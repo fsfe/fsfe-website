@@ -73,6 +73,14 @@
 	<td valign="top" class="TopBody">
           <table summary="" width="150" border="0" cellspacing="0"
           cellpadding="4">
+
+   		<tr><td class="TopTitle" align="center">Projects</td></tr>
+		<tr>
+		  <td class="TopBody" align="right">
+		    <a href="{$fsfeurope}/law/law.en.html" class="T2">Secure Free Software</a><br />
+		  </td>
+		</tr>
+
             <tr>
               <td class="TopTitle" align="center">Sections</td>
             </tr>

@@ -2,37 +2,28 @@
 <webfolders>
 <foldersdiv>
 <folderentry url="http://www.fsf.org/home.fr.html">FSF</folderentry>
-<folderentry url="http://www.fsfeurope.org/index.fr.html">FSF Europe</folderentry>
-<folderentry url="http://france.fsfeurope.org/index.fr.shtml">FSF France</folderentry>
 <folderentry url="http://www.gnu.org/home.fr.html">GNU</folderentry>
 <folderentry url="http://es.gnu.org/">GNU Espagne</folderentry>
-<folderentry url="http://www.april.org/">April</folderentry>
-<folderentry url="http://www.lsfn.org/">LSFN</folderentry>
 </foldersdiv>
 <foldersdiv>
-<folderentry url="index.html">Home</folderentry>
-<folderentry url="contact.html">Contact</folderentry>
-<folderentry url="mailinglists.html">Mailing Lists</folderentry>
-<folderentry url="http://france.fsfeurope.org/stats/">Documents</folderentry>
-<folderentry url="contact.html">Contacts</folderentry>
+<folderentry url="index.fr.html">Home</folderentry>
+<folderentry url="contact/index.html">Contact</folderentry>
+<folderentry url="/index.fr.html">FSF Europe</folderentry>
 </foldersdiv>
 </webfolders>
 <webmenu>
 <menudiv>
-<title>FSF Europe</title>
-<menuentry url="http://savannah.gnu.org/pm/task.php?group_project_id=53&amp;group_id=53&amp;func=browse">Tâches</menuentry>
-<menuentry url="http://www.gnu.org/jobs/">Emploi</menuentry>
-<menuentry url="http://mailman.fsfeurope.org/mailman/listinfo/">Mailing Lists</menuentry>
-<menuentry url="http://savannah.gnu.org/project/memberlist.php?group_id=148">Who's who</menuentry>
+<title>Sections</title>
+<menuentry url="background.html">Background</menuentry>
+<menuentry url="press/index.html">Press section</menuentry>
+<menuentry url="gbn/index.html">GNU Business Network</menuentry>
 </menudiv>
 <menudiv>
 <title>Admin</title>
+<menuentry url="http://mailman.fsfeurope.org/mailman/listinfo/">Mailing Lists</menuentry>
 <menuentry url="http://savannah.gnu.org/projects/fsfe/">Comptes</menuentry>
-</menudiv>
-<menudiv>
-<title>Webmaster</title>
-<menuentry url="http://france.fsfeurope.org/server/server.en.shtml#Web">Guide</menuentry>
-<menuentry url="http://www.gnu.org/server/standards/">GNU Guide GNU</menuentry>
+<menuentry url="http://savannah.gnu.org/pm/task.php?group_id=53">Tâches</menuentry>
+<menuentry url="http://www.gnu.org/server/standards/">GNU Guide</menuentry>
 </menudiv>
 </webmenu>
 

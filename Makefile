@@ -1,4 +1,4 @@
-pags = index.html mailinglists.html
+pags = index.html mailinglists.html background.html
 pags.de = index.de.html
 pags.fr = index.fr.html
 
@@ -13,4 +13,6 @@ $(pags.de): %.html: %.xml menu.de.xml fsfe.de.xsl
 $(pags.fr): %.html: %.xml menu.fr.xml fsfe.fr.xsl
 	sabcmd fsfe.fr.xsl $< > $@
 
+clean:
+	rm $(pags) $(pags.de) $(pags.fr)
 

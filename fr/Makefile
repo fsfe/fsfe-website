@@ -42,8 +42,9 @@ process:
 	done
 
 validate:
-	find . -name '*.xhtml' -print | while read file
+	find . -name '*.xhtml' -print | while read file ; \
 	do \
+		echo $$file ; \
 		rxp -Vs $$file ; \
 	done
 

@@ -103,9 +103,9 @@
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
-                <xsl:when test="$path='mailman/index.xhtml'">Mailing Lists</xsl:when>
+                <xsl:when test="$path='mailman/index.de.xhtml'">Mailingslisten</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/mailman/index.html" class="T2">Mailing Lists</a>
+                  <a href="{$fsfeurope}/mailman/index.de.html" class="T2">Mailingslisten</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>

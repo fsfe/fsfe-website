@@ -6,7 +6,7 @@
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:output method="html"
-	    encoding="ISO-8859-1"
+	    encoding="ISO-8859-2"
 	    doctype-public="-//W3C//DTD HTML 4.0 Transitional//EN"
 	    doctype-system="http://www.w3.org/TR/REC-html40/loose.dtd"
 	    indent="yes"
@@ -46,12 +46,7 @@
     </head>
   </xsl:template>
 
-  <xsl:include href="navigation.de.xsl" />
-  <xsl:include href="navigation.en.xsl" />
-  <xsl:include href="navigation.fr.xsl" />
-  <xsl:include href="navigation.it.xsl" />
-  <xsl:include href="navigation.pt.xsl" />
-  <xsl:include href="navigation.es.xsl" />
+  <xsl:include href="navigation.cs.xsl" />
 
   <xsl:template match="@*|node()" priority="-1">
     <xsl:copy>

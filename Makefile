@@ -136,7 +136,7 @@ $(ESPAGES): %.es.html: %.es.xhtml fsfe.xsl navigation.es.xsl %.lang
 	$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase.es '$$path='$$path '$$langlinks='"$$langlinks" > $$base.es.html-temp && (cat $$base.es.html-temp | perl -p -e '$$| = 1; (s/Date://, s/Author:/por/, s/\$$//g) if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.es.html) ; \
 	rm -f $$base.es.html-temp
 
-$(CSPAGES): %.cs.html: %.cs.xhtml fsfe.xsl navigation.cs.xsl %.lang
+$(CSPAGES): %.cs.html: %.cs.xhtml fsfe.cs.xsl navigation.cs.xsl %.lang
 	@$(ECHO) "Building $@ ..."; \
 	path=$< ; \
 	base=`expr $$path : '\(.*\).cs.xhtml'` ; \
@@ -144,7 +144,7 @@ $(CSPAGES): %.cs.html: %.cs.xhtml fsfe.xsl navigation.cs.xsl %.lang
 	dir=`dirname $$path` ; \
 	root=`dirname $$path | perl -pe 'chop; s:([^/]+):..:g if($$_ ne ".")'` ;\
 	langlinks="`./tools/translate.sh $$base cs`" ; \
-	$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase.cs '$$path='$$path '$$langlinks='"$$langlinks" > $$base.cs.html-temp && (cat $$base.cs.html-temp | perl -p -e '$$| = 1; (s/Date://, s/Author:/od/, s/\$$//g) if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.cs.html) ; \
+	$(XSLTPROC) fsfe.cs.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase.cs '$$path='$$path '$$langlinks='"$$langlinks" > $$base.cs.html-temp && (cat $$base.cs.html-temp | perl -p -e '$$| = 1; (s/Date://, s/Author:/od/, s/\$$//g) if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.cs.html) ; \
 	rm -f $$base.cs.html-temp
 
 %lang: 

@@ -10,7 +10,7 @@
                          "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
 
 <!ENTITY title 
-         "Apport du Logiciel Libre en entreprise">
+         "Apports du Logiciel Libre en entreprise">
 <!ENTITY subtitle 
          "Quels sont les avantages et inconvénients de l'utilisation de Logiciels Libres en entreprise ?">
 
@@ -32,36 +32,36 @@
 
     <legalnotice>
       <para>
-        Ce document est du domaine public.
+      GNU Free Documentation License <ulink url="http://www.gnu.org/copyleft/">
+      http://www.gnu.org/copyleft/</ulink>
       </para>
     </legalnotice>
 
   </articleinfo>
 
   <sect1>
-    <title>Apport du Logiciel Libre en entreprise</title>
+    <title>Apports du Logiciel Libre en entreprise</title>
 
     <para>
-    Nous venons de vivre l'une des révolutions, la plus extraordinaire 
+    Nous venons de vivre l'une des révolutions les plus extraordinaire 
     de l'humanité. En effet la convergence entre télécommunications 
-    et informatique à modifié complètement notre manière de travailler 
+    et informatique a modifié complètement notre manière de travailler 
     et plus particulièrement celle de communiquer. Certaines entreprises 
-    ont su profiter de cette période, un peu folle, pour inventer et 
-    créer de nouveaux services, afin de répondre aux besoins des 
-    consommateurs.
+    ont suent profiter de cette période, un peu folle, pour inventer et 
+    créer de nouveaux services.
     </para>
 
     <para>
-    L'heure est à la réorganisation !!! Nous avons donc la possibilité 
+    L'heure est à la réorganisation ! Nous avons donc la possibilité 
     de réfléchir sur les conséquences de cette révolution. Notamment en 
     ce qui concerne les technologies qui ont permis, aux entreprises, 
     de répondre rapidement à la demande du marché.
     </para>
 
     <para>
-    La majorité des entreprises du secteur informatique qui sont spécialisées dans 
+    La majorité des entreprises du secteur informatique, spécialisées dans 
     la connection internet, la recherche sur internet et l'hébergement 
-    de sites personnels a utilisé en grande partie des logiciels libres. 
+    de sites personnels ont utilisé en grande partie des logiciels libres. 
     </para>
 
     <para>
@@ -114,7 +114,7 @@
     </itemizedlist>
 
     <para>
-    Ces libertés ont été instaurés par la FSF - 
+    Ces libertés ont été instaurées par la FSF - 
     <ulink url="http://www.fsf.org/">Free Software Foundation.</ulink> 
     Il est important de comprendre que le mot anglais "Free" dans Free 
     Software Foundation ne doit pas être traduit comme gratuit mais bien 
@@ -122,38 +122,66 @@
     d'une activité commerciale, pour autant que les libertés ci dessus 
     soient préservées. 
     </para>
-  </sect1>
 
+    <para>
+    Il existe plusieurs licences libres, mais celle qui a concrétisé
+    le concept de Logiciels Libres est la GPL - 
+    <ulink url="http://www.gnu.org/copyleft/gpl.html"> 
+    General Public License</ulink>. Elle permet de protéger les auteurs de 
+    logiciel en deux étapes. Premièrement en assurant le droit d'auteur
+    (copyright) du logiciel et deuxièmement en donnant une autorisation légale
+    de dupliquer distribuer et/ou modifier le logiciel. 
+    </para>
+  </sect1>
+ 
   <sect1>
     <title>Pourquoi ces logiciels ont ils répondu si rapidement aux 
     besoins des entreprises ?</title>
 
     <para>
     Les entreprises qui utilisent des Logiciels Libres ont la possibilité 
-    de les modifier, sans contrainte, pour répondre à leurs besoins 
+    de les modifier, grâce à la GPL, pour répondre à leurs besoins 
     internes ou à la demande des clients. Par contraste, les licences des 
     logiciels propriétaires autorisent seulement l'utilisation et interdisent 
-    la modification. L'entreprise utilisatrice ne peut donc pas faire évoluer 
-    l'application selon ses besoins, elle doit attendre les prochaines versions 
-    de l'éditeur.
+    l'étude des sources, la modification, la redistribution des contributions. 
+    L'entreprise utilisatrice ne peut donc pas faire évoluer l'application selon 
+    ses besoins, elle doit attendre les prochaines versions de l'éditeur ou 
+    développer l'application de zéro.
+    </para> 
+
+    <para>
+    Avec la GPL, les auteurs accordent une licence implicite et gratuite 
+    d'exploitation de leurs droits d'auteur. A ce titre, les logiciels 
+    libres peuvent être dupliqués pour une utilisation privée, professionnelle 
+    ou pour une exploitation commerciale à condition que cette dernière 
+    respecte les mêmes principes.
+    </para>
+
+    <para>
+    L'utilisation de Logiciels Libres à permis de faire des économies 
+    importantes, dès la création des entreprises de la Net-économie. 
+    Elles ont économisé de l'argent sur l'achat de logiciels propriétaires. 
+    Attention cela ne veut pas dire que l'utilisation de Logiciels Libres est
+    moins cher. Il faut payer des développeurs pour les adapter aux besoins 
+    de l'entrepise. Mais l'acquisition du Logiciels et son utilisation ne 
+    sont pas payants.
     </para>
 
     <para>
     La disponibilité d'un grand nombre de Logiciels Libres a permis 
     aux entreprises de la Net-économie de réagir rapidement aux 
-    besoins du marché. L'urgence les a poussées à surmonter un a-priori 
+    besoins du marché. L'urgence les a poussées à surmonter un à-priori 
     négatif vis à vis des Logiciels Libres. Considérés souvent 
     comme de la production artisanale de qualité médiocre, les Logiciels 
     Libres se sont avérés à posteriori répondre au plus près aux besoins
-    de l'entreprise.
+    de l'entreprise. C'est en effet beaucoup plus simple et rapide d'améliorer 
+    un logiciel existant, que de tout refaire de zéro.
     </para>
-
+ 
     <para>
-    C'est en effet beaucoup plus simple et rapide d'améliorer un 
-    logiciel existant, que de tout refaire de zéro. Les Logiciels 
-    Libres ont souvent été développé par des personnes qui ont pris 
-    le temps de les écrire en respectant les standards décris 
-    par les RFC - 
+    Les Logiciels Libres ont souvent été développés par des 
+    personnes qui ont pris le temps de les écrire en respectant
+    les standards décris par les RFC - 
     <ulink url="http://ietf.org/rfc.html">Request for Comments</ulink>,  
     les normes des organisations internationales, comme le W3C - 
     <ulink url="http://www.w3c.org/">World Wide Web Consorsium</ulink>, etc... 
@@ -197,37 +225,30 @@
     <para>
     Maintenant que le marché se stabilise, les sociétés de la 
     Net-économie sont dans une phase de réorganisation. En 
-    effet, elles doivent maintenant travailler afin de fournir
-    à leurs clients un service de qualité, pour obtenir un 
-    retour sur investissement. Les Logiciels Libres peuvent 
-    une fois de plus apporter leurs avantages, afin de battir un 
-    socle robuste et pérenniser ainsi l'entreprise et les 
+    effet, elles doivent travailler afin de conserver des 
+    clients plus informés et plus exigeants qu'avant. Ceci
+    est indispensable afin d'obtenier un retour sur 
+    investissement.Les Logiciels Libres peuvent une fois de 
+    plus apporter leurs avantages, afin de bâtir un socle 
+    robuste et pérenniser ainsi l'entreprise et les 
     développements qu'elle effectue.
     </para>
 
     <para>
-    Si l'entreprise prend la voie de la standardisation de 
-    ces développements, en prenant exemple sur la communauté 
-    des développeurs de Logiciels Libres, elle utilisera un 
-    ensemble de normes qui permettra à tous les universitaires, 
-    chercheurs, gouvernements et informaticiens
-    de participer avec elle aux développements de Logiciels.  
+    Si l'entreprise prend la voie de la standardisation de ces 
+    développements, en prenant exemple sur la communauté des 
+    développeurs de Logiciels Libres, elle utilisera un ensemble 
+    de normes qui permettra à tous les universitaires, chercheurs, 
+    gouvernements et informaticiens de participer avec elle 
+    aux développements de Logiciels. 
     </para>
 
-    <para>
-    Cette démarche aura plusieurs conséquences sur l'entreprise, 
-    aussi bien interne que externe. Elle favorisera le travail 
-    entre les équipes, en mettant en place un serveur CVS - 
-    <ulink url="http://www.cvshome.org/">Concurrent Versions System</ulink>, 
-    un développeur d'une équipe interne ou externe pourra corriger 
-    ou améliorer les développements d'une équipe interne.
-    </para>
-
+    
     <para>
     Le travail décentralisé permet de pérenniser les applications, 
-    même si la société fait le choix de laisser tomber le projet, 
+    même si la société fait le choix d'abandonner le projet, 
     elle ne met pas pour autant tout le travail des développeurs 
-    et autres participants à la poubelle. Le projet peut 
+    et autres participants au rebut. Le projet peut 
     continuer à se développer sur internet. Ceci a une 
     réelle conséquence sur la motivation des équipes et sur 
     l'image de l'entreprise auprès de ses salariés et de 
@@ -240,7 +261,7 @@
     heures et des heures à réaliser un roman. Imaginez la 
     déception du romancier s'il apprend que son oeuvre ne 
     sera pas distribuée tout simplement parce que son éditeur 
-    en a décidé autrement.. Que ferait l'écrivain 
+    en a décidé autrement.. Que ferais l'écrivain 
     d'après vous ? Personnellement je changerai d'éditeur.
     </para>
   </sect1>

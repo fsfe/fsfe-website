@@ -45,6 +45,14 @@
       pas au concédant ou au concessionnaire d'une licence GNU GPL de
       comprendre les conséquences de la GNU GPL.
 
+      Avertissement concernant les auteurs de cette traduction.
+
+      Les personnes ayant participé à cette licence vivent en france,
+      sont de culture et de langue française. Leurs connaissances
+      juridiques concernent exclusivement le droit français et le
+      droit international, à l'exclusion des législations de pays
+      francophones autres que la France.
+
       Avis de droit d'auteur (copyright):
 
       Copyright (C) 2001, 2002 APRIL (http://www.april.org/).  
@@ -65,8 +73,14 @@
       être accompagnée de l'avis de droit d'auteur (copyright), de
       l'avertissement spécifique mentionnant que ce document n'est pas une
       licence, de l'avis de license et de la GNU GPL en anglais.
-      
+
     </abstract>
+    <notes>
+      Le partit pris des notes insérées dans le courant de la
+      traduction consiste à expliquer dans le plus grand détail tout
+      choix qui s'écarte d'une traduction litérale. Si la traduction n'est pas
+      litérale elle doit impérativement être argumentée de façon convaincante.
+    </notes>
   </transinfo>
 
   <section>
@@ -98,14 +112,15 @@
 	authors commit to using it.  </src>
       <dst>La présente Licence Publique Générale s'applique à la
 	plupart des logiciels de la Free Software Foundation, ainsi
-	qu'à tout autre programme pour lequel ses auteurs décident de l'utiliser.</dst>
+	qu'à tout autre programme pour lequel ses auteurs s'engagent à
+	l'utiliser.</dst>
     </para>
     
     <para>
       <src>(Some other Free Software Foundation software is covered by
 	the GNU Library General Public License instead.)</src>
       <dst>(Certains autres logiciels de la Free Software Foundation
-	sont couverts par la GNU Lesser General Public License à la place).</dst>
+	sont couverts par la GNU Lesser General Public License à la place.)</dst>
     </para>
 
     <para>
@@ -147,19 +162,20 @@
 	To protect your rights, we need to make restrictions that
 	forbid anyone to deny you these rights or to ask you to
 	surrender the rights.</src> 
-      <dst>Pour protéger vos droits, il nous est nécessaire de faire des
-	restrictions, qui interdisent à quiconque de vous dénier
-	ces droits, ou de vous demander d'y renoncer.</dst>
+      <dst>Pour protéger vos droits, nous avons besoin de faire des
+	restrictions qui interdisent à quiconque de vous dénier
+	ces droits ou de vous demander d'y renoncer.</dst>
     </para>
 
     <para>
       <src>These restrictions translate to certain responsibilities
 	for you if you distribute copies of the software, or if you
 	modify it.</src>
-      <dst>Ces restrictions se traduisent dans le fait
-        que certaines responsabilités
-        vous incombent si vous distribuez ou modifiez des copies de ces
-	logiciels.</dst>
+      <dst>Ces restrictions se traduisent par
+        certaines responsabilités qui
+        vous incombent si vous distribuez des copies du logiciel, ou
+	si le modifiez.</dst>
+      <notes>Ajouter « couvert par cette licence » après « du logiciel »</notes>
     </para>
 
     <p/>
@@ -171,10 +187,12 @@
 	the rights that you have.  </src>
       <dst>Par exemple, si vous distribuez des copies d'un tel
 	programme, à titre gratuit ou contre une rémunération, vous devez
-	donner aux destinataires tous les droits dont vous
-	jouissez.</dst>
+	transférer aux destinataires tous les droits que vous
+	detenez.</dst>
+      <notes>Doute sur les termes « vous devez transférer aux
+	destinataires tous les droits dont vous
+	disposez »</notes>
     </para>
-
 
     <para>
       <src>You must make sure that they, too, receive or can get the
@@ -198,11 +216,11 @@
 	software, and (2) offer you this license which gives you legal
 	permission to copy, distribute and/or modify the
 	software.</src>
-      <dst>Nous protégeons vos droits en deux étapes : (1) les logiciels
-        sont sous le régime du droit d'auteur (copyright), et (2)
-	nous vous offrons cette licence, qui vous donne
-	l'autorisation légale de dupliquer, distribuer et/ou modifier
-	ces logiciels.</dst>
+      <dst>Nous protégeons vos droits en deux étapes : (1) nous sommes
+	titulaires des droits d'auteurs (copyright) du logiciel, et
+	(2) nous vous offrons cette licence, qui vous donne
+	l'autorisation légale de reproduire, distribuer et/ou modifier
+	le logiciel.</dst>
     </para>
 
     <p/>
@@ -258,8 +276,8 @@
 	be licensed for everyone's free use or not licensed at
 	all.</src>
       <dst>Pour éviter cela, nous établissons clairement que toute licence de brevet
-      doit être concédée de telle sorte que n'importe qui puisse l'exercer librement
-      ou bien qu'aucune licence ne soit concédée.</dst>
+      doit être acquise de telle sorte que n'importe qui puisse l'exercer librement
+      ou bien qu'aucune licence ne soit acquise.</dst>
     </para>
 
     <p/>
@@ -269,7 +287,7 @@
 	The precise terms and conditions for copying, distribution and
 	modification follow.</src>
       <dst>Les termes exacts et les conditions de copie, distribution et
-        modification suivent.</dst>
+        modification sont les suivants.</dst>
     </para>
 
   </section>
@@ -277,8 +295,8 @@
   <section>
     <title lang="en">GNU General Public License Terms and Conditions
       for Copying, Distribution and Modification</title>
-    <title lang="fr">Clauses et Conditions de la Licence Générale
-      Publique GNU portant sur la duplication, la distribution et la
+    <title lang="fr">Clauses et Conditions de la Licence Publique Générale
+      GNU portant sur la reproduction, la distribution et la
       modification</title>
 
     <para>
@@ -286,10 +304,10 @@
 	contains a notice placed by the copyright holder saying it may
 	be distributed under the terms of this General Public
 	License.</src>
-      <dst>La présente Licence s'applique à tout programme
-	ou tout autre ouvrage contenant un avis, apposée par le détenteur des
-	droits d'auteurs, stipulant qu'il peut être distribué selon
-	les clauses de la présente Licence Publique
+      <dst>0. La présente Licence s'applique à tout programme
+	ou tout autre ouvrage contenant un avis, apposé par le titulaire des
+	droits d'auteurs, stipulant qu'il peut être distribué dans le respect
+	des clauses de la présente Licence Publique
 	Générale.</dst>
     </para>
 
@@ -303,10 +321,10 @@
       <dst>Ci-après, le "Programme" désigne l'un quelconque de ces
 	programmes ou ouvrages, et un "ouvrage fondé sur le Programme"
 	désigne soit le Programme, soit un ouvrage qui en dérive au
-	titre de la loi sur le droit d'auteur (copyright): en d'autres termes, 
+	titre des lois sur le droit d'auteur (copyright): en d'autres termes, 
 	un ouvrage contenant le Programme ou une partie de
 	ce dernier, soit en l'état, soit avec des modifications et/ou
-	traduit en un autre langage.</dst>
+	traduit dans un autre langage.</dst>
     </para>
 
     <para>
@@ -317,7 +335,7 @@
 
     <para>
       <src>Each licensee is addressed as "you".</src>
-      <dst>Chaque concessionaire de licence sera désigné par "vous".</dst>
+      <dst>Chaque concessionaire de la présente licence sera désigné par "vous".</dst>
     </para>
 
     <p/>
@@ -327,7 +345,7 @@
 	Activities other than copying, distribution and modification
 	are not covered by this License; they are outside its scope.
       </src>
-      <dst>Les activités autres que la duplication, la distribution et
+      <dst>Les activités autres que la reproduction, la distribution et
 	la modification ne sont pas couvertes par la présente Licence
 	; elles sont hors de son influence.</dst>
     </para>
@@ -338,9 +356,9 @@
 	constitute a work based on the Program (independent of having
 	been made by running the Program).</src>
       <dst>L'acte d'exécuter le Programme n'est pas sujet à restriction
-	et le résultat du programme n'est concerné que si son
+	et les sorties du programme ne sont couvertes que si leur
 	contenu constitue un ouvrage fondé sur le Programme
-	(indépendamment du fait qu'il ait été réalisé par l'exécution
+	(indépendamment du fait qu'il ait été produit par l'exécution
 	du Programme).</dst>
     </para>
 
@@ -362,16 +380,16 @@
 	License and to the absence of any warranty; and give any other
 	recipients of the Program a copy of this License along with
 	the Program.</src>
-      <dst>1. Vous pouvez dupliquer et distribuer des
-	copies non modifiées du code source du Programme tel que vous
-	l'avez reçu, sur un support quelconque, du moment que vous
-	apposez, d'une manière appropriée et parfaitement visible sur chaque
-	copie, un avis approprié de droits d'auteur (copyright)
-	et de dénégation de garantie ; que vous gardez intacts tous
-	les avis faisant référence à la présente Licence et à
-	l'absence de toute garantie ; et que vous donnez à tout
-	destinataire du Programme autre que vous même un exemplaire 
-	de la présente Licence en même temps que le Programme.</dst>
+      <dst>1. Vous pouvez reproduire et distribuer des copies non
+	modifiées du code source du Programme tel que vous l'avez
+	reçu, sur un support quelconque, du moment que vous apposez
+	sur chaque copie, d'une manière appropriée et parfaitement
+	visible, un avis approprié de droits d'auteur (copyright) et
+	de dénégation de garantie ; que vous gardez intacts tous les
+	avis faisant référence à la présente Licence et à l'absence de
+	toute garantie ; et que vous donnez à tout destinataire du
+	Programme autre que vous même un exemplaire de la présente
+	Licence en même temps que le Programme.</dst>
     </para>
 
     <p/>
@@ -383,7 +401,7 @@
 	exchange for a fee.</src>
       <dst>Vous pouvez faire payer l'acte physique de
 	transmission d'une copie, et vous pouvez, à votre discrétion,
-	offrir un recours en garantie contre rémunération.</dst>
+	proposer un recours en garantie contre rémunération.</dst>
     </para>
 
     <p/>
@@ -400,6 +418,15 @@
 	Programme, et copier et distribuer de telles modifications selon les
 	termes de l'Article 1 ci-dessus, à condition de vous conformer également
 	à toutes ces conditions:</dst>
+      <notes>
+	"formant" doit avoir une signification juridique aussi forte
+	que possible et doit dire que l'acte de modification est
+	réputé entrainer l'apparition (la formation ? la constitution
+	? la réalisation ? la production ?) d'un "ouvrage fondé sur le
+	Programme". De la même façon que l'on peut s'interroger sur l'évènement
+	qui entraine la formation d'un contrat. On parlera alors de "formation de
+	contrat" et non de "fabrication de contrat" ou de "production de contrat".
+      </notes>
     </para>
 
     <indent/>
@@ -411,7 +438,7 @@
 	notices stating that you changed the files and the date of any
 	change.</src>
       <dst>a) Vous devez faire en sorte que les fichiers modifiés
-         comportent des avis proéminents stipulant que vous avez modifié
+         comportent des avis très apparents stipulants que vous avez modifié
 	 les fichiers ainsi que la date de toute modification;</dst>
     </para>
 
@@ -429,6 +456,17 @@
 	quelconque de ce dernier, soit concédé comme un tout, 
 	à titre gratuit, à tous tiers, au titre des dispositions
 	de la présente Licence.</dst>
+      <notes>
+	C'est le seul endroit ou l'on dit qu'un programme est concédé
+	au lieu de dire qu'une licence est concédée pour le
+	programme. La seconde formulation correspondant à l'équivalent
+	anglais. Mais on se heurte à un problème de construction de la
+	phrase si on s'essaye à ajouter "licence". Elle est déjà 
+	lourde et complexe à comprendre. Si, juridiquement parlant,
+	la formulation est correcte, il est probablement préférable de
+	s'en tenir la. Si, juridiquement parlant, la formulation est
+	incorrecte, il nous faut l'aide d'un professionnel.
+      </notes>
     </para>
 
     <p/>
@@ -443,13 +481,13 @@
 	else, saying that you provide a warranty) and that users may
 	redistribute the program under these conditions, and telling
 	the user how to view a copy of this License.  </src>
-      <dst>c) Si le Programme modifié lit habituellement des instructions
-	de façon interactive lors de son exécution, vous devez, 
+      <dst>c) Si le programme modifié lit habituellement des instructions
+	de façon interactive lorsqu'il est exécuté, vous devez, 
 	quand il commence son exécution pour une telle
 	utilisation interactive de la manière la plus usuelle, faire
-	en sorte qu'il imprime ou affiche une annonce,
+	en sorte qu'il imprime ou affiche une annonce
 	comprenant un avis approprié de droits d'auteur (copyright), et un avis
-	qu'aucune garantie n'est fournie (ou alternativement, que
+	qu'il n'y a pas de garantie (ou bien stipulant que
 	vous fournissez un recours en garantie), et que
 	les utilisateurs peuvent redistribuer le programme selon les présentes
 	conditions, 
@@ -463,7 +501,7 @@
 	the Program is not required to print an announcement.)</src>
       <dst>(Exception : si le Programme est lui-même interactif
 	mais n'imprime pas habituellement une telle annonce, votre
-	ouvrage fondé sur le Programme n'est pas obligé
+	ouvrage fondé sur le Programme n'est pas contraint
 	d'imprimer une annonce).</dst>
     </para>
 
@@ -474,8 +512,9 @@
     <para>
       <src>These requirements apply to the modified work as a whole.
       </src>
-      <dst>Les obligations ci-dessus s'appliquent à l'ouvrage dérivé
-	pris comme un tout.</dst>
+      <dst>Ces obligations s'appliquent à l'ouvrage modifié
+	pris dans sa totalité.
+      </dst>
     </para>
 
     <para>
@@ -598,10 +637,10 @@
 	received the program in object code or executable form with such
 	an offer, in accord with Subsection b above.)
       </src>
-      <dst>c)L'accompagner de l'information relative à la proposition écrite
+      <dst>c) L'accompagner de l'information relative à la proposition écrite
       concernant la distribution du code source correspondant. (Cette
       alternative est seulement autorisée pour les distributions non commerciales
-      et seulement si vous avez reçu le Programme sous forme de code objet ou
+      et seulement si vous avez reçu le programme sous forme de code objet ou
       d'éxécutable accompagné d'une telle offre, en conformité avec le 
       sous-Article b ci-dessus.)
       </dst>
@@ -622,7 +661,7 @@
 	operating system on which the executable runs, unless that component
 	itself accompanies the executable.
       </src>
-      <dst> Le code source d'un ouvrage signifie la forme favorite 
+      <dst>Le code source d'un ouvrage signifie la forme favorite 
         sous laquelle sont faites des modifications à cet ouvrage.
 	Pour un ouvrage exécutable, le code source complet désigne tout le code 
 	source de tous les modules qu'il contient, ainsi que les éventuels
@@ -701,7 +740,7 @@
 	En conséquence, en modifiant ou 
 	distribuant le Programme (ou un ouvrage quelconque se fondant sur
 	le Programme), vous indiquez pour ce faire votre acceptation de la présente Licence, 
-	et toutes ses clauses et conditions concernant la duplication, la
+	et toutes ses clauses et conditions concernant la reproduction, la
 	distribution ou la modification du Programme ou d'ouvrages fondés
 	sur ce dernier.</dst>
     </para>
@@ -722,7 +761,7 @@
 	ouvrage fondé sur le Programme), une licence est automatiquement
 	concédée au destinataire par le concédant originel de la licence, 
 	l'autorisant à
-	dupliquer, distribuer ou modifier le Programme, sous réserve
+	reproduire, distribuer ou modifier le Programme, sous réserve
 	des présentes clauses et dispositions. Vous ne pouvez imposer
 	une quelconque restriction supplémentaire à l'exercice des
 	droits du destinataire octroyés au titre des présentes.  Vous
@@ -829,7 +868,7 @@
       </src>
       <dst>8. Si la distribution et/ou l'utilisation du Programme est restreinte
       dans certains pays que ce soit par brevets ou par interfaces soumises
-      au droit d'auteur (copyright), le détenteur originel des droits d'auteur
+      au droit d'auteur (copyright), le titulaire originel des droits d'auteur
       qui associe le Programme à la présente Licence peut ajouter explicitement 
       une restriction géographique de distribution qui exclue ces pays afin
       que la distribution soit permise seulement dans ou entre les pays qui ne sont
@@ -908,7 +947,7 @@
       <dst>11. COMME LA LICENCE DU PROGRAMME EST CONCEDEE A TITRE GRATUIT, 
 	AUCUNE GARANTIE NE S'APPLIQUE AU PROGRAMME, DANS LES LIMITES
 	AUTORISEES PAR LA LOI EN VIGUEUR. SAUF MENTION CONTRAIRE ECRITE,
-	LES DETENTEURS DU DROIT D'AUTEUR ET/OU LES AUTRES PARTIES METTENT
+	LES TITULAIRES DU DROIT D'AUTEUR ET/OU LES AUTRES PARTIES METTENT
 	LE PROGRAMME A DISPOSITON "EN L'ETAT", SANS AUCUNE GARANTIE DE
 	QUELQUE NATURE QUE CE SOIT, EXPRESSE OU IMPLICITE, Y COMPRIS, MAIS
 	SANS Y ETRE LIMITE, LES GARANTIES IMPLICITES DE QUALITE LOYALE ET MARCHANDE ET
@@ -924,7 +963,7 @@
     <para>
       <src>12. IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR REDISTRIBUTE THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
       </src>
-      <dst>12. EN AUCUN CAS, SAUF LORSQUE LA LOI EN VIGEUR OU UNE CONVENTION ECRITE L'EXIGE, UN DETENTEUR DE DROIT D'AUTEUR QUEL QU'IL SOIT, OU TOUT TIERS QUI POURRAIT MODIFIER ET/OU REDISTRIBUER LE PROGRAMME COMME PERMIS CI-DESSUS, NE POURRAIT ETRE TENU POUR RESPONSABLE A VOTRE EGARD DES DOMMAGES, INCLUANT LES DOMMAGES GENERIQUES, SPECIFIQUES, SECONDAIRES OU CONSECUTIFS, RESULTANT DE L'UTILISATION OU DE L'IMPOSSIBILITE D'EXECUTER LE PROGRAMME (Y COMPRIS, MAIS SANS Y ETRE LIMITE, LA PERTE DE DONNEES, OU LE FAIT QUE DES DONNEES SOIENT RENDUES INEXACTES, OU LES PERTES EPROUVEES PAR VOUS OU PAR DES TIERS, OU LE FAIT QUE LE PROGRAMME ECHOUE A FONCTIONNER AVEC UN AUTRE PROGRAMME QUEL QU'IL SOIT) MEME SI LE DETENTEUR DE DROIT D'AUTEUR OU LE TIERS CONCERNE A ETE AVERTI DE LA POSSIBILITE DE TELS DOMMAGES.
+      <dst>12. EN AUCUN CAS, SAUF LORSQUE LA LOI EN VIGEUR OU UNE CONVENTION ECRITE L'EXIGE, UN TITULAIRE DE DROIT D'AUTEUR QUEL QU'IL SOIT, OU TOUT TIERS QUI POURRAIT MODIFIER ET/OU REDISTRIBUER LE PROGRAMME COMME PERMIS CI-DESSUS, NE POURRAIT ETRE TENU POUR RESPONSABLE A VOTRE EGARD DES DOMMAGES, INCLUANT LES DOMMAGES GENERIQUES, SPECIFIQUES, SECONDAIRES OU CONSECUTIFS, RESULTANT DE L'UTILISATION OU DE L'IMPOSSIBILITE D'EXECUTER LE PROGRAMME (Y COMPRIS, MAIS SANS Y ETRE LIMITE, LA PERTE DE DONNEES, OU LE FAIT QUE DES DONNEES SOIENT RENDUES INEXACTES, OU LES PERTES EPROUVEES PAR VOUS OU PAR DES TIERS, OU LE FAIT QUE LE PROGRAMME ECHOUE A FONCTIONNER AVEC UN AUTRE PROGRAMME QUEL QU'IL SOIT) MEME SI LE TITULAIRE DE DROIT D'AUTEUR OU LE TIERS CONCERNE A ETE AVERTI DE LA POSSIBILITE DE TELS DOMMAGES.
 </dst>
     </para>
 
@@ -1078,7 +1117,7 @@
       </src>
       <dst>Yoyodyne, Inc., renonce par la présente à tout prétention à
 	un droit d'auteur sur le programme "Gnomovision" (qui fait des
-	passes aux compilateurs) écrit par James Hacker.
+	avances aux compilateurs) écrit par James Hacker.
 
 	[signature de Ty Coon], 1er avril 1989
 

@@ -1,4 +1,4 @@
-$Id: webmaster-HOWTO.txt,v 1.1 2001-08-25 12:16:49 olberger Exp $
+$Id: webmaster-HOWTO.txt,v 1.2 2001-08-25 14:36:22 olberger Exp $
 
 This document is a HOWTO for any volunteer interested in acting as a
 webmaster for the FSF Europe website (www.fsfeurope.org).
@@ -76,6 +76,60 @@ When modifications made on the HEAD/beta are declared good for
 publication (after some review process), then, the checked-out copy of
 the official/public should be directed to another branch.
 
+I propose the following naming scheme for CVS tags :
+
+- stable version of the www.fsfeurope.org site :
+  * S_FSFE_isodate[_patch_numbers] for stable versions (root of patch
+    branch, or tagged patched versions) - examples : S_FSFE_20010825,
+    S_FSFE_20010825_3
+
+  * BS_FSFE_isodate for branch containing patches of the stable
+    version S_FSFE_isodate - example : BS_FSFE_20010825
+    Should be applied exactly to the stable version which is its
+    root. Thus both commands should be issued at the same time :
+      cvs tag S_FSFE_isodate
+      cvs tag -r S_FSFE_isodate -b BS_FSFE_isodate
+
+- beta version of the www.fsfeurope.org (will be on beta.fsfeurope.org) :
+  no need of tags, since it is on the main trunk... use cvs update -A
+
+- stable version of the france.fsfeurope.org site :
+
+  * S_FSFEFR_isodate, etc.
+
+  * BS_FSFEFR_isodate, and so on...
+
+- beta version of the france.fsfeurope.org (will be on
+  beta.fsfeurope.org/fr/) : no need of tags, as for the beta of
+  www.fsfeurope.org.
+
+Example :
+
+
+                       1.4 S_FSFEFR_20010903, BS_FSFEFR_20010903
+                        |        
+                        |   1.2.2.4 S_FSFEFR_20010825_1
+                       1.3     |   
+                        |   1.2.2.3
+                        |      |   
+                        |      |   
+                        |   1.2.2.2
+                        |      |
+                        |   1.2.2.1
+                        |  /  BS_FSFEFR_20010825
+                        | /
+                       1.2 S_FSFEFR_20010825
+                        |
+                       1.1
+		       
+                   toto.xhtml
+
+In this example, the file toto.xhtml was patched several times (typo
+for instance) coming from the 1.2 revision stabilized on 20010825,
+while it was modified in parallel on the main trunk in the beta
+version.
+
+
 
 
 Publication mechanism :
@@ -104,3 +158,95 @@ configuration of the branch checked-out for a certain site will only
 have to be made once, and could be changed almost on the fly if
 necessary (returning to a stable tagged version, for instance).
 
+
+Example of a session with beta and stable versions :
+----------------------------------------------------
+
+This is meant as demonstrating how to handle both stable and beta
+versions in parallel.
+
+For this demonstration, we'll use the following directory of the CVS
+repository : /fsfe/server/testbeta.  Files will be put in this
+directory and modified in certain brances only. As no beta website is
+available as http://beta.fsfeurope.org with its files in a different
+space from the stable site, we'll use two sets of directories.
+
+ - The stable version of this directory is checked-out on
+ http://www.fsfeurope.org/server/testbeta/, viewing a specific branch
+ specified in the Makefile of /fsfe/Makefile (variable STABLEBRANCH -
+ see "sync:" rule for details of cvs commands in the Makefile).
+
+ - The beta version of this directory is checked-out on
+ http://www.fsfeurope.org/server/test/fsfe/server/testbeta/, viewing
+ the "HEAD" branch (main trunk) (see "sync:" rule for details of cvs
+ commands in the Makefile).
+
+We'll discuss here a scenario demonstrating how CVS can be used to
+manage both versions. Feel free to experiment with this sandbox to
+further this scenario.
+
+We won't detail CVS commands. The use of some graphical tool to
+represent CVS revisions might help (I personnaly recommand tkcvs). You
+may see the resulting tree in savannah's viewcvs tool :
+http://savannah.gnu.org/cgi-bin/viewcvs/fsfe/server/testbeta/?cvsroot=www.gnu.org
+
+1) isolating a stable branch from the beta/main trunk evolution :
+
+Initialy, we have version 1.1 of toto file (only file in this
+directory, contains nothing, btw), in the main trunk.
+
+We tag it (and, btw, the rest of the directory... transpose to the
+whole of the repository) as a stable version :
+  cvs tag S_20010825
+  cvs tag -r S_20010825 -b BS_20010825
+
+Then, we add a new file (titi) in order to make it appear on the
+stable site, on the BS_20010825 branch :
+  cvs update -r BS_20010825
+  touch titi
+  cvs add titi
+
+We edit both files and commit modifications, which are made on branch
+BS_20010825, since we got a sticky tag doing the "cvs update -r
+BS_20010825" : every modifications made after such an update happen on
+the branch.
+
+This state is tagged as DEMO_STABLE_1 in the repository, if you wish
+to see it.
+
+
+Now, we switch to the main trunk to prepare something for the beta
+version of the site :
+  cvs update -A
+
+The file titi, which was added on the stable version only now
+disappears. That's where we have to be carefull : too many additions
+on the stable branch instead of additions on the beta will make it
+harder to keep synchronized... creating a news stable version before
+out of the beta might be better...
+
+We now want to add a new file (tutu) on the beta version
+  touch tutu
+  cvs add tutu
+
+We make modifications on tutu and toto, then commit it. The files are
+modified on the main trunk only.  Note that tis state was tagged
+DEMO_BETA_1.
+
+Now, the Makefile must contain the branch tag name of the stable
+version if we want things to appear online when applying the sync:
+rule...
+
+We can make sync and check :
+http://www.fsfeurope.org/server/test/fsfe/server/testbeta/ contains
+only the beta : toto and tutu, and
+http://www.fsfeurope.org/server/testbeta/ contains only the stable
+version : toto and titi.
+
+
+Now if we want to reflect in te beta branch, the addition of titi,
+similar to its version on the stable branch we have to issue a :
+  cvs update -j BS_20010825 titi.
+
+Titi appears on the main trunk.
+We can commit it now.

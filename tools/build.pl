@@ -26,6 +26,7 @@ use File::Basename;
 use XML::LibXSLT;
 use XML::LibXML;
 use File::Copy;
+use POSIX qw(strftime);
 
 # This defines the focuses and their respective preferred / original
 # language. For example, it says that we should have a focus called
@@ -56,6 +57,8 @@ our %languages = (
   pt => 'Portugu&ecirc;s',
   sv => 'Svenska',
 );
+
+our $current_date = strftime "%Y-%m-%d", localtime;
 
 #
 # Parse the command line options. We need two; where to put the finished
@@ -163,6 +166,11 @@ while (my ($file, $langs) = each %bases) {
   my $dom = XML::LibXML::Document->new("1.0", "iso-8859-1");
   my $root = $dom->createElement("buildinfo");
   $dom->setDocumentElement($root);
+
+  #
+  # Set the current date, to use for comparision in the XSLT.
+  #
+  $root->setAttribute("date", $current_date);
 
   #
   # Find original language. It's en, unless we're in the country specific

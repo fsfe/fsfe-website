@@ -82,7 +82,7 @@ $(DEPAGES): %.html: %.xhtml fsfe.xsl navigation.de.xsl
 	root=`dirname $$path | perl -pe 'chop; s:([^/]+):..:g if($$_ ne ".")'` ; \
 	langlinks="`./tools/translate.sh $$base de`" ; \
 	$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase.de '$$path='$$path '$$langlinks='"$$langlinks" > $$base.de.html-temp && (cat $$base.de.html-temp | perl -p -e '$$| = 1; (s/Date://, s/Author:/von/, s/\$$//g) if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.de.html) ; \
-	rm -f $$base.html-temp
+	rm -f $$base.de.html-temp
 
 $(PTPAGES): %.html: %.xhtml fsfe.xsl navigation.pt.xsl tools/translate.sh
 	@$(ECHO) "Building $@ ..."; \

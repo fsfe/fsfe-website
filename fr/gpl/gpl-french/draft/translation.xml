@@ -893,7 +893,23 @@
     </para>
 
     <para>
-      <src>one line to give the program's name and an idea of what it does. Copyright (C) yyyy name of author. This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+      <src>
+    [one line to give the program's name and a brief idea of what it does.]
+    Copyright (C) [year]  [name of author]
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
       </src>
       <dst> Une ligne pour donner le nom du programme et une idée de ce qu'il
 	fait.
@@ -935,10 +951,13 @@
     </para>
 
     <para>
-      <src>Gnomovision version 69, Copyright (C) yyyy name of author Gnomovision comes with ABSOLUTELY NO WARRANTY; for details type `show w'. This is free software, and you are welcome to redistribute it under certain conditions; type `show c' for details.
+      <src>
+    Gnomovision version 69, Copyright (C) year  name of author
+    Gnomovision comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
+    This is free software, and you are welcome to redistribute it
+    under certain conditions; type `show c' for details.
       </src>
       <dst>Gnomovision version 69, Copyright (C) 19 yy nom de l'auteur
-
 	Gnomovision est livré absolument SANS AUCUNE GARANTIE ; pour plus de
 	détail, tapez "show w". Il s'agit d'un logiciel libre, et vous avez le
 	droit de le redistribuer dans certaines conditions ; pour plus de
@@ -968,7 +987,12 @@
     </para>
 
     <para>
-      <src>Yoyodyne, Inc., hereby disclaims all copyright interest in the program `Gnomovision' (which makes passes at compilers) written by James Hacker. signature of Ty Coon, 1 April 1989 Ty Coon, President of Vice
+      <src>
+  Yoyodyne, Inc., hereby disclaims all copyright interest in the program
+  `Gnomovision' (which makes passes at compilers) written by James Hacker.
+
+  [signature of Ty Coon], 1 April 1989
+  Ty Coon, President of Vice
       </src>
       <dst>Yoyodyne, Inc., par la présente, renonce à tout intérêt de droits
 	d'auteur dans le programme "Gnomovision" (qui fait des passages au

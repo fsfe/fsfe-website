@@ -205,13 +205,16 @@
     <description lang="en">GDPC is a program for visualising molecular dynamic simulations, it is a very versatile program and could easily be used for other purposes. gdpc reads xyz input and custom formats and can write out pictures of the frames.</description>
     <description lang="fr">GDPC est un programme pour la visualisation de simulations de dynamique moléculaire.Il s'agit d'un logiciel très versatile et peut facilement être utilisé à d'autres finalités.GDPC lit des entrées en xyz et d'autres formats. Il permet aussi d'avoir des images en sortie.</description>
     <authors>Jonas Frantz</authors>
+    <email>jonas.frantz@helsinki.fi</email>
     <url>http://www.physics.helsinki.fi/~frantz/software/gdpc.html</url>
     <os>
       <name>GNU/Linux</name>
       <maintainer>Jonas Frantz</maintainer>
       <version>2.0</version>
       <licence>GPL</licence>
-      <date>28 jul 2001</date>
+      <url>http://beam.helsinki.fi/~frantz/software/gdpc-2.00-src.tar.gz</url>
+      <comment>.test files should also have a copyright + license notice</comment>
+      <date>22 apr 2002</date>
     </os>
   </software>
   <software>

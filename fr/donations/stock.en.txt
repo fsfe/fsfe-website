@@ -389,3 +389,21 @@ LOC: AEL (alexandre.dulaunoy@ael.be)
 
 Server (Serial: WOLF80)
 LOC: AEL (alexandre.dulaunoy@ael.be)
+
+Switch Extreme Summit 24
+LOC: SOPED (loic@gnu.org)
+     http://extremenetworks.com/support/documentation/summitpubs.pdf
+     To hard reboot do the following: connect to the serial port,
+     type space (spacebar) continuously, reset by pressing the 
+     button in the small hole on the right of the switch, you'll
+     get a prompt, h: will give a menu, d: reset to the factory
+     defaults, f: will continue the boot process, the login "admin"
+     now has no password. Refer to documentation for the rest.
+
+Switch Extreme Summit 24
+LOC: SOPED (loic@gnu.org)
+     http://extremenetworks.com/support/documentation/summitpubs.pdf
+
+Switch Extreme Summit 48
+LOC: SOPED (loic@gnu.org)
+     http://extremenetworks.com/support/documentation/summitpubs.pdf

@@ -5,8 +5,8 @@
 # output files. If this run is successful, it will make a second run
 # and create the files.
 #
-SOURCE=/home/www/fsfe/
-DEST=/home/www/html/
+SOURCE=/home/www/fsfe
+DEST=/home/www/html
 
 tools/build.pl -n -o $DEST -i $SOURCE
 

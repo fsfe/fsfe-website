@@ -5,33 +5,27 @@
 
   <xsl:template match="/html[@lang='es']/body/div">
     <!-- FSF related sites -->
-    <table cellspacing="0" cellpadding="0" width="100%" border="0"><tr bgcolor="#e7e7e7"><td><img src="{$fsfeurope}/images/pix.png" width="1" height="1" alt="" /></td></tr></table> 
     <table cellspacing="0" cellpadding="1" width="100%" border="0"> 
       <tr valign="middle"> 
 	  <td class="newstext">
 	    &nbsp;&nbsp;
-            <a class="topbanner" href="{$fsfeurope}/index.es.html">FSF Europa</a>
+            <a href="{$fsfeurope}/index.es.html">FSF Europa</a>
           </td>
           <td class="newstext" align="right">
-	    <a class="topbanner" href="{$fsf}/home.es.html">FSF</a>
+	    <a href="{$fsf}/home.es.html">FSF</a>
             &nbsp;&nbsp;|&nbsp;&nbsp;
-	    <a class="topbanner" href="{$gnu}/home.es.html">GNU</a>
+	    <a href="{$gnu}/home.es.html">GNU</a>
             &nbsp;&nbsp;|&nbsp;&nbsp;
-	    <a class="topbanner" href="http://es.gnu.org/">GNU España</a><br/>
+	    <a href="http://es.gnu.org/">GNU España</a><br/>
 	  </td>
        </tr>
-    </table>
-    <table cellspacing="0" cellpadding="0" width="100%" border="0">
-	<tr valign="middle" bgcolor="#6f6f6f">
-	  <td><img src="{$fsfeurope}/images/pix.png" width="1" height="1" alt="" /></td>
-	</tr>
     </table>
 
     <!-- Top menu line -->
     <table width="100%" border="0" cellspacing="0" cellpadding="4">
       <tr>
 	<td class="TopTitle">
-	  &nbsp;<a href="{$fsffrance}/index.fr.html" class="T1">Francia</a> |
+	  &nbsp;<a href="{$fsffrance}/index.fr.html">Francia</a> |
 	    Alemania
 	</td>
       </tr>
@@ -43,7 +37,7 @@
 	  <td class="TopBody">
 	    <a href="{$fsfeurope}/">
 	      <img src="{$fsfeurope}/images/fsfe-logo.png" alt="FSFE Logo"
-    border="0" width="259" height="66" align="left"/>
+    border="0" width="259" height="76" align="left"/>
 	    </a>
 	  </td>
 	</tr>
@@ -72,7 +66,7 @@
               <td class="TopTitle" align="center">Secciones</td>
             </tr>
             <tr>
-              <td align="right" class="Section"><br/>
+              <td align="right" class="TopBody"><br/>
               <xsl:choose>
                 <xsl:when test="$path='index.es.xhtml'">Principal</xsl:when>
                 <xsl:otherwise>
@@ -165,17 +159,17 @@
     <table width="100%" border="0" cellspacing="0" cellpadding="2">
       <tr>
 	<td class="TopTitle">
-          <a href="{$filebase}.xhtml" class="T1">Fuente XHTML</a>&nbsp;&nbsp;|
-          &nbsp;&nbsp;<a href="{$fsfeurope}/fsfe.xsl" class="T1">Página de
+          <a href="{$filebase}.xhtml">Fuente XHTML</a>&nbsp;&nbsp;|
+          &nbsp;&nbsp;<a href="{$fsfeurope}/fsfe.xsl">Página de
     estiol XSL</a><br/>
 	</td>
 	<td class="TopTitle" align="right">
 	  &nbsp;<a href="mailto:webmaster@fsfeurope.org"
-                   class="T1">webmaster@fsfeurope.org</a>
+                  >webmaster@fsfeurope.org</a>
         </td>
       </tr>
       <tr>
-	<td class="Body" align="center">
+	<td class="newstext" align="center">
 	<font size="-2">
 	  Copyright (C) 2001 FSF Europa<br/>
           Se permite la copia textual y distribución de este artículo en su
@@ -183,7 +177,7 @@
 	  nota de copyright.
 	</font>
 	</td>
-        <td class="Body">&nbsp;</td>
+        <td class="newstext">&nbsp;</td>
       </tr>
     </table>
   </xsl:template> 

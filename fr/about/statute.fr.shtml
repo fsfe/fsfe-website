@@ -17,13 +17,31 @@
 ]
 </center>
 
-<!--#include virtual="../Constitution-fr.fr.html"-->
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+	    <td valign="top" class="TopBody">
+	      <table width="120" border="0" cellspacing="0" cellpadding="4">
+		  <tr><td class="TopTitle" align="center"><a href="about.fr.shtml">A propos</a></td></tr>
+		  <tr>
+		    <td align="right">
+		      <a href="statute.fr.shtml" class="T2">Statuts HTML</a><br />
+		      <a href="Constitution-fr.fr.ps" class="T2">Statuts PS</a><br />
+		    </td>
+		  </tr>
+	      </table>
+	    </td>
+	    <td>&nbsp;</td>
+	    <td width="99%" valign="top">
+	      <!--#include virtual="Constitution-fr.fr.html"-->
+	    </td>
+	  </tr>
+      </table>
 	    
 <!--#include virtual="../footer.fr.html"-->
 
   Mis à jour:
 <!-- timestamp start -->
-$Date: 2001-04-16 19:28:39 $ $Author: loic $
+$Date: 2001-04-16 19:34:50 $ $Author: loic $
 <!-- timestamp end -->
 
   </body>

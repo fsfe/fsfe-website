@@ -37,13 +37,20 @@ DEPAGES = $(shell find * -path 'fr' -prune -o -regex '.*\.de\.xhtml' -print | se
 
 PTPAGES = $(shell find * -path 'fr' -prune -o -regex '.*\.pt\.xhtml' -print | sed "s/xhtml$$/html/")
 
+# temporary, added by mad@april.org
+NEWS = news/news.fr.html news/news.en.html
+
 all: $(ENPAGES) $(FRPAGES) $(DEPAGES) $(PTPAGES)
 
 swpat/patents.en.html: swpat/patents-agenda.en.xml
 
 # temporary, added by mad@april.org
-NEWS = news/news.fr.html news/news.en.html
-$(NEWS): fr/news/fsfe-fr-channel.fr.xml fr/news/fsfe-fr-channel.en.xml fr/news/news-bytes-latest.en.html fr/news/news-bytes-latest.fr.html
+$(NEWS): fr/news/news-bytes-latest.en.html fr/news/news-bytes-latest.fr.html
+
+fr/news/news-bytes-latest.en.html fr/news/news-bytes-latest.fr.html: fr/news/fsfe-fr-channel.fr.xml fr/news/fsfe-fr-channel.en.xml
+	@$(ECHO) "Building $@ ..."
+	@cd fr; $(MAKE)
+
 
 $(ENPAGES): %.html: %.xhtml fsfe.xsl navigation.en.xsl
 	@$(ECHO) "Building $@ ..."; \

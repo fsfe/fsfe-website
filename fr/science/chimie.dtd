@@ -1,9 +1,15 @@
 <!-- DTD for free software list -->
 
-<!ELEMENT softliste (software+)>
-<!ELEMENT software (name, description, authors, url, mirrorurl*, os+)>
+<!ENTITY % Lang "(en|fr)">
+
+<!ELEMENT softliste (updatenotice?, software+)>
+<!ELEMENT updatenotice (#PCDATA)>
+<!ELEMENT software (name, description*, authors, url, mirrorurl*, os+)>
 <!ELEMENT name (#PCDATA)>
 <!ELEMENT description (#PCDATA)>
+<!ATTLIST description
+          lang %Lang;  "en"
+ >
 <!ELEMENT authors (#PCDATA)>
 <!ELEMENT url (#PCDATA)>
 <!ELEMENT mirrorurl (#PCDATA)>

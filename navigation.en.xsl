@@ -144,7 +144,7 @@
               <br/></td>
             </tr>
 
-        	<tr><td class="TopTitle" align="center">Associated organizations</td></tr>
+        	<tr><td class="TopTitle" align="center">Associate organizations</td></tr>
 		<tr>
 		  <td class="TopBody" align="right">
 		    <a href="http://www.april.org/" class="T2">APRIL</a><br />

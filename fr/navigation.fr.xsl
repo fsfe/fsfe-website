@@ -70,7 +70,6 @@ icon links to the top of the hub's site -->
 	      <td>
 		<a href="http://cyberlink.idws.com/fsm/" class="T2">Afrique</a> <br />
 		<a href="http://www.fsf.or.at/" class="T2">Autriche</a> <br />
-		<a href="http://mail.gnu.org/mailman/listinfo/fsfc-discuss" class="T2">Canada</a> <br />
 		<a href="http://www.rons.net.cn/english/Links/fsf-china/" class="T2">Chine</a> <br />
 		<a href="http://korea.gnu.org/home.html" class="T2">Corée</a> <br />
 	      </td>

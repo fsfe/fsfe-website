@@ -242,7 +242,7 @@
 
   <software>
     <name>Ghemical</name>
-    <date>22 apr 2002</date>
+    <date>05 sep 2002</date>
     <description lang="en">A molecular modelling software package with nice 3D-visualization tools.</description>
     <description lang="fr">Un logiciel de modélisation moléculaire avec de bons outils de visualisation 3D.</description>
     <authors>Mike Cruz, Tommi Hassinen, Ville Heikkila, Geoff Hutchison, Jarno Huuskonen</authors>
@@ -250,11 +250,11 @@
     <url>http://www.uku.fi/~thassine/ghemical</url>
     <os name="GNU/Linux">
       <maintainer>Mike Cruz, Tommi Hassinen, Ville Heikkila, Geoff Hutchison, Jarno Huuskonen</maintainer>
-      <version>0.82</version>
+      <version>0.90</version>
       <license>GPL</license>
       <url>http://www.uku.fi/~thassine/ghemical/download/ghemical-0.82.tgz</url>
       <comment>truncated GNU GPL, license and copyright notice ok but not following GNU GPL template</comment>
-      <date>22 apr 2002</date>
+      <date>05 sep 2002</date>
     </os>
   </software>
 
@@ -402,18 +402,18 @@
 
   <software>
     <name>Kemistry</name>
-    <date>18 jun 2002</date>
+    <date>04 sep 2002</date>
     <description lang="en">Kemistry is a collection of chemistry-related applications for KDE.</description>
     <description lang="fr">Kemistry est une collection de logiciels appliqués à la chimie pour KDE.</description>
     <authors>Francesco Bresciani</authors>
     <url>http://kemistry.sourceforge.net</url>
     <os name="GNU/Linux">
       <maintainer>Francesco Bresciani</maintainer>
-      <version>0.4</version>
+      <version>0.6</version>
       <license></license>
       <url></url>
       <comment></comment>
-      <date>20 jun 2002</date>
+      <date>04 sep 2002</date>
     </os>
   </software>
 
@@ -696,34 +696,34 @@
 
   <software>
     <name>XDrawChem</name>
-    <date>4 jun 2002</date>
+    <date>04 sep 2002</date>
     <description lang="en">XDrawChem is a two-dimensional molecule drawing program for Unix operating systems. It is similar in functionality to other molecule drawing programs such as ChemDraw (TM, CambridgeSoft). It can read and write MDL Molfiles, and read ChemDraw text and binary files, to allow sharing between XDrawChem and other chemistry applications. XDrawChem has been tested on GNU/Linux, SGI IRIX 6.5, and Sun Solaris.</description>
     <description lang="fr">XDrawChem est un programme de dessins moléculaires en 2D pour les systèmes Unix et clones. Il a des fonctionnalités similaires à d'autres logiciels tel que ChemDraw (TM, CambridgeSoft). Il peut lire les file MDL Mol, ChemDraw (texte et binaire), permettant ainsi l'échange entre XDrawChem et d'autres applications en chimie.</description>
     <authors>Bryan Herger</authors>
     <url>http://www.prism.gatech.edu/~gte067k/xdrawchem</url>
     <os name="GNU/Linux">
       <maintainer>Bryan Herger</maintainer>
-      <version>1.4.2</version>
+      <version>1.5</version>
       <license>GPL</license>
       <url></url>
       <comment>Missing copyright and license note in some code</comment>
-      <date>4 aug 2002</date>
+      <date>04 sep 2002</date>
     </os>
     <os name="Other Unix">
       <maintainer>Bryan Herger</maintainer>
-      <version>1.4.2</version>
+      <version>1.5</version>
       <license>GPL</license>
       <url></url>
       <comment>Missing copyright and license note in some code</comment>
-      <date>4 aug 2002</date>
+      <date>04 sep 2002</date>
     </os>
     <os name="Windows">
       <maintainer>Bryan Herger</maintainer>
-      <version>1.4.2</version>
+      <version>1.5</version>
       <license>GPL</license>
       <url></url>
       <comment>Missing copyright and license note in some code</comment>
-      <date>4 aug 2002</date>     
+      <date>04 sep 2002</date>     
     </os>
   </software>
 

@@ -41,6 +41,9 @@ $(NEWS): news/news-bytes.%.xhtml: news/fsfe-fr-channel.%.xml news/news.%.xsl
 	@echo "Building $@ ..."; \
 	$(XSLTPROC) news/news.$*.xsl news/fsfe-fr-channel.$*.xml $(XSLTOPTS) '$$fsffrance=$(FSFFRANCE)' > news/news-bytes.$*.xhtml
 
+index.fr.html: news/fsfe-fr-channel.fr.xml
+index.en.html: news/fsfe-fr-channel.en.xml
+
 $(ENPAGES) $(FRPAGES): %.html: %.xhtml fsfe-fr.xsl navigation.en.xsl navigation.fr.xsl
 	@echo "Building $@ ..."; \
 	path=$< ; \

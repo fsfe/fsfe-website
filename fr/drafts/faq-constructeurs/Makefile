@@ -126,7 +126,8 @@ help:
 	@echo
 
 # Shortcuts
-all: html pdf
+all:
+oldall: html pdf
 ph: prepare-html
 pp: prepare-print
 html: html-long html-short

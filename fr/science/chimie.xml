@@ -40,7 +40,6 @@
   *  commercial rights including the right to modify 
   *  this notice
   */
-
   </comment>
   <date>22 apr 2002</date>
       </os>
@@ -76,6 +75,7 @@
       <date>22 apr 2002</date>
     </os>
   </software>
+
   <software>
     <name>Chemeq</name>
     <date>22 apr 2002</date>
@@ -94,7 +94,7 @@
       <date>22 apr 2002</date>
     </os>
   </software>
-<!--
+
   <software>
     <name>Chemsuite</name>
     <date>03 mar 2002</date>
@@ -112,7 +112,7 @@
       <date>22 apr 2002</date>
     </os>
   </software>
--->
+
   <software>
     <name>Chemtool</name>
     <date>22 apr 2002</date>
@@ -130,6 +130,7 @@
       <date>22 apr 2002</date>
     </os>
   </software>
+
   <software>
     <name>CHIMP</name>
     <date>22 apr 2002</date>
@@ -181,7 +182,7 @@
       <date>22 apr 2002</date>
     </os>
   </software>
-<!--
+
   <software>
     <name>Garlic</name>
     <date>28 jul 2001</date>
@@ -193,11 +194,11 @@
       <maintainer>Damir Zucic</maintainer>
       <version>1.1</version>
       <license>GPL</license>
-      <comment>Unreachable</comment>
+      <comment>COPYING file exist, but .c should have a licence notice (have copyright notice).</comment>
       <date>22 apr 2002</date>
     </os>
   </software>
--->
+
   <software>
     <name>GDPC</name>
     <date>22 apr 2002</date>
@@ -238,11 +239,12 @@
       <date>28 jul 2001</date>
     </os>
   </software>
+
   <software>
     <name>Ghemical</name>
     <date>22 apr 2002</date>
     <description lang="en">A molecular modelling software package with nice 3D-visualization tools.</description>
-    <description lang="fr">A molecular modelling software package with nice 3D-visualization tools.</description>
+    <description lang="fr">Un logiciel de modélisation moléculaire avec de bons outils de visualisation 3D.</description>
     <authors>Mike Cruz, Tommi Hassinen, Ville Heikkila, Geoff Hutchison, Jarno Huuskonen</authors>
     <email>thassine@messi.uku.fi</email>
     <url>http://www.uku.fi/~thassine/ghemical</url>
@@ -255,24 +257,24 @@
       <date>22 apr 2002</date>
     </os>
   </software>
-<!--
-  License not not checked yet
-
 
   <software>
     <name>GPeriodic</name>
-    <date>30 aug 2001</date>
+    <date>31 may 2002</date>
     <description lang="en">GPeriodic is a periodic table application for GNU/Linux. It allows you to browse through a periodic table of the elements, and view detailed information on each of the elements. 118 elements are currently liste.</description>
     <description lang="fr">GPeriodic est un tableau pérodique des éléments pour GNU/Linux. Il permet de se 'ballader' dans le tableau périodique et de voir les informations détaillées de chaque élément. Actuellement, 118 éléments sont pris en charge.</description>
     <authors>Kyle R. Burton</authors>
     <url>http://gperiodic.seul.org</url>
     <os name="GNU/Linux">
       <maintainer>Kyle R. Burton</maintainer>
-      <version>1.3.2</version>
-      <license>GPL</license>
-      <date>30 aug 2001</date>
+      <version>1.3.3</version>
+      <license>GPL</license> 
+      <url></url>
+      <comment>COPYING is okay, but missing license and copyright notice in source file.</comment>
+      <date> 18 jan 2002</date>
     </os>
   </software>
+<!--
   <software>
     <name>GtkChemkin</name>
     <date>28 jul 2001</date>
@@ -284,23 +286,29 @@
       <maintainer>Nils Bokermann</maintainer>
       <version>0.7</version>
       <license>GPL</license>
+      <url></url>
+      <comment></comment>
       <date>28 jul 2001</date>
     </os>
   </software>
+-->
   <software>
     <name>JChemPaint</name>
-    <date>28 jul 2001</date>
+    <date>28 jun 2002</date>
     <description lang="en">JChemPaint is an editor for 2D Molecular Structures. JChemPaint is intended to be complementary to JMol, a visualisation and analysis tool for 3D molecular structures, started by Dan Gezelter at Notre Dame University, initator of the Open Science Project and, like JChemPaint, developed by an international team of open-source programmers.</description>
     <description lang="fr">JChemPaint est un éditeur de molécules.Il se veut complémentaire de JMol.</description>
     <authors>Christoph Steinbeck, Stefan Krause, Egon Willighagen, Martin Schild</authors>
     <url>http://jchempaint.sourceforge.net</url>
     <os name="All">
       <maintainer>Christoph Steinbeck, Stefan Krause, Egon Willighagen, Martin Schild</maintainer>
-      <version>1.1</version>
+      <version>1.2</version>
       <license>GPL</license>
-      <date>28 jul 2001</date>
+      <url></url>
+      <comment></comment>
+      <date>28 jun 2002</date>
     </os>
   </software>
+
   <software>
     <name>JCML</name>
     <date>28 jul 2001</date>
@@ -312,9 +320,12 @@
       <maintainer>Egon Willighagen</maintainer>
       <version>1.2.6</version>
       <license>GPL</license>
+      <url></url>
+      <comment></comment>
       <date>28 jul 2001</date>
     </os>
   </software>
+
   <software>
     <name>Jmol</name>
     <date>4 dec 2001</date>
@@ -326,9 +337,12 @@
       <maintainer>Egon Willighagen, Charles Fulton, Dan Gezelter, Jack van Rooij, Christoph Steinbeck, Bradley Smith</maintainer>
       <version>1.2</version>
       <license>GPL</license>
+      <url></url>
+      <comment></comment>
       <date>4 dec 2001</date>
     </os>
   </software>
+
   <software>
     <name>KC</name>
     <date>28 jul 2001</date>
@@ -340,35 +354,45 @@
       <maintainer></maintainer>
       <version>1.05</version>
       <license></license>
+      <url></url>
+      <comment></comment>
       <date>28 jul 2001</date>
     </os>
     <os name="Other Unix">
       <maintainer></maintainer>
       <version>1.05</version>
       <license></license>
+      <url></url>
+      <comment></comment>
       <date>28 jul 2001</date>
     </os>
     <os name="Windows">
       <maintainer></maintainer>
       <version>1.05</version>
       <license></license>
+      <url></url>
+      <comment></comment>
       <date>28 jul 2001</date>
     </os>
   </software>
+
   <software>
     <name>Kemistry</name>
-    <date>4 dec 2001</date>
+    <date>18 jun 2002</date>
     <description lang="en">Kemistry is a collection of chemistry-related applications for KDE.</description>
     <description lang="fr">Kemistry est une collection de logiciels appliqués à la chimie pour KDE.</description>
     <authors>Francesco Bresciani</authors>
     <url>http://kemistry.sourceforge.net</url>
     <os name="GNU/Linux">
       <maintainer>Francesco Bresciani</maintainer>
-      <version>0.3</version>
+      <version>0.4</version>
       <license></license>
-      <date>4 dec 2001</date>
+      <url></url>
+      <comment></comment>
+      <date>20 jun 2002</date>
     </os>
   </software>
+
   <software>
     <name>KMol</name>
     <date>28 jul 2001</date>
@@ -378,11 +402,14 @@
     <url>http://www.idiom.com/~tomi/kmol.html</url>
     <os name="GNU/Linux">
       <maintainer></maintainer>
-      <version>0.2.2</version>
+      <version>0.3.2</version>
       <license>GPL</license>
+      <url></url>
+      <comment>Missing license notice in the code</comment>
       <date>28 jul 2001</date>
     </os>
   </software>
+
   <software>
     <name>KMovisto</name>
     <date>28 jul 2001</date>
@@ -394,52 +421,63 @@
       <maintainer>Mario Hoverath</maintainer>
       <version>0.2.0</version>
       <license>GPL</license>
+      <url></url>
+      <comment></comment>
       <date>28 jul 2001</date>
     </os>
   </software>
+
   <software>
     <name>Lennard</name>
     <date>28 jul 2001</date>
     <description lang="en">Nobel Gas Simulator.</description>
     <description lang="fr">Simulateur de Gaz Noble.</description>
     <authors>Jonathan Bondzie, Chuck Yeung</authors>
-    <url>http://metalab.unc.edu/pub/GNU/Linux/science/chemistry</url>
+    <url>http://www.ibiblio.org/pub/Linux/science/chemistry</url>
     <os name="GNU/Linux">
       <maintainer>Jonathan Bondzie, Chuck Yeung</maintainer>
       <version>1.1</version>
       <license>GPL</license>
+      <url></url>
+      <comment></comment>
       <date>28 jul 2001</date>
     </os>
   </software>
+<!--
   <software>
     <name>MMTK</name>
     <date>28 jul 2001</date>
     <description lang="en">The Molecular Modelling Toolkit (MMTK) is an Free Software program library for molecular simulation applications.</description>
     <description lang="fr">Le Molecular Modelling Toolkit (MMTK) est une librairie libre pour des applications en simulation moléculaire.</description>
     <authors>Konrad Hinsen</authors>
-    <url>http://dirac.cnrs-orleans.fr/MMTK</url>
+    <url>http://starship.python.net/crew/hinsen/MMTK</url>
     <os name="GNU/Linux">
       <maintainer>Konrad Hinsen</maintainer>
       <version>2.0</version>
       <license>BSD like</license>
+      <url></url>
+      <comment>Missing license notice in the code and copying file.</comment>
       <date>28 jul 2001</date>
     </os>
   </software>
+-->
   <software>
     <name>MWCalc</name>
     <date>28 jul 2001</date>
     <description lang="en">A simple but powerful molecularweight calculator.</description>
     <description lang="fr">MWCalc est un calculateur de masse moléculaire, simple et fonctionnel.</description>
     <authors>Jerome PANSANEL</authors>
-    <url>http://pansanel.multimania.com/mwcalc.html</url>
+    <url>http://savannah.gnu.org/projects/mwcalc/</url>
     <os name="GNU/Linux">
       <maintainer>Jerome PANSANEL</maintainer>
       <version>1.0.1</version>
       <license>LPGL</license>
+      <url></url>
+      <comment></comment>
       <date>28 jul 2001</date>
     </os>
   </software>
-  
+<!--  
   <software>
     <name>Moiss</name>
     <date>28 jul 2001</date>
@@ -451,9 +489,12 @@
       <maintainer>Alan Aspuru-Guzik, Dario Bressanini, John A. W. Harkless</maintainer>
       <version>0.2.7</version>
       <license>?</license>
+      <url></url>
+      <comment></comment>
       <date>28 jul 2001</date>
     </os>
   </software>
+-->
   <software>
     <name>Moldy</name>
     <date>28 jul 2001</date>
@@ -465,35 +506,45 @@
       <maintainer>Keith Refson</maintainer>
       <version>2.0</version>
       <license>GPL</license>
+      <url></url>
+      <comment></comment>
       <date>28 jul 2001</date>
     </os>
     <os name="Other Unix">
       <maintainer>Keith Refson</maintainer>
       <version>2.0</version>
       <license>GPL</license>
+      <url></url>
+      <comment></comment>
       <date>28 jul 2001</date>
     </os>
     <os name="Windows">
       <maintainer>Keith Refson</maintainer>
       <version>2.0</version>
       <license>GPL</license>
+      <url></url>
+      <comment></comment>
       <date>28 jul 2001</date>
     </os>
   </software>
+
   <software>
     <name>MOSCITO</name>
-    <date>28 jul 2001</date>
+    <date>28 jun 2002</date>
     <description lang="en">MOSCITO is designed for molecular dynamics simulations of condensed phase systems defined by classical molecular mechanics force-fields such as AMBER, OPLS, CHARMM and GROMOS.</description>
     <description lang="fr">MOSCITO a été réalisé pour la simulation de dynamique moléculaire des systèmes à phase condensée, défini par des champs de force classique en mécanique moléculaire (AMBER, OPLS, CHARMM, GROMOS, ...).</description>
     <authors>Dietmar Paschek, Alfons Geiger</authors>
     <url>http://ganter.chemie.uni-dortmund.de/~pas/moscito.html</url>
     <os name="GNU/Linux">
       <maintainer>Dietmar Paschek, Alfons Geiger</maintainer>
-      <version>3.9</version>
+      <version>4.0</version>
       <license>GPL</license>
-      <date>28 jul 2001</date>
+      <url></url>
+      <comment>Missing license note in code.</comment>
+      <date>28 jun 2002</date>
     </os>
   </software>
+
   <software>
     <name>MPQC</name>
     <date>28 jul 2001</date>
@@ -503,59 +554,81 @@
     <url>http://aros.ca.sandia.gov/~cljanss/mpqc/</url>
     <os name="GNU/Linux">
       <maintainer></maintainer>
-      <version>1.1.3</version>
-      <license></license>
+      <version>2.1.1</version>
+      <license>GPL and LGPL</license>
+      <url></url>
+      <comment></comment>
       <date>28 jul 2001</date>
     </os>
   </software>
+
   <software>
     <name>NanoCAD</name>
     <date>28 jul 2001</date>
     <description lang="en">NanoCAD uses mathematical techniques of molecular modeling to simulate the behavior of molecules on your web browser.</description>
     <description lang="fr">NanoCAD utilise des techniques mathématiques de modélisations moléculaires pour simuler le comportement de molécules dans un navigateur web.</description>
     <authors></authors>
-    <url>http://world.std.com/~wware/ncad.html</url>
+    <url>http://willware.net:8080/ncad.html</url>
     <os name="All">
-      <maintainer></maintainer>
-      <version>?</version>
-      <license></license>
+      <maintainer>Will Ware</maintainer>
+      <version>1.1</version>
+      <license>BSD like</license>
+      <url></url>
+      <comment>Missing copying file</comment>
       <date>28 jul 2001</date>
     </os>
   </software>
+
   <software>
     <name>ORAC</name>
-    <date>28 jul 2001</date>
+    <date>20 jun 2002</date>
     <description lang="en">ORAC is a program for running classical simulations of biomolecules. Simulations can be carried out in the NVE, NPT, NHP, and NVT thermodynamic ensembles.</description>
     <description lang="fr">ORAC est un programme pour effectuer des simulations classiques de biomolécules. Les simulations peuvent être réalisées dans les ensembles thermodynamiques suivant : NVE, NPT, NHP, et NVT.</description>
-    <authors></authors>
+    <authors>Massimo Marchi, P. Procacci</authors>
     <url>http://www.chim.unifi.it:8080/orac/</url>
     <os name="GNU/Linux">
-      <maintainer></maintainer>
+      <maintainer>Massimo Marchi, P. Procacci</maintainer>
       <version>4.0</version>
-      <license></license>
-      <date>28 jul 2001</date>
+      <license>GPL</license>
+      <url></url>
+      <comment>Missing license note in code.</comment>
+      <date>20 jun 2002</date>
     </os>
     <os name="Other Unix">
-      <maintainer></maintainer>
+      <maintainer>Massimo Marchi, P. Procacci</maintainer>
       <version>4.0</version>
-      <license></license>
-      <date>28 jul 2001</date>
+      <license>GPL</license>
+      <url></url>
+      <comment>Missing license note in code.</comment>
+      <date>20 jun 2002</date>
+    </os>
+    <os name="Windows">
+      <maintainer>Alessandro Pedretti</maintainer>
+      <version>4.0</version>
+      <license>GPL</license>
+      <url></url>
+      <comment>Missing license note in code.</comment>
+      <date>20 jun 2002</date>
     </os>
   </software>
+
   <software>
     <name>OSET</name>
     <date>28 jul 2001</date>
     <description lang="en">Computer-Assisted Organic Synthesis (CAOS) program for use in the teaching of Organic Chemistry, and retrosynthetic analysis in particular.</description>
     <description lang="fr"> OSET est un programme de Synthèse Organique Assistée par Ordinateur (SOAO) pour l'enseignement de la chimie organique, et l'analyse rétrosynthétique en particulier.</description>
     <authors></authors>
-    <url>http://litio.pqim.unam.mx/caos/</url>
+    <url>http://litio.pquim.unam.mx/caos/</url>
     <os name="All">
       <maintainer></maintainer>
       <version>?</version>
-      <license></license>
+      <license>GPL</license>
+      <url></url>
+      <comment>Missing license note in code and copying file</comment>
       <date>28 jul 2001</date>
     </os>
   </software>
+
   <software>
     <name>VASP Viewer</name>
     <date>28 jul 2001</date>
@@ -564,107 +637,107 @@
     <authors></authors>
     <url>http://vaspview.sourceforge.net/</url>
     <os name="GNU/Linux">
-      <maintainer></maintainer>
+      <maintainer>Timothy Terriberry</maintainer>
       <version>1.0.5</version>
-      <license></license>
+      <license>GPL</license>
+      <url></url>
+      <comment></comment>
       <date>28 jul 2001</date>
     </os>
     <os name="Windows">
-      <maintainer></maintainer>
+      <maintainer>Timothy Terriberry</maintainer>
       <version>1.0.5</version>
-      <license></license>
+      <license>GPL</license>
+      <url></url>
+      <comment></comment>
       <date>28 jul 2001</date>
     </os>
   </software>
+
   <software>
     <name>XDrawChem</name>
-    <date>4 dec 2001</date>
+    <date>4 jun 2002</date>
     <description lang="en">XDrawChem is a two-dimensional molecule drawing program for Unix operating systems. It is similar in functionality to other molecule drawing programs such as ChemDraw (TM, CambridgeSoft). It can read and write MDL Molfiles, and read ChemDraw text and binary files, to allow sharing between XDrawChem and other chemistry applications. XDrawChem has been tested on GNU/Linux, SGI IRIX 6.5, and Sun Solaris.</description>
     <description lang="fr">XDrawChem est un programme de dessins moléculaires en 2D pour les systèmes Unix et clones. Il a des fonctionnalités similaires à d'autres logiciels tel que ChemDraw (TM, CambridgeSoft). Il peut lire les file MDL Mol, ChemDraw (texte et binaire), permettant ainsi l'échange entre XDrawChem et d'autres applications en chimie.</description>
     <authors>Bryan Herger</authors>
     <url>http://www.prism.gatech.edu/~gte067k/xdrawchem</url>
     <os name="GNU/Linux">
       <maintainer>Bryan Herger</maintainer>
-      <version>0.99.6</version>
-      <license>BSD like</license>
-      <date>4 dec 2001</date>
+      <version>1.3.2</version>
+      <license>GPL</license>
+      <url></url>
+      <comment>Missing copyright and license note in some code</comment>
+      <date>4 jun 2002</date>
     </os>
     <os name="Other Unix">
       <maintainer>Bryan Herger</maintainer>
-      <version>0.99.6</version>
-      <license>BSD like</license>
-      <date>4 dec 2001</date>
+      <version>1.3.2</version>
+      <license>GPL</license>
+      <url></url>
+      <comment>Missing copyright and license note in some code</comment>
+      <date>4 jun 2002</date>
     </os>
     <os name="Windows">
       <maintainer>Bryan Herger</maintainer>
-      <version>0.99.6</version>
-      <license>BSD like</license>
-      <date>4 dec 2001</date>
+      <version>1.3.2</version>
+      <license>GPL</license>
+      <url></url>
+      <comment>Missing copyright and license note in some code</comment>
+      <date>4 jun 2002</date>     
     </os>
   </software>
+
   <software>
     <name>XMakeMol</name>
-    <date>4 dec 2001</date>
+    <date>4 jun 2002</date>
     <description lang="en">XMakemol is a program written for UN*X operating systems in ANSI C using the X, Xt and Motif libraries. It can be use to view and manipulate atomic and molecular data given in xyz format.</description>
     <description lang="fr">XMakemol est un programme écrit pour des systèmes de type UN*X en C (Il utilise les librairies X, Xt et Motif). Il permet de voire et manipuler les molécules entrées en format xyz.</description>
     <authors></authors>
     <url>http://vegemite.chem.nottingham.ac.uk/~xmakemol</url>
     <os name="GNU/Linux">
       <maintainer></maintainer>
-      <version>5.02</version>
-      <license>GPL 2</license>
-      <date>4 dec 2001</date>
+      <version>5.04</version>
+      <license>GPL</license>
+      <url></url>
+      <comment></comment>
+      <date>4 jun 2002</date>
     </os>
   </software>
+<!--
   <software>
     <name>xyz2rgb</name>
     <date>28 jul 2001</date>
     <description lang="en">xyz2rgb makes pretty pictures and movies of molecules. It expects input in the form of an XYZ file, one of the file formats frequently used by computational chemists. As output, it produces one or more line-interlaced RGB files.</description>
     <description lang="fr">xyz2rgb réalise des images de bonnes qualités, ainsi que des animationsde molécules. Il lit les fichiers en XYZ et sort des ficheirs en RGB.</description>
     <authors></authors>
-    <url>http://world.std.com/~wware/xyz2rgb.html</url>
+    <url>http://wware.net:8080/xyz2rgb.html</url>
     <os name="All">
       <maintainer></maintainer>
       <version>?</version>
       <license></license>
+      <url></url>
+      <comment></comment>
       <date>28 jul 2001</date>
     </os>
   </software>
+-->
   <software>
     <name>PyMOL</name>
-    <date>16 jan 2002</date>
+    <date>16 jun 2002</date>
     <description lang="en">PyMOL is a molecular graphics system with an  embedded Python interpreter designed for real-time visualization and rapid  generation of high-quality molecular graphics images and animations.</description>
     <description lang="fr">PyMOL est un système de représentations de molécules en 3D, écrit en Python. Il permet la visualisation en temps réel, ainsi que la génération d'images et d'animations de hautes qualités.</description>
     <authors>Warren DeLano, Ralf Grosse-Kunstleve</authors>
     <url>http://pymol.sourceforge.net</url>
     <os name="All (Python)">
       <maintainer>Warren DeLano, Ralf Grosse-Kunstleve</maintainer>
-      <version>0.73</version>
+      <version>0.82</version>
       <license>BSD like</license>
+      <url></url>
+      <comment>Missing license note in code.</comment>
       <date>8 jan 2002</date>
     </os>
   </software>
-  <software>
-    <name>ORAC</name>
-    <date>16 jan 2002</date>
-    <description lang="en">ORAC is a program for running classical simulations of biomolecules. Simulations can be carried out in the NVE, NPT, NHP, and NVT thermodynamic ensembles.</description>
-    <description lang="fr">ORAC est un programme qui permet d'effectuer des simulations classiques de biomolécules. Elles peuvent être mené dans des ensembles thermodynamiques du type NVE, NPT, NHP, et NVT.</description>
-    <authors>Massimo Marchi, P. Procacci</authors>
-    <url>http://www.chim.unifi.it:8080/orac/</url>
-    <os name="Unix">
-      <maintainer>Massimo Marchi, P. Procacci</maintainer>
-      <version>4.0</version>
-      <license>GPL</license>
-      <date>14 jan 2002</date>
-    </os>
-    <os name="Windows">
-      <date>16 jan 2002</date>
-      <maintainer>Alessandro Pedretti</maintainer>
-      <version>4.0</version>
-      <license>GPL</license>
-      <date>14 jan 2002</date>
-    </os>
-  </software>
+
   <software>
     <name>BigMAC</name>
     <date>16 jan 2002</date>
@@ -676,57 +749,54 @@
       <maintainer>Thijs J. H. Vlugt, Berend Smit</maintainer>
       <version>1.0</version>
       <license>GPL</license>
+      <url></url>
+      <comment>Missing license and copyright note in code.</comment>
       <date>14 jan 2002</date>
     </os>
   </software>
+
   <software>
     <name>2D-Numerical</name>
     <date>16 jan 2002</date>
     <description lang="en">A numerical Hartree-Fock program for diatomic molecules.</description>
     <description lang="fr">Un programme numérique Hartree-Fock pour des molécules diatomiques.</description>
     <authors>Jacek Kobus, Leif Laaksonen, Dage Sundholm</authors>
-    <url>http://www.csc.fi/~laaksone/Num2d.html</url>
+    <url>http://staff.csc.fi/~laaksone/num2d.html</url>
     <os name="GNU/Linux">
       <maintainer>Jacek Kobus, Leif Laaksonen, Dage Sundholm</maintainer>
       <version>?</version>
       <license>GPL</license>
+      <url></url>
+      <comment>Missing license note in code.</comment>
       <date>16 jan 2002</date>
     </os>
     <os name="Windows">
       <maintainer>Jacek Kobus, Leif Laaksonen, Dage Sundholm</maintainer>
       <version>?</version>
       <license>GPL</license>
+      <url></url>
+      <comment>Missing license note in code.</comment>
       <date>16 jan 2002</date>
     </os>
   </software>
+
   <software>
     <name>Ballroom</name>
-    <date>16 jan 2002</date>
+    <date>16 jun 2002</date>
     <description lang="en">BallRoom is a visualization tool for set of particles. It displays particles as balls (no sticks here), and uses a representation projected on two dimensions (no real 3D features like lights, shadows).</description>
     <description lang="fr">BallRoom est un outil de visualisation de particules. Il affiche des balles (sans batons), et utilise une représentation projetée en 2D (Ce n'est pas de la 3D réelle).</description>
     <authors>Francesco D. Di Tolla, Furio Ercolessi, Erio Tosatti</authors>
     <url>http://www.sissa.it/furio/ballroom.html</url>
     <os name="Unix">
       <maintainer>Francesco D. Di Tolla, Furio Ercolessi, Erio Tosatti</maintainer>
-      <version>7.2</version>
+      <version>7.4</version>
       <license>GPL</license>
-      <date>16 jan 2002</date>
+      <url></url>
+      <comment>Missing license note in code.</comment>
+      <date>16 jun 2002</date>
     </os>
   </software>
-  <software>
-    <name>NAB</name>
-    <date>16 jan 2002</date>
-    <description lang="en">Generation of Models for "Unusual" DNA and RNA: A Computer Language for Structural Exploration.</description>
-    <description lang="fr">Génération de modèle pour des ADN et ARN 'inhabituels': Un langage informatique pour l'exploration structrurale.</description>
-    <authors>Tom Macke, David A. Case</authors>
-    <url>http://www.scripps.edu/case/casegr-sh-2.2.html</url>
-    <os name="Unix">
-      <maintainer>Tom Macke, David A. Case</maintainer>
-      <version>4.3.2</version>
-      <license>GPL</license>
-      <date>16 jan 2002</date>
-    </os>
-  </software>
+
   <software>
     <name>B</name>
     <date>16 jan 2002</date>
@@ -738,9 +808,12 @@
       <maintainer>N. B. White</maintainer>
       <version>1.0</version>
       <license>GPL</license>
+      <url></url>
+      <comment>No license or copyright note in code</comment>
       <date>16 jan 2002</date>
     </os>
   </software>
+
   <software>
     <name>OpenBabel</name>
     <date>6 feb 2002</date>
@@ -752,14 +825,17 @@
       <maintainer>Michael Banck, Geoff Hutchison</maintainer>
       <version>1.99</version>
       <license>GPL</license>
+      <url></url>
+      <comment></comment>
       <date>6 feb 2002</date>
     </os>
     <os name="Windows">
       <maintainer>Michael Banck, Geoff Hutchison</maintainer>
       <version>1.99</version>
       <license>GPL</license>
+      <url></url>
+      <comment></comment>
       <date>6 feb 2002</date>
     </os>
   </software>
--->
 </softliste>

@@ -83,7 +83,7 @@
       <!-- Past events -->
       <xsl:for-each select="/html/set/event
         [translate (@end, '-', '') &lt; translate ($today, '-', '')]">
-        <xsl:sort select="@start" order="descending" />
+        <xsl:sort select="@end" order="descending" />
         <xsl:call-template name="event">
           <xsl:with-param name="header">past</xsl:with-param>
         </xsl:call-template>

@@ -46,7 +46,7 @@
                        <option><xsl:attribute name="value">http://france.new.fsfeurope.org<xsl:value-of select="/buildinfo/@filename" />.<xsl:value-of select="/buildinfo/@language" />.html</xsl:attribute>France</option>
 
 <option><xsl:attribute name="value">http://germany.new.fsfeurope.org<xsl:value-of select="/buildinfo/@filename" />.<xsl:value-of select="/buildinfo/@language" />.html</xsl:attribute>Germany</option>
-                     </select><br />
+                     </select><br /><br />
 
                      <input type="submit" name="submit"><xsl:attribute name="value"><xsl:value-of select="/buildinfo/textset/text[@id='selectgo']" /></xsl:attribute></input>
                    </form>

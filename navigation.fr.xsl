@@ -53,8 +53,8 @@
 	    <a class="TopTitle">Free Software - l'entreprise et l'individu sur un pied d'égalité</a>
 	  </td>
 	  <td align="right" valign="top" class="TopBody">
-	    <a href="{$fsfeurope}/documents/freesoftware.fr.html" class="T2">Qu'est-ce que le Logiciel Libre?</a><br/>
-	    <a href="{$fsfeurope}/documents/gnuproject.fr.html" class="T2">Qu'est-ce que le Projet GNU?</a><br/>
+	    <a href="{$fsfeurope}/documents/freesoftware.fr.html" class="T2">Qu'est-ce&nbsp;quele&nbsp;Logiciel&nbsp;Libre?</a><br/>
+	    <a href="{$fsfeurope}/documents/gnuproject.fr.html" class="T2">Qu'est-ce&nbsp;que&nbsp;le&nbsp;Projet&nbsp;GNU?</a><br/>
 	  </td>
 	</tr>
     </table>

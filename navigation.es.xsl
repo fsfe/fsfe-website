@@ -138,11 +138,12 @@
             </tr>
             <tr>
               <td class="TopBody" align="right">
-		    <a href="http://www.affs.org.uk">AFFS</a><br />
+		    <a href="http://www.affs.org.uk/">AFFS</a><br />
 		    <a href="http://www.ansol.org/">ANSOL</a><br />
                 <a href="http://www.april.org/">APRIL</a><br />
-                <a href="http://www.softwarelibero.it">AsSoLi</a><br />
-		<a href="http://www.ffs.or.at">FFS</a><br />
+                <a href="http://www.softwarelibero.it/">AsSoLi</a><br />
+		<a href="http://www.ffii.org/">FFII</a><br />
+		<a href="http://www.ffs.or.at/">FFS</a><br />
                 <a href="http://www.ofset.org/">OFSET</a><br />
             </td>
             </tr>

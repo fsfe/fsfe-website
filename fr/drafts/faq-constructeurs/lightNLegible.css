@@ -15,6 +15,9 @@ body {
 }
 
 a:link { 
+	/* SteelBlue : AFUL - APRIL color */
+	/* color: #4682b4; */
+	/* standard blue link color */
 	color: #0000ff;
 	/* background-color: inherit; */
 } 
@@ -44,8 +47,9 @@ h1, h2, h3, h4, h5, h6, th, dt, caption	{
     font-family: 'Trebuchet MS', Verdana, 'Myriad Web', Syntax, sans-serif;
 }
 
-h1 { 
-	color: #ffb685;
+h1 {
+	/* SteelBlue : AFUL - APRIL color */
+	color: #4682b4;
 	/* background-color: inherit; */
 }
 

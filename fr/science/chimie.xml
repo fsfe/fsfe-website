@@ -838,4 +838,54 @@
       <date>6 feb 2002</date>
     </os>
   </software>
+  <software>
+    <name>PolyXmass</name>
+    <date>3 jul 2002</date>
+    <description lang="en">This program is a framework for doing mass spectrometric data analysis/prediction on a variety of polymers.</description>
+    <description lang="fr">Ce programme est réalisé pour faire de l'analyse/prédiction de spectres de masse sur une multitude de polymères.</description>
+    <authors>Filippo Rusconi</authors>
+    <url>http://www.polyxmass.org/polyXmass/html/index.html</url>
+    <os name="Linux">
+      <maintainer>Filippo Rusconi</maintainer>
+      <version>0.09</version>
+      <license>GPL</license>
+      <url>http://www.polyxmass.org/polyXmass/html/polyxmass/downloads/polyxmass-downloads.html</url>
+      <comment>Copyright and license notice in each source file</comment>
+      <date>3 jul 2002</date>
+    </os>
+  </software>
+  <software>
+    <name>JOELib</name>
+    <date>3 jul 2002</date>
+    <description lang="en">JOELib is a computational chemistry library which supports SMARTS substructure search, descriptorcalculation, processing/filtering pipes, conversion of different chemical file formats ... 100% pure Java ... and interfaces to external programs are available</description>
+    <description lang="fr">JOELib est une bibliothèque de chimie computationelle, avec le support de recherche de substructures SMARTS, calcul de description, tuyau de calcul/filtrage, conversion dans de nombreux formats de fichiers.</description>
+    <authors>Joerg K. Wegner</authors>
+    <url>http://joelib.sourceforge.net/</url>
+    <os name="All">
+      <maintainer>Joerg K. Wegner</maintainer>
+      <version>1.2</version>
+      <license>GPL</license>
+      <url>http://sourceforge.net/project/showfiles.php?group_id=39708&release_id=73746</url>
+      <comment>Copyright and license notice in each source file</comment>
+      <date>3 jul 2002</date>
+    </os>
+  </software>
+<!-- Template
+  <software>
+    <name></name>
+    <date></date>
+    <description lang="en"></description>
+    <description lang="fr"></description>
+    <authors></authors>
+    <url></url>
+    <os name="">
+      <maintainer></maintainer>
+      <version></version>
+      <license></license>
+      <url></url>
+      <comment></comment>
+      <date></date>
+    </os>
+  </software>
+-->
 </softliste>

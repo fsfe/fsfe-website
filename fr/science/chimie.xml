@@ -138,10 +138,12 @@
       <name>GNU/Linux</name>
       <maintainer>David J. Dooling</maintainer>
       <version>?</version>
-      <licence></licence>
-      <date>28 jul 2001</date>
+      <licence>Claim that it will be released under the GNU GPL</licence>
+      <url>http://sourceforge.net/projects/chimp/</url>
+      <date>22 apr 2002</date>
     </os>
   </software>
+<!--
   <software>
     <name>CRK</name>
     <date>28 jul 2001</date>
@@ -154,9 +156,12 @@
       <maintainer>Alex M. Clark</maintainer>
       <version>1.04</version>
       <licence>GPL</licence>
-      <date>28 jul 2001</date>
+      <url>http://crk.sourceforge.net/downloads/CRK.tar.gz</url>
+      <comment>Missing copy of the GNU GPL, missing license notice in most files, missing copyright notice in all files (copyleft instead of copyright)</comment>
+      <date>22 apr 2002</date>
     </os>
   </software>
+-->
   <software>
     <name>DND</name>
     <date>28 nov 2001</date>

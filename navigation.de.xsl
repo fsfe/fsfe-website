@@ -78,6 +78,8 @@
                     class="T2">Contact</a><br/>
               <a href="{$fsfeurope}/background.html"
                    class="T2">Background</a><br/>
+              <a href="{$fsfeurope}/mailman/index.html"
+                   class="T2">Mailing Lists</a><br/>
               <a href="{$fsfeurope}/press/index.html"
                    class="T2">Press section</a><br/>
               <a href="{$fsfeurope}/gbn/index.html"
@@ -91,8 +93,6 @@
               <td align="right"><br/>
               <a href="http://savannah.gnu.org/projects/fsfe/"
                    class="T2">Project Summary</a><br/>
-              <a href="http://mailman.fsfeurope.org/mailman/listinfo/"
-                   class="T2">Mailing Lists</a><br/>
               <a href="http://www.gnu.org/server/standards/"
                    class="T2">GNU Guide</a><br/>
               <a href="http://savannah.gnu.org/pm/task.php?group_id=53"

@@ -14,8 +14,6 @@
     </xsl:copy>
   </xsl:template>
 
-  <xsl:template match="/html/text" />
-
   <xsl:template match="/html/body">
     <body>
       <xsl:apply-templates />
@@ -28,7 +26,7 @@
       <ul>
        <xsl:apply-templates select="/html/set/isig" />
       </ul></ul>
-
+      <xsl:apply-templates select="/html/text/footer" />
     </body>
   </xsl:template>
 
@@ -40,8 +38,9 @@
 
   <xsl:template match="osig"><xsl:apply-templates /></xsl:template>
   <xsl:template match="isig"><xsl:apply-templates /></xsl:template>
+  <xsl:template match="footer"><xsl:apply-templates /></xsl:template>
 
-  <xsl:template match="set" />
-  <xsl:template match="text" />
+  <xsl:template match="/html/set" />
+  <xsl:template match="/html/text" />
 </xsl:stylesheet>
 

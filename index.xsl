@@ -71,7 +71,8 @@
               <h2><xsl:value-of select="/html/text[@id='news']" /></h2>
             </center>
             <table class="news">
-              <xsl:for-each select="/html/set/news">
+              <xsl:for-each select="/html/set/news
+                [translate (@date, '-', '') &lt;= translate ($today, '-', '')]">
                 <xsl:sort select="@date" order="descending" />
                 <xsl:if test="position() &lt; 6">
                   <xsl:call-template name="news" />

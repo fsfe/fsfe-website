@@ -20,13 +20,11 @@
 XSLTPROC = sabcmd
 
 XSLTOPTS = \
-	'$$fsfeurope=$(FSFEUROPE)' \
-	'$$fsf=$(FSF)' \
 	'$$gnu=$(GNU)'
 
-ENPAGES = $(shell find * -regex '.*\.en\.xhtml' -print | sed "s/xhtml$$/html/")
+ENPAGES = $(shell find * -regex '.*\.en\.xhtml' -print | sed "s/xhtml$$/php/")
 
-FRPAGES = $(shell find * -regex '.*\.fr\.xhtml' -print | sed "s/xhtml$$/html/")
+FRPAGES = $(shell find * -regex '.*\.fr\.xhtml' -print | sed "s/xhtml$$/php/")
 
 
 RSYNC=/usr/bin/rsync
@@ -36,7 +34,7 @@ RSSH=-e ssh
 all: $(ENPAGES) $(FRPAGES)
 
 
-$(ENPAGES) $(FRPAGES): %.html: %.xhtml fsfe-fr.xsl navigation.en.xsl navigation.fr.xsl
+$(ENPAGES) $(FRPAGES): %.php: %.xhtml fsfe-fr.xsl navigation.en.xsl navigation.fr.xsl
 	@echo "Building $@ ..."; \
 	path=$< ; \
 	base=`expr $$path : '\(.*\).xhtml'` ; \
@@ -46,17 +44,14 @@ $(ENPAGES) $(FRPAGES): %.html: %.xhtml fsfe-fr.xsl navigation.en.xsl navigation.
 	$(XSLTPROC) fsfe-fr.xsl $$path $(XSLTOPTS) \
 		'$$fsffrance='$$root '$$filebase='$$filebase '$$path='$$path | \
 		perl -MFile::Copy -p -e '$$| = 1; copy("'$$dir'/$$1", \*STDOUT) if(/\#include virtual=\"(.*?)\"/); s/\$$//g if(/\$$''Date:/);' \
-		> $$base.html-temp && \
-		( cat $$base.html-temp | \
-		  perl -p -e '$$| = 1; s/\$$//g if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.html \
+		> $$base.php-temp && \
+		( cat $$base.php-temp | \
+		  perl -p -e '$$| = 1; s/\$$//g if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.php \
 		) ; \
-	rm -f $$base.html-temp; \
-	base=`expr $$path : '\(.*\)....xhtml'` ; \
-	lang=`expr $$path : '.*\(..\).xhtml'` ; \
-	filebase=`basename $$base` ; \
-	mv $@ $$dir/$$filebase.$$lang.php ; \
+	rm -f $$base.html $$base.php-temp; \
+	ln -s $$base.php $$base.html
 
 # remove html files for which an xhtml version exists (exclude fr/)
 clean:
-	rm -f $(NEWS) $(ENPAGES) $(FRPAGES)
+	rm -f $(ENPAGES) $(FRPAGES)
 

@@ -339,7 +339,7 @@ For example Windows Microsoft is a software distributed under a non-free license
 	</qandaentry>
 
 	<qandaentry>
-	  <question>
+	  <question id="specifications">
 	    <para>
 	      Can I avoid releasing the specifications of my product ?
 	    </para>
@@ -428,7 +428,7 @@ For example Windows Microsoft is a software distributed under a non-free license
 	</qandaentry>
 
 	<qandaentry>
-	  <question>
+	  <question id="expectedAdvantages">
 	    <para>
               What advantages are to be expected from &LL;, from &OS; ?
 	    </para>
@@ -518,7 +518,7 @@ For example Windows Microsoft is a software distributed under a non-free license
 	</qandaentry>
 
 	<qandaentry>
-	  <question>
+	  <question id="notCompetent">
 	    <para>
 	      My developers are not competent with Linux. What should I do ?
 	    </para>

@@ -411,7 +411,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	</qandaentry>
 
 	<qandaentry>
-	  <question>
+	  <question id="specifications">
 	    <para>
 	      Puis-je ne pas diffuser les spécifications de mon produit ?
 	    </para>
@@ -531,7 +531,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	</qandaentry>
 
 	<qandaentry>
-	  <question>
+	  <question id="expectedAdvantages">
 	    <para>
 	      Quels sont les avantages des &LLs;, de l'&OS; ?
 	    </para>
@@ -623,7 +623,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	</qandaentry>
 
 	<qandaentry>
-	  <question>
+	  <question id="notCompetent">
 	    <para>
 	      Mes développeurs ne sont pas formés à Linux. Que faire ?
 	    </para>

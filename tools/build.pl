@@ -49,7 +49,6 @@ our %countries = (
 #
 our %languages = (
   cs => 'Cesky',
-  da => 'Dansk',
   de => 'Deutsch',
   el => '&#917;&#955;&#955;&#951;&#957;&#953;&#954;&#940;',
   en => 'English',

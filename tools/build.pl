@@ -490,7 +490,7 @@ sub clone_document {
     # we maintain a local copy of it, so it doesn't need to go browsing
     # www.w3.org for -every- parsing.
     #
-    # $textsource =~ s|http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd|tools/xhtml1-transitional.dtd|g;
+    $textsource =~ s|http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd|tools/xhtml1-transitional.dtd|g;
     $parser->load_ext_dtd(0);
     $parser->recover(1);
 

@@ -77,7 +77,7 @@
             <tr>
               <td align="right"><br/>
               <a href="{$fsfeurope}/index.html" class="T2">Home</a><br/>
-              <a href="{$fsfeurope}/contact/index.html"
+              <a href="{$fsfeurope}/contact/index.de.html"
                     class="T2">Contact</a><br/>
               <a href="{$fsfeurope}/background.html"
                    class="T2">Background</a><br/>

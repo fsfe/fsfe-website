@@ -268,6 +268,8 @@ while (my ($file, $langs) = each %bases) {
                       $files{$1} = $2;
                     } elsif ($2 eq $lang) {
                       $files{$1} = $2;
+                    } elsif (!exists $files{$1}) {
+                      $files{$1} = $2;
                     }
                  }
               }
@@ -283,6 +285,7 @@ while (my ($file, $langs) = each %bases) {
           my $auto_data = $sourcedoc->createElement("set");
 
           while (my ($base, $l) = each %files) {
+              print STDERR "Loading $base.$l.xml" if $opts{d};
               my $source_data = $parser->parse_file("$base.$l.xml");
               foreach ($source_data->documentElement->childNodes) {
                  my $c = $_->cloneNode(1);

@@ -134,7 +134,6 @@
                   <a href="{$fsfeurope}/education/education.fr.html" class="T2">Éducation</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
-              <a href="http://savannah.gnu.org/pm/?group_id=53" class="T2">Tâches</a><br />
               <xsl:choose>
                 <xsl:when test="$path='news/news.fr.xhtml'">Nouvelles</xsl:when>
                 <xsl:otherwise>

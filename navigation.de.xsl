@@ -135,7 +135,6 @@
                   <a href="{$fsfeurope}/education/education.de.html" class="T2">Bildung</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
-              <a href="http://savannah.gnu.org/pm/?group_id=53" class="T2">Aufgaben</a><br />
               <!--<xsl:choose>
                 <xsl:when test="$path='news/news.de.xhtml'">Neuigkeiten</xsl:when>
                 <xsl:otherwise>
@@ -176,11 +175,11 @@
             <tr>
               <td align="right"><br/>
               <a href="http://savannah.gnu.org/projects/fsfe/"
-                   class="T2">Project Summary</a><br/>
+                   class="T2">Projektübersicht</a><br/>
               <a href="http://www.gnu.org/server/standards/"
                    class="T2">GNU Guide</a><br/>
               <a href="http://savannah.gnu.org/pm/?group_id=53"
-                   class="T2">Tasks</a><br/>
+                   class="T2">Aufgaben</a><br/>
               <br/></td>
             </tr>
           </table>

@@ -135,7 +135,6 @@ class="T2">Cosa&nbsp;e'&nbsp;il&nbsp;Progetto&nbsp;GNU?</a><br/>
 	 </xsl:otherwise>
 	</xsl:choose><br/>
 
-	<a href="http://savannah.gnu.org/pm/?group_id=53" class="T2">Lavori in corso</a><br />
 
 	<xsl:choose>
 	 <xsl:when test="$path='news/news.en.xhtml'">Novita'</xsl:when>

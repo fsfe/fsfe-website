@@ -52,18 +52,23 @@ Old version of the XML DTD, before it became endorsed by OASIS
       <holder>APRIL</holder>
       -->
     </copyright>
-<!--
+
     <legalnotice>
       <para>
 	Copyright (C) 2001 AFUL, APRIL
       </para>
       <para>
-	La reproduction exacte et la distribution intégrale de cet article sont permises sur n'importe quel support d'archivage, pourvu que cette notice soit préservée.
+        Permission is granted to copy, distribute and/or modify this
+        document under the terms of the GNU Free Documentation
+        License, Version 1.1 or any later version published by the
+        Free Software Foundation; with no Invariant Sections, with no
+        Front-Cover Texts, and with the no Back-Cover Texts.  A copy
+        of the license is included in the section entitled "GNU Free
+        Documentation License".
       </para>
     </legalnotice>
--->
-  </articleinfo>
 
+  </articleinfo>
 
 
   <sect1>
@@ -130,8 +135,8 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	      (dont une <ulink url="http://opensource.org/licenses">liste est disponible sur le site de l'Open Source Initiative</ulink>).
 	    </para>
 	    <para condition="long">
-	      Les licences Logiciel Libre correspondent aux critères explicités
-	      dans la définition du Logiciel Libre. Les licences Open Source
+	      Les licences &LL; correspondent aux critères explicités
+	      dans la définition du &LL;. Les licences Open Source
 	      correspondent aux critères explicités dans la définition de l'Open
 	      Source.
 	    </para>
@@ -319,10 +324,8 @@ Old version of the XML DTD, before it became endorsed by OASIS
 		    elles cachées dans des modules exclusifs figés qui n'ont 
 		    pas besoin d'évoluer avec le reste du système.
 		    Cela peut permettre une solution satisfaisante dans le 
-		    cas ou une partie de la 
-		    <quote>propriété intellectuelle</quote> du produit provient
-		    de fournisseurs tiers qui exigent que leur partie soit 
-		    diffusée sous une licence non-libre.
+		    cas ou une partie du produit provient
+		    de fournisseurs tiers sous une licence non-libre.
 		    C'est le choix fait notamment par certains constructeurs 
 		    de cartes graphiques.
 		  </para>
@@ -373,8 +376,9 @@ Old version of the XML DTD, before it became endorsed by OASIS
 		</listitem>
 		<listitem>
 		  <para>
-		    Donc les pilotes (drivers) ne seront pas disponibles lors 
-		    du lancement commercial.
+		    Donc les pilotes (drivers) ne seront peut-être pas
+		    disponibles lors d'une échance importante pour
+		    votre produit (salon, lancement commercial etc.).
 		  </para>
 		</listitem>
 		<listitem>
@@ -434,7 +438,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 		</listitem>
 		<listitem>
 		  <para>
-		    un co&ucirc;t de développement supérieur
+		    un coût de développement supérieur
 		  </para>
 		</listitem>
 		<listitem>
@@ -714,7 +718,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	      les licences BSD modifiées et la Mozilla Public License (MPL).
 	    </para>
 	    <para condition="long">
-	      En règle général on préférera toujours la GPL lorsque rien ne s'y
+	      En règle générale on préférera toujours la GPL lorsque rien ne s'y
 	      oppose.
 	      Si des contraintes indépendantes de votre volonté 
 	      rendent ce choix impossible, le mieux est de contacter les 
@@ -762,7 +766,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	      Lexmark, NVidia, Olitec.
 	      Ces constructeurs satisfont un grand nombre de consommateurs.
 	      Mais en se privant de l'aide des développeurs de la communauté du
-	      Libre et de l'&OS;, ces constructeurs doivent fournir un effort
+	      &LL; et de l'&OS;, ces constructeurs doivent fournir un effort
 	      plus important pour que leurs pilotes restent à jour avec les 
 	      nouvelles versions des systèmes d'exploitation.
 	    </para>
@@ -917,7 +921,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	</listitem>
 	<listitem>
 	  <para>
-	    diminue les co&ucirc;ts de maintenance du projet
+	    diminue les coûts de maintenance du projet
 	  </para>
 	</listitem>
 	<listitem>
@@ -936,6 +940,30 @@ Old version of the XML DTD, before it became endorsed by OASIS
     </para>
   </sect1>
 
+  <sect1>
+    <title>History</title>
+    <para>
+      Le titre de cette section est en anglais car il implique certaines
+      obligations imposées par la license GNU FDL. 
+      <itemizedlist>
+	<listitem>
+	  <para>
+	    Version initiale par Marc-Aurèle Darche <email>ma.darche@free.fr</email> et ??.
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Modifications conjointes par AFUL, APRIL, FSF et
+	    contributeurs sur les listes de diffusions
+	    <email>april@april.org</email>,
+	    <email>aful@aful.org</email> et
+	    <email>fsfe-france@gnu.org</email> coordonées par
+	    Marc-Aurèle Darche <email>ma.darche@free.fr</email>.
+	  </para>
+	</listitem>
+      </itemizedlist>
+    </para>
+  </sect1>
 
 
   <sect1>

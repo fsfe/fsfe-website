@@ -38,9 +38,13 @@ NEWS_COMPLETE = news/news-bytes.fr.xhtml news/news-bytes.en.xhtml
 NEWS_LATEST = news/news-bytes-latest.fr.xhtml news/news-bytes-latest.en.xhtml
 NEWS = $(NEWS_COMPLETE) $(NEWS_LATEST)
 
-all: news $(ENPAGES) $(FRPAGES) 
+SCIENCE = science/documentation.fr.xhtml science/documentation.en.xhtml science/chimie.fr.xhtml science/chimie.en.xhtml
+
+all: news $(ENPAGES) $(FRPAGES) science
 
 news: $(NEWS)
+
+science: $(SCIENCE)
 
 donations/formulaire.fr.html: donations/formulaire.fr.xml
 donations/*.fr.html: donations/menu.fr.xhtml

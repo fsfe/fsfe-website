@@ -184,12 +184,15 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	      soit aux licences &OS;
 	      (dont une <ulink url="http://opensource.org/licenses">liste est disponible sur le site de l'&OSI;</ulink>).
 	    </para>
-	    <para condition="long">
-	      Les licences &LL; correspondent aux critères explicités
-	      dans la définition du &LL;. Les licences Open Source
-	      correspondent aux critères explicités dans la définition de l'Open
-	      Source.
-	    </para>
+            <para condition="long">
+              Les licences &LL; correspondent aux critères explicités dans 
+	      <ulink url="http://www.fsf.org/philosophy/free-sw.html">
+		la définition du &LL;</ulink>.
+	      Les licences &OS; correspondent aux critères explicités dans 
+	      <ulink url="http://opensource.org/docs/definition.html">
+		la définition de l'&OS;</ulink>.
+            </para>
+	    <!--
 	    <para condition="long">
 	      Bien qu'elles se recoupent en grande partie,
 	      ces listes ne sont pas strictement identiques,
@@ -210,6 +213,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	      Pour cette raison ces deux listes sont une référence très 
 	      précieuse.
 	    </para>
+	    -->
 	  </answer>
 	</qandaentry>
 

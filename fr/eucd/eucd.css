@@ -58,3 +58,9 @@ p {
 p.passe { 
           color: #c0C0C0;
  }
+
+td.titre{ font-weight: bold;
+
+ }
+
+td.valeur {     font-weight: normal; }

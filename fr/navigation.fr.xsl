@@ -92,9 +92,9 @@
                     </xsl:choose><br />
 		    <a href="http://www.fsfeurope.org/law/law.fr.html" class="T2">Protéger le logiciel libre</a><br />
 		    <xsl:choose>
-                       <xsl:when test="$path='pressreview/collecte.fr.xhtml'">Revue de presse</xsl:when>
+                       <xsl:when test="$path='collecte.fr.xhtml'">Revue de presse</xsl:when>
                        <xsl:otherwise>
-                          <a href="{$fsffrance}pressreview/collecte.fr.html" class="T2">Revue de presse</a>
+                          <a href="{$fsffrance}/collecte.fr.html" class="T2">Revue de presse</a>
                        </xsl:otherwise>
                     </xsl:choose><br />
 	          </td>

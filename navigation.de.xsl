@@ -71,8 +71,17 @@
 	<!-- Menu column. On the right to be Lynx friendly.  -->
 	<td>&nbsp;</td>
 	<td valign="top" class="TopBody">
-          <table summary="" width="150" border="0" cellspacing="0"
-          cellpadding="4">
+		<table summary="" width="150" border="0" cellspacing="0" cellpadding="4">
+			<tr>
+				<td class="TopTitle" align="center">Projects</td>
+			</tr>
+			<tr>
+				<td class="TopBody" align="right">
+					<a href="{$fsfeurope}/law/law.de.html" class="T2">Freie Software sichern</a><br/>
+					<a href="{$fsfeurope}/documents/whyfs.de.html" class="T2">Wir sprechen von Freier Software</a><br/>
+				</td>
+			</tr>
+
             <tr>
               <td class="TopTitle" align="center">Sections</td>
             </tr>
@@ -120,7 +129,25 @@
                   <a href="{$fsfeurope}/mailman/index.de.html" class="T2">Mailinglisten</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
-              <a href="http://savannah.gnu.org/pm/?group_id=53" class="T2">Aufgabe</a><br />
+              <xsl:choose>
+                <xsl:when test="$path='education/education.de.xhtml'">Bildung</xsl:when>
+                <xsl:otherwise>
+                  <a href="{$fsfeurope}/education/education.de.html" class="T2">Bildung</a>
+                </xsl:otherwise>
+              </xsl:choose><br/>
+              <a href="http://savannah.gnu.org/pm/?group_id=53" class="T2">Aufgaben</a><br />
+              <!--<xsl:choose>
+                <xsl:when test="$path='news/news.de.xhtml'">Neuigkeiten</xsl:when>
+                <xsl:otherwise>
+                  <a href="{$fsfeurope}/news/news.de.html" class="T2">Neuigkeiten</a>
+                </xsl:otherwise>
+              </xsl:choose><br/>
+              <xsl:choose>
+                <xsl:when test="$path='events/events.de.xhtml'">Events</xsl:when>
+                <xsl:otherwise>
+                  <a href="{$fsfeurope}/events/events.de.html" class="T2">Events</a>
+                </xsl:otherwise>
+              </xsl:choose><br/>-->
               <xsl:choose>
                 <xsl:when test="$path='press/index.de.xhtml'">Presse</xsl:when>
                 <xsl:otherwise>

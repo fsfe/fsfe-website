@@ -129,6 +129,12 @@
                   <a href="{$fsfeurope}/mailman/index.html" class="T2">Mailing Lists</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
+              <xsl:choose>
+                <xsl:when test="$path='education/education.en.xhtml'">Education</xsl:when>
+                <xsl:otherwise>
+                  <a href="{$fsfeurope}/education/education.html" class="T2">Education</a>
+                </xsl:otherwise>
+              </xsl:choose><br/>
               <a href="http://savannah.gnu.org/pm/?group_id=53" class="T2">Tasks</a><br />
               <xsl:choose>
                 <xsl:when test="$path='news/news.en.xhtml'">News</xsl:when>

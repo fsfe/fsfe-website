@@ -4,7 +4,7 @@
 
 <!ELEMENT softliste (updatenotice?, software+)>
 <!ELEMENT updatenotice (#PCDATA)>
-<!ELEMENT software (name, date, description*, authors, url, mirrorurl*, os+)>
+<!ELEMENT software (name, date, description*, authors, email?, url, mirrorurl*, os+)>
 <!ELEMENT name (#PCDATA)>
 <!ELEMENT date (#PCDATA)>
 <!ELEMENT description (#PCDATA)>
@@ -12,11 +12,13 @@
           lang %Lang;  "en"
  >
 <!ELEMENT authors (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
 <!ELEMENT url (#PCDATA)>
 <!ELEMENT mirrorurl (#PCDATA)>
-<!ELEMENT os (name, maintainer, version, licence, date)>
+<!ELEMENT os (name, maintainer, version, licence, comment?, date)>
 <!ELEMENT maintainer (#PCDATA)>
 <!ELEMENT version (#PCDATA)>
 <!ELEMENT licence (#PCDATA)>
+<!ELEMENT comment (#PCDATA)>
 
 

@@ -5,7 +5,7 @@
 @setchapternewpage odd
 @c %**end of header
 
-@set RCSID $Id: sysadmin-france.en.texi,v 1.37 2001-06-12 13:43:47 mad Exp $
+@set RCSID $Id: sysadmin-france.en.texi,v 1.38 2001-06-12 13:45:07 mad Exp $
 @set VERSION 1.0
 
 @c Combine the variable and function indices:
@@ -500,7 +500,7 @@ you need first install
 # get expat's RPM file
 ftp speakeasy.rpmfind.net
 user ftp
-pass XXXXX@YYYY.ZZZ
+pass 
 
 cd /linux/C/redhat/7.1/en/os/i386/RedHat/RPMS
 get expat-1.95.1-1.i386.rpm

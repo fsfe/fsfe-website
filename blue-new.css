@@ -38,10 +38,43 @@ TD.line		{
 		border-width: thin;
 		}
 
+TD.newstitle	{
+		border-bottom: solid #00389a;
+		border-left: solid #00389a;
+		border-width: thin;
+		text-align: left;
+		font-size: 13px;
+		font-weight: bold;
+		margin: 0px;
+		padding: 4px;
+		}
+TD.newsdate	{
+		border-bottom: solid #00389a;
+		border-width: thin;
+		text-align: right;
+		font-size: 13px;
+		font-weight: bold;
+		margin: 0px;
+		padding: 4px;
+		}
+
+TD.newsbody	{
+                font-size: 13px;
+		}
+TABLE.news	{
+		border-spacing: 0px;
+		padding: 4px;
+		margin: 0px;
+		}
+
 TD.focus	{
 		background: #00389a;
 		width: 150px;
                 }
+
+TD.projects	{
+		vertical-align: top;
+		}
 
 TD.menu		{
 		padding: 10px;
@@ -49,6 +82,12 @@ TD.menu		{
 		width: 150px;
 		vertical-align: top;
                 }
+
+TD.body		{
+		padding: 10px;
+		vertical-align: top;
+		width: 99%;
+		}
 
 TH.projects	{
 		width: 20%;

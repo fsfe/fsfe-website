@@ -32,7 +32,7 @@
       <table width="100%">
         <tr>
           <td>
-            <img src="/graphics/global/logo.png" />
+            <a href="/"><img src="/graphics/global/logo.png" border="0" /></a>
           </td>
           <td class="focus">
             <table class="focus">
@@ -53,7 +53,7 @@
                    </form>
                  </td>
               </tr>
-              <tr>
+              <!-- <tr>
                 <td class="focus-top-hinge">
                    <xsl:value-of select="/buildinfo/textset/text[@id='find']" />
                 </td>
@@ -62,7 +62,7 @@
                     <input type="text" size="10" name="var" />
                   </form>
                 </td>
-              </tr>
+              </tr> -->
             </table>
           </td>
         </tr>
@@ -84,14 +84,20 @@
                   </xsl:choose>
                 <xsl:text> </xsl:text>
               </xsl:for-each>
+              <xsl:if test="/buildinfo/@outdated='yes'"><br />
+                <xsl:apply-templates select="/buildinfo/textset/text[@id='outdated']" />
+              </xsl:if>
+              <xsl:if test="/buildinfo/@language!=/buildinfo/document/@language"><br />
+                <xsl:apply-templates select="/buildinfo/textset/text[@id='notranslation']" />
+              </xsl:if>
             </div>
           </td>
         </tr>
         <tr>
-          <td valign="top">
+          <td class="body" valign="top">
             <xsl:apply-templates select="node()"/>
           </td>
-          <td class="menu">
+          <td class="menu" width="150">
             <xsl:for-each select="/buildinfo/menuset/menu[@parent='']">
               <xsl:sort select="@id" />
               <xsl:variable name="id"><xsl:value-of select="@id" /></xsl:variable>
@@ -111,7 +117,7 @@
         <tr>
           <td class="line" colspan="2">
             <div align="center">
-              <xsl:apply-templates select="/buildinfo/textset/text[@id='copyright']" />
+              <xsl:apply-templates select="/buildinfo/textset/text[@id='copyright']/node()" />
             </div>
           </td>
         </tr>
@@ -126,8 +132,7 @@
     </head>
   </xsl:template>
 
-  <xsl:template match="buildinfo/set|buildinfo/textset|buildinfo/menuset|buildinfo/trlist">
-  </xsl:template>
+  <xsl:template match="timestamp|buildinfo/set|buildinfo/textset|buildinfo/menuset|buildinfo/trlist" />
 
   <xsl:template match="@*|node()" priority="-1">
     <xsl:copy>

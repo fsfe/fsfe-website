@@ -19,31 +19,31 @@
       <xsl:apply-templates />
       <table>
         <tr>
-          <th class="projects">Technical</th>
-          <th class="projects">Legal</th>
-          <th class="projects">Sociological</th>
-          <th class="projects">Other</th>
+          <th class="projects"><xsl:value-of select="/html/text[@id='technical']" /></th>
+          <th class="projects"><xsl:value-of select="/html/text[@id='legal']" /></th>
+          <th class="projects"><xsl:value-of select="/html/text[@id='community']" /></th>
+          <th class="projects"><xsl:value-of select="/html/text[@id='other']" /></th>
         </tr>
         <tr>
-          <td>
+          <td class="projects">
             <xsl:for-each select="/html/set/project[@type='technical']">
               <p><a href="{link}"><xsl:value-of select="title" /></a><br />
                <xsl:value-of select="description" /></p>
             </xsl:for-each>
           </td>
-          <td>
+          <td class="projects">
             <xsl:for-each select="/html/set/project[@type='legal']">
               <p><a href="{link}"><xsl:value-of select="title" /></a><br />
                <xsl:value-of select="description" /></p>
             </xsl:for-each>
           </td>
-          <td>
-            <xsl:for-each select="/html/set/project[@type='awareness']">
+          <td class="projects">
+            <xsl:for-each select="/html/set/project[@type='community']">
               <p><a href="{link}"><xsl:value-of select="title" /></a><br />
                <xsl:value-of select="description" /></p>
             </xsl:for-each>
           </td>
-          <td>
+          <td class="projects">
             <xsl:for-each select="/html/set/project[@type='other']">
               <p><a href="{link}"><xsl:value-of select="title" /></a><br />
                <xsl:value-of select="description" /></p>

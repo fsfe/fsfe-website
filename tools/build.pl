@@ -221,8 +221,10 @@ while (my ($file, $langs) = each %bases) {
             }
 	}
 
-        next if ( (stat("$opts{o}/$dir/$file.$lang.html"))[9] >
-                  (stat($source))[9] && $opts{u} && ! -f "$opts{i}/$file.xsl" );
+        if ( (stat("$opts{o}/$dir/$file.$lang.html"))[9] >
+             (stat($source))[9] && $opts{u} && ! -f "$opts{i}/$file.xsl" ) {
+           next;
+        }
 
         #
         # Here begins automated magic for those pages which we need to
@@ -374,16 +376,16 @@ while (my ($file, $langs) = each %bases) {
         # so that they point to the correct language.
         #
         foreach ($results->documentElement->getElementsByTagName("a")) {
-          if ($_->getAttribute("href") !~ /^http/) {
-            my $href = $_->getAttribute("href");
+          my $href = $_->getAttribute("href");
+          if ($href !~ /^http/) {
             if ($href !~ /\.html$/) {
               if (-d $opts{i}."/$href") {
                 $href =~ s/\/?$/\/index.$lang.html/;
-              } else {
+              } elsif ($href =~ /\/\w+$/) {
                 $href .= ".$lang.html";
               }
             } else {
-              $href =~ s/([^\.][a-z][a-z])\.html/$1.$lang.html/;
+              $href =~ s/([^\.][a-z0-9-][a-z0-9-])\.html/$1.$lang.html/;
             }
             $_->setAttribute("href", $href);
           }
@@ -397,13 +399,29 @@ while (my ($file, $langs) = each %bases) {
   print STDERR "\n" unless $opts{q};
 }
 
+print STDERR "Fixing index links\n" unless $opts{q};
+
+while (my ($path, undef) = each %countries) {   
+  my @dirs = File::Find::Rule->directory()
+                             ->in($opts{o}."/$path");
+  foreach (@dirs) {
+    my $base = basename($_);
+    while (my ($lang, undef) = each %languages) {
+      if (-f "$_/$base.$lang.html" &&
+          ! -f "$_/index.$lang.html") {
+        link("$_/$base.$lang.html", "$_/index.$lang.html");
+      }
+    }
+  }
+}
+
 #
 # For all files that are not XHTML source files, we copy them verbatim to
 # the final location, for each focus. These should be links instead to
 # prevent us from vasting disk space.
 #
 print STDERR "Copying misc files\n" unless $opts{q};
-foreach (grep(!/\.xhtml$/, @files)) {
+foreach (grep { !/\.xsl$/ } grep(!/\.xhtml$/, @files)) {
   while (my ($dir, undef) = each %countries) {
     link("$opts{i}/$_", "$opts{o}/$dir/$_") if -f "$opts{i}/$_";
   }

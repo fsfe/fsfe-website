@@ -126,8 +126,14 @@ clean:
 	rm -f $(ENPAGES) $(FRPAGES) $(DEPAGES) $(PTPAGES) $(ITPAGES) $(ESPAGES)
 
 sync:
-	@echo "Updating stable version : $(STABLEBRANCH)"
 	$(SSH) -l www france.fsfeurope.org 'cd fsfe ; cvs -z3 -q update -I "*.html" -d ; ../bin/nightly'
+
+#
+# Attempt to install a beta web site (talk to oberger@gnu.org + greve@gnu.org)
+#
+syncall:
+	@echo "Updating stable version : $(STABLEBRANCH)"
+	$(MAKE) sync
 	$(SSH) -l www france.fsfeurope.org 'cd fsfe/server/testbeta ; cvs -z3 -q update -I "*.html" -d -r $(STABLEBRANCH) ; ../../../bin/nightly'
 	@echo "Updating beta version :"
 	$(SSH) -l www france.fsfeurope.org 'cd fsfe/server/test/fsfe/server/testbeta ; cvs -z3 -q update -I "*.html" -d -A ; ../../../../../../bin/nightly'

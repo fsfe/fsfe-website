@@ -268,7 +268,7 @@ while (my ($file, $langs) = each %bases) {
 
           # Create the <timestamp> tag automatically for these documents
           my $timestamp = $dom->createElement("timestamp");
-          $timestamp->appendText("\$Date: 2004-05-25 19:35:13 $current_time." \$ \$Author: reinhard $");
+          $timestamp->appendText("\$"."Date: ".$current_time." \$ \$"."Author: automatic \$");
           $document->appendChild($timestamp);
 
           #

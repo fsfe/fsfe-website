@@ -63,6 +63,17 @@ if [ "`echo $LANGS | grep EN`" != "" ]; then
     fi
     SEPARATOR=" | "
 fi
+if [ "`echo $LANGS | grep eo`" != "" ]; then
+    RESULT="$RESULT""$SEPARATOR"
+    if [ "$LANGUAGE" != "eo" ]; then
+	RESULT="$RESULT""<a href=\"$BASENAME.eo.html\">"
+    fi
+    RESULT="$RESULT""Esperanto"
+    if [ "$LANGUAGE" != "eo" ]; then
+	RESULT="$RESULT""</a>"
+    fi
+    SEPARATOR=" | "
+fi
 if [ "`echo $LANGS | grep es`" != "" ]; then
     RESULT="$RESULT""$SEPARATOR"
     if [ "$LANGUAGE" != "es" ]; then

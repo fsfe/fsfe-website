@@ -18,16 +18,27 @@
       dans des actions techniques, mediatiques, politiques, philosophiques
       destinées à défendre et promouvoir l'informatique libre.
     </description>
-    <link>http://france.fsfeurope.org/news/</link>
-    <title>FSF France News</title>
+    <link>http://france.fsfeurope.org/news/news.fr.html</link>
+    <title>Nouvelles FSF France</title>
     <image>
-      <link>http://france.fsfeurope.org/</link>
+      <link>http://france.fsfeurope.org/index.fr.html</link>
       <title>GNU logo</title>
       <url>http://france.fsfeurope.org/images/gnulogo.jpg</url>
     </image>
     <managingEditor>raph@r4f.org (Raphaël Rousseau)</managingEditor>
     <webMaster>webmasters@fsfeurope.org (FSF Europe Webmaster Team)</webMaster>
     <language>fr-fr</language>
+
+    <item>
+      <title>Migration Savannah</title>
+      <link>http://france.fsfeurope.org/news/article2001-04-26-01.fr.html</link>
+      <description>
+	26 Avril 2001. Une &lt;a href="http://www.valinux.com/products/2200/2200ts.html"&gt;machine de test&lt;/a&gt; prêtée par &lt;a href="http://www.valinux.com/about/contact/"&gt;VA Linux France&lt;/a&gt; est arrivée dans les locaux de 
+	la FSF France. 	&lt;a href="http://savannah.gnu.org/"&gt;Savannah&lt;/a&gt; est aujourd'hui 
+	utilisé par plus de 100 packages du projet GNU et va s'ouvrir à
+	tous les projets Logiciel Libre. 
+      </description>
+    </item>
 
     <item>
       <title>Communiqués de presse de la FSF Europe</title>

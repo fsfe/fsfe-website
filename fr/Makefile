@@ -42,8 +42,9 @@ process:
 		perl -MFile::Copy -p -e '$$| = 1; copy("'$$dir'/$$1", \*STDOUT) if(/\#include virtual=\"(.*?)\"/); s/\$$//g if(/\$$''Date:/);' > $$base.html ; \
 	done
 
-news: 
-	$(XSLTPROC) news/news.fr.xsl news/fsfe-fr-channel.xml $(XSLTOPTS) '$$fsffrance=http://france.fsfeurope.org' > news/news-bytes.fr.xhtml
+news:
+	$(XSLTPROC) news/news.fr.xsl news/fsfe-fr-channel.fr.xml $(XSLTOPTS) '$$fsffrance=http://france.fsfeurope.org' > news/news-bytes.fr.xhtml
+	$(XSLTPROC) news/news.en.xsl news/fsfe-fr-channel.en.xml $(XSLTOPTS) '$$fsffrance=http://france.fsfeurope.org' > news/news-bytes.en.xhtml
 
 validate:
 	find . -name '*.xhtml' -print | while read file ; \

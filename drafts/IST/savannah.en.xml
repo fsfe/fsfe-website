@@ -145,7 +145,7 @@
 	  <para>
 	    Templates and internationalization. 
 
-	    User visible content is stored in tempates. The preferred
+	    User visible content is stored in templates. The preferred
 	    format for HTML pages is XHTML. 
 
 	    Every string displayed is stored using gettext files and
@@ -158,7 +158,7 @@
 	    
 	    Each release provides an upgrade procedure from the
 	    previous version. The upgrade may imply a planned
-	    down-time, &NAME; is commited to provide an upgrade
+	    down-time, &NAME; is committed to provide an upgrade
 	    facility that would work without stopping the service. The
 	    XML dump of the database will be used to upgrade the data
 	    using XSL files. The database structure itself is upgraded
@@ -223,7 +223,7 @@
     <title>Implementation</title>
 
     <para>
-      The following items are implemented, all optionals except for
+      The following items are implemented, all are optionals except for
       the authentication system and the import/export functions.
 
       <itemizedlist>
@@ -354,7 +354,7 @@
 	      (0.9.13) is preferred and close interaction with the
 	      development team is maintained.
 
-	      A set phpGroupWare applications are developped or
+	      A set of phpGroupWare applications are developed or
 	      re-used to implement the &NAME; core. Architectural
 	      decisions that require changes of the phpGroupWare code
 	      base are first discussed with the development team. The

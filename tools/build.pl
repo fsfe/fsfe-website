@@ -309,6 +309,7 @@ while (my ($file, $langs) = each %bases) {
           #
           my $sourcedoc = $parser->parse_file($source);
           $sourcedoc->documentElement->setAttribute("date", $current_date);
+          $sourcedoc->documentElement->setAttribute("lang", $lang);
           my $auto_data = $sourcedoc->createElement("set");
 
           while (my ($base, $l) = each %files) {
@@ -332,6 +333,18 @@ while (my ($file, $langs) = each %bases) {
           foreach ($results->documentElement->childNodes) {
             my $c = $_->cloneNode(1);
             $document->appendChild($c);
+          }
+
+          #
+          # Now, while we're just at it, we create the RSS feeds if we want any
+          #
+	  if (-f "$opts{i}/$file.rss.xsl") {
+            my $style_doc = $parser->parse_file("$opts{i}/$file.rss.xsl");
+	    my $stylesheet = $xslt_parser->parse_stylesheet($style_doc);
+	    my $results = $stylesheet->transform($sourcedoc);
+            $stylesheet->output_file($sourcedoc, "$opts{o}/$dir/$file.$lang.raw");
+	    $stylesheet->output_file($results, "$opts{o}/$dir/$file.$lang.rss")
+		unless $opts{n};
           }
         } else {
           #

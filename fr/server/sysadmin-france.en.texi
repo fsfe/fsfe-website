@@ -5,7 +5,7 @@
 @setchapternewpage odd
 @c %**end of header
 
-@set RCSID $Id: sysadmin-france.en.texi,v 1.33 2001-05-29 20:29:11 olberger Exp $
+@set RCSID $Id: sysadmin-france.en.texi,v 1.34 2001-05-30 11:43:25 mad Exp $
 @set VERSION 1.0
 
 @c Combine the variable and function indices:
@@ -122,8 +122,8 @@ In many aspects, the GNU way of doing things needs to be improved. When
 this is the case the idea is to coordinate with the GNU volunteers in
 charge of a specific aspect in order to improve the system. Doing so is
 a lot easier than contributing to a software. It may sometime be
-furstrating to stick to the GNU policy because it is easier to have a
-quick and nice result by inventing something completly new. The Web is
+frustrating to stick to the GNU policy because it is easier to have a
+quick and nice result by inventing something completely new. The Web is
 probably the most striking example. However, since we claim to be part
 of the GNU project we don't really have the option to fork something of
 our own and leave the GNU project behind. Even if it means that we will
@@ -170,7 +170,7 @@ In some cases there already exists a semantic that fits your needs. Even
 if it's not an established standard
 (@uref{http://groups.yahoo.com/group/rss-dev/files/specification.html,,RSS}
 is a widely spread de-facto standard) it will save you the effort to invent
-something completly new. You may even be able to join the group that works
+something completely new. You may even be able to join the group that works
 on this semantic to enhance it if needs be. There are some DTD repositories
 that can help you find out if something exists:
 
@@ -194,7 +194,7 @@ that can help you find out if something exists:
 
 @end itemize
 
-When the data format is chosen, chosing or writing the programs that provide
+When the data format is chosen, choosing or writing the programs that provide
 a given service is driven by this choice. If an application exists that does
 not support the format chosen, it's fairly reasonable to write a small program
 that translate the data format into the application specific data and vice
@@ -279,7 +279,7 @@ to register one or more public key at
 @cindex ssh public key update
 Once a day the ssh public keys of every account on
 @code{france.fsfeurope.org} are updated from the information fetched on
-Savannah. If the @file{authorized_keys} file of a user is manualy updated,
+Savannah. If the @file{authorized_keys} file of a user is manually updated,
 it will be overwritten. 
 
 @node Account Delete, Account www, Account Update, Accounts
@@ -373,7 +373,7 @@ The modified files will be updated on france.fsfeurope.org within one
 hour. They will be available immediately after a commit on
 http://www.gnu.org/fsfe/ which is convenient for testing.
 
-The pages are stored in @code{.xhtml} files and formated automaticaly
+The pages are stored in @code{.xhtml} files and formatted automatically
 to @code{.html} files. @ref{XHTML and XSLT Quick Start} will tell you
 how to deal with this within seconds.
 
@@ -447,7 +447,7 @@ in the same directory.
 @item To see the resulting HTML file, look for a Makefile in the directory
 or the upper directories that recursively walk the tree to format XHTML
 files into HTML files. If a grep @code{sabcmd} or @code{xsltproc} on a
-Makefile finds something, you probabl found the good one. Run @code{make
+Makefile finds something, you probably found the good one. Run @code{make
 all} and look at the generated HTML file with your web browser.
 
 @item To add a menu entry, edit the XSL file that ends with the @code{.xsl}
@@ -635,7 +635,7 @@ of a programming language (loops, variables, conditions, functions,
 etc.) but none of it's facilities (debugger, profiler etc.), complex
 XSL files will make your life a living hell. It may worth the effort
 (for @uref{http://sourceforge.net/projects/docbook/,,DocBook}
-transofrmation to HTML for instance) you have to carefully evaluate
+transformation to HTML for instance) you have to carefully evaluate
 the pro and cons in advance.
 
 A good XSL file is a file that even someone not accustomed to XSL could
@@ -662,9 +662,9 @@ article2001-04-26-01.fr.xhtml
 @end example
 
 @item
-If an article contains subparts or pictures a directory named
+If an article contains sub-parts or pictures a directory named
 @code{articleYYYY-MM-DD-NN} is created and all elements are added into
-it. No specific convention is to be followed in this subdirectory.
+it. No specific convention is to be followed in this sub-directory.
 
 @item 
 A

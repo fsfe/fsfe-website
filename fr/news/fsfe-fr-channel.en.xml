@@ -23,6 +23,21 @@
     <webMaster>webmasters@fsfeurope.org (FSF Europe Webmaster Team)</webMaster>
     <language>en-us</language>
 
+<!-- To insert URLs in the <description>, use this :
+&lt;a href="http://url"&gt;text&lt;/a&gt;
+-->
+    <item>
+      <title>Transcription of Richard Stallman's conference at NYU</title>
+      <link>http://www.gnu.org/events/rms-nyu-2001-transcript.txt</link>
+      <description>
+	22 July 2001. A transcription of Richard M. Stallman's &lt;a
+	href="http://www.gnu.org/philosophy/audio/audio.html#NYU2001"&gt;conference
+	at NYU&lt;/a&gt; given on May 29th 2001 is &lt;a
+	href="http://www.gnu.org/events/rms-nyu-2001-transcript.txt"&gt;available
+	here&lt;/a&gt;.
+      </description>
+    </item>
+
     <item>
       <title>Electronic voting and Free Software</title>
       <link>http://france.fsfeurope.org/voting/voting.en.html</link>

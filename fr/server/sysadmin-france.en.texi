@@ -5,7 +5,7 @@
 @setchapternewpage odd
 @c %**end of header
 
-@set RCSID $Id: sysadmin-france.en.texi,v 1.68 2002-09-20 08:52:00 loic Exp $
+@set RCSID $Id: sysadmin-france.en.texi,v 1.69 2003-02-13 15:11:30 jlb Exp $
 @set VERSION 2.0
 
 @c Combine the variable and function indices:
@@ -17,7 +17,7 @@
 @title System Administration France
 @subtitle Information specific to GNU and FSF machines in France
 @subtitle @code{Sysadmin France} Version @value{VERSION}
-@author Loic Dachary, Rodolphe Quiédeville, Cyril Bouthors
+@author Loic Dachary, Rodolphe Quiédeville, Cyril Bouthors, Jean-Louis Bergamo
 @page
 @vskip 0pt plus 1filll
 
@@ -190,6 +190,23 @@ Double power
 
 Contact : @email{cyril@@bouthors.org,Cyril Bouthors}, @email{rq@@lolix.org,Rodolphe Quiédeville}, @email{jlb@@j1b.org,Jean-Louis Bergamo}, @email{loic@@gnu.org,Loic Dachary}
 
+@item yoda.gnu.org (yoda.ipsyn.net)
+
+Serial console server. 
+
+@example
+Bi PIII 750
+512 MB RAM
+2 serial ports
+1 parallel port
+1 ethernet eepro100
+2 18 GB SCSI disks
+Adaptec aic7896/97 Ultra2 SCSI adapter
+@end example
+
+Contact : @email{jlb@@j1b.org,Jean-Louis Bergamo}, @email{loic@@gnu.org,Loic
+Dachary}
+
 @item Cisco Catalyst 3500 XL
 
 Typical session:
@@ -299,6 +316,15 @@ ethernet cable is connected to Cisco Catalyst 3500 XL
 
 @item
 
+yado.gnu.org(yoda.ipsyn.net) is hosted at Free.
+
+@example
+power cable is controled by BlackBox Pow-R-Boot 5 + (port 3)
+ethernet cable is connected to Cisco Catalyst 3500 XL (port 5)
+@end example
+
+@item
+
 Cisco Catalyst 3500 XL is hosted at Free.
 
 @example
@@ -379,6 +405,7 @@ one to ask for a reverse change. The current setup is
 213.228.62.2 snail.gnu.org
 213.228.62.3 snail-ssh.gnu.org
 213.228.62.4 frog.gnu.org
+213.228.62.7 yoda.gnu.org(yoda.ipsyn.net)
 @end example
 
 @example
@@ -468,6 +495,11 @@ pretty well. Opened trouble tickets when the line was down.
 Work: +33 6 13 79 63 41.
 Installed the machine. 
 Installed and maintains monitoring tools on fr.fsf.org.
+
+@item @email{jlb@@j1b.org,Jean-Louis Bergamo}. 
+Work: +33 1 53 01 72 13.
+Installed the machine yoda.gnu.org (yoda.ipsyn.net). 
+Administration of snail,frog and yoda.gnu.org.
 
 @item @email{devnull@@gnu.org,Joel N. Weber II}. Monitors the machine. Opened
 trouble tickets when the line was down. Calculated the reliability of
@@ -619,7 +651,7 @@ list} and the following people can be contacted.
 
 @item @email{reefab@@nevrax.org,Fabien Piuzzi}. @code{fr.fsf.org} only (emergency requiring physical access).
 
-@item @email{alevavasseur@@corp.free.fr,Antoine Levavasseur}. @code{snail.gnu.org} and @code{frog.gnu.org} only (emergency requiring physical access).
+@item @email{alevavasseur@@corp.free.fr,Antoine Levavasseur}. @code{snail.gnu.org} @code{frog.gnu.org} and @code{yoda.gnu.org} only (emergency requiring physical access).
 
 @end itemize
 
@@ -639,10 +671,11 @@ future reference and are listed here.
 @menu
 * Firewall (fr.fsf.org)::       
 * Port control (snail.gnu.org and frog.gnu.org)::  
+* Port control (yoda.gnu.org)::  
 @end menu
 
 @cindex firewall
-@node Firewall (fr.fsf.org), Port control (snail.gnu.org and frog.gnu.org), Firewall, Firewall
+@node Firewall (fr.fsf.org), Port control (snail.gnu.org and frog.gnu.org), , Firewall, Firewall
 @subsection Firewall (fr.fsf.org)
 
 A shell script applies filtering rules, it's located in
@@ -657,13 +690,19 @@ The policy applied is to close all TCP/UDP port by default and open only
 the ones we need.
 
 @cindex port control
-@node Port control (snail.gnu.org and frog.gnu.org),  , Firewall (fr.fsf.org), Firewall
+@node Port control (snail.gnu.org and frog.gnu.org), Port control (yoda.gnu.org) , Firewall (fr.fsf.org), Firewall
 @subsection Port control (snail.gnu.org and frog.gnu.org)
 
 On @code{snail.gnu.org} and @code{frog.gnu.org} there is no
 firewall. Instead, only services needed to provide the services
 that match the intended purpose of the machine are launched. 
 All other daemons are de-activated.
+
+@cindex port control
+@node Port control (yoda.gnu.org), , Port control (snail.gnu.org and frog.gnu.org) , Firewall,
+@subsection Port control (yoda.gnu.org)
+
+On @code{yoda.gnu.org} there is a firewall. rules are in file @file{yoda.gnu.org:/etc/iptables.rules} which are read from script @file{yoda.gnu.org:/etc/init.d/packetfilter}. Tese rules are written for netfilter (iptables).
 
 @node Monitoring, Screen sessions, Security, Top
 @chapter Monitoring

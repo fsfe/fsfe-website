@@ -95,6 +95,21 @@
                   <a href="{$fsfeurope}/help/help.html">Help</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
+
+              <xsl:choose>
+                <xsl:when test="$path='help/donate-2002.xhtml'">Donate</xsl:when>
+                <xsl:otherwise>
+                  <a href="{$fsfeurope}/help/donate-2002.html">Donate</a>
+                </xsl:otherwise>
+              </xsl:choose><br/>
+
+              <xsl:choose>
+                <xsl:when test="$path='help/thankgnus-2002.xhtml'">ThankGNUs</xsl:when>
+                <xsl:otherwise>
+                  <a href="{$fsfeurope}/help/thankgnus-2002.html">ThankGNUs</a>
+                </xsl:otherwise>
+              </xsl:choose><br/>
+
               <xsl:choose>
                 <xsl:when test="$path='background.xhtml'">Background</xsl:when>
                 <xsl:otherwise>

@@ -91,12 +91,28 @@
                   <a href="{$fsfeurope}/about/index.html">Über</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
+
               <xsl:choose>
                 <xsl:when test="$path='help/help.de.xhtml'">Helfen</xsl:when>
                 <xsl:otherwise>
                   <a href="{$fsfeurope}/help/help.de.html">Helfen</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
+
+              <xsl:choose>
+                <xsl:when test="$path='help/donate-2002.de.xhtml'">Spenden</xsl:when>
+                <xsl:otherwise>
+                  <a href="{$fsfeurope}/help/donate-2002.de.html">Spenden</a>
+                </xsl:otherwise>
+              </xsl:choose><br/>
+
+              <xsl:choose>
+                <xsl:when test="$path='help/thankgnus-2002.de.xhtml'">Dank</xsl:when>
+                <xsl:otherwise>
+                  <a href="{$fsfeurope}/help/thankgnus-2002.de.html">Dank</a>
+                </xsl:otherwise>
+              </xsl:choose><br/>
+
               <xsl:choose>
                 <xsl:when test="$path='background.de.xhtml'">Hintergrund</xsl:when>
                 <xsl:otherwise>

@@ -1,0 +1,610 @@
+%% $Id: Constitution.en.tex,v 1.1 2001-07-17 13:16:16 taz Exp $
+%% 
+%% Constitution of the Free Software Foundation Europe
+%%
+%% Language: English
+%%
+
+%{{{ Header
+
+\documentclass[a4wide,12pt]{article}
+\usepackage{german,umlaut}
+\usepackage{fancyheadings}
+\usepackage{alltt}
+\usepackage[german]{babel}
+
+\selectlanguage{german}
+\pagestyle{fancyplain}
+
+\lhead[\fancyplain{}{\bfseries\thepage}]
+        {\fancyplain{}{\bfseries\rightmark}}
+\rhead[\fancyplain{}{\bfseries\leftmark}]
+        {\fancyplain{}{\bfseries\thepage}}
+\cfoot{}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\renewcommand{\thesection}{\S~\arabic{section}}
+
+%
+% alternative ways of doing it...
+%
+
+% this makes the references work correctly:
+%\newcommand{\A}{\subsection{}}
+%\renewcommand{\subsectionmark}[1]{\markright{\thesection\ }}
+
+% this looks better:
+\newcounter{absatz}[section]
+\newcommand{\A}{\par\vspace{1ex}
+                \stepcounter{absatz}\noindent(\arabic{absatz})~~}
+
+%}}}
+
+\begin{document}
+
+%{{{ 0 Preamble
+
+\thispagestyle{empty}
+\begin{center}
+\Huge\bf Constitution
+\end{center}
+
+\section*{Preamble}
+
+Upon entering the digital age, in which real and virtual space will
+equally determine the social, cultural and scientific development of
+mankind, the Free Software Foundation Europe has the long-term goal to
+raise and work on the questions this will necessarily raise.\\
+
+In this regard the direct function is the unselfish promotion of
+Free Software as well as creating and propagating the awareness of the
+related philosophical and social questions.\\
+
+As its acknowledged sister organization, the FSF Europe will join
+forces with the Free Software Foundation founded by Richard
+M. Stallman in the United States of America. The latter, recognized
+tax-exempt charitable organization in the USA, has been dedicating
+itself since 1984 to the promotion and distribution of Free software
+and in particular the GNU-System, a Unix-like operating system. This
+system is mostly known by one of its variants, GNU/Linux, which since
+1993 has been used successfully on many computers.\\
+
+The term Free Software in the sense of the FSF Europe does not refer
+to the price, but rather to the following four freedoms:
+\begin{enumerate}
+\item freedom: the freedom to use a program for any purpose
+\item freedom: the freedom to study the program and adapt it to your
+own needs. 
+\item freedom: the freedom to make copies for others.
+\item freedom: the freedom to improve a program and make these
+improvements available to others, so that the whole community
+benefits. 
+\end{enumerate}
+
+This definition of Free Software goes back to the idea of freely
+exchanging knowledge and ideas that can traditionally be found in
+scientific fields. Like thoughts, software is non-tangible and
+duplicable without loss. Passing feeds an evolutionary process,
+advancing thoughts and software.\\
+
+Only Free Software preserves the possibility to comprehend and build
+upon scientific results. For scientists, it is the only kind of
+software which corresponds to the ideals of a free
+science. Accordingly, the promotion of free software is also a
+promotion of science.\\
+
+The distribution of information and the forming of an opinion are done
+increasingly by digital media, and the trend is to foster the use of
+those means for a direct citizen participation to
+democracy. Therefore, a central task of the FSF Europe is to train
+proficient citizens in these media, thereby promoting democracy.\\
+
+Digital space (``Cyberspace''), with software as its medium and its
+language has an enormous potential for the promotion of all mental and
+cultural aspects of mankind. By making it commonly available and
+opening up the medium, Free Software grants equal chances and
+protection of privacy.\\
+
+Coining the awareness for the problems related to the digital age in
+all parts of society is long-term goal and a core aspect of the work
+of the FSF Europe.\\
+
+Therefore the FSF Europe will seek to increase the use of Free
+Software in schools and universities in order to parallelize the
+education in real space matters with the creation of understanding and
+awareness of problems in virtual space.\\
+
+Free Software guarantees traceable results and decision-making
+processes in science and public life as well as the individual rights
+to free development of personality and liberty of opinion. It is the
+job of the FSF Europe to carry Free Software into all areas that touch
+public life or ``informational human rights'' of citizens.\\
+
+%}}}
+
+%{{{ 1 Name, seat, financial year
+
+\section{Name, seat, financial year} 
+\A 
+The association bears the name ``Free Software Foundation Europe.''  It
+is to be registered into the register of associations; after the
+registration it leads the additive ``e.V..''
+\A 
+The association has its seat in Hamburg.  
+\A
+The financial year is the calendar year.
+
+%}}}
+
+%{{{ 2 Purpose, tasks, non-profit character
+
+\section{Purpose, tasks, non-profit character}
+\A 
+Purpose of the FSF Europe is the promotion of the goals specified in
+the preamble.
+\A
+The goals of the FSF Europe are namely to be achieved by:
+\begin{enumerate}
+\item the support of governmental and private organisations in all
+aspects of the Free Software, 
+\item the cooperation and coordination of the national associations
+which pursue the same goals 
+\item the support of projects working on Free Software,
+\item the distribution of the philosophical ideals of Free Software  
+\end{enumerate}
+\A 
+The FSF Europe pursues exclusively and directly publicly-spirited
+and scientific purposes in the sense of the section ``tax-privileged
+purposes'' of the tax code.  The FSF Europe is working selflessly and
+does not pursue self-economic goals.
+
+\A 
+Means of the FSF Europe may be used for the statutory purposes only.
+No person may be favored by expenses alien to the goals of the FSF
+Europe or disproportionally high.
+
+%}}}
+
+%{{{ 3 Acquisition of membership 
+
+\section{Acquisition of membership}
+
+\A 
+Any national or foreign natural or legal person may become member of
+the FSF Europe. Natural persons must be 16 years old.  Persons under
+age do not have eligibility for election.
+\A 
+Condition for the acquisition of the membership is a written
+application for membership to the executive committee.  
+\A 
+The general assembly of the members decides on the application
+for membership with three quarters of all members, that are natural
+people.  The executive committee can grant the application for
+membership passing;  the application for membership must then be
+confirmed by the next members assembly. In case of refusal of the
+request no obligation exists to communicate the reasons to the
+applicant.
+
+%}}}
+
+%{{{ 4 End of membership
+
+\section{End of membership}
+\A 
+Membership ends 
+\renewcommand{\labelenumi}{\alph{enumi}.}
+\begin{enumerate}
+\item with the death of the member with natural persons and/or its
+liquidation in the case of legal persons;
+\item by withdrawal from the association;
+\item by exclusion from the association.  
+\end{enumerate}
+\renewcommand{\labelenumi}{\arabic{enumi}.}
+\A
+The withdrawal is made via written declaration vis-a-vis the executive
+committee. The declaration withdrawal must be signed by the competent
+legal representative. The withdrawal can be declared at any time.
+\A
+For important reasons or if the bond of trust between the members is
+broken, a member can be excluded by decision of the executive
+committee from the association. Before deciding on the matter, the
+executive committee must give the member opportunity to state its
+position in writing. The decision of the executive committee is to be
+justified in writing and sent to the member. The member can appeal the
+decision at the general assembly of the members.  The appeal must be
+lodged within two weeks after communication of the decision at the
+executive committee. The executive committee has to call in a general
+assembly within three months of punctual insertion of the appointment,
+which can support the decision of the executive committee with a
+majority of three quarters of the remaining members.  Until the final
+decision about the exclusion, the member remains suspended of all
+obligations and all rights.
+
+%}}}
+
+%{{{ 5 Membership fees
+
+\section{Membership fees}
+The members make contributions by ways of honorary activity or through
+holding a position in the association.
+
+%}}}
+
+%{{{ 6 Structure of the association
+
+\section{Structure of the association}
+\A 
+The Free Software Foundation Europe forms a European federation
+structure and is divided into national associations. Those are
+associations with own juridical personality after the law on societies
+of the European State for its area the association are active.  All
+members of the national associations must also be members of the FSF
+Europe.  
+\A 
+In order to preserve the uniformity, the national associations have to
+fulfill minimum requirements determined by the extended executive
+committee, which are written down in a constitution-template for
+national associations. This applies with the exception of requirements
+that are inadmissible according to the laws of the state in which the
+national association is to be created. In this case the constitution
+is to be modified so it reflects the intentions of the
+constitution-template most closely. The constitution requires the
+acceptance of the extended executive committee before the national
+association becomes part of the FSF Europe.
+\A
+The finances of the national associations are determined by the
+financial order in accordance with \S~9 sec. 2 of this
+statute.
+\A 
+The national associations can conclude contracts in their own name for
+the fulfillment of local tasks, if the means are present for the
+fulfilment of these contracts.  They can in no case enter obligations
+for the FSF Europe.
+\A
+The national associations can only enter negotiations with authorities
+and organizations mainly active in their respective areas.
+\A
+The national associations are entitled and obliged to bear their own
+name trough which the affiliation with the Free Software Foundation
+Europe is expressed. This has to be done by adding the denomination
+``Chapter'' with the name of the state in English to ``Free Software
+Foundation Europe.'' Additionally they can bear the name in the
+national language.
+\A
+The executive committee is entitled to extract the right for the
+guidance of the name ``FSF Europe'' from a national association that
+violates this constitution or its own constitution. The national
+association can appeal the decision at the general assembly of the
+members.  The appeal must be lodged within two weeks after
+communication of the decision at the executive committee. The
+executive committee has to call in a general assembly within three
+months of punctual insertion of the appointment, which can remedy or
+overrule the decision of the executive committee with a majority of
+three quarters of the remaining members.  Until the final decision
+about the exclusion, the member remains suspended of all obligations
+and all rights.
+
+%}}}
+
+%{{{ 7 Bodies of the association
+
+\section{Bodies of the association}
+The Free software Foundation Europe forms a European federation
+composed by the association of 7 organs/bodies. Organs of the FSF
+Europe are:
+\renewcommand{\labelenumi}{\alph{enumi})}
+\begin{enumerate}
+\item the executive committee (President);
+\item the Vice-President;
+\item the administrative director (Head of Office);
+\item the extended executive committee;
+\item the general assembly.
+\end{enumerate}
+\renewcommand{\labelenumi}{\arabic{enumi}.}
+
+%}}}
+
+%{{{ 8 The executive committee 
+
+\section{The executive committee}
+The executive committee of the FSF Europe consists of the President.
+
+%}}}
+
+%{{{ 9 The competence of the executive committee 
+
+\section{The competence of the executive committee}
+\A
+The executive committee is responsibly for all affairs the FSF Europe,
+as far as they are not transferred to another organ of the FSF Europe
+by statute.  It has in particular the following tasks:
+\begin{enumerate}
+\item Convening and preparation of the general assembly of the members
+as well as list the agenda;
+\item Creation of the annual report;
+\item Adoption of resolutions over the admission and the exclusion of
+members;
+\item Support and control of the national associations;
+\item Agency in judicial and except-court affairs, in particular also
+authority traffic; 
+\item Relationships with the press.
+\end{enumerate}
+\A
+The executive committee leads the finances after the finance plan,
+which the general assembly with a majority of three quarters of all
+voices decides on.  The finance plan must give,
+\begin{enumerate}
+\item that possible profits are used only for the statutory purposes
+\item that no member may get no shares of the profits or other
+allowances from the means of the FSF Europe or its local
+associations. This also applies to separating members.
+\item that administrative costs, which are alien to the purpose of the
+FSF Europe may not be granted. Same applies to disproportionately high
+payments.
+\end{enumerate}
+\A
+The executive committee is not liable vis-a-vis the association
+for slightly negligent behaviour.
+
+%}}}
+
+%{{{ 10 Election and term of office of the executive committee 
+
+\section{Election and term of office of the executive committee}
+\A
+The executive committee is elected by the general assembly of the
+members for the duration of two years, from the election on. It
+continues to be in office up to the new election of the executive
+committee, however.
+\A
+Electable are only members of the FSF Europe. If the executive
+committee separates prematurely, the vice-president represents the
+association up to the selection of a new executive
+committee. Additionally, an extraordinary general assembly of the
+members is to be called in within three months by the vice-president. 
+
+%}}}
+
+%{{{ 11 The Vice-President
+
+\section{The Vice-President}
+\A
+The vice-president represents the executive comittee in the following
+cases:
+\begin{enumerate}
+\item Separating of the executive committee;
+\item Passing indispensability of the executive committee.
+\end{enumerate}
+\A 
+The executive committee is indispensable, if he communicates this in
+written form to the vice-president. The vice-president takes care of
+all matters as long and to the extent they were transferred to him in
+writing by the executive committee. The executive committee is
+considered indispensable, if it is not attainable or cannot exercise
+its office more than seven days because of illness.
+\A
+The vice-president is elected by the general assembly for the duration
+of two years, from the election on.  He remains in office up to the
+election of the new vice-president, however. Only members of the FSF
+Europe can be elected for vice-president.  With the end of membership
+in the association, the office of the vice-president also ends.
+\A
+If the vice-president is ruled out prematurely, the executive
+committee can select a successor for the remaining term of office.
+\A
+The vice-president is not liable vis-a-vis the association for
+slightly negligent behaviour.
+
+%}}}
+
+%{{{ 12 The Head of Office
+
+\section{The Head of Office}
+\A
+The Head of Office leads the office of the FSF Europe. He represents
+the association in the business area belonging to it.
+\A
+The Head of Office certifies the keys for encoding digital texts and
+documents. 
+\A
+The Head of Office is elected by the general assembly for the duration
+of two years, from election on. He remains in office up to the
+election of the new Head of Office, however. Only members of the FSF
+Europe can be selected for Head of Office. With the end of membership
+in the association, the office of the administration director also
+ends.
+\A
+If the administration director is ruled out prematurely, the executive
+committee can select a successor for the remaining term of office.
+\A
+The administration director is not liable vis-a-vis the association
+for slightly negligent behaviour.
+
+%}}}
+
+%{{{ 13 The extended executive committee
+
+\section{The extended executive committee}
+\A
+The extended executive committee consists of the President, the
+Vice-President and the Head of Office.  
+\A
+The extended committee is resolutionable, if at least two members are
+present in person, among them the President. Decisions are passed by
+single majority of votes.
+\A
+Members of the extended executive committee are not liable vis-a-vis
+the association for slightly negligent behaviour.
+
+%}}}
+
+%{{{ 14 The competence of the extended executive committee 
+
+\section{The competence of the extended executive committee}
+The extended executive committee is responsible for the following
+tasks:
+\begin{enumerate}
+\item The approval of the statutes of the national associations;
+\item The execution of the ``Guidelines,'' which are decided on by the
+general assembly.
+\end{enumerate}
+
+%}}}
+
+%{{{ 15 The general assembly
+
+\section{The general assembly}\label{sec:ga}
+\A 
+In the general assembly, each member that is a natural person, has a
+voice. For the practice of the right to vote another member can be
+authorized by written message to the executive committee. The
+authorisation is to be given for each general assembly separately.  A
+member cannot practise the right to vote for more than one third of
+all members.
+\A
+The general assembly has exclusive jurisdiction for the following
+affairs:
+\begin{enumerate}
+\item Creation of so-called ``Guidelines,'' that are to lead the
+activity of the executive committee and extended executive committee;
+\item Receipt of the annual report of the executive committee;
+\item Exoneration of the organs;
+\item Choice and recall of the executive committee, the Vice-President
+and of the Head of Office.
+\end{enumerate}
+
+%}}}
+
+%{{{ 16 The convening of the general assembly 
+
+\section{The convening of the general assembly}\label{sec:cga}
+\A 
+At least once a year, if possible in the first quarter, is the orderly
+general assembly to take place; if possible in one of the states, in
+which a national association exists. It is called up in writing by the
+executive committee under adherence to one period of six weeks under
+indication of the agenda. The period begins with day following the
+sending of the invitation letter. The invitation letter is to be
+considered delivered to the member, if it is addressed to the last
+address or e-mail address given by the member in writing. With written
+agreement of three quarters of the members, the invitation period can
+be shortened to three weeks.
+\A
+The agenda is derermined by the executive committee. Each member can
+request a supplement of the agenda in writing to the executive
+committee until at the latest one week before a general assembly. The
+executive committee has to announce the supplement at the beginning of
+the general assembly. About applications for supplement of the agenda,
+which are made at the general assembly, are decided by the general
+assembly.
+
+%}}}
+
+%{{{ 17 The extraordinary general assembly 
+
+\section{The extraordinary general assembly}
+The executive committee can call up an extraordinary general assembly
+at any time.  It must be called up, if at least a quarter of all
+members require it in writing under indication of the purpose and
+reasons to the executive committee. To the extraordinary meeting of
+the members the \ref{sec:ga}, \ref{sec:cga} and \ref{sec:aorga} apply
+accordingly. 
+
+%}}}
+
+%{{{ 18 Adoption of resolutions of the general assembly 
+
+\section{Adoption of resolutions of the general assembly}\label{sec:aorga}
+\A
+The general assembly is led by the executive committee, at his
+indespensability by the Vice-President and at the indispensability of
+the latter by the Head of Office.
+\A
+The type of election is determined by the assembly director. The
+election must be carried out in writing, if a third of the members
+present in person with the election requests this.
+\A
+The general assembly is not public.
+\A
+The general assembly is resolutionable, if it was duly called up and
+at least one third of all club members is present or represented by
+club members present. In the case of decision inability, the executive
+committee is obliged to call up a second general assembly with the
+same agenda within four weeks; this general assembly will
+resolutionable without consideration of the members present. This is
+to be referred to in the invitation.
+\A
+Unless stated otherwise in the statute, the general assembly passes
+decisions with simple majority of the delivered valid voices;
+abstentions are therefore left out of the consideration. Changes of
+the statute require a majority of three quarters of (the delivered
+valid) voices, dissolution of the FSF Europe requires four fifths of
+the voices of all members. Changing the purpose of the FSF Europe can
+only be decided with unanimous agreement of all members. The written
+agreement of the members not present in the general assembly can be
+explained only within one month vis-a-vis the executive committee.
+\A
+In the case of elections it is selected who received more than half of
+the delivered valid voices.  If nobody received more than half of the
+delivered valid voices, a ballot takes place between the two
+candidates, who received most of the voices.  Is selected then who
+received most of the voices.  In the case of equal number of votes
+once a new choice is necessary; if the mood equality continues to
+exist, the lot decides.
+\A
+Over decisions of the general assembly, a protocol is to be led, that
+is to be signed by the recording clerk and the assembly director.  It
+is to contain the following ascertainments: Place and time of the
+assembly, the person of the assembly director and the recording clerk,
+the number of members present, the agenda, the individual election
+results and the type of the election.  For amendments of the statute
+the exact wording is to be given.
+
+%}}}
+
+%{{{ 19 Dissolution of the association 
+
+\section{Dissolution of the association}
+\A
+The dissolution of the FSF Europe can only be decided in a general
+assembly by the majority in accordance to \ref{sec:aorga}.
+\A
+If the general assembly decides nothing else, the executive committee
+is the liquidator entitled to act as substitute.
+\A
+After end of liquidation, existing funds go to the 
+\begin{alltt}
+  Free Software Foundation
+  59 Temple Place - Suite 330, 
+  Boston, MA 02111-1307, USA, 
+\end{alltt}
+which it has to use directly and exclusively for non-profit purposes.
+\A 
+The preceding regulations apply accordingly, if the FSF Europe is
+dissolved for another reason or loses its legal capacity.
+
+%}}}
+
+%{{{ 20 Written form
+
+\section{Written form}
+Writing form is fulfilled if one of the following conditions is met:
+\renewcommand{\labelenumi}{\alph{enumi})}
+\begin{enumerate}
+\item handwritten signed paper document;
+\item E-mail signed with a key that is sufficiently state of the art.
+The association decides what is to be regarded as state of the art and
+the key must be certified by the association.
+\end{enumerate}
+\renewcommand{\labelenumi}{\arabic{enumi}.}
+
+%}}}
+
+%{{{ 21 Place of jurisdiction 
+
+\section{Place of jurisdiction}
+Place of jurisdiction for all rights and duties resulting from this
+statute is Hamburg, Germany.
+
+%}}}
+
+\end{document}

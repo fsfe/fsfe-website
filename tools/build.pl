@@ -60,12 +60,13 @@ our %languages = (
 # Parse the command line options. We need two; where to put the finished
 # pages and what to use as base for the input.
 #
-getopts('o:i:duq', \%opts);
+getopts('o:i:duqn', \%opts);
 unless ($opts{o} && $opts{i}) {
-  print STDERR "Usage: $0 [-q] [-u] [-d] -o <output directory> -i <input directory>\n";
+  print STDERR "Usage: $0 [-q] [-u] [-d] [-n] -o <output directory> -i <input directory>\n";
   print STDERR "  -q   Quiet\n";
   print STDERR "  -u   Update only\n";
   print STDERR "  -d   Print some debug information\n";
+  print STDERR "  -n   Don't write any files\n";
   exit 1;
 }
 
@@ -393,7 +394,8 @@ while (my ($file, $langs) = each %bases) {
 
 	print "Writing: $opts{o}/$dir/$file.$lang.html\n" if $opts{d};
 
-	$stylesheet->output_file($results, "$opts{o}/$dir/$file.$lang.html");
+	$stylesheet->output_file($results, "$opts{o}/$dir/$file.$lang.html")
+		unless $opts{n};
     }
   }    
   print STDERR "\n" unless $opts{q};
@@ -409,13 +411,16 @@ while (my ($path, undef) = each %countries) {
     while (my ($lang, undef) = each %languages) {
       if (-f "$_/$base.$lang.html" &&
           ! -f "$_/index.$lang.html") {
-        link("$_/$base.$lang.html", "$_/index.$lang.html");
+        link("$_/$base.$lang.html", "$_/index.$lang.html")
+		unless $opts{n};
       }
       if (! -f "$_/index.html") {
         if (-f "$_/index.en.html") {
-          link("$_/index.en.html", "$_/index.html");
+          link("$_/index.en.html", "$_/index.html")
+		unless $opts{n};
         } elsif (-f "$_/$base.en.html") {
-          link("$_/$base.en.html", "$_/index.html");
+          link("$_/$base.en.html", "$_/index.html")
+		unless $opts{n};
         }
       }
     }
@@ -430,7 +435,9 @@ while (my ($path, undef) = each %countries) {
 print STDERR "Copying misc files\n" unless $opts{q};
 foreach (grep { !/\.xsl$/ } grep(!/\.xhtml$/, @files)) {
   while (my ($dir, undef) = each %countries) {
-    link("$opts{i}/$_", "$opts{o}/$dir/$_") if -f "$opts{i}/$_";
+    if (-f "$opts{i}/$_" && !$opts{n}) {
+      link("$opts{i}/$_", "$opts{o}/$dir/$_");
+    }
   }
 }
 

@@ -43,7 +43,7 @@
   </comment>
   <date>22 apr 2002</date>
       </os>
-  <os name="Unix">
+  <os name="GNU/Linux">
   <maintainer>Robert W. Harrison</maintainer>
   <version>2.0</version>
   <license></license>
@@ -299,6 +299,14 @@
     <description lang="fr">JChemPaint est un éditeur de molécules.Il se veut complémentaire de JMol.</description>
     <authors>Christoph Steinbeck, Stefan Krause, Egon Willighagen, Martin Schild</authors>
     <url>http://jchempaint.sourceforge.net</url>
+    <os name="GNU/Linux">
+      <maintainer>Christoph Steinbeck, Stefan Krause, Egon Willighagen, Martin Schild</maintainer>
+      <version>1.2</version>
+      <license>GPL</license>
+      <url></url>
+      <comment></comment>
+      <date>28 jun 2002</date>
+    </os>
     <os name="All">
       <maintainer>Christoph Steinbeck, Stefan Krause, Egon Willighagen, Martin Schild</maintainer>
       <version>1.2</version>
@@ -316,6 +324,14 @@
     <description lang="fr">Le 'Chemical Markup Language' (CML) est une application XML pour le stockage et l'échange d'informations chimiques. La librairie utilise la 'Chemical Data Object Programming Interface' (CDOPI).</description>
     <authors>Egon Willighagen</authors>
     <url>http://www.openscience.org/~egonw/cml</url>
+    <os name="GNU/Linux">
+      <maintainer>Egon Willighagen</maintainer>
+      <version>1.2.6</version>
+      <license>GPL</license>
+      <url></url>
+      <comment></comment>
+      <date>28 jul 2001</date>
+    </os>
     <os name="All">
       <maintainer>Egon Willighagen</maintainer>
       <version>1.2.6</version>
@@ -333,6 +349,14 @@
     <description lang="fr">Jmol est un éditeur et visualisateur de molécules. Jmol est un projet actif, et de nombreuses fonctionnalités lui seront encore ajoutées. Ce programme étant libre, les utilisateurs sont invités à le modifier, afin qu'ils correspondent parfaitement à leur besoin.</description>
     <authors>Egon Willighagen, Charles Fulton, Dan Gezelter, Jack van Rooij, Christoph Steinbeck, Bradley Smith</authors>
     <url>http://jmol.sourceforge.net</url>
+    <os name="GNU/Linux">
+      <maintainer>Egon Willighagen, Charles Fulton, Dan Gezelter, Jack van Rooij, Christoph Steinbeck, Bradley Smith</maintainer>
+      <version>1.2</version>
+      <license>GPL</license>
+      <url></url>
+      <comment></comment>
+      <date>4 dec 2001</date>
+    </os>
     <os name="All">
       <maintainer>Egon Willighagen, Charles Fulton, Dan Gezelter, Jack van Rooij, Christoph Steinbeck, Bradley Smith</maintainer>
       <version>1.2</version>
@@ -569,6 +593,14 @@
     <description lang="fr">NanoCAD utilise des techniques mathématiques de modélisations moléculaires pour simuler le comportement de molécules dans un navigateur web.</description>
     <authors></authors>
     <url>http://willware.net:8080/ncad.html</url>
+    <os name="GNU/Linux">
+      <maintainer>Will Ware</maintainer>
+      <version>1.1</version>
+      <license>BSD like</license>
+      <url></url>
+      <comment>Missing copying file</comment>
+      <date>28 jul 2001</date>
+    </os>
     <os name="All">
       <maintainer>Will Ware</maintainer>
       <version>1.1</version>
@@ -619,6 +651,14 @@
     <description lang="fr"> OSET est un programme de Synthèse Organique Assistée par Ordinateur (SOAO) pour l'enseignement de la chimie organique, et l'analyse rétrosynthétique en particulier.</description>
     <authors></authors>
     <url>http://litio.pquim.unam.mx/caos/</url>
+    <os name="GNU/Linux">
+      <maintainer></maintainer>
+      <version>?</version>
+      <license>GPL</license>
+      <url></url>
+      <comment>Missing license note in code and copying file</comment>
+      <date>28 jul 2001</date>
+    </os>
     <os name="All">
       <maintainer></maintainer>
       <version>?</version>
@@ -728,7 +768,15 @@
     <description lang="fr">PyMOL est un système de représentations de molécules en 3D, écrit en Python. Il permet la visualisation en temps réel, ainsi que la génération d'images et d'animations de hautes qualités.</description>
     <authors>Warren DeLano, Ralf Grosse-Kunstleve</authors>
     <url>http://pymol.sourceforge.net</url>
-    <os name="All (Python)">
+    <os name="GNU/Linux">
+      <maintainer>Warren DeLano, Ralf Grosse-Kunstleve</maintainer>
+      <version>0.82</version>
+      <license>BSD like</license>
+      <url></url>
+      <comment>Missing license note in code.</comment>
+      <date>8 jan 2002</date>
+    </os>
+    <os name="All">
       <maintainer>Warren DeLano, Ralf Grosse-Kunstleve</maintainer>
       <version>0.82</version>
       <license>BSD like</license>
@@ -786,8 +834,16 @@
     <description lang="en">BallRoom is a visualization tool for set of particles. It displays particles as balls (no sticks here), and uses a representation projected on two dimensions (no real 3D features like lights, shadows).</description>
     <description lang="fr">BallRoom est un outil de visualisation de particules. Il affiche des balles (sans batons), et utilise une représentation projetée en 2D (Ce n'est pas de la 3D réelle).</description>
     <authors>Francesco D. Di Tolla, Furio Ercolessi, Erio Tosatti</authors>
-    <url>http://www.sissa.it/furio/ballroom.html</url>
-    <os name="Unix">
+    <url>http://www.fisica.uniud.it/~ercolessi/ballroom.html</url>
+    <os name="GNU/Linux">
+      <maintainer>Francesco D. Di Tolla, Furio Ercolessi, Erio Tosatti</maintainer>
+      <version>7.4</version>
+      <license>GPL</license>
+      <url></url>
+      <comment>Missing license note in code.</comment>
+      <date>16 jun 2002</date>
+    </os>
+    <os name="Other Unix">
       <maintainer>Francesco D. Di Tolla, Furio Ercolessi, Erio Tosatti</maintainer>
       <version>7.4</version>
       <license>GPL</license>
@@ -804,7 +860,15 @@
     <description lang="fr">B est logiciel écrit en Java, permettant la modélisation on-line de biomolécule. Il est utile pour la génération initiale de biopolymères ou de petites molécules organiques.</description>
     <authors>N. B. White</authors>
     <url>http://www.scripps.edu/~nwhite/Biomer</url>
-    <os name="Java">
+    <os name="GNU/Linux">
+      <maintainer>N. B. White</maintainer>
+      <version>1.0</version>
+      <license>GPL</license>
+      <url></url>
+      <comment>No license or copyright note in code</comment>
+      <date>16 jan 2002</date>
+    </os>
+    <os name="All">
       <maintainer>N. B. White</maintainer>
       <version>1.0</version>
       <license>GPL</license>
@@ -821,7 +885,7 @@
     <description lang="fr">Le projet OpenBabel, destiné à compléter Babel, est un ensemble de programmes et de bibliothèques permettant l'interconversion entre différents types de fichier utilisés en modélisation moléculaire et en chimie informatique.</description>
     <authors>Michael Banck, Geoff Hutchison</authors>
     <url>http://openbabel.sourceforge.net</url>
-    <os name="POSIX">
+    <os name="GNU/Linux">
       <maintainer>Michael Banck, Geoff Hutchison</maintainer>
       <version>1.99</version>
       <license>GPL</license>
@@ -829,7 +893,7 @@
       <comment></comment>
       <date>6 feb 2002</date>
     </os>
-    <os name="Windows">
+    <os name="All">
       <maintainer>Michael Banck, Geoff Hutchison</maintainer>
       <version>1.99</version>
       <license>GPL</license>
@@ -845,7 +909,15 @@
     <description lang="fr">Ce programme est réalisé pour faire de l'analyse/prédiction de spectres de masse sur une multitude de polymères.</description>
     <authors>Filippo Rusconi</authors>
     <url>http://www.polyxmass.org</url>
-    <os name="Linux">
+    <os name="GNU/Linux">
+      <maintainer>Filippo Rusconi</maintainer>
+      <version>0.09</version>
+      <license>GPL</license>
+      <url>http://www.polyxmass.org/polyXmass/html/polyxmass/downloads/polyxmass-downloads.html</url>
+      <comment>Copyright and license notice in each source file</comment>
+      <date>3 jul 2002</date>
+    </os>
+    <os name="Windows">
       <maintainer>Filippo Rusconi</maintainer>
       <version>0.09</version>
       <license>GPL</license>
@@ -861,6 +933,14 @@
     <description lang="fr">JOELib est une bibliothèque de chimie computationelle, avec le support de recherche de substructures SMARTS, calcul de description, tuyau de calcul/filtrage, conversion dans de nombreux formats de fichiers.</description>
     <authors>Joerg K. Wegner</authors>
     <url>http://joelib.sourceforge.net/</url>
+    <os name="GNU/Linux">
+      <maintainer>Joerg K. Wegner</maintainer>
+      <version>1.2</version>
+      <license>GPL</license>
+      <url></url>
+      <comment>Copyright and license notice in each source file</comment>
+      <date>3 jul 2002</date>
+    </os>
     <os name="All">
       <maintainer>Joerg K. Wegner</maintainer>
       <version>1.2</version>
@@ -877,7 +957,15 @@
     <description lang="fr">Abinit est un logiciel permettant de trouver l'énergie totale, la densité de charge et la structure électronique de systèmes composés d'électrons et de noyaux (molécules et solides périodiques), grâce a la Théorie de la Densité Fonctionnelle (DFT), en utlisant des pseudopotentiels et une onde de base plane.</description>
     <authors>Xavier Gonze</authors>
     <url>http://www.abinit.org</url>
-    <os name="All">
+    <os name="GNU/Linux">
+      <maintainer></maintainer>
+      <version>3.4</version>
+      <license>GPL</license>
+      <url></url>
+      <comment>Notice of license and copyright in the code</comment>
+      <date>17 jul 2002</date>
+    </os>
+    <os name="Windows">
       <maintainer></maintainer>
       <version>3.3.3</version>
       <license>GPL</license>

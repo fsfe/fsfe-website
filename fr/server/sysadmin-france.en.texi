@@ -5,7 +5,7 @@
 @setchapternewpage odd
 @c %**end of header
 
-@set RCSID $Id: sysadmin-france.en.texi,v 1.64 2002-04-03 16:53:42 cyb Exp $
+@set RCSID $Id: sysadmin-france.en.texi,v 1.65 2002-04-21 11:20:16 loic Exp $
 @set VERSION 2.0
 
 @c Combine the variable and function indices:
@@ -114,10 +114,21 @@ of the set of machines available to the GNU project. As such they
 follow the same rules and the same policy.
 
 Reference documents describing the GNU environment are
-@file{fencepost.gnu.org:/gd/gnuorg/sysadmin/sysadmin.texi}
+@file{http://savannah.gnu.org/projects/sysadmin}
 for system administration information and the
 @uref{http://savannah.gnu.org/savannah.html,,Savannah admin guide} for
 usage of the project hosting facility.
+
+The essential URLs related to this document are:
+
+@itemize @bullet
+
+@item @uref{http://fr.fsf.org/mrtg/,,Nevrax mrtg}
+@item @uref{http://snail.gnu.org/mrtg/,,Free mrtg}
+@item @uref{http://snail.gnu.org/netsaint/,,Netsaint}
+@item @uref{http://france.fsfeurope.org/server/wrap-sysadmin-france.en.html,,This document}
+
+@end itemize
 
 @node Hardware List, Hardware Setup, Introduction, Top
 @chapter Hardware List

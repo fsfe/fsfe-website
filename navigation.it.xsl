@@ -89,9 +89,9 @@
 	 </xsl:otherwise>
 	</xsl:choose><br/>
 	<xsl:choose>
-	 <xsl:when test="$path='about/index.xhtml'">Informazioni</xsl:when>
+	 <xsl:when test="$path='about/about.xhtml'">Informazioni</xsl:when>
 	 <xsl:otherwise>
-	  <a href="{$fsfeurope}/about/index.html">Informazioni</a>
+	  <a href="{$fsfeurope}/about/about.html">Informazioni</a>
 	 </xsl:otherwise>
 	</xsl:choose><br/>
 	<xsl:choose>
@@ -107,9 +107,9 @@
 	 </xsl:otherwise>
 	</xsl:choose><br/>
 	<xsl:choose>
-	 <xsl:when test="$path='documents/documents.xhtml'">Documenti</xsl:when>
+	 <xsl:when test="$path='documents/documents.it.xhtml'">Documenti</xsl:when>
 	 <xsl:otherwise>
-	  <a href="{$fsfeurope}/documents/documents.html">Documenti</a>
+	  <a href="{$fsfeurope}/documents/documents.it.html">Documenti</a>
 	 </xsl:otherwise>
 	</xsl:choose><br/>
 

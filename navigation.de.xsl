@@ -91,9 +91,9 @@
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
-                <xsl:when test="$path='about/index.xhtml'">Über</xsl:when>
+                <xsl:when test="$path='about/about.xhtml'">Über</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/about/index.html">Über</a>
+                  <a href="{$fsfeurope}/about/about.html">Über</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
 

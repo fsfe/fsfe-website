@@ -115,8 +115,9 @@
       <tr>
 	<td class="TopTitle">
           <a href="{$filebase}.xhtml" class="T1">XHTML Source</a>&nbsp;&nbsp;|
-          &nbsp;&nbsp;<a href="{$fsfeurope}/fsfe.xsl" class="T1">XSL Style
-	  Sheet</a><br/>
+          &nbsp;&nbsp;<a href="{$fsffrance}/fsfe-fr.xsl" class="T1">XSL Style
+	  Sheet</a>&nbsp;&nbsp;|
+          &nbsp;&nbsp;<a href="http://savannah.gnu.org/cgi-bin/viewcvs/fsfe/fr/{$path}?cvsroot=www.gnu.org" class="T1">Modifications</a><br/>
 	</td>
 	<td class="TopTitle" align="right">
 	  &nbsp;<a href="mailto:webmaster@fsfeurope.org"

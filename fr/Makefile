@@ -39,7 +39,7 @@ process:
 		filebase=`basename $$base` ; \
 		dir=`dirname $$path` ; \
 		root=`dirname $$path | perl -pe 'chop; s:([^/]+):..:g if($$_ ne ".")'` ; \
-		$(XSLTPROC) fsfe-fr.xsl $$path $(XSLTOPTS) '$$fsffrance='$$root '$$filebase='$$filebase | \
+		$(XSLTPROC) fsfe-fr.xsl $$path $(XSLTOPTS) '$$fsffrance='$$root '$$filebase='$$filebase '$$path='$$path | \
 		perl -MFile::Copy -p -e '$$| = 1; copy("'$$dir'/$$1", \*STDOUT) if(/\#include virtual=\"(.*?)\"/); s/\$$//g if(/\$$''Date:/);' > $$base.html ; \
 	done
 

@@ -43,7 +43,7 @@ process:
 	done
 
 news: 
-	$(XSLTPROC) news/news.fr.xsl news/fsfe-fr-channel.xml $(XSLTOPTS) '$$fsffrance='$$root '$$filebase='$$filebase > news/news-bytes.fr.xhtml
+	$(XSLTPROC) news/news.fr.xsl news/fsfe-fr-channel.xml $(XSLTOPTS) '$$fsffrance=http://france.fsfeurope.org' > news/news-bytes.fr.xhtml
 
 validate:
 	find . -name '*.xhtml' -print | while read file ; \

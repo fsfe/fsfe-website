@@ -6,6 +6,11 @@
 
   <xsl:output method="xml" encoding="ISO-8859-1" indent="yes" />
 
+  <xsl:param name="fsffrance">http://france.fsfeurope.org</xsl:param>
+  <xsl:param name="fsfeurope">http://www.fsfeurope.org</xsl:param>
+  <xsl:param name="fsf">http://www.fsf.org</xsl:param>
+  <xsl:param name="gnu">http://www.gnu.org</xsl:param>
+
   <xsl:template match="/rss/channel">
     <p>
       <xsl:apply-templates select="@*|node()"/>      
@@ -17,17 +22,17 @@
       <table border="0" cellpadding="0" cellspacing="0">
 	<tr valign="top"  bgcolor="#736199">
 	  <td bgcolor="#ffffff">
-	    <img src="images/pix.png" width="5" height="1" alt=" " />
+	    <img src="{$fsffrance}/images/pix.png" width="5" height="1" alt=" " />
 	  </td>
 	  <td width="10" valign="top">
-	    <img border="0" width="10" height="13" src="images/ul.png" alt="(( " />
+	    <img border="0" width="10" height="13" src="{$fsffrance}/images/ul.png" alt="(( " />
 	  </td>
 	  <td bgcolor="#736199" class="newstitle">
 	    <a href="{link}"><xsl:value-of select="title" /></a>
 	    <b><xsl:value-of select="substring-before(description, '.')"/></b>
 	  </td>
 	  <td width="10" align="right" valign="top">
-	    <img border="0" width="10" height="13" src="images/ur.png" alt="))" />
+	    <img border="0" width="10" height="13" src="{$fsffrance}/images/ur.png" alt="))" />
 	  </td>
 	</tr>
       </table>

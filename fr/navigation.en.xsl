@@ -76,6 +76,7 @@
 		<tr>
 		  <td align="right">
 		    <a href="http://agenda.lolix.org/" class="T2">Calendar</a><br />
+		    <a href="{$fsffrance}/news/news.fr.html" class="T2">News</a><br />
 		    <a href="http://savannah.gnu.org/pm/task.php?group_project_id=37&amp;group_id=53&amp;func=browse" class="T2">Tasks</a><br />
 		    <a href="{$gnu}/jobs/jobsFR.fr.html" class="T2">Jobs</a><br />
 		    <a href="{$fsffrance}/press/press.fr.html" class="T2">Press Section</a><br />

@@ -5,7 +5,7 @@
 @setchapternewpage odd
 @c %**end of header
 
-@set RCSID $Id: sysadmin-france.en.texi,v 1.5 2001-04-18 10:53:50 loic Exp $
+@set RCSID $Id: sysadmin-france.en.texi,v 1.6 2001-04-18 11:55:09 rodolphe Exp $
 @set VERSION 1.0
 
 @c Combine the variable and function indices:
@@ -50,6 +50,7 @@ and FSF machines in France.
 * Introduction::                
 * Accounts::                    
 * Web::                         
+* System::                      
 * Concept Index::               
 * Name Index::                  
 
@@ -71,6 +72,20 @@ Web
 * Editing the Web::             
 * Update from CVS::             
 * Nightly script::              
+
+System
+
+* Security::                    
+* Statistics::                  
+
+Security
+
+* Firewall::                    
+
+Statistics
+
+* Installation::                
+* Output::                      
 
 @end detailmenu
 @end menu
@@ -191,7 +206,7 @@ Savannah does not serve account information anonymously. The
 the relevant information in XML. For more information check the
 @uref{http://savannah.gnu.org/savannah.html#Account%20Management,,Account Management} chapter of the Savannah documentation.
 
-@node Web, Concept Index, Accounts, Top
+@node Web, System, Accounts, Top
 @chapter Web
 
 @menu
@@ -273,7 +288,73 @@ run.
 The logs of the nightly script are stored in @file{/var/log/nightly.log}
 and rotated by @file{/etc/logrotate.d/nightly}.
 
-@node Concept Index, Name Index, Web, Top
+@node System, Concept Index, Web, Top
+@chapter System
+
+@menu
+* Security::                    
+* Statistics::                  
+@end menu
+
+@node Security, Statistics, System, System
+@section Security
+
+@menu
+* Firewall::                    
+@end menu
+
+@node Firewall,  , Security, Security
+@subsection Firewall
+
+A shell script applies filtering rules, it's located in
+@file{/etc/init.d/firewall}. This script is compatible with kernel 2.2
+and 2.4, it detects the kernel version using @file{uname}, @file{ipchains} it
+used with 2.2 and @file{iptables} with 2.4.
+
+Warning : only the ipchains (2.2) section is well configured.
+
+The policy applied is to close all TCP/UDP port by default and open only necessary.
+
+@node Statistics,  , Security, System
+@section Statistics
+
+Systems statistics are generated with mrtg
+@url{http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/}
+
+@menu
+* Installation::                
+* Output::                      
+@end menu
+
+@node Installation, Output, Statistics, Statistics
+@subsection Installation
+
+mrtg and addons have been installed with apt-get, two packages :
+
+@itemize
+@item
+mrtg version 2.8.9-1
+@item
+mrtgutils version 0.2
+@end itemize
+
+Some more scripts are used, they are located in @file{/usr/local/bin},
+they are coming from @url{http://mrtg.xidus.net}
+
+@itemize
+@item
+swapstat.sh
+@item
+stat.pl
+@end itemize
+
+
+@node Output,  , Installation, Statistics
+@subsection Output
+
+Output dir is @file{/var/www/france.fsfeurope.org/mrtg/}
+
+@node Concept Index, Name Index, System, Top
 @unnumbered Index of Concepts
 
 @printindex cp

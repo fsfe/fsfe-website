@@ -17,15 +17,15 @@
   <xsl:template match="/html/body">
     <body>
       <xsl:apply-templates />
-      <ul><b><xsl:value-of select="/html/text[@id='osig']" /></b>
+      <div class="indent"><b><xsl:value-of select="/html/text[@id='osig']" /></b>
       <ul>
        <xsl:apply-templates select="/html/set/osig" />
-      </ul></ul>
+      </ul>
 
-      <ul><b><xsl:value-of select="/html/text[@id='isig']" /></b>
+      <b><xsl:value-of select="/html/text[@id='isig']" /></b>
       <ul>
        <xsl:apply-templates select="/html/set/isig" />
-      </ul></ul>
+      </ul></div>
       <xsl:apply-templates select="/html/text/footer" />
     </body>
   </xsl:template>

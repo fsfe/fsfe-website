@@ -81,7 +81,7 @@
 
         <!-- News items -->
         <xsl:for-each select="/html/set/news
-          [translate (@end, '-', '') &lt;= translate ($today, '-', '')]">
+          [translate (@date, '-', '') &lt;= translate ($today, '-', '')]">
           <xsl:sort select="@date" order="descending" />
           <xsl:if test="position() &lt; 6">
             <item>

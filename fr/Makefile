@@ -34,13 +34,15 @@ ENPAGES = $(shell find * -regex '.*\.en\.xhtml' -print | sed "s/xhtml$$/html/")
 
 FRPAGES = $(shell find * -regex '.*\.fr\.xhtml' -print | sed "s/xhtml$$/html/")
 
+ITPAGES = $(shell find * -regex '.*\.it\.xhtml' -print | sed "s/xhtml$$/html/")
+
 NEWS_COMPLETE = news/news-bytes.fr.xhtml news/news-bytes.en.xhtml
 NEWS_LATEST = news/news-bytes-latest.fr.xhtml news/news-bytes-latest.en.xhtml
 NEWS = $(NEWS_COMPLETE) $(NEWS_LATEST)
 
 SCIENCE = science/documentation.fr.xhtml science/documentation.en.xhtml science/chimie.fr.xhtml science/chimie.en.xhtml science/biologie.fr.xhtml science/biologie.en.xhtml
 
-all: news $(ENPAGES) $(FRPAGES) science
+all: news $(ENPAGES) $(FRPAGES) $(ITPAGES) science
 
 news: $(NEWS)
 
@@ -82,7 +84,7 @@ science/documentation.en.xhtml: science/documentation.xml
 
 science/documentation.fr.xhtml: science/documentation.xml
 	$(XSLTPROC) science/documentation.fr.xsl science/documentation.xml >science/documentation.fr.xhtml || rm -f science/documentation.fr.xhtml
-	
+
 science/biologie.en.xhtml: science/biologie.xml
 	$(XSLTPROC) science/biologie.en.xsl science/biologie.xml >science/biologie.en.xhtml || rm -f science/biologie.en.xhtml
 
@@ -113,9 +115,21 @@ $(FRPAGES): %.html: %.xhtml fsfe-fr.xsl navigation.fr.xsl
 		perl -MFile::Copy -p -e '$$| = 1; copy("'$$dir'/$$1", \*STDOUT) if(/\#include virtual=\"(.*?)\"/); (s/Date://, s/Author:/par/, s/\$$//g) if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' \
 		> $$base.html
 
+$(ITPAGES): %.html: %.xhtml fsfe-fr.xsl navigation.en.xsl
+	@$(ECHO) "Building $@ ..."; \
+	path=$< ; \
+	base=`expr $$path : '\(.*\).xhtml'` ; \
+	filebase=`basename $$base` ; \
+	dir=`dirname $$path` ; \
+	root=`dirname $$path | perl -pe 'chop; s:([^/]+):..:g if($$_ ne ".")'` ; \
+	$(XSLTPROC) fsfe-fr.xsl $$path $(XSLTOPTS) \
+		'$$fsffrance='$$root '$$filebase='$$filebase '$$path='$$path | \
+		perl -MFile::Copy -p -e '$$| = 1; copy("'$$dir'/$$1", \*STDOUT) if(/\#include virtual=\"(.*?)\"/); (s/Date://, s/Author:/par/, s/\$$//g) if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' \
+		> $$base.html
+
 # remove html files for which an xhtml version exists (exclude fr/)
 clean:
-	rm -f $(NEWS) $(ENPAGES) $(FRPAGES)
+	rm -f $(NEWS) $(ENPAGES) $(FRPAGES) $(ITPAGES)
 
 sync:
 	$(SSH) -l www france.fsfeurope.org 'cd fsfe ; cvs -z3 -q update -I "*.html" -d ; ../bin/nightly' 

@@ -120,23 +120,14 @@ agreement with a company. The dependency management allows
 to consistently use a large set of packages.
 \\
 The packages will be produced in a source specific to the
-project. This source (currently
-http://france.fsfeurope.org/debian/) contains three types
+project. This source will contain three types
 of packages: copy of existing Debian packages slightly modified
 for the needs of NAME, packages of unfinished software written
 for NAME, packages whose sole purpose is to bind a set of 
 packages together and configure them. 
 \\
-The modified copy of existing Debian packages are only stored
-while waiting for the Debian maintainer or the upstream of the
-software to integrate the change. It is never meant to be 
-permanent. Communication is always established with the Debian
-maintainer and the upstream before the modified copy is built.
-Should we fail to do that, NAME will become a concurrent Debian
-distribution and this is to be avoided at all cost.
-\\
-The software specific to NAME is packaged at a very
-early stage. Basically the package is done whenever the
+The software specific to NAME will be packaged at a very
+early stage. Basically the package will be done whenever the
 software performs at least one task. Properly packaging a
 software takes a lot of time and failing to do it from the
 very beginning is asking for troubles. It also allows

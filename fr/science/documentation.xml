@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<?xml-stylesheet href="chimie.xsl" type="text/xsl"?>
+
+<!DOCTYPE softliste SYSTEM "chimie.dtd">
+
+<softliste>
+
+  <software>
+    <name>GNU TeXmacs</name>
+    <date></date>
+    <description lang="en">GNU TeXmacs is a free scientific text editor, which was both inspired by TeX and GNU Emacs. The editor allows you to write structured documents via a wysiwyg (what-you-see-is-what-you-get) and user friendly interface. New styles may be created by the user. The program implements high-quality typesetting algorithms and TeX fonts, which help you to produce professionally looking documents.</description>
+    <description lang="fr">GNU TeXmacs est un éditeur de textes
+    scientifiques libre, qui a été inspiré par à la fois TeX et GNU
+    Emacs. L'éditeur permet d'écrire des documents structurés via une
+    interface wysiwyg (what-you-see-is-what-you-get) et conviviale. De
+    nouveaux styles peuvent être créés par l'utilisateur. Le programme
+    met en oeuvre des algorithmes de mise en page de haute qualité et
+    les polices TeX, ce qui permet de produire des documents
+    d'apparence professionnelle.</description>
+    <authors>Joris van der Hoeven</authors>
+    <url>http://www.texmacs.org</url>
+    <os>
+      <name>GNU/Linux</name>
+      <maintainer></maintainer>
+      <version>0.3.5.13</version>
+      <licence>GPL</licence>
+      <date></date>
+    </os>
+  </software>
+</softliste>

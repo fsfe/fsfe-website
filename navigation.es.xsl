@@ -10,7 +10,7 @@
       <tr valign="middle"> 
 	  <td class="newstext">
 	    &nbsp;&nbsp;
-            <a class="topbanner" href="{$fsfeurope}/index.pt.html">FSF Europa</a>
+            <a class="topbanner" href="{$fsfeurope}/index.es.html">FSF Europa</a>
           </td>
           <td class="newstext" align="right">
 	    <a class="topbanner" href="{$fsf}/home.es.html">FSF</a>
@@ -76,7 +76,7 @@
             <tr><td class="TopTitle" align="center">Proyectos</td></tr>
               <tr>
                 <td class="TopBody" align="right">
-                  <a href="{$fsfeurope}/law/law.html" class="T2">Proteger&nbsp;el&nbsp;Software&nbsp;Libre</a><br />
+                  <a href="{$fsfeurope}/law/law.en.html" class="T2">Proteger&nbsp;el&nbsp;Software&nbsp;Libre</a><br />
                   <a href="{$fsfeurope}/coposys/index.en.html" class="T2">Coposys</a><br />
                 </td>
               </tr>

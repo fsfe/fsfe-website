@@ -17,8 +17,6 @@
 	  &nbsp;&nbsp;|&nbsp;&nbsp;
 	  <a class="topbanner" href="{$gnu}/">GNU</a>
 	  &nbsp;&nbsp;|&nbsp;&nbsp;
-	  <a class="topbanner" href="http://es.gnu.org/">GNU Espagne</a>
-	  &nbsp;&nbsp;|&nbsp;&nbsp;
 	  <a class="topbanner" href="http://www.april.org/index.html.en">APRIL</a>
 	  &nbsp;&nbsp;|&nbsp;&nbsp;
 	  <a class="topbanner" href="http://www.ofset.org/">OFSET</a>
@@ -57,8 +55,11 @@
 	    <a class="TopTitle">Free Software - equal chances for people and economy</a>
 	  </td>
 	  <td align="right" valign="bottom" class="TopBody">
-	    <a href="{$fsffrance}/index.en.html" class="T2">France</a> <br />
+	    <a href="http://www.rons.net.cn/english/Links/fsf-china/" class="T2">China</a> <br />
 	    <a href="{$fsfeurope}/" class="T2">Europe</a> <br />
+	    <a href="{$fsffrance}/index.en.html" class="T2">France</a> <br />
+	    <a href="http://gnu.org.in/" class="T2">India</a> <br />
+	    <a href="http://es.gnu.org/" class="T2">Spain</a> <br />
 	    <a href="{$fsf}/home.html" class="T2">United-States</a> <br />
 	  </td>
 	</tr>

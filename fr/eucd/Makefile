@@ -33,16 +33,6 @@ RSSH=-e ssh
 
 all: $(ENPAGES) $(FRPAGES)
 
-put:
-
-	$(RSYNC) $(ROPT) /home/rodo/dev/debstat/src/*.tar.gz projets/debstat/source
-
-	$(RSYNC) $(ROPT) $(RSSH) /home/www/rodolphe.quiedeville.org/htdocs/* deb:/home/www/rodolphe.quiedeville.org/htdocs
-
-
-
-
-
 
 $(ENPAGES) $(FRPAGES): %.html: %.xhtml fsfe-fr.xsl navigation.en.xsl navigation.fr.xsl
 	@echo "Building $@ ..."; \

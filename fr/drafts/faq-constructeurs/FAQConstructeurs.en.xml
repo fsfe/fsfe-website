@@ -154,7 +154,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	  </question>
 	  <answer>
 	    <para>
-              Introduced by Richard Mr Stallman in 1984, GNU is a project of operating system consisting solely of &LLs;. The Linux kernel, a creation which began in 1991, is the last component that has allowed to achieve an autonomous operating system solely composed of &LL;. GNU/Linux is thus the conjunction of the project GNU and the Linux kernel. It is this set which is distributed today by Debian, Mandrake, RedHat, etc. 
+              Introduced by Richard M. Stallman in 1984, GNU is a project of operating system consisting solely of &LLs;. The Linux kernel, a creation which began in 1991, is the last component that has allowed to achieve an autonomous operating system solely composed of &LL;. GNU/Linux is thus the conjunction of the project GNU and the Linux kernel. It is this set which is distributed today by Debian, Mandrake, RedHat, etc. 
 	    </para>
 	  </answer>
 	</qandaentry>
@@ -167,11 +167,24 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	  </question>
 	  <answer>
 	    <para>
-              A license can be designated under the generic name of <quote>free license</quote> if it corresponds to the criteria of &LL; licences (a <ulink url="http://www.fsf.org/philosophy/license-list.htm">list</ulink> is available on the FSF's site) or to &OS; licenses (a <ulink url="http://opensource.org/licenses">list</ulink> is available on the on the &OSI;'s site)
+              A license can be designated under the generic name of 
+	      <quote>free license</quote> if it corresponds to the criteria 
+	      of &LL; licences 
+	      (a <ulink
+	      url="http://www.fsf.org/philosophy/license-list.htm">list is
+	      available on the FSF's site</ulink>) 
+	      or to &OS; licenses 
+	      (a <ulink url="http://opensource.org/licenses">list is available on the on the &OSI;'s site</ulink>)
 	    </para>
 	    <para condition="long">
-             &LL; licenses correspond to the criteria stated by &LL; definition. Open Source Licenses correspond to the criteria stated in Open Source definition. 
+	      &LL; licenses correspond to the criteria stated by 
+	      <ulink url="http://www.fsf.org/philosophy/free-sw.html">
+		&LL; definition</ulink>.
+	      &OS; licenses correspond to the criteria stated in 
+	      <ulink url="http://opensource.org/docs/definition.html">
+		&OS; definition</ulink>.
 	    </para>
+	    <!--
 	    <para condition="long">
              Although many licenses appear in both these lists, they are not strictly identical, &LL; movement and the &OS; movement being based on different fundamental postulates.
 	    </para>
@@ -181,6 +194,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	    <para condition="long">
             In both cases, determining if a license is in accordance with the definition represents a lot of work and requires legal competences as well as an understanding of the philosophy of the movements. For that reason these two lists are a very important reference.
 	    </para>
+	    -->
 	  </answer>
 	</qandaentry>
 
@@ -219,7 +233,7 @@ For example Windows Microsoft is a software distributed under a non-free license
 	      It will generate sells.
 	    </para>
 	    <para>
-              The market is sizeable, and its potential is huge. GNU/Linux is the only operating system presently gaining market shares over all its competitors. It is favored by many computer specialists, who are prescriptors for harware choices. It is now commercially and financially backed by the biggest manufacturers (SUN, IBM, DELL, HP, ....). Some goverments are studying the use of &LL; as a standard for their administration (France, Poland, Argentina, China, ...)
+              The market is sizeable, and its potential is huge. GNU/Linux is the only operating system presently gaining market shares over all its competitors. It is favored by many computer specialists, who are prescriptors for harware choices. It is now commercially and financially backed by the biggest manufacturers (SUN, IBM, HP, SGI, DELL, etc.). Some goverments are studying the use of &LL; as a standard for their administration (France, Poland, Argentina, China, ...)
 	    </para>
 	  </answer>
 	</qandaentry>
@@ -374,7 +388,7 @@ For example Windows Microsoft is a software distributed under a non-free license
 	      </itemizedlist>
 	    </para>
 	    <para condition="long">
-              As opposed to other Operating Systems, GNU/Linux executes on a large number of hardware platforms. It is difficult to test them all without the assistance of a community.
+              As opposed to other operating systems, GNU/Linux executes on a large number of hardware platforms. It is difficult to test them all without the assistance of a community.
               Furthermore, versions of the Linux kernel are released on a more steady rythm than those of the other operating systems.
 	    </para>
 	    <para condition="long">
@@ -436,7 +450,8 @@ For example Windows Microsoft is a software distributed under a non-free license
 	<qandaentry>
 	  <question>
 	    <para>
-              Do I risk pressures on behalf of influent OSes publishers ?
+              Do I risk pressures on behalf of influent operating systems 
+	      publishers ?
 	    </para>
 	  </question>
 	  <answer>
@@ -560,7 +575,7 @@ For example Windows Microsoft is a software distributed under a non-free license
 		<listitem>
 		  <para>
 		    <ulink url="http://www.editions-eyrolles.com">
-		      Programmation système en C sous Linux,
+		      Programmation système en C sous Linux (in French),
 		      Christophe Blaess,
 		      2000, Eyrolles
 		    </ulink>

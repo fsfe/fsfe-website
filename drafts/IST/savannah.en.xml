@@ -42,10 +42,6 @@
     <title>Goals</title>
 
     <para>
-      
-    </para>
-
-    <para>
       <itemizedlist>
 	<listitem>
 	  <para>
@@ -343,11 +339,46 @@
     <qandaset defaultlabel="qanda">
 
       <qandadiv>
-	<title>Code base</title>
+	<title>Core</title>
 
 	<qandaentry>
 	    <para>
-	      
+	      The core is the server that implements interactions with
+	      the user and backend scripts. It can be used thru a web
+	      based interface or an xmlrpc interface.
+
+	      phpGroupWare is used as a code base. It provides
+	      templates, authentication, interface to SQL database,
+	      xmlrpc, session management, permission management with
+	      groups and acl.  The development version of phpGroupWare
+	      (0.9.13) is preferred and close interaction with the
+	      development team is maintained.
+
+	      A set phpGroupWare applications are developped or
+	      re-used to implement the &NAME; core. Architectural
+	      decisions that require changes of the phpGroupWare code
+	      base are first discussed with the development team. The
+	      changes are carefully evaluated and reduced to the
+	      minimal. The most important source of changes comes from
+	      the fact that &NAME; is project oriented where
+	      phpGroupWare is user oriented.
+
+	      The &NAME; application implements the user registration,
+	      project registration, project membership, project moderation,
+	      activation/deactivation of other applications for the
+	      project, the home page, searching projects and members,
+	      export/import of projects, read-only/read-write toggle of
+	      projects.
+
+	      Each functionality available to a project (CVS, WebCVS
+	      etc.)  is implemented in the core by an existing
+	      phpGroupWare application where possible, with a new application
+	      if nothing is available. Forking an existing application is
+	      not an option : coordination with the maintainer of the 
+	      application allows to implement the missing functionalities.
+	      If an application is of general interest, its inclusion in
+	      the phpGroupWare project is discussed before the application
+	      is implemented.
 	    </para>
 	</qandaentry>
 

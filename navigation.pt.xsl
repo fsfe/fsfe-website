@@ -134,6 +134,12 @@
                   <a href="{$fsfeurope}/gbn/index.pt.html">Rede Empresarial GNU</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
+              <xsl:choose>
+                <xsl:when test="$path='order/order.en.xhtml'">Order</xsl:when>
+                <xsl:otherwise>
+		  <a href="{$fsfeurope}/order/order.en.html">Order</a>
+                </xsl:otherwise>
+              </xsl:choose><br/>
               <br/></td>
             </tr>
 

@@ -62,6 +62,8 @@
 					<a href="{$fsfeurope}/law/law.de.html">Freie Software sichern</a><br/>
 					<a href="{$fsfeurope}/coposys/index.en.html">Coposys</a><br />
 					<a href="{$fsfeurope}/documents/whyfs.de.html">Wir sprechen von Freier Software</a><br />
+
+					<a href="{$fsfeurope}/de/buergerturm/buergerturm.de.html">Bürgerturm</a><br />
 				</td>
 			</tr>
 

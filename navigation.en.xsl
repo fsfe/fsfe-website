@@ -5,7 +5,7 @@
 
   <xsl:template match="/html[@lang='en']/body/div">
     <!-- FSF related sites -->
-    <table cellspacing="0" cellpadding="0" width="100%" border="0"><tr bgcolor="#e7e7e7"><td><img src="{$fsffrance}/images/pix.png" width="1" height="1" alt="" /></td></tr></table> 
+    <table cellspacing="0" cellpadding="0" width="100%" border="0"><tr bgcolor="#e7e7e7"><td><img src="{$fsfeurope}/images/pix.png" width="1" height="1" alt="" /></td></tr></table> 
     <table cellspacing="0" cellpadding="1" width="100%" border="0"> 
       <tr valign="middle"> 
 	  <td class="newstext">
@@ -23,7 +23,7 @@
     </table>
     <table cellspacing="0" cellpadding="0" width="100%" border="0">
 	<tr valign="middle" bgcolor="#6f6f6f">
-	  <td><img src="{$fsffrance}/images/pix.png" width="1" height="1" alt="" /></td>
+	  <td><img src="{$fsfeurope}/images/pix.png" width="1" height="1" alt="" /></td>
 	</tr>
     </table>
 
@@ -31,7 +31,7 @@
     <table width="100%" border="0" cellspacing="0" cellpadding="4">
       <tr>
 	<td class="TopTitle">
-	  &nbsp;<a href="{$fsffrance}/index.en.html" class="T1">France</a> |
+	  &nbsp;<a href="{$fsffrance}/index.html" class="T1">France</a> |
 	    Germany
 	</td>
       </tr>
@@ -41,8 +41,8 @@
     <table width="100%" border="0" cellspacing="0" cellpadding="4">
 	<tr>
 	  <td class="TopBody">
-	    <a href="{$fsffrance}/
-	      <img src="{$fsffrance}/images/gnulogo.jpg" alt="GNU Logo" border="0" />
+	    <a href="{$fsfeurope}/">
+	      <img src="{$fsfeurope}/images/gnulogo.jpg" alt="GNU Logo" border="0" />
 	    </a>
 	  </td>
 	  <td class="TopBody" width="99%" height="99%">

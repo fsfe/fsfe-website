@@ -4,7 +4,7 @@
           "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="fr">
   <head>
-    <title>FSFE France - Arrêté du 17 mars 1999</title>
+    <title>Dossier DCSSI GnuPG-1.0.7</title>
   </head>
   <body>
 
@@ -15,8 +15,6 @@
 	Français
 	]
       </center>
-
-      <b>ATTENTION: DOSSIER EN COURS D'ECRITURE</b>
 
       <blockquote> 
 	<center>
@@ -205,7 +203,6 @@
 	  sont empaquetées pour faciliter la gestion des clés.  Un
 	  paquet de clés peut être dans la plupart des cas considéré
 	  comme une simple paire de clés.
-	  <!-- cf http://www.gnupg.org/gph/fr/manual.html -->
 	</p>
 	
 	<br />
@@ -311,7 +308,7 @@
 	  manquement aux engagements souscrits m'exposant aux sanctions prévues 
 	  par l'article 28 de la loi no 90-1170 du 29 décembre 1990 modifiée 
 	  et par le décret no 98-101 du 24 février 1998.<br />
-	  Date : 23 Mai 2002  </p>
+	  Date : 24 Mai 2002  </p>
 	<p>  </p>
       </blockquote>
       <dl>
@@ -336,7 +333,7 @@
 	    - distribution source intégrale : 
 	    <a href="ftp://ftp.gnupg.org/gcrypt/gnupg/gnupg-1.0.7.tar.gz">ftp://ftp.gnupg.org/gcrypt/gnupg/gnupg-1.0.7.tar.gz</a>
 	    MD5: d8b36d4dfd213a1a1027b1877acbc897 ; <br />
-	    - licence Logiciel Libre (voir <a href="http://www.gnu.org/licenses/licence-list.html">http://www.gnu.org/licenses/licence-list.html</a>) : <a href="http://www.gnu.org/licenses/gpl.txt">GNU General Public License</a> ; <br />
+	    - licence Logiciel Libre (voir <a href="http://www.gnu.org/licenses/license-list.html">http://www.gnu.org/licenses/licence-list.html</a>) : <a href="http://www.gnu.org/licenses/gpl.txt">GNU General Public License</a> ; <br />
 </p>
 	  <p> La description 
 	    générale du produit, le manuel utilisateur ; 
@@ -355,7 +352,6 @@
 	  sont empaquetées pour faciliter la gestion des clés.  Un
 	  paquet de clés peut être dans la plupart des cas considéré
 	  comme une simple paire de clés.
-	  <!-- cf http://www.gnupg.org/gph/fr/manual.html -->
 	</p>
 	  
 	  <a href="http://www.gnupg.org/gpgman.html">http://www.gnupg.org/gpgman.html</a>, 
@@ -370,10 +366,6 @@
 	    des fonctions de cryptologie offertes par le produit:
 
 	    chiffrement, signature de données, gestion de clés publiques, certification de clés, protection par mot de passe de la clé privée, création de paires de clés et génération de nombres alléatoires.
-<!-- 	    encryption, data signing, public key management, key
-certification, private key protection, key pair creation and random
-number generation; -->
-
 	  </p>
 
 	  <p> Soit la description 
@@ -394,9 +386,6 @@ number generation; -->
 	    au moins : </p>
 	  <p> - le mode de 
 	    distribution: exportation dans un fichier ou envoi par TCP/IP vers des serveurs de clés répondant au protocol LDAP, HKP ou par courriel (gnupg-1.0.7/g10/export.c, gnupg-1.0.7/keyserver/*.c);
-<!-- Export to a file or sending using TCP/IP to keyservers speaking
-either the LDAP, HKP or email protocol.  
-(gnupg-1.0.7/g10/export.c, gnupg-1.0.7/keyserver/*.c) -->
 	    <br />
 	    - le procédé de génération des clés 
 <pre>
@@ -410,44 +399,24 @@ gnupg-1.0.7/cipher/primegen.c
 	    <br />
 	    - le format de conservation des clés s'il y a lieu: 
 	    un fichier contenant une concaténation de blocs de
-clés (keyblocks) utilisation le format de transmission décrit dans le <a href="http://www.ietf.org/rfc/rfc2440.txt">RFC2440</a> (http://www.ietf.org/rfc/rfc2440.txt);
-<!-- One file with concatenated keyblocks using the transmission format for keys as described in RFC2440. -->	    
+clés (keyblocks) utilisant le format de transmission décrit dans le <a href="http://www.ietf.org/rfc/rfc2440.txt">RFC2440</a> (http://www.ietf.org/rfc/rfc2440.txt);
 	    <br />
 	    - le format de transmission des clés s'il y a lieu: tel que décrit dans le RFC2440; 
-<!-- as per RFC2440 --> 
 	  </p>
 	  <p> La description 
 	    des mesures techniques mises en &#339;uvre pour empêcher l'altération 
 	    du procédé de chiffrement ou de la gestion de clés 
 	    associée (2):  le procédé de chiffrement consiste en une clé publique encodée avec la clé de session (bloc type 2 PKCS-1 tel que décrit dans le <a href="http://www.ietf.org/rfc/rfc2313.txt">RFC2313</a> http://www.ietf.org/rfc/rfc2313.txt). Les clés privées sont protégées selon les méthodes décrites dans le RFC2440 avec l'amélioration permettant de remplacer optionnellement le checksum 16 bit par un checksum SHA-1 ;
-<!-- The encryption method is public key encoded along with the session
-key (PKCS-1 block type 2 as defined in RFC2313)
-
-The private keys are protected using the methods described in RFC2440
-with the enhancement that the 16 bit checksum may optioanlly be replaced by a
-SHA-1 checksum. -->
-
 	  </p>
 	  <p> La description 
 	    des prétraitements subis par les données claires avant 
 	    leur chiffrement (compression, formatage, ajout d'un en-tête, 
 	    etc.) : encapsulation dans un paquet de données literal (literal data packet) tel que décrite par le RFC2440, utilisant un en-tête contenant un nom de fichier et un indicateur (flag) distinguant les données binaires des données textuelles. Les données peuvent aussi, optionnellement, être signées et/ou compressées ; 
-<!-- Encapsulation in a literal data packet as per RFC2440, using a header
-with a filename and a flag to distinguish between binary and plaintext
-data. Optiuoanlly digiatlly signed, optionally compressed. -->
 	  </p>
 	  <p> La description 
 	    des post-traitements des données chiffrées, aprés 
 	    leur chiffrement (ajout d'un en-tête, formatage, mise en paquet, 
 	    etc.) : Soit l'ajout au début des données chiffrées d'une clé de session chiffrée avec la clé publique encapsulée dans le paquet RFC2440 idoine, soit le chiffrement de la clé de session par un autre algorithme symétrique afin de permettre le déchiffrement par un secret partagé (shared secret). Les deux méthodes peuvent être combinées afin de permetre le déchiffrement avec la "passphrase" ou la clé privée. Il est possible de chiffrer la clé de session pour plusieures clés privées ou "passphrases".
-<!-- Either prepending the encrypted data with the public key encrypted
-session key encapsulated into the appropriate RFC2440 packet or
-encrypting the session key with another symmetric algorithm to allow
-decryption with a shared secret.  Both methods may be combined to
-allow decryption with either a passphrase or using the private key.
-It is possible to add encrypt the session key for multiple private
-keys or passphrases.
--->
 	  </p>
 	  <p>  (1) Conformément 
 	    au troisième alinéa de l'article 1er de l'arrêté 

@@ -47,14 +47,22 @@
 
     Updated:
     <!-- timestamp start -->
-    $Date: 2001-12-29 14:16:56 $ $Author: olberger $
+    $Date: 2001-12-29 14:22:37 $ $Author: olberger $
     <!-- timestamp end -->
 
   </body>
     </html>
   </xsl:template>
 
-  <xsl:include href="chimie.xsl" />
+  <xsl:template match="/softliste/software">
+<TR>
+<TD><b><xsl:value-of select="name" /></b><br />(<xsl:value-of select="date" />)</TD>
+<TD><xsl:value-of select="description[@lang='en']" /></TD>
+<TD><a href="{url}"><xsl:value-of select="url" /></a></TD>
+</TR>
+  </xsl:template>
+
+<!--  <xsl:include href="chimie.xsl" /> -->
 
 <xsl:template match="updatenotice">
     <i>List updated : <xsl:apply-templates select="@*|node()"/></i>

@@ -56,7 +56,7 @@ This section should clearly specify in addition to the technical objectives -
 also the quantified business objectives and how they are measured}
 \\ \\
 \section*{Decentralized.}
-Any given machine running NAME can host a list of
+Any given machine running SICHA can host a list of
 projects (with pointers to the machines hosting the
 projects), read-only copies of projects (with pointers
 to the machines hosting the read-write instance of the
@@ -101,9 +101,9 @@ because the usage pattern is not the same.
 A Debian package repository will be used to store the
 packages that implement various strategies. They can all
 coexist together. Let's say, for instance, that the
-package NAME-single implements a single machine setup
+package SICHA-single implements a single machine setup
 and depends on exim, cvs and bind. There can also be a
-NAME-multi-cvs, NAME-multi-exim, NAME-multi-bind,
+SICHA-multi-cvs, SICHA-multi-exim, SICHA-multi-bind,
 each installed on a separate machine and that configure
 the corresponding service for a multi-machine setup.
 
@@ -122,17 +122,17 @@ to consistently use a large set of packages.
 The packages will be produced in a source specific to the
 project. This source will contain three types
 of packages: copy of existing Debian packages slightly modified
-for the needs of NAME, packages of unfinished software written
-for NAME, packages whose sole purpose is to bind a set of 
+for the needs of SICHA, packages of unfinished software written
+for SICHA, packages whose sole purpose is to bind a set of 
 packages together and configure them. 
 \\
-The software specific to NAME will be packaged at a very
+The software specific to SICHA will be packaged at a very
 early stage. Basically the package will be done whenever the
 software performs at least one task. Properly packaging a
 software takes a lot of time and failing to do it from the
 very beginning is asking for troubles. It also allows
 developpers to use the software and contribute to it in an
-organized way. Finally, since NAME is a collection of
+organized way. Finally, since SICHA is a collection of
 many packages it allows to debug and architecture their
 interdepencies while writing code.
 
@@ -148,7 +148,7 @@ obeys the system locale.
 	    
 Each release provides an upgrade procedure from the
 previous version. The upgrade may imply a planned
-down-time, NAME is commited to provide an upgrade
+down-time, SICHA is commited to provide an upgrade
 facility that would work without stopping the service. The
 XML dump of the database will be used to upgrade the data
 using XSL files. The database structure itself is upgraded
@@ -172,7 +172,7 @@ to understand it.  There are no plans to submit it to W3C
 or other similar organizations.
 \\
 The CoopX format is used for upgrades and for communication
-between distinct NAME platforms.
+between distinct SICHA platforms.
 
 \chapter*{B4. Contribution to program/Key action objectives}
 \addcontentsline{toc}{chapter}{B4. Contribution to Key action objectives}
@@ -183,7 +183,7 @@ objectives and focus of the Action line which it addresses}
 \\ \\
 
 %% DRAFT, be nice :-) . GM
-The NAME project completely follows the '' Take up Action `` second objective.
+The SICHA project completely follows the '' Take up Action `` second objective.
 Indeed, it is designed to allow anybody even with limited ressources to install
 a development for free software. Therefore, even smallest projects will have a
 complete platform which will use the generic interfaces available on bigger

@@ -426,14 +426,16 @@ while (my ($file, $langs) = each %bases) {
             $href =~ s/http:\/\/www.fsfeurope.org//;
           }
           if ($href !~ /^http/) {
-            if ($href !~ /\.html$/) {
+            if ($href =~ /\.html$/) {
+              $href =~ s/([^\.][a-z0-9-][a-z0-9-])\.html/$1.$lang.html/;
+            } elsif ($href =~ /\.rss$/) {
+              $href =~ s/([^\.][a-z0-9-][a-z0-9-])\.rss/$1.$lang.rss/;
+            } else {
               if (-d $opts{i}."/$href") {
                 $href =~ s/\/?$/\/index.$lang.html/;
               } elsif ($href =~ /\/\w+$/) {
                 $href .= ".$lang.html";
               }
-            } else {
-              $href =~ s/([^\.][a-z0-9-][a-z0-9-])\.html/$1.$lang.html/;
             }
             $_->setAttribute("href", $href);
           }

@@ -96,7 +96,7 @@
             </center>
             <table class="news">
               <xsl:for-each select="/html/set/event
-                [translate (@end, '-', '') &gt; translate ($today, '-', '')]">
+                [translate (@end, '-', '') &gt;= translate ($today, '-', '')]">
                 <xsl:sort select="@start" />
                 <xsl:if test="position() &lt; 6">
                   <xsl:call-template name="event" />

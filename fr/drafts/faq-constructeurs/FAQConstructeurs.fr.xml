@@ -34,17 +34,18 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	  (Association Francophone des Utilisateurs de Linux et des Logiciels Libres)
 	</orgname>
       </affiliation>
-      <!--        <affiliation> -->
-      <!--  	<orgname> -->
-      <!--  	  Free Software Foundation (FSF) Europe -->
-      <!--  	</orgname> -->
-      <!--        </affiliation> -->
+      <affiliation>
+	<orgname>
+	  APRIL 
+	  (Association Pour la Promotion et la Recherche en Informatique Libre)
+   	</orgname>
+      </affiliation>
     </author>
 
-    <pubdate>Juin 2001</pubdate>
+    <pubdate>Septembre 2001</pubdate>
     <legalnotice>
       <para>
-	Copyright (C) 2001 AFUL
+	Copyright (C) 2001 AFUL, APRIL
       </para>
       <para>
 	La reproduction exacte et la distribution intégrale de cet article sont permises sur n'importe quel support d'archivage, pourvu que cette notice soit préservée.
@@ -628,10 +629,27 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	  </answer>
 	</qandaentry>
 
+	<qandaentry condition="long">
+	  <question>
+	    <para>
+	      Quelle documentation est disponible sur la programmation de pilotes (drivers) pour Linux ?
+	    </para>
+	  </question>
+	  <answer>
+	    <para>
+	      <ulink url="http://www.oreilly.com/catalog/linuxdrive2/">Linux Device Drivers, Alessandro Rubini &amp; Jonathan Corbet, 2001, O'Reilly</ulink>
+	    </para>
+	    <para>
+	      Ce livre qui est la référence actuelle pour la programmation de 
+	      pilotes pour le noyau Linux est également <ulink url="http://www.xml.com/ldd/chapter/book/index.html">librement disponible en ligne.</ulink>
+	    </para>
+	  </answer>
+	</qandaentry>
+
 	<qandaentry>
 	  <question id="nonOS">
 	    <para id="nonOS.text">
-	      Conseillez-vous l'&OS; dans tous les cas ?
+	      Conseillez-vous la diffusion sous licence libre dans tous les cas ?
 	    </para>
 	  </question>
 	  <answer>

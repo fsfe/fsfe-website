@@ -249,6 +249,7 @@ clean: clean-html clean-print
 clean-html:
 	rm -f ${HTML_OUT_DIR}/*.htm*
 	rm -f ${HTML_OUT_DIR}/*.css
+	rm -f prepare-html # removing empty target files
 
 clean-print:
 	rm -f ${PRINT_OUT_DIR}/*.tex
@@ -257,9 +258,10 @@ clean-print:
 	rm -f ${PRINT_OUT_DIR}/*.log
 	rm -f ${PRINT_OUT_DIR}/*.dvi
 	rm -f ${PRINT_OUT_DIR}/*.ps
+	rm -f prepare-print # removing empty target files
 
 init:
 	rm -rf ${HTML_OUT_DIR} ${PRINT_OUT_DIR}
-	rm -f prepare-html prepare-print # removing empty target files...
+	rm -f prepare-html prepare-print # removing empty target files
 
 

@@ -135,13 +135,13 @@
                   <a href="{$fsfeurope}/education/education.de.html" class="T2">Bildung</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
-              <!--<xsl:choose>
+              <xsl:choose>
                 <xsl:when test="$path='news/news.de.xhtml'">Nachrichten</xsl:when>
                 <xsl:otherwise>
                   <a href="{$fsfeurope}/news/news.de.html" class="T2">Nachrichten</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
-              <xsl:choose>
+              <!--<xsl:choose>
                 <xsl:when test="$path='events/events.de.xhtml'">Events</xsl:when>
                 <xsl:otherwise>
                   <a href="{$fsfeurope}/events/events.de.html" class="T2">Events</a>

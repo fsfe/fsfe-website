@@ -19,15 +19,15 @@
   <xsl:template match="/html/body">
     <body>
       <xsl:apply-templates />
-      <h3><xsl:value-of select="/html/text[@id='osig']" /></h3>
+      <ul><b><xsl:value-of select="/html/text[@id='osig']" /></b>
       <ul>
        <xsl:apply-templates select="/html/set/osig" />
-      </ul>
+      </ul></ul>
 
-      <h3><xsl:value-of select="/html/text[@id='isig']" /></h3>
+      <ul><b><xsl:value-of select="/html/text[@id='isig']" /></b>
       <ul>
        <xsl:apply-templates select="/html/set/isig" />
-      </ul>
+      </ul></ul>
 
     </body>
   </xsl:template>

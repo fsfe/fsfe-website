@@ -7,5 +7,7 @@ HTML = \
 
 FSFFRANCE = .
 
+SUBDIRS = birth server about stats
+
 include include.mk
 

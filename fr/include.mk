@@ -50,7 +50,7 @@ $(HTML): %.html: %.xhtml $(FSFFRANCE)/navigation.*.xsl $(FSFFRANCE)/fsfe-fr.xsl
 	@if [ ! -f navigation.fr.xsl ] ; then ln -s $(FSFFRANCE)/navigation.*.xsl . ; fi
 	$(XSLTPROC) $(FSFFRANCE)/fsfe-fr.xsl $< $@ $(XSLTOPTS) 
 	perl -MFile::Copy -p -e '$$| = 1; copy("$$1", \*STDOUT) if(/\#include virtual=\"(.*?)\"/);' < $@ > $*.tmp && mv $*.tmp $@
-	@-test -L navigation.fr.xsl && -rm -f navigation.*.xsl $*.tmp || exit 0
+	@-test -L navigation.fr.xsl && rm -f navigation.*.xsl $*.tmp || exit 0
 
 .PHONY: process recurse
 

@@ -76,7 +76,7 @@
             <tr><td class="TopTitle" align="center">Projectos</td></tr>
               <tr>
                 <td class="TopBody" align="right">
-                  <a href="{$fsfeurope}/law/law.pt.html" class="T2">Proteger o Software Livre</a><br />
+                  <a href="{$fsfeurope}/law/law.pt.html" class="T2">Proteger&nbsp;o&nbsp;Software&nbsp;Livre</a><br />
                 </td>
               </tr>
             <tr>

@@ -50,7 +50,9 @@
 	  <td class="TopBody" width="99%" height="99%">
 	    <a class="TopTitleB">FSF Europe</a>
 	    <br/>
+	    <!--
 	    <a class="TopTitle">Free Software - equal chances for people and economy</a>
+	    -->
 	  </td>
 	  <td align="right" valign="top" class="TopBody">
 	    <a href="{$fsfeurope}/documents/freesoftware.html" class="T2">What's&nbsp;Free&nbsp;Software?</a><br/>

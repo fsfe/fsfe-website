@@ -50,7 +50,9 @@
 	  <td class="TopBody" width="99%" height="99%">
 	    <a class="TopTitleB">FSF Europe</a>
 	    <br/>
+	    <!--
 	    <a class="TopTitle">Freie Software - gleiche Chancen für die Bevölkerung und die Wirtschaft</a>
+	    -->
 	  </td>
 	  <td align="right" valign="top" class="TopBody">
 	    <a href="{$fsfeurope}/documents/freesoftware.de.html" class="T2">Was&nbsp;ist&nbsp;Freie&nbsp;Software?</a><br/>

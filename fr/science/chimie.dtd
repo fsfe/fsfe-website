@@ -15,10 +15,9 @@
 <!ELEMENT email (#PCDATA)>
 <!ELEMENT url (#PCDATA)>
 <!ELEMENT mirrorurl (#PCDATA)>
-<!ELEMENT os (maintainer, version, licence, url?, comment?, date)>
+<!ELEMENT os (maintainer, version, license, url?, comment?, date)>
 <!ATTLIST os name CDATA #REQUIRED>
 <!ELEMENT maintainer (#PCDATA)>
 <!ELEMENT version (#PCDATA)>
+<!ELEMENT license (#PCDATA)>
 <!ELEMENT comment (#PCDATA)>
-
-

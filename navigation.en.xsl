@@ -136,6 +136,12 @@
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
+                <xsl:when test="$path='events/events.en.xhtml'">Events</xsl:when>
+                <xsl:otherwise>
+                  <a href="{$fsfeurope}/events/events.en.html" class="T2">Events</a>
+                </xsl:otherwise>
+              </xsl:choose><br/>
+              <xsl:choose>
                 <xsl:when test="$path='press/index.xhtml'">Press Section</xsl:when>
                 <xsl:otherwise>
                   <a href="{$fsfeurope}/press/index.html" class="T2">Press Section</a>

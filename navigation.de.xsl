@@ -13,9 +13,9 @@
             <a class="topbanner" href="{$fsfeurope}/">FSF Europe</a>
           </td>
           <td class="newstext" align="right">
-	    <a class="topbanner" href="{$fsf}/">FSF</a>
+	    <a class="topbanner" href="{$fsf}/home.de.html">FSF</a>
             &nbsp;&nbsp;|&nbsp;&nbsp;
-	    <a class="topbanner" href="{$gnu}/">GNU</a>
+	    <a class="topbanner" href="{$gnu}/home.de.html">GNU</a>
             &nbsp;&nbsp;|&nbsp;&nbsp;
 	    <a class="topbanner" href="http://es.gnu.org/">GNU Spain</a><br/>
 	  </td>

@@ -92,7 +92,7 @@
 		    <a href="http://savannah.gnu.org/pm/task.php?group_project_id=37&amp;group_id=53&amp;func=browse" class="T2">Tâches</a><br />
 		    <a href="{$gnu}/jobs/jobsFR.fr.html" class="T2">Emploi</a><br />
 		    <a href="{$fsffrance}/press/press.fr.html" class="T2">Section presse</a><br />
-		    <a href="http://mail.gnu.org/mailman/listinfo/fsfe-france" class="T2">Mailing List</a><br />
+		    <a href="{$fsffrance}/lists/lists.fr.html" class="T2">Listes Diffusion</a><br />
 		    <a href="{$fsffrance}/donations/donations.fr.html" class="T2">Dons</a><br />
 		    <a href="{$fsffrance}/about/about.fr.html" class="T2">À propos</a><br />
 		    <a href="{$fsffrance}/contact.fr.html" class="T2">Contact</a> <br />

@@ -38,7 +38,7 @@ NEWS_COMPLETE = news/news-bytes.fr.xhtml news/news-bytes.en.xhtml
 NEWS_LATEST = news/news-bytes-latest.fr.xhtml news/news-bytes-latest.en.xhtml
 NEWS = $(NEWS_COMPLETE) $(NEWS_LATEST)
 
-SCIENCE = science/documentation.fr.xhtml science/documentation.en.xhtml science/chimie.fr.xhtml science/chimie.en.xhtml
+SCIENCE = science/documentation.fr.xhtml science/documentation.en.xhtml science/chimie.fr.xhtml science/chimie.en.xhtml science/biologie.fr.xhtml science/biologie.en.xhtml
 
 all: news $(ENPAGES) $(FRPAGES) science
 
@@ -82,6 +82,12 @@ science/documentation.en.xhtml: science/documentation.xml
 
 science/documentation.fr.xhtml: science/documentation.xml
 	$(XSLTPROC) science/documentation.fr.xsl science/documentation.xml >science/documentation.fr.xhtml || rm -f science/documentation.fr.xhtml
+	
+science/biologie.en.xhtml: science/biologie.xml
+	$(XSLTPROC) science/biologie.en.xsl science/biologie.xml >science/biologie.en.xhtml || rm -f science/biologie.en.xhtml
+
+science/biologie.fr.xhtml: science/biologie.xml
+	$(XSLTPROC) science/biologie.fr.xsl science/biologie.xml >science/biologie.fr.xhtml || rm -f science/biologie.fr.xhtml
 
 $(ENPAGES): %.html: %.xhtml fsfe-fr.xsl navigation.en.xsl
 	@$(ECHO) "Building $@ ..."; \

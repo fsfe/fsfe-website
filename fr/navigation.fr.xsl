@@ -80,6 +80,7 @@
 
 		<a href="{$fsffrance}/collecte/collecte.fr.html">Revue de presse</a><br />
 		<a href="{$fsffrance}/voting/voting.en.html">E-Vote</a><br />
+		<a href="{$fsffrance}/dcssi/dcssi.fr.html">DCSSI</a><br />
 		<a href="{$fsfeurope}/coposys/index.fr.html">Coposys</a><br />
 		<a href="{$fsfeurope}/documents/whyfs.fr.html">Pourquoi nous parlons de Logiciel Libre</a><br />
 		<a href="{$fsffrance}/science/science.fr.html">Sciences et LL</a><br />

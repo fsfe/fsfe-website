@@ -79,6 +79,7 @@
 		<a href="http://www.fsfeurope.org/law/law.en.html">Secure Free Software</a><br />
 		<a href="{$fsffrance}/collecte/collecte.en.html">Press review</a><br />
 		<a href="{$fsffrance}/voting/voting.en.html">E-Vote</a><br />
+		<a href="{$fsffrance}/dcssi/dcssi.fr.html">DCSSI</a><br />
 		<a href="{$fsfeurope}/coposys/index.en.html">Coposys</a><br />
 		<a href="{$fsfeurope}/documents/whyfs.en.html">We speak about Free Software</a><br />
 		<a href="{$fsffrance}/science/science.en.html">Science and FS</a><br />

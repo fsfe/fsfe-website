@@ -81,7 +81,7 @@
 		    <a href="{$gnu}/jobs/jobsFR.fr.html" class="T2">Jobs</a><br />
 		    <a href="{$fsffrance}/press/press.fr.html" class="T2">Press Section</a><br />
 		    <a href="http://mail.gnu.org/mailman/listinfo/fsfe-france" class="T2">Mailing List</a><br />
-		    <a href="http://savannah.gnu.org/project/memberlist.php?group_id=148" class="T2">Who's Who</a><br />
+		    <a href="donations/donations.en.html" class="T2">Donations</a><br />
 		    <a href="{$fsffrance}/about/about.fr.html" class="T2">About</a><br />
 		    <a href="{$fsffrance}/contact.en.html" class="T1">Contact</a> <br />
 		    <a href="{$fsffrance}/thanks.fr.html" class="T1">Thanks</a> 

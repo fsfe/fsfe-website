@@ -1,8 +1,0 @@
-<?xml version="1.0"  encoding='ISO-8859-1' ?>
-<!ELEMENT donations (donation*)>
-<!ELEMENT donation (name,destination,amount,date)>
-<!ATTLIST donation id CDATA #REQUIRED>
-<!ELEMENT name (#PCDATA)>
-<!ELEMENT destination (#PCDATA)>
-<!ELEMENT amount (#PCDATA)>
-<!ELEMENT date (#PCDATA)>

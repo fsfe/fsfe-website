@@ -4,7 +4,8 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-  <xsl:output method="xml" encoding="UTF-8" indent="yes" />
+  <xsl:output method="xml" encoding="UTF-8" omit-xml-declaration="yes"
+    indent="yes" />
 
   <!-- ============= -->
   <!-- Link handling -->
@@ -60,6 +61,18 @@
         <description>News from the Free Software Foundation Europe</description>
         <link>http://www.fsfeurope.org</link>
         <language><xsl:value-of select="$lang" /></language>
+        <copyright>Copyright (c) FSF Europe. Verbatim copying and distribution
+          of this entire article is permitted in any medium, provided this
+          notice is preserved.</copyright>
+        <managingEditor>press@fsfeurope.org</managingEditor>
+        <webMaster>web@fsfeurope.org</webMaster>
+        <image>
+          <url>http://fsfeurope.org/news/fsfe-news.png</url>
+          <title>FSFE News</title>
+          <width>180</width>
+          <height>47</height>
+          <link>http://fsfeurope.org/news/</link>
+        </image>
 
         <!-- News items -->
         <xsl:for-each select="/html/set/news">

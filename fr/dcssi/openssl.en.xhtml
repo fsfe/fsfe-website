@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html
+          PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="fr">
+  <head>
+    <title>FSFE France - OpenSSL-0.9.6d technical information</title>
+  </head>
+  <body>
+
+    <div> <!-- The header will be inserted here -->
+      <center>
+	[
+	<!-- Please keep this list alphabetical -->
+	English
+	]
+      </center>
+
+      <blockquote>
+	<center>
+	  <h3> ADMINSITRATIVE PART</h3>
+	</center>
+
+	<center>
+	  <h5> C.5. Cryptographic Services 
+	    provided</h5>
+	</center>
+	<p>[ ] Authentication 
+	  (*) : ....................  </p>
+	<p> [ ] Access 
+	  Control (*) : ....................  </p>
+	<p> [X] Signature 
+	  (*) : DSA, Diffie-Hellman, RSA  </p>
+	<p> [X] Integrity 
+	  (*) : SHA-1, MD2, MD4, MD5, RIPE MD-160 </p>
+	<p> [X] Confidentiality 
+	  (*) : RSA, DSA, DES, Triple-DES, Blowfish, CAST5-128, IDEA, RC2, RC4, RC5 </p>
+	<p>  </p>
+	<p> (*) Specify the names of the algorithms used. </p>
+
+	<center>
+	  <h3> TECHNICAL PART</h3>
+	</center>
+
+	<p> General description of the product, the user manual ;
+	</p>
+	<p> A description 
+	  of the services provided by the product : cryptographic library
+with support for the X509 certification environment, and for hardware
+extensions. Used as a generic cryptographic library in many Free Software
+programs and specifically for its SSL and X509 support in programs
+communicating in a secure way over the Internet, either on-line (transport
+layer for WWW, IMAP, LDAP...), either off-line (S/MIME format e-mail).
+
+	    <a href="http://www.openssl.org/docs/ssl/ssl.html">http://www.openssl.org/docs/ssl/ssl.html</a>;
+	    <a href="http://www.openssl.org/docs/crypto/crypto.html">http://www.openssl.org/docs/crypto/crypto.html</a>
+ ; </p>
+	<p> A description of the cryptographic functions provided by the product (encryption, signature, key management) : Encryption, 
+data signing, public key handling, key certification (X509 format),
+password protection of private keys, key pair creation and 
+random numbers generation, bignum computing library, safe memory
+management (erasing deallocated memory chunks, memory locking),
+flow encryption and authentication (SSL), "nul divulgation" 
+interactive authentication
+   ; </p>
+
+	<p> The description of the key management implemented in
+	  the software, including at least: </p>
+	<p> - the distribution
+	  method : irrelevant for OpenSSL, it is customary to use files or LDAP repositories ;<br />
+	  - the key generation process/method :
+<pre>
+openssl-0.9.6d/apps/gendsa.c
+openssl-0.9.6d/apps/genrsa.c
+openssl-0.9.6d/apps/gendh.c
+</pre>
+	  ;<br />
+	  - the key archival format, if relevant:
+	  <a href="http://www.rsasecurity.com/rsalabs/pkcs/pkcs-8/">PKCS#8</a>
+	    (http://www.rsasecurity.com/rsalabs/pkcs/pkcs-8/), PKCS#12,
+	PEM or DER formats, in a file. Encryption with symetric algorithms
+	proposed in the sources.
+ ;<br />
+	  - the key transmission format, if relevant:
+clear transmission of public keys (X509), Diffie-Hellman key exchange
+during the initalization of an SSL session (directory openssl-0.9.6d/ssl/),
+PKCS#12 ;
+	</p>
+	<p> The description of technical means implemented to
+	  prevent alteration of the encryption method or the associated
+	  key management: Calculus: safe memory
+management (erasing deallocated memory chunks, memory locking), Keys: protected by PKCS#8 encryption, MAC (MD5 and SHA1 algorithms) and PKCS#12 (password protection) ; </p>
+	<p> The description of pre-processing applied on un-encrypted
+	  data before encryption (compression, formating, header addition, etc.):
+<pre>
+  * PKCS#7 encapsulation (S/MIME) for textual files
+  * other encodings ASN.1 : PKCS#12, X509
+  * TLSv1 protocol (SSL) for interactive sessions
+</pre> ; 
+ ; </p>
+	<p> The description of post-processing of encrypted data, after
+	  encryption (adding a header, formating, slicing into packets, etc.).
+<pre>
+  * PEM ("----BEGIN CERTIFICATE----" / "----END
+    CERTIFICATE----") format 
+  * TLSv1 protocol (SSL) for interactive sessions, and the selected
+transport layer (eg. TCP/IP).
+</pre>
+
+	</p>
+      </blockquote>
+
+      Updated:
+      <!-- timestamp start -->
+      $Date$ $Author$
+      <!-- timestamp end -->
+
+    </div> <!-- The footer will be inserted here -->
+  </body>
+  <!--
+  Local Variables: ***
+  mode: xml ***
+  End: ***
+  -->
+</html>

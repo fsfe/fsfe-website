@@ -390,7 +390,7 @@ LOC: AEL (alexandre.dulaunoy@ael.be)
 Server (Serial: WOLF80)
 LOC: AEL (alexandre.dulaunoy@ael.be)
 
-Switch Extreme Summit 24
+Switch Extreme Summit 24 (Serial 0033M-01725)
 LOC: SOPED (loic@gnu.org)
      http://extremenetworks.com/support/documentation/summitpubs.pdf
      To hard reboot do the following: connect to the serial port,
@@ -400,10 +400,19 @@ LOC: SOPED (loic@gnu.org)
      defaults, f: will continue the boot process, the login "admin"
      now has no password. Refer to documentation for the rest.
 
-Switch Extreme Summit 24
+Switch Extreme Summit 24 (Serial 0042M-01244)
+LOC: SOPED (loic@gnu.org) 
+     http://extremenetworks.com/support/documentation/summitpubs.pdf
+
+Switch Extreme Summit 48 (Serial 0024M-01608)
 LOC: SOPED (loic@gnu.org)
      http://extremenetworks.com/support/documentation/summitpubs.pdf
 
-Switch Extreme Summit 48
+HP NetServer LPr (PII400) (Serial FR91646557)
 LOC: SOPED (loic@gnu.org)
-     http://extremenetworks.com/support/documentation/summitpubs.pdf
+     http://h20000.www2.hp.com/bizsupport/TechSupport/Home.jsp?locale=en_US&prodTypeId=15351&prodSeriesId=50457&prodSeriesName=hp+netserver+lpr
+
+HP NetServer LPr (PII450) (Serial FR90919540)
+LOC: SOPED (loic@gnu.org)
+     http://h20000.www2.hp.com/bizsupport/TechSupport/Home.jsp?locale=en_US&prodTypeId=15351&prodSeriesId=50457&prodSeriesName=hp+netserver+lpr
+

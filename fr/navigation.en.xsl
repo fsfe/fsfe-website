@@ -95,6 +95,12 @@
 		<tr>
 		  <td align="right">
 		    <xsl:choose>
+                       <xsl:when test="$path='index.en.xhtml'">Home</xsl:when>
+                       <xsl:otherwise>
+                          <a href="{$fsffrance}/index.en.html" class="T2">Home</a>
+                       </xsl:otherwise>
+                    </xsl:choose><br />
+		    <xsl:choose>
                        <xsl:when test="$path='philosophy/philosophy.en.xhtml'">Philosophy</xsl:when>
                        <xsl:otherwise>
                           <a href="{$fsffrance}/philosophy/philosophy.en.html" class="T2">Philosophy</a>

@@ -30,6 +30,7 @@ and FSF machines in France.
 <li><a href="#Account%20Access">Account Access</a>: 
 <li><a href="#Account%20Update">Account Update</a>: 
 <li><a href="#Account%20Delete">Account Delete</a>: 
+<li><a href="#Account%20www">Account www</a>: 
 <li><a href="#Cron%20Job">Cron Job</a>:
 
 <p>Web
@@ -201,6 +202,7 @@ Up:<a rel=up href="#Top">Top</a>
 <li><a href="#Account%20Access">Account Access</a>: 
 <li><a href="#Account%20Update">Account Update</a>: 
 <li><a href="#Account%20Delete">Account Delete</a>: 
+<li><a href="#Account%20www">Account www</a>: 
 <li><a href="#Cron%20Job">Cron Job</a>: 
 </ul>
 
@@ -276,7 +278,7 @@ it will be overwritten.
 
 <p><hr>
 Node:<a name="Account%20Delete">Account Delete</a>,
-Next:<a rel=next href="#Cron%20Job">Cron Job</a>,
+Next:<a rel=next href="#Account%20www">Account www</a>,
 Previous:<a rel=previous href="#Account%20Update">Account Update</a>,
 Up:<a rel=up href="#Accounts">Accounts</a>
 <br>
@@ -290,8 +292,24 @@ deleted and if the user is added again at a later time, he will retrieve
 his former home directory.
 
 <p><hr>
-Node:<a name="Cron%20Job">Cron Job</a>,
+Node:<a name="Account%20www">Account www</a>,
+Next:<a rel=next href="#Cron%20Job">Cron Job</a>,
 Previous:<a rel=previous href="#Account%20Delete">Account Delete</a>,
+Up:<a rel=up href="#Accounts">Accounts</a>
+<br>
+
+<h2>Account www</h2>
+
+<p>Every account created automatically as described above is also granted
+an access to the <code>www</code> user which owns the directory in which all
+the document roots of the apache server are : <code>/home/www</code>.
+
+<p>This is simply done by appending the public keys of all the users to the
+<code>authorized_keys</code> file of the <code>www</code> user.
+
+<p><hr>
+Node:<a name="Cron%20Job">Cron Job</a>,
+Previous:<a rel=previous href="#Account%20www">Account www</a>,
 Up:<a rel=up href="#Accounts">Accounts</a>
 <br>
 
@@ -927,6 +945,7 @@ Up:<a rel=up href="#Top">Top</a>
 <li><a href="#Account%20Access">Account Access</a>
 <li><a href="#Account%20Update">Account Update</a>
 <li><a href="#Account%20Delete">Account Delete</a>
+<li><a href="#Account%20www">Account www</a>
 <li><a href="#Cron%20Job">Cron Job</a>
 </ul>
 <li><a href="#Web">Web</a>

@@ -5,7 +5,7 @@
 @setchapternewpage odd
 @c %**end of header
 
-@set RCSID $Id: sysadmin-france.en.texi,v 1.24 2001-04-24 13:35:31 loic Exp $
+@set RCSID $Id: sysadmin-france.en.texi,v 1.25 2001-04-24 19:18:03 loic Exp $
 @set VERSION 1.0
 
 @c Combine the variable and function indices:
@@ -66,6 +66,7 @@ Accounts
 * Account Access::              
 * Account Update::              
 * Account Delete::              
+* Account www::                 
 * Cron Job::                    
 
 Web
@@ -220,6 +221,7 @@ allows to do this in a fairly simple way.
 * Account Access::              
 * Account Update::              
 * Account Delete::              
+* Account www::                 
 * Cron Job::                    
 @end menu
 
@@ -279,7 +281,7 @@ Once a day the ssh public keys of every account on
 Savannah. If the @file{authorized_keys} file of a user is manualy updated,
 it will be overwritten. 
 
-@node Account Delete, Cron Job, Account Update, Accounts
+@node Account Delete, Account www, Account Update, Accounts
 @section Account Delete
 
 When a user is not listed anymore in the 
@@ -288,7 +290,17 @@ disabled on @code{france.fsfeurope.org}. The home directory is not
 deleted and if the user is added again at a later time, he will retrieve
 his former home directory. 
 
-@node Cron Job,  , Account Delete, Accounts
+@node Account www, Cron Job, Account Delete, Accounts
+@section Account www
+
+Every account created automatically as described above is also granted
+an access to the @code{www} user which owns the directory in which all
+the document roots of the apache server are : @file{/home/www}.
+
+This is simply done by appending the public keys of all the users to the
+@file{authorized_keys} file of the @code{www} user. 
+
+@node Cron Job,  , Account www, Accounts
 @section Cron Job
 
 The @file{/usr/local/bin/savannah_users} script does the update. It

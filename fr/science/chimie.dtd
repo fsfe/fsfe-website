@@ -15,10 +15,9 @@
 <!ELEMENT email (#PCDATA)>
 <!ELEMENT url (#PCDATA)>
 <!ELEMENT mirrorurl (#PCDATA)>
-<!ELEMENT os (name, maintainer, version, licence, comment?, date)>
+<!ELEMENT os (name, maintainer, version, licence, url?, comment?, date)>
 <!ELEMENT maintainer (#PCDATA)>
 <!ELEMENT version (#PCDATA)>
-<!ELEMENT licence (#PCDATA)>
 <!ELEMENT comment (#PCDATA)>
 
 

@@ -36,7 +36,6 @@
         <tr>
           <td>
             <a href="/"><img alt="[FSFE Logo]" src="/graphics/global/logo.png" border="0" align="left" /></a>
-            <a href="http://www.fsfe.org"><img alt="[Fellow Symbol]" src="/graphics/global/fellow.png" border="0" align="right"/></a>
           </td>
           <td class="focus">
             <table class="focus">

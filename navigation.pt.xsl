@@ -64,7 +64,8 @@
             <tr><td class="TopTitle" align="center">Projectos</td></tr>
               <tr>
                 <td class="TopBody" align="right">
-                  <a href="{$fsfeurope}/law/law.pt.html">Proteger&nbsp;o&nbsp;Software&nbsp;Livre</a><br />
+                  <a
+      href="{$fsfeurope}/law/law.pt.html">Proteger o Software Livre</a><br />
                   <a href="{$fsfeurope}/coposys/index.en.html">Coposys</a><br />
                 </td>
               </tr>

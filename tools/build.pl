@@ -265,11 +265,12 @@ while (my ($file, $langs) = each %bases) {
             if (/(.*):[a-z,]*global/ || /(.*):[a-z,]*$dir/) {
               foreach my $f (glob("$1*")) {
                  if ($f =~ /(.*)\.([a-z][a-z])\.xml$/) {
-                    if ($2 eq "en" && ($files{$1} != $lang)) {
+                    if (!exists $files{$1}) {
                       $files{$1} = $2;
                     } elsif ($2 eq $lang) {
                       $files{$1} = $2;
-                    } elsif (!exists $files{$1}) {
+                    } elsif (($2 eq "en") &&
+                             ($files{$1} != $lang)) {
                       $files{$1} = $2;
                     }
                  }

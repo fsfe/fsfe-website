@@ -26,7 +26,7 @@ XSLTOPTS = \
 	'$$fsf=$(FSF)' \
 	'$$gnu=$(GNU)'
 
-all:: process 
+all:: news process 
 
 clean:
 	find . -name '*.html' -print | xargs rm 

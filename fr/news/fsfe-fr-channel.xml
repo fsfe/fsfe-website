@@ -1,0 +1,46 @@
+<?xml version="1.0"  encoding="iso-8859-1" ?>
+ <!DOCTYPE rss SYSTEM "http://my.netscape.com/publish/formats/rss-0.91.dtd">
+ <rss version="0.91">
+  <channel>
+    <copyright>
+      Copyright (C) 2001 FSF France -
+      La reproduction exacte et la distribution intégrale
+      de cet article sont permises sur n'importe quel support
+      d'archivage, pourvu que cette notice soit
+      préservée.
+    </copyright>
+    <docs>http://france.fsfeurope.org/server/server.en.html#News</docs>
+    <pubDate>$Date$</pubDate>
+    <lastBuildDate>$Date$</lastBuildDate>
+    <description>
+      Les nouvelles fraîches du monde libre en France.
+      L'actualité du Logiciel Libre et l'implication de la FSF France
+      dans des actions techniques, mediatiques, politiques, philosophiques
+      destinées à défendre et promouvoir l'informatique libre.
+    </description>
+    <link>http://france.fsfeurope.org/news/</link>
+    <title>FSF France News</title>
+    <image>
+      <link>http://france.fsfeurope.org/</link>
+      <title>GNU logo</title>
+      <url>http://france.fsfeurope.org/images/gnulogo.jpg</url>
+    </image>
+    <managingEditor>raph@r4f.org (Raphaël Rousseau)</managingEditor>
+    <webMaster>webmasters@fsfeurope.org (FSF Europe Webmaster Team)</webMaster>
+    <language>fr-fr</language>
+
+    <item>
+      <title>Cheese and Wine APRIL</title>
+      <link>http://france.fsfeurope.org/news/article2001-04-23-01.fr.html</link>
+      <description>
+	23 Avril 2001. Le vendredi 20 Avril 2001, la Cheese and Wine
+	traditionelle d'&lt;a
+	href="http://www.april.org/"&gt;APRIL&lt;/a&gt; organisée une
+	fois de plus chez Katixa et Tony a acceuillit pour la première
+	fois la &lt;a href="http://france.fsfeurope.org/"&gt;FSF
+	France&lt;/a&gt;.
+      </description>
+    </item>
+  </channel>
+ </rss>
+

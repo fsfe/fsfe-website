@@ -208,7 +208,9 @@
 	<td class="TopTitle">
           <a href="{$filebase}.xhtml" class="T1">XHTML Source</a>&nbsp;&nbsp;|
           &nbsp;&nbsp;<a href="{$fsfeurope}/fsfe.xsl" class="T1">XSL Style
-	  Sheet</a><br/>
+	  Sheet</a>&nbsp;&nbsp;| <a
+      href="http://savannah.gnu.org/cgi-bin/viewcvs/fsfe/{$path}?cvsroot=www.gnu.org"
+      class="T1">Changes</a><br/>
 	</td>
 	<td class="TopTitle" align="right">
 	  &nbsp;<a href="mailto:webmaster@fsfeurope.org"

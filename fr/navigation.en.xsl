@@ -77,41 +77,122 @@
 		<tr><td class="TopTitle" align="center">Projects</td></tr>
 		<tr>
 		  <td class="TopBody" align="right">
-		    <a href="{$fsffrance}/gpl/gpl.en.html" class="T2">GPL in French</a><br />
-		    <a href="{$fsffrance}/libre.en.html" class="T2">Freedoms</a><br />	          </td>
+		    <xsl:choose>
+                       <xsl:when test="$path='gpl/gpl.en.xhtml'">GPL in French</xsl:when>
+                       <xsl:otherwise>
+                          <a href="{$fsffrance}/gpl/gpl.en.html" class="T2">GPL in French</a>
+                       </xsl:otherwise>
+                    </xsl:choose><br />
+		    <xsl:choose>
+                       <xsl:when test="$path='libre.en.xhtml'">Freedoms</xsl:when>
+                       <xsl:otherwise>
+                          <a href="{$fsffrance}/libre.en.html" class="T2">Freedoms</a>
+                       </xsl:otherwise>
+                    </xsl:choose><br />	          
+                 </td>
 		</tr>
 		<tr><td class="TopTitle" align="center">FSF France</td></tr>
 		<tr>
 		  <td align="right">
-		    <a href="{$fsffrance}/philosophy/philosophy.en.html" class="T2">Philosophy</a><br />
+		    <xsl:choose>
+                       <xsl:when test="$path='philosophy/philosophy.en.xhtml'">Philosophy</xsl:when>
+                       <xsl:otherwise>
+                          <a href="{$fsffrance}/philosophy/philosophy.en.html" class="T2">Philosophy</a>
+                       </xsl:otherwise>
+                    </xsl:choose><br />
 		    <a href="http://agenda.lolix.org/" class="T2">Calendar</a><br />
-		    <a href="{$fsffrance}/news/news.en.html" class="T2">News</a><br />
-		    <a href="{$fsffrance}/events/events.en.html" class="T2">Events</a><br />
+		    <xsl:choose>
+                       <xsl:when test="$path='news/news.en.xhtml'">News</xsl:when>
+                       <xsl:otherwise>
+                          <a href="{$fsffrance}/news/news.en.html" class="T2">News</a>
+                       </xsl:otherwise>
+                    </xsl:choose><br />
+		    <xsl:choose>
+                       <xsl:when test="$path='events/events.en.xhtml'">Events</xsl:when>
+                       <xsl:otherwise>
+                          <a href="{$fsffrance}/events/events.en.html" class="T2">Events</a>
+                       </xsl:otherwise>
+                    </xsl:choose><br />
 		    <a href="http://savannah.gnu.org/pm/task.php?group_project_id=37&amp;group_id=53&amp;func=browse" class="T2">Tasks</a><br />
 		    <a href="{$gnu}/jobs/jobsFR.fr.html" class="T2">Jobs</a><br />
-		    <a href="{$fsffrance}/press/press.fr.html" class="T2">Press Section</a><br />
-		    <a href="{$fsffrance}/lists/lists.en.html" class="T2">Mailing List</a><br />
-		    <a href="{$fsffrance}/donations/donations.en.html" class="T2">Donations</a><br />
-		    <a href="{$fsffrance}/about/about.en.html" class="T2">About</a><br />
-		    <a href="{$fsffrance}/contact.en.html" class="T1">Contact</a> <br />
-		    <a href="{$fsffrance}/thanks.fr.html" class="T1">Thanks</a> 
+		    <xsl:choose>
+                       <xsl:when test="$path='press/press.fr.xhtml'">Press Section</xsl:when>
+                       <xsl:otherwise>
+                          <a href="{$fsffrance}/press/press.fr.html" class="T2">Press Section</a>
+                       </xsl:otherwise>
+                    </xsl:choose><br />
+		    <xsl:choose>
+                       <xsl:when test="$path='lists/lists.en.xhtml'">Mailing List</xsl:when>
+                       <xsl:otherwise>
+                          <a href="{$fsffrance}/lists/lists.en.html" class="T2">Mailing List</a>
+                       </xsl:otherwise>
+                    </xsl:choose><br />
+		    <xsl:choose>
+                       <xsl:when test="$path='donations/donations.en.xhtml'">Donations</xsl:when>
+                       <xsl:otherwise>
+                          <a href="{$fsffrance}/donations/donations.en.html" class="T2">Donations</a>
+                       </xsl:otherwise>
+                    </xsl:choose><br />
+		    <xsl:choose>
+                       <xsl:when test="$path='about/about.en.xhtml'">About</xsl:when>
+                       <xsl:otherwise>
+                          <a href="{$fsffrance}/about/about.en.html" class="T2">About</a>
+                       </xsl:otherwise>
+                    </xsl:choose><br />
+		    <xsl:choose>
+                       <xsl:when test="$path='contact.en.xhtml'">Contact</xsl:when>
+                       <xsl:otherwise>
+                          <a href="{$fsffrance}/contact.en.html" class="T1">Contact</a>
+                       </xsl:otherwise>
+                    </xsl:choose> <br />
+		    <xsl:choose>
+                       <xsl:when test="$path='thanks.fr.xhtml'">Thanks</xsl:when>
+                       <xsl:otherwise>
+                          <a href="{$fsffrance}/thanks.fr.html" class="T1">Thanks</a>
+                       </xsl:otherwise>
+                    </xsl:choose> 
 		  </td>
 		</tr>
 		<tr><td class="TopTitle" align="center">Sysadmin</td></tr>
 		<tr>
 		  <td class="TopBody" align="right">
-		    <a href="{$fsffrance}/stats/stats.fr.html" class="T1">Statistics</a> <br />
-		    <a href="{$fsffrance}/server/server.en.html" class="T2">Guide</a><br />
+		    <xsl:choose>
+                       <xsl:when test="$path='stats/stats.fr.xhtml'">Statistics</xsl:when>
+                       <xsl:otherwise>
+                          <a href="{$fsffrance}/stats/stats.fr.html" class="T1">Statistics</a>
+                       </xsl:otherwise>
+                    </xsl:choose> <br />
+		    <xsl:choose>
+                       <xsl:when test="$path='server/server.en.xhtml'">Guide</xsl:when>
+                       <xsl:otherwise>
+                          <a href="{$fsffrance}/server/server.en.html" class="T2">Guide</a>
+                       </xsl:otherwise>
+                    </xsl:choose><br />
 		    <a href="http://savannah.gnu.org/projects/fsffr/" class="T2">Accounts</a><br />
-		    <a href="{$fsffrance}/birth/birth.en.html" class="T2">Birth</a><br />
+		    <xsl:choose>
+                       <xsl:when test="$path='birth/birth.en.xhtml'">Birth</xsl:when>
+                       <xsl:otherwise>
+                          <a href="{$fsffrance}/birth/birth.en.html" class="T2">Birth</a>
+                       </xsl:otherwise>
+                    </xsl:choose><br />
 		  </td>
 		</tr>
 		<tr><td class="TopTitle" align="center">Webmaster</td></tr>
 		<tr>
 		  <td class="TopBody" align="right">
-		    <a href="{$fsffrance}/server/server.en.html#Web" class="T2">Guide</a><br />
+		    <xsl:choose>
+                       <xsl:when test="$path='server/server.en.html#Web'">Guide</xsl:when>
+                       <xsl:otherwise>
+                          <a href="{$fsffrance}/server/server.en.html#Web" class="T2">Guide</a>
+                       </xsl:otherwise>
+                    </xsl:choose><br />
 		    <a href="{$gnu}/server/standards/" class="T2">GNU Guide</a><br />
-		    <a href="{$fsffrance}/boilerplate.fr.html" class="T2">Boilerplate</a><br />
+		    <xsl:choose>
+                       <xsl:when test="$path='boilerplate.fr.xhtml'">Boilerplate</xsl:when>
+                       <xsl:otherwise>
+                          <a href="{$fsffrance}/boilerplate.fr.html" class="T2">Boilerplate</a>
+                       </xsl:otherwise>
+                    </xsl:choose><br />
 		    <a href="http://mailman.fsfeurope.org/mailman/listinfo/web" class="T2">Mailing List</a><br />
 		  </td>
 		</tr>

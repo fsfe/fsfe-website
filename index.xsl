@@ -82,6 +82,9 @@
               <a href="news/news.html">
                 <xsl:value-of select="/html/text[@id='morenews']" />
               </a>
+              <br />
+              <br />
+              <a href="news/news.rss">[RSS]</a>
             </center>
           </td>
           <td valign="top" width="4%">
@@ -104,6 +107,9 @@
               <a href="events/events.html">
                 <xsl:value-of select="/html/text[@id='moreevents']" />
               </a>
+              <br />
+              <br />
+              <a href="events/events.rss">[RSS]</a>
             </center>
           </td>
         </tr>

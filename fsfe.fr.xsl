@@ -5,7 +5,7 @@
  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:output method="html" encoding="iso-8859-1" doctype-public="-//W3C//DTD HTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" />
 
-<!-- $Id: fsfe.fr.xsl,v 1.2 2001-04-21 17:02:46 villate Exp $ -->
+<!-- $Id: fsfe.fr.xsl,v 1.3 2001-05-08 23:00:34 bernhard Exp $ -->
 <xsl:template match="webpage">
 <html>
   <head>
@@ -21,9 +21,12 @@
     <table summary="" width="100%" border="0" cellspacing="0" cellpadding="4">
 	<tr>
 	  <td class="TopBody">
+	  <!-- 
 	    <a href="http://france.fsfeurope.org/index.fr.shtml">
 	      <img src="images/gnulogo.jpg" alt="GNU Logo" border="0" />
 	    </a>
+          -->
+		&nbsp;
 	  </td>
 	  <td class="TopBody" width="99%" height="99%">
 	    <a class="TopTitleB">FSF Europe</a>
@@ -74,7 +77,7 @@
     </table>
   Mis à jour:
 <!-- timestamp start -->
-$Date: 2001-04-21 17:02:46 $ $Author: villate $
+$Date: 2001-05-08 23:00:34 $ $Author: bernhard $
 <!-- timestamp end -->
   </body>
 </html>

@@ -41,9 +41,11 @@
     <table width="100%" border="0" cellspacing="0" cellpadding="4">
 	<tr>
 	  <td class="TopBody">
+	  <!--
 	    <a href="{$fsfeurope}/index.de.html">
 	      <img src="{$fsfeurope}/images/gnulogo.jpg" alt="GNU Logo" border="0" />
 	    </a>
+	  -->&nbsp;
 	  </td>
 	  <td class="TopBody" width="99%" height="99%">
 	    <a class="TopTitleB">FSF Europe</a>

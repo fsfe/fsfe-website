@@ -117,8 +117,7 @@ help:
 	@echo
 
 # Shortcuts
-all: html
-#all: html pdf
+all: html ps
 ph: prepare-html
 pp: prepare-print
 html: html-long html-short
@@ -163,97 +162,62 @@ prepare-print:
 	touch $@
 
 #=======================================================================
-# Generates filtered XML sources from the XML original source
-#=======================================================================
 
-xml-long: ${XML_SRC} ${LONG_SS_XSL}
-	export SGML_CATALOG_FILES=${CATALOG}; \
-	xsltproc \
-	--catalogs \
-	-o ${XML_SRC_LONG} \
-	${LONG_SS_XSL} ${XML_SRC}
+# "-V use-output-dir" on the Jade command line makes Jade use an output-dir,
+# if it has been specified in the DSSSL stylesheet.
+# Thus, the html chunks will be written to the output-dir, 
+# instead of the current directory
+html: ${XML_SRC} ${HTML_SS_DSL} prepare-html
+	(cd ${HTML_OUT_DIR}; \
+	jade -t sgml \
+	-d ../${HTML_SS_DSL} ${XML_DECL} ../${XML_SRC});
 	touch $@
 
-xml-short: ${XML_SRC} ${SHORT_SS_XSL}
-	export SGML_CATALOG_FILES=${CATALOG}; \
-	xsltproc \
-	--catalogs \
-	-o ${XML_SRC_SHORT} \
-	${SHORT_SS_XSL} ${XML_SRC}
-	touch $@
-
-#=======================================================================
-
-html-long: xml-long ${HTML_SS_XSL} prepare-html
-	export SGML_CATALOG_FILES=${CATALOG}; \
-	xsltproc \
-	--catalogs \
-	-o ${HTML_OUT_DIR}/${HTML_OUTPUT_LONG} \
-	${HTML_SS_XSL} ${XML_SRC_LONG}
-	touch $@
-
-html-short: xml-short ${HTML_SS_XSL} prepare-html
-	export SGML_CATALOG_FILES=${CATALOG}; \
-	xsltproc \
-	--catalogs \
-	-o ${HTML_OUT_DIR}/${HTML_OUTPUT_SHORT} \
-	${HTML_SS_XSL} ${XML_SRC_SHORT}
+html-nochunk: ${XML_SRC} ${HTML_SS_DSL} prepare-html
+	jade -t sgml -V nochunks \
+	-d ${HTML_SS_DSL} ${XML_DECL} ${XML_SRC} \
+	> ${HTML_OUT_DIR}/${HTML_OUTPUT}
 	touch $@
 
 #=======================================================================
 
-latex-long: xml-long ${LATEX_SS_XSL} prepare-print
-	export SGML_CATALOG_FILES=${CATALOG}; \
-	xsltproc \
-	--catalogs \
-	-o ${PRINT_OUT_DIR}/${LATEX_OUTPUT_LONG} \
-	${LATEX_SS_XSL} ${XML_SRC_LONG}
+# "-o output_file" on the Jade command line tells jade 
+# to produce its tex output in ${PRINT_OUT_DIR}.
+#
+# NOTE :
+# It is important to declare the option -o before the others, because if not,
+# jade will complain.
+tex: ${XML_SRC} prepare-print
+	jade -V tex-backend -t tex \
+	-o ${PRINT_OUT_DIR}/${TEX_OUTPUT} \
+	-d ${PRINT_SS_DSL} ${XML_DECL} ${XML_SRC}
 	touch $@
 
-latex-short: xml-short ${LATEX_SS_XSL} prepare-print
-	export SGML_CATALOG_FILES=${CATALOG}; \
-	xsltproc \
-	--catalogs \
-	-o ${PRINT_OUT_DIR}/${LATEX_OUTPUT_SHORT} \
-	${LATEX_SS_XSL} ${XML_SRC_SHORT}
+# jadetex will generate a .dvi file 
+# that can be viewed with xdvi file.dvi
+#
+# jadetex needs to be run as long as the .aux file changes,
+# because of the cross-referencing. 
+# Usually after 3 runs all the references like 
+# the bibliography and the index are done.
+#
+# "cd ${PRINT_OUT_DIR}" runs jadetex in the ${PRINT_OUT_DIR} directory
+#
+dvi: tex
+	cd ${PRINT_OUT_DIR}; \
+	jadetex ${TEX_OUTPUT}; \
+	jadetex ${TEX_OUTPUT}; \
+	jadetex ${TEX_OUTPUT}; \
+	jadetex ${TEX_OUTPUT}
 	touch $@
 
-#=======================================================================
-
-fo-long: xml-long ${FO_SS_XSL} prepare-print
-	export SGML_CATALOG_FILES=${CATALOG}; \
-	xsltproc \
-	--catalogs \
-	-o ${PRINT_OUT_DIR}/${FO_OUTPUT_LONG} \
-	${FO_SS_XSL} ${XML_SRC_LONG}
-	touch $@
-
-fo-short: xml-short ${FO_SS_XSL} prepare-print
-	export SGML_CATALOG_FILES=${CATALOG}; \
-	xsltproc \
-	--catalogs \
-	-o ${PRINT_OUT_DIR}/${FO_OUTPUT_SHORT} \
-	${FO_SS_XSL} ${XML_SRC_SHORT}
-	touch $@
-
-#=======================================================================
-
-# Note that 2 recursion are necessary to get cross-references right.
-# Also "|| true" is needed because PassiveTeX returns some error status.
-pdf-long: fo-long prepare-print
+# dvips will generate a .ps file 
+# that can be viewed with gv file.ps
+#
+# "cd ${PRINT_OUT_DIR}" runs dvips in the ${PRINT_OUT_DIR} directory
+ps: dvi
 	(cd ${PRINT_OUT_DIR}; \
-	../pdfxmltex.sh ${FO_OUTPUT_LONG} || true; \
-	../pdfxmltex.sh ${FO_OUTPUT_LONG} || true \
-	)
-	touch $@
-
-# Note that 2 recursion are necessary to get cross-references right.
-# Also "|| true" is needed because PassiveTeX returns some error status.
-pdf-short: fo-short prepare-print
-	(cd ${PRINT_OUT_DIR}; \
-	../pdfxmltex.sh ${FO_OUTPUT_SHORT} || true; \
-	../pdfxmltex.sh ${FO_OUTPUT_SHORT} || true \
-	)
+	dvips -o ${PS_OUTPUT} -t a4 ${DVI_OUTPUT});
 	touch $@
 
 #=======================================================================

@@ -118,7 +118,6 @@ help:
 
 # Shortcuts
 all: html
-#all: html pdf
 ph: prepare-html
 pp: prepare-print
 html: html-long html-short
@@ -166,94 +165,57 @@ prepare-print:
 # Generates filtered XML sources from the XML original source
 #=======================================================================
 
+# ConfCatEntityResolver is used instead of 
+# com.arbortext.catalog.CatalogEntityResolver.
+# debug = [0-3]
 xml-long: ${XML_SRC} ${LONG_SS_XSL}
-	export SGML_CATALOG_FILES=${CATALOG}; \
-	xsltproc \
-	--catalogs \
-	-o ${XML_SRC_LONG} \
-	${LONG_SS_XSL} ${XML_SRC}
+	java \
+	-Dxml.catalog.debug=0 \
+	-Dxml.catalog.override=yes \
+	-Dxml.catalog.files=${CATALOG} \
+	org.apache.xalan.xslt.Process -v -html \
+	-entityresolver ConfCatEntityResolver \
+	-in ${XML_SRC} \
+	-xsl ${LONG_SS_XSL} \
+	-out ${XML_SRC_LONG}
 	touch $@
 
 xml-short: ${XML_SRC} ${SHORT_SS_XSL}
-	export SGML_CATALOG_FILES=${CATALOG}; \
-	xsltproc \
-	--catalogs \
-	-o ${XML_SRC_SHORT} \
-	${SHORT_SS_XSL} ${XML_SRC}
+	java \
+	-Dxml.catalog.debug=0 \
+	-Dxml.catalog.override=yes \
+	-Dxml.catalog.files=${CATALOG} \
+	org.apache.xalan.xslt.Process -v -html \
+	-entityresolver ConfCatEntityResolver \
+	-in ${XML_SRC} \
+	-xsl ${SHORT_SS_XSL} \
+	-out ${XML_SRC_SHORT}
 	touch $@
 
 #=======================================================================
 
 html-long: xml-long ${HTML_SS_XSL} prepare-html
-	export SGML_CATALOG_FILES=${CATALOG}; \
-	xsltproc \
-	--catalogs \
-	-o ${HTML_OUT_DIR}/${HTML_OUTPUT_LONG} \
-	${HTML_SS_XSL} ${XML_SRC_LONG}
+	java \
+	-Dxml.catalog.debug=0 \
+	-Dxml.catalog.override=yes \
+	-Dxml.catalog.files=${CATALOG} \
+	org.apache.xalan.xslt.Process -v -html \
+	-entityresolver ConfCatEntityResolver \
+	-in ${XML_SRC_LONG} \
+	-xsl ${HTML_SS_XSL} \
+	-out ${HTML_OUT_DIR}/${HTML_OUTPUT_LONG}
 	touch $@
 
 html-short: xml-short ${HTML_SS_XSL} prepare-html
-	export SGML_CATALOG_FILES=${CATALOG}; \
-	xsltproc \
-	--catalogs \
-	-o ${HTML_OUT_DIR}/${HTML_OUTPUT_SHORT} \
-	${HTML_SS_XSL} ${XML_SRC_SHORT}
-	touch $@
-
-#=======================================================================
-
-latex-long: xml-long ${LATEX_SS_XSL} prepare-print
-	export SGML_CATALOG_FILES=${CATALOG}; \
-	xsltproc \
-	--catalogs \
-	-o ${PRINT_OUT_DIR}/${LATEX_OUTPUT_LONG} \
-	${LATEX_SS_XSL} ${XML_SRC_LONG}
-	touch $@
-
-latex-short: xml-short ${LATEX_SS_XSL} prepare-print
-	export SGML_CATALOG_FILES=${CATALOG}; \
-	xsltproc \
-	--catalogs \
-	-o ${PRINT_OUT_DIR}/${LATEX_OUTPUT_SHORT} \
-	${LATEX_SS_XSL} ${XML_SRC_SHORT}
-	touch $@
-
-#=======================================================================
-
-fo-long: xml-long ${FO_SS_XSL} prepare-print
-	export SGML_CATALOG_FILES=${CATALOG}; \
-	xsltproc \
-	--catalogs \
-	-o ${PRINT_OUT_DIR}/${FO_OUTPUT_LONG} \
-	${FO_SS_XSL} ${XML_SRC_LONG}
-	touch $@
-
-fo-short: xml-short ${FO_SS_XSL} prepare-print
-	export SGML_CATALOG_FILES=${CATALOG}; \
-	xsltproc \
-	--catalogs \
-	-o ${PRINT_OUT_DIR}/${FO_OUTPUT_SHORT} \
-	${FO_SS_XSL} ${XML_SRC_SHORT}
-	touch $@
-
-#=======================================================================
-
-# Note that 2 recursion are necessary to get cross-references right.
-# Also "|| true" is needed because PassiveTeX returns some error status.
-pdf-long: fo-long prepare-print
-	(cd ${PRINT_OUT_DIR}; \
-	../pdfxmltex.sh ${FO_OUTPUT_LONG} || true; \
-	../pdfxmltex.sh ${FO_OUTPUT_LONG} || true \
-	)
-	touch $@
-
-# Note that 2 recursion are necessary to get cross-references right.
-# Also "|| true" is needed because PassiveTeX returns some error status.
-pdf-short: fo-short prepare-print
-	(cd ${PRINT_OUT_DIR}; \
-	../pdfxmltex.sh ${FO_OUTPUT_SHORT} || true; \
-	../pdfxmltex.sh ${FO_OUTPUT_SHORT} || true \
-	)
+	java \
+	-Dxml.catalog.debug=0 \
+	-Dxml.catalog.override=yes \
+	-Dxml.catalog.files=${CATALOG} \
+	org.apache.xalan.xslt.Process -v -html \
+	-entityresolver ConfCatEntityResolver \
+	-in ${XML_SRC_SHORT} \
+	-xsl ${HTML_SS_XSL} \
+	-out ${HTML_OUT_DIR}/${HTML_OUTPUT_SHORT}
 	touch $@
 
 #=======================================================================

@@ -4,8 +4,9 @@
 
 <!ELEMENT softliste (updatenotice?, software+)>
 <!ELEMENT updatenotice (#PCDATA)>
-<!ELEMENT software (name, description*, authors, url, mirrorurl*, os+)>
+<!ELEMENT software (name, date, description*, authors, url, mirrorurl*, os+)>
 <!ELEMENT name (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
 <!ELEMENT description (#PCDATA)>
 <!ATTLIST description
           lang %Lang;  "en"
@@ -17,6 +18,5 @@
 <!ELEMENT maintainer (#PCDATA)>
 <!ELEMENT version (#PCDATA)>
 <!ELEMENT licence (#PCDATA)>
-<!ELEMENT date (#PCDATA)>
 
 

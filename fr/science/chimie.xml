@@ -248,7 +248,7 @@
     <description lang="en">A molecular modelling software package with nice 3D-visualization tools.</description>
     <description lang="en">A molecular modelling software package with nice 3D-visualization tools.</description>
     <authors>Mike Cruz, Tommi Hassinen, Ville Heikkila, Geoff Hutchison, Jarno Huuskonen</authors>
-    <email></email>
+    <email>thassine@messi.uku.fi</email>
     <url>http://www.uku.fi/~thassine/ghemical</url>
     <os>
       <name>GNU/Linux</name>
@@ -256,9 +256,11 @@
       <version>0.81</version>
       <licence>GPL</licence>
       <url>http://www.uku.fi/~thassine/ghemical/download/ghemical-0.82.tgz</url>
-      <date>4 dec 2001</date>
+      <comment>truncated GNU GPL, license and copyright notice ok but not following GNU GPL template</comment>
+      <date>22 apr 2002</date>
     </os>
   </software>
+<!--
   <software>
     <name>GPeriodic</name>
     <date>30 aug 2001</date>
@@ -803,4 +805,5 @@
       <date>6 feb 2002</date>
     </os>
   </software>
+-->
 </softliste>

@@ -50,13 +50,13 @@ icon links to the top of the hub's site -->
 <xsl:choose>
 <xsl:when test="$path='index.fr.xhtml'">
 	  <a href="{$fsfeurope}/index.fr.html">
-	    <img src="{$fsffrance}/images/fsfeurope-small.png" alt="to FSFE..." border="0"  />
+	    <img src="{$fsffrance}/images/fsfeurope-small.png" alt="vers FSFE..." border="0"  />
 	  </a>
 </xsl:when>
 <!-- otherwise, link to the top of the local chapter's site -->
 <xsl:otherwise>
 	  <a href="{$fsffrance}/index.fr.html">
-	    <img src="{$fsffrance}/images/fsfeurope-small.png" alt="to FSFE France..." border="0"  />
+	    <img src="{$fsffrance}/images/fsfeurope-small.png" alt="vers FSFE France..." border="0"  />
 	  </a>
 </xsl:otherwise>
 </xsl:choose>

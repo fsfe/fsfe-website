@@ -29,7 +29,7 @@
           </tr>
           <tr>
            <td colspan="2" class="newsbody">
-            <xsl:apply-templates select="body" />
+            <xsl:apply-templates select="body/node()" />
             <xsl:variable name="link"><xsl:value-of select="link" /></xsl:variable>
             <xsl:if test="$link!=''">
               [<a href="{link}"><xsl:value-of select="/html/text[@id='more']" /></a>]

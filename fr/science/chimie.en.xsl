@@ -31,7 +31,7 @@
 </p>
 
   <p align="center">This page lists different free software usefull to
-  research in chemistry. It was compelled part of the <a
+  research in chemistry. It was compiled as part of the <a
   href="science.en.html">Free Software and science</a> project.</p>
 
   <xsl:apply-templates select="updatenotice"/>
@@ -52,7 +52,7 @@
 
     Updated:
     <!-- timestamp start -->
-    $Date: 2002-04-22 10:19:07 $ $Author: loic $
+    $Date: 2002-04-22 11:05:39 $ $Author: loic $
     <!-- timestamp end -->
 
   </body>

@@ -5,7 +5,7 @@
 @setchapternewpage odd
 @c %**end of header
 
-@set RCSID $Id: sysadmin-france.en.texi,v 1.61 2002-04-02 07:03:30 loic Exp $
+@set RCSID $Id: sysadmin-france.en.texi,v 1.62 2002-04-02 07:57:45 loic Exp $
 @set VERSION 2.0
 
 @c Combine the variable and function indices:
@@ -54,6 +54,8 @@ and FSF machines in France.
 * Machines Accounts::           
 * Security::                    
 * Monitoring::                  
+* Screen sessions::             
+* Crash recovery::              
 * Concept Index::               
 * Name Index::                  
 
@@ -682,7 +684,7 @@ firewall. Instead, only services needed to provide the services
 that match the intended purpose of the machine are launched. 
 All other daemons are de-activated.
 
-@node Monitoring, Concept Index, Security, Top
+@node Monitoring, Screen sessions, Security, Top
 @chapter Monitoring
 
 @cindex statistics mrtg
@@ -765,7 +767,85 @@ Output dir is @file{/var/www/fr.fsf.org/mrtg/}
 
 Contact : @email{rq@@lolix.org,Rodolphe Quiédeville}
 
-@node Concept Index, Name Index, Monitoring, Top
+@node Screen sessions, Crash recovery, Monitoring, Top
+@chapter Screen sessions
+
+When logged in as root on @code{frog.gnu.org} or @code{snail.gnu.org},
+one can connect to a shared screen(1) session via @code{screen
+-x}. These screen sessions contain terminals connected to the switch,
+the powerboot, the serial console.  They are created at boot time by
+@file{/etc/init.d/screen} according to the content of
+@file{~root/.screenrc} and use small shell scripts in
+@file{/usr/local/bin} to establish the connections. All sessions are
+logged permanently in @file{/var/log/screen}.
+
+Although it is possible to talk to the switch or the powerboot without using
+the screen session, this is strongly discouraged because no log of the commands
+will be archived.
+
+On all screen sessions, the escape character is C-\ instead of the default
+C-a so that editing stuff with emacs is not a nightmare.
+
+A list of active windows is displayed permanently at the bottom of the screen
+session. 
+
+Most commonly used screen commands:
+
+@itemize @code
+
+@item C-\ d 
+exit from the screen session (does not destroy it).
+
+@item C-\ 0
+switch to terminal 0
+
+@item C-\ 1
+switch to terminal 1
+
+@item C-\ 2
+switch to terminal 2
+
+@item C-\ 3
+switch to terminal 3
+
+@item C-\ c
+create a new terminal with a shell inside, exiting the shell
+will close the terminal.
+
+@item C-\ ?
+help
+
+@end itemize
+
+@node Crash recovery, Concept Index, Screen sessions, Top
+@chapter Crash recovery
+
+If @code{snail.gnu.org} crashes for some reason, do the following:
+
+@itemize
+
+@item
+ssh -l root frog.gnu.org
+
+@item
+screen -x
+
+@item
+check error messages on the @code{snail} console terminal.
+
+@item 
+check error messages in @file{/var/log/screen/snail}.
+
+@item
+switch to the @code{powerboot} terminal and toggle the snail powerswitch.
+
+@item
+switch back to the @code{snail} console terminal and wait for
+the grub screen to show. 
+
+@end itemize
+
+@node Concept Index, Name Index, Crash recovery, Top
 @unnumbered Index of Concepts
 
 @printindex cp

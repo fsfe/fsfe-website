@@ -20,8 +20,6 @@
 	  <a class="topbanner" href="http://www.april.org/">APRIL</a>
 	  &nbsp;&nbsp;|&nbsp;&nbsp;
 	  <a class="topbanner" href="http://www.ofset.org/">OFSET</a>
-	  &nbsp;&nbsp;|&nbsp;&nbsp;
-	  <a class="topbanner" href="http://www.lsfn.org/">LSFN</a>
 	</td>
       </tr>
     </table>

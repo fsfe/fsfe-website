@@ -223,13 +223,16 @@
     <description lang="en">GDIS is a GTK based program for the display and manipulation of isolated molecules and periodic systems. It is in development, but is nonetheless fairly functional.</description>
     <description lang="fr">GDIS est un logiciel basé sur GTK, qui permet l'affichage et la manipulation de molcules isolées, ou de systèmes périodiques. Malgré que ce logiciel soit encore en développement, il est déjà fonctionnel.</description>
     <authors>Sean Fleming</authors>
+    <email>sean@power.curtin.edu.au</email>
     <url>http://gdis.seul.org</url>
     <os>
       <name>GNU/Linux</name>
       <maintainer>Sean Fleming</maintainer>
-      <version>0.73.2</version>
+      <version>0.75</version>
       <licence>GPL</licence>
-      <date>28 jul 2001</date>
+      <url>ftp://ftp.seul.org/pub/gdis/gdis-0.75.0.tgz</url>
+      <comment>a few files miss a proper copyright and license notice</comment>
+      <date>22 apr 2002</date>
     </os>
     <os>
       <name>Other UNIX</name>

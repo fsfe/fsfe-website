@@ -17,6 +17,9 @@ CATALOG=/usr/lib/sgml/catalog
 # $ make CHOICE=FAQConstructeurs.en.xml
 CHOICE=FAQConstructeurs.fr.xml
 
+# The server which does the publishing
+DEPLOYMENT="aful:"
+
 # Initializing XML_SRC with the given CHOICE
 XML_SRC=${CHOICE}
 XML_SRC_LONG=${addprefix long, ${XML_SRC}}
@@ -165,6 +168,10 @@ prepare-print:
 	mkdir ${PRINT_OUT_DIR}; \
 	fi
 	touch $@
+
+# Copies through SSH the generated files on a remote server for publication
+deploy:
+	scp ${HTML_OUT_DIR}/*.html ${PRINT_OUT_DIR}/*.pdf ${DEPLOYMENT}
 
 #=======================================================================
 # Generates filtered XML sources from the XML original source

@@ -1,0 +1,219 @@
+<html lang="en"><head>
+<title>`System Administration France'</title>
+<meta http-equiv="Content-Type" content="text/html">
+<meta name=description content="`System Administration France'">
+<meta name=generator content="makeinfo 4.0">
+<link href="http://texinfo.org/" rel=generator-home>
+</head><body>
+
+<p><hr>
+Node:<a name="Top">Top</a>,
+Next:<a rel=next href="#Introduction">Introduction</a>,
+Previous:<a rel=previous href="#(dir)">(dir)</a>,
+Up:<a rel=up href="#(dir)">(dir)</a>
+<br>
+
+<h1>Sysadmin France</h1>
+
+<p>This document is for system administrators of GNU and FSF machines
+in France.
+
+<ul>
+<li><a href="#Introduction">Introduction</a>: 
+<li><a href="#Accounts">Accounts</a>: 
+<li><a href="#Web">Web</a>: 
+<li><a href="#Account%20Management">Account Management</a>: 
+<li><a href="#Concept%20Index">Concept Index</a>:
+
+<p>--- The Detailed Node Listing ---
+
+<p>Accounts
+
+</p><li><a href="#Account%20Create">Account Create</a>: 
+<li><a href="#Account%20Access">Account Access</a>: 
+<li><a href="#Account%20Update">Account Update</a>: 
+<li><a href="#Account%20Delete">Account Delete</a>: 
+<li><a href="#Cron%20Job">Cron Job</a>: 
+</ul>
+
+<p><hr>
+Node:<a name="Introduction">Introduction</a>,
+Next:<a rel=next href="#Accounts">Accounts</a>,
+Previous:<a rel=previous href="#Top">Top</a>,
+Up:<a rel=up href="#Top">Top</a>
+<br>
+
+<h1>Introduction</h1>
+
+<p>System administration information.
+
+<p><hr>
+Node:<a name="Accounts">Accounts</a>,
+Next:<a rel=next href="#Web">Web</a>,
+Previous:<a rel=previous href="#Introduction">Introduction</a>,
+Up:<a rel=up href="#Top">Top</a>
+<br>
+
+<h1>Accounts</h1>
+
+<ul>
+<li><a href="#Account%20Create">Account Create</a>: 
+<li><a href="#Account%20Access">Account Access</a>: 
+<li><a href="#Account%20Update">Account Update</a>: 
+<li><a href="#Account%20Delete">Account Delete</a>: 
+<li><a href="#Cron%20Job">Cron Job</a>: 
+</ul>
+
+<p><hr>
+Node:<a name="Account%20Create">Account Create</a>,
+Next:<a rel=next href="#Account%20Access">Account Access</a>,
+Previous:<a rel=previous href="#Accounts">Accounts</a>,
+Up:<a rel=up href="#Accounts">Accounts</a>
+<br>
+
+<h2>Account Create</h2>
+
+<p>The user accounts on <code>france.fsfeurope.org</code> are managed with
+<a href="http://savannah.gnu.org/">Savannah</a>. If someone need a shell
+account on <code>france.fsfeurope.org</code> he has to get an account on
+<a href="http://savannah.gnu.org/">Savannah</a> first. Then he should send
+a mail to one of the project administrators of the
+<a href="http://savannah.gnu.org/projects/fsffr/">fsffr</a> project. The
+project administrator adds him as a member of the
+<a href="http://savannah.gnu.org/projects/fsffr/">fsffr</a> project. Within
+24 hours a cron job on <code>france.fsfeurope.org</code> will fetch the
+new user from Savannah and create the account.
+
+<p><hr>
+Node:<a name="Account%20Access">Account Access</a>,
+Next:<a rel=next href="#Account%20Update">Account Update</a>,
+Previous:<a rel=previous href="#Account%20Create">Account Create</a>,
+Up:<a rel=up href="#Accounts">Accounts</a>
+<br>
+
+<h2>Account Access</h2>
+
+<p>Once the account is created, access to the machine is available using
+ssh and a public key. The Savannah password will not work on
+<code>france.fsfeurope.org</code>. When logged on
+<a href="http://savannah.gnu.org/projects/fsffr/">fsffr</a> it is possible
+to register one or more public key at
+<a href="http://savannah.gnu.org/account/editsshkeys.php">Edit SSH Keys</a>.
+
+<p><hr>
+Node:<a name="Account%20Update">Account Update</a>,
+Next:<a rel=next href="#Account%20Delete">Account Delete</a>,
+Previous:<a rel=previous href="#Account%20Access">Account Access</a>,
+Up:<a rel=up href="#Accounts">Accounts</a>
+<br>
+
+<h2>Account Update</h2>
+
+<p>Once a day the ssh public keys of every account on
+<code>france.fsfeurope.org</code> are updated from the information fetched on
+Savannah. If the <code>authorized_keys</code> file of a user is manualy updated,
+it will be overwritten.
+
+<p><hr>
+Node:<a name="Account%20Delete">Account Delete</a>,
+Next:<a rel=next href="#Cron%20Job">Cron Job</a>,
+Previous:<a rel=previous href="#Account%20Update">Account Update</a>,
+Up:<a rel=up href="#Accounts">Accounts</a>
+<br>
+
+<h2>Account Delete</h2>
+
+<p>When a user is not listed anymore in the
+<a href="http://savannah.gnu.org/projects/fsffr/">fsffr</a>, its account is
+disabled on <code>france.fsfeurope.org</code>. The home directory is not
+deleted and if the user is added again at a later time, he will retrieve
+his former home directory.
+
+<p><hr>
+Node:<a name="Cron%20Job">Cron Job</a>,
+Previous:<a rel=previous href="#Account%20Delete">Account Delete</a>,
+Up:<a rel=up href="#Accounts">Accounts</a>
+<br>
+
+<h2>Cron Job</h2>
+
+<p>The <code>/usr/local/bin/savannah_users</code> script does the update. It
+is run from the <code>/etc/cron.d/savannah_users</code> cron file and spits
+log information in <code>/var/log/savannah_users.log</code>. The log file
+is rotated according to the <code>/etc/logrotate.d/savannah_users</code>
+specification.
+
+<p>Savannah does not serve account information anonymously. The
+<code>france.fsfeurope.org</code> machine is explicitly allowed to retrieve
+the relevant information in XML. For more information check the
+<a href="http://savannah.gnu.org/savannah.html#Account%20Management">Account Management</a> chapter of the Savannah documentation.
+
+<p><hr>
+Node:<a name="Web">Web</a>,
+Next:<a rel=next href="#Account%20Management">Account Management</a>,
+Previous:<a rel=previous href="#Accounts">Accounts</a>,
+Up:<a rel=up href="#Top">Top</a>
+<br>
+
+<h1>Web</h1>
+
+<p>The <code>www</code> user owns the web directory. The document root is
+<code>/var/www/</code> that is a link to <code>/home/www/fsfe/fr</code>. The web
+site itself is an anonymous checkout of the <code>fr</code> directory of the
+<a href="http://www.fsfeurope.org/">FSF Europe</a> HTML repository.
+
+<p>All users registered in the
+<a href="http://savannah.gnu.org/projects/fsfe/">FSF Europe</a> project can
+edit the HTML repository using CVS/SSH.
+
+<p>The checkout is updated every hour by the <code>www</code> user crontab.
+
+<p><hr>
+Node:<a name="Account%20Management">Account Management</a>,
+Next:<a rel=next href="#Concept%20Index">Concept Index</a>,
+Previous:<a rel=previous href="#Web">Web</a>,
+Up:<a rel=up href="#Top">Top</a>
+<br>
+
+<h1>Account Management</h1>
+
+<p><hr>
+Node:<a name="Concept%20Index">Concept Index</a>,
+Previous:<a rel=previous href="#Account%20Management">Account Management</a>,
+Up:<a rel=up href="#Top">Top</a>
+<br>
+
+<h1>Index of Concepts</h1>
+
+<ul compact>
+<li>fsffr and shell account: <a href="#Account%20Create">Account Create</a>
+<li>password ssh: <a href="#Account%20Access">Account Access</a>
+<li>public key update: <a href="#Account%20Update">Account Update</a>
+<li>shell account: <a href="#Account%20Create">Account Create</a>
+<li>shell account ssh: <a href="#Account%20Access">Account Access</a>
+<li>ssh and password: <a href="#Account%20Access">Account Access</a>
+<li>ssh public key: <a href="#Account%20Access">Account Access</a>
+<li>ssh public key update: <a href="#Account%20Update">Account Update</a>
+<li>ssh shell account: <a href="#Account%20Access">Account Access</a>
+</ul>
+
+
+<h1>Table of Contents</h1>
+<ul>
+<li><a href="#Top">Sysadmin France</a>
+<li><a href="#Introduction">Introduction</a>
+<li><a href="#Accounts">Accounts</a>
+<ul>
+<li><a href="#Account%20Create">Account Create</a>
+<li><a href="#Account%20Access">Account Access</a>
+<li><a href="#Account%20Update">Account Update</a>
+<li><a href="#Account%20Delete">Account Delete</a>
+<li><a href="#Cron%20Job">Cron Job</a>
+</ul>
+<li><a href="#Web">Web</a>
+<li><a href="#Account%20Management">Account Management</a>
+<li><a href="#Concept%20Index">Index of Concepts</a>
+</ul>
+
+</body></html>
+

@@ -15,6 +15,9 @@
 # or
 # ftp://ftp.cogsci.ed.ac.uk/pub/richard/rxp-1.2.3.tar.gz
 #
+TMP=/home/fsfe/tmp/
+DEST=/home/www/
+
 
 # branch tag name for the stable version of the site and only its patches
 STABLEBRANCH = BS_20010825
@@ -170,3 +173,7 @@ syncall:
 	$(SSH) -l www france.fsfeurope.org 'cd fsfe/server/testbeta ; cvs -z3 -q update -I "*.html" -d -r $(STABLEBRANCH) ; ../../../bin/nightly'
 	@echo "Updating beta version :"
 	$(SSH) -l www france.fsfeurope.org 'cd fsfe/server/test/fsfe/server/testbeta ; cvs -z3 -q update -I "*.html" -d -A ; ../../../../../../bin/nightly'
+
+
+new:
+	@tools/build.sh

@@ -74,3 +74,21 @@ a.menu:hover	{
 		color: #00389a;
 		text-decoration: underline;
 		}
+
+a.submenu	{
+		color: #ffffff;
+		text-decoration: none;
+                font-size: 13px;
+		font-weight: normal;
+		margin-left: 20px;
+		}
+a.submenu:visited	{
+		color: #eeeeee;
+		text-decoration: none;
+		}
+a.submenu:hover	{
+		background-color: #ffffff;
+		color: #00389a;
+		text-decoration: underline;
+		}
+

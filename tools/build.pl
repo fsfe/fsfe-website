@@ -98,7 +98,8 @@ my %bases;
 foreach (grep(/\.xhtml$/, @files)) {
   my ($lang) = ($_ =~ /\.([a-z][a-z])\.xhtml$/);
   unless ($lang) { $lang = "en"; }
-  $_ =~ s/\.[a-z][a-z]\.xhtml//;
+  $_ =~ s/\.[a-z][a-z]\.xhtml$//;
+  $_ =~ s/\.xhtml$//;
   $bases{$_}{$lang} = 1;
 }
 
@@ -199,7 +200,7 @@ while (my ($file, $langs) = each %bases) {
 
 	my $source = $opts{i}."/$file.$lang.xhtml";
 	unless (-f $source) {
-            if ($lang eq "en" && -f $opts{i}."/$file.xhtml") {
+            if (-f $opts{i}."/$file.xhtml") {
                 $document->setAttribute("language", "en");
                 $source = $opts{i}."/$file.xhtml";
             } elsif (-f $opts{i}."/$file.en.xhtml") {
@@ -214,6 +215,7 @@ while (my ($file, $langs) = each %bases) {
 		$source = $opts{i}."/$file.$l.xhtml";
             }
 	}
+
 
         #
         # Here begins automated magic for those pages which we need to
@@ -333,7 +335,6 @@ while (my ($file, $langs) = each %bases) {
         # global menu here, then we add any information that is specific to
         # the focus.
         #
-        # FIXME: Allow for headings and subitems.
 	foreach ($root->getElementsByTagName("menuset")) {
 	    $root->removeChild($_);
 	}
@@ -343,19 +344,16 @@ while (my ($file, $langs) = each %bases) {
 	    if (-f $opts{i}."/tools/menu-$_.xml") {
 		my $menudoc = $parser->parse_file($opts{i}."/tools/menu-$_.xml");
 		foreach my $n ($menudoc->documentElement->getElementsByTagName("menu")) {
-		    $menu{$n->getAttribute("id")} = $n->textContent;
+		    $menu{$n->getAttribute("id")} = $n;
 		}
 	    }
 	}
 	my $menuroot = $dom->createElement("menuset");
-	while (my ($id, $href) = each %menu) {
-	    my $m = $dom->createElement("menu");
-	    $m->setAttribute("id", $id);
-	    $m->appendText($href);
+	while (my ($id, $n) = each %menu) {
+            my $m = $n->cloneNode(1);
 	    $menuroot->appendChild($m);
 	}
 	$root->appendChild($menuroot);
-
 
         #
         # Do the actual transformation.

@@ -5,7 +5,7 @@
 @setchapternewpage odd
 @c %**end of header
 
-@set RCSID $Id: sysadmin-france.en.texi,v 1.3 2001-04-18 09:36:53 loic Exp $
+@set RCSID $Id: sysadmin-france.en.texi,v 1.4 2001-04-18 09:37:30 loic Exp $
 @set VERSION 1.0
 
 @c Combine the variable and function indices:
@@ -67,6 +67,8 @@ Accounts
 Web
 
 * Overview::                    
+* Virtual Hosts::               
+* Editing the Web::             
 * Update from CVS::             
 * Nightly script::              
 
@@ -194,11 +196,13 @@ the relevant information in XML. For more information check the
 
 @menu
 * Overview::                    
+* Virtual Hosts::               
+* Editing the Web::             
 * Update from CVS::             
 * Nightly script::              
 @end menu
 
-@node Overview, Update from CVS, Web, Web
+@node Overview, Virtual Hosts, Web, Web
 @section Overview
 
 The FSF Europe web sites are stored in CVS on the GNU machines. They
@@ -209,7 +213,7 @@ data and programs. However every web site related to the GNU project
 and friends of the GNU project are invited to use the machine for web
 hosting if they need it.
 
-@node Virtual Hosts, Nightly script, Overview, Web
+@node Virtual Hosts, Editing the Web, Overview, Web
 @section Virtual Hosts
 
 The @file{/etc/apache/httpd.conf} was configured with virtual hosts. It
@@ -228,7 +232,7 @@ with a redirect to france.fsfeurope.org
 All new domains should use a similar policy, that will help keeping
 things simple.
 
-@node Editing the Web, Nightly script, Overview, Web
+@node Editing the Web, Update from CVS, Virtual Hosts, Web
 @section Editing the Web
 
 All users registered in the
@@ -239,7 +243,7 @@ The modified files will be updated on france.fsfeurope.org within one
 hour. They will be available immediately after a commit on
 http://www.gnu.org/fsfe/ which is convenient for testing.
 
-@node Update from CVS, Nightly script, Overview, Web
+@node Update from CVS, Nightly script, Editing the Web, Web
 @section Update from CVS
 
 The @file{subversions.gnu.org/webcvs/fsfe} checkout is updated every

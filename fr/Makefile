@@ -32,8 +32,7 @@ ENPAGES = $(shell find * -regex '.*\.en\.xhtml' -print | sed "s/xhtml$$/html/")
 FRPAGES = $(shell find * -regex '.*\.fr\.xhtml' -print | sed "s/xhtml$$/html/")
 
 NEWS_COMPLETE = news/news-bytes.fr.xhtml news/news-bytes.en.xhtml
-#NEWS_LATEST = news/news-bytes-latest.fr.xhtml news/news-bytes-latest.en.xhtml
-NEWS_LATEST = news/news-bytes-latest.fr.xhtml
+NEWS_LATEST = news/news-bytes-latest.fr.xhtml news/news-bytes-latest.en.xhtml
 NEWS = $(NEWS_COMPLETE) $(NEWS_LATEST)
 
 all: news $(ENPAGES) $(FRPAGES) 
@@ -49,8 +48,7 @@ $(NEWS_LATEST): news/news-bytes-latest.%.xhtml: news/fsfe-fr-channel.%.xml news/
 	$(XSLTPROC) news/news-latest.$*.xsl news/fsfe-fr-channel.$*.xml $(XSLTOPTS) '$$fsffrance=$(FSFFRANCE)' > news/news-bytes-latest.$*.xhtml
 
 index.fr.html: news/news-bytes-latest.fr.xhtml
-#index.en.html: news/news-bytes-latest.en.xhtml
-index.en.html: news/news-bytes.en.xhtml
+index.en.html: news/news-bytes-latest.en.xhtml
 
 news/news.fr.html: news/fsfe-fr-channel.fr.xml
 news/news.en.html: news/fsfe-fr-channel.en.xml

@@ -5,7 +5,12 @@ body {
 }
 table.main {
              border: 0 solid;
-}
+             }
+
+table.formulaire {
+                   border: 0 solid;
+                   }
+
 
 h1 {
      font-weight: bold;

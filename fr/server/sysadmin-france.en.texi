@@ -5,7 +5,7 @@
 @setchapternewpage odd
 @c %**end of header
 
-@set RCSID $Id: sysadmin-france.en.texi,v 1.36 2001-06-03 23:39:55 olberger Exp $
+@set RCSID $Id: sysadmin-france.en.texi,v 1.37 2001-06-12 13:43:47 mad Exp $
 @set VERSION 1.0
 
 @c Combine the variable and function indices:
@@ -488,6 +488,33 @@ make all
 #
 # View boilerplate.fr.html with a web browser and start customizing 
 #
+@end example
+
+If you are using an Red Hat distribution, to install
+@uref{http://www.gingerall.com/charlie-bin/get/webGA/act/download.act,,sablotron},
+you need first install
+@uref{http://sourceforge.net/projects/expat,,expat} :
+
+@example
+
+# get expat's RPM file
+ftp speakeasy.rpmfind.net
+user ftp
+pass XXXXX@YYYY.ZZZ
+
+cd /linux/C/redhat/7.1/en/os/i386/RedHat/RPMS
+get expat-1.95.1-1.i386.rpm
+#
+
+# install expat
+rpm -i expat-1.95.1-1.i386.rpm
+#
+
+# get sablotron 
+wget http://www.gingerall.com/perl/rd?url=sablot/sablotron-0.52-1.i386.rpm
+rpm -i sablotron-0.52-1.i386.rpm
+#
+
 @end example
 
 

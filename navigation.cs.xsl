@@ -218,8 +218,8 @@
 	<td class="newstext" align="center">
 	<font size="-2">
 	  Copyright (C) 2001 FSF Europe<br/>
-	  Verbatim copying and distribution of this entire article is
-	    permitted in any medium, provided this notice is preserved.
+	Doslovné kopírování a distribuce tohoto dokumentu jsou povoleny
+	na jakémkoliv médiu za pøedpokladu, ¾e bude zachováno toto upozornìní.
 	</font>
 	</td>
         <td class="newstext">&nbsp;</td>

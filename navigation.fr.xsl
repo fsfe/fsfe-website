@@ -53,7 +53,7 @@
 	    <a class="TopTitle">Free Software - l'entreprise et l'individu sur un pied d'égalité</a>
 	  </td>
 	  <td align="right" valign="top" class="TopBody">
-	    <a href="{$fsfeurope}/documents/freesoftware.fr.html" class="T2">Qu'est-ce&nbsp;quele&nbsp;Logiciel&nbsp;Libre?</a><br/>
+	    <a href="{$fsfeurope}/documents/freesoftware.fr.html" class="T2">Qu'est-ce&nbsp;que&nbsp;le&nbsp;Logiciel&nbsp;Libre?</a><br/>
 	    <a href="{$fsfeurope}/documents/gnuproject.fr.html" class="T2">Qu'est-ce&nbsp;que&nbsp;le&nbsp;Projet&nbsp;GNU?</a><br/>
 	  </td>
 	</tr>
@@ -76,15 +76,15 @@
             </tr>
             <tr>
               <td align="right"><br/>
-              <a href="{$fsfeurope}/index.fr.html" class="T2">Home</a><br/>
+              <a href="{$fsfeurope}/index.fr.html" class="T2">Accueil</a><br/>
               <a href="{$fsfeurope}/contact/index.fr.html"
                     class="T2">Contact</a><br/>
               <a href="{$fsfeurope}/background.fr.html"
-                   class="T2">Background</a><br/>
+                   class="T2">Historique</a><br/>
               <a href="{$fsfeurope}/mailman/index.fr.html"
-                   class="T2">Mailing Lists</a><br/>
+                   class="T2">Listes de diffusion</a><br/>
               <a href="{$fsfeurope}/press/index.fr.html"
-                   class="T2">Press section</a><br/>
+                   class="T2">Section Presse</a><br/>
               <a href="{$fsfeurope}/gbn/index.fr.html"
                    class="T2">GNU Business Network</a><br/>
               <br/></td>
@@ -95,11 +95,11 @@
             <tr>
               <td align="right"><br/>
               <a href="http://savannah.gnu.org/projects/fsfe/"
-                   class="T2">Project Summary</a><br/>
+                   class="T2">Résumé du Projet</a><br/>
               <a href="http://www.gnu.org/server/standards/"
-                   class="T2">GNU Guide</a><br/>
+                   class="T2">Guide GNU</a><br/>
               <a href="http://savannah.gnu.org/pm/?group_id=53"
-                   class="T2">Tasks</a><br/>
+                   class="T2">Tâches</a><br/>
               <br/></td>
             </tr>
           </table>

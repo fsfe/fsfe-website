@@ -45,9 +45,21 @@
     <table width="100%" border="0" cellspacing="0" cellpadding="4">
       <tr>
 	<td class="TopBody">
-	  <a href="{$fsffrance}/index.fr.html">
-	    <img src="{$fsffrance}/images/fsfeurope-small.png" alt="FSFE logo" border="0"  />
+<!-- If we are on the top level page of the local chapter's site, the
+icon links to the top of the hub's site -->
+<xsl:choose>
+<xsl:when test="$path='index.fr.xhtml'">
+	  <a href="{$fsfeurope}/index.fr.html">
+	    <img src="{$fsffrance}/images/fsfeurope-small.png" alt="to FSFE..." border="0"  />
 	  </a>
+</xsl:when>
+<!-- otherwise, link to the top of the local chapter's site -->
+<xsl:otherwise>
+	  <a href="{$fsffrance}/index.fr.html">
+	    <img src="{$fsffrance}/images/fsfeurope-small.png" alt="to FSFE France..." border="0"  />
+	  </a>
+</xsl:otherwise>
+</xsl:choose>
 	</td>
 	<td class="TopBody" width="99%" height="99%">
 	  <a class="TopTitleB">FSF France</a>

@@ -78,12 +78,8 @@
               <td class="TopTitle" align="center">Projets</td></tr>
 		<tr>
 		  <td class="Section" align="right">
-                    <xsl:choose>
-                      <xsl:when test="$path='law/law.fr.xhtml'">Protéger le Logiciel Libre</xsl:when>
-                      <xsl:otherwise>
-		        <a href="{$fsfeurope}/law/law.fr.html" class="T2">Protéger le Logiciel Libre</a>
-                      </xsl:otherwise>
-                    </xsl:choose><br />
+		    <a href="{$fsfeurope}/law/law.fr.html" class="T2">Protéger le Logiciel Libre</a><br />
+		    <a href="{$fsfeurope}/coposys/coposys.fr.html" class="T2">Coposys</a><br />
 		  </td>
 		</tr>
 

@@ -78,6 +78,7 @@
 		<tr>
 		  <td class="TopBody" align="right">
 		    <a href="{$fsfeurope}/law/law.en.html" class="T2">Secure Free Software</a><br />
+		    <a href="{$fsfeurope}/coposys/coposys.en.html" class="T2">Coposys</a><br />
 		  </td>
 		</tr>
 

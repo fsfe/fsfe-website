@@ -124,8 +124,8 @@
 	<td class="Body" align="center">
 	<font size="-2">
 	  Copyright (C) 2001 FSF Europe<br/>
-	  Verbatim copying and distribution of this entire article is
-	    permitted in any medium, provided this notice is preserved.
+          Cópia literal e distribuição deste artigo por inteiro é permitido em
+          qualquer meio, desde que este aviso seja preservado.
 	</font>
 	</td>
         <td class="Body">&nbsp;</td>

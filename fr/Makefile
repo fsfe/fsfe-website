@@ -62,6 +62,8 @@ libre.en.html: libre-bytes.xhtml
 
 server/server.en.html: server/server.en.xhtml server/sysadmin-france.en.texi
 
+about/about.en.html about/about.fr.html about/organisation.fr.html about/reports.en.html about/signatures.html about/speakers.en.html about/speakers.fr.html about/statute.fr.html: about/menu.en.xhtml about/menu.fr.xhtml
+
 $(ENPAGES) $(FRPAGES): %.html: %.xhtml fsfe-fr.xsl navigation.en.xsl navigation.fr.xsl
 	@$(ECHO) "Building $@ ..."; \
 	path=$< ; \

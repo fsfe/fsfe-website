@@ -18,6 +18,7 @@
 	    </td>
 	    <td bgcolor="#736199" class="newstitle">
 	      <a href="{link}"><xsl:value-of select="title" /></a>
+	      <b><xsl:value-of select="substring-before(description, '.')"/></b>
 	    </td>
 	    <td width="10" align="right" valign="top">
 	      <img border="0" width="10" height="13" src="images/ur.png" alt="))" />
@@ -31,12 +32,12 @@
 	      <table border="0" bgcolor="#cacaca" cellspacing="0" cellpadding="3" width="100%">
 		<tr>
 		  <td nowrap="1" class="newsinfo">
-		    Les news du monde libre.
+		    <a href="{link}">Lire l'article</a>
 		  </td>
 		</tr>
 		<tr>
 		  <td class="newstext">
-		    <xsl:value-of disable-output-escaping="yes" select="description" />
+		    <xsl:value-of disable-output-escaping="yes" select="substring-after(description, '.')" />
 		  </td>
 		</tr>
 	      </table>

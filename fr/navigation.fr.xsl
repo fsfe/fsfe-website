@@ -7,16 +7,17 @@
     <!-- FSF related sites -->
     <table cellspacing="0" cellpadding="0" width="100%" border="0"><tr bgcolor="#e7e7e7"><td><img src="{$fsffrance}/images/pix.png" width="1" height="1" alt="" /></td></tr></table> 
     <table cellspacing="0" cellpadding="1" width="100%" border="0"> 
-	<tr valign="middle"> 
+      <tr valign="middle"> 
 	  <td class="newstext">
-	    &nbsp;
-	    <a class="topbanner" href="{$fsf}/home.fr.html">FSF</a>&nbsp;&nbsp;&nbsp;
-	    <a class="topbanner" href="{$fsfeurope}/index.fr.html">Europe</a>&nbsp;&nbsp;&nbsp;
-	    <a class="topbanner" href="{$fsffrance}/index.fr.html">France</a>&nbsp;|&nbsp;
-	    <a class="topbanner" href="{$gnu}/home.fr.html">GNU</a>&nbsp;&nbsp;&nbsp;
-	    <a class="topbanner" href="http://es.gnu.org/">GNU Espagne</a>&nbsp;|&nbsp;
-	    <a class="topbanner" href="http://www.april.org/">April</a>&nbsp;&nbsp;&nbsp;
-	    <a class="topbanner" href="http://www.lsfn.org/">LSFN</a>&nbsp;&nbsp;&nbsp;
+	    &nbsp;&nbsp;
+            <a class="topbanner" href="{$fsfeurope}/">FSF Europe</a>
+          </td>
+          <td class="newstext" align="right">
+	    <a class="topbanner" href="{$fsf}/">FSF</a>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+	    <a class="topbanner" href="{$gnu}/">GNU</a>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+	    <a class="topbanner" href="http://es.gnu.org/">GNU Espagne</a><br/>
 	  </td>
        </tr>
     </table>
@@ -28,17 +29,12 @@
 
     <!-- Top menu line -->
     <table width="100%" border="0" cellspacing="0" cellpadding="4">
-	<tr>
-	  <td class="TopTitle">
-	    <a href="{$fsffrance}/index.fr.html" class="T1">Home</a> |
-	    <a href="{$fsffrance}/contact.fr.html" class="T1">Contact</a> |
-	    <a href="{$fsffrance}/thanks.fr.html" class="T1">Merci</a> |
-	    <a href="{$fsffrance}/stats/" class="T1">Stats</a>
-	  </td>
-	  <td class="TopTitle" align="right">
-	    <a href="{$fsffrance}/about/about.fr.html" class="T1">A propos</a>
-	  </td>
-	</tr>
+      <tr>
+	<td class="TopTitle">
+	  &nbsp;<a href="{$fsffrance}/index.en.html" class="T1">France</a> |
+	    Germany
+	</td>
+      </tr>
     </table>
 
     <!-- Title bar -->
@@ -108,24 +104,30 @@
 
     <!-- Bottom line -->
     <table width="100%" border="0" cellspacing="0" cellpadding="2">
-	<tr>
-	  <td class="TopTitle">
-	    &nbsp;<a href="mailto:webmaster@fsfeurope.org" class="T1">webmaster@fsfeurope.org</a>&nbsp; <a href="{$filebase}.xhtml" class="T1">Source XHTML</a> &nbsp;<a href="{$fsffrance}/fsfe-fr.xsl"  class="T1">Feuille XSL</a> <br />
-	  </td>
-	</tr>
-	<tr>
-	  <td class="Body" align="center">
-	  <font size="-2">
+      <tr>
+	<td class="TopTitle">
+          <a href="{$filebase}.xhtml" class="T1">XHTML Source</a>&nbsp;&nbsp;|
+          &nbsp;&nbsp;<a href="{$fsfeurope}/fsfe.xsl" class="T1">XSL Style
+	  Sheet</a><br/>
+	</td>
+	<td class="TopTitle" align="right">
+	  &nbsp;<a href="mailto:webmaster@fsfeurope.org"
+                   class="T1">webmaster@fsfeurope.org</a>
+        </td>
+      </tr>
+      <tr>
+	<td class="Body" align="center">
+	<font size="-2">
 	    Copyright (C) 2001 FSF France,
 	    8 rue de Valois, 75001 Paris, France
-	    <br />
-	    La reproduction exacte et la distribution intégrale
-	    de cet article sont permises sur n'importe quel support
-	    d'archivage, pourvu que cette notice soit
-	    préservée.
-	  </font>
-	  </td>
-	</tr>
+	    <br/>
+            La reproduction exacte et la distribution intégrale de cet article
+            sont permises sur n'importe quel support d'archivage, pourvu que
+            cette notice soit préservée.
+	</font>
+	</td>
+        <td class="Body">&nbsp;</td>
+      </tr>
     </table>
   </xsl:template> 
 

@@ -30,8 +30,8 @@ Old version of the XML DTD, before it became endorsed by OASIS
          "Foire Aux Questions sur la disponibilité de pilotes (drivers) pour
          tous systèmes d'exploitation">
 
-<!ENTITY OS "Open Source">
-<!ENTITY LL "Logiciel Libre">
+<!ENTITY OS  "Open Source">
+<!ENTITY LL  "Logiciel Libre">
 <!ENTITY LLs "Logiciels Libres">
 
 <!-- *************************************************************** -->
@@ -220,8 +220,10 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	      Ces licences interdisent aussi la copie, l'étude du 
 	      fonctionnement du logiciel, sa modification ou une combinaison 
 	      arbitraire de ces possibilités.
+	      <!--
 	      Par exemple Microsoft Windows est un logiciel diffusé sous une 
 	      licence non-libre.
+	      -->
 	    </para>
 	  </answer>
 	</qandaentry>

@@ -172,9 +172,9 @@
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
-                <xsl:when test="$path='order/announce.de.xhtml'">Fanartikel</xsl:when>
+                <xsl:when test="$path='order/order.de.xhtml'">Bestellen</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/order/announce.de.html">Fanartikel</a>
+		  <a href="{$fsfeurope}/order/order.de.html">Bestellen</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>

@@ -65,6 +65,7 @@
 					<a href="{$fsfeurope}/documents/whyfs.de.html">Wir sprechen von Freier Software</a><br />
 
 					<a href="{$fsfeurope}/de/buergerturm/buergerturm.de.html">Bürgerturm</a><br />
+              <a href="{$fsfeurope}/education/education.de.html">Freie Software und Bildung</a><br />
 				</td>
 			</tr>
 
@@ -129,12 +130,6 @@
                 <xsl:when test="$path='mailman/index.de.xhtml'">Mailinglisten</xsl:when>
                 <xsl:otherwise>
                   <a href="{$fsfeurope}/mailman/index.de.html">Mailinglisten</a>
-                </xsl:otherwise>
-              </xsl:choose><br/>
-              <xsl:choose>
-                <xsl:when test="$path='education/education.de.xhtml'">Bildung</xsl:when>
-                <xsl:otherwise>
-                  <a href="{$fsfeurope}/education/education.de.html">Bildung</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>

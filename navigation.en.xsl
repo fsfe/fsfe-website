@@ -63,6 +63,7 @@
 		    <a href="{$fsfeurope}/law/law.en.html">Secure Free Software</a><br />
 		    <a href="{$fsfeurope}/coposys/index.en.html">Coposys</a><br />
 		    <a href="{$fsfeurope}/documents/whyfs.en.html">We speak about Free Software</a><br />
+              <a href="{$fsfeurope}/education/education.html">Free Software and Education</a><br />
 		  </td>
 		</tr>
 
@@ -126,12 +127,6 @@
                 <xsl:when test="$path='mailman/index.xhtml'">Mailing Lists</xsl:when>
                 <xsl:otherwise>
                   <a href="{$fsfeurope}/mailman/index.html">Mailing Lists</a>
-                </xsl:otherwise>
-              </xsl:choose><br/>
-              <xsl:choose>
-                <xsl:when test="$path='education/education.xhtml'">Education</xsl:when>
-                <xsl:otherwise>
-                  <a href="{$fsfeurope}/education/education.html">Education</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>

@@ -64,6 +64,7 @@
 		    <a href="{$fsfeurope}/law/law.fr.html">Protéger le Logiciel Libre</a><br />
 		    <a href="{$fsfeurope}/coposys/index.fr.html">Coposys</a><br />
 		    <a href="{$fsfeurope}/documents/whyfs.fr.html">Pourquoi nous parlons de Logiciel Libre</a><br />
+                  <a href="{$fsfeurope}/education/education.fr.html">Logiciel et Libre Éducation</a>
 		  </td>
 		</tr>
 
@@ -106,12 +107,6 @@
                 <xsl:when test="$path='mailman/index.fr.xhtml'">Listes de diffusion</xsl:when>
                 <xsl:otherwise>
                   <a href="{$fsfeurope}/mailman/index.fr.html">Listes de diffusion</a>
-                </xsl:otherwise>
-              </xsl:choose><br/>
-              <xsl:choose>
-                <xsl:when test="$path='education/education.fr.xhtml'">Éducation</xsl:when>
-                <xsl:otherwise>
-                  <a href="{$fsfeurope}/education/education.fr.html">Éducation</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>

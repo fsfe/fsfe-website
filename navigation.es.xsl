@@ -63,6 +63,7 @@
                   <a href="{$fsfeurope}/coposys/index.en.html">Coposys</a><br />
 		  <a href="{$fsfeurope}/documents/whyfs.es.html">Nosotros
                   hablamos de Software Libre</a><br />
+              <a href="{$fsfeurope}/education/education.html">Free Software and Education</a><br />
                 </td>
               </tr>
             <tr>

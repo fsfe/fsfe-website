@@ -121,9 +121,9 @@ icon links to the top of the hub's site -->
                     </xsl:choose><br />	          
 		    <a href="http://www.fsfeurope.org/law/law.en.html" class="T2">Secure Free Software</a><br />
 		    <xsl:choose>
-                       <xsl:when test="$path='collecte.en.xhtml'">Press review</xsl:when>
+                       <xsl:when test="$path='collecte/collecte.en.xhtml'">Press review</xsl:when>
                        <xsl:otherwise>
-                          <a href="{$fsffrance}/collecte.en.html" class="T2">Press review</a>
+                          <a href="{$fsffrance}/collecte/collecte.en.html" class="T2">Press review</a>
                        </xsl:otherwise>
                     </xsl:choose><br />
 		    <xsl:choose>

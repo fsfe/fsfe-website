@@ -59,9 +59,9 @@
               <tr>
                 <td class="TopBody" align="right">
                   <a
-      href="{$fsfeurope}/law/law.pt.html">Proteger o Software Livre</a><br />
+      href="{$fsfeurope}/law/law.pt.html">Proteger&nbsp;o&nbsp;Software&nbsp;Livre</a><br />
                   <a href="{$fsfeurope}/coposys/index.en.html">Coposys</a><br />
-         <a href="{$fsfeurope}/documents/whyfs.pt.html">Nós falamos de Software Livre</a><br />
+         <a href="{$fsfeurope}/documents/whyfs.pt.html">Nós&nbsp;falamos&nbsp;de&nbsp;Software&nbsp;Livre</a><br />
                 </td>
               </tr>
             <tr>
@@ -162,7 +162,9 @@
 	<td class="TopTitle">
           <a href="{$filebase}.xhtml">XHTML Source</a>&nbsp;&nbsp;|
           &nbsp;&nbsp;<a href="{$fsfeurope}/fsfe.xsl">XSL Style
-	  Sheet</a><br/>
+	  Sheet</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a
+          href="http://savannah.gnu.org/cgi-bin/viewcvs/fsfe/{$path}?cvsroot=www.gnu.org"
+        >Modificações</a><br/>
 	</td>
 	<td class="TopTitle" align="right">
 	  &nbsp;<a href="mailto:webmaster@fsfeurope.org"

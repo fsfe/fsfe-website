@@ -72,6 +72,12 @@
 	  <td>&nbsp;</td>
 	  <td valign="top" class="TopBody">
 	    <table width="120" border="0" cellspacing="0" cellpadding="4">
+		<tr><td class="TopTitle" align="center">Projets</td></tr>
+		<tr>
+		  <td class="TopBody" align="right">
+		    <a href="{$fsffrance}/gpl/gpl.fr.html" class="T2">GPL en Français</a><br />
+	          </td>
+		</tr>
 		<tr><td class="TopTitle" align="center">FSF France</td></tr>
 		<tr>
 		  <td class="TopBody" align="right">

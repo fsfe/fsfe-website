@@ -6,7 +6,8 @@
 
   <xsl:template match="/html[@lang='fr']/body/div">
     <!-- FSF related sites -->
-    <table cellspacing="0" cellpadding="1" width="100%" border="0"> 
+    <table cellspacing="0" cellpadding="1" width="100%" border="0"
+     summary="Sites amis de la FSF"> 
       <tr valign="middle"> 
 	  <td class="newstext">
 	    &nbsp;&nbsp;
@@ -23,7 +24,8 @@
     </table>
 
     <!-- Top menu line -->
-    <table width="100%" border="0" cellspacing="0" cellpadding="4">
+    <table width="100%" border="0" cellspacing="0" cellpadding="4"
+     summary="Menu de haut de page">
       <tr>
 	<td class="TopTitle">
 	  &nbsp;<a href="{$fsffrance}/index.fr.html">France</a> |
@@ -33,7 +35,8 @@
     </table>
 
     <!-- Title bar -->
-    <table width="100%" border="0" cellspacing="0" cellpadding="8">
+    <table width="100%" border="0" cellspacing="0" cellpadding="8"
+     summary="Barre de titre">
 	<tr>
 	  <td class="TopBody">
 	    <a href="{$fsfeurope}/">
@@ -44,7 +47,8 @@
 	</tr>
     </table>
 
-    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0"
+     summary="Langues">
       <tr>
 	<td width="99%" valign="top">
         <div class="content">
@@ -184,7 +188,8 @@
     </table>
 
     <!-- Bottom line -->
-    <table width="100%" border="0" cellspacing="0" cellpadding="2">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"
+     summary="Bas de page">
       <tr>
 	<td class="TopTitle">
           <a href="{$filebase}.xhtml">XHTML Source</a>&nbsp;&nbsp;|

@@ -25,6 +25,22 @@
     <webMaster>webmasters@fsfeurope.org (FSF Europe Webmaster Team)</webMaster>
     <language>fr-fr</language>
 
+<!-- Pour insérer des URLS dans les <description>, utiliser ceci :
+&lt;a href="http://url"&gt;texte&lt;/a&gt;
+-->
+    <item>
+      <title>Transcription de la conférence de Richard Stallman à NYU</title>
+      <link>http://france.fsfeurope.org/news/article2001-07-22-01.fr.html</link>
+      <description>
+	22 Juillet 2001. Une transcription de la &lt;a
+	href="http://www.gnu.org/philosophy/audio/audio.html#NYU2001"&gt;conférence
+	de Richard M. Stallman donnée à NYU&lt;/a&gt; le 29 mai 2001 a
+	été traduite en français. Elle est &lt;a
+	href="http://france.fsfeurope.org/news/article2001-07-22-01.fr.html"&gt;disponible
+	ici&lt;/a&gt;.
+      </description>
+    </item>
+
     <item>
       <title>Richard Stallman inaugure la Free Software
       Foundation-Inde, première organisation, en Asie, affiliée à la Free Software

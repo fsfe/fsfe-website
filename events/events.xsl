@@ -19,6 +19,7 @@
     <xsl:variable name="start"><xsl:value-of select="@start" /></xsl:variable>
     <xsl:variable name="end"><xsl:value-of select="@end" /></xsl:variable>
     <xsl:variable name="link"><xsl:value-of select="link" /></xsl:variable>
+    <xsl:variable name="page"><xsl:value-of select="page" /></xsl:variable>
 
     <!-- Before the first event, include the header -->
     <xsl:if test="position() = 1">
@@ -39,6 +40,11 @@
       <xsl:if test="$link != ''">
         [<a href="{link}">
           <xsl:value-of select="/html/text [@id = 'more']" />
+        </a>]
+      </xsl:if>
+      <xsl:if test="$page != ''">
+        [<a href="{page}">
+          <xsl:value-of select="/html/text [@id = 'page']" />
         </a>]
       </xsl:if>
     </p>

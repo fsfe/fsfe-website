@@ -1,0 +1,106 @@
+$Id: webmaster-HOWTO.txt,v 1.1 2001-08-25 12:16:49 olberger Exp $
+
+This document is a HOWTO for any volunteer interested in acting as a
+webmaster for the FSF Europe website (www.fsfeurope.org).
+
+Author : Olivier Berger <oberger@april.org>
+
+Topics covered : 
+----------------
+
+  * Configuration Management
+  * Publication mechanisms
+
+Configuration Management : 
+--------------------------
+
+The website is modified by various volunteers and can potentially
+become very large.
+
+We must ensure integrity of the site (visitors always see a correct
+website, without dead links, for instance), and capacity to undergo
+major modifications, that may require some synchronisation by various
+individuals.
+
+Thus, the web site will be available in two versions : - the main site
+displayed at www.fsfeurope.org - the beta site displayed at
+beta.fsfeurope.org
+
+Both versions are constructed out of the CVS repository (hosted by
+savannah.gnu.org).
+
+CVS can maintain different "branches" in one repository that can
+develop independently from each other and merged again later.
+
+This allows having both versions of the site (www and beta) in the
+same CVS repository and in the same files, but corresponding to
+different branches. Modifications can be made available on whichever
+branch is appropriate.
+
+If modifications made on one version of the site must be reproduced on
+the other, CVS merge operations can be done.
+
+But attention : the merging process can be quite painfull sometimes,
+and it is most important to carefully plan on which branch you want to
+work, depending on the amount of modifications / type of modifications
+you will later need to merge on other branches.
+
+There are two solutions for handling the beta and production servers
+on two different branches :
+
+ * take a standard up-to-date repository of the FSF Europe CVS and
+   create a beta branch to start at the current state.
+
+ * have the beta version on the main trunk, identify stable states by
+   tags, and create branches from this stable state, which will be
+   published as the production website.
+
+The second solution should be used. Note that it is more similar to
+the one used (most commonly I think) on development projects :
+
+* the main branch (HEAD) is the one which contains the modifications
+  which consist of the most difficult things to do. Then you don't
+  have to merge those heavy modification on other branches ;) One less
+  problem.
+
+* other branches are created to reflect only "patches" applied to
+  stable versions (this implies that stable versions should be
+  determined ;).  These slighter modifications are easier to track and
+  merge to the other (HEAD or other) branches.
+
+The officiel/public production version (i.e.  www.fsfeurope.org) is
+then the result of publishing a branch, and beta.fsfeurope.org
+consists of the HEAD branch.
+
+When modifications made on the HEAD/beta are declared good for
+publication (after some review process), then, the checked-out copy of
+the official/public should be directed to another branch.
+
+
+
+Publication mechanism :
+-----------------------
+
+The configuration management section describes the principles of using
+CVS for storing the versions of the website. But this only applies to
+sources of the pages (XHTML mostly), which must then be compiled into
+HTML in the right place for publication.
+
+Updates of the sites are made visible by updating the checked-out
+files (from the CVS), then recompiling pages.
+
+This can be done with "make sync" launched on the webmaster's side
+(which then launches the update remotely with ssh), or at times
+specified by crontabs on the server.
+
+All this is described in the
+http://france.fsfeurope.org/server/server.en.html#Web URL. Feel free
+to point to insufficient documentation (or improve it directly by
+committing ;).
+
+Once a checked-out image of the CVS (of a certain branch) is in a
+directory, it will continue to contain updates to that branch, so
+configuration of the branch checked-out for a certain site will only
+have to be made once, and could be changed almost on the fly if
+necessary (returning to a stable tagged version, for instance).
+

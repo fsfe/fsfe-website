@@ -58,7 +58,7 @@
       <authors>Sean Grimes</authors>
       <url>http://chemcalc.sourceforge.net</url>
       <os>
-         <name>Linux</name>
+         <name>GNU/Linux</name>
          <maintainer>Sean Grimes</maintainer>
          <version>0.01a</version>
          <licence>GPL</licence>
@@ -74,7 +74,7 @@
       <authors>Georges Khaznadar</authors>
       <url>ftp://boltz.univ-littoral.fr/pub/chemeq</url>
       <os>
-         <name>Linux</name>
+         <name>GNU/Linux</name>
          <maintainer>Georges Khaznadar</maintainer>
          <version>1.10</version>
          <licence>GPL</licence>
@@ -89,7 +89,7 @@
       <authors>Ricardo Stefani, Rene Fosdal</authors>
       <url>http://chemsuite.seul.org</url>
       <os>
-         <name>Linux</name>
+         <name>GNU/Linux</name>
          <maintainer>Ricardo Stefani, Rene Fosdal</maintainer>
        	 <version>0.0.7</version>
          <licence>GPL</licence>
@@ -99,12 +99,12 @@
    <software>
       <name>Chemtool</name>
       <date>28 nov 2001</date>
-      <description lang="en">Chemtool is a small program for drawing chemical structures on Linux and Unix systems using the GTK toolkit under X11.</description>
+      <description lang="en">Chemtool is a small program for drawing chemical structures on GNU/Linux and Unix systems using the GTK toolkit under X11.</description>
       <description lang="fr">Chemtool est un petit programme de dessin de structures chimiques en 2D.</description>
       <authors>Martin Kroeker</authors>
       <url>http://ruby.chemie.uni-freiburg.de/~martin/chemtool/chemtool.html</url>
       <os>
-         <name>Linux</name>
+         <name>GNU/Linux</name>
          <maintainer>Martin Kroeker</maintainer>
          <version>1.5.a12</version>
          <licence>GPL</licence>
@@ -119,7 +119,7 @@
       <authors>David J. Dooling</authors>
       <url>http://chimp.sourceforge.net</url>
       <os>
-         <name>Linux</name>
+         <name>GNU/Linux</name>
          <maintainer>David J. Dooling</maintainer>
          <version>?</version>
          <licence></licence>
@@ -134,7 +134,7 @@
       <authors>Alex M. Clark</authors>
       <url>http://crk.sourceforge.net</url>
       <os>
-         <name>Linux</name>
+         <name>GNU/Linux</name>
          <maintainer>Alex M. Clark</maintainer>
          <version>1.04</version>
          <licence>GPL</licence>
@@ -149,7 +149,7 @@
       <authors>SooHaeng Yoo</authors>
       <url>http://theopenlab.uml.edu/dnd</url>
       <os>
-         <name>Linux</name>
+         <name>GNU/Linux</name>
          <maintainer>SooHaeng Yoo</maintainer>
          <version>0.5.1</version>
          <licence>GPL</licence>
@@ -164,7 +164,7 @@
       <authors>Damir Zucic</authors>
       <url>http://pref.etfos.hr/garlic</url>
       <os>
-         <name>Linux</name>
+         <name>GNU/Linux</name>
          <maintainer>Damir Zucic</maintainer>
          <version>1.1</version>
          <licence>GPL</licence>
@@ -179,7 +179,7 @@
       <authors>Jonas Frantz</authors>
       <url>http://www.physics.helsinki.fi/~frantz/software/gdpc.html</url>
       <os>
-         <name>Linux</name>
+         <name>GNU/Linux</name>
          <maintainer>Jonas Frantz</maintainer>
          <version>2.0</version>
          <licence>GPL</licence>
@@ -194,7 +194,7 @@
       <authors>Sean Fleming</authors>
       <url>http://gdis.seul.org</url>
       <os>
-         <name>Linux</name>
+         <name>GNU/Linux</name>
          <maintainer>Sean Fleming</maintainer>
       	 <version>0.73.2</version>
          <licence>GPL</licence>
@@ -216,7 +216,7 @@
       <authors>Mike Cruz, Tommi Hassinen, Ville Heikkila, Geoff Hutchison, Jarno Huuskonen</authors>
       <url>http://www.uku.fi/~thassine/ghemical</url>
       <os>
-         <name>Linux</name>
+         <name>GNU/Linux</name>
          <maintainer>Mike Cruz, Tommi Hassinen, Ville Heikkila, Geoff Hutchison, Jarno Huuskonen</maintainer>
          <version>0.81</version>
   	 <licence>GPL</licence>
@@ -226,12 +226,12 @@
 	<software>
       	<name>GPeriodic</name>
 		<date>30 aug 2001</date>
-	      <description lang="en">GPeriodic is a periodic table application for Linux. It allows you to browse through a periodic table of the elements, and view detailed information on each of the elements. 118 elements are currently liste.</description>
-	      <description lang="fr">GPeriodic est un tableau pérodique des éléments pour Linux. Il permet de se 'ballader' dans le tableau périodique et de voir les informations détaillées de chaque élément. Actuellement, 118 éléments sont pris en charge.</description>
+	      <description lang="en">GPeriodic is a periodic table application for GNU/Linux. It allows you to browse through a periodic table of the elements, and view detailed information on each of the elements. 118 elements are currently liste.</description>
+	      <description lang="fr">GPeriodic est un tableau pérodique des éléments pour GNU/Linux. Il permet de se 'ballader' dans le tableau périodique et de voir les informations détaillées de chaque élément. Actuellement, 118 éléments sont pris en charge.</description>
 		<authors>Kyle R. Burton</authors>
       	<url>http://gperiodic.seul.org</url>
 		<os>
-      	   	<name>Linux</name>
+      	   	<name>GNU/Linux</name>
 			<maintainer>Kyle R. Burton</maintainer>
 	         	<version>1.3.2</version>
 			<licence>GPL</licence>
@@ -246,7 +246,7 @@
 		<authors>Nils Bokermann</authors>
       	<url>http://kruemel.mine.nu/~nilsb</url>
 		<os>
-      	   	<name>Linux</name>
+      	   	<name>GNU/Linux</name>
 			<maintainer>Nils Bokermann</maintainer>
 	         	<version>0.7</version>
 			<licence>GPL</licence>
@@ -306,7 +306,7 @@
 		<authors></authors>
       	<url>ftp://fatou.ruc.dk/pub/kneth</url>
 		<os>
-      	   	<name>Linux</name>
+      	   	<name>GNU/Linux</name>
 			<maintainer></maintainer>
 	         	<version>1.05</version>
 			<licence></licence>
@@ -335,7 +335,7 @@
 		<authors>Francesco Bresciani</authors>
       	<url>http://kemistry.sourceforge.net</url>
 		<os>
-      	   	<name>Linux</name>
+      	   	<name>GNU/Linux</name>
 			<maintainer>Francesco Bresciani</maintainer>
 	         	<version>0.3</version>
 			<licence></licence>
@@ -350,7 +350,7 @@
 		<authors></authors>
       	<url>http://www.idiom.com/~tomi/kmol.html</url>
 		<os>
-      	   	<name>Linux</name>
+      	   	<name>GNU/Linux</name>
 			<maintainer></maintainer>
 	         	<version>0.2.2</version>
 			<licence>GPL</licence>
@@ -365,7 +365,7 @@
 		<authors>Mario Hoverath</authors>
       	<url>http://members.tripod.de/PageOfMH</url>
 		<os>
-      	   	<name>Linux</name>
+      	   	<name>GNU/Linux</name>
 			<maintainer>Mario Hoverath</maintainer>
 	         	<version>0.2.0</version>
 			<licence>GPL</licence>
@@ -378,9 +378,9 @@
 	      <description lang="en">Nobel Gas Simulator.</description>
 	      <description lang="fr">Simulateur de Gaz Noble.</description>
 		<authors>Jonathan Bondzie, Chuck Yeung</authors>
-      	<url>http://metalab.unc.edu/pub/Linux/science/chemistry</url>
+      	<url>http://metalab.unc.edu/pub/GNU/Linux/science/chemistry</url>
 		<os>
-      	   	<name>Linux</name>
+      	   	<name>GNU/Linux</name>
 			<maintainer>Jonathan Bondzie, Chuck Yeung</maintainer>
 	         	<version>1.1</version>
 			<licence>GPL</licence>
@@ -395,7 +395,7 @@
 		<authors>Konrad Hinsen</authors>
       	<url>http://dirac.cnrs-orleans.fr/MMTK</url>
 		<os>
-      	   	<name>Linux</name>
+      	   	<name>GNU/Linux</name>
 			<maintainer>Konrad Hinsen</maintainer>
 	         	<version>2.0</version>
 			<licence>BSD like</licence>
@@ -410,7 +410,7 @@
 		<authors>Jerome PANSANEL</authors>
       	<url>http://pansanel.multimania.com/mwcalc.html</url>
 		<os>
-      	   	<name>Linux</name>
+      	   	<name>GNU/Linux</name>
 			<maintainer>Jerome PANSANEL</maintainer>
 	         	<version>1.0.1</version>
 			<licence>LPGL</licence>
@@ -426,7 +426,7 @@
 		<authors>Alan Aspuru-Guzik, Dario Bressanini, John A. W. Harkless</authors>
       	<url>http://sourceforge.net/projects/moiss</url>
 		<os>
-      	   	<name>Linux</name>
+      	   	<name>GNU/Linux</name>
 			<maintainer>Alan Aspuru-Guzik, Dario Bressanini, John A. W. Harkless</maintainer>
 	         	<version>0.2.7</version>
 			<licence>?</licence>
@@ -441,7 +441,7 @@
 		<authors></authors>
       	<url>http://www.earth.ox.ac.uk/~keith/moldy.html</url>
 		<os>
-      	   	<name>Linux</name>
+      	   	<name>GNU/Linux</name>
 			<maintainer>Keith Refson</maintainer>
 	         	<version>2.0</version>
 			<licence>GPL</licence>
@@ -470,7 +470,7 @@
 		<authors>Dietmar Paschek, Alfons Geiger</authors>
       	<url>http://ganter.chemie.uni-dortmund.de/~pas/moscito.html</url>
 		<os>
-      	   	<name>Linux</name>
+      	   	<name>GNU/Linux</name>
 			<maintainer>Dietmar Paschek, Alfons Geiger</maintainer>
 	         	<version>3.9</version>
 			<licence>GPL</licence>
@@ -485,7 +485,7 @@
 		<authors></authors>
       	<url>http://aros.ca.sandia.gov/~cljanss/mpqc/</url>
 		<os>
-      	   	<name>Linux</name>
+      	   	<name>GNU/Linux</name>
 			<maintainer></maintainer>
 	         	<version>1.1.3</version>
 			<licence></licence>
@@ -515,7 +515,7 @@
 		<authors></authors>
       	<url>http://www.chim.unifi.it:8080/orac/</url>
 		<os>
-      	   	<name>Linux</name>
+      	   	<name>GNU/Linux</name>
 			<maintainer></maintainer>
 	         	<version>4.0</version>
 			<licence></licence>
@@ -552,7 +552,7 @@
 		<authors></authors>
       	<url>http://vaspview.sourceforge.net/</url>
 		<os>
-      	   	<name>Linux</name>
+      	   	<name>GNU/Linux</name>
 			<maintainer></maintainer>
 	         	<version>1.0.5</version>
 			<licence></licence>
@@ -569,12 +569,12 @@
    <software>
       <name>XDrawChem</name>
       <date>4 dec 2001</date>
-      <description lang="en">XDrawChem is a two-dimensional molecule drawing program for Unix operating systems. It is similar in functionality to other molecule drawing programs such as ChemDraw (TM, CambridgeSoft). It can read and write MDL Molfiles, and read ChemDraw text and binary files, to allow sharing between XDrawChem and other chemistry applications. XDrawChem has been tested on Linux, SGI IRIX 6.5, and Sun Solaris.</description>
+      <description lang="en">XDrawChem is a two-dimensional molecule drawing program for Unix operating systems. It is similar in functionality to other molecule drawing programs such as ChemDraw (TM, CambridgeSoft). It can read and write MDL Molfiles, and read ChemDraw text and binary files, to allow sharing between XDrawChem and other chemistry applications. XDrawChem has been tested on GNU/Linux, SGI IRIX 6.5, and Sun Solaris.</description>
       <description lang="fr">XDrawChem est un programme de dessins moléculaires en 2D pour les systèmes Unix et clones. Il a des fonctionnalités similaires à d'autres logiciels tel que ChemDraw (TM, CambridgeSoft). Il peut lire les file MDL Mol, ChemDraw (texte et binaire), permettant ainsi l'échange entre XDrawChem et d'autres applications en chimie.</description>
       <authors>Bryan Herger</authors>
       <url>http://www.prism.gatech.edu/~gte067k/xdrawchem</url>
       <os>
-      	 <name>Linux</name>
+      	 <name>GNU/Linux</name>
          <maintainer>Bryan Herger</maintainer>
          <version>0.99.6</version>
          <licence>BSD like</licence>
@@ -603,7 +603,7 @@
       <authors></authors>
       <url>http://vegemite.chem.nottingham.ac.uk/~xmakemol</url>
       <os>
-   	 <name>Linux</name>
+   	 <name>GNU/Linux</name>
          <maintainer></maintainer>
          <version>5.02</version>
          <licence>GPL 2</licence>
@@ -671,7 +671,7 @@
       <authors>Thijs J. H. Vlugt, Berend Smit</authors>
       <url>http://molsim.chem.uva.nl/bigmac</url>
       <os>
-         <name>Linux</name>
+         <name>GNU/Linux</name>
          <maintainer>Thijs J. H. Vlugt, Berend Smit</maintainer>
          <version>1.0</version>
          <licence>GPL</licence>
@@ -686,7 +686,7 @@
       <authors>Jacek Kobus, Leif Laaksonen, Dage Sundholm</authors>
       <url>http://www.csc.fi/~laaksone/Num2d.html</url>
       <os>
-         <name>Linux</name>
+         <name>GNU/Linux</name>
          <maintainer>Jacek Kobus, Leif Laaksonen, Dage Sundholm</maintainer>
          <version>?</version>
          <licence>GPL</licence>

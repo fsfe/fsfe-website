@@ -36,7 +36,6 @@ use File::Copy;
 #
 our %countries = (
   global => 'en',
-  se => 'sv',
   de => 'de',
   fr => 'fr' );
 

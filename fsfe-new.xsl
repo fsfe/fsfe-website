@@ -144,6 +144,19 @@
                 <xsl:value-of select="translate ($Date, '/', '-')" />
                 (<xsl:value-of select="$Author" />)
               </xsl:if>
+
+              <!-- Link to the XHTML source -->
+              <xsl:element name="a">
+                <xsl:attribute name="href">
+                  <xsl:text>/source</xsl:text>
+                  <xsl:value-of select="/buildinfo/@filename" />
+                  <xsl:text>.</xsl:text>
+                  <xsl:value-of select="/buildinfo/document/@language" />
+                  <xsl:text>.xhtml</xsl:text>
+                </xsl:attribute>
+                <xsl:text>[XHTML]</xsl:text>
+              </xsl:element>
+
               <br />
               <xsl:apply-templates
                 select="/buildinfo/textset/text[@id='permission']/node()" />

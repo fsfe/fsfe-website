@@ -1,0 +1,16 @@
+<!-- DTD for free software list -->
+
+<!ELEMENT softliste (software+)>
+<!ELEMENT software (name, description, authors, url, mirrorurl*, os+)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT authors (#PCDATA)>
+<!ELEMENT url (#PCDATA)>
+<!ELEMENT mirrorurl (#PCDATA)>
+<!ELEMENT os (name, maintainer, version, licence, date)>
+<!ELEMENT maintainer (#PCDATA)>
+<!ELEMENT version (#PCDATA)>
+<!ELEMENT licence (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+
+

@@ -1,0 +1,381 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chimie.xsl" type="text/xsl"?> 
+<!DOCTYPE softliste SYSTEM "liste.dtd">
+<softliste>
+   <software>
+      <name>AMMP</name>
+	<date>28 jul 2001</date>
+      <url>http://www.cs.gsu.edu/~cscrwh/ammp/ammp.html</url>
+      <description>a modern full-featured molecular mechanics, dynamics and modeling program. </description>
+      <os>
+         <name>Linux</name>
+         <version>2.0</version>
+      </os>
+      <os>
+         <name>Unix</name>
+         <version>2.0</version>
+      </os>
+      <os>
+         <name>Windows</name>
+         <version>1.5</version>
+      </os>
+   </software>
+   <software>
+      <name>ChemCalc</name>
+	<date>28 jul 2001</date>
+      <url>http://chemcalc.sourceforge.net/</url>
+      <description>a calculator that is more oriented towards chemistry.</description>
+      <os>
+         <name>Linux</name>
+         <version>0.0.1a</version>
+      </os>
+   </software>
+   <software>
+      <name>Chemeq</name>
+	<date>28 jul 2001</date>
+      <url>ftp://boltz.univ-littoral.fr/pub/chemeq/</url>
+      <description>translate chemical equations to LaTeX code.</description>
+      <os>
+         <name>Linux</name>
+         <version>1.10.1</version>
+      </os>
+   </software>
+   <software>
+      <name>Chemsuite</name>
+	<date>28 jul 2001</date>
+      <url>http://chemsuite.seul.org/</url>
+      <description>molecular 2/3D drawing and chemical reaction simulation software.</description>
+      <os>
+         <name>Linux</name>
+         <version>0.6</version>
+      </os>
+   </software>
+   <software>
+      <name>CHIMP</name>
+	<date>28 jul 2001</date>
+      <url>http://chimp.sourceforge.net/</url>
+      <description>a generic tool for the modeling of chemical phenomena.</description>
+      <os>
+         <name>Linux</name>
+         <version>?</version>
+      </os>
+   </software>
+   <software>
+      <name>CRK</name>
+	<date>28 jul 2001</date>
+      <url>http://crk.sourceforge.net/</url>
+      <description>The CRK (Chemical Resource Kit) is the collective name describing three chemistry-related software packages.</description>
+      <os>
+         <name>Linux</name>
+         <version>1.04</version>
+      </os>
+   </software>
+   <software>
+      <name>DND</name>
+	<date>28 jul 2001</date>
+      <url>http://theopenlab.uml.edu/dnd/</url>
+      <description>intend to build a GUI for molecular dynamics simulation of molecule.</description>
+      <os>
+         <name>Linux</name>
+         <version>0.5.1</version>
+      </os>
+   </software>
+   <software>
+      <name>Garlic</name>
+	<date>28 jul 2001</date>
+      <url>http://pref.etfos.hr/garlic/</url>
+      <description>a free/open source molecular visualization program for UNIX/Linux.</description>
+      <os>
+         <name>Linux</name>
+         <version>1.0</version>
+      </os>
+   </software>
+   <software>
+      <name>gdpc</name>
+	<date>28 jul 2001</date>
+      <url>http://www.physics.helsinki.fi/~frantz/software/gdpc.html</url>
+      <description>a program for visualising molecular dynamic simulations.</description>
+      <os>
+         <name>Linux</name>
+         <version>2.0</version>
+      </os>
+   </software>
+   <software>
+      <name>gdis</name>
+	<date>28 jul 2001</date>
+      <url>http://gdis.seul.org/</url>
+      <description>a GTK based program for visualizing molecules and periodic systems.</description>
+      <os>
+         <name>Linux</name>
+         <version>0.72.5</version>
+      </os>
+      <os>
+         <name>Other Unix</name>
+         <version>0.72.5</version>
+      </os>
+   </software>
+   <software>
+      <name>Ghemical</name>
+	<date>28 jul 2001</date>
+      <url>http://www.uku.fi/~thassine/ghemical/</url>
+      <description>a molecular modelling software package with nice 3D-visualization tools.</description>
+      <os>
+         <name>Linux</name>
+         <version>0.42</version>
+      </os>
+   </software>
+   <software>
+      <name>GPeriodic</name>
+	<date>28 jul 2001</date>
+      <url>http://gperiodic.seul.org/</url>
+      <description>a periodic table reference software.</description>
+      <os>
+         <name>Linux</name>
+         <version>1.3.0</version>
+      </os>
+   </software>
+   <software>
+      <name>GtkChemkin</name>
+	<date>28 jul 2001</date>
+      <url>http://kruemel.mine.nu/~nilsb/</url>
+      <description>handles save-files written by the chemkin program.</description>
+      <os>
+         <name>Linux</name>
+         <version>0.7</version>
+      </os>
+   </software>
+   <software>
+      <name>JChemPaint</name>
+      <url>http://jchempaint.sourceforge.net/</url>
+      <description>a program for drawing 2D chemical structures, written in Java.</description>
+      <os>
+         <name>Linux</name>
+         <version>1.1</version>
+      </os>
+   </software>
+   <software>
+      <name>JCML</name>
+	<date>28 jul 2001</date>
+      <url>http://www.openscience.org/~egonw/cml/</url>
+      <description>Java library for utilizing Chemical Markup Language (CML).</description>
+      <os>
+         <name>Java</name>
+         <version>1.2.6</version>
+      </os>
+   </software>
+   <software>
+      <name>Jmol</name>
+	<date>28 jul 2001</date>
+      <url>http://jmol.sourceforge.net/</url>
+      <description>an open-source molecule viewer and editor.</description>
+      <os>
+         <name>Java</name>
+         <version>0.6.1</version>
+      </os>
+   </software>
+   <software>
+      <name>kc</name>
+	<date>28 jul 2001</date>
+      <url>ftp://fatou.ruc.dk/pub/kneth/</url>
+      <description>transforms chemical equations into simulation programs.</description>
+      <os>
+         <name>Linux</name>
+         <version>1.05</version>
+      </os>
+      <os>
+         <name>Other Unix</name>
+         <version>1.05</version>
+      </os>
+      <os>
+         <name>Windows</name>
+         <version>1.05</version>
+      </os>
+   </software>
+   <software>
+      <name>Kemistry</name>
+	<date>28 jul 2001</date>
+      <url>http://kemistry.sourceforge.net/</url>
+      <description>a collection of chemistry-related applications for KDE.</description>
+      <os>
+         <name>Linux</name>
+         <version>0.2</version>
+      </os>
+   </software>
+   <software>
+      <name>KMol</name>
+	<date>28 jul 2001</date>
+      <url>http://www.idiom.com/~tomi/kmol.html</url>
+      <description>KMol is a molecular weight and elemental composition calculator.</description>
+      <os>
+         <name>Linux</name>
+         <version>0.2.2</version>
+      </os>
+   </software>
+   <software>
+      <name>KMovisto</name>
+	<date>28 jul 2001</date>
+      <url>http://members.tripod.de/PageOfMH</url>
+      <description>KMovisto is a molecule viewer for using in quantum chemistry. The program reads GAUSSIAN 94 and GAUSSIAN 98 files (obtained from UNIX or MS Windows systems) or XYZ files and draws the molecule as a ball and stick model.</description>
+      <os>
+         <name>Linux</name>
+         <version>0.2.0</version>
+      </os>
+   </software>
+   <software>
+      <name>Lennard</name>
+	<date>28 jul 2001</date>
+      <url>http://metalab.unc.edu/pub/Linux/science/chemistry/</url>
+      <description>Nobel Gas Simulator</description>
+      <os>
+         <name>Linux</name>
+         <version>1.1</version>
+      </os>
+   </software>
+   <software>
+      <name>Moiss</name>
+	<date>28 jul 2001</date>
+      <url>http://sourceforge.net/projects/moiss/</url>
+      <description>a n-particle, n-dimensions Monte Carlo Schroedinger equation integrator</description>
+      <os>
+         <name>Linux</name>
+         <version>0.2.7</version>
+      </os>
+   </software>
+   <software>
+      <name>Moldy</name>
+	<date>28 jul 2001</date>
+      <url>http://www.earth.ox.ac.uk/~keith/moldy.html</url>
+      <description>Moldy is a general-purpose molecular dynamics simulation program. It is sufficiently flexible that it ought to be useful for a wide range of simulation calculations of atomic, ionic and molecular systems.</description>
+      <os>
+         <name>Linux</name>
+         <version>2.0</version>
+      </os>
+      <os>
+         <name>Other Unix</name>
+         <version>2.0</version>
+      </os>
+      <os>
+         <name>Windows</name>
+         <version>2.0</version>
+      </os>
+   </software>
+   <software>
+      <name>MOSCITO</name>
+	<date>28 jul 2001</date>
+      <url>http://ganter.chemie.uni-dortmund.de/~pas/moscito.html</url>
+      <description>MOSCITO is designed for molecular dynamics simulations of condensed phase systems defined by classical molecular mechanics force-fields such as AMBER, OPLS, CHARMM and GROMOS.</description>
+      <os>
+         <name>Linux</name>
+         <version>3.9</version>
+      </os>
+   </software>
+   <software>
+      <name>MPQC</name>
+	<date>28 jul 2001</date>
+      <url>http://aros.ca.sandia.gov/~cljanss/mpqc/</url>
+      <description>MPQC is the Massively Parallel Quantum Chemistry Program.</description>
+      <os>
+         <name>Linux</name>
+         <version>1.1.3</version>
+      </os>
+   </software>
+   <software>
+      <name>NanoCAD</name>
+	<date>28 jul 2001</date>
+      <url>http://world.std.com/~wware/ncad.html</url>
+      <description>NanoCAD uses mathematical techniques of molecular modeling to simulate the behavior of molecules on your web browser.</description>
+      <os>
+         <name>Java</name>
+         <version>?</version>
+      </os>
+   </software>
+   <software>
+      <name>ORAC</name>
+	<date>28 jul 2001</date>
+      <url>http://www.chim.unifi.it:8080/orac/</url>
+      <description>ORAC is a program for running classical simulations of biomolecules. Simulations can be carried out in the NVE, NPT, NHP, and NVT thermodynamic ensembles.</description>
+      <os>
+         <name>Linux</name>
+         <version>4.0</version>
+      </os>
+      <os>
+         <name>Other Unix</name>
+         <version>4.0</version>
+      </os>
+   </software>
+   <software>
+      <name>OSET</name>
+	<date>28 jul 2001</date>
+      <url>http://litio.pquim.unam.mx/caos/</url>
+      <description>Computer-Assisted Organic Synthesis (CAOS) program for use in the teaching of Organic Chemistry, and retrosynthetic analysis in particular.</description>
+      <os>
+         <name>Java</name>
+         <version>?</version>
+      </os>
+   </software>
+   <software>
+      <name>VASP Viewer</name>
+	<date>28 jul 2001</date>
+      <url>http://vaspview.sourceforge.net/</url>
+      <description>This is a scientific visualization package for examining output files generated by the Vienna Ab-initio Simulation Package, a package for performing ab-initio quantum-mechanical molecular dynamics using pseudopotentials and a plane wave basis set.</description>
+      <os>
+         <name>Linux</name>
+         <version>1.0.5</version>
+      </os>
+      <os>
+         <name>Windows</name>
+         <version>1.0.5</version>
+      </os>
+   </software>
+   <software>
+      <name>XMakeMol</name>
+	<date>28 jul 2001</date>
+      <url>http://vegemite.chem.nottingham.ac.uk/~xmakemol/</url>
+      <description>a program for viewing and manipulating atomic/molecular systems given in xyz format.</description>
+      <os>
+         <name>Linux</name>
+         <version>4.40</version>
+      </os>
+   </software>
+   <software>
+      <name>xyz2rgb</name>
+	<date>28 jul 2001</date>
+      <url>http://world.std.com/~wware/xyz2rgb.html</url>
+      <description>xyz2rgb makes pretty pictures and movies of molecules. It expects input in the form of an XYZ file, one of the file formats frequently used by computational chemists. As output, it produces one or more line-interlaced RGB files.</description>
+      <os>
+         <name>All</name>
+         <version>?</version>
+      </os>
+   </software>
+   <software>
+      <name>Chemtools</name>
+	<date>28 jul 2001</date>
+      <url>http://ruby.chemie.uni-freiburg.de/~martin/chemtool/chemtool.html</url>
+      <description>Chemtool is a small program for drawing chemical structures on Linux and Unix systems using the GTK toolkit under X11.</description>
+      <os>
+         <name>Linux</name>
+         <version>1.4.a13</version>
+      </os>
+   </software>
+   <software>
+      <name>mwcalc</name>
+	<date>28 jul 2001</date>
+      <url>http://pansanel.multimania.com/linux/mwcalc.html</url>
+      <description>This program is a Molecular Weight Calculator (console tools).</description>
+      <os>
+         <name>Linux</name>
+         <version>0.0.1a</version>
+      </os>
+   </software>
+   <software>
+      <name>MMTK</name>
+	<date>28 jul 2001</date>
+      <url>http://dirac.cnrs-orleans.fr/MMTK/</url>
+      <description>The Molecular Modelling Toolkit (MMTK) is an Open Source program library for molecular simulation applications. In addition to</description>
+      <licence>Artistic</licence>
+      <os>
+         <name>Linux</name>
+         <version>2.0</version>
+      </os>
+   </software>
+</softliste>

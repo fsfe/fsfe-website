@@ -1,0 +1,53 @@
+body {
+       font-family: arial, sans-serif;
+       color: black;  
+       background-color: white;
+}
+table.main {
+             border: 0 solid;
+}
+h1 {
+     font-weight: bold;
+     font-size: 12pt;
+}
+
+ul { list-style: circle;  }
+
+span {
+     font-weight: bold;
+     font-size: 12pt;
+}
+
+h2 {
+     font-weight: bold;
+     font-size: 12pt;
+     }
+a {
+    background-color: white;
+    color: #002390;
+    font-weight: bold;
+    text-decoration: none;
+    }
+
+a.extern {
+    background-color: white;
+    color: #002390;
+    font-weight: normal;
+    text-decoration: none;
+    }
+
+a.extern:hover {
+    background-color: white;
+    color: #002390;
+    font-weight: normal;
+    text-decoration: underline;
+    }
+
+address {
+          font-weight: bold;
+          font-size: 10pt;
+          }
+
+p { 
+    padding-left: 9px;
+    }

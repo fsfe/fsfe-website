@@ -109,9 +109,9 @@
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
-                <xsl:when test="$path='press/index.xhtml'">Press Section</xsl:when>
+                <xsl:when test="$path='press/index.de.xhtml'">Presse</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/press/index.html" class="T2">Press Section</a>
+                  <a href="{$fsfeurope}/press/index.de.html" class="T2">Presse</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>

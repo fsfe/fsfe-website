@@ -81,6 +81,8 @@
                     class="T2">Contact</a><br/>
               <a href="{$fsfeurope}/background.fr.html"
                    class="T2">Contexte</a><br/>
+	      <a href="{$fsfeurope}/documents/documents.fr.html"
+		   class="T2">Documents</a><br/>
               <a href="{$fsfeurope}/mailman/index.fr.html"
                    class="T2">Listes de diffusion</a><br/>
               <a href="{$fsfeurope}/press/index.fr.html"

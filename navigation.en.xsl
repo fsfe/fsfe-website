@@ -81,6 +81,8 @@
                     class="T2">Contact</a><br/>
               <a href="{$fsfeurope}/background.html"
                    class="T2">Background</a><br/>
+              <a href="{$fsfeurope}/documents/documents.html"
+                   class="T2">Documents</a><br/>
               <a href="{$fsfeurope}/mailman/index.html"
                    class="T2">Mailing Lists</a><br/>
               <a href="{$fsfeurope}/press/index.html"

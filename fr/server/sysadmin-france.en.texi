@@ -5,7 +5,7 @@
 @setchapternewpage odd
 @c %**end of header
 
-@set RCSID $Id: sysadmin-france.en.texi,v 1.47 2001-07-20 15:06:31 loic Exp $
+@set RCSID $Id: sysadmin-france.en.texi,v 1.48 2001-08-16 15:09:07 loic Exp $
 @set VERSION 1.0
 
 @c Combine the variable and function indices:
@@ -77,6 +77,7 @@ Web
 * Separate layout and content::  
 * Publishing news::             
 * Update from CVS::             
+* Scripts CVS Tree::            
 * Nightly script::              
 * Immediate Update::            
 
@@ -327,6 +328,7 @@ the relevant information in XML. For more information check the
 * Separate layout and content::  
 * Publishing news::             
 * Update from CVS::             
+* Scripts CVS Tree::            
 * Nightly script::              
 * Immediate Update::            
 @end menu
@@ -768,7 +770,7 @@ but handled by @email{oberger@@april.org,Olivier Berger}, with the
 @uref{http://savannah.gnu.org/cgi-bin/viewcvs/rss2mail/,,rss2mail's CVS
 repository} for more details).
 
-@node Update from CVS, Nightly script, Publishing news, Web
+@node Update from CVS, Scripts CVS Tree, Publishing news, Web
 @section Update from CVS
 
 @cindex www.gnu.org
@@ -784,7 +786,35 @@ in @file{/var/log/www.log} and rotated by
 Note that this update does not generate the HTML pages from the XHTML
 pages. The @ref{Nightly script} takes care of this.
 
-@node Nightly script, Immediate Update, Update from CVS, Web
+@node Scripts CVS Tree, Nightly script, Update from CVS, Web
+@section Scripts CVS Tree
+
+@cindex CVS Tree
+@cindex scripts in CVS
+@cindex scripts sources
+@cindex sources of www scripts
+
+The various scripts used to manage and update the *.fsfeurope.org HTML
+trees are stored in the CVS Tree of the savannah.gnu.org/projects/www/
+project.
+
+@itemize @bullet
+
+@item @file{/home/www/bin} is an anonymous checkout equivalent to
+:pserver:anoncvs@@subversions.gnu.org:/cvsroot/www co www/fr.fsf.org.
+It contains the scripts and information scrictly specific to the
+france.fsfeurope.org machine.
+
+@item @file{/usr/local/src/www} is an anonymous checkout equivalent to
+:pserver:anoncvs@@subversions.gnu.org:/cvsroot/www co www. It is used to
+install and update the scripts that are shared between various GNU
+machines such as @code{symlinks}. Those scripts are not software general
+enough to be released. They are documented in
+@url{http://www.gnu.org/server/source/}.
+
+@end itemize
+
+@node Nightly script, Immediate Update, Scripts CVS Tree, Web
 @section Nightly script
 
 The @file{/home/www/bin/nightly} script is run daily by the @code{www}

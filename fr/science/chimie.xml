@@ -115,7 +115,7 @@
 
   <software>
     <name>Chemtool</name>
-    <date>22 apr 2002</date>
+    <date>26 nov 2003</date>
     <description lang="en">Chemtool is a small program for drawing chemical structures on GNU/Linux and Unix systems using the GTK toolkit under X11.</description>
     <description lang="fr">Chemtool est un petit programme de dessin de structures chimiques en 2D.</description>
     <authors>Martin Kroeker</authors>
@@ -123,11 +123,11 @@
     <url>http://ruby.chemie.uni-freiburg.de/~martin/chemtool/chemtool.html</url>
     <os name="GNU/Linux">
       <maintainer>Martin Kroeker</maintainer>
-      <version>1.5</version>
+      <version>1.6</version>
       <license>GPL</license>
       <url>http://ruby.chemie.uni-freiburg.de/~martin/chemtool/chemtool-1.5.tar.gz</url>
       <comment>Missing copy of the GNU GPL, no copyright or license notice, indication of GNU GPL licensing in the README file</comment>
-      <date>22 apr 2002</date>
+      <date>26 nov 2003</date>
     </os>
   </software>
 
@@ -185,24 +185,24 @@
 
   <software>
     <name>Garlic</name>
-    <date>28 jul 2001</date>
+    <date>26 nov 2003</date>
     <description lang="en">Garlic is a free molecular visualization program written for unix and unix clones. Now, it is able to edit the molecule.</description>
     <description lang="fr">Garlic est un programme libre de visualisation moléculaire, pour Unix et ses clones. Il permet aussi d'éditer les molécules visualisées.</description>
     <authors>Damir Zucic</authors>
-    <url>http://pref.etfos.hr/garlic</url>
+    <url>http://garlic.mefos.hr/garlic/</url>
     <os name="GNU/Linux">
       <maintainer>Damir Zucic</maintainer>
-      <version>1.2</version>
+      <version>1.3</version>
       <license>GPL</license>
-      
-      :<comment>COPYING file exist, but .c should have a licence notice (have copyright notice).</comment>
-      <date>22 apr 2002</date>
+      <url>http://garlic.mefos.hr/garlic/</url>
+      <comment>COPYING file exist, but .c should have a licence notice (have copyright notice).</comment>
+      <date>26 nov 2003</date>
     </os>
   </software>
 
   <software>
     <name>GDPC</name>
-    <date>15 nov 2002</date>
+    <date>26 nov 2003</date>
     <description lang="en">GDPC is a program for visualising molecular dynamic simulations, it is a very versatile program and could easily be used for other purposes. gdpc reads xyz input and custom formats and can write out pictures of the frames.</description>
     <description lang="fr">GDPC est un programme pour la visualisation de simulations de dynamique moléculaire.Il s'agit d'un logiciel très versatile et peut facilement être utilisé à d'autres finalités.GDPC lit des entrées en xyz et d'autres formats. Il permet aussi d'avoir des images en sortie.</description>
     <authors>Jonas Frantz</authors>
@@ -210,16 +210,16 @@
     <url>http://www.physics.helsinki.fi/~frantz/software/gdpc.html</url>
     <os name="GNU/Linux">
       <maintainer>Jonas Frantz</maintainer>
-      <version>2.1.2</version>
+      <version>2.2.2</version>
       <license>GPL</license>
       <url>http://beam.helsinki.fi/~frantz/software/gdpc-2.00-src.tar.gz</url>
       <comment>.test files should also have a copyright + license notice</comment>
-      <date>15 nov 2002</date>
+      <date>26 nov 2003</date>
     </os>
   </software>
   <software>
     <name>GDIS</name>
-    <date>15 nov 2002</date>
+    <date>26 nov 2003</date>
     <description lang="en">GDIS is a GTK based program for the display and manipulation of isolated molecules and periodic systems. It is in development, but is nonetheless fairly functional.</description>
     <description lang="fr">GDIS est un logiciel basé sur GTK, qui permet l'affichage et la manipulation de molcules isolées, ou de systèmes périodiques. Malgré que ce logiciel soit encore en développement, il est déjà fonctionnel.</description>
     <authors>Sean Fleming</authors>
@@ -227,11 +227,11 @@
     <url>http://gdis.seul.org</url>
     <os name="GNU/Linux">
       <maintainer>Sean Fleming</maintainer>
-      <version>0.77</version>
+      <version>0.77.4</version>
       <license>GPL</license>
       <url>ftp://ftp.seul.org/pub/gdis/gdis-0.75.0.tgz</url>
       <comment>a few files miss a proper copyright and license notice</comment>
-      <date>15 nov 2002</date>
+      <date>26 nov 2003</date>
     </os>
     <os name="Other UNIX">
       <maintainer>Sean Fleming</maintainer>
@@ -243,7 +243,7 @@
 
   <software>
     <name>Ghemical</name>
-    <date>15 nov 2002</date>
+    <date>26 nov 2003</date>
     <description lang="en">A molecular modelling software package with nice 3D-visualization tools.</description>
     <description lang="fr">Un logiciel de modélisation moléculaire avec de bons outils de visualisation 3D.</description>
     <authors>Mike Cruz, Tommi Hassinen, Ville Heikkila, Geoff Hutchison, Jarno Huuskonen</authors>
@@ -251,11 +251,11 @@
     <url>http://bioinformatics.org/ghemical</url>
     <os name="GNU/Linux">
       <maintainer>Mike Cruz, Tommi Hassinen, Ville Heikkila, Geoff Hutchison, Jarno Huuskonen</maintainer>
-      <version>0.90</version>
+      <version>1.0</version>
       <license>GPL</license>
       <url>http://www.uku.fi/~thassine/ghemical/download/ghemical-0.82.tgz</url>
       <comment>truncated GNU GPL, license and copyright notice ok but not following GNU GPL template</comment>
-      <date>05 sep 2002</date>
+      <date>26 nov 2003</date>
     </os>
   </software>
 
@@ -295,26 +295,26 @@
 -->
   <software>
     <name>JChemPaint</name>
-    <date>28 jun 2002</date>
+    <date>26 nov 2003</date>
     <description lang="en">JChemPaint is an editor for 2D Molecular Structures. JChemPaint is intended to be complementary to JMol, a visualisation and analysis tool for 3D molecular structures, started by Dan Gezelter at Notre Dame University, initator of the Open Science Project and, like JChemPaint, developed by an international team of open-source programmers.</description>
     <description lang="fr">JChemPaint est un éditeur de molécules.Il se veut complémentaire de JMol.</description>
     <authors>Christoph Steinbeck, Stefan Krause, Egon Willighagen, Martin Schild</authors>
     <url>http://jchempaint.sourceforge.net</url>
     <os name="GNU/Linux">
       <maintainer>Christoph Steinbeck, Stefan Krause, Egon Willighagen, Martin Schild</maintainer>
-      <version>1.2</version>
+      <version>1.2.1</version>
       <license>GPL</license>
       <url></url>
       <comment></comment>
-      <date>28 jun 2002</date>
+      <date>26 nov 2003</date>
     </os>
     <os name="All">
       <maintainer>Christoph Steinbeck, Stefan Krause, Egon Willighagen, Martin Schild</maintainer>
-      <version>1.2</version>
+      <version>1.2.1</version>
       <license>GPL</license>
       <url></url>
       <comment></comment>
-      <date>28 jun 2002</date>
+      <date>26 nov 2003</date>
     </os>
   </software>
 
@@ -345,26 +345,26 @@
 
   <software>
     <name>Jmol</name>
-    <date>4 dec 2001</date>
+    <date>26 nov 2003</date>
     <description lang="en">Jmol is a Free, Free Software molecule viewer and editor. It is a collaboratively developed visualization and measurement tool for chemical scientists. Jmol is an active project, and there are new features being added to it. Users are encouraged to modify it to fit their needs and to contribute their changes to the project.</description>
     <description lang="fr">Jmol est un éditeur et visualisateur de molécules. Jmol est un projet actif, et de nombreuses fonctionnalités lui seront encore ajoutées. Ce programme étant libre, les utilisateurs sont invités à le modifier, afin qu'ils correspondent parfaitement à leur besoin.</description>
     <authors>Egon Willighagen, Charles Fulton, Dan Gezelter, Jack van Rooij, Christoph Steinbeck, Bradley Smith</authors>
     <url>http://jmol.sourceforge.net</url>
     <os name="GNU/Linux">
       <maintainer>Egon Willighagen, Charles Fulton, Dan Gezelter, Jack van Rooij, Christoph Steinbeck, Bradley Smith</maintainer>
-      <version>1.2</version>
+      <version>8.O</version>
       <license>GPL</license>
       <url></url>
       <comment></comment>
-      <date>4 dec 2001</date>
+      <date>26 nov 2003</date>
     </os>
     <os name="All">
       <maintainer>Egon Willighagen, Charles Fulton, Dan Gezelter, Jack van Rooij, Christoph Steinbeck, Bradley Smith</maintainer>
-      <version>1.2</version>
+      <version>8.0</version>
       <license>GPL</license>
       <url></url>
       <comment></comment>
-      <date>4 dec 2001</date>
+      <date>26 nov 2003</date>
     </os>
   </software>
 

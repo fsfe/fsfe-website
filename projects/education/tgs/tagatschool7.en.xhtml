@@ -1,0 +1,738 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="generator" content=
+"HTML Tidy for Linux/x86 (vers 1st July 2004), see www.w3.org" />
+<title>TUX&amp;GNU@school - 7th edition</title>
+<meta http-equiv="Content-Type" content=
+"text/html; charset=us-ascii" />
+<meta name="GENERATOR" content="Quanta Plus" />
+</head>
+<body>
+<h1>TUX&amp;GNU@school - 7th edition</h1>
+<p><i>More or less regularly the column <a href=
+"http://www.unormal.org/alis/tagatschool7.en.html">TUX&amp;GNU@school
+[2]</a> reports about free software, a homepage on topic and an
+easy to implement idea. This month I talk about <a href=
+"http://www.kalzium.org/">Kalzium [3]</a>, a free chemistry
+education program, about the homepage of <a href=
+"http://www.schoolforge.net">OFSET (Organisation for Free Software
+in Education and Teaching) [4]</a>, and about the idea "An
+extension for Kalzium" ;-).</i></p>
+<p>Welcome to the seventh edition of TUX&amp;GNU@school.
+Unfortunately it's still not possible to receive the column as a
+newsletter. Though I will try to make it possible till the next
+edition. Furthermore I want to devote this edition to a very
+valuable member of the Swiss (and international) Free Software
+community, Mathias 'turrican' Gygax, who left us far to early.</p>
+<h3>Kalzium - The Periodic Table of the Elements (PTE)</h3>
+<p><a href="http://edu.kde.org/kalzium">Kalzium [3]</a> is a piece
+of free education software (GNU GPL) from the <a href=
+"http://edu.kde.org">KDE Edutainment project [5]</a> and shall
+first and foremost offer a simple access to the Periodic Table of
+the Elements (PTE). I tested the version 0.5 (KDE 3.1.5) on the
+'testing' version of <a href="http://www.debian.org">Debian
+GNU/Linux [6]</a>.</p>
+<p>After the first invocation of the program you see the beloved
+(or hated) Periodic Table (see screenshot 1). Some of you will feel
+reminded of their chemistry lessons in school days. All the
+presently known (state 2002) chemical elements are listed simply
+and clearly. A simple mouse click on one of these over 100 buttons
+further information about the selected element appear. Then a new
+window is opened which is devided in three sections containing
+information in a general way (as name, symbol, atomic weight or
+density), about the state of matter (melting and boiling point) and
+about energies (ionisation energy and electronegativity).</p>
+<p>As you see in screenshot 2, which shows this information for the
+element Iron, there is a button labelled with "Web Lookup" too.
+Through this you can reach the website of the University of Split
+which displays further information about the corresponding element
+in a new window. This information is displayed in one of the
+following five languages: <a href=
+"http://www.ktf-split.hr/periodni">Croatian [7]</a>, <a href=
+"http://www.ktf-split.hr/periodni/de">German [8]</a>, <a href=
+"http://www.ktf-split.hr/periodni/fr">French [9]</a>, <a href=
+"http://www.ktf-split.hr/periodni/en">English [10]</a> and <a href=
+"http://www.ktf-split.hr/periodni/it">Italian [11]</a>.
+Incidentally you change this setting through the menu bar
+<i>Settings -&gt; Configure Kalzium...</i> and there in the item
+<i>Web Lookup</i>.</p>
+<p><img src="./img/kalzium.en.png" alt=
+"Screenshot 1: Kalzium after the frist start" width="889" height=
+"573" border="0" /></p>
+<h5>Screenshot 1: Kalzium after the first start</h5>
+<br />
+<br />
+<p>In this settings dialog you can change the <i>Colors</i> too.
+But for what? For this we go again back to the main window (see
+screenshot 1). The Periodic Table of the Elements, as perhaps still
+some of you know, is divided in different groups which are
+emphasized in different colors. In the tool bar you can choose
+among the international usable groupings <a href=
+"http://www.iupac.org">IUPAC (International Union of Pure and
+Applied Chemistry) [12]</a> and <a href="http://www.cas.org">CAS
+(Chemical Abstracts Service) [13]</a> or, for whom this is as
+meaningless as for me, you can completely deactivate them. Further
+on the PTE can be displayed by characteristics as <i>Acid
+Behavior</i> or <i>State of Matter</i> or simply in <i>Blocks</i>
+or <i>Groups</i> too. Now all these highlighting modes and their
+different colors can be set to your preference in the above called
+setting entry. This allows the teaching person to precisely
+highlight what he or she is talking about right now.</p>
+<p>In this tool bar a selecting menu is located too with the two
+items <i>Complete</i> and <i>Mendeleev</i> which show two
+"different" PTEs. And before we finally leave the tool bar of
+Kalzium I want to say something about the time bar (rightmost).
+After clicking on this button at the bottom of the Periodic Table
+of the Elements a sliding controller appears which stands on 2002.
+With this you can now go back in the history and see which elements
+were already known at which point in time (whereas some elements
+aren't discovered yet but only predicted). And as we are talking
+about the sliders, in the tool bar you can select the display
+according to the <i>State of Matter</i> and explore which element
+are vapor, liquid or solid at which temperatures ;-).</p>
+<p><img src="./img/kalzium-fe.en.png" alt=
+"Screenshot 2: Information about the chemical element Iron" width=
+"597" height="489" border="0" /></p>
+<h5>Screenshot 2: Information about the chemical element Iron</h5>
+<br />
+<br />
+<p>Some of you perhaps already noticed the menu item <i>Quiz</i>.
+Chosen this item you can decide how many questions are asked to you
+and then you can enjoy a little quiz. From my school days I
+remembered at least that much that I mostly reach above 50 percent
+of correct answers ,although, as regular readers of this column
+know, my love to chemistry isn't that far reaching. Left of this
+quiz through the menu item <i>Calculations</i> you reach a simple
+calculation window (KMol) where simple formulas for calculations of
+the molecular weight (Mw in u) can be entered. By the way this tool
+can handle all the elements.</p>
+<p>According to Carsten Niehaus, the author of this program,
+Kalzium is suitable for all ages and students. A colleague of mine,
+who studies <a href="http://www.mat.ethz.ch">materials [14]</a> at
+the <a href="http://www.ethz.ch">ETHZ (Swiss Federal Institut of
+Technology Zurich) [15]</a>, uses this program relatively often.
+According to the handbook of Kalzium Carsten is interested in bug
+reports, new data and improvement proposals as well. You can write
+and send them relatively easy through the menu item <i>Help -&gt;
+Report bug...</i> (well preferentially in English). And because I
+haven't got a good idea for this edition of TUX&amp;GNU@school till
+now and I heard about a good one at a <a href=
+"http://www.lots.ch">Free Software event [16]</a> last week, I want
+to explain it right here (and sending it to Carsten as well of
+course). If I remember correctly last week somebody asked me the
+following: "Is it possible to simulate chemical reactions with
+Kalzium?" I think the person meant what happens if e.g. you take a
+carbon atom and four hydrogen atoms or more generally how does
+oxygen and iron react together. As a non-chemist and a
+not-often-programmer I don't know now how simple or impossible it's
+to implement this but Carsten, this as a food for thought ;-). But
+of course at this place a large thank you to you and your helpers
+for this wonderful piece of free education software.</p>
+<p>But now continues to the homepage or project of this edition
+respectively.</p>
+<h3>OFSET.org - Organisation for Free Software in Education and
+Teaching</h3>
+<p>This is the first time that the information this section is
+based on is not entirely collected on the corresponding homepage.
+But I asked some questions (borrowed of the <a href=
+"http://www.brave-gnu-world.org">Brave GNU World [17]</a>) to a
+person of this homepage/project too. For that reason thanks a lot
+to Hilaire Fernandes of the OFSET for the detailed replies to the
+questions. Some of you might know him as an important person in the
+development of <a href="http://www.ofset.org/freeduc-cd">Freeduc
+[18]</a>, the GNU/Linux-LIVE-CD for schools and education.</p>
+<p>The <a href="http://www.ofset.org">OFSET - Organisation for Free
+Software in Education and Teaching [4]</a> was founded at the end
+of 1999 as an organisation according to the French law. The aim of
+the OFSET is it to support and further the development of free
+education software for education and teaching. Thereby it's
+important that the whole thing happens as international as possible
+therewith the work isn't made double and triple. Currently the
+OFSET counts more than 40 members with a hard core of approx. ten
+people. On the one hand the <a href=
+"http://www.ofset.org/members/members.html">members [19]</a> are
+developers programming busily themselves, in the other hand they
+are e.g. secondary school teachers with whom they practise active
+exchange of ideas concerning education software. The activities of
+the organisation are supposed to speak to not only students and
+programmers but also parents, teachers and whole schools.</p>
+<p>For the concrete development of free education software the
+OFSET gives some guidelines concerning the deployed tools which you
+can read at their <a href=
+"http://www.ofset.org/information/legal/charter.html">charta
+[20]</a>. They always start programming from the user interface
+which clearly is supposed to stand in the centre of their software
+development. Internationalization is aspired where it seems useful,
+translation and documentation at the places where it's feasible and
+people are available. The scriptability is another point where the
+members of the OFSET attach importance to. Therein they see a good
+possibility to give the prospective users a tool for the adaptation
+which seems to be central for free software. Currently they use C,
+C++, Python and Scheme as programming languages, but they does not
+have to limit oneself to these. They always use the <a href=
+"http://www.gnu.org/licenses/licenses.html#TOCGPL">GNU GPL [21]</a>
+and the <a href=
+"http://www.gnu.org/licenses/licenses.html#TOCFDL">GNU FDL [22]</a>
+as licenses.</p>
+<p><img src="./img/ofset.en.png" alt=
+"Screenshot 3: Front page of the homepage of the OFSET" width="800"
+height="600" border="0" /></p>
+<h5>Screenshot 3: Front page of the homepage of the OFSET</h5>
+<br />
+<br />
+<p>The current status of some <a href=
+"http://www.ofset.org/projects/supported/supported.html">projects
+of the OFSET: [23]</a> <a href=
+"http://www.ofset.org/gcompris/">GCompris [24]</a>, which hopefully
+is already know by some readers and whose author is a member of the
+OFSET too, reached version 5.2 (at the moment of the interview with
+Hilaire, the 16th October 2003, it stands at version 4.0). <a href=
+"http://www.ofset.org/drgeo/">DrGeo [25]</a>, a free geometry
+education program which exists since the foundation of the
+organisation stands with version 0.9.9 at the barrier to the famous
+and notorious 1.0. Further out of the countless education software
+productions a new subproject has arosen which is supposed to make
+contents (e.g. sounds and pictures) for education software
+exchangeable among the projects. To the best of my belief <a href=
+"http://www.ofset.org/assetml/">AssetML [26]</a> is currently
+inserted by GCompris and <a href=
+"http://childsplay.sourceforge.net">Childsplay [27]</a>.</p>
+<p>Thanks to the solid legal basis of the OFSET the collaboration
+with the <a href="http://www.unesco.org">UNESCO [28]</a> in the
+last version of <a href="http://www.ofset.org/freeduc-cd">Freeduc
+[18]</a> (Freeduc 1.4.1 in November 2003) was much easier. Not to
+be ignored is the collaboration with other projects in this
+environment as for instance <a href=
+"http://www.skolelinux.org">Skolelinux [29]</a> or <a href=
+"http://wims.unice.fr">WIMS [30]</a>. But of course the OFSET has
+got "other projects in preparation but it is to soon to talk about
+these ones".</p>
+<p>As an answer to my question, what they have for special
+problems, Hilaire answered shortly: "No, only solutions ;-)."
+Nonetheless the OFSET can need helpers of course. Besides
+developers they also search translators, documentaion writer and
+people who represent the OFSET at Free Software events. Currently
+they miss e.g. a primary school teacher who could take over the
+documentation of GCompris. Automatically generated <a href=
+"http://www.openoffice.org">OpenOffice.org [31]</a> documents are
+already there, they only have to be filled. Interested people can
+simply send an email to <a href="mailto:ofset@ofset.org">ofset at
+ofset dot org [32]</a>. As a project for the somehow more distant
+future the OFSET strives to receive the RIP label for their
+software which is franchised by the French Education Office and
+serves as a quality label and increase.</p>
+<p>If you want to get more information about the OFSET, the best
+place to go is the <a href="http://www.ofset.org">homepage of the
+OFSET [4]</a> (English and French). Interesting pieces are the
+<a href=
+"http://www.ofset.org/information/legal/statutes.html">statutes
+[33]</a>, the already called <a href=
+"http://www.ofset.org/information/legal/charter.html">charta
+(guidelines) [20]</a> or the <a href=
+"http://www.ofset.org/information/legal/manifesto.html">manifesto
+[34]</a> of the OFSET. At this place and at the end of the
+presentation of the OFSET I want to wish you good luck for your
+further work.</p>
+<p>But now let's go to the today's idea - rubbish, I presented it
+already above - then to the news.</p>
+<h3>News and up to date program versions</h3>
+<p>As an improvement I want to incorporate here news from other
+internet pages. For the moment these are news from <a href=
+"http://edu.kde.org">edu.kde.org [5]</a> and <a href=
+"http://www.osfet.org">ofset.org [4]</a>. Because this is the first
+time I'll include all news from the beginning of 2003. The messages
+from these pages are taken here one to one or translated
+respectively. The "I" in the edu.kde.org-news is refers to
+Anne-Marie Mahfouf by the way. If you have further proposals send
+<a href="mailto:foxman@lugo.ch">me [1]</a> an email please. Of
+course there will still be other news.</p>
+<h4>QtForum contest includes KDE programs <i>(<a href=
+"http://edu.kde.org">edu.kde.org</a> - <a href=
+"http://edu.kde.org/news.php#QtForumcontestincludesKDEprograms">20.02.2004</a>)</i></h4>
+<p>The QtForum announced today that its <a href=
+"http://contest.qtforum.org/rules.php">contest [35]</a> is now open
+to KDE applications. The changes is as follow: "This folder must
+contain the source code to the program and, in source form, any
+code upon which it depends. As an exception, kdelibs version 3.2 or
+later stable releases are allowed as external depency." I was meant
+to be judge in that contest but I resigned from this position in
+order to allow entries of programs in which I helped. I will not
+present any of my own applications though, having had prior
+knowledge of the contest. I wish you all good luck if you enter the
+contest and I hope that new applications will soon join our
+module!</p>
+<h4>OFSET supports Skolelinux <i>(<a href=
+"http://www.ofset.org">ofset.org</a> - 15.02.2004</i>)</h4>
+<p>OFSET is officially supporting the <a href=
+"http://www.skolelinux.org">Skolelinux [29]</a> project. The goal
+of this project is to provide a free ICT infrastructure for schools
+and it is perfectly complementary to the OFSET goals of developing
+free software for education. <a href=
+"http://developer.ofset.org/cps/Public/communiques_de_press/ofset_soutient_le_pr/view">
+Read more [36]</a>.</p>
+<h4>New icons <i>(<a href="http://edu.kde.org">edu.kde.org</a> -
+<a href=
+"http://edu.kde.org/news.php#Newicons">22.01.2004</a>)</i></h4>
+<p>Several applications have new icons based on svg source and in
+crystal style. Thanks to <i>Chris Luetchford</i> and <i>David
+Vignoni</i> who took time to refresh and redesign our icons They
+look really great!</p>
+<h4>Klicker, the KDE metronome <i>(<a href=
+"http://edu.kde.org">edu.kde.org</a> - <a href=
+"http://edu.kde.org/news.php#KlickertheKDEmetronome">20.01.2004</a>)</i></h4>
+<p>All musicians need it and now KDE provides it! <a href=
+"http://www.duskglow.com/personal/software.shtml">Klicker [37]</a>,
+the KDE metronome, has reached version 1.0. It provides visual and
+sound beats and the plan is to transform it into a more general
+music helper application with a tuning helper, a voicing component,
+a chords trainer and more! Well done, Russell, and carry on the
+good work! You can download it <a href=
+"http://www.duskglow.com/downloads/klicker-1.0.tar.gz">here
+[38]</a>.</p>
+<h4>An icon theme for kids <i>(<a href=
+"http://edu.kde.org">edu.kde.org</a> - <a href=
+"http://edu.kde.org/news.php#Aniconthemeforkids">28.11.2003</a>)</i></h4>
+<p>Everaldo, the Crystal icons theme author, has come up with
+<a href="http://www.kde-look.org/content/show.php?content=9144">a
+new kids icons theme [39]</a>. Thanks a lot for those wonderful
+icons and congratulations to Everaldo who will soon be a father!
+Additionally, you can find the desktop wallpaper <a href=
+"http://www.kde-look.org/content/show.php?content=9146&amp;PHPSESSID=201559f2a8a8a4e52b1d613750ee229d">
+here [40]</a>. This theme is now included in kdeartwork in cvs HEAD
+and will be shipped in that module for KDE 3.2.</p>
+<h4>OFSET at the Solution Linux in Paris <i>(<a href=
+"http://www.ofset.org">ofset.org</a> - 18.11.2003</i>)</h4>
+<p>OFSET will be at the Solution Linux event in Paris, from the 3
+to the 5 of February 2004.</p>
+<h4>Freeduc-cd 1.4 <i>(<a href="http://www.ofset.org">ofset.org</a>
+- 30.10.2003</i>)</h4>
+<p>FREEDUC-CD release 1.4, see the <a href=
+"http://www.ofset.org/freeduc-cd/">FREEDUC page [18]</a> for more
+information. This version has been developped with the support of
+the UNESCO, see our <a href=
+"http://developer.ofset.org/cps/Public/communiques_de_press/copy_of_version_unesco_de_fr/view">
+press release [41]</a>.</p>
+<h4>Debian in Schools <i>(<a href=
+"http://www.debian.org/News/weekly/">Debian Weekly News (DWN)</a> -
+<a href=
+"http://www.debian.org/News/weekly/2003/31/">05.08.2003</a>)</i></h4>
+<p>Thomas Lindemans <a href=
+"http://news.eun.org/eun.org2/eun/en/_News_search_news/content.cfm?ov=28498&amp;lang=en&amp;id_area=109">
+explained [42]</a> at the <a href=
+"http://www.eun.org/eun.org2/eun/en/index_eun_corporate.cfm">European
+Schoolnet [42.1]</a>, a partnership of 26 Ministries of Education,
+why educators should try GNU/Linux. Debian is mentioned as being
+"built for stability" and good for those who enjoy a "fast and
+secure operating system". The article suggests that using Debian in
+a school would require somebody with knowledge of Linux because of
+text configuration files, however no mention is made of <a href=
+"http://www.skolelinux.no/">Skolelinux [43]</a> or the <a href=
+"http://wiki.debian.net/?DebianEdu">Debian-Edu [44]</a>
+subproject.</p>
+<h4>KLogoTurtle is a new promising application <i>(<a href=
+"http://edu.kde.org">edu.kde.org</a> - <a href=
+"http://edu.kde.org/news.php#KLogoTurtleisanewpromisingapplication">
+23.07.2003</a>)</i></h4>
+<p><a href="http://edu.kde.org/klogoturtle">KLogoTurtle [45]</a> is
+a LOGO interpreter for KDE. It helps to teach computing and
+mathematics to young children. You can have a look at the <a href=
+"http://edu.kde.org/klogoturtle/screenshots.php">screenshots page
+[46]</a> and send as your teaching experiment with Logo as well as
+your thoughts and wishes. KLogoTurtle is currently in the
+kdenonbeta module and is meant for developers only at the moment,
+<a href="http://edu.kde.org/klogoturtle/obtain.php">please read
+[47]</a> this page if you want to try it but as LOGO is a very
+useful teaching tool, KLogoTurtle will become a must-have KDE-Edu
+application!</p>
+<h4>OFSET at the Libre Software Meeting 2003 <i>(<a href=
+"http://www.ofset.org">ofset.org</a> - 18.07.2003</i>)</h4>
+<p>We were at the Libre Software Meeting 2003, at Metz. We met
+several people we use to work with. We had a stand to demonstrate
+Freeduc-cd. We also sell Freeduc-cd and new prestigious members
+join our organization. Look at those picture album (<a href=
+"http://redfox.redfoxcenter.org/gallery/LSM2003">http://redfox.redfoxcenter.org/gallery/LSM2003
+[48]</a>).</p>
+<h4>Kard needs more pictures <i>(<a href=
+"http://edu.kde.org">edu.kde.org</a> - <a href=
+"http://edu.kde.org/news.php#Kardneedsmorepictures">04.07.2003</a>)</i></h4>
+<p><a href="http://edu.kde.org/kard">Kard [49]</a> is a Memory-like
+game for young children. You have some cards on a grid and you must
+match the cards by pairs. The number of cards varies from 4 to 24
+(multiples of 4). Kard is currently in the kdenonbeta module. At
+the moment, there are only 2 themes which are colors and objects
+related to a house. It would be nice to get more pictures for Kard.
+For example, I have in mind pictures of musical instruments that
+would be associated with the corresponding instrument sound.
+Another level would be the sounds without any pictures. If you are
+an artist or a would-be-artist, here is the way to be known! Please
+check out the <a href=
+"http://edu.kde.org/kard/screenshots.php">screenshots page [50]</a>
+to know more about Kard.</p>
+<h4>Kig 0.5.1 released <i>(<a href=
+"http://edu.kde.org">edu.kde.org</a> - <a href=
+"http://edu.kde.org/news.php#Kigreleased">03.06.2003</a>)</i></h4>
+<p>I'm currently releasing Kig 0.5.1, which is a bugfix release in
+the 0.5 series. Major improvements in Kig 0.5 include much improved
+undo support, a KSeg import filter, a full screen mode, a polar
+coordinate system, multiline text labels, printing support, along
+with a lot of UI improvements and bugfixes. Check out <a href=
+"http://edu.kde.org/kig/download.php">this page [51]</a> for
+installation instructions.</p>
+<h4>&Eacute;dulinux: a new educational French (Qu&eacute;bec) Linux
+distribution <i>(<a href="http://edu.kde.org">edu.kde.org</a> -
+<a href=
+"http://edu.kde.org/news.php#EacutedulinuxaneweducationalFrenchQueacutebecLinuxdistribution">
+03.06.2003</a>)</i></h4>
+<p>The University of Sherbrooke is proud to announce the release of
+<a href="http://www.edulinux.org/">Edulinux 9.1 [52]</a>, a new
+educational linux distribution based on Mandrake 9.1 and localized
+in French. It consists of 3 CDs (ISOs available <a href=
+"http://www.edulinux.org/spip/article.php3?id_article=23">here
+[53]</a>) and includes several KDE-Edu programs (<a href=
+"http://www.edulinux.org/capture/">screenshots [54]</a>). This
+distribution is targeted to French speaking schools, students and
+their families and is very easy to install. The KDE-Edu team wish
+to thanks all the i18n teams for their hard work because they make
+it possible to widely distribute our applications. Several articles
+in newspapers backed up the launch of this distribution and that
+will make more people aware of the existence of Free Software!</p>
+<h4>Czech sounds in KLettres and code improvement <i>(<a href=
+"http://edu.kde.org">edu.kde.org</a> - <a href=
+"http://edu.kde.org/news.php#CzechsoundsinKLettresandcodeimprovement">
+30.05.2003</a>)</i></h4>
+<p>KLettres has had a major code improvement (hard-coded data are
+now gone ;-) and another language has been added. Czech is now
+supported, thanks to Eva Mikul?&iacute;kov&aacute;. On the <a href=
+"http://edu.kde.org/klettres">KLettres website [55]</a>, there is a
+<a href="http://edu.kde.org/klettres/add_language.php">page
+[55.1]</a> where I explain what to do if you want to add a new
+language. The new version is in CVS HEAD and will be shipped with
+KDE 3.2. Please take a look at the <a href=
+"http://edu.kde.org/klettres/screenshots.php">screenshots page
+[56]</a> to learn more about KLetttres.</p>
+<h4>GCompris gained prize <i>(<a href=
+"http://www.ofset.org">ofset.org</a> - 26.05.2003)</i></h4>
+<p>Again a new success for OFSET, GCompris won the 1st prize in the
+category of educational application during the Trophees du LIBRE in
+France!! See there (<a href=
+"http://www.tropheesdulibre.org">http://www.tropheesdulibre.org
+[57]</a>).</p>
+<h4>KTouch major release (1.3 in CVS) with some new features and a
+rewritten API <i>(<a href="http://edu.kde.org">edu.kde.org</a> -
+<a href=
+"http://edu.kde.org/news.php#KTouchmajorreleaseinCVSwithsomenewfeaturesandarewrittenAPI">
+12.05.2003</a>)</i></h4>
+<p>KTouch is available in a new version (1.3 in CVS) with some new
+features and a rewritten API. Among the new features, you can now
+change the fonts for the keyboard and hebrew support and a color
+settings dialog have been added. You can have a look at the
+<a href="http://ktouch.sourceforge.net">project webpage [58]</a> to
+learn more about KTouch and of course you are encouraged to try the
+new version in CVS HEAD.</p>
+<h4>Freeduc-cd 1.3 <i>(<a href="http://www.ofset.org">ofset.org</a>
+- 02.04.2003)</i></h4>
+<p>Freeduc-cd release 1.3, see the Projects page for more
+information.</p>
+<h4>Wikipedia.org with more than 500'000 articles</h4>
+<p>The free encyclopedia project <a href=
+"http://www.wikipedia.org">Wikipedia.org [59]</a> counts meanwhile
+more than 500'000 articles in most different world languages.
+Wikipedia is a project of the <a href=
+"http://www.wikimedia.org">Wikimedia Foundation [60]</a> which
+contains several other projects too I want to talk about another
+time. For the readers of TUX&amp;GNU@school the following numbers
+will be the most interesting: <a href=
+"http://en.wikipedia.org/wiki/Main_Page">English Wikipedia [61]</a>
+- 221'275 articles, <a href=
+"http://de.wikipedia.org/wiki/Hauptseite">German Wikipedia [62]</a>
+- 59'698 articles, <a href=
+"http://fr.wikipedia.org/wiki/Accueil">French Wikipedia [63]</a> -
+29'009 articles and <a href=
+"http://sv.wikipedia.org/wiki/Huvudsida">Swedisch Wikipedia
+[64]</a> - 22'487 articles (State: 07.03.2004).</p>
+<h4>Duden software for GNU/Linux too</h4>
+<p>All software of the Duden publishing house (the Duden is the
+standard work of the German language) is now also available for
+GNU/Linux. First of all schools which want to change their IT will
+be happy about this.</p>
+<h4>QCad in version II released</h4>
+<p>QCad, a free 2D CAD program, which I reported about in the
+<a href="http://www.unormal.org/alis/tagatschool6.de.html">6th
+edition of TUX&amp;GNU@school [65]</a> is being released in version
+II. Although you don't see it instantly on the <a href=
+"http://www.qcad.org">homepage [66]</a> QCad is still propagated
+under the GNU GPL which the author reassured explicitly. Certainly
+if you want a packaged and for your favorite distribution perpared
+version you are allowed to spend some money to the project team.
+Already packaged demo versions are available at the <a href=
+"http://www.ribbonsoft.com/qcad_downloads.html">download page
+[67]</a>.</p>
+<h4>SelfLinux 0.10.0 published</h4>
+<p>And right now the version 0.10.0 of the German project <a href=
+"http://www.selflinux.org">Selflinux [68]</a> was published. It's
+the aim of this project to simplify for novices the entrance to
+this new world with numerous articles.</p>
+<h4>Skolelinux is now an official subproject of Debian</h4>
+<p><a href="http://www.skolelinux.org">Skolelinux [29]</a>, a
+school distribution from Norway based on Debian, was joined with
+the Debian subproject <a href=
+"http://wiki.debian.net/DebianEdu">DebianEDU [44]</a>. Furthermore
+the project goes slowly but safely to the version number 1.0 and
+these is also the reason why the last prerelease pr46 is that
+stable. All up to date versions are ready for downloading on the
+<a href="ftp://developer.skolelinux.no/skolelinux-cd/">Skolelinux
+FTP server [69]</a>.</p>
+<h4>Oralux - Knoppix for blind people</h4>
+<p><a href="http://www.oralux.org">Oralux [70]</a> is a LIVE-CD
+distribution based on Knoppix for blind and visually impaired
+people. At the startup firstly the hardware is automagically
+detected and configured. After that the user is lead, controlled by
+voice, through an entrance menu and thereafter to a working
+environment with voice output. Currently they use <a href=
+"http://emacspeak.sourceforge.net">Emacspeak [71]</a> for this. But
+for the future they plan also to better integrate <a href=
+"http://www.baum.ro/gnopernicus.html">Gnopernicus [72]</a>. Oralux
+is available in the current version 0.05 at the <a href=
+"http://www.oralux.org/download.php">download page [73]</a>. By the
+way on Oralux 0.05 you'll find TUX&amp;GNU@school 6 in German as a
+text for listing.</p>
+<h4>Kalzium is getting rewritten</h4>
+<p>As I saw just now at <a href=
+"http://www.kde-apps.org/content/show.php?content=11224">KDE-Apps.org
+[74]</a> Kalzium shall be completely reworked and rewritten for the
+version 1.0 (not yet released). It looks as we can be thrilled.</p>
+<h4>Up to date program versions</h4>
+<ul>
+<li><a href="http://edu.kde.org/ktouch">KTouch</a> 1.3 - Type
+writing course under KDE 3.2.1 (<a href=
+"http://www.unormal.org/alis/tagatschool1.html">TGS 1</a>)</li>
+<li><a href="http://www.ofset.org/gcompris">GCompris</a> 5.2 -
+Education plattform with different boards (<a href=
+"http://www.unormal.org/alis/tagatschool2.html">TGS 2</a>)</li>
+<li><a href="http://edu.kde.org/kgeo">KGeo</a> 1.0.2 (<a href=
+"http://www.unormal.org/alis/tagatschool3.de.html">TGS 3</a>) ---
+<i>Substituted by <a href="http://edu.kde.org/kig/">Kig</a> 0.6.1 -
+Geometry program under KDE 3.2.1</i></li>
+<li><a href="http://bioinformatics.org/ghemical/">Ghemical</a> 1.01
+- Chemistry program for modelling and computing molecules (<a href=
+"http://www.unormal.org/alis/tagatschool4.de.html">TGS 4</a>)</li>
+<li><a href="http://www.newbreedsoftware.com/tuxpaint">Tuxpaint</a>
+0.9.13 - Painting programm for children and for those who stayed
+children (<a href=
+"http://www.unormal.org/alis/tagatschool5.de.html">TGS 5</a>)</li>
+<li><a href="http://www.qcad.org">QCad</a> 2.0.2 - 2D-CAD program
+(<a href="http://www.unormal.org/alis/tagatschool6.de.html">TGS
+6</a>)</li>
+<li><a href="http://edu.kde.org/kalzium">Kalzium</a> 0.9.3 -
+Chemistry programm under KDE 3.2.1 (<a href=
+"http://www.unormal.org/alis/tagatschool7.de.html">TGS 7</a>)</li>
+</ul>
+<br />
+<br />
+<p>Ok, that's it once more. This edition became quite large but hey
+there're worse things ;-). Till soon...</p>
+<h3>Links:</h3>
+<p>[1] <a href="mailto:foxman@lugo.ch">Criticism, questions,
+comments, ideas and more please to: foxman@lugo.ch</a><br />
+[2] <a href="http://www.unormal.org/alis/tagatschool7.en.html">The
+homepage of TUX&amp;GNU@school:
+www.unormal.org/alis/tagatschool7.en.html</a><br />
+[3] <a href="http://edu.kde.org/kalzium">The homepage of Kalzium:
+edu.kde.org/Kalzium</a><br />
+[4] <a href="http://www.ofset.org">The homepage of the OFSET
+(Organisation for Free Software in Education and Teaching):
+www.OFSET.org</a><br />
+[5] <a href="http://edu.kde.org">The homepage of the KDE
+Edutainment project: edu.kde.org</a><br />
+[6] <a href="http://www.debian.org">The homepage of Debian:
+www.debian.org</a><br />
+[7] <a href="http://www.ktf-split.hr/periodni/">The Periodic Table
+of the (chemical) Elements (PTE) in Croatian</a><br />
+[8] <a href="http://www.ktf-split.hr/periodni/de">The Periodic
+Table of the (chemical) Elements (PTE) in German</a><br />
+[9] <a href="http://www.ktf-split.hr/periodni/fr">The Periodic
+Table of the (chemical) Elements (PTE) in French</a><br />
+[10] <a href="http://www.ktf-split.hr/periodni/en">The Periodic
+Table of the (chemical) Elements (PTE) in English</a><br />
+[11] <a href="http://www.ktf-split.hr/periodni/it">The Periodic
+Table of the (chemical) Elements (PTE) in Italian</a><br />
+[12] <a href="http://www.iupac.org">The homepage of the IUPAC
+(International Union of Pure and Applied Chemistry):
+www.iupac.org</a><br />
+[13] <a href="http://www.cas.org">The homepage of CAS (Chemical
+Abstracts Service): www.cas.org</a><br />
+[14] <a href="http://www.mat.ethz.ch">The homepage of the
+Departement of Materials at the ETHZ (Swiss Federal Institut of
+Technology Zurich): www.mat.ethz.ch</a><br />
+[15] <a href="http://www.ethz.ch">The homepage of the Swiss Federal
+Institut of Technology Zurich (ETHZ): www.ethz.ch</a><br />
+[16] <a href="http://www.lots.ch">The homepage of the Swiss Free
+Software event LOTS - Let's Open The Source: www.lots.ch</a><br />
+[17] <a href="http://www.brave-gnu-world.org">The homepage of the
+column Brave GNU World: www.Brave-GNU-World.org</a><br />
+[18] <a href="http://www.ofset.org/freeduc-cd">The homepage of the
+LIVE-CD Freeduc</a><br />
+[19] <a href="http://www.ofset.org/members/members.html">Becoming a
+member of the OFSET</a><br />
+[20] <a href=
+"http://www.ofset.org/information/legal/charter.html">Charta of the
+OFSET</a><br />
+[21] <a href=
+"http://www.gnu.org/licenses/licenses.html#TOCGPL">Further
+information about the GNU General Public License (GPL)</a><br />
+[22] <a href=
+"http://www.gnu.org/licenses/licenses.html#TOCFDL">Further
+information about the GNU Free Documentation License
+(FDL)</a><br />
+[23] <a href=
+"http://www.ofset.org/projects/supported/supported.html">Projects
+of the OFSET</a><br />
+[24] <a href="http://www.ofset.org/gcompris/">The homepage of
+GCompris: www.ofset.org/GCompris</a><br />
+[25] <a href="http://www.ofset.org/drgeo/">The homepage of DrGeo:
+www.ofset.org/DrGeo</a><br />
+[26] <a href="http://www.ofset.org/assetml/">The homepage of
+AssetML: www.ofset.org/AssetML</a><br />
+[27] <a href="http://childsplay.sourceforge.net">The homepage of
+Childsplay: childsplay.sourceforge.net</a><br />
+[28] <a href="http://www.unesco.org">The homepage of the UNESCO -
+United Nations Educational, Scientific and Cultural Organisation:
+www.UNESCO.org</a><br />
+[29] <a href="http://www.skolelinux.org">The homepage of
+Skolelinux: www.Skolelinux.org</a><br />
+[30] <a href="http://wims.unice.fr">The homepage of WIMS - WWW
+Interactive Mathematics Server: WIMS.unice.fr</a><br />
+[31] <a href="http://www.openoffice.org">The homepage of
+OpenOffice.org: www.OpenOffice.org</a><br />
+[32] <a href="mailto:ofset@ofset.org">Drop-in center of the OFSET:
+ofset@ofset.org</a><br />
+[33] <a href=
+"http://www.ofset.org/information/legal/statutes.html">The statutes
+of the OFSET</a><br />
+[34] <a href=
+"http://www.ofset.org/information/legal/manifesto.html">The
+manifesto of the OFSET</a><br />
+[35] <a href="http://contest.qtforum.org/rules.php">QtForum
+programming contest</a><br />
+[36] <a href=
+"http://developer.ofset.org/cps/Public/communiques_de_press/ofset_soutient_le_pr/view">
+OFSET press release of the Skolelinux support by the
+OFSET</a><br />
+[37] <a href="http://www.duskglow.com/personal/software.shtml">The
+homepage of Klicker:
+www.duskglow.com/personal/software.shtml</a><br />
+[38] <a href=
+"http://www.duskglow.com/downloads/klicker-1.0.tar.gz">Downloading
+Klicker 1.0</a><br />
+[39] <a href=
+"http://www.kde-look.org/content/show.php?content=9144">Kids - KDE
+icon theme for children</a><br />
+[40] <a href=
+"http://www.kde-look.org/content/show.php?content=9146&amp;PHPSESSID=201559f2a8a8a4e52b1d613750ee229d">
+Wallpaper for the icon theme Kids</a><br />
+[41] <a href=
+"http://developer.ofset.org/cps/Public/communiques_de_press/copy_of_version_unesco_de_fr/view">
+OFSET press release of the freeduc support by the UNESCO</a><br />
+[42] <a href=
+"http://news.eun.org/eun.org2/eun/en/_News_search_news/content.cfm?ov=28498&amp;lang=en&amp;id_area=109">
+Report of Thomas Lindemans at European Schoolnet</a><br />
+[42.1] <a href=
+"http://www.eun.org/eun.org2/eun/en/index_eun_corporate.cfm">European
+Schoolnet</a><br />
+[43] <a href="http://www.skolelinux.no">The Norwegian homepage of
+Skolelinux</a><br />
+[44] <a href="http://wiki.debian.net/?DebianEdu">The homepage of
+the Debian subproject Debian-Edu</a><br />
+[45] <a href="http://edu.kde.org/klogoturtle">The homepage of
+KLogoTurtle: edu.kde.org/KLogoTurtle</a><br />
+[46] <a href="http://edu.kde.org/klogoturtle/screenshots.php">The
+screenshot page of KLogoTurtle</a><br />
+[47] <a href=
+"http://edu.kde.org/klogoturtle/obtain.php">Instructions to try
+KLogoTurtle</a><br />
+[48] <a href="http://redfox.redfoxcenter.org/gallery/LSM2003">OFSET
+picture album of the Libre Software Meeting 2003</a><br />
+[49] <a href="http://edu.kde.org/kard">The homepage of Kard:
+edu.kde.org/Kard</a><br />
+[50] <a href="http://edu.kde.org/kard/screenshots.php">Screenshot
+page of Kard</a><br />
+[51] <a href="http://edu.kde.org/kig/download.php">The download
+page of Kig</a><br />
+[52] <a href="http://www.edulinux.org/">The homepage of
+&Eacute;dulinux: www.Edulinux.org</a><br />
+[53] <a href=
+"http://www.edulinux.org/spip/article.php3?id_article=23">The ISO
+download page of &Eacute;dulinux</a><br />
+[54] <a href="http://www.edulinux.org/capture/">The screenshot page
+of &Eacute;dulinux</a><br />
+[55] <a href="http://edu.kde.org/klettres">The homepage von
+KLettres: edu.kde.org/KLettres</a><br />
+[55.1] <a href="http://edu.kde.org/klettres/add_language.php">How
+to add a new language to KLettres</a><br />
+[56] <a href="http://edu.kde.org/klettres/screenshots.php">The
+screenshot page of KLettres</a><br />
+[57] <a href="http://www.tropheesdulibre.org">The homepage of
+Troph&eacute;es du Libre: www.TropheesduLibre.org</a><br />
+[58] <a href="http://ktouch.sourceforge.net">The homepage of
+KTouch: KTouch.sourceforge.net</a><br />
+[59] <a href="http://www.wikipedia.org">The homepage of Wikipedia:
+www.Wikipedia.org</a><br />
+[60] <a href="http://www.wikimedia.org">The homepage of the
+Wikimedia Foundation: www.Wikimedia.org</a><br />
+[61] <a href="http://en.wikipedia.org/wiki/Main_Page">The English
+front page of Wikipedia</a><br />
+[62] <a href="http://de.wikipedia.org/wiki/Hauptseite">The German
+front page of Wikipedia</a><br />
+[63] <a href="http://fr.wikipedia.org/wiki/Accueil">The French
+front page of Wikipedia</a><br />
+[64] <a href="http://sv.wikipedia.org/wiki/Huvudsida">The Swedish
+front page of Wikipedia</a><br />
+[65] <a href="http://www.unormal.org/alis/tagatschool6.de.html">The
+6th edition of TUX&amp;GNU@school</a><br />
+[66] <a href="http://www.qcad.org">The homepage of QCad:
+www.QCad.org</a><br />
+[67] <a href="http://www.ribbonsoft.com/qcad_downloads.html">The
+download page of QCad</a><br />
+[68] <a href="http://www.selflinux.org">The homepage of Selflinux:
+www.Selflinux.org</a><br />
+[69] <a href="ftp://developer.skolelinux.no/skolelinux-cd/">The
+download page of Skolelinux</a><br />
+[70] <a href="http://www.oralux.org">The homepage of Oralux:
+www.Oralux.org</a><br />
+[71] <a href="http://emacspeak.sourceforge.net">The homepage of
+Emacspeak: Emacspeak.sourceforge.net</a><br />
+[72] <a href="http://www.baum.ro/gnopernicus.html">The homepage of
+Gnopernicus: www.baum.ro/Gnopernicus.html</a><br />
+[73] <a href="http://www.oralux.org/download.php">The download page
+of Oralux</a><br />
+[74] <a href=
+"http://www.kde-apps.org/content/show.php?content=11224">Kalzium on
+KDE-Apps.org</a><br /></p>
+<h4>About the author:</h4>
+<p>Mario Fux finished 1999 the PrimarlehrerInnenseminar in Brig,
+after which he then caught up on the mathematical and natural
+scientifical matura. Currently he studies at the <a href=
+"http://www.unizh.ch">university of Zurich</a> in the main subject
+<a href="http://www.paed.unizh.ch">education (pedagogy)</a> and
+<a href="http://www.ifi.unizh.ch/">computer sciences</a> as the
+subsidiary subject. Together with two colleagues he founded the
+<a href="http://www.edux.ch">"ALIS - Arbeitsgruppe Linux an
+Schulen"</a> (Swiss work group for linux at school). And if he is
+not spending his time in front of the PC, he sits at his nature
+pond in the <a href="http://www.randa.ch">mountains</a>.</p>
+<p align="center"><i>This document is distributed under the terms
+of the <a href=
+"http://www.gnu.org/licenses/licenses.html#TOCFDL">GNU Free
+Documentation License</a>.</i></p>
+<p align="center"><i>Copyright (c) 2002 Mario Fux. Permission is
+granted to copy, distribute and/or modify this document under the
+terms of the GNU Free Documentation License, Version 1.2 or any
+later version published by the Free Software Foundation; with no
+Invariant Sections, no Front-Cover Texts, and no Back-Cover
+Texts.<br />
+A copy of the license can be found at <a href=
+"http://www.gnu.org/licenses/fdl.html">http://www.gnu.org/licenses/fdl.html</a>.</i></p>
+</body>
+</html>

@@ -73,7 +73,7 @@
                 <xsl:sort select="@id" />
                   <xsl:choose>
                     <xsl:when test="@id=/buildinfo/@language">
-                      <xsl:value-of select="." />
+                      <xsl:value-of select="." disable-output-escaping="yes" />
                     </xsl:when>
                     <xsl:otherwise>
                       <xsl:element name="a">

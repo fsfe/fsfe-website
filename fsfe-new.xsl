@@ -99,7 +99,7 @@
             <xsl:apply-templates select="node()"/>
           </td>
           <td class="menu" width="150">
-            <xsl:for-each select="/buildinfo/menuset/menu[@parent='']">
+            <xsl:for-each select="/buildinfo/menuset/menu[not(@parent)]">
               <xsl:sort select="@id" />
               <xsl:variable name="id"><xsl:value-of select="@id" /></xsl:variable>
               <a class="menu" href="{.}">
@@ -108,8 +108,8 @@
               <xsl:for-each select="/buildinfo/menuset/menu[@parent=$id]">
                 <xsl:sort select="@id" />
                 <a class="submenu" href="{.}">
-                  <xsl:variable name="id"><xsl:value-of select="@id" /></xsl:variable>
-                  <xsl:value-of select="/buildinfo/textset/text[@id=$id]" />
+                  <xsl:variable name="mid"><xsl:value-of select="@id" /></xsl:variable>
+                  <xsl:value-of select="/buildinfo/textset/text[@id=$mid]" />
                 </a> <br />
               </xsl:for-each>
             </xsl:for-each>

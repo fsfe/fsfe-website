@@ -7,7 +7,7 @@
 #
 SOURCE=/home/www/fsfe
 DEST=/home/www/html
-TMP=/home/www/tmp
+TMP=/home/www/tmp.$$
 
 cd $SOURCE
 tools/build.pl -q -o $TMP -i .

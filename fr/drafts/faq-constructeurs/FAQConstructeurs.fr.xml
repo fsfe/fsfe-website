@@ -30,10 +30,11 @@ Old version of the XML DTD, before it became endorsed by OASIS
          "Foire Aux Questions sur la disponibilité de pilotes (drivers) pour
          tous systèmes d'exploitation">
 
-<!ENTITY OS  "Open Source">
-<!ENTITY LL  "Logiciel Libre">
-<!ENTITY LLs "Logiciels Libres">
+<!-- LS = Libre Software -->
+<!ENTITY LS  "Logiciel Libre">
+<!ENTITY LSs "Logiciels Libres">
 <!ENTITY FSF "Free Software Foundation">
+<!ENTITY OS  "Open Source">
 <!ENTITY OSI "Open Source Initiative">
 
 <!-- *************************************************************** -->
@@ -139,7 +140,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	  <answer>
 	    <para>
 	      GNU/Linux est un système d'exploitation multiutilisateurs et multitâches qui peut être installé sur un très grand nombre de plates-formes différentes (Intel x86, PowerPC, Alpha, SPARC, ARM, etc.).
-	      La caractéristique la plus importante de ce système d'exploitation, outre ses qualités techniques et sa notoriété grandissante, réside dans le fait que GNU/Linux est un assemblage de &LLs;.
+	      La caractéristique la plus importante de ce système d'exploitation, outre ses qualités techniques et sa notoriété grandissante, réside dans le fait que GNU/Linux est un assemblage de &LSs;.
 	    </para>
 	    <para>
 	      Ainsi dans ce document on mentionnera souvent le système GNU/Linux, essentiellement parce que les problématiques abordées touchent actuellement nombre d'utilisateurs de ce système.
@@ -157,10 +158,10 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	  <answer>
 	    <para>
 	      Initié par Richard M. Stallman en 1984, GNU est un projet de 
-	      système d'exploitation entièrement composé de &LLs;.
+	      système d'exploitation entièrement composé de &LSs;.
 	      Le noyau Linux, dont la création a débuté en 1991, 
 	      est le dernier composant qui a permit d'aboutir à un système 
-	      d'exploitation autonome entièrement composé de &LL;.
+	      d'exploitation autonome entièrement composé de &LS;.
 	      GNU/Linux est donc la conjonction du projet GNU et 
 	      du noyau Linux.
 	      C'est cet ensemble qui est aujourd'hui diffusé par
@@ -179,15 +180,15 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	    <para>
 	      Peut être désignée sous le terme générique de 
 	      <quote>licence libre</quote> une licence correspondant soit 
-	      aux licences &LL;
+	      aux licences &LS;
 	      (dont une <ulink url="http://www.fsf.org/philosophy/license-list.html">liste est disponible sur le site de la FSF</ulink>)
 	      soit aux licences &OS;
 	      (dont une <ulink url="http://opensource.org/licenses">liste est disponible sur le site de l'&OSI;</ulink>).
 	    </para>
             <para condition="long">
-              Les licences &LL; correspondent aux critères explicités dans 
+              Les licences &LS; correspondent aux critères explicités dans 
 	      <ulink url="http://www.fsf.org/philosophy/free-sw.html">
-		la définition du &LL;</ulink>.
+		la définition du &LS;</ulink>.
 	      Les licences &OS; correspondent aux critères explicités dans 
 	      <ulink url="http://opensource.org/docs/definition.html">
 		la définition de l'&OS;</ulink>.
@@ -196,13 +197,13 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	    <para condition="long">
 	      Bien qu'elles se recoupent en grande partie,
 	      ces listes ne sont pas strictement identiques,
-	      le mouvement du &LL; et le mouvement &OS;
+	      le mouvement du &LS; et le mouvement &OS;
 	      reposant sur des postulats fondamentaux différents.
 	    </para>
 	    <para condition="long">
 	      L'&OS; met l'accent sur l'ouverture et l'efficacité des 
 	      développements informatiques, alors que les
-	      fondements du mouvement du &LL; sont la liberté et
+	      fondements du mouvement du &LS; sont la liberté et
 	      la protection de la liberté des utilisateurs.
 	    </para>
 	    <para condition="long">
@@ -265,7 +266,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	      en prescripteurs lors des achats de matériel informatique.
 	      Il est désormais soutenu commercialement et financièrement par 
 	      les plus grands constructeurs (SUN, IBM, HP, SGI, DELL, etc.).
-	      Plusieurs gouvernements envisagent d'utiliser les &LLs;
+	      Plusieurs gouvernements envisagent d'utiliser les &LSs;
 	      comme norme pour leur administration 
 	      (France, Pologne, Argentine, Chine, etc.).
 	    </para>
@@ -330,7 +331,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 		  <para condition="long">
 		    Cela permet l'accès aux fonctionnalités de base ainsi que 
 		    la réalisation de l'interface avec le système 
-		    d'exploitation grâce à des &LLs; adaptables aux évolutions 
+		    d'exploitation grâce à des &LSs; adaptables aux évolutions 
 		    du reste du système.
 		    Certaines fonctionnalités <quote>avancées</quote> restent
 		    elles cachées dans des modules exclusifs figés qui n'ont 
@@ -445,7 +446,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 		</listitem>
 		<listitem>
 		  <para>
-		    une image dégradée auprès de la communauté du &LL; 
+		    une image dégradée auprès de la communauté du &LS; 
 		    et de l'&OS;
 		  </para>
 		</listitem>
@@ -541,7 +542,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	<qandaentry>
 	  <question id="expectedAdvantages">
 	    <para>
-	      Quels sont les avantages des &LLs;, de l'&OS; ?
+	      Quels sont les avantages des &LSs;, de l'&OS; ?
 	    </para>
 	  </question>
 	  <answer>
@@ -585,7 +586,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	<qandaentry>
 	  <question id="contact">
 	    <para id="contact.text">
-	      Qui contacter pour plus d'information sur le &LL; et l'&OS; ?
+	      Qui contacter pour plus d'information sur le &LS; et l'&OS; ?
 	    </para>
 	  </question>
 	  <answer>
@@ -659,7 +660,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 		  <para>
 		    Une <ulink url="&url.ssii;">liste de sociétés</ulink>
 		    de services en ingénierie informatique (SSII) francophones 
-		    spécialisées dans les &LLs; ou l'&OS; est disponible sur 
+		    spécialisées dans les &LSs; ou l'&OS; est disponible sur 
 		    le site de l'<ulink url="http://www.aful.org">AFUL</ulink>.
 		  </para>
 		</listitem>
@@ -732,8 +733,9 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	    <para condition="long">
 	      De plus, le site <ulink url="http://www.linuxhardware.org">
 		LinuxHardware.org</ulink> peut être contacté par les
-	      constructeurs qui souhaitent faire des annonces en rapport avec
-	      les systèmes d'exploitation basés sur des &LLs;, comme GNU/Linux.
+	      constructeurs désireux d'avoir leurs produits évalués en
+	      conjonction avec les systèmes d'exploitation basés sur des 
+	      &LSs; comme GNU/Linux.
 	    </para>
 	  </answer>
 	</qandaentry>
@@ -845,7 +847,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	      Lexmark, NVidia, Olitec.
 	      Ces constructeurs satisfont un grand nombre de consommateurs.
 	      Mais en se privant de l'aide des développeurs de la communauté du
-	      &LL; et de l'&OS;, ces constructeurs doivent fournir un effort
+	      &LS; et de l'&OS;, ces constructeurs doivent fournir un effort
 	      plus important pour que leurs pilotes restent à jour avec les 
 	      nouvelles versions des systèmes d'exploitation.
 	    </para>

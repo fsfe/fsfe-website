@@ -29,10 +29,11 @@ Old version of the XML DTD, before it became endorsed by OASIS
 <!ENTITY subtitle 
          "Frequently Asked Questions on drivers availability under any operating system">
 
-<!ENTITY OS  "Open Source Software">
-<!ENTITY LL  "Free Software">
-<!ENTITY LLs "Free Sotwares">
+<!-- LS = Libre Software -->
+<!ENTITY LS  "Free Software">
+<!ENTITY LSs "Free Sotwares">
 <!ENTITY FSF "Free Software Foundation">
+<!ENTITY OS  "Open Source Software">
 <!ENTITY OSI "Open Source Initiative">
 
 <!-- *************************************************************** -->
@@ -138,7 +139,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	  <answer>
 	    <para>
 	      GNU/Linux is a multiuser, multitask operating system which can execute on a large number of hardware platforms (Intel x86, PowerPC, Alpha, SPARC, ARM, etc.).
-	      The most important characteristic of this operating system, besides its technical qualities and its growing fame, lies in the fact that GNU/Linux is an assembly of &LLs;.
+	      The most important characteristic of this operating system, besides its technical qualities and its growing fame, lies in the fact that GNU/Linux is an assembly of &LSs;.
 	    </para>
 	    <para>
               The GNU/Linux system will often be mentioned in this document, essentially because the problems mentioned presently concern many users of this system. But these problems stay valid <emphasis>for every operating system</emphasis>
@@ -154,7 +155,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	  </question>
 	  <answer>
 	    <para>
-              Introduced by Richard M. Stallman in 1984, GNU is a project of operating system consisting solely of &LLs;. The Linux kernel, a creation which began in 1991, is the last component that has allowed to achieve an autonomous operating system solely composed of &LL;. GNU/Linux is thus the conjunction of the project GNU and the Linux kernel. It is this set which is distributed today by Debian, Mandrake, RedHat, etc. 
+              Introduced by Richard M. Stallman in 1984, GNU is a project of operating system consisting solely of &LSs;. The Linux kernel, a creation which began in 1991, is the last component that has allowed to achieve an autonomous operating system solely composed of &LS;. GNU/Linux is thus the conjunction of the project GNU and the Linux kernel. It is this set which is distributed today by Debian, Mandrake, RedHat, etc. 
 	    </para>
 	  </answer>
 	</qandaentry>
@@ -169,7 +170,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	    <para>
               A license can be designated under the generic name of 
 	      <quote>free license</quote> if it corresponds to the criteria 
-	      of &LL; licences 
+	      of &LS; licences 
 	      (a <ulink
 	      url="http://www.fsf.org/philosophy/license-list.htm">list is
 	      available on the FSF's site</ulink>) 
@@ -177,19 +178,19 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	      (a <ulink url="http://opensource.org/licenses">list is available on the on the &OSI;'s site</ulink>)
 	    </para>
 	    <para condition="long">
-	      &LL; licenses correspond to the criteria stated by 
+	      &LS; licenses correspond to the criteria stated by 
 	      <ulink url="http://www.fsf.org/philosophy/free-sw.html">
-		&LL; definition</ulink>.
+		&LS; definition</ulink>.
 	      &OS; licenses correspond to the criteria stated in 
 	      <ulink url="http://opensource.org/docs/definition.html">
 		&OS; definition</ulink>.
 	    </para>
 	    <!--
 	    <para condition="long">
-             Although many licenses appear in both these lists, they are not strictly identical, &LL; movement and the &OS; movement being based on different fundamental postulates.
+             Although many licenses appear in both these lists, they are not strictly identical, &LS; movement and the &OS; movement being based on different fundamental postulates.
 	    </para>
 	    <para condition="long">
-             &OS; emphasizes the opening and efficiency of the computer software developments, while the foundations of the &LL; movement are freedom and protection of the users' freedom.
+             &OS; emphasizes the opening and efficiency of the computer software developments, while the foundations of the &LS; movement are freedom and protection of the users' freedom.
 	    </para>
 	    <para condition="long">
             In both cases, determining if a license is in accordance with the definition represents a lot of work and requires legal competences as well as an understanding of the philosophy of the movements. For that reason these two lists are a very important reference.
@@ -233,7 +234,7 @@ For example Windows Microsoft is a software distributed under a non-free license
 	      It will generate sells.
 	    </para>
 	    <para>
-              The market is sizeable, and its potential is huge. GNU/Linux is the only operating system presently gaining market shares over all its competitors. It is favored by many computer specialists, who are prescriptors for harware choices. It is now commercially and financially backed by the biggest manufacturers (SUN, IBM, HP, SGI, DELL, etc.). Some goverments are studying the use of &LL; as a standard for their administration (France, Poland, Argentina, China, ...)
+              The market is sizeable, and its potential is huge. GNU/Linux is the only operating system presently gaining market shares over all its competitors. It is favored by many computer specialists, who are prescriptors for harware choices. It is now commercially and financially backed by the biggest manufacturers (SUN, IBM, HP, SGI, DELL, etc.). Some goverments are studying the use of &LS; as a standard for their administration (France, Poland, Argentina, China, ...)
 	    </para>
 	  </answer>
 	</qandaentry>
@@ -279,7 +280,7 @@ For example Windows Microsoft is a software distributed under a non-free license
 		    It consists in publishing a part of the drivers according to the previous logic, and supplying the rest of the drivers under a binary form and non-free license (see the second alternative).
 		  </para>
 		  <para condition="long">
-                   It allows access to basic features as well as realization of an interface with the operating system, thanks to a &LL; adaptable to evolutions of the system. Certain <quote>advanced</quote> features remain hidden in exclusive, fixed modules which do not need to evolve with the rest of the system. It can provide a satisfactory solution in cases where part of the product originates from a third-party supplier and is under a non-free license. It is a choice notably made by certain graphic board manufacturers.
+                   It allows access to basic features as well as realization of an interface with the operating system, thanks to a &LS; adaptable to evolutions of the system. Certain <quote>advanced</quote> features remain hidden in exclusive, fixed modules which do not need to evolve with the rest of the system. It can provide a satisfactory solution in cases where part of the product originates from a third-party supplier and is under a non-free license. It is a choice notably made by certain graphic board manufacturers.
 		  </para>
 		</listitem>
 		<listitem>
@@ -372,7 +373,7 @@ For example Windows Microsoft is a software distributed under a non-free license
 		</listitem>
 		<listitem>
 		  <para>
-		    a deprecated image in the eye of the &LL; and &OS; communities
+		    a deprecated image in the eye of the &LS; and &OS; communities
 		  </para>
 		</listitem>
 		<listitem>
@@ -430,7 +431,7 @@ For example Windows Microsoft is a software distributed under a non-free license
 	<qandaentry>
 	  <question id="expectedAdvantages">
 	    <para>
-              What advantages are to be expected from &LL;, from &OS; ?
+              What advantages are to be expected from &LS;, from &OS; ?
 	    </para>
 	  </question>
 	  <answer>
@@ -473,7 +474,7 @@ For example Windows Microsoft is a software distributed under a non-free license
 	<qandaentry>
 	  <question id="contact">
 	    <para id="contact.text">
-	      Who to contact for more information on &LL; and &OS;?
+	      Who to contact for more information on &LS; and &OS;?
 	    </para>
 	  </question>
 	  <answer>
@@ -545,7 +546,7 @@ For example Windows Microsoft is a software distributed under a non-free license
                     Address specialized service companies
 		  </para>
 		  <para>
-		    A <ulink url="&url.ssii;">list of service companies</ulink> in software engineering specialized in &LL; or &OS; is available on the <ulink url="http://www.aful.org">AFUL</ulink> site.
+		    A <ulink url="&url.ssii;">list of service companies</ulink> in software engineering specialized in &LS; or &OS; is available on the <ulink url="http://www.aful.org">AFUL</ulink> site.
 		  </para>
 		</listitem>
 	      </itemizedlist>
@@ -613,8 +614,9 @@ For example Windows Microsoft is a software distributed under a non-free license
 	    <para condition="long">
 	      Moreover, the <ulink url="http://www.linuxhardware.org">
 		LinuxHardware.org</ulink> site can be contacted by the
-	      manufacturers who wish to make advertisements in connection with
-	      &LL; based operating systems such as GNU/Linux.
+	      manufacturers who wish to have their products evaluated in 
+	      connection with &LS; based operating systems such 
+	      as GNU/Linux.
 	    </para>
 	  </answer>
 	</qandaentry>
@@ -622,7 +624,7 @@ For example Windows Microsoft is a software distributed under a non-free license
 	<qandaentry>
 	  <question id="nonOS">
 	    <para id="nonOS.text">
-              Do you advise a &LL; distribution in every case ?
+              Do you advise a &LS; distribution in every case ?
 	    </para>
 	  </question>
 	  <answer>
@@ -689,7 +691,7 @@ The most famous licenses are the GNU General Public License (GPL), the GNU Lesse
 	    <para>
               The following manufacturers supply only binary versions (under non-free license) of their drivers, but for a large number of operating systems, including GNU/Linux: Lexmark, NVidia, Olitec.
 
-              These manufacturers satisfy a large number of consumers. But by dismissing the help the &LL; and &OS; community of developers could supply, they endure a more important effort to keep their drivers up to date with the new versions of operating systems.
+              These manufacturers satisfy a large number of consumers. But by dismissing the help the &LS; and &OS; community of developers could supply, they endure a more important effort to keep their drivers up to date with the new versions of operating systems.
 	    </para>
 	    <para>
               An inherent problem of the binary drivers is their lack of <quote>modularity</quote>. Being usually modules for the kernel, they can, if they are badly conceived, cause the failure of a whole machine. So editors of free software distributions hesitate to put modules which risk entailling a big load for their support services. An emblematic example are the NVIDIA modules for GNU/Linux, which, in spite of their recognized performances, are not included in the <ulink url="http://www.linux-mandrake.com">Mandrake 8.0</ulink> distribution. As a conclusion, with such an approach, the manufacturers may feel their work is wasted.
@@ -781,7 +783,7 @@ The most famous licenses are the GNU General Public License (GPL), the GNU Lesse
       </itemizedlist>
     </para>
     <para>
-      But the release of a product means neither the end of its life, nor the stopping of the development and services which surround it. Once introduced, the drivers are better maintained according to the &LL; model. 
+      But the release of a product means neither the end of its life, nor the stopping of the development and services which surround it. Once introduced, the drivers are better maintained according to the &LS; model. 
     </para>
     <para condition="long">
       Indeed, that model :

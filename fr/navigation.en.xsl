@@ -60,11 +60,12 @@
 	      <td>
 		<a href="http://cyberlink.idws.com/fsm/" class="T2">Africa</a> <br />
 		<a href="http://www.rons.net.cn/english/Links/fsf-china/" class="T2">China</a> <br />
+		<a href="http://www.gnu.cz/" class="T2">Czech Republic</a> <br />
 		<a href="{$fsfeurope}/" class="T2">Europe</a> <br />
 		<a href="{$fsffrance}/index.en.html" class="T2">France</a> <br />
-		<a href="http://gnu.org.in/" class="T2">India</a> <br />
 	      </td>
 	      <td>
+		<a href="http://gnu.org.in/" class="T2">India</a> <br />
 		<a href="http://korea.gnu.org/home.html" class="T2">Korea</a> <br />
 		<a href="http://www.gnulinux.org.mx/" class="T2">Mexico</a> <br />
 		<a href="http://es.gnu.org/" class="T2">Spain</a> <br />

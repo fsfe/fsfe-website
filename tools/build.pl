@@ -411,6 +411,13 @@ while (my ($path, undef) = each %countries) {
           ! -f "$_/index.$lang.html") {
         link("$_/$base.$lang.html", "$_/index.$lang.html");
       }
+      if (! -f "$_/index.html") {
+        if (-f "$_/index.en.html") {
+          link("$_/index.en.html", "$_/index.html");
+        } elsif (-f "$_/$base.en.html") {
+          link("$_/$base.en.html", "$_/index.html");
+        }
+      }
     }
   }
 }

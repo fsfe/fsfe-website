@@ -27,13 +27,15 @@ XSLTOPTS = \
 	'$$fsf=$(FSF)' \
 	'$$gnu=$(GNU)'
 
-ENPAGES = $(shell find * -path 'fr' -prune -o -regex '[^\.]*\.xhtml' -o -regex '.*\.en\.xhtml' -print | sed "s/xhtml$$/html/")
+ENPAGES = $(shell find * -path 'fr' -prune -o -regex '.*\.en\.xhtml' -o -regex '[^\.]*\.xhtml' -print | sed "s/xhtml$$/html/")
 
 FRPAGES = $(shell find * -path 'fr' -prune -o -regex '.*\.fr\.xhtml' -print | sed "s/xhtml$$/html/")
 
 DEPAGES = $(shell find * -path 'fr' -prune -o -regex '.*\.de\.xhtml' -print | sed "s/xhtml$$/html/")
 
-all: $(ENPAGES) $(FRPAGES) $(DEPAGES)
+PTPAGES = $(shell find * -path 'fr' -prune -o -regex '.*\.pt\.xhtml' -print | sed "s/xhtml$$/html/")
+
+all: $(ENPAGES) $(FRPAGES) $(DEPAGES) $(PTPAGES)
 
 $(ENPAGES): %.html: %.xhtml fsfe.xsl navigation.en.xsl
 	@echo "Building $@ ..."; \
@@ -65,8 +67,17 @@ $(DEPAGES): %.html: %.xhtml fsfe.xsl navigation.de.xsl
 	$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase '$$path='$$path > $$base.html-temp && (cat $$base.html-temp | perl -p -e '$$| = 1; s/\$$//g if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.html) ; \
 	rm -f $$base.html-temp
 
+$(PTPAGES): %.html: %.xhtml fsfe.xsl navigation.pt.xsl
+	@echo "Building $@ ..."; \
+	path=$< ; \
+	base=`expr $$path : '\(.*\).xhtml'` ; \
+	filebase=`basename $$base` ; \
+	dir=`dirname $$path` ; \
+	root=`dirname $$path | perl -pe 'chop; s:([^/]+):..:g if($$_ ne ".")'` ; \
+	$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase '$$path='$$path > $$base.html-temp && (cat $$base.html-temp | perl -p -e '$$| = 1; s/\$$//g if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.html) ; \
+	rm -f $$base.html-temp
+
 # remove html files for which an xhtml version exists (exclude fr/)
 clean:
-	rm -f $(ENPAGES) $(FRPAGES) $(DEPAGES)
-
+	rm -f $(ENPAGES) $(FRPAGES) $(DEPAGES) $(PTPAGES)
 

@@ -16,13 +16,11 @@
         <xsl:for-each select="/html/set/associate">
           <xsl:sort select="@id" />
           <h3><a href="{link}"><xsl:value-of select="name" /></a></h3>
-          <xsl:apply-templates select="description" />
+          <xsl:apply-templates select="description/node()" />
         </xsl:for-each>
       </body>
     </html>
   </xsl:template>
-
-  <xsl:template match="description"><xsl:apply-templates /></xsl:template>
 
   <xsl:template match="@*|node()" priority="-1">
     <xsl:copy>

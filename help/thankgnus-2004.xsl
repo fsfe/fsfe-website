@@ -21,22 +21,22 @@
       <xsl:apply-templates />
       <h3><xsl:value-of select="/html/text[@id='patrons']" /></h3>
       <ul>
-       <xsl:apply-templates select="/html/set/patrons" />
+        <xsl:apply-templates select="/html/set/patrons/node()" />
       </ul>
 
       <h3><xsl:value-of select="/html/text[@id='sustaining']" /></h3>
       <ul>
-       <xsl:apply-templates select="/html/set/sustainingcontributors" />
+        <xsl:apply-templates select="/html/set/sustainingcontributors/node()" />
       </ul>
 
       <h3><xsl:value-of select="/html/text[@id='contributors']" /></h3>
       <ul>
-       <xsl:apply-templates select="/html/set/contributors" />
+        <xsl:apply-templates select="/html/set/contributors/node()" />
       </ul>
 
       <h3><xsl:value-of select="/html/text[@id='supporters']" /></h3>
       <ul>
-       <xsl:apply-templates select="/html/set/supporters" />
+        <xsl:apply-templates select="/html/set/supporters/node()" />
       </ul>
 
     </body>
@@ -47,11 +47,6 @@
       <xsl:apply-templates select="@*|node()"/>
     </xsl:copy>
   </xsl:template>
-
-  <xsl:template match="patrons"><xsl:apply-templates /></xsl:template>
-  <xsl:template match="sustainingcontributors"><xsl:apply-templates /></xsl:template>
-  <xsl:template match="contributors"><xsl:apply-templates /></xsl:template>
-  <xsl:template match="supporters"><xsl:apply-templates /></xsl:template>
 
   <xsl:template match="set" />
   <xsl:template match="text" />

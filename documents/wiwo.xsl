@@ -19,14 +19,14 @@
       <xsl:apply-templates />
       <div class="indent"><b><xsl:value-of select="/html/text[@id='osig']" /></b>
       <ul>
-       <xsl:apply-templates select="/html/set/osig" />
+        <xsl:apply-templates select="/html/set/osig/node()" />
       </ul>
 
       <b><xsl:value-of select="/html/text[@id='isig']" /></b>
       <ul>
-       <xsl:apply-templates select="/html/set/isig" />
+        <xsl:apply-templates select="/html/set/isig/node()" />
       </ul></div>
-      <xsl:apply-templates select="/html/text/footer" />
+      <xsl:apply-templates select="/html/text/footer/node()" />
     </body>
   </xsl:template>
 
@@ -36,11 +36,6 @@
     </xsl:copy>
   </xsl:template>
 
-  <xsl:template match="osig"><xsl:apply-templates /></xsl:template>
-  <xsl:template match="isig"><xsl:apply-templates /></xsl:template>
-  <xsl:template match="footer"><xsl:apply-templates /></xsl:template>
-
   <xsl:template match="/html/set" />
   <xsl:template match="/html/text" />
 </xsl:stylesheet>
-

@@ -59,8 +59,12 @@ p.passe {
           color: #c0C0C0;
  }
 
-td.titre{ font-weight: bold;
+td.titre{ 
+          font-weight: bold; 
+          background-color: "#d0d0d0" ;
+          }
 
- }
-
-td.valeur {     font-weight: normal; }
+td.valeur { 
+            font-weight: normal;
+            background-color: "#f1f1f1" ;
+            }

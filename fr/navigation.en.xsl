@@ -60,6 +60,7 @@
 	    <a href="{$fsfeurope}/" class="T2">Europe</a> <br />
 	    <a href="{$fsffrance}/index.en.html" class="T2">France</a> <br />
 	    <a href="http://gnu.org.in/" class="T2">India</a> <br />
+	    <a href="http://korea.gnu.org/home.html">Korea</a> <br />
 	    <a href="http://es.gnu.org/" class="T2">Spain</a> <br />
 	    <a href="{$fsf}/home.html" class="T2">United-States</a> <br />
 	  </td>

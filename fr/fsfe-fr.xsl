@@ -54,7 +54,7 @@
 
 <!--
 Local Variables: ***
-mode: html ***
+mode: xml ***
 End: ***
 -->
 </xsl:stylesheet>

@@ -8,18 +8,22 @@
     <table cellspacing="0" cellpadding="0" width="100%" border="0"><tr bgcolor="#e7e7e7"><td><img src="{$fsffrance}/images/pix.png" width="1" height="1" alt="" /></td></tr></table> 
     <table cellspacing="0" cellpadding="1" width="100%" border="0"> 
       <tr valign="middle"> 
-	  <td class="newstext">
-	    &nbsp;&nbsp;
-            <a class="topbanner" href="{$fsfeurope}/">FSF Europe</a>
-          </td>
-          <td class="newstext" align="right">
-	    <a class="topbanner" href="{$fsf}/">FSF</a>
-            &nbsp;&nbsp;|&nbsp;&nbsp;
-	    <a class="topbanner" href="{$gnu}/">GNU</a>
-            &nbsp;&nbsp;|&nbsp;&nbsp;
-	    <a class="topbanner" href="http://es.gnu.org/">GNU Espagne</a><br/>
-	  </td>
-       </tr>
+	<td class="newstext">
+	  &nbsp;&nbsp;
+	  <a class="topbanner" href="{$fsfeurope}/index.fr.html">FSF Europe</a>
+	</td>
+	<td class="newstext" align="right">
+	  <a class="topbanner" href="{$fsf}/home.fr.html">FSF</a>
+	  &nbsp;&nbsp;|&nbsp;&nbsp;
+	  <a class="topbanner" href="{$gnu}/home.fr.html">GNU</a>
+	  &nbsp;&nbsp;|&nbsp;&nbsp;
+	  <a class="topbanner" href="http://es.gnu.org/">GNU Espagne</a>
+	  &nbsp;&nbsp;|&nbsp;&nbsp;
+	  <a class="topbanner" href="http://www.april.org/">April</a>
+	  &nbsp;&nbsp;|&nbsp;&nbsp;
+	  <a class="topbanner" href="http://www.lsfn.org/">LSFN</a>
+	</td>
+      </tr>
     </table>
     <table cellspacing="0" cellpadding="0" width="100%" border="0">
 	<tr valign="middle" bgcolor="#6f6f6f">
@@ -31,8 +35,8 @@
     <table width="100%" border="0" cellspacing="0" cellpadding="4">
       <tr>
 	<td class="TopTitle">
-	  &nbsp;<a href="{$fsffrance}/index.en.html" class="T1">France</a> |
-	    Germany
+	  &nbsp;<a href="{$fsffrance}/index.fr.html" class="T1">France</a> |
+	    Allemagne
 	</td>
       </tr>
     </table>
@@ -78,11 +82,14 @@
 		    <a href="http://mailman.fsfeurope.org/mailman/listinfo/france" class="T2">Mailing List</a><br />
 		    <a href="http://savannah.gnu.org/project/memberlist.php?group_id=148" class="T2">Who's who</a><br />
 		    <a href="{$fsffrance}/about/about.fr.html" class="T2">A propos</a><br />
+		    <a href="{$fsffrance}/contact.fr.html" class="T1">Contact</a> <br />
+		    <a href="{$fsffrance}/thanks.fr.html" class="T1">Merci!</a> 
 		  </td>
 		</tr>
 		<tr><td class="TopTitle" align="center">Adminsys</td></tr>
 		<tr>
 		  <td class="TopBody" align="right">
+		    <a href="{$fsffrance}/stats/stats.fr.html" class="T1">Statistiques</a> <br />
 		    <a href="{$fsffrance}/server/server.en.html" class="T2">Guide</a><br />
 		    <a href="http://savannah.gnu.org/projects/fsffr/" class="T2">Comptes</a><br />
 		    <a href="{$fsffrance}/birth/birth.fr.html" class="T2">Naissance</a><br />
@@ -133,7 +140,7 @@
 
 <!--
 Local Variables: ***
-mode: html ***
+mode: xml ***
 End: ***
 -->
 </xsl:stylesheet>

@@ -7,6 +7,12 @@
     <title lang="en">GNU General Public License</title>
     <title lang="fr">Licence Publique Générale GNU</title>
 
+    <!--
+       amelioration possible en supprimant le "we" de l'article 10
+       pour que "we" soit employé de façon constante en faisant
+       référence au concédant.
+    -->
+
     <authorgroup>
 
       <author>
@@ -55,13 +61,13 @@
 
       Avis de licence:
 
-      Il est permis à tout le monde de reproduire et distribuer des
+      Il est permis à tout le monde de copier et distribuer des
       copies conformes de ce document sur tout support, mais aucune
       modification ne devra y être apportée. Ce document comporte un
       avis de droit d'auteur, un avis de licence, un
       avertissement spécifique mentionnant que ce document n'est pas une licence,
       une traduction de la GNU GPL et la GNU GPL en anglais. Une
-      reproduction de la traduction de la GNU GPL doit obligatoirement
+      copie de la traduction de la GNU GPL doit obligatoirement
       être accompagnée de l'avis de droit d'auteur, de
       l'avertissement spécifique mentionnant que ce document n'est pas une
       licence, de l'avis de license et de la GNU GPL en anglais.
@@ -110,7 +116,11 @@
 
       copyright holder => titulaire du droit d'auteur
 
---clause =====> disposition
+      terms => clauses : ne pas utiliser "disposition" car dans la version
+      anglaise le mot "terms" fait référence à la partie "Terms and conditions"
+      à l'exclusion des autres. Utiliser "disposition" car le terme englobe
+      toute la licence. A défaut de définition précise, "termes" présente
+      le même inconvénient.
 --clarifie
       software => logiciel (substantif)
 
@@ -122,19 +132,16 @@
 
       to redistribute => redistribuer
 
---revert
-      to copy => reproduire : on pourra cependant utiliser copier lorsqu'il
-      ne s'agit pas de faire précisément référence à l'autorisation de 
-      l'auteur. On dira "l'auteur donne l'autorisation de reproduire" mais
-      on pourra dire "faire une copie depuis un site internet". S'agissant
-      d'une copie de la licence GNU GPL (partie How to apply), on traduira
-      par "exemplaire de la licence".
+      to copy => copier : le monopole de l'auteur porte sur la "reproduction"
+      et non sur la "copie" (dans les textes). Cependant l'un et l'autre
+      sont courament utilisés
+      de façon interchangeable en droit. On peut utiliser l'un ou l'autre
+      indifféremment.
 
       to cover => couvrir : dans le contexte d'un programme couvert par
       la licence cela signifie que le programme est distribué en accord
       avec les obligations décrites dans licence
 
---change
       scope => champ d'application : tout ce qui est influencé par
       les clauses de la licence, qui est soumis aux effets de la
       licence
@@ -183,9 +190,11 @@
       remplacé par "votre" ou "vos" dans une phrase car on perdrait ainsi
       la correspondance avec la définition de "vous" dans la licence.
 
---remplace complet par intégral
-      complete source code => le code source complet : définit dans l'Article
-      3 mais utilisé avant
+      complete source code => le code source intégral : définit dans l'Article
+      3 mais utilisé avant. On n'utilise pas "code source complet" pour éviter
+      une référence à un système complet au sens mathématique. La
+      différence est subtile, et c'est la seule raison pour choisir "intégral"
+      plutôt que "complet".
 
       Section => Article
 
@@ -218,7 +227,6 @@
       s'arranger pour rédiger de telle façon que "vous" soit toujours
       présent (voir Termes définis)
 
---amelioration possible en supprimant le we de l'article pour consistance
       we => le titulaire des droits d'auteur: dans le préambule
 
       we => la Free Software Foundation: Article 10
@@ -231,13 +239,16 @@
       anglais restriction, sans pour autant que restriction soit un faux
       ami.
 
---doute sur le fait que sortie / résultat
-      output => sortie : se comprend en vocabulaire informatique seulement,
-      par référence à entrée / sortie. Il n'est pas possible de le remplacer
-      par un terme ne faisant pas partie du jargon informatique sans perdre
-      du sens ou en ajouter.
+      output => sortie : se comprend en vocabulaire informatique
+      seulement, par référence à entrée / sortie. Par ailleurs une
+      "sortie" n'implique aucun présuposé sur la nature des choses
+      produites par le programme.  Il n'est pas possible de le
+      remplacer par un terme ne faisant pas partie du jargon
+      informatique sans perdre du sens ou en ajouter. Par exemple,
+      "résultat" contient l'idée que l'on peut qualifier certaines
+      sorties du programmes de "résultats" et d'autres de
+      "temporaires".
 
---éventuellement garder le mot verbatim
       verbatim => à l'identique: on aurait pu lui préférer "en l'état" ou
       "tel quel" mais "à l'identique" améliore la lisibilité sans changer
       le sens.
@@ -386,7 +397,7 @@
     <para>
       <src>And you must show them these terms so they know their
 	rights.</src>
-      <dst>Et vous devez leur montrer les présentes dispositions afin
+      <dst>Et vous devez leur montrer les présentes conditions afin
        qu'ils aient connaissance de leurs droits.</dst>
     </para>
 
@@ -401,7 +412,7 @@
       <dst>Nous protégeons vos droits en deux étapes : (1) nous sommes
 	titulaires des droits d'auteur du logiciel, et
 	(2) nous vous delivrons cette licence, qui vous donne
-	l'autorisation légale de reproduire, distribuer et/ou modifier
+	l'autorisation légale de copier, distribuer et/ou modifier
 	le logiciel.</dst>
       <notes>
 	Laurent: delivrons reflete mieux offer
@@ -489,7 +500,7 @@
       <src>
 	The precise terms and conditions for copying, distribution and
 	modification follow.</src>
-      <dst>Les termes exacts et les conditions de reproduction, distribution et
+      <dst>Les termes exacts et les conditions de copie, distribution et
         modification sont les suivants:</dst>
     </para>
 
@@ -498,7 +509,7 @@
   <section>
     <title lang="en">GNU General Public License Terms and Conditions
       for Copying, Distribution and Modification</title>
-    <title lang="fr">Conditions de reproduction, distribution
+    <title lang="fr">Conditions de copie, distribution
       et modification de la Licence Publique Générale GNU.</title>
 
     <notes>
@@ -514,7 +525,7 @@
       <dst>0. La présente Licence s'applique à tout programme
 	ou tout autre ouvrage contenant un avis, apposé par le titulaire des
 	droits d'auteur, stipulant qu'il peut être distribué au titre
-	des dispositions de la présente Licence Publique
+	des clauses de la présente Licence Publique
 	Générale.</dst>
       <notes>
 	"ou tout autre ouvrage" repète le "tout" alors que la version anglaise
@@ -522,10 +533,16 @@
 	qui ne se retrouve pas en anglais. On pourrait déduire que "tout" ne
 	s'applique qu'au programme et non à l'"autre ouvrage"
 	
-	"terms" pourrait se traduire par "termes" sans poser de problème
-	de sens. Cependant, "dispositions" a la même signification et 
-	la formulation est plus facile à lire et plus proche des formules
-	consacrées en droit français.
+	"terms" pourrait se traduire par "termes" ou "dispositions"
+	mais doit se traduire par "clauses" ou "conditions". "termes"
+	et "dispositions" ont le même sens et désignent l'ensemble de
+	la licence et non simplement la partie "Conditions de
+	distribution". Or, il est explicitement dans l'intention de la
+	phrase en anglais de ne pas se référer à une partie de la
+	licence autre que la partie "Conditions de distribution". En
+	particulier, il n'est pas souhaitable de donner ainsi un poids
+	supplémentaire au préambule. Le choix entre "clauses" et "disposition"
+	se fait en fonction de la lisibilité du texte.
       </notes>
     </para>
 
@@ -586,7 +603,7 @@
 	Activities other than copying, distribution and modification
 	are not covered by this License; they are outside its scope.
       </src>
-      <dst>Les activités autres que la reproduction, la distribution et
+      <dst>Les activités autres que la copie, la distribution et
 	la modification ne sont pas couvertes par la présente Licence
 	; elles sont hors de son champ d'application.</dst>
     </para>
@@ -626,7 +643,7 @@
       <notes>
 	La phrase précédente dit que l'exécution du programme n'est pas
 	soumise à autorisation de l'auteur. Mais si l'exécution du
-	programme consiste à faire une reproduction (même partielle)
+	programme consiste à faire une copie (même partielle)
 	de lui même. En effet, dans ce cas il ne s'agit pas d'une simple
 	exécution mais aussi d'une reproduction qui est soumise à 
 	l'autorisation de l'auteur. Donc la phrase précédente ne s'applique
@@ -646,7 +663,7 @@
 	License and to the absence of any warranty; and give any other
 	recipients of the Program a copy of this License along with
 	the Program.</src>
-      <dst>1. Vous pouvez reproduire et distribuer des copies à 
+      <dst>1. Vous pouvez copier et distribuer des copies à 
 	l'identique du code source du Programme tel que vous l'avez
 	reçu, sur n'importe quel support, du moment que vous apposez
 	sur chaque copie, d'une manière ad hoc et parfaitement
@@ -794,7 +811,7 @@
 	obligations et non aux clauses de la licence. Le b) juste
 	au dessus utilise
 	la formule "under the terms of this License" qui se traduit
-	en "au titre des dispositions de la présente Licence", il est 
+	en "au titre des clauses de la présente Licence", il est 
 	donc pertinent et nécessaire de retranscrire la différence
 	de formulation anglaise. En effet, il est fait référence ici
 	aux obligations liées à la redistribution et non à toutes les
@@ -909,7 +926,7 @@
 	under Section 2) in object code or executable form under the terms of
 	Sections 1 and 2 above provided that you also do one of the following:
       </src>
-      <dst>3. Vous pouvez reproduire et distribuer le Programme (ou un ouvrage
+      <dst>3. Vous pouvez copier et distribuer le Programme (ou un ouvrage
         fondé sur lui, selon l'Article 2) sous forme de code objet ou d'exécutable, 
 	selon les termes des Articles 1 et 2 ci-dessus, à condition que vous accomplissiez
 	l'une des alternatives suivantes :</dst>
@@ -933,7 +950,7 @@
 	source code, which must be distributed under the terms of Sections
 	1 and 2 above on a medium customarily used for software interchange; or,
       </src>
-      <dst>a) L'accompagner du code source complet correspondant,
+      <dst>a) L'accompagner du code source intégral correspondant,
 	sous une forme lisible par un ordinateur, qui doit être distribué
 	au titre
 	des termes des Articles 1 et 2 ci-dessus, sur un support
@@ -953,7 +970,7 @@
       <dst>b) L'accompagner d'une proposition écrite, valable durant au moins
          trois ans, de fournir à tout tiers, pour une compensation n'excédant
 	 pas ce que vous coûte l'acte physique de réaliser une distribution 
-	 source, une reproduction complète du code source correspondant sous
+	 source, une copie intégrale du code source correspondant sous
 	 une forme lisible par un ordinateur, qui sera distribuée au titre des
 	 termes des Articles 1 et 2 ci-dessus, sur un support 
 	 habituellement utilisé pour l'échange de logiciels; ou,
@@ -994,7 +1011,7 @@
       </src>
       <dst>Le code source d'un ouvrage signifie la forme favorite 
         sous laquelle sont faites des modifications à cet ouvrage.
-	Pour un ouvrage exécutable, le code source complet désigne tout le code 
+	Pour un ouvrage exécutable, le code source intégral désigne tout le code 
 	source de tous les modules qu'il contient, ainsi que les éventuels
 	fichiers de définition des interfaces qui y sont associés, ainsi que les
 	scripts utilisés pour contrôler la compilation et l'installation de
@@ -1018,11 +1035,11 @@
       </src>
       <dst>
         Si distribuer un exécutable ou un code objet consiste à
-	offrir un accès permettant la reproduction depuis un
+	offrir un accès permettant la copie depuis un
 	endroit particulier, alors l'offre d'un accès équivalent pour
-	reproduire le code source depuis le même endroit compte comme une
+	copier le code source depuis le même endroit compte comme une
 	distribution du code source, même si les tiers ne sont pas
-	contraints de reproduire le code source en même temps que le code
+	contraints de copier le code source en même temps que le code
 	objet.
       </dst>
     </para>
@@ -1039,10 +1056,10 @@
 	this License will not have their licenses terminated so long as such
 	parties remain in full compliance.
       </src>
-      <dst>4. Vous ne pouvez reproduire, modifier, concéder en sous-licence, ou distribuer
+      <dst>4. Vous ne pouvez copier, modifier, concéder en sous-licence, ou distribuer
 	le Programme, sauf tel qu'expressément prévu au titre de la présente Licence.
-	Toute autre tentative de reproduire, modifier, concéder en sous-licence, ou
-	distribuer le Programme est réputée nulle, et met
+	Toute tentative de copier, modifier, concéder en sous-licence, ou
+	distribuer le Programme autrement est réputée nulle, et met
 	immédiatement fin à vos droits au titre de la présente Licence. 
 	Toutefois, les
 	les parties ayant reçu de vous des copies, ou des droits,
@@ -1072,7 +1089,7 @@
 	distribuant le Programme (ou un ouvrage quelconque se fondant sur
 	le Programme), vous signifiez votre acceptation du droit que la
 	la présente Licence vous donne de le faire, 
-	et de toutes ses clauses concernant la reproduction, la
+	et de toutes ses clauses concernant la copie, la
 	distribution ou la modification du Programme ou d'ouvrages fondés
 	sur ce dernier.</dst>
       <notes>
@@ -1101,7 +1118,7 @@
 	ouvrage fondé sur le Programme), une licence est automatiquement
 	concédée au destinataire par le concédant original de la licence, 
 	l'autorisant à
-	reproduire, distribuer ou modifier le Programme, sous réserve
+	copier, distribuer ou modifier le Programme, sous réserve
 	des présentes clauses. Vous ne pouvez imposer
 	une quelconque limitation supplémentaire à l'exercice des
 	droits octroyés au titre des présentes par le destinataire.  Vous
@@ -1237,7 +1254,7 @@
       <notes>
 	"place" est remplacé par "décide de couvrir" plutôt que "couvre" qui
 	serait plus cohérent avec l'emploi systématique de "couvert" quand
-	il s'agit de dire que le programme est sous l'influence de la licence.
+	il s'agit de dire que le programme est dans le champ de la licence.
 	Le problème est que "couvre" serait par trop étrange et entrainerait
 	une confusion qui n'existe pas avec l'emploi de "place" en anglais.
 	On clarifie la phrase en ajoutant "décide".

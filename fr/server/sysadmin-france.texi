@@ -1,0 +1,66 @@
+\input texinfo                @c -*- Texinfo -*-
+@c %**start of header
+@setfilename sysadmin-france.info
+@settitle @code{System Administration France}
+@setchapternewpage odd
+@c %**end of header
+
+@set RCSID $Id: sysadmin-france.texi,v 1.1 2001-04-13 14:12:28 loic Exp $
+@include version.texi
+
+@c Combine the variable and function indices:
+@syncodeindex vr fn
+@c Combine the program and concept indices:
+@syncodeindex pg cp
+
+@titlepage
+@title System Administration France
+@subtitle Information specific to GNU and FSF machines in France
+@subtitle @code{Sysadmin France} Version @value{VERSION}
+@subtitle @value{UPDATED}
+@author Loic Dachary
+@page
+@vskip 0pt plus 1filll
+
+ Permission is granted to make and distribute verbatim copies of
+ this manual provided the copyright notice and this permission notice
+ are preserved on all copies.
+
+ Permission is granted to copy and distribute modified versions of this
+ manual under the conditions for verbatim copying, provided that the entire
+ resulting derived work is distributed under the terms of a permission
+ notice identical to this one.
+
+ Permission is granted to copy and distribute translations of this manual
+ into another language, under the above conditions for modified versions,
+ except that this permission notice may be stated in a translation approved
+ by the Free Software Foundation.
+@end titlepage
+@page
+
+@ifnottex
+@node Top, Introduction, (dir), (dir)
+@top Sysadmin France
+
+This document is for system administrators of GNU and FSF machines
+in France.
+
+@end ifnottex
+
+@node Introduction, Installation, Top, Top
+@chapter Introduction
+
+@node Concept Index,  , System Administration, Top
+@unnumbered Index of Concepts
+
+@printindex cp
+
+@c @node Name Index,  , Concept Index, Top
+@c @unnumbered Index of File Names
+
+@c @printindex fn
+
+@summarycontents
+@contents
+@bye
+

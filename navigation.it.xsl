@@ -83,15 +83,15 @@
 	 </xsl:otherwise>
 	</xsl:choose><br/>
 	<xsl:choose>
-	 <xsl:when test="$path='contact/contact.xhtml'">Contatti</xsl:when>
+	 <xsl:when test="$path='contact/contact.it.xhtml'">Contatti</xsl:when>
 	 <xsl:otherwise>
-	  <a href="{$fsfeurope}/contact/contact.html">Contatti</a>
+	  <a href="{$fsfeurope}/contact/contact.it.html">Contatti</a>
 	 </xsl:otherwise>
 	</xsl:choose><br/>
 	<xsl:choose>
-	 <xsl:when test="$path='about/about.xhtml'">Informazioni</xsl:when>
+	 <xsl:when test="$path='about/about.it.xhtml'">Informazioni</xsl:when>
 	 <xsl:otherwise>
-	  <a href="{$fsfeurope}/about/about.html">Informazioni</a>
+	  <a href="{$fsfeurope}/about/about.it.html">Informazioni</a>
 	 </xsl:otherwise>
 	</xsl:choose><br/>
 	<xsl:choose>
@@ -101,9 +101,9 @@
 	 </xsl:otherwise>
 	</xsl:choose><br/>
 	<xsl:choose>
-	 <xsl:when test="$path='background.xhtml'">Sfondo</xsl:when>
+	 <xsl:when test="$path='background.it.xhtml'">Sfondo</xsl:when>
 	 <xsl:otherwise>
-	  <a href="{$fsfeurope}/background.html">Sfondo</a>
+	  <a href="{$fsfeurope}/background.it.html">Sfondo</a>
 	 </xsl:otherwise>
 	</xsl:choose><br/>
 	<xsl:choose>

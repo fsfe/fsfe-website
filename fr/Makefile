@@ -38,7 +38,7 @@ process:
 		dir=`dirname $$base` ; \
 		root=`dirname $$base | perl -pe 'chop; s:([^/]+):..:g if($$_ ne ".")'` ; \
 		$(XSLTPROC) fsfe-fr.xsl $$file $(XSLTOPTS) '$$fsffrance='$$root | \
-		perl -MFile::Copy -p -e '$$| = 1; copy("'$$dir'/$$1", \*STDOUT) if(/\#include virtual=\"(.*?)\"/);' > $$base.html ; \
+		perl -MFile::Copy -p -e '$$| = 1; copy("'$$dir'/$$1", \*STDOUT) if(/\#include virtual=\"(.*?)\"/); s/\$$//g if(/\$$Date: 2001-04-22 10:21:55 $$base.html ; \
 	done
 
 validate:

@@ -130,7 +130,7 @@
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
-                <xsl:when test="$path='education/education.en.xhtml'">Education</xsl:when>
+                <xsl:when test="$path='education/education.xhtml'">Education</xsl:when>
                 <xsl:otherwise>
                   <a href="{$fsfeurope}/education/education.html" class="T2">Education</a>
                 </xsl:otherwise>

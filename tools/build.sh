@@ -16,6 +16,11 @@ if test $? -ne 0; then
    echo "Build not complete. Aborting."
    exit 1
 fi
+
+for focus in ${DEST}/*; do
+   ln -s ${SOURCE} ${focus}/source
+done
+
 cd $TMP
 /usr/local/bin/symlinks
 

@@ -73,7 +73,7 @@
 			</tr>
 
             <tr>
-              <td class="TopTitle" align="center">Sections</td>
+              <td class="TopTitle" align="center">Rubriken</td>
             </tr>
             <tr>
               <td align="right" class="TopBody"><br/>

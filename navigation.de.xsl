@@ -115,9 +115,9 @@
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
-                <xsl:when test="$path='gbn/index.xhtml'">GNU Business Network</xsl:when>
+                <xsl:when test="$path='gbn/index.de.xhtml'">GNU Business Network</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/gbn/index.html" class="T2">GNU Business Network</a>
+                  <a href="{$fsfeurope}/gbn/index.de.html" class="T2">GNU Business Network</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <br/></td>

@@ -5,7 +5,7 @@
 @setchapternewpage odd
 @c %**end of header
 
-@set RCSID $Id: sysadmin-france.en.texi,v 1.16 2001-04-23 12:41:09 loic Exp $
+@set RCSID $Id: sysadmin-france.en.texi,v 1.17 2001-04-24 08:27:26 r4f Exp $
 @set VERSION 1.0
 
 @c Combine the variable and function indices:
@@ -612,6 +612,7 @@ repository write to @email{team@@fsfeurope.org,FSF Europe Team} or
 
 @menu
 * Security::                    
+* DNS
 * Statistics::                  
 @end menu
 
@@ -624,7 +625,7 @@ repository write to @email{team@@fsfeurope.org,FSF Europe Team} or
 @end menu
 
 @cindex firewall
-@node Firewall,  , Security, Security
+@node Firewall,  DNS,  , Security, Security
 @subsection Firewall
 
 A shell script applies filtering rules, it's located in
@@ -637,8 +638,20 @@ Warning : only the ipchains (2.2) section is well configured.
 The policy applied is to close all TCP/UDP port by default and open only
 the ones we need.
 
+@cindex DNS
+@node Firewall, Security, , DNS, DNS
+@section DNS
+
+The DNS is handled by the GNU name servers.
+The FSF France machine can be reached through the following names : fr.fsfeurope.org, france.fsfeurope.org or fsffrance.org.
+
+The latter domain name (@code{fsffrance.org}) has been bought at GANDI (a french registrar @uref{http://www.gandi.net}) and is owned by @email{raph@r4f.org,Raphael Rousseau} who's the Administrative, Techniqcal and Billing contact of this domain name.
+
+The primary name server is @code{ns1.gnu.org} (@code{199.232.76.162}) and the secondary @code{sfi.santafe.edu} (@code{192.12.12.1}).
+
+@node Security, Statistics, 
 @cindex statistics mrtg
-@node Statistics,  , Security, System
+@node Statistics, DNS,  , Security, System
 @section Statistics
 
 Systems statistics are generated with mrtg

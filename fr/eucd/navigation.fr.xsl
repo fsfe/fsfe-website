@@ -4,7 +4,7 @@
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:template match="/html[@lang='fr']/body/div">
-    <!-- $Id: navigation.fr.xsl,v 1.17 2002-12-21 13:51:38 rodolphe Exp $ -->
+    <!-- $Id: navigation.fr.xsl,v 1.18 2002-12-21 13:56:41 rodolphe Exp $ -->
     <!-- $Source: /root/wrk/fsfe-web/savannah-rsync/fsfe/fr/eucd/navigation.fr.xsl,v $ -->
     <!-- Top menu line -->
     <table border="1" cellpadding="5" cellspacing="10" class="main">
@@ -32,7 +32,7 @@
 	  <script language="php">
 	    if (file_exists ("thermometer.php"))
 	    {
-	    require("thermometer.php");
+	    include("thermometer.php");
 	    print moneyMeter($totaal_ontvangen+$post_donaties+$post_sponsoring, $totaal_pending, $post_intent);
 	    }
 	  </script>

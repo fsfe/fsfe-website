@@ -31,7 +31,7 @@
 	  </a>
 	</td>
 	<td class="TopBody">
-	  FSF France
+	  FSF Europe - Chapter France
 	</td>
 	<td align="right" valign="bottom" class="TopBody">
 	  <table>
@@ -85,7 +85,7 @@
 		<a href="{$fsffrance}/science/science.fr.html">Sciences et LL</a><br />
 	      </td>
 	    </tr>
-	    <tr><td class="TopTitle" align="center">FSF France</td></tr>
+	    <tr><td class="TopTitle" align="center">FSF Europe - Chapter France</td></tr>
 	    <tr>
 	      <td class="TopBody" align="right">
 		<a href="{$fsffrance}/index.fr.html">Accueil</a><br />
@@ -155,7 +155,7 @@
       <tr>
 	<td class="newstext" align="center">
 	  <font size="-2">
-	    Copyright (C) 2002 FSF France,
+	    Copyright (C) 2002 FSF Europe - Chapter France,
 	    8 rue de Valois, 75001 Paris, France
 	    <br/>
             La reproduction exacte et la distribution intégrale de cet article

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE webpage PUBLIC "-//laespiral.org//DTD LE-document 1.1//EN"
+   "LE-document-1.1.dtd" [<!ENTITY menu SYSTEM "menu.xml">] >
+<webpage lang="en">
+  <title>FSF Europe - Background</title>
+  <translations>
+    <language>English</language>
+  </translations>
+  <sect1>
+    <title>Background</title>
+    <para>
+      In this section you can find some information about Free Software, the
+      GNU project, the Free Software Foundation and FSF Europe.
+    </para>
+    <itemizedlist>
+      <listitem>
+	<para>
+	  <ulink url="documents/freesoftware.html">What is Free
+	  Software?</ulink>
+	</para>
+      </listitem>
+      <listitem>
+	<para><ulink url="documents/doi.html">Declaration of Intent - FSF
+	Europe</ulink>
+	</para>
+      </listitem>
+    </itemizedlist>
+  </sect1>
+  &menu;
+</webpage>

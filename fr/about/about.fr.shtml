@@ -9,7 +9,7 @@
   </head>
   <body>
 
-<!--#include virtual="header.fr.html"-->
+<!--#include virtual="../header.fr.html"-->
 <center>
 [
 <!-- Please keep this list alphabetical -->
@@ -38,11 +38,11 @@
 	  </tr>
       </table>
 	    
-<!--#include virtual="footer.fr.html"-->
+<!--#include virtual="../footer.fr.html"-->
 
   Mis à jour:
 <!-- timestamp start -->
-$Date: 2001-04-16 18:10:09 $ $Author: loic $
+$Date: 2001-04-16 18:12:51 $ $Author: loic $
 <!-- timestamp end -->
 
   </body>

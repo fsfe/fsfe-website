@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<!DOCTYPE xsl:stylesheet [<!ENTITY nbsp "&#160;">]>
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE xsl:stylesheet [ <!ENTITY nbsp "&#160;"> ]>
 
 <xsl:stylesheet version="1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
@@ -47,7 +47,7 @@
 
     Updated:
     <!-- timestamp start -->
-    $Date: 2001-12-29 14:22:37 $ $Author: olberger $
+    $Date: 2001-12-29 14:24:17 $ $Author: olberger $
     <!-- timestamp end -->
 
   </body>

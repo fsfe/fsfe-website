@@ -19,7 +19,9 @@
 	  &nbsp;&nbsp;|&nbsp;&nbsp;
 	  <a class="topbanner" href="http://es.gnu.org/">GNU Espagne</a>
 	  &nbsp;&nbsp;|&nbsp;&nbsp;
-	  <a class="topbanner" href="http://www.april.org/">April</a>
+	  <a class="topbanner" href="http://www.april.org/">APRIL</a>
+	  &nbsp;&nbsp;|&nbsp;&nbsp;
+	  <a class="topbanner" href="http://www.ofset.org/">OFSET</a>
 	  &nbsp;&nbsp;|&nbsp;&nbsp;
 	  <a class="topbanner" href="http://www.lsfn.org/">LSFN</a>
 	</td>
@@ -35,7 +37,7 @@
     <table width="100%" border="0" cellspacing="0" cellpadding="4">
       <tr>
 	<td class="TopTitle">
-	  &nbsp;<a href="{$fsffrance}/index.fr.html" class="T1">France</a> |
+	  &nbsp;Chapitres locaux&nbsp;: <a href="{$fsffrance}/index.fr.html" class="T1">France</a> |
 	    Allemagne
 	</td>
       </tr>
@@ -46,7 +48,7 @@
 	<tr>
 	  <td class="TopBody">
 	    <a href="{$fsffrance}/index.fr.html">
-	      <img src="{$fsffrance}/images/gnulogo.jpg" alt="GNU Logo" border="0" />
+	      <img src="{$fsffrance}/images/gnulogo.jpg" alt="GNU Logo" border="0" height="73" width="60" />
 	    </a>
 	  </td>
 	  <td class="TopBody" width="99%" height="99%">

@@ -91,9 +91,9 @@
 	 </xsl:otherwise>
 	</xsl:choose><br/>
 	<xsl:choose>
-	 <xsl:when test="$path='contact/index.xhtml'">Contatti</xsl:when>
+	 <xsl:when test="$path='contact/contact.xhtml'">Contatti</xsl:when>
 	 <xsl:otherwise>
-	  <a href="{$fsfeurope}/contact/index.html" class="T2">Contatti</a>
+	  <a href="{$fsfeurope}/contact/contact.html" class="T2">Contatti</a>
 	 </xsl:otherwise>
 	</xsl:choose><br/>
 	<xsl:choose>

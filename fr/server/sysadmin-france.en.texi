@@ -5,7 +5,7 @@
 @setchapternewpage odd
 @c %**end of header
 
-@set RCSID $Id: sysadmin-france.en.texi,v 1.18 2001-04-24 08:43:15 r4f Exp $
+@set RCSID $Id: sysadmin-france.en.texi,v 1.19 2001-04-24 12:03:13 loic Exp $
 @set VERSION 1.0
 
 @c Combine the variable and function indices:
@@ -48,6 +48,7 @@ and FSF machines in France.
 
 @menu
 * Introduction::                
+* XML and interoperability::    
 * Accounts::                    
 * Web::                         
 * Private Data::                
@@ -87,6 +88,7 @@ Separate layout and content
 System
 
 * Security::                    
+* DNS::                         
 * Statistics::                  
 
 Security
@@ -101,7 +103,7 @@ Statistics
 @end detailmenu
 @end menu
 
-@node Introduction, Accounts, Top, Top
+@node Introduction, XML and interoperability, Top, Top
 @chapter Introduction
 
 No information on the philosophical and political goals of the
@@ -141,7 +143,74 @@ for system administration information and the
 @uref{http://savannah.gnu.org/savannah.html,,Savannah admin guide} for
 usage of the SourceForge clone.
 
-@node Accounts, Web, Introduction, Top
+@node XML and interoperability, Accounts, Introduction, Top
+@chapter XML and interoperability
+
+When publishing content or building a database for specific purposes (contact
+database, task lists, account information, permissions etc.) it is of the
+outermost importance to choose a data format that allows other programs
+to re-use the database and your own program to import databases from other
+programs. 
+
+Using XML for that purpose is only half of the answer. XML will merely
+prevent you to write a parser to read XML files and save you from the
+pitfall of inventing yet another data format. It says nothing about the
+semantic of the tags you decided to use. The harder part is to define
+the semantic associated with an XML file. For instance,
+@uref{http://www.docbook.org/,,DocBook} uses XML but the core of the
+work was to define what each tag means and make sure it covers all 
+possible needs. It tooks years and is not finished yet. Inventing a new
+semantic for a given purpose is not something that should be undertaken
+lightly.
+
+In some cases there already exists a semantic that fits your needs. Even
+if it's not an established standard
+(@uref{http://my.netscape.com/publish/formats/rss-spec-0.91.html,,RSS}
+is a widely spread de-facto standard) it will save you the effort to invent
+something completly new. You may even be able to join the group that works
+on this semantic to enhance it if needs be. There are some DTD repositories
+that can help you find out if something exists:
+
+@itemize @bullet
+
+@item @uref{http://www.xml.com/pub/rg/DTDs,,XML.com DTD}
+
+@item @uref{http://www.rosettanet.org/rosettanet/Rooms/DisplayPages/LayoutInitial?Container=com.webridge.entity.Entity%5BOID%5B6EDB5FE87F69D411BD84009027E33DD8%5D%5D,,RosettaNet}
+
+@item @uref{http://www.hr-xml.org/schemas/dtd/,hr-xml.org}
+
+@item @uref{http://www.schema.net/,,Schema.net}
+
+@item @uref{http://registry.xml.org:2020/repository/ui/searchResults.jsp?qall=dtd,,XML.org}
+
+@item @uref{http://www.openapplications.org/_vti_bin/shtml.exe/xml/loadform.htm,,Open Applications Group}
+
+@item @uref{http://www.lisa.org/tmx/tmx.htm,,Translation Memory eXchange}
+
+@item @uref{http://www.docuverse.com/xlf/index.html,,Extensible Log Format}
+
+@end itemize
+
+When the data format is chosen, chosing or writing the programs that provide
+a given service is driven by this choice. If an application exists that does
+not support the format chosen, it's fairly reasonable to write a small program
+that translate the data format into the application specific data and vice
+versa. The advantages of doing this are:
+
+@itemize @bullet
+
+@item If a new, better program becomes available and you can switch to it using
+the chosen data format do dump/reload the data.
+
+@item If you contribute the export/import program to the developers of the
+program they are likely to accept it because it's based on a standard.
+
+@item If you want to display static HTML pages from the XML export, XSLT
+allows to do this in a fairly simple way.
+
+@end itemize
+
+@node Accounts, Web, XML and interoperability, Top
 @chapter Accounts
 
 @menu
@@ -612,12 +681,12 @@ repository write to @email{team@@fsfeurope.org,FSF Europe Team} or
 
 @menu
 * Security::                    
-* DNS
+* DNS::                         
 * Statistics::                  
 @end menu
 
 @cindex security
-@node Security, Statistics, System, System
+@node Security, DNS, System, System
 @section Security
 
 @menu
@@ -625,7 +694,7 @@ repository write to @email{team@@fsfeurope.org,FSF Europe Team} or
 @end menu
 
 @cindex firewall
-@node Firewall,  DNS,  , Security, Security
+@node Firewall,  , Security, Security
 @subsection Firewall
 
 A shell script applies filtering rules, it's located in
@@ -640,7 +709,7 @@ the ones we need.
 
 @cindex DNS
 @cindex fsffrance.org
-@node Firewall, Security, , DNS, DNS
+@node DNS, Statistics, Security, System
 @section DNS
 
 The DNS is handled by the GNU name servers.
@@ -650,9 +719,9 @@ The latter domain name (@code{fsffrance.org}) has been bought at @uref{http://ww
 
 The primary and secondary name servers are respectively  @code{ns1.gnu.org} (@code{199.232.76.162}) and @code{sfi.santafe.edu} (@code{192.12.12.1}).
 
-@node Security, Statistics, 
+@node Security,  , DNS, System
 @cindex statistics mrtg
-@node Statistics, DNS,  , Security, System
+@node Statistics,  , DNS, System
 @section Statistics
 
 Systems statistics are generated with mrtg

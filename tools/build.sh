@@ -17,7 +17,7 @@ if test $? -ne 0; then
    exit 1
 fi
 cd $TMP
-symlinks
+/usr/local/bin/symlinks
 
 mv $DEST ${DEST}.old
 mv $TMP $DEST

@@ -14,5 +14,20 @@
 
 <xsl:param name="section.autolabel" select="1"/>
 
+<!-- Enabling all extensions -->
+<!--
+<xsl:param name="use.extensions" select="1"/>
+-->
+<!-- Using fop or passivetex extensions to produce bookmarks for PDF output -->
+<!-- fop.extensions produce buggy outputs for now... -->
+<!--
+<xsl:param name="fop.extensions" select="1"/>
+-->
+<!-- ...and i18n problems with passivetex.extensions :-( -->
+<!--
+<xsl:param name="passivetex.extensions" select="1"/>
+-->
+
+
 </xsl:stylesheet>
 

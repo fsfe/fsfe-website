@@ -30,6 +30,7 @@ all:: news process
 
 clean:
 	find . -name '*.html' -print | xargs rm 
+	rm news/news-bytes.*.xhtml
 
 process: 
 	@find * -name '*.xhtml' -print | while read path ; \

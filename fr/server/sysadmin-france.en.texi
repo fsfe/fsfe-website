@@ -5,7 +5,7 @@
 @setchapternewpage odd
 @c %**end of header
 
-@set RCSID $Id: sysadmin-france.en.texi,v 1.59 2002-04-01 00:51:44 loic Exp $
+@set RCSID $Id: sysadmin-france.en.texi,v 1.60 2002-04-01 13:26:03 loic Exp $
 @set VERSION 2.0
 
 @c Combine the variable and function indices:
@@ -17,7 +17,7 @@
 @title System Administration France
 @subtitle Information specific to GNU and FSF machines in France
 @subtitle @code{Sysadmin France} Version @value{VERSION}
-@author Loic Dachary, Rodolphe Quiedeville, Cyril Bouthors
+@author Loic Dachary, Rodolphe Quiédeville, Cyril Bouthors
 @page
 @vskip 0pt plus 1filll
 
@@ -50,6 +50,7 @@ and FSF machines in France.
 * Introduction::                
 * Hardware List::               
 * Hardware Setup::              
+* Hosting facilities::          
 * Accounts::                    
 * System::                      
 * Concept Index::               
@@ -58,6 +59,12 @@ and FSF machines in France.
 @detailmenu
  --- The Detailed Node Listing ---
 
+Hosting facilities
+
+* Free::                        
+* Lolix::                       
+* Nevrax::                      
+
 Accounts
 
 * System Passwords::            
@@ -65,22 +72,22 @@ Accounts
 * Account Access::              
 * Account Update::              
 * Account Delete::              
-* Account www::                 
+* Account www on fr.fsf.org::   
 * Cron Job::                    
 
 System
 
 * Security alert::              
-* Hosting facilities::          
 * Security::                    
 * DNS::                         
-* Statistics::                  
+* Statistics (fr.fsf.org)::     
 
 Security
 
-* Firewall::                    
+* Firewall (fr.fsf.org)::       
+* Port control (snail.gnu.org and frog.gnu.org)::  
 
-Statistics
+Statistics (fr.fsf.org)
 
 * Installation::                
 * Output::                      
@@ -148,7 +155,7 @@ Asus P2B-D
 Double power
 @end example
 
-Contact : @email{cyril@@bouthors.org,Cyril Bouthors}, @email{rq@@lolix.org,Rodolphe Quiedeville}, @email{jlb@@j1b.org,Jean-Louis Bergamo}, @email{loic@@gnu.org,Loic Dachary}
+Contact : @email{cyril@@bouthors.org,Cyril Bouthors}, @email{rq@@lolix.org,Rodolphe Quiédeville}, @email{jlb@@j1b.org,Jean-Louis Bergamo}, @email{loic@@gnu.org,Loic Dachary}
 
 @item frog.gnu.org
 
@@ -165,7 +172,7 @@ Asus P2B-D
 Double power
 @end example
 
-Contact : @email{cyril@@bouthors.org,Cyril Bouthors}, @email{rq@@lolix.org,Rodolphe Quiedeville}, @email{jlb@@j1b.org,Jean-Louis Bergamo}, @email{loic@@gnu.org,Loic Dachary}
+Contact : @email{cyril@@bouthors.org,Cyril Bouthors}, @email{rq@@lolix.org,Rodolphe Quiédeville}, @email{jlb@@j1b.org,Jean-Louis Bergamo}, @email{loic@@gnu.org,Loic Dachary}
 
 @item Cisco Catalyst 3500 XL
 
@@ -223,7 +230,7 @@ AWE 64 gold
 IIyama 17"
 @end example
 
-Contact : @email{loic@@gnu.org,Loic Dachary}, @email{rq@@lolix.org,Rodolphe Quiedeville}, @email{guerby@@acm.org,Laurent Guerby}
+Contact : @email{loic@@gnu.org,Loic Dachary}, @email{rq@@lolix.org,Rodolphe Quiédeville}, @email{guerby@@acm.org,Laurent Guerby}
 
 @item Laptop
 
@@ -240,7 +247,7 @@ Contact : @email{loic@@gnu.org,Loic Dachary}, @email{mad@@april.org,Frederic Cou
 
 @end itemize
 
-@node Hardware Setup, Accounts, Hardware List, Top
+@node Hardware Setup, Hosting facilities, Hardware List, Top
 @chapter Hardware Setup
 
 Each hardware is mentionned by its name in the @xref{Hardware List}.
@@ -317,174 +324,94 @@ Laptop is travelling with Frederic Couchet.
 
 @end itemize
 
-@node Accounts, System, Hardware Setup, Top
-@chapter Accounts
+@node Hosting facilities, Accounts, Hardware Setup, Top
+@chapter Hosting facilities
+
+Each section in this chapter describe a location where
+GNU machines are hosted in France. 
+
+If the people and contacts listed here are for some reason unable to
+fix an urgent problem, one can look into the sysadmin.texi document
+(entry @uref{http://www.nevrax.com/,Nevrax},
+@uref{http://www.lolix.org/,Lolix},
+@uref{http://www.free.fr/,Free.fr}) in the private project
+@uref{http://savannah.gnu.org/projects/sysadmin/}. This document list
+additional information that cannot be published to preserve the
+privacy of the people.
 
 @menu
-* System Passwords::            
-* Account Create::              
-* Account Access::              
-* Account Update::              
-* Account Delete::              
-* Account www::                 
-* Cron Job::                    
+* Free::                        
+* Lolix::                       
+* Nevrax::                      
 @end menu
 
-@node System Passwords, Account Create, Accounts, Accounts
-@section System Passwords
+@node Free, Lolix, Hosting facilities, Hosting facilities
+@section Free
 
-If you need the password of system users such as root or www you
-should ask to the following persons:
+@cindex Free
+
+Free is one of the largest Internet provider in France.
+There is little chance that we are able to spot a connectivity
+problem which they overlook.
+
+@example
+Linx
+124 bd de Verdun
+92400 Courbevoie
++33 8 04 55 44 11
+@end example
+
+@itemize 
+
+@item @email{loic@@gnu.org,Loic Dachary} 
+Work: +33 1 41 66 47 22, Home: +33 1 42 45 07 97. 
+Installed the machines.
+
+@item @email{cyril@@bouthors.org,Cyril Bouthors}.
+Work: +33 1 41 66 47 06.
+Installed the machines.
+
+@item @email{alevavasseur@@corp.free.fr,Antoine Levavasseur}. 
+Work: +33 1 49 04 48 81.
+Works for Free, is our primary contact and arranged for the
+rack space and bandwidth. He accepts to be disturbed if an
+operation requires physical access to the machine, as long
+as it happens very rarely.
+
+@end itemize
+
+@node Lolix, Nevrax, Free, Hosting facilities
+@section Lolix
+
+@cindex Lolix
+
+@example
+Lolix
+8 rue de Valois
+75001 Paris
++33 1 40 15 03 18
+@end example
+
+No machine accessible from the internet is located here but
+some are stored and used for running the FSFE France office.
 
 @itemize
 
-@item @email{rq@@lolix.org,Rodolphe Quiedeville}
+@item @email{loic@@gnu.org,Loic Dachary} 
+Work: +33 1 41 66 47 22, Home: +33 1 42 45 07 97. 
+Has physical access.
 
-@item @email{loic@@gnu.org,Loic Dachary}
-
-@item @email{jlb@@j1b.org,Jean-Louis Bergamo}
-
-@item @email{cyril@@bouthors.org,Cyril Bouthors}
-
-@end itemize
-
-@node Account Create, Account Access, System Passwords, Accounts
-@section Account Create
-
-@cindex shell account
-@cindex fsffr and shell account
-
-The user accounts on @code{france.fsfeurope.org} are managed with
-@uref{http://savannah.gnu.org/,,Savannah}. If someone need a shell
-account on @code{france.fsfeurope.org} he has to get an account on
-@uref{http://savannah.gnu.org/,,Savannah} first. Then he should send
-a mail to one of the project administrators of the 
-@uref{http://savannah.gnu.org/projects/fsffr/,,fsffr} project. The
-project administrator adds him as a member of the 
-@uref{http://savannah.gnu.org/projects/fsffr/,,fsffr} project. Within
-24 hours a cron job on @code{france.fsfeurope.org} will fetch the
-new user from Savannah and create the account. 
-
-@node Account Access, Account Update, Account Create, Accounts
-@section Account Access
-
-@cindex shell account ssh
-@cindex ssh shell account
-@cindex ssh public key
-@cindex password ssh
-@cindex ssh and password 
-Once the account is created, access to the machine is available using
-ssh and a public key. The Savannah password will not work on 
-@code{france.fsfeurope.org}. When logged on 
-@uref{http://savannah.gnu.org/projects/fsffr/,,fsffr} it is possible
-to register one or more public key at 
-@uref{http://savannah.gnu.org/account/editsshkeys.php,,Edit SSH Keys}. 
-
-@node Account Update, Account Delete, Account Access, Accounts
-@section Account Update
-
-@cindex public key update
-@cindex ssh public key update
-Once a day the ssh public keys of every account on
-@code{france.fsfeurope.org} are updated from the information fetched on
-Savannah. If the @file{authorized_keys} file of a user is manually updated,
-it will be overwritten. 
-
-@node Account Delete, Account www, Account Update, Accounts
-@section Account Delete
-
-When a user is not listed anymore in the 
-@uref{http://savannah.gnu.org/projects/fsffr/,,fsffr}, its account is
-disabled on @code{france.fsfeurope.org}. The home directory is not 
-deleted and if the user is added again at a later time, he will retrieve
-his former home directory. 
-
-@node Account www, Cron Job, Account Delete, Accounts
-@section Account www
-
-Every account created automatically as described above is also granted
-an access to the @code{www} user which owns the directory in which all
-the document roots of the apache server are : @file{/home/www}.
-
-This is simply done by appending the public keys of all the users to the
-@file{authorized_keys} file of the @code{www} user. 
-
-@node Cron Job,  , Account www, Accounts
-@section Cron Job
-
-The @file{/usr/local/bin/savannahusers} script does the update. It
-is run from the @file{/etc/cron.d/savannahusers} cron file and spits
-log information in @file{/var/log/savannahusers.log}. The log file
-is rotated according to the @file{/etc/logrotate.d/savannahusers}
-specification.
-
-Savannah does not provide account information to non identified
-machines. The @code{france.fsfeurope.org} machine is explicitly allowed
-to retrieve the relevant information in XML. For more information check
-the
-@uref{http://savannah.gnu.org/savannah.html#Account%20Management,,Account
-Management} chapter of the Savannah documentation.
-
-The @file{savannahusers} script sources can be found in the
-@uref{http://savannah.gnu.org/projects/www/,,www} project source tree.
-It was checked out in @file{france.fsfeurope.org:/usr/local/src/www}
-directory, together with other GNU specific maintainance scripts.
-
-@node System, Concept Index, Accounts, Top
-@chapter System
-
-@menu
-* Security alert::              
-* Hosting facilities::          
-* Security::                    
-* DNS::                         
-* Statistics::                  
-@end menu
-
-@node Security alert, Hosting facilities, System, System
-@section Security alert
-
-When there is a suspicion that the france.fsfeurope.org machine was
-compromised a mail should be sent to @email{france@@fsfeurope.org,FSF
-France private mailing list} and the following people can be contacted.
-
-@itemize @bullet
-
-@item @email{igor@@genibel.org,Igor Genibel}. Installed security instrusion
-detection tools.
-
-@item @email{jlb@@j1b.org,Jean Louis Bergamo}. Examined and upgraded
-the installed packages and carefully removed or replaced those that 
-may present security problems.
-
-@item @email{rq@@lolix.org,Rodolphe Quiedeville}. Analysed the logs
-for traces of intrusion.
-
-@item @email{valignat@@nevrax.org,Cedric Valignat}. Analysed the logs
-for traces of intrusion.
-
-@item @email{loic@@gnu.org,Loic Dachary}. Knows every person who has 
-access to the machine.
+@item @email{rq@@lolix.org,Rodolphe Quiédeville}. 
+Work: +33 1 40 15 03 18.
+Owns the place.
 
 @end itemize
 
-The intrusion related mails are kept in a private mail archive for
-future reference and are listed here.
+@node Nevrax,  , Lolix, Hosting facilities
+@section Nevrax
 
-@itemize @bullet
-
-@item @uref{http://mailman.fsfeurope.org/mailman/private/france/2001-June/000272.html,,June 29}.
-
-@end itemize
-
-@node Hosting facilities, Security, Security alert, System
-@section Hosting facilities
-
-@cindex Connection is down
 @cindex Colt
 @cindex Nevrax
-
-The france.fsfeurope.org machine is hosted by 
 
 @example
 Nevrax
@@ -504,8 +431,8 @@ Phone : +33 1 44 29 58 99
 Fax   : +33 1 44 29 57 97
 @end example
 
-Here is a complete list of the mail threads related to solving problems
-when something goes wrong with the Internet connection.
+Here is a complete list of the mail threads related to solving
+problems when something goes wrong with the Internet connection.
 
 @cindex troubleshooting
 
@@ -515,13 +442,9 @@ when something goes wrong with the Internet connection.
 
 @end itemize
 
-Here is a list of people who know some about the machine and its connectivity
-and who actually did something in the past to improve or fix it. Feel
-free to add yourself if you were forgotten.
-
-@cindex connection trouble contact 
-@cindex internet is down
-@cindex machine does not respond
+Here is a list of people who know some about the machine and its
+connectivity and who actually did something in the past to improve or
+fix it.
 
 @itemize @bullet
 
@@ -531,14 +454,14 @@ System administrator who is physically near the machine most of the
 time.
 
 @item @email{loic@@gnu.org,Loic Dachary} 
-Work: +33 1 41 66 47 22, Home: +33 1 42 45 09 16. 
+Work: +33 1 41 66 47 22, Home: +33 1 42 45 07 97. 
 Asked Nevrax to host the machine. 
 Installed the machine. Asked Colt to change the
 reverse for fr.fsf.org.
 
 @item @email{cyril@@bouthors.org,Cyril Bouthors}.
 Work: +33 1 41 66 47 06.
-Monitors the machine. Know Colt
+Monitors the machine. Knows Colt
 pretty well. Opened trouble tickets when the line was down.
 
 @item @email{rq@@lolix.org,Rodolphe Quiédeville}. 
@@ -548,42 +471,205 @@ Installed and maintains monitoring tools on fr.fsf.org.
 
 @item @email{devnull@@gnu.org,Joel N. Weber II}. Monitors the machine. Opened
 trouble tickets when the line was down. Calculated the reliability of
-the Colt connection. 
+the Colt connection.
 
 @end itemize
 
-If the people and contacts listed here are for some reason unable to fix
-an urgent problem, one can look into the sysadmin.texi document (entry
-@uref{http://www.nevrax.com/,Nevrax}) in the private project
-@uref{http://savannah.gnu.org/projects/sysadmin/}. This document list
-additional information that cannot be published to preserve the privacy
-of the people.
+@node Accounts, System, Hosting facilities, Top
+@chapter Accounts
+
+@menu
+* System Passwords::            
+* Account Create::              
+* Account Access::              
+* Account Update::              
+* Account Delete::              
+* Account www on fr.fsf.org::   
+* Cron Job::                    
+@end menu
+
+@node System Passwords, Account Create, Accounts, Accounts
+@section System Passwords
+
+If you need the password of system users such as root or www on any
+GNU machines located in France you should ask to the following people:
+
+@itemize
+
+@item @email{rq@@lolix.org,Rodolphe Quiédeville}
+
+@item @email{loic@@gnu.org,Loic Dachary}
+
+@item @email{jlb@@j1b.org,Jean-Louis Bergamo}
+
+@item @email{cyril@@bouthors.org,Cyril Bouthors}
+
+@end itemize
+
+@node Account Create, Account Access, System Passwords, Accounts
+@section Account Create
+
+@cindex shell account
+@cindex fsffr and shell account
+
+The user accounts on @code{fr.fsf.org} and @code{snail.gnu.org} are
+managed with @uref{http://savannah.gnu.org/,,Savannah}. If someone
+need a shell account on @code{fr.fsf.org} or @code{snail.gnu.org} she
+has to get an account on @uref{http://savannah.gnu.org/,,Savannah}
+first. Then she should send a mail to one of the project
+administrators of the
+@uref{http://savannah.gnu.org/projects/fsffr/,,fsffr} project. The
+project administrator adds her as a member of the
+@uref{http://savannah.gnu.org/projects/fsffr/,,fsffr} project. Within
+24 hours a cron job on @code{fr.fsf.org} and @code{snail.gnu.org} will
+fetch the new user from Savannah and create the corresponding account.
+
+@node Account Access, Account Update, Account Create, Accounts
+@section Account Access
+
+@cindex shell account ssh
+@cindex ssh shell account
+@cindex ssh public key
+@cindex password ssh
+@cindex ssh and password 
+Once the account is created, access to the machines is available using
+ssh and a public key. The Savannah password will not work on
+@code{fr.fsf.org} or @code{snail.gnu.org}. When logged on
+@uref{http://savannah.gnu.org/,,Savannah} it is possible
+to register one or more public key at
+@uref{http://savannah.gnu.org/account/editsshkeys.php,,Edit SSH Keys}.
+
+@node Account Update, Account Delete, Account Access, Accounts
+@section Account Update
+
+@cindex public key update
+@cindex ssh public key update
+Once a day the ssh public keys of every account on @code{fr.fsf.org}
+or @code{snail.gnu.org} are updated from the information fetched on
+Savannah. If the @file{authorized_keys} file of a user is manually
+updated, it will be overwritten.
+
+@node Account Delete, Account www on fr.fsf.org, Account Update, Accounts
+@section Account Delete
+
+When a user is not listed anymore in the
+@uref{http://savannah.gnu.org/projects/fsffr/,,fsffr}, its account is
+disabled on @code{fr.fsf.org} and @code{snail.gnu.org}. The home
+directory is not deleted and if the user is added again at a later
+time, she will retrieve his former home directory.
+
+@node Account www on fr.fsf.org, Cron Job, Account Delete, Accounts
+@section Account www on fr.fsf.org
+
+Every account created automatically as described above is also granted
+an access to the @code{www} user on @code{fr.fsf..org} (and not on
+@code{snail.gnu.org}). @code{www} owns the directory in which all the
+document roots of the apache server are : @file{/home/www}.
+
+This is simply done by appending the public keys of all the users to the
+@file{authorized_keys} file of the @code{www} user. 
+
+@node Cron Job,  , Account www on fr.fsf.org, Accounts
+@section Cron Job
+
+The @file{/usr/local/bin/savannahusers} script does the user account
+updates. It is run from the @file{/etc/cron.d/savannahusers} cron file
+and spits log information in @file{/var/log/savannahusers.log}. The
+log file is rotated according to the
+@file{/etc/logrotate.d/savannahusers} specification. This holds for
+both @code{fr.fsf.org} and @code{snail.gnu.org}.
+
+Savannah does not provide account information to non identified
+machines. The @code{fr.fsf.org} and @code{snail.gnu.org} machines are
+explicitly allowed to retrieve the relevant information. For more
+information check the
+@uref{http://savannah.gnu.org/savannah.html#Account%20Management,,Account
+Management} chapter of the Savannah documentation.
+
+The @file{savannahusers} script sources can be found in the
+@uref{http://savannah.gnu.org/projects/www/,,www} project source tree.
+It was checked out in @file{/usr/local/src/www} directory (on
+@code{fr.fsf.org} and @code{snail.gnu.org}), together with other GNU
+specific maintainance scripts.
+
+@node System, Concept Index, Accounts, Top
+@chapter System
+
+@menu
+* Security alert::              
+* Security::                    
+* DNS::                         
+* Statistics (fr.fsf.org)::     
+@end menu
+
+@node Security alert, Security, System, System
+@section Security alert
+
+When there is a suspicion that a machine was compromised a mail should
+be sent to @email{france@@fsfeurope.org,FSF France private mailing
+list} and the following people can be contacted.
+
+@itemize @bullet
+
+@item @email{loic@@gnu.org,Loic Dachary}. All machines.
+
+@item @email{jlb@@j1b.org,Jean Louis Bergamo}. All machines.
+
+@item @email{rq@@lolix.org,Rodolphe Quiédeville}. All machines.
+
+@item @email{igor@@genibel.org,Igor Genibel}. @code{fr.fsf.org} only.
+
+@item @email{valignat@@nevrax.org,Cedric Valignat}. @code{fr.fsf.org} only (emergency requiring physical access).
+
+@item @email{alevavasseur@@corp.free.fr,Antoine Levavasseur}. @code{snail.gnu.org} and @code{frog.gnu.org} only (emergency requiring physical access).
+
+@end itemize
+
+The intrusion related mails are kept in a private mail archive for
+future reference and are listed here.
+
+@itemize @bullet
+
+@item @uref{http://mailman.fsfeurope.org/mailman/private/france/2001-June/000272.html,,June 29 (fr.fsf.org)}.
+
+@end itemize
 
 @cindex security
-@node Security, DNS, Hosting facilities, System
+@node Security, DNS, Security alert, System
 @section Security
 
 @menu
-* Firewall::                    
+* Firewall (fr.fsf.org)::       
+* Port control (snail.gnu.org and frog.gnu.org)::  
 @end menu
 
 @cindex firewall
-@node Firewall,  , Security, Security
-@subsection Firewall
+@node Firewall (fr.fsf.org), Port control (snail.gnu.org and frog.gnu.org), Security, Security
+@subsection Firewall (fr.fsf.org)
 
 A shell script applies filtering rules, it's located in
-@file{/etc/init.d/firewall}. This script is compatible with kernel 2.2
-and 2.4 and detects the kernel version using @file{uname}. @file{ipchains} is
-used with 2.2 and @file{iptables} with 2.4.
+@file{fr.fsf.org:/etc/init.d/firewall}. This script is compatible with
+kernel 2.2 and 2.4 and detects the kernel version using
+@file{uname}. @file{ipchains} is used with 2.2 and @file{iptables}
+with 2.4.
 
 Warning : only the ipchains (2.2) section is well configured.
 
 The policy applied is to close all TCP/UDP port by default and open only
 the ones we need.
 
+@cindex port control
+@node Port control (snail.gnu.org and frog.gnu.org),  , Firewall (fr.fsf.org), Security
+@subsection Port control (snail.gnu.org and frog.gnu.org)
+
+On @code{snail.gnu.org} and @code{frog.gnu.org} there is no
+firewall. Instead, only services needed to provide the services
+that match the intended purpose of the machine are launched. 
+All other daemons are de-activated.
+
 @cindex DNS
-@cindex fsffrance.org
-@node DNS, Statistics, Security, System
+@cindex ns2.gnu.org
+@node DNS, Statistics (fr.fsf.org), Security, System
 @section DNS
 
 The FSF France machine has a canonical name of @code{fr.fsf.org}, this
@@ -591,12 +677,10 @@ name should be used for the reverse.
 
 Unless stated otherwise in the @file{/etc/bind/named.conf} file, all
 the domains use @code{ns1.gnu.org} as a primary name server and
-@code{ns1.fsffrance.org} as a secondary name server.
+@code{ns2.gnu.org} as a secondary name server.
 
-@code{ns1.fsffrance.org} is used as a secondary name server for most
-Europe related domain names. It should not be used as a primary DNS,
-unless someone is willing to take the responsibility of taking care of
-it permanently. 
+@code{ns2.gnu.org} is run by @code{fr.fsf.org} and is configured
+to be the secondary name server of all gnu.org domains.
 
 The domain name @code{fsffrance.org} has been bought at
 @uref{http://www.gandi.net,,GANDI}, a French registrar, and is owned by
@@ -606,8 +690,8 @@ Technical and Billing contact of this domain name.
 The domain name @code{fsfeurope.org} is owned by @email{greve@@gnu.org,,Georg Greve}.
 
 @cindex statistics mrtg
-@node Statistics,  , DNS, System
-@section Statistics
+@node Statistics (fr.fsf.org),  , DNS, System
+@section Statistics (fr.fsf.org)
 
 Systems statistics are generated with mrtg
 @uref{http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/}
@@ -617,7 +701,7 @@ Systems statistics are generated with mrtg
 * Output::                      
 @end menu
 
-@node Installation, Output, Statistics, Statistics
+@node Installation, Output, Statistics (fr.fsf.org), Statistics (fr.fsf.org)
 @subsection Installation
 
 mrtg and addons have been installed with apt-get, two packages :
@@ -640,10 +724,10 @@ stat.pl
 @end itemize
 
 
-@node Output,  , Installation, Statistics
+@node Output,  , Installation, Statistics (fr.fsf.org)
 @subsection Output
 
-Output dir is @file{/var/www/france.fsfeurope.org/mrtg/}
+Output dir is @file{/var/www/fr.fsf.org/mrtg/}
 
 @node Concept Index, Name Index, System, Top
 @unnumbered Index of Concepts

@@ -45,14 +45,6 @@
       pas au concédant ou au concessionnaire d'une licence GNU GPL de
       comprendre les conséquences de la GNU GPL.
 
-      Avertissement concernant les auteurs de cette traduction.
-
-      Les personnes ayant participé à cette traduction vivent en france,
-      sont de culture et de langue française. Leurs connaissances
-      juridiques concernent exclusivement le droit français et le
-      droit international, à l'exclusion des législations de pays
-      francophones autres que la France.
-
       Avis de droit d'auteur:
 
       Copyright (C) 2001, 2002 APRIL (http://www.april.org/).  
@@ -92,9 +84,7 @@
 
       third party => tiers
 
-      party => tiers : lorsqu'il pourrait s'entendre comme "third party".
-      La distinction qui existe entre "third party" et "party" est perdue
-      mais est insignifiante.
+      party => partie : dans le sens partie au contrat
 
       body of this licence => corps de la présente licence
 
@@ -120,6 +110,8 @@
 
       copyright holder => titulaire du droit d'auteur
 
+--clause =====> disposition
+--clarifie
       software => logiciel (substantif)
 
       program => programme (nom)
@@ -130,6 +122,7 @@
 
       to redistribute => redistribuer
 
+--revert
       to copy => reproduire : on pourra cependant utiliser copier lorsqu'il
       ne s'agit pas de faire précisément référence à l'autorisation de 
       l'auteur. On dira "l'auteur donne l'autorisation de reproduire" mais
@@ -141,7 +134,12 @@
       la licence cela signifie que le programme est distribué en accord
       avec les obligations décrites dans licence
 
-      sublicense => concéder en sous-licence
+--change
+      scope => champ d'application : tout ce qui est influencé par
+      les clauses de la licence, qui est soumis aux effets de la
+      licence
+
+      to sublicense => concéder une sous-licence
 
       to license => concéder une licence de: cela impose parfois des
       reconstructions de phrase car un verbe est remplacé par un verbe
@@ -149,26 +147,25 @@
       mais considéré juridiquement plus faible que l'équivalent
       anglais "to license".
 
-      under the terms / under copyright law : au titre des présentes clauses /
-      au titre des lois sur le droit d'auteur
+      as is => en l'état
 
-      as is => tel quel
-
-      merchandability => qualité loyale et marchande
+      merchantability => qualité loyale et marchande
 
       recipient of the program => destinataire du programme
 
-      warranty => recours en garantie: s'il s'agit d'une proposition de
-      de service de la part de quelqu'un
+      warranty disclaimer => exonération de garantie: le sens
+      habituel d'éxonération impliquant deux personnes n'est pas
+      repris ici, c'est le concédant qui s'éxonère lui même de la 
+      fourniture de toute garantie
 
-      warranty => garantie: s'il s'agit d'une absence de garantie
+      warranty => garantie
 
       to run a program => exécuter un programme
 
       invalid => invalide : s'agissant d'une clause
 
       unenforceable => inapplicable : s'agissant d'une clause
-      
+
       Termes définis:
       ===============
 
@@ -186,11 +183,17 @@
       remplacé par "votre" ou "vos" dans une phrase car on perdrait ainsi
       la correspondance avec la définition de "vous" dans la licence.
 
+--remplace complet par intégral
       complete source code => le code source complet : définit dans l'Article
       3 mais utilisé avant
 
+      Section => Article
+
       Vocabulaire présentant des difficultés:
       =======================================
+
+      under the terms / under copyright law : au titre des présentes clauses /
+      au titre des lois sur le droit d'auteur
 
       module => module : dans le contexte module d'un programme. L'idée de
       module n'est pas définie ce qui laisse un flou, en anglais comme
@@ -201,10 +204,10 @@
       verbe plus proche de "may", peuvent fait l'affaire et la perte de 
       nuance entre "can" et "may" ne nuit pas au sens. 
 
-      terms / conditions => clauses / obligations : 2.c) conditions
+      terms / conditions => clauses / obligations
 
-      normally => habituellement: on aurait pu utiliser "normallement" mais
-      la signification "sans problème, sans incident" de "normallement" est
+      normally => habituellement: on aurait pu utiliser "normalement" mais
+      la signification "sans problème, sans incident" de "normalement" est
       trop forte et cache celle qui est importante: l'idée de norme, de
       standard, d'habitude. Si on dit "lorsqu'un programme se lance de
       la façon la plus normale" on fait référence à la façon la plus usuelle,
@@ -215,22 +218,26 @@
       s'arranger pour rédiger de telle façon que "vous" soit toujours
       présent (voir Termes définis)
 
+--amelioration possible en supprimant le we de l'article pour consistance
       we => le titulaire des droits d'auteur: dans le préambule
 
       we => la Free Software Foundation: Article 10
 
-      indéfini => auteur de la licence : Article 7 "what is believed"
+      indéfini / forme impersonnelle ? => auteur de la licence : 
+      Article 7 "what is believed"
 
       restriction => limitation : bien que restriction soit correct en
       français, le mot limitation a une signification plus proche du terme
       anglais restriction, sans pour autant que restriction soit un faux
       ami.
 
+--doute sur le fait que sortie / résultat
       output => sortie : se comprend en vocabulaire informatique seulement,
       par référence à entrée / sortie. Il n'est pas possible de le remplacer
       par un terme ne faisant pas partie du jargon informatique sans perdre
       du sens ou en ajouter.
 
+--éventuellement garder le mot verbatim
       verbatim => à l'identique: on aurait pu lui préférer "en l'état" ou
       "tel quel" mais "à l'identique" améliore la lisibilité sans changer
       le sens.
@@ -249,8 +256,9 @@
 	conçues pour vous enlever toute liberté de les partager et de les
 	modifier. </dst>
       <notes>
-	Laurent: "toute liberte" traduit mieux "la liberte" est trop
-	flou et generique et plus exact
+	Laurent: "toute liberte" est plus exact et traduit mieux
+	"la liberte" est trop
+	flou et generique
       </notes>
     </para>
 
@@ -260,12 +268,12 @@
 	make sure the software is free for all its users.
       </src>
 
-      <dst>A contrario, la Licence Publique Générale est destinée garantir
+      <dst>A contrario, la Licence Publique Générale est destinée à garantir
 	votre liberté de partager et de modifier les logiciels libres,
 	et à assurer que ces logiciels soient libres pour tous leurs
 	utilisateurs.  </dst> 
       <notes>
-	Laurent: "ces" refere a "les logiciels" plus tot dans la phrase
+	"ces" fait référence à "les logiciels libres" plus tôt dans la phrase.
 	</notes>
     </para>
 
@@ -283,7 +291,7 @@
       <src>(Some other Free Software Foundation software is covered by
 	the GNU Library General Public License instead.)</src>
       <dst>(Certains autres logiciels de la Free Software Foundation
-	sont couverts par la GNU Lesser General Public License a la place.)</dst>
+	sont couverts par la GNU Lesser General Public License à la place.)</dst>
     </para>
 
     <para>
@@ -345,7 +353,7 @@
       <dst>Ces limitations équivalent à
         certaines responsabilités qui
         vous incombent si vous distribuez des copies de ces logiciels, ou
-	si les modifiez.</dst>
+	si vous les modifiez.</dst>
       <notes>
 	"ces logiciels" fait référence aux logiciels libres, voir
 	ci-dessus le paragraphe débutant par "A contrario".
@@ -419,14 +427,21 @@
 	reflect on the original authors' reputations.</src>
       <dst>Si le logiciel est modifié par quelqu'un d'autre puis
 	transmis à des tiers, nous voulons que les destinataires
-	soient mis au courant que ce qu'ils ont recu n'est pas le logiciel d'origine, de sorte
+	soient mis au courant que ce qu'ils ont reçu n'est pas le logiciel d'origine, de sorte
 	que tout problème introduit par d'autres ne puisse entacher
 	la réputation de
 	l'auteur original.</dst>
       <note>
-	Laurent: have dans l'article correspond bcp plus a l'idee de "recu"
+	Laurent: "have" dans l'article correspond beaucoup plus a l'idee de "reçu"
 	qu'a celle de possession qui est totalement hors du sujet de ce
 	paragraphe.
+
+	"entacher" a une connotation négative qui est absente de
+	"influer sur" qui serait la traduction fidèle de
+	"reflect". Mais comme il s'agit dans la phrase de "problèmes"
+	le présuposé négatif est déjà présent dans la phrase et
+	l'introduire de nouveau en employant "entacher" n'ajoute pas
+	un sens qui serait absent de la phrase.
       </note>
     </para>
 
@@ -440,7 +455,7 @@
 	brevets de logiciels.</dst>
       <notes>
 	Laurent: un == article indéfinit remplace "tout". Utiliser
-	le futur comme present de généralité qui cumule "is"et "constantly"
+	le futur comme présent de généralité qui cumule "is" et "constantly"
 	</notes>
     </para>
 
@@ -449,12 +464,14 @@
 	program will individually obtain patent licenses, in effect
 	making the program proprietary.  </src>
 
+écarter
       <dst>Nous souhaitons éviter le risque que les redistributeurs
       d'un programme libre fassent des demandes individuelles de
       licence de brevet, ceci ayant pour effet de rendre le programme
       propriétaire.
        </dst>
-
+      <notes>
+      </notes>
     </para>
 
     <para>
@@ -462,8 +479,8 @@
 	be licensed for everyone's free use or not licensed at
 	all.</src>
       <dst>Pour éviter cela, nous établissons clairement que toute licence de brevet
-      doit être acquise de facon a ce que l'usage en soit libre pour tous
-      ou bien qu'aucune licence ne soit acquise.</dst>
+      doit être concédée de facon a ce que l'usage en soit libre pour tous
+      ou bien qu'aucune licence ne soit concédée.</dst>
     </para>
 
     <p/>
@@ -472,7 +489,7 @@
       <src>
 	The precise terms and conditions for copying, distribution and
 	modification follow.</src>
-      <dst>Les termes exacts et les conditions de copie, distribution et
+      <dst>Les termes exacts et les conditions de reproduction, distribution et
         modification sont les suivants:</dst>
     </para>
 
@@ -481,21 +498,10 @@
   <section>
     <title lang="en">GNU General Public License Terms and Conditions
       for Copying, Distribution and Modification</title>
-    <title lang="fr">Clauses de la Licence Publique Générale
-      GNU portant sur la reproduction, la distribution et la
-      modification</title>
+    <title lang="fr">Conditions de reproduction, distribution
+      et modification de la Licence Publique Générale GNU.</title>
 
     <notes>
-      "Termes and Conditions" est un terme consacré en droit
-      anglo-saxon qui se traduit mal tel quel en français. "termes et
-      conditions" est remplacé par "clauses". Il serait aussi possible
-      de traduire par "clause et obligations" ce qui trouverait un
-      écho dans le fait que "conditions" est systématiquement traduit
-      par "obligation" dans la suite. Mais c'est une formulation
-      inhabituelle lorsqu'on rédige une licence en français. Dans ce
-      cas le fait de remplacer les deux termes par un seul ne rajoute
-      pas de signification et n'enlève pas de signification.
-
       L'utilisation des majuscules dans les titres passe mal en français
       et a été abandonné dans la traduction.
     </notes>
@@ -507,9 +513,20 @@
 	License.</src>
       <dst>0. La présente Licence s'applique à tout programme
 	ou tout autre ouvrage contenant un avis, apposé par le titulaire des
-	droits d'auteur, stipulant qu'il peut être distribué dans le respect
-	des clauses de la présente Licence Publique
+	droits d'auteur, stipulant qu'il peut être distribué au titre
+	des dispositions de la présente Licence Publique
 	Générale.</dst>
+      <notes>
+	"ou tout autre ouvrage" repète le "tout" alors que la version anglaise
+	ne le fait pas car il existe une ambiguïté si on l'omet en français
+	qui ne se retrouve pas en anglais. On pourrait déduire que "tout" ne
+	s'applique qu'au programme et non à l'"autre ouvrage"
+	
+	"terms" pourrait se traduire par "termes" sans poser de problème
+	de sens. Cependant, "dispositions" a la même signification et 
+	la formulation est plus facile à lire et plus proche des formules
+	consacrées en droit français.
+      </notes>
     </para>
 
     <para>
@@ -524,7 +541,7 @@
 	désigne soit le Programme, soit un ouvrage qui en dérive au
 	titre des lois sur le droit d'auteur: en d'autres termes, 
 	un ouvrage contenant le Programme ou une partie de
-	ce dernier, soit á l'identique, soit avec des modifications et/ou
+	ce dernier, soit à l'identique, soit avec des modifications et/ou
 	traduit dans un autre langage.</dst>
     </para>
     <note>
@@ -546,7 +563,7 @@
       Reformulation: dans la suite de la licence, lorsqu'il est écrit
       "modification" il faut lire "modification ou traduction". Le
       "sans s'y réduire" signifie qu'on ne peut pas prétendre que 
-      par la suite "modification" signifie exclusivement "traduction".
+      par la suite que "modification" signifie exclusivement "traduction".
       Cela aurait pour effet, par exemple, de permettre à quelqu'un
       de prétendre qu'une amélioration au programme n'est pas permise
       car il ne s'agit pas d'une traduction et que la licence ne permet
@@ -557,8 +574,8 @@
       <src>Each licensee is addressed as "you".</src>
       <dst>Chaque concessionaire sera désigné par "vous".</dst>
       <notes>
-	Il est implicite que le concessionaire est concessionaire
-	de la présente license. 
+	Il est implicite que le "concessionaire" est "concessionaire
+	de la présente license". 
       </notes>
     </para>
 
@@ -571,7 +588,7 @@
       </src>
       <dst>Les activités autres que la reproduction, la distribution et
 	la modification ne sont pas couvertes par la présente Licence
-	; elles sont hors de sa sphère d'influence.</dst>
+	; elles sont hors de son champ d'application.</dst>
     </para>
 
     <para>
@@ -582,7 +599,7 @@
       <dst>L'opération consistant à exécuter le Programme n'est soumise à aucune limitation
 	et les sorties du programme ne sont couvertes que si leur
 	contenu constitue un ouvrage fondé sur le Programme
-	(indépendamment du fait qu'il ait été réalisé grâce à l'exécution
+	(indépendamment du fait qu'il ait été réalisé par l'exécution
 	du Programme).</dst>
       <notes>
 	Il faut bien distinguer "exécuter" et "lancer" qui correspondent
@@ -592,6 +609,12 @@
 	d'acte ponctuel est forte et s'oppose à l'idée de durée 
 	contenue dans "exécuter". C'est la raison du choix du mot
 	"opération".
+
+	"par" pourrait être remplacé par "grâce à". Mais on
+	introduirait l'idée que l'exécution du programme pourrait être
+	accessoire à la production du contenu. En utilisant "par" on
+	appuie sur le fait que la production du contenu est le
+	résultat de l'exécution du programme.
       </notes>
     </para>
 
@@ -600,6 +623,16 @@
 	does.</src>
       <dst>La validité de ce qui précède dépend de ce que fait le
 	Programme.</dst>
+      <notes>
+	La phrase précédente dit que l'exécution du programme n'est pas
+	soumise à autorisation de l'auteur. Mais si l'exécution du
+	programme consiste à faire une reproduction (même partielle)
+	de lui même. En effet, dans ce cas il ne s'agit pas d'une simple
+	exécution mais aussi d'une reproduction qui est soumise à 
+	l'autorisation de l'auteur. Donc la phrase précédente ne s'applique
+	pas dans ce cas, ce qui justifie la précaution assez large prise
+	par cette phrase.
+      </notes>
     </para>
 
     <p/>
@@ -618,7 +651,7 @@
 	reçu, sur n'importe quel support, du moment que vous apposez
 	sur chaque copie, d'une manière ad hoc et parfaitement
 	visible, l'avis de droit d'auteur adéquat et
-	un déni de garantie ; que vous gardez intacts tous les
+	une exonération de garantie ; que vous gardez intacts tous les
 	avis faisant référence à la présente Licence et à l'absence de
 	toute garantie ; et que vous fournissez à tout destinataire du
 	Programme autre que vous même un exemplaire de la présente
@@ -636,7 +669,10 @@
 	de droit d'auteur doit avoir a une forme adéquate (appropriate) 
 	dont dépend sa validité, qui conditionne le fait qu'il sera
 	jugé recevable dans certain cas. Par exemple il faut y inclure
-	la lettre "c" dans un cercle.
+	la lettre "c" dans un cercle. On pourrait mettre "requis" mais
+	cela suggèrerait une obligation d'ajouter cet avis au lieu de
+	véhiculer la simple idée que l'avis doit avoir une forme "requise"
+	pour être valid. C'est pourquoi on lui préfère "adéquat".
       </notes>
     </para>
 
@@ -649,7 +685,7 @@
 	exchange for a fee.</src>
       <dst>Vous pouvez faire payer l'acte physique de
 	transmission d'une copie, et vous pouvez, à votre discrétion,
-	proposer un recours en garantie contre rémunération.</dst>
+	proposer une garantie contre rémunération.</dst>
     </para>
 
     <p/>
@@ -662,10 +698,15 @@
 	conditions:
       </src>
       <dst>2. Vous pouvez modifier votre copie ou des copies du Programme
-	ou n'importe quelle partie de celui-ci, réalisant ainsi un ouvrage
-	fondé sur le Programme, et copier et distribuer de tels modifications ou ouvrage selon les
+	ou n'importe quelle partie de celui-ci, créant ainsi un ouvrage
+	fondé sur le Programme, et copier et distribuer de telles modifications ou ouvrage selon les
 	termes de l'Article 1 ci-dessus, à condition de vous conformer également
 	à chacune des obligations suivantes:</dst>
+
+      <notes>
+	"créant" pourrait être remplacé par "réalisant" mais "créant" semble
+	plus juste, juridiquement parlant, dans ce contexte.
+      </notes>
     </para>
 
     <indent/>
@@ -742,18 +783,18 @@
 	en sorte qu'il imprime ou affiche une annonce
 	comprenant un avis de droit d'auteur adéquat, et un avis
 	stipulant qu'il n'y a pas de garantie (ou bien stipulant que
-	vous fournissez un recours en garantie), et que
+	vous fournissez une garantie), et que
 	les utilisateurs peuvent redistribuer le programme en respectant
-	les présentes obligations, et expliquant à l'utilisateur comment voir
-	une copie de la présente Licence.</dst>
+	les présentes obligations, et expliquant à l'utilisateur comment 
+	visualiser une copie de la présente Licence.</dst>
       <notes>
 	Il aurait été tentant de traduire "under these conditions" par
-	"au titre des présentes clauses". Cependant, lorsque le
-	terme "condition" est employé c'est pour faire référence aux
+	"au titre des présentes conditions". Cependant, lorsque le
+	terme "condition" est employé ici c'est pour faire référence aux
 	obligations et non aux clauses de la licence. Le b) juste
 	au dessus utilise
 	la formule "under the terms of this License" qui se traduit
-	en "au titre des clauses de la présente Licence", il est 
+	en "au titre des dispositions de la présente Licence", il est 
 	donc pertinent et nécessaire de retranscrire la différence
 	de formulation anglaise. En effet, il est fait référence ici
 	aux obligations liées à la redistribution et non à toutes les
@@ -771,7 +812,7 @@
 	d'imprimer une annonce).</dst>
       <notes>
 	"the Pogram itself" doit se comprendre comme le programme
-	original, sans modifications. Il aurait été plus clair de dire
+	non modifié. Il aurait été plus clair de dire
 	"the original Program", bien que ce soit redondant avec la
 	définition de Program comme nom propre. 
       </notes>
@@ -848,8 +889,8 @@
       <dst>De plus, la simple proximité du Programme avec un autre ouvrage qui n'est
         pas fondé sur le Programme (ou un ouvrage fondé
 	sur le Programme) sur un espace de stockage ou un support de
-	distribution ne place pas l'autre ouvrage dans la sphère 
-	d'influence de
+	distribution ne place pas l'autre ouvrage dans le champ
+	d'application de
 	la présente Licence.
 	</dst>
       <notes>
@@ -1004,9 +1045,9 @@
 	distribuer le Programme est réputée nulle, et met
 	immédiatement fin à vos droits au titre de la présente Licence. 
 	Toutefois, les
-	tiers ayant reçu de vous des copies, ou des droits,
+	les parties ayant reçu de vous des copies, ou des droits,
 	au titre de la présente Licence ne verront pas leurs licences annullées
-	aussi longtemps que ces tiers restent en totale conformité.
+	aussi longtemps que ces parties restent en totale conformité.
 	</dst>
     </para>
 
@@ -1279,7 +1320,7 @@
       <dst>11. COMME LA LICENCE DU PROGRAMME EST CONCEDEE A TITRE GRATUIT, 
 	AUCUNE GARANTIE NE S'APPLIQUE AU PROGRAMME, DANS LES LIMITES
 	AUTORISEES PAR LA LOI APPLICABLE. SAUF MENTION CONTRAIRE ECRITE,
-	LES TITULAIRES DU DROIT D'AUTEUR ET/OU LES AUTRES TIERS FOURNISSENT
+	LES TITULAIRES DU DROIT D'AUTEUR ET/OU LES AUTRES PARTIES FOURNISSENT
 	LE PROGRAMME "EN L'ETAT", SANS AUCUNE GARANTIE DE
 	QUELQUE NATURE QUE CE SOIT, EXPRESSE OU IMPLICITE, Y COMPRIS, MAIS
 	SANS Y ETRE LIMITE, LES GARANTIES IMPLICITES DE QUALITE LOYALE ET MARCHANDE ET
@@ -1297,13 +1338,13 @@
     <para>
       <src>12. IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR REDISTRIBUTE THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
       </src>
-      <dst>12. EN AUCUN CAS, SAUF LORSQUE LA LOI APPLICABLE OU UNE CONVENTION ECRITE L'EXIGE, UN TITULAIRE DE DROIT D'AUTEUR QUEL QU'IL SOIT, OU TOUT TIERS QUI POURRAIT MODIFIER ET/OU REDISTRIBUER LE PROGRAMME COMME PERMIS CI-DESSUS, NE POURRAIT ETRE TENU POUR RESPONSABLE A VOTRE EGARD DES DOMMAGES, INCLUANT LES DOMMAGES GENERIQUES, SPECIFIQUES, SECONDAIRES OU CONSECUTIFS, RESULTANT DE L'UTILISATION OU DE L'INCAPACITE D'UTILISER LE PROGRAMME (Y COMPRIS, MAIS SANS Y ETRE LIMITE, LA PERTE DE DONNEES, OU LE FAIT QUE DES DONNEES SOIENT RENDUES IMPRECISES, OU LES PERTES EPROUVEES PAR VOUS OU PAR DES TIERS, OU LE FAIT QUE LE PROGRAMME ECHOUE A INTEROPERER AVEC UN AUTRE PROGRAMME QUEL QU'IL SOIT) MEME SI LE DIT TITULAIRE DU DROIT D'AUTEUR OU LE TIERS CONCERNE A ETE AVERTI DE L'EVENTUALITE DE TELS DOMMAGES.
+      <dst>12. EN AUCUN CAS, SAUF LORSQUE LA LOI APPLICABLE OU UNE CONVENTION ECRITE L'EXIGE, UN TITULAIRE DE DROIT D'AUTEUR QUEL QU'IL SOIT, OU TOUTE PARTIE QUI POURRAIT MODIFIER ET/OU REDISTRIBUER LE PROGRAMME COMME PERMIS CI-DESSUS, NE POURRAIT ETRE TENU POUR RESPONSABLE A VOTRE EGARD DES DOMMAGES, INCLUANT LES DOMMAGES GENERIQUES, SPECIFIQUES, SECONDAIRES OU CONSECUTIFS, RESULTANT DE L'UTILISATION OU DE L'INCAPACITE D'UTILISER LE PROGRAMME (Y COMPRIS, MAIS SANS Y ETRE LIMITE, LA PERTE DE DONNEES, OU LE FAIT QUE DES DONNEES SOIENT RENDUES IMPRECISES, OU LES PERTES EPROUVEES PAR VOUS OU PAR DES TIERS, OU LE FAIT QUE LE PROGRAMME ECHOUE A INTEROPERER AVEC UN AUTRE PROGRAMME QUEL QU'IL SOIT) MEME SI LE DIT TITULAIRE DU DROIT D'AUTEUR OU LE PARTIE CONCERNEE A ETE AVERTI DE L'EVENTUALITE DE TELS DOMMAGES.
 </dst>
 
     </para>
 
     <title lang="en">END OF TERMS AND CONDITIONS</title>
-    <title lang="fr">FIN DES CLAUSES</title>
+    <title lang="fr">FIN DES CONDITIONS</title>
 
   </section>
 

@@ -1,9 +1,12 @@
-$Id: webmaster-HOWTO.txt,v 1.4 2001-08-25 14:49:46 olberger Exp $
+$Id: webmaster-HOWTO.txt,v 1.5 2001-08-27 22:21:16 olberger Exp $
 
 This document is a HOWTO for any volunteer interested in acting as a
 webmaster for the FSF Europe website (www.fsfeurope.org).
 
 Author : Olivier Berger <oberger@april.org>
+
+Remarks by others between (( and ))
+
 
 Topics covered : 
 ----------------
@@ -93,6 +96,11 @@ I propose the following naming scheme for CVS tags :
 - beta version of the www.fsfeurope.org (will be on beta.fsfeurope.org) :
   no need of tags, since it is on the main trunk... use cvs update -A
 
+(( Remarks greve 20010827
+   One of the goals is to get a consistent layout/design between
+   the main site and the chapters. Why would anyone want to split
+   off a revision for a chapter? Maybe this is a little misleading? ))
+
 - stable version of the france.fsfeurope.org site :
 
   * S_FSFEFR_isodate, etc.
@@ -165,6 +173,11 @@ Example of a session with beta and stable versions :
 This is meant as demonstrating how to handle both stable and beta
 versions in parallel.
 
+
+(( Remarks greve 20010827
+   I have to admit that I don't entirely understand the following
+   paragraph. ))
+
 For this demonstration, we'll use the following directory of the CVS
 repository : /fsfe/server/testbeta.  Files will be put in this
 directory and modified in certain brances only. As no beta website is
@@ -184,6 +197,10 @@ space from the stable site, we'll use two sets of directories.
 We'll discuss here a scenario demonstrating how CVS can be used to
 manage both versions. Feel free to experiment with this sandbox to
 further this scenario.
+
+(( Remarks greve 20010827
+   Does this mean people are free to change things there without
+   risking to break stuff? ))
 
 We won't detail CVS commands. The use of some graphical tool to
 represent CVS revisions might help (I personnaly recommand tkcvs). You
@@ -253,6 +270,9 @@ We can commit it now.
 
 Adding files in both versions
 -----------------------------
+
+(( Remarks greve 20010827
+   I have to admit this section is a little unclear to me. ))
 
 One problem with this strategy is that certain parts of the website
 may require frequent modifications on the stable version (for instance

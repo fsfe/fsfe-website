@@ -1,12 +1,7 @@
+# Authors: Loic Dachary <loic@gnu.org> and Jaime Villate <villate@gnu.org>
 #
-# XML validator
-# -------------
-# apt-get install rxp
-# or
-# ftp://ftp.cogsci.ed.ac.uk/pub/richard/rxp-1.2.3.tar.gz
-#
-# XSLT processor
-# --------------
+# XML/XSLT processor (validator)
+# -------------------------
 #
 # sablotron (sabcmd)
 # apt-get install sablotron
@@ -14,9 +9,15 @@
 # libxslt + libxml2 (xsltproc)
 # http://www.xmlsoft.org/
 #
+# XML validator
+# -------------
+# apt-get install rxp
+# or
+# ftp://ftp.cogsci.ed.ac.uk/pub/richard/rxp-1.2.3.tar.gz
+#
 XSLTPROC = sabcmd
 
-FSFFRANCE = . # http://france.fsfeurope.org
+FSFFRANCE = http://france.fsfeurope.org
 FSFEUROPE = http://www.fsfeurope.org
 FSF       = http://www.fsf.org
 GNU       = http://www.gnu.org
@@ -26,32 +27,36 @@ XSLTOPTS = \
 	'$$fsf=$(FSF)' \
 	'$$gnu=$(GNU)'
 
-all:: news process 
+ENPAGES = $(shell find * -regex '[^\.]*\.xhtml' -print | sed "s/xhtml$$/html/")
 
+FRPAGES = $(shell find * -regex '.*\.fr\.xhtml' -print | sed "s/xhtml$$/html/")
+
+NEWS = news/news-bytes.fr.xhtml news/news-bytes.en.xhtml
+
+all: news $(ENPAGES) $(FRPAGES) 
+
+news: $(NEWS)
+
+$(NEWS): news/news-bytes.%.xhtml: news/fsfe-fr-channel.%.xml news/news.%.xsl
+	@echo "Building $@ ..."; \
+	$(XSLTPROC) news/news.$*.xsl news/fsfe-fr-channel.$*.xml $(XSLTOPTS) '$$fsffrance=$(FSFFRANCE)' > news/news-bytes.$*.xhtml
+
+$(ENPAGES) $(FRPAGES): %.html: %.xhtml fsfe-fr.xsl navigation.en.xsl navigation.fr.xsl
+	@echo "Building $@ ..."; \
+	path=$< ; \
+	base=`expr $$path : '\(.*\).xhtml'` ; \
+	filebase=`basename $$base` ; \
+	dir=`dirname $$path` ; \
+	root=`dirname $$path | perl -pe 'chop; s:([^/]+):..:g if($$_ ne ".")'` ; \
+	$(XSLTPROC) fsfe-fr.xsl $$path $(XSLTOPTS) \
+		'$$fsffrance='$$root '$$filebase='$$filebase '$$path='$$path | \
+		perl -MFile::Copy -p -e '$$| = 1; copy("'$$dir'/$$1", \*STDOUT) if(/\#include virtual=\"(.*?)\"/); s/\$$//g if(/\$$''Date:/);' \
+		> $$base.html-temp && \
+		( cat $$base.html-temp | \
+		  perl -p -e '$$| = 1; s/\$$//g if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.html \
+		) ; \
+	rm -f $$base.html-temp
+
+# remove html files for which an xhtml version exists (exclude fr/)
 clean:
-	find . -name '*.html' -print | grep -v '\(Constitution-fr.fr.html\|sysadmin-france.en.html\)' | xargs rm -f /tmp/nukeme.unlikely
-	rm -f news/news-bytes.*.xhtml
-
-process: 
-	@find * -name '*.xhtml' -print | while read path ; \
-	do \
-		base=`expr $$path : '\(.*\).xhtml'` ; \
-		filebase=`basename $$base` ; \
-		dir=`dirname $$path` ; \
-		root=`dirname $$path | perl -pe 'chop; s:([^/]+):..:g if($$_ ne ".")'` ; \
-		$(XSLTPROC) fsfe-fr.xsl $$path $(XSLTOPTS) '$$fsffrance='$$root '$$filebase='$$filebase '$$path='$$path | \
-		perl -MFile::Copy -p -e '$$| = 1; copy("'$$dir'/$$1", \*STDOUT) if(/\#include virtual=\"(.*?)\"/); s/\$$//g if(/\$$''Date:/);' > $$base.html ; \
-	done
-
-news:
-	$(XSLTPROC) news/news.fr.xsl news/fsfe-fr-channel.fr.xml $(XSLTOPTS) '$$fsffrance=http://france.fsfeurope.org' > news/news-bytes.fr.xhtml
-	$(XSLTPROC) news/news.en.xsl news/fsfe-fr-channel.en.xml $(XSLTOPTS) '$$fsffrance=http://france.fsfeurope.org' > news/news-bytes.en.xhtml
-
-validate:
-	find . -name '*.xhtml' -print | while read file ; \
-	do \
-		echo $$file ; \
-		rxp -Vs $$file ; \
-	done
-
-.PHONY: process recurse news
+	rm -f $(NEWS) $(ENPAGES) $(FRPAGES)

@@ -33,6 +33,8 @@ Old version of the XML DTD, before it became endorsed by OASIS
 <!ENTITY OS  "Open Source">
 <!ENTITY LL  "Logiciel Libre">
 <!ENTITY LLs "Logiciels Libres">
+<!ENTITY FSF "Free Software Foundation">
+<!ENTITY OSI "Open Source Initiative">
 
 <!-- *************************************************************** -->
 <!-- URL aliases                                                     -->
@@ -40,29 +42,33 @@ Old version of the XML DTD, before it became endorsed by OASIS
 
 <!-- Factorization for easy replacement -->
 <!ENTITY server     "http://www.aful.org">
-<!ENTITY server.doc "&server;/faqs/faq-constructeurs/">
+<!ENTITY server.faqs      "&server;/faqs/faq-constructeurs/">
+<!ENTITY server.solutions "&server;/solutions/">
+
+<!ENTITY url.ssii
+         "&server.solutions;ssii.fr.html">
 
 <!-- French versions -->
 <!ENTITY url.longVerion.fr.html
-         "&server.doc;FAQConstructeurs.fr.html">
+         "&server.faqs;FAQConstructeurs.fr.html">
 <!ENTITY url.longVerion.fr.pdf
-         "&server.doc;FAQConstructeurs.fr.pdf">
+         "&server.faqs;FAQConstructeurs.fr.pdf">
 
 <!ENTITY url.shortVerion.fr.html
-         "&server.doc;shortFAQConstructeurs.fr.html">
+         "&server.faqs;shortFAQConstructeurs.fr.html">
 <!ENTITY url.shortVerion.fr.pdf
-         "&server.doc;shortFAQConstructeurs.fr.pdf">
+         "&server.faqs;shortFAQConstructeurs.fr.pdf">
 
 <!-- English versions -->
 <!ENTITY url.longVerion.en.html
-         "&server.doc;FAQConstructeurs.en.html">
+         "&server.faqs;FAQConstructeurs.en.html">
 <!ENTITY url.longVerion.en.pdf
-         "&server.doc;FAQConstructeurs.en.pdf">
+         "&server.faqs;FAQConstructeurs.en.pdf">
 
 <!ENTITY url.shortVerion.en.html
-         "&server.doc;shortFAQConstructeurs.en.pdf">
+         "&server.faqs;shortFAQConstructeurs.en.pdf">
 <!ENTITY url.shortVerion.en.pdf
-         "&server.doc;shortFAQConstructeurs.en.html">
+         "&server.faqs;shortFAQConstructeurs.en.html">
 
 ]>
 
@@ -106,7 +112,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
         Permission is granted to copy, distribute and/or modify this
         document under the terms of the GNU Free Documentation
         License, Version 1.1 or any later version published by the
-        Free Software Foundation; with no Invariant Sections, with no
+        &FSF;; with no Invariant Sections, with no
         Front-Cover Texts, and with the no Back-Cover Texts.  A copy
         of the license is included in the section entitled "GNU Free
         Documentation License".
@@ -175,9 +181,8 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	      <quote>licence libre</quote> une licence correspondant soit 
 	      aux licences &LL;
 	      (dont une <ulink url="http://www.fsf.org/philosophy/license-list.html">liste est disponible sur le site de la FSF</ulink>)
-	      soit 
-	      aux licences &OS;
-	      (dont une <ulink url="http://opensource.org/licenses">liste est disponible sur le site de l'Open Source Initiative</ulink>).
+	      soit aux licences &OS;
+	      (dont une <ulink url="http://opensource.org/licenses">liste est disponible sur le site de l'&OSI;</ulink>).
 	    </para>
 	    <para condition="long">
 	      Les licences &LL; correspondent aux critères explicités
@@ -190,6 +195,12 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	      ces listes ne sont pas strictement identiques,
 	      le mouvement du &LL; et le mouvement &OS;
 	      reposant sur des postulats fondamentaux différents.
+	    </para>
+	    <para condition="long">
+	      L'&OS; met l'accent sur l'ouverture et l'efficacité des 
+	      développements informatiques, alors que les
+	      fondations du mouvement du &LL; sont la liberté et
+	      la protection de la liberté des utilisateurs.
 	    </para>
 	    <para condition="long">
 	      Dans les deux cas déterminer si une licence est conforme à la
@@ -227,56 +238,6 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	    </para>
 	  </answer>
 	</qandaentry>
-
-	<qandaentry condition="long">
-	  <question>
-	    <para>
-	      Quelle est la différence entre &OS; et &LL; ?
-	    </para>
-	  </question>
-	  <answer>
-	    <para>
-	      L'&OS; met l'accent sur l'ouverture et l'efficacité des 
-	      développements informatiques, alors que les
-	      fondations du mouvement du &LL; sont la liberté et
-	      la protection de la liberté des utilisateurs.
-	    </para>
-	    <para>
-	      Un logiciel &OS; doit avoir ses sources disponibles et 
-	      utilisables par tous sans restrictions.
-	    </para>
-	    <para>
-	      Pour qu'un logiciel soit un &LL;, 
-	      il doit satisfaire quatre conditions.
-	      Ces quatre conditions sont les quatre libertés du &LL; :
-	      <orderedlist>
-		<listitem>
-		  <para>
-		    La liberté d'utiliser le logiciel, pour tous les usages.
-		  </para>
-		</listitem>
-		<listitem>
-		  <para>
-		    La liberté d'étudier le fonctionnement du logiciel 
-		    et de l'adapter à vos besoins.
-		  </para>
-		</listitem>
-		<listitem>
-		  <para>
-		    La liberté de redistribuer des copies du logiciel.
-		  </para>
-		</listitem>
-		<listitem>
-		  <para>
-		    La liberté de publier et distribuer des versions 
-		    modifiées du logiciel.
-		  </para>
-		</listitem>
-	      </orderedlist>
-	    </para>
-	  </answer>
-	</qandaentry>
-
       </qandadiv>
 
       <qandadiv>
@@ -630,7 +591,8 @@ Old version of the XML DTD, before it became endorsed by OASIS
 		</listitem>
 		<listitem>
 		  <para>
-		    <ulink url="http://france.fsfeurope.org/">Free Software Foundation Europe (FSFE) Chapitre France</ulink> 
+		    <ulink url="http://france.fsfeurope.org/">
+		      &FSF; Europe (FSFE) Chapitre France</ulink> 
 		    <address><email>contact@france.fsfeurope.org</email></address>
 		  </para>
 		</listitem>
@@ -641,12 +603,13 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	      <itemizedlist>
 		<listitem>
 		  <para>
-		    <ulink url="http://www.fsf.org/">Free Software Foundation (FSF)</ulink>
+		    <ulink url="http://www.fsf.org/">&FSF; (FSF)</ulink>
 		  </para>
 		</listitem>
 		<listitem>
 		  <para>
-		    <ulink url="http://www.opensource.org/">Open Source Initiative</ulink>
+		    <ulink url="http://www.opensource.org/">
+		      &OSI;</ulink>
 		  </para>
 		</listitem>
 	      </itemizedlist>
@@ -679,8 +642,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 		    s'adresser à des sociétés de service spécialisées
 		  </para>
 		  <para>
-		    Une <ulink url="http://www.aful.org/info/ssii.html">liste 
-		      de sociétés</ulink>
+		    Une <ulink url="&url.ssii;">liste de sociétés</ulink>
 		    de services en ingénierie informatique (SSII) francophones 
 		    spécialisées dans les &LLs; ou l'&OS; est disponible sur 
 		    le site de l'<ulink url="http://www.aful.org">AFUL</ulink>.
@@ -699,15 +661,32 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	    </para>
 	  </question>
 	  <answer>
-	    <para>
-	      Le livre 
-	      <ulink url="http://www.oreilly.com/catalog/linuxdrive2/">Linux
-	      Device Drivers, Alessandro Rubini &amp; Jonathan Corbet, 2001,
-	      O'Reilly</ulink> est la référence actuelle pour la programmation 
-	      de pilotes pour le noyau Linux.
-	      Ce livre peut être acheté dans sa version papier et est également
-	      <ulink url="http://www.xml.com/ldd/chapter/book/index.html">
-		librement disponible en ligne.</ulink>
+	    <para>Il y a actuellement deux ouvrages de référence :
+	      <itemizedlist>
+		<listitem>
+		  <para>
+		    <ulink url="http://www.editions-eyrolles.com">
+		      Programmation système en C sous Linux,
+		      Christophe Blaess,
+		      2000 Eyrolles
+		    </ulink>
+		  </para>
+		</listitem>
+		<listitem>
+		  <para>
+		    <ulink url="http://www.oreilly.com/catalog/linuxdrive2/">
+		      Linux Device Drivers, 
+		      Alessandro Rubini &amp; Jonathan Corbet, 
+		      2001, O'Reilly</ulink>
+		  </para>
+		  <para>
+		    Ce livre peut être acheté dans sa version papier, tout en
+		    étant 
+		    <ulink url="http://www.xml.com/ldd/chapter/book/index.html">
+		      librement disponible en ligne.</ulink>
+		  </para>
+		</listitem>
+	      </itemizedlist>
 	    </para>
 	  </answer>
 	</qandaentry>
@@ -715,7 +694,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	<qandaentry condition="long">
 	  <question>
 	    <para>
-	      Existe-t-il une base de données recensant les matériels
+	      Existe-t-il une base de données recensant les matériels 
 	      compatibles Linux ?
 	    </para>
 	  </question>

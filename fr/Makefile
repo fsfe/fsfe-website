@@ -65,6 +65,12 @@ server/server.en.html: server/server.en.xhtml server/sysadmin-france.en.texi
 
 about/about.en.html about/about.fr.html about/organisation.fr.html about/reports.en.html about/signatures.html about/speakers.en.html about/speakers.fr.html about/statute.fr.html: about/menu.en.xhtml about/menu.fr.xhtml
 
+science/chimie.en.xhtml: science/chimie.xml
+	$(XSLTPROC) science/chimie.en.xsl science/chimie.xml '$$lang=en' >science/chimie.en.xhtml
+
+science/chimie.fr.xhtml: science/chimie.xml
+	$(XSLTPROC) science/chimie.fr.xsl science/chimie.xml '$$lang=fr' >science/chimie.fr.xhtml
+
 $(ENPAGES): %.html: %.xhtml fsfe-fr.xsl navigation.en.xsl
 	@$(ECHO) "Building $@ ..."; \
 	path=$< ; \

@@ -150,10 +150,11 @@
     <description lang="en">The CRK (Chemical Resource Kit) is the collective name describing three chemistry-related software packages : Xykron (front end for a collection of tools for managing, manipulating and presenting chemical data), Xentark (The computational arm of CRK) and Xortoth.</description>
     <description lang="fr">Le CRK (Chemical Resource Kit) est le dénomminatif d'un paquet de trois logiciels : Xykron (Interface d'une collection d'outils pour gérer, manipuler et représenter des données chimiques), Xentark (La partie calcul de CRK) et Xortoth.</description>
     <authors>Alex M. Clark</authors>
+    <email>aclark@users.sourceforge.net</email>
     <url>http://crk.sourceforge.net</url>
     <os>
       <name>GNU/Linux</name>
-      <maintainer>Alex M. Clark</maintainer>
+      <mainntainer>Alex M. Clark</maintainer>
       <version>1.04</version>
       <licence>GPL</licence>
       <url>http://crk.sourceforge.net/downloads/CRK.tar.gz</url>
@@ -168,13 +169,16 @@
     <description lang="en">DND stands for Dream aNd Dreamer. The DND project intends to build a complete, user-friendly GUI of the Molecular Dynamics Simulation of the Molecule on free software.</description>
     <description lang="fr">DND est l'abréviation pour Dream aNd Dreamer. Le projet DND a pour but de construire une interface graphique pour la simulation de dynamique moléculaire basée sur l'utilisation de logiciel libre.</description>
     <authors>SooHaeng Yoo</authors>
+    <email>yoo@theoalpha.korea.ac.kr</email>
     <url>http://theopenlab.uml.edu/dnd</url>
     <os>
       <name>GNU/Linux</name>
       <maintainer>SooHaeng Yoo</maintainer>
       <version>0.5.1</version>
       <licence>GPL</licence>
-      <date>28 nov 2001</date>
+      <url>http://www.bioinformatics.org/dnd/dnd-0.5.1.tar.gz</url>
+      <comment>missing copyright and license notices in most files, unknown license for callback.c (Jonathan Blandford <jrb@redhat.com>)</comment>
+      <date>22 apr 2002</date>
     </os>
   </software>
   <software>

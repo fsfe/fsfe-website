@@ -62,6 +62,7 @@
 		  <td class="TopBody" align="right">
 		    <a href="{$fsfeurope}/law/law.fr.html">Protéger le Logiciel Libre</a><br />
 		    <a href="{$fsfeurope}/coposys/index.fr.html">Coposys</a><br />
+		    <a href="{$fsfeurope}/documents/whyfs.fr.html">Pourquoi nous parlons de Logiciel Libre</a><br />
 		  </td>
 		</tr>
 

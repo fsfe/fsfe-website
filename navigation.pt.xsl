@@ -61,6 +61,7 @@
                   <a
       href="{$fsfeurope}/law/law.pt.html">Proteger o Software Livre</a><br />
                   <a href="{$fsfeurope}/coposys/index.en.html">Coposys</a><br />
+         <a href="{$fsfeurope}/documents/whyfs.pt.html">Nós falamos de Software Livre</a><br />
                 </td>
               </tr>
             <tr>

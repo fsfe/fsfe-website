@@ -61,6 +61,7 @@
 		  <td class="TopBody" align="right">
 		    <a href="{$fsfeurope}/law/law.en.html">Secure Free Software</a><br />
 		    <a href="{$fsfeurope}/coposys/index.en.html">Coposys</a><br />
+		    <a href="{$fsfeurope}/documents/whyfs.en.html">We speak about Free Software</a><br />
 		  </td>
 		</tr>
 

@@ -60,6 +60,7 @@
        <td class="TopBody" align="right">
 	 <a href="{$fsfeurope}/law/law.it.html">Software Libero sicuro</a><br />
 	 <a href="{$fsfeurope}/coposys/index.en.html">Coposys</a><br />
+         <a href="{$fsfeurope}/documents/whyfs.it.html">Parliamo di Software Libero</a><br />
        </td>
       </tr>
       

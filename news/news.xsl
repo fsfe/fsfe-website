@@ -16,7 +16,7 @@
 
   <xsl:template match="/html/body">
     <body>
-      <!-- <xsl:apply-templates /> -->
+      <xsl:apply-templates />
       <xsl:for-each select="/html/set/news">
         <xsl:sort select="@date" order="descending" />
         <p>

@@ -43,6 +43,13 @@
 	      La FSF France, sous son nom complet <em>Free Software
 	      Foundation Europe - Chapter France</em> a été créée le
 	      jeudi 19 avril 2001.
+	      <p />
+	      La <a href="Constitution-fr.fr.tex.sig">signature électronique</a> des <a href="Constitution-fr.fr.tex">statuts</a> peut
+	      être vérifiée en utilisant les <a href="../contact.fr.shtml">clés publiques des signataires</a>
+	      par la commande 
+	      <pre>
+gpg --verify Constitution-fr.fr.tex.sig Constitution-fr.fr.tex
+	      </pre>
 	      <center><img src="teamback.jpg" alt="Team Back" /></center>
 	      <center><b>FSF France team de dos</b></center>
 
@@ -98,7 +105,7 @@
 
   Mis à jour:
 <!-- timestamp start -->
-$Date: 2001-04-20 08:34:31 $ $Author: loic $
+$Date: 2001-04-20 08:56:16 $ $Author: loic $
 <!-- timestamp end -->
 
   </body>

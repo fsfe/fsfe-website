@@ -36,7 +36,7 @@
 	    <td width="99%" valign="top">
 	      <!--#include virtual="Constitution-fr.fr.html"-->
 	      <p />
-	      La <a href="Constitution-fr.fr.tex.sig">signature électronique</a> du <a href="Constitution-fr.fr.tex">document</a> peut
+	      La <a href="Constitution-fr.fr.tex.sig">signature électronique</a> des <a href="Constitution-fr.fr.tex">statuts</a> peut
 	      être vérifiée en utilisant les <a href="../contact.fr.shtml">clés publiques des signataires</a>
 	      par la commande 
 	      <pre>
@@ -50,7 +50,7 @@ gpg --verify Constitution-fr.fr.tex.sig Constitution-fr.fr.tex
 
   Mis à jour:
 <!-- timestamp start -->
-$Date: 2001-04-20 08:47:15 $ $Author: loic $
+$Date: 2001-04-20 08:56:16 $ $Author: loic $
 <!-- timestamp end -->
 
   </body>

@@ -8,5 +8,5 @@ all: Constitution-fr.fr.html Constitution-fr.fr.ps
 
 %.ps : %.tex
 	latex $<
-	dvips -o $@ $*.dvi
+	dvips -t a4 -o $@ $*.dvi
 	rm *.aux *.dvi *.log

@@ -16,11 +16,11 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  *
- * $Id: thermometer.php,v 1.2 2002-12-21 14:59:41 rodolphe Exp $
+ * $Id: thermometer.php,v 1.3 2002-12-21 15:07:59 rodolphe Exp $
  * $Source: /root/wrk/fsfe-web/savannah-rsync/fsfe/fr/eucd/thermometer.php,v $
  *
  */
-function moneyMeter($actualValue=0, $pendingValue=0, $intentValue=0, $posten, $totaal)
+function moneyMeter($actualValue=0, $pendingValue=0, $intentValue=0)
   /*
     This function returns the html for the moneymeter.
     cachedValue: amount of actual money
@@ -28,6 +28,7 @@ function moneyMeter($actualValue=0, $pendingValue=0, $intentValue=0, $posten, $t
     intentValue: amount of intended money (that's without the amount of actual money)
   */
 {
+
     // variables
   $height="200";
   $maximumValue=125000;
@@ -172,29 +173,6 @@ function moneyMeter($actualValue=0, $pendingValue=0, $intentValue=0, $posten, $t
   return $thermometer . $htmlLegenda;
 }
 
-/*
- * Read values in file
- *
- */
-
-
-
-/* lees posten uit file */
-   $fp = fopen( $posten, 'r' );
-   $post_donaties = fgets( $fp, 10 );
-   $post_sponsoring = fgets( $fp, 10 );
-   $post_intent = fgets( $fp, 10 );
-   fclose( $fp ); 
-
-/* lees posten uit file  */
-   $fp = fopen( $totaal, 'r' );
-   $totaal_ontvangen = fgets( $fp, 10 );
-   $totaal_pending = fgets( $fp, 10 );
-   fclose( $fp ); 
-
-
-//print moneyMeter($totaal_ontvangen+$post_donaties+$post_sponsoring, $totaal_pending, $post_intent); 
-	
 ?>
 
 

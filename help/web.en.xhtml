@@ -89,29 +89,29 @@ web page works.</p>
 frustration while making it easy to create translations.
 <ul>
 <li><b>Never edit the HTML files directly, edit the XHTML sources
-instead!</b></li>
+instead!</b></li><br />
 <li><b>If you commit pages with broken XHTML code, it will break the
 build process until somebody fixes the mistake. So never commit files
 to CVS without having them checked for valid XHTML syntax!</b> The web
 CVS contains a script "validate.pl" in the tools directory, which is
-supplied for that particular purpose.</li>
+supplied for that particular purpose.</li><br />
 <li>Page names follow the syntax: "&lt;name&gt;.&lt;language&gt;.xhtml" with
 &lt;language&gt; being the two-letter country code for the language. If
 there is no country/language code, the page is assumed to be in
 English. <br />(<em>Example: The build system will assume that
 test.it.xhtml is the Italian translation of the French page
-test.fr.xhtml.</em>)</li>
+test.fr.xhtml.</em>)</li><br />
 <li>Do not translate links within the FSF Europe web page. If there is
 a link to another pagex.html on the FSF Europe web page, do <b>not
 include a language part</b>, it will be automatically added by the
-build script!</li>
+build script!</li><br />
 <li>If you want to create the French translation of the Italian page
 x.it.xhtml, all you need to do is to copy it to x.fr.xhtml, translate
 it and check it in. On the next build, this will be accepted as the
 translation and put into the navigation structure accordingly.</li>
 <li>Some of the files for auto-generated menus are in XML format
 instead of XHTML. What was said about the XHTML pages is also applies
-for these. </li> 
+for these. </li><br />
 </ul></p>
 
 <h3>More Questions?</h3>

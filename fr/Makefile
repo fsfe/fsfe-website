@@ -18,6 +18,7 @@
 XSLTPROC = sabcmd
 
 ECHO	 = echo
+SSH	 = ssh
 
 FSFFRANCE = http://france.fsfeurope.org
 FSFEUROPE = http://www.fsfeurope.org
@@ -85,4 +86,4 @@ clean:
 	rm -f $(NEWS) $(ENPAGES) $(FRPAGES)
 
 sync:
-	ssh -l www france.fsfeurope.org 'cd fsfe ; cvs -z3 -q update -I "*.html" -d ; ../bin/nightly' 
+	$(SSH) -l www france.fsfeurope.org 'cd fsfe ; cvs -z3 -q update -I "*.html" -d ; ../bin/nightly' 

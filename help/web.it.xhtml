@@ -49,21 +49,28 @@ href="http://savannah.gnu.org" target="_blank">Savannah</a>, nel caso
 non l'abbiate già. Comunicate il vostro nome di login a uno degli <a
 href="https://savannah.gnu.org/projects/fsfe/"
 target="_blank">amministratori del progetto FSF Europe</a> e
-chiedete loro di aggiungervi al progetto FSF Europe su Savannah.</p>
+chiedete loro di aggiungervi al progetto FSF Europe su Savannah.  Nel frattempo,
+potete leggere le FAQ riguardanti <a
+href="http://savannah.gnu.org/faq/?group=administration">il funzionamento di
+Savannah</a>
+</p>
 
-<p>Il coordinamento tra i volontari web italiani avviene sulla mailing
-list <a href="http://mail.fsfeurope.org/mailman/listinfo/web-it"
-target="_blank">web-it@fsfeurope.org</a>, ma é consigliabile iscriversi 
-anche alla lista <a href="http://mail.fsfeurope.org/mailman/listinfo/web"
-target="_blank">web@fsfeurope.org</a>, che è usata dai volontari di tutti
-i paesi.</p>
+<p>Il coordinamento tra i volontari web italiani avviene sulla mailing list
+(italiana) <a href="http://mail.fsfeurope.org/mailman/listinfo/web-it"
+target="_blank">web-it@fsfeurope.org</a>. Se volete partecipare più da vicino
+alla manutenzione e allo sviluppo del sito web potete iscrivervi alla lista
+(inglese) <a href="http://mail.fsfeurope.org/mailman/listinfo/web"
+target="_blank">web@fsfeurope.org</a>. Se poi volete essere informati in tempo
+reale sulle modifiche che avvengono nel CVS, potete iscrivervi alla lista <a
+href="http://mail.fsfeurope.org/mailman/listinfo/web-cvs-notify">web-cvs-notify@fsfeurope.org</a>.
+</p>
 
-<p>Una volta che siete stati aggiunti alla pagina FSF Europe, seguite le
-<a href="http://savannah.gnu.org/cvs/?group=fsfe"
-target="_blank">istruzioni su savannah</a> per recuperare i file su
-cui volete lavorare.</p>
+<p>Una volta che siete stati aggiunti al progetto FSF Europe, seguite le
+<a href="http://savannah.gnu.org/cvs/?group=fsfe" target="_blank">istruzioni
+sull'uso del CVS su Savannah</a> per recuperare i file su cui volete
+lavorare.</p>
 
-<p>Prima di iniziare a lavorare, leggete il prossimo paragrafo.</p>
+<p>Prima di iniziare a lavorare, leggete i prossimi paragrafi.</p>
 
 <h3>Importante</h3>
 
@@ -83,23 +90,25 @@ target="_blank">Texinfo</a> "<a href="/README.texi"
 target="_blank">Webmastering FSF Europe</a>" a cura di <a
 href="mailto:oberg@fsfeurope.org">Jonas Öberg</a>, che ha implementato
 il sistema di generazione delle pagine. Leggetelo per capire i
-dettagli di funzionamento del sito.</p>
-
+dettagli di funzionamento del sito. Potete trasformare il file dal formato
+Texinfo al vostro formato preferito utilizzando il programa "makeinfo"
+(contenuto ad esempio nel pacchetto Debian "texinfo"), ad esempio con
+"makeinfo --plaintext README.texi" otterrete un file di testo.</p>
 
 
 <h3>Istruzioni sintetiche per i traduttori e regole generali</h3>
 
-<p>Queste poche regole dovrebbero tenervi al riparo dai problemi,
-evitare frustrazioni e facilitarvi il lavoro di traduzione.</p>
+<p>Alcune regole generali per i traduttori sono disponibili su <a
+href="http://www.fsfeurope.org/contribute/translators.html">questa pagina</a>;
+per quanto riguarda in particolare la traduzione delle pagine web, queste poche
+regole dovrebbero tenervi al riparo dai problemi, evitare frustrazioni e
+facilitarvi il lavoro.</p>
+
 <ul>
+
 <li><b>Non modificate mai direttamente i file HTML, modificate invece
 i sorgenti XHTML!</b><br /><br /></li>
-<li><b>Se fate il commit di una pagina che contiene codice XHTML
-scorretto, il processo di generazione delle pagine si interromperà
-finché qualcuno non correggerà l'errore. Quindi non fate mai il commit
-al CVS senza prima aver controllato la validità della sintassi XHTML
-del file!</b> L'archivio CVS contiene uno script "validate.pl" nella directory
-"tools", che serve proprio a questo scopo.<br /><br /></li>
+
 <li>I nomi delle pagine seguono la sintassi:
 "&lt;nome&gt;.&lt;lingua&gt;.xhtml" dove &lt;lingua&gt; è il codice di
 due lettere della nazione di riferimento. Se non c'è alcun codice di
@@ -107,25 +116,47 @@ nazionalità, si assume che la pagina sia in inglese.  <br
 />(<em>Esempio: il sistema di generazione assume che test.it.xhtml sia
 la traduzione italiana della pagina francese
 test.fr.xhtml.</em>)<br /><br /></li>
-<li>Non traducete i link interni al sito della FSF Europe: se in una
-pagina c'è un link a un'altra pagina x.html del sito FSF Europe,
-<b>non aggiungete il codice della nazionalità</b>, verrà aggiunto
-automaticamente dallo script di generazione!<br /><br /></li>
+
 <li>Se volete creare la traduzione italiana della pagina francese
 x.fr.xhtml, tutto quello che dovete fare è copiarla in x.it.xhtml,
 tradurla e fare il commit. Al prossimo ciclo di ricostruzione delle
 pagine, verrà riconosciuta come traduzione e aggiunta in modo ordinato
 alla struttura di navigazione del sito.<br /><br /></li>
+
+<li><b>Se fate il commit di una pagina che contiene codice XHTML
+scorretto, il processo di generazione delle pagine si interromperà
+finché qualcuno non correggerà l'errore. Quindi non fate mai il commit
+al CVS senza prima aver controllato la validità della sintassi XHTML
+del file!</b> L'archivio CVS contiene uno script "validate.pl" nella directory
+"tools", che serve proprio a questo scopo (richiede il modulo perl "XML::LibXML",
+contenuto ad esempio nel pacchetto Debian "libxml-libxml-perl").<br />
+In alternativa è possibile usare un altro strumento di validazione xml, come
+xmllint (pacchetto Debian "libxml2-utils").<br />
+<br /></li>
+
+<li>Link interni: se in una pagina c'è un link a un'altra pagina x.html del sito
+FSF Europe, <b>non aggiungete il codice della nazionalità</b>, verrà aggiunto
+automaticamente dallo script di generazione!
+<br /><br /></li>
+
+<li>Link esterni: se in una pagina c'è un link a una pagina esterna di cui
+esiste una traduzione italiana, è preferibile linkare la versione tradotta della
+pagina esterna, indicando tra parentesi la pagina in lingua originale.
+<br /><br /></li>
+
 <li>Alcuni dei file per i menu generati automaticamente sono in
 formato XML invece che XHTML. Ciò che abbiamo detto per le pagine XHTML 
 si applica anche a quelle XML. <br /><br /></li>
+
 </ul>
 
 <h3>Altre domande?</h3>
 
 <p>Se avete ulteriori domande, ponetele nella lista <a
-href="http://mail.fsfeurope.org/mailman/listinfo/web">web@fsfeurope.org</a>
-o mettetevi in contatto con l'attuale coordinatore del sito web <a
+href="http://mail.fsfeurope.org/mailman/listinfo/web">web@fsfeurope.org</a> (in
+inglese) o nella lista <a
+href="http://mail.fsfeurope.org/mailman/listinfo/web-it">web-it@fsfeurope.org</a>
+(in italiano), oppure mettetevi in contatto con l'attuale coordinatore del sito web <a
 href="mailto:oberg@fsfeurope.org">Jonas Öberg</a>.</p>
 
 <!-- End page content -->

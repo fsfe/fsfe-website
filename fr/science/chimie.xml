@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-1" ?>
 <?xml-stylesheet href="chimie.xsl" type="text/xsl"?>
-<!DOCTYPE softliste SYSTEM "liste.dtd">
+<!DOCTYPE softliste SYSTEM "chimie.dtd">
 <softliste>
 	<software>
       	<name>AMMP</name>
@@ -65,7 +65,7 @@
 	<software>
       	<name>Chemsuite</name>
             <date>28 jul 2001</date>
-	      <description lang="en">Molecular 2D/3D drawing and chemical reaction simulation software.</description>
+	      <description lang="en>A Molecular 2D/3D drawing and chemical reaction simulation software.</description>
 	      <description lang="fr">Logiciel de dessin 2D/3D et de simulation de réactions chimiques.</description>
 		<authors>Ricardo Stefani, Rene Fosdal</authors>
 		<url>http://chemsuite.seul.org</url>

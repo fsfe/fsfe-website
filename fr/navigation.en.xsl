@@ -43,28 +43,37 @@
 
     <!-- Title bar -->
     <table width="100%" border="0" cellspacing="0" cellpadding="4">
-	<tr>
-	  <td class="TopBody">
-	    <a href="{$fsffrance}/index.en.html">
-	      <img src="{$fsffrance}/images/fsfeurope-small.png" alt="FSFE logo" border="0"  />
-	    </a>
-	  </td>
-	  <td class="TopBody" width="99%" height="99%">
-	    <a class="TopTitleB">FSF France</a>
-	    <br />
-	    <a class="TopTitle">Free Software - equal chances for people and economy</a>
-	  </td>
-	  <td align="right" valign="bottom" class="TopBody">
-	    <a href="http://cyberlink.idws.com/fsm/" class="T2">Africa</a> <br />
-	    <a href="http://www.rons.net.cn/english/Links/fsf-china/" class="T2">China</a> <br />
-	    <a href="{$fsfeurope}/" class="T2">Europe</a> <br />
-	    <a href="{$fsffrance}/index.en.html" class="T2">France</a> <br />
-	    <a href="http://gnu.org.in/" class="T2">India</a> <br />
-	    <a href="http://korea.gnu.org/home.html" class="T2">Korea</a> <br />
-	    <a href="http://es.gnu.org/" class="T2">Spain</a> <br />
-	    <a href="{$fsf}/home.html" class="T2">United-States</a> <br />
-	  </td>
-	</tr>
+      <tr>
+	<td class="TopBody">
+	  <a href="{$fsffrance}/index.en.html">
+	    <img src="{$fsffrance}/images/fsfeurope-small.png" alt="FSFE logo" border="0"  />
+	  </a>
+	</td>
+	<td class="TopBody" width="99%" height="99%">
+	  <a class="TopTitleB">FSF France</a>
+	  <br />
+	  <a class="TopTitle">Free Software - equal chances for people and economy</a>
+	</td>
+	<td align="right" valign="bottom" class="TopBody">
+	  <table>
+	    <tr>
+	      <td>
+		<a href="http://cyberlink.idws.com/fsm/" class="T2">Africa</a> <br />
+		<a href="http://www.rons.net.cn/english/Links/fsf-china/" class="T2">China</a> <br />
+		<a href="{$fsfeurope}/" class="T2">Europe</a> <br />
+		<a href="{$fsffrance}/index.en.html" class="T2">France</a> <br />
+		<a href="http://gnu.org.in/" class="T2">India</a> <br />
+	      </td>
+	      <td>
+		<a href="http://korea.gnu.org/home.html" class="T2">Korea</a> <br />
+		<a href="http://www.gnulinux.org.mx/" class="T2">Mexico</a> <br />
+		<a href="http://es.gnu.org/" class="T2">Spain</a> <br />
+		<a href="{$fsf}/home.html" class="T2">United-States</a> <br />
+	      </td>
+	    </tr>
+	    </table>
+	</td>
+      </tr>
     </table>
 
     <table width="100%" border="0" cellspacing="0" cellpadding="0">

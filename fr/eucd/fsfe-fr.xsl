@@ -46,7 +46,7 @@
   </xsl:template>
 
   <xsl:include href="navigation.fr.xsl" />
-  <xsl:include href="navigation.en.xsl" />
+  <!-- <xsl:include href="navigation.en.xsl" /> -->
 
   <xsl:template match="@*|node()" priority="-1">
     <xsl:copy>

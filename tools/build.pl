@@ -60,14 +60,19 @@ our %languages = (
 # pages and what to use as base for the input.
 #
 getopts('o:i:duqn', \%opts);
-unless ($opts{o} && $opts{i}) {
-  print STDERR "Usage: $0 [-q] [-u] [-d] [-n] -o <output directory> -i <input directory>\n";
+unless ($opts{o}) {
+  print STDERR "Usage: $0 [-q] [-u] [-d] [-n] -o <output directory>\n";
   print STDERR "  -q   Quiet\n";
   print STDERR "  -u   Update only\n";
   print STDERR "  -d   Print some debug information\n";
   print STDERR "  -n   Don't write any files\n";
   exit 1;
 }
+
+# It might be nice to be able to specify this, but it will break things as
+# they are now. This is on the TODO list :-)
+
+$opts{i} = ".";
 
 $| = 1;
 

@@ -24,10 +24,12 @@
    <p>Please select how much you wish to contribute</p>
 
      <!-- more options under https://www.paypal.com/en_US/pdf/integration_guide.pdf page 123 -->
-       <form name="_xclick" action="https://www.paypal.com/cgi-bin/webscr" method="post" class="indent">
+       <form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="indent">
+	 <p>
            <input type="hidden" name="cmd" value="_xclick"/>
            <input type="hidden" name="business" value="paypal@fsfeurope.org"/>
            <input type="hidden" name="image_url" value="http://fsfeurope.org/graphics/global/logo-w150.png"/>
+	 </p>
            <!-- here you can add the amount -->
            <table>
              <tr><td> </td><td><input type="text" name="amount" value="" size="5" /> EUR</td><td>- (other amount)</td></tr>
@@ -52,7 +54,7 @@
                   </td> </tr>
 
            </table>
-           
+	 
             
        </form>
 

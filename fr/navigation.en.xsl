@@ -16,19 +16,7 @@
 	  &nbsp;&nbsp;|&nbsp;&nbsp;
 	  <a href="{$gnu}/">GNU</a>
 	  &nbsp;&nbsp;|&nbsp;&nbsp;
-	  <a href="http://www.april.org/index.html.en">APRIL</a>
-	  &nbsp;&nbsp;|&nbsp;&nbsp;
-	  <a href="http://www.ofset.org/">OFSET</a>
-	</td>
-      </tr>
-    </table>
-
-    <!-- Top menu line -->
-    <table width="100%" border="0" cellspacing="0" cellpadding="4">
-      <tr>
-	<td class="TopTitle">
-	  &nbsp;Local chapters&nbsp;: <a href="{$fsffrance}/index.en.html">France</a> |
-	    Germany
+	  <a href="http://es.gnu.org/">GNU Spain</a>
 	</td>
       </tr>
     </table>
@@ -38,22 +26,12 @@
       <tr>
 	<td class="TopBody">
 	  <a href="{$fsfeurope}">
-	      <img src="{$fsffrance}/images/fsfe-logo.png" alt="to FSFE Logo"
-    border="0" width="259" height="76" align="left"/>
+	    <img src="{$fsffrance}/images/fsfe-logo.png" alt="FSFE Logo"
+	      border="0" width="259" height="76" align="left"/>
 	  </a>
 	</td>
 	<td class="TopBody">
-<!-- If we are on the top level page of the local chapter's site, the
-icon links to the top of the hub's site -->
-        <xsl:choose>
-        <xsl:when test="$path='index.en.xhtml'">
-	  French Chapter
-        </xsl:when>
-        <!-- otherwise, link to the top of the local chapter's site -->
-        <xsl:otherwise>
-	  <a href="{$fsffrance}/index.en.html">French Chapter</a>
-        </xsl:otherwise>
-        </xsl:choose>
+	  FSF France
 	</td>
 	<td align="right" valign="bottom" class="TopBody">
 	  <table>
@@ -78,182 +56,84 @@ icon links to the top of the hub's site -->
 		<a href="{$fsf}/home.html">United-States</a> <br />
 	      </td>
 	    </tr>
-	    </table>
+	  </table>
 	</td>
       </tr>
     </table>
 
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
-	<tr>
-	  <td width="99%" valign="top">
+      <tr>
+	<td width="99%" valign="top">
 	  <xsl:apply-templates select="@*|node()"/>
-	  </td>
+	</td>
 
-	  <!-- Menu column. On the right to be Lynx friendly.  -->
-	  <td>&nbsp;</td>
-	  <td valign="top" class="TopBody">
-	    <table width="120" border="0" cellspacing="0" cellpadding="4">
-		<tr><td class="TopTitle" align="center">Projects</td></tr>
-		<tr>
-		  <td class="TopBody" align="right">
-		    <xsl:choose>
-                       <xsl:when test="$path='gpl/gpl.en.xhtml'">GPL in French</xsl:when>
-                       <xsl:otherwise>
-                          <a href="{$fsffrance}/gpl/gpl.en.html">GPL in French</a>
-                       </xsl:otherwise>
-                    </xsl:choose><br />
-		    <xsl:choose>
-                       <xsl:when test="$path='libre.en.xhtml'">Freedoms</xsl:when>
-                       <xsl:otherwise>
-                          <a href="{$fsffrance}/libre.en.html">Freedoms</a>
-                       </xsl:otherwise>
-                    </xsl:choose><br />	          
-		    <a href="http://www.fsfeurope.org/law/law.en.html">Secure Free Software</a><br />
-		    <xsl:choose>
-                       <xsl:when test="$path='collecte/collecte.en.xhtml'">Press review</xsl:when>
-                       <xsl:otherwise>
-                          <a href="{$fsffrance}/collecte/collecte.en.html">Press review</a>
-                       </xsl:otherwise>
-                    </xsl:choose><br />
-		    <xsl:choose>
-                       <xsl:when test="$path=voting.en.xhtml">E-Vote</xsl:when>
-                       <xsl:otherwise>
-                          <a href="{$fsffrance}/voting/voting.en.html">E-Vote</a>
-                       </xsl:otherwise>
-                    </xsl:choose><br />
-                 </td>
-		</tr>
-		<tr><td class="TopTitle" align="center">FSF France</td></tr>
-		<tr>
-		  <td align="right">
-		    <xsl:choose>
-                       <xsl:when test="$path='index.en.xhtml'">Home</xsl:when>
-                       <xsl:otherwise>
-                          <a href="{$fsffrance}/index.en.html">Home</a>
-                       </xsl:otherwise>
-                    </xsl:choose><br />
-		    <xsl:choose>
-                       <xsl:when test="$path='philosophy/philosophy.en.xhtml'">Philosophy</xsl:when>
-                       <xsl:otherwise>
-                          <a href="{$fsffrance}/philosophy/philosophy.en.html">Philosophy</a>
-                       </xsl:otherwise>
-                    </xsl:choose><br />
-		    <a href="http://agenda.lolix.org/">Calendar</a><br />
-		    <xsl:choose>
-                       <xsl:when test="$path='news/news.en.xhtml'">News</xsl:when>
-                       <xsl:otherwise>
-                          <a href="{$fsffrance}/news/news.en.html">News</a>
-                       </xsl:otherwise>
-                    </xsl:choose><br />
-		    <xsl:choose>
-                       <xsl:when test="$path='events/events.en.xhtml'">Events</xsl:when>
-                       <xsl:otherwise>
-                          <a href="{$fsffrance}/events/events.en.html">Events</a>
-                       </xsl:otherwise>
-                    </xsl:choose><br />
-		    <a href="http://savannah.gnu.org/pm/task.php?group_project_id=37&amp;group_id=53&amp;func=browse">Tasks</a><br />
-		    <a href="{$gnu}/jobs/jobsFR.fr.html">Jobs</a><br />
-		    <xsl:choose>
-                       <xsl:when test="$path='press/press.fr.xhtml'">Press Section</xsl:when>
-                       <xsl:otherwise>
-                          <a href="{$fsffrance}/press/press.fr.html">Press Section</a>
-                       </xsl:otherwise>
-                    </xsl:choose><br />
-		    <xsl:choose>
-                       <xsl:when test="$path='lists/lists.en.xhtml'">Mailing List</xsl:when>
-                       <xsl:otherwise>
-                          <a href="{$fsffrance}/lists/lists.en.html">Mailing List</a>
-                       </xsl:otherwise>
-                    </xsl:choose><br />
-		    <xsl:choose>
-                       <xsl:when test="$path='donations/donations.en.xhtml'">Donations</xsl:when>
-                       <xsl:otherwise>
-                          <a href="{$fsffrance}/donations/donations.en.html">Donations</a>
-                       </xsl:otherwise>
-                    </xsl:choose><br />
-		    <xsl:choose>
-                       <xsl:when test="$path='about/speakers.en.xhtml'">Speakers</xsl:when>
-                       <xsl:otherwise>
-                          <a href="{$fsffrance}/about/speakers.en.html">Speakers</a>
-                       </xsl:otherwise>
-                    </xsl:choose><br />
-		    <xsl:choose>
-                       <xsl:when test="$path='about/about.en.xhtml'">About</xsl:when>
-                       <xsl:otherwise>
-                          <a href="{$fsffrance}/about/about.en.html">About</a>
-                       </xsl:otherwise>
-                    </xsl:choose><br />
-		    <xsl:choose>
-                       <xsl:when test="$path='contact.en.xhtml'">Contact</xsl:when>
-                       <xsl:otherwise>
-                          <a href="{$fsffrance}/contact.en.html">Contact</a>
-                       </xsl:otherwise>
-                    </xsl:choose> <br />
-		    <xsl:choose>
-                       <xsl:when test="$path='thanks.fr.xhtml'">Thanks</xsl:when>
-                       <xsl:otherwise>
-                          <a href="{$fsffrance}/thanks.fr.html">Thanks</a>
-                       </xsl:otherwise>
-                    </xsl:choose> 
-		  </td>
-		</tr>
+	<!-- Menu column. On the right to be Lynx friendly.  -->
+	<td>&nbsp;</td>
+	<td valign="top" class="TopBody">
+	  <table width="120" border="0" cellspacing="0" cellpadding="4">
+	    <tr><td class="TopTitle" align="center">Projects</td></tr>
+	    <tr>
+	      <td class="TopBody" align="right">
+		<a href="{$fsffrance}/gpl/gpl.en.html">GPL in French</a><br />
+		<a href="{$fsffrance}/libre.en.html">Freedoms</a><br />	          
+		<a href="http://www.fsfeurope.org/law/law.en.html">Secure Free Software</a><br />
+		<a href="{$fsffrance}/collecte/collecte.en.html">Press review</a><br />
+		<a href="{$fsffrance}/voting/voting.en.html">E-Vote</a><br />
+		<a href="{$fsfeurope}/coposys/index.en.html">Coposys</a><br />
+		<a href="{$fsfeurope}/documents/whyfs.en.html">We speak about Free Software</a><br />
+	      </td>
+	    </tr>
+	    <tr><td class="TopTitle" align="center">FSF France</td></tr>
+	    <tr>
+	      <td align="right">
+		<a href="{$fsffrance}/index.en.html">Home</a><br />
+		<a href="{$fsffrance}/philosophy/philosophy.en.html">Philosophy</a><br />
+		<a href="http://agenda.lolix.org/">Calendar</a><br />
+		<a href="{$fsffrance}/news/news.en.html">News</a><br />
+		<a href="{$fsffrance}/events/events.en.html">Events</a><br />
+		<a href="http://savannah.gnu.org/pm/task.php?group_project_id=37&amp;group_id=53&amp;func=browse">Tasks</a><br />
+		<a href="{$gnu}/jobs/jobsFR.fr.html">Jobs</a><br />
+		<a href="{$fsffrance}/press/press.fr.html">Press Section</a><br />
+		<a href="{$fsffrance}/lists/lists.en.html">Mailing List</a><br />
+		<a href="{$fsffrance}/donations/donations.en.html">Donations</a><br />
+		<a href="{$fsffrance}/about/speakers.en.html">Speakers</a><br />
+		<a href="{$fsffrance}/about/about.en.html">About</a><br />
+		<a href="{$fsffrance}/contact.en.html">Contact</a> <br />
+		<a href="{$fsffrance}/thanks.fr.html">Thanks</a> 
+	      </td>
+	    </tr>
 
-		<tr><td class="TopTitle" align="center">Associated organizations</td></tr>
-		<tr>
-		  <td class="TopBody" align="right">
-		    <a href="http://www.april.org/">APRIL</a><br />
-		     <a href="http://www.softwarelibero.it">AsSoLi</a><br />
-		    <a href="http://www.fsf.or.at/">FFS</a><br />
-		    <a href="http://www.ofset.org/">OFSET</a><br />
-	          </td>
-		</tr>
+	    <tr><td class="TopTitle" align="center">Associated organizations</td></tr>
+	    <tr>
+	      <td class="TopBody" align="right">
+		<a href="http://www.april.org/">APRIL</a><br />
+		<a href="http://www.softwarelibero.it">AsSoLi</a><br />
+		<a href="http://www.fsf.or.at/">FFS</a><br />
+		<a href="http://www.ofset.org/">OFSET</a><br />
+	      </td>
+	    </tr>
 
-		<tr><td class="TopTitle" align="center">Sysadmin</td></tr>
-		<tr>
-		  <td class="TopBody" align="right">
-		    <xsl:choose>
-                       <xsl:when test="$path='stats/stats.fr.xhtml'">Statistics</xsl:when>
-                       <xsl:otherwise>
-                          <a href="{$fsffrance}/stats/stats.fr.html">Statistics</a>
-                       </xsl:otherwise>
-                    </xsl:choose> <br />
-		    <xsl:choose>
-                       <xsl:when test="$path='server/server.en.xhtml'">Guide</xsl:when>
-                       <xsl:otherwise>
-                          <a href="{$fsffrance}/server/server.en.html">Guide</a>
-                       </xsl:otherwise>
-                    </xsl:choose><br />
-		    <a href="http://savannah.gnu.org/projects/fsffr/">Accounts</a><br />
-		    <xsl:choose>
-                       <xsl:when test="$path='birth/birth.en.xhtml'">Birth</xsl:when>
-                       <xsl:otherwise>
-                          <a href="{$fsffrance}/birth/birth.en.html">Birth</a>
-                       </xsl:otherwise>
-                    </xsl:choose><br />
-		  </td>
-		</tr>
-		<tr><td class="TopTitle" align="center">Webmaster</td></tr>
-		<tr>
-		  <td class="TopBody" align="right">
-		    <xsl:choose>
-                       <xsl:when test="$path='server/server.en.html#Web'">Guide</xsl:when>
-                       <xsl:otherwise>
-                          <a href="{$fsffrance}/server/server.en.html#Web">Guide</a>
-                       </xsl:otherwise>
-                    </xsl:choose><br />
-		    <a href="{$gnu}/server/standards/">GNU Guide</a><br />
-		    <xsl:choose>
-                       <xsl:when test="$path='boilerplate.fr.xhtml'">Boilerplate</xsl:when>
-                       <xsl:otherwise>
-                          <a href="{$fsffrance}/boilerplate.fr.html">Boilerplate</a>
-                       </xsl:otherwise>
-                    </xsl:choose><br />
-		    <a href="http://mailman.fsfeurope.org/mailman/listinfo/web">Mailing List</a><br />
-		  </td>
-		</tr>
-	    </table>
-	  </td>
-    	</tr>
+	    <tr><td class="TopTitle" align="center">Sysadmin</td></tr>
+	    <tr>
+	      <td class="TopBody" align="right">
+		<a href="{$fsffrance}/stats/stats.fr.html">Statistics</a> <br />
+		<a href="{$fsffrance}/server/server.en.html">Guide</a><br />
+		<a href="http://savannah.gnu.org/projects/fsffr/">Accounts</a><br />
+		<a href="{$fsffrance}/birth/birth.en.html">Birth</a><br />
+	      </td>
+	    </tr>
+	    <tr><td class="TopTitle" align="center">Webmaster</td></tr>
+	    <tr>
+	      <td class="TopBody" align="right">
+		<a href="{$fsffrance}/server/server.en.html#Web">Guide</a><br />
+		<a href="{$gnu}/server/standards/">GNU Guide</a><br />
+		<a href="{$fsffrance}/boilerplate.fr.html">Boilerplate</a><br />
+		<a href="http://mailman.fsfeurope.org/mailman/listinfo/web">Mailing List</a><br />
+	      </td>
+	    </tr>
+	  </table>
+	</td>
+      </tr>
     </table>
 
     <!-- Bottom line -->
@@ -262,23 +142,23 @@ icon links to the top of the hub's site -->
 	<td class="TopTitle">
           <a href="{$filebase}.xhtml">XHTML Source</a>&nbsp;&nbsp;|
           &nbsp;&nbsp;<a href="{$fsffrance}/fsfe-fr.xsl">XSL Style
-	  Sheet</a>&nbsp;&nbsp;|
+	    Sheet</a>&nbsp;&nbsp;|
           &nbsp;&nbsp;<a href="http://savannah.gnu.org/cgi-bin/viewcvs/fsfe/fr/{$path}?cvsroot=www.gnu.org">Modifications</a><br/>
 	</td>
 	<td class="TopTitle" align="right">
 	  &nbsp;<a href="mailto:webmaster@fsfeurope.org"
-                  >webmaster@fsfeurope.org</a>
+	    >webmaster@fsfeurope.org</a>
         </td>
       </tr>
       <tr>
 	<td  class="newstext" align="center">
-	<font size="-2">
+	  <font size="-2">
 	    Copyright (C) 2001 FSF France,
 	    8 rue de Valois, 75001 Paris, France
 	    <br/>
 	    Verbatim copying and distribution of this entire article is
 	    permitted in any medium, provided this notice is preserved.
-	</font>
+	  </font>
 	</td>
         <td  class="newstext">&nbsp;</td>
       </tr>

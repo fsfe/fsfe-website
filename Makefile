@@ -36,7 +36,7 @@ $(ENPAGES): %.html: %.xhtml fsfe.xsl navigation.en.xsl
 	filebase=`basename $$base` ; \
 	dir=`dirname $$path` ; \
 	root=`dirname $$path | perl -pe 'chop; s:([^/]+):..:g if($$_ ne ".")'` ; \
-	$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase > $$base.html-temp && (cat $$base.html-temp | perl -p -e '$$| = 1; s/\$$//g if(/\$$Date: 2001-04-26 21:18:25 $$base.html) ; \
+	$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase > $$base.html-temp && (cat $$base.html-temp | perl -p -e '$$| = 1; s/\$$//g if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.html) ; \
 	rm -f $$base.html-temp
 
 $(FRPAGES): %.html: %.xhtml fsfe.xsl navigation.fr.xsl
@@ -46,7 +46,7 @@ $(FRPAGES): %.html: %.xhtml fsfe.xsl navigation.fr.xsl
 	filebase=`basename $$base` ; \
 	dir=`dirname $$path` ; \
 	root=`dirname $$path | perl -pe 'chop; s:([^/]+):..:g if($$_ ne ".")'` ; \
-	$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase > $$base.html-temp && (cat $$base.html-temp | perl -p -e '$$| = 1; s/\$$//g if(/\$$Date: 2001-04-26 21:18:25 $$base.html) ; \
+	$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase > $$base.html-temp && (cat $$base.html-temp | perl -p -e '$$| = 1; s/\$$//g if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.html) ; \
 	rm -f $$base.html-temp
 
 $(DEPAGES): %.html: %.xhtml fsfe.xsl navigation.de.xsl
@@ -56,7 +56,7 @@ $(DEPAGES): %.html: %.xhtml fsfe.xsl navigation.de.xsl
 	filebase=`basename $$base` ; \
 	dir=`dirname $$path` ; \
 	root=`dirname $$path | perl -pe 'chop; s:([^/]+):..:g if($$_ ne ".")'` ; \
-	$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase > $$base.html-temp && (cat $$base.html-temp | perl -p -e '$$| = 1; s/\$$//g if(/\$$Date: 2001-04-26 21:18:25 $$base.html) ; \
+	$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase > $$base.html-temp && (cat $$base.html-temp | perl -p -e '$$| = 1; s/\$$//g if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.html) ; \
 	rm -f $$base.html-temp
 
 # remove html files for which an xhtml version exists (exclude fr/)

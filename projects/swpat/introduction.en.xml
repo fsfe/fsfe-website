@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<what_are_patents>
+<introtext>
+
+ <what_are_patents>
 
  <h3>What are patents?</h3>
 
@@ -20,9 +22,9 @@
  they are monopolies which are granted by society for the sake of
  benefitting society.</p>
 
-</what_are_patents>
+ </what_are_patents>
 
-<what_are_swpat>
+ <what_are_swpat>
 
  <h3>What are software patents?</h3>
 
@@ -62,9 +64,9 @@
  <p>Software patents are harmful to innovation, economy and society, so
  they lack justification.</p>
 
-</what_are_swpat>
+ </what_are_swpat>
 
-<why_want_swpat>
+ <why_want_swpat>
 
  <h3>But why would anyone want them?</h3>
 
@@ -104,9 +106,9 @@
  player in innovation, while in the U.S., innovative software
  development is limited to a few monopolists.</p>
 
-</why_want_swpat>
+ </why_want_swpat>
 
-<epo>
+ <epo>
 
  <h3>The European Patent Office (EPO)</h3>
 
@@ -130,7 +132,9 @@
  <p>That is why the directive in question is called the directive on
  "patentability of computer implemented inventions."</p>
 
-</epo>
+ </epo>
+
+</introtext>
 
 <!--
 Local Variables: ***

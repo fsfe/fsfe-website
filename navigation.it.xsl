@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+v
 <!DOCTYPE xsl:stylesheet [<!ENTITY nbsp "&#160;">]>
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
@@ -78,8 +78,14 @@
 
    		<tr><td class="TopTitle" align="center">Progetti</td></tr>
 		<tr>
-		  <td class="TopBody" align="right">
-		    <a href="{$fsfeurope}/law/law.en.html" class="T2">Software Libero sicuro</a><br />
+		  <td class="Section" align="right">
+		  <xsl:choose>
+		  <xsl:when test="$path='law/law.it.xhtml'">Software Libero Sicuro</xsl:when>
+		  <xsl:otherwise>
+		  	    <a href="{$fsfeurope}/law/law.it.html" class="T2">Software Libero sicuro</a>
+			    </xsl:otherwise>
+			    </xsl:choose><br />
+			    
 		  </td>
 		</tr>
 

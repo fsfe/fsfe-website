@@ -98,6 +98,13 @@
               <xsl:if test="$path='background.pt.xhtml'">
                 Contexto<br/>
               </xsl:if>
+              <xsl:if test="$path!='documents/documents.pt.xhtml'">
+              <a href="{$fsfeurope}/documents/documents.pt.html"
+                   class="T2">Documentos</a><br/>
+              </xsl:if>
+              <xsl:if test="$path='documents/documents.pt.xhtml'">
+                Documentos<br/>
+              </xsl:if>
               <xsl:if test="$path!='mailman/index.pt.xhtml'">
               <a href="{$fsfeurope}/mailman/index.pt.html"  
                    class="T2">Listas de Correio</a><br/>    

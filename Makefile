@@ -15,7 +15,7 @@
 # or
 # ftp://ftp.cogsci.ed.ac.uk/pub/richard/rxp-1.2.3.tar.gz
 #
-XSLTPROC = sabcmd
+XSLTPROC = echo
 
 FSFFRANCE = http://france.fsfeurope.org
 FSFEUROPE = http://www.fsfeurope.org
@@ -38,6 +38,10 @@ PTPAGES = $(shell find * -path 'fr' -prune -o -regex '.*\.pt\.xhtml' -print | se
 all: $(ENPAGES) $(FRPAGES) $(DEPAGES) $(PTPAGES)
 
 swpat/patents.en.html: swpat/patents-agenda.en.xml
+
+# temporary, added by mad@april.org
+NEWS = news/news.fr.html news/news.en.html
+$(NEWS): fr/news/fsfe-fr-channel.fr.xml fr/news/fsfe-fr-channel.en.xml 
 
 $(ENPAGES): %.html: %.xhtml fsfe.xsl navigation.en.xsl
 	@echo "Building $@ ..."; \

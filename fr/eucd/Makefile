@@ -1,4 +1,6 @@
-# Authors: Loic Dachary <loic@gnu.org> and Jaime Villate <villate@gnu.org>
+# Copyright (C) 2001 Loic Dachary <loic@gnu.org>
+# Copyright (C) 2001 Jaime Villate <villate@gnu.org>
+# Copyright (C) 2002 Rodolphe Quiedeville <rodolphe@quiedeville.org>
 #
 # XML/XSLT processor (validator)
 # -------------------------

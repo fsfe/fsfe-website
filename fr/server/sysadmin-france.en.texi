@@ -5,7 +5,7 @@
 @setchapternewpage odd
 @c %**end of header
 
-@set RCSID $Id: sysadmin-france.en.texi,v 1.6 2001-04-18 11:55:09 rodolphe Exp $
+@set RCSID $Id: sysadmin-france.en.texi,v 1.7 2001-04-18 11:58:54 rodolphe Exp $
 @set VERSION 1.0
 
 @c Combine the variable and function indices:
@@ -319,7 +319,7 @@ The policy applied is to close all TCP/UDP port by default and open only necessa
 @section Statistics
 
 Systems statistics are generated with mrtg
-@url{http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/}
+@uref{http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/}
 
 @menu
 * Installation::                
@@ -339,7 +339,7 @@ mrtgutils version 0.2
 @end itemize
 
 Some more scripts are used, they are located in @file{/usr/local/bin},
-they are coming from @url{http://mrtg.xidus.net}
+they are coming from @uref{http://mrtg.xidus.net/}
 
 @itemize
 @item

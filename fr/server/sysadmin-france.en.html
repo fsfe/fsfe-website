@@ -39,7 +39,8 @@ and FSF machines in France.
 <li><a href="#Editing%20the%20Web">Editing the Web</a>: 
 <li><a href="#Separate%20layout%20and%20content">Separate layout and content</a>: 
 <li><a href="#Update%20from%20CVS">Update from CVS</a>: 
-<li><a href="#Nightly%20script">Nightly script</a>:
+<li><a href="#Nightly%20script">Nightly script</a>: 
+<li><a href="#Immediate%20Update">Immediate Update</a>:
 
 <p>Separate layout and content
 
@@ -323,6 +324,7 @@ Up:<a rel=up href="#Top">Top</a>
 <li><a href="#Separate%20layout%20and%20content">Separate layout and content</a>: 
 <li><a href="#Update%20from%20CVS">Update from CVS</a>: 
 <li><a href="#Nightly%20script">Nightly script</a>: 
+<li><a href="#Immediate%20Update">Immediate Update</a>: 
 </ul>
 
 <p><hr>
@@ -357,14 +359,10 @@ handles the following domain names:
 <dl>
 <dt><code>france.fsfeurope.org</code>
 <dd>with a document root at <code>/var/www/france.fsfeurope.org</code>
-that points to <code>/home/www/www.gnu.org/fsfe/fr</code>.
+that points to <code>/home/www/fsfe/fr</code>.
 
 <br><dt><code>www.france.fsfeurope.org, fr.fsf.org, www.fr.fsf.org</code>
 <dd>with a redirect to france.fsfeurope.org
-
-<br><dt><code>fr.gnu.org</code>
-<dd>with a document root at <code>/var/www/www.gnu.org</code>
-that points to <code>/home/www/www.gnu.org</code>.
 
 </dl>
 
@@ -672,36 +670,63 @@ Up:<a rel=up href="#Web">Web</a>
 <h2>Update from CVS</h2>
 
 <p>A <code>cvs update</code> is done every hour in the
-<code>/home/www/www.gnu.org/fsfe</code> directory by the
+<code>/home/www/fsfe</code> directory by the
 <code>/etc/cron.d/www</code> user crontab.  The logs of the update are stored
 in <code>/var/log/www.log</code> and rotated by
 <code>/etc/logrotate.d/www</code>.
 
+<p>Note that this update does not generate the HTML pages from the XHTML
+pages. The <a href="#Nightly%20script">Nightly script</a> takes care of this.
+
 <p><hr>
 Node:<a name="Nightly%20script">Nightly script</a>,
+Next:<a rel=next href="#Immediate%20Update">Immediate Update</a>,
 Previous:<a rel=previous href="#Update%20from%20CVS">Update from CVS</a>,
 Up:<a rel=up href="#Web">Web</a>
 <br>
 
 <h2>Nightly script</h2>
 
-<p>The <code>/home/www/bin/nightly</code> script is run daily and is in charge of
-the following:
+<p>The <code>/home/www/bin/nightly</code> script is run daily by the <code>www</code>
+user and is in charge of the following:
 
 <ul>
 
-<li>Run <code>cvs update</code> in the <code>/home/www/www.gnu.org</code> directory.
+<li>Run <code>cvs update</code> in the <code>/home/www/fsfe</code> directory.
 
 <li>Update the symbolic links according to the content of the
 <code>.symlinks</code> files. See the <a href="http://www.gnu.org/server/standards/README.html#SEC01">Symbolic Links</a> chapter of the webmaster guidelines for
 detailed information.
 
-<li>Run the <code>all</code> goal of the <code>/home/www/fsfe/fr/Makefile</code>.
+<li>Run the <code>all</code> goal of all the Makefiles
+found in the <code>/home/www/fsfe/</code> directory. 
+Those Makefiles are in charge of formating
+the XHTML into HTML, formating <code>.texi</code> or <code>.tex</code> files into
+HTML among other things.
 
 </ul>
 
 <p>The logs of the nightly script are stored in <code>/var/log/nightly.log</code>
 and rotated by <code>/etc/logrotate.d/nightly</code>.
+
+<p>The <code>nightly</code> script can be run by hand after login as the <code>www</code>
+user.
+
+<p><hr>
+Node:<a name="Immediate%20Update">Immediate Update</a>,
+Previous:<a rel=previous href="#Nightly%20script">Nightly script</a>,
+Up:<a rel=up href="#Web">Web</a>
+<br>
+
+<h2>Immediate Update</h2>
+
+<p>If you ever want to update the web in no time you have to do the following:
+
+<pre>ssh -l www france.fsfeurope.org
+cd fsfe
+cvs update
+../bin/nightly
+</pre>
 
 <p><hr>
 Node:<a name="Private%20Data">Private Data</a>,
@@ -919,6 +944,7 @@ Up:<a rel=up href="#Top">Top</a>
 </ul>
 <li><a href="#Update%20from%20CVS">Update from CVS</a>
 <li><a href="#Nightly%20script">Nightly script</a>
+<li><a href="#Immediate%20Update">Immediate Update</a>
 </ul>
 <li><a href="#Private%20Data">Private Data</a>
 <li><a href="#System">System</a>

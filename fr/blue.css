@@ -1,0 +1,72 @@
+BODY      	{	font-family: Helvetica, Verdana; 
+			font-size: 13px; 
+			background: #FFFFFF; 
+			color: #000000 }
+
+A.T1      	{ font-size: 13px; font-weight: bold; color: #FFFFFF; text-decoration: none }
+A.T2      	{ font-size: 13px; font-weight: bold; color: #FFFFFF; text-decoration: none }
+A.T3      	{ font-size: 13px; font-weight: bold; color: #5A6BA5; text-decoration: none }
+A.T4      	{ font-size: 13px; font-weight: bold; color: #EE5000; text-decoration: none }
+A.T5      	{ font-size: 13px; font-weight: bold; color: #BB5000; text-decoration: none }
+
+A.Title   	{ font-size: 13px; font-weight: bold; color: #1C2D67 }
+A.TopTitle   	{ font-size: 19px; font-weight: bold; color: #1C2D67 }
+A.TopTitleB   	{ font-size: 19px; font-weight: bold; color: #000000 }
+A.TitleS  	{ font-size: 13px; font-weight: bold; color: #000000 }
+A.Extern  	{ font-size: 13px; font-weight: bold; color: #000000 }
+A.Desc	  	{ font-size: 13px; font-style: italic; color: #000000 }
+A.Warning   	{ font-size: 13px; font-weight: bold; color: #FF2222 }
+
+TD.Section  	{ font-weight: bold; }
+
+TD.TopTitle  	{ color: #E0E0E0; font-weight: bold; background: #5A6BA5 }
+TD.TopBody  	{ color: #1C2D67; font-weight: bold; background: #9DAEE8 }
+
+TD.Title 	{ color: #1C2D67; font-weight: bold; background: #C0C0C0 }
+TD.Title2 	{ color: #000000; font-weight: normal; background: #FFFFFF }
+TD.Title15 	{ font-size: 15px; color: #1C2D67; font-weight: bold; background: #C0C0C0 }
+
+TD.Label  	{ color: #1C2D67; font-weight: bold; background: #E0E0E0 }
+
+TD.Body  	{ color: #1C2D67; font-weight: normal; background: #E0E0E0}
+TD.BodyDark  	{ color: #1C2D67; font-weight: normal; background: #bbbbbb}
+
+TD.Body2 	{ color: #1C2D67; font-weight: normal; background: #FFFFFF}
+TD.Body3 	{ color: #1C2D67; font-weight: normal; background: #c0c0c0}
+TD.BodyAT 	{ color: #1C2D67; font-weight: bold; background: #FFFFFF }
+TD.BodyATT 	{ color: #1C2D67; font-weight: bold; background: #FFFFFF }
+
+TD.TodayCell	{ background: #F0F0F0; }
+TD.Cell		{ background: #d0d0d0; }
+TD.OtherCell	{ background: #b0b0b0; }
+
+
+TD.BodyErr 	{ color: #1C2D67; font-weight: bold; background: #FF0000}
+TD.BodyErr2 	{ color: #1C2D67; font-weight: bold; background: #FF2222}
+TD.BodyA 	{ color: #000000; font-weight: bold; background: #9DAEE8 }
+TD.BodyT 	{ color: #1C2D67; font-weight: bold; background: #E0E0E0 }
+TD.BodyB 	{ color: #1C2D67; font-weight: bold; background: #B8C8FE }
+
+TD.Submit  	{ color: #1C2D67; font-weight: bold; background: #9DAEE8 }
+
+TD.newstext     { font-family: Verdana, Arial, Helvetica, sans-serif; 
+        font-size: 13px; 
+        color: #505050;
+        text-align: left; 
+        vertical-align: top; 
+	background: #c0c0c0
+}
+
+A.topbanner
+{
+        font-size: 11px;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        color: #505050;
+}
+
+A         	{ font-family: Helvetica, Verdana; font-size: 13px; color: #000000 }
+P		{ font-family: Helvetica, Verdana; font-size: 13px; color: #000000 }
+DIV		{ font-family: Helvetica, Verdana; font-size: 13px; color: #000000 }
+TD	  	{ font-family: Helvetica, Verdana; font-size: 13px; }
+

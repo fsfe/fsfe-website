@@ -1,0 +1,56 @@
+// -*- mode: c -*-
+
+digraph packages {
+  rotate=90;
+  ratio=compress;
+
+  "MySQL" -> "phpGroupWare" [weight=100];
+
+  "phpGroupWare" -> "xml2db";
+  "xml2db" -> "Berkeley DB";
+
+"phpGroupWare" -> {
+  "registration\n(phpgw)";
+  "preferences\n(phpgw)";
+  "moderation";
+  "control";
+}
+
+ "Berkeley DB" -> {
+   "http";
+   "ftp";
+   "pop";
+   "imap";
+   "smtp";
+   "estat";
+   "php";
+   "wap";
+   "misc";
+ }
+
+ "misc" -> {
+   "webboard\nchange";
+   "webmail\nimp";
+   "file manager\nchudload";
+   "creation pages\nkeebook";
+ }
+
+ misc -> "forum\nw-agora" [weight=100];
+
+
+phpGroupWare [shape=box];
+"registration\n(phpgw)" [shape=box];
+"preferences\n(phpgw)" [shape=box];
+MySQL [shape=box];
+"Berkeley DB" [shape=box];
+"webmail\nimp" [shape=box];
+
+http [shape=box];
+ftp [shape=box];
+pop [shape=box];
+imap [shape=box];
+smtp [shape=box];
+php [shape=box];
+wap [shape=box];
+"forum\nw-agora" [shape=box];
+}

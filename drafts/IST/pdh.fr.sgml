@@ -1,0 +1,363 @@
+<!doctype linuxdoc system>
+
+<article>
+
+<title>Industrialisation de l'architecture
+<author>Cyril Bouthors
+<htmlurl url="mailto:cyril@bouthors.org" name="cyril@bouthors.org">
+<date>Septembre 2001
+
+<abstract>
+L'idée de base de l'industrialisation est de définir les standards et
+processus de normalisation en vue notamment de transmettre à l'équipe
+d'exploitation (qui fait partie du NOC) l'intégralité de l'exploitation
+de la plateforme. L'objectif de ce document est de définir les lignes
+directrices générales afin d'établir un calendrier d'actions et de
+quantifier les ressources nécessaires.
+</abstract>
+
+<toc>
+
+<p>
+Ce document est aussi disponible aux formats
+<htmlurl url="pdh.fr.ps" name="postscript">,
+<htmlurl url="pdh.fr.html" name="html">,
+<htmlurl url="pdh.fr.txt" name="texte"> et
+<htmlurl url="pdh.fr.pdf" name="pdf">.
+
+<sect> Introduction
+ <p>
+
+ Ce texte présentera en premier lieu les solutions générales pour
+ réduire et/ou déléguer à l'équipe d'exploitation les efforts de
+ maintenance et de déploiement. Il abordera ensuite le détail de la
+ mise en oeuvre ainsi qu'une estimation du temps nécessaire.
+
+<sect> Maintenance
+ <sect1> Split en packages
+  <p>
+
+  Une des premières choses qui vient à l'esprit pour réduire l'effort
+  de maintenance est de rendre les choses plus <it>carrées</it> dans
+  le but d'éviter les problèmes de cohérence rencontrés ces derniers
+  mois: les plus fréquents sont : il manque une bibliothèque, tel
+  outil est trop vieux et ne supporte pas telle fonction.
+
+  La séparation en packages apporte la gestion des dépendances: le
+  risque d'erreurs humaines diminue, les outils requis sont à jour et
+  installés dans le bon ordre.
+
+  Adopter un système de packaging fait que les numéros de version
+  deviennent clairement identifiés, cela facilite le diagnostic et la
+  remontée de bugs en cas de problèmes. L'hétérogénéité entre chaque
+  serveur est d'autant plus identifiable: il suffit de comparer les
+  numéros de versions, le parc est plus homogène, stable et
+  maintenable. Les versions qui fonctionnent correctement sont
+  identifiées et sont de préférence déployées sur les nouveaux
+  serveurs.
+
+  Le split en packages permet de comprendre plus facilement
+  l'architecture et de mieux identifier le rôle de chaque élément, il
+  permet aussi de pouvoir remplacer chaque élément par une autre
+  solution plus générique, plus standard ou plus performante sans
+  casser le reste du schéma.
+
+  Les auteurs sont clairement identifiés, le support et le bug
+  tracking se font par package via des outils standards
+  (<it>SourceForge like</it>).
+
+  Rien ne peut être oublié lors d'un déploiement si tout est
+  correctement packagé.
+
+  Le re-déploiement d'un service après correction d'un bug se résume à
+  la mise à jour d'un ou plusieurs packages, cela ne nécessite pas de
+  connaissance particulière de l'architecture globale, l'équipe
+  d'exploitation du NOC pourra faire cela.
+
+  On en arrive rapidement à la problématique de savoir comment mettre
+  a jour les packages sur plusieurs serveurs sans avoir à se connecter
+  sur chaque. Je pense que ce document décrit la manière de résoudre
+  un certains nombre de nos problèmes actuels mais ne prend pas encore
+  en compte celui la. L'automatisation des déploiements sera
+  mono-poste dans la prochaine version, cela permet de réduire les
+  manipulations manuelles.
+
+  <!--
+  TODO: regarder s'il existe des trucs pour mettre à jour des packages
+  à distance.
+  -->
+
+ <sect1> Branches
+  <p>
+
+  À l'heure actuelle, nous installons systématiquement la dernière
+  version de chaque package développé en interne, cela provoque
+  régulièrement des problèmes de qualité de service. L'idée d'avoir
+  une différenciation pour chaque package entre une version associée à
+  une branche de production dite stable et une autre version associée
+  à une branche de développement dite instable aurait l'avantage de
+  garantir un niveau de service plus élevé.
+
+ <sect1> Astreinte niveau 2
+  <p>
+
+  Pour mémoire, les trois niveaux d'astreinte sont:
+
+  <descrip>
+   <tag>niveau 1</tag> Supervision: réception de l'alerte, appel du
+   niveau 2 en cas de panne réelle;
+
+   <tag>niveau 2</tag> Exploitation: technicien (compétences
+   d'administration): résolution du problème en cas de panne déjà
+   rencontrée grâce à une fiche d'intervention, appel du niveau 3 si
+   le problème n'est pas documenté ou si le problème non documenté
+   intervient lors de la procédure;
+
+   <tag>niveau 3</tag> Ingénierie (connaissance de l'architecture):
+   diagnostic et résolution de l'incident.
+
+  </descrip>
+
+  Il n'existe actuellement pas de niveau 2, les pannes réelles sont
+  inconditionnellement communiquées au niveau 3.
+
+ <sect1> Exploitation
+
+  <p> Certaines opérations comme la mise à jour d'un applicatif suite
+  à un bug sont semi automatiques, il en résulte des erreurs (souvent
+  humaines) au moment du dispatch: l'idée est de réduire le plus
+  possible les opérations manuelles en faisant en sorte qu'il n'y ait
+  qu'un bouton a pousser (i.e. une commande) pour mettre à jour tel ou
+  tel service. L'exploitation doit être le plus possible effectuée par
+  le NOC.
+
+ <!--
+
+ mis en commentaire car pas de solution à proposer
+
+ <sect1> Configuration du parc: centralisation et automatisation
+  <p>
+
+  Nous n'avons actuellement pas de vraie solution pour connaître de
+  manière centrale l'affectation des éléments du cluster en
+  production. Qui fait quoi ? Il en résulte des problèmes de cohérence
+  entre la configuration du monitoring, du backup et des statistiques
+  vu que ces configurations sont maintenues séparément et
+  manuellement. Des pannes ne sont pas détectées, des serveurs pas
+  backuppés, les statistiques sont erronées, ... La qualité de service
+  est globalement dégradée.
+ -->
+
+<sect> Déploiement
+
+ <sect1> Validation matérielle
+  <p>
+
+  Un document décrivant les problèmes hardware fréquemment rencontrés
+  lors d'une importante période de déploiement a déjà été rédigé,
+  plusieurs solutions ont été envisagées: cf "<htmlurl
+  url="../exploitation/temps_d_installation.html" name="Réduction du
+  temps d'installation de nouveaux serveurs">".
+
+ <sect1> Rackage et brassage
+  <p>
+
+  Les serveurs étant actuellement rackés et brassés par les ingénieurs
+  qui travaillent quotidiennement avec l'architecture, les conventions
+  et impératifs spécifiques ne sont pas documentés. Les erreurs
+  humaines sont courantes en raison d'un manque de méthodologie et
+  checklists. Le NOC ne peut pas non plus faire ce travail de manière
+  autonome dans ces conditions.
+
+ <sect1> Installation
+ <p>
+
+  À partir du moment où ce qui est nécessaire au fonctionnement d'un
+  serveur (chaque fichier) est dans un package, il devient logique de
+  vouloir installer ces packages via une distribution.
+
+  <!-- TODO: Décrire plus en détail pourquoi une distribution serait
+  cool. -->
+
+ <sect1> Automatisation
+  <p>
+
+  L'installation d'un nouveau serveur doit se faire de manière la plus
+  automatique possible à partir de la distribution.
+
+ <sect1> Encadrement des actions couramment effectuées.
+  <p>
+
+  Il faudrait pour cela qu'une mise à jour se résume à <tt>apt-get
+  upgrade <it>package</it></tt>, un accès <tt>SSH</tt> au NOC sur les
+  serveurs de production est donc nécessaire.
+
+
+<sect> Mise en oeuvre
+
+ <sect1> Validation matérielle
+
+  <sect2> Kit de test serveur
+   <p>
+
+    Rassembler plusieurs logiciels de benchmark hardware et établir
+    une procédure de test à base de <htmlurl
+    url="http://freshmeat.net/projects/memtest86/" name="memtest86">
+    et <htmlurl url="http://freshmeat.net/projects/lucifer/"
+    name="lucifer">.
+
+   <!-- Task ID 85 -->
+
+  <sect2> Kit de test stockage
+   <p>
+
+    Rassembler plusieurs logiciels de benchmark disque et établir une
+    procédure de test à base de <htmlurl
+    url="http://freshmeat.net/projects/bonnie++/" name="bonnie++"> et
+    <htmlurl url="http://freshmeat.net/projects/hdparm/"
+    name="hdparm">.
+
+    <!-- Task ID 89 -->
+
+ <sect1> Rackage et brassage
+
+  <sect2> Consignes de sécurité
+   <p>
+
+   Trouver une documentation sur les consignes de sécurité (auprès de
+   Sylvie ?): répartition du poids, fixation, ... Le NOC doit déjà
+   avoir des consignes (?).
+
+  <sect2> Documentation sur le brassage
+   <p>
+
+   Documenter les différents réseaux, les conventions, l'attribution
+   des IPs. Quels types d'équipement (host, disk, switch) doivent être
+   reliés sur chaque réseau ?
+
+  <sect2> Checklists
+   <p>
+
+   TODO: Identifier conventions, impératifs et checklists.
+
+ <sect1> Astreinte niveau 2
+  <p>
+
+  Identification des pannes courantes et rédaction de fiches
+  d'interventions typiques à faire progressivement. Le plus simple et
+  efficace semble être de rajouter des liens HTML vers la procédure
+  adéquate dans le panneau d'alertes Netsaint.
+
+  Prévoir une séance de formation pour les équipes du NOC (voir avec
+  <htmlurl url="mailto://franck.duffaux@intercall.fr"
+  name="franck.duffaux@intercall.fr">).
+
+  Ouvrir un shell pour les techniciens du niveau 2.
+
+ <sect1> Split en packages
+  <p>
+
+  La partie sysadmin d'une install de type PDH requiert la gestion
+  d'un réseau de dépendances. Le packaging <tt>RPM</tt> ne contient
+  pas ces informations. Avoir une distribution GNU/Linux spécialisée à
+  cet usage serait intéressant une fois l'ensemble splitté en
+  packages. Faire une distribution spécialisée à base de RedHat relève
+  du défi impossible, l'essentiel de l'expertise nécessaire n'étant
+  pas publié par les entreprises dont les employés font ce genre de
+  travail. Au contraire, l'intégralité de la méthodologie et des
+  outils qui font une distribution Debian sont visibles et
+  disponibles. Packager PDH sous la forme d'une méta distribution
+  Debian à l'image de la <htmlurl url="http://www.telemetrybox.org/"
+  name="TelemetryBox"> est donc très adapté: elle est basée sur une
+  distribution déjà existante (Potato : la Debian stable), les seules
+  différences sont les packages supplémentaires et spécifiques à cette
+  distribution, les autres sont identiques.
+
+  Différentes approches ont été étudiées afin d'organiser la
+  répartition des packages. L'idée de base est d'utiliser le moins
+  possible de développement maison en privilégiant les outils
+  génériques maintenus par une communauté de développeurs
+  externes. <htmlurl url="http://www.phpgroupware.org/"
+  name="PhpGroupware"> a été choisi comme socle principalement pour
+  l'API qu'il offre (<htmlurl
+  url="http://www.phpgroupware.org/phpgwapi.php"
+  name="http://www.phpgroupware.org/phpgwapi.php">).
+
+  Les deux schémas suivant représentent l'architecture actuelle et
+  l'architecture future. Les formes rectangulaires représentent les
+  outils standards, les formes arrondies représentent les outils
+  développés en interne.
+
+  <htmlurl url="pdh-oldarchi.ps" name="architecture actuelle (pdh-oldarchi.ps)">
+
+  <htmlurl url="pdh-newarchi.ps" name="architecture future (pdh-newarchi.p)">
+
+  Le principal changement est la modification de <tt>mkdb</tt> pour
+  utiliser un dump <tt>XML</tt> fourni par <tt>phpGroupware</tt>. On
+  remarque que le fait que quasiment rien n'accède directement à la
+  base de données est un réel avantage, cela va nous permettre de
+  faire une migration progressive en modifiant <tt>mkdb</tt>. Il reste
+  de plus la possibilité d'accéder directement à la base <tt>SQL</tt>
+  pour <tt>control</tt> et la modération mais l'idéal à terme serait
+  que ces deux éléments soient packagés en tant que modules de
+  <tt>phpGroupware</tt>.
+
+  Le reste sera un ensemble de packages <tt>Debian</tt> contenant les
+  binaires et les fichiers de configuration nécessaires. Le mieux
+  serait d'avoir rapidement un set minimal de packages incluant
+  <tt>phpGroupware</tt> et le strict nécessaire pour faire fonctionner
+  un service de base comme <tt>HTTP</tt> sur un type serveur donné:
+  cela aura pour effet de mettre en place les procédures
+  d'installation d'un serveur par les équipes du NOC. La fin de
+  l'installation sera dans un premier temps toujours effectuée par un
+  administrateur de notre équipe mais de plus en plus de packages
+  devront être fournis au NOC pour installation/exploitation.
+
+ <sect1> Automatisation
+  <p>
+
+  <htmlurl url="http://www.informatik.uni-koeln.de/fai/" name="FAI
+  (Fully Automatic Installation)"> semble être l'outil le mieux adapté
+  pour effectuer cette opération : "<it>FAI is a non interactive
+  system to install a Debian GNU/Linux operating system on a PC
+  cluster. You can take one or more virgin PCs, turn on the power and
+  after a few minutes Linux is installed, configured and running on
+  the whole cluster, without any interaction necessary</it>".
+
+  Faire une procédure de déploiement pour le NOC.
+
+  <!-- TODO: décrire plus en détail le travail nécessaire pour se
+  servir de FAI-->
+
+<sect1> Disclaimer
+  <p>
+
+   L'investissement dans un tel projet ne peut se faire sans rendre
+   explicite le fait que le travail fournit par les salariés soit
+   libre. Pour cela, l'employeur devra signer le papier suivant :
+
+   LibertySurf Telecom hereby disclaims all copyright interest in the
+   changes and enhancements made by $name to the program "X", also
+   including any future revisions of these changes and
+   enhancements. We do not consider them as a work made for hire for
+   us.
+
+   LibertySurf Telecom affirms that it has no other intellectual
+   property interest that would undermine this release, or the use of
+   the program, and will do nothing to undermine it in the future.
+
+   <it>signature</it> , <it>date</it>
+
+   Éric Denoyer, Directeur Général, LibertySurf Telecom
+
+</article>
+<!--  LocalWords:  NOC rackés checklist checklists itemize Sylvie s'arranger tt
+ -->
+  <!--  LocalWords:  bug bugs L'hétérogénéité maintenable split impactés tag
+ -->
+   <!--  LocalWords:  descrip d'astreinte l'alerte applicatifs applicatif SSH
+ -->
+  <!--  LocalWords:  apt-get upgrade backup FAI PhpGroupWare Netsaint mkdb XML
+ -->
+<!--  LocalWords:  phpGroupware dump SQL HTTP repository
+ -->

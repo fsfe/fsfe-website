@@ -5,7 +5,7 @@
 @setchapternewpage odd
 @c %**end of header
 
-@set RCSID $Id: sysadmin-france.en.texi,v 1.51 2001-10-12 11:19:03 cyb Exp $
+@set RCSID $Id: sysadmin-france.en.texi,v 1.52 2001-10-12 13:13:22 cyb Exp $
 @set VERSION 1.0
 
 @c Combine the variable and function indices:
@@ -950,13 +950,13 @@ modified to allow CGI execution. The following lines were added in the
 "www.fsfeurope.org" VirtualHost :
 
 @example
-        ScriptAlias /cgi-bin/ "/var/www/www.fsfeurope.org/cgi-bin/"
-        <Directory "/var/www/www.fsfeurope.org/cgi-bin">
-                AllowOverride None
-                Options ExecCGI
-                Order allow,deny
-                Allow from all
-        </Directory>
+ScriptAlias /cgi-bin/ "/var/www/www.fsfeurope.org/cgi-bin/"
+<Directory "/var/www/www.fsfeurope.org/cgi-bin">
+        AllowOverride None
+        Options ExecCGI
+        Order allow,deny
+        Allow from all
+</Directory>
 @end example
 
 @node File permissions and owners, Crontab, Apache configuration, Coposys
@@ -965,9 +965,9 @@ modified to allow CGI execution. The following lines were added in the
 Every files and directories installed under
 
 @itemize
- @item @file{var/www/www.fsfeurope.org/coposys/markers/}
- @item @file{var/www/www.fsfeurope.org/coposys/maps/}
- @item @file{var/www/www.fsfeurope.org/cgi-bin/}
+ @item @file{/var/www/www.fsfeurope.org/coposys/markers/}
+ @item @file{/var/www/www.fsfeurope.org/coposys/maps/}
+ @item @file{/var/www/www.fsfeurope.org/cgi-bin/}
 @end itemize
 are owned by @code{www:www}.
 

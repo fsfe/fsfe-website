@@ -140,9 +140,9 @@
 	 </xsl:otherwise>
 	</xsl:choose><br/>
 	<xsl:choose>
-	 <xsl:when test="$path='speakers/speakers.xhtml'">Oratori</xsl:when>
+	 <xsl:when test="$path='speakers/speakers.it.xhtml'">Relatori</xsl:when>
 	 <xsl:otherwise>
-	  <a href="{$fsfeurope}/speakers/speakers.html">Oratori</a>
+	  <a href="{$fsfeurope}/speakers/speakers.it.html">Relatori</a>
 	 </xsl:otherwise>
 	</xsl:choose><br/>
 	<xsl:choose>

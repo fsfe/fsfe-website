@@ -81,8 +81,8 @@
               <a href="{$fsfeurope}/index.html" class="T2">Home</a><br/>
               <a href="{$fsfeurope}/contact/index.de.html"
                     class="T2">Contact</a><br/>
-              <a href="{$fsfeurope}/background.html"
-                   class="T2">Background</a><br/>
+              <a href="{$fsfeurope}/background.de.html"
+                   class="T2">Hintergrund</a><br/>
               <a href="{$fsfeurope}/mailman/index.html"
                    class="T2">Mailing Lists</a><br/>
               <a href="{$fsfeurope}/press/index.html"

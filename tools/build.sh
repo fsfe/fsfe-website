@@ -22,4 +22,4 @@ cd $TMP
 mv $DEST ${DEST}.old
 mv $TMP $DEST
 rm -rf ${DEST}.old
-
+echo "Build complete."

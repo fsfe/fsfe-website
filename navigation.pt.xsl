@@ -53,7 +53,7 @@
 	    <a class="TopTitle">Software Livre - igualdade de oportunidades para pessoas e empresas</a>
 	  </td>
 	  <td align="right" valign="top" class="TopBody">
-	    <a href="{$fsfeurope}/documents/freesoftware.html" class="T2">O&nbsp;que&nbsp;é&nbsp;o&nbsp;Software&nbsp;Livre?</a><br/>
+	    <a href="{$fsfeurope}/documents/freesoftware.pt.html" class="T2">O&nbsp;que&nbsp;é&nbsp;o&nbsp;Software&nbsp;Livre?</a><br/>
 	    <a href="{$fsfeurope}/documents/gnuproject.html" class="T2">O&nbsp;que&nbsp;é&nbsp;o&nbsp;projecto&nbsp;GNU?</a><br/>
 	  </td>
 	</tr>

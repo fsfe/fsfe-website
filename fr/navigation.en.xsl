@@ -141,6 +141,12 @@
                        </xsl:otherwise>
                     </xsl:choose><br />
 		    <xsl:choose>
+                       <xsl:when test="$path='about/speakers.en.xhtml'">Speakers</xsl:when>
+                       <xsl:otherwise>
+                          <a href="{$fsffrance}/about/speakers.en.html" class="T2">Speakers</a>
+                       </xsl:otherwise>
+                    </xsl:choose><br />
+		    <xsl:choose>
                        <xsl:when test="$path='about/about.en.xhtml'">About</xsl:when>
                        <xsl:otherwise>
                           <a href="{$fsffrance}/about/about.en.html" class="T2">About</a>

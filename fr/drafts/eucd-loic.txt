@@ -1,3 +1,12 @@
+[Traité de nice, la charte des droits fondamentaux de l'union, 18
+décembre 2000, article 17 alinéa 2: la propriété intellectuelle est
+protégée. C'est la première fois que dans un texte de l'union la
+propriété intellectuelle est mentionnée commun droit de l'individu et
+non des marchands.]
+
+SEC(2002)197 - DRM rapport
+
+[! pas de copie privée en matière de logiciel]
 [Pourquoi EUCD est une mauvaise chose: 20 lignes
  + reference]
 
@@ -22,12 +31,13 @@ mesure technique.
     27 Juin 2002. Compte rendu CSPLA. http://www.culture.fr/culture/cspla/co270602.pdf 
     2001 Information rights and intellectual freedom, Julie E. Cohen. http://www.law.georgetown.edu/faculty/jec/intellfreedom.pdf
     2000. The Digital Dilemma (The challenge of private use and fair use with digital information) http://www.nap.edu/html/digital_dilemma/ch4.html
+    (marc mossé)
 
 . Atteinte au droit de lire, au droit d'usage 
 
   Une personne loue un film sur DVD. Elle utilise une copie du
 logiciel DeCSS pour decrypter le film et le regarder sur son
-ordinateur. Or L'EUCD interdit la copie du logiciel DeCSS, par
+ordinateur. Or l'EUCD interdit la distribution du logiciel DeCSS, par
 conséquent cette personne est en situation de contrefaçon. Donc seuls
 les logiciels autorisés par l'auteur de la mesure technique (CSS dans
 ce cas) permettent de lire les contenus protégés. Si le lecteur ne
@@ -36,38 +46,101 @@ autre, actuellement ou dans l'avenir, il lui est de fait interdit de
 lire l'oeuvre pour laquelle il s'est déjà acquité des droits.
 
   Reference: The Right to Read, Communications of the ACM (Volume 40, Number 2), http://www.gnu.org/philosophy/right-to-read.fr.html
+	     U.S. v. ElcomSoft & Sklyarov http://www.eff.org/IP/DMCA/US_v_Elcomsoft/
 	     Content Scramble System http://www.dvdcca.org/css/
 
-. Négation du principe des bibliothèques et de l'accès à la culture pour tous
+. Négation du principe des bibliothèques, de l'accès à la culture pour tous et du domaine public
 
-  
-  Reference: About DMCA: Comments of the Library Associations http://www.copyright.gov/reports/studies/dmca/comments/Init018.pdf
+  Les bibliothèques et les archives font un pont entre les
+générations. Des médias tels que le papier se dégradent mais survivent
+cependant durant des centaines d'années. Les oeuvres digitales sont
+eternelles, et les mesures techniques qui les protègent sont donc une
+menace d'envergure, même sans l'EUCD. Elles sont conçues pour empêcher
+des personnes d'accéder à l'oeuvre, pour limiter cet accès à certaines
+personnes dans certaines circonstances. C'est un principe totalement
+opposé à celui des bibliothèques.  Dans le cas d'oeuvres tombées dans
+le domaine public et archivées l'EUCD interdit au bibliothèques de
+contourner les mesures techniques qui les protègent, et ne prend
+aucune mesure pour les oeuvres dont les mesures techniques ne peuvent
+être contournées. 
+
+  Reference: Exemple: les fleurs du mal 1857. 
+
+  About DMCA: Comments of the Library Associations http://www.copyright.gov/reports/studies/dmca/comments/Init018.pdf
 	IFLA Position on Copyright in the Digital Environment http://www.ifla.org/V/press/copydig.htm
+	The Right to Read, Communications of the ACM (Volume 40, Number 2), http://www.gnu.org/philosophy/right-to-read.fr.html
+	Janvier 2002. La diffusion numérique du patrimoine, dimension de la politique culturelle http://www.culture.fr/culture/actualites/rapports/ory-lavollee/ory-lavollee.pdf
 
 . Violation de la vie privée
 
-  Reference:  Rapport particulier de Monsieur Leonardo Chiariglione (Telecom Italia Lab, Italie) portant sur la gestion et la protection des ?uvres et de la propriété intellectuelle. Etat des travaux et des réflexions. (Point C. La protection de la vie privée des utilisateurs) http://www.culture.fr/culture/cspla/rapchariglione.htm
+  Reference:  Rapport particulier de Monsieur Leonardo Chiariglione (Telecom Italia Lab, Italie) portant sur la gestion et la protection des oeuvres et de la propriété intellectuelle. Etat des travaux et des réflexions. (Point C. La protection de la vie privée des utilisateurs) http://www.culture.fr/culture/cspla/rapchariglione.htm
 	Article 8 European Community Human Right.
 
-. Atteinte au droit de créer un logiciel
+. Atteinte au droit de divulguer le logiciel que l'on crée
 
-  DeCSS
+  Un auteur a le droit de divulguer son oeuvre. Dans le cas du
+logiciel ce droit moral inaliénable ne souffre pas d'exception. L'EUCD
+rend illicite la divulgation de certains logiciels. Cette
+interdiction, difficile à déterminer, dépend de la capacité du
+logiciel à contourner une mesure technique. Par exemple, le logiciel
+DeCSS qui permet de decrypter un film stocké sur un DVD ne peut être
+divulgué.
 
-  Reference: EFF/2600 Appellate Reply Brief in MPAA v. 2600 Case 
-	http://www.eff.org/IP/Video/MPAA_DVD_cases/20010319_ny_eff_appeal_reply_brief.html
+  Reference: The Right to Read, Communications of the ACM (Volume 40, Number 2), http://www.gnu.org/philosophy/right-to-read.fr.html
+  EFF/2600 Appellate Reply Brief in MPAA v. 2600 Case http://www.eff.org/IP/Video/MPAA_DVD_cases/20010319_ny_eff_appeal_reply_brief.html
+	     Content Scramble System http://www.dvdcca.org/css/
 
 . Force les ventes liées
+
+  Avec l'EUCD l'acquisition de droits sur une oeuvre digitale protégée
+par une mesure technique oblige l'acquisition d'un logiciel autorisé
+par l'auteur de la mesure technique qui protège l'oeuvre.  Par
+exemple, une personne loue un film sur DVD. Pour regarder ce film,
+l'EUCD oblige à utiliser les logiciels qui ont été autorisés par
+l'auteur de la mesure technique qui protège le film sur le DVD (CSS) à
+l'exclusion de ceux qui seraient basés, par exemple, sur DeCSS qui est
+un logiciel qui contourne la mesure technique.
 
   Reference: The law & economics of reverse engineering http://www.sims.berkeley.edu/~pam/papers/l&e%20reveng5.pdf
 
 . Met en danger l'économie
 
+  Un économie compétitive dépend de la possibilité pour le consomateur
+ou pour l'entreprise de remplacer le produit d'une entreprise par
+celui d'une autre. Pour des biens de consomation simples tels qu'un
+bol ou une chaise, c'est à l'évidence possible. Pour des biens
+digitaux pour lesquels il existe une serrure cryptographique (une
+mesure technique de protection) cela peut s'avérer
+impossible. L'article 6 de l'EUCD empêche les entreprises de pratiquer
+le reverse engineering qui leur permettrait de créer et diffuser des
+produits concurrents, car le reverse engineering implique toujours un
+contournement de mesure technique. Par conséquent les entreprises
+peuvent se servir de l'EUCD pour empêcher d'autre entreprises de créer
+des produits compatibles ou susceptibles de se substituer aux leurs.
+
   . Encourage les abus de position dominante
+
+    Une entreprise disposant de plus de 90% du marché des navigateurs
+internet pourrait monayer à sa convenance, auprès du consomateur et
+auprès du titulaire des droits, l'ajout d'une mesure technique de
+protection dans son navigateur permettant de contrôler la consultation
+d'oeuvres en ligne.
+
   . Force les ententes illicites
+
+    Les titulaires de droits et les auteurs de mesure techniques sont
+contraint de passer entre eux des accords. Si l'ensemble de ces
+acteurs ont un monopole, il peut s'agir d'entente illicite.
+
   . Empèche une saine compétition
+
+    
+
   . Menace l'interopérabilité
 
   Reference: The law & economics of reverse engineering http://www.sims.berkeley.edu/~pam/papers/l&e%20reveng5.pdf
+	     Blizzard v. bnetd http://www.eff.org/IP/Emulation/Blizzard_v_bnetd/
+	     U.S. v. ElcomSoft & Sklyarov http://www.eff.org/IP/DMCA/US_v_Elcomsoft/
 
 ----------------------------------------------------------------------
 . Criminalisation exagérée des actes relatifs aux mesures techniques

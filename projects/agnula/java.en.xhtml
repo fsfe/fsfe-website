@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html
+          PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+  <head>
+    <title>FSF Europe - Projects - AGNULA: A GNU/Linux Audio distribution (IST-2001-34879) - Java Problem</title>
+  </head>
+  <body>
+
+    <div> <!-- The header will be inserted here -->
+<!-- Begin page content -->
+<center>
+<img src="agnula_logo_big.png" border="0" /><img src="ist_logo.png" border="0" /><br /><br />
+<h1>Java Problems</h1>
+</center>
+
+<p>The goal of the AGNULA project is to create an entirely Free
+Software GNU/Linux distribution for professional audio users. When
+setting out with this goal, we didn't know how far we would come, but
+it turns out that it is indeed possible. As it so often is the case,
+one problem remains to be solved.</p>
+
+<h3>Java issues</h3><ul>
+
+<p>The "Java problem" often mentioned in several places is not a
+technical problem of Java as a programming language. It is rather in
+the way Java is being developed and maintained as a proprietary
+operating base.</p>
+
+<p>There are two major Java implementations currently in use, one
+maintained by IBM, the other by Sun. Both of them may come without
+charge, but are without the freedom that would make them qualify as <a
+href="http://www.gnu.org/philosophy/free-sw.html">Free
+Software</a>.</p>
+
+<p>Consequently, all software written in Java &#8212; even software
+under a Free Software license, such as the GNU General Public License
+(GPL) or the BSD license &#8212; running on such a platform will put
+the users freedom at risk. A situation quite comparable to Free
+Software running on Microsoft Windows.</p>
+
+<p>Alternative approaches to provide Free Software Java platforms
+exist, but due to the proprietary nature of the Java implementations,
+Free Software needs re-engineer what the proprietary platforms have
+implemented after they have been released, putting Free Software
+implementations at a disadvantage. Furthermore, this is a tedious task
+that not many developers wish to undertake.</p>
+
+<p>As a result, the proprietary Java platforms tend to be more feature
+rich than their Free Software counterparts, tempting programmers to
+make use of their advanced features.</p>
+
+<p>When programs make use of these advanced features, they will not
+run on Free Software Java implementations. In fact they will often
+only run with one of the two major proprietary implementations. A
+situation comparable to Free Software that only runs on Microsoft
+Windows and cannot be made to run on a Free Software operating
+system.</p>
+
+<p>If you seek more detailed information about the status of Free
+Software Java implementations, the follwing link should be useful:</p>
+<ul><code><a href="http://www.gnu.org/software/java/">http://www.gnu.org/software/java/</a></code></ul>
+
+</ul><h3>Effect on AGNULA</h3><ul>
+
+<p>There is only one package in AGNULA that has a dependency to a
+proprietary Java implementation. Unfortunately this is a very valuable
+project called <a href="http://www.ircam.fr/jmax/">jMax</a>, written
+by <a href="http://www.ircam.fr">IRCAM</a>, one of the AGNULA project
+partners.</p>
+
+<p>The project itself consists of a server written in C and licensed
+under the GNU General Public License (GPL), and a client written in
+Java, also licensed under the GNU General Public License.</p>
+
+<p>So all that would be required is to make sure the Java client does
+not have proprietary dependencies.</p>
+
+</ul><h2>What we have tried</h2><ul>
+
+<p>There are several possible ways to solve this problem that we have
+explored:
+<ul>
+
+<li><b>Convince Sun to release their Java implementation as Free
+Software</b>:<br /> Because Microsofts .NET initative seems very
+likely to become the "Java killer," releasing their Java
+implementation as Free Software would greatly increase Suns chances to
+remain an important player in the market. Although there are some
+people inside Sun who would like to do this, it appears unlikely this
+will happen soon. Suns recent announcement to support Free Software
+Java implementations helps, but it is not enough to solve the
+immediate problem.</li>
+
+<li><b>Make the jMax GUI use the GNU Java tools:</b><br /> IRCAM has
+spent some time evaluating the possibilities and found that the GNU
+Java Compiler (gjc) would be up to the job, unfortunately the
+libraries needed for the GUI are still too rudimentary. The simplest
+solution along this route would have been to add the necessary
+features to GNU Classpath, a task that has been estimated with four
+person-years. Unfortunately IRCAM does not have the resources to do
+this and by European Commission rules, AGNULA can only finance
+integration, not development.</li>
+
+<li><b>Create an alternative non-Java GUI:</b><br /> Since it seems
+unlikely we'll be able to stick with Java and keep the project
+entirely free, the last alternative appears to be the writing of
+another GUI based upon a different programming language.<br /> After
+some discussion it has been decided that <a
+href="http://www.python.org">Python</a> would be a good choice for a
+platform independent Free Software GUI.</li> </ul></p>
+
+</ul><h3>Creating a Python GUI for jMax</h3><ul>
+
+<p>For the same reasons mentioned above, AGNULA cannot directly fund
+development of a Python GUI, nor can IRCAM afford the resources
+necessary for full development. We are very determined to not fall
+short of our initial goal, however, which is why we are asking for
+volunteers.</p>
+
+</ul><h2>Call for volunteers</h2><ul>
+
+<p>If you are a Python developer or somebody with an interest in music
+applications, please help us develop <b>pyMax</b>, the Python GUI for
+jMax, so we can offer this as another fully functional Free Software
+audio application on AGNULA.</p>
+
+<p>IRCAM cannot do all the work themselves, but they are willing to
+offer volunteers priority support (answer time within 24hrs on working
+days) and all help that they can provide.</p>
+
+<p>Should you wish to help with this problem, please subscribe to the
+IRCAM jMax development list and let people that you want to help:
+<ul><code><a href="THEURLOFTHELIST">THEURLOFTHELIST</a></code></ul>
+</p>
+
+</ul>
+
+<!-- End page content -->
+
+    </div> <!-- The footer will be inserted here -->
+
+    Last update:
+    <!-- timestamp start -->
+    $Date$ $Author$
+    <!-- timestamp end -->
+
+  </body>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

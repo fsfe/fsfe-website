@@ -17,8 +17,9 @@
   <os>
   <name>Linux</name>
   <maintainer>Robert W. Harrison</maintainer>
-  <version>2.0</version>
+  <version>2.1</version>
   <licence></licence>
+  <url>http://asterix.cs.gsu.edu/ammp/dist/ammp-2.1-linux.tar.gz</url>
   <comment>
   /*
   *  copyright 1992, 1993, 1994, 1995 Robert W. Harrison
@@ -32,7 +33,7 @@
   */
 
   </comment>
-  <date>28 jul 2001</date>
+  <date>22 apr 2002</date>
       </os>
   <os>
   <name>Unix</name>
@@ -64,8 +65,9 @@
       <maintainer>Sean Grimes</maintainer>
       <version>0.01a</version>
       <licence>GPL</licence>
+      <url>http://chemcalc.sourceforge.net/downloads/chemcalc-0.01a.tgz</url>
       <comment>Missing end of GNU GPL, license notice ok but incomplete, no license notice in Makefiles and documentation.</comment>
-      <date>28 jul 2001</date>
+      <date>22 apr 2002</date>
     </os>
   </software>
   <software>
@@ -82,8 +84,9 @@
       <maintainer>Georges Khaznadar</maintainer>
       <version>1.10</version>
       <licence>GPL</licence>
+      <url>ftp://boltz.univ-littoral.fr/pub/chemeq/chemeq-V110.tar.gz</url>
       <comment>No copyright or license notice in the code, only comment on the fact that it is under the GNU GPL in the LISEZMOI file.</comment>
-      <date>28 jul 2001</date>
+      <date>22 apr 2002</date>
     </os>
   </software>
 <!--
@@ -100,8 +103,9 @@
       <maintainer>Ricardo Stefani, Rene Fosdal</maintainer>
       <version>0.0.7</version>
       <licence>GPL</licence>
+      <url>http://chemsuite.seul.org/chemsuite-0.0.7.tar.bz2</url>
       <comment>no copyright or license notice in molcalc, spectrum, license notice ok but incomplete in chem2d, missing information about Qt Architect generated files license</comment>
-      <date>03 mar 2002</date>
+      <date>22 apr 2002</date>
     </os>
   </software>
 -->
@@ -111,13 +115,16 @@
     <description lang="en">Chemtool is a small program for drawing chemical structures on GNU/Linux and Unix systems using the GTK toolkit under X11.</description>
     <description lang="fr">Chemtool est un petit programme de dessin de structures chimiques en 2D.</description>
     <authors>Martin Kroeker</authors>
+    <email>Thomas.Volk@student.uni-ulm.de</email>
     <url>http://ruby.chemie.uni-freiburg.de/~martin/chemtool/chemtool.html</url>
     <os>
       <name>GNU/Linux</name>
       <maintainer>Martin Kroeker</maintainer>
       <version>1.5.a12</version>
       <licence>GPL</licence>
-      <date>28 nov 2001</date>
+      <url>http://ruby.chemie.uni-freiburg.de/~martin/chemtool/chemtool-1.5.tar.gz</url>
+      <comment>Missing copy of the GNU GPL, no copyright or license notice, indication of GNU GPL licensing in the README file</comment>
+      <date>22 apr 2002</date>
     </os>
   </software>
   <software>

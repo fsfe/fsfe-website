@@ -41,7 +41,7 @@ swpat/patents.en.html: swpat/patents-agenda.en.xml
 
 # temporary, added by mad@april.org
 NEWS = news/news.fr.html news/news.en.html
-$(NEWS): fr/news/fsfe-fr-channel.fr.xml fr/news/fsfe-fr-channel.en.xml 
+$(NEWS): fr/news/fsfe-fr-channel.fr.xml fr/news/fsfe-fr-channel.en.xml fr/news/news-bytes-latest.en.html fr/news/news-bytes-latest.fr.html
 
 $(ENPAGES): %.html: %.xhtml fsfe.xsl navigation.en.xsl
 	@echo "Building $@ ..."; \

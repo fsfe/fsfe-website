@@ -118,7 +118,31 @@
         <tr>
           <td class="line" colspan="2">
             <div align="center">
-              <xsl:apply-templates select="/buildinfo/textset/text[@id='copyright']/node()" />
+              <xsl:apply-templates
+                select="/buildinfo/textset/text[@id='copyright']/node()" />
+              <!-- "Last changed" magic -->
+              <xsl:variable name="timestamp">
+                <xsl:value-of select="/buildinfo/document/timestamp" />
+              </xsl:variable>
+              <!-- FIXME: over time, all pages should have the timestamp -->
+              <!--        tags, so this conditional could be removed     -->
+              <xsl:if test="string-length ($timestamp) &gt; 0">
+                <xsl:variable name="Date">
+                  <xsl:value-of select="substring-before (substring-after
+                    ($timestamp, '$Date: 2004-05-25 17:15:44 $')" />
+                </xsl:variable>
+                <xsl:variable name="Author">
+                  <xsl:value-of select="substring-before (substring-after
+                    ($timestamp, '$Author: reinhard $')" />
+                </xsl:variable>
+                <xsl:apply-templates
+                  select="/buildinfo/textset/text[@id='lastchanged']/node()" />
+                <xsl:value-of select="translate ($Date, '/', '-')" />
+                (<xsl:value-of select="$Author" />)
+              </xsl:if>
+              <br />
+              <xsl:apply-templates
+                select="/buildinfo/textset/text[@id='permission']/node()" />
             </div>
           </td>
         </tr>

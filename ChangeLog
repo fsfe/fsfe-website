@@ -1,3 +1,30 @@
+2001-04-24  loic  <loic@jev>
+
+	* /webcvs/fsfe/fr/server/sysadmin-france.en.html: Push HTML version
+
+	* /webcvs/fsfe/fr/server/sysadmin-france.en.texi:
+	Fix duplicate security node bug
+
+	* /webcvs/fsfe/fr/server/sysadmin-france.en.texi:
+	Add XML section + fix DNS node bug
+
+2001-04-24  Jaime E. Villate  <villate@jev.fe.up.pt>
+
+	* /webcvs/fsfe/gbn/menu.xml, /webcvs/fsfe/press/index.fr.xml, /webcvs/fsfe/press/index.xml, /webcvs/fsfe/press/menu.fr.xml, /webcvs/fsfe/press/menu.xml, /webcvs/fsfe/contact/index.xml, /webcvs/fsfe/contact/menu.xml, /webcvs/fsfe/documents/doi.fr.xml, /webcvs/fsfe/documents/doi.xml, /webcvs/fsfe/documents/freesoftware.de.xml, /webcvs/fsfe/documents/freesoftware.xml, /webcvs/fsfe/documents/menu.de.xml, /webcvs/fsfe/documents/menu.fr.xml, /webcvs/fsfe/documents/menu.xml, /webcvs/fsfe/gbn/index.xml, /webcvs/fsfe/background.xml, /webcvs/fsfe/index.de.xml, /webcvs/fsfe/index.fr.xml, /webcvs/fsfe/index.xml, /webcvs/fsfe/mailinglists.xml, /webcvs/fsfe/menu.de.xml, /webcvs/fsfe/menu.fr.xml, /webcvs/fsfe/menu.xml, /webcvs/fsfe/template.xml:
+	XML have been superseded by their XHTML versions.
+
+	* /webcvs/fsfe/mailman/index.xhtml, /webcvs/fsfe/press/index.fr.xhtml, /webcvs/fsfe/press/index.xhtml, /webcvs/fsfe/contact/index.xhtml, /webcvs/fsfe/documents/doi.fr.xhtml, /webcvs/fsfe/documents/doi.xhtml, /webcvs/fsfe/documents/freesoftware.de.xhtml, /webcvs/fsfe/documents/freesoftware.xhtml, /webcvs/fsfe/documents/gnuproject.de.xhtml, /webcvs/fsfe/documents/gnuproject.xhtml, /webcvs/fsfe/documents/preamble.de.xhtml, /webcvs/fsfe/documents/preamble.fr.xhtml, /webcvs/fsfe/documents/preamble.xhtml, /webcvs/fsfe/gbn/index.xhtml, /webcvs/fsfe/background.xhtml, /webcvs/fsfe/boilerplate.de.xhtml, /webcvs/fsfe/boilerplate.en.xhtml, /webcvs/fsfe/boilerplate.fr.xhtml, /webcvs/fsfe/index.de.xhtml, /webcvs/fsfe/index.fr.xhtml, /webcvs/fsfe/index.xhtml:
+	Corrects a typo in the DOCTYPE and changes emacs mode to xml.
+
+	* /webcvs/fsfe/ChangeLog:
+	Updates of the last, very hectic week, in which we moved from html+ssi
+	into xml+xslt and finally into xhtml+xslt.
+
+2001-04-24  greve  <greve@jev>
+
+	* /webcvs/fsfe/navigation.de.xsl, /webcvs/fsfe/navigation.en.xsl, /webcvs/fsfe/navigation.fr.xsl:
+	changed equal chances... to have people first
+
 2001-04-24  Jaime E. Villate  <villate@jev.fe.up.pt>
 
 	* /webcvs/fsfe/fr/boilerplate.fr.xhtml:
@@ -10,6 +37,30 @@
 
 	* /webcvs/fsfe/fr/server/sysadmin-france.en.texi:
 	Added information about the DNS
+
+2001-04-24  Jaime E. Villate  <villate@jev.fe.up.pt>
+
+	* /webcvs/fsfe/fr/boilerplate.fr.xhtml:
+	Corrects a typo in the Public descriptor of the doctype and defines the
+	emacs mode as xml, rather than html.
+
+2001-04-24  r4f  <r4f@jev>
+
+	* /webcvs/fsfe/fr/server/sysadmin-france.en.texi: typo
+
+	* /webcvs/fsfe/fr/server/sysadmin-france.en.texi:
+	Added information about the DNS
+
+2001-04-23  Jaime E. Villate  <villate@jev.fe.up.pt>
+
+	* /webcvs/fsfe/index.xhtml:
+	Just a fake change to force refreshing in gnudist :-)
+
+	* /webcvs/fsfe/mailman/index.xhtml:
+	Fixes an html tag that I forgot to change into lower case.
+
+	* /webcvs/fsfe/mailman/index.xhtml, /webcvs/fsfe/navigation.de.xsl, /webcvs/fsfe/navigation.en.xsl, /webcvs/fsfe/navigation.fr.xsl:
+	Updated the mailing lists page.
 
 2001-04-23  r4f  <r4f@jev>
 

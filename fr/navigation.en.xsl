@@ -94,7 +94,7 @@
 		<a href="{$fsffrance}/philosophy/philosophy.en.html">Philosophy</a><br />
 		<a href="http://agenda.lolix.org/">Calendar</a><br />
 		<a href="{$fsffrance}/news/news.en.html">News</a><br />
-		<a href="{$fsfeurope}/events/events.en.html">Events</a><br />
+		<a href="{$fsffrance}/events/events.en.html">Events</a><br />
 		<a href="http://savannah.gnu.org/pm/task.php?group_project_id=37&amp;group_id=53&amp;func=browse">Tasks</a><br />
 		<a href="{$gnu}/jobs/jobsFR.fr.html">Jobs</a><br />
 		<a href="{$fsffrance}/press/press.fr.html">Press Section</a><br />

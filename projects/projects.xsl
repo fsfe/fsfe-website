@@ -30,25 +30,25 @@
           <td class="projects">
             <xsl:for-each select="/html/set/project[@type='technical']">
               <p><a href="{link}"><xsl:value-of select="title" /></a><br />
-               <xsl:value-of select="description" /></p>
+               <xsl:apply-templates select="description/node()" /></p>
             </xsl:for-each>
           </td>
           <td class="projects">
             <xsl:for-each select="/html/set/project[@type='legal']">
               <p><a href="{link}"><xsl:value-of select="title" /></a><br />
-               <xsl:value-of select="description" /></p>
+               <xsl:apply-templates select="description/node()" /></p>
             </xsl:for-each>
           </td>
           <td class="projects">
             <xsl:for-each select="/html/set/project[@type='community']">
               <p><a href="{link}"><xsl:value-of select="title" /></a><br />
-               <xsl:value-of select="description" /></p>
+               <xsl:apply-templates select="description/node()" /></p>
             </xsl:for-each>
           </td>
           <td class="projects">
             <xsl:for-each select="/html/set/project[@type='other']">
               <p><a href="{link}"><xsl:value-of select="title" /></a><br />
-               <xsl:value-of select="description" /></p>
+               <xsl:apply-templates select="description/node()" /></p>
             </xsl:for-each>
           </td>
         </tr>

@@ -19,7 +19,7 @@
       <xsl:apply-templates />
       <xsl:for-each select="/html/set/project[@type='other']">
         <p><a href="{link}"><xsl:value-of select="title" /></a><br />
-        <xsl:value-of select="description" /></p>
+        <xsl:apply-templates select="description/node()" /></p>
       </xsl:for-each>
     </body>
   </xsl:template>

@@ -14,11 +14,55 @@ Old version of the XML DTD, before it became endorsed by OASIS
 <!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
                          "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
 
-<!ENTITY title "F.A.Q des constructeurs d'électronique et de matériels informatiques">
-<!ENTITY subtitle "Foire Aux Questions sur la disponibilité de pilotes (drivers) pour tous systèmes d'exploitation">
+<!-- *************************************************************** -->
+<!-- External documents                                              -->
+<!-- *************************************************************** -->
+
+<!ENTITY doc.gnuFDL SYSTEM "gnuFDL.xml">
+
+<!-- *************************************************************** -->
+<!-- General aliases                                                 -->
+<!-- *************************************************************** -->
+
+<!ENTITY title 
+         "F.A.Q des constructeurs d'électronique et de matériels informatiques">
+<!ENTITY subtitle 
+         "Foire Aux Questions sur la disponibilité de pilotes (drivers) pour
+         tous systèmes d'exploitation">
+
 <!ENTITY OS "Open Source">
 <!ENTITY LL "Logiciel Libre">
 <!ENTITY LLs "Logiciels Libres">
+
+<!-- *************************************************************** -->
+<!-- URL aliases                                                     -->
+<!-- *************************************************************** -->
+
+<!-- Factorization for easy replacement -->
+<!ENTITY server     "http://www.aful.org">
+<!ENTITY server.doc "&server;/info/faq-constructeurs/">
+
+<!-- French versions -->
+<!ENTITY url.longVerion.fr.html
+         "&server.doc;FAQConstructeurs.fr.html">
+<!ENTITY url.longVerion.fr.pdf
+         "&server.doc;FAQConstructeurs.fr.pdf">
+
+<!ENTITY url.shortVerion.fr.html
+         "&server.doc;shortFAQConstructeurs.fr.html">
+<!ENTITY url.shortVerion.fr.pdf
+         "&server.doc;shortFAQConstructeurs.fr.pdf">
+
+<!-- English versions -->
+<!ENTITY url.longVerion.en.html
+         "&server.doc;FAQConstructeurs.en.html">
+<!ENTITY url.longVerion.en.pdf
+         "&server.doc;FAQConstructeurs.en.pdf">
+
+<!ENTITY url.shortVerion.en.html
+         "&server.doc;shortFAQConstructeurs.en.pdf">
+<!ENTITY url.shortVerion.en.pdf
+         "&server.doc;shortFAQConstructeurs.en.html">
 
 ]>
 
@@ -49,7 +93,8 @@ Old version of the XML DTD, before it became endorsed by OASIS
     <copyright>
       <year>2001</year>
       <holder>AFUL, APRIL</holder>
-      <!-- Buggy stylesheet support -->
+      <!-- If there wasn't a buggy stylesheet support, 
+           it should be like this : -->
       <!--
       <holder>AFUL</holder>
       <holder>APRIL</holder>
@@ -460,7 +505,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	    <para condition="long">
 	      GNU/Linux n'est pas le seul système d'exploitation libre.
 	      Si les autres peuvent sembler négligeables en part de marché, 
-	      il n'en existent pas moins, et leurs utilisateurs souhaitent 
+	      ils n'en existent pas moins, et leurs utilisateurs souhaitent 
 	      également disposer des ressources nécessaires au bon 
 	      fonctionnement de leurs machines.
 	    </para>
@@ -647,16 +692,37 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	<qandaentry condition="long">
 	  <question>
 	    <para>
-	      Quelle documentation est disponible sur la programmation de pilotes (drivers) pour Linux ?
+	      Où trouver de la documentation sur la programmation de pilotes
+	      (drivers) pour Linux ?
 	    </para>
 	  </question>
 	  <answer>
 	    <para>
-	      <ulink url="http://www.oreilly.com/catalog/linuxdrive2/">Linux Device Drivers, Alessandro Rubini &amp; Jonathan Corbet, 2001, O'Reilly</ulink>
+	      Le livre 
+	      <ulink url="http://www.oreilly.com/catalog/linuxdrive2/">Linux
+	      Device Drivers, Alessandro Rubini &amp; Jonathan Corbet, 2001,
+	      O'Reilly</ulink> est la référence actuelle pour la programmation 
+	      de pilotes pour le noyau Linux.
+	      Ce livre peut être acheté dans sa version papier et est également
+	      <ulink url="http://www.xml.com/ldd/chapter/book/index.html">
+		librement disponible en ligne.</ulink>
 	    </para>
+	  </answer>
+	</qandaentry>
+
+	<qandaentry condition="long">
+	  <question>
 	    <para>
-	      Ce livre qui est la référence actuelle pour la programmation de 
-	      pilotes pour le noyau Linux est également <ulink url="http://www.xml.com/ldd/chapter/book/index.html">librement disponible en ligne.</ulink>
+	      Existe-t-il une base de données recensant les matériels
+	      compatibles Linux ?
+	    </para>
+	  </question>
+	  <answer>
+	    <para>
+	      Oui, ZDNet maintient la <ulink url="http://lhd.zdnet.com/">Linux
+	      Hardware Database</ulink>.
+	      Cette base de données est très complète et chaque constructeur
+	      peut y référencer ses matériels.
 	    </para>
 	  </answer>
 	</qandaentry>
@@ -940,30 +1006,6 @@ Old version of the XML DTD, before it became endorsed by OASIS
     </para>
   </sect1>
 
-  <sect1>
-    <title>History</title>
-    <para>
-      Le titre de cette section est en anglais car il implique certaines
-      obligations imposées par la license GNU FDL. 
-      <itemizedlist>
-	<listitem>
-	  <para>
-	    Version initiale par Marc-Aurèle Darche <email>ma.darche@free.fr</email> et Philippe Coulonges <email>cphil@cphil.net</email>.
-	  </para>
-	</listitem>
-	<listitem>
-	  <para>
-	    Modifications conjointes par AFUL, APRIL, FSF et
-	    contributeurs sur les listes de diffusions
-	    <email>april@april.org</email>,
-	    <email>aful@aful.org</email> et
-	    <email>fsfe-france@gnu.org</email> coordonées par
-	    Marc-Aurèle Darche <email>ma.darche@free.fr</email>.
-	  </para>
-	</listitem>
-      </itemizedlist>
-    </para>
-  </sect1>
 
 
   <sect1>
@@ -977,15 +1019,15 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	    <itemizedlist>
 	      <listitem>
 		<para>
-		  <ulink url="http://www.aful.org/info/FAQConstructeurs/FAQConstructeurs.fr.html">
+		  <ulink url="&url.longVerion.fr.html;">
 		    format HTML
 		  </ulink>
 		</para>
 	      </listitem>
 	      <listitem>
 		<para>
-		  <ulink url="http://www.aful.org/info/FAQConstructeurs/FAQConstructeurs.fr.ps">
-		    format impression PostScript
+		  <ulink url="&url.longVerion.fr.pdf;">
+		    format PDF
 		  </ulink>
 		</para>
 	      </listitem>
@@ -998,15 +1040,15 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	    <itemizedlist>
 	      <listitem>
 		<para>
-		  <ulink url="http://www.aful.org/info/FAQConstructeurs/FAQConstructeurs.fr_courte.html">
+		  <ulink url="&url.shortVerion.fr.html;">
 		    format HTML
 		  </ulink>
 		</para>
 	      </listitem>
 	      <listitem>
 		<para>
-		  <ulink url="http://www.aful.org/info/FAQConstructeurs/FAQConstructeurs.fr_courte.ps">
-		    format impression PostScript
+		  <ulink url="&url.shortVerion.fr.pdf;">
+		    format PDF
 		  </ulink>
 		</para>
 	      </listitem>
@@ -1019,15 +1061,15 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	    <itemizedlist>
 	      <listitem>
 		<para>
-		  <ulink url="http://www.aful.org/info/FAQConstructeurs/FAQConstructeurs.en.html">
+		  <ulink url="&url.longVerion.en.html;">
 		    format HTML
 		  </ulink>
 		</para>
 	      </listitem>
 	      <listitem>
 		<para>
-		  <ulink url="http://www.aful.org/info/FAQConstructeurs/FAQConstructeurs.en.ps">
-		    format impression PostScript
+		  <ulink url="&url.longVerion.en.pdf;">
+		    format PDF
 		  </ulink>
 		</para>
 	      </listitem>
@@ -1040,15 +1082,15 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	    <itemizedlist>
 	      <listitem>
 		<para>
-		  <ulink url="http://www.aful.org/info/FAQConstructeurs/FAQConstructeurs.en_courte.html">
+		  <ulink url="&url.shortVerion.en.html;">
 		    format HTML
 		  </ulink>
 		</para>
 	      </listitem>
 	      <listitem>
 		<para>
-		  <ulink url="http://www.aful.org/info/FAQConstructeurs/FAQConstructeurs.en_courte.ps">
-		    format impression PostScript
+		  <ulink url="&url.shortVerion.en.pdf;">
+		    format PDF
 		  </ulink>
 		</para>
 	      </listitem>
@@ -1058,6 +1100,39 @@ Old version of the XML DTD, before it became endorsed by OASIS
       </itemizedlist>
     </para>
   </sect1>
+
+
+
+  <sect1>
+    <title>History</title>
+    <para>
+      Le titre de cette section est en anglais car il implique certaines
+      obligations imposées par la license GNU FDL. 
+      <itemizedlist>
+	<listitem>
+	  <para>
+	    Version initiale par 
+	    Philippe Coulonges <email>cphil@cphil.net</email> et 
+	    Marc-Aurèle Darche <email>ma.darche@free.fr</email>.
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Modifications conjointes par AFUL, APRIL, FSF et
+	    contributeurs sur les listes de diffusions
+	    <email>aful@aful.org</email>,
+	    <email>april@april.org</email> et
+	    <email>fsfe-france@gnu.org</email> coordonées par
+	    Marc-Aurèle Darche <email>ma.darche@free.fr</email>.
+	  </para>
+	</listitem>
+      </itemizedlist>
+    </para>
+  </sect1>
+
+
+  <!-- Insertion of the GNU Free Document License -->
+  &doc.gnuFDL;
 
 
 </article>

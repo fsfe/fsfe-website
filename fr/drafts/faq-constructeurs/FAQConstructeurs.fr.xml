@@ -42,9 +42,6 @@ Old version of the XML DTD, before it became endorsed by OASIS
 
 <!-- Factorization for easy replacement -->
 <!ENTITY server     "http://www.aful.org">
-<!--
-<!ENTITY server.faqs      "&server;/faqs/faq-constructeurs/">
--->
 <!ENTITY server.faqs      "&server;/faqs/">
 <!ENTITY server.solutions "&server;/solutions/">
 
@@ -52,26 +49,26 @@ Old version of the XML DTD, before it became endorsed by OASIS
          "&server.solutions;ssii.fr.html">
 
 <!-- French versions -->
-<!ENTITY url.longVerion.fr.html
+<!ENTITY url.longVersion.fr.html
          "&server.faqs;FAQConstructeurs.fr.html">
-<!ENTITY url.longVerion.fr.pdf
+<!ENTITY url.longVersion.fr.pdf
          "&server.faqs;FAQConstructeurs.fr.pdf">
 
-<!ENTITY url.shortVerion.fr.html
+<!ENTITY url.shortVersion.fr.html
          "&server.faqs;shortFAQConstructeurs.fr.html">
-<!ENTITY url.shortVerion.fr.pdf
+<!ENTITY url.shortVersion.fr.pdf
          "&server.faqs;shortFAQConstructeurs.fr.pdf">
 
 <!-- English versions -->
-<!ENTITY url.longVerion.en.html
+<!ENTITY url.longVersion.en.html
          "&server.faqs;FAQConstructeurs.en.html">
-<!ENTITY url.longVerion.en.pdf
+<!ENTITY url.longVersion.en.pdf
          "&server.faqs;FAQConstructeurs.en.pdf">
 
-<!ENTITY url.shortVerion.en.html
-         "&server.faqs;shortFAQConstructeurs.en.pdf">
-<!ENTITY url.shortVerion.en.pdf
+<!ENTITY url.shortVersion.en.html
          "&server.faqs;shortFAQConstructeurs.en.html">
+<!ENTITY url.shortVersion.en.pdf
+         "&server.faqs;shortFAQConstructeurs.en.pdf">
 
 ]>
 
@@ -1018,14 +1015,14 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	    <itemizedlist>
 	      <listitem>
 		<para>
-		  <ulink url="&url.longVerion.fr.html;">
+		  <ulink url="&url.longVersion.fr.html;">
 		    format HTML
 		  </ulink>
 		</para>
 	      </listitem>
 	      <listitem>
 		<para>
-		  <ulink url="&url.longVerion.fr.pdf;">
+		  <ulink url="&url.longVersion.fr.pdf;">
 		    format PDF
 		  </ulink>
 		</para>
@@ -1039,14 +1036,14 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	    <itemizedlist>
 	      <listitem>
 		<para>
-		  <ulink url="&url.shortVerion.fr.html;">
+		  <ulink url="&url.shortVersion.fr.html;">
 		    format HTML
 		  </ulink>
 		</para>
 	      </listitem>
 	      <listitem>
 		<para>
-		  <ulink url="&url.shortVerion.fr.pdf;">
+		  <ulink url="&url.shortVersion.fr.pdf;">
 		    format PDF
 		  </ulink>
 		</para>
@@ -1060,14 +1057,14 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	    <itemizedlist>
 	      <listitem>
 		<para>
-		  <ulink url="&url.longVerion.en.html;">
+		  <ulink url="&url.longVersion.en.html;">
 		    format HTML
 		  </ulink>
 		</para>
 	      </listitem>
 	      <listitem>
 		<para>
-		  <ulink url="&url.longVerion.en.pdf;">
+		  <ulink url="&url.longVersion.en.pdf;">
 		    format PDF
 		  </ulink>
 		</para>
@@ -1081,14 +1078,14 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	    <itemizedlist>
 	      <listitem>
 		<para>
-		  <ulink url="&url.shortVerion.en.html;">
+		  <ulink url="&url.shortVersion.en.html;">
 		    format HTML
 		  </ulink>
 		</para>
 	      </listitem>
 	      <listitem>
 		<para>
-		  <ulink url="&url.shortVerion.en.pdf;">
+		  <ulink url="&url.shortVersion.en.pdf;">
 		    format PDF
 		  </ulink>
 		</para>

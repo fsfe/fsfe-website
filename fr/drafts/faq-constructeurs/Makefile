@@ -36,9 +36,11 @@ HTML_OUTPUT=${patsubst %.xml,%.html,${XML_SRC}}
 HTML_OUTPUT_LONG=${patsubst %.xml,%.html,${XML_SRC}}
 HTML_OUTPUT_SHORT=${patsubst %.xml,%.html,${XML_SRC_SHORT}}
 
+FO_OUTPUT=${patsubst %.xml,%.fo,${XML_SRC}}
 FO_OUTPUT_LONG=${patsubst %.xml,%.fo,${XML_SRC}}
 FO_OUTPUT_SHORT=${patsubst %.xml,%.fo,${XML_SRC_SHORT}}
 
+LATEX_OUTPUT=${patsubst %.xml,%.tex,${XML_SRC}}
 LATEX_OUTPUT_LONG=${patsubst %.xml,%.tex,${XML_SRC}}
 LATEX_OUTPUT_SHORT=${patsubst %.xml,%.tex,${XML_SRC_SHORT}}
 
@@ -96,11 +98,14 @@ MAX_TEX_RECURSION=4
 # NOTE : 
 # Don't put empty targets in the .PHONY targets, they would get executed all
 # the time, which is the opposite of what they are for.
-.PHONY: help all test \
+.PHONY: help test all \
 	clean clean-html clean-print \
-	html html-xsl html-dsssl \
-	latex tex dvi ps \
-	fo pdf
+	xml-long xml-short \
+	html html-long html-short \
+	latex latex-long latex-short \
+	tex dvi ps \
+	fo fo-long fo-short \
+	pdf pdf-long pdf-short
 
 help:
 	@echo "make help   prints this help message"

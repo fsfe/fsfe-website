@@ -27,6 +27,7 @@ FSF       = http://www.fsf.org
 GNU       = http://www.gnu.org
 
 ECHO	  = echo 
+SSH	  = ssh
 
 XSLTOPTS = \
 	'$$fsffrance=$(FSFFRANCE)' \
@@ -126,8 +127,7 @@ clean:
 
 sync:
 	@echo "Updating stable version : $(STABLEBRANCH)"
-	ssh -l www france.fsfeurope.org 'cd fsfe ; cvs -z3 -q update -I "*.html" -d ; ../bin/nightly'
-	ssh -l www france.fsfeurope.org 'cd fsfe/server/testbeta ; cvs -z3 -q update -I "*.html" -d -r $(STABLEBRANCH) ; ../../../bin/nightly'
+	$(SSH) -l www france.fsfeurope.org 'cd fsfe ; cvs -z3 -q update -I "*.html" -d ; ../bin/nightly'
+	$(SSH) -l www france.fsfeurope.org 'cd fsfe/server/testbeta ; cvs -z3 -q update -I "*.html" -d -r $(STABLEBRANCH) ; ../../../bin/nightly'
 	@echo "Updating beta version :"
-	ssh -l www france.fsfeurope.org 'cd fsfe/server/test/fsfe/server/testbeta ; cvs -z3 -q update -I "*.html" -d -A ; ../../../../../../bin/nightly'
-
+	$(SSH) -l www france.fsfeurope.org 'cd fsfe/server/test/fsfe/server/testbeta ; cvs -z3 -q update -I "*.html" -d -A ; ../../../../../../bin/nightly'

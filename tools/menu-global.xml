@@ -12,8 +12,8 @@
   <menu id="menu/events">/events/events.html</menu>
   <menu id="menu/help">/help/help.html</menu>
   <menu id="menu/donate">/help/donate.html</menu>
-  <menu id="menu/donate/cc">/help/paypal.html</menu>
-  <menu id="menu/donate/other">/help/donate.html</menu>
+  <menu id="menu/donate/cc" parent="menu/donate">/help/paypal.html</menu>
+  <menu id="menu/donate/other" parent="menu/donate">/help/donate.html</menu>
   <menu id="menu/order">/order/order.html</menu>
   <menu id="menu/contact">/contact/contact.html</menu>
   <menu id="menu/thankgnus">/help/thankgnus.html</menu>

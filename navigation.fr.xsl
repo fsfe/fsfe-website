@@ -79,7 +79,7 @@
 		<tr>
 		  <td class="Section" align="right">
 		    <a href="{$fsfeurope}/law/law.fr.html" class="T2">Protéger le Logiciel Libre</a><br />
-		    <a href="{$fsfeurope}/coposys/coposys.fr.html" class="T2">Coposys</a><br />
+		    <a href="{$fsfeurope}/coposys/index.fr.html" class="T2">Coposys</a><br />
 		  </td>
 		</tr>
 

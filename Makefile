@@ -48,7 +48,7 @@ ITPAGES = $(shell find * -path 'fr' -prune -o -regex '.*\.it\.xhtml' -print | se
 
 ESPAGES = $(shell find * -path 'fr' -prune -o -regex '.*\.es\.xhtml' -print | sed "s/xhtml$$/html/")
 
-LANGFILES = $(shell find * -path 'fr' -prune -o -regex '.*\.lang'")
+LANGFILES = $(shell find * -path 'fr' -prune -o -regex '.*\.lang' -print)
 
 # temporary, added by mad@april.org
 NEWS = news/news.fr.html news/news.en.html news/news.pt.html

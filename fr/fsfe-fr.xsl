@@ -5,7 +5,7 @@
  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:output method="html" encoding="iso-8859-1" doctype-public="-//W3C//DTD HTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" />
 
-<!-- $Id: fsfe-fr.xsl,v 1.1 2001-04-20 12:07:38 villate Exp $ -->
+<!-- $Id: fsfe-fr.xsl,v 1.2 2001-04-20 23:28:01 villate Exp $ -->
 <xsl:template match="webpage">
 <html>
   <head>
@@ -77,7 +77,7 @@
     </table>
   Mis à jour:
 <!-- timestamp start -->
-$Date: 2001-04-20 12:07:38 $ $Author: villate $
+$Date: 2001-04-20 23:28:01 $ $Author: villate $
 <!-- timestamp end -->
   </body>
 </html>
@@ -110,11 +110,12 @@ $Date: 2001-04-20 12:07:38 $ $Author: villate $
 </xsl:template>
 
 <xsl:template match="webfolders">
-  <xsl:apply-templates />
+  <xsl:apply-templates select="foldersdiv[1]" mode="grey"/>
+  <xsl:apply-templates select="foldersdiv[2]" mode="blue"/>
 </xsl:template>
 
 
-<xsl:template match="foldersdiv[1]">
+<xsl:template match="foldersdiv" mode="grey">
     <table summary="" cellspacing="0" cellpadding="0" width="100%" border="0">
       <tr valign="middle" bgcolor="#6f6f6f">
       <td><img src="images/pix.png" width="1" height="1" alt="" /></td>
@@ -130,7 +131,7 @@ $Date: 2001-04-20 12:07:38 $ $Author: villate $
     </table>
 </xsl:template>
 
-<xsl:template match="foldersdiv[2]">
+<xsl:template match="foldersdiv" mode="blue">
     <table summary="" cellspacing="0" cellpadding="0" width="100%" border="0">
 	<tr valign="middle" bgcolor="#6f6f6f">
 	  <td><img src="images/pix.png" width="1" height="1" alt="" /></td>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE webpage PUBLIC "-//laespiral.org//DTD LE-document 1.1//EN"
+   "LE-document-1.1.dtd" [<!ENTITY menu SYSTEM "menu.xml">] >
+<webpage lang="fr">
+  <title>Free Software Foundation Europe - FSF Europe - Homepage</title>
+  <translations>
+    <language>English</language>
+    <language url="index.fr.html">Français</language>
+    <language url="index.de.html">Deutsch</language>
+  </translations>
+  <sect1>
+    <title>Free Software Foundation Europe</title>
+    <para>
+      This will become the web site of the <emphasis>FSF Europe</emphasis>, an
+      organization dedicated to Free Software activities in Europe. As the
+      official sister organization of the <emphasis>Free Software
+      Foundation</emphasis> in the United States, it will build its activities
+      around the <ulink url="http://www.gnu.org/">GNU Project</ulink> although
+      it won't be limited to it.
+    </para>
+    <para>
+      Its second role will be to provide maintenance and services for the
+      <emphasis>GNU Business Network</emphasis> which is also being planned
+      right now. For more information about the <emphasis>GNU Business
+      Network</emphasis> we recommend taking a look at the <ulink
+      url="http://mailman.gnubiz.org">mailing lists</ulink> - this is where
+      all the information is right now.
+    </para>
+    <para>
+      The <emphasis>FSF Europe</emphasis> is currently in an "about to become
+      reality" phase, so all we can provide at the moment is the <ulink
+      url="documents/doi.html">Declaration of Intent</ulink>. If you want more
+      information, we also recommend checking out the <ulink
+      url="http://mailman.fsfeurope.org">mailing lists</ulink>.
+    </para>
+  </sect1>
+  &menu;
+</webpage>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE webpage PUBLIC "-//laespiral.org//DTD LE-document 1.1//EN"
+   "LE-document-1.1.dtd" [<!ENTITY menu SYSTEM "menu.xml">] >
+<webpage lang="fr">
+  <title>FSF Europe - Contacts</title>
+  <translations>
+    <language>English</language>
+  </translations>
+  <variablelist>
+    <varlistentry>
+      <term>FSFE and other questions:</term>
+      <listitem>
+	<para>
+	  <ulink url="mailto:team@fsfeurope.org">team@fsfeurope.org</ulink>
+	</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>Web pages comments:</term>
+      <listitem>
+	<para>
+	  <ulink url="mailto:webmasters@fsfeurope.org">webmasters@fsfeurope.org</ulink>
+	</para>
+      </listitem>
+    </varlistentry>
+  </variablelist>
+  &menu;
+</webpage>

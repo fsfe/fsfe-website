@@ -114,6 +114,7 @@
                   <a href="{$fsfeurope}/mailman/index.pt.html" class="T2">Listas de Correio</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
+              <!--
               <a href="http://savannah.gnu.org/pm/?group_id=53" class="T2">Tarefa</a><br />
               <xsl:choose>
                 <xsl:when test="$path='press/index.pt.xhtml'">Para a Imprensa</xsl:when>
@@ -121,6 +122,7 @@
                   <a href="{$fsfeurope}/press/index.pt.html" class="T2">Para a Imprensa</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
+	      -->
               <xsl:choose>
                 <xsl:when test="$path='gbn/index.pt.xhtml'">Rede Empresarial GNU</xsl:when>
                 <xsl:otherwise>
@@ -128,6 +130,15 @@
                 </xsl:otherwise>
               </xsl:choose><br/>
               <br/></td>
+            </tr>
+            <tr>
+              <td class="TopTitle" align="center">Organizações Associadas</td>
+            </tr>
+            <tr>
+              <td align="right">
+                <a href="http://www.april.org/" class="T2">APRIL</a><br />
+                <a href="http://www.ofset.org/" class="T2">OFSET</a><br />
+              </td>
             </tr>
             <tr>
               <td class="TopTitle" align="center">Administração</td>

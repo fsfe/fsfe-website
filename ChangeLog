@@ -1,3 +1,117 @@
+2004-07-28  Jonathan R. Grant < jg at jguk . org>
+	* help/web.en.xhtml: add hyphen to co-ordination
+
+	
+	* documents/whyweexist.en.xhtml:  "organizatory" word does not exist
+	From context it I can see it should be "organisational", I have made
+	this change.
+
+	* documents/eur5greve.en.xhtml: Contains "proprietarization", this is
+	not a word, possibly a noun->verb americanisation style.  In the
+	sentence "..which has a strong system-inherent tendency towards
+	proprietarization".  I changed this to "..which has a strong
+	system-inherent tendency towards proprietary software". Hope this is
+	ok. It sounds clear to me.
+
+	* contribute/translators.en.xhtml: Change "don't" -> "do not",
+	non-abreviated is more suitable IMO.
+
+	* projects/eucd/eucd.en.xhtml: I changed "american" -> "U.S.", as this
+	is refering to specifically the U.S. DMCA and not both "american"
+	continents.
+
+
+	* news/article2001-12-17-01.en.xhtml: The term "proprietarizations" is
+	not in my dictionaries, or dictionary.com.  It is perhaps an american
+	created word I believe.  I revised it from ["value added"
+	proprietaryizations] -> ["value added" proprietary software additions].
+	I think that is more suitable.  I hope this change is ok.
+
+	I have not revised the PDF's containing the U.S. style spellings.
+
+
+	* about/members.en.xhtml:
+	* about/legal/template-constitution.en.xhtml:
+	* about/legal/constitution.en.xhtml:
+	* associates/affs/associate.en.xml:
+	* associates/ffs/associate.en.xml:
+	* associates/ofset/associate.en.xml:
+	* associates/ofset/associate.fr.xml:
+	* associates/ofset/associate.it.xml:
+	* contact/contact.en.xhtml:
+	* contribute/translators.en.xhtml:
+	* documents/fp6/focal.en.xhtml:
+	* documents/fp6/lafis.en.xhtml:
+	* documents/fp6/more-support.en.xhtml:
+	* documents/fp6/reasoning.en.xhtml:
+	* documents/fp6/recommendation.en.xhtml:
+	* documents/doi.en.xhtml:
+	* documents/eur5greve.en.xhtml:
+	* documents/freesoftware.en.xhtml:
+	* documents/gnuproject.en.xhtml:
+	* documents/iprip.en.xhtml:
+	* documents/preamble.en.xhtml:
+	* events/2004/FISL/fisl.en.xhtml:
+	* help/donate-2001.xhtml:
+	* help/donate-2002.xhtml:
+	* help/help.en.xhtml:
+	* help/help.en.xhtml:
+	* help/thankgnus-2001.en.xhtml:
+	* help/web.en.xhtml:
+	* help/webpage/Webpage-Structure.txt:
+	* it/news/2003/news-20030716-01.en.xml:
+	* it/news/2003/news-20031001-01.en.xml:
+	* news/2002/news-20020118-01.en.xml:
+	* news/2002/news-20021218-01.en.xml:
+	* news/article2001-08-23-01.en.xhtml:
+	* news/article2001-12-17-01.en.xhtml:
+	* news/article2002-01-18-01.en.xhtml:
+	* news/article2002-01-31-01.en.xhtml:
+	* news/2004/news-20040324-01.en.xml:
+	* news/2004/news-20040510-01.en.xml:
+	* news/2004/news-20040510-02.en.xml:
+	* news/2004/news-20040510.en.xhtml:
+	* projects/agnula/agnula.en.xhtml:
+	* projects/agnula/deliverable-1.3.1.en.xhtml:
+	* projects/education/tgs/tagatschool5.de.xhtml:
+	* projects/education/tgs/tagatschool5.fr.xhtml:
+	* projects/education/education.de.xhtml:
+	* projects/education/education.fr.xhtml:
+	* projects/education/education.it.xhtml:
+	* projects/education/education.xhtml:
+	* projects/mankind/lsm2002/slides/support.html:
+	* projects/mankind/lsm2002/index.en.xhtml:
+	* projects/mankind/lsm2002/press-release.en.xhtml:
+	* projects/mankind/done.en.xhtml:
+	* projects/mankind/worldmemory.draft:
+	* projects/swpat/letter-20040510.en.xhtml:
+	* projects/swpat/swpat.en.xhtml:
+	* projects/wsis/debriefing-geneva.en.xhtml:
+	* projects/wsis/debriefing-paris.en.xhtml:
+	* projects/wsis/fs.en.xhtml:
+	* projects/wsis/issues.en.xhtml:
+
+
+
+	English revisions -iza- -> -isa-.  Also some changed to UTF-8.
+
+
+	* documents/fp6/focal.en.xhtml:
+	* documents/fp6/lafis.en.xhtml:
+	* documents/fp6/recommendation.en.xhtml:
+	* documents/eur5greve.en.xhtml:
+	* documents/iprip.en.xhtml:
+	* projects/education/tgs/tagatschool2.en.xhtml:
+	* projects/fla/fla.en.xhtml:
+	* projects/swpat/letter-20040510.en.xhtml:
+	* projects/swpat/swpat.en.xhtml:
+	* projects/wsis/debriefing-geneva.en.xhtml:
+	* projects/wsis/debriefing-paris.en.xhtml:
+	* projects/wsis/fs.en.xhtml:
+	* projects/wsis/ps-20030923.en.xhtml:
+
+	English revisions -izing -> -ising.
+
 2004-07-27  Werner Koch  <wk@g10code.de>
 
 	* contact/contact.de.xhtml: Added ridiculous note about the phone

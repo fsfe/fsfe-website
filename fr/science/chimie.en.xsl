@@ -13,7 +13,7 @@
 
 <html lang="en">
   <head>
-    <title>FSF France - Free software for chemistery</title>
+    <title>FSF France - Free software for chemistry</title>
   </head>
   <body>
 
@@ -26,7 +26,7 @@
       </center>
       <p />
 
-<p align="center"><font size="+2"><b>Free software for chemistery</b></font>
+<p align="center"><font size="+2"><b>Free software for chemistry</b></font>
 <font size="-2">(Listed by Jérôme Pansanel.)</font>
 </p>
 
@@ -47,7 +47,7 @@
 
     Updated:
     <!-- timestamp start -->
-    $Date: 2001-12-29 14:24:17 $ $Author: olberger $
+    $Date: 2002-01-11 14:54:34 $ $Author: gilles $
     <!-- timestamp end -->
 
   </body>

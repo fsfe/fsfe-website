@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html lang="en">
+  <head>
+  <title>FSF Europe - Microsoft against free competition</title>
+  </head>
+
+<body>
+<!-- Begin page content -->
+
+<center>
+  <h1>INTERVENTION to the Court of the European Union on behalf of the
+    Free Software Foundation Europe, Thursday Sept 30th. 2004</h1>
+</center>
+
+<h2>Introduction by Carlo Piana:</h2>
+
+<p>Mylord,</p>
+
+<p>My name is Carlo Piana, I appear on behalf of the Free Software
+Foundation Europe. The Free Software Foundations have a 20 year
+history of starting, developing and furthering the GNU and after the
+GNU/Linux system, often referred to as "Linux". FSFs are in particular
+the single largest fiduciary of the interests of the thousands of
+authors of that system, especially their legal interests through
+defense of their Copyright and Licenses (precisely the GNU GPL and
+LGPL, published by the FSF).</p>
+
+<p>One of these groups of authors is the Samba Team. May I therefore
+introduce Mr. Jeremy Allison of the Samba Team whose first hand
+experience will represent and show further how the factual assumption
+on Microsofts part are flawed and overstating the consequences of the
+remedies.</p>
+
+
+<h2>Intervention by Jeremy Allison:</h2>
+
+<p>Mr. President,</p>
+
+<p>My name is Jeremy Allison, and I'm speaking on behalf of the FSFE who
+is representing the Samba Team, who have a great interest in this
+case. Samba is one of the few competing products to Microsoft in the
+Workgroup server market. It is commonly shipped with Linux, but is
+developed separately. I am one of the original authors of the Samba
+code, and with my colleague from Germany Volker Lendecke have been
+working on interoperating with Microsoft software for over 12 years.
+I speak from many years of experience of implementing Workgroup server
+software.</p>
+
+<p>In the development of Samba Microsoft has already disclosed to us
+specifications similar to those that we are now requesting. Microsoft
+has given to the Samba Team in the past internal documents describing
+exactly the level of protocol information we now need. These documents
+are now no longer useful, as Microsoft creates modified versions of
+its protocols on a regular basis, as it releases new versions of its
+Windows software. The documents given to us were marked internal we
+used them to create Samba code, as Microsoft intended when they gave
+them to us. They gave us these documents knowing we would create code
+with them, and they encouraged this. We were not required to sign
+non-disclosure agreements to obtain this information, we were simply
+treated as a trusted third party, as I believe we have been. We have
+never disclosed their contents publicly, only the code we created.</p>
+
+<p>What we are requesting via these remedies is that Microsoft return to
+the policy of openness and co-operation with others that they followed
+in the past. The claims that we have not requested information on the
+protocols is not true. We have made repeated requests to Microsoft
+that they continue the kind of disclosures they made before they came
+to dominate this market.</p>
+
+<p>A protocol, like a language, is a convention for communication. We
+need to know if the noun comes before the verb. We can learn ourselves
+by listening to others speak, this is what we do now to teach
+ourselves how to talk with Microsoft software. But such a self-taught
+student will always be behind someone properly taught by a native
+speaker well versed in grammar.</p>
+
+<p>Microsoft claims that to disclose interoperability information would
+cause them irreparable harm. However, we believe the information that
+they are being asked to disclose is not of the immense value they
+claim.</p>
+
+<p>The protocols Microsoft uses to prevent interoperability are mostly
+based on open and standard protocol specifications. Microsoft have
+added undisclosed extensions and additions to standard protocols that
+create dependencies between their clients and servers. For a
+non-Microsoft server to provide services to Microsoft clients these
+interdependencies must be understood by the programmers
+involved. Microsoft uses this lack of knowledge in third party servers
+for competitive advantage ("tying together" of clients and servers).
+Microsoft is building on the standards work of others, and adding
+small but critical changes for the pure purpose of making Windows
+clients depend on the presence of Microsoft servers, and Microsoft
+servers depend upon Microsoft directory servers.</p>
+
+<p>A good analogy would be with the telephone network. The Microsoft
+documentation for the phone network would tell you how voice is
+transferred over the lines, but would neglect to tell you how to dial
+a number. As you can imagine this would cause difficulty for other
+phone manufacturers. Microsoft is trying to claim that the particular
+tones that they have chosen to use to dial 1-2-3 are a multi-million
+dollar investment.</p>
+
+<p>The protocols Microsoft wants to keep secret to prevent
+interoperability are *not* of high intrinsic value. These protocols
+are not kept secret by Microsoft because they are valuable, they are
+valuable to Microsoft because they are kept secret, and thus prevent
+competition.</p>
+
+<p>Whilst we are proud of Samba, it is not yet up to the level of
+interoperability of a Windows Workgroup server of 1996 (NT4). This is
+due to the lack of timely information from Microsoft on how their
+products talk to each other. Without this it is impossible to fairly
+compete on the merits of our products, as we are always without the
+basic levels of interoperability that Windows servers can provide. We
+are always scrambling to try and catch up to work out how the latest
+version of Windows has modified the protocols we implement.</p>
+
+<p>We are not able to achieve interoperability by the existing methods we
+use, sophisticated though they are and there are no others available
+to us. We are 8 years behind and will only fall further behind if
+these remedies are delayed. It is trivial for Microsoft to change a
+detail in the protocol in a service pack or new release, and we need
+to first write our own protocol spec. before we can even begin to
+implement that change.</p>
+
+<p>We do not wish to copy the Windows Operating System or to see any of
+the code that implements it. We wish to be able to expose our own
+merits, which we believe are considerable, not to reproduce the
+features of the Windows Operating Systems. Such a task does not
+require Microsoft to provide details of Windows internals, only
+network protocols.  We wish to have the opportunity to provide file,
+print and authentication services with the same amount of network
+protocol information that is available to Microsoft engineers.</p>
+
+<!-- End page content -->
+
+</body>
+  <timestamp>
+    Last update:
+    <!-- timestamp start -->
+
+    <!-- timestamp end -->
+  </timestamp>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

@@ -22,7 +22,7 @@ page should already be familiar to many developers and authors and
 might be of interest to those that have not yet discovered them.</p>
 
 <p>Translators and occasional volunteers will most likely only get
-in touch with
+in touch with</p>
 <ul>
 <li><a href="http://savannah.gnu.org" target="_blank">Savannah</a> --
 for CVS (see below) services and access permission management
@@ -31,16 +31,16 @@ for CVS (see below) services and access permission management
 from which the static pages are generated about every 2 hours</li>
 <li><a href="http://www.cvshome.org" target="_blank">Concurrent
 Version System (CVS)</a> -- for co-ordination and synchronisation</li>
-</ul></p>
+</ul>
 
 <p>Volunteers interested in getting deeper into the maintenance should
-also be familiar with
+also be familiar with</p>
 <ul>
 <li><a href="http://www.perl.org" target="_blank">Perl</a> -- for the
 maintenance and page creation scripts</li>
 <li><a href="http://www.apache.org" target="_blank">Apache</a> -- as
 the web server</li>
-</ul></p>
+</ul>
 
 <h3>First steps</h3>
 
@@ -69,51 +69,51 @@ you are interested in working on.</p>
 user-chosen local levels that supplement them for information that is
 country-specific, the layout has a certain complexity that is hidden
 entirely from the user of the page.</p>
-<ul>
-<p><b>[DOCUMENTATION]</b> Unless you only wish to translate pages (see
+
+<p class="indent"><b>[DOCUMENTATION]</b> Unless you only wish to translate pages (see
 below), <b>please make sure you have taken a look at the <a
 href="/help/webpage/Webpage-Structure.txt" target="_blank">structural
 reference</a>.</b></p>
 
-<p><b>[DOCUMENTATION]</b> Also, there is a <a
+<p class="indent"><b>[DOCUMENTATION]</b> Also, there is a <a
 href="http://www.texinfo.org" target="_blank">Texinfo</a>
 documentation file "<a href="/README.texi"
 target="_blank">Webmastering FSF Europe</a>" by <a
 href="mailto:oberg@fsfeurope.org">Jonas Öberg</a>, who implemented the
 build system for the page. Please read it to know more about how the
 web page works.</p>
-</ul>
+
 
 <h3>Quick Reference for Translators / Some general rules</h3>
 
 <p>These easy rules should keep you out of trouble and save you from
-frustration while making it easy to create translations.
+frustration while making it easy to create translations.</p>
 <ul>
 <li><b>Never edit the HTML files directly, edit the XHTML sources
-instead!</b></li><br />
+instead!</b><br /><br /></li>
 <li><b>If you commit pages with broken XHTML code, it will break the
 build process until somebody fixes the mistake. So never commit files
 to CVS without having them checked for valid XHTML syntax!</b> The web
 CVS contains a script "validate.pl" in the tools directory, which is
-supplied for that particular purpose.</li><br />
+supplied for that particular purpose.<br /><br /></li>
 <li>Page names follow the syntax: "&lt;name&gt;.&lt;language&gt;.xhtml" with
 &lt;language&gt; being the two-letter country code for the language. If
 there is no country/language code, the page is assumed to be in
 English. <br />(<em>Example: The build system will assume that
 test.it.xhtml is the Italian translation of the French page
-test.fr.xhtml.</em>)</li><br />
+test.fr.xhtml.</em>)<br /><br /></li>
 <li>Do not translate links within the FSF Europe web page. If there is
 a link to another pagex.html on the FSF Europe web page, do <b>not
 include a language part</b>, it will be automatically added by the
-build script!</li><br />
+build script!<br /><br /></li>
 <li>If you want to create the French translation of the Italian page
 x.it.xhtml, all you need to do is to copy it to x.fr.xhtml, translate
 it and check it in. On the next build, this will be accepted as the
-translation and put into the navigation structure accordingly.</li><br />
+translation and put into the navigation structure accordingly.<br /><br /></li>
 <li>Some of the files for auto-generated menus are in XML format
 instead of XHTML. What was said about the XHTML pages is also applies
-for these. </li><br />
-</ul></p>
+for these. <br /><br /></li>
+</ul>
 
 <h3>More Questions?</h3>
 
@@ -126,12 +126,8 @@ href="mailto:oberg@fsfeurope.org">Jonas Öberg</a>.</p>
 
     </div> <!-- The footer will be inserted here -->
 
-    Last update:
-    <!-- timestamp start -->
-    $Date$ $Author$
-    <!-- timestamp end -->
-
   </body>
+  <timestamp>$Date$ $Author$</timestamp>
 </html>
 <!--
 Local Variables: ***

@@ -21,22 +21,22 @@
       <xsl:apply-templates />
       <h3><xsl:value-of select="/html/text[@id='patrons']" /></h3>
       <ul>
-       <xsl:apply-templates select="/html/set/patrons" />
+       <xsl:apply-templates select="/html/set/patrons/node()" />
       </ul>
 
       <h3><xsl:value-of select="/html/text[@id='sustaining']" /></h3>
       <ul>
-       <xsl:apply-templates select="/html/set/sustainingcontributors" />
+       <xsl:apply-templates select="/html/set/sustainingcontributors/node()" />
       </ul>
 
       <h3><xsl:value-of select="/html/text[@id='contributors']" /></h3>
       <ul>
-       <xsl:apply-templates select="/html/set/contributors" />
+       <xsl:apply-templates select="/html/set/contributors/node()" />
       </ul>
 
       <h3><xsl:value-of select="/html/text[@id='supporters']" /></h3>
       <ul>
-       <xsl:apply-templates select="/html/set/supporters" />
+       <xsl:apply-templates select="/html/set/supporters/node()" />
       </ul>
 
     </body>

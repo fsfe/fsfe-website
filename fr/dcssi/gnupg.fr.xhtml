@@ -382,24 +382,60 @@ number generation;
 	    de la gestion des clés mises en &#339;uvre par le moyen, incluant 
 	    au moins : </p>
 	  <p> - le mode de 
-	    distribution ;<br />
+	    distribution: exportation dans un fichier ou envoi par TCP/IP vers des serveurs de clés répondant au protocol LDAP, HKP ou par email (gnupg-1.0.7/g10/export.c, gnupg-1.0.7/keyserver/*.c);
+<!-- Export to a file or sending using TCP/IP to keyservers speaking
+either the LDAP, HKP or email protocol.  
+(gnupg-1.0.7/g10/export.c, gnupg-1.0.7/keyserver/*.c) -->
+	    <br />
 	    - le procédé de génération des clés 
-	    ;<br />
-	    - le format de conservation des clés s'il y a lieu ;<br />
-	    - le format de transmission des clés s'il y a lieu ; 
+gnupg-1.0.7/g10/keygen.c
+gnupg-1.0.7/cipher/rsa.c
+gnupg-1.0.7/cipher/dsa.c
+gnupg-1.0.7/cipher/elgamal.c
+gnupg-1.0.7/cipher/primegen.c
+	    ;
+	    <br />
+	    - le format de conservation des clés s'il y a lieu: 
+	    un fichier contenant une concaténation de blocs de
+clés (keyblocks) utilisation le format de transmission décrit dans le RFC2440;
+<!-- One file with concatenated keyblocks using the transmission format for keys as described in RFC2440. -->	    
+	    <br />
+	    - le format de transmission des clés s'il y a lieu: tel que décrit dans le RFC2440; 
+<!-- as per RFC2440 --> 
 	  </p>
 	  <p> La description 
 	    des mesures techniques mises en &#339;uvre pour empêcher l'altération 
 	    du procédé de chiffrement ou de la gestion de clés 
-	    associée (2) ; </p>
+	    associée (2):  le procédé de chiffrement consiste en une clé publique encodée avec la clé de session (bloc type 2 PKCS-1 tel que décrit dans le RFC2313). Les clés privées sont protégées selon les méthodes décrites dans le RFC2440 avec l'amélioration permettant de remplacer optionnellement le checksum 16 bit par un checksum SHA-1 ;
+<!-- The encryption method is public key encoded along with the session
+key (PKCS-1 block type 2 as defined in RFC2313)
+
+The private keys are protected using the methods described in RFC2440
+with the enhancement that the 16 bit checksum may optioanlly be replaced by a
+SHA-1 checksum. -->
+
+	  </p>
 	  <p> La description 
 	    des prétraitements subis par les données claires avant 
 	    leur chiffrement (compression, formatage, ajout d'un en-tête, 
-	    etc.) ; </p>
+	    etc.) : encapsulation dans un paquet de données literal (literal data packet) tel que décrite par le RFC2440, utilisant un en tête contenant un nom de fichier et un indicateur (flag) distinguant les données binaires des données textuelles. Les données peuvent aussi, optionneellement, être signées et/ou compressées ; 
+<!-- Encapsulation in a literal data packet as per RFC2440, using a header
+with a filename and a flag to distinguish between binary and plaintext
+data. Optiuoanlly digiatlly signed, optionally compressed. -->
+	  </p>
 	  <p> La description 
 	    des post-traitements des données chiffrées, aprés 
 	    leur chiffrement (ajout d'un en-tête, formatage, mise en paquet, 
-	    etc.). </p>
+	    etc.) : Soit l'ajout au début des données chiffrées d'une clé de session chiffrée avec la clé publique encapsulée dans le paquet RFC2440 idoine, soit le chiffrement de la clé de session par un autre algorithme symétrique afin de permettre le déchiffrement par un secret partagé (shared secret). Les deux méthodes peuvent être combinées afin de permetre le déchiffrement avec la "passphrase" ou la clé privée. Il est possible de chiffrer la clé de session pour plusieures clés privées ou "passphrases".
+<!-- Either prepending the encrypted data with the public key encrypted
+session key encapsulated into the appropriate RFC2440 packet or
+encrypting the session key with another symmetric algorithm to allow
+decryption with a shared secret.  Both methods may be combined to
+allow decryption with either a passphrase or using the private key.
+It is possible to add encrypt the session key for multiple private
+keys or passphrases.
+-->
+	  </p>
 	  <p>  (1) Conformément 
 	    au troisième alinéa de l'article 1er de l'arrêté 
 	    ci-dessus, la partie technique doit être accompagnée 

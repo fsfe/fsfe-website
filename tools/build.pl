@@ -61,6 +61,7 @@ our %languages = (
 );
 
 our $current_date = strftime "%Y-%m-%d", localtime;
+our $current_time = strftime "%Y-%m-%d %H:%M:%S", localtime;
 
 #
 # Parse the command line options. We need two; where to put the finished
@@ -82,6 +83,17 @@ unless ($opts{o}) {
 $opts{i} = ".";
 
 $| = 1;
+
+# Create XML and XSLT parser contexts. Also create the root note for the
+# above mentioned XML file (used to feed the XSL transformation).
+
+my $parser = XML::LibXML->new();
+my $xslt_parser = XML::LibXSLT->new();
+
+# Parse the global stylesheet
+
+my $global_style_doc = $parser->parse_file($opts{i}."/fsfe-new.xsl");
+my $global_stylesheet = $xslt_parser->parse_stylesheet($global_style_doc);
 
 #
 # First topic of today: create all directories we need. Instead of creating
@@ -158,12 +170,8 @@ foreach (grep(/\.xhtml$/, @files)) {
 while (my ($file, $langs) = each %bases) {
   print STDERR "Building $file.. " unless $opts{q};
 
-  #
-  # Create XML and XSLT parser contexts. Also create the root note for the
-  # above mentioned XML file (used to feed the XSL transformation).
-  #
-  my $parser = XML::LibXML->new();
-  my $xslt_parser = XML::LibXSLT->new();
+  # Create the root note for the above mentioned XML file (used to feed the XSL
+  # transformation).
 
   my $dom = XML::LibXML::Document->new("1.0", "iso-8859-1");
   my $root = $dom->createElement("buildinfo");
@@ -257,6 +265,11 @@ while (my ($file, $langs) = each %bases) {
 	    $root->removeChild($_);
           }
           $root->appendChild($document);
+
+          # Create the <timestamp> tag automatically for these documents
+          my $timestamp = $dom->createElement("timestamp");
+          $timestamp->appendText("\$Date: 2004-05-25 19:35:13 $current_time." \$ \$Author: reinhard $");
+          $document->appendChild($timestamp);
 
           #
           # Get the list of sources and create the files hash. The files
@@ -389,9 +402,7 @@ while (my ($file, $langs) = each %bases) {
         #
         # Do the actual transformation.
         #
-	my $style_doc = $parser->parse_file($opts{i}."/fsfe-new.xsl");
-	my $stylesheet = $xslt_parser->parse_stylesheet($style_doc);
-	my $results = $stylesheet->transform($dom);
+	my $results = $global_stylesheet->transform($dom);
 
         #
         # In post-processing, we replace links pointing back to ourselves
@@ -418,7 +429,7 @@ while (my ($file, $langs) = each %bases) {
 
 	print "Writing: $opts{o}/$dir/$file.$lang.html\n" if $opts{d};
 
-	$stylesheet->output_file($results, "$opts{o}/$dir/$file.$lang.html")
+	$global_stylesheet->output_file($results, "$opts{o}/$dir/$file.$lang.html")
 		unless $opts{n};
     }
   }    

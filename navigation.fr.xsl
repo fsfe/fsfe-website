@@ -60,8 +60,9 @@
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
       <tr>
 	<td width="99%" valign="top">
+        <div class="content">
 	<xsl:apply-templates select="@*|node()"/>
-        <br/>
+        </div>
 	</td>
 	<!-- Menu column. On the right to be Lynx friendly.  -->
 	<td>&nbsp;</td>

@@ -1,0 +1,1015 @@
+\input texinfo                @c -*- Texinfo -*-
+@c %**start of header
+@setfilename sysadmin-france.info
+@settitle @code{System Administration France}
+@setchapternewpage odd
+@c %**end of header
+
+@set RCSID $Id: publish.en.texi,v 1.1 2002-04-01 00:47:43 loic Exp $
+@set VERSION 1.0
+
+@c Combine the variable and function indices:
+@syncodeindex vr fn
+@c Combine the program and concept indices:
+@syncodeindex pg cp
+
+@titlepage
+@title System Administration France
+@subtitle Information specific to GNU and FSF machines in France
+@subtitle @code{Sysadmin France} Version @value{VERSION}
+@author Loic Dachary, Rodolphe Quiedeville
+@page
+@vskip 0pt plus 1filll
+
+ Permission is granted to make and distribute verbatim copies of
+ this manual provided the copyright notice and this permission notice
+ are preserved on all copies.
+
+ Permission is granted to copy and distribute modified versions of this
+ manual under the conditions for verbatim copying, provided that the entire
+ resulting derived work is distributed under the terms of a permission
+ notice identical to this one.
+
+ Permission is granted to copy and distribute translations of this manual
+ into another language, under the above conditions for modified versions,
+ except that this permission notice may be stated in a translation approved
+ by the Free Software Foundation.
+@end titlepage
+@page
+
+@ifnottex
+@node Top, Introduction, (dir), (dir)
+@top Sysadmin France
+
+This document is for webmasters and users of GNU and FSF machines in
+France. It may contain useful bits of informations outside this
+context.
+
+@end ifnottex
+
+@menu
+* Introduction::                
+* XML and interoperability::    
+* DocBook Quick Start::         
+* Web::                         
+* Private Data::                
+* Concept Index::               
+* Name Index::                  
+
+@detailmenu
+ --- The Detailed Node Listing ---
+
+DocBook Quick Start
+
+* DocBook packages::            
+* DocBook formating::           
+
+Web
+
+* Overview::                    
+* Virtual Hosts::               
+* Editing the Web::             
+* Separate layout and content::  
+* Publishing news::             
+* Update from CVS::             
+* Scripts CVS Tree::            
+* Nightly script::              
+* Immediate Update::            
+* Coposys::                     
+
+Separate layout and content
+
+* XHTML and XSLT Quick Start::  
+* XSLT processors::             
+* Writing XHTML content::       
+* XSL and generated HTML::      
+* Writing XSL files::           
+
+Coposys
+
+* Intro::                       
+* Configuration::               
+* Install::                     
+* Apache configuration::        
+* File permissions and owners::  
+* Crontab::                     
+* HTML design::                 
+
+@end detailmenu
+@end menu
+
+@node Introduction, XML and interoperability, Top, Top
+@chapter Introduction
+
+In many aspects, the GNU way of doing things needs to be
+improved. When this is the case the idea is to coordinate with the GNU
+volunteers in charge of a specific aspect in order to improve the
+system. Doing so is a not as hard as contributing to a software. It
+may sometime be frustrating to stick to the GNU policy because it is
+quicker to get a nice result by inventing something completely
+new. The Web is probably the most striking example. However, since we
+claim to be part of the GNU project we don't really have the option to
+fork something of our own and leave the GNU project behind. Even if it
+means that we will go slower, coordination with and improvement of the
+GNU project as a whole should be our goal.
+
+Close cooperation with the GNU project also makes some things a lot
+easier. The account creation process, the management of the HTML tree
+from CVS, the DNS hosting, mailing lists etc. are facilities we do not
+need to re-implement. When installing something entirely new on the
+GNU machines located in France, it is important to send a note on the
+relevant mailing lists in advance. This prevents possible duplication
+of the effort and greatly increases the chances that the GNU project
+will be able to re-use the new facility.
+
+Reference documents describing the GNU environment are
+@uref{http://www.gnu.org/server/standards/,,standards} for webmaster
+information, @file{fencepost.gnu.org:/gd/gnuorg/sysadmin/sysadmin.texi}
+for system administration information and the
+@uref{http://savannah.gnu.org/savannah.html,,Savannah admin guide} for
+usage of the project hosting facility.
+
+@node XML and interoperability, DocBook Quick Start, Introduction, Top
+@chapter XML and interoperability
+
+When publishing content or building a database for specific purposes (contact
+database, task lists, account information, permissions etc.) it is of the
+outermost importance to choose a data format that allows other programs
+to re-use the database and your own program to import databases from other
+programs. 
+
+Using XML for that purpose is only half of the answer. XML will merely
+prevent you to write a parser to read XML files and save you from the
+pitfall of inventing yet another data format. It says nothing about the
+semantic of the tags you decided to use. The harder part is to define
+the semantic associated with an XML file. For instance,
+@uref{http://www.docbook.org/,,DocBook} uses XML but the core of the
+work was to define what each tag means and make sure it covers all 
+possible needs. It tooks years and is not finished yet. Inventing a new
+semantic for a given purpose is not something that should be undertaken
+lightly.
+
+In some cases there already exists a semantic that fits your needs. Even
+if it's not an established standard
+(@uref{http://groups.yahoo.com/group/rss-dev/files/specification.html,,RSS}
+is a widely spread de-facto standard) it will save you the effort to invent
+something completely new. You may even be able to join the group that works
+on this semantic to enhance it if needs be. There are some DTD repositories
+that can help you find out if something exists:
+
+@itemize @bullet
+
+@item @uref{http://www.xml.com/pub/rg/DTDs,,XML.com DTD}
+
+@item @uref{http://www.rosettanet.org/rosettanet/Rooms/DisplayPages/LayoutInitial?Container=com.webridge.entity.Entity%5BOID%5B6EDB5FE87F69D411BD84009027E33DD8%5D%5D,,RosettaNet}
+
+@item @uref{http://www.hr-xml.org/schemas/dtd/,hr-xml.org}
+
+@item @uref{http://www.schema.net/,,Schema.net}
+
+@item @uref{http://registry.xml.org:2020/repository/ui/searchResults.jsp?qall=dtd,,XML.org}
+
+@item @uref{http://www.openapplications.org/_vti_bin/shtml.exe/xml/loadform.htm,,Open Applications Group}
+
+@item @uref{http://www.lisa.org/tmx/tmx.htm,,Translation Memory eXchange}
+
+@item @uref{http://www.docuverse.com/xlf/index.html,,Extensible Log Format}
+
+@end itemize
+
+When the data format is chosen, choosing or writing the programs that provide
+a given service is driven by this choice. If an application exists that does
+not support the format chosen, it's fairly reasonable to write a small program
+that translate the data format into the application specific data and vice
+versa. The advantages of doing this are:
+
+@itemize @bullet
+
+@item If a new, better program becomes available and you can switch to it using
+the chosen data format do dump/reload the data.
+
+@item If you contribute the export/import program to the developers of the
+program they are likely to accept it because it's based on a standard.
+
+@item If you want to display static HTML pages from the XML export, XSLT
+allows to do this in a fairly simple way.
+
+@end itemize
+
+@node DocBook Quick Start, Web, XML and interoperability, Top
+@chapter DocBook Quick Start
+
+@cindex DocBook usage
+@cindex XSLT and DocBook
+@cindex DSSSL not used for DocBook
+@cindex DocBook using unstable or testing
+
+When using a debian unstable distribution it is fairly easy to write and
+format @uref{http://www.docbook.org/,,DocBook} documentation with few
+manual operations. However, one has to know the shortest path otherwise
+it quickly turns into a nightmare. An
+@uref{http://www.w3c.org/TR/xslt,,XSLT} based (as opposed to DSSSL) set
+of packages and commands is proposed here, assuming you are running
+unstable. It will also works at the date of this writing (October 2001)
+if you're running testing but will require to install the packages
+recommended here from unstable.
+
+@menu
+* DocBook packages::            
+* DocBook formating::           
+@end menu
+
+@node DocBook packages, DocBook formating, DocBook Quick Start, DocBook Quick Start
+@section DocBook packages
+
+@cindex xsltproc
+@cindex passivetex
+@cindex xmltex
+@cindex DocBook packages
+
+On GNU/Linux Debian unstable install the following packages:
+
+@example
+apt-get install xsltproc
+apt-get install docbook-xsl
+apt-get install xmltex
+@end example
+
+Install passivetex as found at @url{http://users.ox.ac.uk/~rahtz/passivetex/}.
+
+@example
+cd /usr/share/texmf/tex/latex/
+mkdir passivetex
+cd passivetex
+unzip /tmp/passivetex.zip
+cd /usr/share/texmf/tex/xmltex/base
+pdftex -ini "&pdflatex" pdfxmltex.ini
+fmtutil --missing
+texlinks
+texhash
+@end example
+
+Finally, the global memory size parameters of TeX must be increased.
+If formating fails, check for @code{exceeded} errors and increase
+the corresponding parameter. Some sample values are available at 
+@url{http://users.ox.ac.uk/~rahtz/passivetex/}.
+
+@example
+*** /etc/texmf/texmf.cnf.~1~	Sun Sep 16 23:06:18 2001
+--- /etc/texmf/texmf.cnf	Wed Oct 17 15:37:48 2001
+***************
+*** 398,409 ****
+  % Extra space for the hash table of control sequences (which allows 10K
+  % names as distributed).
+  hash_extra.context = 25000
+! hash_extra = 0
+  
+  % Max number of characters in all strings, including all error messages,
+  % help texts, font names, control sequences.  These values apply to TeX and MP.
+  pool_size.context = 750000
+! pool_size = 125000		
+  % Minimum pool space after TeX/MP's own strings; must be at least
+  % 25000 less than pool_size, but doesn't need to be nearly that large.
+  string_vacancies.context = 45000
+--- 398,409 ----
+  % Extra space for the hash table of control sequences (which allows 10K
+  % names as distributed).
+  hash_extra.context = 25000
+! hash_extra = 50000
+  
+  % Max number of characters in all strings, including all error messages,
+  % help texts, font names, control sequences.  These values apply to TeX and MP.
+  pool_size.context = 750000
+! pool_size = 1250000
+  % Minimum pool space after TeX/MP's own strings; must be at least
+  % 25000 less than pool_size, but doesn't need to be nearly that large.
+  string_vacancies.context = 45000
+***************
+*** 442,448 ****
+  param_size.context = 1500
+  param_size = 500	% simultaneous macro parameters
+  save_size.context = 5000
+! save_size = 4000	% for saving values outside current group
+  stack_size.context = 1500
+  stack_size = 300	% simultaneous input sources
+  
+--- 442,448 ----
+  param_size.context = 1500
+  param_size = 500	% simultaneous macro parameters
+  save_size.context = 5000
+! save_size = 10000	% for saving values outside current group
+  stack_size.context = 1500
+  stack_size = 300	% simultaneous input sources
+  
+@end example
+
+@node DocBook formating,  , DocBook packages, DocBook Quick Start
+@section DocBook formating
+
+Formating DocBook in html or pdf can be done from the following
+Makefile sample.
+
+@example
+all: sample.html sample.pdf
+
+clean:
+        rm -f sample.aux sample.fo sample.log sample.out \
+              sample.html sample.pdf
+
+sample.html: sample.xml custom_html.xsl
+        export SGML_CATALOG_FILES=/usr/lib/sgml/catalog ; \
+        xsltproc \
+        --catalogs \
+        -o sample.html \
+        custom_html.xsl sample.xml
+
+sample.pdf: sample.xml custom_fo.xsl
+        export SGML_CATALOG_FILES=/usr/lib/sgml/catalog ; \
+        xsltproc \
+        --catalogs \
+        -o sample.fo \
+        custom_fo.xsl sample.xml
+        pdflatex "&pdfxmltex" sample.fo
+@end example
+
+A simple standalone example can be downloaded for test purposes at
+@uref{http://france.fsfeurope.org/server/docbook-sample.tar.gz,,http://france.fsfeurope.org/server/docbook-sample.tar.gz}.
+
+@node Web, Private Data, DocBook Quick Start, Top
+@chapter Web
+
+@menu
+* Overview::                    
+* Virtual Hosts::               
+* Editing the Web::             
+* Separate layout and content::  
+* Publishing news::             
+* Update from CVS::             
+* Scripts CVS Tree::            
+* Nightly script::              
+* Immediate Update::            
+* Coposys::                     
+@end menu
+
+@node Overview, Virtual Hosts, Web, Web
+@section Overview
+
+The FSF Europe web sites are stored in CVS on the GNU machines. They
+can be edited from there and the france.fsfeurope.org has a local copy
+of all the pages that are updated every hour. The primary purpose of
+the france.fsfeurope.org machine is to host the FSF France web site,
+data and programs. However every web site related to the GNU project
+and friends of the GNU project are invited to use the machine for web
+hosting if they need it.
+
+@node Virtual Hosts, Editing the Web, Overview, Web
+@section Virtual Hosts
+
+The @file{/etc/apache/httpd.conf} was configured with virtual hosts. It
+handles the following domain names:
+
+@table @samp
+@item france.fsfeurope.org
+with a document root at @file{/var/www/france.fsfeurope.org}
+that points to @file{/home/www/fsfe/fr}.
+
+@item www.france.fsfeurope.org, fr.fsf.org, www.fr.fsf.org, fsffrance.org, www.fsffrance.org
+with a redirect to france.fsfeurope.org
+
+@end table
+
+All new domains should use a similar policy, that will help keeping
+things simple.
+
+@node Editing the Web, Separate layout and content, Virtual Hosts, Web
+@section Editing the Web
+
+@cindex fsfe project
+@cindex edit france.fsfeurope.org
+
+All users registered in the
+@uref{http://savannah.gnu.org/projects/fsfe/,,FSF Europe} project can
+edit the HTML repository using CVS/SSH. Instructions on how to do so can
+be found on @uref{http://savannah.gnu.org/cvs/?group_id=53,,Savannah}.
+The modified files will be updated on france.fsfeurope.org within one
+hour. They will be available immediately after a commit on
+http://www.gnu.org/fsfe/ which is convenient for testing.
+
+The pages are stored in @code{.xhtml} files and formatted automatically
+to @code{.html} files. @ref{XHTML and XSLT Quick Start} will tell you
+how to deal with this within seconds.
+
+@node Separate layout and content, Publishing news, Editing the Web, Web
+@section Separate layout and content
+
+@cindex SSI
+It is convenient to separate the layout of an HTML page from the actual
+content. It prevents duplicating the menus in each page and allows to 
+have a nice display without the burden of fixing it in every page when
+something needs fixing. Using SSI (Server Side Includes) is a solution
+to this problem but it has the disadvantage that it requires from
+web server displaying the pages to have this feature enabled, which is
+not always the case. 
+
+@cindex XSLT
+@cindex XHTML
+
+We chose to use an @uref{http://www.w3c.org/TR/xslt,,XSLT}
+processor to separate the content from the layout. An XSLT processor
+provides something similar to a C preprocessor but is applied to XML
+files. The content of the pages are written in 
+@uref{http://www.w3.org/TR/xhtml1,,XHTML}, which is a slightly
+different form of HTML that makes it XML compliant. The layout of the
+pages is stored in XSL files and the XSLT processor merges the two to
+produce an HTML page that will be used for display.
+
+@example
+
+XSL file    ----\
+                 => XSLT processor ----> HTML file
+XHTML file  ----/
+
+@end example
+
+We chose to use XSL rather than any other method because it is 
+a widely accepted standard and that Free Software tools are available
+everywhere that implement it. There are many possible uses of XSL but
+this chapter only focuses on using it to separate the layout of a
+web site from it's content.
+
+@menu
+* XHTML and XSLT Quick Start::  
+* XSLT processors::             
+* Writing XHTML content::       
+* XSL and generated HTML::      
+* Writing XSL files::           
+@end menu
+
+@node XHTML and XSLT Quick Start, XSLT processors, Separate layout and content, Separate layout and content
+@subsection XHTML and XSLT Quick Start
+
+@cindex edit .xhtml files
+@cindex .xhtml files editing
+@cindex XHTML and XSLT quick start
+@cindex XSLT and XHTML quick start
+
+Assuming you're facing a directory that contains a mixture of 
+@code{.xhtml}, @code{.html} and/or @code{.xsl} files and you just
+want to contribute content without actually understanding what all
+this about, here is what you should do:
+
+@itemize @bullet
+
+@item Modify the @code{.xhtml} file, not the generated @code{.html} file.
+
+@item If you want to create a new file, create it with the @code{.xhtml}
+extension. Copy a @file{boilerplate.xhtml} from @uref{http://france.fsfeurope.org/boilerplate.xhtml,,somewhere} or copy and modify a @code{.xhtml} file
+in the same directory.
+
+@item To see the resulting HTML file, look for a Makefile in the directory
+or the upper directories that recursively walk the tree to format XHTML
+files into HTML files. If a grep @code{sabcmd} or @code{xsltproc} on a
+Makefile finds something, you probably found the good one. Run @code{make
+all} and look at the generated HTML file with your web browser.
+
+@item To add a menu entry, edit the XSL file that ends with the @code{.xsl}
+extension. It should contain the menu entries: that's why they are
+created in the first place. Although the syntax of this file may not be
+familiar, the menu entries themselves are written in plain XHTML.
+
+@cindex your own XSL files
+@cindex XSL files of your own
+@item To re-use existing XSL files for your own web pages do the following
+
+@example
+
+#
+# Make sure you have the sablotron XSLT processor
+#
+apt-get install sablotron
+#
+# Get the XSL files
+#
+wget http://france.fsfeurope.org/navigation.fr.xsl
+wget http://france.fsfeurope.org/fsfe-fr.xsl
+#
+# Get the Makefile
+#
+wget -O Makefile http://france.fsfeurope.org/Makefile.sample
+#
+# Get the boilerplate
+#
+wget http://france.fsfeurope.org/boilerplate.fr.xhtml
+#
+# edit fsfe-fr.xsl and remove all references to navigation.*.xsl other
+# than navigation.en.xsl.
+#
+# Build the boilerplate.fr.html file
+#
+make all
+#
+# View boilerplate.fr.html with a web browser and start customizing 
+#
+@end example
+
+If you are using an Red Hat distribution, to install
+@uref{http://www.gingerall.com/charlie-bin/get/webGA/act/download.act,,sablotron},
+you need first install
+@uref{http://sourceforge.net/projects/expat,,expat} :
+
+@example
+
+# get expat's RPM file
+ftp speakeasy.rpmfind.net
+user ftp
+pass 
+
+cd /linux/C/redhat/7.1/en/os/i386/RedHat/RPMS
+get expat-1.95.1-1.i386.rpm
+#
+
+# install expat
+rpm -i expat-1.95.1-1.i386.rpm
+#
+
+# get sablotron 
+wget http://www.gingerall.com/perl/rd?url=sablot/sablotron-0.52-1.i386.rpm
+
+# install sablotron
+rpm -i sablotron-0.52-1.i386.rpm
+#
+
+@end example
+
+
+@end itemize
+
+@node XSLT processors, Writing XHTML content, XHTML and XSLT Quick Start, Separate layout and content
+@subsection XSLT processors
+
+There are many XSLT processors. We recommend the following two:
+
+@itemize @bullet
+
+@cindex sabcmd
+@cindex sablotron
+@item @uref{http://www.gingerall.com/charlie-bin/get/webGA/act/download.act,,sablotron}
+
+@cindex libxslt
+@cindex xsltproc
+@item @uref{http://www.xmlsoft.org/,,libxslt}
+
+@end itemize
+
+@node Writing XHTML content, XSL and generated HTML, XSLT processors, Separate layout and content
+@subsection Writing XHTML content
+
+@cindex XHTML rules
+
+The content of the web site is written in XHTML files that have
+the @code{.xhtml} extension. The XHTML looks like a regular HTML 
+file, you don't have to learn anything new. Taking an existing HTML
+file and converting it to XHTML is simple. You only have to take
+care of the following:
+
+@itemize @bullet
+
+@item Add the following at the beginning of the file:
+
+@example
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html
+          PUBLIC "-//W3C//DTD HTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+@end example
+
+This declaration says that your file is in XHTML and that it contains
+@code{iso-8859-1} characters.
+
+@item Always close opening tags or the XSLT processor will bark. If
+you want to use a single tag, end it with a />.
+
+@example
+<br />
+<ul>
+<li> Item 1 </li>
+<li> Item 2 </li>
+</ul>
+@end example
+
+@item Wrap the content of the page using the proper tags.
+
+@example
+<html>
+  <head>
+    <title>My Title</title>
+  </head>
+  <body>
+     My stuff
+  </body>
+</html>
+@end example
+
+Web browsers may very well cope with the fact that you forget those but
+XSLT processors will not.
+
+@item Unlike html, tags and attribute names are case-sensitive and they are
+    defined in @code{lower-case}. 
+
+@example
+<title> My Title </title>
+@end example
+
+@item Attribute values must be always inside quotes.
+
+@example
+<a href="URL">What is it</a>
+@end example
+
+@end itemize
+
+@node XSL and generated HTML, Writing XSL files, Writing XHTML content, Separate layout and content
+@subsection XSL and generated HTML
+
+XSL is not able to deal with HTML that does not look like XML (XHTML). 
+Unfortunately most programs that generate HTML such as @code{makeinfo} or
+@code{hevea} do not generate XHTML but plain HTML. In this case including
+the generated HTML cannot be done with XSL. We suggest the following 
+method:
+
+@itemize @bullet
+
+@item Add a SSI line to include the generated HTML file.
+
+@example
+<!--#include virtual="sysadmin-france.en.html"-->
+@end example
+
+@item After running the XSLT processor, replace the SSI line with the
+content of the generated HTML file.
+
+@example
+perl -MFile::Copy -pi -e \
+      '$| = 1; copy("$1", \*STDOUT) if(/\#include virtual=\"(.*?)\"/);' \
+      result.html
+@end example
+
+@end itemize
+
+@node Writing XSL files,  , XSL and generated HTML, Separate layout and content
+@subsection Writing XSL files
+
+If you're only interested in modifying the menus that are located
+in XSL files (those with the @code{.xsl} extension), you can consider
+that XSL files are just XHTML files and forget about the rest. 
+
+@cindex re-use XSL example
+@cindex XSL examples
+To create your own XSL file without learning XSL, copy the XSL files
+of the @uref{http://france.fsfeurope.org/,,FSF France} web site
+and change them to your liking. The
+@ref{XHTML and XSLT Quick Start} chapter will give you instructions
+to do this.
+
+@cindex XSL learning curve
+It takes a few days to get accustomed to
+@uref{http://www.w3.org/TR/xslt,,XSLT}. If you're familiar with @uref{
+http://www.gnu.org/software/m4/,,m4} you'll find that
+easy. Otherwise it will look very strange because it looks like a
+programing language but is really a data transformation language.
+
+@cindex XSL pitfall
+A common pitfall when dealing with XSL is to try to use its most
+advanced features and this may lead to XSL files that are complex and
+very hard to understand and debug. Since XSL has almost all the features
+of a programming language (loops, variables, conditions, functions,
+etc.) but none of it's facilities (debugger, profiler etc.), complex
+XSL files will make your life a living hell. It may worth the effort
+(for @uref{http://sourceforge.net/projects/docbook/,,DocBook}
+transformation to HTML for instance) you have to carefully evaluate
+the pro and cons in advance.
+
+A good XSL file is a file that even someone not accustomed to XSL could
+figure out, even if he won't be able to modify it's structure. Check the
+@uref{http://france.fsfeurope.org/navigation.en.xsl,,english menus} of
+the @uref{http://france.fsfeurope.org/server/server.en.html,,FSF France}
+web site for an example.
+
+@node Publishing news, Update from CVS, Separate layout and content, Web
+@section Publishing news
+
+The @file{fsfe/fr/news} directory contains news articles. The structure
+of the directory is as follows:
+
+@itemize @bullet
+
+@item Each article is in a file named @file{articleYYYY-MM-DD-NN.LG.xhtml}
+where YYY-MM-DD is the date of publication, NN a two digit serial number
+if two or more news are published the same day, LG is the language code
+in lower case.
+
+@example
+article2001-04-26-01.fr.xhtml
+@end example
+
+@item
+If an article contains sub-parts or pictures a directory named
+@code{articleYYYY-MM-DD-NN} is created and all elements are added into
+it. No specific convention is to be followed in this sub-directory.
+
+@item 
+A
+@uref{http://groups.yahoo.com/group/rss-dev/files/specification.html,,RSS}
+file must be built for each language with a file name of
+@file{fsfe-fr-channel.LG.xml} where LG is the language code in lower
+case. It's ok to use RSS-0.91 instead of RSS-1.0 since the later is
+backward compatible. Whenever an article is added in the news directory,
+a corresponding @code{item} entry should be added to the RSS file
+corresponding to the language. The RSS DTD and necessary catalog file
+are available to enable users of Emacs/PSGML to produce a valid file.
+
+@item
+An XSL file must be provided for each language with the name
+@file{news.LG.xsl}. This XSL file will be used to format the
+corresponding @file{fsfe-fr-channel.LG.xml} into a
+@file{news-bytes.LG.xhtml} file by the top level makefile. LG is the
+language code in lower case
+
+@end itemize
+
+@file{fsfe/fr/Makefile} is responsible of applying the
+@file{fsfe/fr/news/news.LG.xsl} files to the
+@file{fsfe/fr/news/fsfe-fr-channel.LG.xml} channels in order to produce the
+@file{fsfe/fr/news/news-bytes.LG.xhtml}. The @file{fsfe/fr/index.fr.xhtml}
+includes the news using the following:
+
+@example
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html
+          PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+          [<!ENTITY news SYSTEM "news/news-bytes.fr.xhtml">]>
+...
+
+          &news;
+...
+@end example
+
+Other pages may do the same where appropriate. 
+
+If a remote site wants to print the news, the webmaster is free to use
+the RSS channels for this purpose. We should even encourage this. At present
+the following web sites read the RSS channels:
+
+@itemize @bullet
+
+@item SomeNews.org, contact @email{penso@@linuxfr.org, Fabien Penso},
+@uref{http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/somenews/config/francefsf.cnf,,plugin sources}.
+
+@end itemize
+
+The RSS availables at present are:
+
+@itemize @bullet
+
+@item @uref{http://france.fsfeurope.org/news/fsfe-fr-channel.fr.xml,,FSF France} French
+
+@item @uref{http://france.fsfeurope.org/news/fsfe-fr-channel.en.xml,,FSF France} English
+
+@end itemize
+
+The news are dispatched each day on a dedicated mailing-list
+(@uref{http://mail.gnu.org/mailman/listinfo/fsfe-newsfr-fr,,french},
+@uref{http://mail.gnu.org/mailman/listinfo/fsfe-newsfr-en,,english}). The
+process is not automated on FSF Europe's servers at the present time,
+but handled by @email{oberger@@april.org,Olivier Berger}, with the
+@uref{https://savannah.gnu.org/projects/rss2mail/,,rss2mail} program
+(see the fsfenews-fr and fsfenews-en modules in
+@uref{http://savannah.gnu.org/cgi-bin/viewcvs/rss2mail/,,rss2mail's CVS
+repository} for more details).
+
+@node Update from CVS, Scripts CVS Tree, Publishing news, Web
+@section Update from CVS
+
+@cindex www.gnu.org
+@cindex france.fsfeurope.org updates
+@cindex www.fsfeurope.org updates
+
+A @code{cvs update} is done every hour in the
+@file{/home/www/fsfe} directory by the
+@file{/etc/cron.d/www} user crontab.  The logs of the update are stored
+in @file{/var/log/www.log} and rotated by
+@file{/etc/logrotate.d/www}. 
+
+Note that this update does not generate the HTML pages from the XHTML
+pages. The @ref{Nightly script} takes care of this.
+
+@node Scripts CVS Tree, Nightly script, Update from CVS, Web
+@section Scripts CVS Tree
+
+@cindex CVS Tree
+@cindex scripts in CVS
+@cindex scripts sources
+@cindex sources of www scripts
+
+The various scripts used to manage and update the *.fsfeurope.org HTML
+trees are stored in the CVS Tree of the savannah.gnu.org/projects/www/
+project.
+
+@itemize @bullet
+
+@item @file{/home/www/bin} is an anonymous checkout equivalent to
+:pserver:anoncvs@@subversions.gnu.org:/cvsroot/www co www/fr.fsf.org.
+It contains the scripts and information scrictly specific to the
+france.fsfeurope.org machine.
+
+@item @file{/usr/local/src/www} is an anonymous checkout equivalent to
+:pserver:anoncvs@@subversions.gnu.org:/cvsroot/www co www. It is used to
+install and update the scripts that are shared between various GNU
+machines such as @code{symlinks}. Those scripts are not software general
+enough to be released. They are documented in
+@url{http://www.gnu.org/server/source/}.
+
+@end itemize
+
+@node Nightly script, Immediate Update, Scripts CVS Tree, Web
+@section Nightly script
+
+The @file{/home/www/bin/nightly} script is run daily by the @code{www}
+user and is in charge of the following:
+
+@itemize @bullet
+
+@item Run @code{cvs update} in the @file{/home/www/fsfe} directory.
+
+@item Update the symbolic links according to the content of the
+@file{.symlinks} files. See the @uref{http://www.gnu.org/server/standards/README.html#SEC01,,Symbolic Links} chapter of the webmaster guidelines for
+detailed information.
+
+@item Run the @code{all} goal of all the Makefiles
+found in the @file{/home/www/fsfe/} directory.
+Those Makefiles are in charge of formating
+the XHTML into HTML, formating @code{.texi} or @code{.tex} files into
+HTML among other things.
+
+@end itemize
+
+The logs of the nightly script are stored in @file{/var/log/nightly.log}
+and rotated by @file{/etc/logrotate.d/nightly}.
+
+The @code{nightly} script can be run by hand after login as the @code{www}
+user.
+
+@node Immediate Update, Coposys, Nightly script, Web
+@section Immediate Update
+
+If you ever want to update the web in no time you have to do the following:
+
+@example
+ssh -l www france.fsfeurope.org
+cd fsfe
+cvs -z3 -q update -I "*.html" -d
+../bin/nightly
+@end example
+
+These actions are encapsulated in the @code{sync} goal of the 
+@file{fsfe/fr/Makefile}. On your local machine type:
+
+@example
+make sync
+@end example
+
+@node Coposys,  , Immediate Update, Web
+@section Coposys
+
+@menu
+* Intro::                       
+* Configuration::               
+* Install::                     
+* Apache configuration::        
+* File permissions and owners::  
+* Crontab::                     
+* HTML design::                 
+@end menu
+
+@node Intro, Configuration, Coposys, Coposys
+@subsection Intro
+
+The tool Coposys is available on the 
+
+@uref{http://www.fsfeurope.org/coposys/,,FSFE site}
+
+@node Configuration, Install, Intro, Coposys
+@subsection Configuration
+
+@code{Coposys} itself was installed from the CVS tree with this
+configuration (see the
+@uref{http://savannah.gnu.org/projects/coposys/,,coposys project
+homepage} for further informations) :
+
+@example
+./configure --with-communities=fsf
+ --with-markerdir=/var/www/coposys
+ --with-mapdir=/var/www/www.fsfeurope.org/coposys/maps
+ --with-cgidir=/var/www/www.fsfeurope.org/cgi-bin
+ --with-owner=www
+ --with-group=www
+@end example
+
+@node Install, Apache configuration, Configuration, Coposys
+@subsection Install
+
+Several packages were installed with @code{apt-get} for Coposys :
+
+@itemize
+@item xbase-clients
+@item xplanet
+ @itemize
+  @item glutg3
+  @item libnetpbm9
+  @item libungif4g
+ @end itemize
+@item imagemagick
+ @itemize
+  @item libhdf4g
+  @item libmagick5
+  @item libwmf0
+  @item netpbm
+ @end itemize
+@end itemize
+
+The Coposys package was installed with the following command: @code{make
+install}.
+
+@node Apache configuration, File permissions and owners, Install, Coposys
+@subsection Apache configuration
+
+The Apache configuration file (@file{/etc/apache/httpd.conf}) was
+modified to allow CGI execution. The following lines were added in the
+"www.fsfeurope.org" VirtualHost :
+
+@example
+ScriptAlias /cgi-bin/ "/var/www/www.fsfeurope.org/cgi-bin/"
+<Directory "/var/www/www.fsfeurope.org/cgi-bin">
+        AllowOverride None
+        Options ExecCGI
+        Order allow,deny
+        Allow from all
+</Directory>
+@end example
+
+@node File permissions and owners, Crontab, Apache configuration, Coposys
+@subsection File permissions and owners
+
+Every files and directories installed under
+
+@itemize
+ @item @file{/var/www/www.fsfeurope.org/coposys/markers/}
+ @item @file{/var/www/www.fsfeurope.org/coposys/maps/}
+ @item @file{/var/www/www.fsfeurope.org/cgi-bin/}
+@end itemize
+are owned by @code{www:www}.
+
+@node Crontab, HTML design, File permissions and owners, Coposys
+@subsection Crontab
+
+One command has been added in the crontab of the user @code{www}, it's
+purpose is to build the maps from the 'database' every 30 minutes if
+needed :
+
+@example
+ MAILTO=cyril@@bouthors.org
+ */30 * * * * www nice -20 make -s -C /var/www/www.fsfeurope.org/coposys/maps/
+@end example
+
+@node HTML design,  , Crontab, Coposys
+@subsection HTML design
+
+One HTML page was made in order to describe and link to coposys goals
+and functionalities. It is available from the
+@uref{http://savannah.gnu.org/projects/fsfe/,,FSF Europe} HTML
+repository using CVS/SSH in the @file{/coposys/} directory.
+
+@node Private Data, Concept Index, Web, Top
+@chapter Private Data
+
+Most if not all the private data of the FSF France is handled by the
+@uref{http://savannah.gnu.org/projects/fsfeprivate,,FSF Europe Private
+Data} project on Savannah. Its access is restricted to its members only,
+there is no anonymous access. If you need to have access to this
+repository write to @email{team@@fsfeurope.org,FSF Europe Team} or
+@email{france@@fsfeurope.org,,FSF France}.
+
+@node Concept Index, Name Index, Private Data, Top
+@unnumbered Index of Concepts
+
+@printindex cp
+
+@node Name Index,  , Concept Index, Top
+@unnumbered Index of File Names
+
+@printindex fn
+
+@summarycontents
+@contents
+@bye

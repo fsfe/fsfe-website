@@ -1,8 +1,8 @@
-# $Id: Makefile,v 1.9 2001-10-12 12:56:43 cyb Exp $
+# $Id: Makefile,v 1.10 2002-04-01 00:47:43 loic Exp $
 
 MAKEINFO = makeinfo
 
-all: sysadmin-france.en.html
+all: sysadmin-france.en.html publish.en.html
 
 %.html: %.texi
 	@echo "generating $@ from $<"

@@ -158,6 +158,12 @@
                   <a href="{$fsfeurope}/gbn/index.de.html" class="T2">GNU Business Network</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
+              <xsl:choose>
+                <xsl:when test="$path='order/announce.de.xhtml'">Fanartikel</xsl:when>
+                <xsl:otherwise>
+                  <a href="{$fsfeurope}/order/announce.de.html" class="T2">Fanartikel</a>
+                </xsl:otherwise>
+              </xsl:choose><br/>
               <br/></td>
             </tr>
         	<tr><td class="TopTitle" align="center">assoziierte Organisationen</td></tr>

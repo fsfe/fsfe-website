@@ -153,7 +153,9 @@
 
   <xsl:template match="head">
     <head>
-      <link rel="stylesheet" type="text/css" href="/blue-new.css" />
+      <link rel="stylesheet" href="/blue-new.css" type="text/css" />
+      <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
       <xsl:apply-templates select="@*|node()"/>
     </head>
   </xsl:template>

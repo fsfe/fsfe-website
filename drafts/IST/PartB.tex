@@ -90,10 +90,133 @@ measured against theses objectives in later reviews and assessments.\\
 This section should clearly specify in addition to the technical objectives -
 also the quantified business objectives and how they are measured}
 \\ \\
-
+\section*{Decentralized.}
+Any given machine running NAME can host a list of
+projects (with pointers to the machines hosting the
+projects), read-only copies of projects (with pointers
+to the machines hosting the read-write instance of the
+project), read-write projects.
+\\
+The read-only projects are mirrored from the machine
+hosting the read-write instance of the project or other
+machines hosting a read-only copy. The format used is
+based on XML and defined by CoopX (http://coopx.eu.org).
+\\
+The number of read-only and read-write projects hosted
+on a given machine is controlled by the maintainer of the
+machine, depending on the available resources. For instance,
+an average machine with lots of bandwidth could host at most
+one hundred read-write projects and ten thousand read-only
+projects.
+\\
+At a given time, only one machine hosts a read-write
+project. It is the responsibility of the project
+maintainers to ensure this.  Should a machine become
+unavailable for some reason, the administrators of the
+project can toggle the read-only flag of one of the
+read-only mirrors and start using it as a
+replacement. 
+\\
+Such a decentralized setup is not the most efficient
+replication system but it is definitely simple and
+requires very little effort.
 The first objective is to build a code base with all tools that current hosting
 facilities have. The first audit we made shows there are a Bug tracking system,
 per project mailing lists and web forums, project management tools
+
+\section*{Multi machine.}
+A single machine may not be powerful enough for someone
+willing to host a large number of projects. Planning a
+multi machine setup in advance is mostly impossible
+because many strategies can be implemented depending on
+the needs. For instance a site like SourceForge will not
+implement the same strategies than a site like Geocities
+because the usage pattern is not the same.
+\\
+A Debian package repository will be used to store the
+packages that implement various strategies. They can all
+coexist together. Let's say, for instance, that the
+package NAME-single implements a single machine setup
+and depends on exim, cvs and bind. There can also be a
+NAME-multi-cvs, NAME-multi-exim, NAME-multi-bind,
+each installed on a separate machine and that configure
+the corresponding service for a multi-machine setup.
+
+
+\section*{Packaging.}
+
+Every bit is packaged for Debian. Although it may be
+desirable to package it for other GNU/Linux distributions,
+this is not our goal. The cooperative nature of Debian and
+the package dependency management are essential. When the
+set of packages reach a stable state it will be possible
+to contribute them to Debian without a need to find an
+agreement with a company. The dependency management allows
+to consistently use a large set of packages.
+\\
+The packages will be produced in a source specific to the
+project. This source (currently
+http://france.fsfeurope.org/debian/) contains three types
+of packages: copy of existing Debian packages slightly modified
+for the needs of NAME, packages of unfinished software written
+for NAME, packages whose sole purpose is to bind a set of 
+packages together and configure them. 
+\\
+The modified copy of existing Debian packages are only stored
+while waiting for the Debian maintainer or the upstream of the
+software to integrate the change. It is never meant to be 
+permanent. Communication is always established with the Debian
+maintainer and the upstream before the modified copy is built.
+Should we fail to do that, NAME will become a concurrent Debian
+distribution and this is to be avoided at all cost.
+\\
+The software specific to NAME is packaged at a very
+early stage. Basically the package is done whenever the
+software performs at least one task. Properly packaging a
+software takes a lot of time and failing to do it from the
+very beginning is asking for troubles. It also allows
+developpers to use the software and contribute to it in an
+organized way. Finally, since NAME is a collection of
+many packages it allows to debug and architecture their
+interdepencies while writing code.
+
+\section*{Templates and internationalization. }
+
+User visible content is stored in tempates. The preferred
+format for HTML pages is XHTML. 
+\\
+Every string displayed is stored using gettext files and
+obeys the system locale.
+
+\section*{Upgradable.}
+	    
+Each release provides an upgrade procedure from the
+previous version. The upgrade may imply a planned
+down-time, NAME is commited to provide an upgrade
+facility that would work without stopping the service. The
+XML dump of the database will be used to upgrade the data
+using XSL files. The database structure itself is upgraded
+with a set of SQL orders. The associated services (smtp,
+cvs, etc.) are reset to their initial state (empty) and
+the backend scripts are run on the upgraded database to
+restore the desired state. 
+
+\section*{Export/Import using CoopX.}
+
+CoopX provides a set of XML based schemas to represent all
+the data related to a project. This includes the description
+of a user (P3P), contact information (XMLvCard) and custom
+made schemas for the CVS tree and the bug tracker information
+for instance. 
+\\
+The goal of CoopX is not to promote a standard but to use
+them where possible. The bug tracker information, for
+instance, is codified using a DTD with some documentation
+to understand it.  There are no plans to submit it to W3C
+or other similar organizations.
+\\
+The CoopX format is used for upgrades and for communication
+between distinct NAME platforms.
 
 \chapter*{B4. Contribution to program/Key action objectives}
 \textit{This section, which should not exceed more than one page, describes how

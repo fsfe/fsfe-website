@@ -73,7 +73,8 @@
 
 					<a href="{$fsfeurope}/de/buergerturm/buergerturm.de.html">Bürgerturm</a><br />
               <a href="{$fsfeurope}/education/education.de.html">Freie Software und Bildung</a><br />
-                  <a href="{$fsfeurope}/law/eucd/eucd.en.html">EUCD</a>
+                  <a href="{$fsfeurope}/law/eucd/eucd.en.html">EUCD</a><br />
+                  <a href="{$fsfeurope}/projects/mankind/mankind.de.html">Freie Software als Weltkulturerbe</a>
 				</td>
 			</tr>
 

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="iso-8859-1" ?>
 <!DOCTYPE html
           PUBLIC "-//W3C//DTD HTML 1.0 Transitional//EN"
-          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+          [<!ENTITY menu SYSTEM "menu.fr.xhtml">] >
 <html lang="fr">
   <head>
     <title>FSF France - A propos</title>
@@ -23,12 +24,7 @@
 	      <table width="120" border="0" cellspacing="0" cellpadding="4">
 		  <tr><td class="TopTitle" align="center"><a href="about.fr.html">A propos</a></td></tr>
 		  <tr>
-		    <td align="right">
-		      <a href="statute.fr.html" class="T2">Statuts HTML</a><br />
-		      <a href="Constitution-fr.fr.ps" class="T2">Statuts PS</a><br />
-		      <a href="Constitution-fr.fr.tex" class="T2">Statuts TeX</a><br />
-		      <a href="Constitution-fr.fr.tex.sig" class="T2">Signatures de TeX</a><br />
-		    </td>
+		    &menu;
 		  </tr>
 	      </table>
 	    </td>
@@ -44,12 +40,11 @@
 	      jeudi 19 avril 2001.
 	      <p />
 
-		La <a href="Constitution-fr.fr.tex.sig">signature
+		La <a href="signatures.html">signature
 		  électronique</a> des <a
 		  href="Constitution-fr.fr.tex">statuts</a> peut être
-		  vérifiée en utilisant les <a
-		  href="../contact.fr.html">clés publiques des
-		  signataires</a> par la commande
+		vérifiée, elle donne l'assurance que le texte des
+		statuts n'a pas été modifié à posteriori.
 
 	      <pre>
 		gpg --verify Constitution-fr.fr.tex.sig Constitution-fr.fr.tex

@@ -1,9 +1,16 @@
+HTML = \
+	server.en.html
+
+FSFFRANCE = ..
+
 MAKEINFO = makeinfo
 
-all: sysadmin-france.en.html
+all:: sysadmin-france.en.html
 
 %.html: %.texi
 	$(MAKEINFO) --output $@ --html $<
 	perl -pi -e '$$_ = "" if((/<html/ .. /<body/) || /body>/)' $@
 
 .SUFFIXES: .html .texi
+
+include ../include.mk

@@ -1,8 +1,11 @@
-pags = index.fr.html contact.fr.html thanks.fr.html boilerplate.html
+HTML = \
+	index.fr.html \
+	contact.fr.html \
+	contact.en.html \
+	boilerplate.fr.html \
+	thanks.fr.html
 
-all: $(pags)
+FSFFRANCE = .
 
-$(pags): %.html: %.xml menu.xml fsfe-fr.xsl
-	sabcmd fsfe-fr.xsl $< > $@
-
+include include.mk
 

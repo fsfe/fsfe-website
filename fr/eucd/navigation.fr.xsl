@@ -4,7 +4,7 @@
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:template match="/html[@lang='fr']/body/div">
-    <!-- $Id: navigation.fr.xsl,v 1.3 2002-12-15 23:30:41 rodolphe Exp $ -->
+    <!-- $Id: navigation.fr.xsl,v 1.4 2002-12-16 12:42:10 rodolphe Exp $ -->
     <!-- $Source: /root/wrk/fsfe-web/savannah-rsync/fsfe/fr/eucd/navigation.fr.xsl,v $ -->
     <!-- Top menu line -->
     <table border="1" cellpadding="5" cellspacing="10" class="main">
@@ -17,6 +17,7 @@
       <tr>
 	<td valign="top">
 	  <a href="/">Home</a><br />
+	  <a href="analyse.fr.html">Analyse</a><br />
 	  <a href="statut.fr.html">Statut</a><br />
 	  <a href="courriers.fr.html">Courriers</a><br />
 	  <a href="revue.fr.html">Presse</a><br />

@@ -48,7 +48,10 @@
       <tr>
 	<td width="99%" valign="top">
         <div class="content">
-	<xsl:apply-templates select="@*|node()"/>
+         <center>
+         <xsl:value-of select="$langlinks" disable-output-escaping="yes"/>
+         </center>
+	 <xsl:apply-templates select="@*|node()"/>
         </div>
 	</td>
 	<!-- Menu column. On the right to be Lynx friendly.  -->

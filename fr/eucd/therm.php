@@ -15,7 +15,7 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  *
- * $Id: therm.php,v 1.2 2002-12-21 15:09:34 rodolphe Exp $
+ * $Id: therm.php,v 1.3 2002-12-23 23:35:29 rodolphe Exp $
  * $Source: /root/wrk/fsfe-web/savannah-rsync/fsfe/fr/eucd/therm.php,v $
  */
 
@@ -25,47 +25,33 @@ if (file_exists ($thermlib))
 {
   include($thermlib);
 
-  $posten_file = "posten.txt";
-  $totaal_file = "totaal.txt";
-
+  $dons_file = "/var/run/dolibarr.don.eucd";
 
   /*
    * Read Values
    */
 
-  if (file_exists ($posten_file))
+  if (file_exists ($dons_file))
     {
-      if (file_exists ($totaal_file))
-	{
 
-	  /* lees posten uit file */
-	  $fp = fopen($posten_file, 'r' );
+      $fp = fopen($dons_file, 'r' );
 	  
 	  
-	  if ($fp)
-	    {
-	      $post_donaties = fgets( $fp, 10 );
-	      $post_sponsoring = fgets( $fp, 10 );
-	      $post_intent = fgets( $fp, 10 );
-	      fclose( $fp ); 
-	    }
-	  
-	  /* lees posten uit file  */
-	  $fp = fopen( $totaal_file, 'r' );
-	  if ($fp)
-	    {
-	      $totaal_ontvangen = fgets( $fp, 10 );
-	      $totaal_pending = fgets( $fp, 10 );
-	      fclose( $fp ); 
-	    }
+      if ($fp)
+	{
+	  $promesses = fgets( $fp, 10 );
+	  $intent = fgets( $fp, 10 );
+	  $payes = fgets( $fp, 10 );
+	  fclose( $fp ); 
 	}
+	  
     }
   
   /* 
    * Graph thermometer
    */
 
-  print moneyMeter($totaal_ontvangen+$post_donaties+$post_sponsoring, $totaal_pending, $post_intent);
+  print moneyMeter($payes, $intent, $promesses);
 }
 
 ?>

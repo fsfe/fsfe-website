@@ -827,8 +827,14 @@ Up:<a rel=up href="#Web">Web</a>
 
 <pre>ssh -l www france.fsfeurope.org
 cd fsfe
-cvs update
+cvs -z3 -q update -I "*.html" -d
 ../bin/nightly
+</pre>
+
+<p>These actions are encapsulated in the <code>sync</code> goal of the
+<code>fsfe/fr/Makefile</code>. On your local machine type:
+
+<pre>make sync
 </pre>
 
 <p><hr>

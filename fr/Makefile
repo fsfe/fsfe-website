@@ -65,6 +65,4 @@ clean:
 	rm -f $(NEWS) $(ENPAGES) $(FRPAGES)
 
 sync:
-	ssh -l www fr.fsf.org 'cd fsfe/fr ; cvs -z3 -q update -I "*.html" -d ; make' 
-
-
+	ssh -l www fr.fsf.org 'cd fsfe ; cvs -z3 -q update -I "*.html" -d ; ../bin/nightly' 

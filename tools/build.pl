@@ -60,11 +60,13 @@ our %languages = (
 # Parse the command line options. We need two; where to put the finished
 # pages and what to use as base for the input.
 #
-getopts('o:i:', \%opts);
+getopts('o:i:d', \%opts);
 unless ($opts{o} && $opts{i}) {
-  print STDERR "Usage: $0 -o <output directory> -i <input directory>\n";
+  print STDERR "Usage: $0 [-d] -o <output directory> -i <input directory>\n";
   exit 1;
 }
+
+$| = 1;
 
 #
 # First topic of today: create all directories we need. Instead of creating
@@ -81,6 +83,7 @@ while (my ($path, undef) = each %countries) {
   rmtree($opts{o}.'/'.$path);
   my @paths = map { $opts{o}."/$path/".$_ } grep(!/^\.\.?$/, @dirs);
   foreach (@paths) {
+    print "Creating $_\n" if $opts{d};
     mkpath($_);
   }
 }
@@ -96,14 +99,13 @@ my @files = File::Find::Rule->file()
 
 my %bases;
 foreach (grep(/\.xhtml$/, @files)) {
+  $_ =~ s/^$opts{i}\/?// unless $opts{i} eq ".";
   my ($lang) = ($_ =~ /\.([a-z][a-z])\.xhtml$/);
   unless ($lang) { $lang = "en"; }
   $_ =~ s/\.[a-z][a-z]\.xhtml$//;
   $_ =~ s/\.xhtml$//;
   $bases{$_}{$lang} = 1;
 }
-
-$| = 1;
 
 #
 # For each file, translation and focus, we create a new XML file. This will
@@ -198,21 +200,21 @@ while (my ($file, $langs) = each %bases) {
 	$document->setAttribute("language", $lang);
 	$root->appendChild($document);
 
-	my $source = $opts{i}."/$file.$lang.xhtml";
+	my $source = "$opts{i}/$file.$lang.xhtml";
 	unless (-f $source) {
-            if (-f $opts{i}."/$file.xhtml") {
+            if (-f "$opts{i}/$file.xhtml") {
                 $document->setAttribute("language", "en");
-                $source = $opts{i}."/$file.xhtml";
-            } elsif (-f $opts{i}."/$file.en.xhtml") {
+                $source = "$opts{i}/$file.xhtml";
+            } elsif (-f "$opts{i}/$file.en.xhtml") {
 		$document->setAttribute("language", "en");
-		$source = $opts{i}."/$file.en.xhtml";
-	    } elsif (-f $opts{i}."/$file.".$root->getAttribute("original").".xhtml") {
+		$source = "$opts{i}/$file.en.xhtml";
+	    } elsif (-f "$opts{i}/$file.".$root->getAttribute("original").".xhtml") {
 		$document->setAttribute("language", $root->getAttribute("original"));
-		$source = $opts{i}."/$file.".$root->getAttribute("original").".xhtml";
+		$source = "$opts{i}/$file.".$root->getAttribute("original").".xhtml";
 	    } else {
                 my $l = (keys %{$bases{$file}})[0];
                 $document->setAttribute("language", $l);
-		$source = $opts{i}."/$file.$l.xhtml";
+		$source = "$opts{i}/$file.$l.xhtml";
             }
 	}
 
@@ -222,7 +224,7 @@ while (my ($file, $langs) = each %bases) {
         # assemble other sets of informations for first (automatically
         # updated pages).
         #
-	if (-f $opts{i}."/$file.xsl") {
+	if (-f "$opts{i}/$file.xsl") {
           #
           # Settle down please, children. First we remove all previous
           # document leftovers.
@@ -242,7 +244,7 @@ while (my ($file, $langs) = each %bases) {
           #     "Learn all that is learnable and return that information
           #      to the Creator."
           #
-          open(IN, '<', $opts{i}."/$file.sources");
+          open(IN, '<', "$opts{i}/$file.sources");
           my @auto_sources = <IN>;
           close IN;
           my %files;
@@ -269,7 +271,7 @@ while (my ($file, $langs) = each %bases) {
           my $auto_data = $sourcedoc->createElement("set");
 
           while (my ($base, $l) = each %files) {
-              my $source_data = $parser->parse_file($opts{i}."/$base.$l.xml");
+              my $source_data = $parser->parse_file("$base.$l.xml");
               foreach ($source_data->documentElement->childNodes) {
                  my $c = $_->cloneNode(1);
                  $auto_data->appendChild($c);
@@ -281,7 +283,7 @@ while (my ($file, $langs) = each %bases) {
           # Transform the document using the XSL file and then push the
           # result into the <document> element of the document we're building.
           #
-          my $style_doc = $parser->parse_file($opts{i}."/$file.xsl");
+          my $style_doc = $parser->parse_file("$opts{i}/$file.xsl");
 	  my $stylesheet = $xslt_parser->parse_stylesheet($style_doc);
 	  my $results = $stylesheet->transform($sourcedoc);
 
@@ -301,15 +303,15 @@ while (my ($file, $langs) = each %bases) {
         # Find out if this translation is to be regarded as outdated or not.
         # Make allowances for files called either file.en.xhtml or file.xhtml.
         #
-	if ((stat($opts{i}."/$file.".$root->getAttribute("original").".xhtml"))[9] >
+	if ((stat("$opts{i}/$file.".$root->getAttribute("original").".xhtml"))[9] >
 	    (stat($source))[9]) {
 	    $root->setAttribute("outdated", "yes");
 	} else {
 	    $root->setAttribute("outdated", "no");
 	}
 
-        if ($lang eq "en" && -f $opts{i}."/$file.xhtml") {
-	  if ((stat($opts{i}."/$file.xhtml"))[9] >
+        if (-f "$opts{i}/$file.xhtml") {
+	  if ((stat("$opts{i}/$file.xhtml"))[9] >
 	      (stat($source))[9]) {
 	      $root->setAttribute("outdated", "yes");
 	  } else {
@@ -358,7 +360,7 @@ while (my ($file, $langs) = each %bases) {
         #
         # Do the actual transformation.
         #
-	my $style_doc = $parser->parse_file("fsfe-new.xsl");
+	my $style_doc = $parser->parse_file($opts{i}."/fsfe-new.xsl");
 	my $stylesheet = $xslt_parser->parse_stylesheet($style_doc);
 	my $results = $stylesheet->transform($dom);
 
@@ -381,6 +383,8 @@ while (my ($file, $langs) = each %bases) {
             $_->setAttribute("href", $href);
           }
         }
+
+	print "Writing: $opts{o}/$dir/$file.$lang.html\n" if $opts{d};
 
 	$stylesheet->output_file($results, "$opts{o}/$dir/$file.$lang.html");
     }
@@ -408,6 +412,8 @@ foreach (grep(!/\.xhtml$/, @files)) {
 sub clone_document {
     my ($doc, $source) = @_;
     my $root = $doc->parentNode;
+
+    print "Source: $source\n" if $opts{d};
 
     foreach ($root->getElementsByTagName($doc->nodeName)) {
 	$root->removeChild($_);

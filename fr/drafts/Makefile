@@ -3,7 +3,7 @@ all: apportll.html
 clean:
 	rm -f apportll.html
 
-apport.html: apportll.xml custom_html.xsl
+apportll.html: apportll.xml custom_html.xsl
 	export SGML_CATALOG_FILES=/usr/lib/sgml/catalog ; \
 	xsltproc \
 	--catalogs \

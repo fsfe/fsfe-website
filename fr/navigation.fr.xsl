@@ -76,6 +76,7 @@
 		<tr>
 		  <td class="TopBody" align="right">
 		    <a href="{$fsffrance}/gpl/gpl.fr.html" class="T2">GPL en Français</a><br />
+		    <a href="{$fsffrance}/libre.fr.html" class="T2">Liberté</a><br />
 	          </td>
 		</tr>
 		<tr><td class="TopTitle" align="center">FSF France</td></tr>

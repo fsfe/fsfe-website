@@ -47,6 +47,9 @@ index.en.html: news/fsfe-fr-channel.en.xml
 news/news.fr.html: news/fsfe-fr-channel.fr.xml
 news/news.en.html: news/fsfe-fr-channel.en.xml
 
+libre.fr.html: libre-bytes.xhtml
+libre.en.html: libre-bytes.xhtml
+
 $(ENPAGES) $(FRPAGES): %.html: %.xhtml fsfe-fr.xsl navigation.en.xsl navigation.fr.xsl
 	@echo "Building $@ ..."; \
 	path=$< ; \

@@ -37,7 +37,7 @@ change_lang()
 
 getdate()
 {
-  ls -l --full-time $1 | (read mode links owner group size rest; echo $rest) \
+  ls -l $1 | (read mode links owner group size rest; echo $rest) \
     | sed -e "s% $1%%"
 }
 

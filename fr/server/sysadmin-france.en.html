@@ -45,7 +45,7 @@ and FSF machines in France.
 </p><li><a href="#XHTML%20and%20XSLT%20Quick%20Start">XHTML and XSLT Quick Start</a>: 
 <li><a href="#XSLT%20processors">XSLT processors</a>: 
 <li><a href="#Writing%20XHTML%20content">Writing XHTML content</a>: 
-<li><a href="#Generating%20HTML%20files%20with%20XSLT">Generating HTML files with XSLT</a>: 
+<li><a href="#XSL%20and%20generated%20HTML">XSL and generated HTML</a>: 
 <li><a href="#Writing%20XSL%20files">Writing XSL files</a>:
 
 <p>System
@@ -360,7 +360,7 @@ web site from it's content.
 <li><a href="#XHTML%20and%20XSLT%20Quick%20Start">XHTML and XSLT Quick Start</a>: 
 <li><a href="#XSLT%20processors">XSLT processors</a>: 
 <li><a href="#Writing%20XHTML%20content">Writing XHTML content</a>: 
-<li><a href="#Generating%20HTML%20files%20with%20XSLT">Generating HTML files with XSLT</a>: 
+<li><a href="#XSL%20and%20generated%20HTML">XSL and generated HTML</a>: 
 <li><a href="#Writing%20XSL%20files">Writing XSL files</a>: 
 </ul>
 
@@ -400,6 +400,10 @@ familiar, the menu entries themselves are written in plain XHTML.
 <li>To re-use existing XSL files for your own web pages do the following
 
 <pre>
+#
+# Make sure you have the sablotron XSLT processor
+#
+apt-get install sablotron
 #
 # Get the XSL files
 #
@@ -448,7 +452,7 @@ Up:<a rel=up href="#Separate%20layout%20and%20content">Separate layout and conte
 
 <p><hr>
 Node:<a name="Writing%20XHTML%20content">Writing XHTML content</a>,
-Next:<a rel=next href="#Generating%20HTML%20files%20with%20XSLT">Generating HTML files with XSLT</a>,
+Next:<a rel=next href="#XSL%20and%20generated%20HTML">XSL and generated HTML</a>,
 Previous:<a rel=previous href="#XSLT%20processors">XSLT processors</a>,
 Up:<a rel=up href="#Separate%20layout%20and%20content">Separate layout and content</a>
 <br>
@@ -502,17 +506,40 @@ XSLT processors will not.
 </ul>
 
 <p><hr>
-Node:<a name="Generating%20HTML%20files%20with%20XSLT">Generating HTML files with XSLT</a>,
+Node:<a name="XSL%20and%20generated%20HTML">XSL and generated HTML</a>,
 Next:<a rel=next href="#Writing%20XSL%20files">Writing XSL files</a>,
 Previous:<a rel=previous href="#Writing%20XHTML%20content">Writing XHTML content</a>,
 Up:<a rel=up href="#Separate%20layout%20and%20content">Separate layout and content</a>
 <br>
 
-<h3>Generating HTML files with XSLT</h3>
+<h3>XSL and generated HTML</h3>
+
+<p>XSL is not able to deal with HTML that does not look like XML (XHTML). 
+Unfortunately most programs that generate HTML such as <code>makeinfo</code> or
+<code>hevea</code> do not generate XHTML but plain HTML. In this case including
+the generated HTML cannot be done with XSL. We suggest the following
+method:
+
+<ul>
+
+<li>Add a SSI line to include the generated HTML file.
+
+<pre>&lt;!--#include virtual="sysadmin-france.en.html"--&gt;
+</pre>
+
+<li>After running the XSLT processor, replace the SSI line with the
+content of the generated HTML file.
+
+<pre>perl -MFile::Copy -pi -e \
+      '$| = 1; copy("$1", \*STDOUT) if(/\#include virtual=\"(.*?)\"/);' \
+      result.html
+</pre>
+
+</ul>
 
 <p><hr>
 Node:<a name="Writing%20XSL%20files">Writing XSL files</a>,
-Previous:<a rel=previous href="#Generating%20HTML%20files%20with%20XSLT">Generating HTML files with XSLT</a>,
+Previous:<a rel=previous href="#XSL%20and%20generated%20HTML">XSL and generated HTML</a>,
 Up:<a rel=up href="#Separate%20layout%20and%20content">Separate layout and content</a>
 <br>
 
@@ -533,7 +560,7 @@ to do this.
 easy. Otherwise it will look very strange because it looks like a
 programing language but is really a data transformation language.
 
-<p>A common pitfall when dealing with XSL is to try to use it's most
+<p>A common pitfall when dealing with XSL is to try to use its most
 advanced features and this may lead to XSL files that are complex and
 very hard to understand and debug. Since XSL has almost all the features
 of a programming language (loops, variables, conditions, functions,
@@ -781,7 +808,7 @@ Up:<a rel=up href="#Top">Top</a>
 <li><a href="#XHTML%20and%20XSLT%20Quick%20Start">XHTML and XSLT Quick Start</a>
 <li><a href="#XSLT%20processors">XSLT processors</a>
 <li><a href="#Writing%20XHTML%20content">Writing XHTML content</a>
-<li><a href="#Generating%20HTML%20files%20with%20XSLT">Generating HTML files with XSLT</a>
+<li><a href="#XSL%20and%20generated%20HTML">XSL and generated HTML</a>
 <li><a href="#Writing%20XSL%20files">Writing XSL files</a>
 </ul>
 <li><a href="#Update%20from%20CVS">Update from CVS</a>

@@ -5,7 +5,7 @@
 @setchapternewpage odd
 @c %**end of header
 
-@set RCSID $Id: sysadmin-france.en.texi,v 1.14 2001-04-22 17:22:46 loic Exp $
+@set RCSID $Id: sysadmin-france.en.texi,v 1.15 2001-04-22 17:45:43 loic Exp $
 @set VERSION 1.0
 
 @c Combine the variable and function indices:
@@ -17,7 +17,7 @@
 @title System Administration France
 @subtitle Information specific to GNU and FSF machines in France
 @subtitle @code{Sysadmin France} Version @value{VERSION}
-@author Loic Dachary
+@author Loic Dachary, Rodolphe Quiedeville
 @page
 @vskip 0pt plus 1filll
 
@@ -81,7 +81,7 @@ Separate layout and content
 * XHTML and XSLT Quick Start::  
 * XSLT processors::             
 * Writing XHTML content::       
-* Generating HTML files with XSLT::  
+* XSL and generated HTML::      
 * Writing XSL files::           
 
 System
@@ -338,7 +338,7 @@ web site from it's content.
 * XHTML and XSLT Quick Start::  
 * XSLT processors::             
 * Writing XHTML content::       
-* Generating HTML files with XSLT::  
+* XSL and generated HTML::      
 * Writing XSL files::           
 @end menu
 
@@ -380,6 +380,10 @@ familiar, the menu entries themselves are written in plain XHTML.
 
 @example
 
+#
+# Make sure you have the sablotron XSLT processor
+#
+apt-get install sablotron
 #
 # Get the XSL files
 #
@@ -425,7 +429,7 @@ There are many XSLT processors. We recommend the following two:
 
 @end itemize
 
-@node Writing XHTML content, Generating HTML files with XSLT, XSLT processors, Separate layout and content
+@node Writing XHTML content, XSL and generated HTML, XSLT processors, Separate layout and content
 @subsection Writing XHTML content
 
 @cindex XHTML rules
@@ -479,10 +483,35 @@ XSLT processors will not.
 
 @end itemize
 
-@node Generating HTML files with XSLT, Writing XSL files, Writing XHTML content, Separate layout and content
-@subsection Generating HTML files with XSLT
+@node XSL and generated HTML, Writing XSL files, Writing XHTML content, Separate layout and content
+@subsection XSL and generated HTML
 
-@node Writing XSL files,  , Generating HTML files with XSLT, Separate layout and content
+XSL is not able to deal with HTML that does not look like XML (XHTML). 
+Unfortunately most programs that generate HTML such as @code{makeinfo} or
+@code{hevea} do not generate XHTML but plain HTML. In this case including
+the generated HTML cannot be done with XSL. We suggest the following 
+method:
+
+@itemize @bullet
+
+@item Add a SSI line to include the generated HTML file.
+
+@example
+<!--#include virtual="sysadmin-france.en.html"-->
+@end example
+
+@item After running the XSLT processor, replace the SSI line with the
+content of the generated HTML file.
+
+@example
+perl -MFile::Copy -pi -e \
+      '$| = 1; copy("$1", \*STDOUT) if(/\#include virtual=\"(.*?)\"/);' \
+      result.html
+@end example
+
+@end itemize
+
+@node Writing XSL files,  , XSL and generated HTML, Separate layout and content
 @subsection Writing XSL files
 
 If you're only interested in modifying the menus that are located
@@ -505,7 +534,7 @@ easy. Otherwise it will look very strange because it looks like a
 programing language but is really a data transformation language.
 
 @cindex XSL pitfall
-A common pitfall when dealing with XSL is to try to use it's most
+A common pitfall when dealing with XSL is to try to use its most
 advanced features and this may lead to XSL files that are complex and
 very hard to understand and debug. Since XSL has almost all the features
 of a programming language (loops, variables, conditions, functions,

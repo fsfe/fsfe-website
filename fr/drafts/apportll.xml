@@ -180,7 +180,7 @@
     secondaire et seul la qualité du logiciel est recherché.
     
     Les développeurs utilisent un enssemble de règles utilisées au niveau
-    international, pour plusieurs raisons. D'une part parce qu'elles 
+    international, pour plusieurs raisons : D'une part parce qu'elles 
     permettent d'avoir une information précise sur les auteurs, 
     l'historique, l'installation, le fonctionnement et les fonctionnalités 
     futures d'une application. Et surtout parce qu'elles permettent de 
@@ -194,7 +194,7 @@
     </para>
 
     <para>
-    La qualité des Logiciels Libres s'explique aussi par leurs respect
+    La qualité des Logiciels Libres s'explique aussi par leurs respects
     des standards. Les développeurs de Logiciels Libres ont pris le temps 
     de les écrire en respectant les standards décris par les RFC - 
     <ulink url="http://ietf.org/rfc.html">Request for Comments</ulink>,  
@@ -223,46 +223,103 @@
     Maintenant que le marché se stabilise, les sociétés de la 
     Net-économie sont dans une phase de réorganisation. En 
     effet, elles doivent travailler afin de conserver des 
-    clients plus informés et plus exigeants qu'avant. Ceci
-    est indispensable pour obtenir un retour sur investissement. 
+    clients plus informés et plus exigeants. Ceci est 
+    indispensable pour obtenir un retour sur investissement. 
     Les Logiciels Libres peuvent une fois de plus apporter leurs 
     avantages, afin de bâtir un socle robuste et pérenniser ainsi 
     l'entreprise et les développements qu'elle effectue.
     </para>
 
     <para>
-    Si l'entreprise prend la voie de la standardisation de ces 
-    développements, en prenant exemple sur la communauté des 
+    Le développeur de Logiciels Libres utilisent des techniques 
+    pour permettre et faciliter la portabilité et 
+    l'internationalisation de leurs applications. 
+    Ils sont obligés de faire attention à cet aspect, afin de 
+    ne pas limiter l'utilisation de leurs logiciels à un niveau
+    national. Ce système de développement est un plus pour les 
+    entreprises, car elles peuvent utiliser les applications ou 
+    les services dans les différents pays ou elles sont implémentées. 
+    </para>
+
+    <para>
+    Si les entreprises prennent la voie de la standardisation de 
+    leurs développements, en prenant exemple sur la communauté des 
     développeurs de Logiciels Libres, elle utilisera un ensemble 
-    de normes qui permettra à tous les universitaires, chercheurs, 
-    gouvernements et informaticiens de participer avec elle 
-    aux développements de Logiciels. L'ouverture des sources
-    permet en effet d'avoir un retour d'information sur un bug 
-    à résoudre, un problème de sécurité à supprimer, une nouvelle
-    fonctionnalité à ajouter ou des propositions sur des solutions
-    techiques différentes qui permetraient de faire évoluer l'application
-    avec efficacité.
+    de normes de programmation qui permettra à tous les	
+    développeurs de l'entreprise de travailler sur des projets 
+    communs, même s'ils sont répartis dans divers pays. 
+
+    Ce système de développement donne aussi la possiblité à des 
+    universitaires, chercheurs, gouvernements et informaticiens 
+    de participer avec les entreprises aux développements de 
+    Logiciels. 
+
+    En effet, l'ouverture des sources permet d'avoir un retour 
+    d'information sur un bug à résoudre, un problème de sécurité 
+    à supprimer, une nouvelle fonctionnalité à ajouter ou des 
+    propositions sur des solutions techiques différentes qui 
+    permetraient de faire évoluer l'application avec efficacité.
     </para>
     
     <para>
-    Le travail décentralisé permet de pérenniser les applications, 
-    même si la société fait le choix d'abandonner le projet, 
-    elle ne met pas pour autant tout le travail des développeurs 
-    et autres participants au rebut. Le projet peut continuer à 
-    se développer sur internet. Ceci a une réelle conséquence sur 
-    la motivation des équipes et sur l'image de l'entreprise auprès 
-    de ses salariés et de celle qu'elle véhicule.
+    L'ouverture des sources et la licence GPL permettent de 
+    pérenniser les applications développées par l'entreprise. 
+    Même si pour des raisons internes, la société fait le choix 
+    d'abandonner un projet, elle ne met pas pour autant le travail 
+    des développeurs et autres participants au rebut. Le projet 
+    peut continuer à se développer sur internet.
+    Ceci a une réelle conséquence sur la motivation des équipes et 
+    sur l'image de l'entreprise auprès de ses salariés et de celle 
+    qu'elle véhicule. 
     </para>
 
     <para>
-    Un projet ou une application est bien plus que du code pour 
-    les développeurs, c'est comme un écrivain qui passe des 
-    heures et des heures à réaliser un roman. Imaginez la 
-    déception du romancier s'il apprend que son oeuvre ne 
-    sera pas distribuée tout simplement parce que son éditeur 
-    en a décidé autrement.. Que ferais l'écrivain 
-    d'après vous ? Personnellement je changerai d'éditeur.
+    Imaginez un ébéniste qui passent des heures à réaliser une belle 
+    armoire, pour un client. A mis parcours le patron décide d'annuler
+    la commande pour une raison X ou Y (le client ne veut pas payer, 
+    manque de bois, etc.). J'imagine la tête de l'ouvrier si on lui 
+    dit de jeter son travail au feu. Personnellement à la place de
+    l'ébéniste, je changerai d'employeur.
     </para>
+
+
   </sect1>
 
+  <sect1>
+    <title>Conclusion</title>
+    
+    <para>
+    L'utilisation des Logiciels Libres par les sociétés de la Net-économie
+    a permis de prendre conscience que la réalisation de logiciel s'adapte
+    parfaitement au nouveaux moyens mis à la disposition des développeurs 
+    grâce à internet. La mise en réseau des outils de développement, 
+    le respect des normes utilisées par les développeurs de Logiciels 
+    Libres au niveau international et les libertés instaurées par la 
+    FSF permettent de produire de façon déstructurées et décentralisées 
+    des logiciel performants et de bonne qualité.
+    </para>
+
+    <para>
+    Les développeurs comme les entreprises ont tout intérêt à ce lancer
+    dans l'utilisation et la réalisation de Logiciels Libres. Car cela 
+    permet de rester indépendant, tout en respectant les orientations
+    du marché.
+    </para>
+
+  </sect1>
+
+
+  <sect1>
+    <title>Remerciements</title>
+    
+    <para>
+    J'aimerai remercier toutes les personnes qui ont participer de près 
+    ou de loin à la réalisation de cet document. Notamment 
+    </para>
+    
+    <para>
+    [Liste des personnes s'ils acceptent]
+    </para>
+
+  </sect1>
 </article>

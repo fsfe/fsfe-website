@@ -1,0 +1,433 @@
+%% $Id: Constitution-fr.fr.tex,v 1.1 2001-04-16 18:10:09 loic Exp $
+%% 
+%% Constitution of the Free Software Foundation Chapter France
+%%
+%% Language: German
+%%
+
+%{{{ Header
+
+\documentclass[a4wide,12pt]{scrartcl}
+\usepackage{german,umlaut}
+\usepackage{fancyheadings}
+\usepackage{alltt}
+\usepackage[german]{babel}
+
+\selectlanguage{german}
+\pagestyle{fancyplain}
+
+\lhead[\fancyplain{}{\bfseries\thepage}]
+        {\fancyplain{}{\bfseries\rightmark}}
+\rhead[\fancyplain{}{\bfseries\leftmark}]
+        {\fancyplain{}{\bfseries\thepage}}
+\cfoot{}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\renewcommand{\thesection}{\S~\arabic{section}}
+
+%
+% alternative ways of doing it...
+%
+
+% this makes the references work correctly:
+%\newcommand{\A}{\subsection{}}
+%\renewcommand{\subsectionmark}[1]{\markright{\thesection\ }}
+
+% this looks better:
+\newcounter{absatz}[section]
+\newcommand{\A}{\par\vspace{1ex}
+                \stepcounter{absatz}\noindent(\arabic{absatz})~~}
+
+%}}}
+
+\begin{document}
+
+%{{{ 0 Préambule
+
+\thispagestyle{empty}
+\begin{center}
+\Huge\bf STATUTS
+\end{center}
+
+\section*{Préambule}
+
+L'entrée dans l'ère numérique, où l'espace réel et l'espace virtuel
+vont coexister à titre d'égalité et marquer ensemble l'évolution
+sociale, culturelle et scientifique de l'humanité, impose des
+questions dont la formulation et le traitement sera le but à long
+terme de la Free Software Foundation Europe.\\
+
+A cet égard, ses tâches immédiates seront d'avancer de manière
+désintéressée les Logiciels libres (en anglais, «Free
+Software»), ainsi que de formuler et de disséminer les questions
+philosophiques et sociales qui s'y attachent.\\
+
+Le terme de Logiciels libres au sens employé par la FSF France ne fait
+pas référence au prix, mais se rapporte aux quatre libertés suivantes:\\
+
+\begin{enumerate}
+
+\item 1ère liberté : La liberté d'utiliser un logiciel pour tout objectif ;
+
+\item 2ème liberté : La liberté d'examiner le fonctionnement d'un logiciel
+et de l'adapter à ses propres besoins ;
+
+\item 3ème liberté : La liberté de faire des copies pour d'autres personnes ;
+
+\item 4ème liberté : La liberté d'améliorer le logiciel et de rendre ces améliorations largement disponibles pour le bien public.
+\end{enumerate}
+
+Cette définition de Logiciels libres remonte à l'idée fondamentale du
+libre échange de savoir et d'idées, comme on le trouve
+traditionnellement dans les sciences. Les logiciels, comme les
+pensées, sont immatériels et peuvent être copiés sans pertes. Leur
+transmission sert un procès évolutif de développement continu d'idées
+et de logiciels.\\
+
+Seuls les Logiciels libres permettent la traçabilité et le
+développement de résultats scientifiques. Dans le discours
+scientifique, ils sont donc le seul type de logiciels correspondant
+aux idéaux d'une science libre. L'avancement de Logiciels libres est
+donc en même temps l'avancement de la recherche scientifique.\\
+
+La dissémination d'informations et la formation d'opinions est de plus
+en plus fortement marquée par les médias numériques, et il existe des
+projets pour impliquer les citoyens plus directement dans la
+démocratie avec l'aide de technologies numériques. L'une des tâches
+centrales de la FSF France sera donc de former des citoyens émancipés
+à ces égards et de faire progresser l'Etat démocratique.\\
+
+L'espace numérique, dont les logiciels sont le médium et le langage,
+dispose d'un formidable potentiel de progrès dans tous les domaines
+d'intérêt spirituel et culturel pour l'humanité.  En rendant ce médium
+communément disponible et ouvert, les Logiciels libres garantissent
+l'égalité des possibilités et la protection du domaine privé.\\
+
+Développer, parmi toutes les sections de la population, la
+connaissance des questions liées à l'ère numérique, c'est là le but à
+long terme et l'un des noyaux de l'activité de la FSF France.\\
+
+La FSF France milite donc pour le renforcement de l'usage de Logiciels
+libres dans les écoles et les universités, pour engendrer pendant la
+période formative, parallèlement à la connaissance des questions de
+l'espace réel, une conscience et une compréhension de l'espace
+virtuel.\\
+
+Les Logiciels libres garantissent des résultats et des processus de
+prise de décision plus traçables dans les sciences et dans la vie
+publique, ainsi que le droit de l'individu à l'épanouissement de sa
+personnalité et de sa liberté d'opinion. La FSF France tâchera donc de
+porter les Logiciels libres dans tous les domaines qui touchent à la
+vie publique ou aux « droits de l'homme informationnels » des
+citoyens.\\
+
+Dans la suite de ce document «FSF Europe» désigne l'association à but non
+lucratif dont le nom est «Free Software Foundation Europe» et dont le siège
+social est localisé en Allemagne.
+
+%}}}
+
+%{{{ 1 
+
+\section{Nom} 
+
+Il est fondé entre les adhérents aux présents status une association
+régie par la loi du 1er Juillet 1901 et le décret du 16 Août 1901,
+ayant pour titre:\\
+
+«Free Software Foundation Chapter France» \\
+
+dont l'acronyme est\\
+
+«FSF France»\\
+
+L'association se nommera «Free Software Foundation Chapter
+France» aussi longtemps qu'elle sera membre de la FSF Europe
+au titre de personne morale et s'oblige à modifier son nom
+si elle était exclue à titre définitif de la FSF Europe.
+
+%}}}
+
+%{{{ 2 
+
+\section{Objet} 
+
+L'objectif de la FSF France est l'avancement des buts cités dans le préambule. \\
+
+Spécifiquement, l'objectif de l'association sera servi par :\\
+
+le soutien à tous les organismes d'Etat et privés dans toutes les
+questions de Logiciels libres, la collaboration coordonnée avec les
+associations nationales poursuivant les mêmes objectifs et avec la FSF
+Europe, le soutien de projets développant des Logiciels libres, la
+dissémination des idéaux philosophiques des Logiciels libres.\\
+
+La FSF France se dédie aux seules et immédiates finalités
+scientifiques et d'utilité publique. La FSF France agit de manière
+désintéressée et ne poursuit aucun objectif lucratif.\\
+
+L'association se réserve le droit d'exercer toute action en justice
+pour assurer la défense des intérêts individuels de la totalité ou d'une
+partie de ses membres.\\
+
+Les moyens de la FSF France ne doivent être utilisés que pour des
+objectifs conformes à son statut. Nul ne doit être favorisé par des
+dépenses qui seraient étrangères aux objectifs de la FSF France, ou
+par une compensation hors proportion.\\
+
+%}}}
+
+%{{{ 3
+
+\section{Durée}
+
+La durée de l'association est illimitée.
+
+%}}}
+
+%{{{ 4
+
+\section{Siège social} 
+
+Le siège social est fixé au 8, rue Riant 93200 Saint Denis. Il pourra
+être transféré par simple décision du Conseil d'Administration.\\
+
+%}}}
+
+%{{{ 5
+
+\section{Adhérents} 
+
+L'association se compose de membres actifs ou adhérents.
+
+%}}}
+
+%{{{ 6
+
+\section{Admission} 
+
+Pour faire partie de l'association, il faut être agrée par le bureau
+qui statue lors de chacune de ses réunions, sur les demandes
+d'admission présentées.\\
+
+Seuls les membres de la FSF Europe peuvent devenir membre de la FSF
+France.
+
+%}}}
+
+%{{{ 7
+
+\section{Les membres} 
+
+Les membres actifs se cotisent par une activité bénévole ou par
+l'exercice d'une fonction dans l'association.\\
+
+La qualité de membre se perd par:\\
+
+\begin{enumerate}
+\item La démission
+\item Le décès
+\item La radiation prononcée par le conseil d'Administration pour motif
+grave, l'intéressé ayant été invité par lettre recommandée à se présenter 
+devant le bureau pour fournir des explications.
+\end{enumerate}
+
+%}}}
+
+%{{{ 8
+
+\section{Ressources} 
+
+Les ressources de l'association comprennent:\\
+
+\begin{enumerate}
+\item les subventions qui pourront lui être accordées par les
+ structures de l'Union Européenne, de l'Etat, des collectivités
+ locales, des collectivités publiques ou des établissements publics,
+ ainsi que d'associations ou toute autre personne morale dans les
+ conditions légales
+
+ \item toutes autres ressources ou subventions qui lui seraient
+ accordées et qui ne seraient pas contraires aux lois en vigueur
+
+\end{enumerate}
+
+%}}}
+
+%{{{ 9
+
+\section{Conseil d'Administration} 
+
+L'association est dirigée par un Conseil d'Administration, élu pour 2 ans,
+par l'assemblée générale. Les membres sont rééligibles.\\
+
+Le Conseil d'Administration choisit parmis ses membres, au scrutin secret,
+un bureau composé de:\\
+
+\begin{enumerate}
+\item Un président.
+\item Un secrétaire et, s'il y a lieu, un secrétaire adjoint.
+\item Un trésorier et, s'il y a lieu, un trésorier adjoint.
+\end{enumerate}
+
+Le président du bureau est le président de l'association.\\
+
+Le conseil est investi des pouvoirs les plus étendus pour décider et
+autoriser toutes opérations ayant pour but la réalisation de l'objet
+de l'association ainsi que pour gérer sa gestion, son développement et
+son fonctionnement.\\
+
+Le conseil étant renouvelé chaque année par moitié, la première année les
+membres sortants sont désignés par le sort. \\
+
+En cas de vacances, le conseil d'Administration pourvoit provisoirement au
+remplacement de ses membres. Il est procédé à leur remplacement 
+définitif par la plus prochaine assemblée générale. Les pouvoirs des membres
+ainsi élus prennent fin à l'époque où devrait normalement expirer le mandat
+des membres remplacés.\\
+
+Afin de faciliter les communications avec la FSF Europe il est convenu
+que le président pourra porter le titre de Chancellor et que le secrétaire
+pourra porter le titre de Vice Chancellor.
+
+%}}}
+
+%{{{ 10
+
+\section{Réunion du Conseil d'Administration} 
+
+Le Conseil d'Administration se réunit une fois au moins tous les six mois
+sur convocation du président, ou sur la demande du quart de ses membres.\\
+
+Les décisions sont prises à la majorité des voix, en cas de partage, la
+voix du président est prépondérante. \\
+
+Tout membre du conseil qui, sans excuse, n'aura pas assisté à trois 
+réunion consécutives, pourra être considéré comme démissionaire.\\
+
+Nul ne peut faire partie du conseil s'il n'est pas majeur. \\
+%}}}
+
+%{{{ 11
+
+\section{Rôle des membres du bureau}
+
+Le président convoque les assemblées générales et les réunions du
+conseil d'administration. Il représente l'association dans tous les
+actes de la vie civile et est investi des pouvoirs à cet effet. Il
+représente l'association en justice. En cas d'absence ou de maladie,
+il est remplacé par le secrétaire qui dispose alors des mêmes
+pouvoirs.\\
+
+Le secrétaire est chargé de tout ce qui concerne la correspondance et
+les archives. Il rédige les procès-verbaux des délibérations du
+conseil et en assure la transcription sur les registres. En cas
+d'absence ou de maladie, il est remplacé par un membre du conseil
+désigné par le président qui dispose alors des mêmes pouvoirs.\\
+
+Le trésorier est chargé de tout ce qui concerne la gestion du
+patrimoine de l'association. Il effectue tous paiements et perçoit
+toutes recettes sous la surveillance du président. Il tient une
+comptabilité régulière de toutes les opérations. En cas d'absence ou
+de maladie, il est remplacé par un membre du conseil désigné par le
+président qui dispose alors des mêmes pouvoirs.\\
+
+%}}}
+
+%{{{ 12
+
+\section{Assemblée Générale Ordinaire} 
+
+L'Assemblée Générale Ordinaire comprend tous les membres de
+l'association à quelque titre qu'ils y soient affiliés. Les membres de
+l'association sont convoqués au moins une fois par année civile en
+assemblée générale.\\
+
+Quinze jours au moins avant la date fixée, les membres de l'association
+sont convoqués par les soins du secrétaire. L'ordre du jour est indiqué
+sur les convocations. \\
+
+L'ordre du jour doit inclure en
+priorité l'examen des guidelines les plus récentes éditées par la FSF
+Europe et les modalités de leur mise en oeuvre. \\
+
+
+Pour délibérer valablement, l'assemblée générale devra être composée
+d'au moins 50% des membres actifs, participants ou représentés. Dans
+le cas où le quorum ne serait pas atteint, une seconde assemblée
+générale sera convoquée et statuera valablement sans règle de quorum,
+après un délai de 15 jours.\\
+
+Le président, assisté des membres du conseil, préside l'assemblée et
+expose la situation morale de l'association. \\
+
+Le trésorier rend compte de sa gestion et soumet le bilan à l'approbation
+de l'assemblée.\\
+
+Les réunions de l'Assemblée Générale ne sont pas publiques.\\
+
+%}}}
+
+%{{{ 13
+
+\section{Assemblée Générale Extraordinaire} 
+
+Si besoin est, ou sur la demande de la moitié plus un des membres inscrits,
+le Président peut convoquer une Assemblée Générale Extraordinaire, suivant
+les formalités prévues par l'Article 10.\\
+
+L'assemblée générale, convoquée de façon extraordinaire, délibère
+exclusivement sur les questions portées à son ordre du jour.\\
+  
+Elle peut, en particulier, modifier les statuts de l'association ou
+proposer la dissolution de l'association, mais seulement sur
+proposition du conseil d'administration. Ces décisions ne peuvent
+alors être votées que si les 3/4 des membres de l'association sont
+présents ou représentés, et à la majorité qualifiée des 3/4 des
+votants. Si une première assemblée ne réunit pas le quorum des 3/4,
+une seconde assemblée doit être convoquée dans un délai d'un mois et
+peut valablement délibérer.\\
+
+%}}}
+
+%{{{ 14
+
+\section{Règlement Intérieur} 
+
+Un règlement intérieur peut être établi par le Conseil d'Administration
+qui le fait alors approuver par l'Assemblée Générale. \\
+
+Ce règlement éventuel est destiné à fixer les divers points non prévus
+par les statuts, notament ceux qui ont trait à l'administration interne
+de l'association.
+
+%}}}
+
+%{{{ 15
+
+\section{Dissolution} 
+
+En cas de dissolution prononcée par les deux tiers au moins des membres
+présents à l'Assemblée Générale, un ou plusieurs liquidateurs sont nommés 
+par celle-ci et l'actif, s'il y a lieu, est dévolu conformément à l'article 
+9 de la loi du 1er Juillet 1901 et au décret du 16 Août 1901. 
+
+%}}}
+
+%{{{ 16
+
+\section{Forme écrite} 
+
+\begin{enumerate}
+\item Un document papier signé manuellement.
+\item Un courrier électronique encodé par un code correspondant au
+standards actuels d'encodage.
+\end{enumerate}
+
+%}}}
+
+\thispagestyle{empty}
+\begin{center}
+\bf Fait à Paris, le 28 Avril 2001
+\end{center}
+
+\end{document}

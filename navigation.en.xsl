@@ -114,9 +114,9 @@
               </xsl:choose><br/>
 
               <xsl:choose>
-                <xsl:when test="$path='help/thankgnus-2002.xhtml'">ThankGNUs</xsl:when>
+                <xsl:when test="$path='help/thankgnus.xhtml'">ThankGNUs</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/help/thankgnus-2002.html">ThankGNUs</a>
+                  <a href="{$fsfeurope}/help/thankgnus.html">ThankGNUs</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
 

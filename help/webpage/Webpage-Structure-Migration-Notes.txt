@@ -1,0 +1,44 @@
+Migration/transition notes:
+***************************
+
+The technology necessary to implement the structure described in the
+Webpage-Structure document are already present and in use. In other
+words: We can keep using the XSL/XHTML technology currently being
+used. 
+
+But the way pages will be built & served will change.
+
+Right now, <country>.fsfeurope.org gets served out of /<county>/.
+
+With the new structure, we create full checkouts of the repository
+that get built with a certain countrification; which means that the
+sections with available countrification get navigation/overview pages
+with according supplementation. The <country>.fsfeurope.org pages also
+get served out of / then.
+
+
+This way we also ensure that
+
+	http://www.fsfeurope.org/<someaddressoranother>
+
+and
+
+	http://france.fsfeurope.org/<someaddressoranother>
+	http://germany.fsfeurope.org/<someaddressoranother>
+	http://italy.fsfeurope.org/<someaddressoranother>
+        ...
+
+will always exist and bring people to the same page - even if there is
+a different countrification.
+
+
+Important: We must make sure that old link-addresses remain accessible
+in order to make sure that existing links to our page aren't broken.
+This surely is work, but it won't get easier with time.
+
+The structure has been designed in a way to allow the links to remain
+as similar as possible, but we won't be able to maintain that for
+every page - in such cases we may need to create a list of
+redirections for the web server that will bring people to the new
+page. 
+

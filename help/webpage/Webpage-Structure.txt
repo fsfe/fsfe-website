@@ -1,0 +1,326 @@
+$Id: Webpage-Structure.txt,v 1.1 2002-07-22 13:32:31 greve Exp $
+
+FSF Europe Web page structure
+-----------------------------
+
+Introduction:
+*************
+
+This document describes the directory/organizational structure of the
+FSF Europe web page. Maintaining a consistent and clear structure is
+important.
+
+Since the web page is a central point of disseminating information
+about Free Software and the activities of the FSF Europe and its
+associate organizations, we need to make our best effort to make sure
+people can easily find what they are looking for.
+
+If they get lost or confused, they will feel stupid, which is
+something noone likes, so they will (at best) give up or (at worst)
+assume that Free Software isn't worth the effort to get into it.
+
+Please try to make sure that everyone working on the web page knows
+this document and tries to maintain the structure consistent. If you
+feel something isn't clear or are not sure where to put something,
+please feel free to ask web@fsfeurope.org and/or team@fsfeurope.org at
+your discretion.
+
+
+About expanding the document:
+*****************************
+
+This document will always remain work in progress. Whenever you
+believe the structure should be modified or expanded in some way,
+please feel free to suggest your ideas to web@fsfeurope.org. If people
+on web@fsfeurope.org agree this is a useful addition, please prepare a
+patch to this document.
+
+Before making changes to this document final, please mail your
+intended patch to team@fsfeurope.org and let them know where to find
+the discussion that preceded this patch so people will be able to
+understand why you feel this patch has become necessary. 
+
+For each of these processes, there should be at least a week (better:
+two weeks) allowed feedback time in order to allow people to comment.
+
+
+General notes:
+**************
+
+ - We try to provide every page in as many languages as possible,
+   regardless of where it is published. 
+
+   Of course we will not always have all translations at once, so
+   things are being published when we have them and translated over
+   time. 
+ 
+   If this means that a European document is only available in
+   Italian, German or French, so be it. It is better to get active
+   publishing things than to discourage ourselves by demanding
+   translations that we currently aren't willing or able to do. 
+
+   Of course we should aim to always have English versions of all
+   pages and preferrably write things in English for the European
+   level, but this is a recommendation, not a hard rule.
+
+
+   To give potential translators ideas, /help/translation should
+   contain a priority list of things that we'd like to see translated
+   first. 
+
+
+ - Some of the directories are global to the whole FSF Europe, others
+   will be supplemented with country-specific branches to contain
+   information that is country specific (whenever applicable).
+
+   Those "Countrified" branches will be put under
+
+	/<country TLD>/
+
+   in the main directory to allow creating "<country>.fsfeurope.org"
+   to map to it.
+
+   Example: The /projects tree will contain projects on the European
+    level, so the countrified tree for France will be located under
+    /fr/projects 
+
+   The most important point about navigation will be to provide
+   several overview pages based on the interest-focus of the web-page
+   visitors that allow easy overview & navigation between the country
+   projects and European projects.
+
+   Although this document speaks of countries/countrified, the
+   boundaries of such a region do not have to be identical to
+   political borders. It is possible that some countries will bundle
+   themselves together or divide themselves up based on political/
+   cultural/language identities.
+
+   We don't seek to define who people feel close to - so if enough
+   people feel a certain "countrification" makes sense, we should go
+   along with it. 
+
+   Creating duplicities should be avoided in order not to confuse
+   people. 
+
+
+
+Web site structure:
+*******************
+
+Global/European directories:
+(please keep this list alphabetical)
+
+/about
+
+	This directory contains the introductory documents into the
+        background, goals and structure of the FSF Europe. It also
+        contains all legal documents like constitutions of the Hub and
+        the Chapters and the Chapter template-constitution.
+
+	Also contains list of members and speakers.
+
+ /about/graphics
+
+	Subdirectory containing logo, artworks & other FSF Europe
+        things that people sometimes need for web pages(links) and
+        such.
+
+
+/associate
+
+	Directory of associate organizations, containing a list of
+	associate organizations and some contact information on the
+	top level. Also page(s) explaining the associate status and
+	giving information on how to become an associate organization
+	should go here.
+
+ /associate/<name of associate organization>
+
+	Subdirectory for the specified associate organization,
+	containing text, information, material, brochures by the
+	respective associate organization.
+
+        All pages in here should contain some sort of visible sign
+	that this information was provided by the associate
+	organization (other than the directory location, that is.)
+
+ /associate/other
+
+	Subdirectory containing texts/initiatives/projects that we
+        percieve to be well-written or useful written by people
+	neither in a formal associate organization nor member of the
+        FSF Europe.
+
+
+/documents
+
+	This directory contains all documents about Free Software and
+        related topics published by the FSF Europe. Also one-time
+        initiatives like open letters and such.
+
+        Generally speaking, only documents that will probably be
+        useful to read/refer to for the next 2 years should go in
+        here.
+
+
+/events	
+	This directory contains information about events the FSF
+	Europe or one of its representatives is present at. Contains
+	overviews of future events.
+
+ /events/<year>
+	
+	Subdirectories for the different years containing overview
+	over the events in that particular year. Also avoids directory
+	cluttering of main events directory. Subdirectories for the
+	different events should be made when there are pictures,
+	presentations or several files to be put online.
+
+
+/help
+
+	This directory contains all information about how to help the
+        FSF Europe, how to donate and so on. For information on how to
+	get involved, people should be referred to /contact.
+
+ /help/translation
+
+	Subdirectory containing information about how to get involved
+	in the translation process and also TODO lists of things that
+        need translation.
+
+ /help/webpage
+
+	Subdirectory containing all the technical information for the
+        web page and information on how to get involved.
+
+
+/links
+
+	Directory containing linkpages to other organizations,
+	initatives and such. Potentially sorted by topic.
+
+
+/material
+
+        Directory containing brochures, information material and other
+        "formatted material" that people may want to print out
+        themselves and/or distribute to colleagues/friends/whoever.
+
+        A subdirectory per brochure/flyer seems useful.
+
+
+/order
+
+	Information on how to order FSF Europe brochures, flyers and
+	such as well as information on how to order merchandise.
+
+
+/search
+
+	Navigation page(s) for the search engine go in here.
+
+	Should contain sitemap.html with a sitemap explaining the
+	layout and directory structure from a users perspective.
+
+
+
+Countrified directories:
+(please keep this list alphabetical)
+
+/contact
+
+	Directory containing contact information, information about
+	mailing lists and how to get involved.
+
+
+/news
+	Directory for one-time events, actions and news. This level
+	contains the overview pages for new & old news.
+
+ /news/<year>
+
+	Subdirectories for the different years to avoid directory
+	cluttering. If something contains pictures or multiple files,
+	please create subdirectories for the entry.
+
+
+/press
+
+	Directory containing overview-pages geared towards
+	journalists, trying to make it easier for them to get to the
+	relevant information fast. Should also contain information
+	about press-release mailing lists.
+
+	This directory will probably contain little in terms of
+	additional information, it will more or less try to provide a
+	different type of networking the information that will be more
+	useful for journalists.
+
+
+/projects
+
+	Directory structure containing projects in subsubdirectories
+	depending on their focus.
+
+	A project normally will be something that goes over a long
+	period of time (potentially forever), so one-time actions
+	should not go here but rather be put in /news.
+
+ /projects/technical
+
+	Subdirectory containing the technical projects in their own
+	subdirectories. 
+
+ /projects/legal
+
+	Subdirectories containing the legal projects/activities in
+	their own subdirectories.
+
+ /projects/awareness
+
+	As above for projects concentrating on building awareness for
+	Free Software.
+
+ /projects/other
+
+	As above for all that do not fall in one of the categories
+	above.
+
+
+
+Navigation paradigms:
+*********************
+
+Following the most likely way users will want to percieve/use the
+page, the general navigation paradigm is that sections (topics)
+supersede countrification.
+
+In all countrified sections, the navigation pages should always
+contain the countrified entries PLUS the Global/European ones.  That
+way someone who selected countrification for one region will not miss
+the Global/European information.
+
+Whenever a user who selected a countrification asks for a section that
+is Global/European only, the Global/European pages should be served
+silently without loss of countrification.
+
+Countrification can be maintained / preserved over several hops by
+host name (i.e. <countrifiedregion>.fsfeurope.org).
+
+
+That way people can enter the web page directly with a certain
+preselected countrification or they enter the web page globally.
+
+Either way they can select the topics of interest and browse the whole
+page while maintaining their countrification. 
+
+
+The navigation should allow them to go back to the European level and
+whenever there are other countrified selections available, the user
+should be able to switch between countrifications.
+
+
+Language selection can be done through content negotiation or
+explicitly. If possible, language selection should be preserved even
+through a missing translation.

@@ -106,7 +106,24 @@
       <date>18 jul 2002</date>
     </os>
   </software>
-
+  <software>
+    <name>PWCalc</name>
+    <date>30 Jul 2002</date>
+    <description lang="en">A simple but powerful protein weight calculator.</description>
+    <description lang="fr">Un programme simple et performant pour le calcul de masse protéique.</description>
+    <authors>Jerome PANSANEL</authors>
+    <email>pansanel@pansanel.net</email>
+    <url>http://www.pansanel.net/linux/mwcalc.html</url>
+    <mirrorurl></mirrorurl>
+    <os name="Linux">
+      <maintainer>Jerome PANSANEL</maintainer>
+      <version>1.2</version>
+      <license>LGPL</license>
+      <url>http://www.pansanel.net/linux/ressources/pwcalc-1.2.tar.gz</url>
+      <comment>The tarball is containing COPYING notice, and each file contains license and copyright notice.</comment>
+      <date>3 Jul 2002</date>
+    </os>
+  </software>
 <!-- Template
   <software>
     <name></name>

@@ -134,7 +134,7 @@ code {
 	font-style:	normal;
 	font-weight:	bolder;
 	background:	yellow;
-	color:	black;
+	color: black;
 }	
 		
 .noTextDecoration {
@@ -147,6 +147,10 @@ code {
  
 .cornerIcon {
 	    float: right;
+}
+
+.correct {
+	color: red;
 }
 
 /* *************** DocBook specific *************** */

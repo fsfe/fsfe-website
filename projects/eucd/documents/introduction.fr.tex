@@ -1,0 +1,187 @@
+%% 
+%% Language: French
+%%
+
+%{{{ Header
+
+\documentclass[a4wide,12pt]{scrartcl}
+\usepackage{german,umlaut}
+\usepackage{fancyheadings}
+\usepackage{alltt}
+\usepackage[german]{babel}
+
+\selectlanguage{german}
+\pagestyle{fancyplain}
+
+\lhead[\fancyplain{}{\bfseries\thepage}]
+        {\fancyplain{}{\bfseries\rightmark}}
+\rhead[\fancyplain{}{\bfseries\leftmark}]
+        {\fancyplain{}{\bfseries\thepage}}
+\cfoot{}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\renewcommand{\thesection}{\S~\arabic{section}}
+
+%
+% alternative ways of doing it...
+%
+
+% this makes the references work correctly:
+%\newcommand{\A}{\subsection{}}
+%\renewcommand{\subsectionmark}[1]{\markright{\thesection\ }}
+
+% this looks better:
+\newcounter{absatz}[section]
+\newcommand{\A}{\par\vspace{1ex}
+                \stepcounter{absatz}\noindent(\arabic{absatz})~~}
+
+%}}}
+
+\begin{document}
+
+%{{{ 0 Préambule
+
+\thispagestyle{empty}
+%\begin{center}
+%\Huge\bf STATUTS
+%\end{center}
+
+\section*{Menace sur la copie privée: désir de monopole ?}
+
+En 1878, lors de son discours d'ouverture du congrès littéraire
+international, Victor Hugo contribuait à fonder le droit d'auteur avec
+ces mots: "Le livre, comme livre, appartient à l'auteur, mais comme
+pensée, il appartient - le mot n'est pas trop vaste - au genre
+humain. Toutes les intelligences y ont droit. Si l'un des deux droits,
+le droit de l'écrivain et le droit de l'esprit humain, devait être
+sacrifié, ce serait, certes, le droit de l'écrivain, car l'intérêt
+public est notre préoccupation unique, et tous, je le déclare, doivent
+passer avant nous". Ses vues ne plaisaient guère au cercle des
+libraires qui s'opposait, en particulier, à son idée du domaine public
+en prétendant qu'elle nuirait au commerce et donc à toute la
+profession littéraire. Et nous voici, deux siècles plus tard,
+confrontés à une volonté de changement du droit d'auteur dont on nous
+dit qu'elle permet de réduire le manque à gagner des commerçants. Le
+cercle des libraires a certes disparu mais les majors du disque et les
+éditeurs tiennent son rôle. Le temps n'a pas atténué l'influence des
+commerçants ni, fort heureusement, la force du discours Hugolien.\\
+
+Les "mesures techniques de protection" sont la pomme de la discorde.
+Celle utilisée sur les DVD est largement répandue: elle permet de
+cacher le contenu du film en le mélangeant selon une méthode appellée
+CSS. Chaque logiciel permettant de visionner un film doit auparavant
+remettre son contenu dans l'ordre. Si le logiciel ne connait pas CSS,
+il ne peut donc projeter le film. Bien entendu, l'inventeur de CSS a
+gardé le secret et ne l'a divulgué qu'à des personnes choisies. Or il
+s'est trouvé qu'un programmeur avait acquis un DVD et ne disposait
+d'aucun logiciel pour le voir. A force de travail, il a réussi à
+deviner par lui-même le secret de CSS et écrit un petit logiciel,
+appelé DeCSS, permettant de remettre en ordre son film. Il l'a ensuite
+intégré à un logiciel d'affichage et a enfin profité de son
+acquisition. Depuis lors, et comme DeCSS est un Logiciel Libre
+disponible à tous, chacun peut voir le contenu du DVD qu'il a acheté
+ou loué sans obligation d'acquérir un logiciel approuvé par
+l'inventeur de CSS.\\
+
+Comme on l'imagine, l'exemple se décline pour toute forme de création
+immatérielle, qu'il s'agisse de textes, de sons ou d'images. Il ne se
+trouve d'ailleurs personne pour prétendre concevoir une mesure
+technique de protection infaillible: dans le meilleur des cas elle
+résiste quelque mois à la créativité des hommes. C'est ce constat qui
+a mis un terme, vers la fin des années 80, à la course aux mesures
+techniques de protection. Dans la décade qui a suivi, elles ont
+progressivement disparu. L'internet s'est développé avec le succès que
+l'on sait, propulsant sur les réseaux une grande richesse de créations
+immatérielles dont l'immense majorité n'est protégée par aucune mesure
+technique. Les auteurs de l'immatériel, participants activement à
+cette évolution, ne sont pas pour autant privés de moyens légaux pour
+protéger leurs droits et les défendent chaque jour grâce au droit
+d'auteur que nous connaissons.\\
+
+Le nouveau cercle des libraires, c'est-à-dire quelques puissantes
+multinationales, ont vu dans les mutations techniques l'opportunité de
+modifier les lois afin d'acquérir un contrôle nouveau sur chaque
+citoyen. Constituées en lobby, elles ont reclamé et obtenu en 1996 un
+traité international (Traité OMPI sur le droit d'auteur) imposant aux
+États signataires de prendre des mesures légales appropriées pour
+punir le contournement de mesures techniques de protection. Quelle
+idée surprenante, quand on y pense: si j'ai obtenu le droit de jouir
+d'une oeuvre et que je dois pour cela contourner une mesure technique,
+comme l'a fait l'auteur de DeCSS, quel tort ai-je causé à l'auteur ?
+Si je suis un contrefacteur ayant la ferme intention de jouir de
+l'oeuvre sans la permission de l'auteur, je suis déjà un délinquant et
+ajouter à mon délit celui de contournement de la mesure technique ne
+change rien à l'affaire. Mais, on l'a dit plus haut, l'objectif
+recherché n'est ni la punition des contrefacteurs ni la défense des
+intérêts légitimes de l'auteur. Il s'agit d'instituer un contrôle.\\
+
+L'inventeur d'une mesure technique de protection prétend détenir un
+monopole sur son utilisation. Il entend ainsi imposer à tous des
+conditions contractuelles, dont il détermine les termes à sa
+convenance, et qui contrôlent le fonctionnement de tout dispositif qui
+met en oeuvre la mesure technique de protection. Par exemple, si un
+créateur de logiciel permettant de lire un DVD demande la permission à
+l'inventeur de CSS, il l'obtiendra à condition que son logiciel se
+comporte d'une certaine façon. Le logiciel devra, entre autre,
+interdire à l'utilisateur de passer outre la séquence d'introduction
+contenant diverses publicités. L'inventeur de CSS a attaqué en justice
+le créateur de DeCSS car il lui devenait impossible d'imposer ses
+conditions contractuelles, il perdait le contrôle.\\
+
+On cherche en vain à comprendre en quoi les auteurs, les titulaires de
+droits ou les sociétés d'auteurs sont concernés par de telles
+manoeuvres. Après tout, l'auteur d'un film ou d'une mélodie qui
+choisit de distribuer son oeuvre sur un support numérique n'a aucune
+influence sur les logiciels qui vont servir à son lecteur. Un
+industriel français doit pouvoir décider en toute indépendance de
+créer un logiciel permettant de jouir d'une oeuvre numérique. Un
+auteur cherchant à imposer des conditions à cet industriel se verrait
+immédiatement accusé de fausser les règles de la concurrence. A
+l'inverse, un consommateur qui tenterait de forcer l'auteur à fournir,
+par exemple, le moyen de faire des copies privées, se verrait opposer
+que cela dépend exclusivement des logiciels, sur lesquels l'auteur n'a
+pas et ne peut pas avoir prise.  La mesure technique de protection ne
+permet donc aucun contrôle par l'auteur de l'utilisation de son
+oeuvre, ce contrôle est tout entier dans les relations contractuelles
+entre l'inventeur de la mesure technique de protection et les
+créateurs de logiciels.\\
+
+La question se pose donc au législateur dans ces termes : instituer un
+monopole sur les mesures techniques de protection permet-il de mieux
+protéger les auteurs dans l'environnement numérique ? On opposera à
+cela que les textes européens (directive du 22 mai 2001 relative au
+droit d'auteur et aux droits voisins dans la société de l'information
+ou EUCD) ne parlent à aucun moment de monopole sur les mesures
+techniques de protection. Mais s'il n'y a pas monopole, il s'en suit
+par exemple que DeCSS peut être légalement créé et distribué comme
+concurrent des logiciels autorisés par l'inventeur de CSS et selon des
+conditions contractuelles différentes. Dans ce cas la mesure technique
+de protection devient donc inutile. Si, au contraire, le législateur
+entend effectivement accorder un monopole à l'inventeur de la mesure
+technique de protection, il lui permet d'imposer à tous les conditions
+contractuelles de son choix. L'auteur ne dispose d'aucun moyen légal
+pour s'assurer que ces conditions contractuelles défendent ses
+intérêts. La loi glisse vers la technique et oblige l'auteur à
+négocier les modalités d'usage de son oeuvre avec l'inventeur de la
+mesure technique de protection.\\
+
+L'immense confusion qui règne depuis des années sur l'EUCD et la
+grande complexité de sa rédaction n'ont pas d'autre source qu'un refus
+d'énoncer clairement le problème comme nous venons de le faire. On ne
+peut pretexter que les mutations de l'environnement numérique en sont
+la cause, elles sont seulement l'excuse qui permet de cacher un désir
+de contrôle. Ceux qui réclament un nouveau monopole savent que pour
+l'inscrire dans la loi il faudrait en mesurer soigneusement les
+conséquences pour toute la société. Il faudrait mettre en balance et
+équilibrer les bénéfices et les privations qu'il entraine pour
+chacun. Quel impact aurait-il sur les auteurs et les titulaires de
+droits ? Sur la libre concurrence ?  Sur les droits des consommateurs
+?  Sur la protection de la vie privée ?  Sur la mission des
+bibliothèques ? Or, tout montre que le déséquilibre est grand et que
+les bénéfices tirés d'un tel monopole par une minorité se ferait au
+détriment de tous. \\
+
+Loïc Dachary, fondateur de http://EUCD.INFO/, 15 Janvier 2003
+
+%}}}
+
+\end{document}

@@ -1,13 +1,13 @@
 <!DOCTYPE html
           PUBLIC "-//W3C//DTD HTML 1.0 Transitional//EN"
-          SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-    <link rel="stylesheet" type="text/css" href="/blue.css">
+    <meta http-equiv="Content-Type" content="text/html; ISO-8859-1" />
+    <link rel="stylesheet" type="text/css" href="/blue.css" charset="ISO-8859-1" />
     <title>FSF France - Merci !</title>
   </head>
-  <body topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" marginheight="0" marginwidth="0">
+  <body>
 
 <!--#include virtual="header.fr.html"-->
 <center>
@@ -18,16 +18,24 @@
 </center>
 <p />
 
+La FSF France doit beaucoup à de nombreuses personnes, morales ou
+physiques.  Nous en remercions ici quelques unes. Si vous pensez que
+vous devriez vous trouver dans cette liste, <a
+href="mailto:france@fsfeurope.org">ecrivez nous</a>.
+<p />
+
 <ul>
-<li><a href="http://www.nevrax.com/">Nevrax</a> pour l'hébergement de
-la machine <a href="http://france.fsfeurope.org/">france.fsfeurope.org</a>.
+      <li>
+	<a href="http://www.nevrax.com/">Nevrax</a> pour l'hébergement de
+	la machine <a href="http://france.fsfeurope.org/">france.fsfeurope.org</a>.
+      </li>
 </ul>
 
 <!--#include virtual="footer.fr.html"-->
 
   Mis à jour:
 <!-- timestamp start -->
-$Date: 2001-04-16 15:59:49 $ $Author: loic $
+$Date: 2001-04-16 16:57:17 $ $Author: loic $
 <!-- timestamp end -->
 
   </body>

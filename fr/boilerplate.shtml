@@ -1,19 +1,19 @@
 <!DOCTYPE html
           PUBLIC "-//W3C//DTD HTML 1.0 Transitional//EN"
-          SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-    <link rel="stylesheet" type="text/css" href="/blue.css">
+    <meta http-equiv="Content-Type" content="text/html; iso-8859-1" />
+    <link rel="stylesheet" type="text/css" href="/blue.css" />
     <title>TITLE</title>
   </head>
-  <body topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" marginheight="0" marginwidth="0">
+  <body>
 
 <!--#include virtual="header.en.html"-->
 <center>
 [
 <!-- Please keep this list alphabetical -->
-  English | <a href="birth.fr.shtml">French</a>
+  English | <a href="boilerplate.fr.shtml">French</a>
 ]
 </center>
 <p />
@@ -22,7 +22,7 @@
 
   Updated:
 <!-- timestamp start -->
-$Date: 2001-04-16 15:59:49 $ $Author: loic $
+$Date: 2001-04-16 16:57:17 $ $Author: loic $
 <!-- timestamp end -->
 
   </body>

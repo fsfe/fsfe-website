@@ -44,9 +44,10 @@
     </head>
   </xsl:template>
 
-  <xsl:include href="navigation.fr.xsl" />
-  <xsl:include href="navigation.en.xsl" />
   <xsl:include href="navigation.de.xsl" />
+  <xsl:include href="navigation.en.xsl" />
+  <xsl:include href="navigation.fr.xsl" />
+  <xsl:include href="navigation.it.xsl" />
   <xsl:include href="navigation.pt.xsl" />
 
   <xsl:template match="@*|node()" priority="-1">

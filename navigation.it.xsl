@@ -5,7 +5,8 @@
 
   <xsl:template match="/html[@lang='it']/body/div">
     <!-- FSF related sites -->
-    <table cellspacing="0" cellpadding="0" width="100%" border="0"><tr bgcolor="#e7e7e7"><td><img src="{$fsfeurope}/images/pix.png" width="1" height="1" alt="" /></td></tr></table> 
+   <table cellspacing="0" cellpadding="0" width="100%" border="0"><tr bgcolor="#e7e7e7"><td><img src="{$fsfeurope}/images/pix.png" width="1" height="1" alt="" /></td></tr></table> 
+
     <table cellspacing="0" cellpadding="1" width="100%" border="0"> 
       <tr valign="middle"> 
 	  <td class="newstext">
@@ -106,9 +107,9 @@
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
-                <xsl:when test="$path='help/help.xhtml'">Aiuto</xsl:when>
+                <xsl:when test="$path='help/help.it.xhtml'">Aiuto</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/help/help.html" class="T2">Aiuto</a>
+                  <a href="{$fsfeurope}/help/help.it.html" class="T2">Aiuto</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>

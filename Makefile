@@ -1,12 +1,7 @@
+# Authors: Loic Dachary <loic@gnu.org> and Jaime Villate <villate@gnu.org>
 #
-# XML validator
-# -------------
-# apt-get install rxp
-# or
-# ftp://ftp.cogsci.ed.ac.uk/pub/richard/rxp-1.2.3.tar.gz
-#
-# XSLT processor
-# --------------
+# XML/XSLT processor (validator)
+# -------------------------
 #
 # sablotron (sabcmd)
 # apt-get install sablotron
@@ -26,26 +21,46 @@ XSLTOPTS = \
 	'$$fsf=$(FSF)' \
 	'$$gnu=$(GNU)'
 
-all:: process 
+ENPAGES = $(shell find * -path 'fr' -prune -o -regex '[^\.]*\.xhtml' -print | sed "s/xhtml$$/html/")
 
-# process xhtml files in all subdirectories, except fr/
-process: 
-	@find * -path 'fr' -prune -o -name '*.xhtml' -print | while read path ; \
-	do \
-		base=`expr $$path : '\(.*\).xhtml'` ; \
-		filebase=`basename $$base` ; \
-		dir=`dirname $$path` ; \
-		root=`dirname $$path | perl -pe 'chop; s:([^/]+):..:g if($$_ ne ".")'` ; \
-		$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase | \
-		perl -MFile::Copy -p -e '$$| = 1; copy("'$$dir'/$$1", \*STDOUT) if(/\#include virtual=\"(.*?)\"/); s/\$$//g if(/\$$''Date:/);' > $$base.html ; \
-	done
+FRPAGES = $(shell find * -path 'fr' -prune -o -regex '.*\.fr\.xhtml' -print | sed "s/xhtml$$/html/")
 
-# validate xhtml files in all subdirectories, except fr/
-validate:
-	find . -path './fr' -prune -o -name '*.xhtml' -print | while read file ; \
-	do \
-		echo $$file ; \
-		rxp -Vs $$file ; \
-	done
+DEPAGES = $(shell find * -path 'fr' -prune -o -regex '.*\.de\.xhtml' -print | sed "s/xhtml$$/html/")
 
-.PHONY: process recurse
+all: $(ENPAGES) $(FRPAGES) $(DEPAGES)
+
+$(ENPAGES): %.html: %.xhtml fsfe.xsl navigation.en.xsl
+	@echo "Building $< ..."; \
+	path=$< ; \
+	base=`expr $$path : '\(.*\).xhtml'` ; \
+	filebase=`basename $$base` ; \
+	dir=`dirname $$path` ; \
+	root=`dirname $$path | perl -pe 'chop; s:([^/]+):..:g if($$_ ne ".")'` ; \
+	$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase > $$base.html-temp && (cat $$base.html-temp | perl -p -e '$$| = 1; s/\$$//g if(/\$$''Date:/);' > $$base.html) ; \
+	rm -f $$base.html-temp
+
+$(FRPAGES): %.html: %.xhtml fsfe.xsl navigation.fr.xsl
+	@echo "Building $< ..."; \
+	path=$< ; \
+	base=`expr $$path : '\(.*\).xhtml'` ; \
+	filebase=`basename $$base` ; \
+	dir=`dirname $$path` ; \
+	root=`dirname $$path | perl -pe 'chop; s:([^/]+):..:g if($$_ ne ".")'` ; \
+	$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase > $$base.html-temp && (cat $$base.html-temp | perl -p -e '$$| = 1; s/\$$//g if(/\$$''Date:/);' > $$base.html) ; \
+	rm -f $$base.html-temp
+
+$(DEPAGES): %.html: %.xhtml fsfe.xsl navigation.de.xsl
+	@echo "Building $< ..."; \
+	path=$< ; \
+	base=`expr $$path : '\(.*\).xhtml'` ; \
+	filebase=`basename $$base` ; \
+	dir=`dirname $$path` ; \
+	root=`dirname $$path | perl -pe 'chop; s:([^/]+):..:g if($$_ ne ".")'` ; \
+	$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase > $$base.html-temp && (cat $$base.html-temp | perl -p -e '$$| = 1; s/\$$//g if(/\$$''Date:/);' > $$base.html) ; \
+	rm -f $$base.html-temp
+
+# remove html files for which an xhtml version exists (exclude fr/)
+clean:
+	rm -f $(ENPAGES) $(FRPAGES) $(DEPAGES)
+
+

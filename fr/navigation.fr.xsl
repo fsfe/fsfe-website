@@ -74,7 +74,7 @@
 	    <table width="120" border="0" cellspacing="0" cellpadding="4">
 		<tr><td class="TopTitle" align="center">FSF France</td></tr>
 		<tr>
-		  <td align="right">
+		  <td class="TopBody" align="right">
 		    <a href="http://agenda.lolix.org/" class="T2">Agenda</a><br />
 		    <a href="{$fsffrance}/news/news.fr.html" class="T2">Nouvelles</a><br />
 		    <a href="http://savannah.gnu.org/pm/task.php?group_project_id=37&amp;group_id=53&amp;func=browse" class="T2">Tâches</a><br />
@@ -83,14 +83,14 @@
 		    <a href="http://mailman.fsfeurope.org/mailman/listinfo/france" class="T2">Mailing List</a><br />
 		    <a href="http://savannah.gnu.org/project/memberlist.php?group_id=148" class="T2">Who's who</a><br />
 		    <a href="{$fsffrance}/about/about.fr.html" class="T2">A propos</a><br />
-		    <a href="{$fsffrance}/contact.fr.html" class="T1">Contact</a> <br />
-		    <a href="{$fsffrance}/thanks.fr.html" class="T1">Merci!</a> 
+		    <a href="{$fsffrance}/contact.fr.html" class="T2">Contact</a> <br />
+		    <a href="{$fsffrance}/thanks.fr.html" class="T2">Merci!</a> 
 		  </td>
 		</tr>
 		<tr><td class="TopTitle" align="center">Adminsys</td></tr>
 		<tr>
 		  <td class="TopBody" align="right">
-		    <a href="{$fsffrance}/stats/stats.fr.html" class="T1">Statistiques</a> <br />
+		    <a href="{$fsffrance}/stats/stats.fr.html" class="T2">Statistiques</a> <br />
 		    <a href="{$fsffrance}/server/server.en.html" class="T2">Guide</a><br />
 		    <a href="http://savannah.gnu.org/projects/fsffr/" class="T2">Comptes</a><br />
 		    <a href="{$fsffrance}/birth/birth.fr.html" class="T2">Naissance</a><br />

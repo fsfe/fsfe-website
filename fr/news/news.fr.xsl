@@ -20,27 +20,27 @@
   <xsl:template match="/rss/channel/item">
     <p>
       <table border="0" cellpadding="0" cellspacing="0">
-	<tr valign="top"  bgcolor="#736199">
-	  <td bgcolor="#ffffff">
+	<tr class="TopBody" valign="top">
+	  <td>
 	    <img src="{$fsffrance}/images/pix.png" width="5" height="1" alt=" " />
 	  </td>
-	  <td width="10" valign="top">
+	  <td class="TopBody" width="10" valign="top">
 	    <img border="0" width="10" height="13" src="{$fsffrance}/images/ul.png" alt="(( " />
 	  </td>
-	  <td bgcolor="#736199" class="newstitle">
+	  <td class="TopBody">
 	    <a href="{link}"><xsl:value-of select="title" /></a>
 	    <b><xsl:value-of select="substring-before(description, '.')"/></b>
 	  </td>
-	  <td width="10" align="right" valign="top">
+	  <td width="10" align="right" class="TopBody" valign="top">
 	    <img border="0" width="10" height="13" src="{$fsffrance}/images/ur.png" alt="))" />
 	  </td>
 	</tr>
       </table>
 
-      <table border="0" cellspacing="0" cellpadding="1" width="100%" bgcolor="#736199">
+      <table border="0" cellspacing="0" cellpadding="1" bgcolor="#736199">
 	<tr>
 	  <td valign="bottom">
-	    <table border="0" bgcolor="#cacaca" cellspacing="0" cellpadding="3" width="100%">
+	    <table border="0" bgcolor="#cacaca" cellspacing="0" cellpadding="3">
 	      <tr>
 		<td nowrap="1" class="newsinfo">
 		  <a href="{link}">Lire l'article</a>

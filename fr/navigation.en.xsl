@@ -83,7 +83,10 @@ icon links to the top of the hub's site -->
 	      <td>
 		<a href="http://korea.gnu.org/home.html" class="T2">Korea</a> <br />
 		<a href="http://www.gnulinux.org.mx/" class="T2">Mexico</a> <br />
+		<a href="http://www.ansol.org/" class="T2">Portugal</a> <br />
 		<a href="http://es.gnu.org/" class="T2">Spain</a> <br />
+	      </td>
+	      <td>
 		<a href="{$fsf}/home.html" class="T2">United-States</a> <br />
 	      </td>
 	    </tr>

@@ -80,7 +80,7 @@
               <a href="{$fsfeurope}/contact/index.pt.html"
                     class="T2">Contactos</a><br/>
               <a href="{$fsfeurope}/background.pt.html"
-                   class="T2">Origens</a><br/>
+                   class="T2">Contexto</a><br/>
               <a href="{$fsfeurope}/mailman/index.pt.html"
                    class="T2">Listas de Correio</a><br/>
               <a href="{$fsfeurope}/press/index.pt.html"
@@ -124,8 +124,8 @@
 	<td class="Body" align="center">
 	<font size="-2">
 	  Copyright (C) 2001 FSF Europe<br/>
-          Cópia literal e distribuição deste artigo por inteiro é permitido em
-          qualquer meio, desde que este aviso seja preservado.
+          Cópia literal e distribuição deste artigo na íntegra são
+          permitidas em qualquer meio, desde que este aviso seja preservado.
 	</font>
 	</td>
         <td class="Body">&nbsp;</td>

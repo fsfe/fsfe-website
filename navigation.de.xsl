@@ -153,6 +153,12 @@
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
+                <xsl:when test="$path='speakers/speakers.de.xhtml'">Sprecher</xsl:when>
+                <xsl:otherwise>
+                  <a href="{$fsfeurope}/speakers/speakers.de.html" class="T2">Sprecher</a>
+                </xsl:otherwise>
+              </xsl:choose><br/>
+              <xsl:choose>
                 <xsl:when test="$path='gbn/index.de.xhtml'">GNU Business Network</xsl:when>
                 <xsl:otherwise>
                   <a href="{$fsfeurope}/gbn/index.de.html" class="T2">GNU Business Network</a>

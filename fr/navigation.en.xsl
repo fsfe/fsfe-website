@@ -129,7 +129,7 @@
 	      <td class="TopBody" align="right">
 		<a href="{$fsffrance}/server/server.en.html#Web">Guide</a><br />
 		<a href="{$gnu}/server/standards/">GNU Guide</a><br />
-		<a href="{$fsffrance}/boilerplate.fr.html">Boilerplate</a><br />
+		<a href="{$fsffrance}/boilerplate.en.html">Boilerplate</a><br />
 		<a href="http://mailman.fsfeurope.org/mailman/listinfo/web">Mailing List</a><br />
 	      </td>
 	    </tr>

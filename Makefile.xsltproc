@@ -9,7 +9,7 @@
 # libxslt + libxml2 (xsltproc)
 # http://www.xmlsoft.org/
 #
-XSLTPROC = xsltproc
+XSLTPROC = xsltproc --nonet
 
 FSFFRANCE = http://france.fsfeurope.org
 FSFEUROPE = . # http://www.fsfeurope.org
@@ -17,9 +17,9 @@ FSF       = http://www.fsf.org
 GNU       = http://www.gnu.org
 
 XSLTOPTS = \
-	--param fsffrance $(FSFFRANCE) \
-	--param fsf $(FSF) \
-	--param gnu $(GNU)
+	--param fsffrance "'$(FSFFRANCE)'" \
+	--param fsf "'$(FSF)'" \
+	--param gnu "'$(GNU)'"
 
 ENPAGES = $(shell find * -path 'fr' -prune -o -regex '[^\.]*\.xhtml' -print | sed "s/xhtml$$/html/")
 
@@ -27,7 +27,18 @@ FRPAGES = $(shell find * -path 'fr' -prune -o -regex '.*\.fr\.xhtml' -print | se
 
 DEPAGES = $(shell find * -path 'fr' -prune -o -regex '.*\.de\.xhtml' -print | sed "s/xhtml$$/html/")
 
-all: $(ENPAGES) $(FRPAGES) $(DEPAGES)
+PTPAGES = $(shell find * -path 'fr' -prune -o -regex '.*\.pt\.xhtml' -print | sed "s/xhtml$$/html/")
+
+ITPAGES = $(shell find * -path 'fr' -prune -o -regex '.*\.it\.xhtml' -print | sed "s/xhtml$$/html/")
+
+ESPAGES = $(shell find * -path 'fr' -prune -o -regex '.*\.es\.xhtml' -print | sed "s/xhtml$$/html/")
+
+# temporary, added by mad@april.org
+NEWS = news/news.fr.html news/news.en.html news/news.pt.html
+
+all: $(ENPAGES) $(FRPAGES) $(DEPAGES) $(PTPAGES) $(ITPAGES) $(ESPAGES)
+
+swpat/patents.en.html: swpat/patents-agenda.en.xml
 
 $(ENPAGES): %.html: %.xhtml fsfe.xsl navigation.en.xsl
 	@echo "Building $@ ..."; \
@@ -36,7 +47,7 @@ $(ENPAGES): %.html: %.xhtml fsfe.xsl navigation.en.xsl
 	filebase=`basename $$base` ; \
 	dir=`dirname $$path` ; \
 	root=`dirname $$path | perl -pe 'chop; s:([^/]+):..:g if($$_ ne ".")'` ; \
-	$(XSLTPROC) $(XSLTOPTS) '--param fsfeurope '$$root '--param filebase '$$filebase fsfe.xsl $$path > $$base.html-temp && (cat $$base.html-temp | perl -p -e '$$| = 1; s/\$$//g if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.html) ; \
+	$(XSLTPROC) $(XSLTOPTS) --param fsfeurope $$root --param filebase $$filebase fsfe.xsl $$path > $$base.html-temp && (cat $$base.html-temp | perl -p -e '$$| = 1; s/\$$//g if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.html) ; \
 	rm -f $$base.html-temp
 
 $(FRPAGES): %.html: %.xhtml fsfe.xsl navigation.fr.xsl
@@ -46,7 +57,7 @@ $(FRPAGES): %.html: %.xhtml fsfe.xsl navigation.fr.xsl
 	filebase=`basename $$base` ; \
 	dir=`dirname $$path` ; \
 	root=`dirname $$path | perl -pe 'chop; s:([^/]+):..:g if($$_ ne ".")'` ; \
-	$(XSLTPROC) $(XSLTOPTS) '--param fsfeurope '$$root '--param filebase '$$filebase fsfe.xsl $$path > $$base.html-temp && (cat $$base.html-temp | perl -p -e '$$| = 1; s/\$$//g if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.html) ; \
+	$(XSLTPROC) $(XSLTOPTS) --param fsfeurope $$root --param filebase $$filebase fsfe.xsl $$path > $$base.html-temp && (cat $$base.html-temp | perl -p -e '$$| = 1; s/\$$//g if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.html) ; \
 	rm -f $$base.html-temp
 
 $(DEPAGES): %.html: %.xhtml fsfe.xsl navigation.de.xsl
@@ -56,11 +67,41 @@ $(DEPAGES): %.html: %.xhtml fsfe.xsl navigation.de.xsl
 	filebase=`basename $$base` ; \
 	dir=`dirname $$path` ; \
 	root=`dirname $$path | perl -pe 'chop; s:([^/]+):..:g if($$_ ne ".")'` ; \
-	$(XSLTPROC) $(XSLTOPTS) '--param fsfeurope='$$root '--param filebase='$$filebase fsfe.xsl $$path > $$base.html-temp && (cat $$base.html-temp | perl -p -e '$$| = 1; s/\$$//g if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.html) ; \
+	$(XSLTPROC) $(XSLTOPTS) --param fsfeurope $$root --param filebase $$filebase fsfe.xsl $$path > $$base.html-temp && (cat $$base.html-temp | perl -p -e '$$| = 1; s/\$$//g if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.html) ; \
+	rm -f $$base.html-temp
+
+$(PTPAGES): %.html: %.xhtml fsfe.xsl navigation.pt.xsl
+	@echo "Building $@ ..."; \
+	path=$< ; \
+	base=`expr $$path : '\(.*\).xhtml'` ; \
+	filebase=`basename $$base` ; \
+	dir=`dirname $$path` ; \
+	root=`dirname $$path | perl -pe 'chop; s:([^/]+):..:g if($$_ ne ".")'` ; \
+	$(XSLTPROC) $(XSLTOPTS) --param fsfeurope $$root --param filebase $$filebase fsfe.xsl $$path > $$base.html-temp && (cat $$base.html-temp | perl -p -e '$$| = 1; s/\$$//g if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.html) ; \
+	rm -f $$base.html-temp
+
+$(ITPAGES): %.html: %.xhtml fsfe.xsl navigation.it.xsl
+	@echo "Building $@ ..."; \
+	path=$< ; \
+	base=`expr $$path : '\(.*\).xhtml'` ; \
+	filebase=`basename $$base` ; \
+	dir=`dirname $$path` ; \
+	root=`dirname $$path | perl -pe 'chop; s:([^/]+):..:g if($$_ ne ".")'` ; \
+	$(XSLTPROC) $(XSLTOPTS) --param fsfeurope $$root --param filebase $$filebase fsfe.xsl $$path > $$base.html-temp && (cat $$base.html-temp | perl -p -e '$$| = 1; s/\$$//g if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.html) ; \
+	rm -f $$base.html-temp
+
+$(ESPAGES): %.html: %.xhtml fsfe.xsl navigation.es.xsl
+	@echo "Building $@ ..."; \
+	path=$< ; \
+	base=`expr $$path : '\(.*\).xhtml'` ; \
+	filebase=`basename $$base` ; \
+	dir=`dirname $$path` ; \
+	root=`dirname $$path | perl -pe 'chop; s:([^/]+):..:g if($$_ ne ".")'` ; \
+	$(XSLTPROC) $(XSLTOPTS) --param fsfeurope $$root --param filebase $$filebase fsfe.xsl $$path > $$base.html-temp && (cat $$base.html-temp | perl -p -e '$$| = 1; s/\$$//g if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.html) ; \
 	rm -f $$base.html-temp
 
 # remove html files for which an xhtml version exists (exclude fr/)
 clean:
-	rm -f $(ENPAGES) $(FRPAGES) $(DEPAGES)
+	rm -f $(ENPAGES) $(FRPAGES) $(DEPAGES) $(PTPAGES) $(ITPAGES) $(ESPAGES)
 
 

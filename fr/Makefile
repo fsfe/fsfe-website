@@ -66,7 +66,8 @@ news/news.en.html: news/fsfe-fr-channel.en.xml
 libre.fr.html: libre-bytes.xhtml
 libre.en.html: libre-bytes.xhtml
 
-server/server.en.html: server/server.en.xhtml server/sysadmin-france.en.texi
+server/wrap-sysadmin-france.en.html: server/wrap-sysadmin-france.en.xhtml server/sysadmin-france.en.texi
+server/wrap-publish.en.html: server/wrap-publish.en.xhtml server/publish.en.texi
 
 about/about.en.html about/about.fr.html about/organisation.fr.html about/reports.en.html about/signatures.html about/speakers.en.html about/speakers.fr.html about/statute.fr.html: about/menu.en.xhtml about/menu.fr.xhtml
 

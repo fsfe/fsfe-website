@@ -5,63 +5,45 @@
 
   <xsl:template match="/html[@lang='en']/body/div">
     <!-- FSF related sites -->
-    <table cellspacing="0" cellpadding="0" width="100%" border="0"><tr bgcolor="#e7e7e7"><td><img src="{$fsfeurope}/images/pix.png" width="1" height="1" alt="" /></td></tr></table> 
     <table cellspacing="0" cellpadding="1" width="100%" border="0"> 
       <tr valign="middle"> 
 	  <td class="newstext">
 	    &nbsp;&nbsp;
-            <a class="topbanner" href="{$fsfeurope}/">FSF Europe</a>
+            <a href="{$fsfeurope}/">FSF Europe</a>
           </td>
           <td class="newstext" align="right">
-	    <a class="topbanner" href="{$fsf}/">FSF</a>
+	    <a href="{$fsf}/">FSF</a>
             &nbsp;&nbsp;|&nbsp;&nbsp;
-	    <a class="topbanner" href="{$gnu}/">GNU</a>
+	    <a href="{$gnu}/">GNU</a>
             &nbsp;&nbsp;|&nbsp;&nbsp;
-	    <a class="topbanner" href="http://es.gnu.org/">GNU Spain</a><br/>
+	    <a href="http://es.gnu.org/">GNU Spain</a><br/>
 	  </td>
        </tr>
-    </table>
-    <table cellspacing="0" cellpadding="0" width="100%" border="0">
-	<tr valign="middle" bgcolor="#6f6f6f">
-	  <td><img src="{$fsfeurope}/images/pix.png" width="1" height="1" alt="" /></td>
-	</tr>
     </table>
 
     <!-- Top menu line -->
     <table width="100%" border="0" cellspacing="0" cellpadding="4">
       <tr>
 	<td class="TopTitle">
-	  &nbsp;<a href="http://france.fsfeurope.org/index.en.html" class="T1">France</a> |
-	  &nbsp;<a href="http://germany.fsfeurope.org/index.en.html">index.en.html" class="T1">Germany</a>
+	  &nbsp;<a href="{$fsffrance}/index.en.html">France</a> |
+	    Germany
 	</td>
       </tr>
     </table>
 
     <!-- Title bar -->
-    <table width="100%" border="0" cellspacing="0" cellpadding="4">
+    <table width="100%" border="0" cellspacing="0" cellpadding="8">
 	<tr>
 	  <td class="TopBody">
-          <!--
 	    <a href="{$fsfeurope}/">
-	      <img src="{$fsfeurope}/images/gnulogo.jpg" alt="GNU Logo" border="0" />
+	      <img src="{$fsfeurope}/images/fsfe-logo.png" alt="FSFE Logo"
+    border="0" width="259" height="76" align="left"/>
 	    </a>
-	  -->&nbsp;
-	  </td>
-	  <td class="TopBody" width="99%" height="99%">
-	    <a class="TopTitleB">FSF Europe</a>
-	    <br/>
-	    <!--
-	    <a class="TopTitle">Free Software - equal chances for people and economy</a>
-	    -->
-	  </td>
-	  <td align="right" valign="top" class="TopBody">
-	    <a href="{$fsfeurope}/documents/freesoftware.html" class="T2">What's&nbsp;Free&nbsp;Software?</a><br/>
-	    <a href="{$fsfeurope}/documents/gnuproject.html" class="T2">What's&nbsp;the&nbsp;GNU&nbsp;Project?</a><br/>
 	  </td>
 	</tr>
     </table>
 
-    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <table width="100%" border="0" cellspacing="0">
       <tr>
 	<td width="99%" valign="top">
         <div class="content">
@@ -74,83 +56,102 @@
           <table summary="" width="150" border="0" cellspacing="0"
           cellpadding="4">
 
-<!--   		<tr><td class="TopTitle" align="center">Projects</td></tr>
+   		<tr><td class="TopTitle" align="center">Projects</td></tr>
 		<tr>
 		  <td class="TopBody" align="right">
-		    <a href="{$fsfeurope}/law/law.en.html" class="T2">Secure Free Software</a><br />
-		    <a href="{$fsfeurope}/coposys/index.en.html" class="T2">Coposys</a><br />
+		    <a href="{$fsfeurope}/law/law.en.html">Secure Free Software</a><br />
+		    <a href="{$fsfeurope}/coposys/index.en.html">Coposys</a><br />
+		    <a href="{$fsfeurope}/documents/whyfs.en.html">We speak about Free Software</a><br />
 		  </td>
-		</tr>-->
+		</tr>
 
             <tr>
               <td class="TopTitle" align="center">Sections</td>
             </tr>
             <tr>
-              <td align="right" class="Section"><br/>
+              <td align="right" class="TopBody"><br/>
               <xsl:choose>
                 <xsl:when test="$path='index.xhtml'">Home</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfgermany}/index.html" class="T2">Home</a>
+                  <a href="{$fsfeurope}/index.html">Home</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
                 <xsl:when test="$path='contact/contact.xhtml'">Contact</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfgermany}/contact/contact.html" class="T2">Contact</a>
+                  <a href="{$fsfeurope}/contact/contact.html">Contact</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
                 <xsl:when test="$path='about/index.xhtml'">About</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfgermany}/about/index.html" class="T2">About</a>
+                  <a href="{$fsfeurope}/about/index.html">About</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
                 <xsl:when test="$path='help/help.xhtml'">Help</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfgermany}/help/help.html" class="T2">Help</a>
+                  <a href="{$fsfeurope}/help/help.html">Help</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
                 <xsl:when test="$path='background.xhtml'">Background</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfgermany}/background.html" class="T2">Background</a>
+                  <a href="{$fsfeurope}/background.html">Background</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
                 <xsl:when test="$path='documents/documents.xhtml'">Documents</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfgermany}/documents/documents.html" class="T2">Documents</a>
+                  <a href="{$fsfeurope}/documents/documents.html">Documents</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
                 <xsl:when test="$path='mailman/index.xhtml'">Mailing Lists</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfgermany}/mailman/index.html" class="T2">Mailing Lists</a>
+                  <a href="{$fsfeurope}/mailman/index.html">Mailing Lists</a>
+                </xsl:otherwise>
+              </xsl:choose><br/>
+              <xsl:choose>
+                <xsl:when test="$path='education/education.xhtml'">Education</xsl:when>
+                <xsl:otherwise>
+                  <a href="{$fsfeurope}/education/education.html">Education</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
                 <xsl:when test="$path='news/news.xhtml'">News</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfgermany}/news/news.html" class="T2">News</a>
+                  <a href="{$fsfeurope}/news/news.html">News</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
                 <xsl:when test="$path='events/events.en.xhtml'">Events</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfgermany}/events/events.en.html" class="T2">Events</a>
+                  <a href="{$fsfeurope}/events/events.en.html">Events</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
                 <xsl:when test="$path='press/index.xhtml'">Press Section</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfgermany}/press/index.html" class="T2">Press Section</a>
+                  <a href="{$fsfeurope}/press/index.html">Press Section</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
-                <xsl:when test="$path='speakers/index.xhtml'">Speakers</xsl:when>
+                <xsl:when test="$path='speakers/speakers.xhtml'">Speakers</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfgermany}/speakers/index.html" class="T2">Speakers</a>
+                  <a href="{$fsfeurope}/speakers/speakers.html">Speakers</a>
+                </xsl:otherwise>
+              </xsl:choose><br/>
+              <xsl:choose>
+                <xsl:when test="$path='gbn/index.xhtml'">GNU Business Network</xsl:when>
+                <xsl:otherwise>
+                  <a href="{$fsfeurope}/gbn/index.html">GNU Business Network</a>
+                </xsl:otherwise>
+              </xsl:choose><br/>
+              <xsl:choose>
+                <xsl:when test="$path='order/announce.de.xhtml'">fan articles</xsl:when>
+                <xsl:otherwise>
+                  <a href="{$fsfeurope}/order/announce.de.html">fan articles</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <br/></td>
@@ -159,10 +160,10 @@
         	<tr><td class="TopTitle" align="center">Associate organizations</td></tr>
 		<tr>
 		  <td class="TopBody" align="right">
-		    <a href="http://www.april.org/" class="T2">APRIL</a><br />
-		    <a href="http://www.softwarelibero.it" class="T2">AsSoLi</a><br />
-		    <a href="http://www.fsf.or.at" class="T2">FFS</a><br />
-		    <a href="http://www.ofset.org/" class="T2">OFSET</a><br />
+		    <a href="http://www.april.org/">APRIL</a><br />
+		    <a href="http://www.softwarelibero.it">AsSoLi</a><br />
+		    <a href="http://www.fsf.or.at">FFS</a><br />
+		    <a href="http://www.ofset.org/">OFSET</a><br />
 	          </td>
 		</tr>
 
@@ -172,11 +173,11 @@
             <tr>
               <td align="right"><br/>
               <a href="http://savannah.gnu.org/projects/fsfe/"
-                   class="T2">Project Summary</a><br/>
+                   >Project Summary</a><br/>
               <a href="http://www.gnu.org/server/standards/"
-                   class="T2">GNU Guide</a><br/>
+                   >GNU Guide</a><br/>
               <a href="http://savannah.gnu.org/pm/?group_id=53"
-                   class="T2">Tasks</a><br/>
+                   >Tasks</a><br/>
               <br/></td>
             </tr>
           </table>
@@ -188,29 +189,34 @@
     <table width="100%" border="0" cellspacing="0" cellpadding="2">
       <tr>
 	<td class="TopTitle">
-          <a href="{$filebase}.xhtml" class="T1">XHTML Source</a>&nbsp;&nbsp;|
-          &nbsp;&nbsp;<a href="{$fsfgermany}/fsfe-de.xsl" class="T1">XSL Style
+          <a href="{$filebase}.xhtml">XHTML Source</a>&nbsp;&nbsp;|
+          &nbsp;&nbsp;<a href="{$fsfeurope}/fsfe.xsl">XSL Style
 	  Sheet</a>&nbsp;&nbsp;| <a
       href="http://savannah.gnu.org/cgi-bin/viewcvs/fsfe/{$path}?cvsroot=www.gnu.org"
-      class="T1">Changes</a><br/>
+     >Changes</a><br/>
 	</td>
 	<td class="TopTitle" align="right">
 	  &nbsp;<a href="mailto:webmaster@fsfeurope.org"
-                   class="T1">webmaster@fsfeurope.org</a>
+                  >webmaster@fsfeurope.org</a>
         </td>
       </tr>
       <tr>
-	<td class="Body" align="center">
+	<td class="newstext" align="center">
 	<font size="-2">
 	  Copyright (C) 2001 FSF Europe<br/>
 	  Verbatim copying and distribution of this entire article is
 	    permitted in any medium, provided this notice is preserved.
 	</font>
 	</td>
-        <td class="Body">&nbsp;</td>
+        <td class="newstext">&nbsp;</td>
       </tr>
     </table>
   </xsl:template> 
 
 </xsl:stylesheet>
 
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

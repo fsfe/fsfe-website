@@ -142,7 +142,7 @@
                        </xsl:otherwise>
                     </xsl:choose><br />
                     <xsl:choose>
-                       <xsl:when test="$path='about/speakers.fr.xhtml'">Intervenant</xsl:when>
+                       <xsl:when test="$path='about/speakers.fr.xhtml'">Intervenants</xsl:when>
                        <xsl:otherwise>
                           <a href="{$fsffrance}/about/speakers.fr.html" class="T2">Intervenant</a>
                        </xsl:otherwise>

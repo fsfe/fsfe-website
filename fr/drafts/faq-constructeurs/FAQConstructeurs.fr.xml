@@ -42,7 +42,10 @@ Old version of the XML DTD, before it became endorsed by OASIS
 
 <!-- Factorization for easy replacement -->
 <!ENTITY server     "http://www.aful.org">
+<!--
 <!ENTITY server.faqs      "&server;/faqs/faq-constructeurs/">
+-->
+<!ENTITY server.faqs      "&server;/faqs/">
 <!ENTITY server.solutions "&server;/solutions/">
 
 <!ENTITY url.ssii

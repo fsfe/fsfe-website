@@ -52,10 +52,8 @@
      <br/>
     </td>
     <td align="right" valign="top" class="TopBody">
-     <a href="{$fsfeurope}/documents/freesoftware.html" class="T2">
-      Cosa&nbsp;e'&nbsp;il&nbsp;software&nbsp;libero?</a><br/>
-     <a href="{$fsfeurope}/documents/gnuproject.html"
-class="T2">Cosa&nbsp;e'&nbsp;il&nbsp;Progetto&nbsp;GNU?</a><br/>
+     <a href="{$fsfeurope}/documents/freesoftware.html" class="T2">Cosa&nbsp;e'&nbsp;il&nbsp;software&nbsp;libero?</a><br/>
+     <a href="{$fsfeurope}/documents/gnuproject.html" class="T2">Cosa&nbsp;e'&nbsp;il&nbsp;Progetto&nbsp;GNU?</a><br/>
     </td>
    </tr>
   </table>

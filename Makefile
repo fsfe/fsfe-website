@@ -93,7 +93,7 @@ $(PTPAGES): %.html: %.xhtml fsfe.xsl navigation.pt.xsl
 	$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase '$$path='$$path > $$base.html-temp && (cat $$base.html-temp | perl -p -e '$$| = 1; (s/Date://, s/Author:/por/, s/\$$//g) if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.html) ; \
 	rm -f $$base.html-temp
 
-$(ITPAGES): %.html: %.xhtml fsfe.xsl # navigation.it.xsl
+$(ITPAGES): %.html: %.xhtml fsfe.xsl navigation.it.xsl
 	@$(ECHO) "Building $@ ..."; \
 	path=$< ; \
 	base=`expr $$path : '\(.*\).xhtml'` ; \
@@ -103,7 +103,7 @@ $(ITPAGES): %.html: %.xhtml fsfe.xsl # navigation.it.xsl
 	$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase '$$path='$$path > $$base.html-temp && (cat $$base.html-temp | perl -p -e '$$| = 1; (s/Date://, s/Author:/, per/, s/\$$//g) if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.html) ; \
 	rm -f $$base.html-temp
 
-$(ESPAGES): %.html: %.xhtml fsfe.xsl # navigation.es.xsl
+$(ESPAGES): %.html: %.xhtml fsfe.xsl navigation.es.xsl
 	@$(ECHO) "Building $@ ..."; \
 	path=$< ; \
 	base=`expr $$path : '\(.*\).xhtml'` ; \

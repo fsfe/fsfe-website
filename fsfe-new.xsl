@@ -118,7 +118,7 @@
               </xsl:for-each>
             </xsl:for-each>
             <br />
-            <a href="http://www.fsfe.org"><img alt="[Fellow]" src="/graphics/global/fellow.png" border="0" align="bottom" /></a>
+            <a href="http://www.fsfe.org"><img alt="[Fellow]" src="/graphics/global/fellow.png" border="0" valign="bottom" align="right" /></a>
           </td>
         </tr>
         <tr>

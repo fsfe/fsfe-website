@@ -5,7 +5,7 @@
 @setchapternewpage odd
 @c %**end of header
 
-@set RCSID $Id: sysadmin-france.en.texi,v 1.52 2001-10-12 13:13:22 cyb Exp $
+@set RCSID $Id: sysadmin-france.en.texi,v 1.53 2001-10-17 15:27:16 loic Exp $
 @set VERSION 1.0
 
 @c Combine the variable and function indices:
@@ -50,6 +50,7 @@ and FSF machines in France.
 * Introduction::                
 * XML and interoperability::    
 * Accounts::                    
+* DocBook Quick Start::         
 * Web::                         
 * Private Data::                
 * System::                      
@@ -68,6 +69,11 @@ Accounts
 * Account Delete::              
 * Account www::                 
 * Cron Job::                    
+
+DocBook Quick Start
+
+* DocBook packages::            
+* DocBook formating::           
 
 Web
 
@@ -227,7 +233,7 @@ allows to do this in a fairly simple way.
 
 @end itemize
 
-@node Accounts, Web, XML and interoperability, Top
+@node Accounts, DocBook Quick Start, XML and interoperability, Top
 @chapter Accounts
 
 @menu
@@ -336,7 +342,185 @@ The @file{savannahusers} script sources can be found in the
 It was checked out in @file{france.fsfeurope.org:/usr/local/src/www}
 directory, together with other GNU specific maintainance scripts.
 
-@node Web, Private Data, Accounts, Top
+@node DocBook Quick Start, Web, Accounts, Top
+@chapter DocBook Quick Start
+
+@cindex DocBook usage
+@cindex XSLT and DocBook
+@cindex DSSSL not used for DocBook
+@cindex DocBook using unstable or testing
+
+When using a debian unstable distribution it is fairly easy to write and
+format @uref{http://www.docbook.org/,,DocBook} documentation without
+installing anything by hand. However, one has to know the shortest path
+otherwise it quickly turns into a nightmare. An
+@uref{http://www.w3c.org/TR/xslt,,XSLT} based (as opposed to DSSSL) set
+of packages and commands is proposed here, assuming you are running
+unstable. It will also works at the date of this writing (October 2001)
+if you're running testing but are willing to install the packages
+recommended here from unstable.
+
+@menu
+* DocBook packages::            
+* DocBook formating::           
+@end menu
+
+@node DocBook packages, DocBook formating, DocBook Quick Start, DocBook Quick Start
+@section DocBook packages
+
+@cindex xsltproc
+@cindex passivetex
+@cindex xmltex
+@cindex DocBook packages
+
+On GNU/Linux Debian unstable install the following packages:
+
+@example
+apt-get install xsltproc
+apt-get install docbook-xsl
+apt-get install xmltex
+@end example
+
+Install passivetex as found at @url{http://users.ox.ac.uk/~rahtz/passivetex/}.
+
+@example
+cd /usr/share/texmf/tex/latex/
+mkdir passivetex
+cd passivetex
+unzip /tmp/passivetex.zip
+cd /usr/share/texmf/tex/xmltex/base
+pdftex -ini "&pdflatex" pdfxmltex.ini
+fmtutil --missing
+texlinks
+texhash
+@end example
+
+Finally, the global memory size parameters of TeX must be increased.
+If formating fails, check for @code{exceeded} errors and increase
+the corresponding parameter. Some sample values are available at 
+@url{http://users.ox.ac.uk/~rahtz/passivetex/}.
+
+@example
+*** /etc/texmf/texmf.cnf.~1~	Sun Sep 16 23:06:18 2001
+--- /etc/texmf/texmf.cnf	Wed Oct 17 15:37:48 2001
+***************
+*** 398,409 ****
+  % Extra space for the hash table of control sequences (which allows 10K
+  % names as distributed).
+  hash_extra.context = 25000
+! hash_extra = 0
+  
+  % Max number of characters in all strings, including all error messages,
+  % help texts, font names, control sequences.  These values apply to TeX and MP.
+  pool_size.context = 750000
+! pool_size = 125000		
+  % Minimum pool space after TeX/MP's own strings; must be at least
+  % 25000 less than pool_size, but doesn't need to be nearly that large.
+  string_vacancies.context = 45000
+--- 398,409 ----
+  % Extra space for the hash table of control sequences (which allows 10K
+  % names as distributed).
+  hash_extra.context = 25000
+! hash_extra = 50000
+  
+  % Max number of characters in all strings, including all error messages,
+  % help texts, font names, control sequences.  These values apply to TeX and MP.
+  pool_size.context = 750000
+! pool_size = 1250000
+  % Minimum pool space after TeX/MP's own strings; must be at least
+  % 25000 less than pool_size, but doesn't need to be nearly that large.
+  string_vacancies.context = 45000
+***************
+*** 442,448 ****
+  param_size.context = 1500
+  param_size = 500	% simultaneous macro parameters
+  save_size.context = 5000
+! save_size = 4000	% for saving values outside current group
+  stack_size.context = 1500
+  stack_size = 300	% simultaneous input sources
+  
+--- 442,448 ----
+  param_size.context = 1500
+  param_size = 500	% simultaneous macro parameters
+  save_size.context = 5000
+! save_size = 10000	% for saving values outside current group
+  stack_size.context = 1500
+  stack_size = 300	% simultaneous input sources
+  
+@end example
+
+Note that there is a small licensing issue with passivetex. The two
+important files are fotex.sty and fotex.xmt. While fotex.xmt contains
+a copyright notice that makes it Free Software, fotex.sty has no copyright
+notice and is therefore not Free Software. We sent a mail to the author
+asking for the status of the whole passivetex distribution and he answered
+the following:
+
+@example
+From: "Sebastian Rahtz" <sebastian.rahtz@@computing-services.oxford.ac.uk>
+To: loic@@gnu.org
+Subject: Re: passivetex
+Date: Mon, 3 Sep 2001 00:50:14 +0100
+
+Loic Dachary writes:
+ > 
+ > 	We would like to use PassiveTeX but the license status is not
+ > clear. Is it Free Software ? If so what is the license ? 
+ > 
+
+% Copyright 2000 Sebastian Rahtz/Oxford University  
+%      <sebastian.rahtz@@oucs.ox.ac.uk>
+%
+% Permission is hereby granted, free of charge, to any person obtaining
+% a copy of this software and any associated documentation files (the
+% ``Software''), to deal in the Software without restriction, including
+% without limitation the rights to use, copy, modify, merge, publish,
+% distribute, sublicense, and/or sell copies of the Software, and to
+% permit persons to whom the Software is furnished to do so, subject to
+% the following conditions:
+% 
+% The above copyright notice and this permission notice shall be included
+% in all copies or substantial portions of the Software.
+
+sebastian
+@end example
+
+In reply we asked him to clarify this in all the files of the distribution
+and we can hope it will be done at some point.
+
+@node DocBook formating,  , DocBook packages, DocBook Quick Start
+@section DocBook formating
+
+Formating DocBook in html or pdf can be done from the following
+Makefile sample.
+
+@example
+all: sample.html sample.pdf
+
+clean:
+        rm -f sample.aux sample.fo sample.log sample.out \
+              sample.html sample.pdf
+
+sample.html: sample.xml custom_html.xsl
+        export SGML_CATALOG_FILES=/usr/lib/sgml/catalog ; \
+        xsltproc \
+        --catalogs \
+        -o sample.html \
+        custom_html.xsl sample.xml
+
+sample.pdf: sample.xml custom_fo.xsl
+        export SGML_CATALOG_FILES=/usr/lib/sgml/catalog ; \
+        xsltproc \
+        --catalogs \
+        -o sample.fo \
+        custom_fo.xsl sample.xml
+        pdflatex "&pdfxmltex" sample.fo
+@end example
+
+A simple standaline example can be downloaded for test purposes at
+@url{http://france.fsfeurope.org/server/docbook-sample.tar.gz}.
+
+@node Web, Private Data, DocBook Quick Start, Top
 @chapter Web
 
 @menu

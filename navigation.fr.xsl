@@ -73,6 +73,20 @@
 	<td valign="top" class="TopBody">
           <table summary="" width="150" border="0" cellspacing="0"
           cellpadding="4">
+
+   	    <tr>
+              <td class="TopTitle" align="center">Projets</td></tr>
+		<tr>
+		  <td class="Section" align="right">
+                    <xsl:choose>
+                      <xsl:when test="$path='law/law.fr.xhtml'">Protéger le Logiciel Libre</xsl:when>
+                      <xsl:otherwise>
+		        <a href="{$fsfeurope}/law/law.fr.html" class="T2">Protéger le Logiciel Libre</a>
+                      </xsl:otherwise>
+                    </xsl:choose><br />
+		  </td>
+		</tr>
+
             <tr>
               <td class="TopTitle" align="center">Sections</td>
             </tr>
@@ -161,7 +175,7 @@
                    class="T1">webmaster@fsfeurope.org</a>
         </td>
       </tr>
-      <tr>
+       <tr>
 	<td class="Body" align="center">
 	<font size="-2">
 	  Copyright (C) 2001 FSF Europe<br/>
@@ -177,3 +191,8 @@
 
 </xsl:stylesheet>
 
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

@@ -52,11 +52,11 @@ our %languages = (
   de => 'Deutsch',
   el => '&#917;&#955;&#955;&#951;&#957;&#953;&#954;&#940;',
   en => 'English',
-  es => 'Espa&ntilde;ol',
-  fr => 'Fran&ccedil;ais',
+  es => 'Español',       
+  fr => 'Français',
   it => 'Italiano',
   nl => 'Nederlands',
-  pt => 'Portugu&ecirc;s',
+  pt => 'Português',
   sv => 'Svenska',
 );
 

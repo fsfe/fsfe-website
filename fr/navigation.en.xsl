@@ -10,7 +10,7 @@
       <tr valign="middle"> 
 	<td class="newstext">
 	  &nbsp;&nbsp;
-	  <a class="topbanner" href="{$fsfeurope}/index.en.html">FSF Europe</a>
+	  <a class="topbanner" href="{$fsfeurope}/">FSF Europe</a>
 	</td>
 	<td class="newstext" align="right">
 	  <a class="topbanner" href="{$fsf}/">FSF</a>

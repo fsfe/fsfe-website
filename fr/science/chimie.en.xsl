@@ -41,6 +41,7 @@
 <TH>Name</TH>
 <TH>Description</TH>
 <TH>URL</TH>
+<TH>License</TH>
 </TR>
 
       <xsl:apply-templates select="software"/>      
@@ -51,7 +52,7 @@
 
     Updated:
     <!-- timestamp start -->
-    $Date: 2002-03-02 16:56:38 $ $Author: olberger $
+    $Date: 2002-04-22 10:19:07 $ $Author: loic $
     <!-- timestamp end -->
 
   </body>
@@ -63,6 +64,7 @@
 <TD><b><xsl:value-of select="name" /></b><br />(<xsl:value-of select="date" />)</TD>
 <TD><xsl:value-of select="description[@lang='en']" /></TD>
 <TD><a href="{url}"><xsl:value-of select="url" /></a></TD>
+<TD>Version <xsl:value-of select="os[@name='GNU/Linux']/version" />: <xsl:value-of select="os[@name='GNU/Linux']/license" /></TD>
 </TR>
   </xsl:template>
 

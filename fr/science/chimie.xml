@@ -61,7 +61,7 @@
 
   <software>
     <name>ChemCalc</name>
-    <date>28 jul 2001</date>
+    <date>22 apr 2002</date>
     <description lang="en">a calculator that is more oriented towards chemistry.</description>
     <description lang="fr">Un calculateur orienté chimie.</description>
     <authors>Sean Grimes</authors>
@@ -78,7 +78,7 @@
   </software>
   <software>
     <name>Chemeq</name>
-    <date>28 jul 2001</date>
+    <date>22 apr 2002</date>
     <description lang="en">Translate chemical equations to LaTeX code.</description>
     <description lang="fr">Transcrit des équations chimiques en code LaTeX.</description>
 
@@ -115,7 +115,7 @@
 -->
   <software>
     <name>Chemtool</name>
-    <date>28 nov 2001</date>
+    <date>22 apr 2002</date>
     <description lang="en">Chemtool is a small program for drawing chemical structures on GNU/Linux and Unix systems using the GTK toolkit under X11.</description>
     <description lang="fr">Chemtool est un petit programme de dessin de structures chimiques en 2D.</description>
     <authors>Martin Kroeker</authors>
@@ -123,7 +123,7 @@
     <url>http://ruby.chemie.uni-freiburg.de/~martin/chemtool/chemtool.html</url>
     <os name="GNU/Linux">
       <maintainer>Martin Kroeker</maintainer>
-      <version>1.5.a12</version>
+      <version>1.5</version>
       <license>GPL</license>
       <url>http://ruby.chemie.uni-freiburg.de/~martin/chemtool/chemtool-1.5.tar.gz</url>
       <comment>Missing copy of the GNU GPL, no copyright or license notice, indication of GNU GPL licensing in the README file</comment>
@@ -132,14 +132,14 @@
   </software>
   <software>
     <name>CHIMP</name>
-    <date>28 jul 2001</date>
+    <date>22 apr 2002</date>
     <description lang="en">CHIMP is a generic tool for the modeling of chemical phenomena. Eventually, chemical reaction modeling, molecular mechanics, and quantum mechanic modules will be implemented, along with an easy to use graphical user interface (GUI). At present, CHIMP has the ability to perform dynamic Monte Carlo simulations on chemical reactions, in particular heterogeneous catalytic reactions.</description>
     <description lang="fr">CHIMP est un outil générique pour la modélisation de phénomènes chimiques. is a generic tool for the modeling of chemical phenomena. A terme, des modules de modélisation de réactions chimiques, de mécanique moléculaire et de mécanique quantique seront implantés. Actuellement, CHIMP effectue des simulations dynamiques 'Monte Carlo' dans des réactions chimiques, et en particulier, en catalyse hétérogène.</description>
     <authors>David J. Dooling</authors>
     <url>http://chimp.sourceforge.net</url>
     <os name="GNU/Linux">
       <maintainer>David J. Dooling</maintainer>
-      <version>?</version>
+      <version>NA</version>
       <license>Claim that it will be released under the GNU GPL</license>
       <url>http://sourceforge.net/projects/chimp/</url>
       <date>22 apr 2002</date>
@@ -166,7 +166,7 @@
 -->
   <software>
     <name>DND</name>
-    <date>28 nov 2001</date>
+    <date>22 apr 2002</date>
     <description lang="en">DND stands for Dream aNd Dreamer. The DND project intends to build a complete, user-friendly GUI of the Molecular Dynamics Simulation of the Molecule on free software.</description>
     <description lang="fr">DND est l'abréviation pour Dream aNd Dreamer. Le projet DND a pour but de construire une interface graphique pour la simulation de dynamique moléculaire basée sur l'utilisation de logiciel libre.</description>
     <authors>SooHaeng Yoo</authors>
@@ -200,7 +200,7 @@
 -->
   <software>
     <name>GDPC</name>
-    <date>28 jul 2001</date>
+    <date>22 apr 2002</date>
     <description lang="en">GDPC is a program for visualising molecular dynamic simulations, it is a very versatile program and could easily be used for other purposes. gdpc reads xyz input and custom formats and can write out pictures of the frames.</description>
     <description lang="fr">GDPC est un programme pour la visualisation de simulations de dynamique moléculaire.Il s'agit d'un logiciel très versatile et peut facilement être utilisé à d'autres finalités.GDPC lit des entrées en xyz et d'autres formats. Il permet aussi d'avoir des images en sortie.</description>
     <authors>Jonas Frantz</authors>
@@ -217,7 +217,7 @@
   </software>
   <software>
     <name>GDIS</name>
-    <date>28 jul 2001</date>
+    <date>22 apr 2002</date>
     <description lang="en">GDIS is a GTK based program for the display and manipulation of isolated molecules and periodic systems. It is in development, but is nonetheless fairly functional.</description>
     <description lang="fr">GDIS est un logiciel basé sur GTK, qui permet l'affichage et la manipulation de molcules isolées, ou de systèmes périodiques. Malgré que ce logiciel soit encore en développement, il est déjà fonctionnel.</description>
     <authors>Sean Fleming</authors>
@@ -240,7 +240,7 @@
   </software>
   <software>
     <name>Ghemical</name>
-    <date>4 dec 2001</date>
+    <date>22 apr 2002</date>
     <description lang="en">A molecular modelling software package with nice 3D-visualization tools.</description>
     <description lang="fr">A molecular modelling software package with nice 3D-visualization tools.</description>
     <authors>Mike Cruz, Tommi Hassinen, Ville Heikkila, Geoff Hutchison, Jarno Huuskonen</authors>

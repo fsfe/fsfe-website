@@ -63,10 +63,10 @@
    		<tr><td class="TopTitle" align="center">Projekty</td></tr>
 		<tr>
 		  <td class="TopBody" align="right">
-		    <a href="{$fsfeurope}/law/law.en.html">Ochrana Svobodného software</a><br />
+		    <a href="{$fsfeurope}/law/law.cs.html">Ochrana Svobodného software</a><br />
 		    <a href="{$fsfeurope}/coposys/index.en.html">Coposys</a><br />
-		    <a href="{$fsfeurope}/documents/whyfs.en.html">Mluvíme o svobodném software</a><br />
-              <a href="{$fsfeurope}/education/education.html">Svobodný software a vzdìlávání</a><br />
+		    <a href="{$fsfeurope}/documents/whyfs.cs.html">Mluvíme o svobodném software</a><br />
+              <a href="{$fsfeurope}/education/education.cs.html">Svobodný software a vzdìlávání</a><br />
 		  </td>
 		</tr>
 
@@ -76,41 +76,41 @@
             <tr>
               <td align="right" class="TopBody"><br/>
               <xsl:choose>
-                <xsl:when test="$path='index.xhtml'">Hlavní stránka</xsl:when>
+                <xsl:when test="$path='index.cs.xhtml'">Hlavní stránka</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/index.html">Hlavní stránka</a>
+                  <a href="{$fsfeurope}/index.cs.html">Hlavní stránka</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
-                <xsl:when test="$path='contact/contact.xhtml'">Kontakty</xsl:when>
+                <xsl:when test="$path='contact/contact.cs.xhtml'">Kontakty</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/contact/contact.html">Kontakty</a>
+                  <a href="{$fsfeurope}/contact/contact.cs.html">Kontakty</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
-                <xsl:when test="$path='about/index.xhtml'">O nás</xsl:when>
+                <xsl:when test="$path='about/about.xhtml'">O nás</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/about/index.html">O nás</a>
+                  <a href="{$fsfeurope}/about/about.html">O nás</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
-                <xsl:when test="$path='help/help.xhtml'">Nápovìda</xsl:when>
+                <xsl:when test="$path='help/help.cs.xhtml'">Pomoc</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/help/help.html">Nápovìda</a>
-                </xsl:otherwise>
-              </xsl:choose><br/>
-
-              <xsl:choose>
-                <xsl:when test="$path='help/donate-2002.xhtml'">Pøispìjte</xsl:when>
-                <xsl:otherwise>
-                  <a href="{$fsfeurope}/help/donate-2002.html">Pøispìjte</a>
+                  <a href="{$fsfeurope}/help/help.cs.html">Pomoc</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
 
               <xsl:choose>
-                <xsl:when test="$path='help/thankgnus-2002.xhtml'">Podìkování</xsl:when>
+                <xsl:when test="$path='help/donate-2002.cs.xhtml'">Pøispìjte</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/help/thankgnus-2002.html">Podìkování</a>
+                  <a href="{$fsfeurope}/help/donate-2002.cs.html">Pøispìjte</a>
+                </xsl:otherwise>
+              </xsl:choose><br/>
+
+              <xsl:choose>
+                <xsl:when test="$path='help/thankgnus-2002.cs.xhtml'">Podìkování</xsl:when>
+                <xsl:otherwise>
+                  <a href="{$fsfeurope}/help/thankgnus-2002.cs.html">Podìkování</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
 
@@ -121,15 +121,15 @@
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
-                <xsl:when test="$path='documents/documents.xhtml'">Dokumenty</xsl:when>
+                <xsl:when test="$path='documents/documents.cs.xhtml'">Dokumenty</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/documents/documents.html">Dokumenty</a>
+                  <a href="{$fsfeurope}/documents/documents.cs.html">Dokumenty</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
-                <xsl:when test="$path='mailman/index.xhtml'">Emailové konference</xsl:when>
+                <xsl:when test="$path='mailman/index.cs.xhtml'">Emailové konference</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/mailman/index.html">Emailové konference</a>
+                  <a href="{$fsfeurope}/mailman/index.cs.html">Emailové konference</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
@@ -145,21 +145,21 @@
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
-                <xsl:when test="$path='press/index.xhtml'">Pro tisk</xsl:when>
+                <xsl:when test="$path='press/index.cs.xhtml'">Pro tisk</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/press/index.html">Pro tisk</a>
+                  <a href="{$fsfeurope}/press/index.cs.html">Pro tisk</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
-                <xsl:when test="$path='speakers/speakers.xhtml'">Mluvèí</xsl:when>
+                <xsl:when test="$path='speakers/speakers.cs.xhtml'">Mluvèí</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/speakers/speakers.html">Mluvèí</a>
+                  <a href="{$fsfeurope}/speakers/speakers.cs.html">Mluvèí</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
-                <xsl:when test="$path='gbn/index.xhtml'">Obchodní sí» GNU</xsl:when>
+                <xsl:when test="$path='gbn/index.cs.xhtml'">Obchodní sí» GNU</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/gbn/index.html">Obchodní sí» GNU</a>
+                  <a href="{$fsfeurope}/gbn/index.cs.html">Obchodní sí» GNU</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>

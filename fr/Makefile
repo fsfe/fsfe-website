@@ -1,13 +1,50 @@
-HTML = \
-	index.fr.html \
-	contact.fr.html \
-	contact.en.html \
-	boilerplate.fr.html \
-	thanks.fr.html
+#
+# XML validator
+# -------------
+# apt-get install rxp
+# or
+# ftp://ftp.cogsci.ed.ac.uk/pub/richard/rxp-1.2.3.tar.gz
+#
+# XSLT processor
+# --------------
+#
+# sablotron (sabcmd)
+# apt-get install sablotron
+#
+# libxslt + libxml2 (xsltproc)
+# http://www.xmlsoft.org/
+#
+XSLTPROC = sabcmd
 
-FSFFRANCE = .
+FSFFRANCE = . # http://france.fsfeurope.org
+FSFEUROPE = http://www.fsfeurope.org 
+FSF       = http://www.fsf.org
+GNU       = http://www.gnu.org
 
-SUBDIRS = birth server about stats
+XSLTOPTS = \
+	'$$fsfeurope=$(FSFEUROPE)' \
+	'$$fsf=$(FSF)' \
+	'$$gnu=$(GNU)'
 
-include include.mk
+all:: process 
 
+clean:
+	find . -name '*.html' -print | xargs rm 
+
+process: 
+	@find * -name '*.xhtml' -print | while read file ; \
+	do \
+		base=`expr $$file : '\(.*\).xhtml'` ; \
+		dir=`dirname $$base` ; \
+		root=`dirname $$base | perl -pe 'chop; s:([^/]+):..:g if($$_ ne ".")'` ; \
+		$(XSLTPROC) fsfe-fr.xsl $$file $(XSLTOPTS) '$$fsffrance='$$root | \
+		perl -MFile::Copy -p -e '$$| = 1; copy("'$$dir'/$$1", \*STDOUT) if(/\#include virtual=\"(.*?)\"/);' > $$base.html ; \
+	done
+
+validate:
+	find . -name '*.xhtml' -print | while read file
+	do \
+		rxp -Vs $$file ; \
+	done
+
+.PHONY: process recurse

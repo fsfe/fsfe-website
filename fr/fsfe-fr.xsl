@@ -5,7 +5,7 @@
  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:output method="html" encoding="iso-8859-1" doctype-public="-//W3C//DTD HTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" />
 
-<!-- $Id: fsfe-fr.xsl,v 1.2 2001-04-20 23:28:01 villate Exp $ -->
+<!-- $Id: fsfe-fr.xsl,v 1.3 2001-04-21 17:36:52 villate Exp $ -->
 <xsl:template match="webpage">
 <html>
   <head>
@@ -26,7 +26,7 @@
 	    </a>
 	  </td>
 	  <td class="TopBody" width="99%" height="99%">
-	    <a class="TopTitleB">FSF France</a>
+	    <a class="TopTitleB">FSF Europe - Chapter France</a>
 	    <br />
 	    <a class="TopTitle">Le Logiciel Libre est la conscience du logiciel</a>
 	  </td>
@@ -77,7 +77,7 @@
     </table>
   Mis à jour:
 <!-- timestamp start -->
-$Date: 2001-04-20 23:28:01 $ $Author: villate $
+$Date: 2001-04-21 17:36:52 $ $Author: villate $
 <!-- timestamp end -->
   </body>
 </html>

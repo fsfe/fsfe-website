@@ -152,6 +152,12 @@ div.letter	{
 		margin-right: 20px;
 		margin-left: 40px;
 		}
+
+li.indent	{
+		margin-right: 20px;
+		margin-left: 40px;
+		}
+
 div.indent	{
 		margin-right: 20px;
 		margin-left: 40px;
@@ -164,3 +170,20 @@ code.indent	{
 		margin-right: 20px;
 		margin-left: 40px;
 		}
+
+p.footnote	{
+		margin-right: 20px;
+		margin-left: 40px;
+		text-align: left;
+		font-size: 13px;
+		font-weight: bold;
+		}
+code.footnote	{
+		margin-right: 20px;
+		margin-left: 40px;
+		text-align: left;
+		font-size: 13px;
+		font-weight: bold;
+		}
+
+

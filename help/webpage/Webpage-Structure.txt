@@ -1,4 +1,4 @@
-$Id: Webpage-Structure.txt,v 1.1 2002-07-22 13:32:31 greve Exp $
+$Id: Webpage-Structure.txt,v 1.2 2004-07-27 23:04:37 now3d Exp $
 
 FSF Europe Web page structure
 -----------------------------
@@ -6,13 +6,13 @@ FSF Europe Web page structure
 Introduction:
 *************
 
-This document describes the directory/organizational structure of the
-FSF Europe web page. Maintaining a consistent and clear structure is
+This document describes the directory/organisation structure of the
+FSF Europe web pages. Maintaining a consistent and clear structure is
 important.
 
 Since the web page is a central point of disseminating information
 about Free Software and the activities of the FSF Europe and its
-associate organizations, we need to make our best effort to make sure
+associate organisations, we need to make our best effort to make sure
 people can easily find what they are looking for.
 
 If they get lost or confused, they will feel stupid, which is
@@ -128,27 +128,27 @@ Global/European directories:
 
 /associate
 
-	Directory of associate organizations, containing a list of
-	associate organizations and some contact information on the
+	Directory of associate organisations, containing a list of
+	associate organisations and some contact information on the
 	top level. Also page(s) explaining the associate status and
-	giving information on how to become an associate organization
+	giving information on how to become an associate organisation
 	should go here.
 
- /associate/<name of associate organization>
+ /associate/<name of associate organisation>
 
-	Subdirectory for the specified associate organization,
+	Subdirectory for the specified associate organisation,
 	containing text, information, material, brochures by the
-	respective associate organization.
+	respective associate organisation.
 
         All pages in here should contain some sort of visible sign
 	that this information was provided by the associate
-	organization (other than the directory location, that is.)
+	organisation (other than the directory location, that is.)
 
  /associate/other
 
 	Subdirectory containing texts/initiatives/projects that we
         percieve to be well-written or useful written by people
-	neither in a formal associate organization nor member of the
+	neither in a formal associate organisation nor member of the
         FSF Europe.
 
 
@@ -197,7 +197,7 @@ Global/European directories:
 
 /links
 
-	Directory containing linkpages to other organizations,
+	Directory containing linkpages to other organisations,
 	initatives and such. Potentially sorted by topic.
 
 

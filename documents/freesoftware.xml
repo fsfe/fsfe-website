@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE webpage PUBLIC "-//laespiral.org//DTD LE-document 1.1//EN"
+   "LE-document-1.1.dtd" [<!ENTITY menu SYSTEM "menu.xml">] >
+<webpage lang="en">
+  <title>FSF Europe - </title>
+  <translations>
+    <language><ulink url="freesoftware.de.html">Deutsch</ulink></language>
+    <language>English</language>
+  </translations>
+  <sect1>
+    <title>What is Free Software?</title>
+    <para>
+      Georg C. F. Greve &lt;<ulink
+      url="mailto:greve@gnu.org">greve@gnu.org</ulink>&gt;
+    </para>
+    <para>
+      The Philosophy of Free Software goes back to the idea of freely
+      exchanging knowledge and thoughts that can traditionally be found in
+      scientific fields. Just like ideas, software are non-tangible and can be
+      copied without loss. Passing them on is rather the basis of an
+      evolutionary process which fuels the development of thoughts.
+    </para>
+    <para>
+      In the early eighties, Richard M. Stallman was the first to succeed in
+      formalizing this for software in form of four freedoms.
+    </para>
+    <variablelist>
+      <varlistentry>
+	<term>0. freedom:</term>
+	<listitem>
+	  <para>
+	    The freedom to run the program, for any purpose.
+	  </para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>
+	<term>1. freedom:</term>
+	<listitem>
+	  <para>
+	    The freedom to study how the program works, and adapt it to your
+	    needs.
+	  </para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>
+	<term>2. freedom:</term>
+	<listitem>
+	  <para>The freedom to redistribute copies.</para>
+      </listitem>
+      </varlistentry>
+      <varlistentry>
+	<term>3. freedom:</term>
+	<listitem>
+	  <para>
+	    The freedom to improve the program, and release your improvements
+	    to the public, so that the whole community benefits.
+	  </para>
+	</listitem>
+      </varlistentry>
+    </variablelist>
+    <para>
+      Software following these four principles is called "Free Software."
+    </para>
+    <para>
+      To support and realize this, Richard M. Stallman created the <quote>Free
+      Software Foundation</quote> in 1984 and started the GNU-Project. The
+      license of the GNU-Project, the GNU General Public License not only
+      grants the four freedoms described above, it also protects
+      them. Especially because of this protection the GPL is the most-widely
+      used license for Free Software nowadays.
+    </para>
+    <para>
+      Besides the GPL there are several other licenses granting thesse
+      freedoms and hence qualifying as Free Software licenses. Of these
+      especially the FreeBSD license should be mentioned. The major difference
+      to the GPL is that it does not seek to protect the freedom.
+    </para>
+    <para>
+      When talking about Free Software, the most common misconception is the
+      belief that it has to be gratis. This is not the case - in fact a very
+      big part of the Free Software protagonists work on the field of
+      commercial Free Software.
+    </para>
+    <para>
+      In 1998 the <quote>Open Source Definition</quote> was written by the
+      U.S. citizen Bruce Perens as the main author. Its goal was to describe
+      the technical properties of Free Software and to serve as the
+      fundamental document of the <quote>Open Source</quote> movement.
+    </para>
+    <para>
+      The <quote>Open Source Definition</quote> itself is a derivate of the
+      <quote>Debian Free Software Guidelines,</quote> which is derived from
+      the four freedoms mentioned above. Therefore all three definitions
+      describe the same licenses; the <quote>GNU General Public
+      License</quote> (GPL) is the primary license for all definitions.
+    </para>
+    <para>
+      It is the self-declared goal of the Open Source movement to be a
+      marketing program for Free Software. This is sought by deliberatly
+      turning away from the philosophical and political background; they are
+      seen as hazardous to commercialization.
+    </para>
+    <para>
+      Opposed to this, the Free Software movement has always understood the
+      philosophy and the background as an essential part of the movement and
+      one of it's biggest assets.
+    </para>
+  </sect1>
+  &menu;
+</webpage>

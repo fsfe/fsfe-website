@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE webpage PUBLIC "-//laespiral.org//DTD LE-document 1.1//EN"
+   "LE-document-1.1.dtd" [<!ENTITY menu SYSTEM "menu.de.xml">] >
+<webpage lang="de">
+  <title>FSF Europe - </title>
+  <translations>
+    <language>Deutsch</language>
+    <language><ulink url="freesoftware.html">English</ulink></language>
+  </translations>
+  <sect1>
+    <title>Was ist Freie Software?</title>
+    <para>
+      Georg C. F. Greve &lt;<ulink
+      url="mailto:greve@gnu.org">greve@gnu.org</ulink>&gt;
+    </para>
+    <para>
+      Die Philosophie Freier Software geht zurück auf den Grundgedanken des
+      freien Austauschs von Wissen und Gedanken, wie er traditionell im Feld
+      der Wissenschaft zu finden ist. Software ist, wie auch Ideen,
+      nichtstofflich und verlustfrei kopierbar. Das Weiterreichen dient
+      vielmehr einem evolutionärer Prozeß, über den Gedanken weiterentwickelt
+      werden.
+    </para>
+    <para>
+      Dies in bezug auf Software zu formalisieren, gelang erstmals Richard
+      M. Stallman, der in den frühen 80ern die Prinzipien in Form von vier
+      Freiheiten formulierte:
+    </para>
+    <variablelist>
+      <varlistentry>
+	<term>0. Freiheit:</term>
+	<listitem>
+	  <para>
+	    Die Freiheit, ein Programm für jeden Zweck einsetzen zu dürfen
+	  </para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>
+	<term>1. Freiheit:</term>
+	<listitem>
+	  <para>
+	    Die Freiheit, untersuchen zu dürfen, wie ein Programm
+	    funktioniert, und es den eigenen Bedürfnissen anzupassen
+	  </para>
+	</listitem>
+      </varlistentry>
+      <varlistentry>
+	<term>2. Freiheit:</term>
+	<listitem>
+	  <para>Die Freiheit, Kopien für Andere machen zu dürfen</para>
+      </listitem>
+      </varlistentry>
+      <varlistentry>
+	<term>3. Freiheit:</term>
+	<listitem>
+	  <para>
+	    Die Freiheit, das Programm verbessern zu dürfen und diese
+	    Verbesserungen zum allgemeinen Wohl zugänglich zu machen
+	  </para>
+	</listitem>
+      </varlistentry>
+    </variablelist>
+    <para>
+      Software, deren Nutzung nach diesen vier Prinzipien geregelt ist, wird
+      als <quote>Freie Software</quote> bezeichnet.
+    </para>
+    <para>
+      Um dies zu fördern und umzusetzen, gründete Richard M. Stallman 1984 die
+      <quote>Free Software Foundation</quote> und rief das GNU-Projekt ins
+      Leben, dessen GNU General Public License die beschriebenen vier
+      Freiheiten nicht nur gewährt, sondern darüberhinaus auch schützt. Gerade
+      der Schutz, den die GPL für die Freiheit der Software bietet, hat dazu
+      geführt, daß die GPL heutzutage die am weitesten verbreitete Lizenz für
+      Freie Software ist.
+    </para>
+    <para>
+      Neben der GPL gibt es noch etliche andere Lizenzen, die diese Freiheiten
+      gewähren und sich somit als Lizenzen für Freie Software
+      qualifizieren. Von diesen sollte speziell die FreeBSD-Lizenz erwähnt
+      werden, deren Hauptunterschied zur GPL ist, daß sie die Freiheit nicht
+      zu schützen sucht.
+    </para>
+    <para>
+      Das häufigste Mißverständnis in bezug auf Freie Software ist, daß
+      diese kostenlos sein müsse. Dies trifft nicht zu - vielmehr ist eines
+      der Hauptgebiete der Protagonisten Freier Software das Feld der
+      kommerziellen Freien Software.
+    </para>
+    <para>
+      Im Jahr 1998 schrieb der Amerikaner Bruce Perens als Hauptautor die
+      <quote>Open Source Definition</quote>, deren Ziel es war, die
+      technischen Eigenschaften Freier Software zu beschreiben und als
+      Grundlage der <quote>Open Source</quote> Bewegung zu dienen.
+    </para>
+    <para>
+      Die <quote>Open Source Definition</quote> ist eine Ableitung der
+      <quote>Debian Free Software Guidelines</quote>, welche von den oben
+      aufgeführten vier Freiheiten abgeleitet wurden. Daher beschreiben alle
+      drei Definitionen dieselben Lizenzen; insbesondere ist die <quote>GNU
+      General Public License</quote> (GPL) die primäre Lizenz aller
+      Definitionen.
+    </para>
+    <para>
+      Selbstgewähltes Ziel der Open Source Bewegung ist es, ein
+      Marketingprogramm für Freie Software darzustellen. Dies will sie durch
+      gezielte Abkehr von den philosophischen und politischen
+      Hintergrundüberlegungen tun, da diese als störend bei der
+      Kommerzialisierung empfunden werden.
+    </para>
+    <para>
+      Die Freie Software Bewegung hat hingegen in der Philosophie und den
+      Hintergründen schon immer einen essentiellen Teil des Phänomens und eine
+      wesentliche Stärke gesehen.
+    </para>
+  </sect1>
+  &menu;
+</webpage>

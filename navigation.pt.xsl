@@ -114,15 +114,19 @@
                   <a href="{$fsfeurope}/mailman/index.pt.html" class="T2">Listas de Correio</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
-              <!--
-              <a href="http://savannah.gnu.org/pm/?group_id=53" class="T2">Tarefa</a><br />
+              <a href="http://savannah.gnu.org/pm/?group_id=53" class="T2">Tarefas</a><br />
               <xsl:choose>
-                <xsl:when test="$path='press/index.pt.xhtml'">Para a Imprensa</xsl:when>
+                <xsl:when test="$path='news/news.pt.xhtml'">Noticias</xsl:when>
+                <xsl:otherwise>
+                  <a href="{$fsfeurope}/news/news.pt.html" class="T2">Noticias</a>
+                </xsl:otherwise>
+              </xsl:choose><br/>
+              <xsl:choose>
+                 <xsl:when test="$path='press/index.pt.xhtml'">Para a Imprensa</xsl:when>
                 <xsl:otherwise>
                   <a href="{$fsfeurope}/press/index.pt.html" class="T2">Para a Imprensa</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
-	      -->
               <xsl:choose>
                 <xsl:when test="$path='gbn/index.pt.xhtml'">Rede Empresarial GNU</xsl:when>
                 <xsl:otherwise>
@@ -131,16 +135,18 @@
               </xsl:choose><br/>
               <br/></td>
             </tr>
+
             <tr>
-              <td class="TopTitle" align="center">Organizações Associadas</td>
+              <td class="TopTitle" align="center">Organizações associadas</td>
             </tr>
             <tr>
-              <td align="right">
+              <td class="TopBody" align="right">
                 <a href="http://www.april.org/" class="T2">APRIL</a><br />
                 <a href="http://www.ofset.org/" class="T2">OFSET</a><br />
-              </td>
+            </td>
             </tr>
-            <tr>
+
+             <tr>
               <td class="TopTitle" align="center">Administração</td>
             </tr>
             <tr>

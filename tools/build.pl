@@ -380,8 +380,14 @@ while (my ($file, $langs) = each %bases) {
         # In post-processing, we replace links pointing back to ourselves
         # so that they point to the correct language.
         #
-        foreach ($results->documentElement->getElementsByTagName("a")) {
+        my @hrefs = $results->documentElement->getElementsByTagName("a");
+        push(@hrefs, $results->documentElement->getElementsByTagName("A"));
+
+        foreach (@hrefs) {
           my $href = $_->getAttribute("href");
+          if ($href =~ /^http:\/\/www.fsfeurope.org/) {
+            $href =~ s/http:\/\/www.fsfeurope.org//;
+          }
           if ($href !~ /^http/) {
             if ($href !~ /\.html$/) {
               if (-d $opts{i}."/$href") {

@@ -89,9 +89,9 @@
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
-                <xsl:when test="$path='about/about.xhtml'">O nás</xsl:when>
+                <xsl:when test="$path='about/about.cs.xhtml'">O nás</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/about/about.html">O nás</a>
+                  <a href="{$fsfeurope}/about/about.cs.html">O nás</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
@@ -116,9 +116,9 @@
               </xsl:choose><br/>
 
               <xsl:choose>
-                <xsl:when test="$path='background.xhtml'">Souvislosti</xsl:when>
+                <xsl:when test="$path='background.cs.xhtml'">Souvislosti</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/background.html">Souvislosti</a>
+                  <a href="{$fsfeurope}/background.cs.html">Souvislosti</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
@@ -134,15 +134,15 @@
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
-                <xsl:when test="$path='news/news.xhtml'">Novinky</xsl:when>
+                <xsl:when test="$path='news/news.cs.xhtml'">Novinky</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/news/news.html">Novinky</a>
+                  <a href="{$fsfeurope}/news/news.cs.html">Novinky</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
-                <xsl:when test="$path='events/events.en.xhtml'">Události</xsl:when>
+                <xsl:when test="$path='events/events.cs.xhtml'">Akce</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/events/events.en.html">Události</a>
+                  <a href="{$fsfeurope}/events/events.cs.html">Akce</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>

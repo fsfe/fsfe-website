@@ -109,7 +109,7 @@
     <table width="100%" border="0" cellspacing="0" cellpadding="2">
 	<tr>
 	  <td class="TopTitle">
-	    &nbsp;<a href="mailto:webmaster@fsfeurope.org" class="T1">webmaster@fsfeurope.org</a><br />
+	    &nbsp;<a href="mailto:webmaster@fsfeurope.org" class="T1">webmaster@fsfeurope.org</a>&nbsp; <a href="{$filebase}.xhtml" class="T1">XHTML Source</a> &nbsp;<a href="{$fsffrance}/fsfe-fr.xsl"  class="T1">XSL Sheet</a> <br />
 	  </td>
 	</tr>
 	<tr>
@@ -117,7 +117,7 @@
 	  <font size="-2">
 	    Copyright (C) 2001 FSF France,
 	    8 rue de Valois, 75001 Paris, France
-	    <p />
+	    <br />
 	    Verbatim copying and distribution of this entire article is
 	    permitted in any medium, provided this notice is preserved.
 	  </font>

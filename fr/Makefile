@@ -32,12 +32,13 @@ clean:
 	find . -name '*.html' -print | xargs rm 
 
 process: 
-	@find * -name '*.xhtml' -print | while read file ; \
+	@find * -name '*.xhtml' -print | while read path ; \
 	do \
-		base=`expr $$file : '\(.*\).xhtml'` ; \
-		dir=`dirname $$base` ; \
-		root=`dirname $$base | perl -pe 'chop; s:([^/]+):..:g if($$_ ne ".")'` ; \
-		$(XSLTPROC) fsfe-fr.xsl $$file $(XSLTOPTS) '$$fsffrance='$$root | \
+		base=`expr $$path : '\(.*\).xhtml'` ; \
+		filebase=`basename $$base` ; \
+		dir=`dirname $$path` ; \
+		root=`dirname $$path | perl -pe 'chop; s:([^/]+):..:g if($$_ ne ".")'` ; \
+		$(XSLTPROC) fsfe-fr.xsl $$path $(XSLTOPTS) '$$fsffrance='$$root '$$filebase='$$filebase | \
 		perl -MFile::Copy -p -e '$$| = 1; copy("'$$dir'/$$1", \*STDOUT) if(/\#include virtual=\"(.*?)\"/); s/\$$//g if(/\$$''Date:/);' > $$base.html ; \
 	done
 

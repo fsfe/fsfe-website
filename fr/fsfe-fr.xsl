@@ -15,6 +15,7 @@
   <xsl:param name="fsfeurope">http://www.fsfeurope.org</xsl:param>
   <xsl:param name="fsf">http://www.fsf.org</xsl:param>
   <xsl:param name="gnu">http://www.gnu.org</xsl:param>
+  <xsl:param name="filebase">nofile.html</xsl:param>
 
   <xsl:template match="/">
     <xsl:copy>

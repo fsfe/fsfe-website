@@ -26,7 +26,7 @@
         </td>
        </tr>
       </table>
-
+      <p> </p>
       <table class="news">
       <xsl:for-each select="/html/set/news">
         <xsl:sort select="@date" order="descending" />

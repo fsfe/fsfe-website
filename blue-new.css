@@ -1,4 +1,4 @@
-BODY	{	font-family: Helvetica, Verdana, sans-serif;
+BODY	{	font-family: sans-serif;
 		font-size: 13px;
 		background: #ffffff;
 		color: #000000;
@@ -162,23 +162,15 @@ p		{
 		margin-left: 20px;
 		}
 
+.indent	{
+		margin-right: 30px;
+		margin-left: 40px;
+		}
 
-li.indent	{
-		margin-right: 30px;
-		margin-left: 30px;
-		}
-
-div.indent	{
-		margin-right: 30px;
-		margin-left: 40px;
-		}
-p.indent	{
-		margin-right: 30px;
-		margin-left: 40px;
-		}
-code.indent	{
-		margin-right: 30px;
-		margin-left: 40px;
+.quote	{
+        font-size: 12px;
+		margin-right: 40px;
+		margin-left: 50px;
 		}
 
 p.footnote	{
@@ -198,9 +190,4 @@ code.footnote	{
 form		{
 		margin-right: 20px;
 		margin-left: 20px;
-		}
-
-form.indent	{
-		margin-right: 30px;
-		margin-left: 40px;
 		}

@@ -43,6 +43,16 @@ Old version of the XML DTD, before it became endorsed by OASIS
     </author>
 
     <pubdate>Septembre 2001</pubdate>
+    <copyright>
+      <year>2001</year>
+      <holder>AFUL-APRIL</holder>
+      <!-- Buggy stylesheet support -->
+      <!--
+      <holder>AFUL</holder>
+      <holder>APRIL</holder>
+      -->
+    </copyright>
+<!--
     <legalnotice>
       <para>
 	Copyright (C) 2001 AFUL, APRIL
@@ -51,6 +61,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	La reproduction exacte et la distribution intégrale de cet article sont permises sur n'importe quel support d'archivage, pourvu que cette notice soit préservée.
       </para>
     </legalnotice>
+-->
   </articleinfo>
 
 
@@ -173,8 +184,8 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	  </question>
 	  <answer>
 	    <para>
-	      L'&OS; met l'accent sur la gratuité et l'efficacité des 
-	      développements informatiques, lorsque les
+	      L'&OS; met l'accent sur l'ouverture et l'efficacité des 
+	      développements informatiques, alors que les
 	      fondations du mouvement du &LL; sont la liberté et
 	      la protection de la liberté des utilisateurs.
 	    </para>
@@ -182,7 +193,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	      Un logiciel &OS; doit avoir ses sources disponibles et 
 	      utilisables par tous sans restrictions.
 	    </para>
-	    <para condition="long">
+	    <para>
 	      Pour qu'un logiciel soit un &LL;, 
 	      il doit satisfaire quatre conditions.
 	      Ces quatre conditions sont les quatre libertés du &LL; :
@@ -997,7 +1008,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	</listitem>
 	<listitem>
 	  <para>
-	    Version longue en anglais
+	    Version courte en anglais
 	    <itemizedlist>
 	      <listitem>
 		<para>

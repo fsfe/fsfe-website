@@ -1,6 +1,25 @@
 Here is the list of what we must do in priority order of urgency:
-	1 agree on project content; 
-	2 decide what will be the workpackages and what institution will do which package;
+	1 agree on project name 
+		Simple International Cooperative Hosting System (SICHS)
+	    Simple International Cooperative Hosting Architecture (SICHA) 
+	    Easy International Cooperative Hosting (EICH)
+		Easy Multilingual Cooperative Hosting (EMCH)
+
+	2 decide what will be the workpackages and what institution will do 
+	  which package;
+        1 Redesing the Savannah and/or Picolibre type plateforms to have a real 
+	      package easily installable.
+			(GET for Picolibre, Alcove, UO for Savannah)
+        2 Integrate multilanguage support to these platforms and versions for
+          portuguese (UO), german (Alcove), spanish (UPM), english (anynone) and french(GET)
+        3 Define common data types and representation between the two types of
+          platform. (GET,Alcove, UO)
+        4 Introduce functionalities to import/export informations from one site to
+          another, based on this common data representation.
+	      (GET on Picolobre, UO on savannah)
+        5 Test, deployement over wide area network (??)
+        6 Ensure security in this protocols to ensure that data communication
+          between different sites is not fake.(??)
 	3 gather entities informations, costs, and signatures to be able to present 
 	  the project (see DocEEC/accm_forms_en.pdf doc A3) send this be postal mail or fax 
 	  to the leader (even if the project is submitted electronicaly, the leader must state

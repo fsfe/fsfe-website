@@ -17,7 +17,7 @@ A.Extern  	{ font-size: 13px; font-weight: bold; color: #000000 }
 A.Desc	  	{ font-size: 13px; font-style: italic; color: #000000 }
 A.Warning   	{ font-size: 13px; font-weight: bold; color: #FF2222 }
 
-TD.Section  	{ font-weight: bold; }
+TD.Section  	{ font-size: 13px; font-weight: regular; color: #FFFFFF; text-decoration: none }
 
 TD.TopTitle  	{ color: #E0E0E0; font-weight: bold; background: #5A6BA5 }
 TD.TopBody  	{ color: #1C2D67; font-weight: bold; background: #9DAEE8 }

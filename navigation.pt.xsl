@@ -77,18 +77,48 @@
               <td class="TopTitle" align="center">Secções</td>
             </tr>
             <tr>
-              <td align="right"><br/>
-              <a href="{$fsfeurope}/index.pt.html" class="T2">Principal</a><br/>
+              <td align="right" class="Section"><br/>
+              <xsl:if test="$path!='index.pt.xhtml'">
+                <a href="{$fsfeurope}/index.pt.html" class="T2">Principal</a><br/>
+              </xsl:if>
+              <xsl:if test="$path='index.pt.xhtml'">
+                Principal<br/>
+              </xsl:if>
+              <xsl:if test="$path!='contact/index.pt.xhtml'">
               <a href="{$fsfeurope}/contact/index.pt.html"
                     class="T2">Contactos</a><br/>
+              </xsl:if>
+              <xsl:if test="$path='contact/index.pt.xhtml'">
+                Contactos<br/>
+              </xsl:if>
+              <xsl:if test="$path!='background.pt.xhtml'">
               <a href="{$fsfeurope}/background.pt.html"
                    class="T2">Contexto</a><br/>
-              <a href="{$fsfeurope}/mailman/index.pt.html"
-                   class="T2">Listas de Correio</a><br/>
+              </xsl:if>
+              <xsl:if test="$path='background.pt.xhtml'">
+                Contexto<br/>
+              </xsl:if>
+              <xsl:if test="$path!='mailman/index.pt.xhtml'">
+              <a href="{$fsfeurope}/mailman/index.pt.html"  
+                   class="T2">Listas de Correio</a><br/>    
+              </xsl:if>
+              <xsl:if test="$path='mailman/index.pt.xhtml'">
+                Listas de Correio<br/>
+              </xsl:if>
+              <xsl:if test="$path!='press/index.pt.xhtml'">
               <a href="{$fsfeurope}/press/index.pt.html"
                    class="T2">Para a Imprensa</a><br/>
+              </xsl:if>
+              <xsl:if test="$path='press/index.pt.xhtml'">
+                Para a Imprensa<br/>
+              </xsl:if>
+              <xsl:if test="$path!='gbn/index.pt.xhtml'">
               <a href="{$fsfeurope}/gbn/index.pt.html"
                    class="T2">Rede Empresarial GNU</a><br/>
+              </xsl:if>
+              <xsl:if test="$path='gbn/index.pt.xhtml'">
+                Rede Empresarial GNU<br/>
+              </xsl:if>
               <br/></td>
             </tr>
             <tr>

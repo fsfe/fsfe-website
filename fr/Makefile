@@ -72,6 +72,12 @@ science/chimie.en.xhtml: science/chimie.xml
 science/chimie.fr.xhtml: science/chimie.xml
 	$(XSLTPROC) science/chimie.fr.xsl science/chimie.xml >science/chimie.fr.xhtml || rm -f science/chimie.fr.xhtml
 
+science/documentation.en.xhtml: science/documentation.xml
+	$(XSLTPROC) science/documentation.en.xsl science/documentation.xml >science/documentation.en.xhtml || rm -f science/documentation.en.xhtml
+
+science/documentation.fr.xhtml: science/documentation.xml
+	$(XSLTPROC) science/documentation.fr.xsl science/documentation.xml >science/documentation.fr.xhtml || rm -f science/documentation.fr.xhtml
+
 $(ENPAGES): %.html: %.xhtml fsfe-fr.xsl navigation.en.xsl
 	@$(ECHO) "Building $@ ..."; \
 	path=$< ; \

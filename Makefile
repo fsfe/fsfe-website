@@ -97,12 +97,13 @@ $(PTPAGES): %.html: %.xhtml fsfe.xsl navigation.pt.xsl tools/translate.sh
 $(ITPAGES): %.html: %.xhtml fsfe.xsl navigation.it.xsl
 	@$(ECHO) "Building $@ ..."; \
 	path=$< ; \
-	base=`expr $$path : '\(.*\).xhtml'` ; \
+	base=`expr $$path : '\(.*\).it.xhtml'` ; \
 	filebase=`basename $$base` ; \
 	dir=`dirname $$path` ; \
 	root=`dirname $$path | perl -pe 'chop; s:([^/]+):..:g if($$_ ne ".")'` ; \
-	$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase '$$path='$$path > $$base.html-temp && (cat $$base.html-temp | perl -p -e '$$| = 1; (s/Date://, s/Author:/, da/, s/\$$//g) if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.html) ; \
-	rm -f $$base.html-temp
+	langlinks="`./tools/translate.sh $$base it`" ; \
+	$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase.it '$$path='$$path '$$langlinks='"$$langlinks" > $$base.it.html-temp && (cat $$base.it.html-temp | perl -p -e '$$| = 1; (s/Date://, s/Author:/, da/, s/\$$//g) if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.it.html) ; \
+	rm -f $$base.it.html-temp
 
 $(ESPAGES): %.html: %.xhtml fsfe.xsl navigation.es.xsl
 	@$(ECHO) "Building $@ ..."; \

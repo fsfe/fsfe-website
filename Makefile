@@ -48,6 +48,8 @@ ITPAGES = $(shell find * -path 'fr' -prune -o -regex '.*\.it\.xhtml' -print | se
 
 ESPAGES = $(shell find * -path 'fr' -prune -o -regex '.*\.es\.xhtml' -print | sed "s/xhtml$$/html/")
 
+LANGFILES = $(shell find * -path 'fr' -prune -o -regex '.*\.lang'")
+
 # temporary, added by mad@april.org
 NEWS = news/news.fr.html news/news.en.html news/news.pt.html
 
@@ -55,7 +57,7 @@ all: $(ENPAGESOLD) $(ENPAGES) $(FRPAGES) $(DEPAGES) $(PTPAGES) $(ITPAGES) $(ESPA
 
 swpat/patents.en.html: swpat/patents-agenda.en.xml
 
-$(ENPAGESOLD): %.html: %.xhtml fsfe.xsl navigation.en.xsl
+$(ENPAGESOLD): %.html: %.xhtml fsfe.xsl navigation.en.xsl %.lang
 	@$(ECHO) "Building $@ ..."; \
 	path=$< ; \
 	base=`expr $$path : '\(.*\).xhtml'` ; \
@@ -66,7 +68,7 @@ $(ENPAGESOLD): %.html: %.xhtml fsfe.xsl navigation.en.xsl
 	$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase '$$path='$$path '$$langlinks='"$$langlinks" > $$base.html-temp && (cat $$base.html-temp | perl -p -e '$$| = 1; (s/Date://, s/Author:/by/, s/\$$//g) if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.html) ; \
 	rm -f $$base.html-temp
 
-$(ENPAGES): %.html: %.xhtml fsfe.xsl navigation.en.xsl
+$(ENPAGES): %.en.html: %.en.xhtml fsfe.xsl navigation.en.xsl %.lang
 	@$(ECHO) "Building $@ ..."; \
 	path=$< ; \
 	base=`expr $$path : '\(.*\).en.xhtml'` ; \
@@ -77,7 +79,7 @@ $(ENPAGES): %.html: %.xhtml fsfe.xsl navigation.en.xsl
 	$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase.en '$$path='$$path '$$langlinks='"$$langlinks" > $$base.en.html-temp && (cat $$base.en.html-temp | perl -p -e '$$| = 1; (s/Date://, s/Author:/by/, s/\$$//g) if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.en.html) ; \
 	rm -f $$base.en.html-temp
 
-$(FRPAGES): %.html: %.xhtml fsfe.xsl navigation.fr.xsl
+$(FRPAGES): %.fr.html: %.fr.xhtml fsfe.xsl navigation.fr.xsl %.lang
 	@$(ECHO) "Building $@ ..."; \
 	path=$< ; \
 	base=`expr $$path : '\(.*\).fr.xhtml'` ; \
@@ -88,7 +90,7 @@ $(FRPAGES): %.html: %.xhtml fsfe.xsl navigation.fr.xsl
 	$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase.fr '$$path='$$path '$$langlinks='"$$langlinks" > $$base.fr.html-temp && (cat $$base.fr.html-temp | perl -p -e '$$| = 1; (s/Date://, s/Author:/par/, s/\$$//g) if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.fr.html) ; \
 	rm -f $$base.fr.html-temp
 
-$(DEPAGES): %.html: %.xhtml fsfe.xsl navigation.de.xsl
+$(DEPAGES): %.de.html: %.de.xhtml fsfe.xsl navigation.de.xsl %.lang
 	@$(ECHO) "Building $@ ..."; \
 	path=$< ; \
 	base=`expr $$path : '\(.*\).de.xhtml'` ; \
@@ -99,7 +101,7 @@ $(DEPAGES): %.html: %.xhtml fsfe.xsl navigation.de.xsl
 	$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase.de '$$path='$$path '$$langlinks='"$$langlinks" > $$base.de.html-temp && (cat $$base.de.html-temp | perl -p -e '$$| = 1; (s/Date://, s/Author:/von/, s/\$$//g) if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.de.html) ; \
 	rm -f $$base.de.html-temp
 
-$(PTPAGES): %.html: %.xhtml fsfe.xsl navigation.pt.xsl tools/translate.sh
+$(PTPAGES): %.pt.html: %.pt.xhtml fsfe.xsl navigation.pt.xsl %.lang
 	@$(ECHO) "Building $@ ..."; \
 	path=$< ; \
 	base=`expr $$path : '\(.*\).pt.xhtml'` ; \
@@ -110,7 +112,7 @@ $(PTPAGES): %.html: %.xhtml fsfe.xsl navigation.pt.xsl tools/translate.sh
 	$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase.pt '$$path='$$path '$$langlinks='"$$langlinks" > $$base.pt.html-temp && (cat $$base.pt.html-temp | perl -p -e '$$| = 1; (s/Date://, s/Author:/por/, s/\$$//g) if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.pt.html) ; \
 	rm -f $$base.pt.html-temp
 
-$(ITPAGES): %.html: %.xhtml fsfe.xsl navigation.it.xsl
+$(ITPAGES): %.it.html: %.it.xhtml fsfe.xsl navigation.it.xsl %.lang
 	@$(ECHO) "Building $@ ..."; \
 	path=$< ; \
 	base=`expr $$path : '\(.*\).it.xhtml'` ; \
@@ -121,7 +123,7 @@ $(ITPAGES): %.html: %.xhtml fsfe.xsl navigation.it.xsl
 	$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase.it '$$path='$$path '$$langlinks='"$$langlinks" > $$base.it.html-temp && (cat $$base.it.html-temp | perl -p -e '$$| = 1; (s/Date://, s/Author:/, da/, s/\$$//g) if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.it.html) ; \
 	rm -f $$base.it.html-temp
 
-$(ESPAGES): %.html: %.xhtml fsfe.xsl navigation.es.xsl
+$(ESPAGES): %.es.html: %.es.xhtml fsfe.xsl navigation.es.xsl %.lang
 	@$(ECHO) "Building $@ ..."; \
 	path=$< ; \
 	base=`expr $$path : '\(.*\).es.xhtml'` ; \
@@ -132,9 +134,16 @@ $(ESPAGES): %.html: %.xhtml fsfe.xsl navigation.es.xsl
 	$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase.es '$$path='$$path '$$langlinks='"$$langlinks" > $$base.es.html-temp && (cat $$base.es.html-temp | perl -p -e '$$| = 1; (s/Date://, s/Author:/por/, s/\$$//g) if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.es.html) ; \
 	rm -f $$base.es.html-temp
 
+%lang: 
+	@$(ECHO) "Building $@ ..."; \
+	path=$@ ; \
+	base=`expr $$path : '\(.*\).lang'` ; \
+	./tools/translate.sh $$base > /dev/null
+
+
 # remove html files for which an xhtml version exists (exclude fr/)
 clean:
-	rm -f $(ENPAGES) $(FRPAGES) $(DEPAGES) $(PTPAGES) $(ITPAGES) $(ESPAGES)
+	rm -f $(ENPAGES) $(FRPAGES) $(DEPAGES) $(PTPAGES) $(ITPAGES) $(ESPAGES) $(LANGFILES)
 
 sync:
 	$(SSH) -l www france.fsfeurope.org 'cd fsfe ; cvs -z3 -q update -I "*.html" -d ; ../bin/nightly'

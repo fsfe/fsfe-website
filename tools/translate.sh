@@ -99,3 +99,15 @@ RESULT="$RESULT ]"
 
 # Output the string.
 echo "$RESULT"
+
+# Create or update $BASE.lang file as needed
+if [ "$LANGUAGE" != "" ]; then
+    LANGSTRING="`$0 $BASE`"
+else
+    LANGSTRING="$RESULT"
+fi
+if [ ! -f "$BASE.lang" ]; then
+    echo "$LANGSTRING" > $BASE.lang
+elif [ "$LANGSTRING" != "`cat $BASE.lang`" ]; then
+    echo "$LANGSTRING" > $BASE.lang
+fi

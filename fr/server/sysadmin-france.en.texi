@@ -5,7 +5,7 @@
 @setchapternewpage odd
 @c %**end of header
 
-@set RCSID $Id: sysadmin-france.en.texi,v 1.50 2001-10-11 13:04:29 cyb Exp $
+@set RCSID $Id: sysadmin-france.en.texi,v 1.51 2001-10-12 11:19:03 cyb Exp $
 @set VERSION 1.0
 
 @c Combine the variable and function indices:
@@ -80,6 +80,7 @@ Web
 * Scripts CVS Tree::            
 * Nightly script::              
 * Immediate Update::            
+* Coposys::                     
 
 Separate layout and content
 
@@ -88,6 +89,16 @@ Separate layout and content
 * Writing XHTML content::       
 * XSL and generated HTML::      
 * Writing XSL files::           
+
+Coposys
+
+* Intro::                       
+* Configuration::               
+* Install::                     
+* Apache configuration::        
+* File permissions and owners::  
+* Crontab::                     
+* HTML design::                 
 
 System
 
@@ -338,6 +349,7 @@ directory, together with other GNU specific maintainance scripts.
 * Scripts CVS Tree::            
 * Nightly script::              
 * Immediate Update::            
+* Coposys::                     
 @end menu
 
 @node Overview, Virtual Hosts, Web, Web
@@ -849,7 +861,7 @@ and rotated by @file{/etc/logrotate.d/nightly}.
 The @code{nightly} script can be run by hand after login as the @code{www}
 user.
 
-@node Immediate Update,  , Nightly script, Web
+@node Immediate Update, Coposys, Nightly script, Web
 @section Immediate Update
 
 If you ever want to update the web in no time you have to do the following:
@@ -867,6 +879,117 @@ These actions are encapsulated in the @code{sync} goal of the
 @example
 make sync
 @end example
+
+@node Coposys,  , Immediate Update, Web
+@section Coposys
+
+@menu
+* Intro::                       
+* Configuration::               
+* Install::                     
+* Apache configuration::        
+* File permissions and owners::  
+* Crontab::                     
+* HTML design::                 
+@end menu
+
+@node Intro, Configuration, Coposys, Coposys
+@subsection Intro
+
+The tool Coposys is available on the 
+
+@uref{http://www.fsfeurope.org/coposys/,,FSFE site}
+
+@node Configuration, Install, Intro, Coposys
+@subsection Configuration
+
+@code{Coposys} itself was installed from the CVS tree with this
+configuration (see the
+@uref{http://savannah.gnu.org/projects/coposys/,,coposys project
+homepage} for further informations) :
+
+@example
+./configure --with-communities=fsf
+ --with-markerdir=/var/www/coposys
+ --with-mapdir=/var/www/www.fsfeurope.org/coposys/maps
+ --with-cgidir=/var/www/www.fsfeurope.org/cgi-bin
+ --with-owner=www
+ --with-group=www
+@end example
+
+@node Install, Apache configuration, Configuration, Coposys
+@subsection Install
+
+Several packages were installed with @code{apt-get} for Coposys :
+
+@itemize
+@item xbase-clients
+@item xplanet
+ @itemize
+  @item glutg3
+  @item libnetpbm9
+  @item libungif4g
+ @end itemize
+@item imagemagick
+ @itemize
+  @item libhdf4g
+  @item libmagick5
+  @item libwmf0
+  @item netpbm
+ @end itemize
+@end itemize
+
+The Coposys package was installed with the following command: @code{make
+install}.
+
+@node Apache configuration, File permissions and owners, Install, Coposys
+@subsection Apache configuration
+
+The Apache configuration file (@file{/etc/apache/httpd.conf}) was
+modified to allow CGI execution. The following lines were added in the
+"www.fsfeurope.org" VirtualHost :
+
+@example
+        ScriptAlias /cgi-bin/ "/var/www/www.fsfeurope.org/cgi-bin/"
+        <Directory "/var/www/www.fsfeurope.org/cgi-bin">
+                AllowOverride None
+                Options ExecCGI
+                Order allow,deny
+                Allow from all
+        </Directory>
+@end example
+
+@node File permissions and owners, Crontab, Apache configuration, Coposys
+@subsection File permissions and owners
+
+Every files and directories installed under
+
+@itemize
+ @item @file{var/www/www.fsfeurope.org/coposys/markers/}
+ @item @file{var/www/www.fsfeurope.org/coposys/maps/}
+ @item @file{var/www/www.fsfeurope.org/cgi-bin/}
+@end itemize
+are owned by @code{www:www}.
+
+@node Crontab, HTML design, File permissions and owners, Coposys
+@subsection Crontab
+
+One command has been added in the crontab of the user @code{www}, it's
+purpose is to build the maps from the 'database' every 30 minutes if
+needed :
+
+@example
+ MAILTO=cyril@@bouthors.org
+ */30 * * * * www nice -20 make -s -C /var/www/www.fsfeurope.org/coposys/maps/
+@end example
+
+@node HTML design,  , Crontab, Coposys
+@subsection HTML design
+
+One HTML page was made in order to describe and link to coposys goals
+and functionalities. It is available from the
+@uref{http://savannah.gnu.org/projects/fsfe/,,FSF Europe} HTML
+repository using CVS/SSH in the @file{/coposys/} directory.
 
 @node Private Data, System, Web, Top
 @chapter Private Data
@@ -984,7 +1107,7 @@ Asked Nevrax to host the machine.
 Installed the machine. Asked Colt to change the
 reverse for fr.fsf.org.
 
-@item @email{cyril@@bouthors.org,Cyril Bouthors}. 
+@item @email{cyril@@bouthors.org,Cyril Bouthors}.
 Work: +33 1 41 66 47 06.
 Monitors the machine. Know Colt
 pretty well. Opened trouble tickets when the line was down.

@@ -118,6 +118,12 @@
               </xsl:choose><br/>
               <a href="http://savannah.gnu.org/pm/?group_id=53" class="T2">Tasks</a><br />
               <xsl:choose>
+                <xsl:when test="$path='news/news.en.xhtml'">News</xsl:when>
+                <xsl:otherwise>
+                  <a href="{$fsfeurope}/news/news.en.html" class="T2">News</a>
+                </xsl:otherwise>
+              </xsl:choose><br/>
+              <xsl:choose>
                 <xsl:when test="$path='press/index.xhtml'">Press Section</xsl:when>
                 <xsl:otherwise>
                   <a href="{$fsfeurope}/press/index.html" class="T2">Press Section</a>

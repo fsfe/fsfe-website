@@ -14,6 +14,8 @@
     </xsl:copy>
   </xsl:template>
 
+  <xsl:template match="/html/text" />
+
   <xsl:template match="/html/body">
     <body>
       <xsl:apply-templates />

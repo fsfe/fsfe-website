@@ -29,8 +29,8 @@ XSLTOPTS = \
 all:: news process 
 
 clean:
-	find . -name '*.html' -print | xargs rm 
-	rm news/news-bytes.*.xhtml
+	find . -name '*.html' -print | grep -v '\(Constitution-fr.fr.html\|sysadmin-france.en.html\)' | xargs rm -f /tmp/nukeme.unlikely
+	rm -f news/news-bytes.*.xhtml
 
 process: 
 	@find * -name '*.xhtml' -print | while read path ; \

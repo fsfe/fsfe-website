@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- <?xml version="1.0" encoding="UTF-8"?> -->
+<!-- encoding: Identifies the character set used to encode the data.
+     "ISO-8859-1" is "Latin-1" the Western European and English 
+     language character set.
+     The default is compressed Unicode: UTF-8.
+-->
+
+<!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+                         "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+
+<!ENTITY title 
+         "Savannah the next generation">
+<!ENTITY subtitle 
+         "A set of packages to install, upgrade and operate a development hosting facility">
+
+<!ENTITY FS  "Free Software">
+<!ENTITY NAME  "Savannah">
+
+]>
+
+<article lang="en">
+  <articleinfo>
+    <title>&title;</title>
+    <subtitle>&subtitle;</subtitle>
+
+    <pubdate>September 2001</pubdate>
+    <copyright>
+      <year>2001</year>
+      <holder>Loic Dachary</holder>
+    </copyright>
+
+    <legalnotice>
+      <para>
+        This document is in the public domain.
+      </para>
+    </legalnotice>
+
+  </articleinfo>
+
+  <sect1>
+    <title>Goals</title>
+
+    <para>
+      
+    </para>
+
+    <para>
+      <itemizedlist>
+	<listitem>
+	  <para>
+	    Decentralized. 
+
+	    Any given machine running &NAME; can host a list of
+	    projects (with pointers to the machines hosting the
+	    projects), read-only copies of projects (with pointers
+	    to the machines hosting the read-write instance of the
+	    project), read-write projects.
+
+	    The read-only projects are mirrored from the machine
+	    hosting the read-write instance of the project or other
+	    machines hosting a read-only copy. The format used is
+	    based on XML and defined by CoopX (http://coopx.eu.org).
+
+	    The number of read-only and read-write projects hosted
+	    on a given machine is controlled by the maintainer of the
+	    machine, depending on the available resources. For instance,
+	    an average machine with lots of bandwidth could host at most
+	    one hundred read-write projects and ten thousand read-only
+	    projects.
+
+	    At a given time, only one machine hosts a read-write
+	    project. It is the responsibility of the project
+	    maintainers to ensure this.  Should a machine become
+	    unavailable for some reason, the administrators of the
+	    project can toggle the read-only flag of one of the
+	    read-only mirrors and start using it as a
+	    replacement. 
+
+	    Such a decentralized setup is not the most efficient
+	    replication system but it is definitely simple and
+	    requires very little effort.
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Multi machine.
+
+	    A single machine may not be powerful enough for someone
+	    willing to host a large number of projects. Planning a
+	    multi machine setup in advance is mostly impossible
+	    because many strategies can be implemented depending on
+	    the needs. For instance a site like SourceForge will not
+	    implement the same strategies than a site like Geocities
+	    because the usage pattern is not the same.
+
+	    A Debian package repository will be used to store the
+	    packages that implement various strategies. They can all
+	    coexist together. Let's say, for instance, that the
+	    package &NAME;-single implements a single machine setup
+	    and depends on exim, cvs and bind. There can also be a
+	    &NAME;-multi-cvs, &NAME;-multi-exim, &NAME;-multi-bind,
+	    each installed on a separate machine and that configure
+	    the corresponding service for a multi-machine setup.
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Packaging. 
+
+	    Every bit is packaged for Debian. Although it may be
+	    desirable to package it for other GNU/Linux distributions,
+	    this is not our goal. The cooperative nature of Debian and
+	    the package dependency management are essential. When the
+	    set of packages reach a stable state it will be possible
+	    to contribute them to Debian without a need to find an
+	    agreement with a company. The dependency management allows
+	    to consistently use a large set of packages.
+
+	    The packages will be produced in a source specific to the
+	    project. This source (currently
+	    http://france.fsfeurope.org/debian/) contains three types
+	    of packages: copy of existing Debian packages slightly modified
+	    for the needs of &NAME;, packages of unfinished software written
+	    for &NAME;, packages whose sole purpose is to bind a set of 
+	    packages together and configure them. 
+
+	    The modified copy of existing Debian packages are only stored
+	    while waiting for the Debian maintainer or the upstream of the
+	    software to integrate the change. It is never meant to be 
+	    permanent. Communication is always established with the Debian
+	    maintainer and the upstream before the modified copy is built.
+	    Should we fail to do that, &NAME; will become a concurrent Debian
+	    distribution and this is to be avoided at all cost.
+
+	    The software specific to &NAME; is packaged at a very
+	    early stage. Basically the package is done whenever the
+	    software performs at least one task. Properly packaging a
+	    software takes a lot of time and failing to do it from the
+	    very beginning is asking for troubles. It also allows
+	    developpers to use the software and contribute to it in an
+	    organized way. Finally, since &NAME; is a collection of
+	    many packages it allows to debug and architecture their
+	    interdepencies while writing code.
+
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Templates and internationalization. 
+
+	    User visible content is stored in tempates. The preferred
+	    format for HTML pages is XHTML. 
+
+	    Every string displayed is stored using gettext files and
+	    obeys the system locale.
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Upgradable. 
+	    
+	    Each release provides an upgrade procedure from the
+	    previous version. The upgrade may imply a planned
+	    down-time, &NAME; is commited to provide an upgrade
+	    facility that would work without stopping the service. The
+	    XML dump of the database will be used to upgrade the data
+	    using XSL files. The database structure itself is upgraded
+	    with a set of SQL orders. The associated services (smtp,
+	    cvs, etc.) are reset to their initial state (empty) and
+	    the backend scripts are run on the upgraded database to
+	    restore the desired state. 
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Export/Import using CoopX. 
+
+	    CoopX provides a set of XML based schemas to represent all
+	    the data related to a project. This includes the description
+	    of a user (P3P), contact information (XMLvCard) and custom
+	    made schemas for the CVS tree and the bug tracker information
+	    for instance. 
+
+	    The goal of CoopX is not to promote a standard but to use
+	    them where possible. The bug tracker information, for
+	    instance, is codified using a DTD with some documentation
+	    to understand it.  There are no plans to submit it to W3C
+	    or other similar organizations.
+
+	    The CoopX format is used for upgrades and for communication
+	    between distinct &NAME; platforms.
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Simplicity. 
+
+	    The motto is: keep it simple, stupid. Inventing complex
+	    solutions, over-generalization, implementing features for
+	    future use are common pitfalls that lead to unnecessary
+	    complex software. Finding a simple solution often requires
+	    more efforts than accepting a complex one. 
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Modularity. 
+
+	    The myth of a perfectly modular software is hard to
+	    kill. Modularity is an advantage and a burden. Deciding
+	    that a feature will live in a module implies that we have
+	    to define and maintain an interface for it. This is a
+	    significant effort that has to be rapidly compensated by
+	    the actual use of various modules. If the perspective of
+	    using more than one module is too far in the future, we
+	    might as well not bother about it. We need modules but we
+	    should not abuse them.
+	  </para>
+	</listitem>
+      </itemizedlist>
+    </para>
+
+  </sect1>
+
+  <sect1>
+    <title>Implementation</title>
+
+    <para>
+      The following items are implemented, all optionals except for
+      the authentication system and the import/export functions.
+
+      <itemizedlist>
+	<listitem>
+	  <para>
+	    Authentication: anyone can create an account with
+	    associated personal data such as full name and public keys
+	    (P3P). A logged in user can create a group (or project but
+	    in term of authentication it means creating a group to
+	    which users can be added). A set of permission bits is
+	    granted to each application by the authentication system,
+	    the application decides which semantic a specific bit
+	    has. A set of users within a group have the ability to
+	    modify the permission bits.  (priority 0).
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Export and import projects using the CoopX XML based
+	    format that contains all the data necessary to move
+	    projects from one platform to another. (priority 0).
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    CVS with ssh/kerberos/gserver/pserver access (priority 1).
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    WebCVS, ViewCVS  (priority 1).
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Tracker declined in support request, bug tracking, patch manager
+	    and task manager  (priority 1).
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Forum  (priority 2).
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Shell account  (priority 2).
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Poll (priority 2).
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    HTML pages managed from CVS (priority 1).
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    HTML pages managed from shell account (priority 2).
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Mailing lists (priority 1).
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Calendar (priority 2).
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Contact database (priority 2).
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Statistics (priority 1).
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    DNS management (priority 1).
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    FTP (priority 1).
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    rsync (priority 1).
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    SQL database access (priority 2).
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    php (priority 2).
+	  </para>
+	</listitem>
+      </itemizedlist>
+    </para>
+
+    <qandaset defaultlabel="qanda">
+
+      <qandadiv>
+	<title>Code base</title>
+
+	<qandaentry>
+	    <para>
+	      
+	    </para>
+	</qandaentry>
+
+      </qandadiv>
+
+      <qandadiv>
+	<title>Documentation</title>
+
+	<qandaentry>
+	    <para>
+	      Quick start, reference manual, user guide, implementor
+	      guide.  
+
+	      The quick start is ten pages at most, including screen
+	      shots of the installation process. The intended audience
+	      is a GNU/Linux system administrator with basic knowledge
+	      of the various services installed and an understanding
+	      of the purpose of &NAME;. 
+
+	      The reference manual documents every component of &NAME;
+	      and how they work together. It is the ultimate source of
+	      information for anyone willing to operate, grow or fix a
+	      machine running &NAME;. The intended audience is a
+	      GNU/Linux system administrator with good knowledge of
+	      the various services installed and advanced user of
+	      &NAME;.  
+
+	      The user guide explains in detail how to interact with a
+	      machine running &NAME;, how to setup a project on it,
+	      and how to manage the project. The intended audience is
+	      a GNU/Linux user with basic understanding of the
+	      GNU/Linux commands or a developer with basic
+	      understanding of the GNU/Linux development tools.  
+
+	      The implementor guide won't have a fixed structure and
+	      provides basic pointers to help volunteers find their
+	      way in the project. Only when the project becomes mature
+	      enough will the implementor guide be re-worked in a
+	      structured way. The intended audience is a skilled
+	      GNU/Linux system administrator and developer. All
+	      documentation is based on DocBook and also available in
+	      texinfo and man pages formats.
+	    </para>
+	</qandaentry>
+
+      </qandadiv>
+
+      <qandadiv>
+	<title>Back end scripts</title>
+
+	<qandaentry>
+	    <para>
+	      Bind the authentication information in the database to
+	      the system files/services. Import and export projects
+	      automatically or upon request.  Update, configure system
+	      services for CVS, WebCVS/ViewCVS, trackers, HTML over
+	      CVS, mailing lists, statistics, DNS, rsync, FTP,
+	      according to the content of the database. 
+
+	      Backend scripts have two options to interact with phpgroupware.
+	      Either thru the XML dump of the projects or thru xmlrpc. 
+	      Queries are never run directly on the phpgroupware database.
+
+	      Services with priority two are not meant to be usable in
+	      the first stage. Scripts are non intrusive as far as
+	      authentication is concerned. It means that user accounts
+	      and groups unrelated to &NAME; may be created manually
+	      by the system administration and are not overriden by
+	      &NAME;. 
+
+	      All backend scripts are designed to be installed
+	      independently, the only mandatory scripts being
+	      authentication and import/export. Libraries common to
+	      all scripts is developed to factorize and normalize
+	      interaction with phpgroupware. All scripts are designed
+	      to be able to run on a machine that is not the same
+	      machine as other services.
+	    </para>
+	</qandaentry>
+
+      </qandadiv>
+
+      <qandadiv>
+	<title>System administration</title>
+
+	<qandaentry>
+	    <para>
+	      Each system service is installed and configured so that
+	      it can be used by the backend scripts. This may involve
+	      to modify/customize the original distribution in some
+	      cases such as WebCVS/ViewCVS, mailing lists, kernel to
+	      allow more group by users + services coping with glibc
+	      lossage, DNS to access the database instead of a script,
+	      chroot'ed environment for security, reverse proxy
+	      ability for FTP service etc. 
+
+	      Such modifications are packaged and generalized in such
+	      a way that they can be accepted by the Debian developer
+	      responsible of the package and the upstream maintainers.
+	      Interaction with the Debian developer and the upstream
+	      maintainer is done before modifying the software.
+	    </para>
+	</qandaentry>
+
+      </qandadiv>
+
+      <qandadiv>
+	<title>Packaging</title>
+
+	<qandaentry>
+	    <para>
+	      The whole set of packages needed to run a &NAME;
+	      instance on a specific machine can be installed on a
+	      Debian GNU/Linux unstable distribution using apt-get
+	      install task-&NAME; and answering debconf questions on a
+	      maximum of five screens. Prior to this, a line has to be
+	      added to the sources.list files so that the necessary
+	      modified packaged are found if needed. 
+
+	      The task-&NAME; package is included in the unstable
+	      branch and must therefore be able to operate consistently
+	      on the basis of unmodified packages.
+
+	      The applications added to the code base, each backend
+	      script and modified services have their own package. All
+	      packages based on phpgroupware use xmlrpc to configure
+	      phpgroupware so that no web based interaction is required
+	      from the system administrator.
+
+	      
+	      The rationale behind creating a source in addition to
+	      the standard unstable is that it can contain packages
+	      modified in a way that is completely specific to
+	      &NAME;. Although this should be kept to the minimum it
+	      won't be possible to avoid all cases. For instance a
+	      kernel patched with NGROUPS_MAX raised to 512 may be of
+	      no interest to Debian in general. Or a chroot'ed MySQL
+	      server with a quota patch.
+	    </para>
+	</qandaentry>
+
+      </qandadiv>
+    </qandaset>
+
+  </sect1>
+
+</article>
+

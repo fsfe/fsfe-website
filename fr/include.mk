@@ -38,6 +38,9 @@ recurse:
 		done ; \
 	fi
 
+clean:
+	find . -name '*.html' -print | xargs rm 
+
 process: $(HTML)
 
 validate:

@@ -17,3 +17,6 @@ if test $? -ne 0; then
 fi
 
 tools/build.pl -o $DEST -i .
+
+cd $DEST
+symlinks

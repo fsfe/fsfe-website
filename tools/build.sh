@@ -8,11 +8,12 @@
 SOURCE=/home/www/fsfe
 DEST=/home/www/html
 
-tools/build.pl -n -o $DEST -i $SOURCE
+cd $SOURCE
+tools/build.pl -n -o $DEST -i .
 
 if test $? -ne 0; then
    echo "Build not complete. Aborting."
    exit 1
 fi
 
-tools/build.pl -o $DEST -i $SOURCE
+tools/build.pl -o $DEST -i .

@@ -38,25 +38,13 @@
     </table>
 
     <!-- Title bar -->
-    <table width="100%" border="0" cellspacing="0" cellpadding="4">
+    <table width="100%" border="0" cellspacing="0" cellpadding="8">
 	<tr>
 	  <td class="TopBody">
-	  <!--
-	    <a href="{$fsfeurope}/index.fr.html">
-	      <img src="{$fsfeurope}/images/gnulogo.jpg" alt="GNU Logo" border="0" />
+	    <a href="{$fsfeurope}/">
+	      <img src="{$fsfeurope}/images/fsfe-logo.png" alt="FSFE Logo"
+    border="0" width="259" height="66" align="left"/>
 	    </a>
-	  --> &nbsp;
-	  </td>
-	  <td class="TopBody" width="99%" height="99%">
-	    <a class="TopTitleB">FSF Europe</a>
-	    <br/>
-	    <!--
-	    <a class="TopTitle">Free Software - l'entreprise et l'individu sur un pied d'égalité</a>
-	    -->
-	  </td>
-	  <td align="right" valign="top" class="TopBody">
-	    <a href="{$fsfeurope}/documents/freesoftware.fr.html" class="T2">Qu'est-ce&nbsp;que&nbsp;le&nbsp;Logiciel&nbsp;Libre?</a><br/>
-	    <a href="{$fsfeurope}/documents/gnuproject.fr.html" class="T2">Qu'est-ce&nbsp;que&nbsp;le&nbsp;Projet&nbsp;GNU?</a><br/>
 	  </td>
 	</tr>
     </table>
@@ -78,8 +66,8 @@
               <td class="TopTitle" align="center">Projets</td></tr>
 		<tr>
 		  <td class="Section" align="right">
-		    <a href="{$fsfeurope}/law/law.fr.html" class="T2">Protéger le Logiciel Libre</a><br />
-		    <a href="{$fsfeurope}/coposys/index.fr.html" class="T2">Coposys</a><br />
+		    <a href="{$fsfeurope}/law/law.fr.html">Protéger le Logiciel Libre</a><br />
+		    <a href="{$fsfeurope}/coposys/index.fr.html">Coposys</a><br />
 		  </td>
 		</tr>
 
@@ -91,73 +79,73 @@
               <xsl:choose>
                 <xsl:when test="$path='index.fr.xhtml'">Accueil</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/index.fr.html" class="T2">Accueil</a>
+                  <a href="{$fsfeurope}/index.fr.html">Accueil</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
                 <xsl:when test="$path='contact/contact.fr.xhtml'">Contact</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/contact/contact.fr.html" class="T2">Contact</a>
+                  <a href="{$fsfeurope}/contact/contact.fr.html">Contact</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
                 <xsl:when test="$path='about/index.xhtml'">À propos</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/about/index.html" class="T2">À propos</a>
+                  <a href="{$fsfeurope}/about/index.html">À propos</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
                 <xsl:when test="$path='background.fr.xhtml'">Contexte</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/background.fr.html" class="T2">Contexte</a>
+                  <a href="{$fsfeurope}/background.fr.html">Contexte</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
                 <xsl:when test="$path='documents/documents.fr.xhtml'">Documents</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/documents/documents.fr.html" class="T2">Documents</a>
+                  <a href="{$fsfeurope}/documents/documents.fr.html">Documents</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
                 <xsl:when test="$path='mailman/index.fr.xhtml'">Listes de diffusion</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/mailman/index.fr.html" class="T2">Listes de diffusion</a>
+                  <a href="{$fsfeurope}/mailman/index.fr.html">Listes de diffusion</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
                 <xsl:when test="$path='education/education.fr.xhtml'">Éducation</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/education/education.fr.html" class="T2">Éducation</a>
+                  <a href="{$fsfeurope}/education/education.fr.html">Éducation</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
                 <xsl:when test="$path='news/news.fr.xhtml'">Nouvelles</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/news/news.fr.html" class="T2">Nouvelles</a>
+                  <a href="{$fsfeurope}/news/news.fr.html">Nouvelles</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
                 <xsl:when test="$path='events/events.fr.xhtml'">Evènements</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/events/events.fr.html" class="T2">Evènements</a>
+                  <a href="{$fsfeurope}/events/events.fr.html">Evènements</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
                 <xsl:when test="$path='press/index.fr.xhtml'">Section Presse</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/press/index.fr.html" class="T2">Section Presse</a>
+                  <a href="{$fsfeurope}/press/index.fr.html">Section Presse</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
                 <xsl:when test="$path='speakers/speakers.fr.xhtml'">Intervenants</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/speakers/speakers.fr.html" class="T2">Intervenants</a>
+                  <a href="{$fsfeurope}/speakers/speakers.fr.html">Intervenants</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
                 <xsl:when test="$path='gbn/index.fr.xhtml'">GNU Business Network</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/gbn/index.fr.html" class="T2">GNU Business Network</a>
+                  <a href="{$fsfeurope}/gbn/index.fr.html">GNU Business Network</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <br/></td>
@@ -166,10 +154,10 @@
             <tr><td class="TopTitle" align="center">Organisations associées</td></tr>
 		<tr>
 		  <td class="TopBody" align="right">
-		    <a href="http://www.april.org/" class="T2">APRIL</a><br />
-                    <a href="http://www.softwarelibero.it" class="T2">AsSoLi</a><br />
-		    <a href="http://www.fsf.or.at" class="T2">FFS</a><br />
-		    <a href="http://www.ofset.org/" class="T2">OFSET</a><br />
+		    <a href="http://www.april.org/">APRIL</a><br />
+                    <a href="http://www.softwarelibero.it">AsSoLi</a><br />
+		    <a href="http://www.fsf.or.at">FFS</a><br />
+		    <a href="http://www.ofset.org/">OFSET</a><br />
 	          </td>
 		</tr>
 
@@ -179,11 +167,11 @@
             <tr>
               <td align="right"><br/>
               <a href="http://savannah.gnu.org/projects/fsfe/"
-                   class="T2">Résumé du Projet</a><br/>
+                  >Résumé du Projet</a><br/>
               <a href="http://www.gnu.org/server/standards/"
-                   class="T2">Guide GNU</a><br/>
+                  >Guide GNU</a><br/>
               <a href="http://savannah.gnu.org/pm/?group_id=53"
-                   class="T2">Tâches</a><br/>
+                  >Tâches</a><br/>
               <br/></td>
             </tr>
           </table>

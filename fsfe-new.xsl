@@ -90,10 +90,10 @@
                 <xsl:text> </xsl:text>
               </xsl:for-each>
               <xsl:if test="/buildinfo/@outdated='yes'"><br />
-                <xsl:apply-templates select="/buildinfo/textset/text[@id='outdated']" />
+                <xsl:apply-templates select="/buildinfo/textset/text[@id='outdated']/node()" />
               </xsl:if>
               <xsl:if test="/buildinfo/@language!=/buildinfo/document/@language"><br />
-                <xsl:apply-templates select="/buildinfo/textset/text[@id='notranslation']" />
+                <xsl:apply-templates select="/buildinfo/textset/text[@id='notranslation']/node()" />
               </xsl:if>
             </div>
           </td>

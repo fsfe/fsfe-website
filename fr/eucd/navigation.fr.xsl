@@ -4,7 +4,7 @@
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:template match="/html[@lang='fr']/body/div">
-    <!-- $Id: navigation.fr.xsl,v 1.5 2002-12-17 11:18:15 loic Exp $ -->
+    <!-- $Id: navigation.fr.xsl,v 1.6 2002-12-17 11:26:48 loic Exp $ -->
     <!-- $Source: /root/wrk/fsfe-web/savannah-rsync/fsfe/fr/eucd/navigation.fr.xsl,v $ -->
     <!-- Top menu line -->
     <table border="1" cellpadding="5" cellspacing="10" class="main">
@@ -33,7 +33,7 @@
       </tr>
       
     </table>
-    <address><a href="mailto:www@france.fsfeurope.org">Virtual Webmaster</a></address>
+    <address><a href="mailto:contact@eucd.info">Contact:</a> EUCD.INFO c/o FSF France 8, rue de valois, 75001 Paris - 01 42 76 05 49</address>
   </xsl:template> 
 
 <!--

@@ -147,7 +147,9 @@
 	<td class="TopTitle">
           <a href="{$filebase}.xhtml" class="T1">XHTML Source</a>&nbsp;&nbsp;|
           &nbsp;&nbsp;<a href="{$fsfeurope}/fsfe.xsl" class="T1">XSL Style
-	  Sheet</a><br/>
+	  Sheet</a>&nbsp;&nbsp;| <a
+	  href="http://savannah.gnu.org/cgi-bin/viewcvs/fsfe/{$path}?cvsroot=www.gnu.org"
+	  class="T1">Veränderungen</a><br/>
 	</td>
 	<td class="TopTitle" align="right">
 	  &nbsp;<a href="mailto:webmaster@fsfeurope.org"
@@ -158,8 +160,8 @@
 	<td class="Body" align="center">
 	<font size="-2">
 	  Copyright (C) 2001 FSF Europe<br/>
-	  Verbatim copying and distribution of this entire article is
-	    permitted in any medium, provided this notice is preserved.
+	  Zitat und Verteilung des vollständigen Artikels ist über jedes
+	    Medium gestattet, solange dieser Hinweis erhalten bleibt.
 	</font>
 	</td>
         <td class="Body">&nbsp;</td>

@@ -81,6 +81,7 @@
 		<a href="{$fsffrance}/voting/voting.en.html">E-Vote</a><br />
 		<a href="{$fsfeurope}/coposys/index.en.html">Coposys</a><br />
 		<a href="{$fsfeurope}/documents/whyfs.en.html">We speak about Free Software</a><br />
+		<a href="{$fsffrance}/science/science.en.html">Science and FS</a><br />
 	      </td>
 	    </tr>
 	    <tr><td class="TopTitle" align="center">FSF France</td></tr>

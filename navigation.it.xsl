@@ -51,7 +51,7 @@
 	    <a class="TopTitleB">FSF Europe</a>
 	    <br/>
 	    <!--
-	    <a class="TopTitle">Software LIbero - pari opportunità per le persone e l'economia</a>
+	    <a class="TopTitle">Software Libero - pari opportunità per le persone e l'economia</a>
 	    -->
 	  </td>
 	  <td align="right" valign="top" class="TopBody">

@@ -4,16 +4,9 @@
 
   <xsl:output method="xml" encoding="ISO-8859-1" indent="yes" />
 
-  <!-- Basically, copy everything -->
-  <xsl:template match="/">
-    <xsl:copy>
-      <xsl:apply-templates select="@*|node()" />
-    </xsl:copy>
-  </xsl:template>
-
   <!-- In /html/body node, append dynamic content -->
   <xsl:template match="/html/body">
-    <body>
+    <xsl:copy>
       <!-- First, include what's in the source file -->
       <xsl:apply-templates />
 
@@ -26,21 +19,48 @@
       <xsl:for-each select="/html/set/news
         [translate (@date, '-', '') &lt;= translate ($today, '-', '')]">
         <xsl:sort select="@date" order="descending" />
-        <p>
-         <b>(<xsl:value-of select="@date" />) <xsl:value-of select="title" /></b><br />
-         <xsl:value-of select="body" />
-         <xsl:variable name="link"><xsl:value-of select="link" /></xsl:variable>
-         <xsl:if test="$link!=''">
-           [<a href="{link}"><xsl:value-of select="/html/text[@id='more']" />]</a>
-         </xsl:if>
-        </p>
+        <xsl:apply-templates select="*"/>
       </xsl:for-each>
-    </body>
+    </xsl:copy>
   </xsl:template>
 
   <!-- Do not copy <set> and <text> to output at all -->
-  <xsl:template match="set" />
-  <xsl:template match="text" />
+  <xsl:template match="/html/set" />
+  <xsl:template match="/html/text" />
+
+  <!-- How to show a single news entry -->
+  <xsl:template select="news">
+    <xsl:element name="p">
+
+      <!-- Date and title -->
+      <xsl:element name="b">
+        <xsl:text>(</xsl:text>
+        <xsl:value-of select="@date" />
+        <xsl:text>) </xsl:text>
+        <xsl:value-of select="title" />
+      </xsl:element>
+      <xsl:element name="br" />
+
+      <!-- Text -->
+      <xsl:apply-templates select="/html/set/news/body/node()" />
+
+      <!-- Link -->
+      <xsl:apply-templates select="/html/set/news/link" />
+
+    </xsl:element>
+  </xsl:template>
+
+  <!-- How to show a news link -->
+  <xsl:template match="/html/set/news/link">
+    <xsl:element name="a">
+      <xsl:attribute name="href">
+        <xsl:value-of select="text()" />
+      </xsl:attribute>
+      <xsl:text>[</xsl:text>
+      <xsl:value-of select="/html/text[@id='more']" />
+      <xsl:text>]</xsl:text>
+    </xsl:element>
+  </xsl:template>
 
   <!-- For all other nodes, copy verbatim -->
   <xsl:template match="@*|node()" priority="-1">
@@ -48,6 +68,4 @@
       <xsl:apply-templates select="@*|node()"/>
     </xsl:copy>
   </xsl:template>
-
 </xsl:stylesheet>
-

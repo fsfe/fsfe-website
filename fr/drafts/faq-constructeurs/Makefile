@@ -85,7 +85,8 @@ help:
 	@echo "make hdn    generates a single html chunk using DSSSL"
 	@echo
 
-all: test html-xsl html-xsl-cut print
+#all: test html-xsl html-xsl-cut print
+all: test hdn print
 
 # Shortcuts
 ph: prepare-html

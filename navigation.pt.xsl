@@ -97,6 +97,12 @@
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
+                <xsl:when test="$path='about/index.xhtml'">Sobre</xsl:when>
+                <xsl:otherwise>
+                  <a href="{$fsfeurope}/about/index.html" class="T2">Sobre</a>
+                </xsl:otherwise>
+              </xsl:choose><br/>
+              <xsl:choose>
                 <xsl:when test="$path='background.pt.xhtml'">Contexto</xsl:when>
                 <xsl:otherwise>
                   <a href="{$fsfeurope}/background.pt.html" class="T2">Contexto</a>

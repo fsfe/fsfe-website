@@ -88,7 +88,7 @@
 		    <a href="{$fsffrance}/philosophy/philosophy.fr.html" class="T2">Philosophie</a><br />
 		    <a href="http://agenda.lolix.org/" class="T2">Agenda</a><br />
 		    <a href="{$fsffrance}/news/news.fr.html" class="T2">Nouvelles</a><br />
-		    <a href="{$fsffrance}/events/events.fr.html" class="T2">Evènements</a><br />
+		    <a href="{$fsffrance}/events/events.fr.html" class="T2">Événements</a><br />
 		    <a href="http://savannah.gnu.org/pm/task.php?group_project_id=37&amp;group_id=53&amp;func=browse" class="T2">Tâches</a><br />
 		    <a href="{$gnu}/jobs/jobsFR.fr.html" class="T2">Emploi</a><br />
 		    <a href="{$fsffrance}/press/press.fr.html" class="T2">Section presse</a><br />

@@ -52,7 +52,6 @@ TD.Submit  	{ color: #1C2D67; font-weight: bold; background: #9DAEE8 }
 TD.newstext     { font-family: Verdana, Arial, Helvetica, sans-serif; 
         font-size: 13px; 
         color: #505050;
-        text-align: left; 
         vertical-align: top; 
 	background: #c0c0c0
 }
@@ -67,6 +66,6 @@ A.topbanner
 
 A         	{ font-family: Helvetica, Verdana; font-size: 13px; color: #0000FF }
 P		{ font-family: Helvetica, Verdana; font-size: 13px; color: #000000 }
-DIV		{ font-family: Helvetica, Verdana; font-size: 13px; color: #000000 }
+DIV		{ margin: 1em; font-family: Helvetica, Verdana; font-size: 13px; color: #000000; }
 TD	  	{ font-family: Helvetica, Verdana; font-size: 13px; }
 

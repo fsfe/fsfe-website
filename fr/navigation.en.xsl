@@ -160,6 +160,15 @@
                     </xsl:choose> 
 		  </td>
 		</tr>
+
+		<tr><td class="TopTitle" align="center">Associated organizations</td></tr>
+		<tr>
+		  <td class="TopBody" align="right">
+		    <a href="http://www.april.org/" class="T2">APRIL</a><br />
+		    <a href="http://www.ofset.org/" class="T2">OFSET</a><br />
+	          </td>
+		</tr>
+
 		<tr><td class="TopTitle" align="center">Sysadmin</td></tr>
 		<tr>
 		  <td class="TopBody" align="right">

@@ -1,14 +1,14 @@
 body {
-       font-family: arial, sans-serif;
        color: black;  
+       font-family: arial, sans-serif;
        background-color: white;
 }
 table.main {
              border: 0 solid;
 }
+
 h1 {
      font-weight: bold;
-     font-size: 12pt;
 }
 
 ul { list-style: circle;  }

@@ -157,6 +157,12 @@
 	  <a href="{$fsfeurope}/gbn/index.html">GNU Business Network</a>
 	 </xsl:otherwise>
 	</xsl:choose><br/>
+              <xsl:choose>
+                <xsl:when test="$path='order/order.en.xhtml'">Articles</xsl:when>
+                <xsl:otherwise>
+		  <a href="{$fsfeurope}/order/order.en.html">Articles</a>
+                </xsl:otherwise>
+              </xsl:choose><br/>
 	<br/></td>
       </tr>
       

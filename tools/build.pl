@@ -342,7 +342,6 @@ while (my ($file, $langs) = each %bases) {
             my $style_doc = $parser->parse_file("$opts{i}/$file.rss.xsl");
 	    my $stylesheet = $xslt_parser->parse_stylesheet($style_doc);
 	    my $results = $stylesheet->transform($sourcedoc);
-            $stylesheet->output_file($sourcedoc, "$opts{o}/$dir/$file.$lang.raw");
 	    $stylesheet->output_file($results, "$opts{o}/$dir/$file.$lang.rss")
 		unless $opts{n};
           }

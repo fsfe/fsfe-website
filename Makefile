@@ -1,18 +1,51 @@
-pags = index.html mailinglists.html background.html
-pags.de = index.de.html
-pags.fr = index.fr.html
+#
+# XML validator
+# -------------
+# apt-get install rxp
+# or
+# ftp://ftp.cogsci.ed.ac.uk/pub/richard/rxp-1.2.3.tar.gz
+#
+# XSLT processor
+# --------------
+#
+# sablotron (sabcmd)
+# apt-get install sablotron
+#
+# libxslt + libxml2 (xsltproc)
+# http://www.xmlsoft.org/
+#
+XSLTPROC = sabcmd
 
-all: $(pags) $(pags.de) $(pags.fr)
+FSFFRANCE = http://france.fsfeurope.org
+FSFEUROPE = . # http://www.fsfeurope.org
+FSF       = http://www.fsf.org
+GNU       = http://www.gnu.org
 
-$(pags): %.html: %.xml menu.xml fsfe.xsl
-	sabcmd fsfe.xsl $< > $@
+XSLTOPTS = \
+	'$$fsffrance=$(FSFFRANCE)' \
+	'$$fsf=$(FSF)' \
+	'$$gnu=$(GNU)'
 
-$(pags.de): %.html: %.xml menu.de.xml fsfe.de.xsl
-	sabcmd fsfe.de.xsl $< > $@
+all:: process 
 
-$(pags.fr): %.html: %.xml menu.fr.xml fsfe.fr.xsl
-	sabcmd fsfe.fr.xsl $< > $@
+# process xhtml files in all subdirectories, except fr/
+process: 
+	@find * -path 'fr' -prune -o -name '*.xhtml' -print | while read path ; \
+	do \
+		base=`expr $$path : '\(.*\).xhtml'` ; \
+		filebase=`basename $$base` ; \
+		dir=`dirname $$path` ; \
+		root=`dirname $$path | perl -pe 'chop; s:([^/]+):..:g if($$_ ne ".")'` ; \
+		$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase | \
+		perl -MFile::Copy -p -e '$$| = 1; copy("'$$dir'/$$1", \*STDOUT) if(/\#include virtual=\"(.*?)\"/); s/\$$//g if(/\$$''Date:/);' > $$base.html ; \
+	done
 
-clean:
-	rm $(pags) $(pags.de) $(pags.fr)
+# validate xhtml files in all subdirectories, except fr/
+validate:
+	find . -path './fr' -prune -o -name '*.xhtml' -print | while read file ; \
+	do \
+		echo $$file ; \
+		rxp -Vs $$file ; \
+	done
 
+.PHONY: process recurse

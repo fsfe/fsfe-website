@@ -1,470 +1,919 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <!-- <?xml version="1.0" encoding="UTF-8"?> -->
 <!-- encoding: Identifies the character set used to encode the data.
-     "ISO-8859-1" is "Latin-1" the Western European and English language character set.
-     The default is compressed Unicode: UTF-8. -->
+     "ISO-8859-1" is "Latin-1" the Western European and English 
+     language character set.
+     The default is compressed Unicode: UTF-8.
+-->
 
 <!--
 Old version of the XML DTD, before it became endorsed by OASIS
-
 <!DOCTYPE book PUBLIC "-//Norman Walsh//DTD DocBk XML V3.1.3//EN"
                       "http://nwalsh.com/docbook/xml/3.1.3/docbookx.dtd" [
 -->
 <!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
-                      "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+                         "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
 
-<!ENTITY title "F.A.Q electronic manufacturers">
-<!ENTITY subtitle "Frequently Asked Questions about drivers for GNU/Linux systems">
+<!-- *************************************************************** -->
+<!-- External documents                                              -->
+<!-- *************************************************************** -->
+
+<!ENTITY doc.gnuFDL SYSTEM "gnuFDL.xml">
+
+<!-- *************************************************************** -->
+<!-- General aliases                                                 -->
+<!-- *************************************************************** -->
+
+<!ENTITY title 
+         "FAQ for hardware and electronic components manufacturers">
+<!ENTITY subtitle 
+         "Frequently Asked Questions on drivers availability under any operating system">
+
+<!ENTITY OS  "Open Source Software">
+<!ENTITY LL  "Free Software">
+<!ENTITY LLs "Free Sotwares">
+<!ENTITY FSF "Free Software Foundation">
+<!ENTITY OSI "Open Source Initiative">
+
+<!-- *************************************************************** -->
+<!-- URL aliases                                                     -->
+<!-- *************************************************************** -->
+
+<!-- Factorization for easy replacement -->
+<!ENTITY server     "http://www.aful.org">
+<!ENTITY server.faqs      "&server;/faqs/faq-constructeurs/">
+<!ENTITY server.solutions "&server;/solutions/">
+
+<!ENTITY url.ssii
+         "&server.solutions;ssii.fr.html">
+
+<!-- French versions -->
+<!ENTITY url.longVersion.fr.html
+         "&server.faqs;FAQConstructeurs.fr.html">
+<!ENTITY url.longVersion.fr.pdf
+         "&server.faqs;FAQConstructeurs.fr.pdf">
+
+<!ENTITY url.shortVersion.fr.html
+         "&server.faqs;shortFAQConstructeurs.fr.html">
+<!ENTITY url.shortVersion.fr.pdf
+         "&server.faqs;shortFAQConstructeurs.fr.pdf">
+
+<!-- English versions -->
+<!ENTITY url.longVersion.en.html
+         "&server.faqs;FAQConstructeurs.en.html">
+<!ENTITY url.longVersion.en.pdf
+         "&server.faqs;FAQConstructeurs.en.pdf">
+
+<!ENTITY url.shortVersion.en.html
+         "&server.faqs;shortFAQConstructeurs.en.pdf">
+<!ENTITY url.shortVersion.en.pdf
+         "&server.faqs;shortFAQConstructeurs.en.html">
 
 ]>
 
 <article class="faq" lang="en">
-
   <articleinfo>
     <title>&title;</title>
-    <subtitle>&subtitle;</subtitle>
+    <subtitle>&subtitle;
+      <phrase condition="long">(long version)</phrase>
+      <phrase condition="short">(short version)</phrase>
+    </subtitle>
 
     <author>
       <affiliation>
-	<orgname>AFUL
-	  (Association Francophone des Utilisateurs de Linux et des Logiciels Libres)</orgname>
+	<orgname>
+	  AFUL
+	  (Association Francophone des Utilisateurs de Linux et des Logiciels Libres i.e. French speaking Linux and Free Software Users' Association)
+	</orgname>
+      </affiliation>
+      <affiliation>
+	<orgname>
+	  APRIL 
+	  (Association Pour la Promotion et la Recherche en Informatique Libre i.e. Association for Promotion and Research on Free Computing)
+   	</orgname>
       </affiliation>
     </author>
-    <pubdate>Juin 2001</pubdate>
+
+    <pubdate>September 2001</pubdate>
+    <copyright>
+      <year>2001</year>
+      <holder>AFUL, APRIL</holder>
+      <!-- If there wasn't a buggy stylesheet support, 
+      it should be like this : -->
+      <!--
+    <holder>AFUL</holder>
+    <holder>APRIL</holder>
+      -->
+    </copyright>
+
+    <legalnotice>
+      <para>
+        Permission is granted to copy, distribute and/or modify this
+        document under the terms of the GNU Free Documentation
+        License, Version 1.1 or any later version published by the
+        &FSF;; with no Invariant Sections, with no
+        Front-Cover Texts, and with the no Back-Cover Texts.  A copy
+        of the license is included in the section entitled "GNU Free
+        Documentation License".
+      </para>
+    </legalnotice>
+
   </articleinfo>
 
 
+  <sect1>
+    <title>Questions / Réponses</title>
 
-  <bridgehead>Questions / Réponses</bridgehead>
+    <qandaset defaultlabel="qanda">
 
-  <qandaset defaultlabel="qanda">
+      <qandadiv>
+	<title>Définitions</title>
 
-    <qandaentry>
-      <question>
-	<para>
-	  Who is concerned by this document ?
-	</para>
-      </question>
-      <answer>
-	<para>
-	  Every manufacturer and distributor of electronic hardware.
-	</para>
-      </answer>
-    </qandaentry>
-
-    <qandaentry>
-      <question>
-	<para>
-	  My customers are asking for Linux drivers, what can I do ?
-	</para>
-      </question>
-      <answer>
-	<para>
-	  Pick one or more strategy in those :
-	  <orderedlist>
-	    <listitem>
-	      <para>
-		Announce there is no support for your hardware
-	      </para>
-	    </listitem>
-	    <listitem>
-	      <para>
-		Publish your hardware interface specifications
-	      </para>
-	    </listitem>
-	    <listitem>
-	      <para>
-		Developp drivers and release them in a binary form
-	      </para>
-	    </listitem>
-	    <listitem>
-	      <para>
-		Developp drivers under an Open Source or Free Sofware licence
-	      </para>
-	    </listitem>
-	  </orderedlist>
-	</para>
-      </answer>
-    </qandaentry>
-
-    <qandaentry>
-      <question>
-	<para>
-	  Is having a Linux support useful ?
-	</para>
-      </question>
-      <answer>
-	<para>
-	  It will generate sells.
-	</para>
-	<para>
-	  Linux potential market is huge. It is the only operating system 
-	  presently gaining market shares over all its competitors. It is 
-	  favored by many computer specialists, who are prescriptors.
-	  It is now commercially and financely backed by the biggest 
-	  manufacturers (SUN, IBM, DELL, HP, ...).
-	  Some goverments are studying the use of Free Software as standard 
-	  for their administration (France, Poland, Argentina, China, ...)
-	</para>
-      </answer>
-    </qandaentry>
-
-    <qandaentry>
-      <question>
-	<para>
-	  Can I have my drivers developped for free ?
-	</para>
-      </question>
-      <answer>
-	<para>
-	  Yes. By giving your specifications to voluntary developpers.
-	</para>
-	<para>
-	  But this approach has some drawbacks :
-	  <itemizedlist>
-	    <listitem>
-	      <para>
-		The numbers of developpers rely in part on luck.
-	      </para>
-	    </listitem>
-	    <listitem>
-	      <para>
-		Voluntary people work at their own pace.
-	      </para>
-	    </listitem>
-	    <listitem>
-	      <para>
-		The drivers may therefore not be available for the commercial 
-		release of the product.
-	      </para>
-	    </listitem>
-	    <listitem>
-	      <para>
-		No extra sell can be expected before drivers availability.
-	      </para>
-	    </listitem>
-	    <listitem>
-	      <para>
-		No control is exerced on the quality of resulting software.
-	      </para>
-	    </listitem>
-	  </itemizedlist>
-	</para>
-      </answer>
-    </qandaentry>
-
-    <qandaentry>
-      <question>
-	<para>
-	  Can I avoid to release the specifications of my product ?
-	</para>
-      </question>
-      <answer>
-	<para>
-	  Yes. By developping and releasing binary drivers.
-	</para>
-	<para>
-	  Advantages to keep secret the specifications are :
-	  <itemizedlist>
-	    <listitem>
-	      <para>
-		protecting your products from cloning
-	      </para>
-	    </listitem>
-	    <listitem>
-	      <para>
-		hiding weaknesses in low quality products.
-	      </para>
-	    </listitem>
-	  </itemizedlist>
-
-	  Inconvenients are :
-	  <itemizedlist>
-	    <listitem>
-	      <para>
-	      
-		be deprieved of help and support from users for maintenance.
-	      </para>
-	    </listitem>
-	    <listitem>
-	      <para>
-		a degraded image in the eye of the free software community
-	      </para>
-	    </listitem>
-	    <listitem>
-	      <para>
-		a superior cost in developpment
-	      </para>
-	    </listitem>
-	    <listitem>
-	      <para>
-		a market limited to platforms chosen initially
-	      </para>
-	    </listitem>
-	  </itemizedlist>
-
-	  Knowing that Linux versions appears at a much higher rate than others OSes and that the present progression of electronic makes cloning ineffective.
-	</para>
-      </answer>
-    </qandaentry>
-
-    <qandaentry>
-      <question>
-	<para>
-	  How can I make money if I give my products ?
-	</para>
-      </question>
-      <answer>
-	<para>
-	Software is not a product, its a service. A product has a cost for
-	mass-production and distribution. Your product is your hardware.
-	</para>
-	<para>
-	Software drivers have not always been developped by manufacturers.
-	Before, manufacturers did release their specifications and OS's 
-	developpers or customers were in charge of developping software drivers.
-	</para>
-	<para>
-	That method was unsatisfacting for many reasons. Some disappeared with
-	the growth of Internet, some thanks to the GPL.
-	</para>
-	<para>
-	The present system is unsatisfacting, too. It favors the appeareance 
-	of monopolies which have the power to put customers and furnishers 
-	under an unbearable pressure.
-	</para>
-      </answer>
-    </qandaentry>
-
-    <qandaentry>
-      <question>
-	<para>
-	  What advantages are to be expected from Open Source ?
-	</para>
-      </question>
-      <answer>
-	<para>
-	  Software can be adapted by users. 
-	  It therefore remains in adequation to their needs. 
-	  Minor, frustrating bugs can be corrected, new ideas can appear.
-	</para>
-	<para>
-	  Free Software is a guaranty of the product lasting.
-	  Should the furnisher disappears, software code could still be maintained.
-	  In the decision of purchase, it is a supplementary guarantee for the customer, 
-	  thus a selling point for the builder.
-	</para>
-      </answer>
-    </qandaentry>
-
-    <qandaentry>
-      <question>
-	<para>
-	  What is the difference between "Open source" and "Free Software" ?
-	</para>
-      </question>
-      <answer>
-	<para>
-	In Open source, sources are published, but you remain the sole owner of the code. 
-	The free software authorizes also modification and the redistribution. Open Source is only a characteristic of free software.
-	</para>
-      </answer>
-    </qandaentry>
-
-    <qandaentry>
-      <question>
-	<para>
-	  My developers are not formed in Linux. What should I do ?
-	</para>
-      </question>
-      <answer>
-	<para>
-	  <itemizedlist>
-	    <listitem>
-	      <para>
-		form them
-	      </para>
-	    </listitem>
-	    <listitem>
-	      <para>
-		Recruit new ones who have this field of competence
-	      </para>
-	    </listitem>
-	    <listitem>
-	      <para>
-		Address specialized companies of service
-	      </para>
-	    </listitem>
-	  </itemizedlist>
-	</para>
-      </answer>
-    </qandaentry>
-
-    <qandaentry>
-      <question>
-	<para>
-	  Do I risk pressures on behalf of influent OSes publishers ?
-	</para>
-      </question>
-      <answer>
-	<para>
-	Some have an egocentric notion of the free-market economy.
-	</para>
-      </answer>
-    </qandaentry>
-
-    <qandaentry>
-      <question>
-	<para>
-	Do you advise the Open source in every case ?
-	</para>
-      </question>
-      <answer>
-	<para>
-	  Non.
-	</para>
-	<orderedlist>
-	  <listitem>
+	<qandaentry>
+	  <question>
 	    <para>
-            The downmarket products have no interest to display in broad 
-	    daylight their mediocrity. The binary driver is then more suited.
+	      What is GNU/Linux ?
 	    </para>
-	  </listitem>
-	  <listitem>
+	  </question>
+	  <answer>
 	    <para>
-       	    The informers software, the hidden functions are afraid as well of the light. This case is a criterion which will tilt companies and governments to choose the manufacturers who opt for transparency.
+	      GNU/Linux is a multiusers, multitask operating system which can execute on a large number of hardware platforms (Intel x86, PowerPC, Alpha, SPARC, ARM, etc.).
+	      The most important characteristic of this operating system, besides its technical qualities and its growing fame, lies in the fact that GNU/Linux is an assembly of &LLs;.
 	    </para>
-	  </listitem>
-	</orderedlist>
-      </answer>
-    </qandaentry>
+	    <para>
+              The GNU/Linux system will often be mentioned in this document, essentially because the approached problems concern presently number of users of this system. But these problems stay valid <emphasis>for every operational systems</emphasis>
+	    </para>
+	  </answer>
+	</qandaentry>
 
-    <qandaentry>
-      <question>
-	<para>
-	What are the existing licenses? Which one is best adapted to my case ?
-	</para>
-      </question>
-      <answer>
-	<para>
-	  On this subject, you can consult <ulink url="http://www.fsf.org/philosophy/license-list.html">http://www.fsf.org/philosophy/license-list.html</ulink>
-	</para>
-      </answer>
-    </qandaentry>
+	<qandaentry condition="long">
+	  <question>
+	    <para>
+	      Why does one sometimes refers to GNU/Linux instead of Linux?
+	    </para>
+	  </question>
+	  <answer>
+	    <para>
+              Introduced by Richard Mr Stallman in 1984, GNU is a project of operating system consisting solely of &LLs;. The Linux kernel, a creation which began in 1991, is the last component which has allowed to achieve an autonomous operating system solely composed of &LL;. GNU/Linux is thus the conjunction of the project GNU and the Linux kernel. It is this set which is distributed today by Debian, Mandrake, RedHat, etc. 
+	    </para>
+	  </answer>
+	</qandaentry>
 
-    <qandaentry>
-      <question>
-	<para>
-	May I use the penguin Logo freely?
-	</para>
-      </question>
-      <answer>
-	<para>
-	  Yes. There is also a specific logo bound to a certification <ulink url="http://www.open-hardware.org">http://www.open-hardware.org</ulink>.
-	</para>
-      </answer>
-    </qandaentry>
+	<qandaentry>
+	  <question id="libreLicense">
+	    <para id="libreLicense.text">
+	      What a free license ?
+	    </para>
+	  </question>
+	  <answer>
+	    <para>
+              A license can be indicated under the generic name of <quote>free license</quote> if it correspond to the criteria of &LL; licences (a <ulink url="http://www.fsf.org/philosophy/license-list.htm">list</ulink> is available on the  on the FSF's site) or to &OS; licenses (a <ulink url="http://opensource.org/licenses">list</ulink> is available on the on the &OSI;'s site)
+	    </para>
+	    <para condition="long">
+	      &LL; licenses correspond to the criteria stated by &LL; definition. Open Source Licenses correspond to the criteria stated in Open Source definition. 
+	    </para>
+	    <para condition="long">
+	      Although many licenses appear in both these lists, they are not strictly identical, &LL; movement and the &OS; movement being based on different fundamental postulates.
+	    </para>
+	    <para condition="long">
+	      &OS; emphasizes on the opening and efficiency of the computer software developments, while the foundations of the &LL; movement are freedom and protection of the users' freedom.
+	    </para>
+	    <para condition="long">
+	      In both cases, determining if a license is in accordance with the definition ask for consequent work and requires equally legal competences and an understanding of the philosophy of the movements. For that reason these two lists are a very important reference.
+	    </para>
+	  </answer>
+	</qandaentry>
 
-    <qandaentry>
-      <question>
-	<para>
-	  Where may I learn more on free software ?
-	</para>
-      </question>
-      <answer>
-	<para>
-	  You can contact the following structures:
-	  <itemizedlist>
-	    <listitem>
-	      <para>
-		<ulink url="http://www.aful.org">AFUL</ulink> 
-		<ulink url="mailto:aful@aful.org?subject=Constructeurs">
-		  &lt;aful@aful.org&gt;</ulink>
-	      </para>
-	    </listitem>
-	    <listitem>
-	      <para>
-		<ulink url="http://france.fsfeurope.org/">FSF France</ulink> 
-		<ulink url="mailto:contact@france.fsfeurope.org">
-		  &lt;contact@france.fsfeurope.org&gt;</ulink>
-	      </para>
-	    </listitem>
-	  </itemizedlist>
-	</para>
-      </answer>
-    </qandaentry>
+	<qandaentry>
+	  <question>
+	    <para>
+	      What a non-free (or proprietary) license ?
+	    </para>
+	  </question>
+	  <answer>
+	    <para>
+              A <quote>non-free</quote> license is a license which requires a transaction with the holder of the license for gaining any right related to the software.
+	    </para>
+	    <para>
+              First of which is the right to use, often conditioned by the payment of an amount of money. These licenses forbid as well the copy, the study of the software's functionning, its modification and arbitrary combination of these possibilities.  
 
-  </qandaset>
+	      <!--
+	      For example Windows Microsoft is a software distributed under a non-free license.
+	      -->
+	    </para>
+	  </answer>
+	</qandaentry>
+      </qandadiv>
 
+      <qandadiv>
+	<title>Commercial considerations</title>
 
+	<qandaentry>
+	  <question>
+	    <para>
+	      Is having a GNU/Linux support useful ?
+	    </para>
+	  </question>
+	  <answer>
+	    <para>
+	      It will generate sells.
+	    </para>
+	    <para>
+              The market is consequent, and its potential is huge. GNU/Linux is the only operating system presently gaining market shares over all its competitors. It is favored by many computer specialists, who are prescriptors for harware choices. It is now commercially and financely backed by the biggest manufacturers (SUN, IBM, DELL, HP, ...). Some goverments are studying the use of &LL; as standard for their administration (France, Poland, Argentina, China, ...)
+	    </para>
+	  </answer>
+	</qandaentry>
 
-  <bridgehead>Conclusion</bridgehead>
+	<qandaentry>
+	  <question id="dualDrivers">
+	    <para>
+	      My customers are asking for Linux drivers, what can I do ?
+	    </para>
+	  </question>
+	  <answer>
+	    <para>
+	      Possibles choices are :
+	      <itemizedlist>
+		<listitem>
+		  <para>
+		    Announce there is no support for your hardware
+		  </para>
+		</listitem>
+		<listitem>
+		  <para>
+		    Developp drivers and release them in a binary form (without giving away the sources)
+		  </para>
+		</listitem>
+		<listitem>
+		  <para>
+		    Publish your hardware interface specifications, thus letting third parties write and distribute drivers on their own.
+		  </para>
+		</listitem>
+		<listitem>
+		  <para>
+		    Develop drivers under an Open Source or Free Sofware licence.
+		  </para>
+		  <para>
+                    This approach allows to insure the fast availability of the drivers. It also permits to share with third parties (companies or individuals) the effort of maintening, debugging, documenting and porting. In this model, choosing a license which guarantees that the drivers' improvements will be distributed according to the same terms is crucial for the company. In this way no competitor can appropriate the modifications it finances.
+		  </para>
+		</listitem>
+		<listitem>
+		  <para id="dualDrivers.text">
+		    Publish <quote>mixed</quote> drivers
+		  </para>
+		  <para>
+		    It consists in publishing a part of the drivers according to the previous logic, and supplying the rest of the drivers under binary form and non-free license (see the second alternative).
+		  </para>
+		  <para condition="long">
+		    It allows access to basic features as well as realization of an interface with the operating system, thanks to a &LLs; adaptable to evolutions of the system. Certain <quote>advanced</quote> features remain hidden in exclusives, unchanging modules which do not need to evolve with the rest of the system. It can allow a satisfactory solution in a case where part of the product originates from third-party supplier and is under a non-free license. It is a choice notably made by certain graphics boards' manufacturers.  
+		  </para>
+		</listitem>
+		<listitem>
+		  <para>
+                    Publicly spread the specifications AND develop the drivers, then distribute them under a free license.
+		  </para>
+		  <para>
+		    This is an ideal solution for the customer. It is also a very good configuration for the manufacturer, except in some particular cases		    (see <quote><xref endterm="nonOS.text" linkend="nonOS"/></quote>).
+		  </para>
+		</listitem>
+	      </itemizedlist>
+	    </para>
+	  </answer>
+	</qandaentry>
 
-  <para>
-    A manufacturer has a strong interest in using Open source for the developments of his drivers, <emphasis> whatever the targeted operating system </emphasis>.
-  </para>
-  <para>
-    He also has interest to develop himself drivers, or at least their initial version because of:  
-    <itemizedlist>
-      <listitem>
-	<para>
-	  his better knowledge of the product,
-	</para>
-      </listitem>
-      <listitem>
-	<para>
-	  his need to insure the quality,
-	</para>
-      </listitem>
-      <listitem>
-	<para>
-	  The necessity of their availability from the commercial launch,
-	</para>
-      </listitem>
-      <listitem>
-	<para>
-	the influence naturally taken by the initiator of a free project on it's evolution.
-	</para>
-      </listitem>
-    </itemizedlist>
+	<qandaentry>
+	  <question>
+	    <para>
+	      Can I hope a third party will spontaneously develop the drivers ?	    </para>
+	  </question>
+	  <answer>
+	    <para>
+              Yes, by giving away the specifications for your products and making the announcement. Volunteers (companies or individuals) can then take care of developments.
+	    </para>
+	    <para>
+	      But this approach has some drawbacks :
+	      <itemizedlist>
+		<listitem>
+		  <para>
+		    The numbers of developpers will partly rely on luck.
+		  </para>
+		</listitem>
+		<listitem>
+		  <para>
+		    Voluntary people work at their own pace.
+		  </para>
+		</listitem>
+		<listitem>
+		  <para>
+		    The drivers may therefore not be available in time for important terms (convention, commercial release, ...).
+		  </para>
+		</listitem>
+		<listitem>
+		  <para>
+                    No sell can be expected before drivers availability.
+		  </para>
+		</listitem>
+		<listitem>
+		  <para>
+		    No control is exerced on the quality of resulting software.
+		  </para>
+		</listitem>
+	      </itemizedlist>
+	    </para>
+	  </answer>
+	</qandaentry>
 
-    Afterward, maintenance of the project according to the free software model,
+	<qandaentry>
+	  <question>
+	    <para>
+	      Can I avoid to release the specifications of my product ?
+	    </para>
+	  </question>
+	  <answer>
+	    <para>
+	      Yes. By developping and releasing binary drivers.
+	    </para>
+	    <para>
+	      Advantages to keep secret the specifications are :
+	      <itemizedlist>
+		<listitem>
+		  <para>
+		    protecting your products from cloning
+		  </para>
+		</listitem>
+		<listitem>
+		  <para>
+		    hiding weaknesses in low quality products.
+		  </para>
+		</listitem>
+	      </itemizedlist>
 
-    <itemizedlist>
-      <listitem>
-	<para>
-	  allows to benefit from improvements brought by the users,
-	</para>
-      </listitem>
-      <listitem>
-	<para>
-	  allows product's compatibility with a wider range of hardware and OSes
-	</para>
-      </listitem>
-      <listitem>
-	<para>
-   	 improve your image within the computer specialists's community.
-	</para>
-      </listitem>
-      <listitem>
-	<para>
-   	decrease the project maintenance costs.
-	</para>
-      </listitem>
-      <listitem>
-	<para>
-   	frees customers fears felt in front of secret,
-	</para>
-      </listitem>
-      <listitem>
-	<para>
-	And then brings as many competitive advantages to whom practises it.
-	</para>
-      </listitem>
-    </itemizedlist>
-  </para>
+              Inconveniences are :
+	      <itemizedlist>
+		<listitem>
+		  <para>
+                    be deprieved of help and support from users for maintenance.
+		  </para>
+		</listitem>
+		<listitem>
+		  <para>
+		    a depreciated image in the eye of the &LL; and &OS; communities
+		  </para>
+		</listitem>
+		<listitem>
+		  <para>
+		    a superior cost in developpment
+		  </para>
+		</listitem>
+		<listitem>
+		  <para>
+		    a market limited to platforms chosen initially
+		  </para>
+		</listitem>
+	      </itemizedlist>
+	    </para>
+	    <para condition="long">
+              In opposition to other Operating Systems, GNU/Linux execute on a large number of hardware platforms. It is difficult to test them all without the assistance of a community.
+              Furthermore, versions of the Linux kernel are released on a more steady rythm than those of the others operating systems.
+	    </para>
+	    <para condition="long">
+              GNU/Linux is not the only free operating system. If the others can seem unimportant in market share, they exist nevertheless, and their users wish to dispose of the resources necessary for operating properly their machines.
+	    </para>
+	    <para condition="long">
+              Finally, as explained by the founder of the &OS; movement Eric S. Raymond, in his article <ulink url="http://www.tuxedo.org/~esr/writings">The Magic Cauldron</ulink> :
+              <quote>while the competition studies your material, you work on the following generation</quote>. 
+              The current rhythm of the electronic development renders the practice of cloning ineffective.
+	    </para>
+	  </answer>
+	</qandaentry>
 
+	<qandaentry>
+	  <question>
+	    <para>
+              How can I make money if I give my products ?
+	    </para>
+	  </question>
+	  <answer>
+	    <para>
+              In your case, the software is not your product.
+              It's a service.
+              Your product is your hardware.
+	    </para>
+	    <para condition="long">
+              Software drivers production made by electronic manufacturers is a recent phenomenon. Previously the manufacturers spread Hardware Interface Specifications, letting the responsibility of developing drivers for operating systems in the hand of their editors and/or the users.
+	    </para>
+	    <para condition="long">
+	      This approch was not satisfactory because it implied that the drivers for the same material could be developed several times by the various customers, what is technically and commercially ineffective. It is thus under the pressure of their customers that the manufacturers took at their expense the development of the drivers.
+	      This new system showed however another defect: it favored the appeareance of monopolies which exercised then an unbearable pressure on customers and suppliers as well.
+	    </para>
+	    <para condition="long">
+              Today, as Internet eases the broadcasting of projects and free licenses bring guarantees on their accessibility and their evolution, the implication of the manufacturers doesn't need to be as important.
+	    </para>
+	  </answer>
+	</qandaentry>
 
+	<qandaentry>
+	  <question>
+	    <para>
+              What advantages are to be expected from &LL;, from &OS; ?
+	    </para>
+	  </question>
+	  <answer>
+	    <para>
+              Software can be adapted by users. 
+              It therefore remains in adequation to their needs. 
+              Minor, frustrating bugs can be corrected, new ideas appear.
+	    </para>
+	    <para>
+              Free Software is a guarantee of the product lasting.
+              Should the furnisher disappears, software code could still be maintained.
+              In the decision of purchase, it is a supplementary guarantee for the customer, thus a selling point for the vendor.
+	    </para>
+	  </answer>
+	</qandaentry>
+
+	<qandaentry>
+	  <question>
+	    <para>
+              Do I risk pressures on behalf of influent OSes publishers ?
+	    </para>
+	  </question>
+	  <answer>
+	    <para>
+              Some have an egocentric notion of the free-market economy.
+              To that day, no case of that nature has been reported.
+	    </para>
+	  </answer>
+	</qandaentry>
+
+      </qandadiv>
+
+      <qandadiv>
+	<title>Precisions</title>
+
+	<qandaentry>
+	  <question id="contact">
+	    <para id="contact.text">
+	      Who to contact for more information on &LL; and &OS;?
+	    </para>
+	  </question>
+	  <answer>
+	    <para>
+	      You can contact the following structures :
+	      <itemizedlist>
+		<listitem>
+		  <para>
+		    <ulink url="http://fsf.org/">
+		      &FSF;</ulink> 
+		    <address><email>contact@fsf.org</email></address>
+		  </para>
+		</listitem>
+		<listitem>
+		  <para>
+		    <ulink url="http://www.aful.org">AFUL</ulink> 
+		    <address><email>aful@aful.org</email></address>
+		  </para>
+		</listitem>
+		<listitem>
+		  <para>
+		    <ulink url="http://www.april.org">APRIL</ulink> 
+		    <address><email>contact@april.org</email></address>
+		  </para>
+		</listitem>
+	      </itemizedlist>
+	    </para>
+	    <para>
+	      You can consult the following sources :
+	      <itemizedlist>
+		<listitem>
+		  <para>
+		    <ulink url="http://www.fsf.org/">&FSF; (FSF)</ulink>
+		  </para>
+		</listitem>
+		<listitem>
+		  <para>
+		    <ulink url="http://www.opensource.org/">
+		      &OSI;</ulink>
+		  </para>
+		</listitem>
+	      </itemizedlist>
+	    </para>
+	  </answer>
+	</qandaentry>
+
+	<qandaentry>
+	  <question>
+	    <para>
+	      My developers are not competents with Linux. What should I do ?
+	    </para>
+	  </question>
+	  <answer>
+	    <para>
+              There are several solutions:
+	      <itemizedlist>
+		<listitem>
+		  <para>
+		    Engage formations
+		  </para>
+		</listitem>
+		<listitem>
+		  <para>
+		    Recruit new ones who have this field of competency
+		  </para>
+		</listitem>
+		<listitem>
+		  <para>
+                    Address specialized companies of service
+		  </para>
+		  <para>
+		    A <ulink url="&url.ssii;">list of companies of service</ulink> in software engineering specialized in &LL; or &OS; is available on the <ulink url="http://www.aful.org">AFUL</ulink> site.
+		  </para>
+		</listitem>
+	      </itemizedlist>
+	    </para>
+	  </answer>
+	</qandaentry>
+
+	<qandaentry condition="long">
+	  <question>
+	    <para>
+	      Where to find some documentation on Linux drivers programming ?		    </para>
+	  </question>
+	  <answer>
+	    <para>
+	      At present references are:
+	      <itemizedlist>
+		<listitem>
+		  <para>
+		    <ulink url="http://www.oreilly.com/catalog/linuxdrive2/">
+		      Linux Device Drivers, 
+		      Alessandro Rubini &amp; Jonathan Corbet, 
+		      2001, O'Reilly</ulink>
+		  </para>
+		  <para>
+		    This book can be bought in its paper version, while being 
+		    <ulink url="http://www.xml.com/ldd/chapter/book/index.html">
+		      freely available online.</ulink>
+		  </para>
+		</listitem>
+		<listitem>
+		  <para>
+		    <ulink url="http://www.editions-eyrolles.com">
+		      Programmation système en C sous Linux,
+		      Christophe Blaess,
+		      2000, Eyrolles
+		    </ulink>
+		  </para>
+		</listitem>
+		<listitem>
+		  <para>
+		    <ulink url="http://www.oreilly.com/catalog/linuxkernel/">
+		      Understanding the Linux Kernel, 
+		      Daniel P. Bovet &amp; Marco Cesati,
+		      2000, O'Reilly</ulink>
+		  </para>
+		</listitem>
+	      </itemizedlist>
+	    </para>
+	  </answer>
+	</qandaentry>
+
+	<qandaentry condition="long">
+	  <question>
+	    <para>
+	      Is there a database listing Linux compatible hardware ?
+	    </para>
+	  </question>
+	  <answer>
+	    <para>
+              Yes, ZDNet maintains the <ulink url="http://lhd.zdnet.com/">Linux Hardware Database</ulink>. This database is very complete and every manufacturer can reference his hardware there.
+	    </para>
+	  </answer>
+	</qandaentry>
+
+	<qandaentry>
+	  <question id="nonOS">
+	    <para id="nonOS.text">
+              Do you advise a &LL; distribution in every case ?
+	    </para>
+	  </question>
+	  <answer>
+	    <para>
+	      No.
+	    </para>
+	    <itemizedlist>
+	      <listitem>
+		<para>
+                  The downmarket products have no interest to display in broad daylight their mediocrity. A binary driver is then more suited.
+		</para>
+	      </listitem>
+	      <listitem>
+		<para>
+       	          The informers software, the hidden functions are afraid as well of light. This case is a criterion which will tilt companies and governments to choose manufacturers who opt for transparency.
+		</para>
+	      </listitem>
+	    </itemizedlist>
+	  </answer>
+	</qandaentry>
+
+	<qandaentry>
+	  <question id="existingLicenses">
+	    <para id="existingLicenses.text">
+	      Which license to choose for distributing my drivers ?
+	    </para>
+	  </question>
+	  <answer>
+	    <para>
+              Many software licenses already exist. You can use them for distributing your drivers (see also <quote><xref endterm="libreLicense.text" linkend="libreLicense"/></quote>).
+	    </para>
+	    <para>
+              It is a rare case when a company feels the need to engage in the redaction of a new free license. Creating and maintaining a license is generally a waste of time. Furthermore, it complicates the task of companies and individuals who decide to work on your drivers.
+	    </para>
+	    <para condition="long">
+The most famous licenses are the GNU General Public License (GPL), the GNU Lesser General Public License (LGPL), the modified BSD licenses and the Mozilla Public License (MPL).
+	    </para>
+	    <para condition="long">
+              As a rule of thumb, the GPL will always be preferred when nothing opposes. If external constraints makes this choice impossible, the best is to contact a specialized structure to expose your case (see also <quote><xref endterm="contact.text" linkend="contact"/></quote>). Factors determining the choice of a license are numerous and of important consequences, to discuss it is the best way to find a well fitted solution.
+	    </para>
+	  </answer>
+	</qandaentry>
+
+	<qandaentry condition="long">
+	  <question>
+	    <para>
+	      What policies have adopted others manufacturers ?
+	    </para>
+	  </question>
+	  <answer>
+	    <para>
+	      ATI, Creative, Epson, HP, IBM, Intel, Kodak, Matrox 
+	      (amongst others)
+	      publish hardware specification for a vast majority of their products.
+
+              These manufacturers are also involved in the development of the drivers for their hardware (in full or partially).
+
+              Finally, they distribute their drivers under a free license (in full or partially), see also <quote>
+		<xref endterm="dualDrivers.text" linkend="dualDrivers"/>
+	      </quote>).
+
+              This position so insures them a maximal coverage of the market, while assuring the best possible support for their products.
+	    </para>
+	    <para>
+              The following manufacturers supply only binary versions (under non-free license) of their drivers, but for a large number of operating systems, including GNU/Linux: Lexmark, NVidia, Olitec.
+
+              These manufacturers satisfy a large number of consumers. But by dismissing the help the &LL; and &OS; community of developers could supply, they endure a more important effort to keep their drivers up to date with the new versions of operating systems.
+	    </para>
+	    <para>
+              An inherent problem of the binary drivers is their lack of <quote>modularity</quote>. Being usually modules for the kernel, they can, if they are badly conceived, cause the failure of a whole machine. So editors of distributors of operating systems hesitate to put modules which risk to entail a big load for their support services. An emblematic example are the NVIDIA modules for GNU/Linux, which, in spite of their recognized performances, are not included in the <ulink url="http://www.linux-mandrake.com">Mandrake 8.0</ulink> distribution. In conclusion, with such an approach, the manufacturers may feel their work is wasted.
+	    </para>
+	    <para>
+              The following companies supply drivers only for a limited number of operating system: Guillemot, Hercule, Canon. These manufacturers limit their market and tarnish their image.
+	    </para>
+	  </answer>
+	</qandaentry>
+
+	<qandaentry condition="long">
+	  <question>
+	    <para>
+	      Are there certification programs ?
+	    </para>
+	  </question>
+	  <answer>
+	    <para>
+             Yes, the <ulink url="http://www.open-hardware.org" > Open Hardware Certification Program </ulink>. It is a recent initiative, but it already gathers a fair number of <ulink url="http://www.open-hardware.org/affiliate.html" > affiliates </ulink>.
+	    </para>
+	  </answer>
+	</qandaentry>
+
+	<qandaentry condition="long">
+	  <question>
+	    <para>
+	      What is the meaning of the penguins pictures, seen in the computer press and on Internet ?
+	    </para>
+	  </question>
+	  <answer>
+	    <para>
+	      The penguin is the mascot of the Linux kernel. This picture is widespread because internet users and Web sites using GNU/Linux are there numerous.
+	    </para>
+	  </answer>
+	</qandaentry>
+
+	<qandaentry condition="long">
+	  <question>
+	    <para>
+	      May I use the logo of the penguin freely ? Where can I find it ?
+	    </para>
+	  </question>
+	  <answer>
+	    <para>
+             Yes you can use it freely. You can even use freely a modified version.
+	    </para>
+	    <para>
+	      <ulink url="http://www.linux.org">Linux Online</ulink> references the various <ulink url="http://www.linux.org/info/logos.html">Linux logos</ulink>, 
+	      the original penguin and its by-products.
+	    </para>
+	  </answer>
+	</qandaentry>
+
+      </qandadiv>
+
+    </qandaset>
+
+  </sect1>
+
+  <sect1>
+    <title>Conclusion</title>
+
+    <para>
+    A manufacturer has a strong interest in using free licences for the developments of his drivers, <emphasis>whatever the target operating system</emphasis>.
+    </para>
+    <para>
+      He also has interest to develop himself drivers, or at least their initial version because of :
+       <itemizedlist>
+	<listitem>
+	  <para>
+	    his better knowledge of the product,
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    his need to insure the quality,
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    the necessity of their availability from the commercial launch,
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    the influence naturally taken by the initiator of a free project on it's evolution.
+	  </para>
+	</listitem>
+      </itemizedlist>
+    </para>
+    <para>
+      But the release of a product does not mean neither the end of its life, nor the stop of the development and services which surround it. Once introduced, the drivers gain to be maintained according to the &LL; model. 
+    </para>
+    <para condition="long">
+      Indeed, that model :
+      <itemizedlist>
+	<listitem>
+	  <para>
+	    allows to benefit from improvements brought by the users
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    allows compatibility of the product with a much wider range of hardware and operating systems.
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    improves the product and its manufacturer's images amongst the community of computer specialists.
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    decrease the project's maintenance costs.
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    reassure buyers and decision-makers by removing fears bound to possible hidden features in the product (Trojan horses, backdoors and the like).
+	  </para>
+	</listitem>
+      </itemizedlist>
+    </para>
+    <para>
+      As we saw, this functioning mode brings real competitive advantages, while improving quality of the proposed services.  
+    </para>
+  </sect1>
+
+  <sect1>
+    <title>References</title>
+    <para>
+      This document exists in several languages and under various formats :
+      <itemizedlist>
+	<listitem>
+	  <para>
+	    Long version in French
+	    <itemizedlist>
+	      <listitem>
+		<para>
+		  <ulink url="&url.longVersion.fr.html;">
+		    format HTML
+		  </ulink>
+		</para>
+	      </listitem>
+	      <listitem>
+		<para>
+		  <ulink url="&url.longVersion.fr.pdf;">
+		    format PDF
+		  </ulink>
+		</para>
+	      </listitem>
+	    </itemizedlist>
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Short version in French
+	    <itemizedlist>
+	      <listitem>
+		<para>
+		  <ulink url="&url.shortVersion.fr.html;">
+		    format HTML
+		  </ulink>
+		</para>
+	      </listitem>
+	      <listitem>
+		<para>
+		  <ulink url="&url.shortVersion.fr.pdf;">
+		    format PDF
+		  </ulink>
+		</para>
+	      </listitem>
+	    </itemizedlist>
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Long version in English
+	    <itemizedlist>
+	      <listitem>
+		<para>
+		  <ulink url="&url.longVersion.en.html;">
+		    format HTML
+		  </ulink>
+		</para>
+	      </listitem>
+	      <listitem>
+		<para>
+		  <ulink url="&url.longVersion.en.pdf;">
+		    format PDF
+		  </ulink>
+		</para>
+	      </listitem>
+	    </itemizedlist>
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Short version in English
+	    <itemizedlist>
+	      <listitem>
+		<para>
+		  <ulink url="&url.shortVersion.en.html;">
+		    format HTML
+		  </ulink>
+		</para>
+	      </listitem>
+	      <listitem>
+		<para>
+		  <ulink url="&url.shortVersion.en.pdf;">
+		    format PDF
+		  </ulink>
+		</para>
+	      </listitem>
+	    </itemizedlist>
+	  </para>
+	</listitem>
+      </itemizedlist>
+    </para>
+  </sect1>
+
+  <sect1>
+    <title>History</title>
+    <para>
+      <itemizedlist>
+	<listitem>
+	  <para>
+	    Original version by 
+	    Philippe Coulonges <email>cphil@cphil.net</email> and
+	    Marc-Aurèle Darche <email>ma.darche@free.fr</email>.
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+            Collective modifications by AFUL, APRIL, FSF and contributors from the following mailing lists :
+	    <email>membres@aful.org</email>,
+	    <email>april@april.org</email> et
+	    <email>fsfe-france@gnu.org</email> 
+	    coordinated by Marc-Aurèle Darche <email>ma.darche@free.fr</email>.
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    English translation by 
+	    Philippe Coulonges <email>cphil@cphil.net</email>
+	  </para>
+	</listitem>
+      </itemizedlist>
+    </para>
+  </sect1>
+
+  <!-- Insertion of the GNU Free Document License -->
+  &doc.gnuFDL;
 
 </article>
-

@@ -102,7 +102,7 @@
 		<a href="{$fsffrance}/about/about.fr.html">À propos</a><br />
 		<a href="{$fsffrance}/contact.fr.html">Contact</a><br />
 		<a href="{$fsffrance}/thanks.fr.html">Merci !</a><br />
-		<a href="{$fsfeurope}/order/announce.fr.xhtml">Articles FSFE</a>
+		<a href="{$fsfeurope}/order/announce.fr.html">Articles FSFE</a>
 	      </td>
 	    </tr>
 

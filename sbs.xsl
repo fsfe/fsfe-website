@@ -64,9 +64,9 @@
   <xsl:template match="/html/body">
     <body>
       <xsl:apply-templates />
-      <table align="top">
-        <tr align="top">
-          <td align="top">
+      <table>
+        <tr>
+          <td>
             <center>
               <h2><xsl:value-of select="/html/text[@id='news']" /></h2>
             </center>
@@ -84,11 +84,11 @@
               </a>
             </center>
           </td>
-          <td align="top">
+          <td>
             <center>
               <h2><xsl:value-of select="/html/text[@id='events']" /></h2>
             </center>
-            <table class="news" align="top">
+            <table class="news">
               <xsl:for-each select="/html/set/event
                 [translate (@end, '-', '') &gt; translate ($today, '-', '')]">
                 <xsl:sort select="@start" />

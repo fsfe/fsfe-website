@@ -154,9 +154,9 @@
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
-                <xsl:when test="$path='speakers/index.xhtml'">Speakers</xsl:when>
+                <xsl:when test="$path='speakers/speakers.xhtml'">Speakers</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/speakers/index.html" class="T2">Speakers</a>
+                  <a href="{$fsfeurope}/speakers/speakers.html" class="T2">Speakers</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>

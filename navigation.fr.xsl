@@ -108,6 +108,7 @@
                   <a href="{$fsfeurope}/mailman/index.fr.html" class="T2">Listes de diffusion</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
+              <a href="http://savannah.gnu.org/pm/?group_id=53" class="T2">Tâches</a><br />
               <xsl:choose>
                 <xsl:when test="$path='press/index.fr.xhtml'">Section Presse</xsl:when>
                 <xsl:otherwise>

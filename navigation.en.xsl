@@ -116,6 +116,7 @@
                   <a href="{$fsfeurope}/mailman/index.html" class="T2">Mailing Lists</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
+              <a href="http://savannah.gnu.org/pm/?group_id=53" class="T2">Tasks</a><br />
               <xsl:choose>
                 <xsl:when test="$path='press/index.xhtml'">Press Section</xsl:when>
                 <xsl:otherwise>

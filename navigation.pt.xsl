@@ -114,6 +114,7 @@
                   <a href="{$fsfeurope}/mailman/index.pt.html" class="T2">Listas de Correio</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
+              <a href="http://savannah.gnu.org/pm/?group_id=53" class="T2">Tarefa</a><br />
               <xsl:choose>
                 <xsl:when test="$path='press/index.pt.xhtml'">Para a Imprensa</xsl:when>
                 <xsl:otherwise>

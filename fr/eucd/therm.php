@@ -15,14 +15,57 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  *
- * $Id: therm.php,v 1.1 2002-12-21 14:58:54 rodolphe Exp $
+ * $Id: therm.php,v 1.2 2002-12-21 15:09:34 rodolphe Exp $
  * $Source: /root/wrk/fsfe-web/savannah-rsync/fsfe/fr/eucd/therm.php,v $
  */
 
-if (file_exists ("thermometer.php"))
+$thermlib = "thermometer.php";
+
+if (file_exists ($thermlib))
 {
-  include("thermometer.php");
-  print moneyMeter($totaal_ontvangen+$post_donaties+$post_sponsoring, $totaal_pending, $post_intent,"posten.txt", "totaal.txt");
+  include($thermlib);
+
+  $posten_file = "posten.txt";
+  $totaal_file = "totaal.txt";
+
+
+  /*
+   * Read Values
+   */
+
+  if (file_exists ($posten_file))
+    {
+      if (file_exists ($totaal_file))
+	{
+
+	  /* lees posten uit file */
+	  $fp = fopen($posten_file, 'r' );
+	  
+	  
+	  if ($fp)
+	    {
+	      $post_donaties = fgets( $fp, 10 );
+	      $post_sponsoring = fgets( $fp, 10 );
+	      $post_intent = fgets( $fp, 10 );
+	      fclose( $fp ); 
+	    }
+	  
+	  /* lees posten uit file  */
+	  $fp = fopen( $totaal_file, 'r' );
+	  if ($fp)
+	    {
+	      $totaal_ontvangen = fgets( $fp, 10 );
+	      $totaal_pending = fgets( $fp, 10 );
+	      fclose( $fp ); 
+	    }
+	}
+    }
+  
+  /* 
+   * Graph thermometer
+   */
+
+  print moneyMeter($totaal_ontvangen+$post_donaties+$post_sponsoring, $totaal_pending, $post_intent);
 }
 
 ?>

@@ -991,6 +991,32 @@
       <date>30 Jul 2002</date>
     </os>
   </software>
+
+  <software>
+    <name>PWSCF</name>
+    <date>13 Oct 2002</date>
+    <description lang="en">PWSCF (Plane-Wave Self-Consistent Field) is a set of programs for electronic structure calculations within Density-Functional Theory and Density-Functional Perturbation Theory, using a Plane-Wave basis set and pseudopotentials.</description>
+    <description lang="fr">PWSCF (Plane-Wave Self-Consistent Field) est un ensemble de programmes pour les calculs de structures électroniques par la théorie de la densité fonctionnelle et la théorie de perturbation de la densité fonctionnelle, avec l'utilisation d'un ensemble basique d'ondes planes et de pseudopotentiels.</description>
+    <authors>Stefano Baroni, Stefano de Gironcoli, Andrea Dal Corso, Paolo Giannozzi</authors>
+    <email></email>
+    <url>http://www.sissa.it/cm/PWcodes</url>
+    <os name="GNU/Linux">
+      <maintainer>Stefano Baroni, Stefano de Gironcoli, Andrea Dal Corso, Paolo Giannozzi</maintainer>
+      <version>1.1.2</version>
+      <license>GPL</license>
+      <url></url>
+      <comment>All is right</comment>
+      <date>10 Oct 2002</date>
+    </os>
+    <os name="Other Unix">
+      <maintainer>Stefano Baroni, Stefano de Gironcoli, Andrea Dal Corso, Paolo Giannozzi</maintainer>
+      <version>1.1.2</version>
+      <license>GPL</license>
+      <url></url>
+      <comment>All is right</comment>
+      <date>10 Oct 2002</date>
+    </os>
+  </software>
 <!-- Template
   <software>
     <name></name>

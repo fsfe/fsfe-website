@@ -15,7 +15,7 @@
 # or
 # ftp://ftp.cogsci.ed.ac.uk/pub/richard/rxp-1.2.3.tar.gz
 #
-XSLTPROC = echo
+XSLTPROC = sabcmd
 
 FSFFRANCE = http://france.fsfeurope.org
 FSFEUROPE = http://www.fsfeurope.org

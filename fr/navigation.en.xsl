@@ -55,6 +55,7 @@
 	    <a class="TopTitle">Free Software - equal chances for people and economy</a>
 	  </td>
 	  <td align="right" valign="bottom" class="TopBody">
+	    <a href="http://cyberlink.idws.com/fsm/" class="T2">Africa</a> <br />
 	    <a href="http://www.rons.net.cn/english/Links/fsf-china/" class="T2">China</a> <br />
 	    <a href="{$fsfeurope}/" class="T2">Europe</a> <br />
 	    <a href="{$fsffrance}/index.en.html" class="T2">France</a> <br />

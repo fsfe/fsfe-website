@@ -55,6 +55,7 @@
 	    <a class="TopTitle">Free Software - l'entreprise et l'individu sur un pied d'égalité</a>
 	  </td>
 	  <td align="right" valign="bottom" class="TopBody">
+	    <a href="http://cyberlink.idws.com/fsm/" class="T2">Afrique</a> <br />
 	    <a href="http://www.rons.net.cn/english/Links/fsf-china/" class="T2">Chine</a> <br />
 	    <a href="http://es.gnu.org/" class="T2">Espagne</a> <br />
 	    <a href="{$fsf}/home.fr.html" class="T2">États-Unis</a> <br />

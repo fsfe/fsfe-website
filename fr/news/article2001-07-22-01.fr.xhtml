@@ -1,0 +1,1152 @@
+Transcription du discours de Richard M. STALLMAN :" logiciel libre: Liberté et coopération". Université de New-York.29 Mai 2001.
+
+URETSKY:"
+Je suis Mike Uretsky. Je travaille à l'école de commerce Stern. Je suis aussi un des co-directeurs du centre pour la technologie de pointe.
+Et au nom de tous au Centre de Technologie de Pointe, je veux vous souhaiter la bienvenue. Je voudrais faire quelques commentaires avant de 
+passer la parole à Ed qui présentera l'orateur.
+Le rôle d'une université est d'être un lieu de débats enrichissants[...] et de permettre des discussions intéressantes Et le rôle d'une grande 
+université est d'offrir des discussions particulièrement intéressantes. Cet exposé particulier, ce séminaire, répond parfaitement à cet impératif. je 
+trouve la discussion sur l'Open Source particulièrement intéressante. D'une certaine manière...
+
+RMS
+-Je fais du logiciel libre. L'Open Source c'est un autre mouvement.[rires et applaudissements]
+
+URETSKY
+-Quand j'ai débuté dans ce champ disciplinaire dans les années 60, fondamentalement, les logiciels étaient libres. Puis nous sommes rentrés dans 
+des cycles.[...] Cela débuta par la liberté puis les fabricants de logiciels pour étendre leur marché les ont poussés dans d'autres directions. A 
+l'arrivée du PC ce fut la même chose dans le domaine du développement.Il y a un philosophe français très intéressant, Pierre Lévy, qui parle d'un 
+mouvement dans cette direction et parle du mouvement dans le cyberespace pas seulement en relation avec la technologie mais aussi avec la 
+restructuration sociale et politique, à travers un changement des types de relations qui va améliorer le bien-être de l'humanité, débat qui traverse 
+de nombreuses disciplines qui travaillent généralement en solo à l'université. Nous espérons donc de très intéressantes discussions . Ed ?
+
+SCHONBERG
+-Je suis Ed Schonberg du département d'informatique de l' Institut Courant. Laissez-moi vous souhaiter la bienvenue pour cet évènement. Les 
+présentateurs sont généralement, et particulièrement, un aspect inutile des présentations publiques, mais, dans ce cas, ils servent un  but utile 
+comme le propos de Mike vient facilement de le prouver. Parce qu'un présentateur par exemple, par des commentaires inappropriés peut permettre 
+à l'orateur de corriger [rires] et préciser considérablement les paramètres du débat.
+
+Aussi laissez-moi faire la présentation la plus brève possible de quelqu'un qui n'en n'a pas besoin. Richard est le parfait exemple de quelqu'un qui, 
+agissant localement, commença à penser globalement les problèmes d'inaccessibilité du code source des drivers d'imprimante au laboratoire 
+d'Intelligence Artificielle  il y a bien des années. Il a développé une philosophie cohérente qui nous a tous forcé à réexaminer nos idées sur la façon 
+dont le logiciel est produit,sur ce que signifie la propriété intellectuelle, et sur ce que représente la communauté du logiciel. Bienvenue à Richard 
+Stallman.[applaudissements]
+
+STALLMAN
+-Quelqu'un peut-il me prêter une montre ?[rires]Merci. Bien, je voudrais remercier Microsoft de me donner l'occasion aujourd'hui [rires] d'être ici. 
+Ces dernières semaines, je me sentais comme un auteur dont le livre a été fortuitement interdit quelque part.[rires] Sauf que tous les articles sur 
+lui mentionnent un nom d'auteur erroné, parce que Microsoft décrit la Licence GNU GPL (general Public License : Licence publique générale 
+GNU,c.a.d crée par le Mouvement pour le logiciel Libre ou Free Software Movement dont RMS est le président) comme une licence Open Source 
+(Source Ouvert, mouvement qui travaille "en parallèle (?)" avec la FSF) et la couverture de presse suit. La plupart des gens ignore, innocemment 
+bien sur,que notre travail n'a rien à voir avec l' Open Source; et qu'en réalité nous l'avons mené bien avant que l'on l'estampille du terme "Open 
+source".
+
+Nous sommes dans le Mouvement pour le logiciel Libre (FSF) et je vais vous parler de ce qu'est le mouvement pour le logiciel libre, ce qu'il signifie, 
+ce que nous avons fait, et puisque nous sommes réunis par une école de commerce,je vous en dirai un peu plus qu'à l'habitude sur les relations du 
+logiciel libre et du commerce ou d'autres champs de la vie sociale.
+
+Bien, certains d'entre vous n'écriront peut être jamais de logiciels mais vous cuisinez peut être. et si vous cuisinez, à moins que vous ne soyez un 
+grand chef, vous utilisez probablement des recettes. Et si vous utilisez des recettes vous avez probablement eu l'expérience de recevoir la copie 
+d'une recette par un ami qui la partage. Et vous avez sans doute eu également l'expérience -à moins d'être un néophyte complet- de changer 
+cette recette. Il y a des choses que l'on est pas obligé de faire exactement. Vous pouvez laisser tomber certains ingrédients. Ajouter des 
+champignons 
+parce que vous aimez les champignons. Mettre un peu moins de sel parce que votre médecin vous a recommandé de supprimer le sel, que sais-je... 
+Vous pouvez même faire des changements plus importants selon vos talents. Et si vous avez fait des changements dans une recette et que vos 
+amis l'ont appréciée l'un d'entre eux vous a peut être dit "hé, pourrais-je avoir la recette ?" Et alors vous faites une copie pour votre ami. C'est une 
+chose qu'on fait naturellement avec des recettes de toutes sortes.
+
+En fait, une recette ressemble beaucoup à un programme informatique. un programme d'ordinateur est comme une recette. Une série d'étapes 
+à mener pour obtenir le résultat que vous attendez. Alors il est tout naturel de faire la même chose avec un programme. Donner une copie à un 
+ami. Apporter des modifications parce que le travail pour lequel il a été écrit n'est pas tout à fait ce que vous voulez. Il a fait du bon travail pour 
+quelqu'un d'autre mais votre travail est différent et après l'avoir changé il est probable qu'il puisse servir à d'autres. Peut être qu'il ont à faire un 
+travail comme le votre, alors ils vous demandent une copie, et si vous êtes une personne aimable, vous donnez votre copie. C'est une façon de se 
+comporter convenablement.
+
+Alors imaginez que les recettes soient enfermées dans des boîtes noires. Vous ne pourriez pas savoir les ingrédients qu'elles utilisent, encore moins 
+les changer - Et imaginez , si vous faisiez une copie pour un ami qu'on vous traiterait de pirate et qu'on essayerait de vous mettre en prison pour 
+des années. Ce serait un énorme tollé de la part de tous ceux qui sont habitués à partager des recettes de cuisine.Mais c'est exactement ce qui se 
+passe dans le monde du logiciel propriétaire. Un monde dans lequel on prévient et on interdit un comportement correct envers les autres personnes.
+
+Maintenant, pourquoi ai-je remarqué cela ? Je l'ai remarqué parce que j'ai eu la bonne fortune dans les années 70 de faire partie d'une communauté 
+d'informaticiens qui partageaient les logiciels. On pourrait faire remonter ses racines aux origines de l'informatique mais dans les années 70 c'était 
+plutôt rare. En fait c'était en quelque sorte un cas extrème, parce que le laboratoire dans lequel je travaillais, le système d'exploitation avait été 
+développé par les gens de cette communauté et nous le partagions avec quiconque. N'importe qui était le bienvenu, pouvait regarder et prendre 
+une copie quelqu'en soit l'usage. Il n'y avait pas de notice de copyright sur ces programmes. Et nous étions confiants dans ce  mode de vie. Nous 
+n'avions pas lutté pour cela, nous vivions comme cela. Nous pensions continuer comme cela. Il y avait du logiciel libre mais pas de mouvement pour 
+le logiciel libre.
+
+Mais alors, notre communauté a été détruite par une série de calamités. Et à la fin elle fut balayée. L' ordinateur PPD-10 que nous utilisions pour 
+tout notre travail fut abandonné. Et notre système d'exploitation, le System de partage du temps Incompatible, écrit à partir des années 60, étant 
+à cette époque en langage assembleur qui est spécifique à un type d'architecture d'ordinateur, tout notre travail est tombé en poussière. Les 20 
+ans de travail de notre communauté sont tombés en poussière.
+
+Mais avant que cela n'arrive, une expérience m'a préparé et m'a aidé à voir ce qu'il fallait faire. A un certain moment Xerox a donné au laboratoire 
+pour l' Intelligence Artificielle où je travaillais, une imprimante laser, et c'était un beau cadeau car c'était la première fois qu'n dehors de xerox 
+quelqu'un possédait une imprimante laser. Elle était très rapide, une page à la seconde, très bien par bien des aspects, mais elle n'était pas fiable, 
+parcqu'en fait c'était un copieur rapide qui avait été modifié pour devenir une imprimante.Vous savez les copieurs tombent en panne mais il y a 
+sur place quelqu'un pour les réparer. L'imprimante tomba en panne mais personne ne l'a vu aussi resta-t-elle en panne longtemps. 
+
+Nous avions bien une idée pour résoudre ce problème. Faire en sorte que chaque fois que l'imprimante tombe en panne elle avertisse notre 
+ordinateur et les utilisateurs qui attendent une sortie d'imprimante. Car bien sur si vous attendez une sortie d'imprimante et que vous savez qu'elle 
+est en panne vous n'allez pas rester assis pour l'éternité, vous irez réparer.
+
+Mais à ce moment nous avons été entravés par le fait que le driver de l'imprimante n'était pas un logiciel libre. Il était livré avec mais c'était un 
+programme binaire. Nous n'avions pas le code source. Xerox ne nous avait pas autorisé à avoir le source. Si bien que malgé nos talents 
+d'informaticiens, (nous avions écrit notre système d'exploitation), nous ne pouvions ajouter cette fonction au driver d'imprimante.
+
+Nous devions simplement souffrir en attendant ; cela prendrait une ou deux heures pour avoir son impression car la machine était en panne la 
+plupart du temps. De temps à autre vous attendiez en vous disant "je sais que ça va planter. je vais attendre une heure et aller chercher mon 
+texte" et alors vous vous aperceviez que la machine était en panne tout le temps et que personne d'autre n'avait réparé. Alors vous la répariez et 
+attendiez une nouvelle demi-heure. Ensuite vous reveniez et vous voyiez qu'elle était tombée en panne avant même de commencer votre 
+impression. Elle imprimait trois minutes et tombait en panne pour 30 minutes. Frustration jusque là ! mais le pire était de savoir que nous aurions pu 
+la réparer, mais quelqu'un par pur égoïsme nous bloquait en nous empêchant d'améliorer son programme. D'où un ressentiment, bien sur...
+
+Et alors j'ai entendu dire que quelqu'un avait une copie de ce programme à l' université Carnegie-Mellon. En visite là bas un peu plus tard, je me 
+rends à son bureau et je dis: "salut, je suis du MIT, pourrais-je avoir une copie du code source de l'imprimante ?" et il réponds:"Non, j'ai promis de 
+ne pas vous donner de copie "[rires]. J'étais soufflé. J'étais si.. j'étais si en colère et je ne savais pas quoi faire pour réparer cette injustice. Tout 
+ce que je pus penser c'était sortir. J'ai tourné les talons et je suis sorti. Peut-être que j'ai claqué la porte...[rires] j'y ai repensé plus tard parce  
+que j'ai réalisé que je n'étais pas simplement en face d'un fait isolé mais d'un phénomène social qui était important et affectait beaucoup de gens.
+
+Pour moi, par chance ce n'était qu'un échantillon, mais d'autres gens étaient obligés de vivre avec ça tout le temps. et j'y ai repensé plus 
+longuement. Vous voyez, il avait promis de refuser de coopérer avec nous, ses collègues au MIT. Il nous avait trahis. mais il ne l'avait pas fait qu'à 
+nous. Il y a des chances qu'il vous l'ai fait à vous aussi.[rires]et à vous aussi. Et certainement à une bonne partie de ceux qui sont dans cette 
+salle, à l'exception de ceux qui n'étaient pas nés en 1980. Il avait promis de ne pas coopérer avec la population de la planete terre. Il avait signé 
+un accord de non-divulgation.
+
+C'était ma première confrontation avec un accord de non-divulgation et cela m'a appris une importante leçon, une leçon qui est importante parce 
+que la plupart des programmeurs ne l'apprennent jamais.Vous voyez c'était ma première rencontre avec un accord de non-divulgation et j'étais 
+victime. Moi et mon laboratoire entier nous étions victimes. Et la leçon que j'ai apprise c'est que les accords de non-divulgation font des victimes. 
+Ils ne sont pas innocents, ils ne sont pas inoffensifs. La plupart des programmeurs rencontrent un accord de non-divulgation lorsqu'ils sont invités à 
+en signer un. Et il y a toujours une sorte de tentation, un bénéfice qu'il auront s'ils signent. Alors ils s'inventent des excuses. Ils disent "de toute 
+façon, il n'aura pas de copie, alors pourquoi ne rejoindrais-je pas la conspiration pour l'en priver ?" Ils disent "Ca se fait toujours comme ça, qui 
+suis-je pour m'y opposer ?" Ils disent "si je ne signe pas quelqu'un d'autre le fera." Diverses excuses pour tromper leur conscience.
+
+Mais quand on m'a invité à signer un accord de non-divulgation, ma conscience était déjà en éveil. Elle se rappelait comme j'étais en colère lorsque 
+quelqu'un avait promis de ne pas m'aider, moi et mon labo, à résoudre notre problème. Je ne pouvais pas retourner ma veste et faire la même chose 
+à quelqu'un qui ne m'avait fait aucun mal. Vous savez si quelqu'un me demandait de promettre de ne pas partager une information utile avec un 
+ennemi détesté je le ferais. Si quelqu'un a fait quelque chose de mal il le mérite. Mais des étrangers... Ils ne m'ont fait aucun mal. Comment 
+pourraient-ils mériter ce genre de mauvais traitement. On ne peut pas se mettre à maltraiter tout le monde ou n'importe qui, sinon vous devenez un 
+prédateur de la société. Alors j'ai dit:"merci de m'offrir ce beau package logiciel, mais je ne peux l'accepter en bonne conscience aux conditions que 
+vous exigez, aussi vais-je m'en passer. Merci beaucoup." Ainsi, je n'ai jamais consciemment signé d'accord de non-divulgation pour une information 
+technique utile telle qu'un programme.
+
+Cela dit, il y a d'autres sortes d'informations qui posent d'autres problèmes éthiques. Par exemple, il ya les informations personnelles. Vous savez si 
+vous voulez me parler de ce qui se passe entre vous et votre petit ami et que vous me demandez de n'en parler à personne, je peux accepter de 
+garder le secret pour vous parce que ce n'est pas une information technique utile en général. 
+
+En fait, ce n'est probablement pas utile généralement.[rires] Il y a une petite chance,c'est possible, que vous puissiez me révéler une merveilleuse 
+nouvelle tecnhique sexuelle[rires] et j'éprouverais le devoir moral [rires] de la révéler au reste de l'humanité, pour que chacun puisse en profiter. 
+Donc, je devrais lever ma promesse. Si ce sont juste des détails sur qui veut ceci et qui est colère contre untel, des choses comme,ça, du 
+feuilleton télé, cela je peux le garder confidentiellement.... mais quelque chose dont l'humanité bénéficiera, je ne peux le garder pour moi. Vous 
+voyez, le but de la science et de la 
+technologie est de vivre mieux. Si nous décidons de garder cette information, si nous la gardons secrète, nous trahissons la mission de notre 
+champ. Et ceci j'ai décidé de ne pas le faire.
+
+Mais, pendant ce temps ma communauté s'était effondrée et c'était un effondrement et ça me laissait dans une mauvaise situation. tout notre 
+système était obsolète parce que le PDP-10 était obsolète et je ne pouvais plus travailler en tant que développeur de système d'exploitation 
+comme je l'avais fait. Cela dépendait de l'appartenance à la communauté utilisant ce logiciel et l'améliorant. Cela n'était plus possible et cela 
+m'amena à un dilemme moral. Qu'allais-je faire? Parce que la possibilité la plus évidente signifiait aller contre la décision que j'avais prise.La plus 
+évidente posssibilité était de m'adapter au changement du monde. Accepter que les choses soient différentes et que je n'avais qu'à abandonner 
+ces principes et commencer à signer des accords dee non-divulgation pour des systèmes d'exploitation propriétaires et probabalement écrire des 
+logiciels propriétaires à mon tour. Mais j'ai réalisé que de cette façon j'avais un moyen de m'amuser à coder et de gagner de l'argent en même 
+temps, surtout si je faisais ça ailleurs qu' au MIT, mais à la fin j'aurais du me retourner sur ma carrière et dire : "j'ai passé ma vie à construire des 
+murs pour diviser les gens." et j'aurais eu honte de ma vie.
+
+Alors,j'ai cherché une autre alternative et il y en avait une évidente. je pouvais quitter l'informatique et faire autre chose.  Je n'avais aucun autre 
+talent mais j'aurais pu être serveur[rires]Pas dans un restaurant chic,il n'auraient pas voulu de moi, mais j'aurais pu être serveur quelque part. De 
+nombreux programmeurs disent :"les gens qui emploient des programmeurs exigent ceci, cela, si je ne le fais pas je mourrai de faim." C'est le mot 
+qu'ils utilisent littéralement. Bon,comme serveur je ne risquais pas de mourir de faim.[rires] Réellement les programmeurs ne courent aucun danger 
+mais; c'est important voyez-vous,car vous pouvez justifier de faire quelque chose qui blesse autrui en disant :"sinon quelque chose de pire va 
+m'ariver." Si vous êtres vraiment sur le point de crever de faim vous pouvez justifier d'écrire du logiciel propriétaire.[rires] Et si quelqu'un vous 
+menace d'une arme je dirais même que c'est pardonnable.[rires] Mais j'avais trouvé une façon de survivre sans enfreindre mon éthiqueaussi cette 
+excuse était elle irrecevable.
+Cependant, je réalisai qu'être serveur ne serait pas drôle pour moi et que ce serait gâcher mes talents de programmeur. je devais éviter de mal 
+utiliser mes talents. Ecrire des logiciels propriétaires aurait été mal utiliser mes talents. Encourager les autres à vivre dans un monde de logiciels 
+propriétaires aurait signifié mal utiliser mes talents. Aussi, il valait mieux les gâcher que les utiliser à mauvais escient, mais ce n'était toujours pas 
+très bon.
+
+Pour toutes ces raisons,j'ai cherché une autre alternative. Que pouvait faire un développeur de systèmes d'exploitation pour rendre le monde 
+meilleur. J'ai alors réalisé que c'était exactement ce qu'il fallait. le problème pour moi, et tous les autres c'était que tous les systèmes d'exploitation 
+disponibles pour les ordinateurs modernes étaient propriétaires. les systèmes d'exploitation libres étaient pour de vieux ordinateurs, obsolètes, 
+n'est-ce pas ? Si vous vouliez un ordinateur moderne vous étiez obligé d'adopter une système d'exploitation propriétaire. Alors si un développeur 
+écrivait un autre système d'exploitation et disait :"venez tous et partagez cela, vous êtes les bienvenus" cela permettrait à cachun de sortir du 
+dilemme, offrirait une nouvelle alternative. J'ai réalisé que je pouvais faire quelque chose qui résoudrait le problème. j'avais les talents requis et 
+c'était la chose la plus utile que je pourrais faire de ma vie. Et c'était un problème que personne d'autre n'essayait de résoudre. J'étais là, de pire 
+en pire, et j'étais seul. Alors j'ai senti:" je suis élu. je dois travailler là-dessus, Si ce n'est pas moi,qui ?" J'ai donc décidé de développer un 
+système d'exploitation libre ou de mourir. De vieillesse bien sûr.[rires]
+
+Alors je devais décider quel sorte d' OS ce serait. Il y a quelques décisions techniques à prendre. J'ai décidé de faire un système compatible avec 
+UNIX pour un certain nombre de raisons.
+En premier lieu je venais de voir un système que j'adorais devenir obsolète parcequ'il était écrit pour un type spécial d'ordinateur. Je ne voulais pas 
+que cela se reproduise. Nous avions besoin d'un système portable. Si je suivais le schéma d' UNIX,j'avais toute chance de faire un système portable 
+et utilisable. Mieux, ce [ nouveau ystème devait être]compatible dans le détail. La raison en est que les utilisateurs détestent les changements 
+incompatibles. si j'avis conçu le système de la façon que je préfère --ce que j'aurais adoré, j'en suis sur-- j'aurais produit quelque chose 
+d'incompatible. Les détails auraient été différents.  Donc, si j'avais conçu le système ainsi les gens m' auraient dit :"bien, c'est très joli mais c'est 
+incompatible. ce sera trop d'efforts de changer. nous ne pouvons nous permettre trop d'efforts pour utiliser votre système au lieu d' UNIX, alors 
+nous garderons UNIX."Voila ce qu'ils auraient dit. 
+
+Maintenant, si je voulais créer une communauté où il y aurait des gens, des gens utilisant ce nouveau système, et bénéficiant de la liberté et de la 
+coopération, je devais faire un système que les gens utiliseraient, qu'ils trouveraient facile à adopter,qui ne serait pas en échec dès le départ. 
+rendre ce système compatible avec UNIX a entrainé les premières décisions de conception,parce qu'UNIX consiste en de nombreux morceaux et ils 
+communiquent à travers des interfaces plus ou moins documentées. Alors si vous voulez être compatible avec UNIX, il vous faut remplacer chaque 
+morceau,un par un, par un morceau compatible.Les décisions de conception sont dans un morceau et elles peuvent être prises plus tard quelque 
+soit la personne qui écrive le morceau;on ne devait pas les prendre dès le départ.
+
+La seule chose que nous devions faire pour commencer le travail était de trouver un nom pour le système. Nous les hackers, nous cherchons 
+toujours des noms drôles ou méchants pour un programme,parce que penser aux gens qui s'amusent du nom c'est la moitié du plaisir de l'écriture. 
+[rires] Nous avions aussi une tradition d'acronymes récursifs qui consiste à dire que le programme qu'on crée est similaire à un programme existant. 
+on peut lui donner un nom récursif qui dit celui ci n'est pas celui là. Par exemple, il y avait beaucoup d'éditeurs de texte TICO dans les années 60 et 
+70 et ils étaient généralement appelés quelquechose ou autre TICO. A cette époque un hacker malin appela le sien Tint, pour Tint Is Not Tico, le 
+premier acronyme récursif. En 1975, j'ai développé le premier éditeur de texte EMACS et il y a eu de nombreuses imitations d' EMACS , beaucoup 
+étaient appelés quelque chose Emacs, mais l'un était nommé FINE ("BIEN!" n.d.t) pour Fine is not Emacs.et il y a eu SINE pour Sine is not Emacs, et 
+IINA pour Ina Is Not Emacs, et il y a eu  MINCE pour Mince Is Not Complete Emacs[rires],c'était une imitation incomplète.Ensuite IINA a été 
+complètement réécrit et la nouvelle version a été appelée ZWII pour Zwii Was Iina Initially.[rires]
+
+Alors j'ai cherché un acronyme récursif pour quelque chose n'est pas UNIX. Et j'ai essayé les 26 lettres mais aucune n'était un mot.[rires] Hmm, 
+essayons autre chose. J'ai fait une contraction. De cette façon, je pouvais avoir un acronyme de trois lettres pour Something's not Unix. J'ai 
+essayé des lettres et j'en suis arrivé au mot GNU. le mot GNU est le plus drôle de la langue anglaise[rires]C'était ça. Bien sur, la raison de cette 
+drôlerie vient du fait que selon le dictionnaire, il doit se dire New. Voyez-vous ? Et c'est pourquoi les gens l'utilisent pour de nombreux jeux de mots. 
+Laissez moi vous dire que c'est le nom d'un animal d' Afrique. Et la prononciation africaine avait un click à l'intérieur.[rires] Les colonisateurs 
+européens quand ils arrivèrent là bas n'entendaient pas appprendre la prononciation d'un click.Alors ils l'ont laissé dehors et écrit un G qui signifiait: 
+"il y a un autre son qui est supposé être là mais que nous ne prononçons pas."[rires] Cette nuit, je pars en Afrique du Sud et je leur ai demandé de 
+me trouver quelqu'un qui puisse m'apprendre à prononcer les clicks.[rires] Ainsi, je saurai prononcer correctement le GNU quand il s'agit de l'animal.
+
+Mais en ce qui concerne le nom de notre système la prononciation correste est guh-new, prononcez le "g" dur. Si vous parlez du "New operating 
+system", vous embrouillez l'esprit des gens , parce que cela fait 17 ans que nous travaillons dessus et il n'est plus du tout "new" ! mais il est 
+toujours et sera toujours GNU; peu importe le nombre de  gens qui l'appellent Linux par erreur.[rires]
+
+Ainsi en janvier 84, je quitte mon job au MITpour commencer à écrire des morceaux de GNU. Tout de même, ils ont été assez sympa pour me laisser 
+utiliser leurs installations. Et,à cette époque, je pensais que j'écrirais tous les morceaux du système GNU en entier, dirais:"venez et prenez!" et que 
+les gens commenceraient à l'utiliser. Cela ne se passa pas comme cela. Les premiers morceaux que j'ai ecrits étaient juste aussi bons que les 
+originaux avec moins de bugs [..]mais ils n'étaient pas terriblement excitants. Personne en particulier ne souhaitait l'utiliser ni l'installer. mais alors 
+en  
+septembre 84, j'ai commencé à écrire GNU Emacs, qui était ma seconde implémentation d' Emacs, et au début 85, il fonctionnait. je pouvais l'utiliser 
+pour mon travail d'édition, ce qui était un soulagement  car je n'avais aucune intention d'utiliser VI, l'éditeur UNIX.[rires] Avant cela, je faisais mon 
+travail d'édition sur une autre machine et je sauvegardais les fichiers sur le réseau pour pouvoir les tester. Mais quand GNU Emacs a fonctionné 
+assez bien pour que je puisse l'utiliser, d'autres personnes ont voulu l'utiliser aussi.
+
+J'ai du travailler les détails de la distribution. Bien sur j'ai mis une copie sur FTP anonyme, et c'était bien pour les gens qui étaient sur le net,ils 
+pouvaient prendre un fichier tar, mais beaucoup de programmeurs n'étaient pas sur le net en 85. Ils m'envoyaient des mails."Puis-je avoir une copie 
+?" je devais savoir quoi leur répondre. J'aurais pu dire, je veux passer plus de temps à écrire des logiciels GNU et pas enregistrer des bandes, aussi 
+trouvez vous un ami qui a accès au net et qui vous le téléchargera et vous l'enregistrera sur bande. Et je suis sur que les gens auraient 
+trouvé ces amis tôt ou tard,vous savez.. Ils auraient eu des copies. Mais, je n'avais pas de travail. En fait, je n'ai eu aucune profession depuis mon 
+départ du MIT en 84. Aussi, je cherchais une façon de gagner de l'argent par mon travail sur le logiciel libre, donc j'ai commencé un commerce de 
+logiciel libre. j'ai annoncé:"envoyez moi 150 dollars et je vous posterai une bande d' Emacs." Et les commandes ont commencé à tomber, et vers le 
+milieu de l'année elles dégringolaient... 
+
+Je recevais 8 à 10 commandes par mois. J'aurais pu en cas de nécessité vivre seulement de cela parce que j'ai toujours vécu simplement; je vis 
+comme un étudiant à la base. et j'aime ça car cela signifie que l'argent ne me dicte pas ce que je dois faire. Je peux faire ce qui me parait 
+important. Cela m'a libéré de faire ce qui semblait "rentable". Aussi faites un effort pour éviter d'être englué dans les habitudes dispendieuses de 
+l'american way of life, typique des américains typiques. Parce que si vous faites cela, les gens avec de l'argent vous dicteront quoi faire de votre 
+vie. Vous ne pourrez pas faire ce qui est réellement important pour vous.
+
+// les lignes suivantes ne se comprennent que si l'on sait qu'en anglais logiciel libre et logiciel gratuit se disent free software l'un comme l'autre.//
+Bon, c'était bien mais les gens me disaient "qu'entendez vous par free software (logiciel gratuit) si cela coute 150 dollars?"[rires] La raison de cette 
+question, était la confusion induite par l'ambiguïté du mot free en anglais. Le premier sens se réfère au prix et un autre se réfère à la liberté. Quand 
+je parle de logiciel libre, je me réfère à la liberté et non au prix.[...] en tous cas je n'aurais pas passsé autant d'années de ma vie pour faire gagner 
+moins d'argent aux programmeurs. Ce n'est pas mon but. je suis moi même programmeurs et je ne m'offusque pas de gagner de l'argent. Je ne 
+passerais pas ma vie à en gagner mais je ne refuse pas d'en gagner. Et je ne suis pas; l'éthique est la même pour tous, je ne suis pas contre le fait 
+qu'un autre programmeur en gagne. je ne veux pas faire baisser les prix.ce n'est pas du tout le problème. L'enjeu c'est la liberté. la liberté de 
+chaque personne qui utilise un logiciel, qu'on soit programmeur ou non.
+
+A ce moment je dois vous donner une définition de ce qu'est le logiciel libre. je préfère aller au réel car dire simplement "je crois en la liberté" est 
+vide de sens. Il y a tant de libertés différentes en lesquelles croire, et qui sont en conflit l'une avec l'autre, que la vraie question politique est 
+:"quelles sont les libertés importtantes, celles dont tout le monde doit être sur de les avoir ?" Et maintenant je vais vous donner ma réponse dans 
+ce domaine particulier qu'est l'usage du logiciel.
+
+Un programme est libre pour vous, utilisateur particulier, si vous bénficiez des libertés suivantes: premièrement, la liberté zéro est la liberté d'utiliser 
+un logiciel pour n'importe quel usage, de n'importe quelle manière. la liberté un est la liberté de s'aider en changeant le programme pour répondre à 
+vos besoins. la mliberté deux est celle d'aider ton prochain en distribuant des copies du programme. Et la liberté trois est celle d'aider à bâtir votre 
+communautéen publiant une version améliorée pour que les autres puissent bénéficier de votre travail. si vous avez toutes ces libertés, le 
+programme est un logiciel libre,pour vous; et c'est crucial c'est pourquoi je le dis comme ça. J'expliquerai pourquoi plus tard quand je parlerai de la 
+licence publique générale GNU (GNU-GPL), mais pour le moment j'explique ce qu'est un logiciel libre ce qui est une question plus basique.
+
+La liberté zéro est assez évidente. Si vous n'êtes même pas autorisé à faire fonctionner le programme de la façon qui vous plait, c'est un 
+programme sacrément restrictif ! La plupart des programmes vous donnent la liberrté zéro. Et la liberté zéro suit comme conséquence des libertés
+un deux et trois-- c'est la façon dont lma loi sur le copyright fonctionne. Ainsi les libertés qui distinguent le logiciel libre du logiciel ordinaire  sont 
+les libertés un,deux et trois; j'en parlerai donc plus et je dirai en quoi elles sont importantes. La liberté un est celle de modifier le logiciel pour 
+l'adapter à ses besoins. cela peut signifier corriger des bugs. cela peut signifier ajouter de nouvelles fonctions. cela peut signifier porter le logiciel 
+sur un autre type de système informatique. cela peut signifier traduire tous les messages d'erreur en navajo. Vous devriez pouvoir apporter toutes 
+les modifications que vous voulez librement.
+
+ Cela dit, il est évident que les programmeurs professionnels peuvent utiliser cette liberté de façon très effective mais ils ne sont pas les seuls.
+N'importe quelle personne d'intelligence normale peut apprendre un peu de programmation. Vous savez, il ya des travaux difficiles, des travaux 
+faciles et tout le monde n'apprend pas suffisamment pour faire les travaux difficiles, mais beaucoup peuvent apprendre assez pour faire des travaux 
+faciles, de la même façon que, il y a 50 ans, beaucoup beaucoup d'américains ont appris à réparer leur voiture ce qui a permis aux USA d'avoir une 
+armée motorisée pendant la seconde guerre mondiale et de gagner.alors,chose très importante avoir beaucoup de bricoleurs. Et si vous 
+refusez  d'apprendre la technologie; cela veut dire que vous avez probablement beaucoup d'amis et que vous êtes bon pour les obliger à vous 
+rendre service.[rires] Certains d'entre eux sont probablement informaticiens. Alors vous pouvez demander à un de vos amis informaticiens 
+"pourrais-tu changer ceci pour moi ?,et cette fonction ?" donc beaucoup de gens peuvent en bénéficier.
+
+Si vous n'avez pas cette liberté ceci cause un préjudice matériel et pratique à la société. Cela fait de vous un prisonnier de votre logiciel.j'ai 
+expliqué comment c'était dans le cas de l'imprimante laser. Vous savez, elle marchait mal et nous ne pouvions la réparer,parce que nous étions 
+prisonniers de notre logiciel. Mais cela affecte aussi le moral des gens. si l'ordinateur est constamment frustrant et que les gens l'utilisent, leur vies 
+vont devenir frustrantes et s'ils l'utilisent dans leur métier, leur métier va devenir frustrant; ils vont détester leur métier. Vous savez, les gens se 
+protègent de la frustration en décidant de s'en ficher. Vous en arrivez à des gens qui disent:"Bon, j'ai fait acte de présence au boulot, c'est tout 
+ce que j'ai à faire. Si je ne peux pas progresser ce n'est pas mon affaire, c'est l'affaire du patron." Et quand ça arrive c'est mauvais pour ces gens, 
+c'est mauvais pour la société toute entière. C'est la liberté un, la liberté de s'aider soi-même.
+
+La liberté deux est celle d'aider votre prochain, en distribuant des copies du programme. Pour des êtres qui pensent et qui apprennent, partager un 
+savoir utile est un acte fondamental d'amitié. Quand ces êtres utilisent des ordinateurs, cet acte d'amitié prend la forme d'un partage de logiciel. 
+Les amis partagent entre eux. les amis s'aident mutuellement. C'est la nature de l'amitié. Et en fait l'esprit de bonne volonté; l'esprit de vouloir aider 
+son prochain volontairement, est la ressource la plus importante de la société. Elle fait la différence entre une société vivable et une jungle où 
+chacun s'entredévore. Cette importance a été reconnue par les grandes religions du monde depuis des milliers d'années et elle essaye explicitement 
+d'encourager cette attitude.
+
+Quand j'allais au jardin d'enfants, les enseignants essayaient de nous apprendre cette attitude, l'esprit de partage, en nous la faisant pratiquer. ils 
+pensaient que si nous le faisions nous l'apprendrions. Alors ils disaient:" si tu apportes des bonbons à l'école, tu ne peux pas tout garder pour toi, 
+tu dois le partager avec d'autre enfants." la société a été faite pour apprendre cet esprit de coopération. Et pourquoi faut-il faire cela ? Parce que 
+les gens ne sont pas totalement coopératifs. C'est un aspect de la nature humaine mais il y en a d'autres. il y en a beaucoup. Aussi, si vous voulez 
+une société meilleure vous devez travailler à encourager  l'esprit de partage. Vous savez, ça ne sera jamais à 100%. Ca se comprend. Les gens 
+doivent aussi prendre soin d'eux mêmes. Mais si nous le rendons plus fort nous nous en porterons tous mieux.
+
+De nos jours, selon le gouvernement des Etats Unis, les enseignants sont supposés faire exactement le contraire. Oh Johny, tu as apporté un 
+programme à l'école ! Bien, ne le partage pas! Oh non, le partage c'est mal ! Le partage ça veut dire que tu es un pirate. Qu'entend-on par le mot 
+"pirate" ? Qu'aider son voisin est l'équivalent moral d'une attaque de bateau.[rires] Que diraient Jesus et Bouddah là dessus ? Prenez vos chefs 
+religieux favoris... je ne sais pas... Peut être Manson aurait dit quelque chose de différent.[rires] Qui sait ce que L. Ron Hubbard aurait dit, mais...
+
+QUESTION
+-[inaudible]
+
+STALLMAN
+-Bien sur il est mort. mais il ne l'admettent pas. Quoi?
+
+QUESTION
+-Les autres aussi sont morts.[rires] Charles Manson aussi est mort.[rires] Ils sont morts, Jesus est mort, Bouddah est mort..
+
+STALLMAN
+-Oui, c'est vrai.[rires] De ce point de vue Ron Hubbard n'est pas pire que les autres.[rires] de toute façon...
+
+QUESTION
+-L. Ron Hubbard utilisait du logiciel libre. cela l'a libéré de ZANU.
+[rires]
+
+STALLMAN
+-Bon, c'est la plus importante raison pour laquelle les logiciels doivent être libres. Nous ne pouvons nous permettre de polluer la ressource la plus 
+importante de la société. C'est vrai que ce n'est pas une ressource physique comme l'air propre, et l'eau propre. C'est une ressource 
+psycho-sociale, mais c'est tout aussi réel et cela fait une formidable différence pour nos vies.
+Les actions que nous menons influencent les pensées des autres. Quand nous clamons alentour:"ne partagez pas avec les autres", s'ils nous 
+entendent nous avons eu un effet sur la société et pas un bon effet. C'est la liberté Deux, celle d'aider son voisin.
+
+Oh, du coup si vous n'avez pas cette liberté cela ne cause pas seulement un préjudice à cette ressource psycho-sociale, cela porte préjudice de 
+manière matérielle et pratique. Si le programme a un propriétaire et que le propriétaire s'arrange pour que chaque utilisateur doive payer pour s'en 
+servir, certaines personnes diront:"pas d'importance, je m'en passerrai." Et c'est un gâchis délibéré. ce qui est intéressant avec les logiciels c'est 
+que ce n'est pas parce que vous avez moins d'utilisateurs que vous devez produire moins. Si moins de gens achètent des voitures, vous fabriquerez 
+moins de voitures. là il y a une économie. il y a des ressources à allouer, ou non à la fabrication des voitures. aussi vous pouvez dire qu'avoir un 
+prix pour une voiture est une bonne chose. Cela évite que les gens gaspillent leurs ressources dans l'achat de voitures dont ils n'ont pas vraiment 
+besoin. mais si chaque nouvelle voiture n'utilisait aucune ressource, on aurait aucun intérêt à économiser sur la fabrication des voitures. Bien, pour 
+les objects physiques, comme les voitures, il faudra toujours des ressources pour en faire une de plus. Chaque exemplaire additionnel. Mais pour les 
+logiciels cela n'est pas vrai.
+
+N'importe qui peut faire une copie. Et c'est complètement banal de le faire. Cela ne consomme aucune ressource sauf un tout petit peu 
+d'électricité. Il n'y a rien à économiser, aucune ressource à allouer ailleurs. Vous trouvez souvent des gens qui prennent l'économie -- les 
+conséquences du raisonnement économique basé sur des prémisses qui ne s'appliquent pas à l'informatique, et qui prétendent les transposer, en 
+supposant que les résultats seront valides -- dans ce cas l'argument n'est basé sur rien de valable dans le domaine du logiciel. C'est très important 
+de voir comment on arrive à une conclusion et de quelles prémisses elle dépend pour voir si elle est valide. Donc, liberté deux, la liberté d'aider son 
+voisin.
+
+La liberté trois est celle d'aider à bâtir votre communauté en publiant une version améliorée du logiciel. les gens me disaient souvent, si le logiciel 
+est gratuit, personne ne sera payé et donc pourquoi travailler ? [..]Aujourd'hui nous pouvons comparer cette théorie avec les faits empiriques et 
+constater que des centaines de gens sont payés pour faire du logiciel libre et plus de 100 000 le font comme volontaires. Il y a plein de gens qui 
+font des logiciels libres pour différents motifs.
+
+Quand j'ai démarrer le premier GNU Emacs --le premier morceau de GNU que les gens ont réellement voulu utiliser-- et quand il a commencé à avoir 
+des utilisateurs, après un certain temps j'ai eu un message disant:"Je pense que j'ai vu un bug dans le source, et voici une solution". Et j'ai eu  un 
+autre message "Voici du code pour ajouter une nouvelle fonction". Et un nouvelle correction, et une nouvelle fonction.Et un autre et un autre 
+--jusqu'à ce qu'ils se déversent  sur moi si vite qu'utiliser toute cette aide devenait un vrai travail. Microsoft n'a pas ce problème.[rires]
+
+En fin de compte, des gens ont remarqué ce phénomène. Vous voyez dans les années 80, beaucoup parmi nous pensaient que peut-être le logiciel 
+libre ne serait peut être pas aussi bon que le non-libre, parce que nous n'aurions pas assez d'argent pour payer des gens. Et bien sur, les gens qui 
+comme moi accordent de la valeur à la communauté et à la liberté ont dit:"nous utiliserons des logiciels libres tout de même." Cela vaut le coup de 
+faire quelque sacrifice au niveau technique pour avoir la liberté. Mais ce que les gens ont vu dans les années 90, c'est que nos logiciels étaient en 
+fait meilleurs . Ils étaient plus puissants et plus fiables que les alternatives propriétaires.
+
+Au début des années 90 quelqu'un a trouvé un moyen de mesurer scientifiquement la fiabilité d'un logiciel. Voila ce qu'il a fait. Il a pris plusieurs 
+logiciels qui faisaient le même travail, exactement le même travail sur différents systèmes. Parce qu'il y avait certains utilitaires de type UNIX. Et le 
+travail qu'il faisaient, nous le savons, imitait plus ou moins la même chose, ou il suivait les spécifications POSIX, donc c'étaient tous les mêmes en 
+terme de travail mais ils étaient écrits et maintenus par des gens différents et développés séparément. Le code était différent. Alors on a dit, bien, 
+faisons marcher ces programmes avec des données aléatoires et mesurons quand ils crashent ou combien de temps ils tiennent. Alors on a mesuré 
+et les programmes les plus fiables étaient les programmes GNU. Toutes les alternatives propriétaires étaient moins fiables. Alors,  il l'a publié et et 
+l'a dit à tous les développeurs et quelques années plus tard il a fait les mêmes expériences avec les dernières versions et il a obtenu le même 
+résultat. les versions GNU étaient plus fiables. Vous savez il y a des cliniques pour le cancer qui utilisent le système GNU parce qu'il est très fiable. 
+Et la fiabilité est très importante pour elles.
+
+Quoi qu'il en soit, il y a même un groupe de gens qui se concentrent sur cet avantage particulier, la plus importante raison qu'ils en donnent, est le 
+fait que les utilisateurs  puissent faire ces diverses choses et avoir ces libertés. Si vous m'avez écouté, vous aurez noté que je parle d'enjeux 
+éthiques et du type de société où nous voulons vivre, ce qui fait une bonne société, autant que des bénéfices matériels. C'est cela le Mouvement 
+pour le Logiciel Libre.
+
+L'autre groupe de gens qui est appelé Mouvement Open Source, ne parle que des bénéfices pratiques. Ils nient que c'est un enjeu de principe. Ils 
+nient que les gens aient un droit à cette liberté de partager avec son prochain et de voir ce que le programme fait, et de le modifier s'il ne leur plaît 
+pas. Ils disent cependant que c'est une chose utile que les gens aient ces droits. Alors ils vont voir des compagnies et leur disent:" Vous savez 
+vous pourriez faire plus d'argent si vous laissiez les gens faire cela." Aussi vous voyez que jusqu'à un certain point ils mènent les gens dans la même 
+direction mais pour des raisons fondamentalement, philosophiquement, totalement différentes. Parce que sur l'enjeu le plus profond, l'enjeu éthique, 
+les deux mouvements ne sont pas d'accord. Dans le Mouvement pour le Logiciel Libre on dit :"Vous êtes titulaires de ces libertés. personne ne 
+devrait vous empêcher de faire ces choses." Dans le mouvement Open Source on dit:" oui, on peut vous l'interdire mais nous allons essayer de les 
+convaincre de vous laisser faire." Bien, ils ont apporté leur contribution, ils ont convaincu un certain nombre de compagnies  d' apporter de 
+substantiels logiciels dans la communauté des logiciels libres. Aussi  le mouvement Open Source a-t-il contribué substantiellement à notre 
+communauté. Et donc nous travillons ensemble sur des projets pratiques. mais philosophiquement il y a un désaccord considérable.
+
+Malheureusement c'est le mouvement Open Source qui reçoit le plus d'aide du monde des affaires  et beaucoup d'articles sur notre travail le 
+décrivent comme Open Source et beaucoup de gens pensent innocemment que nous faisons tous partie du mouvement Open Source. C'est pour 
+cela que je mentionne cette distinction,  je veux que vous soyez conscients que le mouvement pour le Logiciel Libre qui a amené notre 
+communauté à l'existence et développé le système d'exploitation libre est toujours là et que nous défendons encore cette philosophie éthique.Je 
+tiens à ce que vous soyez au courant de façon à ce que vous ne désinformiez pas quelqu'un d'autre sans le savoir.
+
+Mais c'est aussi pour que vous puissiez vous situer. Vous savez c'est à vous de voir quel mouvement vous soutenez. Vous serez peut être d'accord 
+avec le Mouvement pour le Logiciel Libre et avec mes vues. Vous serez peut être d'accord avec le mouvement Open Source. Vous serez peut être 
+en désaccord avec les deux. Vous décidez de votre position sur ces enjeux politiques. mais si vous êtes d'accord avec le mouvement pour le 
+Logiciel Libre, si vous voyez  qu'il y a là un enjeu, que les gens dont les vies sont contrôlées et dirigées par cette décision ont aussi leur mot à 
+dire-- alors j'espère que vous direz que vous êtes d'accord avec le mouvement pour le Logiciel libre et une façon de le faire est d'utiliser le terme 
+Logiciel Libre et juste aider les gens à savoir qu'il existe.
+
+Donc, la liberté Trois est très importante pratiquement et psycho-sociologiquement. Si vous n'avez pas cette liberté cela amène un préjudice 
+matériel et pratique parce que le développement communautaire n'a pas lieu et nous ne pouvons pas faire des logiciels puissants et fiables. Mais 
+cela amène un préjudice psycho-social qui affecte l'esprit de coopération scientifique -- l'idée que nous travaillons ensemble à l'avancement du 
+savoir humain. Vous savez le progrès scientifique dépends de façon cruciale de de la capacité des gens à travailler ensemble. Et pourtant même de 
+nos jours vous trouvez souvent chaque petit groupe de scientifique en train d'agir comme s'il était en guerre avec un autre gang de scientifiques et 
+d'ingénieurs. Et s'ils ne partagent pas les uns avec les autres ils sont tous freinés.
+
+Ainsi voila les trois libertés qui distinguent le logiciel libre du logiciel ordinaire. La Liberté Un est celle de s'aider soi même, d'apporter des 
+changements en fonction de ses besoins propres. La liberté Deux est celle d'aider son prochain en distribuant des copies. Et la Liberté Trois  est la 
+liberté d'aider à construire sa communauté en apportant des modifications et en les publiant pour l'usage des autres gens. Si vous avez toutes ces  
+libertés, ce logiciel est libre pour vous. Maintenant pourquoi est-ce-que je définis cela en terme d'utilisateur particulier ? Est ce que c'est du logiciel 
+libre pour vous ? Est-ce que c'est du logiciel libre pour vous ? Oui ?
+
+QUESTION
+- Pouvez vous expliquer un peu la différence entre la liberté Deux et Trois ?
+
+STALLMAN
+- Bien, elles sont certainement liées. Parce que si vous n'avez pas la liberté de redistribuer  vous avez encore moins la liberté de distribuer une 
+version modifiée. Mais ce sont des activités différentes.
+
+QUESTION
+-Oh.
+
+STALLMAN
+- La liberté Deux c'est --lisez le, vous pouvez faire une copie exacte et la donner à vos amis... ou peut être vous faites des copies exactes, vous 
+les vendez à des amis pour qu'ils puissent les utiliser. La liberté Trois c'est quand vous apportez des améliorations ou au moins quand vous pensez 
+qu'il y a des améliorations et que quelques personnes sont d'accord avec vous. Voila c'est cela la différence. Oh, par le fait,un point crucial. Les 
+libertés Un et Trois dépendent de l'accès au code source. Parce que changer un programme binaire c'est extrèmement difficile.[rires] Même des 
+changements très insignifiants comme d'utiliser quatre chiffres pour la date.[rires]  Si vous n'avez pas le source... Aussi pour des raisons pratiques 
+l'accès au code source est une pré-condition, un pré-requis du logiciel libre.
+
+Bien, pourquoi définir le logiciel libre comme logiciel Libre "pour vous" ? La raison est que le même programme peut être libre pour quelques 
+personnes et non-libres pour d'autres.Cela pourrait sembler paradoxal. Laissez moi vous donnez un exemple de cette situation. Un très grand 
+exemple --peut être le plus grand exemple sur ce problème a été le système X window qui a été développé au MIT et publié sous une licence qui en 
+a fait un logiciel libre. Si vous aviez la version MIT avec la licence MIT, vous aviez les libertés Un Deux et Trois. C'était du logiciel libre pour vous. 
+Mais parmi ceux qui avaient des copies, il y avait divers fabricants d'ordinateurs qui distribuaient des systèmes UNIX et ils firent les changements 
+nécessaires pour que x fonctionne sur leurs systèmes. Vous savez, probablement quelques centaines de lignes sur les centaines de mille d'X. Et 
+quand ils le compilaient ils plaçaient les programmes binaires parmi les autres programmes binaires de leurs systèmes UNIX et distribuaient le tout 
+avec la même clause de non-divulgation. Alors des milliers de gens ont eu ces copies. Ils avaient le système X window mais aucune de ces libertés 
+et ce n'était plus du logiciel libre pour eux.
+
+Ainsi, que le système xwindow soit du logiciel libre dépendait de où l'on faisait la mesure. si vous faisiez la mesure à la sortie du groupe de 
+développeurs vous disiez:" J'ai observé toutes ces libertés, c'est du logiciel libre." Si vous faisiez la mesure parmi les utilisateurs vous disiez:" Mmh, 
+la plupart des utilisateurs n'ont pas ces libertés, ce n'est pas du logiciel libre." Bon, les gens qui développaient x window n'y voyaient pas de 
+problème car leur principal souci était la popularité, l' égo,essentiellement. Ils voulaient un grand succès professionnel. Ils voulaient sentir:"aah, un 
+tas de gens utilisent nos logiciels !" et c'était vrai, un tas de gens utilisaient leurs logiciels mais ils n'avaient pas la liberté.
+
+Bien, dans le projet GNU, si la même chose arrivait à un logiciel GNU ce serait un échec car notre but n'est pas simplement d'être populaires. Notre 
+but est de donner aux gens la liberté, d'encourager la coopération et de permettre aux gens de coopérer. Rappelez vous. Ne forcez personne à 
+coopérer mais faites en sorte que chacun puisse coopérer. Tout le monde a le droit de le faire s'il le souhaite. Si des millions de personnes 
+utilisaient des versions non-libres de GNU, ça ne serait pas du tout un succès, l'ensemble aurait été perverti et détourné de son but.
+
+Donc, j'ai cherché un moyen d'empêcher que cela arrive. La méthode que j'ai adoptée est appelée "copyleft". Ca s'appelle copyleft car c'est comme 
+de prendre un copyright et de le retourner.[rires] Légalement le copyleft fonctionne sur la base du copyright. Nous utilisons la loi existante sur le 
+copyright mais nous l'utilisons pour atteindre un but très différent. Voici ce que nous faisons. Nous disons:"Ce programme est copyrighté." Et bien 
+sur, par défaut, cela signifie qu'il est interdit de le copier, de le distribuer et de le modifier. Mais alors nous disons:" Vous êtes autorisé à en 
+distribuer des copies, vous êtes autorisé à le modifier, vous êtes autorisé à en distribuer des copies modifiées et étendues. Changez le comme vous 
+le voulez."
+
+Mais il y a une condition. Et la condition bien sur -- la condition est la raison pour laquelle nous nous sommes donnés tout ce mal. La condition dit: 
+"Chaque fois que vous distribuez quelque chose qui contient un morceau de ce programme, vous devez distribuer le tout aux mêmes conditions. Ni 
+plus, ni moins." Donc, vous pouvez modifiez le programme et le distribuer mais les gens qui l'auront de vous bénéficieront de la même liberté que 
+vous avez reçue de nous. Et pas seulement pour des parties de ce programme, les extraits que vous avez pris, mais aussi pour tous les autres 
+morceaux de ce programme. L'entièreté de ce programme doit être libre pour eux.
+
+Les libertés de redistribuer et de modifier le programme deviennent des droits inaliénables -- un concept de la déclaration d'indépendance. Des 
+droits dont nous nous assurons qu'ils ne peuvent vous être retirés. Et bien sur, la licence spécifique qui incarne l'idée du copyleft est la licence 
+générale publique  GNU(' désormais appelée GPL - n.d.t'.) une licence controversée car elle a la force de dire non à ceux qui voudraient être les 
+parasites de notre communauté.
+
+il y a beaucoup de gens qui n'apprécient pas nos idéaux de liberté. Et ils seraient très content de prendre  le travail que nous avons fait et d'en 
+faire une base pour la distribution de logiciel non-libre, et d'inciter les gens à abandonner leur liberté. Et le résultat serait, si nous les laissions faire, 
+que nous développerions des programmes libres et nous devrions être constamment concurrencés par des versions  améliorés de nos propres 
+programmes. Ca ne serait pas drôle. Et, beaucoup de gens pensent;" Je suis volontaire pour donner mon temps afin de contribuer à ma 
+communauté mais pourquoi contribuer à un programme propriétaire de telle ou telle compagnie. Vous savez certaines personnes ne trouvent pas ça 
+formcément mal mais elles veulent être rétribuées pour cela. Moi, je préfèrerais ne pas le faire du tout. Mais les deux groupes de gens-- ceux qui 
+comme moi disent:"je ne veux pas aider un programme non-libre à prendre pied dans notre communauté "-- et ceux qui pensent "je veux bien 
+améliorer un programme non libre mais ils ont intérêt à me payer", ont une bonne raison d' utiliser la licence GPL. Parce que cela dit aux 
+compagnies:" Vous ne pouvez pas juste prendre mon travail et le redistribuer sans la liberté. ce que les licences sans copyleft comme la licence de 
+Xwindow permettent.
+
+C'est cela la grande distinction entre les deux catégories de logiciel libre --au point de vue de la licence. il y a les programmes copyleftés; de façon 
+à ce que la licence défende la liberté du logiciel pour chaque utilisateur. Et il y a les programmes non copyleftés pour lesquels des versions non 
+libres sont permises. Quelqu'un peut prendre ces programmes et en ôter la liberté. Vous pouvez obtenir ce programme dans une version non libre. 
+Et ce problème existe aujourd'hui. il y a encore des versions non libres de x window utilisée sur des systèmes libres. il y a même des matériels qui 
+ne sont supportés que par des versions non libres. Et c'est un problème majeur dans notre communauté. cependant, je ne   dirais pas que X 
+window est une mauvaise chose; vous savez, je dirais que les développeurs n'ont pas fait du mieux qu'il pouvaient. Mais ils ont effectivement mis à 
+disposition beaucoup des logiciels que nous pouvons utiliser.
+
+ Vous savez, il y a une grande différence entre imparfait et mauvais. il y a de nombreux degrés entre le bien et le mal. Nous devons résister à la 
+tentation de dire :"Si vous n'avez pas fait absolument du mieux possible, vous ne valez rien." les gens qui ont développé X window ont fait une 
+grande contribution à notre communauté, mais il y avait mieux à faire. Ils auraient pu copylefté des morceaux du programme et empêcher ces 
+versions non libres d'être distribuées par d'autres. Maintenant le fait que la GPL défende votre liberté -- utilise la loi du copyright pour défendre 
+cette liberté, est la raison pour laquelle Microsoft l'attaque aujourd'hui. Voyez, Microsoft voudrait réellement prendre tout ce code que nous avons 
+écrit et le mettre dans des programmes propriétaires. Avoir quelqu'un qui ajoute quelques améliorations ou simplement des changements 
+incompatibles c'est tout ce qu'il leur faudrait.[rires]
+
+Vous savez, avez la force de Marketing de Microsoft, ils n'ont pas vraiment besoin de faire une version meilleure pour nous supplanter. Ils ont juste 
+besoin de la rendre différente et incompatible. et alors la mettre sur le bureau de tout le monde. Donc ils n'aiment pas la GPL. Parce que la GPL GNU 
+ne leur permet pas de faire cela. Elle ne leur permet pas la stratégie "étreindre et s'étendre". Elle dit si vous voulez partager du code avec nous 
+vous pouvez. mais vous devrez aussi partager et de la même façon. les changements que vous avez faits devront pouvoir être partagés. ainsi 
+c'est une coopération dans les deux sens, ce qui est une réelle coopération.
+
+Beaucoup de compagnies, même des grosses compagnies comme IBM et HP veulent utiliser nos logiciels dans cet esprit. IBM et HP contribuent à de 
+substantielles améliorations dans les logiciels GNU. Et ils développent d'autres logiciels libres. mais Microoft ne veut pas de cela, et ils prétendent 
+que le buissiness ne peut être compatible avec la GPL. Eh bien si le buisiness n' inclue pas IBM et HP et SUN, peut être qu'ils ont raison.[rires]
+
+J'en dirai plus ultérieurement sur ce sujet. Je dois d'abord terminer l'exposé historique. Vous voyez nous sommes arrivés en 84, pas seulement à 
+écrire du logiciel libre, mais à faire quelque chose de plus cohérent: développer un système d'exploitation libre qui ne comprenne que des logiciels 
+libres. Cela signifiait  que nous devions écrire morceau par morceau. Bien sûr nous cherchions des raccourcis, le travail était si grand que les gens 
+pensaient qu'on ne finirait jamais. je pensais qu'il y avait tout de même une chance que nous finissions mais que ça valait la peine d'essayer des 
+raccourcis. Alors on a continué à chercher ; n'y aurait-il pas un programme que quelqu'un a écrit et que nous pourrions adapter, implanter et que 
+nous n'aurions pas à écrire depuis le début ? Par exemple le système X window. c'est vrai qu'il n'était pas copylefté mais il était libre et nous 
+pouvions l'utiliser.
+
+En fait j'ai voulu inclure un système de fenêtres dès le premier jour. J'ai écrit une paire de systèmes de fenêtres quand j'étais au MIT avant de 
+commencer GNU. Et alors, avant même qu' UNIX ait un système de fenêtres en 1984 j'ai décidé que GNU en aurait un. Mais je n'ai jamais fini d'écrire 
+le sytème de fenêtres pour GNU car X window est arrivé. Et j'ai dit Bono! Un gros travail que nous n'aurons pas à faire. nous utiliserons X. Donc, j'ai 
+dit basiquement prenons X et mettons le dans le système GNU. Et nousferont marcher les autres morceaux de GNU avec X lorsque cela sera 
+approprié. et nous avons trouvé d'autres logiciels qui avaient été écrits par d'autres personnes comme le formateur de texte TEX. une bibliothèque 
+de code de berkeley. En ce temps là il y avait l' UNIX de berkeley, mais ce n'était pas un logiciel libre. cette bibliothèque venait d'un autre groupoe 
+à Berkeley, qui faisiat des recherches sur la virgule flottante. Et donc nous avons agencé ces morceaux.
+
+En octobre 85 nous avons fondé la FSF( free Software Fondation : Fondation pour le Logiciel Libre). Notez donc que le projet GNU est venu avant. 
+la FSF est venue après. Presque deux ans après l'annonce du projet. Et la FSF est une fondation exonérée d'impôt, qui lève des fonds pour 
+promouvoir la liberté de partager et changer les logiciels. dans les années 80 une des principales choses que nous avons faites avec nos fonds fut 
+d'employer des gens pour écrire des parties de GNU. Et des programmes essentiels tels que le Shell et la librairie C ont été écrits comme cela ainsi 
+que des parties d'autres programmes. Le programme tar qui est absolument essentiel -- bien que pas du tout excitant fut écrit comme ça.[rires] je 
+crois que Grep a été écrit comme ça aussi, si bien que nous nous sommes approchés du but.
+
+Vers 1991, il n'y avait plus qu'une pièce majeure qui manquait et c'était le noyau. Bon, pourquoi ai-je mis le noyau à part ? Probablement parce que 
+l'ordre dans lequel vous mettez les choses n'a pas d'importance, au moins techniquement. Il faut tout faire de toute façon. Et en partie parce que 
+nous pensions trouver un début de noyau ailleurs. ce que nous avons fait. Nous avons trouvé Mach qui était développé à l'université 
+Carnegie-Mellon. Et ce n'était pas tout le noyau mais le socle du noyau, aussi devions nous écrire la partie supérieure, des choses comme le 
+système de fichiers, le code réseau, etc.. Fonctionnant par dessus Mach comme systèmes utilisateurs ils étaient plus faciles à débugger. vous 
+pouvez ainsi débugger avec un débuggeur <au niveau source>. Et ainsi, de cette façon nous pensions être capables d'avoir cette partie supérieure 
+en peu de temps. Ca n'a pas marché de cette façon. Ces processus asynchrones et multi-threads, s'envoyant des messages les uns aux autres se 
+sont avérés très difficiles à débugger. Et le système basé sur Mach que nous utilisions possédait un calamiteux environnement de débuggage, il 
+n'était pas fiable et avait divers problèmes. Cela nous a pris des années et des années pour faire fonctionner le noyau GNU. mais heureusement 
+notre communauté n'a pas eu à attendre le noyau GNU. Parce qu'en 1991 Linus Torvalds développa un autre noyau libre appelé Linux. Et il utilisait 
+le vieux schéma du noyau monolithique et il se trouve qu'il réussit à le faire marcher beaucoup plus vite que nous le notre. C'est surement une 
+erreur que j'ai faite: la décision de l'architecture. De toute façon, au début on ne savait rien de Linux, car il ne nous a jamais contacté pour en 
+parler. Bien qu'il ait été au courant du projet GNU. Mais il l'a annoncé à d'autres gens et à d'autres endroits sur le net. Alors d'autres gens ont fait 
+le travail de combiner Linux avec le reste du système GNU pour en faire un système d'exploitation libre complet. Essentiellement pour faire la 
+combinaison GNU+Linux.
+
+Mais ils ne réalisaient pas ce qu'ils faisaient. Vous voyez disaient-ils, nous avons un noyau; regardons et voyons les morceaux que nous pouvons 
+ajouter . Alors ils ont regardé autour, en en dessous et partout et tout ce dont ils avaient besoin était disponible. Quelle bonne fortune dirent-ils 
+[rires] Tout est là. Nous pouvons trouver tout ce dont nous avons besoin. prenons toutes ces différentes choses et mettons les ensemble et nous 
+aurons un système complet. il ne savaient pas que la plus grande partie de ce qu'ils trouvaient c'étaient des parties du système GNU.Alors, ils ne 
+réalisaient pas qu'ils plaçaient Linux dans le créneau manquant du système GNU. ils pensaient qu'ils prenaient Linux et qu'ils en faisaient un 
+système. Alors ils l'ont appelé système Linux.
+
+QUESTION 
+-[inaudible]
+
+STALLMAN
+- Vous entend pas--Quoi ?
+
+QUESTION
+-[inaudible]
+
+STALLMAN
+-Bien je crois que ce n'est juste pas... c'est provincial, vous savez...
+
+QUESTION
+-Mais c'est plus une bonne fortune que de trouver X et Mach ?
+
+STALLMAN
+- Oui. la différence c'est que les gens qui ont développé X et Mach, n'avaient pas pour but de faire un système d'exploitation libre complet. Nous 
+sommes les seuls à avoir cela. et c'est notre travail acharné qui a fait exister le système. nous avons en réalité fait plus de travail que n'importe 
+quel autre projet. ce n'est pas une coïncidence, car ces gens --ils ont écrit des parties utiles du système. mais ils ne l'ont pas fait parce qu'ils 
+voulaient finir le système. ils avaient d'autres raisons.
+
+Maintenant les gens qui ont développé X, ils pensaient que concevoir un système de fenetres sur le réseau serait une bonne chose et cela l'était. 
+Et cela s'est transformé en un système d'exploitation bon et libre. Mais ce n'est pas ce qu'ils espéraient. Ils n'y pensaient même pas. C'est un 
+accident. Un bénéfice accidentel. Je ne dis pas que ce qu'ils ont fait était mauvais, ils ont fait un grand projet libre. C'est une bonne chose. Mais ils 
+n'avaient pas la vision ultime. C'est le projet GNU qui avait la vision.
+
+Et donc, nous sommes ceux dont -- tous les morceaux n'ont pas été faits par d'autres. Nous les avons fait. Sinon nous n'aurions pas eu un 
+système complet. Même quand ils étaient totallement ennuyeux et pas du tout romantiques comme tar et mv.[rires] Et nous l'avons fait. Ou ld, 
+vous trouvez qu'il n'y a rien de  très excitant dans ld, mais j'en ai fait un.[rires] Et j'ai fait des efforts pour qu'il utilise un minimum de <capacité 
+disque> de façon  à pouvoir supporter des programmes plus gros et être plus rapide. Mais vous voyez, j'aime bien faire du bon boulot, j'aime bien 
+améliorer différentes choses du programme pendant que je le réalise. Mais la raison pour laquelle je l'ai fait n'est pas que j'avais des idées brillantes 
+pour un meilleur Ld. La raison en était que j'en avais besoin d'un qui soit libre. Et nous ne pouvions attendre de personne d'autre qu'il le fasse. Aussi 
+nous l'avons fait ou avons trouvé quelqu'un pour le faire. Aussi, bien qu'à ce point des milliers de gens dans des projets aient contribué à ce 
+système, il n'y a qu'un projet qui soit à l'origine de ce système et c'est le projet GNU. c' *est* le projet GNU, avec d'autres choses ajoutées depuis.
+
+Donc quoi qu'il en soit le fait d'appeler ce système Linux a été un coup de poing au projet GNU car nous ne sommes pas reconnus normalement pour 
+le travail que nous avons fait. Je pense que Linux, le noyau est un morceau très utile de logiciel libre et je n'ai que de bonnes choses à en dire. 
+Bon, en fait,je pourrais trouver quelques mauvaises choses à dire mais...[rires] mais à la base j'en dis du bien. Toutefois appeler le système GNU, 
+Linux est juste une erreur. Je vous demanderais de fairer le petit effort nécessaire pour appeler le système GNU/Linux et de cette façon, nous aider 
+à en partager le crédit.
+
+QUESTION
+-Vous  avez besoin d'une mascotte ! Procurez vous un animal empaillé !
+[rires]
+
+STALLMAN
+-Nous en avons un.
+
+QUESTION
+-Ah bon ?
+
+STALLMAN
+- Nous avons un animal: un GNOU.[rires] Alors, oui, lorsque vous dessinez un pingouin, dessinez un gnou à côté.[rires]
+
+Mais gardons les questions pour la fin.je dois encore avancer. Alors pourquoi est-ce que je me soucie de tout cela. Vous savez pourquoi 
+est-ce-que je pense que cela vaut la peine de vous ennuyer et peut être de vous donner une pietre opinion de moi-même[rires] en soulevant la 
+question de confiance. Parceque certaines personnes quand je parle de ça, certaines personnes pensent que je fais cela pour nourrir mon ego, 
+n'est-ce pas?  Bien sur, je ne vous demande pas de l'appeler "Stallmanix", n'est ce pas ?[rires et applaudissements]
+
+Je vous demande de l'appeler GNU parce que je veux que le projet GNU ait du crédit. Et il y a une raison très spécifique à cela, qui est beaucoup 
+plus importante que le fait d'être reconnu. Parce que vous savez de nos jours il y a des gens dans notre communauté et la plupart des gens qui en 
+parlent ou écrivent à son sujet, ne mentionnent même pas GNU, ni ses buts de liberté, ni d'ailleurs ses idéaux politiques et sociaux. Parce que 
+l'endroit d'où cela vient c'est GNU. Les idées associées à Linux, la philosophie est très différente. C'est basiquement le système a-politique de Linus 
+Torvalds. Ainsi quand les gens pensent que l'ensemble du système est Linux, ils tendent à penser:" oh tout a du débuter avec Linus Torvalds. C'est 
+sa philosophie que nous devrions examiner attentivement." Et quand ils entendent parler de la philosophie GNU ils disent:" Mon dieu ,C'est bien 
+idéaliste, ça ne doit pas être pratique. Je suis un utilisateur Linux et pas GNU.[rires]
+
+Quelle ironie! si seulement ils savaient ! S'ils savaient que le système qu'ils aiment; et dans certains cas adorent et à la folie, c'est notre 
+philosophie idéaliste devenue réelle. ce n'est pas qu'ils devraient être d'accord avec nous. Mais au moins ils verraient une raison de la prendre un 
+peu sérieusement, d'y penser attentivement, de lui donner une chance. Ils verraient comme c'est lié à leur vie. vous savez, s'ils réalisaient :" 
+j'utilise le système GNU. voici la philosophie GNU. c'est par cette philosopie que le système que j'aime existe." Il la considérerainet avec un esprit 
+beaucoup plus ouvert. ca ne veut pas dire que tout le monde serait d'accord. les gens pensent des choses différentes. C'est OK. Vous savez, les 
+gens doivent décider aux-mêmes. Mais je veux que cette philosophie soit créditée pour les résultats qu'elle a obtenus.
+
+Si vous regardez dans notre communauté, vous verrez que presque partout les institutions appellent notre système Linux. Vous savez les 
+journalistes l'appellent principalement linux. Ce n'est pas juste mais ils le font. Les compagnies disent que ça donne une image de marque au 
+système. Oh et la plupart des journalistes quand ils écrivent des articles ne l'envisagent pas comme un sujet politique ou social. ils l'envisagent 
+comme un problème industriel ou commercial ou quelle compagnie a plus ou moins réussi, ce qui est une question mineure pour la société. et si vous 
+regardez les sociétés qui "emballent" le système GNU/Linux pour les utilisateurs, la plupart d'entre elles l'appelent linux et elles y ajoutent *toutes* 
+des logiciels non libres.
+
+Voyez la GPL stipule que si vous prenez du code d'un programme GéPéLisé, et si vous ajoutez du code pour en faire un programme plus grand, ce 
+programme entier devra être placé sous GPL. mais vous pourriez mettre d'autres programmes séparés sur le même support (de toutes sortes, disque 
+dur, CD..) et ils peuvent être sous d'autres licences. cela est considéré comme simple agrégation. Et, pour l'essentiel, distribuer deux programmes à 
+quelqu'un en même temps, nous n'avons rien à dire là dessus. Donc, en fait ce n'est pas vrai. J'aimerais que ça soit vrai, que si une compagnie 
+utilise un programme gépélisé dans un produit l'ensemble du produit doive-t-être du logiciel libre. Mais ce n'est pas --ca ne va pas jusque là --ce 
+n'est pas comme ça. Si deux programmes séparés communiquent l'un avec l'autre à distance, comme en s'envoyant des messages, ils sont 
+légalement séparés en général. Alors les compagnies en ajoutant des logiciels non-libres au système, donnent aux utilisateurs philosophiquement et 
+politiquement une très mauvaise idée. Ils disent aux utilisateurs: "C'est bien d'utiliser des logiciels non-libres. nous les mettons même comme bonus."
+
+Si vous regardez les magazines sur l'utilisation du système GNU/Linux, la plupart ont un titre comme Linux ceci ou Linux cela. donc ils appellent le 
+système "Linux", la plupart du temps. Et ils sont remplis depublicités pour des programmes non libres, que vous pouvez faire fonctionner par dessus 
+le système GNU/Linux. Ces publicités ont un message commun :"Le logiciel non libre est bon pour vous. Tellement bon, que vous pourriez même 
+*payer* pour l'avoir.[rires] et ils appellent ces choses packages à valeur ajoutée, ce qui en dit long sur leurs valeurs. Ils disent accordez de la 
+valeur au côté pratique, pas à la liberté." et je n'adhère pas à ces valuers, aussi je les appelle packages à liberté soustraite.[rires] Parce que si 
+vous avez installé un système d'exploitation libre vous vivez maintenant dans un monde libre.Vous bénéficiez de la liberté que nous avons travaillé 
+pendant des années à vous donner. Ces packages vous donnent l'occasion de vous attacher à une chaine.
+
+Et si vous regardez les Réunions commerciales autour du système GNU/Linux, elles s'appellent toutes Linux-expo. Et elles sont remplies de stands 
+exposant des logiciels non libres, donnant le sceau de l'approbation à du logiciel non libre. donc où que vous regardiez dans notre communauté, les 
+institutions renforcent le logiciel non libre, niant totalement l'idée de liberté pour laquelle GNU a été développé.Et le seul moment où les gens 
+rencontrent l'idée de liberté en relation avec GNU et les logiciels libres c'est justement quand vous utilisez le terme Logiciel Libre. C'est pourquoi je 
+vous demande d'appeler le système "GNU/Linux". S'il vous plaît, rendez les gens conscients d'où et pourquoi les système est venu.
+
+Bien sur, en utilisant simplement ce nom vous ne ferez pas une explication historique. Vous pouvez taper quatre lettres supplémentaires et écrire 
+"GNU/Linux". Vous pouvez dire deux syllabes de plus. Mais GNU/Linux c'est moins de syllabes que windows 2000. [rires] Vous n'en dites pas vraiment 
+beaucoup mais vous les préparez de façon à ce que lorsqu'ils entendent  parler de GNU, et de ce qu'il en est, ils voient comment ça se rattache à 
+leur vie. et ça fait, indirectement, une différence énorme. alors, aidez nous.
+
+Vous noterez que microsoft qualifie la GPL de licence Open-Source. Ils ne veulent pas que les gens en parlent en terme de liberté. Ils incitent les 
+gens à penser étroitement en tant que consommateurs. (Et en plus pas tres rationnels comme consommateurs s'ils choisissent les produits 
+Microsoft.) mais ils ne veulent pas que les gens pensent en tant que citoyens ou hommes d'état. Pour eux c'est défavorable.En tout cas c'est 
+défavorable pour leur modèle économique.
+
+Bon, comment ça se passe pour le logiciel libre.. bon, je peux vous dire comment le logiciel libre est lié à la société. un second sujet qui pour vous 
+pourrait être de quelque intérêt c'est comment il est lié à l'économie.. car, en réalité le Logiciel libre est *terriblement* utile à l'économie.Beaucoup 
+de secteurs utilisent du logiciel dans les pays avancés. Seule une petite fraction en développe. Et le logiciel libre est terriblement  avantageux pour 
+une compagnie qui utilise des logiciels car cela veut dire que c'est vous qui contrôlez. a la base le logiciel libre signifie que l'utilisateur contrôle  
+ce que fait le programme. Soit individuellent soit collectivement, si on y prête suffisamment d'attention. N'importe quelle personne qui porte de 
+l'attention peut exercer quelque influence. Si ça ne vous intéresse pas vous n'achetez pas, ensuite vous utilisez ce que les autres préfèrent. Mais 
+si vous êtes intéressé alors vous avez votre mot à dire.
+
+Avec les logiciels propriétaires vous n'avez  essentiellement rien à dire. Avec le Logiciel libre vous pouvez changer ce que vous voulez changer. 
+Et peu importe qu'il n'y ait pas de programmeurs dans votre société, ça va quand même. Vous savez si vous voulez bouger les cloisons de votre 
+appartement vous n'avez pas à être une entreprise de charpente , vous n'avez qu'à trouver un charpentier et lui demander de prendre en charge 
+ce travail. et si vous voulez changer les logiciels que vous utilisez vous n'avez pas besoin d'être une compagnie d'informatique, il vous suffit d'aller 
+dans une compagnie d'informatique et de leur dire :" Combien demandez vous pour implémenter ces fonctions ? et pour quand pouvez vous le faire 
+?" Et s'ils ne font pas le travail vous allez voir quelqu'un d'autre.
+
+il y a un marché libre pour l'assistance. Alors une entreprise qui s'intéresse à l'assistance trouvera un avantage terrible dans le logiciel libre. Dans le 
+logiciel propriétaire, l'assistance est un monopole. Parce qu'une compagnie a le code source, ou peut être quelques compagnies qui ont payé des 
+sommes énormes, si c'est le shared-source de Microsoft. Mais ils sont très peu. Et donc il n' y a pas mille sources d'assistance pour vous. Et cela 
+veut dire, sauf si vous êtes un géant, qu'ils n'en ont rien à faire de vous. Votre compagnie n'est pas assez importante pour qu'ils tiennent à avoir 
+votre clientèle. une fois que vous utilisez le programme, vous êtes obligé de passer par eux pour l'assistance, parce que migrer pour un autre 
+logiciel est un travail gigantesque. Alors vous finissez par payer pour avoir le privilège de signaler un bug.[rires] Et une fois que vous avez payé ils 
+vous disent: "OK,nous avons noté le bug. dans quelques mois vous pourrez acheter une mise à jour et vous verrez si nous avons réparé."[rires]
+
+Les boîtes d'assistance dans le logiciel libre ne peuvent pas s'en tirer comme cela. Elles doivent satisfaire les consommateurs. Bien sur vous pouvez 
+avoir beaucoup d'assistance gratis. Vous postez votre problème sur l'internet. Vous pouvez recevoir une réponse le lendemain. Mais ça n'est pas 
+garanti bien sur. Si vous voulez être sur, vous avez intérêt à conclure un accord avec une compagnie et à les payer. Et c'est, bien sûr, une des 
+façons dont l'économie du logiciel libre fonctionne.
+ 
+Un des autres avantages du logiciel libre c'est la sécurité et la protection de la vie privée.(Et ce la s'applique aussi aux individus mais je le pose là 
+dans le domaine des affaires.) Vous voyez, quand un programme est propriétaire on ne peut pas dire ce qu'il fait vraiment. il pourrait avoir des 
+fonctionnalités délibérément implantées que vous ne voudriez pas savoir là. Comme il pourrait y avoir une 'backdoor' ('porte de derrière' n.d.t) pour 
+laisser le dévekoppeur rentrer sur votre machine. Il peut vous espionner et envoyer des informations quelque part. Ce n'est pas inhabituel. il y a 
+des programmes Microsoft qui ont fait cela. Mais ce n'est pas seulement Microsoft. Il y a d'autres programmes propriétaires qui espionnent l'usager. 
+et vous ne pouvez même pas le savoir. Et, bien sur, même dans le cas où le développeur est totalement honnête, un programmeur peut commettre 
+des erreurs. Il pourrait y avoir des bugs qui affectent votre sécurité, ce qui n'est la faute de personne. Mais l'important c'est que si ce n'est pas du 
+logiciel libre vous ne pouvez trouver les erreurs ni les réparer.
+
+Personne n'a le temps de vérifier le source de chaque programme qu'il utilise. Vous n'allez pas faire cela. Mais, avec les logiciels libres il y a une 
+grande communauté et dans cette communauté il y a des gens qui vérifient les choses. et vous bénéficiez de leurs vérifications.Parce que s'il y a 
+un bug accidentel (et il y en a de temps en temps dans n'importe quel programme), il pourront le trouver et le corriger. Et les gens ne placeront 
+vraisemblablement pas un cheval de troie ou une fonction d'espionnage, s'ils pensent qu'ils peuvent être découverts. Les développeurs propriétaires 
+pensent qu'ils ne seront pas pris. Que cela passera indétecté. mais un développeur libre devra penser que les gens y regarderont et verront s'il y en 
+a. Alors, dans notre communauté nous ne pouvons pas faire avaler une fonction que les utilisateurs n'aimeraient pas. Aussi, nous savons que si les 
+utilisateurs ne l'aiment pas ils feront une version modifiée, sans cette fonction. Et ils utiliseront tous la version modifiée.
+
+En fait on peut raisonner un peu et se projeter suffisamment pour ne pas créer cette fonction. Après tout, si vous écrivez un programme libre, vous 
+voulez que les gens aiment votre version. Vous voulez pas y mettre quelque chose que les gens vont détester, et voir une version modifiée, 
+prendre le dessus. Ainsi vous réalisez que l'utilisateur est roi, dans le monde du logiciel libre. Dans le monde du logiciel propriétaire, l'utilisateur n'est 
+*pas* roi. Vous n'êtes qu'un consommateur, vous n'avez pas votre mot à dire sur le logiciel que vous utilisez.
+
+Dans cet aspect, le logiciel libre est une nouveau mécanisme pour faire jouer la démocratie. Le professeur Lessig qui est maintenant à Stanford a 
+remarqué que le code était un peu comme une sorte de loi. Celui qui écrit un code que les gens utilisent pour tel ou tel usage écrit les lois qui 
+régissent la vie des gens. Avec le logiciel libre, ces lois sont écrites d'une façon démocratique. Pas comme la démocratie traditionnelle, il n'y a pas 
+une grande élection où l'on demande:"qui veut que l'on mette telle ou telle fonction ?" [rires] A la place nous disons: que ceux qui veulent travailler 
+à implémenter telle fonction de telle façon, le fassent. Et si beaucoup de gens le veulent de telle façon, cela se fait ainsi. De cette façon, tout le 
+monde contribue à la décision sociale simplement en avançant dans la direction où il veut aller.
+
+Et vous êtes, personnellement, libre d'aller aussi loin que vous voulez. Une entreprise est libre d'avancer dans une direction autant qu'elle le veut. 
+Après, vous additionnez toutes ces choses et cela donne la direction où va le logiciel.
+
+Et c'est souvent utile de prendre un morceau d'un programme existant, en général un gros morceau. Et ensuite d'écrire une certaine quantité de 
+logiciel que voulez ajouter. Et faire en sorte que le programme fasse exactement ce que vous voulez qu'il fasse, ce qui vous aurait coûté les yeux 
+de la tête à développer vous même du début sans pouvoir cannibaliser un programme libre existant.
+
+Un autre résultat de la puissance de l'utilisateur, c'est que nous tendons à être bon en matière de standardisation et de compatibilité. Parce que 
+les utilisateurs aiment ça ! Les utilisateurs rejettent vraisemblablement un programme qui est délibérément incompatible. Bon, maintenant certains 
+groupes d'utilisateurs ont besoin  d'une certaine incompatibilité. Et alors, ils l'obtiennent c'est très bien. Mais quand les utilisateurs veulent que 
+vous suiviez un standard, les développeurs doivent le suivre. Et nous savons cela. Nous le faisons. Par contraste, si vous regardez les développeurs 
+propriétaires, ils trouvent souvent avantage à *ne pas* suivre un standard, délibérément. Et pas parce qu'ils pensent que cela donnera un 
+avantage à l'utilisateur, mais plutôt pour s' imposer à lui --- l'enfermer. Et vous en trouverez même qui modifient leurs formats de fichiers de temps 
+en 
+temps juste pour obliger les utilisateurs à se procurer la dernière version.
+
+Les archivistes ont un problème maintenant parce que des fichiers écrits sur des ordinateurs il y a des années ne sont plus accessibles. Ils ont été 
+écrits avec des programmes propriétaires qui sont maintenant perdus. S'ils avaient été écrits avec des logiciels libres, ils pourraient être mis à jour 
+et fonctionner. Et ces choses, ces archives, ne seraient plus inaccessibles. Il y a eu des plaintes à ce sujet récemment qui proposaient la solution 
+du logiciel libre. Et en effet en utilisant un logiciel propriétaire pour stocker vos données vous mettez la tête dans un noeud coulant.
+
+Donc j'ai parlé de la façon dont le logiciel libre change les affaires. mais comment affecte-t-il le domaine plus particulier de l'industrie informatique? 
+Bien, la réponse est pratiquement pas. Et la raison en est que 90 % de l'industrie informatique (d'après ce que j'entends dire) développe du logiciel 
+sur mesure. Du logiciel qui n'est pas destiné à la diffusion. Pour le logiciel sur mesure la question éthique sur libre ou propriétaire ne se pose pas. 
+Vous voyez la question est :"est-ce que les utilisateurs peuvent changer et redistribuer le logiciel ?". S'il n'y a qu'un utilisateur et qu'il a ces droits 
+ce n'est pas un problème. Cet utilisateur à le droit de faire toutes ces choses. Aussi un programme qui est conçu pour un utilisateur pour  un 
+usage interne  est un logiciel libre, du moins si le code source est accesible avec tous les droits.
+
+Et l'enjeu ne se pose pas pour un logiciel embarqué dans une montre ou un four micro-onde, ou dans le système d'allumage d'une voiture. parce 
+que ce ne sont pas des endroits où télécharger des logiciels à installer. Ce ne sont pas de vrais ordinateurs pour l'utilisateur. Il n'y a pas un enjeu 
+suffisant. Donc, pour la plus grande part, l'industrie informatique continuera ainsi. La chose importante c'est que comme le plupart des emplois sont 
+dans le sur-mesure, même s'il n'y avait pas de possibilités pour une économie du logiciel libre, les développeurs libres pourraient quand même 
+trouver un emploi dans le sur-mesure. Il y en a tellement, la proportion est si importante.
+
+Mais, il se  trouve qu'il y a une industrie du logiciel libre. Il y a des compagnies de logiciel libre. Et à la conférence de presse que je vais faire, 
+quelques uns d'entre eux vont se joindre à nous. Et, bien sur, il ya des sociétés qui ne sont pas des compagnies de logiciel libre mais qui 
+développent du logiciel libre très utile. et le logiciel libre qu'elles produisent est substantiel.
+
+Mais, comment travaille l'industrie du logiciel libre ? Bien, certains vendent des copies. On est libre de copier un programme mais ils peuvent quand 
+même vendre des centaines de copies par mois. Et d'autres vendent de l'assistance et des services variés. Personnellement dans les années 80, j'ai 
+vendu de l'assistance sur les logiciels libres. Basiquement, pour 200$ de l'heure je changeais ce que vous vouliez dans les programmes GNU que 
+j'avais écrits. Et oui, c'était un gros tarif, mais c'était pour des programmes que j'avais écrit et les gens pouvaient penser que j'y passerais moins 
+de temps.[rires] Et j'ai vécu de cela. En fait j'ai vécu mieux que jamais. J'ai aussi enseigné. Et j'ai continué jusqu'en 1990 où j'ai eu un  prix 
+important et je n'ai plus eu à le faire.
+
+Mais en 1990 la première entreprise de logiciel libre a été formée qui est CYGNUS support. Et leur travail était essentiellement le même que le mien. 
+J'aurais certainement pu travailler pour eux si j'en avais eu besoin.  Comme ce n'était pas le cas, j'ai pensé qu'il était bon pour le Mouvement que je 
+reste indépendant. De cette façon je pouvais dire de bonnes et de mauvaises choses sur les différentes entreprises de logiciel libre ou non sans 
+conflit d'intérêt. Je pensais que cela servirait plus le mouvement. Mais si j'avais dû en vivre j'aurais travaillé pour eux. C'est un travail éthique. Il n'y 
+aurait pas eu de raison d'en avoir honte. Et cette compagnie a été rentable dès les premières années. Elle a été fondée avec très peu de capital. 
+Juste l'argent de ses trois fondateurs. Et elle a grossi chaque année jusqu'à ce qu'ils soient trop cupides, cherchent des investisseurs extérieurs et 
+ça s'est mal passé. Mais il a fallu plusieurs années de succès avant qu'ils ne soient trop gourmands.Cela illustre une des choses intéressantes sur le 
+logiciel libre. Il démontre que vous n'avez pas à lever du capital pour dévélopper.  Je veux dire, c'est utile, cela peut aider. Si vous levez du capital 
+vous pouvez payer des gens pour écrire un bout de logiciel. Mais vous pouvez faire beaucoup avec peu de gens. Et en fait la formidable efficacité 
+du processus de développement du logiciel libre est une des raisons importantes de passer au logiciel libre. Et cela éclaire ce que dit Microsoft:" la 
+GPL GNU est mauvaise"; parce qu'elle leur rend difficile l'appel au capital. Et le fait de prendre des logiciels libres et de les intégrer dans leurs 
+programmes sans les partager. A la base nous n'avons pas besoin qu'ils lèvent du capital. Nous ferons le travail. Nous faisons le travail.
+
+Les gens disaient:" Vous ne pourrez jamais avoir un système d'exploitation libre complet. Maintenant nous en avons fait beaucoup plus. Et je dirais 
+que nous avons devant nous un champ qui englobe l'ensemble du logiciel d'intérêt général. Et ceci dans un monde ou 90% des utilisateurs n'utilisent 
+pas encore nos logiciels libres. Bien que dans certains domaines, plus de la moitié des serveurs web  du monde utilisent GNU/Linux avec Apache 
+comme serveur web.
+
+QUESTION
+-[inaudible] Qu'avez vous dit avant Linux ?...
+
+STALLMAN:
+-J'ai dit GNU/Linux.
+
+QUESTION:
+-Ah bon ?
+
+STALLMAN
+-Oui, si je parle du noyau, je dis Linux. Vous savez, c'est son nom. Le noyau a été écrit par Linus Torvalds. et nous devons l'appeler par le nom qu'il 
+a choisi, par respect pour l'auteur.
+Toutefois, en général dans l'industrie la plupart des utilisateurs  ne l'utilisent pas. La plupart des utilisateurs  ne l'utilisent pas encore. Aussi 
+lorsqu'ils l'utiliseront, nous devrions avoir automatiquement dix fois plus de volontaires et dix fois plus de clients pour l'industrie du logiciel libre qu'il 
+y aura. Je suis très confiant sur le fait que nous *pouvons* faire le travail.
+
+Et c'est très important, parce que Microsoft nous demande d'être desespérés. Ils disent :" La seule façon d'avoir des logiciels qui marchent; la 
+seule façon d'avoir des innovations, c'est de nous donner le pouvoir. Laissez nous vous dominer. Laissez nous contrôler ce que vous pouvez faire 
+avec les programmes que vous utilisez de façon à pouvoir vous pressurer beaucoup d'argent, utiliser une certaine fraction de cet argent pour 
+développer et le reste comme profit."
+
+Eh bien nous ne devons pas être aussi désespérés. Il ne faut pas être désespéré au point d'abandonner sa liberté. C'est très dangereux.
+
+Une autre chose c'est que Microsoft (en fait, pas que Microsoft) -- les gens qui n'encouragent pas le logiciel libre adoptent un système de valeurs 
+où la seule chose qui compte ce sont les bénéfices à court terme. Combien d'argent ferons nous cette année ? Quel travail puis-je faire aujourd'hui 
+? Pensée à court terme et pensée étroite. Ils présupposent qu'il est ridicule d'imaginer que quelqu'un puisse faire un sacrifice pour la liberté.
+
+Hier, un tas de gens faisaient des discours sur les américains qui faisaient des sacrifices pour la liberté de leurs compatriotes. Certains ont fait de 
+grands sacrifices. Ils ont même sacrifié leur vie pour des sortes de liberté dont chacun a, au moins, entendu parler dans notre pays. (au moins dans 
+certains cas. Je suppose qu'il faut oublier la guerre du viet-nam.) [note de l'éditeur: le jour précédent était le Memorial Day azux USA. C'est un jour 
+où les héros des guerres sont commémorés.]
+
+Mais heureusement, garder notre liberté d'utiliser des logiciels n'exige pas de grands sacrifices. Juste de petits sacrifices. Comme apprendre à 
+utiliser la ligne de commande, si on a pas encore d'interface graphique. Comme faire le travail de cette façon-ci parce qu'on a pas de logiciel libre 
+pour le faire de cette façon là. Comme payer une compagnie pour développer tel package logiciel en libre, pour que nous puissions en disposer dans 
+quelques années. Divers petits sacrifices que nous pouvons tous faire. et dans le long terme même *nous* en bénéficieront ! En réalité c'est plus 
+un investissement qu'un sacrifice. Il nous faut seulement voir assez loin pour réaliser qu'il est bon de travailler à l'amélioration de la société, sans 
+compter les centimes et les francs de qui bénéficie de cet investissement.
+
+j'en ai fini avec ce point.
+
+je voudrais mentionner qu'il existe une autre approche de l'économie du logiciel libre qui a été proposée par Tony Stanco,et qu'il appelle les 
+développeurs libres. Qui implique une certaine strucuture économique qui espère éventuellement payer un certaine partie de ses profits à des 
+auteurs de logiciel libres qui ont rejoint cette organisation. Et ils espèrent obtenir de grands contrats de développement en Inde, parce qu'ils vont 
+utiliser des logiciels libres là-bas ce qui leur fera des économies de coût considérables.
+
+Et donc maintenant, je vais vous demander des questions.
+
+QUESTION
+-[inaudible]
+
+STALLMAN:
+-Pourriez vous parler plus fort s'il vous plaît, je ne peux vraiment pas vous entendre.
+
+QUESTION
+-Comment une compagnie comme Microsoft pourrait-elle inclure des contrats pour du logiciel libre ?
+
+STALLMAN:
+- Bien, en réalité Microsoft est en train de prévoir de transférer beaucoup de ses activités dans les services. Et ce qu'ils veulent faire est sale et 
+dangereux, car ils veulent lier les services avec les programmes. Dans une sorte de zig-zag, vous voyez. Si bien que pour utiliser ce service, vous 
+devrez utiliser un programme Microsoft,ce qui veut dire que vous utiliserez ce service...et ainsi de suite. Tout est lié ensemble. C'est leur plan.
+
+La chose intéressante est que vendre ces services n'engage pas la question ethique du logiciel libre ou non libre. Ca pourrait être bien,d'avoir cette 
+activité  pour les entreprises qui vendent leurs services sur le net. Mais ce qu'ils essaient d'atteindre c'est de verrouiller encore plus --d'atteindre 
+un monopole encore plus grand-- sur les logiciels et les services. Et cela a été décrit dans un article de Buisseness Week, je crois récemment. Et 
+d'autre gens ont dit que cela allait transformer le net en " Microsoft-ville ".
+
+Et c'est pertinent car vous savez, le tribunal du procès anti-trust contre Microsoft a recommandé de casser en deux la compagnie. Mais d'un côté, 
+ça n'a pas de sens; ça ne ferait rien de bon, ni du côté système d'exploitation, ni du côté applications.
+
+Mais ayant lu cet article, je vois une autre façon, efficace celle là, de séparer Microsoft, avec d'un côté les services et de l'autre le logiciel. et de 
+les obliger à garder quelque distance. que la division services publie ses interfaces, pour que tout le monde puisse écrire un programme client pour 
+ces services. Bien sur, il faudrait payer pour ces services, mais c'est un enjeu tout à fait différent.
+
+ Si Microsoft est divisé en deux de cette façon, "services et logiciels", ils ne pourront pas utiliser leurs logiciels pour empecher la concurrence avec 
+les services. Et ils ne pourront pas utiliser les services pour fausser la concurrence des logiciels Microsoft. Et nous pourront faire des logiciels libres, 
+que des gens utiliseront peut être pour utiliser les services Microsoft, mais cela ne nous dérangera pas.
+
+Parce que bien que Microsoft soit la compagnie de logiciel propriétaire qui a subjugué le plus de monde,les autres en ont subjugué moins, mais ce 
+n'est pas faute d'avoir essayé.[rires]Ils n'ont simplement pas si bien réussi. Donc le problème n'est pas Microsoft et uniquement Microsoft. Microsoft 
+est seulement le plus grand exemple du problème que nous voulons résoudre, qui est que le logiciel propriétaire éloigne les utilisateurs de la liberté 
+de coopérer et de former une société ethique. Aussi, il ne faut pas trop focaliser sur Microsoft. Vous savez, bien qu'ils m'aient donné l'occasion 
+d'être ici, ça ne les rend pas plus important. Ils ne sont pas tout.
+
+QUESTION
+-Plus tôt, vous discutiez les différences entre le logiciel Open source et le logiciel libre. Que pensez vous de la tendance actuelle des distributions 
+GNU/Linux  à se limiter à la plate-forme intel. Et le fait qu'il semble que de moins en moins de programmeurs programment correctement et fassent 
+des logiciels qui compilent partout. Et fassent des logiciels qui fonctionnent seulement sur système Intel.
+
+STALLMAN
+- Je ne vois pas là d'enjeu éthique. Bien qu'en fait les compagnies qui fabriquent des ordinateurs portent parfois GNU/Linux. HP a fait cela 
+récemment apparemment. Et ils n'ont pas cherché à faire porter windows car cela aurait coûté trop cher. Mais avoir GNU/Linux supporté était 
+l'affaire de cinq ingénieurs pendant quelques mois, je crois.C'était facilement faisable.
+
+Maintenant, bien sur, j'encourage les gens à utiliser autoconf, un package GNU qui vous aide à rendre vos programmes portables. Je les y 
+encourage. Ou si quelqu'un corrige le bug qui empêche de compiler sur votre plateforme, à l'incorporer. mais je ne vois pas là d'enjeu éthique.
+
+QUESTION
+-Deux commentaires. Primo: récemment vous avez parlé au MIT. J'ai lu la transcription. Et quelqu'un vous a interpelé sur les brevets. et vous avez 
+dit :"les brevets sont un autre enjeu. je n'ai pas de commentaires sur cela."
+
+STALLMAN
+-Exact. En réalité j'ai beaucoup à dire sur les brevets. Ca prendrait une heure [rires].
+
+QUESTION
+- Je voulais dire ceci. Il me semble qu'il y a un enjeu. Il y a une raison pour que les compagnies appellent les brevets et les copyrights quelque 
+chose comme la propriété dure. Elles veulent utilsier le pouvoir de l'état à leur assurer un monopole. Ce qu'il y a de commun, c'est la motivation des 
+compagnies à obtenir un monopole pour leur intérêt privé.
+
+STALLMAN
+- Je comprends. Mais il ne reste pas beaucoup de temps alors tant qu'à faire je voudrais répondre à ça.
+
+Vous avez raison de dire que c'est ce qu'elles veulent. Mais il y a une autre raison pour qu'elles veuillent utiliser le terme "propriété intellectuelle." 
+C'est qu'elles ne veulent pas que les gens pensent correctement sur l'enjeu des copyrights et des brevets. Parce que la loi sur les droits d'auteur 
+ou copyrights n'est pas du tout la même que cellle sur les brevets. Leurs effets sur les logiciels sont totalement différents.
+
+Les brevets logiciels sont des restrictions faites aux programmeurs, leur interdisant d'écrire certaines sortes de programmes. Tandis que le 
+copyright ne fait pas cela. Avec le copyright au moins si vous l'avez écrit vous pouvez le distribuer. Donc il est terriblement important de séparer 
+ces deux questions.
+Elles sont un petit quelque chose en commun à un très bas niveau. Et tout le reste est différent. alors s'il vous plait pour rendre la discussion plus 
+claire, discuter du copyright ou discutez des brevets. Mais ne parlez pas de "propriété intellectuelle". j'ai des opinions sur les brevets et sur le 
+copyright.
+[...]
+
+QUESTION
+- Je m'interrogeais sur la music en ligne. il y a des similarités et des différences...
+
+STALLMAN
+- Bien. Je dirais que la liberté minimum dont nous devrions disposer pour *n'importe quelle* information publiée, est le droit de redistribuer non 
+commercialement, verbatim. Pour des travaux fonctionnels, nous avons besoin de la liberté de redistribuer *commerciallement* une version 
+modifiée, parce que c'est terriblement utile à la société. Pour des travaux non fonctionnels, vous savez des choses qui doivent être divertissantes 
+ou esthétiques, ou refléter les vues d'une personne, peut être qu'ils ne doivent pas être modifiés. Et peut être que cela signifie que c'est OK d'avoir 
+un copyright qui couvre toute distribution commerciale.
+
+Rappelez vous que selon la constitution des Etats Unis, le but du copyright est le bénéfice du public. Elle est de modifier la conduite de certaines 
+personnes privées de façon à ce qu'elles publient plus de livres. Et le bénéfice est que la société discute et apprenne et ,vous savez, nous avons la 
+litterature. Nous avons les écrits scientifiques. Le but est d'encourager cela. Les copyrights n'existent pas pour le bien être des auteurs, ni celui 
+des éditeurs, il existe pour les lecteurs et tous ceux qui bénéficient de la communication d'information, qui survient quand des gens écrivent et 
+d'autres lisent. Et ce but, je l'approuve!
+
+Mais à l'âge des réseaux d'ordinateurs la *méthode* n'est plus tenable, parce qu'elle exige des lois draconiennes qui envahissent l'intimité de 
+chacun et terrorisent tout le monde. Vous savez, des années de prison pour avoir partagé avec son voisin. Ce n'était pas la même chose du temps 
+de la presse écrite. Le copyright était alors une règlementation industrielle. Il restreignait les éditeurs. Maintenant, c'est une restriction imposée par 
+les éditeurs sur le public. Alors la relation de pouvoir a viré à 180° même si c'est la même loi.
+
+QUESTION
+- Ainsi on peut avoir la même chose, mais en faisant de la musique à partir d 'autre musique.
+
+STALLMAN
+-Oui, c'est intéressant.
+
+QUESTION
+-Et unique. De nouvelles oeuvres, c'est encore beaucoup de coopération.
+
+STALLMAN
+-Tout à fait. Et je suppose que cela demande un concept de "bon usage". Certainement faire un sample de quelques secondes et l'utiliser pour faire 
+une oeuvre musicale, ça doit être un "bon usage". Même l'idée ordinaire de "bon usage" renferme cela, si vous y pensez. Je ne sais pas si les 
+tribunaux seraient d'accord mais ils devraient. Ce ne serait pas un vrai changement du système tel qu'il a existé.
+
+QUESTION
+-Que pensez vous de la publication d'informations *publiques* dans des formats propriétaires.
+
+STALLMAN
+-Bien, ça ne devrait pas se faire. Le gouvernement ne devrait jamais exiger des citoyens d'utiliser un programme non libre pour accéder, 
+communiquer avec le gouvernement dans n'importe quel sens.
+
+QUESTION
+- Je suis,comment diriez vous un utilisateur de GNU/Linux...
+
+STALLMAN
+Merci [rires]
+
+QUESTION
+-Depuis quatre ans. La seule chose qui m'ait parue problématique pour moi et qui est quelque chose d'essentiel, je crois pour nous tous, est de 
+surfer sur le web.
+
+STALLMAN
+-Oui.
+
+QUESTION
+-Une chose qui a été décidément une faiblesse dans l'usage de GNU/Linux a été de surfer sur le web, parce que le principal outil pour cela, 
+Netscape..
+
+STALLMAN
+- n'est pas un logiciel libre...
+
+laissez moi répondre à cela.[..] Il y a une tendance terrible chez les utilisateurs de GNU/Linux à utiliser Netscape navigator sur leur système 
+GNU/Linux. Et en fait les distributions commerciales viennent avec. Voila bien une situation ironique : nous avons travaillé dur pour faire un système 
+d'exploitation libre, et maintenant si vous allez dans un magasin vous pouvez trouver des versions de GNU/Linux (la plupart d'entre elles apelées 
+linux) et elles ne sont pas libres.  Du moins en partie. Il y a Netscape navigator et peut être d'autres logiciels non libres.Donc il est très difficile de 
+trouver un système libre, sauf si vous savez ce que vous faîtes. En fait vous pouvez, il suffit de ne pas installer Netscape navigator.
+
+En fait il y a des navigateurs libres depuis de nombreuses années. Il y a un navigateur web libre que j'utilise et qui s'appelle "LYNX". C'est un 
+navigateur libre  qui n'est pas graphique. Il est en mode texte. Il a l'extraordinaire avantage de ne pas afficher les publicités.[rires et 
+applaudissements]
+
+Mais de toute façon il ya un projet graphique libre appelé Mozilla, qui est pratiquement au point. Et je l'utilise à l'occasion.
+
+QUESTION
+-Konqueror 2.1 est très bon aussi.
+
+STALLMAN
+-Tres bien. Voila donc un autre navigateur graphique libre. Donc nous résolvons finalement ce problème.
+
+ QUESTION
+- Pouvez vous me parler de la différence philosophique/éthique entre le logiciel libre et open source? Pensez vous que les deux soient 
+irréconciliables.[la fin de la question et le début de la réponse ont sauté au changement de cassettes.]
+
+STALLMAN
+-[...]
+Mais comme je le disais, dans beaucoup de travail pratique, la politique d'une personne ne compte pas. Quand quelqu'un offre son aide pour un 
+projet GNU nous ne lui disons pas :"Vous devez être d'accord avec notre politique." Nous disons que dans un package GNU vous devez appeler le 
+système GNU/Linux, et vous devez l'appeler logiciel libre. ce que vous dites quand vous ne parlez pas au projet GNU, ça vous regarde.
+
+QUESTION
+-IBM a commencé une campagne pour les agences gouvernementales pour vendre leurs nouvelles grosses machines utilisant Linux pour argument 
+de vente et disant à un moment "Linux".
+
+STALLMAN
+-Oui, bien sur c'est en réalité le système GNU/Linux.[rires]
+
+QUESTION
+- C'est vrai. Eh bien le responsable des ventes. il n'y connait rien à GNU.
+
+STALLMAN
+-Je dois dire qui ?
+
+QUESTION
+-Le grand responsable des ventes.
+
+STALLMAN
+-Oh oui. le problème c'est qu'ils ont déjà décidé ce qu'ils voulaient dire à leur avantage. Et l'enjeu de savoir comment nommer 
+correctement ou précisément ,n'est pas l'enjeu premier pour une compagnie comme cela. Dans une petite compagnie il y a un patron. Si le patron 
+est enclin à réfléchir sur des choses comme cela il peut prendre une décision. Mais pas dans une corporation géante. c'est une honte vous savez.
+
+il y a une autre chose plus réelle à propos de ce que fait IBM. Ils disent qu'ils mettent un milliard de dollars dans Linux. Mais peut être faut-il 
+mettre des guillemets autour de dans. Parce qu'une partie de cet argent sert à payer des gens pour faire des logiciels libres. C'est réellement une 
+contribution à notre communauté. Mais une autre partie de cet argent sert à fabriquer du logiciel propriétaire ou à porter des logiciels propriétaires 
+vers GNU/Linux, et ce n'est *pas* une contribution à notre communauté. Mais IBM mélange tout cela. Ce pourrait être en partie de la publicité, ce 
+qui est une contribution même si elle est en partie fausse. Donc c'est une situation compliquée. Une partie de ce qu'ils font est une contribution, 
+une autre partie non et une autre partie est entre les deux. On ne peut pas mettre tout cela ensemble et dire "Whee ! un milliard de dollars d' 
+IBM!"[rires] C'est simplifier à outrance !
+
+QUESTION
+-Pouvez vous en dire plus sur la pensée qui sous-tend la licence GNU/GPL.
+
+STALLMAN
+-[..] Donc, la pensée qui sous-tend la licence GNU/GPL ? C'est en partie que je voulais protéger la liberté de la communauté des phénomènes que 
+j'ai décrits à propos de Xwindow, et qui sont arrivés avec d'autres logiciels libres. En fait quand j'ai pensé à cet enjeu, Xwindow n'était pas encore 
+sorti. Mais j'avais vu le problème se réaliser avec d'autres programmes libres. Par exemple Tex. Je voulais être sur que les utilisateurs auraient tous 
+la liberté. Sinon, j'ai réalisé que je pouvais écrire un programme et que peut être beaucoup de gens utiliseraient ce programme, mais ils n'auraient 
+pas la liberté. Alors à quoi bon ?
+
+Mais l'autre enjeu auquel je pensais c'était: je voulais donner le sentiment à la communauté qu'elle n'était pas un paillasson, le sentiment qu'elle ne 
+serait pas la proie du premier parasite venu. Si vous n'utilisez pas le copyleft, vous dites en substance :[voix mièvre] "prenez mon code. Faites ce 
+que vous voulez. Je ne dis pas non." Alors n'importe qui arrive et dit : "[voix très ferme] Ah je veux faire une version non libre de ceci. Je le 
+prends." Et alors, très probablement ils font quelques améliorations. Ces versions non libres intéressent les utilisateurs et remplacent les versions 
+libres. Et alors qu'est-ce que vous avez accompli ? Vous avez simplement fait une donation à un projet de logiciel propriétaire.
+
+Et quand les gens voient ce qui est arrivé; quand des gens voient: "les autres prennent et ne donnent jamais", ça peut être démoralisant. Et ce 
+n'est pas une pure spéculation. Je l'ai vu arriver. Ca a participé à la disparition de la vieille communauté dont j'ai fait partie dans les années 70. 
+Certaines personnes sont devenues non-coopératives. on pensait qu'elles en profitaient. elles agissaient en donnant cette impression. Et on a 
+réalisé qu'elles pouvaient utiliser la coopération et ne pas donner en retour. Nous ne pouvions rien y faire. C'était très décourageant. Nous qui ne 
+suivions pas la tendance nous disputions et n'arrivions pas à trouver une idée pour arrêter cela.
+
+Alors la GPL est conçue pour éviter cela. Elle dit:" Vous êtes le bienvenu pour vous joindre à la communauté et utiliser ce code. Vous pouvez 
+l'utiliser de toutes les façons possibles. Mais si vous sortez une version modifiée, vous devez la sortir pour la communauté en tant que logiciel libre."
+
+Alors en fait, il y a encore bien des façons pour les gens de profiter de notre travail sans y contribuer, comme ne pas écrire de logiciels. Bien des 
+gens utilisent GNU/Linux et n'écrivent pas de logiciels. Il n'y a pas d'exigences sur ce que vous devez faire pour nous. Mais si vous faites une 
+certaine chose précise vous devez contribuer. Ca signifie que notre communauté n'est pas un paillasson. Et je pense que ça donne aux gens la 
+force de sentir:" Oui, nous ne serons pas piétinés par n'importe qui. Nous tiendrons."
+
+QUESTION
+-Oui, ma question portait sur le logiciel libre mais non copylefté. puisque tout le monde peut le prendre et en faire du logiciel propriétaire, est-ce 
+que quelqu'un ne peut pas le prendre , faire quelques modifications et le placer sous GPL ?
+
+STALLMAN
+-Oui, c'est possible.
+
+QUESTION
+-Ca rendrait toutes les copies futures gépélisées.
+
+STALLMAN
+-A partir de cette branche. Mais voici pourquoi nous ne le faisons pas:
+
+QUESTION
+-Hmmm?
+
+STALLMAN
+-Nous ne faisons pas cela généralement. Laissez moi vous expliquer pourquoi.[..] Nous pourrions si nous le voulions, prendre Xwindows, faire une 
+copy sous GPL et faire des modifications. Mais il ya un groupe beaucoup plus important de gens qui travaillent à son amélioration et qui ne veulent 
+pas le gépéliser. si nous faisions cela nous créérions une branche. Et ce n'est pas très sympa comme traitement. Ils font partie de notre 
+communauté. Ils contribuent à notre communauté.
+
+Deuxièmement, cela se retournerait contre nous, parce qu'ils ont fait beaucoup plus de travail sur X que nous n'en ferions. Notre version serait 
+inférieure à la leur et les gens ne l'utiliseraient pas, alors à quoi bon ?
+Alors quand une personne apporte une amélioration à X, je dis à cette personne coopérez avec l'équipe de développement de Xwindow. Envoyez 
+leur votre travail et laissez les s'en servir. Ils développent une *tres* importante pièce de logiciel libre. C'est bon de coopérer avec eux!
+
+QUESTION
+-Sauf, considérant X en particulier , il y a deux ans quand ils étaient très loin dans l'open-source non libre...
+
+STALLMAN
+- En fait ce n'était même pas Open source. Vous ne pouviez pas distribuer commercialement, ou quelque chose comme ça.[..]
+il y avait des restrictions. On ne pouvait pas distribuer commercialement, je crois. Ou on ne pouvait pas distribuer commercialement une version 
+modifiée. Il y avait une restriction considérée comme inacceptable à la fois par le mouvement Open source et la FSF.
+
+Et oui, c'est à cela que mène l'utilisation de licence sans copyleft. En fait, le consortium X avait une politique très rigide. Ils disaient: "Si votre 
+programme est copylefté ,nous ne le distribuerons pas du tout. Nous ne le mettrons pas dans notre distribution." Alors un grand nombre de 
+personnes ont été mis sous pression pour ne pas copylefter. Et le résultat c'était que tout leur logiciel était grand ouvert, ensuite. Et ensuite, 
+après avoir demandé aux gens d'être trop permissifs ils ont dit :"maintenant nous pouvons mettre des restrictions." Ca n'était pas très éthique de 
+leur part. 
+Mais, la situation étant donnée, allons nous gaspiller des ressources pour maintenir une version GPL de X ? Ca n'aurait pas de sens de faire cela. Il 
+y a tant d'autres choses à faire. Laissons les faire plutôt. Nous pouvons coopérer avec les développeurs de X.
+
+QUESTION
+- Avez vous un commentaire: GNU est il une marque déposée ? Et est il pratique d'inclure cela comme faisant partie de la GPL ?
+
+STALLMAN
+-Nous cherchons à déposer GNU comme marque déposée mais ça n'a rien à voir avec la GPL; c'est une longue histoire pour expliquer cela.
+
+QUESTION
+-Vous pourriez exiger que la marque déposée soit inclue dans les programmes GPL.
+
+STALLMAN
+-Non, je ne pense pas. Les licences ne couvrent que les programmes individuels. Et quand un programme fait partie du projet GNU personne ne 
+ment sur cela. Mais le nom du système dans son ensemble c'est un autre enjeu. C'est un à côté, cela ne vaut pas la peine d'en discuter plus.
+
+QUESTION
+- S'il y avait un bouton qui forçait toutes les compagnies à libérer leurs logiciels, l'utiliseriez vous ?
+
+STALLMAN
+- Bien, je ne l'utiliserais que pour les logiciels publiés. Vous savez, je pense que les gens ont le droit d'écrire des logiciels privés et de les utiliser. 
+Cela inclut les entreprises. C'est une question de vie privée. Et c'est vrai qu'il y a des temps ou cela peut être néfaste si vous gardez par devers 
+vous quelque chose qui peut être très utile à l'humanité. Mais c'est une sorte de mal différente, même si cela concerne le même secteur.
+
+Mais oui, je pense que tout logiciel publié devrait être libre. Et rappelez vous que si ce n'est pas un logiciel libre c'est à cause de l'intervention de 
+l'Etat. L'Etat intervient pour faire du non-libre. Il crée des pouvoirs spéciaux pour soutenir les propriétaires de programmes, de telle sorte qu'ils ont 
+la police pour nous empêcher d'utiliser les programmes de certaines façons. J'aimerais certainement mettre un terme à cela.
+
+SCHONBERG
+-Les intervention de Richard génèrent invariablement une quantité énorme d'énergie intellectuelle. Je suggère qu'une partie soit dirigée pour utiliser 
+et écrire des logiciels libres. Nous allons nous interrompre rapidement. Je voulais dire que Richard a injecté dans la profession, qui est connue dans 
+le public pour son attitude a-politique, un niveau de discussion morale et politique sans précédent. Et nous lui devons beaucoup pour 
+cela[...].[appaludissements]
+
+STALLMAN
+-Vous êtes libres de sortir quand vous voulez. je ne vous retiens pas prisonniers ici vous savez.[...] Ah, un dernier mot: notre site web : 
+www.gnu.org
+ 
+
+
+ 
+
+
+
+
+
+
+
+
+
+

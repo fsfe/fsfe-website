@@ -72,7 +72,7 @@
         <managingEditor>press@fsfeurope.org</managingEditor>
         <webMaster>web@fsfeurope.org</webMaster>
         <image>
-          <url>http://fsfeurope.org/news/fsfe-events.png</url>
+          <url>http://fsfeurope.org/events/fsfe-events.png</url>
           <title>FSFE Events</title>
           <width>180</width>
           <height>47</height>

@@ -17,7 +17,7 @@ if test $? -ne 0; then
    exit 1
 fi
 
-for focus in ${DEST}/*; do
+for focus in ${TMP}/*; do
    ln -s ${SOURCE} ${focus}/source
 done
 

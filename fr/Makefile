@@ -63,3 +63,8 @@ $(ENPAGES) $(FRPAGES): %.html: %.xhtml fsfe-fr.xsl navigation.en.xsl navigation.
 # remove html files for which an xhtml version exists (exclude fr/)
 clean:
 	rm -f $(NEWS) $(ENPAGES) $(FRPAGES)
+
+sync:
+	ssh -l www fr.fsf.org 'cd fsfe/fr ; cvs -z3 -q update -I "*.html" -d ; make' 
+
+

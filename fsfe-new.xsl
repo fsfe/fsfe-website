@@ -129,11 +129,11 @@
               <xsl:if test="string-length ($timestamp) &gt; 0">
                 <xsl:variable name="Date">
                   <xsl:value-of select="substring-before (substring-after
-                    ($timestamp, '$Date: 2004-05-25 17:15:44 $')" />
+                    ($timestamp, 'Date: '), ' $')" />
                 </xsl:variable>
                 <xsl:variable name="Author">
                   <xsl:value-of select="substring-before (substring-after
-                    ($timestamp, '$Author: reinhard $')" />
+                    ($timestamp, 'Author: '), ' $')" />
                 </xsl:variable>
                 <xsl:apply-templates
                   select="/buildinfo/textset/text[@id='lastchanged']/node()" />

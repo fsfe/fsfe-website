@@ -1,0 +1,22 @@
+Usage : 
+$ ./preproc.pl boilerplate.fr.pxhtml (for example)
+-> will generate a "final" file   boilerplate.fr.xhtml 
+
+
+The preproc.pl script parses a .pxhtml file and generate a .xhtml.
+It recognizes 2 special tags :   
+
+* <plang:langselection>
+which generates the classical menu
+[ Deutsch | English | Español | Français | Italiano | Português ]
+with links only on existing translations
+
+* <plang:internallink href="..." lnlang="..." fblang="..." name="...">
+which generates a link towards an other page on the site.
+lnlang (link language) and fblang (fallback language) are optional,
+href and name are mandatory.
+href is the page name or path, without the ".LA.html" extension
+name is the string to put between <a href=""> and </a> in the .xhtml output.
+ (a la linuxdoc)
+
+<GAllegre@april.org>, december 2001

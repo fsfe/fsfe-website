@@ -34,7 +34,9 @@ XSLTOPTS = \
 	'$$fsf=$(FSF)' \
 	'$$gnu=$(GNU)'
 
-ENPAGES = $(shell find * -path 'fr' -prune -o \( -regex '.*\.en\.xhtml' -o -regex '[^\.]*\.xhtml' \) -print | sed "s/xhtml$$/html/")
+ENPAGESOLD = $(shell find * -path 'fr' -prune -o -regex '[^\.]*\.xhtml' -print | sed "s/xhtml$$/html/")
+
+ENPAGES = $(shell find * -path 'fr' -prune -o -regex '.*\.en\.xhtml' -print | sed "s/xhtml$$/html/")
 
 FRPAGES = $(shell find * -path 'fr' -prune -o -regex '.*\.fr\.xhtml' -print | sed "s/xhtml$$/html/")
 
@@ -49,19 +51,31 @@ ESPAGES = $(shell find * -path 'fr' -prune -o -regex '.*\.es\.xhtml' -print | se
 # temporary, added by mad@april.org
 NEWS = news/news.fr.html news/news.en.html news/news.pt.html
 
-all: $(ENPAGES) $(FRPAGES) $(DEPAGES) $(PTPAGES) $(ITPAGES) $(ESPAGES)
+all: $(ENPAGESOLD) $(ENPAGES) $(FRPAGES) $(DEPAGES) $(PTPAGES) $(ITPAGES) $(ESPAGES)
 
 swpat/patents.en.html: swpat/patents-agenda.en.xml
 
-$(ENPAGES): %.html: %.xhtml fsfe.xsl navigation.en.xsl
+$(ENPAGESOLD): %.html: %.xhtml fsfe.xsl navigation.en.xsl
 	@$(ECHO) "Building $@ ..."; \
 	path=$< ; \
 	base=`expr $$path : '\(.*\).xhtml'` ; \
 	filebase=`basename $$base` ; \
 	dir=`dirname $$path` ; \
 	root=`dirname $$path | perl -pe 'chop; s:([^/]+):..:g if($$_ ne ".")'` ; \
-	$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase '$$path='$$path > $$base.html-temp && (cat $$base.html-temp | perl -p -e '$$| = 1; (s/Date://, s/Author:/by/, s/\$$//g) if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.html) ; \
+	langlinks="`./tools/translate.sh $$base en`" ; \
+	$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase '$$path='$$path '$$langlinks='"$$langlinks" > $$base.html-temp && (cat $$base.html-temp | perl -p -e '$$| = 1; (s/Date://, s/Author:/by/, s/\$$//g) if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.html) ; \
 	rm -f $$base.html-temp
+
+$(ENPAGES): %.html: %.xhtml fsfe.xsl navigation.en.xsl
+	@$(ECHO) "Building $@ ..."; \
+	path=$< ; \
+	base=`expr $$path : '\(.*\).en.xhtml'` ; \
+	filebase=`basename $$base` ; \
+	dir=`dirname $$path` ; \
+	root=`dirname $$path | perl -pe 'chop; s:([^/]+):..:g if($$_ ne ".")'` ; \
+	langlinks="`./tools/translate.sh $$base en`" ; \
+	$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase.en '$$path='$$path '$$langlinks='"$$langlinks" > $$base.en.html-temp && (cat $$base.en.html-temp | perl -p -e '$$| = 1; (s/Date://, s/Author:/by/, s/\$$//g) if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.en.html) ; \
+	rm -f $$base.en.html-temp
 
 $(FRPAGES): %.html: %.xhtml fsfe.xsl navigation.fr.xsl
 	@$(ECHO) "Building $@ ..."; \

@@ -37,6 +37,8 @@ PTPAGES = $(shell find * -path 'fr' -prune -o -regex '.*\.pt\.xhtml' -print | se
 
 all: $(ENPAGES) $(FRPAGES) $(DEPAGES) $(PTPAGES)
 
+swpat/patents.en.html: swpat/patents-agenda.en.xml
+
 $(ENPAGES): %.html: %.xhtml fsfe.xsl navigation.en.xsl
 	@echo "Building $@ ..."; \
 	path=$< ; \

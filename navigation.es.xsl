@@ -171,7 +171,7 @@
 	<td class="TopTitle">
           <a href="{$filebase}.xhtml">Fuente XHTML</a>&nbsp;&nbsp;|
           &nbsp;&nbsp;<a href="{$fsfeurope}/fsfe.xsl">Página de
-    estiol XSL</a><br/>
+    estilo XSL</a><br/>
 	</td>
 	<td class="TopTitle" align="right">
 	  &nbsp;<a href="mailto:webmaster@fsfeurope.org"

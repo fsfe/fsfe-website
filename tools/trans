@@ -1,6 +1,9 @@
 #!/bin/bash
 
+# -----------------------------------------------------------------------------
 # Find all files that have outdated translations or are untranslated.
+# -----------------------------------------------------------------------------
+
 # Usage: trans <language>
 # Example: trans de
 # Output is ordered: First all outdated translations, then all untranslated.
@@ -9,18 +12,45 @@
 # Written by Reinhard Mueller, mueller@fsfeurope.org
 # This script is in the public domain.
 
-# Get the date of a file. If somebody knows a better way, please tell me
-getdate() {
-  ls -l --full-time $1 | (read mode links owner group size rest; echo $rest) | sed -e "s% $1%%"
+# -----------------------------------------------------------------------------
+# Get the suffix of a filename (the part after the last dot)
+# -----------------------------------------------------------------------------
+
+suffix()
+{
+  echo "${1##*.}"                       # I love bash parameter expansion!
 }
+
+# -----------------------------------------------------------------------------
+# Change the language part of file $1 from $2 to $3
+# -----------------------------------------------------------------------------
+
+change_lang()
+{
+  suffix=$(suffix $1)
+  echo ${1/%.$2.${suffix}/.$3.${suffix}}
+}
+
+# -----------------------------------------------------------------------------
+# Get the date of a file. If somebody knows a better way, please tell me
+# -----------------------------------------------------------------------------
+
+getdate()
+{
+  ls -l --full-time $1 | (read mode links owner group size rest; echo $rest) \
+    | sed -e "s% $1%%"
+}
+
+# -----------------------------------------------------------------------------
+# Main program
+# -----------------------------------------------------------------------------
 
 missing=""
 outdated=""
 
 # Ignore de fr etc. subdirectories, we don't need translations there
-for orig in $(ls -t $(find ???* -name "*.en.xml") $(find ???* -name "*.en.xhtml")); do
-  trans=${orig/%.en.xml/.$1.xml}
-  trans=${trans/%.en.xhtml/.$1.xhtml}
+for orig in $(ls -t $(find ???* -name "*.en.xml" -or -name "*.en.xhtml")); do
+  trans=$(change_lang "$orig" "en" "$1")
   if [ ! -f ${trans} ]; then
     missing="${missing} ${trans}"
   elif [ ${trans} -ot ${orig} ]; then
@@ -28,16 +58,26 @@ for orig in $(ls -t $(find ???* -name "*.en.xml") $(find ???* -name "*.en.xhtml"
   fi
 done
 
-for i in ${outdated}; do
-  orig=${i/%.$1.xml/.en.xml}
-  orig=${orig/%.$1.xhtml/.en.xhtml}
+for trans in ${outdated}; do
+  orig=$(change_lang "$trans" "$1" "en")
+
+  # for .xml-Files, ignore all files where the original is less than 5 minutes
+  # newer than the translation. We have to list .xhtml-Files in any case,
+  # because otherwise "outdated" message will appear on the net.
+  if [ "$(suffix $trans)" == "xml" ]; then
+    t_time=$(stat -c "%Y" $trans)
+    o_time=$(stat -c "%Y" $orig)
+    if [ $(($o_time - $t_time)) -lt 300 ]; then
+      continue
+    fi
+  fi
+
   date=$(getdate $orig)
-  echo "outdated since ${date}: $i"
+  echo "outdated since ${date}: $trans"
 done
 
-for i in ${missing}; do
-  orig=${i/%.$1.xml/.en.xml}
-  orig=${orig/%.$1.xhtml/.en.xhtml}
+for trans in ${missing}; do
+  orig=$(change_lang "$trans" "$1" "en")
   date=$(getdate $orig)
-  echo "missing since ${date}: $i"
+  echo "missing since ${date}: $trans"
 done

@@ -27,7 +27,7 @@ XSLTOPTS = \
 	'$$fsf=$(FSF)' \
 	'$$gnu=$(GNU)'
 
-ENPAGES = $(shell find * -regex '[^\.]*\.xhtml' -print | sed "s/xhtml$$/html/")
+ENPAGES = $(shell find * -regex '.*\.en\.xhtml' -print | sed "s/xhtml$$/html/")
 
 FRPAGES = $(shell find * -regex '.*\.fr\.xhtml' -print | sed "s/xhtml$$/html/")
 

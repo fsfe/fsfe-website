@@ -41,7 +41,7 @@
     <table width="100%" border="0" cellspacing="0" cellpadding="4">
 	<tr>
 	  <td class="TopBody">
-	    <a href="{$fsffrance}/index.en.html">
+	    <a href="{$fsffrance}/
 	      <img src="{$fsffrance}/images/gnulogo.jpg" alt="GNU Logo" border="0" />
 	    </a>
 	  </td>

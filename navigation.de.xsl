@@ -31,7 +31,7 @@
     <table width="100%" border="0" cellspacing="0" cellpadding="4">
       <tr>
 	<td class="TopTitle">
-	  &nbsp;<a href="{$fsffrance}/index.en.html" class="T1">France</a> |
+	  &nbsp;<a href="{$fsffrance}/" class="T1">France</a> |
 	    Germany
 	</td>
       </tr>

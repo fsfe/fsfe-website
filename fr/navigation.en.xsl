@@ -84,7 +84,7 @@
 		<a href="{$fsffrance}/science/science.en.html">Science and FS</a><br />
 	      </td>
 	    </tr>
-	    <tr><td class="TopTitle" align="center">FSF Europe - Chapter France</td></tr>
+	    <tr><td class="TopTitle" align="center">Sections</td></tr>
 	    <tr>
 	      <td align="right">
 		<a href="{$fsffrance}/index.en.html">Home</a><br />

@@ -35,7 +35,7 @@
     <table width="100%" border="0" cellspacing="0" cellpadding="4">
       <tr>
 	<td class="TopTitle">
-	  &nbsp;<a href="{$fsffrance}/index.fr.html" class="T1">France</a> |
+	  &nbsp;<a href="{$fsffrance}/index.en.html" class="T1">France</a> |
 	    Germany
 	</td>
       </tr>
@@ -45,7 +45,7 @@
     <table width="100%" border="0" cellspacing="0" cellpadding="4">
 	<tr>
 	  <td class="TopBody">
-	    <a href="{$fsffrance}/index.fr.html">
+	    <a href="{$fsffrance}/index.en.html">
 	      <img src="{$fsffrance}/images/gnulogo.jpg" alt="GNU Logo" border="0" />
 	    </a>
 	  </td>
@@ -55,7 +55,7 @@
 	    <a class="TopTitle">Free Software is the conscience of software</a>
 	  </td>
 	  <td align="right" valign="bottom" class="TopBody">
-	    <a href="{$fsffrance}/index.fr.html" class="T2">France</a> <br />
+	    <a href="{$fsffrance}/index.en.html" class="T2">France</a> <br />
 	    <a href="{$fsfeurope}/" class="T2">Europe</a> <br />
 	    <a href="{$fsf}/home.en.html" class="T2">United-States</a> <br />
 	  </td>
@@ -76,7 +76,7 @@
 		<tr>
 		  <td align="right">
 		    <a href="http://agenda.lolix.org/" class="T2">Calendar</a><br />
-		    <a href="{$fsffrance}/news/news.fr.html" class="T2">News</a><br />
+		    <a href="{$fsffrance}/news/news.en.html" class="T2">News</a><br />
 		    <a href="http://savannah.gnu.org/pm/task.php?group_project_id=37&amp;group_id=53&amp;func=browse" class="T2">Tasks</a><br />
 		    <a href="{$gnu}/jobs/jobsFR.fr.html" class="T2">Jobs</a><br />
 		    <a href="{$fsffrance}/press/press.fr.html" class="T2">Press Section</a><br />

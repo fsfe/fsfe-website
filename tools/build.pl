@@ -285,7 +285,7 @@ while (my ($file, $langs) = each %bases) {
           my $auto_data = $sourcedoc->createElement("set");
 
           while (my ($base, $l) = each %files) {
-              print STDERR "Loading $base.$l.xml" if $opts{d};
+              print STDERR "Loading $base.$l.xml\n" if $opts{d};
               my $source_data = $parser->parse_file("$base.$l.xml");
               foreach ($source_data->documentElement->childNodes) {
                  my $c = $_->cloneNode(1);

@@ -19,7 +19,28 @@
       <xsl:for-each select="/html/set/news
         [translate (@date, '-', '') &lt;= translate ($today, '-', '')]">
         <xsl:sort select="@date" order="descending" />
-        <xsl:apply-templates select="*"/>
+
+        <!-- This is a news entry -->
+        <xsl:element name="p">
+
+          <!-- Date and title -->
+          <xsl:element name="b">
+            <xsl:text>(</xsl:text>
+            <xsl:value-of select="@date" />
+            <xsl:text>) </xsl:text>
+            <xsl:value-of select="title" />
+          </xsl:element>
+          <xsl:element name="br" />
+
+          <!-- Text -->
+          <xsl:apply-templates select="body/node()" />
+
+          <!-- Link -->
+          <xsl:apply-templates select="link" />
+
+        </xsl:element>
+        <!-- End news entry -->
+
       </xsl:for-each>
     </xsl:copy>
   </xsl:template>
@@ -28,29 +49,7 @@
   <xsl:template match="/html/set" />
   <xsl:template match="/html/text" />
 
-  <!-- How to show a single news entry -->
-  <xsl:template select="news">
-    <xsl:element name="p">
-
-      <!-- Date and title -->
-      <xsl:element name="b">
-        <xsl:text>(</xsl:text>
-        <xsl:value-of select="@date" />
-        <xsl:text>) </xsl:text>
-        <xsl:value-of select="title" />
-      </xsl:element>
-      <xsl:element name="br" />
-
-      <!-- Text -->
-      <xsl:apply-templates select="/html/set/news/body/node()" />
-
-      <!-- Link -->
-      <xsl:apply-templates select="/html/set/news/link" />
-
-    </xsl:element>
-  </xsl:template>
-
-  <!-- How to show a news link -->
+  <!-- How to show a link -->
   <xsl:template match="/html/set/news/link">
     <xsl:element name="a">
       <xsl:attribute name="href">

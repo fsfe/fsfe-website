@@ -66,7 +66,7 @@
       <xsl:apply-templates />
       <table>
         <tr>
-          <td valign="top">
+          <td valign="top" width="47%">
             <center>
               <h2><xsl:value-of select="/html/text[@id='news']" /></h2>
             </center>
@@ -84,7 +84,10 @@
               </a>
             </center>
           </td>
-          <td valign="top">
+          <td valign="top" width="4%">
+            &#160;
+          </td>
+          <td valign="top" width="47%">
             <center>
               <h2><xsl:value-of select="/html/text[@id='events']" /></h2>
             </center>

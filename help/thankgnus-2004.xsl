@@ -48,6 +48,11 @@
     </xsl:copy>
   </xsl:template>
 
+  <xsl:template match="patrons"><xsl:apply-templates /></xsl:template>
+  <xsl:template match="sustainingcontributors"><xsl:apply-templates /></xsl:template>
+  <xsl:template match="contributors"><xsl:apply-templates /></xsl:template>
+  <xsl:template match="supporters"><xsl:apply-templates /></xsl:template>
+
   <xsl:template match="set" />
   <xsl:template match="text" />
 </xsl:stylesheet>

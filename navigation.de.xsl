@@ -115,9 +115,9 @@
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
-                <xsl:when test="$path='mailman/index.de.xhtml'">Mailingslisten</xsl:when>
+                <xsl:when test="$path='mailman/index.de.xhtml'">Mailinglisten</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/mailman/index.de.html" class="T2">Mailingslisten</a>
+                  <a href="{$fsfeurope}/mailman/index.de.html" class="T2">Mailinglisten</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <a href="http://savannah.gnu.org/pm/?group_id=53" class="T2">Aufgabe</a><br />

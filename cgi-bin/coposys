@@ -17,7 +17,7 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
 # 02111-1307, USA.
 #
-# $Id: coposys,v 1.3 2003-02-01 15:23:34 jonas Exp $
+# $Id: coposys,v 1.4 2003-02-01 15:24:12 jonas Exp $
 #
 
 use integer;
@@ -33,7 +33,7 @@ my %people;
 
 # directory containing the marker files for xplanet
 # named thecommunity.mark
-my $markerdir='/var/www/coposys';
+my $markerdir='/home/www/var/coposys';
 
 # markerfile
 # format :
@@ -55,7 +55,7 @@ if (param('community')) {
 
     $filename = $markerdir . '/' . param('community') . '.mark';
 
-    print '<b>Coposys $Revision: 1.3 $ </b>' , "\n\n",
+    print '<b>Coposys $Revision: 1.4 $ </b>' , "\n\n",
     "Manage members of a community </b>\n\n";
 
     # form for adding a new member of the community

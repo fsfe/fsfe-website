@@ -293,6 +293,7 @@ while (my ($file, $langs) = each %bases) {
           # knowledge of all the sets in the source files.
           #
           my $sourcedoc = $parser->parse_file($source);
+          $sourcedoc->documentElement->setAttribute("date", $current_date);
           my $auto_data = $sourcedoc->createElement("set");
 
           while (my ($base, $l) = each %files) {

@@ -22,7 +22,7 @@
       <table class="news">
       <xsl:for-each select="/html/set/news">
         <xsl:sort select="@date" order="descending" />
-        <xsl:if test="position() &lt; 6">
+        <xsl:if test="(position() &lt; 6) and (@date &gt; /html/@date)">
           <tr>
             <td class="newstitle"><xsl:value-of select="title" /></td>
             <td class="newsdate"><xsl:value-of select="@date" /></td>

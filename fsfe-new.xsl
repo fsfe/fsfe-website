@@ -32,7 +32,7 @@
       <table width="100%">
         <tr>
           <td>
-            <a href="/"><img src="/graphics/global/logo.png" border="0" /></a>
+            <a href="/"><img alt="[FSFE Logo]" src="/graphics/global/logo.png" border="0" /></a>
           </td>
           <td class="focus">
             <table class="focus">

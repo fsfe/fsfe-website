@@ -1,0 +1,205 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta name="GENERATOR" content="Mozilla/4.77 [en] (X11; U; Linux 2.4.3-20mdk i586) [Netscape]">
+</head>
+<body bgcolor="#FFFFFF">
+
+<ul>
+<h1>
+<font color="#000000">IST&nbsp;Project : Cooperative Hosting Easily for Libre Software</font></h1>
+
+<h2>Required parts</h2>
+<DL>
+<DD>
+<STRONG>Proposal abstract</STRONG> (max 1000 characters)
+<DT>
+The proposal abstract should be a very short and precise presentation of the
+main features of the proposal. Why is it proposed and what problem is it
+solving? What are the objectives? How will the objectives be achieved? What
+results are expected? This proposal abstract will be used together with the
+proposal summary description in form A2 in the evaluation process and in
+communications about the proposals to the interested parties (Commission
+services and programme committees, etc.). Please use plain typed text, avoiding
+formulae and other special characters. If the proposal is written in a language
+other than English, please include in form A1 an English version of the
+abstract.  
+<BR><BR>
+<P>
+Although there are many hosting facilities around the world, no
+software package is designed to setup and maintain a set of
+machines dedicated to this purpose. The &NAME; project will
+provide a generic solution that can be used and adapted by all
+of them.
+<BR>
+<DD><STRONG>Objectives</STRONG> (max 1000 characters)
+<DD><STRONG>Description of the work</STRONG> (max 2000 characters)
+<DD><STRONG>Milestones and expected result</STRONG> (max 500 characters)
+</DL>
+<HR>
+<h2>Context</h2>
+Most of free or open source software is collaboratively developped using an
+hosting plateform. They are mostly web sites. The frontend integrates different
+functionnalities that are available to project developpers and administrators
+and linked them with each other. The backend is mainly implemented with
+scripts.
+A hosting plaform is a web site that provides functionnalities to
+developpers. 
+
+<p>The following functionalities are the most
+usualy supported in hosting platforms:
+<ul>
+<li> users and groups of users management, 
+<li> project repository (usualy based on Concurent Versionning System),
+<li> per project web pages and document sharing,
+<li> per project mailing lists and web forums,
+<li> bugtracking system,
+<li> project management system (audit, task management),
+<li> global site management and information feeding.
+</ul>
+<p>
+As far as we know, there is at least 4 different types of platforms : 
+<ul>
+<li> SourceForge (http://sourceforge.net/)
+<li> Savannah (http://savannah.gnu.org/),
+<li> VHFFS (http://tuxfamily.org/),
+<li> and Picolibre (http://picolibre.eu.org/).
+</ul>
+<p>
+The two leaders in hosting platforms are the 
+SourceForge (http://sourceforge.net/) site and Savannah (http://savannah.gnu.org/).
+<p>
+Hosting platforms are very useful and powerful tools. Many free software 
+developpers already use them for their work, and we are sure
+we will need more and more hosting platforms in a near future.
+<p>
+However, the existing solutions have some 
+drawbacks, that refrain their wide adoption as well in the Libre software
+community than in the proprietary software industry. Indeed
+they were poorly designed and had evolved quickly to provide
+functionnalities to developpers. The resulting platforms suffer from some 
+annoying flaws :
+
+<ul> 
+<li> Also due to the number of services and their inter-relations, it is not
+	simple to set up a new site that provides hosting. This is a real
+	brake to a large number of sites using this technology.
+	There is no complete solutions to install easily any of the technologies
+	described above.
+<li> They are hard to distribute, they were mainly designed as a front end to
+	a group of dedicated machines that provide the given set of 
+	functionnalities, versionning system, web access, or data base 
+	access. Even if the access is remote all data is centralized,
+	as one site hosts a huge number of projects. This is a bad
+	practice in terms of data safety, data access and scalability.
+<li> They rely too much on managing procedures and human control. For example, a site
+	needs to be managed by peoplata for mrtg. These script are used on es.gnu.org and france.fsfeurope.org
+es that acknowledge project creation.
+<li> The most active effort to build such a sytem has recently become proprietary.
+Therefore the produced work is not available.
+</ul>
+<h2>Presentation</h2>
+The goals of our project are to address many of these drawbacks and try to 
+provide a new generation of software that will help design, implement, 
+customize and deploy easily local hosting platforms as well as groups of 
+hosting platforms.
+<p>We will in the rest of this paper consider that a hosting platform 
+provides the following functionalities:
+users and groups of users management, 
+project repository (usually based on Concurent Versionning System, but it will
+not be mandatory),
+per project web pages and document sharing,
+per project mailing lists and web forums,
+bugtracking system linked to a project management system,
+global site management and information feeding.
+<BR>
+Our primary goal is to build a set of packages that is easy to
+install on a virgin machine or a machine already used for other
+purposes.
+<BR>
+Although we have in mind that thata for mrtg. These script are used on es.gnu.org and france.fsfeurope.org
+e set of packages produced could be used to for
+multiple purposes, our focus will be on development hosting facilities. 
+<p>
+The following picture summarize this project aims.
+<p><hline>
+<img src=hnet.png>
+<p><hline>
+<p>In this picture:
+<ul>
+<li> an ellipse means a network or group of sites that share information.
+<li> A rectangular box with rounding corner means a hosting platform
+	sharing information with the other platforms in the network.
+<li> The "Data Bus" is the medium used by the platforms to exchange 
+	      information using common data formats.
+<li> A rectangular boxes means a developper machine that accesses the global
+network transparently by using the hosting platform they prefer.
+</ul>
+<p>
+Let's say that the left ellipse covers hosting platforms which topic is
+small buziness accounting. And the right ellipse, covers 
+hosting platforms that support personnal household accounting projects.
+<p>
+Hosts may access information on the data bus by a publish/subscribe mechanisms.
+Host 3 is part of both networks, because it provides news on accounting
+projects. It listens to the common data bus waiting for informations 
+on projects releases, and sorts this information to put it in its own 
+web pages.
+<p>
+Hosts from a same network may share information, as in our example hosts 2 and
+3 agreed on sharing a developper list, that allows developper B to connect 
+to hosts 2 and 3 with the same identity after his registration at host 2.
+<p>
+To achieve these goals, we propose the following actions :
+<ul>
+<BR>
+Our primary goal is to build a set of packages that is easy to
+install on a virgin machine or a machine already used for other
+purposes.
+<BR>
+Although we have in mind that the set of packages produced could be used to for
+multiple purposes, our focus will be on development hosting facilities. 
+<li> to design a set of data formats that will be the core of 
+	communications among hosting platforms (these data will circulate in
+	      a bus àla XML Blaster);
+<BR>
+Our primary goal is to build a set of packages that is easy to
+install on a virgin machine or a machine already used for other
+purposes.
+<BR>
+Although we have in mind that the set of packages produced could be used to for
+multiple purposes, our focus will be on development hosting facilities. 
+<li> to design and implement interfaces to this data formats in existing 
+	hosting	platforms so that these existing platforms may be parts of the
+<BR>
+Our primary goal is to build a set of packages that is easy to
+install on a virgin machine or a machine already used for other
+purposes.
+<BR>
+Although we have in mind that the set of packages produced could be used to for
+multiple purposes, our focus will be on development hosting facilities. 
+	created network (for example savannah or sourceforge) ;
+<li> to integrates this data format in an existing platform simple and easy to
+	      install and to customize (picolibre) to create a network of
+	      such platforms;
+<li> to design prototype web sites, that will use the informations 
+	provided by hosting platforms ;
+<li> to test the usability and scalability of the solution by integrating 
+	a platform in the country of each parteners to create the first 
+	      network.
+</ul>
+<p>
+The data formats will play the role of a common language to all types of 
+platforms, allowing new platforms to be designed as well as integration of
+existing platforms in a network of cooperative sites.
+<p>
+Using this data format, hosting platforms will be able to share informations
+about developpers, projects, releases...
+<p>
+The final goal of the project is to help the developper using a global network
+of resources easily.
+
+
+</body>
+</html>

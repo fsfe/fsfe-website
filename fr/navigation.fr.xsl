@@ -114,6 +114,12 @@
                           <a href="{$fsffrance}/collecte.fr.html" class="T2">Revue de presse</a>
                        </xsl:otherwise>
                     </xsl:choose><br />
+		    <xsl:choose>
+                       <xsl:when test="$path=voting.en.xhtml">E-Vote</xsl:when>
+                       <xsl:otherwise>
+                          <a href="{$fsffrance}/voting/voting.en.html" class="T2">E-Vote</a>
+                       </xsl:otherwise>
+                    </xsl:choose><br />
 	          </td>
 		</tr>
 		<tr><td class="TopTitle" align="center">FSF France</td></tr>

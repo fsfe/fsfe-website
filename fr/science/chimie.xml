@@ -1094,6 +1094,57 @@
       <date>10 fev 2003</date>
     </os>
   </software>
+  <software>
+    <name>LDS</name>
+    <date>27 jun 2003</date>
+    <description lang="en">The aim of the LSD program is to find all possible molecular structures of an organic compound that are compatible with its spectroscopic data. Structure building relies on connectivity data found in 2D NMR spectra, without any reference to a chemical shift database. Molecular structures containing up to 50 non-hydrogen atoms were investigated by means of the LSD program.</description>
+    <description lang="fr">Le but du programme LSD est de déduire toutes les structures moléculaires planes d'une substance organique qui sont compatibles avec un ensemble de données spectroscopiques. La construction des structures repose sur des informations de connectivité déduites de données de RMN 2D, sans faire référence à une base de données de déplacement chimique. Des molécules comportant jusqu'à 50 atomes (hydrogènes exceptés) ont été étudiées par le programme LSD.</description>
+    <authors>Jean-Marc Nuzillard</authors>
+    <email></email>
+    <url>http://www.univ-reims.fr/Labos/UPRESA6013/GNOSIE/LSD/</url>
+    <os name="GNU/Linux">
+      <maintainer>Jean-Marc Nuzillard</maintainer>
+      <version>3.1</version>
+      <license>GPL</license>
+      <url>http://www.univ-reims.fr/Labos/UPRESA6013/GNOSIE/LSD/LSD-3.1.0.tar.gz</url>
+      <comment></comment>
+      <date>27 jun 2003</date>
+    </os>
+  </software>
+  <software>
+    <name>ObjCryst++</name>
+    <date>27 jun 2003</date>
+    <description lang="en">The aim of this project is to provide object-oriented tools for Crystallography. The focus of these tools is the analysis of diffraction data, with an emphasis on speed optimization for repetitive calculations (for global refinement methods such as simulated annealing, for example).</description>
+    <description lang="fr">Le but de ce projet est de fournir des outils orientés objets pour la Cristallographie. Ils sont particulièrement bien adapté à l'analyse des données, avec un effort particulier pour l'optimisation lors de calculs répétitifs.</description>
+    <authors>Vincent Favre-Nicolin</authors>
+    <email></email>
+    <url>http://objcryst.sourceforge.net/ObjCryst/</url>
+    <os name="GNU/Linux">
+      <maintainer>Vincent Favre-Nicolin</maintainer>
+      <version>1.5</version>
+      <license>GPL</license>
+      <url>http://sourceforge.net/project/showfiles.php?group_id=27546</url>
+      <comment></comment>
+      <date>27 jun 2003</date>
+    </os>
+  </software>
+  <software>
+    <name>Fox</name>
+    <date>27 jun 2003</date>
+    <description lang="en">The FOX program (for Linux and Windows) was made for the ab initio crystal structure solution from diffraction data (mostly powder diffraction data).</description>
+    <description lang="fr">Le programme FOX (poour Linux et Windows) a été réalisé pour la détermination ab initio de structure cristalline à partir de données obtenu par diffraction sur poudres.</description>
+    <authors>Vincent Favre-Nicolin</authors>
+    <email></email>
+    <url>http://objcryst.sourceforge.net/Fox/</url>
+    <os name="GNU/Linux">
+      <maintainer>Vincent Favre-Nicolin</maintainer>
+      <version>1.5</version>
+      <license>GPL</license>
+      <url>http://sourceforge.net/project/showfiles.php?group_id=27546</url>
+      <comment></comment>
+      <date>27 jun 2003</date>
+    </os>
+  </software>
 
 <!-- Template
   <software>

@@ -31,7 +31,7 @@
 	  </a>
 	</td>
 	<td class="TopBody">
-	  FSF France
+	  FSF Europe Chapter France
 	</td>
 	<td align="right" valign="bottom" class="TopBody">
 	  <table>
@@ -154,7 +154,7 @@
       <tr>
 	<td  class="newstext" align="center">
 	  <font size="-2">
-	    Copyright (C) 2002 FSF France,
+	    Copyright (C) 2002 FSF Europe Chapter France,
 	    8 rue de Valois, 75001 Paris, France
 	    <br/>
 	    Verbatim copying and distribution of this entire article is

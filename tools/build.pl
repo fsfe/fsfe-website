@@ -38,7 +38,8 @@ our %countries = (
   global => 'en',
   de => 'de',
   it => 'it',
-  fr => 'fr' );
+  fr => 'fr',
+  se => 'sv' );
 
 #
 # This is a hash of all the languages that we have translations into, and their

@@ -117,6 +117,7 @@ hd: html-dsssl
 hdn: html-dsssl-nochunk
 
 fo: fo-xsl-gnome-long fo-xsl-gnome-short
+pdf: pdf-xsl-gnome-long pdf-xsl-gnome-short
 
 p: print
 
@@ -219,7 +220,12 @@ fo-xsl-gnome-short: xml-xsl-short ${FO_SS_XSL} prepare-print
 
 pdf-xsl-gnome-long: fo-xsl-gnome-long prepare-print
 	(cd ${PRINT_OUT_DIR}; \
-	../pdfxmltex.sh ${FO_OUTPUT})
+	../pdfxmltex.sh ${FO_OUTPUT_LONG})
+	touch $@
+
+pdf-xsl-gnome-short: fo-xsl-gnome-short prepare-print
+	(cd ${PRINT_OUT_DIR}; \
+	../pdfxmltex.sh ${FO_OUTPUT_SHORT})
 	touch $@
 
 latex-xsl-gnome-long: xml-xsl-long ${LATEX_SS_XSL} prepare-print

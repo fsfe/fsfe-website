@@ -51,8 +51,8 @@
 	    <a class="TopTitle">Free Software - l'entreprise et l'individu sur un pied d'égalité</a>
 	  </td>
 	  <td align="right" valign="top" class="TopBody">
-	    <a href="{$fsfeurope}/documents/freesoftware.html" class="T2">What's&nbsp;Free&nbsp;Software?</a><br/>
-	    <a href="{$fsfeurope}/documents/gnuproject.html" class="T2">What's&nbsp;the&nbsp;GNU&nbsp;Project?</a><br/>
+	    <a href="{$fsfeurope}/documents/freesoftware.fr.html" class="T2">Qu'est-ce que le Logiciel Libre?</a><br/>
+	    <a href="{$fsfeurope}/documents/gnuproject.fr.html" class="T2">Qu'est-ce que le Projet GNU?</a><br/>
 	  </td>
 	</tr>
     </table>
@@ -74,16 +74,16 @@
             </tr>
             <tr>
               <td align="right"><br/>
-              <a href="{$fsfeurope}/index.html" class="T2">Home</a><br/>
-              <a href="{$fsfeurope}/contact/index.html"
+              <a href="{$fsfeurope}/index.fr.html" class="T2">Home</a><br/>
+              <a href="{$fsfeurope}/contact/index.fr.html"
                     class="T2">Contact</a><br/>
-              <a href="{$fsfeurope}/background.html"
+              <a href="{$fsfeurope}/background.fr.html"
                    class="T2">Background</a><br/>
-              <a href="{$fsfeurope}/mailman/listinfo/index.fr.html"
+              <a href="{$fsfeurope}/mailman/index.fr.html"
                    class="T2">Mailing Lists</a><br/>
               <a href="{$fsfeurope}/press/index.fr.html"
                    class="T2">Press section</a><br/>
-              <a href="{$fsfeurope}/gbn/index.html"
+              <a href="{$fsfeurope}/gbn/index.fr.html"
                    class="T2">GNU Business Network</a><br/>
               <br/></td>
             </tr>

@@ -96,6 +96,12 @@
 		<tr>
 		  <td class="TopBody" align="right">
                     <xsl:choose>
+                       <xsl:when test="$path='index.fr.xhtml'">Accueil</xsl:when>
+                       <xsl:otherwise>
+                          <a href="{$fsffrance}/index.fr.html" class="T2">Accueil</a>
+                       </xsl:otherwise>
+                    </xsl:choose><br />
+                    <xsl:choose>
                        <xsl:when test="$path='philosophy/philosophy.fr.xhtml'">Philosophie</xsl:when>
                        <xsl:otherwise>
                           <a href="{$fsffrance}/philosophy/philosophy.fr.html" class="T2">Philosophie</a>

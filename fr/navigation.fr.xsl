@@ -101,7 +101,8 @@
 		<a href="{$fsffrance}/about/speakers.fr.html">Intervenants</a><br />
 		<a href="{$fsffrance}/about/about.fr.html">À propos</a><br />
 		<a href="{$fsffrance}/contact.fr.html">Contact</a><br />
-		<a href="{$fsffrance}/thanks.fr.html">Merci !</a> 
+		<a href="{$fsffrance}/thanks.fr.html">Merci !</a><br />
+		<a href="{$fsfeurope}/order/announce.fr.xhtml">Articles FSFE</a>
 	      </td>
 	    </tr>
 

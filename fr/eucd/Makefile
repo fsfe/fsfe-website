@@ -58,7 +58,11 @@ $(ENPAGES) $(FRPAGES): %.html: %.xhtml fsfe-fr.xsl navigation.en.xsl navigation.
 		( cat $$base.html-temp | \
 		  perl -p -e '$$| = 1; s/\$$//g if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.html \
 		) ; \
-	rm -f $$base.html-temp
+	rm -f $$base.html-temp; \
+	base=`expr $$path : '\(.*\)....xhtml'` ; \
+	lang=`expr $$path : '.*\(..\).xhtml'` ; \
+	filebase=`basename $$base` ; \
+	mv $@ $$dir/$$filebase.$$lang.php ; \
 
 # remove html files for which an xhtml version exists (exclude fr/)
 clean:

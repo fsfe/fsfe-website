@@ -15,6 +15,10 @@
 # or
 # ftp://ftp.cogsci.ed.ac.uk/pub/richard/rxp-1.2.3.tar.gz
 #
+
+# branch tag name for the stable version of the site and only its patches
+STABLEBRANCH = BS_20010825
+
 XSLTPROC = sabcmd
 
 FSFFRANCE = http://france.fsfeurope.org
@@ -97,5 +101,9 @@ clean:
 	rm -f $(ENPAGES) $(FRPAGES) $(DEPAGES) $(PTPAGES)
 
 sync:
+	@echo "Updating stable version : $(STABLEBRANCH)"
 	ssh -l www france.fsfeurope.org 'cd fsfe ; cvs -z3 -q update -I "*.html" -d ; ../bin/nightly'
+	ssh -l www france.fsfeurope.org 'cd fsfe/server/testbeta ; cvs -z3 -q update -I "*.html" -d -r $(STABLEBRANCH) ; ../../../bin/nightly'
+	@echo "Updating beta version :"
+	ssh -l www france.fsfeurope.org 'cd fsfe/server/test/fsfe/server/testbeta ; cvs -z3 -q update -I "*.html" -d -A ; ../../../../../../bin/nightly'
 

@@ -60,9 +60,12 @@ our %languages = (
 # Parse the command line options. We need two; where to put the finished
 # pages and what to use as base for the input.
 #
-getopts('o:i:d', \%opts);
+getopts('o:i:duq', \%opts);
 unless ($opts{o} && $opts{i}) {
-  print STDERR "Usage: $0 [-d] -o <output directory> -i <input directory>\n";
+  print STDERR "Usage: $0 [-q] [-u] [-d] -o <output directory> -i <input directory>\n";
+  print STDERR "  -q   Quiet\n";
+  print STDERR "  -u   Update only\n";
+  print STDERR "  -d   Print some debug information\n";
   exit 1;
 }
 
@@ -79,8 +82,8 @@ my @dirs = File::Find::Rule->directory()
                            ->in($opts{i});
 
 while (my ($path, undef) = each %countries) {
-  print STDERR "Reseting path for $path\n";
-  rmtree($opts{o}.'/'.$path);
+  print STDERR "Reseting path for $path\n" unless $opts{q};
+  rmtree($opts{o}.'/'.$path) unless $opts{u};
   my @paths = map { $opts{o}."/$path/".$_ } grep(!/^\.\.?$/, @dirs);
   foreach (@paths) {
     print "Creating $_\n" if $opts{d};
@@ -141,7 +144,7 @@ foreach (grep(/\.xhtml$/, @files)) {
 #  document/@language    The language that this documents is in
 #
 while (my ($file, $langs) = each %bases) {
-  print STDERR "Building $file.. ";
+  print STDERR "Building $file.. " unless $opts{q};
 
   #
   # Create XML and XSLT parser contexts. Also create the root note for the
@@ -182,7 +185,7 @@ while (my ($file, $langs) = each %bases) {
   # Transform it, once for every focus!
   #
   while (my ($dir, undef) = each %countries) {
-    print STDERR "$dir ";
+    print STDERR "$dir " unless $opts{q};
 
     #
     # And once for every language!
@@ -218,6 +221,8 @@ while (my ($file, $langs) = each %bases) {
             }
 	}
 
+        next if ( (stat("$opts{o}/$dir/$file.$lang.html"))[9] >
+                  (stat($source))[9] && $opts{u} && ! -f "$opts{i}/$file.xsl" );
 
         #
         # Here begins automated magic for those pages which we need to
@@ -389,7 +394,7 @@ while (my ($file, $langs) = each %bases) {
 	$stylesheet->output_file($results, "$opts{o}/$dir/$file.$lang.html");
     }
   }    
-  print STDERR "\n";
+  print STDERR "\n" unless $opts{q};
 }
 
 #
@@ -397,10 +402,10 @@ while (my ($file, $langs) = each %bases) {
 # the final location, for each focus. These should be links instead to
 # prevent us from vasting disk space.
 #
-print STDERR "Copying misc files\n";
+print STDERR "Copying misc files\n" unless $opts{q};
 foreach (grep(!/\.xhtml$/, @files)) {
   while (my ($dir, undef) = each %countries) {
-    copy("$opts{i}/$_", "$opts{o}/$dir/$_") if -f "$opts{i}/$_";
+    link("$opts{i}/$_", "$opts{o}/$dir/$_") if -f "$opts{i}/$_";
   }
 }
 

@@ -19,7 +19,10 @@
       <xsl:apply-templates />
       <table>
         <tr>
-          <th>Technical</th><th>Legal</th><th>Sociological</th><th>Other</th>
+          <th class="projects">Technical</th>
+          <th class="projects">Legal</th>
+          <th class="projects">Sociological</th>
+          <th class="projects">Other</th>
         </tr>
         <tr>
           <td>

@@ -605,7 +605,16 @@ For example Windows Microsoft is a software distributed under a non-free license
 	  </question>
 	  <answer>
 	    <para>
-              Yes, ZDNet maintains the <ulink url="http://lhd.zdnet.com/">Linux Hardware Database</ulink>. This database is very complete and every manufacturer can reference his hardware there.
+              Yes, ZDNet maintains the <ulink url="http://lhd.zdnet.com/">
+		Linux Hardware Database</ulink>. 
+	      This database is very complete and every manufacturer can
+	      reference his hardware there.
+	    </para>
+	    <para condition="long">
+	      Moreover, the <ulink url="http://www.linuxhardware.org">
+		LinuxHardware.org</ulink> site can be contacted by the
+	      manufacturers who wish to make advertisements in connection with
+	      &LL; based operating systems such as GNU/Linux.
 	    </para>
 	  </answer>
 	</qandaentry>
@@ -910,7 +919,7 @@ The most famous licenses are the GNU General Public License (GPL), the GNU Lesse
 	  <para>
 	    Original version by 
 	    Philippe Coulonges <email>cphil@cphil.net</email> and
-	    Marc-Aurèle Darche <email>ma.darche@free.fr</email>.
+	    Marc-Aurèle Darche <email>ma.darche@cynode.org</email>.
 	  </para>
 	</listitem>
 	<listitem>
@@ -919,7 +928,7 @@ The most famous licenses are the GNU General Public License (GPL), the GNU Lesse
 	    <email>membres@aful.org</email>,
 	    <email>april@april.org</email> and
 	    <email>fsfe-france@gnu.org</email> 
-	    coordinated by Marc-Aurèle Darche <email>ma.darche@free.fr</email>.
+	    coordinated by Marc-Aurèle Darche <email>ma.darche@cynode.org</email>.
 	  </para>
 	</listitem>
 	<listitem>

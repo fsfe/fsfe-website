@@ -19,7 +19,6 @@ CHOICE=FAQConstructeurs.fr.xml
 
 # Initializing XML_SRC with the given CHOICE
 XML_SRC=${CHOICE}
-# FAQConstructeurs.fr.xml -> cutFAQConstructeurs.fr.xml
 XML_SRC_LONG=${addprefix long, ${XML_SRC}}
 XML_SRC_SHORT=${addprefix short, ${XML_SRC}}
 

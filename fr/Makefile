@@ -65,7 +65,7 @@ server/server.en.html: server/server.en.xhtml server/sysadmin-france.en.texi
 
 about/about.en.html about/about.fr.html about/organisation.fr.html about/reports.en.html about/signatures.html about/speakers.en.html about/speakers.fr.html about/statute.fr.html: about/menu.en.xhtml about/menu.fr.xhtml
 
-$(ENPAGES) $(FRPAGES): %.html: %.xhtml fsfe-fr.xsl navigation.en.xsl navigation.fr.xsl
+$(ENPAGES): %.html: %.xhtml fsfe-fr.xsl navigation.en.xsl
 	@$(ECHO) "Building $@ ..."; \
 	path=$< ; \
 	base=`expr $$path : '\(.*\).xhtml'` ; \
@@ -74,12 +74,20 @@ $(ENPAGES) $(FRPAGES): %.html: %.xhtml fsfe-fr.xsl navigation.en.xsl navigation.
 	root=`dirname $$path | perl -pe 'chop; s:([^/]+):..:g if($$_ ne ".")'` ; \
 	$(XSLTPROC) fsfe-fr.xsl $$path $(XSLTOPTS) \
 		'$$fsffrance='$$root '$$filebase='$$filebase '$$path='$$path | \
-		perl -MFile::Copy -p -e '$$| = 1; copy("'$$dir'/$$1", \*STDOUT) if(/\#include virtual=\"(.*?)\"/); s/\$$//g if(/\$$''Date:/);' \
-		> $$base.html-temp && \
-		( cat $$base.html-temp | \
-		  perl -p -e '$$| = 1; s/\$$//g if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.html \
-		) ; \
-	rm -f $$base.html-temp
+		perl -MFile::Copy -p -e '$$| = 1; copy("'$$dir'/$$1", \*STDOUT) if(/\#include virtual=\"(.*?)\"/); (s/Date://, s/Author:/by/, s/\$$//g) if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' \
+		> $$base.html
+
+$(FRPAGES): %.html: %.xhtml fsfe-fr.xsl navigation.fr.xsl
+	@$(ECHO) "Building $@ ..."; \
+	path=$< ; \
+	base=`expr $$path : '\(.*\).xhtml'` ; \
+	filebase=`basename $$base` ; \
+	dir=`dirname $$path` ; \
+	root=`dirname $$path | perl -pe 'chop; s:([^/]+):..:g if($$_ ne ".")'` ; \
+	$(XSLTPROC) fsfe-fr.xsl $$path $(XSLTOPTS) \
+		'$$fsffrance='$$root '$$filebase='$$filebase '$$path='$$path | \
+		perl -MFile::Copy -p -e '$$| = 1; copy("'$$dir'/$$1", \*STDOUT) if(/\#include virtual=\"(.*?)\"/); (s/Date://, s/Author:/par/, s/\$$//g) if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' \
+		> $$base.html
 
 # remove html files for which an xhtml version exists (exclude fr/)
 clean:

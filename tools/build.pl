@@ -55,6 +55,7 @@ our %languages = (
   es => 'Espa&ntilde;ol',
   fr => 'Fran&ccedil;ais',
   it => 'Italiano',
+  nl => 'Nederlands',
   pt => 'Portugu&ecirc;s',
   sv => 'Svenska',
 );

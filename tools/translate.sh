@@ -96,6 +96,17 @@ if [ "`echo $LANGS | grep fr`" != "" ]; then
     fi
     SEPARATOR=" | "
 fi
+if [ "`echo $LANGS | grep nl`" != "" ]; then
+    RESULT="$RESULT""$SEPARATOR"
+    if [ "$LANGUAGE" != "nl" ]; then
+	RESULT="$RESULT""<a href=\"$BASENAME.nl.html\">"
+    fi
+    RESULT="$RESULT""Nederlands"
+    if [ "$LANGUAGE" != "nl" ]; then
+	RESULT="$RESULT""</a>"
+    fi
+    SEPARATOR=" | "
+fi
 if [ "`echo $LANGS | grep it`" != "" ]; then
     RESULT="$RESULT""$SEPARATOR"
     if [ "$LANGUAGE" != "it" ]; then

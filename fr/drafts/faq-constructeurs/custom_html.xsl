@@ -5,7 +5,7 @@
 		exclude-result-prefixes="#default">
 
 <!-- Import of the stylesheet to customize -->
-<xsl:import href="/usr/local/docbook-xsl/html/docbook.xsl"/>
+<xsl:import href="/usr/share/sgml/docbook/stylesheet/xsl/nwalsh/html/docbook.xsl"/>
 
 
 <!-- HTML output will use the given stylesheet -->

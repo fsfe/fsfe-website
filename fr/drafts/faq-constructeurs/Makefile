@@ -88,7 +88,7 @@ help:
 	@echo
 
 #all: test html-xsl html-xsl-cut print
-all: test hdn print
+all: hg print
 
 # Shortcuts
 ph: prepare-html

@@ -1,4 +1,4 @@
-$Id: Webpage-Structure.txt,v 1.2 2004-07-27 23:04:37 now3d Exp $
+$Id: Webpage-Structure.txt,v 1.3 2004-08-01 13:08:59 now3d Exp $
 
 FSF Europe Web page structure
 -----------------------------
@@ -16,12 +16,12 @@ associate organisations, we need to make our best effort to make sure
 people can easily find what they are looking for.
 
 If they get lost or confused, they will feel stupid, which is
-something noone likes, so they will (at best) give up or (at worst)
-assume that Free Software isn't worth the effort to get into it.
+something no one likes, so they will (at best) give up or (at worst)
+assume that Free Software is not worth the effort to get into it.
 
 Please try to make sure that everyone working on the web page knows
-this document and tries to maintain the structure consistent. If you
-feel something isn't clear or are not sure where to put something,
+this document and tries to maintain the consistent structure. If you
+feel something is not clear or are not sure where to put something,
 please feel free to ask web@fsfeurope.org and/or team@fsfeurope.org at
 your discretion.
 
@@ -38,7 +38,7 @@ patch to this document.
 Before making changes to this document final, please mail your
 intended patch to team@fsfeurope.org and let them know where to find
 the discussion that preceded this patch so people will be able to
-understand why you feel this patch has become necessary. 
+understand why you feel this patch has become necessary.
 
 For each of these processes, there should be at least a week (better:
 two weeks) allowed feedback time in order to allow people to comment.
@@ -48,25 +48,25 @@ General notes:
 **************
 
  - We try to provide every page in as many languages as possible,
-   regardless of where it is published. 
+   regardless of where it is published.
 
    Of course we will not always have all translations at once, so
    things are being published when we have them and translated over
-   time. 
- 
+   time.
+
    If this means that a European document is only available in
-   Italian, German or French, so be it. It is better to get active
-   publishing things than to discourage ourselves by demanding
-   translations that we currently aren't willing or able to do. 
+   Italian, German or French, then so be it. It is better to get
+   active publishing things than to discourage ourselves by demanding
+   translations that we currently are not willing or able to do.
 
    Of course we should aim to always have English versions of all
-   pages and preferrably write things in English for the European
-   level, but this is a recommendation, not a hard rule.
+   pages and preferably write things in English for the European
+   purpose, but this is a recommendation, not a strict rule.
 
 
    To give potential translators ideas, /help/translation should
-   contain a priority list of things that we'd like to see translated
-   first. 
+   contain a priority list of things that we would like to see
+   translated first.
 
 
  - Some of the directories are global to the whole FSF Europe, others
@@ -80,27 +80,27 @@ General notes:
    in the main directory to allow creating "<country>.fsfeurope.org"
    to map to it.
 
-   Example: The /projects tree will contain projects on the European
-    level, so the countrified tree for France will be located under
-    /fr/projects 
+   Example: The /projects tree will contain projects specifically
+   European, so the specific localised tree for France will be located
+   under /fr/projects
 
    The most important point about navigation will be to provide
    several overview pages based on the interest-focus of the web-page
    visitors that allow easy overview & navigation between the country
    projects and European projects.
 
-   Although this document speaks of countries/countrified, the
+   Although this document speaks of countries and localisation, the
    boundaries of such a region do not have to be identical to
    political borders. It is possible that some countries will bundle
    themselves together or divide themselves up based on political/
    cultural/language identities.
 
-   We don't seek to define who people feel close to - so if enough
-   people feel a certain "countrification" makes sense, we should go
-   along with it. 
+   We do not seek to define who people feel close to - so if enough
+   people feel a certain "grouping" makes sense, we should go
+   along with it.
 
    Creating duplicities should be avoided in order not to confuse
-   people. 
+   people.
 
 
 
@@ -117,11 +117,11 @@ Global/European directories:
         contains all legal documents like constitutions of the Hub and
         the Chapters and the Chapter template-constitution.
 
-	Also contains list of members and speakers.
+	Also contained is a list of members and speakers.
 
  /about/graphics
 
-	Subdirectory containing logo, artworks & other FSF Europe
+	Sub-directory containing logo, artwork & other FSF Europe
         things that people sometimes need for web pages(links) and
         such.
 
@@ -130,13 +130,13 @@ Global/European directories:
 
 	Directory of associate organisations, containing a list of
 	associate organisations and some contact information on the
-	top level. Also page(s) explaining the associate status and
+	top level. Also, page(s) explaining the associate status and
 	giving information on how to become an associate organisation
 	should go here.
 
  /associate/<name of associate organisation>
 
-	Subdirectory for the specified associate organisation,
+	Sub-directory for the specified associate organisation,
 	containing text, information, material, brochures by the
 	respective associate organisation.
 
@@ -146,8 +146,8 @@ Global/European directories:
 
  /associate/other
 
-	Subdirectory containing texts/initiatives/projects that we
-        percieve to be well-written or useful written by people
+	Sub-directory containing texts/initiatives/projects that we
+        perceive to be well-written or useful written by people
 	neither in a formal associate organisation nor member of the
         FSF Europe.
 
@@ -163,18 +163,18 @@ Global/European directories:
         here.
 
 
-/events	
+/events
 	This directory contains information about events the FSF
 	Europe or one of its representatives is present at. Contains
 	overviews of future events.
 
  /events/<year>
-	
-	Subdirectories for the different years containing overview
-	over the events in that particular year. Also avoids directory
-	cluttering of main events directory. Subdirectories for the
-	different events should be made when there are pictures,
-	presentations or several files to be put online.
+
+	Sub-directories for the different years containing overview
+	over the events in that particular year. Also, this avoids
+	directory cluttering of main events directory. Sub-directories
+	for the different events should be made when there are
+	pictures, presentations or several files to be put online.
 
 
 /help
@@ -185,7 +185,7 @@ Global/European directories:
 
  /help/translation
 
-	Subdirectory containing information about how to get involved
+	Sub-directory containing information about how to get involved
 	in the translation process and also TODO lists of things that
         need translation.
 
@@ -198,7 +198,7 @@ Global/European directories:
 /links
 
 	Directory containing linkpages to other organisations,
-	initatives and such. Potentially sorted by topic.
+	initiatives and such. Potentially sorted by topic.
 
 
 /material
@@ -225,7 +225,7 @@ Global/European directories:
 
 
 
-Countrified directories:
+Localised directories:
 (please keep this list alphabetical)
 
 /contact
@@ -240,7 +240,7 @@ Countrified directories:
 
  /news/<year>
 
-	Subdirectories for the different years to avoid directory
+	Sub-directories for the different years to avoid directory
 	cluttering. If something contains pictures or multiple files,
 	please create subdirectories for the entry.
 
@@ -254,13 +254,13 @@ Countrified directories:
 
 	This directory will probably contain little in terms of
 	additional information, it will more or less try to provide a
-	different type of networking the information that will be more
-	useful for journalists.
+	different type of communicating the information that will be
+	more useful to journalists.
 
 
 /projects
 
-	Directory structure containing projects in subsubdirectories
+	Directory structure containing projects in sub-directories
 	depending on their focus.
 
 	A project normally will be something that goes over a long
@@ -270,21 +270,21 @@ Countrified directories:
  /projects/technical
 
 	Subdirectory containing the technical projects in their own
-	subdirectories. 
+	subdirectories.
 
  /projects/legal
 
-	Subdirectories containing the legal projects/activities in
-	their own subdirectories.
+	Sub-directories containing the legal projects/activities,
+	each within their own sub-directory.
 
  /projects/awareness
 
-	As above for projects concentrating on building awareness for
+	As above, for projects concentrating on building awareness for
 	Free Software.
 
  /projects/other
 
-	As above for all that do not fall in one of the categories
+	As above, for all that do not fall in one of the categories
 	above.
 
 
@@ -292,33 +292,33 @@ Countrified directories:
 Navigation paradigms:
 *********************
 
-Following the most likely way users will want to percieve/use the
+Following the most likely way users will want to perceive/use the
 page, the general navigation paradigm is that sections (topics)
-supersede countrification.
+supersede localised sections of the site.
 
-In all countrified sections, the navigation pages should always
-contain the countrified entries PLUS the Global/European ones.  That
-way someone who selected countrification for one region will not miss
+In all localised sections, the navigation pages should always
+contain the localised entries PLUS the Global/European ones.  That
+way someone who selected the localised page for one region will not miss
 the Global/European information.
 
-Whenever a user who selected a countrification asks for a section that
+Whenever a user who selected a localised version asks for a section that
 is Global/European only, the Global/European pages should be served
-silently without loss of countrification.
+silently without loss of overall localisation.
 
-Countrification can be maintained / preserved over several hops by
-host name (i.e. <countrifiedregion>.fsfeurope.org).
+Localisation can be maintained / preserved over several hops by
+host name (i.e. <localised-region>.fsfeurope.org).
 
 
-That way people can enter the web page directly with a certain
-preselected countrification or they enter the web page globally.
+That way people can enter the web page directly through a certain
+pre-selected localised link or they enter the web page globally.
 
 Either way they can select the topics of interest and browse the whole
-page while maintaining their countrification. 
+page while maintaining their localised version of site selection.
 
 
 The navigation should allow them to go back to the European level and
-whenever there are other countrified selections available, the user
-should be able to switch between countrifications.
+whenever there are other localised selections available, the user
+should be able to switch between localisations.
 
 
 Language selection can be done through content negotiation or

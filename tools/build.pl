@@ -84,11 +84,11 @@ my @dirs = File::Find::Rule->directory()
 
 while (my ($path, undef) = each %countries) {
   print STDERR "Reseting path for $path\n" unless $opts{q};
-  rmtree($opts{o}.'/'.$path) unless $opts{u};
+  rmtree($opts{o}.'/'.$path) unless ($opts{u} || $opts{n});
   my @paths = map { $opts{o}."/$path/".$_ } grep(!/^\.\.?$/, @dirs);
   foreach (@paths) {
     print "Creating $_\n" if $opts{d};
-    mkpath($_);
+    mkpath($_) unless $opts{n};
   }
 }
 

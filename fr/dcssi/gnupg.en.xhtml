@@ -44,8 +44,26 @@
 	  <h3> TECHNICAL PART</h3>
 	</center>
 
-	<p> General description of the product, the user manual ;
+	<p> General description of the product, the user manual:
+
+	  GnuPG uses public-key cryptography so that users may
+	  communicate securely. In a public-key system, each user has
+	  a pair of keys consisting of a private key and a public
+	  key. A user's private key is kept secret; it need never be
+	  revealed. The public key may be given to anyone with whom
+	  the user wants to communicate. GnuPG uses a somewhat more
+	  sophisticated scheme in which a user has a primary keypair
+	  and then zero or more additional subordinate keypairs. The
+	  primary and subordinate keypairs are bundled to facilitate
+	  key management and the bundle can often be considered simply
+	  as one keypair.
+
 	</p>
+
+	<p>
+	  <a href="http://www.gnupg.org/gph/en/manual.html">http://www.gnupg.org/gph/en/manual.html</a>
+	</p>
+
 	<p> A description 
 	  of the services provided by the product : encryption, data signing, public key management, key
 certification, private key protection, key pair creation and random
@@ -55,10 +73,10 @@ number generation; </p>
 	<p> The description of the key management implemented in
 	  the software, including at least: </p>
 	<p> - the distribution
-	  method Export to a file or sending using TCP/IP to keyservers speaking
+	  method: Export to a file or sending using TCP/IP to keyservers speaking
 either the LDAP, HKP or email protocol.  
 (gnupg-1.0.7/g10/export.c, gnupg-1.0.7/keyserver/*.c) ;<br />
-	  - the key generation process/method
+	  - the key generation process/method:
 <pre>
 gnupg-1.0.7/g10/keygen.c
 gnupg-1.0.7/cipher/rsa.c
@@ -73,7 +91,7 @@ gnupg-1.0.7/cipher/primegen.c
 	<p> The description of technical means implemented to
 	  prevent alteration of the encryption method or of the associated
 	  key management: The encryption method is public key encoded along with the session
-key (PKCS-1 block type 2 as defined in RFC2313)
+key (PKCS-1 block type 2 as defined in <a href="http://www.ietf.org/rfc/rfc2313.txt">RFC2313</a> http://www.ietf.org/rfc/rfc2313.txt)
 
 The private keys are protected using the methods described in RFC2440
 with the enhancement that the 16 bit checksum may optioanlly be replaced by a
@@ -89,7 +107,7 @@ encrypting the session key with another symmetric algorithm to allow
 decryption with a shared secret.  Both methods may be combined to
 allow decryption with either a passphrase or using the private key.
 It is possible to add encrypt the session key for multiple private
-keys or passphrases..
+keys or passphrases.
 	</p>
       </blockquote>
 

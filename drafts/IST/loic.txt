@@ -1,4 +1,4 @@
-<article class="faq" lang="en">
+<article lang="en">
   <articleinfo>
     <title>&title;</title>
     <subtitle>&subtitle;</subtitle>
@@ -33,8 +33,8 @@
       Our primary goal is to build a set of packages that is easy to
       install on a virgin machine or a machine already used for other
       purposes. Easy in this case means that one can install a Debian
-      unstable distribution and then do an apt-get install task-glitr,
-      face at most five screens with questions and is able to
+      unstable distribution and then do an apt-get install task-&NAME;,
+      face at most five screens asking questions and is able to
       publicize a URL where people can register to use the facility.
     </para>
 
@@ -53,9 +53,9 @@
       We are all ready to spend a large amount of our time on this
       project in the next three months. This is the one reason why we
       believe it can be a success. We also very well know that we need
-      results fast. Because it's a pre-condition for successfull &FS;
+      results fast. Because it's a pre-condition for successful &FS;
       projects. And because we are only human beings who need
-      rewarding results not too far in the futre. We establish a dead
+      rewarding results not too far in the future. We establish a dead
       line of December 31 2001 for the first usable release.
     </para>
 
@@ -75,57 +75,57 @@
 
     <para>
       In order to achieve the level of cooperation necessary for the
-      project to be friendly to all contributors willing to participate
-      in it, we are decide to discuss all matters online. Even if a group
-      of us are physically close to each other, we will avoid meetings
-      that would exclude people who cannot be in the same room. If and
-      when group of people join the project, we will ask them to do the
-      same in order to prevent a de facto secret decision process.
+      project to be friendly to all contributors willing to
+      participate in it, we decide to discuss all matters online. Even
+      if some of us are physically close to each other, we will avoid
+      meetings that would exclude people who cannot be in the same
+      room. If and when a group of people join the project, we will ask
+      them to do the same in order to prevent a de facto secret
+      decision process.
     </para>
 
     <para>
       In the past three days we talked with each other over the phone
-      in order to find out if we were all motivated by the idea and all
-      ready to jump. From now on all we are going to do will be public and
-      visible to all. Our fights, our mistakes, our failures included. 
-      There are many reasons to work in the open, the most important one
-      being that volunteers who will want to participate in the project
-      will only feel at home if they can see all we do and read all our
-      discussions. Another reason is that being too secretive leads to
-      dead end in many cases. 
+      to find out if we were all motivated by the idea and all ready
+      to jump. From now on all we are going to do will be public and
+      visible to all. Our fights, our mistakes, our failures included.
+      There are many reasons to work in the open, the most important
+      one being that volunteers willing to participate will feel at
+      home if they can see what we do and read our
+      discussions.
     </para>
 
     <para>
-      Each of us agreed to follow the leadership of one of us on a
+      Each of us agrees to follow the leadership of one of us on a
       specific subject. This is the sole definition of leadership
       &NAME; will ever recognize. None of us is entitled to claim
       leadership except among ourselves, and only because we agreed on
-      this in advance. With regard to all the volunteers who will be
-      joining the project, leadership will only be de facto and never
-      enforced. For all matters we will behave as any volunteer and
-      never claim authority on anything.
+      this in advance. With regard to all the volunteers who will join
+      the project, leadership will only be de facto and never
+      enforced. For all matters we will behave as other volunteer,
+      never claim authority on anything and keep a low profile.
     </para>
 
     <para>
-      We take a risk by doing so since someone else can indeed become
-      very active on the project and takeover the leadership on part
-      or all of it. This is a risk worth taking. Our own experience of
-      cooperation in projects shows that this happen very rarely and 
-      that it's even less likely that someone completly crazy takeover
-      and jeopardize the whole project. The reward for taking this risk 
-      is that volunteers who would like to devote a burst of energy to
-      the project will feel confident to do so, today and in a few years.
-      In short, this risk is a precondition to a volunteer friendly &NAME;
-      project.
+      We take a risk by doing so since someone else can become very
+      active on the project and takeover the leadership on part or all
+      of it. This is a risk worth taking. Our own experience of
+      cooperation in projects shows that this happen very rarely and
+      that it's even less likely that someone completely crazy takeover
+      and jeopardize the whole project. The reward for taking this
+      risk is that volunteers willing to invest in the project will
+      feel confident that their efforts will not be lost. In short,
+      this risk is a precondition to a volunteer friendly &NAME;
+      project. 
     </para>
 
     <para>
       <itemizedlist>
 	<listitem>
 	  <para>
-	    Joe A. leads
+	    Joe A leads
 	    the documentation and the installation/debugging of the releases,
-	    using savannah.gnu.org as a testbase.
+	    using savannah.gnu.org as a test base.
 	  </para>
 	</listitem>
 	<listitem>
@@ -137,9 +137,10 @@
 	</listitem>
 	<listitem>
 	  <para>
-	    Joe C
-	    leads the system administration, chosing, configuring and patching
-	    the necessary services (DNS, mailing lists, CVS...). 
+	    Joe C leads
+	    the system administration, choosing, configuring and
+	    patching, repackaging the necessary services (DNS, mailing
+	    lists, CVS...).
 	  </para>
 	</listitem>
 	<listitem>
@@ -152,7 +153,7 @@
 	<listitem>
 	  <para>
 	    Joe E
-	    leads the debian packaging of the various components involved.
+	    leads the Debian packaging of all the components involved.
 	  </para>
 	</listitem>
       </itemizedlist>
@@ -163,11 +164,19 @@
 
     <para>
       The five of us will be copyright holders of all the files released
-      in the &NAME; project. This serves two purposes. First it will make
+      by the &NAME; project. This serves two purposes. First it will make
       it impossible for one of us to change the license from GNU GPL to
       something else. This is an insurance for all of us that the software
       will remain &FS; for ever. Second it makes it a harder for someone
       to threaten &NAME; since we are not living in the same country.
+    </para>
+
+    <para>
+      We will keep an up-to-date database of all the volunteers contributing
+      more than fifteen lines to the project. At some point we may kindly
+      ask them to assign their copyright to us or some organization. In
+      any case we should not lose track of them or we will be in a delicate
+      position.
     </para>
 
     <para>
@@ -176,19 +185,19 @@
       some paperwork and could be discussed as we go. The main
       advantage in this case is that the organization will protect the
       project from external threats, paying lawyers, talking to people
-      involved in copyright infrigement if needs be. Otherwise we will
+      involved in copyright infringement if needs be. Otherwise we will
       have to do all this ourselves.
     </para>
 
     <para>
       Making sure our own code is &FS; is the easy part of the problem.
-      In order for &NAME; to be useable, a large number of components need
+      In order for &NAME; to be usable, a large number of components need
       to be installed. We will take great care that all these components
       are Free Software. We want someone to be able to install a GNU/Linux
-      machine running GLITR without any software that is non free. We
+      machine running &NAME; without any software that is non free. We
       have various reasons to want that, the most important being that
-      we don't want anyone to be forced to give up GLITR because a non 
-      free software component is not avaible to her. We are not building
+      we don't want anyone to be forced to give up &NAME; because a non 
+      free software component is not available to her. We are not building
       a project for an elite, we are building a project for everyone.
     </para>
 
@@ -201,15 +210,125 @@
   </sect1>
 
   <sect1>
-    <title>Orientations</title>
+    <title>General Trends</title>
 
     <para>
-    simplicity
-    packaging
-    modularity
-      tradeoff
-    internationalization
-    customizable look and feel
+      <itemizedlist>
+	<listitem>
+	  <para>
+	    Decentralized. Any given machine running &NAME; will be
+	    able to display a large number of read-only projects,
+	    copied from the XML dumps of other machines running &NAME;
+	    on a regular basis. It may also host a number of
+	    read-write projects depending on the available resources.
+	    Moving or mirroring a project from one &NAME; machine to
+	    another will be done by a simple copy of the XML dump.  At
+	    a given time, only one machine will host a read-write
+	    project. It will be the responsibility of the project
+	    maintainers to ensure this.  Should a machine become
+	    unavailable for any reason, the administrators of the
+	    project can toggle the read-only flag of one of the
+	    mirrors and start using it as a replacement. Such a
+	    decentralized setup is probably not the most efficient
+	    replication system but it is definitely simple and requires
+	    very little effort.
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Multi machine. A single machine may not be powerful
+	    enough for someone willing to host a large number of
+	    projects. Planning a truly multi machine setup in advance
+	    is mostly impossible because many strategies may be
+	    implemented depending on the needs. For instance a service
+	    like SourceForge will not implement the same strategies
+	    than a service like Geocities because the usage pattern is
+	    not the same. Instead of trying to plan the possible
+	    strategies in advance we can make sure various strategies
+	    can be implemented.  This a motive to store the various
+	    packages in a Debian source separate from unstable. This
+	    repository could contain highly specific packages that
+	    would not fit in the unstable branch.  For instance a
+	    Geocities like service is very likely to assign web
+	    oriented roles to machines such as a web front end that
+	    dispatches requests to web backends where the data really
+	    is.  We don't want to cope with that ourselves. But we
+	    want a contributor to be able to offer her package easily
+	    instead of keeping it for herself.
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Simplicity. Our motto is: keep it simple, stupid. Inventing
+	    complex solutions, over-generalization, implementing features
+	    for future use are common pitfalls that lead to unnecessary
+	    complex software. Finding a simple solution often requires 
+	    more efforts than accepting a complex one. We will be extra
+	    careful when something we do starts to evolve into an artifact
+	    that is hard to understand.
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Modularity. The myth of a perfectly modular software is hard
+	    to kill. Modularity is an advantage and a burden. Deciding
+	    that a feature will live in a module implies that we have
+	    to define and maintain an interface for it. This is a significant
+	    effort that has to be rapidly compensated by the actual use 
+	    of various modules. If the perspective of using more than one
+	    module is too far in the future, we might as well not bother
+	    about it. We need modules but we should not abuse them.
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Packaging. Every bit will be packaged for Debian. Although
+	    it may be desirable to package it for other GNU/Linux
+	    distributions, we will not attempt this. We know Debian
+	    and Debian is the only cooperatively built distribution.
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Look and Feel. All user visible content will be replaceable.
+	    The preferred template system for web based navigation is
+	    XHTML and XSL. At present we need a server side XSL processor
+	    because only a few navigators implement the necessary logic
+	    to do the rendering themselves. 
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Upgradable. Every release will provide an upgrade
+	    procedure from the previous version. The upgrade may imply
+	    a planned down-time, we are not commited to provide an
+	    upgrade facility that would work without stopping &NAME;
+	    and associated services. The XML dump of the database will
+	    be used to upgrade the data using XSL. The database structure
+	    itself will be upgraded with a set of SQL orders. The associated
+	    services will be reset to their initial state and the backend
+	    scripts will run on the upgraded database to restore the 
+	    desired state. At least one upgrade operation will be done
+	    before the first release scheduled to exercise it.
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Standards. Every effort will be made to use standards where
+	    possible. That mainly concerns the XML dump of data stored
+	    in the database. 
+	  </para>
+	</listitem>
+	<listitem>
+	  <para>
+	    Internationalization. Every string visible to the user are
+	    stored in a way that allows easy translation. It must not
+	    be bound to the look and feel in any way. The supported
+	    charset will not be limited to 8 bits charset in order to
+	    support Japanese and Chinese.
+	  </para>
+	</listitem>
+      </itemizedlist>
     </para>
 
   </sect1>
@@ -239,7 +358,7 @@
 	  <para>
 	    Export and import projects using an XML based format that
 	    contains all the data necessary to move projects from one
-	    platform to another.
+	    platform to another. (priority 0).
 	  </para>
 	</listitem>
 	<listitem>
@@ -320,7 +439,7 @@
 	</listitem>
 	<listitem>
 	  <para>
-	    Database access (priority 2).
+	    SQL database access (priority 2).
 	  </para>
 	</listitem>
 	<listitem>
@@ -350,7 +469,7 @@
 	<qandaentry>
 	    <para>
 	      Quick start, reference manual, user guide, implementor
-	      guide.  The quick start will be 10 pages at most,
+	      guide.  The quick start will be ten pages at most,
 	      including screen shots of the installation process. The
 	      intended audience is a GNU/Linux system administrator
 	      with basic knowledge of the various services installed
@@ -366,14 +485,14 @@
 	      setup a project on it, and how to manage the
 	      project. The intended audience is a GNU/Linux user with
 	      basic understanding of the GNU/Linux commands or a
-	      developper with basic understanding of the GNU/Linux
+	      developer with basic understanding of the GNU/Linux
 	      development tools.  The implementor guide won't have a
 	      fixed structure and will provide basic pointers to help
 	      volunteers find their way in the project. Only when the
 	      project becomes mature enough will the implementor guide
-	      be worked in a structured way. The intended audience is
+	      be re-worked in a structured way. The intended audience is
 	      a skilled GNU/Linux system administrator and
-	      developper. All documentation will be based on DocBook
+	      developer. All documentation will be based on DocBook
 	      and also available in texinfo and man pages formats.
 	    </para>
 	</qandaentry>
@@ -387,7 +506,7 @@
 	    <para>
 	      Bind the authentication information in the database to
 	      the system files/services. Import and export projects
-	      automaticaly or upon request.  Update, configure system
+	      automatically or upon request.  Update, configure system
 	      services for CVS, WebCVS/ViewCVS, trackers, HTML over
 	      CVS, mailing lists, statistics, DNS, rsync, FTP,
 	      according to the content of the database. Services with
@@ -398,7 +517,7 @@
 	      &NAME;. All backend scripts are designed to be installed
 	      independently, the only mandatory scripts being
 	      authentication and import/export. A library common to
-	      all scripts is developped to factorize and normalize
+	      all scripts is developed to factorize and normalize
 	      interaction with the database. All scripts are designed
 	      to be able to run on a machine that is not the same
 	      machine as any other services.
@@ -414,15 +533,15 @@
 	    <para>
 	      Each system service is installed and configured so that
 	      it can be used by the backend scripts. This may involve
-	      to modify/custom the original distribution in some
+	      to modify/customize the original distribution in some
 	      cases such as WebCVS/ViewCVS, mailing
 	      lists, kernel to allow more group by users + services
 	      coping with glibc lossage, DNS to access the database
 	      instead of a script, chroot'ed environment for security,
 	      reverse proxy ability for FTP service etc. Such
 	      modifications will be packaged and generalized in such a
-	      way that they can be accepted by the upstream
-	      maintainers and integrated in the distribution.
+	      way that they can be accepted by the Debian developer
+	      responsible of the package and the upstream maintainers.
 	    </para>
 	</qandaentry>
 
@@ -445,13 +564,13 @@
 	      unmodified packages. The code base will be in a package
 	      by itself, each backend script will have a separate
 	      package and modified services will have a package. The
-	      rationale behind creating a source list in addition to
-	      the standard unstable is that it can contain packaged
-	      modified in a way that is completly specific to
+	      rationale behind creating a source in addition to the
+	      standard unstable is that it can contain packages
+	      modified in a way that is completely specific to
 	      &NAME;. Although we want to keep this to the minimum it
 	      won't be possible to avoid all cases. For instance a
-	      kernel patched with NGROUP_MAX raised to 512 may be of
-	      no interest to Debian in general. Or a chrooted MySQL
+	      kernel patched with NGROUPS_MAX raised to 512 may be of
+	      no interest to Debian in general. Or a chroot'ed MySQL
 	      server with a quota patch.
 	    </para>
 	</qandaentry>

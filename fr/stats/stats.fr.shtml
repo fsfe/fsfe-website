@@ -19,22 +19,27 @@
 
 <blockquote>
 
-Statistiques Web
+<a href="/webalizer/">Statistiques Web</a>
 <p />
 <a href="/webalizer/"><img src="/webalizer/usage.png"></a>
-
 <p />
 Statistiques Systèmes
 <p />
-<a href="/mrtg/"><img src="/mrtg/wan-day.png"></a>
-
+<ul>
+  <li><a href="/mrtg/wan.html">Traffic réseau</A>
+  <br />
+  <a href="/mrtg/wan.html"><img src="/mrtg/wan-day.png"></a>
+  <li><a href="/mrtg/tcpopen.html">Connexions TCP</A>
+  <br />
+  <a href="/mrtg/tcpopen.html"><img src="/mrtg/tcpopen-day.png"></a>
+</ul>
 </blockquote>
 
 <!--#include virtual="../footer.fr.html"-->
 
   Mis à jour:
 <!-- timestamp start -->
-$Date: 2001-04-18 10:00:51 $ $Author: rodolphe $
+$Date: 2001-04-18 10:23:12 $ $Author: rodolphe $
 <!-- timestamp end -->
 
   </body>

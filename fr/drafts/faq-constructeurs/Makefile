@@ -148,6 +148,15 @@ test:
 	@echo "PS_OUTPUT = ${PS_OUTPUT}"
 
 #=======================================================================
+# Validates the XML source document
+#=======================================================================
+
+# -s : suppress output, error messages still printed
+# -wxml : warnings about non-xml constructs
+validate:
+	nsgmls -s -wxml ${XML_DECL} ${XML_SRC}
+
+#=======================================================================
 # Creates the directories where the outputs will be generated
 #=======================================================================
 

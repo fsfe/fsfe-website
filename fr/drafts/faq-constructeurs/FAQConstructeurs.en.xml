@@ -130,7 +130,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	<title>Définitions</title>
 
 	<qandaentry>
-	  <question>
+	  <question id="whatIsGnuLinux">
 	    <para>
 	      What is GNU/Linux ?
 	    </para>
@@ -147,7 +147,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	</qandaentry>
 
 	<qandaentry condition="long">
-	  <question>
+	  <question id="notJustLinux">
 	    <para>
 	      Why does one sometimes refer to GNU/Linux instead of Linux?
 	    </para>
@@ -199,7 +199,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	</qandaentry>
 
 	<qandaentry>
-	  <question>
+	  <question id="proprietaryLicense">
 	    <para>
 	      What is a non-free (or proprietary) license ?
 	    </para>
@@ -223,7 +223,7 @@ For example Windows Microsoft is a software distributed under a non-free license
 	<title>Marketing points</title>
 
 	<qandaentry>
-	  <question>
+	  <question id="supportGnuLinux">
 	    <para>
 	      Is having a GNU/Linux support useful ?
 	    </para>
@@ -403,7 +403,7 @@ For example Windows Microsoft is a software distributed under a non-free license
 	</qandaentry>
 
 	<qandaentry>
-	  <question>
+	  <question id="earnMoney">
 	    <para>
               How can I make money if I give away my products ?
 	    </para>
@@ -441,14 +441,17 @@ For example Windows Microsoft is a software distributed under a non-free license
 	    </para>
 	    <para>
               Free Software is a guarantee that the product will last.
-              Should the furnisher disappear, software code could still be maintained.
-              In the decision of purchase, it is an additional guarantee for the customer, thus a selling argument for the vendor.
+              Should the furnisher disappear, software code could still be 
+	      maintained.
+              In the decision of purchase, it is an additional guarantee for 
+	      the customer, thus a selling argument for the vendor.
+	      <!-- Needs more examples, further development required -->
 	    </para>
 	  </answer>
 	</qandaentry>
 
 	<qandaentry>
-	  <question>
+	  <question id="monopoly">
 	    <para>
               Do I risk pressures on behalf of influent operating systems 
 	      publishers ?
@@ -551,7 +554,7 @@ For example Windows Microsoft is a software distributed under a non-free license
 	</qandaentry>
 
 	<qandaentry condition="long">
-	  <question>
+	  <question id="driverDevDoc">
 	    <para>
 		Where to find some documentation on Linux drivers programming ?		    </para>
 	  </question>
@@ -595,7 +598,7 @@ For example Windows Microsoft is a software distributed under a non-free license
 	</qandaentry>
 
 	<qandaentry condition="long">
-	  <question>
+	  <question id="hardwareDB">
 	    <para>
 	      Is there a database listing Linux compatible hardware ?
 	    </para>
@@ -655,7 +658,7 @@ The most famous licenses are the GNU General Public License (GPL), the GNU Lesse
 	</qandaentry>
 
 	<qandaentry condition="long">
-	  <question>
+	  <question id="examples">
 	    <para>
 	      What policies have other manufacturers adopted ?
 	    </para>
@@ -689,7 +692,7 @@ The most famous licenses are the GNU General Public License (GPL), the GNU Lesse
 	</qandaentry>
 
 	<qandaentry condition="long">
-	  <question>
+	  <question id="certification">
 	    <para>
 	      Are there certification programs ?
 	    </para>
@@ -702,7 +705,7 @@ The most famous licenses are the GNU General Public License (GPL), the GNU Lesse
 	</qandaentry>
 
 	<qandaentry condition="long">
-	  <question>
+	  <question id="penguinPics">
 	    <para>
 	      What is the meaning of the penguin pictures, seen in the computer press and on Internet ?
 	    </para>
@@ -715,7 +718,7 @@ The most famous licenses are the GNU General Public License (GPL), the GNU Lesse
 	</qandaentry>
 
 	<qandaentry condition="long">
-	  <question>
+	  <question id="penguinLogo">
 	    <para>
 	      May I use the logo of the penguin freely ? Where can I find it ?
 	    </para>
@@ -935,3 +938,9 @@ The most famous licenses are the GNU General Public License (GPL), the GNU Lesse
 
 </article>
 
+<!--
+Local Variables:
+mode: xml
+ispell-local-dictionary: "american"
+End:
+-->

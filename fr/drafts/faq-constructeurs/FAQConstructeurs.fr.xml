@@ -131,7 +131,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	<title>Définitions</title>
 
 	<qandaentry>
-	  <question>
+	  <question id="whatIsGnuLinux">
 	    <para>
 	      Qu'est-ce que GNU/Linux ?
 	    </para>
@@ -149,7 +149,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	</qandaentry>
 
 	<qandaentry condition="long">
-	  <question>
+	  <question id="notJustLinux">
 	    <para>
 	      Pourquoi dit-on parfois GNU/Linux et non Linux ?
 	    </para>
@@ -202,7 +202,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	    <para condition="long">
 	      L'&OS; met l'accent sur l'ouverture et l'efficacité des 
 	      développements informatiques, alors que les
-	      fondations du mouvement du &LL; sont la liberté et
+	      fondements du mouvement du &LL; sont la liberté et
 	      la protection de la liberté des utilisateurs.
 	    </para>
 	    <para condition="long">
@@ -218,7 +218,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	</qandaentry>
 
 	<qandaentry>
-	  <question>
+	  <question id="proprietaryLicense">
 	    <para>
 	      Qu'est-ce qu'une licence non-libre (ou propriétaire) ?
 	    </para>
@@ -248,7 +248,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	<title>Considérations commerciales</title>
 
 	<qandaentry>
-	  <question>
+	  <question id="supportGnuLinux">
 	    <para>
 	      Est-il utile d'avoir mes produits supportés sous GNU/Linux ?
 	    </para>
@@ -480,9 +480,17 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	    <para condition="long">
 	      Enfin, comme l'explique Eric S. Raymond, 
 	      fondateur du mouvement &OS;, dans son article 
-	      <ulink url="http://www.tuxedo.org/~esr/writings">The Magic Cauldron</ulink> :
-	      <quote>pendant que la concurrence étudie votre matériel, 
-		vous travaillez sur la génération suivante</quote>.
+	      <ulink url="http://www.tuxedo.org/~esr/writings">The Magic
+	      Cauldron</ulink> :
+	      <quote>
+		Aujourd'hui, le temps que les ingénieurs de vos concurrents
+		dépenseraient pour copier et comprendre la copie est une 
+		partie substantielle du cycle du produit, 
+		temps qu'ils ne dépensent pas à innover ou différencier leur 
+		propre produit.
+		Le plagiat est un piège dans lequel vous voulez que vos 
+		concurrents tombent.
+	      </quote>
 	      Le rythme actuel du développement électronique rend inefficace 
 	      la pratique du clonage.
 	    </para>
@@ -490,7 +498,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	</qandaentry>
 
 	<qandaentry>
-	  <question>
+	  <question id="earnMoney">
 	    <para>
 	      Comment puis-je gagner de l'argent en donnant mes produits ?
 	    </para>
@@ -543,17 +551,19 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	      peuvent être corrigés, des idées nouvelles apparaissent.
 	    </para>
 	    <para>
-	      La disponibilité sous une licence libre rassure l'utilisateur sur la
-	      pérennité du produit. En cas de défaillance du fournisseur, les
+	      La disponibilité sous une licence libre rassure l'utilisateur 
+	      sur la pérennité du produit.
+	      En cas de défaillance du fournisseur, les
 	      pilotes (drivers) peuvent continuer à évoluer. Dans la décision
-	      d'achat, c'est une garantie supplémentaire pour le client, donc un
-	      argument de vente pour le constructeur.
+	      d'achat, c'est une garantie supplémentaire pour le client, donc 
+	      un argument de vente pour le constructeur.
+	      <!-- Demande des exemples, un développement supplémentaire -->
 	    </para>
 	  </answer>
 	</qandaentry>
 
 	<qandaentry>
-	  <question>
+	  <question id="monopoly">
 	    <para>
 	      Est-ce que je risque des pressions de la part d'éditeurs de 
 	      systèmes d'exploitation influents ?
@@ -659,7 +669,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	</qandaentry>
 
 	<qandaentry condition="long">
-	  <question>
+	  <question id="driverDevDoc">
 	    <para>
 	      Où trouver de la documentation sur la programmation de pilotes
 	      (drivers) pour Linux ?
@@ -706,7 +716,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	</qandaentry>
 
 	<qandaentry condition="long">
-	  <question>
+	  <question id="hardwareDB">
 	    <para>
 	      Existe-t-il une base de données recensant les matériels 
 	      compatibles Linux ?
@@ -794,7 +804,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	</qandaentry>
 
 	<qandaentry condition="long">
-	  <question>
+	  <question id="examples">
 	    <para>
 	      Quelles sont les politiques adoptées par les autres constructeurs
 	      d'électronique (diffusion des spécifications, distribution des 
@@ -860,7 +870,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	</qandaentry>
 
 	<qandaentry condition="long">
-	  <question>
+	  <question id="certification">
 	    <para>
 	      Existe-t-il des programmes de certification ?
 	    </para>
@@ -876,7 +886,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	</qandaentry>
 
 	<qandaentry condition="long">
-	  <question>
+	  <question id="penguinPics">
 	    <para>
 	      A quoi correspondent ces images de pingouins, dans la presse informatique et sur Internet ?
 	    </para>
@@ -892,7 +902,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	</qandaentry>
 
 	<qandaentry condition="long">
-	  <question>
+	  <question id="penguinLogo">
 	    <para>
 	      Puis-je utiliser le logo du pingouin librement ? Où le trouver ?
 	    </para>
@@ -1134,3 +1144,9 @@ Old version of the XML DTD, before it became endorsed by OASIS
 
 </article>
 
+<!--
+Local Variables:
+mode: xml
+ispell-local-dictionary: "francais"
+End:
+-->

@@ -31,7 +31,7 @@
         </xsl:if>
       </td>
     </tr> 
-    <tr><td colspan="2"></td></tr>
+    <tr><td colspan="2"><br /></td></tr>
   </xsl:template>
 
   <!-- Show a single event -->
@@ -57,7 +57,7 @@
         </xsl:if>
       </td>
     </tr> 
-    <tr><td colspan="2"></td></tr>
+    <tr><td colspan="2"><br /></td></tr>
   </xsl:template>
 
   <!-- In /html/body node, append dynamic content -->

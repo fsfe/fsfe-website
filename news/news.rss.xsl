@@ -7,6 +7,11 @@
   <xsl:output method="xml" encoding="UTF-8" omit-xml-declaration="yes"
     indent="yes" />
 
+  <!-- $today = current date (given as <html date="...">) -->
+  <xsl:variable name="today">
+    <xsl:value-of select="/html/@date" />
+  </xsl:variable>
+
   <!-- ============= -->
   <!-- Link handling -->
   <!-- ============= -->
@@ -75,7 +80,8 @@
         </image>
 
         <!-- News items -->
-        <xsl:for-each select="/html/set/news">
+        <xsl:for-each select="/html/set/news
+          [translate (@end, '-', '') &lt;= translate ($today, '-', '')]">
           <xsl:sort select="@date" order="descending" />
           <xsl:if test="position() &lt; 6">
             <item>

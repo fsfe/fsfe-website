@@ -77,20 +77,49 @@
               <td class="TopTitle" align="center">Sections</td>
             </tr>
             <tr>
-              <td align="right"><br/>
-              <a href="{$fsfeurope}/index.fr.html" class="T2">Accueil</a><br/>
-              <a href="{$fsfeurope}/contact/index.fr.html"
-                    class="T2">Contact</a><br/>
-              <a href="{$fsfeurope}/background.fr.html"
-                   class="T2">Contexte</a><br/>
-	      <a href="{$fsfeurope}/documents/documents.fr.html"
-		   class="T2">Documents</a><br/>
-              <a href="{$fsfeurope}/mailman/index.fr.html"
-                   class="T2">Listes de diffusion</a><br/>
-              <a href="{$fsfeurope}/press/index.fr.html"
-                   class="T2">Section Presse</a><br/>
-              <a href="{$fsfeurope}/gbn/index.fr.html"
-                   class="T2">GNU Business Network</a><br/>
+              <td align="right" class="Section"><br/>
+              <xsl:choose>
+                <xsl:when test="$path='index.fr.xhtml'">Accueil</xsl:when>
+                <xsl:otherwise>
+                  <a href="{$fsfeurope}/index.fr.html" class="T2">Accueil</a>
+                </xsl:otherwise>
+              </xsl:choose><br/>
+              <xsl:choose>
+                <xsl:when test="$path='contact/index.fr.xhtml'">Contact</xsl:when>
+                <xsl:otherwise>
+                  <a href="{$fsfeurope}/contact/index.fr.html" class="T2">Contact</a>
+                </xsl:otherwise>
+              </xsl:choose><br/>
+              <xsl:choose>
+                <xsl:when test="$path='background.fr.xhtml'">Contexte</xsl:when>
+                <xsl:otherwise>
+                  <a href="{$fsfeurope}/background.fr.html" class="T2">Contexte</a>
+                </xsl:otherwise>
+              </xsl:choose><br/>
+              <xsl:choose>
+                <xsl:when test="$path='documents/documents.fr.xhtml'">Documents</xsl:when>
+                <xsl:otherwise>
+                  <a href="{$fsfeurope}/documents/documents.fr.html" class="T2">Documents</a>
+                </xsl:otherwise>
+              </xsl:choose><br/>
+              <xsl:choose>
+                <xsl:when test="$path='mailman/index.fr.xhtml'">Listes de diffusion</xsl:when>
+                <xsl:otherwise>
+                  <a href="{$fsfeurope}/mailman/index.fr.html" class="T2">Listes de diffusion</a>
+                </xsl:otherwise>
+              </xsl:choose><br/>
+              <xsl:choose>
+                <xsl:when test="$path='press/index.fr.xhtml'">Section Presse</xsl:when>
+                <xsl:otherwise>
+                  <a href="{$fsfeurope}/press/index.fr.html" class="T2">Section Presse</a>
+                </xsl:otherwise>
+              </xsl:choose><br/>
+              <xsl:choose>
+                <xsl:when test="$path='gbn/index.fr.xhtml'">GNU Business Network</xsl:when>
+                <xsl:otherwise>
+                  <a href="{$fsfeurope}/gbn/index.fr.html" class="T2">GNU Business Network</a>
+                </xsl:otherwise>
+              </xsl:choose><br/>
               <br/></td>
             </tr>
             <tr>

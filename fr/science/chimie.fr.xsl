@@ -30,6 +30,11 @@
   <font size="-2">(Listée par Jérôme Pansanel.)</font>
   </p>
 
+  <p align="center">Cette page recense différents logiciels libres
+  utiles à la recherche en chimie. Elle a été constituée dans le cadre
+  du projet <a href="science.fr.html">Logiciels Libres et recherche
+  scientifique</a></p>
+
   <xsl:apply-templates select="updatenotice"/>
 
   <TABLE CELLPADDING="10" RULES="all" BORDER="1">
@@ -47,7 +52,7 @@
 
     Mis à jour:
     <!-- timestamp start -->
-    $Date: 2001-12-29 14:22:37 $ $Author: olberger $
+    $Date: 2002-03-02 16:51:29 $ $Author: olberger $
     <!-- timestamp end -->
 
 

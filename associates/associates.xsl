@@ -13,7 +13,7 @@
       <xsl:apply-templates select="html/head" />
       <body>
         <xsl:apply-templates select="html/body/node()" />
-        <xsl:for-each select="html/set/association">
+        <xsl:for-each select="/html/set/association">
           <xsl:sort select="@id" />
           <h3><a href="{link}"><xsl:value-of select="name" /></a></h3>
           <xsl:apply-templates select="description" />

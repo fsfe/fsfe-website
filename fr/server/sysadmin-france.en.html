@@ -39,6 +39,7 @@ and FSF machines in France.
 <li><a href="#Virtual%20Hosts">Virtual Hosts</a>: 
 <li><a href="#Editing%20the%20Web">Editing the Web</a>: 
 <li><a href="#Separate%20layout%20and%20content">Separate layout and content</a>: 
+<li><a href="#Publishing%20news">Publishing news</a>: 
 <li><a href="#Update%20from%20CVS">Update from CVS</a>: 
 <li><a href="#Nightly%20script">Nightly script</a>: 
 <li><a href="#Immediate%20Update">Immediate Update</a>:
@@ -142,7 +143,7 @@ lightly.
 
 <p>In some cases there already exists a semantic that fits your needs. Even
 if it's not an established standard
-(<a href="http://my.netscape.com/publish/formats/rss-spec-0.91.html">RSS</a>
+(<a href="http://groups.yahoo.com/group/rss-dev/files/specification.html">RSS</a>
 is a widely spread de-facto standard) it will save you the effort to invent
 something completly new. You may even be able to join the group that works
 on this semantic to enhance it if needs be. There are some DTD repositories
@@ -340,6 +341,7 @@ Up:<a rel=up href="#Top">Top</a>
 <li><a href="#Virtual%20Hosts">Virtual Hosts</a>: 
 <li><a href="#Editing%20the%20Web">Editing the Web</a>: 
 <li><a href="#Separate%20layout%20and%20content">Separate layout and content</a>: 
+<li><a href="#Publishing%20news">Publishing news</a>: 
 <li><a href="#Update%20from%20CVS">Update from CVS</a>: 
 <li><a href="#Nightly%20script">Nightly script</a>: 
 <li><a href="#Immediate%20Update">Immediate Update</a>: 
@@ -410,7 +412,7 @@ how to deal with this within seconds.
 
 <p><hr>
 Node:<a name="Separate%20layout%20and%20content">Separate layout and content</a>,
-Next:<a rel=next href="#Update%20from%20CVS">Update from CVS</a>,
+Next:<a rel=next href="#Publishing%20news">Publishing news</a>,
 Previous:<a rel=previous href="#Editing%20the%20Web">Editing the Web</a>,
 Up:<a rel=up href="#Web">Web</a>
 <br>
@@ -679,9 +681,91 @@ the <a href="http://france.fsfeurope.org/server/server.en.html">FSF France</a>
 web site for an example.
 
 <p><hr>
+Node:<a name="Publishing%20news">Publishing news</a>,
+Next:<a rel=next href="#Update%20from%20CVS">Update from CVS</a>,
+Previous:<a rel=previous href="#Separate%20layout%20and%20content">Separate layout and content</a>,
+Up:<a rel=up href="#Web">Web</a>
+<br>
+
+<h2>Publishing news</h2>
+
+<p>The <code>fsfe/fr/news</code> directory contains news articles. The structure
+of the directory is as follows:
+
+<ul>
+
+<li>Each article is in a file named <code>articleYYYY-MM-DD-NN.LG.xhtml</code>
+where YYY-MM-DD is the date of publication, NN a two digit serial number
+if two or more news are published the same day, LG is the language code
+in lower case.
+
+<pre>article2001-04-26-01.fr.xhtml
+</pre>
+
+<li>If an article contains subparts or pictures a directory named
+<code>articleYYYY-MM-DD-NN</code> is created and all elements are added into
+it. No specific convention is to be followed in this subdirectory.
+
+<li>A
+<a href="http://groups.yahoo.com/group/rss-dev/files/specification.html">RSS</a>
+file must be built for each language with a file name of
+<code>fsfe-fr-channel.LG.xml</code> where LG is the language code in lower
+case. It's ok to use RSS-0.91 instead of RSS-1.0 since the later is
+backward compatible. Whenever an article is added in the news directory,
+a corresponding <code>item</code> entry should be added to the RSS file
+corresponding to the language.
+
+<li>An XSL file must be provided for each language with the name
+<code>news.LG.xsl</code>. This XSL file will be used to format the
+corresponding <code>fsfe-fr-channel.LG.xml</code> into a
+<code>news-bytes.LG.xhtml</code> file by the top level makefile. LG is the
+language code in lower case
+
+</ul>
+
+<p><code>fsfe/fr/Makefile</code> is responsible of applying the
+<code>fsfe/fr/news/news.LG.xsl</code> files to the
+<code>fsfe/fr/news/fsfe-fr-channel.LG.xml</code> channels in order to produce the
+<code>fsfe/fr/news/news-bytes.LG.xhtml</code>. The <code>fsfe/fr/index.fr.xhtml</code>
+includes the news using the following:
+
+<pre>&lt;?xml version="1.0" encoding="iso-8859-1" ?&gt;
+&lt;!DOCTYPE html
+          PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+          [&lt;!ENTITY news SYSTEM "news/news-bytes.fr.xhtml"&gt;]&gt;
+...
+
+          &amp;news;
+...
+</pre>
+
+<p>Other pages may do the same where appropriate.
+
+<p>If a remote site wants to print the news, the webmaster is free to use
+the RSS channels for this purpose. We should even encourage this. At present
+the following web sites read the RSS channels:
+
+<ul>
+
+<li>SomeNews.org, contact <a href="mailto:penso@linuxfr.org">Fabien Penso</a>
+
+</ul>
+
+<p>The RSS availables at present are:
+
+<ul>
+
+<li><a href="http://france.fsfeurope.org/news/fsfe-fr-channel.fr.xml">FSF France</a> French
+
+<li><a href="http://france.fsfeurope.org/news/fsfe-fr-channel.en.xml">FSF France</a> English
+
+</ul>
+
+<p><hr>
 Node:<a name="Update%20from%20CVS">Update from CVS</a>,
 Next:<a rel=next href="#Nightly%20script">Nightly script</a>,
-Previous:<a rel=previous href="#Separate%20layout%20and%20content">Separate layout and content</a>,
+Previous:<a rel=previous href="#Publishing%20news">Publishing news</a>,
 Up:<a rel=up href="#Web">Web</a>
 <br>
 
@@ -961,6 +1045,7 @@ Up:<a rel=up href="#Top">Top</a>
 <li><a href="#XSL%20and%20generated%20HTML">XSL and generated HTML</a>
 <li><a href="#Writing%20XSL%20files">Writing XSL files</a>
 </ul>
+<li><a href="#Publishing%20news">Publishing news</a>
 <li><a href="#Update%20from%20CVS">Update from CVS</a>
 <li><a href="#Nightly%20script">Nightly script</a>
 <li><a href="#Immediate%20Update">Immediate Update</a>

@@ -5,7 +5,7 @@
 @setchapternewpage odd
 @c %**end of header
 
-@set RCSID $Id: sysadmin-france.en.texi,v 1.26 2001-04-27 06:38:41 loic Exp $
+@set RCSID $Id: sysadmin-france.en.texi,v 1.27 2001-04-27 09:46:37 loic Exp $
 @set VERSION 1.0
 
 @c Combine the variable and function indices:
@@ -75,6 +75,7 @@ Web
 * Virtual Hosts::               
 * Editing the Web::             
 * Separate layout and content::  
+* Publishing news::             
 * Update from CVS::             
 * Nightly script::              
 * Immediate Update::            
@@ -167,7 +168,7 @@ lightly.
 
 In some cases there already exists a semantic that fits your needs. Even
 if it's not an established standard
-(@uref{http://my.netscape.com/publish/formats/rss-spec-0.91.html,,RSS}
+(@uref{http://groups.yahoo.com/group/rss-dev/files/specification.html,,RSS}
 is a widely spread de-facto standard) it will save you the effort to invent
 something completly new. You may even be able to join the group that works
 on this semantic to enhance it if needs be. There are some DTD repositories
@@ -322,6 +323,7 @@ the relevant information in XML. For more information check the
 * Virtual Hosts::               
 * Editing the Web::             
 * Separate layout and content::  
+* Publishing news::             
 * Update from CVS::             
 * Nightly script::              
 * Immediate Update::            
@@ -375,7 +377,7 @@ The pages are stored in @code{.xhtml} files and formated automaticaly
 to @code{.html} files. @ref{XHTML and XSLT Quick Start} will tell you
 how to deal with this within seconds.
 
-@node Separate layout and content, Update from CVS, Editing the Web, Web
+@node Separate layout and content, Publishing news, Editing the Web, Web
 @section Separate layout and content
 
 @cindex SSI
@@ -642,7 +644,88 @@ figure out, even if he won't be able to modify it's structure. Check the
 the @uref{http://france.fsfeurope.org/server/server.en.html,,FSF France}
 web site for an example.
 
-@node Update from CVS, Nightly script, Separate layout and content, Web
+@node Publishing news, Update from CVS, Separate layout and content, Web
+@section Publishing news
+
+The @file{fsfe/fr/news} directory contains news articles. The structure
+of the directory is as follows:
+
+@itemize @bullet
+
+@item Each article is in a file named @file{articleYYYY-MM-DD-NN.LG.xhtml}
+where YYY-MM-DD is the date of publication, NN a two digit serial number
+if two or more news are published the same day, LG is the language code
+in lower case.
+
+@example
+article2001-04-26-01.fr.xhtml
+@end example
+
+@item
+If an article contains subparts or pictures a directory named
+@code{articleYYYY-MM-DD-NN} is created and all elements are added into
+it. No specific convention is to be followed in this subdirectory.
+
+@item 
+A
+@uref{http://groups.yahoo.com/group/rss-dev/files/specification.html,,RSS}
+file must be built for each language with a file name of
+@file{fsfe-fr-channel.LG.xml} where LG is the language code in lower
+case. It's ok to use RSS-0.91 instead of RSS-1.0 since the later is
+backward compatible. Whenever an article is added in the news directory,
+a corresponding @code{item} entry should be added to the RSS file
+corresponding to the language.
+
+@item
+An XSL file must be provided for each language with the name
+@file{news.LG.xsl}. This XSL file will be used to format the
+corresponding @file{fsfe-fr-channel.LG.xml} into a
+@file{news-bytes.LG.xhtml} file by the top level makefile. LG is the
+language code in lower case
+
+@end itemize
+
+@file{fsfe/fr/Makefile} is responsible of applying the
+@file{fsfe/fr/news/news.LG.xsl} files to the
+@file{fsfe/fr/news/fsfe-fr-channel.LG.xml} channels in order to produce the
+@file{fsfe/fr/news/news-bytes.LG.xhtml}. The @file{fsfe/fr/index.fr.xhtml}
+includes the news using the following:
+
+@example
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html
+          PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+          [<!ENTITY news SYSTEM "news/news-bytes.fr.xhtml">]>
+...
+
+          &news;
+...
+@end example
+
+Other pages may do the same where appropriate. 
+
+If a remote site wants to print the news, the webmaster is free to use
+the RSS channels for this purpose. We should even encourage this. At present
+the following web sites read the RSS channels:
+
+@itemize @bullet
+
+@item SomeNews.org, contact @email{penso@@linuxfr.org, Fabien Penso}
+
+@end itemize
+
+The RSS availables at present are:
+
+@itemize @bullet
+
+@item @uref{http://france.fsfeurope.org/news/fsfe-fr-channel.fr.xml,,FSF France} French
+
+@item @uref{http://france.fsfeurope.org/news/fsfe-fr-channel.en.xml,,FSF France} English
+
+@end itemize
+
+@node Update from CVS, Nightly script, Publishing news, Web
 @section Update from CVS
 
 @cindex www.gnu.org

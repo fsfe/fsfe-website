@@ -7,18 +7,6 @@
 <softliste>
 
   <!--
-
-  /*
-  *  copyright 1992, 1993, 1994, 1995 Robert W. Harrison
-  *  
-  *  This notice may not be removed
-  *  This program may be copied for scientific use
-  *  It may not be sold for profit without explicit
-  *  permission of the author(s) who retain any
-  *  commercial rights including the right to modify 
-  *  this notice
-  */
-
   <software>
   <name>AMMP</name>
   <date>28 jul 2001</date>
@@ -30,21 +18,34 @@
   <name>Linux</name>
   <maintainer>Robert W. Harrison</maintainer>
   <version>2.0</version>
-  <licence>GPL</licence>
+  <licence></licence>
+  <comment>
+  /*
+  *  copyright 1992, 1993, 1994, 1995 Robert W. Harrison
+  *  
+  *  This notice may not be removed
+  *  This program may be copied for scientific use
+  *  It may not be sold for profit without explicit
+  *  permission of the author(s) who retain any
+  *  commercial rights including the right to modify 
+  *  this notice
+  */
+
+  </comment>
   <date>28 jul 2001</date>
       </os>
   <os>
   <name>Unix</name>
   <maintainer>Robert W. Harrison</maintainer>
   <version>2.0</version>
-  <licence>GPL</licence>
+  <licence></licence>
   <date>28 jul 2001</date>
       </os>
   <os>
   <name>Windows</name>
   <maintainer>Robert W. Harrison</maintainer>
   <version>1.5</version>
-  <licence>GPL</licence>
+  <licence></licence>
   <date>28 jul 2001</date>
       </os>
    </software>
@@ -85,21 +86,25 @@
       <date>28 jul 2001</date>
     </os>
   </software>
+<!--
   <software>
     <name>Chemsuite</name>
     <date>03 mar 2002</date>
     <description lang="en">A Molecular 2D/3D drawing and chemical reaction simulation software.</description>
     <description lang="fr">Logiciel de dessin 2D/3D et de simulation de réactions chimiques.</description>
     <authors>Ricardo Stefani, Rene Fosdal</authors>
+    <email>rstefani@seul.org</email>
     <url>http://chemsuite.seul.org</url>
     <os>
       <name>GNU/Linux</name>
       <maintainer>Ricardo Stefani, Rene Fosdal</maintainer>
       <version>0.0.7</version>
       <licence>GPL</licence>
+      <comment>no copyright or license notice in molcalc, spectrum, license notice ok but incomplete in chem2d, missing information about Qt Architect generated files license</comment>
       <date>03 mar 2002</date>
     </os>
   </software>
+-->
   <software>
     <name>Chemtool</name>
     <date>28 nov 2001</date>

@@ -9,26 +9,20 @@
            />
 
   <xsl:template match="/">
-    <xsl:copy>
-      <xsl:apply-templates select="@*|node()" />
-    </xsl:copy>
-  </xsl:template>
-
-  <xsl:template match="/html/body">
-    <body>
-      <xsl:apply-templates />
-      <xsl:apply-templates select="/html/set" />
-      <xsl:apply-templates select="/html/footer" />
-    </body>
+    <html>
+      <xsl:apply-templates select="html/head" />
+      <body>
+        <xsl:apply-templates select="html/body/node()" />
+        <xsl:apply-templates select="html/set/node()" />
+        <xsl:apply-templates select="html/footer/node()" />
+      </body>
+    </html>
   </xsl:template>
 
   <xsl:template match="@*|node()" priority="-1">
     <xsl:copy>
       <xsl:apply-templates select="@*|node()"/>
     </xsl:copy>
-  </xsl:template>
-
-  <xsl:template match="set|footer">
   </xsl:template>
 </xsl:stylesheet>
 

@@ -83,6 +83,7 @@
 		<tr><td class="TopTitle" align="center">FSF France</td></tr>
 		<tr>
 		  <td align="right">
+		    <a href="{$fsffrance}/philosophy/philosophy.en.html" class="T2">Philosophy</a><br />
 		    <a href="http://agenda.lolix.org/" class="T2">Calendar</a><br />
 		    <a href="{$fsffrance}/news/news.en.html" class="T2">News</a><br />
 		    <a href="{$fsffrance}/events/events.en.html" class="T2">Events</a><br />

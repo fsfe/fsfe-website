@@ -78,7 +78,6 @@
 			<tr>
 				<td class="TopBody" align="right">
 					<a href="{$fsfeurope}/law/law.de.html" class="T2">Freie Software sichern</a><br/>
-					<a href="{$fsfeurope}/documents/whyfs.de.html" class="T2">Wir sprechen von Freier Software</a><br/>
 				</td>
 			</tr>
 

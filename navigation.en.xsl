@@ -78,7 +78,6 @@
 		<tr>
 		  <td class="TopBody" align="right">
 		    <a href="{$fsfeurope}/law/law.en.html" class="T2">Secure Free Software</a><br />
-		    <a href="{$fsfeurope}/documents/whyfs.en.html" class="T2">We speak about Free Software</a><br />
 		  </td>
 		</tr>
 

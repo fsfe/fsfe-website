@@ -90,6 +90,7 @@
                           <a href="{$fsffrance}/libre.fr.html" class="T2">Libertés</a>
                        </xsl:otherwise>
                     </xsl:choose><br />
+		    <a href="http://www.fsfeurope.org/law/law.fr.html" class="T2">Protéger le logiciel libre</a><br />
 	          </td>
 		</tr>
 		<tr><td class="TopTitle" align="center">FSF France</td></tr>

@@ -89,6 +89,7 @@
                           <a href="{$fsffrance}/libre.en.html" class="T2">Freedoms</a>
                        </xsl:otherwise>
                     </xsl:choose><br />	          
+		    <a href="http://www.fsfeurope.org/law/law.en.html" class="T2">Secure Free Software</a><br />
                  </td>
 		</tr>
 		<tr><td class="TopTitle" align="center">FSF France</td></tr>

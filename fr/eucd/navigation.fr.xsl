@@ -4,31 +4,31 @@
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:template match="/html[@lang='fr']/body/div">
-    <!-- $Id: navigation.fr.xsl,v 1.19 2002-12-21 14:58:30 rodolphe Exp $ -->
+    <!-- $Id: navigation.fr.xsl,v 1.20 2002-12-22 15:31:57 rodolphe Exp $ -->
     <!-- $Source: /root/wrk/fsfe-web/savannah-rsync/fsfe/fr/eucd/navigation.fr.xsl,v $ -->
     <!-- Top menu line -->
     <table border="1" cellpadding="5" cellspacing="10" class="main">
       <tr>
 	<td colspan="2">
-	  <span><a href="http://eucd.info/">EUCD.INFO</a> - Au <a href="donations.fr.php">secours</a> de la copie privée</span>
+	  <span><a href="http://eucd.info/">EUCD.INFO</a> - Au <a href="http://eucd.info/donations.fr.php">secours</a> de la copie privée</span>
 	</td>
       </tr>
       
       <tr>
 	<td valign="top">
-	  <a href="index.fr.php">Accueil</a><br />
-	  <a href="revue.fr.php">Presse</a><br />
-	  <a href="donations.fr.php">Aider</a><br />
-	  <a href="transparence.fr.php">Transparence</a><br />
+	  <a href="http://eucd.info/index.fr.php">Accueil</a><br />
+	  <a href="http://eucd.info/revue.fr.php">Presse</a><br />
+	  <a href="http://eucd.info/donations.fr.php">Aider</a><br />
+	  <a href="http://eucd.info/transparence.fr.php">Transparence</a><br />
 
 	  <br/>
-	  <a href="eucd.fr.php">Analyse</a><br />
+	  <a href="http://eucd.info/eucd.fr.php">Analyse</a><br />
 	  <a href="http://wiki.ael.be/index.php/EUCD-Status">Situation</a><br />
 	  <a href="http://mail.gnu.org/mailman/listinfo/fsfe-france">Discuter</a><br />
-	  <a href="who.fr.php">Qui</a><br />
+	  <a href="http://eucd.info/who.fr.php">Qui</a><br />
 	  <br />
 	  <br />
-	  <a href="donations.fr.php">Dons</a><br />	  
+	  <a href="http://eucd.info/donations.fr.php">Dons</a><br />	  
 	  <script language="php">
 	    if (file_exists ("therm.php"))
 	    {

@@ -10,12 +10,12 @@
       <tr valign="middle"> 
 	  <td class="newstext">
 	    &nbsp;&nbsp;
-            <a class="topbanner" href="{$fsfeurope}/">FSF Europa</a>
+            <a class="topbanner" href="{$fsfeurope}/index.pt.html">FSF Europa</a>
           </td>
           <td class="newstext" align="right">
-	    <a class="topbanner" href="{$fsf}/">FSF</a>
+	    <a class="topbanner" href="{$fsf}/home.pt.html">FSF</a>
             &nbsp;&nbsp;|&nbsp;&nbsp;
-	    <a class="topbanner" href="{$gnu}/">GNU</a>
+	    <a class="topbanner" href="{$gnu}/home.pt.html">GNU</a>
             &nbsp;&nbsp;|&nbsp;&nbsp;
 	    <a class="topbanner" href="http://es.gnu.org/">GNU Espanha</a><br/>
 	  </td>
@@ -42,7 +42,7 @@
 	<tr>
 	  <td class="TopBody">
           <!--
-	    <a href="{$fsfeurope}/">
+	    <a href="{$fsfeurope}/index.pt.html">
 	      <img src="{$fsfeurope}/images/gnulogo.jpg" alt="GNU Logo" border="0" />
 	    </a>
 	  -->&nbsp;
@@ -82,7 +82,7 @@
               <a href="{$fsfeurope}/background.pt.html"
                    class="T2">Origens</a><br/>
               <a href="{$fsfeurope}/mailman/index.pt.html"
-                   class="T2">Listas de Discussão</a><br/>
+                   class="T2">Listas de Correio</a><br/>
               <a href="{$fsfeurope}/press/index.pt.html"
                    class="T2">Para a Imprensa</a><br/>
               <a href="{$fsfeurope}/gbn/index.pt.html"

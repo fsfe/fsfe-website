@@ -10,12 +10,12 @@
       <tr valign="middle"> 
 	  <td class="newstext">
 	    &nbsp;&nbsp;
-            <a class="topbanner" href="{$fsfeurope}/">FSF Europe</a>
+            <a class="topbanner" href="{$fsfeurope}/index.fr.html">FSF Europe</a>
           </td>
           <td class="newstext" align="right">
-	    <a class="topbanner" href="{$fsf}/">FSF</a>
+	    <a class="topbanner" href="{$fsf}/home.fr.html">FSF</a>
             &nbsp;&nbsp;|&nbsp;&nbsp;
-	    <a class="topbanner" href="{$gnu}/">GNU</a>
+	    <a class="topbanner" href="{$gnu}/home.fr.html">GNU</a>
             &nbsp;&nbsp;|&nbsp;&nbsp;
 	    <a class="topbanner" href="http://es.gnu.org/">GNU Espagne</a><br/>
 	  </td>
@@ -32,7 +32,7 @@
       <tr>
 	<td class="TopTitle">
 	  &nbsp;<a href="{$fsffrance}/index.fr.html" class="T1">France</a> |
-	    Germany
+	    Allemagne
 	</td>
       </tr>
     </table>
@@ -48,7 +48,7 @@
 	  <td class="TopBody" width="99%" height="99%">
 	    <a class="TopTitleB">FSF Europe</a>
 	    <br/>
-	    <a class="TopTitle">Free Software - equal chances for people and economy</a>
+	    <a class="TopTitle">Free Software - l'entreprise et l'individu sur un pied d'égalité</a>
 	  </td>
 	  <td align="right" valign="top" class="TopBody">
 	    <a href="{$fsfeurope}/documents/freesoftware.html" class="T2">What's&nbsp;Free&nbsp;Software?</a><br/>
@@ -111,7 +111,8 @@
 	<td class="TopTitle">
           <a href="{$filebase}.xhtml" class="T1">XHTML Source</a>&nbsp;&nbsp;|
           &nbsp;&nbsp;<a href="{$fsfeurope}/fsfe.xsl" class="T1">XSL Style
-	  Sheet</a><br/>
+	  Sheet</a>&nbsp;&nbsp;|
+          &nbsp;&nbsp;<a href="http://savannah.gnu.org/cgi-bin/viewcvs/fsfe/{$path}?cvsroot=www.gnu.org" class="T1">Modifications</a><br/>
 	</td>
 	<td class="TopTitle" align="right">
 	  &nbsp;<a href="mailto:webmaster@fsfeurope.org"

@@ -52,7 +52,7 @@
 	  <td class="TopBody" width="99%" height="99%">
 	    <a class="TopTitleB">FSF France</a>
 	    <br />
-	    <a class="TopTitle">Free Software is the conscience of software</a>
+	    <a class="TopTitle">Free Software - equal chances for people and economy</a>
 	  </td>
 	  <td align="right" valign="bottom" class="TopBody">
 	    <a href="{$fsffrance}/index.en.html" class="T2">France</a> <br />

@@ -16,6 +16,7 @@
   <xsl:param name="fsf">http://www.fsf.org</xsl:param>
   <xsl:param name="gnu">http://www.gnu.org</xsl:param>
   <xsl:param name="filebase">nofile.html</xsl:param>
+  <xsl:param name="path">nofile.html</xsl:param>
 
   <xsl:template match="/">
     <xsl:copy>
@@ -43,9 +44,9 @@
     </head>
   </xsl:template>
 
-  <xsl:include href="navigation.de.xsl" />
-  <xsl:include href="navigation.en.xsl" />
   <xsl:include href="navigation.fr.xsl" />
+  <xsl:include href="navigation.en.xsl" />
+  <xsl:include href="navigation.de.xsl" />
 
   <xsl:template match="@*|node()" priority="-1">
     <xsl:copy>

@@ -52,7 +52,7 @@
 	  <td class="TopBody" width="99%" height="99%">
 	    <a class="TopTitleB">FSF France</a>
 	    <br />
-	    <a class="TopTitle">Le Logiciel Libre est la conscience du logiciel</a>
+	    <a class="TopTitle">Free Software - l'entreprise et l'individu sur un pied d'égalité</a>
 	  </td>
 	  <td align="right" valign="bottom" class="TopBody">
 	    <a href="{$fsffrance}/index.fr.html" class="T2">France</a> <br />
@@ -65,13 +65,14 @@
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
 	<tr>
 	  <td width="99%" valign="top">
+	  <div class="content">
 	  <xsl:apply-templates select="@*|node()"/>
+	  </div>
 	  </td>
-
 	  <!-- Menu column. On the right to be Lynx friendly.  -->
 	  <td>&nbsp;</td>
 	  <td valign="top" class="TopBody">
-	    <table width="120" border="0" cellspacing="0" cellpadding="4">
+	    <table summary="" width="150" border="0" cellspacing="0" cellpadding="4">
 		<tr><td class="TopTitle" align="center">Projets</td></tr>
 		<tr>
 		  <td class="TopBody" align="right">

@@ -105,7 +105,7 @@
 	Adresse : 12 bd Magenta ...... <br />
 	75010 Paris ........ <br />
 	Numéro de téléphone : 01 42 45 07 97 ..... <br />
-	Numéro de télécopie : 01 40 15 06 98 ..... <br />
+	Numéro de télécopie : 01 40 15 06 18 ..... <br />
 	Adresse du courrier électronique : loic@gnu.org .......  
 	<p></p>
 	<p>  </p>
@@ -161,7 +161,7 @@
 	    d'autorisation d'utilisation personnelle</h5>
 	</center>
 	<p>Besoins justifiant 
-	  la demande : .......................... br />
+	  la demande : .......................... <br />
 	  .................... <br />
 	  .................... <br />
 	  Lieux d'utilisation du moyen de cryptologie : .................... 
@@ -331,9 +331,9 @@ with Triple-DES, CAST5-128, Blowfish, AES-128, AES-192, AES-256, Twofish)  </p>
 	    - numéro de la version : 1.0.7 ; <br />
 	    - distribution source intégrale : 
 	    <a href="ftp://ftp.gnupg.org/gcrypt/gnupg/gnupg-1.0.7.tar.gz">ftp://ftp.gnupg.org/gcrypt/gnupg/gnupg-1.0.7.tar.gz</a>
-	    MD5: ???? <br />
-	    - licence Logiciel Libre (voir <a href="http://www.gnu.org/licenses/licence-list.html">http://www.gnu.org/licenses/licence-list.html</a>) : <a href="http://www.gnu.org/licenses/gpl.txt">GNU General Public License</a><br />
- ;</p>
+	    MD5: ???? ; <br />
+	    - licence Logiciel Libre (voir <a href="http://www.gnu.org/licenses/licence-list.html">http://www.gnu.org/licenses/licence-list.html</a>) : <a href="http://www.gnu.org/licenses/gpl.txt">GNU General Public License</a> ; <br />
+</p>
 	  <p> La description 
 	    générale du produit, le manuel utilisateur ; 
 	<p>
@@ -357,8 +357,8 @@ with Triple-DES, CAST5-128, Blowfish, AES-128, AES-192, AES-256, Twofish)  </p>
 	    <a href="http://www.gnupg.org/gph/fr/manual.html">http://www.gnupg.org/gph/fr/manual.html</a>
 	  </p>
 	  <p> La description 
-	    des services offerts par le produit ;
-	    <a href="http://www.gnupg.org/gph/fr/manual.html">http://www.gnupg.org/gph/fr/manual.html</a>
+	    des services offerts par le produit :
+	    <a href="http://www.gnupg.org/gph/fr/manual.html">http://www.gnupg.org/gph/fr/manual.html</a> ; 
 	  </p>
 	  <p> La description 
 	    des fonctions de cryptologie offertes par le produit:
@@ -387,22 +387,24 @@ number generation; -->
 	    de la gestion des clés mises en &#339;uvre par le moyen, incluant 
 	    au moins : </p>
 	  <p> - le mode de 
-	    distribution: exportation dans un fichier ou envoi par TCP/IP vers des serveurs de clés répondant au protocol LDAP, HKP ou par email (gnupg-1.0.7/g10/export.c, gnupg-1.0.7/keyserver/*.c);
+	    distribution: exportation dans un fichier ou envoi par TCP/IP vers des serveurs de clés répondant au protocol LDAP, HKP ou par courriel (gnupg-1.0.7/g10/export.c, gnupg-1.0.7/keyserver/*.c);
 <!-- Export to a file or sending using TCP/IP to keyservers speaking
 either the LDAP, HKP or email protocol.  
 (gnupg-1.0.7/g10/export.c, gnupg-1.0.7/keyserver/*.c) -->
 	    <br />
 	    - le procédé de génération des clés 
+<pre>
 gnupg-1.0.7/g10/keygen.c
 gnupg-1.0.7/cipher/rsa.c
 gnupg-1.0.7/cipher/dsa.c
 gnupg-1.0.7/cipher/elgamal.c
 gnupg-1.0.7/cipher/primegen.c
+</pre>
 	    ;
 	    <br />
 	    - le format de conservation des clés s'il y a lieu: 
 	    un fichier contenant une concaténation de blocs de
-clés (keyblocks) utilisation le format de transmission décrit dans le RFC2440;
+clés (keyblocks) utilisation le format de transmission décrit dans le <a href="http://www.ietf.org/rfc/rfc2440.txt">RFC2440</a> (http://www.ietf.org/rfc/rfc2440.txt);
 <!-- One file with concatenated keyblocks using the transmission format for keys as described in RFC2440. -->	    
 	    <br />
 	    - le format de transmission des clés s'il y a lieu: tel que décrit dans le RFC2440; 
@@ -411,7 +413,7 @@ clés (keyblocks) utilisation le format de transmission décrit dans le RFC2440;
 	  <p> La description 
 	    des mesures techniques mises en &#339;uvre pour empêcher l'altération 
 	    du procédé de chiffrement ou de la gestion de clés 
-	    associée (2):  le procédé de chiffrement consiste en une clé publique encodée avec la clé de session (bloc type 2 PKCS-1 tel que décrit dans le RFC2313). Les clés privées sont protégées selon les méthodes décrites dans le RFC2440 avec l'amélioration permettant de remplacer optionnellement le checksum 16 bit par un checksum SHA-1 ;
+	    associée (2):  le procédé de chiffrement consiste en une clé publique encodée avec la clé de session (bloc type 2 PKCS-1 tel que décrit dans le <a href="http://www.ietf.org/rfc/rfc2313.txt">RFC2313</a> http://www.ietf.org/rfc/rfc2313.txt). Les clés privées sont protégées selon les méthodes décrites dans le RFC2440 avec l'amélioration permettant de remplacer optionnellement le checksum 16 bit par un checksum SHA-1 ;
 <!-- The encryption method is public key encoded along with the session
 key (PKCS-1 block type 2 as defined in RFC2313)
 

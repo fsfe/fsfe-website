@@ -40,7 +40,7 @@
 
   <xsl:template match="/html/head">
     <head>
-      <link rel="stylesheet" type="text/css" href="{$fsffrance}/eucd.css" />
+      <link rel="stylesheet" type="text/css" href="./eucd.css" />
       <xsl:apply-templates select="@*|node()"/>
     </head>
   </xsl:template>

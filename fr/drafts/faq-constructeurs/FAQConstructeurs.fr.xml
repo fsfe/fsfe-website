@@ -25,7 +25,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 <!-- *************************************************************** -->
 
 <!ENTITY title 
-         "F.A.Q des constructeurs d'électronique et de matériels informatiques">
+         "F.A.Q des constructeurs de composants et de matériels informatiques">
 <!ENTITY subtitle 
          "Foire Aux Questions sur la disponibilité de pilotes (drivers) pour
          tous systèmes d'exploitation">
@@ -40,7 +40,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 
 <!-- Factorization for easy replacement -->
 <!ENTITY server     "http://www.aful.org">
-<!ENTITY server.doc "&server;/info/faq-constructeurs/">
+<!ENTITY server.doc "&server;/faqs/faq-constructeurs/">
 
 <!-- French versions -->
 <!ENTITY url.longVerion.fr.html
@@ -1122,7 +1122,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	  <para>
 	    Modifications conjointes par AFUL, APRIL, FSF et
 	    contributeurs sur les listes de diffusions
-	    <email>aful@aful.org</email>,
+	    <email>membres@aful.org</email>,
 	    <email>april@april.org</email> et
 	    <email>fsfe-france@gnu.org</email> coordonées par
 	    Marc-Aurèle Darche <email>ma.darche@free.fr</email>.

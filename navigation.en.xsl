@@ -174,6 +174,12 @@
 		  <a href="{$fsfeurope}/order/announce.de.html">Fan Products</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
+              <xsl:choose>
+                <xsl:when test="$path='about/graphics/graphics.en.xhtml'">Graphics</xsl:when>
+                <xsl:otherwise>
+		  <a href="{$fsfeurope}/about/graphics/graphics.en.html">Graphics</a>
+                </xsl:otherwise>
+              </xsl:choose><br/>
               <br/></td>
             </tr>
 

@@ -5,7 +5,7 @@
 @setchapternewpage odd
 @c %**end of header
 
-@set RCSID $Id: sysadmin-france.en.texi,v 1.32 2001-05-26 20:51:47 olberger Exp $
+@set RCSID $Id: sysadmin-france.en.texi,v 1.33 2001-05-29 20:29:11 olberger Exp $
 @set VERSION 1.0
 
 @c Combine the variable and function indices:
@@ -726,6 +726,13 @@ The RSS availables at present are:
 @item @uref{http://france.fsfeurope.org/news/fsfe-fr-channel.en.xml,,FSF France} English
 
 @end itemize
+
+The news are dispatched each day on a dedicated mailing-list
+(@uref{http://mail.gnu.org/mailman/listinfo/fsfe-newsfr-fr,,french},
+@uref{http://mail.gnu.org/mailman/listinfo/fsfe-newsfr-en,,english}). The
+process is not automated on FSF Europe's servers at the present time,
+but handled by @email{oberger@@april.org,Olivier Berger}, with the
+@uref{https://savannah.gnu.org/projects/rss2mail/,,rss2mail} program.
 
 @node Update from CVS, Nightly script, Publishing news, Web
 @section Update from CVS

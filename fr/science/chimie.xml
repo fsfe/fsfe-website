@@ -43,7 +43,7 @@
   </comment>
   <date>22 apr 2002</date>
       </os>
-  <os name="GNU/Linux">
+  <os name="GNU/Linux"
   <maintainer>Robert W. Harrison</maintainer>
   <version>2.0</version>
   <license></license>
@@ -403,18 +403,18 @@
 
   <software>
     <name>Kemistry</name>
-    <date>04 sep 2002</date>
+    <date>04 fev 2003</date>
     <description lang="en">Kemistry is a collection of chemistry-related applications for KDE.</description>
     <description lang="fr">Kemistry est une collection de logiciels appliqués à la chimie pour KDE.</description>
     <authors>Francesco Bresciani</authors>
     <url>http://kemistry.sourceforge.net</url>
     <os name="GNU/Linux">
       <maintainer>Francesco Bresciani</maintainer>
-      <version>0.6</version>
+      <version>0.7</version>
       <license></license>
-      <url></url>
+      <url>http://kemistry.sourceforge.net</url>
       <comment></comment>
-      <date>04 sep 2002</date>
+      <date>04 fev 2003</date>
     </os>
   </software>
 
@@ -437,18 +437,18 @@
 
   <software>
     <name>KMovisto</name>
-    <date>15 nov 2002</date>
+    <date>10 fev 2003</date>
     <description lang="en">KMovisto is a molecule viewer for using in quantum chemistry. The program reads GAUSSIAN 94 and GAUSSIAN 98 files (obtained from UNIX or MS Windows systems) or XYZ files and draws the molecule as a ball and stick model.</description>
     <description lang="fr">KMovisto est un visuealisateur de molécules, à utiliser en chimie quantique. Ce programme lit des fichiers GAUSSIAN 94 et GAUSSIAN 98 (obtainus à partir de systèmes UNIX ou MS Windows) ou XYZ, et affiche les molécules par une représentation du type 'ball and stick'.</description>
     <authors>Mario Hoverath</authors>
     <url>http://members.tripod.de/PageOfMH</url>
     <os name="GNU/Linux">
       <maintainer>Mario Hoverath</maintainer>
-      <version>0.3.1</version>
+      <version>0.5</version>
       <license>GPL</license>
       <url></url>
       <comment></comment>
-      <date>15 nov 2002</date>
+      <date>10 fev 2003</date>
     </os>
   </software>
 
@@ -697,18 +697,18 @@
 
   <software>
     <name>XDrawChem</name>
-    <date>15 nov 2002</date>
+    <date>6 fev 2003</date>
     <description lang="en">XDrawChem is a two-dimensional molecule drawing program for Unix operating systems. It is similar in functionality to other molecule drawing programs such as ChemDraw (TM, CambridgeSoft). It can read and write MDL Molfiles, and read ChemDraw text and binary files, to allow sharing between XDrawChem and other chemistry applications. XDrawChem has been tested on GNU/Linux, SGI IRIX 6.5, and Sun Solaris.</description>
     <description lang="fr">XDrawChem est un programme de dessins moléculaires en 2D pour les systèmes Unix et clones. Il a des fonctionnalités similaires à d'autres logiciels tel que ChemDraw (TM, CambridgeSoft). Il peut lire les file MDL Mol, ChemDraw (texte et binaire), permettant ainsi l'échange entre XDrawChem et d'autres applications en chimie.</description>
     <authors>Bryan Herger</authors>
     <url>http://www.prism.gatech.edu/~gte067k/xdrawchem</url>
     <os name="GNU/Linux">
       <maintainer>Bryan Herger</maintainer>
-      <version>1.6</version>
+      <version>1.6.4</version>
       <license>GPL</license>
       <url></url>
       <comment>Missing copyright and license note in some code</comment>
-      <date>15 nov 2002</date>
+      <date>6 fev 2003</date>
     </os>
     <os name="Other Unix">
       <maintainer>Bryan Herger</maintainer>
@@ -1041,6 +1041,57 @@
       <url>http://savannah.nongnu.org/download/bkchem/</url>
       <comment></comment>
       <date>15 nov 2002</date>
+    </os>
+  </software>
+  <software>
+    <name>Kalzium</name>
+    <date>09 fev 2003</date>
+    <description lang="en">Kalzium is an application which will show you some information about the periodic system of the elements.</description>
+    <description lang="fr">Kalzium est une application permettant d'obtenir des informations sur les éléments du tableau périodique des éléments.</description>
+    <authors>Carsten Niehaus</authors>
+    <email></email>
+    <url>http://edu.kde.org/kalzium/</url>
+    <os name="GNU/Linux">
+      <maintainer>Carsten Niehaus</maintainer>
+      <version>0.6</version>
+      <license>GPL</license>
+      <url>http://edu.kde.org/kalzium/</url>
+      <comment>Download unreachable, could not look the source!</comment>
+      <date>09 fev 2003</date>
+    </os>
+  </software>
+  <software>
+    <name>Xem</name>
+    <date>6 fev 2003</date>
+    <description lang="en">This software can draw quickly acid/base titration diagramme</description>
+    <description lang="fr">Ce logiciel permet de dessiner très rapidement des courbes de dosages acido/basiques.</description>
+    <authors>Ghislain Picard</authors>
+    <email></email>
+    <url>http://www.linux-france.org/prj/xem/</url>
+    <os name="GNU/Linux">
+      <maintainer>Ghislain Picard</maintainer>
+      <version>0.3</version>
+      <license>GPL</license>
+      <url>http://www.linux-france.org/prj/xem/</url>
+      <comment>I have modified the source to include all the requierement</comment>
+      <date>6 fev 2003</date>
+    </os>
+  </software>
+  <software>
+    <name>Gromacs</name>
+    <date>10 fev 2003</date>
+    <description lang="en">GROMACS is a versatile package to perform molecular dynamics, i.e. simulate the Newtonian equations of motion for systems with hundreds to millions of particles.</description>
+    <description lang="fr">GROMACS est un ensemble de logiciels réalisant des calculs de dynamique moléculaire, comme la simulation d'équations de Newton pour le mouvement d'un système comportant plusieurs millions de particules.</description>
+    <authors>Berk Hess, Erik Lindahl, David van der Spoel</authors>
+    <email></email>
+    <url>http://www.gromacs.org/</url>
+    <os name="GNU/Linux">
+      <maintainer>Berk Hess, Erik Lindahl, David van der Spoel</maintainer>
+      <version>3.1.4</version>
+      <license>GPL</license>
+      <url>http://www.gromacs.org/</url>
+      <comment>The source are all right</comment>
+      <date>10 fev 2003</date>
     </os>
   </software>
 

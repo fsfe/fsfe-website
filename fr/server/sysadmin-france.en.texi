@@ -5,7 +5,7 @@
 @setchapternewpage odd
 @c %**end of header
 
-@set RCSID $Id: sysadmin-france.en.texi,v 1.55 2001-10-17 15:31:21 loic Exp $
+@set RCSID $Id: sysadmin-france.en.texi,v 1.56 2001-10-17 15:31:50 loic Exp $
 @set VERSION 1.0
 
 @c Combine the variable and function indices:
@@ -518,7 +518,7 @@ sample.pdf: sample.xml custom_fo.xsl
 @end example
 
 A simple standalone example can be downloaded for test purposes at
-@url{http://france.fsfeurope.org/server/docbook-sample.tar.gz}.
+@uref{http://france.fsfeurope.org/server/docbook-sample.tar.gz,,http://france.fsfeurope.org/server/docbook-sample.tar.gz}.
 
 @node Web, Private Data, DocBook Quick Start, Top
 @chapter Web

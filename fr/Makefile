@@ -50,8 +50,7 @@ news/news.en.html: news/fsfe-fr-channel.en.xml
 libre.fr.html: libre-bytes.xhtml
 libre.en.html: libre-bytes.xhtml
 
-server/server.en.html: server/server.en.xhtml
-server/server.en.xhtml: server/sysadmin-france.en.texi
+server/server.en.html: server/server.en.xhtml server/sysadmin-france.en.texi
 
 $(ENPAGES) $(FRPAGES): %.html: %.xhtml fsfe-fr.xsl navigation.en.xsl navigation.fr.xsl
 	@echo "Building $@ ..."; \

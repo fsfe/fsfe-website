@@ -4,7 +4,7 @@
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:template match="/html[@lang='fr']/body/div">
-    <!-- $Id: navigation.fr.xsl,v 1.9 2002-12-17 11:59:09 loic Exp $ -->
+    <!-- $Id: navigation.fr.xsl,v 1.10 2002-12-17 12:32:06 loic Exp $ -->
     <!-- $Source: /root/wrk/fsfe-web/savannah-rsync/fsfe/fr/eucd/navigation.fr.xsl,v $ -->
     <!-- Top menu line -->
     <table border="1" cellpadding="5" cellspacing="10" class="main">
@@ -25,6 +25,7 @@
 	  <a href="eucd.fr.html">Analyse</a><br />
 	  <a href="http://wiki.ael.be/index.php/EUCD-Status">Situation</a><br />
 	  <a href="http://mail.gnu.org/mailman/listinfo/fsfe-france">Discuter</a><br />
+	  <a href="who.fr.html">Qui</a><br />
 	</td>
 	
 	<td>

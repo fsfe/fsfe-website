@@ -5,7 +5,7 @@
 @setchapternewpage odd
 @c %**end of header
 
-@set RCSID $Id: sysadmin-france.en.texi,v 1.13 2001-04-22 00:44:50 loic Exp $
+@set RCSID $Id: sysadmin-france.en.texi,v 1.14 2001-04-22 17:22:46 loic Exp $
 @set VERSION 1.0
 
 @c Combine the variable and function indices:
@@ -72,8 +72,17 @@ Web
 * Overview::                    
 * Virtual Hosts::               
 * Editing the Web::             
+* Separate layout and content::  
 * Update from CVS::             
 * Nightly script::              
+
+Separate layout and content
+
+* XHTML and XSLT Quick Start::  
+* XSLT processors::             
+* Writing XHTML content::       
+* Generating HTML files with XSLT::  
+* Writing XSL files::           
 
 System
 
@@ -230,6 +239,7 @@ the relevant information in XML. For more information check the
 * Overview::                    
 * Virtual Hosts::               
 * Editing the Web::             
+* Separate layout and content::  
 * Update from CVS::             
 * Nightly script::              
 @end menu
@@ -268,7 +278,7 @@ that points to @file{/home/www/www.gnu.org}.
 All new domains should use a similar policy, that will help keeping
 things simple.
 
-@node Editing the Web, Update from CVS, Virtual Hosts, Web
+@node Editing the Web, Separate layout and content, Virtual Hosts, Web
 @section Editing the Web
 
 @cindex fsfe project
@@ -282,7 +292,236 @@ The modified files will be updated on france.fsfeurope.org within one
 hour. They will be available immediately after a commit on
 http://www.gnu.org/fsfe/ which is convenient for testing.
 
-@node Update from CVS, Nightly script, Editing the Web, Web
+The pages are stored in @code{.xhtml} files and formated automaticaly
+to @code{.html} files. @ref{XHTML and XSLT Quick Start} will tell you
+how to deal with this within seconds.
+
+@node Separate layout and content, Update from CVS, Editing the Web, Web
+@section Separate layout and content
+
+@cindex SSI
+It is convenient to separate the layout of an HTML page from the actual
+content. It prevents duplicating the menus in each page and allows to 
+have a nice display without the burden of fixing it in every page when
+something needs fixing. Using SSI (Server Side Includes) is a solution
+to this problem but it has the disadvantage that it requires from
+web server displaying the pages to have this feature enabled, which is
+not always the case. 
+
+@cindex XSLT
+@cindex XHTML
+
+We chose to use an @uref{http://www.w3c.org/TR/xslt,,XSLT}
+processor to separate the content from the layout. An XSLT processor
+provides something similar to a C preprocessor but is applied to XML
+files. The content of the pages are written in 
+@uref{http://www.w3.org/TR/xhtml1,,HTML}, which is a slightly
+different form of HTML that makes it XML compliant. The layout of the
+pages is stored in XSL files and the XSLT processor merges the two to
+produce an HTML page that will be used for display.
+
+@example
+
+XSL file    ----\
+                 => XSLT processor ----> HTML file
+XHTML file  ----/
+
+@end example
+
+We chose to use XSL rather than any other method because it is 
+a widely accepted standard and that Free Software tools are available
+everywhere that implement it. There are many possible uses of XSL but
+this chapter only focuses on using it to separate the layout of a
+web site from it's content.
+
+@menu
+* XHTML and XSLT Quick Start::  
+* XSLT processors::             
+* Writing XHTML content::       
+* Generating HTML files with XSLT::  
+* Writing XSL files::           
+@end menu
+
+@node XHTML and XSLT Quick Start, XSLT processors, Separate layout and content, Separate layout and content
+@subsection XHTML and XSLT Quick Start
+
+@cindex edit .xhtml files
+@cindex .xhtml files editing
+@cindex XHTML and XSLT quick start
+@cindex XSLT and XHTML quick start
+
+Assuming you're facing a directory that contains a mixture of 
+@code{.xhtml}, @code{.html} and/or @code{.xsl} files and you just
+want to contribute content without actually understanding what all
+this about, here is what you should do:
+
+@itemize @bullet
+
+@item Modify the @code{.xhtml} file, not the generated @code{.html} file.
+
+@item If you want to create a new file, create it with the @code{.xhtml}
+extension. Copy a @file{boilerplate.xhtml} from @uref{http://france.fsfeurope.org/boilerplate.xhtml,,somewhere} or copy and modify a @code{.xhtml} file
+in the same directory.
+
+@item To see the resulting HTML file, look for a Makefile in the directory
+or the upper directories that recursively walk the tree to format XHTML
+files into HTML files. If a grep @code{sabcmd} or @code{xsltproc} on a
+Makefile finds something, you probabl found the good one. Run @code{make
+all} and look at the generated HTML file with your web browser.
+
+@item To add a menu entry, edit the XSL file that ends with the @code{.xsl}
+extension. It should contain the menu entries: that's why they are
+created in the first place. Although the syntax of this file may not be
+familiar, the menu entries themselves are written in plain XHTML.
+
+@cindex your own XSL files
+@cindex XSL files of your own
+@item To re-use existing XSL files for your own web pages do the following
+
+@example
+
+#
+# Get the XSL files
+#
+wget http://france.fsfeurope.org/navigation.fr.xsl
+wget http://france.fsfeurope.org/fsfe-fr.xsl
+#
+# Get the Makefile
+#
+wget http://france.fsfeurope.org/Makefile
+#
+# Get the boilerplate
+#
+wget http://france.fsfeurope.org/boilerplate.fr.xhtml
+#
+# edit fsfe-fr.xsl and remove all references to navigation.*.xsl other
+# than navigation.en.xsl.
+#
+# Build the boilerplate.fr.html file
+#
+make all
+#
+# View boilerplate.fr.html with a web browser and start customizing 
+#
+@end example
+
+
+@end itemize
+
+@node XSLT processors, Writing XHTML content, XHTML and XSLT Quick Start, Separate layout and content
+@subsection XSLT processors
+
+There are many XSLT processors. We recommend the following two:
+
+@itemize @bullet
+
+@cindex sabcmd
+@cindex sablotron
+@item @uref{http://www.gingerall.com/charlie-bin/get/webGA/act/download.act,,sablotron}
+
+@cindex libxslt
+@cindex xsltproc
+@item @uref{http://www.xmlsoft.org/,,libxslt}
+
+@end itemize
+
+@node Writing XHTML content, Generating HTML files with XSLT, XSLT processors, Separate layout and content
+@subsection Writing XHTML content
+
+@cindex XHTML rules
+
+The content of the web site is written in XHTML files that have
+the @code{.xhtml} extension. The XHTML looks like a regular HTML 
+file, you don't have to learn anything new. Taking an existing HTML
+file and converting it to XHTML is simple. You only have to take
+care of the following:
+
+@itemize @bullet
+
+@item Add the following at the beginning of the file:
+
+@example
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html
+          PUBLIC "-//W3C//DTD HTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+@end example
+
+This declaration says that your file is in XHTML and that it contains
+@code{iso-8859-1} characters.
+
+@item Always close opening tags or the XSLT processor will bark. If
+you want to use a single tag, end it with a />.
+
+@example
+<br />
+<ul>
+<li> Item 1 </li>
+<li> Item 2 </li>
+</ul>
+@end example
+
+@item Wrap the content of the page using the proper tags.
+
+@example
+<html>
+  <head>
+    <title>My Title</title>
+  </head>
+  <body>
+     My stuff
+  </body>
+</html>
+@end example
+
+Web browsers may very well cope with the fact that you forget those but
+XSLT processors will not.
+
+@end itemize
+
+@node Generating HTML files with XSLT, Writing XSL files, Writing XHTML content, Separate layout and content
+@subsection Generating HTML files with XSLT
+
+@node Writing XSL files,  , Generating HTML files with XSLT, Separate layout and content
+@subsection Writing XSL files
+
+If you're only interested in modifying the menus that are located
+in XSL files (those with the @code{.xsl} extension), you can consider
+that XSL files are just XHTML files and forget about the rest. 
+
+@cindex re-use XSL example
+@cindex XSL examples
+To create your own XSL file without learning XSL, copy the XSL files
+of the @uref{http://france.fsfeurope.org/,,FSF France} web site
+and change them to your liking. The
+@ref{XHTML and XSLT Quick Start} chapter will give you instructions
+to do this.
+
+@cindex XSL learning curve
+It takes a few days to get accustomed to
+@uref{http://www.w3.org/TR/xslt,,XSLT}. If you're familiar with @uref{
+http://www.gnu.org/software/m4/,,m4} you'll find that
+easy. Otherwise it will look very strange because it looks like a
+programing language but is really a data transformation language.
+
+@cindex XSL pitfall
+A common pitfall when dealing with XSL is to try to use it's most
+advanced features and this may lead to XSL files that are complex and
+very hard to understand and debug. Since XSL has almost all the features
+of a programming language (loops, variables, conditions, functions,
+etc.) but none of it's facilities (debugger, profiler etc.), complex
+XSL files will make your life a living hell. It may worth the effort
+(for @uref{http://sourceforge.net/projects/docbook/,,DocBook}
+transofrmation to HTML for instance) you have to carefully evaluate
+the pro and cons in advance.
+
+A good XSL file is a file that even someone not accustomed to XSL could
+figure out, even if he won't be able to modify it's structure. Check the
+@uref{http://france.fsfeurope.org/navigation.en.xsl,,english menus} of
+the @uref{http://france.fsfeurope.org/server/server.en.html,,FSF France}
+web site for an example.
+
+@node Update from CVS, Nightly script, Separate layout and content, Web
 @section Update from CVS
 
 @cindex www.gnu.org
@@ -309,9 +548,7 @@ the following:
 @file{.symlinks} files. See the @uref{http://www.gnu.org/server/standards/README.html#SEC01,,Symbolic Links} chapter of the webmaster guidelines for
 detailed information.
 
-@item Run the @code{all} goal for each Makefile in the directory tree. For
-instance, if @code{about/Makefile} exists, then @code{make -C about all} is
-run. 
+@item Run the @code{all} goal of the @file{/home/www/fsfe/fr/Makefile}.
 
 @end itemize
 

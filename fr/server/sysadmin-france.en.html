@@ -36,8 +36,17 @@ and FSF machines in France.
 </p><li><a href="#Overview">Overview</a>: 
 <li><a href="#Virtual%20Hosts">Virtual Hosts</a>: 
 <li><a href="#Editing%20the%20Web">Editing the Web</a>: 
+<li><a href="#Separate%20layout%20and%20content">Separate layout and content</a>: 
 <li><a href="#Update%20from%20CVS">Update from CVS</a>: 
 <li><a href="#Nightly%20script">Nightly script</a>:
+
+<p>Separate layout and content
+
+</p><li><a href="#XHTML%20and%20XSLT%20Quick%20Start">XHTML and XSLT Quick Start</a>: 
+<li><a href="#XSLT%20processors">XSLT processors</a>: 
+<li><a href="#Writing%20XHTML%20content">Writing XHTML content</a>: 
+<li><a href="#Generating%20HTML%20files%20with%20XSLT">Generating HTML files with XSLT</a>: 
+<li><a href="#Writing%20XSL%20files">Writing XSL files</a>:
 
 <p>System
 
@@ -236,6 +245,7 @@ Up:<a rel=up href="#Top">Top</a>
 <li><a href="#Overview">Overview</a>: 
 <li><a href="#Virtual%20Hosts">Virtual Hosts</a>: 
 <li><a href="#Editing%20the%20Web">Editing the Web</a>: 
+<li><a href="#Separate%20layout%20and%20content">Separate layout and content</a>: 
 <li><a href="#Update%20from%20CVS">Update from CVS</a>: 
 <li><a href="#Nightly%20script">Nightly script</a>: 
 </ul>
@@ -288,7 +298,7 @@ things simple.
 
 <p><hr>
 Node:<a name="Editing%20the%20Web">Editing the Web</a>,
-Next:<a rel=next href="#Update%20from%20CVS">Update from CVS</a>,
+Next:<a rel=next href="#Separate%20layout%20and%20content">Separate layout and content</a>,
 Previous:<a rel=previous href="#Virtual%20Hosts">Virtual Hosts</a>,
 Up:<a rel=up href="#Web">Web</a>
 <br>
@@ -303,10 +313,246 @@ The modified files will be updated on france.fsfeurope.org within one
 hour. They will be available immediately after a commit on
 http://www.gnu.org/fsfe/ which is convenient for testing.
 
+<p>The pages are stored in <code>.xhtml</code> files and formated automaticaly
+to <code>.html</code> files. <a href="#XHTML%20and%20XSLT%20Quick%20Start">XHTML and XSLT Quick Start</a> will tell you
+how to deal with this within seconds.
+
+<p><hr>
+Node:<a name="Separate%20layout%20and%20content">Separate layout and content</a>,
+Next:<a rel=next href="#Update%20from%20CVS">Update from CVS</a>,
+Previous:<a rel=previous href="#Editing%20the%20Web">Editing the Web</a>,
+Up:<a rel=up href="#Web">Web</a>
+<br>
+
+<h2>Separate layout and content</h2>
+
+<p>It is convenient to separate the layout of an HTML page from the actual
+content. It prevents duplicating the menus in each page and allows to
+have a nice display without the burden of fixing it in every page when
+something needs fixing. Using SSI (Server Side Includes) is a solution
+to this problem but it has the disadvantage that it requires from
+web server displaying the pages to have this feature enabled, which is
+not always the case.
+
+<p>We chose to use an <a href="http://www.w3c.org/TR/xslt">XSLT</a>
+processor to separate the content from the layout. An XSLT processor
+provides something similar to a C preprocessor but is applied to XML
+files. The content of the pages are written in
+<a href="http://www.w3.org/TR/xhtml1">HTML</a>, which is a slightly
+different form of HTML that makes it XML compliant. The layout of the
+pages is stored in XSL files and the XSLT processor merges the two to
+produce an HTML page that will be used for display.
+
+<pre>
+XSL file    ----\
+                 =&gt; XSLT processor ----&gt; HTML file
+XHTML file  ----/
+
+</pre>
+
+<p>We chose to use XSL rather than any other method because it is
+a widely accepted standard and that Free Software tools are available
+everywhere that implement it. There are many possible uses of XSL but
+this chapter only focuses on using it to separate the layout of a
+web site from it's content.
+
+<ul>
+<li><a href="#XHTML%20and%20XSLT%20Quick%20Start">XHTML and XSLT Quick Start</a>: 
+<li><a href="#XSLT%20processors">XSLT processors</a>: 
+<li><a href="#Writing%20XHTML%20content">Writing XHTML content</a>: 
+<li><a href="#Generating%20HTML%20files%20with%20XSLT">Generating HTML files with XSLT</a>: 
+<li><a href="#Writing%20XSL%20files">Writing XSL files</a>: 
+</ul>
+
+<p><hr>
+Node:<a name="XHTML%20and%20XSLT%20Quick%20Start">XHTML and XSLT Quick Start</a>,
+Next:<a rel=next href="#XSLT%20processors">XSLT processors</a>,
+Previous:<a rel=previous href="#Separate%20layout%20and%20content">Separate layout and content</a>,
+Up:<a rel=up href="#Separate%20layout%20and%20content">Separate layout and content</a>
+<br>
+
+<h3>XHTML and XSLT Quick Start</h3>
+
+<p>Assuming you're facing a directory that contains a mixture of
+<code>.xhtml</code>, <code>.html</code> and/or <code>.xsl</code> files and you just
+want to contribute content without actually understanding what all
+this about, here is what you should do:
+
+<ul>
+
+<li>Modify the <code>.xhtml</code> file, not the generated <code>.html</code> file.
+
+<li>If you want to create a new file, create it with the <code>.xhtml</code>
+extension. Copy a <code>boilerplate.xhtml</code> from <a href="http://france.fsfeurope.org/boilerplate.xhtml">somewhere</a> or copy and modify a <code>.xhtml</code> file
+in the same directory.
+
+<li>To see the resulting HTML file, look for a Makefile in the directory
+or the upper directories that recursively walk the tree to format XHTML
+files into HTML files. If a grep <code>sabcmd</code> or <code>xsltproc</code> on a
+Makefile finds something, you probabl found the good one. Run <code>make
+all</code> and look at the generated HTML file with your web browser.
+
+<li>To add a menu entry, edit the XSL file that ends with the <code>.xsl</code>
+extension. It should contain the menu entries: that's why they are
+created in the first place. Although the syntax of this file may not be
+familiar, the menu entries themselves are written in plain XHTML.
+
+<li>To re-use existing XSL files for your own web pages do the following
+
+<pre>
+#
+# Get the XSL files
+#
+wget http://france.fsfeurope.org/navigation.fr.xsl
+wget http://france.fsfeurope.org/fsfe-fr.xsl
+#
+# Get the Makefile
+#
+wget http://france.fsfeurope.org/Makefile
+#
+# Get the boilerplate
+#
+wget http://france.fsfeurope.org/boilerplate.fr.xhtml
+#
+# edit fsfe-fr.xsl and remove all references to navigation.*.xsl other
+# than navigation.en.xsl.
+#
+# Build the boilerplate.fr.html file
+#
+make all
+#
+# View boilerplate.fr.html with a web browser and start customizing
+#
+</pre>
+
+</ul>
+
+<p><hr>
+Node:<a name="XSLT%20processors">XSLT processors</a>,
+Next:<a rel=next href="#Writing%20XHTML%20content">Writing XHTML content</a>,
+Previous:<a rel=previous href="#XHTML%20and%20XSLT%20Quick%20Start">XHTML and XSLT Quick Start</a>,
+Up:<a rel=up href="#Separate%20layout%20and%20content">Separate layout and content</a>
+<br>
+
+<h3>XSLT processors</h3>
+
+<p>There are many XSLT processors. We recommend the following two:
+
+<ul>
+
+<li><a href="http://www.gingerall.com/charlie-bin/get/webGA/act/download.act">sablotron</a>
+
+<li><a href="http://www.xmlsoft.org/">libxslt</a>
+
+</ul>
+
+<p><hr>
+Node:<a name="Writing%20XHTML%20content">Writing XHTML content</a>,
+Next:<a rel=next href="#Generating%20HTML%20files%20with%20XSLT">Generating HTML files with XSLT</a>,
+Previous:<a rel=previous href="#XSLT%20processors">XSLT processors</a>,
+Up:<a rel=up href="#Separate%20layout%20and%20content">Separate layout and content</a>
+<br>
+
+<h3>Writing XHTML content</h3>
+
+<p>The content of the web site is written in XHTML files that have
+the <code>.xhtml</code> extension. The XHTML looks like a regular HTML
+file, you don't have to learn anything new. Taking an existing HTML
+file and converting it to XHTML is simple. You only have to take
+care of the following:
+
+<ul>
+
+<li>Add the following at the beginning of the file:
+
+<pre>&lt;?xml version="1.0" encoding="iso-8859-1" ?&gt;
+&lt;!DOCTYPE html
+          PUBLIC "-//W3C//DTD HTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+</pre>
+
+<p>This declaration says that your file is in XHTML and that it contains
+<code>iso-8859-1</code> characters.
+
+</p><li>Always close opening tags or the XSLT processor will bark. If
+you want to use a single tag, end it with a /&gt;.
+
+<pre>&lt;br /&gt;
+&lt;ul&gt;
+&lt;li&gt; Item 1 &lt;/li&gt;
+&lt;li&gt; Item 2 &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+<li>Wrap the content of the page using the proper tags.
+
+<pre>&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My Title&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+     My stuff
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<p>Web browsers may very well cope with the fact that you forget those but
+XSLT processors will not.
+
+</ul>
+
+<p><hr>
+Node:<a name="Generating%20HTML%20files%20with%20XSLT">Generating HTML files with XSLT</a>,
+Next:<a rel=next href="#Writing%20XSL%20files">Writing XSL files</a>,
+Previous:<a rel=previous href="#Writing%20XHTML%20content">Writing XHTML content</a>,
+Up:<a rel=up href="#Separate%20layout%20and%20content">Separate layout and content</a>
+<br>
+
+<h3>Generating HTML files with XSLT</h3>
+
+<p><hr>
+Node:<a name="Writing%20XSL%20files">Writing XSL files</a>,
+Previous:<a rel=previous href="#Generating%20HTML%20files%20with%20XSLT">Generating HTML files with XSLT</a>,
+Up:<a rel=up href="#Separate%20layout%20and%20content">Separate layout and content</a>
+<br>
+
+<h3>Writing XSL files</h3>
+
+<p>If you're only interested in modifying the menus that are located
+in XSL files (those with the <code>.xsl</code> extension), you can consider
+that XSL files are just XHTML files and forget about the rest.
+
+<p>To create your own XSL file without learning XSL, copy the XSL files
+of the <a href="http://france.fsfeurope.org/">FSF France</a> web site
+and change them to your liking. The
+<a href="#XHTML%20and%20XSLT%20Quick%20Start">XHTML and XSLT Quick Start</a> chapter will give you instructions
+to do this.
+
+<p>It takes a few days to get accustomed to
+<a href="http://www.w3.org/TR/xslt">XSLT</a>. If you're familiar with <a href="http://www.gnu.org/software/m4/">m4</a> you'll find that
+easy. Otherwise it will look very strange because it looks like a
+programing language but is really a data transformation language.
+
+<p>A common pitfall when dealing with XSL is to try to use it's most
+advanced features and this may lead to XSL files that are complex and
+very hard to understand and debug. Since XSL has almost all the features
+of a programming language (loops, variables, conditions, functions,
+etc.) but none of it's facilities (debugger, profiler etc.), complex
+XSL files will make your life a living hell. It may worth the effort
+(for <a href="http://sourceforge.net/projects/docbook/">DocBook</a>
+transofrmation to HTML for instance) you have to carefully evaluate
+the pro and cons in advance.
+
+<p>A good XSL file is a file that even someone not accustomed to XSL could
+figure out, even if he won't be able to modify it's structure. Check the
+<a href="http://france.fsfeurope.org/navigation.en.xsl">english menus</a> of
+the <a href="http://france.fsfeurope.org/server/server.en.html">FSF France</a>
+web site for an example.
+
 <p><hr>
 Node:<a name="Update%20from%20CVS">Update from CVS</a>,
 Next:<a rel=next href="#Nightly%20script">Nightly script</a>,
-Previous:<a rel=previous href="#Editing%20the%20Web">Editing the Web</a>,
+Previous:<a rel=previous href="#Separate%20layout%20and%20content">Separate layout and content</a>,
 Up:<a rel=up href="#Web">Web</a>
 <br>
 
@@ -337,9 +583,7 @@ the following:
 <code>.symlinks</code> files. See the <a href="http://www.gnu.org/server/standards/README.html#SEC01">Symbolic Links</a> chapter of the webmaster guidelines for
 detailed information.
 
-<li>Run the <code>all</code> goal for each Makefile in the directory tree. For
-instance, if <code>about/Makefile</code> exists, then <code>make -C about all</code> is
-run.
+<li>Run the <code>all</code> goal of the <code>/home/www/fsfe/fr/Makefile</code>.
 
 </ul>
 
@@ -466,13 +710,19 @@ Up:<a rel=up href="#Top">Top</a>
 <h1>Index of Concepts</h1>
 
 <ul compact>
+<li>.xhtml files editing: <a href="#XHTML%20and%20XSLT%20Quick%20Start">XHTML and XSLT Quick Start</a>
+<li>edit .xhtml files: <a href="#XHTML%20and%20XSLT%20Quick%20Start">XHTML and XSLT Quick Start</a>
 <li>edit france.fsfeurope.org: <a href="#Editing%20the%20Web">Editing the Web</a>
 <li>firewall: <a href="#Security">Security</a>
 <li>france.fsfeurope.org updates: <a href="#Update%20from%20CVS">Update from CVS</a>
 <li>fsfe project: <a href="#Editing%20the%20Web">Editing the Web</a>
 <li>fsffr and shell account: <a href="#Account%20Create">Account Create</a>
+<li>libxslt: <a href="#XSLT%20processors">XSLT processors</a>
 <li>password ssh: <a href="#Account%20Access">Account Access</a>
 <li>public key update: <a href="#Account%20Update">Account Update</a>
+<li>re-use XSL example: <a href="#Writing%20XSL%20files">Writing XSL files</a>
+<li>sabcmd: <a href="#XSLT%20processors">XSLT processors</a>
+<li>sablotron: <a href="#XSLT%20processors">XSLT processors</a>
 <li>security: <a href="#System">System</a>
 <li>shell account: <a href="#Account%20Create">Account Create</a>
 <li>shell account ssh: <a href="#Account%20Access">Account Access</a>
@@ -480,9 +730,21 @@ Up:<a rel=up href="#Top">Top</a>
 <li>ssh public key: <a href="#Account%20Access">Account Access</a>
 <li>ssh public key update: <a href="#Account%20Update">Account Update</a>
 <li>ssh shell account: <a href="#Account%20Access">Account Access</a>
+<li>SSI: <a href="#Separate%20layout%20and%20content">Separate layout and content</a>
 <li>statistics mrtg: <a href="#Firewall">Firewall</a>
 <li>www.fsfeurope.org updates: <a href="#Update%20from%20CVS">Update from CVS</a>
 <li>www.gnu.org: <a href="#Update%20from%20CVS">Update from CVS</a>
+<li>XHTML: <a href="#Separate%20layout%20and%20content">Separate layout and content</a>
+<li>XHTML and XSLT quick start: <a href="#XHTML%20and%20XSLT%20Quick%20Start">XHTML and XSLT Quick Start</a>
+<li>XHTML rules: <a href="#Writing%20XHTML%20content">Writing XHTML content</a>
+<li>XSL examples: <a href="#Writing%20XSL%20files">Writing XSL files</a>
+<li>XSL files of your own: <a href="#XHTML%20and%20XSLT%20Quick%20Start">XHTML and XSLT Quick Start</a>
+<li>XSL learning curve: <a href="#Writing%20XSL%20files">Writing XSL files</a>
+<li>XSL pitfall: <a href="#Writing%20XSL%20files">Writing XSL files</a>
+<li>XSLT: <a href="#Separate%20layout%20and%20content">Separate layout and content</a>
+<li>XSLT and XHTML quick start: <a href="#XHTML%20and%20XSLT%20Quick%20Start">XHTML and XSLT Quick Start</a>
+<li>xsltproc: <a href="#XSLT%20processors">XSLT processors</a>
+<li>your own XSL files: <a href="#XHTML%20and%20XSLT%20Quick%20Start">XHTML and XSLT Quick Start</a>
 </ul>
 <p><hr>
 Node:<a name="Name%20Index">Name Index</a>,
@@ -514,6 +776,14 @@ Up:<a rel=up href="#Top">Top</a>
 <li><a href="#Overview">Overview</a>
 <li><a href="#Virtual%20Hosts">Virtual Hosts</a>
 <li><a href="#Editing%20the%20Web">Editing the Web</a>
+<li><a href="#Separate%20layout%20and%20content">Separate layout and content</a>
+<ul>
+<li><a href="#XHTML%20and%20XSLT%20Quick%20Start">XHTML and XSLT Quick Start</a>
+<li><a href="#XSLT%20processors">XSLT processors</a>
+<li><a href="#Writing%20XHTML%20content">Writing XHTML content</a>
+<li><a href="#Generating%20HTML%20files%20with%20XSLT">Generating HTML files with XSLT</a>
+<li><a href="#Writing%20XSL%20files">Writing XSL files</a>
+</ul>
 <li><a href="#Update%20from%20CVS">Update from CVS</a>
 <li><a href="#Nightly%20script">Nightly script</a>
 </ul>

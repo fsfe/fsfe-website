@@ -93,7 +93,7 @@
               <xsl:choose>
                 <xsl:when test="$path='background.de.xhtml'">Hintergrund</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/background.de.html" class="T2">Hintegrund</a>
+                  <a href="{$fsfeurope}/background.de.html" class="T2">Hintergrund</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>

@@ -109,12 +109,13 @@ $(ITPAGES): %.html: %.xhtml fsfe.xsl navigation.it.xsl
 $(ESPAGES): %.html: %.xhtml fsfe.xsl navigation.es.xsl
 	@$(ECHO) "Building $@ ..."; \
 	path=$< ; \
-	base=`expr $$path : '\(.*\).xhtml'` ; \
+	base=`expr $$path : '\(.*\).es.xhtml'` ; \
 	filebase=`basename $$base` ; \
 	dir=`dirname $$path` ; \
 	root=`dirname $$path | perl -pe 'chop; s:([^/]+):..:g if($$_ ne ".")'` ; \
-	$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase '$$path='$$path > $$base.html-temp && (cat $$base.html-temp | perl -p -e '$$| = 1; (s/Date://, s/Author:/por/, s/\$$//g) if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.html) ; \
-	rm -f $$base.html-temp
+	langlinks="`./tools/translate.sh $$base es`" ; \
+	$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase.es '$$path='$$path '$$langlinks='"$$langlinks" > $$base.es.html-temp && (cat $$base.es.html-temp | perl -p -e '$$| = 1; (s/Date://, s/Author:/por/, s/\$$//g) if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.es.html) ; \
+	rm -f $$base.es.html-temp
 
 # remove html files for which an xhtml version exists (exclude fr/)
 clean:

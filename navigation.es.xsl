@@ -48,6 +48,9 @@
       <tr>
 	<td width="99%" valign="top">
         <div class="content">
+        <center>
+        <xsl:value-of select="$langlinks" disable-output-escaping="yes"/>
+        </center>
 	<xsl:apply-templates select="@*|node()"/>
 	</div>
 	</td>

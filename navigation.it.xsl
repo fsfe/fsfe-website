@@ -7,11 +7,11 @@
   <!-- FSF related sites -->
   <table cellspacing="0" cellpadding="1" width="100%" border="0"> 
    <tr valign="middle"> 
-    <td>
+    <td class="newstext">
      &nbsp;&nbsp;
      <a href="{$fsfeurope}/">FSF Europe</a>
     </td>
-    <td align="right">
+    <td class="newstext" align="right">
      <a href="{$fsf}/">FSF</a>
      &nbsp;&nbsp;|&nbsp;&nbsp;
      <a href="{$gnu}/">GNU</a>

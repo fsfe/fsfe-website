@@ -15,7 +15,7 @@
    along with this program; if not, write to the Free Software
    Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  
-   $Id: eucd.css,v 1.10 2002-12-22 14:08:05 rodolphe Exp $
+   $Id: eucd.css,v 1.11 2002-12-26 21:02:19 loic Exp $
    $Source: /root/wrk/fsfe-web/savannah-rsync/fsfe/fr/eucd/eucd.css,v $
 */
 body {
@@ -48,7 +48,7 @@ span {
 
 h2 {
      font-weight: bold;
-     font-size: 12pt;
+     font-size: 10pt;
      }
 a {
     color: #002390;

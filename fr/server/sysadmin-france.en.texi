@@ -5,7 +5,7 @@
 @setchapternewpage odd
 @c %**end of header
 
-@set RCSID $Id: sysadmin-france.en.texi,v 1.38 2001-06-12 13:45:07 mad Exp $
+@set RCSID $Id: sysadmin-france.en.texi,v 1.39 2001-06-12 13:46:58 mad Exp $
 @set VERSION 1.0
 
 @c Combine the variable and function indices:
@@ -512,6 +512,8 @@ rpm -i expat-1.95.1-1.i386.rpm
 
 # get sablotron 
 wget http://www.gingerall.com/perl/rd?url=sablot/sablotron-0.52-1.i386.rpm
+
+# install sablotron
 rpm -i sablotron-0.52-1.i386.rpm
 #
 

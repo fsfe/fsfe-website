@@ -22,6 +22,8 @@
     </html>
   </xsl:template>
 
+  <xsl:template select="description"><xsl:apply-templates /></xsl:template>
+
   <xsl:template match="@*|node()" priority="-1">
     <xsl:copy>
       <xsl:apply-templates select="@*|node()"/>

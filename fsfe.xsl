@@ -5,7 +5,7 @@
  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:output method="html" encoding="iso-8859-1" doctype-public="-//W3C//DTD HTML 1.0 Transitional//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" />
 
-<!-- $Id: fsfe.xsl,v 1.1 2001-04-20 10:43:13 villate Exp $ -->
+<!-- $Id: fsfe.xsl,v 1.2 2001-04-20 17:32:38 villate Exp $ -->
 <xsl:template match="webpage">
 <html>
   <head>
@@ -28,12 +28,12 @@
 	  <td class="TopBody" width="99%" height="99%">
 	    <a class="TopTitleB">FSF Europe</a>
 	    <br />
-	    <a class="TopTitle">Free Software is the concience of software</a>
+	    <a class="TopTitle">Free Software - equal chances for economy and
+            people</a>
 	  </td>
-	  <td align="right" valign="bottom" class="TopBody">
-	    <a href="http://france.fsfeurope.org/index.fr.shtml" class="T2">France</a><br/>
-	    <a href="http://www.fsfeurope.org/index.fr.html" class="T2">Europe</a><br/>
-	    <a href="http://www.fsf.org/home.fr.html" class="T2">Etats-Unis</a>
+	  <td align="right" valign="top" class="TopBody"><br/>
+	    <a href="http://france.fsfeurope.org/" class="T2">Chapter&nbsp;France</a><br/><br/>
+	    <a name="germany.fsfeurope.org" class="T2">Chapter&nbsp;Germany</a><br/>
 	  </td>
 	</tr>
     </table>
@@ -73,14 +73,14 @@
     </table>
   Last update:
 <!-- timestamp start -->
-$Date: 2001-04-20 10:43:13 $ $Author: villate $
+$Date: 2001-04-20 17:32:38 $ $Author: villate $
 <!-- timestamp end -->
   </body>
 </html>
 </xsl:template>
 
 <xsl:template match="webmenu">
-	    <table summary="" width="120" border="0" cellspacing="0" cellpadding="4">
+	    <table summary="" width="150" border="0" cellspacing="0" cellpadding="4">
                <xsl:apply-templates />
 	    </table>
 </xsl:template>
@@ -89,7 +89,7 @@ $Date: 2001-04-20 10:43:13 $ $Author: villate $
 <xsl:template match="menudiv">
 		<tr><td class="TopTitle" align="center"><xsl:apply-templates select="title"/></td></tr>
 		<tr>
-		  <td align="right">
+		  <td align="right"><br/>
                   <xsl:apply-templates select="menuentry" />
 		  </td>
 		</tr>
@@ -102,15 +102,16 @@ $Date: 2001-04-20 10:43:13 $ $Author: villate $
                      </xsl:attribute>
                      <xsl:attribute name="class">T2</xsl:attribute>
                      <xsl:apply-templates/>
-                   </xsl:element><br/>
+                   </xsl:element><br/><br/>
 </xsl:template>
 
 <xsl:template match="webfolders">
-  <xsl:apply-templates />
+  <xsl:apply-templates select="foldersdiv[1]" mode="grey"/>
+  <xsl:apply-templates select="foldersdiv[2]" mode="blue"/>
 </xsl:template>
 
 
-<xsl:template match="foldersdiv[1]">
+<xsl:template match="foldersdiv" mode="grey">
     <table summary="" cellspacing="0" cellpadding="0" width="100%" border="0">
       <tr valign="middle" bgcolor="#6f6f6f">
       <td><img src="images/pix.png" width="1" height="1" alt="" /></td>
@@ -126,7 +127,7 @@ $Date: 2001-04-20 10:43:13 $ $Author: villate $
     </table>
 </xsl:template>
 
-<xsl:template match="foldersdiv[2]">
+<xsl:template match="foldersdiv" mode="blue">
     <table summary="" cellspacing="0" cellpadding="0" width="100%" border="0">
 	<tr valign="middle" bgcolor="#6f6f6f">
 	  <td><img src="images/pix.png" width="1" height="1" alt="" /></td>

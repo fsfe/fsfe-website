@@ -4,6 +4,7 @@
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:output method="html"
+           encoding="ISO-8859-1"
            doctype-public="-//W3C//DTD HTML 4.0 Transitional//EN"
            doctype-system="http://www.w3.org/TR/REC-html40/loose.dtd"
            indent="yes"

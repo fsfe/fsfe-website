@@ -74,7 +74,8 @@ an hosting facility. With that tool we want to allow different kinds of facility
 to communicate with each other. It will help to develop tools to facilitate
 migrations between hosting facilities. This part is more oriented on data formats and tools to exchange informations between hosting facilities. It may
 be released as an individual package from the first part.\\
-\\ 1087/924 chars need some check and some other stuff
+\\ 
+%1087/924 chars need some check and some other stuff
 \subsection*{Description of the work (max 2000 characters)} to be written
 %SAVANNAH
 The hosting facility is composed of two main parts, the frontend and the
@@ -87,13 +88,31 @@ Our primary goal is to build a set of packages that is easy to
 install on a virgin machine or a machine already used for other
 purposes. 
 Although we have in mind that the set of packages produced could be used for
-multiple purposes, our focus will be on development hosting facilities. 
-created network (for example savannah or sourceforge) ;
+multiple purposes, our focus will be on development hosting facilities. \\
 
-% 450
-%COOPX
+To achieve this goal, we will 
+1 redesing existing hosting architectures such as Savannah and Picolibre 
+  so that they may be packaged, installed and taylored easily; 
+2 integrate multilanguage support to these platforms and implement support
+  versions for portuguese, german, spanish, english and french;
+3 define common data types and representation between the two types of
+  platform with possible interaction with other platform via the CoopX project;
+4 introduce functionalities to import/export informations from one site to
+  another, based on this common data representation;
+5 test and deploy over wide area network at least three sites in three out
+	of four participating countries.
+%1445/1224 chars need check and more description
 \subsection*{Milestones and expected result (max 500 characters)}
-%%% HELP HELP
+PM 3: specification of new hosting architecture
+PM 6: specification of common data formats
+PM 9: V1 of savannah with new design 1 language version
+PM12: V1 of picolibre with new design
+      V2 of savannah with support for at least 2 languages and import/export
+PM15: V2 of picolibre with multilingual support for at least 2 languages and
+      import/export functionalities
+PM18: deployment of redesigned platform in 3 countries, 
+      dissemination of the project results by a Debian package.
+%496/408
 \section*{A4 Cost Summary}
 %% will look at that later
 \rotatebox{90}{

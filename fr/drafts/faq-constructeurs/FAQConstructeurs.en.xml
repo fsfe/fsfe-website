@@ -41,7 +41,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 
 <!-- Factorization for easy replacement -->
 <!ENTITY server     "http://www.aful.org">
-<!ENTITY server.faqs      "&server;/faqs/faq-constructeurs/">
+<!ENTITY server.faqs      "&server;/faqs/">
 <!ENTITY server.solutions "&server;/solutions/">
 
 <!ENTITY url.ssii
@@ -65,9 +65,9 @@ Old version of the XML DTD, before it became endorsed by OASIS
          "&server.faqs;FAQConstructeurs.en.pdf">
 
 <!ENTITY url.shortVersion.en.html
-         "&server.faqs;shortFAQConstructeurs.en.pdf">
-<!ENTITY url.shortVersion.en.pdf
          "&server.faqs;shortFAQConstructeurs.en.html">
+<!ENTITY url.shortVersion.en.pdf
+         "&server.faqs;shortFAQConstructeurs.en.pdf">
 
 ]>
 
@@ -89,7 +89,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
       <affiliation>
 	<orgname>
 	  APRIL 
-	  (Association Pour la Promotion et la Recherche en Informatique Libre i.e. Association for Promotion and Research on Free Computing)
+	  (Association Pour la Promotion et la Recherche en Informatique Libre ie. Association for Promotion and Research in Libre Computing)
    	</orgname>
       </affiliation>
     </author>
@@ -99,10 +99,10 @@ Old version of the XML DTD, before it became endorsed by OASIS
       <year>2001</year>
       <holder>AFUL, APRIL</holder>
       <!-- If there wasn't a buggy stylesheet support, 
-      it should be like this : -->
+           it should be like this : -->
       <!--
-    <holder>AFUL</holder>
-    <holder>APRIL</holder>
+      <holder>AFUL</holder>
+      <holder>APRIL</holder>
       -->
     </copyright>
 
@@ -122,7 +122,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 
 
   <sect1>
-    <title>Questions / Réponses</title>
+    <title>Questions / Answers</title>
 
     <qandaset defaultlabel="qanda">
 
@@ -137,11 +137,11 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	  </question>
 	  <answer>
 	    <para>
-	      GNU/Linux is a multiusers, multitask operating system which can execute on a large number of hardware platforms (Intel x86, PowerPC, Alpha, SPARC, ARM, etc.).
+	      GNU/Linux is a multiuser, multitask operating system which can execute on a large number of hardware platforms (Intel x86, PowerPC, Alpha, SPARC, ARM, etc.).
 	      The most important characteristic of this operating system, besides its technical qualities and its growing fame, lies in the fact that GNU/Linux is an assembly of &LLs;.
 	    </para>
 	    <para>
-              The GNU/Linux system will often be mentioned in this document, essentially because the approached problems concern presently number of users of this system. But these problems stay valid <emphasis>for every operational systems</emphasis>
+              The GNU/Linux system will often be mentioned in this document, essentially because the problems mentioned presently concern many users of this system. But these problems stay valid <emphasis>for every operating system</emphasis>
 	    </para>
 	  </answer>
 	</qandaentry>
@@ -149,12 +149,12 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	<qandaentry condition="long">
 	  <question>
 	    <para>
-	      Why does one sometimes refers to GNU/Linux instead of Linux?
+	      Why does one sometimes refer to GNU/Linux instead of Linux?
 	    </para>
 	  </question>
 	  <answer>
 	    <para>
-              Introduced by Richard Mr Stallman in 1984, GNU is a project of operating system consisting solely of &LLs;. The Linux kernel, a creation which began in 1991, is the last component which has allowed to achieve an autonomous operating system solely composed of &LL;. GNU/Linux is thus the conjunction of the project GNU and the Linux kernel. It is this set which is distributed today by Debian, Mandrake, RedHat, etc. 
+              Introduced by Richard Mr Stallman in 1984, GNU is a project of operating system consisting solely of &LLs;. The Linux kernel, a creation which began in 1991, is the last component that has allowed to achieve an autonomous operating system solely composed of &LL;. GNU/Linux is thus the conjunction of the project GNU and the Linux kernel. It is this set which is distributed today by Debian, Mandrake, RedHat, etc. 
 	    </para>
 	  </answer>
 	</qandaentry>
@@ -162,24 +162,24 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	<qandaentry>
 	  <question id="libreLicense">
 	    <para id="libreLicense.text">
-	      What a free license ?
+	      What is a free license ?
 	    </para>
 	  </question>
 	  <answer>
 	    <para>
-              A license can be indicated under the generic name of <quote>free license</quote> if it correspond to the criteria of &LL; licences (a <ulink url="http://www.fsf.org/philosophy/license-list.htm">list</ulink> is available on the  on the FSF's site) or to &OS; licenses (a <ulink url="http://opensource.org/licenses">list</ulink> is available on the on the &OSI;'s site)
+              A license can be designated under the generic name of <quote>free license</quote> if it corresponds to the criteria of &LL; licences (a <ulink url="http://www.fsf.org/philosophy/license-list.htm">list</ulink> is available on the FSF's site) or to &OS; licenses (a <ulink url="http://opensource.org/licenses">list</ulink> is available on the on the &OSI;'s site)
 	    </para>
 	    <para condition="long">
-	      &LL; licenses correspond to the criteria stated by &LL; definition. Open Source Licenses correspond to the criteria stated in Open Source definition. 
+             &LL; licenses correspond to the criteria stated by &LL; definition. Open Source Licenses correspond to the criteria stated in Open Source definition. 
 	    </para>
 	    <para condition="long">
-	      Although many licenses appear in both these lists, they are not strictly identical, &LL; movement and the &OS; movement being based on different fundamental postulates.
+             Although many licenses appear in both these lists, they are not strictly identical, &LL; movement and the &OS; movement being based on different fundamental postulates.
 	    </para>
 	    <para condition="long">
-	      &OS; emphasizes on the opening and efficiency of the computer software developments, while the foundations of the &LL; movement are freedom and protection of the users' freedom.
+             &OS; emphasizes the opening and efficiency of the computer software developments, while the foundations of the &LL; movement are freedom and protection of the users' freedom.
 	    </para>
 	    <para condition="long">
-	      In both cases, determining if a license is in accordance with the definition ask for consequent work and requires equally legal competences and an understanding of the philosophy of the movements. For that reason these two lists are a very important reference.
+            In both cases, determining if a license is in accordance with the definition represents a lot of work and requires legal competences as well as an understanding of the philosophy of the movements. For that reason these two lists are a very important reference.
 	    </para>
 	  </answer>
 	</qandaentry>
@@ -187,18 +187,18 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	<qandaentry>
 	  <question>
 	    <para>
-	      What a non-free (or proprietary) license ?
+	      What is a non-free (or proprietary) license ?
 	    </para>
 	  </question>
 	  <answer>
 	    <para>
-              A <quote>non-free</quote> license is a license which requires a transaction with the holder of the license for gaining any right related to the software.
+              A <quote>non-free</quote> license is a license which requires a transaction with the holder of the license in order to gain any right related to the software.
 	    </para>
 	    <para>
-              First of which is the right to use, often conditioned by the payment of an amount of money. These licenses forbid as well the copy, the study of the software's functionning, its modification and arbitrary combination of these possibilities.  
+              First of which is the right to use it, often conditioned by the payment of an amount of money. These licenses equally forbid the copying, the studying of the software's functioning, its modification and any arbitrary combination of these possibilities.
 
 	      <!--
-	      For example Windows Microsoft is a software distributed under a non-free license.
+For example Windows Microsoft is a software distributed under a non-free license.
 	      -->
 	    </para>
 	  </answer>
@@ -206,7 +206,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
       </qandadiv>
 
       <qandadiv>
-	<title>Commercial considerations</title>
+	<title>Marketing points</title>
 
 	<qandaentry>
 	  <question>
@@ -219,7 +219,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	      It will generate sells.
 	    </para>
 	    <para>
-              The market is consequent, and its potential is huge. GNU/Linux is the only operating system presently gaining market shares over all its competitors. It is favored by many computer specialists, who are prescriptors for harware choices. It is now commercially and financely backed by the biggest manufacturers (SUN, IBM, DELL, HP, ...). Some goverments are studying the use of &LL; as standard for their administration (France, Poland, Argentina, China, ...)
+              The market is sizeable, and its potential is huge. GNU/Linux is the only operating system presently gaining market shares over all its competitors. It is favored by many computer specialists, who are prescriptors for harware choices. It is now commercially and financially backed by the biggest manufacturers (SUN, IBM, DELL, HP, ....). Some goverments are studying the use of &LL; as a standard for their administration (France, Poland, Argentina, China, ...)
 	    </para>
 	  </answer>
 	</qandaentry>
@@ -232,7 +232,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	  </question>
 	  <answer>
 	    <para>
-	      Possibles choices are :
+	      Possible choices are :
 	      <itemizedlist>
 		<listitem>
 		  <para>
@@ -241,7 +241,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 		</listitem>
 		<listitem>
 		  <para>
-		    Developp drivers and release them in a binary form (without giving away the sources)
+		    Develop drivers and release them in a binary form (without giving away the sources)
 		  </para>
 		</listitem>
 		<listitem>
@@ -251,10 +251,10 @@ Old version of the XML DTD, before it became endorsed by OASIS
 		</listitem>
 		<listitem>
 		  <para>
-		    Develop drivers under an Open Source or Free Sofware licence.
+		    Develop drivers under an Open Source or Free Sofware license.
 		  </para>
 		  <para>
-                    This approach allows to insure the fast availability of the drivers. It also permits to share with third parties (companies or individuals) the effort of maintening, debugging, documenting and porting. In this model, choosing a license which guarantees that the drivers' improvements will be distributed according to the same terms is crucial for the company. In this way no competitor can appropriate the modifications it finances.
+                    This approach insures fast availability of the drivers. It also permits to share with third parties (companies or individuals) the effort of maintainance, debug, documention and portage. In this model, choosing a license which guarantees that the improvements of the drivers will be distributed according to the same terms is crucial for the company In this way no competitor can appropriate the modifications it finances.
 		  </para>
 		</listitem>
 		<listitem>
@@ -262,10 +262,10 @@ Old version of the XML DTD, before it became endorsed by OASIS
 		    Publish <quote>mixed</quote> drivers
 		  </para>
 		  <para>
-		    It consists in publishing a part of the drivers according to the previous logic, and supplying the rest of the drivers under binary form and non-free license (see the second alternative).
+		    It consists in publishing a part of the drivers according to the previous logic, and supplying the rest of the drivers under a binary form and non-free license (see the second alternative).
 		  </para>
 		  <para condition="long">
-		    It allows access to basic features as well as realization of an interface with the operating system, thanks to a &LLs; adaptable to evolutions of the system. Certain <quote>advanced</quote> features remain hidden in exclusives, unchanging modules which do not need to evolve with the rest of the system. It can allow a satisfactory solution in a case where part of the product originates from third-party supplier and is under a non-free license. It is a choice notably made by certain graphics boards' manufacturers.  
+                   It allows access to basic features as well as realization of an interface with the operating system, thanks to a &LL; adaptable to evolutions of the system. Certain <quote>advanced</quote> features remain hidden in exclusive, fixed modules which do not need to evolve with the rest of the system. It can provide a satisfactory solution in cases where part of the product originates from a third-party supplier and is under a non-free license. It is a choice notably made by certain graphic board manufacturers.
 		  </para>
 		</listitem>
 		<listitem>
@@ -273,7 +273,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
                     Publicly spread the specifications AND develop the drivers, then distribute them under a free license.
 		  </para>
 		  <para>
-		    This is an ideal solution for the customer. It is also a very good configuration for the manufacturer, except in some particular cases		    (see <quote><xref endterm="nonOS.text" linkend="nonOS"/></quote>).
+		    This is an ideal solution for the customer. It is also a very good configuration for the manufacturer, except in some particular cases (see <quote><xref endterm="nonOS.text" linkend="nonOS"/></quote>).
 		  </para>
 		</listitem>
 	      </itemizedlist>
@@ -284,7 +284,8 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	<qandaentry>
 	  <question>
 	    <para>
-	      Can I hope a third party will spontaneously develop the drivers ?	    </para>
+	      Can I hope a third party will spontaneously develop the drivers ?
+            </para>
 	  </question>
 	  <answer>
 	    <para>
@@ -295,27 +296,27 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	      <itemizedlist>
 		<listitem>
 		  <para>
-		    The numbers of developpers will partly rely on luck.
+		    The numbers of developers will partly rely on luck.
 		  </para>
 		</listitem>
 		<listitem>
 		  <para>
-		    Voluntary people work at their own pace.
+		    Volunteers work at their own pace.
 		  </para>
 		</listitem>
 		<listitem>
 		  <para>
-		    The drivers may therefore not be available in time for important terms (convention, commercial release, ...).
+		   Therefore, the drivers may not be available in time for important dates (convention, commercial release, ...).
 		  </para>
 		</listitem>
 		<listitem>
 		  <para>
-                    No sell can be expected before drivers availability.
+                    No sale can be expected before the drivers are available.
 		  </para>
 		</listitem>
 		<listitem>
 		  <para>
-		    No control is exerced on the quality of resulting software.
+		    No control is exercised on the quality of resulting software.
 		  </para>
 		</listitem>
 	      </itemizedlist>
@@ -326,62 +327,62 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	<qandaentry>
 	  <question>
 	    <para>
-	      Can I avoid to release the specifications of my product ?
+	      Can I avoid releasing the specifications of my product ?
 	    </para>
 	  </question>
 	  <answer>
 	    <para>
-	      Yes. By developping and releasing binary drivers.
+	      Yes. By developing and releasing binary drivers.
 	    </para>
 	    <para>
-	      Advantages to keep secret the specifications are :
+	       Advantages of keeping secret the specifications are :
 	      <itemizedlist>
 		<listitem>
 		  <para>
-		    protecting your products from cloning
+                   protecting your products from cloning
 		  </para>
 		</listitem>
 		<listitem>
 		  <para>
-		    hiding weaknesses in low quality products.
+                   hiding weaknesses in low quality products.
 		  </para>
 		</listitem>
 	      </itemizedlist>
 
-              Inconveniences are :
+              Drawbacks are :
 	      <itemizedlist>
 		<listitem>
 		  <para>
-                    be deprieved of help and support from users for maintenance.
+                    being deprieved of help and support from users for maintenance.
 		  </para>
 		</listitem>
 		<listitem>
 		  <para>
-		    a depreciated image in the eye of the &LL; and &OS; communities
+		    a deprecated image in the eye of the &LL; and &OS; communities
 		  </para>
 		</listitem>
 		<listitem>
 		  <para>
-		    a superior cost in developpment
+		   a higher cost in development
 		  </para>
 		</listitem>
 		<listitem>
 		  <para>
-		    a market limited to platforms chosen initially
+		   a market limited to initially chosen platforms
 		  </para>
 		</listitem>
 	      </itemizedlist>
 	    </para>
 	    <para condition="long">
-              In opposition to other Operating Systems, GNU/Linux execute on a large number of hardware platforms. It is difficult to test them all without the assistance of a community.
-              Furthermore, versions of the Linux kernel are released on a more steady rythm than those of the others operating systems.
+              As opposed to other Operating Systems, GNU/Linux executes on a large number of hardware platforms. It is difficult to test them all without the assistance of a community.
+              Furthermore, versions of the Linux kernel are released on a more steady rythm than those of the other operating systems.
 	    </para>
 	    <para condition="long">
-              GNU/Linux is not the only free operating system. If the others can seem unimportant in market share, they exist nevertheless, and their users wish to dispose of the resources necessary for operating properly their machines.
+              GNU/Linux is not the only free operating system. If the others can seem unimportant in market shares, they exist nevertheless, and their users wish to dispose of the necessary resources for proper operating of their machines.
 	    </para>
 	    <para condition="long">
               Finally, as explained by the founder of the &OS; movement Eric S. Raymond, in his article <ulink url="http://www.tuxedo.org/~esr/writings">The Magic Cauldron</ulink> :
-              <quote>while the competition studies your material, you work on the following generation</quote>. 
+              <quote>Today, the time your competitors' engineers would need to spend copying and understanding the copy is a substantial portion of the product cycle, time they are not spending innovating or differentiating their own product. Plagiarism is a trap you want your competitors to fall into.</quote>.
               The current rhythm of the electronic development renders the practice of cloning ineffective.
 	    </para>
 	  </answer>
@@ -390,7 +391,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	<qandaentry>
 	  <question>
 	    <para>
-              How can I make money if I give my products ?
+              How can I make money if I give away my products ?
 	    </para>
 	  </question>
 	  <answer>
@@ -400,14 +401,14 @@ Old version of the XML DTD, before it became endorsed by OASIS
               Your product is your hardware.
 	    </para>
 	    <para condition="long">
-              Software drivers production made by electronic manufacturers is a recent phenomenon. Previously the manufacturers spread Hardware Interface Specifications, letting the responsibility of developing drivers for operating systems in the hand of their editors and/or the users.
+              Software drivers production made by electronic manufacturers is a recent phenomenon. Previously the manufacturers spread Hardware Interface Specifications, letting the responsibility of developing drivers for operating systems in the hands of their editors and/or of the users.
 	    </para>
 	    <para condition="long">
-	      This approch was not satisfactory because it implied that the drivers for the same material could be developed several times by the various customers, what is technically and commercially ineffective. It is thus under the pressure of their customers that the manufacturers took at their expense the development of the drivers.
-	      This new system showed however another defect: it favored the appeareance of monopolies which exercised then an unbearable pressure on customers and suppliers as well.
+             This policy was not satisfactory because it implied that the drivers for the same material could be developed several times by various customers, which is technically and commercially ineffective. It is thus under the pressure of their customers that the manufacturers financed the development of the drivers.
+             However this new system showed another flaw : it favored the appeareance of monopolies which then exercised an unbearable pressure on customers and suppliers as well.
 	    </para>
 	    <para condition="long">
-              Today, as Internet eases the broadcasting of projects and free licenses bring guarantees on their accessibility and their evolution, the implication of the manufacturers doesn't need to be as important.
+              Today, as Internet eases the broadcasting of projects and free licenses bring guarantees on their accessibility and their evolution, the involvement of the manufacturers doesn't need to be as important.
 	    </para>
 	  </answer>
 	</qandaentry>
@@ -421,13 +422,13 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	  <answer>
 	    <para>
               Software can be adapted by users. 
-              It therefore remains in adequation to their needs. 
-              Minor, frustrating bugs can be corrected, new ideas appear.
+              It therefore remains in adequacy with their needs. 
+              Minor, frustrating bugs can be corrected, new ideas will appear.
 	    </para>
 	    <para>
-              Free Software is a guarantee of the product lasting.
-              Should the furnisher disappears, software code could still be maintained.
-              In the decision of purchase, it is a supplementary guarantee for the customer, thus a selling point for the vendor.
+              Free Software is a guarantee that the product will last.
+              Should the furnisher disappear, software code could still be maintained.
+              In the decision of purchase, it is an additional guarantee for the customer, thus a selling argument for the vendor.
 	    </para>
 	  </answer>
 	</qandaentry>
@@ -463,13 +464,6 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	      <itemizedlist>
 		<listitem>
 		  <para>
-		    <ulink url="http://fsf.org/">
-		      &FSF;</ulink> 
-		    <address><email>contact@fsf.org</email></address>
-		  </para>
-		</listitem>
-		<listitem>
-		  <para>
 		    <ulink url="http://www.aful.org">AFUL</ulink> 
 		    <address><email>aful@aful.org</email></address>
 		  </para>
@@ -478,6 +472,13 @@ Old version of the XML DTD, before it became endorsed by OASIS
 		  <para>
 		    <ulink url="http://www.april.org">APRIL</ulink> 
 		    <address><email>contact@april.org</email></address>
+		  </para>
+		</listitem>
+		<listitem>
+		  <para>
+		    <ulink url="http://france.fsfeurope.org/">
+		      &FSF; Europe (FSFE) Chapitre France</ulink>
+		    <address><email>contact@france.fsfeurope.org</email></address>
 		  </para>
 		</listitem>
 	      </itemizedlist>
@@ -504,7 +505,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	<qandaentry>
 	  <question>
 	    <para>
-	      My developers are not competents with Linux. What should I do ?
+	      My developers are not competent with Linux. What should I do ?
 	    </para>
 	  </question>
 	  <answer>
@@ -513,20 +514,20 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	      <itemizedlist>
 		<listitem>
 		  <para>
-		    Engage formations
+		    Pay for their training
 		  </para>
 		</listitem>
 		<listitem>
 		  <para>
-		    Recruit new ones who have this field of competency
+		    Recruit new employees who are competent in this field
 		  </para>
 		</listitem>
 		<listitem>
 		  <para>
-                    Address specialized companies of service
+                    Address specialized service companies
 		  </para>
 		  <para>
-		    A <ulink url="&url.ssii;">list of companies of service</ulink> in software engineering specialized in &LL; or &OS; is available on the <ulink url="http://www.aful.org">AFUL</ulink> site.
+		    A <ulink url="&url.ssii;">list of service companies</ulink> in software engineering specialized in &LL; or &OS; is available on the <ulink url="http://www.aful.org">AFUL</ulink> site.
 		  </para>
 		</listitem>
 	      </itemizedlist>
@@ -537,11 +538,11 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	<qandaentry condition="long">
 	  <question>
 	    <para>
-	      Where to find some documentation on Linux drivers programming ?		    </para>
+		Where to find some documentation on Linux drivers programming ?		    </para>
 	  </question>
 	  <answer>
 	    <para>
-	      At present references are:
+	     At present references are:
 	      <itemizedlist>
 		<listitem>
 		  <para>
@@ -604,12 +605,12 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	    <itemizedlist>
 	      <listitem>
 		<para>
-                  The downmarket products have no interest to display in broad daylight their mediocrity. A binary driver is then more suited.
+                  It might not be in the best interest of downmarket products to display their mediocrity in broad daylight. A binary driver is then more suited.
 		</para>
 	      </listitem>
 	      <listitem>
 		<para>
-       	          The informers software, the hidden functions are afraid as well of light. This case is a criterion which will tilt companies and governments to choose manufacturers who opt for transparency.
+       	          The informer software, the hidden functions also dislike exposure. This element is a criterion which will tilt companies and governments towards choosing manufacturers who will opt for transparency.
 		</para>
 	      </listitem>
 	    </itemizedlist>
@@ -620,11 +621,11 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	  <question id="existingLicenses">
 	    <para id="existingLicenses.text">
 	      Which license to choose for distributing my drivers ?
-	    </para>
+	   </para>
 	  </question>
 	  <answer>
 	    <para>
-              Many software licenses already exist. You can use them for distributing your drivers (see also <quote><xref endterm="libreLicense.text" linkend="libreLicense"/></quote>).
+              Many software licenses already exist. You can use them for the distribution of your drivers (see also <quote><xref endterm="libreLicense.text" linkend="libreLicense"/></quote>).
 	    </para>
 	    <para>
               It is a rare case when a company feels the need to engage in the redaction of a new free license. Creating and maintaining a license is generally a waste of time. Furthermore, it complicates the task of companies and individuals who decide to work on your drivers.
@@ -633,7 +634,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 The most famous licenses are the GNU General Public License (GPL), the GNU Lesser General Public License (LGPL), the modified BSD licenses and the Mozilla Public License (MPL).
 	    </para>
 	    <para condition="long">
-              As a rule of thumb, the GPL will always be preferred when nothing opposes. If external constraints makes this choice impossible, the best is to contact a specialized structure to expose your case (see also <quote><xref endterm="contact.text" linkend="contact"/></quote>). Factors determining the choice of a license are numerous and of important consequences, to discuss it is the best way to find a well fitted solution.
+              As a rule of thumb, the GPL will always be preferred when nothing opposes it. If external constraints make this choice impossible, the best is to contact a specialized structure to expose your case (see also <quote><xref endterm="contact.text" linkend="contact"/></quote>). Factors determining the choice of a license are numerous and have important consequences, to discuss it is the best way to find a well fitted solution.
 	    </para>
 	  </answer>
 	</qandaentry>
@@ -641,7 +642,7 @@ The most famous licenses are the GNU General Public License (GPL), the GNU Lesse
 	<qandaentry condition="long">
 	  <question>
 	    <para>
-	      What policies have adopted others manufacturers ?
+	      What policies have other manufacturers adopted ?
 	    </para>
 	  </question>
 	  <answer>
@@ -650,13 +651,13 @@ The most famous licenses are the GNU General Public License (GPL), the GNU Lesse
 	      (amongst others)
 	      publish hardware specification for a vast majority of their products.
 
-              These manufacturers are also involved in the development of the drivers for their hardware (in full or partially).
+              These manufacturers are also involved in the development of the drivers for their hardware (fully or partially).
 
-              Finally, they distribute their drivers under a free license (in full or partially), see also <quote>
+              Finally, they distribute their drivers under a free license (fully or partially), see also <quote>
 		<xref endterm="dualDrivers.text" linkend="dualDrivers"/>
 	      </quote>).
 
-              This position so insures them a maximal coverage of the market, while assuring the best possible support for their products.
+              This position insures them a maximal coverage of the market, while assuring the best possible support for their products.
 	    </para>
 	    <para>
               The following manufacturers supply only binary versions (under non-free license) of their drivers, but for a large number of operating systems, including GNU/Linux: Lexmark, NVidia, Olitec.
@@ -664,7 +665,7 @@ The most famous licenses are the GNU General Public License (GPL), the GNU Lesse
               These manufacturers satisfy a large number of consumers. But by dismissing the help the &LL; and &OS; community of developers could supply, they endure a more important effort to keep their drivers up to date with the new versions of operating systems.
 	    </para>
 	    <para>
-              An inherent problem of the binary drivers is their lack of <quote>modularity</quote>. Being usually modules for the kernel, they can, if they are badly conceived, cause the failure of a whole machine. So editors of distributors of operating systems hesitate to put modules which risk to entail a big load for their support services. An emblematic example are the NVIDIA modules for GNU/Linux, which, in spite of their recognized performances, are not included in the <ulink url="http://www.linux-mandrake.com">Mandrake 8.0</ulink> distribution. In conclusion, with such an approach, the manufacturers may feel their work is wasted.
+              An inherent problem of the binary drivers is their lack of <quote>modularity</quote>. Being usually modules for the kernel, they can, if they are badly conceived, cause the failure of a whole machine. So editors of free software distributions hesitate to put modules which risk entailling a big load for their support services. An emblematic example are the NVIDIA modules for GNU/Linux, which, in spite of their recognized performances, are not included in the <ulink url="http://www.linux-mandrake.com">Mandrake 8.0</ulink> distribution. As a conclusion, with such an approach, the manufacturers may feel their work is wasted.
 	    </para>
 	    <para>
               The following companies supply drivers only for a limited number of operating system: Guillemot, Hercule, Canon. These manufacturers limit their market and tarnish their image.
@@ -688,12 +689,12 @@ The most famous licenses are the GNU General Public License (GPL), the GNU Lesse
 	<qandaentry condition="long">
 	  <question>
 	    <para>
-	      What is the meaning of the penguins pictures, seen in the computer press and on Internet ?
+	      What is the meaning of the penguin pictures, seen in the computer press and on Internet ?
 	    </para>
 	  </question>
 	  <answer>
 	    <para>
-	      The penguin is the mascot of the Linux kernel. This picture is widespread because internet users and Web sites using GNU/Linux are there numerous.
+	      The penguin is the mascot of the Linux kernel. This picture is widespread because internet users and Web sites using GNU/Linux are numerous there.
 	    </para>
 	  </answer>
 	</qandaentry>
@@ -706,7 +707,7 @@ The most famous licenses are the GNU General Public License (GPL), the GNU Lesse
 	  </question>
 	  <answer>
 	    <para>
-             Yes you can use it freely. You can even use freely a modified version.
+             Yes you can use it freely. You can even use a modified version freely.
 	    </para>
 	    <para>
 	      <ulink url="http://www.linux.org">Linux Online</ulink> references the various <ulink url="http://www.linux.org/info/logos.html">Linux logos</ulink>, 
@@ -725,10 +726,10 @@ The most famous licenses are the GNU General Public License (GPL), the GNU Lesse
     <title>Conclusion</title>
 
     <para>
-    A manufacturer has a strong interest in using free licences for the developments of his drivers, <emphasis>whatever the target operating system</emphasis>.
+    A manufacturer has a strong interest in using free licenses for the developments of his drivers, <emphasis>whatever the target operating system</emphasis>.
     </para>
     <para>
-      He also has interest to develop himself drivers, or at least their initial version because of :
+      He also should develop drivers himself, or at least their initial version because of :
        <itemizedlist>
 	<listitem>
 	  <para>
@@ -737,30 +738,30 @@ The most famous licenses are the GNU General Public License (GPL), the GNU Lesse
 	</listitem>
 	<listitem>
 	  <para>
-	    his need to insure the quality,
+	    his need to insure quality,
 	  </para>
 	</listitem>
 	<listitem>
 	  <para>
-	    the necessity of their availability from the commercial launch,
+	    the necessity of their availability from the commercial launch on,
 	  </para>
 	</listitem>
 	<listitem>
 	  <para>
-	    the influence naturally taken by the initiator of a free project on it's evolution.
+	    the natural influence the initiator of a free project has on its evolution.
 	  </para>
 	</listitem>
       </itemizedlist>
     </para>
     <para>
-      But the release of a product does not mean neither the end of its life, nor the stop of the development and services which surround it. Once introduced, the drivers gain to be maintained according to the &LL; model. 
+      But the release of a product means neither the end of its life, nor the stopping of the development and services which surround it. Once introduced, the drivers are better maintained according to the &LL; model. 
     </para>
     <para condition="long">
       Indeed, that model :
       <itemizedlist>
 	<listitem>
 	  <para>
-	    allows to benefit from improvements brought by the users
+	    gives access to improvements brought by the users
 	  </para>
 	</listitem>
 	<listitem>
@@ -770,23 +771,23 @@ The most famous licenses are the GNU General Public License (GPL), the GNU Lesse
 	</listitem>
 	<listitem>
 	  <para>
-	    improves the product and its manufacturer's images amongst the community of computer specialists.
+	    improves the product and its manufacturer's image within the community of computer specialists.
 	  </para>
 	</listitem>
 	<listitem>
 	  <para>
-	    decrease the project's maintenance costs.
+	    decreases the maintenance costs of the project.
 	  </para>
 	</listitem>
 	<listitem>
 	  <para>
-	    reassure buyers and decision-makers by removing fears bound to possible hidden features in the product (Trojan horses, backdoors and the like).
+	    reassures buyers and decision-makers by removing fears related to possible hidden features in the product (Trojan horses, backdoors and the like).
 	  </para>
 	</listitem>
       </itemizedlist>
     </para>
     <para>
-      As we saw, this functioning mode brings real competitive advantages, while improving quality of the proposed services.  
+      As was shown, this functioning mode brings real competitive advantages, while improving quality of the proposed services.  
     </para>
   </sect1>
 
@@ -898,15 +899,16 @@ The most famous licenses are the GNU General Public License (GPL), the GNU Lesse
 	  <para>
             Collective modifications by AFUL, APRIL, FSF and contributors from the following mailing lists :
 	    <email>membres@aful.org</email>,
-	    <email>april@april.org</email> et
+	    <email>april@april.org</email> and
 	    <email>fsfe-france@gnu.org</email> 
 	    coordinated by Marc-Aurèle Darche <email>ma.darche@free.fr</email>.
 	  </para>
 	</listitem>
 	<listitem>
 	  <para>
-	    English translation by 
+	    English translation by
 	    Philippe Coulonges <email>cphil@cphil.net</email>
+	    and Isabelle Coulonges.
 	  </para>
 	</listitem>
       </itemizedlist>
@@ -917,3 +919,4 @@ The most famous licenses are the GNU General Public License (GPL), the GNU Lesse
   &doc.gnuFDL;
 
 </article>
+

@@ -1,4 +1,4 @@
-pags = index.html contact.html mailinglists.html
+pags = index.html mailinglists.html
 pags.de = index.de.html
 pags.fr = index.fr.html
 

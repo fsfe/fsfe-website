@@ -13,6 +13,7 @@ and FSF machines in France.
 
 <ul>
 <li><a href="#Introduction">Introduction</a>: 
+<li><a href="#XML%20and%20interoperability">XML and interoperability</a>: 
 <li><a href="#Accounts">Accounts</a>: 
 <li><a href="#Web">Web</a>: 
 <li><a href="#Private%20Data">Private Data</a>: 
@@ -51,6 +52,7 @@ and FSF machines in France.
 <p>System
 
 </p><li><a href="#Security">Security</a>: 
+<li><a href="#DNS">DNS</a>: 
 <li><a href="#Statistics">Statistics</a>:
 
 <p>Security
@@ -66,7 +68,7 @@ and FSF machines in France.
 
 <p><hr>
 Node:<a name="Introduction">Introduction</a>,
-Next:<a rel=next href="#Accounts">Accounts</a>,
+Next:<a rel=next href="#XML%20and%20interoperability">XML and interoperability</a>,
 Previous:<a rel=previous href="#Top">Top</a>,
 Up:<a rel=up href="#Top">Top</a>
 <br>
@@ -111,9 +113,82 @@ for system administration information and the
 usage of the SourceForge clone.
 
 <p><hr>
+Node:<a name="XML%20and%20interoperability">XML and interoperability</a>,
+Next:<a rel=next href="#Accounts">Accounts</a>,
+Previous:<a rel=previous href="#Introduction">Introduction</a>,
+Up:<a rel=up href="#Top">Top</a>
+<br>
+
+<h1>XML and interoperability</h1>
+
+<p>When publishing content or building a database for specific purposes (contact
+database, task lists, account information, permissions etc.) it is of the
+outermost importance to choose a data format that allows other programs
+to re-use the database and your own program to import databases from other
+programs.
+
+<p>Using XML for that purpose is only half of the answer. XML will merely
+prevent you to write a parser to read XML files and save you from the
+pitfall of inventing yet another data format. It says nothing about the
+semantic of the tags you decided to use. The harder part is to define
+the semantic associated with an XML file. For instance,
+<a href="http://www.docbook.org/">DocBook</a> uses XML but the core of the
+work was to define what each tag means and make sure it covers all
+possible needs. It tooks years and is not finished yet. Inventing a new
+semantic for a given purpose is not something that should be undertaken
+lightly.
+
+<p>In some cases there already exists a semantic that fits your needs. Even
+if it's not an established standard
+(<a href="http://my.netscape.com/publish/formats/rss-spec-0.91.html">RSS</a>
+is a widely spread de-facto standard) it will save you the effort to invent
+something completly new. You may even be able to join the group that works
+on this semantic to enhance it if needs be. There are some DTD repositories
+that can help you find out if something exists:
+
+<ul>
+
+<li><a href="http://www.xml.com/pub/rg/DTDs">XML.com DTD</a>
+
+<li><a href="http://www.rosettanet.org/rosettanet/Rooms/DisplayPages/LayoutInitial?Container=com.webridge.entity.Entity%5BOID%5B6EDB5FE87F69D411BD84009027E33DD8%5D%5D">RosettaNet</a>
+
+<li><a href="http://www.hr-xml.org/schemas/dtd/">hr-xml.org</a>
+
+<li><a href="http://www.schema.net/">Schema.net</a>
+
+<li><a href="http://registry.xml.org:2020/repository/ui/searchResults.jsp?qall=dtd">XML.org</a>
+
+<li><a href="http://www.openapplications.org/_vti_bin/shtml.exe/xml/loadform.htm">Open Applications Group</a>
+
+<li><a href="http://www.lisa.org/tmx/tmx.htm">Translation Memory eXchange</a>
+
+<li><a href="http://www.docuverse.com/xlf/index.html">Extensible Log Format</a>
+
+</ul>
+
+<p>When the data format is chosen, chosing or writing the programs that provide
+a given service is driven by this choice. If an application exists that does
+not support the format chosen, it's fairly reasonable to write a small program
+that translate the data format into the application specific data and vice
+versa. The advantages of doing this are:
+
+<ul>
+
+<li>If a new, better program becomes available and you can switch to it using
+the chosen data format do dump/reload the data.
+
+<li>If you contribute the export/import program to the developers of the
+program they are likely to accept it because it's based on a standard.
+
+<li>If you want to display static HTML pages from the XML export, XSLT
+allows to do this in a fairly simple way.
+
+</ul>
+
+<p><hr>
 Node:<a name="Accounts">Accounts</a>,
 Next:<a rel=next href="#Web">Web</a>,
-Previous:<a rel=previous href="#Introduction">Introduction</a>,
+Previous:<a rel=previous href="#XML%20and%20interoperability">XML and interoperability</a>,
 Up:<a rel=up href="#Top">Top</a>
 <br>
 
@@ -503,6 +578,17 @@ you want to use a single tag, end it with a /&gt;.
 <p>Web browsers may very well cope with the fact that you forget those but
 XSLT processors will not.
 
+</p><li>Unlike html, tags and attribute names are case-sensitive and they are
+    defined in <code>lower-case</code>.
+
+<pre>&lt;title&gt; My Title &lt;/title&gt;
+</pre>
+
+<li>Attribute values must be always inside quotes.
+
+<pre>&lt;a href="URL"&gt;What is it&lt;/a&gt;
+</pre>
+
 </ul>
 
 <p><hr>
@@ -643,12 +729,13 @@ Up:<a rel=up href="#Top">Top</a>
 
 <ul>
 <li><a href="#Security">Security</a>: 
+<li><a href="#DNS">DNS</a>: 
 <li><a href="#Statistics">Statistics</a>: 
 </ul>
 
 <p><hr>
 Node:<a name="Security">Security</a>,
-Next:<a rel=next href="#Statistics">Statistics</a>,
+Next:<a rel=next href="#DNS">DNS</a>,
 Previous:<a rel=previous href="#System">System</a>,
 Up:<a rel=up href="#System">System</a>
 <br>
@@ -678,8 +765,24 @@ used with 2.2 and <code>iptables</code> with 2.4.
 the ones we need.
 
 <p><hr>
-Node:<a name="Statistics">Statistics</a>,
+Node:<a name="DNS">DNS</a>,
+Next:<a rel=next href="#Statistics">Statistics</a>,
 Previous:<a rel=previous href="#Security">Security</a>,
+Up:<a rel=up href="#System">System</a>
+<br>
+
+<h2>DNS</h2>
+
+<p>The DNS is handled by the GNU name servers. 
+The FSF France machine can be reached through the following names : <code>fr.fsfeurope.org</code>, <code>france.fsfeurope.org</code> or <code>fsffrance.org</code>.
+
+<p>The latter domain name (<code>fsffrance.org</code>) has been bought at <a href="http://www.gandi.net">GANDI</a>, a French registrar, and is owned by <a href="mailto:raph@r4f.org">Raphael Rousseau</a> who's the Administrative, Technical and Billing contact of this domain name.
+
+<p>The primary and secondary name servers are respectively  <code>ns1.gnu.org</code> (<code>199.232.76.162</code>) and <code>sfi.santafe.edu</code> (<code>192.12.12.1</code>).
+
+<p><hr>
+Node:<a name="Statistics">Statistics</a>,
+Previous:<a rel=previous href="#DNS">DNS</a>,
 Up:<a rel=up href="#System">System</a>
 <br>
 
@@ -738,12 +841,14 @@ Up:<a rel=up href="#Top">Top</a>
 
 <ul compact>
 <li>.xhtml files editing: <a href="#XHTML%20and%20XSLT%20Quick%20Start">XHTML and XSLT Quick Start</a>
+<li>DNS: <a href="#Firewall">Firewall</a>
 <li>edit .xhtml files: <a href="#XHTML%20and%20XSLT%20Quick%20Start">XHTML and XSLT Quick Start</a>
 <li>edit france.fsfeurope.org: <a href="#Editing%20the%20Web">Editing the Web</a>
 <li>firewall: <a href="#Security">Security</a>
 <li>france.fsfeurope.org updates: <a href="#Update%20from%20CVS">Update from CVS</a>
 <li>fsfe project: <a href="#Editing%20the%20Web">Editing the Web</a>
 <li>fsffr and shell account: <a href="#Account%20Create">Account Create</a>
+<li>fsffrance.org: <a href="#Firewall">Firewall</a>
 <li>libxslt: <a href="#XSLT%20processors">XSLT processors</a>
 <li>password ssh: <a href="#Account%20Access">Account Access</a>
 <li>public key update: <a href="#Account%20Update">Account Update</a>
@@ -758,7 +863,7 @@ Up:<a rel=up href="#Top">Top</a>
 <li>ssh public key update: <a href="#Account%20Update">Account Update</a>
 <li>ssh shell account: <a href="#Account%20Access">Account Access</a>
 <li>SSI: <a href="#Separate%20layout%20and%20content">Separate layout and content</a>
-<li>statistics mrtg: <a href="#Firewall">Firewall</a>
+<li>statistics mrtg: <a href="#DNS">DNS</a>
 <li>www.fsfeurope.org updates: <a href="#Update%20from%20CVS">Update from CVS</a>
 <li>www.gnu.org: <a href="#Update%20from%20CVS">Update from CVS</a>
 <li>XHTML: <a href="#Separate%20layout%20and%20content">Separate layout and content</a>
@@ -789,6 +894,7 @@ Up:<a rel=up href="#Top">Top</a>
 <ul>
 <li><a href="#Top">Sysadmin France</a>
 <li><a href="#Introduction">Introduction</a>
+<li><a href="#XML%20and%20interoperability">XML and interoperability</a>
 <li><a href="#Accounts">Accounts</a>
 <ul>
 <li><a href="#System%20Passwords">System Passwords</a>
@@ -821,6 +927,7 @@ Up:<a rel=up href="#Top">Top</a>
 <ul>
 <li><a href="#Firewall">Firewall</a>
 </ul>
+<li><a href="#DNS">DNS</a>
 <li><a href="#Statistics">Statistics</a>
 <ul>
 <li><a href="#Installation">Installation</a>

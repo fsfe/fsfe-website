@@ -96,7 +96,7 @@
                    class="T2">Project Summary</a><br/>
               <a href="http://www.gnu.org/server/standards/"
                    class="T2">GNU Guide</a><br/>
-              <a href="http://savannah.gnu.org/pm/task.php?group_id=53"
+              <a href="http://savannah.gnu.org/pm/?group_id=53"
                    class="T2">Tasks</a><br/>
               <br/></td>
             </tr>

@@ -28,7 +28,7 @@
     </xsl:copy>
   </xsl:template>
 
-  <xsl:template match="set">
+  <xsl:template match="set|footer">
   </xsl:template>
 </xsl:stylesheet>
 

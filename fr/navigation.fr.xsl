@@ -57,7 +57,7 @@
 	  <td align="right" valign="bottom" class="TopBody">
 	    <a href="{$fsffrance}/index.fr.html" class="T2">France</a> <br />
 	    <a href="{$fsfeurope}/index.fr.html" class="T2">Europe</a> <br />
-	    <a href="{$fsf}/home.fr.html" class="T2">Etats-Unis</a> <br />
+	    <a href="{$fsf}/home.fr.html" class="T2">États-Unis</a> <br />
 	  </td>
 	</tr>
     </table>
@@ -77,7 +77,7 @@
 		<tr>
 		  <td class="TopBody" align="right">
 		    <a href="{$fsffrance}/gpl/gpl.fr.html" class="T2">GPL en Français</a><br />
-		    <a href="{$fsffrance}/libre.fr.html" class="T2">Liberté</a><br />
+		    <a href="{$fsffrance}/libre.fr.html" class="T2">Libertés</a><br />
 	          </td>
 		</tr>
 		<tr><td class="TopTitle" align="center">FSF France</td></tr>
@@ -90,9 +90,9 @@
 		    <a href="{$fsffrance}/press/press.fr.html" class="T2">Section presse</a><br />
 		    <a href="http://mail.gnu.org/mailman/listinfo/fsfe-france" class="T2">Mailing List</a><br />
 		    <a href="{$fsffrance}/donations/donations.fr.html" class="T2">Dons</a><br />
-		    <a href="{$fsffrance}/about/about.fr.html" class="T2">A propos</a><br />
+		    <a href="{$fsffrance}/about/about.fr.html" class="T2">À propos</a><br />
 		    <a href="{$fsffrance}/contact.fr.html" class="T2">Contact</a> <br />
-		    <a href="{$fsffrance}/thanks.fr.html" class="T2">Merci!</a> 
+		    <a href="{$fsffrance}/thanks.fr.html" class="T2">Merci !</a> 
 		  </td>
 		</tr>
 		<tr><td class="TopTitle" align="center">Adminsys</td></tr>

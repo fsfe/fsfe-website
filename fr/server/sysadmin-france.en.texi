@@ -5,7 +5,7 @@
 @setchapternewpage odd
 @c %**end of header
 
-@set RCSID $Id: sysadmin-france.en.texi,v 1.62 2002-04-02 07:57:45 loic Exp $
+@set RCSID $Id: sysadmin-france.en.texi,v 1.63 2002-04-02 13:14:29 cyb Exp $
 @set VERSION 2.0
 
 @c Combine the variable and function indices:
@@ -743,18 +743,35 @@ stat.pl
 @item /etc/mrtg.cfg
 was created by hand.
 
+Output dir is @file{/var/www/mrtg/}
+
 @item /etc/mrtg-switch.cfg
-was generated with @code{/usr/bin/cfgmaker GnuRms@@213.228.62.5} and
-should be regenerated in the same way whenever the switch usage changes.
+was generated with @code{/usr/bin/cfgmaker --global 'Withpeak[_]: wmy'
+--global 'Options[_]: growright, bits' GnuRms@@213.228.62.5} and
+should be regenerated in the same way whenever the switch usage
+changes.
+
+Output dir is @file{/var/www/mrtg/}
+
+@item /etc/mrtg-storage.cfg
+was generated with @code{/usr/bin/cfgstoragemaker public@@snail} and
+should be regenerated in the same way.
+
+Output dir is @file{/var/www/mrtg/storage/}
 
 @end itemize
 
-Output dir is @file{/var/www/mrtg/}
 
 The @file{/var/www/mrtg/index.html} file was generated with:
 
 @example
-/usr/bin/indexmaker --section=descr /tmp/cfgmaker.cfg /etc/mrtg.cfg
+/usr/bin/indexmaker --section=descr /etc/mrtg-switch.cfg /etc/mrtg.cfg
+@end example
+
+The @file{/var/www/mrtg/storage/index.html} file was generated with:
+
+@example
+/usr/bin/indexmaker /etc/mrtg-storage.cfg
 @end example
 
 Contact : @email{cyril@@bouthors.org,Cyril Bouthors}, @email{rq@@lolix.org,Rodolphe Quiédeville}

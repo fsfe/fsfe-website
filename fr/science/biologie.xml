@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="iso-8859-1" ?>
 
+<?xml-stylesheet href="biologie.xsl" type="text/xsl"?>
 
 <!DOCTYPE softliste SYSTEM "softliste.dtd">
 
@@ -13,6 +14,99 @@
   software (as is often the case with software written in Java).
 -->
 <softliste>
+  <software>
+    <name>Populations</name>
+    <date>18 jul 2002</date>
+    <description lang="en">Software about genetic of population (distance s between individuals and populations, phylogenetic trees).</description>
+    <description lang="fr">Logiciel de génétique des populations (distances entre individus ou populations, arbres phylogénétiques).</description>
+    <authors>Olivier Langella</authors>
+    <email></email>
+    <url>http://www.pge.cnrs-gif.fr/bioinfo/populations/</url>
+    <mirrorurl></mirrorurl>
+    <os name="Gnu/Linux">
+      <maintainer>Olivier Langella</maintainer>
+      <version>1.2.28</version>
+      <license>GPL</license>
+      <url></url>
+      <comment>The tarball is containing COPYING file and each source file has a copyright and license notice.</comment>
+      <date>18 jul 2002</date>
+    </os>
+    <os name="Windows">
+      <maintainer>Olivier Langella</maintainer>
+      <version>1.2.28</version>
+      <license>GPL</license>
+      <url></url>
+      <comment>The tarball is containing COPYING file and each source file has a copyright and license notice.</comment>
+      <date>18 jul 2002</date>
+    </os>
+  </software>
+
+  <software>
+    <name>Treeplot</name>
+    <date>18 jul 2002</date>
+    <description lang="en">Translator of phytogenetic tree files (Phylip, Gif, Postscript, Adobe Illustrator, xfig...).(</description>
+    <description lang="fr">Convertisseur de fichiers d'arbres phylogénétiques (Phylip, Gif, Postscript, Adobe Illustrator, xfig...).
+</description>
+    <authors>Olivier Langella</authors>
+    <email></email>
+    <url>http://www.pge.cnrs-gif.fr/bioinfo/treeplot/</url>
+    <mirrorurl></mirrorurl>
+    <os name="Gnu/Linux">
+      <maintainer>Olivier Langella</maintainer>
+      <version>0.7</version>
+      <license>GPL</license>
+      <url></url>
+      <comment>The tarball is containing COPYING file and each source file has a copyright and license notice.</comment>
+      <date>18 jul 2002</date>
+    </os>
+  </software>
+
+  <software>
+    <name>Nuees</name>
+    <date>18 jul 2002</date>
+    <description lang="en">Classification by the dynamic floud method.</description>
+    <description lang="fr">Classification par la méthode des nuées dynamiques.</description>
+    <authors>Olivier Langella</authors>
+    <email></email>
+    <url>http://www.pge.cnrs-gif.fr/bioinfo/nuees/</url>
+    <mirrorurl></mirrorurl>
+    <os name="GNU/Linux">
+      <maintainer>Olivier Langella</maintainer>
+      <version>0.8</version>
+      <license>GPL</license>
+      <url></url>
+      <comment>The tarball is containing COPYING file and each source file has a copyright and license notice.</comment>
+      <date>18 jul 2002</date>
+    </os>
+    <os name="Windows">
+      <maintainer>Olivier Langella</maintainer>
+      <version>0.8</version>
+      <license>GPL</license>
+      <url></url>
+      <comment>The tarball is containing COPYING file and each source file has a copyright and license notice.</comment>
+      <date>18 jul 2002</date>
+    </os>
+  </software>
+
+  <software>
+    <name>gBioseq</name>
+    <date>18 jul 2002</date>
+    <description lang="en">gBioseg is a graphical application running with linux. The goal of this project is to allow the edition and multple alignment of DNA sequences or proteins, in the same way as the SeqApp software with MacOS.</description>
+    <description lang="fr">gBioSeq est une application graphique fontionnant sous linux. Le but de ce projet est de rendre possible l'édition et l'alignement multiple de séquences d'ADN ou de protéines, de la même façon que le logiciel SeqApp sur Macintosh.</description>
+    <authors>Olivier Langella</authors>
+    <email></email>
+    <url>http://www.pge.cnrs-gif.fr/bioinfo/gbioseq/</url>
+    <mirrorurl></mirrorurl>
+    <os name="Gnu/Linux">
+      <maintainer>Olivier Langella</maintainer>
+      <version>0.2.2</version>
+      <license>GPL</license>
+      <url></url>
+      <comment>The tarball is containing COPYING file and each source file has a copyright and license notice.</comment>
+      <date>18 jul 2002</date>
+    </os>
+  </software>
+
 <!-- Template
   <software>
     <name></name>
@@ -20,7 +114,9 @@
     <description lang="en"></description>
     <description lang="fr"></description>
     <authors></authors>
+    <email></email>
     <url></url>
+    <mirrorurl></mirrorurl>
     <os name="">
       <maintainer></maintainer>
       <version></version>

@@ -13,7 +13,7 @@
 
  <html lang="fr">
   <head>
-    <title>FSF France - Logiciel libre pour la chimie</title>
+    <title>FSF France - Logiciel libre pour la biologie</title>
   </head>
   <body>
 
@@ -21,17 +21,17 @@
       <center>
 	[
 	<!-- Please keep this list alphabetical -->
-	<a href="chimie.en.html">Anglais</a> | Français
+	<a href="biologie.en.html">Anglais</a> | Français
 	]
       </center>
       <p />
 
-  <p align="center"><font size="+2"><b>Logiciel libre pour la chimie</b></font>
+  <p align="center"><font size="+2"><b>Logiciel libre pour la biologie</b></font>
   <font size="-2">(Listée par Jérôme Pansanel.)</font>
   </p>
 
   <p align="center">Cette page recense différents logiciels libres
-  utiles à la recherche en chimie. Elle a été constituée dans le cadre
+  utiles à la recherche en biologie. Elle a été constituée dans le cadre
   du projet <a href="science.fr.html">Logiciels Libres et recherche
   scientifique</a></p>
 
@@ -53,7 +53,7 @@
 
     Mis à jour:
     <!-- timestamp start -->
-    $Date: 2002-07-17 12:57:25 $ $Author: pansanel $
+    $Date: 2002-07-18 12:10:17 $ $Author: pansanel $
     <!-- timestamp end -->
 
 
@@ -69,8 +69,6 @@
 <TD>Version <xsl:value-of select="os[@name='GNU/Linux']/version" />: <xsl:value-of select="os[@name='GNU/Linux']/license" /></TD>
 </TR>
   </xsl:template>
-
-<!-- <xsl:include href="chimie.xsl" /> -->
 
 <xsl:template match="updatenotice">
     <i>Liste mise à jour : <xsl:apply-templates select="@*|node()"/></i>

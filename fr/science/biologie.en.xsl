@@ -13,7 +13,7 @@
 
 <html lang="en">
   <head>
-    <title>FSF France - Free software for chemistry</title>
+    <title>FSF France - Free software for biology</title>
   </head>
   <body>
 
@@ -21,17 +21,17 @@
       <center>
 	[
 	<!-- Please keep this list alphabetical -->
-	English | <a href="chimie.fr.html">French</a>
+	English | <a href="biologie.fr.html">French</a>
 	]
       </center>
       <p />
 
-<p align="center"><font size="+2"><b>Free software for chemistry</b></font>
+<p align="center"><font size="+2"><b>Free software for biology</b></font>
 <font size="-2">(Listed by Jérôme Pansanel.)</font>
 </p>
 
   <p align="center">This page lists different free software usefull to
-  research in chemistry. It was compiled as part of the <a
+  research in biology. It was compiled as part of the <a
   href="science.en.html">Free Software and science</a> project.</p>
 
   <xsl:apply-templates select="updatenotice"/>
@@ -52,7 +52,7 @@
 
     Updated:
     <!-- timestamp start -->
-    $Date: 2002-07-17 12:57:25 $ $Author: pansanel $
+    $Date: 2002-07-18 12:10:17 $ $Author: pansanel $
     <!-- timestamp end -->
 
   </body>
@@ -67,8 +67,6 @@
 <TD>Version <xsl:value-of select="os[@name='GNU/Linux']/version" />: <xsl:value-of select="os[@name='GNU/Linux']/license" /></TD>
 </TR>
   </xsl:template>
-
-<!--  <xsl:include href="chimie.xsl" /> -->
 
 <xsl:template match="updatenotice">
     <i>List updated : <xsl:apply-templates select="@*|node()"/></i>

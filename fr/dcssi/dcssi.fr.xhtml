@@ -140,15 +140,12 @@
 
 	  <dt>Réception de l'autorisation</dt>
 	  <dd>
-	    Un autorisation est fournie pour les demandes
-	    d'Autorisation uniquement et non pour la Déclarations
-	    ou la Déclaration simplifiée. Il existe différentes
-	    sortes d'autorisation (exportation, grand public..)
-	    et la DCSSI décide lesquelles peuvent être fournies.
-	    Lorsque l'autorisation est reçue, en faire copie
-	    et la faire certifier conforme (? quel organisme).
-	    L'autorisation <i>grand public</i> est la plus large
-	    et est mieux adaptée aux Logiciels Libres.
+	    Une ou plusieurs <a
+	    href="#autorisations">autorisations</a> sont fournies, pour
+	    les demandes d'Autorisation uniquement et non pour la
+	    Déclarations ou la Déclaration simplifiée.
+	    Lorsque l'autorisation est reçue, en faire
+	    copie et la faire certifier conforme (? quel organisme).
 	    <p></p>
 	  </dd>
 
@@ -205,6 +202,177 @@
 	  logiciel. Elle ne concerne en rien les versions antèrieures ou
 	  ultérieures.
 	</p>
+
+	<h4><a name="autorisation" />Les autorisations</h4>
+
+	<p>
+	  Lorsqu'une demande d'Autorisation est acceptée par
+	  la DCSSI, elle délivre une ou plusieurs autorisations.
+	  Les autorisations délivrées dépendent en partie des
+	  cases cochées dans le dossier (<i>de fourniture 
+	  pour une durée de</i> et <i>d'exportation 
+	  pour une durée de</i> voir par exemple la
+	  <a href="gnupg.fr.html">demande
+	    faite pour GnuPG</a>). In fine, c'est la DCSSI qui
+	  détermine quelles autorisations sont appropriées pour
+	  une demande données.
+	</p>
+
+	<p>
+	  L'autorisation <i>grand public</i> est la plus large et
+	  est la mieux adaptée aux Logiciels Libres.  
+	</p>
+	
+	<dl>
+	  <dt>L'autorisation de fourniture générale (AFG).</dt>
+	  <dd>
+	    Elle concerne le territoire français. Elle permet
+	    de (? quoi faire).
+	    <p></p>
+	  </dd>
+
+	  <dt>L'autorisation d'exportation.</dt>
+	  <dd>
+	    Permet l'exportation du produit hors de France.  Il est
+	    nécessaire de faire une démarche, l'autorisation à elle
+	    seule ne suffit pas. Cette démarche est soit d'une
+	    déclaration, soit d'une autorisation selon les
+	    destinations (UE, un des 10 pays "amis", qui sont listés,
+	    et hors UE) Ce qui varie, c'est la nécessité d'une
+	    "licence d'exportation".  C'est un document qui explique
+	    quel produit est exporté, par qui et vers qui, et cela
+	    pour chaque exportation.  (? descriptif des démarches, URL
+	    de référence)
+	    <p></p>
+	  </dd>
+
+	  <dt>L'autorisation grand public.</dt>
+	  <dd>
+	    Elle permet toute acte sur le territoire français, et
+	    l'exportation n'impose pas de formalité supplémentaire.
+	    <p>
+	      Un point délicat soulevé dans le cas des Logiciels Libres
+	      doit être éclaircit. Une condition nécessaire pour que
+	      le logiciel soit considéré grand public est:
+
+	      <quote>
+		La fonctionnalité cryptographique ne peut pas être
+		modifiée facilement par l'utilisateur.
+	      </quote>
+
+	      (<a href="http://admi.net/jo/20011215/ECOX0100059D.html">Décret no 2001-1192, article 10, 5 c)</a>).
+	    </p>
+
+	    <p>
+	      Dans le cas d'un logiciel propriétaire, les éléments de
+	      l'équation sont une personne physique ou morale, un
+	      objet binaire (le produit). Dans le cas d'un Logiciel
+	      Libre, le code source vient s'ajouter. On peut donc
+	      légitimement s'interroger sur les conséquences pour la
+	      <i>facilité</i> avec laquelle l'<i>utilisateur</i> peut
+	      modifier la <i>fonctionnalité cryptographique</i>.
+	    </p>
+
+	    <p>
+	      Qu'on dispose des sources ou du binaire, il est toujours
+	      possible de modifier au hasard, grâce à un éditeur de
+	      texte, le binaire ou les sources. C'est un processus
+	      facile pour tout utilisateur mais on s'accorde à dire
+	      que le seul résultat serait de rendre le logiciel non
+	      fonctionel. Même s'il est possible de qualifier une
+	      telle modification de facile et concernant les
+	      fonctionalités cryptographique, elle s'appliquerait
+	      alors à tout logiciel. C'est un cas absurde et nous
+	      sommes en fait intéressés par le cas d'un logiciel qui
+	      permettrait une modification facile de ses
+	      fonctionalités cryptographiques tout en restant
+	      fonctionel.
+	    </p>
+
+	    <p>
+	      Pour envisager de modifier les fonctionalités
+	      cryptographiques, l'utilisateur doit tout d'abord
+	      disposer de notions mathématiques et une connaissance
+	      approfondie du domaine de la cryptographie. Sans ce
+	      bagage théorique, il a toutes les chances de tenter des
+	      modifications qui rendront le logiciel inopérant.  Hors
+	      disponibilité des sources ou du binaire seul, ce bagage
+	      théorique est une précondition qui constitue à lui seul
+	      un obstacle qui rend la tâche <i>difficile</i>.
+	    </p>
+
+	    <p>
+	      En l'absence de bagage théorique, l'utilisateur peut
+	      tenter une modification en suivant à la lettre et
+	      aveuglément des instruction fournies par un tiers.  Dans
+	      le cas d'un logiciel binaire il peut s'agir d'éxécuter
+	      un petit logiciel automatisant ces modifications. Il
+	      existe de nombreux logiciels de ce genre, en général
+	      disponible sur le web. Dans le cas d'un logiciel
+	      disponible sous forme source, il s'agirait d'un
+	      <i>patch</i> s'appliquant sur les sources. Il s'agit
+	      essentiellement du même principe. Dans le cas du
+	      <i>patch</i> cependant, l'utilisateur doit en plus
+	      avoir la capacité technique de reconstruire une version
+	      binaire du produit, c'est donc un peu moins aisé.
+	      Comme dans le cas des modifications aléatoires rendant
+	      le logiciel inopérant, cette possibilité existant pour
+	      tous les logiciels, Logiciel Libre ou non, elle ne
+	      peut constituer un critère qualifiant la modification
+	      des fonctionalités cryptographiques de <i>facile</i>.
+	    </p>
+	    
+	    <p>
+	      Supposons qu'une personne dispose du bagage théorique
+	      nécessaire et qu'elle entreprenne de modifier les
+	      fonctionalités cryptographiques sans appliquer des
+	      instructions aveuglément.  En présence d'un binaire
+	      seul, la personne doit disposer d'une solide formation
+	      en assembleur, d'outils de décompilation et d'une
+	      expérience de reverse ingineering. En présence d'un code
+	      source, la personne doit disposer d'unse solide
+	      formation dans le langage de programmation visé,
+	      d'outils de compilation. En bref, elle doit avoir suivit
+	      une formation en informatique pour tenter effectivement
+	      une modification. Acquerir le bagage informatique
+	      nécessaire est dans tout les cas un processus
+	      <i>difficile</i>.
+	    </p>
+
+	    <p>
+	      Enfin, le produit peut, par choix de conception,
+	      permettre une modification facile des fonctionalités de
+	      cryptographie.  Le produit peut, par exemple, contenir
+	      une interface homme machine dont l'objet est de
+	      permettre à l'utilisateur de modifier les
+	      fonctionnalités cryptographiques. Il peut s'agir d'une
+	      interface graphique ou d'une interface ligne de
+	      commande, et cela implique que le logiciel a été
+	      expréssément conçu pour offrir cette possibilité.  Il
+	      est alors facile pour l'utilisateur de modifier les
+	      fonctionalités de cryptographie. Mais c'est un choix de
+	      conception qui n'est pas lié à la disponibilité du code
+	      source.
+	    </p>
+
+	    <p>
+	      En conclusion, l'accès au code source n'implique pas en
+	      soit qu'il est facile pour l'utilisateur de modifier les
+	      fonctionalités cryptographiques. Il s'agit avant tout
+	      d'un choix de conception délibéré qui doit être jugé au
+	      cas par cas, Logiciel Libre ou non.  La disponibilité du
+	      code source fait qu'il devient <b>possible pour une
+	      personne ayant la volonté de franchir les difficiles
+	      étapes menant aux connaissances requises mais
+	      certainement pas facile pour l'utilisateur</b> de
+	      modifier les fonctions cryptographiques. C'est la,
+	      uniquement, que réside la différence.
+	    </p>
+	    
+	    <p></p>
+	  </dd>
+	  
+	</dl>
 
 	<h4><a name="diffusion" />Diffusion des autorisations</h4>
 
@@ -410,19 +578,26 @@
 	  </dd>
 	  
 	  <dt>Guide à propos de la réglementation sur la cryptologie</dt>
-	  <dd><a href="http://www.scssi.gouv.fr/fr/reglementation/regl_crypto.html">http://www.scssi.gouv.fr/fr/reglementation/regl_crypto.html</a></dd>
+	  <dd><a href="http://www.scssi.gouv.fr/fr/reglementation/regl_crypto.html">http://www.scssi.gouv.fr/fr/reglementation/regl_crypto.html</a><p></p></dd>
 
 	  <dt>FAQ Infrastructures de gestion de clés</dt>
-	  <dd><a href="http://www.scssi.gouv.fr/fr/faq/faq_igc.html">http://www.scssi.gouv.fr/fr/faq/faq_igc.html</a></dd>
+	  <dd><a href="http://www.scssi.gouv.fr/fr/faq/faq_igc.html">http://www.scssi.gouv.fr/fr/faq/faq_igc.html</a><p></p></dd>
 
 	  <dt>FAQ Décret relatif à la signature électronique </dt>
-	  <dd><a href="http://www.scssi.gouv.fr/fr/faq/faq_sigelec.html">http://www.scssi.gouv.fr/fr/faq/faq_sigelec.html</a></dd>
-	  
+	  <dd><a href="http://www.scssi.gouv.fr/fr/faq/faq_sigelec.html">http://www.scssi.gouv.fr/fr/faq/faq_sigelec.html</a><p></p></dd>
+
+	  <dt>Décret no 2001-1192 du 13 décembre 2001 relatif au contrôle à l'exportation, à l'importation et au transfert de biens et technologies à double usage</dt>
+	  <dd>
+	    L'article 10, 5 en particulier.
+	    <a href="http://admi.net/jo/20011215/ECOX0100059D.html">http://admi.net/jo/20011215/ECOX0100059D.html</a>
+	  </dd>
+
 	  <dt>Article 28 de la loi n°90-1170 du 29 décembre 1990
 	    (tel que modifié par la loi du 26 juillet 1996 sur les 
 	    télécommunications)</dt>
 	  <dd>
 	    <a href="http://www.scssi.gouv.fr/fr/reglementation/lois/lois_fr4.html">http://www.scssi.gouv.fr/fr/reglementation/lois/lois_fr4.html</a>
+	    <p></p>
 	  </dd>
 
 	  <dt>Arrété du 17 mars 1999</dt>
@@ -431,38 +606,42 @@
 	    les déclarations ou demandes d'autorisation relatives aux
 	    moyens et prestations de cryptologie.
 	    <a href="arrete-17-mars-1999.fr.html">http://france.fsfeurope.org/dcssi/arrete-17-mars-1999.fr.html</a>
+	    <p></p>
 	  </dd>
 
 	  <dt>Décret n°99-199 du 17 mars 1999</dt>
 	  <dd>
 	    Définissant les catégories de moyens et de prestations de cryptologie pour lesquelles la procédure de déclaration préalable est substituée à celle d'autorisation.
 	    <a href="http://www.scssi.gouv.fr/fr/reglementation/lois/lois_fr1.html">http://www.scssi.gouv.fr/fr/reglementation/lois/lois_fr1.html</a>
+	    <p></p>
 	  </dd>
 
 	  <dt>Décret n°98-101 du 24 février 1998</dt>
 	  <dd>
 	    Définissant les conditions dans lesquelles sont souscrites les déclarations et accordées les autorisations concernant les moyens et prestations de cryptologie.
 	    <a href="http://www.scssi.gouv.fr/fr/reglementation/lois/lois_fr5.html">http://www.scssi.gouv.fr/fr/reglementation/lois/lois_fr5.html</a>
+	    <p></p>
 	  </dd>
 
 	  <dt>Décret n°99-200 du 17 mars 1999</dt>
 	  <dd>
 	    Définissant les catégories de moyens et de prestations de
 	    cryptologie dispensées de toute formalité préalable.
-	    <a href="http://www.scssi.gouv.fr/fr/reglementation/lois/lois_fr2.html">http://www.scssi.gouv.fr/fr/reglementation/lois/lois_fr2.html</a>	    
+	    <a href="http://www.scssi.gouv.fr/fr/reglementation/lois/lois_fr2.html">http://www.scssi.gouv.fr/fr/reglementation/lois/lois_fr2.html</a>
+	    <p></p>
 	  </dd>
 
 	  <dt>GnuPG</dt>
-	  <dd><a href="http://www.gnupg.org/">The GNU Privacy Guard http://www.gnupg.org/</a></dd>
+	  <dd><a href="http://www.gnupg.org/">The GNU Privacy Guard http://www.gnupg.org/</a><p></p></dd>
 
 	  <dt>OpenSSL</dt>
-	  <dd><a href="http://www.openssl.org/">http://www.openssl.org/</a></dd>
+	  <dd><a href="http://www.openssl.org/">http://www.openssl.org/</a><p></p></dd>
 
 	  <dt>Mcrypt</dt>
-	  <dd><a href="http://mcrypt.hellug.gr/">http://mcrypt.hellug.gr/</a></dd>
+	  <dd><a href="http://mcrypt.hellug.gr/">http://mcrypt.hellug.gr/</a><p></p></dd>
 
 	  <dt>GNUtls</dt>
-	  <dd><a href="http://www.gnu.org/software/gnutls/">http://www.gnu.org/software/gnutls/</a></dd>
+	  <dd><a href="http://www.gnu.org/software/gnutls/">http://www.gnu.org/software/gnutls/</a><p></p></dd>
 
 	</dl>
 	

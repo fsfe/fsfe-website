@@ -4,7 +4,7 @@
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:template match="/html[@lang='fr']/body/div">
-    <!-- $Id: navigation.fr.xsl,v 1.20 2002-12-22 15:31:57 rodolphe Exp $ -->
+    <!-- $Id: navigation.fr.xsl,v 1.21 2002-12-23 23:21:40 rodolphe Exp $ -->
     <!-- $Source: /root/wrk/fsfe-web/savannah-rsync/fsfe/fr/eucd/navigation.fr.xsl,v $ -->
     <!-- Top menu line -->
     <table border="1" cellpadding="5" cellspacing="10" class="main">
@@ -28,7 +28,7 @@
 	  <a href="http://eucd.info/who.fr.php">Qui</a><br />
 	  <br />
 	  <br />
-	  <a href="http://eucd.info/donations.fr.php">Dons</a><br />	  
+	  <a href="http://dons.eucd.info/">Dons</a><br />	  
 	  <script language="php">
 	    if (file_exists ("therm.php"))
 	    {

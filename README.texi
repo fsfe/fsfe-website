@@ -4,7 +4,7 @@
 @settitle Webmastering FSF Europe
 @setchapternewpage odd
 
-@set lastupdated $Id: README.texi,v 1.1 2003-02-01 13:54:42 jonas Exp $
+@set lastupdated $Id: README.texi,v 1.2 2003-02-01 20:52:20 jonas Exp $
 
 @titlepage
 @title Webmastering FSF Europe
@@ -34,38 +34,44 @@ please commit your ideas to paper in the README.texi file in CVS. All other
 versions are automatically generated from the TexInfo source.
 
 @menu
-* Webmastering::	How to be a Webmaster in 10 easy steps
-* Translating::		Doing it all again, 10 times over
-* Building::		How to build the pages, in 10 less easy steps
-* Administrating::	How to handle hits
-* People::		Who did all this?
+* Webmastering::                How to be a Webmaster in 10 easy steps
+* Translating::                 Doing it all again, 10 times over
+* Building::                    How to build the pages, in 10 less easy steps
+* Administrating::              How to handle hits
+* People::                      Who did all this?
+* Guides::                      Step-by-step guides to certain functions
 
 @detailmenu
  --- The Detailed Node Listing ---
 
 Webmastering
 
-* Focuses::		How the user finds information
-* Source files::	What files to edit
-* Editing::		How to actually edit them
-* Automatic updates::	Pages magically update themselves!
-* Special files::	How to work with the magic glue
+* Focuses::                     How the user finds information
+* Source files::                What files to edit
+* Editing::                     How to actually edit them
+* Automatic updates::           Pages magically update themselves!
+* Special files::               How to work with the magic glue
 
 Building
 
-* Requirements::        What you must have to build the pages
-* Process::             How the build process works
-* build.pl::            How the build script works
+* Requirements::                What you must have to build the pages
+* Process::                     How the build process works
+* build.pl::                    How the build script works
 
 Administrating
 
-* Apache::              Apache installation
-* Perl::                Perl installation
+* Apache::                      Apache installation
+* Perl::                        Perl installation
 
 People
 
-* Webmasters::          List of current webmasters
-* Translators::         List of translators
+* Webmasters::                  List of current webmasters
+* Translators::                 List of translators
+
+Guides
+
+* Posting news::                How to post news items
+* Adding a project::            How to add a project
 
 @end detailmenu
 @end menu
@@ -79,11 +85,11 @@ should be edited and various other bits that are of particular interest
 to a webmaster.
 
 @menu
-* Focuses::		How the user finds information
-* Source files::	What files to edit
-* Editing::		How to actually edit them
-* Automatic updates::	Pages magically update themselves!
-* Special files::	How to work with the magic glue
+* Focuses::                     How the user finds information
+* Source files::                What files to edit
+* Editing::                     How to actually edit them
+* Automatic updates::           Pages magically update themselves!
+* Special files::               How to work with the magic glue
 @end menu
 
 @node Focuses, Source files, Webmastering, Webmastering
@@ -270,9 +276,9 @@ second describes the actual process of building pages, and the third
 describe the @file{build.pl} script that does the actual building.
 
 @menu
-* Requirements::        What you must have to build the pages
-* Process::             How the build process works
-* build.pl::            How the build script works
+* Requirements::                What you must have to build the pages
+* Process::                     How the build process works
+* build.pl::                    How the build script works
 @end menu
 
 
@@ -373,7 +379,7 @@ file should be as follows:
   <timestamp>
     Last update:
     <!-- timestamp start -->
-    $Date: 2003-02-01 13:54:42 $ $Author: jonas $
+    $Date: 2003-02-01 20:52:20 $ $Author: jonas $
     <!-- timestamp end -->
   </timestamp>
 </html>
@@ -417,7 +423,7 @@ finished, the result should look like this:
     <timestamp>
       Last update:
       <!-- timestamp start -->
-      $Date: 2003-02-01 13:54:42 $ $Author: jonas $
+      $Date: 2003-02-01 20:52:20 $ $Author: jonas $
       <!-- timestamp end -->
     </timestamp>
   </document>
@@ -615,8 +621,8 @@ will contain a secondary directory for each focus.
 @chapter Administrating
 
 @menu
-* Apache::              Apache installation
-* Perl::                Perl installation
+* Apache::                      Apache installation
+* Perl::                        Perl installation
 @end menu
 
 @node Apache, Perl, Administrating, Administrating
@@ -625,12 +631,12 @@ will contain a secondary directory for each focus.
 @node Perl,  , Apache, Administrating
 @section Perl
 
-@node People,  , Administrating, Top
+@node People, Guides, Administrating, Top
 @chapter People
 
 @menu
-* Webmasters::          List of current webmasters
-* Translators::         List of translators
+* Webmasters::                  List of current webmasters
+* Translators::                 List of translators
 @end menu
 
 @node Webmasters, Translators, People, People
@@ -638,3 +644,69 @@ will contain a secondary directory for each focus.
 
 @node Translators,  , Webmasters, People
 @section Translators
+
+@node Guides,  , People, Top
+@chapter Guides
+This chapter contains simple step-by-step guides to performing certain
+functions on the FSFE web site, such as posting news, adding new
+projects and so on.
+
+@menu
+* Posting news::                
+* Adding a project::            
+@end menu
+
+@node Posting news, Adding a project, Guides, Guides
+@section Posting news
+When you're posting a news item, you have a choice to make; should it
+be a global item, or a localised item? The decision you make will
+influence which directory to put the information in. For a global news
+item, you should place it in @file{news/} and @file{country/news/} for
+localised news.
+
+Each directory mentioned should have one subdirectory for each
+year. Those directories should contain files of the form
+@file{news.en.xml} which can contain any number of news items. An
+English version of the news files are mandatory.
+
+Global news will be included for every focus. Localised news only for
+each respective focus. A news item in @file{news.en.xml} can look like
+this:
+
+@verbatim
+  <news date="2002-02-01">
+    <title>Something happened</title>
+    <body>
+      Something happened today, but we're not quite sure what.
+    </body>
+    <link>http://www.example.com/</link>
+  </news>
+@end verbatim
+
+Once this has been commited to CVS, the item will be included in the
+news listings once the next update has been run.
+
+@node Adding a project,  , Posting news, Guides
+@section Adding a project
+As for news items, the location of a project depends on whether it is
+of global interest or a local project. Place a directory with all
+project information in the @file{projects/} or
+@file{country/projects/} hierarchy.
+
+In addition to a directory, decide on a classification for the project
+(one of community, legal, other and technical). Put that information
+in a @file{project.en.xml} file in the root directory of the project.
+
+@verbatim
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<projectset>
+  <project type="legal">
+    <title>Some project</title>
+    <description>
+     A description of the project.
+    </description>
+    <link>/projects/some/project.html</link>
+  </project>
+</projectset>
+@end verbatim

@@ -19,16 +19,6 @@
   <xsl:template match="/html/body">
     <body>
       <xsl:apply-templates />
-      <div align="center">
-      <table style="border: solid red" width="70%">
-       <tr>
-        <td>
-         The FSF Europe supports the <a href="http://swpat.ffii.org/group/demo/index.en.html">online demonstration against software patents</a>. The European Parliament will vote on a directive validating Software Patents on September the 1st. Read more about why software patents are a bad idea on <a href="http://swpat.ffii.org/">SWPAT</a>, and learn how you can help fight them.
-        </td>
-       </tr>
-      </table>
-      </div>
-      <p> </p>
       <table class="news">
       <xsl:for-each select="/html/set/news">
         <xsl:sort select="@date" order="descending" />

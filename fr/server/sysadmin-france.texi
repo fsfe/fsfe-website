@@ -5,7 +5,7 @@
 @setchapternewpage odd
 @c %**end of header
 
-@set RCSID $Id: sysadmin-france.texi,v 1.3 2001-04-15 17:36:01 loic Exp $
+@set RCSID $Id: sysadmin-france.texi,v 1.4 2001-04-16 19:49:56 loic Exp $
 @set VERSION 1.0
 
 @c Combine the variable and function indices:
@@ -67,13 +67,40 @@ Accounts
 @node Introduction, Accounts, Top, Top
 @chapter Introduction
 
-The machines donated to FSF France and hosted in France are part of
-the set of machines available to the GNU project. As such they follow
-the same rules and the same policy. Reference documents describing
-the GNU environment are
-@uref{http://www.gnu.org/server/standards/,,standards} for webmaster information,
-@file{fencepost.gnu.org:/gd/gnuorg/sysadmin/sysadmin.texi} for system
-administration information and the
+No information on the philosophical and political goals of the
+@uref{http://www.fsfeurope.org/,,FSF Europe} in general and the
+@uref{http://france.fsfeurope.org/,,FSF France} in particular can be
+found in this document. 
+
+The machines donated to FSF France and hosted in France are part of the
+set of machines available to the GNU project. As such they follow the
+same rules and the same policy.
+
+In many aspects, the GNU way of doing things needs to be improved. When
+this is the case the idea is to coordinate with the GNU volunteers in
+charge of a specific aspect in order to improve the system. Doing so is
+a lot easier than contributing to a software. It may sometime be
+furstrating to stick to the GNU policy because it is easier to have a
+quick and nice result by inventing something completly new. The Web is
+probably the most striking example. However, since we claim to be part
+of the GNU project we don't really have the option to fork something of
+our own and leave the GNU project behind. Even if it means that we will
+go slower, coordination with and improvement of the GNU project as a
+whole should be our goal.
+
+Close cooperation with the GNU project also makes some things a lot
+easier. The account creation process, the management of the HTML tree
+from CVS, the DNS hosting, mailing lists etc. are facilities we do not
+need to re-implement. When installing something entirely new on the FSF
+France machines, it is important to send a note on the relevant mailing
+lists in advance. This prevents possible duplication of the effort and
+greatly increases the chances that the GNU project will be able to
+re-use the new facility.
+
+Reference documents describing the GNU environment are
+@uref{http://www.gnu.org/server/standards/,,standards} for webmaster
+information, @file{fencepost.gnu.org:/gd/gnuorg/sysadmin/sysadmin.texi}
+for system administration information and the
 @uref{http://savannah.gnu.org/savannah.html,,Savannah admin guide} for
 usage of the SourceForge clone.
 
@@ -156,6 +183,9 @@ the relevant information in XML. For more information check the
 @node Web, Account Management, Accounts, Top
 @chapter Web
 
+@node Overview, Account Management, Accounts, Top
+@section Overview
+
 All users registered in the
 @uref{http://savannah.gnu.org/projects/fsfe/,,FSF Europe} project can
 edit the HTML repository using CVS/SSH.
@@ -165,7 +195,9 @@ The @code{www} user owns the web directory. The document root is
 site itself is an anonymous checkout of the @file{fr} directory of the
 @uref{http://www.fsfeurope.org/,,FSF Europe} HTML repository. 
 
-The checkout is updated every hour by the @code{www} user crontab. 
+The checkout is updated every hour by the @file{/etc/cron.d/www} user crontab. 
+The logs of the checkout are stored in @file{/var/log/www.log} and rotated
+by @file{/etc/logrotate.d/www}. 
 
 @node Concept Index,  , Account Management, Top
 @unnumbered Index of Concepts

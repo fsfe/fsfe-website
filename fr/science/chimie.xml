@@ -2,7 +2,7 @@
 
 <?xml-stylesheet href="chimie.xsl" type="text/xsl"?>
 
-<!DOCTYPE softliste SYSTEM "chimie.dtd">
+<!DOCTYPE softliste SYSTEM "softliste.dtd">
 
 <!--
   It is of the outermost importance to carefully check the
@@ -844,7 +844,7 @@
     <description lang="en">This program is a framework for doing mass spectrometric data analysis/prediction on a variety of polymers.</description>
     <description lang="fr">Ce programme est réalisé pour faire de l'analyse/prédiction de spectres de masse sur une multitude de polymères.</description>
     <authors>Filippo Rusconi</authors>
-    <url>http://www.polyxmass.org/polyXmass</url>
+    <url>http://www.polyxmass.org</url>
     <os name="Linux">
       <maintainer>Filippo Rusconi</maintainer>
       <version>0.09</version>
@@ -868,6 +868,22 @@
       <url></url>
       <comment>Copyright and license notice in each source file</comment>
       <date>3 jul 2002</date>
+    </os>
+  </software>
+  <software>
+    <name>Abinit</name>
+    <date>17 jul 2002</date>
+    <description lang="en"></description>
+    <description lang="fr"></description>
+    <authors></authors>
+    <url>http://www.abinit.org</url>
+    <os name="All">
+      <maintainer></maintainer>
+      <version>3.3.3</version>
+      <license>GPL</license>
+      <url></url>
+      <comment>Notice of license and copyright in the code</comment>
+      <date>17 jul 2002</date>
     </os>
   </software>
 <!-- Template

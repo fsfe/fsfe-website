@@ -30,6 +30,10 @@
 <font size="-2">(Listed by Jérôme Pansanel.)</font>
 </p>
 
+  <p align="center">This page lists different free software usefull to
+  research in chemistry. It was compelled part of the <a
+  href="science.en.html">Free Software and science</a> project.</p>
+
   <xsl:apply-templates select="updatenotice"/>
 
 <TABLE CELLPADDING="10" RULES="all" BORDER="1">
@@ -47,7 +51,7 @@
 
     Updated:
     <!-- timestamp start -->
-    $Date: 2002-01-11 14:54:34 $ $Author: gilles $
+    $Date: 2002-03-02 16:56:38 $ $Author: olberger $
     <!-- timestamp end -->
 
   </body>

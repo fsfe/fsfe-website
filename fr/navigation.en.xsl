@@ -96,7 +96,7 @@
 		<a href="{$gnu}/jobs/jobsFR.fr.html">Jobs</a><br />
 		<a href="{$fsffrance}/press/press.fr.html">Press Section</a><br />
 		<a href="{$fsffrance}/lists/lists.en.html">Mailing List</a><br />
-		<a href="{$fsffrance}/donations/donations.en.html">Donations</a><br />
+		<a href="{$fsffrance}/donations/donations.fr.html">Donations</a><br />
 		<a href="{$fsffrance}/about/speakers.en.html">Speakers</a><br />
 		<a href="{$fsffrance}/about/about.en.html">About</a><br />
 		<a href="{$fsffrance}/contact.en.html">Contact</a> <br />

@@ -44,7 +44,7 @@ PTPAGES = $(shell find * -path 'fr' -prune -o -regex '.*\.pt\.xhtml' -print | se
 ITPAGES = $(shell find * -path 'fr' -prune -o -regex '.*\.it\.xhtml' -print | sed "s/xhtml$$/html/")
 
 # temporary, added by mad@april.org
-NEWS = news/news.fr.html news/news.en.html
+NEWS = news/news.fr.html news/news.en.html news/news.pt.html
 
 all: $(ENPAGES) $(FRPAGES) $(DEPAGES) $(PTPAGES) $(ITPAGES)
 

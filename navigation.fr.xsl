@@ -149,9 +149,9 @@
                 </xsl:otherwise>
               </xsl:choose><br/>
               <xsl:choose>
-                <xsl:when test="$path='order/announce.fr.xhtml'">Articles FSFE</xsl:when>
+                <xsl:when test="$path='order/order.en.xhtml'">Articles FSFE</xsl:when>
                 <xsl:otherwise>
-                  <a href="{$fsfeurope}/order/announce.fr.html">Articles FSFE</a>
+                  <a href="{$fsfeurope}/order/order.en.html">Articles FSFE</a>
                 </xsl:otherwise>
               </xsl:choose><br/>
               <br/></td>

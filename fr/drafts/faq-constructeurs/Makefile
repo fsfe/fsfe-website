@@ -13,12 +13,14 @@ CHOICE=FAQConstructeurs.fr.xml
 # Initializing XML_SRC with the given CHOICE
 XML_SRC=${CHOICE}
 # FAQConstructeurs.fr.xml -> cutFAQConstructeurs.fr.xml
-XML_SRC_CUT=${addprefix cut, ${XML_SRC}}
+XML_SRC_LONG=${addprefix long, ${XML_SRC}}
+XML_SRC_SHORT=${addprefix short, ${XML_SRC}}
 
 # Using a pattern substitution
 # $(patsubst pattern,replacement,text)
 HTML_OUTPUT=${patsubst %.xml,%.html,${XML_SRC}}
-HTML_OUTPUT_CUT=${patsubst %.xml,%.html,${XML_SRC_CUT}}
+HTML_OUTPUT_LONG=${patsubst %.xml,%.html,${XML_SRC_LONG}}
+HTML_OUTPUT_SHORT=${patsubst %.xml,%.html,${XML_SRC_SHORT}}
 TEX_OUTPUT=${patsubst %.xml,%.tex,${XML_SRC}}
 DVI_OUTPUT=${patsubst %.xml,%.dvi,${XML_SRC}}
 PS_OUTPUT=${patsubst %.xml,%.ps,${XML_SRC}}
@@ -35,7 +37,8 @@ CATALOG=/usr/lib/sgml/catalog
 
 # XSL filter stylesheet to delete some specific elements
 # Customization has to be done in this filter.
-CUT_SS_XSL=deleteElements.xsl
+LONG_SS_XSL=longVersion.xsl
+SHORT_SS_XSL=shortVersion.xsl
 
 # XSL stylesheet for HTML
 HTML_SS_XSL=custom_html.xsl
@@ -72,8 +75,7 @@ MAX_TEX_RECURSION=4
 # the time, which is the opposite of what they are for.
 .PHONY: help all test \
 	clean clean-html clean-print \
-	init \
-	ph pp h hx hd hdn p
+	ph pp h hx hg hd hdn p
 
 help:
 	@echo "make help   prints this help message"
@@ -93,6 +95,7 @@ ph: prepare-html
 pp: prepare-print
 h: html-xsl html-xsl-cut
 hx: html-xsl
+hg: html-xsl-gnome-long html-xsl-gnome-short
 hd: html-dsssl
 hdn: html-dsssl-nochunk
 p: print
@@ -101,10 +104,12 @@ p: print
 #=======================================================================
 # Prints the values of the different variables to check if they are correct.
 test:
+	@echo "CATALOG = ${CATALOG}"
 	@echo "XML_SRC = ${XML_SRC}"
-	@echo "XML_SRC_CUT = ${XML_SRC_CUT}"
-	@echo "HTML_OUTPUT = ${HTML_OUTPUT}"
-	@echo "HTML_OUTPUT_CUT = ${HTML_OUTPUT_CUT}"
+	@echo "XML_SRC_LONG = ${XML_SRC_LONG}"
+	@echo "XML_SRC_SHORT = ${XML_SRC_SHORT}"
+	@echo "HTML_OUTPUT_LONG = ${HTML_OUTPUT_LONG}"
+	@echo "HTML_OUTPUT_SHORT = ${HTML_OUTPUT_SHORT}"
 	@echo "TEX_OUTPUT= ${TEX_OUTPUT}"
 	@echo "DVI_OUTPUT = ${DVI_OUTPUT}"
 	@echo "PS_OUTPUT = ${PS_OUTPUT}"
@@ -131,6 +136,46 @@ prepare-print:
 
 
 #=======================================================================
+html-xsl-gnome: ${XML_SRC} ${HTML_SS_XSL} prepare-html
+	export SGML_CATALOG_FILES=${CATALOG}; \
+	xsltproc \
+	--catalogs \
+	-o ${HTML_OUT_DIR}/${HTML_OUTPUT} \
+	${HTML_SS_XSL} ${XML_SRC}
+	touch $@
+
+html-xsl-gnome-long: xml-xsl-long ${HTML_SS_XSL} prepare-html
+	export SGML_CATALOG_FILES=${CATALOG}; \
+	xsltproc \
+	--catalogs \
+	-o ${HTML_OUT_DIR}/${HTML_OUTPUT} \
+	${HTML_SS_XSL} ${XML_SRC_LONG}
+	touch $@
+
+html-xsl-gnome-short: xml-xsl-short ${HTML_SS_XSL} prepare-html
+	export SGML_CATALOG_FILES=${CATALOG}; \
+	xsltproc \
+	--catalogs \
+	-o ${HTML_OUT_DIR}/${HTML_OUTPUT_SHORT} \
+	${HTML_SS_XSL} ${XML_SRC_SHORT}
+	touch $@
+
+xml-xsl-long: ${XML_SRC} ${LONG_SS_XSL}
+	export SGML_CATALOG_FILES=${CATALOG}; \
+	xsltproc \
+	--catalogs \
+	-o ${XML_SRC_LONG} \
+	${LONG_SS_XSL} ${XML_SRC}
+	touch $@
+
+xml-xsl-short: ${XML_SRC} ${SHORT_SS_XSL}
+	export SGML_CATALOG_FILES=${CATALOG}; \
+	xsltproc \
+	--catalogs \
+	-o ${XML_SRC_SHORT} \
+	${SHORT_SS_XSL} ${XML_SRC}
+	touch $@
+
 
 # ConfCatEntityResolver is used instead of 
 # com.arbortext.catalog.CatalogEntityResolver.
@@ -154,12 +199,12 @@ html-xsl-cut: xml-xsl-cut ${HTML_SS_XSL} prepare-html
 	-Dxml.catalog.files=${CATALOG} \
 	org.apache.xalan.xslt.Process -v -html \
 	-entityresolver ConfCatEntityResolver \
-	-in ${XML_SRC_CUT} \
+	-in ${XML_SRC_SHORT} \
 	-xsl ${HTML_SS_XSL} \
-	-out ${HTML_OUT_DIR}/${HTML_OUTPUT_CUT}
+	-out ${HTML_OUT_DIR}/${HTML_OUTPUT_SHORT}
 	touch $@
 
-xml-xsl-cut: ${XML_SRC} ${CUT_SS_XSL}
+xml-xsl-cut: ${XML_SRC} ${SHORT_SS_XSL}
 	java \
 	-Dxml.catalog.debug=0 \
 	-Dxml.catalog.override=yes \
@@ -167,8 +212,8 @@ xml-xsl-cut: ${XML_SRC} ${CUT_SS_XSL}
 	org.apache.xalan.xslt.Process -v -html \
 	-entityresolver ConfCatEntityResolver \
 	-in ${XML_SRC} \
-	-xsl ${CUT_SS_XSL} \
-	-out ${XML_SRC_CUT}
+	-xsl ${SHORT_SS_XSL} \
+	-out ${XML_SRC_SHORT}
 	touch $@
 
 
@@ -177,8 +222,8 @@ xml-xsl-cut-with-xt: ${XML_SRC} ${HTML_SS_XSL}
 	-Dcom.jclark.xsl.sax.parser=org.apache.xerces.parsers.SAXParser \
 	com.jclark.xsl.sax.Driver \
 	${XML_SRC} \
-	${CUT_SS_XSL} \
-	${XML_SRC_CUT}
+	${SHORT_SS_XSL} \
+	${XML_SRC_SHORT}
 	touch $@
 
 
@@ -246,6 +291,9 @@ tex: ${XML_SRC} prepare-print
 #=======================================================================
 
 clean: clean-html clean-print
+	rm -rf ${HTML_OUT_DIR} ${PRINT_OUT_DIR} # removing directories
+	rm -f prepare-html prepare-print        # removing empty target files
+	rm -f xml-xsl-* html-xsl-*              # removing empty target files
 
 clean-html:
 	rm -f ${HTML_OUT_DIR}/*.htm*
@@ -260,9 +308,5 @@ clean-print:
 	rm -f ${PRINT_OUT_DIR}/*.dvi
 	rm -f ${PRINT_OUT_DIR}/*.ps
 	rm -f prepare-print # removing empty target files
-
-init:
-	rm -rf ${HTML_OUT_DIR} ${PRINT_OUT_DIR}
-	rm -f prepare-html prepare-print # removing empty target files
 
 

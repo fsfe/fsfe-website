@@ -12,7 +12,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
                       "http://nwalsh.com/docbook/xml/3.1.3/docbookx.dtd" [
 -->
 <!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
-                         "http://www.oasis-open.org/docbook/xml/4.0/docbookx.dtd" [
+                         "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
 
 <!ENTITY title "F.A.Q des constructeurs d'électronique et de matériels informatiques">
 <!ENTITY subtitle "Foire Aux Questions sur la disponibilité de pilotes (drivers) pour tous systèmes d'exploitation">
@@ -25,7 +25,10 @@ Old version of the XML DTD, before it became endorsed by OASIS
 <article class="faq" lang="fr">
   <articleinfo>
     <title>&title;</title>
-    <subtitle>&subtitle;</subtitle>
+    <subtitle>&subtitle;
+      <phrase condition="long">(version longue)</phrase>
+      <phrase condition="short">(version courte)</phrase>
+    </subtitle>
 
     <author>
       <affiliation>
@@ -45,7 +48,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
     <pubdate>Septembre 2001</pubdate>
     <copyright>
       <year>2001</year>
-      <holder>AFUL-APRIL</holder>
+      <holder>AFUL, APRIL</holder>
       <!-- Buggy stylesheet support -->
       <!--
       <holder>AFUL</holder>
@@ -54,9 +57,6 @@ Old version of the XML DTD, before it became endorsed by OASIS
     </copyright>
 
     <legalnotice>
-      <para>
-	Copyright (C) 2001 AFUL, APRIL
-      </para>
       <para>
         Permission is granted to copy, distribute and/or modify this
         document under the terms of the GNU Free Documentation

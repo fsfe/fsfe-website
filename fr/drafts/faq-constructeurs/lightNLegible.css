@@ -34,14 +34,14 @@ a:active {
 	/* background-color: inherit; */
 } 
 
-h1, h2, h3, h4, h5, h6, th, dt, caption	{
-    font-family: 'Trebuchet MS', Verdana, 'Myriad Web', Syntax, sans-serif;
-}
-
 h1, h2, h3, h4, h5, h6 {
     /* Augmenting the space on top of headers */
     /* of an amount of 1/2 the orginal margin. */
     margin-top: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6, th, dt, caption	{
+    font-family: 'Trebuchet MS', Verdana, 'Myriad Web', Syntax, sans-serif;
 }
 
 h1 { 

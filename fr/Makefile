@@ -43,6 +43,7 @@ all: news $(ENPAGES) $(FRPAGES)
 news: $(NEWS)
 
 donations/formulaire.fr.html: donations/formulaire.fr.xml
+donations/*.fr.html: donations/menu.fr.xhtml
 
 $(NEWS_COMPLETE): news/news-bytes.%.xhtml: news/fsfe-fr-channel.%.xml news/news.%.xsl
 	@$(ECHO) "Building $@ ..."; \

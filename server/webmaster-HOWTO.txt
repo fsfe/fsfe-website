@@ -1,4 +1,4 @@
-$Id: webmaster-HOWTO.txt,v 1.5 2001-08-27 22:21:16 olberger Exp $
+$Id: webmaster-HOWTO.txt,v 1.6 2001-08-27 22:40:52 olberger Exp $
 
 This document is a HOWTO for any volunteer interested in acting as a
 webmaster for the FSF Europe website (www.fsfeurope.org).
@@ -99,7 +99,18 @@ I propose the following naming scheme for CVS tags :
 (( Remarks greve 20010827
    One of the goals is to get a consistent layout/design between
    the main site and the chapters. Why would anyone want to split
-   off a revision for a chapter? Maybe this is a little misleading? ))
+   off a revision for a chapter? Maybe this is a little misleading? 
+
+   Oberger 20010827 :
+   Good care should be taken to have the stable version identical for
+   all sites : main and the chapter's. But in the case certain
+   chapter's specific projects are too difficult to convert to new
+   version, or some local translations are late, it should be best to
+   have the main site become stable as soon as possible, putting a new
+   stable tag on the main trunk, while the local chapters keep n-1
+   stable version... Then the main site can (and must) evolve on the
+   fastest pace while local chapters being allowed to get more delays
+   in adapting to the new elements. ))
 
 - stable version of the france.fsfeurope.org site :
 
@@ -176,7 +187,13 @@ versions in parallel.
 
 (( Remarks greve 20010827
    I have to admit that I don't entirely understand the following
-   paragraph. ))
+   paragraph. 
+
+   Oberger 20010827 :
+   At the moment of writing, AFAIK, the "beta" and "www" virtual hosts
+   direct to the same directory. That's why it's impossible to take to
+   different checked-out branches for these two sites... Than I have
+   to use some temporary directory as described below. Is it clearer ? ))
 
 For this demonstration, we'll use the following directory of the CVS
 repository : /fsfe/server/testbeta.  Files will be put in this
@@ -200,7 +217,16 @@ further this scenario.
 
 (( Remarks greve 20010827
    Does this mean people are free to change things there without
-   risking to break stuff? ))
+   risking to break stuff? 
+
+   Oberger 20010827 :
+   Yep. One could commit as he wants into fsfe/server/testbeta making
+   experimentation between branches... but be carefull anyway not to
+   apply cvs commands to the whole repository, nor change something on
+   the server in the checkout directories under the "www"
+   account... but no one's expected to work there, isn't it ? : every
+   modifications are made on the client's side, and the only thing to
+   do is "make sync" to update the online version. ))
 
 We won't detail CVS commands. The use of some graphical tool to
 represent CVS revisions might help (I personnaly recommand tkcvs). You
@@ -272,7 +298,27 @@ Adding files in both versions
 -----------------------------
 
 (( Remarks greve 20010827
-   I have to admit this section is a little unclear to me. ))
+   I have to admit this section is a little unclear to me. 
+
+   Oberger 20010827 :
+   Well, you have to consider what happens quite frequently : files
+   are added to directories, when there is need to publish new pages
+   on the site. Either this corresponds to a modification in the beta
+   version, either it's something done on the stable version (adding
+   pieces of news, articles, which don't impact the whole structure,
+   don't need to be reviewed, and then can directly be added to the
+   stable version, right ?). In the latter case, every modification
+   made on the stable version has to be ported to the beta site also,
+   if we don't want to loose some information when going from one
+   stable version to the next. cvs update -j make the job for you,
+   "merging" from the stable branch to the beta, as I described it
+   above... but another solution exists, which permits to do without
+   any merge... but requires working first on the beta instead of on
+   the stable version... But actually, this is what we may prefer to
+   do : add on beta (main trunk), and make it also available to the
+   stable : just put a branch tag on it... cool ;). Am I clearer now ? 
+   Maybe you have to experiment with CVS to understand that, cause it
+   would be pretty long to explain in more details ? ))
 
 One problem with this strategy is that certain parts of the website
 may require frequent modifications on the stable version (for instance

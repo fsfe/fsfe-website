@@ -67,6 +67,7 @@
 	 <a href="{$fsfeurope}/coposys/index.en.html">Coposys</a><br />
          <a href="{$fsfeurope}/documents/whyfs.it.html">Parliamo di Software Libero</a><br />
               <a href="{$fsfeurope}/education/education.html">Free Software and Education</a><br />
+                  <a href="{$fsfeurope}/law/eucd/eucd.en.html">EUCD</a>
        </td>
       </tr>
       

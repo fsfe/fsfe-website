@@ -1,0 +1,40 @@
+From: "Georg C. F. Greve" <testroundup-issues@fsfeurope.org>
+Subject: [issue19] Add Events to Web Page
+Date: Thu, 01 Jul 2004 09:31:58 +0000
+Message-Id: <1088674318.72.0.041272067427.issue19@fsfeurope.org>
+
+
+[...]
+It occurs to me that currently I'd have problems going there. I'm asking myself
+among other things:
+
+ - WHERE exactly is it?
+ - WHAT do I have to pay to get in?
+ - WHEN exactly will be Reinhards speech and WHEN will it end?
+
+We should try to come up with a way of providing that information consistently.
+
+My suggestion as immediate improvement would be that every event entry title
+should contain
+    <NAME>, <LOCATION>, <CITY>, <COUNTRY>
+
+And the description should always contain a word about possible admission fees.
+
+In the medium perspective, we might want to consider how we actually map the
+individual speeches and tasks inside one larger event. If several people speak,
+I would like to be able to supply that information.
+
+So we may either want to discipline ourselves strongly or add another subset of
+tags for this. Information I would like to have as someone who's planning to
+attend is:
+
+ - Speaker(s) (mandatory, maybe as link)
+ - Title/Summary of speech/conference (mandatory)
+ - Language of speech/conference (mandatory)
+ - Start and end time of speech/conference (mandatory)
+ - Expected audience (optional)
+ - Possible link to preparatory/additional information (optional)
+
+Until we have better ways of providing this info, we should try to put it in
+text into the event descriptions, I think.
+[...]

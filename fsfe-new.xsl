@@ -144,6 +144,9 @@
               <br />
               <xsl:apply-templates
                 select="/buildinfo/textset/text[@id='permission']/node()" />
+              <br />
+              <xsl:apply-templates
+                select="/buildinfo/textset/text[@id='webmaster']/node()" />
             </div>
           </td>
         </tr>

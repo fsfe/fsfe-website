@@ -15,9 +15,12 @@
   </xsl:template>
 
   <xsl:template match="buildinfo/document">
-    <html>
+    <xsl:element name="html">
+      <xsl:attribute name="lang">
+        <xsl:value-of select="/buildinfo/@language" />
+      </xsl:attribute>
       <xsl:apply-templates select="node()" />
-    </html>
+    </xsl:element>
   </xsl:template>
 
   <xsl:template match="body">

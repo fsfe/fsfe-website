@@ -40,7 +40,7 @@
   </articleinfo>
 
   <sect1>
-    <title>Apports du Logiciel Libre en entreprise</title>
+    <title>Introduction</title>
 
     <para>
     Nous venons de vivre l'une des révolutions les plus extraordinaire 
@@ -75,8 +75,10 @@
 
     <para>
     Avant de répondre précisément à ces deux questions, il convient 
-    d'expliquer le concept de Logiciel Libre. Il repose sur l'idée 
-    que tout logiciel doit être associé à quatre libertés fondamentales :
+    d'expliquer le concept de Logiciel Libre. 
+
+    Il repose sur l'idée que tout logiciel doit être associé à quatre 
+    libertés fondamentales :
     </para>
 
     <itemizedlist>
@@ -129,8 +131,10 @@
     <ulink url="http://www.gnu.org/copyleft/gpl.html"> 
     General Public License</ulink>. Elle permet de protéger les auteurs de 
     logiciel en deux étapes. Premièrement en assurant le droit d'auteur
-    (copyright) du logiciel et deuxièmement en donnant une autorisation légale
-    de dupliquer distribuer et/ou modifier le logiciel. 
+    (copyright) et deuxièmement en donnant une autorisation légale
+    de dupliquer, distribuer, modifier le logiciel pour une utilisation privée,
+    professionnelle ou pour une exploitation commerciale. A condition que cette
+    dernière respect les mêmes principes. 
     </para>
   </sect1>
  
@@ -143,51 +147,61 @@
     de les modifier, grâce à la GPL, pour répondre à leurs besoins 
     internes ou à la demande des clients. Par contraste, les licences des 
     logiciels propriétaires autorisent seulement l'utilisation et interdisent 
-    l'étude des sources, la modification, la redistribution des contributions. 
-    L'entreprise utilisatrice ne peut donc pas faire évoluer l'application selon 
+    l'étude des sources, la modification et la redistribution des contributions. 
+    L'entreprise utilisatrice ne peut pas faire évoluer l'application selon 
     ses besoins, elle doit attendre les prochaines versions de l'éditeur ou 
-    développer l'application de zéro.
-    </para> 
-
-    <para>
-    Avec la GPL, les auteurs accordent une licence implicite et gratuite 
-    d'exploitation de leurs droits d'auteur. A ce titre, les logiciels 
-    libres peuvent être dupliqués pour une utilisation privée, professionnelle 
-    ou pour une exploitation commerciale à condition que cette dernière 
-    respecte les mêmes principes.
+    développer l'application de zéro. 
     </para>
 
     <para>
-    L'utilisation de Logiciels Libres à permis de faire des économies 
-    importantes, dès la création des entreprises de la Net-économie. 
-    Elles ont économisé de l'argent sur l'achat de logiciels propriétaires. 
-    Attention cela ne veut pas dire que l'utilisation de Logiciels Libres est
-    moins cher. Il faut payer des développeurs pour les adapter aux besoins 
-    de l'entrepise. Mais l'acquisition du Logiciels et son utilisation ne 
-    sont pas payants.
-    </para>
+    Il existe plusieurs sites internet pour rechercher rapidement
+    des Logiciels Libres. Les plus connus sont 
+    <ulink url="http://fresmeat.net">Freshmeat</ulink>,
+    <ulink url="http://savannah.gnu.org">Savannah</ulink>,
+    <ulink url="http://sourceforge.net">Sourceforge</ulink>. 
+    Le nombre de Logiciels Libres disponibles, ne cesse d'augmenter. 
+    Il est maintenant possible de trouver des Logiciels Libres pour
+    tous les domaines : bureautique, science, éducation, internet, etc. 
 
-    <para>
     La disponibilité d'un grand nombre de Logiciels Libres a permis 
-    aux entreprises de la Net-économie de réagir rapidement aux 
+    aux entreprises de la net-économie de réagir rapidement aux 
     besoins du marché. L'urgence les a poussées à surmonter un à-priori 
     négatif vis à vis des Logiciels Libres. Considérés souvent 
     comme de la production artisanale de qualité médiocre, les Logiciels 
     Libres se sont avérés à posteriori répondre au plus près aux besoins
-    de l'entreprise. C'est en effet beaucoup plus simple et rapide d'améliorer 
-    un logiciel existant, que de tout refaire de zéro.
-    </para>
- 
-    <para>
-    Les Logiciels Libres ont souvent été développés par des 
-    personnes qui ont pris le temps de les écrire en respectant
-    les standards décris par les RFC - 
-    <ulink url="http://ietf.org/rfc.html">Request for Comments</ulink>,  
-    les normes des organisations internationales, comme le W3C - 
-    <ulink url="http://www.w3c.org/">World Wide Web Consorsium</ulink>, etc... 
+    de l'entreprise.  
     </para>
 
     <para>
+    La qualité des Logiciels Libres s'explique notamment par le mode de 
+    développement utilisé par les développeurs. C'est un travail 
+    collaboratif basé sur le volontariat. Les développeurs participent 
+    à un projet par envie ou par besoin, la recherche de profit reste 
+    secondaire et seul la qualité du logiciel est recherché.
+    
+    Les développeurs utilisent un enssemble de règles utilisées au niveau
+    international, pour plusieurs raisons. D'une part parce qu'elles 
+    permettent d'avoir une information précise sur les auteurs, 
+    l'historique, l'installation, le fonctionnement et les fonctionnalités 
+    futures d'une application. Et surtout parce qu'elles permettent de 
+    travailler en équipe, même si les participants sont d'un bout à 
+    l'autre de la planette. Savannah et Sourceforge proposent tout un enssemble 
+    d'outils - site internet, mailing list, serveur cvs, serveur ftp, etc - 
+    qui permettent de gérer un projet sur internet. Cette clarté à permis aux 
+    entreprises de la Net-économie de choisir parmis l'ensemble des Logiciels 
+    Libres, ceux qui étaient les plus proches de leurs besoins, et donc de gagner 
+    beaucoup de temps.
+    </para>
+
+    <para>
+    La qualité des Logiciels Libres s'explique aussi par leurs respect
+    des standards. Les développeurs de Logiciels Libres ont pris le temps 
+    de les écrire en respectant les standards décris par les RFC - 
+    <ulink url="http://ietf.org/rfc.html">Request for Comments</ulink>,  
+    les normes des organisations internationales, comme le W3C - 
+    <ulink url="http://www.w3c.org/">World Wide Web Consorsium</ulink>, 
+    etc... 
+    
     Le respect des standards est le seul moyen permettant aux 
     développeurs de Logiciels Libres de se mettre en relation 
     avec d'autres logiciels ou systèmes d'information. Les logiciels 
@@ -195,27 +209,10 @@
     communication inter logiciels à ceux qu'ils produisent, en 
     particulier si l'entreprise produit une large gamme de logiciels 
     couvrant différents besoins métier. Le respect des standards 
-    est une nécessité pour le logiciel libre et un plus 
+    est une nécessité pour le Logiciel Libre et un plus 
     important pour l'entreprise.
     </para>
 
-    <para>
-    Les développeurs de Logiciels Libres, utilisent un ensemble 
-    de règles de programmation et de gestion de projet qui est 
-    utilisé au niveau international. Ces règles sont respectées 
-    pour plusieurs raisons. D'une part parce qu'elles permettent 
-    d'avoir une information précise sur les auteurs, l'historique, 
-    l'installation, le fonctionnement et les fonctionnalités futures 
-    d'une application. Cette transparence permet aux utilisateurs 
-    de savoir si le logiciel convient à leurs besoins et aux 
-    contributeurs potentiels d'entrer dans un projet plus 
-    facilement. Et surtout parce qu'elles permettent de travailler 
-    en équipe, même si ces participants habitent d'un bout à 
-    l'autre de la planette. Cette clarté à permis aux entreprises 
-    de la Net-économie de choisir parmis l'ensemble des Logiciels 
-    Libres, celui qui était le plus proche de leurs besoins, et 
-    donc de gagner beaucoup de temps.
-    </para>
   </sect1>
 
   <sect1>
@@ -227,11 +224,10 @@
     Net-économie sont dans une phase de réorganisation. En 
     effet, elles doivent travailler afin de conserver des 
     clients plus informés et plus exigeants qu'avant. Ceci
-    est indispensable afin d'obtenier un retour sur 
-    investissement.Les Logiciels Libres peuvent une fois de 
-    plus apporter leurs avantages, afin de bâtir un socle 
-    robuste et pérenniser ainsi l'entreprise et les 
-    développements qu'elle effectue.
+    est indispensable pour obtenir un retour sur investissement. 
+    Les Logiciels Libres peuvent une fois de plus apporter leurs 
+    avantages, afin de bâtir un socle robuste et pérenniser ainsi 
+    l'entreprise et les développements qu'elle effectue.
     </para>
 
     <para>
@@ -240,19 +236,22 @@
     développeurs de Logiciels Libres, elle utilisera un ensemble 
     de normes qui permettra à tous les universitaires, chercheurs, 
     gouvernements et informaticiens de participer avec elle 
-    aux développements de Logiciels. 
+    aux développements de Logiciels. L'ouverture des sources
+    permet en effet d'avoir un retour d'information sur un bug 
+    à résoudre, un problème de sécurité à supprimer, une nouvelle
+    fonctionnalité à ajouter ou des propositions sur des solutions
+    techiques différentes qui permetraient de faire évoluer l'application
+    avec efficacité.
     </para>
-
     
     <para>
     Le travail décentralisé permet de pérenniser les applications, 
     même si la société fait le choix d'abandonner le projet, 
     elle ne met pas pour autant tout le travail des développeurs 
-    et autres participants au rebut. Le projet peut 
-    continuer à se développer sur internet. Ceci a une 
-    réelle conséquence sur la motivation des équipes et sur 
-    l'image de l'entreprise auprès de ses salariés et de 
-    celle qu'elle véhicule.
+    et autres participants au rebut. Le projet peut continuer à 
+    se développer sur internet. Ceci a une réelle conséquence sur 
+    la motivation des équipes et sur l'image de l'entreprise auprès 
+    de ses salariés et de celle qu'elle véhicule.
     </para>
 
     <para>

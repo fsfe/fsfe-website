@@ -89,3 +89,6 @@ $(PTPAGES): %.html: %.xhtml fsfe.xsl navigation.pt.xsl
 clean:
 	rm -f $(ENPAGES) $(FRPAGES) $(DEPAGES) $(PTPAGES)
 
+sync:
+        ssh -l www france.fsfeurope.org 'cd fsfe ; cvs -z3 -q update -I "*.html" -d ; ../bin/nightly'
+

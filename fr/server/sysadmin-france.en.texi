@@ -5,7 +5,7 @@
 @setchapternewpage odd
 @c %**end of header
 
-@set RCSID $Id: sysadmin-france.en.texi,v 1.17 2001-04-24 08:27:26 r4f Exp $
+@set RCSID $Id: sysadmin-france.en.texi,v 1.18 2001-04-24 08:43:15 r4f Exp $
 @set VERSION 1.0
 
 @c Combine the variable and function indices:
@@ -639,15 +639,16 @@ The policy applied is to close all TCP/UDP port by default and open only
 the ones we need.
 
 @cindex DNS
+@cindex fsffrance.org
 @node Firewall, Security, , DNS, DNS
 @section DNS
 
 The DNS is handled by the GNU name servers.
-The FSF France machine can be reached through the following names : fr.fsfeurope.org, france.fsfeurope.org or fsffrance.org.
+The FSF France machine can be reached through the following names : @code{fr.fsfeurope.org}, @code{france.fsfeurope.org} or @code{fsffrance.org}.
 
-The latter domain name (@code{fsffrance.org}) has been bought at GANDI (a french registrar @uref{http://www.gandi.net}) and is owned by @email{raph@r4f.org,Raphael Rousseau} who's the Administrative, Techniqcal and Billing contact of this domain name.
+The latter domain name (@code{fsffrance.org}) has been bought at @uref{http://www.gandi.net,,GANDI}, a French registrar, and is owned by @email{raph@r4f.org,Raphael Rousseau} who's the Administrative, Technical and Billing contact of this domain name.
 
-The primary name server is @code{ns1.gnu.org} (@code{199.232.76.162}) and the secondary @code{sfi.santafe.edu} (@code{192.12.12.1}).
+The primary and secondary name servers are respectively  @code{ns1.gnu.org} (@code{199.232.76.162}) and @code{sfi.santafe.edu} (@code{192.12.12.1}).
 
 @node Security, Statistics, 
 @cindex statistics mrtg

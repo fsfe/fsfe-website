@@ -66,12 +66,13 @@ $(ENPAGES): %.html: %.xhtml fsfe.xsl navigation.en.xsl
 $(FRPAGES): %.html: %.xhtml fsfe.xsl navigation.fr.xsl
 	@$(ECHO) "Building $@ ..."; \
 	path=$< ; \
-	base=`expr $$path : '\(.*\).xhtml'` ; \
+	base=`expr $$path : '\(.*\).fr.xhtml'` ; \
 	filebase=`basename $$base` ; \
 	dir=`dirname $$path` ; \
 	root=`dirname $$path | perl -pe 'chop; s:([^/]+):..:g if($$_ ne ".")'` ; \
-	$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase '$$path='$$path > $$base.html-temp && (cat $$base.html-temp | perl -p -e '$$| = 1; (s/Date://, s/Author:/par/, s/\$$//g) if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.html) ; \
-	rm -f $$base.html-temp
+	langlinks="`./tools/translate.sh $$base fr`" ; \
+	$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase.fr '$$path='$$path '$$langlinks='"$$langlinks" > $$base.fr.html-temp && (cat $$base.fr.html-temp | perl -p -e '$$| = 1; (s/Date://, s/Author:/par/, s/\$$//g) if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.fr.html) ; \
+	rm -f $$base.fr.html-temp
 
 $(DEPAGES): %.html: %.xhtml fsfe.xsl navigation.de.xsl
 	@$(ECHO) "Building $@ ..."; \

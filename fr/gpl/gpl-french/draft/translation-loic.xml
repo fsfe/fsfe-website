@@ -24,46 +24,39 @@
 	<email>arnaud@crao.net</email>
 	<organisation>N/A</organisation>
       </author>
-      <author>
-	<name>Sophie Manoury</name>
-	<email></email>
-	<organisation></organisation>
-      </author>
-      <author>
-	<name>Nat Makarévitch</name>
-	<email></email>
-	<organisation></organisation>
-      </author>
     </authorgroup>
     <abstract lang="fr">
+
       Ceci est une traduction non officielle de la GNU General Public
-      License en français. Elle n'a pas été publiée par la Free
-      Software Foundation, et ne détermine pas les termes de
-      distribution pour les logiciels qui utilisent la GNU GPL--seul
-      le texte anglais original de la GNU GPL en a le
-      droit. Cependant, nous espérons que cette traduction aidera les
-      francophones à mieux comprendre la GPL.
-      
-      Cette traduction est sous Copyright 2001 APRIL
-      (http://www.april.org).  La version la plus à jour de ce
+      License publiée par la Free Software Foundation (GNU GPL dans la
+      suite) en français. Cette traduction n'a pas été publiée par la
+      Free Software Foundation. Cette traduction ne peut en aucun cas
+      être substituée à la GNU GPL. Cette traduction ne détermine pas
+      le statut légal des logiciels concédés sous licence GNU GPL
+      (seule la version anglaise, c'est à dire la GNU GPL détermine
+      leur statut légal). La lecture de cette traduction ne peut en
+      aucun cas se substituer à la lecture de la GNU GPL: la lecture
+      de cette traduction ne permet pas de comprendre la GNU GPL, la
+      lecture de cette traduction ne permet pas au concédant ou au
+      concessionnaire d'une licence GNU GPL de comprendre les
+      conséquences de la GNU GPL.
+
+      Cette traduction est sous Copyright (C) 2001, 2002 APRIL
+      (http://www.april.org/).  La version la plus à jour de ce
       document est disponible sur <a
 	href="http://www.april.org/gnu/gpl_french.html">le site web
 	d'APRIL</a>.
 
       Il est permis à tout le monde de reproduire et distribuer des
-      copies conformes de cette traduction, mais aucune modification
-      ne doit y être apportée, et la présente notice doit être
-      préservée.  Nous autorisons la FSF à apporter toute modification
-      qu'elle jugera nécessaire pour rendre la traduction plus claire.
-    </abstract>
-    <abstract lang="en">
-      This is an unofficial translation of the GNU General Public
-      License into french. It was not published by the Free Software
-      Foundation, and does not legally state the distribution terms
-      for software that uses the GNU GPL--only the original English
-      text of the GNU GPL does that. However, we hope that this
-      translation will help french speakers understand the GNU GPL
-      better.
+      copies conformes de ce document, mais aucune modification ne
+      doit y être apportée. Ce document comporte une notice de droit
+      d'auteur (copyright), une notice de licence, un avertissement
+      sur le caratère non officiel de ce document et une traduction de
+      la GNU GPL. Une reproduction de la traduction de la GNU GPL doit
+      nécessairement être accompagnée de la notice de droit d'auteur
+      (copyright), de l'avertissement sur le caractère non officiel de
+      ce document et de la notice de license.
+      
     </abstract>
   </transinfo>
 
@@ -861,127 +854,148 @@
 
   <section>
     <title lang="en">How to Apply These Terms to Your New Programs</title>
-    <title lang="fr">Comment appliquer ces dispositions a vos nouveaux programmes?</title>
-    <notes>En l'abscence d'indications contraires, la version
-      d'Olivier Berger est utilisée.</notes> 
+    <title lang="fr">Comment Appliquer Ces Clauses A Vos Nouveaux Programmes</title>
     <para>
       <src>If you develop a new program, and you want it to be of the greatest possible use to the public, the best way to achieve this is to make it free software which everyone can redistribute and change under these terms.</src>
-      <dst> Si le concessionnaire développe un nouveau programme, et s'il en
-	souhaite l'utilisation la plus large possible dans le public, le
-	meilleur moyen d'y arriver est d'en faire un logiciel libre, que tout
-	le monde pourra redistribuer et modifier au titre des présentes
-	dispositions.</dst>
+      <dst> Si vous développez un nouveau programme, et si vous voulez qu'il soit de la plus grande utilité possible pour le public, le meilleur moyen d'y parvenir est d'en faire un Logiciel Libre que chacun peut redistribuer et modifier au titre des présentes clauses et conditions.</dst>
     </para>
 
     <para>
       <src>To do so, attach the following notices to the program. It is safest to attach them to the start of each source file to most effectively convey the exclusion of warranty; and each file should have at least the "copyright" line and a pointer to where the full notice is found.
       </src>
-      <dst>Dans ce but, il convient de rattacher au programme les avis suivants.
-	Le moyen le plus sûr consiste à les rattacher au début de chaque
-	fichier source, pour avertir le plus efficacement possible de
-	l'exclusion de garantie ; et chaque fichier doit comporter au moins la
-	ligne "copyright", et un pointeur indiquant où est localisée la
-	totalité de l'avis.</dst>
+      <dst>Pour ce faire, ajoutez les avis suivants au programme. Il
+	est plus sûr de les ajouter au début de chaque fichier source
+	pour faire comprendre le plus efficacement possible l'absence
+	de toute garantie; et chaque fichier devrait au moins contenir
+	la ligne "copyright" et une indication de l'endroit ou l'avis
+	complet peut être trouvé.
+      </dst>
     </para>
 
     <para>
-      <src>one line to give the program's name and an idea of what it does. Copyright (C) yyyy name of author. This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+      <src>
+    [one line to give the program's name and a brief idea of what it does.]
+    Copyright (C) [année]  [name of author]
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
       </src>
-      <dst> Une ligne pour donner le nom du programme et une idée de ce qu'il
+      <dst> Une ligne pour donner le nom du programme et une idée synthétique de ce qu'il
 	fait.
 
 	Copyright (C) 19yy nom de l'auteur
 
-	Ce programme est un logiciel libre ; vous pouvez le redistribuer et/ou
-	le modifier conformément aux dispositions de la Licence Publique
-	Générale GNU, telle que publiée par la Free Software Foundation ;
-	version 2 de la licence, ou encore (à votre choix) toute version
-	ultérieure.
+	Ce programme est un Logiciel Libre ; vous pouvez le
+	redistribuer et/ou le modifier au titre des clauses et
+	conditions de la Licence Publique Générale GNU, telle que
+	publiée par la Free Software Foundation ; soit la version 2 de
+	la Licence, ou (à votre discrétion) une version ultérieure
+	quelconque.
 
-	Ce programme est distribué dans l'espoir qu'il sera utile, mais SANS
-	AUCUNE GARANTIE ; sans même la garantie implicite de COMMERCIALISATION
-	ou D'ADAPTATION A UN OBJET PARTICULIER. Pour plus de détail, voir la
-	Licence Publique Générale GNU .
+	Ce programme est distribué dans l'espoir qu'il sera utile,
+	mais SANS AUCUNE GARANTIE ; sans même la garantie implicite de
+	QUALITE LOYALE ET MARCHANDE ou D'ADEQUATION A UN OBJETCTIF
+	PARTICULIER. Se référer à la Licence Publique
+	Générale GNU pour plus de détails.
 
-	Vous devez avoir reçu un exemplaire de la Licence Publique Générale
-	GNU en même temps que ce programme ; si ce n'est pas le cas, écrivez à
-	la Free Software Foundation Inc., 675 Mass Ave, Cambridge, MA 02139,
-	Etats-Unis.</dst>
+	Vous devriez avoir reçu un exemplaire de la Licence Publique
+	Générale GNU avec ce programme ; si ce n'est pas le cas,
+	écrivez à la Free Software Foundation Inc., 59 Temple Place,
+	Suite 330, Boston, MA 02111-1307 USA.</dst>
     </para>
 
     <para>
       <src>Also add information on how to contact you by electronic and paper mail.
       </src>
-      <dst>Ajoutez aussi des informations sur le moyen permettant d'entrer en
-	contact avec vous par courrier électronique (e-mail) et courrier
-	normal.</dst>
+      <dst>Ajoutez aussi des informations permettant de vous contacter
+	par courrier électronique (mèl) et courrier postal.</dst>
     </para>
 
     <para>
       <src>If the program is interactive, make it output a short notice like this when it starts in an interactive mode:
       </src>
-      <dst>Si le programme est interactif, prévoyez en sortie un court avis, tel
-	que celui qui est présenté ci-dessous, lors du démarrage en mode
-	interactif.
+      <dst>Si le programme est interactif, faites en sorte qu'il
+	émette un court avis tel que celui-ci lors qu'il démarre en
+	mode interactif:
       </dst>
     </para>
 
     <para>
-      <src>Gnomovision version 69, Copyright (C) yyyy name of author Gnomovision comes with ABSOLUTELY NO WARRANTY; for details type `show w'. This is free software, and you are welcome to redistribute it under certain conditions; type `show c' for details.
+      <src>
+    Gnomovision version 69, Copyright (C) year  name of author
+    Gnomovision comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
+    This is free software, and you are welcome to redistribute it
+    under certain conditions; type `show c' for details.
       </src>
-      <dst>Gnomovision version 69, Copyright (C) 19 yy nom de l'auteur
-
-	Gnomovision est livré absolument SANS AUCUNE GARANTIE ; pour plus de
-	détail, tapez "show w". Il s'agit d'un logiciel libre, et vous avez le
-	droit de le redistribuer dans certaines conditions ; pour plus de
-	détail, tapez "show c".</dst>
+      <dst>Gnomovision version 69, Copyright (C) année  nom de l'auteur
+	Gnomovision n'est accompagné d'AUCUNE GARANTIE ; pour plus de
+	détails tapez "show w". Ceci est un Logiciel Libre, et vous pouvez
+	le redistribuer sous certaines conditions ; pour plus de
+	détails tapez "show c".</dst>
     </para>
 
     <para>
       <src>The hypothetical commands `show w' and `show c' should show the appropriate parts of the General Public License. Of course, the commands you use may be called something other than `show w' and `show c'; they could even be mouse-clicks or menu items--whatever suits your program.
       </src>
-      <dst>Les instructions hypothétiques "show w" et "show c" doivent présenter
+      <dst>Les instructions hypothétiques "show w" et "show c" devraient présenter
 	les parties appropriées de la Licence Publique Générale. Bien
-	évidemment, les instructions que vous utilisez peuvent porter d'autres
-	noms que "show w" et "show c" ; elles peuvent même correspondre à des
-	clics de souris ou à des éléments d'un menu, selon ce qui convient à
+	entendu, les instructions que vous utilisez peuvent porter d'autres
+	noms que "show w" et "show c" ; elles peuvent même être des
+	clics de souris ou des éléments d'un menu, ou tout ce qui convient à
 	votre programme.</dst>
     </para>
 
     <para>
       <src>You should also get your employer (if you work as a programmer) or your school, if any, to sign a "copyright disclaimer" for the program, if necessary. Here is a sample; alter the names: 
       </src>
-      <dst>Si nécessaire, vous devrez aussi demander à votre employeur (si vous
-	travaillez en tant que programmeur) ou à votre éventuelle école ou
-	université, de signer une "renonciation à droit d'auteur" concernant
-	le programme. En voici un échantillon (il suffit de modifier les noms)
-	:
+
+      <dst>Vous devriez aussi faire en sorte que votre employeur (si
+	vous travaillez en tant que développeur) ou votre école, si
+	c'est le cas, signe une "renonciation à droit d'auteur"
+	concernant le programme, si c'est nécessaire. Voici un échantillon (changez
+	les noms):
       </dst>
     </para>
 
     <para>
-      <src>Yoyodyne, Inc., hereby disclaims all copyright interest in the program `Gnomovision' (which makes passes at compilers) written by James Hacker. signature of Ty Coon, 1 April 1989 Ty Coon, President of Vice
+      <src>
+  Yoyodyne, Inc., hereby disclaims all copyright interest in the program
+  `Gnomovision' (which makes passes at compilers) written by James Hacker.
+
+  [signature of Ty Coon], 1 April 1989
+  Ty Coon, President of Vice
       </src>
-      <dst>Yoyodyne, Inc., par la présente, renonce à tout intérêt de droits
-	d'auteur dans le programme "Gnomovision" (qui fait des passages au
-	niveau des compilateurs) écrit par James Hacker.
+      <dst>Yoyodyne, Inc., renonce par la présente à tout prétention
+	relative au droit d'auteur concernant le programme "Gnomovision" 
+	(qui fait des passes de compilation) écrit par James Hacker.
 
-	Signature de Ty Coon, 1er avril 1989
+	[signature de Ty Coon], 1er avril 1989
 
-	Ty Coon, President of Vice</dst>
+	Ty Coon, President du Vice</dst>
     </para>
 
     <para>
       <src>This General Public License does not permit incorporating your program into proprietary programs. If your program is a subroutine library, you may consider it more useful to permit linking proprietary applications with the library. If this is what you want to do, use the GNU Library General Public License instead of this License.
       </src>
-      <dst>La présente Licence Publique Générale n'autorise pas le
-	concessionnaire à incorporer son programme dans des programmes
+      <dst>La présente Licence Publique Générale n'autorise pas l'incorporatino de votre
+	programme dans des programmes
 	propriétaires. Si votre programme est une bibliothèque de
-	sous-programmes, vous pouvez considérer comme plus intéressant
-	d'autoriser une édition de liens des applications propriétaires avec
-	la bibliothèque. Si c'est ce que vous souhaitez, vous devrez utiliser
-	non pas la présente licence, mais la Licence Publique Générale pour
-	Bibliothèques GNU.</dst>
+	sous-programmes, vous pouvez considérer plus utile
+	d'autoriser l'édition de liens d'applications propriétaires avec
+	la bibliothèque. Si c'est ce que vous voulez faire, utilisez la
+	GNU Lesser General Public License au lieu de la présente Licence.
+      </dst>
     </para>
 
   </section>

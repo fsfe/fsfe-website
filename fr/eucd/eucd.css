@@ -13,6 +13,8 @@ h1 {
 
 ul { list-style: circle;  }
 
+
+
 span {
      font-weight: bold;
      font-size: 12pt;
@@ -51,3 +53,7 @@ address {
 p { 
     padding-left: 9px;
     }
+
+p.passe { 
+          color: #c0C0C0;
+ }

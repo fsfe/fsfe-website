@@ -381,7 +381,7 @@ handles the following domain names:
 <dd>with a document root at <code>/var/www/france.fsfeurope.org</code>
 that points to <code>/home/www/fsfe/fr</code>.
 
-<br><dt><code>www.france.fsfeurope.org, fr.fsf.org, www.fr.fsf.org</code>
+<br><dt><code>www.france.fsfeurope.org, fr.fsf.org, www.fr.fsf.org, fsffrance.org, www.fsffrance.org</code>
 <dd>with a redirect to france.fsfeurope.org
 
 </dl>
@@ -907,12 +907,24 @@ Up:<a rel=up href="#System">System</a>
 
 <h2>DNS</h2>
 
-<p>The DNS is handled by the GNU name servers. 
-The FSF France machine can be reached through the following names : <code>fr.fsfeurope.org</code>, <code>france.fsfeurope.org</code> or <code>fsffrance.org</code>.
+<p>The FSF France machine has a cannonical name of <code>fr.fsf.org</code>, this
+name should be used for the reverse.
 
-<p>The latter domain name (<code>fsffrance.org</code>) has been bought at <a href="http://www.gandi.net">GANDI</a>, a French registrar, and is owned by <a href="mailto:raph@r4f.org">Raphael Rousseau</a> who's the Administrative, Technical and Billing contact of this domain name.
+<p>Unless stated otherwise in the <code>/etc/bind/named.conf</code> file, all
+the domains use <code>ns1.gnu.org</code> as a primary name server and
+<code>ns1.fsffrance.org</code> as a secondary name server.
 
-<p>The primary and secondary name servers are respectively  <code>ns1.gnu.org</code> (<code>199.232.76.162</code>) and <code>sfi.santafe.edu</code> (<code>192.12.12.1</code>).
+<p><code>ns1.fsffrance.org</code> is used as a secondary name server for most
+Europe related domain names. It should not be used as a primary DNS,
+unless someone is willing to take the responsibility of taking care of
+it permanently.
+
+<p>The domain name <code>fsffrance.org</code> has been bought at
+<a href="http://www.gandi.net">GANDI</a>, a French registrar, and is owned by
+<a href="mailto:raph@r4f.org">Raphael Rousseau</a> who's the Administrative,
+Technical and Billing contact of this domain name.
+
+<p>The domain name <code>fsfeurope.org</code> is owned by <a href="mailto:greve@gnu.org">greve@gnu.org</a>Georg Greve.
 
 <p><hr>
 Node:<a name="Statistics">Statistics</a>,

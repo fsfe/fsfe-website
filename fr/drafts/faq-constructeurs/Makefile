@@ -218,14 +218,22 @@ fo-xsl-gnome-short: xml-xsl-short ${FO_SS_XSL} prepare-print
 	touch $@
 
 
+# Note that 2 recursion are necessary to get cross-references right.
+# Also "|| true" is needed because PassiveTeX returns some error status.
 pdf-xsl-gnome-long: fo-xsl-gnome-long prepare-print
 	(cd ${PRINT_OUT_DIR}; \
-	../pdfxmltex.sh ${FO_OUTPUT_LONG})
+	../pdfxmltex.sh ${FO_OUTPUT_LONG} || true; \
+	../pdfxmltex.sh ${FO_OUTPUT_LONG} || true \
+	)
 	touch $@
 
+# Note that 2 recursion are necessary to get cross-references right.
+# Also "|| true" is needed because PassiveTeX returns some error status.
 pdf-xsl-gnome-short: fo-xsl-gnome-short prepare-print
 	(cd ${PRINT_OUT_DIR}; \
-	../pdfxmltex.sh ${FO_OUTPUT_SHORT})
+	../pdfxmltex.sh ${FO_OUTPUT_SHORT} || true; \
+	../pdfxmltex.sh ${FO_OUTPUT_SHORT} || true \
+	)
 	touch $@
 
 latex-xsl-gnome-long: xml-xsl-long ${LATEX_SS_XSL} prepare-print

@@ -571,8 +571,9 @@
     <para>
       <src>These requirements apply to the modified work as a whole.
       </src>
-      <dst>Les exigences ci-dessus s'appliquent à l'ouvrage modifié
-	entier.</dst>
+      <dst>Ces obligations s'appliquent à l'ouvrage modifié
+	pris comme un tout.
+      </dst>
     </para>
 
     <para>
@@ -581,11 +582,13 @@
 	separate works in themselves, then this License, and its
 	terms, do not apply to those sections when you distribute them
 	as separate works.  </src>
-      <dst>Si des éléments identifiables de ce travail ne sont pas
-	dérivés du Programme et peuvent être raisonnablement
-	considérés comme indépendants, la présente Licence ne
-	s'applique pas à ces éléments lorsque Vous les distribuez
-	seuls.</dst>
+	<dst>Si des éléments identifiables
+	de cet ouvrage ne sont pas fondées sur le Programme et peuvent
+	raisonnablement être considérées comme des ouvrages indépendants 
+	distincts en eux mêmes, alors la présente Licence et
+	ses conditions ne
+	s'appliquent pas à ces éléments lorsque vous les distribuez
+	en tant qu'ouvrages distincts.</dst>
     </para>
 
     <para>
@@ -612,11 +615,21 @@
 	the intent is to exercise the right to control the
 	distribution of derivative or collective works based on the
 	Program.</src>
-      <dst>Cet article n'a pas pour but de s'approprier ou de
-	contester vos droits sur un travail entièrement réalisé par
-	Vous, mais plutôt d'ouvrir droit à un contrôle de la libre
-	distribution de tout travail dérivé ou collectif basé sur le
-	Programme.</dst>
+      <dst>Par conséquent, l'objet du présent article n'est pas de revendiquer des droits
+        ou de contester vos droits sur un ouvrage entièrement écrit par
+	vous; son objet est plutôt d'exercer le droit de contrôler
+	la distribution d'ouvrages dérivés ou d'ouvrages collectifs fondés
+	sur le Programme.
+	</dst>
+      <notes>
+	"this" est traduit par "le présent" au lieu de "cet" car équivalent
+	et "le présent" lève une ambiguïté.
+
+	"intent" dans le contexte d'un article désigne l'"objet" d'un article
+	et non une "intention" qui n'a aucune signification juridique et
+	suppose une volonté propre de l'article qui ne correspond à aucune
+	réalite.
+      </notes>
     </para>
 
     <para>
@@ -625,11 +638,23 @@
 	Program with the Program (or with a work based on the Program)
 	on a volume of a storage or distribution medium does not bring
 	the other work under the scope of this License.</src>
-      <dst>En outre, tout assemblage d'un autre travail, non basé sur
-	le Programme, avec le Programme (ou avec un travail dérivé de
-	ce dernier), effectuée sur un support de stockage ou de
-	distribution, ne fait pas tomber cet autre travail sous le
-	contrôle de la Licence.</dst>
+
+
+      <dst>
+	De plus, la simple proximité du Programme avec un autre
+        ouvrage qui n'est pas fondé sur le Programme (ou un ouvrage
+        fondé sur le Programme) sur une partition d'un espace de
+        stockage ou un support de distribution ne place pas cet autre
+        ouvrage dans le champ d'application de la présente Licence.
+      </dst>
+
+      <notes>
+	"mere aggregation" est traduit par "simple proximité" car le
+	terme "aggregation" en français contient une forte idée de
+	fusion alors que la signification de "mere aggregation" en 
+	anglais est précisément d'exclure tout idée de fusion entre
+	les deux programmes dont il est question.
+      </notes>
     </para>
 
     <para>
@@ -637,10 +662,13 @@
 	under Section 2) in object code or executable form under the terms of
 	Sections 1 and 2 above provided that you also do one of the following:
       </src>
-      <dst>3. Vous pouvez copier et distribuer le programme (ou un travail dérivé
-	selon l'article 2) sous forme de code objet ou exécutable, selon les
-	termes des articles 1 et 2 ci-dessus, à condition de respecter les
-	clauses suivantes :</dst>
+
+      <dst>3. Vous pouvez copier et distribuer le Programme (ou un
+        ouvrage fondé sur lui, selon l'Article 2) sous forme de code
+        objet ou d'exécutable, selon les termes des Articles 1 et 2
+        ci-dessus, à condition que vous accomplissiez l'un des points
+        suivants :</dst>
+
     </para>
 
     <para>
@@ -648,10 +676,11 @@
 	source code, which must be distributed under the terms of Sections
 	1 and 2 above on a medium customarily used for software interchange; or,
       </src>
-      <dst> a) Que la distribution soit accompagnée du code source complet du
-	programme, sous une forme lisible par un ordinateur, et cela selon
-	les termes des articles 1 et 2 ci-dessus, sur un support
-	habituellement utilisé pour l'échange de données ; ou,</dst>
+      <dst>a) L'accompagner de l'intégralité du code source correspondant,
+	sous une forme lisible par un ordinateur, lequel doit être distribué
+	au titre
+	des termes des Articles 1 et 2 ci-dessus, sur un support
+	habituellement utilisé pour l'échange de logiciels; ou,</dst>
     </para>
 
     <para>
@@ -662,11 +691,15 @@
 	distributed under the terms of Sections 1 and 2 above on a medium
 	customarily used for software interchange; or,
       </src>
-      <dst> b. Le concessionnaire doit faire en sorte que tout ouvrage qu'il
-	distribue ou publie, et qui, en totalité ou en partie,
-	contient le programme ou une partie quelconque de ce dernier
-	ou en dérive, soit concédé en totalité, à titre gracieux, à tous
-	tiers au titre des dispositions de la présente licence.
+
+      <dst>b) L'accompagner d'une proposition écrite, valable pendant
+         au moins trois ans, de fournir à tout tiers, à un tarif qui
+         ne soit pas supérieur à ce que vous coûte l'acte physique de
+         réaliser une distribution source, une copie intégrale du code
+         source correspondant sous une forme lisible par un
+         ordinateur, qui sera distribuée au titre des termes des
+         Articles 1 et 2 ci-dessus, sur un support habituellement
+         utilisé pour l'échange de logiciels; ou,
       </dst>
     </para>
 
@@ -677,20 +710,11 @@
 	received the program in object code or executable form with such
 	an offer, in accord with Subsection b above.)
       </src>
-      <dst> c. Si le programme modifié lit normalement des instructions
-	interactives lors de son exécution, le concessionnaire doit,
-	quand il commence l'exécution du programme pour une telle
-	utilisation interactive de la manière la plus usuelle, faire
-	en sorte que ce programme imprime ou affiche une annonce,
-	comprenant un avis approprié de droits d'auteur, et un avis
-	selon lequel il n'y a aucune garantie (ou la garantie que vous vous engagez à fournir vous même), et que les
-	utilisateurs peuvent redistribuer le programme au titre de
-	ces dispositions, et disant à l'utilisateur comment
-	visualiser une copie de cette licence (exception : si le
-	programme par lui-même est interactif mais n'imprime
-	normalement pas une telle annonce, l'ouvrage du
-	concessionnaire se fondant sur le programme n'a pas besoin
-	d'imprimer une annonce).
+      <dst>c) L'accompagner des informations reçues par vous concernant la proposition de distribution du code source correspondant. (Cette
+      solution n'est autorisée que dans le cas d'une distribution non-commerciale
+      et seulement si vous avez reçu le programme sous forme de code objet ou
+      d'éxécutable accompagné d'une telle proposition - en conformité avec le 
+      sous-Article b ci-dessus.)
       </dst>
     </para>
 
@@ -706,15 +730,30 @@
 	operating system on which the executable runs, unless that component
 	itself accompanies the executable.
       </src>
-      <dst> Le code source d'un travail désigne la forme de cet ouvrage sous
-	laquelle les modifications sont les plus aisées. Ceci désigne la
-	totalité du code source de tous les modules qui composent un programme
-	exécutable, plus tout éventuel fichier d'interface associé, ainsi
-	que les scripts utilisés pour effectuer la compilation et
-	l'installation du programme exécutable. Toutefois, il est fait
-	exception de tout ce qui fait partie des composants majeurs du système d'exploitation utilisé (source ou binaire)
-	comme les compilateurs, bibliothèques, noyau, etc. Sauf si ces
-	éléments sont aussi diffusés avec le programme exécutable.</dst>
+
+      <dst>Le code source d'un ouvrage désigne la forme favorite pour
+        travailler à des modifications de cet ouvrage.  Pour un
+        ouvrage exécutable, le code source intégral désigne la
+        totalité du code source de la totalité des modules qu'il
+        contient, ainsi que les éventuels fichiers de définition des
+        interfaces qui y sont associés, ainsi que les scripts utilisés
+        pour contrôler la compilation et l'installation de
+        l'exécutable. Cependant, par exception spéciale, le code
+        source distribué n'est pas censé inclure quoi que ce soit de
+        normalement distribué (que ce soit sous forme source ou
+        binaire) avec les composants principaux (compilateur, noyau,
+        et autre) du système d'exploitation sur lequel l'exécutable
+        tourne, à moins que ce composant lui-même n'accompagne
+        l'exécutable.
+     </dst>
+
+      <notes>
+	"means" traduit en "désigne" au lieu de signifie car il ne s'agit pas
+	réellement d'une définition qui accorde une signification au mot, c'est
+	un terme qui va faire référence à quelque chose. Moins abstrait que 
+	signification et colle mieux au. C'est une description plus qu'une
+	définition.
+      </notes>
     </para>
 
     <para>
@@ -724,12 +763,22 @@
 	distribution of the source code, even though third parties are not
 	compelled to copy the source along with the object code.
       </src>
-      <dst>Si la distribution de l'exécutable ou du code objet consiste à offrir
-	un accès permettant de copier le programme depuis un endroit
-	particulier, alors l'offre d'un accès équivalent pour se procurer le
-	code source au même endroit compte comme une distribution de ce code
-	source, même si l'utilisateur choisit de ne pas profiter de cette
-	offre.</dst>
+      <dst>
+        Si distribuer un exécutable ou un code objet consiste à
+	offrir un accès permettant leur copie depuis un
+	endroit particulier, alors l'offre d'un accès équivalent pour
+	copier le code source depuis le même endroit compte comme une
+	distribution du code source - même si les tiers ne sont pas
+	contraints de copier le source en même temps que le code
+	objet.
+      </dst>
+
+      <notes>
+	"leur copie" contient une information supplémentaires par rapport
+	à "to copy" mais l'implicite est fort dans la version anglaise
+	et l'est moins dans la version française si on traduit par "la copie",
+	en partie parceque l'on utilise pas un verbe.
+      </notes>
     </para>
 
     <para>
@@ -741,16 +790,30 @@
 	this License will not have their licenses terminated so long as such
 	parties remain in full compliance.
       </src>
-      <dst>4. Vous ne pouvez pas copier, modifier, concéder en sous licence, déposer, ou distribuer
-	le programme, d'une autre manière que l'autorise la Licence Publique
-	Générale. Toute tentative de copier, modifier, céder, déposer, ou
-	distribuer le programme différemment, annulera immédiatement vos
-	droits d'utilisation du programme sous cette Licence. Toutefois, les
-	tiers ayant reçu de vous des copies du programme ou le droit
-	d'utiliser ces copies, continueront à bénéficier de leur droit
-	d'utilisation tant qu'ils respecteront pleinement les conditions de
-	cette Licence Publique Générale.</dst>
-      <notes>L'une des deux versions comporte pour l'article 4 6 paragraphes contre 1 seul pour l'autre version ...</notes>
+      <dst>4. Vous ne pouvez copier, modifier, concéder en sous-licence, ou distribuer
+	le Programme, sauf tel qu'expressément prévu par la présente Licence.
+	Toute tentative de copier, modifier, concéder en sous-licence, ou
+	distribuer le Programme d'une autre manière est réputée non valable, et met
+	immédiatement fin à vos droits au titre de la présente Licence. 
+	Toutefois, les
+	les tiers ayant reçu de vous des copies, ou des droits,
+	au titre de la présente Licence ne verront pas leurs autorisations résiliées
+	aussi longtemps que ledits tiers se conforment pleinement à elle.
+	</dst>
+
+      <notes>
+	"provided" ajoute un sens de "fournir" etc. Mais cette sorte de jeu
+	de mot ne peut pas se retranscrire en français et la perte n'est pas
+	essentielle.
+
+	"void" se traduit en "non valable" car non autorisée, que l'on peut
+	considérer comme ne s'étant pas produite ...
+
+	"licenses" doit se comprendre comme l'ensemble des droits que donne
+	la licence et non comme les licenses (au sens de ce document)
+
+	"à elle" corrige une ambiguïté qui existe dans la phrase anglaise
+      </notes>
     </para>
 
     <para>
@@ -763,16 +826,38 @@
 	all its terms and conditions for copying, distributing or modifying
 	the Program or works based on it.
       </src>
-      <dst> 5. Le concessionnaire ne peut dupliquer, modifier, concéder en
-	sous-licence ou distribuer le programme d'une autre manière que ne l'autorise la présente licence.
-	Toute tentative pour autrement dupliquer, modifier, concéder en
-	sous-licence ou distribuer le programme est réputée nulle, et met
-	automatiquement fin aux droits du concessionnaire au titre de la
-	présente licence. Cependant, les parties qui ont reçu des copies,
-	ou des droits, de la part du concessionnaire au titre de la
-	présente licence, ne verront pas expirer leur contrat de licence,
-	tant que ces parties agissent d'une manière parfaitement conforme.</dst>
-      <notes>"ou des droits" semble discutable</notes>
+
+      <dst>5. Vous n'êtes pas obligé d'accepter la présente Licence étant donné que  vous ne
+        l'avez pas signée. Cependant, rien d'autre
+	ne vous accorde l'autorisation de modifier ou 
+	distribuer le Programme ou les ouvrages fondés sur lui. Ces actions sont
+	interdites par la loi si vous n'acceptez pas la présente Licence. 
+	En conséquence, en modifiant ou 
+	distribuant le Programme (ou un ouvrage quelconque fondé sur
+	le Programme), vous signifiez votre acceptation de la présente Licence en le faisant, 
+	et de toutes ses conditions concernant la copie, la
+	distribution ou la modification du Programme ou d'ouvrages fondés
+	sur lui.</dst>
+
+      <notes>
+	"License to do so" est une astuce en anglais intraduisible
+	telle quelle "license to" signifie "permission de" et
+	"License" fait référence à la licence elle même. En anglais on
+	cumule donc une phrase intelligible avec une référence
+	précise. En français il est donc nécessaire de traduire en
+	utilisant une formule moins compacte et plus lourde.
+
+	"fondés sur lui" au lieu de "qui en dérivent" est plus
+	élégant. Le choix dans la version anglaise de dire "derivative
+	works" au lieu de "works based on it" ne relève pas d'un choix
+	de véhiculer un sens différent. On trouve plus haut dans la
+	licence la définition de "work based on the programme" qui
+	lève toute ambiguïté possible qui proviendrait de la
+	signification juridique précise de "dérivé" qui n'est pas
+	partagée par "fondé". Il ne serait pas possible de prétendre
+	que "fondé" n'est pas une oeuvre "dérivée", la définition lève
+	toute possibilité de cet ordre.
+      </notes>
     </para>
 
     <para>

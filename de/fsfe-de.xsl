@@ -11,6 +11,7 @@
 	    indent="yes"
 	    />
 
+  <xsl:param name="fsffrance">http://france.fsfeurope.org</xsl:param>
   <xsl:param name="fsfgermany">http://germany.fsfeurope.org</xsl:param>
   <xsl:param name="fsfeurope">http://www.fsfeurope.org</xsl:param>
   <xsl:param name="fsf">http://www.fsf.org</xsl:param>

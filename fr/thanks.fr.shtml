@@ -5,22 +5,27 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
     <link rel="stylesheet" type="text/css" href="/blue.css">
-    <title>TITLE</title>
+    <title>FSF France - Merci !</title>
   </head>
   <body topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0" marginheight="0" marginwidth="0">
 
-<!--#include virtual="header.en.html"-->
+<!--#include virtual="header.fr.html"-->
 <center>
 [
 <!-- Please keep this list alphabetical -->
-  English | <a href="birth.fr.shtml">French</a>
+  Français
 ]
 </center>
 <p />
-	    This rocks.
-<!--#include virtual="footer.en.html"-->
 
-  Updated:
+<ul>
+<li><a href="http://www.nevrax.com/">Nevrax</a> pour l'hébergement de
+la machine <a href="http://france.fsfeurope.org/">france.fsfeurope.org</a>.
+</ul>
+
+<!--#include virtual="footer.fr.html"-->
+
+  Mis à jour:
 <!-- timestamp start -->
 $Date: 2001-04-16 15:59:49 $ $Author: loic $
 <!-- timestamp end -->

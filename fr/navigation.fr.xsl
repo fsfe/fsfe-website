@@ -83,6 +83,7 @@ icon links to the top of the hub's site -->
 	      <td>
 		<a href="http://fsf.org.in/" class="T2">Inde</a> <br />
 		<a href="http://www.gnulinux.org.mx/" class="T2">Mexique</a> <br />
+		<a href="http://www.ansol.org/" class="T2">Portugal</a> <br />
 		<a href="http://www.gnu.cz/" class="T2">République Tchèque</a> <br />
 	      </td>
 	    </tr>

@@ -1,6 +1,9 @@
 MAKEINFO = makeinfo
 
-all: sysadmin-france.html
+all: sysadmin-france.en.html
 
-sysadmin-france.html: sysadmin-france.texi
-	$(MAKEINFO) --html $<
+%.html: %.texi
+	$(MAKEINFO) --output $@ --html $<
+	perl -pi -e '$$_ = "" if((/<html/ .. /<body/) || /body>/)' $@
+
+.SUFFIXES: .html .texi

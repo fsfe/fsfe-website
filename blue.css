@@ -1,7 +1,12 @@
-BODY      	{	font-family: Helvetica, Verdana; 
+BODY      	{	font-family: Helvetica, Verdana;
 			font-size: 13px; 
 			background: #FFFFFF; 
-			color: #000000 }
+			color: #000000
+			margin-left: 0px;
+			margin-right: 0px;
+			margin-top: 0px;
+			margin-bottom: 0px;
+			}
 
 A.T1      	{ font-size: 13px; font-weight: bold; color: #FFFFFF; text-decoration: none }
 A.T2      	{ font-size: 13px; font-weight: bold; color: #FFFFFF; text-decoration: none }

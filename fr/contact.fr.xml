@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE webpage PUBLIC "-//laespiral.org//DTD LE-document 1.1//EN"
+   "LE-document-1.1.dtd" [<!ENTITY menu SYSTEM "menu.xml">] >
+<webpage lang="fr">
+  <title>FSF France - Contact</title>
+  <translations>
+    <language>Français</language>
+  </translations>
+  <variablelist>
+    <varlistentry>
+      <term>Adresse Postale</term>
+      <listitem>
+	<simplelist cols="1" type="horiz">
+	  <member>8 rue Riant</member>
+	  <member>93200 Saint Denis</member>
+	  <member>France</member>
+	</simplelist>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>Président (Chancellor)</term>
+      <listitem>
+	<para>
+	  Frédéric Couchet <ulink
+	  url="mailto:couchet@fsfeurope.org">couchet@fsfeurope.org</ulink>
+	</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>Secrétaire (Vice Chancellor)</term>
+      <listitem>
+	<para>
+	  Raphaël Rousseau <ulink
+	  url="mailto:raph@r4f.org">raph@r4f.org</ulink>
+	</para>
+      </listitem>
+    </varlistentry>
+    <varlistentry>
+      <term>Trésorier</term>
+      <listitem>
+	<para>
+	  Loïc Dachary <ulink
+	  url="mailto:dachary@fsfeurope.org">dachary@fsfeurope.org</ulink>
+	</para>
+      </listitem>
+    </varlistentry>
+  </variablelist>
+  &menu;
+</webpage>

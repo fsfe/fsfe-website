@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="fr">
+  <head>
+    <title>LSM: Glasnost, Logiciel Libre pour la démocratie électronique</title>
+  </head>
+  <body>
+
+    <div> <!-- The header will be inserted here -->
+      <center>
+	[
+	<!-- Please keep this list alphabetical -->
+	English
+	]
+      </center>
+      <p />
+      <blockquote>
+
+	<center><h2>LSM: Glasnost, Logiciel Libre pour la démocratie électronique</h2></center>
+
+	<img src="article2002-07-12-01/emmanuel-raviart.jpg" alt="Emmanuel Raviart" align="left" />
+	<p>
+	  Conférence 12 Juillet 2002 aux <a
+	  href="http://lsm.abul.org/">LSM</a> par Emmanuel Raviart.
+	</p>
+
+	<p>
+	  Le vote électronique implique un haut niveau de sécurité et
+	  de cryptage. Le cryptage est résolu, c'est un problème
+	  maîtrisable. L'anonymat et la confiance: il faut s'assurer
+	  que, quelque soit le mode de scrutin, on reste anonyme. Mais
+	  il faut aussi que l'on puisse retrouver le bulletin lors du
+	  dépouillement. Lorsque l'informatique s'en mêle, c'est bien
+	  beau de dire qu'il est dans l'urne virtuelle mais comment
+	  vérifier. Il faut donc que le système propose de montrer que
+	  le bulletin est encore la après le dépouillement, sans
+	  compromettre l'anonymat.
+	</p>
+
+	<p>
+	  Comment s'assurer que le bulletin n'a pas été dupliqué ?
+	  Comment s'assurer que deux bulletin n'ont pas été fusionné ?
+	  Tout cela est très compliqués et les normes n'existe
+	  pas. L'OASIS (DocBook) a commencé une
+	  normalisation. Première réunion cette année mais c'est très
+	  récent. 
+	</p>
+
+	<p>
+	  Il y a une solution propriétaire qui "résoud tout". Par exemple election.com qui est un partenariat avec Accenture. Ils proposent d'héberger des élections. Il n'y a aucune information sur leur protocole.
+	</p>
+
+	<ul>
+	  <li>accurate</li>
+	  <li>fast</li>
+	  <li>reliable</li>
+	  <li>transparent</li>
+	  <li>secure</li>
+	  <li>affordable</li>
+	</ul>
+
+	<p>
+	  Il faut les croire sur parole. Ces solutions ont été
+	  refusées par la CNIL. Dans un cas c'est l'hébergement aux US
+	  qui a posé problème. Dans un autre cas le vote se faisait
+	  par Internet ce qui ne permet pas de savoir si la personne
+	  vote bien et non son conjoint. Dans un autre cas l'anonymat
+	  n'était pas garantit, il fallait séparation entre la phase
+	  d'identification et la phase de vote. Après identification
+	  un jeton anonyme est donné qui permet de voter. Il ne faut
+	  donc pas pouvoir interroger le serveur qui donne les jetons.
+	</p>
+
+	<p>
+	  La CNIL a tout de même donné un avis favorable mais mitigé
+	  sur les solutions de vote sur place (e-poll). En France les
+	  élections sont très contrôllées. Contrairement aux états
+	  unis ou il est possible de voter par téléphone ou sms. Mais
+	  le problème lors des élections de Mr Bush ont relancé le
+	  débat.  Chaque semaine des systèmes de votes électronique
+	  sont remis en question.
+	</p>
+
+	<p>
+	  GnuFree est un projet Logiciel Libre, écrit en Java. Il ne
+	  peut y avoir d'identification sérieuse avec un simple
+	  browser web.  Il faut qu'une partie de l'application tourne
+	  sur le poste client. C'est un projet qui commence à marcher.
+	  Ils se demande récemment si le vote électronique est une
+	  solution, suite à sa participation à la standardisation.
+	</p>
+
+	<p>
+	  En conclusion le vote électronique n'est pas pour aujourd'hui.
+	  C'est trop tôt. Cela va prendre des années.
+	</p>
+
+	<p>
+	  Lors du 3ieme forum mondial de l'e-democracy avec un panel
+	  prestigieux (CEO et Elus) qui expliquait que le vote était
+	  sur car utilisant des clés SSL 128 que peuvent decrypter les
+	  états.
+	</p>
+
+	<p>
+	  L'informatique apporte d'autre systèmes de vote, non
+	  institutionels. Je vais vous montrer comment l'informatique
+	  permet de voter dans des cas ou on ne votait pas auparavant.
+	</p>
+
+	<p>
+	  Les types de scrutin:
+	</p>
+
+	<ul>
+	  <li>Scrutin uninominal à deux tours (d'un point de vue mathématique ce n'est pas une bonne méthode)</li>
+	  <li>Scrutin un seul tour proportionel</li>
+	  <li>ils sont tous assez compliqués et varient de pays en pays</li>
+	</ul>
+
+	<p>
+	  La méthode optimum est celle qui désigne le candidat le plus
+	  consensuel. Condorcet avait dit que le vainqueur devrait
+	  être celui qui bat chaque autre candidat en duel. Or le
+	  scrutin uninominal a deux tour ne respecte pas ce principe.
+	</p>
+
+	<p>
+	  Par exemple élections présidentielles. Chirac, Mitterand,
+	  Barre et pourtant le candidat le plus consensuel était
+	  Barre. Au dernières élections les deux derniers candidats
+	  dont en majorité les gens ne voulaient pas.
+	</p>
+
+	<p>
+	  La méthode condorcet respected le critère condorcet. Chaque
+	  votant classe les candidats par ordre de préférence. Lors du
+	  dépouillement, chaque candidat est comparé à chacun des
+	  autres. Si un candidat A arrive plus souvent devant un
+	  candidat B que le contraire il gagne son duel. Le vainqueur
+	  selon la méthode condorcet est celui qui gagne tout ces
+	  duels. S'il n'existe pas de vainqueur par la méthode
+	  condorcet (aucun candidat ne gagne tout ses duels) il existe
+	  plusieurs méthodes plus ou moins arbitraire pour trancher.
+	  On peut par exemple garder celui qui a perdu avec le moins 
+	  d'écart.
+	</p>
+
+	<p>
+	  Lors des dernières élections présidentielles aux US. Les
+	  gens auraient typiquement fait "Bush, Nader, Gore" ou "Gore,
+	  Nader, Bush" d'ou il serait ressortit que Nader était le
+	  candidat le plus consensuel. En france le scrutin encourage
+	  le bipartisme, il empêche typiquement la création d'un parti
+	  centriste. Si on basculait sur la méthode condorcet cela
+	  boulverserait le monde politique. Ce n'est pas ce que je
+	  propose (rires).
+	</p>
+
+	<p>
+	  Présentation d'un exemple de vote dans une entreprise.
+	  Le sujet était d'adhérer à une coopérative d'entreprises
+	  multimédia. Trois candidats : Oui, Non, Refus du vote. 
+	  (graphique présentant les résultats et commentaires).
+	</p>
+
+	<p>
+	  Christian Bac: quelles sont vos expériences ? 
+	</p>
+
+	<p>
+	  Emmanuel Raviart: sur 30 élections, un seul cas n'a pas
+	  présenté de gagnant et nous avons du trancher
+	  arbitrairement.
+	</p>
+
+	<p>
+	  Les autres types de scrutin:
+	</p>
+
+	<ul>
+	  <li>
+	    Votre par assentiment. On choisit autant de candidat qu'on
+	    veut, on peut mettre plusieurs de bulletin dans l'urne et
+	    cela donne un résultat qui est très proche du vote
+	    condorcet. Il est plus simple que le vote condorcet.
+	  </li>
+
+	  <li>
+	    Méthode de Régnier. Vote selon un code couleur, plusieurs
+	    élections en parallèle, tris des votes par couleurs, les
+	    couleurs différentes des autres peuvent indiquer une
+	    information. C'est pour la prise de décision en travail de
+	    groupe. Les salariés décident du packaging d'un produit et
+	    les salariés décident. On soumet les salariés un jeu de
+	    question. Ils donnent une note à chaque question (couleur
+	    du vert au rouge). Les bulletins de vote sont triés par
+	    couleur et par candidat. Il s'agit d'une sorte de
+	    processus d'aide à la décision.
+	  </li>
+	</ul>
+
+	<p>
+	  Easter-Eggs est une société de service en Logiciel Libre
+	  détenue par les salariés. Pour que les salariés soient
+	  propriétaires de l'entreprise, l'association des salaries de
+	  l'entreprise a racheté l'entreprise et chaque employé est
+	  membre de l'association. Il ne fallait pas que les
+	  fondateurs aient plus de droits que les salariés
+	  nouvellement arrivés. C'est un mécanisme qui évite le
+	  mécanisme de capital. L'appartenance à l'association est
+	  conditionné à l'appartenance à l'entreprise.
+	</p>
+
+	<p>
+	  Easter-Eggs n'a pas besoin de capital, les seuls couts sont
+	  les salaires. Il y a une hiérarchie mais il y a une
+	  nécessité d'informer et de prendre des décisions
+	  collectives. La première année c'est facile mais quand on
+	  grossit c'est compliqué car il faut être présent aux
+	  réunions, on peut être distrait ou en télé-travail. C'est
+	  pour cela que nous avons développé Glasnost
+	  (information/décision).
+	</p>
+
+	<p>
+	  Depuis ma présentation de l'année dernière, fin 2001
+	  theridion.com, en ce moment codelutin.com et bientôt
+	  genetux.com se sont crées sur le même principe. Comment
+	  partager avec eux ? Nous n'avons pas de capitaux à mettre,
+	  comment s'entraider ? Nous avons décidé de partager toute
+	  l'information dont nous disposons avec les autres
+	  entreprises (comptabilité, base commerciale etc.) à l'unique
+	  condition qu'il fasse exactement la même chose avec nous.
+	</p>
+
+	<p>
+	  On utilise les même outils techniques et l'échange
+	  marche. Nous nous comportons comme une multi-nationale avec
+	  une structure différente. Avec ces entreprises soeur, le
+	  mécanisme de prise de décision est devenu encore plus
+	  complexe.
+	</p>
+
+	<p>
+	  On a développé une idée de vote permanent. Je voudrais
+	  prendre une décision (participer au réseau étoile). On a
+	  décidé mais les choses évolues et on peut changer d'avis.
+	  Si on fait un vote unique cela ne correspond pas, on a pris
+	  une décision qui ne peut plus basculer. Le vote permanent
+	  s'étale sur une pèriode. Le vote peut être changé à tout
+	  moment. C'est comme une succéssion de vote suivit d'un
+	  sondage.
+	</p>
+
+	<p>
+	  Exemple sur l'égalité des salaires à l'intérieur de
+	  Easter-Eggs.
+	</p>
+
+	<p>
+	  Vote public ou vote secret ? Pour le respect de la vie
+	  privée c'est essentiel. Le vote public a des avantages dans
+	  une entreprise ou dans un groupe. Cela permet de se
+	  connaitre. Certain ne parlent pas ou sont absent. Le fait de
+	  connaitre le vote des gens est important parce que c'est un
+	  moyen d'expression. Comment trancher entre les deux ? On a
+	  décidé de choisir l'un ou l'autre. On a proposé que certains
+	  puissent choisir de garder leur vote anonyme.
+	</p>
+
+	<p>
+	  Exemple qui ne marche pas. On a eu un débat sur le mode de
+	  scrutin et nous avons eu un vote pour trancher. 
+	</p>
+
+	<ul>
+	  <li>Bulletins publics ou privés au choix du votant pour toutes les élections</li>
+	  <li>Nature des bulletins choisie au cas par cas.</li>
+	  <li>etc.</li>
+	</ul>
+
+	<p>
+	  Dans ce cas une seule personne a choisit de rester anonyme
+	  ... donc il n'était pas anonyme. Mais ce n'est pas très
+	  grave car il n'y a pas d'enjeux.
+	</p>
+
+	<p>
+	  Dans un autre exemple il s'agissait d'élire quelque. Deux
+	  candidats et pratiquement tout le monde a voté en
+	  anonyme car il y avait un enjeux. Cela a marché.
+	</p>
+
+	<p>
+	  Le vote public entraine la nécessité de motiver son vote,
+	  donc des commentaires associés au vote. Un commentaire peut
+	  être associé à un vote anonyme ... mais c'est un risque de
+	  ne plus être anonyme ;-)
+	</p>
+
+	<p>
+	  C'est le jeton qui permet de retrouver le vote et d'être
+	  anonyme. Faire un vote normal anonyme c'est facile tant
+	  qu'il ne s'agit pas de vote permanent.
+	</p>
+
+	<p>
+	  Dans un vote on réfléchit au moment de voter, d'après mon
+	  expérience. On essaye d'en discuter avant mais c'est à la
+	  dernière minute qu'on y pense vraiment. On peut se rendre
+	  compte à postériori qu'il faut permettre au gens de voter et
+	  changer leur vote. Il est nécessaire que la période de
+	  scrutin soit assez longue.
+	</p>
+
+	<p>
+	  La plupart des élections sont en vote permanent. On connait
+	  le résultat actuel et on developpe une stratégie de
+	  vote. Quand on faisait l'élection du gérant, le
+	  dépouillement avait lieu après le scrutin. Mais l'usage du
+	  vote permanent a rendu ce processus frustrant. On préfère
+	  voter en sachant ce qui se passe. C'est contraire a la
+	  logique car la théorie dit qu'il ne faut pas faire de
+	  stratégies de vote.
+	</p>
+
+	<p>
+	  Par exemple, je fais une démo de Glasnot à un élu vert. Ils
+	  ont fait remarquer que le développement de stratégies de
+	  vote évite des situations absurdes auquels ils ont été 
+	  confrontés.
+	</p>
+
+	<p>
+	  Certaines décisions se concernent des problèmes spécialisés
+	  (décisions commerciales, l'avis des commerciaux doit être
+	  prépondérant sauf si cette décision concerne tout le
+	  monde). Il y a une nécessité de pondérer le "poids" des
+	  électeurs en fonction des domaines.
+	</p>
+
+	<p>
+	  Une première solution est le vote par pondération. La
+	  compétence de chacun donne un poid proportionel dans le
+	  vote. Chaque personne a une note dans différents
+	  domaines. Cela ne marche pas : car la plupart des personnes
+	  ont une mauvaise note, voter avec une pondération proche de
+	  zéro, c'est démotivant. On se retrouve avec une élite qui
+	  regroupe tout le pouvoir de vote et cela démotive totalement
+	  les autres.
+	</p>
+
+	<p>
+	  Une autre solution est le vote par délégation (pas encore
+	  implémenté dans Glasnost). Chaque électeur peut déléguer son
+	  vote à un ou plusieurs personnes dans un
+	  domaine. Possibilité de reprendre sa délégation à tout
+	  moment.
+	</p>
+
+	<p>
+	  Les avantages de l'e-vote.
+	</p>
+
+	<ul>
+	  <li>
+	    Décision rapdie (une élection peut-être terminée en deux
+	    jours)
+	  </li>
+
+	  <li>Subsidiarité (Ex: Reversement de 2% du CA
+	  au libre et à l'économie solidaire)</li>
+
+	  <li>Voter c'est réfléchir</li>
+	  
+	</ul>
+
+	<p>
+	  Voter ne suffit pas. Il faut aussi connaitre l'information
+	  et pouvoir en débattre. Glasnost permet aussi d'écrire des
+	  articles web avec une syntaxe très simple, d'écrire des
+	  brèves, de gérer les droits d'écriture et de lecture, de
+	  susciter et gérer des débats, de suivre les finances et la
+	  comptabilité de l'entreprise.
+	</p>
+
+	<p>
+	  (fin avec démonstration de Glasnost)
+	</p>
+	
+	<p/>
+	<i><a href="mailto:loic@gnu.org">Loïc Dachary</a></i>
+	<p/>
+      </blockquote>
+    </div> <!-- The footer will be inserted here -->
+
+    Mis à jour:
+    <!-- timestamp start -->
+    $Date$ $Author$
+    <!-- timestamp end -->
+
+  </body>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

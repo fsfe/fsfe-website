@@ -16,7 +16,19 @@ fi
 
 # Create the string to be included in the webpage.
 BASENAME=`basename $BASE` 
+
 SEPARATOR="[ "
+if [ "`echo $LANGS | grep cs`" != "" ]; then
+    RESULT="$RESULT""$SEPARATOR"
+    if [ "$LANGUAGE" != "cs" ]; then
+        RESULT="$RESULT""<a href=\"$BASENAME.cs.html\">"
+    fi
+    RESULT="$RESULT""Cesky"
+    if [ "$LANGUAGE" != "cs" ]; then
+        RESULT="$RESULT""</a>"
+    fi
+    SEPARATOR=" | "
+fi
 if [ "`echo $LANGS | grep de`" != "" ]; then
     RESULT="$RESULT""$SEPARATOR"
     if [ "$LANGUAGE" != "de" ]; then

@@ -47,6 +47,7 @@
   </xsl:template>
 
   <xsl:include href="navigation.de.xsl" />
+  <xsl:include href="navigation.cs.xsl" />
   <xsl:include href="navigation.en.xsl" />
   <xsl:include href="navigation.fr.xsl" />
   <xsl:include href="navigation.it.xsl" />

@@ -48,12 +48,14 @@ ITPAGES = $(shell find * -path 'fr' -prune -o -regex '.*\.it\.xhtml' -print | se
 
 ESPAGES = $(shell find * -path 'fr' -prune -o -regex '.*\.es\.xhtml' -print | sed "s/xhtml$$/html/")
 
+CSPAGES = $(shell find * -path 'fr' -prune -o -regex '.*\.cs\.xhtml' -print | sed "s/xhtml$$/html/")
+
 LANGFILES = $(shell find * -path 'fr' -prune -o -regex '.*\.lang' -print)
 
 # temporary, added by mad@april.org
 NEWS = news/news.fr.html news/news.en.html news/news.pt.html
 
-all: $(ENPAGESOLD) $(ENPAGES) $(FRPAGES) $(DEPAGES) $(PTPAGES) $(ITPAGES) $(ESPAGES)
+all: $(ENPAGESOLD) $(ENPAGES) $(FRPAGES) $(DEPAGES) $(PTPAGES) $(ITPAGES) $(ESPAGES) $(CSPAGES)
 
 swpat/patents.en.html: swpat/patents-agenda.en.xml
 
@@ -134,6 +136,17 @@ $(ESPAGES): %.es.html: %.es.xhtml fsfe.xsl navigation.es.xsl %.lang
 	$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase.es '$$path='$$path '$$langlinks='"$$langlinks" > $$base.es.html-temp && (cat $$base.es.html-temp | perl -p -e '$$| = 1; (s/Date://, s/Author:/por/, s/\$$//g) if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.es.html) ; \
 	rm -f $$base.es.html-temp
 
+$(CSPAGES): %.cs.html: %.cs.xhtml fsfe.xsl navigation.cs.xsl %.lang
+	@$(ECHO) "Building $@ ..."; \
+	path=$< ; \
+	base=`expr $$path : '\(.*\).cs.xhtml'` ; \
+	filebase=`basename $$base` ; \
+	dir=`dirname $$path` ; \
+	root=`dirname $$path | perl -pe 'chop; s:([^/]+):..:g if($$_ ne ".")'` ;\
+	langlinks="`./tools/translate.sh $$base cs`" ; \
+	$(XSLTPROC) fsfe.xsl $$path $(XSLTOPTS) '$$fsfeurope='$$root '$$filebase='$$filebase.cs '$$path='$$path '$$langlinks='"$$langlinks" > $$base.cs.html-temp && (cat $$base.cs.html-temp | perl -p -e '$$| = 1; (s/Date://, s/Author:/od/, s/\$$//g) if(/\$$''Date:/); s/mode: xml \*\*\*/mode: html \*\*\*/' > $$base.cs.html) ; \
+	rm -f $$base.cs.html-temp
+
 %lang: 
 	@$(ECHO) "Building $@ ..."; \
 	path=$@ ; \
@@ -143,7 +156,7 @@ $(ESPAGES): %.es.html: %.es.xhtml fsfe.xsl navigation.es.xsl %.lang
 
 # remove html files for which an xhtml version exists (exclude fr/)
 clean:
-	rm -f $(ENPAGES) $(FRPAGES) $(DEPAGES) $(PTPAGES) $(ITPAGES) $(ESPAGES) $(LANGFILES)
+	rm -f $(ENPAGES) $(FRPAGES) $(DEPAGES) $(PTPAGES) $(ITPAGES) $(ESPAGES) $(CSPAGES) $(LANGFILES)
 
 sync:
 	$(SSH) -l www france.fsfeurope.org 'cd fsfe ; cvs -z3 -q update -I "*.html" -d ; ../bin/nightly'

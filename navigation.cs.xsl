@@ -4,7 +4,7 @@
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-  <xsl:template match="/html[@lang='cz']/body/div">
+  <xsl:template match="/html[@lang='cs']/body/div">
     <!-- FSF related sites -->
     <table cellspacing="0" cellpadding="1" width="100%" border="0"> 
       <tr valign="middle"> 

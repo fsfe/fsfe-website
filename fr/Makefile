@@ -41,6 +41,8 @@ all: news $(ENPAGES) $(FRPAGES)
 
 news: $(NEWS)
 
+donations/formulaire.fr.html: donations/formulaire.fr.xml
+
 $(NEWS_COMPLETE): news/news-bytes.%.xhtml: news/fsfe-fr-channel.%.xml news/news.%.xsl
 	@$(ECHO) "Building $@ ..."; \
 	$(XSLTPROC) news/news.$*.xsl news/fsfe-fr-channel.$*.xml $(XSLTOPTS) '$$fsffrance=$(FSFFRANCE)' > news/news-bytes.$*.xhtml

@@ -1,4 +1,11 @@
 
+# XML declaration
+XML_DECL=/usr/lib/sgml/declaration/xml.decl
+
+# System Catalog
+CATALOG=/usr/lib/sgml/catalog
+
+
 # Every variables in this makefile are computed from the XML_SRC variable
 # It has a default value, so the makefile works by itself is one just
 # types : 
@@ -16,36 +23,46 @@ XML_SRC=${CHOICE}
 XML_SRC_LONG=${addprefix long, ${XML_SRC}}
 XML_SRC_SHORT=${addprefix short, ${XML_SRC}}
 
-# Using a pattern substitution
-# $(patsubst pattern,replacement,text)
-HTML_OUTPUT=${patsubst %.xml,%.html,${XML_SRC}}
-HTML_OUTPUT_LONG=${patsubst %.xml,%.html,${XML_SRC_LONG}}
-HTML_OUTPUT_SHORT=${patsubst %.xml,%.html,${XML_SRC_SHORT}}
-TEX_OUTPUT=${patsubst %.xml,%.tex,${XML_SRC}}
-DVI_OUTPUT=${patsubst %.xml,%.dvi,${XML_SRC}}
-PS_OUTPUT=${patsubst %.xml,%.ps,${XML_SRC}}
-
 # Output directories
 HTML_OUT_DIR=generated-html
 PRINT_OUT_DIR=generated-print
 
-# XML declaration
-XML_DECL=/usr/lib/sgml/declaration/xml.decl
+# Using a pattern substitution
+# $(patsubst pattern,replacement,text)
+HTML_OUTPUT=${patsubst %.xml,%.html,${XML_SRC}}
+HTML_OUTPUT_LONG=${patsubst %.xml,%.html,${XML_SRC}}
+HTML_OUTPUT_SHORT=${patsubst %.xml,%.html,${XML_SRC_SHORT}}
 
-# System Catalog
-CATALOG=/usr/lib/sgml/catalog
+FO_OUTPUT_LONG=${patsubst %.xml,%.fo,${XML_SRC}}
+FO_OUTPUT_SHORT=${patsubst %.xml,%.fo,${XML_SRC_SHORT}}
 
-# XSL filter stylesheet to delete some specific elements
+TEX_OUTPUT=${patsubst %.xml,%.tex,${XML_SRC}}
+DVI_OUTPUT=${patsubst %.xml,%.dvi,${XML_SRC}}
+PS_OUTPUT=${patsubst %.xml,%.ps,${XML_SRC}}
+
+
+#=======================================================================
+# Stylesheets
+#=======================================================================
+
+# XSL filter stylesheets to delete some specific elements.
 # Customization has to be done in this filter.
 LONG_SS_XSL=longVersion.xsl
 SHORT_SS_XSL=shortVersion.xsl
 
+#---------------------------------------------
+# XSL stylesheets for the various outputs
+#---------------------------------------------
 # XSL stylesheet for HTML
 HTML_SS_XSL=custom_html.xsl
-#HTML_SS_XSL=file:///usr/share/doc/hardware/AFUL/custom_html.xsl
-
 # CSS stylesheet to be used by the HTML output
 HTML_SS_CSS=lightNLegible.css
+
+# XSL stylesheet that generates FO to get PDF output
+FO_SS_XSL=custom_fo.xsl
+
+# XSL stylesheet that generates high level LaTeX (but still beta)
+LATEX_SS_XSL=custom_latex.xsl
 
 # DSSSL stylesheet for HTML
 HTML_SS_DSL=custom_html.dsl
@@ -136,29 +153,6 @@ prepare-print:
 
 
 #=======================================================================
-html-xsl-gnome: ${XML_SRC} ${HTML_SS_XSL} prepare-html
-	export SGML_CATALOG_FILES=${CATALOG}; \
-	xsltproc \
-	--catalogs \
-	-o ${HTML_OUT_DIR}/${HTML_OUTPUT} \
-	${HTML_SS_XSL} ${XML_SRC}
-	touch $@
-
-html-xsl-gnome-long: xml-xsl-long ${HTML_SS_XSL} prepare-html
-	export SGML_CATALOG_FILES=${CATALOG}; \
-	xsltproc \
-	--catalogs \
-	-o ${HTML_OUT_DIR}/${HTML_OUTPUT} \
-	${HTML_SS_XSL} ${XML_SRC_LONG}
-	touch $@
-
-html-xsl-gnome-short: xml-xsl-short ${HTML_SS_XSL} prepare-html
-	export SGML_CATALOG_FILES=${CATALOG}; \
-	xsltproc \
-	--catalogs \
-	-o ${HTML_OUT_DIR}/${HTML_OUTPUT_SHORT} \
-	${HTML_SS_XSL} ${XML_SRC_SHORT}
-	touch $@
 
 xml-xsl-long: ${XML_SRC} ${LONG_SS_XSL}
 	export SGML_CATALOG_FILES=${CATALOG}; \
@@ -176,6 +170,54 @@ xml-xsl-short: ${XML_SRC} ${SHORT_SS_XSL}
 	${SHORT_SS_XSL} ${XML_SRC}
 	touch $@
 
+
+html-xsl-gnome: ${XML_SRC} ${HTML_SS_XSL} prepare-html
+	export SGML_CATALOG_FILES=${CATALOG}; \
+	xsltproc \
+	--catalogs \
+	-o ${HTML_OUT_DIR}/${HTML_OUTPUT} \
+	${HTML_SS_XSL} ${XML_SRC}
+	touch $@
+
+html-xsl-gnome-long: xml-xsl-long ${HTML_SS_XSL} prepare-html
+	export SGML_CATALOG_FILES=${CATALOG}; \
+	xsltproc \
+	--catalogs \
+	-o ${HTML_OUT_DIR}/${HTML_OUTPUT_LONG} \
+	${HTML_SS_XSL} ${XML_SRC_LONG}
+	touch $@
+
+html-xsl-gnome-short: xml-xsl-short ${HTML_SS_XSL} prepare-html
+	export SGML_CATALOG_FILES=${CATALOG}; \
+	xsltproc \
+	--catalogs \
+	-o ${HTML_OUT_DIR}/${HTML_OUTPUT_SHORT} \
+	${HTML_SS_XSL} ${XML_SRC_SHORT}
+	touch $@
+
+fo-xsl-gnome-long: xml-xsl-long ${FO_SS_XSL} prepare-print
+	export SGML_CATALOG_FILES=${CATALOG}; \
+	xsltproc \
+	--catalogs \
+	-o ${PRINT_OUT_DIR}/${FO_OUTPUT_LONG} \
+	${FO_SS_XSL} ${XML_SRC_LONG}
+	touch $@
+
+pdf-xsl-gnome-long: fo-xsl-gnome-long prepare-print
+	(cd ${PRINT_OUT_DIR}; \
+	../pdfxmltex.sh ${FO_OUTPUT})
+	touch $@
+
+latex-xsl-gnome-long: xml-xsl-long ${LATEX_SS_XSL} prepare-print
+	export SGML_CATALOG_FILES=${CATALOG}; \
+	xsltproc \
+	--catalogs \
+	-o ${PRINT_OUT_DIR}/${TEX_OUTPUT} \
+	${LATEX_SS_XSL} ${XML_SRC_LONG}
+	touch $@
+
+
+#=======================================================================
 
 # ConfCatEntityResolver is used instead of 
 # com.arbortext.catalog.CatalogEntityResolver.
@@ -226,6 +268,8 @@ xml-xsl-cut-with-xt: ${XML_SRC} ${HTML_SS_XSL}
 	${XML_SRC_SHORT}
 	touch $@
 
+
+#=======================================================================
 
 # "-V use-output-dir" on the Jade command line makes Jade use an output-dir,
 # if it has been specified in the DSSSL stylesheet.
@@ -293,12 +337,15 @@ tex: ${XML_SRC} prepare-print
 clean: clean-html clean-print
 	rm -rf ${HTML_OUT_DIR} ${PRINT_OUT_DIR} # removing directories
 	rm -f prepare-html prepare-print        # removing empty target files
-	rm -f xml-xsl-* html-xsl-*              # removing empty target files
+	rm -f xml-xsl-*                         # removing empty target files
+	rm -f ${XML_SRC_LONG} ${XML_SRC_SHORT}
 
 clean-html:
 	rm -f ${HTML_OUT_DIR}/*.htm*
 	rm -f ${HTML_OUT_DIR}/*.css
-	rm -f prepare-html # removing empty target files
+	rm -f prepare-html            # removing empty target files
+	rm -f html-xsl-*              # removing empty target files
+	rm -f html-dsssl-*            # removing empty target files
 
 clean-print:
 	rm -f ${PRINT_OUT_DIR}/*.tex
@@ -307,6 +354,8 @@ clean-print:
 	rm -f ${PRINT_OUT_DIR}/*.log
 	rm -f ${PRINT_OUT_DIR}/*.dvi
 	rm -f ${PRINT_OUT_DIR}/*.ps
-	rm -f prepare-print # removing empty target files
+	rm -f prepare-print           # removing empty target files
+	rm -f fo-xsl-* latex-xsl-*    # removing empty target files
+	rm -f print dvi tex           # removing empty target files
 
 

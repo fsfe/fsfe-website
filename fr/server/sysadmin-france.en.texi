@@ -5,7 +5,7 @@
 @setchapternewpage odd
 @c %**end of header
 
-@set RCSID $Id: sysadmin-france.en.texi,v 1.65 2002-04-21 11:20:16 loic Exp $
+@set RCSID $Id: sysadmin-france.en.texi,v 1.66 2002-07-01 16:07:46 loic Exp $
 @set VERSION 2.0
 
 @c Combine the variable and function indices:
@@ -65,7 +65,6 @@ and FSF machines in France.
 Hosting facilities
 
 * Free::                        
-* Lolix::                       
 * Nevrax::                      
 
 Machine Accounts
@@ -333,7 +332,7 @@ UPS x 3 are hosted at Nevrax.
 
 @item
 
-Desktop is hosted at Lolix.
+Desktop is hosted at Loïc Dachary's home.
 
 @item
 
@@ -350,7 +349,6 @@ GNU machines are hosted in France.
 If the people and contacts listed here are for some reason unable to
 fix an urgent problem, one can look into the sysadmin.texi document
 (entry @uref{http://www.nevrax.com/,Nevrax},
-@uref{http://www.lolix.org/,Lolix},
 @uref{http://www.free.fr/,Free.fr}) in the private project
 @uref{http://savannah.gnu.org/projects/sysadmin/}. This document list
 additional information that cannot be published to preserve the
@@ -358,11 +356,10 @@ privacy of the people.
 
 @menu
 * Free::                        
-* Lolix::                       
 * Nevrax::                      
 @end menu
 
-@node Free, Lolix, Hosting facilities, Hosting facilities
+@node Free, Nevrax, Hosting facilities, Hosting facilities
 @section Free
 
 @cindex Free
@@ -410,34 +407,7 @@ as it happens very rarely.
 
 @end itemize
 
-@node Lolix, Nevrax, Free, Hosting facilities
-@section Lolix
-
-@cindex Lolix
-
-@example
-Lolix
-8 rue de Valois
-75001 Paris
-+33 1 40 15 03 18
-@end example
-
-No machine accessible from the internet is located here but
-some are stored and used for running the FSFE France office.
-
-@itemize
-
-@item @email{loic@@gnu.org,Loic Dachary} 
-Work: +33 1 41 66 47 22, Home: +33 1 42 45 07 97. 
-Has physical access.
-
-@item @email{rq@@lolix.org,Rodolphe Quiédeville}. 
-Work: +33 1 40 15 03 18.
-Owns the place.
-
-@end itemize
-
-@node Nevrax,  , Lolix, Hosting facilities
+@node Nevrax,  , Free, Hosting facilities
 @section Nevrax
 
 @cindex Colt
@@ -495,7 +465,7 @@ Monitors the machine. Knows Colt
 pretty well. Opened trouble tickets when the line was down.
 
 @item @email{rq@@lolix.org,Rodolphe Quiédeville}. 
-Work: +33 1 40 15 03 18.
+Work: +33 6 13 79 63 41.
 Installed the machine. 
 Installed and maintains monitoring tools on fr.fsf.org.
 

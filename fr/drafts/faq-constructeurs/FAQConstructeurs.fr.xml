@@ -441,7 +441,8 @@ Old version of the XML DTD, before it became endorsed by OASIS
 		</listitem>
 		<listitem>
 		  <para>
-		    une image dégradée auprès de la communauté du &LL; et de l'&OS;
+		    une image dégradée auprès de la communauté du &LL; 
+		    et de l'&OS;
 		  </para>
 		</listitem>
 		<listitem>
@@ -661,17 +662,9 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	    </para>
 	  </question>
 	  <answer>
-	    <para>Il y a actuellement deux ouvrages de référence :
+	    <para>
+	      Actuellement les ouvrages de référence sont :
 	      <itemizedlist>
-		<listitem>
-		  <para>
-		    <ulink url="http://www.editions-eyrolles.com">
-		      Programmation système en C sous Linux,
-		      Christophe Blaess,
-		      2000 Eyrolles
-		    </ulink>
-		  </para>
-		</listitem>
 		<listitem>
 		  <para>
 		    <ulink url="http://www.oreilly.com/catalog/linuxdrive2/">
@@ -684,6 +677,23 @@ Old version of the XML DTD, before it became endorsed by OASIS
 		    étant 
 		    <ulink url="http://www.xml.com/ldd/chapter/book/index.html">
 		      librement disponible en ligne.</ulink>
+		  </para>
+		</listitem>
+		<listitem>
+		  <para>
+		    <ulink url="http://www.editions-eyrolles.com">
+		      Programmation système en C sous Linux,
+		      Christophe Blaess,
+		      2000, Eyrolles
+		    </ulink>
+		  </para>
+		</listitem>
+		<listitem>
+		  <para>
+		    <ulink url="http://www.oreilly.com/catalog/linuxkernel/">
+		      Understanding the Linux Kernel, 
+		      Daniel P. Bovet &amp; Marco Cesati,
+		      2000, O'Reilly</ulink>
 		  </para>
 		</listitem>
 	      </itemizedlist>
@@ -701,7 +711,7 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	  <answer>
 	    <para>
 	      Oui, ZDNet maintient la <ulink url="http://lhd.zdnet.com/">Linux
-	      Hardware Database</ulink>.
+		Hardware Database</ulink>.
 	      Cette base de données est très complète et chaque constructeur
 	      peut y référencer ses matériels.
 	    </para>
@@ -711,7 +721,8 @@ Old version of the XML DTD, before it became endorsed by OASIS
 	<qandaentry>
 	  <question id="nonOS">
 	    <para id="nonOS.text">
-	      Conseillez-vous la diffusion sous licence libre dans tous les cas ?
+	      Conseillez-vous la diffusion sous licence libre dans 
+	      tous les cas ?
 	    </para>
 	  </question>
 	  <answer>

@@ -73,7 +73,7 @@
 	<td valign="top" class="TopBody">
 		<table summary="" width="150" border="0" cellspacing="0" cellpadding="4">
 			<tr>
-				<td class="TopTitle" align="center">Projects</td>
+				<td class="TopTitle" align="center">Projekte</td>
 			</tr>
 			<tr>
 				<td class="TopBody" align="right">

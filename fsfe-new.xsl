@@ -48,7 +48,6 @@
                        <option><xsl:attribute name="value">http://france.new.fsfeurope.org<xsl:value-of select="/buildinfo/@filename" />.<xsl:value-of select="/buildinfo/@language" />.html</xsl:attribute>France</option>
 
 <option><xsl:attribute name="value">http://germany.new.fsfeurope.org<xsl:value-of select="/buildinfo/@filename" />.<xsl:value-of select="/buildinfo/@language" />.html</xsl:attribute>Germany</option>
-<option><xsl:attribute name="value">http://sweden.new.fsfeurope.org<xsl:value-of select="/buildinfo/@filename" />.<xsl:value-of select="/buildinfo/@language" />.html</xsl:attribute>Sweden</option>
                      </select>
                    </form>
                  </td>

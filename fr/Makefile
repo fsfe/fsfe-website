@@ -17,6 +17,8 @@
 #
 XSLTPROC = sabcmd
 
+ECHO	 = echo
+
 FSFFRANCE = http://france.fsfeurope.org
 FSFEUROPE = http://www.fsfeurope.org
 FSF       = http://www.fsf.org
@@ -40,11 +42,11 @@ all: news $(ENPAGES) $(FRPAGES)
 news: $(NEWS)
 
 $(NEWS_COMPLETE): news/news-bytes.%.xhtml: news/fsfe-fr-channel.%.xml news/news.%.xsl
-	@echo "Building $@ ..."; \
+	@$(ECHO) "Building $@ ..."; \
 	$(XSLTPROC) news/news.$*.xsl news/fsfe-fr-channel.$*.xml $(XSLTOPTS) '$$fsffrance=$(FSFFRANCE)' > news/news-bytes.$*.xhtml
 
 $(NEWS_LATEST): news/news-bytes-latest.%.xhtml: news/fsfe-fr-channel.%.xml news/news-latest.%.xsl
-	@echo "Building $@ ..."; \
+	@$(ECHO) "Building $@ ..."; \
 	$(XSLTPROC) news/news-latest.$*.xsl news/fsfe-fr-channel.$*.xml $(XSLTOPTS) '$$fsffrance=$(FSFFRANCE)' > news/news-bytes-latest.$*.xhtml
 
 index.fr.html: news/news-bytes-latest.fr.xhtml
@@ -59,7 +61,7 @@ libre.en.html: libre-bytes.xhtml
 server/server.en.html: server/server.en.xhtml server/sysadmin-france.en.texi
 
 $(ENPAGES) $(FRPAGES): %.html: %.xhtml fsfe-fr.xsl navigation.en.xsl navigation.fr.xsl
-	@echo "Building $@ ..."; \
+	@$(ECHO) "Building $@ ..."; \
 	path=$< ; \
 	base=`expr $$path : '\(.*\).xhtml'` ; \
 	filebase=`basename $$base` ; \

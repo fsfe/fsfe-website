@@ -22,6 +22,8 @@ FSFEUROPE = http://www.fsfeurope.org
 FSF       = http://www.fsf.org
 GNU       = http://www.gnu.org
 
+ECHO	  = echo 
+
 XSLTOPTS = \
 	'$$fsffrance=$(FSFFRANCE)' \
 	'$$fsf=$(FSF)' \
@@ -44,7 +46,7 @@ NEWS = news/news.fr.html news/news.en.html
 $(NEWS): fr/news/fsfe-fr-channel.fr.xml fr/news/fsfe-fr-channel.en.xml fr/news/news-bytes-latest.en.html fr/news/news-bytes-latest.fr.html
 
 $(ENPAGES): %.html: %.xhtml fsfe.xsl navigation.en.xsl
-	@echo "Building $@ ..."; \
+	@$(ECHO) "Building $@ ..."; \
 	path=$< ; \
 	base=`expr $$path : '\(.*\).xhtml'` ; \
 	filebase=`basename $$base` ; \
@@ -54,7 +56,7 @@ $(ENPAGES): %.html: %.xhtml fsfe.xsl navigation.en.xsl
 	rm -f $$base.html-temp
 
 $(FRPAGES): %.html: %.xhtml fsfe.xsl navigation.fr.xsl
-	@echo "Building $@ ..."; \
+	@$(ECHO) "Building $@ ..."; \
 	path=$< ; \
 	base=`expr $$path : '\(.*\).xhtml'` ; \
 	filebase=`basename $$base` ; \
@@ -64,7 +66,7 @@ $(FRPAGES): %.html: %.xhtml fsfe.xsl navigation.fr.xsl
 	rm -f $$base.html-temp
 
 $(DEPAGES): %.html: %.xhtml fsfe.xsl navigation.de.xsl
-	@echo "Building $@ ..."; \
+	@$(ECHO) "Building $@ ..."; \
 	path=$< ; \
 	base=`expr $$path : '\(.*\).xhtml'` ; \
 	filebase=`basename $$base` ; \
@@ -74,7 +76,7 @@ $(DEPAGES): %.html: %.xhtml fsfe.xsl navigation.de.xsl
 	rm -f $$base.html-temp
 
 $(PTPAGES): %.html: %.xhtml fsfe.xsl navigation.pt.xsl
-	@echo "Building $@ ..."; \
+	@$(ECHO) "Building $@ ..."; \
 	path=$< ; \
 	base=`expr $$path : '\(.*\).xhtml'` ; \
 	filebase=`basename $$base` ; \

@@ -5,7 +5,7 @@
 @setchapternewpage odd
 @c %**end of header
 
-@set RCSID $Id: sysadmin-france.en.texi,v 1.60 2002-04-01 13:26:03 loic Exp $
+@set RCSID $Id: sysadmin-france.en.texi,v 1.61 2002-04-02 07:03:30 loic Exp $
 @set VERSION 2.0
 
 @c Combine the variable and function indices:
@@ -51,8 +51,9 @@ and FSF machines in France.
 * Hardware List::               
 * Hardware Setup::              
 * Hosting facilities::          
-* Accounts::                    
-* System::                      
+* Machines Accounts::           
+* Security::                    
+* Monitoring::                  
 * Concept Index::               
 * Name Index::                  
 
@@ -65,7 +66,7 @@ Hosting facilities
 * Lolix::                       
 * Nevrax::                      
 
-Accounts
+Machine Accounts
 
 * System Passwords::            
 * Account Create::              
@@ -75,22 +76,25 @@ Accounts
 * Account www on fr.fsf.org::   
 * Cron Job::                    
 
-System
+Security
 
 * Security alert::              
-* Security::                    
-* DNS::                         
-* Statistics (fr.fsf.org)::     
+* Firewall::                    
 
-Security
+Firewall
 
 * Firewall (fr.fsf.org)::       
 * Port control (snail.gnu.org and frog.gnu.org)::  
 
-Statistics (fr.fsf.org)
+Monitoring
 
-* Installation::                
-* Output::                      
+* Netsaint::                    
+* Mrtg::                        
+
+Mrtg
+
+* Mrtg snail.gnu.org::          
+* Mrtg fr.fsf.org::             
 
 @end detailmenu
 @end menu
@@ -324,7 +328,7 @@ Laptop is travelling with Frederic Couchet.
 
 @end itemize
 
-@node Hosting facilities, Accounts, Hardware Setup, Top
+@node Hosting facilities, Machines Accounts, Hardware Setup, Top
 @chapter Hosting facilities
 
 Each section in this chapter describe a location where
@@ -353,6 +357,19 @@ privacy of the people.
 Free is one of the largest Internet provider in France.
 There is little chance that we are able to spot a connectivity
 problem which they overlook.
+
+The range of IP addresses that is granted to us is:
+
+213.228.62.2 - 213.228.62.14
+
+The reverse is managed by Free and Antoine Levavasseur is the
+one to ask for a reverse change. The current setup is
+
+@example
+213.228.62.2 snail.gnu.org
+213.228.62.3 snail-ssh.gnu.org
+213.228.62.4 frog.gnu.org
+@end example
 
 @example
 Linx
@@ -475,8 +492,8 @@ the Colt connection.
 
 @end itemize
 
-@node Accounts, System, Hosting facilities, Top
-@chapter Accounts
+@node Machines Accounts, Security, Hosting facilities, Top
+@chapter Machine Accounts
 
 @menu
 * System Passwords::            
@@ -488,7 +505,7 @@ the Colt connection.
 * Cron Job::                    
 @end menu
 
-@node System Passwords, Account Create, Accounts, Accounts
+@node System Passwords, Account Create, Machines Accounts, Machines Accounts
 @section System Passwords
 
 If you need the password of system users such as root or www on any
@@ -506,7 +523,7 @@ GNU machines located in France you should ask to the following people:
 
 @end itemize
 
-@node Account Create, Account Access, System Passwords, Accounts
+@node Account Create, Account Access, System Passwords, Machines Accounts
 @section Account Create
 
 @cindex shell account
@@ -524,7 +541,7 @@ project administrator adds her as a member of the
 24 hours a cron job on @code{fr.fsf.org} and @code{snail.gnu.org} will
 fetch the new user from Savannah and create the corresponding account.
 
-@node Account Access, Account Update, Account Create, Accounts
+@node Account Access, Account Update, Account Create, Machines Accounts
 @section Account Access
 
 @cindex shell account ssh
@@ -539,7 +556,7 @@ ssh and a public key. The Savannah password will not work on
 to register one or more public key at
 @uref{http://savannah.gnu.org/account/editsshkeys.php,,Edit SSH Keys}.
 
-@node Account Update, Account Delete, Account Access, Accounts
+@node Account Update, Account Delete, Account Access, Machines Accounts
 @section Account Update
 
 @cindex public key update
@@ -549,7 +566,7 @@ or @code{snail.gnu.org} are updated from the information fetched on
 Savannah. If the @file{authorized_keys} file of a user is manually
 updated, it will be overwritten.
 
-@node Account Delete, Account www on fr.fsf.org, Account Update, Accounts
+@node Account Delete, Account www on fr.fsf.org, Account Update, Machines Accounts
 @section Account Delete
 
 When a user is not listed anymore in the
@@ -558,7 +575,7 @@ disabled on @code{fr.fsf.org} and @code{snail.gnu.org}. The home
 directory is not deleted and if the user is added again at a later
 time, she will retrieve his former home directory.
 
-@node Account www on fr.fsf.org, Cron Job, Account Delete, Accounts
+@node Account www on fr.fsf.org, Cron Job, Account Delete, Machines Accounts
 @section Account www on fr.fsf.org
 
 Every account created automatically as described above is also granted
@@ -569,7 +586,7 @@ document roots of the apache server are : @file{/home/www}.
 This is simply done by appending the public keys of all the users to the
 @file{authorized_keys} file of the @code{www} user. 
 
-@node Cron Job,  , Account www on fr.fsf.org, Accounts
+@node Cron Job,  , Account www on fr.fsf.org, Machines Accounts
 @section Cron Job
 
 The @file{/usr/local/bin/savannahusers} script does the user account
@@ -592,17 +609,15 @@ It was checked out in @file{/usr/local/src/www} directory (on
 @code{fr.fsf.org} and @code{snail.gnu.org}), together with other GNU
 specific maintainance scripts.
 
-@node System, Concept Index, Accounts, Top
-@chapter System
+@node Security, Monitoring, Machines Accounts, Top
+@chapter Security
 
 @menu
 * Security alert::              
-* Security::                    
-* DNS::                         
-* Statistics (fr.fsf.org)::     
+* Firewall::                    
 @end menu
 
-@node Security alert, Security, System, System
+@node Security alert, Firewall, Security, Security
 @section Security alert
 
 When there is a suspicion that a machine was compromised a mail should
@@ -635,8 +650,8 @@ future reference and are listed here.
 @end itemize
 
 @cindex security
-@node Security, DNS, Security alert, System
-@section Security
+@node Firewall,  , Security alert, Security
+@section Firewall
 
 @menu
 * Firewall (fr.fsf.org)::       
@@ -644,7 +659,7 @@ future reference and are listed here.
 @end menu
 
 @cindex firewall
-@node Firewall (fr.fsf.org), Port control (snail.gnu.org and frog.gnu.org), Security, Security
+@node Firewall (fr.fsf.org), Port control (snail.gnu.org and frog.gnu.org), Firewall, Firewall
 @subsection Firewall (fr.fsf.org)
 
 A shell script applies filtering rules, it's located in
@@ -659,7 +674,7 @@ The policy applied is to close all TCP/UDP port by default and open only
 the ones we need.
 
 @cindex port control
-@node Port control (snail.gnu.org and frog.gnu.org),  , Firewall (fr.fsf.org), Security
+@node Port control (snail.gnu.org and frog.gnu.org),  , Firewall (fr.fsf.org), Firewall
 @subsection Port control (snail.gnu.org and frog.gnu.org)
 
 On @code{snail.gnu.org} and @code{frog.gnu.org} there is no
@@ -667,42 +682,31 @@ firewall. Instead, only services needed to provide the services
 that match the intended purpose of the machine are launched. 
 All other daemons are de-activated.
 
-@cindex DNS
-@cindex ns2.gnu.org
-@node DNS, Statistics (fr.fsf.org), Security, System
-@section DNS
-
-The FSF France machine has a canonical name of @code{fr.fsf.org}, this
-name should be used for the reverse.
-
-Unless stated otherwise in the @file{/etc/bind/named.conf} file, all
-the domains use @code{ns1.gnu.org} as a primary name server and
-@code{ns2.gnu.org} as a secondary name server.
-
-@code{ns2.gnu.org} is run by @code{fr.fsf.org} and is configured
-to be the secondary name server of all gnu.org domains.
-
-The domain name @code{fsffrance.org} has been bought at
-@uref{http://www.gandi.net,,GANDI}, a French registrar, and is owned by
-@email{raph@@r4f.org,Raphael Rousseau} who's the Administrative,
-Technical and Billing contact of this domain name.
-
-The domain name @code{fsfeurope.org} is owned by @email{greve@@gnu.org,,Georg Greve}.
+@node Monitoring, Concept Index, Security, Top
+@chapter Monitoring
 
 @cindex statistics mrtg
-@node Statistics (fr.fsf.org),  , DNS, System
-@section Statistics (fr.fsf.org)
-
-Systems statistics are generated with mrtg
-@uref{http://ee-staff.ethz.ch/~oetiker/webtools/mrtg/}
-
 @menu
-* Installation::                
-* Output::                      
+* Netsaint::                    
+* Mrtg::                        
 @end menu
 
-@node Installation, Output, Statistics (fr.fsf.org), Statistics (fr.fsf.org)
-@subsection Installation
+@node Netsaint, Mrtg, Monitoring, Monitoring
+@section Netsaint
+
+Netsaint was installed on @code{http://snail.gnu.org/netsaint/}.
+The configuration (@file{/etc/netsaint/*}) was created by hand.
+Neat was installed and can be used to fine tune the configuration.
+
+This Netsaint instance is only supposed to watch over GNU machines.
+
+Host groups were created for each hosting facilities so that 
+different group of people can be sollicited if a problem occurs.
+
+Contact : @email{cyril@@bouthors.org,Cyril Bouthors}
+
+@node Mrtg,  , Netsaint, Monitoring
+@section Mrtg
 
 mrtg and addons have been installed with apt-get, two packages :
 
@@ -724,12 +728,44 @@ stat.pl
 @end itemize
 
 
-@node Output,  , Installation, Statistics (fr.fsf.org)
-@subsection Output
+@menu
+* Mrtg snail.gnu.org::          
+* Mrtg fr.fsf.org::             
+@end menu
+
+@node Mrtg snail.gnu.org, Mrtg fr.fsf.org, Mrtg, Mrtg
+@subsection Mrtg snail.gnu.org
+
+@itemize @file
+
+@item /etc/mrtg.cfg
+was created by hand.
+
+@item /etc/mrtg-switch.cfg
+was generated with @code{/usr/bin/cfgmaker GnuRms@@213.228.62.5} and
+should be regenerated in the same way whenever the switch usage changes.
+
+@end itemize
+
+Output dir is @file{/var/www/mrtg/}
+
+The @file{/var/www/mrtg/index.html} file was generated with:
+
+@example
+/usr/bin/indexmaker --section=descr /tmp/cfgmaker.cfg /etc/mrtg.cfg
+@end example
+
+Contact : @email{cyril@@bouthors.org,Cyril Bouthors}, @email{rq@@lolix.org,Rodolphe Quiédeville}
+
+@cindex statistics mrtg
+@node Mrtg fr.fsf.org,  , Mrtg snail.gnu.org, Mrtg
+@subsection Mrtg fr.fsf.org
 
 Output dir is @file{/var/www/fr.fsf.org/mrtg/}
 
-@node Concept Index, Name Index, System, Top
+Contact : @email{rq@@lolix.org,Rodolphe Quiédeville}
+
+@node Concept Index, Name Index, Monitoring, Top
 @unnumbered Index of Concepts
 
 @printindex cp

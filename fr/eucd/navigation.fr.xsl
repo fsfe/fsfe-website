@@ -4,13 +4,13 @@
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:template match="/html[@lang='fr']/body/div">
-    <!-- $Id: navigation.fr.xsl,v 1.27 2003-01-30 13:56:19 loic Exp $ -->
+    <!-- $Id: navigation.fr.xsl,v 1.28 2003-02-06 08:49:26 loic Exp $ -->
     <!-- $Source: /root/wrk/fsfe-web/savannah-rsync/fsfe/fr/eucd/navigation.fr.xsl,v $ -->
     <!-- Top menu line -->
     <table border="1" cellpadding="5" cellspacing="10" class="main">
       <tr>
 	<td colspan="2">
-	  <span><img src="http://eucd.info/eucd.info-logo-50x64.png" align="middle" /> <a href="http://eucd.info/">EUCD.INFO</a> - Au <a href="http://eucd.info/donations.fr.php">secours</a> de la copie privée<br/>For UK citizens: <a href="http://www.eucd.org/">www.eucd.org</a> is addressing the same problem your country.</span>
+	  <span><img src="http://eucd.info/eucd.info-logo-50x64.png" align="middle" /> <a href="http://eucd.info/">EUCD.INFO</a> - Au <a href="http://eucd.info/donations.fr.php">secours</a> de la copie privée<br/>For UK citizens: <a href="http://www.eucd.org/">www.eucd.org</a> is addressing the same problem in your country.</span>
 	</td>
       </tr>
       

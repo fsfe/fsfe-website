@@ -177,7 +177,7 @@
       <version>0.5.1</version>
       <licence>GPL</licence>
       <url>http://www.bioinformatics.org/dnd/dnd-0.5.1.tar.gz</url>
-      <comment>missing copyright and license notices in most files, unknown license for callback.c (Jonathan Blandford <jrb@redhat.com>)</comment>
+      <comment>missing copyright and license notices in most files, unknown license for callback.c (Jonathan Blandford jrb@redhat.com)</comment>
       <date>22 apr 2002</date>
     </os>
   </software>
@@ -248,12 +248,14 @@
     <description lang="en">A molecular modelling software package with nice 3D-visualization tools.</description>
     <description lang="en">A molecular modelling software package with nice 3D-visualization tools.</description>
     <authors>Mike Cruz, Tommi Hassinen, Ville Heikkila, Geoff Hutchison, Jarno Huuskonen</authors>
+    <email></email>
     <url>http://www.uku.fi/~thassine/ghemical</url>
     <os>
       <name>GNU/Linux</name>
       <maintainer>Mike Cruz, Tommi Hassinen, Ville Heikkila, Geoff Hutchison, Jarno Huuskonen</maintainer>
       <version>0.81</version>
       <licence>GPL</licence>
+      <url>http://www.uku.fi/~thassine/ghemical/download/ghemical-0.82.tgz</url>
       <date>4 dec 2001</date>
     </os>
   </software>

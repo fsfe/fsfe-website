@@ -11,6 +11,39 @@
     </xsl:copy>
   </xsl:template>
 
+  <!-- Show a single event -->
+  <xsl:template name="event">
+    <xsl:param name="header" />
+
+    <!-- Create variables -->
+    <xsl:variable name="start"><xsl:value-of select="@start" /></xsl:variable>
+    <xsl:variable name="end"><xsl:value-of select="@end" /></xsl:variable>
+    <xsl:variable name="link"><xsl:value-of select="link" /></xsl:variable>
+
+    <!-- Before the first event, include the header -->
+    <xsl:if test="position() = 1">
+      <h2><xsl:value-of select="/html/text [@id = $header]" /></h2>
+    </xsl:if>
+
+    <!-- Now, the event block -->
+    <p>
+      <b>
+        (<xsl:value-of select="@start" />
+        <xsl:if test="$start != $end"> 
+          <xsl:value-of select="/html/text [@id = 'to']" />
+          <xsl:value-of select="@end" />
+        </xsl:if>)
+        <xsl:value-of select="title" />
+      </b><br />
+      <xsl:value-of select="body" />
+      <xsl:if test="$link != ''">
+        [<a href="{link}">
+          <xsl:value-of select="/html/text [@id = 'more']" />
+        </a>]
+      </xsl:if>
+    </p>
+  </xsl:template>
+
   <!-- In /html/body node, append dynamic content -->
   <xsl:template match="/html/body">
     <body>
@@ -22,131 +55,32 @@
         <xsl:value-of select="/html/@date" />
       </xsl:variable>
 
-      <!-- The code for "Current events", "Future events" and "Past events" is
-      nearly the same.  However, I haven't found out how to make "subroutines"
-      with xslt. Any hints welcome. - Reinhard -->
-
       <!-- Current events -->
-      <xsl:for-each select="/html/set/event[translate(@start, '-', '') &lt;= translate($today, '-', '') and translate(@end, '-', '') &gt;= translate($today, '-', '')]">
-
-        <!-- Sort by start date -->
+      <xsl:for-each select="/html/set/event
+        [translate (@start, '-', '') &lt;= translate ($today, '-', '') and
+         translate (@end,   '-', '') &gt;= translate ($today, '-', '')]">
         <xsl:sort select="@start" order="descending" />
-
-        <!-- Create variables for start and end date and link -->
-        <xsl:variable name="start">
-          <xsl:value-of select="@start" />
-        </xsl:variable>
-        <xsl:variable name="end">
-          <xsl:value-of select="@end" />
-        </xsl:variable>
-        <xsl:variable name="link">
-          <xsl:value-of select="link" />
-        </xsl:variable>
-
-        <!-- Before the first event, include the header -->
-        <xsl:if test="position()=1">
-          <h2><xsl:value-of select="/html/text[@id='current']" /></h2>
-        </xsl:if>
-
-        <!-- Now, the event block -->
-        <p>
-          <b>
-            (<xsl:value-of select="@start" />
-            <xsl:if test="$start!=$end"> 
-              <xsl:value-of select="/html/text[@id='to']" />
-              <xsl:value-of select="@end" />
-            </xsl:if>)
-            <xsl:value-of select="title" />
-          </b><br />
-          <xsl:value-of select="body" />
-          <xsl:if test="$link!=''">
-            [<a href="{link}">
-              <xsl:value-of select="/html/text[@id='more']" />
-            </a>]
-          </xsl:if>
-        </p>
+        <xsl:call-template name="event">
+          <xsl:with-param name="header">current</xsl:with-param>
+        </xsl:call-template>
       </xsl:for-each>
 
       <!-- Future events -->
-      <xsl:for-each select="/html/set/event[translate(@start, '-', '') &gt; translate($today, '-', '')]">
-
-        <!-- Sort by start date -->
+      <xsl:for-each select="/html/set/event
+        [translate (@start, '-', '') &gt; translate ($today, '-', '')]">
         <xsl:sort select="@start" />
-
-        <!-- Create variables for start and end date and link -->
-        <xsl:variable name="start">
-          <xsl:value-of select="@start" />
-        </xsl:variable>
-        <xsl:variable name="end">
-          <xsl:value-of select="@end" />
-        </xsl:variable>
-        <xsl:variable name="link">
-          <xsl:value-of select="link" />
-        </xsl:variable>
-
-        <!-- Before the first event, include the header -->
-        <xsl:if test="position()=1">
-          <h2><xsl:value-of select="/html/text[@id='future']" /></h2>
-        </xsl:if>
-
-        <!-- Now, the event block -->
-        <p>
-          <b>
-            (<xsl:value-of select="@start" />
-            <xsl:if test="$start!=$end"> 
-              <xsl:value-of select="/html/text[@id='to']" />
-              <xsl:value-of select="@end" />
-            </xsl:if>)
-            <xsl:value-of select="title" />
-          </b><br />
-          <xsl:value-of select="body" />
-          <xsl:if test="$link!=''">
-            [<a href="{link}">
-              <xsl:value-of select="/html/text[@id='more']" />
-            </a>]
-          </xsl:if>
-        </p>
+        <xsl:call-template name="event">
+          <xsl:with-param name="header">future</xsl:with-param>
+        </xsl:call-template>
       </xsl:for-each>
 
       <!-- Past events -->
-      <xsl:for-each select="/html/set/event[translate(@end, '-', '') &lt; translate($today, '-', '')]">
-
-        <!-- Sort by start date -->
+      <xsl:for-each select="/html/set/event
+        [translate (@end, '-', '') &lt; translate ($today, '-', '')]">
         <xsl:sort select="@start" order="descending" />
-
-        <!-- Create variables for start and end date and link -->
-        <xsl:variable name="start">
-          <xsl:value-of select="@start" />
-        </xsl:variable>
-        <xsl:variable name="end">
-          <xsl:value-of select="@end" />
-        </xsl:variable>
-        <xsl:variable name="link">
-          <xsl:value-of select="link" />
-        </xsl:variable>
-
-        <!-- Before the first event, include the header -->
-        <xsl:if test="position()=1">
-          <h2><xsl:value-of select="/html/text[@id='past']" /></h2>
-        </xsl:if>
-
-        <!-- Now, the event block -->
-        <p>
-          <b>
-            (<xsl:value-of select="@start" />
-            <xsl:if test="$start!=$end"> 
-              <xsl:value-of select="/html/text[@id='to']" />
-              <xsl:value-of select="@end" />
-            </xsl:if>)
-            <xsl:value-of select="title" />
-          </b><br />
-          <xsl:value-of select="body" />
-          <xsl:if test="$link!=''">
-            [<a href="{link}">
-              <xsl:value-of select="/html/text[@id='more']" />
-            </a>]
-          </xsl:if>
-        </p>
+        <xsl:call-template name="event">
+          <xsl:with-param name="header">past</xsl:with-param>
+        </xsl:call-template>
       </xsl:for-each>
 
     </body>

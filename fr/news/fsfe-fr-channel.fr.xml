@@ -10,8 +10,9 @@
       préservée.
     </copyright>
     <docs>http://france.fsfeurope.org/server/server.en.html#Publishing%20News</docs>
-    <pubDate>$Date$</pubDate>
-    <lastBuildDate>$Date$</lastBuildDate>
+<!-- Suppressed because DTD specification requires rfc-822 date format -->
+<!--     <pubDate>$Date$</pubDate> -->
+<!--     <lastBuildDate>$Date$</lastBuildDate> -->
     <description>
       Les nouvelles fraîches du monde du Logiciel Libre en France.
       L'actualité du Logiciel Libre et l'implication de la FSF France
@@ -65,7 +66,7 @@
 	href="http://my.userland.com/viewChannel$4391"&gt;my.userland.com&lt;/a&gt;. Ceci
 	permet aux utilisateurs de ce site d'être informés des
 	nouvelles de la FSF France, ainsi qu'aux webmestres utilisant
-	les possibilités de userlan.com de mieux tirer parti de ce fil
+	les possibilités de userland.com de mieux tirer parti de ce fil
 	d'infos.
       </description>
     </item>

@@ -17,7 +17,7 @@
 XSLTPROC = sabcmd
 
 FSFFRANCE = . # http://france.fsfeurope.org
-FSFEUROPE = http://www.fsfeurope.org 
+FSFEUROPE = http://www.fsfeurope.org
 FSF       = http://www.fsf.org
 GNU       = http://www.gnu.org
 

@@ -11,10 +11,10 @@
 	  <td class="newstext">
 	    &nbsp;
 	    <a class="topbanner" href="{$fsf}/home.fr.html">FSF</a>&nbsp;&nbsp;&nbsp;
-	    <a class="topbanner" href="{$fsfeurope}/index.fr.html">FSF Europe</a>&nbsp;&nbsp;&nbsp;
-	    <a class="topbanner" href="{$fsffrance}/index.fr.html">FSF France</a>&nbsp;&nbsp;&nbsp;
+	    <a class="topbanner" href="{$fsfeurope}/index.fr.html">Europe</a>&nbsp;&nbsp;&nbsp;
+	    <a class="topbanner" href="{$fsffrance}/index.fr.html">France</a>&nbsp;|&nbsp;
 	    <a class="topbanner" href="{$gnu}/home.fr.html">GNU</a>&nbsp;&nbsp;&nbsp;
-	    <a class="topbanner" href="http://es.gnu.org/">GNU Espagne</a>&nbsp;&nbsp;&nbsp;
+	    <a class="topbanner" href="http://es.gnu.org/">GNU Espagne</a>&nbsp;|&nbsp;
 	    <a class="topbanner" href="http://www.april.org/">April</a>&nbsp;&nbsp;&nbsp;
 	    <a class="topbanner" href="http://www.lsfn.org/">LSFN</a>&nbsp;&nbsp;&nbsp;
 	  </td>

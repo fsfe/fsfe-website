@@ -47,13 +47,13 @@
 
       Avertissement concernant les auteurs de cette traduction.
 
-      Les personnes ayant participé à cette licence vivent en france,
+      Les personnes ayant participé à cette traduction vivent en france,
       sont de culture et de langue française. Leurs connaissances
       juridiques concernent exclusivement le droit français et le
       droit international, à l'exclusion des législations de pays
       francophones autres que la France.
 
-      Avis de droit d'auteur (copyright):
+      Avis de droit d'auteur:
 
       Copyright (C) 2001, 2002 APRIL (http://www.april.org/).  
       La version la plus à jour de ce
@@ -66,20 +66,175 @@
       Il est permis à tout le monde de reproduire et distribuer des
       copies conformes de ce document sur tout support, mais aucune
       modification ne devra y être apportée. Ce document comporte un
-      avis de droit d'auteur (copyright), un avis de licence, un
+      avis de droit d'auteur, un avis de licence, un
       avertissement spécifique mentionnant que ce document n'est pas une licence,
       une traduction de la GNU GPL et la GNU GPL en anglais. Une
       reproduction de la traduction de la GNU GPL doit obligatoirement
-      être accompagnée de l'avis de droit d'auteur (copyright), de
+      être accompagnée de l'avis de droit d'auteur, de
       l'avertissement spécifique mentionnant que ce document n'est pas une
       licence, de l'avis de license et de la GNU GPL en anglais.
 
     </abstract>
     <notes>
+      Nature des notes
+      ================
+
       Le partit pris des notes insérées dans le courant de la
       traduction consiste à expliquer dans le plus grand détail tout
-      choix qui s'écarte d'une traduction litérale. Si la traduction n'est pas
-      litérale elle doit impérativement être argumentée de façon convaincante.
+      choix qui s'écarte d'une traduction litérale. Si la traduction
+      n'est pas litérale elle doit impérativement être argumentée de
+      façon convaincante.
+
+      Vocabulaire obligatoire en raison d'un signification juridique:
+      (Préambule et Clauses mais ne s'applique pas toujours à la
+      portion How to apply).
+      ===============================================================
+
+      third party => tiers
+
+      party => tiers : lorsqu'il pourrait s'entendre comme "third party".
+      La distinction qui existe entre "third party" et "party" est perdue
+      mais est insignifiante.
+
+      body of this licence => corps de la présente licence
+
+      condition => obligation : lorsque condition s'entend comme
+      dans "Terms and Conditions" il s'agit alors des obligations
+      du concessionaire
+
+      licensee => concessionaire
+
+      licensor => conçédant
+
+      based => fondé : lorsque based s'applique à un programme ou
+      un ouvrage (work based on the programe)
+
+      work => ouvrage
+
+      copyright => droit d'auteur: la convention de Berne traduit
+      copyright en droit d'auteur. Alors que copyright est toujours au
+      singulier il est parfois nécessaire de mettre "droit d'auteur"
+      au pluriel.
+
+      License => présente Licence
+
+      copyright holder => titulaire du droit d'auteur
+
+      software => logiciel (substantif)
+
+      program => programme (nom)
+
+      modification => modification
+
+      to distribute => distribuer
+
+      to redistribute => redistribuer
+
+      to copy => reproduire : on pourra cependant utiliser copier lorsqu'il
+      ne s'agit pas de faire précisément référence à l'autorisation de 
+      l'auteur. On dira "l'auteur donne l'autorisation de reproduire" mais
+      on pourra dire "faire une copie depuis un site internet". S'agissant
+      d'une copie de la licence GNU GPL (partie How to apply), on traduira
+      par "exemplaire de la licence".
+
+      to cover => couvrir : dans le contexte d'un programme couvert par
+      la licence cela signifie que le programme est distribué en accord
+      avec les obligations décrites dans licence
+
+      sublicense => concéder en sous-licence
+
+      to license => concéder une licence de: cela impose parfois des
+      reconstructions de phrase car un verbe est remplacé par un verbe
+      et un objet. Un traduction plus simple aurait été "licencier"
+      mais considéré juridiquement plus faible que l'équivalent
+      anglais "to license".
+
+      under the terms / under copyright law : au titre des présentes clauses /
+      au titre des lois sur le droit d'auteur
+
+      as is => tel quel
+
+      merchandability => qualité loyale et marchande
+
+      recipient of the program => destinataire du programme
+
+      warranty => recours en garantie: s'il s'agit d'une proposition de
+      de service de la part de quelqu'un
+
+      warranty => garantie: s'il s'agit d'une absence de garantie
+
+      to run a program => exécuter un programme
+
+      invalid => invalide : s'agissant d'une clause
+
+      unenforceable => inapplicable : s'agissant d'une clause
+      
+      Termes définis:
+      ===============
+
+      Les mots suivants sont parfois employés comme des noms propres et
+      portent donc un majuscule:
+
+      Program => Programme : terme définit par la licence
+
+      License => Licence : terme non définit par la licence et qui
+      désigne la licence elle même. Peut se lire comme "la présente licence"
+
+      you => vous et toutes dérivations : terme définit par la licence.
+      L'absence de majuscule ne doit pas cacher le fait que l'effet voulu
+      est le même. Il est donc essentiel que le mot "you" ne soit pas
+      remplacé par "votre" ou "vos" dans une phrase car on perdrait ainsi
+      la correspondance avec la définition de "vous" dans la licence.
+
+      complete source code => le code source complet : définit dans l'Article
+      3 mais utilisé avant
+
+      Vocabulaire présentant des difficultés:
+      =======================================
+
+      module => module : dans le contexte module d'un programme. L'idée de
+      module n'est pas définie ce qui laisse un flou, en anglais comme
+      en français
+
+      may => peuvent : il serait mieux de traduire par "ont la possibilité
+      de". La traduction actuelle conviendrait mieux à "can". A défaut d'un
+      verbe plus proche de "may", peuvent fait l'affaire et la perte de 
+      nuance entre "can" et "may" ne nuit pas au sens. 
+
+      terms / conditions => clauses / obligations : 2.c) conditions
+
+      normally => habituellement: on aurait pu utiliser "normallement" mais
+      la signification "sans problème, sans incident" de "normallement" est
+      trop forte et cache celle qui est importante: l'idée de norme, de
+      standard, d'habitude. Si on dit "lorsqu'un programme se lance de
+      la façon la plus normale" on fait référence à la façon la plus usuelle,
+      la plus habituelle. On ne fait pas référence au fait qu'il se lance
+      sans avoir problèmes.
+
+      you => vous : vos ou votre n'est pas une possibilité, il faut
+      s'arranger pour rédiger de telle façon que "vous" soit toujours
+      présent (voir Termes définis)
+
+      we => le titulaire des droits d'auteur: dans le préambule
+
+      we => la Free Software Foundation: Article 10
+
+      indéfini => auteur de la licence : Article 7 "what is believed"
+
+      restriction => limitation : bien que restriction soit correct en
+      français, le mot limitation a une signification plus proche du terme
+      anglais restriction, sans pour autant que restriction soit un faux
+      ami.
+
+      output => sortie : se comprend en vocabulaire informatique seulement,
+      par référence à entrée / sortie. Il n'est pas possible de le remplacer
+      par un terme ne faisant pas partie du jargon informatique sans perdre
+      du sens ou en ajouter.
+
+      verbatim => à l'identique: on aurait pu lui préférer "en l'état" ou
+      "tel quel" mais "à l'identique" améliore la lisibilité sans changer
+      le sens.
+
     </notes>
   </transinfo>
 
@@ -91,8 +246,12 @@
       <src>The licenses for most software are designed to take away
 	your freedom to share and change it.  </src>
       <dst>Les licences de la plupart des logiciels sont
-	conçues pour vous ôter la liberté de les partager et de les
+	conçues pour vous enlever toute liberté de les partager et de les
 	modifier. </dst>
+      <notes>
+	Laurent: "toute liberte" traduit mieux "la liberte" est trop
+	flou et generique et plus exact
+      </notes>
     </para>
 
     <para>
@@ -101,10 +260,14 @@
 	make sure the software is free for all its users.
       </src>
 
-      <dst>A contrario, la Licence Publique Générale est destinée à vous garantir
-	la liberté de partager et de modifier les logiciels libres,
-	et à assurer que les logiciels soient libres pour tous leurs
-	utilisateurs.  </dst> </para>
+      <dst>A contrario, la Licence Publique Générale est destinée garantir
+	votre liberté de partager et de modifier les logiciels libres,
+	et à assurer que ces logiciels soient libres pour tous leurs
+	utilisateurs.  </dst> 
+      <notes>
+	Laurent: "ces" refere a "les logiciels" plus tot dans la phrase
+	</notes>
+    </para>
 
     <para>
       <src>This General Public License applies to most of the Free
@@ -120,12 +283,16 @@
       <src>(Some other Free Software Foundation software is covered by
 	the GNU Library General Public License instead.)</src>
       <dst>(Certains autres logiciels de la Free Software Foundation
-	sont couverts par la GNU Lesser General Public License à la place.)</dst>
+	sont couverts par la GNU Lesser General Public License a la place.)</dst>
     </para>
 
     <para>
       <src>You can apply it to your programs, too.</src>
-      <dst>Vous pouvez aussi l'appliquer à vos programmes.</dst>
+      <dst>Vous pouvez aussi l'appliquer aux programmes qui sont les votres.</dst>
+      <notes>
+	Laurent: la phrase anglaise contient plus que "vos programmes"et
+	il faut le traduire.
+	</notes>
     </para>
 
     <p/>
@@ -162,20 +329,27 @@
 	To protect your rights, we need to make restrictions that
 	forbid anyone to deny you these rights or to ask you to
 	surrender the rights.</src> 
-      <dst>Pour protéger vos droits, nous avons besoin de faire des
-	restrictions qui interdisent à quiconque de vous dénier
+      <dst>Pour protéger vos droits, il nous est nécessaire d'imposer
+	des limitations qui interdisent à quiconque de vous refuser
 	ces droits ou de vous demander d'y renoncer.</dst>
+      <notes>
+	Laurent: "we need" coté passif et non actif, limitation traduit
+	mieux restriction, restriction en francais pas meme signification
+      </notes>
     </para>
 
     <para>
       <src>These restrictions translate to certain responsibilities
 	for you if you distribute copies of the software, or if you
 	modify it.</src>
-      <dst>Ces restrictions se traduisent par
+      <dst>Ces limitations équivalent à
         certaines responsabilités qui
-        vous incombent si vous distribuez des copies du logiciel, ou
-	si le modifiez.</dst>
-      <notes>Ajouter « couvert par cette licence » après « du logiciel »</notes>
+        vous incombent si vous distribuez des copies de ces logiciels, ou
+	si les modifiez.</dst>
+      <notes>
+	"ces logiciels" fait référence aux logiciels libres, voir
+	ci-dessus le paragraphe débutant par "A contrario".
+      </notes>
     </para>
 
     <p/>
@@ -198,14 +372,14 @@
       <src>You must make sure that they, too, receive or can get the
 	source code.  </src>
       <dst>Vous devez vous assurer qu'eux aussi reçoivent ou puissent
-        obtenir le code source.</dst>
+        disposer du code source.</dst>
     </para>
 
     <para>
       <src>And you must show them these terms so they know their
 	rights.</src>
       <dst>Et vous devez leur montrer les présentes dispositions afin
-       qu'ils connaissent leurs droits.</dst>
+       qu'ils aient connaissance de leurs droits.</dst>
     </para>
 
     <p/>
@@ -217,10 +391,13 @@
 	permission to copy, distribute and/or modify the
 	software.</src>
       <dst>Nous protégeons vos droits en deux étapes : (1) nous sommes
-	titulaires des droits d'auteurs (copyright) du logiciel, et
-	(2) nous vous offrons cette licence, qui vous donne
+	titulaires des droits d'auteur du logiciel, et
+	(2) nous vous delivrons cette licence, qui vous donne
 	l'autorisation légale de reproduire, distribuer et/ou modifier
 	le logiciel.</dst>
+      <notes>
+	Laurent: delivrons reflete mieux offer
+      </notes>
     </para>
 
     <p/>
@@ -242,10 +419,15 @@
 	reflect on the original authors' reputations.</src>
       <dst>Si le logiciel est modifié par quelqu'un d'autre puis
 	transmis à des tiers, nous voulons que les destinataires
-	sachent que ce qu'ils possèdent n'est pas l'original, de sorte
-	que tout problème introduit par d'autres ne puisse influer
-	sur la réputation de
+	soient mis au courant que ce qu'ils ont recu n'est pas le logiciel d'origine, de sorte
+	que tout problème introduit par d'autres ne puisse entacher
+	la réputation de
 	l'auteur original.</dst>
+      <note>
+	Laurent: have dans l'article correspond bcp plus a l'idee de "recu"
+	qu'a celle de possession qui est totalement hors du sujet de ce
+	paragraphe.
+      </note>
     </para>
 
     <p/>
@@ -254,8 +436,12 @@
       <src>
 	Finally, any free program is threatened constantly by software
 	patents.  </src>
-      <dst>Enfin, tout programme libre est en permanence menacé par
-	les brevets de logiciels.</dst>
+      <dst>En définitive, un programme libre restera à la merci des
+	brevets de logiciels.</dst>
+      <notes>
+	Laurent: un == article indéfinit remplace "tout". Utiliser
+	le futur comme present de généralité qui cumule "is"et "constantly"
+	</notes>
     </para>
 
     <para>
@@ -264,9 +450,9 @@
 	making the program proprietary.  </src>
 
       <dst>Nous souhaitons éviter le risque que les redistributeurs
-      d'un programme libre soient dans l'obligation d'obtenir
-      individuellement des licences de brevet, ceci ayant l'effet de
-      rendre le programme propriétaire.
+      d'un programme libre fassent des demandes individuelles de
+      licence de brevet, ceci ayant pour effet de rendre le programme
+      propriétaire.
        </dst>
 
     </para>
@@ -276,7 +462,7 @@
 	be licensed for everyone's free use or not licensed at
 	all.</src>
       <dst>Pour éviter cela, nous établissons clairement que toute licence de brevet
-      doit être acquise de telle sorte que n'importe qui puisse l'exercer librement
+      doit être acquise de facon a ce que l'usage en soit libre pour tous
       ou bien qu'aucune licence ne soit acquise.</dst>
     </para>
 
@@ -287,7 +473,7 @@
 	The precise terms and conditions for copying, distribution and
 	modification follow.</src>
       <dst>Les termes exacts et les conditions de copie, distribution et
-        modification sont les suivants.</dst>
+        modification sont les suivants:</dst>
     </para>
 
   </section>
@@ -295,9 +481,24 @@
   <section>
     <title lang="en">GNU General Public License Terms and Conditions
       for Copying, Distribution and Modification</title>
-    <title lang="fr">Clauses et Conditions de la Licence Publique Générale
+    <title lang="fr">Clauses de la Licence Publique Générale
       GNU portant sur la reproduction, la distribution et la
       modification</title>
+
+    <notes>
+      "Termes and Conditions" est un terme consacré en droit
+      anglo-saxon qui se traduit mal tel quel en français. "termes et
+      conditions" est remplacé par "clauses". Il serait aussi possible
+      de traduire par "clause et obligations" ce qui trouverait un
+      écho dans le fait que "conditions" est systématiquement traduit
+      par "obligation" dans la suite. Mais c'est une formulation
+      inhabituelle lorsqu'on rédige une licence en français. Dans ce
+      cas le fait de remplacer les deux termes par un seul ne rajoute
+      pas de signification et n'enlève pas de signification.
+
+      L'utilisation des majuscules dans les titres passe mal en français
+      et a été abandonné dans la traduction.
+    </notes>
 
     <para>
       <src>0. This License applies to any program or other work which
@@ -306,7 +507,7 @@
 	License.</src>
       <dst>0. La présente Licence s'applique à tout programme
 	ou tout autre ouvrage contenant un avis, apposé par le titulaire des
-	droits d'auteurs, stipulant qu'il peut être distribué dans le respect
+	droits d'auteur, stipulant qu'il peut être distribué dans le respect
 	des clauses de la présente Licence Publique
 	Générale.</dst>
     </para>
@@ -321,21 +522,44 @@
       <dst>Ci-après, le "Programme" désigne l'un quelconque de ces
 	programmes ou ouvrages, et un "ouvrage fondé sur le Programme"
 	désigne soit le Programme, soit un ouvrage qui en dérive au
-	titre des lois sur le droit d'auteur (copyright): en d'autres termes, 
+	titre des lois sur le droit d'auteur: en d'autres termes, 
 	un ouvrage contenant le Programme ou une partie de
-	ce dernier, soit en l'état, soit avec des modifications et/ou
+	ce dernier, soit á l'identique, soit avec des modifications et/ou
 	traduit dans un autre langage.</dst>
     </para>
+    <note>
+      "dans un autre langage" contient une ambiguïte qui reflète celle
+      du texte anglais. Il peut s'agir d'une langue parlée (c'est le
+      case généralement pris en compte) mais ne doit pas exclure un
+      langage informatique. Il n'est donc pas possible de traduire
+      en disant "dans une autre langue" qui excluerait les langages
+      informatiques car il ne sont jamais désignés comme une "langue"
+      en français.
+    </note>
 
     <para>
       <src>(Hereinafter, translation is included without limitation in
 	the term "modification".)</src>
-      <dst>(Ci-après, le terme "modification" inclut, sans s'y réduire, la traduction)</dst>
+      <dst>(Ci-après, le terme "modification" implique, sans s'y réduire, le terme traduction)</dst>
     </para>
+    <notes>
+      Reformulation: dans la suite de la licence, lorsqu'il est écrit
+      "modification" il faut lire "modification ou traduction". Le
+      "sans s'y réduire" signifie qu'on ne peut pas prétendre que 
+      par la suite "modification" signifie exclusivement "traduction".
+      Cela aurait pour effet, par exemple, de permettre à quelqu'un
+      de prétendre qu'une amélioration au programme n'est pas permise
+      car il ne s'agit pas d'une traduction et que la licence ne permet
+      que des traductions.
+    </notes>
 
     <para>
       <src>Each licensee is addressed as "you".</src>
-      <dst>Chaque concessionaire de la présente licence sera désigné par "vous".</dst>
+      <dst>Chaque concessionaire sera désigné par "vous".</dst>
+      <notes>
+	Il est implicite que le concessionaire est concessionaire
+	de la présente license. 
+      </notes>
     </para>
 
     <p/>
@@ -347,7 +571,7 @@
       </src>
       <dst>Les activités autres que la reproduction, la distribution et
 	la modification ne sont pas couvertes par la présente Licence
-	; elles sont hors de son influence.</dst>
+	; elles sont hors de sa sphère d'influence.</dst>
     </para>
 
     <para>
@@ -355,18 +579,27 @@
 	output from the Program is covered only if its contents
 	constitute a work based on the Program (independent of having
 	been made by running the Program).</src>
-      <dst>L'acte d'exécuter le Programme n'est pas sujet à restriction
+      <dst>L'opération consistant à exécuter le Programme n'est soumise à aucune limitation
 	et les sorties du programme ne sont couvertes que si leur
 	contenu constitue un ouvrage fondé sur le Programme
-	(indépendamment du fait qu'il ait été produit par l'exécution
+	(indépendamment du fait qu'il ait été réalisé grâce à l'exécution
 	du Programme).</dst>
+      <notes>
+	Il faut bien distinguer "exécuter" et "lancer" qui correspondent
+	à "execute" et "run". Exécuter un programme se comprend en
+	général comme lancer le programme et l'exécuter jusqu'à son
+	terme. Si l'on traduit "act" par "acte" l'idée sous-jacente
+	d'acte ponctuel est forte et s'oppose à l'idée de durée 
+	contenue dans "exécuter". C'est la raison du choix du mot
+	"opération".
+      </notes>
     </para>
 
     <para>
       <src>Whether that is true depends on what the Program
 	does.</src>
-      <dst>La véracité de ce qui précède dépend de ce que fait le
-	programme.</dst>
+      <dst>La validité de ce qui précède dépend de ce que fait le
+	Programme.</dst>
     </para>
 
     <p/>
@@ -380,16 +613,31 @@
 	License and to the absence of any warranty; and give any other
 	recipients of the Program a copy of this License along with
 	the Program.</src>
-      <dst>1. Vous pouvez reproduire et distribuer des copies non
-	modifiées du code source du Programme tel que vous l'avez
-	reçu, sur un support quelconque, du moment que vous apposez
-	sur chaque copie, d'une manière appropriée et parfaitement
-	visible, un avis approprié de droits d'auteur (copyright) et
-	de dénégation de garantie ; que vous gardez intacts tous les
+      <dst>1. Vous pouvez reproduire et distribuer des copies à 
+	l'identique du code source du Programme tel que vous l'avez
+	reçu, sur n'importe quel support, du moment que vous apposez
+	sur chaque copie, d'une manière ad hoc et parfaitement
+	visible, l'avis de droit d'auteur adéquat et
+	un déni de garantie ; que vous gardez intacts tous les
 	avis faisant référence à la présente Licence et à l'absence de
-	toute garantie ; et que vous donnez à tout destinataire du
+	toute garantie ; et que vous fournissez à tout destinataire du
 	Programme autre que vous même un exemplaire de la présente
 	Licence en même temps que le Programme.</dst>
+      <notes>
+	"appropriatly" est traduit par "ad hoc" dans le sens de
+	idoine, lié à la situation dans laquelle on se
+	trouve. L'apposition de l'avis doit se faire de façon ad hoc
+	par rapport à la nature de l'ouvrage. Par exemple, son
+	inclusion dans un binaire n'est ad hoc ("appropriate") que si
+	elle permet à l'utilisateur de le voir autrement qu'en ouvrant
+	le fichier binaire avec un éditeur de texte.
+
+	"appropriate" est traduit par "adéquat" car l'avis
+	de droit d'auteur doit avoir a une forme adéquate (appropriate) 
+	dont dépend sa validité, qui conditionne le fait qu'il sera
+	jugé recevable dans certain cas. Par exemple il faut y inclure
+	la lettre "c" dans un cercle.
+      </notes>
     </para>
 
     <p/>
@@ -413,20 +661,11 @@
 	of Section 1 above, provided that you also meet all of these
 	conditions:
       </src>
-      <dst>2. Vous pouvez modifier votre copie ou vos copies du Programme
-	ou toute partie de celui-ci, formant ainsi un ouvrage fondé sur le
-	Programme, et copier et distribuer de telles modifications selon les
+      <dst>2. Vous pouvez modifier votre copie ou des copies du Programme
+	ou n'importe quelle partie de celui-ci, réalisant ainsi un ouvrage
+	fondé sur le Programme, et copier et distribuer de tels modifications ou ouvrage selon les
 	termes de l'Article 1 ci-dessus, à condition de vous conformer également
-	à toutes ces conditions:</dst>
-      <notes>
-	"formant" doit avoir une signification juridique aussi forte
-	que possible et doit dire que l'acte de modification est
-	réputé entrainer l'apparition (la formation ? la constitution
-	? la réalisation ? la production ?) d'un "ouvrage fondé sur le
-	Programme". De la même façon que l'on peut s'interroger sur l'évènement
-	qui entraine la formation d'un contrat. On parlera alors de "formation de
-	contrat" et non de "fabrication de contrat" ou de "production de contrat".
-      </notes>
+	à chacune des obligations suivantes:</dst>
     </para>
 
     <indent/>
@@ -437,9 +676,9 @@
       <src>a) You must cause the modified files to carry prominent
 	notices stating that you changed the files and the date of any
 	change.</src>
-      <dst>a) Vous devez faire en sorte que les fichiers modifiés
-         comportent des avis très apparents stipulants que vous avez modifié
-	 les fichiers ainsi que la date de toute modification;</dst>
+      <dst>a) Vous devez munir les fichiers modifiés d'avis bien visibles
+	stipulants que vous avez modifié ces
+	fichiers, ainsi que la date de chaque modification;</dst>
     </para>
 
     <para>
@@ -452,9 +691,9 @@
       <dst>b) Vous devez prendre les dispositions nécessaires pour que 
         tout ouvrage
 	que vous distribuez ou publiez, et qui, en totalité ou en partie,
-	contient ou est fondé sur le Programme ou une partie 
-	quelconque de ce dernier, soit concédé comme un tout, 
-	à titre gratuit, à tous tiers, au titre des dispositions
+	contient ou est fondé sur le Programme - ou une partie 
+	quelconque de ce dernier - soit concédé comme un tout, 
+	à titre gratuit, à n'importe quel tiers, au titre des clauses
 	de la présente Licence.</dst>
       <notes>
 	C'est le seul endroit ou l'on dit qu'un programme est concédé
@@ -464,8 +703,23 @@
 	phrase si on s'essaye à ajouter "licence". Elle est déjà 
 	lourde et complexe à comprendre. Si, juridiquement parlant,
 	la formulation est correcte, il est probablement préférable de
-	s'en tenir la. Si, juridiquement parlant, la formulation est
-	incorrecte, il nous faut l'aide d'un professionnel.
+	s'en tenir la. 
+	
+	Il est à noter que cette section ne s'applique aux
+	modifications elles mêmes que dans la mesure ou elles peuvent
+	être qualifiées d'ouvrage dérivé ou contenant le
+	programme. L'articulation entre l'introduction du 2.  qui dit
+	que les modifications sont sujetes aux sections a) b) c) et
+	cette section b) conduit parfois le lecteur à conclure à tort
+	que les modifications elles mêmes doivent pouvoir être
+	distribuées sous licence GNU GPL par l'auteur ou alors ne pas
+	être diffusées du tout. L'auteur peut toujours distribuer ses
+	modifications indépendament sous la licence de son choix.  Le
+	caractère indépendant d'une distribution s'apprécie au cas par
+	cas et les stratégies de contournement évidentes consistant à
+	distribuer des modifications qui provoquent automatiquement le
+	téléchargement du programme son vouées à l'échec, d'un point
+	de vue juridique.
       </notes>
     </para>
 
@@ -486,13 +740,25 @@
 	quand il commence son exécution pour une telle
 	utilisation interactive de la manière la plus usuelle, faire
 	en sorte qu'il imprime ou affiche une annonce
-	comprenant un avis approprié de droits d'auteur (copyright), et un avis
-	qu'il n'y a pas de garantie (ou bien stipulant que
+	comprenant un avis de droit d'auteur adéquat, et un avis
+	stipulant qu'il n'y a pas de garantie (ou bien stipulant que
 	vous fournissez un recours en garantie), et que
-	les utilisateurs peuvent redistribuer le programme selon les présentes
-	conditions, 
-	et expliquant à l'utilisateur comment voir
+	les utilisateurs peuvent redistribuer le programme en respectant
+	les présentes obligations, et expliquant à l'utilisateur comment voir
 	une copie de la présente Licence.</dst>
+      <notes>
+	Il aurait été tentant de traduire "under these conditions" par
+	"au titre des présentes clauses". Cependant, lorsque le
+	terme "condition" est employé c'est pour faire référence aux
+	obligations et non aux clauses de la licence. Le b) juste
+	au dessus utilise
+	la formule "under the terms of this License" qui se traduit
+	en "au titre des clauses de la présente Licence", il est 
+	donc pertinent et nécessaire de retranscrire la différence
+	de formulation anglaise. En effet, il est fait référence ici
+	aux obligations liées à la redistribution et non à toutes les
+	obligations décrites dans la licence.
+      </notes>
     </para>
 
     <para>
@@ -503,6 +769,12 @@
 	mais n'imprime pas habituellement une telle annonce, votre
 	ouvrage fondé sur le Programme n'est pas contraint
 	d'imprimer une annonce).</dst>
+      <notes>
+	"the Pogram itself" doit se comprendre comme le programme
+	original, sans modifications. Il aurait été plus clair de dire
+	"the original Program", bien que ce soit redondant avec la
+	définition de Program comme nom propre. 
+      </notes>
     </para>
 
     <p/>
@@ -513,7 +785,7 @@
       <src>These requirements apply to the modified work as a whole.
       </src>
       <dst>Ces obligations s'appliquent à l'ouvrage modifié
-	pris dans sa totalité.
+	pris comme un tout.
       </dst>
     </para>
 
@@ -525,9 +797,10 @@
 	as separate works.  </src>
 	<dst>Si des parties identifiables
 	de cet ouvrage ne sont pas fondées sur le Programme et peuvent
-	raisonnablement être considérées comme indépendantes et
-	elles-mêmes comme des ouvrages distincts, alors la présente Licence ne
-	s'applique pas à ces éléments lorsque vous les distribuez
+	raisonnablement être considérées comme des ouvrages indépendants 
+	distincts en elles mêmes, alors ni la présente Licence ni
+	ses clauses, ne
+	s'appliquent à ces parties lorsque vous les distribuez
 	en tant qu'ouvrages distincts.</dst>
     </para>
 
@@ -542,7 +815,7 @@
 	d'un tout qui est un ouvrage fondé sur le Programme, la distribution
 	du tout doit être soumise aux clauses de la présente Licence, 
 	dont les permissions qu'elle octroie aux autres concessionaires s'étendent à
-	l'entièreté du tout, et par conséquent à chacune de ses parties,
+	l'entièreté du tout, et par conséquent à chaque partie
 	quel qu'en soit l'auteur.
       </dst>
     </para>
@@ -575,9 +848,17 @@
       <dst>De plus, la simple proximité du Programme avec un autre ouvrage qui n'est
         pas fondé sur le Programme (ou un ouvrage fondé
 	sur le Programme) sur un espace de stockage ou un support de
-	distribution ne place pas l'autre ouvrage sous l'influence de
+	distribution ne place pas l'autre ouvrage dans la sphère 
+	d'influence de
 	la présente Licence.
 	</dst>
+      <notes>
+	"mere aggregation" est traduit par "simple proximité" car le
+	terme "aggregation" en français contient une forte idée de
+	fusion alors que la signification de "mere aggregation" en 
+	anglais est précisément d'exclure tout idée de fusion entre
+	les deux programmes dont il est question.
+      </notes>
     </para>
 
     <p/>
@@ -587,10 +868,20 @@
 	under Section 2) in object code or executable form under the terms of
 	Sections 1 and 2 above provided that you also do one of the following:
       </src>
-      <dst>3. Vous pouvez copier et distribuer le Programme (ou un ouvrage
+      <dst>3. Vous pouvez reproduire et distribuer le Programme (ou un ouvrage
         fondé sur lui, selon l'Article 2) sous forme de code objet ou d'exécutable, 
-	selon les termes des Articles 1 et 2 ci-dessus, à condition d'accomplir
+	selon les termes des Articles 1 et 2 ci-dessus, à condition que vous accomplissiez
 	l'une des alternatives suivantes :</dst>
+      <notes>
+	"alternatives" n'est pas dans le texte anglais mais est ajouté
+	pour que la phrase tienne debout. "alternatives" respecte aussi
+	le "au moins une" implicite dans la phrase anglaise car il est
+	possible de choisir plusieurs alternatives. Le mot "alternative"
+	suggère que l'on choisit une seule alternative plutôt
+	que plusieurs alternatives, mais ce n'est pas obligatoire.
+	De la même façon, "one of" suggère que l'on choisit une seule
+	possibilité mais n'implique pas "at most one of". 
+      </notes>
     </para>
 
     <p/>
@@ -603,8 +894,8 @@
       </src>
       <dst>a) L'accompagner du code source complet correspondant,
 	sous une forme lisible par un ordinateur, qui doit être distribué
-	selon
-	les termes des Articles 1 et 2 ci-dessus, sur un support
+	au titre
+	des termes des Articles 1 et 2 ci-dessus, sur un support
 	habituellement utilisé pour l'échange de logiciels; ou,</dst>
     </para>
 
@@ -621,8 +912,8 @@
       <dst>b) L'accompagner d'une proposition écrite, valable durant au moins
          trois ans, de fournir à tout tiers, pour une compensation n'excédant
 	 pas ce que vous coûte l'acte physique de réaliser une distribution 
-	 source, une copie complète du code source correspondant sous
-	 une forme lisible par un ordinateur, qui sera distribuée selon les
+	 source, une reproduction complète du code source correspondant sous
+	 une forme lisible par un ordinateur, qui sera distribuée au titre des
 	 termes des Articles 1 et 2 ci-dessus, sur un support 
 	 habituellement utilisé pour l'échange de logiciels; ou,
       </dst>
@@ -637,11 +928,10 @@
 	received the program in object code or executable form with such
 	an offer, in accord with Subsection b above.)
       </src>
-      <dst>c) L'accompagner de l'information relative à la proposition écrite
-      concernant la distribution du code source correspondant. (Cette
-      alternative est seulement autorisée pour les distributions non commerciales
+      <dst>c) L'accompagner de l'information que vous avez reçu relative à la proposition de distribution du code source correspondant. (Cette
+      alternative est seulement autorisée pour les distributions non-commerciales
       et seulement si vous avez reçu le programme sous forme de code objet ou
-      d'éxécutable accompagné d'une telle offre, en conformité avec le 
+      d'éxécutable accompagné d'une telle proposition, en conformité avec le 
       sous-Article b ci-dessus.)
       </dst>
     </para>
@@ -665,12 +955,12 @@
         sous laquelle sont faites des modifications à cet ouvrage.
 	Pour un ouvrage exécutable, le code source complet désigne tout le code 
 	source de tous les modules qu'il contient, ainsi que les éventuels
-	fichiers de définition des interfaces associées, ainsi que les
+	fichiers de définition des interfaces qui y sont associés, ainsi que les
 	scripts utilisés pour contrôler la compilation et l'installation de
-	l'exécutable. Cependant, par exception spéciale, il n'est pas imposé que
-	le code source distribué inclue un élément quelconque qui est normallement
+	l'exécutable. Cependant, par exception spéciale, il n'est pas nécessaire que
+	le code source distribué inclue quoi que ce soit qui est habituellement
 	distribué (que ce soit sous forme source ou binaire) avec les composants
-	majeurs (compilateur, noyau, et ainsi de suite) du système d'exploitation
+	les plus importants (compilateur, noyau, et ainsi de suite) du système d'exploitation
 	sur lequel l'exécutable s'exécute, à moins que ce composant lui-même
 	accompagne l'exécutable.
      </dst>
@@ -686,12 +976,12 @@
 	compelled to copy the source along with the object code.
       </src>
       <dst>
-        Si une distribution d'exécutable ou de code objet consiste à
-	offrir un accès permettant de copier le programme depuis un
+        Si distribuer un exécutable ou un code objet consiste à
+	offrir un accès permettant la reproduction depuis un
 	endroit particulier, alors l'offre d'un accès équivalent pour
-	se procurer le code source au même endroit compte comme une
+	reproduire le code source depuis le même endroit compte comme une
 	distribution du code source, même si les tiers ne sont pas
-	contraints de copier le code source en même temps que le code
+	contraints de reproduire le code source en même temps que le code
 	objet.
       </dst>
     </para>
@@ -708,10 +998,10 @@
 	this License will not have their licenses terminated so long as such
 	parties remain in full compliance.
       </src>
-      <dst>4. Vous ne pouvez copier, modifier, concéder en sous-licence, ou distribuer
-	le Programme, sauf tel qu'expressément prévu par la présente Licence.
-	Toute tentative de copier, modifier, concéder en sous-licence, ou
-	distribuer le Programme autrement est réputée nulle, et met
+      <dst>4. Vous ne pouvez reproduire, modifier, concéder en sous-licence, ou distribuer
+	le Programme, sauf tel qu'expressément prévu au titre de la présente Licence.
+	Toute autre tentative de reproduire, modifier, concéder en sous-licence, ou
+	distribuer le Programme est réputée nulle, et met
 	immédiatement fin à vos droits au titre de la présente Licence. 
 	Toutefois, les
 	tiers ayant reçu de vous des copies, ou des droits,
@@ -732,17 +1022,26 @@
 	all its terms and conditions for copying, distributing or modifying
 	the Program or works based on it.
       </src>
-      <dst>5. Vous n'êtes pas obligé d'accepter la présente Licence, car vous ne
+      <dst>5. Vous n'êtes pas obligé d'accepter la présente Licence car vous ne
         l'avez pas signée. Cependant, rien d'autre
-	ne vous octroie l'autorisation de modifier ou de
-	distribuer le Programme ou ses ouvrages dérivés. Ces actions sont
+	ne vous donne l'autorisation de modifier ou 
+	distribuer le Programme ou les ouvrages qui en dérivent. Ces actions sont
 	interdites par la loi si vous n'acceptez pas la présente Licence. 
 	En conséquence, en modifiant ou 
 	distribuant le Programme (ou un ouvrage quelconque se fondant sur
-	le Programme), vous indiquez pour ce faire votre acceptation de la présente Licence, 
-	et toutes ses clauses et conditions concernant la reproduction, la
+	le Programme), vous signifiez votre acceptation du droit que la
+	la présente Licence vous donne de le faire, 
+	et de toutes ses clauses concernant la reproduction, la
 	distribution ou la modification du Programme ou d'ouvrages fondés
 	sur ce dernier.</dst>
+      <notes>
+	"License to do so" est une astuce en anglais intraduisible
+	telle quelle "license to" signifie "permission de" et
+	"License" fait référence à la licence elle même. En anglais on
+	cumule donc une phrase intelligible avec une référence
+	précise. En français il est donc nécessaire de traduire en
+	utilisant une formule moins compacte et plus lourde.
+      </notes>
     </para>
 
     <p/>
@@ -757,14 +1056,14 @@
 	this License.
       </src>
       <dst>
-        6. Chaque fois que vous redistribuez le Programme (ou tout
+        6. Chaque fois que vous redistribuez le Programme (ou n'importe quel
 	ouvrage fondé sur le Programme), une licence est automatiquement
-	concédée au destinataire par le concédant originel de la licence, 
+	concédée au destinataire par le concédant original de la licence, 
 	l'autorisant à
 	reproduire, distribuer ou modifier le Programme, sous réserve
-	des présentes clauses et dispositions. Vous ne pouvez imposer
-	une quelconque restriction supplémentaire à l'exercice des
-	droits du destinataire octroyés au titre des présentes.  Vous
+	des présentes clauses. Vous ne pouvez imposer
+	une quelconque limitation supplémentaire à l'exercice des
+	droits octroyés au titre des présentes par le destinataire.  Vous
 	n'avez pas la responsabilité de faire respecter la conformité
 	des tiers à la présente Licence.  </dst>
     </para>
@@ -787,32 +1086,36 @@
       </src>
       <dst>
       7. Si, conséquement à la décision d'une cour de justice ou l'allégation
-      d'une transgression de brevet ou pour toute autre raison (non limitée au
-      sujet des brevets), des obligations vous sont imposées (que ce soit par jugement,
+      d'une transgression de brevet ou pour toute autre raison (non limitée à un
+      probleme de brevet), des obligations vous sont imposées (que ce soit par jugement,
       conciliation ou autre) qui contredisent les obligations de la présente  Licence, elles
       ne vous excusent pas des obligations de la présente  Licence. Si vous ne pouvez
       distribuer de manière à satisfaire simultanément vos obligations au titre
-      de la présente  Licence et toute autre obligation pertinente, alors la conséquence 
-      en est que vous ne pouvez pas du tout distribuer le Programme. Par exemple,
-      si une licence de brevet ne permet pas une redistribution sans frais du
+      de la présente  Licence et toute autre obligation pertinente, alors il en découle que vous ne pouvez pas du tout distribuer le Programme. Par exemple,
+      si une licence de brevet ne permettait pas une redistribution sans redevance du
       Programme par tous ceux qui reçoivent une copie directement ou indirectement
       par votre intermédiaire, alors la seule façon pour vous de satisfaire à la
       fois à la licence du brevet et à la présente  Licence serait de vous abstenir 
       totalement de toute distribution du Programme.
       </dst>
+      <notes>
+	Dans la dernière phrase "it" a été remplacé par "la licence du brevet"
+	car la tournure en français ne permet pas d'écrire "ça" ou "y" de
+	façon intelligible.
+      </notes>
     </para>
 
     <p/>
 
     <para>
-      <src>If any portion of this section is held invalid or unenforceable under 
-        any particular circumstance, the balance of the section is intended to
+      <src>If any portion of this section is held invalid or unenforceable under any particular circumstance, the balance of the section is intended to
 	apply and the section as a whole is intended to apply in other
 	circumstances.
       </src>
-      <dst>Si une partie quelconque de cette section est tenue pour invalide ou
-	inapplicable pour quelque raison que ce soit, le reste de cette section
-	continue à s'appliquer et la totalité de la section s'appliquera dans
+      <dst>Si une partie quelconque de cette article est tenue pour invalide ou
+	inapplicable dans une circonstance particulière quelconque, l'intention
+	est que le reste de l'article s'applique la totalité de la section
+	s'appliquera dans
 	toute autre circonstance.</dst>
     </para>
 
@@ -830,18 +1133,33 @@
 	to distribute software through any other system and a licensee cannot
 	impose that choice.
       </src>
-      <dst>Cet article n'a pas pour but de vous inciter à transgresser un 
+      <dst>Cet article n'a pas pour but de vous induire à transgresser un 
       quelconque brevet ou d'autres prétentions à un droit de propriété ou
-      à contester la validité de telles prétentions ; cette section a pour 
-      seul objectif la protection de l'intégrité du système de distribution
-      du logiciel libre, qui est instrumenté par l'exercice de licenses
+      à contester la validité de la moindre de ces prétentions ; cet article a pour 
+      seul objectif de protéger l'intégrité du système de distribution
+      du logiciel libre, qui est mis en oeuvre par la pratique des licenses
       publiques. De nombreuses personnes ont fait de généreuses contributions
       au large spectre de logiciels distribués par ce système en se fiant à
       l'application cohérente de ce système ; il appartient à chaque auteur/donateur
-      de décider si il ou elle veut distribuer le logiciel par l'intermédiaire
-      d'un quelconque autre système et un concessionaire ne peut imposer ce
+      de décider si il ou elle veut distribuer du logiciel par l'intermédiaire
+      d'un quelconque autre système et un concessionaire ne peut imposer un
       choix.
       </dst>
+      <notes>
+	"any such claims" est traduit par "de la moindre de ces prétentions"
+	alors qu'il serait plus fidèle de traduire par "une quelconque de
+	telles prétentions". Il nous a semblé que "moindre" reflétait fidèlement
+	le "any" et "ces" le "such". Cela introduit un défaut d'homogénéité
+	dans le vocabulaire, "any" étant de façon quasi systématique 
+	traduit par "quelconque" ou "n'importe lequel" ou "quel qu'il soit".
+	Mais l'intelligibilité de la phrase est meilleure.
+
+	Une autre formulation éclaire la signification de la pratique
+	des licences. Ce sont les personnes qui se conforment
+	volontairement aux termes de licences publiques (qui les
+	pratiquent) qui crée ainsi (met en oeuvre) un système de
+	distribution dit "du logiciel libre".
+      </notes>
     </para>
 
     <p/>
@@ -850,7 +1168,7 @@
       <src>This section is intended to make thoroughly clear what is believed to
 	be a consequence of the rest of this License.
       </src>
-      <dst>Cette section a pour but de rendre totalement clair ce que l'on croit
+      <dst>Cet article a pour but de rendre totalement limpide ce que l'on pense
       être une conséquence du reste de la présente Licence.</dst>
     </para>
 
@@ -866,15 +1184,23 @@
 	countries not thus excluded. In such case, this License incorporates
 	the limitation as if written in the body of this License.
       </src>
-      <dst>8. Si la distribution et/ou l'utilisation du Programme est restreinte
+      <dst>8. Si la distribution et/ou l'utilisation du Programme est limitée
       dans certains pays que ce soit par brevets ou par interfaces soumises
-      au droit d'auteur (copyright), le titulaire originel des droits d'auteur
-      qui associe le Programme à la présente Licence peut ajouter explicitement 
-      une restriction géographique de distribution qui exclue ces pays afin
+      au droit d'auteur, le titulaire original des droits d'auteur
+      qui décide de couvrir le Programme par la présente Licence peut ajouter 
+      une limitation géographique de distribution explicite qui exclue ces pays afin
       que la distribution soit permise seulement dans ou entre les pays qui ne sont
-      pas ainsi exclus. Dans un tel cas, la présente Licence incorpore la restriction
+      pas ainsi exclus. Dans ce cas, la présente Licence incorpore la limitation
       comme si elle était écrite dans le corps de la présente Licence.
       </dst>
+      <notes>
+	"place" est remplacé par "décide de couvrir" plutôt que "couvre" qui
+	serait plus cohérent avec l'emploi systématique de "couvert" quand
+	il s'agit de dire que le programme est sous l'influence de la licence.
+	Le problème est que "couvre" serait par trop étrange et entrainerait
+	une confusion qui n'existe pas avec l'emploi de "place" en anglais.
+	On clarifie la phrase en ajoutant "décide".
+      </notes>
     </para>
 
     <p/>
@@ -887,7 +1213,7 @@
       </src>
       <dst>9. La Free Software Foundation peut, de temps à autre, publier des
 	versions révisées et/ou nouvelles de la Licence Publique Générale. De telles
-	nouvelles versions seront similaires à la présente version dans l'esprit,
+	nouvelles versions seront similaires à la présente version dans l'esprit
 	mais pourront différer dans le détail pour prendre en compte
 	de nouvelles problématiques ou inquiétudes.
       </dst>
@@ -904,15 +1230,21 @@
 	this License, you may choose any version ever published by the Free Software
 	Foundation.
       </src>
-      <dst>Chaque version possède un numéro de version distinct. Si le Programme
-	précise un numéro de la version de la présente Licence qui s'y applique 
-	et "any later version" ("une version ultérieure quelconque" ), vous avez le choix
+      <dst>Chaque version possède un numéro de version la distinguant. Si le Programme
+	précise le numéro de version de la présente Licence qui s'y applique 
+	et "une version ultérieure quelconque", vous avez le choix
 	de suivre les 
-	clauses et conditions de
+	clauses de
 	la présente version ou de toute autre version ultérieure publiée par la
 	Free Software Foundation. Si le Programme ne spécifie aucun numéro de
 	version de la présente Licence, vous pouvez choisir une version quelconque
 	publiée par la Free Software Foundation à quelque moment que ce soit.</dst>
+      <notes>
+	La nuance de "either" est perdue. "either" appuyait sur le fait qu'il
+	s'agit d'une alternative qui ne peut être cumulée. On peut choisir
+	de se conformer aux termes d'une des deux versions, pas a un panache
+	des deux.
+      </notes>
     </para>
 
     <p/>
@@ -930,10 +1262,10 @@
 	dans d'autres programmes libres dont les conditions de
 	distribution sont différentes, écrivez à l'auteur pour lui en demander
 	l'autorisation. Pour le logiciel dont la Free Software Foundation est
-	détentrice des droits d'auteur (copyright), écrivez à la Free Software Foundation ;
-	nous faisons parfois des exceptions à cette fin. Notre décision sera guidée
+	titulaire des droits d'auteur, écrivez à la Free Software Foundation ;
+	nous faisons parfois des exceptions dans ce sens. Notre décision sera guidée
 	par le double objectif de préserver le statut libre de tous les dérivés de nos
-	logiciels libres et de promouvoir le partage et la réutilisation du logiciel
+	logiciels libres et de promouvoir le partage et la réutilisation des logiciels
 	en général.
       </dst>
     </para>
@@ -946,16 +1278,18 @@
       </src>
       <dst>11. COMME LA LICENCE DU PROGRAMME EST CONCEDEE A TITRE GRATUIT, 
 	AUCUNE GARANTIE NE S'APPLIQUE AU PROGRAMME, DANS LES LIMITES
-	AUTORISEES PAR LA LOI EN VIGUEUR. SAUF MENTION CONTRAIRE ECRITE,
-	LES TITULAIRES DU DROIT D'AUTEUR ET/OU LES AUTRES PARTIES METTENT
-	LE PROGRAMME A DISPOSITON "EN L'ETAT", SANS AUCUNE GARANTIE DE
+	AUTORISEES PAR LA LOI APPLICABLE. SAUF MENTION CONTRAIRE ECRITE,
+	LES TITULAIRES DU DROIT D'AUTEUR ET/OU LES AUTRES TIERS FOURNISSENT
+	LE PROGRAMME "EN L'ETAT", SANS AUCUNE GARANTIE DE
 	QUELQUE NATURE QUE CE SOIT, EXPRESSE OU IMPLICITE, Y COMPRIS, MAIS
 	SANS Y ETRE LIMITE, LES GARANTIES IMPLICITES DE QUALITE LOYALE ET MARCHANDE ET
-	DE L'ADEQUATION A UN OBJECTIF PARTICULIER. VOUS
+	DE LA CONFORMITE A UNE UTILISATION PARTICULIERE. VOUS
 	ASSUMEZ LA TOTALITE DES RISQUES LIES A LA QUALITE ET AUX PERFORMANCES DU PROGRAMME.
-	SI LE PROGRAMME SE REVELAIT DEFECTUEUX, L'ENTRETIEN, 
-	LES REPARATIONS OU LES CORRECTIONS NECESSAIRES
-	SONT INTEGRALEMENT A LA CHARGE DU CONCESSIONAIRE.</dst>
+	SI LE PROGRAMME SE REVELAIT DEFECTUEUX, LE COUT DE L'ENTRETIEN, 
+	DES REPARATIONS OU DES CORRECTIONS NECESSAIRES
+	VOUS INCOMBENT INTEGRALEMENT.</dst>
+      <notes>
+	
     </para>
 
     <p/>
@@ -963,20 +1297,22 @@
     <para>
       <src>12. IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MAY MODIFY AND/OR REDISTRIBUTE THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
       </src>
-      <dst>12. EN AUCUN CAS, SAUF LORSQUE LA LOI EN VIGEUR OU UNE CONVENTION ECRITE L'EXIGE, UN TITULAIRE DE DROIT D'AUTEUR QUEL QU'IL SOIT, OU TOUT TIERS QUI POURRAIT MODIFIER ET/OU REDISTRIBUER LE PROGRAMME COMME PERMIS CI-DESSUS, NE POURRAIT ETRE TENU POUR RESPONSABLE A VOTRE EGARD DES DOMMAGES, INCLUANT LES DOMMAGES GENERIQUES, SPECIFIQUES, SECONDAIRES OU CONSECUTIFS, RESULTANT DE L'UTILISATION OU DE L'IMPOSSIBILITE D'EXECUTER LE PROGRAMME (Y COMPRIS, MAIS SANS Y ETRE LIMITE, LA PERTE DE DONNEES, OU LE FAIT QUE DES DONNEES SOIENT RENDUES INEXACTES, OU LES PERTES EPROUVEES PAR VOUS OU PAR DES TIERS, OU LE FAIT QUE LE PROGRAMME ECHOUE A FONCTIONNER AVEC UN AUTRE PROGRAMME QUEL QU'IL SOIT) MEME SI LE TITULAIRE DE DROIT D'AUTEUR OU LE TIERS CONCERNE A ETE AVERTI DE LA POSSIBILITE DE TELS DOMMAGES.
+      <dst>12. EN AUCUN CAS, SAUF LORSQUE LA LOI APPLICABLE OU UNE CONVENTION ECRITE L'EXIGE, UN TITULAIRE DE DROIT D'AUTEUR QUEL QU'IL SOIT, OU TOUT TIERS QUI POURRAIT MODIFIER ET/OU REDISTRIBUER LE PROGRAMME COMME PERMIS CI-DESSUS, NE POURRAIT ETRE TENU POUR RESPONSABLE A VOTRE EGARD DES DOMMAGES, INCLUANT LES DOMMAGES GENERIQUES, SPECIFIQUES, SECONDAIRES OU CONSECUTIFS, RESULTANT DE L'UTILISATION OU DE L'INCAPACITE D'UTILISER LE PROGRAMME (Y COMPRIS, MAIS SANS Y ETRE LIMITE, LA PERTE DE DONNEES, OU LE FAIT QUE DES DONNEES SOIENT RENDUES IMPRECISES, OU LES PERTES EPROUVEES PAR VOUS OU PAR DES TIERS, OU LE FAIT QUE LE PROGRAMME ECHOUE A INTEROPERER AVEC UN AUTRE PROGRAMME QUEL QU'IL SOIT) MEME SI LE DIT TITULAIRE DU DROIT D'AUTEUR OU LE TIERS CONCERNE A ETE AVERTI DE L'EVENTUALITE DE TELS DOMMAGES.
 </dst>
+
     </para>
 
     <title lang="en">END OF TERMS AND CONDITIONS</title>
-    <title lang="fr">FIN DES CLAUSES ET CONDITIONS</title>
+    <title lang="fr">FIN DES CLAUSES</title>
+
   </section>
 
   <section>
     <title lang="en">How to Apply These Terms to Your New Programs</title>
-    <title lang="fr">Comment Appliquer ces Clauses à vos Nouveaux Programmes</title>
+    <title lang="fr">Comment appliquer ces clauses à vos nouveaux programmes</title>
     <para>
       <src>If you develop a new program, and you want it to be of the greatest possible use to the public, the best way to achieve this is to make it free software which everyone can redistribute and change under these terms.</src>
-      <dst> Si vous développez un nouveau programme, et si vous voulez qu'il soit de la plus grande utilité possible pour le public, le meilleur moyen d'y parvenir est d'en faire un Logiciel Libre que chacun peut redistribuer et modifier au titre des présentes clauses et conditions.</dst>
+      <dst> Si vous développez un nouveau programme, et si vous voulez qu'il soit de la plus grande utilité possible pour le public, le meilleur moyen d'y parvenir est d'en faire un logiciel libre que chacun peut redistribuer et modifier au titre des présentes clauses.</dst>
     </para>
 
     <p/>
@@ -984,12 +1320,12 @@
     <para>
       <src>To do so, attach the following notices to the program. It is safest to attach them to the start of each source file to most effectively convey the exclusion of warranty; and each file should have at least the "copyright" line and a pointer to where the full notice is found.
       </src>
-      <dst>Pour ce faire, ajoutez les avis suivants au programme. Il
-	est plus sûr de les ajouter au début de chaque fichier source
-	pour faire comprendre le plus efficacement possible l'absence
-	de toute garantie ; et chaque fichier devrait au moins contenir
-	la ligne "copyright" et une indication de l'endroit ou l'avis
-	complet peut être trouvé.
+      <dst>Pour ce faire, munissez le programme des avis suivants. 
+	Le plus sûr est de les ajouter au début de chaque fichier source
+	pour véhiculer le plus efficacement possible l'absence
+	de toute garantie ; chaque fichier devrait aussi contenir au moins
+	la ligne "copyright" et une indication de l'endroit ou se trouve l'avis
+	complet.
       </dst>
     </para>
 
@@ -1015,27 +1351,32 @@
     along with this program; if not, write to the Free Software
     Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
       </src>
-      <dst> [Une ligne donnant le nom du programme et une idée synthétique de ce qu'il fait.]
+      <dst> [Une ligne donnant le nom du programme et une courte idée  de ce qu'il fait.]
 
 	Copyright (C) [année] [nom de l'auteur]
 
-	Ce programme est un Logiciel Libre ; vous pouvez le
-	redistribuer et/ou le modifier au titre des clauses et
-	conditions de la Licence Publique Générale GNU, telle que
-	publiée par la Free Software Foundation ; soit la version 2 de
-	la Licence, ou (à votre discrétion) une version ultérieure
-	quelconque.
+	Ce programme est un logiciel libre ; vous pouvez le
+	redistribuer et/ou le modifier au titre des clauses de la
+	Licence Publique Générale GNU, telle que publiée par la Free
+	Software Foundation ; soit la version 2 de la Licence, ou (à
+	votre discrétion) une version ultérieure quelconque.
 
 	Ce programme est distribué dans l'espoir qu'il sera utile,
 	mais SANS AUCUNE GARANTIE ; sans même la garantie implicite de
-	QUALITE LOYALE ET MARCHANDE ou D'ADEQUATION A UN OBJECTIF
-	PARTICULIER. Se référer à la Licence Publique
+	QUALITE LOYALE ET MARCHANDE ou DE CONFORMITE A UNE UTILISATION
+	PARTICULIERE. Voir la Licence Publique
 	Générale GNU pour plus de détails.
 
 	Vous devriez avoir reçu un exemplaire de la Licence Publique
 	Générale GNU avec ce programme ; si ce n'est pas le cas,
 	écrivez à la Free Software Foundation Inc., 59 Temple Place,
 	Suite 330, Boston, MA 02111-1307 USA.</dst>
+      <notes>
+	On ne traduit pas "along" qui renforce l'idée que c'est en 
+	même temps que le programme que l'on est censé recevoir la 
+	licence. Il n'y a pas de possibilité de retranscrire cela
+	aisément en français et la perte de sens est insignifiante.
+      </notes>
     </para>
 
     <p/>
@@ -1044,8 +1385,8 @@
     <para>
       <src>Also add information on how to contact you by electronic and paper mail.
       </src>
-      <dst>Ajoutez aussi des informations permettant de vous contacter
-	par courrier électronique (mél) et courrier postal.</dst>
+      <dst>Ajoutez aussi des informations la manière de vous contacter
+	par courrier électronique et courrier postal.</dst>
     </para>
 
     <p/>
@@ -1054,9 +1395,22 @@
       <src>If the program is interactive, make it output a short notice like this when it starts in an interactive mode:
       </src>
       <dst>Si le programme est interactif, faites en sorte qu'il
-	émette un court avis tel que celui-ci lors qu'il démarre en
+	affiche un court avis tel que celui-ci lors qu'il démarre en
 	mode interactif :
       </dst>
+      <notes>
+	"affiche" est le verbe qui se rapproche le plus de "sortir" qui
+	serait le verbe que l'on devrait logiquement utiliser. Cependant,
+	si "sortie" a une signification informatique précise en français,
+	le verbe "sortir" n'est pas dans ce cas. On ne dit habituellement
+	les "entrées/sorties" d'un programme mais on ne dit pas d'un programme
+	qu'il a "sortit" des donné. Selon la nature des données produites
+	par le programme on emploiera plus volontier "affiche" si elle
+	sont destinées à être lues ou vues par un être humain, "émet" pour
+	en parler en général, "produit" quand c'est à destination d'un
+	autre programme (par exemple: produit un flux de données sur sa
+	sortie standard). 
+      </notes>
     </para>
 
     <p/>
@@ -1070,10 +1424,17 @@
     under certain conditions; type `show c' for details.
       </src>
       <dst>Gnomovision version 69, Copyright (C) année  nom de l'auteur
-	Gnomovision n'est accompagné d'AUCUNE GARANTIE ; pour plus de
-	détails tapez "show w". Ceci est un Logiciel Libre et vous pouvez
-	le redistribuer sous certaines conditions ; pour plus de
-	détails tapez "show c".</dst>
+	Gnomovision n'est accompagné d'ABSOLUMENT AUCUNE GARANTIE ; pour plus de
+	détails tapez "show w". Ceci est un logiciel libre et vous êtes
+	invité à le redistribuer en respectant certaines obligations ; pour plus
+	de détails tapez "show c".</dst>
+      <notes>
+	Pour être tout a fait cohérent avec les choix de vocabulaire 
+	juridique, il aurait fallu traduire "under" par
+	"au titre". Mais cela aurait rendu la phrase incompréhensible
+	dans ce contexte ou le jargon juridique cède la pas à la facilité
+	de compréhension par l'utilisateur.
+      </notes>
     </para>
 
     <p/>
@@ -1082,8 +1443,8 @@
     <para>
       <src>The hypothetical commands `show w' and `show c' should show the appropriate parts of the General Public License. Of course, the commands you use may be called something other than `show w' and `show c'; they could even be mouse-clicks or menu items--whatever suits your program.
       </src>
-      <dst>Les instructions hypothétiques "show w" et "show c" devraient présenter
-	les parties appropriées de la Licence Publique Générale. Bien
+      <dst>Les instructions hypothétiques "show w" et "show c" sont supposées montrer
+	les parties ad hoc de la Licence Publique Générale. Bien
 	entendu, les instructions que vous utilisez peuvent porter d'autres
 	noms que "show w" et "show c" ; elles peuvent même être des
 	clics de souris ou des éléments d'un menu ou tout ce qui convient à
@@ -1096,12 +1457,28 @@
       <src>You should also get your employer (if you work as a programmer) or your school, if any, to sign a "copyright disclaimer" for the program, if necessary. Here is a sample; alter the names: 
       </src>
 
-      <dst>Vous devriez aussi faire en sorte que votre employeur (si
-	vous travaillez en tant que développeur) ou votre école, si
-	c'est le cas, signe une "renonciation à droit d'auteur"
+      <dst>Vous devriez aussi obtenir de votre employeur (si
+	vous travaillez en tant que développeur) ou de votre école, si
+	c'est le cas, qu'il (ou elle) signe une "renonciation à droit d'auteur"
 	concernant le programme, si nécessaire. Voici un exemple (changez
 	les noms) :
       </dst>
+      <notes>
+	On est obligé de rajouter "(ou elle)" parceque le genre de "employeur"
+	n'est pas le même que celui de "école", problème qui ne se pose pas
+	en anglais.
+
+	"sample" signifie "échantillon" et non "exemple". La
+	signification d'"échantillon" ne convient cependant pas du
+	tout. Le terme le plus fidèle à la réalité décrite serait
+	"patron" dans le sens utilisé en couture ou encore
+	"calibre". Mais alors on pourrait supposer que le terme
+	anglais aurait du être "template" (utilisé en informatique et
+	effectivement traduit par "patron" en français) au lieu de
+	"sample". Mais, comme le mot "exemple" est suivit d'une
+	instruction suggérant de changer les noms, l'un ajouté à
+	l'autre ont la même sémantique que "patron".
+      </notes>
     </para>
 
     <p/>
@@ -1115,13 +1492,23 @@
   [signature of Ty Coon], 1 April 1989
   Ty Coon, President of Vice
       </src>
-      <dst>Yoyodyne, Inc., renonce par la présente à tout prétention à
-	un droit d'auteur sur le programme "Gnomovision" (qui fait des
+      <dst>Yoyodyne, Inc., déclare par la présente renoncer à toute prétention 
+	sur les droits d'auteur du programme "Gnomovision" (qui fait des
 	avances aux compilateurs) écrit par James Hacker.
 
 	[signature de Ty Coon], 1er avril 1989
 
 	Ty Coon, President du Vice</dst>
+      <notes>
+	"fait des avances" est la traduction litérale du jeu de mot
+	anglais dont le coté humoristique est intraduisible. Un
+	compilateur peut opèrer en plusieurs passes.  Une passe de
+	compilation est donc une opération commune pour un
+	compilateur. Un programme faisant des passes de compilation
+	(which makes compilation passes) n'a rien de drôle. Mais en
+	ajoutant "at" l'auteur change le sens : "make a pass at"
+	signifiant "faire des avances".
+      </notes>
     </para>
 
     <p/>

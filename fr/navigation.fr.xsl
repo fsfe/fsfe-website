@@ -48,7 +48,7 @@
 	<tr>
 	  <td class="TopBody">
 	    <a href="{$fsffrance}/index.fr.html">
-	      <img src="{$fsffrance}/images/gnulogo.jpg" alt="GNU Logo" border="0" height="73" width="60" />
+	      <img src="{$fsffrance}/images/fsfeurope-small.png" alt="FSFE logo" border="0"  />
 	    </a>
 	  </td>
 	  <td class="TopBody" width="99%" height="99%">

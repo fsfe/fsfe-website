@@ -92,7 +92,7 @@ MAX_TEX_RECURSION=4
 # the time, which is the opposite of what they are for.
 .PHONY: help all test \
 	clean clean-html clean-print \
-	ph pp h hx hg hd hdn p
+	ph pp h hx hg hd hdn fo p
 
 help:
 	@echo "make help   prints this help message"
@@ -115,6 +115,9 @@ hx: html-xsl
 hg: html-xsl-gnome-long html-xsl-gnome-short
 hd: html-dsssl
 hdn: html-dsssl-nochunk
+
+fo: fo-xsl-gnome-long fo-xsl-gnome-short
+
 p: print
 
 
@@ -179,6 +182,7 @@ html-xsl-gnome: ${XML_SRC} ${HTML_SS_XSL} prepare-html
 	${HTML_SS_XSL} ${XML_SRC}
 	touch $@
 
+
 html-xsl-gnome-long: xml-xsl-long ${HTML_SS_XSL} prepare-html
 	export SGML_CATALOG_FILES=${CATALOG}; \
 	xsltproc \
@@ -195,6 +199,7 @@ html-xsl-gnome-short: xml-xsl-short ${HTML_SS_XSL} prepare-html
 	${HTML_SS_XSL} ${XML_SRC_SHORT}
 	touch $@
 
+
 fo-xsl-gnome-long: xml-xsl-long ${FO_SS_XSL} prepare-print
 	export SGML_CATALOG_FILES=${CATALOG}; \
 	xsltproc \
@@ -202,6 +207,15 @@ fo-xsl-gnome-long: xml-xsl-long ${FO_SS_XSL} prepare-print
 	-o ${PRINT_OUT_DIR}/${FO_OUTPUT_LONG} \
 	${FO_SS_XSL} ${XML_SRC_LONG}
 	touch $@
+
+fo-xsl-gnome-short: xml-xsl-short ${FO_SS_XSL} prepare-print
+	export SGML_CATALOG_FILES=${CATALOG}; \
+	xsltproc \
+	--catalogs \
+	-o ${PRINT_OUT_DIR}/${FO_OUTPUT_SHORT} \
+	${FO_SS_XSL} ${XML_SRC_SHORT}
+	touch $@
+
 
 pdf-xsl-gnome-long: fo-xsl-gnome-long prepare-print
 	(cd ${PRINT_OUT_DIR}; \

@@ -42,6 +42,9 @@ process:
 		perl -MFile::Copy -p -e '$$| = 1; copy("'$$dir'/$$1", \*STDOUT) if(/\#include virtual=\"(.*?)\"/); s/\$$//g if(/\$$''Date:/);' > $$base.html ; \
 	done
 
+news: 
+	$(XSLTPROC) news/news.fr.xsl news/fsfe-fr-channel.xml $(XSLTOPTS) '$$fsffrance='$$root '$$filebase='$$filebase > news/news-bytes.fr.xhtml
+
 validate:
 	find . -name '*.xhtml' -print | while read file ; \
 	do \
@@ -49,4 +52,4 @@ validate:
 		rxp -Vs $$file ; \
 	done
 
-.PHONY: process recurse
+.PHONY: process recurse news

@@ -126,4 +126,9 @@
     </table>
   </xsl:template> 
 
+<!--
+Local Variables: ***
+mode: html ***
+End: ***
+-->
 </xsl:stylesheet>

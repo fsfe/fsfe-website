@@ -2,9 +2,11 @@
 # XML declaration
 XML_DECL=/usr/lib/sgml/declaration/xml.decl
 
-# System Catalog
-CATALOG=/usr/lib/sgml/catalog
-
+# System Catalogs
+# Deactivating default XML catalog support for now
+# Defining variables and exporting them at the same time
+export XML_CATALOG_FILES=
+export SGML_CATALOG_FILES=/usr/lib/sgml/catalog
 
 # Every variables in this makefile are computed from the XML_SRC variable
 # It has a default value, so the makefile works by itself is one just
@@ -124,8 +126,7 @@ help:
 	@echo
 
 # Shortcuts
-all: html
-#all: html pdf
+all: html pdf
 ph: prepare-html
 pp: prepare-print
 html: html-long html-short
@@ -178,7 +179,6 @@ deploy:
 #=======================================================================
 
 xml-long: ${XML_SRC} ${LONG_SS_XSL}
-	export SGML_CATALOG_FILES=${CATALOG}; \
 	xsltproc \
 	--catalogs \
 	-o ${XML_SRC_LONG} \
@@ -186,7 +186,6 @@ xml-long: ${XML_SRC} ${LONG_SS_XSL}
 	touch $@
 
 xml-short: ${XML_SRC} ${SHORT_SS_XSL}
-	export SGML_CATALOG_FILES=${CATALOG}; \
 	xsltproc \
 	--catalogs \
 	-o ${XML_SRC_SHORT} \
@@ -196,7 +195,6 @@ xml-short: ${XML_SRC} ${SHORT_SS_XSL}
 #=======================================================================
 
 html-long: xml-long ${HTML_SS_XSL} prepare-html
-	export SGML_CATALOG_FILES=${CATALOG}; \
 	xsltproc \
 	--catalogs \
 	-o ${HTML_OUT_DIR}/${HTML_OUTPUT_LONG} \
@@ -204,7 +202,6 @@ html-long: xml-long ${HTML_SS_XSL} prepare-html
 	touch $@
 
 html-short: xml-short ${HTML_SS_XSL} prepare-html
-	export SGML_CATALOG_FILES=${CATALOG}; \
 	xsltproc \
 	--catalogs \
 	-o ${HTML_OUT_DIR}/${HTML_OUTPUT_SHORT} \
@@ -214,7 +211,6 @@ html-short: xml-short ${HTML_SS_XSL} prepare-html
 #=======================================================================
 
 latex-long: xml-long ${LATEX_SS_XSL} prepare-print
-	export SGML_CATALOG_FILES=${CATALOG}; \
 	xsltproc \
 	--catalogs \
 	-o ${PRINT_OUT_DIR}/${LATEX_OUTPUT_LONG} \
@@ -222,7 +218,6 @@ latex-long: xml-long ${LATEX_SS_XSL} prepare-print
 	touch $@
 
 latex-short: xml-short ${LATEX_SS_XSL} prepare-print
-	export SGML_CATALOG_FILES=${CATALOG}; \
 	xsltproc \
 	--catalogs \
 	-o ${PRINT_OUT_DIR}/${LATEX_OUTPUT_SHORT} \
@@ -232,7 +227,6 @@ latex-short: xml-short ${LATEX_SS_XSL} prepare-print
 #=======================================================================
 
 fo-long: xml-long ${FO_SS_XSL} prepare-print
-	export SGML_CATALOG_FILES=${CATALOG}; \
 	xsltproc \
 	--catalogs \
 	-o ${PRINT_OUT_DIR}/${FO_OUTPUT_LONG} \
@@ -240,7 +234,6 @@ fo-long: xml-long ${FO_SS_XSL} prepare-print
 	touch $@
 
 fo-short: xml-short ${FO_SS_XSL} prepare-print
-	export SGML_CATALOG_FILES=${CATALOG}; \
 	xsltproc \
 	--catalogs \
 	-o ${PRINT_OUT_DIR}/${FO_OUTPUT_SHORT} \

@@ -2,209 +2,208 @@
 <?xml-stylesheet href="chimie.xsl" type="text/xsl"?>
 <!DOCTYPE softliste SYSTEM "chimie.dtd">
 <softliste>
-	<software>
-      	<name>AMMP</name>
-            <date>28 jul 2001</date>
-	      <description lang="en">AMMP is a modern full-featured molecular mechanics, dynamics and modeling program. It can manipulate both small molecules and macromolecules including proteins, nucleic acids and other polymers.</description>
-            <description lang="fr">AMMP est un programme complet pour la mécanique, la dynamique et la modélisation moléculaire. Il peut manipuler aussi bien des petites molécules que des macromolécules, des acides nucléiques, des protéines et autres polymères.</description>
-		<authors>Robert W. Harrison</authors>
-      	<url>http://www.cs.gsu.edu/~cscrwh/ammp/ammp.html</url>
-		<os>
-      	   	<name>Linux</name>
-			<maintainer>Robert W. Harrison</maintainer>
-	         	<version>2.0</version>
-			<licence>GPL</licence>
-			<date>28 jul 2001</date>
-	      </os>
-      	<os>
-         		<name>Unix</name>
-			<maintainer>Robert W. Harrison</maintainer>
-      	   	<version>2.0</version>
-			<licence>GPL</licence>
-			<date>28 jul 2001</date>
-	      </os>
-      	<os>
-	         	<name>Windows</name>
-			<maintainer>Robert W. Harrison</maintainer>
-	      	<version>1.5</version>
-			<licence>GPL</licence>
-			<date>28 jul 2001</date>
-	      </os>
-	</software>
-	<software>
-            <name>ChemCalc</name>
-            <date>28 jul 2001</date>
-            <description lang="en">a calculator that is more oriented towards chemistry.</description>
-            <description lang="fr">Un calculateur orienté chimie.</description>
-	      <authors>Sean Grimes</authors>
-      	<url>http://chemcalc.sourceforge.net</url>
-		<os>
-               <name>Linux</name>
-	         <maintainer>Sean Grimes</maintainer>
-	         <version>0.01a</version>
-		   <licence>GPL</licence>
-		   <date>28 jul 2001</date>
-	      </os>
-	</software>
-	<software>
-      	<name>Chemeq</name>
-            <date>28 jul 2001</date>
-	      <description lang="en">Translate chemical equations to LaTeX code.</description>
-            <description lang="fr">Transcrit des équations chimiques en code LaTeX.</description>
+   <software>
+      <name>AMMP</name>
+      <date>28 jul 2001</date>
+      <description lang="en">AMMP is a modern full-featured molecular mechanics, dynamics and modeling program. It can manipulate both small molecules and macromolecules including proteins, nucleic acids and other polymers.</description>
+      <description lang="fr">AMMP est un programme complet pour la mécanique, la dynamique et la modélisation moléculaire. Il peut manipuler aussi bien des petites molécules que des macromolécules, des acides nucléiques, des protéines et autres polymères.</description>
+      <authors>Robert W. Harrison</authors>
+      <url>http://www.cs.gsu.edu/~cscrwh/ammp/ammp.html</url>
+      <os>
+         <name>Linux</name>
+         <maintainer>Robert W. Harrison</maintainer>
+         <version>2.0</version>
+         <licence>GPL</licence>
+         <date>28 jul 2001</date>
+      </os>
+      <os>
+         <name>Unix</name>
+         <maintainer>Robert W. Harrison</maintainer>
+      	 <version>2.0</version>
+         <licence>GPL</licence>
+         <date>28 jul 2001</date>
+      </os>
+      <os>
+         <name>Windows</name>
+         <maintainer>Robert W. Harrison</maintainer>
+         <version>1.5</version>
+         <licence>GPL</licence>
+         <date>28 jul 2001</date>
+      </os>
+   </software>
+   <software>
+      <name>ChemCalc</name>
+      <date>28 jul 2001</date>
+      <description lang="en">a calculator that is more oriented towards chemistry.</description>
+      <description lang="fr">Un calculateur orienté chimie.</description>
+      <authors>Sean Grimes</authors>
+      <url>http://chemcalc.sourceforge.net</url>
+      <os>
+         <name>Linux</name>
+         <maintainer>Sean Grimes</maintainer>
+         <version>0.01a</version>
+         <licence>GPL</licence>
+         <date>28 jul 2001</date>
+      </os>
+   </software>
+   <software>
+      <name>Chemeq</name>
+      <date>28 jul 2001</date>
+      <description lang="en">Translate chemical equations to LaTeX code.</description>
+      <description lang="fr">Transcrit des équations chimiques en code LaTeX.</description>
 
-		<authors>Georges Khaznadar</authors>
-      	<url>ftp://boltz.univ-littoral.fr/pub/chemeq</url>
-		<os>
-      	   	<name>Linux</name>
-			<maintainer>Georges Khaznadar</maintainer>
-	         	<version>1.10</version>
-			<licence>GPL</licence>
-			<date>28 jul 2001</date>
-	      </os>
-	</software>
-	<software>
-      	<name>Chemsuite</name>
-            <date>28 jul 2001</date>
-	      <description lang="en">A Molecular 2D/3D drawing and chemical reaction simulation software.</description>
-	      <description lang="fr">Logiciel de dessin 2D/3D et de simulation de réactions chimiques.</description>
-		<authors>Ricardo Stefani, Rene Fosdal</authors>
-		<url>http://chemsuite.seul.org</url>
-		<os>
-      	   	<name>Linux</name>
-			<maintainer>Ricardo Stefani, Rene Fosdal</maintainer>
-	         	<version>0.6</version>
-			<licence>GPL</licence>
-			<date>28 jul 2001</date>
-	      </os>
-	</software>
-	<software>
-      	<name>Chemtool</name>
-		<date>28 nov 2001</date>
-	      <description lang="en">Chemtool is a small program for drawing chemical structures on Linux and Unix systems using the GTK toolkit under X11.</description>
-	      <description lang="fr">Chemtool est un petit programme de dessin de structures chimiques en 2D.</description>
-		<authors>Martin Kroeker</authors>
-      	<url>http://ruby.chemie.uni-freiburg.de/~martin/chemtool/chemtool.html</url>
-		<os>
-      	   	<name>Linux</name>
-			<maintainer>Martin Kroeker</maintainer>
-	         	<version>1.5.a12</version>
-			<licence>GPL</licence>
-			<date>28 nov 2001</date>
-	      </os>
-	</software>
-
-	<software>
-      	<name>CHIMP</name>
-            <date>28 jul 2001</date>
-	      <description lang="en">CHIMP is a generic tool for the modeling of chemical phenomena. Eventually, chemical reaction modeling, molecular mechanics, and quantum mechanic modules will be implemented, along with an easy to use graphical user interface (GUI). At present, CHIMP has the ability to perform dynamic Monte Carlo simulations on chemical reactions, in particular heterogeneous catalytic reactions.</description>
-	      <description lang="fr">CHIMP est un outil générique pour la modélisation de phénomènes chimiques. is a generic tool for the modeling of chemical phenomena. A terme, des modules de modélisation de réactions chimiques, de mécanique moléculaire et de mécanique quantique seront implantés. Actuellement, CHIMP effectue des simulations dynamiques 'Monte Carlo' dans des réactions chimiques, et en particulier, en catalyse hétérogène.</description>
-		<authors>David J. Dooling</authors>
-      	<url>http://chimp.sourceforge.net</url>
-		<os>
-      	   	<name>Linux</name>
-			<maintainer>David J. Dooling</maintainer>
-	         	<version>?</version>
-			<licence></licence>
-			<date>28 jul 2001</date>
-	      </os>
-	</software>
-	<software>
-      	   <name>CRK</name>
-                   <date>28 jul 2001</date>
-	   <description lang="en">The CRK (Chemical Resource Kit) is the collective name describing three chemistry-related software packages : Xykron (front end for a collection of tools for managing, manipulating and presenting chemical data), Xentark (The computational arm of CRK) and Xortoth.</description>
-	  <description lang="fr">Le CRK (Chemical Resource Kit) est le dénomminatif d'un paquet de trois logiciels : Xykron (Interface d'une collection d'outils pour gérer, manipuler et représenter des données chimiques), Xentark (La partie calcul de CRK) et Xortoth.</description>
-	 <authors>Alex M. Clark</authors>
-      	 <url>http://crk.sourceforge.net</url>
-	 <os>
-      	   	<name>Linux</name>
-			<maintainer>Alex M. Clark</maintainer>
-	         	<version>1.04</version>
-			<licence>GPL</licence>
-			<date>28 jul 2001</date>
-	 </os>
-	</software>
-	<software>
-      	   <name>DND</name>
-	   <date>28 nov 2001</date>
-	   <description lang="en">DND stands for Dream aNd Dreamer. The DND project intends to build a complete, user-friendly GUI of the Molecular Dynamics Simulation of the Molecule on free software.</description>
-	      <description lang="fr">DND est l'abréviation pour Dream aNd Dreamer. Le projet DND a pour but de construire une interface graphique pour la simulation de dynamique moléculaire basée sur l'utilisation de logiciel libre.</description>
-		<authors>SooHaeng Yoo</authors>
-      	<url>http://theopenlab.uml.edu/dnd</url>
-		<os>
-      	   	<name>Linux</name>
-			<maintainer>SooHaeng Yoo</maintainer>
-	         	<version>0.5.1</version>
-			<licence>GPL</licence>
-			<date>28 nov 2001</date>
-	      </os>
-	</software>
-	<software>
-      	<name>Garlic</name>
-		<date>28 jul 2001</date>
-	      <description lang="en">Garlic is a free molecular visualization program written for unix and unix clones. </description>
-	      <description lang="fr">Garlic est un programme libre de visualisation moléculaire, pour Unix et ses clones.</description>
-		<authors>Damir Zucic</authors>
-      	<url>http://pref.etfos.hr/garlic</url>
-		<os>
-      	   	<name>Linux</name>
-			<maintainer>Damir Zucic</maintainer>
-	         	<version>1.1</version>
-			<licence>GPL</licence>
-			<date>28 jul 2001</date>
-	      </os>
-	</software>
-	<software>
-      	<name>GDPC</name>
-		<date>28 jul 2001</date>
-	      <description lang="en">GDPC is a program for visualising molecular dynamic simulations, it is a very versatile program and could easily be used for other purposes. gdpc reads xyz input and custom formats and can write out pictures of the frames.</description>
-	      <description lang="fr">GDPC est un programme pour la visualisation de simulations de dynamique moléculaire.Il s'agit d'un logiciel très versatile et peut facilement être utilisé à d'autres finalités.GDPC lit des entrées en xyz et d'autres formats. Il permet aussi d'avoir des images en sortie.</description>
-		<authors>Jonas Frantz</authors>
-      	<url>http://www.physics.helsinki.fi/~frantz/software/gdpc.html</url>
-		<os>
-      	   	<name>Linux</name>
-			<maintainer>Jonas Frantz</maintainer>
-	         	<version>2.0</version>
-			<licence>GPL</licence>
-			<date>28 jul 2001</date>
-	      </os>
-	</software>
-	<software>
-      	<name>GDIS</name>
-		<date>28 jul 2001</date>
-	      <description lang="en">GDIS is a GTK based program for the display and manipulation of isolated molecules and periodic systems. It is in development, but is nonetheless fairly functional.</description>
-	      <description lang="fr">GDIS est un logiciel basé sur GTK, qui permet l'affichage et la manipulation de molcules isolées, ou de systèmes périodiques. Malgré que ce logiciel soit encore en développement, il est déjà fonctionnel.</description>
-		<authors>Sean Fleming</authors>
-      	<url>http://gdis.seul.org</url>
-		<os>
-      	   	<name>Linux</name>
-			<maintainer>Sean Fleming</maintainer>
-	         	<version>0.73.2</version>
-			<licence>GPL</licence>
-			<date>28 jul 2001</date>
-	      </os>
-		<os>
-      	   	<name>Other UNIX</name>
-			<maintainer></maintainer>
-	         	<version>0.73.2</version>
-			<licence>Sean Fleming</licence>
-			<date>28 jul 2001</date>
-	      </os>
-	</software>
-	<software>
-      	<name>Ghemical</name>
-		<date>4 dec 2001</date>
-	      <description lang="en">A molecular modelling software package with nice 3D-visualization tools.</description>
-	      <description lang="en">A molecular modelling software package with nice 3D-visualization tools.</description>
-		<authors>Mike Cruz, Tommi Hassinen, Ville Heikkila, Geoff Hutchison, Jarno Huuskonen</authors>
-      	<url>http://www.uku.fi/~thassine/ghemical</url>
-		<os>
-      	   	<name>Linux</name>
-			<maintainer>Mike Cruz, Tommi Hassinen, Ville Heikkila, Geoff Hutchison, Jarno Huuskonen</maintainer>
-	         	<version>0.81</version>
-			<licence>GPL</licence>
-			<date>4 dec 2001</date>
-	      </os>
-	</software>
+      <authors>Georges Khaznadar</authors>
+      <url>ftp://boltz.univ-littoral.fr/pub/chemeq</url>
+      <os>
+         <name>Linux</name>
+         <maintainer>Georges Khaznadar</maintainer>
+         <version>1.10</version>
+         <licence>GPL</licence>
+         <date>28 jul 2001</date>
+      </os>
+   </software>
+   <software>
+      <name>Chemsuite</name>
+      <date>28 jul 2001</date>
+      <description lang="en">A Molecular 2D/3D drawing and chemical reaction simulation software.</description>
+      <description lang="fr">Logiciel de dessin 2D/3D et de simulation de réactions chimiques.</description>
+      <authors>Ricardo Stefani, Rene Fosdal</authors>
+      <url>http://chemsuite.seul.org</url>
+      <os>
+         <name>Linux</name>
+         <maintainer>Ricardo Stefani, Rene Fosdal</maintainer>
+       	 <version>0.6</version>
+         <licence>GPL</licence>
+         <date>28 jul 2001</date>
+      </os>
+   </software>
+   <software>
+      <name>Chemtool</name>
+      <date>28 nov 2001</date>
+      <description lang="en">Chemtool is a small program for drawing chemical structures on Linux and Unix systems using the GTK toolkit under X11.</description>
+      <description lang="fr">Chemtool est un petit programme de dessin de structures chimiques en 2D.</description>
+      <authors>Martin Kroeker</authors>
+      <url>http://ruby.chemie.uni-freiburg.de/~martin/chemtool/chemtool.html</url>
+      <os>
+         <name>Linux</name>
+         <maintainer>Martin Kroeker</maintainer>
+         <version>1.5.a12</version>
+         <licence>GPL</licence>
+         <date>28 nov 2001</date>
+      </os>
+   </software>
+   <software>
+      <name>CHIMP</name>
+      <date>28 jul 2001</date>
+      <description lang="en">CHIMP is a generic tool for the modeling of chemical phenomena. Eventually, chemical reaction modeling, molecular mechanics, and quantum mechanic modules will be implemented, along with an easy to use graphical user interface (GUI). At present, CHIMP has the ability to perform dynamic Monte Carlo simulations on chemical reactions, in particular heterogeneous catalytic reactions.</description>
+      <description lang="fr">CHIMP est un outil générique pour la modélisation de phénomènes chimiques. is a generic tool for the modeling of chemical phenomena. A terme, des modules de modélisation de réactions chimiques, de mécanique moléculaire et de mécanique quantique seront implantés. Actuellement, CHIMP effectue des simulations dynamiques 'Monte Carlo' dans des réactions chimiques, et en particulier, en catalyse hétérogène.</description>
+      <authors>David J. Dooling</authors>
+      <url>http://chimp.sourceforge.net</url>
+      <os>
+         <name>Linux</name>
+         <maintainer>David J. Dooling</maintainer>
+         <version>?</version>
+         <licence></licence>
+         <date>28 jul 2001</date>
+       </os>
+   </software>
+   <software>
+      <name>CRK</name>
+      <date>28 jul 2001</date>
+      <description lang="en">The CRK (Chemical Resource Kit) is the collective name describing three chemistry-related software packages : Xykron (front end for a collection of tools for managing, manipulating and presenting chemical data), Xentark (The computational arm of CRK) and Xortoth.</description>
+      <description lang="fr">Le CRK (Chemical Resource Kit) est le dénomminatif d'un paquet de trois logiciels : Xykron (Interface d'une collection d'outils pour gérer, manipuler et représenter des données chimiques), Xentark (La partie calcul de CRK) et Xortoth.</description>
+      <authors>Alex M. Clark</authors>
+      <url>http://crk.sourceforge.net</url>
+      <os>
+         <name>Linux</name>
+         <maintainer>Alex M. Clark</maintainer>
+         <version>1.04</version>
+         <licence>GPL</licence>
+         <date>28 jul 2001</date>
+      </os>
+   </software>
+   <software>
+      <name>DND</name>
+      <date>28 nov 2001</date>
+      <description lang="en">DND stands for Dream aNd Dreamer. The DND project intends to build a complete, user-friendly GUI of the Molecular Dynamics Simulation of the Molecule on free software.</description>
+      <description lang="fr">DND est l'abréviation pour Dream aNd Dreamer. Le projet DND a pour but de construire une interface graphique pour la simulation de dynamique moléculaire basée sur l'utilisation de logiciel libre.</description>
+      <authors>SooHaeng Yoo</authors>
+      <url>http://theopenlab.uml.edu/dnd</url>
+      <os>
+         <name>Linux</name>
+         <maintainer>SooHaeng Yoo</maintainer>
+         <version>0.5.1</version>
+         <licence>GPL</licence>
+         <date>28 nov 2001</date>
+      </os>
+   </software>
+   <software>
+      <name>Garlic</name>
+      <date>28 jul 2001</date>
+      <description lang="en">Garlic is a free molecular visualization program written for unix and unix clones. </description>
+      <description lang="fr">Garlic est un programme libre de visualisation moléculaire, pour Unix et ses clones.</description>
+      <authors>Damir Zucic</authors>
+      <url>http://pref.etfos.hr/garlic</url>
+      <os>
+         <name>Linux</name>
+         <maintainer>Damir Zucic</maintainer>
+         <version>1.1</version>
+         <licence>GPL</licence>
+         <date>28 jul 2001</date>
+      </os>
+   </software>
+   <software>
+      <name>GDPC</name>
+      <date>28 jul 2001</date>
+      <description lang="en">GDPC is a program for visualising molecular dynamic simulations, it is a very versatile program and could easily be used for other purposes. gdpc reads xyz input and custom formats and can write out pictures of the frames.</description>
+      <description lang="fr">GDPC est un programme pour la visualisation de simulations de dynamique moléculaire.Il s'agit d'un logiciel très versatile et peut facilement être utilisé à d'autres finalités.GDPC lit des entrées en xyz et d'autres formats. Il permet aussi d'avoir des images en sortie.</description>
+      <authors>Jonas Frantz</authors>
+      <url>http://www.physics.helsinki.fi/~frantz/software/gdpc.html</url>
+      <os>
+         <name>Linux</name>
+         <maintainer>Jonas Frantz</maintainer>
+         <version>2.0</version>
+         <licence>GPL</licence>
+         <date>28 jul 2001</date>
+      </os>
+   </software>
+   <software>
+      <name>GDIS</name>
+      <date>28 jul 2001</date>
+      <description lang="en">GDIS is a GTK based program for the display and manipulation of isolated molecules and periodic systems. It is in development, but is nonetheless fairly functional.</description>
+      <description lang="fr">GDIS est un logiciel basé sur GTK, qui permet l'affichage et la manipulation de molcules isolées, ou de systèmes périodiques. Malgré que ce logiciel soit encore en développement, il est déjà fonctionnel.</description>
+      <authors>Sean Fleming</authors>
+      <url>http://gdis.seul.org</url>
+      <os>
+         <name>Linux</name>
+         <maintainer>Sean Fleming</maintainer>
+      	 <version>0.73.2</version>
+         <licence>GPL</licence>
+         <date>28 jul 2001</date>
+      </os>
+      <os>
+         <name>Other UNIX</name>
+         <maintainer>Sean Fleming</maintainer>
+         <version>0.73.2</version>
+         <licence>GPL</licence>
+         <date>28 jul 2001</date>
+      </os>
+   </software>
+   <software>
+      <name>Ghemical</name>
+      <date>4 dec 2001</date>
+      <description lang="en">A molecular modelling software package with nice 3D-visualization tools.</description>
+      <description lang="en">A molecular modelling software package with nice 3D-visualization tools.</description>
+      <authors>Mike Cruz, Tommi Hassinen, Ville Heikkila, Geoff Hutchison, Jarno Huuskonen</authors>
+      <url>http://www.uku.fi/~thassine/ghemical</url>
+      <os>
+         <name>Linux</name>
+         <maintainer>Mike Cruz, Tommi Hassinen, Ville Heikkila, Geoff Hutchison, Jarno Huuskonen</maintainer>
+         <version>0.81</version>
+  	 <licence>GPL</licence>
+         <date>4 dec 2001</date>
+      </os>
+   </software>
 	<software>
       	<name>GPeriodic</name>
 		<date>30 aug 2001</date>
@@ -548,84 +547,83 @@
 			<date>28 jul 2001</date>
 	      </os>
 	</software>
-	<software>
-      	<name>XDrawChem</name>
-		<date>4 dec 2001</date>
-	      <description lang="en">XDrawChem is a two-dimensional molecule drawing program for Unix operating systems. It is similar in functionality to other molecule drawing programs such as ChemDraw (TM, CambridgeSoft). It can read and write MDL Molfiles, and read ChemDraw text and binary files, to allow sharing between XDrawChem and other chemistry applications. XDrawChem has been tested on Linux, SGI IRIX 6.5, and Sun Solaris.</description>
-	      <description lang="fr">XDrawChem est un programme de dessins moléculaires en 2D pour les systèmes Unix et clones. Il a des fonctionnalités similaires à d'autres logiciels tel que ChemDraw (TM, CambridgeSoft). Il peut lire les file MDL Mol, ChemDraw (texte et binaire), permettant ainsi l'échange entre XDrawChem et d'autres applications en chimie.</description>
-		<authors>Bryan Herger</authors>
-      	<url>http://www.prism.gatech.edu/~gte067k/xdrawchem/</url>
-		<os>
-      	   	<name>Linux</name>
-			<maintainer>Bryan Herger</maintainer>
-	         	<version>0.99.6</version>
-			<licence>BSD like</licence>
-			<date>4 dec 2001</date>
-	      </os>
-		<os>
-      	   	<name>Other Unix</name>
-			<maintainer>Bryan Herger</maintainer>
-	         	<version>0.99.6</version>
-			<licence>BSD like</licence>
-			<date>4 dec 2001</date>
-	      </os>
-		<os>
-      	   	<name>Windows</name>
-			<maintainer>Bryan Herger</maintainer>
-	         	<version>0.99.6</version>
-			<licence>BSD like</licence>
-			<date>4 dec 2001</date>
-	      </os>
-	</software>
-
-	<software>
-      	<name>XMakeMol</name>
-		<date>4 dec 2001</date>
-	      <description lang="en">XMakemol is a program written for UN*X operating systems in ANSI C using the X, Xt and Motif libraries. It can be use to view and manipulate atomic and molecular data given in xyz format.</description>
-	      <description lang="fr">XMakemol est un programme écrit pour des systèmes de type UN*X en C (Il utilise les librairies X, Xt et Motif). Il permet de voire et manipuler les molécules entrées en format xyz.</description>
-		<authors></authors>
-      	<url>http://vegemite.chem.nottingham.ac.uk/~xmakemol/</url>
-		<os>
-      	   	<name>Linux</name>
-			<maintainer></maintainer>
-	         	<version>5.02</version>
-			<licence>GPL 2</licence>
-			<date>4 dec 2001</date>
-	      </os>
-	</software>
-	<software>
-      	<name>xyz2rgb</name>
-		<date>28 jul 2001</date>
-	      <description lang="en">xyz2rgb makes pretty pictures and movies of molecules. It expects input in the form of an XYZ file, one of the file formats frequently used by computational chemists. As output, it produces one or more line-interlaced RGB files.</description>
-<description lang="fr">xyz2rgb réalise des images de bonnes qualités, ainsi que des animationsde molécules. Il lit les fichiers en XYZ et sort des ficheirs en RGB.</description>
-		<authors></authors>
-      	<url>http://world.std.com/~wware/xyz2rgb.html</url>
-		<os>
-      	   	<name>All</name>
-			<maintainer></maintainer>
-	         	<version>?</version>
-			<licence></licence>
-			<date>28 jul 2001</date>
-	      </os>
-	</software>
-	<software>
-      	<name>PyMOL</name>
-  	      <date>16 jan 2002</date>
-	      <description lang="en">PyMOL is a molecular graphics system with an  embedded Python interpreter designed for real-time visualization and rapid  generation of high-quality molecular graphics images and animations.</description>
-                     <description lang="fr">PyMOL est un système de représentations de molécules en 3D, écrit en Python. Il permet la visualisation en temps réel, ainsi que la génération d'images et d'animations de hautes qualités.</description>
-		<authors>Warren DeLano, Ralf Grosse-Kunstleve</authors>
-      	<url>http://pymol.sourceforge.net</url>
-		<os>
-      	   	<name>All (Python)</name>
-			<maintainer>Warren DeLano, Ralf Grosse-Kunstleve</maintainer>
-	         	<version>0.73</version>
-			<licence>BSD like</licence>
-			<date>8 jan 2002</date>
-	      </os>
-	</software>
+   <software>
+      <name>XDrawChem</name>
+      <date>4 dec 2001</date>
+      <description lang="en">XDrawChem is a two-dimensional molecule drawing program for Unix operating systems. It is similar in functionality to other molecule drawing programs such as ChemDraw (TM, CambridgeSoft). It can read and write MDL Molfiles, and read ChemDraw text and binary files, to allow sharing between XDrawChem and other chemistry applications. XDrawChem has been tested on Linux, SGI IRIX 6.5, and Sun Solaris.</description>
+      <description lang="fr">XDrawChem est un programme de dessins moléculaires en 2D pour les systèmes Unix et clones. Il a des fonctionnalités similaires à d'autres logiciels tel que ChemDraw (TM, CambridgeSoft). Il peut lire les file MDL Mol, ChemDraw (texte et binaire), permettant ainsi l'échange entre XDrawChem et d'autres applications en chimie.</description>
+      <authors>Bryan Herger</authors>
+      <url>http://www.prism.gatech.edu/~gte067k/xdrawchem</url>
+      <os>
+      	 <name>Linux</name>
+         <maintainer>Bryan Herger</maintainer>
+         <version>0.99.6</version>
+         <licence>BSD like</licence>
+         <date>4 dec 2001</date>
+      </os>
+      <os>
+         <name>Other Unix</name>
+         <maintainer>Bryan Herger</maintainer>
+         <version>0.99.6</version>
+         <licence>BSD like</licence>
+         <date>4 dec 2001</date>
+      </os>
+      <os>
+         <name>Windows</name>
+         <maintainer>Bryan Herger</maintainer>
+         <version>0.99.6</version>
+         <licence>BSD like</licence>
+         <date>4 dec 2001</date>
+      </os>
+   </software>
+   <software>
+      <name>XMakeMol</name>
+      <date>4 dec 2001</date>
+      <description lang="en">XMakemol is a program written for UN*X operating systems in ANSI C using the X, Xt and Motif libraries. It can be use to view and manipulate atomic and molecular data given in xyz format.</description>
+      <description lang="fr">XMakemol est un programme écrit pour des systèmes de type UN*X en C (Il utilise les librairies X, Xt et Motif). Il permet de voire et manipuler les molécules entrées en format xyz.</description>
+      <authors></authors>
+      <url>http://vegemite.chem.nottingham.ac.uk/~xmakemol</url>
+      <os>
+   	 <name>Linux</name>
+         <maintainer></maintainer>
+         <version>5.02</version>
+         <licence>GPL 2</licence>
+         <date>4 dec 2001</date>
+      </os>
+   </software>
+   <software>
+      <name>xyz2rgb</name>
+      <date>28 jul 2001</date>
+      <description lang="en">xyz2rgb makes pretty pictures and movies of molecules. It expects input in the form of an XYZ file, one of the file formats frequently used by computational chemists. As output, it produces one or more line-interlaced RGB files.</description>
+      <description lang="fr">xyz2rgb réalise des images de bonnes qualités, ainsi que des animationsde molécules. Il lit les fichiers en XYZ et sort des ficheirs en RGB.</description>
+      <authors></authors>
+      <url>http://world.std.com/~wware/xyz2rgb.html</url>
+      <os>
+         <name>All</name>
+         <maintainer></maintainer>
+         <version>?</version>
+         <licence></licence>
+         <date>28 jul 2001</date>
+      </os>
+   </software>
+   <software>
+      <name>PyMOL</name>
+      <date>16 jan 2002</date>
+      <description lang="en">PyMOL is a molecular graphics system with an  embedded Python interpreter designed for real-time visualization and rapid  generation of high-quality molecular graphics images and animations.</description>
+      <description lang="fr">PyMOL est un système de représentations de molécules en 3D, écrit en Python. Il permet la visualisation en temps réel, ainsi que la génération d'images et d'animations de hautes qualités.</description>
+      <authors>Warren DeLano, Ralf Grosse-Kunstleve</authors>
+      <url>http://pymol.sourceforge.net</url>
+      <os>
+         <name>All (Python)</name>
+         <maintainer>Warren DeLano, Ralf Grosse-Kunstleve</maintainer>
+         <version>0.73</version>
+         <licence>BSD like</licence>
+         <date>8 jan 2002</date>
+      </os>
+   </software>
    <software>
       <name>ORAC</name>
-	<date>16 jan 2002</date>
+      <date>16 jan 2002</date>
       <description lang="en">ORAC is a program for running classical simulations of biomolecules. Simulations can be carried out in the NVE, NPT, NHP, and NVT thermodynamic ensembles.</description>
       <description lang="fr">ORAC est un programme qui permet d'effectuer des simulations classiques de biomolécules. Elles peuvent être mené dans des ensembles thermodynamiques du type NVE, NPT, NHP, et NVT.</description>
       <authors>Massimo Marchi, P. Procacci</authors>
@@ -639,7 +637,7 @@
       </os>
       <os>
          <name>Windows</name>
-  	   <date>16 jan 2002</date>
+         <date>16 jan 2002</date>
          <maintainer>Alessandro Pedretti</maintainer>
          <version>4.0</version>
          <licence>GPL</licence>
@@ -648,7 +646,7 @@
    </software>
    <software>
       <name>BigMAC</name>
-	<date>16 jan 2002</date>
+      <date>16 jan 2002</date>
       <description lang="en">Configurational-Bias  Monte Carlo of Linear Alkanes.</description>
       <description lang="fr">Configurational-Bias  Monte Carlo of Linear Alkanes.</description>
       <authors>Thijs J. H. Vlugt, Berend Smit</authors>
@@ -663,7 +661,7 @@
    </software>
    <software>
       <name>2D-Numerical</name>
-	<date>16 jan 2002</date>
+      <date>16 jan 2002</date>
       <description lang="en">A numerical Hartree-Fock program for diatomic molecules.</description>
       <description lang="fr">Un programme numérique Hartree-Fock pour des molécules diatomiques.</description>
       <authors>Jacek Kobus, Leif Laaksonen, Dage Sundholm</authors>
@@ -685,9 +683,8 @@
    </software>
    <software>
       <name>Ballroom</name>
-	<date>16 jan 2002</date>
-      <description lang="en">BallRoom is a visualization tool for set of particles. It displays particles as balls (no sticks here), and uses a representation projected on two dimensions (no real 3D
-features like lights, shadows).</description>
+      <date>16 jan 2002</date>
+      <description lang="en">BallRoom is a visualization tool for set of particles. It displays particles as balls (no sticks here), and uses a representation projected on two dimensions (no real 3D features like lights, shadows).</description>
       <description lang="fr">BallRoom est un outil de visualisation de particules. Il affiche des balles (sans batons), et utilise une représentation projetée en 2D (Ce n'est pas de la 3D réelle).</description>
       <authors>Francesco D. Di Tolla, Furio Ercolessi, Erio Tosatti</authors>
       <url>http://www.sissa.it/furio/ballroom.html</url>
@@ -701,7 +698,7 @@ features like lights, shadows).</description>
    </software>
    <software>
       <name>NAB</name>
-	<date>16 jan 2002</date>
+      <date>16 jan 2002</date>
       <description lang="en">Generation of Models for "Unusual" DNA and RNA: A Computer Language for Structural Exploration.</description>
       <description lang="fr">Génération de modèle pour des ADN et ARN 'inhabituels': Un langage informatique pour l'exploration structrurale.</description>
       <authors>Tom Macke, David A. Case</authors>
@@ -720,13 +717,35 @@ features like lights, shadows).</description>
       <description lang="en">B is a Java-based, on-line biomolecular modeling package. It should be useful in generating initial structures of biopolymers and small organic molecules.</description>
       <description lang="fr">B est logiciel écrit en Java, permettant la modélisation on-line de biomolécule. Il est utile pour la génération initiale de biopolymères ou de petites molécules organiques.</description>
       <authors>N. B. White</authors>
-      <url>http://www.scripps.edu/~nwhite/Biomer/</url>
+      <url>http://www.scripps.edu/~nwhite/Biomer</url>
       <os>
          <name>All (Java)</name>
          <maintainer>N. B. White</maintainer>
          <version>1.0</version>
          <licence>GPL</licence>
   	   <date>16 jan 2002</date>
+      </os>
+   </software>
+   <software>
+      <name>OpenBabel</name>
+      <date>6 feb 2002</date>
+      <description lang="en">OpenBabel is a project designed to pick up Babel left off, as a cross-plateform programm and library designed to interconvert between many file formats used in molecular modelling ans computanional chemistry.</description>
+      <description lang="fr">Le projet OpenBabel, destiné à compléter Babel, est un ensemble de programmes et de bibliothèques permettant l'interconversion entre différents types de fichier utilisés en modélisation moléculaire et en chimie informatique.</description>
+      <authors>Michael Banck, Geoff Hutchison</authors>
+      <url>http://openbabel.sourceforge.net</url>
+      <os>
+         <name>POSIX</name>
+         <maintainer>Michael Banck, Geoff Hutchison</maintainer>
+         <version>1.99</version>
+         <licence>GPL</licence>
+         <date>6 feb 2002</date>
+      </os>
+      <os>
+         <name>Windows</name>
+         <maintainer>Michael Banck, Geoff Hutchison</maintainer>
+         <version>1.99</version>
+         <licence>GPL</licence>
+         <date>6 feb 2002</date>
       </os>
    </software>
 </softliste>

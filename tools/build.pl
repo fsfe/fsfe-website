@@ -58,6 +58,7 @@ our %languages = (
   nl => 'Nederlands',
   pt => 'Português',
   sv => 'Svenska',
+  tr => 'Türkçe',
 );
 
 our $current_date = strftime "%Y-%m-%d", localtime;

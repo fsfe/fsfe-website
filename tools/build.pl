@@ -55,6 +55,7 @@ our %languages = (
   es => 'Español',       
   fr => 'Français',
   it => 'Italiano',
+  ku => 'Kûrdî',
   nl => 'Nederlands',
   pt => 'Português',
   sv => 'Svenska',

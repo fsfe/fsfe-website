@@ -157,9 +157,29 @@
                 <xsl:text>[XHTML]</xsl:text>
               </xsl:element>
 
+              <!-- Insert the inofficial translation notice if appropriate -->
+              <xsl:variable name="translator">
+                <xsl:value-of select="/buildinfo/document/translator" />
+              </xsl:variable>
+              <xsl:if test="string-length ($translator) &gt; 0">
+                <br />
+                <xsl:value-of select="/buildinfo/textset/text[@id='translator1']" />
+                <xsl:value-of select="$translator" />
+                <xsl:value-of select="/buildinfo/textset/text[@id='translator2']" />
+                <xsl:element name="a">
+                  <xsl:attribute name="href">
+                    <xsl:value-of select="/buildinfo/@filename" />
+                    <xsl:text>.en.html</xsl:text>
+                  </xsl:attribute>
+                  <xsl:value-of select="/buildinfo/textset/text[@id='translator3']" />
+                </xsl:element>
+                <xsl:value-of select="/buildinfo/textset/text[@id='translator4']" />
+              </xsl:if>
+
               <br />
               <xsl:apply-templates
                 select="/buildinfo/textset/text[@id='permission']/node()" />
+
               <br />
               <xsl:apply-templates
                 select="/buildinfo/textset/text[@id='webmaster']/node()" />
@@ -179,7 +199,7 @@
     </head>
   </xsl:template>
 
-  <xsl:template match="timestamp|buildinfo/set|buildinfo/textset|buildinfo/menuset|buildinfo/trlist" />
+  <xsl:template match="timestamp|translator|buildinfo/set|buildinfo/textset|buildinfo/menuset|buildinfo/trlist" />
 
   <xsl:template match="@*|node()" priority="-1">
     <xsl:copy>

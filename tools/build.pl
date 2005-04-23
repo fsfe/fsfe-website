@@ -19,6 +19,8 @@
 # Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
 # 02111-1307, USA.
 #
+use CGI::Carp qw(fatalsToBrowser);
+use lib '/projects/home/potkal/perllib';
 use File::Find::Rule;
 use Getopt::Std;
 use File::Path;

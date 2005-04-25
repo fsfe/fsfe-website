@@ -60,7 +60,7 @@ our %languages = (
   ku => 'Kûrdî',
   nl => 'Nederlands',
   pt => 'Português',
-  ro => 'Romanian',
+  ro => 'Român&#259;',
   sv => 'Svenska',
   tr => 'Türkçe',
 );

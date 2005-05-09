@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html
+          PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+  <head>
+    <title>FSF Europe - Wie können Sie bei der Webseite helfen</title>
+  </head>
+  <body>
+
+    <div> <!-- The header will be inserted here -->
+<!-- Begin page content -->
+<h2>Wie können Sie bei der Webseite helfen</h2>
+
+<p>Diese Seite versucht Freiwilligen eine Übersicht, Einführung und 
+Referenzinformationen zur Pflege der Webseite zu geben.</p>
+
+<h3>Einführung</h3>
+
+<p>Die Techniken und Programme die zur Verwaltung der FSF Europe Webseite 
+eingesetzt werden sollte vielen Entwicklern und Autoren bereits bekannt sein 
+und könnte für Sie interessant sein wenn Sie sie noch nicht kennen.</p>
+
+<p>Übersetzer und Freiwillige werden wahrscheinlich mit folgendem in Berührung kommen</p>
+<ul>
+<li><a href="http://savannah.gnu.org" target="_blank">Savannah</a> -- 
+für CVS (siehe unten) Dienste und Zugriffskontrolle
+</li>
+<li><a href="http://www.w3.org/MarkUp/" target="_blank">XHTML</a> -- 
+wovon die statischen Seiten alle zwei Stunden generiert werden</li>
+<li><a href="http://www.cvshome.org" target="_blank">Concurrent 
+Version System (CVS)</a> -- zur Koordination und Synchronisation</li>
+</ul>
+
+<p>Freiwillige die sich tiefer mit der Verwaltung der Webseite beschäftigen
+wollen sollten auch vertraut sein mit</p>
+<ul>
+<li><a href="http://www.perl.org" target="_blank">Perl</a> -- für die Skripte 
+zur Verwaltung und Erstellung der Seite</li>
+<li><a href="http://www.apache.org" target="_blank">Apache</a> -- als 
+Webserver</li>
+</ul>
+
+<h3>Erste Schritte</h3>
+
+<p>Als erstes sollten Sie sich einen <a
+href="http://savannah.gnu.org" target="_blank">Savannah</a> Zugang
+einrichten, falls sie noch keinen haben. Bitten Sie einen der <a
+href="https://savannah.gnu.org/projects/fsfe/" target="_blank">FSF
+Europe Savannah Projekt Admins</a> Sie zum FSF Europe Projekt auf
+Savannah hinzuzufügen.</p>
+
+<p>Sie sollten sich auch auf der Mailingliste <a
+href="http://mail.fsfeurope.org/mailman/listinfo/web"
+target="_blank">web@fsfeurope.org</a> eintragen, auf dieser Liste wird die Arbeit an der Webseite koordiniert.</p>
+
+<p>Außerdem wird empfohlen sich auf <a href="http://mail.fsfeurope.org/mailman/listinfo/web-cvs-notify" target="_blank">web-cvs-notify@fsfeurope.org</a> einzutragen, um über die Änderungen an der Seite auf dem Laufenden zu sein.</p>
+
+<p>Wenn Sie zur FSF Europe Seite hinzugefügt wurden, dann lesen Sie die
+<a href="http://savannah.gnu.org/cvs/?group=fsfe"
+target="_blank">Anweisungen auf Savannah</a> um die Dateien aus dem CVS zu
+landen an denen Sie arbeiten wollen.</p>
+
+<p>Nachdem Sie den nächsten Abschnitt gelesen haben können Sie mit der Arbeit
+beginnen</p>
+
+<h3>Wichtig</h3>
+
+<p>Dadurch, dass die FSF Europe Webseite eine europäische/globale Ebene hat
+und eine, durch den Anwender wählbare, lokale Ebene, welche die Seite mit
+landesspezifisch Informationen erweitert, hat die Seite eine gewisse
+Komplexität welche dem Anwender der Seite verborgen bleibt.</p>
+
+<p class="indent"><b>[DOKUMENTATION]</b> Wenn Sie nicht nur Seiten
+Übersetzen wollen (siehe unten), dann <b>schauen Sie sich unbedingt die <a
+href="/help/webpage/Webpage-Structure.txt" target="_blank">Referenz zur
+Struktur</a> an.</b></p>
+
+<p class="indent"><b>[DOKUMENTATION]</b> Es gibt auch eine <a
+href="http://www.texinfo.org" target="_blank">Texinfo</a>
+Dokumentation "<a href="/README.texi"
+target="_blank">Webmastering FSF Europe</a>" von <a
+href="mailto:oberg@fsfeurope.org">Jonas Öberg</a>, welcher das System zur
+automatischen Generierung der Seiten entwickelt hat. Bitte lesen sie es um
+mehr über den Aufbau der Seite zu erfahren.</p>
+
+<h3>Schnell-Referenz für Übersetzer / Einige allgemeine Regeln</h3>
+
+<p>Diese einfachen Regeln sollen Sie vor Problemen und Frustration schützen
+und es Ihnen einfach machen Übersetzungen zu erstellen.</p>
+<ul>
+<li><b>Bearbeiten Sie niemals die HTML Dateien, bearbeiten Sie stattdessen die
+XHTML Dateien!</b><br /><br /></li>
+<li><b>Wenn Sie Seiten mit fehlerhaften XHTML auf den CVS Server laden, dann
+werden solange keine HTML Seiten erzeugt bis jemand den Fehler behoben hat.
+Laden Sie also niemals eine Seite auf den CVS Server bevor sie den XHTML
+Syntax überprüft haben. </b>Im Verzeichnis tools des CVS befindet sich ein
+Skript "validate.pl", welches zur Überprüfung des Syntax verwendet werden
+kann.<br /><br /></li>
+<li>Seiten werden nach folgenden Regeln benannt:
+"&lt;name&gt;.&lt;sprache&gt;.xhtml", &lt;sprache&gt; ist dabei ein aus
+zwei Buchstaben bestehender Ländercode. Wenn kein Ländercode existiert,
+dann wird davon ausgegangen, dass die Seite in englisch ist. <br />
+(<em>Beispiel: Das Skript bei der Generierung der Webseite geht davon aus,
+dass test.it.xhtml eine italienische Übersetzung der französischen Seite
+test.fr.xhtml ist.</em>)<br /><br /></li>
+<li>Übersetzen sie keine Links innerhalb der FSF Europe Webseite. Wenn es
+eine Link zu einer weiteren seitex.html auf der FSF Europe Webseite gibt,
+<b>fügen Sie keinen Ländercode ein</b>, dies wird bei der Erstellung der HTML
+Seiten automatisch angepasst.<br /><br /></li>
+<li>Wenn Sie eine französische Übersetzung der italienischen Seite
+x.it.xhtml erstellen wollen, dann müssen Sie die Datei nur nach
+x.fr.xhtml kopieren, übersetzen und auf den CVS Server laden. Bei der
+nächsten Aktualisierung der Webseite wird die neue Übersetzung erkannt und
+in die Seite eingebunden.<br /><br /></li>
+<li>Einige Dateien für automatisch erstellte Menüs sind im XML Format. Alles
+was über XHTML Seiten gesagt wurde gilt auch für diese Seiten.
+<br /><br /></li>
+</ul>
+
+<h3>Weitere Fragen?</h3>
+
+<p>Wenn Sie weitere Fragen haben, dann stellen Sie diese bitte auf <a
+href="http://mail.fsfeurope.org/mailman/listinfo/web">web@fsfeurope.org</a>
+oder nehmen sie mit dem Koordinator, <a
+href="mailto:oberg@fsfeurope.org">Jonas Öberg</a>, Kontakt auf.</p>
+
+<!-- End page content -->
+
+    </div> <!-- The footer will be inserted here -->
+
+  </body>
+  <timestamp>$Date$ $Author$</timestamp>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

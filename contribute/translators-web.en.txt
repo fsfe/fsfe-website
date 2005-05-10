@@ -1,0 +1,97 @@
+# IMPORTANT NOTE: THIS FILE IS STILL IN PROGRESS, SO PLEASE DON'T TRANSLATE IT
+#                 UNTIL IT IS CONSIDERED FINAL.  
+
+Howto Create a Savannah Account
+
+    First you have to go to the savannah project website [1]. There you have to
+    go to "New User via SSL" in the menu, to proceed you have to accept the
+    savannah SSL certificate. Then you have should fill out the form; choose a
+    login name, enter your password, confirm your password, enter your real
+    name and your email address. 
+    
+    Now you will now receive a email from savannah, in order to complete your
+    registration, visit the URL in the email. Accounts not confirmed after two
+    days are deleted from the database.
+    
+    Enter your login name and your password. Now you are a registered user on
+    Savannah. 
+
+Howto Create a SSH Key
+
+    In this step you have to create a SSH key to identify yourself to savannah.
+    This has to be done one every machine from where you will access the CVS
+    repository. To create a key you have to execute
+    
+        $ssh-keygen -t dsa 
+    
+    If you don't already have a key named id_dsa in your .ssh directory
+    you only have to confirm the question in which file the key should be saved
+    with enter.
+    
+    Then you have to choose a password for the SSH key and confirm it.
+    
+    
+    Login in your savannah account. Choose "My Account Conf" from the menu,
+    then "Register an SSH Public Key"
+    
+    Then copy the content of the file .ssh/id_dsa.pub (or the name you choose)
+    into the key#1 field; confirm with update. After approximately two hours
+    the key should be registered.
+
+Howto Join FSFE project.
+
+    Choose "Group Membership" in the top tabs then you can enter FSFE into the
+    search box of "Request for Inclusion", activate the FSF Europe check box
+    and enter a comment.
+    
+    Then you'll have to wait until someone of the administrators approve your
+    request. After that you should see "FSF Europe" in the "Groups I'm
+    Contributor of" after you login at savannah.
+
+
+Howto checkout the Repository
+
+    First you should add the following line to your ~/.bashrc file:
+        
+        export CVS_RSH=ssh
+
+    then create a directory for the repository and execute 
+
+        $cvs -z3 -d username@savannah.gnu.org:/webcvs/fsfe co .
+    
+    Now you are asked for your SSH password. Enter it and confirm. If
+    everything is alright now the website should be checked out.
+
+    Note: You can also checkout the repository without a savannah account
+          anonymously using 
+    
+            $cvs -z3 -d anoncvs@savannah.gnu.org:/webcvs/fsfe co .
+
+
+Howto use CVS
+
+    After you checked out the repository the first time, you should execute 
+
+        $cvs update -d 
+
+    in the fsfe directory every time before you work on a specific file. If you
+    want to add new files to the repository you have to execute:
+        
+        $cvs add filename  
+
+   and after that
+
+        $cvs commit filename
+    
+    then you are asked for the changes. Describe briefly what you changed, or
+    what you added. 
+
+Tips
+    
+    If you add "ssh-agent &" to your .xsession you can hand over your SSH
+    password to the SSH-agent with ssh-add; then you will not be asked for your
+    password during your X-session.
+
+
+
+    1. http://savannah.gnu.org

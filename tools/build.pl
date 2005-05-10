@@ -359,23 +359,16 @@ while (my ($file, $langs) = each %bases) {
 
         #
         # Find out if this translation is to be regarded as outdated or not.
-        # Make allowances for files called either file.en.xhtml or file.xhtml.
+        # A translation is deemed outdated if it is more than 10 minutes older
+        # than the original. This makes sure a translation committed together
+        # with the original (but maybe a second earlier) isn't marked outdated.
         #
 	if ((stat("$opts{i}/$file.".$root->getAttribute("original").".xhtml"))[9] >
-	    (stat($source))[9]) {
+	    (stat($source))[9] + 600) {
 	    $root->setAttribute("outdated", "yes");
 	} else {
 	    $root->setAttribute("outdated", "no");
 	}
-
-        if (-f "$opts{i}/$file.xhtml") {
-	  if ((stat("$opts{i}/$file.xhtml"))[9] >
-	      (stat($source))[9]) {
-	      $root->setAttribute("outdated", "yes");
-	  } else {
-	      $root->setAttribute("outdated", "no");
-	  }
-        }
 
         #
         # Get the appropriate textset for this language. If one can't be

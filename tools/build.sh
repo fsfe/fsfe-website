@@ -31,5 +31,5 @@ rm -rf ${DEST}.old
 
 echo "Generating translation logs"
 cd $SOURCE
-tools/translation-log.sh ${DEST} ${STATUS}
+tools/translation-log.sh ${DEST}/translations.log ${STATUS}
 echo "Build complete."

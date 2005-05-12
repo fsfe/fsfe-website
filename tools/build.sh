@@ -18,9 +18,7 @@ if test $? -ne 0; then
    exit 1
 fi
 
-for focus in ${TMP}/*; do
-   ln -s ${SOURCE} ${focus}/source
-done
+ln -s ${SOURCE} ${TMP}/global/source
 
 cd $TMP
 /usr/local/bin/symlinks

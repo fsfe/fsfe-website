@@ -148,7 +148,7 @@
               <!-- Link to the XHTML source -->
               <xsl:element name="a">
                 <xsl:attribute name="href">
-                  <xsl:text>/source</xsl:text>
+                  <xsl:text>http://www.fsfeurope.org/source</xsl:text>
                   <xsl:value-of select="/buildinfo/@filename" />
                   <xsl:text>.</xsl:text>
                   <xsl:value-of select="/buildinfo/document/@language" />

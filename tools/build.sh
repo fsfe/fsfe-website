@@ -30,5 +30,6 @@ mv $TMP $DEST
 rm -rf ${DEST}.old
 
 echo "Generating translation logs"
+cd $SOURCE
 tools/translation-log.sh ${DEST} ${STATUS}
 echo "Build complete."

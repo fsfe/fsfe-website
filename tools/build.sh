@@ -8,6 +8,7 @@
 SOURCE=/home/www/fsfe
 DEST=/home/www/html
 TMP=/home/www/tmp.$$
+STATUS=/var/www/web
 
 cd $SOURCE
 tools/build.pl -q -o $TMP -i .
@@ -27,4 +28,7 @@ cd $TMP
 mv $DEST ${DEST}.old
 mv $TMP $DEST
 rm -rf ${DEST}.old
+
+echo "Generating translation logs"
+tools/translation-log.sh ${DEST} ${STATUS}
 echo "Build complete."

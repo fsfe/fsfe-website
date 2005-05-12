@@ -138,6 +138,9 @@ foreach (grep(/\.xhtml$/, @files)) {
   $bases{$_}{$lang} = 1;
 }
 
+# Open the file where we will log all outdated and missing translations
+open (TRANSLATIONS, '>', "$opts{o}/translations.log");
+
 #
 # For each file, translation and focus, we create a new XML file. This will
 # contain all information that the XSL needs to produce a finished page.
@@ -234,6 +237,7 @@ while (my ($file, $langs) = each %bases) {
 
 	my $source = "$opts{i}/$file.$lang.xhtml";
 	unless (-f $source) {
+            my $missingsource = $source;
             if (-f "$opts{i}/$file.xhtml") {
                 $document->setAttribute("language", "en");
                 $source = "$opts{i}/$file.xhtml";
@@ -248,6 +252,7 @@ while (my ($file, $langs) = each %bases) {
                 $document->setAttribute("language", $l);
 		$source = "$opts{i}/$file.$l.xhtml";
             }
+            print TRANSLATIONS "$lang $missingsource $source\n";
 	}
 
         if ( (stat("$opts{o}/$dir/$file.$lang.html"))[9] >
@@ -317,6 +322,9 @@ while (my ($file, $langs) = each %bases) {
           my $auto_data = $sourcedoc->createElement("set");
 
           while (my ($base, $l) = each %files) {
+              if ($l != $lang) {
+                print TRANSLATIONS "$lang $base.$lang.xml $base.$l.xml\n";
+              }
               print STDERR "Loading $base.$l.xml\n" if $opts{d};
               my $source_data = $parser->parse_file("$base.$l.xml");
               foreach ($source_data->documentElement->childNodes) {
@@ -366,6 +374,7 @@ while (my ($file, $langs) = each %bases) {
 	if ((stat("$opts{i}/$file.".$root->getAttribute("original").".xhtml"))[9] >
 	    (stat($source))[9] + 600) {
 	    $root->setAttribute("outdated", "yes");
+            print TRANSLATIONS "$lang $source $source\n";
 	} else {
 	    $root->setAttribute("outdated", "no");
 	}
@@ -446,6 +455,9 @@ while (my ($file, $langs) = each %bases) {
   }    
   print STDERR "\n" unless $opts{q};
 }
+
+# Close the logfile for outdated and missing translations
+close (TRANSLATIONS);
 
 print STDERR "Fixing index links\n" unless $opts{q};
 

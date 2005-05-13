@@ -27,48 +27,68 @@ for file in ${infile}.*; do
     echo "  </head>"
     echo "  <body>"
     echo "    <h1>Translation status for ${language}</h1>"
-    echo "    The following translations are missing or are not up to date"
-    echo "    with the original any more."
-    echo "    <br /><br />"
-    echo "    Please translate the XHTML files!"
-    echo "    <br /><br />"
+    echo "    <p>"
+    echo "      The following translations are missing or are not up to date"
+    echo "      with the original any more."
+    echo "    </p>"
+    echo "    <p>"
+    echo "      Please translate the XHTML files!"
+    echo "    </p>"
     lastgroup=""
     sort -r ${file} | while read group date wantfile havefile; do
-      htmlfile="${wantfile%.xhtml}.html"
-
       if [ "${group}" != "${lastgroup}" ]; then
         if [ "${group}" == "outdated" ]; then
           echo "    <h2>Outdated translations</h2>"
-          echo "    The following pages are already translated. However, the"
-          echo "    original version has been changed since the translation"
-          echo "    was done, and the translation has not been updated so far"
-          echo "    to reflect these changes.<br /><br />"
-          echo "    Updating these translations is generally considered more"
-          echo "    urgent than translating new pages.<br /><br />"
+          echo "    <p>"
+          echo "      The following pages are already translated. However, the"
+          echo "      original version has been changed since the translation"
+          echo "      was done, and the translation has not been updated so far"
+          echo "      to reflect these changes."
+          echo "    </p>"
+          echo "    <p>"
+          echo "      Updating these translations is generally considered more"
+          echo "      urgent than translating new pages."
+          echo "    </p>"
+          echo "    <table border=\"1\" cellspacing=\"0\" cellpadding=\"3\">"
+          echo "      <tr>"
+          echo "        <th>outdated since</th>"
         elif [ "${group}" == "missing" ]; then
+          if [ "${lastgroup}" == "outdated" ]; then
+            echo "    </table>"
+          fi
           echo "    <h2>Missing translations</h2>"
-          echo "    The following pages have not yet been translated."
-          echo "    <br /><br />"
-          echo "    This list is ordered by the date of the original version,"
-          echo "    newest first. Generally, it's a good idea to translate"
-          echo "    newer texts before older ones, as people will probably be"
-          echo "    more interested in current information.<br /><br />"
+          echo "    <p>"
+          echo "      The following pages have not yet been translated."
+          echo "    </p>"
+          echo "    <p>"
+          echo "      This list is ordered by the date of the original version,"
+          echo "      newest first. Generally, it's a good idea to translate"
+          echo "      newer texts before older ones, as people will probably be"
+          echo "      more interested in current information."
+          echo "    </p>"
+          echo "    <table border=\"1\" cellspacing=\"0\" cellpadding=\"3\">"
+          echo "      <tr>"
+          echo "        <th align=\"center\">missing since</th>"
         fi
         lastgroup="${group}"
+        echo "        <th>translated file</th>"
+        echo "        <th>original file</th>"
+        echo "      </tr>"
       fi
 
+      echo "      <tr>"
+      echo "        <td align=\"center\">${date}</td>"
       if [ "${group}" = "outdated" ]; then
-        echo "    Outdated since ${date}:"
+        echo "        <td><a href=\"http://www.fsfeurope.org/source/${wantfile}\">${wantfile}</a></td>"
       else
-        echo "    Missing since ${date}:"
+        echo "        <td>${wantfile}</td>"
       fi
-      echo "    <a href=\"http://www.fsfeurope.org/${htmlfile}\">${htmlfile}</a>"
-      if [ "${group}" = "outdated" ]; then
-        echo "    - <a href=\"http://www.fsfeurope.org/source/${wantfile}\">[translated XHTML]</a>"
-      fi
-      echo "    - <a href=\"http://www.fsfeurope.org/source/${havefile}\">[original XHTML]</a>"
-      echo "    <br />"
+      echo "        <td><a href=\"http://www.fsfeurope.org/source/${havefile}\">${havefile}</a></td>"
+      echo "      </tr>"
     done
+    if [ "${lastgroup}" != "" ]; then
+      echo "    </table>"
+    fi
     echo "  </body>"
     echo "</html>"
   ) > $outdir/$language.html
@@ -82,14 +102,23 @@ done
   echo "  </head>"
   echo "  <body>"
   echo "    <h1>Translation status overview</h1>"
+  echo "    <table border=\"1\" cellspacing=\"0\" cellpadding=\"3\">"
+  echo "      <tr>"
+  echo "        <th align=\"center\">language</td>"
+  echo "        <th align=\"center\">outdated translations</td>"
+  echo "        <th align=\"center\">missing translations</td>"
+  echo "      </tr>"
   for file in ${infile}.*; do
     language=${file##*.}
     outdated=$(grep "^outdated" ${file} | wc --lines)
     missing=$(grep "^missing" ${file} | wc --lines)
-    echo "    <a href=\"${language}.html\">${language}</a>:"
-    echo "    ${outdated} outdated, ${missing} missing"
-    echo "    <br />"
+    echo "      <tr>"
+    echo "        <td align=\"center\"><a href=\"${language}.html\">${language}</a></td>"
+    echo "        <td align=\"center\">${outdated}</td>"
+    echo "        <td align=\"center\">${missing}</td>"
+    echo "      </tr>"
   done
+  echo "    </table border=\"0\">"
   echo "  </body>"
   echo "</html>"
 ) > $outdir/translations.html

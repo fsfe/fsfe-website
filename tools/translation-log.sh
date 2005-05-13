@@ -37,7 +37,7 @@ for file in ${infile}.*; do
       htmlfile="${wantfile%.xhtml}.html"
 
       if [ "${group}" != "${lastgroup}" ]; then
-        if ["${group}" == "outdated" ]; then
+        if [ "${group}" == "outdated" ]; then
           echo "    <h2>Outdated translations</h2>"
           echo "    The following pages are already translated. However, the"
           echo "    original version has been changed since the translation"
@@ -45,7 +45,7 @@ for file in ${infile}.*; do
           echo "    to reflect these changes.<br /><br />"
           echo "    Updating these translations is generally considered more"
           echo "    urgent than translating new pages.<br /><br />"
-        elif ["${group}" == "missing" ]; then
+        elif [ "${group}" == "missing" ]; then
           echo "    <h2>Missing translations</h2>"
           echo "    The following pages have not yet been translated."
           echo "    <br /><br />"
@@ -73,3 +73,23 @@ for file in ${infile}.*; do
     echo "</html>"
   ) > $outdir/$language.html
 done
+
+# Finally, create the overview page
+(
+  echo "<html>"
+  echo "  <head>"
+  echo "    <title>Translation status overview</title>"
+  echo "  </head>"
+  echo "  <body>"
+  echo "    <h1>Translation status overview</h1>"
+  for file in ${infile}.*; do
+    language=${file##*.}
+    outdated=$(grep "^outdated" ${file} | wc --lines)
+    missing=$(grep "^missing" ${file} | wc --lines)
+    echo "    <a href=\"${language}.html\">${language}</a>:"
+    echo "    ${outdated} outdated, ${missing} missing"
+    echo "    <br />"
+  done
+  echo "  </body>"
+  echo "</html>"
+) > $outdir/translations.html

@@ -194,7 +194,9 @@ while (my ($file, $langs) = each %bases) {
   # se/, fr/, de/ and so on, directories.
   #
   $root->setAttribute("original", "en");
+  my $srcfocus = "global";
   if ($file =~ /^([a-z][a-z])\//) {
+      $srcfocus = "$1";
       $root->setAttribute("original", $countries{$1});
   }
 
@@ -217,6 +219,9 @@ while (my ($file, $langs) = each %bases) {
   # Transform it, once for every focus!
   #
   while (my ($dir, undef) = each %countries) {
+    # If we handle a focus specific file, only process it in that focus
+    next if (("$srcfocus" ne "global") && ("$dir" ne "$srcfocus"));
+
     print STDERR "$dir " unless $opts{q};
 
     #
@@ -252,7 +257,9 @@ while (my ($file, $langs) = each %bases) {
                 $document->setAttribute("language", $l);
 		$source = "$opts{i}/$file.$l.xhtml";
             }
-            print TRANSLATIONS "$lang $missingsource $source\n";
+            if ($dir eq "global") {
+              print TRANSLATIONS "$lang $missingsource $source\n";
+            }
 	}
 
         if ( (stat("$opts{o}/$dir/$file.$lang.html"))[9] >
@@ -322,7 +329,7 @@ while (my ($file, $langs) = each %bases) {
           my $auto_data = $sourcedoc->createElement("set");
 
           while (my ($base, $l) = each %files) {
-              if ($l != $lang) {
+              if (($dir eq "global") && ($l ne $lang)) {
                 print TRANSLATIONS "$lang $base.$lang.xml $base.$l.xml\n";
               }
               print STDERR "Loading $base.$l.xml\n" if $opts{d};
@@ -371,10 +378,12 @@ while (my ($file, $langs) = each %bases) {
         # than the original. This makes sure a translation committed together
         # with the original (but maybe a second earlier) isn't marked outdated.
         #
-	if ((stat("$opts{i}/$file.".$root->getAttribute("original").".xhtml"))[9] >
-	    (stat($source))[9] + 600) {
+        my $originalsource = "$file.".$root->getAttribute("original").".xhtml";
+	if ((stat("$opts{i}/$originalsource"))[9] > (stat($source))[9] + 600) {
 	    $root->setAttribute("outdated", "yes");
-            print TRANSLATIONS "$lang $source $source\n";
+            if ($dir eq "global") {
+              print TRANSLATIONS "$lang $source $originalsource\n";
+            }
 	} else {
 	    $root->setAttribute("outdated", "no");
 	}

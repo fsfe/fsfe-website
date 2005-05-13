@@ -54,6 +54,7 @@ for file in ${infile}.*; do
           echo "    newer texts before older ones, as people will probably be"
           echo "    more interested in current information.<br /><br />"
         fi
+        lastgroup="${group}"
       fi
 
       if [ "${group}" = "outdated" ]; then

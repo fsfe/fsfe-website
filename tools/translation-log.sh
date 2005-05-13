@@ -32,8 +32,30 @@ for file in ${infile}.*; do
     echo "    <br /><br />"
     echo "    Please translate the XHTML files!"
     echo "    <br /><br />"
+    lastgroup=""
     sort -r ${file} | while read group date wantfile havefile; do
       htmlfile="${wantfile%.xhtml}.html"
+
+      if [ "${group}" != "${lastgroup}" ]; then
+        if ["${group}" == "outdated" ]; then
+          echo "    <h2>Outdated translations</h2>"
+          echo "    The following pages are already translated. However, the"
+          echo "    original version has been changed since the translation"
+          echo "    was done, and the translation has not been updated so far"
+          echo "    to reflect these changes.<br /><br />"
+          echo "    Updating these translations is generally considered more"
+          echo "    urgent than translating new pages.<br /><br />"
+        elif ["${group}" == "missing" ]; then
+          echo "    <h2>Missing translations</h2>"
+          echo "    The following pages have not yet been translated."
+          echo "    <br /><br />"
+          echo "    This list is ordered by the date of the original version,"
+          echo "    newest first. Generally, it's a good idea to translate"
+          echo "    newer texts before older ones, as people will probably be"
+          echo "    more interested in current information.<br /><br />"
+        fi
+      fi
+
       if [ "${group}" = "outdated" ]; then
         echo "    Outdated since ${date}:"
       else

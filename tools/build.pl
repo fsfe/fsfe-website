@@ -375,12 +375,12 @@ while (my ($file, $langs) = each %bases) {
 
         #
         # Find out if this translation is to be regarded as outdated or not.
-        # A translation is deemed outdated if it is more than 10 minutes older
+        # A translation is deemed outdated if it is more than 60 minutes older
         # than the original. This makes sure a translation committed together
         # with the original (but maybe a second earlier) isn't marked outdated.
         #
         my $originalsource = "$file.".$root->getAttribute("original").".xhtml";
-	if ((stat("$opts{i}/$originalsource"))[9] > (stat($source))[9] + 600) {
+	if ((stat("$opts{i}/$originalsource"))[9] > (stat($source))[9] + 3600) {
 	    $root->setAttribute("outdated", "yes");
             if ($dir eq "global") {
               print TRANSLATIONS "$lang $source $originalsource\n";

@@ -60,6 +60,7 @@ our %languages = (
   no => 'Norsk',
   pt => 'Português',
   ro => 'Român&#259;',
+  sq => 'Shqip',
   sv => 'Svenska',
   tr => 'Türkçe',
 );

@@ -57,6 +57,9 @@ for file in ${infile}.*; do
           echo "    <table border=\"1\" cellspacing=\"0\" cellpadding=\"3\">"
           echo "      <tr>"
           echo "        <th>outdated since</th>"
+          echo "        <th colspan=\"2\">translated file</th>"
+          echo "        <th colspan=\"2\">original file</th>"
+          echo "      </tr>"
         elif [ "${group}" == "missing" ]; then
           if [ "${lastgroup}" == "outdated" ]; then
             echo "    </table>"
@@ -74,11 +77,11 @@ for file in ${infile}.*; do
           echo "    <table border=\"1\" cellspacing=\"0\" cellpadding=\"3\">"
           echo "      <tr>"
           echo "        <th align=\"center\">missing since</th>"
+          echo "        <th>translated file</th>"
+          echo "        <th>original file</th>"
+          echo "      </tr>"
         fi
         lastgroup="${group}"
-        echo "        <th>translated file</th>"
-        echo "        <th>original file</th>"
-        echo "      </tr>"
       fi
 
       echo "      <tr>"
@@ -86,10 +89,14 @@ for file in ${infile}.*; do
       if [ "${group}" = "outdated" ]; then
         echo "        <td>"
         echo "          <a href=\"http://www.fsfeurope.org/source/${wantfile}\">${wantfile}</a>"
+        echo "        </td>"
+        echo "        <td>"
         echo "          <a href=\"http://savannah.gnu.org/cgi-bin/viewcvs/fsfe/fsfe/${wantfile}?cvsroot=Web\">[changelog]</a>"
         echo "        </td>"
         echo "        <td>"
         echo "          <a href=\"http://www.fsfeurope.org/source/${havefile}\">${havefile}</a>"
+        echo "        </td>"
+        echo "        <td>"
         echo "          <a href=\"http://savannah.gnu.org/cgi-bin/viewcvs/fsfe/fsfe/${havefile}?cvsroot=Web\">[changelog]</a>"
         echo "        </td>"
       else

@@ -6,15 +6,20 @@
 infile=$1
 outdir=$2
 
-# First, create a separate file per language
-sort ${infile} | uniq | while read language wantfile havefile; do
+# First, remove all "./" at the beginning of filenames, remove all filenames
+# mentioned in notranslations.txt, and create a separate file per language
+sort ${infile} \
+  | uniq \
+  | sed --expression='s/\.\///g' \
+  | grep --invert-match --file=tools/translation-ignore.txt \
+  | while read language wantfile havefile; do
   if [ -f ${wantfile} ]; then
     group="outdated"
   else
     group="missing"
   fi
   date="$(date --iso-8601 --reference=${havefile})"
-  echo "${group} ${date} ${wantfile#./} ${havefile#./}" >> ${infile}.$language
+  echo "${group} ${date} ${wantfile} ${havefile}" >> ${infile}.$language
 done
 
 # Now, convert the ASCII file to HTML

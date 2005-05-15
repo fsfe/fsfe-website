@@ -84,11 +84,18 @@ for file in ${infile}.*; do
       echo "      <tr>"
       echo "        <td align=\"center\">${date}</td>"
       if [ "${group}" = "outdated" ]; then
-        echo "        <td><a href=\"http://www.fsfeurope.org/source/${wantfile}\">${wantfile}</a></td>"
+        echo "        <td>"
+        echo "          <a href=\"http://www.fsfeurope.org/source/${wantfile}\">${wantfile}</a>"
+        echo "          <a href=\"http://savannah.gnu.org/cgi-bin/viewcvs/fsfe/fsfe/${wantfile}?cvsroot=Web\">[changelog]</a>"
+        echo "        </td>"
+        echo "        <td>"
+        echo "          <a href=\"http://www.fsfeurope.org/source/${havefile}\">${havefile}</a>"
+        echo "          <a href=\"http://savannah.gnu.org/cgi-bin/viewcvs/fsfe/fsfe/${havefile}?cvsroot=Web\">[changelog]</a>"
+        echo "        </td>"
       else
         echo "        <td>${wantfile}</td>"
+        echo "        <td><a href=\"http://www.fsfeurope.org/source/${havefile}\">${havefile}</a></td>"
       fi
-      echo "        <td><a href=\"http://www.fsfeurope.org/source/${havefile}\">${havefile}</a></td>"
       echo "      </tr>"
     done
     if [ "${lastgroup}" != "" ]; then

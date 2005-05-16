@@ -1,13 +1,47 @@
 #!/bin/bash
 
-# This file is called by build.sh to create the translation log html files from
-# the translations.log file created by build.pl.
+# This script is called by build.sh to create the translation log html
+# files from the translations.log file created by build.pl.
+#
+# Copyright (C) 2005 Free Software Foundation Europe
+# 
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2 of the License, or
+# (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
+# 02111-1307, USA.
+
+# -----------------------------------------------------------------------------
+# Constants
+# -----------------------------------------------------------------------------
+
+srcroot="http://www.fsfeurope.org/source"
+cvsroot="http://savannah.gnu.org/cgi-bin/viewcvs/fsfe/fsfe"
+
+
+# -----------------------------------------------------------------------------
+# Parameters
+# -----------------------------------------------------------------------------
 
 infile=$1
 outdir=$2
 
-# First, remove all "./" at the beginning of filenames, remove all filenames
-# mentioned in notranslations.txt, and create a separate file per language
+
+# -----------------------------------------------------------------------------
+# Create a separate file per language
+# -----------------------------------------------------------------------------
+
+# Remove all "./" at the beginning of filenames, remove all filenames mentioned
+# in notranslations.txt, and create a separate file per language
 sort ${infile} \
   | uniq \
   | sed --expression='s/\.\///g' \
@@ -22,7 +56,11 @@ sort ${infile} \
   echo "${group} ${date} ${wantfile} ${havefile}" >> ${infile}.$language
 done
 
-# Now, convert the ASCII file to HTML
+
+# -----------------------------------------------------------------------------
+# Convert the ASCII files to HTML files
+# -----------------------------------------------------------------------------
+
 for file in ${infile}.*; do
   language=${file##*.}
   (
@@ -32,13 +70,6 @@ for file in ${infile}.*; do
     echo "  </head>"
     echo "  <body>"
     echo "    <h1>Translation status for ${language}</h1>"
-    echo "    <p>"
-    echo "      The following translations are missing or are not up to date"
-    echo "      with the original any more."
-    echo "    </p>"
-    echo "    <p>"
-    echo "      Please translate the XHTML files!"
-    echo "    </p>"
     lastgroup=""
     sort -r ${file} | while read group date wantfile havefile; do
       if [ "${group}" != "${lastgroup}" ]; then
@@ -88,20 +119,24 @@ for file in ${infile}.*; do
       echo "        <td align=\"center\">${date}</td>"
       if [ "${group}" = "outdated" ]; then
         echo "        <td>"
-        echo "          <a href=\"http://www.fsfeurope.org/source/${wantfile}\">${wantfile}</a>"
+        echo "          <a href=\"${srcroot}/${wantfile}\">${wantfile}</a>"
         echo "        </td>"
         echo "        <td>"
-        echo "          <a href=\"http://savannah.gnu.org/cgi-bin/viewcvs/fsfe/fsfe/${wantfile}?cvsroot=Web\">[changelog]</a>"
+        echo "          <a href=\"${cvsroot}/${wantfile}?cvsroot=Web\">[changelog]</a>"
         echo "        </td>"
         echo "        <td>"
-        echo "          <a href=\"http://www.fsfeurope.org/source/${havefile}\">${havefile}</a>"
+        echo "          <a href=\"${srcroot}/${havefile}\">${havefile}</a>"
         echo "        </td>"
         echo "        <td>"
-        echo "          <a href=\"http://savannah.gnu.org/cgi-bin/viewcvs/fsfe/fsfe/${havefile}?cvsroot=Web\">[changelog]</a>"
+        echo "          <a href=\"${cvsroot}/${havefile}?cvsroot=Web\">[changelog]</a>"
         echo "        </td>"
       else
-        echo "        <td>${wantfile}</td>"
-        echo "        <td><a href=\"http://www.fsfeurope.org/source/${havefile}\">${havefile}</a></td>"
+        echo "        <td>"
+        echo "          ${wantfile}"
+        echo "        </td>"
+        echo "        <td>"
+        echo "          <a href=\"${srcroot}/${havefile}\">${havefile}</a>"
+        echo "        </td>"
       fi
       echo "      </tr>"
     done
@@ -113,7 +148,11 @@ for file in ${infile}.*; do
   ) > $outdir/$language.html
 done
 
-# Finally, create the overview page
+
+# -----------------------------------------------------------------------------
+# Create the overview page
+# -----------------------------------------------------------------------------
+
 (
   echo "<html>"
   echo "  <head>"
@@ -137,7 +176,7 @@ done
     echo "        <td align=\"center\">${missing}</td>"
     echo "      </tr>"
   done
-  echo "    </table border=\"0\">"
+  echo "    </table>"
   echo "  </body>"
   echo "</html>"
 ) > $outdir/translations.html

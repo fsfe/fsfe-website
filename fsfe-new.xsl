@@ -158,13 +158,10 @@
               </xsl:element>
 
               <!-- Insert the inofficial translation notice if appropriate -->
-              <xsl:variable name="translator">
-                <xsl:value-of select="/buildinfo/document/translator" />
-              </xsl:variable>
-              <xsl:if test="string-length ($translator) &gt; 0">
-                <br />
+              <xsl:if test="/buildinfo/document/@translation='unofficial'">
+                <xsl:element name="br" />
                 <xsl:value-of select="/buildinfo/textset/text[@id='translator1']" />
-                <xsl:value-of select="$translator" />
+                <xsl:value-of select="/buildinfo/document/translator" />
                 <xsl:value-of select="/buildinfo/textset/text[@id='translator2']" />
                 <xsl:element name="a">
                   <xsl:attribute name="href">

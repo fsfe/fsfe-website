@@ -272,14 +272,45 @@
         Improper XML breaks the automatic build process of the web pages and
         blocks updates for the complete FSFE web site. If you suspect the build
         process to be broken, you can view the log of the last build run
-        <a href="http://status.fsfeurope.org/web/">here</a>.
+        <a href="http://status.fsfeurope.org/web/">here</a>. The
+        <code>validate.pl</code> script requires the <code>XML::LibXML</code>
+        Perl module; if this is not installed on your system, you can validate
+        files using your favourite XML validator. For example you can use the
+        command line <code>xmllint</code> utility from the <a
+        href="http://xmlsoft.org/">libxml2 project</a> (if you are using the
+        Debian GNU/Linux distribution, install the <code>libxml2-utils</code>
+        package); run the command  <code>xmllint --noout file.xhtml</code> and
+        watch for possible error messages.
+      </li>
+      
+      <li>
+        Make sure the encoding of the file is consistent with the content of the
+        "encoding" attribute declared in the first line of the file. For example, if
+        your file is encoded as "iso-8859-1" (also known as "latin-1" encoding), the
+        first line of the file should read <pre>&lt;?xml version="1.0" 
+        encoding="iso-8859-1" ?&gt;</pre>; another valid encoding is the
+        unicode, or "UTF-8" encoding. If you want to change the encoding of a
+        file, you can use the standard <code>iconv</code> utility, as in the
+        following example (which converts a file from the "latin1" to the
+        "utf-8" encoding): <code>iconv -f LATIN1 -t UTF8 inputfile &gt;
+        outputfile</code>
       </li>
 
       <li>
         If there is any chance that others can proofread your translation, use
         it. You can use the
         <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">Translators
-          mailing list</a> to ask for proofreading.
+        mailing list</a> to ask for proofreading. Whether you are translating
+        files or proofreading them, you are encouraged to spell-check files
+        using some automated tools, such as GNU aspell, ispell, or your
+        favourite spell-checker. For example, to use <a
+        href="http://aspell.net/">GNU aspell</a> on a Debian GNU/Linux system,
+        just install the packages <code>aspell</code> and <code>aspell-XX</code>
+        (where "XX" is your language code), then run the command
+        <code>aspell -H -d language -c file.xhtml</code> (where
+        "language" is the name of the dictionary for your language; the
+        <code>-d</code> option can be omitted if your UNIX locale is the same as
+        the language of the dictionary).
       </li>
     </ul>
 

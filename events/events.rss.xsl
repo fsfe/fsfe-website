@@ -100,15 +100,19 @@
               </description>
 
               <!-- Link -->
-              <xsl:if test="link != ''">
-                <xsl:variable name="link">
-                  <xsl:apply-templates select="link">
-                    <xsl:with-param name="lang" select="$lang" />
-                  </xsl:apply-templates>
-                </xsl:variable>
-                <link><xsl:value-of select="normalize-space($link)" /></link>
-              </xsl:if>
-
+              <xsl:choose>
+                <xsl:when test="link != ''">
+                  <xsl:variable name="link">
+                    <xsl:apply-templates select="link">
+                      <xsl:with-param name="lang" select="$lang" />
+                    </xsl:apply-templates>
+                  </xsl:variable>
+                  <link><xsl:value-of select="normalize-space($link)" /></link>
+                </xsl:when>
+                <xsl:otherwise>
+                  <link>http://www.fsfeurope.org/</link>
+                </xsl:otherwise>
+              </xsl:choose>
             </item>
           </xsl:if>
         </xsl:for-each>

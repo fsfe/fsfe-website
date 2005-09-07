@@ -110,7 +110,12 @@
                   <link><xsl:value-of select="normalize-space($link)" /></link>
                 </xsl:when>
                 <xsl:otherwise>
-                  <link>http://www.fsfeurope.org/</link>
+                  <link>
+                    <xsl:text>http://www.fsfeurope.org/events/#</xsl:text>
+                    <xsl:value-of select="@start" />
+                    <xsl:text>-</xsl:text>
+                    <xsl:value-of select="@end" />
+                  </link>
                 </xsl:otherwise>
               </xsl:choose>
             </item>

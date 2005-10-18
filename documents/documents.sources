@@ -1,0 +1,14 @@
+documents/document:global
+de/documents/document:de
+fr/documents/document:fr
+it/documents/document:it
+se/documents/document:se
+projects/*/document:global
+de/projects/*/document:de
+fr/projects/*/document:fr
+it/projects/*/document:it
+se/projects/*/document:se
+de/news/*/document:de
+fr/news/*/document:fr
+it/news/*/document:it
+se/news/*/document:se

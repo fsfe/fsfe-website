@@ -11,14 +11,9 @@
         <xsl:sort select="@date" order="descending" />
         <xsl:element name="li">
           <xsl:element name="p">
+
+            <!-- Title as link -->
             <xsl:element name="b">
-
-              <!-- Date -->
-              <xsl:text>(</xsl:text>
-              <xsl:value-of select="@date" />
-              <xsl:text>) </xsl:text>
-
-              <!-- Title as link -->
               <xsl:element name="a">
                 <xsl:attribute name="href">
                   <xsl:value-of select="link" />
@@ -26,6 +21,13 @@
                 <xsl:value-of select="title" />
               </xsl:element>
             </xsl:element>
+
+            <!-- Date -->
+            <xsl:text>(</xsl:text>
+            <xsl:value-of select="@date" />
+            <xsl:text>) </xsl:text>
+
+            <!-- Line break -->
             <xsl:element name="br" />
 
             <!-- Description text -->

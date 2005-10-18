@@ -22,9 +22,9 @@
             </xsl:element>
 
             <!-- Date -->
-            <xsl:text>(</xsl:text>
+            <xsl:text> (</xsl:text>
             <xsl:value-of select="@date" />
-            <xsl:text>) </xsl:text>
+            <xsl:text>)</xsl:text>
 
             <!-- Line break -->
             <xsl:element name="br" />

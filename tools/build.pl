@@ -527,7 +527,7 @@ while (my ($path, undef) = each %countries) {
 # prevent us from vasting disk space.
 #
 print STDERR "Copying misc files\n" unless $opts{q};
-foreach (grep { !/\.xsl$/ } grep(!/\.xhtml$/, @files)) {
+foreach (grep(!/\.sources$/, grep(!/\.xsl$/, grep(!/\.xhtml$/, @files)))) {
   while (my ($dir, undef) = each %countries) {
     if (-f "$opts{i}/$_" && !$opts{n}) {
       link("$opts{i}/$_", "$opts{o}/$dir/$_");

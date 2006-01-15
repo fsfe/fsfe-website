@@ -48,6 +48,7 @@ our %countries = (
 # here for every language, or it won't be rendered.
 #
 our %languages = (
+  ca => 'Català',
   cs => 'Cesky',
   de => 'Deutsch',
   el => '&#917;&#955;&#955;&#951;&#957;&#953;&#954;&#940;',

@@ -64,6 +64,7 @@ our %languages = (
   ro => 'Român&#259;',
   ru => '&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;',
   sq => 'Shqip',
+  sr => 'Srpski',
   sv => 'Svenska',
   tr => 'Türkçe',
 );
@@ -89,6 +90,7 @@ our %translations = (
   ro => 'unofficial',
   ru => 'unofficial',
   sq => 'unofficial',
+  sr => 'unofficial',
   sv => 'official',
   tr => 'unofficial',
 );

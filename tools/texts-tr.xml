@@ -1,19 +1,17 @@
-<?xml version="1.0" encoding="ISO-8859-9"?>
-
+<?xml version="1.0" encoding="ISO-8859-9"?> 
 <textset>
-  <text id="copyright">Tüm Haklar (C) FSF Avrupa</text>
+  <text id="copyright">Telif Hakkı (C) FSF Avrupa.</text>
   <text id="lastchanged"> Son Değişiklik: </text>
-  <text id="translator1">Biz bu sayfanın çevirisi için</text>
-  <text id="translator2">'a teşekkür ediyoruz bu sayfanın resmi olmayan çevirisidir</text>
-  <text id="translator3">bura</text>
-  <text id="translator4">'ya tıklayarak sayfanın orijinal halini görebilirsiniz.</text>
+  <text id="translator1">Bu sayfanın resmi olmayan çevirisi </text>
+  <text id="translator2"> tarafından yapılmıştır. Kendisine teşekkür ediyoruz. Sayfanın resmi sürümüne </text>
+  <text id="translator3">buradan</text>
+  <text id="translator4"> ulaşabilirsiniz.</text>
   <text id="permission">
-   Bu makalenin tamamının kelimesi kelimesine kopyalanması ve dağıtılmasına, 
-   bu bildiriyi korumak şartıyla, telif hakkı ücreti olmaksızın, herhangi bir
-   ortamda, dünya çapında izin verilmiştir.
+   Bu makalenin tamamının, herhangi bir ortamda, bire bir kopyalanmasına ve
+   dağıtılmasına, bu notun korunması şartıyla, izin verilmiştir.
   </text>
   <text id="webmaster">
-   Lütfen problem ve hataları aşağıdaki epostaya yazın
+   Bu sayfa ilgili sorunları lütfen aşağıdaki e-posta adresine bildirin
     <i>webmaster at fsfeurope.org</i>.
   </text>
   <text id="focus">Bölge</text>
@@ -22,40 +20,39 @@
   <text id="selectgo">Seç</text>
   <text id="outdated">
      <p><strong>Uyarı: </strong>
-        Bu sayfa orijinal halinden eski. Bu sayfanın çevrisinde katkıda bulunmak için. Lütfen
-        <a href="/help/help.html">Yardım</a> sayfasını okuyarak çeşitli şekillerde
-          bize yardım edebilrsiniz.
+        Bu sayfa asılından eski olabilir. Çeviri yada diğer konularda nasıl
+	yardım edebileceğinizi öğrenmek için
+	<a href="/help/help.html">bu sayfayı</a> kullanabilirsiniz.
      </p>
   </text>
   <text id="notranslation">
      <p><strong>Uyarı: </strong>
-        Bu sayfa henüz çevrilmemiş. Bu sayfanın çevrisinde katkıda bulunmak için. Lütfen
-        <a href="/help/help.html">Yardım</a> sayfasını okuyarak çeşitli şekillerde
-          bize yardım edebilrsiniz.
+        Bu sayfa henüz çevrilmemiş. Aşağıda gördüğünüz sayfanın asıl sürümüdür.
+	Çeviri yada diğer konularda nasıl yardım edebileceğinizi öğrenmek için
+        <a href="/help/help.html">bu sayfayı</a> kullanabilirsiniz.
      </p>
   </text>
   <text id="menu/about">Hakkımızda</text>
   <text id="menu/projects">Projeler</text>
-  <text id="menu/projects/technical">Teknik</text>
-  <text id="menu/projects/other">Diğer</text>
-  <text id="menu/projects/legal">Yasal</text>
-  <text id="menu/projects/community">Topluluk</text>
-  <text id="menu/documents">Dokümanlar</text>
-  <text id="menu/events">Gelişmeler</text>
-  <text id="menu/help">Aktif Ol</text>
-  <text id="menu/help/1-fellow">üye olarak</text>
-  <text id="menu/help/2-translator">çevirmen olarak</text>
-  <text id="menu/help/3-webmaster">webmaster olarak</text>
-  <text id="menu/help/4-booth_volunteer">koordinasyon görevlisi olarak</text>
-  <text id="menu/help/5-intern">projeye dahil olarak</text>
-  <text id="menu/donate">Bağış</text>
+  <text id="menu/projects/technical">teknik</text>
+  <text id="menu/projects/other">diğer</text>
+  <text id="menu/projects/legal">yasal</text>
+  <text id="menu/projects/community">topluluk</text>
+  <text id="menu/documents">Belgeler</text>
+  <text id="menu/events">Etkinlikler</text>
+  <text id="menu/help">Yardımda bulun</text>
+  <text id="menu/help/1-fellow">üyelik</text>
+  <text id="menu/help/2-translator">çevirmenlik</text>
+  <text id="menu/help/3-webmaster">site yöneticiliği</text>
+  <text id="menu/help/4-booth_volunteer">fuar gönüllüsü</text>
+  <text id="menu/help/5-intern">stajyerlik</text>
+  <text id="menu/donate">Bağış yap</text>
   <text id="menu/donate/cc">kredi kartıyla</text>
-  <text id="menu/donate/other">diğer şekillerde</text>
+  <text id="menu/donate/other">diğer yollarla</text>
   <text id="menu/order">Sipariş</text>
   <text id="menu/contact">İletişim</text>
-  <text id="menu/associates">İşbirlikleri</text>
-  <text id="menu/lists">Eposta Listeleri</text>
+  <text id="menu/associates">Ortaklar</text>
+  <text id="menu/lists">E-posta Listeleri</text>
   <text id="menu/news">Haberler</text>
   <text id="menu/press">Basın Haberleri</text>
-  <text id="menu/thankgnus">Teşekkürler Gnu'lar</text>
-</textset>
+  <text id="menu/thankgnus">Teşekkürler</text> </textset>

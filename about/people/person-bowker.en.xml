@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="iso-8859-1" ?>
 
 <personset>
-  <person id="bowker">
+  <person id="bowker" member="yes" chapter_gb="yes">
     <name>Gareth Bowker</name>
-    <function>United Kingdom</function>
-    <email>tgb (at) fsfe (dot) org</email>
-    <description>
-      Gareth Bowker supports FSFE's activities in the United Kingdom.
-    </description>
+    <country>United Kingdom</country>
+    <function>member of the association</function>
+    <email>bowker (at) fsfeurope (dot) org</email>
     <link>http://www.fsfe.org/en/fellows/tgb</link>
   </person>
 </personset>

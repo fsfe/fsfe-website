@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<html>
+  <head>
+    <title>
+      FSF Europe - Contribute - Information for translators - Web pages
+    </title>
+  </head>
+
+  <body>
+    <h1>Traduction des pages web</h1>
+
+    <h2>Comprendre comment les pages web sont construites</h2>
+
+    <p>
+      Les pages web de www.fsfeurope.org sont maintenues comme un jeu de fichiers XML.
+      Toutes les heures, le serveur web génère automatiquement les pages HTML à partir de ces fichiers. 
+      Par conséquent l'édition des pages est entièrement réalisée dans les fichiers XML; le HTML n'est 
+      jamais édité directement.
+    </p>
+
+    <p>
+      Chaque page sur www.fsfeurope.org est nommée
+      "<i>nomdepage</i>.<i>langue</i>.html" (<i>langue</i> étant désignée
+      par 2 lettres en code iso-639, comme "en" pour l'anglais ou "de" pour 
+      l'allemand). Les fichiers source sont appellés
+      "<i>nomdepage</i>.<i>langue</i>.xhtml".<br />
+      Certaines pages sont partiellement dynamiques: indépendamment des
+      textes fixes rapportés depuis les fichiers .xhtml, elles contiennent de l'information liée à un 
+      ou plusieurs fichiers .xml. Chaque fois qu'une page de cette nature est créée,
+      le système qui construit les pages prend les fichiers .xml traduits là où ils sont disponibles, 
+      puis bascule vers les versions anglaises des fichiers .xml qui ne le sont 
+      pas encore. De cette manière, les pages peuvent se retrouver avec des parties 
+      de texte traduits et d'autres toujours présentées en anglais. 
+      Par exemple des pages comme celles-ci : la 
+      <a href="/index.html">page de départ</a>, la
+      <a href="/news/news.html">page de nouvelles</a>, et la
+      <a href="/events/events.html">page d'évènements</a>.
+    </p>
+
+    <h2>Tout le monde peut aider aux traductions</h2>
+
+    <p>
+      Tous les fichiers source (i.e. tous les fichiers .xhtml et .xml) sont téléchargeables,  
+      aussi chacun peut aider spontanément à la traduction sans avoir à s'enregistrer.
+      Cependant, chaque fois que vous commencez une traduction et que vous pensez 
+      y consacrer du temps, veuillez écrire un court message à la  
+      <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">mailing-liste des traducteurs
+      </a> pour éviter qu'une autre personne commence à travailler sur le même texte simultanément.
+    </p>
+
+    <h3>Aider aux traductions manquantes</h3>
+
+    <p>
+      Si une page ouverte sur votre navigateur n'est pas encore traduite dans votre langue,
+      défilez à la fin de la page, cliquez sur le lien "[XHTML]" et sauvegardez le fichiers que vous avez obtenu.
+      Vous aurez le fichier .xhtml en anglais. Renommez le fichier avec le code de votre langue au lieu du code 
+      "en", et ouvrez-le dans un éditeur de texte. Maintenant, dans le fichier traduisez tout le texte qui se trouve 
+      en dehors des signes "&lt;...&gt;"; ne changez rien à l'intérieur de ces marques (le texte entre les signes
+      sont des commandes XHTML qui influent sur l'aspect de la page web résultante).
+    </p>
+
+    <p>
+      A la fin du fichier, se trouve une ligne qui indique "&lt;/html&gt;".
+      Juste <i>au dessus</i> de cette ligne, ajoutez-en une indiquant 
+      "&lt;translator&gt;<i>votre nom</i>&lt;/translator&gt;".
+    </p>
+
+    <p>
+      Ceci fait, envoyez le fichier traduit à la 
+      <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">mailing-liste des traducteurs
+      </a>. Les autres membres de la liste peuvent corriger la traduction, et une personne sur cette liste  
+      finira par l'envoyer au serveur.
+    </p>
+
+    <h3>Mise à jour des traductions périmées</h3>
+
+    <p>
+      Si une page ouverte sur votre navigateur est une traduction périmée
+      (indiqué par une note en haut de la page), défilez à la fin de la page,
+      cliquez sur le lien "[XHTML]" et sauvegardez le fichier que vous avez obtenu.
+      Ce fichier est la version traduite (périmée). Ensuite, utilisez le lien "English"
+      en haut de la page pour sauter à la version anglaise et cliquez à nouveau 
+      sur le lien "[XHTML]" qu'elle contient. Le fichier que vous obtenez alors
+      est la version anglaise (à jour). Maintenant vous pouvez comparer les deux fichiers 
+      et mettre à jour la traduction. Veuillez noter que tout ce qui est inclu entre les signes
+      "&lt;...&gt;" ne doit pas être traduit.
+    </p>
+
+    <p>
+      Ceci fait, envoyez le fichier traduit à la 
+      <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">mailing-liste des traducteurs
+      </a>. Les autres membres de la liste peuvent corriger la traduction, et une personne sur cette liste 
+      finira par l'envoyer au serveur.
+    </p>
+
+    <h3>Trouver ce qui a besoin d'être fait</h3>
+
+    <p>
+      Une 
+      <a href="http://status.fsfeurope.org/web/translations.html">liste autogénérée
+      de tous les langages</a> est disponible. Sur cette page, chaque code de langue est un lien 
+      vers une page distincte faisant la liste de toutes les traductions manquantes ou périmées 
+      dans cette langue.
+    </p>
+
+    <p>
+      La liste des traductions périmées offre une fonction supplémentaire utile à la mise à jour:
+      vous pouvez non seulement télécharger la traduction (périmée) et l'original en anglais (à jour);
+      mais aussi voir le changelog (journal des modifications) des deux fichiers, un protocole 
+      de l'ensemble des modifications effectuées sur chaque fichier.
+      Comparer les deux changelogs rend d'habitude plus facile la recherche des parties
+      de l'original ayant été modifiées lors de la dernière mise à jour de la traduction. 
+    </p>
+
+    <p>
+      Cette page d'état de la traduction est également le seul moyen de télécharger les fichiers .xml
+      créés dans les pages dynamiques, comme les fichiers contenant des nouvelles
+      ou des arrivées d'évènements.
+    </p>
+
+    <h3>Télécharger l'arbre complet du fichier source avec CVS</h3>
+
+    <p>
+      S'il vous est possible d'utiliser CVS, vous pouvez aussi télécharger en une seule fois 
+      l'arbre complet du fichier source.
+    </p>
+
+    <p>
+      Créez un répertoire dans lequel vous désirez stocker le fichier, mettez-le dans ce répertoire
+      et entrez la commande <br />
+      <code>$ cvs -z3 -d:pserver:anonymous@cvs.savannah.gnu.org:/web/fsfe co .</code><br />
+      A la demande de mot de passe, tapez juste retour-chariot.
+    </p>
+
+    <p>
+      Pour mettre à jour l'arbre du source précédemment téléchargé, vous pouvez utiliser la commande
+      <br />
+      <code>$ cvs -z3 update -Pd</code><br />
+    </p>
+
+    <h2>Rejoindre les webmasters de www.fsfeurope.org</h2>
+
+    <p>
+      Si vous avez l'intention de contribuer régulièrement aux traductions et que vous avez quelques 
+      notions basiques de CVS et SSH, vous êtes invités à
+      <a href="/contribute/web/web.html">rejoindre l'équipe des webmasters</a>.
+    </p>
+  </body>
+
+  <timestamp>$Date$ $Author$</timestamp>
+  <translator>miluz</translator>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

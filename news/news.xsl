@@ -18,7 +18,7 @@
       <!-- Show news except those in the future, but no newsletters -->
       <xsl:for-each select="/html/set/news
         [translate (@date, '-', '') &lt;= translate ($today, '-', '') and
-         @type != 'newsletter']">
+         not (@type = 'newsletter')]">
         <xsl:sort select="@date" order="descending" />
 
         <!-- This is a news entry -->

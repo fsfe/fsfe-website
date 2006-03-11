@@ -219,6 +219,10 @@ grep --no-filename "^outdated" ${infile}.* \
     echo "      </tr>"
   done
   echo "    </table>"
+  echo "    <p>"
+  echo "      A <a href=\"outdated.html\">hit parade of outdated translations</a>"
+  echo "      for all languages is also available."
+  echo "    </p>"
   echo "  </body>"
   echo "</html>"
 ) > $outdir/translations.html

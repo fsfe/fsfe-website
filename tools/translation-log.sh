@@ -150,6 +150,48 @@ done
 
 
 # -----------------------------------------------------------------------------
+# Create hit parade of outdated translations
+# -----------------------------------------------------------------------------
+
+grep --no-filename "^outdated" ${infile}.* \
+  | sort --key=2 \
+  | (
+    echo "<html>"
+    echo "  <head>"
+    echo "    <title>Hit parade of outdated translations</title>"
+    echo "  </head>"
+    echo "  <body>"
+    echo "    <h1>Hit parade of outdated translations</h1>"
+    echo "    <table border=\"1\" cellspacing=\"0\" cellpadding=\"3\">"
+    echo "      <tr>"
+    echo "        <th>outdated since</th>"
+    echo "        <th colspan=\"2\">translated file</th>"
+    echo "        <th colspan=\"2\">original file</th>"
+    echo "      </tr>"
+    while read group date wantfile havefile; do
+      echo "      <tr>"
+      echo "        <td align=\"center\">${date}</td>"
+      echo "        <td>"
+      echo "          <a href=\"${srcroot}/${wantfile}\">${wantfile}</a>"
+      echo "        </td>"
+      echo "        <td>"
+      echo "          <a href=\"${cvsroot}/${wantfile}?cvsroot=Web\">[changelog]</a>"
+      echo "        </td>"
+      echo "        <td>"
+      echo "          <a href=\"${srcroot}/${havefile}\">${havefile}</a>"
+      echo "        </td>"
+      echo "        <td>"
+      echo "          <a href=\"${cvsroot}/${havefile}?cvsroot=Web\">[changelog]</a>"
+      echo "        </td>"
+    done
+    echo "      </tr>"
+    echo "    </table>"
+    echo "  </body>"
+    echo "</html>"
+  ) > $outdir/outdated.html
+
+
+# -----------------------------------------------------------------------------
 # Create the overview page
 # -----------------------------------------------------------------------------
 

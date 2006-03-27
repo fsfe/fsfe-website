@@ -30,6 +30,9 @@
         <xsl:when test="starts-with ($link, 'http:')">
           <xsl:value-of select="$link" />
         </xsl:when>
+        <xsl:when test="starts-with ($link, 'https:')">
+          <xsl:value-of select="$link" />
+        </xsl:when>
         <xsl:otherwise>http://www.fsfeurope.org<xsl:value-of select="$link" />
         </xsl:otherwise>
       </xsl:choose>

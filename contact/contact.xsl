@@ -53,10 +53,10 @@
       <!-- Core team members -->
       <xsl:element name="p">
         <xsl:choose>
-          <xsl:when test="count(/html/set/person[@country=$country])>0">
+          <xsl:when test="count(/html/set/person[contains(@country,$country)])>0">
             <xsl:value-of select="/html/text[@id='members']" />
             <xsl:text> </xsl:text>
-            <xsl:for-each select="/html/set/person[@country=$country]">
+            <xsl:for-each select="/html/set/person[contains(@country,$country)]">
               <xsl:if test="position()!=1">
                 <xsl:text>, </xsl:text>
               </xsl:if>

@@ -76,6 +76,7 @@ our %languages = (
 # Valid values are "official" and "unofficial"
 #
 our %translations = (
+  bg => 'unofficial',
   ca => 'unofficial',
   cs => 'unofficial',
   da => 'unofficial',

@@ -4,7 +4,7 @@
 @settitle Webmastering FSF Europe
 @setchapternewpage odd
 
-@set lastupdated $Id: README.texi,v 1.2 2003-02-01 20:52:20 jonas Exp $
+@set lastupdated $Id: README.texi,v 1.3 2006-05-08 14:31:35 reinhard Exp $
 
 @titlepage
 @title Webmastering FSF Europe
@@ -121,21 +121,24 @@ should be similar to this:
 
 @verbatim
   <?xml version="1.0" encoding="iso-8859-1" ?>
-  <!DOCTYPE html
-          PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
   <html>
     <head>
       <title>Some title</title>
     </head>
-    <body>
-      Content of the page.
-    </body>
-  </html>
-@end verbatim
 
-Make sure that the DOCTYPE indicates that the document should be
-validated according to XHTML 1.0 Transitional.
+    <body>
+      Content of the page
+    </body>
+
+    <timestamp>$Date: 2006-05-08 14:31:35 $ $Author: reinhard $</timestamp>
+  </html>
+  <!--
+  Local Variables: ***
+  mode: xml ***
+  End: ***
+  -->
+@end verbatim
 
 @node Editing, Automatic updates, Source files, Webmastering
 @section Editing
@@ -376,12 +379,7 @@ file should be as follows:
   <body>
     Some content for the page.
   </body>
-  <timestamp>
-    Last update:
-    <!-- timestamp start -->
-    $Date: 2003-02-01 20:52:20 $ $Author: jonas $
-    <!-- timestamp end -->
-  </timestamp>
+  <timestamp>$Date: 2006-05-08 14:31:35 $ $Author: reinhard $</timestamp>
 </html>
 @end verbatim
 
@@ -420,12 +418,7 @@ finished, the result should look like this:
     <body>
       Some content for the page.
     </body>
-    <timestamp>
-      Last update:
-      <!-- timestamp start -->
-      $Date: 2003-02-01 20:52:20 $ $Author: jonas $
-      <!-- timestamp end -->
-    </timestamp>
+    <timestamp>$Date: 2006-05-08 14:31:35 $ $Author: reinhard $</timestamp>
   </document>
 </buildinfo>
 @end verbatim

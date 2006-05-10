@@ -36,7 +36,7 @@
         </xsl:if>)
         <xsl:value-of select="title" />
       </b><br />
-      <xsl:value-of select="body" />
+      <xsl:apply-templates select="body/node()" />
       <xsl:if test="$link != ''">
         [<a href="{link}">
           <xsl:value-of select="/html/text [@id = 'more']" />

@@ -5,7 +5,7 @@ use CGI;
 $query = new CGI;
 @names = $query->param;
 
-open(MAIL,"|/usr/lib/sendmail -t")
+open(MAIL,"|/usr/lib/sendmail -t");
 print MAIL "From: mueller\@fsfeurope.org\n";
 print MAIL "To: mueller\@fsfeurope.org\n";
 print MAIL "Subject: Web order\n\n";

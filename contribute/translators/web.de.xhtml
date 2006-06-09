@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<html>
+  <head>
+    <title>
+      FSF Europe - Mitarbeiten - Informationen für Übersetzer - Webseiten
+    </title>
+  </head>
+
+  <body>
+    <h1>Webseiten übersetzen</h1>
+
+    <h2>Verstehen, wie die Webseiten generiert werden</h2>
+
+    <p>
+      Die Webseiten von www.fsfeurope.org werden als Menge von XML Dateien
+      gewartet.  Der Webserver generiert jede gerade Stunde HTML Seiten aus
+      diesen XML-Dateien.  Deshalb werden alle Änderungen in den XML Dateien
+      vorgenommen und niemals direkt in den HTML Dateien.  
+    </p>
+
+    <p>
+      Jede Seite auf www.fsfeurope.org ist nach dem Schema
+      "<i>Seitenname</i>.<i>Sprache</i>.html" benannt (wobei <i>Sprache</i> für
+      den zweibuchstabigen ISO-639-Code für Sprachen steht, zum Beispiel "en"
+      für Englisch oder "de" für Deutsch). Die zugehörigen Quelldateien heißen
+      "<i>Seitenname</i>.<i>Sprache</i>.xhtml".<br /> 
+
+      Manche Seiten haben einen dynamischen Teil: neben dem festen Texten aus
+      der .xhtml-Datei beinhalten diese Informationen aus einer oder mehreren
+      .xml-Dateien. Immer wenn eine solche Seite generiert wird, nimmt das
+      Build-System, falls vorhanden, die übersetzte .xml-Datei und greift auf
+      die englische Version der Seiten zurück, die noch nicht übersetzt
+      wurden. Dadurch können solche Seiten teils mit übersetzten Texten und
+      teils mit noch englischen Texten erscheinen. Beispiele für solche Seiten
+      enthalten die
+      <a href="/index.html">Startseite</a>, das
+      <a href="/news/news.html">Meldungsarchiv</a>, und die
+      <a href="/events/events.html">Veranstaltungsseite</a>.
+    </p>
+
+    <h2>Jeder kann Übersetzungen beisteuern</h2>
+
+    <p>
+      Alle Quelldateien (z.B. alle .xhtml und .xml Dateien) sind öffentlich zum
+      Download verfügbar, sodass jeder spontan Übersetzungen beisteuern kann,
+      ohne irgendwo registriert zu sein. Wann immer Sie eine Übersetzung
+      beginnen und glauben, dass dies mehr Zeit in Anspruch nehmen wird,
+      schreiben Sie bitte eine kurze Nachricht an die <a
+      href="http://mail.fsfeurope.org/mailman/listinfo/translators">Mailingliste
+      für Übersetzer</a> um zu vermeiden, dass jemand anderes gleichzeitig
+      anfängt an dem Text zu arbeiten.
+    </p>
+
+    <h3>Fehlende Übersetzungen beisteuern</h3>
+
+    <p>
+      Falls Sie in Ihrem Browser eine Seite geöffnet haben, die noch nicht in
+      Ihre Sprache übersetzt wurde, scrollen Sie bis ans Ende der Seite,
+      klicken Sie auf den "[XHTML]"-Link und speichern Sie die Datei, die Sie
+      dort bekommen. Sie bekommen die englische .xhtml Datei. Benennen Sie die
+      Datei so um, dass sie Ihren Sprachcode statt des "en" Codes enthält und
+      öffnen Sie diese in einem Text-Editor. Jetzt können Sie den ganzen Text
+      außerhalb der "&lt;...&gt;" Markierungen übersetzen; Ändern Sie nichts
+      innerhalb dieser Markierungen (der Text innerhalb der Markierungen sind
+      XHTML-Befehle, die die Aufmachung der resultierenden Webseite
+      beeinflussen).
+    </p>
+
+    <p>
+      Am Ende der Datei werden Sie eine Zeile mit dem Inhalt "&lt;/html&gt;"
+      finden.  Direkt <i>über</i> dieser Zeile fügen Sie eine Zeile mit dem
+      Inhalt "&lt;translator&gt;<i>Ihr Name</i>&lt;/translator&gt;" hinzu.
+    </p>
+
+    <p>
+      Wenn Sie fertig sind senden Sie die übersetzte Datei an die <a
+      href="http://mail.fsfeurope.org/mailman/listinfo/translators">Mailingliste
+      für Übersetzer</a>. Andere Mitglieder der Liste können die Übersetzung
+      korrekturlesen und jemand auf der Liste wird sie dann letztendlich auf
+      den Webserver stellen.
+    </p>
+
+    <h3>Veraltete Webseiten aktualisieren</h3>
+
+    <p>
+      Wenn Sie eine Seite in Ihrem Webbrowser geöffnet haben, deren Übersetzung
+      veraltet ist (angezeigt durch eine Notiz oben auf der Seite), dann
+      scrollen Sie bis zum Ende der Seiten, klicken Sie auf den "[XHTML]"-Link
+      und speichern Sie die Datei, die Sie dort bekommen. Diese Datei ist die
+      (veraltete) übersetzte Version. Als nächstes benutzen Sie den
+      "English"-Link oben auf der Seite, um zur englischen Version zu wechseln
+      und klicken Sie dort ebenfalls auf den "[XHTML]"-Link. Die Datei, die Sie
+      dort bekommen ist die (aktualisierte) englische Version. Bitte beachten
+      Sie, dass alles innerhalb der "&lt;...&gt;" Markierungen nicht übersetzt
+      werden darf.
+    </p>
+
+    <p>
+      Wenn die fertig sind, senden Sie die übersetzte Datei an die <a
+      href="http://mail.fsfeurope.org/mailman/listinfo/translators">Mailingliste
+      für Übersetzer</a>. Andere Mitglieder der Liste können die Übersetzung dann
+      korrekturlesen und jemand auf der Liste wird sie dann letztendlich auf
+      den Webserver stellen.
+    </p>
+
+    <h3>Herausfinden, wo Arbeit benötigt wird</h3>
+
+    <p>
+      Es gibt eine automatisch erstellte <a
+      href="http://status.fsfeurope.org/web/translations.html">Liste aller
+      verfügbaren Sprachen</a>.  Auf dieser Seite ist jeder Sprachcode ein Link
+      auf eine separate Seite, die alle veralteten und fehlenden Übersetzungen
+      für diese Sprache auflistet.
+    </p>
+
+    <p>
+      Die Liste mit den veralteten Übersetzungen bietet eine hilfreiche
+      Funktion für Aktualisierungen: Sie können nicht nur die (veraltete)
+      Übersetzung und das (aktuelle) englische Original herunterladen, sondern
+      auch das Changelog beider Dateien ansehen - ein Protokoll aller
+      Modifikationen, die an der entsprechenden Datei vorgenommen wurden.  Ein
+      Vergleich der beiden Changelogs macht es oft einfacher herauszufinden,
+      welche Teile des Originals verändert wurden seitdem die Übersetzung
+      zuletzt aktualisiert wurde.
+    </p>
+
+    <p>
+      Die Seite mit dem Übersetzungsstatus ist außerdem der einzige Weg um die
+      .xml-Dateien herunterzuladen, die in dynamische Seiten eingebaut werden,
+      wie zum Beispiel Dateien, die Neuigkeiten oder Veranstaltungshinweise
+      enthalten.
+    </p>
+
+    <h3>Den kompletten Dateibaum der Quellen mit CVS herunterladen</h3>
+
+    <p>
+      Wenn es für Sie möglich ist, CVS zu benutzen, dann können Sie den kompletten
+      Dateibaum der Quellen auf einmal herunterladen.
+    </p>
+
+    <p>
+      Erzeugen Sie ein Verzeichnis, in dem Sie die Dateien speichern
+      möchten. Wechseln Sie in dieses Verzeichnis und führen Sie folgenden
+      Befehl aus<br /> 
+      <code>$ cvs -z3 -d:pserver:anonymous@cvs.savannah.gnu.org:/web/fsfe co
+      .</code><br />
+      Wenn Sie nach einem Passwort gefragt werden, drücken Sie einfach auf die
+      Return-Taste.
+    </p>
+
+    <p>
+      Um den zuvor heruntergeladenen Dateibaum der Quellen zu aktualisieren,
+      können Sie folgendes Kommando ausführen:<br />
+      <code>$ cvs -z3 update -Pd</code><br />
+    </p>
+
+    <h2>Den Webmastern von www.fsfeurope.org beitreten</h2>
+
+    <p>
+      Falls Sie vorhaben regelmäßig Übersetzungen beizusteuern und ein
+      grundlegendes Verständnis von CVS und SSH haben, sind Sie herzlich dazu
+      eingeladen dem <a href="/contribute/web/web.html">Webmaster-Team</a>
+      beizutreten.
+    </p>
+  </body>
+
+  <timestamp>$Date$ $Author$</timestamp>
+  <translator>Andi Drebes</translator>
+</html>
+
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

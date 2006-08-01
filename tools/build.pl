@@ -38,6 +38,7 @@ use POSIX qw(strftime);
 our %countries = (
   global => 'en',
   de => 'de',
+  es => 'es',
   it => 'it',
   fr => 'fr',
   se => 'sv' );

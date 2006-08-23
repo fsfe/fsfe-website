@@ -1,0 +1,2121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<html>
+  <head>
+    <title>GPLv3 - Die Änderungen zwischen dem ersten und dem zweiten Entwurf</title>
+  </head>
+
+  <body>
+
+<div style="float:right;">
+<a href="gplv3.html"><img SRC="GPLv3-logo-red.png"
+   ALT="GPLv3 logo" BORDER="0"
+   WIDTH="319" HEIGHT="130" /></a>
+</div>
+
+<h1>GPLv3 - Die Änderungen zwischen dem ersten und dem zweiten Entwurf</h1>
+
+<p>
+Mehr Informationen zum Entwurf der GPLv3 und zu den Möglichkeiten am
+öffentlichen Beratungsprozess teilzunehmen, finden Sie auf unserer <a
+href="gplv3.html">GPLv3 Projekt</a> Seite.
+</p>
+
+<p>
+Unten ist der erste Entwurf neben den zweiten Entwurf der GNU GPL Version 3
+gestellt. Text, der im 1. Entwurf steht, aber nicht im 2. Entwurf, ist in der
+linken Spalte <span style="color:red; font-weight: bold;">fett rot</span> und
+Text, der neu ist im 2. Entwurf, ist in der rechten Spalte <span
+style="color:blue; font-weight: bold;">fett blau</span> markiert.  Die Nummern
+der entsprechenden Paragraphen in Version 2 der GNU GPL stehen in eckigen
+Klammern.
+</p>
+
+<h2>Titel der Paragraphen:</h2>
+
+<ul>
+
+<li><a href="#preamble">Preamble</a></li>
+<li><a href="#definitions">0. Definitions</a></li>
+<li><a href="#source-code">1. Source Code</a></li>
+<li><a href="#basic-permissions">2. Basic Permissions</a></li>
+<li><a href="#no-denying-rights">3. No Denying Users' Rights Through Technical Measures</a></li>
+<li><a href="#verbatim-copying">4. Verbatim Copying</a></li>
+<li><a href="#conveying-modified-source-versions">5. Conveying Modified Source Versions</a></li>
+<li><a href="#conveying-non-source-forms">6. Conveying Non-Source Forms</a></li>
+<li><a href="#additional-terms">7. Additional Terms</a></li>
+<li><a href="#termination">8. Termination</a></li>
+<li><a href="#acceptance-not-required">9. Acceptance Not Required for Having Copies</a></li>
+<li><a href="#automatic-licensing">10. Automatic Licensing of Downstream Users</a></li>
+<li><a href="#patents">11. Patents</a></li>
+<li><a href="#no-surrender">12. No Surrender of Others' Freedom</a></li>
+<li><a href="#geographical-limitations">13. Geographical Limitations</a></li>
+<li><a href="#revised-versions">14. Revised Versions of this License</a></li>
+<li><a href="#requesting-exceptions">15. Requesting-Exceptions</a></li>
+<li><a href="#disclaimer-of-warranty">16. Disclaimer of Warranty</a></li>
+<li><a href="#limitation-of-liability">17. Limitation of Liability</a></li>
+</ul>
+
+
+
+<table>
+
+<tr>
+
+<th>
+  Erster Entwurf
+</th>
+
+<th>
+  Zweiter Entwurf
+</th>
+
+</tr><tr>
+
+<td style="border: 1px solid black; margin: 1px;">
+Discussion Draft <span style="color:red; font-weight: bold;">1</span>  of Version 3, <span style="color:red; font-weight: bold;">16
+Jan</span>  2006
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+Discussion Draft  <span style="color: blue; font-weight: bold;">2</span> of Version 3,  <span style="color: blue; font-weight: bold;">27 July</span> 2006
+</td>
+
+</tr><tr>
+
+
+
+
+<td style="border: 1px solid black; margin: 1px;">
+THIS IS A DRAFT, NOT A PUBLISHED VERSION OF THE <br /> GNU GENERAL PUBLIC
+LICENSE. 
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+THIS IS A DRAFT, NOT A PUBLISHED VERSION OF THE <br /> GNU GENERAL PUBLIC
+LICENSE. 
+</td>
+
+</tr><tr>
+
+
+
+
+ <td style="border: 1px solid black; margin: 1px;">
+Copyright (c) 2006 Free Software Foundation, Inc. <br />
+     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA <br />
+ Everyone is permitted to copy and distribute verbatim copies 
+ of this license document, but changing it is not allowed.
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+Copyright (c) 2006 Free Software Foundation, Inc. <br />
+     51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA <br />
+ Everyone is permitted to copy and distribute verbatim copies 
+ of this license document, but changing it is not allowed.
+</td>
+
+</tr><tr id="preamble">
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3>Preamble</h3>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3>Preamble</h3>
+</td>
+
+</tr><tr>
+
+
+  <td style="border: 1px solid black; margin: 1px;">
+The licenses for most software are designed to take away your freedom
+to share and change it.  By contrast, the GNU General Public License is
+intended to guarantee your freedom to share and change free
+software---to make sure the software is free for all its users.  We, the
+Free Software Foundation, use the GNU General Public License for most of
+our software; it applies also to any other program whose authors commit
+to using it.  <span style="color:red; font-weight: bold;">(Some Free Software Foundation software is covered
+by the GNU Lesser General Public License instead.)</span> You can apply it to
+your programs, too.
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+The licenses for most software are designed to take away your freedom
+to share and change it.  By contrast, the GNU General Public License is
+intended to guarantee your freedom to share and change free
+software---to make sure the software is free for all its users.  We, the
+Free Software Foundation, use the GNU General Public License for most of
+our software; it applies also to any other program whose authors commit
+to using it.   You can apply it to
+your programs, too.
+</td>
+
+</tr><tr>
+
+
+  <td style="border: 1px solid black; margin: 1px;">
+When we speak of free software, we are referring to freedom, not
+price.  Our General Public Licenses are designed to make sure that you
+have the freedom to distribute copies of free software (and charge for
+this service if you wish), that you receive source code or can get it if
+you want it, that you can change the software or use pieces of it in new
+free programs<span style="color:red; font-weight: bold;">;</span> and that you know you can do these
+things.
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+When we speak of free software, we are referring to freedom, not
+price.  Our General Public Licenses are designed to make sure that you
+have the freedom to distribute copies of free software (and charge for
+this service if you wish), that you receive source code or can get it if
+you want it, that you can change the software or use pieces of it in new
+free programs<span style="color: blue; font-weight: bold;">,</span> and that you know you can do these
+things.
+</td>
+
+</tr><tr>
+
+
+  <td style="border: 1px solid black; margin: 1px;">
+To protect your rights, we need to make requirements that forbid
+anyone to deny you these rights or to ask you to surrender the rights.
+<span style="color:red; font-weight: bold;">These restrictions translate to</span> 
+certain responsibilities <span style="color:red; font-weight: bold;">for you</span> if you distribute copies of the
+software, or if you modify it.
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+To protect your rights, we need to make requirements that forbid
+anyone to deny you these rights or to ask you to surrender the rights.
+ <span style="color: blue; font-weight: bold;">Therefore, you have</span>
+certain responsibilities  if you distribute copies of the
+software, or if you modify it.
+</td>
+
+</tr><tr>
+
+
+  <td style="border: 1px solid black; margin: 1px;">
+For example, if you distribute copies of such a program, whether
+gratis or for a fee, you must give the recipients all the rights that
+you have.  You must make sure that they, too, receive or can get the
+source code.  And you must show them these terms so they know their
+rights.
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+For example, if you distribute copies of such a program, whether
+gratis or for a fee, you must give the recipients all the rights that
+you have.  You must make sure that they, too, receive or can get the
+source code.  And you must show them these terms so they know their
+rights.
+</td>
+
+</tr><tr>
+
+
+  <td style="border: 1px solid black; margin: 1px;">
+Developers that use the GNU GPL protect your rights with two steps:
+(1) assert copyright on the software, and (2) offer you this License
+which gives you legal permission to copy, distribute and/or modify the
+software.
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+Developers that use the GNU GPL protect your rights with two steps:
+(1) assert copyright on the software, and (2) offer you this License
+which gives you legal permission to copy, distribute and/or modify the
+software.
+</td>
+
+</tr><tr>
+
+
+  <td style="border: 1px solid black; margin: 1px;">
+For the developers' and <span style="color:red; font-weight: bold;">author's</span>  protection,
+the GPL clearly explains that there is no warranty for this free
+software.  <span style="color:red; font-weight: bold;">If the software is modified by someone else and passed
+on, the GPL ensures that recipients are told that what they have is not
+the original, so that any problems introduced by others will not reflect
+on the original authors' reputations.</span> 
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+For the developers' and  <span style="color: blue; font-weight: bold;">authors'</span> protection,
+the GPL clearly explains that there is no warranty for this free
+software.   <span style="color: blue; font-weight: bold;">For both users' and
+authors' sake, the GPL requires that modified versions be marked as
+changed, so that their problems will not be associated erroneously with
+the original version.</span>
+</td>
+
+</tr><tr>
+
+
+  <td style="border: 1px solid black; margin: 1px;">
+<span style="color:red; font-weight: bold;">Some countries have adopted laws prohibiting software that
+enables users to escape from Digital Restrictions Management.</span>
+  <span style="color:red; font-weight: bold;">DRM</span>
+ is fundamentally incompatible with the purpose of the GPL,
+which is to protect users' freedom<span style="color:red; font-weight: bold;">;</span>   <span style="color:red; font-weight: bold;">therefore</span> , the GPL ensures that
+the software it covers will <span style="color:red; font-weight: bold;">neither be subject to, nor subject
+other works to, digital restrictions from which escape is forbidden</span>
+.
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+
+<span style="color: blue; font-weight: bold;">Some computers are designed to deny users access to install or
+run modified versions of the software inside them.</span>  
+<span style="color: blue; font-weight: bold;">This</span> is fundamentally incompatible with the purpose of the GPL,
+which is to protect users' freedom <span style="color: blue; font-weight: bold;">to change the
+software.</span>   <span style="color: blue; font-weight: bold;">Therefore</span>, the GPL ensures that
+the software it covers will 
+<span style="color: blue; font-weight: bold;">not be restricted in this way</span>.
+</td>
+
+</tr><tr>
+
+
+  <td style="border: 1px solid black; margin: 1px;">
+Finally, every program is threatened constantly by software patents.
+ <span style="color:red; font-weight: bold;">We</span> wish to avoid the special danger that redistributors of a
+free program will individually obtain patent licenses, in effect making
+the program proprietary.  To prevent this, the GPL <span style="color:red; font-weight: bold;">makes it clear</span>
+ that <span style="color:red; font-weight: bold;">any patent must be licensed for everyone's
+free use or not licensed at all</span>.
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+Finally, every program is threatened constantly by software patents.
+<span style="color: blue; font-weight: bold;">States should not allow patents to restrict development and use
+of software on general-purpose computers, but in places where they do,
+we</span>  wish to avoid the special danger that redistributors of a
+free program will individually obtain patent licenses, in effect making
+the program proprietary.  To prevent this, the GPL 
+<span style="color: blue; font-weight: bold;">assures</span> that <span style="color: blue; font-weight: bold;">patents cannot be used to
+render the program non-free</span>.
+</td>
+
+</tr><tr>
+
+
+  <td style="border: 1px solid black; margin: 1px;">
+<span style="color:red; font-weight: bold;">The precise terms and conditions for copying, distribution and
+modification follow.</span>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+
+</td>
+
+</tr><tr>
+
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<center><span style="color:red; font-weight: bold;">GNU GENERAL PUBLIC LICENSE</span></center>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<center>TERMS AND CONDITIONS <span style="color:red; font-weight: bold;">FOR COPYING, DISTRIBUTION AND
+MODIFICATION</span></center>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<center>TERMS AND CONDITIONS</center>
+</td>
+
+</tr><tr id="definitions">
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3>0. Definitions.</h3>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3>0. Definitions.</h3>
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<span style="color:red; font-weight: bold;">A ``licensed program'' means any program or other work distributed
+under this License.</span> <span style="color:red; font-weight: bold;">``The Program'' refers to any such program or
+work, and a ``work based on the Program'' means either the Program or
+any derivative work under copyright law: that is to say, a work
+containing the Program or a portion of it, either modified or
+unmodified.</span>   <span style="color:red; font-weight: bold;">Throughout this License, the term
+``modification'' includes, without limitation, translation and
+extension.</span>    A ``covered work''
+means either the  Program or <span style="color:red; font-weight: bold;">any</span> 
+work based on the Program.  <span style="color:red; font-weight: bold;">Each licensee is addressed as
+``you''.</span>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+  <span style="color: blue; font-weight: bold;">In this License, each licensee is addressed as
+``you,'' while ``the Program'' refers to any work of authorship licensed
+under this License.</span>    <span style="color: blue; font-weight: bold;">A ``modified'' work includes, without limitation,
+versions in which material has been translated or added. A work ``based
+on'' another work means any modified version, formation of which
+requires permission under applicable copyright law.</span>  A ``covered work''
+means either the <span style="color: blue; font-weight: bold;">unmodified</span> Program or  <span style="color: blue; font-weight: bold;">a</span>
+work based on the Program.  
+</td>
+
+</tr><tr>
+
+
+  <td style="border: 1px solid black; margin: 1px;">
+To ``propagate'' a work means doing anything with it that requires
+permission under applicable copyright law, <span style="color:red; font-weight: bold;">other than</span>
+ executing it on a computer or making
+<span style="color:red; font-weight: bold;">private</span> modifications . <span style="color:red; font-weight: bold;">This</span>
+ includes copying, distribution (with or without
+modification), 
+<span style="color:red; font-weight: bold;">sublicensing,</span> and in some countries other activities as well.
+
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+To ``propagate'' a work means doing anything with it that requires
+permission under applicable copyright law, 
+<span style="color: blue; font-weight: bold;">except</span> executing it on a computer<span style="color: blue; font-weight: bold;">,</span> or making
+ modifications <span style="color: blue; font-weight: bold;">that you do not share</span>. 
+<span style="color: blue; font-weight: bold;">Propagation</span> includes copying, distribution (with or without
+modification), <span style="color: blue; font-weight: bold;">making available to the public,</span>
+ and in some countries other activities as well.
+<span style="color: blue; font-weight: bold;">To ``convey'' a work means any kind of propagation that enables
+other parties to make or receive copies, excluding
+sublicensing.</span>
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<span style="color: blue; font-weight: bold;">A party's ``essential patent claims'' in a work are all patent
+claims that the party can give permission to practice, whether already
+acquired or to be acquired, that would be infringed by making, using, or
+selling the work.</span>
+</td>
+
+</tr><tr id="source-code">
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3>1. Source Code.</h3>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3>1. Source Code.</h3>
+</td>
+
+</tr><tr>
+
+
+  <td style="border: 1px solid black; margin: 1px;">
+The ``source code'' for a work means the preferred form of the work
+for making modifications to it.  ``Object code'' means any non-source
+version of a work.
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+The ``source code'' for a work means the preferred form of the work
+for making modifications to it.  ``Object code'' means any non-source
+version of a work.
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<span style="font-style: italic;">[Explanatory note: As well as being reworded, the &quot;system library
+exception&quot; has been moved in draft 2.  In the left column, draft
+1's corresponding paragraph can be found further down in this section]</span>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<span style="color: blue; font-weight: bold;">The ``System Libraries'' of an executable work include every
+subunit such that (a) the identical subunit is normally included as an
+adjunct in the distribution of either a major essential component
+(kernel, window system, and so on) of the specific operating system (if
+any) on which the object code runs, or a compiler used to produce the
+object code, or an object code interpreter used to run it, and (b) the
+subunit (aside from possible incidental extensions) serves only to
+enable use of the work with that system component or compiler or
+interpreter, or to implement a widely used or standard interface for
+which an implementation is available to the public in source code
+form.</span>
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+The ``<span style="color:red; font-weight: bold;">Complete</span> Corresponding Source <span style="color:red; font-weight: bold;">Code</span>'' for a work in
+object code form means all the source code needed to <span style="color:red; font-weight: bold;">understand,
+adapt, modify, compile, link</span> , install, and
+ run the  work, <span style="color:red; font-weight: bold;">excluding</span>  general-purpose tools  used  in performing those
+activities but which are not part of the work.  For example, <span style="color:red; font-weight: bold;">this</span>
+ includes <span style="color:red; font-weight: bold;">any</span> scripts used to
+control those activities,  and <span style="color:red; font-weight: bold;">any</span>  shared libraries and dynamically linked subprograms that the work
+is  designed to require, such as by <span style="color:red; font-weight: bold;">intimate</span>
+ data communication or control flow between those
+subprograms and other parts of the work<span style="color:red; font-weight: bold;">, and interface definition
+files associated with the program source files</span>.
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+The ``Corresponding Source'' for a work in
+object code form means all the source code needed to  <span style="color: blue; font-weight: bold;">generate</span>, install, and
+<span style="color: blue; font-weight: bold;">(for an executable work)</span> run the <span style="color: blue; font-weight: bold;">object code and to
+modify the</span> work,  <span style="color: blue; font-weight: bold;">except its System Libraries,
+and except</span> general-purpose tools <span style="color: blue; font-weight: bold;">or generally available free
+programs which are</span> used <span style="color: blue; font-weight: bold;">unmodified</span> in performing those
+activities but which are not part of the work.  For example, 
+<span style="color: blue; font-weight: bold;">Corresponding Source</span> includes  scripts used to
+control those activities, <span style="color: blue; font-weight: bold;">interface definition files associated
+with the program source files,</span> and  <span style="color: blue; font-weight: bold;">the source code
+for</span> shared libraries and dynamically linked subprograms that the work
+is <span style="color: blue; font-weight: bold;">specifically</span> designed to require, such as by 
+<span style="color: blue; font-weight: bold;">complex</span> data communication or control flow between those
+subprograms and other parts of the work.
+</td>
+
+</tr><tr>
+
+
+  <td style="border: 1px solid black; margin: 1px;">
+ <span style="color:red; font-weight: bold;">Complete</span> Corresponding Source <span style="color:red; font-weight: bold;">Code</span> also
+includes any encryption or authorization <span style="color:red; font-weight: bold;">codes</span> 
+necessary to install and/or execute <span style="color:red; font-weight: bold;">the</span>  source code <span style="color:red; font-weight: bold;">of the work, perhaps modified by you,</span> in the
+recommended or principal context of use, such that <span style="color:red; font-weight: bold;">its functioning
+in all circumstances is identical to that of the work, except as altered
+by your modifications</span>     <span style="color:red; font-weight: bold;">It also includes any
+decryption codes necessary to access or unseal the work's output.</span>
+<span style="color:red; font-weight: bold;">Notwithstanding this, a code</span>  need not be included
+in cases where use of the work normally implies the user already has
+<span style="color:red; font-weight: bold;">it</span>  
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<span style="color: blue; font-weight: bold;">The</span>  Corresponding Source  also
+includes any encryption or authorization  <span style="color: blue; font-weight: bold;">keys</span>
+necessary to install and/or execute  <span style="color: blue; font-weight: bold;">modified versions
+from</span> source code  in the
+recommended or principal context of use, such that  <span style="color: blue; font-weight: bold;">they can implement all the same
+functionality in the same range of circumstances.</span>  <span style="color: blue; font-weight: bold;">(For
+instance, if the work is a DVD player and can play certain DVDs, it must
+be possible for modified versions to play those DVDs.  If the work
+communicates with an online service, it must be possible for modified
+versions to communicate with the same online service in the same way
+such that the service cannot distinguish.)</span>  
+ <span style="color: blue; font-weight: bold;">A key</span> need not be included
+in cases where use of the work normally implies the user already has
+ <span style="color: blue; font-weight: bold;">the key and can read and copy it, as in privacy
+applications where users generate their own keys.  However, the fact
+that a key is generated based on the object code of the work or is
+present in hardware that limits its use does not alter the requirement
+to include it in the Corresponding Source.</span>  
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<span style="color: blue; font-weight: bold;">The Corresponding Source may include portions which do not
+formally state this License as their license, but qualify under section
+7 for inclusion in a work under this License.</span>
+</td>
+
+</tr><tr>
+
+
+  <td style="border: 1px solid black; margin: 1px;">
+ <span style="color:red; font-weight: bold;">Complete</span> Corresponding Source <span style="color:red; font-weight: bold;">Code</span> need not
+include anything that users can regenerate automatically from other
+parts of the <span style="color:red; font-weight: bold;">Complete</span> Corresponding Source <span style="color:red; font-weight: bold;">Code</span>.
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<span style="color: blue; font-weight: bold;">The</span>  Corresponding Source  need not
+include anything that users can regenerate automatically from other
+parts of the  Corresponding Source.
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<span style="color:red; font-weight: bold;">As a special exception, the Complete Corresponding Source Code
+need not include a particular subunit if (a) the identical subunit is
+normally included as an adjunct in the distribution of either a major
+essential component (kernel, window system, and so on) of the operating
+system on which the executable runs or a compiler used to produce the
+executable or an object code interpreter used to run it, and (b) the
+subunit (aside from possible incidental extensions) serves only to
+enable use of the work with that system component or compiler or
+interpreter, or to implement a widely used or standard interface, the
+implementation of which requires no patent license not already generally
+available for software under this License.</span>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<span style="font-style: italic;">[Explanatory note: As well as being
+reworded, the &quot;system library exception&quot; has been moved in
+draft 2.  In the right column, draft 2's corresponding paragraph can
+be found further up in this section]</span>
+</td>
+
+</tr><tr id="basic-permissions">
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3>2. Basic Permissions.</h3>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3>2. Basic Permissions.</h3>
+</td>
+
+</tr><tr>
+
+
+  <td style="border: 1px solid black; margin: 1px;">
+All rights granted under this License are granted for the term of
+copyright on the Program, and are irrevocable provided the stated
+conditions are met.  This License explicitly affirms your unlimited
+permission to run the  Program.  The output from
+running it is covered by this License only if the output, given its
+content, constitutes a <span style="color:red; font-weight: bold;">work based on the Program</span> .  This License acknowledges your rights of ``fair use'' or other
+equivalent, as provided by copyright law.
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+All rights granted under this License are granted for the term of
+copyright on the Program, and are irrevocable provided the stated
+conditions are met.  This License explicitly affirms your unlimited
+permission to run the <span style="color: blue; font-weight: bold;">unmodified</span> Program.  The output from
+running it is covered by this License only if the output, given its
+content, constitutes a  <span style="color: blue; font-weight: bold;">covered
+work</span>.  This License acknowledges your rights of ``fair use'' or other
+equivalent, as provided by copyright law.
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+This License <span style="color:red; font-weight: bold;">gives unlimited</span> <span style="color:red; font-weight: bold;">permission</span>  to <span style="color:red; font-weight: bold;">privately modify</span>  and run  the Program,  <span style="color:red; font-weight: bold;">provided you do not</span>  bring suit
+ for patent infringement <span style="color:red; font-weight: bold;">against anyone</span>
+ for
+making, using or <span style="color:red; font-weight: bold;">distributing</span>  <span style="color:red; font-weight: bold;">their own works</span>  based on the Program.
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+This License   <span style="color: blue; font-weight: bold;">permits
+you</span> to  <span style="color: blue; font-weight: bold;">make</span> and run <span style="color: blue; font-weight: bold;">privately
+modified versions of</span> the Program, <span style="color: blue; font-weight: bold;">or have others make and run
+them on your behalf.</span>  <span style="color: blue; font-weight: bold;">However, this
+permission terminates, as to all such versions, if you</span> bring suit
+<span style="color: blue; font-weight: bold;">against anyone</span> for patent infringement 
+<span style="color: blue; font-weight: bold;">of any of your essential patent claims in any such version,</span> for
+making, using<span style="color: blue; font-weight: bold;">, selling</span> or  <span style="color: blue; font-weight: bold;">otherwise
+conveying</span> <span style="color: blue; font-weight: bold;">a work</span> based on the Program
+<span style="color: blue; font-weight: bold;">in compliance with this License</span>.
+</td>
+
+</tr><tr>
+
+
+  <td style="border: 1px solid black; margin: 1px;">
+Propagation of covered works  is
+permitted without limitation <span style="color:red; font-weight: bold;">provided it does not enable parties
+other than you to make or receive copies</span>.    <span style="color:red; font-weight: bold;">Propagation which does
+enable them to do so</span>  is permitted <span style="color:red; font-weight: bold;">, as
+``distribution'',</span> under the conditions <span style="color:red; font-weight: bold;">of sections 4-6</span>
+ below.
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+Propagation of covered works <span style="color: blue; font-weight: bold;">other than conveying</span> is
+permitted without limitation .  <span style="color: blue; font-weight: bold;">Sublicensing is not
+allowed; section 10 makes it unnecessary.</span>   <span style="color: blue; font-weight: bold;">Conveying</span> is permitted  under the conditions 
+<span style="color: blue; font-weight: bold;">stated</span> below.
+</td>
+
+</tr><tr id="no-denying-rights">
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3><span style="color:red; font-weight: bold;">3. Digital Restrictions Management</span> .</h3>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3> <span style="color: blue; font-weight: bold;">3. No Denying
+ Users' Rights Through Technical Measures</span>.</h3>
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<span style="color:red; font-weight: bold;">As a free software license, this License intrinsically disfavors
+technical attempts to restrict users' freedom to copy, modify, and share
+copyrighted works.  Each of its provisions shall be interpreted in light
+of this specific declaration of the licensor's intent.</span>  Regardless of
+any other provision of this License, no permission is given <span style="color:red; font-weight: bold;">to
+distribute covered works that illegally invade users' privacy, nor</span> for
+modes of <span style="color:red; font-weight: bold;">distribution</span>  that deny users that run
+covered works the full exercise of the legal rights granted by this
+License.
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+  Regardless of
+any other provision of this License, no permission is given  for
+modes of  <span style="color: blue; font-weight: bold;">conveying</span> that deny users that run
+covered works the full exercise of the legal rights granted by this
+License.
+</td>
+
+</tr><tr>
+
+
+  <td style="border: 1px solid black; margin: 1px;">
+No covered work constitutes part of an effective technological
+protection measure <span style="color:red; font-weight: bold;">: that is to say, distribution
+of a covered work as part of a system to generate or access certain data
+constitutes general permission at least for development, distribution
+and use, under this License, of other software capable of accessing the
+same data.</span>    
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+No covered work constitutes part of an effective technological
+<span style="color: blue; font-weight: bold;">``</span>protection<span style="color: blue; font-weight: bold;">''</span> measure <span style="color: blue; font-weight: bold;">under section 1201 of
+Title 17 of the United States Code.</span>  <span style="color: blue; font-weight: bold;">When you convey a covered work, you waive any legal
+power to forbid circumvention of technical measures that include use of
+the covered work, and you disclaim any intention to limit operation or
+modification of the work as a means of enforcing the legal rights of
+third parties against the work's users.</span>  
+</td>
+
+</tr><tr id="verbatim-copying">
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3>4.[1] Verbatim Copying.</h3>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3>4.[1] Verbatim Copying.</h3>
+</td>
+
+</tr><tr>
+
+
+ <td style="border: 1px solid black; margin: 1px;">
+You may copy and <span style="color:red; font-weight: bold;">distribute</span>  verbatim copies of
+the Program's source code as you receive it, in any medium, provided
+that you conspicuously and appropriately publish on each copy an
+appropriate copyright notice; keep intact all license notices and
+notices of the absence of any warranty;  give all
+recipients <span style="color:red; font-weight: bold;">of</span>  the Program
+a copy of this License <span style="color:red; font-weight: bold;">along with the Program;</span> and <span style="color:red; font-weight: bold;">obey any
+additional terms present on parts of the Program in accord with</span>
+ section 7.
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+You may copy and  <span style="color: blue; font-weight: bold;">convey</span> verbatim copies of
+the Program's source code as you receive it, in any medium, provided
+that you conspicuously and appropriately publish on each copy an
+appropriate copyright notice; keep intact all license notices and
+notices of the absence of any warranty; <span style="color: blue; font-weight: bold;">and</span> give all
+recipients<span style="color: blue; font-weight: bold;">,</span>  <span style="color: blue; font-weight: bold;">along with</span> the Program<span style="color: blue; font-weight: bold;">,</span>
+a copy of this License  and 
+<span style="color: blue; font-weight: bold;">the central list (if any) required by</span> section 7.  <span style="color: blue; font-weight: bold;">The
+recipients of these copies will possess all the rights granted by this
+License (with any added terms under section 7).</span>
+</td>
+
+</tr><tr>
+
+
+  <td style="border: 1px solid black; margin: 1px;">
+You may charge <span style="color:red; font-weight: bold;">a fee</span>  for
+<span style="color:red; font-weight: bold;">the physical act of transferring a copy</span> , and you may <span style="color:red; font-weight: bold;">at your option</span> offer 
+warranty protection for a fee.
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+You may charge  <span style="color: blue; font-weight: bold;">any price or no price</span> for
+ <span style="color: blue; font-weight: bold;">each copy that
+you convey</span>, and you may  offer <span style="color: blue; font-weight: bold;">support or</span>
+warranty protection for a fee.
+</td>
+
+</tr><tr id="conveying-modified-source-versions">
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3>5.[2]<span style="color:red; font-weight: bold;">Distributing</span>  Modified Source Versions.</h3>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3>5.[2] <span style="color: blue; font-weight: bold;">Conveying</span> Modified Source Versions.</h3>
+</td>
+
+</tr><tr>
+
+
+  <td style="border: 1px solid black; margin: 1px;">
+<span style="color:red; font-weight: bold;">Having modified a copy of the Program under the conditions of
+section 2, thus forming a work based on the Program, you</span> 
+may copy and <span style="color:red; font-weight: bold;">distribute</span>  <span style="color:red; font-weight: bold;">such modifications
+or</span>  work  in the form of source code under the
+terms of section 4 above, provided that you also meet all of these
+conditions:
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+ <span style="color: blue; font-weight: bold;">You</span>
+may copy and  <span style="color: blue; font-weight: bold;">convey</span>  <span style="color: blue; font-weight: bold;">a</span> work <span style="color: blue; font-weight: bold;">based on the Program, or the modifications
+to produce it from the Program,</span> in the form of source code under the
+terms of section 4 above, provided that you also meet all of these
+conditions:
+</td>
+
+</tr><tr>
+
+
+
+<td style="border: 1px solid black; margin: 1px;">
+a) The modified work must carry prominent notices stating that you
+      changed the work and the date of any change.
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+a) The modified work must carry prominent notices stating that you
+      changed the work and the date of any change.
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+b) You must license the entire <span style="color:red; font-weight: bold;">modified</span> work, as a whole,
+    under this License to anyone who comes into possession of a copy.
+    This License must apply, unmodified except as permitted by section 7
+    below, to the whole of the work.  This License gives no
+    permission to license the work in any other way, but it does not
+    invalidate such permission if you have separately received it.
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+b) You must license the entire  work, as a whole,
+    under this License to anyone who comes into possession of a copy.
+    This License must apply, unmodified except as permitted by section 7
+    below, to the whole of the work<span style="color: blue; font-weight: bold;">, and all its parts,
+    regardless of how they are packaged</span>.  This License gives no
+    permission to license the work in any other way, but it does not
+    invalidate such permission if you have separately received it.
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+c) If the modified work has interactive user interfaces, each must
+      include a convenient feature that displays an appropriate
+      copyright notice, and tells the user that there is no warranty for
+      the program (or that you provide a warranty), that users may
+      <span style="color:red; font-weight: bold;">redistribute</span>  the modified work under
+      <span style="color:red; font-weight: bold;">these conditions</span> , and how to view a
+      copy of this License together with the central list (if any) of
+      other terms in accord with section 7.  
+      <span style="color:red; font-weight: bold;">If</span>  the interface presents a list of user
+      commands or options, such as a menu, a command to display this
+      information must be prominent in the list<span style="color:red; font-weight: bold;">.</span>
+      <span style="color:red; font-weight: bold;">Otherwise</span> , the modified work must
+      display this information at startup<span style="color:red; font-weight: bold;">---except in the case
+      that the Program has such interactive modes and does not display
+      this information at startup</span>.  
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+c) If the modified work has interactive user interfaces, each must
+      include a convenient feature that displays an appropriate
+      copyright notice, and tells the user that there is no warranty for
+      the program (or that you provide a warranty), that users may
+       <span style="color: blue; font-weight: bold;">convey</span> the modified work under
+       <span style="color: blue; font-weight: bold;">this License</span>, and how to view a
+      copy of this License together with the central list (if any) of
+      other terms in accord with section 7.  <span style="color: blue; font-weight: bold;">Specifically,</span>
+       <span style="color: blue; font-weight: bold;">if</span> the interface presents a list of user
+      commands or options, such as a menu, a command to display this
+      information must be prominent in the list<span style="color: blue; font-weight: bold;">;</span>
+       <span style="color: blue; font-weight: bold;">otherwise</span>, the modified work must
+      display this information at startup.  <span style="color: blue; font-weight: bold;">However, if the Program has
+      interactive interfaces that do not comply with this subsection,
+      your modified work need not make them comply.</span>
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<span style="color:red; font-weight: bold;">These requirements apply to the modified work as a
+whole.</span> <span style="color:red; font-weight: bold;">If</span>  identifiable sections of
+<span style="color:red; font-weight: bold;">that</span>  work, added by you, are not derived
+from the Program, and can be reasonably considered independent and
+separate works in themselves, then this License, and its terms, do not
+apply to those sections when you <span style="color:red; font-weight: bold;">distribute</span>  them
+as separate works for use <span style="color:red; font-weight: bold;">not</span> in
+combination with the Program.  <span style="color:red; font-weight: bold;">But when you distribute the same
+sections for use in combination with covered works, no matter in what
+form such combination occurs, the whole of the combination must be
+licensed under this License, whose permissions for other licensees
+extend to the entire whole, and thus to every part of the whole. Your
+sections may carry other terms as part of this combination in limited
+ways, described in section 7.</span>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+noindent   <span style="color: blue; font-weight: bold;">To the extent that</span> identifiable sections of
+ <span style="color: blue; font-weight: bold;">the modified</span> work, added by you, are not derived
+from the Program, and can be reasonably considered independent and
+separate works in themselves, then this License, and its terms, do not
+apply to those sections when you  <span style="color: blue; font-weight: bold;">convey</span> them
+as separate works<span style="color: blue; font-weight: bold;">, not specifically</span> for use  in
+combination with the Program.
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<span style="color:red; font-weight: bold;">Thus, it is not the intent of this section to claim rights or
+contest your rights to work written entirely by you; rather, the intent
+is to exercise the right to control the distribution of derivative or
+collective works based on the Program.</span>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+A compilation of a covered work with other separate and independent
+works, which are not by their nature extensions of the covered work, in
+or on a volume of a storage or distribution medium, is called an
+``aggregate'' if the  copyright
+<span style="color:red; font-weight: bold;">resulting from the compilation is</span>  not used to limit
+the  legal rights of the compilation's users beyond
+what the individual works permit. <span style="color:red; font-weight: bold;">Mere inclusion</span>
+ of a covered work in an aggregate does not cause this
+License to apply to the other parts of the aggregate.
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+A compilation of a covered work with other separate and independent
+works, which are not by their nature extensions of the covered work, in
+or on a volume of a storage or distribution medium, is called an
+``aggregate'' if the <span style="color: blue; font-weight: bold;">compilation and its resulting</span> copyright
+ <span style="color: blue; font-weight: bold;">are</span> not used to limit
+the <span style="color: blue; font-weight: bold;">access or</span> legal rights of the compilation's users beyond
+what the individual works permit. 
+<span style="color: blue; font-weight: bold;">Inclusion</span> of a covered work in an aggregate does not cause this
+License to apply to the other parts of the aggregate.
+</td>
+
+</tr><tr id="conveying-non-source-forms">
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3>6.[3] Non-Source <span style="color:red; font-weight: bold;">Distribution</span> </h3>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3>6.[3] <span style="color: blue; font-weight: bold;">Conveying</span> Non-Source  <span style="color: blue; font-weight: bold;">Forms.</span></h3>
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+You may copy and <span style="color:red; font-weight: bold;">distribute</span>  a covered work in
+<span style="color:red; font-weight: bold;">Object Code</span>  form under the terms of sections
+4 and 5, provided that you also <span style="color:red; font-weight: bold;">distribute</span>  the
+machine-readable <span style="color:red; font-weight: bold;">Complete</span> Corresponding Source <span style="color:red; font-weight: bold;">Code (herein
+the ``Corresponding Source'')</span> under the terms of this License, in one
+of these ways:
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+You may copy and  <span style="color: blue; font-weight: bold;">convey</span> a covered work in
+ <span style="color: blue; font-weight: bold;">object code</span> form under the terms of sections
+4 and 5, provided that you also  <span style="color: blue; font-weight: bold;">convey</span> the
+machine-readable  Corresponding Source  under the terms of this License, in one
+of these ways:
+</td>
+
+</tr><tr>
+
+
+
+<td style="border: 1px solid black; margin: 1px;">
+a) <span style="color:red; font-weight: bold;">Distribute</span>  the <span style="color:red; font-weight: bold;">Object Code</span>
+     in a physical product (including a physical
+    distribution medium), accompanied by the Corresponding Source
+    <span style="color:red; font-weight: bold;">distributed</span>  on a durable physical medium
+    customarily used for software interchange<span style="color:red; font-weight: bold;">; or,</span>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+a)  <span style="color: blue; font-weight: bold;">Convey</span> the 
+    <span style="color: blue; font-weight: bold;">object code</span> in a physical product (including a physical
+    distribution medium), accompanied by the Corresponding Source
+     <span style="color: blue; font-weight: bold;">fixed</span> on a durable physical medium
+    customarily used for software interchange<span style="color: blue; font-weight: bold;">.</span>
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+b) <span style="color:red; font-weight: bold;">Distribute</span>  the <span style="color:red; font-weight: bold;">Object Code</span>
+     in a physical product (including a physical
+    distribution medium), accompanied by a written offer, valid for at
+    least three years and valid for as long as you offer spare parts or
+      customer support for that product model, to give any third
+    party<span style="color:red; font-weight: bold;">, for a price no more than ten times your cost of
+    physically performing source distribution,</span> a copy of
+    the Corresponding Source for all the software in the product that is
+    covered by this License, on a durable physical medium customarily
+    used for software interchange<span style="color:red; font-weight: bold;">; or,</span>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+b)  <span style="color: blue; font-weight: bold;">Convey</span> the 
+    <span style="color: blue; font-weight: bold;">object code</span> in a physical product (including a physical
+    distribution medium), accompanied by a written offer, valid for at
+    least three years and valid for as long as you offer spare parts or
+      customer support for that product model, to give any third
+    party a copy of
+    the Corresponding Source for all the software in the product that is
+    covered by this License, on a durable physical medium customarily
+    used for software interchange<span style="color: blue; font-weight: bold;">, for a
+    price no more than your reasonable cost of physically
+    performing this conveying of source.</span>
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+b1) <span style="font-style: italic;">[Explanatory note: this is an alternate "b" for consideration]</span>
+    <span style="color: blue; font-weight: bold;">Convey the object code in a physical product (including a
+    physical distribution medium), accompanied by a written offer,
+    valid for at least three years and valid for as long as you offer
+    spare parts or customer support for that product model, to provide
+    access to copy the Corresponding Source from a network server at
+    no charge.</span>]
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+c) <span style="color:red; font-weight: bold;">Privately distribute</span> 
+    the <span style="color:red; font-weight: bold;">Object Code</span>  with a copy of the
+    written offer to provide the Corresponding Source.  This alternative
+    is allowed only <span style="color:red; font-weight: bold;">for occasional noncommercial distribution</span>
+    , and only if you received
+    the <span style="color:red; font-weight: bold;">Object Code</span>  with such an offer, in
+    accord with <span style="color:red; font-weight: bold;">Subsection b above</span> .<span style="color:red; font-weight: bold;">Or,</span>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+c)  <span style="color: blue; font-weight: bold;">Convey individual copies of</span>
+    the  <span style="color: blue; font-weight: bold;">object code</span> with a copy of the
+    written offer to provide the Corresponding Source.  This alternative
+    is allowed only 
+    <span style="color: blue; font-weight: bold;">occasionally and noncommercially</span>, and only if you received
+    the  <span style="color: blue; font-weight: bold;">object code</span> with such an offer, in
+    accord with  <span style="color: blue; font-weight: bold;">subsection 6b or
+      6b1</span>.
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+d) <span style="color:red; font-weight: bold;">Distribute</span>  the <span style="color:red; font-weight: bold;">Object Code</span>
+     by offering access <span style="color:red; font-weight: bold;">to copy it</span> from a
+    designated place, and offer equivalent access to <span style="color:red; font-weight: bold;">copy</span> the
+    Corresponding Source in the same way through the same place
+    . You need not require recipients to copy
+    the Corresponding Source along with the <span style="color:red; font-weight: bold;">Object Code</span>.
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+d)  <span style="color: blue; font-weight: bold;">Convey</span> the 
+    <span style="color: blue; font-weight: bold;">object code</span> by offering access  from a
+    designated place, and offer equivalent access to  the
+    Corresponding Source in the same way through the same place
+    <span style="color: blue; font-weight: bold;">at no extra charge</span>. You need not require recipients to copy
+    the Corresponding Source along with the 
+    <span style="color: blue; font-weight: bold;">object code</span>.
+</td>
+
+</tr><tr>
+
+
+    <td style="border: 1px solid black; margin: 1px;">
+[If the place to copy the <span style="color:red; font-weight: bold;">Object Code</span>  is
+    a network server, the Corresponding Source may be on a different
+    server that supports equivalent copying facilities, provided you
+    have explicitly arranged with the operator of that server to keep
+    the Corresponding Source available for as long as needed to satisfy
+    these requirements, and provided you maintain clear directions next
+    to the <span style="color:red; font-weight: bold;">Object Code</span>  saying where to find
+    the Corresponding Source.]
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+[If the place to copy the  <span style="color: blue; font-weight: bold;">object code</span> is
+    a network server, the Corresponding Source may be on a different
+    server that supports equivalent copying facilities, provided you
+    have explicitly arranged with the operator of that server to keep
+    the Corresponding Source available for as long as needed to satisfy
+    these requirements, and provided you maintain clear directions next
+    to the  <span style="color: blue; font-weight: bold;">object code</span> saying where to find
+    the Corresponding Source.]
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+e) <span style="color: blue; font-weight: bold;">Convey the object code using peer-to-peer transmission
+    provided you know that, and inform other peers where, the object
+      code and Corresponding Source of
+    the work are being offered to the general public at no
+    charge under subsection 6d.</span>
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<span style="color:red; font-weight: bold;">Distribution of the</span>  Corresponding Source
+ in accord with this section must be in a format that
+is publicly documented, <span style="color:red; font-weight: bold;">unencumbered by patents,</span> and must
+require no special password or key for unpacking, reading or copying.
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+ <span style="color: blue; font-weight: bold;">The</span> Corresponding Source
+<span style="color: blue; font-weight: bold;">conveyed</span> in accord with this section must be in a format that
+is publicly documented, <span style="color: blue; font-weight: bold;">with an
+implementation available to the public in source code form,</span> and must
+require no special password or key for unpacking, reading or copying.
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<span style="color:red; font-weight: bold;">The Corresponding Source may include portions which do not
+formally state this License as their license, but qualify under section
+7 for inclusion in a work under this License.</span>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<span style="color: blue; font-weight: bold;">A separable portion of the object code, whose source code is
+excluded from the Corresponding Source as a System Library, need not be
+included in conveying the object code work.</span>
+</td>
+
+</tr><tr id="additional-terms">
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3>7. <span style="color:red; font-weight: bold;">License Compatibility</span>.</h3>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3>7. <span style="color: blue; font-weight: bold;">Additional
+ Terms</span>.</h3>
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<span style="color:red; font-weight: bold;">When you release a work based on the Program, you may include your
+ own terms covering added parts for which you have, or can give,
+ appropriate copyright permission, as long as those terms clearly permit
+ all the activities that this License permits, or permit usage or
+ relicensing under this License. Your terms may be written separately or
+ may be this License plus additional written permission. If you so
+ license your own added parts, those parts may be used separately under
+ your terms, but the entire work remains under this License. Those who
+ copy the work, or works based on it, must preserve your terms just as
+ they must preserve this License, as long as any substantial portion of
+ the parts they apply to are present.</span>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<span style="color: blue; font-weight: bold;">You may have received the Program, or parts of it, under terms
+that supplement the terms of this License.  These additional terms may
+include additional permissions, as provided in subsection 7a, and
+additional requirements, as provided in subsection 7b.  When you convey
+copies of a covered work, unless the work also permits use under a
+previous version of this License, it must list, in one central place in
+the source code, the complete set of additional terms governing all or
+part of the work.</span>
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<h4><span style="color: blue; font-weight: bold;">a. Additional Permissions.</span></h4>
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<span style="color: blue; font-weight: bold;">Additional permissions make exceptions from one or more of the
+requirements of this License.  A license document containing a clause
+that permits relicensing or conveying under this License shall be
+treated as a list of additional permissions, provided that the license
+document makes clear that no requirement in it survives such relicensing
+or conveying.</span>
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<span style="color: blue; font-weight: bold;">Any additional permissions that are applicable to the entire
+Program are treated as though they were included in this License, as
+exceptions to its conditions, to the extent that they are valid under
+applicable law.  If additional permissions apply only to part of the
+Program, that part may be used separately under those permissions, but
+the entire Program remains governed by this License without regard to
+the additional terms.</span>
+</td>
+
+</tr><tr>
+
+
+ <td style="border: 1px solid black; margin: 1px;">
+<span style="color:red; font-weight: bold;">Aside from additional permissions, your terms may add limited
+kinds of additional requirements on your added parts, as follows:</span>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<h4><span style="color: blue; font-weight: bold;">b. Additional Requirements.</span></h4>
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<span style="color: blue; font-weight: bold;">Additional requirements are terms that further constrain use,
+modification or propagation of covered works.  This License affects only
+the procedure for enforcing additional requirements, and does not assert
+that they can be successfully enforced by the copyright holder.  Only
+these kinds of additional requirements are allowed by this License:</span>
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+0) <span style="color:red; font-weight: bold;">a) They may</span>  require <span style="color:red; font-weight: bold;">the</span>
+       preservation of <span style="color:red; font-weight: bold;">certain copyright notices, other</span>
+        legal notices<span style="color:red; font-weight: bold;">, and/or</span>
+        author attributions<span style="color:red; font-weight: bold;">,</span>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+0)  <span style="color: blue; font-weight: bold;">terms that</span> require 
+       preservation of 
+       <span style="color: blue; font-weight: bold;">specified reasonable</span> legal notices
+       <span style="color: blue; font-weight: bold;">or</span> author attributions<span style="color: blue; font-weight: bold;">; or</span>
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+1) <span style="color:red; font-weight: bold;">and may</span>  require that the origin of the
+<span style="color:red; font-weight: bold;">parts</span>  they cover not be misrepresented,
+<span style="color:red; font-weight: bold;">and/or</span>  that <span style="color:red; font-weight: bold;">altered</span>  versions
+of <span style="color:red; font-weight: bold;">them</span>  be marked <span style="color:red; font-weight: bold;">in the source
+code, or marked there</span> in specific reasonable ways<span style="color:red; font-weight: bold;">,</span> as different
+from the original version<span style="color:red; font-weight: bold;">.</span>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+1)  <span style="color: blue; font-weight: bold;">terms that</span> require that the origin of the
+ <span style="color: blue; font-weight: bold;">material</span> they cover not be misrepresented,
+ <span style="color: blue; font-weight: bold;">or</span> that  <span style="color: blue; font-weight: bold;">modified</span> versions
+of  <span style="color: blue; font-weight: bold;">that material</span> be marked  in specific reasonable ways as different
+from the original version<span style="color: blue; font-weight: bold;">; or</span>
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+2) <span style="color:red; font-weight: bold;">b) They may state a disclaimer of</span> warranty <span style="color:red; font-weight: bold;">and</span>
+       liability  <span style="color:red; font-weight: bold;">in terms
+      different</span>  from <span style="color:red; font-weight: bold;">those used</span>  in this License<span style="color:red; font-weight: bold;">.</span>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+2)  warranty 
+      <span style="color: blue; font-weight: bold;">or</span> liability <span style="color: blue; font-weight: bold;">disclaimers</span>  <span style="color: blue; font-weight: bold;">that differ</span> from  <span style="color: blue; font-weight: bold;">the
+      disclaimers</span> in this License<span style="color: blue; font-weight: bold;">; or</span>
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+3) <span style="color:red; font-weight: bold;">c) They may</span>  prohibit or limit the use
+      for publicity purposes of
+specified names of <span style="color:red; font-weight: bold;">contributors</span> ,
+      <span style="color:red; font-weight: bold;">and they may</span>  require that certain
+specified  trademarks be used for publicity purposes  <span style="color:red; font-weight: bold;">only</span> in <span style="color:red; font-weight: bold;">the</span> ways
+that are fair use under  trademark law
+      <span style="color:red; font-weight: bold;">except with express permission.</span> 
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+3)  <span style="color: blue; font-weight: bold;">terms that</span> prohibit or limit the use
+      for publicity purposes of
+specified names of  <span style="color: blue; font-weight: bold;">licensors or authors</span>,
+       <span style="color: blue; font-weight: bold;">or that</span> require that certain
+specified <span style="color: blue; font-weight: bold;">trade names,</span> trademarks<span style="color: blue; font-weight: bold;">, or service marks
+      not</span> be used for publicity purposes <span style="color: blue; font-weight: bold;">without express
+      permission, other than</span>  in  ways
+that are fair use under <span style="color: blue; font-weight: bold;">applicable</span> trademark law<span style="color: blue; font-weight: bold;">;</span>
+       <span style="color: blue; font-weight: bold;">or</span>
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+4) <span style="color:red; font-weight: bold;">d) They may</span>  require
+      <span style="color:red; font-weight: bold;">that the work contain functioning facilities that
+allow</span>  users  to <span style="color:red; font-weight: bold;">immediately</span> obtain
+      copies of <span style="color:red; font-weight: bold;">its</span>  <span style="color:red; font-weight: bold;">Complete</span> Corresponding
+      Source <span style="color:red; font-weight: bold;">Code.</span>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+4)  <span style="color: blue; font-weight: bold;">terms that</span> require<span style="color: blue; font-weight: bold;">,</span>
+       <span style="color: blue; font-weight: bold;">if a modified version of the material they cover is a
+      work intended to interact with users through a computer network,
+      that those</span> users <span style="color: blue; font-weight: bold;">be able</span> to  obtain
+      copies of  <span style="color: blue; font-weight: bold;">the</span>  Corresponding
+      Source <span style="color: blue; font-weight: bold;">of the work through the same network
+      session; or</span>
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+5) <span style="color:red; font-weight: bold;">e) They may impose software patent retaliation, which means</span>
+
+permission
+for use of <span style="color:red; font-weight: bold;">your added parts terminates or may be terminated, wholly or
+partially, under stated conditions,</span> 
+for <span style="color:red; font-weight: bold;">users closely related to any party that has filed</span>
+ a software patent lawsuit 
+(<span style="color:red; font-weight: bold;">i.e.</span>, a lawsuit alleging
+that some software infringes a patent)<span style="color:red; font-weight: bold;">.</span> 
+
+<span style="color:red; font-weight: bold;">The conditions must limit
+retaliation to a subset of these two cases: 1. Lawsuits that lack the
+justification of retaliating against other software patent lawsuits that
+lack such justification. 2. Lawsuits that target part of this work, or
+other code that was elsewhere released together with the parts you
+added, the whole being under the terms used here for those
+      parts.</span>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+5) 
+<span style="color: blue; font-weight: bold;">terms that wholly or partially terminate, or allow termination of,</span>
+permission
+for use of  <span style="color: blue; font-weight: bold;">the material they cover,</span>
+for 
+<span style="color: blue; font-weight: bold;">a user who files</span> a software patent lawsuit 
+(<span style="color: blue; font-weight: bold;">that is</span>, a lawsuit alleging
+that some software infringes a patent) 
+<span style="color: blue; font-weight: bold;">not filed in retaliation or defense against the earlier filing
+      of another software patent lawsuit, or in which the allegedly
+      infringing software includes some of the covered material,
+      possibly in combination with other software; or</span>
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+6) <span style="color: blue; font-weight: bold;">terms that are precisely equivalent in type and extent to
+      a requirement expressly stated in this License, or that deny
+      permission for activities that are clearly not permitted,
+      expressly or otherwise, by this License.</span>
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<span style="color:red; font-weight: bold;">No other additional conditions are permitted in your terms;
+therefore, no other conditions can be present on any work that uses this
+License. This License does not attempt to enforce your terms, or assert
+that they are valid or enforceable by you; it simply does not prohibit
+you from employing them.</span>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<span style="color: blue; font-weight: bold;">All other additional requirements, including attorney's fees
+provisions, choice of law, forum, and venue clauses, arbitration
+clauses, mandatory contractual acceptance clauses, requirements
+regarding changes to the name of the work, and terms that require that
+conveyed copies be governed by a license other than this License, are
+prohibited.</span>
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<h4><span style="color: blue; font-weight: bold;">c. Terms Added or Removed By You.</span></h4>
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<span style="color:red; font-weight: bold;">When others modify the work, if they modify your parts of it, they
+may release such parts of their versions under this License without
+additional permissions, by including notice to that effect, or by
+deleting the notice that gives specific permissions in addition to this
+License. Then any broader permissions granted by your terms which are
+not granted by this License will not apply to their modifications, or to
+the modified versions of your parts resulting from their
+modifications. However, the specific requirements of your terms will
+still apply to whatever was derived from your added parts.</span>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<span style="color: blue; font-weight: bold;">When you convey a copy of a covered work, you may at your option
+remove any additional permissions from that copy, or from any part of
+it.  Some additional permissions require their own removal in certain
+cases when you modify the work.</span>
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<span style="color: blue; font-weight: bold;">Additional requirements are allowed only as stated in subsection
+7b.  If the Program as you received it purports to impose any other
+additional requirement, you may remove that requirement.</span>
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<span style="color: blue; font-weight: bold;">You may place additional permissions, or additional requirements
+as allowed by subsection 7b, on material, added by you to a covered
+work, for which you have or can give appropriate copyright permission.
+Adding requirements not allowed by subsection 7b is a violation of this
+License that may lead to termination of your rights under section 8.</span>
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<span style="color: blue; font-weight: bold;">If you add terms to a covered work in accordance with this
+section, you must place, in the relevant source files, a statement of
+the additional terms that apply to those files, or a notice indicating
+where to find the applicable terms.</span>
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<span style="color:red; font-weight: bold;">Unless the work also permits distribution under a previous version
+of this License, all the other terms included in the work under this
+section must be listed, together, in a central list in the work.</span>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+
+</td>
+
+</tr><tr id="termination">
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3>8.[4] Termination.</h3>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3>8.[4] Termination.</h3>
+</td>
+
+</tr><tr>
+
+
+  <td style="border: 1px solid black; margin: 1px;">
+You may not propagate<span style="color:red; font-weight: bold;">,</span>  modify <span style="color:red; font-weight: bold;">or sublicense</span>
+the Program except as expressly provided under this License.  Any
+attempt otherwise to propagate<span style="color:red; font-weight: bold;">,</span>  modify <span style="color:red; font-weight: bold;">or
+sublicense</span> the Program is void<span style="color:red; font-weight: bold;">, and any copyright holder may
+terminate your rights under this License at any time after having
+notified you of the violation by any reasonable means within 60 days of
+any occurrence</span>.  However, parties who have received
+copies, or rights, from you under this License will not have their
+licenses terminated so long as they remain in full compliance.
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+You may not propagate <span style="color: blue; font-weight: bold;">or</span> modify 
+the Program except as expressly provided under this License.  Any
+attempt otherwise to propagate <span style="color: blue; font-weight: bold;">or</span> modify  the Program is void.  <span style="color: blue; font-weight: bold;">If you violate this License, any copyright
+holder may put you on notice by notifying you of the violation, by any
+reasonable means, provided 60 days have not elapsed since the last
+violation.  Having put you on notice, the copyright holder may then
+terminate your license at any time.</span>  However, parties who have received
+copies, or rights, from you under this License will not have their
+licenses terminated so long as they remain in full compliance.
+</td>
+
+</tr><tr id="acceptance-not-required">
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3>9.[5] <span style="color:red; font-weight: bold;">Not a Contract</span> </h3>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3>9.[5] <span style="color: blue; font-weight: bold;">Acceptance Not Required for
+ Having Copies.</span></h3>
+</td>
+
+</tr><tr>
+
+
+  <td style="border: 1px solid black; margin: 1px;">
+You are not required to accept this License in order to receive
+ a copy of the Program.  
+However, nothing else grants you permission to propagate or modify the
+Program or any covered works.  These actions infringe copyright if you
+do not accept this License.  Therefore, by modifying or propagating the
+Program (or any covered work), you indicate your acceptance of this
+License to do so, and all its terms and conditions.
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+You are not required to accept this License in order to receive
+<span style="color: blue; font-weight: bold;">or run</span> a copy of the Program.  <span style="color: blue; font-weight: bold;">Ancillary propagation of
+a covered work occurring solely as a consequence of using peer-to-peer
+transmission to receive a copy likewise does not require acceptance.</span>
+However, nothing else grants you permission to propagate or modify the
+Program or any covered works.  These actions infringe copyright if you
+do not accept this License.  Therefore, by modifying or propagating the
+Program (or any covered work), you indicate your acceptance of this
+License to do so, and all its terms and conditions.
+</td>
+
+</tr><tr id="automatic-licensing">
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3>10.[6] Automatic Licensing of Downstream Users.</h3>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3>10.[6] Automatic Licensing of Downstream Users.</h3>
+</td>
+
+</tr><tr>
+
+
+  <td style="border: 1px solid black; margin: 1px;">
+Each time you <span style="color:red; font-weight: bold;">redistribute</span>  a covered work, the
+recipient automatically receives a license from the original licensors,
+to <span style="color:red; font-weight: bold;">propagate and</span>  modify  that
+work, subject to this License, including any additional terms introduced
+through section 7.  You may not impose any further restrictions on the
+recipients' exercise of the rights thus granted or affirmed, except
+<span style="color:red; font-weight: bold;">(when modifying the work)</span> in the limited ways permitted by
+section 7.  You are not responsible for enforcing compliance by third
+parties to this License.
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+Each time you  <span style="color: blue; font-weight: bold;">convey</span> a covered work, the
+recipient automatically receives a license from the original licensors,
+to  <span style="color: blue; font-weight: bold;">run,</span> modify <span style="color: blue; font-weight: bold;">and propagate</span> that
+work, subject to this License, including any additional terms introduced
+through section 7.  You may not impose any further restrictions on the
+recipients' exercise of the rights thus granted or affirmed, except
+ in the limited ways permitted by
+section 7.  <span style="color: blue; font-weight: bold;">Therefore, you may not impose a license fee,
+royalty, or other charge for exercise of rights granted under this
+License.</span> You are not responsible for enforcing compliance by third
+parties to this License.
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<span style="color: blue; font-weight: bold;">If propagation results from a transaction transferring control
+of an organization, each party to that transaction who receives a copy
+of the work also receives a license and a right to possession of the
+Corresponding Source of the work from the party's predecessor in
+interest.</span>
+</td>
+
+</tr><tr id="patents">
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3>11. <span style="color:red; font-weight: bold;">Licensing of</span> Patents.</h3>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3>11. Patents.</h3>
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<span style="color:red; font-weight: bold;">When you distribute a covered work, you grant a patent license to
+the recipient, and to anyone that receives any version of the work,
+permitting, for any and all versions of the covered work, all activities
+allowed or contemplated by this License, such as installing, running and
+distributing versions of the work, and using their output. This patent
+license is nonexclusive, royalty-free and worldwide, and covers all
+patent claims you control or have the right to sublicense, at the time
+you distribute the covered work or in the future, that would be
+infringed or violated by the covered work or any reasonably contemplated
+use of the covered work.</span>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<span style="color: blue; font-weight: bold;">You receive the Program with a covenant from each author and
+conveyor of the Program, and of any material, conveyed under this
+License, on which the Program is based, that the covenanting party will
+not assert (or cause others to assert) any of the party's essential
+patent claims in the material that the party conveyed, against you,
+arising from your exercise of rights under this License.  If you convey
+a covered work, you similarly covenant to all recipients, including
+recipients of works based on the covered work, not to assert any of your
+essential patent claims in the covered work.</span>
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+If you <span style="color:red; font-weight: bold;">distribute</span>  a covered work
+knowingly relying on a  patent license
+, you must  act to shield downstream users against the possible patent
+infringement claims from which your license protects you.
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+If you  <span style="color: blue; font-weight: bold;">convey</span> a covered work<span style="color: blue; font-weight: bold;">,</span>
+knowingly relying on a <span style="color: blue; font-weight: bold;">non-sublicensable</span> patent license
+<span style="color: blue; font-weight: bold;">that is not generally available to all</span>, you must <span style="color: blue; font-weight: bold;">either
+(1)</span> act to shield downstream users against the possible patent
+infringement claims from which your license protects you<span style="color: blue; font-weight: bold;">, or (2)
+ensure that anyone can copy the Corresponding Source of the covered
+work, free of charge and under the terms of this License, through a
+publicly-available network server or other readily accessible
+means</span>.
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<span style="color: blue; font-weight: bold;">Nothing in this License shall be construed as excluding or
+limiting any implied license or other defenses to infringement that may
+otherwise be available to you under applicable patent
+law.</span>
+</td>
+
+</tr><tr id="no-surrender">
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3>12.[7] <span style="color:red; font-weight: bold;">Liberty or Death for the Program</span> </h3>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3>12.[7] <span style="color: blue; font-weight: bold;">No Surrender 
+of Others' Freedom.</span></h3>
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+If conditions are imposed on you (whether by court order, agreement or
+otherwise) that contradict the conditions of this License, they do not
+excuse you from the conditions of this License. If you cannot
+<span style="color:red; font-weight: bold;">distribute</span>  the Program, or other covered work, so
+as to satisfy simultaneously your obligations under this License and any
+other pertinent obligations, then as a consequence you may not
+<span style="color:red; font-weight: bold;">distribute</span>  it at all. For example, if  a patent license <span style="color:red; font-weight: bold;">would not permit</span> 
+royalty-free <span style="color:red; font-weight: bold;">redistribution</span>  by <span style="color:red; font-weight: bold;">all</span>
+those who receive copies directly or indirectly through you, then the
+only way you could satisfy both it and this License would be to refrain
+entirely from <span style="color:red; font-weight: bold;">distribution</span>.
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+If conditions are imposed on you (whether by court order, agreement or
+otherwise) that contradict the conditions of this License, they do not
+excuse you from the conditions of this License. If you cannot
+ <span style="color: blue; font-weight: bold;">convey</span> the Program, or other covered work, so
+as to satisfy simultaneously your obligations under this License and any
+other pertinent obligations, then as a consequence you may not
+ <span style="color: blue; font-weight: bold;">convey</span> it at all. For example, if <span style="color: blue; font-weight: bold;">you
+accept</span> a patent license  <span style="color: blue; font-weight: bold;">that prohibits</span>
+royalty-free  <span style="color: blue; font-weight: bold;">conveying</span> by 
+those who receive copies directly or indirectly through you, then the
+only way you could satisfy both it and this License would be to refrain
+entirely from <span style="color: blue; font-weight: bold;">conveying the
+Program</span>.
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<span style="color:red; font-weight: bold;">It is not the purpose of this section to induce you to infringe
+any patents or other exclusive rights or to contest their legal
+validity.  The sole purpose of this section is to protect the integrity
+of the free software distribution system. Many people have made generous
+contributions to the wide range of software distributed through that
+system in reliance on consistent application of that system; it is up to
+the author/donor to decide if he or she is willing to distribute
+software through any other system and a licensee cannot impose that
+choice.</span>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+
+</td>
+
+</tr><tr id="geographical-limitations">
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3>[13.[8] Geographical Limitations.</h3>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3>[13.[8] Geographical Limitations.</h3>
+</td>
+
+</tr><tr>
+
+
+  <td style="border: 1px solid black; margin: 1px;">
+If the <span style="color:red; font-weight: bold;">distribution</span>  and/or use of the
+Program is restricted in certain countries either by patents or by
+copyrighted interfaces, the original copyright holder who places the
+Program under this License may add an explicit geographical
+<span style="color:red; font-weight: bold;">distribution</span> limitation  excluding those
+countries, so that <span style="color:red; font-weight: bold;">distribution</span>  is permitted
+only in or among countries not thus excluded.  In such case, this
+License incorporates the limitation as if written in the body of this
+License.]
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+If the  <span style="color: blue; font-weight: bold;">conveying</span> and/or use of the
+Program is restricted in certain countries either by patents or by
+copyrighted interfaces, the original copyright holder who places the
+Program under this License may add an explicit geographical
+ limitation <span style="color: blue; font-weight: bold;">on conveying,</span> excluding those
+countries, so that <span style="color: blue; font-weight: bold;">conveying</span> is permitted
+only in or among countries not thus excluded.  In such case, this
+License incorporates the limitation as if written in the body of this
+License.]
+</td>
+
+</tr><tr id="revised-versions">
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3>14.[9] Revised Versions of this License.</h3>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3>14.[9] Revised Versions of this License.</h3>
+</td>
+
+</tr><tr>
+
+
+  <td style="border: 1px solid black; margin: 1px;">
+The Free Software Foundation may publish revised and/or new versions
+of the GNU General Public License from time to time.  Such new versions
+will be similar in spirit to the present version, but may differ in
+detail to address new problems or concerns.
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+The Free Software Foundation may publish revised and/or new versions
+of the GNU General Public License from time to time.  Such new versions
+will be similar in spirit to the present version, but may differ in
+detail to address new problems or concerns.
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+Each version is given a distinguishing version number.  If the Program
+specifies that a certain numbered version of this License ``or any later
+version'' applies to it, you have the option of following the terms and
+conditions either of that numbered version or of any later version
+published by the Free Software Foundation.  If the Program does not
+specify a version number of this License, you may choose any version
+ever published by the Free Software Foundation.
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+Each version is given a distinguishing version number.  If the Program
+specifies that a certain numbered version of this License ``or any later
+version'' applies to it, you have the option of following the terms and
+conditions either of that numbered version or of any later version
+published by the Free Software Foundation.  If the Program does not
+specify a version number of this License, you may choose any version
+ever published by the Free Software Foundation.
+</td>
+
+</tr><tr id="requesting-exceptions">
+
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3>15.[10] Requesting Exceptions.</h3>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3>15.[10] Requesting Exceptions.</h3>
+</td>
+
+</tr><tr>
+
+
+  <td style="border: 1px solid black; margin: 1px;">
+If you wish to incorporate parts of the Program into other free
+programs <span style="color:red; font-weight: bold;">whose distribution conditions are different</span>, write to the author to ask for
+permission.  For software which is copyrighted by the Free Software
+Foundation, write to the Free Software Foundation; we sometimes make
+exceptions for this.  Our decision will be guided by the two goals of
+preserving the free status of all derivatives of our free software and
+of promoting the sharing and reuse of software generally.]
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+If you wish to incorporate parts of the Program into other free
+programs 
+<span style="color: blue; font-weight: bold;">under other licenses</span>, write to the author to ask for
+permission.  For software which is copyrighted by the Free Software
+Foundation, write to the Free Software Foundation; we sometimes make
+exceptions for this.  Our decision will be guided by the two goals of
+preserving the free status of all derivatives of our free software and
+of promoting the sharing and reuse of software generally.]
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3>NO WARRANTY</h3>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3>NO WARRANTY</h3>
+</td>
+
+</tr><tr id="disclaimer-of-warranty">
+
+
+<td style="border: 1px solid black; margin: 1px;">
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3><span style="color: blue; font-weight: bold;">16.[11] Disclaimer of Warranty.</span></h3>
+</td>
+
+</tr><tr>
+
+
+  <td style="border: 1px solid black; margin: 1px;">
+There is no warranty for the Program, to the extent permitted by
+applicable law.  Except when otherwise stated in writing the copyright
+holders and/or other parties provide the Program ``as is'' without
+warranty of any kind, either expressed or implied, including, but not
+limited to, the implied warranties of merchantability and fitness for a
+particular purpose.  The entire risk as to the quality and performance
+of the Program is with you.  Should the Program prove defective, you
+assume the cost of all necessary servicing, repair or correction.
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+There is no warranty for the Program, to the extent permitted by
+applicable law.  Except when otherwise stated in writing the copyright
+holders and/or other parties provide the Program ``as is'' without
+warranty of any kind, either expressed or implied, including, but not
+limited to, the implied warranties of merchantability and fitness for a
+particular purpose.  The entire risk as to the quality and performance
+of the Program is with you.  Should the Program prove defective, you
+assume the cost of all necessary servicing, repair or correction.
+</td>
+
+</tr><tr id="limitation-of-liability">
+
+
+<td style="border: 1px solid black; margin: 1px;">
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3><span style="color: blue; font-weight: bold;">17.[12] Limitation of Liability.</span></h3>
+</td>
+
+</tr><tr>
+
+
+  <td style="border: 1px solid black; margin: 1px;">
+In no event unless required by applicable law or agreed to in writing
+will any copyright holder, or any other party who may modify and/or
+<span style="color:red; font-weight: bold;">redistribute</span> the Program as permitted above, be
+liable to you for damages, including any general, special, incidental or
+consequential damages arising out of the use or inability to use the
+Program (including but not limited to loss of data or data being
+rendered inaccurate or losses sustained by you or third parties or a
+failure of the Program to operate with any other programs), even if such
+holder or other party has been advised of the possibility of such
+damages.
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+In no event unless required by applicable law or agreed to in writing
+will any copyright holder, or any other party who may modify and/or
+ <span style="color: blue; font-weight: bold;">convey</span> the Program as permitted above, be
+liable to you for damages, including any general, special, incidental or
+consequential damages arising out of the use or inability to use the
+Program (including but not limited to loss of data or data being
+rendered inaccurate or losses sustained by you or third parties or a
+failure of the Program to operate with any other programs), even if such
+holder or other party has been advised of the possibility of such
+damages.
+</td>
+
+</tr><tr>
+
+
+<td style="border: 1px solid black; margin: 1px;">
+<h3><span style="color:red; font-weight: bold;">18.</span></h3>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+</td>
+
+</tr><tr>
+
+
+  <td style="border: 1px solid black; margin: 1px;">
+<span style="color:red; font-weight: bold;">Unless specifically stated, the Program has not been tested for
+use in safety critical systems.</span>
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+
+</td>
+
+</tr><tr>
+
+
+
+<td style="border: 1px solid black; margin: 1px;">
+END OF TERMS AND CONDITIONS
+</td>
+
+<td style="border: 1px solid black; margin: 1px;">
+END OF TERMS AND CONDITIONS
+</td>
+
+</tr>
+
+</table>
+
+</body>
+<translator>mip</translator>
+</html>

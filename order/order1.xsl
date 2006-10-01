@@ -68,7 +68,7 @@
         </xsl:element>
         <xsl:element name="tr">
           <xsl:element name="td">
-            <xsl:attribute name"=colspan">3</xsl:attribute>
+            <xsl:attribute name="colspan">3</xsl:attribute>
             <xsl:element name="hl">
           </xsl:element>
         </xsl:element>

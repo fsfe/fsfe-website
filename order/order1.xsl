@@ -18,17 +18,19 @@
 
           <!-- Image -->
           <xsl:element name="td">
-            <xsl:element name="a">
-              <xsl:attribute name="href">
-                <xsl:value-of select="link" />
-              </xsl:attribute>
-              <xsl:element name="img">
-                <xsl:attribute name="alt">Image of the item</xsl:attribute>
-                <xsl:attribute name="src">
-                  <xsl:value-of select="image" />
+            <xsl:for-each select="image">
+              <xsl:element name="a">
+                <xsl:attribute name="href">
+                  <xsl:value-of select="@large"/>
                 </xsl:attribute>
+                <xsl:element name="img">
+                  <xsl:attribute name="alt">Image of the item</xsl:attribute>
+                  <xsl:attribute name="src">
+                    <xsl:value-of select="@small"/>
+                  </xsl:attribute>
+                </xsl:element>
               </xsl:element>
-            </xsl:element>
+            </xsl:for-each>
           </xsl:element>
 
           <!-- Name and description -->

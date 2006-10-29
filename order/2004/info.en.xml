@@ -1,20 +1,66 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <infoset>
-  <info id="girlie-fsfeurope-gpl-black">
-    <name>Classic Style, black</name>
+  <info id="tshirt-fsfs-grey">
+    <name>Free Software Free Society, grey</name>
     <description>
       <p>
-        The girlie shirt shows a small logo as pocket print on the front side
-        and the preamble of the GPL on the back.
+        The T-shirt shows the txt "Free Software Free Society" on the front
+        side.
       </p>
     </description>
   </info>
-  <info id="girlie-fsfeurope-biglogo-grey">
+  <info id="tshirt-gnuage-sand">
     <name>Large Logo, grey</name>
     <description>
       <p>
-        The girlie shirt shows a big logo on the front side.
+        The T-shirt shows the image of a floating GNU and the text "Welcome to
+        the GNU age" on the front, and a big FSFE logo on the back.
+      </p>
+    </description>
+  </info>
+  <info id="girlie-fsfs-grey">
+    <name>Free Software Free Society, grey</name>
+    <description>
+      <p>
+        The girlie shirt shows the txt "Free Software Free Society" on the
+        front side.
+      </p>
+    </description>
+  </info>
+  <info id="girlie-fsfs-orange">
+    <name>Free Software Free Society, orange</name>
+    <description>
+      <p>
+        The girlie shirt shows the txt "Free Software Free Society" on the
+        front side.
+      </p>
+    </description>
+  </info>
+  <info id="girlie-fsfs-yellow">
+    <name>Free Software Free Society, yellow</name>
+    <description>
+      <p>
+        The girlie shirt shows the txt "Free Software Free Society" on the
+        front side.
+      </p>
+    </description>
+  </info>
+  <info id="longsleeve-gpl-black">
+    <name>Classic Longsleeve, black</name>
+    <description>
+      <p>
+        The longsleeve shirt shows a small FSFE logo on the front and the
+        preamble of the GPL on the back.
+      </p>
+    </description>
+  </info>
+  <info id="hooded-fsfs-black">
+    <name>Free Software Free Society Hooded, black</name>
+    <description>
+      <p>
+        The hooded shirt shows a small FSFE logo on the front and the text
+        "Free Software Free Society" on the back.
       </p>
     </description>
   </info>

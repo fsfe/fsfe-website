@@ -3,7 +3,7 @@
 <!-- Do not translate this file! -->
 
 <itemset>
-  <item type="t-shirt" id="tshirt-fsfs-grey" date="2004-01-01">
+  <item type="t-shirt" id="tshirt-fsfs-grey" price="18.00" date="2004-01-01">
     <available size="M"/>
     <available size="L"/>
     <available size="XL"/>
@@ -14,7 +14,7 @@
       small="/order/2004/tshirt-fsfs-grey-back-small.jpg"
       large="/order/2004/tshirt-fsfs-grey-back-large.jpg"/-->
   </item>
-  <item type="t-shirt" id="tshirt-gnuage-sand" date="2004-01-01">
+  <item type="t-shirt" id="tshirt-gnuage-sand" price="18.00" date="2004-01-01">
     <available size="M"/>
     <available size="L"/>
     <available size="XL"/>
@@ -26,7 +26,7 @@
       small="/order/2004/tshirt-gnuage-sand-back-small.jpg"
       large="/order/2004/tshirt-gnuage-sand-back-large.jpg"/-->
   </item>
-  <item type="girlie" id="girlie-fsfs-grey" date="2004-01-01">
+  <item type="girlie" id="girlie-fsfs-grey" price="18.00" date="2004-01-01">
     <available size="L"/>
     <image
       small="/order/2004/girlie-fsfs-grey-front-small.jpg"
@@ -35,7 +35,7 @@
       small="/order/2004/girlie-fsfs-grey-back-small.jpg"
       large="/order/2004/girlie-fsfs-grey-back-large.jpg"/-->
   </item>
-  <item type="girlie" id="girlie-fsfs-orange" date="2004-01-01">
+  <item type="girlie" id="girlie-fsfs-orange" price="18.00" date="2004-01-01">
     <available size="M"/>
     <available size="L"/>
     <image
@@ -45,7 +45,7 @@
       small="/order/2004/girlie-fsfs-orange-back-small.jpg"
       large="/order/2004/girlie-fsfs-orange-back-large.jpg"/>
   </item>
-  <item type="girlie" id="girlie-fsfs-yellow" date="2004-01-01">
+  <item type="girlie" id="girlie-fsfs-yellow" price="18.00" date="2004-01-01">
     <available size="M"/>
     <available size="L"/>
     <image
@@ -55,7 +55,7 @@
       small="/order/2004/girlie-fsfs-yellow-back-small.jpg"
       large="/order/2004/girlie-fsfs-yellow-back-large.jpg"/>
   </item>
-  <item type="longsleeve" id="longsleeve-gpl-black" date="2004-01-01">
+  <item type="longsleeve" id="longsleeve-gpl-black" price="18.00" date="2004-01-01">
     <available size="XL"/>
     <available size="XXL"/>
     <!-- missing image
@@ -65,7 +65,7 @@
       small="/order/2004/longsleeve-gpl-black-back-small.jpg"
       large="/order/2004/longsleeve-gpl-black-back-large.jpg"/-->
   </item>
-  <item type="hooded" id="hooded-fsfs-black" date="2004-01-01">
+  <item type="hooded" id="hooded-fsfs-black" price="28.00" date="2004-01-01">
     <available size="M"/>
     <available size="L"/>
     <available size="XL"/>

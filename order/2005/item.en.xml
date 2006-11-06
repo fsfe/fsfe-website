@@ -3,7 +3,7 @@
 <!-- Do not translate this file! -->
 
 <itemset>
-  <item type="t-shirt" id="tshirt-hacking-black" date="2005-01-01">
+  <item type="t-shirt" id="tshirt-hacking-black" price="18" date="2005-01-01">
     <available size="M"/>
     <available size="L"/>
     <available size="XL"/>
@@ -15,7 +15,7 @@
       small="/order/2005/tshirt-hacking-black-back-small.jpg"
       large="/order/2005/tshirt-hacking-black-back-large.jpg"/>
   </item>
-  <item type="girlie" id="girlie-hacking-black" date="2005-01-01">
+  <item type="girlie" id="girlie-hacking-black" price="18" date="2005-01-01">
     <available size="M"/>
     <available size="L"/>
     <image

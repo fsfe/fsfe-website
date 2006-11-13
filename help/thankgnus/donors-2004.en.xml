@@ -3,18 +3,25 @@
 <!-- to set sort-fold-case to true and run sort-lines on a region -->
 
 <donorset>
-
   <patrons>
-    <li>Firenze Tecnologia</li>
-    <li>
-      <img src="thankgnus/freiheit.png" alt="freiheit.com"/>
-      freiheit.com technologies
-    </li>
-    <li>
-      <img src="thankgnus/nlnet.png" alt="NLnet"/>
-      Stichting NLnet
-    </li>
-    <li>Villa-Vogelsang</li>
+    <table cellpadding="10">
+      <tr>
+        <td>&#160;</td>
+        <td>Firenze Tecnologia</td>
+      </tr>
+      <tr>
+        <td><img src="thankgnus/freiheit.png" alt="freiheit.com"/></td>
+        <td>freiheit.com technologies</td>
+      </tr>
+      <tr>
+        <td><img src="thankgnus/nlnet.png" alt="NLnet"/></td>
+        <td>Stichting NLnet</td>
+      </tr>
+      <tr>
+        <td>&#160;</td>
+        <td>Villa-Vogelsang</td>
+      </tr>
+    </table>
   </patrons>
 
   <sustainingcontributors>

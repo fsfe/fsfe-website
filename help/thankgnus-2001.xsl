@@ -20,9 +20,7 @@
     <body>
       <xsl:apply-templates />
       <h3><xsl:value-of select="/html/text[@id='patrons']" /></h3>
-      <ul>
-       <xsl:apply-templates select="/html/set/patrons/node()" />
-      </ul>
+      <xsl:apply-templates select="/html/set/patrons/node()" />
 
       <h3><xsl:value-of select="/html/text[@id='sustaining']" /></h3>
       <ul>

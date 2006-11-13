@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <donorset>
-
   <patrons>
-    <li>
-      <img src="thankgnus/bmag.png" alt="B+M Informatik"/>
-      B+M Informatik AG
-    </li>
-    <li>Villa-Vogelsang</li>
+    <table cellpadding="10">
+      <li>
+        <td><img src="thankgnus/bmag.png" alt="B+M Informatik"/></td>
+        <td>B+M Informatik AG</td>
+      </li>
+      <tr>
+        <td>&#160;</td>
+        <td>Villa-Vogelsang</td>
+      </tr>
+    </table>
   </patrons>
 
   <sustainingcontributors>

@@ -7,12 +7,12 @@
     <available size="M"/>
     <available size="L"/>
     <available size="XL"/>
-    <!-- Missing image
+    <image
       small="/order/2004/tshirt-fsfs-grey-front-small.jpg"
       large="/order/2004/tshirt-fsfs-grey-front-large.jpg"/>
     <image
       small="/order/2004/tshirt-fsfs-grey-back-small.jpg"
-      large="/order/2004/tshirt-fsfs-grey-back-large.jpg"/-->
+      large="/order/2004/tshirt-fsfs-grey-back-large.jpg"/>
   </item>
   <item type="t-shirt" id="tshirt-gnuage-sand" price="18.00" date="2004-01-01">
     <available size="M"/>
@@ -61,9 +61,9 @@
     <image
       small="/order/2004/longsleeve-gpl-black-front-small.jpg"
       large="/order/2004/longsleeve-gpl-black-front-large.jpg"/>
-    <!-- Missing image
+    <image
       small="/order/2004/longsleeve-gpl-black-back-small.jpg"
-      large="/order/2004/longsleeve-gpl-black-back-large.jpg"/-->
+      large="/order/2004/longsleeve-gpl-black-back-large.jpg"/>
   </item>
   <item type="hooded" id="hooded-fsfs-black" price="28.00" date="2004-01-01">
     <available size="M"/>

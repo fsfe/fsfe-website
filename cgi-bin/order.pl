@@ -3,8 +3,8 @@
 use CGI;
 use POSIX qw(strftime);
 
-$query = new CGI;
-@param = $query->param;
+my $query = new CGI;
+my @param = $query->param;
 
 my $date = strftime "%Y-%m-%d", localtime;
 my $time = strftime "%s", localtime;

@@ -10,7 +10,9 @@ print MAIL "To: mueller\@fsfeurope.org\n";
 print MAIL "Subject: Web order\n\n";
 foreach $name ($query->param) {
   foreach $value ($query->param($name)) {
-    if ($value) print MAIL $name.": ".$value."\n";
+    if ($value) {
+      print MAIL $name.": ".$value."\n";
+    }
   }
 }
 close(MAIL);

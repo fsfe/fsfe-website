@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:output method="xml" encoding="UTF-8" indent="yes" />
+  <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
 
   <!-- Fill dynamic content -->
   <xsl:template match="dynamic-content">
-    <xsl:variable name="type"><xsl:value-of select="@type" /></xsl:variable>
+    <xsl:variable name="type"><xsl:value-of select="@type"/></xsl:variable>
 
     <xsl:element name="table">
       <xsl:attribute name="width">100%</xsl:attribute>
 
       <xsl:for-each select="/html/set/item [@type = $type]">
-        <xsl:sort select="@date" order="descending" />
-        <xsl:variable name="id"><xsl:value-of select="@id" /></xsl:variable>
+        <xsl:sort select="@date" order="descending"/>
+        <xsl:variable name="id"><xsl:value-of select="@id"/></xsl:variable>
 
         <xsl:element name="tr">
 
@@ -38,14 +38,14 @@
             <xsl:attribute name="width">100%</xsl:attribute>
 
             <xsl:element name="h3">
-              <xsl:value-of select="/html/set/info[@id=$id]/name" />
+              <xsl:value-of select="/html/set/info[@id=$id]/name"/>
               <xsl:text> (€</xsl:text>
-              <xsl:value-of select="@price" />
+              <xsl:value-of select="@price"/>
               <xsl:text>)</xsl:text>
             </xsl:element>
 
             <xsl:apply-templates
-              select="/html/set/info[@id=$id]/description/node()" />
+              select="/html/set/info[@id=$id]/description/node()"/>
           </xsl:element>
 
           <!-- Order quantity -->
@@ -53,15 +53,29 @@
             <xsl:attribute name="align">right</xsl:attribute>
             <xsl:for-each select="available">
               <xsl:element name="pre">
-                <xsl:value-of select="@size" />
+                <xsl:value-of select="@size"/>
                 <xsl:text>: </xsl:text>
                 <xsl:element name="input">
                   <xsl:attribute name="type">text</xsl:attribute>
                   <xsl:attribute name="size">5</xsl:attribute>
                   <xsl:attribute name="name">
-                    <xsl:value-of select="$id" />
+                    <xsl:value-of select="$id"/>
                     <xsl:text>_</xsl:text>
-                    <xsl:value-of select="@size" />
+                    <xsl:value-of select="@size"/>
+                  </xsl:attribute>
+                </xsl:element>
+
+                <!-- Hidden input to pass price into CGI script -->
+                <xsl:element name="input">
+                  <xsl:attribute name="type">hidden</xsl:attribute>
+                  <xsl:attribute name="name">
+                    <xsl:text>_</xsl:text>
+                    <xsl:value-of select="$id"/>
+                    <xsl:text>_</xsl:text>
+                    <xsl:value-of select="@size"/>
+                  </xsl:attribute>
+                  <xsl:attribute name="value">
+                    <xsl:value-of select="@price"/>
                   </xsl:attribute>
                 </xsl:element>
               </xsl:element>
@@ -80,7 +94,7 @@
   </xsl:template>
 
   <!-- Do not copy <set> to output at all -->
-  <xsl:template match="set" />
+  <xsl:template match="set"/>
 
   <!-- For all other nodes, copy verbatim -->
   <xsl:template match="@*|node()" priority="-1">

@@ -15,7 +15,7 @@ print MAIL "To: mueller\@fsfeurope.org\n";
 print MAIL "Subject: Web order\n\n";
 print MAIL $reference . "\n\n";
 foreach $name ($query->param) {
-  $value = $query->param($name)
+  $value = $query->param($name);
   if (not $name =~ /^_/ and $value) {
     print MAIL $name . ": " . $value . "\n";
   }

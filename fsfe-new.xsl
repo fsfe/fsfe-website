@@ -104,16 +104,6 @@
             <xsl:apply-templates select="node()"/>
           </td>
           <td class="menu" width="150">
-
-            <br/>
-            <!-- "Join the Fellowship" button -->
-            <a href="https://www.fsfe.org/join"><img alt="Join the Fellowship" src="graphics/global/Join_Fellowship.png"/></a>
-            <br/>
-
-            <!-- "Donate Today" button -->
-            <a href="/help/paypal.html"><img alt="Donate today" src="graphics/global/Become_Patron2006_w_small.png"/></a>
-            <br/>
-
             <xsl:for-each select="/buildinfo/menuset/menu[not(@parent)]">
               <xsl:sort select="@id" />
               <xsl:variable name="id"><xsl:value-of select="@id" /></xsl:variable>
@@ -128,6 +118,17 @@
                 </a> <br />
               </xsl:for-each>
             </xsl:for-each>
+
+            <!-- "Join the Fellowship" button -->
+            <br/>
+            <a href="https://www.fsfe.org/join"><img alt="Join the Fellowship" src="/graphics/global/Join_Fellowship.png"/></a>
+            <br/>
+
+            <!-- "Donate Today" button -->
+            <br/>
+            <a href="/help/paypal.html"><img alt="Donate today" src="/graphics/global/Become_Patron2006_w_small.png"/></a>
+            <br/>
+
           </td>
         </tr>
         <tr>

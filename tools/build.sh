@@ -24,17 +24,18 @@ done
 
 cd $TMP
 
-echo "$(date) Creating symlinks"
+echo "$(date)  Creating symlinks"
 /usr/local/bin/symlinks
 
-echo "$(date) Obfuscating email addresses"
+echo "$(date)  Obfuscating email addresses"
 find . -type f | xargs sed -i 's/@/\&#64;/g'
 
 mv $DEST ${DEST}.old
 mv $TMP $DEST
 rm -rf ${DEST}.old
 
-echo "$(date) Generating translation logs"
 cd $SOURCE
+
+echo "$(date)  Generating translation logs"
 tools/translation-log.sh ${DEST}/translations.log ${STATUS}
-echo "$(date) Build complete"
+echo "$(date)  Build complete"

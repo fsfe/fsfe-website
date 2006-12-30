@@ -28,7 +28,7 @@ echo "$(date)  Creating symlinks"
 /usr/local/bin/symlinks
 
 echo "$(date)  Obfuscating email addresses"
-find . -name "*.html" | xargs sed -i 's/@/\&#64;/g'
+find . -type f -name "*.html" | xargs sed -i 's/@/\&#64;/g'
 
 mv $DEST ${DEST}.old
 mv $TMP $DEST

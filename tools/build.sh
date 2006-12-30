@@ -23,16 +23,18 @@ for target in ${TMP}/*; do
 done
 
 cd $TMP
+
+echo "$(date) Creating symlinks"
 /usr/local/bin/symlinks
 
-# obfuscate email addresses
+echo "$(date) Obfuscating email addresses"
 find . -type f | xargs sed -i 's/@/\&#64;/g'
 
 mv $DEST ${DEST}.old
 mv $TMP $DEST
 rm -rf ${DEST}.old
 
-echo "Generating translation logs"
+echo "$(date) Generating translation logs"
 cd $SOURCE
 tools/translation-log.sh ${DEST}/translations.log ${STATUS}
-echo "Build complete."
+echo "$(date) Build complete"

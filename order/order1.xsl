@@ -13,6 +13,7 @@
       <xsl:for-each select="/html/set/item [@type = $type]">
         <xsl:sort select="@date" order="descending"/>
         <xsl:variable name="id"><xsl:value-of select="@id"/></xsl:variable>
+        <xsl:variable name="price"><xsl:value-of select="@price"/></xsl:variable>
 
         <xsl:element name="tr">
 
@@ -55,6 +56,8 @@
               <xsl:element name="pre">
                 <xsl:value-of select="@size"/>
                 <xsl:text>: </xsl:text>
+
+                <!-- Real input for quantity -->
                 <xsl:element name="input">
                   <xsl:attribute name="type">text</xsl:attribute>
                   <xsl:attribute name="size">5</xsl:attribute>
@@ -64,20 +67,21 @@
                     <xsl:value-of select="@size"/>
                   </xsl:attribute>
                 </xsl:element>
-              </xsl:element>
 
-              <!-- Hidden input to pass price into CGI script -->
-              <xsl:element name="input">
-                <xsl:attribute name="type">hidden</xsl:attribute>
-                <xsl:attribute name="name">
-                  <xsl:text>_</xsl:text>
-                  <xsl:value-of select="$id"/>
-                  <xsl:text>_</xsl:text>
-                  <xsl:value-of select="@size"/>
-                </xsl:attribute>
-                <xsl:attribute name="value">
-                  <xsl:value-of select="@price"/>
-                </xsl:attribute>
+                <!-- Hidden input to pass price into CGI script -->
+                <xsl:element name="input">
+                  <xsl:attribute name="type">hidden</xsl:attribute>
+                  <xsl:attribute name="name">
+                    <xsl:text>_</xsl:text>
+                    <xsl:value-of select="$id"/>
+                    <xsl:text>_</xsl:text>
+                    <xsl:value-of select="@size"/>
+                  </xsl:attribute>
+                  <xsl:attribute name="value">
+                    <xsl:value-of select="$price"/>
+                  </xsl:attribute>
+                </xsl:element>
+
               </xsl:element>
             </xsl:for-each>
           </xsl:element>

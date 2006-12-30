@@ -34,7 +34,8 @@ close MAIL;
 # Lead user to "thankyou" page
 # -----------------------------------------------------------------------------
 
-open TEMPLATE, "/order/tmpl-thankyou." . $query->param("language") . ".html";
+print "Content-type: text/html\n\n";
+open TEMPLATE, "/home/www/html/global/order/tmpl-thankyou." . $query->param("language") . ".html";
 while (<TEMPLATE>) {
   s/\@AMOUNT\@/$amount/g;
   s/\@REFERENCE\@/$reference/g;

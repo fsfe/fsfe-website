@@ -481,7 +481,10 @@ while (my ($file, $langs) = each %bases) {
             $href =~ s/http:\/\/www.fsfeurope.org//;
           }
           if ($href !~ /^http/) {
-            if ($href =~ /\.html$/) {
+            if ($href =~ /^mailto:/) {
+              # obfuscate email address
+              $href =~ s/\@/&#64;/g;
+            } elsif ($href =~ /\.html$/) {
               $href =~ s/([^\.][a-z0-9-][a-z0-9-])\.html/$1.$lang.html/;
             } elsif ($href =~ /\.rss$/) {
               $href =~ s/([^\.][a-z0-9-][a-z0-9-])\.rss/$1.$lang.rss/;

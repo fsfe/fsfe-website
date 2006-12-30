@@ -10,6 +10,10 @@ my $time = strftime "%s", localtime;
 my $reference = "order.$date." . substr $time, -5;
 my $amount = 0;
 
+# -----------------------------------------------------------------------------
+# Calculate amount and generate mail to office
+# -----------------------------------------------------------------------------
+
 open(MAIL, "|/usr/lib/sendmail -t -f mueller\@fsfeurope.org");
 print MAIL "From: mueller\@fsfeurope.org\n";
 print MAIL "To: mueller\@fsfeurope.org\n";
@@ -22,7 +26,17 @@ foreach $name ($query->param) {
     $amount += $value * $query->param("_$name");
   }
 }
+$amount = sprintf "%.2f", $amount;
 print MAIL "Total amount: $amount\n";
 close MAIL;
 
-print "Location: /order/thankyou." . $query->param("language") . ".html\n\n";
+# -----------------------------------------------------------------------------
+# Lead user to "thankyou" page
+# -----------------------------------------------------------------------------
+
+open TEMPLATE, "/order/tmpl-thankyou." . $query->param("language") . ".html";
+while (<TEMPLATE>) {
+  s/\@AMOUNT\@/$amount/g;
+  s/\@REFERENCE\@/$reference/g;
+  print;
+}

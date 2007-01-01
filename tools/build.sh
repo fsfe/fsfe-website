@@ -28,6 +28,10 @@ echo "$(date)  Creating symlinks"
 /usr/local/bin/symlinks
 
 echo "$(date)  Obfuscating email addresses"
+# This replaces all '@' in all html files with '&#64;'. We use '-type f'
+# because we want to exclude symlinks. Because 'sed -i' is a very expensive
+# operation, even if there is no replacement done anyway, we first limit the
+# files to operate on to those files that actually contain an '@'.
 find . -type f -name "*.html" | xargs grep -l '@' | xargs sed -i 's/@/\&#64;/g'
 
 mv $DEST ${DEST}.old

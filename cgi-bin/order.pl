@@ -37,7 +37,7 @@ close MAIL;
 print "Content-type: text/html\n\n";
 open TEMPLATE, "/home/www/html/global/order/tmpl-thankyou." . $query->param("language") . ".html";
 while (<TEMPLATE>) {
-  s/\@AMOUNT\@/$amount/g;
-  s/\@REFERENCE\@/$reference/g;
+  s/:AMOUNT:/$amount/g;
+  s/:REFERENCE:/$reference/g;
   print;
 }

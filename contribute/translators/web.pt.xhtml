@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+
+<html>
+  <head>
+    <title>
+      FSF Europe - Contribuir - Informação para os tradutores - Páginas Web
+    </title>
+  </head>
+
+  <body>
+    <h1> Traduzir páginas web</h1>
+
+    <h2>Perceber como as páginas web são construídas</h2>
+
+    <p>
+      As páginas web de www.fsfeurope.org são mantidas como um conjunto de ficheiros XML.
+      O servidor de web gera páginas HTML a partir dos ficheiros XML
+      automaticamente cada cinco minutos. Consequentemente, toda a edição das páginas é
+      feita em ficheiros XML, e os ficheiros HTML nunca são editados directamente.
+    </p>
+
+    <p>
+      Os nomes das páginas em www.fsfeurope.org têm a sintaxe
+      "<i>nomedapágina</i>.<i>língua</i>.html" (<i>língua</i> são as
+      2-letras do código de linguagem da iso-639, por exemplo "en" para English ou "pt" para
+      Português). Os ficheiros de origem têm a sintaxe
+      "<i>nomedapágina</i>.<i>língua</i>.xhtml".<br />
+      Algumas páginas são dinâmicas: para além dos textos estáticos retirados do
+      ficheiro .xhtml, elas contêm informação sobre uma ou várias páginas de vários ficheiros .xml.
+      Quando uma destas páginas é construída, o sistema de construção vai escolher o ficheiro .xml
+      traduzido quando está disponível, e retorna à versão Inglesa
+      dos ficheiros .xml caso ainda não tenham sido traduzidos. Desta forma, muitas páginas
+      podem aparecer com partes de texto já traduzidos e com outras partes ainda
+      na versão Inglesa. Exemplos deste tipo de páginas são a
+      <a href="/index.html">página de entrada</a>, a
+      <a href="/news/news.html">pagina de notícias</a>, e a
+      <a href="/events/events.html">página de eventos</a>.
+    </p>
+
+    <h2>Todos podem contribuir nas traduções</h2>
+
+    <p>
+      Todos os ficheiros originais (i.e., os ficheiros .xhtml e .xml) estão publicamente disponíveis
+      para download, ou seja, qualquer pessoa pode espontâneamente contribuir numa tradução
+      sem ser necessário registrar-se. No entanto, sempre que começar uma
+      tradução e prevê que irá demorar, por favor envie uma pequena nota para
+      a <a href="http://mail.fsfeurope.org/mailman/listinfo/translators"> Lista de correio dos
+        tradutores</a> para evitar que alguém também comece a trabalhar na tradução do mesmo
+      texto em simultâneo.
+    </p>
+
+    <h3>Contribuir nas traduções inexistentes</h3>
+
+    <p>
+      Se tem uma página aberta no seu web browser que ainda não esteja
+      traduzida para Português, descer até ao final da página, clicar no
+      link "[XHTML]" e gravar o ficheiro aí obtido. Vai receber o ficheiro
+      .xhtml em Inglês. Renomeie o ficheiro para ter o código da língua Portuguesa em vez do código
+      "en", e abra-o num editor de texto. Agora, traduza todo o texto no
+      ficheiro que esteja fora das etiquetas "&lt;...&gt;"; não altere nada
+      dentro destas etiquetas (o texto dentro das etiquetas são comandos XHTML que
+      influênciam o aspecto da página web resultante).
+    </p>
+
+    <p>
+      No final do ficheiro estará uma linha que refere "&lt;/html&gt;".
+      Imediatamente <i>acima</i> desta linha, adicione uma linha dizendo
+      "&lt;translator&gt;<i>o seu nome</i>&lt;/translator&gt;".
+    </p>
+
+    <p>
+      Quando finalizar, enviar o ficheiro traduzido para a
+      <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">Lista de
+        correio de tradutores</a>. Outros membros desta lista podem corrigir
+      a tradução, e alguém nessa lista afixá-lo-à finalmente no
+      servidor.
+    </p>
+
+    <h3>Actualizar traduções obsoletas</h3>                         
+
+    <p>
+      Se tiver uma página aberta no seu web browser cuja tradução é
+      obsoleta (indicado por uma nota no topo da página), ir até ao final
+      da página, clicar na ligação "[XHTML]" e gravar o ficheiro obtido.
+      Este ficheiro é a versão (obsoleta) traduzida. Depois, utilize a ligação
+      "English" no topo da página para saltar para a versão Inglesa da página
+      e aí clicar também na ligação "[XHTML]". O ficheiro que aí obtém é a
+      versão Inglesa (actualizada). Agora pode comparar os dois ficheiros e actualizar
+      a tradução. Por favor tenha o cuidado de que tudo o que está dentro das etiquetas "&lt;...&gt;"
+      não pode ser traduzido.
+    </p>
+
+    <p>
+      Quando finalizar, enviar o ficheiro traduzido para
+      <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">Lista de
+        correio de tradutores</a>. Outros membros desta lista podem corrigir
+      a tradução, e alguém nessa lista afixá-lo-à finalmente no
+      servidor.
+    </p>
+
+    <h3>Procurar o que falta fazer</h3>
+
+    <p>
+      Existe uma
+      <a href="http://status.fsfeurope.org/web/translations.html"> Lista de todas as
+        línguas que são geradas automaticamente</a> disponível. Nessa página, cada código de linguagem
+      é uma ligação para uma outra página na qual estão listadas todas as traduções desactualizadas 
+      e que estão em falta para essa língua.
+    </p>
+
+    <p>
+      A lista das traduções desactualizadas fornece uma característica extra muito útil para
+      actualizações: pode não só fazer o download do ficheiro (obsoleto) traduzido e do
+      ficheiro (actualizado) Inglês original; pode também ver as modificações de ambos os
+      ficheiros, um protocolo de todas as modificações feitas ao respectivo ficheiro.
+      Comparando as duas modificações geralmente fica mais fácil de encontrar quais
+      as partes originais que foram modificadas desde a última tradução que foi
+      actualizada.
+    </p>
+
+    <p>
+      Esta página de estado de tradução é também a única forma de descarregar o ficheiro .xml
+      que está construido nas páginas dinâmicas, tais como, ficheiros contendo entradas de novos
+      itens ou eventos.
+    </p>
+
+    <h3>Fazer download da árvore completa dos ficheiros fonte com CVS</h3>
+
+    <p>
+      Se for possível utilizar CSV, também pode fazer o download da árvore completa
+      dos ficheiros fonte de uma só vez.
+    </p>
+
+    <p>
+      Crie uma directoria na qual pretenda guardar os ficheiros, mudá-los para essa
+      directoria e emitir o comando<br />
+      <code>$ cvs -z3 -d:pserver:anonymous@cvs.savannah.gnu.org:/web/fsfe co .</code><br />
+      Quando lhe perguntarem pela password, pressione apenas a tecla Return.
+    </p>
+
+    <p>
+      Para actualizar a árvore fonte que anteriormente guadou desta forma, pode utilizar
+      o comando<br />
+      <code>$ cvs -z3 update -Pd</code><br />
+    </p>
+
+    <h2>Aderir aos webmasters de www.fsfeurope.org</h2>
+
+    <p>
+      Se tem intenção de contribuir regularmente com traduções e possui alguns
+      conhecimentos básicos de CVS e SSH, você está convidado a
+      <a href="/contribute/web/web.html">Aderir à equipa webmaster</a>.
+    </p>
+  </body>
+
+  <timestamp>$Date$ $Author$</timestamp>
+  <translator>Luis Madeira</translator>"
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html>
+  <head>
+    <title>FSFE - Freedom Task Force (FTF)</title>
+  </head>
+
+  <body>
+
+	<h2>Broncode FAQ</h2>
+
+<div style="text-align: center;">
+<p>
+[ <b><a href="ftf.html">Services</a></b> ] 
+[ <b><a href="documentation.html">Documentatie</a></b> ] 
+[ <b><a href="community.html">Gemeenschap</a></b> ] 
+[ <b><a href="about.html">Over ons</a></b> ] 
+[ <b><a href="contact.html">Contact</a></b> ]
+</p>
+</div>
+
+<p>Deze FAQ bevat meer gedetailleerde informatie over de vereisten en de beste
+  handelswijze voor het verdelen van de overeenkomende broncode van onder de GPL
+  verdeelde code. Deze FAQ werd samengesteld aan de hand van veel tekortkomingen en
+  misverstanden die we tegenkwamen in meer dan 60, succesvol bestreden, inbreuken tegen
+  de GPL.</p>
+
+<p>Wij raden u aan om deze FAQ door te nemen voordat u, zoals vereist door de GPL, 
+  broncode verdeelt. Zo kan u er zich van vergewissen dat wat u verdeelt volledig is, en
+  voldoet aan uw en onze verwachtingen.</p>
+
+<p>Dit is geen juridisch advies. Als je twijfelt, raadpleeg een juridisch adviseur.</p>
+
+<h3>Welke broncode moet ik publiceren volgende de GNU GPL?</h3>
+
+<p>Als je uitvoerbare code verdeelt van software onder de GNU GPL, moet je ook de
+  'volledig overeenkomende broncode' beschikbaar maken. De licentie definieert het als
+  volgt: "The source code for a work means the preferred form of the work for making
+  modifications to it. For an executable work, complete source code means all the source code
+  for all modules it contains, plus any associated interface definition files, plus the scripts used 
+  to control compilation and installation of the executable."</p>
+
+<p>Dit is een vrij duidelijke definitie. Voor een klassiek C programma, omvat dat alle
+  broncodes (.c files), alle header files (.h files) plus de scripts die nodig zijn om het programma
+  te compileren en te installeren.</p>
+
+<p>Je moet steeds in je achterhoofd houden dat het de bedoeling is van de GPL om een
+  gebruiker in staat te stellen zijn vrijheden te gebruiken. Eén van deze vrijheden is de
+  mogelijkheid een aangepaste versie van een programma te kunnen maken en gebruiken.</p>
+
+<h3>Wat zijn "de scripts nodig om een programma te compileren"?</h3>
+
+<p>Elk gesofisticeerd programma wordt normaal gezien opgesplitst in verschillen files met
+  broncode. Tijdens het compilatieproces wordt elke van deze files omgezet in uitvoerbare
+  codes, waarna die worden samengevoegd (gelinkt). Het proces van compileren en linken,
+  wordt meestal gecontroleerd door scripts. Hiervoor gebruikt men vaak het "make" 
+  programma, de scripts die dit programma gebruikt worden vaak "Makefiles" genoemd.</p>
+
+<p>Er zijn ook programma's zoals de Linux kernel, die bestanden hebben die tijdens de
+  compilatie gebruikt worden (zoals de .config file in linux). Deze "compile-time" configuratie
+  heeft overduidelijk een invloed op de compilatie, dus moeten ook deze compile-time
+  configuratiebestanden aangeboden worden.</p>
+
+<h3>Wat zijn "scripts om de installatie uit te voeren""?</h3>
+
+<p>Nadat software omgezet is naar uitvoerbare code, kan het nodig zijn om het programma
+  te installeren op het systeem. Dit proces wordt vaak geautomatiseerd door gebruik te maken
+  van een installatiescript. Het zijn zulke scripts waar de GPL naar verwijst.</p>
+
+<p>Voor toestellen met ingebouwde software vraagt dit zeker extra aandacht, aangezien de
+  software geïnstalleerd moet kunnen worden in het apparaat. Als de gebruiker geen
+  mogelijkheid heeft om zijn eigen (aangepaste) versie van het programma te installeren, 
+  wordt hem de vrijheid ontzegt om zijn eigen aangepaste versie te gebruiken.</p>
+
+<p>Soms worden voor de installatie van een programma geen scripts gebruikt, maar andere
+  hulpmiddelen (zoals uitvoerbare programma's). De GPL-tekst maakt alleen vermelding van
+  het woord scripts. Maar als men de licentie grondig leest en analyseert, is het duidelijk dat
+  men zich niet alleen tot de scripts mag beperken, maar het moet interpreteren als elk stuk
+  software dat nodig kan zijn om de (aangepaste) versie van het gecompileerde programma
+  te installeren.</p>
+
+<h3>Wat met de compiler en andere gebruikte programma's?</h3>
+
+<p>De GPL stelt duidelijk: "However, as a special exception, the source code distributed need not include anything that is normally distributed (in either source or binary form) with the major components (compiler, kernel, and so on) of the operating system on which the executable runs, unless that component itself accompanies the executable."</p>
+
+<p>Deze paragraaf is speciaal geschreven voor gewone programma's die gebruikt worden op
+  gewone algemene besturingssystemen. Als je alleen zulke programma's verdeelt, is het niet
+  nodig om de compiler, kernel, linker, ... mee te leveren.</p>
+
+<p>In het geval van cross-compilatie voor toestellen met ingebouwde software, wordt de 
+  cross-compiler voor jouw specifieke hardware waarschijnlijk niet meegeleverd met de
+  "gewone distrubutie ,,, voor het besturingssysteem". Daarom moet u in dit geval de juiste
+  versies van de programma's die u gebruikte om uw uitvoerbare code te compileren, 
+  meeleveren. Let op! Dit zijn vaak ook programma's onder de GPL, zoals GNU gcc, waarvoor
+  dus ook dezelfde regel geldt dat u alle overeenkomende broncode moet publiceren.</p>
+
+<h3>Welke versie van de broncode moet ik verdelen?</h3>
+
+<p>Voor elke uitgebrachte uitvoerbare versie van een programma, moet u ook de 
+  overeenkomende versie van de broncode verdelen.</p>
+
+<p>Dus als u tien verschillende softwareversies voor een toestel hebt verdeeld, en die
+  software bevat delen onder de GPL, dan moet u ook tien verschillende pakketten met
+  broncode verdelen, één pakket voor elk afzonderlijk uitvoerbaar bestand.</p>
+
+<p>Als u kiest voor de GPL optie 3b (in plaats van 3a), dan geldt deze verplichting slechts voor
+  drie jaar. Dit betekent dat u de broncode voor een uitvoerbaar bestand niet moet bijvoegen
+  als deze code meer dan drie jaar geleden voor het laatst verdeeld werd.</p>
+
+<p>Denk eraan dat zowel verdelen op fysieke dragers als verdelen via data-netwerken, zoals
+ het internet, in de GPL licentie beschreven zijn.</p>
+
+<h3>Hoe kan ik controleren of mijn broncodepakket volledig is?</h3>
+
+<p>Als je de broncode van één bepaald softwarepakket neemt, en je slaagt erin om daarmee
+  het uitvoerbaar bestand te maken, dan lijkt de broncode wel  volledig.</p>
+
+<p>Als dit proces mislukt, of je uitvoerbaar bestand blijkt niet te werken, of je slaagt er niet in
+  het uitvoerbaar bestand te installeren, dan ontbreekt er iets.</p>
+
+<p>Copyright (c) 2004-2006 The gpl-violations.org webmaster <br />
+Copyright (c) 2006 FSFE e.V.</p>
+
+  </body>
+
+  <timestamp>$Date$ $Author$</timestamp>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

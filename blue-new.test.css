@@ -1,149 +1,161 @@
-BODY	{
-        font-family: Helvetica, Verdana, sans-serif;
-		background: #ffffff;
-		color: #000000;
-	}
+/* ========================================================================= */
+/* Style sheet for fsfeurope.org                                             */
+/* ========================================================================= */
 
-TD.focus-box	{
-		border-left: solid #202d79;
-		border-width: thin;
-		font-size: 11px;
-		}
+/* ------------------------------------------------------------------------- */
+/* General definitions                                                       */
+/* ------------------------------------------------------------------------- */
 
-TABLE.focus	{
-		background: #ffffff;
-		}
+body {
+  margin: 0;
+  padding: 1em 0;
+  background: #fdfdfd;
+  color: #151515;
+  font-family: Nimbus Sans L, Helvetica, Verdana, sans-serif;
+  font-size: 100.01%;           /* FIXME: What does this do? */
+}
 
-TD.line		{
-		border-top: solid #202d79;
-		border-bottom: solid #202d79;
-		border-width: thin;
-		}
+a {
+  color: #202D97;
+}
 
-TD.newstitle	{
-		border-bottom: solid #202d79;
-		border-left: solid #202d79;
-		border-width: thin;
-		text-align: left;
-		font-weight: bold;
-		margin: 0px;
-		padding: 4px;
-		}
-TD.newsdate	{
-		border-bottom: solid #202d79;
-		border-width: thin;
-		text-align: right;
-		font-weight: bold;
-		margin: 0px;
-		padding: 4px;
-		}
+a:hover, a:active, a:focus {
+  background: #3394CE;
+}
 
-TABLE.news	{
-		border-spacing: 0px;
-		padding: 4px;
-		margin: 0px;
-		}
+/* ------------------------------------------------------------------------- */
+/* Logo and Focus                                                            */
+/* ------------------------------------------------------------------------- */
 
-TD.focus	{
-		width: 150px;
-                }
+td.focus-box {
+  border-left: medium #202d79;
+  width: 13em;
+}
 
-TD.projects	{
-		vertical-align: top;
-		}
+/* ------------------------------------------------------------------------- */
+/* Language List                                                             */
+/* ------------------------------------------------------------------------- */
 
-TD.menu		{
-		border-left: solid #202d79;
-		border-width: thin;
-		padding: 10px;
-		width: 150px;
-		vertical-align: top;
-                }
+td.line {
+  border-top: thin #202d79;
+  border-bottom: thin #202d79;
+}
 
-TD.body		{
-		padding: 10px;
-		vertical-align: top;
-		width: 99%;
-		}
+.line a {
+  text-decoration: none;
+}
 
-TH.projects	{
-		width: 20%;
-		}
+/* ------------------------------------------------------------------------- */
+/* Menu                                                                      */
+/* ------------------------------------------------------------------------- */
 
-a.menu		{
-		text-decoration: none;
-        font-size: 15px;
-		font-weight: bold;
-		}
-a.menu:hover	{
-		background-color: #6BB340;
-		}
+td.menu {
+  border-left: medium #202d79;
+  width: 13em;
+  padding: 1em;
+  vertical-align: top;
+}
 
-a.submenu	{
-		text-decoration: none;
-        font-size: 13px;
-		font-weight: normal;
-		margin-left: 20px;
-		}
-a.submenu:hover	{
-		background-color: #6BB340;
-		}
+a.menu {
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+}
 
+a.submenu {
+  text-decoration: none;
+  font-size: 13px;
+  padding-left: 2em;
+}
 
+/* ------------------------------------------------------------------------- */
+/* Content                                                                   */
+/* ------------------------------------------------------------------------- */
 
-ul              {          
-		margin-right:20px;
-		margin-left: 20px;
-		background: #ffffff;
-		color: #000000;
-		}
-div.letter	{
-		margin-right: 30px;
-		margin-left: 30px;
-		}
+td.body {
+  padding: 0 1.5em;
+  width: 99%;
+  vertical-align: top;
+}
 
-p		{
-		margin-right: 20px;
-		margin-left: 20px;
-		}
+.body {
+  margin-left 20px;
+  margin-right 20px;
+}
 
-dt		{
-		margin-right: 20px;
-		margin-left: 20px;
-		}
+.body h1 {
+  text-align: center;
+}
 
-dd		{
-		margin-right: 20px;
-		margin-left: 40px;
-		}
+.body h2 {
+  margin-left 0px;
+}
 
+/* ------------------------------------------------------------------------- */
+/* Styles used only on some pages                                            */
+/* ------------------------------------------------------------------------- */
+
+/* News and event items */
+
+table.news {
+  margin: 0px;
+  border-spacing: 0px;
+  padding: 4px;
+}
+
+td.newstitle {
+  margin: 0px;
+  border-bottom: thin #202d79;
+  border-left: thin #202d79;
+  padding: 4px;
+  text-align: left;
+  font-weight: bold;
+}
+
+td.newsdate {
+  margin: 0px;
+  border-bottom: thin #202d79;
+  padding: 4px;
+  text-align: right;
+  font-weight: bold;
+}
+
+/* Project list */
+
+th.projects {
+  width: 20%;
+}
+
+td.projects {
+  vertical-align: top;
+}
+
+/* Other stuff */
+
+/* FIXME: replace with something else! */
 .indent	{
-		margin-right: 30px;
-		margin-left: 40px;
-		}
+  margin-right: 30px;
+  margin-left: 40px;
+}
 
-.quote	{
-        font-style:italic;
-		margin-right: 40px;
-		margin-left: 50px;
-		}
+/* FIXME: Use blockquote instead for real quotations */
+.quote {
+  font-style:italic;
+  margin-right: 40px;
+  margin-left: 50px;
+}
 
-p.footnote	{
-		margin-right: 30px;
-		margin-left: 40px;
-		text-align: left;
-		font-weight: normal;
-		}
+p.footnote {
+  margin-right: 30px;
+  margin-left: 40px;
+}
 
-code.footnote	{
-		font-weight: bold;
-		}
+/* FIXME: this is probably not really code... */
+code.footnote {
+  font-weight: bold;
+}
 
-form		{
-		margin-right: 20px;
-		margin-left: 20px;
-		}
-
-span.emph	{
-		font-weight: bold;
-		}
+/* FIXME: Use <strong> instead */
+span.emph {
+  font-weight: bold;
+}

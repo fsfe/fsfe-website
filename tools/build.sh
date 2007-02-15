@@ -45,6 +45,7 @@ perl tools/build.pl -q -o ${TMP} -i .
 
 if test $? -ne 0; then
    echo "$(date)  Build not complete. Aborting."
+   cp ${STATUS}/status.txt ${STATUS}/status-finished.txt
    exit 1
 fi
 

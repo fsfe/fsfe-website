@@ -89,3 +89,5 @@ tools/translation-log.sh ${DEST}/translations.log ${STATUS}
 # -----------------------------------------------------------------------------
 echo "$(date)  Build complete."
 # -----------------------------------------------------------------------------
+
+cp ${STATUS}/status.txt ${STATUS}/status-finished.txt

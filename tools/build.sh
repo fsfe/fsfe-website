@@ -12,11 +12,28 @@ DEST=/home/www/html
 TMP=/home/www/tmp.$$
 STATUS=/var/www/web
 
-# -----------------------------------------------------------------------------
-echo "$(date)  Building HTML pages"
-# -----------------------------------------------------------------------------
+# If build is already running, don't run it again.
+if test -n "$(ps -C build.pl -o pid=)"; then
+  exit
+fi
+
+# Redirect output
+exec 1> ${STATUS}/status.txt 2>&1
 
 cd ${SOURCE}
+
+# -----------------------------------------------------------------------------
+echo "$(date)  Updating source files from CVS."
+# -----------------------------------------------------------------------------
+
+if test -z "$(cvs update -Pd 2>/dev/null)"; then
+  echo "$(date)  No changes to CVS."
+fi
+
+# -----------------------------------------------------------------------------
+echo "$(date)  Building HTML pages."
+# -----------------------------------------------------------------------------
+
 tools/build.pl -q -o ${TMP} -i .
 
 if test $? -ne 0; then
@@ -25,7 +42,7 @@ if test $? -ne 0; then
 fi
 
 # -----------------------------------------------------------------------------
-echo "$(date)  Linking source files"
+echo "$(date)  Linking source files."
 # -----------------------------------------------------------------------------
 
 for target in ${TMP}/*; do
@@ -33,7 +50,7 @@ for target in ${TMP}/*; do
 done
 
 # -----------------------------------------------------------------------------
-echo "$(date)  Creating symlinks"
+echo "$(date)  Creating symlinks."
 # -----------------------------------------------------------------------------
 
 for f in $(find ${TMP} -name .symlinks); do
@@ -45,7 +62,7 @@ done
 cd ${SOURCE}
 
 # -----------------------------------------------------------------------------
-echo "$(date)  Obfuscating email addresses"
+echo "$(date)  Obfuscating email addresses."
 # -----------------------------------------------------------------------------
 
 # This replaces all '@' in all html files with '&#64;'. We use '-type f'
@@ -55,7 +72,7 @@ echo "$(date)  Obfuscating email addresses"
 find ${TMP} -type f -name "*.html" | xargs grep -l '@' | xargs sed -i 's/@/\&#64;/g'
 
 # -----------------------------------------------------------------------------
-echo "$(date)  Activating new output"
+echo "$(date)  Activating new output."
 # -----------------------------------------------------------------------------
 
 mv ${DEST} ${DEST}.old
@@ -63,11 +80,11 @@ mv ${TMP} ${DEST}
 rm -rf ${DEST}.old
 
 # -----------------------------------------------------------------------------
-echo "$(date)  Generating translation logs"
+echo "$(date)  Generating translation logs."
 # -----------------------------------------------------------------------------
 
 tools/translation-log.sh ${DEST}/translations.log ${STATUS}
 
 # -----------------------------------------------------------------------------
-echo "$(date)  Build complete"
+echo "$(date)  Build complete."
 # -----------------------------------------------------------------------------

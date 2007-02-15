@@ -30,7 +30,7 @@ echo "$(date)  Updating source files from CVS."
 # once every day at least to move events from future to current and from
 # current to past.
 if test -z "$(cvs update -Pd 2>/dev/null)" \
-    -a "$(date -r ${STATUS}/last-run +%F)" != "$(date +%F)"; then
+    -a "$(date -r ${STATUS}/last-run +%F)" == "$(date +%F)"; then
   echo "$(date)  No changes to CVS."
   exit
 fi

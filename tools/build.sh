@@ -26,7 +26,11 @@ cd ${SOURCE}
 echo "$(date)  Updating source files from CVS."
 # -----------------------------------------------------------------------------
 
-if test -z "$(cvs update -Pd 2>/dev/null)"; then
+# Rebuild only if changes were made or it hasn't run yet today. We must run it
+# once every day at least to move events from future to current and from
+# current to past.
+if test -z "$(cvs update -Pd 2>/dev/null)" \
+    -a "$(date -r ${STATUS}/last-run +%F)" != "$(date +%F)"; then
   echo "$(date)  No changes to CVS."
   exit
 fi
@@ -34,6 +38,8 @@ fi
 # -----------------------------------------------------------------------------
 echo "$(date)  Building HTML pages."
 # -----------------------------------------------------------------------------
+
+touch ${STATUS}/last-run
 
 perl tools/build.pl -q -o ${TMP} -i .
 

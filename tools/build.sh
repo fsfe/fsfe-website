@@ -28,6 +28,7 @@ echo "$(date)  Updating source files from CVS."
 
 if test -z "$(cvs update -Pd 2>/dev/null)"; then
   echo "$(date)  No changes to CVS."
+  exit
 fi
 
 # -----------------------------------------------------------------------------

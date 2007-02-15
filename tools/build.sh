@@ -91,3 +91,4 @@ echo "$(date)  Build complete."
 # -----------------------------------------------------------------------------
 
 cp ${STATUS}/status.txt ${STATUS}/status-finished.txt
+cp tools/status.php ${STATUS}/index.php

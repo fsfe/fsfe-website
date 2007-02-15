@@ -35,7 +35,7 @@ fi
 echo "$(date)  Building HTML pages."
 # -----------------------------------------------------------------------------
 
-tools/build.pl -q -o ${TMP} -i .
+perl tools/build.pl -q -o ${TMP} -i .
 
 if test $? -ne 0; then
    echo "$(date)  Build not complete. Aborting."

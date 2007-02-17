@@ -83,6 +83,15 @@ echo "$(date)  Obfuscating email addresses."
 find ${TMP} -type f -name "*.html" | xargs grep -l '@' | xargs sed -i 's/@/\&#64;/g'
 
 # -----------------------------------------------------------------------------
+echo "$(date)  Creating test site"
+# -----------------------------------------------------------------------------
+
+cp -rf ${TMP}/global ${TMP}/test
+for file in $(find ${TMP}/test -name "*.test.*"); do
+  ln -sf ${file} ${file/.test//}
+done
+
+# -----------------------------------------------------------------------------
 echo "$(date)  Activating new output."
 # -----------------------------------------------------------------------------
 
@@ -95,19 +104,6 @@ echo "$(date)  Generating translation logs."
 # -----------------------------------------------------------------------------
 
 tools/translation-log.sh ${DEST}/translations.log ${STATUS}
-
-# -----------------------------------------------------------------------------
-echo "$(date)  Creating test site"
-# -----------------------------------------------------------------------------
-
-cd /home/www/html
-cp -rf global test
-cd /home/www/html/test
-for I in `find . -name "*.test.*"`; do
-    N=`echo $I | sed s/.test//`
-    rm -f $N
-    ln -s $I $N
-done
 
 # -----------------------------------------------------------------------------
 echo "$(date)  Build complete."

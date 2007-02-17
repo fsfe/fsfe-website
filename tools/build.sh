@@ -23,7 +23,7 @@ exec 1> ${STATUS}/status.txt 2>&1
 cd ${SOURCE}
 
 # -----------------------------------------------------------------------------
-echo "$(date)  Cleaning old build directories"
+echo "$(date)  Cleaning old build directories."
 # -----------------------------------------------------------------------------
 
 rm -rf /home/www/tmp.*
@@ -89,7 +89,7 @@ echo "$(date)  Obfuscating email addresses."
 find ${TMP} -type f -name "*.html" | xargs grep -l '@' | xargs sed -i 's/@/\&#64;/g'
 
 # -----------------------------------------------------------------------------
-echo "$(date)  Creating test site"
+echo "$(date)  Creating test site."
 # -----------------------------------------------------------------------------
 
 cp -rf ${TMP}/global ${TMP}/test

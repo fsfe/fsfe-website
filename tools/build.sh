@@ -110,5 +110,6 @@ done
 echo "$(date)  Build complete."
 # -----------------------------------------------------------------------------
 
+exec 1> /dev/null 2>&1
 cp ${STATUS}/status.txt ${STATUS}/status-finished.txt
 cp tools/status.php ${STATUS}/index.php

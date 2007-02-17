@@ -94,7 +94,7 @@ echo "$(date)  Creating test site."
 
 cp -rf ${TMP}/global ${TMP}/test
 for file in $(find ${TMP}/test -name "*.test.*"); do
-  ln -sf $(basename file) ${file/.test/}
+  ln -sf $(basename ${file}) ${file/.test/}
 done
 
 # -----------------------------------------------------------------------------

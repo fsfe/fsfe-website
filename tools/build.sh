@@ -13,7 +13,7 @@ TMP=/home/www/tmp.$$
 STATUS=/var/www/web
 
 # If build is already running, don't run it again.
-if test -n "$(ps -C build.sh -o pid= | grep -v "$$")"; then
+if ps -C build.sh -o pid= | grep -q -v "$$"; then
   exit
 fi
 

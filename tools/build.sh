@@ -35,13 +35,16 @@ if test -z "$(cvs update -Pd 2>/dev/null)" \
   exit
 fi
 
+# Make sure build.sh and build.pl are executable (damn CVS!)
+chmod +x tools/build.sh tools/build.pl
+
 # -----------------------------------------------------------------------------
 echo "$(date)  Building HTML pages."
 # -----------------------------------------------------------------------------
 
 touch ${STATUS}/last-run
 
-perl tools/build.pl -q -o ${TMP} -i .
+tools/build.pl -q -o ${TMP} -i .
 
 if test $? -ne 0; then
    echo "$(date)  Build not complete. Aborting."

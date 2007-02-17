@@ -13,7 +13,7 @@ TMP=/home/www/tmp.$$
 STATUS=/var/www/web
 
 # If build is already running, don't run it again.
-if test -n "$(ps -C build.pl -o pid=)"; then
+if test -n "$(ps -C build.sh -o pid= | grep -v "$$")"; then
   exit
 fi
 
@@ -110,6 +110,5 @@ done
 echo "$(date)  Build complete."
 # -----------------------------------------------------------------------------
 
-exec 1> /dev/null 2>&1
 cp ${STATUS}/status.txt ${STATUS}/status-finished.txt
 cp tools/status.php ${STATUS}/index.php

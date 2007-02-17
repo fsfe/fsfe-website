@@ -94,6 +94,19 @@ echo "$(date)  Generating translation logs."
 tools/translation-log.sh ${DEST}/translations.log ${STATUS}
 
 # -----------------------------------------------------------------------------
+echo "$(date)  Creating test site"
+# -----------------------------------------------------------------------------
+
+cd /home/www/html
+cp -rf global test
+cd /home/www/html/test
+for I in `find . -name "*.test.*"`; do
+    N=`echo $I | sed s/.test//`
+    rm -f $N
+    ln -s $I $N
+done
+
+# -----------------------------------------------------------------------------
 echo "$(date)  Build complete."
 # -----------------------------------------------------------------------------
 

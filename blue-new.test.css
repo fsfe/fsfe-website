@@ -40,7 +40,7 @@ a:hover, a:active, a:focus {
 /* ------------------------------------------------------------------------- */
 
 td.focus-box {
-  border-left: medium #202D79;
+  border-left: thin solid #202D79;
   width: 13em;
 }
 
@@ -49,8 +49,8 @@ td.focus-box {
 /* ------------------------------------------------------------------------- */
 
 td.line {
-  border-top: thin #202D79;
-  border-bottom: thin #202D79;
+  border-top: thin solid #202D79;
+  border-bottom: thin solid #202D79;
 }
 
 .line a {
@@ -62,7 +62,7 @@ td.line {
 /* ------------------------------------------------------------------------- */
 
 td.menu {
-  border-left: medium #202D79;
+  border-left: medium solid #202D79;
   width: 13em;
   padding: 1em;
   vertical-align: top;
@@ -124,8 +124,8 @@ table.news {
 
 td.newstitle {
   margin: 0px;
-  border-bottom: thin #202D79;
-  border-left: thin #202D79;
+  border-bottom: thin solid #202D79;
+  border-left: thin solid #202D79;
   padding: 4px;
   text-align: left;
   font-weight: bold;
@@ -133,7 +133,7 @@ td.newstitle {
 
 td.newsdate {
   margin: 0px;
-  border-bottom: thin #202D79;
+  border-bottom: thin solid #202D79;
   padding: 4px;
   text-align: right;
   font-weight: bold;

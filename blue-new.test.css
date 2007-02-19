@@ -24,7 +24,7 @@ body {
 }
 
 a {
-  color: #3394CE;
+  color: #202D79;
 }
 
 a:visited {
@@ -62,7 +62,7 @@ td.line {
 /* ------------------------------------------------------------------------- */
 
 td.menu {
-  border-left: medium solid #202D79;
+  border-left: thin solid #202D79;
   width: 13em;
   padding: 1em;
   vertical-align: top;

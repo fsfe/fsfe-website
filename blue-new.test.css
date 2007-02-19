@@ -73,19 +73,15 @@ td.menu {
 }
 
 a.menu {
-  display: block;
   text-decoration: none;
   font-size: 15px;
   font-weight: bold;
-  border: 0;
 }
 
 a.submenu {
-  display: block;
   text-decoration: none;
   font-size: 13px;
   padding-left: 2em;
-  border: 0;
 }
 
 a.menu:visited, a.submenu:visited {

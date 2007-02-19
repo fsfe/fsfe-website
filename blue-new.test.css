@@ -31,10 +31,6 @@ a:visited {
   color: #639829;
 }
 
-a:hover, a:active, a:focus {
-  background: #D0F400;
-}
-
 /* ------------------------------------------------------------------------- */
 /* Logo and Focus                                                            */
 /* ------------------------------------------------------------------------- */
@@ -55,6 +51,14 @@ td.line {
 
 .line a {
   text-decoration: none;
+}
+
+.line a:visited {
+  color: #202D79;
+}
+
+.line a:hover, .line a:active, .line a:focus {
+  background: #D0F400;
 }
 
 /* ------------------------------------------------------------------------- */
@@ -78,6 +82,14 @@ a.submenu {
   text-decoration: none;
   font-size: 13px;
   padding-left: 2em;
+}
+
+a.menu:visited, a.submenu:visited {
+  color: #202D79;
+}
+
+a.menu:hover, a.menu:active, a.menu:focus, a.submenu:hover, a.submenu:active, a.submenu:focus {
+  background: #D0F400;
 }
 
 /* ------------------------------------------------------------------------- */

@@ -19,9 +19,9 @@
 </p>
 </div>
 
-<p>This FAQ contains some more detailed information on the requirements and best current practice of providing corresponding source code for GPL licensed executable code. It was compiled as a result of the numerous shortcomings and mistakes of more than sixty successful gpl enforcements.</p>
+<p>This FAQ contains some information on the requirements and best practice when providing source code for GPL licensed executable code. It was compiled as a result of the numerous shortcomings and mistakes of more than sixty successful gpl enforcements.</p>
 
-<p>Before releasing source code as required by the GPL we recommend reading through this FAQ in order to ensure completeness and mutual satisfaction with what you actually release.</p>
+<p>Before releasing source code as required by the GPL we recommend reading through this FAQ.</p>
 
 <p>This is not legal advice. If you have doubts consult a legal advisor.</p>
 
@@ -37,7 +37,7 @@
 
 <p>Generally, any sophisticated program is split into many different source code files. During the process of compilation, each of these files is compiled into executable code, after which they are linked together. This process of compiling and linking individual source code files is generally controlled by scripts. Most often the "make" program is used, whose scripts are generally referred to as "Makefiles".</p>
 
-<p>Also, some programs such as the Linux kernel tend to have compile-time configuration (in case of the Linux kernel the .config file). Since this compile-time configuration undoubtedly controls the process of compilation, you need to include any such compile-time configuration files, too.</p>
+<p>Some programs such as the Linux kernel tend to have compile-time configuration (in case of the Linux kernel the .config file). This controls the process of compilation and would need to be included too.</p>
 
 <h3>What are "scripts used to control installation"?</h3>
 
@@ -45,15 +45,11 @@
 
 <p>Please note that this is of special importance in the case of embedded devices as the executable program(s) need to be installed onto the device. If the user is not given a way to install his own (modified) versions of the program, he has no way of exercising his freedom to run modified versions of the program.</p>
 
-<p>Sometimes the process of installation is not facilitated by scripts but by some other means (such as executable programs). The GPL text only mentions the word "scripts". When reading and interpreting the license, it must understood that the license doesn't specifically only mean "scripts", but any kind of software program that is required to install a (modified) version of the compiled program.</p>
-
 <h3>What about the compiler, the toolchain?</h3>
 
-<p>The GPL explicitly states: "However, as a special exception, the source code distributed need not include anything that is normally distributed (in either source or binary form) with the major components (compiler, kernel, and so on) of the operating system on which the executable runs, unless that component itself accompanies the executable."</p>
+<p>The GPL states: "However, as a special exception, the source code distributed need not include anything that is normally distributed (in either source or binary form) with the major components (compiler, kernel, and so on) of the operating system on which the executable runs, unless that component itself accompanies the executable."</p>
 
-<p>This paragraph is written for userspace programs running on existing general purpose operating systems. If you only distribute such programs then you do not need to include compiler, kernel, linker, and so on.</p>
-
-<p>In the case of cross-compilation for embedded platforms, the cross compiler for your specific hardware is very likely not something that is "normally distributed with [...] the operating system". Therefore, you have to provide the exact version of the compiler toolchain that was used to create the executables that you have distributed. Please note that in most cases this will be GNU gcc, which is itself GPL licensed, so the GPL obligations will in turn apply to the toolchain, and you must release the complete corresponding source code to it as well.</p>
+<p>It's a good idea to release the toolchain because it might include things not normally distributed with the operating system on which the executable runs.  It also helps encourage third parties to contribute to your development effort. 
 
 <h3>What version of the source code do I have to release?</h3>
 
@@ -72,7 +68,7 @@
 <p>If the build process fails, or you end up with a non-working executable, or you have no way to install the resulting executable, then something is missing.</p>
 
 <p>Copyright (c) 2004-2006 The gpl-violations.org webmaster <br />
-Copyright (c) 2006 FSFE e.V.</p>
+Copyright (c) 2006-2007 FSFE e.V.</p>
 
   </body>
 

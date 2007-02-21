@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule ^ftf(.*) projects/ftf$1 [redirect=permanent]
+RewriteRule ^donate.html /help/donate.en.html [redirect=permanent]

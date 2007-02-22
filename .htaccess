@@ -1,3 +1,6 @@
 RewriteEngine On
+RewriteRule ^education(.*) projects/education$1 [redirect=permanent]
 RewriteRule ^ftf(.*) projects/ftf$1 [redirect=permanent]
+RewriteRule ^law(.*) projects/law$1 [redirect=permanent]
+RewriteRule ^swpat(.*) projects/swpat$1 [redirect=permanent]
 RewriteRule ^donate.html /help/donate.en.html [redirect=permanent]

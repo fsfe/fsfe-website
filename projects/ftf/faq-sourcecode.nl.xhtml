@@ -19,15 +19,14 @@
 </p>
 </div>
 
-<p>Deze FAQ bevat meer gedetailleerde informatie over de vereisten en de beste
+<p>Deze FAQ bevat informatie over de vereisten en de beste
   handelswijze voor het verdelen van de overeenkomende broncode van onder de GPL
   verdeelde code. Deze FAQ werd samengesteld aan de hand van veel tekortkomingen en
   misverstanden die we tegenkwamen in meer dan 60, succesvol bestreden, inbreuken tegen
   de GPL.</p>
 
 <p>Wij raden u aan om deze FAQ door te nemen voordat u, zoals vereist door de GPL, 
-  broncode verdeelt. Zo kan u er zich van vergewissen dat wat u verdeelt volledig is, en
-  voldoet aan uw en onze verwachtingen.</p>
+  broncode verdeelt. </p>
 
 <p>Dit is geen juridisch advies. Als je twijfelt, raadpleeg een juridisch adviseur.</p>
 
@@ -57,9 +56,8 @@
   programma, de scripts die dit programma gebruikt worden vaak "Makefiles" genoemd.</p>
 
 <p>Er zijn ook programma's zoals de Linux kernel, die bestanden hebben die tijdens de
-  compilatie gebruikt worden (zoals de .config file in linux). Deze "compile-time" configuratie
-  heeft overduidelijk een invloed op de compilatie, dus moeten ook deze compile-time
-  configuratiebestanden aangeboden worden.</p>
+  compilatie gebruikt worden (zoals de .config file). Deze bestanden bepalen mee het
+  compilatieproces en moeten dus ook meegeleverd worden.</p>
 
 <h3>Wat zijn "scripts om de installatie uit te voeren""?</h3>
 
@@ -72,27 +70,14 @@
   mogelijkheid heeft om zijn eigen (aangepaste) versie van het programma te installeren, 
   wordt hem de vrijheid ontzegt om zijn eigen aangepaste versie te gebruiken.</p>
 
-<p>Soms worden voor de installatie van een programma geen scripts gebruikt, maar andere
-  hulpmiddelen (zoals uitvoerbare programma's). De GPL-tekst maakt alleen vermelding van
-  het woord scripts. Maar als men de licentie grondig leest en analyseert, is het duidelijk dat
-  men zich niet alleen tot de scripts mag beperken, maar het moet interpreteren als elk stuk
-  software dat nodig kan zijn om de (aangepaste) versie van het gecompileerde programma
-  te installeren.</p>
-
 <h3>Wat met de compiler en andere gebruikte programma's?</h3>
 
-<p>De GPL stelt duidelijk: "However, as a special exception, the source code distributed need not include anything that is normally distributed (in either source or binary form) with the major components (compiler, kernel, and so on) of the operating system on which the executable runs, unless that component itself accompanies the executable."</p>
+<p>De GPL stelt: "However, as a special exception, the source code distributed need not include anything that is normally distributed (in either source or binary form) with the major components (compiler, kernel, and so on) of the operating system on which the executable runs, unless that component itself accompanies the executable."</p>
 
-<p>Deze paragraaf is speciaal geschreven voor gewone programma's die gebruikt worden op
-  gewone algemene besturingssystemen. Als je alleen zulke programma's verdeelt, is het niet
-  nodig om de compiler, kernel, linker, ... mee te leveren.</p>
-
-<p>In het geval van cross-compilatie voor toestellen met ingebouwde software, wordt de 
-  cross-compiler voor jouw specifieke hardware waarschijnlijk niet meegeleverd met de
-  "gewone distrubutie ,,, voor het besturingssysteem". Daarom moet u in dit geval de juiste
-  versies van de programma's die u gebruikte om uw uitvoerbare code te compileren, 
-  meeleveren. Let op! Dit zijn vaak ook programma's onder de GPL, zoals GNU gcc, waarvoor
-  dus ook dezelfde regel geldt dat u alle overeenkomende broncode moet publiceren.</p>
+<p>Het is altijd een goed idee om ook de programma's die je gebruikte voor de compilatie
+  mee te leveren, er kunnen zaken bij zitten die niet standaard meegeleverd worden bij
+  het besturingssysteem waarop uw programma gebruikt zal worden. Het kan ook een
+  motivatie zijn voor anderen om mee te werken aan uw programma.</p>
 
 <h3>Welke versie van de broncode moet ik verdelen?</h3>
 
@@ -119,7 +104,7 @@
   het uitvoerbaar bestand te installeren, dan ontbreekt er iets.</p>
 
 <p>Copyright (c) 2004-2006 The gpl-violations.org webmaster <br />
-Copyright (c) 2006 FSFE e.V.</p>
+Copyright (c) 2006- 2007 FSFE e.V.</p>
 
   </body>
 

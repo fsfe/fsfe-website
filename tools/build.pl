@@ -68,6 +68,7 @@ our %languages = (
   pt => 'Português',
   ro => 'Român&#259;',
   ru => '&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;',
+  sl => 'Sloven&#353;&#269;ina',
   sq => 'Shqip',
   sr => 'Srpski',
   sv => 'Svenska',

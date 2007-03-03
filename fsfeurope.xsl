@@ -202,8 +202,8 @@
   <xsl:template match="head">
     <head>
       <link rel="stylesheet" href="/fsfeurope.css" type="text/css" />
-      <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-      <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+      <link rel="icon" href="/graphics/fsfeurope.ico" type="image/x-icon" />
+      <link rel="shortcut icon" href="/graphics/fsfeurope.ico" type="image/x-icon" />
       <xsl:apply-templates select="@*|node()"/>
     </head>
   </xsl:template>

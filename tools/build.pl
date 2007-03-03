@@ -476,10 +476,11 @@ while (my ($file, $langs) = each %bases) {
         #
         # Do the actual transformation.
         #
+        my $results;
         if ($dir eq "test") {
-	  my $results = $test_stylesheet->transform($dom);
+	  $results = $test_stylesheet->transform($dom);
         } else {
-	  my $results = $global_stylesheet->transform($dom);
+	  $results = $global_stylesheet->transform($dom);
         }
 
         #

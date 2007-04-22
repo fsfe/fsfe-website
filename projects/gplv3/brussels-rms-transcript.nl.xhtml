@@ -1,0 +1,887 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<html>
+  <head>
+    <title>GPLv3 - Afschrift van Richard Stallman's toespraak in Brussel,
+    België; 01-04-2007</title>
+  </head>
+
+  <body>
+
+<div style="float:right;">
+<a href="gplv3.html"><img SRC="GPLv3-logo-red.png"
+   ALT="GPLv3 logo" BORDER="0"
+   WIDTH="319" HEIGHT="130" /></a>
+</div>
+
+<h1 id="top"> Afschrift van Richard Stallman's toespraak in Brussels, België; 1 april 
+  2007</h1>
+
+
+<p>
+  Het originele afschrift verscheen in het Engels op 4 april 2007.  Achtergrond en 
+  aanverwante onderwerpen
+</p>
+
+<ul>
+  <li><a href="http://fsfe.org/transcripts">Lijst met afschriften van de FSFE</a></li>
+  <li><a href="diff-draft2-draft3.en.html">diff tussen v2 en v3</a></li>
+  <li><a href="http://gplv3.fsf.org/comments/gplv3-draft-3.html">Discussietekst 3 
+    (open commentaarsysteem)</a></li>
+  <li><a href="http://gplv3.fsf.org/gpl3-dd3-rationale.pdf">Document met achterliggende
+    redenering</a></li>
+  <li><a href="http://gplv3.fsf.org/dd3-faq">dd3 FAQ</a></li>
+  <li><a href="http://www.groklaw.net/article.php?story=20070403114157109">Het interview
+   met Sean Daly op diezelfde dag</a></li>
+  <li><a href="http://gplv3.fsf.org/lgpl3-dd2-guide">De tweede discussietekst voor de LGPL is
+    gepubliceerd</a></li>
+  <li><a 
+    href="http://ciaran.compsoc.com/TEMPORARY-URL-rms-gplv3-20070401.vorbis.ogg">
+    De geluidsopnamen</a></li>
+</ul>
+
+<p>
+  De opnamen werden verzorgd door Sean Daly. Afschrift door <a 
+  href="/about/oriordan/oriordan.html">Ciarán O'Riordan</a>. U kan deze activiteiten
+  ondersteunen door <a href="http://www.fsfe.org/">lid te worden van de Fellowship of
+  FSFE</a>, door <a href="/help/donate">donaties aan de FSFE</a> en door anderen
+  aan te moedigen hetzelfde te doen. De toespraak verliep in het Engels.
+</p>
+
+<h2 id="menu">Hoofdpunten van de toespraak</h2>
+
+<ol>
+
+<li><a href="#free-sw">Wat is Vrije Software?</a></li>
+<li><a href="#gnu">Het GNU-project</a></li>
+<li><a href="#licences">Vrije Softwarelicenties</a></li>
+<li><a href="#internationalisation">Internationalisering</a></li>
+<li><a href="#tivoisation">Tivoïsatie</a></li>
+<li><a href="#tivoisation-d3">Tivoïsatie - de beperkingen in de derde proeftekst</a></li>
+<li><a href="#eucd">Uithollen van de EUCD en de DMCA</a></li>
+<li><a href="#ms-novell">Novell, Microsoft en patenten</a></li>
+<li><a href="#termination">Stopzetten van de licentie</a></li>
+<li><a href="#added">Formaliseren van de extra toestemmingen</a></li>
+<li><a href="#bittorrent">BitTorrent</a></li>
+<li><a href="#retaliation">Patentvergelding en de Apache-licentie</a></li>
+<li><a href="#bracketed">De zin tussen vierkante haakjes</a></li>
+
+</ol>
+
+<h2 id="presentation">De toespraak</h2>
+
+<div style="float:right;">
+<img SRC="rms-20070401.jpeg"
+   ALT="Richard Stallman speaking" BORDER="0"
+   WIDTH="408" HEIGHT="447" />
+</div>
+
+<p>
+  <span id="free-sw">(<a href="#menu">menu</a>) [Sectie: Wat is Vrije Software?]</span>
+</p>
+
+<p class="indent">
+  Om de GNU General Public License te kunnen begrijpen, moet men eerst weten wat Vrije
+  Software is. Vrije Software is software die de vrijheden van haar gebruikers respecteert.
+  Software die niet vrij is, noemt men propriëtaire software. Niet-vrije software, software die
+  haar gebruikers onderwerpt, wordt verdeeld onder een sociaal systeem dat de gebruikers
+  verdeeld en hulpeloos maakt. Verdeeld omdat het voor elke gebruiker verboden is om het
+  programma met andere te delen, hulpeloos omdat de gebruikers de broncode niet hebben,
+  ze kunnen de software niet aanpassen, niet beheren, men kan zelfs niet onafhankelijk
+  controleren wat de software echt doet. Er kunnen best slechte eigenschappen ingebouwd
+  zitten, en de gebruikers kunnen zelfs niet onderzoeken wat die slechte eigenschappen zijn.
+</p>
+
+<p class="indent">
+  Vrije Software respecteert de vrijheid van haar gebruikers. Daarom is het heel belangrijk om
+  duidelijk te maken dat als we spreken over Vrije Software, we praten over vrijheid en niet over
+  de prijs, we praten niet over gratis software. Het gaat ons niet over de prijs, de prijs is maar 
+  een detail. Een bijkomend iets, geen ethische regel. Als u op een juiste manier over Vrije
+  Software wil nadenken bekijk het dan als vrije meningsuiting, en niet als een vrij (gratis) biertje.
+  (think of free speech, not free beer)
+</p>
+
+<p class="indent">
+  Om precies te zijn, geeft Vrije Software u de volgende vier vrijheden:
+</p>
+
+  <ul>
+
+    <li>
+      Vrijheid nul, de vrijheid om een programma te gebruiken zoals u dat zelf wil.
+    </li>
+
+    <li>
+      Vrijheid één, de vrijheid om de broncode van een programma te bestuderen en te
+      veranderen, zodat het programma doet wat u wil als u het gebruikt.
+    </li>
+
+    <li>
+      Vrijheid twee, de vrijheid om uw buur te helpen; dat is de vrijheid om exacte kopieën
+      door te geven aan anderen, als u dat wil.
+    </li>
+
+    <li>
+      Vrijheid drie, de vrijheid om uw gemeenschap te helpen; dat is de vrijheid om uw
+      aangepaste versie van de software te verdelen, als u dat wil.
+    </li>
+
+  </ul>
+
+<p class="indent">
+  Elk van deze vrijheden geeft u de kans om iets te doen, als u dat wil. Het is geen verplichting,
+  het moet niet. U bent niet verplicht een programma te gebruiken. U hoeft de broncode niet te
+  bestuderen en te veranderen. U moet geen exacte kopieën van het programma verdelen. En
+  u moet uw aangepaste versies van de software niet verdelen. Maar het staat u wel vrij dat te
+  doen, als u dat wil.
+</p>
+
+<p class="indent">
+  Als dit een toespraak was over Vrije Software, zou ik nu uitleggen waarom deze vier vrijheden
+  essentieel zijn, maar in deze korte inleiding zal ik dat achterwege moeten laten. Het volstaat
+  dat ik zeg indien software met deze vier vrijheden verdeeld wordt, de software verdeeld en
+  gebruikt wordt op een sociaal ethisch verantwoorde wijze. Wat betekent dat de software, binnen 
+ deze context tenminste, ethisch verantwoord is. Maar als één van deze vrijheden wezenlijk
+ ontbreekt, dan is het programma propriëtaire software, wat betekent dat het programma
+ verdeeld en gebruikt wordt op een onethische wijze, wat dit programma ook doet, het zou
+ nooit op zo'n wijze verdeeld mogen worden.
+</p>
+
+<p class="indent">
+  Een niet-vrij programma ontwikkelen levert geen bijdrage aan de gemeenschap. Het is een
+  aanval op onze vrijheid en op de sociale solidariteit. Zo'n aanvallen moeten ontmoedigd
+  worden, ik kijk uit naar de dag dat ze ophouden te bestaan. Dat is het doel van de Vrije
+  Software-beweging; alle computergebruikers moeten deze vier vrijheden hebben, voor alle
+  software die ze gebruiken. De onderwerping van anderen, door middel van de software die 
+  ze gebruiken, moet ophouden.
+</p>
+
+
+<p>
+  <span id="gnu">(<a href="#menu">menu</a>) [Sectie: Het GNU-project]</span>
+</p>
+
+<p class="indent">
+  Om dit te verwezenlijken, of toch tenminste om een aanzet te geven, begon ik in 1984 aan de
+  ontwikkeling van een besturingssysteem dat volledig uit Vrije Software moest bestaan. Ik
+  noemde het GNU, wat een recursief acroniem is voor "GNU's Not Unix". Dit systeem is in
+  technisch opzicht compatibel met Unix, maar het is belangrijk dat het geen Unix is. Unix is
+  propriëtaire software en GNU, dat dus geen Unix is, kan door ons, de ontwikkelaars, vrij
+  gemaakt worden, en dat maakt het verschil - u krijgt een besturingssysteem dat u vrij kan
+  gebruiken zonder uw vrijheid voor iemand te moeten opgeven.
+</p>
+
+<p class="indent">
+  Vandaag zijn er tientallen miljoenen, misschien zelfs honderd miljoen gebruikers van één of
+  andere variant van het GNU-systeem. De meeste mensen weten niet dat ze een variant van
+  het GNU-systeem gebruiken, omdat zij denken dat ze Linux gebruiken. Linux is inderdaad
+  één onderdeel van het systeem dat ze gebruiken. Een onderdeel dat een essentieel deel
+  van het werk verricht en dat ontwikkeld werd in 1991, en door zijn ontwikkelaar bevrijd werd
+  in 1992. Met de GNU plus Linux combinatie werd het voor het eerst mogelijk om een
+  PC-compatibele computer te gebruiken in vrijheid.
+</p>
+
+<p>
+  <span id="licences">(<a href="#menu">menu</a>) [Sectie: Vrije Softwarelicenties]</span>
+</p>
+
+<p class="indent">
+  Linux werd bevrijd door het opnieuw uit te brengen onder de GNU General Public License.
+  De GNU General Public License is de Vrije softwarelicentie die ik geschreven heb voor de
+  onderdelen van het GNU-systeem. Als wij onderdelen schreven, maakten we er Vrije Software
+  van door ze uit te brengen onder de GNU GPL.
+</p>
+
+<p class="indent">
+  Maar wat betekent dat? Juridisch bekeken is een programma een literair werk, en dus
+  onderhevig aan het auteursrecht. Alles wat u schrijft, valt automatisch onder het auteursrecht -
+  wat eigenlijk een absurde wet is, maar het is zo - en deze wetgeving verbiedt kopiëren,
+  verdelen en aanpassingen aan dat werk. Dus hoe kan zo'n programma ooit Vrije Software
+  worden? De eigenaar van het auteursrecht moet een tekst bijvoegen die de gebruikers
+  zegt: "U heeft de vier vrijheden", omdat wij daar geen probleem van maken. Zo'n tekst is een
+  Vrije Softwarelicentie. Elke tekst die u deze vrijheden geeft is een Vrije Softwarelicentie.
+</p>
+
+<p class="indent">
+  Er bestaan momenteel wel een twaalftal verschillende Vrije Softwarelicenties, maar de GNU
+  GPL is de meest populaire. Het wordt gebruikt voor ongeveer 70% van alle Vrije
+  Softwarepakketten. Het grootste verschil tussen de GNU GPL en de meeste andere Vrije
+  Softwarelicenties is dat de GNU GPL een copyleftlicentie is.
+</p>
+
+<p class="indent">
+  Copyleft is een techniek die ik heb uitgevonden, een manier om de auteursrechtwetgeving te
+  gebruiken om de vrijheid van anderen te verdedigen. Om een Vrije Softwarelicentie te zijn,
+  moet een licentie u de vier vrijheden geven, als u dus een programma krijgt onder om het
+  even welke Vrije Softwarelicentie, dan heeft u deze vier vrijheden. De licentie geeft ze u. En
+  daar hoort ook vrijheid nummer drie bij, de vrijheid om aangepaste versies te verdelen, en
+  vrijheid nummer twee, de vrijheid om kopieën zonder aanpassingen te verspreiden. Maar als
+  u deze vrijheden gebruikt, als u deze kopieën verder verdeelt aan anderen, hebben zij dan
+  ook deze vier vrijheden?
+</p>
+
+<p class="indent">
+  Misschien wel, misschien niet, het hangt van jou af. Zo zag ik in 1984 bijvoorbeeld al het
+  gevaar dat iemand uitvoerbare code van het programma zou verdelen, zonder er de broncode
+  bij te leveren, wat als gevolg zou hebben dat de ontvangers van deze bestanden nooit
+  vrijheid nummer één zouden hebben. De vrijheid om de broncode te bestuderen en het
+  programma aan te passen zodat het doet wat zij willen.
+</p>
+
+<p class="indent">
+  Dus als je kopieën kan verdelen zonder de broncode mee te leveren, dan zouden mensen
+  die het programma van jou krijgen nooit de vier vrijheden hebben. Toch niet allemaal.
+</p>
+
+<p class="indent">
+  Iets anders wat je bijvoorbeeld zou kunnen doen, is bijkomende beperkingen opleggen. Als
+  je het programma verder verdeelt, gebruik je misschien een andere licentie, één met meer
+  beperkingen, die de vier vrijheden van de gebruiker niet respecteert. Als je dat moest doen,
+  hebben de personen die het programma van jou krijgen geen Vrije Software gekregen. Veel
+  Vrije Softwarelicenties staan dit soort gedrag toe, ze geven je de vier vrijheden, maar helpen
+  ze niet verdedigen. Een tussenpersoon kan alle vrijheid aan het programma ontnemen en het
+  aan jou geven. Je krijgt dan wel de code, maar niet de vrijheid. Je krijgt dan bijvoorbeeld
+  alleen het uitvoerbare bestand, of het uitvoerbare bestand met een licentie die zegt dat het
+  niet is toegestaan om dit programma te kopiëren. Misschien krijg je zelfs de broncode, maar
+  heb je niet de toestemming om ze te kopiëren. Er kan van alles gebeuren met als resultaat
+  dat je geen Vrije Software krijgt.
+</p>
+
+<p class="indent">
+  Het was mijn doel, bij het ontwikkelen van het GNU besturingssysteem, om alle 
+  computergebruikers opnieuw vrijheid te geven. Als het voor een tussenpersoon mogelijk is
+  om de software niet-vrij te maken, als men, bijvoorbeeld door het veranderen van de 
+  software, het excuus heeft om de software niet-vrij te maken, dan is mijn doel mislukt. Dan zijn 
+  wij er niet in geslaagd om de gebruiker zijn vrijheid te geven.
+</p>
+
+<p class="indent">
+  Daarom heb ik een Vrije Softwarelicentie ontworpen die er voor zorgt dat iedereen die een
+  versie krijgt van het programma, een Vrije Softwareversie krijgt, een versie met de vier 
+  vrijheden. In versie één van de GNU GPL, die gepubliceerd werd in 1989, heb ik er dan ook
+  voor gezorgd dat de twee eerder beschreven aanvallen op uw vrijheid, onmogelijk werden.
+</p>
+
+<p class="indent">
+ De eerste: alleen het uitvoerbaar bestand verdelen, zonder de broncode. GPL versie één
+ stelde duidelijk dat als u een uitvoerbaar bestand wil verdelen, u ook de broncode voor
+ dezelfde mensen beschikbaar moet maken. Zo werd deze aanval afgeblokt.
+</p>
+
+<p class="indent">
+  De andere aanval was het opleggen van bijkomende licentievoorwaarden, het veranderen
+  van de licentie. Versie één van de GPL stelde duidelijk dat u de toestemming hebt om 
+  kopieën te verdelen, maar dat u dat wel opnieuw onder deze licentie moet doen, niets meer
+  en niets minder. Op enig andere manier mag u de software niet verdelen. Dus geen extra
+  voorwaarden. En de voorwaarden die anderen hun vrijheid geven mogen niet verwijderd
+  worden. Elke kopie die u aan iemand anders geeft, moet juridisch gezien onder dezelfde
+  licentie verdeeld worden, onder de GNU GPL.
+</p>
+
+<p class="indent">
+  In 1991 publiceerde ik de tweede versie van de GNU GPL, die nog andere methodes om
+  onze vrijheid te ontnemen, moest blokkeren. Een methode die ik in 1989 nog niet kende, maar
+  waar ik me later bewust van werd. Dat was een patenthouder die een verdeler van de
+  software zou aanklagen, en in een vergelijk zou de verdeler ermee akkoord gaan om "de
+  software te verdelen met  bepaalde beperkingen voor de gebruikers".
+</p>
+
+<p class="indent">
+  Wat konden we daaraan doen? Softwarepatenten zijn wapens die niet zouden mogen
+  bestaan. Zij zijn een bedreiging voor de computergebruikers, ze ondermijnen 
+  softwareontwikkeling, ze zijn alleen positief voor de megabedrijven. Het zijn ook de 
+  megabedrijven die lobbyen voor deze patenten, met de hulp van hun schoothondje,
+  de regering uit Washington.
+</p>
+
+<p class="indent">
+  In landen die gek genoeg zijn geweest om softwarepatenten toe te staan, kan een
+  patenthouder elke verspreiding van het programma tegenhouden, als dat een 
+  gepattenteerd idee van hem bevat. We kunnen dit soort gedrag door middel van een licentie
+  niet tegenhouden. Een Vrije Softwarelicentie geeft je enkel de toestemming om de
+  auteursrechten te gebruiken van het betreffende werk, het heeft niets te maken met iemand
+  anders zijn patenten.
+</p>
+
+<p class="indent">
+  We kunnen niet verhinderen dat een patenthouder een programma dood maakt, maar we
+  kunnen wel hopen dat we het programma kunnen besparen van iets ergers dan de dood,
+  het programma niet-vrij maken, het herleiden tot een instrument voor onderwerping. Ons
+  programma kan beter ophouden te bestaan, tenminste voor de volgende twintig jaar, de
+  tijd dat een patent geldt, dan dat het een instrument wordt voor onderwerping van zijn
+  gebruikers. Dat was een oplossing die ik wel kon verwezenlijken. Dus in GPL versie twee,
+  sectie zeven staat dat als je extra voorwaarden krijgt opgelegd voor het gebruik, of als er 
+  extra voorwaarden zijn die je verbieden het programma te verdelen met al de vrijheden van 
+  de GPL, dan mag je het programma niet meer verdelen.
+</p>
+
+<p class="indent">
+  Dus iedereen die jou probeert aan te klagen, of die daarmee dreigt, en een vergelijk probeert 
+  te bekomen waardoor het programma een instrument wordt voor onderwerping, zal 
+  ontdekken dat hij alleen de dood van het programma heeft bekomen. ...wat ten minste het
+  veel ergere lot dan de dood, voor het programma voorkomt. En het is al gebleken, dat deze
+  maatregel onze gemeenschap een zekere bescherming biedt, aangezien patenthouders er 
+  vaak weinig voordeel in zien om een programma 'dood' te maken. Als aan de andere kant,
+  een patent een programma niet-vrij kon maken, en mensen moest kunnen laten betalen om
+  het te gebruiken, dan zouden ze er vast wel de voordelen van in zien. Dus als de patenhouder
+  de kans moest krijgen om een programma te misbruiken, dan zou dat veel verleidelijker zijn
+  dan de kans om het programma te vermoorden. Door ons been stijf te houden, maken we het
+  dus minder waarschijnlijk dat ergere dingen met onze software gebeuren.
+</p>
+
+<p class="indent">
+  GPL versie twee wordt nu al zestien jaar gebruikt. De afgelopen jaren zagen we al vaak
+  redenen om er veranderingen in aan te brengen. Twee jaar geleden, hebben we besloten
+  de we er echt werk van gingen maken en een nieuwe versie wilden uitbrengen. We beseften
+  dat dat tijd zou vragen. Ik heb enkele maanden van 2005 aan de derde versie van de GPL
+  gewerkt, om een eerste discussietekst klaar te krijgen tegen januari 2006.
+</p>
+
+<p class="indent">
+  We hebben zopas de derde discussietekst gepubliceerd en hebben beslist om nog zestig
+  dagen te wachten, om dan hopelijk de allerlaatste discussietekst voor te stellen die na de
+  laatste commentaren de uiteindelijke versie moet worden.
+</p>
+
+<p class="indent">
+  Welke veranderingen hebben we ingevoerd?
+</p>
+
+<p class="indent">
+  Mensen vragen vaak voor een eenvoudige samenvatting van de veranderingen, maar dat
+  is onmogelijk. Dat komt omdat elke verandering vrij specifiek is, maar steeds met hetzelfde
+  doel voor ogen: de vrijheid van elke gebruiker verdedigen. Dat zal nooit veranderen. Dus
+  alle veranderingen gaan over een specifiek punt en detail. Ik zal iets vertellen over de meest
+  belangrijke. Eén ervan is de internationalisering.
+</p>
+
+<p>
+  <span id="internationalisation">(<a href="#menu">menu</a>) [Sectie: 
+    Internationalisering]</span>
+</p>
+
+<p class="indent">
+  We hebben de gebruikte taal aangepast, om te voorkomen dat we termen moeten gebruiken
+  die meer dan nodig verschillen tussen verschillende landen. Termen zoals "distribute". In GPL
+  versie drie, gebruiken we niet langer de term "distribute". We hebben twee nieuwe termen
+  gedefinieerd, we definieerden ze op zo'n manier dat ze wereldwijd zo gelijk mogelijk
+  geïnterpreteerd kunnen worden. De eerste term is "propagate", wat zoiets als kopiëren
+  betekent, of alles wat erop lijkt en dat valt onder de auteursrechten.
+</p>
+
+<p class="indent">
+Alles behalve het aanpassen van een kopie of het gebruiken van het programma, valt onder
+"propagating". De tweede term is "convey", wat ongeveer neerkomt op het verdelen onder
+anderen, het werd omschreven in functie van de term "propagating" op zo'n manier dat 
+anderen ook een kopie kunnen verkrijgen. We proberen op deze manier de term "distribution"
+te vermijden. In de rest van de licentie spreken we dus over "propagating" en "conveying" van
+het werk. Op deze manier zijn de termen vrij universeel. Ze zullen nooit overal helemaal gelijk
+zijn, zolang de details van de auteursrechten in verschillende landen verschillen.
+</p>
+
+<p>
+  <span id="tivoisation">(<a href="#menu">menu</a>) [Sectie: Tivoïsatie]</span>
+</p>
+
+<p class="indent">
+  Een andere belangrijke verandering dient om een nieuwe aanval op onze vrijheden, die de
+  laatste jaren steeds meer de kop op steekt, aan te pakken. Ik noem het tivoïsatie. Dit is de
+  praktijk om een machine te ontwikkelen die weigert om software te draaien die door de
+  gebruiker werd aangepast.
+</p>
+
+<p class="indent">
+  Het is genoemd naar de, volgens mij, eerste machine die dit deed, de Tivo. De Tivo bevat
+  Vrije Software onder de GPLv2, en de makers hebben ook de broncode vrijgegeven. De
+   gebruiker van de Tivo kan de software dus aanpassen, zijn nieuwe versie compileren, deze
+   versie installeren op zijn machine, waarna de machine zal weigeren om deze versie te draaien 
+  omdat ze merkt dat het een aangepaste versie van de software is. Dat betekent dat op een
+  bepaalde manier de gebruiker wel zijn vrijheid nummer één heeft kunnen uitoefenen, maar in
+  praktijk is hij het recht verloren, men wordt bedrogen. Dit gebeurt nu systematisch, en wordt
+  dus een systeem om onze vrijheid te bedreigen. We hebben besloten om ook dit bedrog te
+  blokkeren. We hebben een extra voorwaarde gemaakt voor het verdelen van de uitvoerbare
+  code: we zeggen dat als u uitvoerbare code verdeelt samen met een product, of voor het
+  gebruik in een bepaald product, u ook al de nodige bijhorende zaken moet leveren die nodig
+  zijn om een eigen, aangepaste versie van de software op dat product te kunnen installeren
+  en te laten werken met dezelfde mogelijkheden als het origineel, tenzij de nieuwe software
+  juist die functies verandert. Wat belangrijk is, is niet alleen het feit dat een gebruiker in
+  staat is om zijn eigen versie te installeren en te laten werken, maar zeker ook dat die nieuwe
+  versie dezelfde mogelijkheden moet krijgen als het origineel, ondanks dat ze is aangepast.
+</p>
+
+<p class="indent">
+  Het feit alleen al dat een programma wordt gecontroleerd op aanpassingen, en als dat het
+  geval is,niet in staat wordt gesteld om hetzelfde te doen, dan is dat een inbreuk, dat betekent
+  dat de installatie-informatie onvoldoende is, dat is wat bijvoorbeeld zou gebeuren onder het
+  Microsoft schema dat men vroeger Palladium noemde. Zij hadden het idee opgevat dat een
+  programma zo gecodeerd zou worden dat alleen één bepaald programma in staat zou zijn
+  om het opnieuw te decoderen. Als je de broncode van het programma zou nemen, de software
+  veranderde en het opnieuw compileerde, veranderde de checksum van uw versie. Dus zou
+  de aangepaste versie niet langer in staat staat zijn om de bestanden, gemaakt met het 
+  originele programma, te lezen. En de originele versie zou ook niet in staat zijn om bestanden 
+  die met uw programma gemaakt zijn,voor zover die al bestaan, te lezen. Zij stellen dit voor als
+  een symmetrische situatie, en beweren dat ze jou niets in de weg leggen, maar onze
+  voorwaarden stellen dat je alles moet meeleveren zodat uw aangepaste versie in staat is om
+  dezelfde taak te verrichten als het origineel, en hier is het duidelijk dat alleen het feit dat je
+  programma veranderde er voor gezorgd heeft dat het niet langer dezelfde taak kan  
+  verrichten.
+</p>
+
+<p>
+  <span id="tivoisation-d3">(<a href="#menu">menu</a>) [Sectie: Tivoïsatie - 
+    de beperkingen in de derde proeftekst]</span>
+</p>
+
+<p class="indent">
+  In de derde versie hebben we ervoor gekozen om de voorwaarden een beetje af te zwakken.
+  We hebben het beperkt voor een categorie toestellen die wij "producten voor particulieren"
+  noemen, waarmee we alle consumentenproducten en toestellen bedoelen die gemaakt zijn 
+  om in huis te gebruiken. Dit hebben we gedaan om toestellen uit te sluiten die bedoeld zijn 
+  voor het gebruik in bedrijven en die normaal gezien nooit door gewone consumenten gebruikt
+  zullen worden.
+</p>
+
+<p class="indent">
+ We hebben deze regel gewijzigd omdat het grootste gevaar ligt bij de producten voor
+  particulieren, en we er dankzij deze wijziging in slagen om bedrijven gedeeltelijk akkoord te
+  laten gaan met de nieuwe regeling, die naar wij hopen zal volstaan om deze dreiging af te
+  slaan.
+</p>
+
+<p class="indent">
+  Producten die deze techniek van tivoïsatie gebruiken, doen dat meestal omdat één of 
+  andere 'slechte' eigenschap in het product zit ingebouwd. De Tivo bijvoorbeeld bespioneert
+  zijn gebruikers en past DRM technieken toe. Daarom willen zij niet dat je hun programma
+  wijzigt. Digital Ristrictions Management is gewoon onethisch, dat zou nooit getolereerd mogen
+  worden. En je gebruikers bespioneren is ook onethisch, maar we hebben niets in onze 
+  GPL gezet dat zegt dat je je gebruikers niet mag bespioneren, of dat je software in staat moet
+  zijn om iets te kopiëren. We plaatsen helemaal geen beperkingen op de functionaliteiten van
+  een door u aangepast programma.
+</p>
+
+<p class="indent">
+  De anti-tivoïtatie vereisten, beperken je niet op dat gebied. Je kan de slechtst mogelijke
+  praktijken bedenken, en ontwikkelen in een aangepaste versie. Wij proberen er alleen voor
+  te zorgen dat de gebruikers die het programma van jou krijgen, de vrijheid hebben om deze
+  slechte eigenschappen terug te verwijderen en om het even welke goede eigenschap die
+  je verwijderde opnieuw te implementeren. Zij moeten de vrijheid daarvoor hebben, net zoals
+  u daarvoor de vrijheid had. Dat is hetgeen waar de anti-tivoïsatie regeling voor zorgt.
+</p>
+
+<p>
+  <span id="eucd">(<a href="#menu">menu</a>) [Sectie: Uithollen van de EUCD en de 
+    DMCA]</span>
+</p>
+
+<p class="indent">
+  We hebben nu ook voorzieningen in sectie drie, die proberen een tegengewicht te vormen
+  voor oneerlijke wetgeving zoals de Digital Millenium Act in de VS, en het EU Copyright
+  Directive - een verdrag dat nooit ondertekend zou worden door een regering die haar
+  burgers wil vertegenwoordigen.
+</p>
+
+<p class="indent">
+  De regeling bevat twee paragrafen. Eén die gericht is op de DMCA en gelijkaardige
+  wetgeving, een tweede gericht op de EU Copyright Directive, maar beiden hebben hetzelfde
+  doel. Wat we willen bereiken: als iemand software onder de GPL gebruikt als onderdeel van
+  een schema om iets de coderen of te decoderen, dan kan tegen een ander programma dat
+  deze gegevens decodeert nooit een klacht ingediend worden omdat ze een overtreding zijn
+  van deze wetten. Dit is een eenvoudige maatregel om te voorkomen dat mensen niet langer
+  ,al dan niet aangepaste, versies van die software zouden kunnen verspreiden. We zorgen
+  ervoor dat deze wetten niet gebruikt kunnen worden om aangepaste versies van deze
+  software, verdeeld onder de GPL, tegen te houden.
+</p>
+
+<p>
+[26:30]
+</p>
+
+<p>
+  <span id="ms-novell">(<a href="#menu">menu</a>) [Sectie: Novell, Microsoft, en 
+    patenten]</span>
+</p>
+
+<p class="indent">
+  Er bestaat nog een andere aanval op de vrijheid van Vrije Software, die we pas vorig jaar
+  in november ontdekten met de Novell-Microsoft overeenkomst. Novell maakte zo een
+  overeenkomst met Microsoft, Novell betaalt Microsoft voor het verdelen van software onder
+  een GPL-licentie, Microsoft geeft de klanten van Novell in ruil een zeer beperkte
+  patentlicentie, die alleen geldig is als men akkoord gaat om veel van de vrijheden die de 
+  GPL hen geeft op te geven.
+</p>
+
+<p class="indent">
+  Dit is een zeer grote bedreiging, dus pakken we dit langs twee kanten aan. Eén maatregel is
+  gericht tegen Microsofts deel in de overeenkomst. Wij zeggen: als je een overeenkomst sluit
+  voor het bezorgen van iemand anders zijn versie van een programma onder de GPL versie
+  drie, en je geeft samen daarmee om het even welke soort van patentlicentie, dan wordt deze
+  patentlicentie uitgebreid naar iedereen die het programma krijgt. Dus als Novell software
+  gaat verdelen met een GPLv3 licentie met deze overeenkomst, dan heeft dat gevolgen voor
+  Microsoft want zij verzorgen een vorm van verdeling door hun overeenkomst.
+</p>
+
+<p class="indent">
+  De andere paragraaf, die beiden in sectie elf zitten, is gericht op Novells deel van de
+  overeenkomst, en zegt: als je een programma verdeelt onder een afspraak met een derde,
+  zodat uw klanten, op een discriminerende wijze, de belofte krijgen om niet aangeklaagd te
+  worden voor patentinbreuken, dan ben je in overtreding met de licentie en verlies je dus het 
+  recht de software nog langer te verdelen.
+</p>
+
+<p class="indent">
+  Er zijn eigenlijk wel wat meer voorwaarden, omdat we bepaalde andere praktijken willen
+  uitsluiten. Zo zijn er bijvoorbeeld patentparasieten, dat zijn bedrijven die enkel en alleen
+  bestaan om mensen te bedreigen met rechtszaken voor patentinbreuken en hen willen
+  laten betalen. Als zoiets gebeurt, hebben de bedrijven die aangevallen worden vaak geen
+  andere keuze dan te betalen. Wij zouden echt niet willen dat ze daarna in een positie van
+  GPL-overtreder komen te zitten. Dus kwam er een voorwaarde dat deze regeling alleen
+  geldt als de patenthouder zelf ook een verdeler van software is. Patentparasieten doen dat
+  dus niet. Met als gevolg dat slachtoffers van deze patentparasieten niet in overtreding worden
+  gesteld door deze paragraaf.
+</p>
+
+<p class="indent">
+  We hebben ook maatregelen genomen om algemene kruis-licenties en soortgelijke 
+  praktijken, die ons niet op dezelfde manier bedreigen, uit te sluiten.
+</p>
+
+<p>
+[29:38]
+</p>
+
+<p class="indent">
+  Sectie elf, waarin deze paragrafen zijn opgenomen, doen nog meer. We hebben beslist dat
+  in de GPL versie drie, de verdelers expliciet patenlicenties moeten geven als ze de
+  software verdelen. We hebben dit op twee manieren gedefinieerd. Zij die bijdragen leveren
+  aan het programma, die ook maar iets wijzigen, geven een bevestigende patentlicentie aan
+  alle toekomstige ontvangers. Zij die alleen maar kopieën van de software verder geven, 
+  zonder iets te veranderen, zijn ertoe gebonden niemand van de toekomstige ontvangers aan
+  te klagen, of de licentieovereenkomst wordt verbroken.
+</p>
+
+<p class="indent">
+  Dit is een soort van compromis, dat zo ontworpen is dat veel bedrijven geïnteresseerd zullen
+  zijn om deel te nemen aan de verdeling, en op deze wijze hopen we onze gemeenschap wat
+  meer veiligheid te bezorgen.
+</p>
+
+<p class="indent">
+  In vorige versies van de GPL hebben we nog nooit enige vorm van expliciete patentlicentie
+  gehad. We gingen er van uit dat als u software verdeelde onder de GPL, en iemand dus de
+  toestemming geeft om bepaalde dingen te doen, u die persoon niet kan aanklagen omdat
+  hij die zaken doet. En in de VS is dat waar, binnen bepaalde grenzen, maar dat geldt niet over
+  de hele wereld. Dit is dus ook een vorm van internationalisering - hetzelfde resultaat nastreven
+  over heel de wereld.
+</p>
+
+<p>
+  <span id="termination">(<a href="#menu">menu</a>) [Sectie: Stopzetten van de 
+    licentie]</span>
+</p>
+
+<p class="indent">
+  Een andere verandering die we invoeren is in de stopzetting van de licentie. Als je de licentie
+  niet nakomt bij versie twee van de licentie, mag je niets meer met het programma doen. En
+  de enige manier om deze rechten terug te krijgen, is elke houder van een auteursrecht gaan
+  opzoeken, en om vergiffenis vragen. Wat je in de meeste gevallen wel zal krijgen, als je 
+  aantoont dat je de licentie in de toekomst wel zal nakomen. Maar soms zijn er echt wel heel 
+  veel auteurs die je moet bezoeken.
+</p>
+
+<p class="indent">
+  Dit kan soms een gigantisch groot werk zijn. Soms is het een onmogelijke taak. In GPL versie
+  drie, wordt je licentie niet automatisch ingetrokken. Het is de houder van het auteursrecht die
+  u een brief kan schrijven die zegt: "Ik plaats u onder toezicht.", hierna kan de rechtenhouder,
+  als hij dat wil, uw licentie beëindigen. Maar dat hoeft niet. Hij kan u ook gewoon vergeven als
+  hij vaststelt dat u zich in regel stelt.
+</p>
+
+<p class="indent">
+  Met volgend resultaat: Veronderstel dat u een volledige  GNU/Linux distributie verdeelt, met 
+  enkele duizenden programma's erin, en u doet iets dat niet mag volgens de licentie. 
+  Veronderstel dan dat u van tien rechtenhouders een bericht krijgt dat u in overtreding bent
+  met de licentie. U denkt bij uzelf "Oh, ik kan dit beter volgens de regels doen", er gaan dan
+  zestig dagen voorbij, waarin misschien nog een vijftal rechtenhouders u contacteren. Deze
+  vijftien rechtenhouders zijn dan ook de enige die jouw licentie kunnen intrekken. Het idee is nu 
+  dat u die vijftien rechtenhouders duidelijk toont dat u nu wel in regel bent, en dat u ze ook 
+  belooft om dat in de toekomst zo te houden. Zij zullen dan zeggen: "OK, wij vergeven u".
+</p>
+
+<p class="indent">
+  U moet niet op zoek naar die duizenden andere rechtenhouders, en hen allemaal om
+  vergiffenis vragen. Dus zolang u in overtreding bent, kunnen alle rechtenhouders, die op
+  de hoogte worden gebracht, u een verwittiging sturen. Maar van zodra u in regel bent,
+  dan hebben ze nog maar zestig dagen om u een verwittiging te sturen, en daarna kan dat
+  niet meer. Dus moet u alleen maar rekening houden met de personen die binnen deze
+  periode gereageerd hebben.
+</p>
+
+<p>
+[34:00]
+</p>
+
+<p class="indent">
+We hebben ook een automatische herstelperiode ingesteld voor personen die een eerste keer
+in overtreding zijn. Als je de licentie overtreedt, en het is je eerste inbreuk bij een bepaalde
+rechtenhouder, en je herstelt je fout binnen de dertig dagen, dan wordt u automatisch terug
+in regel gesteld. Je bent terug in orde. Maar dat geldt niet meer bij een tweede inbreuk.
+</p>
+
+<p class="indent">
+We willen het wat makkelijker maken voor toevallige overtreders, diegenen die bereid zijn om
+hun fout recht te zetten, terwijl het ook eenvoudiger moet zijn om maatregelen te nemen tegen
+diegenen die hun fouten niet willen corrigeren.
+</p>
+
+<p>
+[34:55]
+</p>
+
+<p class="indent">
+De nieuwigheid die we in sectie tien hebben ingevoerd, is wat er moet gebeuren als een bedrijf
+opsplitst of een afdeling verkoopt aan een ander bedrijf, hoe met het dan verder? Wij hebben
+ervoor willen zorgen dat dat duidelijk is. Het zou geen erg controversieel punt mogen zijn, maar
+nu is het tenminste geregeld.
+</p>
+
+<p>
+  <span id="added">(<a href="#menu">menu</a>) [Sectie: Formaliseren van de extra
+    toestemmingen]</span>
+</p>
+
+<p class="indent">
+  Nog een andere verandering is het formaliseren van wat het betekent om extra 
+  toestemmingen te geven. Er is vandaag met de GPL versie twee al een veel voorkomende
+  praktijk om te zeggen "Dit wordt verdeeld onder de GPL versie twee of een nieuwere versie,
+  en daarbovenop mag je ook X, Y en Z". Toegevoegde speciale toelatingen als een
+  uitzondering.
+</p>
+
+<p class="indent">
+En dit is perfect in orde, want wat betekent het om een programma te verdelen onder een
+Vrije Software licentie? Het is een opsomming van de toelatingen die je geeft en als jij dat wil
+kan je nog meer zaken toestaan.
+</p>
+
+<p class="indent">
+  Maar om duidelijk te stellen wat dat betekent, hebben we het geformaliseerd. We hebben
+  uitgelegd dat  je bijkomende toelatingen kan geven voor dat deel van de code onder de
+  GPL dat je zelf hebt bijgedragen, indien je het recht hebt om deze toelatingen te geven. 
+  Aangezien de code beschikbaar is onder de voorwaarden van de GPL, kan iemand die
+  de code verandert, de bijkomende toelatingen opnieuw verwijderen. De GPL geeft haar de 
+  toestemming om haar versie te verdelen onder de GPL. Ze hoeft helemaal geen bijkomende
+  toelatingen te geven voor haar versie. Aangezien ze de bijkomende toelatingen van u kreeg,
+  kan ze natuurlijk beslissen om ze ook aan u toe te kennen. En als ze deze code verandert,
+  kan ze ook uw bijgevoegde toelatingen toekennen als ze dat wenst.
+</p>
+
+<p class="indent">
+  Dus als een programma verdeeld wordt onder de GPL plus toegevoegde toestemmingen,
+  kan iedereen die de code verder verdeelt, kiezen wat hij doet. De toegevoegde
+  toestemmingen laten staan of verwijderen. Sectie 7 beschrijft dit. Er staat ook dat sommige
+  soorten van expliciete voorwaarden uit andere Vrije Softwarelicenties, volgens ons,
+  compatibel zijn met de GPL, wat trouwens nu al vaak in praktijk bij de GPL versie twee is
+  gebleken. Maar nog eens, het is beter om het expliciet te omschrijven.
+</p>
+
+<p class="indent">
+Dit zijn vaak heel gewone voorwaarden. Zoals, deze melding van het auteursrecht mag niet
+verwijderd worden. Of allerlei vormen van het verwerpen van verantwoordelijkheid. Het zijn
+geen zware voorwaarden.
+</p>
+
+<p class="indent">
+  In proeftekst twee, was deze sectie zeven, veel ingewikkelder. We hadden het zo opgesteld
+  dat er enkele specifieke, belangrijke voorwaarden waren omschreven die je mocht
+  toevoegen. We hadden dan ook een veel ingewikkelder systeem nodig om deze voorwaarden
+  juist op te volgen. Veel mensen waren tegen deze ingewikkelde regeling. Dus hebben we
+  dit opnieuw verwijdert, en sommige zaken op een andere manier aangepakt. Zo bestaat er nu
+  bijvoorbeeld een sectie in de laatste discussietekst die zegt dat als code wordt verdeeld
+  onder de GPL versie drie, je dat programma ook mag linken met code die verdeeld wordt
+  onder de Affero GPL. In een vorige proeftekst hadden we gezegd dat de bijkomende
+  voorwaarden van de Affero GPL zo'n voorwaarde was die u kon toevoegen voor de code die
+  u bijdraagt aan een programma. Nu is dat niet meer zo. Nu is de GPL gewoon de GPL, en
+  het staat alleen toe dat je de code linkt met andere code die door haar ontwerpers verdeeld
+  wordt onder de Affero GPL.
+</p>
+
+<p class="indent">
+  De Affero GPL, voor diegenen die het niet moesten weten, is eigenlijk gewoon de GNU GPL, 
+  met één bijkomende voorwaarde: als je de software gebruikt op een website, dan moet je de
+  gebruikers in staat stellen om de gebruikte software te downloaden. De code die
+  overeenkomt met de versie van het programma waarmee de gebruiker communiceert.
+</p>
+
+<p class="indent">
+  Men is op dit idee gekomen voor personen die specifiek voor dit doel software ontwikkelen,
+  voor op servers, zij willen dat mensen die openbaar een aangepaste versie van hun software
+  gebruiken, deze versie ook opnieuw beschikbaar stellen aan de gemeenschap.
+</p>
+
+<p class="indent">
+  Toen wij Affero advies gaven over deze licentie, hadden we al de bedoeling om een
+  toekomstige versie van de GPL daarmee compatibel te maken. En dit is hoe we dat gaan
+  verwezenlijken.
+</p>
+
+<p>
+  <span id="bittorrent">(<a href="#menu">menu</a>) [Sectie: BitTorrent]</span>
+</p>
+
+<p class="indent">
+  Een andere verandering die we doorvoerden is voor de ondersteuning van zaken zoals
+  BitTorrent. Bittorrent is vrije uniek, want als je kopieën ontvangt, ben je automatisch ook een
+  verdeler van de kopieën, zonder dat je het zelf weet. Dit is zo bizar, dat ik in 1991 zoiets nooit
+  had kunnen verzinnen. En wie een programma onder de GPL versie twee verdeelt met
+  BitTorrent, doet eigenlijk zaken die niet kunnen volgens de GPL.
+</p>
+
+<p class="indent">
+  Al deze mensen verdelen kopieën, zonder het zelf te weten, maar komen de verplichtingen die 
+  de verplichtingen van de GPL niet na. We hebben dat dus wat aangepast zodat deze mensen
+  niet in de problemen komen. Het is maar logisch dat verdelen met de hulp van BitTorrent,
+  toegestaan is.
+</p>
+
+<p>
+[42:00]
+</p>
+
+<p class="indent">
+  Het probleem heeft te maken met de uitvoerbare code. De GPL stelt dat als je uitvoerbare
+  code verdeelt, je ook de broncode beschikbaar moet stellen. Maar als iemand
+  deelneemt aan een Torrent voor de uitvoerbare code, dan is de kans groot dat hij helemaal
+  niet weet waar de broncode is. Hij heeft de torrent zelf niet opgezet, en we stellen hem dan 
+  ook helemaal niet verantwoordelijk om ook voor de broncode te zorgen, hij is gewoon
+  een gebruiker die een kopie wil verkrijgen via een Torrent.
+</p>
+
+<p class="indent">
+  Een andere verandering, die het leven van veel mensen een stuk eenvoudiger zal maken, is
+  dat het nu zal toegestaan zijn om de uitvoerbare code te verspreiden op een fysiek medium, 
+  en de code voor het publiek beschikbaar te stellen op een server. Vroeger was dat niet
+  toegestaan omdat het toen voor veel gebruikers ongelooflijk lang kon duren, en dus vrij duur
+  kon worden, om de overeenkomende broncode te downloaden.
+</p>
+
+<p class="indent">
+  In grote delen van de wereld, en zeker zestien geleden, hadden mensen geen toegang tot
+  breedband internet. Het enige wat ze hadden was een inbelverbinding. je kon toen iemand een
+  CD geven met een volledig systeem op, en als je dan tegen die persoon zegde: "Als je de
+  broncode wil, haal die dan binnen langs je telefoonlijn", zou dat wel belachelijk klinken. Dus
+  hadden wij gesteld dat je het aanbod moest doen om hem een CD, of een andere fysiek
+  medium, met de broncode op te sturen. Wat veel goedkoper en praktischer is, dan het hele 
+  pakket via je telefoon binnen te halen. Vandaag zijn er over heel de wereld verschillende
+  bedrijven die je deze dienst leveren, ze downloaden om het even wat, branden het op een CD
+  en versturen het naar u, tegen zeer democratische prijzen. Dus het probleem waartegen we
+  onze gebruikers wilden beschermen, dat het onmogelijk zou kunnen zijn om de broncode te
+  verkrijgen, is vandaag geen probleem meer. Deze diensten zijn goedkoper dan wat het door
+  de GPL versie twee verplichte aanbod kostte. Wij veronderstellen nu dat mensen eerder
+  gebruik zullen maken van deze bedrijven en leggen de last dus niet langer op de schouders
+  van al de verdelers.
+</p>
+
+<p>
+[44:44]
+</p>
+
+<p class="indent">
+  Dat is zowat de basis van de veranderingen. Er zijn veel meer kleine details die veranderen,
+  waarvan ik er momenteel zelf allicht al enkele vergeten ben.
+</p>
+
+<p class="indent">
+  We hebben ook een paragraaf uit de GPL versie twee verwijderd, die een geografische
+  beperking oplegde. Het was verboden een programma te verdelen in een land, waar het
+  omwille van patent-achtige zaken, niet-vrij zou worden. Wij denken dat we daartegen
+  voldoende beveiligingen hebben ingebouwd, en niemand heeft deze paragraaf ooit gebruikt.
+</p>
+
+<p class="indent">
+Dus binnen ongeveer negentig dagen ...
+</p>
+
+<p>
+[Technische onderbreking]
+</p>
+
+<p>
+  <span id="retaliation">(<a href="#menu">menu</a>) [Patentvergelding en de 
+    Apache-licentie]</span>
+</p>
+
+<p class="indent">
+  De vorige discussieteksten hadden enkele voorzieningen om vergeldingsmaatregelen te 
+  nemen tegen agressief gebruik van softwarepatenten. Ten eerste was er een heel beperkt
+  vergeldingsrecht in de GPL zelf: als iemand een aangepaste versie van een programma gaat
+  gebruiken en dan iemand anders gaat aanklagen voor patentinbreuken omdat hij dezelfde
+  veranderingen in zijn eigen versie implementeerde, dan verliest de eerste een heel specifiek
+  recht, het recht om nog langer het programma aan te passen.
+</p>
+
+<p class="indent">
+  We hebben dat verwijderd, omdat het niet erg efficiënt leek. Ook in sectie zeven, waar de
+  toegestane extra voorwaarden beschreven stonden, stond een veel sterker soort vergelding,
+  samen met nog twee andere vormen die werden toegestaan. De laatste discussietekst heeft
+  één van deze regelingen in de basistekst, en moet dus niet langer als mogelijke extra
+  voorwaarde beschreven worden. De andere voorwaarde wordt in praktijk blijkbaar door
+  niemand gebruikt, en hebben we dan ook weggelaten om de tekst te vereenvoudigen.
+</p>
+
+<p class="indent">
+  De reden waarom we mensen wilden toestaan om deze twee maatregelen op te nemen, was
+  voor de compatibiliteit. Eén van die maatregelen werd gebruikt in de Apache-licentie. We 
+  hadden gehoopt de GPL versie drie compatibel te maken met de Apache-licentie, en
+  dachten daarin geslaagd te zijn. We hebben ons steeds gefocust op de vergeldingsclausule
+  in de Apache-licntie, en in de vorige discussieteksten was dat een mogelijke bijkomende
+  voorwaarde voor code die je zelf toevoegde. Nu zit deze clausule dus ingebouwd in de GPL,
+  en is het niet langer nodig ze expliciet toe te voegen.
+</p>
+
+<p class="indent">
+Dus zijn we nu compatibel met deze clausule in de Apache-licentie, maar enkele maanden
+geleden ontdekten we een andere clausule in de Apache-licentie, waar in sommige gevallen
+een bepaalde garanties gevraagd worden, het is onmogelijk voor ons om hiermee compatibel
+te zijn. We zullen er dus niet in slagen om de GPL versie drie compatibel te maken met de
+bestaande Apache-licentie. Ik vind dat spijtig.
+</p>
+
+<p>
+  <span id="bracketed">(<a href="#menu">menu</a>) [Sectie: De zin, met datum, tussen
+    vierkante haakjes]</span>
+</p>
+
+<p class="indent">
+  Er staat één zin tussen haakjes in de huidige proeftekst, die eventueel een begindatum
+  vaststelt voor de paragraaf die het verbiedt om overeenkomsten te sluiten die uw klanten
+  beveiligen tegen patentovertredingen. We hebben nog niet beslist of deze regeling ook zal
+  gelden voor overeenkomsten die afgesloten zijn voor deze discussietekst is verschenen. We
+  willen eerst zeker zijn dat we onze taak, om een juiste scheidingslijn te trekken tussen deze
+  schadelijke overeenkomsten en andere overeenkomsten, naar behoren hebben vervuld. We
+  hebben enkele criteria beschreven die volgens ons moeten volstaan, maar hopen tijdens de
+  discussie te ontdekken of dat echt zo is.
+</p>
+
+<p class="indent">
+  We denken dat we de Novell-Microsoft overeenkomst voldoende hebben aangepakt met de
+  andere voorwaarde, diegene die gericht is op Microsofts deel van de overeenkomst. Zelfs
+  als we de tweede paragraaf, die gericht is Novell's  deel van de overeenkomst, pas laten
+  ingaan na deze datum, hebben we deze specifieke overeenkomst geblokkeerd. Maar als
+  we de scheidingslijn juist hebben kunnen trekken, dan zal ook deze paragraaf gelden voor 
+  overeenkomsten gesloten voor en na het verschijnen van deze tekst. We hebben deze
+  beslissing nog niet gemaakt.
+</p>
+
+<p>
+[52:00, einde]
+</p>
+
+<p>
+[Opmerking: voor meer informatie over de GPLv3, lees de <a href="gplv3.html">FSFE's
+ GPLv3 pagina</a> en de linken bovenaan deze pagina naar achtergrondinformatie en 
+ aanverwante documenten]
+</p>
+
+</body>
+
+</html>

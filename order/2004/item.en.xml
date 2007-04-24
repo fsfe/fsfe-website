@@ -4,6 +4,7 @@
 
 <itemset>
   <item type="t-shirt" id="tshirt-fsfs-grey" price="18.00" date="2004-01-01">
+    <!-- available size="L"/ (not available in DUS) -->
     <available size="L"/>
     <available size="XL"/>
     <image
@@ -13,7 +14,8 @@
       small="/order/2004/tshirt-fsfs-grey-back-small.jpg"
       large="/order/2004/tshirt-fsfs-grey-back-large.jpg"/>
   </item>
-  <item type="t-shirt" id="tshirt-gnuage-sand" price="20.00" date="2004-01-01">
+  <!-- item type="t-shirt" id="tshirt-gnuage-sand" price="20.00" date="2004-01-01" (not available in DUS) >
+    <available size="XL"/>
     <available size="XL"/>
     <image
       small="/order/2004/tshirt-gnuage-sand-front-small.jpg"
@@ -21,7 +23,7 @@
     <image
       small="/order/2004/tshirt-gnuage-sand-back-small.jpg"
       large="/order/2004/tshirt-gnuage-sand-back-large.jpg"/>
-  </item>
+  </item -->
   <item type="girlie" id="girlie-fsfs-grey" price="18.00" date="2004-01-01">
     <available size="S/M"/>
     <available size="L"/>
@@ -33,7 +35,6 @@
       large="/order/2004/girlie-fsfs-grey-back-large.jpg"/-->
   </item>
   <item type="girlie" id="girlie-fsfs-yellow" price="18.00" date="2004-01-01">
-    <available size="M"/>
     <available size="L"/>
     <image
       small="/order/2004/girlie-fsfs-yellow-front-small.jpg"
@@ -42,19 +43,9 @@
       small="/order/2004/girlie-fsfs-yellow-back-small.jpg"
       large="/order/2004/girlie-fsfs-yellow-back-large.jpg"/>
   </item>
-  <item type="longsleeve" id="longsleeve-gpl-black" price="18.00" date="2004-01-01">
-    <available size="S"/>
-    <available size="XXL"/>
-    <image
-      small="/order/2004/longsleeve-gpl-black-front-small.jpg"
-      large="/order/2004/longsleeve-gpl-black-front-large.jpg"/>
-    <image
-      small="/order/2004/longsleeve-gpl-black-back-small.jpg"
-      large="/order/2004/longsleeve-gpl-black-back-large.jpg"/>
-  </item>
   <item type="hooded" id="hooded-fsfs-black" price="28.00" date="2004-01-01">
-    <available size="M"/>
-    <available size="L"/>
+    <!-- available size="M"/ (not available in DUS) -->
+    <!-- available size="L"/ (not available in DUS) -->
     <available size="XL"/>
     <image
       small="/order/2004/hooded-fsfs-black-front-small.jpg"

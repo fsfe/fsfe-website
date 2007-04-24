@@ -16,7 +16,6 @@
   <item type="t-shirt" id="tshirt-fsfeurope-logo-black" price="18.00" date="2002-01-01">
     <available size="S"/>
     <available size="M"/>
-    <available size="L"/>
     <available size="XL"/>
     <image
       small="/order/2002/fsfeurope-black-front-small.png"
@@ -26,9 +25,8 @@
       large="/order/2002/fsfeurope-black-logo-large.png"/>
   </item>
   <item type="t-shirt" id="tshirt-fsfeurope-gpl-black" price="18.00" date="2002-01-01">
-    <available size="S"/>
-    <available size="M"/>
-    <available size="L"/>
+    <!-- available size="M"/ (not available in DUS) -->
+    <!-- available size="L"/ (not available in DUS) -->
     <available size="XL"/>
     <image
       small="/order/2002/fsfeurope-black-front-small.png"
@@ -38,7 +36,6 @@
       large="/order/2002/fsfeurope-black-gpl-large.png"/>
   </item>
   <item type="t-shirt" id="tshirt-fsfeurope-empty-grey" price="18.00" date="2002-01-01">
-    <available size="L"/>
     <available size="XL"/>
     <image
       small="/order/2002/fsfeurope-grey-front-small.jpg"
@@ -58,15 +55,15 @@
       small="/order/2002/fsfeurope-grey-logo-small.jpg"
       large="/order/2002/fsfeurope-grey-logo-large.jpg"/>
   </item>
-  <item type="t-shirt" id="tshirt-fsfeurope-gpl-grey" price="18.00" date="2002-01-01">
-    <available size="M"/>
-    <available size="L"/>
-    <available size="XL"/>
-    <image
+  <!-- item type="t-shirt" id="tshirt-fsfeurope-gpl-grey" price="18.00" date="2002-01-01" -->
+    <!-- available size="M"/ (not available in DUS) -->
+    <!-- available size="L"/ (not available in DUS) -->
+    <!-- available size="XL"/ (not available in DUS) -->
+    <!-- image
       small="/order/2002/fsfeurope-grey-front-small.png"
       large="/order/2002/fsfeurope-grey-front-large.png"/>
     <image
       small="/order/2002/fsfeurope-grey-gpl-small.png"
-      large="/order/2002/fsfeurope-grey-gpl-large.png"/>
+      large="/order/2002/fsfeurope-grey-gpl-large.png"/ -->
   </item>
 </itemset>

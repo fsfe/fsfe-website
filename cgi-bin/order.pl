@@ -15,8 +15,8 @@ my $amount = 0;
 # -----------------------------------------------------------------------------
 
 open(MAIL, "|/usr/lib/sendmail -t -f mueller\@fsfeurope.org");
-print MAIL "From: mueller\@fsfeurope.org\n";
-print MAIL "To: office\@fsfeurope.org\n";
+print MAIL "From: web\@fsfeurope.org\n";
+print MAIL "To: order\@fsfeurope.org\n";
 print MAIL "Cc: mueller\@fsfeurope.org\n";
 print MAIL "Subject: Web order\n\n";
 print MAIL "$reference\n\n";

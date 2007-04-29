@@ -1,7 +1,5 @@
-<?xml version="1.0" encoding="iso-8859-1" ?>
-<!DOCTYPE html
-          PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang="it">
   <head>
     <title>FSFE - Come aiutarci con le pagine web</title>
@@ -18,11 +16,11 @@ e dettagliate per i nuovi od occasionali volontari delle pagine web.</p>
 <h3>Introduzione</h3>
 
 <p>Le tecnologie e i programmi usati per curare il sito web della FSF
-Europe dovrebbero essere già familiari a molti sviluppatori e autori,
+Europe dovrebbero essere giÃ  familiari a molti sviluppatori e autori,
 ma potrebbero interessare anche chi non li conosce ancora.</p>
 
-<p>Ai traduttori e ai volontari occasionali basterà quasi certamente
-avere familiarità con</p>
+<p>Ai traduttori e ai volontari occasionali basterÃ  quasi certamente
+avere familiaritÃ  con</p>
 <ul>
 <li><a href="http://savannah.gnu.org" target="_blank">Savannah</a> --
 per i servizi CVS (cfr oltre) e la gestione dei permessi di accesso
@@ -34,7 +32,7 @@ Version System (CVS)</a> -- per il coordinamento e la sincronizzazione</li>
 </ul>
 
 <p>I volontari interessati ad approfondire la manutenzione del sito
-dovrebbero avere familiarità anche con</p>
+dovrebbero avere familiaritÃ  anche con</p>
 <ul>
 <li><a href="http://www.perl.org" target="_blank">Perl</a> -- per la
 manutenzione e gli script di creazione delle pagine</li>
@@ -44,25 +42,18 @@ server web</li>
 
 <h3>Primi passi</h3>
 
-<p>La prima cosa che dovete fare è procurarvi un account su <a
-href="http://savannah.gnu.org" target="_blank">Savannah</a>, nel caso
-non l'abbiate già. Comunicate il vostro nome di login a uno degli <a
-href="https://savannah.gnu.org/projects/fsfe/"
-target="_blank">amministratori del progetto FSFE</a> e
+<p>La prima cosa che dovete fare Ã¨ procurarvi un account su <a href="http://savannah.gnu.org" target="_blank">Savannah</a>, nel caso
+non l'abbiate giÃ . Comunicate il vostro nome di login a uno degli <a href="https://savannah.gnu.org/projects/fsfe/" target="_blank">amministratori del progetto FSFE</a> e
 chiedete loro di aggiungervi al progetto FSFE su Savannah.  Nel frattempo,
-potete leggere le FAQ riguardanti <a
-href="http://savannah.gnu.org/faq/?group=administration">il funzionamento di
+potete leggere le FAQ riguardanti <a href="http://savannah.gnu.org/faq/?group=administration">il funzionamento di
 Savannah</a>
 </p>
 
 <p>Il coordinamento tra i volontari web italiani avviene sulla mailing list
-(italiana) <a href="http://mail.fsfeurope.org/mailman/listinfo/web-it"
-target="_blank">web-it@fsfeurope.org</a>. Se volete partecipare più da vicino
+(italiana) <a href="http://mail.fsfeurope.org/mailman/listinfo/web-it" target="_blank">web-it@fsfeurope.org</a>. Se volete partecipare piÃ¹ da vicino
 alla manutenzione e allo sviluppo del sito web potete iscrivervi alla lista
-(inglese) <a href="http://mail.fsfeurope.org/mailman/listinfo/web"
-target="_blank">web@fsfeurope.org</a>. Se poi volete essere informati in tempo
-reale sulle modifiche che avvengono nel CVS, potete iscrivervi alla lista <a
-href="http://mail.fsfeurope.org/mailman/listinfo/web-cvs-notify">web-cvs-notify@fsfeurope.org</a>.
+(inglese) <a href="http://mail.fsfeurope.org/mailman/listinfo/web" target="_blank">web@fsfeurope.org</a>. Se poi volete essere informati in tempo
+reale sulle modifiche che avvengono nel CVS, potete iscrivervi alla lista <a href="http://mail.fsfeurope.org/mailman/listinfo/web-cvs-notify">web-cvs-notify@fsfeurope.org</a>.
 </p>
 
 <p>Una volta che siete stati aggiunti al progetto FSFE, seguite le
@@ -76,19 +67,15 @@ lavorare.</p>
 
 <p>Le pagine web della FSFE hanno una struttura a livelli, con
 un livello Europeo/globale e un livello scelto dall'utente che
-presenta informazioni specifiche per ogni paese; la complessità di
-questa struttura è interamente nascosta all'utente finale.</p>
+presenta informazioni specifiche per ogni paese; la complessitÃ  di
+questa struttura Ã¨ interamente nascosta all'utente finale.</p>
 
 <p class="indent"><b>[DOCUMENTAZIONE]</b> A meno che non vogliate semplicemente
 tradurre delle pagine (cfr oltre), <b>assicuratevi di aver dato
-un'occhiata alla <a href="/help/webpage/Webpage-Structure.txt"
-target="_blank">guida alla struttura delle pagine</a>.</b></p>
+un'occhiata alla <a href="/help/webpage/Webpage-Structure.txt" target="_blank">guida alla struttura delle pagine</a>.</b></p>
 
-<p class="indent"><b>[DOCUMENTAZIONE]</b> Inoltre, c'è anche un file di
-documentazione <a href="http://www.texinfo.org"
-target="_blank">Texinfo</a> "<a href="/README.texi"
-target="_blank">Webmastering FSFE</a>" a cura di <a
-href="mailto:oberg@fsfeurope.org">Jonas Öberg</a>, che ha implementato
+<p class="indent"><b>[DOCUMENTAZIONE]</b> Inoltre, c'Ã¨ anche un file di
+documentazione <a href="http://www.texinfo.org" target="_blank">Texinfo</a> "<a href="/README.texi" target="_blank">Webmastering FSFE</a>" a cura di <a href="mailto:oberg@fsfeurope.org">Jonas Ã–berg</a>, che ha implementato
 il sistema di generazione delle pagine. Leggetelo per capire i
 dettagli di funzionamento del sito. Potete trasformare il file dal formato
 Texinfo al vostro formato preferito utilizzando il programa "makeinfo"
@@ -98,8 +85,7 @@ Texinfo al vostro formato preferito utilizzando il programa "makeinfo"
 
 <h3>Istruzioni sintetiche per i traduttori e regole generali</h3>
 
-<p>Alcune regole generali per i traduttori sono disponibili su <a
-href="http://www.fsfeurope.org/contribute/translators.html">questa pagina</a>;
+<p>Alcune regole generali per i traduttori sono disponibili su <a href="http://www.fsfeurope.org/contribute/translators.html">questa pagina</a>;
 per quanto riguarda in particolare la traduzione delle pagine web, queste poche
 regole dovrebbero tenervi al riparo dai problemi, evitare frustrazioni e
 facilitarvi il lavoro.</p>
@@ -107,57 +93,53 @@ facilitarvi il lavoro.</p>
 <ul>
 
 <li><b>Non modificate mai direttamente i file HTML, modificate invece
-i sorgenti XHTML!</b><br /><br /></li>
+i sorgenti XHTML!</b><br/><br/></li>
 
 <li>I nomi delle pagine seguono la sintassi:
-"&lt;nome&gt;.&lt;lingua&gt;.xhtml" dove &lt;lingua&gt; è il codice di
-due lettere della nazione di riferimento. Se non c'è alcun codice di
-nazionalità, si assume che la pagina sia in inglese.  <br
-/>(<em>Esempio: il sistema di generazione assume che test.it.xhtml sia
+"&lt;nome&gt;.&lt;lingua&gt;.xhtml" dove &lt;lingua&gt; Ã¨ il codice di
+due lettere della nazione di riferimento. Se non c'Ã¨ alcun codice di
+nazionalitÃ , si assume che la pagina sia in inglese.  <br/>(<em>Esempio: il sistema di generazione assume che test.it.xhtml sia
 la traduzione italiana della pagina francese
-test.fr.xhtml.</em>)<br /><br /></li>
+test.fr.xhtml.</em>)<br/><br/></li>
 
 <li>Se volete creare la traduzione italiana della pagina francese
-x.fr.xhtml, tutto quello che dovete fare è copiarla in x.it.xhtml,
+x.fr.xhtml, tutto quello che dovete fare Ã¨ copiarla in x.it.xhtml,
 tradurla e fare il commit. Al prossimo ciclo di ricostruzione delle
-pagine, verrà riconosciuta come traduzione e aggiunta in modo ordinato
-alla struttura di navigazione del sito.<br /><br /></li>
+pagine, verrÃ  riconosciuta come traduzione e aggiunta in modo ordinato
+alla struttura di navigazione del sito.<br/><br/></li>
 
 <li><b>Se fate il commit di una pagina che contiene codice XHTML
-scorretto, il processo di generazione delle pagine si interromperà
-finché qualcuno non correggerà l'errore. Quindi non fate mai il commit
-al CVS senza prima aver controllato la validità della sintassi XHTML
+scorretto, il processo di generazione delle pagine si interromperÃ 
+finchÃ© qualcuno non correggerÃ  l'errore. Quindi non fate mai il commit
+al CVS senza prima aver controllato la validitÃ  della sintassi XHTML
 del file!</b> L'archivio CVS contiene uno script "validate.pl" nella directory
 "tools", che serve proprio a questo scopo (richiede il modulo perl "XML::LibXML",
-contenuto ad esempio nel pacchetto Debian "libxml-libxml-perl").<br />
-In alternativa è possibile usare un altro strumento di validazione xml, come
-xmllint (pacchetto Debian "libxml2-utils").<br />
-<br /></li>
+contenuto ad esempio nel pacchetto Debian "libxml-libxml-perl").<br/>
+In alternativa Ã¨ possibile usare un altro strumento di validazione xml, come
+xmllint (pacchetto Debian "libxml2-utils").<br/>
+<br/></li>
 
-<li>Link interni: se in una pagina c'è un link a un'altra pagina x.html del sito
-FSFE, <b>non aggiungete il codice della nazionalità</b>, verrà aggiunto
+<li>Link interni: se in una pagina c'Ã¨ un link a un'altra pagina x.html del sito
+FSFE, <b>non aggiungete il codice della nazionalitÃ </b>, verrÃ  aggiunto
 automaticamente dallo script di generazione!
-<br /><br /></li>
+<br/><br/></li>
 
-<li>Link esterni: se in una pagina c'è un link a una pagina esterna di cui
-esiste una traduzione italiana, è preferibile linkare la versione tradotta della
+<li>Link esterni: se in una pagina c'Ã¨ un link a una pagina esterna di cui
+esiste una traduzione italiana, Ã¨ preferibile linkare la versione tradotta della
 pagina esterna, indicando tra parentesi la pagina in lingua originale.
-<br /><br /></li>
+<br/><br/></li>
 
 <li>Alcuni dei file per i menu generati automaticamente sono in
-formato XML invece che XHTML. Ciò che abbiamo detto per le pagine XHTML 
-si applica anche a quelle XML. <br /><br /></li>
+formato XML invece che XHTML. CiÃ² che abbiamo detto per le pagine XHTML 
+si applica anche a quelle XML. <br/><br/></li>
 
 </ul>
 
 <h3>Altre domande?</h3>
 
-<p>Se avete ulteriori domande, ponetele nella lista <a
-href="http://mail.fsfeurope.org/mailman/listinfo/web">web@fsfeurope.org</a> (in
-inglese) o nella lista <a
-href="http://mail.fsfeurope.org/mailman/listinfo/web-it">web-it@fsfeurope.org</a>
-(in italiano), oppure mettetevi in contatto con l'attuale coordinatore del sito web <a
-href="mailto:oberg@fsfeurope.org">Jonas Öberg</a>.</p>
+<p>Se avete ulteriori domande, ponetele nella lista <a href="http://mail.fsfeurope.org/mailman/listinfo/web">web@fsfeurope.org</a> (in
+inglese) o nella lista <a href="http://mail.fsfeurope.org/mailman/listinfo/web-it">web-it@fsfeurope.org</a>
+(in italiano), oppure mettetevi in contatto con l'attuale coordinatore del sito web <a href="mailto:oberg@fsfeurope.org">Jonas Ã–berg</a>.</p>
 
 <!-- End page content -->
 
@@ -170,3 +152,4 @@ Local Variables: ***
 mode: xml ***
 End: ***
 -->
+

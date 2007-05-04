@@ -3,9 +3,8 @@
 <!-- Do not translate this file! -->
 
 <itemset>
-  <item type="t-shirt" id="tshirt-fsfs-grey" price="18.00" date="2004-01-01">
-    <!-- available size="L"/ (not available in DUS) -->
-    <available size="L"/>
+  <!-- item type="t-shirt" id="tshirt-fsfs-grey" price="18.00" date="2004-01-01" (not available in DUS) >
+    <available size="L">
     <available size="XL"/>
     <image
       small="/order/2004/tshirt-fsfs-grey-front-small.jpg"
@@ -13,9 +12,9 @@
     <image
       small="/order/2004/tshirt-fsfs-grey-back-small.jpg"
       large="/order/2004/tshirt-fsfs-grey-back-large.jpg"/>
-  </item>
+  </item -->
   <!-- item type="t-shirt" id="tshirt-gnuage-sand" price="20.00" date="2004-01-01" (not available in DUS) >
-    <available size="XL"/>
+    <available size="M"/>
     <available size="XL"/>
     <image
       small="/order/2004/tshirt-gnuage-sand-front-small.jpg"

@@ -4,9 +4,9 @@
 
 <itemset>
   <item type="t-shirt" id="tshirt-gotfreedom-black" price="18.00" date="2006-01-01">
-    <available size="M"/>
+    <!-- available size="M"/ (not available in DUS) -->
     <available size="L"/>
-    <available size="XL"/>
+    <!-- available size="XL"/ (not available in DUS) -->
     <image
       small="/order/2006/tshirt-gotfreedom-black-front-small.jpg"
       large="/order/2006/tshirt-gotfreedom-black-front-large.jpg"/>

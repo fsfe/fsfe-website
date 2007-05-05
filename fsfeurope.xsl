@@ -72,7 +72,7 @@
               <xsl:variable name="id"><xsl:value-of select="@id"/></xsl:variable>
               <xsl:element name="li">
                 <xsl:element name="a">
-                  <xsl:attribute name="href"><xsl:value-of select="{.}"/></xsl:attribute>
+                  <xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
                   <xsl:value-of select="/buildinfo/textset/text[@id=$id]"/>
                 </xsl:element>
               </xsl:element>

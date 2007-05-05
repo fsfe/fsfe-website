@@ -16,117 +16,169 @@
 
 body {
   margin: 0;
-  padding: 1em 0;
+  padding: 0;
   background: #FDFDFD;
   color: #151515;
   font-family: Nimbus Sans L, Helvetica, Verdana, sans-serif;
-  font-size: 100.01%;           /* FIXME: What does this do? */
+  font-size: 100.01%;           /* Fix for IE */
 }
 
-a {
+a, a:link {
   color: #202D79;
+  text-decoration: none;
 }
 
 a:visited {
   color: #314C14;               /* like green mix, but darker */
+  text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+  color: #6BB340;
+  text-decoration: none;
+}
+
+/* avoid hover effects and borders on internal marks and graphical links */
+a[name], a[name]:hover, a.gl img, a.gl:link, a.gl:visited, a.gl:hover {
+  border: none;
+  background: #FDFDFD;
+  text-decoration: none;
+}
+
+.page {
+  margin: 0;
+  padding: 0 0 2em 1em;
+}
+
+/* invisible except in text based browsers */
+.n {
+  display: none;
 }
 
 /* ------------------------------------------------------------------------- */
-/* Logo and Focus                                                            */
+/* Logo                                                                      */
 /* ------------------------------------------------------------------------- */
 
-td.focus-box {
-  border-left: thin solid #202D79;
+.logo, .logo a, .logo a img {
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  margin: 1em 1em 1em 2em;
+}
+
+.logo a, .logo a:link, .logo a:visited {
+  border: none;
+
+/* ------------------------------------------------------------------------- */
+/* Menu                                                                      */
+/* ------------------------------------------------------------------------- */
+
+.menu {
+  float: left;
+  margin: 0;
+  padding: 0;
+  color: #151515;
   width: 13em;
+  min-width: 180px;             /* ignored by IE 6 */
+}
+
+.menu ul {
+  margin: 0;
+  background: url(/graphics/bogen-sebastian-10-01.png) top left no-repeat;
+  padding: 1em 0 1em 1.4em;
+}
+
+.menu li {
+  margin: 0.4em 0 0 0;
+  list-style: none;
+}
+
+.menu li a, .menu li a:link, .menu li a:visited {
+  display: block;
+}
+
+.menu li.submenu {
+  margin: 0;
+}
+
+.menu li.submenu a, .menu li.submenu a:link, .menu li.submenu a:visited {
+  display: block;
+  padding-left: 0.6em;
 }
 
 /* ------------------------------------------------------------------------- */
 /* Language List                                                             */
 /* ------------------------------------------------------------------------- */
 
-td.line {
-  border-top: thin solid #202D79;
-  border-bottom: thin solid #202D79;
+.language {
+  margin: 0 0 0 15em;
+  padding: 0.3em 0 0.4em 0;
+  text-align: center;
+  font-size: 90%;
 }
 
-.line a {
-  text-decoration: none;
+.language ul {
+  margin: 0;
+  padding: 0;
 }
 
-.line a:visited {
-  color: #202D79;
-}
-
-.line a:hover, .line a:active, .line a:focus {
-  background: #D0F400;
-}
-
-/* ------------------------------------------------------------------------- */
-/* Menu                                                                      */
-/* ------------------------------------------------------------------------- */
-
-td.menu {
-  border-left: thin solid #202D79;
-  width: 13em;
-  padding: 1em;
-  vertical-align: top;
-}
-
-a.menu {
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: bold;
-}
-
-a.submenu {
-  text-decoration: none;
-  font-size: 13px;
-  padding-left: 2em;
-}
-
-a.menu:visited, a.submenu:visited {
-  color: #202D79;
-}
-
-a.menu:hover, a.menu:active, a.menu:focus, a.submenu:hover, a.submenu:active, a.submenu:focus {
-  background: #D0F400;
+.language li {
+  display: inline;
+  margin: 0.3em;
+  list-style: none;
 }
 
 /* ------------------------------------------------------------------------- */
 /* Content                                                                   */
 /* ------------------------------------------------------------------------- */
 
-td.body {
-  padding: 0 1.5em;
-  width: 99%;
-  vertical-align: top;
+.content {
+  margin: 3em 0 0 14em;
+  padding: 0 1em 1em 1em;
 }
 
-.body {
-  margin-left 20px;
-  margin-right 20px;
-}
-
-.body h1 {
+.content h1 h2 {
   text-align: center;
   color: #202D79;
 }
 
-.body h2 {
-  margin-left 0px;
+.content h3 {
   color: #202D79;
 }
 
-.body h3 {
-  margin-left 0px;
-  color: #202D79;
+.content img {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+
+.postit {
+  float: left;
+  margin: 0 1em 1em 0;
+  border: 1px #000 solid;
+  padding: 0.3em;
+  width: 14em;
+  background: #FFECBF;
+  text-align: center;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Footer                                                                    */
+/* ------------------------------------------------------------------------- */
+
+.footer {
+  clear: both;
+  border: 5px #FDFDFD solid;    /* IE workaround */
+  padding: 0.5em;
+  font-size: 90%;
 }
 
 /* ------------------------------------------------------------------------- */
 /* Styles used only on some pages                                            */
 /* ------------------------------------------------------------------------- */
 
-/* News and event items */
+/* News and event items (old, based on table) */
 
 table.news {
   margin: 0px;
@@ -149,6 +201,46 @@ td.newsdate {
   padding: 4px;
   text-align: right;
   font-weight: bold;
+}
+
+/* News and event items (new, based on dt and dd) */
+
+.newsleft {
+  float: left;
+  width: 45%;
+}
+
+.newsright {
+  border: 1px #FDFDFD solid;
+  padding-left: 47%;
+}
+
+.newsleft dt, .newsright dt {
+  padding: 0 0 1em 0;
+  font-weight: bold;
+} 
+
+.newsleft dt span, .newsright dt span {
+  float: right;
+  margin: 0 0 0 0.5em;
+  padding: 0;
+  color: #888;
+  font-weight: normal;
+}
+
+.newsleft dd, .newsright dd {
+  margin: 0;
+  padding: 0 0 2em 0;
+}
+
+.newsleft dd ul, .newsright dd ul {
+  margin: 0;
+  padding: 0;
+}
+
+.newsleft dd li, .newsright dd li {
+  padding-left: 0.5em;
+  list-style: none;
 }
 
 /* Project list */

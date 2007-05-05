@@ -123,6 +123,7 @@
             <xsl:element name="li">
               <xsl:attribute name="class">submenu</xsl:attribute>
               <xsl:element name="a"><xsl:attribute name="href">http://www.fsf.org.in</xsl:attribute>FSF India</xsl:element>
+            </xsl:element>
             <xsl:element name="li">
               <xsl:attribute name="class">submenu</xsl:attribute>
               <xsl:element name="a"><xsl:attribute name="href">http://www.fsfla</xsl:attribute>FSF Latin America</xsl:element>

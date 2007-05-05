@@ -82,6 +82,7 @@
                 <xsl:element name="li">
                   <xsl:attribute name="class">submenu</xsl:attribute>
                   <xsl:element name="a">
+                    <xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
                     <xsl:value-of select="/buildinfo/textset/text[@id=$mid]"/>
                   </xsl:element>
                 </xsl:element>

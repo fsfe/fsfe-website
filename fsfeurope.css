@@ -190,8 +190,6 @@ table.news {
 
 td.newstitle {
   margin: 0px;
-  border-bottom: thin solid #202D79;
-  border-left: thin solid #202D79;
   padding: 4px;
   text-align: left;
   font-weight: bold;
@@ -201,8 +199,9 @@ td.newsdate {
   margin: 0px;
   border-bottom: thin solid #202D79;
   padding: 4px;
+  color: #888;
   text-align: right;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 /* News and event items (new, based on dt and dd) */

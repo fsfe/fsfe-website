@@ -251,7 +251,7 @@
 
             <!-- Webmaster feedback note -->
             <xsl:element name="br"/>
-            <xsl:apply-templates select="/buildinfo/textset/text[@id='webmaster']/node()">
+            <xsl:apply-templates select="/buildinfo/textset/text[@id='webmaster']/node()"/>
           </xsl:element>
 
         </xsl:element>

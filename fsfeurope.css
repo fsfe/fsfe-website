@@ -19,7 +19,8 @@ body {
   padding: 0;
   background: #FDFDFD;
   color: #000000;
-  font-family: Nimbus Sans L, Helvetica, Verdana, sans-serif;
+  /* font-family: Nimbus Sans L, Helvetica, Verdana, sans-serif; */
+  font-family: sans-serif;      /* Much better readable than Nimbus Sans L */
   font-size: 100.01%;           /* Fix for IE */
 }
 

@@ -191,3 +191,9 @@ form		{
 span.emph	{
 		font-weight: bold;
 		}
+
+.imgright {
+  float: right;
+  border: 0;
+  margin: 0 0 1em 1em;
+}

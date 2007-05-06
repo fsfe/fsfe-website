@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^web(.*) /contribute/web/web$1 [redirect=permanent]

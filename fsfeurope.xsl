@@ -181,11 +181,7 @@
         <!-- Content -->
         <xsl:element name="div">
           <xsl:attribute name="class">content</xsl:attribute>
-
-          <xsl:element name="a">
-            <xsl:attribute name="class">n</xsl:attribute>
-            <xsl:attribute name="id">#content</xsl:attribute>
-          </xsl:element>
+          <xsl:attribute name="id">content</xsl:attribute>
 
           <!-- Here goes the actual content of the <body> node of the input file -->
           <xsl:apply-templates select="node()"/>

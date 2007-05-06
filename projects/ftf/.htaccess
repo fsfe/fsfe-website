@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule ^rough-guide-for-users(.*) /projects/ftf/useful-tips-for-users$1 [redirect=permanent]
+RewriteRule ^rough-guide-for-vendors(.*) /projects/ftf/useful-tips-for-vendors$1 [redirect=permanent]

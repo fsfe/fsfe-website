@@ -64,7 +64,7 @@
   <xsl:template match="/html/body">
     <body>
       <xsl:apply-templates />
-      <table>
+      <table style="clear:both">
         <tr>
           <td valign="top" width="47%">
             <center>

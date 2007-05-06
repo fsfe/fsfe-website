@@ -211,6 +211,7 @@ td.newsdate {
 /* News and event items (new, based on dt and dd) */
 
 .newsleft {
+  clear: both;
   float: left;
   width: 45%;
 }

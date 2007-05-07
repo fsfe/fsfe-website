@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<html>
+  <head>
+    <title>GPLv3 - Retranscription de la conférence de Richard Stallman à Bruxelles, Belgique, le 1er avril 2007</title>
+  </head>
+
+  <body>
+
+<div style="float:right;">
+<a href="gplv3.html"><img SRC="GPLv3-logo-red.png"
+   ALT="GPLv3 logo" BORDER="0"
+   WIDTH="319" HEIGHT="130" /></a>
+</div>
+
+<h1 id="top">Retranscription de la conférence de Richard Stallman à Bruxelles, Belgique, le 1er avril 2007</h1>
+
+
+<p>
+  Retranscription publiée le 4 avril 2007. Contexte et documents liés&#160;:
+</p>
+
+<ul>
+  <li><a href="http://fsfe.org/transcripts">Liste des retranscriptions dans fsfe.org/transcripts</a></li>
+  <li><a href="diff-draft2-draft3.en.html">Les changements entre les versions 2 et 3 côte à côte</a></li>
+  <li><a href="http://gplv3.fsf.org/comments/gplv3-draft-3.html">Révision 3 (public comment system)</a></li>
+  <li><a href="http://gplv3.fsf.org/gpl3-dd3-rationale.pdf">Argumentaire</a></li>
+  <li><a href="http://gplv3.fsf.org/dd3-faq">dd3 FAQ</a></li>
+  <li><a
+  href="http://www.groklaw.net/article.php?story=20070403114157109">L'interview de Sean Daly de ce jour</a></li>
+  <li><a href="http://gplv3.fsf.org/lgpl3-dd2-guide">La deuxième révision de la LGPLv3 est sortie</a></li>
+  <li><a href="http://ciaran.compsoc.com/TEMPORARY-URL-rms-gplv3-20070401.vorbis.ogg">L'enregistrement audio</a></li>
+</ul>
+
+<p>
+  Merci à Sean Daly pour l'enregistrement.  Retranscription de <a href="/about/oriordan/oriordan.html">Ciarán O'Riordan</a>.
+  Apportez votre aide à ce type de travaux en <a href="http://www.fsfe.org/">rejoignant la Fellowship de la
+  FSFE</a>, en
+  <a href="/help/donate">donnant à la FSFE</a>, et en encourageant d'autres personnes à faire de même. La conférence a été faite en anglais.
+  </p>
+
+<h2 id="menu">Table des matières</h2>
+
+<ol>
+
+<li><a href="#free-sw">Qu'est-ce que le Logiciel Libre&#160;?</a></li>
+<li><a href="#gnu">Le projet GNU</a></li>
+<li><a href="#licences">Les licences du Logiciel Libre</a></li>
+<li><a href="#internationalisation">Internationalisation</a></li>
+<li><a href="#tivoisation">Tivoisation</a></li>
+<li><a href="#tivoisation-d3">Tivoisation - les limites de la révision 3</a></li>
+<li><a href="#eucd">Limiter les effets de l'EUCD et du DMCA</a></li>
+<li><a href="#ms-novell">Novell, Microsoft et les brevets</a></li>
+<li><a href="#termination">Fin des droits de distribution</a></li>
+<li><a href="#added">Formalisation des autorisations additionnelles</a></li>
+<li><a href="#bittorrent">BitTorrent</a></li>
+<li><a href="#retaliation">Les représailles contre les brevets et la licence Apache</a></li>
+<li><a href="#bracketed">La clause datée entre crochets</a></li>
+
+</ol>
+
+<h2 id="presentation">L'intervention</h2>
+
+<div style="float:right;">
+<img SRC="rms-20070401.jpeg"
+   ALT="Richard Stallman speaking" BORDER="0"
+   WIDTH="408" HEIGHT="447" />
+</div>
+
+<p>
+  <span id="free-sw">(<a href="#menu">aller au menu</a>) [Section&#160;: Qu'est-ce que le Logiciel Libre&#160;?]</span>
+</p>
+
+<p class="indent">
+Pour comprendre la GNU General Public License, vous devez tout d'abord comprendre ce que signifie le Logiciel Libre. Un Logiciel Libre est un logiciel qui respecte la liberté de l'utilisateur. Un logiciel qui n'est pas libre est un logiciel propriétaire. Les logiciels non-libres, ceux qui assujettissent l'utilisateur, sont distribués par un système social qui maintient les utilisateurs divisés et impuissants. Divisés parce que chaque utilisateur a l'interdiction de partager le programme avec quiconque, et impuissants parce que les utilisateurs ne possèdent pas le code source, de sorte qu'ils ne peuvent le modifier, n'ont aucun contrôle dessus, et ne peuvent même pas vérifier de façon indépendante ce qu'il fait réellement. Ces logiciels peuvent posséder des fonctions malveillantes, et de fait en ont souvent, et les utilisateurs peuvent ne pas être en mesure de connaître lesquelles.</p>
+
+<p class="indent">
+Les Logiciels Libres respectent la liberté de l'utilisateur. C'est pourquoi il est important de préciser, lorsqu'on parle de Logiciel Libre, que nous parlons de liberté et pas de prix, nous ne parlons pas nécessairement de logiciels gratuits. Le prix ne fait pas partie de la discussion, il est un détail secondaire, pas une question éthique. Pour comprendre le terme de Logiciel Libre correctement, pensez à la liberté de parole plutôt qu'à une bière offerte.
+(NdT&#160;: en anglais les mots 'libre' et 'gratuit' s'expriment par le même mot&#160;: free)
+</p>
+
+<p class="indent">
+Précisemment, le Logiciel Libre se définit par les quatre libertés fondamentales pour l'utilisateur&#160;:
+</p>
+
+<ul>
+
+<li>
+La liberté numéro zéro est la liberté d'exécuter le programme comme vous le voulez.
+</li>
+
+<li>
+La liberté numéro un est la liberté d'étudier le code source et de le modifier de sorte que le programme fasse ce que vous voulez lorsque vous l'exécutez.
+</li>
+
+<li>
+La liberté numéro deux est la liberté d'aider votre voisin&#160;; c'est à dire la liberté de redistribuer des copies conformes du programme à d'autres personnes, comme vous le voulez.</li>
+
+<li>
+La liberté numéro trois est la liberté de contribuer à votre communauté&#160;; c'est la liberté de distribuer des copies de vos versions modifiées du programme, comme vous le voulez.
+</li>
+
+</ul>
+
+<p class="indent">
+Chacune de ces libertés est une liberté de faire quelque chose si vous le souhaitez, et quand vous le souhaitez. Ce n'est pas une obligation, ce n'est pas une exigence. Vous n'êtes pas obligés d'exécuter le programme. Il ne vous est pas demandé de l'étudier ou de le modifier. Vous n'avez pas d'obligation d'en distribuer des copies exactes. Et l'on n'exige pas de vous que vous en distribuiez des copies modifiées. Mais vous êtes libres de faire tout cela, lorsque vous le souhaitez.
+</p>
+
+<p class="indent">
+S'il s'agissait d'un discours de présentation du Logiciel Libre, j'expliquerais pourquoi ces libertés sont essentielles, mais dans cette brève introduction j'omettrai de le faire. Qu'il me suffise de dire que lorsqu'un programme respecte ces quatre libertés, le système social présidant à sa distribution et à son utilisation est un système éthique. Ce qui veut dire qu'au moins de ce point de vue, le logiciel possède une légitimité éthique. Mais dès lors que l'une de ces libertés vient à manquer, alors nous avons à faire à un logiciel propriétaire, ce qui signifie que son système social de distribution et d'utilisation n'est pas éthique, et que quelle que soit la fonction du programme, il ne devrait pas être distribué de cette façon.
+</p>
+
+<p class="indent">
+Développer un programme non-libre n'apporte aucune contribution à la société. C'est une attaque à la liberté à la solidarité sociale. De telles attaques devraient être découragées, et j'espère voir le jour où elles n'auront plus lieu. C'est le but du mouvement du Logiciel Libre&#160;; que tous les utilisateurs d'ordinateurs jouissent de ces quatre libertés, pour tous les logiciels qu'ils utilisent. L'assujettissement des autres au travers des logiciels qu'ils utilisent ne devrait plus se produire.
+</p>
+
+
+<p>
+  <span id="gnu">(<a href="#menu">aller au menu</a>) [Section&#160;: Le projet GNU]</span>
+</p>
+
+<p class="indent">
+Pour amener ce sujet, ou tout au moins commencer, j'ai commencé à développer en 1984 un système d'exploitation dont l'intention était d'être constitué uniquement de Logiciels Libres. Son nom est GNU, qui est un acronyme récursif signifiant "GNU is Not Unix". Techniquement parlant, ce système est compatible avec Unix, mais la chose la plus importante est qu'il n'est pas Unix. Parce qu'Unix est un logiciel propriétaire et que GNU, puisqu'il n'est pas Unix, peut être rendu libre par nous tous, ses développeurs, et c'est le point crucial&#160;: parce qu'il vous offre un système d'exploitation que vous pouvez utiliser sans abandonner votre liberté à quiconque.
+</p>
+
+<p class="indent">
+Il y a aujourd'hui des dizaines de millions, peut-être une centaine de millions d'utilisateurs de variantes du système GNU. La plupart d'entre eux ne savent même pas qu'il s'agit d'une variante du système GNU parce qu'ils croient qu'il s'agit de Linux. Alors que Linux n'est qu'un composant du système qu'ils utilisent. Un composant qui réalise un travail essentiel et a été développé en 1991, et rendu libre par son développeur en 1992. Le système GNU associé à Linux, qui est le programme que nous appelons le noyau, a permis de constituer un système complètement libre en 1992. La combinaison de GNU et de Linux a rendu possible pour la première fois l'utilisation d'un compatible PC en toute liberté.
+</p>
+
+<p>
+  <span id="licences">(<a href="#menu">aller au menu</a>) [Section&#160;: Les licences du Logiciel Libre]</span>
+</p>
+
+<p class="indent">
+La manière dont Linux fut libéré a été de le republier sous la licence GNU General Public License. La GNU General Public License est la licence de Logiciel Libre que j'ai écrite à l'usage des composants du système GNU. Lorsque nous avons écrit ces composants, nous en avons fait des Logiciels Libres et les publiant sous la licence GNU GPL.
+</p>
+
+<p class="indent">
+Mais que cela signifie-t-il&#160;? Un programme est légalement considéré comme une œuvre littéraire, et est soumise au droit d'auteur (NdT&#160;: copyright). Tout ce que vous écrivez est automatiquement soumis au droit d'auteur&#160;- ce qui est une loi quelque peu absurde, mais c'est ainsi&#160;- et les lois relatives aux droits d'auteurs, par défaut, interdisent la copie, la distribution et la modification d'une œuvre. Alors comment un programme peut-il jamais devenir un Logiciel Libre&#160;? La seule solution consiste à ce que les détenteurs des droits écrivent un avis aux utilisateurs "vous avez les quatre libertés" parce que nous ne nous y opposons pas. Cet avis est une licence de Logiciel Libre. Tout avis ayant cet effet est une licence de Logiciel Libre.
+</p>
+
+<p class="indent">
+Il y a en fait des douzaines de licences différentes de Logiciels Libres, mais la GNU GPL est la plus répandue. Elle est utilisée par environ 70&#160;% des paquetages de Logiciels Libres. La différence principale entre la GNU GPL et la plupart des licences de Logiciels Libres est que la GNU GPL est une licence "copyleft". (Ndt&#160;: en anglais "right" veut dire droit, mais signifie également "droite", et "left" signifie "gauche" mais aussi "laisser"&#160;; le copyleft est donc à prendre comme une conception diamétralement opposée du droit d'auteur)
+</p>
+
+<p class="indent">
+Le copyleft est une technique que j'ai inventé, une façon d'utiliser les lois des droits d'auteur pour défendre la liberté des autres. Pour être une licence libre, la licence doit reconnaître les quatre libertés, si vous recevez un logiciel sous n'importe laquelle des licences de Logiciel Libre, vous avez les quatre libertés. La licence vous les donne. Et cela inclut la liberté numéro trois, celle de distribuer des copies d'une version modifiée du logiciel, et la liberté numéro deux, celle de redistribuer des copies du logiciel sans modification. Mais lorsque vous faites cela, lorsque vous distribuez des copies à d'autres personnes, auront-elles également ces quatre libertés&#160;?
+</p>
+
+<p class="indent">
+Peut-être que oui, peut-être que non, tout dépend de la manière dont vous allez procéder. Par exemple, même en 1984, j'ai vu le danger qui apparaissait si vous distribuiez un exécutable du logiciel sans fournir le code source, ce qui dénierait aux destinataires la liberté numéro un. La liberté d'étudier le code source et de le modifier pour que le programme fasse ce qu'ils souhaitent.
+</p>
+
+<p class="indent">
+Si donc vous pouviez distribuer des copies sans le code source, les gens qui les obtiendraient de vous n'auraient pas les quatre libertés. Pas toutes les quatre.
+</p>
+
+<p class="indent">
+Une autre chose que vous pourriez également faire, serait d'adjoindre des restrictions supplémentaires. Lorsque vous distribuez le logiciel, vous pourriez par exemple le placer sous une licence différente, qui pourrait être plus restrictive, et ne pas respecter les quatre libertés des utilisateurs. Si vous pouviez faire cela, ceux qui recevraient le programme de votre part n'auraient pas reçu un Logiciel Libre. Beaucoup de licences de Logiciels Libres permettent cela, de sorte qu'elles respectent les quatre libertés, mais ne les défendent pas. Un intermédiaire pourrait donc retirer la liberté du programme et vous le passer ensuite, vous recevriez alors le code, mais pas la liberté. Vous pourriez même ne recevoir qu'un exécutable, ou même recevoir un exécutable avec une licence vous interdisant de le copier. Ou encore, vous pourriez bien recevoir le code source, mais avec l'interdiction de le copier. Différentes situations peuvent se produire qui résultent dans le fait que vous ne recevez plus un Logiciel Libre. 
+</p>
+
+<p class="indent">
+
+Mon but, lorsque je développais le système d'exploitation GNU, était très exactement de donner la liberté à tous les utilisateurs d'ordinateurs. S'il était possible à un intermédiaire de rendre le logiciel non-libre&#160;- si par exemple, le modifier pouvait constituer une excuse pour en faire un logiciel non-libre, ce but aurait été manqué. Nous n'aurions pas réussi à apporter la liberté aux utilisateurs.
+</p>
+
+<p class="indent">
+C'est pourquoi j'ai spécialement conçu une licence de Logiciel Libre qui s'assure que toute personne recevant n'importe quelle version du programme le reçoive comme un logiciel libre, avec les quatre libertés. La première version de la GNU GPL, qui a été publiée en 1989, fut pensée de manière à empêcher les deux types d'attaques que je viens de vous décrire.
+</p>
+
+<p class="indent">
+La première étant de ne pas distribuer le code source, seulement l'exécutable. Eh bien la première version de la GPL indique que l'une des conditions pour distribuer un exécutable est de rendre disponible en même temps et pour les mêmes personnes le code source. Cela repoussait une attaque.
+</p>
+
+<p class="indent">
+L'autre attaque était l'adjonction de termes supplémentaires à la licence pour la modifier. Et bien, la version 1 de la GPL vous donnait la permission de distribuer des copies, mais sous la même licence, ni plus ni moins. Aucune autre façon de redistribuer n'était permise. On ne pouvait donc pas ajouter d'autres exigences. Ni retirer celles qui protègent la liberté des autres. Toute copie que peut recevoir quelqu'un doit légalement être distribuée sous la même licence&#160;: la GNU GPL.
+</p>
+
+<p class="indent">
+En 1991, j'ai publié la version 2 de la GNU GPL, et elle empêchait une nouvelle méthode possible d'attaque de la liberté des utilisateurs. C'est une méthode dont je n'avais pas conscience en 1989, mais que j'ai découvert par la suite. Elle repose sur le fait qu'un détenteur de brevet pourrait poursuivre un distributeur, et dans la transaction le distributeur pourrait admettre "lorsque nous distribuons ce programme, nous mettrons certaines restrictions aux utilisateurs".
+</p>
+
+<p class="indent">
+Que pouvions-nous faire contre cela&#160;? Les brevets logiciels sont des armes qui ne devraient pas exister. Elle s'attaquent à la liberté des utilisateurs d'ordinateurs, elles sabotent le développement de logiciels, et ne sont finalement bonnes que pour les méga entreprises. Ce sont elles qui font du lobbying pour les brevets, avec l'aide de leur gouvernement fantoche à Washington.
+</p>
+
+<p class="indent">
+Le fait est que, dans les pays assez bêtes pour avoir autorisé les brevets logiciels, un détenteur de brevet peut arrêter la distribution de n'importe quel programme qui implémente l'idée du brevet, et nous ne pouvons rien faire dans la licence du programme pour empêcher qu'il soit supprimé de cette façon. Parce que la licence d'un Logiciel Libre n'est qu'une autorisation d'utiliser l'œuvre du détenteur des droits d'auteur, elle ne concerne pas le brevet de quelqu'un d'autre.
+</p>
+
+<p class="indent">
+Nous ne pouvons empêcher le détenteur du brevet de tuer le programme, mais nous pouvons espérer sauver le programme d'un sort plus terrible que la mort, qui est d'être rendu non-libre, d'être transformé en un instrument d'assujettissement. Il est préférable que notre logiciel cesse d'exister, au moins pour 20 ans, durée de vie d'un brevet, plutôt que de le voir devenir un instrument d'assujettissement. Et j'ai trouvé un moyen de m'assurer de cela. Donc, dans la seconde version de la GPL, la septième section dit que si une condition vous est imposée, ou que vous acceptez n'importe quelle condition qui vous interdit de distribuer le programme avec toutes les libertés garanties par la GPL, alors vous ne pouvez pas le distribuer du tout.
+</p>
+
+<p class="indent">
+Quiconque essaiera de vous attaquer ou de vous effrayer, et tournera son attaque de façon à transformer le programme en instrument d'assujettissement, découvrira que tout ce qu'il a réussi à faire c'est de le tuer... qui évite au moins cet autre sort plus terrible encore que sa mort. Et de fait, cela donne à notre communauté une certaine marge de sécurité, car bien souvent le détenteur du brevet ne trouvera pas particulièrement intéressant de tuer le programme. D'un autre côté, si le brevet pouvait le rendre effectivement non-libre et payant pour les utilisateurs, cela pourrait être avantageux. Si donc le détenteur du brevet pouvait infliger son coup pire que la mort, cela serait beaucoup plus tentant à ses yeux que de seulement le tuer. Nous rendons donc effectivement moins probable le mauvais dénouement, en restant fermes.
+</p>
+
+<p class="indent">
+La deuxième version de la GPL est maintenant utilisée depuis seize ans. Au fil des ans nous avons vu plusieurs raisons de la changer. Il y a deux ans, nous avons décidé qu'il était temps de commencer à travailler sérieusement dessus et de préparer une nouvelle version. Nous avons réalisé que cela prendrait du temps. J'ai passé plusieurs mois à travailler sur la version 3 de la GPL en 2005, de façon à préparer la première révision qui a été publiée en janvier 2006.
+</p>
+
+<p class="indent">
+Nous venons juste de publier la troisième révision de discussion et avons décidé d'attendre soixante jours, pour ensuite préparer ce que nous espérons être le dernier brouillon destiné à recevoir les tous derniers commentaires avant le texte final.
+</p>
+
+<p class="indent">
+Quels sont donc les changements apportés&#160;?
+</p>
+
+<p class="indent">
+Les gens réclament fréquemment un résumé simple de ces changements, mais il n'est pas possible de le faire. La raison en est que tous ces changements se rapportent à des points spécifiques alors que l'idée de base reste la même&#160;: défendre la liberté de tous les utilisateurs. Et ceci ne changera jamais. Les modifications se retrouvent donc dans des domaines spécifiques et dans les détails, dont je vais maintenant vous présenter les plus importants. L'un d'entre eux est l'internationalisation.
+</p>
+
+<p>
+  <span id="internationalisation">(<a href="#menu">aller au menu</a>) [Section&#160;: Internationalisation]</span>
+</p>
+
+<p class="indent">
+Nous avons effectué des modifications sur la langue afin d'éviter certains termes dont le sens est trop variable selon les pays, comme "distribute" (≈distribuer) par exemple. Dans la version 3 de la GPL, le mot "distribute" n'est pas utilisé. Nous avons introduit deux nouveaux termes, et les avons définis de façon à obtenir des traductions aussi uniformes que possible à travers le monde. Le premier terme est "propagate" (≈propager). À la base, cela signifie effectuer une copie, ou toute activité similaire qui nécessite une autorisation selon les lois régissant le droit d'auteur.
+</p>
+
+<p class="indent">
+Toute action qui ne se limite pas à la modification d'une copie d'un logiciel ou à son exécution est une action de propagation de l'œuvre. Et le second terme est "convey" (≈convoyer). Le terme "convey" remplace simplement "distribute to other" (≈distribuer à d'autres), mais n'est plus défini en utilisant le mot "distribute" (≈distribution). Il est défini dans les termes suivants&#160;: propager d'une manière qui permette aux autres d'obtenir des copies du logiciel. Nous évitons de la sorte l'emploi du mot "distribution", et introduisons ensuite dans la licence des clauses sur la propagation de l'œuvre et son convoyage. Ainsi, les conditions posées sont-elles aussi uniformes que possible à travers le monde. Bien sûr, elles ne seront jamais exactement les mêmes puisque certains détails des lois sur les droits d'auteurs varient.
+</p>
+
+<p>
+  <span id="tivoisation">(<a href="#menu">aller au menu</a>) [Section&#160;:
+  Tivoisation]</span>
+</p>
+
+<p class="indent">
+Un autre changement important consiste en une nouvelle forme d'attaque à la liberté de l'utilisateur que nous avons vu naître ces dernières années. Nous l'appelons tivoisation. Cette pratique désigne la conception d'une machine qui refuse d'exécuter une version de son programme modifiée par l'utilisateur.
+</p>
+
+<p class="indent">
+Elle est ainsi nommée d'après le premier produit dont j'ai entendu parler qui se comportait ainsi, qui est le Tivo. Le Tivo contient des Logiciels Libres publiés sous la version 2 de la GPL, et en fournit le code source, de façon à ce que l'utilisateur puisse modifier le programme, le recompiler et installer sa version modifiée sur sa machine, alors que celle-ci refusera de démarrer parce qu'elle aura détecté qu'il s'agit d'une version modifiée de son programme original. Ceci veut dire que si l'utilisateur dispose bien de la liberté numéro 1 d'une façon théorique, celle-ci lui est retirée d'un point de vue pratique, il y a tromperie. Et ces façons de procéder apparaissent de façon systématique, et constituent donc une menace répétée sur les libertés des utilisateurs. Nous avons donc décidé d'empêcher ceci, et notre façon d'y parvenir est insérée dans les conditions de distribution des exécutables. Nous disons que si vous distribuez du code GPL embarqué dans un produit donné, ou destiné à être utilisé dans un produit, alors vous devez fournir à l'utilisateur tout ce dont il a besoin pour installer sa propre version modifiée du programme et lui permettre d'obtenir les mêmes fonctionnalités, à moins bien sûr que les changements apportés au code ne modifient la fonction. Le point important est qu'il n'est pas seulement requis que l'utilisateur puisse installer son programme, mais que celui-ci puisse s'exécuter bien qu'ayant été modifié.
+</p>
+
+<p class="indent">
+Si le seul fait que la modification du programme soit détectée et l'empêche de faire le même travail, il s'agit également d'une violation de la licence en ce sens que les informations d'installation fournies sont insuffisantes, et c'est ce qui se produirait par exemple dans la perspective de ce que Microsoft appelait Palladium. L'idée était que les fichiers eux-mêmes pouvaient être cryptés de façon à ce que seul un programme particulier pouvait les lire. Si vous aviez obtenu le code source de ce programme, l'aviez modifié et recompilé, la somme de contrôle de votre version serait évidemment différente. Ainsi votre version serait incapable de lire les fichiers cryptés avec la version originale. De la même manière, la version originale serait incapable de lire les fichiers cryptés avec votre version modifiée, bien qu'il n'y en ait point. Ils feraient mine de croire qu'il s'agit d'une situation symétrique et qu'il n'ont rien fait pour vous coincer, mais nos conditions stipulent qu'ils doivent vous donner ce qu'il faut pour que vous puissiez écrire une version modifiée qui fasse le même travail, alors que le seul fait de modifier le programme le rend incapable de réaliser ce travail.
+</p>
+
+<p>
+  <span id="tivoisation-d3">(<a href="#menu">aller au menu</a>) [Section&#160;:
+  Tivoisation - les limites de la révision 3]</span>
+</p>
+
+<p class="indent">
+Dans la troisième version, nous avons décidé de limiter quelque peu cette exigence. Elle est limitée à une catégorie que nous appelons "produits publics", qui inclut tous les produits disponibles pour le grand public et tout ce qui est destiné à être intégré à un boîtier. Ceci pour exclure les produits qui sont destinés spécifiquement aux entreprises et ne sont pas habituellement utilisés par les consommateurs.
+</p>
+
+<p class="indent">
+La raison pour laquelle nous avons pris cette décision est que le grand danger réside dans les produits destinés au grand public, et que de cette manière nous pouvions obtenir au moins un accord partiel des entreprises qui, du moins nous l'espérons, seront en mesure de nous aider à mettre un terme à cette menace.
+</p>
+
+<p class="indent">
+Les produits qui implémentent la tivoisation le font généralement parce qu'il y a d'autres fonctionnalités malveillantes dans le produit. Par exemple, le Tivo surveille l'utilisateur et implémente des restrictions comme les DRM. C'est pourquoi on vous empêche de modifier le programme. Les DRM ne sont pas éthiques, et ne devraient pas être tolérés. Toute surveillance de l'utilisateur est également contraire à l'éthique, mais nous n'avons rien spécifié dans la GPL qui empêche votre logiciel d'espionner l'utilisateur ou vérifie ses droits à la copie d'un fichier. Il n'y a aucune restriction sur les fonctionnalités dont peut disposer votre programme modifié.
+</p>
+
+<p class="indent">
+L'exigence anti-tivoisation ne vous limite pas de ce point de vue. Vous pouvez implémenter les plus sournoises des fonctionnalités que vous puissiez imaginer et distribuer la version modifiée du programme les comprenant. Nous essayons seulement de nous assurer que les utilisateurs qui se procureront votre programme auront la liberté d'enlever ces fonctionnalités, et d'y remettre toutes les fonctionnalités utiles que vous aurez retirées. Ils devraient être libres de modifier votre programme, tout comme vous avez été libre de le faire. C'est ce dont s'assurent les dispositions anti-tivoisation.
+</p>
+
+<p>
+  <span id="eucd">(<a href="#menu">aller au menu</a>) [Section&#160;:
+  Limiter les effets de l'EUCD et du DMCA]</span>
+</p>
+
+<p class="indent">
+Nous avons également des dispositions dans la section trois qui tentent de combattre les lois injustes comme le Digital Millenium Copyright Act aux États-Unis et la directive 2001/29 dite EUCD de l'Union Européenne, ou de toute loi similaire implémentant cette directive sur les droits d'auteurs issue du WIPO&#160;- un traité qu'aucun gouvernement représentant ses citoyens ne pourrait signer.
+</p>
+
+<p class="indent">
+Il y a en fait deux paragraphes. L'un est dirigé contre le DMCA et les lois similaires, l'autre contre l'EUCD, mais tous deux poursuivent le même but. L'objectif qu'ils remplissent est le suivant, si quelqu'un utilise un logiciel couvert par la GPL comme partie d'un système conçu pour coder et décoder des œuvres, alors il supprime toute possibilité de revendiquer qu'un autre logiciel qui décode ces œuvres est en infraction à ces lois. Ceci est simplement une manière d'essayer d'empêcher que des gens se voient interdits de distribuer un logiciel, peut-être une version modifiée du même ou peut-être pas, mais en tous les cas nous nous assurons que ces lois ne puissent supprimer les version modifiées que des gens pourraient souhaiter distribuer sous la GPL.
+</p>
+
+<p>
+[26:30]
+</p>
+
+<p>
+  <span id="ms-novell">(<a href="#menu">aller au menu</a>) [Section&#160;:
+  Novell, Microsoft, et les brevets]</span>
+</p>
+
+<p class="indent">
+Il y a également une autre forme d'attaque sur les libertés du Logiciel Libre que nous avons découvert en Novembre dernier lors de l'accord Novell-Microsoft. Ce qui s'est passé est que Novell a conclu un accord avec Microsoft dans lequel Novell paye pour distribuer des copies de logiciels couverts par la GPL alors que Microsoft accorde aux clients de Novell une licence de brevet très limitée, conditionnée sur la non-utilisation par les clients de plusieurs des libertés accordées par la GPL.
+</p>
+
+<p class="indent">
+Ceci représente un grand danger auquel nous avons fait face dans deux directions. Le premier est dirigé contre le rôle de Microsoft dans cet accord. Nous disons&#160;: si vous concluez un accord par lequel vous fournissez un logiciel sous licence GPL, version 3, qui est distribué par un tiers, et que, par cet accord, vous fournissez une sorte de licence pour un brevet à quiconque, alors cette licence de brevet s'étend à toute personne recevant le logiciel. Ainsi, si Novell avait distribué son logiciel sous la version 3 de la GPL dans cet accord, la GPL aurait également affecté Microsoft puisqu'ils fournissent de la distribution à travers cet accord.
+</p>
+
+<p class="indent">
+L'autre paragraphe, qui se trouve également dans la section [11], est dirigé contre la partie Novell de l'accord, qui est la suivante&#160;: si vous distribuez le programme sous couvert d'un accord que vous avez fait avec un tiers, en obtenant pour vos clients la promesse d'absence de poursuite relative à un brevet, et ce d'une manière discriminatoire, alors vous violez la licence GPL et perdez votre droit à distribuer le logiciel.
+</p>
+
+<p class="indent">
+Il y a en fait quelques conditions supplémentaires car nous essayons d'éviter de couvrir certains autres cas. Considérez par exemple le cas d'un parasite breveteur, une de ces compagnies dont la seule activité est de menacer les gens d'intenter des procès sur des violations de brevets afin de les faire payer. Lorsque cela arrive, l'entreprise attaquée n'a souvent pas d'autre choix que de payer. Nous ne souhaitons pas les mettre en position de violer la GPL en plus. Nous avons donc ajouté la condition suivante&#160;: "Ce paragraphe ne s'applique que si la distribution de logiciel est une activité lucrative du détenteur de brevet". Les parasites breveteurs n'en font pas partie, de sorte que leurs victimes ne se retrouvent pas en infraction à cause de ce paragraphe.
+</p>
+
+<p class="indent">
+Nous avons également fait quelque chose pour exclure les licences croisées (blanket cross-licenses) et d'autres pratiques qui ne sont pas menaçantes de la même manière.
+</p>
+
+<p>
+[29:38]
+</p>
+
+<p class="indent">
+Cette section [11], qui contient tous ces paragraphes, fait également quelque chose de plus. Nous avons décidé, dans la version 3 de la GPL, que les distributeurs devaient explicitement accorder les licences de brevets lorsqu'ils distribuaient un logiciel. Nous réalisons cela de deux façons. Ceux qui contribuent au développement du programme, qui y apportent quelque changement que ce soit, donnent positivement une licence de brevet à tous leurs destinataires finaux. Ceux qui ne font que transmettre des copies, sans apporter de modifications, sont contraints à ne pouvoir poursuivre aucun de ces destinataires finaux sous peine de voir leur licence retirée.
+</p>
+
+<p class="indent">
+C'est une sorte de compromis destiné à encourager de nombreuses entreprises à participer à la distribution, et de la sorte à rendre notre communauté relativement plus sûre.
+</p>
+
+<p class="indent">
+Dans les versions précédentes de la GPL, nous n'avions aucune sorte de licence de brevet explicite. Nous avions tenu pour acquis que si vous distribuiez à quelqu'un un programme couvert par la GPL et que vous disiez qu'il avait le droit de faire certaines choses, vous ne pouviez le poursuivre ensuite pour avoir fait ces choses. Et ceci reste vrai aux États-Unis dans une certaine mesure, mais n'est pas vrai partout dans le monde. Il s'agit donc d'un autre aspect de l'internationalisation&#160;: obtenir le même résultat partout dans le monde.
+</p>
+
+<p>
+  <span id="termination">(<a href="#menu">aller au menu</a>) [Section&#160;:
+  Fin des droits de distribution]</span>
+</p>
+
+<p class="indent">
+Une autre modification que nous avons apporté se trouve dans la révocation des droits de distribution. Dans la deuxième version de la GPL, si vous violiez la licence, vous perdiez vos droits de faire quoi que ce soit avec le programme. Et la seule manière de les récupérer était de revenir vers les détenteurs des droits et d'implorer leur pardon. Dans la plupart des cas ils vous l'accorderont si vous prouvez que vous suivrez la licence dans le futur, mais il peut y avoir de très nombreux détenteurs des droits d'auteur.
+</p>
+
+<p class="indent">
+Cela pourrait représenter un travail gigantesque, voire complètement infaisable. Avec la troisième version de la GPL, votre licence n'est pas automatiquement révoquée. C'est au contraire au détenteur du droit d'auteur de vous écrire, et de vous dire "Je vous avertis", et après cela, il peut révoquer votre licence s'il le souhaite. Mais il n'est pas obligé de le faire, et peut très bien vous pardonner s'il voit que vous vous mettez en règle avec la licence.
+</p>
+
+<p class="indent">
+Le résultat est le suivant&#160;: supposez que vous fassiez quelque chose qui viole la licence, et que vous distribuiez une distribution complète de GNU/Linux comprenant des milliers de programmes, en ne suivant pas les obligations de la licence. Et supposez maintenant que dix détenteurs des droits vous contactent en vous disant que vous violez la licence. Vous répondez alors "Oups, je devrais corriger ceci", et puis 60 jours passent et disons, cinq autres détenteurs de droits vous auront contacté durant ce délai, alors ce sont seulement ces derniers qui auront le droit de révoquer votre licence. Mais l'idée est que si vous montrez à cette quinzaine de développeurs que désormais vous respectez la licence et promettez de poursuivre dans cette voie. Ils peuvent alors vous dire "D'accord, nous vous pardonnons".
+</p>
+
+<p class="indent">
+Vous n'avez donc pas à aller trouver les milliers de détenteurs de droits pour leur demander de vous pardonner. Donc, tant que vous continuez à violer la licence, tous les détenteurs de droits peuvent toujours vous donner un avertissement lorsqu'ils prendront connaissance des faits, mais dès lors que vous vous mettez en conformité avec la licence, ils ont encore 60 jours de plus pour se plaindre, mais ensuite n'en ont plus le droit. En conséquence, les seuls à se plaindre durant ce délai sont ceux avec qui vous aurez à traiter.
+</p>
+
+<p>
+[34:00]
+</p>
+
+<p class="indent">
+Nous introduisons également une période automatique de correction pour ceux qui violent la licence pour la première fois. Ainsi donc, si c'est la première fois que vous violez la licence d'un détenteur de droits et que vous corrigez dans les 30 jours, les choses sont automatiquement réparées. Tout va bien pour vous. Mais cela ne se produira pas une seconde fois.
+</p>
+
+<p class="indent">
+Ce que nous essayons de faire, est de faciliter la tâche des contrevenants accidentels, de ceux qui acceptent de corriger leurs erreurs, tout en facilitant l'application stricte de la licence contre ceux qui persistent à ne pas agir correctement.
+</p>
+
+<p>
+[34:55]
+</p>
+
+<p class="indent">
+Un autre changement que nous avons apporté a à voir avec... ce que nous avons fait de neuf dans la section 10 est que nous avons traité les cas qui se présentent lorsqu'une société se scinde ou vend une de ses parties à une autre société, que se passe-t-il alors&#160;? Nous voulons nous assurer que ceci est clair. Cela ne devrait pas porter à controverse, mais au moins maintenant c'est clairement défini.
+</p>
+
+<p>
+  <span id="added">(<a href="#menu">aller au menu</a>) [Section&#160;:
+  Formalisation des autorisations additionnelles]</span>
+</p>
+
+<p class="indent">
+Une autre chose que nous avons faite, est que nous avons formalisé le sens de l'attribution des autorisation additionnelles. Il y a une pratique assez répandue, utilisée avec la version 2 de la GPL, qui vous permet de dire "Ceci est publié sous la version 2 de la GPL ou plus récente, et nous ajoutons en plus que vous pouvez faire X, Y ou Z". Les autorisations additionnelles sont ajoutées comme une exception.
+</p>
+
+<p class="indent">
+Et ceci est parfaitement compréhensible puisque distribuer un programme sous une licence libre signifie simplement que vous donnez les autorisations mentionnées dans la licence, et pouvez donc également donner d'autres autorisations.
+</p>
+
+<p class="indent">
+Mais, dans le but de rendre plus clair ce que cela signifie, nous l'avons formalisé. Nous avons donc expliqué que vous pouvez donner des autorisations supplémentaires pour des parties de code que vous introduisez dans un programme couvert par la GPL, sur lequel vous avez le droit d'ajouter des autorisations. Puisque le programme est disponible selon les termes de la GPL, lorsque quelqu'un le modifie il peut très bien retirer ces autorisations additionnelles. La GPL lui donne le droit de distribuer sa version sous la GPL. Il n'a aucune obligation de transférer des autorisations supplémentaires pour sa version. Mais il pourrait très bien transférer également ces autorisations additionnelles, les ayant reçues de vous, et donner ces autorisations aux parties qu'il a modifiées, lorsqu'il le désire.
+</p>
+
+<p class="indent">
+Lorsqu'un programme est distribué sous la GPL avec des autorisations additionnelles, quiconque le redistribue a le choix entre préserver ces autorisations additionnelles, ou les retirer. La section 7 explique tout cela. Elle explique également certaines exigences explicites que l'on peut trouver dans d'autres licences de Logiciels Libres, qui sont selon notre compréhension compatibles avec la GPL, et qui reflètent en fait notre pratique avec la version 2 de la GPL, mais que nous avons trouvé important de rendre explicite.
+</p>
+
+<p class="indent">
+Ce sont basiquement des clauses triviales. Comme le fait que l'avis de copyright ne peut être retiré. Ou bien les différentes formulations de décharge de garantie. Ce ne sont pas des conditions substantielles.
+</p>
+
+<p class="indent">
+Dans la révision 2, cette section, la section 7, était plus compliquée. Nous l'avons reprise de sorte qu'il n'y ait qu'un petit nombre d'exigences substantielles que vous puissiez ajouter. Et nous avions donc besoin d'un mécanisme plus compliqué qui permette d'en garder trace. Beaucoup de gens n'ont pas apprécié cette complexité. Nous l'avons donc supprimé et avons traité les problèmes sous un autre angle. Par exemple, il y a une section dans la dernière révision qui dit que lorsqu'un programme est distribué sous la version 3 de la GPL, vous pouvez le lier à du code couvert par la licence Affero GPL. Dans une révision précédente, nous disions que l'exigence ajoutée dans l'Affero GPL était l'une de celles que vous pouviez ajouter à une partie d'un programme à laquelle vous aviez contribué. Maintenant cela ne se passe plus ainsi. Désormais, la GPL est purement et simplement la GPL, et ne vous autorise à vous lier qu'à un autre code couvert par l'Affero GPL.
+</p>
+
+<p class="indent">
+L'Affero GPL, pour ceux qui ne la connaissent pas, est à la base une GNU GPL version 2, avec une exigence additionnelle qui dit que si vous utilisez le logiciel publiquement sur un site web, vous devez alors donner aux utilisateurs du site un moyen de télécharger le code source que vous exécutez. La version du source correspondant à celle dont ils utilisent l'interface.
+</p>
+
+<p class="indent">
+L'idée de base est que les développeurs de ces logiciels écrits pour être utilisés de cette façon, sur des serveurs, voulaient que ceux qui déploient publiquement des versions modifiées, contribuent eux aussi en rendant disponible leur code à la communauté.
+</p>
+
+<p class="indent">
+Lorsque nous avons pris contact avec Affero en travaillant sur cette licence, nous avions l'intention de rendre la future GPL compatible avec elle, et c'est ainsi que nous allons y parvenir.
+</p>
+
+<p>
+  <span id="bittorrent">(<a href="#menu">aller au menu</a>) [Section&#160;: BitTorrent]</span>
+</p>
+
+<p class="indent">
+Un autre changement apporté concerne la prise en charge de choses comme BitTorrent. La particularité de BitTorrent est que lorsque vous recevez des copies, vous devenez automatiquement un distributeur de copies à d'autres personnes sans même vous en apercevoir. C'est si bizarre que je n'avais jamais imaginé une telle chose possible en 1991. Et de fait, distribuer un logiciel couvert par la version 2 de la GPL en utilisant BitTorrent conduit à des choses qui enfreignent la GPL.
+</p>
+
+<p class="indent">
+Toutes ces personnes redistribuent des copies sans même le savoir, et manquent à leur responsabilité envers la GPL. Nous l'avons donc modifiée de sorte qu'ils n'aient aucun problème. De manière évidente, distribuer via BitTorrent doit être possible.
+</p>
+
+<p>
+[42:00]
+</p>
+
+<p class="indent">
+Le problème posé par BitTorrent vient des exécutables. L'idée de la GPL est que si vous distribuez des exécutables, vous devez rendre le code source disponible. Mais lorsque quelqu'un participe à un torrent pour les exécutables, il peut très bien ne pas savoir où se trouve le source, ne pas en avoir besoin, et nous ne voulons pas le rendre responsable de la gestion du code source, en simple utilisateur tentant d'obtenir une copie à travers le torrent.
+</p>
+
+<p class="indent">
+Un autre changement qui rendra la vie plus facile à un grand nombre de personnes, est que vous aurez désormais la permission de distribuer des copies locales et physiques d'exécutables en mettant simplement le code source à disposition sur un serveur. La raison pour laquelle ceci n'était pas autorisé dans le passé est que pour beaucoup d'utilisateurs d'alors, le téléchargement du source correspondant aurait été une opération longue et chère, ce qui n'est souvent plus le cas aujourd'hui.
+</p>
+
+<p class="indent">
+Dans la plupart des parties du monde, il y a seize ans, les accès haut débit n'existaient pas. Tout ce dont disposaient les gens étaient des accès par modem. Vous auriez pu donner le CD d'un système entier à une personne et si vous pouviez lui dire "Pour obtenir le code source, téléchargez-le simplement par votre ligne téléphonique", cela aurait été ridicule. Nous disions donc que vous deviez leur permettre d'obtenir le CD, ou tout autre support, du source par courrier, ce qui était bien moins cher et bien plus facile que de télécharger le tout à travers un modem RTC. Mais de nos jours, il existe des services qui vous proposent de vous télécharger ce que vous voulez et de vous l'envoyer sur un CD partout dans le monde, pour une somme modique. Le problème duquel nous tentions de nous protéger, qui était celui de l'impossibilité pratique d'accéder au code source, n'en n'est plus un désormais. Ces services vous coûteront moins cher que ce que la commande de CD par courrier requise par la version 2 de la GPL risque de vous coûter. Nous pouvons donc nous contenter de dire que les gens qui en ont besoin utiliseront ce service, et n'avons plus besoin d'imposer cette exigence à tous les distributeurs.
+</p>
+
+<p>
+[44:44]
+</p>
+
+<p class="indent">
+Je pense que nous avons fait le tour des points principaux. Il y a bien d'autres petits détails, et j'en ai sans doute oublié certains.
+</p>
+
+<p class="indent">
+Nous avons retiré le paragraphe de la version 2 de la GPL qui instaurait une limite géographique disant que vous ne pouviez distribuer le logiciel dans certains pays si quelque chose dans ces pays, comme des brevets, avait pour effet de rendre le programme non libre. Nous pensons nous être défendu contre cela de manière satisfaisante, et personne n'a jamais utilisé cette clause de toute façon.
+</p>
+
+<p class="indent">
+Alors, dans 90 jours...
+</p>
+
+<p>
+[interruption pour cause de changement de cassette]
+</p>
+
+<p>
+  <span id="retaliation">(<a href="#menu">aller au menu</a>) [Section&#160;: Les représailles contre les brevets et la licence Apache]</span>
+</p>
+
+<p class="indent">
+Les précédentes révisions possédaient quelques dispositions concernant les représailles possibles contre les agressions des brevets logiciels. Tout d'abord, il y avait une possibilité limitée de représailles directement dans la GPL elle-même qui disait que si quelqu'un commençait à utiliser une version modifiée d'un logiciel et attaquait ensuite quelqu'un d'autre au titre d'une infraction sur les brevets pour avoir fait des améliorations similaires dans sa propre version, cela entraînait la révocation d'un droit spécifique, celui de continuer à modifier le programme.
+</p>
+
+<p class="indent">
+Nous l'avons retirée car elle ne semblait pas vraiment efficace. Nous avons également retiré une clause dans la section 7, où nous autorisions l'ajout de deux sortes d'exigences additionnelles, l'une d'entre elles constituant une forme plus forte de défense contre les brevets. La dernière révision constitue essentiellement l'une de ces clauses en elle-même, et nous n'avons donc pas besoin de faire cet autre type d'exigence que vous pourriez apporter. L'autre sorte d'exigence ne semblait pas être utilisée, et nous l'avons donc retirée par souci de simplicité.
+
+</p>
+
+<p class="indent">
+La raison pour laquelle nous avons autorisé les gens à ajouter ces deux cas de représailles contre les brevets était la compatibilité, d'autant que l'une d'entre elle est utilisée par la licence Apache. Nous avons souhaité faire de la troisième version de la GPL, une version compatible avec la licence Apache et nous pensions y être parvenus. Nous étions fixés sur la clause de rejet des brevets de la licence Apache, et dans les précédentes révisions nous disions qu'il était correct d'ajouter des exigences au code auquel vous aviez contribué. Maintenant nous avons tout simplement cette exigence, plus loin dans la GPL, elle n'a donc plus besoin d'être ajoutée.
+</p>
+
+<p class="indent">
+Nous sommes donc compatibles avec cette clause de la licence Apache, mais il y a quelques mois, nous avons remarqué qu'il y avait une autre clause de la licence Apache qui réclamait une indemnité dans certains cas, et nous n'avons aucun moyen de nous rendre compatibles avec cela. Nous ne parviendrons pas au but de rendre la version 3 de la GPL pleinement compatible avec la licence Apache existante, ce que je regrette.
+</p>
+
+<p>
+  <span id="bracketed">(<a href="#menu">aller au menu</a>) [Section&#160;: La clause datée entre crochets]</span>
+</p>
+
+<p class="indent">
+Il y a une clause entre crochets dans la révision actuelle qui concerne une date limite dans le paragraphe qui interdit de conclure des accords de licence de brevet pour vos seuls clients. Nous n'avons pas encore décidé si cela devait s'appliquer aux accords qui ont déjà été signés ou bien seulement à ceux qui seront signés après la publication de cette révision. Et ceci dépend essentiellement de notre aptitude à dessiner une ligne de partage entre ces accords pernicieux et d'autres types d'accords sur lesquels nous ne voulons pas intervenir. Nous avons défini des critères qui semblent remplir cette fonction, et j'espère que nous pourrons savoir si nous avons réellement achever cela.
+</p>
+
+<p class="indent">
+Nous pensons nous être adéquatement occupés de l'accord spécifique entre Novell et Microsoft, avec cette autre exigence, celle qui est dirigée contre le rôle de Microsoft dans cet accord. Même si nous postdatons l'effet du second paragraphe, celui qui vise le rôle de Novell, de telle manière à ce qu'il ne s'applique pas à Novell, nous aurons traité correctement cet accord. Mais si nous avons suffisamment bien dessiné les lignes, ou si nous y parvenons, nous pourrons alors le faire appliquer à tous les accords, existants comme nouveaux. C'est une décision que nous n'avons pas encore prise.
+</p>
+
+<p>
+[52:00, end]
+</p>
+
+<p>
+[Note&#160;: pour plus d'informations sur la GPLv3, référez-vous à <a href="gplv3.html">la page de la FSFE sur la GPLv3</a> ainsi qu'au contexte et aux documents connexes liés en haut de cette page]
+</p>
+
+</body>
+
+</html>

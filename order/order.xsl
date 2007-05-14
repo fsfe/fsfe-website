@@ -16,6 +16,7 @@
         <xsl:variable name="price"><xsl:value-of select="@price"/></xsl:variable>
 
         <xsl:element name="tr">
+          <xsl:attribute name="id"><xsl:value-of select="$id"/></xsl:attribute>
 
           <!-- Image -->
           <xsl:element name="td">

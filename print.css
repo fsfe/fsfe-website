@@ -1,0 +1,49 @@
+/* ========================================================================= */
+/* Style sheet for fsfeurope.org, printing specials                          */
+/* ========================================================================= */
+
+/*
+  2007-05-13 19:00 Rainer Kersten - initial version
+  2007-05-14 21:00 Reinhard Müller - removed redundant things
+*/
+
+/* Use white background, grey is bad for printing :-) */
+/* Use "official" FSFE font */
+body {
+  background: #FFFFFF;
+  font-family: "Nimbus Sans L", Helvetica, Arial, sans-serif;
+}
+
+/* Don't use color for links */
+a, a:link, a:visited {
+  color: #000000;
+}
+
+/* Hide menu bar */
+.menu {
+  display: none;
+}
+
+/* Hide language list */
+.language {
+  display: none;
+}
+
+/* We don't need margins for the content */
+.content {
+  margin: 0;
+  padding: 0;
+}
+
+.postit {
+  background: #FFFFFF;
+}
+
+.footer {
+  font-size: 100%;
+  border: 5px #FFFFFF solid;
+}
+
+.newsleft dt span, .newsright dt span {
+  color: #000000;
+}

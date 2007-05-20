@@ -138,11 +138,8 @@ my $xslt_parser = XML::LibXSLT->new();
 
 # Parse the global stylesheet
 
-my $global_style_doc = $parser->parse_file($opts{i}."/fsfe-new.xsl");
+my $global_style_doc = $parser->parse_file($opts{i}."/fsfeurope.xsl");
 my $global_stylesheet = $xslt_parser->parse_stylesheet($global_style_doc);
-
-my $test_style_doc = $parser->parse_file($opts{i}."/fsfeurope.xsl");
-my $test_stylesheet = $xslt_parser->parse_stylesheet($test_style_doc);
 
 #
 # First topic of today: create all directories we need. Instead of creating
@@ -476,12 +473,7 @@ while (my ($file, $langs) = each %bases) {
         #
         # Do the actual transformation.
         #
-        my $results;
-        if ($dir eq "test") {
-	  $results = $test_stylesheet->transform($dom);
-        } else {
-	  $results = $global_stylesheet->transform($dom);
-        }
+        my $results = $global_stylesheet->transform($dom);
 
         #
         # In post-processing, we replace links pointing back to ourselves

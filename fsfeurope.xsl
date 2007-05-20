@@ -131,7 +131,7 @@
             </xsl:element>
             <xsl:element name="li">
               <xsl:attribute name="class">submenu</xsl:attribute>
-              <xsl:element name="a"><xsl:attribute name="href">http://www.fsfla</xsl:attribute>FSF Latin America</xsl:element>
+              <xsl:element name="a"><xsl:attribute name="href">http://www.fsfla.org</xsl:attribute>FSF Latin America</xsl:element>
             </xsl:element>
           </xsl:element>
 

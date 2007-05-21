@@ -7,12 +7,12 @@ my $query = new CGI;
 
 # Search robots sometimes don't fill in the _shipping field
 if $query->param("_shipping") {
-  die "Invalid order, possibly a search engine robot."
+  die "Invalid order, possibly a search engine robot.";
 }
 
 # Spam bots will be tempted to fill in this actually invisible field
 if $query->param("link") {
-  die "Invalid order, possibly spam."
+  die "Invalid order, possibly spam.";
 }
 
 my $date = strftime "%Y-%m-%d", localtime;

@@ -6,12 +6,12 @@ use POSIX qw(strftime);
 my $query = new CGI;
 
 # Search robots sometimes don't fill in the _shipping field
-if $query->param("_shipping") {
+if ($query->param("_shipping")) {
   die "Invalid order, possibly a search engine robot.";
 }
 
 # Spam bots will be tempted to fill in this actually invisible field
-if $query->param("link") {
+if ($query->param("link")) {
   die "Invalid order, possibly spam.";
 }
 

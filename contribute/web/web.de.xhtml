@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html>
+  <head>
+    <title>
+      FSFE - Mitarbeiten - Informationen für Webmaster
+    </title>
+  </head>
+
+  <body>
+    <h1>Informationen für Webmaster</h1>
+
+    <h2>Einleitung</h2>
+
+    <p>
+      Die Techniken und Programme zur Verwaltung der FSFE-Webseiten sollten den
+      meisten Entwicklern und Autoren schon bekannt sein. Sie könnten aber auch
+      für diejenigen interessant sein, die sie noch nicht entdeckt haben.
+    </p>
+
+    <p>
+      Übersetzer und gelegentliche Helfer werden höchstwahrscheinlich nur mit
+      Folgendem in Berührung kommen:
+    </p>
+
+    <ul>
+      <li>
+        <a href="http://savannah.gnu.org" target="_blank">Savannah</a> -- für
+        den CVS-Dienst (siehe unten) und das Management von
+        Zugriffsberechtigungen
+      </li>
+      <li>
+        <a href="http://www.w3.org/MarkUp/" target="_blank">XHTML</a> -- aus
+	 dem die statischen Seiten alle 5 Minuten generiert werden
+      </li>
+      <li>
+        <a href="http://www.cvshome.org" target="_blank">Concurrent Version
+          System (CVS)</a> -- zur Koordinierung und Synchronisierung
+      </li>
+    </ul>
+
+    <p>
+      Freiwillige, die sich eingehender mit Wartungsarbeiten beschäftigen
+      wollen, sollten auch mit Folgendem vertraut sein:
+    </p>
+
+    <ul>
+      <li>
+        <a href="http://www.perl.org" target="_blank">Perl</a> -- für Skripts 
+	zur Wartung und Seitenerstellung 
+      </li>
+      <li>
+        <a href="http://www.apache.org" target="_blank">Apache</a> -- als 
+        Webserver
+      </li>
+    </ul>
+
+    <h2>Verstehen, wie die Webseiten generiert werden</h2>
+
+    <p>
+      Die Webseiten auf www.fsfeurope.org werden als eine Sammlung von
+      XML-Dateien gewartet. Der Webserver erzeugt aus diesem XML-Dateien
+      automatisch alle fünf Minuten die HTML-Seiten. Somit geschehen alle
+      Änderungen der Seiten in den XML-Dateien, und das HTML wird nie direkt
+      verändert.
+    </p>
+
+    <p>
+      Jede Seite auf www.fsfeurope.org  wird
+      "<i>seitenname</i>.<i>sprache</i>.html" genannt. (Für <i>sprache</i> wird
+      der Iso-639 Code der Sprache genommen, der wie "en" für Englisch oder
+      "de" für Deutsch immer aus zwei Buchstaben besteht.) Die Quelldateien
+      werden <i>seitenname</i>.<i>sprache</i>.xhtml benannt. Einige Seiten
+      haben auch einen dynamischen Teil. Außer dem festen Text, der aus der
+      .xhtml-Datei geholt wird, schließen sie auch Informationen aus einer oder
+      mehreren .xml-Dateien mit ein. Immer wenn so eine Seite generiert wird,
+      nimmt das Generierungssystem wenn möglich die übersetzten .xml-Dateien
+      und greift für noch nicht übersetzte .xml-Dateien auf die englische
+      Version zurück. Auf diese Weise können solche Seiten am Ende teilweise
+      übersetztem Text zusammen mit Teilen anzeigen, die noch auf Englisch zu
+      sehen sind.  Beispiele für solche Seiten sind unter anderem die
+      <a href="/index.html">Startseite</a>, die
+      <a href="/news/news.html">Newsseite</a>, und die
+      <a href="/events/events.html">Veranstaltungsseite</a>.
+    </p>
+
+    <h2>Sich bei Savannah registrieren</h2>
+
+    <p>
+      Die Quelldateien der Webseiten werden auf
+      <a href="http://savannah.gnu.org/">Savannah</a> gespeichert. Dieser
+      Server wird von der Free Software Foundation, unserer
+      Schwesterorganisation in Nordamerika, gehostet. Sie können sich einen
+      Account auf diesem Server anlegen, um Schreibzugriff auf diese Dateien zu
+      bekommen.
+    </p>
+
+    <h3>Einen neuen Account registrieren</h3>
+
+    <p>
+      Folgen Sie
+      <a href="https://savannah.gnu.org/account/register.php">diesem Link</a>,
+      um einen neuen Account zu registrieren. Wählen Sie einen Login-Namen und
+      ein Passwort, tragen Sie Ihren echten Namen und Ihre E-mail-Adresse ein
+      und drücken Sie auf den „Absenden“ Knopf.
+    </p>
+
+    <p>
+      Jetzt werden Sie eine E-Mail von Savannah erhalten. Um Ihre Registrierung
+      abzuschließen, besuchen Sie die in der Mail erwähnte URL. Unbestätigte
+      Accounts werden nach zwei Tagen aus der Datenbank gelöscht.
+    </p>
+
+    <p>
+      Wenn Sie Ihren Account bestätigt haben, können Sie sich bei
+      <a href="https://savannah.gnu.org/">https://savannah.gnu.org</a> mit
+      Ihrem Login-Namen und Passwort einloggen.
+    </p>
+
+    <h3>Einen SSH-Schlüssel erzeugen</h3>
+
+    <p>
+      Während Sie das Passwort benutzen können, um sich ins Portal auf
+      Savannah einzuloggen, müssen Sie einen SSH-Schlüssel registrieren, um
+      einen CVS-Zugang zu bekommen. Das muss von jeder Maschine aus gemacht
+      werden, von der Sie auf das CVS-Repository zugreifen.
+    </p>
+
+    <p>
+      Folgen Sie bitte der
+      <a href="https://savannah.gnu.org/faq/?group_id=5802&amp;question=User_Account_-_How_do_I_configure_my_SSH_access.txt">Anleitung im Savannah-FAQ</a>
+      um einen SSH-Schlüssel zu erzeugen und zu registrieren.
+    </p>
+
+    <h3>Dem FSFE-Projekt beitreten</h3>
+
+    <p>
+      Auf Savannah werden viele Projekte gehostet, und der CVS-Zugang erfolgt
+      auf Projektbasis. Um Zugang zu den FSFE-Webseite-Quelldateien zu
+      bekommen, müssen Sie ein Mitglied des FSFE-Projekts werden.
+    </p>
+
+    <p>
+      Wählen Sie "Gruppenmitgliedschaft" in den oberen Tabs. Jetzt können Sie
+      "FSFE" in das Suchfeld "Bewerben, um in Projekten mitzuarbeiten"
+      eingeben, den FSF Europe Kontrollkasten aktivieren und einen Kommentar
+      eingeben.
+    </p>
+
+    <p>
+      Die Administratoren des FSFE-Projekts bekommen dann eine E-Mail mit Ihrer
+      Anfrage und dem Kommentar, den Sie eingeben haben, und können Ihre
+      Mitgliedschaft im Projekt genehmigen. Danach sollten Sie "FSF Europe"
+      unter "Gruppen, von denen ich Mitglied bin" sehen, nachdem Sie sich bei
+      Savannah angemeldet haben.
+    </p>
+
+    <h3>Das Repository das erste Mal abgleichen</h3>
+
+    <p>
+      Zuerst sollten Sie sicherstellen, dass Ihre ~/.bashrc-Datei eine Zeile
+      enthält, in der<br/>
+      <code>export CVS_RSH=ssh</code><br/>
+      steht. Dann legen Sie ein Verzeichnis für das Repository an und führen in
+      diesem Verzeichnis folgenden Befehl aus:<br/>
+      <code>$ cvs -z3 -d <i>Benutzername</i>@cvs.savannah.gnu.org:/web/fsfe co
+        .</code><br/>
+      Nun werden Sie nach Ihrem SSH-Passwort gefragt. Geben Sie es ein und
+      bestätigen Sie nochmals. Wenn alles in Ordnung ist, sollte die Webseite
+      jetzt ausgecheckt werden.
+    </p>
+
+    <h2>Mit dem Repository arbeiten</h2>
+
+    <p>
+      Nachdem Sie das Repository das erste Mal überprüft haben, sollten
+      Sie<br/>
+      <code>$ cvs update -d</code><br/>
+      im FSFE-Verzeichnis jedes Mal ausführen, bevor Sie an einer bestimmten
+      Datei arbeiten.
+    </p>
+
+    <p>
+      Wenn Sie dem Repository neue Dateien hinzufügen wollen, müssen Sie<br/>
+      <code>$ cvs add <i>Dateiname</i></code><br/>
+      ausführen.
+    </p>
+
+    <p>
+      Um Ihre Änderungen dem Server zu schicken, egal ob es neue Dateien oder
+      Änderungen an existierenden Dateien sind, führen Sie<br/>
+      <code>$ cvs commit <i>Dateiname</i></code> aus. Ein Editor öffnet sich
+      dann, damit Sie Ihre Änderungen beschreiben können.
+    </p>
+
+    <p>
+      Eine ausführliche Anleitung für CVS finden Sie auf der
+      <a href="http://www.nongnu.org/cvs/">CVS-Homepage</a>.
+    </p>
+
+    <p>
+      Wenn Sie alle Commits zu den Quelldateien der Webseiten verfolgen wollen,
+      können Sie sich in die
+      <a href="http://mail.fsfeurope.org/mailman/listinfo/web-cvs-notify">CVS-Benachrichtigungs-Mailingliste</a>
+      eintragen. Dann erhalten Sie eine E-Mail für jede Änderung, im
+      Verzeichnisbaum der Quelldateien vorgenommen wird.
+    </p>
+
+    <h2>Verantwortungsvoller Umgang mit dem Schreibzugriff</h2>
+
+    <p>
+      Wenn Sie auf die Webseite Schreibzugriff haben, tragen Sie sich bitte in
+      die
+      <a href="http://mail.fsfeurope.org/mailman/listinfo/web">Webmaster-Mailingliste</a>
+      ein.
+    </p>
+
+    <p>
+      Bitte behalten Sie im Hinterkopf, dass alle Änderungen automatisch
+      wirksam und sichtbar werden, ohne dass Irgendjemand weiter etwas tun
+      muss. Somit gibt es einige Dinge, um die wir Sie bitten möchten, wenn Sie
+      Änderungen oder neue Dateien einbringen:
+    </p>
+
+    <ul>
+      <li>
+        <p>
+          Die FSFE trägt die Verantwortung für den Inhalt der Webseiten. Bitte
+          schicken Sie keine Änderungen, die die Bedeutung des Textes
+          verändern, ohne dass ein
+          <a href="/about/members.html">Mitglied des Kernteams der FSFE</a>
+          zugestimmt hat. (Das ist bei Übersetzungen von schon existierendem
+          Inhalt nicht notwendig.)
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Wenn Sie Übersetzungen schicken und es irgendeine Möglichkeit gibt,
+          dass andere den Text auf Fehler überprüfen, dann nutzen Sie diese
+          Möglichkeit. Sie sollten die
+          <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">Mailingliste für Übersetzer</a>
+          nutzen, um dort um Korrekturlesen zu bitten. Wir ermutigen Sie dazu,
+          Dateien mit automatischen Tools wie GNU aspell oder einem anderen
+          Rechtschreibprüfungsprogramm Ihrer Wahl auf Rechtschreibfehler zu
+          überprüfen, egal ob Sie Dateien übersetzen oder korrekturlesen. Um
+          zum Beispiel <a href="http://aspell.net/">GNU aspell</a> auf einem
+          Debian GNU/Linux System zu nutzen, installieren Sie einfach die
+          Pakete <code>aspell</code> und <code>aspell-XX</code> ("XX" ist Ihr
+          Sprachcode), und führen dann den Befehl
+          <pre>aspell -H -d language -c file.xhtml</pre>
+          aus
+          (hier ist "language" der Name des Wörterbuchs für Ihre Sprache; die
+          <code>-d</code> -Option kann weggelassen werden, wenn Ihr UNIX-Locale
+          der Sprache des Wörterbuchs entspricht).
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Stellen Sie sicher, dass alle Dateien korrektes XML sind. Es gibt ein
+          Skript namens <code>tools/validate.pl</code>, das Ihnen hilft, Fehler
+          im Markup zu finden. Fehlerhaftes XML stört den automatischen
+          Generierungsprozess der Webseiten und blockiert Updates für die
+          gesamte FSFE-Webseite. Wenn Sie vermuten, dass der
+          Generierungsprozess gestört ist, können Sie das Protokoll des letzten
+          Generierungslaufs <a href="http://status.fsfeurope.org/web/">hier</a>
+          nachlesen.
+        </p>
+
+        <p>
+          <code>validate.pl</code> benötigt das <code>XML::LibXML</code> Perl
+          Modul; wenn es nicht auf Ihrem System installiert ist, können Sie
+          Dateien auch mit dem XML-Prüfungsprogramm Ihrer Wahl validieren. Sie
+          können zum Beispiel das Kommandozeilen Werkzeug<code>xmllint</code>
+          vom <a href="http://xmlsoft.org/">libxml2-Project</a> benutzten (wenn
+          Sie die Debian GNU/Linux-Distribution nutzen, installieren Sie das
+          <code>libxml2-utils</code>-Paket); führen Sie den Befehl
+          <pre>xmllint --noout file.xhtml</pre>
+          aus und suchen Sie nach möglichen Fehlermeldungen. 
+        </p>
+      </li>
+      
+      <li>
+        <p>
+          Stellen Sie sicher, dass die Codierung der Datei konsistent ist und
+          sie dem Inhalt des "encoding"-Attributs in der ersten Zeile
+          entspricht. Wenn Ihre Datei zum Beispiel als "iso-8859-1" (auch
+          bekannt als "latin-1"-Codierung) codiert ist, sollte in der ersten
+          Zeile der Datei stehen:
+          <pre>&lt;?xml version="1.0" encoding="iso-8859-1" ?&gt;</pre>
+          Eine weitere gültige Codierung ist die Unicode- oder
+          "UTF-8"-Codierung. Wenn Sie die Codierung einer Datei ändern wollen,
+          können Sie das Standardwerkzeug <code>iconv</code> wie in folgendem
+          Beispiel benutzen (hier wird eine Datei von der "latin1" auf "utf-8"
+          umcodiert):
+          <pre>iconv -f LATIN1 -t UTF8 inputfile &gt; outputfile</pre>
+        </p>
+      </li>
+    </ul>
+
+    <p>
+      Bitte stimmen Sie sich mit anderen Leuten mit CVS-Schreibzugriff ab,
+      damit Übersetzungen und Verbesserungen von Leuten ohne Schreibzugriff
+      auch committet werden, nachdem sie korrekturgelesen worden sind. Bitte
+      überprüfen Sie diese Dateien natürlich ebenso genau, wie Sie Ihre eigenen
+      Dateien überprüfen, bevor Sie sie committen.
+    </p>
+
+    <h2>Weitergehende Information</h2>
+
+    <p>
+      Da die FSFE-Webseite sowohl eine europäische/globale Ebene als auch vom
+      Anwender wählbare lokale Ebenen hat, die sie um länderspezifische
+      Informationen ergänzt, weist ihr Layout eine gewisse Komplexität auf.
+      Diese bleibt dem Anwender der Seite aber vollständig verborgen.
+    </p>
+
+    <p>
+      Wenn Sie nicht nur daran interessiert sind, Seiten zu übersetzen, werfen
+      Sie bitte einen Blick in die
+      <a href="/help/webpage/Webpage-Structure.txt" target="_blank">Struktur-Referenz</a>.
+    </p>
+
+    <p>
+      Es gibt auch eine
+      <a href="http://www.texinfo.org" target="_blank">Texinfo</a>-Dokumentation
+      "<a href="/README.texi" target="_blank">Webmastering FSF Europe</a>" von
+      <a href="mailto:oberg@fsfeurope.org">Jonas Öberg</a>, der das
+      Generierungssystem für diese Seite implementiert hat. Dort erfahren Sie
+      mehr darüber, wie diese Webseiten funktionieren.
+    </p>
+  </body>
+
+  <timestamp>$Date$ $Author$</timestamp>
+  <translator>Andreas Aubele </translator>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

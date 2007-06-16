@@ -527,15 +527,8 @@ while (my ($path, undef) = each %countries) {
           ! -f "$_/index.$lang.html") {
         link("$_/$base.$lang.html", "$_/index.$lang.html")
 		unless $opts{n};
-      }
-      if (! -f "$_/index.html") {
-        if (-f "$_/index.en.html") {
-          link("$_/index.en.html", "$_/index.html")
+        link("$_/$base.html.$lang", "$_/index.html.$lang")
 		unless $opts{n};
-        } elsif (-f "$_/$base.en.html") {
-          link("$_/$base.en.html", "$_/index.html")
-		unless $opts{n};
-        }
       }
     }
   }
@@ -544,10 +537,11 @@ while (my ($path, undef) = each %countries) {
 #
 # For all files that are not XHTML source files, we copy them verbatim to
 # the final location, for each focus. These should be links instead to
-# prevent us from vasting disk space.
+# prevent us from wasting disk space.
 #
 print STDERR "Copying misc files\n" unless $opts{q};
-foreach (grep(!/\.sources$/, grep(!/\.xsl$/, grep(!/\.xhtml$/, @files)))) {
+foreach (grep(!/\.sources$/, grep(!/\.xsl$/, grep(!/\.xml$/, grep(!/\.xhtml$/,
+          @files))))) {
   while (my ($dir, undef) = each %countries) {
     if (-f "$opts{i}/$_" && !$opts{n}) {
       link("$opts{i}/$_", "$opts{o}/$dir/$_");

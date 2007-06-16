@@ -503,6 +503,10 @@ while (my ($file, $langs) = each %bases) {
 
 	$global_stylesheet->output_file($results, "$opts{o}/$dir/$file.$lang.html")
 		unless $opts{n};
+        # Add foo.html.xx link which is used by Apache's MultiViews option when
+        # a user enters foo.html as URL.
+        link("$opts{o}/$dir/$file.$lang.html", "$opts{o}/$dir/$file.html.$lang")
+		unless $opts{n};
     }
   }    
   print STDERR "\n" unless $opts{q};

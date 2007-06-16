@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteRule ^contribute(.*) /help/help$1 [redirect=permanent]
+RewriteRule ^index(.*) /help/help$1 [redirect=permanent]
+RewriteRule ^donate(.*) /help/donate$1 [redirect=permanent]

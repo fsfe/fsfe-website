@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteRule ^web(.*) /contribute/web/web$1 [redirect=permanent]
+RewriteRule ^web\.(.*) /contribute/web/web.$1 [redirect=permanent]
 RewriteRule ^thankgnus\.(.*) /help/thankgnus-2007.$1 [redirect=permanent]
 RewriteRule ^donate\.(.*) /help/donate-2002.$1 [redirect=permanent]
 RewriteRule ^spenden\(.*) /help/donate-2002-de$1 [redirect=permanent]

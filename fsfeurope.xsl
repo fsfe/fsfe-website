@@ -142,6 +142,15 @@
         <xsl:element name="div">
           <xsl:attribute name="class">language</xsl:attribute>
 
+          <!-- Join the Fellowship -->
+          <xsl:element name="a">
+            <xsl:attribute name="href">https://www.fsfe.org/join</xsl:attribute>
+            <xsl:element name="img">
+              <xsl:attribute name="alt">Join the Fellowship!</xsl:attribute>
+              <xsl:attribute name="src">/graphics/global/Join_Fellowship.png</xsl:attribute>
+            </xsl:element>
+          </xsl:element>
+
           <!-- Translation list -->
           <xsl:element name="ul">
             <xsl:for-each select="/buildinfo/trlist/tr">

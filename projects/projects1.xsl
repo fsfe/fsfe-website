@@ -5,7 +5,7 @@
 
   <!-- Fill dynamic content -->
   <xsl:template match="dynamic-content">
-    <xsl:variable name="status"<xsl:value-of select="@status"/></xsl:variable>
+    <xsl:variable name="status"><xsl:value-of select="@status"/></xsl:variable>
 
     <xsl:for-each select="/html/set/project [@type = $type]">
       <xsl:sort select="@date" order="descending"/>

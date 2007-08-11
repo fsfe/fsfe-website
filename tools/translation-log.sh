@@ -40,20 +40,22 @@ outdir=$2
 # Create a separate file per language
 # -----------------------------------------------------------------------------
 
-# Remove all "./" at the beginning of filenames, remove all filenames mentioned
-# in notranslations.txt, and create a separate file per language
-sort ${infile} \
+# Remove all "./" at the beginning of filenames, and create a separate file per
+# language. For missing translations, remove all files mentioned in
+# translation-ignore.txt.
+sort "${infile}" \
   | uniq \
   | sed --expression='s/\.\///g' \
-  | grep --invert-match --file=tools/translation-ignore.txt \
   | while read language wantfile havefile; do
-  if [ -f ${wantfile} ]; then
+  if [ -f "${wantfile}" ]; then
     group="outdated"
   else
     group="missing"
+    echo "${havefile}" | grep --quiet --file="tools/translation-ignore.txt" \
+      && continue
   fi
   date="$(date --iso-8601 --reference=${havefile})"
-  echo "${group} ${date} ${wantfile} ${havefile}" >> ${infile}.$language
+  echo "${group} ${date} ${wantfile} ${havefile}" >> "${infile}.${language}"
 done
 
 

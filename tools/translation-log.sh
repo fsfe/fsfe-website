@@ -51,7 +51,7 @@ outdir=$2
 sort "${infile}" \
   | uniq \
   | sed --expression='s/\.\///g' \
-  | grep --quiet --invert-match --file="tools/translation-ignore.txt" \
+  | grep --invert-match --file="tools/translation-ignore.txt" \
   | while read language wantfile havefile; do
   if [ ! -f "${wantfile}" ]; then
     date="$(date --iso-8601 --reference=${havefile})"

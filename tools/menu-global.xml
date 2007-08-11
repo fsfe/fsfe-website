@@ -11,7 +11,7 @@
   <menu id="menu/events">/events/events.html</menu>
   <menu id="menu/help">/help/help.html</menu>
   <menu id="menu/help/1-fellow" parent="menu/help">https://www.fsfe.org</menu>
-  <menu id="menu/help/2-translator" parent="menu/help">/contribute/translators.html</menu>
+  <menu id="menu/help/2-translator" parent="menu/help">/contribute/translators/translators.html</menu>
   <menu id="menu/help/3-webmaster" parent="menu/help">/contribute/web/web.html</menu>
   <menu id="menu/help/4-booth_volunteer" parent="menu/help">/contribute/booth/booth.html</menu>
   <menu id="menu/help/5-intern" parent="menu/help">/contribute/internship.html</menu>
@@ -20,10 +20,6 @@
   <menu id="menu/press">/press/press.html</menu>
   <menu id="menu/projects">/projects/projects.html</menu>
   <menu id="menu/projects/1-ftf" parent="menu/projects">/projects/ftf/ftf.html</menu>
-  <menu id="menu/projects/community" parent="menu/projects">/projects/community.html</menu>
-  <menu id="menu/projects/legal" parent="menu/projects">/projects/legal.html</menu>
-  <menu id="menu/projects/other" parent="menu/projects">/projects/other.html</menu>
-  <menu id="menu/projects/technical" parent="menu/projects">/projects/technical.html</menu>
   <menu id="menu/order">/order/order.html</menu>
   <menu id="menu/thankgnus">/help/thankgnus.html</menu>
 </menuset>

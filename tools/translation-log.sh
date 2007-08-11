@@ -43,19 +43,31 @@ outdir=$2
 # Remove all "./" at the beginning of filenames, and create a separate file per
 # language. For missing translations, remove all files mentioned in
 # translation-ignore.txt.
+
+# Performance seems to be much better if we do it in 2 separate runs.
+# Otherwise, we would have to run the grep for each line of the file.
+
+# First run: missing translations
+sort "${infile}" \
+  | uniq \
+  | sed --expression='s/\.\///g' \
+  | grep --quiet --invert-match --file="tools/translation-ignore.txt" \
+  | while read language wantfile havefile; do
+  if [ ! -f "${wantfile}" ]; then
+    date="$(date --iso-8601 --reference=${havefile})"
+    echo "missing ${date} ${wantfile} ${havefile}" >> "${infile}.${language}"
+  fi
+done
+
+# Second run: outdated translations
 sort "${infile}" \
   | uniq \
   | sed --expression='s/\.\///g' \
   | while read language wantfile havefile; do
   if [ -f "${wantfile}" ]; then
-    group="outdated"
-  else
-    group="missing"
-    echo "${havefile}" | grep --quiet --file="tools/translation-ignore.txt" \
-      && continue
+    date="$(date --iso-8601 --reference=${havefile})"
+    echo "outdated ${date} ${wantfile} ${havefile}" >> "${infile}.${language}"
   fi
-  date="$(date --iso-8601 --reference=${havefile})"
-  echo "${group} ${date} ${wantfile} ${havefile}" >> "${infile}.${language}"
 done
 
 

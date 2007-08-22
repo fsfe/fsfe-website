@@ -5,7 +5,7 @@
 
   <!-- Fill dynamic content -->
   <xsl:template match="dynamic-content">
-    <xsl:for-each select="/html/set/project [@status = 'active']">
+    <xsl:for-each select="/html/set/project [@status = 'inactive']">
       <xsl:sort select="@date" order="descending"/>
 
       <!-- Title -->

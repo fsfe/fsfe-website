@@ -34,7 +34,7 @@
   </item>
   <item type="hooded" id="hooded-fsfs-black" price="28.00" date="2004-01-01">
     <available size="M"/>
-    <available size="L"/>
+    <!-- available size="L"/ not available in DUS -->
     <available size="XL"/>
     <image
       small="/order/2004/hooded-fsfs-black-front-small.jpg"

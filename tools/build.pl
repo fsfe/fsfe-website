@@ -79,37 +79,6 @@ our %languages = (
   tr => 'Türkçe',
 );
 
-#
-# This hash defines the translation status for every translation.
-# Valid values are "official" and "unofficial"
-#
-our %translations = (
-  bg => 'unofficial',
-  ca => 'unofficial',
-  cs => 'unofficial',
-  da => 'unofficial',
-  de => 'official',
-  el => 'unofficial',
-  en => 'official',
-  es => 'official',       
-  fi => 'unofficial',
-  fr => 'unofficial',
-  hu => 'unofficial',
-  it => 'official',
-  ku => 'unofficial',
-  mk => 'unofficial',
-  nl => 'unofficial',
-  no => 'unofficial',
-  pl => 'unofficial',
-  pt => 'unofficial',
-  ro => 'unofficial',
-  ru => 'unofficial',
-  sq => 'unofficial',
-  sr => 'unofficial',
-  sv => 'official',
-  tr => 'unofficial',
-);
-
 our $current_date = strftime "%Y-%m-%d", localtime;
 our $current_time = strftime "%Y-%m-%d %H:%M:%S", localtime;
 
@@ -219,7 +188,6 @@ open (TRANSLATIONS, '>', "$opts{o}/translations.log");
 #  buildinfo/@language    The language that we're building into
 #  buildinfo/@outdated    Set to "yes" if the original is newer than this page
 #  document/@language     The language that this documents is in
-#  document/@translation  The translation status (official/unofficial)
 #
 while (my ($file, $langs) = each %bases) {
   print STDERR "Building $file.. " unless $opts{q};
@@ -285,7 +253,6 @@ while (my ($file, $langs) = each %bases) {
         #
 	my $document = $dom->createElement("document");
 	$document->setAttribute("language", $lang);
-        $document->setAttribute("translation", $translations{$lang});
 	$root->appendChild($document);
 
 	my $source = "$opts{i}/$file.$lang.xhtml";
@@ -293,16 +260,13 @@ while (my ($file, $langs) = each %bases) {
             my $missingsource = $source;
             if (-f "$opts{i}/$file.en.xhtml") {
 		$document->setAttribute("language", "en");
-                $document->setAttribute("translation", "official");
 		$source = "$opts{i}/$file.en.xhtml";
 	    } elsif (-f "$opts{i}/$file.".$root->getAttribute("original").".xhtml") {
 		$document->setAttribute("language", $root->getAttribute("original"));
-                $document->setAttribute("translation", "official");
 		$source = "$opts{i}/$file.".$root->getAttribute("original").".xhtml";
 	    } else {
                 my $l = (keys %{$bases{$file}})[0];
                 $document->setAttribute("language", $l);
-                $document->setAttribute("translation", $translations{$l});
 		$source = "$opts{i}/$file.$l.xhtml";
             }
             if ($dir eq "global") {

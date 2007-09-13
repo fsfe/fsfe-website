@@ -245,8 +245,8 @@
               <xsl:text>[XHTML]</xsl:text>
             </xsl:element>
 
-            <!-- Insert the inofficial translation notice if appropriate -->
-            <xsl:if test="/buildinfo/document/@translation='unofficial'">
+            <!-- Insert the appropriate translation notice -->
+            <xsl:if test="/buildinfo/document/@translation!=''">
               <xsl:element name="br"/>
               <xsl:value-of select="/buildinfo/textset/text[@id='translator1']"/>
               <xsl:value-of select="/buildinfo/document/translator"/>

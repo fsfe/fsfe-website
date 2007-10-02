@@ -1,6 +1,7 @@
 RewriteEngine On
 RewriteRule ^education(.*) /projects/education$1 [redirect=permanent]
 RewriteRule ^ftf(.*) /projects/ftf$1 [redirect=permanent]
+RewriteRule ^stacs(.*) /projects/stacs$1 [redirect=permanent]
 RewriteRule ^gbn(.*) /projects/gbn$1 [redirect=permanent]
 RewriteRule ^law/eucd/(.*) /projects/eucd$1 [redirect=permanent]
 RewriteRule ^law(.*) /projects/law$1 [redirect=permanent]

@@ -23,9 +23,11 @@
     </p>
 
     <form action="/cgi-bin/stacs-register-capacity.pl" method="post">
-      <h2>Contact details</h2>
-
-      <table>
+     <center>
+      <table style="width:600px">
+        <tr>
+          <td colspan="2"><h2>Contact details</h2></td>
+        </tr>
         <tr>
           <td><p>Name:</p></td>
           <td>
@@ -50,16 +52,15 @@
             <input type="text" size="80" style="width:500px" name="phone"/>
           </td>
         </tr>
-      </table>
-
-      <h2>Organisation details</h2>
+        <tr>
+         <td colspan="2"><h2>Organisation details</h2>
       <p>
         If you would be attending this event as a representative of a
         particular organisation, please fill in the requested information
 	below.
       </p>
-
-      <table>
+          </td>
+         </tr>
         <tr>
           <td><p>Organisation name:</p></td>
           <td>
@@ -73,14 +74,13 @@
           </td>
         </tr>
         <tr>
-          <td><p>Organisation type:</p><p>(ie, NGO, company, government)</p></td>
+          <td><p>Organisation type (ie, NGO, company, government):</p></td>
           <td>
             <input type="text" size="80" style="width:500px" name="orgtype"/>
           </td>
         </tr>
-      </table>
-
-      <h2>Motivation for attending</h2>
+        <tr>
+         <td colspan="2"><h2>Motivation for attending</h2>
       <p>
         We'd like to know a few things about why you'd want to attend this
         event and how it would help you. Please explain briefly how your
@@ -88,15 +88,15 @@
         and how you would be able to disseminate what you learn to others
 	in your own field or geographic area.
       </p>
-
-      <table>
+        </td>
+       </tr>
         <tr>
           <td>
-            <textarea cols="80" rows="7" style="width:700px" name="address"/>
+            <textarea cols="80" rows="7" style="width:500px" name="address"/>
           </td>
         </tr>
-      </table>
-
+        <tr>
+         <td>
       <h2>Travel and accommodation expenses</h2>
       <p>
         If you need help to pay for your travel and accommodation expenses,
@@ -107,18 +107,18 @@
 	expenses other than travel and accommodation (for instance visa
 	fees), please give the amount and details in "Other expenses".
       </p>
-
-      <table>
+         </td>
+        </tr>
         <tr>
           <td><p>Travel expenses:</p></td>
           <td>
-            <input type="text" size="80" style="width:500px" name="travel"/> EUR
+            <input type="text" size="80" style="width:50px" name="travel"/> EUR
           </td>
         </tr>
         <tr>
           <td><p>Accommodation expenses:</p></td>
           <td>
-            <input type="text" size="80" style="width:500px" name="acco"/> EUR
+            <input type="text" size="80" style="width:50px" name="acco"/> EUR
           </td>
         </tr>
         <tr>
@@ -127,8 +127,8 @@
             <textarea cols="80" rows="5" style="width:500px" name="otherexp"/>
           </td>
         </tr>
-      </table>
-
+        <tr>
+         <td colspan="2">
       <!-- Should help against spam -->
       <p class="n">
         Please do not put anything in here:
@@ -140,6 +140,10 @@
       </center>
       <!-- Translators: Please change the value here to your language -->
       <input type="hidden" name="language" value="en"/>
+          </td>
+         </tr>
+        </table>
+       </center>
     </form>
   </body>
 

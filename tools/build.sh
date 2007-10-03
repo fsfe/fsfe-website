@@ -43,6 +43,7 @@ fi
 
 # Make sure build.sh and build.pl are executable (damn CVS!)
 chmod +x tools/build.sh tools/build.pl
+chmod +x cgi-bin/order.pl cgi-bin/stacs-register-capacity.pl
 
 # -----------------------------------------------------------------------------
 echo "$(date)  Building HTML pages."

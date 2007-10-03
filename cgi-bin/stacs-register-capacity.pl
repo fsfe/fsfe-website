@@ -26,7 +26,9 @@ open(MAIL, "|/usr/lib/sendmail -t -f oberg\@fsfeurope.org");
 print MAIL "From: web\@fsfeurope.org\n";
 print MAIL "To: oberg\@fsfeurope.org\n";
 print MAIL "Cc: jonas\@coyote.org\n";
-print MAIL "Subject: London Registration\n\n";
+print MAIL "Subject: London Registration\n";
+print MAIL "Content-type: text/plain; charset=UTF-8\n";
+print MAIL "Content-Transfer-Encoding: 8bit\n\n";
 print MAIL "$reference\n\n";
 foreach $name ($query->param) {
   $value = $query->param($name);

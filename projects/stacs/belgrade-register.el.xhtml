@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<html>
+  <head>
+    <title>Ευρωπαϊκό Ίδρυμα Ελεύθερου Λογισμικού - Βελιγράδι</title>
+  </head>
+
+  <body>
+    <h1>Αίτηση για το συνέδριο: Η Έρευνα στο Ελεύθερο Λογισμικό και η Κοινωνία
+        των Πολιτών</h1>
+
+    <p>
+      Ευχαριστούμε για το ενδιαφέρον σας να παρακολουθήσετε το τεχνικό συνέδριο
+      Η Έρευνα στο Ελεύθερο Λογισμικό και η Κοινωνία των Πολιτών στο Βελιγράδι
+      στις 4 Δεκεμβρίου 2007. Για περισσότερες πληροφορίες για την εκδήλωση
+      πηγαίνετε στη σελίδα 
+      <a href="belgrade">Η Έρευνα στο Ελεύθερο Λογισμικό και η Κοινωνία των Πολιτών</a>.
+    </p>
+    <p>
+      <strong>
+        Παρακαλούμε όπως υποβάλλετε την αίτησή σας πριν τις 9 Νοεμβρίου!
+      </strong>
+    </p>
+
+    <form action="/cgi-bin/stacs-register-workshop.pl" method="post">
+      <h3>Στοιχεία επικοινωνίας</h3>
+
+      <table>
+        <tr>
+          <td><p>Όνομα:</p></td>
+          <td>
+            <input type="text" size="80" style="width:500px" name="name"/>
+          </td>
+        </tr>
+        <tr>
+          <td><p>Διεύθυνση:</p></td>
+          <td>
+            <textarea cols="80" rows="5" style="width:500px" name="address"/>
+          </td>
+        </tr>
+        <tr>
+          <td><p>Διεύθυνση ηλεκτρονικού ταχυδρομείου:</p></td>
+          <td>
+            <input type="text" size="80" style="width:500px" name="email"/>
+          </td>
+        </tr>
+        <tr>
+          <td><p>Τηλέφωνο:</p></td>
+          <td>
+            <input type="text" size="80" style="width:500px" name="phone"/>
+          </td>
+        </tr>
+      </table>
+
+      <h3>Στοιχεία οργανισμού</h3>
+      <p style="width:700px">
+        Αν θα θέλατε να παρακολουθήσετε αυτή την εκδήλωση ως αντιπρόσωπος
+        συγκεκριμένου οργανισμού, παρακαλούμε όπως συμπληρώσετε τις κατωτέρω
+        απαιτούμενες πληροφορίες.
+      </p>
+
+      <table>
+        <tr>
+          <td><p>Όνομα οργανισμού:</p></td>
+          <td>
+            <input type="text" size="80" style="width:500px" name="orgname"/>
+          </td>
+        </tr>
+        <tr>
+          <td><p>Η θέση σας στον οργανισμό:</p></td>
+          <td>
+            <input type="text" size="80" style="width:500px" name="orgpos"/>
+          </td>
+        </tr>
+        <tr>
+          <td><p>Τύπος οργανισμού:</p><p>(πχ, ΜΚΟ, εταιρία, δημόσιος οργανισμός)</p></td>
+          <td>
+            <input type="text" size="80" style="width:500px" name="orgtype"/>
+          </td>
+        </tr>
+      </table>
+
+      <h3>Κίνητρο συμμετοχής/h3>
+      <p style="width:700px">
+        Θα θέλαμε μα γνωρίζουμε λίγα πράγματα σχετικά με τους λόγους για τους
+        οποίους επιθυμείτε να παρακολουθήσετε αυτή την εκδήλωση και πώς μπορούμε
+        να σας βοηθήσουμε. Παρακαλούμε εξηγήστε με συντομία πώς η συμμετοχή σας
+        στην εκδήλωση θα ωφελήσει εσάς ή τον οργανισμό σας και ποια θα είναι
+        η συμβολή σας.
+       </p>
+
+      <table>
+        <tr>
+          <td>
+            <textarea cols="80" rows="7" style="width:700px" name="address"/>
+          </td>
+        </tr>
+      </table>
+
+      <h3>Έξοδα μετακίνησης και διαμονής</h3>
+      <p style="width:700px">
+        Το έργο STACS μπορεί, αν το επιθυμείτε, να καλύψει λογικά έξοδα της 
+        μετακίνησης και της διαμονής σας. Παρακαλούμε υποδείξτε παρακάτω αν
+        χρειάζεστε κάλυψη εξόδων.
+      </p>
+
+      <table>
+        <tr>
+          <td><p>Έξοδα ταξιδιού:</p></td>
+          <td>
+            <input type="checkbox" name="travel"/> Ναί, θα χρειαζόμουν κάλυψη των εξόδων μετακίνησης και διαμονής.
+          </td>
+        </tr>
+      </table>
+
+      <!-- Should help against spam -->
+      <p class="n">
+        Παρακαλούμε μη σημειώσετε τίποτα εδώ:
+        <input type="text" size="40" name="link"/>
+      </p>
+
+      <center>
+        <input type="submit" value="Submit application"/>
+      </center>
+      <!-- Translators: Please change the value here to your language -->
+      <input type="hidden" name="language" value="en"/>
+    </form>
+  </body>
+
+  <timestamp>$Date$ $Author$</timestamp>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

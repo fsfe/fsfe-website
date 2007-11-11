@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<html>
+  <head>
+    <title>FSFE - Internal Tools - Expense Request</title>
+  </head>
+
+  <body>
+    <h1>Expense Request</h1>
+
+    <form action="/cgi-bin/expense-request.pl" method="post">
+      <table>
+          <td><p>Who:</p></td>
+          <td>
+            <select name="who" size="1">
+              <option value="coughlan">Shane Coughlan</option>
+              <option value="greve">Georg Greve</option>
+              <option value="harmuth">Stefan Harmuth</option>
+              <option value="jakobs">Joachim Jakobs</option>
+              <option value="kersten">Rainer Kersten</option>
+              <option value="kirschner">Matthias Kirschner</option>
+              <option value="oberg">Jonas Öberg</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><p>What:</p></td>
+          <td>
+            <textarea cols="80" rows="5" style="width:500px" name="what"/>
+          </td>
+        </tr>
+        <tr>
+          <td><p>When:</p></td>
+          <td>
+            <input type="text" size="80" style="width:500px" name="when"/>
+          </td>
+        </tr>
+        <tr>
+          <td><p>Why:</p></td>
+          <td>
+            <textarea cols="80" rows="5" style="width:500px" name="why"/>
+          </td>
+        </tr>
+        <tr>
+          <td><p>Estimate:</p></td>
+          <td>
+            <input type="text" size="80" style="width:500px" name="when"/>
+          </td>
+        </tr>
+        <tr>
+          <td><p>Budget:</p></td>
+          <td>
+            <select name="budget" size="1">
+              <option value="DRM">DRM</option>
+              <option value="FELLOWSHIP">FELLOWSHIP</option>
+              <option value="FTF">FTF</option>
+              <option value="POLICY">POLICY</option>
+              <option value="SELF">SELF</option>
+              <option value="STACS">STACS</option>
+              <option value="EVENTS">EVENTS (FSFE's appearance on public events)</option>
+              <option value="MERCHANDISE">MERCHANDISE (Purchase of Merchandise)</option>
+              <option value="OFFICE">OFFICE (Administration tasks in the main office)</option>
+              <option value="GENERAL">GENERAL (Everything that doesn't fit into any other category)</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td><p>Refund Contact:</p></td>
+          <td>
+            <input type="text" size="80" style="width:500px" name="refund"/>
+          </td>
+        </tr>
+      </table>
+
+      <center>
+        <input type="submit" value="Send Expense Request"/>
+      </center>
+    </form>
+  </body>
+
+  <timestamp>$Date$ $Author$</timestamp>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

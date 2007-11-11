@@ -70,7 +70,7 @@ if ($to == $who) {
 # Generate mail to responsible person
 # -----------------------------------------------------------------------------
 
-my $boundary = "NextPart$reference"
+my $boundary = "NextPart$reference";
 
 open(MAIL, "|/usr/lib/sendmail -t -f $to\@fsfeurope.org");
 print MAIL "From: $who\@fsfeurope.org\n";

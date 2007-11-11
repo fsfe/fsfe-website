@@ -1,0 +1,101 @@
+#!/usr/bin/perl
+
+use CGI;
+use POSIX qw(strftime);
+
+# -----------------------------------------------------------------------------
+# List of full names
+# -----------------------------------------------------------------------------
+
+my %names = (
+  "coughlan" => "Shane Coughlan",
+  "greve" => "Georg Greve",
+  "harmuth" => "Stefan Harmuth",
+  "jakobs" => "Joachim Jakobs",
+  "kersten" => "Rainer Kersten",
+  "kirschner" => "Matthias Kirschner",
+  "machon" => "Pablo Machón",
+  "mueller" => "Reinhard Müller",
+  "oberg" => "Jonas Öberg",
+  "ohnewein" => "Patrick Ohnewein",
+  "oriordan" => "Ciarán O'Riordan"
+  "reiter" => "Bernhard Reiter"
+);
+
+# -----------------------------------------------------------------------------
+# List of people responsible for the projects
+# -----------------------------------------------------------------------------
+
+my %responsible = (
+  "DRM" => "eec",
+  "FELLOWSHIP" => "kirschner",
+  "FTF" => "coughlan",
+  "POLICY" => "greve",
+  "SELF" => "oberg",
+  "STACS" => "oberg",
+  "AT" => "mueller",
+  "DE" => "reiter",
+  "ES" => "machon",
+  "IT" => "ohnewein",
+  "SE" => "oberg",
+  "EVENTS" => "eec",
+  "MERCHANDISE" => "eec",
+  "OFFICE" => "mueller",
+  "GENERAL" => "eec"
+);
+
+# -----------------------------------------------------------------------------
+# Get parameters
+# -----------------------------------------------------------------------------
+
+my $query = new CGI;
+
+my $who = $query->param("who");
+my $what = $query->param("what");
+my $when = $query->param("when");
+my $why = $query->param("why");
+my $estimate = $query->param("estimate");
+my $budget = $query->param("budget");
+my $refund = $query->param("refund");
+
+my $date = strftime "%Y-%m-%d", localtime;
+my $reference = "$who.$date";
+
+my $to = %responsible{$budget};
+if ($to == $who) {
+  $to = "eec";
+}
+
+# -----------------------------------------------------------------------------
+# Generate mail to responsible person
+# -----------------------------------------------------------------------------
+
+my $boundary = "NextPart$reference"
+
+open(MAIL, "|/usr/lib/sendmail -t -f $to\@fsfeurope.org");
+print MAIL "From: $who\@fsfeurope.org\n";
+print MAIL "To: $to\@fsfeurope.org\n";
+print MAIL "Subject: Web order\n";
+print MAIL "Mime-Version: 1.0\n";
+print MAIL "Content-Type: text/plain; charset=UTF-8\n";
+print MAIL "Content-Disposition: attachment; filename=$reference.txt\n";
+print MAIL "Content-Description: Expense Request\n";
+print MAIL "Content-Transfer-Encoding: 8bit\n\n";
+                      
+print MAIL "WHO: $who\n\n";
+print MAIL "WHAT: $what\n\n";
+print MAIL "WHEN: $when\n\n";
+print MAIL "WHY: $why\n\n";
+print MAIL "ESTIMATE: $estimate\n\n";
+print MAIL "BUDGET: $budget\n\n";
+print MAIL "REFUND CONTACT: $refund\n\n";
+print MAIL "AUTHORISED:\n\n";
+print MAIL "BY:\n";
+close MAIL;
+
+# -----------------------------------------------------------------------------
+# Inform user that everything was ok
+# -----------------------------------------------------------------------------
+
+print "Content-type: text/html\n\n";
+print "Your request was sent. Thank you.";

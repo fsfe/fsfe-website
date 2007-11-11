@@ -18,7 +18,7 @@ my %names = (
   "mueller" => "Reinhard Müller",
   "oberg" => "Jonas Öberg",
   "ohnewein" => "Patrick Ohnewein",
-  "oriordan" => "Ciarán O'Riordan"
+  "oriordan" => "Ciarán O'Riordan",
   "reiter" => "Bernhard Reiter"
 );
 

@@ -75,7 +75,7 @@ my $boundary = "NextPart$reference";
 open(MAIL, "|/usr/lib/sendmail -t -f $to\@fsfeurope.org");
 print MAIL "From: $who\@fsfeurope.org\n";
 print MAIL "To: $to\@fsfeurope.org\n";
-print MAIL "Subject: Web order\n";
+print MAIL "Subject: Expense Request\n";
 print MAIL "Mime-Version: 1.0\n";
 print MAIL "Content-Type: text/plain; charset=UTF-8\n";
 print MAIL "Content-Disposition: attachment; filename=$reference.txt\n";

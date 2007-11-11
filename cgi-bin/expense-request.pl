@@ -61,7 +61,7 @@ my $refund = $query->param("refund");
 my $date = strftime "%Y-%m-%d", localtime;
 my $reference = "$who.$date";
 
-my $to = %responsible{$budget};
+my $to = $responsible{$budget};
 if ($to == $who) {
   $to = "eec";
 }
@@ -82,7 +82,7 @@ print MAIL "Content-Disposition: attachment; filename=$reference.txt\n";
 print MAIL "Content-Description: Expense Request\n";
 print MAIL "Content-Transfer-Encoding: 8bit\n\n";
                       
-print MAIL "WHO: $who\n\n";
+print MAIL "WHO: $names{$who}\n\n";
 print MAIL "WHAT: $what\n\n";
 print MAIL "WHEN: $when\n\n";
 print MAIL "WHY: $why\n\n";

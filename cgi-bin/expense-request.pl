@@ -93,7 +93,7 @@ print MAIL "Content-Disposition: attachment; filename=$reference.txt\n";
 print MAIL "Content-Description: Expense Request\n";
 print MAIL "Content-Transfer-Encoding: 8bit\n\n";
 
-print MAIL "--$boundary--\n";
+print MAIL "--$boundary\n";
                       
 print MAIL "WHO: $names{$who}\n\n";
 print MAIL "WHAT: $what\n\n";
@@ -103,7 +103,10 @@ print MAIL "ESTIMATE: $estimate\n\n";
 print MAIL "BUDGET: $budget\n\n";
 print MAIL "REFUND CONTACT: $refund\n\n";
 print MAIL "AUTHORISED:\n\n";
-print MAIL "BY:\n";
+print MAIL "BY:\n\n";
+
+print MAIL "--$boundary--\n";
+                      
 close MAIL;
 
 # -----------------------------------------------------------------------------

@@ -59,7 +59,8 @@ my $budget = $query->param("budget");
 my $refund = $query->param("refund");
 
 my $date = strftime "%Y-%m-%d", localtime;
-my $reference = "$who.$date";
+my $time = strftime "%s", localtime;
+my $reference = "$who.$date." . substr $time, -3;
 
 my $to = $responsible{$budget};
 if ($to == $who) {
@@ -77,10 +78,22 @@ print MAIL "From: $who\@fsfeurope.org\n";
 print MAIL "To: $to\@fsfeurope.org\n";
 print MAIL "Subject: Expense Request\n";
 print MAIL "Mime-Version: 1.0\n";
-print MAIL "Content-Type: text/plain; charset=UTF-8\n";
+print MAIL "Content-Type: multipart/mixed; boundary=$boundary\n";
+print MAIL "Content-Transfer-Encoding: 8bit\n\n";
+
+print MAIL "--$boundary\n";
+print MAIL "Content-Type: text/plain; charset=utf-8\n";
+print MAIL "Content-Transfer-Encoding: 8bit\n\n";
+
+print MAIL "This expense request was sent via web interface\n\n";
+
+print MAIL "--$boundary\n";
+print MAIL "Content-Type: text/plain; charset=utf-8\n";
 print MAIL "Content-Disposition: attachment; filename=$reference.txt\n";
 print MAIL "Content-Description: Expense Request\n";
 print MAIL "Content-Transfer-Encoding: 8bit\n\n";
+
+print MAIL "--$boundary--\n";
                       
 print MAIL "WHO: $names{$who}\n\n";
 print MAIL "WHAT: $what\n\n";

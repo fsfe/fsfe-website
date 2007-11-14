@@ -63,7 +63,7 @@ my $time = strftime "%s", localtime;
 my $reference = "$who.$date." . substr $time, -3;
 
 my $to = $responsible{$budget};
-if ($to == $who) {
+if ($to eq $who) {
   $to = "eec";
 }
 
@@ -92,8 +92,6 @@ print MAIL "--$boundary\n";
 print MAIL "Content-Type: text/plain; charset=utf-8\n";
 print MAIL "Content-Transfer-Encoding: 8bit\n\n";
 
-print MAIL "$who";
-print MAIL "$responsible{$budget}";
 print MAIL "This expense request was sent via web interface\n\n";
 
 print MAIL "--$boundary\n";

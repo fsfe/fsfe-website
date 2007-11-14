@@ -73,10 +73,15 @@ if ($to == $who) {
 
 my $boundary = "NextPart$reference";
 
+my $replyto = "dus\@office.fsfeurope.org, $who\@fsfeurope.org, $to\@fsfeurope.org";
+if ($to != "eec") {
+  $replyto += ", eec\@fsfeurope.org";
+}
+
 open(MAIL, "|/usr/lib/sendmail -t -f $to\@fsfeurope.org");
 print MAIL "From: $who\@fsfeurope.org\n";
-print MAIL "Reply-To: dus\@office.fsfeurope.org, $who\@fsfeurope.org, $to\@fsfeurope.org\n";
-print MAIL "Mail-Followup-To: dus\@office.fsfeurope.org, $who\@fsfeurope.org, $to\@fsfeurope.org\n";
+print MAIL "Reply-To: $replyto\n";
+print MAIL "Mail-Followup-To: $replyto\n";
 print MAIL "To: $to\@fsfeurope.org\n";
 print MAIL "Subject: Expense Request\n";
 print MAIL "Mime-Version: 1.0\n";
@@ -87,6 +92,8 @@ print MAIL "--$boundary\n";
 print MAIL "Content-Type: text/plain; charset=utf-8\n";
 print MAIL "Content-Transfer-Encoding: 8bit\n\n";
 
+print MAIL "$who";
+print MAIL "$responsible{$budget}";
 print MAIL "This expense request was sent via web interface\n\n";
 
 print MAIL "--$boundary\n";

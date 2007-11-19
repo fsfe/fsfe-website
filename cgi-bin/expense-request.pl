@@ -75,7 +75,7 @@ my $boundary = "NextPart$reference";
 
 my $replyto = "dus\@office.fsfeurope.org, $who\@fsfeurope.org, $to\@fsfeurope.org";
 if ($to ne "eec") {
-  $replyto += ", eec\@fsfeurope.org";
+  $replyto .= ", eec\@fsfeurope.org";
 }
 
 open(MAIL, "|/usr/lib/sendmail -t -f $to\@fsfeurope.org $who\@fsfeurope.org");

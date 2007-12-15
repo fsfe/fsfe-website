@@ -449,11 +449,10 @@ while (my ($file, $langs) = each %bases) {
         #
         foreach ($results->documentElement->getElementsByTagName("a")) {
           my $href = $_->getAttribute("href");
-          # Remove all http://www.fsfeurope.org prefixes, except if the URL is
-          # *only* http://www.fsfeurope.org without any further path or file.
-          # This exception is needed to keep the "Our global work" link.
-          if ($href =~ /^http:\/\/www.fsfeurope.org\//) {
-            $href =~ s/http:\/\/www.fsfeurope.org//;
+          if ($href =~ /^http:\/\/www.fsfeurope.org/) {
+            if ($_->textContent != "Our global work") {
+              $href =~ s/http:\/\/www.fsfeurope.org//;
+            }
           }
           if ($href !~ /^http/) {
             if ($href =~ /\.html$/) {

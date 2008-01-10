@@ -281,10 +281,10 @@ td.projects {
 }
 
 /* FIXME: Use blockquote instead for real quotations */
-.quote {
+.quote, blockquote {
   font-style:italic;
-  margin-right: 40px;
-  margin-left: 50px;
+  margin-right: 5em;
+  margin-left: 5em;
 }
 
 p.footnote {

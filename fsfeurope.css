@@ -287,6 +287,10 @@ td.projects {
   margin-left: 5em;
 }
 
+address{
+  margin-left: 1em;
+}
+
 p.footnote {
   margin-right: 30px;
   margin-left: 40px;
@@ -300,4 +304,14 @@ code.footnote {
 /* FIXME: Use <strong> instead */
 span.emph {
   font-weight: bold;
+}
+
+.background{ /* For background information */
+ margin-left: 1.5em;
+ margin-right:2em;
+}
+
+.aboutfsfe{ /* For press release section "About the FSFE" */
+ font-style:italic;
+ margin-left: 2em;
 }

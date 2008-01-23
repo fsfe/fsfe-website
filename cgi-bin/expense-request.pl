@@ -19,7 +19,8 @@ my %names = (
   "oberg" => "Jonas Öberg",
   "ohnewein" => "Patrick Ohnewein",
   "oriordan" => "Ciarán O'Riordan",
-  "reiter" => "Bernhard Reiter"
+  "reiter" => "Bernhard Reiter",
+  "irina" => "Irina Dzhambazova"
 );
 
 # -----------------------------------------------------------------------------

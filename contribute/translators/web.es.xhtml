@@ -16,19 +16,19 @@
       Las páginas web de www.fsfeurope.org se mantienen mediante archivos XML.
       El servidor web genera páginas HTML desde los archivos XML
       automáticamente cada cinco minutos. Por tanto, toda edición que se hace
-      de estas páginas es sobre los archivos XML, y los HTML nunca son editados
+      de estas páginas es sobre los archivos XML, y los HTML nunca se editan
       directamente.
     </p>
 
     <p>
-      Toda página de www.fsfeurope.org es denominada
+      Toda página de www.fsfeurope.org se denomina
       «<i>nombrepágina</i>.<i>idioma</i>.html» (<i>idioma</i> son las
       dos letras del código iso-639 del idioma, como «en» para el inglés o «es» para
       el español). Los archivos fuente se denominan
       «<i>nombrepágina</i>.<i>idioma</i>.xhtml».<br />
-      Algunas páginas tienen partes dinámicas: aparte de los textos modificados
+      Algunas páginas tienen partes dinámicas: a parte de los textos modificados
       que provienen del archivo .xhtml, incluye información de uno o varios .xml.
-      Cuando cualquier página es construida, el sistema de construcción toma
+      Cuando cualquier página se construye, el sistema toma
       el archivo .xml traducido cuando está disponible, si no, toma la versión
       inglesa los archivos .xml. De este modo,
       cualquiera de las páginas se puede mostrar con partes de texto traducidas y
@@ -45,7 +45,7 @@
       públicamente disponibles para descargar, así que todo el mundo puede
       espontáneamente contribuir con una traducción sin registrarse en ningún
       sitio. A veces, cuando se empieza una traducción y va a tardar, por favor
-      envía una pequeña nota a la
+      envíe una pequeña nota a la
       <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">lista 
       de correo de traductores.</a> para evitar que otra persona empiece a trabajar 
       en el mismo texto simultáneamente.
@@ -55,18 +55,18 @@
 
     <p>
       Si abre una página en su explorador web que aún no ha sido
-      traducida a su idioma, vaya al final de la página, haga clic
+      traducida a su idioma, vaya al final de la página, pulse
       en el enlace «[XHTML]» y guarde el archivo. Obtendrá el archivo .xhtml
       en inglés. Renómbrelo para que tenga el código de su idioma en vez del
       código «en», y ábralo con un editor de textos. Ahora, puede traducir todo el
       texto que esté fuera de las etiquetas "&lt;...&gt;"; no cambie nada
-      dentro de estas etiquetas (el texto dentro de ellas son comandos XHTML
+      dentro de estas etiquetas (el texto dentro de ellas son órdenes XHTML
       que influyen en la apariencia de la página web resultante).
     </p>
 
     <p>
       Al final del archivo habrá una línea diciendo "&lt;/html&gt;".
-      Inmediatamente <i>encima</i> de esta línea, agregue una línea que ponga
+      Inmediatamente <i>encima</i> de esta línea, añada una línea que ponga
       "&lt;translator&gt;<i>su nombre</i>&lt;/translator&gt;".
     </p>
 
@@ -83,10 +83,10 @@
     <p>
       Si ha abierto una página con su explorador en la que la traducción está
       desfasada (lo indica un mensaje al principio de la página), vaya
-      al final de la página, haga clic en el enlace «[XHTML]» y guarde
+      al final de la página, pulse en el enlace «[XHTML]» y guarde
       el archivo. Este archivo es la (antigua) versión traducida. Después,
       use el enlace «English» al principio de la página para saltar a la
-      página inglesa. Ahora puedes comparar ambos archivos y actualizar la
+      página inglesa. Ahora puede comparar ambos archivos y actualizar la
       traducción. Por favor recuerde que todo lo que esté dentro de las
       etiquetas "&lt;...&gt;" no se debe traducir.
     </p>
@@ -106,7 +106,7 @@
       <a href="http://status.fsfeurope.org/web/translations.html">lista autogenerada</a>
       con todos los idiomas. En dicha página, cada código de idioma
       es un enlace para ir a otra página con una lista de todas las traducciones desfasadas
-      o que no existen para ese lenguaje.
+      o que no existen para ese idioma.
     </p>
 
     <p>
@@ -134,14 +134,14 @@
 
     <p>
       Cree un directorio en el cuál almacenará los archivos, entre en él
-      y use el siguiente comando:
+      y use la siguiente orden:
       <code>$ cvs -z3 -d:pserver:anonymous@cvs.savannah.gnu.org:/web/fsfe co .</code><br />
-      Cuando le pregunte por contraseña, pulse Intro.
+      Cuando le pregunte por la contraseña, pulse Intro.
     </p>
 
     <p>
       Para actualizar los archivos fuente que previamente ha descargado
-      mediante este sistema, puede utilizar el comando<br />
+      mediante este sistema, puede utilizar la orden<br />
       <code>$ cvs -z3 update -Pd</code><br />
     </p>
 

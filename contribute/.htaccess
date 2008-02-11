@@ -1,6 +1,2 @@
 RewriteEngine On
-RewriteRule ^$ /help/ [redirect=permanent]
 RewriteRule ^translators\.(.*) /contribute/translators/translators.$1 [redirect=permanent]
-RewriteRule ^contribute(.*) /help/help$1 [redirect=permanent]
-RewriteRule ^index(.*) /help/help$1 [redirect=permanent]
-RewriteRule ^donate(.*) /help/donate$1 [redirect=permanent]

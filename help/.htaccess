@@ -1,4 +1,6 @@
 RewriteEngine On
+RewriteRule ^index(.*) /contribute/contribute$1 [redirect=permanent]
+RewriteRule ^help(.*) /contribute/contribute$1 [redirect=permanent]
 RewriteRule ^web\.(.*) /contribute/web/web.$1 [redirect=permanent]
 RewriteRule ^thankgnus\.(.*) /help/thankgnus-2008.$1 [redirect=permanent]
 RewriteRule ^donate-2002\.(.*) /help/donate.$1 [redirect=permanent]

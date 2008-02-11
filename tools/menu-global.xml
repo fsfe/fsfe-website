@@ -5,9 +5,9 @@
   <menu id="menu/associates">/associates/associates.html</menu>
   <menu id="menu/contact">/contact/contact.html</menu>
   <menu id="menu/documents">/documents/documents.html</menu>
-  <menu id="menu/donate">/help/donate.html</menu>
-  <menu id="menu/donate/cc" parent="menu/donate">/help/paypal.html</menu>
-  <menu id="menu/donate/other" parent="menu/donate">/help/donate.html</menu>
+  <menu id="menu/donate">/donate/donate.html</menu>
+  <menu id="menu/donate/cc" parent="menu/donate">/donate/paypal.html</menu>
+  <menu id="menu/donate/other" parent="menu/donate">/donate/donate.html</menu>
   <menu id="menu/events">/events/events.html</menu>
   <menu id="menu/help">/contribute/contribute.html</menu>
   <menu id="menu/help/1-fellow" parent="menu/help">https://www.fsfe.org</menu>

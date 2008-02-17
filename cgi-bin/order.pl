@@ -11,7 +11,7 @@ if (!$query->param("_shipping")) {
 }
 
 # Spam bots will be tempted to fill in this actually invisible field
-if ($query->param("link")) {
+if ($query->param("url")) {
   die "Invalid order, possibly spam.";
 }
 

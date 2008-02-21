@@ -20,7 +20,7 @@ my $amount = 0;
 # -----------------------------------------------------------------------------
 
 # Spam bots will be tempted to fill in this actually invisible field
-if (!$query->param("url")) {
+if (not $query->param("url")) {
   open(MAIL, "|/usr/lib/sendmail -t -f mueller\@fsfeurope.org");
   print MAIL "From: web\@fsfeurope.org\n";
   print MAIL "To: order\@fsfeurope.org\n";

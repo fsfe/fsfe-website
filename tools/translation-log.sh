@@ -55,7 +55,7 @@ sort "${infile}" \
   | while read language wantfile havefile; do
   if [ ! -f "${wantfile}" ]; then
     date="$(date --iso-8601 --reference=${havefile})"
-    echo "missing ${date} ${wantfile} ${havefile}" >> "${infile}.${language}"
+    echo "missing ${wantfile} NONE ${havefile} ${date}" >> "${infile}.${language}"
   fi
 done
 
@@ -65,8 +65,9 @@ sort "${infile}" \
   | sed --expression='s/\.\///g' \
   | while read language wantfile havefile; do
   if [ -f "${wantfile}" ]; then
-    date="$(date --iso-8601 --reference=${havefile})"
-    echo "outdated ${date} ${wantfile} ${havefile}" >> "${infile}.${language}"
+    date1="$(date --iso-8601 --reference=${wantfile})"
+    date2="$(date --iso-8601 --reference=${havefile})"
+    echo "outdated ${wantfile} ${date1} ${havefile} ${date2}" >> "${infile}.${language}"
   fi
 done
 
@@ -85,7 +86,7 @@ for file in ${infile}.*; do
     echo "  <body>"
     echo "    <h1>Translation status for ${language}</h1>"
     lastgroup=""
-    sort -r ${file} | while read group date wantfile havefile; do
+    sort -r ${file} | while read group wantfile date1 havefile date2; do
       if [ "${group}" != "${lastgroup}" ]; then
         if [ "${group}" == "outdated" ]; then
           echo "    <h2>Outdated translations</h2>"
@@ -101,9 +102,8 @@ for file in ${infile}.*; do
           echo "    </p>"
           echo "    <table border=\"1\" cellspacing=\"0\" cellpadding=\"3\">"
           echo "      <tr>"
-          echo "        <th>last change of original</th>"
-          echo "        <th colspan=\"2\">translated file</th>"
-          echo "        <th colspan=\"2\">original file</th>"
+          echo "        <th colspan=\"3\">translated file</th>"
+          echo "        <th colspan=\"3\">original file</th>"
           echo "      </tr>"
         elif [ "${group}" == "missing" ]; then
           if [ "${lastgroup}" == "outdated" ]; then
@@ -121,26 +121,27 @@ for file in ${infile}.*; do
           echo "    </p>"
           echo "    <table border=\"1\" cellspacing=\"0\" cellpadding=\"3\">"
           echo "      <tr>"
-          echo "        <th align=\"center\">last change of original</th>"
           echo "        <th>translated file</th>"
           echo "        <th>original file</th>"
+          echo "        <th align=\"center\">last change of original</th>"
           echo "      </tr>"
         fi
         lastgroup="${group}"
       fi
 
       echo "      <tr>"
-      echo "        <td align=\"center\">${date}</td>"
       if [ "${group}" = "outdated" ]; then
         echo "        <td>"
         echo "          <a href=\"${srcroot}/${wantfile}\">${wantfile}</a>"
         echo "        </td>"
+        echo "        <td align=\"center\">${date1}</td>"
         echo "        <td>"
         echo "          <a href=\"${cvsroot}/${wantfile}?cvsroot=Web\">[changelog]</a>"
         echo "        </td>"
         echo "        <td>"
         echo "          <a href=\"${srcroot}/${havefile}\">${havefile}</a>"
         echo "        </td>"
+        echo "        <td align=\"center\">${date2}</td>"
         echo "        <td>"
         echo "          <a href=\"${cvsroot}/${havefile}?cvsroot=Web\">[changelog]</a>"
         echo "        </td>"
@@ -151,6 +152,7 @@ for file in ${infile}.*; do
         echo "        <td>"
         echo "          <a href=\"${srcroot}/${havefile}\">${havefile}</a>"
         echo "        </td>"
+        echo "        <td align=\"center\">${date2}</td>"
       fi
       echo "      </tr>"
     done
@@ -178,22 +180,22 @@ grep --no-filename "^outdated" ${infile}.* \
     echo "    <h1>Hit parade of outdated translations</h1>"
     echo "    <table border=\"1\" cellspacing=\"0\" cellpadding=\"3\">"
     echo "      <tr>"
-    echo "        <th>outdated since</th>"
-    echo "        <th colspan=\"2\">translated file</th>"
-    echo "        <th colspan=\"2\">original file</th>"
+    echo "        <th colspan=\"3\">translated file</th>"
+    echo "        <th colspan=\"3\">original file</th>"
     echo "      </tr>"
-    while read group date wantfile havefile; do
+    while read group wantfile date1 havefile date2; do
       echo "      <tr>"
-      echo "        <td align=\"center\">${date}</td>"
       echo "        <td>"
       echo "          <a href=\"${srcroot}/${wantfile}\">${wantfile}</a>"
       echo "        </td>"
+      echo "        <td align=\"center\">${date1}</td>"
       echo "        <td>"
       echo "          <a href=\"${cvsroot}/${wantfile}?cvsroot=Web\">[changelog]</a>"
       echo "        </td>"
       echo "        <td>"
       echo "          <a href=\"${srcroot}/${havefile}\">${havefile}</a>"
       echo "        </td>"
+      echo "        <td align=\"center\">${date2}</td>"
       echo "        <td>"
       echo "          <a href=\"${cvsroot}/${havefile}?cvsroot=Web\">[changelog]</a>"
       echo "        </td>"

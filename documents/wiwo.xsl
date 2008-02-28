@@ -17,7 +17,7 @@
   <xsl:template match="/html/body">
     <body>
       <xsl:apply-templates />
-      <div class="indent"><b><xsl:value-of select="/html/text[@id='osig']" /></b>
+      <b><xsl:value-of select="/html/text[@id='osig']" /></b>
       <ul>
         <xsl:apply-templates select="/html/set/osig/node()" />
       </ul>
@@ -25,7 +25,7 @@
       <b><xsl:value-of select="/html/text[@id='isig']" /></b>
       <ul>
         <xsl:apply-templates select="/html/set/isig/node()" />
-      </ul></div>
+      </ul>
       <xsl:apply-templates select="/html/text/footer/node()" />
     </body>
   </xsl:template>

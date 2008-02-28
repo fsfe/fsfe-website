@@ -55,7 +55,7 @@ sort "${infile}" \
   | while read language wantfile havefile; do
   if [ ! -f "${wantfile}" ]; then
     date="$(date --iso-8601 --reference=${havefile})"
-    echo "missing ${wantfile} NONE ${havefile} ${date}" >> "${infile}.${language}"
+    echo "missing ${date} ${wantfile} NONE ${havefile}" >> "${infile}.${language}"
   fi
 done
 
@@ -67,7 +67,7 @@ sort "${infile}" \
   if [ -f "${wantfile}" ]; then
     date1="$(date --iso-8601 --reference=${wantfile})"
     date2="$(date --iso-8601 --reference=${havefile})"
-    echo "outdated ${wantfile} ${date1} ${havefile} ${date2}" >> "${infile}.${language}"
+    echo "outdated ${date2} ${wantfile} ${date1} ${havefile}" >> "${infile}.${language}"
   fi
 done
 
@@ -86,7 +86,7 @@ for file in ${infile}.*; do
     echo "  <body>"
     echo "    <h1>Translation status for ${language}</h1>"
     lastgroup=""
-    sort -r ${file} | while read group wantfile date1 havefile date2; do
+    sort --reverse ${file} | while read group date2 wantfile date1 havefile; do
       if [ "${group}" != "${lastgroup}" ]; then
         if [ "${group}" == "outdated" ]; then
           echo "    <h2>Outdated translations</h2>"
@@ -183,7 +183,7 @@ grep --no-filename "^outdated" ${infile}.* \
     echo "        <th colspan=\"3\">translated file</th>"
     echo "        <th colspan=\"3\">original file</th>"
     echo "      </tr>"
-    while read group wantfile date1 havefile date2; do
+    while read group date2 wantfile date1 havefile; do
       echo "      <tr>"
       echo "        <td>"
       echo "          <a href=\"${srcroot}/${wantfile}\">${wantfile}</a>"

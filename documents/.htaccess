@@ -1,0 +1,2 @@
+RewriteEngine On
+RewriteRule ^fp6(.*) /projects/fp6$1 [redirect=permanent]

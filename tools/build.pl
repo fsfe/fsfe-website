@@ -537,21 +537,10 @@ sub clone_document {
     $root->appendChild($doc);
 
     my $parser = XML::LibXML->new();
-
-    open(IN, '<', $source);
-    $textsource = join('', <IN>);
-
-    #
-    # This requires an explanation. I had bad luck with some versions of
-    # XML::LibXML wanting to validate the DTD. So just to be extra safe
-    # we maintain a local copy of it, so it doesn't need to go browsing
-    # www.w3.org for -every- parsing.
-    #
-    $textsource =~ s|http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd|tools/xhtml1-transitional.dtd|g;
     $parser->load_ext_dtd(0);
     $parser->recover(1);
 
-    my $sourcedoc = $parser->parse_string($textsource);
+    my $sourcedoc = $parser->parse_file($source);
     foreach ($sourcedoc->documentElement->childNodes) {
         $_->unbindNode();
 	my $n = $_->cloneNode(1);

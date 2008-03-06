@@ -65,13 +65,13 @@ a[name], a[name]:hover, a.gl img, a.gl:link, a.gl:visited, a.gl:hover {
 /* Logo                                                                      */
 /* ------------------------------------------------------------------------- */
 
-.logo, .logo a, .logo a img {
-  margin: 0;
-  padding: 0;
+.logo {
+  margin: 1em;
 }
 
-.logo {
-  margin: 1em 1em 1em 2em;
+.logo a, .logo a img {
+  margin: 0;
+  padding: 0;
 }
 
 .logo a, .logo a:link, .logo a:visited {

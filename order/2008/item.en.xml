@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- Do not translate this file! -->
+
+<itemset>
+  <item type="t-shirt" id="tshirt-hacking2-black" price="18.00" date="2008-02-23">
+    <available size="S"/>
+    <available size="M"/>
+    <available size="L"/>
+    <available size="XL"/>
+    <available size="XXL"/>
+    <available size="XXXL"/>
+    <image
+      small="/order/2008/tshirt-hacking2-black-front-small.jpg"
+      large="/order/2008/tshirt-hacking2-black-front-large.jpg"/>
+    <image
+      small="/order/2008/tshirt-hacking2-black-back-small.jpg"
+      large="/order/2008/tshirt-hacking2-black-back-large.jpg"/>
+  </item>
+  <item type="t-shirt" id="tshirt-dfd-blue" price="18.00" date="2008-03-01">
+    <available size="S"/>
+    <available size="M"/>
+    <available size="L"/>
+    <available size="XL"/>
+    <available size="XXL"/>
+    <available size="XXXL"/>
+    <!-- image
+      small="/order/2008/tshirt-dfd-blue-front-small.jpg"
+      large="/order/2008/tshirt-dfd-blue-front-large.jpg"/ -->
+    <!-- image
+      small="/order/2008/tshirt-dfd-blue-back-small.jpg"
+      large="/order/2008/tshirt-dfd-blue-back-large.jpg"/ -->
+  </item>
+  <item type="other" id="keyring-fellowship" price="7.00" date="2008-02-23">
+    <available size="&#160;"/>
+    <!-- image
+      small="/order/2005/keychain-fellowship-small.jpg"
+      large="/order/2005/keychain-fellowship-large.jpg"/ -->
+  </item>
+  <item type="other" id="mug-fellowship" price="8.00" date="2008-03-01">
+    <available size="&#160;"/>
+    <!-- image
+      small="/order/2005/mug-fellowship-small.jpg"
+      large="/order/2005/mug-fellowship-large.jpg"/ -->
+  </item>
+  <item type="other" id="cap-fellowship-black" price="12.00" date="2008-03-01">
+    <available size="&#160;"/>
+    <!-- image
+      small="/order/2005/cap-fellowship-black-small.jpg"
+      large="/order/2005/cap-fellowship-black-large.jpg"/ -->
+  </item>
+  <item type="other" id="cap-fellowship-white" price="12.00" date="2008-03-01">
+    <available size="&#160;"/>
+    <!-- image
+      small="/order/2005/cap-fellowship-white-small.jpg"
+      large="/order/2005/cap-fellowship-white-large.jpg"/ -->
+  </item>
+</itemset>

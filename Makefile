@@ -1,8 +1,8 @@
-SUBDIRS := $(shell find */* -name "Makefile" | xargs --max-args=1 dirname)
+subdirs := $(shell find */* -name "Makefile" | xargs --max-args=1 dirname)
 
-.PHONY: subdirs $(SUBDIRS)
+.PHONY: subdirs $(subdirs)
 
-subdirs: $(SUBDIRS)
+subdirs: $(subdirs)
 
-$(SUBDIRS):
+$(subdirs):
 	$(MAKE) -C $@

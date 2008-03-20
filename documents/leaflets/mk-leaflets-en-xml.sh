@@ -1,0 +1,57 @@
+#!/bin/bash
+# -----------------------------------------------------------------------------
+# Script to rebuild leaflets.en.xml
+# -----------------------------------------------------------------------------
+
+lang_bg="Български",
+lang_ca="Català",
+lang_cs="Cesky",
+lang_da="Dansk",
+lang_de="Deutsch",
+lang_el="Ελληνικά",
+lang_en="English",
+lang_es="Español",       
+lang_fi="Suomi",
+lang_fr="Français",
+lang_hu="Magyar",
+lang_it="Italiano",
+lang_ku="Kurdî",
+lang_mk="Mакедонски",
+lang_nl="Nederlands",
+lang_no="Norsk",
+lang_pl="Polski",
+lang_pt="Português",
+lang_ro="Română",
+lang_ru="Русский",
+lang_sl="Slovenščina",
+lang_sq="Shqip",
+lang_sr="Srpski",
+lang_sv="Svenska",
+lang_tr="Türkçe",
+
+rm --force leaflets.en.xml
+
+echo "<publicationset>" >> leaflets.en.xml
+lastfile=""
+for i in $*; do
+  file=$(echo -n $i | cut --delimiter="." --fields="1")
+  lang=$(echo -n $i | cut --delimiter="." --fields="2")
+  thetype=$(echo -n ${file} | cut --delimiter="-" --fields="1")
+  langvar="lang_${lang}"
+  if [ "${file}" != "${lastfile}" ]; then
+    if [ -n "${lastfile}" ]; then
+      echo "  </publication>" >> leaflets.en.xml
+    fi
+    echo -n "  <publication" >> leaflets.en.xml
+    echo -n " type=\"${thetype}\"" >> leaflets.en.xml
+    echo " id=\"${file}\">" >> leaflets.en.xml
+  fi
+  echo -n "    <translation" >> leaflets.en.xml
+  echo -n " lang=\"${lang}\"" >> leaflets.en.xml
+  echo -n " langname=\"${!langvar}\">" >> leaflets.en.xml
+  xsltproc get_h1.xsl $i >> leaflets.en.xml
+  echo "</translation>" >> leaflets.en.xml
+  lastfile=${file}
+done
+echo "  </publication>" >> leaflets.en.xml
+echo "</publicationset>" >> leaflets.en.xml

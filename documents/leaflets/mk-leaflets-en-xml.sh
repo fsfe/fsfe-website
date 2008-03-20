@@ -3,31 +3,31 @@
 # Script to rebuild leaflets.en.xml
 # -----------------------------------------------------------------------------
 
-lang_bg="Български",
-lang_ca="Català",
-lang_cs="Cesky",
-lang_da="Dansk",
-lang_de="Deutsch",
-lang_el="Ελληνικά",
-lang_en="English",
-lang_es="Español",       
-lang_fi="Suomi",
-lang_fr="Français",
-lang_hu="Magyar",
-lang_it="Italiano",
-lang_ku="Kurdî",
-lang_mk="Mакедонски",
-lang_nl="Nederlands",
-lang_no="Norsk",
-lang_pl="Polski",
-lang_pt="Português",
-lang_ro="Română",
-lang_ru="Русский",
-lang_sl="Slovenščina",
-lang_sq="Shqip",
-lang_sr="Srpski",
-lang_sv="Svenska",
-lang_tr="Türkçe",
+lang_bg="Български"
+lang_ca="Català"
+lang_cs="Cesky"
+lang_da="Dansk"
+lang_de="Deutsch"
+lang_el="Ελληνικά"
+lang_en="English"
+lang_es="Español"       
+lang_fi="Suomi"
+lang_fr="Français"
+lang_hu="Magyar"
+lang_it="Italiano"
+lang_ku="Kurdî"
+lang_mk="Mакедонски"
+lang_nl="Nederlands"
+lang_no="Norsk"
+lang_pl="Polski"
+lang_pt="Português"
+lang_ro="Română"
+lang_ru="Русский"
+lang_sl="Slovenščina"
+lang_sq="Shqip"
+lang_sr="Srpski"
+lang_sv="Svenska"
+lang_tr="Türkçe"
 
 rm --force leaflets.en.xml
 

@@ -70,13 +70,13 @@
     <xsl:text>
         \begin{bfseries}
             </xsl:text>
-    <xsl:apply-templates select="p[@style='background']"/>
+    <xsl:apply-templates select="p[@class='background']"/>
     <xsl:text>
         \end{bfseries}
 
           \begin{multicols}{2}
               </xsl:text>
-    <xsl:apply-templates select="h2|p[not(@style='background')]|ul"/>
+    <xsl:apply-templates select="h2|p[not(@class='background')]|ul"/>
     <xsl:text>
         \end{multicols}
       \end{document}

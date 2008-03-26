@@ -7,9 +7,8 @@
   <xsl:template match="dynamic-content">
     <xsl:variable name="type"><xsl:value-of select="@type"/></xsl:variable>
     <xsl:variable name="text-online"><xsl:value-of select="text[@id='online']"/></xsl:variable>
-    <xsl:variable name="text-pdf"><xsl:value-of select="text[@id='pdf']"/></xsl:variable>
-    <xsl:variable name="text-pdf1"><xsl:value-of select="text[@id='pdf1']"/></xsl:variable>
-    <xsl:variable name="text-pdf2"><xsl:value-of select="text[@id='pdf2']"/></xsl:variable>
+    <xsl:variable name="text-pdf-G"><xsl:value-of select="text[@id='pdf-G']"/></xsl:variable>
+    <xsl:variable name="text-pdf-0"><xsl:value-of select="text[@id='pdf-0']"/></xsl:variable>
 
     <xsl:for-each select="/html/set/publication[@type=$type]">
       <xsl:sort select="@id"/>
@@ -39,17 +38,15 @@
           </xsl:element>
         </xsl:element>
 
-        <!-- List of translations -->
+        <!-- PDF versions with graphics -->
         <xsl:element name="li">
-          <xsl:value-of select="$text-pdf"/>
+          <xsl:value-of select="$text-pdf-G"/>
           <xsl:element name="ul">
             <xsl:for-each select="translation">
               <xsl:sort select="@lang"/>
               <xsl:element name="li">
                 <xsl:value-of select="@langname"/>
                 <xsl:text>: </xsl:text>
-                <xsl:value-of select="node()"/>
-                <xsl:text> [</xsl:text>
                 <xsl:element name="a">
                   <xsl:attribute name="href">
                     <xsl:value-of select="$id"/>
@@ -57,9 +54,20 @@
                     <xsl:value-of select="@lang"/>
                     <xsl:text>.G.pdf</xsl:text>
                   </xsl:attribute>
-                  <xsl:value-of select="$text-pdf1"/>
+                  <xsl:value-of select="node()"/>
                 </xsl:element>
-                <xsl:text>] [</xsl:text>
+              </xsl:element>
+            </xsl:for-each>
+          </xsl:element>
+        </xsl:element>
+
+        <!-- PDF versions without graphics -->
+        <xsl:element name="li">
+          <xsl:value-of select="$text-pdf-0"/>
+          <xsl:element name="ul">
+            <xsl:for-each select="translation">
+              <xsl:sort select="@lang"/>
+              <xsl:element name="li">
                 <xsl:element name="a">
                   <xsl:attribute name="href">
                     <xsl:value-of select="$id"/>
@@ -67,9 +75,8 @@
                     <xsl:value-of select="@lang"/>
                     <xsl:text>.0.pdf</xsl:text>
                   </xsl:attribute>
-                  <xsl:value-of select="$text-pdf2"/>
+                  <xsl:value-of select="node()"/>
                 </xsl:element>
-                <xsl:text>]</xsl:text>
               </xsl:element>
             </xsl:for-each>
           </xsl:element>

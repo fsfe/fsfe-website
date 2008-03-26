@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:output method="text" encoding="UTF-8"/>
+  <xsl:output method="text" encoding="ISO-8859-1"/>
 
   <xsl:template match="html">
     <xsl:apply-templates match="body"/>
@@ -11,7 +11,7 @@
 
   <xsl:template match="body">
     <xsl:text>\documentclass[a4paper]{article}
-\usepackage[utf8]{inputenc}
+\usepackage[latin1]{inputenc}
 \usepackage{helvet}
 \usepackage{fancyheadings}
 \usepackage{multicol}

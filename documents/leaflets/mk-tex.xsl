@@ -3,6 +3,8 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:output method="text" encoding="ISO-8859-1"/>
 
+  <xsl:param name="style"/>
+
   <xsl:template match="html">
     <xsl:apply-templates match="body"/>
   </xsl:template>
@@ -15,7 +17,9 @@
 \usepackage{helvet}
 \usepackage{fancyheadings}
 \usepackage{multicol}
-
+</xsl:text><xsl:if test="$style='G'">\usepackage{graphics}
+\usepackage[absolute]{textpos}
+</xsl:if><xsl:text>
 % Page layout
 \setlength{\topmargin}{58pt}
 \setlength{\headheight}{12pt}
@@ -58,7 +62,10 @@
     <xsl:apply-templates select="address"/>
     <xsl:text>
 \begin{document}
-  \pagestyle{fancy}</xsl:text>
+  \pagestyle{fancy}</xsl:text><xsl:if test="$style='G'">
+  \begin{textblock*}{\paperwidth}(0pt,0pt)
+    \includegraphics{background.pdf}
+  \end{textblock*}</xsl:if>
     <xsl:apply-templates select="h1"/>
     <xsl:text>
         \begin{bfseries}

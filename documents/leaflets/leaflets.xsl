@@ -68,6 +68,8 @@
             <xsl:for-each select="translation">
               <xsl:sort select="@lang"/>
               <xsl:element name="li">
+                <xsl:value-of select="@langname"/>
+                <xsl:text>: </xsl:text>
                 <xsl:element name="a">
                   <xsl:attribute name="href">
                     <xsl:value-of select="$id"/>

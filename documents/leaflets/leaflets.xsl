@@ -53,9 +53,9 @@
                 <xsl:element name="a">
                   <xsl:attribute name="href">
                     <xsl:value-of select="$id"/>
-                    <xsl:text>-</xsl:text>
+                    <xsl:text>.</xsl:text>
                     <xsl:value-of select="@lang"/>
-                    <xsl:text>-G.pdf</xsl:text>
+                    <xsl:text>.G.pdf</xsl:text>
                   </xsl:attribute>
                   <xsl:value-of select="$text-pdf1"/>
                 </xsl:element>
@@ -63,9 +63,9 @@
                 <xsl:element name="a">
                   <xsl:attribute name="href">
                     <xsl:value-of select="$id"/>
-                    <xsl:text>-</xsl:text>
+                    <xsl:text>.</xsl:text>
                     <xsl:value-of select="@lang"/>
-                    <xsl:text>-0.pdf</xsl:text>
+                    <xsl:text>.0.pdf</xsl:text>
                   </xsl:attribute>
                   <xsl:value-of select="$text-pdf2"/>
                 </xsl:element>

@@ -3,6 +3,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:output method="text" encoding="ISO-8859-1"/>
 
+  <xsl:param name="language"/>
   <xsl:param name="style"/>
 
   <xsl:template match="html">
@@ -32,9 +33,10 @@
 \raggedright
 
 % Header and footer
-\lhead{}
 \chead{}
-\rhead{}
+\rhead{\fontseries{bc}\selectfont (</xsl:text>
+<xsl:value-of select="$language"/>
+<xsl:text>)}
 \setlength{\headrulewidth}{0pt}
 \cfoot{}
 \rfoot{}

@@ -16,7 +16,7 @@
     <xsl:text>\documentclass[a4paper]{article}
 \usepackage[latin1]{inputenc}
 \usepackage{helvet}
-\usepackage{fancyheadings}
+\usepackage{fancyhdr}
 \usepackage{multicol}
 </xsl:text><xsl:if test="$style='G'">\usepackage{graphics}
 \usepackage[absolute]{textpos}
@@ -37,10 +37,10 @@
 \rhead{\fontseries{bc}\selectfont (</xsl:text>
 <xsl:value-of select="$language"/>
 <xsl:text>)}
-\setlength{\headrulewidth}{0pt}
 \cfoot{}
 \rfoot{}
-\setlength{\footrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
 % No chapter numbering
 \setcounter{secnumdepth}{-2}

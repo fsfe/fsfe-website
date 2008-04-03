@@ -27,6 +27,10 @@ use XML::LibXSLT;
 use XML::LibXML;
 use File::Copy;
 use POSIX qw(strftime);
+use IO::Handle;
+use IO::Select;
+use Socket;
+use Fcntl ':flock';
 
 # This defines the focuses and their respective preferred / original
 # language. For example, it says that we should have a focus called
@@ -86,13 +90,14 @@ our $current_time = strftime "%Y-%m-%d %H:%M:%S", localtime;
 # Parse the command line options. We need two; where to put the finished
 # pages and what to use as base for the input.
 #
-getopts('o:i:duqn', \%opts);
+getopts('o:i:t:duqn', \%opts);
 unless ($opts{o}) {
-  print STDERR "Usage: $0 [-q] [-u] [-d] [-n] -o <output directory>\n";
+  print STDERR "Usage: $0 [-q] [-u] [-d] [-n] [-t #] -o <output directory>\n";
   print STDERR "  -q   Quiet\n";
   print STDERR "  -u   Update only\n";
   print STDERR "  -d   Print some debug information\n";
   print STDERR "  -n   Don't write any files\n";
+  print STDERR "  -t   Number of worker childs to create (default: 1)\n";
   exit 1;
 }
 
@@ -102,6 +107,8 @@ unless ($opts{o}) {
 $opts{i} = ".";
 
 $| = 1;
+
+$SIG{CHLD} = 'IGNORE';
 
 # Create XML and XSLT parser contexts. Also create the root note for the
 # above mentioned XML file (used to feed the XSL transformation).
@@ -189,9 +196,109 @@ open (TRANSLATIONS, '>', "$opts{o}/translations.log");
 #  buildinfo/@outdated    Set to "yes" if the original is newer than this page
 #  document/@language     The language that this documents is in
 #
-while (my ($file, $langs) = each %bases) {
-  print STDERR "Building $file.. " unless $opts{q};
+#
+# $threads is the number of child processes to fork off to build the tree
+#
+unless ($threads = $opts{t}) {
+  $threads = 1;
+}
 
+#
+# Start the required number of children, for each child we create a socket
+# pair to communicate between parent and child. This information is kept in
+# the %procs hash, which contains file handles for both child and parent.
+#
+foreach my $i (1..$threads) {
+  $procs[$i]{child} = new IO::Handle;
+  $procs[$i]{parent} = new IO::Handle;
+
+  socketpair($procs[$i]{child}, $procs[$i]{parent}, AF_UNIX,
+             SOCK_STREAM, PF_UNSPEC);
+
+  $procs[$i]{child}->autoflush(1);
+  $procs[$i]{parent}->autoflush(1);
+  #$procs[$i]{child}->blocking(false);
+  #$procs[$i]{parent}->blocking(false);
+
+  if (fork()) {
+    # 
+    # The parent doesn't do anything at this stage, except close one of
+    # the filehandes not used.
+    #
+    close($procs[$i]{parent});
+  } else {
+    #
+    # This is the main worker for the children, which wait for a command
+    # to execute, either DIE or PROCESS. In the case of the first, the child
+    # exists gracefully, in the case of the second, it calls on process()
+    # to build the required page and languages.
+    #
+    # When waiting for the next page to be sent to it, the child sends NEXT
+    # to the parent to signify that it's ready for the next command.
+    #
+    close($procs[$i]{child});
+    my $io = $procs[$i]{parent};
+    print $io "NEXT\n";
+    while (!$io->error) {
+      my $cmd = <$io>;
+      if ($cmd =~ /DIE/) {
+         exit;
+      } elsif ($cmd =~ /PROCESS/) {
+         chomp($cmd);
+         my (undef, $file, $langs) = split(/\|/, $cmd);
+         process($file, $langs);
+	 print $io "NEXT\n";
+      }
+    }
+    exit;
+  }
+}
+
+#
+# This sets up an IO::Select object with the filehandles of all children.
+# The parent uses this when looking for the next available child and blocks
+# until any child is ready.
+#
+my $s = IO::Select->new();
+foreach my $i (1..$threads) {
+  $s->add($procs[$i]{child});
+}
+
+while (my ($file, $langs) = each %bases) {
+  $s->can_read();
+
+  my $done = 0;
+  while (!$done) {
+    foreach my $fh ($s->can_read()) {
+      $cmd = <$fh>;
+      if ($cmd =~ /NEXT/) {
+        print $fh "PROCESS|$file|$langs\n";
+	$done = 1;
+        last;
+      }
+    }
+  }
+}
+
+#
+# When done, we send the DIE command to each child.
+#
+foreach my $i (1..$threads) {
+  my $io = $procs[$i]{child};
+  print $io "DIE\n";
+}
+
+#
+# This ensures a timely wait for every child to finish processing and shutdown.
+#
+while (wait() != -1) {
+  sleep 2;
+}
+
+sub process {
+  my ($file, $langs) = @_;
+
+  print STDERR "Building $file.. \n" unless $opts{q};
   # Create the root note for the above mentioned XML file (used to feed the XSL
   # transformation).
 
@@ -270,7 +377,9 @@ while (my ($file, $langs) = each %bases) {
 		$source = "$opts{i}/$file.$l.xhtml";
             }
             if ($dir eq "global") {
+	      lock(*TRANSLATIONS);
               print TRANSLATIONS "$lang $missingsource $source\n";
+	      unlock(*TRANSLATIONS);
             }
 	}
 
@@ -342,7 +451,9 @@ while (my ($file, $langs) = each %bases) {
 
           while (my ($base, $l) = each %files) {
               if (($dir eq "global") && ($l ne $lang)) {
+	        lock(*TRANSLATIONS);
                 print TRANSLATIONS "$lang $base.$lang.xml $base.$l.xml\n";
+		unlock(*TRANSLATIONS);
               }
               print STDERR "Loading $base.$l.xml\n" if $opts{d};
               my $source_data = $parser->parse_file("$base.$l.xml");
@@ -394,7 +505,9 @@ while (my ($file, $langs) = each %bases) {
 	if ((stat("$opts{i}/$originalsource"))[9] > (stat($source))[9] + 7200) {
 	    $root->setAttribute("outdated", "yes");
             if ($dir eq "global") {
+	      lock(*TRANSLATIONS);
               print TRANSLATIONS "$lang $source $originalsource\n";
+	      unlock(*TRANSLATIONS);
             }
 	} else {
 	    $root->setAttribute("outdated", "no");
@@ -519,7 +632,6 @@ foreach (grep(!/\.sources$/, grep(!/\.xsl$/, grep(!/\.xml$/, grep(!/\.xhtml$/,
     }
   }
 }
-
 #
 # Helper function that clones a document. It accepts an XML node and
 # a filename as parameters. Using this, it loads the source file into
@@ -546,4 +658,19 @@ sub clone_document {
 	my $n = $_->cloneNode(1);
 	$doc->appendChild($n);
     }
+}
+
+#
+# Helper functions to lock and unlock the translation log.
+#
+sub lock {
+  my ($fh) = @_;
+
+  flock($fh, LOCK_EX);
+  seek($fh, 0, 2);
+}
+
+sub unlock {
+  my ($fh) = @_;
+  flock($fh, LOCK_UN);
 }

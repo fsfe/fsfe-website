@@ -59,12 +59,12 @@ echo "$(date)  Building HTML pages."
 touch ${STATUS}/last-run
 
 if test "x`hostname`" = "xekeberg"; then
-  procs="-t 16"
+  tools/build.pl -t 16 -q -o ${TMP} -i .
 elif test "x`hostname`" = "xberzelius"; then
-  procs="-t 2"
+  tools/build.pl -t 2 -q -o ${TMP} -i .
+else
+  tools/build.pl -q -o ${TMP} -i .
 fi
-
-tools/build.pl ${procs} -q -o ${TMP} -i .
 
 if test $? -ne 0; then
    echo "$(date)  Build not complete. Aborting."

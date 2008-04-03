@@ -272,7 +272,7 @@ while (my ($file, $langs) = each %bases) {
     foreach my $fh ($s->can_read()) {
       $cmd = <$fh>;
       if ($cmd =~ /NEXT/) {
-        print $fh "PROCESS|$file|$langs\n";
+        printf $fh "PROCESS|%s|%s\n", $file, join(':', keys(%{$langs}));
 	$done = 1;
         last;
       }
@@ -329,7 +329,7 @@ sub process {
   # for them.
   #
   my $trlist = $dom->createElement("trlist");
-  while (my ($lang, undef) = each %{ $langs }) {
+  foreach my $lang (split(/:/, $langs)) {
       my $tr = $dom->createElement("tr");
       $tr->setAttribute("id", $lang);
       $tr->appendText($languages{$lang});

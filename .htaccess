@@ -1,4 +1,5 @@
 RewriteEngine On
+RewriteRule ^standards(.*) /projects/os$1 [redirect=permanent]
 RewriteRule ^education(.*) /projects/education$1 [redirect=permanent]
 RewriteRule ^ftf(.*) /projects/ftf$1 [redirect=permanent]
 RewriteRule ^stacs(.*) /projects/stacs$1 [redirect=permanent]

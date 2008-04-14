@@ -25,8 +25,8 @@
 \setlength{\topmargin}{58pt}
 \setlength{\headheight}{12pt}
 \setlength{\headsep}{36pt}
-\setlength{\textheight}{506pt}
-\setlength{\footskip}{72pt}
+\setlength{\textheight}{530pt}
+\setlength{\footskip}{48pt}
 \setlength{\oddsidemargin}{-32pt}
 \setlength{\columnsep}{10pt}
 \setlength{\textwidth}{514pt}

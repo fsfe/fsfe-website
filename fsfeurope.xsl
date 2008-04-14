@@ -94,27 +94,20 @@
             </xsl:for-each>
           </xsl:element>
 
-          <!-- Focus list -->
+          <!-- Priority Links -->
           <xsl:element name="ul">
-            <xsl:variable name="filename"><xsl:value-of select="/buildinfo/@filename"/>.<xsl:value-of select="/buildinfo/@language"/>.html</xsl:variable>
+            <xsl:element name="li">Priority Links</xsl:element>
             <xsl:element name="li">
-              <xsl:element name="a"><xsl:attribute name="href">http://www.fsfeurope.org<xsl:value-of select="$filename"/></xsl:attribute>Our global work</xsl:element>
+              <xsl:attribute name="class">submenu</xsl:attribute>
+              <xsl:element name="a"><xsl:attribute name="href">http://www.fsfe.org</xsl:attribute>Fellowship</xsl:element>
             </xsl:element>
             <xsl:element name="li">
               <xsl:attribute name="class">submenu</xsl:attribute>
-              <xsl:element name="a"><xsl:attribute name="href">http://www.germany.fsfeurope.org<xsl:value-of select="$filename"/></xsl:attribute>Germany</xsl:element>
+			  <xsl:element name="a"><xsl:attribute name="href">/projects/ftf</xsl:attribute>Freedom Task Force</xsl:element>
             </xsl:element>
             <xsl:element name="li">
               <xsl:attribute name="class">submenu</xsl:attribute>
-              <xsl:element name="a"><xsl:attribute name="href">http://www.italy.fsfeurope.org<xsl:value-of select="$filename"/></xsl:attribute>Italy</xsl:element>
-            </xsl:element>
-            <xsl:element name="li">
-              <xsl:attribute name="class">submenu</xsl:attribute>
-              <xsl:element name="a"><xsl:attribute name="href">http://www.spain.fsfeurope.org<xsl:value-of select="$filename"/></xsl:attribute>Spain</xsl:element>
-            </xsl:element>
-            <xsl:element name="li">
-              <xsl:attribute name="class">submenu</xsl:attribute>
-              <xsl:element name="a"><xsl:attribute name="href">http://www.sweden.fsfeurope.org<xsl:value-of select="$filename"/></xsl:attribute>Sweden</xsl:element>
+			  <xsl:element name="a"><xsl:attribute name="href">/projects/os</xsl:attribute>Open Standards</xsl:element>
             </xsl:element>
           </xsl:element>
 

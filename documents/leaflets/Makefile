@@ -1,8 +1,7 @@
 sources := $(wildcard folder.??.xhtml) $(wildcard leaflet-*.??.xhtml)
 
-allleafletsources := $(wildcard leaflet-*.??.xhtml)
 # FIXME: Sorry, no support for other character sets than Latin-1 yet
-leafletsources := $(filter-out %.el.xhtml,$(allleafletsources))
+leafletsources := $(filter-out %.el.xhtml,$(sources))
 
 pdfs_0 := $(leafletsources:.xhtml=.0.pdf)
 pdfs_G := $(leafletsources:.xhtml=.G.pdf)

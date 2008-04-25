@@ -7,9 +7,7 @@
   <xsl:template match="dynamic-content">
     <xsl:variable name="type"><xsl:value-of select="@type"/></xsl:variable>
     <xsl:variable name="text-online"><xsl:value-of select="text[@id='online']"/></xsl:variable>
-    <xsl:if test="$type='folder'">
-      <xsl:variable name="text-pdf-F"><xsl:value-of select="text[@id='pdf-F']"/></xsl:variable>
-    </xsl:if>
+    <xsl:variable name="text-pdf-F"><xsl:value-of select="text[@id='pdf-F']"/></xsl:variable>
     <xsl:variable name="text-pdf-G"><xsl:value-of select="text[@id='pdf-G']"/></xsl:variable>
     <xsl:variable name="text-pdf-0"><xsl:value-of select="text[@id='pdf-0']"/></xsl:variable>
 

@@ -8,8 +8,7 @@
     <xsl:variable name="type"><xsl:value-of select="@type"/></xsl:variable>
     <xsl:variable name="text-online"><xsl:value-of select="text[@id='online']"/></xsl:variable>
     <xsl:if test="$type='folder'">
-      <xsl:variable name="text-pdf-A3-G"><xsl:value-of select="text[@id='pdf-A3-G']"/></xsl:variable>
-      <xsl:variable name="text-pdf-A3-0"><xsl:value-of select="text[@id='pdf-A3-0']"/></xsl:variable>
+      <xsl:variable name="text-pdf-F"><xsl:value-of select="text[@id='pdf-F']"/></xsl:variable>
     </xsl:if>
     <xsl:variable name="text-pdf-G"><xsl:value-of select="text[@id='pdf-G']"/></xsl:variable>
     <xsl:variable name="text-pdf-0"><xsl:value-of select="text[@id='pdf-0']"/></xsl:variable>
@@ -42,11 +41,10 @@
           </xsl:element>
         </xsl:element>
 
+        <!-- A3 PDF versions -->
         <xsl:if test="$type='folder'">
-
-          <!-- A3 PDF versions with graphics -->
           <xsl:element name="li">
-            <xsl:value-of select="$text-pdf-G"/>
+            <xsl:value-of select="$text-pdf-F"/>
             <xsl:element name="ul">
               <xsl:for-each select="translation">
                 <xsl:sort select="@lang"/>
@@ -58,7 +56,7 @@
                       <xsl:value-of select="$id"/>
                       <xsl:text>.</xsl:text>
                       <xsl:value-of select="@lang"/>
-                      <xsl:text>.A3.G.pdf</xsl:text>
+                      <xsl:text>.F.pdf</xsl:text>
                     </xsl:attribute>
                     <xsl:value-of select="node()"/>
                   </xsl:element>
@@ -66,33 +64,9 @@
               </xsl:for-each>
             </xsl:element>
           </xsl:element>
-
-          <!-- A3 PDF versions without graphics -->
-          <xsl:element name="li">
-            <xsl:value-of select="$text-pdf-0"/>
-            <xsl:element name="ul">
-              <xsl:for-each select="translation">
-                <xsl:sort select="@lang"/>
-                <xsl:element name="li">
-                  <xsl:value-of select="@langname"/>
-                  <xsl:text>: </xsl:text>
-                  <xsl:element name="a">
-                    <xsl:attribute name="href">
-                      <xsl:value-of select="$id"/>
-                      <xsl:text>.</xsl:text>
-                      <xsl:value-of select="@lang"/>
-                      <xsl:text>.A3.0.pdf</xsl:text>
-                    </xsl:attribute>
-                    <xsl:value-of select="node()"/>
-                  </xsl:element>
-                </xsl:element>
-              </xsl:for-each>
-            </xsl:element>
-          </xsl:element>
-
         </xsl:if>
 
-        <!-- PDF versions with graphics -->
+        <!-- A4 PDF versions with graphics -->
         <xsl:element name="li">
           <xsl:value-of select="$text-pdf-G"/>
           <xsl:element name="ul">
@@ -115,7 +89,7 @@
           </xsl:element>
         </xsl:element>
 
-        <!-- PDF versions without graphics -->
+        <!-- A4 PDF versions without graphics -->
         <xsl:element name="li">
           <xsl:value-of select="$text-pdf-0"/>
           <xsl:element name="ul">

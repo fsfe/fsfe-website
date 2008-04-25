@@ -15,6 +15,7 @@
   <xsl:template match="body">
     <xsl:text>\documentclass[a4paper]{article}
 \usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
 \usepackage{helvet}
 \usepackage{fancyhdr}
 \usepackage{multicol}

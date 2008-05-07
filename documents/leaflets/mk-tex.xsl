@@ -14,7 +14,7 @@
 
   <xsl:template match="body">
     <xsl:text>\documentclass[a4paper]{article}
-\usepackage[utf-8]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{helvet}
 \usepackage{fancyhdr}

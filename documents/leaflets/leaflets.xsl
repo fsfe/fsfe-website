@@ -17,6 +17,7 @@
 
       <!-- Header -->
       <xsl:element name="h3">
+        <xsl:attribute name="id"><xsl:value-of select="$id"/></xsl:attribute>
         <xsl:choose>
           <xsl:when test="translation[@lang=/html/@lang]!=''">
             <xsl:value-of select="translation[@lang=/html/@lang]"/>

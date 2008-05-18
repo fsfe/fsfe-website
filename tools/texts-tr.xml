@@ -1,46 +1,55 @@
-<?xml version="1.0" encoding="ISO-8859-9"?> 
+<?xml version="1.0" encoding="UTF-8"?> 
 <textset>
-  <text id="copyright">Telif Hakkı (C) FSFE.</text>
-  <text id="lastchanged"> Son Değişiklik: </text>
-  <text id="translator1">Bu sayfanın resmi olmayan çevirisi </text>
-  <text id="translator2"> tarafından yapılmıştır. Kendisine teşekkür ediyoruz. Sayfanın resmi sürümüne </text>
+  <text id="copyright">Telif HakkÄ± (C) FSFE.</text>
+  <text id="lastchanged"> Son DeÄŸiÅŸiklik: </text>
+  <text id="translator1">Bu sayfanÄ±n resmi olmayan Ã§evirisi </text>
+  <text id="translator2"> tarafÄ±ndan yapÄ±lmÄ±ÅŸtÄ±r. Kendisine teÅŸekkÃ¼r ediyoruz. SayfanÄ±n resmi sÃ¼rÃ¼mÃ¼ne </text>
   <text id="translator3">buradan</text>
-  <text id="translator4"> ulaşabilirsiniz.</text>
+  <text id="translator4"> ulaÅŸabilirsiniz.</text>
   <text id="permission">
-   Bu makalenin tamamının, herhangi bir ortamda, bire bir kopyalanmasına ve
-   dağıtılmasına, bu notun korunması şartıyla, izin verilmiştir.
+   Bu makalenin tamamÄ±nÄ±n, herhangi bir ortamda, bire bir kopyalanmasÄ±na ve
+   daÄŸÄ±tÄ±lmasÄ±na, bu notun korunmasÄ± ÅŸartÄ±yla, izin verilmiÅŸtir.
   </text>
   <text id="webmaster">
-   Bu sayfa ilgili sorunları lütfen aşağıdaki e-posta adresine bildirin
+   Bu sayfa ilgili sorunlarÄ± lÃ¼tfen aÅŸaÄŸÄ±daki e-posta adresine bildirin
     <em>webmaster at fsfeurope.org</em>.
   </text>
   <text id="outdated">
-    <strong>Uyarı: </strong>
-    Bu sayfa asılından eski olabilir. Çeviri yada diğer konularda nasıl
-    yardım edebileceğinizi öğrenmek için
-    <a href="/contribute/contribute.html">bu sayfayı</a> kullanabilirsiniz.
+    <strong>UyarÄ±: </strong>
+    Bu sayfa asÄ±lÄ±ndan eski olabilir. Ã‡eviri yada diÄŸer konularda nasÄ±l
+    yardÄ±m edebileceÄŸinizi Ã¶ÄŸrenmek iÃ§in
+    <a href="/contribute/contribute.html">bu sayfayÄ±</a> kullanabilirsiniz.
   </text>
   <text id="notranslation">
-    <strong>Uyarı: </strong>
-    Bu sayfa henüz çevrilmemiş. Aşağıda gördüğünüz sayfanın asıl sürümüdür.
-    Çeviri yada diğer konularda nasıl yardım edebileceğinizi öğrenmek için
-    <a href="/contribute/contribute.html">bu sayfayı</a> kullanabilirsiniz.
+    <strong>UyarÄ±: </strong>
+    Bu sayfa henÃ¼z Ã§evrilmemiÅŸ. AÅŸaÄŸÄ±da gÃ¶rdÃ¼ÄŸÃ¼nÃ¼z sayfanÄ±n asÄ±l sÃ¼rÃ¼mÃ¼dÃ¼r.
+    Ã‡eviri yada diÄŸer konularda nasÄ±l yardÄ±m edebileceÄŸinizi Ã¶ÄŸrenmek iÃ§in
+    <a href="/contribute/contribute.html">bu sayfayÄ±</a> kullanabilirsiniz.
   </text>
-  <text id="menu/about">Hakkımızda</text>
-  <text id="menu/projects">Projeler</text>
-  <text id="menu/documents">Belgeler</text>
-  <text id="menu/events">Etkinlikler</text>
-  <text id="menu/help">Yardımda bulun</text>
-  <text id="menu/help/1-fellow">üyelik</text>
-  <text id="menu/help/2-translator">çevirmenlik</text>
-  <text id="menu/help/3-webmaster">site yöneticiliği</text>
-  <text id="menu/help/4-booth_volunteer">fuar gönüllüsü</text>
-  <text id="menu/help/5-intern">stajyerlik</text>
-  <text id="menu/donate">Bağış yap</text>
-  <text id="menu/order">Sipariş</text>
-  <text id="menu/contact">İletişim</text>
-  <text id="menu/associates">Ortaklar</text>
-  <text id="menu/lists">E-posta Listeleri</text>
-  <text id="menu/news">Haberler</text>
-  <text id="menu/press">Basın Haberleri</text>
-  <text id="menu/thankgnus">Teşekkürler</text> </textset>
+  <text id="menu1/about">HakkÄ±mÄ±zda</text>
+  <text id="menu1/projects">Projeler</text>
+  <text id="menu1/documents">Belgeler</text>
+  <text id="menu1/events">Etkinlikler</text>
+  <text id="menu1/help">YardÄ±mda bulun</text>
+  <text id="menu1/help/1-fellow">Ã¼yelik</text>
+  <text id="menu1/help/2-translator">Ã§evirmenlik</text>
+  <text id="menu1/help/3-webmaster">site yÃ¶neticiliÄŸi</text>
+  <text id="menu1/help/4-booth_volunteer">fuar gÃ¶nÃ¼llÃ¼sÃ¼</text>
+  <text id="menu1/help/5-intern">stajyerlik</text>
+  <text id="menu1/donate">BaÄŸÄ±ÅŸ yap</text>
+  <text id="menu1/order">SipariÅŸ</text>
+  <text id="menu1/contact">Ä°letiÅŸim</text>
+  <text id="menu1/associates">Ortaklar</text>
+  <text id="menu1/lists">E-posta Listeleri</text>
+  <text id="menu1/news">Haberler</text>
+  <text id="menu1/press">BasÄ±n Haberleri</text>
+  <text id="menu1/thankgnus">TeÅŸekkÃ¼rler</text> 
+  <text id="menu2/priority">Priority Links</text>
+  <text id="menu2/priority/fellowship">Fellowship</text>
+  <text id="menu2/priority/ftf">Freedom Task Force</text>
+  <text id="menu2/priority/os">Open Standards</text>
+  <text id="menu3/sisters">Our sister organisations</text>
+  <text id="menu3/sisters/fsf">FSF</text>
+  <text id="menu3/sisters/fsf_india">FSF India</text>
+  <text id="menu3/sisters/fsf_la">FSF Latin America</text>
+</textset>

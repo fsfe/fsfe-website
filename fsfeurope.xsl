@@ -70,67 +70,43 @@
           </xsl:element>
 
           <!-- Menu -->
-          <xsl:element name="ul">
-            <xsl:for-each select="/buildinfo/menuset/menu[not(@parent)]">
-              <xsl:sort select="@id"/>
-              <xsl:variable name="id"><xsl:value-of select="@id"/></xsl:variable>
-              <xsl:element name="li">
-                <xsl:element name="a">
-                  <xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
-                  <xsl:value-of select="/buildinfo/textset/text[@id=$id]"/>
-                </xsl:element>
-              </xsl:element>
-              <xsl:for-each select="/buildinfo/menuset/menu[@parent=$id]">
-                <xsl:sort select="@id" />
-                <xsl:variable name="mid"><xsl:value-of select="@id"/></xsl:variable>
-                <xsl:element name="li">
-                  <xsl:attribute name="class">submenu</xsl:attribute>
-                  <xsl:element name="a">
-                    <xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
-                    <xsl:value-of select="/buildinfo/textset/text[@id=$mid]"/>
+	  <xsl:for-each select="/buildinfo/menuset/menu[not(@parent)]">
+	    <xsl:sort select="@id"/>
+	    <xsl:variable name="menu"><xsl:value-of select="@id"/></xsl:variable>
+	    <xsl:element name="ul">
+	      <xsl:for-each select="/buildinfo/menuset/menu[@parent=$menu]">
+		<xsl:sort select="@id"/>
+		<xsl:variable name="id"><xsl:value-of select="@id"/></xsl:variable>
+		<xsl:element name="li">
+		  <xsl:choose>
+		    <xsl:when test="not(string(.))">
+		      <xsl:value-of select="/buildinfo/textset/text[@id=$id]"/>
+		    </xsl:when>
+		    <xsl:otherwise>
+                      <xsl:element name="a">
+			<xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
+			<xsl:value-of select="/buildinfo/textset/text[@id=$id]"/>
+                      </xsl:element>
+		    </xsl:otherwise>
+		  </xsl:choose>
+		</xsl:element>		  
+		<xsl:for-each select="/buildinfo/menuset/menu[@parent=$id]">
+                  <xsl:sort select="@id" />
+                  <xsl:variable name="mid"><xsl:value-of select="@id"/></xsl:variable>
+                  <xsl:element name="li">
+                    <xsl:attribute name="class">submenu</xsl:attribute>
+                    <xsl:element name="a">
+                      <xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
+                      <xsl:value-of select="/buildinfo/textset/text[@id=$mid]"/>
+                    </xsl:element>
                   </xsl:element>
-                </xsl:element>
+		</xsl:for-each>
               </xsl:for-each>
-            </xsl:for-each>
-          </xsl:element>
-
-          <!-- Priority Links -->
-          <xsl:element name="ul">
-            <xsl:element name="li">Priority Links</xsl:element>
-            <xsl:element name="li">
-              <xsl:attribute name="class">submenu</xsl:attribute>
-              <xsl:element name="a"><xsl:attribute name="href">http://www.fsfe.org</xsl:attribute>Fellowship</xsl:element>
-            </xsl:element>
-            <xsl:element name="li">
-              <xsl:attribute name="class">submenu</xsl:attribute>
-			  <xsl:element name="a"><xsl:attribute name="href">/projects/ftf</xsl:attribute>Freedom Task Force</xsl:element>
-            </xsl:element>
-            <xsl:element name="li">
-              <xsl:attribute name="class">submenu</xsl:attribute>
-			  <xsl:element name="a"><xsl:attribute name="href">/projects/os</xsl:attribute>Open Standards</xsl:element>
-            </xsl:element>
-          </xsl:element>
-
-          <!-- Sister organisation list -->
-          <xsl:element name="ul">
-            <xsl:element name="li">Our sister organisations</xsl:element>
-            <xsl:element name="li">
-              <xsl:attribute name="class">submenu</xsl:attribute>
-              <xsl:element name="a"><xsl:attribute name="href">http://www.fsf.org</xsl:attribute>FSF</xsl:element>
-            </xsl:element>
-            <xsl:element name="li">
-              <xsl:attribute name="class">submenu</xsl:attribute>
-              <xsl:element name="a"><xsl:attribute name="href">http://www.fsf.org.in</xsl:attribute>FSF India</xsl:element>
-            </xsl:element>
-            <xsl:element name="li">
-              <xsl:attribute name="class">submenu</xsl:attribute>
-              <xsl:element name="a"><xsl:attribute name="href">http://www.fsfla.org</xsl:attribute>FSF Latin America</xsl:element>
-            </xsl:element>
-          </xsl:element>
-
+	    </xsl:element>
+	  </xsl:for-each>
         </xsl:element>
         <!-- End Menu bar -->
-
+	
         <!-- Language bar -->
         <xsl:element name="div">
           <xsl:attribute name="class">language</xsl:attribute>

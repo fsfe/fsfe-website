@@ -29,7 +29,7 @@ my %names = (
 # -----------------------------------------------------------------------------
 
 my %responsible = (
-  "DRM" => "eec",
+  "EULEG" => "eec",
   "FELLOWSHIP" => "kirschner",
   "FTF" => "coughlan",
   "POLICY" => "greve",
@@ -41,9 +41,10 @@ my %responsible = (
   "IT" => "ohnewein",
   "SE" => "oberg",
   "EVENTS" => "eec",
+  "GA" => "eec",
+  "INFRASTRUCT" => "eec",
   "MERCHANDISE" => "eec",
   "OFFICE" => "mueller",
-  "GENERAL" => "eec"
 );
 
 # -----------------------------------------------------------------------------

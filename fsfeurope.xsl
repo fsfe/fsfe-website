@@ -82,6 +82,9 @@
 		    <xsl:when test="not(string(.))">
 		      <xsl:value-of select="/buildinfo/textset/text[@id=$id]"/>
 		    </xsl:when>
+		    <xsl:when test=". = concat(/buildinfo/@filename ,'.html')">
+		      <xsl:value-of select="/buildinfo/textset/text[@id=$id]"/>
+		    </xsl:when>
 		    <xsl:otherwise>
                       <xsl:element name="a">
 			<xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
@@ -95,10 +98,17 @@
                   <xsl:variable name="mid"><xsl:value-of select="@id"/></xsl:variable>
                   <xsl:element name="li">
                     <xsl:attribute name="class">submenu</xsl:attribute>
-                    <xsl:element name="a">
-                      <xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
-                      <xsl:value-of select="/buildinfo/textset/text[@id=$mid]"/>
-                    </xsl:element>
+		    <xsl:choose>
+		      <xsl:when test=". = concat(/buildinfo/@filename ,'.html')">
+			<xsl:value-of select="/buildinfo/textset/text[@id=$mid]"/>
+		      </xsl:when>
+		      <xsl:otherwise>
+			<xsl:element name="a">
+			  <xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
+			  <xsl:value-of select="/buildinfo/textset/text[@id=$mid]"/>
+			</xsl:element>
+		      </xsl:otherwise>
+		    </xsl:choose>
                   </xsl:element>
 		</xsl:for-each>
               </xsl:for-each>

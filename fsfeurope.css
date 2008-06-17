@@ -101,16 +101,8 @@ a[name], a[name]:hover, a.gl img, a.gl:link, a.gl:visited, a.gl:hover {
   list-style: none;
 }
 
-.menu li a, .menu li a:link, .menu li a:visited {
-  display: block;
-}
-
 .menu li.submenu {
   margin: 0;
-}
-
-.menu li.submenu a, .menu li.submenu a:link, .menu li.submenu a:visited {
-  display: block;
   padding-left: 0.6em;
 }
 

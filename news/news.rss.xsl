@@ -97,7 +97,7 @@
 
               <!-- News body -->
               <description>
-                <xsl:value-of select="body" />
+                <xsl:value-of select="normalize-space(body)"/>
               </description>
 
               <!-- Link -->

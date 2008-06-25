@@ -86,7 +86,7 @@
         <xsl:for-each select="/html/set/event
           [translate (@end, '-', '') &gt;= translate ($today, '-', '')]">
           <xsl:sort select="@start" />
-          <xsl:if test="position() &lt; 6">
+          <xsl:if test="position() &lt; 11">
             <xsl:variable name="start"><xsl:value-of select="@start" /></xsl:variable>
             <xsl:variable name="end"><xsl:value-of select="@end" /></xsl:variable>
             <item>

@@ -1,5 +1,9 @@
 #!/usr/bin/perl
 
+# NOTE:
+# If the format of the generated mail changes, please notify Penny in the DUS
+# office, since the emails are processed automatically.
+
 use CGI;
 use POSIX qw(strftime);
 

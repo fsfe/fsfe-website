@@ -4,16 +4,16 @@
   <head>
   <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type" />
   <title>FSFE - Freedom Task Force (FTF)</title>
-<script type="text/javascript">
-submitted = false;
-function submit_once() {
+  <script type="text/javascript">
+    submitted = false;
+    function submit_once() {
     if (submitted) {
         alert("Uw verzoek wordt verwerkt.\nEven geduld.");
         event.returnValue = 0;    // work-around for IE
         return false;
     }
     if (document.itemSynopsis.title.value == "") {
-        alert("Kies een onderwerp!"); 
+        alert("Vul een onderwerp in!"); 
         document.itemSynopsis.title.focus();
         return false;
     }
@@ -28,119 +28,109 @@ function submit_once() {
         return false;
     }
     submitted = true;
-}
-</script>
-</head>
+    }
+  </script>
+  </head>
 
 
 
-<body>
+  <body>
 
-<h2 style="text-align: center;">Contacteer de FTF</h2>
+    <h2 style="text-align: center;">Contacteer de FTF</h2>
 
-<div style="text-align: center;">
-<p>
-[ <b><a href="ftf.html">Diensten</a></b> ] 
-[ <b><a href="network.html">Netwerken</a></b> ] 
-[ <b><a href="documentation.html">Documentatie</a></b> ] 
-[ <b><a href="community.html">Gemeenschap</a></b> ] 
-[ <b><a href="about.html">Over ons</a></b> ] 
-[ <b><a href="contact.html">Contact</a></b> ]
-</p>
-</div>
+    <div style="text-align: center;">
+      <p>
+	[ <b><a href="ftf.html">Diensten</a></b> ] 
+	[ <b><a href="network.html">Netwerken</a></b> ] 
+	[ <b><a href="documentation.html">Documentatie</a></b> ] 
+	[ <b><a href="community.html">Gemeenschap</a></b> ] 
+	[ <b><a href="about.html">Over ons</a></b> ] 
+	[ <b><a href="contact.html">Contact</a></b> ]
+      </p>
+    </div>
 
-<p>The FTF contact form is temporarily unavailable.  You can still <a href="contact.html">contact us</a> by email, phone or post.</p>
+    <div style="text-align: center;">
+      <p>Gelieve hieronder uw bericht te plaatsen:</p>
+    </div>
 
-<!--
+    <form method="POST" name="itemSynopsis"
+	  onSubmit="return submit_once()" enctype="multipart/form-data"
+	  action="https://roundup.fsfeurope.org/ftf/issue">
 
-<div style="text-align: center;">
-<p>Gelieve hieronder uw bericht te plaatsen:</p>
-</div>
+      <table class="form" style="width: 500px; text-align: left; margin-left: auto; margin-right: auto;" cellpadding="3" cellspacing="3">
 
+	<tbody>
 
-<form method="POST" name="itemSynopsis"
-      onSubmit="return submit_once()" enctype="multipart/form-data"
-      action="https://roundup.fsfeurope.org/ftf/issue">
+	  <tr>
+	    <th style="text-align: left; vertical-align: top; width: 170px;" class="required">Onderwerp :</th>
+	    <td colspan="3" style="width: 330px;">
+	      <input name="title" value="" size="35" />
+	    </td>
+	  </tr>
 
-<table class="form" style="width: 500px; text-align: left; margin-left: auto; margin-right: auto;" cellpadding="3" cellspacing="3">
+	  <tr>
+	    <th class="required" style="text-align: left; vertical-align: top; width: 170px;">Categorie:</th>
+	    <td style="width: 330px;">
+	      <select name="topic">
+		<option selected="selected" value="1">
+		  Vraag voor ondersteuning</option>
+		<option value="2">
+		  Melden van een inbreuk</option>
+		<option value="3">
+		  Vraag over fiduciaire diensten</option>
+		<option value="4">
+		  Ander onderwerp</option>
+	      </select>
+	    </td>
+	  </tr>
 
-  <tbody>
+	  <tr>
+	    <th class="required" style="text-align: left; vertical-align: top; width: 170px;">Uw naam:</th>
+	    <td colspan="3" style="width: 330px;">
+              <input name="sender_name" value="" size="35" /></td>
+	  </tr>
 
-    <tr>
+	  <tr>
+	    <th class="required" style="text-align: left; vertical-align: top; width: 170px;">Uw e-mailadres :</th>
+	    <td colspan="3" style="width: 330px;">
+	      <input name="sender_email" value="" size="35" /></td>
+	  </tr>
 
-      <th style="text-align: left; vertical-align: top; width: 170px;" class="required">Onderwerp :</th>
+	  <tr>
+	    <th style="text-align: left; vertical-align: top; width: 170px;">Bericht :</th>
+	    <td colspan="3" style="width: 330px;"> 
+	      <textarea name="@note" wrap="hard" rows="5" cols="30"></textarea>
+	    </td>
+	  </tr>
 
-      <td colspan="3" style="width: 330px;"><input name="title" value="" size="35" /></td>
+	  <tr>
+	    <th style="text-align: left; vertical-align: top; width: 170px;">Bestand: </th>
+	    <td colspan="3" style="width: 330px;">
+	      <input name="@file" size="25" type="file" /></td>
+	  </tr>
 
-    </tr>
+	  <tr>
+	    <th style="text-align: left; vertical-align: top; width: 170px;">Als validatie gelieve "zeventien" in cijfers te schrijven:</th>
 
-    <tr>
+	    <td colspan="3" style="width: 430px;">
+	      <input name="@riddle" size="35" type="text"/></td>
+	  </tr>
 
-      <th class="required" style="text-align: left; vertical-align: top; width: 170px;">Categorie
-:</th>
+	  <tr>
+	    <td style="width: 170px;">
+	      <input name="@template" value="item" type="hidden" />
+	      <input name="@required" value="title" type="hidden" />
+	    </td>
+	    <td style="width: 330px;" colspan="3">
+	      <input name="@action" value="ftfsubmit" type="hidden" />
+	      <input name="submit" value="Verzenden" type="submit" /> 
+	      <input name="reset" value="Herbeginnen" type="reset" />
+	    </td>
+	  </tr>
 
-      <td style="width: 330px;">
-      <select name="topic">
-      <option selected="selected" value="1">Vraag voor ondersteuning</option>
-      <option value="2">Melden van een inbreuk</option>
-      <option value="3">Vraag over fiduciaire diensten</option>
-      <option value="4">Ander onderwerp</option>
-      </select>
-
-      </td>
-
-    </tr>
-
-    <tr>
-
-      <th class="required" style="text-align: left; vertical-align: top; width: 170px;">Uw naam:
-        </th>
-
-      <td colspan="3" style="width: 330px;">
-        <input name="sender_name" value="" size="35" /></td>
-
-    </tr>
-
-    <tr>
-
-      <th class="required" style="text-align: left; vertical-align: top; width: 170px;">Uw
-      e-mailadres :</th>
-
-      <td colspan="3" style="width: 330px;"><input name="sender_email" value="" size="35" /></td>
-
-    </tr>
-
-    <tr>
-
-      <th style="text-align: left; vertical-align: top; width: 170px;">Bericht :</th>
-
-      <td colspan="3" style="width: 330px;"> <textarea name="@note" wrap="hard" rows="5" cols="30"></textarea>
-      </td>
-
-    </tr>
-
-    <tr>
-
-      <th style="text-align: left; vertical-align: top; width: 170px;">Bestand
-: </th>
-
-      <td colspan="3" style="width: 330px;"><input name="@file" size="25" type="file" /></td>
-
-    </tr>
-
-    <tr>
-
-      <td style="width: 170px;">
-      <input name="@template" value="item" type="hidden" /><input name="@required" value="title" type="hidden" /></td>
-      <td style="width: 330px;" colspan="3"><input name="@action" value="ftfsubmit" type="hidden" />
-      <input name="submit" value="Verzenden" type="submit" /> <input name="reset" value="Herbeginnen" type="reset" /></td>
-
-    </tr>
-
-  </tbody>
-</table>
-</form>
--->
+	</tbody>
+      </table>
+    </form>
 
   </body>
 

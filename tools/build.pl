@@ -64,6 +64,7 @@ our %languages = (
   el => '&#917;&#955;&#955;&#951;&#957;&#953;&#954;&#940;',
   en => 'English',
   es => 'Español',       
+  et => 'Eesti',
   fi => 'Suomi',
   fr => 'Français',
   hu => 'Magyar',

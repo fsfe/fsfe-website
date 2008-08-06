@@ -12,7 +12,8 @@
   <xsl:template match="head"/>
 
   <xsl:template match="body">
-    <xsl:text>\documentclass[a4paper]{article}
+    <xsl:text>\documentclass{article}
+\usepackage[a3paper]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{helvet}

@@ -41,7 +41,7 @@
   {\fontsize{16pt}{18pt}\selectfont\bfseries\color{fsfeblue}}}
 \renewcommand{\subsection}{\@startsection{section}{3}{\z@}%
   {\bigskipamount}%
-  {1pt}%
+  {\smallskipamount}%
   {\fontsize{12pt}{14.4pt}\selectfont\bfseries\itshape\color{fsfeblue}}}
 \makeatother
 

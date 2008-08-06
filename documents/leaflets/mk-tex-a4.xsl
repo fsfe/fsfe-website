@@ -55,8 +55,8 @@
   {2.3ex \@plus.2ex}%
   {\fontsize{12pt}{14.4pt}\selectfont\bfseries\itshape}}
 \renewcommand{\subsection}{\@startsection{section}{3}{\z@}%
-  {-3.25ex \@plus -1ex \@minus -.2ex}%
-  {1.5ex \@plus.2ex}%
+  {-3ex \@plus -1ex \@minus -.2ex}%
+  {3pt}%
   {\fontsize{11pt}{12pt}\selectfont\bfseries\itshape}}
 \makeatother
 
@@ -106,13 +106,12 @@
     <xsl:if test="@id='free_software'">
       <xsl:text>\break</xsl:text>
     </xsl:if>
-    <xsl:text>\parskip\parsep</xsl:text>  <!-- FIXME: ??? -->
     <xsl:if test="not(@id='fsfe')">
       <xsl:apply-templates select="h1"/>
     </xsl:if>
     <xsl:text>\begin{bfseries}</xsl:text>
     <xsl:apply-templates select="p[@class='background']"/>
-    <xsl:text>\end{bfseries}</xsl:text>
+    <xsl:text>\end{bfseries}\smallskip</xsl:text>
     <xsl:apply-templates select="h2|p[not(@class='background')]|ul"/>
   </xsl:template>
 
@@ -135,6 +134,7 @@
 
   <xsl:template match="ul">
     <xsl:text>\begin{itemize}</xsl:text>
+    <xsl:text>\itemsep 3pt</xsl:text>
     <xsl:apply-templates select="li"/>
     <xsl:text>\end{itemize}</xsl:text>
   </xsl:template>

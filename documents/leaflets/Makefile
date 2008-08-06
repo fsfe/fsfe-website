@@ -15,12 +15,12 @@ all: leaflets.en.xml $(pdfs_0) $(pdfs_G)
 leaflets.en.xml: $(sources) mk-leaflets-en-xml.sh
 	/bin/bash mk-leaflets-en-xml.sh $(sources)
 
-%.0.pdf: %.xhtml mk-tex.xsl
-	xsltproc --stringparam language $(subst .,,$(suffix $*)) --stringparam style 0 mk-tex.xsl $< > $*.0.tex
+%.0.pdf: %.xhtml mk-tex-a4.xsl
+	xsltproc --stringparam language $(subst .,,$(suffix $*)) --stringparam style 0 mk-tex-a4.xsl $< > $*.0.tex
 	pdflatex -interaction=nonstopmode $*.0.tex || exit 0
 	rm --force $*.0.tex $*.0.log $*.0.aux
 
-%.G.pdf: %.xhtml mk-tex.xsl
-	xsltproc --stringparam language $(subst .,,$(suffix $*)) --stringparam style G mk-tex.xsl $< > $*.G.tex
+%.G.pdf: %.xhtml mk-tex-a4.xsl
+	xsltproc --stringparam language $(subst .,,$(suffix $*)) --stringparam style G mk-tex-a4.xsl $< > $*.G.tex
 	pdflatex -interaction=nonstopmode $*.G.tex || exit 0
 	rm --force $*.G.tex $*.G.log $*.G.aux

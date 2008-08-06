@@ -88,7 +88,7 @@
     <xsl:text>\lhead{</xsl:text>
     <xsl:if test="$style='G'">
       <xsl:text>\begin{textblock*}{\paperwidth}(0pt,0pt)</xsl:text>
-      <xsl:text>\includegraphics{background.pdf}</xsl:text>
+      <xsl:text>\includegraphics{background-a4.pdf}</xsl:text>
       <xsl:text>\end{textblock*}</xsl:text>
     </xsl:if>
     <xsl:text>\fontseries{bc}\selectfont </xsl:text>

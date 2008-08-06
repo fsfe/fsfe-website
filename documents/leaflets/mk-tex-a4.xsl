@@ -106,7 +106,7 @@
     <xsl:if test="@id='free_software'">
       <xsl:text>\break</xsl:text>
     </xsl:if>
-    <xsl:text>\parskip\parsep</xsl:text> <!-- FIXME: ??? -->
+    <xsl:text>\parskip\parsep</xsl:text>  <!-- FIXME: ??? -->
     <xsl:if test="not(@id='fsfe')">
       <xsl:apply-templates select="h1"/>
     </xsl:if>

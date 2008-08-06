@@ -12,7 +12,7 @@
   <xsl:template match="head"/>
 
   <xsl:template match="body">
-    <xsl:text>\documentclass{article}
+    <xsl:text>\documentclass[11pt]{article}
 \usepackage[a3paper]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}

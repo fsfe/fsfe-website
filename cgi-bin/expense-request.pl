@@ -67,9 +67,9 @@ my $time = strftime "%s", localtime;
 my $reference = "$who.$date." . substr $time, -3;
 
 my $to = $responsible{$budget};
-if ($to eq $who) {
-  $to = "eec";
-}
+# if ($to eq $who) {
+#   $to = "eec";
+# }
 
 # -----------------------------------------------------------------------------
 # Generate mail to responsible person

@@ -82,7 +82,7 @@ if ($to ne "eec") {
   $replyto .= ", eec\@fsfeurope.org";
 }
 
-open(MAIL, "|/usr/lib/sendmail -t -f $to\@fsfeurope.org $who\@fsfeurope.org");
+open(MAIL, "|/usr/lib/sendmail -t -f $to\@fsfeurope.org");
 print MAIL "From: $who\@fsfeurope.org\n";
 print MAIL "Reply-To: $replyto\n";
 print MAIL "Mail-Followup-To: $replyto\n";

@@ -53,9 +53,9 @@
     <xsl:text>\pagestyle{empty}</xsl:text>
 
     <!-- First (outer) page -->
-    <!-- <xsl:text>\begin{textblock*}{\paperwidth}(0pt,0pt)</xsl:text>
+    <xsl:text>\begin{textblock*}{\paperwidth}(0pt,0pt)</xsl:text>
     <xsl:text>\includegraphics{background-a3-outer.pdf}</xsl:text>
-    <xsl:text>\end{textblock*}</xsl:text> -->
+    <xsl:text>\end{textblock*}</xsl:text>
     <xsl:text>\begin{textblock*}{170mm}(20mm,70mm)</xsl:text>
     <xsl:text>\raggedright</xsl:text>
     <xsl:apply-templates select="div[@id='contribute']"/>
@@ -63,9 +63,9 @@
     <xsl:text>~\pagebreak</xsl:text>
 
     <!-- Second (inner) page -->
-    <!-- <xsl:text>\begin{textblock*}{\paperwidth}(0pt,0pt)</xsl:text>
+    <xsl:text>\begin{textblock*}{\paperwidth}(0pt,0pt)</xsl:text>
     <xsl:text>\includegraphics{background-a3-inner.pdf}</xsl:text>
-    <xsl:text>\end{textblock*}</xsl:text> -->
+    <xsl:text>\end{textblock*}</xsl:text>
     <xsl:text>\begin{textblock*}{170mm}(20mm,55mm)</xsl:text>
     <xsl:text>\raggedright</xsl:text>
     <xsl:apply-templates select="div[@id='fsfe']"/>

@@ -36,6 +36,11 @@ lastfile=""
 for i in $*; do
   file=$(echo -n $i | cut --delimiter="." --fields="1")
   lang=$(echo -n $i | cut --delimiter="." --fields="2")
+  if [ "${lang}" == "el" ]; then
+    # Skip Greek since our LaTeX magic doesn't work for non-lating languages
+    # yet.
+    continue
+  fi
   thetype=$(echo -n ${file} | cut --delimiter="-" --fields="1")
   langvar="lang_${lang}"
   if [ "${file}" != "${lastfile}" ]; then

@@ -19,7 +19,7 @@ printable.en.xml: $(sources) mk-printable-en-xml.sh
 
 %.F.pdf: %.xhtml mk-tex-a3.xsl
 	xsltproc --stringparam language $(subst .,,$(suffix $*)) mk-tex-a3.xsl $< | sed -e 's/ /~/' > $*.F.tex
-	pdflatex -interaction=nonstopmode -output-directory $* $*.F.tex || exit 0
+	pdflatex -interaction=nonstopmode -output-directory $(*D) $*.F.tex || exit 0
 	rm --force $*.F.tex $*.F.log $*.F.aux
 
 %.G.pdf: %.xhtml mk-tex-a4.xsl

@@ -56,6 +56,16 @@
     <xsl:text>\begin{textblock*}{170mm}(20mm,70mm)</xsl:text>
     <xsl:text>\raggedright</xsl:text>
     <xsl:apply-templates select="div[@id='contribute']"/>
+
+    <!-- Disclaimer -->
+    <xsl:if test="$language!='en'">
+      <xsl:text>
+        \footnotesize This is a translation. Please see
+        http://www.fsfeurope.org/documents/printable/printable.en.html for the
+        original text
+      </xsl:text>
+    </xsl:if>
+
     <xsl:text>\end{textblock*}</xsl:text>
     <xsl:text>\begin{textblock*}{\paperwidth}(0pt,0pt)</xsl:text>
     <xsl:text>\includegraphics{background-a3-outer.pdf}</xsl:text>

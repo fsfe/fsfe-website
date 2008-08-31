@@ -80,6 +80,15 @@
     <xsl:apply-templates select="h2|p[not(@class='background')]|ul"/>
     <xsl:text>\end{multicols}</xsl:text>
 
+    <!-- Disclaimer -->
+    <xsl:if test="$language!='en'">
+      <xsl:text>
+        \footnotesize This is a translation. Please see
+        http://www.fsfeurope.org/documents/printable/printable.en.html for the
+        original text
+      </xsl:text>
+    </xsl:if>
+
     <!-- End of document -->
     <xsl:text>\end{document}</xsl:text>
   </xsl:template>

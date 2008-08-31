@@ -34,15 +34,14 @@ rm --force printable.en.xml
 echo "<printableset>" >> printable.en.xml
 lastfile=""
 for i in $*; do
-  base=$(basename $i)
-  file=$(echo -n $base | cut --delimiter="." --fields="1")
-  lang=$(echo -n $base | cut --delimiter="." --fields="2")
+  file=$(echo -n $i | cut --delimiter="." --fields="1")
+  lang=$(echo -n $i | cut --delimiter="." --fields="2")
   if [ "${lang}" == "el" ]; then
     # Skip Greek since our LaTeX magic doesn't work for non-lating languages
     # yet.
     continue
   fi
-  thetype=$(echo -n ${file} | cut --delimiter="-" --fields="1")
+  thetype=$(basename ${file} | cut --delimiter="-" --fields="1")
   langvar="lang_${lang}"
   if [ "${file}" != "${lastfile}" ]; then
     if [ -n "${lastfile}" ]; then

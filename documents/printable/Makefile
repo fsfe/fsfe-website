@@ -18,16 +18,16 @@ printable.en.xml: $(sources) mk-printable-en-xml.sh
 	/bin/bash mk-printable-en-xml.sh $(sources)
 
 %.F.pdf: %.xhtml mk-tex-a3.xsl
-	xsltproc --stringparam language $(subst .,,$(suffix $*)) mk-tex-a3.xsl $< | sed -e 's/ /~/' > $(*F).F.tex
-	pdflatex -interaction=nonstopmode $(*F).F.tex || exit 0
-	rm --force $(*F).F.tex $(*F).F.log $(*F).F.aux
+	xsltproc --stringparam language $(subst .,,$(suffix $*)) mk-tex-a3.xsl $< | sed -e 's/ /~/' > $*.F.tex
+	pdflatex -interaction=nonstopmode -output-directory $* $*.F.tex || exit 0
+	rm --force $*.F.tex $*.F.log $*.F.aux
 
 %.G.pdf: %.xhtml mk-tex-a4.xsl
-	xsltproc --stringparam language $(subst .,,$(suffix $*)) --stringparam style G mk-tex-a4.xsl $< | sed -e 's/ /~/' > $(*F).G.tex
-	pdflatex -interaction=nonstopmode $(*F).G.tex || exit 0
-	rm --force $(*F).G.tex $(*F).G.log $(*F).G.aux
+	xsltproc --stringparam language $(subst .,,$(suffix $*)) --stringparam style G mk-tex-a4.xsl $< | sed -e 's/ /~/' > $*.G.tex
+	pdflatex -interaction=nonstopmode -output-directory $(*D) $*.G.tex || exit 0
+	rm --force $*.G.tex $*.G.log $*.G.aux
 
 %.0.pdf: %.xhtml mk-tex-a4.xsl
-	xsltproc --stringparam language $(subst .,,$(suffix $*)) --stringparam style 0 mk-tex-a4.xsl $< | sed -e 's/ /~/' > $(*F).0.tex
-	pdflatex -interaction=nonstopmode $(*F).0.tex || exit 0
-	rm --force $(*F).0.tex $(*F).0.log $(*F).0.aux
+	xsltproc --stringparam language $(subst .,,$(suffix $*)) --stringparam style 0 mk-tex-a4.xsl $< | sed -e 's/ /~/' > $*.0.tex
+	pdflatex -interaction=nonstopmode -output-directory $(*D) $*.0.tex || exit 0
+	rm --force $*.0.tex $*.0.log $*.0.aux

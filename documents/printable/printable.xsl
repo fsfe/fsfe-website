@@ -11,7 +11,7 @@
     <xsl:variable name="text-pdf-G"><xsl:value-of select="text[@id='pdf-G']"/></xsl:variable>
     <xsl:variable name="text-pdf-0"><xsl:value-of select="text[@id='pdf-0']"/></xsl:variable>
 
-    <xsl:for-each select="/html/set/publication[@type=$type]">
+    <xsl:for-each select="/html/set/printable[@type=$type]">
       <xsl:sort select="@id"/>
       <xsl:variable name="id"><xsl:value-of select="@id"/></xsl:variable>
 

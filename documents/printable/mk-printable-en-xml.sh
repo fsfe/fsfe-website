@@ -1,6 +1,6 @@
 #!/bin/bash
 # -----------------------------------------------------------------------------
-# Script to rebuild leaflets.en.xml
+# Script to rebuild printable.en.xml
 # -----------------------------------------------------------------------------
 
 lang_bg="Български"
@@ -29,13 +29,14 @@ lang_sr="Srpski"
 lang_sv="Svenska"
 lang_tr="Türkçe"
 
-rm --force leaflets.en.xml
+rm --force printable.en.xml
 
-echo "<publicationset>" >> leaflets.en.xml
+echo "<printableset>" >> printable.en.xml
 lastfile=""
 for i in $*; do
-  file=$(echo -n $i | cut --delimiter="." --fields="1")
-  lang=$(echo -n $i | cut --delimiter="." --fields="2")
+  base=$(basename $i)
+  file=$(echo -n $base | cut --delimiter="." --fields="1")
+  lang=$(echo -n $base | cut --delimiter="." --fields="2")
   if [ "${lang}" == "el" ]; then
     # Skip Greek since our LaTeX magic doesn't work for non-lating languages
     # yet.
@@ -45,18 +46,18 @@ for i in $*; do
   langvar="lang_${lang}"
   if [ "${file}" != "${lastfile}" ]; then
     if [ -n "${lastfile}" ]; then
-      echo "  </publication>" >> leaflets.en.xml
+      echo "  </printable>" >> printable.en.xml
     fi
-    echo -n "  <publication" >> leaflets.en.xml
-    echo -n " type=\"${thetype}\"" >> leaflets.en.xml
-    echo " id=\"${file}\">" >> leaflets.en.xml
+    echo -n "  <printable" >> printable.en.xml
+    echo -n " type=\"${thetype}\"" >> printable.en.xml
+    echo " id=\"${file}\">" >> printable.en.xml
   fi
-  echo -n "    <translation" >> leaflets.en.xml
-  echo -n " lang=\"${lang}\"" >> leaflets.en.xml
-  echo -n " langname=\"${!langvar}\">" >> leaflets.en.xml
-  xsltproc get_h1.xsl $i >> leaflets.en.xml
-  echo "</translation>" >> leaflets.en.xml
+  echo -n "    <translation" >> printable.en.xml
+  echo -n " lang=\"${lang}\"" >> printable.en.xml
+  echo -n " langname=\"${!langvar}\">" >> printable.en.xml
+  xsltproc get_h1.xsl $i >> printable.en.xml
+  echo "</translation>" >> printable.en.xml
   lastfile=${file}
 done
-echo "  </publication>" >> leaflets.en.xml
-echo "</publicationset>" >> leaflets.en.xml
+echo "  </printable>" >> printable.en.xml
+echo "</printableset>" >> printable.en.xml

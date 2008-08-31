@@ -27,6 +27,9 @@ TODO items for www.fsfeurope.org web pages (unsorted):
 * Include a dynamic news and events list on the project pages for those
   projects where it makes sense.
 
+* Include a dynamic leaflet list on the project pages for those projects that
+  have leaflets.
+
 * Check all pages for outdated content and update them to be current. This is
   certainly one for a rainy Sunday afternoon :-)
 
@@ -35,6 +38,8 @@ TODO items for www.fsfeurope.org web pages (unsorted):
 * Move files from /documents that actually belong to a project to their
   respective /projects/* directory (for example wiwo). Don't forget to add a
   redirect to not break old external links!
+
+* Split the documents page into several pages, based on the current sections.
 
 * Search the whole tree for broken links, external as well as internal (is this
   scriptable?)
@@ -45,8 +50,6 @@ TODO items for www.fsfeurope.org web pages (unsorted):
 
 * Scan the apache log for 404 errors resulting from external links and help
   avoid them by adding page redirects.
-
-* Make the current page a non-link in the menu.
 
 * Make a separate page per year for news and events.
 

@@ -101,11 +101,9 @@
     <xsl:apply-templates select="node()"/>
     <!-- Disclaimer -->
     <xsl:if test="$language!='de' and $language!='en' and $language!='es' and $language!='it'">
-      <xsl:text>
-        This is an inofficial translation. Please see
-        http://www.fsfeurope.org/documents/printable/printable.en.html for the
-        original text.
-      </xsl:text>
+      <xsl:text>This is an inofficial translation. Please see </xsl:text>
+      <xsl:text>http://www.fsfeurope.org/documents/printable/printable.en.html</xsl:text>
+      <xsl:text> for the original text.</xsl:text>
     </xsl:if>
     <xsl:text>}</xsl:text>
   </xsl:template>

@@ -35,7 +35,7 @@ if (not $query->param("url")) {
     $value = $query->param($name);
     if (not $name =~ /^_/ and $value) {
       print MAIL "$name: $value\n";
-      $price = $query->param("_$name");
+      my $price = $query->param("_$name");
       if ($name != "shipping") {
         $price = $price * 0.75;
       }

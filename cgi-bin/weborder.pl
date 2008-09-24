@@ -42,6 +42,7 @@ if (not $query->param("url")) {
       $amount += $value * $price;
       # $amount += $value * $query->param("_$name");
     }
+    print MAIL "discount: 25";
   }
   $amount = sprintf "%.2f", $amount;
   print MAIL "Total amount: $amount\n";

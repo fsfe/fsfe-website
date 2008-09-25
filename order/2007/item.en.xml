@@ -16,8 +16,9 @@
       small="/order/2007/tshirt-ussi-blue-back-small.jpg"
       large="/order/2007/tshirt-ussi-blue-back-large.jpg"/>
   </item>
+<!--
   <item type="hooded" id="hooded-fsfs-grey" price="28.00" date="2004-01-01">
-    <!-- available size="S"/ -->
+    <available size="S"/>
     <available size="M"/>
     <available size="L"/>
     <available size="XL"/>
@@ -28,4 +29,5 @@
       small="/order/2007/hooded-fsfs-grey-back-small.jpg"
       large="/order/2007/hooded-fsfs-grey-back-large.jpg"/>
   </item>
+-->
 </itemset>

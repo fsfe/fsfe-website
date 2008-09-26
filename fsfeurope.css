@@ -180,7 +180,8 @@ p.tagline {
 	text-align: right;
 }
 
-p.tagline.centre {
+p.tagline.centre,
+h2.tagline.centre {
 	text-align: center;
 }
 

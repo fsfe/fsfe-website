@@ -63,7 +63,7 @@
               <xsl:attribute name="class">gl</xsl:attribute>
               <xsl:attribute name="href">/</xsl:attribute>
               <xsl:element name="img">
-                <xsl:attribute name="alt">[FSFE Logo]</xsl:attribute>
+                <xsl:attribute name="alt">FSFE Logo</xsl:attribute>
                 <xsl:attribute name="src">/graphics/logo.png</xsl:attribute>
               </xsl:element>
             </xsl:element>
@@ -92,7 +92,7 @@
                       </xsl:element>
 		    </xsl:otherwise>
 		  </xsl:choose>
-		</xsl:element>		  
+		</xsl:element>
 		<xsl:for-each select="/buildinfo/menuset/menu[@parent=$id]">
                   <xsl:sort select="@id" />
                   <xsl:variable name="mid"><xsl:value-of select="@id"/></xsl:variable>
@@ -116,7 +116,7 @@
 	  </xsl:for-each>
         </xsl:element>
         <!-- End Menu bar -->
-	
+
         <!-- Language bar -->
         <xsl:element name="div">
           <xsl:attribute name="class">language</xsl:attribute>

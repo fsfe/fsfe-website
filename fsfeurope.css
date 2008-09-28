@@ -44,6 +44,11 @@ img {
   border: 0;
 }
 
+img.right {
+	float: right;
+	margin: 0 0 1em 1em;
+}
+
 /* avoid hover effects and borders on internal marks and graphical links */
 a[name], a[name]:hover, a.gl img, a.gl:link, a.gl:visited, a.gl:hover {
   border: none;
@@ -173,15 +178,14 @@ a[name], a[name]:hover, a.gl img, a.gl:link, a.gl:visited, a.gl:hover {
   text-align: center;
 }
 
-p.tagline {
+.tagline {
 	color: #202D79;
 	font-size: 150%;
 	font-weight: bold;
 	text-align: right;
 }
 
-p.tagline.centre,
-h2.tagline.centre {
+.centre {
 	text-align: center;
 }
 

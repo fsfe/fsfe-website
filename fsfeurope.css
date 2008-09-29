@@ -67,9 +67,17 @@ a[name], a[name]:hover, a.gl img, a.gl:link, a.gl:visited, a.gl:hover {
 }
 
 /* attempts to resemble typographical block quotations */
-blockquote {
-	font-size: 90%;
-	line-height: 115%;
+/* FIXME: Use blockquote instead for real quotations */
+blockquote, .quote {
+  font-size: 90%;
+  font-style: italic;
+  line-height: 115%;
+  margin-left: 5em;
+  margin-right: 5em;
+}
+
+address {
+  margin-left: 1em;
 }
 
 /* ------------------------------------------------------------------------- */
@@ -250,7 +258,7 @@ td.newsdate {
 .newsleft dt, .newsright dt {
   padding: 0 0 1em 0;
   font-weight: bold;
-} 
+}
 
 .newsleft dt span, .newsright dt span {
   float: right;
@@ -293,17 +301,6 @@ td.projects {
   margin-left: 40px;
 }
 
-/* FIXME: Use blockquote instead for real quotations */
-.quote, blockquote {
-  font-style:italic;
-  margin-right: 5em;
-  margin-left: 5em;
-}
-
-address{
-  margin-left: 1em;
-}
-
 p.footnote {
   margin-right: 30px;
   margin-left: 40px;
@@ -316,15 +313,19 @@ code.footnote {
 
 /* FIXME: Use <strong> instead */
 span.emph {
-  font-weight: bold;
+   font-weight: bold;
 }
 
-.background{ /* For background information */
- margin-left: 1.5em;
- margin-right:2em;
+ul.spaced li, ol.spaced li { /* Spaced listings, use this instead of <br /> */
+	margin-bottom: 0.8em;
+}
+
+.background { /* For background information */
+  margin-left: 1.5em;
+  margin-right: 2em;
 }
 
 .aboutfsfe{ /* For press release section "About the FSFE" */
- font-style:italic;
- margin-left: 2em;
+  font-style: italic;
+  margin-left: 2em;
 }

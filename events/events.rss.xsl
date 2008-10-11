@@ -67,19 +67,19 @@
       <channel>
         <title>FSFE Events</title>
         <description>Free Software Events</description>
-        <link>http://www.fsfeurope.org/</link>
+        <link>http://www.fsfeurope.org/events/</link>
         <language><xsl:value-of select="$lang" /></language>
         <copyright>Copyright (c) FSF Europe. Verbatim copying and distribution
           of this entire article is permitted in any medium, provided this
           notice is preserved.</copyright>
-        <managingEditor>press@fsfeurope.org</managingEditor>
-        <webMaster>web@fsfeurope.org</webMaster>
+        <managingEditor>press@fsfeurope.org (FSFE Press Team)</managingEditor>
+        <webMaster>web@fsfeurope.org (FSFE Webmaster Team)</webMaster>
         <image>
           <url>http://fsfeurope.org/events/fsfe-events.png</url>
           <title>FSFE Events</title>
-          <width>180</width>
-          <height>47</height>
-          <link>http://fsfeurope.org/events/</link>
+          <width>88</width>
+          <height>31</height>
+          <link>http://www.fsfeurope.org/events/</link>
         </image>
 
         <!-- News items -->

@@ -66,8 +66,6 @@ TODO items for www.fsfeurope.org web pages (unsorted):
 * in internal/er.en.xhtml, allow for presetting of fields through URL, like
   http://www.fsfeurope.org/internal/er?budget=GENERAL
 
-* Fix the 'non-valid' RSS. See http://validator.w3.org/feed/ for details.
-
 * Add id to RSS so caching readers replace old versions of a news entry or
   event with the new version istead of just adding the new version. The id
   should be the same for all languages, so changing from untranslated to

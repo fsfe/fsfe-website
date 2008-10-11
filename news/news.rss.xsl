@@ -85,32 +85,36 @@
         <!-- News items -->
         <xsl:for-each select="/html/set/news
           [translate (@date, '-', '') &lt;= translate ($today, '-', '')]">
-          <xsl:sort select="@date" order="descending" />
+          <xsl:sort select="@date" order="descending"/>
           <xsl:if test="position() &lt; 11">
-            <item>
+            <xsl:element name="item">
 
               <!-- Title -->
-              <title>
-                <xsl:value-of select="title" />
-                (<xsl:value-of select="@date" />)
-              </title>
+              <xsl:element name="title">
+                <xsl:value-of select="title"/>
+                <xsl:text> (</xsl:text>
+                <xsl:value-of select="@date"/>
+                <xsl:text>)</xsl:text>
+              </xsl:element>
 
               <!-- News body -->
-              <description>
+              <xsl:element name="description">
                 <xsl:value-of select="normalize-space(body)"/>
-              </description>
+              </xsl:element>
 
               <!-- Link -->
               <xsl:if test="link != ''">
                 <xsl:variable name="link">
                   <xsl:apply-templates select="link">
-                    <xsl:with-param name="lang" select="$lang" />
+                    <xsl:with-param name="lang" select="$lang"/>
                   </xsl:apply-templates>
                 </xsl:variable>
-                <link><xsl:value-of select="normalize-space($link)" /></link>
+                <xsl:element name="link">
+                  <xsl:value-of select="normalize-space($link)"/>
+                </xsl:element>
               </xsl:if>
 
-            </item>
+            </xsl:element>
           </xsl:if>
         </xsl:for-each>
 

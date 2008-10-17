@@ -42,7 +42,7 @@
               <xsl:if test="position()!=1">
                 <xsl:text>, </xsl:text>
               </xsl:if>
-              <xsl:value-of select="/html/set/function[@id=.]"/>
+              <xsl:value-of select="/html/set/function[@id=text()]"/>
             </xsl:for-each>
 
           </xsl:element>

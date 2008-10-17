@@ -10,6 +10,14 @@
     <link>http://www.fsfe.org/en/fellows/tgb</link>
   </person>
 
+  <person id="bubestinger" team="yes">
+    <name>Peter Bubestinger</name>
+    <country>AT</country>
+    <function country="AT">deputy</function>
+    <email>bubestinger (at) fsfeurope (dot) org</email>
+    <link>http://www.fsfe.org/en/fellows/pb</link>
+  </person>
+
   <person id="coughlan" member="yes" team="yes">
     <name>Shane M. Coughlan</name>
     <country>CH</country>
@@ -18,9 +26,18 @@
     <link>/about/coughlan/coughlan.html</link>
   </person>
 
+  <person id="eide" team="yes">
+    <name>Stian Rødven Eide</name>
+    <country>SE</country>
+    <function>intern</function>
+    <email>stian (at) fsfeurope (dot) org</email>
+    <link>http://www.fsfe.org/en/fellows/julipan</link>
+  </person>
+
   <person id="gerloff" team="yes">
     <name>Karsten Gerloff</name>
     <country>DE</country>
+    <function>gerloff</function>
     <email>gerloff (at) fsfeurope (dot) org</email>
     <link>http://www.fsfe.org/en/fellows/gerloff</link>
   </person>
@@ -36,6 +53,8 @@
   <person id="jelic" team="yes">
     <name>Ivan Jelic</name>
     <country>RS</country>
+    <function country="RS">coordinator</function>
+    <function>sysadmin</function>
     <email>jelic (at) fsfeurope (dot) org</email>
     <link>http://www.fsnserbia.org/</link>
   </person>
@@ -43,28 +62,33 @@
   <person id="kersten" team="yes">
     <name>Rainer Kersten</name>
     <country>DE</country>
+    <function>office</function>
     <email>kersten (at) fsfeurope (dot) org</email>
   </person>
 
   <person id="kesper" team="yes">
     <name>Michael Kesper</name>
     <country>DE</country>
+    <function volunteers="booth">coordinator</country>
+    <function volunteers="translators-de">deputy</country>
     <email>kesper (at) fsfeurope (dot) org</email>
+  </person>
+
+  <person id="kienesberger" team="yes">
+    <name>Georg Kienesberger</name>
+    <country>AT</country>
+    <function country="AT">coordinator</function>
+    <email>kienesberger (at) fsfeurope (dot) org</email>
+    <link>http://www.fsfe.org/en/fellows/gk</link>
   </person>
 
   <person id="kirschner" member="yes" chapter_de="yes" team="yes">
     <name>Matthias Kirschner</name>
     <country>DE</country>
+    <function project="fellowship">coordinator</function>
     <function country="DE">deputy</function>
     <email>kirschner (at) fsfeurope (dot) org</email>
     <link>http://www.fsfe.org/en/fellows/mk</link>
-  </person>
-
-  <person id="klang" team="yes">
-    <name>Mathias Klang</name>
-    <country>SE</country>
-    <email>klang (at) fsfeurope (dot) org</email>
-    <link>http://www.fsfe.org/en/fellows/klang</link>
   </person>
 
   <person id="koch" member="yes" chapter_de="yes">
@@ -77,6 +101,7 @@
   <person id="machon" team="yes">
     <name>Pablo Machón</name>
     <country>ES</country>
+    <function country="ES">coordinator</country>
     <email>machon (at) fsfeurope (dot) org</email>
     <link>http://www.fsfe.org/en/fellows/pablo</link>
   </person>
@@ -84,13 +109,24 @@
   <person id="milenovic" team="yes">
     <name>Marko Milenovic</name>
     <country>RS</country>
+    <function country="RS">deputy</function>
     <email>milenovic (at) fsfeurope (dot) org</email>
     <link>http://www.fsfe.org/en/fellows/nightweaver</link>
+  </person>
+
+  <person id="morant" team="yes">
+    <name>Benjamin Morant</name>
+    <country>CH</country>
+    <function>intern</function>
+    <email>morant (at) fsfeurope (dot) org</email>
+    <link>http://www.fsfe.org/en/fellows/morant</link>
   </person>
 
   <person id="mueller" member="yes" chapter_de="yes" team="yes">
     <name>Reinhard Müller</name>
     <country>AT</country>
+    <function>financial-officer</function>
+    <function volunteers="web">coordinator</function>
     <email>mueller (at) fsfeurope (dot) org</email>
     <link>http://www.fsfe.org/en/fellows/reinhard</link>
   </person>
@@ -106,6 +142,7 @@
   <person id="ohnewein" team="yes">
     <name>Patrick Ohnewein</name>
     <country>IT</country>
+    <function country="IT">coordinator</function>
     <email>ohnewein (at) fsfeurope (dot) org</email>
     <link>http://www.fsfe.org/en/fellows/patrick</link>
   </person>
@@ -114,6 +151,7 @@
     <name>Ciarán O'Riordan</name>
     <country>BE</country>
     <country>IE</country>
+    <function project="fellowship">deputy</function>
     <email>oriordan (at) fsfeurope (dot) org</email>
     <link>/about/oriordan/oriordan.html</link>
   </person>
@@ -121,6 +159,7 @@
   <person id="poderi" team="yes">
     <name>Giacomo Poderi</name>
     <country>IT</country>
+    <function country="IT">deputy</function>
     <email>poderi (at) fsfeurope (dot) org</email>
     <link>http://www.fsfe.org/en/fellows/Poderi</link>
   </person>
@@ -133,9 +172,19 @@
     <link>http://www.fsfe.org/en/fellows/bernhard</link>
   </person>
 
+  <person id="rejas" team="yes">
+    <name>Marcus Rejås</name>
+    <country>SE</country>
+    <function country="SE">coordinator</country>
+    <email>rejas (at) fsfeurope (dot) org</email>
+    <link>http://www.fsfe.org/en/fellows/rejas</link>
+  </person>
+
   <person id="rigamonti" team="yes">
     <name>Cristian Rigamonti</name>
     <country>IT</country>
+    <function>sysadmin</country>
+    <function volunteers="translators-it">coordinator</country>
     <email>rigamonti (at) fsfeurope (dot) org</email>
     <link>http://www.fsfe.org/en/fellows/cri</link>
   </person>
@@ -143,6 +192,7 @@
   <person id="sandklef" member="yes" team="yes">
     <name>Henrik Sandklef</name>
     <country>SE</country>
+    <function country="SE">deputy</country>
     <email>sandklef (at) fsfeurope (dot) org</email>
     <link>http://www.fsfe.org/en/fellows/hesa</link>
   </person>
@@ -150,8 +200,17 @@
   <person id="schiessle" team="yes">
     <name>Björn Schießle</name>
     <country>DE</country>
+    <function volunteers="translators-de">coordinator</country>
     <email>schiessle (at) fsfeurope (dot) org</email>
     <link>http://www.fsfe.org/en/fellows/schiessle</link>
+  </person>
+
+  <person id="weiden" team="yes">
+    <name>Fernanda Weiden</name>
+    <country>CH</country>
+    <function>sysadmin</function>
+    <email>weiden (at) fsfeurope (dot) org</email>
+    <link>http://www.fsfe.org/en/fellows/nanda</link>
   </person>
 
   <person id="west" team="yes">

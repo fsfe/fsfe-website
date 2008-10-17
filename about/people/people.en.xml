@@ -3,13 +3,6 @@
 <!-- Do not translate this file -->
 
 <personset>
-  <person id="antener">
-    <name>Alex Antener</name>
-    <country>CH</country>
-    <email>antener (at) fsfeurope (dot) org</email>
-    <link>http://www.fsfe.org/en/fellows/lix</link>
-  </person>
-
   <person id="bowker" member="yes">
     <name>Gareth Bowker</name>
     <country>GB</country>
@@ -17,75 +10,54 @@
     <link>http://www.fsfe.org/en/fellows/tgb</link>
   </person>
 
-  <person id="carli">
-    <name>Maria Carli</name>
-    <country>CH</country>
-    <email>carli (at) fsfeurope (dot) org</email>
-    <link>http://www.fsfe.org/en/fellows/mlc981</link>
-  </person>
-
-  <person id="coughlan" member="yes">
+  <person id="coughlan" member="yes" team="yes">
     <name>Shane M. Coughlan</name>
     <country>CH</country>
     <email>coughlan (at) fsfeurope (dot) org</email>
     <link>/about/coughlan/coughlan.html</link>
   </person>
 
-  <person id="finkenberger">
-    <name>Alexander Finkenberger</name>
-    <country>DE</country>
-    <email>finkenberger (at) fsfeurope (dot) org</email>
-    <link>http://www.fsfe.org/en/fellows/af</link>
-  </person>
-
-  <person id="gerloff">
+  <person id="gerloff" team="yes">
     <name>Karsten Gerloff</name>
     <country>DE</country>
     <email>gerloff (at) fsfeurope (dot) org</email>
     <link>http://www.fsfe.org/en/fellows/gerloff</link>
   </person>
 
-  <person id="greve" member="yes" chapter_de="yes">
+  <person id="greve" member="yes" chapter_de="yes" team="yes">
     <name>Georg C. F. Greve</name>
     <country>CH</country>
     <email>greve (at) fsfeurope (dot) org</email>
     <link>/about/greve/greve.html</link>
   </person>
 
-  <person id="jakobs">
-    <name>Joachim Jakobs</name>
-    <country>DE</country>
-    <email>jakobs (at) fsfeurope (dot) org</email>
-    <link>http://www.fsfe.org/en/fellows/jj</link>
-  </person>
-
-  <person id="jelic">
+  <person id="jelic" team="yes">
     <name>Ivan Jelic</name>
     <country>RS</country>
     <email>jelic (at) fsfeurope (dot) org</email>
     <link>http://www.fsnserbia.org/</link>
   </person>
 
-  <person id="kersten">
+  <person id="kersten" team="yes">
     <name>Rainer Kersten</name>
     <country>DE</country>
     <email>kersten (at) fsfeurope (dot) org</email>
   </person>
 
-  <person id="kesper">
+  <person id="kesper" team="yes">
     <name>Michael Kesper</name>
     <country>DE</country>
     <email>kesper (at) fsfeurope (dot) org</email>
   </person>
 
-  <person id="kirschner" member="yes" chapter_de="yes">
+  <person id="kirschner" member="yes" chapter_de="yes" team="yes">
     <name>Matthias Kirschner</name>
     <country>DE</country>
     <email>kirschner (at) fsfeurope (dot) org</email>
     <link>http://www.fsfe.org/en/fellows/mk</link>
   </person>
 
-  <person id="klang">
+  <person id="klang" team="yes">
     <name>Mathias Klang</name>
     <country>SE</country>
     <email>klang (at) fsfeurope (dot) org</email>
@@ -99,42 +71,42 @@
     <link>http://www.fsfe.org/en/fellows/werner</link>
   </person>
 
-  <person id="machon">
+  <person id="machon" team="yes">
     <name>Pablo Machón</name>
     <country>ES</country>
     <email>machon (at) fsfeurope (dot) org</email>
     <link>http://www.fsfe.org/en/fellows/pablo</link>
   </person>
 
-  <person id="milenovic">
+  <person id="milenovic" team="yes">
     <name>Marko Milenovic</name>
     <country>RS</country>
     <email>milenovic (at) fsfeurope (dot) org</email>
     <link>http://www.fsfe.org/en/fellows/nightweaver</link>
   </person>
 
-  <person id="mueller" member="yes" chapter_de="yes">
+  <person id="mueller" member="yes" chapter_de="yes" team="yes">
     <name>Reinhard Müller</name>
     <country>AT</country>
     <email>mueller (at) fsfeurope (dot) org</email>
     <link>http://www.fsfe.org/en/fellows/reinhard</link>
   </person>
 
-  <person id="oberg" member="yes" chapter_de="yes">
+  <person id="oberg" member="yes" chapter_de="yes" team="yes">
     <name>Jonas Öberg</name>
     <country>SE</country>
     <email>oberg (at) fsfeurope (dot) org</email>
     <link>/about/oberg/oberg.html</link>
   </person>
 
-  <person id="ohnewein">
+  <person id="ohnewein" team="yes">
     <name>Patrick Ohnewein</name>
     <country>IT</country>
     <email>ohnewein (at) fsfeurope (dot) org</email>
     <link>http://www.fsfe.org/en/fellows/patrick</link>
   </person>
 
-  <person id="oriordan">
+  <person id="oriordan" team="yes">
     <name>Ciarán O'Riordan</name>
     <country>BE</country>
     <country>IE</country>
@@ -142,66 +114,45 @@
     <link>/about/oriordan/oriordan.html</link>
   </person>
 
-  <person id="poderi">
+  <person id="poderi" team="yes">
     <name>Giacomo Poderi</name>
     <country>IT</country>
     <email>poderi (at) fsfeurope (dot) org</email>
     <link>http://www.fsfe.org/en/fellows/Poderi</link>
   </person>
 
-  <person id="reina">
-    <name>Xavier Reina</name>
-    <country>ES</country>
-    <email>reina (at) fsfeurope (dot) org</email>
-    <link>http://www.fsfe.org/en/fellows/xreina</link>
-  </person>
-
-  <person id="reiter" member="yes" chapter_de="yes">
+  <person id="reiter" member="yes" chapter_de="yes" team="yes">
     <name>Bernhard Reiter</name>
     <country>DE</country>
     <email>reiter (at) fsfeurope (dot) org</email>
     <link>http://www.fsfe.org/en/fellows/bernhard</link>
   </person>
 
-  <person id="rigamonti">
+  <person id="rigamonti" team="yes">
     <name>Cristian Rigamonti</name>
     <country>IT</country>
     <email>rigamonti (at) fsfeurope (dot) org</email>
     <link>http://www.fsfe.org/en/fellows/cri</link>
   </person>
 
-  <person id="sandklef" member="yes">
+  <person id="sandklef" member="yes" team="yes">
     <name>Henrik Sandklef</name>
     <country>SE</country>
     <email>sandklef (at) fsfeurope (dot) org</email>
     <link>http://www.fsfe.org/en/fellows/hesa</link>
   </person>
 
-  <person id="schiessle">
+  <person id="schiessle" team="yes">
     <name>Björn Schießle</name>
     <country>DE</country>
     <email>schiessle (at) fsfeurope (dot) org</email>
     <link>http://www.fsfe.org/en/fellows/schiessle</link>
   </person>
 
-  <person id="thim">
-    <name>Christof Thim</name>
-    <country>DE</country>
-    <email>thim (at) fsfeurope (dot) org</email>
-    <link>http://www.fsfe.org/en/fellows/cthim</link>
-  </person>
-
-  <person id="west">
+  <person id="west" team="yes">
     <name>Graeme West</name>
     <country>CH</country>
     <email>west (at) fsfeurope (dot) org</email>
     <link>http://www.fsfe.org/en/fellows/west</link>
-  </person>
-
-  <person id="yziquel">
-    <name>Guillaume Yziquel</name>
-    <country>CH</country>
-    <email>yziquel (at) fsfeurope (dot) org</email>
-    <link>http://www.fsfe.org/en/fellows/yziquel</link>
   </person>
 </personset>

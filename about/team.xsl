@@ -42,7 +42,18 @@
               <xsl:if test="position()!=1">
                 <xsl:text>, </xsl:text>
               </xsl:if>
-              <xsl:value-of select="/html/set/function[@id=text()]"/>
+              <xsl:variable name="function"><xsl:value-of select="."/></xsl:variable>
+              <xsl:value-of select="/html/set/function[@id=$function]"/>
+              <xsl:if test="@country != ''">
+                <xsl:text> </xsl:text>
+                <xsl:variable name="country"><xsl:value-of select="@country"/></xsl:variable>
+                <xsl:value-of select="/html/set/country[@id=$country]"/>
+              </xsl:if>
+              <xsl:if test="@project != ''">
+                <xsl:text> </xsl:text>
+                <xsl:variable name="project"><xsl:value-of select="@project"/></xsl:variable>
+                <xsl:value-of select="/html/set/project[@id=$project]/title"/>
+              </xsl:if>
             </xsl:for-each>
 
           </xsl:element>

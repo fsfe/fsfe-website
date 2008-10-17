@@ -6,11 +6,6 @@ TODO items for www.fsfeurope.org web pages (unsorted):
   included dynamically with <dynamic-content>. At the same time, remove
   volunteers from /about/team to avoid confusion.
 
-* Change dynamically built pages /about/team, /about/members and
-  /about/legal/de/de to take language independent information about people from
-  people.xml instead of person-*.xml. Remove language independent information
-  from person-*.xml, these files should only contain the descriptions.
-
 * Change all .xsl scripts to use <dynamic-content> instead of just appending
   the dynamic content to the end of the body.
 

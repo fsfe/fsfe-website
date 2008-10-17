@@ -13,6 +13,7 @@
   <person id="coughlan" member="yes" team="yes">
     <name>Shane M. Coughlan</name>
     <country>CH</country>
+    <function project="ftf">coordinator</function>
     <email>coughlan (at) fsfeurope (dot) org</email>
     <link>/about/coughlan/coughlan.html</link>
   </person>
@@ -27,6 +28,7 @@
   <person id="greve" member="yes" chapter_de="yes" team="yes">
     <name>Georg C. F. Greve</name>
     <country>CH</country>
+    <function>president</function>
     <email>greve (at) fsfeurope (dot) org</email>
     <link>/about/greve/greve.html</link>
   </person>
@@ -53,6 +55,7 @@
   <person id="kirschner" member="yes" chapter_de="yes" team="yes">
     <name>Matthias Kirschner</name>
     <country>DE</country>
+    <function country="de">deputy</function>
     <email>kirschner (at) fsfeurope (dot) org</email>
     <link>http://www.fsfe.org/en/fellows/mk</link>
   </person>
@@ -95,6 +98,7 @@
   <person id="oberg" member="yes" chapter_de="yes" team="yes">
     <name>Jonas Öberg</name>
     <country>SE</country>
+    <function>vice-president</function>
     <email>oberg (at) fsfeurope (dot) org</email>
     <link>/about/oberg/oberg.html</link>
   </person>
@@ -124,6 +128,7 @@
   <person id="reiter" member="yes" chapter_de="yes" team="yes">
     <name>Bernhard Reiter</name>
     <country>DE</country>
+    <function country="de">coordinator</function>
     <email>reiter (at) fsfeurope (dot) org</email>
     <link>http://www.fsfe.org/en/fellows/bernhard</link>
   </person>
@@ -152,6 +157,8 @@
   <person id="west" team="yes">
     <name>Graeme West</name>
     <country>CH</country>
+    <function>intern</function>
+    <function project="ftf">deputy</function>
     <email>west (at) fsfeurope (dot) org</email>
     <link>http://www.fsfe.org/en/fellows/west</link>
   </person>

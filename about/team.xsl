@@ -28,29 +28,22 @@
               </xsl:choose>
             </xsl:element>
 
-            <!-- Country >
-            <xsl:if test="country != ''">
-              <xsl:text> - </xsl:text>
-              <xsl:apply-templates select="country/node()"/>
-            </xsl:if -->
-
-            <!-- Function >
-            <xsl:if test="function != ''">
-              <xsl:text> - </xsl:text>
-              <xsl:apply-templates select="function/node()"/>
-            </xsl:if -->
-
             <!-- E-mail -->
             <xsl:if test="email != ''">
               <xsl:text> &lt;</xsl:text>
               <xsl:element name="i">
                 <xsl:value-of select="email"/>
               </xsl:element>
-              <xsl:text>&gt;</xsl:text>
+              <xsl:text>&gt; - </xsl:text>
             </xsl:if>
 
-            <!-- Description text>
-            <xsl:apply-templates select="description/node()"/ -->
+            <!-- Functions -->
+            <xsl:for-each select="function">
+              <xsl:if test="position()!=1">
+                <xsl:text>, </xsl:text>
+              </xsl:if>
+              <xsl:value-of select="/html/set/function[@id=.]"/>
+            </xsl:for-each>
 
           </xsl:element>
         </xsl:element>

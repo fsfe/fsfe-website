@@ -9,32 +9,35 @@
       <xsl:for-each select="/html/set/person[@member='yes']">
         <xsl:sort select="@id"/>
         <xsl:element name="li">
-          <!-- Name; if link is given show as link -->
-          <xsl:element name="b">
-            <xsl:choose>
-              <xsl:when test="link != ''">
-                <xsl:element name="a">
-                  <xsl:attribute name="href">
-                    <xsl:value-of select="link"/>
-                  </xsl:attribute>
+          <xsl:element name="p">
+
+            <!-- Name; if link is given show as link -->
+            <xsl:element name="b">
+              <xsl:choose>
+                <xsl:when test="link != ''">
+                  <xsl:element name="a">
+                    <xsl:attribute name="href">
+                      <xsl:value-of select="link"/>
+                    </xsl:attribute>
+                    <xsl:value-of select="name"/>
+                  </xsl:element>
+                </xsl:when>
+                <xsl:otherwise>
                   <xsl:value-of select="name"/>
-                </xsl:element>
-              </xsl:when>
-              <xsl:otherwise>
-                <xsl:value-of select="name"/>
-              </xsl:otherwise>
-            </xsl:choose>
-          </xsl:element>
-
-          <!-- E-mail -->
-          <xsl:if test="email != ''">
-            <xsl:text> &lt;</xsl:text>
-            <xsl:element name="i">
-              <xsl:value-of select="email"/>
+                </xsl:otherwise>
+              </xsl:choose>
             </xsl:element>
-            <xsl:text>&gt;</xsl:text>
-          </xsl:if>
 
+            <!-- E-mail -->
+            <xsl:if test="email != ''">
+              <xsl:text> &lt;</xsl:text>
+              <xsl:element name="i">
+                <xsl:value-of select="email"/>
+              </xsl:element>
+              <xsl:text>&gt;</xsl:text>
+            </xsl:if>
+
+          </xsl:element>
         </xsl:element>
       </xsl:for-each>
     </xsl:element>

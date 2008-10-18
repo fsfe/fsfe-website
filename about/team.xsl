@@ -57,7 +57,7 @@
               <xsl:if test="@volunteers != ''">
                 <xsl:text> </xsl:text>
                 <xsl:variable name="volunteers"><xsl:value-of select="@volunteers"/></xsl:variable>
-                <xsl:value-of select="/html/set/volunteers[@id=$project]"/>
+                <xsl:value-of select="/html/set/volunteers[@id=$volunteers]"/>
               </xsl:if>
             </xsl:for-each>
 

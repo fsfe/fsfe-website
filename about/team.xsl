@@ -52,7 +52,12 @@
               <xsl:if test="@project != ''">
                 <xsl:text> </xsl:text>
                 <xsl:variable name="project"><xsl:value-of select="@project"/></xsl:variable>
-                <xsl:value-of select="/html/set/project[@id=$project]/title"/>
+                <xsl:element name="a">
+                  <xsl:attribute name="href">
+                    <xsl:value-of select="/html/set/project[@id=$project]/link"/>
+                  </xsl:attribute>
+                  <xsl:value-of select="/html/set/project[@id=$project]/title"/>
+                </xsl:element>
               </xsl:if>
               <xsl:if test="@volunteers != ''">
                 <xsl:text> </xsl:text>

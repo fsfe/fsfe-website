@@ -43,7 +43,7 @@
                 <xsl:text>, </xsl:text>
               </xsl:if>
               <xsl:variable name="function"><xsl:value-of select="."/></xsl:variable>
-              <xsl:value-of select="/html/set/function[@id=$function]/node()"/>
+              <xsl:apply-templates select="/html/set/function[@id=$function]/node()"/>
               <xsl:if test="@country != ''">
                 <xsl:text> </xsl:text>
                 <xsl:variable name="country"><xsl:value-of select="@country"/></xsl:variable>
@@ -62,7 +62,7 @@
               <xsl:if test="@volunteers != ''">
                 <xsl:text> </xsl:text>
                 <xsl:variable name="volunteers"><xsl:value-of select="@volunteers"/></xsl:variable>
-                <xsl:value-of select="/html/set/volunteers[@id=$volunteers]/node()"/>
+                <xsl:apply-templates select="/html/set/volunteers[@id=$volunteers]/node()"/>
               </xsl:if>
             </xsl:for-each>
 

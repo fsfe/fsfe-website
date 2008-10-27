@@ -123,7 +123,7 @@
 
           <!-- Join the Fellowship -->
           <xsl:element name="a">
-            <xsl:attribute name="href">https://www.fsfe.org/join</xsl:attribute>
+            <xsl:attribute name="href">http://fellowship.fsfe.org/about</xsl:attribute>
             <xsl:element name="img">
               <xsl:attribute name="alt">Join the Fellowship!</xsl:attribute>
               <xsl:attribute name="src">/graphics/global/Join_Fellowship.png</xsl:attribute>

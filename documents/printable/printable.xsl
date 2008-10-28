@@ -10,6 +10,7 @@
     <xsl:variable name="text-pdf-F"><xsl:value-of select="text[@id='pdf-F']"/></xsl:variable>
     <xsl:variable name="text-pdf-G"><xsl:value-of select="text[@id='pdf-G']"/></xsl:variable>
     <xsl:variable name="text-pdf-0"><xsl:value-of select="text[@id='pdf-0']"/></xsl:variable>
+    <xsl:variable name="text-moreinfo"><xsl:value-of select="text[@id='moreinfo']"/></xsl:variable>
 
     <xsl:for-each select="/html/set/printable[@type=$type]">
       <xsl:sort select="@id"/>
@@ -110,6 +111,18 @@
             </xsl:for-each>
           </xsl:element>
         </xsl:element>
+
+        <!-- Further information -->
+        <xsl:if test="$type='leaflet'">
+          <xsl:element name="li">
+            <xsl:element name="a">
+              <xsl:attribute name="href">
+                <xsl:value-of select="@moreinfo"/>
+              </xsl:attribute>
+              <xsl:value-of select="$text-moreinfo"/>
+            </xsl:element>
+          </xsl:element>
+        </xsl:if>
 
       </xsl:element>
     </xsl:for-each>

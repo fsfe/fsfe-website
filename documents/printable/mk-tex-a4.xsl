@@ -61,7 +61,7 @@
 \makeatother
 
 </xsl:text>
-    <xsl:apply-templates select="h3"/>
+    <xsl:apply-templates select="a[@id='moreinfo'"/>
     <xsl:apply-templates select="address"/>
     <xsl:text>\begin{document}</xsl:text>
     <xsl:text>\pagestyle{fancy}</xsl:text>
@@ -84,7 +84,7 @@
     <xsl:text>\end{document}</xsl:text>
   </xsl:template>
 
-  <xsl:template match="h3">
+  <xsl:template match="a[@id='moreinfo']">
     <xsl:text>\lhead{</xsl:text>
     <xsl:if test="$style='G'">
       <xsl:text>\begin{textblock*}{\paperwidth}(0pt,0pt)</xsl:text>

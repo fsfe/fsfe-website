@@ -45,13 +45,18 @@ for i in $*; do
   fi
   thetype=$(echo -n ${file} | cut --delimiter="-" --fields="1")
   langvar="lang_${lang}"
+  moreinfo=$(xsltproc get_moreinfo.xsl $i)
   if [ "${file}" != "${lastfile}" ]; then
     if [ -n "${lastfile}" ]; then
       echo "  </printable>" >> printable.en.xml
     fi
     echo -n "  <printable" >> printable.en.xml
     echo -n " type=\"${thetype}\"" >> printable.en.xml
-    echo " id=\"${dir}/${file}\">" >> printable.en.xml
+    echo -n " id=\"${dir}/${file}\"" >> printable.en.xml
+    if [ -n "${moreinfo}" ]; then
+      echo -n " moreinfo=\"${moreinfo}\"" >> printable.en.xml
+    fi
+    echo ">" >> printable.en.xml
   fi
   echo -n "    <translation" >> printable.en.xml
   echo -n " lang=\"${lang}\"" >> printable.en.xml

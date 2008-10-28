@@ -61,7 +61,7 @@
 \makeatother
 
 </xsl:text>
-    <xsl:apply-templates select="a[@id='moreinfo'"/>
+    <xsl:apply-templates select="a[@id='moreinfo']"/>
     <xsl:apply-templates select="address"/>
     <xsl:text>\begin{document}</xsl:text>
     <xsl:text>\pagestyle{fancy}</xsl:text>

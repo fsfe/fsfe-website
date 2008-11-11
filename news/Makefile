@@ -10,7 +10,7 @@ TRANSFORM = xsltproc  --stringparam link $$(echo $$FILE | sed -e 's,..,,') $(XSL
 
 # Select files
 sources := $(shell grep -l "<html newsdate" $(FILES))
-all_xmls := $(notdir $(basename $(wildcard ./generated_xml/*)))
+all_xmls := $(notdir $(basename $(wildcard ./generated_xml/*.xml)))
 
 # Create targets 
 first_step = $(subst /,___, $(subst ../,, $(sources)))

@@ -30,7 +30,7 @@ my %names = (
 # -----------------------------------------------------------------------------
 
 my %responsible = (
-  "EULEG" => "eec",
+  "EULEG" => "council",
   "FELLOWSHIP" => "kirschner",
   "FTF" => "coughlan",
   "POLICY" => "greve",
@@ -41,10 +41,10 @@ my %responsible = (
   "ES" => "machon",
   "IT" => "ohnewein",
   "SE" => "oberg",
-  "EVENTS" => "eec",
-  "GA" => "eec",
-  "INFRASTRUCT" => "eec",
-  "MERCHANDISE" => "eec",
+  "EVENTS" => "council",
+  "GA" => "council",
+  "INFRASTRUCT" => "council",
+  "MERCHANDISE" => "council",
   "OFFICE" => "mueller",
 );
 
@@ -68,7 +68,7 @@ my $reference = "$who.$date." . substr $time, -3;
 
 my $to = $responsible{$budget};
 # if ($to eq $who) {
-#   $to = "eec";
+#   $to = "council";
 # }
 
 # -----------------------------------------------------------------------------
@@ -78,8 +78,8 @@ my $to = $responsible{$budget};
 my $boundary = "NextPart$reference";
 
 my $replyto = "dus\@office.fsfeurope.org, $who\@fsfeurope.org, $to\@fsfeurope.org";
-if ($to ne "eec") {
-  $replyto .= ", eec\@fsfeurope.org";
+if ($to ne "council") {
+  $replyto .= ", council\@fsfeurope.org";
 }
 
 open(MAIL, "|/usr/lib/sendmail -t -f $to\@fsfeurope.org");

@@ -15,6 +15,12 @@
 	  <xsl:value-of select="/html/@newsdate"/>
 	</xsl:attribute>
 
+	<xsl:if test="/html/@type">
+	  <xsl:attribute name ="type">
+	    <xsl:value-of select="/html/@type"/>
+	  </xsl:attribute>
+	</xsl:if>
+
 	<xsl:element name="title">
 	  <xsl:value-of select="/html/head/title"/>
 	</xsl:element>

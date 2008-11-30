@@ -569,10 +569,10 @@ sub process {
             }
           }
           if ($href !~ /^http/) {
-            if ($href =~ /\.html$/) {
-              $href =~ s/([^\.][a-z0-9-][a-z0-9-])\.html/$1.$lang.html/;
-            } elsif ($href =~ /\.rss$/) {
-              $href =~ s/([^\.][a-z0-9-][a-z0-9-])\.rss/$1.$lang.rss/;
+            if (($href =~ /\.html$/) && ($href !~ /\.[a-z][a-z]\.html$/)) {
+             $href =~ s/\.html$/\.$lang.html/;
+            } elsif (($href =~ /\.rss$/) && ($href !~ /\.[a-z][a-z]\.rss$/)) {
+              $href =~ s/\.rss$/\.$lang.rss/;
             } else {
               if (-d $opts{i}."/$href") {
                 $href =~ s/\/?$/\/index.$lang.html/;

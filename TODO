@@ -31,10 +31,9 @@ TODO items for www.fsfeurope.org web pages (unsorted):
 * Clean up .symlinks (actually they should be replaced by .htaccess redirects)
 
 * Move files from /documents that actually belong to a project to their
-  respective /projects/* directory (for example wiwo). Don't forget to add a
-  redirect to not break old external links!
-
-* Split the documents page into several pages, based on the current sections.
+  respective /projects/* directory (for example wiwo). Or into other
+  directories like /about/, ... Don't forget to add a redirect to not break old
+  external links!
 
 * Search the whole tree for broken links, external as well as internal (is this
   scriptable?)

@@ -5,7 +5,7 @@
 
 lang_bg="Български"
 lang_ca="Català"
-lang_cs="Cesky"
+lang_cs="Česky"
 lang_da="Dansk"
 lang_de="Deutsch"
 lang_el="Ελληνικά"

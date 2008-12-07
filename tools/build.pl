@@ -174,6 +174,9 @@ open (TRANSLATIONS, '>', "$opts{o}/translations.log");
 #     <tr id="sv">Svenska</tr>
 #     ...
 #   </trlist>
+#   <localmenuset>      <!-- Local menu items for some directories -->
+#     ...
+#   </localmenuset>
 #   <menuset>           <!-- The menu items for the right hand bar -->
 #     ...
 #   </menuset>
@@ -193,6 +196,7 @@ open (TRANSLATIONS, '>', "$opts{o}/translations.log");
 #
 #  buildinfo/@original    The language code of the original document
 #  buildinfo/@filename    The filename without language or trailing .html
+#  buildinfo/@filename    The path to the file
 #  buildinfo/@language    The language that we're building into
 #  buildinfo/@outdated    Set to "yes" if the original is newer than this page
 #  document/@language     The language that this documents is in
@@ -326,6 +330,13 @@ sub process {
   $root->setAttribute("filename", "/$file");
 
   #
+  # Set the directory name attribute
+  #
+  my (undef, $current_dir, undef) = fileparse($file);
+
+  $root->setAttribute("dirname", "$current_dir");
+
+  #
   # Find all translations for this document, and create the trlist set
   # for them.
   #
@@ -337,6 +348,16 @@ sub process {
       $trlist->appendChild($tr);
   }
   $root->appendChild($trlist);
+
+  #
+  # Load the file with local menu's
+  #
+  my $localmenu = "$opts{i}/localmenuinfo.xml";
+  if (-f $localmenu) {
+      my $menudoc = $dom->createElement("localmenuset");
+      $root->appendChild($menudoc);
+      clone_document($menudoc, $localmenu);
+  }
 
   #
   # Transform it, once for every focus!

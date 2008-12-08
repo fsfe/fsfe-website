@@ -6,7 +6,7 @@ FILES := ../news/*/*.xhtml ../projects/*/*.xhtml
 # Trying to keep things readable
 ACTUAL_PREREQUISITE = ../$$(echo $* | sed -e 's,___,/,g').xhtml
 FIND_XHTML = ../$$(echo $$FILE | sed -e 's,___,/,g').xhtml
-TRANSFORM = xsltproc  --stringparam link $$(echo $$FILE | sed -e 's,..,,' | sed -e 's,.xhtml,.html,') $(XSL_STYLESHEET) $$FILE > $@
+TRANSFORM = xsltproc  --stringparam link $$(echo $$FILE | sed -e 's,\.\.,,' | sed -e 's,..\.xhtml,html,') $(XSL_STYLESHEET) $$FILE > $@
 
 # Select files
 sources := $(shell grep -l "<html newsdate" $(FILES))

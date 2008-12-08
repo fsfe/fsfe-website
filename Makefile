@@ -1,10 +1,41 @@
-subdirs := $(shell find */* -name "Makefile" | xargs --max-args=1 dirname)
+.PHONY: all
 
-include Make_local_menus
+all: subdirs localmenus
 
-.PHONY: subdirs $(subdirs)
+# -----------------------------------------------------------------------------
+# Dive into subdirectories
+# -----------------------------------------------------------------------------
 
-subdirs: $(subdirs)
+SUBDIRS := $(shell find */* -name "Makefile" | xargs --max-args=1 dirname)
 
-$(subdirs):
+.PHONY: subdirs $(SUBDIRS)
+
+subdirs: $(SUBDIRS)
+
+$(SUBDIRS):
 	$(MAKE) -C $@
+
+# -----------------------------------------------------------------------------
+# Handle local menus
+# -----------------------------------------------------------------------------
+
+HELPERFILE := menuhelper
+SELECT := '<localmenu.*</localmenu>'
+STYLESHEET := ./tools/buildmenu.xsl 
+
+FIND := ./\(.*/\)\?\(\w*\)\.\([a-z][a-z]\)\.xhtml:[ \t]*\(.*\)
+REPLACE := <menuitem language="\3"><dir>\1</dir><link>\2.html</link>\4</menuitem>
+
+sources := $(shell grep -l -R --include='*.xhtml' $(SELECT) . )
+
+.PHONY: localmenus
+
+localmenus: localmenuinfo.xml
+
+localmenuinfo.xml: $(sources)
+	rm -f $(HELPERFILE)
+	echo \<localmenuset\> > $(HELPERFILE)
+	grep -R --include='*.xhtml' $(SELECT) .| sed -e 's,$(FIND),$(REPLACE),' >> $(HELPERFILE)
+	echo \</localmenuset\> >> $(HELPERFILE)
+	xsltproc -o $@ $(STYLESHEET) $(HELPERFILE) 
+	rm -f $(HELPERFILE)

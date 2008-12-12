@@ -15,10 +15,6 @@
 <? include ("status-finished.txt") ?>
     </pre>
 
-    <h2>Previously finished builds</h2>
-
-    <pre>
-<? include ("status-log.txt") ?>
-    </pre>
+    <a href="./status-log.txt">Previously finished builds</a>
   </body>
 </html>

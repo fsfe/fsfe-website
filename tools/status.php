@@ -14,5 +14,11 @@
     <pre>
 <? include ("status-finished.txt") ?>
     </pre>
+
+    <h2>Previously finished builds</h2>
+
+    <pre>
+<? include ("status-log.txt") ?>
+    </pre>
   </body>
 </html>

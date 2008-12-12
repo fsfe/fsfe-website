@@ -12,6 +12,7 @@ DEST=/home/www/html
 TMP=/home/www/tmp.$$
 STATUS=/var/www/web
 
+
 # If build is already running, don't run it again.
 if ps -C build.sh -o pid= | grep -q -v "$$"; then
   exit
@@ -38,6 +39,8 @@ echo "$(date)  Updating source files from CVS."
 if test -z "$(cvs update -Pd 2>/dev/null)" \
     -a "$(date -r ${STATUS}/last-run +%F)" == "$(date +%F)"; then
   echo "$(date)  No changes to CVS."
+  # In this case we only append to the cumulative status-log.txt file, we don't touch status-finished.txt
+  cat ${STATUS}/status.txt >> ${STATUS}/status-log.txt
   exit
 fi
 
@@ -69,6 +72,7 @@ fi
 if test $? -ne 0; then
    echo "$(date)  Build not complete. Aborting."
    cp ${STATUS}/status.txt ${STATUS}/status-finished.txt
+   cat ${STATUS}/status-finished.txt >> ${STATUS}/status-log.txt
    exit 1
 fi
 

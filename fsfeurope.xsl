@@ -29,6 +29,12 @@
       <link rel="stylesheet" media="print" href="/print.css" type="text/css"/>
       <link rel="icon" href="/graphics/fsfeurope.ico" type="image/x-icon"/>
       <link rel="shortcut icon" href="/graphics/fsfeurope.ico" type="image/x-icon"/>
+      <xsl:element name="link">
+	<xsl:attribute name="rel">alternate</xsl:attribute>
+	<xsl:attribute name="title">FSFE <xsl:value-of select="/buildinfo/textset/text[@id='menu1/news']"/> RSS</xsl:attribute>
+	<xsl:attribute name="href">/news/news.<xsl:value-of select="/buildinfo/@language"/>.rss</xsl:attribute>
+	<xsl:attribute name="type">application/rss+xml</xsl:attribute>
+      </xsl:element>
       <xsl:apply-templates select="@*|node()"/>
     </xsl:copy>
   </xsl:template>

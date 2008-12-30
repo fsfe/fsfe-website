@@ -18,11 +18,10 @@ my %names = (
   "oberg" => "Jonas Öberg",
   "ohnewein" => "Patrick Ohnewein",
   "oriordan" => "Ciarán O'Riordan",
-  "radulovic" => "Emil Radulovic",
   "reiter" => "Bernhard Reiter",
   "sandklef" => "Henrik Sandklef",
-  "irina" => "Irina Dzhambazova",
   "morant" => "Benjamin Morant",
+  "west" => "Graeme West",
 );
 
 # -----------------------------------------------------------------------------
@@ -30,22 +29,22 @@ my %names = (
 # -----------------------------------------------------------------------------
 
 my %responsible = (
-  "EULEG" => "council",
-  "FELLOWSHIP" => "kirschner",
-  "FTF" => "coughlan",
-  "POLICY" => "greve",
-  "SELF" => "oberg",
-  "STACS" => "oberg",
-  "AT" => "mueller",
-  "DE" => "reiter",
-  "ES" => "machon",
-  "IT" => "ohnewein",
-  "SE" => "oberg",
-  "EVENTS" => "council",
-  "GA" => "council",
-  "INFRASTRUCT" => "council",
+  "ADMIN-DUS" => "council",
+  "ADMIN-TECH" => "council",
+  "ADMIN-GA" => "council",
+  "PA-MATERIAL" => "council",
+  "PA-TRAVEL" => "council",
+  "PA-GNUVOX" => "ohnewein",
+  "FELLOWSHIP-MATERIAL" => "kirschner",
+  "FELLOWSHIP-CONF" => "kirschner",
+  "FELLOWSHIP-LOCAL" => "kirschner",
+  "FTF-ZRH" => "coughlan",
+  "FTF-TRAVEL" => "coughlan",
+  "FTF-CONF" => "coughlan",
+  "FTF-TRANS" => "coughlan",
+  "FTF-ECONOMIC" => "coughlan",
+  "POLICY-TRAVEL" => "greve",
   "MERCHANDISE" => "council",
-  "OFFICE" => "mueller",
 );
 
 # -----------------------------------------------------------------------------

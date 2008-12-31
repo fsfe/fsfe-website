@@ -17,6 +17,13 @@
         <xsl:value-of select="/html/set/country[@id=$country]" />
       </xsl:element>
 
+      <!-- Address -->
+      <xsl:if test="address != ''">
+        <xsl:element name="address">
+          <xsl:value-of select="address" />
+        </xsl:element>
+      </xsl:if>
+
       <!-- Email -->
       <xsl:if test="email != ''">
         <xsl:element name="p">

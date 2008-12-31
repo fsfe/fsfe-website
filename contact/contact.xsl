@@ -19,9 +19,7 @@
 
       <!-- Address -->
       <xsl:if test="address != ''">
-        <xsl:element name="address">
-          <xsl:value-of select="address" />
-        </xsl:element>
+      <xsl:apply-templates select="address"/>
       </xsl:if>
 
       <!-- Email -->

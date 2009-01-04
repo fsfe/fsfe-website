@@ -129,7 +129,10 @@
 
           <!-- Join the Fellowship -->
           <xsl:element name="a">
+            <xsl:attribute name="href">/news/2009/nyr.html</xsl:attribute>
+	    <!--- This is the original value, restore on 5.2.2009
             <xsl:attribute name="href">http://fellowship.fsfe.org/about</xsl:attribute>
+	    --->
             <xsl:element name="img">
               <xsl:attribute name="alt">Join the Fellowship!</xsl:attribute>
               <xsl:attribute name="src">/news/2009/nyr/nyr2009_button.png</xsl:attribute>

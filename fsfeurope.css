@@ -211,6 +211,19 @@ address {
   text-align: center;
 }
 
+.toolbox {
+	background-color: rgb(244,248,250);
+	float: right;
+	font-size: 85%;
+	margin-top: .5em;
+	padding-left: 1em;
+	width: 12em;
+}
+
+.toolbox .inner {
+	padding: 1em;
+}
+
 /* ------------------------------------------------------------------------- */
 /* Footer                                                                    */
 /* ------------------------------------------------------------------------- */

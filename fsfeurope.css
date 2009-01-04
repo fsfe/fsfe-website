@@ -220,6 +220,30 @@ address {
 	width: 12em;
 }
 
+p.terminal,
+pre.terminal,
+p.file,
+pre.file {
+	font-family: monospace;
+	font-size: 85%;
+	padding: .5em 1em;
+}
+
+p.terminal,
+pre.terminal {
+	background-color: rgb(50,50,50);
+	border-left: 10px solid rgb(97,97,97);
+	color: white;
+}
+
+p.file,
+pre.file {
+	background-color: rgb(244,248,250);
+	border-left: 10px solid rgb(141,172,190);
+	color: rgb(50,50,50);
+}
+
+
 /* ------------------------------------------------------------------------- */
 /* Footer                                                                    */
 /* ------------------------------------------------------------------------- */

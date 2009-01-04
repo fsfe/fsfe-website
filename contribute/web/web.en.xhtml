@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
-
 <html>
   <head>
     <title>
       FSFE - Contribute - Information for Webmasters
     </title>
   </head>
-
   <body>
+
     <h1>Information for Webmasters</h1>
+
 
     <h2>Introduction</h2>
 
@@ -25,16 +25,16 @@
 
     <ul>
       <li>
-        <a href="http://savannah.gnu.org" target="_blank">Savannah</a> -- for
-        CVS (see below) services and access permission management
+        <a href="http://savannah.gnu.org" target="_blank">Savannah</a> – for
+          CVS (see below) services and access permission management
       </li>
       <li>
-        <a href="http://www.w3.org/MarkUp/" target="_blank">XHTML</a> -- from
+        <a href="http://www.w3.org/MarkUp/" target="_blank">XHTML</a> – from
         which the static pages are generated every 5 minutes
       </li>
       <li>
         <a href="http://www.cvshome.org" target="_blank">Concurrent Version
-          System (CVS)</a> -- for co-ordination and synchronisation
+          System (CVS)</a> – for co-ordination and synchronisation
       </li>
     </ul>
 
@@ -45,162 +45,191 @@
 
     <ul>
       <li>
-        <a href="http://www.perl.org" target="_blank">Perl</a> -- for the
-        maintenance and page creation scripts
+        <a href="http://www.perl.org" target="_blank">Perl</a> – for the
+	      maintenance and page creation scripts
       </li>
       <li>
-        <a href="http://www.apache.org" target="_blank">Apache</a> -- as the
-        web server
+        <a href="http://www.apache.org" target="_blank">Apache</a> – as the
+	      web server
       </li>
     </ul>
+
 
     <h2>Understanding how the web pages are built</h2>
 
     <p>
-      The web pages of www.fsfeurope.org are maintaned as a set of XML files.
-      The web server generates the HTML pages from these XML files
-      automatically every five minutes. Consequently, all editing of the pages is
-      done in the XML files, and the HTML is never edited directly.
+      The web pages of <var>www.fsfeurope.org</var> are maintaned as a set of
+      XML files.  The web server generates the HTML pages from these XML files
+      automatically every five minutes.  Consequently, all editing of the pages
+      is done in the XML files, and the HTML is never edited directly.
     </p>
 
     <p>
       Every page on www.fsfeurope.org is named
-      "<i>pagename</i>.<i>language</i>.html" (<i>language</i> being the
-      2-letter iso-639 code of the language, like "en" for English or "de" for
-      German). The source files are named
-      "<i>pagename</i>.<i>language</i>.xhtml".<br />
-      Some pages have a dynamic part: apart from the fixed texts taken from the
-      .xhtml file, they include information from one or several .xml files.
-      Whenever such a page is built, the build system takes the translated .xml
-      files where available, and falls back to the English version of those
-      .xml files that have not yet been translated. This way, such pages
-      can end up with parts of the text being translated and other parts still
-      showing in English. Examples of such pages include the
-      <a href="/index.html">start page</a>, the
-      <a href="/news/news.html">news page</a>, and the
-      <a href="/events/events.html">events page</a>.
+      <var><em>>pagename</em>.<em>language</em>.html</var> (<em>language</em>
+      being the two-letter iso-639 code of the language, like "en" for English
+      or "de" for German).  The source files are named
+      <var><em>pagename</em>.<em>language</em>.xhtml</var>.
     </p>
-
-    <h2>Registering at savannah</h2>
 
     <p>
-      The source files for the web pages are stored on
-      <a href="http://savannah.gnu.org/">Savannah</a>, a server hosted by the
-      Free Software Foundation, our sister organisation in North America. To
-      get write access to these files, you can create an account on that
-      server.
+      Some pages have a dynamic part: apart from the fixed texts taken from the
+      XHTML file, they include information from one or several XML files.
+      Whenever such a page is built, the build system takes the translated XML
+      files where available, and falls back to the English version of those XML
+      files that have not yet been translated.  This way, such pages can end up
+      with parts of the text being translated and other parts still showing in
+      English.  Examples of such pages include the <a href="/index.html">start
+      page</a>, the <a href="/news/news.html">news page</a>, and the <a
+      href="/events/events.html">events page</a>.
     </p>
+
+
+    <h2>Registering at Savannah</h2>
+
+    <p>
+      The source files for the web pages are stored on <a
+      href="http://savannah.gnu.org/">Savannah</a>, a server hosted by the Free
+      Software Foundation, our sister organisation in North America.  To get
+      write access to these files, you need to create an account on that server
+      and request write permission from the FSFE project.
+    </p>
+
 
     <h3>Registering a new account</h3>
 
     <p>
-      Follow
-      <a href="https://savannah.gnu.org/account/register.php">this link</a> to
-      register a new account. Choose a login name, a password, fill in your
-      real name and your e-mail address and click on the "Submit" button.
+      First you must <a
+      href="https://savannah.gnu.org/account/register.php">register a new
+      account</a>.  Choose a login name, a password, fille in your real name
+      and your e-mail address, and click the <strong>Submit</strong> button.
     </p>
-    
+
     <p>
-      Now you will receive a email from savannah. In order to complete your
-      registration, visit the URL mentionend there. Accounts not confirmed
+      Now you will receive an e-mail from Savannah.  In order to complete your
+      registration, visit the URL mentionend there.  Accounts not confirmed
       after two days are deleted from the database.
     </p>
     
     <p>
-      After confirming your account, you can log in at
-      <a href="https://savannah.gnu.org/">https://savannah.gnu.org</a> with
-      your login name and your password.
+      After confirming your account, you can log in at <a
+      href="https://savannah.gnu.org/">https://savannah.gnu.org/</a> with your
+      login name and your password.
     </p>
+
 
     <h3>Creating an SSH key</h3>
 
     <p>
       While you can use the password to log into the web portal on Savannah,
-      you have to register an SSH key to get CVS access. This has to be done on
-      every machine from where you will access the CVS repository.
+      you must have an SSH key to gain CVS write access.  This has to be done
+      on every machine from where you will access the CVS repository.
     </p>
     
     <p>
-      To create and register an SSH key, please follow the
-      <a href="https://savannah.gnu.org/faq/?group_id=5802&amp;question=User_Account_-_How_do_I_configure_my_SSH_access.txt">instructions
-        given in the Savannah FAQ</a>.
+      To create and register an SSH key, please follow the <a
+      href="https://savannah.gnu.org/faq/?group_id=5802&amp;question=User_Account_-_How_do_I_configure_my_SSH_access.txt">instructions
+      given in the Savannah FAQ</a>.
     </p>
+
 
     <h3>Joining the FSFE project</h3>
 
     <p>
       There are a lot of projects hosted on Savannah, and CVS access is granted
-      on a per-project basis. To get access to the FSFE web page source files,
+      on a per-project basis.  To get access to the FSFE web page source files,
       you have to become a member of the FSFE project.
     </p>
 
     <p>
-      Choose "Group Membership" in the top tabs. Now you can enter "FSFE" into
-      the search box of "Request for Inclusion", activate the FSF Europe check
-      box and enter a comment.
+      Choose <strong>Group Membership</strong> in the top tabs. Now you can
+      enter "FSFE" into the search box of <strong>Request for
+      Inclusion</strong>, activate the FSFE checkbox and enter a comment.
     </p>
 
     <p>
       The administrators of the FSFE project will then get a mail with your
       request and the comment you gave and can approve your membership in the
-      project. After that you should see "FSF Europe" in the "Groups I'm
-      Contributor of" after you login at savannah.
+      project.  After that you should see "Free Software Foundation Europe" in
+      the <strong>Groups I'm Contributor of</strong> after you login at
+      Savannah.
     </p>
+
 
     <h3>Checking out the repository initially</h3>
 
     <p>
-      First you should make sure that your ~/.bashrc file contains a line
-      saying<br />
-      <code>export CVS_RSH=ssh</code><br />
-      then create a directory for the repository and execute<br />
-      <code>$ cvs -z3 -d <i>username</i>@cvs.savannah.gnu.org:/web/fsfe co
-        .</code><br />
-      in that directory. Now you are asked for your SSH passphrase. Enter it
-      and confirm. If everything is alright, now the website should be checked
+      First you should make sure that your <var>~/.bashrc</var> file contains a line
+      saying
+    </p>
+
+    <p class="file">>export CVS_RSH=ssh</p>
+
+    <p>
+      then create a directory for the repository and execute
+    </p>
+
+    <p class="terminal">$ cvs -z3 -d <em>username</em>@cvs.savannah.gnu.org:/web/fsfe co .</p>
+    
+    <p>
+      in that directory.  Now you are asked for your SSH passphrase.  Enter it
+      and confirm.  If everything is alright, now the website should be checked
       out.
     </p>
+
 
     <h2>Working with the repository</h2>
 
     <p>
       After you checked out the repository the first time, you should
-      execute<br />
-      <code>$ cvs update -d</code><br />
+      execute
+    </p>
+
+    <p class="terminal">$ cvs update -d</p>
+
+    <p>
       in the fsfe directory every time before you work on a specific file.
     </p>
     
     <p>
-      If you want to add new files to the repository you have to execute<br />
-      <code>$ cvs add <i>filename</i></code><br />
+      If you want to add new files or directories to the repository you have to
+      execute
     </p>
+
+    <p class="terminal">$ cvs add <em>filename</em></p>
 
     <p>
       To post your changes to the server, no matter be it a new file or a
-      modification in an existing file, execute<br />
-      <code>$ cvs commit <i>filename</i></code><br />
-      and an editor will open to allow for some description of your changes.
+      modification in an existing file, execute
+    </p>
+
+    <p class="terminal">$ cvs commit <em>filename</em></p>
+
+    <p>
+      and your default editor will open to allow for some description of your
+      changes.
     </p>
 
     <p>
-      You can download a detailed manual for CVS at the
-      <a href="http://www.nongnu.org/cvs/">CVS home page</a>.
+      You can download a detailed manual for CVS at the <a
+      href="http://www.nongnu.org/cvs/">CVS home page</a>.
     </p>
 
     <p>
       If you want to keep track with all commits that are done to the web page
-      sources, you can subscribe to the
-      <a href="http://mail.fsfeurope.org/mailman/listinfo/web-cvs-notify">CVS
-        notification mailing list</a> and you will get a mail for every change
+      sources, you can subscribe to the <a
+      href="http://mail.fsfeurope.org/mailman/listinfo/web-cvs-notify">CVS
+      notification mailing list</a> and you will get a mail for every change
       posted to the source tree.
     </p>
+
 
     <h2>Responsible handling of write access</h2>
 
     <p>
-      If you have write access to the web pages, please subscribe to the
-      <a href="http://mail.fsfeurope.org/mailman/listinfo/web">Webmasters
-        mailing list</a>.
+      If you have write access to the web pages, please subscribe to the <a
+      href="http://mail.fsfeurope.org/mailman/listinfo/web">Webmasters mailing
+      list</a>.
     </p>
 
     <p>
@@ -213,107 +242,133 @@
     <ul>
       <li>
         <p>
-          The FSFE holds responsible for the content of the web pages. Please
-          do not commit modifications that change the meaning of the text
-          without approval from a
-          <a href="/about/members.html">core team member of the FSFE</a>.
-          (This is not necessary for translations of already existing content)
+          The FSFE is held responsible for the content of the web pages.
+          Please do not commit modifications that change the meaning of the
+          text without approval from a <a href="/about/members.html">core team
+          member of the FSFE</a>.  (This is not necessary for translations of
+          already existing content.)
         </p>
       </li>
 
       <li>
+
         <p>
           If you are posting translations, and there is any chance that others
-          can proofread it, use that chance. You can use the
-          <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">Translators
-          mailing list</a> to ask for proofreading. Whether you are translating
-          files or proofreading them, you are encouraged to spell-check files
-          using some automated tools, such as GNU aspell, ispell, or your
-          favourite spell-checker. For example, to use
-          <a href="http://aspell.net/">GNU aspell</a> on a Debian GNU/Linux
-          system, just install the packages <code>aspell</code> and
-          <code>aspell-XX</code> (where "XX" is your language code), then run
-          the command
-          <pre>aspell -H -d language -c file.xhtml</pre>
-          (where "language" is the name of the dictionary for your language;
-          the <code>-d</code> option can be omitted if your UNIX locale is the
-          same as the language of the dictionary).
+          can proofread it, use that chance.  You can use the <a
+          href="http://mail.fsfeurope.org/mailman/listinfo/translators">Translators
+          mailing list</a> to ask for proofreading.  Whether you are
+          translating files or proofreading them, you are encouraged to
+          spell-check files using some automated tools, such as GNU aspell,
+          ispell, or your favourite spell-checker.  For example, to use <a
+          href="http://aspell.net/">GNU aspell</a> on a Debian GNU/Linux
+          system, just install the packages <em>aspell</em> and
+          <em>aspell-<strong>XX</strong></em>> (where "XX" is your language
+          code), then run the command
         </p>
+
+        <p class="terminal">
+          aspell -H -d <em>language</em> -c file.xhtml
+        </p>
+
+        <p>
+          where "language" is the name of the dictionary for your language; the
+          <var>-d</var> option can be omitted if your UNIX locale is the same
+          as the language of the dictionary).
+        </p>
+
       </li>
 
       <li>
+
         <p>
-          Make sure that all files are proper XML. There is a script named
-          <code>tools/validate.pl</code> that helps finding errors in the
-          markup. Improper XML breaks the automatic build process of the web
-          pages and blocks updates for the complete FSFE web site. If you
-          suspect the build process to be broken, you can view the log of the
-          last build run <a href="http://status.fsfeurope.org/web/">here</a>.
+          Make sure that all files are proper XML.  There is a script named
+          <var>/fsfe/tools/validate.pl</var> that helps finding errors in the
+          markup.  Improper XML breaks the automatic build process of the web
+          pages and blocks updates for the complete FSFE website.  If you
+          suspect the build process to broken, you can <a
+          href="http://status.fsfeurope.org/">view the log of the last build
+          run</a> on our <a href="http://status.fsfeurope.org/">status
+          pages</a>.
         </p>
 
         <p>
-          The <code>validate.pl</code> script requires the
-          <code>XML::LibXML</code> Perl module; if this is not installed on
-          your system, you can validate files using your favourite XML
-          validator. For example you can use the command line
-          <code>xmllint</code> utility from the
-          <a href="http://xmlsoft.org/">libxml2 project</a> (if you are using
-          the Debian GNU/Linux distribution, install the
-          <code>libxml2-utils</code> package); run the command
-          <pre>xmllint --noout file.xhtml</pre>
-          and watch for possible error messages.
+          The <var>validate.pl</var> script requires the <em>XML::LibXML</em>
+          Perl module; if this is not installed on your system, you can
+          validate files using your favourite XML validator.  For example you
+          can use the command line <em>xmllint</em> utility from the <a
+          href="http://xmlsoft.org/"><em>libxml2</em> project</a>.
         </p>
+       
+        <p>
+          If you are using the Debian GNU/Linux distribution, install the
+          <em>libxml2-utils</em> package; run the command
+        </p>
+
+        <p class="terminal">xmllint --noout <em>file</em>.xhtml</p>
+
+        <p>
+          where <em>file</em> specifies the file you want checked, and watch
+          for possible error messages.
+        </p>
+
       </li>
       
       <li>
+
         <p>
           Make sure the encoding of the file is consistent with the content of
           the "encoding" attribute declared in the first line of the file. For
           example, if your file is encoded as "iso-8859-1" (also known as
           "latin-1" encoding), the first line of the file should read
-          <pre>&lt;?xml version="1.0" encoding="iso-8859-1" ?&gt;</pre>
-          Another valid encoding is the unicode, or "UTF-8" encoding. If you
-          want to change the encoding of a file, you can use the standard
-          <code>iconv</code> utility, as in the following example (which
-          converts a file from the "latin1" to the "utf-8" encoding):
-          <pre>iconv -f LATIN1 -t UTF8 inputfile &gt; outputfile</pre>
         </p>
+
+        <p class="file">&lt;?xml version="1.0" encoding="iso-8859-1" ?&gt;</p>
+
+        <p>
+          Another valid encoding is the unicode, or "UTF-8" encoding.  If you
+          want to change the encoding of a file, you can use the standard
+          <em>iconv</em> utility, as in the following example (which converts a
+          file from the "latin1" to the "utf-8" encoding):
+        </p>
+
+        <p class="terminal">iconv -f LATIN1 -t UTF8 <em>inputfile</em> &gt; <em>outputfile</em></p>
+
       </li>
     </ul>
 
     <p>
       Please coordinate with other people who also have CVS commit access to
       make sure that translations and fixes contributed by people without
-      commit access are committed properly after they have been proofread. Of
+      commit access are committed properly after they have been proofread.  Of
       course, please check these files before you commit them like you check
       your own files.
     </p>
 
+
     <h2>Further information</h2>
 
     <p>
-      Given that the FSFE web page has a European/global level and
-      user-chosen local levels that supplement them for information that is
+      Given that the FSFE webpage has a European/global level and user-chosen
+      local levels that supplement them for information that is
       country-specific, the layout has a certain complexity that is hidden
       entirely from the user of the page.
     </p>
 
     <p>
       Unless you only wish to translate pages (see below), please make sure you
-      have taken a look at the
-      <a href="Webpage-Structure.txt" target="_blank">structural
-        reference</a>.
+      have taken a look at the <a href="Webpage-Structure.txt"
+      target="_blank">structural reference</a>.
     </p>
 
     <p>
-      Also, there is a
-      <a href="http://www.texinfo.org" target="_blank">Texinfo</a>
-      documentation file
-      "<a href="/README.texi" target="_blank">Webmastering FSF Europe</a>" by
-      <a href="mailto:oberg@fsfeurope.org">Jonas Öberg</a>, who implemented
-      the build system for the page. Please read it to know more about how the
-      web pages works.
+      Also, there is a <a href="http://www.texinfo.org"
+      target="_blank">Texinfo</a> documentation file <em><a href="/README.texi"
+      target="_blank">Webmastering FSF Europe</a></em> by <a
+      href="mailto:oberg@fsfeurope.org">Jonas Öberg</a>, who implemented the
+      build system for the page.  Please read it to know more about how the web
+      pages works.
     </p>
+
   </body>
 
   <timestamp>$Date$ $Author$</timestamp>

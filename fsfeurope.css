@@ -215,13 +215,9 @@ address {
 	background-color: rgb(244,248,250);
 	float: right;
 	font-size: 85%;
-	margin-top: .5em;
-	padding-left: 1em;
-	width: 12em;
-}
-
-.toolbox .inner {
+	margin: .5em 0 0 1em;
 	padding: 1em;
+	width: 12em;
 }
 
 /* ------------------------------------------------------------------------- */

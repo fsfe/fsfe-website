@@ -9,11 +9,11 @@
 }
 
 #frame {
-	width: 594px;
-	height: 1045px;
 	background-image: url("bk.png");
 	background-repeat: no-repeat;
 	font-size: 85%;
+	height: 1045px;
+	width: 594px;
 }
 
 #story-column {
@@ -31,8 +31,8 @@ h2 {
 }
 
 .box {
-	margin-top: 10px;
 	height: 95px;
+	margin-top: 10px;
 	width: 100%;
 }
 
@@ -51,7 +51,7 @@ h2 {
 }
 
 .g3 {
-	width: 360px;
+	width: 390px;
 	margin-left: 30px;
 }
 
@@ -67,6 +67,10 @@ h2 {
 .g4 img {
 	margin: 25px 0 0 215px;
 	position: absolute;
+}
+
+.g5 {
+	width: 400px;
 }
 
 .g5 img {
@@ -90,8 +94,8 @@ h2 {
 }
 
 .g7 {
-	margin: -70px 0 0 -100px;
 	height: 248px;
+	margin: -70px 0 0 -100px;
 	width: 580px;
 }
 
@@ -99,9 +103,10 @@ h2 {
 	background-image: url("7b.png");
 	background-position: 80px 55px;
 	background-repeat: no-repeat;
-	height: 100px;
 	font-size: 130%;
+	height: 100px;
 	padding: 150px 0 0 220px;
+	width: 320px;
 }
 
 #g7 img {
@@ -114,9 +119,9 @@ h2 {
 }
 
 #join {
-	width: 53%;
 	float: left;
 	padding: 30px 10px 30px 30px;
+	width: 53%;
 }
 
 #logos {

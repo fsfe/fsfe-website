@@ -237,17 +237,25 @@
             <!-- Insert the appropriate translation notice -->
             <xsl:if test="/buildinfo/document/@language!=/buildinfo/@original">
               <xsl:element name="br"/>
-              <xsl:value-of select="/buildinfo/textset/text[@id='translator1']"/>
-              <xsl:value-of select="/buildinfo/document/translator"/>
-              <xsl:value-of select="/buildinfo/textset/text[@id='translator2']"/>
+              <xsl:choose>
+                <xsl:when test="/buildinfo/document/translator">
+                  <xsl:value-of select="/buildinfo/textset/text[@id='translator1a']"/>
+                  <xsl:value-of select="/buildinfo/document/translator"/>
+                  <xsl:value-of select="/buildinfo/textset/text[@id='translator1b']"/>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:value-of select="/buildinfo/textset/text[@id='translator2']"/>
+                </xsl:otherwise>
+              </xsl:choose>
+              <xsl:value-of select="/buildinfo/textset/text[@id='translator3a']"/>
               <xsl:element name="a">
                 <xsl:attribute name="href">
                   <xsl:value-of select="/buildinfo/@filename"/>
                   <xsl:text>.en.html</xsl:text>
                 </xsl:attribute>
-                <xsl:value-of select="/buildinfo/textset/text[@id='translator3']"/>
+                <xsl:value-of select="/buildinfo/textset/text[@id='translator3b']"/>
               </xsl:element>
-              <xsl:value-of select="/buildinfo/textset/text[@id='translator4']"/>
+              <xsl:value-of select="/buildinfo/textset/text[@id='translator3c']"/>
             </xsl:if>
 
             <!-- Permission note -->

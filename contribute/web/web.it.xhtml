@@ -23,16 +23,16 @@
     
     <ul>
       <li>
-        <a href="http://savannah.gnu.org" target="_blank">Savannah</a> --
+        <a href="http://savannah.gnu.org" target="_blank">Savannah</a> –
         per i servizi CVS (cfr oltre) e la gestione dei permessi di accesso
       </li>
       <li>
-        <a href="http://www.w3.org/MarkUp/" target="_blank">XHTML</a> --
+        <a href="http://www.w3.org/MarkUp/" target="_blank">XHTML</a> –
         il formato sorgente da cui ogni 5 minuti vengono generate le pagine statiche del sito
       </li>
       <li>
         <a href="http://www.cvshome.org" target="_blank">Concurrent
-        Version System (CVS)</a> -- per il coordinamento e la sincronizzazione
+        Version System (CVS)</a> – per il coordinamento e la sincronizzazione
       </li>
     </ul>
 
@@ -43,11 +43,11 @@
     
     <ul>
       <li>
-        <a href="http://www.perl.org" target="_blank">Perl</a> -- per la
+        <a href="http://www.perl.org" target="_blank">Perl</a> – per la
         manutenzione e gli script di creazione delle pagine
       </li>
       <li>
-        <a href="http://www.apache.org" target="_blank">Apache</a> -- il
+        <a href="http://www.apache.org" target="_blank">Apache</a> – il
         server web
       </li>
     </ul>
@@ -60,14 +60,17 @@
       di file XML. Di conseguenza, non serve modificare le pagine HTML, ma tutto
       il lavoro di aggiornamento è fatto sui file XML.
     </p>
+    
     <p>
       I nomi delle pagine seguono la sintassi: "<i>nome</i>.<i>lingua</i>.html"
       (dove <i>lingua</i> è il codice di due lettere iso-639 della lingua, ad esempio
       "en" per l'inglese, o "de" per il tedesco). I file sorgenti sono chiamati
-      "<i>nome</i>.<i>lingua</i>.xhtml".<br/>
-      Alcune pagine contengono una parte generata in modo dinamico: oltre a una
-      parte fissa proveniente dal file .xhtml, includono informazioni
-      provenienti da uno o più file .xml. Quando non tutti i file .xml sono
+      "<i>nome</i>.<i>lingua</i>.xhtml".
+      </p>
+      
+      <p>Alcune pagine contengono una parte generata in modo dinamico: oltre a una
+      parte fissa proveniente dal file XHTML, includono informazioni
+      provenienti da uno o più file XML. Quando non tutti i file XML sono
       tradotti, il sistema di generazione delle pagine utilizza la versione
       originale inglese, quindi è possibile che la pagina finale contenga delle
       parti tradotte e delle parti in inglese. Questo può succedere ad esempio
@@ -75,6 +78,7 @@
       <a href="/news/news.html">notizie</a> e quella degli
       <a href="/events/events.html">eventi</a>.
     </p>
+
 
     <h2>Registrarsi su savannah</h2>
 
@@ -129,28 +133,33 @@
     </p>
 
     <p>
-      Basta scegliere "Partecipazione ai gruppi" nel menù in alto nella propria
-      pagina personale, inserire "FSFE" nel campo "Richieste di inclusione" e
+      Basta scegliere <strong>Partecipazione ai gruppi</strong> nel menù in alto nella propria
+      pagina personale, inserire "FSFE" nel campo <strong>Richieste di inclusione</strong> e
       un commento opzionale per motivare la propria richiesta.
     </p>
 
     <p>
       Gli amministratori del progetto FSFE riceveranno una mail con la richiesta
       di inclusione e potranno così approvarla. Quando la richiesta sarà
-      approvata il gruppo "FSF Europe" comparirà nell'elenco dei "Gruppi ai
-      quali partecipo" sulla propria pagina personale di savannah.
+      approvata il gruppo "Free Software Foundation Europe" comparirà nell'elenco dei <strong>Gruppi ai
+      quali partecipo</strong> sulla propria pagina personale di savannah.
     </p>
     
     <h3>Eseguire il primo check out dell'archivio CVS</h3>
 
     <p>
-      Per prima cosa occorre assicurarsi che il proprio file ~/.bashrc contenga una
-      riga<br/>
-      <code>export CVS_RSH=ssh</code><br/>
-      quindi occorre creare una directory in cui verrà scaricato l'archivio,
-      entrarvi ed eseguire il comando<br/>
-      <code>$ cvs -z3 -d <i>nomeutente</i>@cvs.savannah.gnu.org:/web/fsfe co .</code><br/>
-      Dopo aver inserito la passphrase della propria chiave SSH, inizierà il
+      Per prima cosa occorre assicurarsi che il proprio file <var>~/.bashrc</var> contenga una
+      riga</p>
+
+      <p class="file">export CVS_RSH=ssh</p>
+
+      <p>quindi occorre creare una directory in cui verrà scaricato l'archivio,
+      entrarvi ed eseguire il comando
+      </p>
+
+      <p class="terminal">$ cvs -z3 -d <em>nomeutente</em>@cvs.savannah.gnu.org:/web/fsfe co .</p>
+
+      <p>Dopo aver inserito la passphrase della propria chiave SSH, inizierà il
       check out dell'archivio.
     </p>
 
@@ -158,22 +167,28 @@
 
     <p>
       Una volta effettuato il check out dell'archivio, ogni volta che si intende
-      lavorare sulla propria copia locale occorre per prima cosa eseguire<br/>
-      <code>$ cvs update -d</code><br/>
-      nella directory che contiene i file che si intende modificare. In questo
+      lavorare sulla propria copia locale occorre per prima cosa eseguire
+    </p>
+
+      <p class="terminal">$ cvs update -d</p>
+
+      <p>nella directory che contiene i file che si intende modificare. In questo
       modo i file saranno aggiornati con la copia centrale dell'archivio.
     </p>
     
     <p>
-      Per aggiungere nuovi file all'archivio, occorre eseguire<br/>
-      <code>$ cvs add <i>nomefile</i></code><br/>
+      Per aggiungere nuovi file all'archivio, occorre eseguire
+    </p>
+
+      <p class="terminal">$ cvs add <em>nomefile</em>
     </p>
 
     <p>
       Per inviare il proprio lavoro al server, che si tratti di un nuovo file
-      o di una modifica a un file esistente, basta eseguire<br/>
-      <code>$ cvs commit <i>nomefile</i></code><br/>
-      e inserire una descrizione breve delle proprie modifiche nella finestra
+      o di una modifica a un file esistente, basta eseguire</p>
+    <p class="terminal">$ cvs commit <em>nomefile</em></p>
+
+      <p>e inserire una descrizione breve delle proprie modifiche nella finestra
       dell'editor che si aprirà.
     </p>
 
@@ -227,11 +242,15 @@
           strumento di correzione ortografica automatica, come GNU aspell,
           ispell, o altri correttori ortografici. Ad esempio, per usare
           <a href="http://aspell.net/">GNU aspell</a> su un sistema Debian GNU/Linux
-          basta installare i pacchetti <code>aspell</code> e
-          <code>aspell-XX</code> (dove "XX" è il codice della propria lingua) ed eseguire
-          il comando <pre>aspell -H -d lingua -c file.xhtml</pre> (dove "lingua"
-          è il nome del dizionario per la propria lingua; l'opzione 
-          <code>-d</code> può essere omessa se la lingua impostata sul proprio
+          basta installare i pacchetti <em>aspell</em> e
+          <em>aspell-<strong>XX</strong></em> (dove "XX" è il codice della propria lingua) ed eseguire
+          il comando</p>
+
+          <p class="terminal">
+	    aspell -H -d <em>lingua</em> -c file.xhtml</p>
+
+	  <p>(dove "lingua" è il nome del dizionario per la propria lingua; l'opzione 
+          <var>-d</var> può essere omessa se la lingua impostata sul proprio
           sistema è la stessa del dizionario che si intende usare).
         </p>
       </li>
@@ -239,7 +258,7 @@
       <li>
         <p>
           Assicurarsi che i file rispettino la sintassi XML. Nell'archivio CVS
-          c'è uno script chiamato <code>tools/validate.pl</code> che aiuta a
+          c'è uno script chiamato <var>tools/validate.pl</var> che aiuta a
           trovare gli errori nel markup XML. Questi errori interrompono la
           procedura di generazione automatica delle pagine web, bloccando
           l'aggiornamento dell'intero sito. Se si sospettano errori di questo
@@ -248,15 +267,19 @@
         </p>
 
         <p>
-          Lo script <code>validate.pl</code> richiede il modulo Perl
-          <code>XML::LibXML</code>; se questo non è installato sul proprio sistema,
+          Lo script <var>validate.pl</var> richiede il modulo Perl
+          <em>XML::LibXML</em>; se questo non è installato sul proprio sistema,
           è possibile controllare i file con il proprio validatore XML
           preferito. Ad esempio, è possibile usare il comando
-          <code>xmllint</code> del <a href="http://xmlsoft.org/">progetto
-          libxml2</a> (se si usa la distribuzione Debian GNU/Linux, occorre installare
-          il pacchetto <code>libxml2-utils</code>); basta eseguire il comando
-          <pre>xmllint --noout file.xhtml</pre> e controllare eventuali messaggi
-          di errore.
+          <em>xmllint</em> del <a href="http://xmlsoft.org/">progetto
+          <em>libxml2</em></a> (se si usa la distribuzione Debian GNU/Linux, occorre installare
+          il pacchetto <em>libxml2-utils</em>); basta eseguire il comando
+	</p>
+
+        <p class="terminal">xmllint --noout <em>file</em>.xhtml</p>
+
+        <p>dove <em>file</em> indica il file che si intende verificare, e controllare eventuali messaggi
+        di errore.
         </p>
       </li>
       
@@ -267,13 +290,18 @@
           prima riga del file.  Ad esempio, se il file adotta la codifica 
           "iso-8859-1" (chiamata anche "latin-1"), la prima riga del file dovrebbe
           essere
-          <pre>&lt;?xml version="1.0" encoding="iso-8859-1" ?&gt;</pre>.
-          Un'altra codifica valida è quella unicode, o "UTF-8". Se occorre
+	</p>
+
+        <p class="file">&lt;?xml version="1.0" encoding="iso-8859-1" ?&gt;</p>
+
+         <p>Un'altra codifica valida è quella unicode, o "UTF-8". Se occorre
           modificare la codifica di un file, basta usare il comando standard
-          <code>iconv</code>, come nell'esempio seguente (che converte un file
+          <em>iconv</em>, come nell'esempio seguente (che converte un file
           dalla codifica "latin1" a quella "utf-8"):
-          <pre>iconv -f LATIN1 -t UTF8 inputfile &gt; outputfile</pre>
-        </p>
+	</p>
+
+        <p class="terminal">iconv -f LATIN1 -t UTF8 <em>inputfile</em> &gt; <em>outputfile</em></p>
+
       </li>
     </ul>
 
@@ -301,7 +329,7 @@
     <p>
       Esiste anche un file in formato
       <a href="http://www.texinfo.org" target="_blank">Texinfo</a>, intitolato
-      "<a href="/README.texi" target="_blank">Webmastering FSF Europe</a>"
+      <em><a href="/README.texi" target="_blank">Webmastering FSF Europe</a></em>
       curato da <a href="mailto:oberg@fsfeurope.org">Jonas Öberg</a>, che ha implementato
       il sistema di generazione delle pagine.
     </p>

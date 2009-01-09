@@ -14,7 +14,7 @@ STATUS=/var/www/web
 
 
 # If there are multiple build.pl scripts running, mail alarm and exit
-if test "$(ps ax | grep build.pl | wc -l)" -gt 17 ; then 
+if test "$(ps ax | grep perl | grep build.pl | wc -l)" -gt 17 ; then 
   echo -e "\nMultiple build.pl scripts running on ekeberg!" \
   | mail -s "www.fsfeurope.org: build.pl error" system-hackers@fsfeurope.org
   exit

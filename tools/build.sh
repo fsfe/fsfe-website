@@ -13,11 +13,10 @@ TMP=/home/www/tmp.$$
 STATUS=/var/www/web
 
 
-# If there are multiple build.pl scripts running, mail alarm and exit
-if test "$(ps ax | grep perl | grep build.pl | wc -l)" -gt 17 ; then 
-  echo -e "\nMultiple build.pl scripts running on ekeberg!" \
-  | mail -s "www.fsfeurope.org: build.pl error" system-hackers@fsfeurope.org
-  exit
+# If there is a build.pl script started more than 30 minutes ago, mail alarm
+if test "$(ps --no-headers -C build.pl -o etime | cut -d ":" -f 1 | sort -r | head -n 1)" -gt 30 ; then
+  echo -e "\nA build.pl script has been running for more than 30 minutes!" \
+  | mail -s "www.fsfeurope.org: build.pl warning" system-hackers@fsfeurope.org
 fi
 
 # If build is already running, don't run it again.

@@ -5,9 +5,10 @@
       FSFE - Mitarbeiten - Informationen für Webmaster
     </title>
   </head>
-
   <body>
+
     <h1>Informationen für Webmaster</h1>
+
 
     <h2>Einleitung</h2>
 
@@ -57,7 +58,7 @@
     <h2>Verstehen, wie die Webseiten generiert werden</h2>
 
     <p>
-      Die Webseiten auf www.fsfeurope.org werden als eine Sammlung von
+	Die Webseiten auf <var>www.fsfeurope.org</var>werden als eine Sammlung von
       XML-Dateien gewartet. Der Webserver erzeugt aus diesem XML-Dateien
       automatisch alle fünf Minuten die HTML-Seiten. Somit geschehen alle
       Änderungen der Seiten in den XML-Dateien, und das HTML wird nie direkt
@@ -66,11 +67,14 @@
 
     <p>
       Jede Seite auf www.fsfeurope.org  wird
-      "<i>seitenname</i>.<i>sprache</i>.html" genannt. (Für <i>sprache</i> wird
+	  <var><em>seitenname</em>.<em>sprache</em>.html</var> genannt. (Für <em>sprache</em> wird
       der Iso-639 Code der Sprache genommen, der wie "en" für Englisch oder
       "de" für Deutsch immer aus zwei Buchstaben besteht.) Die Quelldateien
-      werden <i>seitenname</i>.<i>sprache</i>.xhtml benannt. Einige Seiten
-      haben auch einen dynamischen Teil. Außer dem festen Text, der aus der
+	  werden <var><em>seitenname</em>.<em>sprache</em>.xhtml</var> benannt.
+	  </p>
+
+	  <p>
+	  Einige Seiten haben auch einen dynamischen Teil. Außer dem festen Text, der aus der
       .xhtml-Datei geholt wird, schließen sie auch Informationen aus einer oder
       mehreren .xml-Dateien mit ein. Immer wenn so eine Seite generiert wird,
       nimmt das Generierungssystem wenn möglich die übersetzten .xml-Dateien
@@ -101,7 +105,7 @@
       <a href="https://savannah.gnu.org/account/register.php">diesem Link</a>,
       um einen neuen Account zu registrieren. Wählen Sie einen Login-Namen und
       ein Passwort, tragen Sie Ihren echten Namen und Ihre E-mail-Adresse ein
-      und drücken Sie auf den „Absenden“ Knopf.
+	  und drücken Sie auf den <strong>Absenden</strong> Knopf.
     </p>
 
     <p>
@@ -140,8 +144,8 @@
     </p>
 
     <p>
-      Wählen Sie "Gruppenmitgliedschaft" in den oberen Tabs. Jetzt können Sie
-      "FSFE" in das Suchfeld "Bewerben, um in Projekten mitzuarbeiten"
+	Wählen Sie <strong>Gruppenmitgliedschaft</strong> in den oberen Tabs. Jetzt können Sie
+	"FSFE" in das Suchfeld <strong>Bewerben, um in Projekten mitzuarbeiten</strong>
       eingeben, den FSF Europe Kontrollkasten aktivieren und einen Kommentar
       eingeben.
     </p>
@@ -150,20 +154,27 @@
       Die Administratoren des FSFE-Projekts bekommen dann eine E-Mail mit Ihrer
       Anfrage und dem Kommentar, den Sie eingeben haben, und können Ihre
       Mitgliedschaft im Projekt genehmigen. Danach sollten Sie "FSF Europe"
-      unter "Gruppen, von denen ich Mitglied bin" sehen, nachdem Sie sich bei
+	  unter <strong>Gruppen, von denen ich Mitglied bin</strong> sehen, nachdem Sie sich bei
       Savannah angemeldet haben.
     </p>
 
     <h3>Das Repository das erste Mal abgleichen</h3>
 
     <p>
-      Zuerst sollten Sie sicherstellen, dass Ihre ~/.bashrc-Datei eine Zeile
-      enthält, in der<br/>
-      <code>export CVS_RSH=ssh</code><br/>
+	Zuerst sollten Sie sicherstellen, dass Ihre <var>~/.bashrc</var>-Datei eine Zeile
+	enthält, in der
+	</p>
+
+	<p class="file">export CVS_RSH=ssh</p>
+
+	<p>
       steht. Dann legen Sie ein Verzeichnis für das Repository an und führen in
-      diesem Verzeichnis folgenden Befehl aus:<br/>
-      <code>$ cvs -z3 -d <i>Benutzername</i>@cvs.savannah.gnu.org:/web/fsfe co
-        .</code><br/>
+	  diesem Verzeichnis folgenden Befehl aus:
+	</p>
+
+	<p class="terminal">$ cvs -z3 -d <em>Benutzername</em>@cvs.savannah.gnu.org:/web/fsfe co .</p>
+
+	<p>
       Nun werden Sie nach Ihrem SSH-Passwort gefragt. Geben Sie es ein und
       bestätigen Sie nochmals. Wenn alles in Ordnung ist, sollte die Webseite
       jetzt ausgecheckt werden.
@@ -173,23 +184,35 @@
 
     <p>
       Nachdem Sie das Repository das erste Mal überprüft haben, sollten
-      Sie<br/>
-      <code>$ cvs update -d</code><br/>
+	  Sie
+	</p>
+
+	<p class="terminal">$ cvs update -d</p>
+
+	<p>
       im FSFE-Verzeichnis jedes Mal ausführen, bevor Sie an einer bestimmten
       Datei arbeiten.
     </p>
 
     <p>
-      Wenn Sie dem Repository neue Dateien hinzufügen wollen, müssen Sie<br/>
-      <code>$ cvs add <i>Dateiname</i></code><br/>
+		Wenn Sie dem Repository neue Dateien hinzufügen wollen, müssen Sie
+	</p>
+
+    <p class="terminal">$ cvs add <em>Dateiname</em></p>
+
+	<p>
       ausführen.
     </p>
 
     <p>
       Um Ihre Änderungen dem Server zu schicken, egal ob es neue Dateien oder
-      Änderungen an existierenden Dateien sind, führen Sie<br/>
-      <code>$ cvs commit <i>Dateiname</i></code> aus. Ein Editor öffnet sich
-      dann, damit Sie Ihre Änderungen beschreiben können.
+	  Änderungen an existierenden Dateien sind, führen Sie
+	</p>
+
+	<p class="terminal">$ cvs commit <em>Dateiname</em></p> 
+
+	<p>
+	aus. Ein Editor öffnet sich dann, damit Sie Ihre Änderungen beschreiben können.
     </p>
 
     <p>
@@ -245,12 +268,16 @@
           überprüfen, egal ob Sie Dateien übersetzen oder korrekturlesen. Um
           zum Beispiel <a href="http://aspell.net/">GNU aspell</a> auf einem
           Debian GNU/Linux System zu nutzen, installieren Sie einfach die
-          Pakete <code>aspell</code> und <code>aspell-XX</code> ("XX" ist Ihr
+          Pakete <em>aspell</em> und <em>aspell-XX</em> ("XX" ist Ihr
           Sprachcode), und führen dann den Befehl
-          <pre>aspell -H -d language -c file.xhtml</pre>
+		</p>
+		  	
+		<p class="terminal">aspell -H -d <em>language</em> -c file.xhtml</p>
+
+		<p>
           aus
           (hier ist "language" der Name des Wörterbuchs für Ihre Sprache; die
-          <code>-d</code> -Option kann weggelassen werden, wenn Ihr UNIX-Locale
+          <var>-d</var> -Option kann weggelassen werden, wenn Ihr UNIX-Locale
           der Sprache des Wörterbuchs entspricht).
         </p>
       </li>
@@ -258,7 +285,7 @@
       <li>
         <p>
           Stellen Sie sicher, dass alle Dateien korrektes XML sind. Es gibt ein
-          Skript namens <code>tools/validate.pl</code>, das Ihnen hilft, Fehler
+          Skript namens <var>tools/validate.pl</var>, das Ihnen hilft, Fehler
           im Markup zu finden. Fehlerhaftes XML stört den automatischen
           Generierungsprozess der Webseiten und blockiert Updates für die
           gesamte FSFE-Webseite. Wenn Sie vermuten, dass der
@@ -267,16 +294,21 @@
           nachlesen.
         </p>
 
-        <p>
-          <code>validate.pl</code> benötigt das <code>XML::LibXML</code> Perl
+       <p>
+          <var>validate.pl</var> benötigt das <em>XML::LibXML</em> Perl
           Modul; wenn es nicht auf Ihrem System installiert ist, können Sie
           Dateien auch mit dem XML-Prüfungsprogramm Ihrer Wahl validieren. Sie
-          können zum Beispiel das Kommandozeilen Werkzeug<code>xmllint</code>
+          können zum Beispiel das Kommandozeilen Werkzeug<em>xmllint</em>
           vom <a href="http://xmlsoft.org/">libxml2-Project</a> benutzten (wenn
           Sie die Debian GNU/Linux-Distribution nutzen, installieren Sie das
           <code>libxml2-utils</code>-Paket); führen Sie den Befehl
-          <pre>xmllint --noout file.xhtml</pre>
-          aus und suchen Sie nach möglichen Fehlermeldungen. 
+		</p>
+
+		<p class="terminal">xmllint --noout <em>file</em>.xhtml</p>
+
+		<p>
+		  aus (wobei <em>file</em> die Datei ist, welche sie überprüfen wollen)
+		  und suchen Sie nach möglichen Fehlermeldungen. 
         </p>
       </li>
       
@@ -287,14 +319,16 @@
           entspricht. Wenn Ihre Datei zum Beispiel als "iso-8859-1" (auch
           bekannt als "latin-1"-Codierung) codiert ist, sollte in der ersten
           Zeile der Datei stehen:
-          <pre>&lt;?xml version="1.0" encoding="iso-8859-1" ?&gt;</pre>
+		  </p>
+          <p class="file">&lt;?xml version="1.0" encoding="iso-8859-1" ?&gt;</p>
+		  <p>
           Eine weitere gültige Codierung ist die Unicode- oder
           "UTF-8"-Codierung. Wenn Sie die Codierung einer Datei ändern wollen,
-          können Sie das Standardwerkzeug <code>iconv</code> wie in folgendem
+          können Sie das Standardwerkzeug <em>iconv</em> wie in folgendem
           Beispiel benutzen (hier wird eine Datei von der "latin1" auf "utf-8"
           umcodiert):
-          <pre>iconv -f LATIN1 -t UTF8 inputfile &gt; outputfile</pre>
-        </p>
+		  </p>
+          <p class="terminal">iconv -f LATIN1 -t UTF8 inputfile &gt; outputfile</p>
       </li>
     </ul>
 

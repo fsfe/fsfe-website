@@ -13,6 +13,13 @@ TMP=/home/www/tmp.$$
 STATUS=/var/www/web
 
 
+# If there are multiple build.pl scripts running, mail alarm and exit
+if test "$(ps ax | grep build.pl | wc -l)" -gt 1 ; then 
+  echo -e "\nMultiple build.pl scripts running on ekeberg!" \
+  | mail -s "www.fsfeurope.org: build.pl error" system-hackers@fsfeurope.org
+  exit
+fi
+
 # If build is already running, don't run it again.
 if ps -C build.sh -o pid= | grep -q -v "$$"; then
   exit

@@ -8,6 +8,7 @@
   </head>
 
   <body>
+
     <h1>Informatie voor webmasters</h1>
 
     <h2>Inleiding</h2>
@@ -49,12 +50,12 @@
 
     <ul>
       <li>
-        <a href="http://www.perl.org" target="_blank">Perl</a> -- voor
+        <a href="http://www.perl.org" target="_blank">Perl</a> - voor
         het maken van de scripts die instaan voor het onderhoud en
         aanmaken van de pagina's.
       </li>
       <li>
-        <a href="http://www.apache.org" target="_blank">Apache</a> --
+        <a href="http://www.apache.org" target="_blank">Apache</a> -
         onze webserver.
       </li>
     </ul>
@@ -62,24 +63,29 @@
     <h2>Hoe worden de webpagina's gecreëerd?</h2>
 
     <p>
-      De webpagina's van www.fsfeurope.org worden beheerd als een
-      verzameling van XML files. Alle vijf minuten genereert de
-      webserver automatisch de HTML pagina's van de XML
-      files. Vanzelfsprekend gebeuren al de aanpassingen van de
-      pagina's in de XML files, de HTML wordt nooit direct veranderd.
+      De webpagina's van <var>www.fsfeurope.org</var> worden beheerd
+      als een verzameling van XML-bestanden. Alle vijf minuten
+      genereert de webserver automatisch de HTML pagina's van de
+      XML-bestanden. Vanzelfsprekend gebeuren al de aanpassingen van
+      de pagina's in de XML-bestanden, de HTML wordt nooit direct
+      veranderd.
     </p>
 
     <p>
       De naam van elke webpagina bij www.fsfeurope.org heeft dezelfde
-      structuur, "<i>paginanaam</i>.<i>taal</i>.html" (<i>taal</i>is
-      de 2-letter iso-639 code voor de gebruikte taal, zoals "en" voor
-      Engels of "nl" voor Nederlands). De naam van de basisfiles heeft
-      de structuur, "<i>paginanaam</i>.<i>taal</i>.xhtml".<br />
+      structuur, <var><em>paginanaam</em>.<em>taal</em>.html</var>
+      (<em>taal</em>is de 2-letter iso-639 code voor de gebruikte
+      taal, zoals "en" voor Engels of "nl" voor Nederlands). De naam
+      van de basisbestanden heeft de structuur,
+      <var><em>paginanaam</em>.<em>taal</em>.xhtml</var>.
+    </p>
+
+    <p>
       Sommige pagina's hebben een dynamisch deel: buiten het vaste
-      tekstgedeelte van de .xhtml file, wordt informatie toegevoegd
-      van verschillende .xml files. Telkens als zo'n pagina gebouwd
-      wordt, gebruikt het systeem de vertaalde .xml files. Als er geen
-      vertaalde versies bestaan van die .xml files, gebruikt het
+      tekstgedeelte van het xhtml-bestand, wordt informatie toegevoegd
+      van verschillende .xml-bestanden. Telkens als zo'n pagina gebouwd
+      wordt, gebruikt het systeem de vertaalde .xml-bestanden. Als er geen
+      vertaalde versies bestaan van die .xml-bestanden, gebruikt het
       systeem de Engelse versies. Door deze werkwijze kan het gebeuren
       dat deze pagina's slechts gedeeltelijk vertaald zijn.
       Voorbeelden van zo'n pagina's zijn vaak <a href="/index.html">de
@@ -91,142 +97,164 @@
     <h2>Registreren bij savannah</h2>
 
     <p>
-      De basisfiles voor de webpagina´s wqorden bewaard op
+      De basisbestanden voor de webpagina´s worden bewaard door
       <a href="http://savannah.gnu.org/">Savannah</a>, een server die
       onderdak vindt bij de Free Software Foundation, onze
       zusterorganisatie in Noord-Amerika. Als u onze bestanden wil
-      bewerken, dan moet je je registreren op de server.
+      bewerken, dan moet u zich registreren op de server.
     </p>
 
     <h3>Een nieuwe gebruiker registreren.</h3>
 
     <p>
-      volg <a href="https://savannah.gnu.org/account/register.php">deze
-      link</a> om een nieuwe gebruiker te registreren. Kies een
-      loginnaam, een paswoord. Geef je echte naam en een
-      e-mailadres. Klik dan op de knop "Submit".
+      Eerst moet u zich
+      als <a href="https://savannah.gnu.org/account/register.php">gebruiker
+      registreren</a>. Kies een loginnaam, een paswoord. Geef uw echte
+      naam en een e-mailadres. Klik dan op de
+      knop <strong>Submit</strong>.
     </p>
         
     <p>
-      Daarna krijg je een e-mail van savannah. Om je registratie af te
-      ronden, moet je de URL die daar vermeld staat
+      Daarna krijgt u een e-mail van savannah. Om uw registratie af te
+      ronden, moet u de URL die daar vermeld staat
       openen. Inschrijvingen die niet binnen de twee dagen bevestigd
       zijn, worden verwijderd.
     </p>
     
     <p>
-      Na de bevestiging van je inschrijving, kan je jezelf aanmelden bij
+      Na de bevestiging van uw inschrijving, kan u zich aanmelden bij
       <a href="https://savannah.gnu.org/">https://savannah.gnu.org</a>
-      met je login en je paswoord.
+      met uw login en paswoord.
     </p>
 
     <h3>Aanmaken van een SSH key</h3>
 
     <p>
-      Het paswoord kan je gebruiken om in te loggen in het webportaal
-      van Savannah, als je toegang wil krijgen tot de CVS, dan moet je
+      Het paswoord kan u gebruiken om in te loggen in het webportaal
+      van Savannah, als u toegang wil krijgen tot de CVS, dan moet u
       een SSH key registreren. Dat moet gebeuren vanop elke computer
-      waarmee je de CVS wil gebruiken.
+      waarmee u de CVS wil gebruiken.
     </p>
     
     <p>
-      Om een SSH key te maken en te registreren, volg de
+      Om een SSH key te maken en te registreren, kan u best de
       <a href="https://savannah.gnu.org/faq/?group_id=5802&amp;question=User_Account_-_How_do_I_configure_my_SSH_access.txt">
-      instructies van de savannah  FAQ</a>.
+      instructies van de savannah FAQ</a> volgen.
     </p>
 
     <h3>Lid worden van het FSFE project.</h3>
 
     <p>
       Er zijn veel projecten die onderdak vinden bij Savannah, en
-      toegang tot het project wordt toegestaan per project. Als je
+      toegang tot het project wordt toegestaan per project. Als u
       toegang wil krijgen tot de basisfiles van de FSFE webpagina's,
-      dan moet je lid worden van het FSFE project.
+      dan moet u lid worden van het FSFE project.
     </p>
 
     <p>
-      Kies "Group Membership" in de bovenste tabs. Hier plaats je
-      "FSFE" in de zoekbox van "Request for Inclusion", vink de
-      checkbox aan van FSF Europe, en geef wat uitleg.
+      Kies <strong>Group Membership</strong> in de bovenste tabs. Hier
+      plaatst u "FSFE" in de zoekbox van <strong>Request for
+      Inclusion</strong>, vink de checkbox aan van FSFE, en geef wat
+      uitleg.
     </p>
 
 
     <p>
-      De beheerders van het FSFE project krijgen dan een mail met jouw
-      verzoek en uitleg, zij kunnen jouw lidmaatschap bij het project
-      goedkeuren. Daarna zie je "FSF Europe" bij de tab "Groups I'm
-      Contributer of", nadat je bent ingelogd bij savannah.
+      De beheerders van het FSFE project krijgen dan een mail met uw
+      verzoek en uitleg, zij kunnen uw lidmaatschap bij het project
+      goedkeuren. Daarna ziet u "Free Software Foundation Europe" bij
+      de tab <strong>Groups I'm Contributer of</strong>, nadat u bent
+      ingelogd bij savannah.
     </p>
 
 
     <h3>Het CVS archief de eerste keer installeren</h3>
 
     <p>
-      Ten eerste moet je ervoor zorgen dat je ~/.bashrc file de
-      volgende lijn bevat <br />
-      <code>export CVS_RSH=ssh</code><br />
-      Creëer dan een map voor het archief en voer in deze map de
-      volgende code uit<br /> 
-      <code>$ cvs -z3
-      -d <i>username</i>@cvs.savannah.gnu.org:/web/fsfe co
-      .</code><br /> 
-      Nu wordt er gevraagd naar je SSH paszin. Vul die in en
-      bevestig. Als alles goed gaat, heb je nu een lokale kopie van
+      Ten eerste moet u ervoor zorgen dat uw <var>~/.bashrc</var> file de
+      volgende lijn bevat
+    </p>
+
+    <p class="file">export CVS_RSH=ssh</p>
+
+    <p>
+      creëer dan een map voor het archief en voer in deze map de
+      volgende code uit
+    </p>
+
+    <p class="terminal">
+      $ cvs -z3 -d <em>username</em>@cvs.savannah.gnu.org:/web/fsfe co
+      .
+    </p>
+
+    <p>
+      Nu wordt er gevraagd naar uw SSH paszin. Vul die in en
+      bevestig. Als alles goed gaat, hebt u nu een lokale kopie van
       het archief. 
     </p>
 
     <h2>Werken met het archief</h2>
 
     <p>
-      Nadat je het archief een eerste keer kopieerde, moet je steeds <br />
-      <code>$ cvs update -d</code><br />
-      uitvoeren in deze map, voordat je aan een specifieke file begint te werken.
+      Nadat u het archief een eerste keer kopieerde, moet u steeds
+    </p>
+
+    <p class="terminal">$ cvs update -d</p>
+
+    <p>
+      uitvoeren in de fsfe map, voordat u aan een specifiek bestand
+      begint te werken.
     </p>
     
     
     <p>
-      Als je nieuwe files aan het archief wil toevoegen moet je de
-      volgende code uitvoeren <br />
-      <code>$ cvs add <i>filename</i></code><br />
+      Als u een nieuw bestand of een nieuwe map aan het archief wil
+      toevoegen moet u de volgende code uitvoeren
     </p>
+
+    <p class="terminal">$ cvs add <em>filename</em></p>
 
     <p>
       Om bestanden naar de server te zenden, of het nu een nieuw
       bestand is, of de aangepaste versie van een bestaand bestand,
-      voer dan de volgende code uit<br />
-      <code>$ cvs commit <i>filename</i></code><br /> 
-      een editorvenster zal dan openen, zo kan je wat uitleg geven bij
-      je veranderingen.
+      voert u de volgende code uit
+    </p>
+
+    <p class="terminal">$ cvs commit <em>filename</em></p>
+
+    <p>
+      een editorvenster zal dan openen, zodat u wat uitleg kan geven
+      bij je veranderingen.
     </p>
 
     <p>
-      Je kan een gedetailleerde handleiding downloaden op de
+      U kan een gedetailleerde handleiding downloaden op de
       <a href="http://www.nongnu.org/cvs/">CVS startpagina</a>.
     </p>
 
     <p>
-      Als je op de hoogte wil blijven van alle veranderingen die
-      worden doorgevoerd in het archief, kan je je inschrijven bij de
+      Als u op de hoogte wil blijven van alle veranderingen die
+      worden doorgevoerd in het archief, kan u zich inschrijven bij de
       <a href="http://mail.fsfeurope.org/mailman/listinfo/web-cvs-notify">CVS
-      notification mailing list</a>, dan krijg je een mail bij elke
+      notification mailing list</a>, dan krijgt u een mail bij elke
       verandering aan het archief.
     </p>
 
     <h2>Verantwoord handelen bij schrijftoegang</h2>
 
     <p>
-      Als je schrijftoegang hebt tot de webpagina's, schrijf je dan
+      Als u schrijftoegang hebt tot de webpagina's, schrijf u dan
       alsjeblieft ook in voor de
       <a href="http://mail.fsfeurope.org/mailman/listinfo/web">Webmasters
         mailing list</a>.
     </p>
 
     <p>
-      Houd alsjeblieft steeds in gedachte dat al je veranderingen
+      Houd alsjeblieft steeds in gedachte dat al uw veranderingen
       direct worden doorgevoerd en zichtbaar worden, zonder enige
-      tussenkomst van iemand anders. Daarom vragen we om enkele regels
-      te respecteren wanneer je veranderingen of nieuwe files naar de
-      server stuurt.
+      tussenkomst van iemand anders. Daarom vragen we u om enkele
+      regels te respecteren wanneer u veranderingen of nieuwe files
+      naar de server stuurt.
     </p>
 
     <ul>
@@ -243,74 +271,99 @@
 
       <li>
         <p>
-          Als je vertalingen doorstuurt, en je hebt de kans om ze door
-          anderen te laten lezen, gebruik die mogelijkheid. Je kan
+          Als u vertalingen doorstuurt, en u hebt de kans om ze door
+          anderen te laten lezen, gebruik die mogelijkheid. U kan
           de<a href="http://mail.fsfeurope.org/mailman/listinfo/translators">
           Translators mailing list</a> vragen om iets na te lezen. Of
-          je nu vertalingen maakt, of ze naleest, controleer steeds de
+          u nu vertalingen maakt, of ze naleest, controleer steeds de
           spelling van de tekst, er zijn geautomatiseerde
           gereedschappen, zoals GNU aspell, ispell of een andere
-          spellingcorrector. Als je
+          spellingcorrector. Als u
           bijvoorbeeld <a href="http://aspell.net/">GNU aspell</a> wil
           gebruiken op een Debian GNU/Linux systeem, installeer dan de
-          paketten <code>aspell</code> en
-          <code>aspell-XX</code> ("XX" is je taalcode), en voer dan de
-          volgende code uit <br />
-          <pre>aspell -H -d language -c file.xhtml</pre> (Met
-          "language" de naam van het woordenboek van je taal;
-          de <code>-d</code> optie kan je achterwege laten als je UNIX
-          locale dezelfde is als de taal van je woordenboek).
+          paketten <em>aspell</em> en
+          <em>aspell-<strong>XX</strong></em> ("XX" is uw taalcode),
+          en voer dan de volgende code uit
+	</p>
+
+	<p class="terminal">
+	  aspell -H -d <em>language</em> -c file.xhtml
+	</p>
+
+	<p>
+	  Waar "language" de naam is van het woordenboek van uw taal;
+          de <var>-d</var> optie kan u achterwege laten als uw UNIX
+          locale dezelfde is als de taal van je woordenboek.
         </p>
       </li>
 
       <li>
         <p>
-          Zorg ervoor dat al je files juiste XML code zijn. Er is een
-          script
-          <code>tools/validate.pl</code> genoemd, dat kan helpen om
+          Zorg ervoor dat al uw bestanden een juiste XML code
+          hebben. Er is een script
+          <var>/fsfe/tools/validate.pl</var> genoemd dat kan helpen om
           fouten te vinden in de markup. Slecht gevormde XML verbreekt
           het automatische proces voor het maken van de webpagina's,
-          en blokkeert het updaten van de hele FSFE website. Als je
-          vermoedt dat het automatisch proces verstoord is, kan je het
-          logboek van de laatste
-          poging <a href="http://status.fsfeurope.org/web/">hier</a>
-          bekijken.
+          en blokkeert het updaten van de hele FSFE website. Als u
+          vermoedt dat het automatisch proces verstoord is, kan
+          u <a href="http://status.fsfeurope.org/web/">het
+          logboek</a> van de laatste poging bekijken.
         </p>
 
         <p>
-          Het <code>validate.pl</code> script heeft
-          de <code>XML::LibXML</code> Perl module nodig; als dit niet
-          geïnstalleerd is op jouw systeem, kan je je files
-          controleren met je favoriete gereedschap. Je kan
-          bijvoorbeeld het <code>xmllint</code> programma gebruiken
+          Het <var>validate.pl</var> script heeft
+          de <em>XML::LibXML</em> Perl module nodig; als dit niet
+          geïnstalleerd is op uw systeem, kan u uw bestanden
+          controleren met uw favoriete gereedschap. U kan
+          bijvoorbeeld het <em>xmllint</em> programma gebruiken
           vanuit de console. Dit programma maakt deel uit van
-           <a href="http://xmlsoft.org/">het libxml2 project</a> (als
-           je een Debian GNU/Linux systeem hebt, installeer <code>het
-           libxml2-utils</code> pakket); je typt in de console
-           <pre>xmllint --noout file.xhtml</pre> en je ziet de
-           eventuele foutboodschappen.
-        </p>
+           <a href="http://xmlsoft.org/">het <em>libxml2</em>
+           project</a>
+	</p>
+
+	<p>
+	  Als u een Debian GNU/Linux systeem hebt,
+          installeer <em>het libxml2-utils</em> pakke); u typt
+          in de console
+	</p>
+	
+	<p class="terminal">xmllint --noout <em>file</em>.xhtml</p>
+
+	<p>
+	  waar <em>file</em> het bestand is dat u wil
+          controleren. Eventuele fouten krijgt uw in de console te
+          zien.
+	</p>
       </li>
-      
-      
-      
-      
+            
       <li>
         <p>
-          Kijk goed na of de codering van je file overeenkomt met de
-          waarde die je aan het "encoding" attribuut geeft in de
-          eerste regel van je file. Als je file bijvoorbeeld gecodeerd
-          is als "iso-8859-1" (ook bekend als "latin-1" codering), dan
-          zou de eerste regel van je file er als volgt moeten uitzien
-          <pre>&lt;?xml version="1.0" encoding="iso-8859-1"
-          ?&gt;</pre> Een andere geldige codering is de unicode, of
-          UTF-8 codering. Als je de codering van een file wil
-          veranderen kan je het standaard <code>iconv</code> programma
+          Kijk goed na of de codering van uw bestand overeenkomt met
+          de waarde die u aan het "encoding" attribuut geeft in de
+          eerste regel van uw bestand. Als uw bestand bijvoorbeeld
+          gecodeerd is als "iso-8859-1" (ook bekend als "latin-1"
+          codering), dan zou de eerste regel van uw bestand er als volgt
+          moeten uitzien
+	</p>
+
+        <p class="file">
+	  &lt;?xml version="1.0" encoding="iso-8859-1" ?&gt;
+	</p>
+
+	<p>
+	  Een andere geldige codering is de unicode, of
+          UTF-8 codering. Als u de codering van een file wil
+          veranderen kan u het standaard <em>iconv</em> programma
           gebruiken, zoals in het volgende voorbeeld (waar we een
           bestand van "latin1" codering naar "utf-8" codering
           omzetten):
-          <pre>iconv -f LATIN1 -t UTF8 inputfile &gt; outputfile</pre>
-        </p>
+	</p>
+
+        <p class="terminal">
+	  iconv -f LATIN1 -t UTF8 <em>inputfile</em>
+          &gt; <em>outputfile</em>
+	</p>
+        
       </li>
     </ul>
 
@@ -318,8 +371,8 @@
       Probeer afspraken te maken met andere mensen die toegang hebben
       tot het CVS archief, zodat bijdragen van mensen zonder deze
       toegang, aan de CVS worden toegevoegd.  Zorg dat die files door
-      iemand werden nagelezen, en controleer de files, zoals je met
-      je eigen files zou doen, voor je ze toevoegt.
+      iemand werden nagelezen, en controleer de files, zoals u met
+      uw eigen files zou doen, voor u ze toevoegt.
     </p>
 
 
@@ -334,7 +387,7 @@
     </p>
 
     <p>
-      Tenzij je alleen pagina's wil vertalen, kan je best de de pagina
+      Tenzij u alleen pagina's wil vertalen, kan u best de pagina
       <a href="Webpage-Structure.txt" target="_blank">structural
         reference</a> eens doornemen.
     </p>
@@ -346,8 +399,8 @@
       Europe</a>" geschreven
       door <a href="mailto:oberg@fsfeurope.org">Jonas Öberg</a>, die
       ook de implementatie schreef voor het automatisch genereren van
-      de html-pagina's. U kan deze tekst best lezen, zo zal je beter
-      begrijpen hoe je met de webpagina's moet werken.
+      de html-pagina's. U kan deze tekst best lezen, zo zal u beter
+      begrijpen hoe u met de webpagina's moet werken.
     </p>
   </body>
 

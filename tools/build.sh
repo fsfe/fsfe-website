@@ -15,7 +15,7 @@ STATUS=/var/www/web
 
 # If there is a build.pl script started more than 30 minutes ago, mail alarm
 BUILD_STARTED=$(ps --no-headers -C build.pl -o etime | cut -c 7-8 | sort -r | head -n 1)
-if [[ -n "$BUILD_STARTED" && "$BUILD_STARTED" -gt 30 ]] ; then
+if [[ -n "$BUILD_STARTED" && "10#${BUILD_STARTED}" -gt 30 ]] ; then
   echo -e "\nA build.pl script has been running for more than 30 minutes!\n\nPlease check http://status.fsfeurope.org/web/\n" | mail -s "www.fsfeurope.org: build.pl warning" system-hackers@fsfeurope.org
 fi
 

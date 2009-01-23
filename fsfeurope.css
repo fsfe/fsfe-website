@@ -25,7 +25,11 @@ body {
 }
 
 a, a:link {
-  color: #202D79;
+  /* 
+   * To make links more visible, we use a slightly more blue-ish color,
+   * instead of the default #202D79
+   */
+  color: #202DCC; 
   text-decoration: none;
 }
 

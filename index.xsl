@@ -25,10 +25,10 @@
         <xsl:apply-templates select="body/node()" />
         <xsl:variable name="link"><xsl:value-of select="link" /></xsl:variable>
         <xsl:if test="$link!=''">
-          <a class="read_more" href="{link}"><xsl:value-of select="/html/text[@id='more']" /></a>
+          <span class="read_more"><a href="{link}"><xsl:value-of select="/html/text[@id='more']" /></a></span>
         </xsl:if>
       </div>
-    </div> <!-- /entry -->
+    </div>
   </xsl:template>
 
   <!-- Show a single event -->
@@ -48,10 +48,10 @@
       <div class="text">
         <xsl:apply-templates select="body/node()" />
         <xsl:if test="$link!=''">
-          <a class="read_more" href="{link}"><xsl:value-of select="/html/text[@id='more']" /></a>
+          <span class="read_more"><a href="{link}"><xsl:value-of select="/html/text[@id='more']" /></a></span>
         </xsl:if>
       </div>
-    </div> <!-- /event -->
+    </div>
   </xsl:template>
 
   <!-- In /html/body node, append dynamic content -->

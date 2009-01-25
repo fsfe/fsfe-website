@@ -275,6 +275,13 @@ pre.file {
 	text-align: center;
 }
 
+#news h3,
+#events h3 {
+	color: black;
+	font-size: 100%;
+	margin-right: 6em;
+}
+
 #news .date,
 #events .date {
 	color: #888;
@@ -290,7 +297,6 @@ pre.file {
 #events {
 	float: right;
 }
-
 
 
 /* News and event items (old, based on table) */

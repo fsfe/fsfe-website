@@ -279,14 +279,26 @@ pre.file {
 #events h3 {
 	color: black;
 	font-size: 100%;
-	margin-right: 6em;
+	margin-right: 6.2em;
+}
+
+#news .entry,
+#news .event {
+	margin-bottom: 1.8em;
 }
 
 #news .date,
 #events .date {
 	color: #888;
 	float: right;
-	margin-top: -2.5em;
+	margin-top: -2.2em;
+}
+
+#news .tools,
+#events .tools {
+	list-style: none;
+	padding-left: 0;
+	text-align: center;
 }
 
 #news {

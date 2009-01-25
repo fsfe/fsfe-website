@@ -263,6 +263,36 @@ pre.file {
 /* Styles used only on some pages                                            */
 /* ------------------------------------------------------------------------- */
 
+/* News and events on front page */
+
+#news,
+#events {
+	width: 49%;
+}
+
+#news h2,
+#events h2 {
+	text-align: center;
+}
+
+#news .date,
+#events .date {
+	color: #888;
+	float: right;
+	margin-top: -2.5em;
+}
+
+#news {
+	padding-right: 2%;
+	float: left;
+}
+
+#events {
+	float: right;
+}
+
+
+
 /* News and event items (old, based on table) */
 
 table.news {
@@ -369,7 +399,7 @@ ul.spaced li, ol.spaced li { /* Spaced listings, use this instead of <br /> */
   margin-right: 2em;
 }
 
-.aboutfsfe{ /* For press release section "About the FSFE" */
+.aboutfsfe { /* For press release section "About the FSFE" */
   font-style: italic;
   margin-left: 2em;
 }

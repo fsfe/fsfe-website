@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="iso-8859-1" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 
 <html>
   <head>
@@ -21,15 +21,20 @@
 
     <p>
       Every page on www.fsfeurope.org is named
-      "<i>pagename</i>.<i>language</i>.html" (<i>language</i> being the
-      2-letter iso-639 code of the language, like "en" for English or "de" for
+      <var><em>pagename</em>.<em>language</em>.html</var> (<em>language</em>
+      being the <a
+      href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">two-letter
+      ISO-639-1 code</a> of the language, like "en" for English or "de" for
       German). The source files are named
-      "<i>pagename</i>.<i>language</i>.xhtml".<br />
-      Some pages have a dynamic part: apart from the fixed texts taken from the
-      .xhtml file, they include information from one or several .xml files.
-      Whenever such a page is built, the build system takes the translated .xml
+      <var><em>pagename</em>.<em>language</em>.xhtml</var>.
+	</p>
+
+	<p>
+      Some pages have a dynamic part. Apart from the fixed texts taken from the
+      XHTML file, they include information from one or several XML files.
+      Whenever such a page is built, the build system takes the translated XML
       files where available, and falls back to the English version of those
-      .xml files that have not yet been translated. This way, such pages
+      XML files that have not yet been translated. This way, such pages
       can end up with parts of the text being translated and other parts still
       showing in English. Examples of such pages include the
       <a href="/index.html">start page</a>, the
@@ -40,12 +45,12 @@
     <h2>Everybody can contribute translations</h2>
 
     <p>
-      All source files (i.e. all .xhtml and .xml files) are publicly available
+      All source files (i.e. all XHTML and XML files) are publicly available
       for download, so everybody can spontaneously contribute a translation
       without having to register anywhere. However, whenever you start a
       translation and expect it to take longer, please write a short note to
       the <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">Translators
-        mailing list</a> to avoid that somebody else starts to work on the same
+      mailing list</a> to avoid that somebody else starts to work on the same
       text simultaneously.
     </p>
 
@@ -54,24 +59,29 @@
     <p>
       If you have a page open in your web browser that has not yet been
       translated to your language, scroll to the end of the page, click on the
-      "[XHTML]" link and save the file you get there. You will get the English
-      .xhtml file. Rename the file to carry your language code instead of the
-      "en" code, and open it in a text editor. Now, translate all text in the
-      file that is outside the "&lt;...&gt;" marks; do not change anything
-      inside these marks (the text inside the marks are XHTML commands that
-      influence the appearance of the resulting web page).
+      <strong>[XHTML]</strong> link and save the file you get there. You will
+      get the English XHTML file. Rename the file to carry your language code
+      instead of the "en" code, and open it in a text editor. Now, translate
+      all text in the file that is outside the "&lt;&hellip;&gt;" marks; do not
+      change anything inside these marks (the text inside the marks are XHTML
+      commands that influence the structure of the resulting web page).
     </p>
 
+	<!--
+	     Note to translators for the above sentence:
+	     _structure_ not _appearance_.  XHTML = structure, CSS = appearance.
+    -->
+
     <p>
-      At the end of the file there will by a line saying "&lt;/html&gt;".
-      Immediately <i>above</i> this line, add a line saying
-      "&lt;translator&gt;<i>your name</i>&lt;/translator&gt;".
+      At the end of the file there will by a line saying <var>&lt;/html&gt;</var>.
+      Immediately <em>above</em> this line, add a line saying
+      <var>&lt;translator&gt;<em>your name</em>&lt;/translator&gt;</var>.
     </p>
 
     <p>
       When you are done, send the translated file to the
       <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">Translators
-        mailing list</a>. Other members of this list can proofread the
+      mailing list</a>. Other members of this list can proofread the
       translation, and somebody on that list will ultimately post it to the
       server.
     </p>
@@ -81,19 +91,27 @@
     <p>
       If you have a page open in your web browser of which the translation is
       outdated (indicated by a note at the top of the page), scroll to the end
-      of the page, click on the "[XHTML]" link and save the file you get there.
-      This file is the (outdated) translated version. Next, use the "English"
-      link at the top of the page to jump to the English version of the page
-      and click on the "[XHTML]" link there, too. The file you get there is the
-      (up to date) English version. Now you can compare both files and update
-      the translation. Please notice that everything inside the "&lt;...&gt;"
-      marks may not be translated.
+      of the page, click on the <strong>[XHTML]</strong> link and save the file
+      you get there.  This file is the (outdated) translated version. Next, use
+      the <strong>English</strong> link at the top of the page to jump to the
+      English version of the page and click on the <strong>[XHTML]</strong>
+      link there, too. The file you get there is the (up to date) English
+      version. Now you can compare both files and update the translation.
+      Please notice that everything inside the "&lt;&hellip;&gt;" marks may not
+      be translated.
+    </p>
+
+    <p>
+      Alternatively, you may also use <a
+      href="http://web.cvs.savannah.gnu.org/viewvc/?root=fsfe">the web-based
+      source repository</a> on <a href="http://savannah.gnu.org/">Savannah</a>
+      to create diffs, and to see the latest updates for all source files.
     </p>
 
     <p>
       When you are done, send the translated file to the
       <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">Translators
-        mailing list</a>. Other members of this list can proofread the
+      mailing list</a>. Other members of this list can proofread the
       translation, and somebody on that list will ultimately post it to the
       server.
     </p>
@@ -103,7 +121,7 @@
     <p>
       There is an
       <a href="http://status.fsfeurope.org/web/translations.html">autogenerated
-        list of all languages</a> available. On that page, each language code
+      list of all languages</a> available. On that page, each language code
       is a link to a separate page that lists all outdated and missing
       translations for that language.
     </p>
@@ -119,7 +137,7 @@
     </p>
 
     <p>
-      This translation status page is also the only way to download the .xml
+      This translation status page is also the only way to download the XML
       files that are built into the dynamic pages, like files containing news
       items or event entries.
     </p>
@@ -133,16 +151,21 @@
 
     <p>
       Create a directory in which you want to store the files, change into that
-      directory and issue the command<br />
-      <code>$ cvs -z3 -d:pserver:anonymous@cvs.savannah.gnu.org:/web/fsfe co .</code><br />
-      When you are asked for a password, just hit the Return key.
+      directory and issue the command
+    </p>
+
+    <p class="terminal">$ cvs -z3 -d:pserver:anonymous@cvs.savannah.gnu.org:/web/fsfe co .</p>
+
+	<p>
+      When you are asked for a password, just hit the <kbd>Return</kbd> key.
     </p>
 
     <p>
       To update a source tree you previously downloaded that way, you can use
-      the command<br />
-      <code>$ cvs -z3 update -Pd</code><br />
+      the command
     </p>
+
+	<p class="terminal">$ cvs -z3 update -Pd</p>
 
     <h2>Joining the www.fsfeurope.org webmasters</h2>
 

@@ -11,12 +11,26 @@ SOURCE=/home/www/fsfe
 DEST=/home/www/html
 TMP=/home/www/tmp.$$
 STATUS=/var/www/web
-
+ALARM_LOCKFILE=alarm_lockfile
 
 # If there is a build.pl script started more than 30 minutes ago, mail alarm
 BUILD_STARTED=$(ps --no-headers -C build.pl -o etime | cut -c 7-8 | sort -r | head -n 1)
-if [[ -n "$BUILD_STARTED" && "10#${BUILD_STARTED}" -gt 30 ]] ; then
-  echo -e "\nA build.pl script has been running for more than 30 minutes!\n\nPlease check http://status.fsfeurope.org/web/\n" | mail -s "www.fsfeurope.org: build.pl warning" system-hackers@fsfeurope.org
+if [[ -n "$BUILD_STARTED" && "10#${BUILD_STARTED}" -gt 30 && ! -f ${STATUS}/${ALARM_LOCKFILE} ]] ; then
+  echo -e "
+  A build.pl script has been running for more than 30 minutes!
+  
+  Please:
+  
+  - Check the build script log at http://status.fsfeurope.org/web/
+  - Fix the cause of the problem
+  - Kill build.pl processes older than 30 minutes
+  - Delete the lockfile ${STATUS}/${ALARM_LOCKFILE}
+
+  " | mail -s "www.fsfeurope.org: build.pl warning" system-hackers@fsfeurope.org
+
+  # This lockfile avoids sending the mail alarm more than once;
+  # it must be deleted when the problem is solved.
+  touch ${STATUS}/${ALARM_LOCKFILE}
 fi
 
 # If build is already running, don't run it again.

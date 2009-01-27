@@ -22,9 +22,9 @@
       <h3><xsl:value-of select="title" /></h3>
       <div class="date"><xsl:value-of select="@date" /></div>
       <div class="text">
-        <xsl:apply-templates select="body/node()" />
+        <xsl:apply-templates select="body/node()" /> 
         <xsl:variable name="link"><xsl:value-of select="link" /></xsl:variable>
-        <xsl:if test="$link!=''"> 
+        <xsl:if test="$link!=''">
           <a class="read_more" href="{link}"><xsl:value-of select="/html/text[@id='more']" /></a>
         </xsl:if>
       </div>
@@ -46,8 +46,8 @@
         </xsl:if>
       </div>
       <div class="text">
-        <xsl:apply-templates select="body/node()" />
-        <xsl:if test="$link!=''"> 
+        <xsl:apply-templates select="body/node()" /> 
+        <xsl:if test="$link!=''">
           <a class="read_more" href="{link}"><xsl:value-of select="/html/text[@id='more']" /></a>
         </xsl:if>
       </div>

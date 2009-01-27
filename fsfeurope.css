@@ -421,3 +421,30 @@ ul.spaced li, ol.spaced li { /* Spaced listings, use this instead of <br /> */
   font-style: italic;
   margin-left: 2em;
 }
+
+
+/* Wordlist (/contribution/translators/wordlist.en.xhtml) */
+.wordlist {
+	border-collapse: collapse;
+}
+
+.wordlist th,
+.wordlist td {
+	padding: .2em .5em;
+}
+
+.wordlist th+th,
+.wordlist td+td {
+	border-left: 1px solid #ccc;
+}
+
+.wordlist th {
+	border-bottom: 1px solid #202d79;
+	border-top: 1px solid #202d79;
+	color: #202d79;
+	background-color: #f4f8fa;
+}
+
+.wordlist td {
+	border-bottom: 1px solid #ccc;
+}

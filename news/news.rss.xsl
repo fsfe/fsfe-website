@@ -50,6 +50,36 @@
     </xsl:choose>
   </xsl:template>
 
+  <!-- =============== -->
+  <!-- Date conversion -->
+  <!-- =============== -->
+
+  <xsl:template match="date">
+    <xsl:param name="date" />
+    <xsl:analyze-string select="$date" regex="(\d{{4}})-(\d{{2}})-(\d{{2}})T([\d:]*)Z">
+      <xsl:matching-substring>
+        <xsl:value-of select="regex-group(3)" />
+        <xsl:text> </xsl:text>
+        <xsl:variable name="month" select="number(regex-group(2))" />
+        <xsl:choose>
+          <xsl:when test="$month=1">Jan</xsl:when>
+          <xsl:when test="$month=2">Feb</xsl:when>
+          <xsl:when test="$month=3">Mar</xsl:when>
+          <xsl:when test="$month=4">Apr</xsl:when>
+          <xsl:when test="$month=5">May</xsl:when>
+          <xsl:when test="$month=6">Jun</xsl:when>
+          <xsl:when test="$month=7">Jul</xsl:when>
+          <xsl:when test="$month=8">Sug</xsl:when>
+          <xsl:when test="$month=9">Sep</xsl:when>
+          <xsl:when test="$month=10">Oct</xsl:when>
+          <xsl:when test="$month=11">Nov</xsl:when>
+          <xsl:when test="$month=12">Dec</xsl:when>
+        </xsl:choose>
+        <xsl:value-of select="concat(' ', regex-group(1), ' ', regex-group(4), ' CET')" />
+      </xsl:matching-substring>
+    </xsl:analyze-string>
+  </xsl:template>
+
   <!-- ============ -->
   <!-- Main routine -->
   <!-- ============ -->
@@ -117,7 +147,9 @@
 
               <!-- Date -->
               <xsl:element name="pubDate">
-                <xsl:value-of select="format-dateTime(@date, '[FNn], [D01] [MNn] [Y] [H01]:[m01]:[s01] [z]', 'en', (), ())" />
+                <xsl:apply-templates select="date">
+                  <xsl:width-param name="date" select="@date" />
+                </xsl:apply-templates>
               </xsl:element>
 
             </xsl:element>

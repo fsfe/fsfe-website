@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- XSL stylesheet for generating RSS feeds. We use RSS 0.91 for now -->
+<!-- XSL stylesheet for generation RSS feeds.  It's currently using RSS 2.0. -->
 
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:output method="xml" encoding="UTF-8" indent="yes" />
 
@@ -48,24 +48,6 @@
         <xsl:value-of select="$full-link" />
       </xsl:otherwise>
     </xsl:choose>
-  </xsl:template>
-
-  <!-- =============== -->
-  <!-- Date Convertion -->
-  <!-- =============== -->
-
-  <!--
-    Converts 2009-01-28 to Wed, 28 Jan 2009 00:00:00 +0100
-    (RFC822), required by RSS 2.0.
-  -->
-
-  <xsl:template name="rfc822date">
-    <xsl:param name="date" />
-    <xsl:value-of select="date:day-abbreviation($date)" />, <xsl:value-of select="date:day-in-month($date)"/><xsl:text> </xsl:text>
-    <xsl:value-of select="date:month-abbreviation($date)" /><xsl:text> </xsl:text>
-    <xsl:value-of select="date:year($date)" /><xsl:text> </xsl:text> 
-    <!--<xsl:value-of select="date:hour-in-day($date)" />:<xsl:value-of select="date:minute-in-hour($date)"/>:<xsl:value-of select="date:second-in-minute($date)"/> +0100-->
-    00:00:00 +0100
   </xsl:template>
 
   <!-- ============ -->
@@ -116,9 +98,9 @@
 
               <!-- News body -->
               <xsl:element name="description">
-                <xsl:text>&lt;![CDATA[</xsl:text>
+                <xsl:text><![CDATA[</xsl:text>
                 <xsl:value-of select="normalize-space(body)"/>
-                <xsl:text>]]&gt;</xsl:text>
+                <xsl:text>]]></xsl:text>
               </xsl:element>
 
               <!-- Link -->
@@ -135,9 +117,8 @@
 
               <!-- Date -->
               <xsl:element name="pubDate">
-                <xsl:apply-templates select="rfc822date">
                   <xsl:with-param name="date" select="@date" />
-                </xsl:apply-templates>
+                <xsl:value-of select="format-dateTime(@date, '[FNn], [D01] [MNn] [Y] [H01]:[m01]:[s01] [z]', 'en', (), ())" />
               </xsl:element>
 
             </xsl:element>

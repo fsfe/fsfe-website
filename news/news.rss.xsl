@@ -148,7 +148,7 @@
               <!-- Date -->
               <xsl:element name="pubDate">
                 <xsl:apply-templates select="date">
-                  <xsl:width-param name="date" select="@date" />
+                  <xsl:with-param name="date" select="@date" />
                 </xsl:apply-templates>
               </xsl:element>
 

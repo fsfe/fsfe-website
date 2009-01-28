@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!-- XSL stylesheet for generating RSS feeds. We use RSS 0.91 for now -->
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-  <xsl:output method="xml" encoding="UTF-8" omit-xml-declaration="yes"
-    indent="yes" />
+  <xsl:output method="xml" encoding="UTF-8" indent="yes" />
 
   <!-- $today = current date (given as <html date="...">) -->
   <xsl:variable name="today">
@@ -51,6 +50,24 @@
     </xsl:choose>
   </xsl:template>
 
+  <!-- =============== -->
+  <!-- Date Convertion -->
+  <!-- =============== -->
+
+  <!--
+    Converts 2009-01-28 to Wed, 28 Jan 2009 00:00:00 +0100
+    (RFC822), required by RSS 2.0.
+  -->
+
+  <xsl:template name="rfc822date">
+    <xsl:param name="date" />
+    <xsl:value-of select="date:day-abbreviation($date)" />, <xsl:value-of select="date:day-in-month($date)"/><xsl:text> </xsl:text>
+    <xsl:value-of select="date:month-abbreviation($date)" /><xsl:text> </xsl:text>
+    <xsl:value-of select="date:year($date)" /><xsl:text> </xsl:text> 
+    <!--<xsl:value-of select="date:hour-in-day($date)" />:<xsl:value-of select="date:minute-in-hour($date)"/>:<xsl:value-of select="date:second-in-minute($date)"/> +0100-->
+    00:00:00 +0100
+  </xsl:template>
+
   <!-- ============ -->
   <!-- Main routine -->
   <!-- ============ -->
@@ -63,7 +80,7 @@
     </xsl:variable>
 
     <!-- Header -->
-    <rss version="0.91">
+    <rss version="2.0">
       <channel>
         <title>FSFE News</title>
         <description>News from the Free Software Foundation Europe</description>
@@ -99,20 +116,29 @@
 
               <!-- News body -->
               <xsl:element name="description">
+                <xsl:text>&lt;![CDATA[</xsl:text>
                 <xsl:value-of select="normalize-space(body)"/>
+                <xsl:text>]]&gt;</xsl:text>
               </xsl:element>
 
               <!-- Link -->
               <xsl:if test="link != ''">
                 <xsl:variable name="link">
                   <xsl:apply-templates select="link">
-                    <xsl:with-param name="lang" select="$lang"/>
+                    <xsl:with-param name="lang" select="$lang" />
                   </xsl:apply-templates>
                 </xsl:variable>
                 <xsl:element name="link">
-                  <xsl:value-of select="normalize-space($link)"/>
+                  <xsl:value-of select="normalize-space($link)" />
                 </xsl:element>
               </xsl:if>
+
+              <!-- Date -->
+              <xsl:element name="pubDate">
+                <xsl:apply-templates select="rfc822date">
+                  <xsl:with-param name="date" select="@date" />
+                </xsl:apply-templates>
+              </xsl:element>
 
             </xsl:element>
           </xsl:if>

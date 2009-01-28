@@ -117,7 +117,6 @@
 
               <!-- Date -->
               <xsl:element name="pubDate">
-                  <xsl:with-param name="date" select="@date" />
                 <xsl:value-of select="format-dateTime(@date, '[FNn], [D01] [MNn] [Y] [H01]:[m01]:[s01] [z]', 'en', (), ())" />
               </xsl:element>
 

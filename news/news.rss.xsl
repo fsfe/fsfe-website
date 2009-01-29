@@ -58,18 +58,18 @@
   <!-- Weekday conversion -->
   <!-- ================== -->
 
-  <weekdays:weekday-names>
-    <weekdays:day key="0">Sun</weekdays:day>
-    <weekdays:day key="1">Mon</weekdays:day>
-    <weekdays:day key="2">Tue</weekdays:day>
-    <weekdays:day key="3">Wed</weekdays:day>
-    <weekdays:day key="4">Thu</weekdays:day>
-    <weekdays:day key="5">Fri</weekdays:day>
-    <weekdays:day key="6">Sat</weekdays:day>
-  </weekdays:weekday-names>
-
   <xsl:template match="weekday">
     <xsl:param name="timestamp" />
+
+    <weekdays:weekday-names>
+      <weekdays:day key="0">Sun</weekdays:day>
+      <weekdays:day key="1">Mon</weekdays:day>
+      <weekdays:day key="2">Tue</weekdays:day>
+      <weekdays:day key="3">Wed</weekdays:day>
+      <weekdays:day key="4">Thu</weekdays:day>
+      <weekdays:day key="5">Fri</weekdays:day>
+      <weekdays:day key="6">Sat</weekdays:day>
+    </weekdays:weekday-names>
 
     <xsl:variable name="day-of-week">
       <xsl:call-template name="dt:calculate-day-of-the-week">
@@ -87,23 +87,23 @@
   <!-- Month conversion -->
   <!-- ================ -->
 
-  <months:month-names>
-    <months:month key="1">Jan</months:month>
-    <months:month key="2">Feb</months:month>
-    <months:month key="3">Mar</months:month>
-    <months:month key="4">Apr</months:month>
-    <months:month key="5">May</months:month>
-    <months:month key="6">Jun</months:month>
-    <months:month key="7">Jul</months:month>
-    <months:month key="8">Aug</months:month>
-    <months:month key="9">Sep</months:month>
-    <months:month key="10">Oct</months:month>
-    <months:month key="11">Nov</months:month>
-    <months:month key="12">Dec</months:month>
-  </months:month-names>
-
   <xsl:template match="month">
     <xsl:param name="timestamp" />
+
+    <months:month-names>
+      <months:month key="1">Jan</months:month>
+      <months:month key="2">Feb</months:month>
+      <months:month key="3">Mar</months:month>
+      <months:month key="4">Apr</months:month>
+      <months:month key="5">May</months:month>
+      <months:month key="6">Jun</months:month>
+      <months:month key="7">Jul</months:month>
+      <months:month key="8">Aug</months:month>
+      <months:month key="9">Sep</months:month>
+      <months:month key="10">Oct</months:month>
+      <months:month key="11">Nov</months:month>
+      <months:month key="12">Dec</months:month>
+    </months:month-names>
 
     <xsl:variable name="month">
       <xsl:value-of select="substr($timestamp, 6, 2)" />

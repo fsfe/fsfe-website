@@ -103,9 +103,7 @@
 
               <!-- News body -->
               <xsl:element name="description">
-                <xsl:text><![CDATA[</xsl:text>
                 <xsl:value-of select="normalize-space(body)"/>
-                <xsl:text>]]></xsl:text>
               </xsl:element>
 
               <!-- Link -->
@@ -121,7 +119,7 @@
               </xsl:if>
 
               <!-- Date -->
-              <xsl:variable name="timestamp" select="date:date-time(@date)" />
+              <xsl:variable name="timestamp" select="date:date-time()" />
               <xsl:element name="pubDate">
                 <xsl:value-of select="concat(date:day-abbrevation($timestamp), ',',
                                              date:day-in-month($timestamp), ' ',

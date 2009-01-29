@@ -57,57 +57,59 @@
   <!-- ================== -->
   <!-- Weekday conversion -->
   <!-- ================== -->
+
+  <weekdays:weekday-names>
+    <weekdays:day key="0">Sun</weekdays:day>
+    <weekdays:day key="1">Mon</weekdays:day>
+    <weekdays:day key="2">Tue</weekdays:day>
+    <weekdays:day key="3">Wed</weekdays:day>
+    <weekdays:day key="4">Thu</weekdays:day>
+    <weekdays:day key="5">Fri</weekdays:day>
+    <weekdays:day key="6">Sat</weekdays:day>
+  </weekdays:weekday-names>
+
   <xsl:template match="weekday">
     <xsl:param name="timestamp" />
 
-    <xsl:variable name="weekdays">
-      <d>Sun</d>
-      <d>Mon</d>
-      <d>Tue</d>
-      <d>Wed</d>
-      <d>Thu</d>
-      <d>Fri</d>
-      <d>Sat</d>
-    </xsl:variable>
-
     <xsl:variable name="day-of-week">
       <xsl:call-template name="dt:calculate-day-of-the-week">
-        <xsl:with-param name="year" select="substring(timestamp, 0, 4)" />
-        <xsl:with-param name="month" select="substring(timestamp, 6, 2)" />
-        <xsl:with-param name="day" select="substring(timestamp, 9, 2)" />
+        <xsl:with-param name="year" select="substring($timestamp, 0, 4)" />
+        <xsl:with-param name="month" select="substring($timestamp, 6, 2)" />
+        <xsl:with-param name="day" select="substring($timestamp, 9, 2)" />
       </xsl:call-template>
     </xsl:variable>
 
-    <xsl:value-of select="document('')/*/$weekdays/d[number($day-of-week)]" />
+    <xsl:value-of select="document('')/*/weekdays:weekday-names/weekdays:day[number($day-of-week)]" />
 
   </xsl:template>
 
   <!-- ================ -->
   <!-- Month conversion -->
   <!-- ================ -->
+
+  <months:month-names>
+    <months:month key="1">Jan</months:month>
+    <months:month key="2">Feb</months:month>
+    <months:month key="3">Mar</months:month>
+    <months:month key="4">Apr</months:month>
+    <months:month key="5">May</months:month>
+    <months:month key="6">Jun</months:month>
+    <months:month key="7">Jul</months:month>
+    <months:month key="8">Aug</months:month>
+    <months:month key="9">Sep</months:month>
+    <months:month key="10">Oct</months:month>
+    <months:month key="11">Nov</months:month>
+    <months:month key="12">Dec</months:month>
+  </months:month-names>
+
   <xsl:template match="month">
     <xsl:param name="timestamp" />
 
-    <xsl:variable name="months">
-      <m>Jan</m>
-      <m>Feb</m>
-      <m>Mar</m>
-      <m>Apr</m>
-      <m>May</m>
-      <m>Jun</m>
-      <m>Jul</m>
-      <m>Aug</m>
-      <m>Sep</m>
-      <m>Oct</m>
-      <m>Nov</m>
-      <m>Dec</m>
-    </xsl:variable>
-
     <xsl:variable name="month">
-      <xsl:value-of select="substr(date, 6, 2)" />
+      <xsl:value-of select="substr($timestamp, 6, 2)" />
     </xsl:variable>
 
-    <xsl:value-of select="document('')/*/$months/m[number($month)]" />
+    <xsl:value-of select="document('')/*/months:month-names/months:month[number($month)]" />
 
   </xsl:template>
 

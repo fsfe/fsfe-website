@@ -1,15 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 
 <!-- XSL stylesheet for generation RSS feeds.  It's currently using RSS 2.0. -->
 
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:date="http://exslt.org/dates-and-times"
-                extension-element-prefixes="date">
+                xmlns:dt="http://xsltsl.org/date-time">
 
-  <!--<xsl:import href="http://www.exslt.org/date/date.xsl" />-->
+  <xsl:import href="date-time.xsl" />
 
-  <xsl:output method="xml" encoding="UTF-8" indent="yes" />
+  <xsl:output method="xml" encoding="utf-8" indent="yes" />
 
   <!-- $today = current date (given as <html date="...">) -->
   <xsl:variable name="today">
@@ -53,6 +52,63 @@
         <xsl:value-of select="$full-link" />
       </xsl:otherwise>
     </xsl:choose>
+  </xsl:template>
+
+  <!-- ================== -->
+  <!-- Weekday conversion -->
+  <!-- ================== -->
+  <xsl:template match="weekday">
+    <xsl:param name="timestamp" />
+
+    <xsl:variable name="weekdays">
+      <d>Sun</d>
+      <d>Mon</d>
+      <d>Tue</d>
+      <d>Wed</d>
+      <d>Thu</d>
+      <d>Fri</d>
+      <d>Sat</d>
+    </xsl:variable>
+
+    <xsl:variable name="day-of-week">
+      <xsl:call-template name="dt:calculate-day-of-the-week">
+        <xsl:with-param name="year" select="substring(timestamp, 0, 4)" />
+        <xsl:with-param name="month" select="substring(timestamp, 6, 2)" />
+        <xsl:with-param name="day" select="substring(timestamp, 9, 2)" />
+      </xsl:variable>
+    </xsl:variable>
+
+    <xsl:value-of select="$weekdays/d[number($day-of-week)]" />
+
+  </xsl:tempalte>
+
+  <!-- ================ -->
+  <!-- Month conversion -->
+  <!-- ================ -->
+  <xsl:template match="month">
+    <xsl:param name="timestamp" />
+
+    <xsl:variable name="months">
+      <m>Jan</m>
+      <m>Feb</m>
+      <m>Mar</m>
+      <m>Apr</m>
+      <m>May</m>
+      <m>Jun</m>
+      <m>Jul</m>
+      <m>Aug</m>
+      <m>Sep</m>
+      <m>Oct</m>
+      <m>Nov</m>
+      <m>Dec</m>
+    </xsl:variable>
+
+    <xsl:variable name="month">
+      <xsl:value-of select="substr(date, 6, 2)" />
+    </xsl:variable>
+
+    <xsl:value-of select="$months/m[number($month)]" />
+
   </xsl:template>
 
   <!-- ============ -->
@@ -119,12 +175,11 @@
               </xsl:if>
 
               <!-- Date -->
-              <xsl:variable name="timestamp" select="date:date-time()" />
               <xsl:element name="pubDate">
-                <xsl:value-of select="concat(date:day-abbrevation($timestamp), ',',
-                                             date:day-in-month($timestamp), ' ',
-                                             date:month-abbrevation($timestamp), ' ',
-                                             date:year($timestamp), ' +0100')" />
+                <xsl:apply-templates select="weekday"><xsl:with-param name="timestamp" select="@date" /></xsl:apply-templates>, 
+                <xsl:value-of select="substring(@date, 6, 2)" /> 
+                <xsl:apply-templates select="month"><xsl:with-param name="timestamp" select="@date" /></xsl:apply-templates> 
+                <xsl:text>00:00:00 +0100</xsl:text>
               </xsl:element>
 
             </xsl:element>

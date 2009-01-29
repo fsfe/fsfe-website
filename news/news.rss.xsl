@@ -153,7 +153,7 @@
               </xsl:if>
 
               <!-- Date -->
-              <xsl:element name="pubDate">
+              <!-- xsl:element name="pubDate">
                 <xsl:variable name="day-of-week">
                   <xsl:call-template name="dt:calculate-day-of-the-week">
                     <xsl:with-param name="year" select="substring(@date, 0, 5)" />
@@ -169,7 +169,7 @@
                 <xsl:value-of select="document('')/*/months:month-names/months:month[@month]" />
                 <xsl:value-of select="substring-before(@date, '-')" />
                 <xsl:text> 00:00:00 +0100</xsl:text>
-              </xsl:element>
+              </xsl:element -->
 
             </xsl:element>
           </xsl:if>

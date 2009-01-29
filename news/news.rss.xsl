@@ -130,9 +130,6 @@
               <!-- Title -->
               <xsl:element name="title">
                 <xsl:value-of select="title"/>
-                <xsl:text> (</xsl:text>
-                <xsl:value-of select="@date"/>
-                <xsl:text>)</xsl:text>
               </xsl:element>
 
               <!-- News body -->

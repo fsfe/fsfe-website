@@ -56,7 +56,7 @@
 
   <xsl:template match="date">
     <xsl:param name="date" />
-    <xsl:analyze-string select="$date" regex="(\d{{4}})-(\d{{2}})-(\d{{2}})T([\d:]*)Z">
+    <xsl:analyze-string select="$date" regex="(\d{{4}})-(\d{{2}})-(\d{{2}})">
       <xsl:matching-substring>
         <xsl:value-of select="regex-group(3)" />
         <xsl:text> </xsl:text>
@@ -75,7 +75,7 @@
           <xsl:when test="$month=11">Nov</xsl:when>
           <xsl:when test="$month=12">Dec</xsl:when>
         </xsl:choose>
-        <xsl:value-of select="concat(' ', regex-group(1), ' ', regex-group(4), ' CET')" />
+        <xsl:value-of select="concat(' ', regex-group(1), ' 00:00:00 +0100 CET')" />
       </xsl:matching-substring>
     </xsl:analyze-string>
   </xsl:template>

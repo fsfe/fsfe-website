@@ -54,65 +54,6 @@
     </xsl:choose>
   </xsl:template>
 
-  <!-- ================== -->
-  <!-- Weekday conversion -->
-  <!-- ================== -->
-
-  <xsl:variable name="weekdays">
-    <i ref="0">Sun</i>
-    <i ref="1">Mon</i>
-    <i ref="2">Tue</i>
-    <i ref="3">Wed</i>
-    <i ref="4">Thu</i>
-    <i ref="5">Fri</i>
-    <i ref="6">Sat</i>
-  </xsl:variable>
-
-  <xsl:template match="weekday">
-    <xsl:param name="timestamp" />
-
-    <xsl:variable name="day-of-week">
-      <xsl:call-template name="dt:calculate-day-of-the-week">
-        <xsl:with-param name="year" select="substring($timestamp, 0, 4)" />
-        <xsl:with-param name="month" select="substring($timestamp, 6, 2)" />
-        <xsl:with-param name="day" select="substring($timestamp, 9, 2)" />
-      </xsl:call-template>
-    </xsl:variable>
-
-    <xsl:value-of select="$weekdays[@ref=$day-of-week]" />
-
-  </xsl:template>
-
-  <!-- ================ -->
-  <!-- Month conversion -->
-  <!-- ================ -->
-
-  <xsl:variable name="months">
-    <i ref="01">Jan</i>
-    <i ref="02">Feb</i>
-    <i ref="03">Mar</i>
-    <i ref="04">Apr</i>
-    <i ref="05">May</i>
-    <i ref="06">Jun</i>
-    <i ref="07">Jul</i>
-    <i ref="08">Aug</i>
-    <i ref="09">Sep</i>
-    <i ref="10">Oct</i>
-    <i ref="11">Nov</i>
-    <i ref="12">Dec</i>
-  </xsl:variable>
-
-  <xsl:template match="month">
-    <xsl:param name="timestamp" />
-
-    <xsl:variable name="month">
-      <xsl:value-of select="substr($timestamp, 6, 2)" />
-    </xsl:variable>
-
-    <xsl:value-of select="$months[@ref=$month]" />
-
-  </xsl:template>
-
   <!-- ============ -->
   <!-- Main routine -->
   <!-- ============ -->
@@ -178,9 +119,43 @@
 
               <!-- Date -->
               <xsl:element name="pubDate">
-                <xsl:apply-templates select="weekday"><xsl:with-param name="timestamp" select="@date" /></xsl:apply-templates>, 
+                <xsl:variable name="weekdays">
+                  <i ref="0">Sun</i>
+                  <i ref="1">Mon</i>
+                  <i ref="2">Tue</i>
+                  <i ref="3">Wed</i>
+                  <i ref="4">Thu</i>
+                  <i ref="5">Fri</i>
+                  <i ref="6">Sat</i>
+                </xsl:variable>
+                <xsl:variable name="day-of-week">
+                  <xsl:call-template name="dt:calculate-day-of-the-week">
+                    <xsl:with-param name="year" select="substring(@date, 0, 5)" />
+                    <xsl:with-param name="month" select="substring(@date, 6, 2)" />
+                    <xsl:with-param name="day" select="substring(@date, 9, 2)" />
+                  </xsl:call-template>
+                </xsl:variable>
+                <xsl:value-of select="$weekdays[@ref=$day-of-week]" />, 
                 <xsl:value-of select="substring(@date, 6, 2)" /> 
-                <xsl:apply-templates select="month"><xsl:with-param name="timestamp" select="@date" /></xsl:apply-templates> 
+                <xsl:variable name="months">
+                  <i ref="01">Jan</i>
+                  <i ref="02">Feb</i>
+                  <i ref="03">Mar</i>
+                  <i ref="04">Apr</i>
+                  <i ref="05">May</i>
+                  <i ref="06">Jun</i>
+                  <i ref="07">Jul</i>
+                  <i ref="08">Aug</i>
+                  <i ref="09">Sep</i>
+                  <i ref="10">Oct</i>
+                  <i ref="11">Nov</i>
+                  <i ref="12">Dec</i>
+                </xsl:variable>
+                <xsl:variable name="month">
+                  <xsl:value-of select="substr(@date, 6, 2)" />
+                </xsl:variable>
+                <xsl:value-of select="$months[@ref=$month]" /> 
+                <xsl:value-of select="substr($@date, 0, 5)" />
                 <xsl:text>00:00:00 +0100</xsl:text>
               </xsl:element>
 

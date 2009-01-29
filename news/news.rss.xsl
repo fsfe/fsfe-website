@@ -4,7 +4,9 @@
 
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:dt="http://xsltsl.org/date-time">
+                xmlns:dt="http://xsltsl.org/date-time"
+                xmlns:weekdays="*** Weekdays ***"
+                xmlns:months="*** Months ***">
 
   <xsl:import href="date-time.xsl" />
 
@@ -14,6 +16,39 @@
   <xsl:variable name="today">
     <xsl:value-of select="/html/@date" />
   </xsl:variable>
+
+  <!-- ======== -->
+  <!-- Weekdays --> 
+  <!-- ======== -->
+
+  <weekdays:weekday-names>
+    <weekdays:day ref="1">Sun</weekdays:day>
+    <weekdays:day ref="2">Mon</weekdays:day>
+    <weekdays:day ref="3">Tue</weekdays:day>
+    <weekdays:day ref="4">Wed</weekdays:day>
+    <weekdays:day ref="5">Thu</weekdays:day>
+    <weekdays:day ref="6">Fri</weekdays:day>
+    <weekdays:day ref="7">Sat</weekdays:day>
+  </weekdays:weekday-names>
+
+  <!-- ====== -->
+  <!-- Months -->
+  <!-- ====== -->
+
+  <months:month-names>
+    <months:month ref="01">Jan</months:month>
+    <months:month ref="02">Feb</months:month>
+    <months:month ref="03">Mar</months:month>
+    <months:month ref="04">Apr</months:month>
+    <months:month ref="05">May</months:month>
+    <months:month ref="06">Jun</months:month>
+    <months:month ref="07">Jul</months:month>
+    <months:month ref="08">Aug</months:month>
+    <months:month ref="09">Sep</months:month>
+    <months:month ref="10">Oct</months:month>
+    <months:month ref="11">Nov</months:month>
+    <months:month ref="12">Dec</months:month>
+  </months:month-names>
 
   <!-- ============= -->
   <!-- Link handling -->
@@ -119,15 +154,6 @@
 
               <!-- Date -->
               <xsl:element name="pubDate">
-                <xsl:variable name="weekdays">
-                  <i ref="0">Sun</i>
-                  <i ref="1">Mon</i>
-                  <i ref="2">Tue</i>
-                  <i ref="3">Wed</i>
-                  <i ref="4">Thu</i>
-                  <i ref="5">Fri</i>
-                  <i ref="6">Sat</i>
-                </xsl:variable>
                 <xsl:variable name="day-of-week">
                   <xsl:call-template name="dt:calculate-day-of-the-week">
                     <xsl:with-param name="year" select="substring(@date, 0, 5)" />
@@ -135,28 +161,14 @@
                     <xsl:with-param name="day" select="substring(@date, 9, 2)" />
                   </xsl:call-template>
                 </xsl:variable>
-                <xsl:value-of select="$weekdays[@ref=$day-of-week]" />, 
-                <xsl:value-of select="substring(@date, 6, 2)" /> 
-                <xsl:variable name="months">
-                  <i ref="01">Jan</i>
-                  <i ref="02">Feb</i>
-                  <i ref="03">Mar</i>
-                  <i ref="04">Apr</i>
-                  <i ref="05">May</i>
-                  <i ref="06">Jun</i>
-                  <i ref="07">Jul</i>
-                  <i ref="08">Aug</i>
-                  <i ref="09">Sep</i>
-                  <i ref="10">Oct</i>
-                  <i ref="11">Nov</i>
-                  <i ref="12">Dec</i>
-                </xsl:variable>
+                <xsl:value-of select="document('')/*/weekdays:weekday-names/weekdays:day[$day-of-week]" />, 
+                <xsl:value-of select="substring-after(substring-after(@date, '-'), '-')" />
                 <xsl:variable name="month">
-                  <xsl:value-of select="substr(@date, 6, 2)" />
+                  <xsl:value-of select="substring-before(substring-after(@date, '-'), '-')" />
                 </xsl:variable>
-                <xsl:value-of select="$months[@ref=$month]" /> 
-                <xsl:value-of select="substr($@date, 0, 5)" />
-                <xsl:text>00:00:00 +0100</xsl:text>
+                <xsl:value-of select="document('')/*/months:month-names/months:month[@month]" />
+                <xsl:value-of select="substring-before(@date, '-')" />
+                <xsl:text> 00:00:00 +0100</xsl:text>
               </xsl:element>
 
             </xsl:element>

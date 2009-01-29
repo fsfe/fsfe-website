@@ -2,7 +2,12 @@
 
 <!-- XSL stylesheet for generation RSS feeds.  It's currently using RSS 2.0. -->
 
-<xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="1.0"
+                xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                xmlns:date="http://exslt.org/dates-and-times"
+                extension-element-prefixes="date">
+
+  <xsl:import href="http://www.exslt.org/date/date.xsl" />
 
   <xsl:output method="xml" encoding="UTF-8" indent="yes" />
 
@@ -48,36 +53,6 @@
         <xsl:value-of select="$full-link" />
       </xsl:otherwise>
     </xsl:choose>
-  </xsl:template>
-
-  <!-- =============== -->
-  <!-- Date conversion -->
-  <!-- =============== -->
-
-  <xsl:template match="date">
-    <xsl:param name="date" />
-    <xsl:analyze-string select="$date" regex="(\d{{4}})-(\d{{2}})-(\d{{2}})">
-      <xsl:matching-substring>
-        <xsl:value-of select="regex-group(3)" />
-        <xsl:text> </xsl:text>
-        <xsl:variable name="month" select="number(regex-group(2))" />
-        <xsl:choose>
-          <xsl:when test="$month=1">Jan</xsl:when>
-          <xsl:when test="$month=2">Feb</xsl:when>
-          <xsl:when test="$month=3">Mar</xsl:when>
-          <xsl:when test="$month=4">Apr</xsl:when>
-          <xsl:when test="$month=5">May</xsl:when>
-          <xsl:when test="$month=6">Jun</xsl:when>
-          <xsl:when test="$month=7">Jul</xsl:when>
-          <xsl:when test="$month=8">Sug</xsl:when>
-          <xsl:when test="$month=9">Sep</xsl:when>
-          <xsl:when test="$month=10">Oct</xsl:when>
-          <xsl:when test="$month=11">Nov</xsl:when>
-          <xsl:when test="$month=12">Dec</xsl:when>
-        </xsl:choose>
-        <xsl:value-of select="concat(' ', regex-group(1), ' 00:00:00 +0100 CET')" />
-      </xsl:matching-substring>
-    </xsl:analyze-string>
   </xsl:template>
 
   <!-- ============ -->
@@ -146,10 +121,12 @@
               </xsl:if>
 
               <!-- Date -->
+              <xsl:variable name="timestamp" select="date:date-time(@date)" />
               <xsl:element name="pubDate">
-                <xsl:apply-templates select="date">
-                  <xsl:with-param name="date" select="@date" />
-                </xsl:apply-templates>
+                <xsl:value-of selected="concat(date:day-abbrevation($timestamp), ',',
+                                               date:day-in-month($timestamp), ' ',
+                                               date:month-abbrevation($timestamp), ' ',
+                                               date:year($timestamp), ' +0100')" />
               </xsl:element>
 
             </xsl:element>

@@ -75,12 +75,12 @@
         <xsl:with-param name="year" select="substring(timestamp, 0, 4)" />
         <xsl:with-param name="month" select="substring(timestamp, 6, 2)" />
         <xsl:with-param name="day" select="substring(timestamp, 9, 2)" />
-      </xsl:variable>
+      </xsl:call-template>
     </xsl:variable>
 
     <xsl:value-of select="$weekdays/d[number($day-of-week)]" />
 
-  </xsl:tempalte>
+  </xsl:template>
 
   <!-- ================ -->
   <!-- Month conversion -->

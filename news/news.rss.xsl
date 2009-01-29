@@ -78,7 +78,7 @@
       </xsl:call-template>
     </xsl:variable>
 
-    <xsl:value-of select="$weekdays/d[number($day-of-week)]" />
+    <xsl:value-of select="document('')/*/$weekdays/d[number($day-of-week)]" />
 
   </xsl:template>
 
@@ -107,7 +107,7 @@
       <xsl:value-of select="substr(date, 6, 2)" />
     </xsl:variable>
 
-    <xsl:value-of select="$months/m[number($month)]" />
+    <xsl:value-of select="document('')/*/$months/m[number($month)]" />
 
   </xsl:template>
 

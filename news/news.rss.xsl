@@ -7,7 +7,7 @@
                 xmlns:date="http://exslt.org/dates-and-times"
                 extension-element-prefixes="date">
 
-  <xsl:import href="http://www.exslt.org/date/date.xsl" />
+  <!--<xsl:import href="http://www.exslt.org/date/date.xsl" />-->
 
   <xsl:output method="xml" encoding="UTF-8" indent="yes" />
 
@@ -123,10 +123,10 @@
               <!-- Date -->
               <xsl:variable name="timestamp" select="date:date-time(@date)" />
               <xsl:element name="pubDate">
-                <xsl:value-of selected="concat(date:day-abbrevation($timestamp), ',',
-                                               date:day-in-month($timestamp), ' ',
-                                               date:month-abbrevation($timestamp), ' ',
-                                               date:year($timestamp), ' +0100')" />
+                <xsl:value-of select="concat(date:day-abbrevation($timestamp), ',',
+                                             date:day-in-month($timestamp), ' ',
+                                             date:month-abbrevation($timestamp), ' ',
+                                             date:year($timestamp), ' +0100')" />
               </xsl:element>
 
             </xsl:element>

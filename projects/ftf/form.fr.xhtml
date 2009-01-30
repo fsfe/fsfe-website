@@ -23,7 +23,7 @@ function submit_once() {
         return false;
     }
     if (document.itemSynopsis.sender_email.value == "") {
-        alert("Veuillez indiquer votre email&#160;!"); 
+        alert("Veuillez indiquer votre adresse de courriel&#160;!"); 
         document.itemSynopsis.sender_email.focus();
         return false;
     }
@@ -36,17 +36,9 @@ function submit_once() {
 
 <body>
 
-<h2 style="text-align: center;">Prendre contact avec la FTF</h2>
+<h2 style="text-align: center;">FTF&#160;:Prendre contact avec la FTF</h2>
 
-<div style="text-align: center;">
-<p>
-[ <b><a href="ftf.html">Services</a></b> ] 
-[ <b><a href="network.html">Réseau technique et juridique</a></b> ] 
-[ <b><a href="documentation.html">Documentation</a></b> ] 
-[ <b><a href="about.html">A propos</a></b> ] 
-[ <b><a href="contact.html">Contact</a></b> ]
-</p>
-</div>
+<localmenu/>
 
 <div style="text-align: center;">
 <p>Veuillez composer votre message ci-dessous&#160;:</p>
@@ -97,7 +89,7 @@ function submit_once() {
 
     <tr>
 
-      <th class="required" style="text-align: left; vertical-align: top; width: 170px;">Votre adresse mail&#160;:
+      <th class="required" style="text-align: left; vertical-align: top; width: 170px;">Votre adresse de courriel&#160;:
 	</th>
 
       <td colspan="3" style="width: 330px;"><input name="sender_email" value="" size="35" /></td>
@@ -116,7 +108,7 @@ function submit_once() {
 
     <tr>
 
-      <th style="text-align: left; vertical-align: top; width: 170px;">Fichier&#160;
+      <th style="text-align: left; vertical-align: top; width: 170px;">Fichier&#160;:
       </th>
 
       <td colspan="3" style="width: 330px;"><input name="@file" size="25" type="file" /></td>
@@ -124,7 +116,7 @@ function submit_once() {
     </tr>
     
     <tr>
-      <th style="text-align: left; vertical-align: top; width: 170px;">A titre de vérification merci de saisir le nombre "dix-sept" en chiffres&#160;:</th>
+      <th style="text-align: left; vertical-align: top; width: 170px;">À titre de vérification merci de saisir le nombre "dix-sept" en chiffres&#160;:</th>
 
       <td colspan="3" style="width: 430px;"><input name="@riddle" size="35" type="text"/></td>
     </tr>

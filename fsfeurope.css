@@ -29,7 +29,7 @@ a, a:link {
    * To make links more visible, we use a slightly more blue-ish color,
    * instead of the default #202D79
    */
-  color: #202DCC; 
+  color: rgb(51,148,206); 
   text-decoration: none;
 }
 
@@ -39,7 +39,9 @@ a:visited {
 }
 
 a:hover, a:active, a:focus {
-  color: #6BB340;
+  /*color: #6BB340;*/
+  background-color: rgb(224,242,194);
+  color: rgb(97,131,0);
   text-decoration: none;
 }
 

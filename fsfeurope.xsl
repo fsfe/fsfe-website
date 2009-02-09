@@ -132,7 +132,6 @@
             <xsl:attribute name="href">http://fellowship.fsfe.org/about</xsl:attribute>   
             <xsl:element name="img">
               <xsl:attribute name="alt">Join the Fellowship!</xsl:attribute>
-	      <This is the original value, restore on 5.2.2009 -->
               <xsl:attribute name="src">/graphics/global/Join_Fellowship.png</xsl:attribute>
             </xsl:element>
           </xsl:element>

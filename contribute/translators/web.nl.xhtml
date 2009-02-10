@@ -13,87 +13,113 @@
     <h2>Hoe worden de webpagina's gemaakt</h2>
 
     <p>
-      De webpagina's van www.fsfeuropa.org worden onderhouden als een verzameling XML
-      files. De webserver hervormt deze XML files alle vijf minuten automatisch naar HTML 
-      pagina's. Het is hierdoor logisch dat alle wijzigingen gebeuren in de XML files, de HTML
+      De webpagina's van www.fsfeuropa.org worden onderhouden als een
+      verzameling XML files. De webserver hervormt deze XML files alle
+      vijf minuten automatisch naar HTML pagina's. Het is hierdoor
+      logisch dat alle wijzigingen gebeuren in de XML files, de HTML
       pagina's worden nooit rechtstreeks bewerkt.
     </p>
 
-   <p>
+    <p>
       De naam van elke webpagina bij www.fsfeurope.org heeft dezelfde structuur,
-      "<i>paginanaam</i>.<i>taal</i>.html" (<i>taal</i>is de 2-letter iso-639 code voor de
-      gebruikte taal, zoals "en" voor Engels of "nl" voor Nederlands). De naam van de
-      basisfiles heeft de structuur, "<i>paginanaam</i>.<i>taal</i>.xhtml".<br />
-      Sommige pagina's hebben een dynamisch deel: buiten het vaste tekstgedeelte van de
-      .xhtml file, wordt informatie toegevoegd van verschillende .xml files. Telkens als zo'n
-      pagina gebouwd wordt, gebruikt het systeem de vertaalde .xml files. Als er geen vertaalde
-      versies bestaan van die .xml files, gebruikt het systeem de  Engelse versies. Door deze
-      werkwijze kan het gebeuren dat deze pagina's slechts gedeeltelijk vertaald zijn.
-      Voorbeelden van zo'n pagina's zijn vaak <a href="/index.html">de startpagina</a>,
+      <var><em>paginanaam</em>.<em>taal</em>.html</var> (<em>taal</em>
+      is <a href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">de
+      2-letter iso-639 code</a> voor de gebruikte taal, zoals "en"
+      voor Engels of "nl" voor Nederlands). De naam van de
+      basisbestanden heeft de
+      structuur, <var><em>paginanaam</em>.<em>taal</em>.xhtml</var>.
+    </p>
+
+    <p>
+      Sommige pagina's hebben een dynamisch deel: buiten het vaste
+      tekstgedeelte van het XHTML-bestand, wordt informatie toegevoegd
+      van verschillende XML-bestanden. Telkens als zo'n pagina gebouwd
+      wordt, gebruikt het systeem de vertaalde XML-bestanden. Als er
+      geen vertaalde versies bestaan van die bestanden gebruikt het
+      systeem de Engelse versie. Door deze werkwijze kan het gebeuren
+      dat deze pagina's slechts gedeeltelijk vertaald zijn.
+      Voorbeelden van zo'n pagina's zijn vaak
+      <a href="/index.html">de startpagina</a>,
       <a href="/news/news.html">de nieuwspagina</a> en
       <a href="/events/events.html">de evenementenpagina</a>.
     </p>
 
-
-
-
     <h2>Iedereen kan vertalingen maken</h2>
 
     <p>
-      Alle basisfiles (de .xhtml en .xml files) zijn vrij beschikbaar om te downloaden, dus kan
-      iedereen spontaan een vertaling maken, zonder zich ergens te registreren. Maar als je van
-      plan bent een vertaling te maken, waarvan je weet dat het wat langer kan duren, stuur dan
-      een kort berichtje naar de <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">
-      Translators  mailinglijst</a>. Zo voorkom je dat iemand iemand anders op hetzelfde 
-      moment aan dezelfde file werkt.
+      Alle basisbestanden (de XHTML- en XML-bestanden) zijn vrij
+      beschikbaar om te downloaden, dus kan iedereen spontaan een
+      vertaling maken, zonder zich ergens te registreren. Maar als u
+      van plan bent een vertaling te maken, waarvan u weet dat het
+      wat langer kan duren, stuur dan een kort berichtje naar
+      de <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">
+      Translators mailinglijst</a>. Zo voorkomt u dat iemand
+      anders op hetzelfde moment aan hetzelfde bestand werkt.
     </p>
 
 
     <h3>Ontbrekende vertalingen maken</h3>
 
     <p>
-      Als je een pagina opent in je webbrowser, die nog niet vertaald is naar jouw taal, scroll
-      naar het einde van de pagina en druk op de "[XHTML]" link, bewaar de file die hier krijgt.
-      Hernoem de file zodat ze jouw taalcode krijgt in plaats van  de "en" code en open de file
-      in een editor naar keuze. Vertaal al de tekst in de file die buiten de "&lt;...&gt;" tekens staat.
-      Verander niets dat binnen deze tekens staat (de tekst binnen deze tekens zijn de XHTML
-      commando's die invloed hebben op het uitzicht van de gegenereerde HTML files).
-    </p>
-
-
-
-    <p>
-      Op het einde van de file is er een regel met de volgende inhoud: "&lt;/html&gt;". Onmiddellijk
-      <i>boven</i> deze regel, plaats je de volgende regel:
-      "&lt;translator&gt;<i>your name</i>&lt;/translator&gt;".
+      Als u een pagina opent in uw webbrowser, die nog niet vertaald
+      is naar uw taal, scroll naar het einde van de pagina en druk
+      op de <strong>[XHTML]</strong> link, bewaar het bestand dat u
+      hier krijgt.  Hernoem het bestand zodat het uw taalcode krijgt
+      in plaats van de "en" code en open het bestand in een editor
+      naar keuze. Vertaal al de tekst in het bestand die buiten de
+      "&lt;…&gt;" tekens staat.  Verander niets dat binnen deze tekens
+      staat (de tekst binnen deze tekens zijn de XHTML-commando's die
+      invloed hebben op de structuur van de gegenereerde
+      HTML-bestanden).
     </p>
 
     <p>
-      Als je klaar bent, stuur je je file naar de <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">
-      Translators mailinglijst</a>. Andere leden van de lijst kunnen je file dan nalezen en iemand
-      op de lijst zal de file uiteindelijk op de server plaatsen.
+      Op het einde van het bestand is er een regel met de volgende
+      inhoud: <var>&lt;/html&gt;</var>. Onmiddellijk
+      <em>boven</em> deze regel, plaats je hetvolgende:
+      <var>&lt;translator&gt;<em>uw
+      naam</em>&lt;/translator&gt;</var>.
     </p>
 
-
+    <p>
+      Als u klaar bent, stuurt u uw bestand naar
+      de <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">
+      Translators mailinglist</a>. Andere leden van de lijst kunnen
+      uw vertaling dan nalezen en iemand op de lijst zal het bestand
+      uiteindelijk op de server plaatsen.
+    </p>
 
     <h3>Verouderde pagina's updaten</h3>
 
     <p>
-      Als je een pagina opent in je webbrowser, waarvan de vertaling verouderd is (dat kan je lezen
-      in een opmerking bovenaan de pagina), scroll naar het einde van de pagina en druk op de
-      "[XHTML]" link, bewaar de file die hier krijgt. De file die je krijgt is de verouderde vertaalde
-      versie. Gebruik de "English" tab bovenaan de pagina om de Engelse versie van de
-      webpagina te krijgen, gebruik ook hier de "[XHTML]" link, om de meest recente Engelse
-      versie te krijgen. Nu kan je beide files vergelijken en de vertaling bijwerken. Houd er
-      rekening mee dat alles binnen de "&lt;...&gt;" tekens niet vertaald mag worden.
+      Als u een pagina opent in uw webbrowser, waarvan de vertaling
+      verouderd is (dat kan u lezen in een opmerking bovenaan de
+      pagina), scroll naar het einde van de pagina en druk op de
+      <strong>[XHTML]</strong> link, bewaar het bestand dat u hier
+      krijgt. Het bestand dat u krijgt is de verouderde vertaalde
+      versie. Gebruik de <strong>English</strong> tab bovenaan de
+      pagina om de Engelse versie van de webpagina te krijgen, gebruik
+      ook hier de <strong>[XHTML]</strong> link, om de meest recente
+      Engelse versie te krijgen. Nu kan u beide bestanden vergelijken
+      en de vertaling bijwerken. Houd er rekening mee dat alles binnen
+      de "&lt;…&gt;" tekens niet vertaald mag worden.
     </p>
 
-
+    <p>
+      U kan eventueel
+      ook <a href="http://web.cvs.savannah.gnu.org/viewvc/?root=fsfe">de
+      webinterface voor de broncode</a>
+      van <a href="http://savannah.gnu.org/">Savannah</a> gebruiken om
+      diffs te generen en om de laatste versies van de bestanden te
+      verkrijgen.
+    </p>
 
     <p>
-      Als je klaar bent, stuur je je file naar de <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">
-      Translators mailinglijst</a>. Andere leden van de lijst kunnen je file dan nalezen en iemand
-      op de lijst zal de file uiteindelijk op de server plaatsen.
+      Als u klaar bent, stuurt u uw bestand naar
+      de <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">
+      Translators mailinglist</a>. Andere leden van de lijst kunnen uw
+      bestand dan nalezen en iemand op de lijst zal het bestand
+      uiteindelijk op de server plaatsen.
     </p>
 
 
@@ -101,54 +127,66 @@
     <h3>Uitzoeken wat er moet gebeuren</h3>
 
     <p>
-      Er is een voor alle talen <a href="http://status.fsfeurope.org/web/translations.html"> een
-      automatisch gegenereerde lijst </a> beschikbaar. Op deze pagina is elke taalcode
-      een link naar een aparte pagina, daar vind je een lijst met alle ontbrekende en verouderde
-      vertalingen voor die taal.
+      Er is voor alle
+      talen <a href="http://status.fsfeurope.org/web/translations.html">
+      een automatisch gegenereerde lijst</a> beschikbaar. Op deze
+      pagina staat voor elke taalcode een link naar een aparte pagina, daar
+      vindt u een lijst met alle ontbrekende en verouderde vertalingen
+      voor die taal.
     </p>
 
 
     <p>
-      De lijst van verouderde vertalingen biedt nog een handig extraatje voor het updaten: je
-      kan hier niet alleen de basisfiles van de verouderde vertaling en de Engelse versie
-      downloaden; Je kan ook de geschiedenislogs van beide files bekijken, dat is een overzicht
-      van alle wijzigingen aan de file. Als je deze logs goed bekijkt, is het vaak veel gemakkelijker
-      om te zien waar de Engelse file veranderd zijn sinds de laatste update.
+      De lijst van verouderde vertalingen biedt nog een handig
+      extraatje voor het updaten: u kan hier niet alleen de
+      basisbestanden van de verouderde vertaling en de Engelse versie
+      downloaden; U kan ook de geschiedenislogs van beide files
+      bekijken, dat is een overzicht van alle wijzigingen aan het
+      bestand. Als u deze logs goed bekijkt, is het vaak veel
+      gemakkelijker om te zien waar de Engelse bestanden veranderd
+      zijn sinds de laatste update.
     </p>
 
 
 
     <p>
-      Deze statuspagina's voor vertalers, zijn ook de enige manier om de .xml files te kunnen
-      downloaden, die gebruikt worden voor het opbouwen van de dynamische pagina's, dit zijn
-      vooral files voor de nieuws- en evenementenkoppen.
+      Deze statuspagina's voor vertalers, zijn ook de enige manier om
+      de XML-bestanden te kunnen downloaden, die gebruikt worden voor het
+      opbouwen van de dynamische pagina's, dit zijn vooral files voor
+      de nieuws- en evenementenkoppen.
     </p>
 
-    <h3>Alle basisfiles downloaden via CVS</h3>
+    <h3>Alle basisbestanden downloaden via CVS</h3>
 
     <p>
-      Als het voor jou mogelijk is om CVS te gebruiken, kan je de volledig directory met
+      Als het voor u mogelijk is om CVS te gebruiken, kan u de volledig directory met
       basisfiles in één keer downloaden.
     </p>
 
     <p>
-      Maak een directory aan waar je de files wil bewaren, plaats je in de directory en voer het
-      volgende commando uit<br />
-      <code>$ cvs -z3 -d:pserver:anonymous@cvs.savannah.gnu.org:/web/fsfe co .</code><br />
-      Als er een paswoord gevraagd word, druk je op 'return'.
+      Maak een directory aan waar u de files wil bewaren, voer in deze directory het volgende commando uit
+    </p>
+
+    <p class="terminal">
+      $ cvs -z3 -d:pserver:anonymous@cvs.savannah.gnu.org:/web/fsfe co .
     </p>
 
     <p>
-      Als je een bestaande directory die je reeds downloadde wil updaten, kan je het volgende 
-      commando gebruiken<br />
-      <code>$ cvs -z3 update -Pd</code><br />
+      Als er een paswoord gevraagd word, drukt u op <kbd>return</kbd>.
     </p>
+
+    <p>
+      Als u een bestaande directory die u reeds downloadde wil updaten, kan u het volgende 
+      commando gebruiken
+    </p>
+
+    <p class="terminal">$ cvs -z3 update -Pd</p>
 
     <h2>Lid worden van de www.fsfeurope.org webmasters</h2>
 
     <p>
-      Als je van plan bent om op regelmatige basis vertalingen in te dienen en je kent iets van
-      CVS en SSH, dan word je uitgenodigd  om  <a href="/contribute/web/web.html">
+      Als u van plan bent om op regelmatige basis vertalingen in te dienen en u kent iets van
+      CVS en SSH, dan wordt u uitgenodigd  om  <a href="/contribute/web/web.html">
       lid te worden van het webmasterteam</a>.
     </p>
   </body>

@@ -173,9 +173,10 @@ address {
 .language p {                           /* used for outdated/missing note */
   clear: right;
   margin: 1em 0 0 2em;
-  border: 1px #000 solid;
+  border: 1px #ccc solid;
   padding: 0.3em;
-  background: #FFECBF;
+  /*background: #FFECBF;*/
+  background-color: #f4f8fa;
 }
 
 /* ------------------------------------------------------------------------- */

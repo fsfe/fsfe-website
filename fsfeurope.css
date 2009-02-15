@@ -29,7 +29,8 @@ a, a:link {
    * To make links more visible, we use a slightly more blue-ish color,
    * instead of the default #202D79
    */
-  color: rgb(51,148,206); 
+  /*color: rgb(51,148,206);*/
+  color: #0066cc;
   text-decoration: none;
 }
 

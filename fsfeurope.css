@@ -459,13 +459,18 @@ ul.spaced li, ol.spaced li { /* Spaced listings, use this instead of <br /> */
   width: 100%;
 }
 
+#merchandise .image {
+  width: 30%;
+}
+
 #merchandise .description {
-  width: 80%;
+  width: 60%;
   vertical-align: top;
 }
 
 #merchandise .quantity {
   text-align: right;
+  width: 10%;
 }
 
 #merchandise .quantity p {

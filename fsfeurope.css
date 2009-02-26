@@ -460,16 +460,17 @@ ul.spaced li, ol.spaced li { /* Spaced listings, use this instead of <br /> */
 }
 
 #merchandise .image {
-  width: 30%;
+  padding-right: 1em;
+  text-align: center;
 }
 
 #merchandise .description {
-  width: 60%;
   vertical-align: top;
 }
 
 #merchandise .quantity {
   text-align: right;
+  vertical-align: middle;
   width: 10%;
 }
 
@@ -483,4 +484,5 @@ ul.spaced li, ol.spaced li { /* Spaced listings, use this instead of <br /> */
 
 #merchandise tr {
   border-bottom: 1px solid #f4f8fa;
+  padding-bottom: 1.2em;
 }

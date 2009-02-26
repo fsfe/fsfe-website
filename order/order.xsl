@@ -8,7 +8,7 @@
     <xsl:variable name="type"><xsl:value-of select="@type"/></xsl:variable>
 
     <xsl:element name="table">
-      <xsl:attribute name="width">100%</xsl:attribute>
+      <xsl:attribute name="id">merchandise</xsl:attribute>
 
       <xsl:for-each select="/html/set/item [@type = $type]">
         <xsl:sort select="@date" order="descending"/>
@@ -20,6 +20,7 @@
 
           <!-- Image -->
           <xsl:element name="td">
+            <xsl:attribute name="class">image</xsl:attribute>
             <xsl:for-each select="image">
               <xsl:element name="a">
                 <xsl:attribute name="href">
@@ -37,7 +38,7 @@
 
           <!-- Name and description -->
           <xsl:element name="td">
-            <xsl:attribute name="width">100%</xsl:attribute>
+            <xsl:attribute name="class">description</xsl:attribute>
 
             <xsl:element name="h3">
               <xsl:value-of select="/html/set/info[@id=$id]/name"/>
@@ -52,16 +53,16 @@
 
           <!-- Order quantity -->
           <xsl:element name="td">
-            <xsl:attribute name="align">right</xsl:attribute>
+            <xsl:attribute name="class">quantity</xsl:attribute>
             <xsl:for-each select="available">
-              <xsl:element name="pre">
+              <xsl:element name="p">
                 <xsl:value-of select="@size"/>
                 <xsl:text>: </xsl:text>
 
                 <!-- Real input for quantity -->
                 <xsl:element name="input">
                   <xsl:attribute name="type">text</xsl:attribute>
-                  <xsl:attribute name="size">5</xsl:attribute>
+                  <xsl:attribute name="size">2</xsl:attribute>
                   <xsl:attribute name="name">
                     <xsl:value-of select="$id"/>
                     <xsl:text>_</xsl:text>
@@ -87,12 +88,6 @@
             </xsl:for-each>
           </xsl:element>
 
-        </xsl:element>
-        <xsl:element name="tr">
-          <xsl:element name="td">
-            <xsl:attribute name="colspan">3</xsl:attribute>
-            <xsl:element name="hr"/>
-          </xsl:element>
         </xsl:element>
       </xsl:for-each>
     </xsl:element>

@@ -452,3 +452,30 @@ ul.spaced li, ol.spaced li { /* Spaced listings, use this instead of <br /> */
 .wordlist td {
 	border-bottom: 1px solid #ccc;
 }
+
+
+/* Merchandise */
+#merchandise {
+  width: 100%;
+}
+
+#merchandise .description {
+  width: 80%;
+  vertical-align: top;
+}
+
+#merchandise .quantity {
+  text-align: right;
+}
+
+#merchandise .quantity p {
+  margin: 0;
+}
+
+#merchandise .quantity input {
+  vertical-align: middle;
+}
+
+#merchandise tr {
+  border-bottom: 1px solid #f4f8fa;
+}

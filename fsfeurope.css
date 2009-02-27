@@ -65,7 +65,7 @@ a[name], a[name]:hover, a.gl img, a.gl:link, a.gl:visited, a.gl:hover {
 
 .page {
   margin: 0;
-  padding: 0 0 0 1em;
+  padding: 0 1em 0 1em;
 }
 
 /* invisible except in text based browsers */
@@ -118,7 +118,7 @@ address {
 
 .menu ul {
   margin: 0;
-  background: url(/graphics/corner.png) top left no-repeat;
+  background: url("/graphics/corner.png") top left no-repeat;
   padding: 1em 0 1em 1.4em;
 }
 
@@ -127,7 +127,8 @@ address {
   list-style: none;
 }
 
-.menu li.submenu {
+.menu ul ul,
+.menu ul li.submenu {
   margin: 0;
   padding-left: 0.6em;
 }
@@ -150,7 +151,7 @@ address {
 
 .language {
   margin: 0 0 0 14em;
-  padding: 0.3em 1em 0.4em 1em;
+  padding: 0.3em 0 0.4em 1.5em;
   font-size: 90%;
 }
 
@@ -175,7 +176,6 @@ address {
   margin: 1em 0 0 2em;
   border: 1px #ccc solid;
   padding: 0.3em;
-  /*background: #FFECBF;*/
   background-color: #f4f8fa;
 }
 
@@ -186,7 +186,7 @@ address {
 .content {
   clear: right;         /* make sure to go below "Join the Fellowship" */
   margin: 3em 0 0 14em;
-  padding: 0 1em 1em 1em;
+  padding: 0 0 1em 1em;
 }
 
 .content h1, .content h2, .content h3 {

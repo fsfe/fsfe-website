@@ -64,7 +64,7 @@ a[name], a[name]:hover, a.gl img, a.gl:link, a.gl:visited, a.gl:hover {
   text-decoration: none;
 }
 
-.page {
+#wrapper {
   margin: 0;
   padding: 0 1em 0 1em;
 }
@@ -150,7 +150,7 @@ address {
 
 #language {
   margin: 0 0 0 220px;
-  padding: 0.3em 0 0.4em 1.5em;
+  padding: 0.3em 0 0.4em 1em;
   font-size: 90%;
 }
 

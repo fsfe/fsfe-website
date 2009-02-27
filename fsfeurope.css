@@ -18,7 +18,7 @@ body {
   margin: 0;
   padding: 0;
   background: #FDFDFD;
-  color: #000000;
+  color: rgb(50,50,50);
   /* font-family: Nimbus Sans L, Helvetica, Verdana, sans-serif; */
   font-family: sans-serif;      /* Much better readable than Nimbus Sans L */
   font-size: 100.01%;           /* Fix for IE */
@@ -47,7 +47,8 @@ a:hover, a:active, a:focus {
 }
 
 /* Generally avoid borders around images */
-img {
+img,
+a img {
   border: 0;
 }
 
@@ -91,44 +92,42 @@ address {
 /* Logo                                                                      */
 /* ------------------------------------------------------------------------- */
 
-.logo {
-  margin: 1em;
+#logo {
+  margin: 1em 0;
+  text-align: center;
 }
 
-.logo a, .logo a img {
+#logo a,
+#logo a img {
   margin: 0;
   padding: 0;
 }
 
-.logo a, .logo a:link, .logo a:visited {
-  border: none;
-}
 
 /* ------------------------------------------------------------------------- */
 /* Menu                                                                      */
 /* ------------------------------------------------------------------------- */
 
-.menu {
+#menu {
   float: left;
   margin: 0;
   padding: 0;
-  width: 13em;
-  min-width: 180px;             /* ignored by IE 6 */
+  width: 220px;
 }
 
-.menu ul {
+#menu ul {
   margin: 0;
   background: url("/graphics/corner.png") top left no-repeat;
   padding: 1em 0 1em 1.4em;
 }
 
-.menu li {
+#menu li {
   margin: 0.4em 0 0 0;
   list-style: none;
 }
 
-.menu ul ul,
-.menu ul li.submenu {
+#menu ul ul,
+#menu ul li.submenu {
   margin: 0;
   padding-left: 0.6em;
 }
@@ -149,29 +148,30 @@ address {
 /* Language List                                                             */
 /* ------------------------------------------------------------------------- */
 
-.language {
-  margin: 0 0 0 14em;
+#language {
+  margin: 0 0 0 220px;
   padding: 0.3em 0 0.4em 1.5em;
   font-size: 90%;
 }
 
-.language img {
+/* FIXME: Move out of #language */
+#language img {
   float: right;
   margin: 0 0 0.3em 0; /* make sure image doesn't touch outdated note below */
 }
 
-.language ul {
+#language ul {
   margin: 0;
-  padding: 0 0 0 2em; /* FIXME: why does it need 2em to align with text?? */
+  padding: 0;
 }
 
-.language li {
+#language ul li {
   display: inline;
   margin: 0 0.5em 0 0;
   list-style: none;
 }
 
-.language p {                           /* used for outdated/missing note */
+#language p {                           /* used for outdated/missing note */
   clear: right;
   margin: 1em 0 0 2em;
   border: 1px #ccc solid;
@@ -183,17 +183,19 @@ address {
 /* Content                                                                   */
 /* ------------------------------------------------------------------------- */
 
-.content {
+#content {
   clear: right;         /* make sure to go below "Join the Fellowship" */
-  margin: 3em 0 0 14em;
+  margin: 3em 0 0 220px;
   padding: 0 0 1em 1em;
 }
 
-.content h1, .content h2, .content h3 {
+#content h1,
+#content h2,
+#content h3 {
   color: #202D79;
 }
 
-.content h1 {
+#content h1 {
   text-align: center;
 }
 
@@ -255,7 +257,7 @@ pre.file {
 /* Footer                                                                    */
 /* ------------------------------------------------------------------------- */
 
-.footer {
+#footer {
   clear: both;
   border: 5px #FDFDFD solid;    /* IE workaround */
   padding: 0.5em;
@@ -315,70 +317,6 @@ pre.file {
 }
 
 
-/* News and event items (old, based on table) */
-
-table.news {
-  margin: 0px;
-  border-spacing: 0px;
-  padding: 4px;
-}
-
-td.newstitle {
-  margin: 0px;
-  padding: 4px;
-  text-align: left;
-  font-weight: bold;
-}
-
-td.newsdate {
-  margin: 0px;
-  padding: 4px;
-  color: #888;
-  text-align: right;
-  font-weight: normal;
-}
-
-/* News and event items (new, based on dt and dd) */
-
-.newsleft {
-  clear: right;
-  float: left;
-  width: 45%;
-}
-
-.newsright {
-  border: 1px #FDFDFD solid;
-  padding-left: 47%;
-}
-
-.newsleft dt, .newsright dt {
-  padding: 0 0 1em 0;
-  font-weight: bold;
-}
-
-.newsleft dt span, .newsright dt span {
-  float: right;
-  margin: 0 0 0 0.5em;
-  padding: 0;
-  color: #888;
-  font-weight: normal;
-}
-
-.newsleft dd, .newsright dd {
-  margin: 0;
-  padding: 0 0 2em 0;
-}
-
-.newsleft dd ul, .newsright dd ul {
-  margin: 0;
-  padding: 0;
-}
-
-.newsleft dd li, .newsright dd li {
-  padding-left: 0.5em;
-  list-style: none;
-}
-
 /* Project list */
 
 th.projects {
@@ -388,6 +326,7 @@ th.projects {
 td.projects {
   vertical-align: top;
 }
+
 
 /* Other stuff */
 

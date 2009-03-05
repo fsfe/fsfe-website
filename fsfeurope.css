@@ -134,9 +134,13 @@ dl dd {
   padding: 0 0 0 0.4em;
 }
 
-#menu li {
+#menu ul li {
   margin: 0.4em 0 0 0;
   list-style: none;
+}
+
+#menu ul ul li {
+  margin: 0;
 }
 
 

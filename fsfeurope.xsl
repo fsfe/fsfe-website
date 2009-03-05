@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="utf-8"?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
@@ -81,50 +82,53 @@
           </xsl:element>
 
           <!-- Menu -->
-	  <xsl:for-each select="/buildinfo/menuset/menu[not(@parent)]">
-	    <xsl:sort select="@id"/>
-	    <xsl:variable name="menu"><xsl:value-of select="@id"/></xsl:variable>
-	    <xsl:element name="ul">
-	      <xsl:for-each select="/buildinfo/menuset/menu[@parent=$menu]">
-		<xsl:sort select="@id"/>
-		<xsl:variable name="id"><xsl:value-of select="@id"/></xsl:variable>
-		<xsl:element name="li">
-		  <xsl:choose>
-		    <xsl:when test="not(string(.))">
-		      <xsl:value-of select="/buildinfo/textset/text[@id=$id]"/>
-		    </xsl:when>
-		    <xsl:when test=". = concat(/buildinfo/@filename ,'.html')">
-		      <xsl:value-of select="/buildinfo/textset/text[@id=$id]"/>
-		    </xsl:when>
-		    <xsl:otherwise>
+          <xsl:for-each select="/buildinfo/menuset/menu[not(@parent)]">
+            <xsl:sort select="@id"/>
+            <xsl:variable name="menu"><xsl:value-of select="@id"/></xsl:variable>
+            <xsl:element name="ul">
+              <xsl:for-each select="/buildinfo/menuset/menu[@parent=$menu]">
+                <xsl:sort select="@id"/>
+                <xsl:variable name="id"><xsl:value-of select="@id"/></xsl:variable>
+                <xsl:element name="li">
+                  <xsl:choose>
+                    <xsl:when test="not(string(.))">
+                      <xsl:value-of select="/buildinfo/textset/text[@id=$id]"/>
+                    </xsl:when>
+                    <xsl:when test=". = concat(/buildinfo/@filename ,'.html')">
+                      <xsl:value-of select="/buildinfo/textset/text[@id=$id]"/>
+                    </xsl:when>
+                    <xsl:otherwise>
                       <xsl:element name="a">
-			<xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
-			<xsl:value-of select="/buildinfo/textset/text[@id=$id]"/>
+                        <xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
+                        <xsl:value-of select="/buildinfo/textset/text[@id=$id]"/>
                       </xsl:element>
-		    </xsl:otherwise>
-		  </xsl:choose>
-		</xsl:element>
-		<xsl:for-each select="/buildinfo/menuset/menu[@parent=$id]">
-                  <xsl:sort select="@id" />
-                  <xsl:variable name="mid"><xsl:value-of select="@id"/></xsl:variable>
-                  <xsl:element name="li">
-                    <xsl:attribute name="class">submenu</xsl:attribute>
-		    <xsl:choose>
-		      <xsl:when test=". = concat(/buildinfo/@filename ,'.html')">
-			<xsl:value-of select="/buildinfo/textset/text[@id=$mid]"/>
-		      </xsl:when>
-		      <xsl:otherwise>
-			<xsl:element name="a">
-			  <xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
-			  <xsl:value-of select="/buildinfo/textset/text[@id=$mid]"/>
-			</xsl:element>
-		      </xsl:otherwise>
-		    </xsl:choose>
-                  </xsl:element>
-		</xsl:for-each>
+                    </xsl:otherwise>
+                  </xsl:choose>
+                  <!-- Submenu -->
+                  <xsl:element name="ul">
+                    <xsl:for-each select="/buildinfo/menuset/menu[@parent=$id]">
+                      <xsl:sort select="@id" />
+                      <xsl:variable name="mid"><xsl:value-of select="@id"/></xsl:variable>
+                      <xsl:element name="li">
+                        <xsl:attribute name="class">submenu</xsl:attribute>
+                        <xsl:choose>
+                          <xsl:when test=". = concat(/buildinfo/@filename ,'.html')">
+                            <xsl:value-of select="/buildinfo/textset/text[@id=$mid]"/>
+                          </xsl:when>
+                          <xsl:otherwise>
+                            <xsl:element name="a">
+                              <xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
+                              <xsl:value-of select="/buildinfo/textset/text[@id=$mid]"/>
+                            </xsl:element>
+                          </xsl:otherwise>
+                        </xsl:choose>
+                      </xsl:element>
+                    </xsl:for-each>
+                  </xsl:element> <!-- /submenu ul -->
+                </xsl:element> <!-- /li -->
               </xsl:for-each>
-	    </xsl:element>
-	  </xsl:for-each>
+            </xsl:element>
+          </xsl:for-each>
         </xsl:element>
         <!-- End Menu bar -->
 
@@ -134,7 +138,7 @@
 
           <!-- Join the Fellowship -->
           <xsl:element name="a">
-            <xsl:attribute name="href">http://fellowship.fsfe.org/about</xsl:attribute>   
+            <xsl:attribute name="href">http://fellowship.fsfe.org/about</xsl:attribute>
             <xsl:element name="img">
               <xsl:attribute name="alt">Join the Fellowship!</xsl:attribute>
               <xsl:attribute name="src">/graphics/global/Join_Fellowship.png</xsl:attribute>
@@ -278,12 +282,12 @@
   <xsl:template match="localmenu">
     <xsl:variable name="set">
       <xsl:choose>
-	<xsl:when test="@set">
-	  <xsl:value-of select="@set"/>
-	</xsl:when>
-	<xsl:otherwise>
-	  <xsl:text>0</xsl:text>
-	</xsl:otherwise>
+        <xsl:when test="@set">
+          <xsl:value-of select="@set"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:text>0</xsl:text>
+        </xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
     <xsl:variable name="dir">
@@ -295,50 +299,50 @@
     <xsl:element name="div">
       <xsl:attribute name="class">localmenu</xsl:attribute>
       <xsl:element name="p">
-	<xsl:text>[ </xsl:text>
-	<xsl:for-each select="/buildinfo/localmenuset/localmenuitems/menu[@dir=$dir and @set=$set]">
-	  <xsl:sort select="@id"/>
-	  <xsl:variable name="style"><xsl:value-of select="@style"/></xsl:variable>
-	  <xsl:variable name="id"><xsl:value-of select="@id"/></xsl:variable>
-	  <xsl:variable name="localmenutext">
-	    <xsl:choose>
-	      <xsl:when 
-		 test="/buildinfo/localmenuset/translate/lang_part[@dir=$dir and @id=$id and @language=$language]">
-		<xsl:value-of 
-		   select="/buildinfo/localmenuset/translate/lang_part[@dir=$dir and @id=$id and @language=$language]"/>
-	      </xsl:when>
-	      <xsl:otherwise>
-		<xsl:value-of 
-		   select="/buildinfo/localmenuset/translate/lang_part[@dir=$dir and @id=$id and @language='en']"/>
-	      </xsl:otherwise>
-	    </xsl:choose>
-	  </xsl:variable>
-	  <xsl:element name="span">
-	    <xsl:attribute name="class">local_menu_item</xsl:attribute>
-	    <xsl:choose>
-	      <xsl:when test="not(substring-before(concat(/buildinfo/@filename ,'.html'), string(.)))">
-		<xsl:element name="a">
-		  <xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
-		  <xsl:value-of select="$localmenutext"/>
-		</xsl:element>
-	      </xsl:when>
-	      <xsl:otherwise>
-		<xsl:value-of select="$localmenutext"/>
-	      </xsl:otherwise>
-	    </xsl:choose>
-	  </xsl:element>
-	  <xsl:if test="position()!=last()">
-	    <xsl:choose>
-	      <xsl:when test="$style='number'">
-		<xsl:text> | </xsl:text>
-	      </xsl:when>
-	      <xsl:otherwise>
-		<xsl:text> ] [ </xsl:text>
-	      </xsl:otherwise>
-	    </xsl:choose>
-	  </xsl:if>
-	</xsl:for-each>
-	<xsl:text> ]</xsl:text>
+        <xsl:text>[ </xsl:text>
+        <xsl:for-each select="/buildinfo/localmenuset/localmenuitems/menu[@dir=$dir and @set=$set]">
+          <xsl:sort select="@id"/>
+          <xsl:variable name="style"><xsl:value-of select="@style"/></xsl:variable>
+          <xsl:variable name="id"><xsl:value-of select="@id"/></xsl:variable>
+          <xsl:variable name="localmenutext">
+            <xsl:choose>
+              <xsl:when
+                 test="/buildinfo/localmenuset/translate/lang_part[@dir=$dir and @id=$id and @language=$language]">
+                <xsl:value-of
+                   select="/buildinfo/localmenuset/translate/lang_part[@dir=$dir and @id=$id and @language=$language]"/>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of
+                   select="/buildinfo/localmenuset/translate/lang_part[@dir=$dir and @id=$id and @language='en']"/>
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:variable>
+          <xsl:element name="span">
+            <xsl:attribute name="class">local_menu_item</xsl:attribute>
+            <xsl:choose>
+              <xsl:when test="not(substring-before(concat(/buildinfo/@filename ,'.html'), string(.)))">
+                <xsl:element name="a">
+                  <xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
+                  <xsl:value-of select="$localmenutext"/>
+                </xsl:element>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="$localmenutext"/>
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:element>
+          <xsl:if test="position()!=last()">
+            <xsl:choose>
+              <xsl:when test="$style='number'">
+                <xsl:text> | </xsl:text>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:text> ] [ </xsl:text>
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:if>
+        </xsl:for-each>
+        <xsl:text> ]</xsl:text>
       </xsl:element>
     </xsl:element>
   </xsl:template>

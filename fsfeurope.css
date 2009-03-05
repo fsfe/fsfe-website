@@ -131,7 +131,7 @@ dl dd {
 
 #menu ul ul {
   background: none;
-  padding: 0;
+  padding: 0 0 0 0.4em;
 }
 
 #menu li {
@@ -139,11 +139,6 @@ dl dd {
   list-style: none;
 }
 
-#menu ul ul,
-#menu ul li.submenu {
-  margin: 0;
-  padding-left: 0.6em;
-}
 
 /* ------------------------------------------------------------------------- */
 /* Localmenu                                                                 */

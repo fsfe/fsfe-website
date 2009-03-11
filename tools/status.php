@@ -6,13 +6,19 @@
     <h2>Last attempted or currently running build</h2>
 
     <pre>
-<? include ("status.txt") ?>
+<?php 
+$status=file_get_contents("status.txt");
+echo htmlspecialchars($status);
+?>
     </pre>
 
     <h2>Last finished build</h2>
 
     <pre>
-<? include ("status-finished.txt") ?>
+<?php 
+$statusfinished=file_get_contents("status-finished.txt");
+echo htmlspecialchars($statusfinished);
+?>
     </pre>
 
     <a href="./status-log.txt">Previously finished builds</a>

@@ -10,6 +10,7 @@ build.pl                Perl script doing most of the dirty work for build.sh
 translation-log.sh      Script to generate translation status pages
 translation-ignore.txt  List of files to be ignored on translation status pages
 menu-*.xml              Menues for all focuses ("inherits" from global)
+status.php              Displays the web server status (used by build.sh)
 texts-*.xml             Static texts for all languages.
 
 

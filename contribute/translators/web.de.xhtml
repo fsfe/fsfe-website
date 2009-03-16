@@ -3,7 +3,7 @@
 <html>
   <head>
     <title>
-      FSF Europe - Mitarbeiten - Informationen für Übersetzer - Webseiten
+      FSFE - Mitarbeiten - Informationen für Übersetzer - Webseiten
     </title>
   </head>
 
@@ -21,10 +21,10 @@
 
     <p>
       Jede Seite auf www.fsfeurope.org ist nach dem Schema
-      "<i>Seitenname</i>.<i>Sprache</i>.html" benannt (wobei <i>Sprache</i> für
-      den zweibuchstabigen ISO-639-Code für Sprachen steht, zum Beispiel "en"
+      <var><em>Seitenname</em>.<em>Sprache</em>.html</var> benannt (wobei <em>Sprache</em> für
+      den <a href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">zweibuchstabigen ISO-639-1-Code</a> für Sprachen steht, zum Beispiel "en"
       für Englisch oder "de" für Deutsch). Die zugehörigen Quelldateien heißen
-      "<i>Seitenname</i>.<i>Sprache</i>.xhtml".<br /> 
+      <var><em>Seitenname</em>.<em>Sprache</em>.xhtml</var>.<br /> 
 
       Manche Seiten haben einen dynamischen Teil: neben dem festen Texten aus
       der .xhtml-Datei beinhalten diese Informationen aus einer oder mehreren
@@ -68,9 +68,10 @@
     </p>
 
     <p>
-      Am Ende der Datei werden Sie eine Zeile mit dem Inhalt "&lt;/html&gt;"
-      finden.  Direkt <i>über</i> dieser Zeile fügen Sie eine Zeile mit dem
-      Inhalt "&lt;translator&gt;<i>Ihr Name</i>&lt;/translator&gt;" hinzu.
+      Am Ende der Datei werden Sie eine Zeile mit dem
+      Inhalt <var>&lt;/html&gt;</var>
+      finden.  Direkt <em>über</em> dieser Zeile fügen Sie eine Zeile mit dem
+      Inhalt <var>&lt;translator&gt;<em>Ihr Name</em>&lt;/translator&gt;</var> hinzu.
     </p>
 
     <p>
@@ -86,18 +87,25 @@
     <p>
       Wenn Sie eine Seite in Ihrem Webbrowser geöffnet haben, deren Übersetzung
       veraltet ist (angezeigt durch eine Notiz oben auf der Seite), dann
-      scrollen Sie bis zum Ende der Seiten, klicken Sie auf den "[XHTML]"-Link
-      und speichern Sie die Datei, die Sie dort bekommen. Diese Datei ist die
-      (veraltete) übersetzte Version. Als nächstes benutzen Sie den
-      "English"-Link oben auf der Seite, um zur englischen Version zu wechseln
-      und klicken Sie dort ebenfalls auf den "[XHTML]"-Link. Die Datei, die Sie
-      dort bekommen ist die (aktualisierte) englische Version. Bitte beachten
-      Sie, dass alles innerhalb der "&lt;...&gt;" Markierungen nicht übersetzt
-      werden darf.
+      scrollen Sie bis zum Ende der Seiten, klicken Sie auf
+      den <strong>[XHTML]</strong>-Link und speichern Sie die Datei, die Sie
+      dort bekommen. Diese Datei ist die (veraltete) übersetzte Version. Als
+      nächstes benutzen Sie den
+      <strong>English</strong>-Link oben auf der Seite, um zur englischen
+      Version zu wechseln und klicken Sie dort ebenfalls auf
+      den <strong>[XHTML]</strong>-Link. Die Datei, die Sie dort bekommen ist
+      die (aktualisierte) englische Version. Bitte beachten Sie, dass alles
+      innerhalb der "&lt;...&gt;" Markierungen nicht übersetzt werden darf.
     </p>
 
     <p>
-      Wenn die fertig sind, senden Sie die übersetzte Datei an die <a
+      Außerdem können Sie <a
+      href="http://web.cvs.savannah.gnu.org/viewvc/?root=fsfe">das web-basierte Quellen-Repository</a> auf <a href="http://savannah.gnu.org/">Savannah</a>
+      nutzen, um <a href="http://de.wikipedia.org/wiki/Diff">diffs</a> zu erstellen und die letzten Änderungen aller Quelldateien einzusehen.
+    </p>
+
+    <p>
+      Wenn Sie fertig sind, senden Sie die übersetzte Datei an die <a
       href="http://mail.fsfeurope.org/mailman/listinfo/translators">Mailingliste
       für Übersetzer</a>. Andere Mitglieder der Liste können die Übersetzung dann
       korrekturlesen und jemand auf der Liste wird sie dann letztendlich auf
@@ -142,18 +150,20 @@
     <p>
       Erzeugen Sie ein Verzeichnis, in dem Sie die Dateien speichern
       möchten. Wechseln Sie in dieses Verzeichnis und führen Sie folgenden
-      Befehl aus<br /> 
-      <code>$ cvs -z3 -d:pserver:anonymous@cvs.savannah.gnu.org:/web/fsfe co
-      .</code><br />
+      Befehl aus
+    </p>
+    <p class="terminal">$ cvs -z3
+      -d:pserver:anonymous@cvs.savannah.gnu.org:/web/fsfe co .</p>
+    <p>
       Wenn Sie nach einem Passwort gefragt werden, drücken Sie einfach auf die
-      Return-Taste.
+      <kbd>Return</kbd>-Taste.
     </p>
 
     <p>
       Um den zuvor heruntergeladenen Dateibaum der Quellen zu aktualisieren,
-      können Sie folgendes Kommando ausführen:<br />
-      <code>$ cvs -z3 update -Pd</code><br />
-    </p>
+      können Sie folgendes Kommando ausführen:</p>
+      <p class="terminal">$ cvs -z3 update -Pd</p>
+    
 
     <h2>Den Webmastern von www.fsfeurope.org beitreten</h2>
 

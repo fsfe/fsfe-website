@@ -128,21 +128,22 @@
               </xsl:for-each>
             </xsl:element>
           </xsl:for-each>
-        </xsl:element>
-        <!-- End Menu bar -->
-
-        <!-- Language bar -->
-        <xsl:element name="div">
-          <xsl:attribute name="id">language</xsl:attribute>
 
           <!-- Join the Fellowship -->
           <xsl:element name="a">
             <xsl:attribute name="href">http://fellowship.fsfe.org/about</xsl:attribute>
             <xsl:element name="img">
               <xsl:attribute name="alt">Join the Fellowship!</xsl:attribute>
-              <xsl:attribute name="src">/graphics/global/Join_Fellowship.png</xsl:attribute>
+              <xsl:attribute name="src">/graphics/join_fellowship.png</xsl:attribute>
             </xsl:element>
           </xsl:element>
+
+        </xsl:element>
+        <!-- End Menu bar -->
+
+        <!-- Language bar -->
+        <xsl:element name="div">
+          <xsl:attribute name="id">language</xsl:attribute>
 
           <!-- Translation list -->
           <xsl:element name="ul">

@@ -105,7 +105,7 @@
                   </xsl:choose>
                   <!-- Submenu -->
                   <xsl:if test="/buildinfo/menuset/menu[@parent=$id]">
-                    <xsl:element name="ul">-->
+                    <xsl:element name="ul">
                       <xsl:for-each select="/buildinfo/menuset/menu[@parent=$id]">
                         <xsl:sort select="@id" />
                         <xsl:variable name="mid"><xsl:value-of select="@id" /></xsl:variable>
@@ -124,7 +124,7 @@
                            </xsl:choose>
                         </xsl:element>
                       </xsl:for-each>
-                    </xsl:element>--> <!-- /submenu ul -->
+                    </xsl:element> <!-- /submenu ul -->
                   </xsl:if>
                 </xsl:element> <!-- /li -->
               </xsl:for-each>

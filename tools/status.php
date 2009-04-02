@@ -22,5 +22,8 @@ echo htmlspecialchars($statusfinished);
     </pre>
 
     <a href="./status-log.txt">Previously finished builds</a>
+    <br />
+    <br />
+    <a href="http://cvs.savannah.gnu.org/viewvc/fsfe/fsfe/?root=Web">CVS web interface</a>
   </body>
 </html>

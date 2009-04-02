@@ -105,7 +105,8 @@
                   </xsl:choose>
                   <!-- Submenu -->
                   <xsl:when test="/buildinfo/menuset/menu[@parent=$id]">
-                    <xsl:element name="ul">
+                    <!--<xsl:element name="ul">-->
+                    <ul>
                   </xsl:when>
                   <xsl:for-each select="/buildinfo/menuset/menu[@parent=$id]">
                     <xsl:sort select="@id" />
@@ -126,11 +127,12 @@
                     </xsl:element>
                   </xsl:for-each>
                   <xsl:when test="/buildinfo/menuset/menu[@parent=$id]">
-                    </xsl:element> <!-- /submenu ul -->
+                    <!--</xsl:element>--> <!-- /submenu ul -->
+                    </ul>
                   </xsl:when>
                 </xsl:element> <!-- /li -->
               </xsl:for-each>
-            </xsl:element>
+            </xsl:element> <!-- /ul -->
           </xsl:for-each>
 
           <!-- Join the Fellowship -->

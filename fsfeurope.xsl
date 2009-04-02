@@ -106,7 +106,7 @@
                   <!-- Submenu -->
                   <xsl:when test="/buildinfo/menuset/menu[@parent=$id]">
                     <!--<xsl:element name="ul">-->
-                    <ul>
+                    <xsl:text disable-output-escaping="yes">&lt;ul&gt;</xsl:text>
                   </xsl:when>
                   <xsl:for-each select="/buildinfo/menuset/menu[@parent=$id]">
                     <xsl:sort select="@id" />
@@ -128,7 +128,7 @@
                   </xsl:for-each>
                   <xsl:when test="/buildinfo/menuset/menu[@parent=$id]">
                     <!--</xsl:element>--> <!-- /submenu ul -->
-                    </ul>
+                    <xsl:text disable-output-escaping="yes">&lt;/ul&gt;</xsl:text>
                   </xsl:when>
                 </xsl:element> <!-- /li -->
               </xsl:for-each>

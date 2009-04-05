@@ -91,15 +91,21 @@
                 <xsl:element name="li">
                   <xsl:choose>
                     <xsl:when test="not(string(.))">
-                      <xsl:value-of select="/buildinfo/textset/text[@id=$id]"/>
+                      <xsl:value-of select="/buildinfo/textset/text[@id=$id]|
+					    /buildinfo/textsetbackup/text[@id=$id
+					       and not(@id=/buildinfo/textset/text/@id)]"/>
                     </xsl:when>
                     <xsl:when test=". = concat(/buildinfo/@filename ,'.html')">
-                      <xsl:value-of select="/buildinfo/textset/text[@id=$id]"/>
+                      <xsl:value-of select="/buildinfo/textset/text[@id=$id]|
+					    /buildinfo/textsetbackup/text[@id=$id
+					      and not(@id=/buildinfo/textset/text/@id)]"/>
                     </xsl:when>
                     <xsl:otherwise>
                       <xsl:element name="a">
                         <xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
-                        <xsl:value-of select="/buildinfo/textset/text[@id=$id]"/>
+                        <xsl:value-of select="/buildinfo/textset/text[@id=$id]|
+					      /buildinfo/textsetbackup/text[@id=$id
+					        and not(@id=/buildinfo/textset/text/@id)]"/>
                       </xsl:element>
                     </xsl:otherwise>
                   </xsl:choose>
@@ -113,12 +119,16 @@
                           <xsl:attribute name="class">submenu</xsl:attribute>
                           <xsl:choose>
                             <xsl:when test=". = concat(/buildinfo/@filename ,'.html')">
-                              <xsl:value-of select="/buildinfo/textset/text[@id=$mid]"/>
+                              <xsl:value-of select="/buildinfo/textset/text[@id=$mid]|
+						    /buildinfo/textsetbackup/text[@id=$mid
+						      and not(@id=/buildinfo/textset/text/@id)]"/>
                             </xsl:when>
                             <xsl:otherwise>
                               <xsl:element name="a">
                                 <xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
-                                <xsl:value-of select="/buildinfo/textset/text[@id=$mid]"/>
+                                <xsl:value-of select="/buildinfo/textset/text[@id=$mid]|
+						      /buildinfo/textsetbackup/text[@id=$mid
+						        and not(@id=/buildinfo/textset/text/@id)]"/>
                               </xsl:element>
                             </xsl:otherwise>
                            </xsl:choose>
@@ -352,7 +362,14 @@
 
 
   <!-- Do not copy non-HTML elements to output -->
-  <xsl:template match="timestamp|translator|buildinfo/set|buildinfo/textset|buildinfo/menuset|buildinfo/trlist|buildinfo/localmenuset"/>
+  <xsl:template match="timestamp|
+		       translator|
+		       buildinfo/set|
+		       buildinfo/textset|
+		       buildinfo/textsetbackup|
+		       buildinfo/menuset|
+		       buildinfo/trlist|
+		       buildinfo/localmenuset"/>
 
   <!-- For all other nodes, copy verbatim -->
   <xsl:template match="@*|node()" priority="-1">

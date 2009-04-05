@@ -178,12 +178,15 @@ open (TRANSLATIONS, '>', "$opts{o}/translations.log");
 #   <localmenuset>      <!-- Local menu items for some directories -->
 #     ...
 #   </localmenuset>
-#   <menuset>           <!-- The menu items for the right hand bar -->
+#   <menuset>           <!-- The menu items for the left hand bar -->
 #     ...
 #   </menuset>
 #   <textset>           <!-- The static text set for this language -->
 #     ...
 #   </textset>
+#   <textsetbackup>     <!-- The English textset as backup for missing translations -->
+#     ...
+#   </textsetbackup>
 #   <document>          <!-- The actual document, as read from the XHTML -->
 #     <head>
 #       <title>...</title>
@@ -197,7 +200,7 @@ open (TRANSLATIONS, '>', "$opts{o}/translations.log");
 #
 #  buildinfo/@original    The language code of the original document
 #  buildinfo/@filename    The filename without language or trailing .html
-#  buildinfo/@filename    The path to the file
+#  buildinfo/@dirname    The path to the file
 #  buildinfo/@language    The language that we're building into
 #  buildinfo/@outdated    Set to "yes" if the original is newer than this page
 #  document/@language     The language that this documents is in
@@ -359,6 +362,14 @@ sub process {
       $root->appendChild($menudoc);
       clone_document($menudoc, $localmenu);
   }
+
+  #
+  # Load English backup texts
+  #
+  
+  my $backup = $dom->createElement("textsetbackup");
+  $root->appendChild($backup);
+  clone_document($backup, $opts{i}."/tools/texts-en.xml");
 
   #
   # Transform it, once for every focus!
@@ -548,6 +559,7 @@ sub process {
 	my $textdoc = $dom->createElement("textset");
 	$root->appendChild($textdoc);
 	clone_document($textdoc, $opts{i}."/tools/texts-$textlang.xml");
+
 
 	#
         # And then we do the same thing for the menues. But first we take the

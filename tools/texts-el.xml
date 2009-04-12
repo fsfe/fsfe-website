@@ -4,11 +4,11 @@
   <text id="copyright">Copyright (C) FSFE.</text>
   <text id="lastchanged"> Τελευταία αλλαγή: </text>
   <text id="translator1a">Ευχαριστούμε </text>
-  <text id="translator1b"> για αυτή την ανεπίσημη μετάφραση. </text>
+  <text id="translator1b"> για αυτήν τη μετάφραση. </text>
   <text id="translator2">Αυτή είναι μια ανεπίσημη μετάφραση. </text>
   <text id="translator3a">Παρακαλούμε ανατρέξτε στο </text>
-  <text id="translator3b">πρωτότυπο</text>
-  <text id="translator3c"> για την επίσημη ερμηνεία αυτής της σελίδας.</text>
+  <text id="translator3b">πρωτότυπο κείμενο</text>
+  <text id="translator3c"> αυτής της σελίδας.</text>
   <text id="permission">
     Η κατά λέξη αντιγραφή και αναδιανομή ολόκληρου του άρθρου επιτρέπεται
     σε οποιοδήποτε μέσο, δεδομένου πως αυτή η σημείωση θα διατηρηθεί.
@@ -19,41 +19,44 @@
   </text>
   <text id="outdated">
     <strong>Προειδοποίηση: </strong>
-    Αυτή η σελίδα μπορεί να είναι παλαιότερη της αυθεντικής. Παρακαλούμε χρησιμοποιήστε
-    <a href="/contribute/contribute.html">αυτή τη σελίδα</a> για να δείτε πώς μπορείτε να βοηθήσετε
-    στις μεταφράσεις και σε άλλες ανάγκες.
+    Αυτή η σελίδα μπορεί να είναι παλαιότερη της πρωτότυπης. Παρακαλούμε χρησιμοποιήστε
+    <a href="/contribute/contribute.html">αυτήν τη σελίδα</a> για να δείτε πώς μπορείτε
+    να βοηθήσετε στις μεταφράσεις και σε άλλες ανάγκες.
   </text>
   <text id="notranslation">
     <strong>Προειδοποίηση: </strong>
     Αυτή η σελίδα δεν έχει μεταφραστεί ακόμα. Αυτό που βλέπετε παρακάτω
     είναι η πρωτότυπη έκδοση της σελίδας. Παρακαλούμε χρησιμοποιήστε
-    <a href="/contribute/contribute.html">αυτή τη σελίδα</a> για να δείτε πώς μπορείτε να βοηθήσετε
-    στις μεταφράσεις και σε άλλες ανάγκες.
+    <a href="/contribute/contribute.html">αυτήν τη σελίδα</a> για να δείτε πώς μπορείτε
+    να βοηθήσετε στις μεταφράσεις και σε άλλες ανάγκες.
   </text>
-  <text id="menu1/about">Σχετικά</text>
+  <text id="menu1/about">Περίγραμμα</text>
   <text id="menu1/projects">Εργασίες</text>
   <text id="menu1/documents">Έγγραφα</text>
   <text id="menu1/events">Εκδηλώσεις</text>
   <text id="menu1/help">Συμμετοχή</text>
-  <text id="menu1/help/1-fellow">ως μέλος</text>
   <text id="menu1/help/2-translator">σε μεταφράσεις</text>
   <text id="menu1/help/3-webmaster">στη διαχείριση ιστού</text>
   <text id="menu1/help/4-booth_volunteer">με εθελοντική παρουσία στα περίπτερα</text>
   <text id="menu1/help/5-intern">σε θέσεις μαθητείας</text>
   <text id="menu1/donate">Δωρεές</text>
-  <text id="menu1/order">Παραγγελίες</text>
+  <text id="menu1/order">Κατάστημα</text>
   <text id="menu1/contact">Επικοινωνία</text>
   <text id="menu1/associates">Συνέταιροι</text>
   <text id="menu1/lists">Κατάλογοι παραληπτών αλληλογραφίας</text>
   <text id="menu1/news">Ειδήσεις</text>
   <text id="menu1/press">Πληροφορίες για τον Τύπο</text>
   <text id="menu1/thankgnus">Ευχαριστίες GNU</text>
-  <text id="menu2/priority">Σύνδεσμοι προτεραιότητας</text>
-  <text id="menu2/priority/fellowship">Η Κοινότητα</text>
-  <text id="menu2/priority/ftf">Η Ομάδα Εργασίας Ελευθερίας</text>
-  <text id="menu2/priority/os">Τα Ανοιχτά Πρότυπα</text>
-  <text id="menu3/sisters">Οι ομοθυγατρικοί μας οργανισμοί</text>
-  <text id="menu3/sisters/fsf">FSF</text>
-  <text id="menu3/sisters/fsf_india">FSF India</text>
-  <text id="menu3/sisters/fsf_la">FSF Latin America</text>
+  <text id="menu2/fellowship">Η Κοινότητα</text>
+  <text id="menu2/fellowship/1-wiki">Wiki</text>
+  <text id="menu2/fellowship/2-planet">Συγκέντρωση ιστολογίων</text>
+  <text id="menu2/fellowship/3-join">Ένταξη</text>
+  <text id="menu3/priority">Σύνδεσμοι προτεραιότητας</text>
+  <text id="menu3/priority/ftf">Η Ομάδα Εργασίας Ελευθερίας</text>
+  <text id="menu3/priority/os">Τα Ανοιχτά Πρότυπα</text>
+  <text id="menu3/priority/pdfreaders">PDFreaders</text>
+  <text id="menu4/sisters">Οι ομοθυγατρικοί μας οργανισμοί</text>
+  <text id="menu4/sisters/fsf">FSF</text>
+  <text id="menu4/sisters/fsf_india">FSF India</text>
+  <text id="menu4/sisters/fsf_la">FSF Latin America</text>
 </textset>

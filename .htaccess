@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteRule ^(.*).no.html /$1.nb.html [redirect=permanent]
+RewriteRule ^(.*).no.html $1.nb.html [redirect=permanent]
 RewriteRule ^standards(.*) /projects/os$1 [redirect=permanent]
 RewriteRule ^education(.*) /projects/education$1 [redirect=permanent]
 RewriteRule ^ftf(.*) /projects/ftf$1 [redirect=permanent]

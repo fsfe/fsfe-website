@@ -63,7 +63,7 @@ our %languages = (
   de => 'Deutsch',
   el => '&#917;&#955;&#955;&#951;&#957;&#953;&#954;&#940;',
   en => 'English',
-  es => 'Español',       
+  es => 'Español',
   et => 'Eesti',
   fi => 'Suomi',
   fr => 'Français',
@@ -78,6 +78,7 @@ our %languages = (
   pt => 'Português',
   ro => 'Român&#259;',
   ru => '&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;',
+  sk => 'Sloven&#269;ina',
   sl => 'Sloven&#353;&#269;ina',
   sq => 'Shqip',
   sr => 'Srpski',
@@ -366,7 +367,7 @@ sub process {
   #
   # Load English backup texts
   #
-  
+
   my $backup = $dom->createElement("textsetbackup");
   $root->appendChild($backup);
   clone_document($backup, $opts{i}."/tools/texts-en.xml");
@@ -627,7 +628,7 @@ sub process {
         link("$opts{o}/$dir/$file.$lang.html", "$opts{o}/$dir/$file.html.$lang")
 		unless $opts{n};
     }
-  }    
+  }
   print STDERR "\n" unless $opts{q};
 }
 
@@ -636,7 +637,7 @@ close (TRANSLATIONS);
 
 print STDERR "Fixing index links\n" unless $opts{q};
 
-while (my ($path, undef) = each %countries) {   
+while (my ($path, undef) = each %countries) {
   my @dirs = File::Find::Rule->directory()
                              ->in($opts{o}."/$path");
   foreach (@dirs) {

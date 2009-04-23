@@ -603,9 +603,16 @@ sub process {
               $href =~ s/http:\/\/www.fsfeurope.org//;
             }
           }
-          if ($href !~ /^http/) {
-            if (($href =~ /\.html$/) && ($href !~ /\.[a-z][a-z]\.html$/)) {
-             $href =~ s/\.html$/\.$lang.html/;
+          if (($href !~ /^http/) && ($href !~ /^#/)) {
+	    # Save possible anchor and remove it from URL
+	    my $anchor = $href;
+	    if (!($anchor =~ s/.*#/#/)) {
+	      $anchor = "";
+	    }
+	    $href =~ s/#.*//;
+	    # proces URL
+	    if (($href =~ /\.html$/) && ($href !~ /\.[a-z][a-z]\.html$/)) {
+              $href =~ s/\.html$/\.$lang.html/;
             } elsif (($href =~ /\.rss$/) && ($href !~ /\.[a-z][a-z]\.rss$/)) {
               $href =~ s/\.rss$/\.$lang.rss/;
             } else {
@@ -615,6 +622,8 @@ sub process {
                 $href .= ".$lang.html";
               }
             }
+	    # replace anchor
+	    $href .= $anchor;
             $_->setAttribute("href", $href);
           }
         }

@@ -24,7 +24,7 @@
 # Constants
 # -----------------------------------------------------------------------------
 
-srcroot="http://www.fsfeurope.org/source"
+srcroot="http://www.fsfe.org/source"
 cvsroot="http://savannah.gnu.org/cgi-bin/viewcvs/fsfe/fsfe"
 
 

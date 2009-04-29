@@ -598,9 +598,9 @@ sub process {
         #
         foreach ($results->documentElement->getElementsByTagName("a")) {
           my $href = $_->getAttribute("href");
-          if ($href =~ /^http:\/\/www.fsfeurope.org/) {
+          if ($href =~ /^http:\/\/www.fsfe.org/) {
             if ($_->textContent != "Our global work") {
-              $href =~ s/http:\/\/www.fsfeurope.org//;
+              $href =~ s/http:\/\/www.fsfe.org//;
             }
           }
           if (($href !~ /^http/) && ($href !~ /^#/)) {

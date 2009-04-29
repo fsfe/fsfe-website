@@ -2,7 +2,7 @@
 # -----------------------------------------------------------------------------
 # Web page build script
 # -----------------------------------------------------------------------------
-# This script is called every 5 minutes on www.fsfeurope.org to rebuild the
+# This script is called every 5 minutes on www.fsfe.org to rebuild the
 # HTML pages from the .xhtml, .xml and .xsl source files. Most of the work,
 # however, is done by the Perl script build.pl.
 # -----------------------------------------------------------------------------
@@ -21,12 +21,12 @@ if [[ -n "$BUILD_STARTED" && "10#${BUILD_STARTED}" -gt 30 && ! -f ${STATUS}/${AL
   
   Please:
   
-  - Check the build script log at http://status.fsfeurope.org/web/
+  - Check the build script log at http://status.fsfe.org/web/
   - Fix the cause of the problem
   - Kill build.pl processes older than 30 minutes
   - Delete the lockfile ${STATUS}/${ALARM_LOCKFILE}
 
-  " | mail -s "www.fsfeurope.org: build.pl warning" system-hackers@fsfeurope.org
+  " | mail -s "www.fsfe.org: build.pl warning" system-hackers@fsfeurope.org
 
   # This lockfile avoids sending the mail alarm more than once;
   # it must be deleted when the problem is solved.

@@ -82,7 +82,7 @@ echo "$(date)  Building HTML pages."
 touch ${STATUS}/last-run
 
 if test "x`hostname`" = "xekeberg"; then
-  tools/build.pl -t 2 -q -o ${TMP} -i .
+  tools/build.pl -t 16 -q -o ${TMP} -i .
 elif test "x`hostname`" = "xberzelius"; then
   tools/build.pl -t 2 -q -o ${TMP} -i .
 else

@@ -21,9 +21,9 @@ if [[ -n "$BUILD_STARTED" && "10#${BUILD_STARTED}" -gt 30 && ! -f ${STATUS}/${AL
   
   Please:
   
+  - run 'ps aux | grep build.pl' and kill build.pl processes older than 30 minutes
   - Check the build script log at http://status.fsfe.org/web/
   - Fix the cause of the problem
-  - Kill build.pl processes older than 30 minutes
   - Delete the lockfile ${STATUS}/${ALARM_LOCKFILE}
 
   " | mail -s "www.fsfe.org: build.pl warning" system-hackers@fsfeurope.org
@@ -82,7 +82,7 @@ echo "$(date)  Building HTML pages."
 touch ${STATUS}/last-run
 
 if test "x`hostname`" = "xekeberg"; then
-  tools/build.pl -t 16 -q -o ${TMP} -i .
+  tools/build.pl -t 2 -q -o ${TMP} -i .
 elif test "x`hostname`" = "xberzelius"; then
   tools/build.pl -t 2 -q -o ${TMP} -i .
 else

@@ -24,7 +24,7 @@
   <!-- HTML head -->
   <xsl:template match="head">
     <xsl:copy>
-      <![CDATA[<meta name="robots" content="index, follow" />]]>
+      <meta name="robots" content="index, follow" />
       <link rel="stylesheet" media="all" href="/fsfeurope.css" type="text/css" />
       <link rel="stylesheet" media="print" href="/print.css" type="text/css" />
       <link rel="icon" href="/graphics/fsfeurope.ico" type="image/x-icon" />

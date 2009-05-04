@@ -17,6 +17,7 @@ if (!$query->param("_shipping")) {
 my $date = strftime "%Y-%m-%d", localtime;
 my $time = strftime "%s", localtime;
 my $reference = "order.$date." . substr $time, -5;
+my $buyer = $query->param("name");
 my $amount = 0;
 
 # -----------------------------------------------------------------------------
@@ -29,7 +30,7 @@ if (not $query->param("url")) {
   print MAIL "From: web\@fsfeurope.org\n";
   print MAIL "To: order\@fsfeurope.org\n";
   print MAIL "Cc: mueller\@fsfeurope.org\n";
-  print MAIL "Subject: Web order\n\n";
+  print MAIL "Subject: Web order $reference $buyer\n\n";
   print MAIL "$reference\n\n";
   foreach $name ($query->param) {
     $value = $query->param($name);

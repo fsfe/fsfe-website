@@ -17,6 +17,9 @@
       <xsl:attribute name="lang">
         <xsl:value-of select="/buildinfo/@language"/>
       </xsl:attribute>
+      <xsl:if test="/buildinfo/@language='ar'">
+        <xsl:attribute name="dir">rtl</xsl:attribute>
+      </xsl:if>
       <xsl:apply-templates select="node()"/>
     </xsl:element>
   </xsl:template>

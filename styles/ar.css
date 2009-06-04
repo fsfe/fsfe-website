@@ -6,3 +6,8 @@
 	margin-right: 220px;
 	margin-left: 0;
 }
+
+#menu ul {
+	background-image: url("/graphics/corner-rtl.png");
+	background-position: top right;
+}

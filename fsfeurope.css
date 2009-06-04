@@ -226,42 +226,78 @@ dl dd {
 }
 
 .tagline {
-  color: #202D79;
-  font-size: 150%;
-  font-weight: bold;
-  text-align: center;
+    color: #202D79;
+    font-size: 150%;
+    font-weight: bold;
+    text-align: center;
 }
 
 .toolbox {
-	background-color: rgb(244,248,250);
-	float: right;
-	font-size: 85%;
-	margin: .5em 0 0 1em;
-	padding: 1em;
-	width: 12em;
+    background-color: rgb(244,248,250);
+    float: right;
+    font-size: 85%;
+    margin: .5em 0 0 1em;
+    padding: 1em;
+    width: 12em;
 }
 
 p.terminal,
 pre.terminal,
 p.file,
 pre.file {
-	font-family: monospace;
-	padding: .5em 1em;
+    font-family: monospace;
+    padding: .5em 1em;
 }
 
 p.terminal,
 pre.terminal {
-	background-color: rgb(50,50,50);
-	border-left: 10px solid rgb(97,97,97);
-	color: white;
+    background-color: rgb(50,50,50);
+    border-left: 10px solid rgb(97,97,97);
+    color: white;
 }
 
 p.file,
 pre.file {
-	background-color: rgb(244,248,250);
-	border-left: 10px solid rgb(141,172,190);
-	color: rgb(50,50,50);
+    background-color: rgb(244,248,250);
+    border-left: 10px solid rgb(141,172,190);
+    color: rgb(50,50,50);
 }
+
+
+/* tables */
+table {
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    padding: .2em .5em;
+}
+
+table th+th,
+table td+td {
+    border-left: 1px solid #ccc;
+}
+
+table th {
+    border-bottom: 1px solid #202d79;
+    border-top: 1px solid #202d79;
+    color: #202d79;
+    background-color: #f4f8fa;
+}
+
+table td {
+    border-bottom: 1px solid #ccc;
+}
+
+table td.positive {
+    background-color: #d0ffd0;
+}
+
+table td.negative {
+    background-color: #ffd0d0;
+}
+
 
 
 /* ------------------------------------------------------------------------- */
@@ -374,33 +410,6 @@ ul.spaced li, ol.spaced li { /* Spaced listings, use this instead of <br /> */
 .aboutfsfe { /* For press release section "About the FSFE" */
   font-style: italic;
   margin-left: 2em;
-}
-
-
-/* Wordlist (/contribution/translators/wordlist.en.xhtml) */
-.wordlist {
-	border-collapse: collapse;
-}
-
-.wordlist th,
-.wordlist td {
-	padding: .2em .5em;
-}
-
-.wordlist th+th,
-.wordlist td+td {
-	border-left: 1px solid #ccc;
-}
-
-.wordlist th {
-	border-bottom: 1px solid #202d79;
-	border-top: 1px solid #202d79;
-	color: #202d79;
-	background-color: #f4f8fa;
-}
-
-.wordlist td {
-	border-bottom: 1px solid #ccc;
 }
 
 

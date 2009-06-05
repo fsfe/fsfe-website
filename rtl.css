@@ -14,6 +14,11 @@
 	padding-left: 0;
 }
 
+#menu ul ul {
+	padding-right: 0.6em;
+	padding-left: 0.6em;
+}
+
 #language {
 	margin-right: 220px;
 	margin-left: 0;

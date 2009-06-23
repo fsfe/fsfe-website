@@ -9,9 +9,9 @@ use POSIX qw(strftime);
 
 my %names = (
   "coughlan" => "Shane Coughlan",
-  "degroot" => "Adrian de Groot",
   "gerloff" => "Karsten Gerloff",
   "greve" => "Georg Greve",
+  "groot" => "Adrian de Groot",
   "grote" => "Torsten Grote",
   "harmuth" => "Stefan Harmuth",
   "holz" => "Christian Holz",
@@ -19,13 +19,13 @@ my %names = (
   "kersten" => "Rainer Kersten",
   "kirschner" => "Matthias Kirschner",
   "machon" => "Pablo Machón",
+  "morant" => "Benjamin Morant",
   "mueller" => "Reinhard Müller",
   "oberg" => "Jonas Öberg",
   "ohnewein" => "Patrick Ohnewein",
   "reiter" => "Bernhard Reiter",
   "sandklef" => "Henrik Sandklef",
-  "morant" => "Benjamin Morant",
-  "west" => "Graeme West",
+  "weiden" => "Fernanda Weiden",
 );
 
 # -----------------------------------------------------------------------------
@@ -33,12 +33,12 @@ my %names = (
 # -----------------------------------------------------------------------------
 
 my %responsible = (
-  "ADMIN-DUS" => "council",
-  "ADMIN-TECH" => "council",
-  "ADMIN-GA" => "council",
-  "PA-MATERIAL" => "council",
-  "PA-TRAVEL" => "council",
-  "PA-GNUVOX" => "ohnewein",
+  "ADMIN-DUS" => "holz",
+  "ADMIN-TECH" => "holz",
+  "ADMIN-GA" => "holz",
+  "PA-MATERIAL" => "holz",
+  "PA-TRAVEL" => "holz",
+  "PA-GNUVOX" => "holz",
   "FELLOWSHIP-MATERIAL" => "kirschner",
   "FELLOWSHIP-CONF" => "kirschner",
   "FELLOWSHIP-LOCAL" => "kirschner",
@@ -47,8 +47,8 @@ my %responsible = (
   "FTF-CONF" => "coughlan",
   "FTF-TRANS" => "coughlan",
   "FTF-ECONOMIC" => "coughlan",
-  "POLICY-TRAVEL" => "greve",
-  "MERCHANDISE" => "council",
+  "POLICY-TRAVEL" => "gerloff",
+  "MERCHANDISE" => "holz",
 );
 
 # -----------------------------------------------------------------------------

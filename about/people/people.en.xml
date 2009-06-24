@@ -34,7 +34,7 @@
     <link>/about/coughlan/coughlan.html</link>
   </person>
 
-  <person id="adridg" member="yes" team="yes">
+  <person id="degroot" member="yes" team="yes">
     <name>Adriaan de Groot</name>
     <country>NL</country>
     <function project="ftf">deputy</function>
@@ -53,18 +53,18 @@
   <person id="gerloff" member="yes" team="yes">
     <name>Karsten Gerloff</name>
     <country>DE</country>
-    <function>gerloff</function>
+    <function>president</function>
+    <function project="os">coordinator</function>
+    <function project="igf">coordinator</function>
+    <function project="wipo">coordinator</function>
     <email>gerloff (at) fsfeurope (dot) org</email>
-    <link>http://blogs.fsfe.org/gerloff/</link>
+    <link>/about/gerloff/gerloff.html</link>
   </person>
 
   <person id="greve" member="yes" chapter_de="yes" team="yes">
     <name>Georg C. F. Greve</name>
     <country>CH</country>
-    <function>president</function>
-    <function project="os">coordinator</function>
-    <function project="igf">coordinator</function>
-    <function project="wipo">coordinator</function>
+    <function>greve</function>
     <email>greve (at) fsfeurope (dot) org</email>
     <link>/about/greve/greve.html</link>
   </person>
@@ -80,7 +80,7 @@
   <person id="holz" member="no" team="yes">
     <name>Christian Holz</name>
     <country>DE</country>
-    <function>executive_director</function>
+    <function>executive-director</function>
     <email>holz (at) fsfeurope (dot) org</email>
     <link>/about/holz/holz.html</link>
   </person>
@@ -145,7 +145,6 @@
   <person id="machon" member="yes" team="yes">
     <name>Pablo Machón</name>
     <country>ES</country>
-    <function>vice-president</function>
     <function country="ES">coordinator</function>
     <email>machon (at) fsfeurope (dot) org</email>
   </person>
@@ -232,16 +231,15 @@
   <person id="weiden" member="yes" team="yes">
     <name>Fernanda Weiden</name>
     <country>CH</country>
-    <function>sysadmin</function>
+    <function>vice-president</function>
     <email>weiden (at) fsfeurope (dot) org</email>
-    <link>http://blogs.fsfe.org/nanda/</link>
+    <link>/about/nanda/nanda.html</link>
   </person>
 
   <person id="west" team="yes">
     <name>Graeme West</name>
     <country>CH</country>
     <country>GB</country>
-    <function>intern</function>
     <function project="ftf">deputy</function>
     <email>west (at) fsfeurope (dot) org</email>
     <link>http://blogs.fsfe.org/west/</link>

@@ -1,3 +1,4 @@
 RewriteEngine On
 RewriteRule ^maffulli /about/team [redirect=permanent]
 RewriteRule ^jakobs /about/team [redirect=permanent]
+RewriteRule ^nanda /about/weiden [redirect=permanent]

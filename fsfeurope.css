@@ -148,6 +148,10 @@ dl dd {
   margin: 0;
 }
 
+#meun a:hover img {
+	background: transparent;
+}
+
 
 /* ------------------------------------------------------------------------- */
 /* Localmenu                                                                 */

@@ -1,24 +1,28 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-<!-- Please keep each list alphabetically ordered.  Emacs users want -->
-<!-- to set sort-fold-case to true and run sort-lines on a region -->
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Please keep each list alphabetically ordered.  Emacs users want to set
+  sort-fold-case to true and run sort-lines on a region.  Vi+ users can
+  visually select the list and use the :sort command.
+-->
 
 <donorset>
   <patrons>
-    <table cellpadding="10">
+    <table>
       <tr>
-        <td><img src="donors/freiheit.png" alt="freiheit.com"/></td>
+        <td><img src="donors/freiheit.png" alt="" /></td>
         <td>freiheit.com technologies</td>
       </tr>
       <tr>
-        <td><img src="donors/google.jpg" alt="google.com"/></td>
+        <td><img src="donors/google.jpg" alt="" /></td>
         <td>Google</td>
       </tr>
       <tr>
-        <td><img src="donors/linuxhotel.png" alt="Linuxhotel"/></td>
+        <td><img src="donors/linuxhotel.png" alt="" /></td>
         <td>Linuxhotel Villa Vogelsang</td>
       </tr>
       <tr>
-        <td><img src="donors/nlnet.png" alt="NLnet"/></td>
+        <td><img src="donors/nlnet.png" alt="" /></td>
         <td>Stichting NLnet</td>
       </tr>
     </table>
@@ -30,34 +34,35 @@
   </sustainingcontributors>
 
   <contributors>
-	<li>Christian Barth</li>
-	<li>Håkon Wium Lie</li>
-	<li>inmedias.it GmbH</li>
-	<li>Joachim Zobel</li>
-	<li>Univention GmbH</li>
-	<li>Valentin Hilbig</li>
+  	<li>Christian Barth</li>
+  	<li>Håkon Wium Lie</li>
+  	<li>inmedias.it GmbH</li>
+  	<li>Joachim Zobel</li>
+  	<li>Univention GmbH</li>
+  	<li>Valentin Hilbig</li>
   </contributors>
 
   <supporters>
-	<li>Bernhard Stosik</li>
-	<li>Communitare GmbH</li>
-	<li>Fabian Schury</li>
-	<li>hippie-online.de</li>
-	<li>Holger Doepner</li>
-	<li>Hostsharing eG</li>
-	<li>Ingmar Redel</li>
-	<li>Jan Brinkmann</li>
-	<li>Joachim Krantz</li>
-	<li>Michael Mosmann</li>
-	<li>Network Theory Ltd.</li>
-    	<li>OwnIT</li>
-    	<li>puma-it.com</li>
-	<li>Roland Hafner</li>
-	<li>Thiemo Nagel</li>
-	<li>Torsten Loehr</li>
-	<li>Ulrich Walter</li>
-	<li>Uwe Henschel</li>
-	<li>Oskar Welzl</li>
-	<li>Werner Wiethege</li>
+  	<li>Bernhard Stosik</li>
+  	<li>Communitare GmbH</li>
+  	<li>Fabian Schury</li>
+  	<li>hippie-online.de</li>
+  	<li>Holger Doepner</li>
+  	<li>Hostsharing eG</li>
+  	<li>Ingmar Redel</li>
+  	<li>Jan Brinkmann</li>
+  	<li>Joachim Krantz</li>
+  	<li>Michael Mosmann</li>
+  	<li>Network Theory Ltd.</li>
+   	<li>OwnIT</li>
+   	<li>puma-it.com</li>
+  	<li>Roland Hafner</li>
+  	<li>Thiemo Nagel</li>
+  	<li>Torsten Loehr</li>
+  	<li>Ulrich Walter</li>
+  	<li>Uwe Henschel</li>
+  	<li>Oskar Welzl</li>
+  	<li>Werner Wiethege</li>
   </supporters>
 </donorset>
+

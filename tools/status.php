@@ -7,6 +7,7 @@
 
 		body {
 			background-color: white;
+			color: rgb(50,50,50);
 			font-family: sans-serif;
 		}
 
@@ -38,8 +39,13 @@ echo htmlspecialchars($statusfinished);
 ?>
 	</pre>
 
-	<p><a href="./status-log.txt">Previously finished builds</a></p>
-	<p><a href="http://cvs.savannah.gnu.org/viewvc/fsfe/fsfe/?root=Web">CVS web interface</a></p>
+
+	<h2>Other tools</h2>
+
+	<ul>
+		<li><a href="./status-log.txt">Previously finished builds</a></li>
+		<li><a href="http://cvs.savannah.gnu.org/viewvc/fsfe/fsfe/?root=Web">CVS web interface</a></li>
+	</ul>
 
 </body>
 </html>

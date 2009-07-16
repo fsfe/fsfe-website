@@ -1,30 +1,46 @@
+<!doctype html>
 <html>
-  <title>Web server status</title>
-  <body>
+<head>
+	<meta charset="utf-8" />
+  <title>Build script output / Web server status</title>
+	<style>
 
-    <h1>Web server status</h1>
+		body {
+			background-color: white;
+			font-family: sans-serif;
+		}
 
-    <h2>Last attempted or currently running build</h2>
+	</style>
+</head>
+ <body>
 
-    <pre>
+	<h1>Build script output</h1>
+
+	<p><a href="http://status.fsfe.org/">« Back to <em>Web server status</em></a></p>
+
+
+	<h2>Last attempted or currently running build</h2>
+
+	<pre>
 <?php 
-$status=file_get_contents("status.txt");
+$status = file_get_contents("status.txt");
 echo htmlspecialchars($status);
 ?>
-    </pre>
+	</pre>
 
-    <h2>Last finished build</h2>
 
-    <pre>
+	<h2>Last finished build</h2>
+
+	<pre>
 <?php 
-$statusfinished=file_get_contents("status-finished.txt");
+$statusfinished = file_get_contents("status-finished.txt");
 echo htmlspecialchars($statusfinished);
 ?>
-    </pre>
+	</pre>
 
-    <p><a href="./status-log.txt">Previously finished builds</a></p>
+	<p><a href="./status-log.txt">Previously finished builds</a></p>
+	<p><a href="http://cvs.savannah.gnu.org/viewvc/fsfe/fsfe/?root=Web">CVS web interface</a></p>
 
-    <p><a href="http://cvs.savannah.gnu.org/viewvc/fsfe/fsfe/?root=Web">CVS web interface</a></p>
-
-  </body>
+</body>
 </html>
+

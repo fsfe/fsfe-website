@@ -22,22 +22,26 @@
 
 	<h2>Last attempted or currently running build</h2>
 
-	<pre>
+	<p>
+		<pre>
 <?php 
 $status = file_get_contents("status.txt");
 echo htmlspecialchars($status);
 ?>
-	</pre>
+		</pre>
+	</p>
 
 
 	<h2>Last finished build</h2>
 
-	<pre>
+	<p>
+		<pre>
 <?php 
 $statusfinished = file_get_contents("status-finished.txt");
 echo htmlspecialchars($statusfinished);
 ?>
-	</pre>
+		</pre>
+	</p>
 
 
 	<h2>Other tools</h2>

@@ -1,13 +1,22 @@
 <?xml version="1.0"?>
 
 <functionset>
-  <function id="president">Président</function>
-  <function id="vice-president">Vice président</function>
-  <function id="financial-officer">Trésorier</function>
-  <function id="executive-director">Directeur Général</function>
-  <function id="intern">Stagiaire</function>
-  <function id="office">Secrétaire</function>
-  <function id="sysadmin">Administrateur système</function>
-  <function id="coordinator">Coordinateur</function>
-  <function id="deputy">Coordinateur associé</function>
+  <function id="president/f">Président</function>
+  <function id="president/m">Président</function>
+  <function id="vice-president/f">Vice président</function>
+  <function id="vice-president/m">Vice président</function>
+  <function id="financial-officer/f">Trésorier</function>
+  <function id="financial-officer/m">Trésorier</function>
+  <function id="executive-director/f">Directeur Général</function>
+  <function id="executive-director/m">Directeur Général</function>
+  <function id="intern/f">Stagiaire</function>
+  <function id="intern/m">Stagiaire</function>
+  <function id="office/f">Secrétaire</function>
+  <function id="office/m">Secrétaire</function>
+  <function id="sysadmin/f">Administrateur système</function>
+  <function id="sysadmin/m">Administrateur système</function>
+  <function id="coordinator/f">Coordinateur</function>
+  <function id="coordinator/m">Coordinateur</function>
+  <function id="deputy/f">Coordinateur associé</function>
+  <function id="deputy/m">Coordinateur associé</function>
 </functionset>

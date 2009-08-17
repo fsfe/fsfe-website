@@ -68,6 +68,7 @@ our %languages = (
   et => 'Eesti',
   fi => 'Suomi',
   fr => 'Français',
+  hr => 'Hrvatski',
   hu => 'Magyar',
   it => 'Italiano',
   ku => 'Kurdî',

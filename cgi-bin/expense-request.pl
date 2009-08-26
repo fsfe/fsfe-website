@@ -86,11 +86,12 @@ if ($to ne "council") {
   $replyto .= ", council\@fsfeurope.org";
 }
 
-open(MAIL, "|/usr/lib/sendmail -t -f $to\@fsfeurope.org");
+open(MAIL, "|/usr/lib/sendmail -t -f $to\@fsfeurope.org holz\@fsfeurope.org");
 print MAIL "From: $who\@fsfeurope.org\n";
 print MAIL "Reply-To: $replyto\n";
 print MAIL "Mail-Followup-To: $replyto\n";
 print MAIL "To: $to\@fsfeurope.org\n";
+print MAIL "Cc: holz\@fsfeurope.org\n";
 print MAIL "Subject: Expense Request\n";
 print MAIL "Mime-Version: 1.0\n";
 print MAIL "Content-Type: multipart/mixed; boundary=$boundary\n";

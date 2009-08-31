@@ -34,12 +34,12 @@ my %names = (
 # -----------------------------------------------------------------------------
 
 my %responsible = (
-  "ADMIN-DUS" => "holz",
-  "ADMIN-TECH" => "holz",
-  "ADMIN-GA" => "holz",
-  "PA-MATERIAL" => "holz",
-  "PA-TRAVEL" => "holz",
-  "PA-GNUVOX" => "holz",
+  "ADMIN-DUS" => "director",
+  "ADMIN-TECH" => "director",
+  "ADMIN-GA" => "director",
+  "PA-MATERIAL" => "director",
+  "PA-TRAVEL" => "director",
+  "PA-GNUVOX" => "director",
   "FELLOWSHIP-MATERIAL" => "kirschner",
   "FELLOWSHIP-CONF" => "kirschner",
   "FELLOWSHIP-LOCAL" => "kirschner",
@@ -49,7 +49,7 @@ my %responsible = (
   "FTF-TRANS" => "groot",
   "FTF-ECONOMIC" => "groot",
   "POLICY-TRAVEL" => "gerloff",
-  "MERCHANDISE" => "holz",
+  "MERCHANDISE" => "director",
 );
 
 # -----------------------------------------------------------------------------
@@ -86,12 +86,12 @@ if ($to ne "council") {
   $replyto .= ", council\@fsfeurope.org";
 }
 
-open(MAIL, "|/usr/lib/sendmail -t -f $to\@fsfeurope.org holz\@fsfeurope.org");
+open(MAIL, "|/usr/lib/sendmail -t -f $to\@fsfeurope.org director\@fsfeurope.org");
 print MAIL "From: $who\@fsfeurope.org\n";
 print MAIL "Reply-To: $replyto\n";
 print MAIL "Mail-Followup-To: $replyto\n";
 print MAIL "To: $to\@fsfeurope.org\n";
-print MAIL "Cc: holz\@fsfeurope.org\n";
+print MAIL "Cc: director\@fsfeurope.org\n";
 print MAIL "Subject: Expense Request\n";
 print MAIL "Mime-Version: 1.0\n";
 print MAIL "Content-Type: multipart/mixed; boundary=$boundary\n";

@@ -43,6 +43,7 @@ my %responsible = (
   "FELLOWSHIP-MATERIAL" => "kirschner",
   "FELLOWSHIP-CONF" => "kirschner",
   "FELLOWSHIP-LOCAL" => "kirschner",
+  "FELLOWSHIP-OFFICE" => "kirschner",
   "FTF-ZRH" => "groot",
   "FTF-TRAVEL" => "groot",
   "FTF-CONF" => "groot",

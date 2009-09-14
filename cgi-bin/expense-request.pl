@@ -64,17 +64,21 @@ my $what = $query->param("what");
 my $when = $query->param("when");
 my $why = $query->param("why");
 my $estimate = $query->param("estimate");
-my $budget = $query->param("budget");
+my $budget1 = $query->param("budget1");
+my $percent1 = $query->param("percent1");
+my $budget2 = $query->param("budget2");
+my $percent2 = $query->param("percent2");
 my $refund = $query->param("refund");
 
 my $date = strftime "%Y-%m-%d", localtime;
 my $time = strftime "%s", localtime;
 my $reference = "$who.$date." . substr $time, -3;
 
-my $to = $responsible{$budget};
-# if ($to eq $who) {
-#   $to = "council";
-# }
+my $to1 = $responsible{$budget1};
+my $to2 = "";
+if ($budget2 ne "NONE") {
+  $to2 = $responsible{$budget2};
+}
 
 # -----------------------------------------------------------------------------
 # Generate mail to responsible person
@@ -82,16 +86,21 @@ my $to = $responsible{$budget};
 
 my $boundary = "NextPart$reference";
 
-my $replyto = "dus\@office.fsfeurope.org, $who\@fsfeurope.org, $to\@fsfeurope.org";
-if ($to ne "council") {
-  $replyto .= ", council\@fsfeurope.org";
+my $replyto = "dus\@office.fsfeurope.org, $who\@fsfeurope.org, $to1\@fsfeurope.org";
+if ($budget2 ne "NONE") {
+  $replyto .= ", $to2\@fsfeurope.org";
 }
+$replyto .= ", council\@fsfeurope.org";
 
-open(MAIL, "|/usr/lib/sendmail -t -f $to\@fsfeurope.org");
+open(MAIL, "|/usr/lib/sendmail -t -f $who\@fsfeurope.org");
 print MAIL "From: $who\@fsfeurope.org\n";
 print MAIL "Reply-To: $replyto\n";
 print MAIL "Mail-Followup-To: $replyto\n";
-print MAIL "To: $to\@fsfeurope.org\n";
+if ($budget2 ne "NONE") {
+  print MAIL "To: $to1\@fsfeurope.org, $to2\@fsfeurope.org\n";
+} else {
+  print MAIL "To: $to1\@fsfeurope.org\n";
+}
 print MAIL "Cc: director\@fsfeurope.org\n";
 print MAIL "Subject: Expense Request\n";
 print MAIL "Mime-Version: 1.0\n";
@@ -115,7 +124,11 @@ print MAIL "WHAT: $what\n\n";
 print MAIL "WHEN: $when\n\n";
 print MAIL "WHY: $why\n\n";
 print MAIL "ESTIMATE: $estimate\n\n";
-print MAIL "BUDGET: $budget\n\n";
+if ($budget2 ne "NONE") {
+  print MAIL "BUDGET: $budget1 $percentage1\% $budget2 $percentage2\%\n\n";
+} else {
+  print MAIL "BUDGET: $budget1\n\n";
+}
 print MAIL "REFUND CONTACT: $refund\n\n";
 print MAIL "AUTHORISED:\n\n";
 print MAIL "BY:\n\n";

@@ -125,7 +125,7 @@ print MAIL "WHEN: $when\n\n";
 print MAIL "WHY: $why\n\n";
 print MAIL "ESTIMATE: $estimate\n\n";
 if ($budget2 ne "NONE") {
-  print MAIL "BUDGET: $budget1 $percentage1\% $budget2 $percentage2\%\n\n";
+  print MAIL "BUDGET: $budget1 $percent1\% $budget2 $percent2\%\n\n";
 } else {
   print MAIL "BUDGET: $budget1\n\n";
 }

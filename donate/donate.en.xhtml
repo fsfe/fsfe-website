@@ -60,6 +60,7 @@
     </p>
 
     <!-- more options under https://www.paypal.com/en_US/pdf/integration_guide.pdf page 123 -->
+
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="indent">
       <p>
         <input type="hidden" name="cmd" value="_xclick"/>
@@ -68,22 +69,21 @@
       </p>
       <!-- here you can add the amount -->
       <table>
-		  <tr><td> </td><td><input type="text" name="amount" value="" size="5" /> EUR</td><td>
-	            <!-- here you can add the intended purpose -->
-            <input type="hidden" name="item_name" value="Donation"/>
-            <input type="hidden" name="currency_code" value="EUR"/>
-            <input type="hidden" name="cn" value="How do you wish to be listed on our Thank GNUs page?"/>
-            <input type="hidden" name="no_note" value="0"/>
-            <!-- to which site the user is piped after payment -->
-            <!-- <input type="hidden" name="return" value"http://fsfe.org/donate-thank.html"> -->
-            <input type="reset" name="reset" value="Clear"/>
-            <input type="submit" name="submit" value="Donate"/>
-		  </td></tr>
-        <tr>
-
+		  <tr><td> </td><td><input type="text" name="amount" value="" size="5" /> EUR</td>
+			<td>
+	        	    <!-- here you can add the intended purpose -->
+            	<input type="hidden" name="item_name" value="Donation"/>
+            	<input type="hidden" name="currency_code" value="EUR"/>
+            	<input type="hidden" name="cn" value="How do you wish to be listed on our Thank GNUs page?"/>
+            	<input type="hidden" name="no_note" value="0"/>
+            	<!-- to which site the user is piped after payment -->
+            	<!-- <input type="hidden" name="return" value"http://fsfe.org/donate-thank.html"> -->
+            	<input type="reset" name="reset" value="Clear"/>
+            	<input type="submit" name="submit" value="Donate"/>
+			</td>
+		</tr>
       </table>
     </form>
-
 
 
 	 <h3>Check drawn onto a US- or UK-bank</h3>

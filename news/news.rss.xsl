@@ -5,8 +5,8 @@
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:dt="http://xsltsl.org/date-time"
-                xmlns:weekdays="*** Weekdays ***"
-                xmlns:months="*** Months ***">
+                xmlns:weekdays="."
+                xmlns:months=".">
 
   <xsl:import href="date-time.xsl" />
 
@@ -22,13 +22,13 @@
   <!-- ======== -->
 
   <weekdays:weekday-names>
-    <weekdays:day ref="1">Sun</weekdays:day>
-    <weekdays:day ref="2">Mon</weekdays:day>
-    <weekdays:day ref="3">Tue</weekdays:day>
-    <weekdays:day ref="4">Wed</weekdays:day>
-    <weekdays:day ref="5">Thu</weekdays:day>
-    <weekdays:day ref="6">Fri</weekdays:day>
-    <weekdays:day ref="7">Sat</weekdays:day>
+    <weekdays:day ref="1">Mon</weekdays:day>
+    <weekdays:day ref="2">Tue</weekdays:day>
+    <weekdays:day ref="3">Wed</weekdays:day>
+    <weekdays:day ref="4">Thu</weekdays:day>
+    <weekdays:day ref="5">Fri</weekdays:day>
+    <weekdays:day ref="6">Sat</weekdays:day>
+    <weekdays:day ref="7">Sun</weekdays:day>
   </weekdays:weekday-names>
 
   <!-- ====== -->

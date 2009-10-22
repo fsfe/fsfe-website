@@ -39,13 +39,14 @@ use Fcntl ':flock';
 # This also says that documents in the directory /se should be considered
 # as having the Swedish version as the original, and so on.
 #
-our %countries = (
-  global => 'en',
-  de => 'de',
-  es => 'es',
-  it => 'it',
-  fr => 'fr',
-  se => 'sv' );
+our %countries = (global => 'en');
+#our %countries = (
+#  global => 'en',
+#  de => 'de',
+#  es => 'es',
+#  it => 'it',
+#  fr => 'fr',
+#  se => 'sv' );
 
 #
 # This is a hash of all the languages that we have translations into, and their

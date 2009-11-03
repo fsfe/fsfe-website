@@ -20,11 +20,13 @@ my %names = (
   "kersten" => "Rainer Kersten",
   "kirschner" => "Matthias Kirschner",
   "machon" => "Pablo Machón",
+  "mierlus" => "Alina Mierlus",
   "morant" => "Benjamin Morant",
   "mueller" => "Reinhard Müller",
   "oberg" => "Jonas Öberg",
   "ohnewein" => "Patrick Ohnewein",
   "reiter" => "Bernhard Reiter",
+  "roy" => "Hugo Roy",
   "sandklef" => "Henrik Sandklef",
   "weiden" => "Fernanda Weiden",
 );

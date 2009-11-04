@@ -2,16 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-  <title>Build script output / Web server status</title>
-	<style>
-
-		body {
-			background-color: white;
-			color: rgb(50,50,50);
-			font-family: sans-serif;
-		}
-
-	</style>
+  <title>Build script output</title>
 </head>
  <body>
 

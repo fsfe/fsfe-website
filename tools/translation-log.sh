@@ -79,12 +79,17 @@ done
 for file in ${infile}.*; do
   language=${file##*.}
   (
+    echo "<!doctype html>"
     echo "<html>"
     echo "  <head>"
+    echo "    <meta charset=\"utf-8\" />"
     echo "    <title>Translation status for ${language}</title>"
     echo "  </head>"
     echo "  <body>"
     echo "    <h1>Translation status for ${language}</h1>"
+    echo "    <p>"
+    echo "      <a href=\"translations.html\">« Back to <em>Translation status overview</em></a>"
+    echo "    </p>"
     lastgroup=""
     sort --reverse ${file} | while read group date2 wantfile date1 havefile; do
       if [ "${group}" != "${lastgroup}" ]; then
@@ -172,13 +177,29 @@ done
 grep --no-filename "^outdated" ${infile}.* \
   | sort --key=2 \
   | (
+    echo "<!doctype html>"
     echo "<html>"
     echo "  <head>"
+    echo "    <meta charset=\"utf-8\" />"
     echo "    <title>Hit parade of outdated translations</title>"
+    echo "    <style>"
+    echo "      table,"
+    echo "      th,"
+    echo "      td {"
+    echo "        border: 1px outset gray;"
+    echo "      }"
+    echo "      th,"
+    echo "      td {"
+    echo "        padding: 3px;"
+    echo "      }"
+    echo "    </style>"
     echo "  </head>"
     echo "  <body>"
     echo "    <h1>Hit parade of outdated translations</h1>"
-    echo "    <table border=\"1\" cellspacing=\"0\" cellpadding=\"3\">"
+    echo "    <p>"
+    echo "      <a href=\"translations.html\">« Back to <em>Translation status overview</em></a>"
+    echo "    </p>"
+    echo "    <table>"
     echo "      <tr>"
     echo "        <th colspan=\"3\">translated file</th>"
     echo "        <th colspan=\"3\">original file</th>"
@@ -212,26 +233,43 @@ grep --no-filename "^outdated" ${infile}.* \
 # -----------------------------------------------------------------------------
 
 (
+  echo "<!doctype html>"
   echo "<html>"
   echo "  <head>"
+  echo "    <meta charset=\"utf-8\" />"
   echo "    <title>Translation status overview</title>"
+  echo "    <style>"
+  echo "      table,"
+  echo "      th,"
+  echo "      td {"
+  echo "        border: 1px outset gray;"
+  echo "      }"
+  echo "      th,"
+  echo "      td {"
+  echo "        padding: 3px;"
+  echo "        text-align: center;"
+  echo "      }"
+  echo "    </style>" 
   echo "  </head>"
   echo "  <body>"
   echo "    <h1>Translation status overview</h1>"
-  echo "    <table border=\"1\" cellspacing=\"0\" cellpadding=\"3\">"
+  echo "    <p>"
+  echo "      <a href=\"http://status.fsfe.org/\">« Back to <em>Web server status</em></a>"
+  echo "    </p>"
+  echo "    <table>"
   echo "      <tr>"
-  echo "        <th align=\"center\">language</td>"
-  echo "        <th align=\"center\">outdated translations</td>"
-  echo "        <th align=\"center\">missing translations</td>"
+  echo "        <th>language</td>"
+  echo "        <th>outdated translations</td>"
+  echo "        <th>missing translations</td>"
   echo "      </tr>"
   for file in ${infile}.*; do
     language=${file##*.}
     outdated=$(grep "^outdated" ${file} | wc --lines)
     missing=$(grep "^missing" ${file} | wc --lines)
     echo "      <tr>"
-    echo "        <td align=\"center\"><a href=\"${language}.html\">${language}</a></td>"
-    echo "        <td align=\"center\">${outdated}</td>"
-    echo "        <td align=\"center\">${missing}</td>"
+    echo "        <td><a href=\"${language}.html\">${language}</a></td>"
+    echo "        <td>${outdated}</td>"
+    echo "        <td>${missing}</td>"
     echo "      </tr>"
   done
   echo "    </table>"
@@ -242,3 +280,4 @@ grep --no-filename "^outdated" ${infile}.* \
   echo "  </body>"
   echo "</html>"
 ) > $outdir/translations.html
+

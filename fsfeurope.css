@@ -237,6 +237,14 @@ dl dd {
   text-align: center;
 }
 
+.fineprint {
+	color: rgb(120,120,120);
+	font-size: 90%;
+	border-top: 1px solid	rgb(220,220,220);
+	padding: 1em .5em;
+	margin: 1em -.5em;
+}
+
 .tagline {
     color: #202D79;
     font-size: 150%;

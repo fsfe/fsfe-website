@@ -24,6 +24,7 @@
   <menu id="menu2/fellowship/3-join" parent="menu2/fellowship">http://fellowship.fsfe.org/join</menu>
   <menu id="menu3"/>
   <menu id="menu3/priority" parent="menu3"/>
+  <menu id="menu3/priority/com-pkg" parent="menu3/priority">/com-pkg/com-pkg.html</menu>
   <menu id="menu3/priority/ftf" parent="menu3/priority">/projects/ftf/ftf.html</menu>
   <menu id="menu3/priority/os" parent="menu3/priority">/projects/os/os.html</menu>
   <menu id="menu3/priority/pdfreaders" parent="menu3/priority">http://www.pdfreaders.org</menu>

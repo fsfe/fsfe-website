@@ -468,6 +468,13 @@ ul.spaced li, ol.spaced li { /* Spaced listings, use this instead of <br /> */
 
 /* temporary */
 #support {
-	text-align: center;
+  border: 1px #000 solid;
+  padding: 0.3em;
+  background: #FFECBF; 
+  text-align: center;
+  font-weight: bold;
 }
 
+#support h2 {
+  margin-top: .5em;
+}

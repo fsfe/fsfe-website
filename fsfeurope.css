@@ -469,7 +469,7 @@ ul.spaced li, ol.spaced li { /* Spaced listings, use this instead of <br /> */
 /* temporary */
 #support {
   border: 1px solid black;
-  padding: 0.3em;
+  padding: 0.3em 1em 0.3em 1em;
   background: #FFECBF; 
   text-align: center;
   font-weight: bold;

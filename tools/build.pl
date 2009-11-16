@@ -565,6 +565,20 @@ sub process {
 	clone_document($textdoc, $opts{i}."/tools/texts-$textlang.xml");
 
 
+        #
+        # Read the fundraising text, if it exists.
+        #
+	if (-f $opts{i}."/fundraising.$lang.xml") {
+	    my $fundraisingdoc = $dom->createElement("fundraising");
+	    $root->appendChild($fundraisingdoc);
+	    clone_document($fundraisingdoc, $opts{i}."/fundraising.$lang.xml");
+	} elsif (-f $opts{i}."/fundraising.en.xml") {
+	    my $fundraisingdoc = $dom->createElement("fundraising");
+	    $root->appendChild($fundraisingdoc);
+	    clone_document($fundraisingdoc, $opts{i}."/fundraising.en.xml");
+        }
+
+
 	#
         # And then we do the same thing for the menues. But first we take the
         # global menu here, then we add any information that is specific to

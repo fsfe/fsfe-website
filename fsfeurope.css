@@ -195,6 +195,54 @@ dl dd {
 
 
 /* ------------------------------------------------------------------------- */
+/* Fundraising box                                                           */
+/* ------------------------------------------------------------------------- */
+
+#fundraising {
+  margin: 1em 0 0 220px;
+  padding: 0 0 1em 1em;
+}
+
+#fundraising div.box {
+  border: 1px solid black;
+  padding: 0.6em 1em 0.6em 1em;
+  background-color: #FFECBF; 
+}
+
+#fundraising p.call1 {
+  margin: 0;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
+
+#fundraising p.call2 {
+  margin-top: .3em;
+  text-align: center;
+}
+
+#fundraising div.percentbox {
+  border: 1px solid black;
+}
+
+#fundraising div.percentbar {
+  height: 1em;
+  background-color: #202D79;
+}
+
+#fundraising p.current {
+  float: left;
+  margin: 0;
+  text-align: left;
+}
+
+#fundraising p.target {
+  margin: 0;
+  text-align: right;
+}
+
+
+/* ------------------------------------------------------------------------- */
 /* Content                                                                   */
 /* ------------------------------------------------------------------------- */
 
@@ -317,6 +365,36 @@ table td.negative {
     background-color: #ffd0d0;
 }
 
+
+/* ------------------------------------------------------------------------- */
+/* Action box                                                                */
+/* ------------------------------------------------------------------------- */
+
+div.actionbox {
+  float: right;
+  margin: 0 0 1em 1em;
+  border: thin solid black;
+  padding: .3em .6em;
+  background-color: #A4E8F7;
+  font-size: large;
+  text-align: center;
+  font-weight: bold;
+}
+
+div.actionbox p {
+  margin: .3em 0;
+}
+
+div.actionbox a {
+  display: block;
+  margin: .3em 0;
+  border-width: medium;
+  border-style: solid;
+  border-color: #666FA3 black black #666FA3;
+  padding: .5em 1em;
+  background: #202D79;
+  color: white;
+}
 
 /* ------------------------------------------------------------------------- */
 /* Footer                                                                    */
@@ -463,18 +541,4 @@ ul.spaced li, ol.spaced li { /* Spaced listings, use this instead of <br /> */
 #merchandise tr {
   border-bottom: 1px solid #f4f8fa;
   padding-bottom: 1.2em;
-}
-
-
-/* temporary */
-#support {
-  border: 1px solid black;
-  padding: 0.3em 1em 0.3em 1em;
-  background: #FFECBF; 
-  text-align: center;
-  font-weight: bold;
-}
-
-#support h2 {
-  margin-top: .5em;
 }

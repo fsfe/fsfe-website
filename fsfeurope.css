@@ -204,13 +204,16 @@ dl dd {
 }
 
 #fundraising div.box {
-  border: 1px solid black;
+  border: 1px solid #dbb65e;
   padding: 0.6em 1em 0.6em 1em;
-  background-color: #FFECBF; 
+  background-color: #ffecbf; 
+}
+
+#fundraising {
+	margin: 0;
 }
 
 #fundraising p.call1 {
-  margin: 0;
   text-align: center;
   font-size: large;
   font-weight: bold;
@@ -227,7 +230,7 @@ dl dd {
 
 #fundraising div.percentbar {
   height: 1em;
-  background-color: #202D79;
+  background-color: #202d79;
 }
 
 #fundraising p.current {
@@ -542,3 +545,4 @@ ul.spaced li, ol.spaced li { /* Spaced listings, use this instead of <br /> */
   border-bottom: 1px solid #f4f8fa;
   padding-bottom: 1.2em;
 }
+

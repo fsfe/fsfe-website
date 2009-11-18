@@ -418,10 +418,10 @@ h2#fn {
 }
 
 h2#fn + ol {
-	border-top: .5em;
 	border-top: 1px solid rgb(180,180,180);
 	font-size: 90%;
 	margin-top: 3em;
+	padding-top: .5em;
 	width: 30%;
 }
 

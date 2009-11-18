@@ -417,9 +417,11 @@ h2#fn {
 }
 
 h2#fn + ol {
-	width: 30%;
-	margin-top: 3em;
+	border-top: .5em;
+	border-top: 1px solid rgb(180,180,180);
 	font-size: 90%;
+	margin-top: 3em;
+	width: 30%;
 }
 
 h2#fn + ol li {

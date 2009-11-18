@@ -333,36 +333,37 @@ pre.file {
 
 /* tables */
 table {
-    border-collapse: collapse;
+	border-collapse: collapse;
+	margin-bottom :1em;
 }
 
 table th,
 table td {
-    padding: .2em .5em;
+	padding: .2em .5em;
 }
 
-table th+th,
-table td+td {
-    border-left: 1px solid #ccc;
+table th + th,
+table td + td {
+	border-left: 1px solid #ccc;
 }
 
 table th {
-    border-bottom: 1px solid #202d79;
-    border-top: 1px solid #202d79;
-    color: #202d79;
-    background-color: #f4f8fa;
+	border-bottom: 1px solid #202d79;
+	border-top: 1px solid #202d79;
+	color: #202d79;
+	background-color: #f4f8fa;
 }
 
 table td {
-    border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
 }
 
 table td.positive {
-    background-color: #d0ffd0;
+	background-color: #d0ffd0;
 }
 
 table td.negative {
-    background-color: #ffd0d0;
+	background-color: #ffd0d0;
 }
 
 

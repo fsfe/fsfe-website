@@ -210,7 +210,7 @@ dl dd {
 }
 
 #fundraising p.call1 {
-  margin: 0;
+  margin: 0 0 .5em 0;
   text-align: center;
   font-size: 150%;
   font-weight: bold;
@@ -222,12 +222,14 @@ dl dd {
 }
 
 #fundraising div.percentbox {
-  border: 1px solid black;
+  border: 1px solid #202d79;
+	background-color: #4ad2f0;
+	margin-bottom: .5em;
 }
 
 #fundraising div.percentbar {
   height: 1em;
-  background-color: #202d79;
+  background-color: #3394ce;
 }
 
 #fundraising p.current {

@@ -219,17 +219,17 @@
                 <xsl:attribute name="class">percentbox</xsl:attribute>
                 <xsl:element name="div">
                   <xsl:attribute name="class">percentbar</xsl:attribute>
-                  <xsl:attribute name="style">width: 18.2%</xsl:attribute>
+                  <xsl:attribute name="style">width: 18.3%</xsl:attribute>
                 </xsl:element>
               </xsl:element>
               <xsl:element name="p">
                 <xsl:attribute name="class">current</xsl:attribute>
                 <xsl:apply-templates select="/buildinfo/fundraising/current/node()"/>
-                <xsl:text>€ 18,199</xsl:text>
+                <xsl:text>€ 18 319</xsl:text>
               </xsl:element>
               <xsl:element name="p">
                 <xsl:attribute name="class">target</xsl:attribute>
-                <xsl:text>€ 100,000</xsl:text>
+                <xsl:text>€ 100 000</xsl:text>
               </xsl:element>
             </xsl:element>
           </xsl:element>

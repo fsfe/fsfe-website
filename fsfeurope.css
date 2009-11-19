@@ -379,13 +379,13 @@ div.actionbox {
   border: thin solid black;
   padding: .3em .6em;
   background-color: #f4f8fa;
-  font-size: large;
-  text-align: center;
-  font-weight: bold;
 }
 
 div.actionbox p {
   margin: .3em 0;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
 }
 
 div.actionbox a {
@@ -397,6 +397,19 @@ div.actionbox a {
   padding: .5em 1em;
   background: #202D79;
   color: white;
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
+
+div.actionbox ul,
+div.actionbox ol {
+  margin: .3em 0;
+  padding: 0;
+}
+
+div.actionbox li {
+  list-style-position: inside;
 }
 
 /* ------------------------------------------------------------------------- */

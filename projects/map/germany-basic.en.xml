@@ -1,21 +1,22 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0"?>
 
-<html>
-  <head>
-    <title>Basic overview</title>
-  </head>
+<countryset>
 
-  <body>
+<!--Basic overview -->
+<basics>
 
-    <h1>Basic overview</h1>
-
+<!-- Main Local Free Software Organisations: -->
+<mainorgs>
 	<ul>
 		<li>Main Local Free Software Organisations:</li>
 		<ul>
 			<li><a href="http://www.linuxverband.de">Linuxverband</a></li>
 			<li><a href="http://www.ffii.de/">Förderverein für eine Freie Informationelle Infrastruktur e.V.</a></li>
 		</ul>
+</mainorgs>
 
+<!-- Free Software Events -->
+<fsevents>
 		<li>Free Software events:</li>
 		<ul>
 			<li><a href="http://www.luga.de/Aktionen/LIT-2010/">Augsburger Linux-Infotag</a></li>
@@ -25,16 +26,20 @@
 			<li><a href="http://www.linuxtag.org/">Linuxtag (Berlin)</a></li>
 			<li><a href="http://www.openrheinruhr.de/">Open Rhein Ruhr (Bottrop)</a></li>
 		</ul>
+</fsevents>
 
-		<li>Prominent users of Free Software:</li>
+<!-- Prominent users of Free Software: -->
+<prominentusers>
 		<ul>
 			<li><a href="https://www.bsi.bund.de">Federal Office for Information Security (BSI)</a></li>
 			<li><a href="http://www.auswaertiges-amt.de">Foreign Office</a></li>
 			<li><a href="http://www.muenchen.de/Rathaus/dir/limux/english/147197/index.html">City of Munich</a></li>
 			<li><a href="http://www.schwaebischhall.de/index.php?id=2786">City of Schwäbisch Hall</a></li>
 		</ul>
+</prominentusers>
 
-		<li>FS related news:</li>
+<!-- FS related news: -->
+<fsnews>
 		<ul>
 			<li><a href="http://www.pro-linux.de">Pro-Linux</a></li>
 			<li><a href="http://www.linux-magazin.de">Linux Magazin</a></li>
@@ -43,14 +48,8 @@
 			<li><a href="http://www.heise.de/open/">Heise Open</a></li>
 			<li><a href="http://www.golem.de/oss/">Golem</a></li>
 		</ul>
-	</ul>
+</fsnews>
 
-  </body>
+</basics>
 
-  <timestamp>$Date$ $Author$</timestamp>
-</html>
-<!--
-Local Variables: ***
-mode: xml ***
-End: ***
--->
+</countryset>

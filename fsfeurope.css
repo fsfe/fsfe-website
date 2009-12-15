@@ -412,6 +412,36 @@ div.actionbox li {
   list-style-position: inside;
 }
 
+
+/* ------------------------------------------------------------------------- */
+/* Subpages menu                                                             */
+/* ------------------------------------------------------------------------- */
+
+h2#subpages {
+	display: none;
+}
+
+ul#subpages,
+h2#subpages + ul {
+	margin: 1em 0 2em 0;
+	list-style-type: none;
+	padding: 0 1em;
+}
+
+ul#subpages li,
+h2#subpages + ul li {
+	width: 49%;
+	padding-right: 1%;
+	float: left;
+	margin-bottom: .1em;
+}
+
+ul#subpages li p,
+h2#subpages + ul li p {
+	font-size: 90%;
+}
+
+
 /* ------------------------------------------------------------------------- */
 /* Footer                                                                    */
 /* ------------------------------------------------------------------------- */

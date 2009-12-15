@@ -338,7 +338,7 @@ pre.file {
 	border-top: 1px solid rgb(210,210,210);
 	border-bottom: 1px solid rgb(210,210,210);
 	*/
-	padding: 1em;
+	/*padding: 1em;*/
 	min-height: 60px;
 	line-height: 160%;
 }
@@ -440,7 +440,7 @@ ul#subpages,
 h2#subpages + ul {
 	margin: 1em 0 2em 0;
 	list-style-type: none;
-	padding: 0 1em;
+	/*padding: 0 1em;*/
 }
 
 ul#subpages li,

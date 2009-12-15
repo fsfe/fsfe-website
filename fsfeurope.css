@@ -332,6 +332,21 @@ pre.file {
     color: rgb(50,50,50);
 }
 
+#introduction {
+	font-size: 105%;
+	/*
+	border-top: 1px solid rgb(210,210,210);
+	border-bottom: 1px solid rgb(210,210,210);
+	*/
+	padding: 1em;
+	min-height: 60px;
+	line-height: 160%;
+}
+
+#introduction .read_more {
+	text-align: right;
+}
+
 
 /* tables */
 table {

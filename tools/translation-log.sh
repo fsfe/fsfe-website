@@ -25,7 +25,7 @@
 # -----------------------------------------------------------------------------
 
 srcroot="http://www.fsfe.org/source"
-cvsroot="http://savannah.gnu.org/cgi-bin/viewcvs/fsfe/fsfe"
+cvsroot="https://trac.fsfe.org/fsfe-web/log/trunk"
 
 
 # -----------------------------------------------------------------------------
@@ -141,14 +141,14 @@ for file in ${infile}.*; do
         echo "        </td>"
         echo "        <td align=\"center\">${date1}</td>"
         echo "        <td>"
-        echo "          <a href=\"${cvsroot}/${wantfile}?cvsroot=Web\">[changelog]</a>"
+        echo "          <a href=\"${cvsroot}/${wantfile}\">[changelog]</a>"
         echo "        </td>"
         echo "        <td>"
         echo "          <a href=\"${srcroot}/${havefile}\">${havefile}</a>"
         echo "        </td>"
         echo "        <td align=\"center\">${date2}</td>"
         echo "        <td>"
-        echo "          <a href=\"${cvsroot}/${havefile}?cvsroot=Web\">[changelog]</a>"
+        echo "          <a href=\"${cvsroot}/${havefile}\">[changelog]</a>"
         echo "        </td>"
       else
         echo "        <td>"
@@ -211,14 +211,14 @@ grep --no-filename "^outdated" ${infile}.* \
       echo "        </td>"
       echo "        <td align=\"center\">${date1}</td>"
       echo "        <td>"
-      echo "          <a href=\"${cvsroot}/${wantfile}?cvsroot=Web\">[changelog]</a>"
+      echo "          <a href=\"${cvsroot}/${wantfile}\">[changelog]</a>"
       echo "        </td>"
       echo "        <td>"
       echo "          <a href=\"${srcroot}/${havefile}\">${havefile}</a>"
       echo "        </td>"
       echo "        <td align=\"center\">${date2}</td>"
       echo "        <td>"
-      echo "          <a href=\"${cvsroot}/${havefile}?cvsroot=Web\">[changelog]</a>"
+      echo "          <a href=\"${cvsroot}/${havefile}\">[changelog]</a>"
       echo "        </td>"
     done
     echo "      </tr>"

@@ -39,7 +39,7 @@ echo htmlspecialchars($statusfinished);
 
 	<ul>
 		<li><a href="./status-log.txt">Previously finished builds</a></li>
-		<li><a href="http://cvs.savannah.gnu.org/viewvc/fsfe/fsfe/?root=Web">CVS web interface</a></li>
+		<li><a href="https://trac.fsfe.org/fsfe-web/browser/trunk">SVN web browser</a></li>
 	</ul>
 
 </body>

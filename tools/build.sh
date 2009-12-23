@@ -13,6 +13,10 @@ TMP=/home/www/tmp.$$
 STATUS=/var/www/web
 ALARM_LOCKFILE=alarm_lockfile
 
+# Since we must grep for svn output messages,
+# let's ensure we get English messages
+export LANG=C
+
 # If there is a build.pl script started more than 30 minutes ago, mail alarm
 BUILD_STARTED=$(ps --no-headers -C build.pl -o etime | cut -c 7-8 | sort -r | head -n 1)
 if [[ -n "$BUILD_STARTED" && "10#${BUILD_STARTED}" -gt 30 && ! -f ${STATUS}/${ALARM_LOCKFILE} ]] ; then
@@ -50,24 +54,37 @@ echo "$(date)  Cleaning old build directories."
 rm -rf /home/www/tmp.*
 
 # -----------------------------------------------------------------------------
-echo "$(date)  Updating source files from CVS."
+echo "$(date)  Updating source files from SVN."
 # -----------------------------------------------------------------------------
 
-# Rebuild only if changes were made or it hasn't run yet today. We must run it
-# once every day at least to move events from future to current and from
-# current to past.
-if test -z "$(cvs update -Pd 2>/dev/null)" \
-    -a "$(date -r ${STATUS}/last-run +%F)" == "$(date +%F)"; then
-  echo "$(date)  No changes to CVS."
+# Rebuild only if changes were made to the SVN or it hasn't run yet today
+# (unless "-f" option is used)
+#
+# We must run it once every day at least to move events from future to current
+# and from current to past.
+#
+# Since the "svn update" exit status cannot be trusted, and "svn update -q" is
+# always quiet, we have to test the output of "svn update" (ignoring the final
+# "At revision" line) and check for any output lines
+if test -z "$(svn update 2>/dev/null | grep -v 'At revision')" \
+    -a "$(date -r ${STATUS}/last-run +%F)" == "$(date +%F)" \
+    -a "$1" != "-f" ; then
+  echo "$(date)  No changes to SVN."
   # In this case we only append to the cumulative status-log.txt file, we don't touch status-finished.txt
   cat ${STATUS}/status.txt >> ${STATUS}/status-log.txt
   exit
 fi
 
-# Make sure build.sh and build.pl are executable (damn CVS!)
+# Make sure build.sh and build.pl are executable
+# TODO: this can be removed once we set the "executable" svn property
+# to these files
 chmod +x tools/build.sh tools/build.pl
 chmod +x cgi-bin/weborder.pl cgi-bin/stacs-register-capacity.pl
 chmod +x cgi-bin/stacs-register-workshop.pl
+
+if test "$1" == "-f" ; then
+  echo "Forced rebuild"
+fi
 
 # -----------------------------------------------------------------------------
 echo "$(date)  Running Makefiles."

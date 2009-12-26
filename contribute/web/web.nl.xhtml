@@ -3,7 +3,7 @@
 <html>
   <head>
     <title>
-      FSFE - word actief - Informatie voor webmasters
+      FSFE - Help ons - Informatie voor webmasters
     </title>
   </head>
 
@@ -15,28 +15,28 @@
 
     <p>
       De technologieën en programma's die gebruikt worden voor het
-      onderhouden van de FSFE-webpagina's, zouden goed bekend moeten
-      zijn bij veel ontwikkelaars en auteurs, en kunnen zeker
+      onderhouden van de FSFE-webpagina's zouden goed bekend moeten
+      zijn bij ontwikkelaars en auteurs, en kunnen zeker
       interessant zijn voor diegenen die ze nog niet ontdekten.
     </p>
 
     <p>
       Vertalers en occasionele vrijwilligers komen hoogst
-      waarschijnlijk alleen in contact met
+      waarschijnlijk alleen in contact met:
     </p>
 
     <ul>
       <li>
-        <a href="http://savannah.gnu.org" target="_blank">Savannah</a>
-        -- voor CVS (zie verder) diensten en toegangcontroles.</li>
-      <li>
         <a href="http://www.w3.org/MarkUp/" target="_blank">XHTML</a>
-        -- de basis waarvan elke 5 minuten de statische pagina's
-        gemaakt worden.</li>
+        -- de basis voor onze webpagina's.</li>
       <li>
-        <a href="http://www.cvshome.org" target="_blank">Concurrent
-        Version System (CVS)</a> -- voor coördinatie en
-        synchronisatie.</li>
+        <a href="http://subversion.tigris.org"
+        target="_blank">Subversion</a> --  het versiebeheersysteem
+        voor de basisbestanden van onze webpagina´s.</li>
+      <li>
+	<a href="http://trac.edgewall.org/" target="_blank">Trac</a>
+	-- voor het toegangsbeheer, het opvolgen van problemen en
+	aanverwante diensten.</li>
     </ul>
 
     <p>
@@ -57,8 +57,8 @@
     <h2>Hoe worden de webpagina's gecreëerd?</h2>
 
     <p>
-      De webpagina's van <var>www.fsfe.org</var> worden beheerd
-      als een verzameling van XML-bestanden. Alle vijf minuten
+      De webpagina's van <var>fsfe.org</var> worden beheerd
+      als een verzameling van XML-bestanden. Alle tien minuten
       genereert de webserver automatisch de HTML pagina's van de
       XML-bestanden. Vanzelfsprekend gebeuren al de aanpassingen van
       de pagina's in de XML-bestanden, de HTML wordt nooit direct
@@ -66,7 +66,7 @@
     </p>
 
     <p>
-      De naam van elke webpagina bij www.fsfe.org heeft dezelfde
+      De naam van elke webpagina bij fsfe.org heeft dezelfde
       structuur, <var><em>paginanaam</em>.<em>taal</em>.html</var>
       (<em>taal</em>is de 2-letter iso-639 code voor de gebruikte
       taal, zoals "en" voor Engels of "nl" voor Nederlands). De naam
@@ -88,104 +88,90 @@
       <a href="/events/events.html">de evenementenpagina</a>.
     </p>
 
-    <h2>Registreren bij Savannah</h2>
+    <h2>Toegang krijgen tot de basisbestanden</h2>
 
     <p>
-      De basisbestanden voor de webpagina´s worden bewaard door
-      <a href="http://savannah.gnu.org/">Savannah</a>, een server die
-      onderdak vindt bij de Free Software Foundation, onze
-      zusterorganisatie in Noord-Amerika. Als u onze bestanden wil
-      bewerken, dan moet u zich registreren op de server en
-      schrijftoegang aanvragen voor het FSFE-project.
-    </p>
-
-    <h3>Een nieuwe gebruiker registreren.</h3>
-
-    <p>
-      Eerst moet u zich
-      als <a href="https://savannah.gnu.org/account/register.php">gebruiker
-      registreren</a>. Kies een loginnaam, een paswoord. Geef uw echte
-      naam en een e-mailadres. Klik dan op de
-      knop <strong>Submit</strong>.
-    </p>
-        
-    <p>
-      Daarna krijgt u een e-mail van Savannah. Om uw registratie af te
-      ronden, moet u de URL die daar vermeld staat
-      openen. Inschrijvingen die niet binnen de twee dagen bevestigd
-      zijn, worden verwijderd.
-    </p>
-    
-    <p>
-      Na de bevestiging van uw inschrijving, kan u zich aanmelden bij
-      <a href="https://savannah.gnu.org/">https://savannah.gnu.org</a>
-      met uw login en paswoord.
-    </p>
-
-    <h3>Aanmaken van een SSH key</h3>
-
-    <p>
-      Het paswoord kan u gebruiken om in te loggen in het webportaal
-      van Savannah, als u toegang wil krijgen tot de CVS, dan moet u
-      een SSH key registreren. Dat moet gebeuren vanop elke computer
-      waarmee u de CVS wil gebruiken.
-    </p>
-    
-    <p>
-      Om een SSH key te maken en te registreren, kan u best de
-      <a href="https://savannah.gnu.org/faq/?group_id=5802&amp;question=User_Account_-_How_do_I_configure_my_SSH_access.txt">
-      instructies van de Savannah FAQ</a> volgen.
-    </p>
-
-    <h3>Lid worden van het FSFE project.</h3>
-
-    <p>
-      Er zijn veel projecten die onderdak vinden bij Savannah, en
-      toegang tot het project wordt toegestaan per project. Als u
-      toegang wil krijgen tot de basisfiles van de FSFE webpagina's,
-      dan moet u lid worden van het FSFE project.
+      De basisbestanden voor de webpagina´s worden bewaard in het
+      <a href="https://svn.fsfe.org/fsfe-web">fsfe-web subversion
+      repository</a> op onze subversionserver. Andere diensten zijn
+      beschikbaar via het
+      gekoppelde  <a href="https://trac.fsfe.org/fsfe-web">trac
+      beheersysteem</a>.
     </p>
 
     <p>
-      Kies <strong>Group Membership</strong> in de bovenste tabs. Hier
-      plaatst u "FSFE" in de zoekbox van <strong>Request for
-      Inclusion</strong>, vink de checkbox aan van FSFE, en geef wat
-      uitleg.
+      Volg de instructies om toegang te krijgen tot deze hulpmiddelen:
     </p>
 
+    <ul>
+      <li>
+	<p>
+	  Als u een <a href="http://fellowship.fsfe.org">Fellow van de
+	  FSFE</a> bent, heeft u al toegang tot de subversionserver
+	  en het trac beheersysteem. Gebruik uw Fellowship
+	  gebruikernaam en paswoord.
+        </p></li>
+
+      <li>
+	<p>
+	  Als u rechten wil krijgen om bestanden te veranderen op de
+	  subversionserver en de tracwiki schrijf
+	  naar <b>system-hackers@fsfeurope.org</b>.
+        </p></li>
+
+      <li>
+	<p>
+	  Andere personen kunnen zich laten registreren als gast via
+	  het webformulier
+	  op <a href="https://trac.fsfe.org/fsfe-web/register">https://trac.fsfe.org/fsfe-web/register</a>.
+	  Onmiddellijk na uw registratie hebt u leesrechten op de
+	  subversionserver en kan u inloggen op de tracwiki (de
+	  gebruikernaam die u kiest zal de prefix <var>guest-</var>
+	  krijgen). De beheerder van de subversionserver krijgt een
+	  melding van uw verzoek en zal u zo vlug als mogelijk
+	  schrijftoegang geven.
+        </p></li>
+    </ul>
+
+    <h3>Een lokale werkkopij van het subversionarchief installeren</h3>
 
     <p>
-      De beheerders van het FSFE project krijgen dan een mail met uw
-      verzoek en uitleg, zij kunnen uw lidmaatschap bij het project
-      goedkeuren. Daarna ziet u "Free Software Foundation Europe" bij
-      de tab <strong>Groups I'm Contributer of</strong>, nadat u bent
-      ingelogd bij savannah.
+      Op de subversionserver staan twee archieven voor de
+      FSFE-website. Het <a href="https://trac.fsfe.org/fsfe-web/browser/trunk">SVN
+      "trunk" archief</a> wordt gebruikt om de "officiële" versie
+      (<a href="http://fsfe.org">http://fsfe.org</a>) van de website
+      te
+      bouwen. Het <a href="https://trac.fsfe.org/fsfe-web/browser/branches/test">"test"
+      archief</a> wordt gebruikt om de "test" versie
+      (<a href="http://test.fsfe.org">http://test.fsfe.org</a>) te bouwen.
     </p>
 
-
-    <h3>Het CVS archief de eerste keer installeren</h3>
-
     <p>
-      Ten eerste moet u ervoor zorgen dat uw <var>~/.bashrc</var> file de
-      volgende lijn bevat
-    </p>
-
-    <p class="file">export CVS_RSH=ssh</p>
-
-    <p>
-      creëer dan een map voor het archief en voer in deze map de
-      volgende code uit
+      Voor alledaagse taken zoals het toevoegen van nieuwsberichten,
+      het vertalen van webpagina's of zelfs voor kleine aanpassingen
+      aan de website volstaat een kopij van het trunkarchief:
     </p>
 
     <p class="terminal">
-      $ cvs -z3 -d <em>username</em>@cvs.savannah.gnu.org:/web/fsfe co
-      .
+      svn --username YOURNAME co https://svn.fsfe.org/fsfe-web/trunk
     </p>
 
     <p>
-      Nu wordt er gevraagd naar uw SSH paszin. Vul die in en
-      bevestig. Als alles goed gaat, hebt u nu een lokale kopie van
-      het archief. 
+      Als u grotere veranderingen aan de website wil maken of mee
+      nieuwe functies wil ontwikkelen of debuggen kan u best ook een
+      kopij van het testarchief downloaden:
+    </p>
+
+    <p class="terminal">
+      svn --username YOURNAME co
+      https://svn.fsfe.org/fsfe-web/branches/test
+    </p>
+
+    <p>
+      Houd er rekening mee dat een werkkopij ongeveer 160Mb
+      inneemt. Als u van plan bent om slechts aan bepaalde delen van
+      de website te werken kan u kopijen downloaden van de mappen die
+      u interesseren.
     </p>
 
     <h2>Werken met het archief</h2>
@@ -194,20 +180,19 @@
       Nadat u het archief een eerste keer kopiëerde, moet u steeds
     </p>
 
-    <p class="terminal">$ cvs update -d</p>
+    <p class="terminal">$ svn update</p>
 
     <p>
-      uitvoeren in de fsfe map, voordat u aan een specifiek bestand
-      begint te werken.
+      uitvoeren voordat u aan een specifiek bestand begint te werken.
     </p>
     
     
     <p>
       Als u een nieuw bestand of een nieuwe map aan het archief wil
-      toevoegen moet u de volgende code uitvoeren
+      toevoegen moet u de volgende code uitvoeren:
     </p>
 
-    <p class="terminal">$ cvs add <em>filename</em></p>
+    <p class="terminal">$ svn add <em>bestandsnaam</em></p>
 
     <p>
       Om bestanden naar de server te zenden, of het nu een nieuw
@@ -215,23 +200,73 @@
       voert u de volgende code uit
     </p>
 
-    <p class="terminal">$ cvs commit <em>filename</em></p>
+    <p class="terminal">$ svn commit <em>bestandsnaam</em></p>
 
     <p>
-      een editorvenster zal dan openen, zodat u wat uitleg kan geven
-      bij je veranderingen.
+      je standaardeditor zal een venster openen waarin je een korte
+      beschrijving kan geven van de veranderingen die je doorstuurt.
+    </p>
+
+    <p>
+      In een subversion archief moet de optie  <a
+      href="http://svnbook.red-bean.com/en/1.5/svn.advanced.props.special.keywords.html">trefwoordvervangen</a>
+      voor elk bestand individueel ingesteld worden. Wij
+      maken gebruik van trefwoorden in onze <var>.xml</var>
+      en <var>.xhtml</var> bestanden (bijvoorbeeld
+      het <var>$</var><var>Author</var><var>$</var> trefwoord in de
+      voettekst van onze pagina's). U kan trefwoordvervanging
+      automatisch instellen voor deze bestanden door volgende tekst in
+      uw <var>~/.subversion/config</var> bestand op te nemen:
+
+      <pre>
+	enable-auto-props = yes
+	
+	[auto-props]
+	*.xml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xml;svn:eol-style=native
+	*.xhtml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xhtml;svn:eol-style=native
+      </pre>
+    </p>
+
+    <p>
+      Als u gewoon bent met CVS te werken zal U makkelijk de
+      overstap naar SVN kunnen maken. Zoals u reeds kon zien zijn de
+      basiscommando's vergelijkbaar. Als u hier wat meer over wil
+      leren kan u een overzicht bekijken van de verschillen tussen CVS
+      en SVN
+      via <a href="http://svnbook.red-bean.com/en/1.5/svn.forcvs.html">Subversion
+      for CVS Users</a> of een korte referentiepagina raadplegen die
+      CVS-commando's vergelijkt met SVN-commando's in de <a
+      href="http://svn.collab.net/repos/svn/trunk/doc/user/cvs-crossover-guide.html">CVS
+      to SVN Crossover Guide</a>.
     </p>
 
     <p>
       U kan een gedetailleerde handleiding downloaden op de
-      <a href="http://www.nongnu.org/cvs/">CVS startpagina</a>.
+      <a href="http://svnbook.red-bean.com/">Subversion book</a>
+      pagina (wij gebruiken de 1.5 versie van SVN).
+    </p>
+
+    <h2>Coördinatie van de werkzaamheden</h2>
+
+    <p>
+      Het werk aan de website wordt in de eerste plaats gecoördineerd
+      via
+      de <a href="http://mail.fsfeurope.org/mailman/listinfo/web">mailinglist
+      voor webmasters</a>
+    </p>
+
+    <p>
+      De <a href="https://trac.fsfe.org/fsfe-web">fsfe-web trac
+      interface</a> voorziet in enkele handige hulpmiddelen: een
+      webbrowser voor het SVN-archief, een opvolgsysteem voor
+      problemen en een wiki.
     </p>
 
     <p>
       Als u op de hoogte wil blijven van alle veranderingen die
       worden doorgevoerd in het archief, kan u zich inschrijven bij de
-      <a href="http://mail.fsfeurope.org/mailman/listinfo/web-cvs-notify">CVS
-      notification mailing list</a>, dan krijgt u een mail bij elke
+      <a href="http://mail.fsfeurope.org/mailman/listinfo/web-cvs-notify">commit
+      notification mailinglist</a>, dan krijgt u een mail bij elke
       verandering aan het archief.
     </p>
 
@@ -245,7 +280,7 @@
     </p>
 
     <p>
-      Houd alsjeblieft steeds in gedachte dat al uw veranderingen
+      Houd alsjeblieft steeds in gedachten dat al uw veranderingen
       direct worden doorgevoerd en zichtbaar worden, zonder enige
       tussenkomst van iemand anders. Daarom vragen we u om enkele
       regels te respecteren wanneer u veranderingen of nieuwe files
@@ -262,6 +297,7 @@
           FSFE</a>.  (Dit is niet nodig voor vertalingen van bestaande
           documenten)
         </p></li>
+
       <li>
         <p>
           Als u vertalingen doorstuurt, en u hebt de kans om ze door
@@ -274,7 +310,7 @@
           spellingcorrector. Als u
           bijvoorbeeld <a href="http://aspell.net/">GNU aspell</a> wil
           gebruiken op een Debian GNU/Linux systeem, installeer dan de
-          paketten <em>aspell</em> en
+          pakketten <em>aspell</em> en
           <em>aspell-<strong>XX</strong></em> ("XX" is uw taalcode),
           en voer dan de volgende code uit
 	</p>
@@ -288,11 +324,18 @@
           de <var>-d</var> optie kan u achterwege laten als uw UNIX
           locale dezelfde is als de taal van je woordenboek.
         </p></li>
+
       <li>
         <p>
-          Zorg ervoor dat al uw bestanden een juiste XML code
-          hebben. Er is een script
-          <var>/fsfe/tools/validate.pl</var> genoemd dat kan helpen om
+          Zorg ervoor dat al uw bestanden een juiste XML-code
+          hebben. De subversionserver controleert standaard de
+          XML-syntaxis van bestanden met een .xml- en .xhtml-extensie
+          en zal geen bestanden aanvaarden die niet voldoen. U kan uw
+          bestanden zelf controleren vooraleer u ze aanbiedt.
+	</p>
+
+	<p>
+	  Er is een script <var>/trunc/tools/validate.pl</var> genoemd dat kan helpen om
           fouten te vinden in de markup. Slecht gevormde XML verbreekt
           het automatische proces voor het maken van de webpagina's,
           en blokkeert het updaten van de hele FSFE website. Als u
@@ -356,10 +399,10 @@
 
     <p>
       Probeer afspraken te maken met andere mensen die toegang hebben
-      tot het CVS archief, zodat bijdragen van mensen zonder deze
-      toegang, aan de CVS worden toegevoegd.  Zorg dat die files door
-      iemand werden nagelezen, en controleer de files, zoals u met
-      uw eigen files zou doen, voor u ze toevoegt.
+      tot het SVN-archief, zodat bijdragen van mensen zonder deze
+      toegang eventueel na proeflezen aan het kunnen toegevoegd
+      worden. Controleer de files, zoals u met uw eigen files zou
+      doen, voor u ze toevoegt.
     </p>
 
 

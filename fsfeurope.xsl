@@ -225,7 +225,7 @@
               <xsl:element name="p">
                 <xsl:attribute name="class">current</xsl:attribute>
                 <xsl:apply-templates select="/buildinfo/fundraising/current/node()"/>
-                <xsl:text>€ 45 580</xsl:text>
+                <xsl:text>€ 45 620</xsl:text>
               </xsl:element>
               <xsl:element name="p">
                 <xsl:attribute name="class">target</xsl:attribute>

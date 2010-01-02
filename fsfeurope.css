@@ -527,7 +527,8 @@ a.fn {
 	display: block;
 }
 
-.event .date.multiple .day {
+.event .date.multiple .from .day,
+.event .date.multiple .to .day {
 	font-size: 150%;
 }
 

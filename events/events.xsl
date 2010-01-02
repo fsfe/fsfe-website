@@ -27,27 +27,48 @@
     </xsl:if>
 
     <!-- Now, the event block -->
-    <p>
-      <b>
-        (<xsl:value-of select="@start" />
-        <xsl:if test="$start != $end"> 
-          <xsl:value-of select="/html/text [@id = 'to']" />
-          <xsl:value-of select="@end" />
-        </xsl:if>)
-        <xsl:value-of select="title" />
-      </b><br />
-      <xsl:apply-templates select="body/node()" />
-      <xsl:if test="$link != ''">
-        [<a href="{link}">
-          <xsl:value-of select="/html/text [@id = 'more']" />
-        </a>]
-      </xsl:if>
-      <xsl:if test="$page != ''">
-        [<a href="{page}">
-          <xsl:value-of select="/html/text [@id = 'page']" />
-        </a>]
-      </xsl:if>
-    </p>
+    <div class="event">
+      <h3><xsl:value-of select="title" /></h3>
+
+      <xsl:choose>
+        <xsl:when test="$start != $end">
+          <div class="date multiple">
+            <div class="from">
+              <span class="day">12</span>
+              <span class="month">Jan</span>
+            </div>
+            <p><xsl:value-of select="/html/text [@id = 'to']" /></p>
+            <div class="to">
+              <span class="day">14</span>
+              <span class="month">Jan</span>
+            </div>
+          </div>
+        </xsl:when>
+        <xsl:otherwise>
+          <div class="date">
+            <span class="day">14</span>
+            <span class="month">Jan</span>
+          </div>
+        </xsl:otherwise>
+      </xsl:choose>
+
+      <div class="details">
+        <xsl:apply-templates select="body/node()" />
+     
+        <xsl:if test="$link != ''">
+          <p class="read_more">
+            <a href="{link}"><xsl:value-of select="/html/text [@id = 'more']" /></a>
+          </p>
+        </xsl:if>
+
+        <xsl:if test="$page != ''">
+          <p class="read_more">
+            <a href="{page}"><xsl:value-of select="/html/text [@id = 'page']" /></a>
+          </p>
+        </xsl:if>
+      </div>
+
+    </div>
   </xsl:template>
 
   <!-- In /html/body node, append dynamic content -->
@@ -104,3 +125,4 @@
   </xsl:template>
 
 </xsl:stylesheet>
+

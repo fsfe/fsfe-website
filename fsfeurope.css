@@ -529,12 +529,13 @@ a.fn {
 
 .event .date.multiple .from .day,
 .event .date.multiple .to .day {
-	font-size: 150%;
+	font-size: 250%;
 }
 
 .event .date.multiple .conjunction {
-	display: block;
 	color: #bebebe;
+	display: block;
+	margin: .5em 0;
 }
 
 

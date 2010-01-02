@@ -562,8 +562,8 @@ td.projects {
 a.feed {
 	background-image: url("/graphics/icons/feed.png");
 	background-repeat: no-repeat;
-	background-position: 100% 50%;
-	padding-right: 1.5em;
+	background-position: 100% -1px !important;
+	padding-right: 1.3em;
 }
 
 /* FIXME: replace with something else! */

@@ -36,11 +36,13 @@
             <span class="n">(</span>
             <span class="from">
               <span class="day">12</span>
+              &nbsp;
               <span class="month">Jan</span>
             </span>
             <span class="conjunction"><xsl:value-of select="/html/text [@id = 'to']" /></span>
             <span class="to">
               <span class="day">14</span>
+              &nbsp;
               <span class="month">Jan</span>
             </span>
             <span class="n">)</span>
@@ -50,6 +52,7 @@
           <p class="date">
             <span class="n">(</span>
             <span class="day">14</span>
+            &nbsp;
             <span class="month">Jan</span>
             <span class="n">)</span>
           </p>

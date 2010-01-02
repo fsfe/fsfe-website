@@ -503,13 +503,12 @@ a.fn {
 }
 
 .event .date {
-	clear: left;
-	float: left;
-	width: 10%;
-	font-size: 90%;
 	color: #888;
+	font-size: 90%;
+	margin: -2.5em 0 1.8em -10%;
+	position: absolute;
 	text-align: center;
-	margin-bottom: 1.8em;
+	width: 10%;
 }
 
 .event .date .day {
@@ -528,15 +527,6 @@ a.fn {
 
 .event .date.multiple .month {
 	font-size: 90%;
-}
-
-.event .details {
-	float: right;
-	width: 90%;
-}
-
-.event .details h3 {
-	margin-top: 0;
 }
 
 

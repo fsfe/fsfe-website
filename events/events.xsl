@@ -32,42 +32,43 @@
 
       <xsl:choose>
         <xsl:when test="$start != $end">
-          <div class="date multiple">
-            <div class="from">
+          <p class="date multiple">
+            <span class="n">(</span>
+            <span class="from">
               <span class="day">12</span>
               <span class="month">Jan</span>
-            </div>
-            <p><xsl:value-of select="/html/text [@id = 'to']" /></p>
-            <div class="to">
+            </span>
+            <span class="conjunction"><xsl:value-of select="/html/text [@id = 'to']" /></span>
+            <span class="to">
               <span class="day">14</span>
               <span class="month">Jan</span>
-            </div>
-          </div>
+            </span>
+            <span class="n">)</span>
+          </p>
         </xsl:when>
         <xsl:otherwise>
-          <div class="date">
+          <p class="date">
+            <span class="n">(</span>
             <span class="day">14</span>
             <span class="month">Jan</span>
-          </div>
+            <span class="n">)</span>
+          </p>
         </xsl:otherwise>
       </xsl:choose>
 
-      <div class="details">
-        <xsl:apply-templates select="body/node()" />
+      <xsl:apply-templates select="body/node()" />
      
-        <xsl:if test="$link != ''">
-          <p class="read_more">
-            <a href="{link}"><xsl:value-of select="/html/text [@id = 'more']" /></a>
-          </p>
-        </xsl:if>
+      <xsl:if test="$link != ''">
+        <p class="read_more">
+          <a href="{link}"><xsl:value-of select="/html/text [@id = 'more']" /></a>
+        </p>
+      </xsl:if>
 
-        <xsl:if test="$page != ''">
-          <p class="read_more">
-            <a href="{page}"><xsl:value-of select="/html/text [@id = 'page']" /></a>
-          </p>
-        </xsl:if>
-      </div>
-
+      <xsl:if test="$page != ''">
+        <p class="read_more">
+          <a href="{page}"><xsl:value-of select="/html/text [@id = 'page']" /></a>
+        </p>
+      </xsl:if>
     </div>
   </xsl:template>
 

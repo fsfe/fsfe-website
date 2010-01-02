@@ -21,40 +21,41 @@
     <xsl:variable name="link"><xsl:value-of select="link" /></xsl:variable>
     <xsl:variable name="page"><xsl:value-of select="page" /></xsl:variable>
 
-    <xsl:variable name="start_month"><xsl:value-of select="substring($start,6,2)" /></xsl:variable>
     <xsl:variable name="start_day"><xsl:value-of select="substring($start,9,2)" /></xsl:variable>
-
-    <xsl:variable name="end_month"><xsl:value-of select="substring($end,6,2)" /></xsl:variable>
     <xsl:variable name="end_day"><xsl:value-of select="substring($end,9,2)" /></xsl:variable>
 
-    <xsl:choose>
-      <xsl:when test="$start_month = '01'"><xsl:variable name="start_month"><xsl:value-of select="/html/text [@id = 'months/01']" /></xsl:variable></xsl:when>
-      <xsl:when test="$start_month = '02'"><xsl:variable name="start_month"><xsl:value-of select="/html/text [@id = 'months/02']" /></xsl:variable></xsl:when>
-      <xsl:when test="$start_month = '03'"><xsl:variable name="start_month"><xsl:value-of select="/html/text [@id = 'months/03']" /></xsl:variable></xsl:when>
-      <xsl:when test="$start_month = '04'"><xsl:variable name="start_month"><xsl:value-of select="/html/text [@id = 'months/04']" /></xsl:variable></xsl:when>
-      <xsl:when test="$start_month = '05'"><xsl:variable name="start_month"><xsl:value-of select="/html/text [@id = 'months/05']" /></xsl:variable></xsl:when>
-      <xsl:when test="$start_month = '06'"><xsl:variable name="start_month"><xsl:value-of select="/html/text [@id = 'months/06']" /></xsl:variable></xsl:when>
-      <xsl:when test="$start_month = '07'"><xsl:variable name="start_month"><xsl:value-of select="/html/text [@id = 'months/07']" /></xsl:variable></xsl:when>
-      <xsl:when test="$start_month = '08'"><xsl:variable name="start_month"><xsl:value-of select="/html/text [@id = 'months/08']" /></xsl:variable></xsl:when>
-      <xsl:when test="$start_month = '09'"><xsl:variable name="start_month"><xsl:value-of select="/html/text [@id = 'months/09']" /></xsl:variable></xsl:when>
-      <xsl:when test="$start_month = '10'"><xsl:variable name="start_month"><xsl:value-of select="/html/text [@id = 'months/10']" /></xsl:variable></xsl:when>
-      <xsl:when test="$start_month = '11'"><xsl:variable name="start_month"><xsl:value-of select="/html/text [@id = 'months/11']" /></xsl:variable></xsl:when>
-      <xsl:when test="$start_month = '12'"><xsl:variable name="start_month"><xsl:value-of select="/html/text [@id = 'months/12']" /></xsl:variable></xsl:when>
-    </xsl:choose>
+    <xsl:variable name="tmp_start_month"><xsl:value-of select="substring($start,6,2)" /></xsl:variable>
 
     <xsl:choose>
-      <xsl:when test="$end_month = '01'"><xsl:variable name="end_month"><xsl:value-of select="/html/text [@id = 'months/01']" /></xsl:variable></xsl:when>
-      <xsl:when test="$end_month = '02'"><xsl:variable name="end_month"><xsl:value-of select="/html/text [@id = 'months/02']" /></xsl:variable></xsl:when>
-      <xsl:when test="$end_month = '03'"><xsl:variable name="end_month"><xsl:value-of select="/html/text [@id = 'months/03']" /></xsl:variable></xsl:when>
-      <xsl:when test="$end_month = '04'"><xsl:variable name="end_month"><xsl:value-of select="/html/text [@id = 'months/04']" /></xsl:variable></xsl:when>
-      <xsl:when test="$end_month = '05'"><xsl:variable name="end_month"><xsl:value-of select="/html/text [@id = 'months/05']" /></xsl:variable></xsl:when>
-      <xsl:when test="$end_month = '06'"><xsl:variable name="end_month"><xsl:value-of select="/html/text [@id = 'months/06']" /></xsl:variable></xsl:when>
-      <xsl:when test="$end_month = '07'"><xsl:variable name="end_month"><xsl:value-of select="/html/text [@id = 'months/07']" /></xsl:variable></xsl:when>
-      <xsl:when test="$end_month = '08'"><xsl:variable name="end_month"><xsl:value-of select="/html/text [@id = 'months/08']" /></xsl:variable></xsl:when>
-      <xsl:when test="$end_month = '09'"><xsl:variable name="end_month"><xsl:value-of select="/html/text [@id = 'months/09']" /></xsl:variable></xsl:when>
-      <xsl:when test="$end_month = '10'"><xsl:variable name="end_month"><xsl:value-of select="/html/text [@id = 'months/10']" /></xsl:variable></xsl:when>
-      <xsl:when test="$end_month = '11'"><xsl:variable name="end_month"><xsl:value-of select="/html/text [@id = 'months/11']" /></xsl:variable></xsl:when>
-      <xsl:when test="$end_month = '12'"><xsl:variable name="end_month"><xsl:value-of select="/html/text [@id = 'months/12']" /></xsl:variable></xsl:when>
+      <xsl:when test="$tmp_start_month = '01'"><xsl:variable name="start_month"><xsl:value-of select="/html/text [@id = 'months/01']" /></xsl:variable></xsl:when>
+      <xsl:when test="$tmp_start_month = '02'"><xsl:variable name="start_month"><xsl:value-of select="/html/text [@id = 'months/02']" /></xsl:variable></xsl:when>
+      <xsl:when test="$tmp_start_month = '03'"><xsl:variable name="start_month"><xsl:value-of select="/html/text [@id = 'months/03']" /></xsl:variable></xsl:when>
+      <xsl:when test="$tmp_start_month = '04'"><xsl:variable name="start_month"><xsl:value-of select="/html/text [@id = 'months/04']" /></xsl:variable></xsl:when>
+      <xsl:when test="$tmp_start_month = '05'"><xsl:variable name="start_month"><xsl:value-of select="/html/text [@id = 'months/05']" /></xsl:variable></xsl:when>
+      <xsl:when test="$tmp_start_month = '06'"><xsl:variable name="start_month"><xsl:value-of select="/html/text [@id = 'months/06']" /></xsl:variable></xsl:when>
+      <xsl:when test="$tmp_start_month = '07'"><xsl:variable name="start_month"><xsl:value-of select="/html/text [@id = 'months/07']" /></xsl:variable></xsl:when>
+      <xsl:when test="$tmp_start_month = '08'"><xsl:variable name="start_month"><xsl:value-of select="/html/text [@id = 'months/08']" /></xsl:variable></xsl:when>
+      <xsl:when test="$tmp_start_month = '09'"><xsl:variable name="start_month"><xsl:value-of select="/html/text [@id = 'months/09']" /></xsl:variable></xsl:when>
+      <xsl:when test="$tmp_start_month = '10'"><xsl:variable name="start_month"><xsl:value-of select="/html/text [@id = 'months/10']" /></xsl:variable></xsl:when>
+      <xsl:when test="$tmp_start_month = '11'"><xsl:variable name="start_month"><xsl:value-of select="/html/text [@id = 'months/11']" /></xsl:variable></xsl:when>
+      <xsl:when test="$tmp_start_month = '12'"><xsl:variable name="start_month"><xsl:value-of select="/html/text [@id = 'months/12']" /></xsl:variable></xsl:when>
+    </xsl:choose>
+    
+    <xsl:variable name="tmp_end_month"><xsl:value-of select="substring($end,6,2)" /></xsl:variable>
+    
+    <xsl:choose>
+      <xsl:when test="$tmp_end_month = '01'"><xsl:variable name="end_month"><xsl:value-of select="/html/text [@id = 'months/01']" /></xsl:variable></xsl:when>
+      <xsl:when test="$tmp_end_month = '02'"><xsl:variable name="end_month"><xsl:value-of select="/html/text [@id = 'months/02']" /></xsl:variable></xsl:when>
+      <xsl:when test="$tmp_end_month = '03'"><xsl:variable name="end_month"><xsl:value-of select="/html/text [@id = 'months/03']" /></xsl:variable></xsl:when>
+      <xsl:when test="$tmp_end_month = '04'"><xsl:variable name="end_month"><xsl:value-of select="/html/text [@id = 'months/04']" /></xsl:variable></xsl:when>
+      <xsl:when test="$tmp_end_month = '05'"><xsl:variable name="end_month"><xsl:value-of select="/html/text [@id = 'months/05']" /></xsl:variable></xsl:when>
+      <xsl:when test="$tmp_end_month = '06'"><xsl:variable name="end_month"><xsl:value-of select="/html/text [@id = 'months/06']" /></xsl:variable></xsl:when>
+      <xsl:when test="$tmp_end_month = '07'"><xsl:variable name="end_month"><xsl:value-of select="/html/text [@id = 'months/07']" /></xsl:variable></xsl:when>
+      <xsl:when test="$tmp_end_month = '08'"><xsl:variable name="end_month"><xsl:value-of select="/html/text [@id = 'months/08']" /></xsl:variable></xsl:when>
+      <xsl:when test="$tmp_end_month = '09'"><xsl:variable name="end_month"><xsl:value-of select="/html/text [@id = 'months/09']" /></xsl:variable></xsl:when>
+      <xsl:when test="$tmp_end_month = '10'"><xsl:variable name="end_month"><xsl:value-of select="/html/text [@id = 'months/10']" /></xsl:variable></xsl:when>
+      <xsl:when test="$tmp_end_month = '11'"><xsl:variable name="end_month"><xsl:value-of select="/html/text [@id = 'months/11']" /></xsl:variable></xsl:when>
+      <xsl:when test="$tmp_end_month = '12'"><xsl:variable name="end_month"><xsl:value-of select="/html/text [@id = 'months/12']" /></xsl:variable></xsl:when>
     </xsl:choose>
 
     <!-- Before the first event, include the header -->

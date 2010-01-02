@@ -1,19 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 
 <html>
   <head>
-    <title>Европейский фонд свободного ПО – Товары</title>
+    <title>Европейский фонд свободного программного обеспечения - Товары</title>
   </head>
 
   <body>
-    <h1>Товары Европейского фонда свободного ПО</h1>
+    <h1>Товары ЕФСПО</h1>
 
     <form action="/cgi-bin/weborder.pl" method="post">
       <h2>Футболки</h2>
  
       <dynamic-content type="t-shirt"/>
 
-      <h2>Футболки для девушек</h2>
+      <h2>Женские футболки</h2>
  
       <dynamic-content type="girlie"/>
 
@@ -25,16 +25,22 @@
 
       <dynamic-content type="other"/>
 
-      <h2>Заказы</h2>
+      <h2>Рекламные материалы</h2>
+    
+      <p>
+	Рекламные брошюры и листовки находятся на странице <a href="/documents/printable/printable.html">печатных материалов</a>.
+      </p>
+
+      <h2>Доставка</h2>
 
       <p>
         <input type="hidden" name="shipping" value="1"/>
         <input type="radio" name="_shipping" value="3"/>
-        Заказы по Германии (€3.00)<br/>
+        Доставка по Германии (3 евро)
         <input type="radio" name="_shipping" value="7" checked="Y"/>
-        Заказы по Европе (€7.00)<br/>
+        Доставка по Европе (7 евро)
         <input type="radio" name="_shipping" value="12"/>
-        Заказы за пределы Европы (€12.00)<br/>
+        Доставка за пределы Европы (12 евро)
       </p>
 
       <table>

@@ -15,7 +15,7 @@
     <p>
       The web pages of fsfe.org are maintaned as a set of XML files.
       The web server generates the HTML pages from these XML files
-      automatically every five minutes. Consequently, all editing of the pages is
+      automatically every ten minutes. Consequently, all editing of the pages is
       done in the XML files, and the HTML is never edited directly.
     </p>
 
@@ -103,9 +103,10 @@
 
     <p>
       Alternatively, you may also use <a
-      href="http://web.cvs.savannah.gnu.org/viewvc/?root=fsfe">the web-based
-      source repository</a> on <a href="http://savannah.gnu.org/">Savannah</a>
-      to create diffs, and to see the latest updates for all source files.
+      href="https://trac.fsfe.org/fsfe-web/browser/trunk">the web-based source
+      repository</a> on the <a href="https://trac.fsfe.org/fsfe-web">fsfe-web
+      trac site</a> to create diffs, and to see the latest updates for all
+      source files.
     </p>
 
     <p>
@@ -142,37 +143,13 @@
       items or event entries.
     </p>
 
-    <h3>Downloading the complete source file tree with CVS</h3>
+    <h3>Downloading the complete source file tree with subversion</h3>
 
     <p>
-      If it is possible for you to use CVS, you can also download the complete
-      source file tree at once.
-    </p>
-
-    <p>
-      Create a directory in which you want to store the files, change into that
-      directory and issue the command
-    </p>
-
-    <p class="terminal">$ cvs -z3 -d:pserver:anonymous@cvs.savannah.gnu.org:/web/fsfe co .</p>
-
-	<p>
-      When you are asked for a password, just hit the <kbd>Return</kbd> key.
-    </p>
-
-    <p>
-      To update a source tree you previously downloaded that way, you can use
-      the command
-    </p>
-
-	<p class="terminal">$ cvs -z3 update -Pd</p>
-
-    <h2>Joining the fsfe.org webmasters</h2>
-
-    <p>
-      If you intend to contribute translations regularly and have some basic
-      understanding of CVS and SSH, you are invited to
-      <a href="/contribute/web/web.html">join the webmaster team</a>.
+      If it is possible for you to use subversion, you can also download the complete
+      source file tree at once.  Please see the <a
+      href="/contribute/web/web.html">FSFE webmaster information page</a> for
+      detailed instructions.
     </p>
   </body>
 

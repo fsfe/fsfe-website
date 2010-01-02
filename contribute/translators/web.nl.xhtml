@@ -14,10 +14,10 @@
 
     <p>
       De webpagina's van fsfe.org worden onderhouden als een
-      verzameling XML files. De webserver hervormt deze XML files alle
-      vijf minuten automatisch naar HTML pagina's. Het is hierdoor
-      logisch dat alle wijzigingen gebeuren in de XML files, de HTML
-      pagina's worden nooit rechtstreeks bewerkt.
+      verzameling XML-bestanden. De webserver hervormt deze XML-bestanden alle
+      tien minuten automatisch naar HTML-pagina's. Het is hierdoor
+      logisch dat alle wijzigingen gebeuren in de XML-bestanden, de
+      HTML-pagina's worden nooit rechtstreeks bewerkt. 
     </p>
 
     <p>
@@ -48,15 +48,14 @@
 
     <p>
       Alle basisbestanden (de XHTML- en XML-bestanden) zijn vrij
-      beschikbaar om te downloaden, dus kan iedereen spontaan een
-      vertaling maken, zonder zich ergens te registreren. Maar als u
-      van plan bent een vertaling te maken, waarvan u weet dat het
-      wat langer kan duren, stuur dan een kort berichtje naar
+      beschikbaar om te downloaden, dus kan iedereen een vertaling
+      maken zonder zich ergens te registreren. Maar als u van plan
+      bent een vertaling te maken, waarvan u weet dat het wat langer
+      kan duren, stuur dan een kort berichtje naar
       de <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">
-      Translators mailinglijst</a>. Zo voorkomt u dat iemand
-      anders op hetzelfde moment aan hetzelfde bestand werkt.
+      Translators mailinglist</a>. Zo voorkomt u dat iemand anders op
+      hetzelfde moment aan hetzelfde bestand werkt.
     </p>
-
 
     <h3>Ontbrekende vertalingen maken</h3>
 
@@ -76,7 +75,7 @@
     <p>
       Op het einde van het bestand is er een regel met de volgende
       inhoud: <var>&lt;/html&gt;</var>. Onmiddellijk
-      <em>boven</em> deze regel, plaats je hetvolgende:
+      <em>boven</em> deze regel, plaats je het volgende:
       <var>&lt;translator&gt;<em>uw
       naam</em>&lt;/translator&gt;</var>.
     </p>
@@ -107,11 +106,11 @@
 
     <p>
       U kan eventueel
-      ook <a href="http://web.cvs.savannah.gnu.org/viewvc/?root=fsfe">de
+      ook <a href="https://trac.fsfe.org/fsfe-web/browser/trunk">de
       webinterface voor de broncode</a>
-      van <a href="http://savannah.gnu.org/">Savannah</a> gebruiken om
+      van <a href="https://trac.fsfe.org/fsfe-web">het trac beheersysteem</a> gebruiken om
       diffs te generen en om de laatste versies van de bestanden te
-      verkrijgen.
+      raadplegen.
     </p>
 
     <p>
@@ -121,8 +120,6 @@
       bestand dan nalezen en iemand op de lijst zal het bestand
       uiteindelijk op de server plaatsen.
     </p>
-
-
 
     <h3>Uitzoeken wat er moet gebeuren</h3>
 
@@ -135,7 +132,6 @@
       voor die taal.
     </p>
 
-
     <p>
       De lijst van verouderde vertalingen biedt nog een handig
       extraatje voor het updaten: u kan hier niet alleen de
@@ -147,8 +143,6 @@
       zijn sinds de laatste update.
     </p>
 
-
-
     <p>
       Deze statuspagina's voor vertalers, zijn ook de enige manier om
       de XML-bestanden te kunnen downloaden, die gebruikt worden voor het
@@ -156,39 +150,15 @@
       de nieuws- en evenementenkoppen.
     </p>
 
-    <h3>Alle basisbestanden downloaden via CVS</h3>
+    <h3>Alle basisbestanden downloaden met subversion</h3>
 
     <p>
-      Als het voor u mogelijk is om CVS te gebruiken, kan u de volledig directory met
-      basisfiles in één keer downloaden.
+      Als u subversion ter beschikking heeft kan u alle bronbestanden
+      in één keer downloaden. Raadpleeg
+      onze <a href="/contribute/web/web.html">FSFE webmaster
+      informatiepagina</a> voor een gedetailleerde uitleg. 
     </p>
 
-    <p>
-      Maak een directory aan waar u de files wil bewaren, voer in deze directory het volgende commando uit
-    </p>
-
-    <p class="terminal">
-      $ cvs -z3 -d:pserver:anonymous@cvs.savannah.gnu.org:/web/fsfe co .
-    </p>
-
-    <p>
-      Als er een paswoord gevraagd word, drukt u op <kbd>return</kbd>.
-    </p>
-
-    <p>
-      Als u een bestaande directory die u reeds downloadde wil updaten, kan u het volgende 
-      commando gebruiken
-    </p>
-
-    <p class="terminal">$ cvs -z3 update -Pd</p>
-
-    <h2>Lid worden van de fsfe.org webmasters</h2>
-
-    <p>
-      Als u van plan bent om op regelmatige basis vertalingen in te dienen en u kent iets van
-      CVS en SSH, dan wordt u uitgenodigd  om  <a href="/contribute/web/web.html">
-      lid te worden van het webmasterteam</a>.
-    </p>
   </body>
 
   <timestamp>$Date$ $Author$</timestamp>

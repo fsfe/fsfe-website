@@ -25,16 +25,16 @@
 
     <ul>
       <li>
-        <a href="http://savannah.gnu.org" target="_blank">Savannah</a> – for
-          CVS (see below) services and access permission management
-      </li>
-      <li>
         <a href="http://www.w3.org/MarkUp/" target="_blank">XHTML</a> – from
-        which the static pages are generated every five minutes
+        which the web pages are generated
       </li>
       <li>
-        <a href="http://www.cvshome.org" target="_blank">Concurrent Version
-          System (CVS)</a> – for co-ordination and synchronisation
+        <a href="http://subversion.tigris.org/" target="_blank">Subversion</a> –
+        for version control of web page sources
+      </li>
+      <li>
+        <a href="http://trac.edgewall.org/" target="_blank">Trac</a> – for
+          access permission management, issue tracking and other related services.
       </li>
     </ul>
 
@@ -60,7 +60,7 @@
     <p>
       The web pages of <var>fsfe.org</var> are maintaned as a set of
       XML files.  The web server generates the HTML pages from these XML files
-      automatically every five minutes.  Consequently, all editing of the pages
+      automatically every ten minutes.  Consequently, all editing of the pages
       is done in the XML files, and the HTML is never edited directly.
     </p>
 
@@ -85,96 +85,72 @@
     </p>
 
 
-    <h2>Registering at Savannah</h2>
+    <h2>Getting access to the web pages</h2>
 
     <p>
-      The source files for the web pages are stored on <a
-      href="http://savannah.gnu.org/">Savannah</a>, a server hosted by the Free
-      Software Foundation, our sister organisation in North America.  To get
-      write access to these files, you need to create an account on that server
-      and request write permission from the FSFE project.
+      The source files for the web pages are stored on the <a
+      href="https://svn.fsfe.org/fsfe-web">fsfe-web subversion repository</a>,
+      hosted on the FSFE subversion server.  Other services are available on the
+      related <a href="https://trac.fsfe.org/fsfe-web">trac instance</a>.
     </p>
-
-
-    <h3>Registering a new account</h3>
-
     <p>
-      First you must <a
-      href="https://savannah.gnu.org/account/register.php">register a new
-      account</a>.  Choose a login name, a password, fille in your real name
-      and your e-mail address, and click the <strong>Submit</strong> button.
+      To have access to these tools, just follow these instructions:
     </p>
+    <ul>
+      <li>
+        <p>
+        If you are a <a href="http://fellowship.fsfe.org">Fellow of the FSFE</a>
+        you already have read access to subversion and trac, just log in with
+        your usual Fellowship username and password.
+        </p>
+        <p>
+        To have write access to the subversion repository, and the trac wiki and
+        ticket system, just write to <b>system-hackers@fsfeurope.org</b>
+        </p>
+      </li>
+      <li>
+        <p>
+        Everyone else can register a guest account for the subversion and
+        trac, using the web form at <a
+        href="https://trac.fsfe.org/fsfe-web/register">https://trac.fsfe.org/fsfe-web/register</a>.
+        As soon as you register, you'll have read access to the subversion
+        repository and you can log into the trac site (please note that a
+        <var>guest-</var> prefix will be added to the username you choose). A
+        notification message will be automatically sent to the repository admin,
+        that will enable write access as soon as possible.
+        </p>
+      </li>
+    </ul>
 
-    <p>
-      Now you will receive an e-mail from Savannah.  In order to complete your
-      registration, visit the URL mentionend there.  Accounts not confirmed
-      after two days are deleted from the database.
-    </p>
+    <h3>Checking out a subversion working copy</h3>
     
     <p>
-      After confirming your account, you can log in at <a
-      href="https://savannah.gnu.org/">https://savannah.gnu.org/</a> with your
-      login name and your password.
+      The subversion repository has two main code bases for the FSFE website,
+      the <a href="https://trac.fsfe.org/fsfe-web/browser/trunk">SVN "trunk"</a>,
+      which is used to build the "production" instance of the website at
+      <a href="http://fsfe.org">http://fsfe.org</a>, and the <a
+      href="https://trac.fsfe.org/fsfe-web/browser/branches/test">"test"
+      branch</a>, which is used to build <a
+      href="http://test.fsfe.org">http://test.fsfe.org</a>.
     </p>
-
-
-    <h3>Creating an SSH key</h3>
-
     <p>
-      While you can use the password to log into the web portal on Savannah,
-      you must have an SSH key to gain CVS write access.  This has to be done
-      on every machine from where you will access the CVS repository.
+      For day-to-day work, like adding news items, translating pages (or even
+      developing small changes to the website) you will need to check out the SVN
+      trunk:
     </p>
-    
+    <p class="terminal">svn --username YOURNAME co https://svn.fsfe.org/fsfe-web/trunk</p>
     <p>
-      To create and register an SSH key, please follow the <a
-      href="https://savannah.gnu.org/faq/?group_id=5802&amp;question=User_Account_-_How_do_I_configure_my_SSH_access.txt">instructions
-      given in the Savannah FAQ</a>.
+      To work on major changes to the website, including debugging new features that
+      could potentially break the site, you are encouraged to check out the "test"
+      branch of the SVN repository:
     </p>
-
-
-    <h3>Joining the FSFE project</h3>
-
+    <p class="terminal">svn --username YOURNAME co https://svn.fsfe.org/fsfe-web/branches/test</p>
     <p>
-      There are a lot of projects hosted on Savannah, and CVS access is granted
-      on a per-project basis.  To get access to the FSFE web page source files,
-      you have to become a member of the FSFE project.
-    </p>
-
-    <p>
-      Choose <strong>Group Membership</strong> in the top tabs. Now you can
-      enter "FSFE" into the search box of <strong>Request for
-      Inclusion</strong>, activate the FSFE checkbox and enter a comment.
-    </p>
-
-    <p>
-      The administrators of the FSFE project will then get a mail with your
-      request and the comment you gave and can approve your membership in the
-      project.  After that you should see "Free Software Foundation Europe" in
-      the <strong>Groups I'm Contributor of</strong> after you login at
-      Savannah.
-    </p>
-
-
-    <h3>Checking out the repository initially</h3>
-
-    <p>
-      First you should make sure that your <var>~/.bashrc</var> file contains a line
-      saying
-    </p>
-
-    <p class="file">export CVS_RSH=ssh</p>
-
-    <p>
-      then create a directory for the repository and execute
-    </p>
-
-    <p class="terminal">$ cvs -z3 -d <em>username</em>@cvs.savannah.gnu.org:/web/fsfe co .</p>
-    
-    <p>
-      in that directory.  Now you are asked for your SSH passphrase.  Enter it
-      and confirm.  If everything is alright, now the website should be checked
-      out.
+      Please note that a full working copy will require about 160Mb; if you only
+      plan to work on part of the website, you can check out only the directories
+      that you are interested in. Please see the <a href="Webpage-Structure.txt"
+        target="_blank">structural reference</a> to have an idea of the directory
+      layout.
     </p>
 
 
@@ -185,10 +161,10 @@
       execute
     </p>
 
-    <p class="terminal">$ cvs update -d</p>
+    <p class="terminal">$ svn update</p>
 
     <p>
-      in the fsfe directory every time before you work on a specific file.
+      every time before you work on a specific file.
     </p>
     
     <p>
@@ -196,14 +172,14 @@
       execute
     </p>
 
-    <p class="terminal">$ cvs add <em>filename</em></p>
+    <p class="terminal">$ svn add <em>filename</em></p>
 
     <p>
       To post your changes to the server, no matter be it a new file or a
       modification in an existing file, execute
     </p>
 
-    <p class="terminal">$ cvs commit <em>filename</em></p>
+    <p class="terminal">$ svn commit <em>filename</em></p>
 
     <p>
       and your default editor will open to allow for some description of your
@@ -211,14 +187,61 @@
     </p>
 
     <p>
-      You can download a detailed manual for CVS at the <a
-      href="http://www.nongnu.org/cvs/">CVS home page</a>.
+      In subversion, <a
+      href="http://svnbook.red-bean.com/en/1.5/svn.advanced.props.special.keywords.html">keyword
+      substitution</a> must be enabled explicitely on every file. Since we
+      use some keywords on <var>.xml</var> and <var>.xhtml</var> files (for
+      example the <var>$</var><var>Author</var><var>$</var> keyword on the
+      page footer), you can automate enabling keywords adding
+      the following snippet to your <var>~/.subversion/config</var> file
+      <pre>
+      enable-auto-props = yes
+
+      [auto-props]
+      *.xml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xml;svn:eol-style=native
+      *.xhtml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xhtml;svn:eol-style=native
+      </pre>
+    </p>
+
+    <p>
+      If you are used to work with CVS, you will easily start working with SVN; as
+      you have noticed, the basic commands are very similar. To learn more, you
+      can see an overview of the differences between CVS and SVN at 
+      <a href="http://svnbook.red-bean.com/en/1.5/svn.forcvs.html">Subversion for
+      CVS Users</a>, and a quick reference comparison of CVS and SVN commands at
+      <a
+      href="http://svn.collab.net/repos/svn/trunk/doc/user/cvs-crossover-guide.html">CVS to SVN Crossover Guide</a>
+    </p>
+    <p>
+      You can download a detailed manual for SVN at the <a
+      href="http://svnbook.red-bean.com/">Subversion book</a> page
+      (we are using the 1.5 release of SVN).
+    </p>
+
+    <h2>Coordination tools</h2>
+
+    <p>
+      The work on the website pages is coordinated on the <a
+      href="http://mail.fsfeurope.org/mailman/listinfo/web">Webmasters mailing
+      list</a>.
+    </p>
+
+    <p>
+      The <a href="https://trac.fsfe.org/fsfe-web">fsfe-web trac instance</a>
+      provides some further tools to help coordination: a SVN repository web
+      browser, an issue tracking system and a wiki.
+    </p>
+
+    <p>
+      You can find out more about using trac at the <a
+      href="https://trac.fsfe.org/fsfe-web/wiki/TracGuide">TracGuide</a> wiki
+      page.
     </p>
 
     <p>
       If you want to keep track with all commits that are done to the web page
-      sources, you can subscribe to the <a
-      href="http://mail.fsfeurope.org/mailman/listinfo/web-cvs-notify">CVS
+      sources, you can also subscribe to the <a
+      href="http://mail.fsfeurope.org/mailman/listinfo/web-cvs-notify">commit
       notification mailing list</a> and you will get a mail for every change
       posted to the source tree.
     </p>
@@ -281,8 +304,14 @@
       <li>
 
         <p>
-          Make sure that all files are proper XML.  There is a script named
-          <var>/fsfe/tools/validate.pl</var> that helps finding errors in the
+          Make sure that all files are proper XML. By default, the SVN server
+          will check the XML syntax of files with .xml and .xhtml extensions, and
+          will forbid the commit if XML errors are found. To avoid this, you can
+          check your files before committing them, in one of the following ways.
+        </p>
+        <p>
+          There is a script named
+          <var>/trunk/tools/validate.pl</var> that helps finding errors in the
           markup.  Improper XML breaks the automatic build process of the web
           pages and blocks updates for the complete FSFE website.  If you
           suspect the build process to broken, you can <a
@@ -337,7 +366,7 @@
     </ul>
 
     <p>
-      Please coordinate with other people who also have CVS commit access to
+      Please coordinate with other people who also have SVN commit access to
       make sure that translations and fixes contributed by people without
       commit access are committed properly after they have been proofread.  Of
       course, please check these files before you commit them like you check
@@ -366,7 +395,7 @@
       target="_blank">Webmastering FSF Europe</a></em> by <a
       href="mailto:oberg@fsfeurope.org">Jonas Öberg</a>, who implemented the
       build system for the page.  Please read it to know more about how the web
-      pages works.
+      pages work.
     </p>
 
   </body>

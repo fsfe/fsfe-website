@@ -515,7 +515,9 @@ a.fn {
 	width: 7em;
 }
 
-.event .date * {
+.event .date .day,
+.event .date .month,
+.event .date .conjunction {
 	display: block;
 	font-size: 90%;
 }

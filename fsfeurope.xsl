@@ -14,9 +14,6 @@
   <!-- The actual HTML tree is in "buildinfo/document" -->
   <xsl:template match="buildinfo/document">
     <xsl:element name="html">
-      <xsl:attribute name="lang">
-        <xsl:value-of select="/buildinfo/@language"/>
-      </xsl:attribute>
       <xsl:if test="/buildinfo/@language='ar'">
         <xsl:attribute name="dir">rtl</xsl:attribute>
       </xsl:if>

@@ -499,7 +499,7 @@ a.fn {
 /* ------------------------------------------------------------------------- */
 .event {
 	clear: right;
-	margin-left: 90px;
+	margin: 0 0 1.5em 90px;
 	min-height: 10em;
 	position: relative;
 }
@@ -567,6 +567,14 @@ a.fn {
 #events h3 {
 	color: black;
 	font-size: 100%;
+}
+
+#frontpage .event .date .day {
+	font-size: 220%;
+}
+
+#frontpage .event .date.multiple .day {
+	font-size: 200%;
 }
 
 /*

@@ -23,7 +23,7 @@
   <xsl:template name="news">
     <div class="entry">
       <h3><xsl:value-of select="title" /></h3>
-      <div class="date"><xsl:value-of select="@date" /></div>
+      <!--<div class="date"><xsl:value-of select="@date" /></div>-->
       <div class="text">
         <xsl:apply-templates select="body/node()" />
         <xsl:variable name="link"><xsl:value-of select="link" /></xsl:variable>
@@ -82,7 +82,7 @@
             <span class="day"><xsl:value-of select="$start_day" /> </span>
             <span class="month"><xsl:value-of select="$start_month" /></span>
           </span>
-          <span class="conjunction"><xsl:value-of select="/html/text [@id = 'to']" /></span>
+          <span class="conjunction"><xsl:value-of select="/html/text[@id='to']" /></span>
           <span class="to">
             <span class="day"><xsl:value-of select="$end_day" /> </span>
             <span class="month"><xsl:value-of select="$end_month" /></span>

@@ -499,9 +499,8 @@ a.fn {
 /* ------------------------------------------------------------------------- */
 .event {
 	clear: right;
-	margin-left: 7em;
+	margin-left: 6em;
 	min-height: 10em;
-	padding-top: .8em;
 }
 
 .event h3 {
@@ -510,10 +509,10 @@ a.fn {
 
 .event .date {
 	color: #888;
-	margin: -2.5em 0 1.8em -7em;
+	margin: -3em 0 1.8em -6em;
 	position: absolute;
 	text-align: center;
-	width: 7em;
+	width: 6em;
 }
 
 .event .date .day,
@@ -527,7 +526,7 @@ a.fn {
 }
 
 .event .date .day {
-	font-size: 300%;
+	font-size: 250%;
 }
 
 .event .date .month {
@@ -536,7 +535,7 @@ a.fn {
 
 .event .date.multiple .from .day,
 .event .date.multiple .to .day {
-	font-size: 250%;
+	font-size: 230%;
 }
 
 .event .date.multiple .conjunction {
@@ -566,9 +565,9 @@ a.fn {
 #events h3 {
 	color: black;
 	font-size: 100%;
-	margin-right: 6.2em;
 }
 
+/*
 #news .entry,
 #events .event {
 	margin-bottom: 1.8em;
@@ -580,6 +579,7 @@ a.fn {
 	float: right;
 	margin-top: -2.2em;
 }
+*/
 
 #news .tools,
 #events .tools {

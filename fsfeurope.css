@@ -517,15 +517,21 @@ a.fn {
 }
 
 .event .date .day,
-.event .date .month,
-.event .date .conjunction {
+.event .date .conjunction,
+.event .date .month {
 	display: block;
+}
+
+.event .date .conjunction {
 	font-size: 90%;
 }
 
 .event .date .day {
 	font-size: 300%;
-	display: block;
+}
+
+.event .date .month {
+	font-size: 110%;
 }
 
 .event .date.multiple .from .day,

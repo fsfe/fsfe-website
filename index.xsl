@@ -2,7 +2,7 @@
 
 <xsl:stylesheet version="1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:dt="http://xlstls.org/date-time">
+  xmlns:dt="http://xsltsl.org/date-time">
 
   <xsl:import href="tools/xsltsl/date-time.xsl" />
   <xsl:output method="xml" encoding="UTF-8" indent="yes" />

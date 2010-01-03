@@ -499,8 +499,9 @@ a.fn {
 /* ------------------------------------------------------------------------- */
 .event {
 	clear: right;
-	margin-left: 6em;
+	margin-left: 90px;
 	min-height: 10em;
+	position: relative;
 }
 
 .event h3 {
@@ -509,10 +510,11 @@ a.fn {
 
 .event .date {
 	color: #888;
-	margin: -3em 0 1.8em -6em;
+	left: -90px;
 	position: absolute;
 	text-align: center;
-	width: 6em;
+	top: -18px;
+	width: 90px;
 }
 
 .event .date .day,

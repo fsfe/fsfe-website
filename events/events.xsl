@@ -4,8 +4,7 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:dt="http://xsltsl.org/date-time">
 
-  <!-- <xsl:import href="../tools/xsltsl/date-time.xsl" /> -->
-  <xsl:import href="http://xsltsl.sourceforge.net/modules/stdlib.xsl" />
+  <xsl:import href="../tools/xsltsl/date-time.xsl" />
   <xsl:output method="xml" encoding="UTF-8" indent="yes" />
 
   <!-- Basically, copy everything -->
@@ -29,7 +28,7 @@
     </xsl:variable>
     
     <xsl:variable name="start_month">
-      <xsl:call-template name="dt:get-month-name-abbreviation">
+      <xsl:call-template name="dt:get-month-abbreviation">
         <xsl:with-param name="month" select="substring($start,6,2)" />
       </xsl:call-template>
     </xsl:variable>
@@ -43,7 +42,7 @@
     </xsl:variable>
     
     <xsl:variable name="end_month">
-      <xsl:call-template name="dt:get-month-name-abbreviation">
+      <xsl:call-template name="dt:get-month-abbreviation">
         <xsl:with-param name="month" select="substring($end,6,2)" />
       </xsl:call-template>
     </xsl:variable>

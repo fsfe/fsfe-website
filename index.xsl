@@ -23,6 +23,7 @@
 
   <!-- Show a single news item -->
   <xsl:template name="news">
+    <xsl:variable name="link"><xsl:value-of select="link" /></xsl:variable>
     <div class="entry">
       <xsl:choose>
         <xsl:when test="$link != ''">
@@ -81,44 +82,42 @@
     </xsl:variable>
  
     <div class="event">
-      <h3><xsl:value-of select="title" /></h3>
-      
       <xsl:choose>
-      <xsl:when test="$start != $end">
-        <p class="date multiple">
-          <span class="n">(</span>
-          <span class="from">
-            <span class="day"><xsl:value-of select="$start_day" /> </span>
-            <span class="month"><xsl:value-of select="$start_month" /></span>
-          </span>
-          <span class="conjunction"><xsl:value-of select="/html/text[@id='to']" /></span>
-          <span class="to">
-            <span class="day"><xsl:value-of select="$end_day" /> </span>
-            <span class="month"><xsl:value-of select="$end_month" /></span>
-          </span>
-          <span class="n">)</span>
-        </p>
-      </xsl:when>
-      <xsl:otherwise>
-        <p class="date">
-          <span class="n">(</span>
-          <span class="day">14 </span>
-          <span class="month">Jan</span>
-          <span class="n">)</span>
-        </p>
-      </xsl:otherwise>
-    </xsl:choose>
+        <xsl:when test="$link != ''">
+          <h3><a href="{link}"><xsl:value-of select="title" /></a></h3>
+        </xsl:when>
+        <xsl:otherwise>
+          <h3><xsl:value-of select="title" /></h3>
+        </xsl:otherwise>
+      </xsl:choose>
 
-    <xsl:apply-templates select="body/node()" /> 
-    
-    <xsl:if test="$link != ''">
-      <p class="read_more">
-        <a href="{link}">
-          <xsl:value-of select="/html/text[@id='more']" />
-        </a>
-      </p>
-    </xsl:if>
+      <xsl:choose>
+        <xsl:when test="$start != $end">
+          <p class="date multiple">
+            <span class="n">(</span>
+            <span class="from">
+              <span class="day"><xsl:value-of select="$start_day" /> </span>
+              <span class="month"><xsl:value-of select="$start_month" /></span>
+            </span>
+            <span class="conjunction"><xsl:value-of select="/html/text[@id='to']" /></span>
+            <span class="to">
+              <span class="day"><xsl:value-of select="$end_day" /> </span>
+              <span class="month"><xsl:value-of select="$end_month" /></span>
+            </span>
+            <span class="n">)</span>
+          </p>
+        </xsl:when>
+        <xsl:otherwise>
+          <p class="date">
+            <span class="n">(</span>
+            <span class="day">14 </span>
+            <span class="month">Jan</span>
+            <span class="n">)</span>
+          </p>
+        </xsl:otherwise>
+      </xsl:choose>
 
+      <xsl:apply-templates select="body/node()" /> 
     </div>
   </xsl:template>
 

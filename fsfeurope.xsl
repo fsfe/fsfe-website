@@ -14,6 +14,9 @@
   <!-- The actual HTML tree is in "buildinfo/document" -->
   <xsl:template match="buildinfo/document">
     <xsl:element name="html">
+      <xsl:attribute name="lang">
+        <xsl:value-of select="/buildinfo/@language"/>
+      </xsl:attribute>
       <xsl:if test="/buildinfo/@language='ar'">
         <xsl:attribute name="dir">rtl</xsl:attribute>
       </xsl:if>
@@ -259,7 +262,7 @@
           <xsl:element name="p">
 
             <!-- Copyright -->
-            <xsl:apply-templates select="/buildinfo/textset/text[@id='copyright']/node()"/>
+            <xsl:text>Copyright 2001-2010 FSFE.</xsl:text>
 
             <!-- "Last changed" magic -->
             <xsl:variable name="timestamp">

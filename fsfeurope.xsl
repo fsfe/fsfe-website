@@ -262,7 +262,7 @@
           <xsl:element name="p">
 
             <!-- Copyright -->
-            <xsl:text>Copyright 2001-2009 FSFE.</xsl:text>
+            <xsl:text>Copyright 2001-2010 FSFE.</xsl:text>
 
             <!-- "Last changed" magic -->
             <xsl:variable name="timestamp">

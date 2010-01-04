@@ -117,7 +117,9 @@
         </xsl:otherwise>
       </xsl:choose>
 
-      <xsl:apply-templates select="body/node()" /> 
+      <div class="details">
+        <xsl:apply-templates select="body/node()" /> 
+      </div>  
     </div>
   </xsl:template>
 

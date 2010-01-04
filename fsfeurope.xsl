@@ -262,7 +262,7 @@
           <xsl:element name="p">
 
             <!-- Copyright -->
-            <xsl:apply-templates select="/buildinfo/textset/text[@id='copyright']/node()"/>
+            <xsl:text>Copyright 2001-2009 FSFE.</xsl:text>
 
             <!-- "Last changed" magic -->
             <xsl:variable name="timestamp">

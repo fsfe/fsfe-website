@@ -1,0 +1,10 @@
+ul.package {
+	margin: 0;
+	background: url("/graphics/corner.png") top left no-repeat;
+	padding: 1em 0 1em 1.4em;
+}
+
+ul.package li {
+	margin: 0.4em 0 0 0;
+	list-style: none;
+}

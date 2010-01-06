@@ -41,3 +41,7 @@ $(HELPERFILE) :
 localmenuinfo.xml: $(HELPERFILE) $(sources)
 	xsltproc -o $@ $(STYLESHEET) $(HELPERFILE) 
 	rm -f $(HELPERFILE)
+
+%.html : %.xhtml $(HELPERFILE)
+	perl tools/bogus-build.pl $< | xsltproc -o $@ fsfeurope.xsl -
+

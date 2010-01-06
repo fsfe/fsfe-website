@@ -32,10 +32,12 @@ sources := $(shell grep -l -R --include='*.xhtml' $(SELECT) . )
 
 localmenus: localmenuinfo.xml
 
-localmenuinfo.xml: $(sources)
+$(HELPERFILE) :
 	rm -f $(HELPERFILE)
 	echo \<localmenuset\> > $(HELPERFILE)
 	grep -R --include='*.xhtml' $(SELECT) .| sed -e 's,$(FIND),$(REPLACE),' >> $(HELPERFILE)
 	echo \</localmenuset\> >> $(HELPERFILE)
+
+localmenuinfo.xml: $(HELPERFILE) $(sources)
 	xsltproc -o $@ $(STYLESHEET) $(HELPERFILE) 
 	rm -f $(HELPERFILE)

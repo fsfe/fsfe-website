@@ -142,7 +142,7 @@
         </xsl:for-each>
         <ul class="tools">
           <li><a class="more_news" href="/news/news.html"><xsl:value-of select="/html/text[@id='morenews']" /></a></li>
-          <li><a class="rss" href="/news/news.rss">RSS</a></li>
+          <li><a class="rss" href="/news/news.rss" class="feed">RSS</a></li>
         </ul>
       </div> <!-- /#news -->
       <div id="events">
@@ -156,7 +156,7 @@
         </xsl:for-each>
         <ul class="tools">
           <li><a class="more_events" href="/events/events.html"><xsl:value-of select="/html/text[@id='moreevents']" /></a></li>
-          <li><a class="rss" href="/events/events.rss">RSS</a></li>
+          <li><a class="rss" href="/events/events.rss"  class="feed">RSS</a></li>
         </ul>
       </div> <!-- /#events -->
     </body>

@@ -62,7 +62,17 @@
 
     <!-- Now, the event block -->
     <div class="event">
-      <h3><xsl:value-of select="title" /></h3>
+      <xsl:choose>
+        <xsl:when test="$link != ''">
+          <h3><a href="{link}"><xsl:value-of select="title" /></a></h3>
+        </xsl:when>
+        <xsl:when test="$page != ''">
+          <h3><a href="{page}"><xsl:value-of select="title" /></a></h3>
+        </xsl:when>
+        <xsl:otherwise>
+          <h3><xsl:value-of select="title" /></h3>
+        </xsl:otherwise>
+      </xsl:choose>
 
       <xsl:choose>
         <xsl:when test="$start != $end">
@@ -90,8 +100,11 @@
         </xsl:otherwise>
       </xsl:choose>
 
-      <xsl:apply-templates select="body/node()" />
-     
+      <div class="details">
+        <xsl:apply-templates select="body/node()" />
+      </div>
+
+      <!--
       <xsl:if test="$link != ''">
         <p class="read_more">
           <a href="{link}"><xsl:value-of select="/html/text [@id = 'more']" /></a>
@@ -103,6 +116,7 @@
           <a href="{page}"><xsl:value-of select="/html/text [@id = 'page']" /></a>
         </p>
       </xsl:if>
+      -->
     </div>
   </xsl:template>
 

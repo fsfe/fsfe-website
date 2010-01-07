@@ -2,13 +2,11 @@
    big chunks and send them off to the side.
 */
 .left {
-	clear: left;
 	float: left;
 	width: 48%;
 }
 
 .right {
-	clear: right;
 	float: right;
 	width: 48%;
 }

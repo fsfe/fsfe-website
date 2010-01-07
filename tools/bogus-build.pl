@@ -36,7 +36,8 @@ print<<EOF;
   <textset>           <!-- The static text set for this language -->
      <text id="menu/about">About</text>
   </textset>
-
+  <webset root="http://www.fsfeurope.org">
+  </webset>
 
   <document language="en">
 EOF

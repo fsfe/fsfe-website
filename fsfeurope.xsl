@@ -28,7 +28,13 @@
   <xsl:template match="head">
     <xsl:copy>
       <meta name="robots" content="index, follow" />
-      <link rel="stylesheet" media="all" href="/fsfeurope.css" type="text/css" />
+      <xsl:element name="link">
+        <xsl:attribute name="rel">stylesheet</xsl:attribute>
+        <xsl:attribute name="media">all</xsl:attribute>
+        <xsl:attribute name="type">text/css</xsl:attribute>
+        <xsl:attribute name="href">
+          <xsl:value-of select="/buildinfo/webset/@root" />/fsfeurope.css</xsl:attribute>
+      </xsl:element>
       <link rel="stylesheet" media="print" href="/print.css" type="text/css" />
       <xsl:if test="/buildinfo/@language='ar'">
         <link rel="stylesheet" media="all" href="/rtl.css" type="text/css" />
@@ -412,6 +418,7 @@
 		       buildinfo/textset|
 		       buildinfo/textsetbackup|
 		       buildinfo/menuset|
+		       buildinfo/webset|
 		       buildinfo/trlist|
 		       buildinfo/fundraising|
 		       buildinfo/localmenuset"/>

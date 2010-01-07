@@ -1,10 +1,90 @@
-ul.package {
+/* This is the very general left-or-right column setup; we split the packages into two
+   big chunks and send them off to the side.
+*/
+.left {
+	clear: left;
+	float: left;
+	width: 48%;
+}
+
+.right {
+	clear: right;
+	float: right;
+	width: 48%;
+}
+
+/* The abstract is the part of the page that explains what the whole
+   page is about. It also contains the localmenu, if relevant. The abstract
+   appears as a single column chunk above the packages or sections.
+*/
+
+#abstract {
+	padding: 1ex 1.5em;
+}
+
+/* Unused menu styling. This could replace the manual formatting applied
+   by the <localmenu> that the FSFE website build script uses.
+*/
+
+#abstract .menu {
+	text-align: center;
+}
+
+#abstract .menu ul {
+	display: inline;
+	margin: 0px;
+}
+
+#abstract .menu li {
+	display: inline;
+}
+
+#abstract .menu li:before {
+	content: "[";
+}
+
+#abstract .menu li:after {
+	content: "]";
+}
+
+/* Each chunk or direction-to-sub-area is called a "package" and can include a
+   header, explanatory texts, whatever -- as well as a list of onward links
+   for specific topics.
+*/
+
+.package {
 	margin: 0;
-	background: url("/graphics/corner.png") top left no-repeat;
+	background: url("http://www.fsfeurope.org/graphics/corner.png") top left no-repeat;
 	padding: 1em 0 1em 1.4em;
 }
 
-ul.package li {
-	margin: 0.4em 0 0 0;
-	list-style: none;
+.package h1 {
+	text-align: left;
+	text-decoration: none;
+	font-size: medium;
+	margin: 0;
 }
+
+.package p {
+	text-align: justify;
+}
+
+
+/* The continue class is intended to provide deep links into a
+   sub area, and should have explanitory general text above it.
+*/
+
+.package ul.continue {
+	text-align: right;
+}
+
+.package ul.continue li {
+	list-style: none;
+	font-size: x-small;
+	margin: 0;
+	padding-right: 27px;
+	background: url("continue.png") top right no-repeat;
+}
+
+
+

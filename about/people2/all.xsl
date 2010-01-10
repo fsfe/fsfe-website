@@ -91,7 +91,14 @@
 
           </div>
           <div class="profile">
-            <xsl:value-of select="profile" />
+            <xsl:choose>
+              <xsl:when test="profile != ''">
+                <xsl:value-of select="profile" />
+              </xsl:when>
+              <xsl:otherwise>
+                &nbsp;
+              </xsl:otherwise>
+            </xsl:choose>
           </div>
         </div>
       </xsl:for-each>

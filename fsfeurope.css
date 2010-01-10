@@ -339,19 +339,21 @@ pre.file {
 	font-size: 105%;
 	padding: 1em;
 	min-height: 60px;
-	line-height: 160%;
+	line-height: 190%;
 }
 
 #introduction img {
 	float: left;
 	padding: 0 2em 0 0;
 	margin: 1em 0;
+	height: 36%; /* hack */
 }
 
 #introduction .read_more {
-	text-align: right;
 	border-bottom: 1px solid rgb(210,210,210);
-	padding-bottom: 1em;
+	margin: 0 -1em;
+	padding: 0 1em 1em 0;
+	text-align: right;
 }
 
 

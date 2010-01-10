@@ -27,26 +27,28 @@
               </xsl:otherwise>
             </xsl:choose>
 
-            <!-- Functions -->
-            <xsl:for-each select="function">
-              <xsl:if test="position() != 1">
-                <xsl:text>/</xsl:text>
-              </xsl:if>
-              <xsl:variable name="function">
-                <xsl:value-of select="." />/
-                <xsl:choose>
-                  <xsl:when test="sex = 'male'">
-                    m
-                  </xsl:when>
-                  <xsl:when test="sex = 'female'">
-                    f
-                  </xsl:when>
-                  <xsl:otherwise>
-                    m
-                  </xsl:otherwise>
-                </xsl:choose>
-            </xsl:variable>
-            <xsl:apply-templates select="/html/set/function[@id=$function]/node()"/>
+            <ul>
+
+              <!-- Functions -->
+              <xsl:for-each select="function">
+                <xsl:if test="position() != 1">
+                  <xsl:text>/</xsl:text>
+                </xsl:if>
+                <xsl:variable name="function">
+                  <xsl:value-of select="." />/
+                  <xsl:choose>
+                    <xsl:when test="sex = 'male'">
+                      m
+                    </xsl:when>
+                    <xsl:when test="sex = 'female'">
+                      f
+                    </xsl:when>
+                    <xsl:otherwise>
+                      m
+                    </xsl:otherwise>
+                  </xsl:choose>
+                </xsl:variable>
+                <xsl:apply-templates select="/html/set/function[@id=$function]/node()"/>
             <!--
             <xsl:if test="@country != ''">
                 <xsl:text> </xsl:text>
@@ -69,15 +71,27 @@
                 <xsl:apply-templates select="/html/set/volunteers[@id=$volunteers]/node()"/>
               </xsl:if>
               -->
-            </xsl:for-each>
+              </xsl:for-each>
 
-            <!-- E-mail -->
-            <xsl:if test="email != ''">
-              <li>
-                <a href="mailto:{email}"><xsl:value-of select="email" /></a>
-              </li>
-            </xsl:if>
+              <!-- E-mail -->
+              <xsl:if test="email != ''">
+                <li>
+                  <a href="mailto:{email}"><xsl:value-of select="email" /></a>
+                </li>
+              </xsl:if>
 
+              <!-- Telephone -->
+              <xsl:if test="telephone != ''">
+                <li>
+                  <xsl:value-of select="telephone" />
+                </li>
+              </xsl:if>
+
+            </ul>
+
+          </div>
+          <div class="profile">
+            <xsl:value-of select="profile" />
           </div>
         </div>
       </xsl:for-each>

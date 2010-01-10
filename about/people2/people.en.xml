@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Do not translate this file -->
+<!-- Translators: Do not translate this file! -->
+
+<!--
+
+The following is a complete list of all available elements/variables for
+a person entry:
+
+  <person id="doe">
+    <name>John Doe</name>
+    <sex>male</sex>
+    <country>us</country>
+    <email>john.doe@example.com</email>
+    <functions>
+      <function type="member">member</function>
+      <function type="team">member</function>
+      <function type="staff">executive-director</function>
+      <function type="country">deputy</function>
+      <function type="designers">member</function>
+      <function type="web">coordinator</function>
+      <function type="translators">deputy</function>
+      <function type="fellowship">deputy</function>
+      <function type="system">system-admin</function>
+      <function type="project">ftf-member</function>
+      <function type="project">stacs-coord</function>
+    </function>
+    <profile>
+      This is a short biography on John Doe.  This can contain HTML.
+    </profile>
+  </person>
+
+-->
 
 <personset>
 

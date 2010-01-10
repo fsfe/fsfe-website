@@ -260,7 +260,10 @@ dl dd {
 }
 
 #content h1 {
-  text-align: center;
+	border-top: 1px solid rgb(210,210,210);
+	font-size: 250%;
+	margin-bottom: 0;
+	padding-bottom: 0.45em;
 }
 
 #content h2 {
@@ -334,15 +337,21 @@ pre.file {
 
 #introduction {
 	font-size: 105%;
-	border-top: 1px solid rgb(210,210,210);
-	border-bottom: 1px solid rgb(210,210,210);
 	padding: 1em;
 	min-height: 60px;
 	line-height: 160%;
 }
 
+#introduction img {
+	float: left;
+	padding: 0 2em 0 0;
+	margin: 1em 0;
+}
+
 #introduction .read_more {
 	text-align: right;
+	border-bottom: 1px solid rgb(210,210,210);
+	padding-bottom: 1em;
 }
 
 

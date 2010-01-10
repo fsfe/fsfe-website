@@ -263,7 +263,7 @@ dl dd {
 	border-bottom: 1px solid rgb(210,210,210);
 	font-size: 250%;
 	margin-bottom: 0;
-	padding-bottom: 0.45em;
+	padding: 0 0 .45em .45em;
 }
 
 #content h2 {

@@ -399,6 +399,32 @@ table td.negative {
 	background-color: #ffd0d0;
 }
 
+/* ------------------------------------------------------------------------- */
+/* People styles                                                             */
+/* ------------------------------------------------------------------------- */
+#people .person {
+	clear: left;
+}
+
+#people .person .image {
+	float: left;
+	width: 100px;
+	padding-right: 1%;
+}
+
+#people .person .meta {
+	float: left;
+	width: 15%;
+}
+
+#people .person .profile {
+	float: left;
+}
+
+#people .person .meta ul {
+	list-style: none;
+}
+
 
 /* ------------------------------------------------------------------------- */
 /* Action box                                                                */

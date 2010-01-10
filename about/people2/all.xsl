@@ -12,7 +12,7 @@
 
           <!-- Image -->
           <div class="image">
-            <img src="/about/people2/images/<xsl:value-of select="@id" />" alt="" />
+            <img src="/about/people2/images/{@id}" alt="" />
           </div>
 
           <div class="meta">

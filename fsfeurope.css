@@ -409,20 +409,28 @@ table td.negative {
 #people .person .image {
 	float: left;
 	width: 100px;
+	height: 100px;
 	padding-right: 1%;
 }
 
 #people .person .meta {
 	float: left;
-	width: 15%;
+	width: 25%;
+}
+
+#people .person .meta h3 {
+	margin: 0;
+	font-size: 110%;
+}
+
+#people .person .meta ul {
+	font-size: 95%;
+	padding: 0;
+	list-style: none;
 }
 
 #people .person .profile {
 	float: left;
-}
-
-#people .person .meta ul {
-	list-style: none;
 }
 
 

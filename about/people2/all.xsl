@@ -12,7 +12,7 @@
 
           <!-- Image -->
           <div class="image">
-            <img src="/about/people2/images/{@id}" alt="" />
+            <img src="/about/people2/images/{@id}.jpg" alt="" />
           </div>
 
           <div class="meta">

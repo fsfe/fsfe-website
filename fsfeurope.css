@@ -262,7 +262,7 @@ dl dd {
 #content h1 {
 	border-bottom: 1px solid rgb(210,210,210);
 	font-size: 250%;
-	margin-bottom: 0;
+	margin: 0;
 	padding: 0 0 .45em .45em;
 }
 
@@ -273,6 +273,13 @@ dl dd {
 #content h3 {
 	font-size: 130%;
   margin-top: 1.5em
+}
+
+#content p#category {
+	margin: 0;
+	padding: 0 0.9em;
+	font-size: 140%;
+	font-weight: bold;
 }
 
 .imgright {

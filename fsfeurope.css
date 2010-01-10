@@ -403,13 +403,19 @@ table td.negative {
 /* People styles                                                             */
 /* ------------------------------------------------------------------------- */
 #people .person {
+	padding-bottom: 2em;
+	min-height: 100px;
 }
 
 #people .person .image {
 	float: left;
 	width: 100px;
 	height: 100px;
-	padding-right: 1%;
+	padding-right: 2%;
+}
+
+#people .person .image img {
+	border: 1px solid #ddd;
 }
 
 #people .person .meta {
@@ -423,7 +429,7 @@ table td.negative {
 }
 
 #people .person .meta ul {
-	font-size: 95%;
+	font-size: 90%;
 	padding: 0;
 	list-style: none;
 }

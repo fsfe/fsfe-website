@@ -75,6 +75,8 @@ if test -z "$(svn update 2>/dev/null | grep -v 'At revision')" \
   exit
 fi
 
+echo "$(date)  $(svn info 2>/dev/null | grep '^Revision')"
+
 # Make sure build-test.sh and build-test.pl are executable
 # TODO: this can be removed once we set the "executable" svn property
 # to these files

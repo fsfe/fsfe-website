@@ -97,7 +97,7 @@
                 <xsl:value-of select="profile" />
               </xsl:when>
               <xsl:otherwise>
-                &nbsp;
+                
               </xsl:otherwise>
             </xsl:choose>
           </div>

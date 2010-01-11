@@ -48,8 +48,9 @@
                     </xsl:otherwise>
                   </xsl:choose>
                 </xsl:variable>
-                <xsl:apply-templates select="/html/set/function[@id=$function]/node()"/>
-            <!--
+                <xsl:apply-templates select="/html/set/function[@id=$function]/node()" />
+                
+                <!--
             <xsl:if test="@country != ''">
                 <xsl:text> </xsl:text>
                 <xsl:variable name="country"><xsl:value-of select="@country"/></xsl:variable>
@@ -86,10 +87,10 @@
                   <xsl:value-of select="telephone" />
                 </li>
               </xsl:if>
-
             </ul>
-
           </div>
+
+          <!-- Profile -->
           <div class="profile">
             <xsl:choose>
               <xsl:when test="profile != ''">
@@ -106,7 +107,7 @@
   </xsl:template>
 
   <!-- Do not copy <set> to output at all -->
-  <xsl:template match="set"/>
+  <xsl:template match="set" />
 
   <!-- For all other nodes, copy verbatim -->
   <xsl:template match="@*|node()" priority="-1">
@@ -116,3 +117,4 @@
   </xsl:template>
 
 </xsl:stylesheet>
+

@@ -54,9 +54,12 @@ sort "${infile}" \
   | grep --invert-match --file="tools/translation-ignore.txt" \
   | while read language wantfile havefile; do
   if [ ! -f "${wantfile}" ]; then
-    test -z "${havefile}" && echo "$(date)  Missing havefile for want <${wantfile}>"
-    date="$(date --iso-8601 --reference=${havefile})"
-    echo "missing ${date} ${wantfile} NONE ${havefile}" >> "${infile}.${language}"
+    if test -z "${havefile}" ; then
+      echo "$(date)  Missing havefile for want <${wantfile}>"
+    else
+      date="$(date --iso-8601 --reference=${havefile})"
+      echo "missing ${date} ${wantfile} NONE ${havefile}" >> "${infile}.${language}"
+    fi
   fi
 done
 
@@ -66,8 +69,6 @@ sort "${infile}" \
   | sed --expression='s/\.\///g' \
   | while read language wantfile havefile; do
   if [ -f "${wantfile}" ]; then
-    test -z "${havefile}" && echo "$(date)  Missing havefile for want <${wantfile}>"
-    test -z "${wantfile}" && echo "$(date)  Missing wantfile for have <${havefile}>"
     date1="$(date --iso-8601 --reference=${wantfile})"
     date2="$(date --iso-8601 --reference=${havefile})"
     echo "outdated ${date2} ${wantfile} ${date1} ${havefile}" >> "${infile}.${language}"

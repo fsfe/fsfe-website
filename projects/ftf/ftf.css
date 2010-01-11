@@ -53,7 +53,7 @@
 .package {
 	margin: 0;
 	background: url("http://www.fsfeurope.org/graphics/corner.png") top left no-repeat;
-	padding: 1em 0 1em 1.4em;
+	padding: 1em 0 1em 6px;
 }
 
 .package h3 {
@@ -61,6 +61,7 @@
 	text-decoration: none;
 	font-size: medium;
 	margin: 0;
+	padding: 0;
 }
 
 .package p {

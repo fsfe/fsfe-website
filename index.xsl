@@ -14,11 +14,9 @@
 
   <!-- Basically, copy everything -->
   <xsl:template match="/">
-    <body id="frontpage">
-      <xsl:copy>
-        <xsl:apply-templates select="@*|node()" />
-      </xsl:copy>
-    </body>
+    <xsl:copy>
+      <xsl:apply-templates select="@*|node()" />
+    </xsl:copy>
   </xsl:template>
 
   <!-- Show a single news item -->
@@ -33,14 +31,8 @@
           <h3><xsl:value-of select="title" /></h3>
         </xsl:otherwise>
       </xsl:choose>
-      <!--<div class="date"><xsl:value-of select="@date" /></div>-->
       <div class="text">
         <xsl:apply-templates select="body/node()" />
-        <!--   <xsl:variable name="link"><xsl:value-of select="link" /></xsl:variable>
-        <xsl:if test="$link != ''">
-          <xsl:text> </xsl:text>
-          <a class="read_more" href="{link}"><xsl:value-of select="/html/text[@id='more']" /></a>
-        </xsl:if>-->
       </div>
     </div>
   </xsl:template>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <textset>
+  <!-- Footer -->
   <text id="lastchanged"> Last changed: </text>
   <text id="translator1a">We thank </text>
   <text id="translator1b"> for this translation. </text>
@@ -29,17 +30,19 @@
     <a href="/contribute/contribute.html">this page</a> to see how you can help
     with translations, and other things.
   </text>
+
+  <!-- Conjunctions -->
+  <text id="to">to</text>
+
+  <!-- Menu -->
   <text id="menu1/about">About</text>
   <text id="menu1/projects">Projects</text>
   <text id="menu1/documents">Documents</text>
-  <text id="menu1/events">Events</text>
   <text id="menu1/help">Contribute</text>
   <text id="menu1/donate">Donate</text>
   <text id="menu1/order">Shop</text>
   <text id="menu1/contact">Contact</text>
-  <text id="menu1/associates">Associates</text>
   <text id="menu1/lists">Mailing Lists</text>
-  <text id="menu1/news">News</text>
   <text id="menu1/thankgnus">Thank GNUs</text>
   <text id="menu2/fellowship">Fellowship</text>
   <text id="menu2/fellowship/1-wiki">Wiki</text>
@@ -54,4 +57,48 @@
   <text id="menu4/sisters/fsf">FSF</text>
   <text id="menu4/sisters/fsf_india">FSF India</text>
   <text id="menu4/sisters/fsf_la">FSF Latin America</text>
+
+  <!-- Date time -->
+  <text id="months/1">January</text>
+  <text id="months/2">February</text>
+  <text id="months/3">March</text>
+  <text id="months/4">April</text>
+  <text id="months/5">May</text>
+  <text id="months/6">June</text>
+  <text id="months/7">July</text>
+  <text id="months/8">August</text>
+  <text id="months/9">September</text>
+  <text id="months/10">October</text>
+  <text id="months/11">November</text>
+  <text id="months/12">December</text>
+ 
+  <text id="months-abbreviated/1">Jan</text>
+  <text id="months-abbreviated/2">Feb</text>
+  <text id="months-abbreviated/3">Mar</text>
+  <text id="months-abbreviated/4">Apr</text>
+  <text id="months-abbreviated/5">May</text>
+  <text id="months-abbreviated/6">Jun</text>
+  <text id="months-abbreviated/7">Jul</text>
+  <text id="months-abbreviated/8">Aug</text>
+  <text id="months-abbreviated/9">Sep</text>
+  <text id="months-abbreviated/10">Oct</text>
+  <text id="months-abbreviated/11">Nov</text>
+  <text id="months-abbreviated/12">Dec</text>
+
+  <text id="weekdays/1">Monday</text>
+  <text id="weekdays/2">Tuesday</text>
+  <text id="weekdays/3">Wednesday</text>
+  <text id="weekdays/4">Thursday</text>
+  <text id="weekdays/5">Friday</text>
+  <text id="weekdays/6">Saturday</text>
+  <text id="weekdays/7">Sunday</text>
+
+  <text id="weekdays-abbreviated/1">Mon</text>
+  <text id="weekdays-abbreviated/2">Tue</text>
+  <text id="weekdays-abbreviated/3">Wed</text>
+  <text id="weekdays-abbreviated/4">Thu</text>
+  <text id="weekdays-abbreviated/5">Fri</text>
+  <text id="weekdays-abbreviated/6">Sat</text>
+  <text id="weekdays-abbreviated/7">Sun</text>
 </textset>
+

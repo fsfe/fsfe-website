@@ -362,6 +362,7 @@ pre.file {
 	float: left;
 	padding: 0 2em 0 0;
 	margin: 1em 0;
+	max-height: 150px;
 }
 
 #introduction .read_more {

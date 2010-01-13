@@ -508,10 +508,11 @@ h2#subpages + ul {
 
 ul#subpages li,
 h2#subpages + ul li {
-	width: 47%;
-	padding-right: 3%;
 	float: left;
+	height: 110px;
 	margin-bottom: .1em;
+	padding-right: 3%;
+	width: 47%;
 }
 
 ul#subpages li p,

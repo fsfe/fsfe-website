@@ -633,6 +633,11 @@ a.fn {
 	text-align: center;
 }
 
+#news h3,
+#events h3 {
+	color: black;
+}
+
 #events h3 {
 	font-size: 100%;
 }

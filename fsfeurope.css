@@ -250,7 +250,7 @@ dl dd {
 
 #content {
   margin: 3em 0 0 240px;
-	padding: 0 1em 1em;
+	padding: 0 .5em .5em;
 }
 
 #content h1,
@@ -262,8 +262,8 @@ dl dd {
 #content h1 {
 	border-bottom: 1px solid rgb(210,210,210);
 	font-size: 250%;
-	margin: 0 -.4em;
-	padding: 0 0 .4em .4em;
+	margin: 0 -.2em;
+	padding: 0 0 .2em .2em;
 }
 
 #content h1.center {
@@ -354,6 +354,7 @@ pre.file {
 	font-size: 105%;
 	line-height: 190%;
 	min-height: 60px;
+	margin: 0 -.5em;
 	padding: 1em;
 }
 
@@ -501,7 +502,7 @@ ul#subpages,
 h2#subpages + ul {
 	margin: 1em 0 2em 0;
 	list-style-type: none;
-	padding: 0 1em;
+	padding: 0;
 }
 
 ul#subpages li,

@@ -628,10 +628,12 @@ a.fn {
 	text-align: center;
 }
 
-#news h3,
 #events h3 {
-	color: black;
 	font-size: 100%;
+}
+
+#news h3 {
+	font-size: 120%;
 }
 
 #news .tools,

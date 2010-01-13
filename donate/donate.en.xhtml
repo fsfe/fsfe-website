@@ -1,126 +1,153 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 
 <html>
   <head>
-    <title>FSFE - Donations to the FSFE</title>
+    <title>Donations to the FSFE - FSFE</title>
   </head>
   <body>
-     <h1>Donations to the FSFE</h1>
+    <h1>Donations to the FSFE</h1>
+
+    <h2>Categories</h2>
+
+    <ul>
+      <li>
+        Donate EUR 10 every month <em>OR</em> EUR 120 in a year and
+        you'll become a <strong>Supporter</strong> of the FSFE.
+      </li>
+      <li>
+        Donate EUR 50 every month <em>OR</em> EUR 600 in a year and
+        you'll become a <strong>Contributor</strong> of the FSFE.
+      </li>
+      <li>
+        Donate EUR 100 every month <em>OR</em> EUR 1.200 in a year and
+        you'll become a <strong>Sustaining Contributor</strong> of the
+        FSFE.
+      </li>
+      <li>
+        Donate EUR 500 every month <em>OR</em> EUR 6000 in a year and
+        you'll become a <b>Patron</b> of the FSFE.
+      </li>
+    </ul>
 
 
-	 <h2>Categories</h2>
+    <h2>Ways of donating</h2>
 
-     <ul>
-      <li>Donate EUR 10 every month <em>OR</em> EUR 120 in a year and you'll become a
-      <b>Supporter</b> of the FSFE.</li>
-      <li>Donate EUR 50 every month <em>OR</em> EUR 600 in a year and you'll
-      become a <b>Contributor</b> of the FSFE.</li>
-      <li>Donate EUR 100 every month <em>OR</em> EUR 1.200 in a year and you'll
-      become a <b>Sustaining Contributor</b> of the FSFE.</li>
-      <li>Donate EUR 500 every month <em>OR</em> EUR 6000 in a year and you'll
-      become a <b>Patron</b> of the FSFE.</li>
-     </ul>
 
-	 <h2>Ways of donating</h2>
-
-	 <h3>Bank account</h3>
-
-	 <p>If you live in one of the following countries, please follow the link
-	 to see more detailed information on how to donate.</p>
-
-	 <ul>
-		 <li><a href="donate-2002-de.html">Germany</a>: Tax-deductable donations are possible</li>
-		 <li><a href="donate-2007-ch.html">Switzerland</a>: Tax-deductable donations are possible</li>
-	 </ul>
-  
-         <p>Of course you can also donate and support the FSFE from other countries and there
-         are many different ways to do this. To find out what the best way for your donation is
-         to reach us and also to ideally make the donation tax-deductable for you, please contact
-         <a href="mailto:office@fsfeurope.org">our office</a>. Generally, donations can be wired
-         from anywhere in the world to the following account:</p>
-
-     <p class="indent">
-      Free Software Foundation Europe e.V.<br/>
-      IBAN: DE69 3602 0030 0003 0047 32<br/>
-      National-Bank Essen, Steinstraße 13, 40212 Dusseldorf, Germany<br/>
-      SWIFT/BIC: NBAG DE3E<br/>
-     </p>
-
-	 <h3>Credit card and PayPal</h3>
+    <h3>Bank account</h3>
 
     <p>
-	  Sometime it is easier and more convenient for our supporters to use credit
-          card payments for their donations. FSFE can receive payments via PayPal. 
-          When using PayPal, please keep in mind that we will have to pay 1.9% + $0.30 USD 
-          for each transaction.
+      If you live in one of the following countries, please follow the
+      link to see more detailed information on how to donate.
+    </p>
+
+    <ul>
+      <li>
+        <a href="donate-2002-de.html">Germany</a>: Tax-deductable
+        donations are possible
+      </li>
+      <li>
+        <a href="donate-2007-ch.html">Switzerland</a>: Tax-deductable
+        donations are possible
+      </li>
+    </ul>
+  
+    <p>
+      Of course you can also donate and support the FSFE from other
+      countries and there are many different ways to do this. To find
+      out what the best way for your donation is to reach us and also to
+      ideally make the donation tax-deductable for you, please contact
+      <a href="mailto:office@fsfeurope.org">our office</a>. Generally,
+      donations can be wired from anywhere in the world to the following
+      account:
     </p>
 
     <p>
-      Please select how much you wish to contribute, and press "donate":
+      <address>
+        Free Software Foundation Europe e.V.<br />
+        IBAN: DE69 3602 0030 0003 0047 32<br />
+        National-Bank Essen, Steinstraße 13, 40212 Dusseldorf, Germany<br />
+        SWIFT/BIC: NBAG DE3E
+      </address>
+    </p>
+
+
+    <h3>Credit card and PayPal</h3>
+
+    <p>
+      Sometime it is easier and more convenient for our supporters to
+      use credit card payments for their donations. FSFE can receive
+      payments via PayPal.  When using PayPal, please keep in mind that
+      we will have to pay 1.9% + $0.30 USD for each transaction.
+    </p>
+
+    <p>
+      Please select how much you wish to contribute, and press
+      <em>Donate</em>:
     </p>
 
     <!-- more options under https://www.paypal.com/en_US/pdf/integration_guide.pdf page 123 -->
 
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="indent">
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+      <input type="hidden" name="cmd" value="_xclick" />
+      <input type="hidden" name="business" value="paypal@fsfeurope.org" />
+      <input type="hidden" name="image_url" value="http://fellowship.fsfe.org/login/images/fsfe_logo_w150.png" />
+     	<input type="hidden" name="item_name" value="Donation" />
+     	<input type="hidden" name="currency_code" value="EUR" />
+     	<input type="hidden" name="cn" value="How do you wish to be listed on our Thank GNUs page?" />
+     	<input type="hidden" name="no_note" value="0" />
+	    <!-- here you can add the intended purpose -->
+     	<!-- to which site the user is piped after payment -->
+     	<!-- <input type="hidden" name="return" value"http://fsfe.org/donate-thank.html"> -->
       <p>
-        <input type="hidden" name="cmd" value="_xclick"/>
-        <input type="hidden" name="business" value="paypal@fsfeurope.org"/>
-        <input type="hidden" name="image_url" value="http://fellowship.fsfe.org/login/images/fsfe_logo_w150.png"/>
-      </p>
-      <!-- here you can add the amount -->
-      <table>
-		  <tr><td> </td><td><input type="text" name="amount" value="" size="5" /> EUR</td>
-			<td>
-	        	    <!-- here you can add the intended purpose -->
-            	<input type="hidden" name="item_name" value="Donation"/>
-            	<input type="hidden" name="currency_code" value="EUR"/>
-            	<input type="hidden" name="cn" value="How do you wish to be listed on our Thank GNUs page?"/>
-            	<input type="hidden" name="no_note" value="0"/>
-            	<!-- to which site the user is piped after payment -->
-            	<!-- <input type="hidden" name="return" value"http://fsfe.org/donate-thank.html"> -->
-            	<input type="reset" name="reset" value="Clear"/>
-            	<input type="submit" name="submit" value="Donate"/>
-			</td>
-		</tr>
-      </table>
+  		  <input type="text" name="amount" value="" size="5" /> EUR
+        <input type="submit" name="submit" value="Donate" />
+			</p>
     </form>
 
 
-	 <h3>Check drawn onto a US- or UK-bank</h3>
+    <h3>Check drawn onto a US- or UK bank</h3>
 
-     <p>If you prefer to mail a check instead, you can send it to </p>
+    <p>
+      If you prefer to mail a check instead, you can send it to
+    </p>
 
-     <p class="quote">
-            Free Software Foundation Europe e.V.<br/>
-            Talstraße 110<br/>
-            40217 Düsseldorf<br/>
-            Germany
-     </p>
+    <p>
+      <address>
+        Free Software Foundation Europe e.V.<br />
+        Talstraße 110<br />
+        40217 Düsseldorf<br />
+        Germany
+      </address>
+    </p>
 
-	 <h2>Our way to say thank you</h2>
+
+    <h2>Our way to say thank you</h2>
 	
-	 <ul>
-		 
-		 <li>Sponsoring buttons: If you are interested in announcing your
-		 contribution publicly, the FSFE provides <a
-			 href="/about/graphics/sponsoring/sponsoring.en.html">sponsoring
-			 buttons</a> for its donors.</li>
+    <ul>
+		  <li>
+        Sponsoring buttons: If you are interested in announcing your
+        contribution publicly, the FSFE provides <a
+        href="/about/graphics/sponsoring/sponsoring.en.html">sponsoring
+          buttons</a> for its donors.
+      </li>
+      <li>
+        <a href="thankgnus.html">Thank GNUs</a>: We would like to list
+        you on our "<a href="thankgnus.html">Thank GNUs</a>" page
+      </li>
+    </ul>
 
-		 <li><a href="thankgnus.html">Thank GNUs</a>: We would like to list you
-		 on our "<a href="thankgnus.html">Thank GNUs</a>" page. </li>
+    <p>
+      Please send an email to <a
+        href="mailto:office@fsfeurope.org">&lt;office@fsfeurope.org&gt;</a>
+      and let us know where to send the receipt and thank-you letter.
+      Even if you prefer to remain anonymous, please let us know how to
+      reach you, so we can thank you privately.
+    </p>
 
-<p> Please send an email to <a
-			 href="mailto:office@fsfeurope.org">&lt;office@fsfeurope.org&gt;</a>
-		 and let
-		 us know where to send the receipt and thank-you letter. Even if you
-		 prefer to remain anonymous, please let us know how to reach you, so we
-		 can thank you privately.</p>
-
-	 </ul>
-
-   <p>The FSFE thanks all <a href="thankgnus.html">donors</a>. Your
-   contribution enables our work.</p>
-
+    <p>
+      The FSFE thanks all <a href="thankgnus.html">donors</a>. Your
+      contribution enables our work.
+    </p>
   </body>
 
   <timestamp>$Date$ $Author$</timestamp>

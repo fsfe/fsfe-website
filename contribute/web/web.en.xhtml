@@ -142,33 +142,35 @@
     </ul>
 
 
-    <h3>Checking out a subversion working copy</h3>
+    <h3>Checking out a SVN branch to work on</h3>
     
     <p>
-      The subversion repository has two main code bases for the FSFE website,
-      the <a href="https://trac.fsfe.org/fsfe-web/browser/trunk">SVN "trunk"</a>,
-      which is used to build the "production" instance of the website at
-      <a href="http://fsfe.org">http://fsfe.org</a>, and the <a
-      href="https://trac.fsfe.org/fsfe-web/browser/branches/test">"test"
-      branch</a>, which is used to build <a
-      href="http://test.fsfe.org">http://test.fsfe.org</a>.
+      The subversion repository has two main code bases for the FSFE
+      website, the <a
+      href="https://trac.fsfe.org/fsfe-web/browser/trunk">SVN
+        <em>trunk</em></a>, which is used to build the production instance
+      of the website at <a href="http://fsfe.org/">http://fsfe.org/</a>, and
+      the <a
+        href="https://trac.fsfe.org/fsfe-web/browser/branches/test"><em>test</em>
+        branch</a>, which is used to build <a
+        href="http://test.fsfe.org/">http://test.fsfe.org/</a>.
     </p>
 
     <p>
-      For day-to-day work, like adding news items, translating pages (or even
-      developing small changes to the website) you will need to check out the SVN
-      trunk:
+      For day-to-day work, like adding news items, translating pages (or
+      even developing small changes to the website) you will need to
+      check out the SVN trunk:
     </p>
 
-    <p class="terminal">svn --username YOURNAME co https://svn.fsfe.org/fsfe-web/trunk</p>
+    <p class="terminal">svn --username <var>YOURNAME</var> co https://svn.fsfe.org/fsfe-web/trunk</p>
 
     <p>
-      To work on major changes to the website, including debugging new features that
-      could potentially break the site, you are encouraged to check out the "test"
-      branch of the SVN repository:
+      To work on major changes to the website, including debugging new
+      features that could potentially break the site, you are encouraged
+      to check out the <em>test</em> branch of the SVN repository:
     </p>
 
-    <p class="terminal">svn --username YOURNAME co https://svn.fsfe.org/fsfe-web/branches/test</p>
+    <p class="terminal">svn --username <var>YOURNAME</var> co https://svn.fsfe.org/fsfe-web/branches/test</p>
 
     <p>
       Please note that a full working copy will require about 160M; if

@@ -506,9 +506,9 @@ h2#subpages {
 
 ul#subpages,
 h2#subpages + ul {
-	margin: -2em 0 2em 0;
+	margin: 2em 0 2em 0;
 	list-style-type: none;
-	padding: 0;
+	padding: 0 1em;
 }
 
 ul#subpages li,

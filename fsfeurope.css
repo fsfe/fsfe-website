@@ -533,7 +533,7 @@ h2#subpages + ul li p {
 #footer {
   clear: both;
   border: 5px #FDFDFD solid;    /* IE workaround */
-  padding: 0.5em;
+  padding: 2em .5em 1em .5em;
   text-align: center;
   font-size: 90%;
 }

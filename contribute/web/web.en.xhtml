@@ -220,13 +220,17 @@
       use some keywords on <var>.xml</var> and <var>.xhtml</var> files (for
       example the <var>$</var><var>Author</var><var>$</var> keyword on the
       page footer), you can automate enabling keywords adding
-      the following snippet to your <var>~/.subversion/config</var> file
-      <pre>
-      enable-auto-props = yes
+      the following snippet to your <var>~/.subversion/config</var>
+      file:
+    </p>
 
-      [auto-props]
-      *.xml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xml;svn:eol-style=native
-      *.xhtml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xhtml;svn:eol-style=native
+    <p class="file">
+      <pre>
+enable-auto-props = yes
+
+[auto-props]
+*.xml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xml;svn:eol-style=native
+*.xhtml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xhtml;svn:eol-style=native
       </pre>
     </p>
 
@@ -239,11 +243,13 @@
       <a
       href="http://svn.collab.net/repos/svn/trunk/doc/user/cvs-crossover-guide.html">CVS to SVN Crossover Guide</a>
     </p>
+
     <p>
       You can download a detailed manual for SVN at the <a
       href="http://svnbook.red-bean.com/">Subversion book</a> page
       (we are using the 1.5 release of SVN).
     </p>
+
 
     <h2>Coordination tools</h2>
 
@@ -312,7 +318,7 @@
           ispell, or your favourite spell-checker.  For example, to use <a
           href="http://aspell.net/">GNU aspell</a> on a Debian GNU/Linux
           system, just install the packages <em>aspell</em> and
-          <em>aspell-<strong>XX</strong></em>> (where "XX" is your language
+          <em>aspell-<strong>XX</strong></em> (where "XX" is your language
           code), then run the command
         </p>
 

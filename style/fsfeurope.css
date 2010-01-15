@@ -694,6 +694,7 @@ a.fn {
 .event {
 	margin: 0 0 1.5em 0;
 	min-height: 7em;
+	display: block;
 }
 
 .event h3 {

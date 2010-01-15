@@ -412,6 +412,123 @@ table.noborders th {
 	border: 0;
 }
 
+
+/* forms */
+form label {
+	color: rgb(80,80,80);
+	display: inline-block;
+	font-size: 112%;
+	font-weight: bold;
+	margin-right: .5em;
+	text-align: right;
+	vertical-align: top;
+	width: 110px;
+}
+
+form small {
+	color: rgb(165,165,165);
+	font-size: 90%;
+	display: block;
+	margin-top: -.6em;
+}
+
+form input,
+form select,
+form textarea,
+.button a {
+	background-color: white;
+	border: 1px solid rgb(187,187,187);
+	color: rgb(50,50,50);
+	font-size: 100%;
+	padding: .4em;
+}
+
+form input.error,
+form select.error,
+form textarea.error {
+	border: 1px solid red;
+}
+
+form input,
+form select,
+form .button a {
+	font-family: "Arial", "Verdana", "Helvetica", sans-serif;
+}
+
+form input[type=submit],
+form input[type=button],
+form select,
+form button,
+form .button a {
+	cursor: pointer;
+}
+
+form input[type=submit],
+form button,
+form .button a {
+	/* border-radius */
+}
+
+form input,
+form select,
+form textarea {
+	background-image: url("/graphics/input-bg.png");
+	background-position: bottom left;
+	background-repeat: repeat-x;
+}
+
+form select {
+	padding: .35em;
+}
+
+form input:hover,
+form select:hover,
+form textarea:hover
+form .button a:hover {
+	border: 1px solid rgb(150,150,150);
+	color: black;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus,
+form .button a:focus {
+	border: 1px solid rgb(90,90,90);
+}
+
+form input[type=radio],
+form input[type=radio]:hover {
+	background: transparent;
+	border: 0;
+}
+
+form input[type=checkbox] {
+	padding: .2em;
+}
+
+form input[disabled=disabled],
+form input[disabled=disabled]:hover {
+	color: rgb(130,130,130);
+	cursor: default;
+}
+
+form .button {
+	background-color: white;
+	display: inline;
+}
+
+form .button a {
+	background-image: none;
+	background-color: transparent;
+	padding: 6px;
+}
+
+form .button a:hover {
+	color: rgb(50,50,50);
+	text-decoration: none;
+}
+
+
 /* ------------------------------------------------------------------------- */
 /* People styles                                                             */
 /* ------------------------------------------------------------------------- */

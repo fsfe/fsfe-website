@@ -117,6 +117,7 @@
         </p>
       </xsl:if>
       -->
+      <div class="cleared">&nbsp;</div>
     </div>
   </xsl:template>
 

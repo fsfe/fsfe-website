@@ -28,10 +28,10 @@
   <xsl:template match="head">
     <xsl:copy>
       <meta name="robots" content="index, follow" />
-      <link rel="stylesheet" media="all" href="/fsfeurope.css" type="text/css" />
-      <link rel="stylesheet" media="print" href="/print.css" type="text/css" />
+      <link rel="stylesheet" media="all" href="/style/fsfeurope.css" type="text/css" />
+      <link rel="stylesheet" media="print" href="/style/print.css" type="text/css" />
       <xsl:if test="/buildinfo/@language='ar'">
-        <link rel="stylesheet" media="all" href="/rtl.css" type="text/css" />
+        <link rel="stylesheet" media="all" href="/style/rtl.css" type="text/css" />
       </xsl:if>
       <link rel="shortcut icon" href="/graphics/fsfeurope.ico" type="image/x-icon" />
       <xsl:element name="link">

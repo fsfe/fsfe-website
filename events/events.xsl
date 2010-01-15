@@ -102,6 +102,7 @@
 
       <div class="details">
         <xsl:apply-templates select="body/node()" />
+        <div class="cleared">&nbsp;</div>
       </div>
 
       <!--
@@ -117,7 +118,6 @@
         </p>
       </xsl:if>
       -->
-      <div class="cleared">&nbsp;</div>
     </div>
   </xsl:template>
 

@@ -417,7 +417,7 @@ table.noborders th {
 form label {
 	color: rgb(80,80,80);
 	display: inline-block;
-	font-size: 112%;
+	font-size: 90%;
 	font-weight: bold;
 	margin-right: .5em;
 	text-align: right;
@@ -427,7 +427,7 @@ form label {
 
 form small {
 	color: rgb(165,165,165);
-	font-size: 90%;
+	font-size: 80%;
 	display: block;
 	margin-top: -.6em;
 }
@@ -439,7 +439,7 @@ form textarea,
 	background-color: white;
 	border: 1px solid rgb(187,187,187);
 	color: rgb(50,50,50);
-	font-size: 100%;
+	font-size: 90%;
 	padding: .4em;
 }
 
@@ -455,6 +455,11 @@ form .button a {
 	font-family: "Arial", "Verdana", "Helvetica", sans-serif;
 }
 
+form input,
+form textarea {
+	width: 60%;
+}
+
 form input[type=submit],
 form input[type=button],
 form select,
@@ -467,6 +472,7 @@ form input[type=submit],
 form button,
 form .button a {
 	/* border-radius */
+	text-align: right;
 }
 
 form input,

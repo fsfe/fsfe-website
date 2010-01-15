@@ -785,6 +785,11 @@ a.fn {
 	float: right;
 }
 
+/* To avoid misplacements on the event page */
+
+.cleared {
+clear:both;height:0;margin:0;padding:0;border:0;line-height:1px;font-size:1px;
+}
 
 /* Project list */
 

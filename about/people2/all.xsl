@@ -48,6 +48,7 @@
                     </xsl:otherwise>
                   </xsl:choose>
                 </xsl:variable>
+                <li><xsl:value-of select="function" /></li>
                 <xsl:apply-templates select="/html/set/function[@id=$function]/node()" />
                 
                 <!--

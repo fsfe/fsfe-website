@@ -49,7 +49,6 @@
                     </xsl:variable>
                     <li><xsl:value-of select="function" /></li>
                   </xsl:for-each>
-                </xsl:for-each>
 
                 <!--
                 <xsl:apply-templates select="/html/set/function[@id=$function]/node()" />

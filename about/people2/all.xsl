@@ -30,27 +30,30 @@
             <ul>
 
               <!-- Functions -->
-              <xsl:for-each select="function">
-                <xsl:if test="position() != 1">
-                  <xsl:text>/</xsl:text>
-                </xsl:if>
-                <xsl:variable name="function">
-                  <xsl:value-of select="." />/
-                  <xsl:choose>
-                    <xsl:when test="sex = 'male'">
-                      m
-                    </xsl:when>
-                    <xsl:when test="sex = 'female'">
-                      f
-                    </xsl:when>
-                    <xsl:otherwise>
-                      m
-                    </xsl:otherwise>
-                  </xsl:choose>
-                </xsl:variable>
-                <li><xsl:value-of select="function" /></li>
+             <xsl:for-each select="functions">
+                <xsl:sort select="." />
+                  <xsl:for-each select="function">
+                    <xsl:variable name="function">
+                      <xsl:value-of select="." />/
+                      <xsl:choose>
+                        <xsl:when test="sex = 'male'">
+                          m
+                        </xsl:when>
+                        <xsl:when test="sex = 'female'">
+                          f
+                        </xsl:when>
+                        <xsl:otherwise>
+                          m
+                        </xsl:otherwise>
+                      </xsl:choose>
+                    </xsl:variable>
+                    <li><xsl:value-of select="function" /></li>
+                  </xsl:for-each>
+                </xsl:for-each>
+
+                <!--
                 <xsl:apply-templates select="/html/set/function[@id=$function]/node()" />
-                
+                -->
                 <!--
             <xsl:if test="@country != ''">
                 <xsl:text> </xsl:text>

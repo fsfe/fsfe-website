@@ -33,6 +33,7 @@
              <xsl:for-each select="functions">
                 <xsl:sort select="." />
                   <xsl:for-each select="function">
+                  <!--
                     <xsl:variable name="function">
                       <xsl:value-of select="." />/
                       <xsl:choose>
@@ -47,6 +48,7 @@
                         </xsl:otherwise>
                       </xsl:choose>
                     </xsl:variable>
+                    -->
                     <li><xsl:value-of select="function" /></li>
                   </xsl:for-each>
 

@@ -100,6 +100,7 @@
                 
               </xsl:otherwise>
             </xsl:choose>
+            <p><a href="#top">back to top</a></p>
           </div>
         </div>
       </xsl:for-each>

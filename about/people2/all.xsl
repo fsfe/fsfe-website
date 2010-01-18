@@ -74,7 +74,7 @@
                   </xsl:call-template>
                 </xsl:variable>
 
-                <li><xsl:value-of select="$function_tes_testt" /></li>
+                <li><xsl:value-of select="$function_test" /></li>
 
                 <!--
                 <xsl:apply-templates select="/html/set/function[@id=$function]/node()" />

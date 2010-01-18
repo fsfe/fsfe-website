@@ -36,9 +36,9 @@
                <li>orig func: <xsl:value-of select="function" /></li> 
                <li>orig func type: <xsl:value-of select="@type" /></li>
                <li>orig func type alt: <xsl:value-of select="type_test" /></li>
-                <xsl:variable name="function_test">
+               <!-- <xsl:variable name="function_test">
                   <xsl:value-of select="function" />foobar
-                  <!--                  <xsl:choose>
+                                    <xsl:choose>
                     <xsl:when test="sex = 'male'">
                       m
                     </xsl:when>
@@ -48,8 +48,9 @@
                     <xsl:otherwise>
                       m
                     </xsl:otherwise>
-                  </xsl:choose>-->
-                </xsl:variable>
+                  </xsl:choose>
+                </xsl:variable>-->
+                <xsl:variable name="function_test"><xsl:value-of select="function" />foobar</xsl:variable>
                 <li>new func: <xsl:value-of select="function_test" /></li>
 
                 <!--

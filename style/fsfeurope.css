@@ -466,6 +466,7 @@ form select,
 form button,
 form .button a {
 	cursor: pointer;
+	width: auto;
 }
 
 form input[type=submit],

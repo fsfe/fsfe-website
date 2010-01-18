@@ -44,7 +44,12 @@ a person entry:
       <function type="team">member</function>
     </functions>
     <profile>
-      This is some interesting information.
+      <p>
+        This is some interesting information.
+      </p>
+      <p>
+        Should be multiple paragraphs.
+      </p>
     </profile>
   </person>
 

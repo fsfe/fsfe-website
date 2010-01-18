@@ -42,10 +42,11 @@
               <!-- Functions -->
              <xsl:for-each select="functions">
                <xsl:sort select="." />
-               <xsl:variable name="type_test"><xsl:value-of select="@type" /></xsl:variable>
+
+               <xsl:variable name="function"><xsl:value-of select="." /></xsl:variable>
+
                <li>orig func: <xsl:value-of select="function" /></li> 
                <li>orig func type: <xsl:value-of select="@type" /></li>
-               <li>orig func type alt: <xsl:value-of select="type_test" /></li>
                <!-- <xsl:variable name="function_test">
                   <xsl:value-of select="function" />foobar
                                     <xsl:choose>
@@ -65,12 +66,14 @@
               <!--<li>new func: <xsl:value-of select="function_test" /></li>
               -->
 
-                <li>new func:
+                <xsl:variable name="function">
                   <xsl:call-template name="getFunctionName">
                     <xsl:with-param name="function" select="$function" />
                     <xsl:with-param name="sex" select="$sex" />
                   </xsl:call-template>
-                </li>
+                </xsl:variable>
+
+                <li><xsl:value-of select="$function" /></li>
 
                 <!--
                 <xsl:apply-templates select="/html/set/function[@id=$function]/node()" />
@@ -119,9 +122,9 @@
           <div class="profile">
             <xsl:choose>
               <xsl:when test="profile != ''">
-                <xsl:text disable-output-escaping="yes">
+                <!--       <xsl:text disable-output-escaping="yes">
                   <xsl:value-of select="profile" />
-                </xsl:text>
+                </xsl:text>-->
               </xsl:when>
               <xsl:otherwise>
                 

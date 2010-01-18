@@ -46,7 +46,7 @@
                       </xsl:otherwise>
                     </xsl:choose>
                   </xsl:variable>
-                  <li>type: <xsl:value-of select="{@type}" /></li>
+                  <li>type: <xsl:value-of select="@type" /></li>
                   <li>func: <xsl:value-of select="function" /></li>
                     <!--</xsl:for-each>-->
 

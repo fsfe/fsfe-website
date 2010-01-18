@@ -35,7 +35,7 @@
                <xsl:variable name="type_test"><xsl:value-of select="@type" /></xsl:variable>
                <li>orig func: <xsl:value-of select="function" /></li> 
                <li>orig func type: <xsl:value-of select="@type" /></li>
-               <li>orig func type alt: <xsl:value-of select="type" /></li>
+               <li>orig func type alt: <xsl:value-of select="type_test" /></li>
                 <xsl:variable name="function_test">
                   <xsl:value-of select="function" />foobar
                   <!--                  <xsl:choose>

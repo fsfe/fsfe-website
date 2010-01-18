@@ -66,14 +66,14 @@
               <!--<li>new func: <xsl:value-of select="function_test" /></li>
               -->
 
-                <xsl:variable name="function">
+                <xsl:variable name="function_test">
                   <xsl:call-template name="getFunctionName">
                     <xsl:with-param name="function" select="$function" />
                     <xsl:with-param name="sex" select="$sex" />
                   </xsl:call-template>
                 </xsl:variable>
 
-                <li><xsl:value-of select="$function" /></li>
+                <li><xsl:value-of select="$function_test" /></li>
 
                 <!--
                 <xsl:apply-templates select="/html/set/function[@id=$function]/node()" />

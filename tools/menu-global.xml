@@ -3,7 +3,6 @@
 <menuset>
   <menu id="menu1"/>
   <menu id="menu1/about" parent="menu1">/about/about.html</menu>
-  <menu id="menu1/contact" parent="menu1">/contact/</menu>
   <menu id="menu1/documents" parent="menu1">/documents/documents.html</menu>
   <menu id="menu1/donate" parent="menu1">/donate/donate.html</menu>
   <menu id="menu1/help" parent="menu1">/contribute/contribute.html</menu>

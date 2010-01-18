@@ -97,7 +97,9 @@
           <div class="profile">
             <xsl:choose>
               <xsl:when test="profile != ''">
-                <xsl:value-of select="profile" />
+                <xsl:copy>
+                  <xsl:value-of select="profile" />
+                </xsl:copy>  
               </xsl:when>
               <xsl:otherwise>
                 

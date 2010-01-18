@@ -32,7 +32,7 @@
               <!-- Functions -->
              <xsl:for-each select="functions">
                 <xsl:sort select="." />
-                  <xsl:for-each select="function">
+                <!--<xsl:for-each select="function">-->
                   <!--
                     <xsl:variable name="function">
                       <xsl:value-of select="." />/
@@ -49,8 +49,9 @@
                       </xsl:choose>
                     </xsl:variable>
                     -->
-                    <li><xsl:value-of select="function" /></li>
-                  </xsl:for-each>
+                    <li>type: <xsl:value-of select="@type" /></li>
+                    <li>func: <xsl:value-of select="function" /></li>
+                    <!--</xsl:for-each>-->
 
                 <!--
                 <xsl:apply-templates select="/html/set/function[@id=$function]/node()" />

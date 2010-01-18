@@ -31,24 +31,24 @@
 
               <!-- Functions -->
              <xsl:for-each select="functions">
-                <xsl:sort select="." />
-                  <xsl:variable name="function_test">
-                    <xsl:value-of select="function" />/
-                    <xsl:choose>
-                      <xsl:when test="sex = 'male'">
-                        m
-                      </xsl:when>
-                      <xsl:when test="sex = 'female'">
-                        f
-                      </xsl:when>
-                      <xsl:otherwise>
-                        m
-                      </xsl:otherwise>
-                    </xsl:choose>
-                  </xsl:variable>
-                  <li>type: {@type}</li>
-                  <li>func: <xsl:value-of select="function_test" /></li>
-                    <!--</xsl:for-each>-->
+              <xsl:sort select="." />
+                <li>orig func: <xsl:value-of select="function" /></li> 
+                <xsl:variable name="function_test">
+                  <xsl:value-of select="function" />foobar
+                  <!--                  <xsl:choose>
+                    <xsl:when test="sex = 'male'">
+                      m
+                    </xsl:when>
+                    <xsl:when test="sex = 'female'">
+                      f
+                    </xsl:when>
+                    <xsl:otherwise>
+                      m
+                    </xsl:otherwise>
+                  </xsl:choose>-->
+                </xsl:variable>
+                <li>type: <xsl:value-of select="@type" /></li>
+                <li>new func: <xsl:value-of select="function_test" /></li>
 
                 <!--
                 <xsl:apply-templates select="/html/set/function[@id=$function]/node()" />

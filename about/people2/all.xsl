@@ -20,10 +20,10 @@
             <!-- Name -->
             <xsl:choose>
               <xsl:when test="link != ''">
-                <h3 id="{id}"><a href="{link}"><xsl:value-of select="name" /></a></h3>
+                <h3 id="{@id}"><a href="{link}"><xsl:value-of select="name" /></a></h3>
               </xsl:when>
               <xsl:otherwise>
-                <h3 id="{id}"><xsl:value-of select="name" /></h3>
+                <h3 id="{@id}"><xsl:value-of select="name" /></h3>
               </xsl:otherwise>
             </xsl:choose>
 

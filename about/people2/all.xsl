@@ -31,8 +31,11 @@
 
               <!-- Functions -->
              <xsl:for-each select="functions">
-              <xsl:sort select="." />
-                <li>orig func: <xsl:value-of select="function" /></li> 
+               <xsl:sort select="." />
+               <xsl:variable name="type_test"><xsl:value-of select="@type" /></xsl:variable>
+               <li>orig func: <xsl:value-of select="function" /></li> 
+               <li>orig func type: <xsl:value-of select="@type" /></li>
+               <li>orig func type alt: <xsl:value-of select="type" /></li>
                 <xsl:variable name="function_test">
                   <xsl:value-of select="function" />foobar
                   <!--                  <xsl:choose>
@@ -47,7 +50,6 @@
                     </xsl:otherwise>
                   </xsl:choose>-->
                 </xsl:variable>
-                <li>type: <xsl:value-of select="@type" /></li>
                 <li>new func: <xsl:value-of select="function_test" /></li>
 
                 <!--

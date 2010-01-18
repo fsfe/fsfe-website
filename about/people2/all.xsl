@@ -44,6 +44,7 @@
                <xsl:sort select="." />
 
                <xsl:variable name="function"><xsl:value-of select="." /></xsl:variable>
+               <xsl:variable name="sex"><xsl:value-of select="@sex" /></xsl:variable>
 
                <li>orig func: <xsl:value-of select="function" /></li> 
                <li>orig func type: <xsl:value-of select="@type" /></li>
@@ -73,7 +74,7 @@
                   </xsl:call-template>
                 </xsl:variable>
 
-                <li><xsl:value-of select="$function_test" /></li>
+                <li><xsl:value-of select="$function_tes_testt" /></li>
 
                 <!--
                 <xsl:apply-templates select="/html/set/function[@id=$function]/node()" />

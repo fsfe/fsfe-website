@@ -50,7 +50,7 @@
                     </xsl:otherwise>
                   </xsl:choose>
                 </xsl:variable>-->
-                <xsl:variable name="function_test"><xsl:value-of select="function" />foobar</xsl:variable>
+                <xsl:variable name="function_test"><xsl:value-of select="function" /><xsl:text>foobar</xsl:text></xsl:variable>
                 <li>new func: <xsl:value-of select="function_test" /></li>
 
                 <!--
@@ -100,9 +100,9 @@
           <div class="profile">
             <xsl:choose>
               <xsl:when test="profile != ''">
-                <xsl:copy>
+                <xsl:text disable-output-escaping="yes">
                   <xsl:value-of select="profile" />
-                </xsl:copy>  
+                </xsl:text>
               </xsl:when>
               <xsl:otherwise>
                 

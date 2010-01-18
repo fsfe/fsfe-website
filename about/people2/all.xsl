@@ -32,8 +32,8 @@
               <!-- Functions -->
              <xsl:for-each select="functions">
                 <xsl:sort select="." />
-                  <xsl:variable name="function">
-                    <xsl:value-of select="." />/
+                  <xsl:variable name="function_test">
+                    <xsl:value-of select="function" />/
                     <xsl:choose>
                       <xsl:when test="sex = 'male'">
                         m
@@ -46,8 +46,8 @@
                       </xsl:otherwise>
                     </xsl:choose>
                   </xsl:variable>
-                  <li>type: <xsl:value-of select="@type" /></li>
-                  <li>func: <xsl:value-of select="function" /></li>
+                  <li>type: {@type}</li>
+                  <li>func: <xsl:value-of select="function_test" /></li>
                     <!--</xsl:for-each>-->
 
                 <!--

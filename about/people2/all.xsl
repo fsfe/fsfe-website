@@ -3,6 +3,16 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
 
+  <!-- Create function name -->
+  <xsl:template name="getFunctionName">
+    <xsl:param name="function" />
+    <xsl:param name="sex" />
+
+    <xsl:value-of select="$function" />
+    <xsl:text>/</xsl:text>
+    <xsl:value-of select="$sex" />
+  </xsl:template>
+
   <!-- Fill dynamic content -->
   <xsl:template match="dynamic-content">
     <div id="people">
@@ -50,8 +60,17 @@
                     </xsl:otherwise>
                   </xsl:choose>
                 </xsl:variable>-->
-                <xsl:variable name="function_test"><xsl:value-of select="function" /><xsl:text>foobar</xsl:text></xsl:variable>
-                <li>new func: <xsl:value-of select="function_test" /></li>
+                <!--<xsl:variable name="function_test"><xsl:value-of select="function" /><xsl:text>foobar</xsl:text></xsl:variable>
+              -->
+              <!--<li>new func: <xsl:value-of select="function_test" /></li>
+              -->
+
+                <li>new func:
+                  <xsl:call-template name="getFunctionName">
+                    <xsl:with-param name="function" select="$function" />
+                    <xsl:with-param name="sex" select="$sex" />
+                  </xsl:call-template>
+                </li>
 
                 <!--
                 <xsl:apply-templates select="/html/set/function[@id=$function]/node()" />

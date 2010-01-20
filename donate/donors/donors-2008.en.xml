@@ -1,79 +1,63 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!-- Please keep each list alphabetically ordered.  Emacs users want -->
-<!-- to set sort-fold-case to true and run sort-lines on a region -->
 
 <donorset>
   <patrons>
-    <table cellpadding="10">
-      <tr>
-        <td><img src="donors/freiheit.png" alt="freiheit.com"/></td>
-        <td>freiheit.com technologies</td>
-      </tr>
-      <tr>
-        <td><img src="donors/google.jpg" alt="google.com"/></td>
-        <td>Google</td>
-      </tr>
-      <tr>
-        <td><img src="donors/linuxhotel.png" alt="Linuxhotel"/></td>
-        <td>Linuxhotel Villa Vogelsang</td>
-      </tr>
-      <tr>
-        <td><img src="donors/nlnet.png" alt="NLnet"/></td>
-        <td>Stichting NLnet</td>
-      </tr>
-    </table>
+    <donor img="donors/freiheit.png">freiheit.com technologies</donor>
+    <donor img="donors/google.jpg">Google</donor>
+    <donor img="donors/linuxhotel.png">Linuxhotel Villa Vogelsang</donor>
+    <donor img="donors/nlnet.png">Stichting NLnet</donor>
   </patrons>
 
   <sustainingcontributors>
-    <li>LF.NET GmbH</li>
-    <li>snom technology AG</li>
+    <donor>LF.NET GmbH</donor>
+    <donor>snom technology AG</donor>
   </sustainingcontributors>
 
   <contributors>
-	<li>Alan Cox</li>
-	<li>AT Computing</li>
-	<li>Bibliotek-Systemer As Torkel Hasle</li>
-    <li>Christian Barth</li>
-    <li>inmedias.it GmbH</li>
-    <li>Joachim Zobel</li>
-	<li>Mario Lardien</li>
-	<li>Univention GmbH</li>
-    <li>Valentin Hilbig</li>
+    <donor>Alan Cox</donor>
+    <donor>AT Computing</donor>
+    <donor>Bibliotek-Systemer As Torkel Hasle</donor>
+    <donor>Christian Barth</donor>
+    <donor>inmedias.it GmbH</donor>
+    <donor>Joachim Zobel</donor>
+    <donor>Mario Lardien</donor>
+    <donor>Univention GmbH</donor>
+    <donor>Valentin Hilbig</donor>
   </contributors>
 
   <supporters>
-    <li>Angiesoft</li>
-    <li>Bernhard Stosik</li>
-    <li>Christian Neise</li>
-    <li>Christopher Kluwe</li>
-    <li>Corinna Vinschen</li>
-    <li>Communitare GmbH</li>
-    <li>Dipl.-Inform. Kai Hofmann</li>
-    <li>Fabian Schury</li>
-    <li>hippie-online.de</li>
-    <li>Holger Doepner</li>
-    <li>Holger Hampel</li>
-    <li>Hostsharing eG</li>
-    <li>Ingmar Redel</li>
-    <li>Ingo Rieger</li>
-    <li>Jan Brinkmann</li>
-    <li>Jan Kupfer</li>
-    <li>Joachim Krantz</li>
-    <li>Jorn Arjen Swart</li>
-    <li>Marc Riese</li>
-	<li>Martin Walenta</li>
-	<li>Martin Zuther</li>
-    <li>Matthew Frederick Exon</li>
-    <li>Martin Zuther</li>
-    <li>Michael Mosmann</li>
-    <li>Network Theory Ltd.</li>
-    <li>Oskar Welzl</li>
-    <li>Roland Hafner</li>
-    <li>Thiemo Nagel</li>
-    <li>Torsten Loehr</li>
-    <li>Ulrich Walter</li>
-    <li>Uwe Henschel</li>
-    <li>Werner Wiethege</li>
-    <li>Wolfgang Hochhaeusler</li>
+    <donor>Angiesoft</donor>
+    <donor>Bernhard Stosik</donor>
+    <donor>Christian Neise</donor>
+    <donor>Christopher Kluwe</donor>
+    <donor>Corinna Vinschen</donor>
+    <donor>Communitare GmbH</donor>
+    <donor>Dipl.-Inform. Kai Hofmann</donor>
+    <donor>Fabian Schury</donor>
+    <donor>hippie-online.de</donor>
+    <donor>Holger Doepner</donor>
+    <donor>Holger Hampel</donor>
+    <donor>Hostsharing eG</donor>
+    <donor>Ingmar Redel</donor>
+    <donor>Ingo Rieger</donor>
+    <donor>Jan Brinkmann</donor>
+    <donor>Jan Kupfer</donor>
+    <donor>Joachim Krantz</donor>
+    <donor>Jorn Arjen Swart</donor>
+    <donor>Marc Riese</donor>
+    <donor>Martin Walenta</donor>
+    <donor>Martin Zuther</donor>
+    <donor>Matthew Frederick Exon</donor>
+    <donor>Martin Zuther</donor>
+    <donor>Michael Mosmann</donor>
+    <donor>Network Theory Ltd.</donor>
+    <donor>Oskar Welzl</donor>
+    <donor>Roland Hafner</donor>
+    <donor>Thiemo Nagel</donor>
+    <donor>Torsten Loehr</donor>
+    <donor>Ulrich Walter</donor>
+    <donor>Uwe Henschel</donor>
+    <donor>Werner Wiethege</donor>
+    <donor>Wolfgang Hochhaeusler</donor>
   </supporters>
 </donorset>

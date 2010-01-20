@@ -1,52 +1,27 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 
-<xsl:stylesheet version="1.0"
-                xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:output method="xml" encoding="utf-8" indent="yes"/>
 
-  <xsl:output method="xml"
-           encoding="ISO-8859-1"
-           indent="yes"
-           />
-
-  <xsl:template match="/">
-    <xsl:copy>
-      <xsl:apply-templates select="@*|node()" />
-    </xsl:copy>
+  <!-- Fill dynamic content -->
+  <xsl:template match="dynamic-content">
+    <xsl:element name="ul">
+      <xsl:for-each select="/html/set/@group/donor">
+        <xsl:element name="li">
+          <xsl:value-of select="node()"/>
+        </xsl:element>
+      </xsl:for-each>
+    </xsl:element>
   </xsl:template>
 
-  <xsl:template match="/html/text" />
+  <!-- Do not copy <set> to output at all -->
+  <xsl:template match="set"/>
 
-  <xsl:template match="/html/body">
-    <body>
-      <xsl:apply-templates />
-      <h3><xsl:value-of select="/html/text[@id='patrons']" /></h3>
-      <xsl:apply-templates select="/html/set/patrons/node()" />
-
-      <h3><xsl:value-of select="/html/text[@id='sustaining']" /></h3>
-      <ul>
-        <xsl:apply-templates select="/html/set/sustainingcontributors/node()" />
-      </ul>
-
-      <h3><xsl:value-of select="/html/text[@id='contributors']" /></h3>
-      <ul>
-        <xsl:apply-templates select="/html/set/contributors/node()" />
-      </ul>
-
-      <h3><xsl:value-of select="/html/text[@id='supporters']" /></h3>
-      <ul>
-        <xsl:apply-templates select="/html/set/supporters/node()" />
-      </ul>
-
-    </body>
-  </xsl:template>
-
+  <!-- For all other nodes, copy verbatim -->
   <xsl:template match="@*|node()" priority="-1">
     <xsl:copy>
       <xsl:apply-templates select="@*|node()"/>
     </xsl:copy>
   </xsl:template>
-
-  <xsl:template match="set" />
-  <xsl:template match="text" />
 </xsl:stylesheet>
 

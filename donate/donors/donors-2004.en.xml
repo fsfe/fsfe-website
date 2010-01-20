@@ -1,125 +1,108 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!-- Please keep each list alphabetically ordered.  Emacs users want -->
-<!-- to set sort-fold-case to true and run sort-lines on a region -->
 
 <donorset>
   <patrons>
-    <table cellpadding="10">
-      <tr>
-        <td>&#160;</td>
-        <td>Firenze Tecnologia</td>
-      </tr>
-      <tr>
-        <td><img src="donors/freiheit.png" alt="freiheit.com"/></td>
-        <td>freiheit.com technologies</td>
-      </tr>
-      <tr>
-        <td><img src="donors/linuxhotel.png" alt="Linuxhotel"/></td>
-        <td>Linuxhotel Villa Vogelsang</td>
-      </tr>
-      <tr>
-        <td><img src="donors/nlnet.png" alt="NLnet"/></td>
-        <td>Stichting NLnet</td>
-      </tr>
-    </table>
+    <donor>Firenze Tecnologia</donor>
+    <donor img="donors/freiheit.png">freiheit.com technologies</donor>
+    <donor img="donors/donornuxhotel.png">Linuxhotel Villa Vogelsang</donor>
+    <donor img="donors/nlnet.png">Stichting NLnet</donor>
   </patrons>
 
   <sustainingcontributors>
-    <li>Bookzilla</li>
-    <li>LF.NET</li>
-    <li>SerNet Service Network GmbH</li>
-    <li>Soeren Sonnenburg</li>
+    <donor>Bookzilla</donor>
+    <donor>LF.NET</donor>
+    <donor>SerNet Service Network GmbH</donor>
+    <donor>Soeren Sonnenburg</donor>
   </sustainingcontributors>
 
   <contributors>
-    <li>Akhela S.r.l.</li>
-    <li>Joachim Zobel</li>
-    <li>tarent GmbH</li>
-    <li>Valentin Hilbig (06/04-)</li>
-    <li>inmedias.it GmbH (09/04-)</li>
-    <li>OSTC GmbH (12/04-)</li>
-    <li>Pascal Cedraschi</li>
+    <donor>Akhela S.r.l.</donor>
+    <donor>Joachim Zobel</donor>
+    <donor>tarent GmbH</donor>
+    <donor>Valentin Hilbig (06/04-)</donor>
+    <donor>inmedias.it GmbH (09/04-)</donor>
+    <donor>OSTC GmbH (12/04-)</donor>
+    <donor>Pascal Cedraschi</donor>
   </contributors>
 
   <supporters>
-    <li>AFFS</li>
-    <li>Alfred Giuliani</li>
-    <li>Andreas Pretzsch</li>
-    <li>Andreas Voegele</li>
-    <li>AngieSoft</li>
-    <li>Axel Grimm</li>
-    <li>C. Breame</li>
-    <li>Christian Barth</li>
-    <li>Christian Gast (04/04-)</li>
-    <li>Christof Awater</li>
-    <li>Christoph Becker</li>
-    <li>Christoph Zimmermann</li>
-    <li>Christopher Kluwe</li>
-    <li>Corinna Vinschen</li>
-    <li>datenfalke.net</li>
-    <li>De Manzano Alessandro</li>
-    <li>debianforum.de</li>
-    <li>Demetra S.r.l.</li>
-    <li>dict.cc</li>
-    <li>Dirk-Rolf Aust</li>
-    <li>Dominic König</li>
-    <li>Dr. Frank Dillmann</li>
-    <li>Emilio Cavalante Lopes</li>
-    <li>Ewald Arnold</li>
-    <li>Fabio Invernizzi</li>
-    <li>Francesco Chiechi</li>
-    <li>G. Blaschke</li>
-    <li>Gerhard Hippmann</li>
-    <li>Geza Giedke</li>
-    <li>Gilles Daniel</li>
-    <li>Gregor Jasny</li>
-    <li>Hartmut und Monika Scheitle</li>
-    <li>Hofmann Software Engineering Int.</li>
-    <li>Holger Hampel (07/04-)</li>
-    <li>hostsharing EG</li>
-    <li>Ingenieurbüro G. Kollenda</li>
-    <li>Inghirami Gabriele</li>
-    <li>Ingo Rieger</li>
-    <li>Ingo Schmiegel</li>
-    <li>Jahn Rentmeister</li>
-    <li>Jan Hecking</li>
-    <li>Jan Kupfer</li>
-    <li>John Muller (12/04-)</li>
-    <li>Jord Arjen Swart (03/04-)</li>
-    <li>Jörg Jacob</li>
-    <li>Jörg Paysen (05/04-)</li>
-    <li>Jörg Sieber</li>
-    <li>Loadbalancer.org Limited</li>
-    <li>Manfred Brandl</li>
-    <li>Mario Lardieri</li>
-    <li>Marc Riese</li>
-    <li>Marc Schaefer</li>
-    <li>Martin Schröder</li>
-    <li>Martin Kallas</li>
-    <li>Martin Wolters</li>
-    <li>Michael Mosmann</li>
-    <li>Mike Abel</li>
-    <li>Network Theory Ltd</li>
-    <li>Niklas Hellenbart (12/04-)</li>
-    <li>pc2midrange.de</li>
-    <li>Pertel SRL</li>
-    <li>Peter Woell</li>
-    <li>Rainer Manns</li>
-    <li>Sergey (Ukraine)</li>
-    <li>Stefan Eilers</li>
-    <li>Stefan Hufnagl</li>
-    <li>Strazzeri Ermanno</li>
-    <li>TaLUG! Taranto Linux Users Group</li>
-    <li>Thiemo Nagel</li>
-    <li>Timon Schroeter</li>
-    <li>Thomas Stuefe</li>
-    <li>together Teamlösungen EDV</li>
-    <li>tp-net OHG</li>
-    <li>tuxcenter.net IT solutions</li>
-    <li>Wilfried Enzmann</li>
-    <li>Wolfgang Hochhäusler</li>
-    <li>Wolfgang Ocker</li>
-    <li>WorldOfDungeons.de</li>
+    <donor>AFFS</donor>
+    <donor>Alfred Giudonorani</donor>
+    <donor>Andreas Pretzsch</donor>
+    <donor>Andreas Voegele</donor>
+    <donor>AngieSoft</donor>
+    <donor>Axel Grimm</donor>
+    <donor>C. Breame</donor>
+    <donor>Christian Barth</donor>
+    <donor>Christian Gast (04/04-)</donor>
+    <donor>Christof Awater</donor>
+    <donor>Christoph Becker</donor>
+    <donor>Christoph Zimmermann</donor>
+    <donor>Christopher Kluwe</donor>
+    <donor>Corinna Vinschen</donor>
+    <donor>datenfalke.net</donor>
+    <donor>De Manzano Alessandro</donor>
+    <donor>debianforum.de</donor>
+    <donor>Demetra S.r.l.</donor>
+    <donor>dict.cc</donor>
+    <donor>Dirk-Rolf Aust</donor>
+    <donor>Dominic König</donor>
+    <donor>Dr. Frank Dillmann</donor>
+    <donor>Emidonoro Cavalante Lopes</donor>
+    <donor>Ewald Arnold</donor>
+    <donor>Fabio Invernizzi</donor>
+    <donor>Francesco Chiechi</donor>
+    <donor>G. Blaschke</donor>
+    <donor>Gerhard Hippmann</donor>
+    <donor>Geza Giedke</donor>
+    <donor>Gilles Daniel</donor>
+    <donor>Gregor Jasny</donor>
+    <donor>Hartmut und Monika Scheitle</donor>
+    <donor>Hofmann Software Engineering Int.</donor>
+    <donor>Holger Hampel (07/04-)</donor>
+    <donor>hostsharing EG</donor>
+    <donor>Ingenieurbüro G. Kollenda</donor>
+    <donor>Inghirami Gabriele</donor>
+    <donor>Ingo Rieger</donor>
+    <donor>Ingo Schmiegel</donor>
+    <donor>Jahn Rentmeister</donor>
+    <donor>Jan Hecking</donor>
+    <donor>Jan Kupfer</donor>
+    <donor>John Muller (12/04-)</donor>
+    <donor>Jord Arjen Swart (03/04-)</donor>
+    <donor>Jörg Jacob</donor>
+    <donor>Jörg Paysen (05/04-)</donor>
+    <donor>Jörg Sieber</donor>
+    <donor>Loadbalancer.org Limited</donor>
+    <donor>Manfred Brandl</donor>
+    <donor>Mario Lardieri</donor>
+    <donor>Marc Riese</donor>
+    <donor>Marc Schaefer</donor>
+    <donor>Martin Schröder</donor>
+    <donor>Martin Kallas</donor>
+    <donor>Martin Wolters</donor>
+    <donor>Michael Mosmann</donor>
+    <donor>Mike Abel</donor>
+    <donor>Network Theory Ltd</donor>
+    <donor>Niklas Hellenbart (12/04-)</donor>
+    <donor>pc2midrange.de</donor>
+    <donor>Pertel SRL</donor>
+    <donor>Peter Woell</donor>
+    <donor>Rainer Manns</donor>
+    <donor>Sergey (Ukraine)</donor>
+    <donor>Stefan Eilers</donor>
+    <donor>Stefan Hufnagl</donor>
+    <donor>Strazzeri Ermanno</donor>
+    <donor>TaLUG! Taranto Linux Users Group</donor>
+    <donor>Thiemo Nagel</donor>
+    <donor>Timon Schroeter</donor>
+    <donor>Thomas Stuefe</donor>
+    <donor>together Teamlösungen EDV</donor>
+    <donor>tp-net OHG</donor>
+    <donor>tuxcenter.net IT solutions</donor>
+    <donor>Wilfried Enzmann</donor>
+    <donor>Wolfgang Hochhäusler</donor>
+    <donor>Wolfgang Ocker</donor>
+    <donor>WorldOfDungeons.de</donor>
   </supporters>
-
 </donorset>

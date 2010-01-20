@@ -8,68 +8,50 @@
 
 <donorset>
   <patrons>
-    <table>
-      <tr>
-        <td><img src="donors/blackduck.jpg" alt=""/></td>
-        <td>Black Duck Software</td>
-      </tr>
-      <tr>
-        <td><img src="donors/freiheit.png" alt=""/></td>
-        <td>freiheit.com technologies</td>
-      </tr>
-      <tr>
-        <td><img src="donors/intevation.png" alt=""/></td>
-        <td>Intevation GmbH</td>
-      </tr>
-      <tr>
-        <td><img src="donors/linuxhotel.png" alt=""/></td>
-        <td>Linuxhotel Villa Vogelsang</td>
-      </tr>
-      <tr>
-        <td><img src="donors/tarent.png" alt=""/></td>
-        <td>tarent GmbH</td>
-      </tr>
-    </table>
+    <donor img="donors/blackduck.jpg">Black Duck Software</donor>
+    <donor img="donors/freiheit.png">freiheit.com technologies</donor>
+    <donor img="donors/intevation.png">Intevation GmbH</donor>
+    <donor img="donors/linuxhotel.png">Linuxhotel Villa Vogelsang</donor>
+    <donor img="donors/tarent.png">tarent GmbH</donor>
   </patrons>
 
   <sustainingcontributors>
-    <li>Google</li>
+    <donor>Google</donor>
   </sustainingcontributors>
 
   <contributors>
-  	<li>Christian Barth</li>
-  	<li>Håkon Wium Lie</li>
-  	<li>inmedias.it GmbH</li>
-  	<li>Joachim Zobel</li>
-	<li>LF.NET GmbH</li>
-	<li>snom technology AG</li>
-  	<li>Univention GmbH</li>
-  	<li>Valentin Hilbig</li>
+    <donor>Christian Barth</donor>
+    <donor>Håkon Wium Lie</donor>
+    <donor>inmedias.it GmbH</donor>
+    <donor>Joachim Zobel</donor>
+    <donor>LF.NET GmbH</donor>
+    <donor>snom technology AG</donor>
+    <donor>Univention GmbH</donor>
+    <donor>Valentin Hilbig</donor>
   </contributors>
 
   <supporters>
-  	<li>Bernhard Stosik</li>
-	<li>BudgetDedicated.com</li>
-  	<li>Communitare GmbH</li>
-  	<li>Fabian Schury</li>
-  	<li>hippie-online.de</li>
-  	<li>Holger Doepner</li>
-  	<li>Hostsharing eG</li>
-  	<li>Ingmar Redel</li>
-  	<li>Jan Brinkmann</li>
-  	<li>Joachim Krantz</li>
-  	<li>Michael Mosmann</li>
-	<li>Markus Osterhoff</li>
-  	<li>Network Theory Ltd.</li>
-   	<li>OwnIT</li>
-   	<li>puma-it.com</li>
-  	<li>Roland Hafner</li>
-  	<li>Thiemo Nagel</li>
-  	<li>Torsten Loehr</li>
-  	<li>Ulrich Walter</li>
-  	<li>Uwe Henschel</li>
-  	<li>Oskar Welzl</li>
-  	<li>Werner Wiethege</li>
+    <donor>Bernhard Stosik</donor>
+    <donor>BudgetDedicated.com</donor>
+    <donor>Communitare GmbH</donor>
+    <donor>Fabian Schury</donor>
+    <donor>hippie-online.de</donor>
+    <donor>Holger Doepner</donor>
+    <donor>Hostsharing eG</donor>
+    <donor>Ingmar Redel</donor>
+    <donor>Jan Brinkmann</donor>
+    <donor>Joachim Krantz</donor>
+    <donor>Michael Mosmann</donor>
+    <donor>Markus Osterhoff</donor>
+    <donor>Network Theory Ltd.</donor>
+    <donor>OwnIT</donor>
+    <donor>puma-it.com</donor>
+    <donor>Roland Hafner</donor>
+    <donor>Thiemo Nagel</donor>
+    <donor>Torsten Loehr</donor>
+    <donor>Ulrich Walter</donor>
+    <donor>Uwe Henschel</donor>
+    <donor>Oskar Welzl</donor>
+    <donor>Werner Wiethege</donor>
   </supporters>
 </donorset>
-

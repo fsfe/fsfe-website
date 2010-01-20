@@ -1,33 +1,31 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <donorset>
   <patrons>
-    <table cellpadding="10">
-      <tr>
-        <td>&#160;</td>
-        <td>Villa-Vogelsang</td>
-      </tr>
-    </table>
+    <donor img="donors/linuxhotel.png">Linuxhotel Villa Vogelsang</donor>
   </patrons>
-  <contributors>
-    <li>tarent GmbH (06/02-)</li>
-    <li>Bytewise Software GmbH</li>
-    <li>"Hiroshima mon amour" Cultural Center Torino</li>
-  </contributors>
-  <supporters>
-    <li>Markus Armbruster</li>
-    <li>Dirk-Rolf Aust</li>
-    <li>Christopher Kohlhaas</li>
-    <li>Thiemo Nagel (02/02-)</li>
-    <li>Tobias Rischer</li>
-    <li>Arno Wagner</li>
-    <li>Dietrich Feist (05/02-)</li>
-    <li>LUG Giessen Installations-Parties 1999</li>
-    <li>Oliver Zendel</li>
-  </supporters>
+
   <sustainingcontributors>
-    <li>LF.NET</li>
-    <li>Stichting NLnet (The Netherlands)</li>
+    <donor>LF.NET</donor>
+    <donor>Stichting NLnet (The Netherlands)</donor>
   </sustainingcontributors>
+
+  <contributors>
+    <donor>tarent GmbH (06/02-)</donor>
+    <donor>Bytewise Software GmbH</donor>
+    <donor>"Hiroshima mon amour" Cultural Center Torino</donor>
+  </contributors>
+
+  <supporters>
+    <donor>Markus Armbruster</donor>
+    <donor>Dirk-Rolf Aust</donor>
+    <donor>Christopher Kohlhaas</donor>
+    <donor>Thiemo Nagel (02/02-)</donor>
+    <donor>Tobias Rischer</donor>
+    <donor>Arno Wagner</donor>
+    <donor>Dietrich Feist (05/02-)</donor>
+    <donor>LUG Giessen Installations-Parties 1999</donor>
+    <donor>Odonorver Zendel</donor>
+  </supporters>
 </donorset>
 

@@ -8,49 +8,37 @@
 
 <donorset>
   <patrons>
-    <table class="noborders">
-      <tr>
-        <td><img src="donors/freiheit.png" alt=""/></td>
-        <td>freiheit.com technologies</td>
-      </tr>
-      <tr>
-        <td><img src="donors/intevation.png" alt=""/></td>
-        <td>Intevation GmbH</td>
-      </tr>
-      <tr>
-        <td><img src="donors/linuxhotel.png" alt=""/></td>
-        <td>Linuxhotel Villa Vogelsang</td>
-      </tr>
-    </table>
+    <donor img="donors/freiheit.png">freiheit.com technologies</donor>
+    <donor img="donors/linuxhotel.png">Linuxhotel Villa Vogelsang</donor>
   </patrons>
 
   <sustainingcontributors>
-  	<li>Variomedia AG</li>
+    <donor>Variomedia AG</donor>
   </sustainingcontributors>
 
   <contributors>
-  	<li>Christian Barth</li>
-  	<li>inmedias.it GmbH</li>
-  	<li>Joachim Zobel</li>
-  	<li>Univention GmbH</li>
+    <donor>Christian Barth</donor>
+    <donor>inmedias.it GmbH</donor>
+    <donor>Joachim Zobel</donor>
+    <donor>LIHAS - Linuxhaus Stuttgart</donor>
+    <donor>Univention GmbH</donor>
   </contributors>
 
   <supporters>
-  	<li>Bernhard Stosik</li>
-  	<li>Communitare GmbH</li>
-  	<li>Fabian Schury</li>
-  	<li>hippie-online.de</li>
-  	<li>Holger Doepner</li>
-  	<li>Hostsharing e.G.</li>
-  	<li>Jan Brinkmann</li>
-  	<li>Joachim Krantz</li>
-  	<li>Michael Mosmann</li>
-  	<li>Roland Hafner</li>
-  	<li>Thiemo Nagel</li>
-  	<li>Torsten Loehr</li>
-  	<li>Ulrich Walter</li>
-  	<li>Uwe Henschel</li>
-  	<li>Werner Wiethege</li>
+    <donor>Bernhard Stosik</donor>
+    <donor>Communitare GmbH</donor>
+    <donor>Fabian Schury</donor>
+    <donor>hippie-online.de</donor>
+    <donor>Holger Doepner</donor>
+    <donor>Hostsharing e.G.</donor>
+    <donor>Jan Brinkmann</donor>
+    <donor>Joachim Krantz</donor>
+    <donor>Michael Mosmann</donor>
+    <donor>Roland Hafner</donor>
+    <donor>Thiemo Nagel</donor>
+    <donor>Torsten Loehr</donor>
+    <donor>Ulrich Walter</donor>
+    <donor>Uwe Henschel</donor>
+    <donor>Werner Wiethege</donor>
   </supporters>
 </donorset>
-

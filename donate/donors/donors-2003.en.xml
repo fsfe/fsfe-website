@@ -2,70 +2,61 @@
 
 <donorset>
   <patrons>
-    <table cellpadding="10">
-      <tr>
-        <td><img src="donors/bmag.png" alt="B+M Informatik"/></td>
-        <td>B+M Informatik AG</td>
-      </tr>
-      <tr>
-        <td><img src="donors/linuxhotel.png" alt="Linuxhotel"/></td>
-        <td>Linuxhotel Villa Vogelsang</td>
-      </tr>
-    </table>
+    <donor img="donors/bmag.png">B+M Informatik AG</donor>
+    <donor img="donors/donornuxhotel.png">Linuxhotel Villa Vogelsang</donor>
   </patrons>
 
   <sustainingcontributors>
-    <li>LF.NET</li>
-    <li>Intevation GmbH</li>
-    <li>Heinrich  Berndes  Haushaltstechnik  GmbH  &amp; Co. KG</li>
-    <li>Operacijski sustavi d.o.o.</li>
-    <li>Andreas Müller</li>
-    <li>Bookzilla.de</li>
-    <li>Klaus Niederkrüger</li>
+    <donor>LF.NET</donor>
+    <donor>Intevation GmbH</donor>
+    <donor>Heinrich  Berndes  Haushaltstechnik  GmbH  &amp; Co. KG</donor>
+    <donor>Operacijski sustavi d.o.o.</donor>
+    <donor>Andreas Müller</donor>
+    <donor>Bookzilla.de</donor>
+    <donor>Klaus Niederkrüger</donor>
   </sustainingcontributors>
 
   <contributors>
-    <li>tarent GmbH</li>
-    <li>BYTEWISE Software GmbH</li>
-    <li>Joachim Zobel</li>
-    <li>Siemens AG, CT SE 2</li>
-    <li>Openstuff.net</li>
-    <li>Lars Mathiassen</li>
+    <donor>tarent GmbH</donor>
+    <donor>BYTEWISE Software GmbH</donor>
+    <donor>Joachim Zobel</donor>
+    <donor>Siemens AG, CT SE 2</donor>
+    <donor>Openstuff.net</donor>
+    <donor>Lars Mathiassen</donor>
   </contributors>
 
   <supporters>
-    <li>Thiemo Nagel</li>
-    <li>Dietrich Feist</li>
-    <li>Marc Riese</li>
-    <li>Hugo Giese</li>
-    <li>media access GmbH (Agentur für Neue Medien)</li>
-    <li>Volker Grassmuck</li>
-    <li>free-it.org</li>
-    <li>Gregor Theis</li>
-    <li>Martin Schröder</li>
-    <li>Loadbalancer.org Limited</li>
-    <li>AngieSoft</li>
-    <li>Wolfgang Hochhäusler</li>
-    <li>Eberhard Schulz</li>
-    <li>Josep Lluis Lopez Munne</li>
-    <li>Geza Giedke</li>
-    <li>Ingo Schmiegel</li>
-    <li>Andrea Glorioso</li>
-    <li>Alceste Scalas</li>
-    <li>pharma traduction</li>
-    <li>Dominic König</li>
-    <li>Metromorph Softworks</li>
-    <li>Hostsharing e.G.</li>
-    <li>tuxcenter.net IT solutions</li>
-    <li>Network Theory Ltd</li>
-    <li>Martin Lohner</li>
-    <li>Timon Schroeter</li>
-    <li>Michael Mosmann</li>
-    <li>Martin Wolters</li>
-    <li>Phase2-Networks</li>
-    <li>Mike Abel</li>
-    <li>Christof Awater</li>
-    <li>Thomas Gerigk</li>
+    <donor>Thiemo Nagel</donor>
+    <donor>Dietrich Feist</donor>
+    <donor>Marc Riese</donor>
+    <donor>Hugo Giese</donor>
+    <donor>media access GmbH (Agentur für Neue Medien)</donor>
+    <donor>Volker Grassmuck</donor>
+    <donor>free-it.org</donor>
+    <donor>Gregor Theis</donor>
+    <donor>Martin Schröder</donor>
+    <donor>Loadbalancer.org Limited</donor>
+    <donor>AngieSoft</donor>
+    <donor>Wolfgang Hochhäusler</donor>
+    <donor>Eberhard Schulz</donor>
+    <donor>Josep Lluis Lopez Munne</donor>
+    <donor>Geza Giedke</donor>
+    <donor>Ingo Schmiegel</donor>
+    <donor>Andrea Glorioso</donor>
+    <donor>Alceste Scalas</donor>
+    <donor>pharma traduction</donor>
+    <donor>Dominic König</donor>
+    <donor>Metromorph Softworks</donor>
+    <donor>Hostsharing e.G.</donor>
+    <donor>tuxcenter.net IT solutions</donor>
+    <donor>Network Theory Ltd</donor>
+    <donor>Martin Lohner</donor>
+    <donor>Timon Schroeter</donor>
+    <donor>Michael Mosmann</donor>
+    <donor>Martin Wolters</donor>
+    <donor>Phase2-Networks</donor>
+    <donor>Mike Abel</donor>
+    <donor>Christof Awater</donor>
+    <donor>Thomas Gerigk</donor>
   </supporters>
-
 </donorset>

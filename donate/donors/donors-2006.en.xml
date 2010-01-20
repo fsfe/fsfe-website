@@ -1,100 +1,87 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<!-- Please keep each list alphabetically ordered.  Emacs users want -->
-<!-- to set sort-fold-case to true and run sort-lines on a region -->
 
 <donorset>
   <patrons>
-    <table cellpadding="10">
-      <tr>
-        <td><img src="donors/freiheit.png" alt="freiheit.com"/></td>
-        <td>freiheit.com technologies</td>
-      </tr>
-      <tr>
-        <td><img src="donors/linuxhotel.png" alt="Linuxhotel"/></td>
-        <td>Linuxhotel Villa Vogelsang</td>
-      </tr>
-      <tr>
-        <td><img src="donors/nlnet.png" alt="NLnet"/></td>
-        <td>Stichting NLnet</td>
-      </tr>
-    </table>
+    <donor img="donors/freiheit.png">freiheit.com technologies</donor>
+    <donor img="donors/donornuxhotel.png">Linuxhotel Villa Vogelsang</donor>
+    <donor img="donors/nlnet.png">Stichting NLnet</donor>
   </patrons>
 
   <sustainingcontributors>
-    <li>Bibliotek-Systemer As Torkel Hasle</li>
-    <li>Dr. Dieter Hoffmann</li>
-    <li>LF.NET GmbH</li>
+    <donor>Bibdonorotek-Systemer As Torkel Hasle</donor>
+    <donor>Dr. Dieter Hoffmann</donor>
+    <donor>LF.NET GmbH</donor>
   </sustainingcontributors>
 
   <contributors>
-    <li>Christian Barth</li>
-    <li>inmedias.it GmbH</li>
-    <li>J. Fossy Weinzinger</li>
-    <li>netcologne.de</li>
-    <li>OSTC GmbH</li>
-    <li>Valentin Hilbig</li>
+    <donor>Christian Barth</donor>
+    <donor>inmedias.it GmbH</donor>
+    <donor>J. Fossy Weinzinger</donor>
+    <donor>netcologne.de</donor>
+    <donor>OSTC GmbH</donor>
+    <donor>Valentin Hilbig</donor>
   </contributors>
 
   <supporters>
-    <li>A. Pretzsch</li>
-    <li>Adrian Kern</li>
-    <li>Andreas Voegele</li>
-    <li>Angiesoft</li>
-    <li>Bernhard Egger</li>
-    <li>Bernhard Stosik</li>
-    <li>Björn Janssen</li>
-    <li>Christian Fabas</li>
-    <li>Christian Neise</li>
-    <li>Christopher Kluwe</li>
-    <li>Communitare GmbH</li>
-    <li>Corinna Vinschen</li>
-    <li>Dirk-Rolf Aust</li>
-    <li>Drew Casko</li>
-    <li>Eberhard Schulz</li>
-    <li>Erik Schonenberger</li>
-    <li>Fabio Nanni</li>
-    <li>Fabrice Bongartz</li>
-    <li>Felix Schudel</li>
-    <li>Frank Becker</li>
-    <li>Gabriele Giambonini</li>
-    <li>Gerhard Hippmann</li>
-    <li>Giacomo Cusato</li>
-    <li>Guido Lesiewicz</li>
-    <li>Hofmann Software Engineering International</li>
-    <li>Holger Hampel</li>
-    <li>Hostsharing EG</li>
-    <li>Jan Brinkmann</li>
-    <li>Jan Hecking</li>
-    <li>Jan Kupfer</li>
-    <li>Jean-Bruno Luginbuehl</li>
-    <li>Joachim Krantz</li>
-    <li>Jord Arjen Swart</li>
-    <li>Jörg Jacob</li>
-    <li>Jörg Payen</li>
-    <li>Juergen Schermuly</li>
-    <li>Karl-Heinz Koether</li>
-    <li>Kenny Duffus</li>
-    <li>Marc Riese</li>
-    <li>Mario Lardieri</li>
-    <li>Martin Wolters</li>
-    <li>Matthew Frederick Exon</li>
-    <li>Matthias Berberich</li>
-    <li>Michael Mosmann</li>
-    <li>Michael Weisbach</li>
-    <li>Network Theory Ltd</li>
-    <li>Oskar Welzl</li>
-    <li>raber.net</li>
-    <li>Robert Unger</li>
-    <li>Roland Hafner</li>
-    <li>Soeren Sonnenburg</li>
-    <li>Soit GmbH</li>
-    <li>Stefan Kraft</li>
-    <li>Tarent GmbH</li>
-    <li>Thiemo Nagel</li>
-    <li>Torsten Loehr</li>
-    <li>Walter Ulrich</li>
-    <li>Werner Wiethege</li>
-    <li>Wilfried Enzmann</li>
-    <li>Wolfgang Hochhaeusler</li>
+    <donor>A. Pretzsch</donor>
+    <donor>Adrian Kern</donor>
+    <donor>Andreas Voegele</donor>
+    <donor>Angiesoft</donor>
+    <donor>Bernhard Egger</donor>
+    <donor>Bernhard Stosik</donor>
+    <donor>Björn Janssen</donor>
+    <donor>Christian Fabas</donor>
+    <donor>Christian Neise</donor>
+    <donor>Christopher Kluwe</donor>
+    <donor>Communitare GmbH</donor>
+    <donor>Corinna Vinschen</donor>
+    <donor>Dirk-Rolf Aust</donor>
+    <donor>Drew Casko</donor>
+    <donor>Eberhard Schulz</donor>
+    <donor>Erik Schonenberger</donor>
+    <donor>Fabio Nanni</donor>
+    <donor>Fabrice Bongartz</donor>
+    <donor>Fedonorx Schudel</donor>
+    <donor>Frank Becker</donor>
+    <donor>Gabriele Giambonini</donor>
+    <donor>Gerhard Hippmann</donor>
+    <donor>Giacomo Cusato</donor>
+    <donor>Guido Lesiewicz</donor>
+    <donor>Hofmann Software Engineering International</donor>
+    <donor>Holger Hampel</donor>
+    <donor>Hostsharing EG</donor>
+    <donor>Jan Brinkmann</donor>
+    <donor>Jan Hecking</donor>
+    <donor>Jan Kupfer</donor>
+    <donor>Jean-Bruno Luginbuehl</donor>
+    <donor>Joachim Krantz</donor>
+    <donor>Jord Arjen Swart</donor>
+    <donor>Jörg Jacob</donor>
+    <donor>Jörg Payen</donor>
+    <donor>Juergen Schermuly</donor>
+    <donor>Karl-Heinz Koether</donor>
+    <donor>Kenny Duffus</donor>
+    <donor>Marc Riese</donor>
+    <donor>Mario Lardieri</donor>
+    <donor>Martin Wolters</donor>
+    <donor>Matthew Frederick Exon</donor>
+    <donor>Matthias Berberich</donor>
+    <donor>Michael Mosmann</donor>
+    <donor>Michael Weisbach</donor>
+    <donor>Network Theory Ltd</donor>
+    <donor>Oskar Welzl</donor>
+    <donor>raber.net</donor>
+    <donor>Robert Unger</donor>
+    <donor>Roland Hafner</donor>
+    <donor>Soeren Sonnenburg</donor>
+    <donor>Soit GmbH</donor>
+    <donor>Stefan Kraft</donor>
+    <donor>Tarent GmbH</donor>
+    <donor>Thiemo Nagel</donor>
+    <donor>Torsten Loehr</donor>
+    <donor>Walter Ulrich</donor>
+    <donor>Werner Wiethege</donor>
+    <donor>Wilfried Enzmann</donor>
+    <donor>Wolfgang Hochhaeusler</donor>
   </supporters>
 </donorset>

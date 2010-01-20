@@ -5,8 +5,9 @@
 
   <!-- Fill dynamic content -->
   <xsl:template match="dynamic-content">
+    <xsl:variable name="group"><xsl:value-of select="@group"></xsl:variable>
     <xsl:element name="ul">
-      <xsl:for-each select="/html/set/{@group}/donor">
+      <xsl:for-each select="/html/set/$group/donor">
         <xsl:element name="li">
           <xsl:value-of select="node()"/>
         </xsl:element>

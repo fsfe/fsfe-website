@@ -333,8 +333,9 @@
             <xsl:apply-templates select="/buildinfo/textset/text[@id='webmaster']/node()"/>
 
             <!-- FSF* netwok note -->
-            <xsl:element name="br"/>
-            <xsl:apply-templates select="/buildinfo/textset/text[@id='fsfnetwork']/node()"/>
+            <p>
+              <xsl:apply-templates select="/buildinfo/textset/text[@id='fsfnetwork']/node()"/>
+            </p>
 
           </xsl:element>
 

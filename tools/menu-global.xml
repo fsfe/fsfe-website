@@ -3,14 +3,9 @@
 <menuset>
   <menu id="menu1"/>
   <menu id="menu1/about" parent="menu1">/about/about.html</menu>
-  <menu id="menu1/documents" parent="menu1">/documents/documents.html</menu>
-  <menu id="menu1/donate" parent="menu1">/donate/donate.html</menu>
-  <menu id="menu1/help" parent="menu1">/contribute/contribute.html</menu>
-  <menu id="menu1/help/2-translator" parent="menu1/help">/contribute/translators/translators.html</menu>
-  <menu id="menu1/help/3-webmaster" parent="menu1/help">/contribute/web/web.html</menu>
-  <menu id="menu1/help/4-booth_volunteer" parent="menu1/help">/contribute/booth/booth.html</menu>
-  <menu id="menu1/help/5-intern" parent="menu1/help">/contribute/internship.html</menu>
   <menu id="menu1/projects" parent="menu1">/projects/work.html</menu>
+  <menu id="menu1/help" parent="menu1">/contribute/contribute.html</menu>
+  <menu id="menu1/donate" parent="menu1">/donate/donate.html</menu>
   <menu id="menu1/order" parent="menu1">/order/order.html</menu>
   <menu id="menu1/thankgnus" parent="menu1">/donate/thankgnus.html</menu>
   <menu id="menu2"/>

@@ -6,10 +6,9 @@
   </head>
 
   <body>
-  
     <localmenu/>
 
-    <h2>Liste over støtter i 2005</h2>
+    <h1>Liste over støtter i 2005</h1>
 
     <p>Free Software Foundation Europe takker alle frivillige, bidragydere
     og andre, der har hjulpet os med at arbejde med og for fri software. 
@@ -29,12 +28,23 @@
     <p>Hardwaredonationer er anført på vores 
     <a href="hardware.html">hardwaredonationswebsted</a>.  Der finder
     du også oplysninger om hvordan man støtter os med hardware.</p>
-  </body>
 
-  <text id="patrons">FSFE's mæcener</text>
-  <text id="sustaining">FSFE's faste støtter</text>
-  <text id="contributors">FSFE's bidragydere</text>
-  <text id="supporters">FSFE's støtter</text>
+    <h2>FSFE's mæcener</h2>
+
+    <dynamic-content group="patrons"/>
+
+    <h2>FSFE's faste støtter</h2>
+
+    <dynamic-content group="sustainingcontributors"/>
+
+    <h2>FSFE's bidragydere</h2>
+
+    <dynamic-content group="contributors"/>
+
+    <h2>FSFE's støtter</h2>
+
+    <dynamic-content group="supporters"/>
+  </body>
 
   <timestamp>$Date$ $Author$</timestamp>
 </html>

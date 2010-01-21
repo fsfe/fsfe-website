@@ -6,10 +6,9 @@
   </head>
 
   <body>
-
     <localmenu/>
 
-    <h2>Lista dei sostenitori del 2002</h2>
+    <h1>Lista dei sostenitori del 2002</h1>
 
     <p>La Free Software Foundation Europe desidera ringraziare tutti
     i volontari, i contribuenti e le altre persone che ci hanno aiutato
@@ -26,12 +25,23 @@
     anonimi. Se anche voi volete donare, potete trovare tutte le informazioni
     necessarie <a href="donate.html">qui</a>. Se cercate pulsanti di
     sponsorizzazione, potete trovarli <a href="/about/graphics/sponsoring/sponsoring.html">qui</a>.</p>
-  </body>
 
-  <text id="patrons">Patron della FSFE</text>
-  <text id="sustaining">Benemeriti della FSFE</text>
-  <text id="contributors">Sostenitori della FSFE</text>
-  <text id="supporters">Promotori della FSFE</text>
+    <h2>Patron della FSFE</h2>
+
+    <dynamic-content group="patrons"/>
+
+    <h2>Benemeriti della FSFE</h2>
+
+    <dynamic-content group="sustainingcontributors"/>
+
+    <h2>Sostenitori della FSFE</h2>
+
+    <dynamic-content group="contributors"/>
+
+    <h2>Promotori della FSFE</h2>
+
+    <dynamic-content group="supporters"/>
+  </body>
 
   <timestamp>$Date$ $Author$</timestamp>
 </html>

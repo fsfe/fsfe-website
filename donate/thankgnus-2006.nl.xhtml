@@ -6,10 +6,9 @@
   </head>
 
   <body>
-
     <localmenu/>
 
-    <h2>Lijst van de donateurs in 2006</h2>
+    <h1>Lijst van de donateurs in 2006</h1>
 
     <p>De Free Software Foundation Europa zou graag alle
     vrijwilligers, medewerkers en andere mensen die ons helpen met
@@ -34,12 +33,23 @@
     href="hardware.html">Hardware Donatie website</a>. Daar
     kunt u ook informatie vinden over hoe u ons kan steunen met
     hardware. </p>
-  </body>
 
-  <text id="patrons">Patroon van de FSFE</text>
-  <text id="sustaining">Substantiële Donateur van de FSFE</text>
-  <text id="contributors">Donateur van de FSFE</text>
-  <text id="supporters">Supporter van de FSFE</text>
+    <h2>Patroon van de FSFE</h2>
+
+    <dynamic-content group="patrons"/>
+
+    <h2>Substantiële Donateur van de FSFE</h2>
+
+    <dynamic-content group="sustainingcontributors"/>
+
+    <h2>Donateur van de FSFE</h2>
+
+    <dynamic-content group="contributors"/>
+
+    <h2>Supporter van de FSFE</h2>
+
+    <dynamic-content group="supporters"/>
+  </body>
 
   <timestamp>$Date$ $Author$</timestamp>
 </html>

@@ -6,10 +6,9 @@
   </head>
 
   <body>
-
     <localmenu/>
 
-    <h2>Liste der Unterstützer 2008</h2>
+    <h1>Liste der Unterstützer 2008</h1>
     
     <p>Die Free Software Foundation Europe möchte allen Freiwilligen,
     Helfern und anderen danken, die uns bei unserer Arbeit für Freie
@@ -33,12 +32,23 @@
     href="hardware.html">Hardware Spenden Internetseite</a>
     aufgelistet. Dort finden sie außerdem Informationen, wie Sie uns
     mit Hardware unterstützen können.</p>
-  </body>
 
-  <text id="patrons">Mäzene der FSFE</text>
-  <text id="sustaining">Substantielle Träger der FSFE</text>
-  <text id="contributors">Träger der FSFE</text>
-  <text id="supporters">Unterstützer der FSFE</text>
+    <h2>Mäzene der FSFE</h2>
+
+    <dynamic-content group="patrons"/>
+
+    <h2>Substantielle Träger der FSFE</h2>
+
+    <dynamic-content group="sustainingcontributors"/>
+
+    <h2>Träger der FSFE</h2>
+
+    <dynamic-content group="contributors"/>
+
+    <h2>Unterstützer der FSFE</h2>
+
+    <dynamic-content group="supporters"/>
+  </body>
 
   <timestamp>$Date$ $Author$</timestamp>
   <translator>Thomas Tigges</translator>

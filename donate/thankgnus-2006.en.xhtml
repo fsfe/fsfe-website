@@ -6,9 +6,9 @@
   </head>
 
   <body>
-<localmenu id="2006" style="number">2006</localmenu>
+    <localmenu id="2006" style="number">2006</localmenu>
 
-    <h2>List of 2006 Supporters</h2>
+    <h1>List of 2006 Supporters</h1>
 
     <p>The Free Software Foundation Europe would like to thank all
     the volunteers, contributors and other people who have helped us
@@ -30,12 +30,23 @@
     <p>Hardware donations are listed on our <a
     href="hardware.html">Hardware Donation website</a>. There,
     you can also find Information on how to support us with hardware.</p>
-  </body>
 
-  <text id="patrons">Patrons of the FSFE</text>
-  <text id="sustaining">Sustaining Contributors of the FSFE</text>
-  <text id="contributors">Contributors of the FSFE</text>
-  <text id="supporters">Supporters of the FSFE</text>
+    <h2>Patrons of the FSFE</h2>
+
+    <dynamic-content group="patrons"/>
+
+    <h2>Sustaining Contributors of the FSFE</h2>
+
+    <dynamic-content group="sustainingcontributors"/>
+
+    <h2>Contributors of the FSFE</h2>
+
+    <dynamic-content group="contributors"/>
+
+    <h2>Supporters of the FSFE</h2>
+
+    <dynamic-content group="supporters"/>
+  </body>
 
   <timestamp>$Date$ $Author$</timestamp>
 </html>

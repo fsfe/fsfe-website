@@ -6,10 +6,9 @@
   </head>
 
   <body>
-
     <localmenu/>
 
-    <h2>Lista med 2005 års sponsorer</h2>
+    <h1>Lista med 2005 års sponsorer</h1>
 
     <p>Free Software Foundation Europe vill tacka alla medhjälpare,
     bidragare och andra personer som har hjälpt oss att arbeta med och
@@ -27,12 +26,23 @@
     href="donate.html">här</a>. Söker du knappar för att visa att du
     stöder oss så finns de <a
     href="/about/graphics/sponsoring/sponsoring.en.html">här</a>.</p>
-  </body>
 
-  <text id="patrons">Beskyddare till FSFE</text>
-  <text id="sustaining">Regelbunden Donator till FSFE</text>
-  <text id="contributors">Donator till FSFE</text>
-  <text id="supporters">Supporter till FSFE</text>
+    <h2>Beskyddare till FSFE</h2>
+
+    <dynamic-content group="patrons"/>
+
+    <h2>Regelbunden Donator till FSFE</h2>
+
+    <dynamic-content group="sustainingcontributors"/>
+
+    <h2>Donator till FSFE</h2>
+
+    <dynamic-content group="contributors"/>
+
+    <h2>Supporter till FSFE</h2>
+
+    <dynamic-content group="supporters"/>
+  </body>
 
   <timestamp>$Date$ $Author$</timestamp>
 </html>

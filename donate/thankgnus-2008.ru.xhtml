@@ -6,10 +6,9 @@
   </head>
 
   <body>
-
     <localmenu/>
 
-    <h2>Список спонсоров 2008</h2>
+    <h1>Список спонсоров 2008</h1>
 
     <p>Европейский фонд свободного программного обеспечения благодарит всех участников, спонсоров и добровольцев за оказанную помощь. Информация о способах участия в деятельности ЕФСПО находится на странице <a href="/contribute/contribute.html">Как принять участие в проекте</a>. Информация для желающих внести денежное пожертвование находится на странице <a href="donate.html">Пожертвования</a>. Значки спонсоров находятся <a href="/about/graphics/sponsoring/sponsoring.html">здесь</a>.</p>
 
@@ -18,12 +17,23 @@
     <p>ЕФСПО благодарит всех спонсоров, пожелавших остаться инкогнито.</p>
       
     <p>Информация о пожертвованиях оборудования находится <a href="hardware.html">здесь</a>.</p>
-  </body>
 
-  <text id="patrons">Patrons of the FSFE</text>
-  <text id="sustaining">Sustaining Contributors of the FSFE</text>
-  <text id="contributors">Contributors of the FSFE</text>
-  <text id="supporters">Supporters of the FSFE</text>
+    <h2>Patrons of the FSFE</h2>
+
+    <dynamic-content group="patrons"/>
+
+    <h2>Sustaining Contributors of the FSFE</h2>
+
+    <dynamic-content group="sustainingcontributors"/>
+
+    <h2>Contributors of the FSFE</h2>
+
+    <dynamic-content group="contributors"/>
+
+    <h2>Supporters of the FSFE</h2>
+
+    <dynamic-content group="supporters"/>
+  </body>
 
   <timestamp>$Date$ $Author$</timestamp>
 <translator>Олега Писменова</translator>

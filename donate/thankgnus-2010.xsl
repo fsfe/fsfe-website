@@ -9,7 +9,7 @@
     <xsl:element name="ul">
       <xsl:for-each select="/html/set/*[name(.)=$group]/donor">
         <xsl:element name="li">
-          <xsl:value-of select="node()"/>
+          <xsl:apply-templates select="node()"/>
         </xsl:element>
       </xsl:for-each>
     </xsl:element>

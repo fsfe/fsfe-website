@@ -89,7 +89,8 @@
 
           <!-- Menu -->
           <xsl:for-each select="/buildinfo/menuset/menu[not(@parent)]">
-            <xsl:sort select="@id"/>
+            <!--<xsl:sort select="@id"/>-->
+            <xsl:sort select="." />
             <xsl:variable name="menu"><xsl:value-of select="@id"/></xsl:variable>
             <xsl:element name="ul">
               <xsl:for-each select="/buildinfo/menuset/menu[@parent=$menu]">

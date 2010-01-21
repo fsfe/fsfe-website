@@ -129,8 +129,8 @@ dl dd {
 
 #menu ul {
   margin: 0;
-  /*background: url("/graphics/corner.png") top left no-repeat;*/
-  padding: 1em 0 1em 1.4em;
+  background: url("/graphics/corner.png") top left no-repeat;
+	padding: 1em 0 1em 1.4em;
 }
 
 #menu ul ul {

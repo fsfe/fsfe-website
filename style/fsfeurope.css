@@ -894,6 +894,7 @@ ul.spaced li, ol.spaced li { /* Spaced listings, use this instead of <br /> */
 ul.overview {
   list-style-type:none;
   margin: 0px;
+  padding: 0px;
   padding-right:20px;
   float:left;
   width:45%;

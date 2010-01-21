@@ -201,7 +201,7 @@
         </xsl:element>
         <!-- End Language bar -->
 
-        <!-- Fundraising box -->
+        <!-- Fundraising box
         <xsl:if test="/buildinfo/fundraising">
           <xsl:element name="div">
             <xsl:attribute name="id">fundraising</xsl:attribute>
@@ -240,7 +240,7 @@
             </xsl:element>
           </xsl:element>
         </xsl:if>
-        <!-- End Fundraising box -->
+        End Fundraising box -->
 
         <!-- Content -->
         <xsl:element name="div">

@@ -885,3 +885,13 @@ ul.spaced li, ol.spaced li { /* Spaced listings, use this instead of <br /> */
   padding-bottom: 1.2em;
 }
 
+
+/* Overview pages */
+
+ul.overview {
+  list-style-type:none;
+  margin: 0px 10px;
+  padding-left:0;
+  float:left;
+  width:45%;
+  }

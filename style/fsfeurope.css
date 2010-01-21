@@ -172,8 +172,8 @@ dl dd {
 #language {
   margin: 0 0 0 220px;
   padding: 0.3em 0 0.4em 1em;
-  font-size: 85%;
-  min-height:2.2em;
+  font-size: 90%;
+  min-height: 2.2em;
 }
 
 #language ul {
@@ -263,7 +263,6 @@ dl dd {
 #content h1 {
 	border-bottom: 1px solid rgb(210,210,210);
 	font-size: 250%;
-	font-family: serif;
 	margin: 0 -.2em;
 	padding: 0 0 .5em .2em;
 }

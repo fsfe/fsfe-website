@@ -289,6 +289,24 @@ dl dd {
 	font-weight: bold;
 }
 
+#content .image {
+	float: right;
+	margin: 0 0 2em 2em;
+}
+
+#content .image .caption {
+	border-left: 1px solid rgb(210,210,210);
+	border-bottom: 1px solid rgb(210,210,210);
+	border-right: 1px solid rgb(210,210,210);
+	padding: .5em;
+	font-size: 90%;
+}
+
+#content .image .photographer {
+	font-size: 90%;
+	font-style: italic;
+}
+
 .imgright {
   float: right;
   margin: 0 0 1em 1em;

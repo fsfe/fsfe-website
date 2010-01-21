@@ -5,11 +5,11 @@
 
   <!-- Fill dynamic content -->
   <xsl:template match="dynamic-content">
-    <xsl:variable name="group"><xsl:value-of select="$group"/></xsl:variable>
+    <xsl:variable name="group"><xsl:value-of select="@group"/></xsl:variable>
     <xsl:choose>
-      <xsl:when test="$group=patrons">
+      <xsl:when test="$group='patrons'">
         <xsl:element name="table">
-          <xsl:for-each select="/html/set/*[name(.)=@group]/donor">
+          <xsl:for-each select="/html/set/*[name(.)=$group]/donor">
             <xsl:element name="tr">
               <xsl:element name="td">
                 <xsl:element name="img">
@@ -26,7 +26,7 @@
       </xsl:when>
       <xsl:otherwise>
         <xsl:element name="ul">
-          <xsl:for-each select="/html/set/*[name(.)=@group]/donor">
+          <xsl:for-each select="/html/set/*[name(.)=$group]/donor">
             <xsl:element name="li">
               <xsl:apply-templates select="node()"/>
             </xsl:element>

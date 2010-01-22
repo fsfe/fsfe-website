@@ -421,6 +421,18 @@ pre.file {
 }
 
 
+/* press releases */
+dl#press-releases dt {
+	font-weight: normal;
+	color: rgb(120,120,120);
+	position: absolute;
+}
+
+dl#press-releases dd {
+	margin-left: 90px;
+}
+
+
 /* tables */
 table {
 	border-collapse: collapse;

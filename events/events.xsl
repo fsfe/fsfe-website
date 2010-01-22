@@ -102,7 +102,7 @@
 
       <div class="details">
         <xsl:apply-templates select="body/node()" />
-        <div class="cleared">&#160;</div>
+        <!--<div class="cleared">&#160;</div>-->
       </div>
 
       <!--

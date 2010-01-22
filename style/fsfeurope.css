@@ -307,11 +307,12 @@ dl dd {
 	font-style: italic;
 }
 
-#content .image .floatright {
+#content .floatright {
 	float: right;
+	max-width:40%;
 }
-#content .image .floatright img {
-	max-width:30%;
+#content .floatright img {
+	width:100%;
 }
 
 .imgright {

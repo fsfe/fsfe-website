@@ -7,7 +7,21 @@
   <body>
     <h1>Press</h1>
 
-    <p id="introduction">
+    <div id="introduction">
+      <div class="image">
+        <img src="/graphics/logo.png" alt="FSFE logo" />
+      </div>
+
+      <p>
+        FSFE believes that access to and control of software determines
+        who may participate in a digital society.  The freedoms to <a
+        href="/about/basics/freesoftware.html">use, copy, modify and
+          redistribute</a> software are necessary for equal participation in
+        the information age.
+      </p>
+    </div>
+
+    <p>
       The Free Software Foundation Europe (FSFE) is a non-profit
       non-governmental organisation active in <a
       href="/contact/local.html">many European countries</a> and involved
@@ -23,54 +37,35 @@
   	</p>
 
 
-
-  	<h2>Get FSFE news and Press Releases</h2>
+    <div class="grid-50-50">
+      <div class="box first">
+  	    <h2>Get our Press Releases</h2>
 	
-  	<p>
-      By subscribing to our news feeds and mailing lists, you
-      can automatically keep up-to-date on the latest news in the
-      Free Software movement.</p>
+  	    <p>
+          By subscribing to our news feeds or mailing lists, you can
+          automatically keep up-to-date on the latest news in the Free
+          Software world.
+        </p>
       
-      <form method="POST" action="http://mail.fsfeurope.org/mailman/subscribe/press-release">
-        <p>
-          <input type="Text" name="email" size="30" value="your@email.com" /> 
-          <input type="Submit" name="email-button" value="Subscribe" />
+        <form method="post" action="http://mail.fsfeurope.org/mailman/subscribe/press-release">
+          <p>
+            <input type="text" name="email" value="your@email.com" onChange="this.value = ''" onClick="this.value = ''" /> 
+            <input type="submit" value="Subscribe" />
+          </p>
+        </form>
 
-        </p>
-      </form>
-
+  	    <p>
+          For instant updates and hot news, you can also follow us <a
+            href="http://identi.ca/fsfe">on Identi.ca</a> or <a
+            href="http://twitter.com/fsfe">on Twitter</a>.
+  	    </p>
+      </div>
+      <div class="box">
+        <h3><a href="/news/">Latest news</a> <a href="/news/news.rss" class="feed">RSS</a></h3>
   	
-  	<p>
-      For instant updates and hot news, you can also follow us <a
-        href="http://identi.ca/fsfe">on Identi.ca</a> or <a
-        href="http://twitter.com/fsfe">on Twitter</a>.
-  	</p>
+      </div>
+    </div>
   	
-    <h3><a href="/news/">Latest news</a> <a href="/news/news.rss" class="feed">RSS</a></h3>
-  	
-  	
-  	
-  	    <!--div style="float: right; width: 250px; border: 1px solid #ccc;       background-color: #f4f8fa; padding: 1em;">
-
-  	
-  	      <h3>Subscribe to our newsletter!</h3>
-
-      <p>
-        We send send out a <a href="http://fsfe.org/news/newsletter.html">monthly
-  		    newsletter</a> with the latest updates
-        within the Free Software movement.  It's an easy way to keep up
-        with FSFE's activities.
-      </p>
-
-      <form>
-        <p>
-          <input name="email" type="email" value="your@email.com"
-            onfocus="self.value = ''" />
-          <input type="submit" value="Subscribe" />
-        </p>
-      </form>
-		</div-->
-
 
     <h2>Enquiries</h2>
 

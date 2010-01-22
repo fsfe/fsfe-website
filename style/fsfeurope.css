@@ -267,11 +267,14 @@ dl dd {
 	padding: 0 0 .5em .2em;
 }
 
+#content .centre {
+	text-align: center;
+}
+
 #content h1.centre {
 	border: 0;
 	margin: 0;
 	padding: 0;
-	text-align: center;
 }
 
 #content h2 {

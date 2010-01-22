@@ -670,6 +670,12 @@ h4#subpages {
 	display: none;
 }
 
+h2#subpages.show-heading,
+h3#subpages.show-heading,
+h4#subpages.show-heading {
+	display: block;
+}
+
 ul#subpages,
 h2#subpages + ul,
 h3#subpages + ul,

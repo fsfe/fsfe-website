@@ -283,7 +283,9 @@ dl dd {
   margin-top: 1.5em
 }
 
-#content p {
+#content p,
+#content li,
+#content dl {
 	line-height: 120%;
 }
 

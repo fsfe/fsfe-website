@@ -376,6 +376,16 @@ pre.file {
 	padding: 1em .5em;
 }
 
+/*
+ * This expands #introduction until all content has been printed, so it
+ * doesn't flow outside of the element.
+ */
+#introduction p::after {
+	clear: both;
+	height: 1px;
+	overflow: hidden;
+}
+
 #introduction img {
 	float: left;
 	padding: 0 2em 0 0;

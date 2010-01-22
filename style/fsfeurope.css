@@ -308,6 +308,11 @@ dl dd {
 	font-style: italic;
 }
 
+#content .image .float-right {
+	float: right;
+	max-width:30%;
+}
+
 .imgright {
   float: right;
   margin: 0 0 1em 1em;

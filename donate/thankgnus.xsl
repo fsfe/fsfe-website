@@ -20,6 +20,7 @@
       <xsl:when test="$group='patrons'">
         <xsl:element name="table">
           <xsl:for-each select="/html/set/*[name(.)=$group]/donor[translate(@date,'-','')&gt;=translate($frommonth,'-','')]">
+            <xsl:sort select="node()"/>
             <xsl:element name="tr">
               <xsl:element name="td">
                 <xsl:element name="img">
@@ -37,6 +38,7 @@
       <xsl:otherwise>
         <xsl:element name="ul">
           <xsl:for-each select="/html/set/*[name(.)=$group]/donor[translate(@date,'-','')&gt;=translate($frommonth,'-','')]">
+            <xsl:sort select="node()"/>
             <xsl:element name="li">
               <xsl:apply-templates select="node()"/>
             </xsl:element>

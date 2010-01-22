@@ -283,6 +283,10 @@ dl dd {
   margin-top: 1.5em
 }
 
+#content p {
+	line-height: 120%;
+}
+
 #content p#category {
 	margin: 0;
 	font-size: 140%;

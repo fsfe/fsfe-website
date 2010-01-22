@@ -294,6 +294,12 @@ dl dd {
 }
 
 #content .image {
+	margin: 0 2em 2em 0;
+	float: left;
+}
+
+#content .image.right {
+	float: right;
 	margin: 0 0 2em 2em;
 }
 
@@ -309,14 +315,6 @@ dl dd {
 #content .image .photographer {
 	font-size: 90%;
 	font-style: italic;
-}
-
-#content .floatright {
-	float: right;
-	max-width:65%;
-}
-#content .floatright img {
-	max-width:100%;
 }
 
 .imgright {

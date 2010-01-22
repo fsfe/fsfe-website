@@ -1,5 +1,4 @@
 RewriteEngine On
-RewriteRule ^thankgnus\.(.*) /donate/thankgnus-2010.$1 [redirect=permanent]
 RewriteRule ^donate-2002\.(.*) /donate/donate.$1 [redirect=permanent]
 RewriteRule ^spenden(.*) /donate/donate-2002-de$1 [redirect=permanent]
 RewriteRule ^donate-2004-uk(.*) /donate/donate$1 [redirect=permanent]

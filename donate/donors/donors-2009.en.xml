@@ -4,15 +4,22 @@
   Please keep each list alphabetically ordered.  Emacs users want to set
   sort-fold-case to true and run sort-lines on a region.  Vi+ users can
   visually select the list and use the :sort command.
+
+  The date="..." should be filled with the last date when a donation from this
+  donor came in. It is important for the "current" thankgnus page.
+
+  Currently, the date="..." may only be set in a single xml file for the same
+  donor, so if you add a donor to a file of the new year, don't forget to
+  remove the date="..." in the old year's file.
 -->
 
 <donorset>
   <patrons>
-    <donor img="donors/blackduck.jpg">Black Duck Software</donor>
+    <donor date="2009-03-25" img="donors/blackduck.jpg">Black Duck Software</donor>
     <donor img="donors/freiheit.png">freiheit.com technologies</donor>
-    <donor img="donors/intevation.png">Intevation GmbH</donor>
+    <donor date="2009-12-29" img="donors/intevation.png">Intevation GmbH</donor>
     <donor img="donors/linuxhotel.png">Linuxhotel Villa Vogelsang</donor>
-    <donor img="donors/tarent.png">tarent GmbH</donor>
+    <donor date="2009-10-16" img="donors/tarent.png">tarent GmbH</donor>
   </patrons>
 
   <sustainingcontributors>
@@ -21,37 +28,35 @@
 
   <contributors>
     <donor>Christian Barth</donor>
-    <donor>Håkon Wium Lie</donor>
+    <donor date="2009-01-21">Håkon Wium Lie</donor>
     <donor>inmedias.it GmbH</donor>
     <donor>Joachim Zobel</donor>
-    <donor>LF.NET GmbH</donor>
-    <donor>snom technology AG</donor>
-    <donor>Univention GmbH</donor>
-    <donor>Valentin Hilbig</donor>
+    <donor date="2009-05-06">LF.NET GmbH</donor>
+    <donor date="2009-12-28">Univention GmbH</donor>
+    <donor date="2009-08-03">Valentin Hilbig</donor>
   </contributors>
 
   <supporters>
     <donor>Bernhard Stosik</donor>
-    <donor>BudgetDedicated.com</donor>
+    <donor date="2009-12-31">BudgetDedicated.com</donor> <!-- FIXME: date? -->
     <donor>Communitare GmbH</donor>
     <donor>Fabian Schury</donor>
     <donor>hippie-online.de</donor>
     <donor>Holger Doepner</donor>
     <donor>Hostsharing eG</donor>
-    <donor>Ingmar Redel</donor>
+    <donor date="2009-02-18">Ingmar Redel</donor>
     <donor>Jan Brinkmann</donor>
     <donor>Joachim Krantz</donor>
     <donor>Michael Mosmann</donor>
-    <donor>Markus Osterhoff</donor>
-    <donor>Network Theory Ltd.</donor>
-    <donor>OwnIT</donor>
-    <donor>puma-it.com</donor>
+    <donor date="2009-12-21">Markus Osterhoff</donor>
+    <donor date="2009-01-30">Network Theory Ltd.</donor>
+    <donor date="2009-12-31">OwnIT</donor>              <!-- FIXME: date? -->
+    <donor date="2009-05-28">puma-it.com</donor>
     <donor>Roland Hafner</donor>
     <donor>Thiemo Nagel</donor>
     <donor>Torsten Loehr</donor>
     <donor>Ulrich Walter</donor>
     <donor>Uwe Henschel</donor>
-    <donor>Oskar Welzl</donor>
     <donor>Werner Wiethege</donor>
   </supporters>
 </donorset>

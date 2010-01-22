@@ -265,6 +265,11 @@
         <xsl:element name="div">
           <xsl:attribute name="id">footer</xsl:attribute>
 
+          <!-- FSF* netwok note -->
+          <p class="fsfnetwork">
+            <xsl:apply-templates select="/buildinfo/textset/text[@id='fsfnetwork']/node()"/>
+          </p>
+
           <xsl:element name="p">
 
             <!-- Copyright -->
@@ -331,11 +336,6 @@
             <!-- Webmaster feedback note -->
             <xsl:element name="br"/>
             <xsl:apply-templates select="/buildinfo/textset/text[@id='webmaster']/node()"/>
-
-            <!-- FSF* netwok note -->
-            <p>
-              <xsl:apply-templates select="/buildinfo/textset/text[@id='fsfnetwork']/node()"/>
-            </p>
 
           </xsl:element>
 

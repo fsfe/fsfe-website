@@ -2,146 +2,125 @@
 
 <html>
   <head>
-  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type" />
-  <title>FSFE - Freedom Task Force (FTF)</title>
-<script type="text/javascript">
-submitted = false;
-function submit_once() {
-    if (submitted) {
-        alert("Your request is being processed.\nPlease be patient.");
-        event.returnValue = 0;    // work-around for IE
-        return false;
-    }
-    if (document.itemSynopsis.title.value == "") {
-        alert("Please enter a subject!"); 
-        document.itemSynopsis.title.focus();
-        return false;
-    }
-    if (document.itemSynopsis.sender_name.value == "") {
-        alert("Please enter your name!"); 
-        document.itemSynopsis.sender_name.focus();
-        return false;
-    }
-    if (document.itemSynopsis.sender_email.value == "") {
-        alert("Please enter your email!"); 
-        document.itemSynopsis.sender_email.focus();
-        return false;
-    }
-    submitted = true;
-}
-</script>
-</head>
+    <link href="/style/grid.css" rel="stylesheet" />
 
+    <title>Contact Freedom Task Force (FTF) - FSFE</title>
 
+    <script type="text/javascript">
 
-<body>
+      submitted = false;
 
-	<h1>FTF: Contact the FTF</h1>
+      function submit_once() {
+
+        if (submitted) {
+          alert("Your request is being processed.\nPlease be patient.");
+          event.returnValue = 0;    // work-around for IE
+          return false;
+        }
+
+        if (document.itemSynopsis.title.value == "") {
+          alert("Please enter a subject!"); 
+          document.itemSynopsis.title.focus();
+          return false;
+        }
+
+        if (document.itemSynopsis.sender_name.value == "") {
+          alert("Please enter your name!"); 
+          document.itemSynopsis.sender_name.focus();
+          return false;
+        }
+
+        if (document.itemSynopsis.sender_email.value == "") {
+          alert("Please enter your email!"); 
+          document.itemSynopsis.sender_email.focus();
+          return false;
+        }
+
+        submitted = true;
+
+      }
+
+    </script>
+  </head>
+  <body>
+    <p id="category"><a href="/projects/ftf/">FTF</a></p>
+  	<h1>Contact the FTF</h1>
 
     <localmenu id="4">Contact Us</localmenu>
 
-<ul>
-  <li>Freedom Task Force<br /> Free Software Foundation Europe<br /> Linienstr.
-    141 EG<br /> 10115 Berlin<br /> Germany</li>
-  <li>Phone: +49-30-27595290</li>
-  <li>Email: <a href="mailto:ftf@fsfeurope.org">ftf@fsfeurope.org</a></li>
-</ul>
+    <div class="grid-50-50">
+      <div class="box first">
 
-<h2>Contact form</h2>
+        <h2>Contact form</h2>
 
-<div style="text-align: center;">
-<p>Please enter your message below:</p>
-</div>
+        <p>
+          You can either use this contact form to get in touch with the
+          FTF, or use our e-mail address <a
+          href="mailto:ftf@fsfeurope.org">ftf@fsfeurope.org</a>.
+        </p>
 
-<form method="POST" name="itemSynopsis"
-      onSubmit="return submit_once()" enctype="multipart/form-data"
-      action="https://roundup.fsfeurope.org/ftf/issue">
+        <form method="post" onSubmit="return submit_once()"
+          enctype="multipart/form-data"
+          action="https://roundup.fsfeurope.org/ftf/issue">
 
-<table class="form" style="width: 500px; text-align: left; margin-left: auto; margin-right: auto;" cellpadding="3" cellspacing="3">
+          <p>
+            <label for="subject">Subject</label>
+            <input id="subject" type="text" name="title" />
+          </p>
+          <p>
+            <label for="category">Category</label>
+            <select id="category" name="topic">
+              <option selected="selected" value="1">Licensing Support Request</option>
+              <option value="2">License Violation Report</option>
+              <option value="3">Fiduciary Support Request</option>
+              <option value="4">Other</option>
+            </select>
+          </p>
+          <p>
+            <label for="name">Your name</label>
+            <input id="name" type="text" name="sender_name" />
+          </p>
+          <p>
+            <label for="email">Your email</label>
+            <input id="email" type="email" name="sender_email" />
+          </p>
+          <p>
+            <label for="message">Message</label>
+            <textarea id="message" name="@note" rows="5" cols="40"></textarea>
+          </p>
+          <p>
+            <label for="file">File</label>
+            <input id="file" name="@file" type="file" />
+          </p>
+          <p>
+            <label for="validation">Enter “seventeen” as number</label>
+            <input id="validation" name="@riddle" type="text"/>
+          </p>
+          <p style="text-align: right;">
+            <input name="@template" value="item" type="hidden" />
+            <input name="@required" value="title" type="hidden" />
+            <input name="@action" value="ftfsubmit" type="hidden" />
+            <input name="submit" value="Send" type="submit" />
+          </p>
+        </form>
+      </div>
+      <div class="box">
+        <h2>Our office</h2>
 
-  <tbody>
+        <p>
+          <strong>Freedom Task Force</strong><br />
+          Free Software Foundation Europe<br />
+          Linienstr. 141 EG<br />
+          10115 Berlin<br />
+          Germany
+        </p>
 
-    <tr>
-
-      <th style="text-align: left; vertical-align: top; width: 170px;" class="required">Subject :</th>
-
-      <td colspan="3" style="width: 330px;"><input name="title" value="" size="35" /></td>
-
-    </tr>
-
-    <tr>
-
-      <th class="required" style="text-align: left; vertical-align: top; width: 170px;">Category
-:</th>
-
-      <td style="width: 330px;">
-      <select name="topic">
-      <option selected="selected" value="1">Licensing
-Support Request</option>
-      <option value="2">License Violation Report</option>
-      <option value="3">Fiduciary Support Request</option>
-      <option value="4">Other</option>
-      </select>
-
-      </td>
-
-    </tr>
-
-    <tr>
-
-      <th class="required" style="text-align: left; vertical-align: top; width: 170px;">Your
-name :</th>
-
-      <td colspan="3" style="width: 330px;"><input name="sender_name" value="" size="35" /></td>
-
-    </tr>
-
-    <tr>
-
-      <th class="required" style="text-align: left; vertical-align: top; width: 170px;">Your
-email :</th>
-
-      <td colspan="3" style="width: 330px;"><input name="sender_email" value="" size="35" /></td>
-
-    </tr>
-
-    <tr>
-
-      <th style="text-align: left; vertical-align: top; width: 170px;">Message :</th>
-
-      <td colspan="3" style="width: 330px;"> <textarea name="@note" wrap="hard" rows="5" cols="40"></textarea>
-      </td>
-
-    </tr>
-
-    <tr>
-
-      <th style="text-align: left; vertical-align: top; width: 170px;">File
-: </th>
-
-      <td colspan="3" style="width: 330px;"><input name="@file" size="25" type="file" /></td>
-
-    </tr>
-    
-    <tr>
-      <th style="text-align: left; vertical-align: top; width: 170px;">As validation please enter "seventeen" as number:</th>
-
-      <td colspan="3" style="width: 430px;"><input name="@riddle" size="35" type="text"/></td>
-    </tr>
-
-    <tr>
-
-      <td style="width: 170px;">
-      <input name="@template" value="item" type="hidden" /><input name="@required" value="title" type="hidden" /></td>
-      <td style="width: 330px;" colspan="3"><input name="@action" value="ftfsubmit" type="hidden" />
-      <input name="submit" value="Send" type="submit" /> <input name="reset" value="Start over" type="reset" /></td>
-
-    </tr>
-
-  </tbody>
-</table>
-</form>
-
+        <p>
+          Phone: +49-30-27595290<br />
+          E-mail: <a href="mailto:ftf@fsfeurope.org">ftf@fsfeurope.org</a>
+        </p>
+      </div>
+    </div>
   </body>
 
   <timestamp>$Date$ $Author$</timestamp>

@@ -295,11 +295,12 @@ dl dd {
 }
 
 #content .image p {
-	border-left: 1px solid rgb(210,210,210);
 	border-bottom: 1px solid rgb(210,210,210);
+	border-left: 1px solid rgb(210,210,210);
 	border-right: 1px solid rgb(210,210,210);
-	padding: .5em;
 	font-size: 90%;
+	margin-top: 0;
+	padding: .5em;
 }
 
 #content .image .photographer {

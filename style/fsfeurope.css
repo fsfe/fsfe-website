@@ -250,6 +250,7 @@ dl dd {
 
 #content {
   margin: 3em 0 0 240px;
+	/*margin: 3em 0 0 0;*/
 	padding: 0 .5em .5em;
 }
 
@@ -381,6 +382,7 @@ pre.file {
  * doesn't flow outside of the element.
  */
 #introduction p::after {
+	content: "";
 	clear: both;
 	height: 1px;
 	overflow: hidden;

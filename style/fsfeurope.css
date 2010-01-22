@@ -702,10 +702,14 @@ h4#subpages + ul li p {
 
 #footer {
   clear: both;
-  border: 5px #FDFDFD solid;    /* IE workaround */
-  padding: 2em .5em 1em .5em;
-  text-align: center;
+  /*border: 5px #FDFDFD solid;    /* IE workaround */
+  /*padding: 2em .5em 1em .5em;*/
+	border-top: 1px solid rgb(210,210,210);
+	margin: 2em auto 1em auto;
+	padding: .5em;
+	width: 58em;
   font-size: 90%;
+  text-align: center;
 }
 
 #footer .fsfnetwork {

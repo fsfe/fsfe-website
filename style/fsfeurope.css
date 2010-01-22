@@ -290,7 +290,6 @@ dl dd {
 }
 
 #content .image {
-	float: right;
 	margin: 0 0 2em 2em;
 }
 
@@ -310,6 +309,8 @@ dl dd {
 
 #content .image .float-right {
 	float: right;
+}
+#content .image .float-right img {
 	max-width:30%;
 }
 

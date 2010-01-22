@@ -299,8 +299,9 @@ dl dd {
 }
 
 #content .image {
-	margin: 0 2em 2em 0;
+	background-color: white;
 	float: left;
+	padding: 0 2em 2em 0;
 }
 
 #content .image.right {

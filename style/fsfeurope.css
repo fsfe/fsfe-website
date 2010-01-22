@@ -381,10 +381,13 @@ pre.file {
 #introduction {
 	border-bottom: 1px solid rgb(210,210,210);
 	font-size: 105%;
-	line-height: 190%;
 	min-height: 60px;
 	margin: 0 -.5em 2em -.5em;
 	padding: 1em .5em;
+}
+
+#introduction p {
+	line-height: 190%;
 }
 
 /*

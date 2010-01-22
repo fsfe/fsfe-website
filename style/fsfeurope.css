@@ -704,9 +704,8 @@ h4#subpages + ul li p {
   clear: both;
   /*border: 5px #FDFDFD solid;    /* IE workaround */
   /*padding: 2em .5em 1em .5em;*/
-	padding-top: 2em;
 	margin: 0 auto 1em auto;
-	padding: .5em;
+	padding: 2em .5em;
 	width: 60em;
   font-size: 90%;
   text-align: center;
@@ -715,6 +714,7 @@ h4#subpages + ul li p {
 #footer .fsfnetwork {
 	border-top: 1px solid rgb(210,210,210);
 	font-size: 130%;
+	padding-top: 1em;
 }
 
 

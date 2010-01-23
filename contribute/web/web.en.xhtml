@@ -1,13 +1,20 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <html>
   <head>
-    <title>
-      FSFE - Contribute - Information for Webmasters
-    </title>
+    <title>Information for Webmasters - FSFE</title>
   </head>
   <body>
 
-    <h1>Information for Webmasters</h1>
+    <p id="category"><a href="/contribute/">Contribute</a></p>
+    <h1>Webmastering</h1>
+
+    <p id="introduction">
+      The <em>Web team </em> maintain and develop the FSFE's websites —
+      ranging from <a href="/">fsfe.org</a> to project and campaign
+      sites.  Webmasters are volunteers working to enhance the
+      organization's face to the world, and to improve the technical
+      solutions of our web efforts.
+    </p>
 
 
     <h2>Introduction</h2>
@@ -25,16 +32,17 @@
 
     <ul>
       <li>
-        <a href="http://www.w3.org/MarkUp/" target="_blank">XHTML</a> – from
+        <a href="http://en.wikipedia.org/wiki/XHTML/">XHTML</a> – from
         which the web pages are generated
       </li>
       <li>
-        <a href="http://subversion.tigris.org/" target="_blank">Subversion</a> –
-        for version control of web page sources
+        <a href="http://subversion.tigris.org/">Subversion</a> – for
+        version control of web page sources
       </li>
       <li>
-        <a href="http://trac.edgewall.org/" target="_blank">Trac</a> – for
-          access permission management, issue tracking and other related services.
+        <a href="http://trac.edgewall.org/">Trac</a> – for access
+        permission management, issue tracking and other related
+        services.
       </li>
     </ul>
 
@@ -45,12 +53,11 @@
 
     <ul>
       <li>
-        <a href="http://www.perl.org" target="_blank">Perl</a> – for the
-	      maintenance and page creation scripts
+        <a href="http://www.perl.org/">Perl</a> – for the maintenance
+        and page creation scripts
       </li>
       <li>
-        <a href="http://www.apache.org" target="_blank">Apache</a> – as the
-	      web server
+        <a href="http://www.apache.org/">Apache</a> – as the web server
       </li>
     </ul>
 
@@ -66,22 +73,25 @@
 
     <p>
       Every page on fsfe.org is named
-      <var><em>pagename</em>.<em>language</em>.html</var> (<em>language</em>
-      being the two-letter iso-639 code of the language, like "en" for English
-      or "de" for German).  The source files are named
+      <var><em>pagename</em>.<em>language</em>.html</var>
+      (<em>language</em> being the two-letter <a
+      href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO-639
+      code</a> of the language, like "en" for English or "de" for German).
+      The source files are named
       <var><em>pagename</em>.<em>language</em>.xhtml</var>.
     </p>
 
     <p>
-      Some pages have a dynamic part: apart from the fixed texts taken from the
-      XHTML file, they include information from one or several XML files.
-      Whenever such a page is built, the build system takes the translated XML
-      files where available, and falls back to the English version of those XML
-      files that have not yet been translated.  This way, such pages can end up
-      with parts of the text being translated and other parts still showing in
-      English.  Examples of such pages include the <a href="/index.html">start
-      page</a>, the <a href="/news/news.html">news page</a>, and the <a
-      href="/events/events.html">events page</a>.
+      Some pages have a dynamic part: apart from the fixed texts taken
+      from the XHTML file, they include information from one or several
+      XML files.  Whenever such a page is built, the build system takes
+      the translated XML files where available, and falls back to the
+      English version of those XML files that have not yet been
+      translated.  This way, such pages can end up with parts of the
+      text being translated and other parts still showing in English.
+      Examples of such pages include the <a href="/">start page</a>, the
+      <a href="/news/">news page</a>, and the <a href="/events/">events
+      page</a>.
     </p>
 
 
@@ -89,68 +99,85 @@
 
     <p>
       The source files for the web pages are stored on the <a
-      href="https://svn.fsfe.org/fsfe-web">fsfe-web subversion repository</a>,
-      hosted on the FSFE subversion server.  Other services are available on the
-      related <a href="https://trac.fsfe.org/fsfe-web">trac instance</a>.
+        href="https://trac.fsfe.org/fsfe-web/browse">fsfe-web subversion
+      repository</a>, hosted on the FSFE subversion server.  Other
+      services are available on the related <a
+      href="https://trac.fsfe.org/fsfe-web">trac instance</a>.
     </p>
+
     <p>
       To have access to these tools, just follow these instructions:
     </p>
+
     <ul>
       <li>
         <p>
-        If you are a <a href="http://fellowship.fsfe.org">Fellow of the FSFE</a>
-        you already have read access to subversion and trac, just log in with
-        your usual Fellowship username and password.
+          If you are a <a href="http://fellowship.fsfe.org">Fellow of
+            the FSFE</a> you already have read access to subversion and
+          trac, just log in with your usual Fellowship username and
+          password.
         </p>
+
         <p>
-        To have write access to the subversion repository, and the trac wiki and
-        ticket system, just write to <b>system-hackers@fsfeurope.org</b>
+          To have write access to the subversion repository, and the
+          trac wiki and ticket system, just write to
+          <a
+          href="mailto:system-hackers@fsfeurope.org">system-hackers@fsfeurope.org</a>
         </p>
       </li>
+
       <li>
         <p>
-        Everyone else can register a guest account for the subversion and
-        trac, using the web form at <a
-        href="https://trac.fsfe.org/fsfe-web/register">https://trac.fsfe.org/fsfe-web/register</a>.
-        As soon as you register, you'll have read access to the subversion
-        repository and you can log into the trac site (please note that a
-        <var>guest-</var> prefix will be added to the username you choose). A
-        notification message will be automatically sent to the repository admin,
-        that will enable write access as soon as possible.
+          Everyone else can register a guest account for the subversion
+          and trac, using the web form at <a
+          href="https://trac.fsfe.org/fsfe-web/register">https://trac.fsfe.org/fsfe-web/register</a>.
+          As soon as you register, you'll have read access to the
+          subversion repository and you can log into the trac site (please
+          note that a <var>guest-</var> prefix will be added to the
+          username you choose). A notification message will be
+          automatically sent to the repository admin, that will enable
+          write access as soon as possible.
         </p>
       </li>
     </ul>
 
-    <h3>Checking out a subversion working copy</h3>
+
+    <h3>Checking out a SVN branch to work on</h3>
     
     <p>
-      The subversion repository has two main code bases for the FSFE website,
-      the <a href="https://trac.fsfe.org/fsfe-web/browser/trunk">SVN "trunk"</a>,
-      which is used to build the "production" instance of the website at
-      <a href="http://fsfe.org">http://fsfe.org</a>, and the <a
-      href="https://trac.fsfe.org/fsfe-web/browser/branches/test">"test"
-      branch</a>, which is used to build <a
-      href="http://test.fsfe.org">http://test.fsfe.org</a>.
+      The subversion repository has two main code bases for the FSFE
+      website, the <a
+      href="https://trac.fsfe.org/fsfe-web/browser/trunk">SVN
+        <em>trunk</em></a>, which is used to build the production instance
+      of the website at <a href="http://fsfe.org/">http://fsfe.org/</a>, and
+      the <a
+        href="https://trac.fsfe.org/fsfe-web/browser/branches/test"><em>test</em>
+        branch</a>, which is used to build <a
+        href="http://test.fsfe.org/">http://test.fsfe.org/</a>.
     </p>
+
     <p>
-      For day-to-day work, like adding news items, translating pages (or even
-      developing small changes to the website) you will need to check out the SVN
-      trunk:
+      For day-to-day work, like adding news items, translating pages (or
+      even developing small changes to the website) you will need to
+      check out the SVN trunk:
     </p>
-    <p class="terminal">svn --username YOURNAME co https://svn.fsfe.org/fsfe-web/trunk</p>
+
+    <p class="terminal">svn --username <var>YOURNAME</var> co https://svn.fsfe.org/fsfe-web/trunk</p>
+
     <p>
-      To work on major changes to the website, including debugging new features that
-      could potentially break the site, you are encouraged to check out the "test"
-      branch of the SVN repository:
+      To work on major changes to the website, including debugging new
+      features that could potentially break the site, you are encouraged
+      to check out the <em>test</em> branch of the SVN repository:
     </p>
-    <p class="terminal">svn --username YOURNAME co https://svn.fsfe.org/fsfe-web/branches/test</p>
+
+    <p class="terminal">svn --username <var>YOURNAME</var> co https://svn.fsfe.org/fsfe-web/branches/test</p>
+
     <p>
-      Please note that a full working copy will require about 160Mb; if you only
-      plan to work on part of the website, you can check out only the directories
-      that you are interested in. Please see the <a href="Webpage-Structure.txt"
-        target="_blank">structural reference</a> to have an idea of the directory
-      layout.
+      Please note that a full working copy will require about 160M; if
+      you only plan to work on part of the website, you can check out
+      only the directories that you are interested in.  You can <a
+        href="https://trac.fsfe.org/fsfe-web/browser">browse the SVN
+        tree</a> online to find out what you are interested in.
     </p>
 
 
@@ -193,13 +220,17 @@
       use some keywords on <var>.xml</var> and <var>.xhtml</var> files (for
       example the <var>$</var><var>Author</var><var>$</var> keyword on the
       page footer), you can automate enabling keywords adding
-      the following snippet to your <var>~/.subversion/config</var> file
-      <pre>
-      enable-auto-props = yes
+      the following snippet to your <var>~/.subversion/config</var>
+      file:
+    </p>
 
-      [auto-props]
-      *.xml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xml;svn:eol-style=native
-      *.xhtml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xhtml;svn:eol-style=native
+    <p class="file">
+      <pre>
+enable-auto-props = yes
+
+[auto-props]
+*.xml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xml;svn:eol-style=native
+*.xhtml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xhtml;svn:eol-style=native
       </pre>
     </p>
 
@@ -212,11 +243,13 @@
       <a
       href="http://svn.collab.net/repos/svn/trunk/doc/user/cvs-crossover-guide.html">CVS to SVN Crossover Guide</a>
     </p>
+
     <p>
       You can download a detailed manual for SVN at the <a
       href="http://svnbook.red-bean.com/">Subversion book</a> page
       (we are using the 1.5 release of SVN).
     </p>
+
 
     <h2>Coordination tools</h2>
 
@@ -285,7 +318,7 @@
           ispell, or your favourite spell-checker.  For example, to use <a
           href="http://aspell.net/">GNU aspell</a> on a Debian GNU/Linux
           system, just install the packages <em>aspell</em> and
-          <em>aspell-<strong>XX</strong></em>> (where "XX" is your language
+          <em>aspell-<strong>XX</strong></em> (where "XX" is your language
           code), then run the command
         </p>
 

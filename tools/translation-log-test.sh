@@ -54,8 +54,12 @@ sort "${infile}" \
   | grep --invert-match --file="tools/translation-ignore.txt" \
   | while read language wantfile havefile; do
   if [ ! -f "${wantfile}" ]; then
-    date="$(date --iso-8601 --reference=${havefile})"
-    echo "missing ${date} ${wantfile} NONE ${havefile}" >> "${infile}.${language}"
+    if test -z "${havefile}" ; then
+      echo "$(date)  Missing havefile for want <${wantfile}>"
+    else
+      date="$(date --iso-8601 --reference=${havefile})"
+      echo "missing ${date} ${wantfile} NONE ${havefile}" >> "${infile}.${language}"
+    fi
   fi
 done
 

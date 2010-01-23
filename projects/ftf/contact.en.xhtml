@@ -2,50 +2,125 @@
 
 <html>
   <head>
-    <title>FSFE - Freedom Task Force (FTF)</title>
+    <link href="/style/grid.css" rel="stylesheet" />
+
+    <title>Contact Freedom Task Force (FTF) - FSFE</title>
+
+    <script type="text/javascript">
+
+      submitted = false;
+
+      function submit_once() {
+
+        if (submitted) {
+          alert("Your request is being processed.\nPlease be patient.");
+          event.returnValue = 0;    // work-around for IE
+          return false;
+        }
+
+        if (document.itemSynopsis.title.value == "") {
+          alert("Please enter a subject!"); 
+          document.itemSynopsis.title.focus();
+          return false;
+        }
+
+        if (document.itemSynopsis.sender_name.value == "") {
+          alert("Please enter your name!"); 
+          document.itemSynopsis.sender_name.focus();
+          return false;
+        }
+
+        if (document.itemSynopsis.sender_email.value == "") {
+          alert("Please enter your email!"); 
+          document.itemSynopsis.sender_email.focus();
+          return false;
+        }
+
+        submitted = true;
+
+      }
+
+    </script>
   </head>
-
   <body>
-
-	<h1>FTF: Contact the FTF</h1>
+    <p id="category"><a href="/projects/ftf/">FTF</a></p>
+  	<h1>Contact the FTF</h1>
 
     <localmenu id="4">Contact Us</localmenu>
 
+    <div class="grid-50-50">
+      <div class="box first">
 
-<p>You can contact us using the methods listed below.</p>
+        <h2>Contact form</h2>
 
-<h3>On-line form:</h3>
+        <p>
+          You can either use this contact form to get in touch with the
+          FTF, or use our e-mail address <a
+          href="mailto:ftf@fsfeurope.org">ftf@fsfeurope.org</a>.
+        </p>
 
-<p>
- <a href="form.html">Click here</a>
-</p>
+        <form method="post" onSubmit="return submit_once()"
+          enctype="multipart/form-data"
+          action="https://roundup.fsfeurope.org/ftf/issue">
 
-<h3>Email:</h3>
+          <p>
+            <label for="subject">Subject</label>
+            <input id="subject" type="text" name="title" />
+          </p>
+          <p>
+            <label for="category">Category</label>
+            <select id="category" name="topic">
+              <option selected="selected" value="1">Licensing Support Request</option>
+              <option value="2">License Violation Report</option>
+              <option value="3">Fiduciary Support Request</option>
+              <option value="4">Other</option>
+            </select>
+          </p>
+          <p>
+            <label for="name">Your name</label>
+            <input id="name" type="text" name="sender_name" />
+          </p>
+          <p>
+            <label for="email">Your email</label>
+            <input id="email" type="email" name="sender_email" />
+          </p>
+          <p>
+            <label for="message">Message</label>
+            <textarea id="message" name="@note" rows="5" cols="40"></textarea>
+          </p>
+          <p>
+            <label for="file">File</label>
+            <input id="file" name="@file" type="file" />
+          </p>
+          <p>
+            <label for="validation">Enter “seventeen” as number</label>
+            <input id="validation" name="@riddle" type="text"/>
+          </p>
+          <p style="text-align: right;">
+            <input name="@template" value="item" type="hidden" />
+            <input name="@required" value="title" type="hidden" />
+            <input name="@action" value="ftfsubmit" type="hidden" />
+            <input name="submit" value="Send" type="submit" />
+          </p>
+        </form>
+      </div>
+      <div class="box">
+        <h2>Our office</h2>
 
-<p>
-<a href="mailto:ftf@fsfeurope.org">ftf@fsfeurope.org</a>
-</p>
+        <p>
+          <strong>Freedom Task Force</strong><br />
+          Free Software Foundation Europe<br />
+          Linienstr. 141 EG<br />
+          10115 Berlin<br />
+          Germany
+        </p>
 
-<h3>Postal address:</h3>
-
-<p>
-Freedom Task Force<br />
-Free Software Foundation Europe<br />
-Linienstr. 141 EG<br />
-10115 Berlin<br />
-Germany
-</p>
-
-<h3>Telephone numbers:</h3>
-
-<p>
-Belgium: +32   2 747 03 57    ext 43<br />
-Germany: +49 700 373 38 76 73 ext 43<br />
-Sweden: +46 31 7802160       ext 43<br />
-Switzerland: +41  43 500 03 66    ext 43<br />
-UK: +44  29 200 08 17 7  ext 43
-</p>
-
+        <p>
+          Phone: +49-30-27595290<br />
+          E-mail: <a href="mailto:ftf@fsfeurope.org">ftf@fsfeurope.org</a>
+        </p>
+      </div>
+    </div>
   </body>
 
   <timestamp>$Date$ $Author$</timestamp>

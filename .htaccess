@@ -1,5 +1,7 @@
 RewriteEngine On
 RewriteRule ^(.*)\.no.html /$1.nb.html [redirect=permanent]
+RewriteRule ^about/self-conception(.*) /about/principles$1 [redirect=permanent]
+RewriteRule ^contact/press(.*) /press/press$1 [redirect=permanent]
 RewriteRule ^standards(.*) /projects/os$1 [redirect=permanent]
 RewriteRule ^education(.*) /projects/education$1 [redirect=permanent]
 RewriteRule ^ftf(.*) /projects/ftf$1 [redirect=permanent]
@@ -17,4 +19,4 @@ RewriteRule ^help/index(.*) /contribute/contribute$1 [redirect=permanent]
 RewriteRule ^help/help(.*) /contribute/contribute$1 [redirect=permanent]
 RewriteRule ^help/web\.(.*) /contribute/web/web.$1 [redirect=permanent]
 RewriteRule ^help/(.*) /donate/$1 [redirect=permanent]
-RewriteRule ^press/(.*) /contact/$1 [redirect=permanent]
+

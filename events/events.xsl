@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:dt="http://xsltsl.org/date-time">
 
+  <xsl:import href="../tools/xsltsl/date-time.xsl" />
   <xsl:output method="xml" encoding="UTF-8" indent="yes" />
 
   <!-- Basically, copy everything -->
@@ -16,10 +19,41 @@
     <xsl:param name="header" />
 
     <!-- Create variables -->
-    <xsl:variable name="start"><xsl:value-of select="@start" /></xsl:variable>
-    <xsl:variable name="end"><xsl:value-of select="@end" /></xsl:variable>
-    <xsl:variable name="link"><xsl:value-of select="link" /></xsl:variable>
-    <xsl:variable name="page"><xsl:value-of select="page" /></xsl:variable>
+    <xsl:variable name="start">
+      <xsl:value-of select="@start" />
+    </xsl:variable>
+    
+    <xsl:variable name="start_day">
+      <xsl:value-of select="substring($start,9,2)" />
+    </xsl:variable>
+    
+    <xsl:variable name="start_month">
+      <xsl:call-template name="dt:get-month-abbreviation">
+        <xsl:with-param name="month" select="substring($start,6,2)" />
+      </xsl:call-template>
+    </xsl:variable>
+    
+    <xsl:variable name="end">
+      <xsl:value-of select="@end" />
+    </xsl:variable>
+    
+    <xsl:variable name="end_day">
+      <xsl:value-of select="substring($end,9,2)" />
+    </xsl:variable>
+    
+    <xsl:variable name="end_month">
+      <xsl:call-template name="dt:get-month-abbreviation">
+        <xsl:with-param name="month" select="substring($end,6,2)" />
+      </xsl:call-template>
+    </xsl:variable>
+    
+    <xsl:variable name="link">
+      <xsl:value-of select="link" />
+    </xsl:variable>
+    
+    <xsl:variable name="page">
+      <xsl:value-of select="page" />
+    </xsl:variable>
 
     <!-- Before the first event, include the header -->
     <xsl:if test="position() = 1">
@@ -27,27 +61,64 @@
     </xsl:if>
 
     <!-- Now, the event block -->
-    <p>
-      <b>
-        (<xsl:value-of select="@start" />
-        <xsl:if test="$start != $end"> 
-          <xsl:value-of select="/html/text [@id = 'to']" />
-          <xsl:value-of select="@end" />
-        </xsl:if>)
-        <xsl:value-of select="title" />
-      </b><br />
-      <xsl:apply-templates select="body/node()" />
+    <div class="event">
+      <xsl:choose>
+        <xsl:when test="$link != ''">
+          <h3><a href="{link}"><xsl:value-of select="title" /></a></h3>
+        </xsl:when>
+        <xsl:when test="$page != ''">
+          <h3><a href="{page}"><xsl:value-of select="title" /></a></h3>
+        </xsl:when>
+        <xsl:otherwise>
+          <h3><xsl:value-of select="title" /></h3>
+        </xsl:otherwise>
+      </xsl:choose>
+
+      <xsl:choose>
+        <xsl:when test="$start != $end">
+          <p class="date multiple">
+            <span class="n">(</span>
+            <span class="from">
+              <span class="day"><xsl:value-of select="$start_day" /> </span>
+              <span class="month"><xsl:value-of select="$start_month" /></span>
+            </span>
+            <span class="conjunction">↓</span>
+            <span class="to">
+              <span class="day"><xsl:value-of select="$end_day" /> </span>
+              <span class="month"><xsl:value-of select="$end_month" /></span>
+            </span>
+            <span class="n">)</span>
+          </p>
+        </xsl:when>
+        <xsl:otherwise>
+          <p class="date">
+            <span class="n">(</span>
+            <span class="day">14 </span>
+            <span class="month">Jan</span>
+            <span class="n">)</span>
+          </p>
+        </xsl:otherwise>
+      </xsl:choose>
+
+      <div class="details">
+        <xsl:apply-templates select="body/node()" />
+        <!--<div class="cleared">&#160;</div>-->
+      </div>
+
+      <!--
       <xsl:if test="$link != ''">
-        [<a href="{link}">
-          <xsl:value-of select="/html/text [@id = 'more']" />
-        </a>]
+        <p class="read_more">
+          <a href="{link}"><xsl:value-of select="/html/text [@id = 'more']" /></a>
+        </p>
       </xsl:if>
+
       <xsl:if test="$page != ''">
-        [<a href="{page}">
-          <xsl:value-of select="/html/text [@id = 'page']" />
-        </a>]
+        <p class="read_more">
+          <a href="{page}"><xsl:value-of select="/html/text [@id = 'page']" /></a>
+        </p>
       </xsl:if>
-    </p>
+      -->
+    </div>
   </xsl:template>
 
   <!-- In /html/body node, append dynamic content -->
@@ -104,3 +175,4 @@
   </xsl:template>
 
 </xsl:stylesheet>
+

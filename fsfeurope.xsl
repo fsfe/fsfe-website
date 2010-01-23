@@ -28,10 +28,10 @@
   <xsl:template match="head">
     <xsl:copy>
       <meta name="robots" content="index, follow" />
-      <link rel="stylesheet" media="all" href="/fsfeurope.css" type="text/css" />
-      <link rel="stylesheet" media="print" href="/print.css" type="text/css" />
+      <link rel="stylesheet" media="all" href="/style/fsfeurope.css" type="text/css" />
+      <link rel="stylesheet" media="print" href="/style/print.css" type="text/css" />
       <xsl:if test="/buildinfo/@language='ar'">
-        <link rel="stylesheet" media="all" href="/rtl.css" type="text/css" />
+        <link rel="stylesheet" media="all" href="/style/rtl.css" type="text/css" />
       </xsl:if>
       <link rel="shortcut icon" href="/graphics/fsfeurope.ico" type="image/x-icon" />
       <xsl:element name="link">
@@ -89,12 +89,13 @@
 
           <!-- Menu -->
           <xsl:for-each select="/buildinfo/menuset/menu[not(@parent)]">
-            <xsl:sort select="@id"/>
-            <xsl:variable name="menu"><xsl:value-of select="@id"/></xsl:variable>
+            <xsl:sort select="@id" />
+            <xsl:variable name="menu"><xsl:value-of select="@id" /></xsl:variable>
             <xsl:element name="ul">
               <xsl:for-each select="/buildinfo/menuset/menu[@parent=$menu]">
-                <xsl:sort select="@id"/>
-                <xsl:variable name="id"><xsl:value-of select="@id"/></xsl:variable>
+                <!--<xsl:sort select="@id"/>-->
+                <xsl:sort select="@priority" />
+                <xsl:variable name="id"><xsl:value-of select="@id" /></xsl:variable>
                 <xsl:element name="li">
                   <xsl:choose>
                     <xsl:when test="not(string(.))">
@@ -109,7 +110,7 @@
                     </xsl:when>
                     <xsl:otherwise>
                       <xsl:element name="a">
-                        <xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
+                        <xsl:attribute name="href"><xsl:value-of select="." /></xsl:attribute>
                         <xsl:value-of select="/buildinfo/textset/text[@id=$id]|
 					                /buildinfo/textsetbackup/text[@id=$id
 					                and not(@id=/buildinfo/textset/text/@id)]"/>
@@ -120,7 +121,8 @@
                   <xsl:if test="/buildinfo/menuset/menu[@parent=$id]">
                     <xsl:element name="ul">
                       <xsl:for-each select="/buildinfo/menuset/menu[@parent=$id]">
-                        <xsl:sort select="@id" />
+                        <!--<xsl:sort select="@id" />-->
+                        <xsl:sort select="@priority" />
                         <xsl:variable name="mid"><xsl:value-of select="@id" /></xsl:variable>
                         <xsl:element name="li">
                           <xsl:attribute name="class">submenu</xsl:attribute>
@@ -201,7 +203,7 @@
         </xsl:element>
         <!-- End Language bar -->
 
-        <!-- Fundraising box -->
+        <!-- Fundraising box
         <xsl:if test="/buildinfo/fundraising">
           <xsl:element name="div">
             <xsl:attribute name="id">fundraising</xsl:attribute>
@@ -240,7 +242,7 @@
             </xsl:element>
           </xsl:element>
         </xsl:if>
-        <!-- End Fundraising box -->
+        End Fundraising box -->
 
         <!-- Content -->
         <xsl:element name="div">
@@ -264,6 +266,11 @@
         <!-- Footer -->
         <xsl:element name="div">
           <xsl:attribute name="id">footer</xsl:attribute>
+
+          <!-- FSF* netwok note -->
+          <p class="fsfnetwork">
+            <xsl:apply-templates select="/buildinfo/textset/text[@id='fsfnetwork']/node()"/>
+          </p>
 
           <xsl:element name="p">
 
@@ -331,6 +338,7 @@
             <!-- Webmaster feedback note -->
             <xsl:element name="br"/>
             <xsl:apply-templates select="/buildinfo/textset/text[@id='webmaster']/node()"/>
+
           </xsl:element>
 
         </xsl:element>

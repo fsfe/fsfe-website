@@ -16,8 +16,8 @@
 # 
 # You should have received a copy of the GNU General Public License
 # along with this program; if not, write to the Free Software
-# Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
-# 02111-1307, USA.
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  
+# 02110-1301, USA.
 #
 use File::Find::Rule;
 use Getopt::Std;
@@ -74,9 +74,9 @@ our %languages = (
   it => 'Italiano',
   ku => 'Kurdî',
   mk => 'M&#1072;&#1082;&#1077;&#1076;&#1086;&#1085;&#1089;&#1082;&#1080;',
-  nb => 'Norsk (bokm&aring;l)',
+  nb => 'Norsk&nbsp;(bokm&aring;l)',
   nl => 'Nederlands',
-  nn => "Norsk (nynorsk)",
+  nn => "Norsk&nbsp;(nynorsk)",
   pl => 'Polski',
   pt => 'Português',
   ro => 'Român&#259;',

@@ -23,6 +23,7 @@ body {
   /* font-family: Nimbus Sans L, Helvetica, Verdana, sans-serif; */
   font-family: sans-serif;      /* Much better readable than Nimbus Sans L */
   font-size: 100.01%;           /* Fix for IE */
+	line-height: 120%;
 }
 
 a, a:link {
@@ -284,12 +285,6 @@ dl dd {
 #content h3 {
 	font-size: 130%;
   margin-top: 1.5em
-}
-
-#content p,
-#content li,
-#content dl {
-	line-height: 120%;
 }
 
 #content p#category {
@@ -817,7 +812,7 @@ a.fn {
 .event .date.multiple .conjunction {
 	color: #bebebe;
 	display: block;
-	margin: .5em 0;
+	margin: 0 0 .5em 0;
 }
 
 .event .details {

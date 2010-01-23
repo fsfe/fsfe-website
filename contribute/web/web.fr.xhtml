@@ -22,17 +22,15 @@ Les traducteurs et bénévoles occasionnels ne seront probablement en relation q
 
 <ul>
 <li>
-<a href="http://savannah.gnu.org" target="_blank">Savannah</a> --
-pour les accès CVS (voir ci-dessous) et la gestion des droits d'accès
-</li>
-<li>
-<a href="http://www.w3.org/MarkUp/" target="_blank">XHTML</a> --
-depuis lequel les pages statiques sont générées toutes les 5 minutes environ
-</li>
-<li>
-<a href="http://www.cvshome.org" target="_blank">Concurrent
-Version System (CVS)</a> -- pour la coordination et la synchronisation
-</li>
+        <a href="http://www.w3.org/MarkUp/" target="_blank">XHTML</a> – pour générer les pages&#160;;
+      </li>
+      <li>
+        <a href="http://subversion.tigris.org/" target="_blank">Subversion</a> –
+        pour le versionnage des fichiers source&#160;;
+      </li>
+      <li>
+      <a href="http://trac.edgewall.org/" target="_blank">Trac</a> – pour la gestion des droits d'accès, le suivi des dysfonctionnements et d'autres services liés au suivi du projet.
+      </li>
 </ul>
 
 <p>
@@ -41,10 +39,10 @@ Les bénévoles qui souhaitent s'engager plus sérieusement dans la maintenance 
 
 <ul>
 <li>
-<a href="http://www.perl.org" target="_blank">Perl</a> -- pour la maintenance et les scripts de création des pages
+<a href="http://www.perl.org" target="_blank">Perl</a> – pour la maintenance et les scripts de création des pages&#160;;
 </li>
 <li>
-<a href="http://www.apache.org" target="_blank">Apache</a> -- le serveur web
+<a href="http://www.apache.org" target="_blank">Apache</a> – le serveur web.
 </li>
 </ul>
 
@@ -68,112 +66,119 @@ Les bénévoles qui souhaitent s'engager plus sérieusement dans la maintenance 
       <a href="/events/events.html">page des évènements</a> par exemple, sont construites ainsi.
     </p>
 
-    <h2>S'enregistrer sur Savannah</h2>
+    <h2>Accéder aux pages internet</h2>
 
     <p>
-    Les fichiers source des pages web sont stockés sur
-      <a href="http://savannah.gnu.org/">Savannah</a>, un serveur hébergé par la 
-      Free Software Foundation, notre organisation sœur en Amérique du Nord. Pour obtenir un accès en écriture sur ces fichiers, vous devez créer un compte sur ce serveur et demander l'autorisation en écriture à la FSFE.
+      Les fichiers sources sont stoqués sur le <a href="https://svn.fsfe.org/fsfe-web">dépôt subversion fsfe-web</a>,      lui-même hébergé sur le serveur subversion de la FSFE. D'autres services sont disponibles sur l'instance <a href="https://trac.fsfe.org/fsfe-web">Trac</a>.
     </p>
-
-    <h3>Créer un nouveau compte</h3>
-
     <p>
-      Tout d'abord, suivez
-      <a href="https://savannah.gnu.org/account/register.php">ce lien</a> pour créer un nouveau compte. Choisissez un identifiant et un mot de passe, renseignez votre nom et votre adresse électronique, cliquez enfin sur le bouton <strong>Submit</strong> (soumettre le formulaire).
+      Pour avoir accès à ces outils, suivez les instructions suivantes&#160;:
     </p>
+    <ul>
+      <li>
+        <p>
+	If you are a <a href="http://fellowship.fsfe.org">Fellow of the FSFE</a>
+	Si vous êtes un <a href="http://fellowship.fsfe.org">Fellow de la FSFE</a>, vous avez déjà accès en lecture à subversion et au trac. Il vous suffit de vous connecter avec vos noms d'utilisateurs et mot de passe habituels.
+        </p>
+	<p>
+	Pour obtenir un accès en écriture au dépôt subversion, au wiki du Trac et au système de tickets, envoyez votre demande à <b>system-hackers@fsfeurope.org</b>
+        </p>
+      </li>
+      <li>
+      <p>
+      Sinon, vous pouvez créer un compte invité pour subversion et trac en remplissant le formulaire suivant&#160;: <a     href="https://trac.fsfe.org/fsfe-web/register">https://trac.fsfe.org/fsfe-web/register</a>. Dès que vous vous serez enregistré, vous aurez accès en lecture au dépôt et au trac (notez que votre nom d'utilisateur sera préfixé par <var>guest-</var>). Un message automatique sera envoyé à l'administrateur qui donnera les droits d'écriture dès que possible.
+        </p>
+      </li>
+    </ul>
+
+    <h3>Rapatrier une version de travail depuis Subversion</h3>
     
     <p>
-    Vous allez alors recevoir un courrier électronique de Savannah. Pour finaliser votre enregistrement, visitez l'URL qui y sera mentionnée. Les comptes qui ne sont pas confirmés dans les deux jours sont supprimés de leur base de données.
+      Le dépôt subversion est constitué de deux éléments majeurs pour le site de la FSFE&#160;: le <a href="https://trac.fsfe.org/fsfe-web/browser/trunk">SVN trunk</a> (tronc SVN) qui est utilisé pour construire les pages du site public (<a href="http://fsfe.org">http://fsfe.org</a>) et la <a href="https://trac.fsfe.org/fsfe-web/browser/branches/test">branche «test»</a> qui est utilisée pour générer le site de test (<a href="http://test.fsfe.org">http://test.fsfe.org</a>).
     </p>
-    
     <p>
-    Après avoir confirmé votre compte, connectez-vous sur
-      <a href="https://savannah.gnu.org/">https://savannah.gnu.org</a> avec votre identifiant et votre mot de passe.
+      Pour le travail habituel, comme ajouter des nouvelles, traduire des pages ou introduire de petites corrections, vous devrez récupérer le tronc&#160;:
     </p>
-
-    <h3>Générer une clef SSH</h3>
-
+    <p class="terminal">svn --username VOTRENOM co https://svn.fsfe.org/fsfe-web/trunk</p>
     <p>
-    Bien que vous puissiez utiliser votre mot de passe pour vous connecter sur le portail web de Savannah, vous devez y enregistrer une clef publique SSH pour obtenir un accès à CVS. Ceci devra être fait depuis chaque machine avec laquelle vous souhaitez accéder au dépôt CVS.
+      Pour travailler sur des changements plus profond, comme déboguer des nouvelles fonctionnalités qui pourraient fracasser le site, vous êtes invité à utiliser la branche de test du dépôt SVN&#160;:
     </p>
-    
+    <p class="terminal">svn --username VOTRENOM co https://svn.fsfe.org/fsfe-web/branches/test</p>
     <p>
-    Pour générer et enregistrer une clef SSH, suivez les
-      <a href="https://savannah.gnu.org/faq/?group_id=5802&amp;question=User_Account_-_How_do_I_configure_my_SSH_access.txt">instructions
-        données dans la FAQ de Savannah</a>.
-    </p>
-  
-  <h3>Rejoindre le projet FSFE</h3>
-
-    <p>
-    Il y a de nombreux projets hébergés par Savannah, et l'accès CVS est accordé par projet. Pour obtenir un accès aux fichiers source du site de la FSFE, vous devez donc devenir membre du projet FSFE.
-    </p>
-
-    <p>
-    Choisissez <strong>Groupes</strong> (ou <strong>Groupes</strong> si vous utilisez l'interface en français) dans les onglets du haut. Vous pouvez maintenant entrer "FSFE" dans le champ de recherche <strong>Requête d'inclusion</strong>, cliquez sur <strong>Rechercher</strong>. Cochez la case à cocher "Free Software Foundation Europe" et entrez un commentaire avant de soumettre le formulaire.
-    </p>
-
-    <p>
-    Les administrateurs du projet FSFE recevront alors un mail avec votre requête accompagnée de votre commentaire et pourront approuver votre adhésion au groupe du projet. Ensuite vous devriez voir "Free Software Foundation Europe" dans les <strong>Groupes dont je suis contributeur</strong> après vous être identifié sur Savannah.
-    </p>
-
-    <h3>Vérifier et récupérer le dépôt la première fois</h3>
-
-    <p>
-    Tout d'abord, vous devez vous assurer que votre fichier ~/.bashrc contient une ligne indiquant
-    </p>
-    
-    <p class="file">export CVS_RSH=ssh</p>
-    
-    <p>
-      créez ensuite un répertoire pour le dépôt et exécutez
-    </p>
-      
-    <p class="terminal">$ cvs -z3 -d <em>identifiant</em>@cvs.savannah.gnu.org:/web/fsfe co .
-     </p>
-     
-     <p>
-        depuis ce répertoire. On vous demande maintenant votre phrase codée SSH. Entrez-la et confirmez. Si tout se passe bien, le site web va maintenant être récupéré.
+      À noter qu'une version complète du dépôt requiert environ 160 Mio. Aussi, si vous pensez travailler uniquement sur certaines parties, vous pouvez rapatrier uniquement celle-ci. Référez-vous au document de <a href="Webpage-Structure.txt"
+        target="_blank">référence structurelle (en anglais)</a> pour avoir une idée de l'agencement des fichiers.
     </p>
 
 
     <h2>Travailler avec le dépôt</h2>
 
     <p>
-    Après avoir récupéré le dépôt une première fois, vous n'aurez qu'à exécuter
+    Après avoir récupéré le dépôt une première fois, vous n'aurez qu'à exécuter chaque fois
     </p>
     
-    <p class="terminal">$ cvs update -d</p>
+    <p class="terminal">$ svn update</p>
     
     <p>
-      depuis le répertoire fsfe chaque fois, juste avant de vous mettre à travailler sur un fichier donné.
+      juste avant de vous mettre à travailler sur un fichier donné.
     </p>
     
     <p>
     Lorsque vous souhaitez ajouter de nouveaux fichiers au dépôt, exécutez
     </p>
     
-    <p class="terminal">$ cvs add <em>nomdufichier</em></p>
+    <p class="terminal">$ svn add <em>nomdufichier</em></p>
     
     <p>
     Pour envoyer vos changements au serveur, qu'il s'agisse d'un nouveau fichier ou de la modification d'un fichier existant, exécutez
     </p>
     
-    <p class="terminal">$ cvs commit <em>nomdufichier</em></p>
+    <p class="terminal">$ svn commit <em>nomdufichier</em></p>
     
     <p>
       et un éditeur s'ouvrira, vous permettant d'indiquer une courte description des changements apportés.
+      </p>
+
+      <p>Avec subversion, la <a href="http://svnbook.red-bean.com/en/1.5/svn.advanced.props.special.keywords.html">substitution de >substitution de mots-clés (en anglais)</a> doit être explicitement définie pour chaque fichier. Comme nous utilisons quelques mots-clés dans les fichiers <var>.xml</var> et <var>.xhtml</var> (par exemple, le mot-clé <var>$</var><var>Author</var><var>$</var> en pied de page), vous pouvez le définir une fois pour toute en ajoutant la section suivante à votre fichier de configuration de SVN <var>~/.subversion/config</var>.
+      <pre>
+      enable-auto-props = yes
+
+      [auto-props]
+      *.xml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xml;svn:eol-style=native
+      *.xhtml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xhtml;svn:eol-style=native
+      </pre>
     </p>
 
     <p>
-    Vous pouvez télécharger un manuel détaillé de CVS sur la
-      <a href="http://www.nongnu.org/cvs/">page d'accueil de CVS</a>.
+      Si vous êtes habitué à travailler avec CVS, vous vous adapterez facilement à SVN. Comme vous l'avez constaté, les commandes de base sont très ressemblantes. Pour en savoir plus, vous pouvez consulter un aperçu des différences entre CVS et SVN sur <a href="http://svnbook.red-bean.com/en/1.5/svn.forcvs.html">Subversion for
+      CVS Users</a> ainsi qu'un aperçu des différences entre commandes sur <a href="http://svn.collab.net/repos/svn/trunk/doc/user/cvs-crossover-guide.html">CVS to SVN Crossover Guide</a>.
     </p>
+
+
+    <p>
+    Vous pouvez télécharger un manuel détaillé de SVN, le <a href="http://svnbook.red-bean.com/">Subversion book</a> (nous utilisons la version 1.5 de SVN).
+    </p>
+
+
+ <h2>Outils de coordination</h2>
+
+ <p>
+   Les travaux sur les pages du site sont coordonnés sur la <a
+      href="http://mail.fsfeurope.org/mailman/listinfo/web">liste de diffusion des webmestres (en anglais)</a>.
+    </p>
+
+    <p>
+      L'instance Trac <a href="https://trac.fsfe.org/fsfe-web">fsfe-web</a> fournit d'autres outils liés à la coordination comme un navigateur de dépôt SVN en ligne, un traqueur de bogues et un wiki.
+    </p>
+
+    <p>
+      Vous pourrez trouver plus d'informations sur l'utilisation du trac sur la page <a
+      href="https://trac.fsfe.org/fsfe-web/wiki/TracGuide">TracGuide</a> du wiki.
+    </p>
+
 
     <p>
     Si vous souhaitez conserver une trace de toutes les modifications apportées aux sources des pages web, souscrivez à la
-      <a href="http://mail.fsfeurope.org/mailman/listinfo/web-cvs-notify">liste de diffusion des notifications de CVS</a>, vous recevrez ainsi un mail à chaque changement posté à l'arbre du source.
+      <a href="http://mail.fsfeurope.org/mailman/listinfo/web-cvs-notify">liste de diffusion des notifications</a>, vous recevrez ainsi un mail à chaque changement posté à l'arbre du source.
     </p>
 
 
@@ -237,7 +242,7 @@ Les bénévoles qui souhaitent s'engager plus sérieusement dans la maintenance 
       
       <li>
         <p>
-        Assurez-vous que l'encodage du fichier soit consistant avec le contenu de l'attribut "encoding" déclaré sur la première ligne du fichier. Par exemple, si votre fichier est codé en "iso-8859-1" (également connu sous le nom de "latin-1"), la première ligne du fichier devrait être
+        Assurez-vous que l'encodage du fichier soit consistant avec le contenu de l'attribut "encoding" déclaré sur la première ligne du fichier. Par exemple, si votre fichier est codé en «iso-8859-1» (également connu sous le nom de «latin-1»), la première ligne du fichier devrait être
         </p>
         
         <p class="file">&lt;?xml version="1.0" encoding="iso-8859-1" ?&gt;</p>
@@ -276,7 +281,7 @@ href="mailto:oberg@fsfeurope.org">Jonas Öberg</a>, le développeur du système 
   </body>
 
   <timestamp>$Date$ $Author$</timestamp>
-  <translator>Michel Roche (Vercors - France)</translator>
+  <translator>Michel Roche (Vercors - France), Jil Larner (Mont Blanc, France)</translator>
 </html>
 <!--
 Local Variables: ***

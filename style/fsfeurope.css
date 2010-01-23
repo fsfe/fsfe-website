@@ -293,9 +293,10 @@ dl dd {
 }
 
 #content p#category {
-	margin: 0;
 	font-size: 140%;
 	font-weight: bold;
+	line-height: 200%;
+	margin: 0;
 }
 
 #content .image {
@@ -392,7 +393,8 @@ pre.file {
 	padding: 1em .5em;
 }
 
-#introduction p {
+#introduction p,
+p#introduction {
 	line-height: 190%;
 }
 

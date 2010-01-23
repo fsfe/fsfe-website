@@ -1,10 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 
 <textset>
+  <!-- Footer -->
   <text id="lastchanged"> Последнее обновление: </text>
-  <text id="translator1a">Мы благодарим за этот перевод </text>
+  <text id="translator1a">Перевод выполнил </text>
   <text id="translator1b">. </text>
-  <text id="translator2">This is an unofficial translation. </text>
+  <text id="translator2">Это неофициальный перевод. </text>
   <text id="translator3a"></text>
   <text id="translator3b">Английская версия страницы</text>
   <text id="translator3c">.</text>
@@ -12,32 +13,92 @@
     Разрешается полное копирование и распространение любым способом информации данной веб-страницы при сохранении этого примечания.
   </text>
   <text id="webmaster">
-    Об ошибках этой страницы сообщите на
+    Если вы обнаружили на странице ошибку, сообщите об этом по адресу
     <em>webmaster at fsfeurope.org</em>.
+  </text>
+  <text id="fsfnetwork">
+    <a href="/about/fsfnetwork.html">Родственные организации</a> ЕФСПО: в <a
+      href="http://www.fsf.org/">Северной Америке</a>, <a
+      href="http://www.fsf.org.in/">Индии</a> and <a
+      href="http://www.fsfla.org/">Латинской Америке</a>.
   </text>
   <text id="outdated">
     <strong>Внимание: </strong>
-    Перевод веб-страницы устарел. Ниже представлен оригинальный текст. Если Вы хотите перевести эту страницу и помочь проекту, перейдите <a href="/contribute/contribute.html">по этой ссылке</a>.
+    Оригинальная версия этой страницы обновлена. Если вы хотите устранить разночтения и помочь с переводом, перейдите по <a href="/contribute/contribute.html">этой ссылке</a>.
   </text>
   <text id="notranslation">
     <strong>Внимание: </strong>
-    Эта веб-страница не переведена. Ниже представлен оригинальный текст. Если Вы хотите перевести эту страницу и помочь проекту, перейдите <a href="/contribute/contribute.html">по этой ссылке</a>.
+    Эта страница не переведена. Ниже представлен оригинальный текст. Если Вы хотите перевести эту страницу и помочь проекту, перейдите <a href="/contribute/contribute.html">по этой ссылке</a>.
   </text>
+
+  <!-- Conjunctions -->
+  <text id="to">to</text>
+
+  <!-- Menu -->
   <text id="menu1/about">О нас</text>
-  <text id="menu1/projects">Проекты</text>
+  <text id="menu1/projects">О деятельности ЕФСПО</text>
   <text id="menu1/documents">Документы</text>
-  <text id="menu1/help">Присоединяйтесь</text>
+  <text id="menu1/help">Как принять участие</text>
   <text id="menu1/donate">Пожертвования</text>
-  <text id="menu1/order">Заказы</text>
+  <text id="menu1/order">Магазин</text>
   <text id="menu1/lists">Списки рассылки</text>
+  <text id="menu1/press">Пресса</text>
   <text id="menu1/thankgnus">Благодарности GNU</text>
-  <text id="menu2/priority">Priority Links</text>
-  <text id="menu3/priority/com-pkg">Commercial Services</text>
-  <text id="menu2/priority/fellowship">Fellowship</text>
-  <text id="menu2/priority/ftf">Freedom Task Force</text>
-  <text id="menu2/priority/os">Open Standards</text>
-  <text id="menu3/sisters">Our sister organisations</text>
-  <text id="menu3/sisters/fsf">FSF</text>
-  <text id="menu3/sisters/fsf_india">FSF India</text>
-  <text id="menu3/sisters/fsf_la">FSF Latin America</text>
+  <text id="menu2/fellowship">Сообщество</text>
+  <text id="menu2/fellowship/1-wiki">Вики</text>
+  <text id="menu2/fellowship/2-planet">Блог</text>
+  <text id="menu2/fellowship/3-join">Присоединяйтесь</text>
+  <text id="menu3/priority">Ссылки</text>
+  <text id="menu3/priority/com-pkg">Professional Services</text>
+  <text id="menu3/priority/ftf">Licensing and Legal (FTF)</text>
+  <text id="menu3/priority/os">Standardization</text>
+  <text id="menu3/priority/pdfreaders">PDFreaders</text>
+  <text id="menu4/sisters">Родственные организации</text>
+  <text id="menu4/sisters/fsf">FSF</text>
+  <text id="menu4/sisters/fsf_india">FSF India</text>
+  <text id="menu4/sisters/fsf_la">FSF Latin America</text>
+
+  <!-- Date time -->
+  <text id="months/1">Январь</text>
+  <text id="months/2">Февраль</text>
+  <text id="months/3">Март</text>
+  <text id="months/4">Апрель</text>
+  <text id="months/5">Май</text>
+  <text id="months/6">Июнь</text>
+  <text id="months/7">Июль</text>
+  <text id="months/8">Август</text>
+  <text id="months/9">Сентябрь</text>
+  <text id="months/10">Октябрь</text>
+  <text id="months/11">Ноябрь</text>
+  <text id="months/12">Декабрь</text>
+ 
+  <text id="months-abbreviated/1">Янв</text>
+  <text id="months-abbreviated/2">Фев</text>
+  <text id="months-abbreviated/3">Мар</text>
+  <text id="months-abbreviated/4">Апр</text>
+  <text id="months-abbreviated/5">Май</text>
+  <text id="months-abbreviated/6">Июн</text>
+  <text id="months-abbreviated/7">Июл</text>
+  <text id="months-abbreviated/8">Авг</text>
+  <text id="months-abbreviated/9">Сен</text>
+  <text id="months-abbreviated/10">Окт</text>
+  <text id="months-abbreviated/11">Ноя</text>
+  <text id="months-abbreviated/12">Дек</text>
+
+  <text id="weekdays/1">Понедельник</text>
+  <text id="weekdays/2">Вторник</text>
+  <text id="weekdays/3">Среда</text>
+  <text id="weekdays/4">Четверг</text>
+  <text id="weekdays/5">Пятница</text>
+  <text id="weekdays/6">Суббота</text>
+  <text id="weekdays/7">Воскресенье</text>
+
+  <text id="weekdays-abbreviated/1">Пон</text>
+  <text id="weekdays-abbreviated/2">Вт</text>
+  <text id="weekdays-abbreviated/3">Ср</text>
+  <text id="weekdays-abbreviated/4">Чет</text>
+  <text id="weekdays-abbreviated/5">Пят</text>
+  <text id="weekdays-abbreviated/6">Суб</text>
+  <text id="weekdays-abbreviated/7">Вос</text>
 </textset>
+

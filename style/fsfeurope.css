@@ -170,8 +170,11 @@ dl dd {
 /* ------------------------------------------------------------------------- */
 
 #language {
+	/*margin: 0 0 0 240px;*/
+	float: right;
+	margin: 0;
+	width: 79.5%;
   font-size: 90%;
-  margin: 0 0 0 240px;
   min-height: 2.2em;
   padding: .3em .5em;
 }
@@ -250,9 +253,11 @@ dl dd {
 /* ------------------------------------------------------------------------- */
 
 #content {
-  margin: 3em 0 0 240px;
-	/*margin: 3em 0 0 0;*/
+  /*margin: 3em 0 0 240px;*/
+	float: right;
+	margin: 3em 0 0 0;
 	padding: 0 .5em .5em;
+	width: 79%;
 }
 
 #content h1,
@@ -868,9 +873,10 @@ a.fn {
 }
 
 /* To avoid misplacements on the event page */
-
-.cleared {
-clear:left;height:0;margin:0;padding:0;border:0;line-height:1px;font-size:1px;
+.clear {
+	overflow: hidden;
+	clear: both;
+	height: 1px;
 }
 
 /* Project list */

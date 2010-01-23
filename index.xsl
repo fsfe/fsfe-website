@@ -94,7 +94,7 @@
             </span>
             <xsl:text> </xsl:text>
             <span class="conjunction">
-              <xsl:value-of select="/buildinfo/textset/text[@id='to']" />
+              ↓
             </span>
             <xsl:text> </xsl:text>
             <span class="to">

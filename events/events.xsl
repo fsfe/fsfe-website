@@ -82,7 +82,7 @@
               <span class="day"><xsl:value-of select="$start_day" /> </span>
               <span class="month"><xsl:value-of select="$start_month" /></span>
             </span>
-            <span class="conjunction"><xsl:value-of select="/buildinfo/textset/text[@id='to']" /></span>
+            <span class="conjunction">↓</span>
             <span class="to">
               <span class="day"><xsl:value-of select="$end_day" /> </span>
               <span class="month"><xsl:value-of select="$end_month" /></span>

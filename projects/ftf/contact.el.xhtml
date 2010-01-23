@@ -2,48 +2,127 @@
 
 <html>
   <head>
-    <title>FSFE - Ομάδα Εργασίας Ελευθερίας (FTF)</title>
+ <link href="/style/grid.css" rel="stylesheet" /> 
+ 
+   <title>Επικοινωνήστε με την Freedom Task Force (FTF) - FSFE</title> 
+ 
+   <script type="text/javascript"> 
+ 
+      submitted = false; 
+ 
+      function submit_once() { 
+ 
+        if (submitted) { 
+          alert("Το αίτημά σας είναι υπό επεξεργασία.\nΠαρακαλούμε περιμένετε."); 
+          event.returnValue = 0;    // work-around for IE 
+          return false; 
+        } 
+ 
+        if (document.itemSynopsis.title.value == "") { 
+          alert("Παρακαλούμε εισάγετε το θέμα!");  
+          document.itemSynopsis.title.focus(); 
+          return false; 
+        } 
+ 
+        if (document.itemSynopsis.sender_name.value == "") { 
+          alert("Παρακαλούμε εισάγετε το όνομά σας!");  
+          document.itemSynopsis.sender_name.focus(); 
+          return false; 
+        } 
+ 
+        if (document.itemSynopsis.sender_email.value == "") { 
+          alert("Παρακαλούμε εισάγετε το ηλεκτρονικό σας ταχυδρομείο!");  
+          document.itemSynopsis.sender_email.focus(); 
+          return false; 
+        } 
+ 
+        submitted = true; 
+ 
+      } 
+ 
+    </script> 
   </head>
 
   <body>
 
-<h1>FTF: Επικοινωνήστε με την FTF</h1>
+<p id="category"><a href="/projects/ftf/">FTF</a></p> 
+<h1>Επικοινωνήστε με την FTF</h1>
 
 <localmenu id="4">Επικοινωνήστε μαζί μας</localmenu>
 
-<p>Μπορείτε να επικοινωνείτε μαζί μας με οποιονδήποτε από τους παρακάτω τρόπους.</p>
+<div class="grid-50-50"> 
+      <div class="box first"> 
 
-<h3>On-line φόρμα:</h3>
-
-<p>
- <a href="form.html">Πατήστε εδώ</a>
-</p>
-
-<h3>Ηλεκτρονική διεύθυνση:</h3>
+  <h2>Φόρμα επικοινωνίας</h2> 
 
 <p>
-<a href="mailto:ftf@fsfeurope.org">ftf@fsfeurope.org</a>
+  Μπορείτε ή να χρησιμοποιήσετε αυτήν τη φόρμα επικοινωνίας για την επαφή με την FTF, ή να χρησιμοποιήσετε
+  τη διεύθυνση του ηλεκτρονικού ταχυδρομείου μας <a href="mailto:ftf@fsfeurope.org">ftf@fsfeurope.org</a>.
 </p>
 
-<h3>Ταχυδρομική διεύθυνση:</h3>
+<form method="post" onSubmit="return submit_once()" 
+          enctype="multipart/form-data" 
+          action="https://roundup.fsfeurope.org/ftf/issue"> 
 
-<p>
-Freedom Task Force<br />
-Free Software Foundation Europe<br />
-Linienstr. 141 EG<br />
-10115 Berlin<br />
-Germany
-</p>
+<p> 
+            <label for="subject">Θέμα</label> 
+            <input id="subject" type="text" name="title" /> 
+          </p> 
+          <p> 
+            <label for="category">Κατηγορία</label> 
+            <select id="category" name="topic"> 
+              <option selected="selected" value="1">Αίτημα Υποστήριξης Αδειοδότησης</option> 
+              <option value="2">Αναφορά Παραβίασης Άδειας Χρήσης</option> 
+              <option value="3">Αίτημα Υποστήριξης Εμπιστευτικότητας</option> 
+              <option value="4">Άλλη</option> 
+            </select> 
+          </p> 
+          <p> 
+            <label for="name">Το όνομά σας</label> 
+            <input id="name" type="text" name="sender_name" /> 
+          </p> 
+          <p> 
+            <label for="email">Η διεύθυνση του ηλεκτρονικού σας ταχυδρομείου</label> 
+            <input id="email" type="email" name="sender_email" /> 
+          </p> 
+          <p> 
+            <label for="message">Μήνυμα</label> 
+            <textarea id="message" name="@note" rows="5" cols="40"></textarea> 
+          </p> 
+          <p> 
+            <label for="file">Αρχείο</label> 
+           <input id="file" name="@file" type="file" /> 
+         </p> 
+         <p> 
+           <label for="validation">Εισάγετε το “δεκαεπτά” ως αριθμό</label> 
+           <input id="validation" name="@riddle" type="text"/> 
+         </p> 
+         <p style="text-align: right;"> 
+            <input name="@template" value="item" type="hidden" /> 
+            <input name="@required" value="title" type="hidden" /> 
+            <input name="@action" value="ftfsubmit" type="hidden" /> 
+            Για αποστολή, πατήστε εδώ : <input name="submit" value="Send" type="submit" /> 
+          </p> 
+        </form> 
+      </div> 
+      <div class="box"> 
+        <h2>Το γραφείο μας</h2> 
 
-<h3>Αριθμοί τηλεφώνων:</h3>
+<p> 
+  <strong>Freedom Task Force</strong><br /> 
+  Free Software Foundation Europe<br /> 
+  Linienstr. 141 EG<br /> 
+  10115 Berlin<br /> 
+  Germany 
+</p> 
 
-<p>
-Βέλγιο: +32   2 747 03 57    ext 43<br />
-Γερμανία: +49 700 373 38 76 73 ext 43<br />
-Σουηδία: +46 31 7802160       ext 43<br />
-Ελβετία: +41  43 500 03 66    ext 43<br />
-Ηνωμένο Βασίλειο: +44  29 200 08 17 7  ext 43
-</p>
+<p> 
+  Τηλέφωνο: +49-30-27595290<br /> 
+  Ηλεκτρονικό ταχυδρομείο: <a href="mailto:ftf@fsfeurope.org">ftf@fsfeurope.org</a> 
+</p> 
+
+      </div> 
+    </div> 
 
   </body>
 

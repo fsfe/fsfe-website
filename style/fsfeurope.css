@@ -170,10 +170,10 @@ dl dd {
 /* ------------------------------------------------------------------------- */
 
 #language {
-	/*margin: 0 0 0 240px;*/
-	float: right;
+	margin: 0 0 0 240px;
+	/*float: right;
 	margin: 0;
-	width: 79.5%;
+	width: 79.5%;*/
   font-size: 90%;
   min-height: 2.2em;
   padding: .3em .5em;
@@ -253,11 +253,11 @@ dl dd {
 /* ------------------------------------------------------------------------- */
 
 #content {
-  /*margin: 3em 0 0 240px;*/
+  margin: 3em 0 0 240px;
 	float: right;
-	margin: 3em 0 0 0;
+	/*margin: 3em 0 0 0;*/
 	padding: 0 .5em .5em;
-	width: 79%;
+	/*width: 79%;*/
 }
 
 #content h1,

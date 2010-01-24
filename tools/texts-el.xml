@@ -16,6 +16,12 @@
     Παρακαλούμε αναφέρετε προβλήματα με αυτή τη σελίδα στη διεύθυνση
     <em>webmaster at fsfeurope.org</em>
   </text>
+    <text id="fsfnetwork">
+    FSFE has <a href="/about/fsfnetwork.html">ομοθυγατρικοί οργανισμοί</a> στη <a
+      href="http://www.fsf.org/">Βόρεια Αμερική</a>, <a
+      href="http://www.fsf.org.in/">Ινδία</a> και <a
+      href="http://www.fsfla.org/">Λατινική Αμερική</a>.
+  </text>
   <text id="outdated">
     <strong>Προειδοποίηση: </strong>
     Αυτή η σελίδα μπορεί να είναι παλαιότερη της πρωτότυπης. Παρακαλούμε χρησιμοποιήστε
@@ -29,8 +35,13 @@
     <a href="/contribute/contribute.html">αυτήν τη σελίδα</a> για να δείτε πώς μπορείτε
     να βοηθήσετε στις μεταφράσεις και σε άλλες ανάγκες.
   </text>
+  
+  <!-- Conjunctions -->
+  <text id="to">μέχρι</text>
+
+  <!-- Menu -->
   <text id="menu1/about">Περίγραμμα</text>
-  <text id="menu1/projects">Εργασίες</text>
+  <text id="menu1/projects">Η εργασία μας</text>
   <text id="menu1/documents">Έγγραφα</text>
   <text id="menu1/help">Συμβάλλετε</text>
   <text id="menu1/donate">Δωρεές</text>
@@ -39,15 +50,49 @@
   <text id="menu1/thankgnus">Ευχαριστίες GNU</text>
   <text id="menu2/fellowship">Η Κοινότητα</text>
   <text id="menu2/fellowship/1-wiki">Wiki</text>
-  <text id="menu2/fellowship/2-planet">Συγκέντρωση ιστολογίων</text>
+  <text id="menu2/fellowship/2-planet">Πλανήτης ιστολογίων</text>
   <text id="menu2/fellowship/3-join">Εγγραφή</text>
-  <text id="menu3/priority">Σύνδεσμοι προτεραιότητας</text>
-  <text id="menu3/priority/com-pkg">Επαγγελματικές Υπηρεσίες</text>
-  <text id="menu3/priority/ftf">Αδειοδότηση και Νομικά θέματα (FTF)</text>
-  <text id="menu3/priority/os">Προτυποποίηση</text>
-  <text id="menu3/priority/pdfreaders">PDFreaders</text>
-  <text id="menu4/sisters">Οι ομοθυγατρικοί μας οργανισμοί</text>
-  <text id="menu4/sisters/fsf">FSF</text>
-  <text id="menu4/sisters/fsf_india">FSF India</text>
-  <text id="menu4/sisters/fsf_la">FSF Latin America</text>
+
+  <!-- Date time -->
+  <text id="months/1">Ιανουάριος</text>
+  <text id="months/2">Φεβρουάριος</text>
+  <text id="months/3">Μάρτιος</text>
+  <text id="months/4">Απρίλιος</text>
+  <text id="months/5">Μάιος</text>
+  <text id="months/6">Ιούνιος</text>
+  <text id="months/7">Ιούλιος</text>
+  <text id="months/8">Αύγουστος</text>
+  <text id="months/9">Σεπτέμβριος</text>
+  <text id="months/10">Οκτώβριος</text>
+  <text id="months/11">Νοέμβριος</text>
+  <text id="months/12">Δεκέμβριος</text>
+
+  <text id="months-abbreviated/1">Ιαν</text>
+  <text id="months-abbreviated/2">Φεβ</text>
+  <text id="months-abbreviated/3">Μαρ</text>
+  <text id="months-abbreviated/4">Απρ</text>
+  <text id="months-abbreviated/5">Μαι</text>
+  <text id="months-abbreviated/6">Ιουν</text>
+  <text id="months-abbreviated/7">Ιουλ</text>
+  <text id="months-abbreviated/8">Αυγ</text>
+  <text id="months-abbreviated/9">Σεπ</text>
+  <text id="months-abbreviated/10">Οκτ</text>
+  <text id="months-abbreviated/11">Νοβ</text>
+  <text id="months-abbreviated/12">Δεκ</text>
+
+  <text id="weekdays/1">Δευτέρα</text>
+  <text id="weekdays/2">Τρίτη</text>
+  <text id="weekdays/3">Τετάρτη</text>
+  <text id="weekdays/4">Πέμπτη</text>
+  <text id="weekdays/5">Παρασκευή</text>
+  <text id="weekdays/6">Σάββατο</text>
+  <text id="weekdays/7">Κυριακή</text>
+
+  <text id="weekdays-abbreviated/1">Δε</text>
+  <text id="weekdays-abbreviated/2">Τρ</text>
+  <text id="weekdays-abbreviated/3">Τε</text>
+  <text id="weekdays-abbreviated/4">Πε</text>
+  <text id="weekdays-abbreviated/5">Πα</text>
+  <text id="weekdays-abbreviated/6">Σα</text>
+  <text id="weekdays-abbreviated/7">Κυ</text>
 </textset>

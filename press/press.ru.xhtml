@@ -1,81 +1,98 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 
 <html>
   <head>
-    <title>ЕФСПО - Контактная информация - Пресса</title>
+    <link href="/style/grid.css" rel="stylesheet"/>
+    <title>Пресс-центр - ЕФСПО</title>
   </head>
 
   <body>
-    <h1>Контактная информация</h1>
+    <h1>Пресса</h1>
 
-	<localmenu id="3">Пресса</localmenu>
-
-	<h2>Пресса</h2>
+    <p id="introduction">
+      Европейский фонд свободного программного обеспечения (ЕФСПО) придерживается концепции, согласно которой членом цифрового общества может стать только тот, у кого есть доступ к программному обеспечению и возможность его изменения. 
+    Свободы <a href="/about/basics/freesoftware.html">использования,
+    изучения, распространения и улучшения</a> ПО
+    необходимы для равноправия членов общества в информационную эпоху. 
+    </p>
 
     <p>
-      Представители прессы могут связаться с нами следующим образом. 
+      ЕФСПО - некоммерческая неправительственная организация, действующая как на <a href="/contact/local.html">европейском</a>, так и на международном уровнях. Главная цель Фонда - продвижение свободного программного обеспечения (СПО) и связанных с ним свобод на использование, копирование, изменение и распространение ПО, которые обеспечивают равноправие членов общества в информационную эпоху и способствуют развитию свободной конкуренции. ЕФСПО создан в 2001 году. Основными направлениями деятельности организации являются популяризация СПО, обеспечение его политической и правовой защиты, а также поддержка развития СПО с целью предоставления людям соответствующих свобод.
     </p>
 
-	<h3>Электронная почта</h3>
 
-	<ul>
-		<li>
-			Общую информацию (на английском языке) можно получить по адресу <a href="mailto:press@fsfeurope.org">press@fsfeurope.org</a>
-		</li>
-		<li>
-			По вопросам, касающимся Германии (на немецком и английском языках), обращайтесь по адресу <a href="mailto:press@germany.fsfeurope.org">press@germany.fsfeurope.org</a>
-		</li>
-		<li>
-			По вопросам, касающимся Италии (на итальянском и английском языках), обращайтесь по адресу <a href="mailto:press@italy.fsfeurope.org">press@germany.fsfeurope.org</a>
-		</li>
-		<li>
-			По вопросам, касающимся Испании (на испанском и английском языках), обращайтесь по адресу <a href="mailto:press@spain.fsfeurope.org">press@germany.fsfeurope.org</a>
-		</li>
-		<li>
-			По вопросам, касающимся Швеции (на шведском и английском языках), обращайтесь по адресу <a href="mailto:press@sweden.fsfeurope.org">press@germany.fsfeurope.org</a>
-		</li>
-	</ul>
+    <div class="grid-50-50">
+      <div class="box first">
+        <h2>Подпишитесь на пресс-релизы</h2>
 
-	<h3>Телефон</h3>
-	<p>
-	Наберите один из номеров, представленных ниже, и по голосовому запросу нажмите цифру 1 в режиме тонального набора.
-</p>
-<ul>
-    <li>Бельгия: +32 2 747 03 57</li>
-	<li>Германия: +49 30 896 77 99 09</li>
-	<li>Швеция: +46 31 7802160</li>
-	<li>Швейцария: +41 43 500 03 66</li>
-	<li>Великобритания: +44 29 200 08 17 7</li>
-  </ul>
+        <p>
+          Подпишитесь на пресс-релизы, если хотите быть в курсе последних новостей в мире свободного ПО.
+        </p>
 
-	<h3>Пресс-релизы</h3>
-    <p> 
-      Подпишитесь на соответствующую рассылку, чтобы получать интересующие вас <a href="/news/news.html">пресс-релизы</a>:
+        <form method="post" action="http://mail.fsfeurope.org/mailman/subscribe/press-release">
+          <p>
+            <input type="text" name="email" value="your@email.com" onChange="this.value = ''" onClick="this.value = ''" />
+            <input type="submit" value="Подписаться" />
+          </p>
+        </form>
+
+        <p>
+          Последние новости в реальном времени можно узнать, подписавшись на <a href="http://identi.ca/fsfe">Identi.ca</a> или на <a href="http://twitter.com/fsfe">Twitter</a>.
+        </p>
+      </div>
+
+      <div class="box">
+        <h2><a href="/news/" class="feed">Последние новости</a></h2>
+
+        <dynamic-content/>
+      </div>
+    </div>
+
+    <h2>Вопросы</h2>
+
+    <p>
+      Представители прессы могут связаться с нами по электронной почте <a href="mailto:press@fsfeurope.org">press@fsfeurope.org</a> или по адресу:
     </p>
+
+    <address>
+      Free Software Foundation Europe e.V.<br/>
+      Linienstr. 141 <br/>
+      10115 Berlin <br/>
+      Germany
+    </address>
+
+    <p>
+      Телефон: +49-30-27595290
+    </p>
+
+    <p>
+      Контактная информация для обращений по общим вопросам находится на <a href="/contact/">этой странице</a>.
+    </p>
+
+
+    <h2 id="subpages" class="show-heading">Разное</h2>
+
     <ul>
       <li>
-        пресс-релизы на английском языке (<a href="http://mail.fsfeurope.org/mailman/listinfo/press-release">веб-интерфейс</a>, <a href="http://mail.fsfeurope.org/pipermail/press-release">архив</a>)
+        <h3><a href="/about/graphics/">Логотипы и графика</a></h3>
+        <p>
+          Скачайте логотип ЕФСПО и другие изображения.
+        </p>
       </li>
+
+      <!-- we should have a link to a subset of people on our people page who can give official press statements -->
+
       <li>
-        пресс-релизы на немецком языке (<a href="http://mail.fsfeurope.org/mailman/listinfo/press-release-de">веб-интерфейс</a>, <a href="http://mail.fsfeurope.org/pipermail/press-release-de">архив</a>)
-      </li>
-      <li>
-        пресс-релизы на испанском языке (<a href="http://mail.fsfeurope.org/mailman/listinfo/press-release-es">веб-интерфейс</a>, <a href="http://mail.fsfeurope.org/pipermail/press-release-es">архив</a>)
-      </li>
-      <li>
-        пресс-релизы на французском языке (<a href="http://mail.fsfeurope.org/mailman/listinfo/press-release-fr">веб-интерфейс</a>, <a href="http://mail.fsfeurope.org/pipermail/press-release-fr">архив</a>)
-      </li>
-      <li>
-        пресс-релизы на итальянском языке (<a href="http://mail.fsfeurope.org/mailman/listinfo/press-release-it">веб-интерфейс</a>, <a href="http://mail.fsfeurope.org/pipermail/press-release-it">архив</a>)
-      </li>
-      <li>
-        пресс-релизы на шведском языке (<a href="http://mail.fsfeurope.org/mailman/listinfo/press-release-sv">веб-интерфейс</a>, <a href="http://mail.fsfeurope.org/pipermail/press-release-sv">архив</a>)
+        <h3><a href="/about/basics/freesoftware.html">Основы свободного ПО</a></h3>
+        <!-- Later this should link to /freesoftware/ -->
+        <p>
+          Информация о различиях между подходами к пониманию понятия "свободное ПО".
+        </p>
       </li>
     </ul>
   </body>
 
-  <timestamp>$Date$ $Author$</timestamp>
-<translator>Олега Писменова</translator>
+  <timestamp>10-01-23 17:58:15 +0100 (Sam, 23. JГ¤n 2010) $ $Author$</timestamp>
 </html>
 <!--
 Local Variables: ***

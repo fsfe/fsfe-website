@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <textset>
+  <!-- Footer -->
   <text id="lastchanged">Dernière modification&#160;: </text>
   <text id="translator1a">Nous remercions </text>
   <text id="translator1b"> pour cette traduction non-officielle. </text>
@@ -37,6 +38,8 @@ préservée.
     <a href="/contribute/contribute.html">cette page</a> pour tout renseignement sur la
     manière de participer, entre autres, aux traductions.
   </text>
+
+  <!-- Menu -->
   <text id="menu1/about">À propos</text>
   <text id="menu1/projects">Notre action</text>
   <text id="menu1/documents">Documents</text>
@@ -44,19 +47,63 @@ préservée.
   <text id="menu1/donate">Dons</text>
   <text id="menu1/order">Boutique</text>
   <text id="menu1/lists">Listes de diffusion</text>
-  <text id="menu1/thankgnus">Merci à GNUs</text>
+  <text id="menu1/press">Espace presse</text>
+  <text id="menu1/thankgnus">Merci aux GNUs</text>
   <text id="menu2/fellowship">Fellowship</text>
   <text id="menu2/fellowship/1-wiki">Wiki</text>
-  <text id="menu2/fellowship/2-planet">Planète blogs</text>
+  <text id="menu2/fellowship/2-planet">Planète blogues</text>
   <text id="menu2/fellowship/3-join">Rejoindre</text>
   <text id="menu3/priority">Principaux liens</text>
-  <text id="menu3/priority/com-pkg">Commercial Services</text>
-  <text id="menu3/priority/fellowship">Fellowship</text>
-  <text id="menu3/priority/ftf">Freedom Task Force</text>
-  <text id="menu3/priority/os">Standards Ouverts</text>
+  <text id="menu3/priority/com-pkg">Services pros</text>
+  <text id="menu3/priority/ftf">Licences et législation (FTF)</text>
+  <text id="menu3/priority/os">Normalisation</text>
   <text id="menu4/priority/pdfreaders">Lecteurs PDF</text>
   <text id="menu4/sisters">Nos organisations sœurs</text>
   <text id="menu4/sisters/fsf">FSF</text>
   <text id="menu4/sisters/fsf_india">FSF India</text>
   <text id="menu4/sisters/fsf_la">FSF Latin America</text>
+
+  <!-- Date time -->
+  <text id="months/1">janvier</text>
+  <text id="months/2">février</text>
+  <text id="months/3">mars</text>
+  <text id="months/4">avril</text>
+  <text id="months/5">mai</text>
+  <text id="months/6">juin</text>
+  <text id="months/7">juillet</text>
+  <text id="months/8">août</text>
+  <text id="months/9">septembre</text>
+  <text id="months/10">octobre</text>
+  <text id="months/11">novembre</text>
+  <text id="months/12">décembre</text>
+ 
+  <text id="months-abbreviated/1">janv.</text>
+  <text id="months-abbreviated/2">févr.</text>
+  <text id="months-abbreviated/3">mars</text>
+  <text id="months-abbreviated/4">avr.</text>
+  <text id="months-abbreviated/5">mai</text>
+  <text id="months-abbreviated/6">juin</text>
+  <text id="months-abbreviated/7">juill.</text>
+  <text id="months-abbreviated/8">août</text>
+  <text id="months-abbreviated/9">sept.</text>
+  <text id="months-abbreviated/10">oct.</text>
+  <text id="months-abbreviated/11">nov.</text>
+  <text id="months-abbreviated/12">déc.</text>
+
+  <text id="weekdays/1">lundi</text>
+  <text id="weekdays/2">mardi</text>
+  <text id="weekdays/3">mercredi</text>
+  <text id="weekdays/4">jeudi</text>
+  <text id="weekdays/5">vendredi</text>
+  <text id="weekdays/6">samedi</text>
+  <text id="weekdays/7">dimanche</text>
+
+  <text id="weekdays-abbreviated/1">lundi</text>
+  <text id="weekdays-abbreviated/2">mardi</text>
+  <text id="weekdays-abbreviated/3">mercr.</text>
+  <text id="weekdays-abbreviated/4">jeudi</text>
+  <text id="weekdays-abbreviated/5">vendr.</text>
+  <text id="weekdays-abbreviated/6">sam.</text>
+  <text id="weekdays-abbreviated/7">dim.</text>
+
 </textset>

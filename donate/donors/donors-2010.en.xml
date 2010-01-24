@@ -4,54 +4,48 @@
   Please keep each list alphabetically ordered.  Emacs users want to set
   sort-fold-case to true and run sort-lines on a region.  Vi+ users can
   visually select the list and use the :sort command.
+
+  The date="..." should be filled with the last date when a donation from this
+  donor came in. It is important for the "current" thankgnus page.
+
+  Currently, the date="..." may only be set in a single xml file for the same
+  donor, so if you add a donor to a file of the new year, don't forget to
+  remove the date="..." in the old year's file.
 -->
 
 <donorset>
   <patrons>
-    <table>
-      <tr>
-        <td><img src="donors/freiheit.png" alt=""/></td>
-        <td>freiheit.com technologies</td>
-      </tr>
-      <tr>
-        <td><img src="donors/intevation.png" alt=""/></td>
-        <td>Intevation GmbH</td>
-      </tr>
-      <tr>
-        <td><img src="donors/linuxhotel.png" alt=""/></td>
-        <td>Linuxhotel Villa Vogelsang</td>
-      </tr>
-    </table>
+    <donor date="2010-12-31" img="donors/freiheit.png">freiheit.com technologies</donor>
+    <!-- Intevation explicitly expressed their wish that the donation is for 2010 -->
+    <donor date="2009-12-29" img="donors/intevation.png">Intevation GmbH</donor>
+    <donor date="2010-12-31" img="donors/linuxhotel.png">Linuxhotel Villa Vogelsang</donor>
   </patrons>
 
   <sustainingcontributors>
-	<li>Variomedia AG</li>
+    <donor date="2010-01-04">Variomedia AG</donor>
   </sustainingcontributors>
 
   <contributors>
-  	<li>Christian Barth</li>
-  	<li>inmedias.it GmbH</li>
-  	<li>Joachim Zobel</li>
-	<li>LIHAS - Linuxhaus Stuttgart</li>
-  	<li>Univention GmbH</li>
+    <donor date="2010-12-31">Christian Barth</donor>
+    <donor date="2010-12-31">inmedias.it GmbH</donor>
+    <donor date="2010-12-31">Joachim Zobel</donor>
   </contributors>
 
   <supporters>
-  	<li>Bernhard Stosik</li>
-  	<li>Communitare GmbH</li>
-  	<li>Fabian Schury</li>
-  	<li>hippie-online.de</li>
-  	<li>Holger Doepner</li>
-	<li>Hostsharing e.G.</li>
-  	<li>Jan Brinkmann</li>
-  	<li>Joachim Krantz</li>
-  	<li>Michael Mosmann</li>
-  	<li>Roland Hafner</li>
-  	<li>Thiemo Nagel</li>
-  	<li>Torsten Loehr</li>
-  	<li>Ulrich Walter</li>
-  	<li>Uwe Henschel</li>
-  	<li>Werner Wiethege</li>
+    <donor date="2010-12-31">Bernhard Stosik</donor>
+    <donor date="2010-12-31">Communitare GmbH</donor>
+    <donor date="2010-12-31">Fabian Schury</donor>
+    <donor date="2010-12-31">hippie-online.de</donor>
+    <donor date="2010-12-31">Holger Doepner</donor>
+    <donor date="2010-01-04">Hostsharing e.G.</donor>
+    <donor date="2010-12-31">Jan Brinkmann</donor>
+    <donor date="2010-12-31">Joachim Krantz</donor>
+    <donor date="2010-12-31">Michael Mosmann</donor>
+    <donor date="2010-12-31">Roland Hafner</donor>
+    <donor date="2010-12-31">Thiemo Nagel</donor>
+    <donor date="2010-12-31">Torsten Loehr</donor>
+    <donor date="2010-12-31">Ulrich Walter</donor>
+    <donor date="2010-12-31">Uwe Henschel</donor>
+    <donor date="2010-12-31">Werner Wiethege</donor>
   </supporters>
 </donorset>
-

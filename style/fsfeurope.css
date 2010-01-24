@@ -302,8 +302,11 @@ dl dd {
 
 #content .image {
 	background-color: white;
-	max-width:100%;
 	padding: 0 2em 2em 0;
+}
+
+#content .image img, #content img.image {
+	max-width:100%;
 }
 
 #content .image.right {

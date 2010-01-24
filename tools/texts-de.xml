@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <textset>
+  <!-- Footer -->
   <text id="lastchanged"> Letzte Änderung: </text>
   <text id="translator1a">Wir danken </text>
   <text id="translator1b"> für diese Übersetzung. </text>
@@ -19,7 +20,7 @@
   </text>
   <text id="fsfnetwork">
     Die FSFE hat <a href="/about/fsfnetwork.html">Schwester-Organisationen</a> in <a
-      href="http://www.fsf.org/">Nord Amerika</a>, <a
+      href="http://www.fsf.org/">Nordamerika</a>, <a
       href="http://www.fsf.org.in/">Indien</a> und <a
       href="http://www.fsfla.org/">Lateinamerika</a>.
   </text>
@@ -38,25 +39,67 @@
     sich <a href="/contribute/contribute.html">hier</a>, um zu sehen, wie Sie uns
     bei Übersetzungen und anderen Dingen unterstützen können.
   </text>
+
+  <!-- Conjunctions -->
+  <text id="to">bis</text>
+
+  <!-- Menu -->
   <text id="menu1/about">Über Uns</text>
   <text id="menu1/projects">Unsere Arbeit</text>
   <text id="menu1/documents">Dokumente</text>
   <text id="menu1/help">Mitwirken</text>
   <text id="menu1/donate">Spenden</text>
   <text id="menu1/order">Bestellung</text>
-  <text id="menu1/lists">Mailing Listen</text>
+  <text id="menu1/lists">Mailinglisten</text>
   <text id="menu1/thankgnus">Thank GNUs</text>
   <text id="menu2/fellowship">Fellowship</text>
   <text id="menu2/fellowship/1-wiki">Wiki</text>
   <text id="menu2/fellowship/2-planet">Blog Planet</text>
   <text id="menu2/fellowship/3-join">Beitreten</text>
-  <text id="menu3/priority">Wichtige Verweise</text>
-  <text id="menu3/priority/com-pkg">Dienstleistungen</text>
-  <text id="menu3/priority/ftf">Freedom Task Force</text>
-  <text id="menu3/priority/os">Offene Standards</text>
-  <text id="menu3/priority/pdfreaders">PDFreaders</text>
-  <text id="menu4/sisters">Unsere Schwesterorganisationen</text>
-  <text id="menu4/sisters/fsf">FSF</text>
-  <text id="menu4/sisters/fsf_india">FSF India</text>
-  <text id="menu4/sisters/fsf_la">FSF Latin America</text>
+
+  <!-- Date time -->
+  <text id="months/1">Januar</text>
+  <text id="months/2">Februar</text>
+  <text id="months/3">März</text>
+  <text id="months/4">April</text>
+  <text id="months/5">Mai</text>
+  <text id="months/6">Juni</text>
+  <text id="months/7">Juli</text>
+  <text id="months/8">August</text>
+  <text id="months/9">September</text>
+  <text id="months/10">Oktober</text>
+  <text id="months/11">November</text>
+  <text id="months/12">Dezember</text>
+
+  <text id="months-abbreviated/1">Jan</text>
+  <text id="months-abbreviated/2">Feb</text>
+  <text id="months-abbreviated/3">Mär</text>
+  <text id="months-abbreviated/4">Apr</text>
+  <text id="months-abbreviated/5">Mai</text>
+  <text id="months-abbreviated/6">Jun</text>
+  <text id="months-abbreviated/7">Jul</text>
+  <text id="months-abbreviated/8">Aug</text>
+  <text id="months-abbreviated/9">Sep</text>
+  <text id="months-abbreviated/10">Okt</text>
+  <text id="months-abbreviated/11">Nov</text>
+  <text id="months-abbreviated/12">Dez</text>
+
+  <text id="weekdays/1">Montag</text>
+  <text id="weekdays/2">Dienstag</text>
+  <text id="weekdays/3">Mittwoch</text>
+  <text id="weekdays/4">Donnerstag</text>
+  <text id="weekdays/5">Freitag</text>
+  <text id="weekdays/6">Samstag</text>
+  <text id="weekdays/7">Sonntag</text>
+
+  <text id="weekdays-abbreviated/1">Mon</text>
+  <text id="weekdays-abbreviated/2">Die</text>
+  <text id="weekdays-abbreviated/3">Mit</text>
+  <text id="weekdays-abbreviated/4">Don</text>
+  <text id="weekdays-abbreviated/5">Fre</text>
+  <text id="weekdays-abbreviated/6">Sam</text>
+  <text id="weekdays-abbreviated/7">Son</text>
+
 </textset>
+
+

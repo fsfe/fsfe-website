@@ -302,7 +302,7 @@ dl dd {
 
 #content .image {
 	background-color: white;
-	float: left;
+	max-width:100%;
 	padding: 0 2em 2em 0;
 }
 

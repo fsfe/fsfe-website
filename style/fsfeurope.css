@@ -302,12 +302,15 @@ dl dd {
 
 #content .image {
 	background-color: white;
+	float: left;
 	padding: 0 2em 2em 0;
 }
 
+/*
 #content .image img, #content img.image {
 	max-width:100%;
 }
+*/
 
 #content .image.right {
 	float: right;
@@ -391,10 +394,12 @@ pre.file {
 
 #introduction {
 	border-bottom: 1px solid rgb(210,210,210);
+	float: left;
 	font-size: 105%;
-	min-height: 60px;
 	margin: 0 -.5em 2em -.5em;
+	min-height: 60px;
 	padding: 1em .5em;
+	width: 100%;
 }
 
 #introduction p,
@@ -414,13 +419,10 @@ p#introduction {
 }
 
 #introduction img {
-	
-	float: left;
-	/*
+	/*float: left;*/
 	padding: 0 2em 0 0;
 	margin: 1em 0;
-	max-height: 150px;
-	*/
+	/*max-height: 150px;*/
 }
 
 #introduction .read_more {

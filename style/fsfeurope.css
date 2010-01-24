@@ -418,11 +418,9 @@ p#introduction {
 	overflow: hidden;
 }
 
-#introduction img {
-	/*float: left;*/
-	padding: 0 2em 0 0;
-	margin: 1em 0;
-	/*max-height: 150px;*/
+#introduction .image {
+	margin: .5em;
+	padding-bottom: 0;
 }
 
 #introduction .read_more {

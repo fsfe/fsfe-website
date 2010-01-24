@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <textset>
-  <text id="lastchanged"> Actualitzat: </text>
+  <!-- Footer -->
+  <text id="lastchanged"> Actualitzat:</text>
   <text id="translator1a">Gràcies a </text>
-  <text id="translator1b"> per aquesta traducció no oficial. </text>
-  <text id="translator2">This is an unofficial translation. </text>
+  <text id="translator1b"> per aquesta traducció. </text>
+  <text id="translator2">Aquesta és una traducció no oficial.</text>
   <text id="translator3a">Si us plau, referiu-vos al </text>
   <text id="translator3b">text original</text>
   <text id="translator3c"> per a la versió oficial d'aquesta pàgina.</text>
   <text id="permission">
-    Podeu copiar i distribuïr literalment aquest article complet
+    Podeu copiar i distribuir literalment aquest article complet
     en qualsevol mitjà, sempre que s'hi inclogui aquest avís.
   </text>
   <text id="webmaster">
     Si us plau, informeu dels problemes amb aquesta pàgina a
     <em>webmaster en fsfeurope.org</em>.
+  </text>
+  <text id="fsfnetwork">
+    L'FSFE té <a href="/about/fsfnetwork.html">organitzacions germanes</a> en <a
+      href="http://www.fsf.org/">Amèrica del Nord</a>, <a
+      href="http://www.fsf.org.in/">India</a> i <a
+      href="http://www.fsfla.org/">Amèrica Llatina</a>.
   </text>
   <text id="outdated">
     <strong>Avís: </strong>
@@ -29,21 +36,65 @@
     <a href="/contribute/contribute.html">aquesta pàgina</a> per a veure com podeu ajudar
     traduint i d'altres maneres.
   </text>
+  
+  <!-- Conjunctions -->
+  <text id="to">a</text>
+
+  <!-- Menu -->
   <text id="menu1/about">Quant a</text>
-  <text id="menu1/projects">Projectes</text>
+  <text id="menu1/projects">La nostra feina</text>
   <text id="menu1/documents">Documents</text>
   <text id="menu1/help">Col·laboreu</text>
   <text id="menu1/donate">Donacions</text>
-  <text id="menu1/order">Comandes</text>
+  <text id="menu1/order">Botiga</text>
   <text id="menu1/lists">Llistes de correu</text>
+  <text id="menu1/press">Premsa</text>
   <text id="menu1/thankgnus">GNUràcies</text>
-  <text id="menu2/priority">Priority Links</text>
-  <text id="menu3/priority/com-pkg">Commercial Services</text>
   <text id="menu2/priority/fellowship">Fellowship</text>
-  <text id="menu2/priority/ftf">Freedom Task Force</text>
-  <text id="menu2/priority/os">Open Standards</text>
-  <text id="menu3/sisters">Our sister organisations</text>
-  <text id="menu3/sisters/fsf">FSF</text>
-  <text id="menu3/sisters/fsf_india">FSF India</text>
-  <text id="menu3/sisters/fsf_la">FSF Latin America</text>
+  <text id="menu2/fellowship/1-wiki">Wiki</text>
+  <text id="menu2/fellowship/2-planet">Agrupació de blogs</text>
+  <text id="menu2/fellowship/3-join">Unir-se</text>
+  
+   <!-- Date time -->
+  <text id="months/1">Gener</text>
+  <text id="months/2">Febrer</text>
+  <text id="months/3">Març</text>
+  <text id="months/4">Abril</text>
+  <text id="months/5">Maig</text>
+  <text id="months/6">Juny</text>
+  <text id="months/7">Juliol</text>
+  <text id="months/8">Agost</text>
+  <text id="months/9">Setembre</text>
+  <text id="months/10">Octubre</text>
+  <text id="months/11">Novembre</text>
+  <text id="months/12">Desembre</text>
+ 
+  <text id="months-abbreviated/1">Gen</text>
+  <text id="months-abbreviated/2">Feb</text>
+  <text id="months-abbreviated/3">Mar</text>
+  <text id="months-abbreviated/4">Abr</text>
+  <text id="months-abbreviated/5">Mai</text>
+  <text id="months-abbreviated/6">Jun</text>
+  <text id="months-abbreviated/7">Jul</text>
+  <text id="months-abbreviated/8">Ago</text>
+  <text id="months-abbreviated/9">Set</text>
+  <text id="months-abbreviated/10">Oct</text>
+  <text id="months-abbreviated/11">Nov</text>
+  <text id="months-abbreviated/12">Des</text>
+
+  <text id="weekdays/1">Dilluns</text>
+  <text id="weekdays/2">Dimarts</text>
+  <text id="weekdays/3">Dimecres</text>
+  <text id="weekdays/4">Dijous</text>
+  <text id="weekdays/5">Divendres</text>
+  <text id="weekdays/6">Dissabte</text>
+  <text id="weekdays/7">Diumenge</text>
+
+  <text id="weekdays-abbreviated/1">Dil</text>
+  <text id="weekdays-abbreviated/2">Dts</text>
+  <text id="weekdays-abbreviated/3">Dms</text>
+  <text id="weekdays-abbreviated/4">Dij</text>
+  <text id="weekdays-abbreviated/5">Div</text>
+  <text id="weekdays-abbreviated/6">Dis</text>
+  <text id="weekdays-abbreviated/7">Diu</text>
 </textset>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <textset>
+  <!-- Footer -->
   <text id="lastchanged"> Laatste aanpassing: </text>
   <text id="translator1a">Wij bedanken </text>
   <text id="translator1b"> voor deze vertaling. </text>
@@ -16,6 +17,12 @@
     Gelieve problemen met deze pagina aan <em>webmaster at
     fsfeurope.org</em> te melden.
   </text>
+  <text id="fsfnetwork">
+    FSFE heeft <a href="/about/fsfnetwork.html">zusterorganisaties</a> in <a
+      href="http://www.fsf.org/">Noord Amerika</a>, <a
+      href="http://www.fsf.org.in/">Indië</a> en <a
+      href="http://www.fsfla.org/">Latijns Amerika</a>.
+  </text>
   <text id="outdated">
     <strong>Opgelet: </strong> Het is mogelijk dat deze pagina
     verouderd is ten opzichte van het origineel. Als u ons wil helpen
@@ -29,25 +36,65 @@
     vinden op <a href="/contribute/contribute.html">deze
     pagina</a>.
   </text>
+
+  <!-- Conjunctions -->
+  <text id="to">tot</text>
+
+  <!-- Menu -->
   <text id="menu1/about">Over FSFE</text>
-  <text id="menu1/projects">Projecten</text>
+  <text id="menu1/projects">Onze werken</text>
   <text id="menu1/documents">Documenten</text>
   <text id="menu1/help">Help ons</text>
   <text id="menu1/donate">Doneer</text>
   <text id="menu1/order">Winkel</text>
   <text id="menu1/lists">Mailinglists</text>
+  <text id="menu1/press">Pers</text>
   <text id="menu1/thankgnus">Thank GNUs</text>
   <text id="menu2/fellowship">Fellowship</text>
   <text id="menu2/fellowship/1-wiki">Wiki</text>
   <text id="menu2/fellowship/2-planet">Verzamelde blogs</text>
   <text id="menu2/fellowship/3-join">Word lid</text>
-  <text id="menu3/priority">Belangrijke Links</text>
-  <text id="menu3/priority/com-pkg">Professionele Diensten</text>
-  <text id="menu3/priority/ftf">Licenties en Wetgeving (FTF)</text>
-  <text id="menu3/priority/os">Standaardisatie</text>
-  <text id="menu3/priority/pdfreaders">PDFreaders</text>
-  <text id="menu4/sisters">Onze zusterorganisaties</text>
-  <text id="menu4/sisters/fsf">FSF</text>
-  <text id="menu4/sisters/fsf_india">FSF India</text>
-  <text id="menu4/sisters/fsf_la">FSF Latin America</text>
+
+  <!-- Menu -->
+  <text id="months/1">januari</text>
+  <text id="months/2">februari</text>
+  <text id="months/3">Maart</text>
+  <text id="months/4">april</text>
+  <text id="months/5">mei</text>
+  <text id="months/6">juni</text>
+  <text id="months/7">juli</text>
+  <text id="months/8">augustus</text>
+  <text id="months/9">september</text>
+  <text id="months/10">oktober</text>
+  <text id="months/11">november</text>
+  <text id="months/12">december</text>
+ 
+  <text id="months-abbreviated/1">jan</text>
+  <text id="months-abbreviated/2">feb</text>
+  <text id="months-abbreviated/3">mar</text>
+  <text id="months-abbreviated/4">apr</text>
+  <text id="months-abbreviated/5">mei</text>
+  <text id="months-abbreviated/6">jun</text>
+  <text id="months-abbreviated/7">jul</text>
+  <text id="months-abbreviated/8">aug</text>
+  <text id="months-abbreviated/9">sep</text>
+  <text id="months-abbreviated/10">okt</text>
+  <text id="months-abbreviated/11">nov</text>
+  <text id="months-abbreviated/12">dec</text>
+
+  <text id="weekdays/1">maandag</text>
+  <text id="weekdays/2">dinsdag</text>
+  <text id="weekdays/3">woensdag</text>
+  <text id="weekdays/4">donderdag</text>
+  <text id="weekdays/5">vrijdag</text>
+  <text id="weekdays/6">zaterdag</text>
+  <text id="weekdays/7">zondag</text>
+
+  <text id="weekdays-abbreviated/1">ma</text>
+  <text id="weekdays-abbreviated/2">di</text>
+  <text id="weekdays-abbreviated/3">wo</text>
+  <text id="weekdays-abbreviated/4">do</text>
+  <text id="weekdays-abbreviated/5">vr</text>
+  <text id="weekdays-abbreviated/6">za</text>
+  <text id="weekdays-abbreviated/7">zo</text>
 </textset>

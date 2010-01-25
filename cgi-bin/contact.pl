@@ -9,9 +9,9 @@ use POSIX qw(strftime);
 my $query = new CGI;
 my %errors;
 
-unless ($query->param("name")    { $errors{"name"}    = "You must give us your name.";           }
-unless ($query->param("email")   { $errors{"email"}   = "You must give us your e-mail address."; }
-unless ($query->param("message") { $errors{"message"} = "You must specify a message.";           }
+unless ($query->param("name"))    { $errors{"name"}    = "You must give us your name.";           }
+unless ($query->param("email"))   { $errors{"email"}   = "You must give us your e-mail address."; }
+unless ($query->param("message")) { $errors{"message"} = "You must specify a message.";           }
 
 unless ($query->param("email") =~ /^(\w¦\-¦\_¦\.)+\@((\w¦\-¦\_)+\.)+[a-zA-Z]{2,}$/) {
   $errors{"email"} = "This e-mail address is not valid.";
@@ -42,11 +42,11 @@ print MAIL "---\n$\n\n";
 
 die "Sent e-mail!";
 
-print "Content-type: text/html\n\n";
-open TEMPLATE, "/home/www/html/global/order/tmpl-thankyou." . $query->param("language") . ".html";
-while (<TEMPLATE>) {
-  s/:AMOUNT:/$amount/g;
-  s/:REFERENCE:/$reference/g;
-  print;
-}
+#print "Content-type: text/html\n\n";
+#open TEMPLATE, "/home/www/html/global/order/tmpl-thankyou." . $query->param("language") . ".html";
+#while (<TEMPLATE>) {
+#  s/:AMOUNT:/$amount/g;
+#  s/:REFERENCE:/$reference/g;
+#  print;
+#}
 

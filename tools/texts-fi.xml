@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <textset>
+  <!-- Footer -->
   <text id="lastchanged"> Viimeisin muutos: </text>
   <text id="translator1a">Kiitämme käännöksestä: </text>
   <text id="translator1b">. </text>
@@ -9,45 +10,91 @@
   <text id="translator3b">alkuperäinen teksti</text>
   <text id="translator3c">.</text>
   <text id="permission">
-    Tämän koko artikkelin sanatarkka kopiointi ja jakaminen on sallittua missä 
-    tahansa mediassa, sillä edellytyksellä että tämä huomautus säilytetään.
+    Koko artikkelin sanatarkka kopiointi ja jakaminen on sallittua missä 
+    tahansa mediassa, kunhan tämä huomautus säilytetään.
   </text>
   <text id="webmaster">
     Ilmoita ongelmista tämän sivun kanssa englanniksi osoitteeseen 
     <em>webmaster at fsfeurope.org</em>.
   </text>
+  <text id="fsfnetwork">
+    FSFE:llä on <a href="/about/fsfnetwork.html">sisarjärjestöjä</a> <a
+      href="http://www.fsf.org/">Pohjois-Amerikassa</a>, <a
+      href="http://www.fsf.org.in/">Intiassa</a> ja <a
+      href="http://www.fsfla.org/">Latinalaisessa Amerikassa</a>.
+  </text>
   <text id="outdated">
     <strong>Varoitus: </strong>
     Tämän sivun käännös saattaa olla vanhentunut. Lisätietoja käännösten 
-    tekemiseen osallistumisesta ja muista asioista 
+    tekemiseen osallistumisesta ja muusta 
     <a href="/contribute/contribute.html">tältä sivulta</a>.
   </text>
   <text id="notranslation">
     <strong>Varoitus: </strong>
-    Tätä sivua ei ole vielä käännetty. Alla näet sivun alkuperäisen version.
-    Lisätietoja käännösten tekemiseen osallistumisesta ja muista asioista 
+    Tätä sivua ei ole vielä käännetty. Alla näet sivun 
+    alkuperäisen version. Lisätietoja käännösten tekemiseen 
+    osallistumisesta ja muusta 
     <a href="/contribute/contribute.html">tältä sivulta</a>.
-
   </text>
+
+  <!-- Conjunctions -->
+  <text id="to">–</text>
+
+  <!-- Menu -->
   <text id="menu1/about">Tietoja</text>
-  <text id="menu1/projects">Projektit</text>
+  <text id="menu1/projects">Työmme</text>
   <text id="menu1/documents">Asiakirjat</text>
-  <text id="menu1/help">Aktivoidu</text>
+  <text id="menu1/help">Osallistu</text>
   <text id="menu1/donate">Lahjoitukset</text>
-  <text id="menu1/order">Tilaa</text>
+  <text id="menu1/order">Kauppa</text>
   <text id="menu1/lists">Sähköpostilistat</text>
+  <text id="menu1/press">Lehdistö</text>
   <text id="menu1/thankgnus">Kiitokset</text>
   <text id="menu2/fellowship">Fellowship-jäsenet</text>
   <text id="menu2/fellowship/1-wiki">Wiki</text>
   <text id="menu2/fellowship/2-planet">Blogit</text>
   <text id="menu2/fellowship/3-join">Liity</text>
-  <text id="menu3/priority">Tärkeät linkit</text>
-  <text id="menu3/priority/com-pkg">Ammattilaispalvelut</text>
-  <text id="menu3/priority/ftf">Freedom Task Force</text>
-  <text id="menu3/priority/os">Avoimet standardit</text>
-  <text id="menu3/priority/pdfreaders">PDF-lukijat</text>
-  <text id="menu4/sisters">Sisarjärjestöt</text>
-  <text id="menu4/sisters/fsf">FSF</text>
-  <text id="menu4/sisters/fsf_india">FSF India</text>
-  <text id="menu4/sisters/fsf_la">FSF Latin America</text>
+  
+  <!-- Date time -->
+  <text id="months/1">tammikuu</text>
+  <text id="months/2">helmikuu</text>
+  <text id="months/3">maaliskuu</text>
+  <text id="months/4">huhtikuu</text>
+  <text id="months/5">toukokuu</text>
+  <text id="months/6">kesäkuu</text>
+  <text id="months/7">heinäkuu</text>
+  <text id="months/8">elokuu</text>
+  <text id="months/9">syyskuu</text>
+  <text id="months/10">lokakuu</text>
+  <text id="months/11">marraskuu</text>
+  <text id="months/12">joulukuu</text>
+ 
+  <text id="months-abbreviated/1">tam</text>
+  <text id="months-abbreviated/2">hel</text>
+  <text id="months-abbreviated/3">maa</text>
+  <text id="months-abbreviated/4">huh</text>
+  <text id="months-abbreviated/5">tou</text>
+  <text id="months-abbreviated/6">kes</text>
+  <text id="months-abbreviated/7">hei</text>
+  <text id="months-abbreviated/8">elo</text>
+  <text id="months-abbreviated/9">syy</text>
+  <text id="months-abbreviated/10">lok</text>
+  <text id="months-abbreviated/11">mar</text>
+  <text id="months-abbreviated/12">jou</text>
+
+  <text id="weekdays/1">maanantai</text>
+  <text id="weekdays/2">tiistai</text>
+  <text id="weekdays/3">keskiviikko</text>
+  <text id="weekdays/4">torstai</text>
+  <text id="weekdays/5">perjantai</text>
+  <text id="weekdays/6">lauantai</text>
+  <text id="weekdays/7">sunnuntai</text>
+
+  <text id="weekdays-abbreviated/1">ma</text>
+  <text id="weekdays-abbreviated/2">ti</text>
+  <text id="weekdays-abbreviated/3">ke</text>
+  <text id="weekdays-abbreviated/4">to</text>
+  <text id="weekdays-abbreviated/5">pe</text>
+  <text id="weekdays-abbreviated/6">la</text>
+  <text id="weekdays-abbreviated/7">su</text>
 </textset>

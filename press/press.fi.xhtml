@@ -2,94 +2,109 @@
 
 <html>
   <head>
-    <title>FSFE - Yhteystiedot - Lehdistön yhteystiedot</title>
+    <link href="/style/grid.css" rel="stylesheet"/>
+    <title>Lehdistö - FSFE</title>
   </head>
 
   <body>
-    <h1>Yhteystiedot</h1>
+    <h1>Lehdistö</h1>
 
-	<localmenu id="3">Lehdistön yhteystiedot</localmenu>
-
-	<h2>Lehdistön yhteystiedot</h2>
+    <p id="introduction">
+      FSFE uskoo, että pääsy ohjelmistoihin määrää, ketkä voivat 
+      osallistua digitaaliseen yhteiskuntaan. Vapaudet 
+      <a href="/about/basics/freesoftware.html">käyttää, kopioida, muokata ja jakaa</a>
+      ohjelmistoja mahdollistavat tasa-arvoisen osallistumisen 
+      informaatioaikaan.
+    </p>
 
     <p>
-      Jos edustat lehdistöä, älä epäröi ottaa meihin yhteyttä. 
+      Free Software Foundation Europe (FSFE) on voittoa tavoittelematon,  
+      <a href="/contact/local.html">useissa Euroopan maissa</a> aktiivisesti 
+      toimiva ja kansainväliseen toimintaan osallistuva järjestö. 
+      Pääsy ohjelmistoihin määrittää digitaaliseen yhteiskuntaan 
+      osallistumisen: tasa-arvoiset osallistumismahdollisuudet ja kilpailun 
+      vapaus ovat Free Software Foundation Europen tavoitteita. Tavoitteet 
+      saavuttaakseen FSFE on omistautunut edistämään vapaita ohjelmistoja, 
+      jotka määritellään käytön, tutkimisen, muokkaamisen ja kopioimisen 
+      vapauksien kautta. Vuonna 2001 perustetulle FSFE:lle keskeisiä 
+      asioita ovat olleet tietoisuuden lisääminen näistä asioista, 
+      vapaiden ohjelmistojen turvaaminen poliittisesti ja juridisesti sekä 
+      vapauksien tarjoaminen ihmisille tukemalla vapaiden ohjelmistojen 
+      kehittäjiä.
     </p>
 
-	<h3>Sähköposti</h3>
 
-	<ul>
-		<li>
-			Yleiset yhteydenotot (englanniksi) osoitteeseen 
-			<a href="mailto:press@fsfeurope.org">press@fsfeurope.org</a>
-		</li>
-		<li>
-			Saksaan liittyvät asiat (saksaksi tai englanniksi) osoitteeseen 
-			<a href="mailto:press@germany.fsfeurope.org">press@germany.fsfeurope.org</a>
-		</li>
-		<li>
-			Italiaan liittyvät asiat (italiaksi tai englanniksi) osoitteeseen 
-			<a href="mailto:press@italy.fsfeurope.org">press@italy.fsfeurope.org</a>
-		</li>
-		<li>
-      Espanjaan liittyvät asiat (espanjaksi tai englanniksi) osoitteeseen 
-			<a href="mailto:press@spain.fsfeurope.org">press@spain.fsfeurope.org</a>
-		</li>
-		<li>
-      Ruotsiin liittyvät asiat (ruotsiksi tai englanniksi) osoitteeseen 
-			<a href="mailto:press@sweden.fsfeurope.org">press@sweden.fsfeurope.org</a>
-		</li>
-	</ul>
+    <div class="grid-50-50">
+      <div class="box first">
+        <h2>Tilaa lehdistötiedotteemme</h2>
 
-	<h3>Puhelin</h3>
-	<p>
-  Soita yhteen alla olevista numeroista, ja paina 1 äänipalvelun kysymykseen.
-</p>
-<ul>
-    <li>Belgia: +32 2 747 03 57</li>
-	<li>Saksa: +49 30 896 77 99 09</li>
-	<li>Ruotsi: +46 31 7802160</li>
-	<li>Sveitsi: +41 43 500 03 66</li>
-	<li>Iso-Britannia: +44 29 200 08 17 7</li>
-  </ul>
+        <p>
+          Voit pysyä ajan tasalla vapaiden ohjelmistojen alueen uutisista 
+          tilaamalla uutissyötteemme tai sähköpostilistamme.
+        </p>
 
-	<h3>Lehdistötiedotteet</h3>
-    <p> 
+        <form method="post" action="http://mail.fsfeurope.org/mailman/subscribe/press-release">
+          <p>
+            <input type="text" name="email" value="your@email.com" onChange="this.value = ''" onClick="this.value = ''" />
+            <input type="submit" value="Subscribe" />
+          </p>
+        </form>
 
+        <p>
+          Pikapäivityksiä voit vastaanottaa myös seuraavien palveluiden kautta: <a
+            href="http://identi.ca/fsfe">Identi.ca</a>tai <a
+            href="http://twitter.com/fsfe">Twitter</a>.
+        </p>
+      </div>
 
-      Vastaanottaaksesi <a href="/news/news.html">lehdistötiedotteita</a> 
-      liity jollekin seuraavista sähköpostilistoista:
+      <div class="box">
+        <h2><a href="/news/news.html" class="feed">Tuoreimmat uutiset</a></h2>
+
+        <dynamic-content/>
+      </div>
+    </div>
+
+    <h2>Tiedustelut</h2>
+
+    <p>
+    Tiedustelut voi lähettää osoitteeseen <a href="mailto:press@fsfeurope.org">press@fsfeurope.org</a>,
+    tai perinteisellä postilla:
     </p>
+
+    <address>
+      Free Software Foundation Europe e.V.<br/>
+      Linienstr. 141 <br/>
+      10115 Berlin <br/>
+      Germany
+    </address>
+
+    <p>
+      Puhelin: +49-30-27595290
+    </p>
+
+    <p>
+      Yleisiä tiedusteluja varten katso 
+      <a href="/contact/contact.html">yhteystietosivumme</a>.
+    </p>
+
+
+    <h2 id="subpages" class="show-heading">Resursseja</h2>
+
     <ul>
       <li>
-        press-release (lehdistötiedotteet englanniksi)
-        (<a href= "http://mail.fsfeurope.org/mailman/listinfo/press-release">WWW-käyttöliittymä</a>,
-        <a href= "http://mail.fsfeurope.org/pipermail/press-release">arkisto</a>)
+        <h3><a href="/about/graphics/graphics.html">Logo ja grafiikat</a></h3>
+        <p>
+          Lataa logomme tai muita grafiikoita.
+        </p>
       </li>
+
+      <!-- we should have a link to a subset of people on our people page who can give official press statements -->
+
       <li>
-        press-release-de (lehdistötiedotteet saksaksi)
-        (<a href="http://mail.fsfeurope.org/mailman/listinfo/press-release-de">WWW-käyttöliittymä</a>,
-        <a href="http://mail.fsfeurope.org/pipermail/press-release-de">arkisto</a>)
-      </li>
-      <li>
-        press-release-es (lehdistötiedotteet espanjaksi)
-        (<a href="http://mail.fsfeurope.org/mailman/listinfo/press-release-es">WWW-käyttöliittymä</a>,
-        <a href="http://mail.fsfeurope.org/pipermail/press-release-es">arkisto</a>)
-      </li>
-      <li>
-        press-release-fr (lehdistötiedotteet ranskaksi)
-        (<a href="http://mail.fsfeurope.org/mailman/listinfo/press-release-fr">WWW-käyttöliittymä</a>,
-        <a href="http://mail.fsfeurope.org/pipermail/press-release-fr">arkisto</a>)
-      </li>
-      <li>
-        press-release-it (lehdistötiedotteet italiaksi)
-        (<a href="http://mail.fsfeurope.org/mailman/listinfo/press-release-it">WWW-käyttöliittymä</a>,
-        <a href="http://mail.fsfeurope.org/pipermail/press-release-it">arkisto</a>)
-      </li>
-      <li>
-        press-release-sv (lehdistötiedotteet ruotsiksi)
-        (<a href="http://mail.fsfeurope.org/mailman/listinfo/press-release-sv">WWW-käyttöliittymä</a>,
-        <a href="http://mail.fsfeurope.org/pipermail/press-release-sv">arkisto</a>)
+        <h3><a href="/about/basics/freesoftware.html">Perusasioista vapaista ohjelmista</a></h3>
+        <!-- Later this should link to /freesoftware/ -->
+        <p>
+          Opi käsitteet vapaa ohjelmisto, avoin lähdekoodi ja ”libre software”.        </p>
       </li>
     </ul>
   </body>

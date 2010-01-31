@@ -12,7 +12,7 @@ sub new {
 
 sub content {
   my ($self, $raw_output) = @_;
-  my $self->{raw_output} = $raw_output;
+  $self->{raw_output} = $raw_output;
 
   $self->transform;
 }
@@ -25,7 +25,7 @@ sub transform {
   my @output = $output_parser->disembowel;
 
   my $document_parser = HTML::TreeBuilder::XPath->new;
-  $document_parser->parse_file("../boilerplate.en.html");
+  $document_parser->parse_file("../boilerplate.en.html") or die $!;
 
   my $content = $document_parser->findnodes('//div[@id="content"]')->[0];
   $content->findnodes("//p")->[0]->delete;
@@ -36,7 +36,7 @@ sub transform {
   }
 
   $content->push_content($old_content);
-  $self->{output} = $tree->as_XML_indented;
+  $self->{output} = $document_parser->as_XML_indented;
 }
 
 sub render {

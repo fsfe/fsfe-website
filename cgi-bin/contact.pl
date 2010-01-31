@@ -9,7 +9,7 @@ use CGI;
 use POSIX qw(strftime);
 
 our $base_directory;
-BEGIN { $base_directory = dirname(abs_path("../tools/")); }
+BEGIN { $base_directory = dirname(abs_path("../tools/WebBuild")); }
 use lib $base_directory;
 
 use WebBuild::DynamicContent;
@@ -19,21 +19,25 @@ my $content = WebBuild::DynamicContent->new;
 my $query = new CGI;
 my %errors;
 
-unless ($query->param("name"))    { $errors{"name"}    = "You must give us your name.";           }
-unless ($query->param("email"))   { $errors{"email"}   = "You must give us your e-mail address."; }
-unless ($query->param("message")) { $errors{"message"} = "You must specify a message.";           }
+#$query->param("name") = "Fjase Mann";
+#$query->param("email") = "asd\@asd.no";
+#$query->param("message") = "asd";
 
-unless ($query->param("email") =~ /^(\w¦\-¦\_¦\.)+\@((\w¦\-¦\_)+\.)+[a-zA-Z]{2,}$/) {
-  $errors{"email"} = "This e-mail address is not valid.";
-}
+#unless ($query->param("name"))    { $errors{"name"}    = "You must give us your name.";           }
+#unless ($query->param("email"))   { $errors{"email"}   = "You must give us your e-mail address."; }
+#unless ($query->param("message")) { $errors{"message"} = "You must specify a message.";           }
 
-unless (length($query->param("message")) > 5) {
-  $errors{"message"} = "This message is too short.";
-}
+#unless ($query->param("email") =~ /^(\w¦\-¦\_¦\.)+\@((\w¦\-¦\_)+\.)+[a-zA-Z]{2,}$/) {
+#  $errors{"email"} = "This e-mail address is not valid.";
+#}
 
-if (%errors) {
+#unless (length($query->param("message")) > 5) {
+#  $errors{"message"} = "This message is too short.";
+#}
+
+#if (%errors) {
 #  die "Errors!";
-}
+#}
   
 my $date = strftime "%Y-%m-%d", localtime;
 my $time = strftime "%s", localtime;
@@ -42,21 +46,23 @@ open(MAIL, "|/usr/lib/sendmail -t -f ato\@fsfe.org");
 print MAIL "From: web\@fsfeurope.org\n";
 print MAIL "To: ato\@fsfe.org\n";
 #print MAIL "Cc: mueller\@fsfeurope.org\n";
-print MAIL "Subject: New message from website from " . $query->param("name") . "\n\n";
+#print MAIL "Subject: New message from website from " . $query->param("name") . "\n\n";
 print MAIL "We have received a new message from our website contact form.\n\n";
-print MAIL "Name:   " . $query->param("name") . "\n";
-print MAIL "E-mail: " . $query->param("email") . "\n\n";
+#print MAIL "Name:   " . $query->param("name") . "\n";
+#print MAIL "E-mail: " . $query->param("email") . "\n\n";
 print MAIL "---\n";
-print MAIL $query->param("message") . "\n";
-print MAIL "---\n$\n\n";
+#print MAIL $query->param("message") . "\n";
+#print MAIL "---\n$\n\n";
 
-$content->content(<<EOI;
+my $output = <<ENDHTML;
 
-  <h1>Result</h1>
-  <p>Hello from dynamic content!</p>
+<h1>Test</h1>
 
-EOI
-);
+<p>foobar.</p>
+
+ENDHTML
+
+$content->content($output);
 
 $content->render;
 

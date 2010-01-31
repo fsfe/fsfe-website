@@ -16,8 +16,8 @@ use WebBuild::DynamicContent;
 
 my $content = WebBuild::DynamicContent->new;
 
-my $query = new CGI;
-my %errors;
+#my $query = new CGI;
+#my %errors;
 
 #$query->param("name") = "Fjase Mann";
 #$query->param("email") = "asd\@asd.no";
@@ -42,27 +42,27 @@ my %errors;
 my $date = strftime "%Y-%m-%d", localtime;
 my $time = strftime "%s", localtime;
 
-open(MAIL, "|/usr/lib/sendmail -t -f ato\@fsfe.org");
-print MAIL "From: web\@fsfeurope.org\n";
-print MAIL "To: ato\@fsfe.org\n";
+#open(MAIL, "|/usr/lib/sendmail -t -f ato\@fsfe.org");
+#print MAIL "From: web\@fsfeurope.org\n";
+#print MAIL "To: ato\@fsfe.org\n";
 #print MAIL "Cc: mueller\@fsfeurope.org\n";
 #print MAIL "Subject: New message from website from " . $query->param("name") . "\n\n";
-print MAIL "We have received a new message from our website contact form.\n\n";
+#print MAIL "We have received a new message from our website contact form.\n\n";
 #print MAIL "Name:   " . $query->param("name") . "\n";
 #print MAIL "E-mail: " . $query->param("email") . "\n\n";
-print MAIL "---\n";
+#print MAIL "---\n";
 #print MAIL $query->param("message") . "\n";
 #print MAIL "---\n$\n\n";
 
-my $output = <<ENDHTML;
+#my $output = <<ENDHTML;
+#
+#<h1>Test</h1>
+#
+#<p>foobar.</p>
+#
+#ENDHTML
 
-<h1>Test</h1>
-
-<p>foobar.</p>
-
-ENDHTML
-
+my $output = "<p>Test.</p>";
 $content->content($output);
-
 $content->render;
 

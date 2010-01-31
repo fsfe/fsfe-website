@@ -3,8 +3,18 @@
 use strict;
 use warnings;
 
+use File::Basename;                                                                            
+use Cwd "abs_path";
 use CGI;
 use POSIX qw(strftime);
+
+our $base_directory;
+BEGIN { $base_directory = dirname(abs_path("../tools/")); }
+use lib $base_directory;
+
+use WebBuild::DynamicContent;
+
+my $content = WebBuild::DynamicContent->new;
 
 my $query = new CGI;
 my %errors;
@@ -22,7 +32,7 @@ unless (length($query->param("message")) > 5) {
 }
 
 if (%errors) {
-  die "Errors!";
+#  die "Errors!";
 }
   
 my $date = strftime "%Y-%m-%d", localtime;
@@ -40,13 +50,13 @@ print MAIL "---\n";
 print MAIL $query->param("message") . "\n";
 print MAIL "---\n$\n\n";
 
-die "Sent e-mail!";
+$content->content(<<EOI;
 
-#print "Content-type: text/html\n\n";
-#open TEMPLATE, "/home/www/html/global/order/tmpl-thankyou." . $query->param("language") . ".html";
-#while (<TEMPLATE>) {
-#  s/:AMOUNT:/$amount/g;
-#  s/:REFERENCE:/$reference/g;
-#  print;
-#}
+  <h1>Result</h1>
+  <p>Hello from dynamic content!</p>
+
+EOI
+);
+
+$content->render;
 

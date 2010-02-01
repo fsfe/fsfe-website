@@ -93,8 +93,8 @@
         <xsl:otherwise>
           <p class="date">
             <span class="n">(</span>
-            <span class="day">14 </span>
-            <span class="month">Jan</span>
+            <span class="day"><xsl:value-of select="$start_day" /> </span>
+            <span class="month"><xsl:value-of select="$start_month" /> </span>
             <span class="n">)</span>
           </p>
         </xsl:otherwise>

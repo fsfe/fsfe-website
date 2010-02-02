@@ -36,7 +36,7 @@ sub transform {
   }
 
   $content->push_content($old_content);
-  $self->{output} = $document_parser->as_XML_indented;
+  $self->{output} = $document_parser->as_XML;
 }
 
 sub render {

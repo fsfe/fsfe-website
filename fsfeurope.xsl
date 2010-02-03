@@ -159,6 +159,7 @@
             </xsl:element>
           </xsl:element>
 
+          <!--
           <ul>
             <li>
               <p>
@@ -172,6 +173,7 @@
               </form>
             </li>
           </ul>
+          -->
 
         </xsl:element>
         <!-- End Menu bar -->

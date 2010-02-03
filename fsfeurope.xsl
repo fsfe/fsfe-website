@@ -159,6 +159,20 @@
             </xsl:element>
           </xsl:element>
 
+          <ul>
+            <li>
+              <p>
+                Subscribe to <a href="/news/">our newsletter</a>!
+              </p>
+              <form action="http://mail.fsfeurope.org/mailman/subscribe/press-release" method="post">
+                <p>
+                  <input type="text" onclick="this.value = ''" value="your@email.com" name="email" />
+                  <input type="submit" value="Sign up" />
+                </p>
+              </form>
+            </li>
+          </ul>
+
         </xsl:element>
         <!-- End Menu bar -->
 

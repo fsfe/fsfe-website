@@ -127,7 +127,7 @@
     <body>
       <xsl:apply-templates />
       <div id="news">
-        <h2><xsl:value-of select="/html/text[@id='news']" /></h2>
+        <h2><a href="/news/news.html"><xsl:value-of select="/html/text[@id='news']"/></a></h2>
         <xsl:for-each select="/html/set/news
           [translate (@date, '-', '') &lt;= translate ($today, '-', '')]">
           <xsl:sort select="@date" order="descending" />
@@ -141,7 +141,7 @@
         </ul>
       </div> <!-- /#news -->
       <div id="events">
-        <h2><xsl:value-of select="/html/text[@id='events']" /></h2>
+        <h2><a href="/events/events.html"><xsl:value-of select="/html/text[@id='events']"/></a></h2>
         <xsl:for-each select="/html/set/event
           [translate (@end, '-', '') &gt;= translate ($today, '-', '')]">
           <xsl:sort select="@start" />

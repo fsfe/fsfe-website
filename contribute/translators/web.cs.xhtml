@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html>
+  <head>
+    <title>
+      FSFE - Přispějte - Informace pro překladatele - Webových stránek
+    </title>
+  </head>
+
+  <body>
+    <h1>Překládání webových stránek</h1>
+
+    <h2>Princip stavby tohoto webu</h2>
+
+    <p>
+      Web fsfe.org je spravován prostřednictvím XML souborů.           
+      Webový server generuje HTML stránky z XML souborů aotomaticky  
+      každých 10 minut. To umožňuje editovat obsah stránek pomocí 
+      XML souborů, takže HTML soubory nejsou nikdy edirovány
+      přímo. 
+    </p>
+
+    <p>
+      Každá stránky fsfe.org má jméno       
+
+      <var><em>jméno stránky</em>.<em>jazyk</em>.html</var> (<em>jazyk</em>
+      sestávající z <a href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes"> dvou písmen
+      ISO-639-1 code</a> jazyka, jako "en" pro angličtinu nebo "de" pro němčinu).
+      Zdrojové soubory jsou pojmenovány
+      <var><em>jméno stránky</em>.<em>jazyk</em>.xhtml</var>.
+	</p>
+
+	<p>
+      Některé stránky mají dynamický obsah. Kromě statického obsahu z XHTML souborů
+      mohou také obsahovat text z jiných XML souborů.
+      V okamžiku kdy je stránka postavena (myslí se vygenerována na základě požadavku
+      o zobrazení ze strany klienta) build systém sáhne po XML souborech, které
+      jsou dostupné, a přepne se automaticky zpět do angličtiny, pokud není 
+      žádaný překlad dostupný. 
+      Příklad stránky:
+      <a href="/index.html">startovací stránka</a>, 
+      <a href="/news/news.html">nová stránka</a>, and the
+      <a href="/events/events.html">events stránka</a>.
+    </p>
+
+    <h2>Každý může přispět k překladu</h2>
+
+    <p>
+      Všechny zdrojové soubory (tj. XHTML a XML soubory) jsou veřejně dostupné 
+      pro stažené, takže kdokoliv může spontánně přispět a přeložit danou
+      část bez registrace. Pokud se rozhodnete začít s překládáním, vezměte
+      také v úvahu, že někdo jiný může začít s překladem stejné části
+      zároveň s Vámi a proto.    
+      <a href="http://mail.fsfeurope.org/mailman/listinfo/translators"></a>
+    </p>
+
+    <h3>Přidání chybějícího překladu</h3>
+
+    <p>
+      Jestliže otevřete stránku, kde chbí překlad do Vašeho jazyku(a), 
+      přesuňte se na konec tránky, klikněte na <strong>[XHTML]</strong> odkaz
+      a uložte soubor, který se Vám otevře v prohlížeči. Zjískali jste anglickou 
+      verzi XHTML - jazykovou verzi. Přejmenujte soubor (dvě písmena označující
+      jazyk "en" na "cz" a otevřete soubor v textovém editoru. Nyní přeložte
+      všechny části, které jsou mimo značky "&lt;…&gt;"; nic uvnitř těchto značek
+      nesmíte změnit(text uvnitř těchto značek je XHTML příkaz, který má zásadní
+      vliv na vygenerování stránky do prohlížeče klienta).
+    </p>
+
+	<!--
+	     Note to translators for the above sentence:
+	     _structure_ not _appearance_.  XHTML = structure, CSS = appearance.
+    -->
+
+    <p>
+      Na konci souboru je uvedena značka konce html souboru <var>&lt;/html&gt;</var>.
+      Bezprostředně <em>nad</em> ni přidejte linku:
+      <var>&lt;translator&gt;<em>your name</em>&lt;/translator&gt;</var>.
+    </p>
+
+    <p>
+      Když jste hotovi zašlete soubor na překladatelský mailing list:
+      <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">Translators
+      mailing list</a>. Ostatní členové mailin listu mohou poopravit a zkontrolovat
+      Váš překlad, a někdo z mailing listu nakonec pošle opravenou verzi na server.
+    </p>
+
+    <h3>Aktualizace zastaralého překladu</h3>
+
+    <p>
+      Jestliže máte stránku otevřenou ve Vašem prohlížeči a zjistíte, že je 
+      překlad neaktuální (infikátor je obvykle v hosrní části stránky), přesuňte se 
+      na konec, a stejně jako při překladu - kliknutím na <strong>[XHTML]</strong> 
+      odkaz a uložte verzi překladu. Tento překlad je již zastaralý. Následně kliněte na 
+      <strong>English</strong> v horní části stránky, aby jste přepnuli do anglické
+      verze. Nyní můžete jednotlivé souvory porovnat, jen musíte dát pozor na obsah
+      mezi symboly "&lt;…&gt;" - ty se nepřekládají.     
+    </p>
+
+    <p>
+      Nebo můžete použít <a href="https://trac.fsfe.org/fsfe-web/browser/trunk"> web-zdroj
+      repository</a> na <a href="https://trac.fsfe.org/fsfe-web">fsfe-web
+      trac stránce</a> k vytvoření rozdílu, a k nahlédnutí do posledních updatů pro všechny
+      zdrojové soubory.
+    </p>
+
+    <p>
+      Když jste hotovi, pošlete přeložený soubor na: 
+      <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">Mailing list 
+      překladatelů</a>. Ostatní členové mohou provést kontrolu překladu, 
+      a následně bude Váš překlad umístěn na serveru.
+    </p>
+
+    <h3>Jak vyhledat co je potřeba ?</h3>
+
+    <p>
+      Tady je:
+      <a href="http://status.fsfe.org/web/translations.html">autogenerovaný
+      list všech jazyků,</a> které jsou dostupné. Na této stránce, každý jazyk
+      představuje odkaz na zvláštní stránku, která uvádí seznam všech chybějících
+      a neaktuálních překladů pro daný jazyk.
+    </p>
+
+    <p>
+      Seznam neaktuálních překladů umožňuje pohotové aktualizace:
+      můžete nejen stáhnout zastaralé=neaktuální překlady a aktualizovat
+      je podle anglického originálu; můžete také sledovat změny v logovacích
+      souborech, protokoly změn, kterými soubory prošly. Porovnáním těchto logů
+      může usnadnit vyhledání části překladu, která se od poslední aktualizace v 
+      porovnání s anglickým originálem změnila.
+   </p>
+
+    <p>
+      Tato stránka - stavu překladů je také jedinou cestou k stažení XML
+      souborů, které jsou zabudovány do dynamických stránek, jako soubory
+      obsahující novinky a události. 
+    </p>
+
+    <h3>Stahování kompletních zdrojů</h3>
+
+    <p>
+      Jestliže je pro Vás možné použití subverze, můžete také stáhnout celý 
+      zdrojový strom najednou.
+      Prosím podívejte se zde: <a href="/contribute/web/web.html">FSFE webmaster info-stránka</a> 
+      pro podrobnější informace a instrukce.
+    </p>
+  </body>
+
+  <timestamp>$Date$ $Author$</timestamp>
+<var>&lt;translator&gt;<em>Zdeněk Vavroušek</em>&lt;/translator&gt;</var>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

@@ -7,6 +7,7 @@ use File::Basename;
 use Cwd "abs_path";
 use CGI;
 use POSIX qw(strftime);
+use Text::Format;
 
 our $base_directory;
 BEGIN { $base_directory = dirname(abs_path("../tools/WebBuild")); }
@@ -15,54 +16,58 @@ use lib $base_directory;
 use WebBuild::DynamicContent;
 
 my $content = WebBuild::DynamicContent->new;
+my $query = new CGI;
+my %errors;
 
-#my $query = new CGI;
-#my %errors;
+$query->param("name") = "Fjase Mann";
+$query->param("email") = "asd\@asd.no";
+$query->param("message") = "asd";
 
-#$query->param("name") = "Fjase Mann";
-#$query->param("email") = "asd\@asd.no";
-#$query->param("message") = "asd";
+unless ($query->param("name"))    { $errors{"name"}    = "You must give us your name.";           }
+unless ($query->param("email"))   { $errors{"email"}   = "You must give us your e-mail address."; }
+unless ($query->param("message")) { $errors{"message"} = "You must specify a message.";           }
 
-#unless ($query->param("name"))    { $errors{"name"}    = "You must give us your name.";           }
-#unless ($query->param("email"))   { $errors{"email"}   = "You must give us your e-mail address."; }
-#unless ($query->param("message")) { $errors{"message"} = "You must specify a message.";           }
+unless ($query->param("email") =~ /^(\w¦\-¦\_¦\.)+\@((\w¦\-¦\_)+\.)+[a-zA-Z]{2,}$/) {
+  $errors{"email"} = "This e-mail address is not valid.";
+}
 
-#unless ($query->param("email") =~ /^(\w¦\-¦\_¦\.)+\@((\w¦\-¦\_)+\.)+[a-zA-Z]{2,}$/) {
-#  $errors{"email"} = "This e-mail address is not valid.";
-#}
+unless (length($query->param("message")) > 5) {
+  $errors{"message"} = "This message is too short.";
+}
 
-#unless (length($query->param("message")) > 5) {
-#  $errors{"message"} = "This message is too short.";
-#}
+if (%errors) {
 
-#if (%errors) {
-#  die "Errors!";
-#}
+  my $output = <<ENDHTML;
+
+  
+
+ENDHTML
+
+}
   
 my $date = strftime "%Y-%m-%d", localtime;
 my $time = strftime "%s", localtime;
 
-#open(MAIL, "|/usr/lib/sendmail -t -f ato\@fsfe.org");
-#print MAIL "From: web\@fsfeurope.org\n";
-#print MAIL "To: ato\@fsfe.org\n";
-#print MAIL "Cc: mueller\@fsfeurope.org\n";
-#print MAIL "Subject: New message from website from " . $query->param("name") . "\n\n";
-#print MAIL "We have received a new message from our website contact form.\n\n";
-#print MAIL "Name:   " . $query->param("name") . "\n";
-#print MAIL "E-mail: " . $query->param("email") . "\n\n";
-#print MAIL "---\n";
-#print MAIL $query->param("message") . "\n";
-#print MAIL "---\n$\n\n";
+open(MAIL, "|/usr/lib/sendmail -t -f ato\@fsfe.org");
+print MAIL "From: web\@fsfeurope.org\n";
+print MAIL "To: ato\@fsfe.org\n";
+print MAIL "Cc: mueller\@fsfeurope.org\n";
+print MAIL "Subject: New message from website from " . $query->param("name") . "\n\n";
+print MAIL "We have received a new message from our website contact form.\n\n";
+print MAIL "Name:   " . $query->param("name") . "\n";
+print MAIL "E-mail: " . $query->param("email") . "\n\n";
+print MAIL "---\n";
+print MAIL Text::Format->new({columns => 72})->format($query->param("message")) . "\n";
+print MAIL "---\n\n";
 
-#my $output = <<ENDHTML;
-#
-#<h1>Test</h1>
-#
-#<p>foobar.</p>
-#
-#ENDHTML
+my $output = <<ENDHTML;
 
-my $output = "<p>Test.</p>";
+<h1>Message sent!</h1>
+
+<p>Your message was sent, and we will get in touch with you very soon.</p>
+
+ENDHTML
+
 $content->content($output);
 $content->render;
 

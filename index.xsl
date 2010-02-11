@@ -126,9 +126,11 @@
   <xsl:template match="/html/body">
     <body>
       <div id="banner">
-      	<a href="/vd2010/"><img src="/campaigns/vd2010/vd-2010.png" alt="I ♥ Free Software" /></a>
-      </div>	
+      	<a href="/valentine-2010/"><img src="/campaigns/valentine-2010/valentine-2010.png" alt="I ♥ Free Software" /></a>
+      </div>
+
       <xsl:apply-templates />
+      
       <div id="news">
         <h2><a href="/news/news.html"><xsl:value-of select="/html/text[@id='news']"/></a></h2>
         <xsl:for-each select="/html/set/news

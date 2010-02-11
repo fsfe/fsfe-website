@@ -249,17 +249,17 @@ dl dd {
 
 
 /* banner */
-
 #banner {
-text-align: center;
-padding: .5em;
+	text-align: center;
+	padding: 0 .5em 2em .5em;
 margin-top: -1.3em;
 margin-bottom: 1.3em;
 }
 
 #banner img {
-max-width: 100%;
+	max-width: 100%;
 }
+
 
 /* ------------------------------------------------------------------------- */
 /* Content                                                                   */

@@ -3,6 +3,17 @@
 <xsl:stylesheet version="1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:dt="http://xsltsl.org/date-time">
+  
+  <xsl:element name="div">
+          <xsl:attribute name="id">banner</xsl:attribute>
+            <xsl:element name="a">
+              <xsl:attribute name="href">/campaigns/vd2010/vd2010.html</xsl:attribute>
+		  <xsl:element name="img">
+		    <xsl:attribute name="src">/campaigns/vd2010/vd-2010.png</xsl:attribute>
+		    <xsl:attribute name="alt">I love Free Software</xsl:attribute>
+		  </xsl:element>
+	   </xsl:element>
+        </xsl:element>
 
   <xsl:import href="tools/xsltsl/date-time.xsl" />
   <xsl:output method="xml" encoding="UTF-8" indent="yes" />

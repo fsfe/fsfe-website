@@ -19,4 +19,6 @@ RewriteRule ^help/index(.*) /contribute/contribute$1 [redirect=permanent]
 RewriteRule ^help/help(.*) /contribute/contribute$1 [redirect=permanent]
 RewriteRule ^help/web\.(.*) /contribute/web/web.$1 [redirect=permanent]
 RewriteRule ^help/(.*) /donate/$1 [redirect=permanent]
+RewriteRule ^vd/(.*) /campaigns/$1 [redirect=permanent]
+RewriteRule ^vd2010/(.*) /campaigns/$1 [redirect=permanent]
 

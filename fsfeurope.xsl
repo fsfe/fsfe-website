@@ -82,7 +82,7 @@
               <xsl:attribute name="href">/</xsl:attribute>
               <xsl:element name="img">
                 <xsl:attribute name="alt">FSFE Logo</xsl:attribute>
-                <xsl:attribute name="src">/campaigns/valentine-2010/logo.png</xsl:attribute>
+                <xsl:attribute name="src">/campaigns/valentine-2010/logo-vd.png</xsl:attribute>
               </xsl:element>
             </xsl:element>
           </xsl:element>

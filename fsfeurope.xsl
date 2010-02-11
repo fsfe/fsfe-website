@@ -262,10 +262,13 @@
         
         <xsl:element name="div">
           <xsl:attribute name="id">banner</xsl:attribute>
-          <xsl:element name="img">
-            <xsl:attribute name="src">/campaigns/vd2010/vd-2010.png</xsl:attribute>
-            <xsl:attribute name="alt">I love Free Software</xsl:attribute>
-          </xsl:element>
+            <xsl:element name="a">
+              <xsl:attribute name="href">/campaigns/vd2010/vd2010.xhtml</xsl:attribute>
+		  <xsl:element name="img">
+		    <xsl:attribute name="src">/campaigns/vd2010/vd-2010.png</xsl:attribute>
+		    <xsl:attribute name="alt">I love Free Software</xsl:attribute>
+		  </xsl:element>
+	   </xsl:element>
         </xsl:element>
 
         <!-- Content -->

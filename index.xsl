@@ -19,23 +19,6 @@
     </xsl:copy>
   </xsl:template>
 
-  <xsl:template match="body">
-    <xsl:copy>
-
-      <xsl:element name="div">
-        <xsl:attribute name="id">banner</xsl:attribute>
-        <xsl:element name="a">
-          <xsl:attribute name="href">/vd2010/</xsl:attribute>
-		      <xsl:element name="img">
-		        <xsl:attribute name="src">/campaigns/vd2010/vd-2010.png</xsl:attribute>
-		        <xsl:attribute name="alt">I ♥ Free Software</xsl:attribute>
-		      </xsl:element>
-	      </xsl:element>
-      </xsl:element>
-
-    </xsl:copy>
-  </xsl:template>
-
   <!-- Show a single news item -->
   <xsl:template name="news">
     <xsl:variable name="link"><xsl:value-of select="link" /></xsl:variable>
@@ -142,6 +125,9 @@
   <!-- In /html/body node, append dynamic content -->
   <xsl:template match="/html/body">
     <body>
+      <div id="banner">
+      	<a href="/vd2010/"><img src="/campaigns/vd2010/vd-2010.png" alt="I ♥ Free Software" /></a>
+      </div>	
       <xsl:apply-templates />
       <div id="news">
         <h2><a href="/news/news.html"><xsl:value-of select="/html/text[@id='news']"/></a></h2>

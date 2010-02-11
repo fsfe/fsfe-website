@@ -259,7 +259,7 @@
           </xsl:element>
         </xsl:if>
         End Fundraising box -->
-        
+        <!-- 
         <xsl:element name="div">
           <xsl:attribute name="id">banner</xsl:attribute>
             <xsl:element name="a">
@@ -270,7 +270,7 @@
 		  </xsl:element>
 	   </xsl:element>
         </xsl:element>
-
+        -->
         <!-- Content -->
         <xsl:element name="div">
           <xsl:attribute name="id">content</xsl:attribute>

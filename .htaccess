@@ -11,15 +11,22 @@ RewriteRule ^law/eucd/(.*) /projects/eucd$1 [redirect=permanent]
 RewriteRule ^law(.*) /projects/law$1 [redirect=permanent]
 RewriteRule ^swpat(.*) /projects/swpat$1 [redirect=permanent]
 RewriteRule ^donate.html /donate/donate.en.html [redirect=permanent]
+
+# New year's resolution in 2009.
 RewriteRule ^2009$ /news/2009/nyr.html [redirect=permanent]
 RewriteRule ^2009/$ /news/2009/nyr.html [redirect=permanent]
+
+# Help section redirs.
 RewriteRule ^help$ /contribute/ [redirect=permanent]
 RewriteRule ^help/$ /contribute/ [redirect=permanent]
 RewriteRule ^help/index(.*) /contribute/contribute$1 [redirect=permanent]
 RewriteRule ^help/help(.*) /contribute/contribute$1 [redirect=permanent]
 RewriteRule ^help/web\.(.*) /contribute/web/web.$1 [redirect=permanent]
 RewriteRule ^help/(.*) /donate/$1 [redirect=permanent]
+
+# Valentine campaign redirects.
 RewriteRule ^valentine/(.*) /campaigns/valentine-2010/$1 [redirect=permanent]
 RewriteRule ^valentine-2010/(.*) /campaigns/valentine-2010/$1 [redirect=permanent]
 RewriteRule ^campaigns/vd2010/(.*) /campaigns/valentine-2010/$1 [redirect=permanent]
+RewriteRule ^campaigns/vd2010 /campaigns/valentine-2010/ [redirect=permanent]
 

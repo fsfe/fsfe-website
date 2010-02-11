@@ -260,7 +260,13 @@
         </xsl:if>
         End Fundraising box -->
         
-        
+        <xsl:element name="div">
+          <xsl:attribute name="id">banner</xsl:attribute>
+          <xsl:element name="img">
+            <xsl:attribute name="src">/campaigns/vd2010/vd-2010.png</xsl:attribute>
+            <xsl:attribute name="alt">I love Free Software</xsl:attribute>
+          </xsl:element>
+        </xsl:element>
 
         <!-- Content -->
         <xsl:element name="div">

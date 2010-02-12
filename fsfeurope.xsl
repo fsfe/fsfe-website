@@ -357,6 +357,12 @@
 
           </xsl:element>
 
+          <p>
+            <a href="/valentine-2010/"><img
+                src="/valentine-2010/vd-i-love-fs-80x15.png"
+                alt="#ilovefs" /></a>
+          </p>
+
         </xsl:element>
         <!-- End Footer -->
 

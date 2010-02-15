@@ -3,6 +3,7 @@ package WebBuild::FormValidation;
 use strict;
 use warnings;
 
+use utf8;
 use CGI;
 
 use base "Exporter";

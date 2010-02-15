@@ -32,20 +32,24 @@ sub has_errors {
 sub get_errors {
   my $self = shift;
 
-  return $self->{errors};
+  if (scalar $self->{errors} > 0) {
+    my $output = "<p>Errors occurred when attempting to process form.</p>\n\n";
+    $output .= "<ul>\n";
+
+    foreach $error ($self->{errors}) {
+      $output .= "\t<li>" . $error{message} . "</li>\n";
+    }
+
+    $output .= "</ul>\n\n";
+    return $output;
+  }
 }
 
 sub add_to_error_stack {
-  my $self = shift;
-  my $new_error = @_;
+  my ($self, $option, $message) = @_;
   #return unless defined $new_error;
 
-  unless ($self->{errors}) {
-    $self->{errors} = "<p>Errors occurred when attempting to process form.</p>";
-    $self->{errors} .= "<ul>";
-  }
-
-  $self->{errors} .= "<li>$new_error</li>";
+  $self->{errors}{$option}{message} = $message;
 }
 
 sub validates_presence_of {
@@ -56,9 +60,9 @@ sub validates_presence_of {
 
   unless ($value) {
     unless ($attrs{"message"}) {
-      add_to_error_stack(ucfirst($option) . " cannot be blank");
+      add_to_error_stack($option, ucfirst($option) . " cannot be blank");
     } else {
-      add_to_error_stack($attrs{"message"});
+      add_to_error_stack($option, attrs{"message"});
     }
   }
 }
@@ -75,9 +79,9 @@ sub validates_length_of {
 
   if (length($value) < $attrs{"min"} || length($value) > $attrs{"max"}) {
     unless ($attrs{"message"}) {
-      add_to_error_stack(ucfirst($option) . " must be between " . $attrs{"min"} . " and " . $attrs{"max"} . " characters");
+      add_to_error_stack($option, ucfirst($option) . " must be between " . $attrs{"min"} . " and " . $attrs{"max"} . " characters");
     } else {
-      add_to_error_stack($attrs{"message"});
+      add_to_error_stack($option, $attrs{"message"});
     }
   }
 }
@@ -105,9 +109,9 @@ sub validates_format_of {
 
   unless ($value =~ /$attrs{"with"}/) {
     unless ($attrs{"message"}) {
-      add_to_error_stack(ucfirst($option) . " is not valid.");
+      add_to_error_stack($option, ucfirst($option) . " is not valid.");
     } else {
-      add_to_error_stack($attrs{"message"});
+      add_to_error_stack($option, $attrs{"message"});
     }
   }
 }

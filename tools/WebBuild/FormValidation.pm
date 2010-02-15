@@ -10,11 +10,21 @@ our @EXPORT = qw(validates_presence_of);
 
 my $q = new CGI;
 
-sub  new {
+sub new {
   my ($class, %args) = @_;
   my $self = bless({}, $class);
 
   return $self;
+}
+
+sub has_errors {
+  my $self = shift;
+
+  if (defined $self->errors) {
+    return 1;
+  } else {
+    return 0;
+  }
 }
 
 sub get_errors {

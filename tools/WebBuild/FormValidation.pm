@@ -45,11 +45,14 @@ sub get_errors {
   }
 }
 
-sub add_to_error_stack {
+sub new_error {
   my ($self, $option, $message) = @_;
-  #return unless defined $new_error;
 
-  $self->{errors}{$option}{message} = $message;
+  unless (defined $q->param($option) && defined $message) {
+    return;
+  }
+
+  $self->{"errors"}{$option} = $message;
 }
 
 sub validates_presence_of {
@@ -60,9 +63,9 @@ sub validates_presence_of {
 
   unless ($value) {
     unless ($attrs{"message"}) {
-      add_to_error_stack($option, ucfirst($option) . " cannot be blank");
+      $self->new_error($option, ucfirst($option) . " cannot be blank");
     } else {
-      add_to_error_stack($option, attrs{"message"});
+      $self->new_error($option, $attrs{"message"});
     }
   }
 }
@@ -79,9 +82,9 @@ sub validates_length_of {
 
   if (length($value) < $attrs{"min"} || length($value) > $attrs{"max"}) {
     unless ($attrs{"message"}) {
-      add_to_error_stack($option, ucfirst($option) . " must be between " . $attrs{"min"} . " and " . $attrs{"max"} . " characters");
+      $self->new_error($option, ucfirst($option) . " must be between " . $attrs{"min"} . " and " . $attrs{"max"} . " characters");
     } else {
-      add_to_error_stack($option, $attrs{"message"});
+      $self->new_error($option, $attrs{"message"});
     }
   }
 }
@@ -109,9 +112,9 @@ sub validates_format_of {
 
   unless ($value =~ /$attrs{"with"}/) {
     unless ($attrs{"message"}) {
-      add_to_error_stack($option, ucfirst($option) . " is not valid.");
+      $self->new_error($option, ucfirst($option) . " is not valid.");
     } else {
-      add_to_error_stack($option, $attrs{"message"});
+      $self->new_error($option, $attrs{"message"});
     }
   }
 }

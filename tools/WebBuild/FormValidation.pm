@@ -36,7 +36,8 @@ sub get_errors {
 }
 
 sub add_to_error_stack {
-  my $new_error = shift;
+  my $self = shift;
+  my $new_error = @_;
   return unless defined $new_error;
 
   unless ($self->errors) {

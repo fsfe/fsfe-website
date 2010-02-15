@@ -38,7 +38,7 @@ sub get_errors {
 sub add_to_error_stack {
   my $self = shift;
   my $new_error = @_;
-  return unless defined $new_error;
+  #return unless defined $new_error;
 
   unless ($self->{errors}) {
     $self->{errors} = "<p>Errors occurred when attempting to process form.</p>";

@@ -125,9 +125,6 @@
   <!-- In /html/body node, append dynamic content -->
   <xsl:template match="/html/body">
     <body>
-      <div id="banner">
-      	<a href="/valentine-2010/valentine-2010.html"><img src="/campaigns/valentine-2010/valentine-2010.png" alt="I ♥ Free Software" /></a>
-      </div>
 
       <xsl:apply-templates />
       

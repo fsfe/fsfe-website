@@ -16,6 +16,8 @@ sub new {
   my ($class, %args) = @_;
   my $self = bless({}, $class);
 
+  $self->errors = "";
+
   return $self;
 }
 
@@ -40,7 +42,7 @@ sub add_to_error_stack {
   my $new_error = @_;
   return unless defined $new_error;
 
-  unless (defined $self->errors) {
+  unless ($self->errors) {
     $self->errors = "<p>Errors occurred when attempting to process form.</p>";
     $self->errors .= "<ul>";
   }

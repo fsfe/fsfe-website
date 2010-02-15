@@ -56,8 +56,7 @@ sub new_error {
 }
 
 sub validates_presence_of {
-  my $option = shift;
-  my %attrs = @_;
+  my ($self, $option, %attrs) = @_;
 
   my $value = $q->param($option);
 
@@ -71,8 +70,7 @@ sub validates_presence_of {
 }
 
 sub validates_length_of {
-  my $option = shift;
-  my %attrs = @_;
+  my ($self, $option, %attrs) = @_;
 
   my $value = $q->param($option);
 
@@ -90,9 +88,8 @@ sub validates_length_of {
 }
 
 sub validates_format_of {
-  my $option = shift;
-  my %attrs = @_;
-
+  my ($self, $options, %attrs) = @_;
+  
   my $value = $q->param($option);
   my @valid_types = ("email");
 

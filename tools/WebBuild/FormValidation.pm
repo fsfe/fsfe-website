@@ -36,7 +36,7 @@ sub get_errors {
     my $output = "<p>Errors occurred when attempting to process form.</p>\n\n";
     $output .= "<ul>\n";
 
-    foreach $error ($self->{errors}) {
+    foreach my $error ($self->{errors}) {
       $output .= "\t<li>" . $error{message} . "</li>\n";
     }
 

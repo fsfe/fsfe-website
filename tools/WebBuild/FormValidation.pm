@@ -88,7 +88,7 @@ sub validates_length_of {
 }
 
 sub validates_format_of {
-  my ($self, $options, %attrs) = @_;
+  my ($self, $option, %attrs) = @_;
   
   my $value = $q->param($option);
   my @valid_types = ("email");

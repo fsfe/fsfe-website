@@ -1,4 +1,5 @@
 RewriteEngine On
+RewriteRule ^self-conception(.*) /about/principles$1 [redirect=permanent]
 RewriteRule ^maffulli /about/team [redirect=permanent]
 RewriteRule ^jakobs /about/team [redirect=permanent]
 RewriteRule ^nanda /about/weiden [redirect=permanent]

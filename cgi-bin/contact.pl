@@ -13,38 +13,39 @@ our $base_directory;
 BEGIN { $base_directory = dirname(abs_path("../tools/WebBuild")); }
 use lib $base_directory;
 
+use WebBuild::FormValidation;
 use WebBuild::DynamicContent;
 
+my $validation = WebBuild::FormValidation->new;
 my $content = WebBuild::DynamicContent->new;
 my $query = new CGI;
-my %errors;
 
-$query->param("name") = "Fjase Mann";
-$query->param("email") = "asd\@asd.no";
-$query->param("message") = "asd";
 
-unless ($query->param("name"))    { $errors{"name"}    = "You must give us your name.";           }
-unless ($query->param("email"))   { $errors{"email"}   = "You must give us your e-mail address."; }
-unless ($query->param("message")) { $errors{"message"} = "You must specify a message.";           }
+validates_presence_of("name");
+validates_format_of("email", type => "email");
+validates_length_of("message", min => 5, max => 2500);
 
-unless ($query->param("email") =~ /^(\w¦\-¦\_¦\.)+\@((\w¦\-¦\_)+\.)+[a-zA-Z]{2,}$/) {
-  $errors{"email"} = "This e-mail address is not valid.";
+if ($validation->has_errors) {
+  $content->content($validation->get_errors);
+  $content->render;
+  exit;
 }
 
-unless (length($query->param("message")) > 5) {
-  $errors{"message"} = "This message is too short.";
-}
 
-if (%errors) {
+#my %errors;
 
-  my $output = <<ENDHTML;
+#unless ($query->param("name"))    { $errors{"name"}    = "You must give us your name.";           }
+#unless ($query->param("email"))   { $errors{"email"}   = "You must give us your e-mail address."; }
+#unless ($query->param("message")) { $errors{"message"} = "You must specify a message.";           }
 
-  
+#unless ($query->param("email") =~ /^(\w¦\-¦\_¦\.)+\@((\w¦\-¦\_)+\.)+[a-zA-Z]{2,}$/) {
+#  $errors{"email"} = "This e-mail address is not valid.";
+#}
 
-ENDHTML
+#unless (length($query->param("message")) > 5) {
+#  $errors{"message"} = "This message is too short.";
+#}
 
-}
-  
 my $date = strftime "%Y-%m-%d", localtime;
 my $time = strftime "%s", localtime;
 

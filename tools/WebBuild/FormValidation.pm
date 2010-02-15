@@ -16,15 +16,13 @@ sub new {
   my ($class, %args) = @_;
   my $self = bless({}, $class);
 
-  $self->errors = "";
-
   return $self;
 }
 
 sub has_errors {
   my $self = shift;
 
-  if (defined $self->errors) {
+  if (defined $self->{errors}) {
     return 1;
   } else {
     return 0;
@@ -34,7 +32,7 @@ sub has_errors {
 sub get_errors {
   my $self = shift;
 
-  return $self->errors;
+  return $self->{errors};
 }
 
 sub add_to_error_stack {
@@ -42,12 +40,12 @@ sub add_to_error_stack {
   my $new_error = @_;
   return unless defined $new_error;
 
-  unless ($self->errors) {
-    $self->errors = "<p>Errors occurred when attempting to process form.</p>";
-    $self->errors .= "<ul>";
+  unless ($self->{errors}) {
+    $self->{errors} = "<p>Errors occurred when attempting to process form.</p>";
+    $self->{errors} .= "<ul>";
   }
 
-  $self->errors .= "<li>$new_error</li>";
+  $self->{errors} .= "<li>$new_error</li>";
 }
 
 sub validates_presence_of {

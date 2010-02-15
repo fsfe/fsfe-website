@@ -70,7 +70,7 @@ sub validates_length_of {
   my $value = $q->param($option);
 
   unless ($attrs{"min"} && $attrs{"max"}) {
-    croak "Missing “min” and “max” attributes for validates_length_of().");
+    die "Missing “min” and “max” attributes for validates_length_of().";
   }
 
   if (length($value) < $attrs{"min"} || length($value) > $attrs{"max"}) {
@@ -90,22 +90,22 @@ sub validates_format_of {
   my @valid_types = ("email");
 
   if (defined $attrs{"type"}) {
-    unless (grep $_ eq $attr{"type"}, @valid_types) {
-      croak "Invalid type “" . $attr{"type"} . "” for validates_format_of().";
+    unless (grep $_ eq $attrs{"type"}, @valid_types) {
+      die "Invalid type “" . $attrs{"type"} . "” for validates_format_of().";
     }
 
-    if ($attr{"type"} eq "email") {
-      $attr{"with"} = "^(\w¦\-¦\_¦\.)+\@((\w¦\-¦\_)+\.)+[a-zA-Z]{2,}\$";
+    if ($attrs{"type"} eq "email") {
+      $attrs{"with"} = "^(\\w¦\\-¦\\_¦\\.)+\\@((\\w¦\\-¦\\_)+\\.)+[a-zA-Z]{2,}\$";
     }
   } else {
     unless ($attrs{"with"}) {
-      croak "Missing “with” argument for validates_format_of().";
+      die "Missing “with” argument for validates_format_of().";
     }
   }
 
   unless ($value =~ /$attrs{"with"}/) {
     unless ($attrs{"message"}) {
-      add_to_error_stack(ucfirst($option) . " is not valid.";
+      add_to_error_stack(ucfirst($option) . " is not valid.");
     } else {
       add_to_error_stack($attrs{"message"});
     }

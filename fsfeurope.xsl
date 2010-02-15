@@ -33,7 +33,7 @@
       <xsl:if test="/buildinfo/@language='ar'">
         <link rel="stylesheet" media="all" href="/style/rtl.css" type="text/css" />
       </xsl:if>
-      <link rel="shortcut icon" href="/graphics/fsfe.ico" type="image/x-icon" />
+      <link rel="shortcut icon" href="/graphics/fsfeurope.ico" type="image/x-icon" />
       <xsl:element name="link">
         <xsl:attribute name="rel">alternate</xsl:attribute>
         <xsl:attribute name="title">FSFE <xsl:value-of select="/buildinfo/textset/text[@id='menu1/news']" /></xsl:attribute>
@@ -82,7 +82,7 @@
               <xsl:attribute name="href">/</xsl:attribute>
               <xsl:element name="img">
                 <xsl:attribute name="alt">FSFE Logo</xsl:attribute>
-                <xsl:attribute name="src">/campaigns/valentine-2010/logo-vd.png</xsl:attribute>
+                <xsl:attribute name="src">/graphics/logo.png</xsl:attribute>
               </xsl:element>
             </xsl:element>
           </xsl:element>
@@ -357,11 +357,6 @@
 
           </xsl:element>
 
-          <p>
-            <a href="/valentine-2010/"><img
-                src="/valentine-2010/vd-i-love-fs-80x15.png"
-                alt="#ilovefs" /></a>
-          </p>
 
         </xsl:element>
         <!-- End Footer -->

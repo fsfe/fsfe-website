@@ -6,84 +6,28 @@ p#category {
 }
 
 // Suppress bullets in grid boxes
-div.box li {
+div.box ul, div.box li {
 	list-style-type: none;
 }
 
-a.external {
+span.external {
 	padding-right: 16px;
 	background: url("http://www.fsfeurope.org/projects/ftf/external.png") top left no-repeat;
 }
 
-
-/* This is the very general left-or-right column setup; we split the packages into two
-   big chunks and send them off to the side.
-*/
-.left {
-	float: left;
-	width: 48%;
-}
-
-.right {
-	float: right;
-	width: 48%;
-}
-
-/* The abstract is the part of the page that explains what the whole
-   page is about. It also contains the localmenu, if relevant. The abstract
-   appears as a single column chunk above the packages or sections.
-*/
-
-#abstract {
-	padding: 1ex 1.5em;
-}
-
-/* Unused menu styling. This could replace the manual formatting applied
-   by the <localmenu> that the FSFE website build script uses.
-*/
-
-#abstract .menu {
-	text-align: center;
-}
-
-#abstract .menu ul {
-	display: inline;
-	margin: 0px;
-}
-
-#abstract .menu li {
-	display: inline;
-}
-
-#abstract .menu li:before {
-	content: "[";
-}
-
-#abstract .menu li:after {
-	content: "]";
-}
 
 /* Each chunk or direction-to-sub-area is called a "package" and can include a
    header, explanatory texts, whatever -- as well as a list of onward links
    for specific topics.
 */
 
-.package {
+.box h3 {
 	margin: 0;
 	background: url("http://www.fsfeurope.org/graphics/corner.png") top left no-repeat;
 	padding: 8px 1em;
-}
-
-.package h3 {
 	text-align: left;
 	text-decoration: none;
 	font-size: medium;
-	margin: 0;
-	padding: 0;
-}
-
-.package p {
-	text-align: justify;
 }
 
 

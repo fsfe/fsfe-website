@@ -1,3 +1,9 @@
+/* Random cruft to start with. */
+
+p#category {
+	display: none;
+}
+
 /* This is the very general left-or-right column setup; we split the packages into two
    big chunks and send them off to the side.
 */

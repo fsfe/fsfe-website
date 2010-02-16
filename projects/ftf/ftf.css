@@ -1,7 +1,7 @@
 /* Random cruft to start with. */
 
 // Suppress the "category" label that otherwise appears at the top of the page 
-p#category {
+#content p#category {
 	display: none;
 }
 

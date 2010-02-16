@@ -6,7 +6,7 @@
 }
 
 // Suppress bullets in grid boxes
-.box li {
+ul.nobullet li {
 	list-style: none;
 }
 
@@ -20,11 +20,11 @@ span.external {
    sub area, and should have explanitory general text above it.
 */
 
-.box ul.continue {
+ul.continue {
 	text-align: right;
 }
 
-.box ul.continue li {
+ul.continue li {
 	list-style: none;
 	font-size: x-small;
 	margin: 0;

@@ -1,5 +1,6 @@
 /* Random cruft to start with. */
 
+// Suppress the "category" label that otherwise appears at the top of the page 
 p#category {
 	display: none;
 }
@@ -79,11 +80,11 @@ p#category {
    sub area, and should have explanitory general text above it.
 */
 
-.package ul.continue {
+.box ul.continue {
 	text-align: right;
 }
 
-.package ul.continue li {
+.box ul.continue li {
 	list-style: none;
 	font-size: x-small;
 	margin: 0;

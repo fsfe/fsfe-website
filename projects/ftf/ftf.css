@@ -5,6 +5,11 @@ p#category {
 	display: none;
 }
 
+// Suppress bullets in grid boxes
+div.box li {
+	list-style-type: none;
+}
+
 /* This is the very general left-or-right column setup; we split the packages into two
    big chunks and send them off to the side.
 */

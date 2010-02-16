@@ -10,6 +10,12 @@ div.box li {
 	list-style-type: none;
 }
 
+a.external {
+	padding-right: 16px;
+	background: url("http://www.fsfeurope.org/projects/ftf/external.png") top left no-repeat;
+}
+
+
 /* This is the very general left-or-right column setup; we split the packages into two
    big chunks and send them off to the side.
 */

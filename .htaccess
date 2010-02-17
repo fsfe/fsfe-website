@@ -37,5 +37,5 @@ RewriteRule ^campaigns/vd2010/(.*) /campaigns/valentine-2010/$1 [redirect=perman
 RewriteRule ^campaigns/vd2010 /campaigns/valentine-2010/ [redirect=permanent]
 
 # Rewrite for dead links to gnupg-ccid stuff
-RewriteRule ^en/content/download/17665/125518/file/gnupg-ccid.rules http://wiki.fsfe.org/Card_howtos/Card_reader_setup_%28udev%29?action=AttachFile&do=view&target=gnupg-ccid.rules [redirect=permanent]
-RewriteRule ^en/content/download/15872/77909/file/gnupg-ccid http://wiki.fsfe.org/Card_howtos/Card_reader_setup_%28udev%29?action=AttachFile&do=view&target=gnupg-ccid [redirect=permanent]
+RewriteRule ^en/content/download/17665/125518/file/gnupg-ccid.rules http://wiki.fsfe.org/Card_howtos/Card_reader_setup_(udev)?action=AttachFile&do=view&target=gnupg-ccid.rules [redirect=permanent]
+RewriteRule ^en/content/download/15872/77909/file/gnupg-ccid http://wiki.fsfe.org/Card_howtos/Card_reader_setup_(udev)?action=AttachFile&do=view&target=gnupg-ccid [redirect=permanent]

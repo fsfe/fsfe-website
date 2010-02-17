@@ -3,6 +3,7 @@
 // Suppress the "category" label that otherwise appears at the top of the page 
 #content p#category {
 	display: none;
+	float: right;
 }
 
 // Suppress bullets in grid boxes

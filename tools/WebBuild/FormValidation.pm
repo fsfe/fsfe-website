@@ -8,7 +8,7 @@ use CGI;
 
 use base "Exporter";
 our @EXPORT = qw(validates_presence_of validates_length_of
-  validates_format_of self);
+  validates_format_of);
 
 my $q = new CGI;
 

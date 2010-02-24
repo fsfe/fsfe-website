@@ -36,14 +36,18 @@ sub get_errors {
   my $self = shift;
 
   if (scalar $self->{errors} > 0) {
-    my $output = "<p>Errors occurred when attempting to process form.</p>\n\n";
-    $output .= "<ul>\n";
+    my $output = "<div id='form_validation_errors'>\n" .
+      "\t<p>Errors occurred when attempting to process form.</p>\n" .
+      "\n" .
+      "\t<ul>\n";
 
     foreach my $option (sort keys %{ $self->{errors} }) {
-      $output .= "\t<li>" . $self->{errors}{$option} . "</li>\n";
+      $output .= "\t\t<li>" . $self->{errors}{$option} . "</li>\n";
     }
 
-    $output .= "</ul>\n\n";
+    $output .= "\t</ul>\n" .
+      "</div>\n" .
+      "\n";
     return $output;
   }
 }

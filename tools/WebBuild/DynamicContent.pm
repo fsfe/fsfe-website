@@ -8,6 +8,16 @@ use HTML::TreeBuilder::XPath;
 sub new {
   my ($class, %args) = @_;
   my $self = bless({}, $class);
+
+  $self->{layout} = "../boilerplate.en.html";
+}
+
+sub layout {
+  my ($self, $new_layout) = @_;
+
+  if (-f $new_layout) {
+    $self->{layout} = $new_layout;
+  }
 }
 
 sub content {
@@ -25,7 +35,7 @@ sub transform {
   my @output = $output_parser->disembowel;
 
   my $document_parser = HTML::TreeBuilder::XPath->new;
-  $document_parser->parse_file("../boilerplate.en.html") or die $!;
+  $document_parser->parse_file($self->{layout}) or die $!;
 
   my $content = $document_parser->findnodes('//div[@id="content"]')->[0];
   $content->findnodes("//p")->[0]->delete;

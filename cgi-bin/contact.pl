@@ -29,6 +29,7 @@ $form->validates_format_of("email", type => "email");
 $form->validates_length_of("message", min => 5, max => 2500);
 
 if ($form->has_errors) {
+  $content->layout("../contact/contact.en.html");
   $content->content($form->get_errors);
   $content->render;
   exit;

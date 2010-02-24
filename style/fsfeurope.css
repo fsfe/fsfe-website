@@ -443,6 +443,15 @@ p#introduction {
 }
 
 
+/* form validation */
+#form_validation_errors {
+	background-color: rgb(245,215,205);
+	border: 1px solid #ccc;
+	color: rgb(236,54,53);
+	padding: 0 1em;
+}
+
+
 /* press releases */
 dl#press-releases dt {
 	font-weight: normal;

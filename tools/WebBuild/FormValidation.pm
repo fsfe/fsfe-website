@@ -8,7 +8,7 @@ use CGI;
 
 use base "Exporter";
 our @EXPORT = qw(validates_presence_of validates_length_of
-  validates_format_of);
+  validates_format_of self);
 
 my $q = new CGI;
 
@@ -21,6 +21,9 @@ sub new {
 
 sub has_errors {
   my $self = shift;
+
+  #use Data::Dumper;
+  #die Dumper($self->{errors});
 
   if (defined $self->{errors}) {
     return 1;
@@ -48,9 +51,9 @@ sub get_errors {
 sub new_error {
   my ($self, $option, $message) = @_;
 
-  unless (defined $q->param($option) && defined $message) {
-    return;
-  }
+#  unless ($q->param($option) eq && defined $message) {
+#    return;
+#  }
 
   $self->{"errors"}{$option} = $message;
 }
@@ -58,9 +61,9 @@ sub new_error {
 sub validates_presence_of {
   my ($self, $option, %attrs) = @_;
 
-  my $value = $q->param($option);
+  my $value = ""; #$q->param($option);
 
-  unless ($value) {
+  if ($value eq "") {
     unless ($attrs{"message"}) {
       $self->new_error($option, ucfirst($option) . " cannot be blank");
     } else {
@@ -72,7 +75,7 @@ sub validates_presence_of {
 sub validates_length_of {
   my ($self, $option, %attrs) = @_;
 
-  my $value = $q->param($option);
+  my $value = "a Asdk asdkjahsd "; #$q->param($option);
 
   unless ($attrs{"min"} && $attrs{"max"}) {
     die "Missing “min” and “max” attributes for validates_length_of().";
@@ -89,8 +92,8 @@ sub validates_length_of {
 
 sub validates_format_of {
   my ($self, $option, %attrs) = @_;
-  
-  my $value = $q->param($option);
+
+  my $value = "asd\@asd"; #$q->param($option);
   my @valid_types = ("email");
 
   if (defined $attrs{"type"}) {

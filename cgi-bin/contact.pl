@@ -17,17 +17,19 @@ use lib $base_directory;
 use WebBuild::FormValidation;
 use WebBuild::DynamicContent;
 
-my $validation = WebBuild::FormValidation->new;
+my $form = WebBuild::FormValidation->new;
 my $content = WebBuild::DynamicContent->new;
 my $query = new CGI;
 
+#$query->param("name") = "Foo Bar";
+#$query->param("email") = "asd\@asd";
 
-validates_presence_of("name");
-validates_format_of("email", type => "email");
-validates_length_of("message", min => 5, max => 2500);
+$form->validates_presence_of("name");
+$form->validates_format_of("email", type => "email");
+$form->validates_length_of("message", min => 5, max => 2500);
 
-if ($validation->has_errors) {
-  $content->content($validation->get_errors);
+if ($form->has_errors) {
+  $content->content($form->get_errors);
   $content->render;
   exit;
 }

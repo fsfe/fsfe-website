@@ -51,7 +51,7 @@ cd ${SOURCE}
 echo "$(date)  Cleaning old build directories."
 # -----------------------------------------------------------------------------
 
-rm -rf /home/www/tmp.*
+rm -rf ${TMP%.*}.*
 
 # -----------------------------------------------------------------------------
 echo "$(date)  Updating source files from SVN."

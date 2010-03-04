@@ -10,6 +10,8 @@ sub new {
   my $self = bless({}, $class);
 
   $self->{layout} = "../boilerplate.en.html";
+
+  return $self;
 }
 
 sub layout {

@@ -16,8 +16,9 @@ sub new {
 
 sub layout {
   my ($self, $new_layout) = @_;
-
-  if (-f $new_layout) {
+  
+  if (-f "../" . $new_layout) {
+    die $new_layout;
     $self->{layout} = $new_layout;
   }
 }

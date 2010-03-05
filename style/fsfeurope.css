@@ -277,12 +277,12 @@ margin-bottom: 1.3em;
 #content h2,
 #content h3 {
   color: #202D79;
+  line-height: 100%;
 }
 
 #content h1 {
 	border-bottom: 1px solid rgb(210,210,210);
 	font-size: 250%;
-	line-height: 100%;
 	margin: 0 -.2em;
 	padding: 0 0 .5em .2em;
 }

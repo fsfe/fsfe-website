@@ -319,12 +319,6 @@ margin-bottom: 1.3em;
 	padding: 0 2em 2em 0;
 }
 
-/*
-#content .image img, #content img.image {
-	max-width:100%;
-}
-*/
-
 #content .image.right {
 	float: right;
 	padding: 0 0 2em 2em;
@@ -762,8 +756,6 @@ h4#subpages + ul li p {
 
 #footer {
   clear: both;
-  /*border: 5px #FDFDFD solid;    /* IE workaround */
-  /*padding: 2em .5em 1em .5em;*/
 	margin: 0 auto 1em auto;
 	padding: 2em .5em;
   font-size: 90%;
@@ -949,7 +941,7 @@ code.footnote {
 
 /* FIXME: Use <strong> instead */
 span.emph {
-   font-weight: bold;
+  font-weight: bold;
 }
 
 ul.spaced li, ol.spaced li { /* Spaced listings, use this instead of <br /> */

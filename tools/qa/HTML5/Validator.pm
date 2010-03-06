@@ -20,8 +20,10 @@ package HTML5::Validator;
 
 use strict;
 use warnings;
-use vars qw($VERSION @ISA);
 
+use Carp;
+
+use vars qw($VERSION @ISA);
 my $VERSION = "1";
 
 sub new {
@@ -35,6 +37,22 @@ sub init {
   my $self = shift;
   
   my %args = @_;
+
+  my %supported_encodings = (
+    "html"  => "text/html",
+    "htm"   => "text/html",
+    "xhtml" => "application/xhtml+xml",
+    "xht"   => "application/xhtml+xml",
+    "xml"   => "application/xml"
+  );
+
+  if (defined $args{encoding}) {
+    unless (grep $_ eq $args{encoding}, %supported_encodings) {
+      croak "Invalid encoding '" . $args{encoding} . "'";
+    } else {
+      $self->{encoding} = $args{encoding};
+    }
+  }
 
   return $self;
 }

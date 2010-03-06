@@ -26,6 +26,14 @@ use Carp;
 use vars qw($VERSION @ISA);
 my $VERSION = "1";
 
+my %supported_encodings = (
+  "html"  => "text/html",
+  "htm"   => "text/html",
+  "xhtml" => "application/xhtml+xml",
+  "xht"   => "application/xhtml+xml",
+  "xml"   => "application/xml"
+);
+
 sub new {
   my $class = shift; 
   my $self = bless {}, $class;
@@ -37,14 +45,6 @@ sub init {
   my $self = shift;
   
   my %args = @_;
-
-  my %supported_encodings = (
-    "html"  => "text/html",
-    "htm"   => "text/html",
-    "xhtml" => "application/xhtml+xml",
-    "xht"   => "application/xhtml+xml",
-    "xml"   => "application/xml"
-  );
 
   if (defined $args{encoding}) {
     unless (grep $_ eq $args{encoding}, %supported_encodings) {
@@ -63,8 +63,6 @@ sub init {
   } elsif ($args{force_xhtml}) {
     $self->{content_type} = $supported_encodings{xhtml};
   }
-
-  die $self->{content_type};
 
   return $self;
 }

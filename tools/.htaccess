@@ -1,9 +1,2 @@
-RewriteEngine on
-
-<DirectoryMatch "/(?!.*/qa$)">
-  Order deny,allow
-  Deny from all
-</DirectoryMatch>
-
-# Deny From All
+Deny From All
 

@@ -164,3 +164,5 @@ echo "$(date)  Build complete."
 cp ${STATUS}/status.txt ${STATUS}/status-finished.txt
 cat ${STATUS}/status-finished.txt >> ${STATUS}/status-log.txt
 cp tools/status.php ${STATUS}/index.php
+cp tools/qa/reports/* ${STATUS}/qa/reports/
+

@@ -15,7 +15,7 @@
       function removeValue(field) {
         if (!changedFields[field.getAttribute("name")]) {
           changedFields[field.getAttribute("name")] = true;
-          field.value("");
+          field.value = "";
         }
 
         return false;

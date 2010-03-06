@@ -2,8 +2,26 @@
 
 <html>
   <head>
-    <link href="/style/grid.css" rel="stylesheet"/>
     <title>Αίθουσα Τύπου - FSFE</title>
+    <link href="/style/grid.css" rel="stylesheet"/>
+    <script>
+
+      /*
+       * Fields that carry values at page load will be emptied if this
+       * is called and the field has not been edited before.
+       */
+      var changedFields = new Array();
+
+      function removeValue(field) {
+        if (!changedFields[field.getAttribute("name")]) {
+          changedFields[field.getAttribute("name")] = true;
+          field.value = "";
+        }
+
+        return false;
+      }
+
+    </script>
   </head>
 
   <body>
@@ -31,7 +49,6 @@
 
    <div class="grid-50-50">
       <div class="box first">
-
     <h2>Δείτε τα Δελτία Τύπου</h2>
 
      <p>
@@ -41,7 +58,7 @@
 
         <form method="post" action="http://mail.fsfeurope.org/mailman/subscribe/press-release">
           <p>
-            <input type="text" name="email" value="your@email.com" onClick="this.value = ''" />
+            <input type="text" name="email" value="youremail@example.com" onClick="removeValue(this)" />
             <input type="submit" value="Subscribe" />
           </p>
         </form>
@@ -75,7 +92,7 @@
     </address>
 
     <p>
-      Phone: +49-30-27595290
+      Τηλέφωνο: +49-30-27595290
     </p>
 
     <p>

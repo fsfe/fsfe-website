@@ -54,7 +54,40 @@ sub init {
     }
   }
 
+  if ($args{force_html} && $args{force_xhtml}) {
+    croak "Cannot force HTML and XHTML at the same time.";
+  }
+
+  if ($args{force_html}) {
+    $self->{content_type} = $supported_encodings{html};
+  } elsif ($args{force_xhtml}) {
+    $self->{content_type} = $supported_encodings{xhtml};
+  }
+
+  die $self->{content_type};
+
   return $self;
+}
+
+sub parse_file {
+  my ($self, $filename) = @_;
+  $self->{filename} = $filename;
+
+  unless (-f $self->{filename}) {
+    croak "Cannot find file '" . $self->{filename} . "'";
+  }
+
+  if ($self->{filename} =~ /^.*\.([A-Za-z]+)$/) {
+    my $ext = lc($&);
+
+    unless (grep $_ eq $ext, %supported_encodings) {
+      croak "Unable to guess Content-Type from filename.  Please force the type.";
+    } else {
+      $self->{content_type} = $supported_encodings{$ext};
+    }
+  } else {
+    croak "Could not extract a filename extension.  Please force the type.";
+  }
 }
 
 1;

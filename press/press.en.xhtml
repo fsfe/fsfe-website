@@ -12,10 +12,10 @@
        */
       var changedFields = new Array();
 
-      function removeValue() {
-        if (!changedFields[this.getAttribute("name")]) {
-          changedFields[this.getAttribute("name")] = true;
-          this.value("");
+      function removeValue(field) {
+        if (!changedFields[field.getAttribute("name")]) {
+          changedFields[field.getAttribute("name")] = true;
+          field.value("");
         }
 
         return false;

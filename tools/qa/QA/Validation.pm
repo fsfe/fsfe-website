@@ -36,8 +36,7 @@ sub new {
 }
 
 sub init {
-  my $self = shift;
-  my %args = @_;
+  my ($self, %args) = @_;
 
   $self->files($args{files});
 
@@ -47,8 +46,8 @@ sub init {
 sub files {
   my ($self, @files) = @_;
 
-  if (defined ($args{files})) {
-    $self->{files} = $args{files};
+  if (@files) {
+    $self->{files} = @files;
   }
 }
 
@@ -62,7 +61,7 @@ sub test {
     croak "No files to test.";
   }
 
-  foreach $file ($self->{files}) {
+  foreach my $file ($self->{files}) {
     unless (-f $file) {
       $report->new_test_result(name    => $file,
                                outcome => "FAIL",
@@ -72,7 +71,7 @@ sub test {
     $validator->parse_file($file);
   }
 
-  $report->compile;
+  $report->compile_to_file($self->{report_file});
 }
 
 sub get_report {

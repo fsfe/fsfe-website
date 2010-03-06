@@ -39,8 +39,7 @@ sub new {
 }
 
 sub init {
-  my $self = shift;
-  my %args = @_;
+  my ($self, %args) = @_;
 
   if (defined $args{file}) {
     $self->{report_file} = $args{file};
@@ -54,25 +53,27 @@ sub init {
 sub new_test_result {
   my ($self, %args) = @_;
 
+  my ($name, $outcome, $message);
+
   unless (defined $args{name} && defined $args{outcome}) {
     croak "You must define 'name' and 'outcome' arguments.";
   }
 
   if ($args{name}) {
-    my $name = $args{name};
+    $name = $args{name};
   }
 
   unless (grep $_ eq uc($args{outcome}), @supported_outcomes) {
     croak "Invalid outcome '" . $args{outcome} . "'";
   } else {
-    my $outcome = uc($args{outcome});
+    $outcome = uc($args{outcome});
   }
 
   if ($args{message}) {
-    my $message = $args{message};
+    $message = $args{message};
   }
 
-  $self->{tests}{$name} = (
+  $self->{tests}{scalar($self->{tests}) + 1} = (
     outcome => $outcome,
     message => $message
   );

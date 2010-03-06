@@ -27,7 +27,16 @@
   <!-- HTML head -->
   <xsl:template match="head">
     <xsl:copy>
-      <meta name="robots" content="index, follow" />
+      <!-- Don't let search engine robots index untranslated pages -->
+      <xsl:element name="meta">
+        <xsl:attribute name="name">robots</xsl:attribute>
+        <xsl:attribute name="content">
+          <xsl:choose>
+            <xsl:when test="/buildinfo/@language=/buildinfo/document/@language">index, follow</xsl:when>
+            <xsl:otherwise>noindex</xsl:otherwise>
+          </xsl:choose>
+        </xsl:attribute>
+      </xsl:element>
       <link rel="stylesheet" media="all" href="/style/fsfeurope.css" type="text/css" />
       <link rel="stylesheet" media="print" href="/style/print.css" type="text/css" />
       <xsl:if test="/buildinfo/@language='ar'">

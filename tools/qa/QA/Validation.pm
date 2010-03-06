@@ -39,11 +39,17 @@ sub init {
   my $self = shift;
   my %args = @_;
 
-  if (defined $args{files}) {
-    $self->{files} = $args{files};
-  }
+  $self->files($args{files});
 
   return $self;
+}
+
+sub files {
+  my ($self, @files) = @_;
+
+  if (defined ($args{files})) {
+    $self->{files} = $args{files};
+  }
 }
 
 sub test {
@@ -51,6 +57,10 @@ sub test {
 
   my $validator = HTML5::Validator->new;
   my $report = QA::Report->new(file => $self->{report_file});
+
+  if (scalar($self->{files}) == 0) {
+    croak "No files to test.";
+  }
 
   foreach $file ($self->{files}) {
     unless (-f $file) {

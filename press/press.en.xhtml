@@ -2,8 +2,26 @@
 
 <html>
   <head>
-    <link href="/style/grid.css" rel="stylesheet"/>
     <title>Press Room - FSFE</title>
+    <link href="/style/grid.css" rel="stylesheet" />
+    <script>
+
+      /*
+       * Fields that carry values at page load will be emptied if this
+       * is called and the field has not been edited before.
+       */
+      var changedFields = new Array();
+
+      function removeValue() {
+        if (!changedFields[this.getAttribute("name")]) {
+          changedFields[this.getAttribute("name")] = true;
+          this.value("");
+        }
+
+        return false;
+      }
+
+    </script>
   </head>
 
   <body>
@@ -43,7 +61,7 @@
 
         <form method="post" action="http://mail.fsfeurope.org/mailman/subscribe/press-release">
           <p>
-            <input type="text" name="email" value="your@email.com"  onClick="this.value = ''" />
+            <input type="text" name="email" value="youremail@example.com" onClick="removeValue()" />
             <input type="submit" value="Subscribe" />
           </p>
         </form>
@@ -58,21 +76,23 @@
       <div class="box">
         <h2><a href="/news/news.html" class="feed">Latest news</a></h2>
 
-        <dynamic-content/>
+        <dynamic-content />
       </div>
     </div>
+
 
     <h2>Enquiries</h2>
 
     <p>
-    Please direct enquiries to <a href="mailto:press@fsfeurope.org">press@fsfeurope.org</a>,
-    or by post to:
+      Please direct enquiries to <a
+        href="mailto:press@fsfeurope.org">press@fsfeurope.org</a>, or by post
+      to:
     </p>
 
     <address>
-      Free Software Foundation Europe e.V.<br/>
-      Linienstr. 141 <br/>
-      10115 Berlin <br/>
+      Free Software Foundation Europe e.V.<br />
+      Linienstr. 141<br />
+      10115 Berlin<br />
       Germany
     </address>
 
@@ -96,13 +116,17 @@
         </p>
       </li>
 
-      <!-- we should have a link to a subset of people on our people page who can give official press statements -->
+      <!--
+        We should have a link to a subset of people on our people page who can
+        give official press statements
+      -->
 
       <li>
         <h3><a href="/about/basics/freesoftware.html">Free Software Basics</a></h3>
         <!-- Later this should link to /freesoftware/ -->
         <p>
-          Learn the difference between Free Software, Open Source, and Libre Software.
+          Learn the difference between Free Software, Open Source, and Libre
+          Software.
         </p>
       </li>
     </ul>

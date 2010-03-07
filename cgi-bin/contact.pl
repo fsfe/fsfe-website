@@ -50,9 +50,9 @@ print MAIL "---\n\n";
 
 my $output = <<ENDHTML;
 
-<h1>Message sent!</h1>
-
-<p>Your message was sent, and we will get in touch with you very soon.</p>
+<div id="flash">
+  <p>Your message was sent, and we will get in touch with you very soon.</p>
+</div>
 
 ENDHTML
 

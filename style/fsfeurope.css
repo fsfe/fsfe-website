@@ -438,12 +438,21 @@ p#introduction {
 
 
 /* form validation */
+#form_validation_errors,
+#flash {
+  border: 1px solid #ccc;
+  padding: 0 1em;
+  margin-bottom: 1em;
+}
+
 #form_validation_errors {
 	background-color: rgb(245,215,205);
-	border: 1px solid #ccc;
 	color: rgb(236,54,53);
-	padding: 0 1em;
-  margin-bottom: 1em;
+}
+
+#flash {
+  background-color: #f4f8fa;
+  color: rgb(107,179,64);
 }
 
 

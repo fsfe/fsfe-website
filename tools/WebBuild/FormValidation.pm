@@ -114,7 +114,8 @@ sub validates_format_of {
     }
   }
 
-  unless ($value =~ /$attrs{"with"}/) {
+  #unless ($value =~ /$attrs{"with"}/) {
+  unless ($value =~ /^[_a-zA-Z0-9-]+(\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.(([0-9]{1,3})|([a-zA-Z]{2,3})|(aero|coop|info|museum|name))$/) {
     unless ($attrs{"message"}) {
       $self->new_error($option, ucfirst($option) . " is not valid.");
     } else {

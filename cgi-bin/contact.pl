@@ -38,8 +38,8 @@ my $time = strftime "%s", localtime;
 
 open(MAIL, "|/usr/lib/sendmail -t -f ato\@fsfe.org");
 print MAIL "From: web\@fsfeurope.org\n";
-print MAIL "To: ato\@fsfe.org\n";
-print MAIL "Cc: mueller\@fsfeurope.org\n";
+print MAIL "To: office\@fsfeurope.org\n";
+print MAIL "Cc: ato\@fsfe.org, mueller\@fsfeurope.org\n";
 print MAIL "Subject: New message from website from " . $query->param("name") . "\n\n";
 print MAIL "We have received a new message from our website contact form.\n\n";
 print MAIL "Name:   " . $query->param("name") . "\n";
@@ -51,7 +51,10 @@ print MAIL "---\n\n";
 my $output = <<ENDHTML;
 
 <div id="flash">
-  <p>Your message was sent, and we will get in touch with you very soon.</p>
+  <p>
+    Your message was sent, and we will get in touch with you very
+    soon.
+  </p>
 </div>
 
 ENDHTML

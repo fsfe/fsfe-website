@@ -25,7 +25,7 @@ sub has_errors {
   #use Data::Dumper;
   #die Dumper($self->{errors});
 
-  if (defined $self->{errors}) {
+  if (scalar($self->{errors}) > 0) {
     return 1;
   } else {
     return 0;
@@ -65,7 +65,7 @@ sub new_error {
 sub validates_presence_of {
   my ($self, $option, %attrs) = @_;
 
-  my $value = ""; #$q->param($option);
+  $q->param($option);
 
   if ($value eq "") {
     unless ($attrs{"message"}) {
@@ -79,7 +79,7 @@ sub validates_presence_of {
 sub validates_length_of {
   my ($self, $option, %attrs) = @_;
 
-  my $value = "a Asdk asdkjahsd "; #$q->param($option);
+  $q->param($option);
 
   unless ($attrs{"min"} && $attrs{"max"}) {
     die "Missing “min” and “max” attributes for validates_length_of().";
@@ -97,7 +97,7 @@ sub validates_length_of {
 sub validates_format_of {
   my ($self, $option, %attrs) = @_;
 
-  my $value = "asd\@asd"; #$q->param($option);
+  $q->param($option);
   my @valid_types = ("email");
 
   if (defined $attrs{"type"}) {

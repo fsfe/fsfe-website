@@ -3,6 +3,7 @@ package WebBuild::DynamicContent;
 use strict;
 use warnings;
 
+use Carp;
 use HTML::TreeBuilder::XPath;
 
 sub new {
@@ -37,17 +38,24 @@ sub transform {
   my @output = $output_parser->disembowel;
 
   my $document_parser = HTML::TreeBuilder::XPath->new;
-  $document_parser->parse_file($self->{layout}) or die $!;
+  $document_parser->parse_file($self->{layout}) or croak $!;
 
   my $content = $document_parser->findnodes('//div[@id="content"]')->[0];
-  $content->findnodes("//p")->[0]->delete;
-  my $old_content = $content->detach_content;
+
+  if ($self->{layout} =~ /boilerplate/) {
+    $content->findnodes("//p")->[0]->delete;
+  }
+
+  my @old_content = $content->content_list;
 
   foreach my $node (@output) {
     $content->push_content($node);
   }
 
-  $content->push_content($old_content);
+  foreach my $n (@old_content) {
+    $content->push_content($n);
+  }
+
   $self->{output} = $document_parser->as_XML;
 }
 

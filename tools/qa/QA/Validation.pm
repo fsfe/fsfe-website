@@ -22,6 +22,7 @@ use strict;
 use warnings;
 
 use Carp;
+use QA::Config;
 use QA::Report;
 use HTML5::Validator;
 
@@ -38,6 +39,11 @@ sub new {
 sub init {
   my ($self, %args) = @_;
 
+  Config::new();
+  Config::load();
+  use Data::Dumper;
+  die Dumper($Config::config);
+
   my @supported_formats = (
     "html",
     "txt"
@@ -53,7 +59,9 @@ sub init {
   if (defined $args{report}) {
     $self->{report_file} = $args{report};
   }
-  
+
+  $self->{revision} = $self->vcs_last_revision;
+
   $self->files($args{files});
 
   return $self;
@@ -87,7 +95,7 @@ sub test {
     $validator->parse_file($file);
   }
 
-  $report->compile_to_file($self->{report_file});
+  $report->compile($self->{report_file});
 }
 
 sub get_report {
@@ -98,6 +106,20 @@ sub get_report {
   } else {
     croak "Report has not yet been generated.";
   }
+}
+
+sub vcs_last_revision {
+  my $self = shift;
+
+  my @supported_vcs = (
+    "svn"
+  );
+
+  unless (grep $_ eq $Config::config->{vcs}, @supported_vcs) {
+    croak "Unsupported VCS '" . $Config::config->{vcs} . "'";
+  }
+
+  return `svn info |grep Revision: |cut -c11-`;
 }
 
 1;

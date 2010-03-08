@@ -73,10 +73,15 @@ sub new_test_result {
     $message = $args{message};
   }
 
-  $self->{tests}{scalar($self->{tests}) + 1} = (
+  #$self->{tests}{scalar($self->{tests}) + 1} = (
+    #outcome => $outcome,
+    #message => $message
+    #);
+
+  $self->{tests}{scalar($self->{tests}) + 1} = {
     outcome => $outcome,
     message => $message
-  );
+  };  
 }
 
 sub compile {

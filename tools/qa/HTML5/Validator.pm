@@ -75,9 +75,11 @@ sub parse_file {
     croak "Cannot find file '" . $self->{filename} . "'";
   }
 
-  if ($self->{filename} =~ /^.*\.([A-Za-z]+)$/) {
-    my $ext = lc($&);
-
+  # FIXME
+  #if ($self->{filename} =~ /^.*\.([A-Za-z]+)$/) {
+  if ($self->{filename} =~ /\.([A-Za-z]+)$/) {
+    my $ext = substr(lc($&), 1);
+    
     unless (grep $_ eq $ext, %supported_encodings) {
       croak "Unable to guess Content-Type from filename.  Please force the type.";
     } else {

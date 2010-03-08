@@ -38,6 +38,22 @@ sub new {
 sub init {
   my ($self, %args) = @_;
 
+  my @supported_formats = (
+    "html",
+    "txt"
+  );
+
+  if (defined $args{format}) {
+    unless (grep $_ eq $args{format}, @supported_formats) {  
+      croak "Invalid format '" . $args{format} . "'";
+    }
+    $self->{report_format} = $args{format};
+  }
+
+  if (defined $args{report}) {
+    $self->{report_file} = $args{report};
+  }
+  
   $self->files($args{files});
 
   return $self;
@@ -47,7 +63,7 @@ sub files {
   my ($self, @files) = @_;
 
   if (@files) {
-    $self->{files} = @files;
+    $self->{files} = \@files;
   }
 }
 
@@ -61,7 +77,7 @@ sub test {
     croak "No files to test.";
   }
 
-  foreach my $file ($self->{files}) {
+  foreach my $file ($self->{files}[0][0]) {
     unless (-f $file) {
       $report->new_test_result(name    => $file,
                                outcome => "FAIL",

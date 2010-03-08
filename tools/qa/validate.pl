@@ -12,6 +12,6 @@ my @files = <../../*.html>;
 #use Data::Dumper;
 #die Dumper(@files);
 
-my $validation = QA::Validation->new(files => @files);
+my $validation = QA::Validation->new(files => \@files, report => "test", format => "html");
 $validation->test;
 

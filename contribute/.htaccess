@@ -1,2 +1,3 @@
 RewriteEngine On
 RewriteRule ^translators\.(.*) /contribute/translators/translators.$1 [redirect=permanent]
+RewriteRule ^booth(.*) http://wiki.fsfe.org/Event_representation [redirect=permanent]

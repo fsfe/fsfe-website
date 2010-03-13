@@ -20,25 +20,137 @@
 use strict;
 use warnings;
 
-use Data::Dumper;
+use Log::Log4perl qw(:easy);
+use Getopt::Long;
+use Pod::Usage;
+use File::Path qw(mkpath);
 
 use QA::Config;
+use QA::Utilities;
 
-while (my ($key, $value) = each(%{ $QA::Config->{modules} })) {
-  my $module = ucfirst($value);
-  eval "use QA::$module";
-  #use QA::$module;
+my $VERSION = 1;
+
+# Logger
+Log::Log4perl->easy_init($INFO);
+my $log = get_logger();
+my $log_file = Log::Log4perl::Appender->new(
+  "Log::Dispatch::File",
+  filename => "qa.log",
+  mode     => "append"
+);
+$log->add_appender($log_file);
+
+# Options
+our $options = {};
+my $options_parser = new Getopt::Long::Parser("config" => ["gnu_compat",
+  "bundling", "permute", "no_getopt_compat"]);
+
+$options_parser->getoptions($options,
+  "debug|d",
+  "help|h",
+  "version|v"
+) or exit;
+
+# Program.
+if ($options->{help}) {
+  pod2usage(-verbose => 2);
+  exit;
+} elsif ($options->{version}) {
+  print "QA tools $VERSION\n";
+  print "Copyright (C) 2010 Andreas Tolf Tolfsen\n";
+  print "Licensed under GNU GPLv3 or later.\n";
+  exit;
+} elsif ($options->{debug}) {
+  $log->level($DEBUG);
 }
 
-die;
+# Config
+$QA::last_revision = QA::Utilities::vcs_last_revision;
+$QA::Config->{report}->{output} .= "/" . $QA::last_revision;
 
-use QA::Validation;
+unless (-d $QA::Config->{report}->{output}) {
+  unless (mkpath($QA::Config->{report}->{output})) {
+    $log->error("Config output directory does not exist '" .
+      $QA::Config->{report}->{output} . "'");
+  }
+}
 
-# Output
+# Modules
+my @available_modules = (
+  "validation"
+);
 
-# Create list of all HTML files.
+my @loaded_modules = ();
+
+$log->info("Starting QA tools");
+
+# Include modules.
+while (my ($key, $value) = each(%{ $QA::Config->{modules} })) {
+  if (grep $_ eq $value, @available_modules) {
+    my $module = ucfirst($value);
+    $log->debug("Including module '$module'");
+    eval "use QA::$module";
+    push @loaded_modules, lc($module);
+  } else {
+    $log->error("Module does not exist '$_'");
+  }
+}
+
+$log->debug("Creating list of all files to be tested");
 my @files = <../../*.html>;
 
-my $validation = QA::Validation->new(files => \@files);
-$validation->test;
+foreach my $module (@loaded_modules) {
+  $log->debug("Loading module '$module'");
+
+  if ($module eq "validation") {
+    my $validation = QA::Validation->new(files => \@files);
+    $validation->test;
+  }
+}
+
+__END__
+
+=head1 NAME
+
+qa - Tools to do quality assurance on static web pages.
+
+=head1 SYNOPSIS
+
+B<qa> [B<-dhv>]
+
+=head1 DESCRIPTION
+
+B<qa> is a program that provides a framework for performing automated
+quality assurance on static web pages.  It can be easily extended with
+modules for various test types.
+
+=head1 OPTIONS
+
+=over 4
+
+=item B<-d>, B<--debug>
+
+Output more verbose messages.
+
+=item B<-h>, B<--help>
+
+Display manual page (this).
+
+=item B<-v>, B<--version>
+
+Displays program version.
+
+=back
+
+=head1 CONFIGURATION
+
+=head1 AUTHOR
+
+Andreas Tolf Tolfsen <ato@fsfe.org>
+
+=head1 WEBSITE
+
+No website yet.
+
+=cut
 

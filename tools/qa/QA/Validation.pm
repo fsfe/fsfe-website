@@ -21,10 +21,7 @@ package QA::Validation;
 use strict;
 use warnings;
 
-use Carp;
-use Data::Dumper;
-use File::Path qw(mkpath);
-use Cwd qw(abs_path);
+use Log::Log4perl qw(get_logger);
 
 use QA::Config;
 use QA::Report;
@@ -33,15 +30,20 @@ use HTML5::Validator;
 use vars qw($VERSION @ISA);
 my $VERSION = 1;
 
+my $log = get_logger("QA::Validation");
+
 sub new {
   my $class = shift;
   my $self = bless {}, $class;
-
+  
   return $self->init(@_);
 }
 
 sub init {
   my ($self, %args) = @_;
+
+  $log->debug("Initializing Validation module");
+  die "yes";
 
   my @supported_formats = (
     "html",
@@ -51,20 +53,12 @@ sub init {
   if (scalar($QA::Config->{report}->{formats}) > 0) {
     while (my ($key, $value) = each(%{ $QA::Config->{report}->{formats} })) {
       unless (grep $_ eq $value, @supported_formats) {  
-        croak "Invalid format '" . $value . "'";
+        $log->error("Invalid format '$_'");
       }
     }
   }
 
-  unless (-d $QA::Config->{report}->{output}) {
-    unless (mkpath($QA::Config->{report}->{output})) {
-      croak "Config output directory does not exist '" . $QA::Config->{report}->{output} . "'";
-    }
-  }
-
-  $self->{report_file} = abs_path($QA::Config->{report}->{output} . "/validation");
-  die $self->{report_file};
-  $self->{revision} = $self->vcs_last_revision;
+  $self->{report_file} = $QA::Config->{report}->{output} . "/validation";
   $self->files($args{files});
 
   return $self;
@@ -85,7 +79,7 @@ sub test {
   my $report = QA::Report->new(file => $self->{report_file});
 
   if (scalar($self->{files}) == 0) {
-    croak "No files to test.";
+    $log->info("No files to test.");
   }
 
   foreach my $file ($self->{files}[0][0]) {
@@ -107,22 +101,8 @@ sub get_report {
   if (-f $self->{report_file}) {
     return $self->{report_file};
   } else {
-    croak "Report has not yet been generated.";
+    $log->info("Report has not yet been generated.");
   }
-}
-
-sub vcs_last_revision {
-  my $self = shift;
-
-  my @supported_vcs = (
-    "svn"
-  );
-
-  unless (grep $_ eq $QA::Config->{vcs}, @supported_vcs) {
-    croak "Unsupported VCS '" . $QA::Config->{vcs} . "'";
-  }
-
-  return `svn info |grep Revision: |cut -c11-`;
 }
 
 1;

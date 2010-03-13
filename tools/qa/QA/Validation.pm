@@ -22,6 +22,10 @@ use strict;
 use warnings;
 
 use Carp;
+use Data::Dumper;
+use File::Path qw(mkpath);
+use Cwd qw(abs_path);
+
 use QA::Config;
 use QA::Report;
 use HTML5::Validator;
@@ -39,29 +43,28 @@ sub new {
 sub init {
   my ($self, %args) = @_;
 
-  Config::new();
-  Config::load();
-  use Data::Dumper;
-  die Dumper($Config::config);
-
   my @supported_formats = (
     "html",
     "txt"
   );
 
-  if (defined $args{format}) {
-    unless (grep $_ eq $args{format}, @supported_formats) {  
-      croak "Invalid format '" . $args{format} . "'";
+  if (scalar($QA::Config->{report}->{formats}) > 0) {
+    while (my ($key, $value) = each(%{ $QA::Config->{report}->{formats} })) {
+      unless (grep $_ eq $value, @supported_formats) {  
+        croak "Invalid format '" . $value . "'";
+      }
     }
-    $self->{report_format} = $args{format};
   }
 
-  if (defined $args{report}) {
-    $self->{report_file} = $args{report};
+  unless (-d $QA::Config->{report}->{output}) {
+    unless (mkpath($QA::Config->{report}->{output})) {
+      croak "Config output directory does not exist '" . $QA::Config->{report}->{output} . "'";
+    }
   }
 
+  $self->{report_file} = abs_path($QA::Config->{report}->{output} . "/validation");
+  die $self->{report_file};
   $self->{revision} = $self->vcs_last_revision;
-
   $self->files($args{files});
 
   return $self;
@@ -95,7 +98,7 @@ sub test {
     $validator->parse_file($file);
   }
 
-  $report->compile($self->{report_file});
+  $report->compile;
 }
 
 sub get_report {
@@ -115,8 +118,8 @@ sub vcs_last_revision {
     "svn"
   );
 
-  unless (grep $_ eq $Config::config->{vcs}, @supported_vcs) {
-    croak "Unsupported VCS '" . $Config::config->{vcs} . "'";
+  unless (grep $_ eq $QA::Config->{vcs}, @supported_vcs) {
+    croak "Unsupported VCS '" . $QA::Config->{vcs} . "'";
   }
 
   return `svn info |grep Revision: |cut -c11-`;

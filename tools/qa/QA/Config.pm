@@ -20,25 +20,30 @@ package Config;
 use strict;
 use warnings;
 
-use Carp;
+use Log::Log4perl qw(get_logger);
 use Cwd "abs_path";
 use File::Basename;
 use File::Spec;
 use XML::Simple;
 
-use vars qw($options);
+my $log = get_logger();
 
 my $current_directory = dirname(abs_path(__FILE__));
 chdir $current_directory;
 my $base_directory = Cwd::realpath(File::Spec->updir);
 chdir $base_directory;
 
-unless (defined $options->{config}) {
-  $options->{config} = "config.xml";
+#die $QA::Options->{config};
+
+use Data::Dumper;
+die Dumper($QA::Options);
+
+unless (defined $QA::Options->{config}) {
+  $QA::Options->{config} = "config.xml";
 }
 
 my $xml_parser = XML::Simple->new;
-$QA::Config = $xml_parser->XMLin($options->{config}) or die "Cannot find configuration file";
+$QA::Config = $xml_parser->XMLin($QA::Options->{config}) or die "Cannot find configuration file";
 
 $QA::Config->{report}->{output} = abs_path($QA::Config->{report}->{output});
 

@@ -25,6 +25,21 @@ use Getopt::Long;
 use Pod::Usage;
 use File::Path qw(mkpath);
 
+# Options
+$QA::Options = {};
+my $options_parser = new Getopt::Long::Parser("config" => ["gnu_compat",
+  "bundling", "permute", "no_getopt_compat"]);
+
+$options_parser->getoptions($QA::Options,
+  "config|c=s",
+  "debug|d",
+  "help|h",
+  "version|v"
+) or exit;
+
+use Data::Dumper;
+die Dumper($QA::Options);
+
 use QA::Config;
 use QA::Utilities;
 
@@ -40,27 +55,16 @@ my $log_file = Log::Log4perl::Appender->new(
 );
 $log->add_appender($log_file);
 
-# Options
-our $options = {};
-my $options_parser = new Getopt::Long::Parser("config" => ["gnu_compat",
-  "bundling", "permute", "no_getopt_compat"]);
-
-$options_parser->getoptions($options,
-  "debug|d",
-  "help|h",
-  "version|v"
-) or exit;
-
 # Program.
-if ($options->{help}) {
+if ($QA::Options->{help}) {
   pod2usage(-verbose => 2);
   exit;
-} elsif ($options->{version}) {
+} elsif ($QA::Options->{version}) {
   print "QA tools $VERSION\n";
   print "Copyright (C) 2010 Andreas Tolf Tolfsen\n";
   print "Licensed under GNU GPLv3 or later.\n";
   exit;
-} elsif ($options->{debug}) {
+} elsif ($QA::Options->{debug}) {
   $log->level($DEBUG);
 }
 
@@ -88,9 +92,9 @@ $log->info("Starting QA tools");
 while (my ($key, $value) = each(%{ $QA::Config->{modules} })) {
   if (grep $_ eq $value, @available_modules) {
     my $module = ucfirst($value);
-    $log->debug("Including module '$module'");
+    $log->debug("Including module '$value'");
     eval "use QA::$module";
-    push @loaded_modules, lc($module);
+    push @loaded_modules, $value;
   } else {
     $log->error("Module does not exist '$_'");
   }
@@ -116,7 +120,7 @@ qa - Tools to do quality assurance on static web pages.
 
 =head1 SYNOPSIS
 
-B<qa> [B<-dhv>]
+B<qa> [B<-c> I<config>] [B<-dhv>]
 
 =head1 DESCRIPTION
 
@@ -127,6 +131,11 @@ modules for various test types.
 =head1 OPTIONS
 
 =over 4
+
+=item B<-c> I<config>, B<--config>=I<config>
+
+Use specified configuration file instead of the default configuration
+file (config.xml).
 
 =item B<-d>, B<--debug>
 

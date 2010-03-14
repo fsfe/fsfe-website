@@ -144,15 +144,13 @@ href="https://trac.fsfe.org/fsfe-web/register">зарегистрировать�
 В системе Subversion <a href="http://svnbook.red-bean.com/en/1.5/svn.advanced.props.special.keywords.html">замена ключевых слов</a> должна включаться явным образом для каждого файла. Поскольку некоторые ключевые слова используются в файлах <var>.xml</var> и <var>.xhtml</var> (например, <var>$</var><var>Author</var><var>$</var> – ключевое слово в нижнем колонтитуле страницы), вы можете настроить автоматическую замену ключевых слов, добавив следующий текст в файл <var>~/.subversion/config</var>:
 </p>
 
-<p class="file">
-<pre>
+    <pre class="file">
 enable-auto-props = yes
 
 [auto-props]
 *.xml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xml;svn:eol-style=native
 *.xhtml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xhtml;svn:eol-style=native
-</pre>
-</p>
+    </pre>
 
 <p>
 Если вы знакомы с программой CVS, вы легко разберётесь с SVN, так как основные команды очень похожи. О различиях между CVS и SVN можно почитать на странице <a href="http://svnbook.red-bean.com/en/1.5svn.forcvs.html">Subversion для пользователей CVS</a>, а сравнение команд CVS и SVN представлено в <a href="http://svn.collab.net/repos/svn/trunk/doc/user/cvs-crossover-guide.html">Руководстве по переходу с CVS на SVN</a>. 

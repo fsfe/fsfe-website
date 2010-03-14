@@ -39,7 +39,20 @@ my $log_file = Log::Log4perl::Appender->new(
   filename => "qa.log",
   mode     => "append"
 );
+my $log_screen = Log::Log4perl::Appender->new(
+  "Log::Dispatch::Screen",
+  name => "screenlog",
+  stderr => 0
+);
+my $log_file_layout = Log::Log4perl::Layout::PatternLayout->new(
+  "%d %p> %F{1}:%L %M - %m%n");
+my $log_screen_layout = Log::Log4perl::Layout::PatternLayout->new(
+  "%m%n");
+
+$log_file->layout($log_file_layout);
+$log_screen->layout($log_screen_layout);
 $log->add_appender($log_file);
+$log->add_appender($log_screen);
 
 # Program.
 if ($QA::Options->{help}) {

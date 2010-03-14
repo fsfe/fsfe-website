@@ -93,7 +93,9 @@ sub compile {
   $log->info("Compiling report...");
 
   use Data::Dumper;
-  return Dumper($self->{tests});
+  print Dumper($self->{tests});
+
+  $log->info("Finished compiling report.");
 }
 
 sub compile_to_file {

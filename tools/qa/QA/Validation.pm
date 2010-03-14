@@ -43,7 +43,6 @@ sub init {
   my ($self, %args) = @_;
 
   $log->debug("Initializing Validation module");
-  die "yes";
 
   my @supported_formats = (
     "html",
@@ -82,16 +81,25 @@ sub test {
     $log->info("No files to test.");
   }
 
+  $log->info("Starting testing:");
+
   foreach my $file ($self->{files}[0][0]) {
     unless (-f $file) {
+      $log->warn("  [ERROR] (Missing file) $file");
+    } else { 
       $report->new_test_result(name    => $file,
                                outcome => "FAIL",
                                message => "Missing file.");
+    
+      if ($validator->parse_file($file)) {
+        $log->info("  [PASS] $file");
+      } else {
+        $log->warn("  [FAIL] $file");
+      }
     }
-
-    $validator->parse_file($file);
   }
 
+  $log->info("Finished testing!");
   $report->compile;
 }
 

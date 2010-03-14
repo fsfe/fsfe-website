@@ -33,11 +33,6 @@ chdir $current_directory;
 my $base_directory = Cwd::realpath(File::Spec->updir);
 chdir $base_directory;
 
-#die $QA::Options->{config};
-
-use Data::Dumper;
-die Dumper($QA::Options);
-
 unless (defined $QA::Options->{config}) {
   $QA::Options->{config} = "config.xml";
 }

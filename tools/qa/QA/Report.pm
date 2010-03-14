@@ -20,10 +20,12 @@ package QA::Report;
 use strict;
 use warnings;
 
-use Carp;
+use Log::Log4perl qw(get_logger);
 
 use vars qw($VERSION @ISA);
 my $VERSION = 1;
+
+my $log = get_logger("QA::Report");
 
 my @supported_outcomes = (
   "PASS",
@@ -44,7 +46,7 @@ sub init {
   if (defined $args{file}) {
     $self->{report_file} = $args{file};
   } else {
-    croak "You must supply a filename for your report.";
+    $log->error("You must supply a filename for your report.");
   }
 
   return $self;
@@ -56,7 +58,7 @@ sub new_test_result {
   my ($name, $outcome, $message);
 
   unless (defined $args{name} && defined $args{outcome}) {
-    croak "You must define 'name' and 'outcome' arguments.";
+    $log->error("You must define 'name' and 'outcome' arguments.");
   }
 
   if ($args{name}) {
@@ -64,7 +66,7 @@ sub new_test_result {
   }
 
   unless (grep $_ eq uc($args{outcome}), @supported_outcomes) {
-    croak "Invalid outcome '" . $args{outcome} . "'";
+    $log->error("Invalid outcome '" . $args{outcome} . "'");
   } else {
     $outcome = uc($args{outcome});
   }
@@ -73,14 +75,22 @@ sub new_test_result {
     $message = $args{message};
   }
 
-  $self->{tests}{scalar($self->{tests}) + 1} = {
+  $log->debug("Inserting new test result ('$name', '$outcome',
+    '$message'");
+
+  my $count = keys %{ $self->{tests} };
+  $count++;
+
+  $self->{tests}{$count} = {
     outcome => $outcome,
     message => $message
-  };  
+  };
 }
 
 sub compile {
   my $self = shift;
+
+  $log->info("Compiling report...");
 
   use Data::Dumper;
   return Dumper($self->{tests});
@@ -88,6 +98,8 @@ sub compile {
 
 sub compile_to_file {
   my $self = shift;
+
+  $log->info("Saving report to '" . $self->{report_file} . "'");
 
   open REPORT, ">", $self->{report_file} or die $!;
   print REPORT $self->compile;
@@ -100,7 +112,7 @@ sub get_report {
   if (-f $self->{report_file}) {
     return $self->{report_file};
   } else {
-    croak "Report has not yet been generated.";
+    $log->error("Report has not yet been generated!");
   }
 }
 

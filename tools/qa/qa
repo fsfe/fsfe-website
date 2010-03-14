@@ -21,25 +21,11 @@ use strict;
 use warnings;
 
 use Log::Log4perl qw(:easy);
-use Getopt::Long;
 use Pod::Usage;
 use File::Path qw(mkpath);
-
-# Options
-$QA::Options = {};
-my $options_parser = new Getopt::Long::Parser("config" => ["gnu_compat",
-  "bundling", "permute", "no_getopt_compat"]);
-
-$options_parser->getoptions($QA::Options,
-  "config|c=s",
-  "debug|d",
-  "help|h",
-  "version|v"
-) or exit;
-
 use Data::Dumper;
-die Dumper($QA::Options);
 
+use QA::Options;
 use QA::Config;
 use QA::Utilities;
 

@@ -75,8 +75,7 @@ sub new_test_result {
     $message = $args{message};
   }
 
-  $log->debug("Inserting new test result ('$name', '$outcome',
-    '$message'");
+  $log->debug("Inserting new test result ('$name', '$outcome', '$message')");
 
   my $count = keys %{ $self->{tests} };
   $count++;

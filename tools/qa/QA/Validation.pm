@@ -86,15 +86,19 @@ sub test {
   foreach my $file ($self->{files}[0][0]) {
     unless (-f $file) {
       $log->warn("  [ERROR] (Missing file) $file");
-    } else { 
+      $log->info("  [PASS] $file");
       $report->new_test_result(name    => $file,
-                               outcome => "FAIL",
+                               outcome => "PASS",
                                message => "Missing file.");
-    
+    } else { 
       if ($validator->parse_file($file)) {
         $log->info("  [PASS] $file");
+        $report->new_test_result(name    => $file,
+                                 outcome => "PASS");
       } else {
         $log->warn("  [FAIL] $file");
+        $report->new_test_result(name    => $file,
+                                 outcome => "FAIL");
       }
     }
   }

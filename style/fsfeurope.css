@@ -122,16 +122,17 @@ dl dd {
 /* ------------------------------------------------------------------------- */
 
 #menu {
-  float: left;
+  /*float: left;*/
   margin: 0;
   padding: 0;
+  position: absolute;
   width: 220px;
 }
 
 #menu ul {
-  margin: 0;
-/*  background: url("/graphics/corner.png") top left no-repeat;*/
 	padding: 1em 0 1em 1.4em;
+  /*background: url("/graphics/corner.png") top left no-repeat;*/
+  margin: 0;
 }
 
 #menu ul ul {
@@ -748,6 +749,7 @@ h4#subpages + ul li {
 	float: left;
 	height: 6.8em;
 	margin-bottom: .1em;
+  min-width: 8em;
 	padding-right: 3%;
 	width: 47%;
 }
@@ -757,6 +759,13 @@ h2#subpages + ul li p,
 h3#subpages + ul li p,
 h4#subpages + ul li p {
 	font-size: 90%;
+}
+
+ul#subpages li:nth-child(odd),
+h2#subpages + ul li:nth-child(odd),
+h3#subpages + ul li:nth-child(odd),
+h4#subpages + ul li:nth-child(odd) {
+  clear: left;
 }
 
 

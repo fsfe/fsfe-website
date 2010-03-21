@@ -552,8 +552,8 @@ form .button a {
 	font-family: "Arial", "Verdana", "Helvetica", sans-serif;
 }
 
-form input,
-form textarea {
+form label + input,
+form label + textarea {
 	width: 60%;
 }
 

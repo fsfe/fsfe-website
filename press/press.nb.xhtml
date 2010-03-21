@@ -1,95 +1,136 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <html>
-<head>
-    <title>FSFE - Kontaktsinformasjon - Pressekontakt</title>
-</head>
-<body>
+  <head>
+    <title>Presserom - FSFE</title>
+    <link href="/style/grid.css" rel="stylesheet" />
+    <script>
 
-    <h1>Kontaktinformasjon</h1>
+      /*
+       * Fields that carry values at page load will be emptied if this
+       * is called and the field has not been edited before.
+       */
+      var changedFields = new Array();
 
-	<localmenu id="3">Pressekontakt</localmenu>
+      function removeValue(field) {
+        if (!changedFields[field.getAttribute("name")]) {
+          changedFields[field.getAttribute("name")] = true;
+          field.value = "";
+        }
 
-	<h2>Pressekontakt</h2>
+        return false;
+      }
 
-<p>Nøl ikke å kontakte oss om du er medlem av pressen.</p>
+    </script>
+  </head>
 
+  <body>
+    <h1>Presse</h1>
 
-<h3>E-post</h3>
+    <p id="introduction">
+      FSFE tror at tilgang til programvare bestemmer hvem som kan
+      delta i det digitale samfunn. Friheten til å
+      <a href="/about/basics/freesoftware.html">bruke, studere, dele og forbedre</a>
+      programvare er nødvendig for likeverdig deltakelse i informasjonsalderen.
+    </p>
 
-<ul>
-
-	<li>For generell kontakt (på engelsk), bruk <a
-	href="mailto:press@fsfeurope.org">press@fsfeurope.org</a> </li>
-
-	<li>For saker relatert til Tyskland (på tysk eller engelsk), bruk <a
-	href="mailto:press@germany.fsfeurope.org">press@germany.fsfeurope.org</a>
-	</li>
-
-	<li>For saker relatert til Italia (på italiensk eller engelsk), bruk <a
-	href="mailto:press@italy.fsfeurope.org">press@italy.fsfeurope.org</a></li>
-
-	<li>For saker relatert til Spania (på spansk eller engelsk), bruk <a
-	href="mailto:press@spain.fsfeurope.org">press@spain.fsfeurope.org</a></li>
-
-	<li>For saker relatert til Sverige (på svensk eller engelsk), bruk <a
-	href="mailto:press@sweden.fsfeurope.org">press@sweden.fsfeurope.org</a>
-	</li>
-
-</ul>
-
-
-<h3>Telefon</h3>
-
-<p>Ring et av de følgende numre, og tast <strong>1</strong> når talemaskinen
-svarer.</p>
-
-<ul>
-	<li>Belgia: +32 2 747 03 57</li>
-	<li>Tyskland: +49 30 896 77 99 09</li>
-	<li>Sverige: +46 31 7802160</li>
-	<li>Sveits: +41 43 500 03 66</li>
-	<li>Storbritannia: +44 29 200 08 17 7</li>
-</ul>
+    <p>
+      The Free Software Foundation Europe (FSFE) er en ideel og
+      ikke-statlig organisasjon aktiv i
+      <a href="/contact/local.html">mange europeiske land</a> og involvert i
+      flere globale aktiviteter. Tilgang til programvare bestemmer deltakelse i 
+      det digitale samfunn: For å sikre likeverdig deltakelse i informasjonsalderen,
+      så vel som fri konkuranse, forfølger og dedikerer Free Software Foundation Europe
+      seg til å fremme fri programvare; definert av frihetene til å bruke, studere,
+      modifisere og kopiere. Grunnlagt i 2001 for å skape bevissthet rundt disse
+      emnene, sikre fri programvare politisk og lovlig, og å gi folk frihet ved å 
+      støtte utviklingen av fri programvare står sentralt i FSFE.
+    </p>
 
 
-<h3>Pressemeldinger</h3>
+    <div class="grid-50-50">
+      <div class="box first">
+        <h2>Få våre presseutgivelser</h2>
 
-<p>For motta <a href="/news/news.html">pressemeldinger</a> kan du tegne et
-abonnement på følgende e-postlister:</p>
+        <p>
+          Ved å abbonnere på våre nyhetsfeeds eller e-postlister kan
+          du bli oppdatert med det nyeste innenfor verden av fri
+          programvare.
+        </p>
 
-<ul>
+        <form method="post" action="http://mail.fsfeurope.org/mailman/subscribe/press-release">
+          <p>
+            <input type="text" name="email" value="dinmail@eksempel.no" onClick="removeValue(this)" />
+            <input type="submit" value="Abbonnere" />
+          </p>
+        </form>
 
-	<li>press-release (for pressemeldinger på engelsk) (<a href=
-	"http://mail.fsfeurope.org/mailman/listinfo/press-release">vevfjes</a>, <a
-	href= "http://mail.fsfeurope.org/pipermail/press-release">arkiv</a>)</li>
+        <p>
+          For umiddelbare oppdateringer og heite nyheter kan du også følge oss <a
+            href="http://identi.ca/fsfe">på Identi.ca</a> or <a
+            href="http://twitter.com/fsfe">på Twitter</a>.
+        </p>
+      </div>
 
-	<li>press-release-de (for pressemeldinger på tysk) (<a
-	href="http://mail.fsfeurope.org/mailman/listinfo/press-release-de">vevfjes</a>,
-	<a href="http://mail.fsfeurope.org/pipermail/press-release-de">arkiv</a>)</li>
+      <div class="box">
+        <h2><a href="/news/news.html" class="feed">Siste nyheter</a></h2>
 
-	<li>press-release-es (for pressemeldinger på spansk) (<a
-	href="http://mail.fsfeurope.org/mailman/listinfo/press-release-es">vevfjes</a>,
-	<a href="http://mail.fsfeurope.org/pipermail/press-release-es">arkiv</a>)</li>
+        <dynamic-content />
+      </div>
+    </div>
 
-	<li>press-release-fr (for pressemeldinger på fransk) (<a
-	href="http://mail.fsfeurope.org/mailman/listinfo/press-release-fr">vevfjes</a>,
-	<a href="http://mail.fsfeurope.org/pipermail/press-release-fr">arkiv</a>)</li>
 
-	<li>press-release-it (for pressemeldinger på italiensk) (<a
-	href="http://mail.fsfeurope.org/mailman/listinfo/press-release-it">vevfjes</a>,
-	<a href="http://mail.fsfeurope.org/pipermail/press-release-it">arkiv</a>)</li>
+    <h2>Spørsmål</h2>
 
-	<li>press-release-sv (for pressemeldinger på svensk) (<a
-	href="http://mail.fsfeurope.org/mailman/listinfo/press-release-sv">vevfjes</a>,
-	<a href="http://mail.fsfeurope.org/pipermail/press-release-sv">arkiv</a>)</li>
+    <p>
+      Vennligst still alle spørsmål til <a
+        href="mailto:press@fsfeurope.org">press@fsfeurope.org</a>, eller ved post
+      til:
+    </p>
 
-</ul>
+    <address>
+      Free Software Foundation Europe e.V.<br />
+      Linienstr. 141<br />
+      10115 Berlin<br />
+      Germany
+    </address>
 
-</body>
-  <translator>Andreas Tolf Tolfsen</translator>
-  <timestamp>$Date$ $Author$</timestamp>
+    <p>
+      Telefon: +49-30-27595290
+    </p>
 
+    <p>
+      For generelle spørsmål vennligst se vår
+      <a href="/contact/contact.html">kontaktinformasjon</a>.
+    </p>
+
+
+    <h2 id="subpages" class="show-heading">Ressurser</h2>
+
+    <ul>
+      <li>
+        <h3><a href="/about/graphics/graphics.html">Logo og grafiske elementer</a></h3>
+        <p>
+          Last ned vår logo og andre grafiske elementer.
+        </p>
+      </li>
+
+      <!--
+        We should have a link to a subset of people on our people page who can
+        give official press statements
+      -->
+
+      <li>
+        <h3><a href="/about/basics/freesoftware.html">Generelt om fri programvare</a></h3>
+        <!-- Later this should link to /freesoftware/ -->
+        <p>
+          Lær forskjellene på fri programvare, åpen kildekode og libre programvare.
+        </p>
+      </li>
+    </ul>
+  </body>
+
+  <timestamp>10-01-23 17:58:15 +0100 (Sam, 23. Jän 2010) $ $Author$</timestamp>
 </html>
 <!--
 Local Variables: ***

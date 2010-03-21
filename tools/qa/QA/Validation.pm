@@ -86,7 +86,6 @@ sub test {
   foreach my $file ($self->{files}[0][0]) {
     unless (-f $file) {
       $log->warn("  [ERROR] (Missing file) $file");
-      $log->info("  [PASS] $file");
       $report->new_test_result(name    => $file,
                                outcome => "PASS",
                                message => "Missing file.");

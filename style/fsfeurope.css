@@ -154,6 +154,8 @@ dl dd {
 }
 
 
+
+
 /* ------------------------------------------------------------------------- */
 /* Localmenu                                                                 */
 /* ------------------------------------------------------------------------- */
@@ -163,6 +165,27 @@ dl dd {
 
 .local_menu_item {
    font-weight: bold;
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* Search box                                                                */
+/* ------------------------------------------------------------------------- */
+
+#menu #search {
+  margin: 0;
+  padding: 0;
+}
+
+#menu #search input[type=text] {
+  padding-right: 2.2em;
+  width: 160px;
+}
+
+#menu #search input[type=image] {
+  border: 0;
+  background-color: transparent;
+  margin: -.3em 0 0 -2.3em;
 }
 
 
@@ -571,6 +594,12 @@ form button,
 form .button a {
 	/* border-radius */
 	text-align: right;
+}
+
+form input[_placeholder_on],
+form input[_placeholder_on]:hover {
+    color: #888888;
+/*  color: rgb(190,190,190);*/
 }
 
 form input,

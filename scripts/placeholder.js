@@ -71,7 +71,9 @@ if (!HTMLInputElement.prototype.__lookupGetter__("placeholder")) {
       var elm = elms[i];
       if (!isTextField(elm))
         continue;
-      if (elm.value == "" && document.activeElement != elm) {
+      if (elm.value == "" &&
+        elm.getAttribute("placeholder") != "" &&
+        document.activeElement != elm) {
         addPlaceholder(elm);
       }
     }

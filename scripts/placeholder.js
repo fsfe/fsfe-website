@@ -4,10 +4,8 @@
  *
  * Suggested styling: input[_placeholder_on] { color:GrayText; }
  *
- * Known issues:
- *  - WebKit doesn't support the .placeholder DOM attribute, so this will
- *    override its native implementation. :-(
- *  - Placeholders are submitted to the server.
+ * Written by Simon Pieters.
+ * Modified by Andreas Tolf Tolfsen <ato@fsfe.org>.
  */
 
 if (!HTMLInputElement.prototype.__lookupGetter__("placeholder")) {

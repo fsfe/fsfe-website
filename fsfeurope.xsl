@@ -55,6 +55,7 @@
         <xsl:attribute name="href">/events/events.<xsl:value-of select="/buildinfo/@language" />.rss</xsl:attribute>
         <xsl:attribute name="type">application/rss+xml</xsl:attribute>
       </xsl:element>
+      <script src="/scripts/placeholder.js"></script>
       <xsl:apply-templates select="@*|node()"/>
     </xsl:copy>
   </xsl:template>
@@ -161,6 +162,7 @@
           
           <xsl:element name="div">
             <xsl:attribute name="id">search</xsl:attribute>
+            
             <xsl:element name="h2">
               <xsl:attribute name="class">n</xsl:attribute>
               <xsl:value-of select="/buildinfo/textset/text[@id='search']" />

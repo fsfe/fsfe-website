@@ -563,6 +563,11 @@ form textarea,
 	padding: .4em;
 }
 
+form input[_placeholder_on],
+form input[_placeholder_on]:hover {
+  color: rgb(190,190,190);
+}
+
 form input.error,
 form select.error,
 form textarea.error {
@@ -575,13 +580,14 @@ form .button a {
 	font-family: "Arial", "Verdana", "Helvetica", sans-serif;
 }
 
-form label + input,
-form label + textarea {
+form input,
+form textarea {
 	width: 60%;
 }
 
 form input[type=submit],
 form input[type=button],
+form input[type=image],
 form select,
 form button,
 form .button a {
@@ -589,18 +595,18 @@ form .button a {
 	width: auto;
 }
 
+form input[type=image] {
+  vertical-align: middle;
+}
+
+/*
 form input[type=submit],
 form button,
 form .button a {
-	/* border-radius */
-	text-align: right;
+	/* border-radius *
+	/*text-align: right;*
 }
-
-form input[_placeholder_on],
-form input[_placeholder_on]:hover {
-    color: #888888;
-/*  color: rgb(190,190,190);*/
-}
+*/
 
 form input,
 form select,

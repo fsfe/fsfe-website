@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <textset>
-  <text id="lastchanged">  Sist endret: </text>
+  <!-- Footer -->
+  <text id="lastchanged"> Sist endret: </text>
   <text id="translator1a">Takk til </text>
   <text id="translator1b"> for denne oversettelsen. </text>
   <text id="translator2">Dette er en uoffisiell oversettelse. </text>
@@ -16,6 +17,12 @@
     Vennligst rapporter problemer med denne siden til
     <em>webmaster at fsfeurope.org</em>.
   </text>
+  <text id="fsfnetwork">
+    FSFE har <a href="/about/fsfnetwork.html">søsterorganisasjoner</a> i
+    <a href="http://www.fsf.org/">Nord-Amerika</a>,
+    <a href="http://www.fsf.org.in/">India</a> og
+    <a href="http://www.fsfla.org/">Latin-Amerika</a>.
+  </text>
   <text id="outdated">
     <strong>Advarsel: </strong> Denne siden kan være utdatert i forhold
     til originalen.  Du kan <a href="/contribute/contribute.html">hjelpe
@@ -27,6 +34,11 @@
       href="/contribute/contribute.html">hjelpe til med
     oversettelser</a>, og andre ting.
   </text>
+  
+  <!-- Conjunctions -->
+  <text id="to">til</text>
+ 
+  <!-- Menu -->
   <text id="menu1/about">Om oss</text>
   <text id="menu1/projects">Prosjekter</text>
   <text id="menu1/documents">Dokumenter</text>
@@ -34,19 +46,53 @@
   <text id="menu1/donate">Donér</text>
   <text id="menu1/order">Bestill</text>
   <text id="menu1/lists">E-postlister</text>
+  <text id="menu1/press">Presse</text>
   <text id="menu1/thankgnus">Takk GNUer</text>
   <text id="menu2/fellowship">Fellowship</text>
   <text id="menu2/fellowship/1-wiki">Wiki</text>
   <text id="menu2/fellowship/2-planet">Planet</text>
   <text id="menu2/fellowship/3-join">Bli med</text>
-  <text id="menu3/priority">Prioriterte lenker</text>
-  <text id="menu3/priority/com-pkg">Profesjonelle tjenester</text>
-  <text id="menu3/priority/fellowship">Brorskapet</text>
-  <text id="menu3/priority/ftf">Lisensiering og juss (FTF)</text>
-  <text id="menu3/priority/os">Standardisering</text>
-  <text id="menu3/priority/pdfreaders">PDFreaders</text>
-  <text id="menu4/sisters">Våre søsterorganisasjoner</text>
-  <text id="menu4/sisters/fsf">FSF</text>
-  <text id="menu4/sisters/fsf_india">FSF India</text>
-  <text id="menu4/sisters/fsf_la">FSF Latin America</text>
+  
+  <!-- Date time -->
+  <text id="months/1">Januar</text>
+  <text id="months/2">Februar</text>
+  <text id="months/3">Mars</text>
+  <text id="months/4">April</text>
+  <text id="months/5">Mai</text>
+  <text id="months/6">Juni</text>
+  <text id="months/7">Juli</text>
+  <text id="months/8">August</text>
+  <text id="months/9">September</text>
+  <text id="months/10">Oktober</text>
+  <text id="months/11">November</text>
+  <text id="months/12">Desember</text>
+
+  <text id="months-abbreviated/1">Jan</text>
+  <text id="months-abbreviated/2">Feb</text>
+  <text id="months-abbreviated/3">Mar</text>
+  <text id="months-abbreviated/4">Apr</text>
+  <text id="months-abbreviated/5">Mai</text>
+  <text id="months-abbreviated/6">Jun</text>
+  <text id="months-abbreviated/7">Jul</text>
+  <text id="months-abbreviated/8">Aug</text>
+  <text id="months-abbreviated/9">Sep</text>
+  <text id="months-abbreviated/10">Okt</text>
+  <text id="months-abbreviated/11">Nov</text>
+  <text id="months-abbreviated/12">Des</text>
+
+  <text id="weekdays/1">Mandag</text>
+  <text id="weekdays/2">Tirsdag</text>
+  <text id="weekdays/3">Onsdag</text>
+  <text id="weekdays/4">Torsdag</text>
+  <text id="weekdays/5">Fredag</text>
+  <text id="weekdays/6">Lørdag</text>
+  <text id="weekdays/7">Søndag</text>
+
+  <text id="weekdays-abbreviated/1">Man</text>
+  <text id="weekdays-abbreviated/2">Tir</text>
+  <text id="weekdays-abbreviated/3">Ons</text>
+  <text id="weekdays-abbreviated/4">Tor</text>
+  <text id="weekdays-abbreviated/5">Fre</text>
+  <text id="weekdays-abbreviated/6">Lør</text>
+  <text id="weekdays-abbreviated/7">Søn</text>
 </textset>

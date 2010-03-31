@@ -51,6 +51,7 @@ my %responsible = (
   "FTF-CONF" => "groot",
   "FTF-TRANS" => "groot",
   "FTF-ECONOMIC" => "groot",
+  "POLICY-CAMPAIGNS" => "gerloff",
   "POLICY-TRAVEL" => "gerloff",
   "MERCHANDISE" => "director",
 );

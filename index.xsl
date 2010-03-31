@@ -126,7 +126,7 @@
   <xsl:template match="/html/body">
     <body>
       <p id="banner">
-        <a href="http://documentfreedom.org"><img alt="Document Freedom Day" src="http://www.documentfreedom.org/images/thumb/0/04/2010-banner-468x60.png/468px-2010-banner-468x60.png"/></a>
+        <a href="http://documentfreedom.org"><img alt="Document Freedom Day" src="http://www.documentfreedom.org/images/2/2c/2010-banner-120x60.png"/></a>
       </p>
 
       <xsl:apply-templates />

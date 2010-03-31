@@ -125,6 +125,9 @@
   <!-- In /html/body node, append dynamic content -->
   <xsl:template match="/html/body">
     <body>
+      <p id="banner">
+        <a href="http://documentfreedom.org"><img alt="Document Freedom Day" src="http://www.documentfreedom.org/images/thumb/0/04/2010-banner-468x60.png/468px-2010-banner-468x60.png"/></a>
+      </p>
 
       <xsl:apply-templates />
       

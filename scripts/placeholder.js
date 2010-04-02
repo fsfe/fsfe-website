@@ -3,9 +3,6 @@
  * implemented in WebKit.
  *
  * Suggested styling: input[_placeholder_on] { color:GrayText; }
- *
- * Written by Simon Pieters.
- * Modified by Andreas Tolf Tolfsen <ato@fsfe.org>.
  */
 
 if (!HTMLInputElement.prototype.__lookupGetter__("placeholder")) {
@@ -72,7 +69,7 @@ if (!HTMLInputElement.prototype.__lookupGetter__("placeholder")) {
       if (!isTextField(elm))
         continue;
       if (elm.value == "" &&
-        elm.getAttribute("placeholder") != "" &&
+        elm.getAttribute("placeholder") &&
         document.activeElement != elm) {
         addPlaceholder(elm);
       }
@@ -85,14 +82,16 @@ if (!HTMLInputElement.prototype.__lookupGetter__("placeholder")) {
       return;
     if (e.target.value == "\uFEFF" + e.target.placeholder) {
       removePlaceholder(e.target);
-      e.target.focus(); // XXX remove this line when opera bug 286219 is fixed
+      //e.target.focus(); // XXX remove this line when opera bug 286219 is fixed
     }
   }, true);
 
   // add placeholder when blurred
   document.addEventListener("blur", function(e) {
-    if (!isTextField(e.target))
+    if (!isTextField(e.target) ||
+      !e.target.getAttribute("placeholder")) {
       return;
+    }
     if (e.target.value == "") {
       addPlaceholder(e.target);
     }

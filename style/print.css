@@ -29,6 +29,10 @@ a, a:link, a:visited {
   display: none;
 }
 
+.menu ul {
+  display: none;
+}
+
 /* Hide language list */
 .language {
   display: none;
@@ -45,7 +49,7 @@ a, a:link, a:visited {
 }
 
 .footer {
-  font-size: 100%;
+  font-size: 80%;
   border: 5px #FFFFFF solid;
 }
 

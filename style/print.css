@@ -5,12 +5,12 @@
 /*
   2007-05-13 19:00 Rainer Kersten - initial version
   2007-05-14 21:00 Reinhard Müller - removed redundant things
-  2010-04-20 17:20 Hugo Roy - make the whole thing works!
+  2010-04-20 17:20 Hugo Roy - update + serif font
 */
 
 
 /* Use white background, grey is bad for printing :-) */
-/* Use "official" FSFE font */
+/* Use "official" FSFE font → Hugo says: don't use sans-serif fonts for printing! */
 
 
 body {

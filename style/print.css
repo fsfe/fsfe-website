@@ -7,7 +7,7 @@
   2007-05-14 21:00 Reinhard Müller - removed redundant things
   2010-04-20 17:20 Hugo Roy - make the whole thing works!
 */
-@media print{
+
 
 /* Use white background, grey is bad for printing :-) */
 /* Use "official" FSFE font */
@@ -25,21 +25,17 @@ a, a:link, a:visited {
 }
 
 /* Hide menu bar */
-.menu {
-  display: none;
-}
-
-.menu ul {
+#menu {
   display: none;
 }
 
 /* Hide language list */
-.language {
+#language {
   display: none;
 }
 
 /* We don't need margins for the content */
-.content {
+#content {
   margin: 0;
   padding: 0;
 }
@@ -57,4 +53,3 @@ a, a:link, a:visited {
   color: #000000;
 }
 
-} /*@media print*/

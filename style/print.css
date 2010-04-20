@@ -5,10 +5,14 @@
 /*
   2007-05-13 19:00 Rainer Kersten - initial version
   2007-05-14 21:00 Reinhard Müller - removed redundant things
+  2010-04-20 17:20 Hugo Roy - make the whole thing works!
 */
+@media print{
 
 /* Use white background, grey is bad for printing :-) */
 /* Use "official" FSFE font */
+
+
 body {
   background: #FFFFFF;
   font-family: "Nimbus Sans L", Helvetica, Arial, sans-serif;
@@ -48,3 +52,5 @@ a, a:link, a:visited {
 .newsleft dt span, .newsright dt span {
   color: #000000;
 }
+
+} /*@media print*/

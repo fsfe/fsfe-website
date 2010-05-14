@@ -13,8 +13,10 @@
 
   <xsl:template match="body">
     <xsl:text>\documentclass[11pt]{article}
-\usepackage[a3paper]{geometry}
-\usepackage[utf8]{inputenc}
+\usepackage[a3paper]{geometry}</xsl:text>
+    <xsl:if test="$language='el'">\usepackage[english,greek]{babel}</xsl:if>
+    <xsl:text>\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{helvet}
 \usepackage{graphics}
@@ -121,6 +123,12 @@
   
   <xsl:template match="b">
     <xsl:text>\subsection{</xsl:text>
+    <xsl:apply-templates select="node()"/>
+    <xsl:text>}</xsl:text>
+  </xsl:template>
+
+  <xsl:template match="latin">
+    <xsl:text>{\selectlanguage{english} </xsl:text>
     <xsl:apply-templates select="node()"/>
     <xsl:text>}</xsl:text>
   </xsl:template>

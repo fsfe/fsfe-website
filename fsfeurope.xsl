@@ -521,7 +521,10 @@
     </xsl:element>
   </xsl:template>
 
-
+  <!-- Ignore "latin" tags, used only for pritable material -->
+  <xsl:template match="latin">
+    <xsl:apply-templates select="@*|node()"/>
+  </xsl:template>
 
   <!-- Do not copy non-HTML elements to output -->
   <xsl:template match="timestamp|

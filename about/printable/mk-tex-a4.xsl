@@ -13,8 +13,10 @@
   <xsl:template match="head"/>
 
   <xsl:template match="body">
-    <xsl:text>\documentclass[a4paper]{article}
-\usepackage[utf8]{inputenc}
+    <xsl:text>\documentclass[a4paper]{article}</xsl:text>
+    <xsl:if test="$language='el'">\usepackage[english,greek]{babel}</xsl:if>
+    <xsl:text>\usepackage{ucs}
+\usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{helvet}
 \usepackage{fancyhdr}
@@ -152,6 +154,12 @@
   
   <xsl:template match="b">
     <xsl:text>{\bfseries </xsl:text>
+    <xsl:apply-templates select="node()"/>
+    <xsl:text>}</xsl:text>
+  </xsl:template>
+
+  <xsl:template match="latin">
+    <xsl:text>{\selectlanguage{english} </xsl:text>
     <xsl:apply-templates select="node()"/>
     <xsl:text>}</xsl:text>
   </xsl:template>

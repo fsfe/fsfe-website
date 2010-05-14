@@ -62,4 +62,3 @@ for i in $*; do
 done
 echo "  </printable>" >> printable.en.xml
 echo "</printableset>" >> printable.en.xml
-

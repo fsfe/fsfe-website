@@ -18,7 +18,7 @@
     <xsl:text>\usepackage{ucs}
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{helvet}
+</xsl:text><xsl:if test="$language!='el'">\usepackage{helvet}</xsl:if><xsl:text>
 \usepackage{fancyhdr}
 \usepackage{multicol}
 </xsl:text><xsl:if test="$style='G'">\usepackage{graphics}

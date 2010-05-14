@@ -11,12 +11,10 @@
   </xsl:template>
   
   <xsl:template match="latin">
-    <xsl:apply-templates select="@*|node()"/>
+    <xsl:value-of select="@*|node()"/>
   </xsl:template>
 
   <xsl:template match="@*|node()" priority="-1">
-    <xsl:copy>
-      <xsl:apply-templates select="@*|node()"/>
-    </xsl:copy>
+    <xsl:apply-templates select="@*|node()"/>
   </xsl:template>
 </xsl:stylesheet>

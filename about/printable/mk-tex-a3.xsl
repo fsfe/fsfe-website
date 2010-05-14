@@ -61,8 +61,8 @@
 
     <!-- Disclaimer -->
     <xsl:if test="$language!='de' and $language!='en' and $language!='es' and $language!='it'">
+      <xsl:if test="$language='el'">\selectlanguage{english} </xsl:if>
       <xsl:text>
-        <xsl:if test="$language='el'">\selectlanguage{english} </xsl:if>
         \bigskip \scriptsize This is an inofficial translation. Please see
         http://www.fsfeurope.org/documents/printable/printable.en.html for the
         original text.

@@ -103,9 +103,9 @@
     <xsl:apply-templates select="node()"/>
     <!-- Disclaimer -->
     <xsl:if test="$language!='de' and $language!='en' and $language!='es' and $language!='it'">
-      <xsl:if test="$language='el'">\selectlanguage{english} </xsl:if>
+      <xsl:if test="$language='el'">\selectlanguage{english}</xsl:if>
       <xsl:text>This is an inofficial translation. Please see </xsl:text>
-      <xsl:text>http://www.fsfeurope.org/documents/printable/printable.en.html</xsl:text>
+      <xsl:text>http://www.fsfe.org/about/printable/printable.en.html</xsl:text>
       <xsl:text> for the original text.</xsl:text>
     </xsl:if>
     <xsl:text>}</xsl:text>
@@ -160,7 +160,7 @@
   </xsl:template>
 
   <xsl:template match="latin">
-    <xsl:text>{\selectlanguage{english} </xsl:text>
+    <xsl:text>{\selectlanguage{english}</xsl:text>
     <xsl:apply-templates select="node()"/>
     <xsl:text>}</xsl:text>
   </xsl:template>

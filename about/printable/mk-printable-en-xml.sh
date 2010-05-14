@@ -38,11 +38,6 @@ for i in $*; do
   base=$(basename $i)
   file=$(echo -n $base | cut --delimiter="." --fields="1")
   lang=$(echo -n $base | cut --delimiter="." --fields="2")
-  if [ "${lang}" == "el" ]; then
-    # Skip Greek since our LaTeX magic doesn't work for non-lating languages
-    # yet.
-    continue
-  fi
   thetype=$(echo -n ${file} | cut --delimiter="-" --fields="1")
   langvar="lang_${lang}"
   moreinfo=$(xsltproc get_moreinfo.xsl $i)

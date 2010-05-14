@@ -100,13 +100,13 @@
 
   <xsl:template match="h1">
     <xsl:text>\section{</xsl:text>
-    <xsl:value-of select="node()"/>
+    <xsl:apply-templates select="node()"/>
     <xsl:text>}</xsl:text>
   </xsl:template>
   
   <xsl:template match="h2">
     <xsl:text>\subsection{</xsl:text>
-    <xsl:value-of select="node()"/>
+    <xsl:apply-templates select="node()"/>
     <xsl:text>}</xsl:text>
   </xsl:template>
   

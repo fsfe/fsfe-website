@@ -11,8 +11,8 @@ pdfs_0 := $(leafletsources:.xhtml=.0.pdf)
 
 all: printable.en.xml $(pdfs_F) $(pdfs_G) $(pdfs_0)
 
-printable.en.xml: $(sources) mk-printable-en-xml.sh
-	/bin/bash mk-printable-en-xml.sh $(sources)
+printable.en.xml: $(leafletsources) mk-printable-en-xml.sh
+	/bin/bash mk-printable-en-xml.sh $(leafletsources)
 
 %.F.pdf: %.xhtml mk-tex-a3.xsl
 	xsltproc --stringparam language $(subst .,,$(suffix $*)) mk-tex-a3.xsl $< | sed -e 's/ /~/' > $*.F.tex

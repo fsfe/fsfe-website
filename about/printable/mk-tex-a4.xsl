@@ -103,6 +103,7 @@
     <xsl:apply-templates select="node()"/>
     <!-- Disclaimer -->
     <xsl:if test="$language!='de' and $language!='en' and $language!='es' and $language!='it'">
+      <xsl:if "$language='el'">\selectlanguage{english} </xsl:if>
       <xsl:text>This is an inofficial translation. Please see </xsl:text>
       <xsl:text>http://www.fsfeurope.org/documents/printable/printable.en.html</xsl:text>
       <xsl:text> for the original text.</xsl:text>

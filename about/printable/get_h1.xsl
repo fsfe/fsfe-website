@@ -4,7 +4,7 @@
   <xsl:output method="text" encoding="UTF-8"/>
 
   <xsl:template match="h1">
-    <xsl:value-of select="node()"/>
+    <xsl:apply-templates select="node()"/>
     <!-- Add dashes between multiple h1 headings -->
     <xsl:if test="../@id='fsfe'"> - </xsl:if>
     <xsl:if test="../@id='free_software'"> - </xsl:if>

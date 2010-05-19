@@ -2,6 +2,11 @@
  * This is an implementation of the placeholder="" attribute as
  * implemented in WebKit.
  *
+ * Written by Simon Pieters <simonp@opera.com>
+ * Improved by Andreas Tolf Tolfsen <ato@fsfe.org>
+ *
+ * Licensed under the MIT license.
+ *
  * Suggested styling: input[_placeholder_on] { color:GrayText; }
  */
 
@@ -21,10 +26,7 @@ if (!HTMLInputElement.prototype.__lookupGetter__("placeholder")) {
             elm.type != "button" &&
             elm.type != "submit" &&
             elm.type != "reset" &&
-            elm.type != "add" &&
             elm.type != "remove" &&
-            elm.type != "move-up" &&
-            elm.type != "move-down" &&
             elm.type != "file" &&
             elm.type != "hidden" &&
             elm.type != "image" &&

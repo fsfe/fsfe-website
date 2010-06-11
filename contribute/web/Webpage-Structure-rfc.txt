@@ -1,0 +1,323 @@
+$Id: Webpage-Structure.txt,v 2.0 2010-16-11 19:02:21 hugo $
+
+= FSFE Web page structure =
+---------------------------
+
+== Introduction ==
+******************
+
+This document describes the directory/organisation structure of the FSFE web
+pages. Maintaining a consistent and clear structure is important.
+
+Since the web page is a central point of disseminating information about Free
+Software and the activities of FSFE and its associate organisations, we need to
+make our best effort to make sure people can easily find what they are looking
+for.
+
+If they get lost or confused, they will feel stupid, which is something no one
+likes, so they will (at best) give up or (at worst) assume that Free Software is
+not worth the effort to get into it.
+
+Please try to make sure that everyone working on the web page knows this
+document and tries to maintain the consistent structure. If you feel something
+is not clear or are not sure where to put something, please feel free to ask
+web@fsfeurope.org.
+
+
+== About expanding the document ==
+**********************************
+
+This document will always remain work in progress. Whenever you
+believe the structure should be modified or expanded in some way,
+please feel free to suggest your ideas to web@fsfeurope.org. If people
+on web@fsfeurope.org agree this is a useful addition, please prepare a
+patch to this document.
+
+Before making changes to this document final, please mail your
+intended patch to team@fsfeurope.org and let them know where to find
+the discussion that preceded this patch so people will be able to
+understand why you feel this patch has become necessary.
+
+For each of these processes, there should be at least a week (better:
+two weeks) allowed feedback time in order to allow people to comment.
+
+
+General notes:
+**************
+
+ - We try to provide every page in as many languages as possible,
+   regardless of where it is published.
+
+   Of course we will not always have all translations at once, so
+   things are being published when we have them and translated over
+   time.
+
+   If this means that a European document is only available in
+   Italian, German or French, then so be it. It is better to get
+   active publishing things than to discourage ourselves by demanding
+   translations that we currently are not willing or able to do.
+
+   Of course we should aim to always have English versions of all
+   pages and preferably write things in English for the European
+   purpose, but this is a recommendation, not a strict rule.
+
+
+   To give potential translators ideas, /help/translation should
+   contain a priority list of things that we would like to see
+   translated first.
+
+
+'''The following part is outdated'''
+
+ - Some of the directories are global to the whole FSFE, others
+   will be supplemented with country-specific branches to contain
+   information that is country specific (whenever applicable).
+
+   Those "Countrified" branches will be put under
+
+	/<country TLD>/
+
+   in the main directory to allow creating "<country>.fsfeurope.org"
+   to map to it.
+
+   Example: The /projects tree will contain projects specifically
+   European, so the specific localised tree for France will be located
+   under /fr/projects
+
+   The most important point about navigation will be to provide
+   several overview pages based on the interest-focus of the web-page
+   visitors that allow easy overview & navigation between the country
+   projects and European projects.
+
+   Although this document speaks of countries and localisation, the
+   boundaries of such a region do not have to be identical to
+   political borders. It is possible that some countries will bundle
+   themselves together or divide themselves up based on political/
+   cultural/language identities.
+
+   We do not seek to define who people feel close to - so if enough
+   people feel a certain "grouping" makes sense, we should go
+   along with it.
+
+   Creating duplicities should be avoided in order not to confuse
+   people.
+
+
+
+Web site structure:
+*******************
+
+Global/European directories:
+(please keep this list alphabetical)
+
+/about
+
+	This directory contains the introductory documents into the
+        ''background, goals and structure'' of the FSFE. It also
+        contains all ''legal documents'' like constitutions of the Hub and
+        the Chapters and the Chapter template-constitution and ''our finances''.
+
+ /about/graphics
+
+	Sub-directory containing ''logo'', artwork & other FSFE
+        things that people sometimes need for web pages(links) and
+        such.
+        
+        Also see: /contribute/designers
+        
+ /about/people/
+ 
+ 	A list of people involved with FSFE, categorized following their
+ 	involvement: members of the European Hub, members of a country team,
+ 	members of a task force, etc.       
+        
+ /about/printable/ ''Move to contribute/advocacy/printable''
+ 	
+ 	Folders, booklets and flyers to print for advocacy. 
+
+
+/associate
+
+	Directory of associate organisations, containing a list of
+	''associate organisations and some contact information'' on the
+	top level. Also, page(s) explaining the associate status and
+	giving information on ''how to become an associate organisation''
+	should go here.
+
+ /associate/<name of associate organisation>
+
+	Sub-directory for the specified associate organisation,
+	containing text, information, material, brochures by the
+	respective associate organisation.
+
+        All pages in here should contain some sort of visible sign
+	that this information was provided by the associate
+	organisation (other than the directory location, that is.)
+
+ /associate/other ''Deprecated''
+
+	Sub-directory containing texts/initiatives/projects that we
+        perceive to be well-written or useful written by people
+	neither in a formal associate organisation nor member of the
+        FSFE.
+        
+/campaigns
+
+	Directory of one-time campaigns, with each campaign having its own
+	directory.
+	
+	Example: /campaigns/valentine-2010/ for Valentine's Day 
+	"I love Free Software" campaign
+	
+/contact
+
+	Directory containing contact information, information about
+	mailing lists.
+        
+/contribute
+
+	This directory contains all information about how to contribute
+        to FSFE's work, by volunteering, helping on daily activities,
+        joining the fellowship or advocating for Free Software. It is also
+        where the information about internships is.
+        
+ /contribute/advocacy
+ 	
+ 	Elements to print or display on web pages for advertising of 
+ 	Free Software and the work of the FSFE.
+ 	
+ 	Also see: /about/printable 
+ 	should go to /contribute/advocacy/printable.html
+
+ /contribute/translators
+
+	Sub-directory containing information about how to get involved
+	in the translation process and also useful links for translators.
+
+ /contribute/web
+
+	Subdirectory containing all the technical information for the
+        web page and information on how to get involved.
+
+ /contribute/designers
+
+	Subdirectory for people with creative skills in graphics.
+
+''This section is not maintained any more.''
+''Documents should go in their respective projects' folder''
+/documents
+
+	This directory contains all documents about Free Software and
+        related topics published by the FSFE. Also one-time
+        initiatives like open letters and such.
+
+        Generally speaking, only documents that will probably be
+        useful to read/refer to for the next 2 years should go in
+        here.
+
+/donate
+
+	Information on how to donate, and a list of donators.
+
+/events
+	This directory contains information about events the FSFE
+	or one of its representatives is present at. Contains
+	overviews of future events.
+
+ /events/<year>
+
+	Sub-directories for the different years containing overview
+	over the events in that particular year. Also, this avoids
+	directory cluttering of main events directory. Sub-directories
+	for the different events should be made when there are
+	pictures, presentations or several files to be put online.
+
+
+/links ''Deprecated''
+
+	Directory containing linkpages to other organisations,
+	initiatives and such. Potentially sorted by topic.
+
+
+/material ''Deprecated''
+
+        Directory containing brochures, information material and other
+        "formatted material" that people may want to print out
+        themselves and/or distribute to colleagues/friends/whoever.
+
+        A subdirectory per brochure/flyer seems useful.
+
+
+/news
+	Directory for one-time events, actions and news. This level
+	contains the overview pages for new & old news.
+
+ /news/<year>
+
+	Sub-directories for the different years to avoid directory
+	cluttering. If something contains pictures or multiple files,
+	please create subdirectories for the entry.
+
+/order
+
+	Information on how to order FSFE brochures, flyers and
+	such as well as information on how to order merchandise.
+
+/press
+
+	Directory containing overview-pages geared towards
+	journalists, trying to make it easier for them to get to the
+	relevant information fast. Should also contain information
+	about press-release mailing lists.
+
+	This directory will probably contain little in terms of
+	additional information, it will more or less try to provide a
+	different type of communicating the information that will be
+	more useful to journalists.
+
+
+/projects ''Transition to /work''
+
+	Directory structure containing projects in sub-directories
+	depending on their focus.
+
+	A project normally will be something that goes over a long
+	period of time (potentially forever), so one-time actions
+	should not go here but rather be put in /news.
+	
+	Each subdirectory is dedicated to a project or an issue.
+
+ /projects/technical ''Deprecated''
+
+	Subdirectory containing the technical projects in their own
+	subdirectories.
+
+ /projects/legal ''Deprecated''
+
+	Sub-directories containing the legal projects/activities,
+	each within their own sub-directory.
+
+ /projects/awareness ''Deprecated''
+
+	As above, for projects concentrating on building awareness for
+	Free Software.
+
+ /projects/other ''Deprecated''
+
+	As above, for all that do not fall in one of the categories
+	above.
+
+/search ''Deprecated''
+
+	Navigation page(s) for the search engine go in here.
+
+	Should contain sitemap.html with a sitemap explaining the
+	layout and directory structure from a users perspective.
+
+
+Localization paradigms:
+***********************
+
+Language selection can be done through content negotiation or
+explicitly. If possible, language selection should be preserved even
+through a missing translation.

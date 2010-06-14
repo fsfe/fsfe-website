@@ -42,3 +42,12 @@ RewriteRule ^freesoftware/(.*) /about/basics/$1 [redirect=temp]
 # Rewrite for dead links to gnupg-ccid stuff
 RewriteRule ^en/content/download/17665/125518/file/gnupg-ccid.rules http://wiki.fsfe.org/Card_howtos/Card_reader_setup_(udev)?action=AttachFile&do=view&target=gnupg-ccid.rules [redirect=permanent]
 RewriteRule ^en/content/download/15872/77909/file/gnupg-ccid http://wiki.fsfe.org/Card_howtos/Card_reader_setup_(udev)?action=AttachFile&do=view&target=gnupg-ccid [redirect=permanent]
+
+# Redirects to reduce 404's
+RewriteRule ^en/layout/set/rss/content/view/full/5116 http://blogs.fsfe.org/ciaran/?feed=rss2 [redirect=permanent]
+RewriteRule ^en/layout/set/rss/content/view/full/5009 http://blogs.fsfe.org/maffulli/?feed=rss2 [redirect=permanent]
+RewriteRule ^en/layout/set/rss/content/view/full/4972 http://blogs.fsfe.org/gerloff/?feed=rss2 [redirect=permanent]
+RewriteRule ^en/layout/set/rss/content/view/full/5971 http://blogs.fsfe.org/jj/?feed=rss2 [redirect=permanent]
+RewriteRule ^en/layout/set/rss/content/view/full/6128 http://blogs.fsfe.org/jj/?feed=rss2 [redirect=permanent]
+RewriteRule ^en/layout/set/rss/content/view/full/4974 http://blogs.fsfe.org/greve/?feed=rss2 [redirect=permanent]
+RewriteRule ^en/news http://fsfe.org/news/ http://fsfe.org/news/ [redirect=permanent]

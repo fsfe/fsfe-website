@@ -50,4 +50,6 @@ RewriteRule ^en/layout/set/rss/content/view/full/4972 http://blogs.fsfe.org/gerl
 RewriteRule ^en/layout/set/rss/content/view/full/5971 http://blogs.fsfe.org/jj/?feed=rss2 [redirect=permanent]
 RewriteRule ^en/layout/set/rss/content/view/full/6128 http://blogs.fsfe.org/jj/?feed=rss2 [redirect=permanent]
 RewriteRule ^en/layout/set/rss/content/view/full/4974 http://blogs.fsfe.org/greve/?feed=rss2 [redirect=permanent]
-RewriteRule ^en/news http://fsfe.org/news/ http://fsfe.org/news/ [redirect=permanent]
+RewriteRule ^en/news http://fsfe.org/news/ [redirect=permanent]
+RewriteRule ^/people/greve /about/greve/ [redirect=permanent]
+

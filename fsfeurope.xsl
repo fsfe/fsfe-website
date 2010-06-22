@@ -42,7 +42,7 @@
       <xsl:if test="/buildinfo/@language='ar'">
         <link rel="stylesheet" media="all" href="/style/rtl.css" type="text/css" />
       </xsl:if>
-      <link rel="shortcut icon" href="/graphics/fsfeurope.ico" type="image/x-icon" />
+      <link rel="shortcut icon" href="/graphics/fsfe.ico" type="image/x-icon" />
       <xsl:element name="link">
         <xsl:attribute name="rel">alternate</xsl:attribute>
         <xsl:attribute name="title">FSFE <xsl:value-of select="/buildinfo/textset/text[@id='menu1/news']" /></xsl:attribute>

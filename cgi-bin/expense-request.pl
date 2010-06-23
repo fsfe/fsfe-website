@@ -106,7 +106,6 @@ if ($budget2 ne "NONE") {
 } else {
   print MAIL "To: $to1\@fsfeurope.org\n";
 }
-print MAIL "Cc: director\@fsfeurope.org\n";
 print MAIL "Subject: Expense Request\n";
 print MAIL "Mime-Version: 1.0\n";
 print MAIL "Content-Type: multipart/mixed; boundary=$boundary\n";

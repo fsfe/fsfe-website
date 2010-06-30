@@ -13,7 +13,6 @@
   <xsl:template match="/html/body">
     <body>
       <xsl:apply-templates />
-      <xsl:for-each select="/html/set/news">
       <xsl:for-each select="/html/set/news[translate(@date,'-','') &lt;= translate($today,'-','')]">
         <xsl:sort select="@date" order="descending"/>
         <p>

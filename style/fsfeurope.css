@@ -80,14 +80,16 @@ a[name], a[name]:hover, a.gl img, a.gl:link, a.gl:visited, a.gl:hover {
 blockquote,
 .quote {
   font-style: italic;
-  border-left: .2em solid rgb(210,210,210);
-  padding-left: .6em;
+  border-left: .5em solid rgb(210,210,210);
+  padding-left: .8em;
+  margin-left: .3em;
 }
 
 blockquote cite,
 .quote cite {
   display: block;
   font-style: normal;
+  line-height: 120%;
 }
 
 blockquote cite:before,

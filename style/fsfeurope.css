@@ -79,10 +79,20 @@ a[name], a[name]:hover, a.gl img, a.gl:link, a.gl:visited, a.gl:hover {
 /* FIXME: Use blockquote instead for real quotations */
 blockquote,
 .quote {
-  font-size: 90%;
   font-style: italic;
-  line-height: 115%;
-	margin: 0 2em;
+  border-left: .2em solid rgb(210,210,210);
+  padding-left: .6em;
+}
+
+blockquote cite,
+.quote cite {
+  display: block;
+  font-style: normal;
+}
+
+blockquote cite:before,
+.quote cite:before {
+  content: "— ";
 }
 
 address {

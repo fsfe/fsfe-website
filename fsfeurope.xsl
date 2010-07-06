@@ -198,7 +198,7 @@
 
               <xsl:element name="input">
                 <xsl:attribute name="type">hidden</xsl:attribute>
-                <xsl:attribute name="name">urlmaskfilter</xsl:attribute>
+                <xsl:attribute name="name">prefermaskfilter</xsl:attribute>
                 <xsl:attribute name="value">.*.<xsl:value-of select="/buildinfo/@language"/>.html</xsl:attribute>
               </xsl:element>
 

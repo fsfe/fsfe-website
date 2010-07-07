@@ -1,5 +1,5 @@
-= The Web Guidelines =
-----------------------
+= Web Guidelines =
+******************
 
 This document aims at giving webmasters and people who contribute to write
 webpages a set of guidelines to help them making the publishing process as good
@@ -7,7 +7,7 @@ as possible.
 
 [Note: this guideline is about regular publication. Any work involved with the
 global restructuration of the website has to comply with another set of
-guidelines discussed among webmasters@fsfeurope.org]
+guidelines discussed among webmasters@fsfeurope.org -- see below.]
 
 == Technical structure ==
 
@@ -59,10 +59,10 @@ version by updating your SVN repository.
 == Source Code format ==
 
  * Line breaks
-   It is important that each document has line breaks at 80 char.
+   It is important that each document has line breaks at 80 char. This is needed
+   to ease translations and diffs. 
    
- * Titles
- * Paragraphs
+ * Mark-ups
 
 == Rules for content ==
 
@@ -74,3 +74,5 @@ version by updating your SVN repository.
 
 == Editors ==
 
+== Tools ==
+ * Browse, diffs, timeline: https://trac.fsfe.org/fsfe-web/browser/trunk

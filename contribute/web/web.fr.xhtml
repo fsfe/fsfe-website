@@ -40,7 +40,7 @@ Les traducteurs et bénévoles occasionnels ne seront probablement en relation q
 </ul>
 
 <p>
-Les bénévoles qui souhaitent s'engager plus sérieusement dans la maintenance du site devraient également se familiariser avec&#160;:
+Les volontaires qui souhaitent s'engager plus sérieusement dans la maintenance du site devraient également se familiariser avec&#160;:
 </p>
 
 <ul>
@@ -72,10 +72,10 @@ Les bénévoles qui souhaitent s'engager plus sérieusement dans la maintenance 
       <a href="/events/events.html">page des évènements</a> par exemple, sont construites ainsi.
     </p>
 
-    <h2>Accéder aux pages internet</h2>
+    <h2>Accéder aux pages Web</h2>
 
     <p>
-      Les fichiers sources sont stoqués sur le <a href="https://svn.fsfe.org/fsfe-web">dépôt subversion fsfe-web</a>,      lui-même hébergé sur le serveur subversion de la FSFE. D'autres services sont disponibles sur l'instance <a href="https://trac.fsfe.org/fsfe-web">Trac</a>.
+      Les fichiers sources sont stoqués sur le <a href="https://svn.fsfe.org/fsfe-web">dépôt subversion fsfe-web</a>, lui-même hébergé sur le serveur subversion de la FSFE. D'autres services sont disponibles sur l'instance <a href="https://trac.fsfe.org/fsfe-web">Trac</a>.
     </p>
     <p>
       Pour avoir accès à ces outils, suivez les instructions suivantes&#160;:
@@ -111,8 +111,7 @@ Les bénévoles qui souhaitent s'engager plus sérieusement dans la maintenance 
     </p>
     <p class="terminal">svn --username VOTRENOM co https://svn.fsfe.org/fsfe-web/branches/test</p>
     <p>
-      À noter qu'une version complète du dépôt requiert environ 160 Mio. Aussi, si vous pensez travailler uniquement sur certaines parties, vous pouvez rapatrier uniquement celle-ci. Référez-vous au document de <a href="Webpage-Structure.txt"
-        target="_blank">référence structurelle (en anglais)</a> pour avoir une idée de l'agencement des fichiers.
+      À noter qu'une version complète du dépôt requiert environ 160 Mio. Aussi, si vous pensez travailler uniquement sur certaines parties, vous pouvez rapatrier uniquement celle-ci. Vous pouvez <a href="https://trac.fsfe.org/fsfe-web/browser">parcourir la branche SVN</a> pour avoir une idée de l'agencement des fichiers.
     </p>
 
 
@@ -144,15 +143,15 @@ Les bénévoles qui souhaitent s'engager plus sérieusement dans la maintenance 
       et un éditeur s'ouvrira, vous permettant d'indiquer une courte description des changements apportés.
       </p>
 
-      <p>Avec subversion, la <a href="http://svnbook.red-bean.com/en/1.5/svn.advanced.props.special.keywords.html">substitution de >substitution de mots-clés (en anglais)</a> doit être explicitement définie pour chaque fichier. Comme nous utilisons quelques mots-clés dans les fichiers <var>.xml</var> et <var>.xhtml</var> (par exemple, le mot-clé <var>$</var><var>Author</var><var>$</var> en pied de page), vous pouvez le définir une fois pour toute en ajoutant la section suivante à votre fichier de configuration de SVN <var>~/.subversion/config</var>.
-      <pre>
+      <p>Avec subversion, la <a href="http://svnbook.red-bean.com/en/1.5/svn.advanced.props.special.keywords.html">substitution de >substitution de mots-clés (en anglais)</a> doit être explicitement définie pour chaque fichier. Comme nous utilisons quelques mots-clés dans les fichiers <var>.xml</var> et <var>.xhtml</var> (par exemple, le mot-clé <var>$</var><var>Author</var><var>$</var> en pied de page), vous pouvez le définir une fois pour toute en ajoutant la section suivante à votre fichier de configuration de SVN <var>~/.subversion/config</var>.</p>
+      
+      <pre class="file">
       enable-auto-props = yes
 
       [auto-props]
       *.xml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xml;svn:eol-style=native
       *.xhtml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xhtml;svn:eol-style=native
       </pre>
-    </p>
 
     <p>
       Si vous êtes habitué à travailler avec CVS, vous vous adapterez facilement à SVN. Comme vous l'avez constaté, les commandes de base sont très ressemblantes. Pour en savoir plus, vous pouvez consulter un aperçu des différences entre CVS et SVN sur <a href="http://svnbook.red-bean.com/en/1.5/svn.forcvs.html">Subversion for
@@ -226,17 +225,29 @@ Les bénévoles qui souhaitent s'engager plus sérieusement dans la maintenance 
 
       <li>
         <p>
-        Assurez-vous que tous les fichiers sont des XML bien formés. Il existe un script nommé <var>/fsfe/tools/validate.pl</var> qui vous aidera à trouver les erreurs dans les balises. Le XML mal formé bloque le processus de création automatique des pages et empêche la mise à jour de la totalité du site web de la FSFE. Si vous pensez que le processus de construction des pages est bloqué, vous pouvez consulter le l'historique de la dernière construction <a href="http://status.fsfe.org/web/">ici</a>.
+        Assurez-vous que tous les fichiers sont des XML bien formés. Par défault, le serveur SVN va vérifier la syntaxe XML des fichiers aux extensions .xml et .xhtml et refusera les changements si des erreurs XML sont trouvées. Pour éviter cela, vérifiez vos fichiers avant de les envoyer, avec l'une des solutions suivantes&#160;:
         </p>
 
         <p>
-          Le script <var>validate.pl</var> repose sur le module Perl           <em>XML::LibXML</em>&#160;; si celui-ci n'est pas installé sur votre système, vous pouvez utiliser votre validateur XML favori. Vous pouvez par exemple utiliser l'utilitaire en ligne de commande
-          <em>xmllint</em> du 
-          <a href="http://xmlsoft.org/">projet libxml2</a>.
-          </p>
+          Le script <var>/trunk/tools/validate.pl</var> vous aide à trouver les
+          erreurs dans les balises. Du code XML mal écrit enraye le processus de
+          construction automatique des pages Web et bloque les mises à jour
+          ultérieures du site Web. Si vous suspectez le processus d'être bloqué,
+          vous pouvez <a
+          href="http://status.fsfe.org/">vérifier la construction en cours</a>.
+        </p>
+        
+        <p>
+          Le script <var>validate.pl</var> requiert le module Perl
+          <em>XML::LibXML</em>; si celui-ci n'est pas installé sur votre
+          système, vous pouvez valider les fichiers avec votre validateur XML
+          favori. Par exemple en ligne de commande vous pouvez utiliser
+          <em>xmllint</em>, du projet <a
+            href="http://xmlsoft.org/"><em>libxml2</em></a>.
+        </p>
           
           <p>
-          Si vous utilisez une distribution Debian GNU/Linux, installez le paquetage <em>libxml2-utils</em>)&#160;; lancez la commande
+          Si vous utilisez une distribution Debian GNU/Linux, installez le paquetage <em>libxml2-utils</em>&#160;; lancez la commande
           </p>
           
           <p class="terminal">xmllint --noout <em>fichier</em>.xhtml</p>
@@ -271,11 +282,6 @@ Les bénévoles qui souhaitent s'engager plus sérieusement dans la maintenance 
 
  <p>Étant donné que les pages web de la FSFE ont un niveau européen/global et des niveaux locaux choisis par l'utilisateur, qui le complètent en apportant les informations spécifiques à chaque pays, la structure possède une certaine complexité qui est totalement cachée à l'utilisateur du site.
  </p>
-
-    <p>
-   À moins que vous ne souhaitiez vous contenter de traduire des pages web (voir ci-dessous), prenez le temps de lire la <a
-href="Webpage-Structure.txt" target="_blank">page de référence sur la structure du site</a>.
-    </p>
 
     <p>
     Un fichier de documentation <a

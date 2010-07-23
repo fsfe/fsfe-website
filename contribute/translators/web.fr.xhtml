@@ -21,9 +21,14 @@
     <p>
       Chaque page sur fsfe.org est nommée
       "<i>nomdepage</i>.<i>langue</i>.html" (la <i>langue</i> étant désignée
-      par 2 lettres en code iso-639, comme "en" pour l'anglais ou "fr" pour 
+      par <a
+      href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">deux lettres du code
+      ISO-639-1</a>, comme "en" pour l'anglais ou "fr" pour 
       le français). Les fichiers source sont nommés
-      "<i>nomdepage</i>.<i>langue</i>.xhtml".<br />
+      "<i>nomdepage</i>.<i>langue</i>.xhtml".
+    </p>
+    
+    <p>
       Certaines pages sont partiellement dynamiques&#160;: indépendamment des
       textes fixes rapportés depuis les fichiers .xhtml, elles contiennent des informations liées à un ou plusieurs fichiers .xml. 
       Chaque fois qu'une page de cette nature est créée, le système qui construit les pages prend les fichiers .xml traduits lorsqu'ils sont disponibles, ou se rabat sur les versions anglaises lorsqu'ils ne le sont 
@@ -74,6 +79,13 @@
     </p>
 
     <p>
+      Vous pouvez aussi utiliser <a
+      href="https://trac.fsfe.org/fsfe-web/browser/trunk">le répertoire des sources web</a> sur <a href="https://trac.fsfe.org/fsfe-web">le site trac fsfe-web
+      </a> pour créer des diffs, et voir les dernières mises à jour des fichiers 
+      sources.
+    </p>
+
+    <p>
       Ceci fait, envoyez le fichier traduit à la 
       <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">mailing-liste des traducteurs</a>. Les autres membres de la liste peuvent corriger la traduction, et une personne sur cette liste finira par l'envoyer au serveur.
     </p>
@@ -96,34 +108,16 @@
       Cette page d'état de la traduction est également le seul moyen de télécharger les fichiers .xml créés dans les pages dynamiques, comme les fichiers contenant des nouvelles ou des arrivées d'événements.
     </p>
 
-    <h3>Télécharger l'arbre complet du fichier source avec CVS</h3>
-
+    <h3>Télécharger l'arbre complet du fichier source avec Subversion</h3>
+    
     <p>
-      S'il vous est possible d'utiliser CVS, vous pouvez aussi télécharger en une seule fois l'arbre complet du fichier source.
-    </p>
-
-    <p>
-      Créez un répertoire dans lequel vous désirez stocker le fichier, mettez-le dans ce répertoire et entrez la commande <br />
-      <code>$ cvs -z3 -d:pserver:anonymous@cvs.savannah.gnu.org:/web/fsfe co .</code><br />
-      A la demande de mot de passe, tapez juste Entrée.
-    </p>
-
-    <p>
-      Pour mettre à jour l'arbre du source précédemment téléchargé, vous pouvez utiliser la commande
-      <br />
-      <code>$ cvs -z3 update -Pd</code><br />
-    </p>
-
-    <h2>Rejoindre les webmestres de www.fsfeurope.org</h2>
-
-    <p>
-      Si vous avez l'intention de contribuer régulièrement aux traductions et que vous avez quelques notions basiques de CVS et SSH, vous êtes invités à
-      <a href="/contribute/web/web.html">rejoindre l'équipe des webmestres</a>.
+      Si vous pouvez utiliser Subversion, vous pouvez télécharger l'arbre complet des fichiers sources en une fois. Veuillez vous réferez à <a
+      href="/contribute/web/web.html">la page d'information des webmestres de la FSFE</a> pour les instructions détaillées.
     </p>
   </body>
 
   <timestamp>$Date$ $Author$</timestamp>
-  <translator>Michel Roche (Vercors - France)</translator>
+  <translator>Michel Roche (Vercors), Hugo Roy</translator>
 </html>
 <!--
 Local Variables: ***

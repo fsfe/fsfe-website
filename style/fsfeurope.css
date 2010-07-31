@@ -75,6 +75,10 @@ a[name], a[name]:hover, a.gl img, a.gl:link, a.gl:visited, a.gl:hover {
   display: none;
 }
 
+.break {
+  clear: both;
+}
+
 /* attempts to resemble typographical block quotations */
 /* FIXME: Use blockquote instead for real quotations */
 blockquote,
@@ -822,16 +826,48 @@ h4#subpages + ul li:nth-child(odd) {
 
 #footer {
   clear: both;
+<<<<<<< .working
 	margin: 0 auto 1em auto;
 	padding: 2em .5em;
+=======
+  color: rgb(120,120,120);
+>>>>>>> .merge-right.r16183
   font-size: 90%;
-  text-align: center;
+  line-height: 140%;
+  min-height: 8em;
+  padding-top: 2em;
 }
 
-#footer .fsfnetwork {
-	border-top: 1px solid rgb(210,210,210);
-	font-size: 130%;
-	padding-top: 1em;
+#footer #notice {
+  float: left;
+  width: 70%;
+}
+
+#footer #notice ul {
+  list-style: none;
+  padding: 0;
+}
+
+#footer #notice ul li {
+  display: inline;
+  margin-right: .8em;
+}
+
+#footer #sister_organizations {
+  float: right;
+  width: 25%;
+}
+
+#footer #sister_organizations h2 {
+  color: rgb(50,50,50);
+  font-size: 100%;
+  font-weight: normal;
+  margin-top: 0;
+  padding: 0;
+}
+
+#footer #sister_organizations ul {
+  list-style: circle;
 }
 
 

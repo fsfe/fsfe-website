@@ -824,9 +824,13 @@ h4#subpages + ul li:nth-child(odd) {
 /* Footer                                                                    */
 /* ------------------------------------------------------------------------- */
 
+#footer,
+#footer h2 {
+  color: rgb(120,120,120);
+}
+
 #footer {
   clear: both;
-  color: rgb(120,120,120);
   font-size: 90%;
   line-height: 140%;
   min-height: 8em;
@@ -854,7 +858,6 @@ h4#subpages + ul li:nth-child(odd) {
 }
 
 #footer #sister_organizations h2 {
-  color: rgb(50,50,50);
   font-size: 100%;
   font-weight: normal;
   margin-top: 0;

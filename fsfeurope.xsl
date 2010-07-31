@@ -363,91 +363,96 @@
             </xsl:element>
           </xsl:element>
 
+          <!-- Break -->
+          <div class="break"></div>
         </xsl:element>
         <!-- End Content -->
 
         <!-- Footer -->
-        <xsl:element name="div">
-          <xsl:attribute name="id">footer</xsl:attribute>
+        <div id="footer">
+          <div id="notice">
+            <p>
+              Copyright © 2001-2010 <a href="/">Free Software
+                Foundation Europe</a>.<br />
 
-          <!-- FSF* netwok note -->
-          <p class="fsfnetwork">
-            <xsl:apply-templates select="/buildinfo/textset/text[@id='fsfnetwork']/node()"/>
-          </p>
+              <xsl:apply-templates select="/buildinfo/textset/text[@id='permission']/node()" /><br />
 
-          <xsl:element name="p">
-
-            <!-- Copyright -->
-            <xsl:text>Copyright 2001-2010 FSFE.</xsl:text>
-
-            <!-- "Last changed" magic -->
-            <xsl:variable name="timestamp">
-              <xsl:value-of select="/buildinfo/document/timestamp"/>
-            </xsl:variable>
-            <!-- FIXME: over time, all pages should have the timestamp -->
-            <!--        tags, so this conditional could be removed     -->
-            <xsl:if test="string-length($timestamp) &gt; 0">
-              <xsl:variable name="Date">
-                <xsl:value-of select="substring-before(substring-after($timestamp, 'Date: '), ' $')"/>
+              <!-- "Last changed" magic -->
+              <xsl:variable name="timestamp">
+                <xsl:value-of select="/buildinfo/document/timestamp"/>
               </xsl:variable>
-              <xsl:variable name="Author">
-                <xsl:value-of select="substring-before(substring-after($timestamp, 'Author: '), ' $')"/>
-              </xsl:variable>
-              <xsl:apply-templates select="/buildinfo/textset/text[@id='lastchanged']/node()"/>
-              <xsl:value-of select="translate ($Date, '/', '-')"/>
-              (<xsl:value-of select="$Author"/>)
-            </xsl:if>
+              <!-- FIXME: over time, all pages should have the timestamp -->
+              <!--        tags, so this conditional could be removed     -->
+              <xsl:if test="string-length($timestamp) &gt; 0">
+                <xsl:variable name="Date">
+                  <xsl:value-of select="substring-before(substring-after($timestamp, 'Date: '), ' $')"/>
+                </xsl:variable>
+                <xsl:variable name="Author">
+                  <xsl:value-of select="substring-before(substring-after($timestamp, 'Author: '), ' $')"/>
+                </xsl:variable>
+                <xsl:apply-templates select="/buildinfo/textset/text[@id='lastchanged']/node()"/>
+                <xsl:value-of select="translate ($Date, '/', '-')"/>
+                (<xsl:value-of select="$Author"/>)
+              </xsl:if>
+            </p>
 
-            <!-- Link to the XHTML source -->
-            <xsl:element name="a">
-              <xsl:attribute name="href">
-                <xsl:text>/source</xsl:text>
-                <xsl:value-of select="/buildinfo/@filename"/>
-                <xsl:text>.</xsl:text>
-                <xsl:value-of select="/buildinfo/document/@language"/>
-                <xsl:text>.xhtml</xsl:text>
-              </xsl:attribute>
-              <xsl:text>[XHTML]</xsl:text>
-            </xsl:element>
+            <ul>
+              <li>
+                <!-- Link to the XHTML source -->
+                <xsl:element name="a">
+                  <xsl:attribute name="href">
+                    <xsl:text>/source</xsl:text>
+                    <xsl:value-of select="/buildinfo/@filename"/>
+                    <xsl:text>.</xsl:text>
+                    <xsl:value-of select="/buildinfo/document/@language"/>
+                    <xsl:text>.xhtml</xsl:text>
+                  </xsl:attribute>
+                  <xsl:text>Source code</xsl:text>
+                </xsl:element>
+              </li>
 
-            <!-- Insert the appropriate translation notice -->
-            <xsl:if test="/buildinfo/document/@language!=/buildinfo/@original">
-              <xsl:element name="br"/>
-              <xsl:choose>
-                <xsl:when test="/buildinfo/document/translator">
-                  <xsl:value-of select="/buildinfo/textset/text[@id='translator1a']"/>
-                  <xsl:value-of select="/buildinfo/document/translator"/>
-                  <xsl:value-of select="/buildinfo/textset/text[@id='translator1b']"/>
-                </xsl:when>
-                <xsl:otherwise>
-                  <xsl:value-of select="/buildinfo/textset/text[@id='translator2']"/>
-                </xsl:otherwise>
-              </xsl:choose>
-              <xsl:value-of select="/buildinfo/textset/text[@id='translator3a']"/>
-              <xsl:element name="a">
-                <xsl:attribute name="href">
-                  <xsl:value-of select="/buildinfo/@filename"/>
-                  <xsl:text>.en.html</xsl:text>
-                </xsl:attribute>
-                <xsl:value-of select="/buildinfo/textset/text[@id='translator3b']"/>
-              </xsl:element>
-              <xsl:value-of select="/buildinfo/textset/text[@id='translator3c']"/>
-            </xsl:if>
+              <li>
+                <a href="/contribute/translators/">Translate this
+                  page?</a>
+              </li>
+            </ul>
 
-            <!-- Permission note -->
-            <xsl:element name="br"/>
-            <xsl:apply-templates select="/buildinfo/textset/text[@id='permission']/node()"/>
+            <p>
+              <!-- Insert the appropriate translation notice -->
+              <xsl:if test="/buildinfo/document/@language!=/buildinfo/@original">
+                <xsl:choose>
+                  <xsl:when test="/buildinfo/document/translator">
+                    <xsl:value-of select="/buildinfo/textset/text[@id='translator1a']"/>
+                    <xsl:value-of select="/buildinfo/document/translator"/>
+                    <xsl:value-of select="/buildinfo/textset/text[@id='translator1b']"/>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:value-of select="/buildinfo/textset/text[@id='translator2']"/>
+                  </xsl:otherwise>
+                </xsl:choose>
+                <xsl:value-of select="/buildinfo/textset/text[@id='translator3a']"/>
+                <xsl:element name="a">
+                  <xsl:attribute name="href">
+                    <xsl:value-of select="/buildinfo/@filename"/>
+                    <xsl:text>.en.html</xsl:text>
+                  </xsl:attribute>
+                  <xsl:value-of select="/buildinfo/textset/text[@id='translator3b']"/>
+                </xsl:element>
+                <xsl:value-of select="/buildinfo/textset/text[@id='translator3c']"/>
+              </xsl:if>
+            </p>
+          </div> <!-- /#notice -->
 
-            <!-- Webmaster feedback note -->
-            <xsl:element name="br"/>
-            <xsl:apply-templates select="/buildinfo/textset/text[@id='webmaster']/node()"/>
+          <div id="sister_organizations">
+            <h2>Sister organizations</h2>
 
-          </xsl:element>
-
-
-        </xsl:element>
-        <!-- End Footer -->
-
+            <ul>
+              <li><a href="http://fsf.org/">North America</a></li>
+              <li><a href="http://fsf.org.in/">India</a></li>
+              <li><a href="http://fsfla.org/">Latin America</a></li>
+            </ul>
+          </div> <!-- /#sister_organizations -->
+        </div> <!-- /#footer -->
       </xsl:element>
     </xsl:copy>
   </xsl:template>

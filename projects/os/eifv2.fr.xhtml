@@ -2,374 +2,589 @@
 
 <html>
   <head>
-    <title>FSFE - EIFv2: Suivre et mesurer la perte d'interopérabilité</title>
+    <title>FSFE - EIFv2 : Retracer la perte d'interopérabilité</title>
 <style type="text/css">
-.colonne {
-margin-top:20px;
-font-size:0.9em;
-max-width:30%;
-min-width:25%;
-border:0;
-float:left;
-padding:0px 10px;
-}
-
-.nettoyeur { clear: both; height: 0; margin: 0; padding: 0; border: 0; line-height: 1px; font-size: 1px; }
-
-.frame {
-min-width:800px;
-overflow-x:scroll;
-}
-
+table tr td {min-width:350px;vertical-align:top;}
 </style>
 
   </head>
 
 
   <body>
-<p align="right">by Hugo Roy [ <a href="eifv2.en.pdf">version PDF (76k)</a> ]</p>
+    <p id="category"><a href="/projects/os/os.html">Standards Ouverts</a></p>
+    <h1>EIFv2 : Retracer la perte d'interopérabilité</h1>
+    
+    <p style="text-align:right">24 mars 2010. Par <a href="/about/gerloff/gerloff.html">Karsten
+    Gerloff</a> et <a href="/about/roy/roy.html">Hugo Roy</a>.</p>
+    
+    <div id="introduction">
+      <p>Ce document présente une analyse comparative de l'évolution du Cadre
+      Européen d'Interopérabilité (EIF&#160;: European Interoperability
+      Framework). Basée sur les <a
+      href="http://ec.europa.eu/idabc/en/document/7732">commentaires</a>
+      formulés vis-à-vis de la <a
+      href="http://ec.europa.eu/idabc/en/document/7733">deuxième version de
+      l'EIF</a> (EIFv2), il met en lumière les différents changements que le
+      document de travail a subis depuis 2008.</p>
+    </div>
+    
+    <p class="indent">Note des traducteurs&#160;: <em>les liens hypertextes
+    conduisent généralement à des documents rédigés en anglais, comme c'est
+    souvent le cas des documents de travail internationnaux. Les traductions
+    faites des extraits de ces textes ne proviennent pas du service de
+    traduction de l'Union Européenne.</em></p>
+    
+    <p>Selon notre analyse, on peut conclure qu'aux endroits clés, la Commission
+    Européenne n'a pris en compte que les commentaires <a
+    href="http://ec.europa.eu/idabc/servlets/Doc?id=31903">faits</a> par la <a
+    href="http://www.bsa.org">Business Software Alliance</a>, un lobby
+    travaillant pour le compte d'entreprises de logiciels propriétaires. Dans le
+    même temps, les commentaires réalisés par des groupes œuvrant en faveur des
+    logiciels libres et de standards ouverts furent négligés, par exemple ceux
+    de l'<a href="http://openforumeurope.org/">Open Forum Europe</a>. </p>
+    
+    <p>En regardant le document de la consultation, il est évident que durant le
+    développement de l'EIFv2, la Commission Européenne a abandonné le concept
+    des Standards Ouverts comme un levier crucial pour l'interopérabilité. C'est
+    l'une des raisons centrales pour laquelle le document de travail actuel
+    n'est plus que l'ombre du document original.</p>
 
-<h1 align="center">EIFv2&#160;: suivre et mesurer la perte d'interopérabilité</h1>
+    <p>Table des matières</p>
+    <ul>
+      <li><a href="#about">Qu'est-ce que le Cadre européen d'interopérabilité&#160;?</a></li>
+      <li><a href="#one">1.Les normes sont le cœur de l'interopérabilité</a></li>
+      <li><a href="#two">2. S'affranchir de l'utilisation des standards propriétaires</a></li>
+      <li><a href="#three">3. Le continuum de l'Ouverture</a></li>
+    </ul>
+    
+    <h2 id="about">Qu'est-ce que le Cadre européen d'interopérabilité&#160;?
+    (EIF en anglais)</h2>
+    
+    <p>L'EIF est un ensemble de recommandations pour l'interopérabilité et
+    d'initiatives conduites sous les auspices du programme ISA (Interoperability
+    Solutions for European Public Administrations). L'EIF supplémente les divers
+    cadres nationaux d'interopérabilité au niveau paneuropéen.</p>
+    
+    <ul>
+      <li>Novembre 2004 : <a href="http://ec.europa.eu/idabc/en/document/3473/5585#finalEIF">European Interoperability Framework (EIF) version 1</a></li>
+      <li>Juillet 2008 : EIF version 2, <a href="http://ec.europa.eu/idabc/servlets/Doc?id=31597">document de consultation</a> (<a href="http://ec.europa.eu/idabc/en/document/7732">commentaires</a>)</li>
+      <li>Novembre 2009 : EIF version 2, <a href="http://blog.webwereld.nl/wp-content/uploads/2009/11/European-Interoperability-Framework-for-European-Public-Services-draft.pdf">fuite du document de travail</a></li>
+      <li>Mars 2010 : EIF version 2, <a href="#">fuite du document de travail (version candidate)</a>
+        <p>S'il y a des améliorations dans ce document de Novembre 2009, elles
+        sont, au mieux, cosmétiques. Jusqu'ici, la Commission Européenne a tout
+        juste retiré les formulations qui attiraient le plus de critiques.</p>
+      </li>
+    </ul>
 
-<p class="indent"><em>Note de traduction&#160;: les liens hypertextes conduisent généralement à des documents rédigés en anglais, comme c'est souvent le cas des documents de travail internationnaux. Les traductions faites des extraits de ces textes ne proviennent pas du service de traduction de l'Union.</em></p>
+    <h2 id="one">1. «&#160;Les normes sont le cœur de
+    l'interopérabilité&#160;»</h2>
 
-<p class="indent"><em>Ce document présente une analyse comparative de l'évolution du Cadre européen d'interopérabilité (EIF&#160;: European Interoperability Framework) basée sur les <a href="http://ec.europa.eu/idabc/en/document/7732">commentaires</a> formulés vis-à-vis de la <a href="http://ec.europa.eu/idabc/en/document/7733">deuxième version de l'EIF</a> (EIF v2). Il met en lumière les changements apportés entre la première mouture, sur laquelle une consultation publique avait été organisée durant l'été 2008, et <a
-		href="http://blog.webwereld.nl/wp-content/uploads/2009/11/European-Interoperability-Framework-for-European-Public-Services-draft.pdf">la version actuelle</a> du document de travail, qui a fui dans la presse.</em></p>
+    <table>
+      <tr>
+        <td>
+        
+        <h3>A. Document de consultation de l'EIFv2</h3>
+        
+        <blockquote>
+	  <p>«&#160;<span style="background:#ffff00">Les normes sont le cœur de
+	  l'interopérabilité.</span> La stratégie de l'Union Européenne pour la
+	  croissance et l'emploi a identifié une normalisation forte et
+	  dynamique comme un instrument crucial pour favoriser l'innovation. La
+	  normalisation a une dimension d'intérêt public, en particulier en
+	  matière de sécurité, de santé, d'environnement et de
+	  performance.&#160;» (p.35)</p>
 
-<p>Table des matières</p>
-<ul>
-<li><a href="#about">Qu'est-ce que le Cadre européen d'interopérabilité&#160;?</a></li>
-<li><a href="#one">1.Les normes sont le cœur de l'intéropérabilité</a></li>
-<li><a href="#two">2. S'affranchir de l'utilisation des standards propriétaires</a></li>
-<li><a href="#three">3. Le continuum de l'Ouverture</a></li>
-</ul>
-
-<h2 id="about">Qu'est-ce que le Cadre européen d'interopérabilité&#160;? (EIF en anglais)</h2>
-<blockquote>
-	<p>L'EIF est un ensemble de lignes directrices pour l'interopérabilité et d'initiatives menées sous les auspices du programme IDABC (<em>Interoperable Delivery of European eGovernment Services to public Administrations, Businesses and Citizens</em>, livraison aux administrations publiques, aux entreprises et aux citoyens de services d'«&#160;e-gouvernement&#160;» européens interopérables). L'EIF complète les différents cadres nationaux d'interopérabilité au niveau paneuropéen.</p>
-
-</blockquote>
-
-<p><em><a href="http://ec.europa.eu/idabc/servlets/Doc?id=31597">Extrait du document de travail initial, section 2/3.</a></em></p>
-
-<p> Le texte ci-dessous analyse certains changements que le texte a connus entre la consultation publique organisée durant l'été 2008 et le document de travail qui en résulta en novembre 2009. À l'occasion de cette consultation, de nombreux groupes et particuliers ont soumis <a href="http://ec.europa.eu/idabc/en/document/7732">leurs commentaires</a>. D'après notre analyse, nous pouvons conclure que la Commission Européenne, dans des domaines clés, n'a pris en compte que les <a href="http://ec.europa.eu/idabc/servlets/Doc?id=31903">commentaires proposés</a> par la <a href="http://www.bsa.org">«Business Software Alliance»</a>, un groupe de lobbying agissant pour le compte des entreprises de logiciels propriétaires. Quant aux commentaires proposés par les groupes travaillant en faveur du Logiciel Libre et des Standards Ouverts, ils ont été négligés. Parmi eux se trouvent ceux de l'<a href="http://openforumeurope.org/">Open Forum Europe</a>.
-
-</p>
-
-
-<h2 id="one">1. «&#160;Les normes sont le cœur de l'intéropérabilité&#160;»</h2>
-
-<div class="frame">
-<div class="colonne">
-
-<h3>A. Document de consultation de l'EIFv2</h3>
-
-<blockquote>
-	<p>«&#160;<span style="background:#ffff00">Les normes sont le cœur de l'interopérabilité.</span> La stratégie de l'Union Européenne pour la croissance et l'emploi a identifié une normalisation forte et dynamique comme un instrument crucial pour favoriser l'innovation. La normalisation a une dimension d'intérêt public, en particulier en matière de sécurité, de santé, d'environnement et de performance.&#160;» (p.35)</p>
-
-	<p>«&#160;Le rôle des administrations nationales dans ce processus est de
-	<span style="background:#1e90ff">choisir la norme appropriée.</span>&#160;»</p>
-</blockquote>
-
-<p>Le document de consultation souligne le fait que les normes sont parmi les outils les plus efficaces pour réaliser l'interopérabilité sans nuire à la compétition ou à l'innovation. De plus, en se référant à la «&#160;norme appropriée&#160;», il indique que si plusieurs normes existent pour un même usage, un choix doit être fait. Ce choix, comme expliqué ensuite, doit favoriser les Standards Ouverts.</p>
-
-</div>
-
-<div class="colonne">
-
-<h3>B. Commentaires de la <em>Business Software Alliance</em></h3>
-
-<blockquote>
-	<p>«&#160;<span style="background:#ffff00">S'il est vrai que les Standards Ouverts jouent un rôle critique pour permettre l'interopérabilité</span>, <span style="background:#ffa500">ce sont souvent nombre de mécanismes complémentaires qui, fonctionnant ensemble, concrétisent l'interopérabilité totale.</span>&#160;»</p>
-</blockquote>
-
-<p>Dans cette phrase, la BSA mentionne explicitement les Standards Ouverts, mais cette affirmation suggère de remettre en cause le rôle même que jouent les normes dans l'interopérabilité.</p>
-
-<blockquote>
-	<p>«&#160;Finalement, l'EIFv2.0 devrait se retenir de recommander que les appels d'offres promeuvent les Standards Ouverts. À la place, l'EIF devrait adopter les principes et les règles exprimés dans les directives 2004/18 et 98/34, et encourager les États membres à baser leur décision d'appel d'offres sur le mérite.&#160;»</p>
-
-</blockquote>
-
-<p>Alors que le document de consultation arguait que le rôle des administrations nationales était de choisir des Standards Ouverts et appropriés, la BSA s'oppose clairement à ces décisions, qui devraient exclusivement être basées «&#160;sur le mérite&#160;».</p>
-
-<blockquote>
-	<p>&#160;«Quatrièmement, le <span style="background:#1e90ff">brouillon de l'EIFv2.0 suggère à tort</span> que la convergence vers un unique ensemble de normes profite davantage aux autorités publiques qu'une utilisation de normes multiples se concurrençant l'une l'autre. 
-	<span style="background:#1e90ff">En effet, le document conclut que l'utilisation de normes équivalentes et multiples pourrait mener à un manque d'interopérabilité. La convergence vers un ensemble unique de normes est, dans la plupart des cas, une approche très risquée</span> car il est impossible de prédire l'impact qu'une solution spécifique aura sur le marché.&#160;»</p>
-</blockquote>
-
-
-</div>
-
-<div class="colonne">
-
-<h3>C. Le document de l'EIFv2 non définitif (fuite)</h3>
-
-<blockquote>
-	<p>&#160;«<span style="background:#ffff00">S'il existe une corrélation entre transparence et interopérabilité</span>, <span style="background:#ffa500">il est également vrai que l'interopérabilité peut être obtenue sans transparence, par exemple grâce à <strong>l'homogénéité</strong> des systèmes informatiques, ce qui implique que tous les partenaires utilisent et se mettent d'accord sur l'emploi de la même solution pour les services publics européens.</span>&#160;»</p>
-
-</blockquote>
-
-<p>En se référant au «&#160;mécanismes complémentaires&#160;» décrits par la BSA, le document qui a fui explique que l'interopérabilité peut aussi être obtenue sans normes, par exemple si tout le monde utilise la même solution propriétaire.</p>
-
-</div>
-
-<div class="nettoyeur"></div>
-</div>
-
-<p><strong>Conclusion&#160;:</strong> Le document de travail original défendait les normes comme élément fondamental de l'interopérabilité et requérait que le cadre définisse les lignes de conduite qui favoriseraient l'utilisation des normes et, ce faisant, permettrait l'interopérabilité des systèmes. En conséquence, il y aurait eu une forte préférence vis-à-vis des Standards Ouverts. Cependant, la version du document qui a fui, absorbant les recommandations du BSA, minimise l'importance des normes. En outre, elle suggère que tous les états «&#160;se mettent d'accord sur l'emploi de la même solution pour les services publics européens.&#160;»</p>
-
-<p>Cela entraverait la concurrence et renforcerait le statu quo en faveur du modèle économique des solutions propriétaires.</p>
-
-<h2 id="two">2. «&#160;Éradiquer l'utilisation de standards propriétaires&#160;»</h2>
-<div class="frame">
-<div class="colonne">
-
-<h3>A. Document de consultation de l'EIFv2</h3>
-
-<blockquote>
-	<p>«&#160;Les administrations publiques et les institutions européennes comme la Commission européenne devraient <span style="background:#90ee90">promouvoir activement les efforts envers l'éradication des standards  et des solutions propriétaires</span> au sein des administrations publiques, en participant aux efforts de normalisation, particulièrement par la formulation et la communication des besoins et des nécessités, en accord avec la nouvelle approche.&#160;»</p>
-
-	<p>«&#160;rendre l'accès aux services publiques aussi abordable que possible.&#160;»</p>
-
-	<p>«&#160;Les administrations doivent faire en sorte que <span
-	style="background:#ffc0cb">les solutions et/ou les produits soient choisis via un processus dans lequel la concurrence entre les fournisseurs est juste. [...] sans les enfermer</span> et contraindre leurs choix ultérieurs.&#160;»</p>
-
-	<p>«&#160;Cette section préconise une <span
-	style="background:#90ee90">migration systématique vers l'utilisation des normes ouvertes</span> ou des spécifications techniques [...] qui garantissent l'interopérabilité, facilitent la réutilisation ultérieure à long-terme tout en minimisant les contraintes. Après avoir précisé la définition des normes et standards ouverts ou des spécifications techniques, cette section aborde la sélection des normes ou spécifications techniques et enfin présente un ensemble de recommandations.&#160;» (p. 51)</p>
-
-	<p>«&#160;<span
-	style="background:#ffc0cb">L'accès aux normes ou spécifications techniques doit être facilie et à un coût raisonnable, sans barrières relatives à leur implémentations</span> de telle sorte qu'une grande variété de produits puissent être disponibles sur le marché&#160;;&#160;»</p>
-
-</blockquote>
-
-<p>Ces extraits mettent en lumière l'intention originale du cadre d'interopérabilité. En plus de promouvoir les normes, préférer les normes ouvertes aux standards propriétaires est perçu comme le meilleur moyen de garantir que l'interopérabilité soit un succès et contribue à la concurrence. <a href="#not1" id="anc1">[1]</a></p>
-
-<blockquote>
-	<p>«&#160;considérant une norme ouverte selon la définition de l'EIF version 1&#160;:</p>
-	<ol>
-		<li>La norme ouverte sera adoptée et sera maintenue par une organisation sans but lucratif, et son développement se fera sur la base d'une <span
-	style="background:#ffc0cb">procédure de décision ouverte à toutes les parties intéressées (par consensus ou par voie de majorité etc.)</span>.</li>
-
-		<li>La norme ouverte sera publiée et le document de spécifications sera disponible soit <span
-	style="background:#ffc0cb">gratuitement ou contre une redevance nominale. Il doit être autorisé de le copier, le distribuer et l'utiliser gratuitement ou en échange d'une redevance nominale</span>.</li>
+	  <p>«&#160;Le rôle des administrations nationales dans ce processus est
+	  de <span style="background:#1e90ff">choisir la norme
+	  appropriée.</span>&#160;»</p>
+	</blockquote>
 	
-		<li>La propriété intellectuelle - par exemple <span
-	style="background:#ffc0cb">la possible présence de brevets - de la norme ouverte sera rendue disponible irrévocablement et libre de droits</span>.</li>
+	<p>Le document de consultation souligne le fait que les normes sont
+	parmi les outils les plus efficaces pour réaliser l'interopérabilité
+	sans nuire à la compétition ou à l'innovation. De plus, en se référant à
+	la «&#160;norme appropriée&#160;», il indique que si plusieurs normes
+	existent pour un même usage, un choix doit être fait. Ce choix, comme
+	expliqué ensuite, doit favoriser les Standards Ouverts.</p>
 	
-		<li>Il n'y a <span
-	style="background:#ffc0cb">aucune contraite sur la réutilisation</span> de la norme.&#160;»</li>
-	</ol>
+	</td>
+	<td>
+	
+	<h3>B. Commentaires de la <em>Business Software Alliance</em></h3>
+	
+	<blockquote>
+	  <p>«&#160;<span style="background:#ffff00">S'il est vrai que les
+	  Standards Ouverts jouent un rôle critique pour permettre
+	  l'interopérabilité</span>, <span style="background:#ffa500">ce sont
+	  souvent nombre de mécanismes complémentaires qui, fonctionnant
+	  ensemble, concrétisent l'interopérabilité totale.</span>&#160;»</p>
+	</blockquote>
+	
+	<p>Dans cette phrase, la BSA mentionne explicitement les Standards
+	Ouverts, mais cette affirmation suggère de remettre en cause le rôle
+	même que jouent les normes dans l'interopérabilité.</p>
+	
+	<blockquote>
+	  <p>«&#160;Finalement, l'EIFv2.0 devrait se retenir de recommander que
+	  les appels d'offres promeuvent les Standards Ouverts. À la place,
+	  l'EIF devrait adopter les principes et les règles exprimés dans les
+	  directives 2004/18 et 98/34, et encourager les États membres à baser
+	  leur décision d'appel d'offres sur le mérite.&#160;»</p> 
+	</blockquote>
+	
+	<p>Alors que le document de consultation arguait que le rôle des
+	administrations nationales était de choisir des Standards Ouverts et
+	appropriés, la BSA s'oppose clairement à ces décisions, qui devraient
+	exclusivement être basées «&#160;sur le mérite&#160;».</p>
+	
+	<blockquote>
+          <p>&#160;«Quatrièmement, le <span style="background:#1e90ff">brouillon
+          de l'EIFv2.0 suggère à tort</span> que la convergence vers un unique
+          ensemble de normes profite davantage aux autorités publiques qu'une
+          utilisation de normes multiples se concurrençant l'une l'autre. <span
+          style="background:#1e90ff">En effet, le document conclut que
+          l'utilisation de normes équivalentes et multiples pourrait mener à un
+          manque d'interopérabilité. La convergence vers un ensemble unique de
+          normes est, dans la plupart des cas, une approche très risquée</span>
+          car il est impossible de prédire l'impact qu'une solution spécifique
+          aura sur le marché.&#160;»</p>
+        </blockquote>
+        
+        </td>
+        <td>
+        
+        <h3>C. Document de travail de l'EIFv2 11/2009</h3>
+        
+        <blockquote>
+          <p>&#160;«<span style="background:#ffff00">S'il existe une corrélation
+          entre transparence et interopérabilité</span>, <span
+          style="background:#ffa500">il est également vrai que
+          l'interopérabilité peut être obtenue sans transparence, par exemple
+          grâce à <strong>l'homogénéité</strong> des systèmes informatiques, ce
+          qui implique que tous les partenaires utilisent et se mettent d'accord
+          sur l'emploi de la même solution pour les services publics
+          européens.</span>&#160;»</p> 
+        </blockquote>
+        
+        <p>En se référant au «&#160;mécanismes complémentaires&#160;» décrits
+        par la BSA, le document qui a fui explique que l'interopérabilité peut
+        aussi être obtenue sans normes, par exemple si tout le monde utilise la
+        même solution propriétaire.</p>
+        
+        </td>
+        <td>
 
-</blockquote>
+        <h3>D. EIFv2 Leaked Draft 03/2010</h3>
 
-<p>Cette définition d'une norme ouverte a déjà été approuvée avec la première version du Cadre européen d'interopérabilité (EIF).</p>
+	<blockquote>
+	<p>Therefore, European public administrations should strive towards openness taking into account needs, priorities, legacy, budget, market situation and a number of other factors.</p>
+	</blockquote>
 
-</div>
+	<p>The unfortunate reference to homogeneity has been dropped out, in favour of openness.</p>
+	
+	<p>This part has become even less meaningful than
+	the draft from November 2009. Given the vendor lock-in which proprietary
+	software and standards produce, the language in this section does not
+	provide any reasons for public administrations to consider moving to
+	Open Standards, let alone actually make the switch.</p>
 
-<div class="colonne">
+        </td>
+      </tr>
+    </table>
 
-<h3>B. The BSA's comments</h3>
+    <p>The current draft says that in making their decision about whether to use
+    Open Standards, public bodies should consider "priorities, legacy, budget,
+    market situation" and other factors. This non-conclusive lists is easy to
+    decrypt:</p> 
+    
+    <ul>
+      <li><p>Like any strategic consideration, looking into Open Standards does
+      often take an initial extra effort. IT is not usually a mission priority
+      in public administrations. Therefore, explicitely naming "priorities" here
+      preserves the status quo.</p></li>
+      
+      <li><p>"Legacy" implies that public administrations should look at the
+      format of the existing data they have, and consider the cost of switching
+      to a storage format based on Open Standards. Exit costs from proprietary
+      solutions can be substantial. But these costs always accrue eventually,
+      either now (when they can be calculated) or at a later time, when the
+      public body needs to switch to a new format (whether open or proprietary)
+      for some reason. In the latter case, the future costs are both higher and
+      harder to calculate.</p>
+      <p>The reference to "legacy" therefore asks public bodies to put off the
+      inevitable exit costs to some distant future day. Organisations following
+      this advice are in effect skirting their responsibility towards
+      citizens.</p></li>
+      
+      <li><p>"market situation" is an invitation to public bodies to prefer the
+      dominant solution. On the desktop as well as in many other areas, the most
+      widespread solutions are usually proprietary, thanks to the long-standing
+      effects of vendor lock-in and the way in which some proprietary companies
+      have abused their dominant position.</p></li>
+    </ul>
+    
+    <p>
+      With this reference to "market situation", the EC is asking Europe's
+      public bodies to further entrench current monopolies by choosing solutions
+      based simply on their market share, rather than on a full assessment of
+      their capabilities, long-term benefits and sustainability.
+    </p>
+    
+    <h2 id="two">2. «&#160;Éradiquer l'utilisation de standards
+    propriétaires&#160;»</h2>
 
-<blockquote>
-	<p>"Second, both the EIF v2.0 and CAMSS <span
-	style="background:#ffc0cb">should either not define
-	open standards</span>, or should endorse a definition that is consistent
-	with common usage of the term. (...)
-	"open":</p>
+    <table>
+      <tr>
+        <td>
+        
+        <h3>A. Document de consultation de l'EIFv2</h3>
+        
+        <blockquote>
+          <p>«&#160;Les administrations publiques et les institutions
+          européennes comme la Commission européenne devraient <span
+          style="background:#90ee90">promouvoir activement les efforts envers
+          l'éradication des standards et des solutions propriétaires</span> au
+          sein des administrations publiques, en participant aux efforts de
+          normalisation, particulièrement par la formulation et la communication
+          des besoins et des nécessités, en accord avec la nouvelle
+          approche.&#160;»</p>
 
-	<p>(1) the specification is publicly available <span
-	style="background:#ffc0cb">without cost or for
-	a reasonable fee</span> to any interested party;</p>
-</blockquote>
+	  <p>«&#160;rendre l'accès aux services publiques aussi abordable que
+	  possible.&#160;»</p>
+	  
+	  <p>«&#160;Les administrations doivent faire en sorte que <span
+	  style="background:#ffc0cb">les solutions et/ou les produits soient
+	  choisis via un processus dans lequel la concurrence entre les
+	  fournisseurs est juste. [...] sans les enfermer</span> et contraindre
+	  leurs choix ultérieurs.&#160;»</p> 
+	  
+	  <p>«&#160;Cette section préconise
+	  une <span style="background:#90ee90">migration systématique vers
+	  l'utilisation des normes ouvertes</span> ou des spécifications
+	  techniques [...] qui garantissent l'interopérabilité, facilitent la
+	  réutilisation ultérieure à long-terme tout en minimisant les
+	  contraintes. Après avoir précisé la définition des normes et standards
+	  ouverts ou des spécifications techniques, cette section aborde la
+	  sélection des normes ou spécifications techniques et enfin présente un
+	  ensemble de recommandations.&#160;» (p. 51)</p> 
+	  
+	  <p>«&#160;<span
+	  style="background:#ffc0cb">L'accès aux normes ou spécifications
+	  techniques doit être facilie et à un coût raisonnable, sans barrières
+	  relatives à leur implémentations</span> de telle sorte qu'une grande
+	  variété de produits puissent être disponibles sur le
+	  marché&#160;;&#160;»</p> 
+	</blockquote>
 
-<p>This point is an equivalent of EIFv1 definition's 2nd criterion. However, there are substantial differences. While the EIFv1 advocated "free of charge or at a nominal fee," the BSA argues for "a reasonable fee," which implies that Free Software is prevented from making use of those standards. ("Reasonable" refers to so-called "Reasonable and Non-Discriminatory" terms, which are in fact neither reasonable nor non-discriminatory from the point of view of Free Software. Under such terms, the person implementing the standard usually has to pay the rightsholder a royalty <strong>per copy</strong> of the software which is distributed. This clashes with most common Free Software licenses, which forbid restrictions on distribution. <a href="#not2" id="anc2">[2]</a></p>
+	<p>Ces extraits mettent en lumière l'intention originale du cadre
+	d'interopérabilité. En plus de promouvoir les normes, préférer les
+	normes ouvertes aux standards propriétaires est perçu comme le meilleur
+	moyen de garantir que l'interopérabilité soit un succès et contribue à
+	la concurrence. <a href="#not1" id="anc1">[1]</a></p>
+	
+	<blockquote>
+  	  <p>«&#160;considérant une norme ouverte selon la définition de l'EIF
+  	  version 1&#160;:</p>
+  	  <ol>
+  	    <li>La norme ouverte sera adoptée et sera maintenue par une
+  	    organisation sans but lucratif, et son développement se fera sur
+  	    la base d'une <span style="background:#ffc0cb">procédure de
+  	    décision ouverte à toutes les parties intéressées (par consensus
+  	    ou par voie de majorité etc.)</span>.</li>
+  	    <li>La norme ouverte sera publiée et le document de spécifications
+  	    sera disponible soit <span style="background:#ffc0cb">gratuitement
+  	    ou contre une redevance nominale. Il doit être autorisé de le
+  	    copier, le distribuer et l'utiliser gratuitement ou en échange
+  	    d'une redevance nominale</span>.</li>
+  	    <li>La propriété intellectuelle - par exemple <span
+  	    style="background:#ffc0cb">la possible présence de brevets - de la
+  	    norme ouverte sera rendue disponible irrévocablement et libre de
+  	    droits</span>.</li>
+  	    <li>Il n'y a <span style="background:#ffc0cb">aucune contraite sur
+  	    la réutilisation</span> de la norme.&#160;»</li>
+  	  </ol>
+        </blockquote>
 
-<blockquote>
+        <p>Cette définition d'une norme ouverte a déjà été approuvée avec la
+        première version du Cadre européen d'interopérabilité (EIF).</p>
+        
+        </td>
+        <td>
+        
+        <h3>B. The BSA's comments</h3>
 
-	<p>(2) any patent rights necessary to implement the standard are
-	available to all implementers on <span
-	style="background:#ffc0cb">RAND terms, either with or without
-	payment of a reasonable royalty or fee</span>; and</p>
-</blockquote>
+	<blockquote>
+		<p>"Second, both the EIF v2.0 and CAMSS <span
+		style="background:#ffc0cb">should either not define
+		open standards</span>, or should endorse a definition that is consistent
+		with common usage of the term. (...)
+		"open":</p>
 
-<p>The EIFv1's definition required that patent rights made were irrevocably available for use without royalties. This is clearly against BSA's statement.</p>
+		<p>(1) the specification is publicly available <span
+		style="background:#ffc0cb">without cost or for
+		a reasonable fee</span> to any interested party;</p>
+	</blockquote>
 
-<blockquote>
-	<p>(3) the specification should be in sufficient detail to enable a
-	complete understanding of its scope and purpose and to enable
-	competing implementations by multiple vendors.</p>
-</blockquote>
+	<p>This point is an equivalent of EIFv1 definition's 2nd criterion. However, there are substantial differences. While the EIFv1 advocated "free of charge or at a nominal fee," the BSA argues for "a reasonable fee," which implies that Free Software is prevented from making use of those standards. ("Reasonable" refers to so-called "Reasonable and Non-Discriminatory" terms, which are in fact neither reasonable nor non-discriminatory from the point of view of Free Software. Under such terms, the person implementing the standard usually has to pay the rightsholder a royalty <strong>per copy</strong> of the software which is distributed. This clashes with most common Free Software licenses, which forbid restrictions on distribution. <a href="#not2" id="anc2">[2]</a></p>
 
-</div>
+	<blockquote>
 
-<div class="colonne">
+		<p>(2) any patent rights necessary to implement the standard are
+		available to all implementers on <span
+		style="background:#ffc0cb">RAND terms, either with or without
+		payment of a reasonable royalty or fee</span>; and</p>
+	</blockquote>
 
-<h3>C. EIFv2 Leaked Draft</h3>
+	<p>The EIFv1's definition required that patent rights made were irrevocably available for use without royalties. This is clearly against BSA's statement.</p>
 
-<blockquote>
-	<p>"<span style="background:#90ee90">It is up to the creators of any
-	particular specification to decide how open they want their
-	specification to be</span>."</p>
+	<blockquote>
+		<p>(3) the specification should be in sufficient detail to enable a
+		complete understanding of its scope and purpose and to enable
+		competing implementations by multiple vendors.</p>
+	</blockquote>
 
-	<p>"If the principle of openness is applied in full:</p>
-	<ul>
+        </td>
+        <td>
+        
+	<h3>C. EIFv2 Leaked Draft 11/2009</h3>
 
-		<li><span
-	style="background:#ffc0cb">All stakeholders can contribute to the elaboration of the
-		specification and public review is organised</span>;</li>
-		<li>The specification document is freely available for everybody to
-		study and to share with others;</li>
-		<li>The specification can be implemented under the different
-		software development approaches19.</li>
+	<blockquote>
+		<p>"<span style="background:#90ee90">It is up to the creators of any
+		particular specification to decide how open they want their
+		specification to be</span>."</p>
+
+		<p>"If the principle of openness is applied in full:</p>
+		<ul>
+
+			<li><span
+		style="background:#ffc0cb">All stakeholders can contribute to the elaboration of the
+			specification and public review is organised</span>;</li>
+			<li>The specification document is freely available for everybody to
+			study and to share with others;</li>
+			<li>The specification can be implemented under the different
+			software development approaches19.</li>
+		</ul>
+		<p>[19] For example using Open Source or proprietary software and
+		technologies. This also allows providers under various business
+		models to deliver products, technologies and services based on such
+		kind of formalised specifications."</p>
+	</blockquote>
+
+	<p>The definition of Open Standards from the first version of the EIF was present in the consultation document, which also said that "[p]ublic administrations in Europe [...] should actively support efforts at eliminating proprietary standards". In reaction to the BSA's comments, the leaked draft totally reverses that position, offering only an extremely vague description of a "principle of openness", which can either be applied in full or not.</p>
+
+        </td>
+        <td>
+        
+        <h3>D. EIFv2 Leaked Draft 03/2010</h3>
+
+	<blockquote>
+	<p>The possibility of sharing and re-using components based on formalised specifications depends on the openness of the specifications. If the principle of openness is applied in full:</p>
+
+	<ul><li>All stakeholders have the same possibility of contributing to the elaboration of the specification and public review thereof is organised;</li><li>The specification document is freely available for everybody to copy, distribute and use;</li><li>The specification can be freely implemented and shared under different software development approaches (18).</li>
 	</ul>
-	<p>[19] For example using Open Source or proprietary software and
-	technologies. This also allows providers under various business
-	models to deliver products, technologies and services based on such
-	kind of formalised specifications."</p>
-</blockquote>
+	<p>[18] For instance, Open Source or proprietary software and technologies. This fosters competition since providers working under various business models may compete to deliver products, technologies and services based on such kind of formalised specifications.</p>
+	</blockquote>
+	
+	<p>The current draft does not reflect any improvement over the version of the Document made public on November.</p>
 
-<p>The definition of Open Standards from the first version of the EIF was present in the consultation document, which also said that "[p]ublic administrations in Europe [...] should actively support efforts at eliminating proprietary standards". In reaction to the BSA's comments, the leaked draft totally reverses that position, offering only an extremely vague description of a "principle of openness", which can either be applied in full or not.</p>
+        </td>
+      </tr>
+    </table>
+    
+    <p>
+      The 2008 consultation draft spoke of "eliminating the use of proprietary
+      standards". This provided a clear direction to Member States, showing them
+      the way to achieve interoperability in their public services
+    </p>
+    
+    <p>
+      At this point, the consultation draft provided a workable definition of
+      what is considered to be an Open Standard. In the current draft, this
+      section is stripped down to a factual statement that is so generic as to
+      be meaningless. This section provides no guidance whatsoever to Member
+      States.
+    </p>
+    
+    <p>
+      Meanwhile, Free Software ("open source") as a key driver of
+      interoperability is relegated to a footnote, which is the only occurence
+      of the term in the entire document. The elimination of Free Software from
+      the text could not have been more systematic.
+    </p>
+    
+    
+    <h2 id="three">3. The Openness Continuum</h2>
+    
+    <table>
+      <tr>
+        <td>
+	<h3>A. Consultation Draft</h3>
 
-</div>
+	<blockquote>
+		<p>"The difficulty in limiting the selection of standards or
+		technical specifications only to <span style="background:#d09cf0">the "most
+		open</span>"<br />
 
-<div class="nettoyeur"></div>
-</div>
+		The definition of open standards presented above should be
+		considered as part of <span style="background:#d09cf0">a broader approach</span>, as openness touches upon
+		many aspects of the definition, adoption and use of standards or
+		technical specifications. First of all, openness might address
+		additional process-related characteristics such as being subject to
+		a non-discriminatory conformance process.</p>
 
-<h2 id="three">3. The Openness Continuum</h2>
-<div class="frame">
-<div class="colonne">
+		<p>On the other hand, the characteristics of an open standard or
+		technical specification, as presented in the previous section,
+		might be fulfilled by some technical specifications only in part.
+		It is useful to consider some specific
+		"shadings" of openness such as
+		technical specifications that are:</p>
+		<ul>
+			<li>"freely available" (meaning that their contents are not
+			secret),</li>
+			<li>"available for free" (without charge), or</li>
 
-<h3>A. Consultation Draft</h3>
+			<li>"free of use restrictions" (i.e., of legal restrictions on
+			their use).</li>
+		</ul>
 
-<blockquote>
-	<p>"The difficulty in limiting the selection of standards or
-	technical specifications only to <span style="background:#d09cf0">the "most
-	open</span>"<br />
+		<p>The interest in such additional categorisations is
+		straightforward: <span style="background:#d09cf0">Open standards or technical specifications are
+		preferred (for all the reasons given above), but if there is no
+		suitable, feasible open standard or technical specification, one
+		can investigate some of the "less
+		open" alternatives</span>. Whereas the goal is to ensure real
+		and fair competition through the selection of open standards or
+		technical specification, it is however <span style="background:#d09cf0">difficult at this time to
+		limit the selection of standards or technical specifications only
+		to the "most open"</span> as prevailing
+		conditions must be taken into account, including the current market
+		conditions.</p>
 
-	The definition of open standards presented above should be
-	considered as part of <span style="background:#d09cf0">a broader approach</span>, as openness touches upon
-	many aspects of the definition, adoption and use of standards or
-	technical specifications. First of all, openness might address
-	additional process-related characteristics such as being subject to
-	a non-discriminatory conformance process.</p>
+		<p>However, <span style="background:#d09cf0">such choices must be revisited on a regular basis in
+		order to ensure that a systematic migration towards the use of open
+		standards</span> or technical specifications takes place, as quickly as is
+		practical."</p>
 
-	<p>On the other hand, the characteristics of an open standard or
-	technical specification, as presented in the previous section,
-	might be fulfilled by some technical specifications only in part.
-	It is useful to consider some specific
-	"shadings" of openness such as
-	technical specifications that are:</p>
-	<ul>
-		<li>"freely available" (meaning that their contents are not
-		secret),</li>
-		<li>"available for free" (without charge), or</li>
+	</blockquote>
 
-		<li>"free of use restrictions" (i.e., of legal restrictions on
-		their use).</li>
-	</ul>
+        </td>
+        <td>
+        
+	<h3>B. BSA</h3>
 
-	<p>The interest in such additional categorisations is
-	straightforward: <span style="background:#d09cf0">Open standards or technical specifications are
-	preferred (for all the reasons given above), but if there is no
-	suitable, feasible open standard or technical specification, one
-	can investigate some of the "less
-	open" alternatives</span>. Whereas the goal is to ensure real
-	and fair competition through the selection of open standards or
-	technical specification, it is however <span style="background:#d09cf0">difficult at this time to
-	limit the selection of standards or technical specifications only
-	to the "most open"</span> as prevailing
-	conditions must be taken into account, including the current market
-	conditions.</p>
+	<blockquote>
+		<p>"In defining openness in a manner that is inconsistent with
+		common industry practice, the EIF v2.0 excludes many <span style="background:#d09cf0">leading
+		standards</span> widely recognised as open from its scope
+		 including such well-known standards as DVB,
+		GSM and MP3. (We have attached a list of excluded standards to our
+		comments at Appendix A). If Member States implement this
+		definition, they will effectively be restricted from utilizing a
+		wide range of <span style="background:#d09cf0">leading technologies that implement these popular
+		standards</span>. This would represent a dramatic shift at national level,
+		given that virtually every single Member State now has policies
+		that are far more flexible. "</p>
 
-	<p>However, <span style="background:#d09cf0">such choices must be revisited on a regular basis in
-	order to ensure that a systematic migration towards the use of open
-	standards</span> or technical specifications takes place, as quickly as is
-	practical."</p>
+	</blockquote>
 
-</blockquote>
+	<p>Against Open Standards and specifications, the BSA promotes "leading or popular standards." It seems difficult to have any relevant guideline or definition about what makes a "leading standard." Moreover, there are no connections in terms of interoperability and competition.</p>
 
-</div>
+        </td>
+        <td>
 
-<div class="colonne">
+	<h3>C. EIFv2 Leaked Draft 11/2009</h3>
 
-<h3>B. BSA</h3>
+	<blockquote>
+		<p>"Specifications, software and software development methods that
+		promote collaboration and the results of which can freely be
+		accessed, reused and shared are considered open and lie at one end
+		of the spectrum while <span style="background:#d09cf0">non-documented, proprietary specifications,
+		proprietary software and the reluctance or resistance to reuse
+		solutions, i.e. the "not invented here" syndrome, lie at the other
+		end</span>.</p>
 
-<blockquote>
-	<p>"In defining openness in a manner that is inconsistent with
-	common industry practice, the EIF v2.0 excludes many <span style="background:#d09cf0">leading
-	standards</span> widely recognised as open from its scope
-	 including such well-known standards as DVB,
-	GSM and MP3. (We have attached a list of excluded standards to our
-	comments at Appendix A). If Member States implement this
-	definition, they will effectively be restricted from utilizing a
-	wide range of <span style="background:#d09cf0">leading technologies that implement these popular
-	standards</span>. This would represent a dramatic shift at national level,
-	given that virtually every single Member State now has policies
-	that are far more flexible. "</p>
+		<p>The spectrum of approaches that lies between these two extremes
+		can be called the openness continuum."</p>
+	</blockquote>
 
-</blockquote>
-
-<p>Against Open Standards and specifications, the BSA promotes "leading or popular standards." It seems difficult to have any relevant guideline or definition about what makes a "leading standard." Moreover, there are no connections in terms of interoperability and competition.</p>
-
-
-
-</div>
-
-<div class="colonne">
-
-<h3>C. Leaked Draft</h3>
-
-<blockquote>
-	<p>"Specifications, software and software development methods that
-	promote collaboration and the results of which can freely be
-	accessed, reused and shared are considered open and lie at one end
-	of the spectrum while <span style="background:#d09cf0">non-documented, proprietary specifications,
-	proprietary software and the reluctance or resistance to reuse
-	solutions, i.e. the "not invented here" syndrome, lie at the other
-	end</span>.</p>
-
-	<p>The spectrum of approaches that lies between these two extremes
-	can be called the openness continuum."</p>
-</blockquote>
-
-<p> The consultation document already included the idea of an "openness continuum". This continuum, however, only covered a range from "open" to "most open". In the leaked draft, the continuum suddenly includes proprietary standards and specifications. 
-</p>
-
-
-<blockquote>
-	<p>"Within the context of the EIF, openness is the willingness of
-	persons, organisations or other members of a community of interest
-	to share knowledge and to stimulate debate within that community of
-	interest, having as ultimate goal the advancement of knowledge and
-	the use thereof to solve relevant problems. In that sense, openness
-	leads to considerable gains in efficiency."</p>
-</blockquote>
-
-</div>
-
-<div class="nettoyeur"></div>
-</div>
-
-
-<p><strong>Conclusion:</strong> Based on the above analysis, we can only conclude that the European Commission is giving strong preference to the viewpoint of a single lobby group. Regarding interoperability and open standards, key places of the consultation document were modified to comply with the demands of the BSA. Input given by other groups was not considered on this issue. Beyond ignoring this input, the Commission has apparently decided to ignore the success of the first version of the EIF, and to abandon its efforts towards actually achieving interoperability in eGovernment services.
-</p>
+	<p> The consultation document already included the idea of an "openness continuum". This continuum, however, only covered a range from "open" to "most open". In the leaked draft, the continuum suddenly includes proprietary standards and specifications. 
+	</p>
 
 
+	<blockquote>
+		<p>"Within the context of the EIF, openness is the willingness of
+		persons, organisations or other members of a community of interest
+		to share knowledge and to stimulate debate within that community of
+		interest, having as ultimate goal the advancement of knowledge and
+		the use thereof to solve relevant problems. In that sense, openness
+		leads to considerable gains in efficiency."</p>
+	</blockquote>
+        
+        </td>
+        <td>
 
-<hr />
+	<h3>D. EIFv2 Leaked Draft 03/2010</h3>
+	<blockquote><p>Specifications, software and software development methods that promote collaboration and the results of which can freely be accessed, reused and shared are considered open and may lead to gains in efficiency, while non-documented, proprietary specifications, proprietary software and the reluctance or resistance to reuse solutions, i.e. the "not invented here" syndrome, are considered closed.</p>
+	</blockquote>
 
-<p><a id="not1" href="#anc1">[1]</a>. This is a stark contrast with the European Commission's policy on this subject. See <a href="http://europa.eu/rapid/pressReleasesAction.do?reference=SPEECH/08/317&amp;format=HTML&amp;aged=0&amp;language=EN&amp;guiLanguage=en">this speech by European Commissioner for Competition, Ms. Neelie Kroes</a>:</p>
+	<blockquote>
+	<p>Within the context of the EIF, openness is the willingness of persons, organisations or other members of a community of interest <strong>to freely share knowledge</strong> and to stimulate debate within that community of interest, having as ultimate goal the advancement of knowledge and the use thereof to solve relevant problems. Interoperability involves the sharing of information and knowledge between interacting organisations, hence implies openness.</p>
+	</blockquote>
+    
+    <p>
+      The terms "open" and "closed" are used in a manner that is so vague as to
+      render them essentially meaningless.
+    </p>	
+    
+    <p>
+      However, the current draft makes no attempt to highlight that an "open"
+      approach is preferable to a "closed" one. Even if it did, both terms are
+      used in a manner that is so vague as to render them essentially
+      meaningless.
+    </p>
+
+
+        </td>
+      </tr>
+    </table>
+    
+    <p>
+      By the time the draft of November 2009 became public, this had morphed
+      into the concept of an "openness continuum", which met with heavy
+      criticism. As a result, the expression is no longer present in the current
+      draft, which instead uses simply "open" and "closed".
+    </p>
+    
+    <p>
+      Looking back to the consultation draft, it is obvious that during the
+      development of EIFv2, the EC has abandoned the concept of Open Standards
+      as a key enabler for interoperability. This is a central reason why the
+      current draft would see the European Interoperability Framework become a
+      shadow of its former self.
+    </p>
+
+    <p><strong>Conclusion:</strong> Based on the above analysis, we can only
+    conclude that the European Commission is giving strong preference to the
+    viewpoint of a single lobby group. Regarding interoperability and open
+    standards, key places of the consultation document were modified to comply
+    with the demands of the BSA. Input given by other groups was not considered
+    on this issue. Beyond ignoring this input, the Commission has apparently
+    decided to ignore the success of the first version of the EIF, and to
+    abandon its efforts towards actually achieving interoperability in
+    eGovernment services. </p>
+    
+    <hr />
+    
+    <p><a id="not1" href="#anc1">[1]</a>. This is a stark contrast with the European Commission's policy on this subject. See <a href="http://europa.eu/rapid/pressReleasesAction.do?reference=SPEECH/08/317&amp;format=HTML&amp;aged=0&amp;language=EN&amp;guiLanguage=en">this speech by European Commissioner for Competition, Ms. Neelie Kroes</a>:</p>
 
 <blockquote>“I know a smart business decision when I see one - choosing open standards is a very smart business decision indeed.”</blockquote>
 
-<p><a id="not2" href="#anc2">[2]</a>. Indeed, instead of the vague notion of "reasonable fee," a nominal fee permits Free Software projects to implement standards. See as a similar case the <a href="http://www.samba.org/samba/PFIF/">agreement between Samba and Microsoft</a>.
+<p><a id="not2" href="#anc2">[2]</a>. Indeed, instead of the vague notion of "reasonable fee," a nominal one-time fee permits Free Software projects to implement standards. See as a similar case the <a href="http://www.samba.org/samba/PFIF/">agreement between Samba and Microsoft</a>.
 </p>
 
 
   </body>
 
-  <timestamp>$Date: 2009-12-10 12:50:10 +0000 (Thu, 10 Dec 2009) $ $Author: hugoroy $</timestamp>
-
+  <timestamp>$Date: 2010-07-31 22:07:39 +1000 (sam. 31 juil. 2010) $ $Author: hugo $</timestamp>
 <translator>Nicolas JEAN, Hugo Roy, Jil Larner (Mont Blanc, France)</translator>
 </html>
 <!--

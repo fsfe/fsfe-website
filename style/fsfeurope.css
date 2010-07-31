@@ -826,12 +826,7 @@ h4#subpages + ul li:nth-child(odd) {
 
 #footer {
   clear: both;
-<<<<<<< .working
-	margin: 0 auto 1em auto;
-	padding: 2em .5em;
-=======
   color: rgb(120,120,120);
->>>>>>> .merge-right.r16183
   font-size: 90%;
   line-height: 140%;
   min-height: 8em;

@@ -75,10 +75,6 @@ a[name], a[name]:hover, a.gl img, a.gl:link, a.gl:visited, a.gl:hover {
   display: none;
 }
 
-.break {
-  clear: both;
-}
-
 /* attempts to resemble typographical block quotations */
 /* FIXME: Use blockquote instead for real quotations */
 blockquote,
@@ -310,6 +306,7 @@ margin-bottom: 1.3em;
   margin: 3em 0 0 240px;
 	/*float: right;*/
 	/*margin: 3em 0 0 0;*/
+  min-height: 500px;
 	padding: 0 .5em .5em;
 	/*width: 79%;*/
 }

@@ -238,30 +238,30 @@
           </xsl:element>
 
           <!-- Join the Fellowship -->
-          <xsl:element name="a">
-            <xsl:attribute name="href">http://fellowship.fsfe.org/about</xsl:attribute>
-            <xsl:element name="img">
-              <xsl:attribute name="alt">Join the Fellowship!</xsl:attribute>
-              <xsl:attribute name="src">/graphics/join-fellowship.png</xsl:attribute>
+          <xsl:element name="div">
+            <xsl:attribute name="id">fellowship</xsl:attribute>
+              <xsl:element name="a">
+                <xsl:attribute name="href">http://fellowship.fsfe.org/about</xsl:attribute>
+                <xsl:element name="img">
+                  <xsl:attribute name="alt">Join the Fellowship!</xsl:attribute>
+                  <xsl:attribute name="src">/graphics/join-fellowship.png</xsl:attribute>
+                </xsl:element>
+              </xsl:element>
             </xsl:element>
           </xsl:element>
 
-          <!--
-          <ul>
-            <li>
-              <p>
-                Subscribe to <a href="/news/">our newsletter</a>!
-              </p>
-              <form action="http://mail.fsfeurope.org/mailman/subscribe/press-release" method="post">
-                <p>
-                  <input type="text" onclick="this.value = ''" value="your@email.com" name="email" />
-                  <input type="submit" value="Sign up" />
-                </p>
-              </form>
-            </li>
-          </ul>
-          -->
+          <div id="newsletter">
+            <p>
+              Subscribe to <a href="/news/">our newsletter</a>!
+            </p>
 
+            <form action="http://mail.fsfeurope.org/mailman/subscribe/press-release" method="post">
+              <p>
+                <input type="text" name="email" placeholder="you@example.com" />
+                <input type="submit" value="Sign up" />
+              </p>
+            </form>
+          </div>
         </xsl:element>
         <!-- End Menu bar -->
 

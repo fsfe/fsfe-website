@@ -262,8 +262,8 @@
               </p>
             </form>
           </div>
+          -->
         </xsl:element>
-        -->
         <!-- End Menu bar -->
 
         <!-- Language bar -->
@@ -363,9 +363,6 @@
               <xsl:text>To top</xsl:text>
             </xsl:element>
           </xsl:element>
-
-          <!-- Break -->
-          <div class="break"></div>
         </xsl:element>
         <!-- End Content -->
 

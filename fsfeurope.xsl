@@ -249,6 +249,7 @@
             </xsl:element>
           </xsl:element>
 
+          <!--
           <div id="newsletter">
             <p>
               Subscribe to <a href="/news/">our newsletter</a>!
@@ -262,6 +263,7 @@
             </form>
           </div>
         </xsl:element>
+        -->
         <!-- End Menu bar -->
 
         <!-- Language bar -->

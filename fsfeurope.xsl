@@ -366,6 +366,11 @@
         </xsl:element>
         <!-- End Content -->
 
+        <!-- FSF* netwok note --> 
+        <p id="fsfnetwork">
+          <xsl:apply-templates select="/buildinfo/textset/text[@id='fsfnetwork']/node()"/>
+        </p>
+
         <!-- Footer -->
         <div id="footer">
           <div id="notice">
@@ -441,6 +446,7 @@
             </p>
           </div> <!-- /#notice -->
 
+          <!--
           <div id="sister_organizations">
             <h2>Sister organizations</h2>
 
@@ -449,7 +455,8 @@
               <li><a href="http://fsf.org.in/">India</a></li>
               <li><a href="http://fsfla.org/">Latin America</a></li>
             </ul>
-          </div> <!-- /#sister_organizations -->
+          </div>
+          -->
         </div> <!-- /#footer -->
       </xsl:element>
     </xsl:copy>

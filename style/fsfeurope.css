@@ -452,6 +452,10 @@ p#introduction {
 	line-height: 190%;
 }
 
+#introduction > * {
+  clear: left;
+}
+
 /*
  * This expands #introduction until all content has been printed, so it
  * doesn't flow outside of the element.

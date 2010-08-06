@@ -240,12 +240,11 @@
           <!-- Join the Fellowship -->
           <xsl:element name="div">
             <xsl:attribute name="id">fellowship</xsl:attribute>
-              <xsl:element name="a">
-                <xsl:attribute name="href">http://fellowship.fsfe.org/about</xsl:attribute>
-                <xsl:element name="img">
-                  <xsl:attribute name="alt">Join the Fellowship!</xsl:attribute>
-                  <xsl:attribute name="src">/graphics/join-fellowship.png</xsl:attribute>
-                </xsl:element>
+            <xsl:element name="a">
+              <xsl:attribute name="href">http://fellowship.fsfe.org/about</xsl:attribute>
+              <xsl:element name="img">
+                <xsl:attribute name="alt">Join the Fellowship!</xsl:attribute>
+                <xsl:attribute name="src">/graphics/join-fellowship.png</xsl:attribute>
               </xsl:element>
             </xsl:element>
           </xsl:element>

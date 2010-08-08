@@ -864,6 +864,7 @@ h4#subpages + ul li:nth-child(odd) {
 }
 
 #footer #sister_organizations {
+  clear: both;
   float: right;
   width: 25%;
 }

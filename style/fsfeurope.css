@@ -870,11 +870,16 @@ h4#subpages + ul li:nth-child(odd) {
 #footer #notice ul {
   list-style: none;
   padding: 0;
+  margin-bottom: 0;
 }
 
 #footer #notice ul li {
   display: inline;
   margin-right: .8em;
+}
+
+#footer #notice ul > p {
+  margin-top: 0;
 }
 
 #footer #sister_organizations {

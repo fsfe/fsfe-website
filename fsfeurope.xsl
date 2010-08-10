@@ -238,31 +238,40 @@
           </xsl:element>
 
           <!-- Join the Fellowship -->
-          <xsl:element name="div">
-            <xsl:attribute name="id">fellowship</xsl:attribute>
-            <xsl:element name="a">
-              <xsl:attribute name="href">http://fellowship.fsfe.org/about</xsl:attribute>
-              <xsl:element name="img">
-                <xsl:attribute name="alt">Join the Fellowship!</xsl:attribute>
-                <xsl:attribute name="src">/graphics/join-fellowship.png</xsl:attribute>
-              </xsl:element>
+          <xsl:element name="a">
+            <xsl:attribute name="href">http://fellowship.fsfe.org/about</xsl:attribute>
+            <xsl:element name="img">
+              <xsl:attribute name="alt">Join the Fellowship!</xsl:attribute>
+              <xsl:attribute name="src">/graphics/join-fellowship.png</xsl:attribute>
+            </xsl:element>
+          </xsl:element>
+          
+          <!-- SFD 2010 -->
+          <xsl:element name="a">
+            <xsl:attribute name="href">http://softwarefreedomday.org/</xsl:attribute>
+            <xsl:element name="img">
+	      <xsl:attribute name="id">sfd-2010</xsl:attribute>
+              <xsl:attribute name="alt">Software Freedom Day 2010</xsl:attribute>
+              <xsl:attribute name="src">/graphics/sfd-2010.png</xsl:attribute>
             </xsl:element>
           </xsl:element>
 
           <!--
-          <div id="newsletter">
-            <p>
-              Subscribe to <a href="/news/">our newsletter</a>!
-            </p>
-
-            <form action="http://mail.fsfeurope.org/mailman/subscribe/press-release" method="post">
+          <ul>
+            <li>
               <p>
-                <input type="text" name="email" placeholder="you@example.com" />
-                <input type="submit" value="Sign up" />
+                Subscribe to <a href="/news/">our newsletter</a>!
               </p>
-            </form>
-          </div>
+              <form action="http://mail.fsfeurope.org/mailman/subscribe/press-release" method="post">
+                <p>
+                  <input type="text" onclick="this.value = ''" value="your@email.com" name="email" />
+                  <input type="submit" value="Sign up" />
+                </p>
+              </form>
+            </li>
+          </ul>
           -->
+
         </xsl:element>
         <!-- End Menu bar -->
 
@@ -363,13 +372,11 @@
               <xsl:text>To top</xsl:text>
             </xsl:element>
           </xsl:element>
+
+          <!-- Break -->
+          <div class="break"></div>
         </xsl:element>
         <!-- End Content -->
-
-        <!-- FSF* netwok note --> 
-        <p id="fsfnetwork">
-          <xsl:apply-templates select="/buildinfo/textset/text[@id='fsfnetwork']/node()"/>
-        </p>
 
         <!-- Footer -->
         <div id="footer">
@@ -446,7 +453,6 @@
             </p>
           </div> <!-- /#notice -->
 
-          <!--
           <div id="sister_organizations">
             <h2>Sister organizations</h2>
 
@@ -455,8 +461,7 @@
               <li><a href="http://fsf.org.in/">India</a></li>
               <li><a href="http://fsfla.org/">Latin America</a></li>
             </ul>
-          </div>
-          -->
+          </div> <!-- /#sister_organizations -->
         </div> <!-- /#footer -->
       </xsl:element>
     </xsl:copy>

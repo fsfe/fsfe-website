@@ -465,7 +465,7 @@ p#introduction {
 	line-height: 190%;
 }
 
-#introduction > * {
+#introduction + * {
   clear: left;
 }
 

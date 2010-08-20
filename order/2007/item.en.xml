@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <!-- Do not translate this file! -->
-
 <itemset>
+<!--
   <item type="t-shirt" id="tshirt-ussi-blue" price="18.00" date="2007-05-25">
     <available size="M"/>
-    <!-- <available size="XL"/> -->
+    <available size="XL"/>
     <image
       small="/order/2007/tshirt-ussi-blue-front-small.jpg"
       large="/order/2007/tshirt-ussi-blue-front-large.jpg"/>
@@ -13,7 +13,6 @@
       small="/order/2007/tshirt-ussi-blue-back-small.jpg"
       large="/order/2007/tshirt-ussi-blue-back-large.jpg"/>
   </item>
-<!--
   <item type="hooded" id="hooded-fsfs-grey" price="28.00" date="2004-01-01">
     <available size="S"/>
     <available size="M"/>

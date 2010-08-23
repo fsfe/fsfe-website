@@ -4,6 +4,7 @@ RewriteRule ^favicon.ico /graphics/fsfe.ico [redirect=permanent]
 RewriteRule ^graphics/fsfeurope.ico /graphics/fsfe.ico [redirect=permanent]
 
 RewriteRule ^(.*)\.no.html /$1.nb.html [redirect=permanent]
+RewriteRule ^(.*)\.no.rss /$1.nb.rss [redirect=permanent]
 RewriteRule ^contact/press(.*) /press/press$1 [redirect=permanent]
 RewriteRule ^standards(.*) /projects/os$1 [redirect=permanent]
 RewriteRule ^education(.*) /projects/education$1 [redirect=permanent]

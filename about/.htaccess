@@ -6,5 +6,5 @@ RewriteRule ^jakobs - [G,L]
 RewriteRule ^oriordan - [G,L]
 
 # moved here from ../.htaccess because it was ignored there
-RewriteRule ^about/basics/gnuproject(.*) /freesoftware/basics/gnuproject$1 [redirect=permanent]   # FIXME
+RewriteRule ^basics/gnuproject(.*) /freesoftware/basics/gnuproject$1 [redirect=permanent]   # FIXME
 

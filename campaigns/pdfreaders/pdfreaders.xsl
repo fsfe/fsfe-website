@@ -34,7 +34,14 @@
           <xsl:element name="tr">
             <xsl:element name="td"><xsl:value-of select="@institution-name"/></xsl:element>
             <xsl:element name="td"><xsl:value-of select="@institution-address"/></xsl:element>
-            <xsl:element name="td"><xsl:value-of select="@institution-url"/></xsl:element>
+            <xsl:element name="td">
+              <xsl:element name="a">
+                <xsl:element name="href">
+                  <xsl:value-of select="@institution-url"/>
+                </xsl:element>
+                <xsl:value-of select="@institution-url"/>
+              </xsl:element>
+            </xsl:element>
             <xsl:element name="td"><xsl:value-of select="@opened"/></xsl:element>
             <xsl:element name="td"><xsl:value-of select="@closed"/></xsl:element>
             <xsl:element name="td"><xsl:value-of select="@name"/></xsl:element>

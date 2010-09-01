@@ -36,9 +36,9 @@
             <xsl:element name="td"><xsl:value-of select="@institution-address"/></xsl:element>
             <xsl:element name="td">
               <xsl:element name="a">
-                <xsl:element name="href">
+                <xsl:attribute name="href">
                   <xsl:value-of select="@institution-url"/>
-                </xsl:element>
+                </xsl:attribute>
                 <xsl:value-of select="@institution-url"/>
               </xsl:element>
             </xsl:element>

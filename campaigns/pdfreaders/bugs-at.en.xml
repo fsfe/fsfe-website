@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<set>
+  <buglist country="AT">
+    <bug
+      institution-name="Example Name"
+      institution-address="Example Address"
+      institution-url="http://www.example.com"
+      opened="2010-09-01"
+      closed="&#160;"
+      name="Example Reporter"
+      group="Example Group"
+      />
+    <bug
+      institution-name="Second Name"
+      institution-address="Second Address"
+      institution-url="http://www.second.com"
+      opened="2010-08-31"
+      closed="2010-09-01"
+      name="Second Reporter"
+      group="Second Group"
+      />
+  </buglist>
+</set>

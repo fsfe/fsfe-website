@@ -7,15 +7,90 @@
   <body>
     <h1 class="n">Ελεύθερο Λογισμικό ανάγνωσης αρχείων PDF</h1>
 
-    <p id="introduction"> Με πρωτοβουλία από την 
+    <!--p id="introduction"> Με πρωτοβουλία από την 
      <a href="http://fellowship.fsfe.org/">Κοινότητα του FSFE</a>, ο
      <a href="http://pdfreaders.org/">pdfreaders.org</a> είναι ένας ιστότοπος
     για την παροχή πληροφοριών σχετικά με προγράμματα Ελεύθερου Λογισμικού
-    για την ανάγνωση αρχείων PDF για τα κυριότερα λειτουργικά συστήματα.</p>
-    
+    για την ανάγνωση αρχείων PDF για τα κυριότερα λειτουργικά συστήματα.</p-->
+
+     <p id="introduction">Το FSFE εγκαινιάζει μια εκστρατεία ευαισθητοποίησης του κοινού
+        στο γεγονός ότι οι κυβερνητικοί ιστότοποι διαφημίζουν ιδιοκτησιακό λογισμικό κάθε
+        φορά που σας ανακατευθύνουν προς μια διεπαφή λήψης μη-ελεύθερου προγράμματος
+        PDFreader όταν πρόκειται να διαβάσετε ένα αρχείο PDF.</p>
+
+      <h2>Πώς να συμμετάσχετε</h2>
+
+      <p>Θα βρείτε σε αυτήν τη σελίδα κάποιες οθόνες που υπογραμμίζουν
+        τι θα θέλαμε να αφαιρεθεί από έναν ιστότοπο δημόσιου θεσμικού οργάνου, 
+        για να επιτύχουμε θεσμικούς ιστότοπους ελεύθερους διαφημίσεων.</p>
+
+      <p><strong>Από τις 13 Σεπτεμβρίου μέχρι τις 17 Οκτωβρίου</strong> 
+        σας προτείνουμε να αναζητήσετε τέτοιου είδους διαφημιστικά σε ιστοτόπους
+        της κυβέρνησης και να τους αναφέρετε σε εμάς χρησιμοποιώντας την παρακάτω φόρμα.</p> 
+
+      <p>Όποιοι μάς αναφέρουν τους περισσότερους ιστότοπους θα κερδίσουν το βραβείο
+        [SPECIFY WHAT PRICE] στο τέλος Οκτωβρίου.</p>
+
+      <p>Σας ευχαριστούμε για τη συμβολή σας με το FSFE για κυβερνητικούς ιστότοπους
+       ελεύθερους διαφημίσεων</p>
+
+      <h2>Αναφέρετε μια δημόσια υπηρεσία</h2>
+
+      <p><em> Σημείωση: Μπορείτε να συμμετάσχετε στο κυνήγι ατομικά ή ως μέλος κάποιας ομάδας.
+          Στην περίπτωση ομάδας, παρακαλούμε εκλέξτε έναν συντονιστή της ομάδας και δηλώστε την
+          ομάδα σας με την αποστολή ενός μηνύματος στο
+          <a href="mailto:pdfreaders@lists.fsfe.org">pdfreaders@lists.fsfe.org</a></em></p>
+
+    <form action="/cgi-bin/pdfcontest.pl" method="post">
+      <p>
+        <label for="institution-name">Όνομα θεσμικού οργάνου/δημόσιας υπηρεσίας</label>
+        <input id="institution-name" name="institution-name" type="text" />
+      </p>
+      <p>
+        <label for="institution-country">Χώρα θεσμικού οργάνου/δημόσιας υπηρεσίας</label>
+        <input id="institution-country" name="institution-country" type="text" />
+      </p>
+      <p>
+        <label for="institution-url">URL του διαφημιστικού για την Adobe</label>
+        <input id="institution-url" name="institution-url" type="text" />
+      </p>
+      <p>
+        <label for="institution-address">Ταχυδρομική διεύθυνση</label>
+        <input id="institution-address" name="institution-address" type="text" />
+      </p>
+      <p>
+        <label for="Name">Το όνομά σας</label>
+        <input id="name" name="name" type="text" />
+      </p>
+      <p>
+        <label for="email">Ηλεκτρονικό ταχυδρομείο (E-mail)</label>
+        <input id="email" name="email" type="email" />
+      </p>
+      <p>
+        <label for="group">Ομάδα ή σύλλογος (προαιρετικά)</label>
+        <input id="group" name="group" type="text" />
+      </p>
+      <p>
+        <label for="contact">Μπορώ να έρθω σε επαφή με το θεσμικό όργανο/δημόσια υπηρεσία</label>
+        <input id="contact" name="contact" type="checkbox"/>
+      </p>
+      <p style="text-align:center">
+        <input type="submit" value="Submit" />
+      </p>
+    </form>
+
+    <h2>Κατάλογος αναφορών</h2>
+
+    <dynamic-content/>
   </body>
 
-  <!-- display reported "bugs" here --> 
+  <text id="institution-name">Όνομα θεσμικού οργάνου/δημόσιας υπηρεσίας</text>
+  <text id="institution-address">Ταχυδρομική διεύθυνση</text>
+  <text id="institution-url">URL του διαφημιστικού για την Adobe</text>
+  <text id="opened">Bug opened</text>
+  <text id="closed">Bug closed</text>
+  <text id="name">Αναφέρθηκε από</text>
+  <text id="group">Ομάδα</text>
 
   <timestamp>$Date: 2010-08-24 15:30:27 +0300 (Tue, 24 Aug 2010) $ $Author: mk $</timestamp>
 </html>

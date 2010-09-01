@@ -1,14 +1,23 @@
 package WebBuild::FormValidation;
 
+=head1 DESCRIPTION
+
+Please document me >:(
+
+=cut
+
 use strict;
 use warnings;
 
 use utf8;
 use CGI;
+use URI;
 
 use base "Exporter";
 our @EXPORT = qw(validates_presence_of validates_length_of
   validates_format_of);
+
+use constant TYPES => ('ur;', 'email');
 
 my $q = new CGI;
 
@@ -65,7 +74,7 @@ sub new_error {
 sub validates_presence_of {
   my ($self, $option, %attrs) = @_;
 
-  my $value = $q->param($option);
+  my $value = $q->param($option) || '';
 
   if ($value eq "") {
     unless ($attrs{"message"}) {
@@ -115,6 +124,8 @@ sub validates_format_of {
   }
 
   #unless ($value =~ /$attrs{"with"}/) {
+
+  # WTF if this? Always check for email?
   unless ($value =~ /^[_a-zA-Z0-9-]+(\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.(([0-9]{1,3})|([a-zA-Z]{2,3})|(aero|coop|info|museum|name))$/) {
     unless ($attrs{"message"}) {
       $self->new_error($option, ucfirst($option) . " is not valid.");
@@ -124,5 +135,47 @@ sub validates_format_of {
   }
 }
 
-1;
+sub validate_format
+  {
+    my ($self, $option, %attrs) = @_;
 
+    my $value = $q->param ($option) || '';
+    my $type = delete $attrs{'type'};
+    my $with = delete $attrs{'with'};
+
+    die 'at least one of [type] or [with] must be set'
+      unless $type || $with;
+
+    die sprintf ('unhandled attributes [%s]', join (', ', keys %attrs))
+      if values %attrs;
+
+    die sprintf ('type [%s] is not one of [%s]', $type, join (', ', TYPES))
+      unless grep $type, TYPES;
+
+    warn '[type] is set, overrides [with]'
+      if $type && $with;
+
+    if (not defined $type)
+      {
+        $self->new_error ($option, ucfirst ($option) . ' is invalid')
+          unless $value =~ $with;
+      }
+    elsif ($type eq 'url')
+      {
+        my $uri = URI->new ($value);
+        my $scheme = $uri->scheme || '';
+        my $host = eval { $uri->host };
+
+        $self->new_error ($option, ucfirst ($option) . ' needs to be a valid URL')
+          unless grep ($scheme, ('http', 'https')) && defined $host;
+      }
+    elsif ($type eq 'email')
+      {
+        my $user_part = qr/[a-z0-9!#$%&'*+\/=?^_`{|}~-]/;
+        $self->new_error ($option, ucfirst ($option) . ' needs to be a valid E-Mail address')
+          unless $value =~ /$user_part+(?:\.$user_part+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+
+                            (?:[A-Z]{2}|com|org|net|edu|gov|mil|biz|info|mobi|name|aero|asia|jobs|museum)\b/x
+      }
+  }
+
+1

@@ -1,5 +1,11 @@
 package WebBuild::DynamicContent;
 
+=head1 DESCRIPTION
+
+Please document me >:(
+
+=cut
+
 use strict;
 use warnings;
 

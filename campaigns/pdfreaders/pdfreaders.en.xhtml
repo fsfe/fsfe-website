@@ -7,15 +7,75 @@
   <body>
     <h1 class="n">Free Software PDF readers</h1>
 
-    <p id="introduction"> Launched by the <a
-      href="http://fellowship.fsfe.org/">Fellowship of FSFE</a>, <a
-      href="http://pdfreaders.org/">pdfreaders.org</a> is a site providing
-    information about Free Software PDF readers for all
-    major operating systems.</p>
+    <!-- <p id="introduction"> Launched by the <a -->
+    <!--   href="http://fellowship.fsfe.org/">Fellowship of FSFE</a>, <a -->
+    <!--   href="http://pdfreaders.org/">pdfreaders.org</a> is a site providing -->
+    <!-- information about Free Software PDF readers for all -->
+    <!-- major operating systems.</p> -->
     
-  </body>
+      <p id="introduction">The FSFE is launching a campaign to sensibilize the public to the fact
+        that government websites are advertising for proprietary software, each time
+        that they redirect you to a downloading interface for a non-free PDFreader while
+        you have to read a PDF file.</p>
 
-  <!-- display reported "bugs" here --> 
+      <p>You'll find on this page some screenshots to highlight
+        want we want fo be removed from the institutional website, in order to
+        reach advertising-free institutional websites.</p>
+
+      <p><strong>From the 13th of September to the 17th October</strong> we
+        propose you to search for such advertising on the
+        governmental websites and to notify them to us thanks to the formular underneath.</p> 
+
+      <p>The ones would will notify us the most websites will win a price
+        [SPECIFY WHAT PRICE] at the end of October.</p>
+
+      <p>Thank you for contributing with the FSFE to advertisment-free goverment websites</p>
+
+      <p><em> Remark: You can participate to the hunt as an individual participant
+          or as a member of a group. In the case of a group, please elect a group
+          coordinator and register your group in sending a
+          mail to <a href="mailto:pdfreaders@lists.fsfe.org">pdfreaders@lists.fsfe.org</a></em></p>
+
+    <form action="/cgi-bin/pdfcontest.pl" method="post">
+      <p>
+        <label for="institution-name">Name of the institution</label>
+        <input id="institution-name" name="institution-name" type="text" />
+      </p>
+      <p>
+        <label for="institution-country">Country of the institution</label>
+        <input id="institution-country" name="institution-country" type="text" />
+      </p>
+      <p>
+        <label for="institution-url">URL of the Adobe advertisement</label>
+        <input id="institution-url" name="institution-url" type="text" />
+      </p>
+      <p>
+        <label for="institution-address">Postal address</label>
+        <input id="institution-address" name="institution-address" type="text" />
+      </p>
+      <p>
+        <label for="Name">Your name</label>
+        <input id="name" name="name" type="text" />
+      </p>
+      <p>
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" />
+      </p>
+      <p>
+        <label for="group">Group or association (optional)</label>
+        <input id="group" name="group" type="text" />
+      </p>
+      <p>
+        <label for="contact">Would you be available to get in contact with the institution?</label>
+        <input id="contact" name="contact" type="checkbox"/>
+      </p>
+      <p style="text-align:center">
+        <input type="submit" value="Submit" />
+      </p>
+    </form>
+
+    <!-- display reported "bugs" here --> 
+  </body>
 
   <timestamp>$Date$ $Author$</timestamp>
 </html>

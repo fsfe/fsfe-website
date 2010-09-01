@@ -12,6 +12,7 @@ DEST=/home/www/html
 TMP=/home/www/tmp.$$
 STATUS=/var/www/web
 ALARM_LOCKFILE=alarm_lockfile
+MAKEFILE_PL=${SOURCE}/Makefile.PL
 
 # Since we must grep for svn output messages,
 # let's ensure we get English messages
@@ -46,6 +47,12 @@ fi
 exec 1> ${STATUS}/status.txt 2>&1
 
 cd ${SOURCE}
+
+# -----------------------------------------------------------------------------
+echo "$(date)  Checking Perl modules."
+# -----------------------------------------------------------------------------
+
+perl ${MAKEFILE_PL}
 
 # -----------------------------------------------------------------------------
 echo "$(date)  Cleaning old build directories."

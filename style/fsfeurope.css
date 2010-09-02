@@ -837,13 +837,18 @@ h4#subpages + ul li:nth-child(odd) {
 /* ------------------------------------------------------------------------- */
 /* FSF* Network                                                              */
 /* ------------------------------------------------------------------------- */
-#fsfnetwork {
+/*#fsfnetwork {
   clear: both;
   font-size: 120%;
   padding-top: 2em;
   text-align: center;
-}
+}*/
 
+#fsfnetwork {
+	font-size: 110%;
+	clear: left;
+	clear:both;
+}
 
 /* ------------------------------------------------------------------------- */
 /* Footer                                                                    */

@@ -378,10 +378,7 @@
         </xsl:element>
         <!-- End Content -->
 
-        <!-- FSF* netwok note --> 
-        <p id="fsfnetwork">
-          <xsl:apply-templates select="/buildinfo/textset/text[@id='fsfnetwork']/node()"/>
-        </p>
+
 
         <!-- Footer -->
         <div id="footer">

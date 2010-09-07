@@ -19,6 +19,7 @@ my %att = (
     'Carp' => 0,
     'CGI' => 0,
     'Cwd' => 0,
+    'DateTime' => 0, # Tested with 0.53
     'Fcntl' => 0,
     'File::Basename' => 0,
     'File::Copy' => 0,

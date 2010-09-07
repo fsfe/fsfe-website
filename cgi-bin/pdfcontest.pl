@@ -70,6 +70,8 @@ my $data = { institution_name => $query->param ('institution-name'),
              name => $query->param ('name'),
              email => $query->param ('email'),
              group => $query->param ('group') || '',
+             petition => $query->param ('petition'),
+             newsletter => $query->param ('newsletter'),
              contact => $query->param ('contact') };
 
 $template->process ('pdfreaders-mail.tt2', $data, \$mail);

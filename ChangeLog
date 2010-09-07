@@ -1,3 +1,14 @@
+2010-09-07  Alexander Kahl  <e-user@fsfe.org>
+
+	* Makefile.PL: Initial creation, check for Perl modules only
+	* tools/build.sh: Also run Makefile.PL (early)
+	* templates: Initial creation, location for Template Toolkit
+	templates
+	* templates/README.directory: Initial creation
+	* templates/pdfreaders-mail.tt2: Initial creation
+	* cgi-bin/pdfcontest.pl: Initial creation
+	* campaigns/pdfreaders/index.en.xhtml: Initial creation
+
 2006-12-05  Werner Koch  <wk@g10code.com>
 
 	* about/people/person-koch.en.xml: Removed me as HoO.  Also for

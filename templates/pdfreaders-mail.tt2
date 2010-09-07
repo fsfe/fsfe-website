@@ -1,0 +1,21 @@
+From: web@fsfeurope.org
+To: pdfreaders@lists.fsfe.org
+Subject: [PDFReaders] New bug for [% institution_country %]
+Content-Type: text/plain
+
+A new PDFReaders bug has been reported by [% name %] <[% email %]> 
+for [% institution_country %]. [% name %] is [% IF !contact %]not [% END %]available for contact.
+
+Please validate and use the following XML snippet if appropriate:
+---
+<bug institution-name="[% institution_name %]"
+     institution-address="[% institution_address %]"
+     institution-url="[% institution_url %]"
+     opened="[% opened %]"
+     closed=""
+     name="[% name %]"
+     group="[% group %]"
+     />
+---
+
+

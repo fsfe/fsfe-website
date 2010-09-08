@@ -39,7 +39,7 @@
                 <xsl:attribute name="href">
                   <xsl:value-of select="@institution-url"/>
                 </xsl:attribute>
-                <xsl:value-of select="@institution-url"/>
+                <xsl:value-of select="/html/text[@id='link']"/>
               </xsl:element>
             </xsl:element>
             <xsl:element name="td"><xsl:value-of select="@opened"/></xsl:element>

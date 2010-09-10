@@ -567,17 +567,17 @@ table.noborders th {
 /* forms */
 form label {
 	color: rgb(80,80,80);
-	display: inline-block;
 	font-size: 90%;
 	font-weight: bold;
-	margin-right: .5em;
+  display: block;	
+}
+
+form.left-aligned label {
 	text-align: right;
 	vertical-align: top;
 	width: 110px;
-}
-
-.formLabelLarger {
-	width: 200px;
+  display: inline-block;
+  margin-right: .5em;
 }
 
 form small {

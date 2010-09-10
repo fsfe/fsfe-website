@@ -586,7 +586,9 @@ form small {
 	display: block;
 }
 
-form input,
+form input[type=text],
+form input[type=email],
+form input[type=url],
 form select,
 form textarea,
 .button a {

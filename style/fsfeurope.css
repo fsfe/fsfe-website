@@ -569,7 +569,8 @@ form label {
 	color: rgb(80,80,80);
 	font-size: 90%;
 	font-weight: bold;
-  display: block;	
+  display: block;
+  padding-bottom: .2em;  
 }
 
 form.left-aligned label {

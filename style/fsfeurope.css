@@ -617,8 +617,10 @@ form .button a {
 	font-family: "Arial", "Verdana", "Helvetica", sans-serif;
 }
 
-form label + input[type=text],
-form label + textarea {
+form input[type=text],
+form input[url],
+form input[email],
+form textarea {
 	width: 12em;
 }
 

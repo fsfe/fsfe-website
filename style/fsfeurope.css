@@ -510,6 +510,10 @@ p#introduction {
   color: rgb(107,179,64);
 }
 
+.required-asterisk {
+  color: red;
+}
+
 
 /* press releases */
 dl#press-releases dt {

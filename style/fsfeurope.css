@@ -570,7 +570,6 @@ form label {
 	font-size: 90%;
 	font-weight: bold;
   display: block;
-  padding-bottom: .2em;  
 }
 
 form.left-aligned label {
@@ -622,9 +621,11 @@ form input[type=url],
 form input[type=email],
 form textarea {
 	width: 22em;
+  padding-top: .3em;
 }
 
-form label + ul {
+form label + ul,
+form label + ul li {
   list-style: none;
 }
 

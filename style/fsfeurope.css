@@ -626,6 +626,10 @@ form label + ul {
   list-style: none;
 }
 
+form label + ul li label {
+  font-weight: normal;
+}
+
 form input[type=submit],
 form input[type=button],
 form input[type=image],

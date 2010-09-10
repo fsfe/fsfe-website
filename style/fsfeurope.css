@@ -618,8 +618,8 @@ form .button a {
 }
 
 form input[type=text],
-form input[url],
-form input[email],
+form input[type=url],
+form input[type=email],
 form textarea {
 	width: 22em;
 }

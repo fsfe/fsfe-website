@@ -174,7 +174,7 @@ sub validate_format
         my $user_part = qr/[a-z0-9!#$%&'*+\/=?^_`{|}~-]/;
         $self->new_error ($option, ucfirst ($option) . ' needs to be a valid E-Mail address')
           unless $value =~ /$user_part+(?:\.$user_part+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+
-                            (?:[A-Z]{2}|com|org|net|edu|gov|mil|biz|info|mobi|name|aero|asia|jobs|museum)\b/x
+                            (?:[A-Z]{2}|com|org|net|edu|gov|mil|biz|info|mobi|name|aero|asia|jobs|museum)\b/xi
       }
   }
 

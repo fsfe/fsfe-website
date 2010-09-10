@@ -619,7 +619,7 @@ form .button a {
 
 form label + input[type=text],
 form label + textarea {
-	width: 60%;
+	width: 12em;
 }
 
 form label + ul {

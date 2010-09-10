@@ -63,53 +63,74 @@ ce second cas, nous vous demandons d'inscrire le groupe en envoyant un mail à  
 
     <form action="/cgi-bin/pdfcontest.pl" method="post">
       <p>
-        <label  class="formLabelLarger" for="institution-name">Nom de l'institution</label>
-        <input style="color: rgb(170, 170, 170);" onclick="if(this.value=='nom en francais')this.value='';this.style=''" id="institution-name" name="institution-name" type="text" value="nom en francais"/>
+        <label for="institution-name">Nom local de l'institution</label>
+        <input id="institution-name" name="institution-name" type="text" />
       </p>
+
       <p>
-        <label  class="formLabelLarger" for="institution-country">Pays de l'institution</label>
-        <input style="color: rgb(170, 170, 170);" onclick="if(this.value=='Pays (en anglais)')this.value='';this.style=''" id="institution-country" name="institution-country" type="text" value="Pays (en anglais)" />
+        <label for="institution-country">Pays de l'institution (en anglais)</label>
+        <input id="institution-country" name="institution-country" type="text" />
       </p>
+
       <p>
-        <label  class="formLabelLarger" for="institution-url">URL de la publicité pour un logiciel propriétaire</label>
-        <input style="color: rgb(170, 170, 170);" onclick="if(this.value=='www.ministère.gov')this.value='';this.style=''" id="institution-url" name="institution-url" type="text" value="www.ministère.gov" />
+        <label for="institution-url">URL de la publicité pour un logiciel propriétaire</label>
+        <input id="institution-url" name="institution-url" type="url" />
       </p>
+
       <p>
-        <label  class="formLabelLarger" for="institution-address">Adresse postale</label>
-        <input style="color: rgb(170, 170, 170);" onclick="if(this.value=='1, rue des logiciels libres, 63000 Ville')this.value='';this.style=''" id="institution-address" name="institution-address" type="text" value="1, rue des logiciels libres, 63000 Ville"/>
+        <label for="institution-address">Adresse postale</label>
+        <small>Rue, Code postal, Ville</small>
+        <input id="institution-address" name="institution-address" type="text" />
       </p>
+
       <p>
-        <label  class="formLabelLarger" for="Name">Votre nom</label>
-        <input style="color: rgb(170, 170, 170);" onclick="if(this.value=='Prénom Nom')this.value='';this.style=''" id="name" name="name" type="text" value="Prénom Nom" />
+        <label for="name">Votre Nom</label>
+  <small>Prénom Nom</small>
+        <input id="name" name="name" type="text" />
       </p>
+
       <p>
-        <label  class="formLabelLarger" for="email">E-mail</label>
-        <input style="color: rgb(170, 170, 170);" onclick="if(this.value=='moi@logiciellibre.com')this.value='';this.style=''" id="email" name="email" type="text" value="moi@logiciellibre.com" />
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" />
       </p>
+
       <p>
-        <label  class="formLabelLarger" for="group">Groupe ou association (facultatif)</label>
-        <input style="color: rgb(170, 170, 170);" onclick="if(this.value=='nom du groupe')this.value='';this.style=''" id="group" name="group" type="text" value="nom du groupe"/>
+        <label for="group">Groupe ou association</label>
+        <small>Facultatif</small>
+        <input id="group" name="group" type="text" />
       </p>
+
       <p>
-        <label  class="formLabelLarger" for="petition">Je souhaite également signer la pétition</label>
-        <input  id="petition" name="petition" type="checkbox" checked="checked" />
+        <label>Je souhaite aussi</label>
+        
+        <ul>
+          <li>
+            <label><input name="petition" type="checkbox"
+              checked="checked" />signer la pétition pour le retrait des publicités pour des logiciels propriétaires des sites internet gouvernementaux </label>
+          </li>
+
+          <li>
+            <label><input name="newsletter" type="checkbox"
+              checked="checked" />recevoir la lettre d'informations mensuelle de la FSFE</label>
+          </li>
+        </ul>
       </p>
+
       <p>
-        <label  class="formLabelLarger" for="newsletter">Je souhaite recevoir la lettre d'informations mensuelle de la FSFE</label>
-        <input id="newsletter" name="newsletter" type="checkbox" checked="checked" />
+        <label><input id="contact" name="contact" type="checkbox" /> Je suis disponible pour contacter l'institution concernée moi-même</label>
       </p>
+      
+      <p class="n">
+        <label for="url">Si vous êtes une machine, merci de remplir également ce formulaire pour voir notre système ignorer allègrement vos efforts </label>
+        <input id="url" name="url" type="text" />
+      </p>
+
       <p>
-        <label  class="formLabelLarger" for="contact">Seriez vous disponible pour contacter l'institution concernée ?</label>
-        <input id="contact" name="contact" type="checkbox"/>
-      </p>
-      <p style="position: absolute; top: -9999px; left: -9999px;">
-        <input id="url" name="url" type="text"/>
-      </p>
-      <p style="text-align:center">
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Report your bug" />
       </p>
     </form>
-<p><em>Nous vérifions chaque soumission faite par le formulaire avant de les mettre en ligne. Lorsque vous rapportez une institution, ne vous inquétez donc pas si elle n'apparait pas immédiatement dans la liste.</em></p>
+
+   <p><em>Nous vérifions chaque soumission faite par le formulaire avant de les mettre en ligne. Lorsque vous rapportez une institution, ne vous inquétez donc pas si elle n'apparait pas immédiatement dans la liste.</em></p>
 
     <h2>Liste des rapports déjà effectués</h2>
 

@@ -51,54 +51,75 @@
 
       <p><em> Bemerkung : Sie können bei der Suche als individueller Anzeiger oder als Mitglied einer Gruppe mitmachen. In diesem letzten Fall, bieten wir Sie darum, ein Gruppenkoordinator zu wählen und die Gruppe zu registrieren, indem Sie ein Mail an <a href="mailto:pdfreaders@lists.fsfe.org">pdfreaders@lists.fsfe.org</a></em> senden.</p>
 
-    <form action="/cgi-bin/pdfcontest.pl" method="post">
+   <form action="/cgi-bin/pdfcontest.pl" method="post">
       <p>
-        <label  class="formLabelLarger" for="institution-name">Name der Institution</label>
-        <input style="color: rgb(170, 170, 170);" onclick="if(this.value=='Heimische Name der Institution')this.value='';this.style=''" id="institution-name" name="institution-name" type="text" value="Heimische Name der Institution"/>
+        <label for="institution-name">Heimische Name der Institution</label>
+        <input id="institution-name" name="institution-name" type="text" />
       </p>
+
       <p>
-        <label  class="formLabelLarger" for="institution-country">Staat</label>
-        <input style="color: rgb(170, 170, 170);" onclick="if(this.value=='Name des Staates (Englisch)')this.value='';this.style=''" id="institution-country" name="institution-country" type="text" value="Name des Staates (Englisch)"/>
+        <label for="institution-country">Staat der Institution (auf Englisch)</label>
+        <input id="institution-country" name="institution-country" type="text" />
       </p>
+
       <p>
-        <label  class="formLabelLarger" for="institution-url">URL der Werbung für unfreie Software</label>
-        <input style="color: rgb(170, 170, 170);" onclick="if(this.value=='http://www.beispiel.gov')this.value='';this.style=''" id="institution-url" name="institution-url" type="text" value="http://www.beispiel.gov" />
+        <label for="institution-url">URL der Werbung für unfreie Software</label>
+        <input id="institution-url" name="institution-url" type="url" />
       </p>
+
       <p>
-        <label  class="formLabelLarger" for="institution-address">Postadresse</label>
-        <input style="color: rgb(170, 170, 170);" onclick="if(this.value=='Straße, Hausnummer, Zip Code, Stadt')this.value='';this.style=''" id="institution-address" name="institution-address" type="text" value="Straße, Hausnummer, Zip Code, Stadt"/>
+        <label for="institution-address">Postadresse</label>
+        <small>Straße, Straßennummer, Zip Code, Stadt</small>
+        <input id="institution-address" name="institution-address" type="text" />
       </p>
+
       <p>
-        <label  class="formLabelLarger" for="Name">Ihr Name</label>
-        <input style="color: rgb(170, 170, 170);" onclick="if(this.value=='Vorname Nachname')this.value='';this.style=''" id="name" name="name" type="text" value="Vorname Nachname"/>
+        <label for="name">Ihr Name</label>
+<small>Vorname Nachname</small>
+        <input id="name" name="name" type="text" />
       </p>
+
       <p>
-        <label  class="formLabelLarger" for="email">E-mail</label>
-        <input style="color: rgb(170, 170, 170);" onclick="if(this.value=='ich@softwarefreedom.org')this.value='';this.style=''" id="email" name="email" type="text" value="ich@softwarefreedom.org" />
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" />
       </p>
+
       <p>
-        <label  class="formLabelLarger" for="group">Group or association (optional)</label>
-        <input style="color: rgb(170, 170, 170);" onclick="if(this.value=='best advertisement hunters Inc.')this.value='';this.style=''" id="group" name="group" type="text" value="best advertisement hunters Inc."/>
+        <label for="group">Gruppe oder Assoziation</label>
+        <small>Optional</small>
+        <input id="group" name="group" type="text" />
       </p>
+
       <p>
-        <label  class="formLabelLarger" for="petition">Ich möchte auch die Petition für Regierungswebseite ohne Werbung für unfreie Software unterschreiben </label>
-        <input style="color: rgb(170, 170, 170);" id="petition" name="petition" type="checkbox" checked="checked" />
+        <label>Ich möchte auch</label>
+        
+        <ul>
+          <li>
+            <label><input name="petition" type="checkbox"
+              checked="checked" />Petition für die Entfernung der Werbung für unfreie Software aus der Webseiten der Regierungen unterzeichnen</label>
+          </li>
+
+          <li>
+            <label><input name="newsletter" type="checkbox"
+              checked="checked" />die FSFE newsletter bekommen</label>
+          </li>
+        </ul>
       </p>
+
       <p>
-        <label  class="formLabelLarger" for="newsletter">Ich möchte die FSFE newsletter bekommen</label>
-        <input id="newsletter" name="newsletter" type="checkbox" checked="checked" />
+        <label><input id="contact" name="contact" type="checkbox" /> Ich stehe zu Verfügung, um die Institution selbst zu kontaktieren</label>
       </p>
+      
+      <p class="n">
+        <label for="url">Wenn Sie ein Roboter sind, können Sie gern dieses Formular füllen, dann wird unser System Ihre Bemühungen fröhlich ignorieren.</label>
+        <input id="url" name="url" type="text" />
+      </p>
+
       <p>
-        <label  class="formLabelLarger" for="contact">Würden Sie bereit sein, die Institution direkt zu kontaktieren ?</label>
-        <input id="contact" name="contact" type="checkbox"/>
-      </p>
-      <p style="position: absolute; top: -9999px; left: -9999px;">
-        <input id="url" name="url" type="text"/>
-      </p>
-      <p style="text-align:center">
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Report your bug" />
       </p>
     </form>
+
 <p><em>Die eingezeigten Institutionen werden zuerst von unserem Team zugelassen, und erscheinen dann erst auf der Webseite. Wir bitten um ein bisschen Geduld, bevor Sie Ihre Anzeige auf der Liste. </em></p>
 
     <h2>Liste der angezeigten Institutionen</h2>

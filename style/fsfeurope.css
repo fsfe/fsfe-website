@@ -582,9 +582,8 @@ form.left-aligned label {
 
 form small {
 	color: rgb(165,165,165);
-	font-size: 80%;
+	font-size: 75%;
 	display: block;
-	margin-top: -.6em;
 }
 
 form input,
@@ -618,6 +617,10 @@ form .button a {
 form label + input[type=text],
 form label + textarea {
 	width: 60%;
+}
+
+form label + ul {
+  list-style: none;
 }
 
 form input[type=submit],

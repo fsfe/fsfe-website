@@ -1,7 +1,9 @@
 From: web@fsfeurope.org
+MIME-Version: 1.0
 To: pdfreaders@lists.fsfe.org
 Subject: [PDFReaders] New bug for [% institution_country %]
-Content-Type: text/plain
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
 
 A new PDFReaders bug has been reported by [% name %] <[% email %]> 
 for [% institution_country %]. [% name %] is [% IF !contact %]not [% END %]available for contact.

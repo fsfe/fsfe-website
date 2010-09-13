@@ -263,7 +263,7 @@
 
           <!-- Software Freedom Day -->
           <xsl:element name="div">
-            <xsl:attribute name="id">sfd</xsl:attribute>
+            <xsl:attribute name="id">sfd-2010</xsl:attribute>
             <xsl:element name="a">
               <xsl:attribute name="href">http://softwarefreedomday.org/</xsl:attribute>
               <xsl:element name="img">

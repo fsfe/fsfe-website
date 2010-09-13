@@ -21,6 +21,7 @@ use lib "$root/tools";
 
 use CGI;
 use DateTime;
+use Encode qw (decode);
 use Template;
 use WebBuild::FormValidation;
 use WebBuild::DynamicContent;
@@ -75,6 +76,7 @@ my $data = { institution_name => $query->param ('institution-name'),
              contact => $query->param ('contact') };
 
 $template->process ('pdfreaders-mail.tt2', $data, \$mail);
+$mail = decode ('iso-8859-1', $mail); # This must match the encoding of the website!
 
 open MAIL, "|/usr/lib/sendmail -t -f web\@fsfeurope.org";
 print MAIL $mail;

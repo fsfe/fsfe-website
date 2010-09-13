@@ -20,6 +20,7 @@ my %att = (
     'CGI' => 0,
     'Cwd' => 0,
     'DateTime' => 0, # Tested with 0.53
+    'Encode' => 0, # Tested with 2.35
     'Fcntl' => 0,
     'File::Basename' => 0,
     'File::Copy' => 0,

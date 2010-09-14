@@ -44,7 +44,7 @@ $form->validate_format ('institution-url', type => 'url');
 $form->validates_presence_of ('institution-address');
 $form->validates_presence_of ('name');
 $form->validate_format ('email', type => 'email');
-# Group is optional
+# Group, Comment are optional
 
 if ($form->has_errors)
   {
@@ -72,7 +72,8 @@ my $data = { institution_name => $query->param ('institution-name'),
              group => $query->param ('group') || '',
              petition => $query->param ('petition'),
              newsletter => $query->param ('newsletter'),
-             contact => $query->param ('contact') };
+             contact => $query->param ('contact'),
+             comment => $query->param ('comment') };
 
 $template->process ('pdfreaders-mail.tt2', $data, \$mail);
 

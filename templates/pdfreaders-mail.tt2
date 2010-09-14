@@ -11,6 +11,11 @@ for [% institution_country %]. [% name %] is [% IF !contact %]not [% END %]avail
 [[% IF petition %]X[% ELSE %] [% END %]] Petition
 [[% IF newsletter %]X[% ELSE %] [% END %]] Newsletter
 
+[% IF comment -%]
+Additional comments:
+[% comment %]
+[%- END %]
+
 Please validate and use the following XML snippet if appropriate:
 ---
 <bug institution-name="[% institution_name %]"

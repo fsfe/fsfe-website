@@ -73,7 +73,7 @@ my $data = { institution_name => $query->param ('institution-name'),
              petition => $query->param ('petition'),
              newsletter => $query->param ('newsletter'),
              contact => $query->param ('contact'),
-             comment => $query->param ('comment') };
+             comment => $query->param ('comment') || '' };
 
 $template->process ('pdfreaders-mail.tt2', $data, \$mail);
 

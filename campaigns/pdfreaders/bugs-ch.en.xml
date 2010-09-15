@@ -3,25 +3,27 @@
 <set>
 <buglist country="CH">
 
-<bug institution-name="Verwaltung des Kantons Basel-Stadt"
-     institution-address="Marktplatz 9, 4001 Basel"
-     institution-url="http://www.bs.ch/impressum.htm"
+<bug institution-name="Schweizerisches Bundesgericht"
+     institution-address="Av. du Tribunal fédéral 29, 1000, Lausanne 14"
+     institution-url="http://www.bger.ch/index/juridiction/jurisdiction-inherit-template/jurisdiction-recht.htm"
      opened="2010-09-13"
      closed=""
-     name="Philipp"
+     name="Michael Telgkamp"
      group=""
      />
-<bug institution-name="Staatskanzlei des Kantons Bern"
-     institution-address="Postgasse 68, 3000 Bern 8"
-     institution-url="http://www.be.ch/web/portal-hilfe.htm"
-     opened="2010-09-13"
-     closed=""
-     name="Philipp"
-     group=""
-     />
+
 <bug institution-name="Gemeindeverwaltung Wallisellen"
      institution-address="Zentralstrasse 9, 8304 Wallisellen"
      institution-url="http://www.wallisellen.ch/de/verwaltung/faq/?f_cat=&amp;#faq1404"
+     opened="2010-09-13"
+     closed=""
+     name="Philipp"
+     group=""
+     />
+
+<bug institution-name="Verwaltung des Kantons Basel-Stadt"
+     institution-address="Marktplatz 9, 4001 Basel"
+     institution-url="http://www.bs.ch/impressum.htm"
      opened="2010-09-13"
      closed=""
      name="Philipp"
@@ -36,6 +38,42 @@
      name="Philipp"
      group=""
      />
+
+<bug institution-name="Staatskanzlei des Kantons Bern"
+     institution-address="Postgasse 68, 3000 Bern 8"
+     institution-url="http://www.be.ch/web/portal-hilfe.htm"
+     opened="2010-09-13"
+     closed=""
+     name="Philipp"
+     group=""
+     />
+
+<bug institution-name="Die Bundesbehörden der Schweizerischen Eidgenossenschaft"
+     institution-address="Informationsdienst Bundeshaus West, 3003, Bern"
+     institution-url="http://www.bfs.admin.ch/bfs/iariw/en/index/11.html"
+     opened="2010-09-13"
+     closed=""
+     name="sq"
+     group=""
+     />
+<bug institution-name="Bundesamt für Justiz"
+     institution-address="Bundesrain, 20, 3003, Bern"
+     institution-url="https://www.e-service.admin.ch/crex/cms/content/zertifikate/zertifikate_de"
+     opened="2010-09-13"
+     closed=""
+     name="Wanja"
+     group=""
+     />
+
+<bug institution-name="Bundesamt für Wohnungswesen BWO"
+     institution-address="Storchengasse, 6, 2540, Grenchen "
+     institution-url="http://www.bwo.admin.ch/dienstleistungen/00145/index.html"
+     opened="2010-09-13"
+     closed=""
+     name="Wanja"
+     group=""
+     />
+
 <bug institution-name="Kanton Basel-Landschaft"
      institution-address="Rathausstrasse 2, 4410 Liestal"
      institution-url="http://www.baselland.ch/pdf_info-htm.276919.0.html"
@@ -44,12 +82,139 @@
      name="sq"
      group=""
      />
+
+<bug institution-name="SBB CFF"
+     institution-address="Rue de la Poya 5, 1964 Conthey"
+     institution-url="http://mct.sbb.ch/mct/fr/konditionen.htm"
+     opened="2010-09-13"
+     closed=""
+     name="François Bianco"
+     group=""
+     />
+
+<bug institution-name="État du Valais"
+     institution-address="Avenue de la Gare 35, Bâtiment Planta 577, 1951 Sion "
+     institution-url="http://www.vs.ch/Navig/navig.asp?MenuID=21704&amp;RefMenuID=0&amp;RefServiceID=0"
+     opened="2010-09-13"
+     closed=""
+     name="François Bianco"
+     group=""
+     />
+
+<bug institution-name="Stadt Zürich Finanzdepartement"
+     institution-address="Stadt Zürich  Internetdienste    Stadthausquai 17  8022 Zürich"
+     institution-url="http://www.stadt-zuerich.ch/fd/de/index/steuern/formulare_merkblaetter.html"
+     opened="2010-09-14"
+     closed=""
+     name="Daniel Bächle"
+     group=""
+     />
+
+<bug institution-name="Amt für Industrie, Gewerbe und Arbeit Graubünden"
+     institution-address="Grabenstr. 9, 7000 Chur"
+     institution-url="http://www.gr.ch/DE/institutionen/verwaltung/dvs/kiga/dokumentation/Seiten/default.aspx"
+     opened="2010-09-14"
+     closed=""
+     name="Philipp"
+     group=""
+     comment=""
+     />
 <bug institution-name="Kantonale Steuerverwaltung Appenzell-Innerrhoden"
      institution-address="Marktgasse 2, 9050 Appenzell"
      institution-url="http://ai.ch/de/verwaltung/dienstleistungen/?dienst_id=2256"
      opened="2010-09-14"
      closed=""
      name="Philipp"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Handelsregisteramt Appenzell-Ausserrhoden"
+     institution-address="Regierungsgebäude, 9102 Herisau"
+     institution-url="http://www.ar.ch/index.php?id=8688"
+     opened="2010-09-14"
+     closed=""
+     name="Philipp"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Bundesamt für Wohnungswesen BWO"
+     institution-address="Storchengasse 6 2540 Grenchen"
+     institution-url="http://www.bwo.admin.ch/dienstleistungen/00145/index.html?lang=de"
+     opened="2010-09-14"
+     closed=""
+     name="Danilo Bargen"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Bundesamt für Bauten und Logistik BBL"
+     institution-address="Fellerstrasse 21, 3003 Bern"
+     institution-url="http://www.bbl.admin.ch/hinweise/index.html?lang=de"
+     opened="2010-09-14"
+     closed=""
+     name="Danilo"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Bundesamt für Strassen ASTRA"
+     institution-address="Mühlestrasse 2, Ittigen, CH-3003 Bern"
+     institution-url="http://www.astra.admin.ch/sonderbewilligungen/02705/index.html?lang=de"
+     opened="2010-09-14"
+     closed=""
+     name="Danilo"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Eidgenössische Steuerverwaltung ESTV"
+     institution-address="Eigerstrasse 65, 3003 Bern"
+     institution-url="http://www.estv.admin.ch/mwst/dienstleistungen/00229/00973/index.html?lang=de"
+     opened="2010-09-14"
+     closed=""
+     name="Danilo"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Bundesamt für Umwelt BAFU"
+     institution-address="3003 Bern"
+     institution-url="http://www.bafu.admin.ch/publikationen/index.html?lang=de&amp;action=show_publ&amp;id_thema=30&amp;series=UW&amp;nr_publ=0733"
+     opened="2010-09-14"
+     closed=""
+     name="Danilo"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Bundesamt für Gesundheit BAG"
+     institution-address="3003 Bern"
+     institution-url="http://www.bag.admin.ch/dokumentation/publikationen/01435/07914/index.html?lang=de"
+     opened="2010-09-14"
+     closed=""
+     name="Danilo"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Bundesamt für Statistik BFS"
+     institution-address="Espace de l’Europe 10, 2010 Neuchâtel"
+     institution-url="http://www.bfs.admin.ch/bfs/iariw/en/index/11.html"
+     opened="2010-09-14"
+     closed=""
+     name="Danilo"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Bundesamt für Kultur BAK"
+     institution-address="Hallwylstrasse 15, CH-3003 Bern "
+     institution-url="http://www.bak.admin.ch/isos/03199/index.html?lang=de"
+     opened="2010-09-14"
+     closed=""
+     name="Danilo"
      group=""
      comment=""
      />
@@ -77,6 +242,26 @@
 <bug institution-name="Schweizerische Bundeskanzelei"
      institution-address="Informationsdienst, Bundeshaus West, 3003 Bern"
      institution-url="http://www.bk.admin.ch/org/bk/00332/00335/index.html?lang=de"
+     opened="2010-09-14"
+     closed=""
+     name="Danilo"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Bundesamt für Informatik und Telekommunikation BIT"
+     institution-address="Monbijoustrasse 74, CH-3003 Bern"
+     institution-url="http://www.bit.admin.ch/edu/kurse/kursdetails/index.html?linkto=details&amp;kursno=242d"
+     opened="2010-09-14"
+     closed=""
+     name="Danilo"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Die Bundesbehörden der Schweizerischen Eidgenossenschaft"
+     institution-address="3003 Bern"
+     institution-url="http://www.admin.ch/ch/d/sr/annot/dokformate.html"
      opened="2010-09-14"
      closed=""
      name="Danilo"

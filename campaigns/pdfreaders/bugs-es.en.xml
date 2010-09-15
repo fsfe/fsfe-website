@@ -2,6 +2,25 @@
 
 <set>
 <buglist country="ES">
+<bug institution-name="Communidad Autónoma de la Región de Murcia"
+     institution-address="C/ Acisclo Díaz, s/n , Murcia"
+     institution-url="http://www.carm.es/neweb2/servlet/integra.servlets.ControlPublico?IDCONTENIDO=1621&amp;IDTIPO=100&amp;RASTRO=c$m1620"
+     opened="2010-09-13"
+     closed=""
+     name="Lucas Braun"
+     group=""
+     />
+
+<bug institution-name="Junta de Andalucía"
+     institution-address="Avenida Diego Martínez Barrio, 10. 41071 Sevilla"
+     institution-url="http://www.juntadeandalucia.es/fundacionprogresoysalud/index.php?option=com_content&amp;task=view&amp;id=10&amp;Itemid=66"
+     opened="2010-09-14"
+     closed=""
+     name="Pablo Castellano"
+     group=""
+     comment=""
+     />
+
 <bug institution-name="Ministerio del Interior"
      institution-address="Paseo de la Castellana 5, Madrid"
      institution-url="http://www.mir.es/SGACAVT/asociaciones/modelo.html"
@@ -12,9 +31,29 @@
      comment=""
      />
 
+<bug institution-name="Universidad de Málaga"
+     institution-address="Avda. Cervantes,2 - 29071 MÁLAGA"
+     institution-url="http://www.uma.es/estudios/propias/criminologia/Publicaciones/boletin_portada.htm"
+     opened="2010-09-14"
+     closed=""
+     name="Pablo Castellano"
+     group=""
+     comment=""
+     />
+
 <bug institution-name="Ministerio de Cultura"
      institution-address="Plaza del Rey, 1 28004 Madrid"
      institution-url="http://hispana.mcu.es/en/registros/registro.cmd?tipoRegistro=MTD&amp;idBib=552001"
+     opened="2010-09-14"
+     closed=""
+     name="Pablo Castellano"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Ministerio de Economía y Hacienda"
+     institution-address="C/ Alcalá 5, Madrid"
+     institution-url="http://www.catastro.meh.es/ayuda/faq.htm#2_4"
      opened="2010-09-14"
      closed=""
      name="Pablo Castellano"
@@ -41,14 +80,15 @@
      group=""
      comment=""
      />
-<bug institution-name="Ministerio de asuntos exteriores y de cooperacion"
-     institution-address="Plaza de la Provincia, 1, 28012, Madrid"
-     institution-url="http://www.maec.es/subwebs/consulados/Londres/en/MenuPpal/Servicios/Visados/Paginas/visaappointment_services.aspx"
-     opened="2010-09-15"
+
+<bug institution-name="Ministerio de Sanidad y Política Social"
+     institution-address="Paseo del Prado, 18-20, planta baja, esquina con Lope de Vega. 28014 Madrid."
+     institution-url="http://www.msps.es/accesibilidad/home.htm"
+     opened="2010-09-14"
      closed=""
-     name="Francisco Villar"
+     name="Pablo Castellano"
      group=""
-     comment="I put the wrong address in my first submission, please use this one!"
+     comment=""
      />
 
 <bug institution-name="Ministerio de asuntos exteriores y de cooperacion"
@@ -58,10 +98,28 @@
      closed=""
      name="Francisco Villar"
      group=""
-     comment="I put the wrong address in my first submission, please use this one!"
+     comment=""
      />
 
 
+<bug institution-name="Generalitat de catalunya"
+     institution-address="Pg. de Gràcia, 105 08008 Barcelona"
+     institution-url="http://www.gencat.cat/diue/ajuda_per_obtenir_el_probgrama_acrobat_reader/index.html"
+     opened="2010-09-14"
+     closed=""
+     name="josep gallart"
+     group=""
+     />
+
+<bug institution-name="Generalitat de Catalunya"
+     institution-address="Via Laietana, 14, 3r, 08003 Barcelona"
+     institution-url="http://www.gencat.cat/diue/ajuda_per_obtenir_el_probgrama_acrobat_reader/index.html"
+     opened="2010-09-14"
+     closed=""
+     name="Àlex Corretgé"
+     group=""
+     comment=""
+     />
   </buglist>
 </set>
 

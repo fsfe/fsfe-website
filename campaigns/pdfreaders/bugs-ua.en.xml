@@ -2,6 +2,24 @@
 
 <set>
 <buglist country="UA">
+<bug institution-name="Державна податкова адміністрація України"
+     institution-address="Львівська пл. 8, 04655, м. Київ-53 "
+     institution-url="http://www.sta.gov.ua/control/uk/publish/article?art_id=118370&amp;cat_id=117117"
+     opened="2010-09-13"
+     closed=""
+     name="Fedenko"
+     group=""
+     />
+
+<bug institution-name="Міністерство України у справах сім'ї, молоді та спорту"
+     institution-address="вул. Еспланадна, 42, 01601, м. Київ"
+     institution-url="http://www.kmu.gov.ua/sport/control/uk/publish/category?cat_id=90311"
+     opened="2010-09-13"
+     closed=""
+     name="Fedenko"
+     group=""
+     />
+
 <bug institution-name="State Tax Administration of Ukraine"
      institution-address="Government of Ukraine"
      institution-url="http://sta.gov.ua/control/uk/publish/article?art_id=107410&amp;cat_id=117116"
@@ -10,7 +28,8 @@
      name="Oleg Grygorenko"
      group=""
      />
-<bug institution-name="Central election commission of Ukraine"
+
+<bug institution-name="Ctntral election commission of Ukraine"
      institution-address="Lesi Ukrainky sq., 1. 01196, Kyiv"
      institution-url="http://www.cvk.gov.ua/vm_2010/"
      opened="2010-09-14"
@@ -29,5 +48,6 @@
      group=""
      comment=""
      />
+
   </buglist>
 </set>

@@ -27,6 +27,7 @@
           <xsl:element name="th"><xsl:value-of select="/html/text[@id='closed']"/></xsl:element>
           <xsl:element name="th"><xsl:value-of select="/html/text[@id='name']"/></xsl:element>
           <xsl:element name="th"><xsl:value-of select="/html/text[@id='group']"/></xsl:element>
+          <xsl:element name="th"><xsl:value-of select="/html/text[@id='comment']"/></xsl:element>
         </xsl:element>
 
         <!-- Table rows -->
@@ -46,6 +47,7 @@
             <xsl:element name="td"><xsl:value-of select="@closed"/></xsl:element>
             <xsl:element name="td"><xsl:value-of select="@name"/></xsl:element>
             <xsl:element name="td"><xsl:value-of select="@group"/></xsl:element>
+            <xsl:element name="td"><xsl:value-of select="@comment"/></xsl:element>
           </xsl:element>
         </xsl:for-each>
       </xsl:element>

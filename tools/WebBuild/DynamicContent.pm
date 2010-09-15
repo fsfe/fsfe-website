@@ -73,5 +73,13 @@ sub render {
   print "\n";
 }
 
+sub render_utf8 {
+  my $self = shift;
+
+  print "Content-type: text/html; charset=utf-8\n\n";
+  print $self->{output};
+  print "\n";
+}
+
 1;
 

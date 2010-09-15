@@ -90,4 +90,4 @@ my $output = <<'EOF';
 EOF
 
 $content->content ($output);
-$content->render
+$content->render_utf8

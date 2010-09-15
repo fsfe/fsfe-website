@@ -17,12 +17,24 @@
   <xsl:template match="/html/body">
     <body>
       <xsl:apply-templates />
-      <b><xsl:value-of select="/html/text[@id='osig']" /></b>
+      
+      <h3>
+      	<xsl:value-of select="/html/text[@id='bsig']" />
+      	<!-- (-<xsl:number count="/sigset/bsig/li" />) -->
+      </h3>
+      <ul>
+        <xsl:apply-templates select="/html/set/bsig/node()" />
+      </ul>
+      
+      <h3>
+        <xsl:value-of select="/html/text[@id='osig']" />
+        <!-- (-<xsl:number count="/html/text[@id='osig']/li" />) -->
+      </h3>
       <ul>
         <xsl:apply-templates select="/html/set/osig/node()" />
       </ul>
 
-      <b><xsl:value-of select="/html/text[@id='isig']" /></b>
+      <h3><xsl:value-of select="/html/text[@id='isig']" /></h3>
       <ul>
         <xsl:apply-templates select="/html/set/isig/node()" />
       </ul>

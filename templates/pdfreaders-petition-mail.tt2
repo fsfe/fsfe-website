@@ -1,0 +1,23 @@
+From: samtuke@fsfeurope.org
+MIME-Version: 1.0
+To: samtuke@fsfe.org
+Subject: [PDFReaders] petition signature
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+A new PDFReaders petition signature has been submitted.
+
+Please validate and use the following XML snippet if appropriate:
+---
+<sig
+     name="[% name %]"
+     surname="[% surname %]"
+     email="[% email %]"
+     group="[% group %]"
+     country="[% country %]"
+     nl=[[% IF newsletter %]X[% ELSE %] [% END %]]
+     date="[% date %]"
+     />
+---
+
+

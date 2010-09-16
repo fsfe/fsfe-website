@@ -35,16 +35,108 @@
     <p>Sincerely,</p>
 
     <p>The Undersigned</p>
+    
+    <hr />
 
-    <p><em>To sign the petition, email <a href="mailto:pdfreaders@lists.fsfe.org?subject=I Sign The Petition">pdfreaders@lists.fsfe.org</a>. </em>We update the list of signatories several times a day, so please allow some time for your signature to appear.</p>
-
-    <h2>List of signatories</h2>
+    <form action="/cgi-bin/pdfpetition.pl" method="post">
+      <p>
+        <label for="name">Name <span class="required-asterisk">*</span></label>
+        <input id="name" name="name" type="text" />
+      </p>
+      
+      <p>
+        <label for="surname">surname <span class="required-asterisk">*</span></label>
+        <input id="surname" name="surname" type="text" />
+      </p>
+      
+      <p>
+        <label for="email">Your E-mail <span class="required-asterisk">*</span></label>
+        <input id="email" name="email" type="email" />
+      </p>
+      
+      <p>
+        <label for="email">On Belhalf of</label>
+        <input id="group" name="group" type="text" />
+      </p>
+      
+      <p>
+        <label for="country">Country of the institution (in English) <span class="required-asterisk">*</span></label>
+        <select id="country" name="country">
+	  <option>Aland</option>
+	  <option>Albania</option>
+	  <option>Austria</option>
+	  <option>Belarus</option>
+	  <option>Belgium</option>
+	  <option>Bosnia and Herzegovina</option>
+	  <option>Bulgaria</option>
+	  <option>Croatia</option>
+	  <option>Cyprus</option>
+	  <option>Czech Republic</option>
+	  <option>Denmark</option>
+	  <option>Estonia</option>
+	  <option>Faroe Islands</option>
+	  <option>Finland</option>
+	  <option>France</option>
+	  <option>Germany</option>
+	  <option>Greece</option>
+	  <option>Hungary</option>
+	  <option>Iceland</option>
+	  <option>Ireland</option>
+	  <option>Italy</option>
+	  <option>Latvia</option>
+	  <option>Liechtenstein</option>
+	  <option>Lithuania</option>
+	  <option>Luxembourg</option>
+	  <option>Macedonia</option>
+	  <option>Malta</option>
+	  <option>Moldova</option>
+	  <option>Montenegro</option>
+	  <option>Netherlands</option>
+	  <option>Norway</option>
+	  <option>Poland</option>
+	  <option>Portugal</option>
+	  <option>Romania</option>
+	  <option>Russian Federation</option>
+	  <option>Serbia</option>
+	  <option>Slovakia</option>
+	  <option>Slovenia</option>
+	  <option>Spain</option>
+	  <option>Sweden</option>
+	  <option>Switzerland</option>
+	  <option>Turkey</option>
+	  <option>Ukraine</option>
+	  <option>United Kingdom</option>
+	</select>
+      </p>
+      
+      <p>
+        <label>Receive Newsletter</label>
+        
+	<input name="newsletter" type="checkbox" checked="checked" />
+      </p>
+      
+      <p class="n">
+        <label for="url">If you're a bot please enter something here to have our system happily ignore all of your efforts</label>
+        <input id="url" name="url" type="text" />
+      </p>
+      
+      <p>
+        <input type="submit" value="Sign Petition" />
+      </p>
+      
+    </form>
+    
+    <hr />
+    
+    <p><em>We update the list of signatories several times a day, so please allow some time for your signature to appear.</em></p>
+	
+	<h2>List of signatories</h2>
 	
   </body>
   
-  <text id="osig">Organizations</text>
-  <text id="bsig">Businesses</text>
+  <text id="osig">Businesses</text>
+  <text id="bsig">Organizations</text>
   <text id="isig">Individuals</text>
-  
+
   <timestamp>$Date: 2010-09-07 16:38:57 +0200 (Tue, 07 Sep 2010) $ $Author: maelle $</timestamp>
 </html>

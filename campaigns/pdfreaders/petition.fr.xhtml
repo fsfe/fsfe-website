@@ -42,7 +42,97 @@
 
     <p>Les signataires</p>
 
-<p><em>Si vous souhaitez signer notre pétition, merci d'envoyer un mail à <a href="mailto:pdfreaders@lists.fsfe.org?subject=I Sign The Petition">pdfreaders@lists.fsfe.org</a></em></p>
+    <hr />
+
+    <form action="/cgi-bin/pdfpetition.pl" method="post">
+      <p>
+        <label for="name">Prénom <span class="required-asterisk">*</span></label>
+        <input id="name" name="name" type="text" />
+      </p>
+      
+      <p>
+        <label for="surname">Nom<span class="required-asterisk">*</span></label>
+        <input id="surname" name="surname" type="text" />
+      </p>
+      
+      <p>
+        <label for="email">Votre adresse E-mail <span class="required-asterisk">*</span></label>
+        <input id="email" name="email" type="email" />
+      </p>
+      
+      <p>
+        <label for="group">Signer aussi au nom d'une entreprise/organisation</label>
+        <input id="group" name="group" type="text" />
+      </p>
+      
+      <p>
+        <label for="country">Pays<span class="required-asterisk">*</span></label>
+        <select id="country" name="country">
+	  <option>Aland</option>
+	  <option>Albania</option>
+	  <option>Austria</option>
+	  <option>Belarus</option>
+	  <option>Belgium</option>
+	  <option>Bosnia and Herzegovina</option>
+	  <option>Bulgaria</option>
+	  <option>Croatia</option>
+	  <option>Cyprus</option>
+	  <option>Czech Republic</option>
+	  <option>Denmark</option>
+	  <option>Estonia</option>
+	  <option>Faroe Islands</option>
+	  <option>Finland</option>
+	  <option>France</option>
+	  <option>Germany</option>
+	  <option>Greece</option>
+	  <option>Hungary</option>
+	  <option>Iceland</option>
+	  <option>Ireland</option>
+	  <option>Italy</option>
+	  <option>Latvia</option>
+	  <option>Liechtenstein</option>
+	  <option>Lithuania</option>
+	  <option>Luxembourg</option>
+	  <option>Macedonia</option>
+	  <option>Malta</option>
+	  <option>Moldova</option>
+	  <option>Montenegro</option>
+	  <option>Netherlands</option>
+	  <option>Norway</option>
+	  <option>Poland</option>
+	  <option>Portugal</option>
+	  <option>Romania</option>
+	  <option>Russian Federation</option>
+	  <option>Serbia</option>
+	  <option>Slovakia</option>
+	  <option>Slovenia</option>
+	  <option>Spain</option>
+	  <option>Sweden</option>
+	  <option>Switzerland</option>
+	  <option>Turkey</option>
+	  <option>Ukraine</option>
+	  <option>United Kingdom</option>
+	</select>
+      </p>
+      
+      <p>
+        <label>Inscription à la Newsletter</label>
+        
+	<input name="newsletter" type="checkbox" checked="checked" />
+      </p>
+      
+      <p class="n">
+        <label for="url">Si vous êtes une machine, merci de remplir également ce formulaire pour voir notre système ignorer allègrement vos efforts </label>
+        <input id="url" name="url" type="text" />
+      </p>
+      
+      <p>
+        <input type="submit" value="Sign Petition" />
+      </p>
+      
+    </form>
+    
+    <hr />
 
     <h2>Liste des signataires</h2>
 	

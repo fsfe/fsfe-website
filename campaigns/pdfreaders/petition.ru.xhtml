@@ -41,20 +41,110 @@ href="http://pdfreaders.org/graphics.html">PDFreaders.org</a>.</p>
     <p>С уважением,</p>
 
     <p>Подписавшиеся</p>
+  <hr />
+    <form action="/cgi-bin/pdfpetition.pl" method="post">
+      <p>
+        <label for="name">Имя <span class="required-asterisk">*</span></label>
+        <input id="name" name="name" type="text" />
+      </p>
+      
+      <p>
+        <label for="surname">Фамилия <span class="required-asterisk">*</span></label>
+        <input id="surname" name="surname" type="text" />
+      </p>
+      
+      <p>
+        <label for="email">Адрес электронной почты <span class="required-asterisk">*</span></label>
+        <input id="email" name="email" type="email" />
+      </p>
+      
+      <p>
+        <label for="group">От имени (организации)</label>
+        <input id="group" name="group" type="text" />
+      </p>
+      
+      <p>
+        <label for="country">Страна<span class="required-asterisk">*</span></label>
+        <select id="country" name="country">
+	  <option>Австрия</option>
+	  <option>Аландские острова</option>
+	  <option>Албания</option>
+	  <option>Белоруссия</option>
+	  <option>Бельгия</option>
+	  <option>Болгария</option>
+	  <option>Босния и Герцеговина</option>
+	  <option>Великобритания</option>
+	  <option>Венгрия</option>
+	  <option>Германия</option>
+	  <option>Греция</option>
+	  <option>Дания</option>
+	  <option>Ирландия</option>
+	  <option>Исландия</option>
+	  <option>Испания</option>
+	  <option>Италия</option>
+	  <option>Кипр</option>
+	  <option>Латвия</option>
+	  <option>Литва</option>
+	  <option>Лихтенштейн</option>
+	  <option>Люксембург</option>
+	  <option>Македония</option>
+	  <option>Мальта</option>
+	  <option>Молдова</option>
+	  <option>Нидерланды</option>
+	  <option>Норвегия</option>
+	  <option>Польша</option>
+	  <option>Португалия</option>
+	  <option>Российская Федерация</option>
+	  <option>Румыния</option>
+	  <option>Сербия</option>
+	  <option>Словакия</option>
+	  <option>Словения</option>
+	  <option>Турция</option>
+	  <option>Хорватия</option>
+	  <option>Украина</option>
+	  <option>Фарерские острова</option>
+	  <option>Финляндия</option>
+	  <option>Франция</option>
+	  <option>Черногория</option>
+	  <option>Чехия</option>
+	  <option>Швейцария</option>
+	  <option>Швеция</option>
+	  <option>Эстония</option>
+	</select>
+      </p>
+      
+      <p>
+        <label>Подписаться на новости</label>
+        
+	<input name="newsletter" type="checkbox" checked="checked" />
+      </p>
+      
+      <p class="n">
+        <label for="url">Если Вы — робот, пожалуйста, введите что-нибудь
+	      здесь, чтобы наша система благополучно проигнорировала
+	      всю Вашу работу</label>
+        <input id="url" name="url" type="text" />
+      </p>
+      
+      <p>
+        <input type="submit" value="Подписать петицию" />
+      </p>
+      
+    </form>
+    
+    <hr />
 
-    <p><em>Если вы хотите подписать нашу петицию, напишите  об этом по адресу
-<a href="mailto:pdfreaders@lists.fsfe.org?subject=I Sign The Petition">
-pdfreaders@lists.fsfe.org</a></em>
+    <p><em>
 Мы обновляем список подписавших несколько раз в день, так что, пожалуйста,
-подождите немного, пока ваша подпись появится здесь.</p>
+подождите немного, пока ваша подпись появится здесь.</em></p>
     
     <h2>Список подписавших</h2>
 	
   </body>
   
-  <text id="osig">Organizations</text>
-  <text id="bsig">Businesses</text>
-  <text id="isig">Individuals</text>
+  <text id="osig">Организации</text>
+  <text id="bsig">Предприятия</text>
+  <text id="isig">Частные лица</text>
 
   <timestamp>$Date$ $Author$</timestamp>
 </html>

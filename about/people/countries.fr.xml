@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <countryset>
+  <country id="AX">Åland</country>
   <country id="AL">Albanie</country>
   <country id="AT">Autriche</country>
   <country id="BA">Bosnie-Herzégovine</country>
@@ -16,12 +17,14 @@
   <country id="ES">Espagne</country>
   <country id="EU">Union Européenne</country>
   <country id="FI">Finlande</country>
+  <country id="FO">Iles Feroe</country>
   <country id="FR">France</country>
   <country id="GB">Royaume-Uni</country>
   <country id="GR">Grèce</country>
   <country id="HR">Croatie</country>
   <country id="HU">Hongrie</country>
   <country id="IE">Irlande</country>
+  <country id="IM">Ile de Man</country>
   <country id="IS">Islande</country>
   <country id="IT">Italie</country>
   <country id="LT">Lituanie</country>
@@ -44,4 +47,5 @@
   <country id="SK">Slovaquie</country>
   <country id="TR">Turquie</country>
   <country id="UA">Ukraine</country>
+  <country id="ZZ">Reste du monde</country>
 </countryset>

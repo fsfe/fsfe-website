@@ -1,641 +1,657 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <html>
   <head>
-    <title>FSFE - Eine Untersuchung über die Ausgewogenheit von Standardisierung und Patenten - von Georg Greve</title>
+    <title>FSFE – Analyse des Verhältnisses von Standardisierung und
+      Patenten – von Georg Greve</title>
   </head>
 
   <body>
 
-<h1 align="center">Eine Untersuchung über die Ausgewogenheit von Standardisierung und Patenten</h1>
+<h1 align="center">Analyse des Verhältnisses von Standardisierung und
+  Patenten</h1>
 
-<p class="indent"><em>Dieser Artikel analysiert das Zusammenspiel von 
-  Patenten und Standards und schließt mit konkreten Vorschlägen, zu den
-  dringensten Probleme. Er ist für Leser mit geringem Hintergrundwissens
-  verfasst, und beinhaltet daher das notwendige Hintergrundwissen um das
-  Problem zu verstehen. Ein Fachmann sollte in der Lage sein, den
+<p class="indent"><em>Dieser Artikel analysiert das Zusammenspiel von
+  Patenten und Standards und schließt mit konkreten Vorschlägen zu den
+  dringendsten Problemen. Er ist für Leser mit geringem Hintergrundwissen
+  verfasst und beinhaltet daher das für das Verständnis der Problematik
+  nötige Hintergrundwissen. Ein Fachmann sollte in der Lage sein, den
   Hintergrundabschnitt zu überspringen.</em></p>
 
 <p align="right"><em>
-— <b><a href="/about/greve/">Georg C. F. Greve</a></b>
+<b><a href="/about/greve/">Georg C. F. Greve</a></b>
 <br />Präsident der Free Software Foundation Europe (FSFE)
 <br />2. Dezember 2008
 </em></p>
 
 <h2>Einführung</h2>
 
-<p>Softwarepatente haben eine höchst kontroverse Auseinandersetzung
-  ausgelöst. Die Fronten verlaufen vor allem zwischen den großen Unternehmen --
-  die große Patentbestände halten und an mehrfachen Kreuzlizensierungsabkommen
-  beteiligt sind -- und denen, die keine haben, wie Gründern, kleinen und
-  mittleren Betrieben, und Anwendern, vom GNU/Linux benutzenden Studenten bis
-  zum institutionellen Anwender in der Regierung.</p>
+<p>Softwarepatente haben eine höchst kontroverse Debatte ausgelöst. Die
+  Fronten verlaufen vor allem zwischen Großunternehmen, die große
+  Patentbestände halten und an mehreren Kreuzlizenzierungsabkommen
+  beteiligt sind, und den Habenichtsen, wie Firmengründer, kleine und
+  mittlere Betriebe, und Anwender, vom GNU/Linux benutzenden Studenten bis
+  hin zu institutionellen Anwendern in der Regierung.</p>
 
-<p>Mit der Zurückweisung der EU-Richtlinie über Softwarepatente im Jahr
-  2005 ist es um diese Auseinandersetzung sehr ruhig geworden. Andere 
-  Themen, wie etwa die Standardisierung, verdrängen sie aus den 
-  Schlagzeilen. Offene Standards sind über Jahre ein Schlagwort geworden,
-  allerdings wurde dieser Begriff nie näher erörtert.</p>
+<p>Die Debatte ist mit der Zurückweisung der EU-Richtlinie über
+  Softwarepatente im Jahr 2005 um einiges ruhiger geworden. Andere Themen
+  haben sie aus den Schlagzeilen verdrängt, unter diesen anderen Themen ist
+  die Standardisierung. Zwar sind Offene Standards schon seit Jahren ein
+  Schlagwort, aber noch nie wurde dieser Begriff so intensiv diskutiert.</p>
 
-<p>Am Mittwoch, den 19. November 2008, trafen beide Debatten in Brüssel
-  in einer Tagung mit dem Titel 
-  „<a href="http://ec.europa.eu/enterprise/newsroom/cf/itemshortdetail.cfm?item_id=3371">
-  ‚Geistige Eigentumsrechte‘ in der IKT-Standardisierung</a>“ (IKT =
-  Informations- und Kommunikationstechnologie, [Anm. d. Übers.]) 
-  zusammen, obwohl „Patente in der IKT-Standardisierung“ ein
-  passenderer Name gewesen wäre, denn das Gespräch drehte sich
-  ausschließlich um das Zusammenspiel von Patenten und der
-  IKT-Standardisierung.</p>
+<p>Am Mittwoch, dem 19. November 2008, trafen beide Debatten in Brüssel in
+  einer Tagung mit dem Titel 
+  „<a href="http://ec.europa.eu/enterprise/newsroom/cf/itemshortdetail.cfm?item_id=3371">Geistige
+  Eigentumsrechte in der IKT-Standardisierung</a>“ zusammen, obwohl „Patente
+  in der IKT-Standardisierung“ ein passenderer Name gewesen wäre, denn das
+  Gespräch drehte sich ausschließlich um das Zusammenspiel von Patenten und
+  der Standardisierung in der IKT (Informations- und
+  Kommunikationstechnologie).</p>
 
-<p>Patente und Standards sind grundlegend entgegengesetzt, so dass
-  viele Menschen die Ausgewogenheit zwischen Patenten und Standards
-  fordern. Dieser Artikel nimmt zu dieser Tagung Stellung und erklärt,
-  warum Standards zumindest im Bereich der Software über Patente die
-  Oberhand haben sollten.</p>
+<p>Patente und Standards stehen grundsätzlich im Konflikt miteinander. Daher
+  wird von vielen ein Ausgleich zwischen Patenten und Standards gefordert.
+  Dieser Artikel nimmt zu der Tagung Stellung und erklärt, warum Standards
+  zumindest im Bereich der Software über Patente die Oberhand haben
+  sollten.</p>
 
 <h2>Hintergrund: Das Einmaleins der Patente und Standards</h2>
 
-<p>Die Idee von Patente ist nicht neu. Ihre Wurzeln liegen in den
-  königlichen „litterae patentes“, die bestimmten Personen
-  ausschließliche Rechte einräumten. Letztendlich nahmen
-  demokratische Regierungen die Stellung der Könige ein, und die
-  Patentgesetzgebung hat sich über die Zeit weiterentwickelt, aber die
-  grundlegenden Merkmale eines Patentes haben sich nicht verändert.</p>
+<p>Die Idee von Patenten ist nicht neu. Ihre Wurzeln liegen in den
+  königlichen „litterae patentes“, die bestimmten Personen exklusive Rechte
+  einräumten. Später wurden die Könige von demokratischen Regierungen
+  abgelöst und die Patentgesetzgebung hat sich mit der Zeit
+  weiterentwickelt, aber die grundlegenden Merkmale eines Patents haben sich
+  nicht verändert.</p>
 
-<p>Kurz und bündig ist ein Patent ein im Namen der Bürger für eine
-  bestimmte Zeit zugesichertes Monopol.</p>
+<p>Kurz und bündig ist ein Patent ein Monopol, das von der Regierung im
+  Namen ihrer Bürger für eine bestimmte Zeit gewährt wird.</p>
 
-<p>Der Begriff Monopol ist vielfach negativ besetzt, und das aus gutem
-  Grund. Ein Monopol erstickt Innovation und lässt aufgrund der
-  Abwesenheit von Wettbewerb die Preise steigen. Auf dieser Grundlage
-  wird ein Monopol gewöhnlich als Schaden für Wirtschaft und
-  Gesellschaft verstanden. Es ist nicht unrechtmäßig, ein Patent zu erhalten,
-  aber die Gesellschaft hat das legitime Interesse, einen Missbrauch 
-  der durch Patente gewährten Macht zu beschränken, und versucht, 
-  dies durch das Kartellrecht zu erreichen.</p>
+<p>Der Begriff Monopol ist vielfach negativ besetzt und das aus gutem Grund.
+  Ein Monopol erstickt Innovation und lässt aufgrund der Abwesenheit von
+  Wettbewerb die Preise steigen. Daher wird ein Monopol gewöhnlich als ein
+  Schaden für Wirtschaft und Gesellschaft angesehen. Monopole sind nicht
+  illegal, aber die Gesellschaft hat das legitime Interesse, den Missbrauch
+  der mit Monopolen einhergehenden Macht zu begrenzen, und versucht, dies
+  durch das Kartellrecht zu erreichen.</p>
 
-<p>Das Recht auf ein Monopol welches ein Patents erzeugt, bringt auch alle Nebeneffekte eines
-  Monopols mit sich. Es wurde vom Staat gewährt, weil man der 
-  Auffassung war, die Abwesenheit von Patenten könnte die 
-  Veröffentlichung von Durchbrüchen verhindern, was als schädlicher 
-  eingestuft wurde als die Gewährung eines Patentmonopols.
+<p>Das durch ein Patent geschaffene Recht auf ein Monopol bringt alle
+  Nebeneffekte von Monopolen mit sich. Es wird vom Staat gewährt, weil man
+  der Auffassung ist, ohne Patente könnte die Veröffentlichung von
+  bahnbrechenden Erfindungen unterbleiben, was als schädlicher eingestuft
+  wird als die Gewährung eines Patentmonopols.
 </p>
 
-<p>Dieses anfängliche Patentmodell ist auf Offenlegung aufgebaut, so
-  dass andere davon lernen und neue Ideen bilden können. Das Fehlen
-  einer brauchbaren Offenlegung oder einer Weiterentwicklung des
-  öffentlichen Wissens lässt sich mit einer Gewährung eines Monopols
-  ohne Gewinn für die Gesellschaft gleichsetzen.</p>
+<p>Dieses anfängliche Patentmodell basiert auf Offenlegung, so dass andere
+  davon lernen und neue Ideen darauf aufgebaut werden können. Das Fehlen
+  einer brauchbaren Offenlegung oder das Ausbleiben der Fortentwicklung des
+  öffentlichen Wissens ist damit gleichzusetzen, dass ein Monopol ohne
+  Gegenleistung an die Gesellschaft gewährt wird.</p>
 
-<p>Wie auch Patente hängen Standards eng mit Offenlegung zusammen. Die 
-  Wurzel des Wortes Standard scheint auf die Heraldik zurückzugehen, wo 
-  es sich auf ein Zeichen bezieht, das gebraucht wurde, um einen 
-  Sammelpunkt in der Schlacht sichtbar zu machen.</p>
+<p>Wie Patente hängen auch Standards eng mit Offenlegung zusammen. Der
+  Ursprung des Wortes Standard geht wahrscheinlich auf die Heraldik zurück,
+  wo es sich auf ein Zeichen bezieht, das benutzt wurde, um einen
+  Sammelpunkt in einer Schlacht sichtbar zu machen.</p>
 
-<p>Der moderne Gebrauch dieses Wortes behält die Bedeutung eines
-  öffentlich sichtbaren Bezugspunktes bei, obwohl sie auf andere Gebiete
-  übertragen wurde. So wird es u. a. als etwas verstanden, das sich
-  „<em>durch Autorität, Brauch oder allgemeine Übereinstimmung als 
-    Modell oder Beispiel durchgesetzt</em>“ hat oder auch als
-  „<em>Struktur, die als Grundlage oder Unterstützung gebildet wurde.</em>“
-  (Übersetzung aus dem <a href="http://www.merriam-webster.com/dictionary/standard">Merriam-Webster
-  Online-Wörterbuch</a>.</p>
+<p>Der moderne Gebrauch des Wortes behält die Bedeutung eines öffentlich
+  sichtbaren Bezugspunktes bei, wenngleich sie auf andere Gebiete
+  übertragen wurde. So wird es unter anderem als etwas verstanden, das sich
+  „<em>durch Autorität, Brauch oder allgemeines Einverständnis als Modell
+  oder Beispiel durchgesetzt hat</em>“ oder auch als „<em>Konstruktion, die
+  als Grundlage oder als Hilfsmittel geschaffen wurde oder dazu dient.</em>“
+  (Übersetzung aus dem
+  <a href="http://www.merriam-webster.com/dictionary/standard">Merriam-Webster
+  Online-Wörterbuch</a>).</p>
 
-<p>In der IKT hat ein Standard beide der oben genannten Bedeutungen.
-  Gemäß der <a href="http://www.bsi-global.com/en/Standards-and-Publications/About-standards/What-is-a-standard/">British
-  Standards Institution</a> (BSI), ist ein Standard „<em>ein
-  vereinbarter, wiederholbarer Weg, etwas zu tun. Er ist ein
-  veröffentlichtes Dokument, das eine technische Spezifikation oder
-  andere präzise Kriterien enthält, die entwickelt wurden, um
-  konsistent als Regel, Richtlinie oder Definition genutzt zu werden. 
-  […] Jeder Standard ist ein Gemeinschaftswerk. Herstellerkomitees,
-  Benutzer, Forschungsorganisationen, Regierungsämter und Verbraucher 
-  arbeiten zusammen, um Standards auszuarbeiten, die dazu dienen, die
-  Ansprüche  von Gesellschaft und Technologie zu erfüllen. […]</em>“</p>
+<p>In der Informations- und Kommunikationstechnologie hat ein Standard
+  beide der oben genannten Bedeutungen. Laut
+  <a href="http://www.bsi-global.com/en/Standards-and-Publications/About-standards/What-is-a-standard/">British
+  Standards Institution</a> (BSI) ist ein Standard „<em>ein vereinbartes,
+  wiederholbares Verfahren etwas zu tun. Er ist ein veröffentlichtes
+  Dokument, das eine technische Spezifikation oder andere präzise Kriterien
+  enthält, die entwickelt wurden, um konsistent als Regel, Richtlinie oder
+  Definition genutzt zu werden. […] Jeder Standard ist ein
+  Gemeinschaftswerk. Hersteller-Komitees, Anwender,
+  Forschungsinstitute, Regierungsbehörden und Verbraucher arbeiten
+  zusammen, um Standards auszuarbeiten, die weiterentwickelt werden, um den
+  Ansprüchen von Gesellschaft und Technologie gerecht zu werden.
+  […]</em>“</p>
 
-<p>Die dahinterstehende Idee ist, dass ein Standard eine gemeinsame
-  Basis schafft; er ist das Mittel für Interoperabilität und
-  Wettbewerb. Das trifft besonders für die IKT wegen ihrer starken
-  Netzwerkeffekte zu. Falls alle Teilnehmer eines IKT-Marktes
-  dieselben Standards befolgen und sich bemühen, Interoperabilität zu 
-  garantieren, dann können die Kunden nicht nur zwischen verschiedenen
-  Produkten und Dienstleistungen frei wählen, sondern auch ohne
-  Probleme untereinander Informationen austauschen.</p>
+<p>Die zugrunde liegende Idee ist, dass ein Standard eine gemeinsame Basis
+  schafft; er ist das Mittel für Interoperabilität und Wettbewerb. Das
+  trifft insbesondere für die IKT wegen ihrer starken Netzwerkeffekte zu.
+  Wenn alle Teilnehmer eines IKT-Marktes sich an dieselben Standards halten
+  und sich bemühen, Interoperabilität sicherzustellen, dann können die
+  Kunden nicht nur zwischen verschiedenen Produkten und Dienstleistungen
+  frei wählen, sondern auch problemlos Informationen miteinander
+  austauschen.</p>
 
-  <!-- needs modification -->
-<p>Abwesenheit oder Versagen von Standardisierung dagegen verzerrt die
-  Netzwerkeffekte, so dass Monopolisierung fast sicher wird. Nutzer 
-  eines Produktes oder einer Dienstleistung könnten nur mit Nutzern 
-  desselben Produktes oder derselben Dienstleistung zusammenarbeiten. 
-  Über die Zeit würde eine Lösung eine so große Nutzerbasis erlangen,
-  dass andere Nutzer de facto nur die Wahl haben, dieser Gruppe
-  beizutreten, oder aber unfähig sind, vollständig mit der Mehrheit der
-  Nutzer zu kommunizieren. Das könnte z. B. durch die Bündelung von
-  Software mit einer vorherrschenden Hardwareplattform geschehen.</p>
+<p>Die Abwesenheit oder das Versagen von Standardisierung hingegen verzerrt
+  die Netzwerkeffekte, so dass eine Monopolisierung beinahe zwangsläufig
+  eintritt. Nutzer eines Produktes oder einer Dienstleistung könnten dann
+  nur mit Nutzern desselben Produktes oder derselben Dienstleistung
+  zusammenarbeiten. Mit der Zeit würde eine Lösung eine so große Nutzerbasis
+  erlangen, dass andere Nutzer de facto nur die Wahl haben, sich dieser
+  Gruppe anzuschließen, oder aber nicht in der Lage sind, ohne Einschränkung
+  mit der Mehrheit der Nutzer zu kommunizieren. Das könnte zum Beispiel
+  durch die Bündelung von Software mit einer vorherrschenden
+  Hardware-Plattform geschehen.</p>
 
-<p>So sind Standards größtenteils ein Instrument, Wettbewerb für das
-  öffentliche Wohl zu ermöglichen. Das Ziel von Standards ist an sich
+<p>Standards sind also hauptsächlich ein Instrument, um Wettbewerb zugunsten
+  des öffentlichen Wohls zu ermöglichen. Das Ziel von Standards ist an sich
   anti-monopolistisch.</p>
 
-<p>Es ist auch pro-innovativ. Da die Abwandlung eines Standards ihn
- automatisch bricht, scheinen Standardisierung und Innovation
- gegensätzliche Ziele zu sein, und zu einem gewissen Ausmaß sind sie es
- auch. Aber solange alle Änderungen des Standards in Übereinstimmung
- mit den Implementatoren durchgeführt werden, ist das Ergebnis eine
- aktualisierte Version des Standards, die allen zur Verfügung steht.
- Der zweite Weg ist auf dem Standard aufbauende Innovation, indem man
- den Standard als Grundlage für Innovation nutzt, anstatt Neuerungen
- innerhalb des Standards durchzuführen.</p>
+<p>Es ist auch pro-innovativ. Da die Abweichung von einem Standard
+  automatisch gegen ihn verstößt, scheinen Standardisierung und Innovation
+  gegensätzliche Ziele zu sein, und zu einem gewissen Grad sind sie das
+  auch. Aber solange alle Änderungen des Standards im Konsens der
+  Implementierer erfolgen, ist das Ergebnis eine aktualisierte Version des
+  Standards, die allen zur Verfügung steht. Der zweite Weg sind
+  Innovationen, die auf dem Standard aufbauen und ihn als Grundlage nutzen,
+  anstatt Neuerungen innerhalb des Standards einzuführen.</p>
 
-<p>Wegen seiner umfassenden, zustimmungsabhängigen Natur ist der erste
-  Weg vergleichsweise langsam. Ein weiteres Problem ist die
-  beträchtliche Hürde, in einen Standardisierungsprozess einzutreten. Im
-  Ergebnis sind daher große Unternehmen im Vergleich zu kleinen und
-  mittleren Betrieben (= SME, engl. Small and Middle Enterprises)
-  überrepräsentiert.</p>
+<p>Aufgrund seines umfassenden, von Konsens abhängigen Wesens ist der erste
+  Weg vergleichsweise langsam. Ein weiteres Problem sind die beträchtlichen
+  Hürden, an einem Standardisierungsprozess teilzunehmen. Daher sind
+  Großunternehmen im Vergleich zu kleinen und mittleren Betrieben (englisch
+  SME, Small and Middle Enterprises) überrepräsentiert.</p>
 
-<p>Der zweite Weg ist für jedermann, ob Privatperson, SME oder
-  Großindustrie offen. Er ist zudem nur durch die
-  Entwicklungsgeschwindigkeit des Innovationsteams beschränkt. Falls
-  die Innovation nur durch eine Partei erzielt wurde, dann besteht
-  kurzfristig ein Monopol. Aber nach einer gewissen Zeit wird die
-  Innovation wahrscheinlich zu einem neuen Standard formalisiert, der
-  die Grundlage für die nächste Innovation auf dieser Basis bildet.</p>
+<p>Der zweite Weg steht jedermann offen, ob Privatperson, SME oder
+  Großindustrie. Er ist zudem nur durch die Schnelligkeit des Teams
+  begrenzt, das die Innovation entwickelt. Falls die Innovation nur von
+  einer Seite entwickelt wurde, dann besteht kurzfristig ein Monopol. Aber
+  falls die Innovation ausgereift war, wird sie nach einer gewissen Zeit
+  wahrscheinlich zu einem neuen Standard formalisiert, der die Grundlage
+  für die nächste darauf aufbauende Innovation bildet.</p>
 
-<p> Während der erste Weg nur langsame und kleine Verbesserungen
+<p>Während der erste Weg nur langsame und kleine Verbesserungen
   ermöglicht, gewährleistet der zweite Weg die volle Mitwirkung der
-  Wirtschaftsmehrheit, ist viel besser für bahnbrechende Ideen geeignet
+  Mehrheit des Marktes, ist viel besser für bahnbrechende Ideen geeignet
   und es ist für die Gesellschaft wohl auch wichtiger, ihn zu schützen.
   </p>
 
-<h2>Widerspruch: Grundlegend entgegengesetzte Instrumente</h2>
+<h2>Konflikt: Grundlegend entgegengesetzte Instrumente</h2>
 
 <p>Die grundsätzlich unterschiedlichen Ziele von Patenten und Standards
-  tauchten in dieser Auseinandersetzung mehrfach auf, z.B. in der Rede
-  von Karsten Meinhold, Präsident des ETSI IPR Sonderkomitees, <a
-  href="http://ec.europa.eu/enterprise/newsroom/cf/document.cfm?action=display&amp;doc_id=3635&amp;userservice_id=1&amp;request.id=0">
-  der sie so zusammenfasste</a>:
-  <em>„‚Geistige Eigentumsrechte‘ und Standards dienen verschiedenen
-  Zielen: ‚Geistige Eigentumsrechte‘ sind für privaten ausschließlichen
-  Nutzen bestimmt, Standards sind für öffentlichen, gemeinschaftlichen
-  Nutzen geplant.“</em></p>
+  tauchten in dieser Debatte mehrfach auf, zum Beispiel in der Rede von
+  Karsten Meinhold, Präsident des ETSI-IPR-Sonderkomitees,
+  <a href="http://ec.europa.eu/enterprise/newsroom/cf/document.cfm?action=display&amp;doc_id=3635&amp;userservice_id=1&amp;request.id=0">der
+  sie so zusammenfasste</a>: <em>„Geistige Eigentumsrechte und Standards
+  dienen verschiedenen Zielen: Geistige Eigentumsrechte sind für den
+  persönlichen, exklusiven Nutzen bestimmt, Standards sind für den
+  öffentlichen, gemeinschaftlichen Nutzen gedacht.“</em></p>
 
 <p>Sowohl Patente als auch Standards leiten ihre Berechtigung vom
-  öffentlichen Interesse ab; eines davon aufrechtzuerhalten beraubt 
-  jedoch das andere seiner Funktion. Standards versuchen Monopolen
-  entgegenzuwirken, Patente aber errichten sie. Oder, wie es Tomoko
-  Miyamoto, Oberste Anwältin der Patentrechtsabteilung der World
-  Intellectual Property Organization (WIPO) in 
-  <a href="http://ec.europa.eu/enterprise/newsroom/cf/document.cfm?action=display&amp;doc_id=3633&amp;userservice_id=1&amp;request.id=0">
-  ihrer Präsentation</a> sagte: Patentdickicht und
-  „Patentüberfälle“ können aus bestimmten Formen rechtmäßiger Ausnutzung der
-  von Patenten gewährten ausschließlichen Rechte entstehen.</p>
+  öffentlichen Interesse ab; jedoch macht die Durchsetzung von einem das
+  andere funktionslos. Standards versuchen Monopolen entgegenzuwirken,
+  Patente aber errichten sie. Oder, wie es Tomoko Miyamoto, oberste
+  Anwältin der Patentrechtsabteilung der World Intellectual Property
+  Organization (WIPO) in 
+  <a href="http://ec.europa.eu/enterprise/newsroom/cf/document.cfm?action=display&amp;doc_id=3633&amp;userservice_id=1&amp;request.id=0">ihrer
+  Präsentation</a> sagte: Patentdickicht und „Patentüberfälle“ können aus
+  bestimmten Formen rechtmäßiger Ausnutzung der von Patenten gewährten
+  exklusiven Rechte entstehen.</p>
 
-<p>In anderen Worten: Erteilung dieser ausschließlichen Rechte ist die gewollte
-  Funktion des Patentsystems und Patentdickicht und „Patentüberfälle“ sind die
-  Folge der rechtmäßigen Ausnutzung dieser Rechte. Patente auf Standards zu
-  erlauben ist folglich eine absichtliche Maßnahme, um Monopole auf Standards
-  bestimmten Parteien zu erteilen, einschließlich des Rechtes, die
-  Implementation durch andere zu unterbinden.
+<p>Mit anderen Worten: Die Erteilung dieser exklusiven Rechte ist die
+  beabsichtigte Funktion des Patentsystems und Patentdickicht und
+  „Patentüberfälle“ sind die Folge der rechtmäßigen Ausnutzung dieser
+  Rechte. Patente auf Standards zu erlauben ist folglich eine absichtliche
+  Maßnahme, um bestimmten Parteien Monopole auf Standards zu gewähren,
+  einschließlich des Rechts, die Implementation durch andere zu unterbinden.
 </p>
 
 <h2>Vorab-Offenlegung</h2>
 
-<p>Es gibt mehrere Versuche, durch die die Standardisierungsbewegung
-  über die Jahre versucht hat, diese Effekte abzuschwächen. Einer dieser
+<p>Es gibt mehrere Versuche, mit denen die Standardisierungsbewegung über
+  die Jahre hinweg versucht hat, diese Effekte abzuschwächen. Einer dieser
   Mechanismen wird „Vorab-Offenlegung“ genannt. Die an einem Standard
-  arbeitenden Parteien nutzen diesen Mechanismus, um sich an
-  Lizensierungsbedingungen zu binden, während der Standard noch unter
-  Entwurf steht. Falls diese Bedingungen für andere an dem Standard
+  arbeitenden Parteien nutzen diesen Mechanismus, um sich auf
+  Lizenzbedingungen festzulegen, während der Standard noch in der
+  Entwurfsphase ist. Falls diese Bedingungen für andere am Standard
   arbeitende Parteien nicht akzeptabel sind, dann wird die vom Patent
-  berührte Technologie nicht in den Standard mitaufgenommen.</p>
+  berührte Technologie nicht in den Standard aufgenommen.</p>
 
-<p>Was akzeptable Bedingungen sind, ist stark subjektiv. Ein großes
-  Unternehmen mit einem großen Patentbestand und existierenden
-  Kreuzlizensierungsabkommen mit den Haltern der relevanten Patente
-  könnte abwägen, dass das Hinzufügen eines weiteren Patents zu dem
-  Abkommen die kleinere Schwierigkeit darstelle. Die selbe Situation
-  sieht aus Sicht eines SME, das typischerweise allenfalls einen
-  kleinen Patentbestand und eine wucherische Lizenzierung zu erwarten
-  hat, wesentlich anders aus.</p>
+<p>Was akzeptable Bedingungen sind, ist äußerst subjektiv. Ein
+  Großunternehmen mit einem großen Patentbestand und existierenden
+  Kreuzlizenzierungsabkommen mit den Haltern der relevanten Patente
+  könnte das Hinzufügen eines weiteren Patents zum Abkommen als eine
+  kleinere Unbequemlichkeit ansehen. Dieselbe Situation sieht aus Sicht
+  eines SMEs, das typischerweise allenfalls einen kleinen Patentbestand
+  besitzt und eine halsabschneiderische Lizenzierung zu erwarten hat,
+  wesentlich anders aus.</p>
 
 <p>Da SMEs in der Standardisierung stark unterrepräsentiert sind, wird
-  die Vorab-Offenlegung wahrscheinlich den großen Unternehmen mit
-  großen Patentbeständen, die in demselben Gebiet konkurrieren,
-  befriedigendere Ergebnisse bringen. Die Wirtschaftsmehrheit hat im
-  Allgemeinen kein Mitspracherecht über die Akzeptanz der
+  die Vorab-Offenlegung wahrscheinlich den Großunternehmen mit großen
+  Patentbeständen, die auf demselben Gebiet konkurrieren,
+  befriedigendere Ergebnisse bringen. Die Mehrheit der Marktteilnehmer hat
+  im Allgemeinen kein Mitspracherecht über die Annehmbarkeit der
   Bedingungen.</p>
 
-<p>Ein anderes Problem der Vorab-Offenlegung ist die schwierige Durchsetzung, 
-  wie Suzanne Michel, Stellvertretende Direktorin des Amtes für Richtlinien 
-  und Koordination der US-Bundeshandelskommission (FTC) 
-  <a href="http://ec.europa.eu/enterprise/newsroom/cf/document.cfm?action=display&amp;doc_id=3631&amp;userservice_id=1&amp;request.id=0">
-  in ihrer Präsentation darlegte</a>. Die FTC hat herausgefunden, dass 
-  <a href="http://en.wikipedia.org/w/index.php?title=Rambus&amp;oldid=251605519">
-  Rambus Incorporated</a> den Standardisierungstreffen des 
-  <a href="http://en.wikipedia.org/wiki/JEDEC">Joint Electron
-  Device Engineering Council (JEDEC)</a> beigetreten ist und an ihnen
-  teilgenommen hat, um ihre Patentklageschriften zu ändern, um
-  Technologien abzudecken, die zur Diskussion zur Aufnahme in
-  zukünftige Standards stehen. Nach der Meinung der FTC war dieses
-  Verhalten betrügerisch, verletzte JEDECs Offenlegungsrichtlinien, und
-  gab Rambus illegal Monopolmacht.</p>
+<p>Ein anderes Problem der Vorab-Offenlegung ist die schwierige
+  Durchsetzbarkeit, wie Suzanne Michel, stellvertretende Direktorin des
+  Amts für Richtlinien und Koordination der US-Bundeshandelskommission
+  (FTC) in
+  <a href="http://ec.europa.eu/enterprise/newsroom/cf/document.cfm?action=display&amp;doc_id=3631&amp;userservice_id=1&amp;request.id=0">ihrer
+  Präsentation</a> darlegte. Die FTC hatte herausgefunden, dass 
+  <a href="http://en.wikipedia.org/w/index.php?title=Rambus&amp;oldid=251605519">Rambus
+  Incorporated</a> den Standardisierungstreffen des 
+  <a href="http://en.wikipedia.org/wiki/JEDEC">Joint Electron Device
+  Engineering Council</a> (JEDEC) beigetreten war und an ihnen teilgenommen
+  hatte, um ihre Patentanträge dahingehend zu ändern, dass sie Technologien
+  abdeckten, die zur Aufnahme in zukünftige Standards zur Diskussion
+  standen. Nach der Meinung der FTC war dieses Verhalten betrügerisch,
+  verletzte die Offenlegungsrichtlinien von JEDEC, und gab Rambus illegal
+  Monopolmacht.</p>
 
-<p>Das <a href="http://en.wikipedia.org/wiki/United_States_Court_of_Appeals_for_the_District_of_Columbia_Circuit">Bezirksgericht von DC</a> stimmte mit dieser
-  Interpretation der FTC in seiner Entscheidung im April 2008 nicht
-  überein. Gemäß Frau Michel sagte das Gericht, dass die Umgehung der
-  sogenannten „<a href="http://en.wikipedia.org/wiki/Reasonable_and_Non_Discriminatory_Licensing">vernünftigen und nichtdiskriminierenden</a>“ (= RAND, engl. Reasonable
-  and Non-Discriminatory) Lizenzbedingungen keinen Missbrauch
-  darstellt, und dass es keinen Beweis gibt, dass JEDEC Technologien
-  vermieden hätte, falls es gewusst hätte, dass Rambus plante, seine 
-  Patente bis zum größten vom Gesetz erlaubten Ausmaß zu nutzen. Das
-  Gericht drückte auch seinen Unwillen aus, Patente aufgrund vager
-  Offenlegungsrichtlinien undurchsetzbar zu machen.</p>
+<p>Das
+  <a href="http://en.wikipedia.org/wiki/United_States_Court_of_Appeals_for_the_District_of_Columbia_Circuit">Berufungsgericht
+  für den für den District of Columbia</a> stimmte in seiner Entscheidung
+  vom April 2008 mit der Interpretation des FTC nicht überein. Laut Frau
+  Michel sagte das Gericht, dass die Umgehung der sogenannten
+  „<a href="http://en.wikipedia.org/wiki/Reasonable_and_Non_Discriminatory_Licensing">vernünftigen
+  und nicht diskriminierenden Lizenzbedingungen</a>“ (englisch RAND,
+  Reasonable and Non-Discriminatory) keinen Missbrauch darstellt, und dass
+  es keinen Beweis dafür gibt, dass JEDEC Technologien vermieden hätte,
+  falls es gewusst hätte, dass Rambus plante, seine Patente zu nutzen so
+  weit es das Gesetz zuließ. Das Gericht drückte auch seinen Unwillen aus,
+  Patente aufgrund vager Offenlegungsrichtlinien nicht mehr durchsetzbar zu
+  machen.</p>
 
 <p>Sowohl Patente als auch Standards leiten ihre Berechtigung vom
-  öffentlichen Interesse ab. Es gab durch die Patente, die Rambus im
-  Zusammenhang mit den zu veröffentlichenden Standards einreichte,
-  keine zusätzliche Offenlegung neuer Technologie. Rambus Monopolmacht
-  über vom JEDEC entwickelte Standards zu geben ist dem öffentlichen
+  öffentlichen Interesse ab. Durch die Patente, die Rambus im Zusammenhang
+  mit den zu veröffentlichenden Standards einreichte, fand keine
+  zusätzliche Offenlegung neuer Technologie statt. Rambus eine Monopolmacht
+  über durch JEDEC entwickelte Standards zu geben ist dem öffentlichen
   Interesse abträglich. So scheint es wahrscheinlich, dass eine
-  vollständige Beurteilung des öffentlichen Interesses an dieser
-  Situation ergäbe, dass sich das öffentliche Interesse in der Tat
-  nicht durchgesetzt hat.</p>
+  vollständige Beurteilung des öffentlichen Interesses in diesem Fall
+  ergäbe, dass sich das öffentliche Interesse in der Tat nicht durchgesetzt
+  hat.</p>
 
-<p>So scheint es, dass das FTC in seiner Beurteilung richtig lag,
-  ebenso das Gericht, da das Errichten zeitbeschränkter Monopole eben
-  Ziel und Funktion des Patentrechts ist. Die Rolle des Gerichts weitet 
-  sich nicht auf die Annullierung des Gesetzes aus, und die meisten
-  Gesetzgeber haben den Zwiespalt des öffentlichen Interesse zwischen
-  Patenten und Standards nicht bedacht.</p>
+<p>Daher scheint es, dass das FTC mit seiner Beurteilung richtig lag, aber
+  ebenso das Gericht, da das Errichten von zeitlich begrenzten Monopolen
+  eben genau das Ziel und die Funktion des Patentrechts ist. Es ist nicht
+  Rolle der Gerichte, Gesetze außer Kraft zu setzen, und die meisten
+  Gesetzgeber haben den Konflikt zwischen Patenten und Standards im
+  Hinblick auf das öffentliche Interesse nicht berücksichtigt.</p>
 
 <p>JEDEC hat in der Zwischenzeit seine Offenlegungsrichtlinien
-  aktualisiert, was helfen sollte, ähnliche Fälle in der Zukunft zu
-  vermeiden. Bedenkt man den Wert, den Patentrecht im Vergleich zur
-  Standardisierung für viele Gerichte hat, kann nur ein zukünftiger
-  Prozess zeigen, ob das Problem auf eine Weise gelöst werden kann, die
-  einer formalen rechtlichen Prüfung standhält.</p>
+  aktualisiert, was helfen könnte, ähnliche Fälle in Zukunft zu vermeiden.
+  Bedenkt man den Wert, den viele Gerichte dem Patentrecht im Vergleich zur
+  Standardisierung zumessen, kann nur ein zukünftiger Gerichtsprozess
+  zeigen, ob das Problem auf eine Weise gelöst wurde, die einer formalen
+  rechtlichen Prüfung standhält.</p>
 
 <h2>(F)RAND</h2>
 
-<p>Das ist der Fall bei allen Standardisierungsgremien, die Vorab-Offenlegung benötigen, was die meisten nicht tun. Stattdessen scheinen sich die meisten Gremien völlig auf freiwillige Offenlegung und die Zusicherung zu vertrauen, dass die in den Prozess involvierten Patenthalter in die sog. RAND- oder FRAND-Bedingungen ("<a href="http://en.wikipedia.org/wiki/Fair,_Reasonable_and_Non_Discriminatory_Licensing">Fair, Reasonable and Non Discriminatory</a>") einwilligen.</p>
+<p>Das Gesagte gilt bei allen Standardisierungsgremien, die eine
+  Vorab-Offenlegung verlangen, was die meisten nicht tun. Stattdessen
+  scheinen sich die meisten Gremien vollkommen auf eine freiwillige
+  Offenlegung und die Zusicherung der am Prozess beteiligten Patentinhaber
+  zu verlassen, in sogenannte RAND- oder FRAND-Bedingungen
+  einzuwilligen (fair, vernünftig und nicht diskriminierend; englisch
+  <a href="http://en.wikipedia.org/wiki/Fair,_Reasonable_and_Non_Discriminatory_Licensing">Fair,
+  Reasonable and Non Discriminatory</a>).</p>
 
-<p>Eine häufige Kritik am (F)RAND-Begriff ist das Fehlen einer
-  Definition, was vernünftig ist und für wen. Während des
-  Internetregierungsforums 2006 (IGF) in Athen <a href="http://www.youtube.com/watch?v=CNUdqEqjbOQ">legte</a> Susy Struble von
-  Sun dar, dass das, was für die eine Partei vernünftig sein mag, 
-  nicht für die andere Partei vernünftig sein muss.</p>
+<p>Eine häufige Kritik am (F)RAND-Begriff ist das Fehlen einer Definition,
+  was vernünftig ist und für wen. Während des Internet Governance Forums
+  2006 (IGF) in Athen
+  <a href="http://www.youtube.com/watch?v=CNUdqEqjbOQ">legte
+  Susy Struble von Sun dar</a>, dass das, was für eine Partei vernünftig
+  sein mag,  nicht für die andere Partei vernünftig sein muss.</p>
 
-<p>Lizensierungspraktiken variieren in der Tat und werden durch
+<p>Die Lizenzierungspraktiken unterscheiden sich in der Tat und werden durch
   verschiedene Faktoren beeinflusst, einschließlich, aber nicht
-  ausschließlich, der Frage, ob eine Firma einen Fuß im relevanten
-  Markt hat, oder nicht, und wie aggressiv sie ihre Patenterträge
-  verfolgt.</p>
+  ausschließlich, der Frage, ob eine Firma am entsprechenden Markt
+  interessiert ist, und wie aggressiv sie das Erzielen von Einkünften durch
+  Patente verfolgt.</p>
 
-<p>Zusätzlich können Patente als Teil einer Geschäftsrestrukturierung
-  oder -übernahme verkauft oder erworben werden. Ein zukünftiger
-  Patenthalter mag abweichende Bedingungen für vernünftig halten, ebenso
-  ein Patenthalter, der nicht am Standardisierungsprozess teilgenommen
-  hat oder sogar nie den RAND-Bedingungen zugestimmt hat.</p>
+<p>Zudem können Patente im Zuge einer Geschäftsumstrukturierung oder
+  -übernahme verkauft oder erworben werden. Ein zukünftiger Patentinhaber
+  mag andere Bedingungen für vernünftig halten, ebenso ein Patentinhaber,
+  der nicht am Standardisierungsprozess teilgenommen hat und den
+  RAND-Bedingungen nie zugestimmt hat.</p>
 
 <p>RAND-Bedingungen laufen üblicherweise auf eine vage Zusicherung der
-  Lizenz auf Anfrage hinaus. Solch eine Zusicherung stellt keine
-  dauernde Lizenz auf das Patent dar und ist nicht für den neuen Patenthalter gültig. Solch ein neuer Halter kann frei wählen, wie er
-  das Patent durchsetzt, einschließlich Patentüberfällen auf alle
+  Lizenzierung auf Anfrage hinaus. Solch eine Zusicherung stellt keine
+  dauerhafte Lizenz für das Patent dar und ist nicht für den neuen
+  Patentinhaber gültig. Ein neuer Patentinhaber kann also frei wählen, wie
+  er das Patent durchsetzt, einschließlich Patentüberfälle auf alle
   vorhandenen Implementierungen des Standards.</p>
 
 <p>Wie Frau Miyamoto von der WIPO dargelegt hat, ist ein Patentüberfall
-  ein rechtmäßiger und absichtlicher Nutzen des Patentsystems. Also
-  gibt es sogar in einer RAND-Ordnung eine beachtliche Unsicherheit,
-  die ausnahmslos große Firmen begünstigt, die nicht nur tiefere
-  Taschen, sondern auch größere Rechtsabteilungen und Patentbestände
-  haben.</p>
+  eine rechtmäßige und vorgesehene Anwendung des Patentsystems. Also gibt
+  es sogar in einer RAND-Ordnung eine beachtliche Unsicherheit, die
+  ausnahmslos Großunternehmen begünstigt, die sowohl größere finanzielle
+  Rücklagen haben, als auch größere Rechtsabteilungen und Patentbestände
+  besitzen.</p>
 
-<p>Diese Unsicherheit ist es, die große Frustration unter den SMEs
-  ausgelöst hat, was Charles Schulz von Ars Aperta als RAND
-  zusammenfasste, was sich auf “RANDom licensing at the sight of
-  competitors” (dt. etwa „willkürliche Lizenzierung bei Erscheinen eines
-  Mitbewerbers”) bezieht. In 
+<p>Diese Unsicherheit ist es, die eine große Frustration unter den SMEs
+  verursacht hat, was Charles Schulz von Ars Aperta dadurch ausdrückte, dass
+  er RAND mit „RANDom licensing at the sight of competitors” (willkürliche
+  Lizenzierung bei Auftauchen eines Mitbewerbers) übersetzte. In 
   <a href="http://ec.europa.eu/enterprise/newsroom/cf/document.cfm?action=display&amp;doc_id=3639&amp;userservice_id=1&amp;request.id=0">
   seiner Präsentation</a> legte Schulz auch dar, dass 
-  (F)RAND-Begriffe Freie Software diskriminiere. Sogar mit
-  gebührenfreien RAND-Begriffen, den sog. RF-en-RAND (“Royalty Free on
-  RAND”), RAND-RF (“RAND Royalty Free”) oder RAND-Z (“RAND with Zero
+  (F)RAND-Bedingungen Freie Software diskriminieren würden. Sogar mit
+  kostenlosen RAND-Bedingungen, den sogenannten RF-on-RAND („Royalty Free on
+  RAND”), RAND-RF („RAND Royalty Free”) oder RAND-Z („RAND with Zero
   royalties”), gibt es dieselben Probleme, da sie keine
   Unterlizenzierung erlauben.</p>
 
-<p>Freie Software (<a href="/about/basics/freesoftware">auch Open
-  Source, FOSS or FLOSS genannt</a>) basiert auf dem Prinzip, dass jede
-  natürliche und juristische Person ein Nutzer, Entwickler, Händler oder eine
-  beliebige Kombination daraus sein kann. Nur Bedingungen, die es
-  erlauben, dass dies geschieht, sind für Freie Software akzeptabel,
-  die 2010 <a href="http://www.flossimpact.eu/">voraussichtlich</a> 32%
-  aller IT-Dienstleistungen und 4% des BIP umfassen wird.</p>
+<p>Freie Software (<a href="/about/basics/freesoftware">auch Open Source,
+  FOSS oder FLOSS genannt</a>) basiert auf dem Prinzip, dass jede
+  natürliche und juristische Person ein Anwender, Entwickler, Händler oder
+  eine beliebige Kombination daraus sein kann. Nur Lizenzbedingungen, die
+  dies zulassen, sind für Freie Software akzeptabel, die 2010
+  <a href="http://www.flossimpact.eu/">voraussichtlich</a> 32% aller
+  IT-Dienstleistungen und 4% des europäischen BIPs umfassen wird.</p>
 
-<p>In <a href="http://ec.europa.eu/enterprise/newsroom/cf/document.cfm?action=display&amp;doc_id=3641&amp;userservice_id=1&amp;request.id=0">
-ihrer Präsentation</a> betont Amy Marasco,
-  Generaldirektorin der Standards-Strategie von Microsoft, dass sie
-  Freie Software nicht als Geschäftsmodell ansieht. Das ist in genau
-  demselben Ausmaß wahr, dass proprietäre Software selbst kein
-  Geschäftsmodell sei. Geschäftsmodelle sind, was sowohl auf Freier als
-  auch auf proprietärer Software aufbaut.</p>
+<p>In
+  <a href="http://ec.europa.eu/enterprise/newsroom/cf/document.cfm?action=display&amp;doc_id=3641&amp;userservice_id=1&amp;request.id=0">ihrer
+  Präsentation</a> betont Amy Marasco, Generaldirektorin der
+  Standardisierungsstrategie von Microsoft, dass sie Freie Software nicht
+  als Geschäftsmodell ansieht. Das ist in genau demselben Ausmaß wahr, in
+  dem proprietäre Software selbst kein Geschäftsmodell ist.
+  Geschäftsmodelle sind das, was auf Freier Software und/oder proprietärer
+  Software aufbaut.</p>
 
-<p>Marasco fuhr fort, darzulegen, dass all diese Geschäftsmodelle
-  legitim sind. Und während es starke Gegensätze in der Meinung darüber
-  gibt, welches Softwaremodell die bessere und nachhaltigere Wahl für
-  Wirtschaft und Gesellschaft sei, müssen aus der Sicht einer
-  politischen Analyse der Standards alle Geschäftsmodelle, die auf
-  proprietärer oder Freier Software oder einer Mischung beider beruhen,
-  als gültig und legitim erachtet werden.</p>
+<p>Marasco fuhr fort darzulegen, dass all diese Geschäftsmodelle legitim
+  sind. Und während es starke Gegensätze in der Meinung darüber gebe,
+  welches Softwaremodell die bessere und nachhaltigere Wahl für Wirtschaft
+  und Gesellschaft sei, müssten aus der Sicht einer politischen Analyse von
+  Standards alle Geschäftsmodelle, die auf proprietärer oder Freier
+  Software oder einer Mischung beider beruhten, als gültig und legitim
+  erachtet werden.</p>
 
-<p>Wie bereits erwähnt, schätzt man, dass Freie Software betreffende
-  Teile des europäischen BIP bis 2010 4% erreichen werden. Alle Parteien
-  stimmen darin überein, dass alle Geschäftsmodelle, einschließlich
-  solcher, die Freie Software einschließen, legitim sind. Das wirft die
-  Frage auf, ob es gerecht, vernünftig und nichtdiskriminierend ist,
-  diesen legitimen Teil der Wirtschaft durch Wahl von
-  Patentlizensierungsbedingungen auszuschließen.</p>
+<p>Wie bereits erwähnt wird erwartet, dass die Freie Software betreffenden
+  Anteile des europäischen BIPs bis 2010 4% erreichen werden. Alle Seiten
+  stimmen darin überein, dass alle Geschäftsmodelle legitim sind,
+  einschließlich solcher, die Freie Software benutzen. Das wirft die Frage
+  auf, ob es fair, vernünftig und nicht diskriminierend ist, diesen
+  legitimen Teil der Wirtschaft durch die Wahl von Lizenzbedingungen
+  für Patente auszuschließen.</p>
 
 <h2>Schaden durch Ausschluss?</h2>
 
-<p>Diese Situation hat eine seltsame Ähnlichkeit mit <a href="http://en.wikipedia.org/wiki/Counterfeit_drugs">gefälschten
-  Medikamenten</a>, wo das Argument für Patentdurchsetzung
-  hauptsächlich von Überlegungen über die öffentliche Gesundheit
-  begleitet ist. Aber nur effektive Medikamente, die identisch mit dem
+<p>Diese Situation hat eine seltsame Ähnlichkeit mit
+  <a href="http://en.wikipedia.org/wiki/Counterfeit_drugs">gefälschten
+  Medikamenten</a>, wo das Argument für die Durchsetzung von Patenten
+  hauptsächlich mit Überlegungen über die öffentliche Gesundheit
+  einhergeht. Aber nur wirksame Medikamente, die identisch mit dem
   patentierten Produkt sind, würden überhaupt die Patente verletzen.
-  Gesundheitsrisiken entstehen hauptsächlich, wo Patente nicht
-  verletzt werden.</p> 
+  Gesundheitsrisiken entstehen hauptsächlich, wo Patente nicht verletzt
+  werden.</p> 
 
-<p>Bei den Standards ist die Situation einigermaßen ähnlich. Falls
+<p>Bei den Standards ist die Situation ziemlich ähnlich. Falls
   Patente Teil eines Standards sind, dann bietet nur eine Implementierung,
-  die vom Patent gedeckt ist, ein effektives Gegenmittel gegen
+  die im Geltungsbereich der Patente liegt, ein wirksames Gegenmittel gegen
   die Monopolisierung. Will man Patente umgehen, muss man zwangsläufig den
-  Standard brechen und läuft somit dem öffentlichen Interesse zuwider, das
+  Standard verletzen und läuft somit dem öffentlichen Interesse zuwider, das
   eigentlich die treibende Kraft hinter der Standardisierung ist.</p>
 
-<p>Patente auf Standards haben also die Möglichkeit, volle 
-  Interoperabilität für legitime Geschäftsfelder in manchen Märkten 
-  unmöglich zu machen. Wie das oben erwähnte BSI <a href="http://www.bsi-global.com/en/Standards-and-Publications/About-standards/What-is-a-standard/">darlegt</a>: „Standards werden für freiwilligen 
-  Gebrauch konzipiert und erzwingen keine Regulierung. Allerdings 
-  können Gesetze und Verordnungen sich auf bestimmte Standards beziehen 
-  und die Befolgung erzwingen.“</p>
+<p>Patente auf Standards haben also das Potential, eine volle
+  Interoperabilität für legitime Geschäftsfelder in einigen Märkten 
+  unmöglich zu machen. Wie das oben erwähnte BSI
+  <a href="http://www.bsi-global.com/en/Standards-and-Publications/About-standards/What-is-a-standard/">darlegt</a>:
+  „Standards werden für freiwilligen Gebrauch konzipiert und erzwingen
+  keine Regulierung. Allerdings können Gesetze und Verordnungen sich auf
+  bestimmte Standards beziehen und deren Einhaltung vorschreiben.“</p>
 
 <p>Sobald eine Technologie standardisiert worden ist, werden bestimmte
-  Entscheidungen nicht mehr für technologische Qualität getroffen. 
-  Sogar wenn es eine bessere Lösung gäbe, die den zusätzlichen Vorteil 
-  hätte, ein mögliches Patent auf den Standard nicht zu verletzen, 
-  würde ein Implementierer dem unterlegenen Standard folgen, um vollen 
-  Marktzugang zu erhalten. So ein Fall dreht den ursprünglichen Zweck eines 
-  Patents um: Die Technologie ist wertvoll, weil sie patentiert 
-  ist, sie ist nicht patentiert, weil sie wertvoll ist.</p>
+  Entscheidungen nicht mehr aufgrund technologischer Qualitätskriterien
+  getroffen.  Sogar wenn es eine bessere Lösung gäbe, die den zusätzlichen
+  Vorteil hätte, ein mögliches Patent auf den Standard nicht zu verletzen, 
+  würde ein Implementierer dem schlechteren Standard folgen, um vollen 
+  Marktzugang zu erhalten. Ein solcher Fall stellt den ursprünglichen Zweck
+  eines  Patents auf den Kopf: Die Technologie ist wertvoll, weil sie
+  patentiert ist; nicht patentiert, weil sie wertvoll ist.</p>
 
-<p>Regierungen lassen in ihren Beschaffungsprozessen fallweise bestimmten
-  Standardisierungsorganisationen, z. B. der <a href="http://www.iso.org">Internationalen Organisation für
-  Standardisierung</a> (ISO), eine privilegierte Rolle zukommen.
-  Aufgrund von Patenten und 
-  ungenügenden (F)RAND-Bedingungen können nicht alle auf diese Weise 
-  privilegierten Standards von allen legitimen Marktteilnehmern 
-  implementiert werden, denen es möglich sein sollte, bei öffentlichen 
-  Ausschreibungen anzubieten.</p>
+<p>Es gibt auch Fälle, wo Standardisierungsorganisationen, z.&#160;B. die
+  <a href="http://www.iso.org">Internationale Organisation für
+  Standardisierung</a> (ISO), eine privilegierte Rolle bei
+  Beschaffungsentscheidungen von Regierungen besitzen. Aufgrund von
+  Patenten und ungenügenden (F)RAND-Bedingungen können nicht alle derart
+  begünstigte Standards von allen legitimen Marktteilnehmern implementiert
+  werden, die die Möglichkeit haben sollten, an öffentlichen
+  Ausschreibungen teilzunehmen.</p>
 
-<p>Durch diese speziellen Privilegien für Organisationen wie die ISO,
-  und dadurch, dass diese Organisationen Bedingungen akzeptieren, die
-  ungenügend sind, um den Wettbewerb zu garantieren, lässt sich das durch
-  Patente entstandene Monopolrecht mit 
-  einem Oligopol oder sogar einem Monopol für öffentliche Anschaffungen 
-  gleichsetzen. Dieser Wettbewerbsausschluss
-  durch Patenten auf Standards ist dem öffentlichen Interesse abträglich, 
-  da es zu höheren Preisen und folglich höheren Steuern führt.</p>
+<p>Durch diese speziellen Privilegien für Organisationen wie die ISO, und
+  dadurch, dass diese Organisationen Bedingungen akzeptieren, die
+  ungenügend sind, um den Wettbewerb zu garantieren, bedeutet das durch
+  Patente verliehene Monopolrecht die Existenz eines Oligopols oder sogar
+  eines Monopols für öffentliche Beschaffungen. Dieser Wettbewerbsausschluss
+  durch Patente auf Standards ist dem öffentlichen Interesse abträglich, da
+  er zu höheren Preisen und folglich höheren Steuern führt.</p>
 
-<p>Lösungen für diese Situation müssten die Art ansprechen, wie
-  Regierungen Standards in Ihren Beschaffungsprozessen bevorzugen,
-  die Art, wie Patente in Standards behandelt werden, das Patentsystem
-  selbst, oder eine Kombination von all diesem.</p>
+<p>Lösungen für diese Situation müssten sich damit befassen, wie
+  Regierungen Standards in ihren Beschaffungsprozessen bevorzugen, damit,
+  wie Patente in Standards gehandhabt werden, mit dem Patentsystem selbst,
+  oder mit einer Kombination aus all dem.</p>
 
 <h2>Lösungsversuche</h2>
 
-<p>Gute Patentrecherche kostet rund 100.000 EUR pro Fall, gemäß Rigo
-  Wenning, Rechtsbeistand und Patentrichtlinienteamkontakt des 
+<p>Eine gute Patentrecherche kostet rund 100.000 EUR pro Fall, so Rigo
+  Wenning, Rechtsbeistand und Kontaktperson des Patentrichtlinien-Teams des 
   W3C/ERCIM, der über 
-  „<a href="http://ec.europa.eu/enterprise/newsroom/cf/document.cfm?action=display&amp;doc_id=3636&amp;userservice_id=1&amp;request.id=0">
-  Standards, Patente und die Dynamik der Innovation 
-  im Web</a>“ referierte. Das W3C ist in der Tat die einzige „Standards 
-  setzende Organisation“ (SSO), die eine ausreichende Patentrichtlinie 
-  für ihre  Standards hat, um alle legitimen Geschäftsmodelle zu fassen.
+  „<a href="http://ec.europa.eu/enterprise/newsroom/cf/document.cfm?action=display&amp;doc_id=3636&amp;userservice_id=1&amp;request.id=0">Standards,
+  Patente und die Dynamik der Innovation im Web</a>“ referierte. Das W3C
+  ist in der Tat die einzige „Standards setzende Organisation“ (SSO), die
+  eine ausreichende Patentrichtlinie für ihre Standards hat, um alle
+  legitimen Geschäftsmodelle zu umfassen.
   </p>
 
-<p>Aus der Sicht der meisten SMEs sind 100.000 EUR
-  Patentforschungskosten unerschwinglich. Sogar für große Firmen sind
-  diese Kosten, die ja nur einer der Kostenfaktoren sind, beachtlich.
-  Noch mehr Schaden kann aber durch gerichtliche Verfügungen gegen ein 
-  Produkt oder Behauptungen über Schäden erzeugt werden. In seiner 
-  <a href="http://ec.europa.eu/enterprise/newsroom/cf/document.cfm?action=display&amp;doc_id=3646&amp;userservice_id=1&amp;request.id=0">>
-  Präsentation über IBMs „SoftIP“-</a>Konzept führt 
-  Roger Burt, Oberster Anwalt von IBM Europa, das Problem mit einem 
-  Zitat von einer Stellungnahme der BSA et al. aus dem Prozess eBay gegen MercExchange vor.
-  Das Zitat fasst das Problem der Großindustrie ziemlich gut zusammen:
-  </p>
+<p>Aus der Sicht der meisten SMEs sind 100.000 EUR für eine
+  Patentrecherche unerschwinglich. Aber sogar für Großunternehmen sind
+  diese Kosten, die ja nur einen der Kostenfaktoren darstellen, beachtlich.
+  Noch mehr Schaden kann durch gerichtliche Verfügungen gegen ein Produkt
+  oder Schadenersatzklagen angerichtet werden. In seiner 
+  <a href="http://ec.europa.eu/enterprise/newsroom/cf/document.cfm?action=display&amp;doc_id=3646&amp;userservice_id=1&amp;request.id=0">Präsentation
+  über IBMs „SoftIP“-Konzept</a> stellt Roger Burt, oberster Anwalt von IBM
+  in Europa, das Problem mit einem Zitat aus einer Stellungnahme der BSA et
+  al. aus dem Prozess eBay gegen MercExchange vor. Das Zitat fasst das
+  Problem der Großindustrie ziemlich gut zusammen:</p>
 
-<quote class="indent"><em>„Technologieprodukte bestehen typischerweise
-  aus hunderten oder tausenden von patentierten Komponenten. Deshalb
-  ist es für Technologieunternehmen unmöglich, alle Patente und
-  schwebende Patentanmeldungen zu recherchieren, die für eine neue
-  Erfindung (ein neues Produkt) relevant sind, dennoch geben sie sich
-  die beste Mühe es zu tun. Wenn, wie es häufig vorkommt, die
-  Patentklage nicht gemacht wurde, bevor das neue Produkt
-  veröffentlicht oder der Industriestandard angenommen wurde, ist das 
-  Konstruieren um die Klage herum keine realistische Option mehr. Weil 
-  eine gerichtliche Verfügung automatisch nach einer Patentverletzung 
-  sucht – sogar falls die Klage sich auf einen unwichtigen Teil des
-  Produktes bezieht – ist der Klagegegner gezwungen, eine
-  erpresserische Abfindung zu zahlen, um sein Geschäft zu retten.“ </em>
+<quote class="indent"><em>„Technologieprodukte bestehen typischerweise aus
+  hunderten oder tausenden von patentierten Komponenten. Deshalb ist es für
+  Technologieunternehmen unmöglich, alle Patente und schwebende
+  Patentanmeldungen zu recherchieren, die für eine neue Erfindung (ein
+  neues Produkt) relevant sind, ungeachtet der größten Anstrengungen von
+  ihrer Seite. Wenn, wie es häufig vorkommt, die Patentklage erst nach der
+  Veröffentlichung des Produkts oder der Annahme des Industriestandards
+  eingereicht wird, ist das Umgehen des Patents in der Entwicklung keine
+  realistische Option mehr. Weil nach einer Patentverletzung automatisch
+  eine gerichtliche Verfügung erfolgt – sogar falls sich die Klage auf
+  einen unwichtigen Teil des Produkts bezieht – ist der Beklagte
+  gezwungen, eine halsabschneiderische Abfindung zu zahlen, um sein
+  Geschäft zu retten.“ </em>
   </quote>
 
-<p>Ein anderer Versuch, um Patentgebühren sogar für die größten
-  Unternehmen nicht zu hoch werden zu lassen, wurde von Tim Frain,
-  Direktor für Regulationsangelegenheiten „geistigen Eigentums“ bei
+<p>Ein anderer Versuch, um exorbitante Patentgebühren zu vermeiden, die
+  sogar für die größten Unternehmen ein Problem darstellen, wurde von Tim
+  Frain, Direktor für Regulationsangelegenheiten geistigen Eigentums bei
   Nokia, in seiner Präsentation über das 
-  „<a href="http://ec.europa.eu/enterprise/newsroom/cf/document.cfm?action=display&amp;doc_id=3646&amp;userservice_id=1&amp;request.id=0">
-  Optimale FRAND-Verfahren</a>“ vorgestellt. Frain
-  plädiert für ein System, das auf „aufsummierten vernünftigen Bedingungen“
-  und „Proportionalität“ (ART+P) beruht.</p>
+  „<a href="http://ec.europa.eu/enterprise/newsroom/cf/document.cfm?action=display&amp;doc_id=3646&amp;userservice_id=1&amp;request.id=0">Optimale
+  FRAND-Verfahren</a>“ vorgestellt. Frain plädiert für ein System, das auf
+  „aufsummierten vernünftigen Bedingungen“ und „Proportionalität“ (ART+P)
+  beruht.</p>
 
-  <!-- needs smoothing of language... readers will not understand that -->
-<p>Die Idee hinter diesem Ansatz ist, dass, falls jeder Patenthalter
-  für sich Patentgebühren ansetzt, die er für gerecht, vernünftig und
-  nicht-diskriminierend hält, die sich ergebenden Gebühren sich leicht
-  auf 50 oder mehr Prozent der Produktendkosten aufsummieren können.
-  Also sollten sich alle Patenthalter vorher verpflichten, dass die
-  summierten Patentkosten für alle Patente vernünftig sein sollen.
-  Frain zitierte, dass z. B. in Nokias Sicht die
-  Patentlizensierungsgebühren auf Kommunikationstechnologie für Handys
-  unter 10 Prozent pro Gerät bleiben sollten.</p>
+<p>Die zugrunde liegende Idee ist, dass, wenn jeder Patentinhaber für sich
+  alleine Patentgebühren festlegt, die er für fair, vernünftig und nicht
+  diskriminierend hält, sich alle Gebühren zusammen leicht auf über 50
+  Prozent der Kosten eines Endproduktes aufsummieren können. Daher sollten
+  sich alle Patentinhaber vorher verpflichten, dass die Summe der
+  Patentkosten für alle Patente vernünftig sein sollte. Als Beispiel
+  brachte Frain, dass aus Nokias Sicht die Patentlizenzgebühren auf
+  Kommunikationstechnologie für Handys unter 10 Prozent pro Gerät bleiben
+  sollten.</p>
 
-<p>Beide Ansätze sind Versuche, die Verwendung der durch die Patente erhaltenen
-  Monopole zu kontrollieren, und als solche versuchen sie,
-  freiwillige Zustimmung von anderen Parteien zu erhalten, die ihnen durch das
+<p>Beide Ansätze sind Versuche, die Monopole, die durch Patente erhalten
+  werden, zu kontrollieren, und als solche versuchen sie, eine freiwillige
+  Einwilligung anderer Parteien zu erhalten, die ihnen durch das
   Patentsystem eigentlich zustehenden Rechte nicht anzuwenden.</p>
 
 <p>Unglücklicherweise genügen beide nicht dem Kriterium der
-  Nicht-Diskriminierung gegenüber berechtigten Geschäftsmodellen, auch
-  hat der ART+P-Ansatz den praktischen Nachteil, dass die Konzentration
-  mehr als eine Technologieart pro Gerät zusammenführt, so dass die
-  Gesamtpatentgebühren eines Handys immer noch 50 Prozent erreichen
-  können, falls die Kosten für GSM u. ä. auf 10 Prozent beschränkt
-  sind. Aber auch diese 10 Prozent können für Laptops mit intergrierten
-  UMTS-Modems oder Embedded Devices beachtlich sein, bedenkt man, dass
-  die Gewinnspanne typischerweise weit unter 10 Prozent liegt.</p>
+  Nicht-Diskriminierung von legitimen Geschäftsmodellen. Auch hat der
+  ART+P-Ansatz den praktischen Nachteil, dass durch Konvergenz mehr als
+  eine Technologie-Gattung in einem Gerät zusammengefasst wird, so dass die
+  Gesamtpatentgebühren eines Handys immer noch 50 Prozent erreichen können,
+  auch wenn die Kosten für GSM und ähnliches auf 10 Prozent begrenzt sind.
+  Aber auch diese 10 Prozent können für Laptops mit integrierten
+  UMTS-Modems oder für Embedded Devices beachtlich sein, einem Bereich, in
+  dem die Gewinnspanne typischerweise weit unter 10 Prozent liegt.</p>
 
-<p>Um es als kontroverse Frage zu formulieren: Ist es gerecht und
-  vernünftig, dass ein Patenteigentümer mehr an Monopolzinzen erhält, als ein
-  innovatives Unternehmen als Gewinn erreichen kann, wenn es ein neues Produkt
-  herausbringt und die damit verbundenen Risiken trägt?</p>
+<p>Um es als kontroverse Frage zu formulieren: Ist es fair und
+  vernünftig, dass ein Patentinhaber mehr an Monopoleinnahmen erhält, als
+  ein innovatives Unternehmen als Gewinn erzielen kann, wenn es ein neues
+  Produkt herausbringt und die damit verbundenen Risiken trägt?</p>
 
 <h2>Cui bono?</h2>
 
-<p>Wer also profitiert davon? Wie vorher erklärt sind Patente als
-  Kompromiss gestaltet. Ihr Nutzen wird oft mit einem einsamen Erfinder
-  erklärt, der eine geniale Idee hat. Wäre es gerecht, wenn der
-  Erfinder die Idee veröffentlicht, und dann zusehen muss, wie ein großes
-  Unternehmen es schneller auf den Markt bringt als er selbst es
-  könnte, und der Erfinder durch die Finger schaut? Die meisten
+<p>Wer also profitiert davon? Wie bereits erklärt sind Patente als
+  Kompromiss gestaltet. Ihr Nutzen wird oft mit dem einsamen Erfinder
+  erklärt, der eine geniale Idee hat. Wäre es gerecht, wenn der Erfinder
+  die Idee veröffentlichte, nur um zusehen zu müssen, wie ein
+  Großunternehmen es schneller auf den Markt brächte, als er selbst es
+  könnte, ohne eine finanzielle Entlohnung für den Erfinder? Die meisten
   Menschen würden darin übereinstimmen, dass dies nicht gerecht ist.</p>
 
-<p>Ohne Patente könnte so ein Erfinder sich nur entscheiden,
-  den Ruhm zu akzeptieren, oder die Erfindung
-  solange wie möglich geheim zu halten, während er versucht, sie auf den
-  Markt zu bringen. Patente garantieren ein zeitlich beschränktes Monopol für den
-  Erfinder als Antwort auf die Veröffentlichung, so dass der Erfinder
-  Investoren finden, ein Unternehmen aufbauen, die Produktentwicklung
-  abschließen, es auf den Markt bringen und sich über einen Start
-  freuen kann, bevor andere normal konkurrieren können.</p>
+<p>Ohne Patente könnte sich solch ein Erfinder nur entscheiden, sich
+  entweder in sein Schicksal zu fügen, oder aber die Erfindung so lange wie
+  möglich geheim zu halten, während er gleichzeitig versucht, sie auf den
+  Markt zu bringen. Patente garantieren dem Erfinder ein zeitlich
+  befristetes Monopol als Gegenleistung für die Veröffentlichung, so dass
+  der Erfinder Investoren finden, ein Unternehmen aufbauen, die
+  Produktentwicklung abschließen, es auf den Markt bringen und sich eines
+  zeitlichen Vorsprungs erfreuen kann, bevor andere normal konkurrieren
+  können.</p>
 
-<p>Dieser Mechanismus scheint für einige Zeit in der Vergangenheit
-  einigermaßen gut funktioniert zu haben. Aber einige Grundparameter
-  haben sich geändert, während Patente sich auf wesentlich
-  unreflektierte Weise auf andere Bereiche ausgeweitet haben. Das trifft
-  besonders auf Software zu, wo Patente keine bedeutende Rolle bei der
-  Offenlegung spielen und das Patentmodell für die Gesellschaft
-  brechen, während die Zeit, um eine neue Innovation auf den Markt zu
-  bringen und die Zeit zwischen bahnbrechenden Entdeckungen abnimmt.</p>
+<p>Dieser Mechanismus scheint in der Vergangenheit für eine gewisse Zeit
+  einigermaßen gut funktioniert zu haben. Aber einige Grundparameter haben
+  sich geändert als Patente auf eine im Wesentlichen unreflektierte
+  Weise auf andere Bereiche ausgeweitet wurden. Das trifft insbesondere auf
+  Software zu, wo Patente keine bedeutende Rolle bei der Offenlegung
+  spielen und der Nutzen des Patentmodells für die Gesellschaft aufgehoben
+  ist, während die Zeit, die benötigt wird, um eine neue Innovation auf den
+  Markt zu bringen, und die Zeit zwischen bahnbrechenden Entdeckungen
+  kürzer geworden ist.</p>
 
 <p><a href="http://de.wikipedia.org/wiki/Raymond_Kurzweil">Raymond
-  Kurzweil</a> hat ein exponentiales Muster der Innovation gefunden, 
-  das bis zu den einzelligen Organismen zurückreicht. Folgernd, dass 
-  das ein universelles Prinzip sein muss, hat Kurzweil
+  Kurzweil</a> hat ein exponentielles Muster in den Innovationen gefunden, 
+  das bis zu den einzelligen Organismen zurückreicht. Schlussfolgernd, dass 
+  dies ein universelles Prinzip sein muss, hat Kurzweil
   <a href="http://en.wikipedia.org/wiki/Predictions_made_by_Raymond_Kurzweil">Vorhersagen</a>
-  gemacht, von denen viele sich bisher als größtenteils 
-  zutreffend erwiesen haben. Wenn man dieses Prinzip auf Patente 
-  anwendet, folgt aus der andauernden Monopolgarantie ein 
-  exponentielles Wachstum des Wertes eines einzelnen Patentes.</p>
+  gemacht, von denen sich bisher einige als im Großen und Ganzen zutreffend
+  erwiesen haben. Wenn man dieses Prinzip auf Patente anwendet, folgt aus
+  der konstanten Dauer der Monopolgarantie ein exponentielles Wachstum des
+  Wertes eines einzelnen Patentes.</p>
 
 <p>Der Preis, den die Gesellschaft für die Gewährung von Patenten zahlt,
-  ist seit der Zeit, in der der erste Patent vergeben wurde,
-  exponentiell angestiegen. Das würde erklären, warum der Preis des
-  Patentsystems zunehmend unerschwinglich scheint und die Rufe nach
-  Reformen lauter werden, die zur kürzlichen Bekanntmachung der „<a href="http://www.ftc.gov/opa/2008/11/ipmarketplace.shtm">Ersten Anhörung zur
-  Entwicklung eines Marktes für ‚geistiges Eigentum‘</a>“ der FTC führte.
+  ist seit der Zeit, als das erste Patent vergeben wurde, exponentiell
+  angestiegen. Das würde erklären, warum der Preis des Patentsystems
+  zunehmend unerschwinglich scheint und Rufe nach Reformen lauter werden,
+  was kürzlich zur Bekanntmachung der
+  „<a href="http://www.ftc.gov/opa/2008/11/ipmarketplace.shtm">Ersten
+  Anhörung zur Entwicklung eines Marktes für geistiges Eigentum</a>“ der
+  FTC geführt hat.
   </p>
 
-<p>Eine mögliche Lösung für dieses Problem könnte es sein, die Lebensdauer von
-  Patenten zu verringern, sie auf bestimmte Situationen anpassen, und Felder von der
-  Patentierung ausschließen, in denen Patente keine nennenswerte
-  Offenlegung darstellen.</p>
+<p>Eine mögliche Lösung für dieses Problem könnte sein, die Laufzeit von
+  Patenten zu verkürzen, sie an bestimmte Situationen anzupassen, und
+  Bereiche von der Patentierung ausschließen, in denen Patente keine
+  nennenswerte Offenlegung bewirken.</p>
 
-<p>Wenn es um Standards geht, war es An Baisheng, Stellvertretender
-  Direktor der Abteilung für WTO-Belange der Abteilung für technische
-  Regulierung des Chinesischen Handelsministeriums, der die Frage von
-  öffentlichem vs. privatem Nutzen in seiner Präsentation mit dem Titel
-  „<a href="http://ec.europa.eu/enterprise/newsroom/cf/document.cfm?action=display&amp;doc_id=3632&amp;userservice_id=1&amp;request.id=0">
-  Das Finden der richtigen Ausgewogenheit zwischen
-  öffentlichen und privaten Interessen des ‚geistigen Eigentums‘ in der
-  IKT-Standardisierung</a>“ aufwarf.</p>
+<p>Es war An Baisheng, stellvertretender Direktor der Abteilung für
+  WTO-Belange der Abteilung für technische Regulierung des Chinesischen
+  Handelsministeriums, der im Bezug auf Standards zuerst die Frage von
+  öffentlichem vs. privatem Nutzen aufwarf. Seine Präsentation hatte den
+  Titel
+  „<a href="http://ec.europa.eu/enterprise/newsroom/cf/document.cfm?action=display&amp;doc_id=3632&amp;userservice_id=1&amp;request.id=0">Das 
+  Finden der richtigen Balance zwischen öffentlichen und privaten
+  Interessen bei geistigem Eigentum in der IKT-Standardisierung</a>“.</p>
 
-<p>Wenn wir unser Szenario des „einsamen Erfinders“ betrachten, ist die 
-  Frage, die wir uns für Patente auf Standards stellen müssen: Wäre es 
-  gerecht, wenn unser Erfinder jemand anderen daran hindern könnte,
-  eine eigene Erfindung auf den Markt zu bringen, die irgendwie mit
-  der anfänglichen Erfindung interagiert? Um es konkreter zu machen:
-  Sollte ein Patent auf eine Schreibmaschine sich auf Durchschlagpapier
-  ausweiten, das die richtige Größe hat, um in der Schreibmaschine
-  verwendet zu werden? Die meisten Menschen würde darin übereinstimmen,
-  dass dies zu weit gehen würde.</p>
+<p>Wenn wir unser Szenario des „einsamen Erfinders“ betrachten, müssen wir
+  uns im Bezug auf Patente auf Standards die Frage stellen: Wäre es 
+  gerecht, wenn unser Erfinder jemand anderen daran hindern könnte, eine
+  eigene Erfindung auf den Markt zu bringen, die irgendwie mit der
+  anfänglichen Erfindung interagiert? Um es konkreter zu machen: Sollte ein
+  Patent auf eine Schreibmaschine sich auf Durchschlagpapier ausweiten, das
+  die richtige Größe hat, um in der Schreibmaschine verwendet zu werden?
+  Die meisten Menschen würde darin übereinstimmen, dass dies zu weit gehen
+  würde.</p>
 
 <h2>Mögliche Lösungen</h2>
 
 <h3>1. Interoperabilität steht über Patenten</h3>
 
-<p>Während der Auseinandersetzung um Softwarepatente in der EU gab es
-  einen Konsens zwischen SMEs, den Vertretern Freier Software und
-  großer Gewerbe von Unternehmen wie von IBM oder Sun, dass Patente
-  nicht verwendbar sein sollten, um Interoperabilität zu beschränken
-  oder zu verhindern.</p>
+<p>In der Debatte um Softwarepatente in der EU gab es einen Konsens
+  zwischen SMEs, Vertretern Freier Software und Repräsentanten von
+  Großunternehmen wie IBM oder Sun, dass Patente nicht verwendbar sein
+  sollten, um Interoperabilität zu beschränken oder zu verhindern.</p>
 
-<p>In der EU könnte das in die andauernde Auseinandersetzung über
-  Gemeinschaftspatente einfließen. Auf einer weltweiten Ebene sollte
-  die WIPO das als Teil ihrer Diskussionen über die Entwicklungsagenda
+<p>In der EU könnte dies in die laufende Debatte über
+  Gemeinschaftspatente einfließen. Auf einer weltweiten Ebene sollte es die
+  WIPO im Rahmen der laufenden Diskussionen über ihre Entwicklungsagenda
   berücksichtigen.</p>
 
-<p>Einmal implementiert, würde das die schädlichsten Nebeneffekte für
-  alle rechtmäßigen Geschäftsmodelle beseitigen und Interoperabilität
-  und Erhaltung des Wettbewerbs höher stellen als Monopolrechte. Wenn man die in 
-  diesem Markt existierenden außerordentlichen Netzwerkeffekte
+<p>Einmal eingeführt würde dies die schädlichsten Nebeneffekte für alle
+  legitimen Geschäftsmodelle beseitigen und die Interoperabilität und die
+  Erhaltung des Wettbewerbs höher stellen als Monopolrechte. Wenn man die
+  in diesem Markt existierenden außergewöhnlichen Netzwerkeffekte
   bedenkt, scheint eine solche Bevorzugung gerechtfertigt.</p>
 
-<h3>2. Erneuerungspolitik in den SSOs</h3>
+<h3>2. Die Richtlinien der SSOs aktualisieren</h3>
 
-<p>Außerdem könnten SSOs ihre Patentrichtlinien erneuern, um
+<p>Zweitens könnten SSOs ihre Patentrichtlinien aktualisieren, um
   sicherzustellen, dass ihre Standards in allen Geschäftsmodellen
-  nutzbar sind. Viele SSO-Vertreter behaupteten bei der Tagung, dass
-  es nicht ihre Aufgabe sei, bestimmte Patentrichtlinien zu
-  verteidigen. Zur selben Zeit gibt die <a href="http://www.itu.int/ITU-T/dbase/patent/patent-policy.html">gemeinsame
-  Patentrichtlinie</a> von ITU-T, ITU-R, ISO und IEC das Prinzip an,
-  dass „<em>ein Patent, dass ganz oder teilweise in einer Empfehlung
-  enthalten ist, jedermann ohne übermäßige Beschränkungen verfügbar
-  sein muss.</em>“ Wie diese Analyse zeigt, fehlt in der gegenwärtigen
-  Anwendung von RAND dieses Prinzip.</p>
+  verwendet werden können. Viele SSO-Vertreter behaupteten in der Tagung,
+  dass es nicht ihre Aufgabe sei, bestimmte Patentrichtlinien zu
+  verteidigen. Zugleich steht in der
+  <a href="http://www.itu.int/ITU-T/dbase/patent/patent-policy.html">gemeinsamen
+  Patentrichtlinie</a> von ITU-T, ITU-R, ISO und IEC das Prinzip, dass
+  „<em>ein Patent, das ganz oder teilweise in einer Empfehlung enthalten
+  ist, jedermann ohne unangemessenen Einschränkungen verfügbar sein
+  muss.</em>“ Wie diese Analyse zeigt, folgt die gegenwärtige Anwendung von
+  RAND diesem Grundsatz nicht.</p>
 
-<p>Manche SSOs fordern, dass alle Teilnehmer eines Standardisierungsprozesses
-  ihr Copyright an die SSO übertragen, und schützen sich so gegen spätere
-  Klagen von den Haltern des Copyrights. Es scheint gerechtfertigt, ähnliche
-  Verfahren aus den gleichen Gründen auf Patente anzuwenden.</p>
+<p>Einen weiteres Vorbild existiert darin, dass SSOs normalerweise fordern,
+  dass alle Teilnehmer eines Standardisierungsprozesses ihr Copyright an
+  die SSO übertragen, um sich gegen spätere Klagen von Inhabern der
+  Copyrights zu schützen. Es scheint aus dem gleichen Grund
+  gerechtfertigt, ähnliche Maßnahmen bei Patenten zu ergreifen.</p>
 
-<h3>3. Anbieten unmittelbarer und längerfristiger Möglichkeiten</h3>
+<h3>3. Kurzfristige Lösungen und Migrationswege anbieten</h3>
 
-<p>Viele patentverhindernde Standards existieren schon, und sogar
-  wenn die WIPO endlich einem Vorrang genereller Interoperabilität
-  zustimmte, würde es Jahrzehnte dauern, bis dieses in nationales Recht
-  umgesetzt würde.</p>
+<p>Viele durch Patente belastete Standards existieren schon, und sogar wenn
+  die WIPO einem generellen Vorrang der Interoperabilität zustimmte, würde
+  es Jahrzehnte dauern, bis dies in nationales Recht umgesetzt würde.</p>
 
-<p>Als unmittelbare Lösung müsste (F)RAND so durchgesetzt werden, dass
-  die Lizensierungsbedingungen gültige Geschäftsmodelle nicht
-  diskriminieren, wie es heute immer noch üblich ist. Eine mögliche
-  Lösung könnte (F)RAND-Gebühren an die nachgeordneten Lizenzgebühren
-  binden.</p>
+<p>Als kurzfristige Lösung müsste (F)RAND so durchgesetzt werden, dass die
+  Lizenzbedingungen gültige Geschäftsmodelle nicht diskriminieren, wie es
+  heute immer noch üblich ist. Eine mögliche Lösung könnte die
+  (F)RAND-Gebühren an die Einnahmen koppeln, die die Lizenznehmer
+  ihrerseits durch Lizenzen erzielen.</p>
 
-<p>Geschäftsmodelle, die auf gebührenpflichtiger Lizenzierung von
-  Urheberrechten oder Patenten aufbauen, würden weiterhin wie
-  heute funktionieren. Geschäftsmodelle, die nicht auf solchen
-  Lizenzgebühren basieren, würden auch Interoperabilität und Wettbewerb
-  erlauben.</p>
+<p>Geschäftsmodelle, die auf proprietärer Lizenzierung, basierend auf
+  Urheberrechten oder Patenten, beruhen, würden weiterhin wie heute
+  funktionieren. Geschäftsmodelle, die nicht auf solchen Lizenzgebühren
+  beruhen, würde die Möglichkeit zur Interoperabilität und Teilnahme am
+  Wettbewerb eingeräumt.</p>
 
-<p>Dieser Schritt würde auch ITU-T, ITU-R, ISO und IEC wieder an ihre
-  erklärte gemeinsame Lizensierungrichtlinie heranführen.</p>
+<p>Dieser Schritt würde auch ITU-T, ITU-R, ISO und IEC wieder ermöglichen,
+  sich an ihrer erklärten gemeinsamen Patentrichtlinie zu orientieren.</p>
 
-<h3>4. Erneuerung der staatlichen Beschaffungsrichtlinien</h3>
+<h3>4. Staatliche Beschaffungsrichtlinien aktualisieren</h3>
 
 <p>Staaten und überstaatliche Organisationen sollten ihre
-  Beschaffungsrichtlinien erneuern, um nur Produkte zu beschaffen,
-  die auf Standards basieren, die kein rechtmäßiges Geschäftsmodell
-  diskriminieren. Das bedeutet, die pauschalen Akzeptanz einiger SSOs zu
-  überdenken, und Standards von Organisationen, deren Patentrichtlinien nicht
-  dieser Anforderungen entsprechen, nur noch eingeschränkt zu akzeptieren.</p>
+  Beschaffungsrichtlinien aktualisieren, um nur Produkte zu beschaffen, die
+  auf Standards basieren, die kein legitimes Geschäftsmodell diskriminieren.
+  Das bedeutet für einige SSOs, pauschale Anerkennungen neu zu überdenken,
+  und Standards von Organisationen, deren Patentrichtlinien nicht dieser
+  Anforderungen entsprechen, nur noch eingeschränkt zu akzeptieren.</p>
 
 <hr />
 
 <p><em>HINWEIS: Dieser Artikel wurde aus der Sicht eines
   Software-Fachmanns verfasst. Die Schlüsse könnten in
-  ihrer Gesamtheit, teilweise oder überhaupt nicht auf andere Bereiche
-  außerhalb von Software zutreffen.
+  ihrer Gesamtheit, teilweise oder überhaupt nicht auf Bereiche
+  außerhalb der Software zutreffen.
 </em></p>
 
   </body>

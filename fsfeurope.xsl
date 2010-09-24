@@ -249,21 +249,9 @@
             </xsl:element>
           </xsl:element>
 
-          <!-- PDF Readers Campaign -->
-          <xsl:element name="div">
-            <xsl:attribute name="id">pdfr</xsl:attribute>
-            <xsl:element name="a">
-              <xsl:attribute name="href">http://www.fsfe.org/campaigns/pdfreaders</xsl:attribute>
-              <xsl:element name="img">
-                <xsl:attribute name="alt">PDF Readers Campaign</xsl:attribute>
-                <xsl:attribute name="src">/graphics/pdf-readers-lang-neutral.png</xsl:attribute>
-              </xsl:element>
-            </xsl:element>
-          </xsl:element>
-
           <!-- Software Freedom Day -->
           <xsl:element name="div">
-            <xsl:attribute name="id">sfd-2010</xsl:attribute>
+            <xsl:attribute name="id">sfd</xsl:attribute>
             <xsl:element name="a">
               <xsl:attribute name="href">http://softwarefreedomday.org/</xsl:attribute>
               <xsl:element name="img">
@@ -330,6 +318,19 @@
 
         </xsl:element>
         <!-- End Language bar -->
+        
+        
+        <!-- Start info box -->
+        <xsl:element name="div">
+          <xsl:attribute name="id">infobox</xsl:attribute>
+          <xsl:if test = "/buildinfo/document/head/meta[@name='under-construction' and @content='true']">
+            <xsl:element name="p">
+              <xsl:apply-templates select="/buildinfo/textset/text[@id='under-construction']/node()" />
+            </xsl:element>
+          </xsl:if>
+        </xsl:element>
+        <!-- End info box -->
+        
 
         <!-- Fundraising box
         <xsl:if test="/buildinfo/fundraising">
@@ -389,8 +390,6 @@
           </xsl:element>
         </xsl:element>
         <!-- End Content -->
-
-
 
         <!-- Footer -->
         <div id="footer">
@@ -478,6 +477,7 @@
             </ul>
           </div>
           -->
+          
           
         <!-- FSF* netwok note --> 
         <p id="fsfnetwork">

@@ -249,6 +249,18 @@
             </xsl:element>
           </xsl:element>
 
+          <!-- PDF Readers Campaign -->
+          <xsl:element name="div">
+            <xsl:attribute name="id">pdfr</xsl:attribute>
+            <xsl:element name="a">
+              <xsl:attribute name="href">http://www.fsfe.org/campaigns/pdfreaders</xsl:attribute>
+              <xsl:element name="img">
+                <xsl:attribute name="alt">PDF Readers Campaign</xsl:attribute>
+                <xsl:attribute name="src">/graphics/pdf-readers-lang-neutral.png</xsl:attribute>
+              </xsl:element>
+            </xsl:element>
+          </xsl:element>
+
           <!--
           <div id="newsletter">
             <p>

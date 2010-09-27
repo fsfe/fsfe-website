@@ -1,69 +1,108 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <html>
   <head>
-    <title>FSFE - Espacio de prensa</title>
+    <title>Sala de prensa - FSFE</title>
+    <link href="/style/grid.css" rel="stylesheet" />
+    <script>
+
+      /*
+       * Fields that carry values at page load will be emptied if this
+       * is called and the field has not been edited before.
+       */
+      var changedFields = new Array();
+
+      function removeValue(field) {
+        if (!changedFields[field.getAttribute("name")]) {
+          changedFields[field.getAttribute("name")] = true;
+          field.value = "";
+        }
+
+        return false;
+      }
+
+    </script>
   </head>
 
   <body>
-<h1>Espacio de prensa</h1>
-<p id="introduction">
-      La FSFE croit que l'accès aux logiciels déterminent qui peut ou non prendre part à la société de l'information. Les libertés <a href="/about/basics/freesoftware.html">d'utiliser, copier, modifier et redistribuer</a> sont nécessaires à permettre l'égalité à l'âge de l'information.
+    <h1>Sala de prensa</h1>
+
+    <p id="introduction">
+      La FSFE considera que el acceso al software determina quién puede
+      participar en la sociedad digital. Las libertades de
+      <a href="/about/basics/freesoftware.html">usar, compartir, estudiar y mejorar</a>
+      el software son necesarias para una participación igualitaria en la era de la información.
     </p>
 
     <p>
-    La Free Software Foundation Europa (FSFE) es una entidad sin ánimo de lucro presenta en <a href="/contact/local.html">numerosos paises europeos</a> dedicada al Software Libre. Para asegurir und participación igualitaria en la sociedad de información y para defender la libre competición, la Free Software Foundation Europe se dedica a la promoción del software libre que están definidos por cuatro libertades : utilizar, estudiar, copiar y modificar el software. Fundida en 2001, la FSFE provoca la toma en cuento de estos temas, incorpora el software libre en los planos polticos y juridicos, y contribuye en traer la libertad a los ciudadanos apoyando al desarrollo del software libre.</p>
+      La Free Software Foundation Europe (FSFE) es una organización
+      no gubernamental y sin ánimo de lucro que actúa en
+      <a href="/contact/local.html">muchos países europeos</a> e involucrada en muchas actividades
+      globales. El acceso al software determina la participación en una
+      sociedad digital: para asegurar una participación igualitaria en la era de la información,
+      así como la libre competencia, la Free Software Foundation Europe
+      persigue y se dedica a mejorar el porvenir del Software Libre; definido por las
+      libertades de usar, estudiar, modificar y copiar. Fundada en el año 2001, crear
+      sensibilización ante estas cuestiones, asegurar el Software Libre política y
+      legalmente, y ofrecer libertad a las personas apoyando el desarrollo del
+      Software Libre son las principales ocupaciones de la FSFE.
+    </p>
 
 
     <div class="grid-50-50">
       <div class="box first">
-        <h2>Accesse a nuestras notas de prensa</h2>
+        <h2>Reciba nuestros comunicados de prensa</h2>
 
-	<p>
-	  Inscriba-se a nuestras notas de prensa y reciba información sobre los últimos eventos acreca del software libre en el mundo.
+        <p>
+          Al suscribirse a nuestros feeds de noticias o a las listas de correo puede
+          mantenerse informado con las últimas noticias sobre el Software Libre
+          en el mundo.
         </p>
 
         <form method="post" action="http://mail.fsfeurope.org/mailman/subscribe/press-release">
           <p>
-            <input type="text" name="email" value="your@email.com" onChange="this.value = ''" onClick="this.value = ''" />
-            <input type="submit" value="Subscribe" />
+            <input type="text" name="email" value="suemail@ejemplo.com" onClick="removeValue(this)" />
+            <input type="submit" value="Suscribir" />
           </p>
         </form>
 
-	<p>
-	  Para notícias instantaneas o lás más recentes, puede también sguir la FSFE <a
+        <p>
+          Para obtener actualizaciones instantáneas y noticias calientes también puede seguirnos <a
             href="http://identi.ca/fsfe">en Identi.ca</a> o <a
             href="http://twitter.com/fsfe">en Twitter</a>.
         </p>
       </div>
 
       <div class="box">
-        <h2><a href="/news/news.html" class="feed">Noticias más recentes</a></h2>
+        <h2><a href="/news/news.html" class="feed">Últimas noticias</a></h2>
 
-        <dynamic-content/>
+        <dynamic-content />
       </div>
     </div>
 
-    <h2>Pedida de información</h2>
+
+    <h2>Más información</h2>
 
     <p>
-      Se Usted quiere aprender más acerca de la FSFFE, puede entrar en contacto con nuestro agente de prensa enviando un e-mail a <a href="mailto:press@fsfeurope.org">press@fsfeurope.org</a> o escribiendo a la oficina de Berlin&#160;:
+      Por favor, envíe sus preguntas a <a
+        href="mailto:press@fsfeurope.org">press@fsfeurope.org</a>, o mediante correo
+      postal a:
     </p>
 
     <address>
-      Free Software Foundation Europe e.V.<br/>
-      Linienstr. 141 <br/>
-      10115 Berlin <br/>
+      Free Software Foundation Europe e.V.<br />
+      Linienstr. 141<br />
+      10115 Berlin<br />
       Germany
     </address>
 
     <p>
-      Tél.&#160;: +49-30-27595290
+      Teléfono: +49-30-27595290
     </p>
 
     <p>
-      Para preguntas generales, Ud puede también utilizar la 
-      <a href="/contact/contact.html">página de contacto</a>.
+      Para informaciones generales, consulte nuestra
+      <a href="/contact/contact.html">información de contacto</a>.
     </p>
 
 
@@ -71,26 +110,30 @@
 
     <ul>
       <li>
-        <h3><a href="/about/graphics/graphics.html">Logo y dibujos</a></h3>
+        <h3><a href="/about/graphics/graphics.html">Logo e imágenes</a></h3>
         <p>
-      Para bajar nuestros recursos.
+          Descargue nuestro logotipo y otros elementos gráficos.
         </p>
       </li>
 
-      <!-- we should have a link to a subset of people on our people page who can give official press statements -->
+      <!--
+        We should have a link to a subset of people on our people page who can
+        give official press statements
+      -->
 
       <li>
-        <h3><a href="/about/basics/freesoftware.html">Informaciones básicas acerca del software libre</a></h3>
+        <h3><a href="/about/basics/freesoftware.html">Fundamentos del Software Libre</a></h3>
         <!-- Later this should link to /freesoftware/ -->
-	<p>
-	  Las diferencias entre «&#160;Software Libre&#160;», «&#160;Open Source&#160;» y «&#160;Libre Software&#160;».
+        <p>
+          Aprenda la diferencia entre Software Libre, Open Source, y Libre
+          Software.
         </p>
       </li>
     </ul>
   </body>
-  
-  <timestamp>$Date$ $Author$</timestamp>
-<translator>maelle</translator>
+
+  <timestamp>10-01-23 17:58:15 +0100 (Sam, 23. Jän 2010) $ $Author$</timestamp>
+  <translator>pcgaldo</translator>
 </html>
 <!--
 Local Variables: ***

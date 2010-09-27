@@ -1107,3 +1107,19 @@ ul.people li:last-child {margin-bottom:1.5em;}
   padding: 0;
 }
 
+
+/* Article pages */
+
+#article-author, #article-author a {
+  color:#202D79;
+}
+
+#article-author a {
+  margin:0.5em 0;
+  text-decoration:underline;
+}
+
+#article-date {
+  margin:0.5em 0;
+  color:#202D79;
+}

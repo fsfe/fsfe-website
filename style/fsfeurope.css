@@ -788,7 +788,7 @@ h2#subpages + ul li,
 h3#subpages + ul li,
 h4#subpages + ul li {
 	float: left;
-	height: 6.8em;
+	min-height: 6.8em;
 	margin-bottom: .1em;
 	padding-right: 3%;
 	width: 47%;

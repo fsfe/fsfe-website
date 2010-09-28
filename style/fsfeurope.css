@@ -23,7 +23,7 @@ body {
   /* font-family: Nimbus Sans L, Helvetica, Verdana, sans-serif; */
   font-family: sans-serif;      /* Much better readable than Nimbus Sans L */
   font-size: 100.01%;           /* Fix for IE */
-	line-height: 120%;
+  line-height: 120%;
 }
 
 a, a:link {
@@ -54,8 +54,8 @@ a img {
 }
 
 img.right {
-	float: right;
-	margin: 0 0 1em 1em;
+  float: right;
+  margin: 0 0 1em 1em;
 }
 
 /* avoid hover effects and borders on internal marks and graphical links */
@@ -125,7 +125,7 @@ dl dd {
 }
 
 #logo a:hover {
-	background: transparent;
+  background: transparent;
 }
 
 
@@ -143,7 +143,7 @@ dl dd {
 }
 
 #menu ul {
-	padding: 1em 0 1em 1.4em;
+  padding: 1em 0 1em 1.4em;
   /*background: url("/graphics/corner.png") top left no-repeat;*/
   margin: 0;
 }
@@ -163,7 +163,7 @@ dl dd {
 }
 
 #menu a:hover img {
-	background: transparent;
+  background: transparent;
 }
 
 
@@ -177,7 +177,7 @@ dl dd {
 }
 
 .local_menu_item {
-   font-weight: bold;
+  font-weight: bold;
 }
 
 
@@ -207,7 +207,7 @@ dl dd {
 /* ------------------------------------------------------------------------- */
 
 #sfd-2010 {
-margin: 15px 0pt 0pt 4px;
+  margin: 15px 0pt 0pt 4px;
 }
 
 #pdfr {
@@ -220,10 +220,10 @@ margin: 15px 0pt 0pt 4px;
 /* ------------------------------------------------------------------------- */
 
 #language {
-	margin: 0 0 0 240px;
-	/*float: right;
-	margin: 0;
-	width: 79.5%;*/
+  margin: 0 0 0 240px;
+  /*float: right;
+   *	margin: 0;
+   *	width: 79.5%;*/
   font-size: 90%;
   min-height: 2.2em;
   padding: .3em .5em;
@@ -241,10 +241,10 @@ margin: 15px 0pt 0pt 4px;
 }
 
 #language p {                           /* used for outdated/missing note */
-  margin: 1em 0 0 0;
-  border: 1px #ccc solid;
-  padding: 0.3em;
-  background-color: #f4f8fa;
+margin: 1em 0 0 0;
+border: 1px #ccc solid;
+padding: 0.3em;
+background-color: #f4f8fa;
 }
 
 
@@ -253,20 +253,20 @@ margin: 15px 0pt 0pt 4px;
 /* ------------------------------------------------------------------------- */
 
 #infobox {
-	margin: 0 0 0 240px;
-	/*float: right;
-	margin: 0;
-	width: 79.5%;*/
+  margin: 0 0 0 240px;
+  /*float: right;
+   *	margin: 0;
+   *	width: 79.5%;*/
   font-size: 90%;
   /* min-height: 2.2em; */
   padding: .3em .5em;
 }
 
 #infobox p {                           /* used for "under construction" note */
-  margin: 1em 0 0 0;
-  border: 1px #ccc solid;
-  padding: 0.3em;
-  background-color: #f1d656;
+margin: 1em 0 0 0;
+border: 1px #ccc solid;
+padding: 0.3em;
+background-color: #f1d656;
 }
 
 
@@ -343,11 +343,11 @@ margin: 15px 0pt 0pt 4px;
 
 #content {
   margin: 3em 0 0 240px;
-	/*float: right;*/
-	/*margin: 3em 0 0 0;*/
+  /*float: right;*/
+  /*margin: 3em 0 0 0;*/
   min-height: 600px;
-	padding: 0 .5em .5em;
-	/*width: 79%;*/
+  padding: 0 .5em .5em;
+  /*width: 79%;*/
 }
 
 #content h1,
@@ -358,20 +358,20 @@ margin: 15px 0pt 0pt 4px;
 }
 
 #content h1 {
-	border-bottom: 1px solid rgb(210,210,210);
-	font-size: 250%;
-	margin: 0 -.2em;
-	padding: 0 0 .5em .2em;
+  border-bottom: 1px solid rgb(210,210,210);
+  font-size: 250%;
+  margin: 0 -.2em;
+  padding: 0 0 .5em .2em;
 }
 
 #content .centre {
-	text-align: center;
+  text-align: center;
 }
 
 #content h1.centre {
-	border: 0;
-	margin: 0;
-	padding: 0;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 #content h2 {
@@ -379,40 +379,40 @@ margin: 15px 0pt 0pt 4px;
 }
 
 #content h3 {
-	font-size: 130%;
+  font-size: 130%;
   margin-top: 1.5em
 }
 
 #content p#category {
-	font-size: 140%;
-	font-weight: bold;
-	line-height: 200%;
-	margin: 0;
+  font-size: 140%;
+  font-weight: bold;
+  line-height: 200%;
+  margin: 0;
 }
 
 #content .image {
-	background-color: #FDFDFD;
-	float: left;
-	padding: 0 2em 2em 0;
+  background-color: #FDFDFD;
+  float: left;
+  padding: 0 2em 2em 0;
 }
 
 #content .image.right {
-	float: right;
-	padding: 0 0 2em 2em;
+  float: right;
+  padding: 0 0 2em 2em;
 }
 
 #content .image p {
-	border-bottom: 1px solid rgb(210,210,210);
-	border-left: 1px solid rgb(210,210,210);
-	border-right: 1px solid rgb(210,210,210);
-	font-size: 90%;
-	margin-top: 0;
-	padding: .5em;
+  border-bottom: 1px solid rgb(210,210,210);
+  border-left: 1px solid rgb(210,210,210);
+  border-right: 1px solid rgb(210,210,210);
+  font-size: 90%;
+  margin-top: 0;
+  padding: .5em;
 }
 
 #content .image .photographer {
-	font-size: 90%;
-	font-style: italic;
+  font-size: 90%;
+  font-style: italic;
 }
 
 .imgright {
@@ -431,64 +431,64 @@ margin: 15px 0pt 0pt 4px;
 }
 
 .fineprint {
-	color: rgb(120,120,120);
-	font-size: 90%;
-	border-top: 1px solid	rgb(220,220,220);
-	padding: 1em .5em;
-	margin: 3em -.5em 1em;
+  color: rgb(120,120,120);
+  font-size: 90%;
+  border-top: 1px solid	rgb(220,220,220);
+  padding: 1em .5em;
+  margin: 3em -.5em 1em;
 }
 
 .tagline {
-    color: #202D79;
-    font-size: 150%;
-    font-weight: bold;
-    text-align: center;
+  color: #202D79;
+  font-size: 150%;
+  font-weight: bold;
+  text-align: center;
 }
 
 .toolbox {
-    background-color: rgb(244,248,250);
-    float: right;
-    font-size: 85%;
-    margin: .5em 0 0 1em;
-    padding: 1em;
-    width: 12em;
+  background-color: rgb(244,248,250);
+  float: right;
+  font-size: 85%;
+  margin: .5em 0 0 1em;
+  padding: 1em;
+  width: 12em;
 }
 
 p.terminal,
 pre.terminal,
 p.file,
 pre.file {
-    font-family: monospace;
-    padding: .5em 1em;
+  font-family: monospace;
+  padding: .5em 1em;
 }
 
 p.terminal,
 pre.terminal {
-    background-color: rgb(50,50,50);
-    border-left: 10px solid rgb(97,97,97);
-    color: white;
+  background-color: rgb(50,50,50);
+  border-left: 10px solid rgb(97,97,97);
+  color: white;
 }
 
 p.file,
 pre.file {
-    background-color: rgb(244,248,250);
-    border-left: 10px solid rgb(141,172,190);
-    color: rgb(50,50,50);
+  background-color: rgb(244,248,250);
+  border-left: 10px solid rgb(141,172,190);
+  color: rgb(50,50,50);
 }
 
 #introduction {
-	border-bottom: 1px solid rgb(210,210,210);
-	float: left;
-	font-size: 105%;
-	margin: 0 -.5em 2em -.5em;
-	min-height: 60px;
-	padding: 1em .5em;
-	width: 100%;
+  border-bottom: 1px solid rgb(210,210,210);
+  float: left;
+  font-size: 105%;
+  margin: 0 -.5em 2em -.5em;
+  min-height: 60px;
+  padding: 1em .5em;
+  width: 100%;
 }
 
 #introduction p,
 p#introduction {
-	line-height: 190%;
+  line-height: 190%;
 }
 
 #introduction + * {
@@ -500,21 +500,21 @@ p#introduction {
  * doesn't flow outside of the element.
  */
 #introduction p::after {
-	content: "";
-	clear: both;
-	height: 1px;
-	overflow: hidden;
+  content: "";
+  clear: both;
+  height: 1px;
+  overflow: hidden;
 }
 
 #introduction .image {
-	margin: .5em;
-	padding-bottom: 0;
+  margin: .5em;
+  padding-bottom: 0;
 }
 
 #introduction .read_more {
-	margin: 0 -1em;
-	padding: 0 1em 1em 0;
-	text-align: right;
+  margin: 0 -1em;
+  padding: 0 1em 1em 0;
+  text-align: right;
 }
 
 
@@ -527,8 +527,8 @@ p#introduction {
 }
 
 #form_validation_errors {
-	background-color: rgb(245,215,205);
-	color: rgb(236,54,53);
+  background-color: rgb(245,215,205);
+  color: rgb(236,54,53);
 }
 
 #flash {
@@ -543,77 +543,77 @@ p#introduction {
 
 /* press releases */
 dl#press-releases dt {
-	font-weight: normal;
-	color: rgb(120,120,120);
-	position: absolute;
+  font-weight: normal;
+  color: rgb(120,120,120);
+  position: absolute;
 }
 
 dl#press-releases dd {
-	margin-left: 6em;
+  margin-left: 6em;
 }
 
 
 /* tables */
 table {
-	border-collapse: collapse;
-	margin-bottom: 1em;
+  border-collapse: collapse;
+  margin-bottom: 1em;
 }
 
 table th,
 table td {
-	padding: .2em .5em;
+  padding: .2em .5em;
 }
 
 table th + th,
 table td + td {
-	border-left: 1px solid #ccc;
+  border-left: 1px solid #ccc;
 }
 
 table th {
-	border-bottom: 1px solid #202d79;
-	border-top: 1px solid #202d79;
-	color: #202d79;
-	background-color: #f4f8fa;
+  border-bottom: 1px solid #202d79;
+  border-top: 1px solid #202d79;
+  color: #202d79;
+  background-color: #f4f8fa;
 }
 
 table td {
-	border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
 table td.positive {
-	background-color: #d0ffd0;
+  background-color: #d0ffd0;
 }
 
 table td.negative {
-	background-color: #ffd0d0;
+  background-color: #ffd0d0;
 }
 
 table.noborders td,
 table.noborders th {
-	border: 0;
+  border: 0;
 }
 
 
 /* forms */
 form label {
-	color: rgb(80,80,80);
-	font-size: 90%;
-	font-weight: bold;
+  color: rgb(80,80,80);
+  font-size: 90%;
+  font-weight: bold;
   display: block;
 }
 
 form.left-aligned label {
-	text-align: right;
-	vertical-align: top;
-	width: 110px;
+  text-align: right;
+  vertical-align: top;
+  width: 110px;
   display: inline-block;
   margin-right: .5em;
 }
 
 form small {
-	color: rgb(165,165,165);
-	font-size: 75%;
-	display: block;
+  color: rgb(165,165,165);
+  font-size: 75%;
+  display: block;
 }
 
 form input[type=text],
@@ -622,45 +622,45 @@ form input[type=url],
 form select,
 form textarea,
 .button a {
-	background-color: white;
-	border: 1px solid rgb(187,187,187);
-	color: rgb(50,50,50);
-	font-size: 90%;
-	padding: .4em;
+background-color: white;
+border: 1px solid rgb(187,187,187);
+color: rgb(50,50,50);
+font-size: 90%;
+padding: .4em;
 }
 
 form input[_placeholder_on],
 form input[_placeholder_on]:hover {
-  color: rgb(190,190,190);
+color: rgb(190,190,190);
 }
 
 form input.error,
 form select.error,
 form textarea.error {
-	border: 1px solid red;
+border: 1px solid red;
 }
 
 form input,
 form select,
 form .button a {
-	font-family: "Arial", "Verdana", "Helvetica", sans-serif;
+font-family: "Arial", "Verdana", "Helvetica", sans-serif;
 }
 
 form input[type=text],
 form input[type=url],
 form input[type=email],
 form textarea {
-	width: 22em;
-  padding-top: .3em;
+width: 22em;
+padding-top: .3em;
 }
 
 form label + ul,
 form label + ul li {
-  list-style: none;
+list-style: none;
 }
 
 form label + ul li label {
-  font-weight: normal;
+font-weight: normal;
 }
 
 form input[type=submit],
@@ -669,80 +669,80 @@ form input[type=image],
 form select,
 form button,
 form .button a {
-	cursor: pointer;
-	width: auto;
+cursor: pointer;
+width: auto;
 }
 
 form input[type=image] {
-  vertical-align: middle;
+vertical-align: middle;
 }
 
 /*
-form input[type=submit],
-form button,
-form .button a {
-	/* border-radius *
-	/*text-align: right;*
+* form input[type=submit],
+* form button,
+* form .button a {
+*	/* border-radius *
+*	/*text-align: right;*
 }
 */
 
 form input,
 form select,
 form textarea {
-	background-image: url("/graphics/input-bg.png");
-	background-position: bottom left;
-	background-repeat: repeat-x;
+background-image: url("/graphics/input-bg.png");
+background-position: bottom left;
+background-repeat: repeat-x;
 }
 
 form select {
-	padding: .35em;
+padding: .35em;
 }
 
 form input:hover,
 form select:hover,
 form textarea:hover
 form .button a:hover {
-	border: 1px solid rgb(150,150,150);
-	color: black;
+border: 1px solid rgb(150,150,150);
+color: black;
 }
 
 form input:focus,
 form select:focus,
 form textarea:focus,
 form .button a:focus {
-	border: 1px solid rgb(90,90,90);
+border: 1px solid rgb(90,90,90);
 }
 
 form input[type=radio],
 form input[type=radio]:hover {
-	background: transparent;
-	border: 0;
+background: transparent;
+border: 0;
 }
 
 form input[type=checkbox] {
-	padding: .2em;
+padding: .2em;
 }
 
 form input[disabled=disabled],
 form input[disabled=disabled]:hover {
-	color: rgb(130,130,130);
-	cursor: default;
+  color: rgb(130,130,130);
+  cursor: default;
 }
 
 form .button {
-	background-color: white;
-	display: inline;
+  background-color: white;
+  display: inline;
 }
 
 form .button a {
-	background-image: none;
-	background-color: transparent;
-	padding: 6px;
+  background-image: none;
+  background-color: transparent;
+  padding: 6px;
 }
 
 form .button a:hover {
-	color: rgb(50,50,50);
-	text-decoration: none;
+  color: rgb(50,50,50);
+  text-decoration: none;
 }
 
 
@@ -750,39 +750,39 @@ form .button a:hover {
 /* People styles                                                             */
 /* ------------------------------------------------------------------------- */
 #people .person {
-	padding-bottom: 2em;
-	min-height: 100px;
+  padding-bottom: 2em;
+  min-height: 100px;
 }
 
 #people .person .image {
-	float: left;
-	width: 100px;
-	height: 100px;
-	padding-right: 2%;
+  float: left;
+  width: 100px;
+  height: 100px;
+  padding-right: 2%;
 }
 
 #people .person .image img {
-	border: 1px solid #ddd;
+  border: 1px solid #ddd;
 }
 
 #people .person .meta {
-	float: left;
-	width: 12em;
+  float: left;
+  width: 12em;
 }
 
 #people .person .meta h3 {
-	margin: 0;
-	font-size: 110%;
+  margin: 0;
+  font-size: 110%;
 }
 
 #people .person .meta ul {
-	font-size: 90%;
-	padding: 0;
-	list-style: none;
+  font-size: 90%;
+  padding: 0;
+  list-style: none;
 }
 
 #people .person .profile {
-	float: left;
+  float: left;
 }
 
 
@@ -837,40 +837,40 @@ div.actionbox li {
 h2#subpages,
 h3#subpages,
 h4#subpages {
-	display: none;
+  display: none;
 }
 
 h2#subpages.show-heading,
 h3#subpages.show-heading,
 h4#subpages.show-heading {
-	display: block;
+  display: block;
 }
 
 ul#subpages,
 h2#subpages + ul,
 h3#subpages + ul,
 h4#subpages + ul {
-	margin: 2em 0 2em 0;
-	list-style-type: none;
-	padding: 0 1em;
+  margin: 2em 0 2em 0;
+  list-style-type: none;
+  padding: 0 1em;
 }
 
 ul#subpages li,
 h2#subpages + ul li,
 h3#subpages + ul li,
 h4#subpages + ul li {
-	float: left;
-	margin-bottom: .1em;
+  float: left;
+  margin-bottom: .1em;
   min-width: 8em;
-	padding-right: 3%;
-	width: 47%;
+  padding-right: 3%;
+  width: 47%;
 }
 
 ul#subpages li p,
 h2#subpages + ul li p,
 h3#subpages + ul li p,
 h4#subpages + ul li p {
-	font-size: 90%;
+  font-size: 90%;
 }
 
 ul#subpages li:nth-child(odd),
@@ -885,16 +885,16 @@ h4#subpages + ul li:nth-child(odd) {
 /* FSF* Network                                                              */
 /* ------------------------------------------------------------------------- */
 /*#fsfnetwork {
-  clear: both;
-  font-size: 120%;
-  padding-top: 2em;
-  text-align: center;
+*  clear: both;
+*  font-size: 120%;
+*  padding-top: 2em;
+*  text-align: center;
 }*/
 
 #fsfnetwork {
-	font-size: 110%;
-	clear: left;
-	clear:both;
+  font-size: 110%;
+  clear: left;
+  clear:both;
 }
 
 /* ------------------------------------------------------------------------- */
@@ -956,25 +956,25 @@ h4#subpages + ul li:nth-child(odd) {
 /* Footnotes                                                                 */
 /* ------------------------------------------------------------------------- */
 h2#fn {
-	display: none;
+  display: none;
 }
 
 h2#fn + ol {
-	border-top: 1px solid #ccc;
-	font-size: 90%;
-	margin-top: 3em;
-	padding-top: .5em;
-	width: 30%;
+  border-top: 1px solid #ccc;
+  font-size: 90%;
+  margin-top: 3em;
+  padding-top: .5em;
+  width: 30%;
 }
 
 h2#fn + ol li {
-	width: 300%;
+  width: 300%;
 }
 
 a.fn {
-	bottom: .5em;
-	font-size: 70%;
-	position: relative;
+  bottom: .5em;
+  font-size: 70%;
+  position: relative;
 }
 
 
@@ -982,51 +982,51 @@ a.fn {
 /* Events calendar                                                           */
 /* ------------------------------------------------------------------------- */
 .event {
-	margin: 0 0 1.5em 0;
-	min-height: 7em;
-	display: block;
+  margin: 0 0 1.5em 0;
+  min-height: 7em;
+  display: block;
 }
 
 .event h3 {
-	margin-top: 0 !important;
-	margin-left: 70px;
+  margin-top: 0 !important;
+  margin-left: 70px;
 }
 
 .event .date {
-	color: #888;
-	float: left;
-	margin-top: -2em;
-	padding-right: 10px;
-	text-align: center;
-	width: 60px;
+  color: #888;
+  float: left;
+  margin-top: -2em;
+  padding-right: 10px;
+  text-align: center;
+  width: 60px;
 }
 
 .event .date .day,
 .event .date .conjunction,
 .event .date .month {
-	display: block;
+  display: block;
 }
 
 .event .date .conjunction {
-	font-size: 90%;
+  font-size: 90%;
 }
 
 .event .date .day {
-	font-size: 150%;
+  font-size: 150%;
 }
 
 .event .date .month {
-	font-size: 100%;
+  font-size: 100%;
 }
 
 .event .date.multiple .conjunction {
-	color: #bebebe;
-	display: block;
-	margin: 0 0 .5em 0;
+  color: #bebebe;
+  display: block;
+  margin: 0 0 .5em 0;
 }
 
 .event .details {
-	margin-left: 70px;
+  margin-left: 70px;
 }
 
 
@@ -1038,48 +1038,48 @@ a.fn {
 
 #news,
 #events {
-	width: 49%;
+  width: 49%;
 }
 
 #news h2,
 #events h2 {
-	text-align: center;
+  text-align: center;
 }
 
 #news h3,
 #events h3 {
-	color: black;
+  color: black;
 }
 
 #events h3 {
-	font-size: 100%;
+  font-size: 100%;
 }
 
 #news h3 {
-	font-size: 120%;
+  font-size: 120%;
 }
 
 #news .tools,
 #events .tools {
-	list-style: none;
-	padding-left: 0;
-	text-align: center;
+  list-style: none;
+  padding-left: 0;
+  text-align: center;
 }
 
 #news {
-	padding-right: 2%;
-	float: left;
+  padding-right: 2%;
+  float: left;
 }
 
 #events {
-	float: right;
+  float: right;
 }
 
 /* To avoid misplacements on the event page */
 .clear {
-	overflow: hidden;
-	clear: both;
-	height: 1px;
+  overflow: hidden;
+  clear: both;
+  height: 1px;
 }
 
 /* Project list */
@@ -1096,14 +1096,14 @@ td.projects {
 /* Other stuff */
 
 p.read_more {
-	text-align: right;
+  text-align: right;
 }
 
 a.feed {
-	background-image: url("/graphics/icons/feed.png");
-	background-repeat: no-repeat;
-	background-position: 100% -1px !important;
-	padding-right: 1.3em;
+  background-image: url("/graphics/icons/feed.png");
+  background-repeat: no-repeat;
+  background-position: 100% -1px !important;
+  padding-right: 1.3em;
 }
 
 /* FIXME: replace with something else! */
@@ -1128,17 +1128,17 @@ span.emph {
 }
 
 ul.spaced li, ol.spaced li { /* Spaced listings, use this instead of <br /> */
-	margin-bottom: 0.8em;
+margin-bottom: 0.8em;
 }
 
 .background { /* For background information */
-  margin-left: 1.5em;
-  margin-right: 2em;
+margin-left: 1.5em;
+margin-right: 2em;
 }
 
 .aboutfsfe { /* For press release section "About the FSFE" */
-  font-style: italic;
-  margin-left: 2em;
+font-style: italic;
+margin-left: 2em;
 }
 
 
@@ -1188,3 +1188,18 @@ ul.overview {
   width: 45%;
 }
 
+/* Article pages */
+
+#article-author, #article-author a {
+  color:#202D79;
+}
+
+#article-author a {
+  margin:0.5em 0;
+  text-decoration:underline;
+}
+
+#article-date {
+  margin:0.5em 0;
+  color:#202D79;
+}

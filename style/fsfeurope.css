@@ -75,18 +75,26 @@ a[name], a[name]:hover, a.gl img, a.gl:link, a.gl:visited, a.gl:hover {
   display: none;
 }
 
-.break {
-  clear: both;
-}
-
 /* attempts to resemble typographical block quotations */
 /* FIXME: Use blockquote instead for real quotations */
 blockquote,
 .quote {
-  font-size: 90%;
   font-style: italic;
-  line-height: 115%;
-	margin: 0 2em;
+  border-left: .5em solid rgb(210,210,210);
+  padding-left: .8em;
+  margin-left: .3em;
+}
+
+blockquote cite,
+.quote cite {
+  display: block;
+  font-style: normal;
+  line-height: 120%;
+}
+
+blockquote cite:before,
+.quote cite:before {
+  content: "— ";
 }
 
 address {
@@ -127,16 +135,17 @@ dl dd {
 
 #menu {
   /*float: left;*/
-  position: absolute;
   margin: 0;
   padding: 0;
+  left: 1em;
+  position: absolute;
   width: 220px;
 }
 
 #menu ul {
-  margin: 0;
-/*  background: url("/graphics/corner.png") top left no-repeat;*/
 	padding: 1em 0 1em 1.4em;
+  /*background: url("/graphics/corner.png") top left no-repeat;*/
+  margin: 0;
 }
 
 #menu ul ul {
@@ -158,6 +167,8 @@ dl dd {
 }
 
 
+
+
 /* ------------------------------------------------------------------------- */
 /* Localmenu                                                                 */
 /* ------------------------------------------------------------------------- */
@@ -168,6 +179,7 @@ dl dd {
 .local_menu_item {
    font-weight: bold;
 }
+
 
 /* ------------------------------------------------------------------------- */
 /* Search box                                                                */
@@ -186,20 +198,22 @@ dl dd {
 #menu #search input[type=image] {
   border: 0;
   background-color: transparent;
-  margin: -.3em 0 0 -2.3em;
+  margin: -3px 0 0 -34px;
 }
+
 
 /* ------------------------------------------------------------------------- */
 /* Left nav col buttons                                                      */
 /* ------------------------------------------------------------------------- */
 
 #sfd-2010 {
-  margin: 15px 0pt 0pt 4px;
+margin: 15px 0pt 0pt 4px;
 }
 
-#pdfr { 
-  margin: 35px 0 0 14px; 
-} 
+#pdfr {
+  margin: 35px 0 0 14px;
+}
+
 
 /* ------------------------------------------------------------------------- */
 /* Language List                                                             */
@@ -233,6 +247,7 @@ dl dd {
   background-color: #f4f8fa;
 }
 
+
 /* ------------------------------------------------------------------------- */
 /* Info box                                                                  */
 /* ------------------------------------------------------------------------- */
@@ -253,6 +268,7 @@ dl dd {
   padding: 0.3em;
   background-color: #f1d656;
 }
+
 
 /* ------------------------------------------------------------------------- */
 /* Fundraising box                                                           */
@@ -304,6 +320,23 @@ dl dd {
 }
 
 
+/* banner */
+#banner {
+  text-align: center;
+  padding: 0 .5em 2em .5em;
+  margin-top: -1.3em;
+  margin-bottom: 1.3em;
+}
+
+#banner img {
+  max-width: 100%;
+}
+
+.sub-banner {
+  text-align:center;
+  padding: 0 .5em 1em .5em;
+}
+
 /* ------------------------------------------------------------------------- */
 /* Content                                                                   */
 /* ------------------------------------------------------------------------- */
@@ -312,6 +345,7 @@ dl dd {
   margin: 3em 0 0 240px;
 	/*float: right;*/
 	/*margin: 3em 0 0 0;*/
+  min-height: 600px;
 	padding: 0 .5em .5em;
 	/*width: 79%;*/
 }
@@ -320,12 +354,12 @@ dl dd {
 #content h2,
 #content h3 {
   color: #202D79;
+  line-height: 100%;
 }
 
 #content h1 {
 	border-bottom: 1px solid rgb(210,210,210);
 	font-size: 250%;
-	line-height: 100%;
 	margin: 0 -.2em;
 	padding: 0 0 .5em .2em;
 }
@@ -357,7 +391,7 @@ dl dd {
 }
 
 #content .image {
-	background-color: white;
+	background-color: #FDFDFD;
 	float: left;
 	padding: 0 2em 2em 0;
 }
@@ -444,15 +478,21 @@ pre.file {
 
 #introduction {
 	border-bottom: 1px solid rgb(210,210,210);
+	float: left;
 	font-size: 105%;
-	min-height: 60px;
 	margin: 0 -.5em 2em -.5em;
+	min-height: 60px;
 	padding: 1em .5em;
+	width: 100%;
 }
 
 #introduction p,
 p#introduction {
 	line-height: 190%;
+}
+
+#introduction + * {
+  clear: left;
 }
 
 /*
@@ -466,19 +506,38 @@ p#introduction {
 	overflow: hidden;
 }
 
-#introduction img {
-	/*
-	float: left;
-	padding: 0 2em 0 0;
-	margin: 1em 0;
-	max-height: 150px;
-	*/
+#introduction .image {
+	margin: .5em;
+	padding-bottom: 0;
 }
 
 #introduction .read_more {
 	margin: 0 -1em;
 	padding: 0 1em 1em 0;
 	text-align: right;
+}
+
+
+/* form validation */
+#form_validation_errors,
+#flash {
+  border: 1px solid #ccc;
+  padding: 0 1em;
+  margin-bottom: 1em;
+}
+
+#form_validation_errors {
+	background-color: rgb(245,215,205);
+	color: rgb(236,54,53);
+}
+
+#flash {
+  background-color: #f4f8fa;
+  color: rgb(107,179,64);
+}
+
+.required-asterisk {
+  color: red;
 }
 
 
@@ -490,14 +549,14 @@ dl#press-releases dt {
 }
 
 dl#press-releases dd {
-	margin-left: 90px;
+	margin-left: 6em;
 }
 
 
 /* tables */
 table {
 	border-collapse: collapse;
-	margin-bottom :1em;
+	margin-bottom: 1em;
 }
 
 table th,
@@ -538,23 +597,28 @@ table.noborders th {
 /* forms */
 form label {
 	color: rgb(80,80,80);
-	display: inline-block;
 	font-size: 90%;
 	font-weight: bold;
-	margin-right: .5em;
+  display: block;
+}
+
+form.left-aligned label {
 	text-align: right;
 	vertical-align: top;
 	width: 110px;
+  display: inline-block;
+  margin-right: .5em;
 }
 
 form small {
 	color: rgb(165,165,165);
-	font-size: 80%;
+	font-size: 75%;
 	display: block;
-	margin-top: -.6em;
 }
 
-form input,
+form input[type=text],
+form input[type=email],
+form input[type=url],
 form select,
 form textarea,
 .button a {
@@ -582,9 +646,21 @@ form .button a {
 	font-family: "Arial", "Verdana", "Helvetica", sans-serif;
 }
 
-form input,
+form input[type=text],
+form input[type=url],
+form input[type=email],
 form textarea {
-	width: 60%;
+	width: 22em;
+  padding-top: .3em;
+}
+
+form label + ul,
+form label + ul li {
+  list-style: none;
+}
+
+form label + ul li label {
+  font-weight: normal;
 }
 
 form input[type=submit],
@@ -674,7 +750,6 @@ form .button a:hover {
 /* People styles                                                             */
 /* ------------------------------------------------------------------------- */
 #people .person {
-  clear: left;
 	padding-bottom: 2em;
 	min-height: 100px;
 }
@@ -692,7 +767,7 @@ form .button a:hover {
 
 #people .person .meta {
 	float: left;
-	width: 14em;
+	width: 12em;
 }
 
 #people .person .meta h3 {
@@ -707,10 +782,7 @@ form .button a:hover {
 }
 
 #people .person .profile {
-}
-
-#people .person .profile .top {
-  text-align: right;
+	float: left;
 }
 
 
@@ -788,8 +860,8 @@ h2#subpages + ul li,
 h3#subpages + ul li,
 h4#subpages + ul li {
 	float: left;
-	min-height: 6.8em;
 	margin-bottom: .1em;
+  min-width: 8em;
 	padding-right: 3%;
 	width: 47%;
 }
@@ -801,18 +873,45 @@ h4#subpages + ul li p {
 	font-size: 90%;
 }
 
+ul#subpages li:nth-child(odd),
+h2#subpages + ul li:nth-child(odd),
+h3#subpages + ul li:nth-child(odd),
+h4#subpages + ul li:nth-child(odd) {
+  clear: left;
+}
+
+
+/* ------------------------------------------------------------------------- */
+/* FSF* Network                                                              */
+/* ------------------------------------------------------------------------- */
+/*#fsfnetwork {
+  clear: both;
+  font-size: 120%;
+  padding-top: 2em;
+  text-align: center;
+}*/
+
+#fsfnetwork {
+	font-size: 110%;
+	clear: left;
+	clear:both;
+}
 
 /* ------------------------------------------------------------------------- */
 /* Footer                                                                    */
 /* ------------------------------------------------------------------------- */
 
+#footer,
+#footer h2 {
+  color: rgb(120,120,120);
+}
+
 #footer {
   clear: both;
-  color: rgb(120,120,120);
   font-size: 90%;
   line-height: 140%;
   min-height: 8em;
-  padding-top: 2em;
+  padding: 2em 0 2em 0;
 }
 
 #footer #notice {
@@ -823,6 +922,7 @@ h4#subpages + ul li p {
 #footer #notice ul {
   list-style: none;
   padding: 0;
+  margin-bottom: 0;
 }
 
 #footer #notice ul li {
@@ -830,18 +930,17 @@ h4#subpages + ul li p {
   margin-right: .8em;
 }
 
-#footer #fsfnetwork {
-	font-size: 110%;
-	clear: left;
+#footer #notice ul > p {
+  margin-top: 0;
 }
 
 #footer #sister_organizations {
+  clear: both;
   float: right;
   width: 25%;
 }
 
 #footer #sister_organizations h2 {
-  color: rgb(50,50,50);
   font-size: 100%;
   font-weight: normal;
   margin-top: 0;
@@ -1025,7 +1124,7 @@ code.footnote {
 
 /* FIXME: Use <strong> instead */
 span.emph {
-   font-weight: bold;
+  font-weight: bold;
 }
 
 ul.spaced li, ol.spaced li { /* Spaced listings, use this instead of <br /> */
@@ -1080,46 +1179,12 @@ ul.spaced li, ol.spaced li { /* Spaced listings, use this instead of <br /> */
 /* Overview pages */
 
 ul.overview {
-  list-style-type:none;
-  margin: 0px;
-  padding: 0px;
-  padding-right: 25px;
-  float:left;
-  width:45%;
-  }
-  
-  
-/* People pages */
-
-.people img {float:left;margin-right:10px;width:48px;height:48px;border:1px solid #000;}
-ul.people {list-style-type:none;}
-ul.people li {display:block;float:left;width:48%;min-width:20em;padding-right:0.5em;}
-ul.people li:nth-child(odd) {clear: left;}
-ul.people li:last-child {margin-bottom:1.5em;}
-.people .name, .people .email {display:block;}
-.people .name {font-weight: bold;}
-.people .email {font-style: italic;}
-
-#map {
-  float: right;
-  border: 1px solid rgb(210,210,210);
-  margin: 0 0 1em 1em;
+  list-style-type: none;
+  margin: 0;
+  margin-bottom: 1em;
   padding: 0;
+  padding-right: 1.5%;
+  float: left;
+  width: 45%;
 }
 
-
-/* Article pages */
-
-#article-author, #article-author a {
-  color:#202D79;
-}
-
-#article-author a {
-  margin:0.5em 0;
-  text-decoration:underline;
-}
-
-#article-date {
-  margin:0.5em 0;
-  color:#202D79;
-}

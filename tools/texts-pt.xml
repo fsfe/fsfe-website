@@ -1,48 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- This is actually pt_BR, if anybody can change it to pt_PT please do so -->
+
 <textset>
-  <text id="lastchanged">Ultima Alteração:</text>
-  <text id="translator1a">Agradecemos </text>
-  <text id="translator1b"> para esta tradução não oficial. </text>
+  <!-- Footer -->
+  <text id="lastchanged"> Última modificação: </text>
+  <text id="translator1a">Agradecemos a </text>
+  <text id="translator1b"> a tradução desta página. </text>
   <text id="translator2">Esta é uma tradução não oficial. </text>
-  <text id="translator3a">Refera-se ao </text>
+  <text id="translator3a">Também pode consultar o </text>
   <text id="translator3b">texto original</text>
-  <text id="translator3c"> para ler a versão oficial version desta pagina.</text>
-  <text id="permission">Permitida a cópia e distribuição deste documento completo em qualquer meio, desde que esta nota seja mantida.</text>
-  <text id="webmaster">Relate problemas com esta página para <em>webmaster at fsfeurope.org</em></text>
+  <text id="translator3c"> desta pagina.</text>
+  <text id="permission">Permite-se a cópia e distribuição deste documento completo em qualquer médio, sempre que se inclua este aviso.</text>
+  <text id="webmaster">Comuniquem os problemas desta página a <em>webmaster at fsfeurope.org</em></text>
+  <text id="fsfnetwork">
+      A FSFE tem <a href="/about/fsfnetwork.html">organizações irmãs</a> em <a
+      href="http://www.fsf.org/">América do Norte</a>, <a
+      href="http://www.fsf.org.in/">Índia</a> e <a
+      href="http://www.fsfla.org/">América Latina</a>.
+  </text>
   <text id="outdated">
-     <strong>Atenção: </strong> Este página pode estar desatualizada com relação a original. Por favor acesse <a href="/contribute/contribute.html">esta página</a> para saber como ajudar com tradução e outras coisas.
+     <strong>Atenção: </strong> Esta página pode estar desatualizada com relação a original. Por favor consulte <a href="/contribute/contribute.html">esta página</a> para saber como ajudar com a tradução e fazer outras contribuições.
   </text>
   <text id="notranslation">
-     <strong>Atenção: </strong> Esta página não está sendo atualizada. Você está acessando a versão original desta página. Por favor, acesse <a href="/contribute/contribute.html">esta página</a> para saber como ajudar com tradução e outras coisas.
+     <strong>Atenção: </strong> Esta página ainda não foi traduzida. Você está a ver a versão original desta página. Por favor, consulte <a href="/contribute/contribute.html">esta página</a> para saber como ajudar com a tradução e fazer outras contribuições.
   </text>
+  <text id="search">Buscar</text>
+
+  <!-- Conjunctions -->
+  <text id="to">a</text>
+
+<!-- Menu -->
   <text id="menu1/about">Sobre</text>
   <text id="menu1/projects">Projetos</text>
   <text id="menu1/documents">Documentos</text>
   <text id="menu1/help">Participe</text>
   <text id="menu1/donate">Doações</text>
-  <text id="menu1/order">Compre</text>
-  <text id="menu1/lists">Listas de Discussão</text>
+  <text id="menu1/order">Loja</text>
+  <text id="menu1/lists">Listas de discussão</text>
   <text id="menu1/press">Imprensa</text>
   <text id="menu1/thankgnus">Obrigado GNUs</text>
   <text id="menu2/fellowship">Fellowship</text>
   <text id="menu2/fellowship/1-wiki">Wiki</text>
   <text id="menu2/fellowship/2-planet">Planet Blog</text>
   <text id="menu2/fellowship/3-join">Una-se</text>
-  <text id="menu2/priority">Priority Links</text>
-  <text id="menu3/priority/com-pkg">Commercial Services</text>
-  <text id="menu2/priority/fellowship">Fellowship</text>
-  <text id="menu2/priority/ftf">Freedom Task Force</text>
-  <text id="menu2/priority/os">Open Standards</text>
-  <text id="menu3/sisters">Our sister organisations</text>
-  <text id="menu3/sisters/fsf">FSF</text>
-  <text id="menu3/sisters/fsf_india">FSF India</text>
-  <text id="menu3/sisters/fsf_la">FSF Latin America</text>
-
-   <!-- Date time -->
-  <text id="months/1">Enero</text>
+  
+  <!-- Date time -->
+  <text id="months/1">Janeiro</text>
   <text id="months/2">Fevereiro</text>
-  <text id="months/3">Março </text>
+  <text id="months/3">Março</text>
   <text id="months/4">Abril</text>
   <text id="months/5">Maio</text>
   <text id="months/6">Junho</text>
@@ -53,12 +57,32 @@
   <text id="months/11">Novembro</text>
   <text id="months/12">Dezembro</text>
  
-   <text id="weekdays/1">Segunda</text>
-  <text id="weekdays/2">Terca</text>
+  <text id="months-abbreviated/1">Jan</text>
+  <text id="months-abbreviated/2">Fev</text>
+  <text id="months-abbreviated/3">Mar</text>
+  <text id="months-abbreviated/4">Abr</text>
+  <text id="months-abbreviated/5">Mai</text>
+  <text id="months-abbreviated/6">Jun</text>
+  <text id="months-abbreviated/7">Jul</text>
+  <text id="months-abbreviated/8">Ago</text>
+  <text id="months-abbreviated/9">Set</text>
+  <text id="months-abbreviated/10">Out</text>
+  <text id="months-abbreviated/11">Nov</text>
+  <text id="months-abbreviated/12">Dec</text>
+
+  <text id="weekdays/1">Segunda</text>
+  <text id="weekdays/2">Terça</text>
   <text id="weekdays/3">Quarta</text>
   <text id="weekdays/4">Quinta</text>
   <text id="weekdays/5">Sexta</text>
-  <text id="weekdays/6">Sabado</text>
+  <text id="weekdays/6">Sábado</text>
   <text id="weekdays/7">Domingo</text>
 
+  <text id="weekdays-abbreviated/1">Seg</text>
+  <text id="weekdays-abbreviated/2">Ter</text>
+  <text id="weekdays-abbreviated/3">Qua</text>
+  <text id="weekdays-abbreviated/4">Qui</text>
+  <text id="weekdays-abbreviated/5">Sex</text>
+  <text id="weekdays-abbreviated/6">Sab</text>
+  <text id="weekdays-abbreviated/7">Dom</text>
 </textset>

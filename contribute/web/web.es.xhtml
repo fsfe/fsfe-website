@@ -1,324 +1,312 @@
-<?xml version="1.0" encoding="utf-8" ?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 <html>
   <head>
-    <title>
-      FSFE - Contribuir - Información para Webmasters
-    </title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>Información para administradores web - FSFE</title>
   </head>
-
   <body>
-    <h1>Información para Webmasters</h1>
+
+    <p id="category"><a href="/contribute/">Colabore</a></p>
+    <h1>Administración web</h1>
+
+    <p id="introduction">
+      El <em>equipo web</em> mantiene y desarrolla las páginas web de la FSFE - que van desde <a href="/">fsfe.org</a> a las páginas web de los proyectos y campañas. Los administradores web son voluntarios que trabajan para mejorar la imagen de la organización en el mundo y para mejorar las soluciones técnicas de nuestros esfuerzos en la web.
+    </p>
+
 
     <h2>Introducción</h2>
 
     <p>
-      Las tecnologías y programas usados para mantener la página web de la FSFE
-      pueden ser familiares para muchos desarrolladores y autores y pueden ser de
-      interés a aquellos que aun no los han descubierto.
+      Las tecnologías y programas utilizados para mantener la página web de la FSFE deberían resultar familiares para muchos desarrolladores y autores, y pueden ser de interés para aquellos que aún no los han descubierto.
     </p>
 
     <p>
-      Traductores y voluntarios ocasionales pueden que sólo entren en contacto
-      con
+      Los traductores y voluntarios ocasionales probablemente sólo tendrán contacto con:
     </p>
 
     <ul>
       <li>
-        <a href="http://savannah.gnu.org" target="_blank">Savannah</a>, para
-        el servicio de CVS y la gestión de permisos de acceso.
+        <a href="http://en.wikipedia.org/wiki/XHTML">XHTML</a> - desde los que las páginas web se generan
       </li>
       <li>
-        <a href="http://www.w3.org/MarkUp/" target="_blank">XHTML</a>, con
-        el cual las páginas estáticas se generan cada cinco minutos.
+        <a href="http://subversion.tigris.org/">Subversion</a> - para el control de versiones de las fuentes de las páginas web
       </li>
       <li>
-        <a href="http://www.cvshome.org" target="_blank">Concurrent Version
-          System (CVS)</a>, para coordinación y sincronización.
+        <a href="http://trac.edgewall.org/">Trac</a> - para la gestión de permisos de acceso, seguimiento de problemas y otros servicios relacionados.
       </li>
     </ul>
 
     <p>
-      Los voluntarios interesados en profundizar en el mantenimiento deben estar
-      familiarizados con
+      Los voluntarios interesados en profundizar en el mantenimiento también deben de estar familiarizados con:
     </p>
 
     <ul>
       <li>
-        <a href="http://www.perl.org" target="_blank">Perl</a>, para el
-        mantenimiento y creación de scripts.
+        <a href="http://www.perl.org/">Perl</a> - para el mantenimiento y las secuencias de comandos de creación de páginas
       </li>
       <li>
-        <a href="http://www.apache.org" target="_blank">Apache</a>, como
-        servidor web.
+        <a href="http://www.apache.org/">Apache</a> - como servidor web
       </li>
     </ul>
 
-    <h2>Comprender cómo se crean las páginas</h2>
+
+    <h2>Comprendiendo cómo se construyen las páginas web</h2>
 
     <p>
-      Las páginas web de www.fsfeurope.org se mantienen como un conjunto de archivos XML.
-      El servidor web genera las páginas HTML a partir de estos archivos XML automáticamente
-      cada cinco minutos. Consecuentemente, toda la edición de las páginas se hace
-      en archivos XML, y nunca se edita directamente el HTML.
+      Las páginas web de <var>fsfe.org</var> se mantienen como un conjunto de archivos XML. El servidor web genera las páginas HTML a partir de estos archivos XML automáticamente cada diez minutos. En consecuencia, toda las ediciones de las páginas se realiza en los archivos XML y el HTML nunca es editado directamente.
     </p>
 
     <p>
-      Cada página en www.fsfeurope.org se denomina
-      «<i>nombre</i>.<i>idioma</i>.html» (<i>idioma</i> proviene de
-      las dos letras del código iso-639 de idiomas, tal como «es» para español o «de» para
-      alemán). Los archivos fuente se nombran
-      «<i>nombre</i>.<i>idioma</i>.xhtml».<br />
-      Algunas páginas tienen partes dinámicas: aparte de los textos fijos tomados del
-      archivo .xhtml, incluyen información desde uno o varios archivos .xml.
-      Una vez que la página está construida, el sistema de construcción toma el archivo .xml
-      traducido cuando sea posible; y en caso contrario la versión inglesa en aquellos
-      archivos.xml que aun no han sido traducidos. De esta manera, ciertas páginas
-      pueden terminar con partes de texto traducido y otras que se muestra aun en
-      inglés. Ejemplos de estas páginas incluyen la
-      <a href="/index.html">portada</a>, la
-      <a href="/news/news.html">página de noticias</a> y la
-      <a href="/events/events.html">página de eventos</a>.
-    </p>
-
-    <h2>Registrarse en savannah</h2>
-
-    <p>
-      El código fuente de las páginas web está almacenados en
-      <a href="http://savannah.gnu.org/">Savannah</a>, un servidor hospedado por la
-      Free Software Foundation, nuestra organización hermana en América del Norte. Para
-      conseguir acceso de escritura a estos archivos debe crear una cuenta en este
-      servidor.
-    </p>
-
-    <h3>Registrar una nueva cuenta</h3>
-
-    <p>
-      Siga
-      <a href="https://savannah.gnu.org/account/register.php">este vínculo</a> para
-      registrar una cuenta nueva. Elija un nombre, una contraseña, rellene con su
-      nombre real y su dirección de correo y pulse en el botón «Submit».
+      Cada página en fsfe.org se denomina <var><em>nombredelapágina</em>.<em>idioma</em>.html</var> (siendo <em>idioma</em> las dos letras del <a
+      href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">código ISO-639</a> para ese idioma, como "es" para el inglés o "de" para el alemán). Los archivos de origen se denominan <var><em>nombredelapágina</em>.<em>idioma</em>.xhtml</var>.
     </p>
 
     <p>
-      Entonces recibirá un correo electrónico desde savannah. Para poder completar su
-      registro visite la URL mencionada en él. La cuentas no confirmadas antes de
-      dos días se borrarán de la base de datos.
+      Algunas páginas tienen partes dinámicas: aparte de los textos fijos tomados de los archivos XHTML, que incluyen información de uno o varios archivos XML. Cada vez que una página es construida, el sistema de construcción toma los archivos XML traducidos, cuando están disponibles, y retorna a la versión en inglés de los archivos XML que aún no han sido traducidos. De esta manera, las páginas pueden acabar presentando partes del texto traducidas y otras partes que aún permanecen en inglés. Algunos ejemplos de este tipo de páginas son la <a href="/">página de inicio</a>, la <a href="/news/">página de noticias</a> y la <a href="/events/">página de eventos</a>.
+    </p>
+
+
+    <h2>Accediendo a las páginas web</h2>
+
+    <p>
+      Los archivos de código fuente para las páginas web se almacenan en el <a
+        href="https://trac.fsfe.org/fsfe-web/browser">repositorio subversion fsfe-web</a>, alojado en el servidor subversion de la FSFE. Otros servicios están disponibles en la correspondiente <a
+      href="https://trac.fsfe.org/fsfe-web">instancia trac</a>.
     </p>
 
     <p>
-      Después de confirmar su cuenta, puede entrar en
-      <a href="https://savannah.gnu.org/">https://savannah.gnu.org</a> con
-      su nombre y su contraseña.
+      Para tener acceso a estas herramientas, sólo tiene que seguir estas instrucciones:
     </p>
 
-    <h3>Crear una clave SSH</h3>
+    <ul>
+      <li>
+        <p>
+          Si usted es un <a href="http://fellowship.fsfe.org">Fellow de la FSFE</a> ya tiene acceso de lectura a subversion y trac. Sólo tiene que entrar con su nombre de usuario y contraseña de la Fellowship.
+        </p>
+
+        <p>
+          Para tener acceso de escritura al repositorio subversion, el wiki trac y el sistema ticket, simplemente escriba a <a
+          href="mailto:system-hackers@fsfeurope.org">system-hackers@fsfeurope.org</a>
+        </p>
+      </li>
+
+      <li>
+        <p>
+          Todo el mundo puede registrar una cuenta de invitado para subversion y trac, a través del formulario web <a
+          href="https://trac.fsfe.org/fsfe-web/register">https://trac.fsfe.org/fsfe-web/register</a>. Tan pronto como se registre, tendrá acceso de lectura al repositorio subversion y puede iniciar una sesión en el sitio trac (por favor, tenga en cuenta que un prefijo <var>guest-</var> será añadido al nombre de usuario que usted elija). Un mensaje de notificación será enviado automáticamente al administrador del repositorio, que permitirá el acceso de escritura tan pronto como sea posible.
+        </p>
+      </li>
+    </ul>
+
+
+    <h3>Comprobando una rama SVN para trabajar con ella</h3>
+    
+    <p>
+      El repositorio subversion tiene dos bases de código principal para la página web de la FSFE, el <a
+      href="https://trac.fsfe.org/fsfe-web/browser/trunk">SVN<em>trunk</em></a>, que se utiliza para crear la instancia de producción de la página web en <a href="http://fsfe.org/">http://fsfe.org/</a> y la rama <a
+        href="https://trac.fsfe.org/fsfe-web/browser/branches/test"><em>test</em></a>, que se utiliza para construir <a
+        href="http://test.fsfe.org/">http://test.fsfe.org/</a>.
+    </p>
 
     <p>
-      Mientras puede usar la contraseña para entrar en el portal en Savannah,
-      debe registrar una clave SSH para conseguir acceso CVS. Esto debe hacerse
-      en cada máquina desde la cual vaya a acceder al repositorio CVS.
+      Para el trabajo del día a día, como la adición de nuevos contenidos, la traducción de páginas (o incluso el desarrollo de pequeños cambios en el sitio web) tendrá que comprobar el trunk CVS:
     </p>
+
+    <p class="terminal">svn --username <var>YOURNAME</var> co https://svn.fsfe.org/fsfe-web/trunk</p>
 
     <p>
-      Para crear y registrar una clave SSH, siga las siguientes
-      <a href="https://savannah.gnu.org/faq/?group_id=5802&amp;question=User_Account_-_How_do_I_configure_my_SSH_access.txt">instrucciones
-        proporcionadas en el FAQ de Savannah</a>.
+      Para realizar cambios importantes en el sitio web, incluyendo la depuración de nuevas características que podrían bloquear o romper el sitio, lo animamos a revisar la rama <em>test</em> del repositorio SVN:
     </p>
 
-    <h3>Unirse al proyecto FSFE</h3>
+    <p class="terminal">svn --username <var>SUNOMBRE</var> co https://svn.fsfe.org/fsfe-web/branches/test</p>
 
     <p>
-      Hay muchos proyectos hospedados en Savannah, y el acceso CVS se garantiza
-      individualmente por cada proyecto. Para conseguir acceso a los archivos fuente de
-      la página web de la FSFE debe hacerse miembro del proyecto FSFE.
+      Tenga en cuenta que para una copia operativa completa se requieren alrededor de 160 Mb; si usted sólo va a trabajar en una parte del sitio web, puede echar un vistazo sólo a los directorios en los que usted está interesado. Usted puede <a
+        href="https://trac.fsfe.org/fsfe-web/browser">navegar por el árbol SVN</a> en línea para encontrar lo que le interesa.
     </p>
 
-    <p>
-      Elija «Group Membership» en las solapas superiores. Ahora introduzca «FSFE» e
-      la caja de búsqueda «Request for Inclusion», active el control FSF Europe e
-      introduzca un comentario.
-    </p>
-
-    <p>
-      Los administradores del proyecto FSFE recibirán un correo con su petición
-      y el comentario. Pudiendo aprobar su inclusión en el proyecto.
-      Despues de esto podrá ver «FSF Europe» en «Groups I'm
-      Contributor of» tras su entrada en savannah.
-    </p>
-
-    <h3>Descargando el repositorio por primera vez</h3>
-
-    <p>
-      Primero debe asegurarse de que su archivo ~/.bashrc contiene una línea que
-      diga<br />
-      <code>export CVS_RSH=ssh</code><br />
-      luego cree un directorio para el repositorio y ejecute<br />
-      <code>$ cvs -z3 -d <i>username</i>@cvs.savannah.gnu.org:/web/fsfe co
-        .</code><br />
-      en ese directorio. Entonces se le pedirá su contraseña SSH. Introdúzcala
-      y confirme. Si todo está bien, el sitio web se descargará.
-    </p>
 
     <h2>Trabajando con el repositorio</h2>
 
     <p>
-      Después de descargar el repositorio por primera vez, debe
-      ejecutar<br />
-      <code>$ cvs update -d</code><br />
-      en el directorio fsfe antes de cada vez que trabaje con un archivo.
+      Después de comprobar el repositorio por primera vez, debe ejecutar
+    </p>
+
+    <p class="terminal">$ svn update</p>
+
+    <p>
+      siempre que vaya a trabajar en un archivo específico.
     </p>
     
     <p>
-      Si desea añadir nuevos archivos al repositorio debe ejecutar<br />
-      <code>$ cvs add <i>nombre del archivo</i></code><br />
+      Si quiere añadir nuevos archivos o directorios en el repositorio tendrá que ejecutar
+    </p>
+
+    <p class="terminal">$ svn add <em>filename</em></p>
+
+    <p>
+      Para enviar sus cambios al servidor, no importa que sea un archivo nuevo o una modificación en un archivo existente, ejecute
+    </p>
+
+    <p class="terminal">$ svn commit <em>filename</em></p>
+
+    <p>
+      y su editor por defecto se abrirá para que escriba una descripción de los cambios que haya realizado.
     </p>
 
     <p>
-      Para publicar sus cambios en el servidor, tanto si es un archivo nuevo o
-      una modificación de uno existente, ejecute<br />
-      <code>$ cvs commit <i>nombre de archivo</i></code><br />
-      y un editor se abrirá para permitir introducir una descripción de sus cambios.
+      En subversion, <a
+      href="http://svnbook.red-bean.com/en/1.5/svn.advanced.props.special.keywords.html">la sustitución de palabras clave</a> se debe activar explícitamente para cada archivo. Como usamos algunas palabras clave en los archivos <var>.xml</var> y <var>.xhtml</var> (por ejemplo, la palabra clave <var>$</var><var>Author</var><var>$</var> en el pie de página), puede habilitar la activación automática de palabras clave añadiendo el siguiente fragmento de código en su archivo <var>~/.subversion/config</var>:
+    </p>
+
+    <pre class="file">
+enable-auto-props = yes
+
+[auto-props]
+*.xml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xml;svn:eol-style=native
+*.xhtml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xhtml;svn:eol-style=native
+    </pre>
+
+    <p>
+      Si está acostumbrado a trabajar con CVS, será fácil para usted empezar a trabajar con SVN; como puede haber notado, los comandos básicos son muy similares. Para obtener más información, puede ver un resumen de las diferencias entre CVS y SVN en <a href="http://svnbook.red-bean.com/en/1.5/svn.forcvs.html">Subversion para usuarios de CVS</a> y una referencia rápida que compara los comandos de CVS y SVN en <a
+      href="http://svn.apache.org/repos/asf/subversion/trunk/doc/user/cvs-crossover-guide.html">Guía de cambios de CVS a SVN</a>
     </p>
 
     <p>
-      Puede descargar un detallado manual de CVS en la
-      <a href="http://www.nongnu.org/cvs/">página de CVS</a>.
+      Puede descargar un manual detallado para SVN en la página del <a
+      href="http://svnbook.red-bean.com/">libro de subversion</a> (utilizamos la versión 1.5 del SVN).
+    </p>
+
+
+    <h2>Instrumentos de coordinación</h2>
+
+    <p>
+      El trabajo en las páginas web es coordinada en la <a
+      href="http://mail.fsfeurope.org/mailman/listinfo/web">lista de correo de administradores web</a>.
     </p>
 
     <p>
-      Si desea saber todas las modificaciones que se hacen en los fuentes 
-      fuentes de la página web puede suscribirse a la
-      <a href="http://mail.fsfeurope.org/mailman/listinfo/web-cvs-notify">lista
-      de correo de notificación CVS</a>. Recibirá un correo por cada cambio
-      publicado.
+      La <a href="https://trac.fsfe.org/fsfe-web">instancia trac de fsfe-web</a> proporciona algunas herramientas adicionales para ayudar a la coordinación: un navegador web para el repositorio SVN, un sistema de seguimiento de problemas y una página wiki.
     </p>
+
+    <p>
+      Usted puede encontrar más información sobre el uso de trac en la página wiki <a
+      href="https://trac.fsfe.org/fsfe-web/wiki/TracGuide">TracGuide</a>.
+    </p>
+
+    <p>
+      Si quiere estar al corriente de todas las actualizaciones que se hacen a las fuentes de las páginas web, también puede suscribirse a la <a
+      href="http://mail.fsfeurope.org/mailman/listinfo/web-cvs-notify">lista de correo de notificación de actualizaciones</a> y recibirá un correo electrónico para cada cambio publicado en el árbol de fuentes.
+    </p>
+
 
     <h2>Manejo responsable del acceso de escritura</h2>
 
     <p>
-      Si tiene derechos de escritura a las páginas web, subscríbase a la
-      <a href="http://mail.fsfeurope.org/mailman/listinfo/web">lista de
-        correo de webmasters</a>.
+      Si tiene acceso de escritura a las páginas web, por favor, suscríbase a la <a
+      href="http://mail.fsfeurope.org/mailman/listinfo/web">lista de correo de administradores web</a>.
     </p>
 
     <p>
-      Tenga en cuenta que todos sus cambios serán efectivos y visibles
-      automáticamente, sin ninguna intervención posterior de nadie.
-      En consecuencia, hay algunas cosas que le pedimos hacer siempre
-      que realice cambios o con los nuevos archivos:
+      Por favor, tenga en cuenta que todos los cambios serán efectivos y visibles de forma automática, sin ninguna intervención humana. En consecuencia, hay algunas cosas que pediríamos que haga cada vez que realice cambios o añada nuevos archivos:
     </p>
 
     <ul>
       <li>
         <p>
-          La FSFE mantiene la responsabilidad sobre el contenido de las páginas web.
-          No ejecute modificaciones que cambien el sentido del texto
-          sin la aprobación de un
-          <a href="/about/members.html">miembro del equipo principal de la FSFE</a>.
-          (Esto no es necesario para traducciones de contenido ya existente)
+          La FSFE se hace responsable del contenido de las páginas web. Por favor, no realicen modificaciones que cambien el significado del texto sin la aprobación de un <a href="/about/members.html">miembro del equipo de la FSFE</a>. (Esto no es necesario para la traducción de los contenidos ya existentes.)
         </p>
       </li>
 
       <li>
+
         <p>
-          Si está publicando traducciones, y existe alguna posibilidad de que otros
-          puedan corregirlas, use esta oportunidad. Puede usar la
-          <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">lista de
-          correo de traductores</a> para pedir que revisen su traducción. Si está traduciendo
-          archivos o corrigiéndolos, le animamos a corregirlos ortográficamente
-          usando herramientas automáticas como GNU aspell, ispell o su
-          corrector ortográfico favorito. Por ejemplo, para usar
-          <a href="http://aspell.net/">GNU aspell</a> en un sistema Debian GNU/Linux,
-          simplemente instale los paquetes <code>aspell</code> y
-          <code>aspell-XX</code> (donde «XX» es el código de su idioma), y ejecute la
-          orden
-          <pre>aspell -H -d language -c file.xhtml</pre>
-          (donde «language» es el nombre del diccionario de su idioma;
-          la opción <code>-d</code> puede omitirse si su UNIX local es el mismo
-          del idioma del diccionario).
+          Si envía traducciones y hay alguna posibilidad de que otros necesiten corregirlas, aproveche esa oportunidad. Usted puede utilizar la <a
+          href="http://mail.fsfeurope.org/mailman/listinfo/translators">lista de correo de traductores</a> para solicitar una revisión. Si usted está traduciendo archivos o corrigiéndolos, le animamos a que realice una corrección ortográfica automática utilizando algunas herramientas, tales como GNU aspell, ispell o su corrector ortográfico favorito. Por ejemplo, para utilizar <a
+          href="http://aspell.net/">GNU aspell</a> en un sistema Debian GNU/Linux, sólo tiene que instalar los paquetes <em>aspell</em> y <em>aspell-<strong>XX</strong></em> (donde "XX" es el código del idioma). A continuación, ejecute el comando
         </p>
+
+        <p class="terminal">
+          
+          aspell -H -d <em>language</em> -c file.xhtml
+        
+        </p>
+
+        <p>
+          donde "languaje" es el nombre del diccionario de la lengua. La opción <var>-d</var> puede omitirse si la configuración regional de UNIX es la misma que el idioma del diccionario).
+        </p>
+
       </li>
 
       <li>
+
         <p>
-          Asegúrese de que todos los archivos sean realmente XML. Hay un script de nombre
-          <code>tools/validate.pl</code> que ayuda a encontrar errores en el
-          <span style="font-style:italic;">markup</span>. Los XML incorrectos rompen el 
-          proceso automático de construcción de las páginas
-          web y bloquean las actualizaciones completas del sitio web de la FSFE. Si sospecha
-          que el proceso de construcción esta roto, puede ver el registro de la última
-          ejecución de construcción <a href="http://status.fsfeurope.org/web/">aquí</a>.
+          Asegúrese de que todos los archivos XML son correctos. De forma predeterminada, el servidor SVN comprobará la sintaxis XML de archivos con extensiones .xml y .xhtml, y evitará la actualización si encuentra errores. Para evitar esto, usted puede comprobar sus archivos antes de enviarlos, de alguna de las siguientes maneras.
+        </p>
+        <p>
+          Hay una secuencia de comandos llamada <var>/trunk/tools/validate.pl</var> que ayuda a encontrar errores en el marcado. Los XML incorrectos rompen el proceso de generación automática de las páginas web y las actualizaciones de bloques para todo el sitio web de la FSFE. Si usted sospecha que el proceso de generación pudo romperse, puede <a
+          href="http://status.fsfe.org/">ver el registro de la última ejecución de la generación</a> en nuestras <a href="http://status.fsfe.org/">páginas de estado</a>.
         </p>
 
         <p>
-          El script <code>validate.pl</code> requiere el módulo Perl
-          <code>XML::LibXML</code>; si no está instalado en su
-          sistema, puede validar arachivos usando su validador XML
-          favorito. Por ejemplo puede usar la utilidad de línea línea de órdenes
-          <code>xmllint</code> del
-          <a href="http://xmlsoft.org/">proyecto libxml2</a> (si está usando
-          la distribución Debian GNU/Linux, instale el paquete
-          <code>libxml2-utils</code>); ejecute la orden
-          <pre>xmllint --noout file.xhtml</pre>
-          y observe los posibles mensajes de error.
+          La secuencia de comandos <var>validate.pl</var> requiere el módulo Perl <em>XML::LibXML</em>. Si este no está instalado en su sistema, puede validar archivos usando su validador XML favorito. Por ejemplo, puede usar la utilidad de línea de comandos <em>xmllint</em> del proyecto <a
+          href="http://xmlsoft.org/"><em>libxml2</em></a>.
         </p>
+       
+        <p>
+          Si está utilizando la distribución Debian GNU/Linux, instale el paquete <em>libxml2-utils</em> y ejecute el comando
+        </p>
+
+        <p class="terminal">xmllint --noout <em>file</em>.xhtml</p>
+
+        <p>
+          donde <em>file</em> especifica el archivo que desea comprobar, y vea los posibles mensajes de error. Si no existen errores no aparecerán mensajes.
+        </p>
+
       </li>
-
+      
       <li>
+
         <p>
-          Asegúrese de que la codificación del archivo es consistente con el contenido
-          del atributo «encoding» declarado en la primera línea de cada archivo. Por
-          ejemplo, si si archivo está codificado como «iso-8859-1» (también conocido como
-          codificación «latin-1»), la primera línea debe poner
-          <pre>&lt;?xml version="1.0" encoding="iso-8859-1" ?&gt;</pre>
-          Otra codificación válida es la unicode, o codificación «UTF-8». Si quiere
-          cambiar la codificación del archivo, puede usar la utilidad estándar
-          <code>iconv</code>, como en el siguiente ejemplo (que convierte
-          un archivo de «latin1» a codificación «utf-8»):
-          <pre>iconv -f LATIN1 -t UTF8 inputfile &gt; outputfile</pre>
+          Asegúrese de que la codificación del archivo coincide con el contenido del atributo "encoding" declarado en la primera línea del archivo. Por ejemplo, si el archivo está codificado como "iso-8859-1" (también conocido como codificación "latin-1"), la primera línea del archivo debe decir
         </p>
+
+        <p class="file">&lt;?xml version="1.0" encoding="iso-8859-1" ?&gt;</p>
+
+        <p>
+          Otra codificación válida es la unicode, o codificación "UTF-8". Si desea cambiar la codificación de un archivo, puede utilizar la utilidad estándar <em>iconv</em>, como en el siguiente ejemplo (que convierte un archivo de la codificación "latin1" a la "utf-8"):
+        </p>
+
+        <p class="terminal">iconv -f LATIN1 -t UTF8 <em>inputfile</em> &gt; <em>outputfile</em></p>
+
       </li>
     </ul>
 
     <p>
-      Coordine con otras personas que también tienen acceso de escritura al CVS
-      para estar seguro de que sus traducciones y correcciones entregadas por la gente
-      sin acceso de escritura se publican correctamente después de que hayan sido corregidas.
-      Desde luego, compruebe estos archivos antes de ejecutarlos como si comprobara sus
-      propios archivos.
+      Por favor coordínese con otras personas que también tienen acceso de escritura al SVN para asegurarse de que las traducciones y correcciones aportadas por personas que no tienen acceso de escritura se actualizan correctamente después de que hayan sido corregidas. Por supuesto, por favor, compruebe estos archivos antes de actualizarlos, como si estuviese comprobando sus propios archivos.
     </p>
+
 
     <h2>Más información</h2>
 
     <p>
-      Teniendo en cuenta que la página web de la FSFE tiene un ámbito europeo y global
-      y elecciones de usuario de nivel local que suplementan la información
-      para un país específico, la disposición tiene un cierta complejidad que se oculta
-      totalmente para el usuario de la página.
+      Teniendo en cuenta que las páginas web de la FSFE se estructuran en niveles europeos/mundiales y otros niveles locales, elegidos por los usuarios, que los complementan al suministrar información específica de cada país, el diseño tiene una cierta complejidad que se oculta por completo a los usuarios del sitio.
     </p>
 
     <p>
-      Salvo que solamente desee traducir páginas, vea abajo, asegúrese de mirar
-      <a href="Webpage-Structure.txt" target="_blank">la referencia 
-        estructural</a>.
+      También puede ver el archivo de documentación <a href="http://www.texinfo.org"
+      target="_blank">Texinfo</a> <em><a href="/README.texi"
+      target="_blank">Webmastering FSF Europe</a></em> de <a
+      href="mailto:oberg@fsfeurope.org">Jonas Öberg</a>, quien implementó el sistema de construcción de la página. Por favor, léalo para saber más sobre cómo funcionan las páginas web.
     </p>
 
-    <p>
-      También hay un archivo de documentación
-      <a href="http://www.texinfo.org" target="_blank">Texinfo</a>
-      «<a href="/README.texi" target="_blank">Webmastering FSF Europe</a>» de
-      <a href="mailto:oberg@fsfeurope.org">Jonas Öberg</a>, que implementa
-      el sistema de construcción de la página. Léalo para conocer más
-      acerca del trabajo con páginas web.
-    </p>
   </body>
 
   <timestamp>$Date$ $Author$</timestamp>
-  <translator>Francisco Molinero</translator>
-</html>
-<!--
+  <translator>pcgaldo y Francisco Molinero</translator>
+</html><!--
 Local Variables: ***
 mode: xml ***
 End: ***
 -->
+

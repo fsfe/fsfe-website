@@ -59,6 +59,37 @@
       <xsl:apply-templates select="@*|node()"/>
     </xsl:copy>
   </xsl:template>
+  
+  <!-- Modify H1 -->
+  <xsl:template match="h1">
+    <xsl:copy>
+      <xsl:apply-templates select="node()"/>
+    </xsl:copy>
+    
+    <!-- Apply article rules -->
+    <xsl:if test = "string(/buildinfo/document/head/meta[@name='author-name']/@content)">
+      <xsl:element name="div">
+      <xsl:attribute name="id">article-metadata</xsl:attribute>
+      <xsl:element name="p">
+	<span class="label"><xsl:apply-templates select="/buildinfo/textset/text[@id='author']/node()" />: </span>
+	<xsl:choose>
+	  <xsl:when test="/buildinfo/document/head/meta[@name='author-link']">
+	    <xsl:variable name="author-link" select="/buildinfo/document/head/meta[@name='author-link']/@content" />
+	    <a href='{$author-link}'>
+	    <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name']/@content" /> </a> 
+	  </xsl:when>
+	  <xsl:otherwise>
+	    <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name']/@content" /> 
+	  </xsl:otherwise>
+	</xsl:choose>
+	  <span class="label"> <xsl:apply-templates select="/buildinfo/textset/text[@id='published']/node()" />: </span><xsl:value-of select="/buildinfo/document/head/meta[@name='publication-date']/@content" />
+	</xsl:element>
+      </xsl:element>
+    </xsl:if>
+    <!-- End Apply article rules -->
+	     
+  </xsl:template>
+  <!-- End modifications to H1 -->  
 
   <!-- HTML body -->
   <xsl:template match="body">

@@ -1190,16 +1190,23 @@ ul.overview {
 
 /* Article pages */
 
-#article-author, #article-author a {
-  color:#202D79;
+#article-metadata {
+  margin:0.5em 0 1.5em;
 }
 
-#article-author a {
-  margin:0.5em 0;
-  text-decoration:underline;
+#article-metadata p {
+  margin:0;
 }
 
-#article-date {
-  margin:0.5em 0;
-  color:#202D79;
+#article-metadata a {
+  color:#323232;
+}
+
+#article-metadata span.label {
+  color: #202D79;
+  padding-left:1em;
+}
+
+#article-metadata span.label:first-child {
+  padding-left:0;
 }

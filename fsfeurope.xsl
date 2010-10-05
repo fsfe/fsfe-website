@@ -75,7 +75,7 @@
 	<xsl:choose>
 	  <xsl:when test="/buildinfo/document/head/meta[@name='author-link']">
 	    <xsl:variable name="author-link" select="/buildinfo/document/head/meta[@name='author-link']/@content" />
-	    <a href='{$author-link}'>
+	    <a rel='author' href='{$author-link}'>
 	    <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name']/@content" /> </a> 
 	  </xsl:when>
 	  <xsl:otherwise>

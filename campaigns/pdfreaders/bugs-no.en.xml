@@ -175,6 +175,24 @@
      group=""
      comment=""
      />
+<bug institution-name="Skatteetaten (Skattedirektoratet)"
+     institution-address="Postboks 9200 Grønland, 0134 Oslo"
+     institution-url="http://www.skatteetaten.no/no/Bibliotek/Tabeller-og-satser/2010/Trekktabeller-for-2010-som-pdf/"
+     opened="2010-10-06"
+     closed=""
+     name="Paul Boddie"
+     group=""
+     comment="This is just one example, since everywhere a PDF is offered there's a link to download Acrobat Reader."
+     />
 
+<bug institution-name="Universitetet i Oslo"
+     institution-address="Boks 1072 Blindern, 0316 Oslo"
+     institution-url="http://www.uio.no/tjenester/it/web/apne-dokformater/pdf/#toc9"
+     opened="2010-10-06"
+     closed=""
+     name="Paul Boddie"
+     group=""
+     comment="Although this page is perhaps aimed at university users, it's striking that the page is about open formats and yet they deem it necessary only to advertise Acrobat Reader as a reader. (And yes, since I use the only supported flavour of GNU/Linux at UiO, I know it wouldn't hurt to mention the programs that are actually installed on such platforms and to mention alternatives for other platforms.)"
+     />
   </buglist>
 </set>

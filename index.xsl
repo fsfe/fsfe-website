@@ -151,7 +151,7 @@
 
         <div class="box">
           <div id="events" class="section blue-3">
-            <h3><a href="/events/events.html"><xsl:value-of select="/html/text[@id='events']"/></a></h3>
+            <h2><a href="/events/events.html"><xsl:value-of select="/html/text[@id='events']"/></a></h2>
             
             <xsl:for-each select="/html/set/event
               [translate (@end, '-', '') &gt;= translate ($today, '-', '')]">

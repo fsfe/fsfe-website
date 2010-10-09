@@ -55,7 +55,7 @@
     </xsl:variable>
     
     <xsl:variable name="start_month">
-      <xsl:call-template name="dt:get-month">
+      <xsl:call-template name="dt:get-month-name">
         <xsl:with-param name="month" select="substring($start,6,2)" />
       </xsl:call-template>
     </xsl:variable>
@@ -69,7 +69,7 @@
     </xsl:variable>
     
     <xsl:variable name="end_month">
-      <xsl:call-template name="dt:get-month">
+      <xsl:call-template name="dt:get-month-name">
         <xsl:with-param name="month" select="substring($end,6,2)" />
       </xsl:call-template>
     </xsl:variable>

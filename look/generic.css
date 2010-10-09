@@ -532,19 +532,19 @@ ul.subpages li p {
   border-left:none;
 }
 
-#menu ul li.fsfe {
+#menu ul li.fsfe a {
   border-left: 15px solid #4ad2f0;
 }
 
-#menu ul li.planet {
+#menu ul li.planet a {
   border-left: 15px solid #4aa0f0;
 }
 
-#menu ul li.wiki {
+#menu ul li.wiki a {
   border-left: 15px solid #adff54;
 }
 
-#menu ul li.fellowship {
+#menu ul li.fellowship a {
   border-left: 15px solid #639829;
 }
 

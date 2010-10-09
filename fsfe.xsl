@@ -149,6 +149,7 @@
 	      
 		<!-- FSFE portal menu -->
 		<xsl:element name="li">
+		  <xsl:attribute name="class">fsfe</xsl:attribute>
 		  FSFE
 		  <xsl:element name="ul">
 		  
@@ -183,7 +184,14 @@
 		      </xsl:for-each>
 
 		    </xsl:element>
-		  </xsl:element>
+
+		</xsl:element> <!-- /li -->
+		
+		<!-- Fellowship portal menu -->
+		<xsl:element name="li">
+		  <xsl:attribute name="class">fellowship</xsl:attribute>
+		  Fellowship
+		  <xsl:element name="ul">
 		
 		    <xsl:variable name="menu"><xsl:value-of select="@id" /></xsl:variable>
 		      <xsl:for-each select="/buildinfo/menuset/menu[@parent='fellowship']">
@@ -214,11 +222,8 @@
 			
 			</xsl:element> <!-- /li -->
 		      </xsl:for-each>
-	      
-	      
-		  
-		  </xsl:element>
-		</xsl:element>
+		    </xsl:element><!-- end li -->
+		  </xsl:element><!-- end ul -->		  
 	      
 	      </xsl:element><!-- end ul -->
 

@@ -299,6 +299,12 @@
 		<xsl:attribute name="action">http://search.fsfe.org/yacysearch.html</xsl:attribute>
 
 		<xsl:element name="p">
+		
+		  <xsl:element name="select">
+		    <xsl:attribute name="name">lang</xsl:attribute>
+		      <option><xsl:value-of select="/buildinfo/textset/text[@id='language']" /></option>
+		  </xsl:element>
+		
 		  <xsl:element name="input">
 		    <xsl:attribute name="type">text</xsl:attribute>
 		    <xsl:attribute name="name">query</xsl:attribute>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <menuset>
-  <menu id="menu1" />
-  <menu id="menu1/about" priority="0" parent="menu1">/about/about.html</menu>
-  <menu id="menu1/projects" priority="1" parent="menu1">/projects/work.html</menu>
-  <menu id="menu1/help" priority="2" parent="menu1">/contribute/contribute.html</menu>
-  <menu id="menu1/donate" priority="3" parent="menu1">/donate/donate.html</menu>
-  <menu id="menu1/order" priority="4" parent="menu1">/order/order.html</menu>
-  <menu id="menu1/press" priority="5" parent="menu1">/press/press.html</menu>
-  <menu id="menu1/thankgnus" priority="6" parent="menu1">/donate/thankgnus.html</menu>
+  <menu id="fsfe" />
+  <menu id="fsfe/about" priority="0" parent="fsfe">/about/about.html</menu>
+  <menu id="fsfe/projects" priority="1" parent="fsfe">/projects/work.html</menu>
+  <menu id="fsfe/help" priority="2" parent="fsfe">/contribute/contribute.html</menu>
+  <menu id="fsfe/donate" priority="3" parent="fsfe">/donate/donate.html</menu>
+  <menu id="fsfe/order" priority="4" parent="fsfe">/order/order.html</menu>
+  <menu id="fsfe/press" priority="5" parent="fsfe">/press/press.html</menu>
+  <menu id="fsfe/thankgnus" priority="6" parent="fsfe">/donate/thankgnus.html</menu>
 
   <menu id="menu2" />
   <menu id="menu2/fellowship" priority="0" parent="menu2">http://fellowship.fsfe.org/</menu>

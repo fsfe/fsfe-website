@@ -64,8 +64,51 @@ RewriteRule ^en/content/download/17665/125518/file/gnupg-ccid.rules http://wiki.
 RewriteRule ^en/content/download/15872/77909/file/gnupg-ccid http://wiki.fsfe.org/Card_howtos/Card_reader_setup_(udev)?action=AttachFile&do=view&target=gnupg-ccid [redirect=permanent]
 
 # from .symlinks files
-## [old .symlinks line] wipo wiwo
-RewriteRule ^wiwo(.*) /projects/wipo$1 [redirect=permanent]
+## /projects directory
+RewriteRule ^projects/wiwo(.*) /projects/wipo$1 [redirect=permanent]
+
+## /projects/wsis directory
+RewriteRule ^projects/wsis/cs-benchmarks\.(.*) /projects/wsis/cs-benchmarks-03-11-14.$1 [redirect=permanent]
+RewriteRule ^projects/wsis/plenary-statement.html /projects/wsis/ps-20030923.en.html [redirect=permanent]
+RewriteRule ^projects/wsis/FreeSoftware.html /projects/wsis/fs.en.html [redirect=permanent]
+RewriteRule ^projects/wsis/cs-benchmarks.html /projects/wsis/cs-benchmarks-03-11-14.en.html [redirect=permanent]
+RewriteRule ^projects/wsis/event.html /projects/wsis/event-03-12-10.en.html [redirect=permanent]
+
+## /projects/swpat directory
+RewriteRule ^projects/swpat/letter.en.html /projects/swpat/letter-20040510.en.html [redirect=permanent]
+RewriteRule ^projects/swpat/letter.de.html /projects/swpat/letter-20040510.de.html [redirect=permanent]
+RewriteRule ^projects/swpat/letter.html /projects/swpat/letter-20040510.en.html [redirect=permanent]
+RewriteRule ^projects/swpat/appello.html /projects/swpat/letter-20050114-stanca.it.html [redirect=permanent]
+RewriteRule ^projects/swpat/appello-it-mep.pdf /projects/swpat/letter-20050511-it-mep.pdf [redirect=permanent]
+
+## /de/news/2004 directory
+RewriteRule ^de/news/2004/navigator-20040917.de.html /news/2004/navigator-20040917.de.html [redirect=permanent]
+
+## /news directory
+RewriteRule ^news/article2001-10-20-01.de.html /news/2001/article2001-10-20-01.de.html [redirect=permanent]
+RewriteRule ^news/article2001-10-20-01.en.html /news/2001/article2001-10-20-01.en.html [redirect=permanent]
+RewriteRule ^news/article2001-10-20-01.es.html /news/2001/article2001-10-20-01.es.html [redirect=permanent]
+RewriteRule ^news/article2001-10-20-01.fr.html /news/2001/article2001-10-20-01.fr.html [redirect=permanent]
+RewriteRule ^news/article2001-10-20-01.it.html /news/2001/article2001-10-20-01.it.html [redirect=permanent]
+RewriteRule ^news/article2001-10-20-01.pt.html /news/2001/article2001-10-20-01.pt.html [redirect=permanent]
+
+## /news/2009
+RewriteRule ^news/2009/index.html /news/2009/nyr.en.html [redirect=permanent]
+RewriteRule ^news/2009/index.en.html /news/2009/nyr.en.html [redirect=permanent]
+RewriteRule ^news/2009/index.de.html /news/2009/nyr.de.html [redirect=permanent]
+RewriteRule ^news/2009/index.es.html /news/2009/nyr.es.html [redirect=permanent]
+RewriteRule ^news/2009/index.fr.html /news/2009/nyr.fr.html [redirect=permanent]
+RewriteRule ^news/2009/index.it.html /news/2009/nyr.it.html [redirect=permanent]
+RewriteRule ^news/2009/index.pt.html /news/2009/nyr.pt.html [redirect=permanent]
+
+## /news/2009/nyr directory
+RewriteRule ^news/2009/nyr/index.html /news/2009/nyr.en.html [redirect=permanent]
+RewriteRule ^news/2009/nyr/index.en.html /news/2009/nyr.en.html [redirect=permanent]
+RewriteRule ^news/2009/nyr/index.es.html /news/2009/nyr.es.html [redirect=permanent]
+RewriteRule ^news/2009/nyr/index.de.html /news/2009/nyr.de.html [redirect=permanent]
+RewriteRule ^news/2009/nyr/index.fr.html /news/2009/nyr.fr.html [redirect=permanent]
+RewriteRule ^news/2009/nyr/index.it.html /news/2009/nyr.it.html [redirect=permanent]
+RewriteRule ^news/2009/nyr/index.pt.html /news/2009/nyr.pt.html [redirect=permanent]
 
 # Redirects to reduce 404's
 RewriteRule ^en/layout/set/rss/content/view/full/5116 http://blogs.fsfe.org/ciaran/?feed=rss2 [redirect=permanent]

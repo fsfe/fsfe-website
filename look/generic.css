@@ -134,6 +134,11 @@ ol {
 
 
 /* header */
+#header {
+  background:url("/graphics/ribbon.png") no-repeat scroll left bottom transparent;
+  min-height:210px;
+}
+
 #header a {
 	padding: .5em 1em 1em 1em;
 	float: left;

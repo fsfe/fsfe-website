@@ -328,9 +328,11 @@
                     <xsl:value-of select="." disable-output-escaping="yes"/>
                   </xsl:when>
                   <xsl:otherwise>
-                    <xsl:element name="a">
-                      <xsl:attribute name="href"><xsl:value-of select="/buildinfo/@filename"/>.<xsl:value-of select="@id"/>.html</xsl:attribute>
-                      <xsl:value-of select="." disable-output-escaping="yes"/>
+		    <xsl:element name="li">
+		      <xsl:element name="a">
+			<xsl:attribute name="href"><xsl:value-of select="/buildinfo/@filename"/>.<xsl:value-of select="@id"/>.html</xsl:attribute>
+			<xsl:value-of select="." disable-output-escaping="yes"/>
+		      </xsl:element>
                     </xsl:element>
                   </xsl:otherwise>
                 </xsl:choose>

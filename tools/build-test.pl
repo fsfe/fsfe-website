@@ -124,7 +124,7 @@ my $xslt_parser = XML::LibXSLT->new();
 
 # Parse the global stylesheet
 
-my $global_style_doc = $parser->parse_file($opts{i}."/fsfeurope.xsl");
+my $global_style_doc = $parser->parse_file($opts{i}."/fsfe.xsl");
 my $global_stylesheet = $xslt_parser->parse_stylesheet($global_style_doc);
 
 #

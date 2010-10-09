@@ -41,6 +41,8 @@ RewriteRule ^campaigns/vd2010 /campaigns/valentine-2010/ [redirect=permanent]
 RewriteRule ^documents/whyfs(.*) /campaigns/whyfs/whyfs$1 [redirect=permanent]
 RewriteRule ^documents/eur5greve(.*) /about/basics/$1 [redirect=permanent]
 RewriteRule ^documents/20071219-opera-antitrust(.*) /about/basics/$1 [redirect=permanent]
+RewriteRule ^documents/peru.en.txt /projects/un/peru.en.txt [redirect=permanent]
+
 
 # Temporary fix unitl we have a /freesoftware dir for contribute/advocacy/cwfs.en.html
 RewriteRule ^freesoftware/freesoftware(.*) /about/basics/freesoftware$1 [redirect=temp]

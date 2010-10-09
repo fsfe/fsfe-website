@@ -145,68 +145,68 @@
 	    <xsl:element name="div">
 	      <xsl:attribute name="id">menu</xsl:attribute>
 
-          <xsl:for-each select="/buildinfo/menuset/menu[not(@parent)]">
-            <xsl:sort select="@id" />
-            <xsl:variable name="menu"><xsl:value-of select="@id" /></xsl:variable>
-            <xsl:element name="ul">
-              <xsl:for-each select="/buildinfo/menuset/menu[@parent=$menu]">
-                <!--<xsl:sort select="@id"/>-->
-                <xsl:sort select="@priority" />
-                <xsl:variable name="id"><xsl:value-of select="@id" /></xsl:variable>
-                <xsl:element name="li">
-                  <xsl:choose>
-                    <xsl:when test="not(string(.))">
-                      <xsl:value-of select="/buildinfo/textset/text[@id=$id]|
-					              /buildinfo/textsetbackup/text[@id=$id
-					              and not(@id=/buildinfo/textset/text/@id)]"/>
-                    </xsl:when>
-                    <xsl:when test=". = concat(/buildinfo/@filename ,'.html')">
-                      <xsl:value-of select="/buildinfo/textset/text[@id=$id]|
-					              /buildinfo/textsetbackup/text[@id=$id
-					              and not(@id=/buildinfo/textset/text/@id)]"/>
-                    </xsl:when>
-                    <xsl:otherwise>
-                      <xsl:element name="a">
-                        <xsl:attribute name="href"><xsl:value-of select="." /></xsl:attribute>
-                        <xsl:value-of select="/buildinfo/textset/text[@id=$id]|
-					                /buildinfo/textsetbackup/text[@id=$id
-					                and not(@id=/buildinfo/textset/text/@id)]"/>
-                      </xsl:element>
-                    </xsl:otherwise>
-                  </xsl:choose>
-                  <!-- Submenu -->
-                  <xsl:if test="/buildinfo/menuset/menu[@parent=$id]">
-                    <xsl:element name="ul">
-                      <xsl:for-each select="/buildinfo/menuset/menu[@parent=$id]">
-                        <!--<xsl:sort select="@id" />-->
-                        <xsl:sort select="@priority" />
-                        <xsl:variable name="mid"><xsl:value-of select="@id" /></xsl:variable>
-                        <xsl:element name="li">
-                          <xsl:attribute name="class">submenu</xsl:attribute>
-                          <xsl:choose>
-                            <xsl:when test=". = concat(/buildinfo/@filename ,'.html')">
-                              <xsl:value-of select="/buildinfo/textset/text[@id=$mid]|
-						                    /buildinfo/textsetbackup/text[@id=$mid
-						                    and not(@id=/buildinfo/textset/text/@id)]"/>
-                            </xsl:when>
-                            <xsl:otherwise>
-                              <xsl:element name="a">
-                                <xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
-                                <xsl:value-of select="/buildinfo/textset/text[@id=$mid]|
-						                      /buildinfo/textsetbackup/text[@id=$mid
-						                      and not(@id=/buildinfo/textset/text/@id)]"/>
-                              </xsl:element>
-                            </xsl:otherwise>
-                           </xsl:choose>
-                        </xsl:element>
-                      </xsl:for-each>
-                    </xsl:element> <!-- /submenu ul -->
-                  </xsl:if>
-                </xsl:element> <!-- /li -->
-              </xsl:for-each>
-            </xsl:element> <!-- /ul -->
-          </xsl:for-each>
-	</xsl:element><!-- end menu -->
+	      <xsl:for-each select="/buildinfo/menuset/menu[not(@parent)]">
+		<xsl:sort select="@id" />
+		<xsl:variable name="menu"><xsl:value-of select="@id" /></xsl:variable>
+		<xsl:element name="ul">
+		  <xsl:for-each select="/buildinfo/menuset/menu[@parent=$menu]">
+		    <!--<xsl:sort select="@id"/>-->
+		    <xsl:sort select="@priority" />
+		    <xsl:variable name="id"><xsl:value-of select="@id" /></xsl:variable>
+		    <xsl:element name="li">
+		      <xsl:choose>
+			<xsl:when test="not(string(.))">
+			  <xsl:value-of select="/buildinfo/textset/text[@id=$id]|
+							  /buildinfo/textsetbackup/text[@id=$id
+							  and not(@id=/buildinfo/textset/text/@id)]"/>
+			</xsl:when>
+			<xsl:when test=". = concat(/buildinfo/@filename ,'.html')">
+			  <xsl:value-of select="/buildinfo/textset/text[@id=$id]|
+							  /buildinfo/textsetbackup/text[@id=$id
+							  and not(@id=/buildinfo/textset/text/@id)]"/>
+			</xsl:when>
+			<xsl:otherwise>
+			  <xsl:element name="a">
+			    <xsl:attribute name="href"><xsl:value-of select="." /></xsl:attribute>
+			    <xsl:value-of select="/buildinfo/textset/text[@id=$id]|
+							    /buildinfo/textsetbackup/text[@id=$id
+							    and not(@id=/buildinfo/textset/text/@id)]"/>
+			  </xsl:element>
+			</xsl:otherwise>
+		      </xsl:choose>
+		      <!-- Submenu -->
+		      <xsl:if test="/buildinfo/menuset/menu[@parent=$id]">
+			<xsl:element name="ul">
+			  <xsl:for-each select="/buildinfo/menuset/menu[@parent=$id]">
+			    <!--<xsl:sort select="@id" />-->
+			    <xsl:sort select="@priority" />
+			    <xsl:variable name="mid"><xsl:value-of select="@id" /></xsl:variable>
+			    <xsl:element name="li">
+			      <xsl:attribute name="class">submenu</xsl:attribute>
+			      <xsl:choose>
+				<xsl:when test=". = concat(/buildinfo/@filename ,'.html')">
+				  <xsl:value-of select="/buildinfo/textset/text[@id=$mid]|
+									/buildinfo/textsetbackup/text[@id=$mid
+									and not(@id=/buildinfo/textset/text/@id)]"/>
+				</xsl:when>
+				<xsl:otherwise>
+				  <xsl:element name="a">
+				    <xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
+				    <xsl:value-of select="/buildinfo/textset/text[@id=$mid]|
+									  /buildinfo/textsetbackup/text[@id=$mid
+									  and not(@id=/buildinfo/textset/text/@id)]"/>
+				  </xsl:element>
+				</xsl:otherwise>
+			      </xsl:choose>
+			    </xsl:element>
+			  </xsl:for-each>
+			</xsl:element> <!-- /submenu ul -->
+		      </xsl:if>
+		    </xsl:element> <!-- /li -->
+		  </xsl:for-each>
+		</xsl:element> <!-- /ul -->
+	      </xsl:for-each>
+	    </xsl:element><!-- end menu -->
           
           <xsl:element name="div">
             <xsl:attribute name="id">search</xsl:attribute>
@@ -283,7 +283,39 @@
                 </xsl:element>
               </xsl:element>
             </xsl:element>
-          </xsl:element>
+          </xsl:element><!-- End search -->
+
+          <!-- Newsletter form -->
+          <xsl:element name="div">
+            <xsl:attribute name="id">nl-form</xsl:attribute>
+            <xsl:element name="p">
+              
+	      <xsl:element name="h2">
+		<xsl:attribute name="class">n</xsl:attribute>
+		<xsl:value-of select="/buildinfo/textset/text[@id='search']" />
+	      </xsl:element>
+
+	      <xsl:element name="form">
+		<xsl:attribute name="method">get</xsl:attribute>
+		<xsl:attribute name="action">http://search.fsfe.org/yacysearch.html</xsl:attribute>
+
+		<xsl:element name="p">
+		  <xsl:element name="input">
+		    <xsl:attribute name="type">text</xsl:attribute>
+		    <xsl:attribute name="name">query</xsl:attribute>
+		    <xsl:attribute name="placeholder">
+		      <xsl:value-of select="/buildinfo/textset/text[@id='search']" />
+		    </xsl:attribute>
+		  </xsl:element>
+
+		  <xsl:element name="input">
+		    <xsl:attribute name="type">image</xsl:attribute>
+		    <xsl:attribute name="src">/graphics/icons/search-button.png</xsl:attribute>
+		  </xsl:element>
+		</xsl:element>
+	      </xsl:element>
+            </xsl:element>
+          </xsl:element><!-- end Newsletter form -->
 
           <!-- Join the Fellowship -->
           <xsl:element name="div">

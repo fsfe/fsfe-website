@@ -63,8 +63,12 @@ RewriteRule ^freesoftware/freesoftware(.*) /about/basics/freesoftware$1 [redirec
 RewriteRule ^en/content/download/17665/125518/file/gnupg-ccid.rules http://wiki.fsfe.org/Card_howtos/Card_reader_setup_(udev)?action=AttachFile&do=view&target=gnupg-ccid.rules [redirect=permanent]
 RewriteRule ^en/content/download/15872/77909/file/gnupg-ccid http://wiki.fsfe.org/Card_howtos/Card_reader_setup_(udev)?action=AttachFile&do=view&target=gnupg-ccid [redirect=permanent]
 
-# from .symlinks files
+# from .symlinks files (and some of underlying .htaccess files to avoid conflicts)
 ## /projects directory
+RewriteRule ^projects/community(.*) /projects/work$1 [redirect=permanent]
+RewriteRule ^projects/legal(.*) /projects/work$1 [redirect=permanent]
+RewriteRule ^projects/other(.*) /projects/work$1 [redirect=permanent]
+RewriteRule ^projects/technical(.*) /projects/work$1 [redirect=permanent]
 RewriteRule ^projects/wiwo(.*) /projects/wipo$1 [redirect=permanent]
 
 ## /projects/wsis directory
@@ -109,6 +113,16 @@ RewriteRule ^news/2009/nyr/index.de.html /news/2009/nyr.de.html [redirect=perman
 RewriteRule ^news/2009/nyr/index.fr.html /news/2009/nyr.fr.html [redirect=permanent]
 RewriteRule ^news/2009/nyr/index.it.html /news/2009/nyr.it.html [redirect=permanent]
 RewriteRule ^news/2009/nyr/index.pt.html /news/2009/nyr.pt.html [redirect=permanent]
+
+# from underlying .htaccess files to avoid conflicts
+## /projects/ftf directory
+RewriteRule ^projects/ftf/rough-guide-for-users(.*) /projects/ftf/useful-tips-for-users$1 [redirect=permanent]
+RewriteRule ^projects/ftf/rough-guide-for-vendors(.*) /projects/ftf/useful-tips-for-vendors$1 [redirect=permanent]
+RewriteRule ^projects/ftf/contact(.*) /contact/contact$1#ftf [NE,redirect=permanent]
+RewriteRule ^projects/ftf/form(.*) /contact/contact$1#ftf [NE,redirect=permanent]
+
+## /projects/fla directory
+RewriteRule ^projects/fla/(.*) /projects/ftf/$1 [redirect=permanent]
 
 # Redirects to reduce 404's
 RewriteRule ^en/layout/set/rss/content/view/full/5116 http://blogs.fsfe.org/ciaran/?feed=rss2 [redirect=permanent]

@@ -291,8 +291,7 @@
             <xsl:element name="p">
               
 	      <xsl:element name="h2">
-		<xsl:attribute name="class">n</xsl:attribute>
-		<xsl:value-of select="/buildinfo/textset/text[@id='search']" />
+		<xsl:value-of select="/buildinfo/textset/text[@id='receive-newsletter']" />
 	      </xsl:element>
 
 	      <xsl:element name="form">

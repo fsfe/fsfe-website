@@ -10,10 +10,9 @@
   <menu id="fsfe/press" priority="5" parent="fsfe">/press/press.html</menu>
   <menu id="fsfe/thankgnus" priority="6" parent="fsfe">/donate/thankgnus.html</menu>
 
-  <menu id="menu2" />
-  <menu id="menu2/fellowship" priority="0" parent="menu2">http://fellowship.fsfe.org/</menu>
-  <menu id="menu2/fellowship/1-wiki" priority="1" parent="menu2/fellowship">http://wiki.fsfe.org/</menu>
-  <menu id="menu2/fellowship/2-planet" priority="2" parent="menu2/fellowship">http://planet.fsfe.org/</menu>
-  <menu id="menu2/fellowship/3-join" priority="3" parent="menu2/fellowship">http://fellowship.fsfe.org/join</menu>
+  <menu id="fellowship" />
+  <menu id="fellowship/fellowship" priority="0" parent="fellowship">http://fellowship.fsfe.org/</menu>
+  <menu id="fellowship/fellowship/1-wiki" priority="1" parent="fellowship/fellowship">http://wiki.fsfe.org/</menu>
+  <menu id="fellowship/fellowship/2-planet" priority="2" parent="fellowship/fellowship">http://planet.fsfe.org/</menu>
+  <menu id="fellowship/fellowship/3-join" priority="3" parent="fellowship/fellowship">http://fellowship.fsfe.org/join</menu>
 </menuset>
-

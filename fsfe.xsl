@@ -37,10 +37,10 @@
           </xsl:choose>
         </xsl:attribute>
       </xsl:element>
-      <link rel="stylesheet" media="all" href="/style/fsfeurope.css" type="text/css" />
-      <link rel="stylesheet" media="print" href="/style/print.css" type="text/css" />
+      <link rel="stylesheet" media="all" href="/look/generic.css" type="text/css" />
+      <link rel="stylesheet" media="print" href="/look/print.css" type="text/css" />
       <xsl:if test="/buildinfo/@language='ar'">
-        <link rel="stylesheet" media="all" href="/style/rtl.css" type="text/css" />
+        <link rel="stylesheet" media="all" href="/look/rtl.css" type="text/css" />
       </xsl:if>
       <link rel="shortcut icon" href="/graphics/fsfe.ico" type="image/x-icon" />
       <xsl:element name="link">

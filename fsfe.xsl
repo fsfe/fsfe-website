@@ -322,9 +322,9 @@
             </xsl:element>
           </xsl:element><!-- end Newsletter form -->
           
-          <!-- Language links -->
+          <!-- translations -->
 	  <xsl:element name="div">
-          <xsl:attribute name="id">langs</xsl:attribute>
+          <xsl:attribute name="id">translations</xsl:attribute>
           <xsl:element name="ul">
             <xsl:for-each select="/buildinfo/trlist/tr">
               <xsl:sort select="@id"/>
@@ -342,7 +342,7 @@
                   </xsl:otherwise>
                 </xsl:choose>
             </xsl:for-each>
-          </xsl:element><!-- end Language links -->
+          </xsl:element><!-- end translations -->
           
         </xsl:element><!-- End sidebar -->
 

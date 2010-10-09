@@ -138,25 +138,19 @@ ol {
   background:url("/graphics/ribbon.png") no-repeat scroll left bottom transparent;
   min-height:210px;
   margin:0;
-}
-
-#header a {
-	padding: .5em 1em 1em 1em;
-	float: left;
-}
-
-#header h1 img {
-	width: 210px;
+  width:100%
 }
 
 #logo {
-  
+  width:215px;
 }
 
 #statement {
- margin:1em 0 0 4em;
- color:#787878;
- font-size:120%;
+  color:#787878;
+  float:left;
+  font-size:120%;
+  margin:3em 0 0 5em;
+  width:40em;
 }
 
 /* translations */

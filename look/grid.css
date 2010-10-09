@@ -1,7 +1,16 @@
 /*
- * Grid
+
+ * Grids are for splitting up an area in multiple columns.  Using the
+ * CSS class .grid-{\d}-{\d}(-{\d}), where $1 and $2 (and optionally $3)
+ * are percentages (integers specified in this file) you will get a
+ * multi-column setup.
  *
- * Written by Andreas Tolf Tolfsen <ato@fsfe.org>
+ * So .grid-50-50 would give you:
+ *
+ *   *-----*-----*
+ *   |     |     |
+ *   |     |     |
+ *   *-----*-----*
  */
 
 .grid-80-20,

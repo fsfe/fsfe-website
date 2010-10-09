@@ -167,8 +167,14 @@ ol {
   font-size: 90%;
 }*/
 
+#menu h2 {
+  font-size:100%;
+  color: #787878;
+}
+
 #translations {
   padding-left: .5em;
+  clear:both;
 }
 
 #translations h2 {

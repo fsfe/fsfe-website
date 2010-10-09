@@ -150,7 +150,10 @@
 		<!-- FSFE portal menu -->
 		<xsl:element name="li">
 		  <xsl:attribute name="class">fsfe</xsl:attribute>
-		  FSFE
+		  <xsl:element name="a">
+		    <xsl:attribute name="href">/</xsl:attribute>
+		    FSFE
+		  </xsl:element>
 		  <xsl:element name="ul">
 		  
 		    <xsl:variable name="menu"><xsl:value-of select="@id" /></xsl:variable>
@@ -190,7 +193,10 @@
 		<!-- Planet portal menu -->
 		<xsl:element name="li">
 		  <xsl:attribute name="class">planet</xsl:attribute>
-		  Planet
+		  <xsl:element name="a">
+		    <xsl:attribute name="href">http://planet.fsfe.org</xsl:attribute>
+		    Planet
+		  </xsl:element>
 		  <xsl:element name="ul">
 		  
 		  </xsl:element>
@@ -199,7 +205,10 @@
 		<!-- Fellowship portal menu -->
 		<xsl:element name="li">
 		  <xsl:attribute name="class">fellowship</xsl:attribute>
-		  Fellowship
+		  <xsl:element name="a">
+		    <xsl:attribute name="href">http://fellowship.fsfe.org</xsl:attribute>
+		    Fellowship
+		  </xsl:element>
 		  <xsl:element name="ul">
 		
 		    <xsl:variable name="menu"><xsl:value-of select="@id" /></xsl:variable>

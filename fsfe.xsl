@@ -130,7 +130,7 @@
 	    <!-- Statement -->
 	    <xsl:element name="p">
 	      <xsl:attribute name="id">statement</xsl:attribute>
-	      Free Software Foundation Europe is a non-profit organization dedicated
+	      Free Software Foundation Europe is a non-profit organisation dedicated
 	      to the furthering of Free Software and working for freedom in the emerging
 	      digital society. <a href="/about">Learn more</a>
 	    </xsl:element>
@@ -316,57 +316,13 @@
 	      </xsl:element>
             </xsl:element>
           </xsl:element><!-- end Newsletter form -->
-
-          <!-- Join the Fellowship -->
-          <xsl:element name="div">
-            <xsl:attribute name="id">fellowship</xsl:attribute>
-            <xsl:element name="a">
-              <xsl:attribute name="href">http://fellowship.fsfe.org/about</xsl:attribute>
-              <xsl:element name="img">
-                <xsl:attribute name="alt">Join the Fellowship!</xsl:attribute>
-                <xsl:attribute name="src">/graphics/join-fellowship.png</xsl:attribute>
-              </xsl:element>
-            </xsl:element>
-          </xsl:element>
-
-          <!-- PDF Readers Campaign -->
-          <xsl:element name="div">
-            <xsl:attribute name="id">pdfr</xsl:attribute>
-            <xsl:element name="a">
-              <xsl:attribute name="href">http://www.fsfe.org/campaigns/pdfreaders</xsl:attribute>
-              <xsl:element name="img">
-                <xsl:attribute name="alt">PDF Readers Campaign</xsl:attribute>
-                <xsl:attribute name="src">/graphics/pdf-readers-lang-neutral.png</xsl:attribute>
-              </xsl:element>
-            </xsl:element>
-          </xsl:element>
-
-          <!--
-          <div id="newsletter">
-            <p>
-              Subscribe to <a href="/news/">our newsletter</a>!
-            </p>
-
-            <form action="http://mail.fsfeurope.org/mailman/subscribe/press-release" method="post">
-              <p>
-                <input type="text" name="email" placeholder="you@example.com" />
-                <input type="submit" value="Sign up" />
-              </p>
-            </form>
-          </div>
-          -->
-        </xsl:element>
-        <!-- End sidebar -->
-
-        <!-- Language bar -->
-        <xsl:element name="div">
-          <xsl:attribute name="id">language</xsl:attribute>
-
-          <!-- Translation list -->
+          
+          <!-- Language links -->
+	  <xsl:element name="div">
+          <xsl:attribute name="id">langs</xsl:attribute>
           <xsl:element name="ul">
             <xsl:for-each select="/buildinfo/trlist/tr">
               <xsl:sort select="@id"/>
-              <xsl:element name="li">
                 <xsl:choose>
                   <xsl:when test="@id=/buildinfo/@language">
                     <xsl:value-of select="." disable-output-escaping="yes"/>
@@ -378,9 +334,10 @@
                     </xsl:element>
                   </xsl:otherwise>
                 </xsl:choose>
-              </xsl:element>
             </xsl:for-each>
-          </xsl:element>
+          </xsl:element><!-- end Language links -->
+          
+        </xsl:element><!-- End sidebar -->
 
           <!-- Outdated note -->
           <xsl:if test="/buildinfo/@outdated='yes'">

@@ -136,12 +136,13 @@ ol {
 /* header */
 #header {
   background:url("/graphics/ribbon.png") no-repeat scroll left bottom transparent;
-  min-height:210px;
+  min-height:220px;
   margin:0;
   width:100%
 }
 
 #logo {
+  margin:1em 0 0 1em;
   width:215px;
   float:left;
 }
@@ -155,7 +156,7 @@ ol {
 }
 
 #statement a {
-  padding-left:15px;
+  padding-left:1.5em;
 }
 
 /* translations */

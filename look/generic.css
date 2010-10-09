@@ -505,7 +505,6 @@ ul.subpages li p {
 
 #menu ul li a {
   border-left:15px solid #DCDCDC;
-  border-right:1px solid #F0F0F0;
   font-weight:normal;
   padding:0.8em 0 0.8em 1em;
 }
@@ -530,6 +529,10 @@ ul.subpages li p {
 
 #menu ul li.fsfe a {
   border-left: 15px solid #4ad2f0;
+}
+
+#menu ul li.fsfe ul li a {
+  border-left:15px solid #DCDCDC;
 }
 
 #menu ul li.planet a {

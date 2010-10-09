@@ -522,6 +522,13 @@ ul.subpages li p {
   font-weight: bold;
 }
 
+#menu ul li.fsfeul li a,
+#menu ul li.fellowshipul li a,
+#menu ul li.planetul li a,
+#menu ul li.wikiul li a {
+  font-weight: normal;
+}
+
 #menu ul li ul {
   border-left:none;
 }

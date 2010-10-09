@@ -309,7 +309,7 @@
 		    <xsl:attribute name="type">text</xsl:attribute>
 		    <xsl:attribute name="name">query</xsl:attribute>
 		    <xsl:attribute name="placeholder">
-		      <xsl:value-of select="/buildinfo/textset/text[@id='search']" />
+		      <xsl:value-of select="/buildinfo/textset/text[@id='email-address']" />
 		    </xsl:attribute>
 		  </xsl:element>
 

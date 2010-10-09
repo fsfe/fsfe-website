@@ -102,33 +102,49 @@
         <xsl:attribute name="id">wrapper</xsl:attribute>
         <xsl:comment>Unnecessary div, for IE only</xsl:comment>
 
-       <xsl:element name="p">
-          <xsl:attribute name="class">n</xsl:attribute>
-          <xsl:comment>Give non-graphical browsers a way to skip the menu.</xsl:comment>
-          <xsl:element name="a">
-            <!--<xsl:attribute name="id">top</xsl:attribute>-->
-            <xsl:attribute name="href">#content</xsl:attribute>
-            <xsl:text>Skip menu</xsl:text>
-          </xsl:element>
-        </xsl:element>
+	<xsl:element name="p">
+	    <xsl:attribute name="class">n</xsl:attribute>
+	    <xsl:comment>Give non-graphical browsers a way to skip the menu.</xsl:comment>
+	    <xsl:element name="a">
+	      <xsl:attribute name="href">#content</xsl:attribute>
+	      <xsl:text>Skip menu</xsl:text>
+	    </xsl:element>
+	  </xsl:element>
+        
+	  <!-- Page header -->
+	  <xsl:element name="div">
+	    <xsl:attribute name="id">header</xsl:attribute>
 
-        <!-- Menu bar -->
-        <xsl:element name="div">
-          <xsl:attribute name="id">menu</xsl:attribute>
+	    <!-- Logo -->
+	    <xsl:element name="div">
+	      <xsl:attribute name="id">logo</xsl:attribute>
+	      <xsl:element name="a">
+		<xsl:attribute name="href">/</xsl:attribute>
+		<xsl:element name="img">
+		  <xsl:attribute name="alt">FSFE Logo</xsl:attribute>
+		  <xsl:attribute name="src">/graphics/logo.png</xsl:attribute>
+		</xsl:element>
+	      </xsl:element>
+	    </xsl:element>
+	    
+	    <!-- Statement -->
+	    <xsl:element name="p">
+	      <xsl:attribute name="id">statement</xsl:attribute>
+	      Free Software Foundation Europe is a non-profit organization dedicated
+	      to the furthering of Free Software and working for freedom in the emerging
+	      digital society. <a href="/about">Learn more</a>
+	    </xsl:element>
+	    
+	  </xsl:element><!-- end Page header -->
+	  
+	  <!-- Sidebar -->
+	  <xsl:element name="div">
+	    <xsl:attribute name="id">sidebar</xsl:attribute>
+	      
+	    <!-- Menu -->
+	    <xsl:element name="div">
+	      <xsl:attribute name="id">menu</xsl:attribute>
 
-          <!-- Logo -->
-          <xsl:element name="div">
-            <xsl:attribute name="id">logo</xsl:attribute>
-            <xsl:element name="a">
-              <xsl:attribute name="href">/</xsl:attribute>
-              <xsl:element name="img">
-                <xsl:attribute name="alt">FSFE Logo</xsl:attribute>
-                <xsl:attribute name="src">/graphics/logo.png</xsl:attribute>
-              </xsl:element>
-            </xsl:element>
-          </xsl:element>
-
-          <!-- Menu -->
           <xsl:for-each select="/buildinfo/menuset/menu[not(@parent)]">
             <xsl:sort select="@id" />
             <xsl:variable name="menu"><xsl:value-of select="@id" /></xsl:variable>
@@ -613,3 +629,4 @@
   </xsl:template>
 </xsl:stylesheet>
 
+<!--  -->

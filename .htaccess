@@ -63,6 +63,10 @@ RewriteRule ^freesoftware/freesoftware(.*) /about/basics/freesoftware$1 [redirec
 RewriteRule ^en/content/download/17665/125518/file/gnupg-ccid.rules http://wiki.fsfe.org/Card_howtos/Card_reader_setup_(udev)?action=AttachFile&do=view&target=gnupg-ccid.rules [redirect=permanent]
 RewriteRule ^en/content/download/15872/77909/file/gnupg-ccid http://wiki.fsfe.org/Card_howtos/Card_reader_setup_(udev)?action=AttachFile&do=view&target=gnupg-ccid [redirect=permanent]
 
+# from .symlinks files
+## [old .symlinks line] wipo wiwo
+RewriteRule ^wiwo(.*) /projects/wipo$1 [redirect=permanent]
+
 # Redirects to reduce 404's
 RewriteRule ^en/layout/set/rss/content/view/full/5116 http://blogs.fsfe.org/ciaran/?feed=rss2 [redirect=permanent]
 RewriteRule ^en/layout/set/rss/content/view/full/5009 http://blogs.fsfe.org/maffulli/?feed=rss2 [redirect=permanent]

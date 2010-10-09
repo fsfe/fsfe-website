@@ -187,6 +187,15 @@
 
 		</xsl:element> <!-- /li -->
 		
+		<!-- Planet portal menu -->
+		<xsl:element name="li">
+		  <xsl:attribute name="class">planet</xsl:attribute>
+		  Planet
+		  <xsl:element name="ul">
+		  
+		  </xsl:element>
+		</xsl:element>
+		
 		<!-- Fellowship portal menu -->
 		<xsl:element name="li">
 		  <xsl:attribute name="class">fellowship</xsl:attribute>
@@ -396,50 +405,7 @@
           </xsl:if>
         </xsl:element>
         <!-- End info box -->
-        
-
-        <!-- Fundraising box
-        <xsl:if test="/buildinfo/fundraising">
-          <xsl:element name="div">
-            <xsl:attribute name="id">fundraising</xsl:attribute>
-            <xsl:element name="div">
-              <xsl:attribute name="class">box</xsl:attribute>
-              <xsl:if test="/buildinfo/fundraising/call1">
-                <xsl:element name="p">
-                  <xsl:attribute name="class">call1</xsl:attribute>
-                  <xsl:apply-templates select="/buildinfo/fundraising/call1/node()"/>
-                </xsl:element>
-              </xsl:if>
-              <xsl:if test="/buildinfo/fundraising/call2">
-                <xsl:element name="p">
-                  <xsl:attribute name="class">call2</xsl:attribute>
-                  <xsl:apply-templates select="/buildinfo/fundraising/call2/node()"/>
-                </xsl:element>
-              </xsl:if>
-              <xsl:if test="/buildinfo/fundraising/current">
-                <xsl:element name="div">
-                  <xsl:attribute name="class">percentbox</xsl:attribute>
-                  <xsl:element name="div">
-                    <xsl:attribute name="class">percentbar</xsl:attribute>
-                    <xsl:attribute name="style">width: 45.9%</xsl:attribute>
-                  </xsl:element>
-                </xsl:element>
-                <xsl:element name="p">
-                  <xsl:attribute name="class">current</xsl:attribute>
-                  <xsl:apply-templates select="/buildinfo/fundraising/current/node()"/>
-                  <xsl:text>€ 45 860</xsl:text>
-                </xsl:element>
-                <xsl:element name="p">
-                  <xsl:attribute name="class">target</xsl:attribute>
-                  <xsl:text>€ 100 000</xsl:text>
-                </xsl:element>
-              </xsl:if>
-            </xsl:element>
-          </xsl:element>
-        </xsl:if>
-        End Fundraising box -->
-        
-        <!-- Content -->
+	
         <xsl:element name="div">
           <xsl:attribute name="id">content</xsl:attribute>
 
@@ -530,20 +496,7 @@
                 <xsl:value-of select="/buildinfo/textset/text[@id='translator3c']"/>
               </xsl:if>
             </p>
-          </div> <!-- /#notice -->
-
-          <!--
-          <div id="sister_organizations">
-            <h2>Sister organizations</h2>
-
-            <ul>
-              <li><a href="http://fsf.org/">North America</a></li>
-              <li><a href="http://fsf.org.in/">India</a></li>
-              <li><a href="http://fsfla.org/">Latin America</a></li>
-            </ul>
-          </div>
-          -->
-          
+          </div> <!-- /#notice -->          
           
         <!-- FSF* netwok note --> 
         <p id="fsfnetwork">

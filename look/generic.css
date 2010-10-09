@@ -484,48 +484,10 @@ ul.subpages li p {
 
 
 /* menu */
-#menu a {
-	color: rgb(120,120,120);
-	text-decoration: none;
-	display: block;
-	padding: .6em;
-	margin-left: -15px;
-	border-left: 15px solid rgb(220,220,220);
-	border-right: 1px solid rgb(240,240,240);
-	/*border-bottom: 1px solid rgb(240,240,240);*/
-  background-image: url("menu-bg.png");
-  background-repeat: no-repeat;
-  background-position: -44px 100%;
-	padding-left: 1em;
-  line-height: 50%;
-  font-size: 95%;
-	background-color: white;
-}
-
-#menu a:hover {
-	color: rgb(50,50,50);
-}
-
-#menu ul {
-	list-style: none;
-  margin: 0;
-  padding: 0;
-	border-top: 1px solid rgb(240,240,240);
-}
-
-#menu ul + ul {
-  border: 0;
-}
-
-#menu ul li:first-child a {
-  line-height: 100%;
-  font-size: 100%;
-  padding-left: .5em;
-}
-
-#menu ul li a:hover {
-	/*border-left: 15px solid rgb(200,200,200);*/
-	border-left: 15px solid rgb(51,148,206);
+#menu ul li {
+  padding:0em 0.5em 1em 0;
+  border-left:15px solid #DCDCDC;
+  border-right:1px solid #F0F0F0;
 }
 
 #menu ul li.fsfe a,
@@ -535,79 +497,20 @@ ul.subpages li p {
   font-weight: bold;
 }
 
-#menu ul li.fsfe a {
-  background-color: rgb(51,147,206);
-  color: white;
+#menu ul li.fsfe {
+  border-left: 15px solid #4ad2f0;
 }
 
-#menu ul li.fsfe a:hover {
-  border-left: 15px solid rgb(120,210,238);
+#menu ul li.planet {
+  border-left: 15px solid #4aa0f0;
 }
 
-#menu ul li.planet a {
-  background-color: rgb(120,210,238);
-  color: rgb(18,100,151);
+#menu ul li.wiki {
+  border-left: 15px solid #adff54;
 }
 
-#menu ul li.planet a:hover {
-  border-left: 15px solid rgb(214,234,245);
-}
-
-#menu ul li.wiki a {
-  background-color: rgb(189,228,85);
-  color: rgb(55,124,15);
-}
-
-#menu ul li.wiki a:hover {
-  border-left: 15px solid rgb(216,255,158);
-}
-
-#menu ul li.fellowship a {
-  background-color: rgb(99,152,41);
-  color: white;
-}
-
-#menu ul li.fellowship a:hover {
-  border-left: 15px solid rgb(107,179,64);
-}
-
-
-
-#menu ul li.selected a {
-	color: rgb(50,50,50);
-	border-left: 15px solid rgb(51,148,206);
-}
-
-#menu ul li.selected li a {
-	/*border-left: 15px solid rgb(220,220,220);*/
-	/*border-left: 15px solid white;*/
-	padding-left: 2em;
-	border-left: 0;
-}
-
-#menu ul li a:active,
-#menu ul li.selected a:hover {
-	border-left: 15px solid rgb(74,210,240);
-}
-
-#menu ul ul {
-	font-size: 90%;
-	border-top: 0;
-}
-
-#menu ul ul li {
-	border-left: 15px solid rgb(240,240,240);
-}
-
-#menu ul ul li a,
-#menu ul ul li:last-child a {
-	padding: .4em .5em .4em 2em;
-	border-bottom: 1px dashed rgb(240,240,240);
-}
-
-#menu ul ul li a:hover {
-	border-left: 15px solid rgb(74,210,240);
-	padding-left: .6em;
+#menu ul li.fellowship {
+  border-left: 15px solid #639829;
 }
 
 

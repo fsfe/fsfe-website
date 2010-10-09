@@ -484,6 +484,20 @@ ul.subpages li p {
 
 
 /* menu */
+#menu a {
+  color: #808080;
+  text-decoration: none;
+  display: block;
+  /*border-bottom: 1px solid rgb(240,240,240);*/
+  background-image: url("menu-bg.png");
+  background-repeat: no-repeat;
+  background-position: -44px 100%;
+  padding: 0.5em 0.3em 0 1em;
+  line-height: 50%;
+  font-size: 15.5px;
+  background-color: white;
+}
+
 #menu ul li {
   padding:0em 0.5em 1em 0;
   border-left:15px solid #DCDCDC;

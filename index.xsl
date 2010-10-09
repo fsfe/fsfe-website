@@ -125,42 +125,44 @@
   <!-- In /html/body node, append dynamic content -->
   <xsl:template match="/html/body">
     <body>
-      <!--
-      <p id="banner">
-        <a href="http://documentfreedom.org"><img alt="Document Freedom Day" src="http://www.documentfreedom.org/images/2/2c/2010-banner-120x60.png"/></a>
-      </p>
-      -->
-
       <xsl:apply-templates />
       
-      <div id="news">
-        <h2><a href="/news/news.html"><xsl:value-of select="/html/text[@id='news']"/></a></h2>
-        <xsl:for-each select="/html/set/news
-          [translate (@date, '-', '') &lt;= translate ($today, '-', '')]">
-          <xsl:sort select="@date" order="descending" />
-          <xsl:if test="position() &lt; 6">
-            <xsl:call-template name="news" />
-          </xsl:if>
-        </xsl:for-each>
-        <ul class="tools">
-          <li><a class="more_news" href="/news/news.html"><xsl:value-of select="/html/text[@id='morenews']" /></a></li>
-          <li><a class="rss feed" href="/news/news.rss">RSS</a></li>
-        </ul>
-      </div> <!-- /#news -->
-      <div id="events">
-        <h2><a href="/events/events.html"><xsl:value-of select="/html/text[@id='events']"/></a></h2>
-        <xsl:for-each select="/html/set/event
-          [translate (@end, '-', '') &gt;= translate ($today, '-', '')]">
-          <xsl:sort select="@start" />
-          <xsl:if test="position() &lt; 6">
-            <xsl:call-template name="event" />
-          </xsl:if>
-        </xsl:for-each>
-        <ul class="tools">
-          <li><a class="more_events" href="/events/events.html"><xsl:value-of select="/html/text[@id='moreevents']" /></a></li>
-          <li><a class="rss feed" href="/events/events.rss">RSS</a></li>
-        </ul>
-      </div> <!-- /#events -->
+      <div class="grid-50-50">
+        <div class="box first">
+
+          <div id="feed" class="section blue-4">
+            <!--<h2><a href="/news/news.html"><xsl:value-of select="/html/text[@id='news']"/></a></h2>-->
+            
+            <div>
+              <a href="#" class="minibutton mousedown"><span>News</span></a>
+              <a href="#" class="minibutton"><span>Blogs</span></a>
+            </div>
+
+            <div id="all">
+              <xsl:for-each select="/html/set/news[translate (@date, '-', '') &lt;= translate ($today, '-', '')]">
+                <xsl:sort select="@date" order="descending" />
+                <xsl:if test="position() &lt; 6">
+                  <xsl:call-template name="news" />
+                </xsl:if>
+              </xsl:for-each>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div id="events" class="section blue-3">
+            <h3><a href="/events/events.html"><xsl:value-of select="/html/text[@id='events']"/></a></h3>
+            
+            <xsl:for-each select="/html/set/event
+              [translate (@end, '-', '') &gt;= translate ($today, '-', '')]">
+              <xsl:sort select="@start" />
+              <xsl:if test="position() &lt; 6">
+                <xsl:call-template name="event" />
+              </xsl:if>
+            </xsl:for-each>
+          </div>
+        </div>
+      </div>
     </body>
   </xsl:template>
 

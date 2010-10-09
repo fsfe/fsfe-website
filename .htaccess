@@ -16,6 +16,12 @@ RewriteRule ^law(.*) /projects/law$1 [redirect=permanent]
 RewriteRule ^swpat(.*) /projects/swpat$1 [redirect=permanent]
 RewriteRule ^donate.html /donate/donate.en.html [redirect=permanent]
 
+# Documents
+RewriteRule ^documents/whyfs(.*) /campaigns/whyfs/whyfs$1 [redirect=permanent]
+RewriteRule ^documents/eur5greve(.*) /about/basics/$1 [redirect=permanent]
+RewriteRule ^documents/20071219-opera-antitrust(.*) /about/basics/$1 [redirect=permanent]
+RewriteRule ^documents/peru.en.txt /projects/un/peru.en.txt [redirect=permanent]
+
 # New year's resolution in 2009.
 RewriteRule ^2009$ /news/2009/nyr.html [redirect=permanent]
 RewriteRule ^2009/$ /news/2009/nyr.html [redirect=permanent]
@@ -36,13 +42,6 @@ RewriteRule ^campaigns/vd2010/vd2010(.*) /campaigns/valentine-2010/valentine-201
 RewriteRule ^campaigns/valentine-2010/vd2010(.*) /campaigns/valentine-2010/valentine-2010$1 [redirect=permanent]
 RewriteRule ^campaigns/vd2010/(.*) /campaigns/valentine-2010/$1 [redirect=permanent]
 RewriteRule ^campaigns/vd2010 /campaigns/valentine-2010/ [redirect=permanent]
-
-# Documents
-RewriteRule ^documents/whyfs(.*) /campaigns/whyfs/whyfs$1 [redirect=permanent]
-RewriteRule ^documents/eur5greve(.*) /about/basics/$1 [redirect=permanent]
-RewriteRule ^documents/20071219-opera-antitrust(.*) /about/basics/$1 [redirect=permanent]
-RewriteRule ^documents/peru.en.txt /projects/un/peru.en.txt [redirect=permanent]
-
 
 # Temporary fix unitl we have a /freesoftware dir for contribute/advocacy/cwfs.en.html
 RewriteRule ^freesoftware/freesoftware(.*) /about/basics/freesoftware$1 [redirect=temp]

@@ -206,6 +206,7 @@
               </xsl:for-each>
             </xsl:element> <!-- /ul -->
           </xsl:for-each>
+	</xsl:element><!-- end menu -->
           
           <xsl:element name="div">
             <xsl:attribute name="id">search</xsl:attribute>
@@ -323,7 +324,7 @@
           </div>
           -->
         </xsl:element>
-        <!-- End Menu bar -->
+        <!-- End sidebar -->
 
         <!-- Language bar -->
         <xsl:element name="div">

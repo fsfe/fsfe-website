@@ -55,7 +55,7 @@
     </xsl:variable>
     
     <xsl:variable name="start_month">
-      <xsl:call-template name="dt:get-month-abbreviation">
+      <xsl:call-template name="dt:get-month">
         <xsl:with-param name="month" select="substring($start,6,2)" />
       </xsl:call-template>
     </xsl:variable>
@@ -69,7 +69,7 @@
     </xsl:variable>
     
     <xsl:variable name="end_month">
-      <xsl:call-template name="dt:get-month-abbreviation">
+      <xsl:call-template name="dt:get-month">
         <xsl:with-param name="month" select="substring($end,6,2)" />
       </xsl:call-template>
     </xsl:variable>
@@ -102,17 +102,12 @@
         </xsl:when>
         <xsl:otherwise>
           <p>
-            <span class="day"><xsl:value-of select="$start_day" /></span>
+            <xsl:value-of select="$start_day" />
             <xsl:text> </xsl:text>
-            <span class="month"><xsl:value-of select="$start_month" /></span>
-            <span class="n">)</span>
+            <xsl:value-of select="$start_month" />
           </p>
         </xsl:otherwise>
       </xsl:choose>
-
-      <div class="details">
-        <xsl:apply-templates select="body/node()" /> 
-      </div>  
     </div>
   </xsl:template>
 

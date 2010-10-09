@@ -287,7 +287,7 @@
 
           <!-- Newsletter form -->
           <xsl:element name="div">
-            <xsl:attribute name="id">nl-form</xsl:attribute>
+            <xsl:attribute name="id">newsletter</xsl:attribute>
             <xsl:element name="p">
               
 	      <xsl:element name="h2">

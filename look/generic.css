@@ -502,14 +502,13 @@ ul.subpages li p {
   list-style: none;
   margin: 0;
   padding: 0;
-  border-top: 1px solid rgb(240,240,240);
 }
 
 #menu ul + ul {
   border: 0;
 }
 
-#menu ul li {
+#menu ul li a {
   padding:0em 0.5em 1em 0;
   border-left:15px solid #DCDCDC;
   border-right:1px solid #F0F0F0;

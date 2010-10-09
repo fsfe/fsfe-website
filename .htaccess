@@ -38,7 +38,7 @@ RewriteRule ^campaigns/vd2010/(.*) /campaigns/valentine-2010/$1 [redirect=perman
 RewriteRule ^campaigns/vd2010 /campaigns/valentine-2010/ [redirect=permanent]
 
 # Documents
-RewriteRule ^documents/whyfs(.*) /campaigns/whyfs/$1 [redirect=permanent]
+RewriteRule ^documents/whyfs(.*) /campaigns/whyfs/whyfs$1 [redirect=permanent]
 RewriteRule ^documents/eur5greve(.*) /about/basics/$1 [redirect=permanent]
 RewriteRule ^documents/20071219-opera-antitrust(.*) /about/basics/$1 [redirect=permanent]
 

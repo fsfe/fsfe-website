@@ -31,9 +31,14 @@
           <h3><xsl:value-of select="title" /></h3>
         </xsl:otherwise>
       </xsl:choose>
+
+      <p><xsl:value-of "html/@newsdate" /></p>
+
+      <!--
       <div class="text">
         <xsl:apply-templates select="body/node()" />
       </div>
+      -->
     </div>
   </xsl:template>
 

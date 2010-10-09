@@ -488,7 +488,7 @@ ul.subpages li p {
   color: #808080;
   text-decoration: none;
   display: block;
-  padding: 0.5em 0.3em 0 1em;
+  padding: 0.8em 0 0.8em 0.5em;
   line-height: 50%;
   font-size: 15.5px;
 }
@@ -537,6 +537,14 @@ ul.subpages li p {
 
 #menu ul li.planet a {
   border-left: 15px solid #4aa0f0;
+}
+
+#menu ul li.planet ul li a {
+  border-left:15px solid #DCDCDC;
+}
+
+#menu ul li.planet ul li a:hover {
+  border-left:15px solid #4aa0f0;
 }
 
 #menu ul li.wiki a {

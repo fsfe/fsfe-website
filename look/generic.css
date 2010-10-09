@@ -504,17 +504,13 @@ ul.subpages li p {
 }
 
 #menu ul li a {
+  font-weight: bold;
+}
+
+#menu ul li ul li a {
   border-left:15px solid #DCDCDC;
   font-weight:normal;
-  padding:0.8em 0 0.8em 0.5em;
-}
-
-#menu ul li u li a {
   padding-left:1em;
-}
-
-#menu ul li a {
-  font-weight: bold;
 }
 
 #menu ul li.fsfeul li a,

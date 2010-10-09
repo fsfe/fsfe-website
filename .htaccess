@@ -37,6 +37,9 @@ RewriteRule ^campaigns/valentine-2010/vd2010(.*) /campaigns/valentine-2010/valen
 RewriteRule ^campaigns/vd2010/(.*) /campaigns/valentine-2010/$1 [redirect=permanent]
 RewriteRule ^campaigns/vd2010 /campaigns/valentine-2010/ [redirect=permanent]
 
+# Documents
+RewriteRule ^documents/whyfs(.*) /campaigns/whyfs/$1 [redirect=permanent]
+
 # Temporary fix unitl we have a /freesoftware dir for contribute/advocacy/cwfs.en.html
 RewriteRule ^freesoftware/freesoftware(.*) /about/basics/freesoftware$1 [redirect=temp]
 

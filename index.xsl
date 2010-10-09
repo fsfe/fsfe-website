@@ -31,9 +31,9 @@
           <h3><xsl:value-of select="title" /></h3>
         </xsl:otherwise>
       </xsl:choose>
-
+      <!--
       <p><xsl:value-of "html/@newsdate" /></p>
-
+      -->
       <!--
       <div class="text">
         <xsl:apply-templates select="body/node()" />
@@ -90,29 +90,18 @@
 
       <xsl:choose>
         <xsl:when test="$start != $end">
-          <p class="date multiple">
-            <span class="n">(</span>
-            <span class="from">
-              <span class="day"><xsl:value-of select="$start_day" /></span>
-              <xsl:text> </xsl:text>
-              <span class="month"><xsl:value-of select="$start_month" /></span>
-            </span>
+          <p>
+            <xsl:value-of select="$start_day" />
             <xsl:text> </xsl:text>
-            <span class="conjunction">
-              ↓
-            </span>
+            <xsl:value-of select="$start_month" />
+            <xsl:text> to </xsl:text>
+            <xsl:value-of select="$end_day" />
             <xsl:text> </xsl:text>
-            <span class="to">
-              <span class="day"><xsl:value-of select="$end_day" /></span>
-              <xsl:text> </xsl:text>
-              <span class="month"><xsl:value-of select="$end_month" /></span>
-            </span>
-            <span class="n">)</span>
+            <xsl:value-of select="$end_month" />
           </p>
         </xsl:when>
         <xsl:otherwise>
-          <p class="date">
-            <span class="n">(</span>
+          <p>
             <span class="day"><xsl:value-of select="$start_day" /></span>
             <xsl:text> </xsl:text>
             <span class="month"><xsl:value-of select="$start_month" /></span>

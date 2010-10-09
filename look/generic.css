@@ -522,6 +522,10 @@ ul.subpages li p {
   font-weight: bold;
 }
 
+#menu ul li ul {
+  border-left:none;
+}
+
 #menu ul li.fsfe {
   border-left: 15px solid #4ad2f0;
 }

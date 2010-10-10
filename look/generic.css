@@ -619,10 +619,6 @@ ul.subpages li p {
   background-color:#7fdf55;
 }
 
-#news .title h2 {
- font-size:160%; 
-}
-
 #news.feed {
   padding-right:2%;
 }
@@ -652,6 +648,11 @@ ul.subpages li p {
   width:15px;
   float:left;
   margin:3px;
+}
+
+#news .entry h3 a {
+  font-size:100%;
+  font-weight:normal;
 }
 
 /* footer */

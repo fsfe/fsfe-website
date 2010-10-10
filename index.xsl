@@ -118,21 +118,20 @@
       
       <div id="feeds">
 
-          <div class="feed" id="news">
-          
-	    <div class="title">
+	<div class="feed" id="news">
+	
+	  <div class="title">
 	    <a class="rss-feed" href="feed"></a>
-	    </div>
+	  </div>
 
-	    <xsl:for-each select="/html/set/news[translate (@date, '-', '') &lt;= translate ($today, '-', '')]">
-	      <xsl:sort select="@date" order="descending" />
-	      <xsl:if test="position() &lt; 6">
-		<xsl:call-template name="news" />
-	      </xsl:if>
-	    </xsl:for-each>
-              
-          </div>
-        </div>
+	  <xsl:for-each select="/html/set/news[translate (@date, '-', '') &lt;= translate ($today, '-', '')]">
+	    <xsl:sort select="@date" order="descending" />
+	    <xsl:if test="position() &lt; 6">
+	      <xsl:call-template name="news" />
+	    </xsl:if>
+	  </xsl:for-each>
+	    
+	</div>
 
         <div class="feed" id="events">
         

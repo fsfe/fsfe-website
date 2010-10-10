@@ -475,7 +475,7 @@ ul.subpages li p {
   color: #808080;
   text-decoration: none;
   display: block;
-  padding: 1.1em 0 0.9em 0.8em;
+  padding: 1.1em 0 1.1em 0.8em;
   line-height: 50%;
   font-size: 15.5px;
 }
@@ -816,28 +816,14 @@ ul.subpages li p {
   color: rgb(140,140,140);
 }
 
-/*
- * #footer,
- * #footer a {
- *	color: rgb(120,120,120);
- }
- 
- #footer a {
-   text-decoration: underline;
- }
- 
- #footer a:hover {
-   text-decoration: none;
- }
- */
-
 #footer a {
   color: rgb(100,100,100);
 }
 
 #footer #notice {
-  float: left;
-  width: 60%;
+  float:left;
+  margin-right:10%;
+  width:50%;
 }
 
 #footer #notice > p {

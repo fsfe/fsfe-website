@@ -16,6 +16,10 @@ RewriteRule ^law(.*) /projects/law$1 [redirect=permanent]
 RewriteRule ^swpat(.*) /projects/swpat$1 [redirect=permanent]
 RewriteRule ^donate.html /donate/donate.en.html [redirect=permanent]
 
+# Former speakerlist
+
+RewriteRule ^about/speakerlist(.*) /about/speakerlist$1 [redirect=permanent]
+
 # Documents
 RewriteRule ^documents/fp6(.*) /projects/fp6$1 [redirect=permanent]
 RewriteRule ^documents/whatwedo(.*) /about/basics/whatwedo$1 [redirect=permanent]

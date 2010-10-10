@@ -539,6 +539,10 @@ ul.subpages li p {
   border-left: 15px solid #4aa0f0;
 }
 
+#menu ul li.planet ul {
+  display:none;
+}
+
 #menu ul li.planet ul li a {
   border-left:15px solid #DCDCDC;
 }
@@ -557,6 +561,10 @@ ul.subpages li p {
 
 #menu ul li.fellowship ul li a {
   border-left:15px solid #DCDCDC;
+}
+
+#menu ul li.fellowship ul {
+  display:none;
 }
 
 #menu ul li.fellowship ul li a:hover {

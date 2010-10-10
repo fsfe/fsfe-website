@@ -117,41 +117,56 @@
       <xsl:apply-templates />
       
       <div id="feeds">
+        <div id="news" class="section">
+          <h2><a href="/news/news.html"><xsl:value-of select="/html/text[@id='news']"/></a></h2>
+          <a href="/news.rss"><img src="/graphics/news-rss.png" alt="News RSS" /></a>
 
-	<div class="feed" id="news">
-	
-	  <div class="title">
-	    <a class="rss-feed" href="feed"></a>
-	    <h2><a href="/news/news.html"><xsl:value-of select="/html/text[@id='news']"/></a></h2>
-	  </div>
+          <xsl:for-each select="/html/set/news[translate (@date, '-', '') &lt;= translate ($today, '-', '')]">
+            <xsl:sort select="@date" order="descending" />
+            <xsl:if test="position() &lt; 6">
+              <xsl:call-template name="news" />
+            </xsl:if>
+          </xsl:for-each>
+        </div>
 
-	  <xsl:for-each select="/html/set/news[translate (@date, '-', '') &lt;= translate ($today, '-', '')]">
-	    <xsl:sort select="@date" order="descending" />
-	    <xsl:if test="position() &lt; 6">
-	      <xsl:call-template name="news" />
-	    </xsl:if>
-	  </xsl:for-each>
-	    
-	</div>
+        <div id="newsletter" class="section">
+          <h2><a href="/news/newsletter.html">Newsletter</a></h2>
 
-        <div class="feed" id="events">
+          <p>
+            By subscribing to FSFE's newsletter you can keep updated on
+            the latest news in the Free Software world.
+          </p>
+
+          <form method="get" action="#">
+            <p>
+              <select>
+                <option selected>English</option>
+                <option>Deutsch</option>
+                <option>Italiano</option>
+                <option>Svenska</option>
+              </select>
+            </p>
+
+            <p>
+              <input type="image" src="email-button.png" />
+              <input name="email" type="email"
+                placeholder="email@example.org" />
+            </p>
+          </form>
+        </div>
+
+        <div id="events" class="section">
+          <h2><a href="/events/events.html"><xsl:value-of select="/html/text[@id='events']"/></a></h2>
+          <a href="/events.rss"><img src="/graphics/events-rss.png" alt="Events RSS" /></a>
         
-	  <div class="title">
-	    <a class="rss-feed" href="feed"></a>
-	    <h2><a href="/events/events.html"><xsl:value-of select="/html/text[@id='events']"/></a></h2>
-	  </div>
-        
-	  
-	  
-	  <xsl:for-each select="/html/set/event
-	    [translate (@end, '-', '') &gt;= translate ($today, '-', '')]">
-	    <xsl:sort select="@start" />
-	    <xsl:if test="position() &lt; 6">
-	      <xsl:call-template name="event" />
-	    </xsl:if>
-	  </xsl:for-each>
-	</div>
-          
+          <xsl:for-each select="/html/set/event
+            [translate (@end, '-', '') &gt;= translate ($today, '-', '')]">
+            <xsl:sort select="@start" />
+            <xsl:if test="position() &lt; 6">
+              <xsl:call-template name="event" />
+            </xsl:if>
+          </xsl:for-each>
+        </div>
       </div>
     </body>
   </xsl:template>

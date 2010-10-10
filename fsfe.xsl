@@ -307,6 +307,11 @@
                 <xsl:attribute name="name">nav</xsl:attribute>
                 <xsl:attribute name="value">hosts</xsl:attribute>
               </xsl:element>
+              
+                <xsl:element name="input">
+                  <xsl:attribute name="type">image</xsl:attribute>
+                  <xsl:attribute name="src">/graphics/icons/search-button.png</xsl:attribute>
+                </xsl:element>
 
               <xsl:element name="p">
                 <xsl:element name="input">
@@ -317,10 +322,6 @@
                   </xsl:attribute>
                 </xsl:element>
 
-                <xsl:element name="input">
-                  <xsl:attribute name="type">image</xsl:attribute>
-                  <xsl:attribute name="src">/graphics/icons/search-button.png</xsl:attribute>
-                </xsl:element>
               </xsl:element>
             </xsl:element>
           </xsl:element><!-- End search -->
@@ -344,6 +345,14 @@
 		    <xsl:attribute name="name">lang</xsl:attribute>
 		      <option><xsl:value-of select="/buildinfo/textset/text[@id='language']" /></option>
 		  </xsl:element>
+		  
+		</xsl:element>
+		<xsl:element name="p">
+		  
+		  <xsl:element name="input">
+		    <xsl:attribute name="type">image</xsl:attribute>
+		    <xsl:attribute name="src">/graphics/icons/search-button.png</xsl:attribute>
+		  </xsl:element>
 		
 		  <xsl:element name="input">
 		    <xsl:attribute name="type">text</xsl:attribute>
@@ -352,11 +361,7 @@
 		      email@example.org
 		    </xsl:attribute>
 		  </xsl:element>
-
-		  <xsl:element name="input">
-		    <xsl:attribute name="type">image</xsl:attribute>
-		    <xsl:attribute name="src">/graphics/icons/search-button.png</xsl:attribute>
-		  </xsl:element>
+		  
 		</xsl:element>
 	      </xsl:element>
             </xsl:element>

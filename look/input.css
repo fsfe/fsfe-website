@@ -29,14 +29,17 @@ select,
   */
 }
 
-input[type=url],
-input[type=email],
-input[type=text] {
-  /*
-  box-shadow: inset 0 1px 1px rgb(90,90,90);
-  -moz-box-shadow: inset 0 1px 1px rgb(90,90,90);
-  -webkit-box-shadow: inset 0 1px 1px rgb(90,90,90);
-  */
+#menu input[type=url],
+#menu input[type=email],
+#menu input[type=text], 
+#menu select {
+  width:100%;
+}
+
+#newsletter input[type="image"], 
+#search input[type="image"] {
+  margin:5px 0 0 5px;
+  position:absolute;
 }
 
 select {

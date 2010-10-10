@@ -122,6 +122,7 @@
 	
 	  <div class="title">
 	    <a class="rss-feed" href="feed"></a>
+	    <h2><a href="/news/news.html"><xsl:value-of select="/html/text[@id='news']"/></a></h2>
 	  </div>
 
 	  <xsl:for-each select="/html/set/news[translate (@date, '-', '') &lt;= translate ($today, '-', '')]">
@@ -136,10 +137,11 @@
         <div class="feed" id="events">
         
 	  <div class="title">
-	  <a class="rss-feed" href="feed"></a>
+	    <a class="rss-feed" href="feed"></a>
+	    <h2><a href="/events/events.html"><xsl:value-of select="/html/text[@id='events']"/></a></h2>
 	  </div>
         
-	  <h2><a href="/events/events.html"><xsl:value-of select="/html/text[@id='events']"/></a></h2>
+	  
 	  
 	  <xsl:for-each select="/html/set/event
 	    [translate (@end, '-', '') &gt;= translate ($today, '-', '')]">

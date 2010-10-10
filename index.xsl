@@ -140,7 +140,7 @@
           <form method="get" action="#">
             <p>
               <select>
-                <option selected>English</option>
+                <option selected="selected">English</option>
                 <option>Deutsch</option>
                 <option>Italiano</option>
                 <option>Svenska</option>

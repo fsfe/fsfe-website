@@ -18,7 +18,7 @@ RewriteRule ^donate.html /donate/donate.en.html [redirect=permanent]
 
 # Former speakerlist
 
-RewriteRule ^about/speakerlist(.*) /about/speakerlist$1 [redirect=permanent]
+RewriteRule ^about/speakerlist(.*) /about/team$1 [redirect=permanent]
 
 # Documents
 RewriteRule ^documents/fp6(.*) /projects/fp6$1 [redirect=permanent]

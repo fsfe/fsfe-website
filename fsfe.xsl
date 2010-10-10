@@ -55,7 +55,7 @@
         <xsl:attribute name="href">/events/events.<xsl:value-of select="/buildinfo/@language" />.rss</xsl:attribute>
         <xsl:attribute name="type">application/rss+xml</xsl:attribute>
       </xsl:element>
-      <script src="/scripts/placeholder.js"></script>
+      <script type="text/javascript" src="/scripts/placeholder.js"></script>
       <xsl:apply-templates select="@*|node()"/>
     </xsl:copy>
   </xsl:template>

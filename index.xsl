@@ -129,7 +129,7 @@
           </xsl:for-each>
         </div>
 
-        <div id="newsletter" class="section">
+        <div id="nl" class="section">
           <h2><a href="/news/newsletter.html">Newsletter</a></h2>
 
           <p>
@@ -140,7 +140,7 @@
           <form method="get" action="#">
             <p>
               <select>
-                <option selected="selected">English</option>
+                <option selected>English</option>
                 <option>Deutsch</option>
                 <option>Italiano</option>
                 <option>Svenska</option>

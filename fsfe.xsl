@@ -326,7 +326,7 @@
             </xsl:element>
           </xsl:element><!-- End search -->
 
-          <!-- Newsletter form -->
+          <!-- Newsletter form
           <xsl:element name="div">
             <xsl:attribute name="id">newsletter</xsl:attribute>
               
@@ -362,7 +362,8 @@
 		</xsl:element>
 	      </xsl:element>
             </xsl:element>
-          </xsl:element><!-- end Newsletter form -->
+          </xsl:element>
+          end Newsletter form -->
           
           <!-- translations -->
 	  <xsl:element name="div">

@@ -116,41 +116,41 @@
     <body>
       <xsl:apply-templates />
       
-      <div class="grid-50-50">
-        <div class="box first">
+      <div id="feeds">
 
-          <div id="feed" class="section blue-4">
-            <!--<h2><a href="/news/news.html"><xsl:value-of select="/html/text[@id='news']"/></a></h2>-->
-            
-            <div>
-              <a href="#" class="minibutton mousedown"><span>News</span></a>
-              <a href="#" class="minibutton"><span>Blogs</span></a>
-            </div>
+          <div class="feed" id="news">
+          
+	    <div class="title">
+	    <a class="rss-feed" href="feed"></a>
+	    </div>
 
-            <div id="all">
-              <xsl:for-each select="/html/set/news[translate (@date, '-', '') &lt;= translate ($today, '-', '')]">
-                <xsl:sort select="@date" order="descending" />
-                <xsl:if test="position() &lt; 6">
-                  <xsl:call-template name="news" />
-                </xsl:if>
-              </xsl:for-each>
-            </div>
+	    <xsl:for-each select="/html/set/news[translate (@date, '-', '') &lt;= translate ($today, '-', '')]">
+	      <xsl:sort select="@date" order="descending" />
+	      <xsl:if test="position() &lt; 6">
+		<xsl:call-template name="news" />
+	      </xsl:if>
+	    </xsl:for-each>
+              
           </div>
         </div>
 
-        <div class="box">
-          <div id="events" class="section blue-3">
-            <h2><a href="/events/events.html"><xsl:value-of select="/html/text[@id='events']"/></a></h2>
-            
-            <xsl:for-each select="/html/set/event
-              [translate (@end, '-', '') &gt;= translate ($today, '-', '')]">
-              <xsl:sort select="@start" />
-              <xsl:if test="position() &lt; 6">
-                <xsl:call-template name="event" />
-              </xsl:if>
-            </xsl:for-each>
-          </div>
-        </div>
+        <div class="feed" id="events">
+        
+	  <div class="title">
+	  <a class="rss-feed" href="feed"></a>
+	  </div>
+        
+	  <h2><a href="/events/events.html"><xsl:value-of select="/html/text[@id='events']"/></a></h2>
+	  
+	  <xsl:for-each select="/html/set/event
+	    [translate (@end, '-', '') &gt;= translate ($today, '-', '')]">
+	    <xsl:sort select="@start" />
+	    <xsl:if test="position() &lt; 6">
+	      <xsl:call-template name="event" />
+	    </xsl:if>
+	  </xsl:for-each>
+	</div>
+          
       </div>
     </body>
   </xsl:template>

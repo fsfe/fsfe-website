@@ -583,18 +583,17 @@ ul.subpages li p {
 /* front page feeds */
 
 #feeds {
-  
+  width:100%;
 }
 
-#feeds .feed {
+#feeds .section {
   width:48%;
   float:left;
 }
 
 
-#feeds .feed .section {
+#feeds .section h2 {
   min-height:1.8em;
-  font-size:16px;
   border-bottom:none;
   letter-spacing:normal;
   line-height:normal;
@@ -605,29 +604,6 @@ ul.subpages li p {
   border-radius:5px;
   -webkit-border-radius:5px;
   -moz-border-radius:5px;
-}
-
-#feeds .feed .section a {
-  color:white;
-}
-
-#news .section {
-  background-color:#4ad2f0;
-}  
-
-#events .section {
-  background-color:#7fdf55;
-}
-
-#news.feed {
-  padding-right:2%;
-}
-
-#events.feed {
-  padding-left:2%;
-}
-
-#feeds .feed h2 {
   padding:0 0.7em 0 0;
   margin:0;
   color:black;
@@ -635,6 +611,26 @@ ul.subpages li p {
   font-size:130%;
   float:right;
   border:0;
+}
+
+#feeds .section h2 a {
+  color:white;
+}
+
+#news .section h2 {
+  background-color:#4ad2f0;
+}  
+
+#events .section h2 {
+  background-color:#7fdf55;
+}
+
+#news.section {
+  padding-right:2%;
+}
+
+#events.section {
+  padding-left:2%;
 }
 
 #feeds .feed h2 {

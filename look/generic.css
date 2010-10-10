@@ -242,19 +242,6 @@ ol {
   width: 100%;
 }
 
-#newsletter input[type=email],
-#search input[type=text] {
-  width: 90px;
-  padding-left: 32px;
-  width: 90px;
-}
-
-#newsletter input[type=image],
-#search input[type=image] {
-  margin: 5px 0 0 5px;
-  position: absolute;
-}
-
 #search h1 {
 	display: none;
 }
@@ -818,72 +805,73 @@ ul.subpages li p {
 
 /* footer */
 #footer {
-	font-size: 90%;
-	line-height: 140%;
-	padding: 1em .8em 0 .8em;
+  font-size: 90%;
+  line-height: 140%;
+  padding: 1em 0;
   clear: both;
-	margin: 0 4em 2em 15px;
-	max-width: 980px;
-	min-width: 500px;
-	min-height: 8em;
+  margin: 0 4em 2em 15px;
+  max-width: 980px;
+  min-width: 500px;
+  min-height: 8em;
   color: rgb(140,140,140);
 }
 
 /*
-#footer,
-#footer a {
-	color: rgb(120,120,120);
-}
-
-#footer a {
-	text-decoration: underline;
-}
-
-#footer a:hover {
-	text-decoration: none;
-}
-*/
+ * #footer,
+ * #footer a {
+ *	color: rgb(120,120,120);
+ }
+ 
+ #footer a {
+   text-decoration: underline;
+ }
+ 
+ #footer a:hover {
+   text-decoration: none;
+ }
+ */
 
 #footer a {
   color: rgb(100,100,100);
 }
 
 #footer #notice {
-	float: left;
-	width: 60%;
+  float: left;
+  width: 60%;
 }
 
 #footer #notice > p {
-	margin-top: 0;
+  margin-top: 0;
 }
 
 #footer #notice ul {
-	list-style: none;
+  list-style: none;
   padding: 0;
 }
 
 #footer #notice ul li {
-	display: inline;
-	margin-right: .8em;
+  display: inline;
+  margin-right: .8em;
 }
 
 #footer #sister_organizations {
-	float: right;
-	width: 40%;
+  float: right;
+  width: 40%;
 }
 
 #footer #sister_organizations h2 {
-	font-size: 100%;
-	font-family: "Lucida Grande", "Verdana", "Helvetica", sans-serif;
-	margin-top: 0;
-	color: rgb(120,120,120);
-	border: 0;
-	padding: 0;
+  font-size: 100%;
+  font-family: "Lucida Grande", "Verdana", "Helvetica", sans-serif;
+  margin-top: 0;
+  color: rgb(120,120,120);
+  border: 0;
+  padding: 0;
 }
 
 #footer #sister_organizations ul {
-	list-style: circle;
+  list-style: circle;
 }
+
 
 
 /* news and events */

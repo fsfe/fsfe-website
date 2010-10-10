@@ -329,7 +329,6 @@
           <!-- Newsletter form -->
           <xsl:element name="div">
             <xsl:attribute name="id">newsletter</xsl:attribute>
-            <xsl:element name="p">
               
 	      <xsl:element name="h2">
 		<xsl:value-of select="/buildinfo/textset/text[@id='receive-newsletter']" />
@@ -359,9 +358,7 @@
 		    <xsl:attribute name="name">query</xsl:attribute>
 		    <xsl:attribute name="placeholder">
 		      email@example.org
-		    </xsl:attribute>
-		  </xsl:element>
-		  
+		    </xsl:attribute>		  
 		</xsl:element>
 	      </xsl:element>
             </xsl:element>

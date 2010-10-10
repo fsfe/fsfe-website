@@ -593,7 +593,7 @@ ul.subpages li p {
 
 
 #feeds .feed .title {
-  height:30px;
+  min-height:1.8em;
   font-size:16px;
   border-bottom:none;
   letter-spacing:normal;
@@ -605,6 +605,10 @@ ul.subpages li p {
   border-radius:5px;
   -webkit-border-radius:5px;
   -moz-border-radius:5px;
+}
+
+#feeds .feed .title a {
+  color:white;
 }
 
 #news .title {

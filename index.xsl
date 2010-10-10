@@ -118,8 +118,10 @@
       
       <div id="feeds">
         <div id="news" class="section">
-          <h2><a href="/news/news.html"><xsl:value-of select="/html/text[@id='news']"/></a></h2>
-          <a href="/news.rss"><img src="/graphics/news-rss.png" alt="News RSS" /></a>
+          <h2>
+	    <a class="rss-feed" href="/news.rss"><img src="/graphics/rss.png" alt="News RSS" /></a>
+	    <a href="/news/news.html"><xsl:value-of select="/html/text[@id='events']"/></a>
+	  </h2>
 
           <xsl:for-each select="/html/set/news[translate (@date, '-', '') &lt;= translate ($today, '-', '')]">
             <xsl:sort select="@date" order="descending" />
@@ -156,8 +158,10 @@
         </div>
 
         <div id="events" class="section">
-          <h2><a href="/events/events.html"><xsl:value-of select="/html/text[@id='events']"/></a></h2>
-          <a href="/events.rss"><img src="/graphics/events-rss.png" alt="Events RSS" /></a>
+          <h2>
+	    <a class="rss-feed" href="/events.rss"><img src="/graphics/rss.png" alt="Events RSS" /></a>
+	    <a href="/events/events.html"><xsl:value-of select="/html/text[@id='events']"/></a>
+	  </h2>
         
           <xsl:for-each select="/html/set/event
             [translate (@end, '-', '') &gt;= translate ($today, '-', '')]">

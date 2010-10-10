@@ -582,24 +582,17 @@ ul.subpages li p {
 
 /* front page feeds */
 
-#events h2 a {
-  text-align:right;
-  color:black;
+#feeds {
+  
 }
 
-#feed .title, #events .title {
+#feeds .feed {
+  width:50%;
+}
+
+
+#feeds .feed .title {
   height:30px;
-}
-
-#feed .title {
-  background-color:#4ad2f0;
-}  
-
-#events .title {
-  background-color:#7fdf55;
-}
-
-#feed .title h2, #events .title h2 {
   font-size:16px;
   border-bottom:none;
   letter-spacing:normal;
@@ -609,7 +602,15 @@ ul.subpages li p {
   float:right;
 }
 
-#events .title h2 {
+#news .title {
+  background-color:#4ad2f0;
+}  
+
+#events .title {
+  background-color:#7fdf55;
+}
+
+#feeds .feed .title h2 {
   padding:5px 15px 0 0;  
 }
 

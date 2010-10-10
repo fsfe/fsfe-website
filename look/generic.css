@@ -588,6 +588,7 @@ ul.subpages li p {
 
 #feeds .feed {
   width:50%;
+  clear:both;
 }
 
 
@@ -610,8 +611,12 @@ ul.subpages li p {
   background-color:#7fdf55;
 }
 
-#feeds .feed .title h2 {
-  padding:5px 15px 0 0;  
+#feeds .feed h2 {
+  padding:5px 15px 0 0;
+  margin:0;
+  color:black;
+  text-align:right;
+  font-size:130%;
 }
 
 .rss-feed {

@@ -488,7 +488,7 @@ ul.subpages li p {
   color: #808080;
   text-decoration: none;
   display: block;
-  padding: 0.8em 0 0.8em 0.5em;
+  padding: 0.7em 0 0.7em 0.5em;
   line-height: 50%;
   font-size: 15.5px;
 }
@@ -532,7 +532,7 @@ ul.subpages li p {
 }
 
 #menu ul li.fsfe ul li a:hover {
-  border-left: 15px solid #4ad2f0;
+  border-left: 15px solid #B2F1FF;
 }
 
 #menu ul li.planet a {
@@ -553,6 +553,14 @@ ul.subpages li p {
 
 #menu ul li.fellowship a {
   border-left: 15px solid #639829;
+}
+
+#menu ul li.fellowship ul li a {
+  border-left:15px solid #DCDCDC;
+}
+
+#menu ul li.fellowship ul li a:hover {
+  border-left:15px solid #D5FFA6;
 }
 
 

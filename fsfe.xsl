@@ -512,10 +512,11 @@
             </p>
           </div> <!-- /#notice -->          
           
-        <!-- FSF* netwok note --> 
-        <p id="fsfnetwork">
+        <!-- Sister organisations -->
+	<xsl:element name="div">
+	<xsl:attribute name="id">sister-organisations</xsl:attribute>        
           <xsl:apply-templates select="/buildinfo/textset/text[@id='fsfnetwork']/node()"/>
-        </p>
+        </xsl:element><!-- end sister organisations-->
           
         </div> <!-- /#footer -->
       </xsl:element>

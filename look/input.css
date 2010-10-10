@@ -29,10 +29,10 @@ select,
   */
 }
 
-#menu input[type=url],
-#menu input[type=email],
-#menu input[type=text], 
-#menu select {
+#newsletter input[type=url],
+#newsletter input[type=email],
+#newsletter input[type=text], 
+#newsletter select {
   width:100%;
 }
 

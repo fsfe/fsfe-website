@@ -642,20 +642,13 @@ ul.subpages li p {
 }
 
 .rss-feed {
+  background-image:url("/graphics/rss.png");
   display:block;
   height:20px;
   padding:2px;
   width:15px;
   float:left;
   margin:3px;
-}
-
-#news .rss-feed {
-  background-image:url("/graphics/news-rss.png");
-}
-
-#events .rss-feed {
-  background-image:url("/graphics/events-rss.png");
 }
 
 /* footer */

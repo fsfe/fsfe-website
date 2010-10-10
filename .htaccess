@@ -21,6 +21,9 @@ RewriteRule ^donate.html /donate/donate.en.html [redirect=permanent]
 RewriteRule ^about/speakerlist(.*) /about/team$1 [redirect=permanent]
 
 # Documents
+RewriteRule ^documents/documents(.*) /projects/work$1 [redirect=permanent]
+RewriteRule ^documents/ /projects/work.html [redirect=permanent]
+
 RewriteRule ^documents/fp6(.*) /projects/fp6$1 [redirect=permanent]
 RewriteRule ^documents/whatwedo(.*) /about/basics/whatwedo$1 [redirect=permanent]
 RewriteRule ^documents/gnuproject(.*) /about/basics/gnuproject$1 [redirect=permanent]

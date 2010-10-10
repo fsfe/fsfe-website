@@ -268,7 +268,7 @@ ol {
 
 #content img {
 	float: left;
-	margin: 0 2.5em 2.5em 1em;
+	margin: 0.15em 2.5em 2.5em 0.3em;
 }
 
 #content p#category {
@@ -593,24 +593,19 @@ ul.subpages li p {
 
 
 #feeds .section h2 {
-  min-height:1.8em;
-  border-bottom:none;
+  -moz-border-radius:5px 5px 5px 5px;
+  border:0 none;
+  color:black;
+  float:right;
+  font-size:130%;
+  font-weight:bold;
   letter-spacing:normal;
   line-height:normal;
-  margin:0 0 1.5em;
-  padding:0;
-  float:right;
-  width:100%;
-  border-radius:5px;
-  -webkit-border-radius:5px;
-  -moz-border-radius:5px;
-  padding:0 0.7em 0 0;
   margin:0;
-  color:black;
+  min-height:1.5em;
+  padding:0.2em 0.7em 0 0;
   text-align:right;
-  font-size:130%;
-  float:right;
-  border:0;
+  width:100%;
 }
 
 #feeds .section h2 a {
@@ -648,7 +643,7 @@ ul.subpages li p {
   padding:2px;
   width:15px;
   float:left;
-  margin:3px;
+  margin:0.2em 0 0 0.5em;
 }
 
 #news .entry h3 a {

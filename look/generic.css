@@ -604,7 +604,7 @@ ul.subpages li p {
   font-weight:bold;
   letter-spacing:normal;
   line-height:normal;
-  margin:0;
+  margin:1.5em 0 1em;
   min-height:1.5em;
   padding:0;
   text-align:right;
@@ -637,6 +637,11 @@ ul.subpages li p {
 #nl.section,
 #events.section {
   padding-left:2%;
+}
+
+#nl select,
+#nl input[type=email] {
+  width:49%;
 }
 
 #feeds .section .rss-feed {

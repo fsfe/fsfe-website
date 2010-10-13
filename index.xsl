@@ -150,7 +150,7 @@
             </p>
 
             <p>
-              <input type="image" src="email-button.png" />
+              <input type="image" src="/graphics/email-button.png" />
               <input name="email" type="email" placeholder="email@example.org" />
               <input type="submit" value="Submit" />
             </p>

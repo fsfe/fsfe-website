@@ -104,7 +104,6 @@ ol {
 }
 
 #wrapper {
-	background-color: white;
 	margin: 0 4em 0 1.2em;
 	padding-bottom: 0;
 	max-width: 980px;
@@ -114,6 +113,7 @@ ol {
 
 #wrapper-inner {
   float:left;
+  background-color: white;
   padding-bottom: 3em;
   -moz-border-radius-bottomright: 25px;
   -moz-border-radius-bottomleft: 3px;

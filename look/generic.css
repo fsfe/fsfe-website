@@ -283,24 +283,45 @@ ol {
   line-height: 120%;
 }
 
-#content .introduction {
-	border-bottom: 1px solid rgb(210,210,210);
-	font-size: 130%;
-	padding: 0 15px;
-	line-height: 200%;
-	margin-bottom: 3em;
+#introduction {
+  border-bottom: 1px solid rgb(210,210,210);
+  float: left;
+  font-size: 105%;
+  margin: 0 -.5em 2em -.5em;
+  min-height: 60px;
+  padding: 1em .5em;
+  width: 100%;
 }
 
-#content .introduction + * {
+#introduction p,
+p#introduction {
+  line-height: 190%;
+}
+
+#introduction + * {
   clear: left;
 }
 
-#content .introduction p {
-	padding: 0;
+/*
+ * This expands #introduction until all content has been printed, so it
+ * doesn't flow outside of the element.
+ */
+#introduction p::after {
+  content: "";
+  clear: both;
+  height: 1px;
+  overflow: hidden;
 }
 
-#content .introduction img {
-  float: left;
+#introduction .image {
+  margin: .5em;
+  padding-bottom: 0;
+}
+
+#introduction .read_more {
+  margin: 0 -1em;
+  padding: 0 1em 1em 0;
+  text-align: right;
 }
 
 #content p::after {
@@ -691,7 +712,7 @@ h4#subpages + ul li:nth-child(odd) {
   padding:0;
   width:20px;
   float:left;
-  margin:0.2em 0 0 0.4em;
+  margin:0.3em 0 0 0.4em;
 }
 
 #feeds .section .ical {

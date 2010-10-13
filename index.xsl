@@ -78,7 +78,7 @@
       <xsl:value-of select="link" />
     </xsl:variable>
  
-    <div class="event">
+    <div class="entry">
       <xsl:choose>
         <xsl:when test="$link != ''">
           <h3><a href="{link}"><xsl:value-of select="title" /></a></h3>

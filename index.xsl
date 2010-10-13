@@ -160,6 +160,7 @@
         <div id="events" class="section">
           <h2>
 	    <a class="rss-feed" href="/events.rss"><img src="/graphics/rss.png" alt="Events RSS" /></a>
+	    <a class="ical" href="/events.ical"><img src="/graphics/ical.png" alt="iCal" /></a>
 	    <a href="/events/events.html"><xsl:value-of select="/html/text[@id='events']"/></a>
 	  </h2>
         

@@ -37,8 +37,7 @@ select,
   width:100%;
 }
 
-#newsletter input[type="image"], 
-#search input[type="image"] {
+input[type="image"] {
   margin:5px 0 0 5px;
   position:absolute;
 }

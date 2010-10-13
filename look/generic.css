@@ -258,29 +258,143 @@ ol {
   padding: 0;
 }
 
+/* ------------------------------------------------------------------------- */
+/* Content                                                                   */
+/* ------------------------------------------------------------------------- */
 
-/* content specific */
 #content {
-	margin-left: 160px;
-	padding-left: .5em;
-  padding-right: 3em;
-  padding-left: 2em;
-	min-height: 400px;
-	clear: right;
-  font-size: 112%;
+  margin: 3em 0 0 240px;
+  /*float: right;*/
+  /*margin: 3em 0 0 0;*/
+  min-height: 600px;
+  padding: 0 .5em .5em;
+  /*width: 79%;*/
 }
 
-#content img {
-	float: left;
-	margin: 0.15em 2.5em 2.5em 0.3em;
+#content h1,
+#content h2,
+#content h3 {
+  color: #202D79;
+  line-height: 100%;
+}
+
+#content h1 {
+  border-bottom: 1px solid rgb(210,210,210);
+  font-size: 250%;
+  margin: 0 -.2em;
+  padding: 0 0 .5em .2em;
+}
+
+#content .centre {
+  text-align: center;
+}
+
+#content h1.centre {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+#content h2 {
+  margin-top: 2em;
+}
+
+#content h3 {
+  font-size: 130%;
+  margin-top: 1.5em
 }
 
 #content p#category {
-  font-family: "Nimbus", "Nimbus Sans L", "Helvetica", "Arial", sans-serif;
+  font-size: 140%;
   font-weight: bold;
-  font-size: 170%;
-  margin: 0 0 -.5em 0;
-  line-height: 120%;
+  line-height: 200%;
+  margin: 0;
+}
+
+#content .image {
+  background-color: #FDFDFD;
+  float: left;
+  padding: 0 2em 2em 0;
+}
+
+#content .image.right {
+  float: right;
+  padding: 0 0 2em 2em;
+}
+
+#content .image p {
+  border-bottom: 1px solid rgb(210,210,210);
+  border-left: 1px solid rgb(210,210,210);
+  border-right: 1px solid rgb(210,210,210);
+  font-size: 90%;
+  margin-top: 0;
+  padding: .5em;
+}
+
+#content .image .photographer {
+  font-size: 90%;
+  font-style: italic;
+}
+
+.imgright {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+
+.postit {
+  float: left;
+  margin: 0 1em 1em 0;
+  border: 1px #000 solid;
+  padding: 0.3em;
+  width: 14em;
+  background: #FFECBF;
+  text-align: center;
+}
+
+.fineprint {
+  color: rgb(120,120,120);
+  font-size: 90%;
+  border-top: 1px solid	rgb(220,220,220);
+  padding: 1em .5em;
+  margin: 3em -.5em 1em;
+}
+
+.tagline {
+  color: #202D79;
+  font-size: 150%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.toolbox {
+  background-color: rgb(244,248,250);
+  float: right;
+  font-size: 85%;
+  margin: .5em 0 0 1em;
+  padding: 1em;
+  width: 12em;
+}
+
+p.terminal,
+pre.terminal,
+p.file,
+pre.file {
+  font-family: monospace;
+  padding: .5em 1em;
+}
+
+p.terminal,
+pre.terminal {
+  background-color: rgb(50,50,50);
+  border-left: 10px solid rgb(97,97,97);
+  color: white;
+}
+
+p.file,
+pre.file {
+  background-color: rgb(244,248,250);
+  border-left: 10px solid rgb(141,172,190);
+  color: rgb(50,50,50);
 }
 
 #introduction {

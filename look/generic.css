@@ -662,8 +662,8 @@ ul.subpages li p {
 #feeds .section .rss-feed {
   display:block;
   height:20px;
-  padding:2px;
-  width:15px;
+  padding:0;
+  width:20px;
   float:left;
   margin:0.2em 0 0 0.4em;
 }
@@ -671,8 +671,8 @@ ul.subpages li p {
 #feeds .section .ical {
   display:block;
   height:20px;
-  padding:2px;
-  width:15px;
+  padding:0;
+  width:20px;
   float:left;
   margin:0.08em 0 0 0;
 }

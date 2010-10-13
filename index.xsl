@@ -149,9 +149,7 @@
 		  <option>Italiano</option>
 		  <option>Svenska</option>
 		</select>
-	      </p>
-
-	      <p>
+		
 		<input type="image" src="/graphics/email-button.png" />
 		<input name="email" type="email" placeholder="email@example.org" />
 	      </p>

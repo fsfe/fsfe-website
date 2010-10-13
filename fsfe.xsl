@@ -574,7 +574,7 @@
 		</xsl:element>
 	      </xsl:when>
 	      <xsl:otherwise>
-		<xsl:element name="span">
+		<xsl:attribute name="href">bamboo</xsl:attribute>
 		  <xsl:value-of select="$localmenutext"/>
 		</xsl:element>
 	      </xsl:otherwise>

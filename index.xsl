@@ -34,11 +34,11 @@
       <!--
       <p><xsl:value-of "html/@newsdate" /></p>
       -->
-      <!--
+      
       <div class="text">
         <xsl:apply-templates select="body/node()" />
       </div>
-      -->
+      
     </div>
   </xsl:template>
 

@@ -113,6 +113,7 @@ ol {
 }
 
 #wrapper-inner {
+  float:left;
   padding-bottom: 3em;
   -moz-border-radius-bottomright: 25px;
   -moz-border-radius-bottomleft: 3px;
@@ -609,6 +610,8 @@ ul.subpages li p {
 
 #feeds .section h2 {
   -moz-border-radius:5px 5px 5px 5px;
+  -webkit-border-radius:5px 5px 5px 5px;
+  border-radius:5px 5px 5px 5px;
   border:0 none;
   color:black;
   float:right;

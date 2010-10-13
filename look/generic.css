@@ -58,6 +58,7 @@ h6 {
 h1,
 h2 {
 	font-weight: normal;
+	line-height:normal;
 }
 
 h2 {
@@ -593,6 +594,15 @@ ul.subpages li p {
 
 .section .entry {
   padding:0 0.5em;
+}
+
+.section .entry h3 {
+  margin:1.5em 0 0.2em;
+}
+
+.section .entry p.date {
+  margin:0;
+  padding:0;
 }
 
 #feeds .section h2 {

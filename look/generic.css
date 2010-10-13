@@ -311,28 +311,54 @@ ol {
 }
 
 
-/* subpages */
-ul.subpages {
+/* ------------------------------------------------------------------------- */
+/* Subpages menu                                                             */
+/* ------------------------------------------------------------------------- */
+
+h2#subpages,
+h3#subpages,
+h4#subpages {
+  display: none;
+}
+
+h2#subpages.show-heading,
+h3#subpages.show-heading,
+h4#subpages.show-heading {
+  display: block;
+}
+
+ul#subpages,
+h2#subpages + ul,
+h3#subpages + ul,
+h4#subpages + ul {
+  margin: 2em 0 2em 0;
+  list-style-type: none;
   padding: 0 1em;
 }
 
-ul.subpages li {
-	width: 49%;
-	padding-right: 1%;
-	float: left;
-	margin-bottom: 1em;
-  list-style: none;
+ul#subpages li,
+h2#subpages + ul li,
+h3#subpages + ul li,
+h4#subpages + ul li {
+  float: left;
+  margin-bottom: .1em;
+  min-width: 8em;
+  padding-right: 3%;
+  width: 47%;
 }
 
-ul.subpages li h3 {
-	font-size: 180%;
-	margin-bottom: .2em;
-	margin-top: 0;
-	color: rgb(51,147,206);
+ul#subpages li p,
+h2#subpages + ul li p,
+h3#subpages + ul li p,
+h4#subpages + ul li p {
+  font-size: 90%;
 }
 
-ul.subpages li p {
-  margin-top: 0;
+ul#subpages li:nth-child(odd),
+h2#subpages + ul li:nth-child(odd),
+h3#subpages + ul li:nth-child(odd),
+h4#subpages + ul li:nth-child(odd) {
+  clear: left;
 }
 
 

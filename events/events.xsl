@@ -60,8 +60,8 @@
       <h2><xsl:value-of select="/html/text [@id = $header]" /></h2>
     </xsl:if>
 
-    <!-- Now, the event block -->
-    <div class="event">
+    <!-- Now, the entry block -->
+    <div class="entry">
       <xsl:choose>
         <xsl:when test="$link != ''">
           <h3><a href="{link}"><xsl:value-of select="title" /></a></h3>

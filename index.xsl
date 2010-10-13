@@ -151,8 +151,8 @@
 
             <p>
               <input type="image" src="email-button.png" />
-              <input name="email" type="email"
-                placeholder="email@example.org" />
+              <input name="email" type="email" placeholder="email@example.org" />
+              <input type="submit" value="Submit" />
             </p>
           </form>
         </div>

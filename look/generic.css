@@ -262,13 +262,23 @@ ol {
 /* Content                                                                   */
 /* ------------------------------------------------------------------------- */
 
+/* content specific */
 #content {
-  margin: 3em 0 0 240px;
-  /*float: right;*/
-  /*margin: 3em 0 0 0;*/
-  min-height: 600px;
-  padding: 0 .5em .5em;
-  /*width: 79%;*/
+  margin-left: 160px;
+  padding-left: .5em;
+  padding-right: 3em;
+  padding-left: 2em;
+  min-height: 400px;
+  clear: right;
+  font-size: 112%;
+}
+
+#content p#category {
+  font-family: "Nimbus", "Nimbus Sans L", "Helvetica", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 170%;
+  margin: 0 0 -.5em 0;
+  line-height: 120%;
 }
 
 #content h1,
@@ -302,13 +312,6 @@ ol {
 #content h3 {
   font-size: 130%;
   margin-top: 1.5em
-}
-
-#content p#category {
-  font-size: 140%;
-  font-weight: bold;
-  line-height: 200%;
-  margin: 0;
 }
 
 #content .image {
@@ -345,7 +348,10 @@ ol {
   float: left;
   margin: 0 1em 1em 0;
   border: 1px #000 solid;
-  padding: 0.3em;
+  padding: #content img {
+    float: left;
+    margin: 0.15em 2.5em 2.5em 0.3em;
+  }0.3em;
   width: 14em;
   background: #FFECBF;
   text-align: center;
@@ -437,14 +443,6 @@ p#introduction {
   padding: 0 1em 1em 0;
   text-align: right;
 }
-
-#content p::after {
-  content: "";
-  clear: both;
-  height: 1px;
-  overflow: hidden;
-}
-
 
 /* ------------------------------------------------------------------------- */
 /* Subpages menu                                                             */

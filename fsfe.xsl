@@ -574,7 +574,9 @@
 		</xsl:element>
 	      </xsl:when>
 	      <xsl:otherwise>
-		<xsl:value-of select="$localmenutext"/>
+		<xsl:element name="span">
+		  <xsl:value-of select="$localmenutext"/>
+		</xsl:element>
 	      </xsl:otherwise>
 	    </xsl:choose>
 	  </xsl:element>

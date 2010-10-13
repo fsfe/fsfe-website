@@ -591,6 +591,9 @@ ul.subpages li p {
   float:left;
 }
 
+.section .entry {
+  padding:0 0.5em;
+}
 
 #feeds .section h2 {
   -moz-border-radius:5px 5px 5px 5px;
@@ -723,9 +726,6 @@ ul.subpages li p {
 
 
 /* news and events */
-#events .event {
-  clear: right;
-}
 
 #events .date,
 #events .details {

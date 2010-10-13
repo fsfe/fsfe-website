@@ -120,7 +120,7 @@
         <div id="news" class="section">
           <h2>
 	    <a class="rss-feed" href="/news.rss"><img src="/graphics/rss.png" alt="News RSS" /></a>
-	    <a href="/news/news.html"><xsl:value-of select="/html/text[@id='events']"/></a>
+	    <a href="/news/news.html"><xsl:value-of select="/html/text[@id='news']"/></a>
 	  </h2>
 
           <xsl:for-each select="/html/set/news[translate (@date, '-', '') &lt;= translate ($today, '-', '')]">

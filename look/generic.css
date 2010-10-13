@@ -677,7 +677,8 @@ ul.subpages li p {
   margin:0.08em 0 0 0;
 }
 
-#feeds .section .rss-feed img {
+#feeds .section .rss-feed img,
+#feeds .section .ical img {
   margin:0;
   padding:0;
   border:none;

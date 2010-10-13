@@ -133,28 +133,31 @@
 
         <div id="nl" class="section">
           <h2><a href="/news/newsletter.html">Newsletter</a></h2>
+          
+          <div class="entry">
 
-          <p>
-            By subscribing to FSFE's newsletter you can keep updated on
-            the latest news in the Free Software world.
-          </p>
+	    <p>
+	      By subscribing to FSFE's newsletter you can keep updated on
+	      the latest news in the Free Software world.
+	    </p>
 
-          <form method="get" action="#">
-            <p>
-              <select>
-                <option selected="selected">English</option>
-                <option>Deutsch</option>
-                <option>Italiano</option>
-                <option>Svenska</option>
-              </select>
-            </p>
+	    <form method="get" action="#">
+	      <p>
+		<select>
+		  <option selected="selected">English</option>
+		  <option>Deutsch</option>
+		  <option>Italiano</option>
+		  <option>Svenska</option>
+		</select>
+	      </p>
 
-            <p>
-              <input type="image" src="/graphics/email-button.png" />
-              <input name="email" type="email" placeholder="email@example.org" />
-            </p>
-          </form>
-        </div>
+	      <p>
+		<input type="image" src="/graphics/email-button.png" />
+		<input name="email" type="email" placeholder="email@example.org" />
+	      </p>
+	    </form>
+	  </div><!--end entry-->
+        </div><!--end nl-->
 
         <div id="events" class="section">
           <h2>

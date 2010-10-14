@@ -14,7 +14,6 @@
 }
 
 body {
-/*	font-family: "Lucida Grande", "Verdana", "Helvetica", sans-serif;*/
   font-family: "Arial", sans-serif;
 	font-size: 12px;
 	line-height: 180%;
@@ -801,7 +800,7 @@ h4#subpages + ul li:nth-child(odd) {
   background-color:#4ad2f0;
 }
 
-#nl.section h2 {
+#newsletter.section h2 {
   background-color:#7fdf55;
 }
 
@@ -814,13 +813,13 @@ h4#subpages + ul li:nth-child(odd) {
   padding-right:2%;
 }
 
-#nl.section,
+#newsletter.section,
 #events.section {
-  padding-left:2%;
+  padding-left: 2%;
 }
 
-#nl select,
-#nl input[type=email] {
+#newsletter select,
+#newsletter input[type=email] {
   width:49%;
 }
 
@@ -1147,6 +1146,7 @@ ul.overview {
   padding-bottom: .5em;
 }
 
+
 /* tables */
 table {
   border-collapse: collapse;
@@ -1186,3 +1186,4 @@ table.noborders td,
 table.noborders th {
   border: 0;
 }
+

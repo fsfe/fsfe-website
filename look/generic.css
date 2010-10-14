@@ -1142,3 +1142,42 @@ ul.overview {
   padding-bottom: .5em;
 }
 
+/* tables */
+table {
+  border-collapse: collapse;
+  margin-bottom: 1em;
+}
+
+table th,
+table td {
+  padding: .2em .5em;
+}
+
+table th + th,
+table td + td {
+  border-left: 1px solid #ccc;
+}
+
+table th {
+  border-bottom: 1px solid #202d79;
+  border-top: 1px solid #202d79;
+  color: #202d79;
+  background-color: #f4f8fa;
+}
+
+table td {
+  border-bottom: 1px solid #ccc;
+}
+
+table td.positive {
+  background-color: #d0ffd0;
+}
+
+table td.negative {
+  background-color: #ffd0d0;
+}
+
+table.noborders td,
+table.noborders th {
+  border: 0;
+}

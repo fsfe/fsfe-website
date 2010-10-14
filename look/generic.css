@@ -264,6 +264,7 @@ ol {
 
 /* content specific */
 #content {
+  float:left;
   margin-left: 160px;
   padding-left: .5em;
   padding-right: 3em;
@@ -406,7 +407,7 @@ pre.file {
 #introduction {
   border-bottom: 1px solid rgb(210,210,210);
   float: left;
-  font-size: 105%;
+  font-size: 125%;
   margin: 0 -.5em 2em -.5em;
   min-height: 60px;
   padding: 1em .5em;

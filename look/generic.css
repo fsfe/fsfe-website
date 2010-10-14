@@ -750,7 +750,7 @@ h4#subpages + ul li:nth-child(odd) {
   width:100%;
 }
 
-#feeds .section {
+.section {
   width:48%;
   float:left;
 }
@@ -768,7 +768,7 @@ h4#subpages + ul li:nth-child(odd) {
   padding:0;
 }
 
-#feeds .section h2 {
+.section h2 {
   -moz-border-radius:5px 5px 5px 5px;
   -webkit-border-radius:5px 5px 5px 5px;
   border-radius:5px 5px 5px 5px;
@@ -786,7 +786,7 @@ h4#subpages + ul li:nth-child(odd) {
   width:100%;
 }
 
-#feeds .section h2 a {
+.section h2 a {
   color:white;
   padding:0.1em 0.6em 0 0;
   display:block;
@@ -819,7 +819,7 @@ h4#subpages + ul li:nth-child(odd) {
   width:49%;
 }
 
-#feeds .section .rss-feed {
+.section .rss-feed {
   display:block;
   height:20px;
   padding:0;
@@ -828,7 +828,7 @@ h4#subpages + ul li:nth-child(odd) {
   margin:0.3em 0 0 0.1em;
 }
 
-#feeds .section .ical {
+.section .ical {
   display:block;
   height:20px;
   padding:0;
@@ -837,8 +837,8 @@ h4#subpages + ul li:nth-child(odd) {
   margin:0.3em 0 0 0.4em;
 }
 
-#feeds .section .rss-feed img,
-#feeds .section .ical img {
+.section .rss-feed img,
+.section .ical img {
   margin:0;
   padding:0;
   border:none;

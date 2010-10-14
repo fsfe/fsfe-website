@@ -119,9 +119,9 @@
       <div id="feeds">
         <div id="news" class="section">
           <h2>
-	    <a class="rss-feed" href="/news.rss"><img src="/graphics/rss.png" alt="News RSS" /></a>
-	    <a href="/news/news.html"><xsl:value-of select="/html/text[@id='news']"/></a>
-	  </h2>
+            <a class="rss-feed" href="/news.rss"><img src="/graphics/rss.png" alt="News RSS" /></a>
+            <a href="/news/news.html"><xsl:value-of select="/html/text[@id='news']"/></a>
+          </h2>
 
           <xsl:for-each select="/html/set/news[translate (@date, '-', '') &lt;= translate ($today, '-', '')]">
             <xsl:sort select="@date" order="descending" />
@@ -131,38 +131,37 @@
           </xsl:for-each>
         </div>
 
-        <div id="nl" class="section">
+        <div id="newsletter" class="section">
           <h2><a href="/news/newsletter.html">Newsletter</a></h2>
           
           <div class="entry">
+            <p>
+              By subscribing to FSFE's newsletter you can keep updated on
+              the latest news in the Free Software world.
+            </p>
 
-	    <p>
-	      By subscribing to FSFE's newsletter you can keep updated on
-	      the latest news in the Free Software world.
-	    </p>
-
-	    <form method="get" action="#">
-	      <p>
-		<select>
-		  <option selected="selected">English</option>
-		  <option>Deutsch</option>
-		  <option>Italiano</option>
-		  <option>Svenska</option>
-		</select>
-		
-		<input type="image" src="/graphics/email-button.png" />
-		<input name="email" type="email" placeholder="email@example.org" />
-	      </p>
-	    </form>
-	  </div><!--end entry-->
-        </div><!--end nl-->
+            <form method="post" action="http://mail.fsfeurope.org/mailman/subscribe/press-release">
+              <p>
+                <select>
+                  <option selected="selected">English</option>
+                  <option>Deutsch</option>
+                  <option>Italiano</option>
+                  <option>Svenska</option>
+                </select>
+          
+                <input type="image" src="/graphics/email-button.png" />
+                <input name="email" type="email" placeholder="email@example.org" />
+              </p>
+            </form>
+          </div><!-- /.entry -->
+        </div> <!-- /#newsletter -->
 
         <div id="events" class="section">
           <h2>
-	    <a class="rss-feed" href="/events.rss"><img src="/graphics/rss.png" alt="Events RSS" /></a>
-	    <a class="ical" href="/events.ical"><img src="/graphics/ical.png" alt="iCal" /></a>
-	    <a href="/events/events.html"><xsl:value-of select="/html/text[@id='events']"/></a>
-	  </h2>
+            <a class="rss-feed" href="/events.rss"><img src="/graphics/rss.png" alt="Events RSS" /></a>
+            <a class="ical" href="/events.ical"><img src="/graphics/ical.png" alt="iCal" /></a>
+            <a href="/events/events.html"><xsl:value-of select="/html/text[@id='events']"/></a>
+          </h2>
         
           <xsl:for-each select="/html/set/event
             [translate (@end, '-', '') &gt;= translate ($today, '-', '')]">
@@ -186,6 +185,5 @@
       <xsl:apply-templates select="@*|node()"/>
     </xsl:copy>
   </xsl:template>
-
 </xsl:stylesheet>
 

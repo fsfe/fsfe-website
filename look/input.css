@@ -29,10 +29,10 @@ select,
   */
 }
 
-#newsletter input[type=url],
-#newsletter input[type=email],
-#newsletter input[type=text], 
-#newsletter select {
+input[type=url],
+input[type=email],
+input[type=text], 
+select {
   padding: 5px 8px 5px 30px;
 }
 

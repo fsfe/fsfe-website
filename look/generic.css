@@ -824,7 +824,7 @@ h4#subpages + ul li:nth-child(odd) {
   padding:0;
   width:20px;
   float:left;
-  margin:0.3em 0 0 0.4em;
+  margin:0.3em 0 0 0.1em;
 }
 
 #feeds .section .ical {
@@ -833,7 +833,7 @@ h4#subpages + ul li:nth-child(odd) {
   padding:0;
   width:20px;
   float:left;
-  margin:0.3em 0 0 0.2em;
+  margin:0.3em 0 0 0.4em;
 }
 
 #feeds .section .rss-feed img,

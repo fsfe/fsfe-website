@@ -576,7 +576,6 @@
 	      <xsl:otherwise>
 		<xsl:attribute name="href">bamboo</xsl:attribute>
 		  <xsl:value-of select="$localmenutext"/>
-		</xsl:element>
 	      </xsl:otherwise>
 	    </xsl:choose>
 	  </xsl:element>

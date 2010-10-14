@@ -1065,6 +1065,41 @@ h4#subpages + ul li:nth-child(odd) {
   margin-left: .8em;
 }
 
+/* Overview pages */
+
+ul.overview {
+  list-style-type: none;
+  margin: 0;
+  margin-bottom: 1em;
+  padding: 0;
+  padding-right: 1.5%;
+  float: left;
+  width: 45%;
+}
+
+/* Article pages */
+
+#article-metadata {
+  margin:0.5em 0 1.5em;
+}
+
+#article-metadata p {
+  margin:0;
+}
+
+#article-metadata a {
+  color:#323232;
+}
+
+#article-metadata span.label {
+  color: #202D79;
+  padding-left:1em;
+}
+
+#article-metadata span.label:first-child {
+  padding-left:0;
+}
+
 
 /* identica feed */
 #identica-feed {

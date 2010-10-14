@@ -63,13 +63,12 @@ h3 {
 }
 
 h2 {
-	border-bottom: 1px solid rgb(210,210,210);
-	color: rgb(32,45,121);
-	font-size: 280%;
-	margin: .4em -.3em .5em -.3em;
-	padding: 0 .3em .2em .3em;
-  letter-spacing: -.5px;
-  line-height: 120%;
+  color:#202D79;
+  font-size:200%;
+  letter-spacing:-0.5px;
+  line-height:120%;
+  margin:0.4em -0.3em 0.5em;
+  padding:0 0.3em 0.2em;
 }
 
 h3 {
@@ -93,7 +92,7 @@ pre {
   padding: 1.2em 0 1.2em 187px;
   max-height: 14em;
   overflow: auto;
-  margin: 1em -40px 1em -187px;
+  margin: 1em 0;
   box-shadow: 10px 0 0 rgb(240,240,240);
 }
 

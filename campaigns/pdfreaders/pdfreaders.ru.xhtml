@@ -80,135 +80,6 @@
     европейскими организациями в виду того, что наши возможности небеспредельны,
     мы рады отчётам изо всех концов мира.</p>
  
-    <form action="/cgi-bin/pdfcontest.pl" method="post">
-      <p>
-        <label for="institution-name">Местное название организации <span class="required-asterisk">*</span></label>
-        <input id="institution-name" name="institution-name" type="text" />
-      </p>
-
-      <p>
-        <label for="institution-country">Страна организации (на английском) <span class="required-asterisk">*</span></label>
-	<select id="institution-country" name="institution-country">
-	  <option>Albania</option>
-	  <option>Austria</option>
-	  <option>Belarus</option>
-	  <option>Belgium</option>
-	  <option>Bosnia and Herzegovina</option>
-	  <option>Bulgaria</option>
-	  <option>Croatia</option>
-	  <option>Cyprus</option>
-	  <option>Czech Republic</option>
-	  <option>Denmark</option>
-	  <option>Estonia</option>
-	  <option>Faroe Islands</option>
-	  <option>Finland</option>
-	  <option>France</option>
-	  <option>Germany</option>
-	  <option>Greece</option>
-	  <option>Hungary</option>
-	  <option>Iceland</option>
-	  <option>Ireland</option>
-	  <option>Italy</option>
-	  <option>Latvia</option>
-	  <option>Liechtenstein</option>
-	  <option>Lithuania</option>
-	  <option>Luxembourg</option>
-	  <option>Macedonia</option>
-	  <option>Malta</option>
-	  <option>Moldova</option>
-	  <option>Montenegro</option>
-	  <option>Netherlands</option>
-	  <option>Norway</option>
-	  <option>Poland</option>
-	  <option>Portugal</option>
-	  <option>Romania</option>
-	  <option>Russian Federation</option>
-	  <option>Serbia</option>
-	  <option>Slovakia</option>
-	  <option>Slovenia</option>
-	  <option>Spain</option>
-	  <option>Sweden</option>
-	  <option>Switzerland</option>
-	  <option>Turkey</option>
-	  <option>Ukraine</option>
-	  <option>United Kingdom</option>
-    <option>Åland</option>
-    <option>Rest of the world</option>
-	</select>
-      </p>
-
-      <p>
-      <label for="institution-url">Ссылка на рекламу несвободных программ
-	      <span class="required-asterisk">*</span></label>
-        <input id="institution-url" name="institution-url" type="url" />
-      </p>
-
-      <p>
-      <label for="institution-address">Почтовый адрес
-	      <span class="required-asterisk">*</span></label>
-        <small>Улица, почтовый индекс, город</small>
-        <input id="institution-address" name="institution-address" type="text" />
-      </p>
-
-      <p>
-        <label for="name">Ваше имя <span class="required-asterisk">*</span></label>
-	<small>Если вы хотите подписать петицию, пожалуйста, заполните
-	       	это поле в форме «Имя Фамилия»</small>
-        <input id="name" name="name" type="text" />
-      </p>
-
-      <p>
-        <label for="email">Адрес электронной почты <span class="required-asterisk">*</span></label>
-        <input id="email" name="email" type="email" />
-      </p>
-
-      <p>
-        <label for="group">Группа или ассоциация</label>
-        <small>Необязательно</small>
-        <input id="group" name="group" type="text" />
-      </p>
-
-      <p>
-        <label for="comment">Дополнительные комментарии</label>
-        <small>Необязательно</small>
-        <input id="comment" name="comment" type="text" />
-      </p>
-
-      <p>
-        <label>Я желаю также</label>
-        
-        <ul>
-          <li>
-            <label><input name="petition" type="checkbox"
-              /> Подписать петицию за удаление
-рекламы несвободных программ на общественных сайтах</label>
-          </li>
-
-          <li>
-            <label><input name="newsletter" type="checkbox"
-             /> Получать ежемесячный бюллетень ЕФСПО
-            </label>
-          </li>
-        </ul>
-      </p>
-
-      <p>
-        <label><input id="contact" name="contact" type="checkbox" /> Я
-          в состоянии могу связаться с этой организацией самостоятельно</label>
-      </p>
-      
-      <p class="n">
-      <label for="url">Если Вы — робот, пожалуйста, введите что-нибудь
-	      здесь, чтобы наша система благополучно проигнорировала
-	      всю Вашу работу</label>
-        <input id="url" name="url" type="text" />
-      </p>
-
-      <p>
-        <input type="submit" value="Отправить отчёт" />
-      </p>
-    </form>
-
 
     <p>Отчёты будут проверяться нашей командой, а затем
     публиковаться, так что вам может потребоваться немного
@@ -217,21 +88,8 @@
 
 
 
-    <h2>Список присланных отчётов</h2>
-
-    <dynamic-content/>
-  </body>
-
-  <text id="institution-name">Название организации</text>
-  <text id="institution-address">Почтовый адрес</text>
-  <text id="institution-url">Ссылка на рекламу</text>
-  <text id="opened">Процесс запущен</text>
-  <text id="closed">Процесс завершён</text>
-  <text id="name">Автор отчёта</text>
-  <text id="group">Группа</text>
-  <text id="comment">Комментарий</text>
-  <text id="link">Ссылка</text>
-
+    <h2><a href="/campaigns/pdfreaders/buglist.html">Список присланных отчётов</a></h2>
+</body>
   <timestamp>$Date$ $Author$</timestamp>
 </html>
 <!--

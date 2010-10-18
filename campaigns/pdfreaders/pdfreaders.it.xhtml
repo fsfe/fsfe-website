@@ -83,128 +83,6 @@
       href="mailto:pdfreaders@lists.fsfe.org">pdfreaders@lists.fsfe.org</a>.
     </p>
 
- 
-    <form action="/cgi-bin/pdfcontest.pl" method="post">
-      <p>
-        <label for="institution-name">Nome locale dell'istituzione <span class="required-asterisk">*</span></label>
-        <input id="institution-name" name="institution-name" type="text" />
-      </p>
-
-      <p>
-        <label for="institution-country">Nazione dell'istituzione (in inglese) <span class="required-asterisk">*</span></label>
-	<select id="institution-country" name="institution-country">
-	  <option>Albania</option>
-	  <option>Austria</option>
-	  <option>Belarus</option>
-	  <option>Belgium</option>
-	  <option>Bosnia and Herzegovina</option>
-	  <option>Bulgaria</option>
-	  <option>Croatia</option>
-	  <option>Cyprus</option>
-	  <option>Czech Republic</option>
-	  <option>Denmark</option>
-	  <option>Estonia</option>
-	  <option>Faroe Islands</option>
-	  <option>Finland</option>
-	  <option>France</option>
-	  <option>Germany</option>
-	  <option>Greece</option>
-	  <option>Hungary</option>
-	  <option>Iceland</option>
-	  <option>Ireland</option>
-	  <option>Italy</option>
-	  <option>Latvia</option>
-	  <option>Liechtenstein</option>
-	  <option>Lithuania</option>
-	  <option>Luxembourg</option>
-	  <option>Macedonia</option>
-	  <option>Malta</option>
-	  <option>Moldova</option>
-	  <option>Montenegro</option>
-	  <option>Netherlands</option>
-	  <option>Norway</option>
-	  <option>Poland</option>
-	  <option>Portugal</option>
-	  <option>Romania</option>
-	  <option>Russian Federation</option>
-	  <option>Serbia</option>
-	  <option>Slovakia</option>
-	  <option>Slovenia</option>
-	  <option>Spain</option>
-	  <option>Sweden</option>
-	  <option>Switzerland</option>
-	  <option>Turkey</option>
-	  <option>Ukraine</option>
-	  <option>United Kingdom</option>
-          <option>Åland</option>
-          <option>Resto del mondo</option>
-	</select>
-      </p>
-
-      <p>
-        <label for="institution-url">URL della pubblicità a software non-libero <span class="required-asterisk">*</span></label>
-        <input id="institution-url" name="institution-url" type="url" />
-      </p>
-
-      <p>
-        <label for="institution-address">Indirizzo postale <span class="required-asterisk">*</span></label>
-        <small>Strada, CAP, città</small>
-        <input id="institution-address" name="institution-address" type="text" />
-      </p>
-
-      <p>
-        <label for="name">Il tuo nome <span class="required-asterisk">*</span></label>
-        <small>Se firmi la petizione, inserisci anche il cognome (dopo il nome)</small>
-        <input id="name" name="name" type="text" />
-      </p>
-
-      <p>
-        <label for="email">E-mail <span class="required-asterisk">*</span></label>
-        <input id="email" name="email" type="email" />
-      </p>
-
-      <p>
-        <label for="group">Gruppo o associazione</label>
-        <small>Facoltativo</small>
-        <input id="group" name="group" type="text" />
-      </p>
-
-      <p>
-        <label for="comment">Commenti aggiuntivi</label>
-        <small>Facoltativi</small>
-        <input id="comment" name="comment" type="text" />
-      </p>
-
-      <p>
-        <label>Desidero anche</label>
-        
-        <ul>
-          <li>
-            <label><input name="petition" type="checkbox"
-               />Firmare la Petizione per la rimozione della pubblicità a software proprietario sui siti delle istituzioni pubbliche</label>
-          </li>
-
-          <li>
-            <label><input name="newsletter" type="checkbox"
-               />Ricevere la newsletter mensile della FSFE</label>
-          </li>
-        </ul>
-      </p>
-
-      <p>
-        <label><input id="contact" name="contact" type="checkbox" />Posso contattare direttamente l'istituzione</label>
-      </p>
-      
-      <p class="n">
-        <label for="url">Se sei un robot, per favore inserisci qualcosa qui in modo che il nostro sistema ignori felicemente tutti i tuoi sforzi</label>
-        <input id="url" name="url" type="text" />
-      </p>
-
-      <p>
-        <input type="submit" value="Segnala il tuo governo-bug" />
-      </p>
-    </form>
-
 
     <p><em>
       Ogni segnalazione viene verificata dal nostro team prima di essere
@@ -213,21 +91,9 @@
     </p>
 
 
-    <h2>Lista delle segnalazioni effettuate</h2>
+    <h2><a href="/campaigns/pdfreaders/buglist.html">Lista delle segnalazioni effettuate</a></h2>
 
-    <dynamic-content/>
-  </body>
-
-  <text id="institution-name">Nome dell'istituzione</text>
-  <text id="institution-address">Indirizzo postale</text>
-  <text id="institution-url">URL della pubblicità a software non-libero</text>
-  <text id="opened">Data segnalazione</text>
-  <text id="closed">Data rimozione</text>
-  <text id="name">Segnalato da</text>
-  <text id="group">Gruppo</text>
-  <text id="group">Commento</text>
-  <text id="link">Link</text>
-
+</body>
   <timestamp>$Date$ $Author$</timestamp>
 </html>
 <!--

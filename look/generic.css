@@ -761,10 +761,12 @@ h4#subpages + ul li:nth-child(odd) {
   padding-left: 2%;
 }
 
+/*
 #newsletter select,
 #newsletter input[type=email] {
   width: 49%;
 }
+*/
 
 .section .rss-feed {
   display: block;

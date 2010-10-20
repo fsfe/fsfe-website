@@ -455,20 +455,19 @@
 	  </xsl:element>
 	  <!-- End Language bar -->
 	  
-	  
-	  <!-- Start info box -->
-	  <xsl:element name="div">
-	    <xsl:attribute name="id">infobox</xsl:attribute>
-	    <xsl:if test = "/buildinfo/document/head/meta[@name='under-construction' and @content='true']">
-	      <xsl:element name="p">
-		<xsl:apply-templates select="/buildinfo/textset/text[@id='under-construction']/node()" />
-	      </xsl:element>
-	    </xsl:if>
-	  </xsl:element>
-	  <!-- End info box -->
-	  
 	  <xsl:element name="div">
 	    <xsl:attribute name="id">content</xsl:attribute>
+	    
+	    <!-- Start info box -->
+	    <xsl:element name="div">
+	      <xsl:attribute name="id">infobox</xsl:attribute>
+	      <xsl:if test = "/buildinfo/document/head/meta[@name='under-construction' and @content='true']">
+		<xsl:element name="p">
+		  <xsl:apply-templates select="/buildinfo/textset/text[@id='under-construction']/node()" />
+		</xsl:element>
+	      </xsl:if>
+	    </xsl:element>
+	    <!-- End info box -->
 
 	    <!-- Here goes the actual content of the <body> node of the input file -->
 	    <xsl:apply-templates select="node()"/>

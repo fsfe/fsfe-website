@@ -212,14 +212,13 @@ ol {
 
 /* content specific */
 #content {
+  clear:right;
   float:left;
-  margin-left: 160px;
-  padding-left: .5em;
-  padding-right: 3em;
-  padding-left: 2em;
-  min-height: 400px;
-  clear: right;
-  font-size: 112%;
+  font-size:112%;
+  min-height:400px;
+  padding-left:27px;
+  padding-right:41px;
+  width:762px;
 }
 
 #content p#category {

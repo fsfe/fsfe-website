@@ -112,6 +112,11 @@
 	</xsl:if>
 	
 	  <span class="label"> <xsl:apply-templates select="/buildinfo/textset/text[@id='published']/node()" />: </span><xsl:value-of select="/buildinfo/document/head/meta[@name='publication-date']/@content" />
+	  
+	  <xsl:if test = "string(/buildinfo/document/head/meta[@name='pdf-link']/@content)">
+	    <span class="label">PDF: </span><xsl:value-of select="/buildinfo/document/head/meta[@name='pdf-link']/@content" />
+	  </xsl:if>
+	  
 	</xsl:element>
       </xsl:element>
     </xsl:if>

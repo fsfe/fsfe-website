@@ -116,7 +116,8 @@
 	  <xsl:if test = "string(/buildinfo/document/head/meta[@name='pdf-link']/@content)">
 	    <span class="label">PDF: </span>
 	    <xsl:variable name="pdf-link" select="/buildinfo/document/head/meta[@name='author-link-3']/@content" />
-	      <a href='{$pdf-link}'>download</a>
+	    <a href='{$pdf-link}'>download</a>
+	  </xsl:if>
 	  
 	</xsl:element>
       </xsl:element>

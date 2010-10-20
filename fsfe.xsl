@@ -76,7 +76,7 @@
 	  <xsl:choose>
 	    <xsl:when test="/buildinfo/document/head/meta[@name='author-link-1']">
 	      <xsl:variable name="author-link-1" select="/buildinfo/document/head/meta[@name='author-link-1']/@content" />
-	      <a rel='author' href='{$author-link}'>
+	      <a rel='author' href='{$author-link-1}'>
 	      <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name-1']/@content" /> </a> 
 	    </xsl:when>
 	    <xsl:otherwise>
@@ -89,7 +89,7 @@
 	  <xsl:choose>
 	    <xsl:when test="/buildinfo/document/head/meta[@name='author-link-2']">
 	      <xsl:variable name="author-link-2" select="/buildinfo/document/head/meta[@name='author-link-2']/@content" />
-	      , <a rel='author' href='{$author-link}'>
+	      , <a rel='author' href='{$author-link-2}'>
 	      <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name-2']/@content" /> </a> 
 	    </xsl:when>
 	    <xsl:otherwise>
@@ -102,7 +102,7 @@
 	  <xsl:choose>
 	    <xsl:when test="/buildinfo/document/head/meta[@name='author-link-3']">
 	      <xsl:variable name="author-link-3" select="/buildinfo/document/head/meta[@name='author-link-3']/@content" />
-	      , <a rel='author' href='{$author-link}'>
+	      , <a rel='author' href='{$author-link-3}'>
 	      <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name-3']/@content" /> </a> 
 	    </xsl:when>
 	    <xsl:otherwise>

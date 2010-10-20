@@ -67,11 +67,11 @@
     </xsl:copy>
     
     <!-- Apply news page rules -->
-    <xsl:if test="/buildinfo/document/html@newsdate">
+    <xsl:if test="string(/buildinfo/document/html/@newsdate)">
       <xsl:element name="div">
       <xsl:attribute name="id">article-metadata</xsl:attribute>
 	<xsl:element name="p">
-	  <span class="label"> <xsl:apply-templates select="/buildinfo/textset/text[@id='published']/node()" />: </span><xsl:value-of select="/buildinfo/document/html@newsdate" />
+	  <span class="label"> <xsl:apply-templates select="/buildinfo/textset/text[@id='published']/node()" />: </span><xsl:value-of select="/buildinfo/document/html/@newsdate" />
 	</xsl:element>
       </xsl:element>
     </xsl:if> 

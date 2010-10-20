@@ -8,12 +8,28 @@
   <body>
     <h1>FSFE Merchandise</h1>
 
-    <form action="/cgi-bin/weborder.pl" method="post">
-      <h2>T-Shirts</h2>
+    <div id="introduction">
+      <div class="image">
+        <img src="/graphics/stars-smaller.png" alt="Stars" />
+      </div>
+
+      <p>
+        Show your love for Free Software by using and wearing the branded items below.
+        Free Software clothing is a great way of raising awareness within your local 
+        community, and each sale helps to fund critical FSFE projects.
+        <br />
+        <br />
+        We also stock a range of <a href="#other-items">stationary, mugs, badges, and keyrings</a>.
+      </p>
+      
+    </div>
+
+    <form action="/cgi-bin/weborder.pl" method="post" class="item-grid">
+      <h2>Men's T-Shirts</h2>
  
       <dynamic-content type="t-shirt"/>
 
-      <h2>Female Shirts</h2>
+      <h2>Women's T-Shirts</h2>
  
       <dynamic-content type="girlie"/>
 
@@ -21,7 +37,7 @@
  
       <dynamic-content type="hooded"/>
 
-      <h2>Other Items</h2>
+      <h2 id="other-items">Other Items</h2>
 
       <dynamic-content type="other"/>
 

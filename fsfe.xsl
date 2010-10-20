@@ -459,7 +459,7 @@
 	    <xsl:attribute name="id">content</xsl:attribute>
 	    
 	    <!-- Start info box -->
-	    <xsl:element name="div">
+	    <xsl:element name="div"> 
 	      <xsl:attribute name="id">infobox</xsl:attribute>
 	      <xsl:if test = "/buildinfo/document/head/meta[@name='under-construction' and @content='true']">
 		<xsl:element name="p">

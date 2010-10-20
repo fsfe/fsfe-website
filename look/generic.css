@@ -921,81 +921,28 @@ h4#subpages + ul li:nth-child(odd) {
   padding:2em;
 }
 
-/* campaigns */
-/*
-#campaigns {
-  width: 70%;
-  float: left;
-  height: 150px;
-  margin-bottom: 2em;
-  border-radius: 4px;
-}
-
-#campaigns .first,
-#campaigns .second,
-#campaigns .third {
-  height: 150px;
-  border-radius: 4px;
-  margin-top: -.8em;
-  padding: 0;
-}
-
-#campaigns .second,
-#campaigns .third {
-  display: none;
-}
-
-#campaigns .first {
-  background-color: rgb(214,234,245);
-}
-
-#campaigns .second {
-  background-color: rgb(137,226,245);
-}
-
-#campaigns ul {
-  font-size: 120%;
-  float: right;
-  list-style: none;
-  padding: 0;
-  width: 15px;
-}
-
-#campaigns ul li a {
-  display: block;
-  max-height: 21px;
-  padding: 14px 0 15px 5px;
-}
-
-#campaigns ul li a:hover {
-  text-decoration: none;
-}
-
-#campaigns ul li.first-tab {
-  background-color: rgb(214,234,245);
-  border-top-right-radius: 4px;
-}
-
-#campaigns ul li.second-tab {
-  background-color: rgb(137,226,245);;
-}
-
-#campaigns ul li.third-tab {
-  background-color: rgb(120,210,238);;
-  border-bottom-right-radius: 4px;
-}
-*/
+/* Front page */
 
 #campaigns {
-  height: 180px;
   overflow: hidden;
   margin-bottom: 1.5em;
+  height: 180px;
 }
 
-#campaigns img {
+#campaigns-1 {
+  width:65%;
+  float:left;
+}
+
+#campaign-1 img {
   width: 100%;
   margin: 0;
   float: none;
+}
+
+#campaign-2 {
+  width:32%;
+  float:right;
 }
 
 

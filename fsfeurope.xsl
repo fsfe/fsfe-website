@@ -114,8 +114,9 @@
 	  <span class="label"> <xsl:apply-templates select="/buildinfo/textset/text[@id='published']/node()" />: </span><xsl:value-of select="/buildinfo/document/head/meta[@name='publication-date']/@content" />
 	  
 	  <xsl:if test = "string(/buildinfo/document/head/meta[@name='pdf-link']/@content)">
-	    <span class="label">PDF: </span><xsl:value-of select="/buildinfo/document/head/meta[@name='pdf-link']/@content" />
-	  </xsl:if>
+	    <span class="label">PDF: </span>
+	    <xsl:variable name="pdf-link" select="/buildinfo/document/head/meta[@name='author-link-3']/@content" />
+	      <a href='{$pdf-link}'>download</a>
 	  
 	</xsl:element>
       </xsl:element>

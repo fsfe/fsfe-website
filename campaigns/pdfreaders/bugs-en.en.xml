@@ -38,16 +38,6 @@
      group=""
      />
 
-<bug institution-name="HSE books"
-     institution-address="regional agencies"
-     institution-url="http://books.hse.gov.uk/hse/public/saleproduct.jsf;jsessionid=0F7902615E588A421099B70DE8B4BAB5.plukweb1?catalogueCode=9780717661794"
-     opened="2010-09-14"
-     closed=""
-     name="will bickerstaff"
-     group="worcs lug"
-     comment=""
-     />
-
 <bug institution-name="Barnet - London borough"
      institution-address="North London Business Park (NLBP), Oakleigh Road South, London. N11 1NP"
      institution-url="http://www.barnet.gov.uk/help/help-pdf-adobe.htm"
@@ -156,8 +146,8 @@
      comment=""
      />
 
-<bug institution-name="Barking Council"
-     institution-address="London Borough of Barking and Dagenham    Civic Centre    Rainham Road North    Dagenham    RM10 7BN"
+<bug institution-name="London Borough of Barking and Dagenham   "
+     institution-address="Civic Centre - Rainham Road North - Dagenham RM10 7BN"
      institution-url="http://www.lbbd.gov.uk/7-hr/schools/schools-main.html"
      opened="2010-09-15"
      closed=""
@@ -225,15 +215,6 @@
      comment="The Job application form on this page uses form functions that are not supported in Evince"
      />
 
-<bug institution-name="Met office"
-     institution-address="HR Customer Services, Met Office, FitzRoy Road, Exeter, EX1 3PB"
-     institution-url="http://www.metoffice.gov.uk/about-us/jobs/current-vacancies/001978"
-     opened="2010-09-16"
-     closed=""
-     name="Craig Barnes"
-     group=""
-     comment="The Job application form on this page uses form functions that are not supported in Evince"
-     />
 <bug institution-name="Loch Lomond and The Trossachs National Park"
      institution-address="Loch Lomond &amp; The Trossachs National Park Headquarters, Carrochan, Carrochan Road, Balloch, G83 8EG"
      institution-url="http://www.lochlomond-trossachs.org/accessibility/menu-id-502.html"
@@ -396,25 +377,6 @@
      group=""
      comment=""
      />
-<bug institution-name="Royal Mail"
-     institution-address="100 VICTORIA EMBANKMENT, LONDON, EC4Y 0HQ"
-     institution-url="http://www.royalmail.com/portal/rm/content1?mediaId=106700789&amp;catId=106700775#63100290"
-     opened="2010-10-12"
-     closed=""
-     name="Chris Lee"
-     group=""
-     comment=""
-     />
-
-<bug institution-name="BBC"
-     institution-address="BBC Audience Services, PO Box 1922, Darlington, DL3 0UR"
-     institution-url="http://www.bbc.co.uk/radio2/help/pdf.shtml"
-     opened="2010-10-11"
-     closed=""
-     name="Chris Lee"
-     group=""
-     comment=""
-     />
 
 <bug institution-name="Oxford City Council"
      institution-address="Town Hall, St Aldates, Oxford, OX1 1BX"
@@ -435,5 +397,8 @@
      group=""
      comment=""
      />
+
+
+
   </buglist>
 </set>

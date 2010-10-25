@@ -363,6 +363,10 @@ pre.file {
   width: 100%;
 }
 
+#content #introduction img {
+  margin: 0;
+}
+
 #introduction p,
 p#introduction {
   line-height: 190%;

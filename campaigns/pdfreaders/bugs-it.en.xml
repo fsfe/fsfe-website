@@ -74,7 +74,7 @@
      group=""
      />
 
-<bug institution-name="UniversitÃ  degli Studi di Perugia"
+<bug institution-name="Universita  degli Studi di Perugia"
      institution-address="Piazza Francesco Morlacchi, 06123, Perugia"
      institution-url="http://www-b.unipg.it/~preslet/index.php?content=didattica_notiziari"
      opened="2010-09-13"
@@ -83,7 +83,7 @@
      group=""
      />
 
-<bug institution-name="UniversitÃ  degli Studi Roma 3"
+<bug institution-name="Universita  degli Studi Roma 3"
      institution-address="Via Ostiense 234, 00144. Roma"
      institution-url="http://host.uniroma3.it/dipartimenti/filosofia/"
      opened="2010-09-13"
@@ -92,7 +92,7 @@
      group=""
      />
 
-<bug institution-name="UniversitÃ  degli Studi di Salerno"
+<bug institution-name="Universita  degli Studi di Salerno"
      institution-address="Via Valle Dell'irno, 84084. Fisciano (SA)"
      institution-url="http://www.ingegneria.unisa.it/Didattica/documenti/documenti.php"
      opened="2010-09-13"
@@ -101,7 +101,7 @@
      group=""
      />
 
-<bug institution-name="UniversitÃ  degli Studi di Padova"
+<bug institution-name="Universita  degli Studi di Padova"
      institution-address="Lungargine Piovego 2/3, 35131, Padova"
      institution-url="http://www.unipd.it/web/guida.htm"
      opened="2010-09-13"
@@ -116,15 +116,6 @@
      opened="2010-09-13"
      closed=""
      name="Carlo Piana"
-     group=""
-     />
-
-<bug institution-name="Biblioteca Centrale - Facoltà di Economia - Siena"
-     institution-address="P.zza S.Francesco, 7 - Siena"
-     institution-url="http://www.unisi.it/bec/banchedati_bib_bec.htm"
-     opened="2010-09-14"
-     closed=""
-     name="Paolo"
      group=""
      />
 
@@ -210,7 +201,7 @@
      />
 
 <bug institution-name="Direzione Marittima di Cagliari"
-     institution-address="Via dei Calafati n. - 09100 Cagliari (CA)"
+     institution-address="Via dei Calafati n.  09100 Cagliari (CA)"
      institution-url="http://www.capitaneriediporto.gov.it/capitanerieonline/cosafareper.cfm?id=5&amp;argomento=gente%20di%20mare"
      opened="2010-09-14"
      closed=""
@@ -272,8 +263,8 @@
      group=""
      />
 
-<bug institution-name="INPS - ISTITUTO NAZIONALE PREVIDENZA SOCIALE"
-     institution-address="Direzione Centrale Sistemi Informativi e Tecnologici - 00144 - ROMA- Via della Civiltà del lavoro, 46"
+<bug institution-name="INPS - Direzione Centrale Sistemi Informativi e Tecnologici"
+     institution-address="Via della Civiltà del lavoro, 46  00144 - ROMA- "
      institution-url="http://www.inps.gov.it/Modulistica/compila.asp?idArea=7&amp;idpagina=7&amp;pagina=7&amp;lang=i&amp;intra=&amp;cf="
      opened="2010-09-14"
      closed=""
@@ -309,7 +300,7 @@
      />
 
 <bug institution-name="AGEA - Agenzia per le Erogazioni in Agricoltura"
-     institution-address="Via Palestro, 81 - 00185 Roma"
+     institution-address="Via Palestro, 81  00185 Roma"
      institution-url="http://www.agea.gov.it/portal/page/portal/AGEAPageGroup/HomeAGEA/01DX_SERVIZI/09_Importi giacenti per IBAN errati o assenti"
      opened="2010-09-14"
      closed=""
@@ -317,15 +308,6 @@
      group=""
      />
 
-<bug institution-name="CNIPA - Centro Nazionale per l’Informatica nella Pubblica Amministrazione"
-     institution-address="Roma"
-     institution-url="http://www.cnipa.gov.it/site/it-IT/menuservizio/Guida/"
-     opened="2010-09-14"
-     closed=""
-     name="a. o."
-     group=""
-     comment=""
-     />
 <bug institution-name="Azienda Sanitaria Locale N.2 Savonese"
      institution-address="Via Manzoni 14, 17100, Savona"
      institution-url="http://www.asl2.liguria.it/template1.asp?itemID=4&amp;codmenu=1&amp;livello=2&amp;label=Organizzazione"
@@ -371,28 +353,32 @@
      opened="2010-09-22"
      closed=""
      name="Massimo Barbieri"
+     contact="Contatto locale: LUG Scandiano: massimo.barbieri@42019.it"
      group="LUG Scandiano"
      comment=""
      />
 
 <bug institution-name="Osservatorio Geofisico Università Modena e Reggio EMilia"
-     institution-address="41100 Modena"
+     institution-address="Via Vignolese 905
+41100 Modena"
      institution-url="http://www.ossgeo.unimo.it/scientifiche.html"
      opened="2010-09-22"
      closed=""
      name="Alessandro Albini"
+     contact="Contatto locale: LUG Scandiano: massimo.barbieri@42019.it"
      group="LUG Scandiano"
      comment=""
      />
 
 
 <bug institution-name="Centro Linguistico d'Ateneo (Universita' di Modena e Reggio Emilia)"
-     institution-address="Corso Vittorio Emanuele, 59 - 41100 Modena"
+     institution-address="Corso Vittorio Emanuele, 59 41100 Modena"
      institution-url="http://www.cla.unimo.it/certificazioni_interne/certificazioni_es_i_c2.htm"
      opened="2010-09-22"
      closed=""
      name="alle"
      group="LUG Scandiano"
+     contact="Contatto locale: LUG Scandiano: massimo.barbieri@42019.it"
      comment=""
      />
 
@@ -406,15 +392,6 @@
      comment=""
      />
 
-<bug institution-name="Agents and Pervasive Computing Group (Universita' Modena e Reggio Emilia)"
-     institution-address="41100 Modena"
-     institution-url="http://www.agentgroup.unimore.it/wiki/index.php/Fondamenti_di_Informatica_C_IEI_%28AA_2009/10%29"
-     opened="2010-09-22"
-     closed=""
-     name="alle"
-     group="LUG Scandiano"
-     comment=""
-     />
 <bug institution-name="Società Paleontologica Italiana"
      institution-address="via dell'Universita' 4, 41100 Modena"
      institution-url="http://www.spi.unimo.it/paleoit_download.htm"
@@ -471,6 +448,7 @@
      opened="2010-09-22"
      closed=""
      name="Massimo Barbieri"
+     contact="Contatto locale: LUG Scandiano: massimo.barbieri@42019.it"
      group="LUG Scandiano"
      comment=""
      />
@@ -485,7 +463,7 @@
      comment=""
      />
 
-<bug institution-name="COMUNE DI TOMBOLO"
+<bug institution-name="Comune di Tombolo"
      institution-address="Via Vittorio Veneto n°16 - Tombolo (PD)"
      institution-url="http://www.comune.tombolo.pd.it/htm/index.php?sezione=tabella.regolamenti"
      opened="2010-09-22"
@@ -501,6 +479,7 @@
      opened="2010-09-22"
      closed=""
      name="Massimo Barbieri"
+     contact="Contatto locale: LUG Scandiano: massimo.barbieri@42019.it"
      group="LUG Scandiano"
      comment=""
      />
@@ -512,6 +491,7 @@
      opened="2010-09-22"
      closed=""
      name="Massimo Barbieri"
+     contact="Contatto locale: LUG Scandiano: massimo.barbieri@42019.it"
      group="LUG Scandiano"
      comment=""
      />
@@ -546,18 +526,8 @@
      comment=""
      />
 
-<bug institution-name="Comune di Prato"
-     institution-address="Piazza del Comune, 2 - 59100 Prato PO"
-     institution-url="http://www.comune.prato.it/common/htm/pdf.htm"
-     opened="2010-09-22"
-     closed=""
-     name="Max-B"
-     group="LUG Scandiano"
-     comment=""
-     />
-
 <bug institution-name="Comune di Spino d'Adda"
-     institution-address="P.zza XXV Aprile - 26016 - Spino D'adda (CR)"
+     institution-address="P.zza XXV Aprile - 26016 Spino D'adda (CR)"
      institution-url="http://www.comune.spinodadda.cr.it/news/leggi_area.asp?ART_ID=1694&amp;MEC_ID=132&amp;MEC_IDFiglie=173"
      opened="2010-09-22"
      closed=""
@@ -756,7 +726,7 @@
      comment=""
      />
 <bug institution-name="Comune di Messagne"
-     institution-address="Via Roma Mesagne Brindisi 72023 "
+     institution-address="Via Roma Mesagne Brindisi 72023 Messagne "
      institution-url="http://www.comune.mesagne.br.it"
      opened="2010-09-22"
      closed=""
@@ -951,7 +921,7 @@
      />
 
 <bug institution-name="Comune di Condove"
-     institution-address="Piazza Martiri della Libertà n.7 - 10055 CONDOVE (TO)"
+     institution-address="Piazza Martiri della Libertà n.7 10055 CONDOVE (TO)"
      institution-url="http://www.comune.condove.to.it/ComConcorsi.asp"
      opened="2010-09-22"
      closed=""
@@ -961,7 +931,7 @@
      />
 
 <bug institution-name="Comune di Castel Guelfo"
-     institution-address="Via A. Gramsci, 10, 40023, Castel Guelfo di Bologna"
+     institution-address="Via A. Gramsci, 10 40023, Castel Guelfo di Bologna"
      institution-url="http://www.comune.castelguelfo.bo.it/default.asp?pag=news\visualizza&amp;Id=743"
      opened="2010-09-22"
      closed=""
@@ -971,7 +941,7 @@
      />
 
 <bug institution-name="Comune di Volpedo"
-     institution-address="Piazza Liberta' n.26 - 15059 VOLPEDO (AL) - Italy"
+     institution-address="Piazza Liberta' n.26 15059 VOLPEDO (AL) "
      institution-url="http://www.comune.volpedo.al.it/ComConcorsi.asp"
      opened="2010-09-22"
      closed=""
@@ -981,7 +951,7 @@
      />
 
 <bug institution-name="Comune di Villadossola"
-     institution-address="Via Marconi n.21 - 28844 VILLADOSSOLA (VB) - Italy"
+     institution-address="Via Marconi n.21 28844 VILLADOSSOLA (VB)"
      institution-url="http://www.comune.villadossola.vb.it/ComOrdinanze.asp"
      opened="2010-09-22"
      closed=""
@@ -1001,7 +971,7 @@
      />
 
 <bug institution-name="Comune di Scalenghe"
-     institution-address="Via Umberto I, 1 - 10060 Scalenghe (TO) - Italy "
+     institution-address="Via Umberto I, 1 - 10060 Scalenghe (TO)"
      institution-url="http://www.comune.scalenghe.to.it/viewobj.asp?id=2251"
      opened="2010-09-22"
      closed=""
@@ -1130,16 +1100,6 @@
      comment=""
      />
 
-<bug institution-name="Comune di Porto Cesareo"
-     institution-address="Via Petraroli - 73010 Porto Cesareo (LE)"
-     institution-url="http://www.comune.portocesareo.le.it/internet/servizi.asp?idservizio=79"
-     opened="2010-09-22"
-     closed=""
-     name="alle"
-     group="LUG Scandiano"
-     comment=""
-     />
-
 <bug institution-name="Comune di Napoli"
      institution-address="Palazzo San Giacomo, piazza Municipio, NAPOLI"
      institution-url="http://www.comune.napoli.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/1055"
@@ -1186,6 +1146,7 @@
      opened="2010-09-22"
      closed=""
      name="alle"
+     contact="Contatto locale: LUG Scandiano: massimo.barbieri@42019.it"
      group="LUG Scandiano"
      comment=""
      />
@@ -1319,16 +1280,6 @@
      comment=""
      />
 
-<bug institution-name="Ministero delle Infrastrutture e dei Trasporti"
-     institution-address="Piazzale Porta Pia, 1 - 00198 ROMA"
-     institution-url="https://www2.ilportaledellautomobilista.it/WebModuleModuli/app"
-     opened="2010-09-23"
-     closed=""
-     name="alle"
-     group="LUG Scandiano"
-     comment=""
-     />
-
 <bug institution-name="Camera dei Deputati"
      institution-address="Palazzo Montecitorio, Piazza Di Monte Citorio (00186) ROMA"
      institution-url="http://www.camera.it/67"
@@ -1397,8 +1348,8 @@
      comment=""
      />
 
-<bug institution-name="COMUNE DI ERBE'"
-     institution-address="VIA VITTORIO EMANUELE, 2, 37060 ERBE' (VR) "
+<bug institution-name="Comune di Erbe"
+     institution-address="Via Vittorio Emanuele, 2, 37060 ERBE' (VR) "
      institution-url="http://www.comune.erbe.vr.it/"
      opened="2010-09-23"
      closed=""
@@ -1428,7 +1379,7 @@
      />
 
 <bug institution-name="Comune di Olzai"
-     institution-address="Corso Vittorio Emanuele - 08020 OLZAI (NU) - Italy"
+     institution-address="Corso Vittorio Emanuele - 08020 OLZAI (NU)"
      institution-url="http://www.comune.olzai.nu.it/ComAvvisi.asp"
      opened="2010-09-23"
      closed=""
@@ -1448,7 +1399,7 @@
      />
 
 <bug institution-name="Comune di Momo"
-     institution-address="Via Squarini n.2 - 28015 MOMO (NO) - Italy"
+     institution-address="Via Squarini n.2 - 28015 MOMO (NO)"
      institution-url="http://www.comune.momo.no.it/ComSServizio.asp?Id=101&amp;IdS=31"
      opened="2010-09-23"
      closed=""
@@ -1538,7 +1489,7 @@
      />
 
 <bug institution-name="Città di SUSA"
-     institution-address="Via Palazzo di Citta' n.39 - 10059 SUSA (TO) - Italy"
+     institution-address="Via Palazzo di Citta' n.39 - 10059 SUSA (TO)"
      institution-url="http://www.cittadisusa.it/ComSServizio.asp?Id=54&amp;IdS=27"
      opened="2010-09-23"
      closed=""
@@ -1657,16 +1608,6 @@
      comment=""
      />
 
-<bug institution-name="Motorizzazione civile di Padova"
-     institution-address="Galleria Spagna 10 - 35127 - Padova"
-     institution-url="http://www.umcpadova.arpis.it/modulistica/"
-     opened="2010-09-24"
-     closed=""
-     name="alle"
-     group="LUG Scandiano"
-     comment=""
-     />
-
 <bug institution-name="INPDAP"
      institution-address="Viale A. Ballarin, 42 00142 - Roma (RM) "
      institution-url="http://www.inpdap.gov.it/webinternet/serviziinlinea/Servizidelpersonale/Faq.asp"
@@ -1747,16 +1688,6 @@
      comment=""
      />
 
-<bug institution-name="DigitPA/CNIPA"
-     institution-address="Viale Marx 43 - 00137 Roma"
-     institution-url="http://www.impresa.gov.it/Portal/impresaGov.portal?_nfpb=true&amp;_pageLabel=download&amp;_nfls=false"
-     opened="2010-09-24"
-     closed=""
-     name="Federico Leva"
-     group=""
-     comment=""
-     />
-
 <bug institution-name="Presidenza del Consiglio dei ministri"
      institution-address="Palazzo Chigi Piazza Colonna 370 00187 Roma - Italy"
      institution-url="http://www.sicurezzanazionale.gov.it/web.nsf/pagine/selezione_stampa"
@@ -1767,7 +1698,7 @@
      comment=""
      />
 
-<bug institution-name=" Ministero del lavoro e delle politiche sociali  Direzione generale per le politiche per l'orientamento e la formazione"
+<bug institution-name="Ministero del lavoro e delle politiche sociali  Direzione generale per le politiche per l'orientamento e la formazione"
      institution-address="Via Fornovo, 8 - 00192 Roma"
      institution-url="http://www.lavoro.gov.it/Lavoro/Europalavoro/SezioneEuropaLavoro/Utilities/ProgrammiUtili/"
      opened="2010-09-24"
@@ -1817,15 +1748,6 @@
      comment=""
      />
 
-<bug institution-name="Ministero del Lavoro e delle Politiche Sociali"
-     institution-address="Via Veneto 56 - 00187 Roma"
-     institution-url="http://www.terzosettore.lavoro.gov.it/web/guest/faq"
-     opened="2010-09-24"
-     closed=""
-     name="Federico Leva"
-     group=""
-     comment=""
-     />
 
 <bug institution-name="Comune di Statte "
      institution-address="Via San Francesco, 5 - 74010 Statte (TA) "
@@ -1847,7 +1769,7 @@
      comment=""
      />
 
-<bug institution-name="Comune di VALDUGGIA"
+<bug institution-name="Comune di Valduggia"
      institution-address="Piazza G. Ferrari n.12 - 13018 VALDUGGIA (VC)"
      institution-url="http://www.comune.valduggia.vc.it/ComSServizio.asp?Id=403&amp;IdS=30"
      opened="2010-09-24"
@@ -1867,7 +1789,7 @@
      comment=""
      />
 
-<bug institution-name="PROVINCIA DI NOVARA"
+<bug institution-name="Provincia di Novara"
      institution-address="p.zza Matteotti, 1 – 28100 Novara"
      institution-url="http://www.provincia.novara.it/sett10/bollino_blu/bollino_blu.htm"
      opened="2010-09-24"
@@ -1884,16 +1806,6 @@
      closed=""
      name="Federico Leva"
      group=""
-     comment=""
-     />
-
-<bug institution-name="Croce Rossa Italiana"
-     institution-address="Comitato Centrale Via Toscana,12 00187 - ROMA"
-     institution-url="http://www.cri.it/software.php"
-     opened="2010-09-24"
-     closed=""
-     name="alle"
-     group="LUG Scandiano"
      comment=""
      />
 
@@ -1967,22 +1879,12 @@
      comment=""
      />
 
-<bug institution-name="Comune di GIVOLETTO"
+<bug institution-name="Comune di Givoletto"
      institution-address="Via Sandro Pertini n. 3 - 10040 GIVOLETTO (TO)"
      institution-url="http://www.comune.givoletto.to.it/ComModulistica.asp"
      opened="2010-09-24"
      closed=""
      name="Max-B"
-     group="LUG Scandiano"
-     comment=""
-     />
-
-<bug institution-name="Comune di PONT CANAVESE"
-     institution-address="Via Marconi n.12 - 10085 PONT CANAVESE (TO)"
-     institution-url="http://www.comune.pontcanavese.to.it/ComSServizio.asp?Id=170&amp;IdS=29"
-     opened="2010-09-25"
-     closed=""
-     name="alle"
      group="LUG Scandiano"
      comment=""
      />
@@ -2020,16 +1922,6 @@
 <bug institution-name="Provincia di Cuneo"
      institution-address="Corso Nizza, 21 - 12100 Cuneo"
      institution-url="http://www.provincia.cuneo.it/informazioni/help/index.jsp"
-     opened="2010-09-25"
-     closed=""
-     name="Max-B"
-     group="LUG Scandiano"
-     comment=""
-     />
-
-<bug institution-name="Provincia di Novara"
-     institution-address="Piazza Matteotti 1 28100 Novara"
-     institution-url="http://www.provincia.novara.it/pari_opp.php"
      opened="2010-09-25"
      closed=""
      name="Max-B"
@@ -2307,17 +2199,7 @@
      comment=""
      />
 
-<bug institution-name="Ministero della Pubblica Istruzione"
-     institution-address=" Viale Trastevere, 76/A - 00153 ROMA"
-     institution-url="http://archivio.pubblica.istruzione.it/reclutamento/moduli04.shtml"
-     opened="2010-09-25"
-     closed=""
-     name="Max-B"
-     group="LUG Scandiano"
-     comment=""
-     />
-
-<bug institution-name="comune di trapani"
+<bug institution-name="Comune di Trapani"
      institution-address="Psg. Ricca Salerno n°10, 90100, Palermo"
      institution-url="http://www.comune.trapani.it/bandiappalti/"
      opened="2010-09-26"
@@ -2327,7 +2209,7 @@
      comment=""
      />
 
-<bug institution-name="comune di vieste"
+<bug institution-name="Comune di Vieste"
      institution-address="Palazzo di Citta'  Corso L. Fazzini, 29, Vieste"
      institution-url="http://www.comunedivieste.it/modulistica.php"
      opened="2010-09-26"
@@ -2793,7 +2675,7 @@
      comment=""
      />
 
-<bug institution-name="Comune di ANDEZENO"
+<bug institution-name="Comune di Andezeno"
      institution-address="Piazza Italia n.3 - 10020 ANDEZENO (TO) "
      institution-url="http://www.comune.andezeno.to.it/ComSServizio.asp?Id=409&amp;IdS=11"
      opened="2010-09-28"
@@ -2803,7 +2685,7 @@
      comment=""
      />
 
-<bug institution-name="Comune di REVELLO"
+<bug institution-name="Comune di Revello"
      institution-address="Piazza Denina n.2 - 12036 REVELLO (CN)"
      institution-url="http://www.comune.revello.cn.it/ComSServizio.asp?Id=68&amp;IdS=16"
      opened="2010-09-28"
@@ -2813,7 +2695,7 @@
      comment=""
      />
 
-<bug institution-name="Comune di AMENO"
+<bug institution-name="Comune di Ameno"
      institution-address="Via Piazza Marconi n.1 - 28010 AMENO (NO)"
      institution-url="http://www.comune.ameno.novara.it/ComSServizio.asp?Id=59&amp;IdS=45"
      opened="2010-09-28"
@@ -2823,7 +2705,7 @@
      comment=""
      />
 
-<bug institution-name="Comune di VOLPIANO"
+<bug institution-name="Comune di Volpiano"
      institution-address="Piazza Vittorio Emanuele II, n.12 - 10088 VOLPIANO (TO) "
      institution-url="http://www.comunevolpiano.to.it/ComSServizio.asp?Id=357&amp;IdS=57"
      opened="2010-09-28"
@@ -2833,7 +2715,7 @@
      comment=""
      />
 
-<bug institution-name="Comune di TORNACO"
+<bug institution-name="Comune di Tornaco"
      institution-address="Via Marconi n.2 - 28070 TORNACO (NO)"
      institution-url="http://www.comune.tornaco.no.it/ComSServizio.asp?Id=1&amp;IdS=1"
      opened="2010-09-28"
@@ -2853,7 +2735,7 @@
      comment=""
      />
 
-<bug institution-name="Comune di RECETTO"
+<bug institution-name="Comune di Recetto"
      institution-address="Via Cavour n.8 - 28060 RECETTO (NO)"
      institution-url="http://www.comune.recetto.no.it/ComDelibere.asp"
      opened="2010-09-28"
@@ -2863,7 +2745,7 @@
      comment=""
      />
 
-<bug institution-name="Comune di LA THUILE"
+<bug institution-name="Comune di La Thuile"
      institution-address="Via Marcello Collomb n.3 - 11016 LA THUILE (AO)"
      institution-url="http://www.comune.la-thuile.ao.it/ComSServizio.asp?Id=64&amp;IdS=45"
      opened="2010-09-28"
@@ -2893,7 +2775,7 @@
      comment=""
      />
 
-<bug institution-name="Città di GARESSIO"
+<bug institution-name="Città di Garessio"
      institution-address="Piazza Carrara n.137 - 12075 GARESSIO (CN)"
      institution-url="http://www.comune.garessio.cn.it/ComSServizio.asp?Id=132&amp;IdS=35"
      opened="2010-09-28"
@@ -2903,7 +2785,7 @@
      comment=""
      />
 
-<bug institution-name="Comune di REANO"
+<bug institution-name="Comune di Reano"
      institution-address="Piazza XX Settembre n.1 - 10090 REANO (TO)"
      institution-url="http://www.comune.reano.to.it/ComSServizio.asp?Id=59&amp;IdS=45"
      opened="2010-09-28"
@@ -2913,7 +2795,7 @@
      comment=""
      />
 
-<bug institution-name="Comune di VOGOGNA"
+<bug institution-name="Comune di Vogogna"
      institution-address="Via Nazionale n.150 - 28805 VOGOGNA (VB)"
      institution-url="http://www.comune.vogogna.vb.it/ComAvvisi.asp"
      opened="2010-09-28"
@@ -2946,16 +2828,6 @@
 <bug institution-name="Comune di MEINA"
      institution-address="Piazza Carabelli n.5 - 28046 MEINA (NO) "
      institution-url="http://www.comune.meina.no.it/ComAvvisi.asp"
-     opened="2010-09-28"
-     closed=""
-     name="Max-B"
-     group="LUG Scandiano"
-     comment=""
-     />
-
-<bug institution-name="Comune di ANDEZENO"
-     institution-address="Piazza Italia n.3 - 10020 ANDEZENO (TO)"
-     institution-url="http://www.comune.andezeno.to.it/ComSServizio.asp?Id=64&amp;IdS=45"
      opened="2010-09-28"
      closed=""
      name="Max-B"
@@ -3105,16 +2977,6 @@
 <bug institution-name="Comune di PALESTRO (PV)"
      institution-address="Piazza Guglielmo Marconi n.1 - 27030 PALESTRO (PV)"
      institution-url="http://www.comune.palestro.pv.it/ComSServizio.asp?Id=75&amp;IdS=56"
-     opened="2010-09-29"
-     closed=""
-     name="Max-B"
-     group="LUG Scandiano"
-     comment=""
-     />
-
-<bug institution-name="Comune di SCIOLZE (TO)"
-     institution-address="Via Roma n.2 - 10090 SCIOLZE (TO)"
-     institution-url="http://www.comunedisciolze.it/ComAvvisi.asp"
      opened="2010-09-29"
      closed=""
      name="Max-B"
@@ -3362,7 +3224,7 @@
      comment=""
      />
 
-<bug institution-name="Comune di RE (VB)"
+<bug institution-name="Comune di Re (VB)"
      institution-address="Piazza Santuario n.1 - 28856 RE (VB) "
      institution-url="http://www.comune.re.vb.it/ComDelibere.asp"
      opened="2010-09-29"
@@ -3731,16 +3593,6 @@
      comment=""
      />
 
-<bug institution-name="Città di GARESSIO (CN)"
-     institution-address="Piazza Carrara n.137 - 12075 GARESSIO (CN) "
-     institution-url="http://www.comune.garessio.cn.it/ComSServizio.asp?Id=9&amp;IdS=1"
-     opened="2010-09-29"
-     closed=""
-     name="Max-B"
-     group="LUG Scandiano"
-     comment=""
-     />
-
 <bug institution-name="Comune di MACUGNAGA (VB)"
      institution-address="Piazza Municipio n.1 - 28876 MACUGNAGA (VB)"
      institution-url="http://www.macugnaga-online.it/ComSServizio.asp?Id=73&amp;IdS=56"
@@ -3815,6 +3667,7 @@
      opened="2010-09-30"
      closed=""
      name="alle"
+     contact="Contatto locale: LUG Scandiano: massimo.barbieri@42019.it"
      group="LUG Scandiano"
      comment=""
      />
@@ -3856,16 +3709,6 @@
      closed=""
      name="alle"
      group="LUG Scandiano"
-     comment=""
-     />
-
-<bug institution-name="Università degli Studi di Torino"
-     institution-address="via Garessio 15, 10100, Torino"
-     institution-url="http://math.i-learn.unito.it/"
-     opened="2010-09-30"
-     closed=""
-     name="Matteo Gamba"
-     group="Guri"
      comment=""
      />
 
@@ -3978,8 +3821,8 @@
      comment=""
      />
 
-<bug institution-name="aifa"
-     institution-address="AIFA -  Via della Sierra Nevada, 60 - 00144 - ROMA - tel. 06 5978401 "
+<bug institution-name="AIFA"
+     institution-address="Via della Sierra Nevada, 60 - 00144 - ROMA - tel. 06 5978401 "
      institution-url="http://pol.aifa.gov.it/guida.jsp"
      opened="2010-10-02"
      closed=""
@@ -4008,89 +3851,9 @@
      comment=""
      />
 
-<bug institution-name="Comune di Desenzano del Garda"
-     institution-address="Via Carducci, 4 - 25015 Desenzano del Garda (BS)"
-     institution-url="http://comune.desenzano.brescia.it/italian/piano_governo_territorio.php?iExpand1=356"
-     opened="2010-10-02"
-     closed=""
-     name="Federico Lanzalotta"
-     group=""
-     comment=""
-     />
-
-<bug institution-name="Comune di Desenzano del Garda"
-     institution-address="Via Carducci, 4 - 25015 Desenzano del Garda (BS)"
-     institution-url="http://comune.desenzano.brescia.it/italian/piano_opere_pubbliche.php?iExpand1=431"
-     opened="2010-10-02"
-     closed=""
-     name="Federico Lanzalotta"
-     group=""
-     comment=""
-     />
-
-<bug institution-name="Comune di Desenzano del Garda"
-     institution-address="Via Carducci, 4 - 25015 Desenzano del Garda (BS)"
-     institution-url="http://comune.desenzano.brescia.it/italian/polizia_locale.php?iExpand1=17"
-     opened="2010-10-02"
-     closed=""
-     name="Federico Lanzalotta"
-     group=""
-     comment=""
-     />
-
-<bug institution-name="Comune di Desenzano del Garda"
-     institution-address="Via Carducci, 4 - 25015 Desenzano del Garda (BS)"
-     institution-url="http://comune.desenzano.brescia.it/italian/modulistica.php?iExpand1=108"
-     opened="2010-10-02"
-     closed=""
-     name="Federico Lanzalotta"
-     group=""
-     comment=""
-     />
-
-<bug institution-name="Comune di Desenzano del Garda"
-     institution-address="Via Carducci, 4 - 25015 Desenzano del Garda (BS)"
-     institution-url="http://comune.desenzano.brescia.it/italian/bilancio.php?iExpand1=423"
-     opened="2010-10-02"
-     closed=""
-     name="Federico Lanzalotta"
-     group=""
-     comment=""
-     />
-
-<bug institution-name="Comune di Desenzano del Garda"
-     institution-address="Via Carducci, 4 - 25015 Desenzano del Garda (BS)"
-     institution-url="http://comune.desenzano.brescia.it/italian/rendiconto_2008.php?iExpand1=424"
-     opened="2010-10-02"
-     closed=""
-     name="Federico Lanzalotta"
-     group=""
-     comment=""
-     />
-
-<bug institution-name="Comune di Desenzano del Garda"
-     institution-address="Via Carducci, 4 - 25015 Desenzano del Garda (BS)"
-     institution-url="http://comune.desenzano.brescia.it/italian/rendiconto_2007.php?iExpand1=428"
-     opened="2010-10-02"
-     closed=""
-     name="Federico Lanzalotta"
-     group=""
-     comment=""
-     />
-
 <bug institution-name="Comune di Brescia"
      institution-address="piazza della Loggia, 1 - 25100 Brescia"
      institution-url="http://www.comune.brescia.it/Eventi/Servizi+al+Cittadino/abitare/affitti-assegnazioni/contratti+di+affitto+agevolato.htm"
-     opened="2010-10-02"
-     closed=""
-     name="Federico Lanzalotta"
-     group=""
-     comment=""
-     />
-
-<bug institution-name="Comune di Brescia"
-     institution-address="piazza della Loggia, 1 - 25100 Brescia"
-     institution-url="http://www.comune.brescia.it/NR/exeres/CB56A7FC-9A12-4BE0-9C24-6EC45172ACA0.htm"
      opened="2010-10-02"
      closed=""
      name="Federico Lanzalotta"
@@ -4314,6 +4077,7 @@
      opened="2010-10-03"
      closed=""
      name="Max-B"
+     contact="Contatto locale: LUG Scandiano: massimo.barbieri@42019.it"
      group="LUG Scandiano"
      comment=""
      />
@@ -4394,15 +4158,6 @@
      comment=""
      />
 
-<bug institution-name="Comune di Romano di Lombardia"
-     institution-address="Piazza Giuseppe Longhi - 24058 Romano di Lombardia (BG)"
-     institution-url="http://www.comune.romano.bg.it/index.php?pagina=delibere"
-     opened="2010-10-05"
-     closed=""
-     name="Federico Lanzalotta"
-     group=""
-     comment=""
-     />
 
 <bug institution-name="Comune di Alzano Lombardo"
      institution-address="via G.Mazzini, 69 - 24022 Alzano Lombardo (BG)"
@@ -4721,7 +4476,7 @@
      comment=""
      />
 <bug institution-name="University Bologna, Faculty of Chemistry"
-     institution-address="  V.le Del Risorgimento 4, Bologna "
+     institution-address="V.le Del Risorgimento 4, Bologna "
      institution-url="http://www.fci.unibo.it/Chimica+Industriale/Didattica/Ordinamenti+previgenti/laureaquinq.htm"
      opened="2010-10-11"
      closed=""
@@ -5056,16 +4811,6 @@
      closed=""
      name="alle"
      group=""
-     comment=""
-     />
-
-<bug institution-name="Conservatorio di Musica Lorenzo Perosi"
-     institution-address="Viale Principe di Piemonte, 2/A - 86100 Campobasso"
-     institution-url="http://www.conservatorioperosi.it/www/index.php"
-     opened="2010-10-16"
-     closed=""
-     name="alle"
-     group="LUG Scandiano"
      comment=""
      />
 

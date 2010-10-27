@@ -438,13 +438,6 @@
 	    
 	  </xsl:element><!-- End sidebar -->
 
-	    <!-- Outdated note -->
-	    <xsl:if test="/buildinfo/@outdated='yes'">
-	      <xsl:element name="p">
-		<xsl:apply-templates select="/buildinfo/textset/text[@id='outdated']/node()" />
-	      </xsl:element>
-	    </xsl:if>
-
 	    <!-- Missing translation note -->
 	    <xsl:if test="/buildinfo/@language!=/buildinfo/document/@language">
 	      <xsl:element name="p">
@@ -457,6 +450,13 @@
 	  
 	  <xsl:element name="div">
 	    <xsl:attribute name="id">content</xsl:attribute>
+	    
+	    <!-- Outdated note -->
+	    <xsl:if test="/buildinfo/@outdated='yes'">
+	      <xsl:element name="p">
+		<xsl:apply-templates select="/buildinfo/textset/text[@id='outdated']/node()" />
+	      </xsl:element>
+	    </xsl:if>
 	    
 	    <!-- Start info box -->
 	    <xsl:element name="div"> 

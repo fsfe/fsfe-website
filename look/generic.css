@@ -936,6 +936,9 @@ h4#subpages + ul li:nth-child(odd) {
 #campaign-1 {
   width:65%;
   float:left;
+  -moz-border-radius:10px;
+  -webkit-border-radius:10px;
+  border-radius:10px;
 }
 
 #campaign-1 img {
@@ -947,6 +950,9 @@ h4#subpages + ul li:nth-child(odd) {
 #campaign-2 {
   width:32%;
   float:right;
+  -moz-border-radius:10px;
+  -webkit-border-radius:10px;
+  border-radius:10px;
 }
 
 

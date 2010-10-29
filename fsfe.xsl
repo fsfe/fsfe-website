@@ -218,9 +218,10 @@
 								and not(@id=/buildinfo/textset/text/@id)]"/>
 			      </xsl:when>
 			      <xsl:when test=". = concat(/buildinfo/@filename ,'.html')">
-				<xsl:value-of select="/buildinfo/textset/text[@id=$id]|
-								/buildinfo/textsetbackup/text[@id=$id
-								and not(@id=/buildinfo/textset/text/@id)]"/>
+				<xsl:element name="span">
+				<xsl:attribute name="id">selected</xsl:attribute>
+				<xsl:value-of select="/buildinfo/textset/text[@id=$id]| /buildinfo/textsetbackup/text[@id=$id and not(@id=/buildinfo/textset/text/@id)]"/>
+				</xsl:element>
 			      </xsl:when>
 			      <xsl:otherwise>
 				<xsl:element name="a">

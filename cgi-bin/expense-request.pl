@@ -121,7 +121,7 @@ if ($budget2 ne "NONE") {
 }
 my $reference = "er$account1";
 if ($budget2 ne "NONE") {
-  $reference .= "/$account2";
+  $reference .= "+$account2";
 }
 $reference .= ".$date." . substr $time, -3;
 
@@ -133,7 +133,7 @@ if ($budget2 ne "NONE") {
 
 my $subject = "Expense Request $reference ($budget1";
 if ($budget2 ne "NONE") {
-  $subject .= "/$budget2";
+  $subject .= "+$budget2";
 }
 $subject .= ")";
 

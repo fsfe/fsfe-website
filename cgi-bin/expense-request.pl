@@ -135,7 +135,7 @@ my $subject = "Expense Request $reference ($budget1";
 if ($budget2 ne "NONE") {
   $subject .= "/$budget2";
 }
-$subject .= ")"
+$subject .= ")";
 
 # -----------------------------------------------------------------------------
 # Generate mail to responsible person

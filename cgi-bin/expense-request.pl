@@ -43,24 +43,56 @@ my %responsible = (
   "ADMIN-GA" => "director",
   "ADMIN-COORDINATION" => "director",
   "PA-PERSONELL" => "kirschner",
-  "PA-MATERIAL" => "kirschner",
+  "PA-OFFICE" => "kirschner",
   "PA-TRAVEL" => "kirschner",
+  "PA-MATERIAL" => "kirschner",
+  "PA-CAMPAIGNS" => "kirschner",
   "PA-GNUVOX" => "kirschner",
   "FELLOWSHIP-PERSONELL" => "kirschner",
+  "FELLOWSHIP-OFFICE" => "kirschner",
   "FELLOWSHIP-MATERIAL" => "kirschner",
   "FELLOWSHIP-CONF" => "kirschner",
   "FELLOWSHIP-LOCAL" => "kirschner",
-  "FELLOWSHIP-OFFICE" => "kirschner",
   "FTF-PERSONELL" => "coughlan",
-  "FTF-ZRH" => "coughlan",
+  "FTF-OFFICE" => "coughlan",
   "FTF-TRAVEL" => "coughlan",
   "FTF-CONF" => "coughlan",
   "FTF-TRANS" => "coughlan",
   "FTF-ECONOMIC" => "coughlan",
   "POLICY-PERSONELL" => "gerloff",
+  "POLICY-OFFICE" => "gerloff",
   "POLICY-CAMPAIGNS" => "gerloff",
   "POLICY-TRAVEL" => "gerloff",
   "MERCHANDISE" => "director",
+);
+
+my %account = (
+  "ADMIN-DUS" => "6xxx",
+  "ADMIN-TECH" => "6xxx",
+  "ADMIN-GA" => "6710",
+  "ADMIN-COORDINATION" => "6xxx",
+  "PA-PERSONELL" => "2511",
+  "PA-OFFICE" => "2512",
+  "PA-TRAVEL" => "2513",
+  "PA-MATERIAL" => "2514",
+  "PA-CAMPAIGNS" => "2515",
+  "PA-GNUVOX" => "2516",
+  "FELLOWSHIP-PERSONELL" => "2521",
+  "FELLOWSHIP-OFFICE" => "2522",
+  "FELLOWSHIP-MATERIAL" => "2524",
+  "FELLOWSHIP-CONF" => "2525",
+  "FELLOWSHIP-LOCAL" => "2526",
+  "FTF-PERSONELL" => "2531",
+  "FTF-OFFICE" => "2532",
+  "FTF-TRAVEL" => "2533",
+  "FTF-CONF" => "2535",
+  "FTF-TRANS" => "2536",
+  "FTF-ECONOMIC" => "2537",
+  "POLICY-PERSONELL" => "2541",
+  "POLICY-OFFICE" => "2542",
+  "POLICY-TRAVEL" => "2543",
+  "POLICY-CAMPAIGNS" => "2545",
+  "MERCHANDISE" => "8154",
 );
 
 # -----------------------------------------------------------------------------
@@ -82,13 +114,28 @@ my $refund = $query->param("refund");
 
 my $date = strftime "%Y-%m-%d", localtime;
 my $time = strftime "%s", localtime;
-my $reference = "$who.$date." . substr $time, -3;
+my $account1 = $account{$budget1};
+my $account2 = "";
+if ($budget2 ne "NONE") {
+  $account2 = $account{$budget2};
+}
+my $reference = "er.$account1";
+if ($budget2 ne "NONE") {
+  $reference .= "/$account2";
+}
+$reference .= ".$date." . substr $time, -3;
 
 my $to1 = $responsible{$budget1};
 my $to2 = "";
 if ($budget2 ne "NONE") {
   $to2 = $responsible{$budget2};
 }
+
+my $subject = "Expense Request $reference ($budget1";
+if ($budget2 ne "NONE") {
+  $subject .= "/$budget2";
+}
+$subject .= ")"
 
 # -----------------------------------------------------------------------------
 # Generate mail to responsible person
@@ -111,7 +158,7 @@ if ($budget2 ne "NONE") {
 } else {
   print MAIL "To: $to1\@fsfeurope.org\n";
 }
-print MAIL "Subject: Expense Request\n";
+print MAIL "Subject: $subject\n";
 print MAIL "Mime-Version: 1.0\n";
 print MAIL "Content-Type: multipart/mixed; boundary=$boundary\n";
 print MAIL "Content-Transfer-Encoding: 8bit\n\n\n";

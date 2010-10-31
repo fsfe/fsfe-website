@@ -119,7 +119,7 @@ my $account2 = "";
 if ($budget2 ne "NONE") {
   $account2 = $account{$budget2};
 }
-my $reference = "er.$account1";
+my $reference = "er$account1";
 if ($budget2 ne "NONE") {
   $reference .= "/$account2";
 }
@@ -182,9 +182,9 @@ print MAIL "WHEN: $when\n\n";
 print MAIL "WHY: $why\n\n";
 print MAIL "ESTIMATE: $estimate\n\n";
 if ($budget2 ne "NONE") {
-  print MAIL "BUDGET: $budget1 $percent1\% $budget2 $percent2\%\n\n";
+  print MAIL "BUDGET: $budget1 ($account1) $percent1\% $budget2 ($account2) $percent2\%\n\n";
 } else {
-  print MAIL "BUDGET: $budget1\n\n";
+  print MAIL "BUDGET: $budget1 ($account1)\n\n";
 }
 print MAIL "REFUND CONTACT: $refund\n\n";
 print MAIL "AUTHORISED:\n\n";

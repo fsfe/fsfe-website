@@ -158,6 +158,7 @@ if ($budget2 ne "NONE") {
 } else {
   print MAIL "To: $to1\@fsfeurope.org\n";
 }
+print MAIL "CC: $who\@fsfeurope.org\n";
 print MAIL "Subject: $subject\n";
 print MAIL "Mime-Version: 1.0\n";
 print MAIL "Content-Type: multipart/mixed; boundary=$boundary\n";
@@ -198,4 +199,15 @@ close MAIL;
 # -----------------------------------------------------------------------------
 
 print "Content-type: text/html\n\n";
-print "Your request was sent. Thank you.";
+print "Your request was sent. Thank you.<br /><br />";
+print "WHO: $names{$who}<br />\n\n";
+print "WHAT: $what<br />\n\n";
+print "WHEN: $when<br />\n\n";
+print "WHY: $why<br />\n\n";
+print "ESTIMATE: $estimate<br />\n\n";
+if ($budget2 ne "NONE") {
+  print "BUDGET: $budget1 $percent1\% $budget2 $percent2\%<br />\n\n";
+} else {
+  print "BUDGET: $budget1<br />\n\n";
+}
+print "REFUND CONTACT: $refund<br />\n\n";

@@ -491,7 +491,7 @@
 	  <div id="notice">
 	    <p>
 	      Copyright © 2001-2010 <a href="/">Free Software
-		Foundation Europe</a>. <a href="/contact/contact.html">Contact us</a>.<br />
+		Foundation Europe</a>. <strong><a href="/contact/contact.html">Contact us</a></strong>.<br />
 
 	      <xsl:apply-templates select="/buildinfo/textset/text[@id='permission']/node()" /><br />
 

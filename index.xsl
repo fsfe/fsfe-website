@@ -150,7 +150,7 @@
                 </select>
           
                 <input type="image" src="/graphics/email-button.png" />
-                <input name="email" type="email" placeholder="email@example.org" />
+                <input name="email" type="email" placeholder="address" />
               </p>
             </form>
           </div><!-- /.entry -->

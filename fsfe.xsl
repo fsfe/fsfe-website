@@ -438,6 +438,8 @@
 	    </xsl:element><!-- end translations -->
 	    
 	  </xsl:element><!-- End sidebar -->
+
+	  </xsl:element>
 	  
 	  <xsl:element name="div">
 	    <xsl:attribute name="id">content</xsl:attribute>
@@ -455,10 +457,8 @@
 		<xsl:apply-templates select="/buildinfo/textset/text[@id='notranslation']/node()" />
 	      </xsl:element>
 	    </xsl:if>
-
-	  </xsl:element>
-	  <!-- Missing translation note -->
-	    
+	    <!-- Missing translation note -->
+	        
 	    <!-- Start info box -->
 	    <xsl:element name="div"> 
 	      <xsl:attribute name="id">infobox</xsl:attribute>

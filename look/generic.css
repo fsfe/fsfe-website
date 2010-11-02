@@ -473,33 +473,15 @@ h4#subpages + ul li:nth-child(odd) {
 	padding: 5px 18px;
 }
 
-#navigation ul#menu li.selected {
-	background-color: rgb(51,148,206);
-	color: white;
-}
-
-#navigation ul#menu li.selected,
-#navigation ul#menu li:hover {
-	border-bottom: 4px solid rgb(208,244,0);
-}
-
-#navigation ul#menu li.selected:first,
-#navigation ul#menu li:first:hover	{
-	-moz-border-radius-topleft: 5px;
-	-moz-border-radius-bottomleft: 5px;
-	-o-border-radius-topleft: 5px;
-	-o-border-radius-bottomleft: 5px;
-	-webkit-border-radius-topleft: 5px;
-	-webkit-border-radius-bottomleft: 5px;
-}
-
-#navigation ul#menu span#selected {
-  border-left:15px solid #DCDCDC;
-  font-weight:normal;
-  padding:0.6em 0 0.8em 0.6em;
-  color:#808080;
-  font-size:15.5px;
-  line-height:50%;
+#menu ul li ul li #selected,
+#menu ul li ul li #selected:hover {
+	border-left:15px solid #F1F1F1;
+	color:#E4E4E4;
+	display:block;
+	font-size:15.5px;
+	font-weight:normal;
+	line-height:50%;
+	padding:0.6em 0 0.8em 0.6em
 }
 
 #navigation ul#languages {

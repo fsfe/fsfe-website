@@ -154,11 +154,11 @@ ol {
 }
 
 #statement {
-  color: #787878;
-  float: left;
-  font-size: 120%;
-  margin: 3em 0 0 5em;
-  width: 60%;
+	color:#787878;
+	float:left;
+	font-size:120%;
+	margin:3em 0 0 8%;
+	max-width:60%;
 }
 
 #statement a {

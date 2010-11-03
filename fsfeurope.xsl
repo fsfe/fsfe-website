@@ -328,6 +328,18 @@
             </xsl:element>
           </xsl:element>
 
+          <!-- Donate button for the PDFReaders campaign -->
+          <xsl:element name="div">
+            <xsl:attribute name="id">pdfrdonate</xsl:attribute>
+            <xsl:element name="a">
+              <xsl:attribute name="href">http://www.fsfe.org/donate/donate</xsl:attribute>
+              <xsl:element name="img">
+                <xsl:attribute name="alt">Donate for the PDF Readers Campaign!</xsl:attribute>
+                <xsl:attribute name="src">/graphics/pdfreaders-fundraiser-stamp.png</xsl:attribute>
+              </xsl:element>
+            </xsl:element>
+          </xsl:element>
+
           <!--
           <div id="newsletter">
             <p>

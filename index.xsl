@@ -190,7 +190,7 @@
                 <input type="image" src="/graphics/email-button.png" />
                 <input name="email" type="email" placeholder="address" />
                 
-                <input type="submit" value="Subscribe" />
+                <!--<input type="submit" value="Subscribe" />-->
               </p>
             </form>
           </div><!-- /.entry -->

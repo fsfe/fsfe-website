@@ -136,7 +136,7 @@
           
           <div class="entry">
           
-	    <xsl:template match="/">
+	    <!--<xsl:template match="/">
 	      <xsl:copy>
 		<xsl:apply-templates select="@*|node()"/>
 	      </xsl:copy>
@@ -146,7 +146,7 @@
 	      <body>
 		<xsl:apply-templates />
 
-		<!-- $today = current date (given as <html date="...">) -->
+		<!-- $today = current date (given as <html date="...">) -\REMOVE ME->
 		<xsl:variable name="today">
 		  <xsl:value-of select="/html/@date" />
 		</xsl:variable>
@@ -172,7 +172,7 @@
 	    </xsl:template>
 
 	    <xsl:template match="set"/>
-	    <xsl:template match="text"/>
+	    <xsl:template match="text"/>-->
           
             <p>
               Subscribe to FSFE's monthly newsletter

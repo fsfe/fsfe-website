@@ -136,8 +136,7 @@
           
           <div class="entry">
             <p>
-              By subscribing to FSFE's newsletter you can keep updated on
-              the latest news in the Free Software world.
+              Subscribe to FSFE's monthly newsletter
             </p>
 
             <form method="post" action="http://mail.fsfeurope.org/mailman/subscribe/press-release">

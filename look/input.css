@@ -163,45 +163,10 @@ button span,
   background-repeat: no-repeat;
 }
 
-.minibutton {
-  font-family: "Helvetica", "Arial", "Freesans", "Clean", sans-serif;
-  display: inline-block !important;
-  height: 23px;
-  padding: 0 0 0 3px;
-  font-size: 11px;
+
+/* labels */
+form label {
   font-weight: bold;
-  color: rgb(50,50,50) !important;
-  text-shadow: 1px 1px 0 #fff;
-  background: url("minibutton_matrix.png") 0 0 no-repeat;
-  white-space: nowrap;
-  overflow: visible;
-  cursor: pointer;
-}
-
-.minibutton > span {
   display: block;
-  height: 23px;
-  padding: 0 10px 0 8px;
-  line-height: 23px;
-  background: urL("minibutton_matrix.png") 100% 0 no-repeat;
+  padding-left: .2em;
 }
-
-.minibutton:hover {
-  color: white !important;
-  text-decoration: none !important;
-  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
-  background-position: 0 -30px;
-}
-
-.minibutton:hover > span {
-  background-position: 100% -30px;
-}
-
-.minibutton.mousedown {
-  background-position: 0 -60px;
-}
-
-.minibutton.mousedown > span {
-  background-position: 100% -60px;
-}
-

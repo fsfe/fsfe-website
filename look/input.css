@@ -6,7 +6,8 @@ input[type=input],
 input[type=text],
 input[type=email],
 input[type=url],
-select {
+select,
+textarea {
   background-image: url("/graphics/input-bg.png");
   background-repeat: repeat-x;
   background-position: 0 0;
@@ -23,14 +24,7 @@ select {
   -moz-border-radius: 11px;
   -webkit-border-radius: 11px;
   */
-}
-
-input[type=url],
-input[type=email],
-input[type=text],
-textarea, 
-select {
-  padding: 5px 8px 5px 30px;
+  padding: 5px 8px;
 }
 
 input[type="image"] {

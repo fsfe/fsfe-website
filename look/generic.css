@@ -910,10 +910,10 @@ width:15%;
 
 /* Front page */
 
-#campaign-boxes {
+#campaigns-boxes {
   overflow: hidden;
   margin-bottom: 1.5em;
-  height: 180px;
+  height: 200px;
 }
 
 #campaign-box-1 {
@@ -925,7 +925,6 @@ width:15%;
 }
 
 #campaign-box-1 img {
-  width: 100%;
   margin: 0;
   float: none;
 }
@@ -936,6 +935,29 @@ width:15%;
   -moz-border-radius:10px;
   -webkit-border-radius:10px;
   border-radius:10px;
+}
+
+#campaign-box-2 p {
+  padding:0;
+  margin:0;
+}
+
+p.donate-box, p.fellowship-box {
+  height:90px;
+  border-radius:10px;
+  -moz-border-radius:10px;
+  -webkit-border-radius:10px;
+  text-align:center;
+  font-size:1.5em;
+}
+
+#campaign-box-2 p.donate-box {
+border:2px solid red;
+margin:0 0 12px;
+}
+
+#campaign-box-2 p.fellowship-box {
+border:2px solid red;
 }
 
 

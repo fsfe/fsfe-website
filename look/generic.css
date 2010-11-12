@@ -196,6 +196,10 @@ ol {
   color: #787878;
 }
 
+#search input[type="text"] {
+  padding: 5px 8px 5px 35px;
+}
+
 #translations ul {
   padding-left: .5em;
   font-size: 90%;
@@ -277,12 +281,12 @@ ol {
   font-style: italic;
 }
 
-.imgright {
+.imgright {  /* compatibility */
   float: right;
   margin: 0 0 1em 1em;
 }
 
-.postit {
+.postit {  /* compatibility */
   float: left;
   margin: 0 1em 1em 0;
   border: 1px #000 solid;
@@ -294,10 +298,10 @@ ol {
   
 #content img {
   float: left;
-  margin: 0.15em 2.5em 2.5em 0.3em;
+  margin: 0 1em 1em 0;
 }
 
-.fineprint {
+.fineprint {  /* compatibility */
   color: rgb(120,120,120);
   font-size: 90%;
   border-top: 1px solid	rgb(220,220,220);
@@ -305,14 +309,7 @@ ol {
   margin: 3em -.5em 1em;
 }
 
-.tagline {
-  color: #202D79;
-  font-size: 150%;
-  font-weight: bold;
-  text-align: center;
-}
-
-.toolbox {
+.toolbox {  /* compatibility */
   background-color: rgb(244,248,250);
   float: right;
   font-size: 85%;

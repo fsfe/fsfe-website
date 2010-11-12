@@ -135,7 +135,8 @@
           <h2><a href="/news/newsletter.html">Newsletter</a></h2>
           
           <div class="entry">
-          
+ 
+<!--
 	    <xsl:template match="/">
 	      <xsl:copy>
 		<xsl:apply-templates select="@*|node()"/>
@@ -152,19 +153,26 @@
 		</xsl:variable>
 
 		<xsl:for-each select="/html/set/news[translate(@date,'-','') &lt;= translate($today,'-','')]">
-		  <xsl:sort select="@date" order="descending"/>
+		  <xsl:sort select="@date" order="descending" />
+		  
 		  <p>
-		  <b><xsl:value-of select="@date" /></b><br/>
-		  <xsl:value-of select="body"/>
-		  <xsl:variable name="link"><xsl:value-of select="link"/></xsl:variable>
-		  <xsl:if test="$link!=''">
-		    [<a href="{link}"><xsl:value-of select="/html/text[@id='more']"/>]</a>
-		  </xsl:if>
+		    <xsl:value-of select="body"/>
+		    <xsl:variable name="link"><xsl:value-of select="link"/></xsl:variable>
+		    
+		    <xsl:if test="$link!=''">
+		      [<a href="{link}"><xsl:value-of select="/html/text[@id='more']"/>]</a>
+		    </xsl:if>
+		  </p>
+
+		  <p class="date">
+		    <xsl:value-of select="@date" />
 		  </p>
 		</xsl:for-each>
 	      </body>
 	    </xsl:template>
+-->
 
+<!--
 	    <xsl:template match="@*|node()" priority="-1">
 	      <xsl:copy>
 		<xsl:apply-templates select="@*|node()"/>
@@ -172,8 +180,9 @@
 	    </xsl:template>
 
 	    <xsl:template match="set"/>
-	    <xsl:template match="text"/> -->
-          
+	    <xsl:template match="text"/>
+-->
+       
             <p>
               Subscribe to FSFE's monthly newsletter
             </p>

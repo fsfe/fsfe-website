@@ -10,7 +10,7 @@ input[type=submit],
 button,
 select,
 .button {
-  background-image: url("input-bg.png");
+  background-image: url("../graphics/input-bg.png");
   background-repeat: repeat-x;
   background-position: 0 0;
   border-top: 1px solid rgb(132,132,132);
@@ -31,7 +31,8 @@ select,
 
 input[type=url],
 input[type=email],
-input[type=text], 
+input[type=text],
+textarea, 
 select {
   padding: 5px 8px 5px 30px;
 }
@@ -41,11 +42,7 @@ input[type="image"] {
   position:absolute;
 }
 
-select {
-  padding: 2px 0;
-  width: 132px;
-}
-
+/*
 input[type=submit],
 button,
 .button {
@@ -58,8 +55,9 @@ button,
   /*
    * Opera and WebKit listens to border-radius, while Firefox requires the
    * prefix.
-   */
+   *
 }
+*/
 
 input[_placeholder_on] {
   color: rgb(120,120,120);

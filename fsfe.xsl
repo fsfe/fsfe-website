@@ -147,6 +147,10 @@
 
       <!-- Service notice (for downtime, upgrades, etc. enable this) -->
       <div id="service-notice">
+	<span class="close">
+	  <a title="dismiss this notification">×</a>
+	</span>
+
 	<h1>Site currently under development</h1>
 
 	<p>

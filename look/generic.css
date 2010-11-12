@@ -165,11 +165,11 @@ ol {
 }
 
 #statement {
-  color: #787878;
+  color: rgb(140,140,140);
   float: left;
   font-size: 120%;
-  margin: 3em 0 0 8%;
-  max-width: 60%;
+  margin: 3em 0 0 280px;
+  padding-right: 1em;
 }
 
 #statement a {

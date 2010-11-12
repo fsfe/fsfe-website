@@ -146,7 +146,7 @@
 	      <body>
 		<xsl:apply-templates />
 
-		<!-- $today = current date (given as <html date="...">) -\REMOVE ME->
+		<!-- $today = current date (given as <html date="...">) -\REMOVE ME-->
 		<xsl:variable name="today">
 		  <xsl:value-of select="/html/@date" />
 		</xsl:variable>

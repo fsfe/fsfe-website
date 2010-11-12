@@ -45,7 +45,7 @@
   <!-- Show a single newsletter entry -->
   <xsl:template name="newsletter">
     <xsl:variable name="link"><xsl:value-of select="link" /></xsl:variable>
-    <li><a href="{link}"><xsl:value-of select="title" /></a></li>
+    <li><a href="{link}"><xsl:value-of select="@date" /></a></li>
   </xsl:template>
 
   <!-- Show a single event -->
@@ -131,7 +131,7 @@
 
           <xsl:for-each select="/html/set/news[translate (@date, '-', '') &lt;= translate ($today, '-', '')]">
             <xsl:sort select="@date" order="descending" />
-            <xsl:if test="position() &lt; 6">
+o            <xsl:if test="position() &lt; 6">
               <xsl:call-template name="news" />
             </xsl:if>
           </xsl:for-each>
@@ -214,7 +214,9 @@
 				  [translate(@date, '-', '') &lt;= translate($today, '-', '')
 				  and (@type = 'newsletter')]">
 	      <xsl:sort select="@date" order="descending" />
-	      <xsl:call-template name="newsletter" />
+	      <xsl:if test="position()&lt;3">
+		<xsl:call-template name="newsletter" />
+	      </xsl:if>
 	    </xsl:for-each>
 	    </ul>
           </div><!-- /.entry -->

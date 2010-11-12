@@ -44,8 +44,21 @@
 
   <!-- Show a single newsletter entry -->
   <xsl:template name="newsletter">
-    <xsl:variable name="link"><xsl:value-of select="link" /></xsl:variable>
-    <li><a href="{link}"><xsl:value-of select="@date" /></a></li>
+    <xsl:variable name="date">
+      <xsl:value-of select="@date" />
+    </xsl:variable>
+
+    <xsl:variable name="link">
+      <xsl:value-of select="link" />
+    </xsl:variable>
+    
+    <xsl:variable name="month">
+      <xsl:call-template name="dt:get-month-name">
+	<xsl:with-param name="month" select="substring($date,6,2)" />
+      </xsl:call-template>
+    </xsl:variable>
+
+    <li><a href="{link}">Newsletter from <xsl:value-of select="month" /></a></li>
   </xsl:template>
 
   <!-- Show a single event -->

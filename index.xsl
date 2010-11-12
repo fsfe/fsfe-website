@@ -173,7 +173,7 @@
 				  [translate(@date, '-', '') &lt;= translate($today, '-', '')
 				  and (@type = 'newsletter')]">
 	      <xsl:sort select="@date" order="descending" />
-	      <xsl:if test="position()&lt;3">
+	      <xsl:if test="position()&lt;4">
 		<xsl:call-template name="newsletter" />
 	      </xsl:if>
 	    </xsl:for-each>

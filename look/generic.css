@@ -1068,7 +1068,8 @@ table.noborders th {
   font-weight: bold;
 }
 
-#service-notice a {
+#service-notice a:link,
+#service-notice a:visited {
   color: rgb(214,234,245);
 }
 

@@ -131,7 +131,7 @@
 
           <xsl:for-each select="/html/set/news[translate (@date, '-', '') &lt;= translate ($today, '-', '')]">
             <xsl:sort select="@date" order="descending" />
-o            <xsl:if test="position() &lt; 6">
+            <xsl:if test="position() &lt; 6">
               <xsl:call-template name="news" />
             </xsl:if>
           </xsl:for-each>
@@ -141,69 +141,28 @@ o            <xsl:if test="position() &lt; 6">
           <h2><a href="/news/newsletter.html">Newsletter</a></h2>
           
           <div class="entry">
-
-<!--
-	    <xsl:template match="/">
-	      <xsl:copy>
-		<xsl:apply-templates select="@*|node()"/>
-	      </xsl:copy>
-	    </xsl:template>
-
-	    <xsl:template match="/html/body">
-	      <body>
-		<xsl:apply-templates />
-
-		$today = current date (given as <html date="...">)
-		<xsl:variable name="today">
-		  <xsl:value-of select="/html/@date" />
-		</xsl:variable>
-
-		<xsl:for-each select="/html/set/news[translate(@date,'-','') &lt;= translate($today,'-','')]">
-		  <xsl:sort select="@date" order="descending" />
-		  
-		  <p>
-		    <xsl:value-of select="body"/>
-		    <xsl:variable name="link"><xsl:value-of select="link"/></xsl:variable>
-		    
-		    <xsl:if test="$link!=''">
-		      [<a href="{link}"><xsl:value-of select="/html/text[@id='more']"/>]</a>
-		    </xsl:if>
-		  </p>
-
-		  <p class="date">
-		    <xsl:value-of select="@date" />
-		  </p>
-		</xsl:for-each>
-	      </body>
-	    </xsl:template>
--->
-
-<!--
-	    <xsl:template match="@*|node()" priority="-1">
-	      <xsl:copy>
-		<xsl:apply-templates select="@*|node()"/>
-	      </xsl:copy>
-	    </xsl:template>
-
-	    <xsl:template match="set"/>
-	    <xsl:template match="text"/>
--->
-       
             <p>
               Subscribe to FSFE's monthly newsletter
             </p>
 
             <form method="post" action="http://mail.fsfeurope.org/mailman/subscribe/press-release">
               <p>
-                <select>
-                  <option selected="selected">English</option>
-                  <option>Deutsch</option>
-                  <option>Italiano</option>
-                  <option>Svenska</option>
+		<label for="language">Language</label>
+                <select id="language" name="language">
+                  <option value="en" selected="selected">English</option>
+  		  <option value="el">Ελληνικά</option>	
+		  <option value="es">Español</option>
+		  <option value="de">Deutsch</option>
+		  <option value="fr">Français</option>
+                  <option value="it">Italiano</option>
+		  <option value="nl">Nederlands</option>
+		  <option value="pt">Português</option>
+		  <option value="ru">Русский</option>
+                  <option value="sv">Svenska</option>
                 </select>
           
-                <input type="image" src="/graphics/email-button.png" />
-                <input name="email" type="email" placeholder="address" />
+		<label for="email">Email</label>
+                <input id="email" name="email" type="email" />
                 
                 <input type="submit" value="Subscribe" />
               </p>

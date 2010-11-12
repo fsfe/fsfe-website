@@ -42,6 +42,12 @@
     </div>
   </xsl:template>
 
+  <!-- Show a single newsletter entry -->
+  <xsl:template name="newsletter">
+    <xsl:variable name="link"><xsl:value-of select="link" /></xsl:variable>
+    <li><a href="{link}"><xsl:value-of select="title" /></a></h3>
+  </xsl:template>
+
   <!-- Show a single event -->
   <xsl:template name="event">
 
@@ -135,7 +141,7 @@
           <h2><a href="/news/newsletter.html">Newsletter</a></h2>
           
           <div class="entry">
- 
+
 <!--
 	    <xsl:template match="/">
 	      <xsl:copy>
@@ -202,6 +208,15 @@
                 <input type="submit" value="Subscribe" />
               </p>
             </form>
+
+	    <ul>
+ 	    <xsl:for-each select="/html/set/news
+				  [translate(@date, '-', '') &lt;= translate($today, '-', '')
+				  and (@type = 'newsletter')]">
+	      <xsl:sort select="@date" order="descending" />
+	      <xsl:call-template name="newsletter" />
+	    </xsl:for-each>
+	    </ul>
           </div><!-- /.entry -->
         </div> <!-- /#newsletter -->
 

@@ -147,8 +147,12 @@
 
       <!-- Service notice (for downtime, upgrades, etc. enable this) -->
       <div id="service-notice">
+	<h1>Site currently under development</h1>
+
 	<p>
-	  Site currently under development.
+	  If you want to help out, <a
+	  href="/contribute/web/web.en.html">consider joining the web
+	  team</a>.
 	</p>
       </div>
 

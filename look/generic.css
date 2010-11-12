@@ -176,14 +176,24 @@ ol {
   padding-left: 1em;
 }
 
+
+/* sidebar */
+#menu,
+#search,
+#translations {
+  margin-bottom: 1em;
+  clear: left;
+  float: left;
+}
+
+#search,
+#translations {
+  padding-left: .5em;
+}
+
 #menu h2 {
   font-size: 100%;
   color: #787878;
-}
-
-#translations {
-  padding-left: .5em;
-  clear: both;
 }
 
 #translations ul {
@@ -194,26 +204,6 @@ ol {
 #translations ul li {
   list-style: none;
   line-height: 120%;
-}
-
-#menu,
-#fellowship,
-#search {
-  margin-bottom: 1em;
-}
-
-#fellowship,
-#search {
-  clear: left;
-  float: left;
-}
-
-#fellowship img {
-  width: 100%;
-}
-
-#search h1 {
-  display: none;
 }
 
 

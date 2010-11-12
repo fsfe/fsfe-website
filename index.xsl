@@ -58,7 +58,7 @@
       </xsl:call-template>
     </xsl:variable>
 
-    <li><a href="{link}">Newsletter from <xsl:value-of select="month" /></a></li>
+    <li><a href="{link}">Newsletter from <xsl:value-of select="$month" /></a></li>
   </xsl:template>
 
   <!-- Show a single event -->

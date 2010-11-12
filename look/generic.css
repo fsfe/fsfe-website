@@ -12,40 +12,40 @@
 @import url("input.css");
 
 * {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  font-family: "Arial", sans-serif;
-	font-size: 12px;
-	line-height: 180%;
-	color: rgb(50,50,50);
-	background-color: rgb(240,240,240);
-	background-image: url("banner_gray.png");
-	background-repeat: no-repeat;
-	background-position: 15px 70px;
+    font-family: "Arial", sans-serif;
+    font-size: 12px;
+    line-height: 180%;
+    color: rgb(50,50,50);
+    background-color: rgb(240,240,240);
+    background-image: url("banner_gray.png");
+    background-repeat: no-repeat;
+    background-position: 15px 70px;
 }
 
 a:link,
 a:visited {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 a:link {
-	color: rgb(51,148,206);
+    color: rgb(51,148,206);
 }
 
 a:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 a:visited {
-  color: rgb(153,186,206);
+    color: rgb(153,186,206);
 }
 
 a img {
-	border: 0;
+    border: 0;
 }
 
 h1,
@@ -55,96 +55,96 @@ h4,
 h5,
 h6,
 #content p#category {
-	font-family: "Helvetica", "Arial", sans-serif;
+    font-family: "Helvetica", "Arial", sans-serif;
 }
 
 h1,
 h2,
 h3 {
-	font-weight: normal;
-	line-height: normal;
+    font-weight: normal;
+    line-height: normal;
 }
 
 h2 {
-  color: #202D79;
-  font-size: 200%;
-  letter-spacing: -.5px;
-  line-height: 120%;
-  margin: .4em -.3em .5em;
-  padding: 0 .3em .2em;
+    color: #202D79;
+    font-size: 200%;
+    letter-spacing: -.5px;
+    line-height: 120%;
+    margin: .4em -.3em .5em;
+    padding: 0 .3em .2em;
 }
 
 h3 {
-	color: rgb(32,45,121);
-	line-height: 110%;
-	margin: 1.5em 0 .8em 0;
-	font-size: 190%;
+    color: rgb(32,45,121);
+    line-height: 110%;
+    margin: 1.5em 0 .8em 0;
+    font-size: 190%;
 }
 
 p {
-	margin: .8em 0;
+    margin: .8em 0;
 }
 
 pre {
-  font-family: monospace;
-  font-size: 90%;
-  line-height: 140%;
-  background-color: rgb(240,240,240);
-  border-top: 1px dotted rgb(210,210,210);
-  border-bottom: 1px dotted rgb(210,210,210);
-  padding: 1.2em 0 1.2em 187px;
-  max-height: 14em;
-  overflow: auto;
-  margin: 1em 0;
-  box-shadow: 10px 0 0 rgb(240,240,240);
+    font-family: monospace;
+    font-size: 90%;
+    line-height: 140%;
+    background-color: rgb(240,240,240);
+    border-top: 1px dotted rgb(210,210,210);
+    border-bottom: 1px dotted rgb(210,210,210);
+    padding: 1.2em 0 1.2em 187px;
+    max-height: 14em;
+    overflow: auto;
+    margin: 1em 0;
+    box-shadow: 10px 0 0 rgb(240,240,240);
 }
 
 ul,
 ol {
-  padding-left: 1.5em;
-  list-style: circle;
+    padding-left: 1.5em;
+    list-style: circle;
 }
 
 #wrapper {
-	margin: 0 4em 0 1.2em;
-	padding-bottom: 0;
-	max-width:95%;
-	min-width: 500px;
-	border-left: 1px solid rgb(240,240,240);
+    margin: 0 4em 0 1.2em;
+    padding-bottom: 0;
+    max-width:95%;
+    min-width: 500px;
+    border-left: 1px solid rgb(240,240,240);
 }
 
 #wrapper-inner {
-  float: left;
-  background-color: white;
-  padding-bottom: 3em;
-  -moz-border-radius-bottomright: 25px;
-  -moz-border-radius-bottomleft: 3px;
-  border-bottom-right-radius: 25px;
-  border-bottom-left-radius: 3px;
-  box-shadow: 3px 3px 4px rgba(0,0,0,.1);
-  -webkit-box-shadow: 3px 3px 4px rgba(0,0,0,.1);
-  -moz-box-shadow: 3px 3px 4px rgba(0,0,0,.1);
+    float: left;
+    background-color: white;
+    padding-bottom: 3em;
+    -moz-border-radius-bottomright: 25px;
+    -moz-border-radius-bottomleft: 3px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 3px;
+    box-shadow: 3px 3px 4px rgba(0,0,0,.1);
+    -webkit-box-shadow: 3px 3px 4px rgba(0,0,0,.1);
+    -moz-box-shadow: 3px 3px 4px rgba(0,0,0,.1);
 }
 
 .n {
-	display: none;
+    display: none;
 }
 
 .read_more {
-	text-align: right;
+    text-align: right;
 }
 
 .break {
-	clear: both;
+    clear: both;
 }
 
 
 /* header */
 #header {
-  background: url("/graphics/ribbon.png") no-repeat scroll left bottom transparent;
-  min-height: 220px;
-  margin: 0;
-  width: 100%
+    background: url("/graphics/ribbon.png") no-repeat scroll left bottom transparent;
+    min-height: 220px;
+    margin: 0;
+    width: 100%
 }
 
 #logo {

@@ -6,11 +6,8 @@ input[type=input],
 input[type=text],
 input[type=email],
 input[type=url],
-input[type=submit],
-button,
-select,
-.button {
-  background-image: url("../graphics/input-bg.png");
+select {
+  background-image: url("/graphics/input-bg.png");
   background-repeat: repeat-x;
   background-position: 0 0;
   border-top: 1px solid rgb(132,132,132);
@@ -21,7 +18,6 @@ select,
   text-decoration: none;
   font-family: "Lucida Grande", "Helvetica", "Arial", sans-serif;
   font-size: 9pt;
-  width:120px;
   /*
   border-radius: 11px;
   -moz-border-radius: 11px;
@@ -38,8 +34,8 @@ select {
 }
 
 input[type="image"] {
-  margin:5px 0 0 5px;
-  position:absolute;
+  margin: 5px 0 0 5px;
+  position: absolute;
 }
 
 /*

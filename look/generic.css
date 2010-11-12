@@ -855,12 +855,6 @@ h4#subpages + ul li:nth-child(odd) {
 }
 
 
-/* about */
-#frontpage #about img {
-  float: right;
-  width: 100px;
-}
-
 #frontpage .entry {
   margin-bottom: 3em;
 }
@@ -879,7 +873,7 @@ h4#subpages + ul li:nth-child(odd) {
 }
 
 
-/* item-grid (used for shop/orders */
+/* item-grid (used for shop/orders) */
 .item-grid h2 {
   border-bottom:1px solid #CCCCCC;
   margin-bottom:0;
@@ -938,21 +932,6 @@ p.donate-box, p.fellowship-box {
 
 #campaign-box-2 p.fellowship-box {
   border: 2px solid red;
-}
-
-
-/* about fsfe */
-#about-fsfe {
-  color: rgb(120,120,120);
-  font-size: 120%;
-  float: right;
-  margin: 2em 1em 7em 1em;
-  width: 67%;
-}
-
-#about-fsfe a {
-  font-weight: bold;
-  margin-left: .8em;
 }
 
 
@@ -1071,4 +1050,15 @@ table td.negative {
 table.noborders td,
 table.noborders th {
   border: 0;
+}
+
+
+/* service notice */
+#service-notice {
+  width: 100%;
+  background-color: rgb(51,148,206);
+  padding: .5em 1.5em;
+  font-size: 120%;
+  font-weight: bold;
+  color: white;
 }

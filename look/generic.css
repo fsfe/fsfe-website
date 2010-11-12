@@ -1057,8 +1057,12 @@ table.noborders th {
 #service-notice {
   width: 100%;
   background-color: rgb(51,148,206);
-  padding: .5em 1.5em;
-  font-size: 120%;
-  font-weight: bold;
+  padding: 0 2em;
+  font-size: 80%;
   color: white;
+}
+
+#service-notice h1 {
+  font-size: 120%;
+  margin-top: 0;
 }

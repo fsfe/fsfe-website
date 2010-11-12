@@ -210,3 +210,8 @@
 	width: 20%;
 }
 
+
+/* generic floating grid */
+.grid .box {
+  float: left;
+}

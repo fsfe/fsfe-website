@@ -1065,4 +1065,17 @@ table.noborders th {
 #service-notice h1 {
   font-size: 120%;
   margin-top: 0;
+  font-weight: bold;
+}
+
+#service-notice .close {
+  background-color: rgb(214,234,245);
+  border: 2px solid rgb(32,45,121);
+  color: rgb(32,45,121);
+  padding: .5em;
+  font-size: 110%;
+  font-weight: normal;
+  float: right;
+  cursor: pointer;
+  display: block;
 }

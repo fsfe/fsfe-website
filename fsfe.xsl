@@ -153,17 +153,19 @@
 
       <!-- Service notice (for downtime, upgrades, etc. enable this) -->
       <div id="service-notice">
-	<span class="close">
+	<div class="close">
 	  <a title="dismiss this notification">×</a>
-	</span>
+	</div>
 
-	<h1>Site currently under development</h1>
+	<div class="text">
+	  <h1>Site currently under development</h1>
 
-	<p>
-	  If you want to help out, <a
-	  href="/contribute/web/web.en.html">consider joining the web
-	  team</a>.
-	</p>
+	  <p>
+	    If you want to help out, <a
+	    href="/contribute/web/web.en.html">consider joining the
+	    web team</a>.
+	  </p>
+	</div>
       </div>
 
       <xsl:element name="div">

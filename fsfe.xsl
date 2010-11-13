@@ -2,9 +2,13 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
+  <!--
   <xsl:output method="html" encoding="utf-8" indent="yes"
     doctype-public="-//W3C//DTD HTML 4.0 Transitional//EN"
     doctype-system="http://www.w3.org/TR/REC-html40/loose.dtd"/>
+  -->
+
+  <xsl:output method="html" encoding="utf-8" indent="yes" />
 
   <!-- The top level element of the input file is "buildinfo" -->
   <xsl:template match="buildinfo">
@@ -55,6 +59,8 @@
         <xsl:attribute name="href">/events/events.<xsl:value-of select="/buildinfo/@language" />.rss</xsl:attribute>
         <xsl:attribute name="type">application/rss+xml</xsl:attribute>
       </xsl:element>
+      <script type="text/javascript" src="/scripts/jquery.js"></script>
+      <script type="text/javascript" src="/scripts/master.js"></script>
       <script type="text/javascript" src="/scripts/placeholder.js"></script>
       <xsl:apply-templates select="@*|node()"/>
     </xsl:copy>

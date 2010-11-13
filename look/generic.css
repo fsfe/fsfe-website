@@ -1087,24 +1087,27 @@ table.noborders th {
 
 #service-notice .close {
   margin: .4em 2em 0 0;
+  float: right;
 }
 
 #service-notice .close a {
   background-color: rgb(137,226,245);
-  border: 2px solid rgb(120,210,238);
+  border: 2px solid rgb(51,148,206);
   padding: .2em .4em;
   font-size: 180%;
   font-weight: normal;
-  float: right;
   cursor: pointer;
-  border-radius: 100%;
-  -webkit-border-radius: 100%;
-  -moz-border-radius: 100%;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
 }
 
-#service-notice .close,
 #service-notice .close a:link,
 #service-notice .close a:visited {
-  /*color: rgb(32,45,121);*/
-  color: rgb(120,210,238);
+  color: rgb(51,148,206);
+}
+
+#service-notice .close a:hover,
+#service-notice .clsoe a:active {
+  color: rgb(32,45,121);
 }

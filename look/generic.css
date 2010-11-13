@@ -1059,7 +1059,6 @@ table.noborders th {
   position: fixed;
   background-color: rgb(51,148,206);
   border-bottom: 1px solid rgb(41,138,196);
-  padding: .6em 2em;
   font-size: 90%;
   color: white;
   line-height: 120%;
@@ -1082,6 +1081,10 @@ table.noborders th {
   color: rgb(214,234,245);
 }
 
+#service-notice .text {
+  padding: .6em 2em;
+}
+
 #service-notice .close {
   background-color: rgb(137,226,245);
   border: 2px solid rgb(32,45,121);
@@ -1091,7 +1094,6 @@ table.noborders th {
   font-weight: normal;
   float: right;
   cursor: pointer;
-  display: block;
 }
 
 #service-notice .close,

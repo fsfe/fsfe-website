@@ -8,7 +8,7 @@
     doctype-system="http://www.w3.org/TR/REC-html40/loose.dtd"/>
   -->
 
-  <xsl:output method="html" encoding="utf-8" indent="yes" />
+  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-public="" doctype-system="" />
 
   <!-- The top level element of the input file is "buildinfo" -->
   <xsl:template match="buildinfo">

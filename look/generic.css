@@ -1056,6 +1056,7 @@ table.noborders th {
 
 /* service notice */
 #service-notice {
+  position: fixed;
   background-color: rgb(51,148,206);
   border-bottom: 1px solid rgb(41,138,196);
   padding: .6em 2em;

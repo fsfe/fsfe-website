@@ -556,17 +556,16 @@ h4#subpages + ul li:nth-child(odd) {
 
 /* menu */
 #menu a {
-  color: #808080;
+  color: rgb(110,110,110);;
   text-decoration: none;
   display: block;
   padding: 1.1em 0 1.1em 0.8em;
   line-height: 50%;
-  font-size: 15.5px;
 }
 
 #menu ul {
   list-style: none;
-  margin: 0;
+  margin: 0 0 0 -15px;
   padding: 0;
 }
 
@@ -597,8 +596,9 @@ h4#subpages + ul li:nth-child(odd) {
   background-color: white;
 }
 
-#menu ul li ul {
+#menu ul li ul {  /* “submenu */
   border-left: none;
+  font-size: 120%;
 }
 
 #menu ul li.fsfe a {

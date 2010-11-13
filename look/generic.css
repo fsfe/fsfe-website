@@ -1085,7 +1085,7 @@ table.noborders th {
   padding: .6em 2em;
 }
 
-#service-notice .close {
+#service-notice .close a {
   background-color: rgb(137,226,245);
   border: 2px solid rgb(32,45,121);
   padding: .2em .4em;

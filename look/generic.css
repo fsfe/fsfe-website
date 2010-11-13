@@ -197,7 +197,8 @@ ol {
 }
 
 #search input[type="text"] {
-  padding: 5px 8px 5px 35px;
+  padding: 5px 8px 5px 28px;
+  width: 140px;
 }
 
 #translations ul {
@@ -252,8 +253,8 @@ ol {
 }
 
 #content h3 {
-  font-size: 130%;
-  margin-top: 1.5em;
+  font-size: 140%;
+  margin: 1.5em 0 .2em 0;
 }
 
 #content .image {

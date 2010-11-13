@@ -1055,11 +1055,11 @@ table.noborders th {
 
 /* service notice */
 #service-notice {
-  width: 100%;
   background-color: rgb(51,148,206);
   padding: .2em 2em;
-  font-size: 85%;
+  font-size: 90%;
   color: white;
+  line-height: 120%;
 }
 
 #service-notice h1 {
@@ -1068,19 +1068,28 @@ table.noborders th {
   font-weight: bold;
 }
 
+#service-notice p {
+  margin: .4em 0;
+}
+
 #service-notice a:link,
 #service-notice a:visited {
   color: rgb(214,234,245);
 }
 
 #service-notice .close {
-  background-color: rgb(214,234,245);
+  background-color: rgb(137,226,245);
   border: 2px solid rgb(32,45,121);
-  color: rgb(32,45,121);
-  padding: .5em;
+  padding: .2em .8em;
   font-size: 110%;
   font-weight: normal;
   float: right;
   cursor: pointer;
   display: block;
+}
+
+#service-notice .close,
+#service-notice .close a:link,
+#service-notice .close a:visited {
+  color: rgb(32,45,121);
 }

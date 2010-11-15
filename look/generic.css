@@ -564,11 +564,12 @@ h4#subpages + ul li:nth-child(odd) {
   display: block;
   padding: 1.1em 0 1.1em 0.8em;
   line-height: 50%;
+  font-size: 15.5px;
 }
 
 #menu ul {
   list-style: none;
-  margin: 0 0 0 -15px;
+  margin: 0 0 0 0;
   padding: 0;
 }
 

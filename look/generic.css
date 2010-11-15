@@ -117,7 +117,7 @@ ol {
 }
 
 #wrapper {
-  margin: 0 4em 0 1.2em;
+  margin:0 5% 0 1%;
   padding-bottom: 0;
   max-width: 980px;
   min-width: 500px;
@@ -159,17 +159,18 @@ ol {
 }
 
 #logo {
-  margin: 1em 0 0 1em;
-  width: 215px;
-  float: left;
+  float:left;
+  margin:1em 0 0 1%;
+  max-width:29%;
+  width:215px;
 }
 
 #statement {
   color: rgb(140,140,140);
-  float: left;
-  font-size: 120%;
-  margin: 3em 0 0 280px;
-  padding-right: 1em;
+  float:left;
+  font-size:120%;
+  margin:3em 2% 0 8%;
+  width:60%;
 }
 
 #statement a {
@@ -218,12 +219,14 @@ ol {
 
 /* content specific */
 #content {
-  clear: right;
-  float: left;
-  font-size: 112%;
-  max-width: 78%;
-  min-height: 400px;
-  padding: 0 1em 0 1em;
+  clear:right;
+  float:left;
+  font-size:112%;
+  min-height:400px;
+  min-width:400px;
+  padding-left:3%;
+  padding-right:4%;
+  width:78%;
 }
 
 #content p#category {

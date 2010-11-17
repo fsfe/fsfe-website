@@ -59,9 +59,7 @@
     </xsl:variable>
     
     <xsl:variable name="year">
-      <xsl:call-template name="dt:get-year-number">
-	<xsl:with-param name="year" select="substring($date,0,4)" />
-      </xsl:call-template>
+      <xsl:value-of select="substring($date,0,4)" />
     </xsl:variable>
 
     <li><a href="{link}">Newsletter from <xsl:value-of select="$month" /> <xsl:value-of select="$year" /></a></li>

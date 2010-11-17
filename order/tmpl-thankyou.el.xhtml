@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<html>
+  <head>
+    <title>Ευρωπαϊκό Ίδρυμα Ελεύθερου Λογισμικού - Σας ευχαριστούμε για την
+     παραγγελία σας!</title>
+  </head>
+
+  <body>
+    <h1>Σας ευχαριστούμε για την παραγγελία σας!</h1>
+
+    <p>
+      Το συνολικό κόστος της παραγγελίας σας είναι <strong>€:AMOUNT:</strong>.
+      Μπορείτε να καταβάλλετε το ποσό με τραπεζική μεταφορά ή μπορείτε να
+      χρησιμοποιήσετε PayPal.
+    </p>
+
+    <h3>Τραπεζική μεταφορά</h3>
+
+    <p>
+      Για να καταβάλλετε το ποσό μέσω τραπεζικού λογαριασμού, παρακαλούμε
+      χρησιμοποιήστε τα δεδομένα των ακόλουθων τραπεζικών λογαριασμών:
+    </p>
+
+    <dl>
+      <dt>Για μεταφορές χρηματικών ποσών εντός Γερμανίας:</dt>
+      <dd>
+        Free Software Foundation Europe e.V.<br/>
+        Konto 3004732, BLZ 36020030, National-Bank Essen, Germany<br/>
+      </dd>
+
+      <dt>Για διεθνείς μεταφορές ποσών:</dt>
+      <dd>
+        Free Software Foundation Europe e.V.<br/>
+        National-Bank Essen, Germany<br/>
+        IBAN: DE69 3602 0030 0003 0047 32<br/>
+        SWIFT/BIC: NBAGDE3E
+      </dd>
+    </dl>
+
+    <p>
+      Παρακαλούμε συμπεριλάβετε το <strong>:REFERENCE:</strong> ως στοιχείο
+      πληρωμής.
+    </p>
+
+    <h3>PayPal</h3>
+
+    <p>
+      Μπορείτε επίσης να καταθέσετε το ποσό με πιστωτική κάρτα ή άλλους
+      τρόπους πληρωμής αποδεκτούς από το PayPal. Αν επιθυμείτε να το κάνετε,
+      απλώς πατήστε στο κουμπί από κάτω.
+    </p>
+
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+      <center>
+        <input type="hidden" name="cmd" value="_xclick"/>
+        <input type="hidden" name="business" value="paypal@fsfeurope.org"/>
+        <input type="hidden" name="image_url" value="http://fsfeurope.org/graphics/logo.png"/>
+        <input type="hidden" name="item_number" value=":REFERENCE:"/>
+        <input type="hidden" name="item_name" value="Online Order"/>
+        <input type="hidden" name="amount" value=":AMOUNT:"/>
+        <input type="hidden" name="currency_code" value="EUR"/>
+        <input type="hidden" name="no_note" value="1"/>
+        <input type="hidden" name="no_shipping" value="1"/>
+        <input type="submit" name="submit" value="Pay with PayPal"/>
+      </center>
+    </form>
+  </body>
+
+  <timestamp>$Date$ $Author$</timestamp>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

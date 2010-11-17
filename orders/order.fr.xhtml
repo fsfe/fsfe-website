@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<html>
+  <head>
+    <title>Free Software Foundation Europe - Boutique</title>
+  </head>
+
+  <body>
+    <h1>La boutique de la FSFE</h1>
+    
+    <form action="/cgi-bin/weborder.pl" method="post">
+      <h2>T-Shirts homme</h2>
+ 
+      <dynamic-content type="t-shirt"/>
+
+      <h2>T-Shirts femme</h2>
+ 
+      <dynamic-content type="girlie"/>
+
+      <h2>Sweatshirts à capuche</h2>
+ 
+      <dynamic-content type="hooded"/>
+
+      <h2>Autres objets</h2>
+
+      <dynamic-content type="other"/>
+      
+      <h2>Objets promotionnels</h2>
+    
+      <p>
+	Visitez la <a href="/documents/printable/printable.html">page des supports d'information imprimables</a> pour commander des dossiers et des tracts.
+      </p>
+
+      <h2>Expédition</h2>
+
+      <p>
+        <input type="hidden" name="shipping" value="1"/>
+        <input type="radio" name="_shipping" value="3"/>
+        Expédition en Allemagne (3,00 €)<br/>
+        <input type="radio" name="_shipping" value="7" checked="Y"/>
+        Expédition en Europe (7,00 €)<br/>
+        <input type="radio" name="_shipping" value="12"/>
+        Expédition en dehors de l'Europe (12,00 €)<br/>
+      </p>
+
+      <table>
+        <tr>
+          <td><p>Nom&#160;:</p></td>
+          <td>
+            <input type="text" size="80" style="width:500px" name="name"/>
+          </td>
+        </tr>
+        <tr>
+          <td><p>Adresse&#160;:</p></td>
+          <td>
+            <textarea cols="80" rows="5" style="width:500px" name="address"/>
+          </td>
+        </tr>
+        <tr>
+          <td><p>Courriel&#160;:</p></td>
+          <td>
+            <input type="text" size="80" style="width:500px" name="email"/>
+          </td>
+        </tr>
+        <tr>
+          <td><p>Téléphone&#160;:</p></td>
+          <td>
+            <input type="text" size="80" style="width:500px" name="phone"/>
+          </td>
+        </tr>
+      </table>
+
+      <!-- Should help against spam -->
+      <p class="n">
+        Merci de ne rien écrire dans cette case&#160;:
+        <input type="text" size="40" name="url"/>
+      </p>
+
+      <center>
+        <!-- Translators: Please also translate the value here, it's the label of the button -->
+        <input type="submit" value="Commander ces objets"/>
+      </center>
+      <!-- Translators: Please change the value here to your language -->
+      <input type="hidden" name="language" value="fr"/>
+    </form>
+  </body>
+
+  <timestamp>$Date$ $Author$</timestamp>
+  <translator>Michel Roche (Vercors-France)</translator>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

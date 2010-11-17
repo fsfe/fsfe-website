@@ -57,8 +57,14 @@
 	<xsl:with-param name="month" select="substring($date,6,2)" />
       </xsl:call-template>
     </xsl:variable>
+    
+    <xsl:variable name="year">
+      <xsl:call-template name="dt:get-year-number">
+	<xsl:with-param name="year" select="substring($date,0,4)" />
+      </xsl:call-template>
+    </xsl:variable>
 
-    <li><a href="{link}">Newsletter from <xsl:value-of select="$month" /></a></li>
+    <li><a href="{link}">Newsletter from <xsl:value-of select="$month" /> <xsl:value-of select="$year" /></a></li>
   </xsl:template>
 
   <!-- Show a single event -->
@@ -160,7 +166,6 @@
 
             <form method="post" action="http://mail.fsfeurope.org/mailman/subscribe/press-release">
               <p>
-		<label for="language">Language</label>
                 <select id="language" name="language">
                   <option value="en" selected="selected">English</option>
   		  <option value="el">Ελληνικά</option>	
@@ -173,9 +178,8 @@
 		  <option value="ru">Русский</option>
                   <option value="sv">Svenska</option>
                 </select>
-          
-		<label for="email">Email</label>
-                <input id="email" name="email" type="email" />
+                
+                <input id="email" name="email" type="email" placeholder="email" />
                 
                 <input type="submit" value="Subscribe" />
               </p>
@@ -190,6 +194,7 @@
 		<xsl:call-template name="newsletter" />
 	      </xsl:if>
 	    </xsl:for-each>
+	    <li><a href="news/newsletter.html"><xsl:value-of select="/buildinfo/textset/text[@id='menu1/news']" />...</a></li>
 	    </ul>
           </div><!-- /.entry -->
         </div> <!-- /#newsletter -->

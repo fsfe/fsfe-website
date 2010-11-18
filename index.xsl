@@ -62,7 +62,7 @@
       <xsl:value-of select="substring($date,0,5)" />
     </xsl:variable>
 
-    <li><a href="{link}">Newsletter from <xsl:value-of select="$month" />  <xsl:value-of select="$year" /></a></li>
+    <li><a href="{link}">Newsletter from <xsl:value-of select="$month" />&nbsp;<xsl:value-of select="$year" /></a></li>
   </xsl:template>
 
   <!-- Show a single event -->

@@ -905,6 +905,7 @@ h4#subpages + ul li:nth-child(odd) {
   -webkit-border-radius: 10px;
   border-radius: 10px;
   background:url('/graphics/pdf-banner.png') no-repeat top left;
+  overflow:hidden;
 }
 
 #campaign-box-1 h3 {

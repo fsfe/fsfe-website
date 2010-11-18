@@ -192,7 +192,7 @@
 		<xsl:call-template name="newsletter" />
 	      </xsl:if>
 	    </xsl:for-each>
-	    <li><a href="news/newsletter.html"><xsl:value-of select="/buildinfo/textset/text[@id='menu1/news']" />...</a></li>
+	    <li><a href="news/newsletter.html"><xsl:value-of select="/buildinfo/textset/text[@id='more']" />...</a></li>
 	    </ul>
           </div><!-- /.entry -->
         </div> <!-- /#newsletter -->

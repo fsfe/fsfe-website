@@ -924,6 +924,7 @@ h4#subpages + ul li:nth-child(odd) {
 }
 
 p.donate-box, p.fellowship-box {
+  font-family:Lucida Sans;
   height: 94px;
   border-radius: 7px;
   -moz-border-radius: 7px;

@@ -177,7 +177,11 @@
                   <option value="sv">Svenska</option>
                 </select>
                 
-                <input id="email" name="email" type="email" placeholder="email" />
+		<xsl:element name="email">
+		  <xsl:attribute name="id">email</xsl:attribute>
+		  <xsl:attribute name="type">email</xsl:attribute>
+		  <xsl:attribute name="placeholder"><xsl:value-of select="/buildinfo/textset/text[@id='email-address-label']" /></xsl:attribute>
+		</xsl:element>
                 
                 <input type="submit" value="Subscribe" />
               </p>
@@ -192,7 +196,7 @@
 		<xsl:call-template name="newsletter" />
 	      </xsl:if>
 	    </xsl:for-each>
-	    <li><a href="news/newsletter.html"><xsl:value-of select="/buildinfo/textset/text[@id='more']" />...</a></li>
+	    <li><a href="news/newsletter.html"><xsl:value-of select="/buildinfo/textset/text[@id='email-address-label']" />...</a></li>
 	    </ul>
           </div><!-- /.entry -->
         </div> <!-- /#newsletter -->

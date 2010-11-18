@@ -904,11 +904,13 @@ h4#subpages + ul li:nth-child(odd) {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
+  background:url('/graphics/pdf-banner.png') no-repeat top left;
 }
 
-#campaign-box-1 img {
-  margin: 0;
-  float: none;
+#campaign-box-1 h3 {
+  width:40%;
+  font-size:2em;
+  margin:1.5em;
 }
 
 #campaign-box-2 {

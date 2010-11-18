@@ -574,6 +574,7 @@ h4#subpages + ul li:nth-child(odd) {
 
 #menu ul li a {
   font-weight: bold;
+  min-width:120px;
 }
 
 #menu ul li ul li a {

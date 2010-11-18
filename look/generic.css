@@ -921,17 +921,19 @@ h4#subpages + ul li:nth-child(odd) {
 
 #campaign-box-2 p {
   margin: 0;
-  padding:0;
+  padding:1.5em;
 }
 
 a.donate-box, a.fellowship-box {
+  display:block;
   font-family:Lucida Sans;
   height: 94px;
   border-radius: 7px;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.8em;
+  font-weight:bold;
 }
 
 #campaign-box-2 a.donate-box {

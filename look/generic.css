@@ -22,6 +22,12 @@ Editing rules:
 @import url("grid.css");
 @import url("input.css");
 
+/* Custom fonts */
+@font-face {
+  font-family: Lucida Sans;
+  src: url('/fonts/LSANS.TTF');
+}
+
 * {
   margin: 0;
   padding: 0;

@@ -918,21 +918,29 @@ h4#subpages + ul li:nth-child(odd) {
 }
 
 p.donate-box, p.fellowship-box {
-  height: 90px;
-  border-radius: 10px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
+  height: 94px;
+  border-radius: 7px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
   text-align: center;
   font-size: 1.5em;
 }
 
 #campaign-box-2 p.donate-box {
-  border: 2px solid red;
+  color:#3394ce;
+  -moz-box-shadow:inset 0 0 6px #00222b;
+  -webkit-box-shadow:inset 0 0 6px #00222b;
+  box-shadow:inset 0 0 6px #00222b;
   margin: 0 0 12px;
+  background:url("/graphics/donate-button-bg.png") no-repeat top left;
 }
 
 #campaign-box-2 p.fellowship-box {
-  border: 2px solid red;
+  color:#70d055;
+  -moz-box-shadow:inset 0 0 6px #17280b;
+  -webkit-box-shadow:inset 0 0 6px #17280b;
+  box-shadow:inset 0 0 6px #17280b;
+  background:url("/graphics/join-button-bg.png") no-repeat top left;
 }
 
 

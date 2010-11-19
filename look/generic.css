@@ -894,12 +894,13 @@ h4#subpages + ul li:nth-child(odd) {
 /* Front page */
 #campaigns-boxes {
   overflow: hidden;
-  margin-bottom: 1.5em;
+  margin-bottom: -1em;
   height: 200px;
 }
 
 #campaign-box-1 {
   width: 65%;
+  height:100%;
   float: left;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -909,9 +910,11 @@ h4#subpages + ul li:nth-child(odd) {
 }
 
 #campaign-box-1 h3 {
-  width:40%;
+  color:white;
+  font-family:lucida Sans;
   font-size:2em;
   margin:0.5em;
+  width:50%;
 }
 
 #campaign-box-2 {

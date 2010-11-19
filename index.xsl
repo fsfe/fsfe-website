@@ -31,9 +31,6 @@
           <h3><xsl:value-of select="title" /></h3>
         </xsl:otherwise>
       </xsl:choose>
-      <!--
-      <p><xsl:value-of "html/@newsdate" /></p>
-      -->
       
       <div class="text">
         <xsl:apply-templates select="body/node()" />
@@ -188,15 +185,15 @@
             </form>
 
 	    <ul>
- 	    <xsl:for-each select="/html/set/news
-				  [translate(@date, '-', '') &lt;= translate($today, '-', '')
-				  and (@type = 'newsletter')]">
-	      <xsl:sort select="@date" order="descending" />
-	      <xsl:if test="position()&lt;4">
-		<xsl:call-template name="newsletter" />
-	      </xsl:if>
-	    </xsl:for-each>
-	    <li><a href="news/newsletter.html"><xsl:value-of select="/buildinfo/textset/text[@id='email-address-label']" />...</a></li>
+	      <xsl:for-each select="/html/set/news
+				    [translate(@date, '-', '') &lt;= translate($today, '-', '')
+				    and (@type = 'newsletter')]">
+		<xsl:sort select="@date" order="descending" />
+		<xsl:if test="position()&lt;3">
+		  <xsl:call-template name="newsletter" />
+		</xsl:if>
+	      </xsl:for-each>
+	      <li><a href="news/newsletter.html"><xsl:value-of select="/buildinfo/textset/text[@id='email-address-label']" />...</a></li>
 	    </ul>
           </div><!-- /.entry -->
         </div> <!-- /#newsletter -->

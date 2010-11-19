@@ -140,7 +140,7 @@
         <div id="news" class="section">
           <h2>
             <a class="rss-feed" href="/news.rss"><img src="/graphics/rss.png" alt="News RSS" title="news RSS feed" /></a>
-            <a class="identica" href="http://identi.ca/fsfe"><img class="ical" src="/graphics/identica.png" alt="identica" title="follow FSFE on identi.ca"/></a>
+            <a class="ical" href="http://identi.ca/fsfe"><img src="/graphics/identica.png" alt="identica" title="follow FSFE on identi.ca"/></a>
             <a href="/news/news.html"><xsl:value-of select="/html/text[@id='news']"/></a>
           </h2>
 

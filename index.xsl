@@ -139,8 +139,8 @@
       <div id="feeds">
         <div id="news" class="section">
           <h2>
-            <a class="rss-feed" href="/news.rss"><img src="/graphics/rss.png" alt="News RSS" /></a>
-            <a class="identica" href="http://identi.ca/fsfe"><img src="/graphics/identica.png" alt="identica" title="follow FSFE on identi.ca"/></a>
+            <a class="rss-feed" href="/news.rss"><img src="/graphics/rss.png" alt="News RSS" title="news RSS feed" /></a>
+            <a class="identica" href="http://identi.ca/fsfe"><img class="ical" src="/graphics/identica.png" alt="identica" title="follow FSFE on identi.ca"/></a>
             <a href="/news/news.html"><xsl:value-of select="/html/text[@id='news']"/></a>
           </h2>
 
@@ -201,7 +201,7 @@
 
         <div id="events" class="section">
           <h2>
-            <a class="rss-feed" href="/events.rss"><img src="/graphics/rss.png" alt="Events RSS" /></a>
+            <a class="rss-feed" href="/events.rss"><img src="/graphics/rss.png" alt="Events RSS" title="events RSS feed" /></a>
             <a class="ical" href="/events.ical"><img src="/graphics/ical.png" alt="iCal" title="FSFE events as iCal feed" /></a>
             <a href="/events/events.html"><xsl:value-of select="/html/text[@id='events']"/></a>
           </h2>

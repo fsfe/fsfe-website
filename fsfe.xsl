@@ -203,7 +203,7 @@
 	      <xsl:element name="p">
 		<xsl:attribute name="id">statement</xsl:attribute>
 		Free Software Foundation Europe is a non-profit organisation dedicated
-		to the furthering of Free Software and working for freedom in the emerging
+		to the furthering of Free Software, and works to promote freedom in emerging
 		digital society. <a href="/about">Learn more</a>
 	      </xsl:element>
 	      

@@ -174,7 +174,7 @@
                   <option value="sv">Svenska</option>
                 </select>
                 
-		<xsl:element name="p">
+		<xsl:element name="email">
 		  <xsl:attribute name="id">email</xsl:attribute>
 		  <xsl:attribute name="type">email</xsl:attribute>
 		  <xsl:attribute name="placeholder"><xsl:value-of select="/buildinfo/textset/text[@id='email-address-label']" /></xsl:attribute>

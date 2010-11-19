@@ -961,12 +961,31 @@ a.donate-box, a.fellowship-box {
   background:url("/graphics/donate-button-bg.png") no-repeat top left;
 }
 
+#campaign-box-2 a.donate-box:hover,
+#campaign-box-2 a.fellowship-box:hover {
+  text-decoration:none;
+}
+
+#campaign-box-2 a.donate-box:hover {
+  color:#2A7BAD;
+  -moz-box-shadow:inset 0 0 20px #00222b;
+  -webkit-box-shadow:inset 0 0 20px #00222b;
+  box-shadow:inset 0 0 20px #00222b;
+}
+
 #campaign-box-2 a.fellowship-box {
   color:#70d055;
   -moz-box-shadow:inset 0 0 6px #17280b;
   -webkit-box-shadow:inset 0 0 6px #17280b;
   box-shadow:inset 0 0 6px #17280b;
   background:url("/graphics/join-button-bg.png") no-repeat top left;
+}
+
+#campaign-box-2 a.fellowship-box:hover {
+  color:#5DAC46;
+  -moz-box-shadow:inset 0 0 20px #17280b;
+  -webkit-box-shadow:inset 0 0 20px #17280b;
+  box-shadow:inset 0 0 20px #17280b;
 }
 
 

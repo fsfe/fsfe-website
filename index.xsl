@@ -180,7 +180,7 @@
 		  <xsl:attribute name="placeholder"><xsl:value-of select="/buildinfo/textset/text[@id='email-address-label']" /></xsl:attribute>
 		</xsl:element>
                 
-                <input type="submit" value="Subscribe" />
+                <input type="submit" id="submit" value="Subscribe" />
               </p>
             </form>
 

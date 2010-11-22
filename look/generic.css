@@ -923,6 +923,10 @@ h4#subpages + ul li:nth-child(odd) {
   display:block;
 }
 
+#campaign-box-1 a:hover {
+  text-decoration:none;
+}
+
 #campaign-box-1 h3 {
   color:white;
   font-family:lucida Sans;

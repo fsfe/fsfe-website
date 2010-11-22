@@ -272,9 +272,10 @@
 		      <xsl:attribute name="href">http://planet.fsfe.org</xsl:attribute>
 		      Planet
 		    </xsl:element>
+		    <!-- causes validation errors, needs li to pass validator?
 		    <xsl:element name="ul">
 		    
-		    </xsl:element>
+		    </xsl:element>-->
 		  </xsl:element>
 		  
 		  <!-- Fellowship portal menu -->
@@ -448,7 +449,9 @@
 		<xsl:sort select="@id"/>
 		  <xsl:choose>
 		    <xsl:when test="@id=/buildinfo/@language">
-		      <xsl:value-of select="." disable-output-escaping="yes"/>
+		      <xsl:element name="li">
+			<xsl:value-of select="." disable-output-escaping="yes"/>
+		      </xsl:element>
 		    </xsl:when>
 		    <xsl:otherwise>
 		      <xsl:element name="li">

@@ -1036,7 +1036,7 @@ ul.overview {
   padding-left: 1em;
 }
 
-#article-metadata span.label::first-child {
+#article-metadata span.label:first-child {
   padding-left: 0;
 }
 

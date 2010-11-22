@@ -31,6 +31,8 @@
   <!-- HTML head -->
   <xsl:template match="head">
     <xsl:copy>
+      <meta charset="utf-8" />
+
       <!-- Don't let search engine robots index untranslated pages -->
       <xsl:element name="meta">
         <xsl:attribute name="name">robots</xsl:attribute>

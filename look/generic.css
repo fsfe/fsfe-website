@@ -918,12 +918,13 @@ h4#subpages + ul li:nth-child(odd) {
   overflow:hidden;
 }
 
-#campaign-box-1 a {
+#campaign-box-1 a h3 {
   display:block;
 }
 
-#campaign-box-1 a:hover {
+#campaign-box-1 a:hover h3 {
   text-decoration:none;
+  color:#FFCECE;
 }
 
 #campaign-box-1 h3 {

@@ -909,7 +909,7 @@ h4#subpages + ul li:nth-child(odd) {
 
 #campaign-box-1 {
   width: 65%;
-  height:100%;
+  height:200px;
   float: left;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -922,7 +922,7 @@ h4#subpages + ul li:nth-child(odd) {
   display:block;
 }
 
-#campaign-box-1 a:hover h3 {
+#campaign-box-1 a h3:hover {
   text-decoration:none;
   color:#FFCECE;
 }
@@ -945,7 +945,20 @@ h4#subpages + ul li:nth-child(odd) {
 
 #campaign-box-2 p {
   margin: 0;
-  padding:1.5em;
+  padding: 1.5em;
+}
+
+#campaign-box-3 {
+  -moz-border-radius: 7px 7px 7px 7px;
+  background-color: silver;
+  float: left;
+  height: 45px;
+  margin: 1.5em 0 0;
+  width: 100%;
+}
+
+#campaign-box-3 {
+  margin: 1em;
 }
 
 a.donate-box, a.fellowship-box {

@@ -157,7 +157,7 @@
           
           <div class="entry">
             <p>
-              Subscribe to FSFE's monthly newsletter
+              <strong>Subscribe to FSFE's monthly newsletter:</strong>
             </p>
 
             <form method="post" action="http://mail.fsfeurope.org/mailman/subscribe/press-release">

@@ -1115,6 +1115,7 @@ ul.overview {
 table {
   border-collapse: collapse;
   margin-bottom: 1em;
+  max-width: 100%;
 }
 
 table th,

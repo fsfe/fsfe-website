@@ -901,6 +901,30 @@ h4#subpages + ul li:nth-child(odd) {
 }
 
 
+/* Footnotes */
+h2#fn {
+  display: none;
+}
+
+h2#fn + ol {
+  border-top: 1px solid #ccc;
+  font-size: 90%;
+  margin-top: 3em;
+  padding-top: .5em;
+  width: 30%;
+}
+
+h2#fn + ol li {
+  width: 300%;
+}
+
+a.fn {
+  bottom: .5em;
+  font-size: 70%;
+  position: relative;
+}
+
+
 /* Front page */
 #campaigns-boxes {
   overflow: hidden;

@@ -145,6 +145,7 @@ ul {
   box-shadow: 3px 3px 4px rgba(0,0,0,.1);
   -webkit-box-shadow: 3px 3px 4px rgba(0,0,0,.1);
   -moz-box-shadow: 3px 3px 4px rgba(0,0,0,.1);
+  overflow:hidden;
 }
 
 .n {
@@ -1116,6 +1117,7 @@ table {
   border-collapse: collapse;
   margin-bottom: 1em;
   max-width: 100%;
+  display:block;
 }
 
 table th,

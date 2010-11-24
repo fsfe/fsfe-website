@@ -164,14 +164,14 @@
               <p>
                 <select id="language" name="language">
                   <option value="en" selected="selected">English</option>
-  		  <option value="el">Ελληνικά</option>	
-		  <option value="es">Español</option>
-		  <option value="de">Deutsch</option>
-		  <option value="fr">Français</option>
+		  		  <option value="el">Ελληνικά</option>	
+				  <option value="es">Español</option>
+				  <option value="de">Deutsch</option>
+				  <option value="fr">Français</option>
                   <option value="it">Italiano</option>
-		  <option value="nl">Nederlands</option>
-		  <option value="pt">Português</option>
-		  <option value="ru">Русский</option>
+				  <option value="nl">Nederlands</option>
+				  <option value="pt">Português</option>
+				  <option value="ru">Русский</option>
                   <option value="sv">Svenska</option>
                 </select>
                 
@@ -189,12 +189,12 @@
 	      <xsl:for-each select="/html/set/news
 				    [translate(@date, '-', '') &lt;= translate($today, '-', '')
 				    and (@type = 'newsletter')]">
-		<xsl:sort select="@date" order="descending" />
-		<xsl:if test="position()&lt;3">
-		  <xsl:call-template name="newsletter" />
-		</xsl:if>
+			<xsl:sort select="@date" order="descending" />
+			<xsl:if test="position()&lt;3">
+			  <xsl:call-template name="newsletter" />
+			</xsl:if>
 	      </xsl:for-each>
-	      <li><a href="news/newsletter.html"><xsl:value-of select="/buildinfo/textset/text[@id='email-address-label']" />...</a></li>
+	      <li><a href="news/newsletter.html"><xsl:value-of select="/buildinfo/textset/text[@id='more']" />...</a></li>
 	    </ul>
           </div><!-- /.entry -->
         </div> <!-- /#newsletter -->

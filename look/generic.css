@@ -368,6 +368,7 @@ pre.file {
 #introduction p,
 p#introduction {
   line-height: 190%;
+  font-size: 1em;
 }
 
 #introduction + * {

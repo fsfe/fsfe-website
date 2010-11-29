@@ -11,7 +11,7 @@
      group=""
      />
 <bug institution-name="Instituto Nacional de Estatistica"
-     institution-address="Av. AntÃ³nio JosÃ© de Almeida 1000-043 LISBOA "
+     institution-address="Av. Antonio José de Almeida 1000-043 LISBOA "
      institution-url="http://www.ine.pt/xportal/xmain?xpid=INE&amp;xpgid=ine_estudos"
      opened="2010-09-13"
      closed=""
@@ -19,7 +19,7 @@
      group=""
      />
 <bug institution-name="DGES - Direcção Geral do Ensino Superior"
-     institution-address="Av. Duque d'Ávila, 137 / 1069-016 LISBOA"
+     institution-address="Av. Duque d'Ávila, 137 1069-016 LISBOA"
      institution-url="http://www.dges.mctes.pt/DGES/pt"
      opened="2010-09-15"
      closed=""
@@ -29,7 +29,7 @@
      />
 
 <bug institution-name="FCT - Fundação para a Ciência e a Tecnologia"
-     institution-address="Av. D. Carlos I, 126 / 1249-074 LISBOA"
+     institution-address="Av. D. Carlos I, 126 1249-074 LISBOA"
      institution-url="http://alfa.fct.mctes.pt/apoios/bolsas/regulamento2010"
      opened="2010-09-15"
      closed=""
@@ -39,7 +39,8 @@
      />
 
 <bug institution-name="GEP - Gabinete de Estratégia e Planeamento (MTSS)"
-     institution-address="Several addresses.  Please check GEP's site."
+     institution-address="Rua Castilho, n.º 24
+1250-069 Lisboa"
      institution-url="http://www.gep.mtss.gov.pt/edicoes/bte/"
      opened="2010-09-15"
      closed=""
@@ -48,7 +49,7 @@
      comment=""
      />
 <bug institution-name="Simplex (GSEMA – Gabinete da Secretária de Estado da Modernização Administrativa)"
-     institution-address="Rua Prof. Gomes Teixeira, 2, 5.º / 1399-022 LISBOA"
+     institution-address="Rua Prof. Gomes Teixeira, 2, 5.º 1399-022 LISBOA"
      institution-url="http://www.simplex.pt/2009relatorio/index.html"
      opened="2010-09-16"
      closed=""
@@ -58,7 +59,8 @@
      />
 
 <bug institution-name="BTE - Boletim do Trabalho e Emprego"
-     institution-address="Several addresses. Please check GEP's site, which supervises BTE."
+     institution-address="Rua Castilho, n.º 24
+1250-069 Lisboa"
      institution-url="http://bte.gep.mtss.gov.pt/"
      opened="2010-09-16"
      closed=""
@@ -68,7 +70,7 @@
      />
 
 <bug institution-name="Governo de Portugal"
-     institution-address="The Portuguese Government has several addresses."
+     institution-address="Rua da Imprensa à Estrela, 4 - 1200-888 Lisboa"
      institution-url="http://www.portugal.gov.pt/pt/GC18/Governo/Composicao/Pages/Composicao.aspx"
      opened="2010-09-16"
      closed=""
@@ -78,7 +80,7 @@
      />
 
 <bug institution-name="Plano Tecnológico"
-     institution-address="Rua da Horta Seca, 15 / 1200-221 LISBOA"
+     institution-address="Rua da Horta Seca, 15 1200-221 LISBOA"
      institution-url="http://www.planotecnologico.pt/InnerPage.aspx?idCat=34&amp;idMasterCat=30&amp;idLang=1&amp;site=planotecnologico"
      opened="2010-09-17"
      closed=""
@@ -86,8 +88,9 @@
      group=""
      comment=""
      />
-<bug institution-name="Novas Oportunidades"
-     institution-address="Unable to find an address :-("
+<bug institution-name="MTSS -Ministério do Trabalho e da Solidariedade Social - Novas Oportunidades"
+     institution-address="Praça de Londres nº2 -16º
+ 1049-056 LISBOA "
      institution-url="http://www.novasoportunidades.gov.pt/outerFrame.jsp?link=http%3A//www.catalogo.anq.gov.pt/"
      opened="2010-09-19"
      closed=""
@@ -96,7 +99,7 @@
      comment=""
      />
 <bug institution-name="Câmara Municipal de Coimbra"
-     institution-address="Praça 8 de Maio / 3000-300 COIMBRA"
+     institution-address="Praça 8 de Maio 3000-300 COIMBRA"
      institution-url="http://www.cm-coimbra.pt/index.php?option=com_content&amp;task=view&amp;id=458&amp;Itemid=389"
      opened="2010-09-25"
      closed=""
@@ -113,6 +116,37 @@
      group=""
      comment=""
      />
+
+<bug institution-name="Direcção Geral dos Impostos"
+     institution-address="Rua do Comércio n.º 49,  1149-017 LISBOA, Portugal"
+     institution-url="http://www.portaldasfinancas.gov.pt/pt/menu.action?pai=348"
+     opened="2010-10-11"
+     closed=""
+     name="Paulo Gomes"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Instituto Camões"
+     institution-address="Av. da Liberdade 270, 1250-149 Lisboa, Portugal "
+     institution-url="http://cvc.instituto-camoes.pt/conhecer/biblioteca-digital-camoes/cat_view/62-revistas-e-periodicos/69-revista-camoes/901-revista-no01-pontes-lusofonas.html"
+     opened="2010-10-11"
+     closed=""
+     name="Paulo Gomes"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Universidade da Beira Interior"
+     institution-address="Convento de Sto. António 6201-001 COVILHÃ"
+     institution-url="https://www.ubi.pt/Pagina.aspx?p=Orgaos_da_Universidade"
+     opened="2010-10-11"
+     closed=""
+     name="Nuno Miguel dos Santos Baeta"
+     group=""
+     comment=""
+     />
+
   </buglist>
 </set>
 

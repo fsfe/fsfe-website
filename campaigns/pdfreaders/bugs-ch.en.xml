@@ -3,7 +3,7 @@
 <set>
 <buglist country="CH">
 
-<bug institution-name="Schweizerisches Bundesgericht"
+<bug institution-name="Tribunal Fédéral"
      institution-address="Av. du Tribunal fédéral 29, 1000, Lausanne 14"
      institution-url="http://www.bger.ch/index/juridiction/jurisdiction-inherit-template/jurisdiction-recht.htm"
      opened="2010-09-13"
@@ -517,16 +517,6 @@
      comment=""
      />
 
-<bug institution-name="Eidgenössisches Finanzdepartement"
-     institution-address="Bundesgasse 3, 3003 Bern"
-     institution-url="http://www.efd.admin.ch/hinweise/index.html?lang=de#sprungmarke0_28"
-     opened="2010-09-15"
-     closed=""
-     name="Philipp"
-     group=""
-     comment=""
-     />
-
 <bug institution-name="Eidgenössische Finanzverwaltung"
      institution-address="Bundesgasse 3, 3003 Bern"
      institution-url="http://www.efv.admin.ch/d/services/hilfe/acceskeys_pdf.php"
@@ -599,15 +589,6 @@
      opened="2010-09-13"
      closed=""
      name="sq"
-     group=""
-     />
-
-<bug institution-name="SBB CFF"
-     institution-address="Rue de la Poya 5, 1964 Conthey"
-     institution-url="http://mct.sbb.ch/mct/fr/konditionen.htm"
-     opened="2010-09-13"
-     closed=""
-     name="François Bianco"
      group=""
      />
 
@@ -771,16 +752,6 @@
 <bug institution-name="Bundesamt für Informatik und Telekommunikation BIT"
      institution-address="Monbijoustrasse 74, CH-3003 Bern"
      institution-url="http://www.bit.admin.ch/edu/kurse/kursdetails/index.html?linkto=details&amp;kursno=242d"
-     opened="2010-09-14"
-     closed=""
-     name="Danilo"
-     group="Piratenpartei Schweiz"
-     comment=""
-     />
-
-<bug institution-name="Die Bundesbehörden der Schweizerischen Eidgenossenschaft"
-     institution-address="3003 Bern"
-     institution-url="http://www.admin.ch/ch/d/sr/annot/dokformate.html"
      opened="2010-09-14"
      closed=""
      name="Danilo"
@@ -1534,16 +1505,6 @@
      comment=""
      />
 
-<bug institution-name="GEmeinde Römerswil"
-     institution-address="Postfach 43, 6027, Römerswil"
-     institution-url="http://www.roemerswil.ch/"
-     opened="2010-09-17"
-     closed=""
-     name="Lucas Bickel"
-     group=""
-     comment=""
-     />
-
 <bug institution-name="Gemeinde Gempen"
      institution-address="Gempenturmstr, 4145, Gempen"
      institution-url="http://www.gempen.ch/gemeinde/index.php"
@@ -2208,16 +2169,6 @@
      comment=""
      />
 
-<bug institution-name="Gemeindeverwaltung Rüderswil"
-     institution-address="3437 Rüderswil"
-     institution-url="http://www.ruederswil.ch/dienstleistungen/downloads.html"
-     opened="2010-09-28"
-     closed=""
-     name="Lucas Bickel"
-     group=""
-     comment=""
-     />
-
 <bug institution-name="Gemeindeverwaltung Jonschwil"
      institution-address="Poststrasse 10/12, 9243, Jonschwil"
      institution-url="http://www.jonschwil.ch/index.php?section=news&amp;cmd=details&amp;newsid=102"
@@ -2279,7 +2230,10 @@
      />
 
 <bug institution-name="Gemeindeverwaltung Römerswil"
-     institution-address="Dorf 6, 6027, Römerswil"
+     institution-address=" Gemeindehaus
+Dorf 6 / Postfach 18
+6027 Römerswil
+"
      institution-url="http://www.roemerswil.ch/"
      opened="2010-09-28"
      closed=""
@@ -2458,16 +2412,6 @@
      comment=""
      />
 
-<bug institution-name="Gemeindeverwaltung Zell"
-     institution-address="Luthernstrasse 1, 6144, Zell"
-     institution-url="http://www.zell-lu.ch/index.php?option=com_content&amp;task=view&amp;id=81"
-     opened="2010-09-28"
-     closed=""
-     name="Lucas Bickel"
-     group=""
-     comment=""
-     />
-
 <bug institution-name="Gemeinde Lengwil"
      institution-address="Hauptstrasse 8, 8574, Lengwil"
      institution-url="http://www.lengwil.ch/xml_1/internet/de/application/d10/f80.cfm"
@@ -2567,15 +2511,6 @@
      comment=""
      />
 
-<bug institution-name="Gemeindeverwaltung Pfäfers"
-     institution-address="Rathaus, 7312, Pfäfers"
-     institution-url="http://www.pfaefers.ch/contento/Home/Onlineschalter/tabid/110/Default.aspx"
-     opened="2010-09-29"
-     closed=""
-     name="Lucas Bickel"
-     group=""
-     comment=""
-     />
 <bug institution-name="Gemeindeverwaltung Abtwil"
      institution-address="Schulhausstrasse 2, 5646, Abtwil"
      institution-url="http://www.abtwilag.ch/dpage/online/rubrik.cfm?domainID=364&amp;languageID=1&amp;kapitelID=210&amp;dienstID=902&amp;rubrikID=6027&amp;userID=0&amp;TreeID=0"
@@ -2657,7 +2592,8 @@
      />
 
 <bug institution-name="Gemeindeverwaltung Radelfingen bei Aarberg"
-     institution-address="3036 Detligen"
+     institution-address="Bühlstrasse 2
+3036 Detligen "
      institution-url="http://www.radelfingen.ch/downloads.html"
      opened="2010-09-29"
      closed=""
@@ -2687,7 +2623,9 @@
      />
 
 <bug institution-name="Gemeindeverwaltung Niederrohrdorf"
-     institution-address="5443 Niederrohrdorf"
+     institution-address="Gemeinde Niederrohrdorf
+Bremgartenstrasse 2
+5443 Niederrohrdorf "
      institution-url="http://www.niederrohrdorf.ch/go.cfm?bereich=onlineschalter&amp;seite=software.cfm&amp;area=1"
      opened="2010-09-29"
      closed=""
@@ -3674,7 +3612,7 @@
      comment=""
      />
 
-<bug institution-name="Gemeindeverwaltung"
+<bug institution-name="Gemeindeverwaltung Birsfelden"
      institution-address="Hardstrasse 21, 4127, Birsfelden"
      institution-url="http://www.birsfelden.ch/de/toolbar/impressum/"
      opened="2010-09-30"
@@ -3813,15 +3751,6 @@
      group=""
      comment=""
      />
-<bug institution-name="Tribunale Federale"
-     institution-address="Tribunale federale svizzero Servizio del personale 1000 Losanna 14"
-     institution-url="http://www.bger.ch/it/index/juridiction/jurisdiction-inherit-template/jurisdiction-recht.htm"
-     opened="2010-10-01"
-     closed=""
-     name="Max-B"
-     group="LUG Scandiano"
-     comment=""
-     />
 
 <bug institution-name="République et Canton du Jura"
      institution-address="Service des contributions, Rue de la Justice 2, 2800 Delémont"
@@ -3841,6 +3770,286 @@
      group=""
      comment=""
      />
+
+<bug institution-name="Gemeinde Villnachern"
+     institution-address="Oberdorfstrasse 2 5213 Villnachern"
+     institution-url="http://www.villnachern.ch/"
+     opened="2010-10-11"
+     closed=""
+     name="Kurt Zerzawy"
+     group=""
+     comment="Auf Seite Bekanntmachungen Archiv"
+     />
+<bug institution-name="Canton de Vaud"
+     institution-address="Rue du Nord 1, CH-1400 Yverdon-les-Bains "
+     institution-url="http://www.vd.ch/fr/themes/etat-droit-finances/impots/vaudtax/vaudtax-2009/"
+     opened="2010-10-11"
+     closed=""
+     name="Issey Llambias"
+     group="GULL, APRIL"
+     comment=""
+     />
+
+<bug institution-name="Kanton Bern"
+     institution-address="Postgasse 68, 3000 Bern 8"
+     institution-url="http://www.be.ch/web/portal-hilfe.htm"
+     opened="2010-10-12"
+     closed=""
+     name="Zwahlen"
+     group=""
+     comment="Only a promotion for Adobe Reader"
+     />
+
+<bug institution-name="Gemeindeverwaltung Lindau"
+     institution-address="Tagelswangerstrasse 2, 8315, Lindau"
+     institution-url="http://www.neudorf.ch/de/toolbar2/impressum/"
+     opened="2010-10-15"
+     closed=""
+     name="Lucas Bickel"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Schule Wettingen"
+     institution-address="Alb.-Zwyssig-Strasse 76, 5430, Wettingen"
+     institution-url="http://www.schule-wettingen.ch/de/toolbar2/impressum/"
+     opened="2010-10-15"
+     closed=""
+     name="Lucas Bickel"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Primarschule Schwerzenbach"
+     institution-address="Heggerstrasse 4, 8603, Schwerzenbach"
+     institution-url="http://www.schule-schwerzenbach.ch/de/toolbar2/impressum/"
+     opened="2010-10-15"
+     closed=""
+     name="Lucas Bickel"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Schule Uitikon"
+     institution-address="Schulverwaltung Lättenstrasse 55, 8142, Uitikon"
+     institution-url="http://www.schule-uitikon.ch/de/toolbar2/impressum/"
+     opened="2010-10-15"
+     closed=""
+     name="Lucas Bickel"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Gemeindeverwaltung Ittigen"
+     institution-address="Rain 7, 3063, Ittigen"
+     institution-url="http://www.ittigen.ch/de/toolbar2/impressum/"
+     opened="2010-10-15"
+     closed=""
+     name="Lucas Bickel"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Administration communale de Vallorbe"
+     institution-address="pl. du Pont 2, 1337, Vallorbe"
+     institution-url="http://www.vallorbe.ch/fr/toolbar2/impressum/"
+     opened="2010-10-15"
+     closed=""
+     name="Lucas Bickel"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Einwohnergemeinde Egerkingen"
+     institution-address="Sportstr. 2, 4622, Egerkingen"
+     institution-url="http://www.egerkingen.ch/de/toolbar2/impressum/"
+     opened="2010-10-15"
+     closed=""
+     name="Lucas Bickel"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Gemeindeverwaltung Wynau"
+     institution-address="Schulhausstrasse 22, 4923, Wynau"
+     institution-url="http://www.wynau.ch/de/toolbar2/impressum/"
+     opened="2010-10-15"
+     closed=""
+     name="Lucas Bickel"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Gemeindeverwaltung Unterägeri"
+     institution-address="Seestrasse 2, 6314, Unterägeri"
+     institution-url="http://www.unteraegeri.ch/de/toolbar2/impressum/"
+     opened="2010-10-15"
+     closed=""
+     name="Lucas Bickel"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Gemeindeverwaltung Altdorf"
+     institution-address="Tellsgasse 25, 6460, Altdorf"
+     institution-url="http://www.altdorf.ch/de/toolbar2/impressum/"
+     opened="2010-10-15"
+     closed=""
+     name="Lucas Bickel"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Gemeindeverwaltung Saas-Fee"
+     institution-address="3906 Saas-Fee"
+     institution-url="http://www.3906.ch/de/toolbar2/impressum/"
+     opened="2010-10-15"
+     closed=""
+     name="Lucas Bickel"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Gemeindeverwaltung Regensdorf"
+     institution-address="Watterstrasse 114, 8105, Regensdorf"
+     institution-url="http://www.regensdorf.ch/de/toolbar2/impressum/"
+     opened="2010-10-15"
+     closed=""
+     name="Lucas Bickel"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Stadtverwaltung Dietikon"
+     institution-address="Bremgartnerstrasse 22, 8953, Dietikon"
+     institution-url="http://www.dietikon.ch/de/toolbar2/impressum/"
+     opened="2010-10-15"
+     closed=""
+     name="Lucas Bickel"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Gemeinde Trimmis"
+     institution-address="Cholplatzweg 1a, 7203, Trimmis"
+     institution-url="http://www.trimmis.ch/de/toolbar2/impressum/"
+     opened="2010-10-15"
+     closed=""
+     name="Lucas Bickel"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Gemeindeverwaltung St.Antoni"
+     institution-address="1713 St. Antoni"
+     institution-url="http://www.stantoni.ch/de/toolbar2/impressum/"
+     opened="2010-10-15"
+     closed=""
+     name="Lucas Bickel"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Commune de Vernier"
+     institution-address="Chemin de Poussy 56, 1214, Vernier"
+     institution-url="http://www.vernier.ch/fr/toolbar2/impressum/"
+     opened="2010-10-15"
+     closed=""
+     name="Lucas Bickel"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Gemeindeverwaltung Zollikofen"
+     institution-address="Wahlackerstrasse 25, 3052, Zollikofen"
+     institution-url="http://www.zollikofen.ch/de/toolbar2/impressum/"
+     opened="2010-10-15"
+     closed=""
+     name="Lucas Bickel"
+     group=""
+     comment=""
+     />
+<bug institution-name="Isituto Federale della Proprietà Intellettuale"
+     institution-address="Stauffacherstrasse 65/59g, CH-3003 Berna"
+     institution-url="https://www.ige.ch/it/istituto/istituto/rapporto-annuale.html"
+     opened="2010-10-16"
+     closed=""
+     name="Max-B"
+     group="LUG Scandiano"
+     comment=""
+     />
+
+<bug institution-name="Kantonsschule Wattwil"
+     institution-address="Näppisuelistrasse 11, 9630, Wattwil"
+     institution-url="http://www.kantiwattwil.ch/impressum.html"
+     opened="2010-10-17"
+     closed=""
+     name="Lucas Bickel"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Universität Freiburg"
+     institution-address="Av. Europe 20, 1700 Freiburg"
+     institution-url="http://www.unifr.ch/droit/de/studies/regulations.php"
+     opened="2010-10-17"
+     closed=""
+     name="Lucas Bickel"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Kantonsschule Wettingen"
+     institution-address="Klosterstrasse 11, 5430, Wettingen"
+     institution-url="http://www.kanti-wettingen.ch/index.cfm?framePage=/FMS_Aufnahme.cfm"
+     opened="2010-10-17"
+     closed=""
+     name="Lucas Bickel"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Sekundarsch. Birmensdorf-Aesch"
+     institution-address="8903, Birmensdorf"
+     institution-url="http://www.sekbirmensdorfaesch.ch/de/toolbar/links/"
+     opened="2010-10-17"
+     closed=""
+     name="Lucas Bickel"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Kantonsschule am Brühl St.Gallen"
+     institution-address="Notkerstrasse 20, 9000, St. Gallen"
+     institution-url="http://www.ksb-sg.ch/eksb/aufnahme.htm"
+     opened="2010-10-17"
+     closed=""
+     name="Lucas Bickel"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Primarschulgemeinde Wila"
+     institution-address="Eichhaldenstr. 23, 8492, Wila"
+     institution-url="http://www.pswila.ch/eltern-abc/"
+     opened="2010-10-17"
+     closed=""
+     name="Lucas Bickel"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Gymnasium Marienburg"
+     institution-address="Töberstrasse 49, 9424, Rheineck"
+     institution-url="http://www.marienburg.ch/de/135/Reglemente.htm"
+     opened="2010-10-17"
+     closed=""
+     name="Lucas Bickel"
+     group=""
+     comment=""
+     />
+
+
   </buglist>
 </set>
 

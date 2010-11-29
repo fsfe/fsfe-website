@@ -38,16 +38,6 @@
      group=""
      />
 
-<bug institution-name="HSE books"
-     institution-address="regional agencies"
-     institution-url="http://books.hse.gov.uk/hse/public/saleproduct.jsf;jsessionid=0F7902615E588A421099B70DE8B4BAB5.plukweb1?catalogueCode=9780717661794"
-     opened="2010-09-14"
-     closed=""
-     name="will bickerstaff"
-     group="worcs lug"
-     comment=""
-     />
-
 <bug institution-name="Barnet - London borough"
      institution-address="North London Business Park (NLBP), Oakleigh Road South, London. N11 1NP"
      institution-url="http://www.barnet.gov.uk/help/help-pdf-adobe.htm"
@@ -156,8 +146,8 @@
      comment=""
      />
 
-<bug institution-name="Barking Council"
-     institution-address="London Borough of Barking and Dagenham    Civic Centre    Rainham Road North    Dagenham    RM10 7BN"
+<bug institution-name="London Borough of Barking and Dagenham   "
+     institution-address="Civic Centre - Rainham Road North - Dagenham RM10 7BN"
      institution-url="http://www.lbbd.gov.uk/7-hr/schools/schools-main.html"
      opened="2010-09-15"
      closed=""
@@ -196,16 +186,6 @@
      comment=""
      />
 
-<bug institution-name="Worcestershire County Council"
-     institution-address="County Hall, Spetchley Road, Worcester, WR5 2NP"
-     institution-url="http://www.worcestershire.gov.uk/cms/environment-and-planning/archaeology/information-and-advice/historic-environment-record/tithe-and-inclosure-map-project/help.aspx"
-     opened="2010-09-15"
-     closed=""
-     name="Anon"
-     group=""
-     comment=""
-     />
-
 <bug institution-name="HM Revenue &amp; Customs"
      institution-address="Cumberland Road, BS1 6UF, Bristol"
      institution-url="http://www.hmrc.gov.uk/menus/help-technical.htm"
@@ -225,15 +205,6 @@
      comment="The Job application form on this page uses form functions that are not supported in Evince"
      />
 
-<bug institution-name="Met office"
-     institution-address="HR Customer Services, Met Office, FitzRoy Road, Exeter, EX1 3PB"
-     institution-url="http://www.metoffice.gov.uk/about-us/jobs/current-vacancies/001978"
-     opened="2010-09-16"
-     closed=""
-     name="Craig Barnes"
-     group=""
-     comment="The Job application form on this page uses form functions that are not supported in Evince"
-     />
 <bug institution-name="Loch Lomond and The Trossachs National Park"
      institution-address="Loch Lomond &amp; The Trossachs National Park Headquarters, Carrochan, Carrochan Road, Balloch, G83 8EG"
      institution-url="http://www.lochlomond-trossachs.org/accessibility/menu-id-502.html"
@@ -368,7 +339,7 @@
      />
 
 <bug institution-name="National Physical Laboratory"
-     institution-address="Hampton Road, TW10 7PJ"
+     institution-address="Hampton Road, TW10 0LW"
      institution-url="http://www.npl.co.uk/networks-clubs-other/server.php?controller=search&amp;action=index&amp;q=acrobat&amp;x=0&amp;y=0"
      opened="2010-10-04"
      closed=""
@@ -396,6 +367,28 @@
      group=""
      comment=""
      />
+
+<bug institution-name="Oxford City Council"
+     institution-address="Town Hall, St Aldates, Oxford, OX1 1BX"
+     institution-url="http://consultation.oxford.gov.uk/consult.ti/system/text?page=accessibility"
+     opened="2010-10-12"
+     closed=""
+     name="C Harvey"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="London Borough of Camden"
+     institution-address="Judd Street, London, WC1H 9JE"
+     institution-url="http://planningonline.camden.gov.uk/MULTIWAM/showCaseFile.do?appType=Planning&amp;appNumber=2010%2F4721%2FP"
+     opened="2010-10-14"
+     closed=""
+     name="Sebastian Tennant"
+     group=""
+     comment=""
+     />
+
+
 
   </buglist>
 </set>

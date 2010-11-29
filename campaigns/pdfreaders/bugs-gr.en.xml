@@ -2,8 +2,9 @@
 
 <set>
 <buglist country="GR">
+
 <bug institution-name="Εθνικό Τυπογραφείο (Ethniko typografeio)"
-     institution-address="81100 Mytilini"
+     institution-address="34 Kapodistriou str., 10432 Athens, Greece"
      institution-url="http://www.et.gr/index.php?option=com_content&amp;view=article&amp;id=70&amp;Itemid=119&amp;lang=en"
      opened="2010-09-15"
      closed=""
@@ -11,15 +12,7 @@
      group=""
      comment=""
      />
-<bug institution-name="Εθνικό Τυπογραφείο (Ethniko typografeio)"
-     institution-address="81100 Mytilini"
-     institution-url="http://www.et.gr/index.php?option=com_content&amp;view=article&amp;id=70&amp;Itemid=119&amp;lang=en"
-     opened="2010-09-20"
-     closed=""
-     name="Stavros Daliakopoulos"
-     group=""
-     comment=""
-     />
+
 <bug institution-name="National Portal of Public Administration"
      institution-address="Stadiou 27, 10183 Athens - Greece"
      institution-url="http://www.ermis.gov.gr/portal/page/portal/ermis/UsefulTools"
@@ -27,22 +20,12 @@
      closed=""
      name="Kostas Boukouvalas"
      group="GreekLUG - GNU Greece"
-     comment=""
+     comment="http://www.ermis.gov.gr/portal/page/portal/ermis/contact"
      />
 
 <bug institution-name="Foundation of Public Insurances"
      institution-address="Patision 12, 106 77 Athens"
      institution-url="http://www.ika.gr/gr/infopages/downloads/home.cfm"
-     opened="2010-10-06"
-     closed=""
-     name="Kostas Boukouvalas"
-     group="GreekLUG - GNU Greece"
-     comment=""
-     />
-
-<bug institution-name="Municipality of Metamorfosi"
-     institution-address="J. Ralli &amp; Public Hall's 1, 14452 Athens, Greece"
-     institution-url="http://www.metamorfossi.gr/portal/page/portal/metamorfosi/municipality/npdd/aodm"
      opened="2010-10-06"
      closed=""
      name="Kostas Boukouvalas"
@@ -110,7 +93,7 @@
      />
 
 <bug institution-name="Educational Institute of Greece"
-     institution-address="Mesogeion 356, 153 41 Agia Paraskeui, Athens, Greece"
+     institution-address="Mesogeion 396, 153 41 Agia Paraskeui, Athens, Greece"
      institution-url="http://www.pi-schools.gr/hdtc/material/scenaria/history.htm"
      opened="2010-10-06"
      closed=""
@@ -138,7 +121,35 @@
      group="GreekLUG - GNU Greece"
      comment=""
      />
+<bug institution-name="National School Network"
+     institution-address="Andrea Papandreou 37, 151 80 Amarousion - Greece"
+     institution-url="http://eclass.sch.gr/manuals/manual.php"
+     opened="2010-10-09"
+     closed=""
+     name="Kostas Boukouvalas"
+     group="GreekLUG - GNU Greece"
+     comment=""
+     />
 
+<bug institution-name="Οργανισμός Περίθαλψης Ασφαλισμένων του Δημοσίου "
+     institution-address="Μακεδονίας 8, ΤΚ 10433, Αθήνα"
+     institution-url="http://www.opad.gr/html/elegktiria.htm"
+     opened="2010-10-14"
+     closed=""
+     name="Harry Zisopoulos"
+     group=""
+     comment=""
+     />
+
+<bug institution-name="Electronic Prescriptions"
+     institution-address="Stadiou 29, 101 10 - Athens, Greece"
+     institution-url="http://www.e-syntagografisi.gr/files/Equipment.pdf"
+     opened="2010-10-16"
+     closed=""
+     name="Kostas Boukouvalas"
+     group="GreekLUG - GNU Greece"
+     comment=""
+     />
 
   </buglist>
 </set>

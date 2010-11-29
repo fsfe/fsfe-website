@@ -3,9 +3,11 @@
 <html>
   <head>
     <title>PDFreaders - Svobodné prohlížeče PDF - FSFE</title>
+    <script type="text/javascript" src="/scripts/flattr.js"/>
   </head>
   <body>
-    <h1>Svobodné prohlížeče PDF</h1>
+    <h1>Svobodné prohlížeče PDF <a class="FlattrButton" style="display:none;" rev="flattr;button:compact;"
+href="http://pdfreaders.org/"></a></h1>
 
     <!-- Please wait with translating. Page will change... will inform translators@ when it is finished ~~mk-->
     <!-- <p id="introduction"> Launched by the <a -->
@@ -82,148 +84,16 @@
 
  <p>Problém PDF prohlížečů se netýká jen Evropy. 
  Přestože následná akce bude z kapacitních důvodů omezena jen na evropské organizace, vítáme hlášení postižených webů z celého světa.</p>
-    <form action="/cgi-bin/pdfcontest.pl" method="post">
-      <p>
-        <label for="institution-name">Místní název instituce <span class="required-asterisk">*</span></label>
-        <input id="institution-name" name="institution-name" type="text" />
-      </p>
-
-      <p>
-        <label for="institution-country">Název státu (anglicky) <span class="required-asterisk">*</span></label>
-        <select id="institution-country" name="institution-country">
-          <option>Albania</option>
-          <option>Austria</option>
-          <option>Belarus</option>
-          <option>Belgium</option>
-          <option>Bosnia and Herzegovina</option>
-          <option>Bulgaria</option>
-          <option>Croatia</option>
-          <option>Cyprus</option>
-          <option>Czech Republic</option>
-          <option>Denmark</option>
-          <option>Estonia</option>
-          <option>Faroe Islands</option>
-          <option>Finland</option>
-          <option>France</option>
-          <option>Germany</option>
-          <option>Greece</option>
-          <option>Hungary</option>
-          <option>Iceland</option>
-          <option>Ireland</option>
-          <option>Italy</option>
-          <option>Latvia</option>
-          <option>Liechtenstein</option>
-          <option>Lithuania</option>
-          <option>Luxembourg</option>
-          <option>Macedonia</option>
-          <option>Malta</option>
-          <option>Moldova</option>
-          <option>Montenegro</option>
-          <option>Netherlands</option>
-          <option>Norway</option>
-          <option>Poland</option>
-          <option>Portugal</option>
-          <option>Romania</option>
-          <option>Russian Federation</option>
-          <option>Serbia</option>
-          <option>Slovakia</option>
-          <option>Slovenia</option>
-          <option>Spain</option>
-          <option>Sweden</option>
-          <option>Switzerland</option>
-          <option>Turkey</option>
-          <option>Ukraine</option>
-          <option>United Kingdom</option>
-          <option>Åland</option>
-          <option>Rest of the world</option>
-        </select>
-      </p>
-
-      <p>
-        <label for="institution-url">URL stránky s reklamou na nesvobodný software <span class="required-asterisk">*</span></label>
-        <input id="institution-url" name="institution-url" type="url" />
-      </p>
-
-      <p>
-        <label for="institution-address">Poštovní adresa instituce <span class="required-asterisk">*</span></label>
-        <small>Ulice, PSČ, město</small>
-        <input id="institution-address" name="institution-address" type="text" />
-      </p>
-
-      <p>
-        <label for="name">Vaše jméno <span class="required-asterisk">*</span></label>
-        <small>Pokud si přejete podepsat petici, zadejte křestní jméno a příjmení</small>
-        <input id="name" name="name" type="text" />
-      </p>
-
-      <p>
-        <label for="email">Váš E-mail <span class="required-asterisk">*</span></label>
-        <input id="email" name="email" type="email" />
-      </p>
-
-      <p>
-        <label for="group">Vaše skupina</label>
-        <small>volitelně</small>
-        <input id="group" name="group" type="text" />
-      </p>
-
-      <p>
-        <label for="comment">Doplňující komentář</label>
-        <small>volitelně</small>
-        <input id="comment" name="comment" type="text" />
-      </p>
-
-      <p>
-        <label>Také chci</label>
-        
-        <ul>
-          <li>
-            <label><input name="petition" type="checkbox"
-              checked="checked" /> podepsat Petici za odstranění reklam na proprietární software z vládních webových stránek</label>
-          </li>
-
-          <li>
-            <label><input name="newsletter" type="checkbox"
-              checked="checked" /> dostávat jednou měsíčně zpravodaj FSFE</label>
-          </li>
-        </ul>
-      </p>
-
-      <p>
-        <label><input id="contact" name="contact" type="checkbox" /> mám možnost sám kontaktovat danou instituci</label>
-      </p>
-      
-      <p class="n">
-        <label for="url">Pokud jste spamovací robot, vyplňte sem něco, ať můžeme váš požadavek ignorovat.</label>
-        <input id="url" name="url" type="text" />
-      </p>
-
-      <p>
-        <input type="submit" value="Report your bug" />
-      </p>
-    </form>
-
+   
     <p>
       Nahlášená stránka bude nejprve schválena naším týmem a až poté publikována.
       Prosíme tedy o strpení, než se váš příspěvek objeví v našem seznamu.
     </p>
 
 
-    <h2>Seznam zaslaných hlášení</h2>
+    <h2><a href="/campaigns/pdfreaders/buglist.html">Seznam zaslaných hlášení</a></h2>
 
-    <dynamic-content/>
-  </body>
-
-  <text id="institution-name">Název instituce</text>
-  <text id="institution-address">Poštovní adresa</text>
-  <text id="institution-url">URL stránky s reklamou</text>
-  <text id="opened">Přijetí chyby</text>
-  <text id="closed">Uzavření chyby</text>
-  <text id="name">Nahlásil</text>
-  <text id="group">Skupina</text>
-  <text id="comment">Komentář</text>
-  <text id="link">Odkaz</text>
-
+ </body>
   <timestamp>$Date: 2010-09-16 09:43:23 +0000 (Thu, 16 Sep 2010) $ $Author: ato $</timestamp>
 <translator>František Kučera</translator>
 </html>

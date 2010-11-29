@@ -137,15 +137,7 @@
      name="Stian Ellingsen"
      group=""
      />
-<bug institution-name="Kommune"
-     institution-address="Whole Norway"
-     institution-url="http://us.forestle.org/en/search.php?q=site:kommune.no%20pdf%20adobe%20reader"
-     opened="2010-09-20"
-     closed=""
-     name="Børge A. Roum"
-     group=""
-     comment="Norway has many municipalities, each of which has their own sub domain at kommune.no. This is a search for adobe reader at kommune.no, showing way too many non-free advertisements to report individually."
-     />
+
 <bug institution-name="Sandnes municipality"
      institution-address="4319 Sandnes"
      institution-url="http://www.sandnes.kommune.no/index.asp?startID=&amp;topExpand=1000107&amp;subExpand=1000116&amp;menuid=1000506&amp;strUrl=1004257i&amp;context=0"
@@ -193,6 +185,15 @@
      name="Paul Boddie"
      group=""
      comment="Although this page is perhaps aimed at university users, it's striking that the page is about open formats and yet they deem it necessary only to advertise Acrobat Reader as a reader. (And yes, since I use the only supported flavour of GNU/Linux at UiO, I know it wouldn't hurt to mention the programs that are actually installed on such platforms and to mention alternatives for other platforms.)"
+     />
+<bug institution-name="Den Norske Nobelkomite"
+     institution-address="Henrik Ibsens gate 51, NO-0255 Oslo"
+     institution-url="http://nobelprize.org/nobel_prizes/physics/laureates/2010/info.html"
+     opened="2010-10-11"
+     closed=""
+     name="Harry Zisopoulos"
+     group=""
+     comment=""
      />
   </buglist>
 </set>

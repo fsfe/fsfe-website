@@ -13,6 +13,9 @@
     </xsl:copy>
   </xsl:template>
 
+  <!-- new line template -->
+  <xsl:template name="nl"><xsl:text>&#13;&#10;</xsl:text></xsl:template>
+
   <!-- Show a single event -->
   <xsl:template name="event">
     <xsl:param name="header" />
@@ -33,18 +36,25 @@
     <xsl:variable name="page">
       <xsl:value-of select="page" />
     </xsl:variable>
+
     <!-- Now, the event block -->
-BEGIN:VEVENT
-SUMMARY:<xsl:value-of select="title" />
-DTSTART:<xsl:value-of select="$start" />
-DTEND:<xsl:value-of select="$end" />
-DESCRIPTION:<xsl:apply-templates select="body/node()" />
-END:VEVENT
+
+	<xsl:text>BEGIN:VEVENT</xsl:text><xsl:call-template name="nl" />
+
+	<xsl:text>SUMMARY:</xsl:text><xsl:value-of select="title" /><xsl:call-template name="nl" />
+
+	<xsl:text>DTSTART;VALUE=DATE:</xsl:text><xsl:value-of select="$start" /><xsl:call-template name="nl" />
+	<xsl:text>DTEND;VALUE=DATE:</xsl:text><xsl:value-of select="$end" /><xsl:call-template name="nl" />
+	
+	<xsl:text>DESCRIPTION:</xsl:text><xsl:value-of select="normalize-space(body/node())" /><xsl:call-template name="nl" />
+
+	<xsl:text>END:VEVENT</xsl:text><xsl:call-template name="nl" />
+	
   </xsl:template>
 
   <!-- In /html/body node, append dynamic content -->
   <xsl:template match="/html/body">
-BEGIN:VCALENDAR
+	  <xsl:text>BEGIN:VCALENDAR</xsl:text><xsl:call-template name="nl" />
       <!-- $today = current date (given as <html date="...">) -->
       <xsl:variable name="today">
         <xsl:value-of select="/html/@date" />
@@ -57,7 +67,7 @@ BEGIN:VCALENDAR
           <xsl:with-param name="header">current</xsl:with-param>
         </xsl:call-template>
       </xsl:for-each>
-END:VCALENDAR
+	  <xsl:text>END:VCALENDAR</xsl:text>
   </xsl:template>
 
 </xsl:stylesheet>

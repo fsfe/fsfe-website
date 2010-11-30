@@ -55,6 +55,8 @@
   <!-- In /html/body node, append dynamic content -->
   <xsl:template match="/html/body">
 	  <xsl:text>BEGIN:VCALENDAR</xsl:text><xsl:call-template name="nl" />
+	  <xsl:text>VERSION:2.0</xsl:text><xsl:call-template name="nl" />
+	  <xsl:text>PRODID:fsfe.org/events/events.ics.xsl</xsl:text><xsl:call-template name="nl" />
       <!-- $today = current date (given as <html date="...">) -->
       <xsl:variable name="today">
         <xsl:value-of select="/html/@date" />

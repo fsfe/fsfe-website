@@ -756,13 +756,17 @@ h4#subpages + ul li:nth-child(odd) {
 }
 
 #newsletter #language {
-  width:30%;
-  margin:0 2% 0 0;
+  width: 30%;
+  margin: 0 2% 0 0;
 }
 
 #newsletter #email {
- width:38%;
- margin:0 2% 0 0;
+  width: 38%;
+  margin: 0 2% 0 0;
+}
+
+#newsletter #submit {
+  float: right;
 }
 
 .section .rss-feed {

@@ -518,13 +518,25 @@ sub process {
           #
           # Now, while we're just at it, we create the RSS feeds if we want any
           #
-	  if (-f "$opts{i}/$file.rss.xsl") {
-            my $style_doc = $parser->parse_file("$opts{i}/$file.rss.xsl");
-	    my $stylesheet = $xslt_parser->parse_stylesheet($style_doc);
-	    my $results = $stylesheet->transform($sourcedoc);
-	    $stylesheet->output_file($results, "$opts{o}/$dir/$file.$lang.rss")
-		unless $opts{n};
+		  if (-f "$opts{i}/$file.rss.xsl") {
+		        my $style_doc = $parser->parse_file("$opts{i}/$file.rss.xsl");
+			my $stylesheet = $xslt_parser->parse_stylesheet($style_doc);
+			my $results = $stylesheet->transform($sourcedoc);
+			$stylesheet->output_file($results, "$opts{o}/$dir/$file.$lang.rss")
+			unless $opts{n};
           }
+
+		  #
+          # and possibly the corresponding iCal (ics) file
+          #
+	      if (-f "$opts{i}/$file.ics.xsl") {
+            my $style_doc = $parser->parse_file("$opts{i}/$file.ics.xsl");
+			my $stylesheet = $xslt_parser->parse_stylesheet($style_doc);
+			my $results = $stylesheet->transform($sourcedoc);
+			$stylesheet->output_file($results, "$opts{o}/$dir/$file.$lang.ics")
+			unless $opts{n};
+          }
+          
         } else {
           #
           # If this wasn't an automatically updating document, we simply

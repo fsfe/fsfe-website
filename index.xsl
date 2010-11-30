@@ -202,7 +202,7 @@
         <div id="events" class="section">
           <h2>
             <a class="rss-feed" href="/events.rss"><img src="/graphics/rss.png" alt="Events RSS" title="events RSS feed" /></a>
-            <a class="ical" href="/events.ical"><img src="/graphics/ical.png" alt="iCal" title="FSFE events as iCal feed" /></a>
+            <a class="ical" href="webcal://fsfe.org/events/events.ics"><img src="/graphics/ical.png" alt="iCal" title="FSFE events as iCal feed" /></a>
             <a href="/events/events.html"><xsl:value-of select="/html/text[@id='events']"/></a>
           </h2>
         

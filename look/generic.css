@@ -126,6 +126,12 @@ ul {
   list-style: circle;
 }
 
+/* generic classes */
+
+.clear {
+    clear:both;
+}
+
 #wrapper {
   margin:0 5% 0 1%;
   padding-bottom: 0;

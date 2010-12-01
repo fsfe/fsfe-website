@@ -183,6 +183,10 @@ ul {
   width:215px;
 }
 
+#logo a img {
+  max-width: 100%;
+}
+
 #statement {
   color: rgb(140,140,140);
   float:left;

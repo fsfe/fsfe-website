@@ -597,6 +597,10 @@ table.noborders th {
   border: 0;
 }
 
+tr.highlighted {
+ background-color :#D0F400;
+}
+
 
 /* forms */
 form label {

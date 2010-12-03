@@ -1171,6 +1171,10 @@ table.noborders th {
   border: 0;
 }
 
+tr.highlighted {
+ background-color :#D0F400;
+}
+
 
 /* service notice */
 #service-notice {

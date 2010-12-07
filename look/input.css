@@ -9,6 +9,11 @@ input[type=url],
 input[type=submit],
 select,
 textarea {
+  color: rgb(50,50,50);
+  text-decoration: none;
+  font-family: "Lucida Grande", "Helvetica", "Arial", sans-serif;
+  font-size: 9pt;
+  /*
   background-image: url("/graphics/input-bg.png");
   background-repeat: repeat-x;
   background-position: 0 0;
@@ -16,11 +21,6 @@ textarea {
   border-left: 1px solid rgb(193,193,193);
   border-bottom: 1px solid rgb(225,225,225);
   border-right: 1px solid rgb(193,193,193);
-  color: rgb(50,50,50);
-  text-decoration: none;
-  font-family: "Lucida Grande", "Helvetica", "Arial", sans-serif;
-  font-size: 9pt;
-  /*
   border-radius: 11px;
   -moz-border-radius: 11px;
   -webkit-border-radius: 11px;

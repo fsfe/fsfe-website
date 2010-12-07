@@ -572,6 +572,7 @@ h4#subpages + ul li:nth-child(odd) {
   float: left;
   line-height: 100%;
   width: 15%;
+  overflow: hidden;
 }
 
 

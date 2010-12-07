@@ -391,6 +391,12 @@
 		      <xsl:value-of select="/buildinfo/textset/text[@id='search']" />
 		    </xsl:attribute>
 		  </xsl:element>
+		  
+		  <xsl:element name="input">
+		    <xsl:attribute name="type">submit</xsl:attribute>
+		    <xsl:attribute name="name">search</xsl:attribute>
+		    <xsl:attribute name="value">Submit</xsl:attribute>
+		  </xsl:element>
 
 		</xsl:element>
 	      </xsl:element>

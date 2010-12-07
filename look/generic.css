@@ -965,20 +965,17 @@ a.fn {
 }
 
 #campaign-box-1 a h3 {
-  display:block;
+  display: block;
+  color: white;
+  font-family: lucida Sans;
+  font-size: 2em;
+  margin: 0.5em;
+  width: 50%;
 }
 
 #campaign-box-1 a h3:hover {
   text-decoration:none;
   color:#FFCECE;
-}
-
-#campaign-box-1 h3 {
-  color:white;
-  font-family:lucida Sans;
-  font-size:2em;
-  margin:0.5em;
-  width:50%;
 }
 
 #campaign-box-2 {

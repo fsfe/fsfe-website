@@ -63,6 +63,9 @@
       <script type="text/javascript" src="/scripts/jquery.js"></script>
       <script type="text/javascript" src="/scripts/master.js"></script>
       <script type="text/javascript" src="/scripts/placeholder.js"></script>
+      <!--[if lt IE 8]>
+	<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
+      <![endif]-->
       <xsl:apply-templates select="@*|node()"/>
     </xsl:copy>
   </xsl:template>

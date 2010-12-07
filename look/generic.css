@@ -771,6 +771,7 @@ h4#subpages + ul li:nth-child(odd) {
 
 #newsletter #submit {
   float: right;
+  max-width: 28%;
 }
 
 .section .rss-feed {

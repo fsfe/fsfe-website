@@ -606,7 +606,7 @@
 	
         <!-- AWstats javascript tracking code -->
         <script language="javascript" type="text/javascript" src="/scripts/awstats_misc_tracker.js" ></script>
-	<noscript><img src="/scripts/awstats_misc_tracker.js?nojs=y" height="0" width="0" border="0" style="display: none"></noscript>
+	<noscript><img src="/scripts/awstats_misc_tracker.js?nojs=y" height="0" width="0" border="0" style="display: none" /></noscript>
 	
       </xsl:element>
     </xsl:copy>

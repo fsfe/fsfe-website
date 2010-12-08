@@ -701,11 +701,6 @@ h4#subpages + ul li:nth-child(odd) {
   float: left;
 }
 
-.section {
-  width: 100%;
-  float: left;
-}
-
 .section .entry {
   padding: 0 .5em;
 }

@@ -696,7 +696,7 @@ h4#subpages + ul li:nth-child(odd) {
   width: 100%;
 }
 
-#feeds .section {
+.section {
   width: 48%;
   float: left;
 }

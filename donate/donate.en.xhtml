@@ -23,52 +23,98 @@
       Free Software wherever necessary, and to be an independent voice.</p>
       
     </div>
+    
+    <div class="section">
 
-    <h3>Online payment</h3>
+      <h3>One-time payment</h3>
 
-    <form action="/cgi-bin/donate.pl" method="post" id="donate">
-      <fieldset>
-        <!-- <legend>Amount:</legend> -->
-	
-	<table>
-	  <tr>
-	    <td><input name="amount" type="radio" value="other" checked="checked" onclick="amount_other.disabled = false"/>
-	    <input name="amount_other" type="text" value="" palceholder="euros" style="width:5em"/></td>
-	    <td>(you choose)</td>
-	  </tr>
-	  <tr>
-	    <td><input name="amount" type="radio" value="120" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;120</td>
-	    <td><a href="/donate/thankgnus.html#supporter">Supporter</a><br/></td>
-	  </tr>
-	  <tr>
-	    <td><input name="amount" type="radio" value="600" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;600</td>
-	    <td><a href="/donate/thankgnus.html#contributor">Contributor</a><br/></td>
-	  </tr>
-	  <tr>
-	    <td><input name="amount" type="radio" value="1200" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;1,200</td>
-	    <td><a href="/donate/thankgnus.html#sustainingcontributor">Sustaining Contributor</a><br/></td>
-	  </tr>
-	  <tr>
-	    <td><input name="amount" type="radio" value="6000" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;6,000</td>
-	    <td><a href="/donate/thankgnus.html#patron">Patron</a><br/></td>
-	  </tr>
-	</table>
-	
+      <form action="/cgi-bin/donate.pl" method="post" id="donate">
+	  <!-- <legend>Amount:</legend> -->
+	  
+	  <table>
+	    <tr>
+	      <td><input name="amount" type="radio" value="other" checked="checked" onclick="amount_other.disabled = false"/>
+	      <input name="amount_other" type="text" value="" palceholder="euros" style="width:5em"/></td>
+	      <td>(you choose)</td>
+	    </tr>
+	    <tr>
+	      <td><input name="amount" type="radio" value="120" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;120</td>
+	      <td><a href="/donate/thankgnus.html#supporter">Supporter</a><br/></td>
+	    </tr>
+	    <tr>
+	      <td><input name="amount" type="radio" value="600" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;600</td>
+	      <td><a href="/donate/thankgnus.html#contributor">Contributor</a><br/></td>
+	    </tr>
+	    <tr>
+	      <td><input name="amount" type="radio" value="1200" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;1,200</td>
+	      <td><a href="/donate/thankgnus.html#sustainingcontributor">Sustaining Contributor</a><br/></td>
+	    </tr>
+	    <tr>
+	      <td><input name="amount" type="radio" value="6000" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;6,000</td>
+	      <td><a href="/donate/thankgnus.html#patron">Patron</a><br/></td>
+	    </tr>
+	  </table>
+	  
+	  <p>
+	    <input name="anonymous" type="checkbox"/> I wish to remain anonymous
+	  </p>
+
 	<p>
-	  <input name="anonymous" type="checkbox"/> I wish to remain anonymous
+	  <!-- Translators: please replace "en" with the language code of your
+	      language and translate "Donation" and "Donate" -->
+	  <input type="hidden" name="language" value="en"/>
+	  <input type="hidden" name="text" value="Donation"/>
+	  <input type="submit" value="Donate"/>
 	</p>
-	
-      </fieldset>
+      </form>
+    
+    </div>
+    
+    <div class="section">
+      <h3>Regular payments</h3>
+      
+      <form action="/cgi-bin/donate.pl" method="post" id="donate">
+	  <!-- <legend>Amount:</legend> -->
+	  
+	  <table>
+	    <tr>
+	      <td><input name="amount" type="radio" value="other" checked="checked" onclick="amount_other.disabled = false"/>
+	      <input name="amount_other" type="text" value="" palceholder="euros" style="width:5em"/></td>
+	      <td>(you choose)</td>
+	    </tr>
+	    <tr>
+	      <td><input name="amount" type="radio" value="10" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;10</td>
+	      <td><a href="/donate/thankgnus.html#supporter">Supporter</a><br/></td>
+	    </tr>
+	    <tr>
+	      <td><input name="amount" type="radio" value="20" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;20</td>
+	      <td><a href="/donate/thankgnus.html#contributor">Contributor</a><br/></td>
+	    </tr>
+	    <tr>
+	      <td><input name="amount" type="radio" value="30" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;30</td>
+	      <td><a href="/donate/thankgnus.html#sustainingcontributor">Sustaining Contributor</a><br/></td>
+	    </tr>
+	    <tr>
+	      <td><input name="amount" type="radio" value="40" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;40</td>
+	      <td><a href="/donate/thankgnus.html#patron">Patron</a><br/></td>
+	    </tr>
+	  </table>
+	  
+	  <p>
+	    <input name="anonymous" type="checkbox"/> I wish to remain anonymous
+	  </p>
 
-      <p>
-        <!-- Translators: please replace "en" with the language code of your
-             language and translate "Donation" and "Donate" -->
-        <input type="hidden" name="language" value="en"/>
-        <input type="hidden" name="text" value="Donation"/>
-        <input type="submit" value="Donate"/>
-      </p>
-    </form>
-
+	<p>
+	  <!-- Translators: please replace "en" with the language code of your
+	      language and translate "Donation" and "Donate" -->
+	  <input type="hidden" name="language" value="en"/>
+	  <input type="hidden" name="text" value="Donation"/>
+	  <input type="submit" value="Donate"/>
+	</p>
+      </form>
+      
+    </div>
+    
     <h3>Bank transfer</h3>
 
     <p>

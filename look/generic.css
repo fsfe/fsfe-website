@@ -217,12 +217,12 @@ ul {
 #search input[type="image"] {
   background-color: transparent;
   border: 0;
-  margin: 0 0 0 -35px;
+  margin: 10px 0 0 -35px;
   vertical-align: middle;
 }
 
 #search input[type="text"] {
-  padding-left: 14px;
+  padding-left: 30px;
   width: 150px;
 }
 

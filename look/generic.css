@@ -219,6 +219,10 @@ ul {
   width: 80%;
 }
 
+#search p {
+  margin: 0;
+}
+
 #translations ul {
   padding-left: .5em;
   font-size: 90%;

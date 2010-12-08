@@ -8,7 +8,8 @@ $(document).ready(function() {
 
     // Close service notice when clicking dismiss button.
     $("#service-notice .close a").click(function() {
-	$("#service-notice").fadeOut("slow");
+//	$("#service-notice").fadeOut("slow");
+	$("#service-notice").hide();
     });
 
 });

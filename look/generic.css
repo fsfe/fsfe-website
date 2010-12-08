@@ -25,7 +25,7 @@ Editing rules:
 /* Custom fonts */
 @font-face {
   font-family: Lucida Sans;
-  src: url('/fonts/LSANS.TTF');
+  src: url("/fonts/LSANS.TTF");
 }
 
 * {
@@ -126,8 +126,8 @@ ul {
   list-style: circle;
 }
 
-/* generic classes */
 
+/* generic classes */
 .clear {
     clear:both;
 }
@@ -925,12 +925,12 @@ margin: 1.5em 0;
 
 /* item-grid (used for shop/orders) */
 .item-grid h2 {
-  border-bottom:1px solid #CCCCCC;
-  margin-bottom:0;
+  border-bottom: 1px solid #CCCCCC;
+  margin-bottom: 0;
 }
 
 #content .item-grid .image {
-  padding:2em;
+  padding: 2em;
 }
 
 
@@ -966,21 +966,21 @@ a.fn {
 
 #campaign-box-1 {
   width: 65.5%;
-  height:200px;
+  height: 200px;
   float: left;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
-  background:url('/graphics/pdf-banner.png') no-repeat top left;
-  overflow:hidden;
+  background: url("/graphics/pdf-banner.png") no-repeat top left;
+  overflow: hidden;
 }
 
 #campaign-box-1 a h3 {
   display: block;
   color: white;
-  font-family: lucida Sans;
+  font-family: "Lucida Sans", sans-serif;
   font-size: 2em;
-  margin: 0.5em;
+  margin: .5em;
   width: 50%;
 }
 
@@ -1014,15 +1014,15 @@ a.fn {
 }
 
 a.donate-box, a.fellowship-box {
-  display:block;
-  font-family:Lucida Sans;
+  display: block;
+  font-family: "Lucida Sans", sans-serif;
   height: 94px;
   border-radius: 7px;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
   text-align: center;
   font-size: 1.8em;
-  font-weight:bold;
+  font-weight: bold;
 }
 
 #campaign-box-2 a.donate-box {
@@ -1036,29 +1036,29 @@ a.donate-box, a.fellowship-box {
 
 #campaign-box-2 a.donate-box:hover,
 #campaign-box-2 a.fellowship-box:hover {
-  text-decoration:none;
+  text-decoration: none;
 }
 
 #campaign-box-2 a.donate-box:hover {
-  color:#2A7BAD;
-  -moz-box-shadow:inset 0 0 20px #00222b;
-  -webkit-box-shadow:inset 0 0 20px #00222b;
-  box-shadow:inset 0 0 20px #00222b;
+  color: #2A7BAD;
+  -moz-box-shadow: inset 0 0 20px #00222b;
+  -webkit-box-shadow: inset 0 0 20px #00222b;
+  box-shadow: inset 0 0 20px #00222b;
 }
 
 #campaign-box-2 a.fellowship-box {
-  color:#70d055;
-  -moz-box-shadow:inset 0 0 6px #17280b;
-  -webkit-box-shadow:inset 0 0 6px #17280b;
-  box-shadow:inset 0 0 6px #17280b;
-  background:url("/graphics/join-button-bg.png") no-repeat top left;
+  color: #70d055;
+  -moz-box-shadow: inset 0 0 6px #17280b;
+  -webkit-box-shadow: inset 0 0 6px #17280b;
+  box-shadow: inset 0 0 6px #17280b;
+  background: url("/graphics/join-button-bg.png") no-repeat top left;
 }
 
 #campaign-box-2 a.fellowship-box:hover {
-  color:#5DAC46;
-  -moz-box-shadow:inset 0 0 20px #17280b;
-  -webkit-box-shadow:inset 0 0 20px #17280b;
-  box-shadow:inset 0 0 20px #17280b;
+  color: #5DAC46;
+  -moz-box-shadow: inset 0 0 20px #17280b;
+  -webkit-box-shadow: inset 0 0 20px #17280b;
+  box-shadow: inset 0 0 20px #17280b;
 }
 
 
@@ -1144,7 +1144,6 @@ table {
   border-collapse: collapse;
   margin-bottom: 1em;
   max-width: 100%;
-  display:block;
 }
 
 table th,

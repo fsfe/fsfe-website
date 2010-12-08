@@ -913,6 +913,14 @@ h4#subpages + ul li:nth-child(odd) {
 }
 
 
+/* advocacy pages */
+
+.copyable-code {
+clear: both;
+margin: 1.5em 0;
+}
+
+
 /* item-grid (used for shop/orders) */
 .item-grid h2 {
   border-bottom:1px solid #CCCCCC;

@@ -240,14 +240,10 @@ ul {
 
 /* content specific */
 #content {
-  clear:right;
-  float:left;
-  font-size:112%;
-  min-height:400px;
-  min-width:400px;
-  padding-left:3%;
-  padding-right:4%;
-  width:78%;
+  clear: right;
+  float: left;
+  min-height: 400px;
+  width: 78%;
 }
 
 #content p#category {

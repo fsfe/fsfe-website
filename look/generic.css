@@ -738,11 +738,13 @@ h4#subpages + ul li:nth-child(odd) {
     padding: 0.2em 0.6em 0 0;
 }
 
-#news.section h2 {
+#news.section h2,
+#donate-once.section h2 {
   background-color: #4ad2f0;
 }
 
-#newsletter.section h2 {
+#newsletter.section h2,
+#donate-regular.section h2 {
   background-color: #7fdf55;
 }
 
@@ -755,7 +757,8 @@ h4#subpages + ul li:nth-child(odd) {
 }
 
 #newsletter.section,
-#events.section {
+#events.section,
+#donate-regular.section h2 {
   padding-left: 2%;
 }
 

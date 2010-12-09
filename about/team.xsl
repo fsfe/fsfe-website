@@ -29,11 +29,11 @@
 			    <xsl:value-of select="avatar"/>
 			  </xsl:attribute>
 			</xsl:when>
-			<xsl:when test="avatar = ''">
+			<xsl:otherwise>
 			  <xsl:attribute name="src">
 			  /graphics/default-avatar.png
-			</xsl:attribute>
-			</xsl:when>
+			  </xsl:attribute>
+			</xsl:otherwise>
 		      </xsl:choose>
                     </xsl:element>
                   </xsl:element>

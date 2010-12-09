@@ -6,13 +6,44 @@
   <!-- Fill dynamic content -->
   <xsl:template match="dynamic-content">
     <xsl:element name="ul">
+      <xsl:attribute name="class">people</xsl:attribute>
       <xsl:for-each select="/html/set/person[@team='yes']">
         <xsl:sort select="@id"/>
         <xsl:element name="li">
           <xsl:element name="p">
+          
+            <!-- Picture -->
+              <xsl:choose>
+                <xsl:when test="link != ''">
+                  <xsl:element name="a">
+                    <xsl:attribute name="href">
+                      <xsl:value-of select="link"/>
+                    </xsl:attribute>
+                    <xsl:element name="img">
+                      <xsl:attribute name="alt">
+                        <xsl:value-of select="name"/>
+                      </xsl:attribute>
+                      <xsl:attribute name="src">
+                        <xsl:value-of select="avatar"/>
+                      </xsl:attribute>
+                    </xsl:element>
+                  </xsl:element>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:element name="img">
+                    <xsl:attribute name="alt">
+                      <xsl:value-of select="name"/>
+                    </xsl:attribute>
+                    <xsl:attribute name="src">
+                      <xsl:value-of select="avatar"/>
+                    </xsl:attribute>
+                  </xsl:element>
+                </xsl:otherwise>
+              </xsl:choose>
 
             <!-- Name; if link is given show as link -->
-            <xsl:element name="b">
+            <xsl:element name="span">
+              <xsl:attribute name="class">name</xsl:attribute>
               <xsl:choose>
                 <xsl:when test="link != ''">
                   <xsl:element name="a">
@@ -29,13 +60,12 @@
             </xsl:element>
 
             <!-- E-mail -->
-            <xsl:if test="email != ''">
-              <xsl:text> &lt;</xsl:text>
-              <xsl:element name="i">
+            <xsl:element name="span">
+              <xsl:attribute name="class">email</xsl:attribute>
+              <xsl:if test="email != ''">
                 <xsl:value-of select="email"/>
-              </xsl:element>
-              <xsl:text>&gt; - </xsl:text>
-            </xsl:if>
+              </xsl:if>
+            </xsl:element>
 
             <!-- Functions -->
             <xsl:for-each select="function">

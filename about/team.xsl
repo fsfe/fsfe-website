@@ -34,6 +34,7 @@
 			  /graphics/default-avatar.png
 			</xsl:attribute>
 			</xsl:when>
+		      </xsl:choose>
                     </xsl:element>
                   </xsl:element>
                 </xsl:when>

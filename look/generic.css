@@ -1244,3 +1244,46 @@ tr.highlighted {
 #service-notice .clsoe a:active {
   color: rgb(32,45,121);
 }
+
+
+/* People pages */
+
+.people img {
+  float:left;
+  margin-right:10px;
+  width:48px;
+  height:48px;
+  border:1px solid #000;
+}
+
+ul.people {
+  list-style-type:none;
+}
+
+ul.people li {
+  display:block;
+  float:left;
+  width:48%;
+  min-width:20em;
+  padding-right:0.5em;
+}
+
+ul.people li:nth-child(odd) {
+  clear: left;
+}
+
+ul.people li:last-child {
+  margin-bottom:1.5em;
+}
+
+.people .name, .people .email {
+  display:block;
+}
+
+.people .name {
+  font-weight: bold;
+}
+
+.people .email {
+  font-style: italic;
+}

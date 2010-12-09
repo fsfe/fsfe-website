@@ -61,9 +61,9 @@
       <xsl:variable name="today">
         <xsl:value-of select="/html/@date" />
       </xsl:variable>
-      <!-- All events -->
+      <!-- Future events -->
       <xsl:for-each select="/html/set/event
-        [translate (@start, '-', '') &gt; translate ($today, '-', '')]">
+        [translate (@start, '-', '') &gt;= translate ($today, '-', '')]">
         <xsl:sort select="@start" order="descending" />
         <xsl:call-template name="event">
           <xsl:with-param name="header">current</xsl:with-param>

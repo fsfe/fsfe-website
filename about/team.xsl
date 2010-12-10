@@ -19,21 +19,31 @@
                     <xsl:attribute name="href">
                       <xsl:value-of select="link"/>
                     </xsl:attribute>
+                    
                     <xsl:element name="img">
+                    
                       <xsl:attribute name="alt">
                         <xsl:value-of select="name"/>
                       </xsl:attribute>
+                      
 		      <xsl:choose>
-			<xsl:when test="string(avatar)">
+		      
+			<xsl:when test="avatar != ''">
 			  <xsl:attribute name="src">
 			    <xsl:value-of select="avatar"/>
 			  </xsl:attribute>
 			</xsl:when>
+			
 			<xsl:otherwise>
-			  <xsl:attribute name="src">/graphics/default-avatar.png</xsl:attribute>
+			  <xsl:attribute name="src">
+			  /graphics/default-avatar.png
+			  </xsl:attribute>
 			</xsl:otherwise>
+			
 		      </xsl:choose>
+		      
                     </xsl:element>
+                    
                   </xsl:element>
                 </xsl:when>
                 <xsl:otherwise>

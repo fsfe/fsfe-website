@@ -34,9 +34,7 @@
 			    avatar-is-set-<xsl:value-of select="avatar"/>
 			</xsl:when>
 			
-			<xsl:otherwise>
-			  /graphics/default-avatar.png
-			</xsl:otherwise>
+			<xsl:otherwise>/graphics/default-avatar.png</xsl:otherwise>
 			
 		      </xsl:choose>
 		      

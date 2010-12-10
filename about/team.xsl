@@ -31,10 +31,10 @@
 		      <xsl:choose>
 		      
 			<xsl:when test="string(avatar)">
-			    avatar-is-set-<xsl:value-of select="avatar"/>
+			    <xsl:value-of select="avatar"/>
 			</xsl:when>
 			
-			<xsl:otherwise>/graphics/default-avatar.png</xsl:otherwise>
+			<xsl:otherwise>hats.png</xsl:otherwise>
 			
 		      </xsl:choose>
 		      

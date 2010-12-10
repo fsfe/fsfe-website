@@ -24,15 +24,13 @@
                         <xsl:value-of select="name"/>
                       </xsl:attribute>
 		      <xsl:choose>
-			<xsl:when test="avatar != ''">
+			<xsl:when test="string(avatar)">
 			  <xsl:attribute name="src">
 			    <xsl:value-of select="avatar"/>
 			  </xsl:attribute>
 			</xsl:when>
 			<xsl:otherwise>
-			  <xsl:attribute name="src">
-			  /graphics/default-avatar.png
-			  </xsl:attribute>
+			  <xsl:attribute name="src">/graphics/default-avatar.png</xsl:attribute>
 			</xsl:otherwise>
 		      </xsl:choose>
                     </xsl:element>

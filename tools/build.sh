@@ -13,6 +13,7 @@ TMP=/home/www/tmp.$$
 STATUS=/var/www/web
 ALARM_LOCKFILE=alarm_lockfile
 MAKEFILE_PL=${SOURCE}/Makefile.PL
+SVNUPERRFILE=/tmp/fsfe-svn-up-err
 
 # Since we must grep for svn output messages,
 # let's ensure we get English messages
@@ -73,11 +74,19 @@ echo "$(date)  Updating source files from SVN."
 # Since the "svn update" exit status cannot be trusted, and "svn update -q" is
 # always quiet, we have to test the output of "svn update" (ignoring the final
 # "At revision" line) and check for any output lines
-if test -z "$(svn update 2>/dev/null | grep -v 'At revision')" \
+if test -z "$(svn update 2>${SVNUPERRFILE} | grep -v 'At revision')" \
     -a "$(date -r ${STATUS}/last-run +%F)" == "$(date +%F)" \
     -a "$1" != "-f" ; then
   echo "$(date)  No changes to SVN."
   # In this case we only append to the cumulative status-log.txt file, we don't touch status-finished.txt
+  cat ${STATUS}/status.txt >> ${STATUS}/status-log.txt
+  exit
+fi
+
+# If "svn update" wrote anything to standard error, we copy the error message to
+# the logfile and exit
+if test -s ${SVNUPERRFILE} ; then
+  cat ${SVNUPERRFILE}
   cat ${STATUS}/status.txt >> ${STATUS}/status-log.txt
   exit
 fi

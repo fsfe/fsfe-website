@@ -71,6 +71,7 @@ echo "$(date)  Updating source files from SVN."
 # always quiet, we have to test the output of "svn update" (ignoring the final
 # "At revision" line) and check for any output lines
 svn --non-interactive update 2>${SVNUPERRFILE} | grep -v 'At revision' >${SVNUPOUTFILE}
+cat ${SVNUPOUTFILE}
 
 # If "svn update" wrote anything to standard error, exit
 if test -s ${SVNUPERRFILE} ; then
@@ -83,7 +84,6 @@ fi
 # If there are conflicts in the working copy, exit
 if test -n "$(grep '^C' ${SVNUPOUTFILE})" ; then
   echo "$(date)  There are conflicts in the local svn working copy. Build aborted"
-  cat ${SVNUPOUTFILE}
   cat ${STATUS}/status.txt >> ${STATUS}/status-log.txt
   exit
 fi

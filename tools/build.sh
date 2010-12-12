@@ -13,7 +13,8 @@ TMP=/home/www/tmp.$$
 STATUS=/var/www/web
 ALARM_LOCKFILE=alarm_lockfile
 MAKEFILE_PL=${SOURCE}/Makefile.PL
-SVNUPERRFILE=/tmp/fsfe-svn-up-err
+SVNUPOUTFILE=/tmp/fsfe-svnup-out
+SVNUPERRFILE=/tmp/fsfe-svnup-err
 
 # Since we must grep for svn output messages,
 # let's ensure we get English messages
@@ -65,16 +66,34 @@ rm -rf ${TMP%.*}.*
 echo "$(date)  Updating source files from SVN."
 # -----------------------------------------------------------------------------
 
+# Update the svn working copy and check if any files were updated.
+# Since the "svn update" exit status cannot be trusted, and "svn update -q" is
+# always quiet, we have to test the output of "svn update" (ignoring the final
+# "At revision" line) and check for any output lines
+svn --non-interactive update 2>${SVNUPERRFILE} | grep -v 'At revision' >${SVNUPOUTFILE}
+
+# If "svn update" wrote anything to standard error, exit
+if test -s ${SVNUPERRFILE} ; then
+  echo "$(date)  svn update produced the following error message. Build aborted"
+  cat ${SVNUPERRFILE}
+  cat ${STATUS}/status.txt >> ${STATUS}/status-log.txt
+  exit
+fi
+
+# If there are conflicts in the working copy, exit
+if test -n "$(grep '^C' ${SVNUPOUTFILE})" ; then
+  echo "$(date)  There are conflicts in the local svn working copy. Build aborted"
+  cat ${SVNUPOUTFILE}
+  cat ${STATUS}/status.txt >> ${STATUS}/status-log.txt
+  exit
+fi
+
 # Rebuild only if changes were made to the SVN or it hasn't run yet today
 # (unless "-f" option is used)
 #
 # We must run it once every day at least to move events from future to current
 # and from current to past.
-#
-# Since the "svn update" exit status cannot be trusted, and "svn update -q" is
-# always quiet, we have to test the output of "svn update" (ignoring the final
-# "At revision" line) and check for any output lines
-if test -z "$(svn update 2>${SVNUPERRFILE} | grep -v 'At revision')" \
+if test ! -s ${SVNUPOUTFILE} \
     -a "$(date -r ${STATUS}/last-run +%F)" == "$(date +%F)" \
     -a "$1" != "-f" ; then
   echo "$(date)  No changes to SVN."
@@ -83,13 +102,6 @@ if test -z "$(svn update 2>${SVNUPERRFILE} | grep -v 'At revision')" \
   exit
 fi
 
-# If "svn update" wrote anything to standard error, we copy the error message to
-# the logfile and exit
-if test -s ${SVNUPERRFILE} ; then
-  cat ${SVNUPERRFILE}
-  cat ${STATUS}/status.txt >> ${STATUS}/status-log.txt
-  exit
-fi
 
 # Make sure build.sh and build.pl are executable
 # TODO: this can be removed once we set the "executable" svn property

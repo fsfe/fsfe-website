@@ -30,9 +30,7 @@
                       
 		      <xsl:choose>
 		      
-			<xsl:when test="not(avatar)">
-			    /graphics/default-avatar.png
-			</xsl:when>
+			<xsl:when test="not(avatar)">/graphics/default-avatar.png</xsl:when>
 			
 			<xsl:otherwise><xsl:value-of select="avatar"/></xsl:otherwise>
 			

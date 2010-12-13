@@ -3,7 +3,7 @@
 // You can add this file onto some of your web pages (main home page can
 // be enough) by adding the following HTML code to your page body:
 //
-// <script type="text/javascript" src="/js/awstats_misc_tracker.js"></script>
+// <script type="text/javascript" src="/scripts/awstats_misc_tracker.js"></script>
 // <noscript><p><img src="/js/awstats_misc_tracker.js?nojs=y" alt="" height="0" width="0" style="display: none" /></p></noscript>
 
 //
@@ -28,7 +28,7 @@
 
 // If you use pslogger.php to generate your log, you can change this line with
 // var awstatsmisctrackerurl="pslogger.php?loc=/js/awstats_misc_tracker.js";
-var awstatsmisctrackerurl="/js/awstats_misc_tracker.js";
+var awstatsmisctrackerurl="/scripts/awstats_misc_tracker.js";
 
 var TRKresult;
 var TRKscreen, TRKwinsize, TRKcdi, TRKjava, TRKshk, TRKsvg, TRKfla;

@@ -390,11 +390,11 @@
 		  <xsl:attribute name="value">hosts</xsl:attribute>
 		</xsl:element>
 
-		<xsl:element name="p">
+		<!--<xsl:element name="p">
 		  <xsl:element name="input">
 		    <xsl:attribute name="type">image</xsl:attribute>
 		    <xsl:attribute name="src">/graphics/icons/search-button.png</xsl:attribute>
-		  </xsl:element>
+		  </xsl:element>-->
 
 		  <xsl:element name="input">
 		    <xsl:attribute name="type">text</xsl:attribute>
@@ -404,13 +404,11 @@
 		    </xsl:attribute>
 		  </xsl:element>
 
-		  <!--
 		  <xsl:element name="input">
 		    <xsl:attribute name="type">submit</xsl:attribute>
 		    <xsl:attribute name="name">search</xsl:attribute>
 		    <xsl:attribute name="value">Submit</xsl:attribute>
 		  </xsl:element>
-		  -->
 
 		</xsl:element>
 	      </xsl:element>

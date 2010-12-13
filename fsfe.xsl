@@ -390,8 +390,8 @@
 		  <xsl:attribute name="value">hosts</xsl:attribute>
 		</xsl:element>
 
-		<!--<xsl:element name="p">
-		  <xsl:element name="input">
+		<xsl:element name="p">
+		  <!--<xsl:element name="input">
 		    <xsl:attribute name="type">image</xsl:attribute>
 		    <xsl:attribute name="src">/graphics/icons/search-button.png</xsl:attribute>
 		  </xsl:element>-->

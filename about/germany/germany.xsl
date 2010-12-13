@@ -8,7 +8,7 @@
     <xsl:element name="ul">
       <xsl:attribute name="class">people</xsl:attribute>
       <xsl:for-each select="/html/set/person[@team='yes']">
-	<xsl:for-each select="/html/set/person[@chapter_de='yes']">
+	<xsl:when test="/html/set/person[@chapter_de] = 'yes'">
 	  <xsl:sort select="@id"/>
 	  <xsl:element name="li">
 	    <xsl:element name="p">
@@ -112,7 +112,7 @@
 
 	    </xsl:element>
 	  </xsl:element>
-	</xsl:for-each>
+	</xsl:when>
       </xsl:for-each>
     </xsl:element>
   </xsl:template>

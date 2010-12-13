@@ -28,7 +28,7 @@
 
 // If you use pslogger.php to generate your log, you can change this line with
 // var awstatsmisctrackerurl="pslogger.php?loc=/js/awstats_misc_tracker.js";
-var awstatsmisctrackerurl="/js/awstats_misc_tracker.js";
+var awstatsmisctrackerurl="/scripts/awstats_misc_tracker.js";
 
 var TRKresult;
 var TRKscreen, TRKwinsize, TRKcdi, TRKjava, TRKshk, TRKsvg, TRKfla;

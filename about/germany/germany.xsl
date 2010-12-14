@@ -7,7 +7,13 @@
   <xsl:import href="../../tools/xsltsl/date-time.xsl" />
   <xsl:output method="xml" encoding="UTF-8" indent="yes" />
 
-  <!-- $today = current date (given as <html date="...">) -->
+  <!-- To localise this page to a new country change the following:
+  
+    # /html/set/person[@chapter_xx - change xx to your country code
+    
+  -->
+
+  <!-- set today variable-->
   <xsl:variable name="today">
     <xsl:value-of select="/html/@date" />
   </xsl:variable>
@@ -155,6 +161,7 @@
   <xsl:template match="country-team-list">
     <xsl:element name="ul">
       <xsl:attribute name="class">people</xsl:attribute>
+      
       <xsl:for-each select="/html/set/person[@chapter_de='yes']">
 	<xsl:sort select="@id"/>
 	<xsl:element name="li">

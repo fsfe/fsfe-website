@@ -115,7 +115,7 @@
   <!--define dynamic list of country news items-->
   <xsl:template match="country-news">
   
-    <xsl:for-each select="/html/set/news[@tags='de']">
+    <xsl:for-each select="/html/set/news [translate (@date, '-', '') &lt;= translate ($today, '-', '') and @tags='de']">
       <xsl:sort select="@date" order="descending" />
       <xsl:if test="position() &lt; 6">
 	<xsl:call-template name="news" />
@@ -127,9 +127,9 @@
   <!--define dynamic list of country event items-->
   <xsl:template match="country-events">
   
-    <xsl:for-each select="/html/set/event [translate (@end, '-', '') &gt;= translate ($today, '-', '')]">
+    <xsl:for-each select="/html/set/event [translate (@end, '-', '') &gt;= translate ($today, '-', '') and @tags='de']">
       <xsl:sort select="@start" />
-      <xsl:if test="position() &lt; 6">
+      <xsl:if test="position() &lt; 5">
 	<xsl:call-template name="event" />
       </xsl:if>
     </xsl:for-each>

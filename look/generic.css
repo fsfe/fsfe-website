@@ -261,42 +261,42 @@ ul {
   margin: 0 0 0.3em;
 }
 
-#content h1,
-#content h2,
-#content h3 {
+h1,
+h2,
+h3 {
   color: #202D79;
   line-height: normal;
 }
 
 
-#content h1 {
+h1 {
   border-bottom: 1px solid #D2D2D2;
   font-size: 250%;
   margin: 0;
   padding: 0 0 0.5em;
 }
 
-#content h2 {
+h2 {
   margin-top: 1.5em;
 }
 
-#content h3 {
+h3 {
   font-size: 140%;
   margin: 1.5em 0 .2em 0;
 }
 
-#content .image {
+.image {
   background-color: #FDFDFD;
   float: left;
   padding: 0 2em 2em 0;
 }
 
-#content .image.right {
+.image.right {
   float: right;
   padding: 0 0 2em 2em;
 }
 
-#content .image p {
+.image p {
   border-bottom: 1px solid rgb(210,210,210);
   border-left: 1px solid rgb(210,210,210);
   border-right: 1px solid rgb(210,210,210);
@@ -305,7 +305,7 @@ ul {
   padding: .5em;
 }
 
-#content .image .photographer {
+.image .photographer {
   font-size: 90%;
   font-style: italic;
 }
@@ -379,7 +379,7 @@ pre.file {
   width: 100%;
 }
 
-#content #introduction img {
+#introduction img {
   margin: 0;
 }
 
@@ -730,13 +730,13 @@ h4#subpages + ul li:nth-child(odd) {
   letter-spacing: normal;
   line-height: normal;
   margin: 1.5em 0 1em;
-  min-height: 1.5em;
+  min-height: 1.6em;
   padding: 0;
   text-align: right;
   width: 100%;
 }
 
-.section h2 a {
+.section h2 a, .section h2 span {
     color: white;
     float: right;
     padding: 0.2em 0.6em 0 0;
@@ -768,6 +768,10 @@ h4#subpages + ul li:nth-child(odd) {
 #events.section,
 #donate-regular.section h2 {
   padding-left: 2%;
+}
+
+#team.section h2 {
+  background-color: #7fdf55;
 }
 
 #newsletter #language {

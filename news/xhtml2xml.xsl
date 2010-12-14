@@ -20,6 +20,12 @@
 	    <xsl:value-of select="/html/@type"/>
 	  </xsl:attribute>
 	</xsl:if>
+	
+	<xsl:if test="/html/@tags">
+	  <xsl:attribute name ="tags">
+	    <xsl:value-of select="/html/@tags"/>
+	  </xsl:attribute>
+	</xsl:if>
 
 	<xsl:element name="title">
 	  <xsl:value-of select="/html/head/title"/>

@@ -10,8 +10,11 @@
   <!-- To localise this page to a new country change the following:
   
     # /html/set/person[@chapter_xx - change xx to your country code
+    # <xsl:variable name="country-code">de - change xx to your country code
     
   -->
+  
+  <xsl:variable name="country-code">de</xsl:variable>
 
   <!-- set today variable-->
   <xsl:variable name="today">
@@ -38,29 +41,6 @@
       </div>
       
     </div>
-  </xsl:template>
-
-  <!-- Show a single newsletter entry -->
-  <xsl:template name="newsletter">
-    <xsl:variable name="date">
-      <xsl:value-of select="@date" />
-    </xsl:variable>
-
-    <xsl:variable name="link">
-      <xsl:value-of select="link" />
-    </xsl:variable>
-    
-    <xsl:variable name="month">
-      <xsl:call-template name="dt:get-month-name">
-	<xsl:with-param name="month" select="substring($date,6,2)" />
-      </xsl:call-template>
-    </xsl:variable>
-    
-    <xsl:variable name="year">
-      <xsl:value-of select="substring($date,0,5)" />
-    </xsl:variable>
-
-    <li><a href="{link}">Newsletter from <xsl:value-of select="$month" />&#160;<xsl:value-of select="$year" /></a></li>
   </xsl:template>
 
   <!-- Show a single event -->
@@ -135,7 +115,7 @@
   <!--define dynamic list of country news items-->
   <xsl:template match="country-news">
   
-    <xsl:for-each select="/html/set/news[translate (@date, '-', '') &lt;= translate ($today, '-', '')]">
+    <xsl:for-each select="/html/set/news[@tags='de']">
       <xsl:sort select="@date" order="descending" />
       <xsl:if test="position() &lt; 6">
 	<xsl:call-template name="news" />
@@ -147,8 +127,7 @@
   <!--define dynamic list of country event items-->
   <xsl:template match="country-events">
   
-    <xsl:for-each select="/html/set/event
-      [translate (@end, '-', '') &gt;= translate ($today, '-', '')]">
+    <xsl:for-each select="/html/set/event [translate (@end, '-', '') &gt;= translate ($today, '-', '') and @tags='de']">
       <xsl:sort select="@start" />
       <xsl:if test="position() &lt; 6">
 	<xsl:call-template name="event" />

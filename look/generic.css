@@ -766,12 +766,17 @@ h4#subpages + ul li:nth-child(odd) {
 
 #newsletter.section,
 #events.section,
+#contact.section,
 #donate-regular.section h2 {
   padding-left: 2%;
 }
 
 #team.section h2 {
   background-color: #7fdf55;
+}
+
+#contact.section h2 {
+  background-color: #BDE455;
 }
 
 #newsletter #language {

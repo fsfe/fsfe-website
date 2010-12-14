@@ -742,7 +742,7 @@ h4#subpages + ul li:nth-child(odd) {
     padding: 0.2em 0.6em 0 0;
 }
 
-.section .grid-100 {
+.section.grid-100 {
   width: 100%;
 }
 

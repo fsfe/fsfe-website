@@ -133,7 +133,8 @@ ul {
 }
 
 .center {
-  text-align: center!important;
+  text-align: center;
+  float: none!important;
 }
 
 .left {

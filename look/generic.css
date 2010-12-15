@@ -132,6 +132,18 @@ ul {
     clear:both;
 }
 
+.center {
+  text-align: center;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
 #wrapper {
   margin:0 5% 0 1%;
   padding-bottom: 0;
@@ -288,7 +300,6 @@ h3 {
 .image {
   background-color: #FDFDFD;
   float: left;
-  padding: 0 2em 2em 0;
 }
 
 .image.right {
@@ -323,11 +334,6 @@ h3 {
   width: 14em;
   background: #FFECBF;
   text-align: center;
-}
-  
-#content img {
-  float: left;
-  margin: 0 1em 1em 0;
 }
 
 .fineprint {  /* compatibility */

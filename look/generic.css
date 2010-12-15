@@ -133,7 +133,7 @@ ul {
 }
 
 .center {
-  text-align: center;
+  text-align: center!important;
 }
 
 .left {
@@ -387,6 +387,7 @@ pre.file {
 
 #introduction img {
   margin: 0;
+  padding: 0 1em 0 0;
 }
 
 #introduction p,
@@ -807,7 +808,7 @@ h4#subpages + ul li:nth-child(odd) {
   padding: 0;
   width: 20px;
   float: left;
-  margin: .3em 0 0 .5em;
+  margin: .3em 0 0 .2em;
 }
 
 .section .ical {

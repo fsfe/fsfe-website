@@ -5,6 +5,7 @@
   xmlns:dt="http://xsltsl.org/date-time">
   
   <xsl:import href="../../tools/xsltsl/date-time.xsl" />
+  <xsl:import href="../../tools/xsltsl/tagging.xsl" />
   <xsl:output method="xml" encoding="UTF-8" indent="yes" />
 
   <!-- To localise this page to a new country change the following:
@@ -114,26 +115,20 @@
   
   <!--define dynamic list of country news items-->
   <xsl:template match="country-news">
-  
-    <xsl:for-each select="/html/set/news [translate (@date, '-', '') &lt;= translate ($today, '-', '') and @tags='de']">
-      <xsl:sort select="@date" order="descending" />
-      <xsl:if test="position() &lt; 6">
-	<xsl:call-template name="news" />
-      </xsl:if>
-    </xsl:for-each>
-          
+  	
+    <xsl:call-template name="news-with-tag">
+    	<xsl:with-param name="tag">de</xsl:with-param>
+    </xsl:call-template>
+    
   </xsl:template>
   
   <!--define dynamic list of country event items-->
   <xsl:template match="country-events">
-  
-    <xsl:for-each select="/html/set/event [translate (@end, '-', '') &gt;= translate ($today, '-', '') and @tags='de']">
-      <xsl:sort select="@start" />
-      <xsl:if test="position() &lt; 5">
-	<xsl:call-template name="event" />
-      </xsl:if>
-    </xsl:for-each>
-          
+  	
+    <xsl:call-template name="events-with-tag">
+    	<xsl:with-param name="tag">de</xsl:with-param>
+    </xsl:call-template>
+    
   </xsl:template>
 
   <!--define dynamic list of country team members-->

@@ -58,6 +58,39 @@ img.right {
   margin: 0 0 1em 1em;
 }
 
+.left {
+  float: left;
+}
+
+p.left {
+  padding: 0 2% 0 0;
+}
+
+.right {
+  float: right;
+}
+
+.grid-40 {
+  width: 38%;
+}
+
+.grid-40.left {
+  padding-right:1%
+}
+
+.grid-60 {
+  width: 56%;
+}
+
+.grid-60.right {
+  padding-left:1%
+  border-left:1px solid #CCC;
+}
+
+.even {
+  background-color: #DEEEFF;
+}
+
 /* avoid hover effects and borders on internal marks and graphical links */
 a[name], a[name]:hover, a.gl img, a.gl:link, a.gl:visited, a.gl:hover {
   border: none;
@@ -1083,11 +1116,8 @@ a.fn {
   float: right;
 }
 
-/* To avoid misplacements on the event page */
 .clear {
-  overflow: hidden;
   clear: both;
-  height: 1px;
 }
 
 /* Project list */

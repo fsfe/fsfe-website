@@ -410,25 +410,35 @@
         </xsl:element>
         <!-- End info box -->
         
-
-        <!-- Fundraising box
-        <xsl:if test="/buildinfo/fundraising">
+        <!-- Fundraising box -->
           <xsl:element name="div">
             <xsl:attribute name="id">fundraising</xsl:attribute>
-            <xsl:element name="div">
-              <xsl:attribute name="class">box</xsl:attribute>
-              <xsl:if test="/buildinfo/fundraising/call1">
-                <xsl:element name="p">
-                  <xsl:attribute name="class">call1</xsl:attribute>
-                  <xsl:apply-templates select="/buildinfo/fundraising/call1/node()"/>
-                </xsl:element>
-              </xsl:if>
-              <xsl:if test="/buildinfo/fundraising/call2">
-                <xsl:element name="p">
-                  <xsl:attribute name="class">call2</xsl:attribute>
-                  <xsl:apply-templates select="/buildinfo/fundraising/call2/node()"/>
-                </xsl:element>
-              </xsl:if>
+	      <xsl:element name="h2">
+		FSFE Needs Your Help!
+	      </xsl:element>
+	      <xsl:element name="div">
+		<xsl:attribute name="class">button</xsl:attribute>
+		<xsl:element name="a">
+		  <xsl:attribute name="href">/about/overview2010.html</xsl:attribute>
+		  Our work in 2010
+		</xsl:element>
+	      </xsl:element>
+	      <xsl:element name="div">
+		<xsl:attribute name="class">button</xsl:attribute>
+		<xsl:element name="a">
+		  <xsl:attribute name="href">/donate</xsl:attribute>
+		  Donate to FSFE
+		</xsl:element>
+	      </xsl:element>
+	      <xsl:element name="img">
+		<xsl:attribute name="src">/graphics/wreath.png</xsl:attribute>
+		<xsl:attribute name="alt">wreath</xsl:attribute>
+		<xsl:attribute name="class">right</xsl:attribute>
+	      </xsl:element>
+	      <xsl:element name="p">
+		Digital freedoms are worth fighting for. Please support our work - donate today
+	      </xsl:element>
+              <!-- disabling the progress bar
               <xsl:if test="/buildinfo/fundraising/current">
                 <xsl:element name="div">
                   <xsl:attribute name="class">percentbox</xsl:attribute>
@@ -447,10 +457,9 @@
                   <xsl:text>€ 100 000</xsl:text>
                 </xsl:element>
               </xsl:if>
+              -->
             </xsl:element>
-          </xsl:element>
-        </xsl:if>
-        End Fundraising box -->
+        <!-- End Fundraising box -->
         
         <!-- Content -->
         <xsl:element name="div">

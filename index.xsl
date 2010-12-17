@@ -48,10 +48,6 @@
         </xsl:otherwise>
       </xsl:choose>
       
-      <div class="text">
-        <xsl:apply-templates select="body/node()" />
-      </div>
-      
     </div>
   </xsl:template>
 

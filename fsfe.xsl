@@ -509,6 +509,52 @@
 	      </xsl:if>
 	    </xsl:element>
 	    <!-- End info box -->
+	    
+	    <!-- Fundraising box -->
+	      <xsl:element name="div">
+		<xsl:attribute name="id">fundraising</xsl:attribute>
+		  <xsl:element name="h2">
+		    <xsl:apply-templates select="/buildinfo/fundraising/call1/node()"/>
+		  </xsl:element>
+		  <xsl:element name="div">
+		    <xsl:attribute name="class">button</xsl:attribute>
+		    <xsl:apply-templates select="/buildinfo/fundraising/call2/node()"/>
+		  </xsl:element>
+		  <xsl:element name="div">
+		    <xsl:attribute name="class">button</xsl:attribute>
+		    <xsl:apply-templates select="/buildinfo/fundraising/call3/node()"/>
+		  </xsl:element>
+		  <xsl:element name="img">
+		    <xsl:attribute name="src">/graphics/wreath.png</xsl:attribute>
+		    <xsl:attribute name="alt">wreath</xsl:attribute>
+		    <xsl:attribute name="class">right</xsl:attribute>
+		  </xsl:element>
+		  <xsl:element name="p">
+		    <xsl:attribute name="class">call4</xsl:attribute>
+		    <xsl:apply-templates select="/buildinfo/fundraising/call4/node()"/>
+		  </xsl:element>
+		  <!-- disabling the progress bar
+		  <xsl:if test="/buildinfo/fundraising/current">
+		    <xsl:element name="div">
+		      <xsl:attribute name="class">percentbox</xsl:attribute>
+		      <xsl:element name="div">
+			<xsl:attribute name="class">percentbar</xsl:attribute>
+			<xsl:attribute name="style">width: 45.9%</xsl:attribute>
+		      </xsl:element>
+		    </xsl:element>
+		    <xsl:element name="p">
+		      <xsl:attribute name="class">current</xsl:attribute>
+		      <xsl:apply-templates select="/buildinfo/fundraising/current/node()"/>
+		      <xsl:text>€ 45 860</xsl:text>
+		    </xsl:element>
+		    <xsl:element name="p">
+		      <xsl:attribute name="class">target</xsl:attribute>
+		      <xsl:text>€ 100 000</xsl:text>
+		    </xsl:element>
+		  </xsl:if>
+		  -->
+		</xsl:element>
+	    <!-- End Fundraising box -->
 
 	    <!-- Here goes the actual content of the <body> node of the input file -->
 	    <xsl:apply-templates select="node()"/>

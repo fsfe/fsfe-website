@@ -414,17 +414,14 @@
           <xsl:element name="div">
             <xsl:attribute name="id">fundraising</xsl:attribute>
 	      <xsl:element name="h2">
-                <xsl:attribute name="class">call1</xsl:attribute>
                 <xsl:apply-templates select="/buildinfo/fundraising/call1/node()"/>
 	      </xsl:element>
 	      <xsl:element name="div">
 		<xsl:attribute name="class">button</xsl:attribute>
-                <xsl:attribute name="class">call2</xsl:attribute>
                 <xsl:apply-templates select="/buildinfo/fundraising/call2/node()"/>
 	      </xsl:element>
 	      <xsl:element name="div">
 		<xsl:attribute name="class">button</xsl:attribute>
-                <xsl:attribute name="class">call3</xsl:attribute>
                 <xsl:apply-templates select="/buildinfo/fundraising/call3/node()"/>
 	      </xsl:element>
 	      <xsl:element name="img">

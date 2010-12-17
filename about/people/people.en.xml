@@ -47,7 +47,6 @@
     <function project="ftf">coordinator/m</function>
     <email>coughlan (at) fsfeurope (dot) org</email>
     <link>/about/coughlan/coughlan.html</link>
-    <avatar>/about/coughlan/coughlan.jpg</avatar>
   </person>
 
   <person id="eide" team="yes">
@@ -67,7 +66,6 @@
     <function project="wipo">coordinator/m</function>
     <email>gerloff (at) fsfeurope (dot) org</email>
     <link>/about/gerloff/gerloff.html</link>
-    <avatar>/about/gerloff/gerloff-avatar.jpg</avatar>
   </person>
 
   <person id="gollowitzer" team="yes">
@@ -78,13 +76,12 @@
     <link>http://wiki.fsfe.org/Fellows/gollo</link>
   </person>
 
-  <person id="greve" member="yes" chapter_de="yes" team="yes">
+  <person id="greve" member="yes" countryteam="de" team="yes">
     <name>Georg C. F. Greve</name>
     <country>CH</country>
     <function>greve</function>
     <email>greve (at) fsfeurope (dot) org</email>
     <link>/about/greve/greve.html</link>
-    <avatar>/about/greve/greve-avatar.jpg</avatar>
   </person>
 
   <person id="groot" member="yes">
@@ -108,7 +105,6 @@
     <function>executive-director/m</function>
     <email>holz (at) fsfeurope (dot) org</email>
     <link>/about/holz/holz.html</link>
-    <avatar>/about/holz/holz.jpg</avatar>
   </person>
 
 <person id="jean" team="yes">
@@ -150,14 +146,13 @@
     <email>kersten (at) fsfeurope (dot) org</email>
   </person>
 
-  <person id="kirschner" member="yes" chapter_de="yes" team="yes">
+  <person id="kirschner" member="yes" countryteam="de" team="yes">
     <name>Matthias Kirschner</name>
     <country>DE</country>
     <function>fellowship-coordinator/m</function>
     <function country="DE">coordinator/m</function>
     <email>kirschner (at) fsfeurope (dot) org</email>
     <link>/about/kirschner/kirschner.html</link>
-    <avatar>/about/kirschner/kirschner-avatar.jpg</avatar>
   </person>
 
   <person id="klein" member="yes" team="yes">
@@ -168,7 +163,7 @@
     <link>http://wiki.fsfe.org/Fellows/julia.e.klein</link>
   </person>
 
-  <person id="koch" member="yes" chapter_de="yes">
+  <person id="koch" member="yes" countryteam="de">
     <name>Werner Koch</name>
     <country>DE</country>
     <email>koch (at) fsfeurope (dot) org</email>
@@ -189,7 +184,7 @@
     <email>milenovic (at) fsfeurope (dot) org</email>
   </person>
 
-  <person id="mueller" member="yes" chapter_de="yes" team="yes">
+  <person id="mueller" member="yes" countryteam="de" team="yes">
     <name>Reinhard Müller</name>
     <country>AT</country>
     <function>financial-officer/m</function>
@@ -198,7 +193,7 @@
     <link>http://wiki.fsfe.org/Fellows/reinhard</link>
   </person>
 
-  <person id="oberg" member="yes" chapter_de="yes" team="yes">
+  <person id="oberg" member="yes" countryteam="de" team="yes">
     <name>Jonas Öberg</name>
     <country>SE</country>
     <function project="stacs">coordinator/m</function>
@@ -222,7 +217,7 @@
     <link>http://blogs.fsfe.org/poderi/</link>
   </person>
 
-  <person id="reiter" member="yes" chapter_de="yes" team="yes">
+  <person id="reiter" member="yes" countryteam="de" team="yes">
     <name>Bernhard Reiter</name>
     <country>DE</country>
     <function country="DE">deputy/m</function>
@@ -248,12 +243,10 @@
 
   <person id="roy" team="yes">
     <name>Hugo Roy</name>
-    <country>DE</country>
+    <country>FR</country>
     <function country="FR">coordinator/m</function>
-    <function>intern/m</function>
     <email>hugo (at) fsfe (dot) org</email>
     <link>/about/roy/roy.html</link>
-    <avatar>/about/roy/roy.jpg</avatar>
   </person>
 
   <person id="sandklef" member="yes" team="yes">
@@ -282,7 +275,7 @@
   
   <person id="tuke" team="yes">
     <name>Sam Tuke</name>
-    <country>UK</country>
+    <country>GB</country>
     <function volunteers="editors">coordinator/m</function>
     <function>intern/m</function>
     <email>samtuke (at) fsfe (dot) org</email>

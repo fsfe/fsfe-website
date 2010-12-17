@@ -40,8 +40,8 @@ if [[ -n "$BUILD_STARTED" && "10#${BUILD_STARTED}" -gt 30 && ! -f ${STATUS}/${AL
   touch ${STATUS}/${ALARM_LOCKFILE}
 fi
 
-# If build is already running, don't run it again.
-if ps -C build.sh -o pid= | grep -q -v "$$"; then
+# If some build script is already running, don't run it.
+if ps -C "build-df.sh,build-test.sh,build.sh" -o pid= | grep -q -v "$$"; then
   exit
 fi
 
@@ -127,9 +127,7 @@ echo "$(date)  Building HTML pages."
 touch ${STATUS}/last-run
 
 if test "x`hostname`" = "xekeberg"; then
-  tools/build.pl -t 16 -q -o ${TMP} -i .
-elif test "x`hostname`" = "xberzelius"; then
-  tools/build.pl -t 2 -q -o ${TMP} -i .
+  tools/build.pl -t 4 -q -o ${TMP} -i .
 else
   tools/build.pl -q -o ${TMP} -i .
 fi

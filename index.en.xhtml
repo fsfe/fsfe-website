@@ -26,12 +26,78 @@
       </div>
       
     </div>
-  </body>
+    
+    <div id="feeds">
+    
+      <div id="news" class="section">
+	<h2>
+	  <a class="rss-feed" href="/news.rss"><img src="/graphics/rss.png" alt="News RSS" title="news RSS feed" /></a>
+	  <a class="ical" href="http://identi.ca/fsfe"><img src="/graphics/identica.png" alt="identica" title="follow FSFE on identi.ca"/></a>
+	  
+	  <a href="/news/news.html">News</a>
+	  
+	</h2>
+      
+	<all-news />
+	  
+      </div><!--end #news-->   
 
-  <text id="news">News</text>
-  <text id="events">Events</text>
-  <text id="morenews">More news…</text>
-  <text id="moreevents">More events…</text>
+      <div id="newsletter" class="section">
+	<h2><a href="/news/newsletter.html">Newsletter</a></h2>
+	
+	<div class="entry">
+	  <p>
+	    <strong>Subscribe to FSFE's monthly newsletter:</strong>
+	  </p>
+
+	  <form method="post" action="http://mail.fsfeurope.org/mailman/subscribe/press-release">
+	    <p>
+	      <select id="language" name="language">
+		<option value="en" selected="selected">English</option>
+		<option value="el">Ελληνικά</option>	
+		<option value="es">Español</option>
+		<option value="de">Deutsch</option>
+		<option value="fr">Français</option>
+		<option value="it">Italiano</option>
+		<option value="nl">Nederlands</option>
+		<option value="pt">Português</option>
+		<option value="ru">Русский</option>
+		<option value="sv">Svenska</option>
+	      </select>
+	      
+	      <input id="email" type="email" placeholder="email" />
+	      
+	      <input type="submit" id="submit" value="Subscribe" />
+	    </p>
+	  </form>
+
+	  <ul>
+	  
+	    <all-newsletters />
+	    
+	    <li><a href="news/newsletter.html">More...</a></li>
+	    
+	  </ul>
+
+	</div><!-- /.entry -->
+      </div> <!-- /#newsletter -->
+    
+      <div id="events" class="section">
+	<h2>
+	  <a class="rss-feed" href="/events.rss"><img src="/graphics/rss.png" alt="Events RSS" title="events RSS feed" /></a>
+	  <a class="ical" href="webcal://fsfe.org/events/events.ics"><img src="/graphics/ical.png" alt="iCal" title="FSFE events as iCal feed" /></a>
+	  
+	  <a href="/events/events.html">Events</a>
+	  
+	</h2>
+    
+	<all-events />
+    
+      </div><!--end #events-->
+      
+    </div><!--end #feeds-->
+    
+  </body>
 
   <timestamp>$Date$ $Author$</timestamp>
 </html>

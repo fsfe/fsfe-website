@@ -414,21 +414,18 @@
           <xsl:element name="div">
             <xsl:attribute name="id">fundraising</xsl:attribute>
 	      <xsl:element name="h2">
-		FSFE Needs Your Help!
+                <xsl:attribute name="class">call1</xsl:attribute>
+                <xsl:apply-templates select="/buildinfo/fundraising/call1/node()"/>
 	      </xsl:element>
 	      <xsl:element name="div">
 		<xsl:attribute name="class">button</xsl:attribute>
-		<xsl:element name="a">
-		  <xsl:attribute name="href">/about/overview2010.html</xsl:attribute>
-		  Our work in 2010
-		</xsl:element>
+                <xsl:attribute name="class">call2</xsl:attribute>
+                <xsl:apply-templates select="/buildinfo/fundraising/call2/node()"/>
 	      </xsl:element>
 	      <xsl:element name="div">
 		<xsl:attribute name="class">button</xsl:attribute>
-		<xsl:element name="a">
-		  <xsl:attribute name="href">/donate</xsl:attribute>
-		  Donate to FSFE
-		</xsl:element>
+                <xsl:attribute name="class">call3</xsl:attribute>
+                <xsl:apply-templates select="/buildinfo/fundraising/call3/node()"/>
 	      </xsl:element>
 	      <xsl:element name="img">
 		<xsl:attribute name="src">/graphics/wreath.png</xsl:attribute>
@@ -436,7 +433,8 @@
 		<xsl:attribute name="class">right</xsl:attribute>
 	      </xsl:element>
 	      <xsl:element name="p">
-		Digital freedoms are worth fighting for. Please support our work - donate today
+                <xsl:attribute name="class">call4</xsl:attribute>
+                <xsl:apply-templates select="/buildinfo/fundraising/call4/node()"/>
 	      </xsl:element>
               <!-- disabling the progress bar
               <xsl:if test="/buildinfo/fundraising/current">

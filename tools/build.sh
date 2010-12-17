@@ -40,14 +40,14 @@ if [[ -n "$BUILD_STARTED" && "10#${BUILD_STARTED}" -gt 30 && ! -f ${STATUS}/${AL
   touch ${STATUS}/${ALARM_LOCKFILE}
 fi
 
+# Redirect output
+exec 1> ${STATUS}/status.txt 2>&1
+
 # If some build script is already running, don't run it.
 if ps -C "build-df.sh,build-test.sh,build.sh" -o pid= | grep -q -v "$$"; then
   echo "Another build script is currently running. Build postponed."
   exit
 fi
-
-# Redirect output
-exec 1> ${STATUS}/status.txt 2>&1
 
 cd ${SOURCE}
 

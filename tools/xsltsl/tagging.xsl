@@ -9,8 +9,8 @@
 
 	
 	<!--define dynamic list of country news items-->
-	<xsl:template name="news-with-tag">
-		<xsl:param name="tag" />
+	<xsl:template name="fetch-news">
+		<xsl:param name="tag" select="''"/>
 		<xsl:param name="today" select="/html/@date" />
 		
 		<xsl:variable name="tagcomma"><xsl:value-of select="$tag" />,</xsl:variable>
@@ -19,7 +19,8 @@
 		<xsl:for-each select="/html/set/news [translate (@date, '-', '') &lt;= translate ($today, '-', '') and
 				(contains(@tags, $commatag) or
 				 contains(@tags, $tagcomma) or
-				 @tags=$tag) ]">
+				 @tags=$tag or
+				 $tag='') ]">
 			<xsl:sort select="@date" order="descending" />
 			<xsl:if test="position() &lt; 6">
 				<xsl:call-template name="news" />
@@ -30,8 +31,8 @@
 	
 	
 	<!--define dynamic list of country event items-->
-	<xsl:template name="events-with-tag">
-		<xsl:param name="tag" />
+	<xsl:template name="fetch-events">
+		<xsl:param name="tag" select="''"/>
 		<xsl:param name="today" select="/html/@date" />
 		
 		<xsl:variable name="tagcomma"><xsl:value-of select="$tag" />,</xsl:variable>
@@ -40,7 +41,8 @@
 		<xsl:for-each select="/html/set/event [translate (@end, '-', '') &gt;= translate ($today, '-', '') and
 				(contains(@tags, $commatag) or
 				 contains(@tags, $tagcomma) or
-				 @tags=$tag) ]">
+				 @tags=$tag or
+				 $tag='') ]">
 			<xsl:sort select="@start" />
 			<xsl:if test="position() &lt; 5">
 				<xsl:call-template name="event" />

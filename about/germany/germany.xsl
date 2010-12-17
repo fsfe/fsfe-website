@@ -115,24 +115,25 @@
   
   <!--define dynamic list of country news items-->
   <xsl:template match="country-news">
-  	
-    <xsl:call-template name="news-with-tag">
-    	<xsl:with-param name="tag">de</xsl:with-param>
+    
+    <xsl:call-template name="fetch-news">
+    	<xsl:with-param name="tag"><xsl:value-of select="$country-code" /></xsl:with-param>
     </xsl:call-template>
     
   </xsl:template>
   
   <!--define dynamic list of country event items-->
   <xsl:template match="country-events">
-  	
-    <xsl:call-template name="events-with-tag">
-    	<xsl:with-param name="tag">de</xsl:with-param>
+    
+    <xsl:call-template name="fetch-events">
+    	<xsl:with-param name="tag"><xsl:value-of select="$country-code" /></xsl:with-param>
     </xsl:call-template>
     
   </xsl:template>
 
   <!--define dynamic list of country team members-->
   <xsl:template match="country-team-list">
+    
     <xsl:element name="ul">
       <xsl:attribute name="class">people</xsl:attribute>
       

@@ -1097,7 +1097,7 @@ a.fn {
 /* Front page */
 #campaigns-boxes {
   overflow: hidden;
-  margin-bottom: -1em;
+  margin-bottom: 0;
 }
 
 #campaign-box-1 {

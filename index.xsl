@@ -35,20 +35,10 @@
     </div>
   </xsl:template>
 
-  <!-- Show a single news item -->
+  <!-- Show a single newsletter item -->
   <xsl:template name="newsletter">
     <xsl:variable name="link"><xsl:value-of select="link" /></xsl:variable>
-    <div class="entry">
-      <xsl:choose>
-        <xsl:when test="$link != ''">
-          <h3><a href="{link}"><xsl:value-of select="title" /></a></h3>
-        </xsl:when>
-        <xsl:otherwise>
-          <h3><xsl:value-of select="title" /></h3>
-        </xsl:otherwise>
-      </xsl:choose>
-      
-    </div>
+    <li><a href="{link}"><xsl:value-of select="title" /></a></li>      
   </xsl:template>
 
   <!-- Show a single event -->

@@ -4,7 +4,9 @@
     <xsl:output method="xml"
                 encoding="UTF-8"
                 indent="yes" />
-                
+    
+    <xsl:variable name="path-for-avatars" select="'/home/www/fsfe'" />
+    
     <xsl:template name="country-people-list">
         <xsl:param name="countryteam" select="''" />
         
@@ -12,6 +14,9 @@
             <xsl:attribute name="class">people</xsl:attribute>
             <xsl:for-each select="/html/set/person[@countryteam=$countryteam or $countryteam='']">
                 <xsl:sort select="@id" />
+                
+                <xsl:variable name="id" select="@id" />
+                
                 <xsl:element name="li">
                     <xsl:element name="p">
                         <!-- Picture -->
@@ -26,12 +31,12 @@
                                             <xsl:value-of select="name" />
                                         </xsl:attribute>
                                         <xsl:attribute name="src">
+                                            <xsl:variable name="img-path" select="string(concat($path-for-avatars, '/about/', $id, '/', $id, '-avatar.jpg'))" />
                                             <xsl:choose>
-                                                <xsl:when test="not(avatar)">
-                                                /graphics/default-avatar.png</xsl:when>
-                                                <xsl:otherwise>
-                                                    <xsl:value-of select="avatar" />
-                                                </xsl:otherwise>
+                                                <xsl:when test="boolean(document($img-path))">
+                                                    <xsl:value-of select="$img-path" />
+                                                </xsl:when>
+                                                <xsl:otherwise>/graphics/default-avatar.png</xsl:otherwise>
                                             </xsl:choose>
                                         </xsl:attribute>
                                     </xsl:element>

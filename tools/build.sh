@@ -42,6 +42,7 @@ fi
 
 # If some build script is already running, don't run it.
 if ps -C "build-df.sh,build-test.sh,build.sh" -o pid= | grep -q -v "$$"; then
+  echo "Another build script is currently running. Build postponed."
   exit
 fi
 

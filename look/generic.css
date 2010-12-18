@@ -329,7 +329,9 @@ p.left {
 }
 
 #fundraising .button a:hover {
+  box-shadow: 0 0 15px #00222B inset;
   -moz-box-shadow: 0 0 15px #00222B inset;
+  -webkit-box-shadow: 0 0 15px #00222B inset;
 }
 
 #fundraising img {

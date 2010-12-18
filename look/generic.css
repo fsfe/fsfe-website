@@ -305,7 +305,7 @@ p.left {
 #fundraising h2 {
   color: #9d0000;
   font-weight: bold;
-  margin: 0.3em 1em 0.5em 0;
+  margin: 0.3em 1em 0.3em 0;
   float:left;
 }
 
@@ -316,7 +316,7 @@ p.left {
 
 #fundraising .button a {
   padding: 0.2em 0.4em;
-  font-size: 1.1em;
+  font-size: 1.5em;
   color: white;
   font-weight:bold;
   float:left;
@@ -339,8 +339,8 @@ p.left {
 #fundraising p {
   clear: left;
   float: left;
-  font-size: 1.2em;
-  margin: 0.3em 0;
+  font-size: 1.6em;
+  margin: 0 0 0.3em 0;
 }
 
 #fundraising div.percentbox {

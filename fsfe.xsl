@@ -510,7 +510,7 @@
 	    </xsl:element>
 	    <!-- End info box -->
 	    
-	    <!-- Fundraising box -->
+	    <!-- Fundraising box
 	      <xsl:element name="div">
 		<xsl:attribute name="id">fundraising</xsl:attribute>
 		  <xsl:element name="h2">
@@ -533,7 +533,7 @@
 		    <xsl:attribute name="class">call4</xsl:attribute>
 		    <xsl:apply-templates select="/buildinfo/fundraising/call4/node()"/>
 		  </xsl:element>
-		  <!-- disabling the progress bar
+		  disabling the progress bar
 		  <xsl:if test="/buildinfo/fundraising/current">
 		    <xsl:element name="div">
 		      <xsl:attribute name="class">percentbox</xsl:attribute>
@@ -552,8 +552,7 @@
 		      <xsl:text>€ 100 000</xsl:text>
 		    </xsl:element>
 		  </xsl:if>
-		  -->
-		</xsl:element>
+		</xsl:element>-->
 	    <!-- End Fundraising box -->
 
 	    <!-- Here goes the actual content of the <body> node of the input file -->

@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    <xsl:import href="feeds.xsl" />
     <xsl:output method="xml"
                 encoding="UTF-8"
                 indent="yes" />
-    
-    <xsl:variable name="path-for-avatars" select="'/home/www/fsfe'" />
-    
+    <!-- <xsl:variable name="path-for-avatars"
+                  select="'/home/nicolas/FSFE/fsfe-web'" /> -->
+    <!--displays  -->
     <xsl:template name="country-people-list">
-        <xsl:param name="countryteam" select="''" />
-        
+        <xsl:param name="countryteam"
+                   select="''" />
         <xsl:element name="ul">
             <xsl:attribute name="class">people</xsl:attribute>
             <xsl:for-each select="/html/set/person[@countryteam=$countryteam or $countryteam='']">
+
                 <xsl:sort select="@id" />
-                
-                <xsl:variable name="id" select="@id" />
-                
+                <xsl:variable name="id"
+                              select="@id" />
                 <xsl:element name="li">
                     <xsl:element name="p">
                         <!-- Picture -->
@@ -27,18 +28,15 @@
                                         <xsl:value-of select="link" />
                                     </xsl:attribute>
                                     <xsl:element name="img">
-                                        <xsl:attribute name="alt">
-                                            <xsl:value-of select="name" />
+                                        <xsl:attribute name="src"
+                                                       value="$img-path" />
+                                        <xsl:attribute name="onerror">
+                                            <xsl:text>
+javascript:this.src='/graphics/default-avatar.png';
+</xsl:text>
                                         </xsl:attribute>
-                                        <xsl:attribute name="src">
-                                            <xsl:variable name="img-path" select="string(concat($path-for-avatars, '/about/', $id, '/', $id, '-avatar.jpg'))" />
-                                            <xsl:choose>
-                                                <xsl:when test="boolean(document($img-path))">
-                                                    <xsl:value-of select="$img-path" />
-                                                </xsl:when>
-                                                <xsl:otherwise>/graphics/default-avatar.png</xsl:otherwise>
-                                            </xsl:choose>
-                                        </xsl:attribute>
+                                        <xsl:attribute name="alt"
+                                                       value="No picture" />
                                     </xsl:element>
                                 </xsl:element>
                             </xsl:when>

@@ -13,11 +13,12 @@
                    select="''" />
         <xsl:element name="ul">
             <xsl:attribute name="class">people</xsl:attribute>
-            <xsl:for-each select="/html/set/person[@countryteam=$countryteam or $countryteam='']">
-
+            <xsl:for-each select="/html/set/person[@countryteam=$countryteam or $countryteam='']"> 
+                
                 <xsl:sort select="@id" />
                 <xsl:variable name="id"
                               select="@id" />
+                
                 <xsl:element name="li">
                     <xsl:element name="p">
                         <!-- Picture -->
@@ -27,28 +28,19 @@
                                     <xsl:attribute name="href">
                                         <xsl:value-of select="link" />
                                     </xsl:attribute>
-                                    <xsl:element name="img">
-                                        <xsl:attribute name="src"
-                                                       value="$img-path" />
-                                        <xsl:attribute name="onerror">
-                                            <xsl:text>
-javascript:this.src='/graphics/default-avatar.png';
-</xsl:text>
-                                        </xsl:attribute>
-                                        <xsl:attribute name="alt"
-                                                       value="No picture" />
-                                    </xsl:element>
+                                    
+                                    <xsl:call-template name="avatar">
+                                        <xsl:with-param name="id" select="$id" />
+                                    </xsl:call-template>
+                                    
                                 </xsl:element>
                             </xsl:when>
                             <xsl:otherwise>
-                                <xsl:element name="img">
-                                    <xsl:attribute name="alt">
-                                        <xsl:value-of select="name" />
-                                    </xsl:attribute>
-                                    <xsl:attribute name="src">
-                                        <xsl:value-of select="avatar" />
-                                    </xsl:attribute>
-                                </xsl:element>
+                                
+                                <xsl:call-template name="avatar">
+                                    <xsl:with-param name="id" select="$id" />
+                                </xsl:call-template>
+                                
                             </xsl:otherwise>
                         </xsl:choose>
                         <!-- Name; if link is given show as link -->
@@ -80,27 +72,21 @@ javascript:this.src='/graphics/default-avatar.png';
                         <!-- Functions -->
                         <xsl:for-each select="function">
                             <xsl:if test="position()!=1">
-                                <xsl:text>
-, 
-</xsl:text>
+                                <xsl:text>, </xsl:text>
                             </xsl:if>
                             <xsl:variable name="function">
                                 <xsl:value-of select="." />
                             </xsl:variable>
                             <xsl:apply-templates select="/html/set/function[@id=$function]/node()" />
                             <xsl:if test="@country != ''">
-                                <xsl:text>
- 
-</xsl:text>
+                                <xsl:text> </xsl:text>
                                 <xsl:variable name="country">
                                     <xsl:value-of select="@country" />
                                 </xsl:variable>
                                 <xsl:value-of select="/html/set/country[@id=$country]" />
                             </xsl:if>
                             <xsl:if test="@project != ''">
-                                <xsl:text>
- 
-</xsl:text>
+                                <xsl:text> </xsl:text>
                                 <xsl:variable name="project">
                                     <xsl:value-of select="@project" />
                                 </xsl:variable>
@@ -112,9 +98,7 @@ javascript:this.src='/graphics/default-avatar.png';
                                 </xsl:element>
                             </xsl:if>
                             <xsl:if test="@volunteers != ''">
-                                <xsl:text>
- 
-</xsl:text>
+                                <xsl:text> </xsl:text>
                                 <xsl:variable name="volunteers">
                                     <xsl:value-of select="@volunteers" />
                                 </xsl:variable>

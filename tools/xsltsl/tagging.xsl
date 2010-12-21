@@ -9,7 +9,7 @@
 	<xsl:output method="xml" encoding="UTF-8" indent="yes" />
 
 	
-	<!--define dynamic list of country news items-->
+	<!--define dynamic list of tagged news items-->
 	<xsl:template name="fetch-news">
 		<xsl:param name="tag" select="''"/>
 		<xsl:param name="today" select="/html/@date" />
@@ -30,8 +30,20 @@
 		
 	</xsl:template>
 	
-	
-	<!--define dynamic list of country event items-->
+    <!--define dynamic list of (not yet tagged) newsletters items-->
+    <xsl:template name="fetch-newsletters">
+        <xsl:param name="today" select="/html/@date" />
+        
+        <xsl:for-each select="/html/set/news [translate(@date, '-', '') &lt;= translate($today, '-', '') and (@type = 'newsletter')]">
+            <xsl:sort select="@date" order="descending" />
+            <xsl:if test="position()&lt;3">
+                <xsl:call-template name="newsletter" />
+            </xsl:if>
+        </xsl:for-each>
+        
+    </xsl:template>
+    
+	<!--define dynamic list of tagged event items-->
 	<xsl:template name="fetch-events">
 		<xsl:param name="tag" select="''"/>
 		<xsl:param name="today" select="/html/@date" />

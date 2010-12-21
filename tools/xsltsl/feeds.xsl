@@ -34,6 +34,12 @@
         </div>
     </xsl:template>
     
+     <!-- Show a single newsletter item -->
+    <xsl:template name="newsletter">
+        <xsl:variable name="link"><xsl:value-of select="link" /></xsl:variable>
+        <li><a href="{link}"><xsl:value-of select="title" /></a></li>      
+    </xsl:template>
+    
     <!-- Show a single event -->
     <xsl:template name="event">
         <!-- Create variables -->

@@ -18,10 +18,10 @@
   
   <!--define dynamic list of country news items-->
     <xsl:template match="country-news">
-        <xsl:call-template name="fetch-news">
-            <xsl:with-param name="tag">
+        <xsl:call-template name="fetch-newsletters">
+            <!-- <xsl:with-param name="tag">
                 <xsl:value-of select="$country-code" />
-            </xsl:with-param>
+            </xsl:with-param> -->
         </xsl:call-template>
     </xsl:template>
     

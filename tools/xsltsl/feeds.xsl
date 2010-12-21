@@ -51,7 +51,7 @@
         <xsl:param name="header"
                    select="''" />
         <xsl:param name="display-details"
-                   select="no" />
+                   select="'no'" />
         
         <!-- Create variables -->
         <xsl:variable name="start">

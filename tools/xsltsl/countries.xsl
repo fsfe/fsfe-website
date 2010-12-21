@@ -5,9 +5,8 @@
     <xsl:output method="xml"
                 encoding="UTF-8"
                 indent="yes" />
-    <!-- <xsl:variable name="path-for-avatars"
-                  select="'/home/nicolas/FSFE/fsfe-web'" /> -->
-    <!--displays  -->
+    
+    <!-- displays list of people for a given country -->
     <xsl:template name="country-people-list">
         <xsl:param name="countryteam"
                    select="''" />

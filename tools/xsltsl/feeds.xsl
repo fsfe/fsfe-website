@@ -5,7 +5,9 @@
     <xsl:output method="xml"
                 encoding="UTF-8"
                 indent="yes" />
+    
     <!-- define content type templates-->
+    
     <!-- Show a single news item -->
     <xsl:template name="news">
         <xsl:variable name="link">
@@ -31,6 +33,7 @@
             </div>
         </div>
     </xsl:template>
+    
     <!-- Show a single event -->
     <xsl:template name="event">
         <!-- Create variables -->
@@ -99,7 +102,7 @@
         </div>
     </xsl:template>
     
-    <!-- Show a single news item -->
+    <!-- Show a person's avatar -->
     <xsl:template name="avatar">
         <xsl:param name="id" />
         

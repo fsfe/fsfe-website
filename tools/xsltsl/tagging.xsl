@@ -5,6 +5,7 @@
 	xmlns:dt="http://xsltsl.org/date-time">
 
 	<xsl:import href="../../tools/xsltsl/date-time.xsl" />
+	<xsl:import href="feeds.xsl" />
 	<xsl:output method="xml" encoding="UTF-8" indent="yes" />
 
 	

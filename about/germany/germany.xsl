@@ -4,15 +4,13 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:dt="http://xsltsl.org/date-time">
   
-  <xsl:import href="../../tools/xsltsl/date-time.xsl" />
   <xsl:import href="../../tools/xsltsl/tagging.xsl" />
   <xsl:import href="../../tools/xsltsl/countries.xsl" />
   <xsl:output method="xml" encoding="UTF-8" indent="yes" />
 
-  <!-- To localise this page to a new country change the following:
+  <!-- To localise this page to a new country, copy this file and change the following:
   
-    # /html/set/person[@chapter_xx - change xx to your country code
-    # <xsl:variable name="country-code">de - change xx to your country code
+    # <xsl:variable name="country-code">de</xsl:variable> -> change xx to your country code
     
   -->
   

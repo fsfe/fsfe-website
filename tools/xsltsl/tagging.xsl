@@ -58,8 +58,11 @@
 	        <xsl:when test="$wanted-time = 'past'">
 	            
 	            <!-- Past events -->
-	            <xsl:for-each select="/html/set/event
-                                        [translate (@end, '-', '') &lt; translate ($today, '-', '')]">
+	            <xsl:for-each select="/html/set/event [translate (@end, '-', '') &lt; translate ($today, '-', '') and
+                                        (contains(@tags, $commatag) or
+                                         contains(@tags, $tagcomma) or
+                                         @tags=$tag or
+                                         $tag='')]">
                     <xsl:sort select="@end" order="descending" />
                     <xsl:if test="position() &lt;= $nb-events or $nb-events=''">
                         <xsl:call-template name="event">
@@ -77,7 +80,11 @@
 	            <!-- Current events -->
                 <xsl:for-each select="/html/set/event
                                         [translate (@start, '-', '') &lt;= translate ($today, '-', '') and
-                                        translate (@end,   '-', '') &gt;= translate ($today, '-', '')]">
+                                        translate (@end,   '-', '') &gt;= translate ($today, '-', '') and
+                                        (contains(@tags, $commatag) or
+                                         contains(@tags, $tagcomma) or
+                                         @tags=$tag or
+                                         $tag='')]">
                     <xsl:sort select="@start" order="descending" />
                     <xsl:if test="position() &lt;= $nb-events or $nb-events=''">
                         <xsl:call-template name="event">
@@ -94,7 +101,11 @@
 	            
 	            <!-- Future events -->
                 <xsl:for-each select="/html/set/event
-                                        [translate (@start, '-', '') &gt; translate ($today, '-', '')]">
+                                        [translate (@start, '-', '') &gt; translate ($today, '-', '') and
+                                        (contains(@tags, $commatag) or
+                                         contains(@tags, $tagcomma) or
+                                         @tags=$tag or
+                                         $tag='')]">
                     <xsl:sort select="@start" />
                     <xsl:if test="position() &lt;= $nb-events or $nb-events=''">
                         <xsl:call-template name="event">

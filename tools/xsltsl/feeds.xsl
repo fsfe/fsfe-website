@@ -50,6 +50,8 @@
     <xsl:template name="event">
         <xsl:param name="header"
                    select="''" />
+        <xsl:param name="display-details"
+                   select="no" />
         
         <!-- Create variables -->
         <xsl:variable name="start">
@@ -59,7 +61,7 @@
             <xsl:value-of select="substring($start,9,2)" />
         </xsl:variable>
         <xsl:variable name="start_month">
-            <xsl:call-template name="dt:get-month-abbreviation">
+            <xsl:call-template name="dt:get-month-name">
                 <xsl:with-param name="month"
                                 select="substring($start,6,2)" />
             </xsl:call-template>
@@ -71,7 +73,7 @@
             <xsl:value-of select="substring($end,9,2)" />
         </xsl:variable>
         <xsl:variable name="end_month">
-            <xsl:call-template name="dt:get-month-abbreviation">
+            <xsl:call-template name="dt:get-month-name">
                 <xsl:with-param name="month"
                                 select="substring($end,6,2)" />
             </xsl:call-template>
@@ -115,45 +117,30 @@
             </xsl:choose>
             <xsl:choose>
                 <xsl:when test="$start != $end">
-                    <p class="date multiple">
-                        <span class="n">(</span>
-                        <span class="from">
-                            <span class="day">
-                                <xsl:value-of select="$start_day" />
-                            </span>
-                            <span class="month">
-                                <xsl:value-of select="$start_month" />
-                            </span>
-                        </span>
-                        <span class="conjunction">↓</span>
-                        <span class="to">
-                            <span class="day">
-                                <xsl:value-of select="$end_day" />
-                            </span>
-                            <span class="month">
-                                <xsl:value-of select="$end_month" />
-                            </span>
-                        </span>
-                        <span class="n">)</span>
+                    <p class="date">
+                        <xsl:value-of select="$start_day" />
+                        <xsl:text> </xsl:text>
+                        <xsl:value-of select="$start_month" />
+                        <xsl:text> to </xsl:text>
+                        <xsl:value-of select="$end_day" />
+                        <xsl:text> </xsl:text>
+                        <xsl:value-of select="$end_month" />
                     </p>
                 </xsl:when>
                 <xsl:otherwise>
                     <p class="date">
-                        <span class="n">(</span>
-                        <span class="day">
-                            <xsl:value-of select="$start_day" />
-                        </span>
-                        <span class="month">
-                            <xsl:value-of select="$start_month" />
-                        </span>
-                        <span class="n">)</span>
+                        <xsl:value-of select="$start_day" />
+                        <xsl:text> </xsl:text>
+                        <xsl:value-of select="$start_month" />
                     </p>
                 </xsl:otherwise>
             </xsl:choose>
-            <div class="details">
-                <xsl:apply-templates select="body/node()" />
-                <!--<div class="cleared">&#160;</div>-->
-            </div>
+            <xsl:if test="$display-details = 'yes'">
+                <div class="details">
+                    <xsl:apply-templates select="body/node()" />
+                    <!--<div class="cleared">&#160;</div>-->
+                </div>
+            </xsl:if>
             <!--
               <xsl:if test="$link != ''">
                 <p class="read_more">

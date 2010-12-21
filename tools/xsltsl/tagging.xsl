@@ -50,6 +50,7 @@
 		<xsl:param name="wanted-time" select="future" /> <!-- value in {"past", "present", "future"} -->
 		<xsl:param name="header" select="''" />
 		<xsl:param name="nb-events" select="''" />
+		<xsl:param name="display-details" select="'no'" />
 		
 		<xsl:variable name="tagcomma"><xsl:value-of select="$tag" />,</xsl:variable>
 		<xsl:variable name="commatag">, <xsl:value-of select="$tag" /></xsl:variable>
@@ -69,6 +70,7 @@
                             <xsl:with-param name="header">
                                 <xsl:value-of select="$header" />
                             </xsl:with-param>
+                            <xsl:with-param name="display-details" select="$display-details" />
                         </xsl:call-template>
                     </xsl:if>
                 </xsl:for-each>
@@ -91,6 +93,7 @@
                             <xsl:with-param name="header">
                                 <xsl:value-of select="$header" />
                             </xsl:with-param>
+                            <xsl:with-param name="display-details" select="$display-details" />
                         </xsl:call-template>
                     </xsl:if>
                 </xsl:for-each>
@@ -112,6 +115,7 @@
                             <xsl:with-param name="header">
                                 <xsl:value-of select="$header" />
                             </xsl:with-param>
+                            <xsl:with-param name="display-details" select="$display-details" />
                         </xsl:call-template>
                     </xsl:if>
                 </xsl:for-each>

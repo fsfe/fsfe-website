@@ -34,14 +34,23 @@
         </div>
     </xsl:template>
     
-     <!-- Show a single newsletter item -->
+    <!-- Show a single newsletter item -->
     <xsl:template name="newsletter">
-        <xsl:variable name="link"><xsl:value-of select="link" /></xsl:variable>
-        <li><a href="{link}"><xsl:value-of select="title" /></a></li>      
+        <xsl:variable name="link">
+            <xsl:value-of select="link" />
+        </xsl:variable>
+        <li>
+            <a href="{link}">
+                <xsl:value-of select="title" />
+            </a>
+        </li>
     </xsl:template>
     
     <!-- Show a single event -->
     <xsl:template name="event">
+        <xsl:param name="header"
+                   select="''" />
+        
         <!-- Create variables -->
         <xsl:variable name="start">
             <xsl:value-of select="@start" />
@@ -50,7 +59,7 @@
             <xsl:value-of select="substring($start,9,2)" />
         </xsl:variable>
         <xsl:variable name="start_month">
-            <xsl:call-template name="dt:get-month-name">
+            <xsl:call-template name="dt:get-month-abbreviation">
                 <xsl:with-param name="month"
                                 select="substring($start,6,2)" />
             </xsl:call-template>
@@ -62,7 +71,7 @@
             <xsl:value-of select="substring($end,9,2)" />
         </xsl:variable>
         <xsl:variable name="end_month">
-            <xsl:call-template name="dt:get-month-name">
+            <xsl:call-template name="dt:get-month-abbreviation">
                 <xsl:with-param name="month"
                                 select="substring($end,6,2)" />
             </xsl:call-template>
@@ -70,11 +79,30 @@
         <xsl:variable name="link">
             <xsl:value-of select="link" />
         </xsl:variable>
-        <div class="entry">
+        <xsl:variable name="page">
+            <xsl:value-of select="page" />
+        </xsl:variable>
+        
+        <!-- Before the first event, include the header -->
+        <xsl:if test="position() = 1 and $header != ''">
+            <h2>
+                <xsl:value-of select="/html/text [@id = $header]" />
+            </h2>
+        </xsl:if>
+        
+        <!-- Now, the event block -->
+        <div class="event">
             <xsl:choose>
                 <xsl:when test="$link != ''">
                     <h3>
                         <a href="{link}">
+                            <xsl:value-of select="title" />
+                        </a>
+                    </h3>
+                </xsl:when>
+                <xsl:when test="$page != ''">
+                    <h3>
+                        <a href="{page}">
                             <xsl:value-of select="title" />
                         </a>
                     </h3>
@@ -87,44 +115,78 @@
             </xsl:choose>
             <xsl:choose>
                 <xsl:when test="$start != $end">
-                    <p class="date">
-                        <xsl:value-of select="$start_day" />
-                        <xsl:text> </xsl:text>
-                        <xsl:value-of select="$start_month" />
-                        <xsl:text> to </xsl:text>
-                        <xsl:value-of select="$end_day" />
-                        <xsl:text> </xsl:text>
-                        <xsl:value-of select="$end_month" />
+                    <p class="date multiple">
+                        <span class="n">(</span>
+                        <span class="from">
+                            <span class="day">
+                                <xsl:value-of select="$start_day" />
+                            </span>
+                            <span class="month">
+                                <xsl:value-of select="$start_month" />
+                            </span>
+                        </span>
+                        <span class="conjunction">↓</span>
+                        <span class="to">
+                            <span class="day">
+                                <xsl:value-of select="$end_day" />
+                            </span>
+                            <span class="month">
+                                <xsl:value-of select="$end_month" />
+                            </span>
+                        </span>
+                        <span class="n">)</span>
                     </p>
                 </xsl:when>
                 <xsl:otherwise>
                     <p class="date">
-                        <xsl:value-of select="$start_day" />
-                        <xsl:text> </xsl:text>
-                        <xsl:value-of select="$start_month" />
+                        <span class="n">(</span>
+                        <span class="day">
+                            <xsl:value-of select="$start_day" />
+                        </span>
+                        <span class="month">
+                            <xsl:value-of select="$start_month" />
+                        </span>
+                        <span class="n">)</span>
                     </p>
                 </xsl:otherwise>
             </xsl:choose>
+            <div class="details">
+                <xsl:apply-templates select="body/node()" />
+                <!--<div class="cleared">&#160;</div>-->
+            </div>
+            <!--
+              <xsl:if test="$link != ''">
+                <p class="read_more">
+                  <a href="{link}"><xsl:value-of select="/html/text [@id = 'more']" /></a>
+                </p>
+              </xsl:if>
+
+              <xsl:if test="$page != ''">
+                <p class="read_more">
+                  <a href="{page}"><xsl:value-of select="/html/text [@id = 'page']" /></a>
+                </p>
+              </xsl:if>
+            -->
         </div>
     </xsl:template>
     
     <!-- Show a person's avatar -->
     <xsl:template name="avatar">
         <xsl:param name="id" />
-        
-        <xsl:variable name="img-path" select="concat( '/about/', $id, '/', $id, '-avatar.jpg' )" />
-        
+        <xsl:variable name="img-path"
+                      select="concat( '/about/', $id, '/', $id, '-avatar.jpg' )" />
         <xsl:element name="img">
-            
             <xsl:attribute name="src">
                 <xsl:value-of select="$img-path" />
             </xsl:attribute>
-            
             <xsl:attribute name="onerror">
-                <xsl:text>this.src='/graphics/default-avatar.png';</xsl:text>
+                <xsl:text>
+this.src='/graphics/default-avatar.png';
+</xsl:text>
             </xsl:attribute>
             <xsl:attribute name="alt"
                            value="No picture" />
         </xsl:element>
     </xsl:template>
+    
 </xsl:stylesheet>

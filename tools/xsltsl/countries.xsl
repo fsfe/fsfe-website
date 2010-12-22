@@ -6,13 +6,21 @@
                 encoding="UTF-8"
                 indent="yes" />
     
-    <!-- displays list of people for a given country -->
+    <!-- displays list of people for a given country (or a given team, i.e. "main") -->
     <xsl:template name="country-people-list">
-        <xsl:param name="countryteam"
+        <xsl:param name="team"
                    select="''" />
+        
+        <xsl:variable name="teamcomma"><xsl:value-of select="$team" />,</xsl:variable>
+		<xsl:variable name="commateam">, <xsl:value-of select="$team" /></xsl:variable>
+        
         <xsl:element name="ul">
             <xsl:attribute name="class">people</xsl:attribute>
-            <xsl:for-each select="/html/set/person[@countryteam=$countryteam or $countryteam='']"> 
+            <xsl:for-each select="/html/set/person[
+                                    contains(@teams, $commateam) or
+				                    contains(@teams, $teamcomma) or
+				                    @teams=$team or
+				                    $team='']"> 
                 
                 <xsl:sort select="@id" />
                 <xsl:variable name="id"

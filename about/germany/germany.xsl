@@ -48,7 +48,7 @@
     <!--define dynamic list of country team members-->
     <xsl:template match="country-team-list">
         <xsl:call-template name="country-people-list">
-            <xsl:with-param name="countryteam">
+            <xsl:with-param name="team">
                 <xsl:value-of select="$country-code" />
             </xsl:with-param>
         </xsl:call-template>

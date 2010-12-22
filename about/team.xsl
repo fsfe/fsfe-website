@@ -7,9 +7,11 @@
 
   <!-- Fill dynamic content -->
   <xsl:template match="dynamic-content">
-    <xsl:call-template name="country-people-list" />
+    <xsl:call-template name="country-people-list">
+      <xsl:with-param name="team" select="'main'" />
+    </xsl:call-template>
   </xsl:template>
-
+  
   <!-- Do not copy <set> to output at all -->
   <xsl:template match="set"/>
 

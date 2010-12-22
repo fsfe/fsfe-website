@@ -37,9 +37,10 @@ my $date = strftime "%Y-%m-%d", localtime;
 my $time = strftime "%s", localtime;
 
 open(MAIL, "|/usr/lib/sendmail -t -f ato\@fsfe.org");
-print MAIL "From: web\@fsfeurope.org\n";
+print MAIL "Reply-To: " . $query->param("email") . "\n";
+print MAIL "From: office\@fsfeurope.org\n";
 print MAIL "To: office\@fsfeurope.org\n";
-print MAIL "Cc: ato\@fsfe.org, mueller\@fsfeurope.org\n";
+print MAIL "Cc: ato\@fsfe.org\n";
 print MAIL "Subject: New message from website from " . $query->param("name") . "\n";
 print MAIL "Content-Type: text/plain\n\n";
 print MAIL "We have received a new message from our website contact form.\n\n";

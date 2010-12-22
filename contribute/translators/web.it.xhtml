@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="iso-8859-1" ?>
+ï»¿<?xml version="1.0" encoding="utf-8" ?>
 
 <html>
   <head>
     <title>
-      FSF Europe - Partecipare - Informazioni per i traduttori delle pagine web
+      FSFE - Partecipare - Informazioni per i traduttori - Pagine web
     </title>
   </head>
 
@@ -13,24 +13,32 @@
     <h2>Come sono generate le pagine web</h2>
 
     <p>
-      Le pagine HTML del sito www.fsfe.org sono generate dal server web
+      Le pagine HTML del sito fsfe.org sono generate dal server web
       in modo automatico ogni cinque minuti a partire da una serie
       di file XML. Di conseguenza, non serve modificare le pagine HTML, ma tutto
-      il lavoro di aggiornamento è fatto sui file XML.
+      il lavoro di aggiornamento Ã¨ fatto sui file XML.
     </p>
+
     <p>
-      I nomi delle pagine seguono la sintassi: "<i>nome</i>.<i>lingua</i>.html"
-      (dove <i>lingua</i> è il codice di due lettere iso-639 della lingua, ad esempio
-      "en" per l'inglese, o "de" per il tedesco). I file sorgenti sono chiamati
-      "<i>nome</i>.<i>lingua</i>.xhtml".<br />
-      Alcune pagine contengono una parte generata in modo dinamico: oltre a una
-      parte fissa proveniente dal file .xhtml, includono informazioni
-      provenienti da uno o più file .xml. Quando non tutti i file .xml sono
-      tradotti, il sistema di generazione delle pagine utilizza la versione
-      originale inglese, quindi è possibile che la pagina finale contenga delle
-      parti tradotte e delle parti in inglese. Questo può succedere ad esempio
-      con la <a href="/index.html">pagina iniziale</a>, quella delle
-      <a href="/news/news.html">notizie</a> e quella degli
+      Il nome di ogni pagina su fsfe.org segue questo schema:
+      <var><em>nomepagina</em>.<em>lingua</em>.html</var> (dove <em>lingua</em>
+      Ã¨ il <a
+      href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">codice
+      ISO-639-1 di due lettere</a> della lingua, come "en" per l'inglese o "it" per
+      l'italiano). I nomi dei file sorgenti sono:
+      <var><em>nomepagina</em>.<em>lingua</em>.xhtml</var>.
+	</p>
+
+	<p>
+	  Alcune pagine contengono una parte generata in modo dinamico: oltre a una
+      parte fissa proveniente dal file .xhtml, includono informazioni provenienti
+      da uno o piÃ¹ file .xml. Quando una pagina di questo tipo viene generata, il
+      sistema di generazione delle pagine prende i file XML tradotti se disponibili
+      e utilizza la versione inglese di quei file XML che non sono stati ancora
+      tradotti. Quindi Ã¨ possibile che la pagina finale contenga delle
+      parti tradotte e delle parti in inglese. Esempi di queste pagine sono la
+      <a href="/index.html">pagina iniziale</a>, quella delle
+      <a href="/news/news.html">notizie</a>, e quella degli
       <a href="/events/events.html">eventi</a>.
     </p>
 
@@ -39,12 +47,12 @@
     <p>
       Tutti i file sorgenti (ossia i file .xhtml e .xml) sono pubblicamente
       disponibili, in modo che chiunque possa partecipare al lavoro di
-      traduzione senza particolari formalità. Tuttavia, se si inizia a tradurre
-      una pagina che si pensa richieda un po' di tempo, è meglio mandare un
+      traduzione senza particolari formalitÃ . Tuttavia, se si inizia a tradurre
+      una pagina che si pensa richieda un po' di tempo, Ã¨ meglio mandare un
       messaggio di avviso sulla <a
       href="http://mail.fsfeurope.org/mailman/listinfo/translators">mailing list
       dei traduttori</a> per evitare che qualcun altro inizi a lavorare sullo
-      stesso testo (per facilitare il lavoro dei vari gruppi di traduzione è
+      stesso testo (per facilitare il lavoro dei vari gruppi di traduzione Ã¨
       bene usare sempre il tag [it] nell'oggetto dei messaggi inviati a questa
       lista).
     </p>
@@ -52,102 +60,95 @@
     <h3>Tradurre le pagine non ancora tradotte</h3>
 
     <p>
-      Se navigando nel sito si incontra una pagina che non è ancora stata
-      tradotta nella propria lingua, basta andare in fondo alla pagina, fare
-      clic sul link "[XHTML]" e salvare il file che si ottiene, ossia il file
-      .xhtml della pagina in lingua inglese. Successivamente, basta rinominare
+      Se navigando nel sito si incontra una pagina che non Ã¨ ancora stata
+      tradotta nella propria lingua, basta andare in fondo alla pagina, fare clic
+      sul link <strong>Source code</strong> e salvare il file che si ottiene, ovvero
+      il file .xhtml della pagina in lingua inglese. Successivamente, basta rinominare
       il file sostituendo al codice "en" il codice della propria lingua e
       aprirlo col proprio editor di testi. Occorre tradurre tutto il testo
       che sta al di fuori degli elementi delimitati dai marcatori "&lt;...&gt;"
-      e lasciare inalterato ciò che sta all'interno di questi marcatori (ossia i
-      comandi XHTML che indicano come verrà visualizzata la pagina web risultante).
+      e lasciare inalterato ciÃ² che sta all'interno di questi marcatori (ossia i
+      comandi XHTML che indicano come verrÃ  visualizzata la pagina web risultante).
+    </p>
+
+	<!--
+	     Note to translators for the above sentence:
+	     _structure_ not _appearance_.  XHTML = structure, CSS = appearance.
+    -->
+
+    <p>
+      Alla fine del file si trova una riga che contiene il tag <var>&lt;/html&gt;</var>.
+      Immediatamente <em>sopra</em> questa linea, occorre aggiungere una riga
+      contenente il <var>&lt;translator&gt;<em>tuo nome</em>&lt;/translator&gt;</var>.
     </p>
 
     <p>
-      Alla fine del file si trova una riga che contiene il comando "&lt;/html&gt;".
-      Immediatamente <i>sopra</i> a questa riga, occorre aggiungere una riga
-      contenente "&lt;translator&gt;<i>proprio&#160;;nome</i>&lt;/translator&gt;".
-    </p>
-
-    <p>
-      Fatto questo, occorre inviare il file tradotto alla
+      Quando hai finito, invia il file tradotto alla
       <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">mailing
-      list dei traduttori</a>, dove altri collaboratori potranno revisionare il
+      list dei Traduttori</a>, dove altri collaboratori potranno revisionare il
       testo e poi caricarlo sul server.
     </p>
 
     <h3>Aggiornare le traduzioni obsolete</h3>
 
     <p>
-      Se navigando nel sito si incontra una pagina la cui traduzione è più
-      vecchia della versione originale (ciò è indicato da una nota all'inizio
+      Se navigando nel sito si incontra una pagina la cui traduzione Ã¨ piÃ¹
+      vecchia della versione originale (ciÃ² Ã¨ indicato da una nota all'inizio
       della pagina), basta andare in fondo alla pagina, fare
-      clic sul link "[XHTML]" e salvare il file che si ottiene, ossia il file
-      .xhtml della vecchia traduzione. Successivamente, occorre fare clic sul
-      link "English" in cima alla pagina, in modo da visualizzare la versione
-      inglese della pagina e fare clic sul link "[XHTML]", in modo da scaricare
-      la pagina inglese, più recente della traduzione. In questo modo è
+      clic sul link <strong>Source code</strong> e salvare il file che si ottiene,
+      ossia il file .xhtml della vecchia traduzione. Successivamente, occorre fare
+      clic sul link <strong>English</strong> in cima alla pagina, in modo da visualizzare
+      la versione inglese della pagina e fare clic sul link <strong>Source code</strong>,
+      in modo da scaricare la pagina inglese, piÃ¹ recente della traduzione. In questo modo Ã¨
       possibile confrontare i due file e aggiornare la traduzione, ricordandosi
       di non modificare il testo compreso tra i marcatori "&lt;...&gt;".
     </p>
 
     <p>
-      Fatto questo, occorre inviare il file tradotto alla
+      Alternativamente, Ã¨ possibile usare <a
+      href="https://trac.fsfe.org/fsfe-web/browser/trunk">il repository web dei
+      sorgenti</a> disponibile sul <a href="https://trac.fsfe.org/fsfe-web">sito
+      trac di fsfe-web</a> cosÃ¬ da poter creare i file diff che mostrano le differenze
+      tra le versioni e vedere gli ultimi aggiornamenti per tutti i file sorgente.
+    </p>
+
+    <p>
+      Quando hai finito, invia il file tradotto alla
       <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">mailing
-      list dei traduttori</a>, dove altri collaboratori potranno revisionare il
+      list dei Traduttori</a>, dove altri collaboratori potranno revisionare il
       testo e poi caricarlo sul server.
     </p>
 
-    <h3>Capire cosa c'è da fare</h3>
+    <h3>Capire cosa c'Ã¨ da fare</h3>
 
     <p>
-      È disponibile una pagina con lo
+      Ãˆ disponibile una pagina con lo
       <a href="http://status.fsfeurope.org/web/translations.html">stato delle
-      traduzioni</a>, da cui è possibile consultare, per ogni lingua, l'elenco delle pagine
+      traduzioni</a>, da cui Ã¨ possibile consultare, per ogni lingua, l'elenco delle pagine
       da tradurre e di quelle da aggiornare.
     </p>
 
     <p>
       L'elenco delle pagine da aggiornare, oltre a fornire le versioni attuali
       della pagina inglese e di quella tradotta, permette di consultare il log
-      delle modifiche apportate ad ognuno dei file. In questo modo è più
+      delle modifiche apportate ad ognuno dei file. In questo modo Ã¨ piÃ¹
       semplice capire quali parti del file originale sono cambiate dal momento
       dell'ultimo aggiornamento della traduzione.
     </p>
 
     <p>
-      La pagina dello stato delle traduzioni è anche l'unico posto da cui è
-      possibile scaricare i file .xml usati per generare le pagine con contenuto
+       La pagina dello stato delle traduzioni Ã¨ anche l'unico posto da cui Ã¨
+      possibile scaricare i file XML usati per generare le pagine con contenuto
       dinamico, come quella delle notizie o degli eventi.
     </p>
 
-    <h3>Scaricare l'intero archivio con CVS</h3>
+    <h3>Scaricare l'intero albero dei sorgenti con subversion</h3>
 
     <p>
-      Se si è in grado di usare CVS, è possibile scaricare in una volta sola l'intero
-      archivio dei file.
-    </p>
-
-    <p>
-      Basta creare una directory in cui scaricare i file, entrarci ed eseguire
-      il comando<br />
-      <code>$ cvs -z3 -d:pserver:anonymous@cvs.savannah.gnu.org:/web/fsfe co .</code><br />
-      Alla richiesta della password, basta premere il tasto Invio.
-    </p>
-
-    <p>
-      Per aggiornare la copia locale dei file scaricati in precedenza, basta
-      eseguire il comando<br />
-      <code>$ cvs -z3 update -Pd</code><br />
-    </p>
-
-    <h2>Aiutare i webmaster di www.fsfe.org</h2>
-
-    <p>
-      Se si ha intenzione di partecipare con regolarità alla traduzione delle
-      pagine web e si conosce l'utilizzo basilare di CVS e SSH, è consigliabile
-      unirsi al <a href="/contribute/web/web.html">gruppo dei webmaster</a>
-      del sito.
+      Se hai la possibilitÃ  di usare subversion, puoi scaricare in una sola volta
+      l'intero albero dei sorgenti.  Leggi la <a
+      href="/contribute/web/web.html">pagina di informazioni dei webmaster di FSFE</a> per
+      conoscere le istruzioni dettagliate.
     </p>
   </body>
 

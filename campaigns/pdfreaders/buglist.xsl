@@ -59,6 +59,9 @@
         <!-- Table rows -->
         <xsl:for-each select="bug">
           <xsl:element name="tr">
+	    <xsl:if test = "string(@closed)">
+	      <xsl:attribute name="class">highlighted</xsl:attribute>
+	    </xsl:if>
             <xsl:element name="td"><xsl:value-of select="@institution-name"/></xsl:element>
             <xsl:element name="td"><xsl:value-of select="@institution-address"/></xsl:element>
             <xsl:element name="td">

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <textset>
+  <!-- Footer -->
   <text id="lastchanged"> Posljednje izmjene: </text>
   <text id="translator1a">Prijevod: </text>
   <text id="translator1b">. Zahvaljujemo. </text>
@@ -9,24 +10,30 @@
   <text id="translator3b">izvorni tekst</text>
   <text id="translator3c"> ove stranice.</text>
   <text id="permission">
-    Doslovno kopiranje i distribucija cijelog članka je dozvoljena
-    u bilo kojem obliku, uz uvijet da se sačuva ova napomena.
+    Doslovno kopiranje i distribucija cijelog članka dozvoljeni su
+    za bilo koji medij uz uvjet da se zadrži ova napomena.
   </text>
   <text id="webmaster">
     Probleme sa stranicom molimo prijavite na
     <em>webmaster at fsfeurope.org</em>.
   </text>
+  <text id="fsfnetwork">
+    FSFE ima <a href="/about/fsfnetwork.html">sestrinske organizacije</a> u <a
+      href="http://www.fsf.org/">Sjevernoj Americi</a>, <a
+      href="http://www.fsf.org.in/">Indiji</a> i <a
+      href="http://www.fsfla.org/">Latinskoj Americi</a>.
+  </text>
   <text id="outdated">
     <strong>Upozorenje: </strong>
-    Ova bi stranica mogla biti zastarjela u odnosu na izvornu. Molimo, koristite
-    <a href="/contribute/contribute.html">ovu stranicu</a> kako bi saznali kako vi
+    Ova bi stranica mogla biti zastarjela u odnosu na izvornu. Molimo koristite
+    <a href="/contribute/contribute.html">ovu stranicu</a> kako bi saznali kako 
     možete pomoći s prijevodima i drugim stvarima.
   </text>
   <text id="notranslation">
     <strong>Upozorenje: </strong>
-    Ova stranica još nije prevedena. Ispod je izvorna verzija stranice.
-    Molimo pogledajte  <a href="/contribute/contribute.html">ovu stranicu</a>
-    kako bi saznali način na koji možete pomoći s prijevodom i drugim stvarima.
+    Ova stranica još nije prevedena. Ispod je izvorna inačica stranice.
+    Molimo koristite <a href="/contribute/contribute.html">ovu stranicu</a>
+    kako bi saznali kako možete pomoći s prijevodima i drugim stvarima.
   </text>
   <text id="fsfe/about">O nama</text>
   <text id="fsfe/projects">Projekti</text>
@@ -49,4 +56,76 @@
   <text id="menu4/sisters/fsf">FSF</text>
   <text id="menu4/sisters/fsf_india">FSF Indija</text>
   <text id="menu4/sisters/fsf_la">FSF Latinska amerika</text>
+  <!-- Info box -->
+  <text id="under-construction">
+    <strong>Upozorenje: </strong>Ova je stranica u izradi. Molimo ne krećite u prijevod stranice jer je sadržaj podložan promjeni.
+  </text>
+  
+  <text id="search">Traži</text>
+
+ <!-- Article metadata -->
+ <text id="author">Autor</text>
+ <text id="published">Objavljeno</text>
+ <text id="download">Preuzmi</text>
+ 
+  <!-- Conjunctions -->
+  <text id="to">do</text>
+
+  <!-- Menu -->
+  <text id="menu1/about">O nama</text>
+  <text id="menu1/projects">Naš rad</text>
+  <text id="menu1/documents">Dokumenti</text>
+  <text id="menu1/help">Uključite se</text>
+  <text id="menu1/donate">Donirajte</text>
+  <text id="menu1/order">Kupite</text>
+  <text id="menu1/lists">E-mail liste</text>
+  <text id="menu1/press">Mediji</text>
+  <text id="menu1/thankgnus">Darivaoci</text>
+  <text id="menu2/fellowship">Prijatelji</text>
+  <text id="menu2/fellowship/1-wiki">Wiki</text>
+  <text id="menu2/fellowship/2-planet">Skup blogova</text>
+  <text id="menu2/fellowship/3-join">Pridružite se</text>
+  
+  <!-- Date time -->
+  <text id="months/1">Siječanj</text>
+  <text id="months/2">Veljača</text>
+  <text id="months/3">Ožujak</text>
+  <text id="months/4">Travanj</text>
+  <text id="months/5">Svibanj</text>
+  <text id="months/6">Lipanj</text>
+  <text id="months/7">Srpanj</text>
+  <text id="months/8">Kolovoz</text>
+  <text id="months/9">Rujan</text>
+  <text id="months/10">Listopad</text>
+  <text id="months/11">Studeni</text>
+  <text id="months/12">Prosinac</text>
+  
+  <text id="months-abbreviated/1">Sij</text>
+  <text id="months-abbreviated/2">Velj</text>
+  <text id="months-abbreviated/3">Ožu</text>
+  <text id="months-abbreviated/4">Tra</text>
+  <text id="months-abbreviated/5">Svi</text>
+  <text id="months-abbreviated/6">Lip</text>
+  <text id="months-abbreviated/7">Srp</text>
+  <text id="months-abbreviated/8">Kol</text>
+  <text id="months-abbreviated/9">Ruj</text>
+  <text id="months-abbreviated/10">Lis</text>
+  <text id="months-abbreviated/11">Stu</text>
+  <text id="months-abbreviated/12">Pro</text>
+  
+  <text id="weekdays/1">Ponedjeljak</text>
+  <text id="weekdays/2">Utorak</text>
+  <text id="weekdays/3">Srijeda</text>
+  <text id="weekdays/4">Četvrtak</text>
+  <text id="weekdays/5">Petak</text>
+  <text id="weekdays/6">Subota</text>
+  <text id="weekdays/7">Nedjelja</text>
+  
+  <text id="weekdays-abbreviated/1">Pon</text>
+  <text id="weekdays-abbreviated/2">Uto</text>
+  <text id="weekdays-abbreviated/3">Sri</text>
+  <text id="weekdays-abbreviated/4">Čet</text>
+  <text id="weekdays-abbreviated/5">Pet</text>
+  <text id="weekdays-abbreviated/6">Sub</text>
+  <text id="weekdays-abbreviated/7">Ned</text>
 </textset>

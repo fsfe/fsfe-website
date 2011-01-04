@@ -424,11 +424,6 @@
 		<xsl:attribute name="class">button</xsl:attribute>
                 <xsl:apply-templates select="/buildinfo/fundraising/call3/node()"/>
 	      </xsl:element>
-	      <xsl:element name="img">
-		<xsl:attribute name="src">/graphics/wreath.png</xsl:attribute>
-		<xsl:attribute name="alt">wreath</xsl:attribute>
-		<xsl:attribute name="class">right</xsl:attribute>
-	      </xsl:element>
 	      <xsl:element name="p">
                 <xsl:attribute name="class">call4</xsl:attribute>
                 <xsl:apply-templates select="/buildinfo/fundraising/call4/node()"/>

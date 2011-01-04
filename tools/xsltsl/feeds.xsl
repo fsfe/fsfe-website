@@ -93,7 +93,7 @@
         </xsl:if>
         
         <!-- Now, the event block -->
-        <div class="event">
+        <div class="entry">
             <xsl:choose>
                 <xsl:when test="$link != ''">
                     <h3>

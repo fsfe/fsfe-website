@@ -85,6 +85,14 @@ p.left {
   padding-right:1%
 }
 
+.grid-50 {
+  width: 48%;
+}
+
+.grid-40.left {
+  padding-right:1%
+}
+
 .grid-60 {
   width: 56%;
 }
@@ -96,6 +104,11 @@ p.left {
 
 .even {
   background-color: #DEEEFF;
+}
+
+.compare hr {
+  clear: both;
+  margin: 0 0 2.5em;
 }
 
 /* avoid hover effects and borders on internal marks and graphical links */

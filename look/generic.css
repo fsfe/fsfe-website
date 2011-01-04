@@ -934,7 +934,7 @@ h4#subpages + ul li:nth-child(odd) {
   background-color: #BDE455;
 }
 
-#identica .section .entry div {
+#identica.section .entry div {
   float :left;
 }
 

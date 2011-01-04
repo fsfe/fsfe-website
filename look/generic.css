@@ -105,7 +105,7 @@ h3 {
 
 p {
   margin: .8em 0;
-  font-size:1.2em;
+  font-size:120%;
 }
 
 pre {
@@ -134,7 +134,7 @@ ul {
 
 /* generic classes */
 .clear {
-    clear:both;
+    clear: both!important;
 }
 
 .center {
@@ -532,7 +532,7 @@ pre.file {
 #introduction p,
 p#introduction {
   line-height: 190%;
-  font-size: 1em;
+  font-size: 110%;
 }
 
 #introduction + * {

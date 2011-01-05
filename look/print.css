@@ -13,20 +13,35 @@ a, a:link, a:visited {
   color: #000000;
 }
 
-/* Hide menu bar */
-#menu {
+/* Hide sidebar */
+#sidebar {
   display: none;
 }
 
-/* Hide language list */
-#language {
-  display: none;
+#wrapper, #wrapper-inner {
+  margin: 0;
+  padding:0;
+  width: auto;
+}
+
+#wrapper-inner {
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-box-shadow: 0;
+  box-shadow: 0;
+  -webkit-box-shadow: 0;
 }
 
 /* We don't need margins for the content */
 #content {
   margin: 0;
   padding: 0;
+}
+
+/* remove donate box on donation page */
+#donate-once {
+  display: none;
 }
 
 .postit {
@@ -36,6 +51,11 @@ a, a:link, a:visited {
 #footer {
   font-size: 80%;
   border: 5px #FFFFFF solid;
+}
+
+
+#footer div {
+  float: none;
 }
 
 .newsleft dt span, .newsright dt span {

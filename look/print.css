@@ -33,10 +33,15 @@ a, a:link, a:visited {
   -webkit-box-shadow: 0;
 }
 
+#header {
+  height: auto;
+}
+
 /* We don't need margins for the content */
 #content {
   margin: 0;
   padding: 0;
+  width: auto;
 }
 
 /* remove donate box on donation page */

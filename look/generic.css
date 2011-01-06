@@ -279,6 +279,7 @@ p.left {
   margin-bottom: 1em;
   clear: left;
   float: left;
+  max-width: 100%;
 }
 
 #search,
@@ -650,17 +651,6 @@ h4#subpages + ul li:nth-child(odd) {
   padding: 5px 18px;
 }
 
-#menu ul li ul li #selected,
-#menu ul li ul li #selected:hover {
-  border-left: 15px solid #C1C1C1;
-  color: #333333;
-  display: block;
-  font-size: 15.5px;
-  font-weight: normal;
-  line-height: 50%;
-  padding: 0.6em 0 0.8em 1.6em
-}
-
 #navigation ul#languages {
   background-color: rgb(74,210,240);
   float: left;
@@ -739,17 +729,17 @@ h4#subpages + ul li:nth-child(odd) {
   float: left;
   line-height: 100%;
   width: 15%;
-  overflow: hidden;
+  word-wrap: break-word;
 }
 
 
 /* menu */
 #menu a {
-  color: rgb(110,110,110);;
+  color: rgb(110,110,110);
   text-decoration: none;
   display: block;
-  padding: 1.1em 0 1.1em 0.8em;
-  line-height: 50%;
+  padding: 0.8em 0 0.8em 0.8em;
+  line-height: 120%;
   font-size: 15.5px;
 }
 
@@ -765,12 +755,11 @@ h4#subpages + ul li:nth-child(odd) {
 
 #menu ul li a {
   font-weight: bold;
-  min-width:120px;
 }
 
 #menu ul li ul li a {
   font-weight: normal;
-  padding: .6em 0 .8em 1.6em;
+  padding: 0.3em 0 0.4em 1.6em;
 }
 
 #menu ul li.fsfe ul li a,
@@ -853,6 +842,16 @@ h4#subpages + ul li:nth-child(odd) {
   border-left: 15px solid #ABFF4A;
 }
 
+#menu ul li ul li #selected,
+#menu ul li ul li #selected:hover {
+  border-left: 15px solid #C1C1C1;
+  color: #333333;
+  display: block;
+  font-size: 15.5px;
+  font-weight: normal;
+  line-height: 50%;
+  padding: 0.6em 0 0.8em 1.6em
+}
 
 /* front page feeds */
 #feeds {

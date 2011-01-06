@@ -729,6 +729,7 @@ h4#subpages + ul li:nth-child(odd) {
   float: left;
   line-height: 100%;
   width: 15%;
+  min-width: 125px;
   word-wrap: break-word;
 }
 

@@ -33,6 +33,7 @@
             <xsl:with-param name="tag">
                 <xsl:value-of select="$country-code" />
             </xsl:with-param>
+            <xsl:with-param name="display-details" select="'yes'" />
         </xsl:call-template>
         
         <!-- Future events -->
@@ -42,6 +43,7 @@
             <xsl:with-param name="tag">
                 <xsl:value-of select="$country-code" />
             </xsl:with-param>
+            <xsl:with-param name="display-details" select="'yes'" />
         </xsl:call-template>
     </xsl:template>
     

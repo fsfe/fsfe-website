@@ -862,6 +862,7 @@ h4#subpages + ul li:nth-child(odd) {
 .section {
   width: 48%;
   float: left;
+  padding-right: 2%;
 }
 
 .section .entry {
@@ -929,16 +930,12 @@ h4#subpages + ul li:nth-child(odd) {
   background-color: #4AA0F0;
 }
 
-#news.section {
-  padding-right: 2%;
-}
-
 #newsletter.section,
 #events.section,
 #contact.section,
 #donate-regular.section
 {
-  padding-left: 2%;
+  padding-left: 0 0 0 2%;
 }
 
 #team.section h2, #identica.section h2 {

@@ -14,7 +14,7 @@
     
     <xsl:call-template name="fetch-news">
     	<xsl:with-param name="tag">front-page</xsl:with-param>
-    	<xsl:with-param name="nb-items" select="3" />
+    	<xsl:with-param name="nb-items" select="5" />
     </xsl:call-template>
     
   </xsl:template>
@@ -23,7 +23,7 @@
   <xsl:template match="all-newsletters">
 
     <xsl:call-template name="fetch-newsletters">
-      <xsl:with-param name="nb-items" select="3" />
+      <xsl:with-param name="nb-items" select="2" />
     </xsl:call-template>
 	  
   </xsl:template>

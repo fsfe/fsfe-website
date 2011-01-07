@@ -876,6 +876,9 @@ h4#subpages + ul li:nth-child(odd) {
 .section .entry p.date {
   margin: 0;
   padding: 0;
+  font-size: 100%;
+  font-weight: bold;
+  color: #6e6e6e;
 }
 
 .section h2 {
@@ -1080,8 +1083,7 @@ h4#subpages + ul li:nth-child(odd) {
 }
 
 #events .details {
-  margin-left: 4em;
-  padding-left: .5em;
+
 }
 
 #events .details > p {

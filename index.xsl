@@ -14,6 +14,7 @@
     
     <xsl:call-template name="fetch-news">
     	<xsl:with-param name="tag">front-page</xsl:with-param>
+    	<xsl:with-param name="nb-items" select="3" />
     </xsl:call-template>
     
   </xsl:template>
@@ -21,7 +22,9 @@
   <!--display dynamic list of newsletters items-->
   <xsl:template match="all-newsletters">
 
-    <xsl:call-template name="fetch-newsletters" />
+    <xsl:call-template name="fetch-newsletters">
+      <xsl:with-param name="nb-items" select="3" />
+    </xsl:call-template>
 	  
   </xsl:template>
   
@@ -38,7 +41,8 @@
     <xsl:call-template name="fetch-events">
         <xsl:with-param name="wanted-time" select="'future'" />
         <xsl:with-param name="tag">front-page</xsl:with-param>
-        <xsl:with-param name="nb-events" select="3" />
+        <xsl:with-param name="display-details" select="'yes'" />
+        <xsl:with-param name="nb-items" select="3" />
     </xsl:call-template>
     
   </xsl:template>

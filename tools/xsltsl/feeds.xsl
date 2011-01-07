@@ -51,7 +51,7 @@
         <xsl:param name="header"
                    select="''" />
         <xsl:param name="display-details"
-                   select="'no'" />
+                   select="'yes'" />
         
         <!-- Create variables -->
         <xsl:variable name="start">
@@ -138,22 +138,8 @@
             <xsl:if test="$display-details = 'yes'">
                 <div class="details">
                     <xsl:apply-templates select="body/node()" />
-                    <!--<div class="cleared">&#160;</div>-->
                 </div>
             </xsl:if>
-            <!--
-              <xsl:if test="$link != ''">
-                <p class="read_more">
-                  <a href="{link}"><xsl:value-of select="/html/text [@id = 'more']" /></a>
-                </p>
-              </xsl:if>
-
-              <xsl:if test="$page != ''">
-                <p class="read_more">
-                  <a href="{page}"><xsl:value-of select="/html/text [@id = 'page']" /></a>
-                </p>
-              </xsl:if>
-            -->
         </div>
     </xsl:template>
     

@@ -403,7 +403,7 @@ p.left {
   clear: right;
   float: left;
   min-height: 400px;
-  width: 78%;
+  width: 83%;
 }
 
 #content p#category {
@@ -935,7 +935,7 @@ h4#subpages + ul li:nth-child(odd) {
 #contact.section,
 #donate-regular.section
 {
-  padding-left: 0 0 0 2%;
+  padding: 0 0 0 2%;
 }
 
 #team.section h2, #identica.section h2 {

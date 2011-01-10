@@ -82,7 +82,7 @@
      institution-address="Richmond House, 79 Whitehall, London SW1A 2NS"
      institution-url="http://www.dh.gov.uk/en/Help/DH_062758"
      opened="2010-09-14"
-     closed=""
+     closed="in process"
      name="Carlo Stemberger"
      group=""
      comment=""
@@ -362,10 +362,10 @@
      institution-address="The Queen’s Walk More London London SE1 2AA"
      institution-url="http://static.london.gov.uk/mayor/strategies/sds/towards_lon_plan.jsp"
      opened="2010-10-04"
-     closed=""
+     closed="2010-12-31"
      name="Andres"
      group=""
-     comment=""
+     comment="added a link to pdfreaders"
      />
 
 <bug institution-name="Oxford City Council"
@@ -388,7 +388,15 @@
      comment=""
      />
 
-
+<bug institution-name="Sheffield City Council"
+     institution-address=""
+     institution-url="http://www.sheffield.gov.uk/council-tax/whats-new/consultation"
+     opened="2010-10-14"
+     closed="soon"
+     name="Simon L."
+     group=""
+     comment=""
+     />
 
   </buglist>
 </set>

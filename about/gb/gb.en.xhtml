@@ -43,7 +43,8 @@
 	<a href="/news/news.html">News</a>
 	
       </h2>
-    
+      
+      <!-- this element fetches all news items which have the relevant country tag -->
       <country-news />
 	
     </div><!--end #news-->    
@@ -57,12 +58,15 @@
 	
       </h2>
   
+      <!-- this element fetches all event items which have the relevant country tag -->
       <country-events />
   
     </div><!--end #events-->
     
     <div class="clear">
     
+      <!-- enable or disable this div to show or hide an identica feed. change 'user' 
+      parameter to filter the 'dents' that will be shown -->
       <div id="identica" class="section">
 	
 	<h2>
@@ -94,6 +98,8 @@
 	
 	<div class="entry">
       
+	  <!-- this element fetches contact details from /contact/local.en.xml - edit 
+	  this file to change the contact details that will be listed -->
 	  <contact-details />
 	     
 	</div>
@@ -106,12 +112,15 @@
     
       <h2><span>British Team</span></h2>
       
+      <!-- this element fetches all team members which are listed as being a member 
+      of this country's team. Edit /abount/people/people.en.xml to change which 
+      members will be listed here -->
       <country-team-list />
       
       <!--<div class="image center">
-	<img src="germany.jpg" alt="A group picture of the German team" />
+	<img src="/graphics/image.png" alt="team members" />
 	<p>
-	  The German Team of FSFE in 2010 at LinuxHotel.
+	  (type caption here)
 	</p>
       </div>-->
       

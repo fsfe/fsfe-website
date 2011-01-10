@@ -16,6 +16,54 @@
   
   <xsl:variable name="country-code">gb</xsl:variable>
   
+  <!--define contact information-->
+  
+  <xsl:template match="contact-details">
+    <xsl:for-each select="/html/set/contact">
+
+    <xsl:if test="@id = 'GB'">
+  
+  <!-- Email -->
+    <xsl:if test="email != ''">
+      <xsl:element name="p">
+	<xsl:value-of select="/buildinfo/textset/text[@id='email']" />
+	<xsl:text> </xsl:text>
+	<xsl:element name="a">
+	  <xsl:attribute name="href">
+	    <xsl:text>mailto:</xsl:text>
+	    <xsl:value-of select="email" />
+	  </xsl:attribute>
+	  <xsl:value-of select="email" />
+	</xsl:element>
+      </xsl:element>
+    </xsl:if>
+  
+  <!-- Address -->
+    <xsl:if test="address != ''">
+     <xsl:apply-templates select="address"/>
+    </xsl:if>
+  
+  <!-- Phone -->
+    <xsl:if test="phone != ''">
+      <xsl:element name="p">
+	<xsl:value-of select="/buildinfo/textset/text[@id='phone']" />
+	<xsl:text> </xsl:text>
+	<xsl:value-of select="phone" />
+      </xsl:element>
+    </xsl:if>
+
+  <!-- Fax -->
+    <xsl:if test="fax != ''">
+      <xsl:element name="p">
+	<xsl:value-of select="/buildinfo/textset/text[@id='fax']" />
+	<xsl:text> </xsl:text>
+	<xsl:value-of select="fax" />
+      </xsl:element>
+    </xsl:if>
+    </xsl:if>
+    </xsl:for-each>
+  </xsl:template>
+  
   <!--define dynamic list of country news items-->
     <xsl:template match="country-news">
         <xsl:call-template name="fetch-news">

@@ -55,26 +55,22 @@
   
   <!--translated word "newsletter"-->
   <xsl:template match="newsletter-label">
-    <xsl:apply-templates select="/buildinfo/textset/text[@id='newsletter']/node()"/>
+    <xsl:apply-templates select="/html/textset-content/text[@id='newsletter']/node()"/>
   </xsl:template>
   
   <!--translated word "news"-->
   <xsl:template match="news-label">
-    <xsl:apply-templates select="/buildinfo/textset/text[@id='news']/node()"/>
+    <xsl:apply-templates select="/html/textset-content/text[@id='news']/node()"/>
   </xsl:template>
 
-  <!--translated word "events"-->
-  <xsl:template match="events-label">
-    <xsl:value-of select="/buildinfo/@language" />
-  </xsl:template>
-  
   <!--translated word "events"-->
   <xsl:template match="more-label">
-    <xsl:apply-templates select="/buildinfo/textset/text[@id='more']/node()"/>
+    <xsl:apply-templates select="/html/textset-content/text[@id='more']/node()"/>
   </xsl:template>
-
+  
   <!-- Do not copy <set> to output at all -->
   <xsl:template match="set"/>
+  <xsl:template match="textset-content"/>
 
   <!-- For all other nodes, copy verbatim -->
   <xsl:template match="@*|node()" priority="-1">

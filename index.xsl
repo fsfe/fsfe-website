@@ -65,6 +65,11 @@
 
   <!--translated word "events"-->
   <xsl:template match="more-label">
+    <xsl:apply-templates select="/html/textset-content/text[@id='events']/node()"/>
+  </xsl:template>
+  
+  <!--translated word "events"-->
+  <xsl:template match="more-label">
     <xsl:apply-templates select="/html/textset-content/text[@id='more']/node()"/>
   </xsl:template>
   

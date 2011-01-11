@@ -128,16 +128,6 @@ for target in ${TMP}/*; do
   test -d ${target} && ln -s ${SOURCE} ${target}/source
 done
 
-# -----------------------------------------------------------------------------
-echo "$(date)  Creating symlinks."
-# -----------------------------------------------------------------------------
-
-for f in $(find ${TMP} -name .symlinks); do
-  cd $(dirname $f)
-  cat $f | while read source destination; do
-    ln -sf ${source} ${destination} 2>/dev/null
-  done
-done
 cd ${SOURCE}
 
 # -----------------------------------------------------------------------------

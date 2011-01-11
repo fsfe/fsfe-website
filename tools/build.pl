@@ -489,9 +489,9 @@ sub process {
 
           while (my ($base, $l) = each %files) {
               if (($dir eq "global") && ($l ne $lang)) {
-	        lock(*TRANSLATIONS);
+	              lock(*TRANSLATIONS);
                 print TRANSLATIONS "$lang $base.$lang.xml $base.$l.xml\n";
-		unlock(*TRANSLATIONS);
+      		      unlock(*TRANSLATIONS);
               }
               print STDERR "Loading $base.$l.xml\n" if $opts{d};
               my $source_data = $parser->parse_file("$base.$l.xml");
@@ -501,14 +501,29 @@ sub process {
               }
           }
           $sourcedoc->documentElement->appendChild($auto_data);
-
+          
+          #
+          # Get the appropriate textset for this language. If one can't be
+          # found, use the English. (I hope this never happens)
+          #
+          my $textlang = $lang;
+          unless (-f $opts{i}."/tools/texts-content-$textlang.xml") {
+              $textlang = "en";
+          }
+          
+          # TODO: backup texts?
+          
+          my $textdoc = $sourcedoc->createElement("textset-content");
+          $sourcedoc->documentElement->appendChild($textdoc);
+          clone_document($textdoc, $opts{i}."/tools/texts-content-$textlang.xml");
+          
           #
           # Transform the document using the XSL file and then push the
           # result into the <document> element of the document we're building.
           #
           my $style_doc = $parser->parse_file("$opts{i}/$file.xsl");
-	  my $stylesheet = $xslt_parser->parse_stylesheet($style_doc);
-	  my $results = $stylesheet->transform($sourcedoc);
+          my $stylesheet = $xslt_parser->parse_stylesheet($style_doc);
+          my $results = $stylesheet->transform($sourcedoc);
 
           foreach ($results->documentElement->childNodes) {
             my $c = $_->cloneNode(1);

@@ -2,7 +2,7 @@
 #
 # build.pl - a tool for building FSF Europe web pages
 #
-# Copyright (C) 2003 Jonas ÷berg
+# Copyright (C) 2003 Jonas √ñberg
 # 
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -59,34 +59,34 @@ our %countries = (global => 'en');
 our %languages = (
   ar => '&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1617;&#1577;',
   bg => '&#1041;&#1098;&#1083;&#1075;&#1072;&#1088;&#1089;&#1082;&#1080;',
-  ca => 'Catal‡',
+  ca => 'Catal√†',
   cs => '&#268;esky',
   da => 'Dansk',
   de => 'Deutsch',
   el => '&#917;&#955;&#955;&#951;&#957;&#953;&#954;&#940;',
   en => 'English',
-  es => 'EspaÒol',
+  es => 'Espa√±ol',
   et => 'Eesti',
   fi => 'Suomi',
-  fr => 'FranÁais',
+  fr => 'Fran√ßais',
   hr => 'Hrvatski',
   hu => 'Magyar',
   it => 'Italiano',
-  ku => 'KurdÓ',
+  ku => 'Kurd√Æ',
   mk => 'M&#1072;&#1082;&#1077;&#1076;&#1086;&#1085;&#1089;&#1082;&#1080;',
   nb => 'Norsk&nbsp;(bokm&aring;l)',
   nl => 'Nederlands',
   nn => "Norsk&nbsp;(nynorsk)",
   pl => 'Polski',
-  pt => 'PortuguÍs',
-  ro => 'Rom‚n&#259;',
+  pt => 'Portugu√™s',
+  ro => 'Rom√¢n&#259;',
   ru => '&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;',
   sk => 'Sloven&#269;ina',
   sl => 'Sloven&#353;&#269;ina',
   sq => 'Shqip',
   sr => 'Srpski',
   sv => 'Svenska',
-  tr => 'T¸rkÁe',
+  tr => 'T√ºrk√ße',
 );
 
 our $current_date = strftime "%Y-%m-%d", localtime;

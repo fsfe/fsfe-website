@@ -6,8 +6,12 @@
   </head>
   <body>
     <h1>Spenden an die FSFE</h1>
-     
-      <p id="introduction">
+          
+    <div id="introduction">
+    
+      <div class="image">
+        <img src="/graphics/piggy-bank.png" alt="Piggy-bank" />
+      </div>
         Die Free Software Foundation Europe ist eine gemeinnützige
         Nichtregierungsorganisation. Unsere Arbeit wird nur dank einer Gemeinschaft von
         <a href="/contribute/">Ehrenamtlichen</a> und <a
@@ -15,39 +19,59 @@
         unersetzlich für unsere Schlagkraft und Unabhängigkeit — sie erlauben uns, wo
         immer es notwendig ist für Freie Software einzutreten und mit
         unabhängiger Stimme zu sprechen.
-      </p>
 
-	 <h2>Kategorien</h2>
+    </div>
+    
+    <div class="section" id="donate-once">
+	 <h2><span>Einmalig spenden</span></h2>
 
-     <p>Wenn Ihre Spende</p>
-     <ul>
-      <li>10 Euro pro Monat <em>ODER</em> 120 Euro pro Jahr beträgt,
-      macht Sie das zum <b>Unterstützer</b> der FSFE.</li>
-      <li>50 Euro pro Monat <em>ODER</em> 600 Euro pro Jahr beträgt,
-      macht Sie das zum <b>Träger</b> der FSFE.</li>
-      <li>100 Euro pro Monat <em>ODER</em> 1200 Euro pro Jahr beträgt,
-      macht Sie das zum <b>Substantiellen Träger</b> der FSFE.</li>
-      <li>500 Euro pro Monat <em>ODER</em> 6000 Euro pro Jahr beträgt,
-      macht Sie das zum <b>Mäzen</b> der FSFE.</li>
-     </ul>
+        <div class="entry">
 
-	 <h2>Möglichkeiten zu Spenden</h2>
+	<form action="/cgi-bin/donate.pl" method="post">
+	    
+	    <table>
+	      <tr>
+		<td><input name="amount" type="radio" value="other" checked="checked" onclick="amount_other.disabled = false"/>
+		<input name="amount_other" type="text" value="" palceholder="euros" style="width:5em"/></td>
+		<td>(wählen Sie)</td>
+	      </tr>
+	      <tr>
+		<td><input name="amount" type="radio" value="120" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;120</td>
+		<td><a href="/donate/thankgnus.html#supporter">Unterstützer</a><br/></td>
+	      </tr>
+	      <tr>
+		<td><input name="amount" type="radio" value="600" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;600</td>
+		<td><a href="/donate/thankgnus.html#contributor">Träger</a><br/></td>
+	      </tr>
+	      <tr>
+		<td><input name="amount" type="radio" value="1200" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;1,200</td>
+		<td><a href="/donate/thankgnus.html#sustainingcontributor">Substanzieller Träger</a><br/></td>
+	      </tr>
+	      <tr>
+		<td><input name="amount" type="radio" value="6000" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;6,000</td>
+		<td><a href="/donate/thankgnus.html#patron">Mäze</a><br/></td>
+	      </tr>
+	    </table>
+	    
+	    <p>
+	      <input name="anonymous" type="checkbox"/> Ich möchte anonym bleiben
+	    </p>
+
+	  <p>
+	    <!-- Translators: please replace "en" with the language code of your
+		language and translate "Donation" and "Donate" -->
+	    <input type="hidden" name="language" value="de"/>
+	    <input type="hidden" name="text" value="Spende"/>
+	    <input type="submit" value="Jetzt spenden"/>
+	  </p>
+	</form>
+	
+      </div>
+    
+    </div>
 
 	 <h3>Überweisung</h3>
-
-	 <p>Wenn Sie in einem der folgenden Länder leben, folgen Sie
-            bitte dem Link für weitere Informationen zum Spendenablauf.</p>
-
-	 <ul>
-		 <li><a href="/donate/germany.html">Deutschland</a>: Spenden können von der Steuer abgesetzt werden.</li>
-		 <li><a href="donate-2007-ch.html">Schweiz</a>: Spenden können von der Steuer abgesetzt werden.</li>
-	 </ul>
-  
-         <p>Sie können die FSFE natürlich auch von anderen Ländern aus
-unterstützen und spenden. Dafür gibt es mehrere Möglichkeiten. Treten Sie mit
-uns in Verbindung, um die für Sie beste Art zu Spenden zu ermitteln und Sie im
-Idealfall steuerlich absetzbar zu machen. Schreiben Sie
-         <a href="mailto:office@fsfeurope.org">unserem Büro</a>. Im Allgemeinen können Spenden aus der ganzen Welt an folgendes Konto überwiesen werden:</p>
+<p> Im Allgemeinen können Spenden aus der ganzen Welt an folgendes Konto überwiesen werden:</p>
 
      <p class="indent">
       Free Software Foundation Europe e.V.<br/>
@@ -56,82 +80,26 @@ Idealfall steuerlich absetzbar zu machen. Schreiben Sie
       SWIFT/BIC: NBAG DE3E<br/>
      </p>
 
-	 <h3>Kreditkarte und PayPal</h3>
+<h3>Zusätzliche Spendekanäle</h3>
 
-    <p>
-	  Für manche Unterstützer ist es einfacher und bequemer, für eine Spende ihre Kreditkarte zu benutzen. Die FSFE nimmt ebenso Beträge via PayPal an.
-	Bitte beachten Sie, dass wir bei einer Überweisung über PayPal
-        1,9% + $ 0,30 für jede Transaktion bezahlen müssen.
-    </p>
+         <p> Treten Sie mit uns in Verbindung, um die für Sie beste Art zu Spenden zu ermitteln und Sie im
+Idealfall steuerlich absetzbar zu machen. Schreiben Sie <a href="mailto:office@fsfeurope.org">unserem Büro</a> an.</p>
 
-    <p>
-      Wählen Sie bitte aus, wie viel Sie spenden wollen und drücken Sie auf
-      "Spenden":
-    </p>
+<h3>Steuer Absatz</h3>
+	 <p>Wenn Sie in einem der folgenden Länder leben, können Ihre Spenden 
+von der Steuer abgesetzt werden.</p>
 
-    <!-- more options under https://www.paypal.com/en_US/pdf/integration_guide.pdf page 123 -->
-
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="indent">
-      <p>
-        <input type="hidden" name="cmd" value="_xclick"/>
-        <input type="hidden" name="business" value="paypal@fsfeurope.org"/>
-        <input type="hidden" name="image_url" value="http://fellowship.fsfe.org/login/images/fsfe_logo_w150.png"/>
-      </p>
-      <!-- here you can add the amount -->
-      <table>
-		  <tr><td> </td><td><input type="text" name="amount" value="" size="5" /> EUR</td>
-			<td>
-	        	    <!-- here you can add the intended purpose -->
-            	<input type="hidden" name="item_name" value="Donation"/>
-            	<input type="hidden" name="currency_code" value="EUR"/>
-            	<input type="hidden" name="cn" value="How do you wish to be listed on our Thank GNUs page?"/>
-            	<input type="hidden" name="no_note" value="0"/>
-            	<!-- to which site the user is piped after payment -->
-            	<!-- <input type="hidden" name="return" value"http://fsfe.org/donate-thank.html"> -->
-            	<input type="reset" name="reset" value="Löschen"/>
-            	<input type="submit" name="submit" value="Spenden"/>
-			</td>
-		</tr>
-      </table>
-    </form>
-
-
-	 <h3>Schecks von US- oder UK-Banken</h3>
-
-     <p>Wenn Sie lieber einen Scheck schicken möchten, senden Sie ihn bitte an folgende Adresse: </p>
-
-     <p class="quote">
-            Free Software Foundation Europe e.V.<br/>
-            Talstraße 110<br/>
-            40217 Düsseldorf<br/>
-            Deutschland
-     </p>
-
-	 <h2>Wie wir uns bei Ihnen bedanken</h2>
-	
 	 <ul>
-		 
-		 <li>Sponsoren-Buttons: Wenn Sie ihren Beitrag öffentlich bekanntmachen wollen, stellt die FSFE hierzu <a
-			 href="/about/graphics/sponsoring/sponsoring.en.html">Sponsoren-Buttons</a> für ihre Spender zur Verfügung.</li>
-
-		 <li><a href="thankgnus.html">Thank GNUs</a>: Wir würden Sie
-		 gerne auf unserer "<a href="thankgnus.html">Thank GNUs</a>"
-		 Seite nennen. </li>
-
-<p> Bitte senden Sie eine E-Mail an <a
-			 href="mailto:office@fsfeurope.org">&lt;office@fsfeurope.org&gt;</a>
-		 und teilen Sie uns mit, wohin wir die Spendenquittung und einen Dankesbrief senden können. Selbst wenn sie es vorziehen, unbekannt zu bleiben, lassen Sie uns bitte wissen, wie wir Sie erreichen können, so dass wir ihnen privat danken können.</p>
-
+		 <li><a href="/donate/germany.html">Deutschland</a></li>
+		 <li><a href="donate-2007-ch.html">Schweiz</a></li>
+     		 <li><a href="transnational-giving-europe.html">Großbrittannien</a></li>
 	 </ul>
 
-   <p>Die FSFE dankt all ihren <a href="thankgnus.html">Spendern</a>. Ihr Beitrag ermöglicht es uns, unsere Arbeit fortzusetzen.</p>
+<h3>Was kommt danach</h3>
 
-   <h2>Der Finanzfluss</h2>
+	<p> Welches Kanal Sie auch für Ihre Spende wählen, bitte <a href="mailto:office@fsfeurope.org">senden Sie uns eine E-Mail</a> und teilen Sie uns mit, wohin wir die Spendenquittung und einen Dankesbrief senden können. Wir würden Sie gerne auf unserer "<a href="thankgnus.html">Thank GNUs</a>" Seite nennen. Selbst wenn sie es vorziehen, unbekannt zu bleiben, lassen Sie uns bitte wissen, wie wir Sie erreichen können, so dass wir Ihnen privat danken können.</p>
 
-   <p>
-    Ihre Spenden erlauben uns zu arbeiten. Wir möchten, dass Sie sehen können,
-    wie wir <a href="/about/funds/">ihre Zuwendungen über die Jahre verwandt haben</a>.
-   </p>
+
   </body>
 
   <timestamp>$Date$ $Author$ </timestamp>

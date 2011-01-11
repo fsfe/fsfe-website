@@ -6,7 +6,7 @@
   <xsl:output method="xml" encoding="ISO-8859-1" indent="yes"/>
 
   <!-- Fill dynamic content -->
-  <xsl:template match="dynamic-content">
+  <xsl:template match="team-members">
     <xsl:call-template name="country-people-list">
       <xsl:with-param name="team" select="'main'" />
     </xsl:call-template>

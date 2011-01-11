@@ -6,7 +6,7 @@
   <!-- Fill dynamic content -->
   <xsl:template match="dynamic-content">
     <xsl:element name="ul">
-      <xsl:for-each select="/html/set/person[@member='yes']">
+      <xsl:for-each select="/html/set/person[@association-member='yes']">
         <xsl:sort select="@id"/>
         <xsl:element name="li">
           <xsl:element name="p">

@@ -7,7 +7,11 @@
   <xsl:import href="tools/xsltsl/date-time.xsl" />
   <xsl:import href="tools/xsltsl/tagging.xsl" />
   <xsl:output method="xml" encoding="UTF-8" indent="yes" />
-
+  
+  <!-- The top level element of the input file is "buildinfo" -->
+  <xsl:template match="buildinfo">
+    <xsl:apply-templates select="node()"/>
+  </xsl:template>
   
   <!--display dynamic list of news items-->
   <xsl:template match="all-news">
@@ -45,6 +49,28 @@
         <xsl:with-param name="nb-items" select="3" />
     </xsl:call-template>
     
+  </xsl:template>
+  
+  <!--display labels-->
+  
+  <!--translated word "newsletter"-->
+  <xsl:template match="newsletter-label">
+    <xsl:apply-templates select="/buildinfo/textset/text[@id='newsletter']/node()"/>
+  </xsl:template>
+  
+  <!--translated word "news"-->
+  <xsl:template match="news-label">
+    <xsl:apply-templates select="/buildinfo/textset/text[@id='news']/node()"/>
+  </xsl:template>
+
+  <!--translated word "events"-->
+  <xsl:template match="events-label">
+    <xsl:value-of select="/buildinfo/@language" />
+  </xsl:template>
+  
+  <!--translated word "events"-->
+  <xsl:template match="more-label">
+    <xsl:apply-templates select="/buildinfo/textset/text[@id='more']/node()"/>
   </xsl:template>
 
   <!-- Do not copy <set> to output at all -->

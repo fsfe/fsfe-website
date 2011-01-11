@@ -7,7 +7,12 @@
   <body>
     <h1>Doações para a FSFE</h1>
      
-    <p id="introduction">
+     
+    <div id="introduction">
+    
+      <div class="image">
+        <img src="/graphics/piggy-bank.png" alt="Piggy-bank" />
+      </div>
       A Free Software Foundation Europe é uma organização não governamental
       sem fins lucrativos. O nosso trabalho é possível graças a uma comunidade de
       <a href="/contribute/">voluntários</a>,
@@ -15,44 +20,60 @@
       <a href="/donate/thankgnus.html">doadores</a>. Suas doações são fundamentais
       para a nossa força e autonomia - permitem continuar a lutar pelo
       Software Livre, quando é necessário, e ser uma voz independente.
-    </p>
 
-    <h2>Categorias</h2>
 
-    <ul>
-      <li>
-        Doe mais de 500 euros por mês <em>OU</em> 6000 euros num ano e
-        você tornará-se um
-        <strong><a href="/donate/thankgnus.html#patron">Patron</a></strong>
-        da FSFE.
-      </li>
-      <li>
-        Doe mais de 100 euros por mês <em>OU</em> 1200 euros num ano e
-        você tornará-se um
-        <strong><a href="/donate/thankgnus.html#sustainingcontributor">Sustaining Contributor</a></strong>
-        da FSFE.
-      </li>
-      <li>
-        Doe mais de 50 euros por mês <em>OU</em> 600 euros num ano e
-        você tornará-se um
-        <strong><a href="/donate/thankgnus.html#contributor">Contributor</a></strong>
-        da FSFE.
-      </li>
-      <li>
-        Doe mais de 10 euros por mês <em>OU</em> 120 euros num ano e
-        você tornará-se um
-        <strong><a href="/donate/thankgnus.html#supporter">Supporter</a></strong>
-        da FSFE.
-      </li>
-      <li>
-        Doar menos de 10 euros por mês <em>OU</em> 120 euros num ano também
-        é possível. Ou a nível individual pode ajudar
-        <a href="http://fellowship.fsfe.org/join">unindo-se ao Fellowship</a>
-        (montante mínimo de 60 euros por ano).
-      </li>
-    </ul>
+ </div>
+    
+    <div class="section" id="donate-once">
 
-    <h2>Maneiras de doar</h2>
+      <h2><span>Pagamento em uma vêz</span></h2>
+
+      <div class="entry">
+
+	<form action="/cgi-bin/donate.pl" method="post">
+	    
+	    <table>
+	      <tr>
+		<td><input name="amount" type="radio" value="other" checked="checked" onclick="amount_other.disabled = false"/>
+		<input name="amount_other" type="text" value="" palceholder="euros" style="width:5em"/></td>
+		<td>(Vc. elige)</td>
+	      </tr>
+	      <tr>
+		<td><input name="amount" type="radio" value="120" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;120</td>
+		<td><a href="/donate/thankgnus.html#supporter">Supporter</a><br/></td>
+	      </tr>
+	      <tr>
+		<td><input name="amount" type="radio" value="600" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;600</td>
+		<td><a href="/donate/thankgnus.html#contributor">Contributor</a><br/></td>
+	      </tr>
+	      <tr>
+		<td><input name="amount" type="radio" value="1200" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;1,200</td>
+		<td><a href="/donate/thankgnus.html#sustainingcontributor">Sustaining Contributor</a><br/></td>
+	      </tr>
+	      <tr>
+		<td><input name="amount" type="radio" value="6000" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;6,000</td>
+		<td><a href="/donate/thankgnus.html#patron">Patron</a><br/></td>
+	      </tr>
+	    </table>
+	    
+	    <p>
+	      <input name="anonymous" type="checkbox"/> Prefiro permanecer anônimo
+	    </p>
+
+	  <p>
+	    <!-- Translators: please replace "en" with the language code of your
+		language and translate "Donation" and "Donate" -->
+	    <input type="hidden" name="language" value="pt"/>
+	    <input type="hidden" name="text" value="doação"/>
+	    <input type="submit" value="Dar agora"/>
+	  </p>
+	</form>
+	
+      </div>
+    
+    </div>
+    
+    <div class="clear"></div>
 
     <h3>Conta bancária</h3>
 
@@ -68,72 +89,31 @@
       SWIFT/BIC: NBAG DE3E<br/>
     </p>
 
+    <h3>Mais informação</h3>
+
+  <p>
+      Para encontrar a melhor maneira para fazer que a sua doação chegue até nós, se você tiver
+      perguntas sobre diferentes tipos de doações (como herdanças), por favor
+      <a
+    href="/contact/contact.html">contacte com o nosso escritório</a>.
+    </p>
+
+<p>Usted pode tambem usar os <a href="/com-pkg">serviços profissionais</a> da FSFE, 
+    o comprar na nossa <a href="/order">loja</a> para apoyar a nossa ação.</p>
+
+<h3>Doações dedutíveis de impostos</h3>
     <p>
       Se você mora em um dos seguintes países, por favor siga a ligação para obter informação detalhada sobre como doar.
     </p>
 
     <ul>
-      <li><a href="/donate/germany.html">Alemanha</a>: Doações dedutíveis de impostos são possíveis</li>
-      <li><a href="donate-2007-ch.html">Suiça</a>: doações dedutíveis de impostos são possíveis</li>
+      <li><a href="/donate/germany.html">Alemanha</a></li>
+      <li><a href="donate-2007-ch.html">Suiça</a></li>
+     <li><a href="transnational-giving-europe.html">Reino Unido</a> </li>
     </ul>
 
-    <h3>Cartão de crédito e PayPal</h3>
 
-    <p>
-      Para os usuários que acham o pagamento por cartão de crédito mais conveniente, nós também fornecemos
-      a facilidade de pagar por PayPal. Lembre-se que a FSFE tem de pagar honorários
-      de 1,9%, além de uma taxa fixa de 0,30 dólares dos EUA por cada doação
-      recebida por esse método.
-    </p>
-
-    <p>
-      Por favor, selecione com quanto você deseja contribuir, e pressione "Doar":
-    </p>
-
-    <!-- more options under https://www.paypal.com/en_US/pdf/integration_guide.pdf page 123 -->
-
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="indent">
-      <p>
-        <input type="hidden" name="cmd" value="_xclick"/>
-        <input type="hidden" name="business" value="paypal@fsfeurope.org"/>
-        <input type="hidden" name="image_url" value="http://fellowship.fsfe.org/login/images/fsfe_logo_w150.png"/>
-      </p>
-      <!-- here you can add the amount -->
-      <table>
-        <tr>
-          <td/>
-          <td><input type="text" name="amount" value="" size="5"/> EUR</td>
-          <td>
-            <!-- here you can add the intended purpose -->
-            <input type="hidden" name="item_name" value="Doação"/>
-            <input type="hidden" name="currency_code" value="EUR"/>
-            <input type="hidden" name="cn" value="Como deseja ser listado na nossa página Obrigado GNUs?"/>
-            <input type="hidden" name="no_note" value="0"/>
-            <!-- to which site the user is piped after payment -->
-            <!-- <input type="hidden" name="return" value"http://fsfe.org/donate-thank.html"> -->
-            <input type="reset" name="reset" value="Apagar"/>
-            <input type="submit" name="submit" value="Doar"/>
-          </td>
-        </tr>
-      </table>
-    </form>
-
-    <h3>Cheque emitido por um banco do Reino Unido ou E.U.</h3>
-
-    <p>
-      Por favor, tome em consideração que os cheques geralmente têm taxas significativas. Mas se você
-      preferem doar por cheque postal, em vez de outras formas, por favor envie
-      para
-    </p>
-
-    <address>
-      Free Software Foundation Europe e.V.<br/>
-      Talstraße 110<br/>
-      40217 Düsseldorf<br/>
-      Germany
-    </address>
-
-    <h3>Mais informação</h3>
+<h3>O que há depois</h3>
 
     <p>
       Não importa o caminho que você escolher, por favor envie um email para
@@ -144,45 +124,11 @@
       contactar com você, para que possamos agradecer-lho pessoalmente.
     </p>
 
-    <p>
-      Para encontrar a melhor maneira para fazer que a sua doação chegue até nós, se você tiver
-      perguntas sobre diferentes tipos de doações (como herdanças), por favor
-      contacte com o nosso escritório.
-    </p>
-
-    <h2 id="subpages">Navigation</h2>
-
-    <ul>
-      <li>
-        <h3><a href="/donate/thankgnus.html">O nossos doadores</a></h3>
-        <p>
-          Veja quem nos está apoiando.
-        </p>
-      </li>
-      <li>
-        <h3><a href="/about/funds/funds.html">Fluxo de caixa</a></h3>
-        <p>
-          Como empregamos a doações.
-        </p>
-      </li>
-      <li>
-        <h3><a href="/about/graphics/sponsoring/sponsoring.en.html">Gráficos de patrocínio.</a></h3>
-        <p>
-          Anuncie a sua doação com o nossos botões de patrocínio.
-        </p>
-      </li>
-      <li>
-        <h3><a href="/com-pkg/com-pkg.html">Serviços profissionais</a></h3>
-        <p>
-          Você deseja ajudar-nos de outra forma diferente de uma doação? Compre os nossos serviços profissionais.
-
-        </p>
-      </li>
-    </ul>
+  
   </body>
 
   <timestamp>$Date: 2010-04-29 16:10:35 +0000 (Thu, 29 Apr 2010) $ $Author: mk $</timestamp>
-  <translator>pcgaldo</translator>
+  <translator>pcgaldo, maelle</translator>
 </html>
 <!--
 Local Variables: ***

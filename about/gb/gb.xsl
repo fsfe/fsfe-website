@@ -16,6 +16,33 @@
   
   <xsl:variable name="country-code">gb</xsl:variable>
   
+  <!--display labels-->
+
+  <!--translated word "news"-->
+  <xsl:template match="news-label">
+    <xsl:apply-templates select="/html/textset-content/text[@id='news']/node()"/>
+  </xsl:template>
+
+  <!--translated word "events"-->
+  <xsl:template match="events-label">
+    <xsl:apply-templates select="/html/textset-content/text[@id='events']/node()"/>
+  </xsl:template>
+
+  <!--translated word "microblog"-->
+  <xsl:template match="microblog-label">
+    <xsl:apply-templates select="/html/textset-content/text[@id='microblog']/node()"/>
+  </xsl:template>
+
+  <!--translated word "contact"-->
+  <xsl:template match="contact-label">
+    <xsl:apply-templates select="/html/textset-content/text[@id='contact']/node()"/>
+  </xsl:template>
+
+  <!--translated word "team"-->
+  <xsl:template match="team-label">
+    <xsl:apply-templates select="/html/textset-content/text[@id='team']/node()"/>
+  </xsl:template>
+  
   <!--define contact information-->
   
   <xsl:template match="contact-details">
@@ -26,15 +53,15 @@
   <!-- Email -->
     <xsl:if test="email != ''">
       <xsl:element name="p">
-	<xsl:value-of select="/buildinfo/textset/text[@id='email']" />
-	<xsl:text> </xsl:text>
-	<xsl:element name="a">
-	  <xsl:attribute name="href">
-	    <xsl:text>mailto:</xsl:text>
-	    <xsl:value-of select="email" />
-	  </xsl:attribute>
-	  <xsl:value-of select="email" />
-	</xsl:element>
+        <xsl:value-of select="/buildinfo/textset/text[@id='email']" />
+        <xsl:text> </xsl:text>
+        <xsl:element name="a">
+          <xsl:attribute name="href">
+            <xsl:text>mailto:</xsl:text>
+            <xsl:value-of select="email" />
+          </xsl:attribute>
+          <xsl:value-of select="email" />
+        </xsl:element>
       </xsl:element>
     </xsl:if>
   
@@ -46,18 +73,18 @@
   <!-- Phone -->
     <xsl:if test="phone != ''">
       <xsl:element name="p">
-	<xsl:value-of select="/buildinfo/textset/text[@id='phone']" />
-	<xsl:text> </xsl:text>
-	<xsl:value-of select="phone" />
+        <xsl:value-of select="/buildinfo/textset/text[@id='phone']" />
+        <xsl:text> </xsl:text>
+        <xsl:value-of select="phone" />
       </xsl:element>
     </xsl:if>
 
   <!-- Fax -->
     <xsl:if test="fax != ''">
       <xsl:element name="p">
-	<xsl:value-of select="/buildinfo/textset/text[@id='fax']" />
-	<xsl:text> </xsl:text>
-	<xsl:value-of select="fax" />
+        <xsl:value-of select="/buildinfo/textset/text[@id='fax']" />
+        <xsl:text> </xsl:text>
+        <xsl:value-of select="fax" />
       </xsl:element>
     </xsl:if>
     </xsl:if>

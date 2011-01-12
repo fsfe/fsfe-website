@@ -58,6 +58,11 @@
     <xsl:apply-templates select="/html/textset-content/text[@id='newsletter']/node()"/>
   </xsl:template>
   
+  <!--translated sentence "receive-newsletter"-->
+  <xsl:template match="receive-newsletter">
+    <xsl:apply-templates select="/html/textset-content/text[@id='receive-newsletter']/node()"/>
+  </xsl:template>
+  
   <!--translated word "news"-->
   <xsl:template match="news-label">
     <xsl:apply-templates select="/html/textset-content/text[@id='news']/node()"/>

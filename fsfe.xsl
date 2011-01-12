@@ -210,9 +210,11 @@
 	      <!-- Statement -->
 	      <xsl:element name="p">
 		<xsl:attribute name="id">statement</xsl:attribute>
-		Free Software Foundation Europe is a non-profit organisation dedicated
-		to the furthering of Free Software, and works to promote freedom in emerging
-		digital society. <a href="/about">Learn more</a>
+		<xsl:value-of select="/buildinfo/textset/text[@id='statement']" />
+		<xsl:element name="a">
+		  <xsl:attribute name="href">/about</xsl:attribute>
+		  <xsl:value-of select="/buildinfo/textset/text[@id='learn-more']" />
+		</xsl:element>
 	      </xsl:element>
 	      
 	    </xsl:element><!-- end Page header -->

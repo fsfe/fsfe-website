@@ -12,6 +12,9 @@
   
     # <xsl:variable name="country-code">de</xsl:variable> -> change xx to your country code
     
+    For more information, take a look at the documentation under
+        /tools/xsltsl/tagging-documentation.txt
+    
   -->
   
   <xsl:variable name="country-code">de</xsl:variable>

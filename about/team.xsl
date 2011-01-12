@@ -4,7 +4,13 @@
   
   <xsl:import href="../tools/xsltsl/countries.xsl" />
   <xsl:output method="xml" encoding="ISO-8859-1" indent="yes"/>
-
+  
+  <!-- 
+    For documentation on tagging (e.g. display a people list), take a
+    look at the documentation under
+      /tools/xsltsl/tagging-documentation.txt
+  -->
+  
   <!-- Fill dynamic content -->
   <xsl:template match="team-members">
     <xsl:call-template name="country-people-list">

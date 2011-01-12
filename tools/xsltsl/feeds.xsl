@@ -135,6 +135,7 @@
                     </p>
                 </xsl:otherwise>
             </xsl:choose>
+            <!-- and possibly details about the event -->
             <xsl:if test="$display-details = 'yes'">
                 <div class="details">
                     <xsl:apply-templates select="body/node()" />
@@ -150,8 +151,10 @@
                       select="concat( '/about/', $id, '/', $id, '-avatar.jpg' )" />
         <xsl:element name="img">
             <xsl:attribute name="src">
+                <!-- we have a default path as the source of the image: /about/*id*/*id*-avatar.jpg -->
                 <xsl:value-of select="$img-path" />
             </xsl:attribute>
+            <!-- And on error (if previous file does not exist), we load our default image -->
             <xsl:attribute name="onerror">
                 <xsl:text>
 this.src='/graphics/default-avatar.png';

@@ -10,6 +10,7 @@
     <xsl:template name="country-people-list">
         <xsl:param name="team"
                    select="''" />
+        <!-- parameter 'team' is your country code -->
         
         <xsl:variable name="teamcomma"><xsl:value-of select="$team" />,</xsl:variable>
 		<xsl:variable name="commateam">, <xsl:value-of select="$team" /></xsl:variable>

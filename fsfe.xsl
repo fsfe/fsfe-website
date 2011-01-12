@@ -210,11 +210,11 @@
 	      <!-- Statement -->
 	      <xsl:element name="p">
 		<xsl:attribute name="id">statement</xsl:attribute>
-		<xsl:value-of select="/buildinfo/textset/text[@id='statement']" />
+		<xsl:value-of select="/buildinfo/textset/text[@id='statement']" />.<!--intentional full stop goes here-->
 		<xsl:element name="a">
 		  <xsl:attribute name="href">/about</xsl:attribute>
 		  <xsl:value-of select="/buildinfo/textset/text[@id='learn-more']" />
-		</xsl:element>
+		</xsl:element>.<!--intentional full stop goes here-->
 	      </xsl:element>
 	      
 	    </xsl:element><!-- end Page header -->

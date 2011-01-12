@@ -65,7 +65,19 @@
               <xsl:if test="position()!=1">
                 <xsl:text>, </xsl:text>
               </xsl:if>
-              <xsl:value-of select="name" />
+	      <xsl:choose>
+		<xsl:when test="link != ''">
+		  <xsl:element name="a">
+		    <xsl:attribute name="href">
+			<xsl:value-of select="link" />
+		    </xsl:attribute>
+		    <xsl:value-of select="name" />
+		  </xsl:element>
+		</xsl:when>
+		<xsl:otherwise>
+		  <xsl:value-of select="name" />
+		</xsl:otherwise>
+	      </xsl:choose>
             </xsl:for-each>
           </xsl:when>
           <xsl:otherwise>

@@ -84,6 +84,16 @@
     <xsl:apply-templates select="/html/textset-content/text[@id='more']/node()"/>
   </xsl:template>
   
+  <!--translated word "donate"-->
+  <xsl:template match="donate-label">
+    <xsl:apply-templates select="/html/textset-content/text[@id='donate']/node()"/>
+  </xsl:template>
+
+  <!--translated word "join"-->
+  <xsl:template match="join-label">
+    <xsl:apply-templates select="/html/textset-content/text[@id='join']/node()"/>
+  </xsl:template>
+  
   <!-- Do not copy <set> to output at all -->
   <xsl:template match="set"/>
   <xsl:template match="textset-content"/>

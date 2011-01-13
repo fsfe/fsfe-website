@@ -4,29 +4,102 @@
   <head> 
     <title>FSF Europa - Fundaţia Europeană a Software-ului Liber</title> 
   </head>
-  <body> 
-    <h1 class="centre">Fundaţia Europeană a Software-ului Liber</h1>
-    
-    <p class="tagline">"Liber precum în Libertate"</p>
+  <body>
+    <div id="campaigns-boxes">
+      <div id="campaign-box-1">
+        <a href="/campaigns/pdfreaders/">
+	  <h3>We're Ending Government Advertising of Non-Free PDF Readers</h3>
+	</a>
+      </div>
 
-    <p>
-      Bine aţi venit pe pagina Fundaţiei Software-ului Liber Europa. FSF
-      (acronimul din engleză al numelui fundaţiei) Europa o fost lansată
-      pe data de 10 Martie 2001 şi susţine toate aspectele Software-ului
-      Liber specifice Europei, în special <a
-        href="documents/gnuproject.html">Proiectul GNU</a>. Susţinem activ
-      dezvoltarea Software-ului liber şi sistemelor de operare bazate pe
-      GNU, cum ar fi GNU/Linux.  De asemenea furnizăm un centru de
-      asistenţă pentru politicieni, avocaţi şi jurnalişti pentru a asigura
-      viitorul Software-ului Liber pe plan legal, politic şi social.
-    </p>
+      <div id="campaign-box-2">
+        <a href="donate/donate.html" class="donate-box">
+	  <p><donate-label /></p>
+        </a>
+        <a href="http://fellowship.fsfe.org/join" class="fellowship-box">
+          <p><join-label /></p>
+        </a>
+      </div>
+      
+      <div id="campaign-box-3">
+	
+      </div>
+      
+    </div>
+    
+    <div id="feeds">
+    
+      <div id="news" class="section">
+	<h2>
+	  <a class="rss-feed" href="/news.rss"><img src="/graphics/rss.png" alt="News RSS" title="news RSS feed" /></a>
+	  <a class="ical" href="http://identi.ca/fsfe"><img src="/graphics/identica.png" alt="identica" title="follow FSFE on identi.ca"/></a>
+	  
+	  <a href="/news/news.html"><news-label /></a>
+	  
+	</h2>
+      
+	<all-news />
+	  
+      </div><!--end #news-->   
+
+      <div id="newsletter" class="section">
+	<h2><a href="/news/newsletter.html"><newsletter-label /></a></h2>
+	
+	<div class="entry">
+	  <p>
+	    <strong><receive-newsletter />:</strong>
+	  </p>
+
+	  <form method="post" action="http://mail.fsfeurope.org/mailman/subscribe/press-release">
+	    <p>
+	      <select id="language" name="language">
+		<option value="en" selected="selected">English</option>
+		<option value="el">Ελληνικά</option>	
+		<option value="es">Español</option>
+		<option value="de">Deutsch</option>
+		<option value="fr">Français</option>
+		<option value="it">Italiano</option>
+		<option value="nl">Nederlands</option>
+		<option value="pt">Português</option>
+		<option value="ru">Русский</option>
+		<option value="sv">Svenska</option>
+	      </select>
+	      
+	      <input id="email" type="email" placeholder="email address" />
+	      
+	      <input type="submit" id="submit" value="Subscribe" />
+	    </p>
+	  </form>
+
+	  <ul>
+	  
+	    <all-newsletters />
+	    
+	    <li><a href="news/newsletter.html"><more-label />...</a></li>
+	    
+	  </ul>
+
+	</div><!-- /.entry -->
+      </div> <!-- /#newsletter -->
+    
+      <div id="events" class="section">
+	<h2>
+	  <a class="rss-feed" href="/events.rss"><img src="/graphics/rss.png" alt="Events RSS" title="events RSS feed" /></a>
+	  <a class="ical" href="webcal://fsfe.org/events/events.ics"><img src="/graphics/ical.png" alt="iCal" title="FSFE events as iCal feed" /></a>
+	  
+	  <a href="/events/events.html"><events-label /></a>
+	  
+	</h2>
+    
+	<all-events />
+    
+      </div><!--end #events-->
+      
+    </div><!--end #feeds-->
+    
   </body>
 
-
-  
-  <translator>Adi Roiban</translator>
   <timestamp>$Date$ $Author$</timestamp>
-
 </html>
 <!--
 Local Variables: ***

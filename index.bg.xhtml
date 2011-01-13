@@ -4,32 +4,101 @@
   <head> 
     <title>ФССЕ - Фондация за Свободен Софтуер Европа</title> 
   </head>
-  <body> 
-      <h1 class="centre">Фондация за Свободен Софтуер Европа</h1>
-      <p class="tagline">„Свободен както в Свобода“</p>
+  <body>
+    <div id="campaigns-boxes">
+      <div id="campaign-box-1">
+        <a href="/campaigns/pdfreaders/">
+	  <h3>We're Ending Government Advertising of Non-Free PDF Readers</h3>
+	</a>
+      </div>
 
-    <p>
-		Добре дошли на началната страница на Фондация за Свободен Софтуер Европа.
-		ФССЕ е основана на 10 март 2001 и подкрепя всички Европейски страни на
-		<a href="documents/freesoftware.html">Свободния софтуер</a>, особено на
-		<a href="documents/gnuproject.html">проекта GNU</a>. Ние активно подкрепяме
-		развитието на Свободния софтуер и разпространението на операционни системи,
-		базирани на GNU, като GNU/Linux. Също така, ние предоставяме център за помощ на
-		политици, адвокати и журналисти за да осигурим юридическото, политическо и 
-		социално бъдеще на Свободния софтуер.
-    </p>
+      <div id="campaign-box-2">
+        <a href="donate/donate.html" class="donate-box">
+	  <p><donate-label /></p>
+        </a>
+        <a href="http://fellowship.fsfe.org/join" class="fellowship-box">
+          <p><join-label /></p>
+        </a>
+      </div>
+      
+      <div id="campaign-box-3">
+	
+      </div>
+      
+    </div>
+    
+    <div id="feeds">
+    
+      <div id="news" class="section">
+	<h2>
+	  <a class="rss-feed" href="/news.rss"><img src="/graphics/rss.png" alt="News RSS" title="news RSS feed" /></a>
+	  <a class="ical" href="http://identi.ca/fsfe"><img src="/graphics/identica.png" alt="identica" title="follow FSFE on identi.ca"/></a>
+	  
+	  <a href="/news/news.html"><news-label /></a>
+	  
+	</h2>
+      
+	<all-news />
+	  
+      </div><!--end #news-->   
 
-    <p>
-		Работата на ФССЕ става възможна благодарение на много индивидуални
-		приноси, в частност на <a href="http://www.fsfe.org">Сдружението на ФССЕ</a>.
-		Един от начините да допринесете е да се <a href="http://www.fsfe.org/about/">включите сега</a>
-		и да окуражите други да сторят същото.
-    </p>
+      <div id="newsletter" class="section">
+	<h2><a href="/news/newsletter.html"><newsletter-label /></a></h2>
+	
+	<div class="entry">
+	  <p>
+	    <strong><receive-newsletter />:</strong>
+	  </p>
+
+	  <form method="post" action="http://mail.fsfeurope.org/mailman/subscribe/press-release">
+	    <p>
+	      <select id="language" name="language">
+		<option value="en" selected="selected">English</option>
+		<option value="el">Ελληνικά</option>	
+		<option value="es">Español</option>
+		<option value="de">Deutsch</option>
+		<option value="fr">Français</option>
+		<option value="it">Italiano</option>
+		<option value="nl">Nederlands</option>
+		<option value="pt">Português</option>
+		<option value="ru">Русский</option>
+		<option value="sv">Svenska</option>
+	      </select>
+	      
+	      <input id="email" type="email" placeholder="email address" />
+	      
+	      <input type="submit" id="submit" value="Subscribe" />
+	    </p>
+	  </form>
+
+	  <ul>
+	  
+	    <all-newsletters />
+	    
+	    <li><a href="news/newsletter.html"><more-label />...</a></li>
+	    
+	  </ul>
+
+	</div><!-- /.entry -->
+      </div> <!-- /#newsletter -->
+    
+      <div id="events" class="section">
+	<h2>
+	  <a class="rss-feed" href="/events.rss"><img src="/graphics/rss.png" alt="Events RSS" title="events RSS feed" /></a>
+	  <a class="ical" href="webcal://fsfe.org/events/events.ics"><img src="/graphics/ical.png" alt="iCal" title="FSFE events as iCal feed" /></a>
+	  
+	  <a href="/events/events.html"><events-label /></a>
+	  
+	</h2>
+    
+	<all-events />
+    
+      </div><!--end #events-->
+      
+    </div><!--end #feeds-->
+    
   </body>
 
-
-
-  <translator>Пламен Стоев</translator>
   <timestamp>$Date$ $Author$</timestamp>
 </html>
 <!--

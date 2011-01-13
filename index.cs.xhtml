@@ -4,34 +4,100 @@
     <title>Evropská Nadace pro Svobodný software - FSFE</title>
   </head>
   <body>
-    <h1 class="centre">Free Software Foundation Europe</h1>
-    
-    <p class="tagline">Evropská Nadace pro Svobodný software</p>
-    
-    <p>
-      Evropská Nadace pro Svobodný software (FSFE) je nezisková, v
-      některých zemích i charitativní organizace, která se věnuje <a
-        href="/documents/freesoftware.html">Svobodnému softwaru</a>.  FSFE
-      považuje svobody užívání, studia, sdílení a vylepšování softwaru za
-      zásadní pro zaručení rovnoprávnosti v informačním věku.  Usilujeme o
-      zvýšení veřejného povědomí o svobodách softwaru a jeho podpory v
-      politice, zákonech a ve společnosti obecně. Také prosazujeme vývoj
-      technologií, jako například operačního systému GNU/Linux, které tyto
-      svobody přinášejí všem účastníkům informační společnosti. 
-    </p>
+    <div id="campaigns-boxes">
+      <div id="campaign-box-1">
+        <a href="/campaigns/pdfreaders/">
+	  <h3>We're Ending Government Advertising of Non-Free PDF Readers</h3>
+	</a>
+      </div>
 
-    <p>
-      Činnost Nadace je umožněna díky příspěvkům mnoha jednotlivců,
-      podrobnosti na <a href="http://fellowship.fsfe.org/">Společenství
-        Evropské Nadace pro Svobodný software</a>.  Jedna z možností jak
-      přispět je <a href="http://fellowship.fsfe.org/about/">přidat se k
-        nám</a> a povzbudit k tomu i ostatní.
-    </p>
+      <div id="campaign-box-2">
+        <a href="donate/donate.html" class="donate-box">
+	  <p><donate-label /></p>
+        </a>
+        <a href="http://fellowship.fsfe.org/join" class="fellowship-box">
+          <p><join-label /></p>
+        </a>
+      </div>
+      
+      <div id="campaign-box-3">
+	
+      </div>
+      
+    </div>
+    
+    <div id="feeds">
+    
+      <div id="news" class="section">
+	<h2>
+	  <a class="rss-feed" href="/news.rss"><img src="/graphics/rss.png" alt="News RSS" title="news RSS feed" /></a>
+	  <a class="ical" href="http://identi.ca/fsfe"><img src="/graphics/identica.png" alt="identica" title="follow FSFE on identi.ca"/></a>
+	  
+	  <a href="/news/news.html"><news-label /></a>
+	  
+	</h2>
+      
+	<all-news />
+	  
+      </div><!--end #news-->   
+
+      <div id="newsletter" class="section">
+	<h2><a href="/news/newsletter.html"><newsletter-label /></a></h2>
+	
+	<div class="entry">
+	  <p>
+	    <strong><receive-newsletter />:</strong>
+	  </p>
+
+	  <form method="post" action="http://mail.fsfeurope.org/mailman/subscribe/press-release">
+	    <p>
+	      <select id="language" name="language">
+		<option value="en" selected="selected">English</option>
+		<option value="el">Ελληνικά</option>	
+		<option value="es">Español</option>
+		<option value="de">Deutsch</option>
+		<option value="fr">Français</option>
+		<option value="it">Italiano</option>
+		<option value="nl">Nederlands</option>
+		<option value="pt">Português</option>
+		<option value="ru">Русский</option>
+		<option value="sv">Svenska</option>
+	      </select>
+	      
+	      <input id="email" type="email" placeholder="email address" />
+	      
+	      <input type="submit" id="submit" value="Subscribe" />
+	    </p>
+	  </form>
+
+	  <ul>
+	  
+	    <all-newsletters />
+	    
+	    <li><a href="news/newsletter.html"><more-label />...</a></li>
+	    
+	  </ul>
+
+	</div><!-- /.entry -->
+      </div> <!-- /#newsletter -->
+    
+      <div id="events" class="section">
+	<h2>
+	  <a class="rss-feed" href="/events.rss"><img src="/graphics/rss.png" alt="Events RSS" title="events RSS feed" /></a>
+	  <a class="ical" href="webcal://fsfe.org/events/events.ics"><img src="/graphics/ical.png" alt="iCal" title="FSFE events as iCal feed" /></a>
+	  
+	  <a href="/events/events.html"><events-label /></a>
+	  
+	</h2>
+    
+	<all-events />
+    
+      </div><!--end #events-->
+      
+    </div><!--end #feeds-->
+    
   </body>
 
-
-
-  <translator>Michael Hrabánek</translator> 
   <timestamp>$Date$ $Author$</timestamp>
 </html>
 <!--

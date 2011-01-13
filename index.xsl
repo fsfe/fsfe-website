@@ -105,8 +105,6 @@
     </xsl:element>
   </xsl:template>
   
-  <input type="submit" id="submit" value="Subscribe" />
-  
   <!-- Do not copy <set> to output at all -->
   <xsl:template match="set"/>
   <xsl:template match="textset-content"/>

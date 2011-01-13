@@ -46,8 +46,8 @@
       <xsl:element name="table">
         <xsl:element name="tr">
           <xsl:element name="th"><xsl:value-of select="/html/text[@id='institution-name']"/></xsl:element>
-          <xsl:comment><xsl:element name="th"><xsl:value-of select="translate( /html/text[@id='institution-address'], '-', '–' )"/></xsl:element></xsl:comment>
-          <xsl:element name="th"><xsl:value-of select="/html/text[@id='institution-url']"/></xsl:element>
+          <!--<xsl:element name="th"><xsl:value-of select="/html/text[@id='institution-address']"/></xsl:element>-->
+          <!--<xsl:element name="th"><xsl:value-of select="/html/text[@id='institution-url']"/></xsl:element>-->
           <xsl:element name="th"><xsl:value-of select="/html/text[@id='opened']"/></xsl:element>
           <xsl:element name="th"><xsl:value-of select="/html/text[@id='closed']"/></xsl:element>
           <xsl:element name="th"><xsl:value-of select="/html/text[@id='name']"/></xsl:element>
@@ -62,16 +62,15 @@
 	    <xsl:if test = "string(@closed)">
 	      <xsl:attribute name="class">highlighted</xsl:attribute>
 	    </xsl:if>
-            <xsl:element name="td"><xsl:value-of select="@institution-name"/></xsl:element>
-            <xsl:comment><xsl:element name="td"><xsl:value-of select="translate(@institution-address, '-', '–' )"/></xsl:element></xsl:comment>
             <xsl:element name="td">
               <xsl:element name="a">
                 <xsl:attribute name="href">
                   <xsl:value-of select="@institution-url"/>
                 </xsl:attribute>
-                <xsl:value-of select="/html/text[@id='link']"/>
+                <xsl:value-of select="@institution-name"/><!--<xsl:value-of select="/html/text[@id='link']"/>-->
               </xsl:element>
             </xsl:element>
+            <xsl:comment><xsl:element name="td"><xsl:value-of select="translate(@institution-address, '-', '–' )"/></xsl:element></xsl:comment>
             <xsl:element name="td"><xsl:value-of select="@opened"/></xsl:element>
             <xsl:element name="td"><xsl:value-of select="@closed"/></xsl:element>
             <xsl:element name="td"><xsl:value-of select="@name"/></xsl:element>

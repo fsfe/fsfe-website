@@ -496,6 +496,7 @@
 	    <!-- Missing translation note -->
 	    <xsl:if test="/buildinfo/@language!=/buildinfo/document/@language">
 	      <xsl:element name="p">
+		<xsl:attribute name="id">outdated-notice</xsl:attribute>
 		<xsl:apply-templates select="/buildinfo/textset/text[@id='notranslation']/node()" />
 	      </xsl:element>
 	    </xsl:if>

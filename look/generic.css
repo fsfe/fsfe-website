@@ -1383,6 +1383,12 @@ tr.highlighted {
  background-color :#D0F400;
 }
 
+/* notices */
+#outdated-notice {
+  border: 1px solid red;
+  padding: 0.5em;
+  margin: 0 0 1.5em 0;
+}
 
 /* service notice */
 #service-notice {

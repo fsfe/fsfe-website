@@ -1365,6 +1365,7 @@ table th {
 
 table td {
   border-bottom: 1px solid #ccc;
+  max-width: 200px; /* to fix pdfreaders buglist page problems */
 }
 
 table td.positive {

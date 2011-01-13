@@ -469,6 +469,8 @@ h3 {
 .captioned {
   padding: 0.5em;
   border: 1px solid #D2D2D2;
+  margin: 1em;
+  text-align: center;
 }
 
 .captioned img {
@@ -477,6 +479,7 @@ h3 {
 .captioned p {
   padding: 0.5em 0.5em 0 0.5em;
   margin: 0;
+  border-top: 1px solid #dcdcdc;
 }
 
 .postit {  /* compatibility */

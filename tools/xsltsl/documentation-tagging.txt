@@ -1,32 +1,5 @@
 
 
-= Implementing a country page =
-
-Implementing a country page won't take you long. England and Germany
-country pages are a good example of what and how you can achieve easily.
-You could start by copying one of these pages, and change the countrycode
-variable to your country code:
-
-  <xsl:variable name="country-code">xx</xsl:variable>
-
-Here after are some specificities.
-
-
-== Using the country-people-list template ==
-
-- copy the call to the country-people-list template from your favorite
-  country page
-- add the 'xx' tag to corresponding people in /about/people/people.en.xml
-  e.g. <person id="mueller" member="yes" teams="main, de">
-
-
-== Fetch news, events ==
-
-- to display news or events for your country, see "Using Tagging » Using the 
-  fetch-news/fetch-events template"
-
-
-
 = Using tagging =
 
 
@@ -68,3 +41,6 @@ work the same way. Here are some addings:
   the details of each event displayed along with its date and title
     
     <xsl:with-param name="display-details" select="'yes'" />
+    
+
+

@@ -68,6 +68,3 @@ work the same way. Here are some addings:
   the details of each event displayed along with its date and title
     
     <xsl:with-param name="display-details" select="'yes'" />
-    
-
-

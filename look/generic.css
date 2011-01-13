@@ -144,10 +144,12 @@ ul {
 
 .left {
   float: left;
+  margin-left: 0;
 }
 
 .right {
   float: right;
+  margin-right: 0;
 }
 
 p.left {

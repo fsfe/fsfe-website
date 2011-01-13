@@ -24,21 +24,21 @@
 
     <ul>
       <li>
-        the "tag" parameter defines what news will be displayed. If you are
+        the <var>tag</var> parameter defines what news will be displayed. If you are
         building up a country page, this is your country code. Leave blank
         if you wish to receive news items with any tags.
       </li>
     </ul>
     
-    <p class="terminal"><text>&lt;xsl:with-param name="tag" select="'<var>your tag</var>'"/&gt;</text></p>
+    <p class="terminal">&lt;xsl:with-param name="tag" select="'<var>your tag</var>'"/&gt;</p>
     
     <ul>
       <li>
-        the "nb-items" parameter determines how many news items will be displayed
+        the <var>nb-items</var> parameter determines how many news items will be displayed
       </li>
     </ul>
     
-    <p class="terminal"><text>&lt;xsl:with-param name="nb-items" select="'<var>x</var>'" /&gt;</text></p>
+    <p class="terminal">&lt;xsl:with-param name="nb-items" select="'<var>x</var>'" /&gt;</p>
     
     
     <h3>Using the fetch-events template</h3>
@@ -50,31 +50,53 @@
     
     <ul>
       <li>
-        the "wanted-time" parameter defines what events you want to see, "past",
+        the <var>wanted-time</var> parameter defines what events you want to see, "past",
         "present" or "future"
       </li>
     </ul>
     
-    <p class="terminal"><text>&lt;xsl:with-param name="wanted-time" select="'<var>time</var>'" /&gt;</text></p>
+    <p class="terminal">&lt;xsl:with-param name="wanted-time" select="'<var>future|present|past</var>'" /&gt;</p>
     
     <ul>
       <li>
-        the "header" parameter determines the text that will be displayed on top
-        of your block of events (used e.g. on events/events.xsl)
-        possible values, 'future', 'current' or 'past'
+        the <var>header</var> parameter determines the text that will be displayed on top
+        of your block of events (used e.g. on events/events.xsl).
+        Possible values: 'future', 'current' or 'past'
       </li>
     </ul>
     
-    <p class="terminal"><text>&lt;xsl:with-param name="header" select="'<var>time</var>'" /&gt;</text></p>
+    <p class="terminal">&lt;xsl:with-param name="header" select="'<var>future|current|past</var>'" /&gt;</p>
     
     <ul>
       <li>
-        the "display-details" parameter says if 'yes' or 'no' you will have
+        the <var>display-details</var> parameter says if 'yes' or 'no' you will have
         the details of each event displayed along with its date and title
       </li>
     </ul>
     
-    <p class="terminal"><text>&lt;xsl:with-param name="display-details" select="'<var>yes|no</var>'" /&gt;</text></p>
+    <p class="terminal">&lt;xsl:with-param name="display-details" select="'<var>yes|no</var>'" /&gt;</p>
+    
+    
+    
+    <h2>Implementing a country page</h2>
+    
+    <p>
+        Implementing a country page won't take you long. England and Germany
+        country pages are a good example of what and how you can achieve easily.
+        You could start by copying one of these pages, and change the countrycode
+        variable to your country code:
+        
+        <p class="terminal">&lt;xsl:variable name="country-code"&gt;<var>xx</var>&lt;/xsl:variable&gt;</p>
+    </p>
+    
+    <h3>Using the country-people-list template</h3>
+    
+    <ul>
+      <li>copy the call to the country-people-list template from your favorite country page.</li>
+      <li>add the <var>xx</var> tag to corresponding people in /about/people/people.en.xml, e.g.</li>
+    </ul>
+    
+    <p class="terminal">&lt;person id="mueller" member="yes" teams="main, de"&gt;</p>
 
   </body>
 

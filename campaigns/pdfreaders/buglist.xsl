@@ -46,7 +46,7 @@
       <xsl:element name="table">
         <xsl:element name="tr">
           <xsl:element name="th"><xsl:value-of select="/html/text[@id='institution-name']"/></xsl:element>
-          <xsl:element name="th"><xsl:value-of select="/html/text[@id='institution-address']"/></xsl:element>
+          <xsl:comment><xsl:element name="th"><xsl:value-of select="translate( /html/text[@id='institution-address'], '-', '–' )"/></xsl:element></xsl:comment>
           <xsl:element name="th"><xsl:value-of select="/html/text[@id='institution-url']"/></xsl:element>
           <xsl:element name="th"><xsl:value-of select="/html/text[@id='opened']"/></xsl:element>
           <xsl:element name="th"><xsl:value-of select="/html/text[@id='closed']"/></xsl:element>
@@ -63,7 +63,7 @@
 	      <xsl:attribute name="class">highlighted</xsl:attribute>
 	    </xsl:if>
             <xsl:element name="td"><xsl:value-of select="@institution-name"/></xsl:element>
-            <xsl:element name="td"><xsl:value-of select="@institution-address"/></xsl:element>
+            <xsl:comment><xsl:element name="td"><xsl:value-of select="translate(@institution-address, '-', '–' )"/></xsl:element></xsl:comment>
             <xsl:element name="td">
               <xsl:element name="a">
                 <xsl:attribute name="href">

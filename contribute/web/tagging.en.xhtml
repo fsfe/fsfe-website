@@ -41,17 +41,22 @@
     <p class="terminal">&lt;xsl:with-param name="nb-items" select="'<var>x</var>'" /&gt;</p>
     
     
+    <h3>Using the fetch-newsletter template</h3>
+
+    <p>Works exactly as the fetch-news template, but does not propose tagging yet.</p>
+    
+    
     <h3>Using the fetch-events template</h3>
     
     <p>
-        fetch-events works in a very similar manner to fetch-news, tag and nb-items
+        fetch-events works in a very similar manner to fetch-news, <var>tag</var> and <var>nb-items</var>
         work the same way. Here are some addings:
     </p>
     
     <ul>
       <li>
-        the <var>wanted-time</var> parameter defines what events you want to see, "past",
-        "present" or "future"
+        the <var>wanted-time</var> parameter defines what events you want
+        to display, "past", "present" or "future"
       </li>
     </ul>
     
@@ -61,7 +66,8 @@
       <li>
         the <var>header</var> parameter determines the text that will be displayed on top
         of your block of events (used e.g. on events/events.xsl).
-        Possible values: 'future', 'current' or 'past'
+        Possible values are 'future', 'current' or 'past'. Leave blank if you
+        don't want any header.
       </li>
     </ul>
     
@@ -70,7 +76,7 @@
     <ul>
       <li>
         the <var>display-details</var> parameter says if 'yes' or 'no' you will have
-        the details of each event displayed along with its date and title
+        the text of each event displayed along with its date and title.
       </li>
     </ul>
     
@@ -82,8 +88,8 @@
     
     <p>
         Implementing a country page won't take you long. England and Germany
-        country pages are a good example of what and how you can achieve easily.
-        You could start by copying one of these pages, and change the countrycode
+        country pages are a good example of what you can achieve easily and how.
+        You could start by copying one of these pages, and change the <var>countrycode</var>
         variable to your country code:
         
         <p class="terminal">&lt;xsl:variable name="country-code"&gt;<var>xx</var>&lt;/xsl:variable&gt;</p>

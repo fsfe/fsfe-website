@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<html>
+  <head>
+    <title>Documentation - Tagged news and events, country pages</title>
+  </head>
+  <body>
+
+    <p id="category"><a href="/contribute/">Contribute</a></p>
+    <h1>Documentation - Tagged news and events, country pages</h1>
+
+    <p id="introduction">
+      As you can see on <a href="/about/gb/gb.en.html">the UK page</a>,
+      it is possible to display news or events that have a special tag,
+      e.g. a country code.
+      This helps setting up pages easily with specific news items or events.
+      The list of people displayed on this same page has also been automated,
+      so it makes it easy to implement your own country page.
+    </p>
+
+
+    <h2>Tagged news and events</h2>
+    
+    <h3>Using the fetch-news template</h3>
+
+    <ul>
+      <li>
+        the <var>tag</var> parameter defines what news will be displayed. If you are
+        building up a country page, this is your country code. Leave blank
+        if you wish to receive news items with any tags.
+      </li>
+    </ul>
+    
+    <p class="terminal">&lt;xsl:with-param name="tag" select="'<var>your tag</var>'"/&gt;</p>
+    
+    <ul>
+      <li>
+        the <var>nb-items</var> parameter determines how many news items will be displayed
+      </li>
+    </ul>
+    
+    <p class="terminal">&lt;xsl:with-param name="nb-items" select="'<var>x</var>'" /&gt;</p>
+    
+    
+    <h3>Using the fetch-newsletter template</h3>
+
+    <p>Works exactly as the fetch-news template, but does not propose tagging yet.</p>
+    
+    
+    <h3>Using the fetch-events template</h3>
+    
+    <p>
+        fetch-events works in a very similar manner to fetch-news, <var>tag</var> and <var>nb-items</var>
+        work the same way. Here are some addings:
+    </p>
+    
+    <ul>
+      <li>
+        the <var>wanted-time</var> parameter defines what events you want
+        to display, "past", "present" or "future"
+      </li>
+    </ul>
+    
+    <p class="terminal">&lt;xsl:with-param name="wanted-time" select="'<var>future|present|past</var>'" /&gt;</p>
+    
+    <ul>
+      <li>
+        the <var>header</var> parameter determines the text that will be displayed on top
+        of your block of events (used e.g. on events/events.xsl).
+        Possible values are 'future', 'current' or 'past'. Leave blank if you
+        don't want any header.
+      </li>
+    </ul>
+    
+    <p class="terminal">&lt;xsl:with-param name="header" select="'<var>future|current|past</var>'" /&gt;</p>
+    
+    <ul>
+      <li>
+        the <var>display-details</var> parameter says if 'yes' or 'no' you will have
+        the text of each event displayed along with its date and title.
+      </li>
+    </ul>
+    
+    <p class="terminal">&lt;xsl:with-param name="display-details" select="'<var>yes|no</var>'" /&gt;</p>
+    
+    
+    
+    <h2>Implementing a country page</h2>
+    
+    <p>
+        Implementing a country page won't take you long. England and Germany
+        country pages are a good example of what you can achieve easily and how.
+        You could start by copying one of these pages, and change the <var>countrycode</var>
+        variable to your country code:
+        
+        <p class="terminal">&lt;xsl:variable name="country-code"&gt;<var>xx</var>&lt;/xsl:variable&gt;</p>
+    </p>
+    
+    <h3>Using the country-people-list template</h3>
+    
+    <ul>
+      <li>copy the call to the country-people-list template from your favorite country page.</li>
+      <li>add the <var>xx</var> tag to corresponding people in /about/people/people.en.xml, e.g.</li>
+    </ul>
+    
+    <p class="terminal">&lt;person id="mueller" member="yes" teams="main, de"&gt;</p>
+
+  </body>
+
+  <timestamp>$Date: 2010-07-07 05:16:55 +0200 (Wed, 07 Jul 2010) $ $Author: hugo $</timestamp>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

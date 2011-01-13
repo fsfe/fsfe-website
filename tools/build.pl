@@ -59,34 +59,34 @@ our %countries = (global => 'en');
 our %languages = (
   ar => '&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1617;&#1577;',
   bg => '&#1041;&#1098;&#1083;&#1075;&#1072;&#1088;&#1089;&#1082;&#1080;',
-  ca => 'Català',
+  ca => 'Catal&#224;',
   cs => '&#268;esky',
   da => 'Dansk',
   de => 'Deutsch',
   el => '&#917;&#955;&#955;&#951;&#957;&#953;&#954;&#940;',
   en => 'English',
-  es => 'Español',
+  es => 'Espa&#241;ol',
   et => 'Eesti',
   fi => 'Suomi',
-  fr => 'Français',
+  fr => 'Fran&#231;ais',
   hr => 'Hrvatski',
   hu => 'Magyar',
   it => 'Italiano',
-  ku => 'Kurdî',
+  ku => 'Kurd&#238;',
   mk => 'M&#1072;&#1082;&#1077;&#1076;&#1086;&#1085;&#1089;&#1082;&#1080;',
   nb => 'Norsk&nbsp;(bokm&aring;l)',
   nl => 'Nederlands',
-  nn => "Norsk&nbsp;(nynorsk)",
+  nn => 'Norsk&nbsp;(nynorsk)',
   pl => 'Polski',
-  pt => 'Português',
-  ro => 'Român&#259;',
+  pt => 'Portugu&#234;s',
+  ro => 'Rom&#226;n&#259;',
   ru => '&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;',
   sk => 'Sloven&#269;ina',
   sl => 'Sloven&#353;&#269;ina',
   sq => 'Shqip',
   sr => 'Srpski',
   sv => 'Svenska',
-  tr => 'Türkçe',
+  tr => 'T&#252;rk&#231;e',
 );
 
 our $current_date = strftime "%Y-%m-%d", localtime;
@@ -310,6 +310,14 @@ while (wait() != -1) {
 
 sub process {
   my ($file, $langs) = @_;
+  
+  #print "$file\n";
+  
+  #if (not $file eq "index") {
+  
+    #return;
+    
+  #}
 
   print STDERR "Building $file.. \n" unless $opts{q};
   # Create the root note for the above mentioned XML file (used to feed the XSL

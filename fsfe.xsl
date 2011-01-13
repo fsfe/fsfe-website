@@ -579,7 +579,10 @@
 	  <div id="notice">
 	    <p>
 	      Copyright © 2001-2010 <a href="/">Free Software
-		Foundation Europe</a>. <strong><a href="/contact/contact.html">Contact us</a></strong>.<br />
+		Foundation Europe</a>. <strong>
+		<a href="/contact/contact.html">
+		  <xsl:apply-templates select="/buildinfo/textset/text[@id='contact-us']/node()" />
+		</a></strong>.<br />
 
 	      <xsl:apply-templates select="/buildinfo/textset/text[@id='permission']/node()" /><br />
 
@@ -613,13 +616,14 @@
 		    <xsl:value-of select="/buildinfo/document/@language"/>
 		    <xsl:text>.xhtml</xsl:text>
 		  </xsl:attribute>
-		  <xsl:text>Source code</xsl:text>
+		  <xsl:apply-templates select="/buildinfo/textset/text[@id='source-code']/node()" />
 		</xsl:element>
 	      </li>
 
 	      <li>
-		<a href="/contribute/translators/">Translate this
-		  page?</a>
+		<a href="/contribute/translators/">
+		  <xsl:apply-templates select="/buildinfo/textset/text[@id='translate-this']/node()" />
+		</a>
 	      </li>
 	    </ul>
 

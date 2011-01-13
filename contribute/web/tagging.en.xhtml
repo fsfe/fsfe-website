@@ -20,6 +20,28 @@
 
     <h2>Tagged news and events</h2>
     
+    <p>In order to retrieve news items or events with a given tag, these
+    have of course to be tagged accordingly. To do that, add or edit the
+    <var>tags</var> attribute. The value of this attribute should be a
+    comma-space-separated list of tags, as you can see on the following
+    examples.</p>
+    
+    <ul>
+      <li>For news items and newsletters, in the &lt;html&gt;:</li>
+    </ul>
+    
+    <p class="terminal">&lt;html newsdate="2011-01-13" tags="<var>front-page, swpats, novell, de, ms, oracle, apple</var>"&gt;</p>
+    
+    <ul>
+      <li>For events, in the &lt;event&gt;:</li>
+    </ul>
+    
+    <p class="terminal">&lt;event start="2011-05-17" end="2011-05-17" tags="<var>front-page, it</var>"&gt;</p>
+    
+    <p>Please note that only events and news items being tagged as <var>front-page</var>
+    will appear on the front page of fsfe.org!</p>
+    
+    
     <h3>Using the fetch-news template</h3>
 
     <ul>

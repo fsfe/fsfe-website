@@ -94,6 +94,19 @@
     <xsl:apply-templates select="/html/textset-content/text[@id='join']/node()"/>
   </xsl:template>
   
+  <!--generate subscribe button in correct language-->
+  <xsl:template match="subscribe-button">
+    <xsl:element name="input">
+      <xsl:attribute name="id">submit</xsl:attribute>
+      <xsl:attribute name="type">submit</xsl:attribute>
+      <xsl:attribute name="value">
+	<xsl:apply-templates select="/html/textset-content/text[@id='subscribe']/node()"/>
+      </xsl:attribute>
+    </xsl:element>
+  </xsl:template>
+  
+  <input type="submit" id="submit" value="Subscribe" />
+  
   <!-- Do not copy <set> to output at all -->
   <xsl:template match="set"/>
   <xsl:template match="textset-content"/>

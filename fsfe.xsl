@@ -581,7 +581,7 @@
 	      Copyright © 2001-2010 <a href="/">Free Software
 		Foundation Europe</a>. <strong>
 		<a href="/contact/contact.html">
-		  <xsl:apply-templates select="/buildinfo/textset/text[@id='contact-us']/node()" />
+		  <xsl:apply-templates select="/buildinfo/textset/text[@id='contact']/node()" />
 		</a></strong>.<br />
 
 	      <xsl:apply-templates select="/buildinfo/textset/text[@id='permission']/node()" /><br />
@@ -616,13 +616,13 @@
 		    <xsl:value-of select="/buildinfo/document/@language"/>
 		    <xsl:text>.xhtml</xsl:text>
 		  </xsl:attribute>
-		  <xsl:apply-templates select="/buildinfo/textset/text[@id='source-code']/node()" />
+		  <xsl:apply-templates select="/buildinfo/textset/text[@id='source']/node()" />
 		</xsl:element>
 	      </li>
 
 	      <li>
 		<a href="/contribute/translators/">
-		  <xsl:apply-templates select="/buildinfo/textset/text[@id='translate-this']/node()" />
+		  <xsl:apply-templates select="/buildinfo/textset/text[@id='translate']/node()" />
 		</a>
 	      </li>
 	    </ul>

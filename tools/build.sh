@@ -13,6 +13,8 @@ TMP=/home/www/tmp.$$
 STATUS=/var/www/web
 ALARM_LOCKFILE=alarm_lockfile
 MAKEFILE_PL=${SOURCE}/Makefile.PL
+SVNUPOUTFILE=/tmp/fsfe-svnup-out
+SVNUPERRFILE=/tmp/fsfe-svnup-err
 
 # Since we must grep for svn output messages,
 # let's ensure we get English messages

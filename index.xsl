@@ -105,7 +105,7 @@
     </xsl:element>
   </xsl:template>
   
-  <!-- Do not copy <set> to output at all -->
+  <!-- Do not copy <set> or <text> to output at all -->
   <xsl:template match="set"/>
   <xsl:template match="textset-content"/>
 

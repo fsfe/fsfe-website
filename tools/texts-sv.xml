@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <textset>
+  <!-- Footer -->
   <text id="lastchanged"> Senast ändrad: </text>
   <text id="translator1a">Vi tackar </text>
-  <text id="translator1b"> för den här icke-officiella översättningen. </text>
+  <text id="translator1b"> för den här översättningen. </text>
   <text id="translator2">Det här är en icke-officiell översättning. </text>
   <text id="translator3a">Var vänligt se </text>
   <text id="translator3b">den ursprungliga texten</text>
-  <text id="translator3c"> för den officiella versionen av den här sidan.</text>
+  <text id="translator3c"> för den här sidan.</text>
   <text id="permission">
     Ordagrann kopiering och distribution av hela denna artikel är tillåten
     i samtliga medium, förutsatt att denna notis bevaras.
@@ -15,6 +16,12 @@
   <text id="webmaster">
     Var vänlig och rapportera problem med den här sidan till
     <em>webmaster at fsfeurope.org</em>.
+  </text>
+  <text id="fsfnetwork">
+    FSFE har <a href="/about/fsfnetwork.html">systerorganisationer</a> i <a
+      href="http://www.fsf.org/">North America</a>, <a
+      href="http://www.fsf.org.in/">India</a> och <a
+      href="http://www.fsfla.org/">Latin America</a>.
   </text>
   <text id="outdated">
     <strong>Varning: </strong>
@@ -29,6 +36,29 @@
     Använd <a href="/contribute/contribute.html">denna</a> sida för att få information
     om hur du kan hjälpa till med översättningar och andra saker.
   </text>
+
+  <text id="source">Källkod</text>
+  <text id="contact">Kontakta oss</text>
+  <text id="translate">Översätt den här sidan?</text>
+
+  <!-- Info box -->
+  <text id="under-construction">
+    <strong>Varning: </strong>Den här sidan är under bearbetning. Vänligen inte översätt den nu eftersom innehållet kan ändras.
+  </text>
+  
+  <text id="search">Sök</text>
+  
+  <text id="language">Språk</text>
+
+ <!-- Article metadata -->
+ <text id="author">Författare</text>
+ <text id="published">Publicerat</text>
+ <text id="download">Ladda ner</text>
+ 
+  <!-- Conjunctions -->
+  <text id="to">till</text>
+
+  <!-- Menu -->
   <text id="fsfe/about">Om oss</text>
   <text id="fsfe/projects">Projekt</text>
   <text id="fsfe/documents">Dokument</text>
@@ -36,14 +66,57 @@
   <text id="fsfe/donate">Donera</text>
   <text id="fsfe/order">Beställ</text>
   <text id="fsfe/lists">E-postlistor</text>
+  <text id="fsfe/press">Press</text>
   <text id="fsfe/thankgnus">Donatorer</text>
-  <text id="fellowship/priority">Priority Links</text>
-  <text id="menu3/priority/com-pkg">Commercial Services</text>
   <text id="fellowship/priority/fellowship">Fellowship</text>
-  <text id="fellowship/priority/ftf">Freedom Task Force</text>
-  <text id="fellowship/priority/os">Open Standards</text>
-  <text id="menu3/sisters">Our sister organisations</text>
-  <text id="menu3/sisters/fsf">FSF</text>
-  <text id="menu3/sisters/fsf_india">FSF India</text>
-  <text id="menu3/sisters/fsf_la">FSF Latin America</text>
+  <text id="fellowship/card">Kort</text>
+  <text id="fellowship/communicate">Kontakt</text>
+  <text id="fellowship/contact">Kontakt</text>
+  <text id="planet/planet/">Kontakt</text>
+
+<!-- Date time -->
+  <text id="months/1">Januari</text>
+  <text id="months/2">Februari</text>
+  <text id="months/3">Mars</text>
+  <text id="months/4">April</text>
+  <text id="months/5">Maj</text>
+  <text id="months/6">Juni</text>
+  <text id="months/7">Juli</text>
+  <text id="months/8">Augusti</text>
+  <text id="months/9">September</text>
+  <text id="months/10">Oktober</text>
+  <text id="months/11">November</text>
+  <text id="months/12">December</text>
+ 
+  <text id="months-abbreviated/1">Jan</text>
+  <text id="months-abbreviated/2">Feb</text>
+  <text id="months-abbreviated/3">Mar</text>
+  <text id="months-abbreviated/4">Apr</text>
+  <text id="months-abbreviated/5">Maj</text>
+  <text id="months-abbreviated/6">Jun</text>
+  <text id="months-abbreviated/7">Jul</text>
+  <text id="months-abbreviated/8">Aug</text>
+  <text id="months-abbreviated/9">Sep</text>
+  <text id="months-abbreviated/10">Okt</text>
+  <text id="months-abbreviated/11">Nov</text>
+  <text id="months-abbreviated/12">Dec</text>
+
+  <text id="weekdays/1">Måndag</text>
+  <text id="weekdays/2">Tisdag</text>
+  <text id="weekdays/3">Onsdag</text>
+  <text id="weekdays/4">Torsdag</text>
+  <text id="weekdays/5">Fredag</text>
+  <text id="weekdays/6">Lördag</text>
+  <text id="weekdays/7">Söndag</text>
+
+  <text id="weekdays-abbreviated/1">Mån</text>
+  <text id="weekdays-abbreviated/2">Tis</text>
+  <text id="weekdays-abbreviated/3">Ons</text>
+  <text id="weekdays-abbreviated/4">Tor</text>
+  <text id="weekdays-abbreviated/5">Fre</text>
+  <text id="weekdays-abbreviated/6">Lör</text>
+  <text id="weekdays-abbreviated/7">Sön</text>
+  
+  <text id="statement">Free Software Foundation Europe är en idéell förening dedikerad till främjandet av fri programvara och arbetar för att promotera frihet i det växande digitala samhället</text>
+  <text id="learn-more">Lär mer</text>
 </textset>

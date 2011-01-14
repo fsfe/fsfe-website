@@ -1,180 +1,188 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 
 <html>
   <head>
-    <title>FSFE - Donate now!</title>
+    <title>FSFE - Donations to the FSFE</title>
   </head>
-
   <body>
-    <h1>Donate</h1>
+    <h1>Donations to the FSFE</h1>
      
-    <div id="introduction">
-    
+  <div id="introduction">
       <div class="image">
-        <img src="/graphics/piggy-bank.png" alt="Piggy-bank" />
+        <img src="/graphics/stars-smaller.png" alt="Stars"/>
       </div>
-      
-      <p>The Free Software Foundation Europe is a non-profit non-governmental
-      organisation. <a href="/projects/work.html">Our work</a> is made possible
-      by a community of <a href="/contribute/">volunteers</a>,
+
+<p>
+      The Free Software Foundation Europe is a non-profit non-governmental
+      organisation. Our work is made possible by a community of
+      <a href="/contribute/">volunteers</a>,
       <a href="http://fellowship.fsfe.org">Fellows</a> and
       <a href="/donate/thankgnus.html">donors</a>. Your donations are critical
-      to our strength and autonomy. They enable us to continue working for
-      Free Software wherever necessary, and to be an independent voice.</p>
-      
-    </div>
-    
-    <div class="section" id="donate-once">
+      to our strength and autonomy — they enable us to continue fighting for
+      Free Software wherever necessary, and to be an independent voice.
+    </p></div>
 
-      <h2><span>One-time payment</span></h2>
+    <h2>Categories</h2>
 
-      <div class="entry">
+    <ul>
+      <li>
+        Donate more than EUR 500 every month <em>OR</em> EUR 6000 in a year and
+        you'll become a
+        <strong><a href="/donate/thankgnus.html#patron">Patron</a></strong>
+        of the FSFE.
+      </li>
+      <li>
+        Donate more than EUR 100 every month <em>OR</em> EUR 1200 in a year and
+        you'll become a
+        <strong><a href="/donate/thankgnus.html#sustainingcontributor">Sustaining Contributor</a></strong>
+        of the FSFE.
+      </li>
+      <li>
+        Donate more than EUR 50 every month <em>OR</em> EUR 600 in a year and you'll
+        become a
+        <strong><a href="/donate/thankgnus.html#contributor">Contributor</a></strong>
+        of the FSFE.
+      </li>
+      <li>
+        Donate more than EUR 10 every month <em>OR</em> EUR 120 in a year and
+        you'll become a
+        <strong><a href="/donate/thankgnus.html#supporter">Supporter</a></strong>
+        of the FSFE.
+      </li>
+      <li>
+        Donate less than EUR 10 every month <em>OR</em> EUR 120 is of course
+        also possible. Or as an individual support us by
+        <a href="http://fellowship.fsfe.org/join">joining the Fellowship</a>
+        (minimum amount 60 EUR a year).
+      </li>
+    </ul>
 
-	<form action="/cgi-bin/donate.pl" method="post">
-	    
-	    <table>
-	      <tr>
-		<td><input name="amount" type="radio" value="other" checked="checked" onclick="amount_other.disabled = false"/>
-		<input name="amount_other" type="text" value="" palceholder="euros" style="width:5em"/></td>
-		<td>(you choose)</td>
-	      </tr>
-	      <tr>
-		<td><input name="amount" type="radio" value="120" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;120</td>
-		<td><a href="/donate/thankgnus.html#supporter">Supporter</a><br/></td>
-	      </tr>
-	      <tr>
-		<td><input name="amount" type="radio" value="600" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;600</td>
-		<td><a href="/donate/thankgnus.html#contributor">Contributor</a><br/></td>
-	      </tr>
-	      <tr>
-		<td><input name="amount" type="radio" value="1200" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;1,200</td>
-		<td><a href="/donate/thankgnus.html#sustainingcontributor">Sustaining Contributor</a><br/></td>
-	      </tr>
-	      <tr>
-		<td><input name="amount" type="radio" value="6000" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;6,000</td>
-		<td><a href="/donate/thankgnus.html#patron">Patron</a><br/></td>
-	      </tr>
-	    </table>
-	    
-	    <p>
-	      <input name="anonymous" type="checkbox"/> I wish to remain anonymous
-	    </p>
+    <h2>Ways of donating</h2>
 
-	  <p>
-	    <!-- Translators: please replace "en" with the language code of your
-		language and translate "Donation" and "Donate" -->
-	    <input type="hidden" name="language" value="en"/>
-	    <input type="hidden" name="text" value="Donation"/>
-	    <input type="submit" value="Donate once"/>
-	  </p>
-	</form>
-	
-      </div>
-    
-    </div>
-    
-    <!--<div class="section">
-      <h2><span>Monthly payments</span></h2>
-      
-      <div class="entry">
-      
-	<form action="/cgi-bin/donate.pl" method="post">
-	    
-	    <table>
-	      <tr>
-		<td><input name="amount" type="radio" value="other" checked="checked" onclick="amount_other.disabled = false"/>
-		<input name="amount_other" type="text" value="" palceholder="euros" style="width:5em"/></td>
-		<td>(you choose)</td>
-	      </tr>
-	      <tr>
-		<td><input name="amount" type="radio" value="10" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;10</td>
-		<td><a href="/donate/thankgnus.html#supporter">Supporter</a><br/></td>
-	      </tr>
-	      <tr>
-		<td><input name="amount" type="radio" value="50" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;50</td>
-		<td><a href="/donate/thankgnus.html#contributor">Contributor</a><br/></td>
-	      </tr>
-	      <tr>
-		<td><input name="amount" type="radio" value="100" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;100</td>
-		<td><a href="/donate/thankgnus.html#sustainingcontributor">Sustaining Contributor</a><br/></td>
-	      </tr>
-	      <tr>
-		<td><input name="amount" type="radio" value="500" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;500</td>
-		<td><a href="/donate/thankgnus.html#patron">Patron</a><br/></td>
-	      </tr>
-	    </table>
-	    
-	    <p>
-	      <input name="anonymous" type="checkbox"/> I wish to remain anonymous
-	    </p>
-
-	  <p>
-
-	    <input type="hidden" name="language" value="en"/>
-	    <input type="hidden" name="text" value="Donation"/>
-	    <input type="submit" value="Donate monthly"/>
-	  </p>
-	</form>
-	
-      </div>
-      
-    </div>-->
-      
-    <div class="clear"></div><!-- end .clear -->
-    
-    <h3>Bank transfer</h3>
+    <h3>Bank account</h3>
 
     <p>
-      Donations can be wired from anywhere in the world to the
+      Generally, donations can be wired from anywhere in the world to the
       following account:
     </p>
 
-    <address>
+    <p class="indent">
       Free Software Foundation Europe e.V.<br/>
       IBAN: DE69 3602 0030 0003 0047 32<br/>
       National-Bank Essen, Steinstraße 13, 40212 Dusseldorf, Germany<br/>
       SWIFT/BIC: NBAG DE3E<br/>
-    </address>
+    </p>
 
-    <h3>Additional donation methods</h3>
-
-    <p>If you require additional payment options, please <a
-    href="/contact/contact.html">contact us</a> in order to discuss alternative methods. 
-    We will gladly discuss other types of monetary donations, such as bequests.</p>
-    
-    <p>Employing FSFE's <a href="/com-pkg">professional services</a>, 
-    and making purchases from our <a href="/order">shop</a> are also ways of financially supporting our work.</p>
-
-    <h3>Tax deductibility</h3>
-    
     <p>
-      Residents of the following countries are welcome to make tax deductible donations:
+      If you live in one of the following countries, please follow the link to see more detailed information on how to donate.
     </p>
 
     <ul>
-      <li>
-        <a href="germany.html">Germany</a>
-      </li>
-      <li>
-        <a href="donate-2007-ch.html">Switzerland</a>
-      </li>
-      <li>
-        <a href="transnational-giving-europe.html">United Kingdom</a>
-      </li>
+      <li><a href="/donate/germany.html">Germany</a>: Tax-deductable donations are possible</li>
+      <li><a href="donate-2007-ch.html">Switzerland</a>: Tax-deductable donations are possible</li>
     </ul>
 
-    <h3>What happens next</h3>
+    <h3>Credit card and PayPal</h3>
 
-    <p>No matter which way you choose, please send an e-mail to
-    <a href="mailto:office@fsfeurope.org">office@fsfeurope.org</a>
-    and let us know where to send the receipt and
-    thank-you letter. We would like to list you on <a
-      href="/donate/thankgnus.html">"our donors" page</a>. We also encourage
-    you to use <a href="/about/graphics/sponsoring/sponsoring.html">our donors
-      buttons</a> to show your support. Even if you prefer to remain anonymous,
-    please let us know how to reach you, so we
-    can thank you privately.</p>
+    <p>
+      For users who find paying by credit card more convenient, we also provide
+      a facility to pay by PayPal.  Please remember that FSFE has to pay fees
+      of  1.9% in addition to a flat fee of $0.30 USD for each donation
+      received by this method.
+    </p>
 
+    <p>
+      Please select how much you wish to contribute, and press "donate":
+    </p>
+
+    <!-- more options under https://www.paypal.com/en_US/pdf/integration_guide.pdf page 123 -->
+
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" class="indent">
+      <p>
+        <input type="hidden" name="cmd" value="_xclick"/>
+        <input type="hidden" name="business" value="paypal@fsfeurope.org"/>
+        <input type="hidden" name="image_url" value="http://fellowship.fsfe.org/login/images/fsfe_logo_w150.png"/>
+      </p>
+      <!-- here you can add the amount -->
+      <table>
+        <tr>
+          <td/>
+          <td><input type="text" name="amount" value="" size="5"/> EUR</td>
+          <td>
+            <!-- here you can add the intended purpose -->
+            <input type="hidden" name="item_name" value="Donation"/>
+            <input type="hidden" name="currency_code" value="EUR"/>
+            <input type="hidden" name="cn" value="How do you wish to be listed on our Thank GNUs page?"/>
+            <input type="hidden" name="no_note" value="0"/>
+            <!-- to which site the user is piped after payment -->
+            <!-- <input type="hidden" name="return" value"http://fsfe.org/donate-thank.html"> -->
+            <input type="reset" name="reset" value="Clear"/>
+            <input type="submit" name="submit" value="Donate"/>
+          </td>
+        </tr>
+      </table>
+    </form>
+
+    <h3>Check drawn onto a US- or UK-bank</h3>
+
+    <p>
+      Please note that checks usually involve significant fees. But if you
+      prefer to donate by postal check instead of the other ways, please send
+      it to
+    </p>
+
+    <address>
+      Free Software Foundation Europe e.V.<br/>
+      Talstraße 110<br/>
+      40217 Düsseldorf<br/>
+      Germany
+    </address>
+
+    <h3>Further information</h3>
+
+    <p>
+      No matter which way you choose, please send an email to
+      <a href="mailto:office@fsfeurope.org">&lt;office@fsfeurope.org&gt;</a>
+      and let us know where to send the receipt and thank-you letter. We would
+      like to list you on "<a href="/donate/thankgnus.html">our donors</a>"
+      page.  Even if you prefer to remain anonymous, please let us know how to
+      reach you, so we can thank you privately.
+    </p>
+
+    <p>
+      To find out the best way for your donation to reach us, if you have
+      questions about different kind of donations (like bequeathals) please
+      contact our office.
+    </p>
+
+    <h2 id="subpages">Navigation</h2>
+
+    <ul>
+      <li>
+        <h3><a href="/donate/thankgnus.html">Our donors</a></h3>
+        <p>
+          See who is already supporting us. 
+        </p>
+      </li>
+      <li>
+        <h3><a href="/about/funds/funds.html">Cash flow</a></h3>
+        <p>
+          How we spent the donations.
+        </p>
+      </li>
+      <li>
+        <h3><a href="/about/graphics/sponsoring/sponsoring.en.html">Sponsoring graphics</a></h3>
+        <p>
+          Announce your donation with our sponsoring buttons.
+        </p>
+      </li>
+      <li>
+        <h3><a href="/com-pkg/com-pkg.html">Professional services</a></h3>
+        <p>
+          You want to support us in another way than a donation? Buy our professional services.
+        </p>
+      </li>
+    </ul>
   </body>
 
   <timestamp>$Date$ $Author$</timestamp>

@@ -1,116 +1,145 @@
-<?xml version="1.0" encoding="iso-8859-1" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <html>
   <head>
-	  <title>FSFE - Contatti - Contatti Stampa</title>
+    <title>Contatti stampa - FSFE</title>
+    <link href="/style/grid.css" rel="stylesheet" />
+    <script>
+
+      /*
+       * Fields that carry values at page load will be emptied if this
+       * is called and the field has not been edited before.
+       */
+      var changedFields = new Array();
+
+      function removeValue(field) {
+        if (!changedFields[field.getAttribute("name")]) {
+          changedFields[field.getAttribute("name")] = true;
+          field.value = "";
+        }
+
+        return false;
+      }
+
+    </script>
   </head>
-  
+
   <body>
+    <h1>Stampa</h1>
 
-    <h1>Informazioni sui contatti</h1>
+  <div id="introduction">
+      <div class="image">
+        <img src="/graphics/stars-smaller.png" alt="Stars"/>
+      </div>
 
-	<localmenu id="3">Contatti Stampa</localmenu>
+<p>
+      La FSFE crede che l'accesso al software determini chi può partecipare ad una
+       società digitale. Le libertà di <a
+        href="/about/basics/freesoftware.html">usare, studiare, condividere, e
+        migliorare</a> il software permettono una equa partecipazione alla società
+        dell'informazione.
+    </p></div>
 
-	<h2>Contatti Stampa</h2>
-
-    <p> Se siete giornalisti o lavorate per la stampa, non esitate a
-    mettervi in contatto con noi. 
+    <p>
+       La Free Software Foundation Europe (FSFE) è una organizzazione non
+       governativa e senza fini di lucro attiva in <a href="/contact/local.html">molti paesi Europei</a> e
+       impegnata in attività a livello globale. L'accesso al software
+       determina chi può far parte di una società digitale. Al fine di
+       assicurare un'equa partecipazione nell'era dell'informazione e
+       una libera concorrenza, la Free Software Foundation Europe (FSFE)
+       si dedica alla diffusione del Software Libero, che è definito
+       dalle libertà di usare, studiare, modificare e copiare il
+       software.  Portare all'attenzione del pubblico questi temi, dare
+       solide basi politiche e legali al Software Libero e assicurare
+       libertà alle persone supportando lo sviluppo di Software Libero,
+       sono temi centrali per la FSFE fin dalla sua fondazione nel 2001.
     </p>
 
-	<h3>E-Mail</h3>
+
+    <div class="grid-50-50">
+      <div class="box first">
+        <h2>Comunicati stampa</h2>
+
+        <p>
+          Potete tenervi aggiornati con le ultime notizie dal mondo del Software
+          Libero iscrivendovi ai nostri feed e mailing list.
+        </p>
+
+        <form method="post" action="http://mail.fsfeurope.org/mailman/subscribe/press-release">
+          <p>
+            <input type="text" name="email" value="youremail@example.com" onClick="removeValue(this)" />
+            <input type="submit" value="Subscribe" />
+          </p>
+        </form>
+
+        <p>
+          Per aggiornamenti e notizie in tempo reale, potete anche seguirci su
+          <a
+            href="http://identi.ca/fsfe">Identi.ca</a> o <a
+            href="http://twitter.com/fsfe">Twitter</a>.
+        </p>
+      </div>
+
+      <div class="box">
+        <h2><a href="/news/news.html" class="feed">Ultime notizie</a></h2>
+
+        <dynamic-content />
+      </div>
+    </div>
+
+
+    <h2>Richieste</h2>
+
+    <p>
+      Potete inviare le vostre richieste a <a
+        href="mailto:press@fsfeurope.org">press@fsfeurope.org</a>, o per posta
+        a:
+    </p>
+
+    <address>
+      Free Software Foundation Europe e.V.<br />
+      Linienstr. 141<br />
+      10115 Berlin<br />
+      Germany
+    </address>
+
+    <p>
+      Telefono: +49-30-27595290
+    </p>
+
+    <p>
+      Per richieste generali, si veda la
+      <a href="/contact/contact.html">pagina dei contatti</a>.
+    </p>
+
+
+    <h2 id="subpages" class="show-heading">Risorse</h2>
 
     <ul>
+      <li>
+        <h3><a href="/about/graphics/graphics.html">Logo e immagini</a></h3>
+        <p>
+          Scaricate il nostro logo e altre immagini.
+        </p>
+      </li>
 
-   <li>
-    Per contatti generici (in lingua inglese), potete utilizzare <a
-    href="mailto:press@fsfeurope.org">press@fsfeurope.org</a>
-    </li>
-    
-    <li>
-    Per tematiche relative alla Germania (in lingua tedesca o inglese),
-    utilizzate <a
-    href="mailto:press@germany.fsfeurope.org">press@germany.fsfeurope.org</a>
-    </li>
+      <!--
+        We should have a link to a subset of people on our people page who can
+        give official press statements
+      -->
 
-    <li>
-    Per tematiche relative all'Italia (in lingua italiana o inglese),
-    utilizzate <a
-    href="mailto:press@italy.fsfeurope.org">press@italy.fsfeurope.org</a>
-    </li>
-
-    <li>
-    Per tematiche relative alla Spagna (in lingua spagnola o inglese),
-    utilizzate <a
-    href="mailto:press@spain.fsfeurope.org">press@spain.fsfeurope.org</a>
-    </li>
-    
-    <li>
-    Per tematiche relative alla Svezia (in lingua svedese o inglese),
-    utilizzate <a
-    href="mailto:press@sweden.fsfeurope.org">press@sweden.fsfeurope.org</a>
-    </li>
-  </ul>
-
-  <h3>Telefono</h3>
-  <p>
-  Per contattare uno dei nostri uffici, chiamare uno dei numeri seguenti e premere il tasto 1 dopo la
-  risposta automatica
-  </p>
-  <ul>
-      <li>Belgio: +32 2 747 03 57</li>
-      <li>Germania: +49 30 896 77 99 09</li>
-      <li>Svezia: +46 31 7802160</li>
-      <li>Svizzera: +41 43 500 03 66</li>
-      <li>Regno Unito: +44 29 200 08 17 7</li>
-  </ul>
-
-  <h3>Comunicati stampa</h3>
-    
-    <p> 
-     Per ricevere i nostri <a href="news/news.html">comunicati stampa</a>, � possibile iscriversi alle seguenti
-     mailing list:
-     </p>
-     <ul>
       <li>
-        press-release (per i comunicati stampa in inglese)
-        (<a href= "http://mail.fsfeurope.org/mailman/listinfo/press-release">interfaccia web</a>,
-        <a href= "http://mail.fsfeurope.org/pipermail/press-release">archivio</a>)
+        <h3><a href="/about/basics/freesoftware.html">Cos'è il Software Libero</a></h3>
+        <!-- Later this should link to /freesoftware/ -->
+        <p>
+          Scoprite la differenza tra Free Software, Open Source e Software
+          Libero.
+        </p>
       </li>
-      <br />
-      <li>
-        press-release-de (per i comunicati stampa in tedesco)
-        (<a href="http://mail.fsfeurope.org/mailman/listinfo/press-release-de">interfaccia web</a>,
-        <a href="http://mail.fsfeurope.org/pipermail/press-release-de">archivio</a>)
-      </li>
-      <br />
-      <li>
-        press-release-es (per i comunicati stampa in spagnolo)
-        (<a href="http://mail.fsfeurope.org/mailman/listinfo/press-release-es">interfaccia web</a>,
-        <a href="http://mail.fsfeurope.org/pipermail/press-release-es">archivio</a>)
-      </li>
-      <br />
-      <li>
-        press-release-fr (per i comunicati stampa in francese)
-        (<a href="http://mail.fsfeurope.org/mailman/listinfo/press-release-fr">interfaccia web</a>,
-        <a href="http://mail.fsfeurope.org/pipermail/press-release-fr">archivio</a>)
-      </li>
-      <br />
-      <li>
-        press-release-it (per i comunicati stampa in italiano)
-        (<a href="http://mail.fsfeurope.org/mailman/listinfo/press-release-it">interfaccia web</a>,
-        <a href="http://mail.fsfeurope.org/pipermail/press-release-it">archivio</a>)
-      </li>
-      <br />
-      <li>
-        press-release-sv (per i comunicati stampa in svedese)
-        (<a href="http://mail.fsfeurope.org/mailman/listinfo/press-release-sv">interfaccia web</a>,
-        <a href="http://mail.fsfeurope.org/pipermail/press-release-sv">archivio</a>)
-      </li>
-     </ul>
+    </ul>
   </body>
 
-  <timestamp>$Date$ $Author$</timestamp>
-
+  <timestamp>10-01-23 17:58:15 +0100 (Sam, 23. Jän 2010) $ $Author$</timestamp>
 </html>
 <!--
 Local Variables: ***

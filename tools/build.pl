@@ -549,10 +549,10 @@ sub process {
 		unless $opts{n};
           }
 
-		  #
+          #
           # and possibly the corresponding iCal (ics) file
           #
-	      if (-f "$opts{i}/$file.ics.xsl") {
+	  if (-f "$opts{i}/$file.ics.xsl") {
             my $style_doc = $parser->parse_file("$opts{i}/$file.ics.xsl");
 			my $stylesheet = $xslt_parser->parse_stylesheet($style_doc);
 			my $results = $stylesheet->transform($sourcedoc);
@@ -667,6 +667,8 @@ sub process {
               $href =~ s/\.html$/\.$lang.html/;
             } elsif (($href =~ /\.rss$/) && ($href !~ /\.[a-z][a-z]\.rss$/)) {
               $href =~ s/\.rss$/\.$lang.rss/;
+            } elsif (($href =~ /\.ics$/) && ($href !~ /\.[a-z][a-z]\.ics$/)) {
+              $href =~ s/\.ics$/\.$lang.ics/;
             } else {
               if (-d $opts{i}."/$href") {
                 $href =~ s/\/?$/\/index.$lang.html/;

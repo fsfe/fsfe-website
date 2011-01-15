@@ -1,0 +1,14 @@
+--- build.pl	2011-01-15 13:20:06.000000000 +0100
++++ build-test.pl	2011-01-15 14:31:46.000000000 +0100
+@@ -650,9 +650,9 @@
+         #
+         foreach ($results->documentElement->getElementsByTagName("a")) {
+           my $href = $_->getAttribute("href");
+-          if ($href =~ /^http:\/\/www.fsfe.org/) {
++          if ($href =~ /^http:\/\/test.fsfe.org/) {
+             if ($_->textContent != "Our global work") {
+-              $href =~ s/http:\/\/www.fsfe.org//;
++              $href =~ s/http:\/\/test.fsfe.org//;
+             }
+           }
+           if (($href !~ /^http/) && ($href !~ /^#/)) {

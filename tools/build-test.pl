@@ -2,7 +2,7 @@
 #
 # build.pl - a tool for building FSF Europe web pages
 #
-# Copyright (C) 2003 Jonas Öberg
+# Copyright (C) 2003 Jonas Ã–berg
 # 
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -16,8 +16,8 @@
 # 
 # You should have received a copy of the GNU General Public License
 # along with this program; if not, write to the Free Software
-# Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
-# 02111-1307, USA.
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  
+# 02110-1301, USA.
 #
 use File::Find::Rule;
 use Getopt::Std;
@@ -59,34 +59,34 @@ our %countries = (global => 'en');
 our %languages = (
   ar => '&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1617;&#1577;',
   bg => '&#1041;&#1098;&#1083;&#1075;&#1072;&#1088;&#1089;&#1082;&#1080;',
-  ca => 'Català',
+  ca => 'Catal&#224;',
   cs => '&#268;esky',
   da => 'Dansk',
   de => 'Deutsch',
   el => '&#917;&#955;&#955;&#951;&#957;&#953;&#954;&#940;',
   en => 'English',
-  es => 'Español',
+  es => 'Espa&#241;ol',
   et => 'Eesti',
   fi => 'Suomi',
-  fr => 'Français',
+  fr => 'Fran&#231;ais',
   hr => 'Hrvatski',
   hu => 'Magyar',
   it => 'Italiano',
-  ku => 'Kurdî',
+  ku => 'Kurd&#238;',
   mk => 'M&#1072;&#1082;&#1077;&#1076;&#1086;&#1085;&#1089;&#1082;&#1080;',
   nb => 'Norsk&nbsp;(bokm&aring;l)',
   nl => 'Nederlands',
-  nn => "Norsk&nbsp;(nynorsk)",
+  nn => 'Norsk&nbsp;(nynorsk)',
   pl => 'Polski',
-  pt => 'Português',
-  ro => 'Român&#259;',
+  pt => 'Portugu&#234;s',
+  ro => 'Rom&#226;n&#259;',
   ru => '&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;',
   sk => 'Sloven&#269;ina',
   sl => 'Sloven&#353;&#269;ina',
   sq => 'Shqip',
   sr => 'Srpski',
   sv => 'Svenska',
-  tr => 'Türkçe',
+  tr => 'T&#252;rk&#231;e',
 );
 
 our $current_date = strftime "%Y-%m-%d", localtime;
@@ -310,6 +310,14 @@ while (wait() != -1) {
 
 sub process {
   my ($file, $langs) = @_;
+  
+  #print "$file\n";
+  
+  #if (not $file eq "index") {
+  
+    #return;
+    
+  #}
 
   print STDERR "Building $file.. \n" unless $opts{q};
   # Create the root note for the above mentioned XML file (used to feed the XSL
@@ -489,9 +497,9 @@ sub process {
 
           while (my ($base, $l) = each %files) {
               if (($dir eq "global") && ($l ne $lang)) {
-	        lock(*TRANSLATIONS);
+	              lock(*TRANSLATIONS);
                 print TRANSLATIONS "$lang $base.$lang.xml $base.$l.xml\n";
-		unlock(*TRANSLATIONS);
+      		      unlock(*TRANSLATIONS);
               }
               print STDERR "Loading $base.$l.xml\n" if $opts{d};
               my $source_data = $parser->parse_file("$base.$l.xml");
@@ -501,14 +509,29 @@ sub process {
               }
           }
           $sourcedoc->documentElement->appendChild($auto_data);
-
+          
+          #
+          # Get the appropriate textset for this language. If one can't be
+          # found, use the English. (I hope this never happens)
+          #
+          my $textlang = $lang;
+          unless (-f $opts{i}."/tools/texts-content-$textlang.xml") {
+              $textlang = "en";
+          }
+          
+          # TODO: backup texts?
+          
+          my $textdoc = $sourcedoc->createElement("textset-content");
+          $sourcedoc->documentElement->appendChild($textdoc);
+          clone_document($textdoc, $opts{i}."/tools/texts-content-$textlang.xml");
+          
           #
           # Transform the document using the XSL file and then push the
           # result into the <document> element of the document we're building.
           #
           my $style_doc = $parser->parse_file("$opts{i}/$file.xsl");
-	  my $stylesheet = $xslt_parser->parse_stylesheet($style_doc);
-	  my $results = $stylesheet->transform($sourcedoc);
+          my $stylesheet = $xslt_parser->parse_stylesheet($style_doc);
+          my $results = $stylesheet->transform($sourcedoc);
 
           foreach ($results->documentElement->childNodes) {
             my $c = $_->cloneNode(1);
@@ -525,6 +548,18 @@ sub process {
 	    $stylesheet->output_file($results, "$opts{o}/$dir/$file.$lang.rss")
 		unless $opts{n};
           }
+
+          #
+          # and possibly the corresponding iCal (ics) file
+          #
+	  if (-f "$opts{i}/$file.ics.xsl") {
+            my $style_doc = $parser->parse_file("$opts{i}/$file.ics.xsl");
+			my $stylesheet = $xslt_parser->parse_stylesheet($style_doc);
+			my $results = $stylesheet->transform($sourcedoc);
+			$stylesheet->output_file($results, "$opts{o}/$dir/$file.$lang.ics")
+			unless $opts{n};
+          }
+          
         } else {
           #
           # If this wasn't an automatically updating document, we simply
@@ -632,6 +667,8 @@ sub process {
               $href =~ s/\.html$/\.$lang.html/;
             } elsif (($href =~ /\.rss$/) && ($href !~ /\.[a-z][a-z]\.rss$/)) {
               $href =~ s/\.rss$/\.$lang.rss/;
+            } elsif (($href =~ /\.ics$/) && ($href !~ /\.[a-z][a-z]\.ics$/)) {
+              $href =~ s/\.ics$/\.$lang.ics/;
             } else {
               if (-d $opts{i}."/$href") {
                 $href =~ s/\/?$/\/index.$lang.html/;

@@ -98,6 +98,7 @@ if test ! -s ${SVNUPOUTFILE} \
     -a "$(date -r ${STATUS}/last-run +%F)" == "$(date +%F)" \
     -a "$1" != "-f" ; then
   echo "$(date)  No changes to SVN."
+  echo "$(date)  $(svn info 2>/dev/null | grep '^Revision')"
   # In this case we only append to the cumulative status-log.txt file, we don't touch status-finished.txt
   cat ${STATUS}/status.txt >> ${STATUS}/status-log.txt
   exit

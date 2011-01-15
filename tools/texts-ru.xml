@@ -30,6 +30,11 @@
     <strong>Внимание: </strong>
     Эта страница не переведена. Ниже представлен оригинальный текст. Если Вы хотите перевести эту страницу и помочь проекту, перейдите <a href="/contribute/contribute.html">по этой ссылке</a>.
   </text>
+
+  <text id="source">Исходный текст</text>
+  <text id="contact">Контакты</text>
+  <text id="translate">Перевести эту страницу?</text>
+  
   <!-- Info box -->
   <text id="under-construction">
     <strong>Внимание: </strong>Эта страница находится в работе.
@@ -37,6 +42,13 @@
   </text>
   <text id="search">Поиск</text>
 
+  <text id="language">Язык</text>
+
+ <!-- Article metadata -->
+ <text id="author">Автор</text>
+ <text id="published">Опубликовано</text>
+ <text id="download">Загрузить</text>
+ 
   <!-- Conjunctions -->
   <text id="to">to</text>
 
@@ -51,6 +63,11 @@
   <text id="fsfe/press">Пресса</text>
   <text id="fsfe/thankgnus">Благодарности GNU</text>
   <text id="fellowship/fellowship">Содружество</text>
+  <text id="fellowship/card">Электронная карта</text>
+  <text id="fellowship/communicate">Контакты</text>
+  <text id="fellowship/contact">Контакты</text>
+  <text id="planet/planet/">Контакты</text>
+
   <text id="fellowship/1-wiki">Вики</text>
   <text id="fellowship/2-planet">Блог</text>
   <text id="fellowship/3-join">Присоединяйтесь</text>
@@ -106,5 +123,12 @@
   <text id="weekdays-abbreviated/5">Птн</text>
   <text id="weekdays-abbreviated/6">Сбт</text>
   <text id="weekdays-abbreviated/7">Вск</text>
+
+
+  <text id="statement">Европейский фонд свободного программного обеспечения —
+некоммерческая организация, задачей которой является развитие свободного
+программного обеспечения. Работа ЕФСПО состоит в содействии свободе
+в растущем цифровом обществе.</text>
+  <text id="learn-more">Подробности</text>
 </textset>
 

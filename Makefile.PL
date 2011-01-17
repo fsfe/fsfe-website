@@ -12,7 +12,8 @@ use warnings;
 
 my %att = (
   NAME => 'FSFE Website', # Shut up MM warning only
-  MIN_PERL_VERSION => 5.008,
+# The version of MakeMaker is sadly too old for MIN_PERL_VERSION
+#  MIN_PERL_VERSION => 5.008,
   PREREQ_FATAL => 1,
   PREREQ_PM => {
     'Exporter' => 0,

@@ -52,12 +52,6 @@ fi
 cd ${SOURCE}
 
 # -----------------------------------------------------------------------------
-echo "$(date)  Checking Perl modules."
-# -----------------------------------------------------------------------------
-
-perl ${MAKEFILE_PL}
-
-# -----------------------------------------------------------------------------
 echo "$(date)  Cleaning old build directories."
 # -----------------------------------------------------------------------------
 
@@ -104,6 +98,11 @@ if test ! -s ${SVNUPOUTFILE} \
   exit
 fi
 
+# -----------------------------------------------------------------------------
+echo "$(date)  Checking Perl modules."
+# -----------------------------------------------------------------------------
+
+perl ${MAKEFILE_PL}
 
 # Make sure build.sh and build.pl are executable
 # TODO: this can be removed once we set the "executable" svn property

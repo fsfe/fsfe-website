@@ -310,14 +310,6 @@ while (wait() != -1) {
 
 sub process {
   my ($file, $langs) = @_;
-  
-  #print "$file\n";
-  
-  #if (not $file eq "index") {
-  
-    #return;
-    
-  #}
 
   print STDERR "Building $file.. \n" unless $opts{q};
   # Create the root note for the above mentioned XML file (used to feed the XSL
@@ -530,15 +522,6 @@ sub process {
           
           # TODO: optimise getting texts-content-xx.xml and texts-content-en.xml,
           # since it does not depend on the xsl file being treated, we should do it only once!
-          
-          if ( $lang eq "cs" ) {
-	        
-            print "--->outputting test.xml\n";
-            open (TEST, '>', "/home/nicolas/FSFE/fsfe-web-out/test.xml");
-            print TEST $sourcedoc->toString();
-            close (TEST);
-
-          }
           
           #
           # Transform the document using the XSL file and then push the

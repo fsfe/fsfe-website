@@ -6,6 +6,7 @@
   
   <xsl:import href="tools/xsltsl/date-time.xsl" />
   <xsl:import href="tools/xsltsl/tagging.xsl" />
+  <xsl:import href="tools/xsltsl/translations.xsl" />
   <xsl:output method="xml" encoding="UTF-8" indent="yes" />
   
   <!-- 
@@ -61,37 +62,51 @@
   
   <!--translated word "newsletter"-->
   <xsl:template match="newsletter-label">
-    <xsl:apply-templates select="/html/textset-content/text[@id='newsletter']/node()"/>
+    <xsl:call-template name="gettext">
+      <xsl:with-param name="id" select="'newsletter'" />
+    </xsl:call-template>
   </xsl:template>
   
   <!--translated sentence "receive-newsletter"-->
   <xsl:template match="receive-newsletter">
-    <xsl:apply-templates select="/html/textset-content/text[@id='receive-newsletter']/node()"/>
+    <xsl:call-template name="gettext">
+      <xsl:with-param name="id" select="'receive-newsletter'" />
+    </xsl:call-template>
   </xsl:template>
   
   <!--translated word "news"-->
   <xsl:template match="news-label">
-    <xsl:apply-templates select="/html/textset-content/text[@id='news']/node()"/>
+    <xsl:call-template name="gettext">
+      <xsl:with-param name="id" select="'news'" />
+    </xsl:call-template>
   </xsl:template>
 
   <!--translated word "events"-->
   <xsl:template match="events-label">
-    <xsl:apply-templates select="/html/textset-content/text[@id='events']/node()"/>
+    <xsl:call-template name="gettext">
+      <xsl:with-param name="id" select="'events'" />
+    </xsl:call-template>
   </xsl:template>
   
   <!--translated word "more"-->
   <xsl:template match="more-label">
-    <xsl:apply-templates select="/html/textset-content/text[@id='more']/node()"/>
+    <xsl:call-template name="gettext">
+      <xsl:with-param name="id" select="'more'" />
+    </xsl:call-template>
   </xsl:template>
   
   <!--translated word "donate"-->
   <xsl:template match="donate-label">
-    <xsl:apply-templates select="/html/textset-content/text[@id='donate']/node()"/>
+    <xsl:call-template name="gettext">
+      <xsl:with-param name="id" select="'donate'" />
+    </xsl:call-template>
   </xsl:template>
 
   <!--translated word "join"-->
   <xsl:template match="join-label">
-    <xsl:apply-templates select="/html/textset-content/text[@id='join']/node()"/>
+    <xsl:call-template name="gettext">
+      <xsl:with-param name="id" select="'join'" />
+    </xsl:call-template>
   </xsl:template>
   
   <!--generate subscribe button in correct language-->
@@ -100,15 +115,16 @@
       <xsl:attribute name="id">submit</xsl:attribute>
       <xsl:attribute name="type">submit</xsl:attribute>
       <xsl:attribute name="value">
-	<xsl:apply-templates select="/html/textset-content/text[@id='subscribe']/node()"/>
+	    <xsl:call-template name="gettext">
+          <xsl:with-param name="id" select="'subscribe'" />
+        </xsl:call-template>
       </xsl:attribute>
     </xsl:element>
   </xsl:template>
   
   <!-- Do not copy <set> or <text> to output at all -->
   <xsl:template match="set"/>
-  <xsl:template match="textset-content"/>
-
+  
   <!-- For all other nodes, copy verbatim -->
   <xsl:template match="@*|node()" priority="-1">
     <xsl:copy>

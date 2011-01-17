@@ -6,6 +6,7 @@
   
   <xsl:import href="../../tools/xsltsl/tagging.xsl" />
   <xsl:import href="../../tools/xsltsl/countries.xsl" />
+  <xsl:import href="../../tools/xsltsl/translations.xsl" />
   <xsl:output method="xml" encoding="UTF-8" indent="yes" />
 
   <!-- To localise this page to a new country, copy this file and change the following:
@@ -23,27 +24,37 @@
 
   <!--translated word "news"-->
   <xsl:template match="news-label">
-    <xsl:apply-templates select="/html/textset-content/text[@id='news']/node()"/>
+    <xsl:call-template name="gettext">
+      <xsl:with-param name="id" select="'news'" />
+    </xsl:call-template>
   </xsl:template>
 
   <!--translated word "events"-->
   <xsl:template match="events-label">
-    <xsl:apply-templates select="/html/textset-content/text[@id='events']/node()"/>
+    <xsl:call-template name="gettext">
+      <xsl:with-param name="id" select="'events'" />
+    </xsl:call-template>
   </xsl:template>
 
   <!--translated word "microblog"-->
   <xsl:template match="microblog-label">
-    <xsl:apply-templates select="/html/textset-content/text[@id='microblog']/node()"/>
+    <xsl:call-template name="gettext">
+      <xsl:with-param name="id" select="'microblog'" />
+    </xsl:call-template>
   </xsl:template>
 
   <!--translated word "contact"-->
   <xsl:template match="contact-label">
-    <xsl:apply-templates select="/html/textset-content/text[@id='contact']/node()"/>
+    <xsl:call-template name="gettext">
+      <xsl:with-param name="id" select="'contact'" />
+    </xsl:call-template>
   </xsl:template>
 
   <!--translated word "team"-->
   <xsl:template match="team-label">
-    <xsl:apply-templates select="/html/textset-content/text[@id='team']/node()"/>
+    <xsl:call-template name="gettext">
+      <xsl:with-param name="id" select="'team'" />
+    </xsl:call-template>
   </xsl:template>
   
   <!--define contact information-->
@@ -135,7 +146,7 @@
         </xsl:call-template>
     </xsl:template>
   
-  <!-- Do not copy <set> to output at all -->
+  <!-- Do not copy <set> or <text> to output at all -->
   <xsl:template match="set"/>
 
   <!-- For all other nodes, copy verbatim -->

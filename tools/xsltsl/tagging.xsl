@@ -4,7 +4,7 @@
 	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:dt="http://xsltsl.org/date-time">
 
-	<xsl:import href="../../tools/xsltsl/date-time.xsl" />
+	<xsl:import href="date-time.xsl" />
 	<xsl:import href="feeds.xsl" />
 	<xsl:output method="xml" encoding="UTF-8" indent="yes" />
 
@@ -127,5 +127,72 @@
 	    </xsl:choose>
 					
 	</xsl:template>
+	
+	
+	<!--display dynamic list of tags used in news-->
+	<xsl:template name="all-tags-news">
+		
+		<xsl:element name="ul">
+		    <xsl:for-each select="/html/set/news">
+			    <xsl:sort select="@date" order="descending" />
+			
+			    <xsl:call-template name="output-tags">
+			        <xsl:with-param name="list" select="@tags" />
+			        <xsl:with-param name="delimiter" select="', '" />
+			    </xsl:call-template>
+			
+		    </xsl:for-each>
+		</xsl:element>
+		
+	</xsl:template>
+	
+	
+	<!--display dynamic list of tags used in events-->
+	<xsl:template name="all-tags-events">
+		
+		<xsl:element name="ul">
+		    <xsl:for-each select="/html/set/event">
+			    <xsl:sort select="@start" order="descending" />
+			    
+			    <xsl:call-template name="output-tags">
+			        <xsl:with-param name="list" select="@tags" />
+			        <xsl:with-param name="delimiter" select="', '" />
+			    </xsl:call-template>
+			
+		    </xsl:for-each>
+		</xsl:element>
+		
+	</xsl:template>
+	
+	
+	<xsl:template name="output-tags">
+      <xsl:param name="list" />
+      <xsl:param name="delimiter" />
+      
+      <xsl:variable name="newlist">
+          <xsl:choose>
+              <xsl:when test="contains($list, $delimiter)"><xsl:value-of select="normalize-space($list)" /></xsl:when>
+              
+              <xsl:otherwise><xsl:value-of select="concat(normalize-space($list), $delimiter)"/></xsl:otherwise>
+          </xsl:choose>
+      </xsl:variable>
+      
+      <xsl:variable name="first" select="substring-before($newlist, $delimiter)" />
+      <xsl:variable name="remaining" select="substring-after($newlist, $delimiter)" />
+      
+      <xsl:if test="$first != ''">
+          <xsl:element name="li">
+            <xsl:value-of select="$first" />
+          </xsl:element>
+      </xsl:if>
+      
+      <xsl:if test="$remaining">
+          <xsl:call-template name="output-tags">
+              <xsl:with-param name="list" select="$remaining" />
+              <xsl:with-param name="delimiter"><xsl:value-of select="$delimiter"/></xsl:with-param>
+          </xsl:call-template>
+      </xsl:if>
+  </xsl:template>
+	
 	
 </xsl:stylesheet>

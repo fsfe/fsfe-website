@@ -519,11 +519,26 @@ sub process {
               $textlang = "en";
           }
           
-          # TODO: backup texts?
-          
           my $textdoc = $sourcedoc->createElement("textset-content");
-          $sourcedoc->documentElement->appendChild($textdoc);
+          $auto_data->appendChild($textdoc);
           clone_document($textdoc, $opts{i}."/tools/texts-content-$textlang.xml");
+          
+          # Get also backup texts from the English file
+          my $textdocbak = $sourcedoc->createElement("textset-content-backup");
+          $auto_data->appendChild($textdocbak);
+          clone_document($textdocbak, $opts{i}."/tools/texts-content-en.xml");
+          
+          # TODO: optimise getting texts-content-xx.xml and texts-content-en.xml,
+          # since it does not depend on the xsl file being treated, we should do it only once!
+          
+          if ( $lang eq "cs" ) {
+	        
+            print "--->outputting test.xml\n";
+            open (TEST, '>', "/home/nicolas/FSFE/fsfe-web-out/test.xml");
+            print TEST $sourcedoc->toString();
+            close (TEST);
+
+          }
           
           #
           # Transform the document using the XSL file and then push the
@@ -549,10 +564,10 @@ sub process {
 		unless $opts{n};
           }
 
-          #
+		  #
           # and possibly the corresponding iCal (ics) file
           #
-	  if (-f "$opts{i}/$file.ics.xsl") {
+	      if (-f "$opts{i}/$file.ics.xsl") {
             my $style_doc = $parser->parse_file("$opts{i}/$file.ics.xsl");
 			my $stylesheet = $xslt_parser->parse_stylesheet($style_doc);
 			my $results = $stylesheet->transform($sourcedoc);

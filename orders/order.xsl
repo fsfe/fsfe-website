@@ -95,7 +95,6 @@
 
   <!-- Do not copy <set> or <text> to output at all -->
   <xsl:template match="set"/>
-  <xsl:template match="text"/>
 
   <!-- For all other nodes, copy verbatim -->
   <xsl:template match="@*|node()" priority="-1">

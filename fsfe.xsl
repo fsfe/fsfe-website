@@ -7,7 +7,8 @@
     doctype-public="-//W3C//DTD HTML 4.0 Transitional//EN"
     doctype-system="http://www.w3.org/TR/REC-html40/loose.dtd"/>
   -->
-
+  
+  <xsl:import href="tools/xsltsl/translations.xsl" />
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-public="html" />
 
   <!-- The top level element of the input file is "buildinfo" -->
@@ -50,13 +51,13 @@
       <link rel="shortcut icon" href="/graphics/fsfe.ico" type="image/x-icon" />
       <xsl:element name="link">
         <xsl:attribute name="rel">alternate</xsl:attribute>
-        <xsl:attribute name="title">FSFE <xsl:value-of select="/buildinfo/textset/text[@id='menu1/news']" /></xsl:attribute>
+        <xsl:attribute name="title">FSFE <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'menu1/news'" /></xsl:call-template></xsl:attribute>
         <xsl:attribute name="href">/news/news.<xsl:value-of select="/buildinfo/@language" />.rss</xsl:attribute>
         <xsl:attribute name="type">application/rss+xml</xsl:attribute>
       </xsl:element>
       <xsl:element name="link">
         <xsl:attribute name="rel">alternate</xsl:attribute>
-        <xsl:attribute name="title">FSFE <xsl:value-of select="/buildinfo/textset/text[@id='menu1/events']" /></xsl:attribute>
+        <xsl:attribute name="title">FSFE <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'menu1/events'" /></xsl:call-template></xsl:attribute>
         <xsl:attribute name="href">/events/events.<xsl:value-of select="/buildinfo/@language" />.rss</xsl:attribute>
         <xsl:attribute name="type">application/rss+xml</xsl:attribute>
       </xsl:element>
@@ -85,7 +86,7 @@
       <xsl:element name="div">
       <xsl:attribute name="id">article-metadata</xsl:attribute>
 	<xsl:element name="p">
-	  <span class="label"> <xsl:apply-templates select="/buildinfo/textset/text[@id='published']/node()" />: </span><xsl:value-of select="/buildinfo/document/html/@newsdate" />
+	  <span class="label"> <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'published'" /></xsl:call-template>: </span><xsl:value-of select="/buildinfo/document/html/@newsdate" />
 	</xsl:element>
       </xsl:element>
     </xsl:if> 
@@ -97,7 +98,7 @@
       <xsl:attribute name="id">article-metadata</xsl:attribute>
       <xsl:element name="p">
 	<xsl:if test = "string(/buildinfo/document/head/meta[@name='author-name-1']/@content)">
-	  <span class="label"><xsl:apply-templates select="/buildinfo/textset/text[@id='author']/node()" />: </span>
+	  <span class="label"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'author'" /></xsl:call-template>: </span>
 	  <xsl:choose>
 	    <xsl:when test="/buildinfo/document/head/meta[@name='author-link-1']">
 	      <xsl:variable name="author-link-1" select="/buildinfo/document/head/meta[@name='author-link-1']/@content" />
@@ -136,7 +137,7 @@
 	  </xsl:choose>
 	</xsl:if>
 	
-	  <span class="label"> <xsl:apply-templates select="/buildinfo/textset/text[@id='published']/node()" />: </span><xsl:value-of select="/buildinfo/document/head/meta[@name='publication-date']/@content" />
+	  <span class="label"> <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'published'" /></xsl:call-template>: </span><xsl:value-of select="/buildinfo/document/head/meta[@name='publication-date']/@content" />
 	  
 	  <xsl:if test = "string(/buildinfo/document/head/meta[@name='pdf-link']/@content)">
 	    <span class="label">PDF: </span>
@@ -207,18 +208,18 @@
 		</xsl:element>
 	      </xsl:element>
 	      
-	      <!-- Statement -->
-	      <xsl:element name="p">
-		<xsl:attribute name="id">statement</xsl:attribute>
-		<xsl:value-of select="/buildinfo/textset/text[@id='statement']" />.<!--intentional full stop goes here-->
-		<xsl:element name="a">
-		  <xsl:attribute name="href">/about</xsl:attribute>
-		  <xsl:value-of select="/buildinfo/textset/text[@id='learn-more']" />
-		</xsl:element>.<!--intentional full stop goes here-->
-	      </xsl:element>
-	      
-	    </xsl:element><!-- end Page header -->
-	    
+          <!-- Statement -->
+          <xsl:element name="p">
+            <xsl:attribute name="id">statement</xsl:attribute>
+            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'statement'" /></xsl:call-template>.<!--intentional full stop goes here-->
+            <xsl:element name="a">
+              <xsl:attribute name="href">/about</xsl:attribute><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'learn-more'" />
+            </xsl:call-template>
+            </xsl:element>.<!--intentional full stop goes here-->
+          </xsl:element>
+          
+        </xsl:element><!-- end Page header -->
+        
 	    <!-- Sidebar -->
 	    <xsl:element name="div">
 	      <xsl:attribute name="id">sidebar</xsl:attribute>
@@ -246,22 +247,18 @@
 			  <xsl:element name="li">
 			    <xsl:choose>
 			      <xsl:when test="not(string(.))">
-				<xsl:value-of select="/buildinfo/textset/text[@id=$id]|
-								/buildinfo/textsetbackup/text[@id=$id
-								and not(@id=/buildinfo/textset/text/@id)]"/>
+				    <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="$id" /></xsl:call-template>
 			      </xsl:when>
 			      <xsl:when test=". = concat(/buildinfo/@filename ,'.html')">
 				<xsl:element name="span">
 				<xsl:attribute name="id">selected</xsl:attribute>
-				<xsl:value-of select="/buildinfo/textset/text[@id=$id]| /buildinfo/textsetbackup/text[@id=$id and not(@id=/buildinfo/textset/text/@id)]"/>
+				  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="$id" /></xsl:call-template>
 				</xsl:element>
 			      </xsl:when>
 			      <xsl:otherwise>
 				<xsl:element name="a">
 				  <xsl:attribute name="href"><xsl:value-of select="." /></xsl:attribute>
-				  <xsl:value-of select="/buildinfo/textset/text[@id=$id]|
-								  /buildinfo/textsetbackup/text[@id=$id
-								  and not(@id=/buildinfo/textset/text/@id)]"/>
+				  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="$id" /></xsl:call-template>
 				</xsl:element>
 			      </xsl:otherwise>
 			    </xsl:choose>
@@ -303,21 +300,15 @@
 			  <xsl:element name="li">
 			    <xsl:choose>
 			      <xsl:when test="not(string(.))">
-				<xsl:value-of select="/buildinfo/textset/text[@id=$id]|
-								/buildinfo/textsetbackup/text[@id=$id
-								and not(@id=/buildinfo/textset/text/@id)]"/>
+				    <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="$id" /></xsl:call-template>
 			      </xsl:when>
 			      <xsl:when test=". = concat(/buildinfo/@filename ,'.html')">
-				<xsl:value-of select="/buildinfo/textset/text[@id=$id]|
-								/buildinfo/textsetbackup/text[@id=$id
-								and not(@id=/buildinfo/textset/text/@id)]"/>
+                    <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="$id" /></xsl:call-template>
 			      </xsl:when>
 			      <xsl:otherwise>
 				<xsl:element name="a">
 				  <xsl:attribute name="href"><xsl:value-of select="." /></xsl:attribute>
-				  <xsl:value-of select="/buildinfo/textset/text[@id=$id]|
-								  /buildinfo/textsetbackup/text[@id=$id
-								  and not(@id=/buildinfo/textset/text/@id)]"/>
+				  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="$id" /></xsl:call-template>
 				</xsl:element>
 			      </xsl:otherwise>
 			    </xsl:choose>
@@ -336,8 +327,8 @@
 	      <xsl:attribute name="id">search</xsl:attribute>
 	      
 	      <xsl:element name="h2">
-		<xsl:attribute name="class">n</xsl:attribute>
-		<xsl:value-of select="/buildinfo/textset/text[@id='search']" />
+		    <xsl:attribute name="class">n</xsl:attribute>
+		    <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'search'" /></xsl:call-template>
 	      </xsl:element>
 
 	      <xsl:element name="form">
@@ -402,7 +393,7 @@
 		    <xsl:attribute name="type">text</xsl:attribute>
 		    <xsl:attribute name="name">query</xsl:attribute>
 		    <xsl:attribute name="placeholder">
-		      <xsl:value-of select="/buildinfo/textset/text[@id='search']" />
+		      <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'search'" /></xsl:call-template>
 		    </xsl:attribute>
 		  </xsl:element>
 
@@ -410,7 +401,7 @@
 		    <xsl:attribute name="type">submit</xsl:attribute>
 		    <xsl:attribute name="name">search</xsl:attribute>
 		    <xsl:attribute name="value">
-		      <xsl:value-of select="/buildinfo/textset/text[@id='submit']" />
+		      <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'submit'" /></xsl:call-template>
 		    </xsl:attribute>
 		  </xsl:element>
 
@@ -423,7 +414,7 @@
 	      <xsl:attribute name="id">newsletter</xsl:attribute>
 		
 		<xsl:element name="h2">
-		  <xsl:value-of select="/buildinfo/textset/text[@id='receive-newsletter']" />
+		  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'receive-newsletter'" /></xsl:call-template>
 		</xsl:element>
 
 		<xsl:element name="form">
@@ -434,7 +425,7 @@
 		  
 		    <xsl:element name="select">
 		      <xsl:attribute name="name">lang</xsl:attribute>
-			<option><xsl:value-of select="/buildinfo/textset/text[@id='language']" /></option>
+			<option><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'language'" /></xsl:call-template></option>
 		    </xsl:element>
 		    
 		  </xsl:element>
@@ -491,15 +482,15 @@
 	    <!-- Outdated note -->
 	    <xsl:if test="/buildinfo/@outdated='yes'">
 	      <xsl:element name="p">
-		<xsl:apply-templates select="/buildinfo/textset/text[@id='outdated']/node()" />
+		    <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'outdated'" /></xsl:call-template>
 	      </xsl:element>
 	    </xsl:if>
 	    
 	    <!-- Missing translation note -->
 	    <xsl:if test="/buildinfo/@language!=/buildinfo/document/@language">
 	      <xsl:element name="p">
-		<xsl:attribute name="id">outdated-notice</xsl:attribute>
-		<xsl:apply-templates select="/buildinfo/textset/text[@id='notranslation']/node()" />
+		    <xsl:attribute name="id">outdated-notice</xsl:attribute>
+		    <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'notranslation'" /></xsl:call-template>
 	      </xsl:element>
 	    </xsl:if>
 	    <!-- Missing translation note -->
@@ -509,7 +500,7 @@
 	      <xsl:attribute name="id">infobox</xsl:attribute>
 	      <xsl:if test = "/buildinfo/document/head/meta[@name='under-construction' and @content='true']">
 		<xsl:element name="p">
-		  <xsl:apply-templates select="/buildinfo/textset/text[@id='under-construction']/node()" />
+		  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'under-construction'" /></xsl:call-template>
 		</xsl:element>
 	      </xsl:if>
 	    </xsl:element>
@@ -583,10 +574,10 @@
 	      Copyright © 2001-2010 <a href="/">Free Software
 		Foundation Europe</a>. <strong>
 		<a href="/contact/contact.html">
-		  <xsl:apply-templates select="/buildinfo/textset/text[@id='contact']/node()" />
+		  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'contact'" /></xsl:call-template>
 		</a></strong>.<br />
 
-	      <xsl:apply-templates select="/buildinfo/textset/text[@id='permission']/node()" /><br />
+	      <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'permission'" /></xsl:call-template><br />
 
 	      <!-- "Last changed" magic -->
 	      <xsl:variable name="timestamp">
@@ -601,7 +592,7 @@
 		<xsl:variable name="Author">
 		  <xsl:value-of select="substring-before(substring-after($timestamp, 'Author: '), ' $')"/>
 		</xsl:variable>
-		<xsl:apply-templates select="/buildinfo/textset/text[@id='lastchanged']/node()"/>
+		<xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'lastchanged'" /></xsl:call-template>
 		<xsl:value-of select="translate ($Date, '/', '-')"/>
 		(<xsl:value-of select="$Author"/>)
 	      </xsl:if>
@@ -618,13 +609,13 @@
 		    <xsl:value-of select="/buildinfo/document/@language"/>
 		    <xsl:text>.xhtml</xsl:text>
 		  </xsl:attribute>
-		  <xsl:apply-templates select="/buildinfo/textset/text[@id='source']/node()" />
+		  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'source'" /></xsl:call-template>
 		</xsl:element>
 	      </li>
 
 	      <li>
 		<a href="/contribute/translators/">
-		  <xsl:apply-templates select="/buildinfo/textset/text[@id='translate']/node()" />
+		  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'translate'" /></xsl:call-template>
 		</a>
 	      </li>
 	    </ul>
@@ -634,23 +625,23 @@
 	      <xsl:if test="/buildinfo/document/@language!=/buildinfo/@original">
 		<xsl:choose>
 		  <xsl:when test="/buildinfo/document/translator">
-		    <xsl:value-of select="/buildinfo/textset/text[@id='translator1a']"/>
+		    <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'translator1a'" /></xsl:call-template>
 		    <xsl:value-of select="/buildinfo/document/translator"/>
-		    <xsl:value-of select="/buildinfo/textset/text[@id='translator1b']"/>
+		    <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'translator1b'" /></xsl:call-template>
 		  </xsl:when>
 		  <xsl:otherwise>
-		    <xsl:value-of select="/buildinfo/textset/text[@id='translator2']"/>
+		    <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'translator2'" /></xsl:call-template>
 		  </xsl:otherwise>
 		</xsl:choose>
-		<xsl:value-of select="/buildinfo/textset/text[@id='translator3a']"/>
+		<xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'translator3a'" /></xsl:call-template>
 		<xsl:element name="a">
 		  <xsl:attribute name="href">
 		    <xsl:value-of select="/buildinfo/@filename"/>
 		    <xsl:text>.en.html</xsl:text>
 		  </xsl:attribute>
-		  <xsl:value-of select="/buildinfo/textset/text[@id='translator3b']"/>
+		  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'translator3b'" /></xsl:call-template>
 		</xsl:element>
-		<xsl:value-of select="/buildinfo/textset/text[@id='translator3c']"/>
+		<xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'translator3c'" /></xsl:call-template>
 	      </xsl:if>
 	    </p>
 	  </div> <!-- /#notice -->          
@@ -658,7 +649,7 @@
 	<!-- Sister organisations -->
 	<xsl:element name="div">
 	<xsl:attribute name="id">sister-organisations</xsl:attribute>        
-	  <xsl:apply-templates select="/buildinfo/textset/text[@id='fsfnetwork']/node()"/>
+	  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfnetwork'" /></xsl:call-template>
 	</xsl:element><!-- end sister organisations-->
 	  
 	</div> <!-- /#footer -->

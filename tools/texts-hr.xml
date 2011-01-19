@@ -35,59 +35,45 @@
     Molimo koristite <a href="/contribute/contribute.html">ovu stranicu</a>
     kako bi saznali kako možete pomoći s prijevodima i drugim stvarima.
   </text>
-  <text id="fsfe/about">O nama</text>
-  <text id="fsfe/projects">Projekti</text>
-  <text id="fsfe/documents">Dokumenti</text>
-  <text id="fsfe/help">Uključite se</text>
-  <text id="fsfe/donate">Donirajte</text>
-  <text id="fsfe/order">Kupite</text>
-  <text id="fsfe/lists">E-mail liste</text>
-  <text id="fsfe/thankgnus">GNU zahvalnice</text>
-  <text id="fellowship/fellowship">FSFE družina</text>
-  <text id="fellowship/1-wiki">Wiki</text>
-  <text id="fellowship/2-planet">Blog grupa</text>
-  <text id="fellowship/3-join">Učlanite se</text>
-  <text id="menu3/priority">Prioritetne poveznice</text>
-  <text id="menu3/priority/com-pkg">Commercial Services</text>
-  <text id="menu3/priority/ftf">Freedom Task Force</text>
-  <text id="menu3/priority/os">Otvoreni standardi</text>
-  <text id="menu3/priority/pdfreaders">PDFčitači</text>
-  <text id="menu4/sisters">Sestrinske organizacije</text>
-  <text id="menu4/sisters/fsf">FSF</text>
-  <text id="menu4/sisters/fsf_india">FSF Indija</text>
-  <text id="menu4/sisters/fsf_la">FSF Latinska amerika</text>
+  
+  <text id="source">Izvorni kôd</text>
+  <text id="contact">Kontaktirajte nas</text>
+  <text id="translate">Želite prevesti ovu stranicu?</text>
+  
   <!-- Info box -->
   <text id="under-construction">
     <strong>Upozorenje: </strong>Ova je stranica u izradi. Molimo ne krećite u prijevod stranice jer je sadržaj podložan promjeni.
   </text>
   
   <text id="search">Traži</text>
-  <text id="submit">Submit</text>
-  <text id="language">Language</text>
-
+  <text id="submit">Pošalji</text>
+  
+  <text id="language">Jezik</text>
+  
  <!-- Article metadata -->
  <text id="author">Autor</text>
  <text id="published">Objavljeno</text>
- <text id="download">Preuzmi</text>
- 
+ <text id="download">Preuzmite</text>
+  
   <!-- Conjunctions -->
   <text id="to">do</text>
-
-  <!-- Menu -->
-  <text id="menu1/about">O nama</text>
-  <text id="menu1/projects">Naš rad</text>
-  <text id="menu1/documents">Dokumenti</text>
-  <text id="menu1/help">Uključite se</text>
-  <text id="menu1/donate">Donirajte</text>
-  <text id="menu1/order">Kupite</text>
-  <text id="menu1/lists">E-mail liste</text>
-  <text id="menu1/press">Mediji</text>
-  <text id="menu1/thankgnus">Darivaoci</text>
-  <text id="menu2/fellowship">Prijatelji</text>
-  <text id="menu2/fellowship/1-wiki">Wiki</text>
-  <text id="menu2/fellowship/2-planet">Skup blogova</text>
-  <text id="menu2/fellowship/3-join">Pridružite se</text>
   
+  <!-- Menu -->
+  <text id="fsfe/about">O nama</text>
+  <text id="fsfe/projects">Naš rad</text>
+  <text id="fsfe/documents">Dokumenti</text>
+  <text id="fsfe/help">Uključite se</text>
+  <text id="fsfe/donate">Donirajte</text>
+  <text id="fsfe/order">Kupite</text>
+  <text id="fsfe/lists">Dopisne liste</text>
+  <text id="fsfe/press">Mediji</text>
+  <text id="fsfe/thankgnus">Darivaoci</text>
+  <text id="fellowship/fellowship">Prijatelji</text>
+  <text id="fellowship/card">Kartica</text>
+  <text id="fellowship/communicate">Kontakt</text>
+  <text id="fellowship/contact">Kontakt</text>
+  <text id="planet/planet/">Kontakt</text>
+
   <!-- Date time -->
   <text id="months/1">Siječanj</text>
   <text id="months/2">Veljača</text>
@@ -101,7 +87,7 @@
   <text id="months/10">Listopad</text>
   <text id="months/11">Studeni</text>
   <text id="months/12">Prosinac</text>
-  
+
   <text id="months-abbreviated/1">Sij</text>
   <text id="months-abbreviated/2">Velj</text>
   <text id="months-abbreviated/3">Ožu</text>
@@ -130,4 +116,7 @@
   <text id="weekdays-abbreviated/5">Pet</text>
   <text id="weekdays-abbreviated/6">Sub</text>
   <text id="weekdays-abbreviated/7">Ned</text>
+  
+  <text id="statement">Free Software Foundation Europe je neprofitna organizacija posvećena promicanju slobodnog softvera i radu za slobodu u nastajućem digitalnom društvu</text>
+  <text id="learn-more">Saznajte više</text>
 </textset>

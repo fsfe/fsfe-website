@@ -39,7 +39,7 @@
     </xsl:copy>
   </xsl:template>
 
-  <xsl:template match="set"/>
+  <xsl:template match="set | tags"/>
   
 </xsl:stylesheet>
 

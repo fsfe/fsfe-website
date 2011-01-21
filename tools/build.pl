@@ -32,6 +32,9 @@ use IO::Select;
 use Socket;
 use Fcntl ':flock';
 
+require "/home/nicolas/FSFE/outdated trad check/comptree.pl";
+our $nbout = 0;
+
 # This defines the focuses and their respective preferred / original
 # language. For example, it says that we should have a focus called
 # "se" (Sweden) which has the preferred language "sv" (Swedish).
@@ -310,6 +313,11 @@ while (wait() != -1) {
 
 sub process {
   my ($file, $langs) = @_;
+  
+  if (not $file eq "tags/tags") {
+    return;
+  }
+  print "$file\n";
 
   print STDERR "Building $file.. \n" unless $opts{q};
   # Create the root note for the above mentioned XML file (used to feed the XSL
@@ -523,6 +531,15 @@ sub process {
           # TODO: optimise getting texts-content-xx.xml and texts-content-en.xml,
           # since it does not depend on the xsl file being treated, we should do it only once!
           
+          if ( $lang eq "cs" ) {
+	        
+            print "--->outputting test.xml\n";
+            open (TEST, '>', "/home/nicolas/FSFE/fsfe-web-out/test.xml");
+            print TEST $sourcedoc->toString();
+            close (TEST);
+
+          }
+          
           #
           # Transform the document using the XSL file and then push the
           # result into the <document> element of the document we're building.
@@ -573,17 +590,27 @@ sub process {
         # with the original (but maybe a second earlier) isn't marked outdated.
         #
         my $originalsource = "$file.".$root->getAttribute("original").".xhtml";
-	if ((stat("$opts{i}/$originalsource"))[9] > (stat($source))[9] + 7200) {
-	    $root->setAttribute("outdated", "yes");
-            if ($dir eq "global") {
-	      lock(*TRANSLATIONS);
-              print TRANSLATIONS "$lang $source $originalsource\n";
-	      unlock(*TRANSLATIONS);
-            }
-	} else {
-	    $root->setAttribute("outdated", "no");
-	}
-
+	    if ((stat("$opts{i}/$originalsource"))[9] > (stat($source))[9] + 7200) {
+	        $root->setAttribute("outdated", "yes");
+                if ($dir eq "global") {
+	          lock(*TRANSLATIONS);
+                  print TRANSLATIONS "$lang $source $originalsource\n";
+	          unlock(*TRANSLATIONS);
+                }
+	    } else {
+	        $root->setAttribute("outdated", "no");
+	    }
+	    
+	    if ( not -e "$opts{i}/$originalsource" ) {
+	        # do something
+	    } else {
+	        my ($bool, $err) = areEqual( "$opts{i}/$originalsource", $source );
+	        if ( not $bool ) {
+	            print "$err\n";
+	            $nbout += 1;
+	        }
+	    }
+        
         #
         # Get the appropriate textset for this language. If one can't be
         # found, use the English. (I hope this never happens)
@@ -771,3 +798,6 @@ sub unlock {
   my ($fh) = @_;
   flock($fh, LOCK_UN);
 }
+
+
+print "$nbout pages are out of date\n";

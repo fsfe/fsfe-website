@@ -117,28 +117,17 @@
 		    <xsl:for-each select="/html/set/news/tags/tag">
 			    <xsl:sort select="." order="ascending" />
 			    
+			    <xsl:variable name="thistag" select="node()" />
+			    
                 <xsl:if test="generate-id() = generate-id(key('news-tags-by-value', normalize-space(.)))">
                     <xsl:element name="li">
                       <xsl:value-of select="."/>
+                      <xsl:text> (</xsl:text><xsl:value-of select="count( /html/set/news/tags/tag[text() = $thistag]) " /><xsl:text>)</xsl:text>
                     </xsl:element>
-                    <xsl:text>
-</xsl:text>
                 </xsl:if>
 			    
 		    </xsl:for-each>
 		</xsl:element>
-		
-		<!-- <xsl:element name="ul">
-		    <xsl:for-each select="/html/set/news">
-			    <xsl:sort select="@date" order="descending" />
-			
-			    <xsl:call-template name="output-tags">
-			        <xsl:with-param name="list" select="@tags" />
-			        <xsl:with-param name="delimiter" select="', '" />
-			    </xsl:call-template>
-			
-		    </xsl:for-each>
-		</xsl:element> -->
 		
 	</xsl:template>
 	
@@ -163,49 +152,7 @@
 		    </xsl:for-each>
 		</xsl:element>
 		
-		<!-- <xsl:element name="ul">
-		    <xsl:for-each select="/html/set/event">
-			    <xsl:sort select="@start" order="descending" />
-			    
-			    <xsl:call-template name="output-tags">
-			        <xsl:with-param name="list" select="@tags" />
-			        <xsl:with-param name="delimiter" select="', '" />
-			    </xsl:call-template>
-			
-		    </xsl:for-each>
-		</xsl:element> -->
-		
 	</xsl:template>
-	
-	
-	<xsl:template name="output-tags">
-      <xsl:param name="list" />
-      <xsl:param name="delimiter" />
-      
-      <xsl:variable name="newlist">
-          <xsl:choose>
-              <xsl:when test="contains($list, $delimiter)"><xsl:value-of select="normalize-space($list)" /></xsl:when>
-              
-              <xsl:otherwise><xsl:value-of select="concat(normalize-space($list), $delimiter)"/></xsl:otherwise>
-          </xsl:choose>
-      </xsl:variable>
-      
-      <xsl:variable name="first" select="substring-before($newlist, $delimiter)" />
-      <xsl:variable name="remaining" select="substring-after($newlist, $delimiter)" />
-      
-      <xsl:if test="$first != ''">
-          <xsl:element name="li">
-            <xsl:value-of select="$first" />
-          </xsl:element>
-      </xsl:if>
-      
-      <xsl:if test="$remaining">
-          <xsl:call-template name="output-tags">
-              <xsl:with-param name="list" select="$remaining" />
-              <xsl:with-param name="delimiter"><xsl:value-of select="$delimiter"/></xsl:with-param>
-          </xsl:call-template>
-      </xsl:if>
-  </xsl:template>
 	
 	
 </xsl:stylesheet>

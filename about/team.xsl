@@ -19,7 +19,7 @@
   </xsl:template>
   
   <!-- Do not copy <set> to output at all -->
-  <xsl:template match="set"/>
+  <xsl:template match="set | tags"/>
 
   <!-- For all other nodes, copy verbatim -->
   <xsl:template match="@*|node()" priority="-1">

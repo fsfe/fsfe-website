@@ -35,16 +35,48 @@
     examples.</p>
     
     <ul>
-      <li>For news items and newsletters, in the &lt;html&gt;:</li>
+      <li>For news items and newsletters, within &lt;html&gt; &lt;/html&gt; if your file has the <var>xhtml</var> extension:</li>
     </ul>
     
-    <p class="terminal">&lt;html newsdate="2011-01-13" tags="<var>front-page, swpats, novell, de, ms, oracle, apple</var>"&gt;</p>
+    <p class="terminal">
+      &lt;html&gt;<br/>
+      [...]<br/>
+      &lt;tags&gt;<br/>
+      &lt;tag&gt;front-page&lt;/tag&gt;<br/>
+      &lt;tag&gt;swpats&lt;/tag&gt;<br/>
+      &lt;tag&gt;novell&lt;/tag&gt;<br/>
+      &lt;/tags&gt;<br/>
+      &lt;/html&gt;
+    </p>
     
     <ul>
-      <li>For events, in the &lt;event&gt;:</li>
+      <li>And, within &lt;news&gt; &lt;/news&gt; if your file has the <var>xml</var> extension:</li>
     </ul>
     
-    <p class="terminal">&lt;event start="2011-05-17" end="2011-05-17" tags="<var>front-page, it</var>"&gt;</p>
+    <p class="terminal">
+      &lt;news&gt;<br/>
+      [...]<br/>
+      &lt;tags&gt;<br/>
+      &lt;tag&gt;front-page&lt;/tag&gt;<br/>
+      &lt;tag&gt;swpats&lt;/tag&gt;<br/>
+      &lt;tag&gt;novell&lt;/tag&gt;<br/>
+      &lt;/tags&gt;<br/>
+      &lt;/news&gt;
+    </p>
+    
+    <ul>
+      <li>For events, within &lt;event&gt; &lt;/event&gt;:</li>
+    </ul>
+    
+    <p class="terminal">
+      &lt;event&gt;<br/>
+      [...]<br/>
+      &lt;tags&gt;<br/>
+      &lt;tag&gt;front-page&lt;/tag&gt;<br/>
+      &lt;tag&gt;it&lt;/tag&gt;<br/>
+      &lt;/tags&gt;<br/>
+      &lt;/event&gt;
+    </p>
     
     <p>Please note that only events and news items being tagged as <var>front-page</var>
     will appear on the front page of fsfe.org!</p>

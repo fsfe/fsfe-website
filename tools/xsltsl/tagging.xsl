@@ -15,14 +15,7 @@
 		<xsl:param name="today" select="/html/@date" />
 		<xsl:param name="nb-items" select="''" />
 		
-		<xsl:variable name="tagcomma"><xsl:value-of select="$tag" />,</xsl:variable>
-		<xsl:variable name="commatag">, <xsl:value-of select="$tag" /></xsl:variable>
-		
-		<xsl:for-each select="/html/set/news [translate (@date, '-', '') &lt;= translate ($today, '-', '') and
-				(contains(@tags, $commatag) or
-				 contains(@tags, $tagcomma) or
-				 @tags=$tag or
-				 $tag='') ]">
+        <xsl:for-each select="/html/set/news[ translate (@date, '-', '') &lt;= translate ($today, '-', '') and (tags/tag = $tag or $tag='') ]">
 			<xsl:sort select="@date" order="descending" />
 			<xsl:if test="position() &lt;= $nb-items or $nb-items=''">
 				<xsl:call-template name="news" />
@@ -54,18 +47,11 @@
 		<xsl:param name="nb-items" select="''" />
 		<xsl:param name="display-details" select="'no'" />
 		
-		<xsl:variable name="tagcomma"><xsl:value-of select="$tag" />,</xsl:variable>
-		<xsl:variable name="commatag">, <xsl:value-of select="$tag" /></xsl:variable>
-		
 		<xsl:choose>
 	        <xsl:when test="$wanted-time = 'past'">
 	            
 	            <!-- Past events -->
-	            <xsl:for-each select="/html/set/event [translate (@end, '-', '') &lt; translate ($today, '-', '') and
-                                        (contains(@tags, $commatag) or
-                                         contains(@tags, $tagcomma) or
-                                         @tags=$tag or
-                                         $tag='')]">
+	            <xsl:for-each select="/html/set/event [translate (@end, '-', '') &lt; translate ($today, '-', '') and (tags/tag = $tag or $tag='') ]">
                     <xsl:sort select="@end" order="descending" />
                     <xsl:if test="position() &lt;= $nb-items or $nb-items=''">
                         <xsl:call-template name="event">
@@ -85,10 +71,7 @@
                 <xsl:for-each select="/html/set/event
                                         [translate (@start, '-', '') &lt;= translate ($today, '-', '') and
                                         translate (@end,   '-', '') &gt;= translate ($today, '-', '') and
-                                        (contains(@tags, $commatag) or
-                                         contains(@tags, $tagcomma) or
-                                         @tags=$tag or
-                                         $tag='')]">
+                                        (tags/tag = $tag or $tag='') ]">
                     <xsl:sort select="@start" order="descending" />
                     <xsl:if test="position() &lt;= $nb-items or $nb-items=''">
                         <xsl:call-template name="event">
@@ -106,11 +89,7 @@
 	            
 	            <!-- Future events -->
                 <xsl:for-each select="/html/set/event
-                                        [translate (@start, '-', '') &gt; translate ($today, '-', '') and
-                                        (contains(@tags, $commatag) or
-                                         contains(@tags, $tagcomma) or
-                                         @tags=$tag or
-                                         $tag='')]">
+                                        [translate (@start, '-', '') &gt; translate ($today, '-', '') and (tags/tag = $tag or $tag='') ]">
                     <xsl:sort select="@start" />
                     <xsl:if test="position() &lt;= $nb-items or $nb-items=''">
                         <xsl:call-template name="event">
@@ -129,10 +108,27 @@
 	</xsl:template>
 	
 	
+	<xsl:key name="news-tags-by-value" match="news/tags/tag" use="."/>
+	
 	<!--display dynamic list of tags used in news-->
 	<xsl:template name="all-tags-news">
 		
 		<xsl:element name="ul">
+		    <xsl:for-each select="/html/set/news/tags/tag">
+			    <xsl:sort select="." order="ascending" />
+			    
+                <xsl:if test="generate-id() = generate-id(key('news-tags-by-value', normalize-space(.)))">
+                    <xsl:element name="li">
+                      <xsl:value-of select="."/>
+                    </xsl:element>
+                    <xsl:text>
+</xsl:text>
+                </xsl:if>
+			    
+		    </xsl:for-each>
+		</xsl:element>
+		
+		<!-- <xsl:element name="ul">
 		    <xsl:for-each select="/html/set/news">
 			    <xsl:sort select="@date" order="descending" />
 			
@@ -142,15 +138,32 @@
 			    </xsl:call-template>
 			
 		    </xsl:for-each>
-		</xsl:element>
+		</xsl:element> -->
 		
 	</xsl:template>
 	
+	
+	<xsl:key name="events-tags-by-value" match="event/tags/tag" use="."/>
 	
 	<!--display dynamic list of tags used in events-->
 	<xsl:template name="all-tags-events">
 		
 		<xsl:element name="ul">
+		    <xsl:for-each select="/html/set/event/tags/tag">
+			    <xsl:sort select="." order="ascending" />
+			    
+                <xsl:if test="generate-id() = generate-id(key('events-tags-by-value', normalize-space(.)))">
+                    <xsl:element name="li">
+                      <xsl:value-of select="."/>
+                    </xsl:element>
+                    <xsl:text>
+</xsl:text>
+                </xsl:if>
+			    
+		    </xsl:for-each>
+		</xsl:element>
+		
+		<!-- <xsl:element name="ul">
 		    <xsl:for-each select="/html/set/event">
 			    <xsl:sort select="@start" order="descending" />
 			    
@@ -160,7 +173,7 @@
 			    </xsl:call-template>
 			
 		    </xsl:for-each>
-		</xsl:element>
+		</xsl:element> -->
 		
 	</xsl:template>
 	

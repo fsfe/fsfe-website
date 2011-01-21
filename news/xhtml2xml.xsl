@@ -21,6 +21,7 @@
 	  </xsl:attribute>
 	</xsl:if>
 	
+	<!-- TODO: to be removed -->
 	<xsl:if test="/html/@tags">
 	  <xsl:attribute name ="tags">
 	    <xsl:value-of select="/html/@tags"/>
@@ -47,7 +48,9 @@
 	      <xsl:value-of select="$the_link"/>
 	    </xsl:otherwise>
 	  </xsl:choose>
-	</xsl:element>	    
+	</xsl:element>
+	
+	<xsl:copy-of select="/html/tags" />
 
       </xsl:element>
     </xsl:element>

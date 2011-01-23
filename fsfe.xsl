@@ -704,7 +704,7 @@
 	  <xsl:element name="span">
 	    <xsl:attribute name="class">local_menu_item</xsl:attribute>
 	    <xsl:choose>
-	      <xsl:when test="not(substring-before(concat(/buildinfo/@filename ,'.html'), string(.)))">
+	      <xsl:when test="not(substring-before(concat(/buildinfo/@filename, '.html'), string(.)))">
 		<xsl:element name="a">
 		  <xsl:attribute name="href"><xsl:value-of select="."/></xsl:attribute>
 		  <xsl:value-of select="$localmenutext"/>

@@ -78,6 +78,7 @@
 	  <![endif]
 	]]>
       </xsl:comment>
+
       <xsl:apply-templates select="@*|node()"/>
     </xsl:copy>
   </xsl:template>

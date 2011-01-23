@@ -53,13 +53,14 @@
       <link rel="shortcut icon" href="/graphics/fsfe.ico" type="image/x-icon" />
 
       <!-- Feeds -->
-      <xsl:element name="link">
+      <xsl:element name="link"> <!-- News feed -->
         <xsl:attribute name="rel">alternate</xsl:attribute>
         <xsl:attribute name="title">FSFE <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'menu1/news'" /></xsl:call-template></xsl:attribute>
         <xsl:attribute name="href">/news/news.<xsl:value-of select="/buildinfo/@language" />.rss</xsl:attribute>
         <xsl:attribute name="type">application/rss+xml</xsl:attribute>
       </xsl:element>
-      <xsl:element name="link">
+
+      <xsl:element name="link"> <!-- Events feed -->
         <xsl:attribute name="rel">alternate</xsl:attribute>
         <xsl:attribute name="title">FSFE <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'menu1/events'" /></xsl:call-template></xsl:attribute>
         <xsl:attribute name="href">/events/events.<xsl:value-of select="/buildinfo/@language" />.rss</xsl:attribute>

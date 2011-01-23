@@ -22,12 +22,10 @@
   
   <!-- Display dynamic list of news items -->
   <xsl:template match="all-news">
-    
     <xsl:call-template name="fetch-news">
     	<xsl:with-param name="tag">front-page</xsl:with-param>
     	<xsl:with-param name="nb-items" select="5" />
     </xsl:call-template>
-    
   </xsl:template>
   
   <!-- Display dynamic list of newsletters items -->
@@ -42,16 +40,16 @@
     
     <!-- Current events -->
     <xsl:call-template name="fetch-events">
-        <xsl:with-param name="wanted-time" select="'present'" />
-        <xsl:with-param name="tag">front-page</xsl:with-param>
+      <xsl:with-param name="wanted-time" select="'present'" />
+      <xsl:with-param name="tag">front-page</xsl:with-param>
     </xsl:call-template>
     
     <!-- Future events -->
     <xsl:call-template name="fetch-events">
-        <xsl:with-param name="wanted-time" select="'future'" />
-        <xsl:with-param name="tag">front-page</xsl:with-param>
-        <xsl:with-param name="display-details" select="'yes'" />
-        <xsl:with-param name="nb-items" select="3" />
+      <xsl:with-param name="wanted-time" select="'future'" />
+      <xsl:with-param name="tag">front-page</xsl:with-param>
+      <xsl:with-param name="display-details" select="'yes'" />
+      <xsl:with-param name="nb-items" select="3" />
     </xsl:call-template>
     
   </xsl:template>

@@ -209,7 +209,7 @@ p.left {
 }
 
 .even {
-  background-color: #DEEEFF;
+  background-color: rgb(222,238,255);
 }
 
 #wrapper {
@@ -331,7 +331,7 @@ p.left {
   padding: 0 0 0 1em;
   font-family: Nimbus Sans L, Helvetica, Verdana, sans-serif;
   background: url('/graphics/xmas-fr-bg.png') no-repeat top right;
-  border: 1px solid #800000;
+  border: 1px solid rgb(128,0,0);
   padding: 0.6em 1em 0.6em 1em;
   overflow: hidden;
 }
@@ -363,9 +363,9 @@ p.left {
 }
 
 #fundraising .button a:hover {
-  box-shadow: 0 0 15px #00222B inset;
-  -moz-box-shadow: 0 0 15px #00222B inset;
-  -webkit-box-shadow: 0 0 15px #00222B inset;
+  box-shadow: 0 0 15px rgb(0,34,43) inset;
+  -moz-box-shadow: 0 0 15px rgb(0,34,43) inset;
+  -webkit-box-shadow: 0 0 15px rgb(0,34,43) inset;
 }
 
 #fundraising img {
@@ -381,13 +381,13 @@ p.left {
 
 #fundraising div.percentbox {
   margin: 1em 0 .5em 0;
-  border: 1px solid #202d79;
-  background-color: #4ad2f0;
+  border: 1px solid rgb(32,45,121);
+  background-color: rgb(74,210,240);
 }
 
 #fundraising div.percentbar {
   height: 1em;
-  background-color: #3394ce;
+  background-color: rgb(51,148,206);
 }
 
 #fundraising p.current {
@@ -424,13 +424,13 @@ p.left {
 h1,
 h2,
 h3 {
-  color: #202D79;
+  color: rgb(32,45,121);
   line-height: normal;
 }
 
 
 h1 {
-  border-bottom: 1px solid #D2D2D2;
+  border-bottom: 1px solid rgb(210,210,210);
   font-size: 250%;
   margin: 0;
   padding: 0 0 0.5em;
@@ -446,7 +446,7 @@ h3 {
 }
 
 .image {
-  background-color: #FDFDFD;
+  background-color: rgb(253,253,253);
   float: left;
 }
 
@@ -476,7 +476,7 @@ h3 {
 
 .captioned {
   padding: 0.5em;
-  border: 1px solid #D2D2D2;
+  border: 1px solid rgb(210,210,210);
   margin: 1em;
   text-align: center;
 }
@@ -487,7 +487,7 @@ h3 {
 .captioned p {
   padding: 0.5em 0.5em 0 0.5em;
   margin: 0;
-  border-top: 1px solid #dcdcdc;
+  border-top: 1px solid rgb(220,220,220);
 }
 
 .postit {  /* compatibility */
@@ -496,7 +496,7 @@ h3 {
   border: 1px #000 solid;
   padding: 0.3em;
   width: 14em;
-  background: #FFECBF;
+  background: rgb(255,236,191);
   text-align: center;
 }
 
@@ -789,26 +789,26 @@ h4#subpages + ul li:nth-child(odd) {
   background-color: white;
 }
 
-#menu ul li ul {  /* “submenu */
+#menu ul li ul {  /* submenu */
   border-left: none;
   font-size: 120%;
 }
 
 #menu ul li.fsfe a {
-  border-left: 15px solid #4ad2f0;
+  border-left: 15px solid rgb(74,210,210);
 }
 
 #menu ul li.fsfe a:hover {
-  border-left: 15px solid #4ad2f0;
-  background-color: #B2F1FF;
+  border-left: 15px solid rgb(74,210,210);
+  background-color: rgb(178,241,255);
 }
 
 #menu ul li.fsfe ul li a {
-  border-left: 15px solid #DCDCDC;
+  border-left: 15px solid rgb(220,220,220);
 }
 
 #menu ul li.fsfe ul li a:hover {
-  border-left: 15px solid #B2F1FF;
+  border-left: 15px solid rgb(178,241,255);
 }
 
 #menu ul li.planet a {
@@ -816,7 +816,7 @@ h4#subpages + ul li:nth-child(odd) {
 }
 
 #menu ul li.planet a:hover {
-  background-color: #92CAFF;
+  background-color: rgb(146,202,255);
 }
 
 #menu ul li.planet ul {
@@ -824,27 +824,27 @@ h4#subpages + ul li:nth-child(odd) {
 }
 
 #menu ul li.planet ul li a {
-  border-left: 15px solid #DCDCDC;
+  border-left: 15px solid rgb(220,220,220);
 }
 
 #menu ul li.planet ul li a:hover {
-  border-left: 15px solid #4aa0f0;
+  border-left: 15px solid rgb(74,160,240);
 }
 
 #menu ul li.wiki a {
-  border-left: 15px solid #adff54;
+  border-left: 15px solid rgb(173,255,84);
 }
 
 #menu ul li.fellowship a {
-  border-left: 15px solid #6BC800;
+  border-left: 15px solid rgb(107,200,0);
 }
 
 #menu ul li.fellowship a:hover {
-  background-color: #CDFF93;
+  background-color: rgb(205,255,147);
 }
 
 #menu ul li.fellowship ul li a {
-  border-left:15px solid #DCDCDC;
+  border-left:15px solid rgb(220,220,220);
 }
 
 #menu ul li.fellowship ul {
@@ -852,18 +852,18 @@ h4#subpages + ul li:nth-child(odd) {
 }
 
 #menu ul li.fellowship ul li a:hover {
-  border-left: 15px solid #ABFF4A;
+  border-left: 15px solid rgb(171,255,74);
 }
 
 #menu ul li ul li #selected,
 #menu ul li ul li #selected:hover {
-  border-left: 15px solid #C1C1C1;
-  color: #333333;
+  border-left: 15px solid rgb(193,193,193);
+  color: rgb(51,51,51);
   display: block;
   font-size: 15.5px;
   font-weight: normal;
   line-height: 50%;
-  padding: 0.6em 0 0.8em 1.6em
+  padding: 0.6em 0 0.8em 1.6em;
 }
 
 /* front page feeds */
@@ -890,7 +890,7 @@ h4#subpages + ul li:nth-child(odd) {
   padding: 0;
   font-size: 100%;
   font-weight: bold;
-  color: #6e6e6e;
+  color: rgb(110,110,110);
 }
 
 .section h2 {
@@ -929,12 +929,12 @@ h4#subpages + ul li:nth-child(odd) {
 
 #news.section h2,
 #donate-once.section h2 {
-  background-color: #4ad2f0;
+  background-color: rgb(74,210,210);
 }
 
 #newsletter.section h2,
 #donate-regular.section h2 {
-  background-color: #7fdf55;
+  background-color: rgb(127,223,85);
 }
 
 .section ul {
@@ -946,7 +946,7 @@ h4#subpages + ul li:nth-child(odd) {
 }
 
 #events.section h2 {
-  background-color: #4AA0F0;
+  background-color: rgb(74,160,240);
 }
 
 #newsletter.section,
@@ -958,11 +958,11 @@ h4#subpages + ul li:nth-child(odd) {
 }
 
 #team.section h2, #identica.section h2 {
-  background-color: #7fdf55;
+  background-color: rgb(127,223,85);
 }
 
 #contact.section h2 {
-  background-color: #BDE455;
+  background-color: rgb(189,228,85);
 }
 
 #identica.section .entry div {
@@ -1135,7 +1135,7 @@ margin: 1.5em 0;
 
 /* item-grid (used for shop/orders) */
 .item-grid h2 {
-  border-bottom: 1px solid #CCCCCC;
+  border-bottom: 1px solid rgb(204,204,204);
   margin-bottom: 0;
 }
 
@@ -1150,7 +1150,7 @@ h2#fn {
 }
 
 h2#fn + ol {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid rgb(204,204,204);
   font-size: 90%;
   margin-top: 3em;
   padding-top: .5em;
@@ -1237,9 +1237,9 @@ a.donate-box, a.fellowship-box {
 
 #campaign-box-2 a.donate-box {
   color:#3394ce;
-  -moz-box-shadow:inset 0 0 6px #00222b;
-  -webkit-box-shadow:inset 0 0 6px #00222b;
-  box-shadow:inset 0 0 6px #00222b;
+  -moz-box-shadow:inset 0 0 6px rgb(0,34,43);
+  -webkit-box-shadow:inset 0 0 6px rgb(0,34,43);
+  box-shadow:inset 0 0 6px rgb(0,34,43);
   margin: 0 0 12px;
   background:url("/graphics/donate-button-bg.png") no-repeat top left;
 }
@@ -1251,24 +1251,24 @@ a.donate-box, a.fellowship-box {
 
 #campaign-box-2 a.donate-box:hover {
   color: #2A7BAD;
-  -moz-box-shadow: inset 0 0 20px #00222b;
-  -webkit-box-shadow: inset 0 0 20px #00222b;
-  box-shadow: inset 0 0 20px #00222b;
+  -moz-box-shadow: inset 0 0 20px rgb(0,34,43);
+  -webkit-box-shadow: inset 0 0 20px rgb(0,34,43);
+  box-shadow: inset 0 0 20px rgb(0,34,43);
 }
 
 #campaign-box-2 a.fellowship-box {
   color: #70d055;
-  -moz-box-shadow: inset 0 0 6px #17280b;
-  -webkit-box-shadow: inset 0 0 6px #17280b;
-  box-shadow: inset 0 0 6px #17280b;
+  -moz-box-shadow: inset 0 0 6px rgb(23,40,11);
+  -webkit-box-shadow: inset 0 0 6px rgb(23,40,11);
+  box-shadow: inset 0 0 6px rgb(23,40,11);
   background: url("/graphics/join-button-bg.png") no-repeat top left;
 }
 
 #campaign-box-2 a.fellowship-box:hover {
   color: #5DAC46;
-  -moz-box-shadow: inset 0 0 20px #17280b;
-  -webkit-box-shadow: inset 0 0 20px #17280b;
-  box-shadow: inset 0 0 20px #17280b;
+  -moz-box-shadow: inset 0 0 20px rgb(23,40,11);
+  -webkit-box-shadow: inset 0 0 20px rgb(23,40,11);
+  box-shadow: inset 0 0 20px rgb(23,40,11);
 }
 
 
@@ -1294,11 +1294,11 @@ ul.overview {
 }
 
 #article-metadata a {
-  color: #323232;
+  color: rgb(50,50,50);
 }
 
 #article-metadata span.label {
-  color: #202D79;
+  color: rgb(32,45,121);
   padding-left: 1em;
 }
 
@@ -1364,18 +1364,18 @@ table td {
 
 table th + th,
 table td + td {
-  border-left: 1px solid #ccc;
+  border-left: 1px solid rgb(204,204,204);
 }
 
 table th {
-  border-bottom: 1px solid #202d79;
-  border-top: 1px solid #202d79;
+  border-bottom: 1px solid rgb(32,45,121);
+  border-top: 1px solid rgb(32,45,121);
   color: #202d79;
-  background-color: #f4f8fa;
+  background-color: rgb(244,248,250);
 }
 
 table td {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid rgb(204,204,204);
 }
 
 table.restricted-width {
@@ -1384,11 +1384,11 @@ table.restricted-width {
 
 
 table td.positive {
-  background-color: #d0ffd0;
+  background-color: rgb(208,255,208);
 }
 
 table td.negative {
-  background-color: #ffd0d0;
+  background-color: rgb(255,208,208);
 }
 
 table.noborders td,
@@ -1397,7 +1397,7 @@ table.noborders th {
 }
 
 tr.highlighted {
- background-color :#D0F400;
+ background-color: rgb(208,244,0);
 }
 
 /* notices */
@@ -1473,7 +1473,7 @@ tr.highlighted {
   margin-right:10px;
   width:48px;
   height:48px;
-  border:1px solid #000;
+  border:1px solid black;
 }
 
 ul.people {

@@ -4,7 +4,11 @@
   <xsl:import href="tools/xsltsl/translations.xsl" />
 
   <!-- HTML 5 with UTF-8 encoding, using XSLT fallback doctype mode -->
-  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-public="XSLT-compat" />
+  <xsl:output method="html" encoding="utf-8" indent="yes" /> <!-- doctype-public="XSLT-compat" /> -->
+ 
+  <xsl:template match="/">
+    <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html></xsl:text>
+   </xsl:template>
 
   <!-- The top level element of the input file is "buildinfo" -->
   <xsl:template match="buildinfo">

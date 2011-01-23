@@ -580,30 +580,33 @@ end Newsletter form -->
 	  <div id="notice">
 	    <p>
 	      Copyright © 2001-2010 <a href="/">Free Software
-	      Foundation Europe</a>. <strong>
-	      <a href="/contact/contact.html">
-		<xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'contact'" /></xsl:call-template>
-		</a></strong>.<br />
+	      Foundation Europe</a>.  <strong><a
+	      href="/contact/contact.html"> <xsl:call-template
+	      name="fsfe-gettext"><xsl:with-param name="id"
+	      select="'contact'" /></xsl:call-template>
+	      </a></strong>.<br />
 
-		<xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'permission'" /></xsl:call-template><br />
+	      <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'permission'" /></xsl:call-template>
+	    </p>
 
-		<!-- "Last changed" magic -->
-		<xsl:variable name="timestamp">
-		  <xsl:value-of select="/buildinfo/document/timestamp"/>
+	    <p>
+	      <!-- "Last changed" magic -->
+	      <xsl:variable name="timestamp">
+		<xsl:value-of select="/buildinfo/document/timestamp"/>
+	      </xsl:variable>
+	      <!-- FIXME: over time, all pages should have the timestamp -->
+	      <!--        tags, so this conditional could be removed     -->
+	      <xsl:if test="string-length($timestamp) &gt; 0">
+		<xsl:variable name="Date">
+		  <xsl:value-of select="substring-before(substring-after($timestamp, 'Date: '), ' $')"/>
 		</xsl:variable>
-		<!-- FIXME: over time, all pages should have the timestamp -->
-		<!--        tags, so this conditional could be removed     -->
-		<xsl:if test="string-length($timestamp) &gt; 0">
-		  <xsl:variable name="Date">
-		    <xsl:value-of select="substring-before(substring-after($timestamp, 'Date: '), ' $')"/>
-		  </xsl:variable>
-		  <xsl:variable name="Author">
-		    <xsl:value-of select="substring-before(substring-after($timestamp, 'Author: '), ' $')"/>
-		  </xsl:variable>
-		  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'lastchanged'" /></xsl:call-template>
-		  <xsl:value-of select="translate ($Date, '/', '-')"/>
-		  (<xsl:value-of select="$Author"/>)
-		</xsl:if>
+		<xsl:variable name="Author">
+		  <xsl:value-of select="substring-before(substring-after($timestamp, 'Author: '), ' $')"/>
+		</xsl:variable>
+		<xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'lastchanged'" /></xsl:call-template>
+		<xsl:value-of select="translate ($Date, '/', '-')"/>
+		(<xsl:value-of select="$Author"/>)
+	      </xsl:if>
 	    </p>
 
 	    <ul>
@@ -659,7 +662,6 @@ end Newsletter form -->
 	    <xsl:attribute name="id">sister-organisations</xsl:attribute>        
 	    <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfnetwork'" /></xsl:call-template>
 	  </xsl:element>
-	  
         </div> <!-- /#footer -->
 	
         <!-- AWstats javascript tracking code -->

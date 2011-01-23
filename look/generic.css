@@ -137,15 +137,64 @@ ul {
   list-style: circle;
 }
 
+table {
+  border-collapse: collapse;
+  margin-bottom: 1em;
+  max-width: 100%;
+  font-size: 100%;
+}
+
+table th,
+table td {
+  padding: .2em .5em;
+}
+
+table th + th,
+table td + td {
+  border-left: 1px solid rgb(204,204,204);
+}
+
+table th {
+  border-bottom: 1px solid rgb(32,45,121);
+  border-top: 1px solid rgb(32,45,121);
+  color: rgb(32,45,121);
+  background-color: rgb(244,248,250);
+}
+
+table td {
+  border-bottom: 1px solid rgb(204,204,204);
+}
+
+table.restricted-width {
+  max-width: 200px;  /* fixes pdfreaders buglist page problems */
+}
+
+table td.positive {
+  background-color: rgb(208,255,208);
+}
+
+table td.negative {
+  background-color: rgb(255,208,208);
+}
+
+table.noborders td,
+table.noborders th {
+  border: 0;
+}
+
+tr.highlighted {
+  background-color: rgb(208,244,0);
+}
+
 
 /* generic classes */
 .clear {
-    clear: both!important;
+  clear: both !important;
 }
 
 .center {
   text-align: center;
-  float: none!important;
+  float: none !important;
 }
 
 .left {
@@ -171,7 +220,7 @@ p.left {
 }
 
 .grid-40.left {
-  padding-right:1%
+  padding-right: 1%;
 }
 
 .grid-50 {
@@ -179,7 +228,7 @@ p.left {
 }
 
 .grid-40.left {
-  padding-right:1%
+  padding-right: 1%;
 }
 
 .grid-60 {
@@ -187,8 +236,8 @@ p.left {
 }
 
 .grid-60.right {
-  padding-left:1%
-  border-left:1px solid #CCC;
+  padding-left: 1%
+  border-left: 1px solid #CCC;
 }
 
 .even {
@@ -257,10 +306,10 @@ p.left {
 }
 
 #logo {
-  float:left;
-  margin:1em 0 0 1%;
-  max-width:29%;
-  width:215px;
+  float: left;
+  margin: 1em 0 0 1%;
+  max-width: 29%;
+  width: 215px;
 }
 
 #logo a img {
@@ -269,10 +318,10 @@ p.left {
 
 #statement {
   color: rgb(140,140,140);
-  float:left;
-  font-size:120%;
-  margin:3em 2% 0 8%;
-  width:60%;
+  float: left;
+  font-size: 120%;
+  margin: 3em 2% 0 8%;
+  width: 60%;
 }
 
 #statement a {
@@ -324,23 +373,22 @@ p.left {
 
 
 /* fundraising box */
-
 #fundraising {
   min-height: 75px;
   margin: 0 0 2em;
   padding: 0 0 0 1em;
-  font-family: Nimbus Sans L, Helvetica, Verdana, sans-serif;
-  background: url('/graphics/xmas-fr-bg.png') no-repeat top right;
+  font-family: "Nimbus Sans L", "Helvetica", "Verdana", sans-serif;
+  background: url("/graphics/xmas-fr-bg.png") no-repeat top right;
   border: 1px solid rgb(128,0,0);
-  padding: 0.6em 1em 0.6em 1em;
+  padding: .6em 1em .6em 1em;
   overflow: hidden;
 }
 
 #fundraising h2 {
-  color: #9d0000;
+  color: rgb(157,0,0);
   font-weight: bold;
-  margin: 0.3em 1em 0.3em 0;
-  float:left;
+  margin: .3em 1em .3em 0;
+  float: left;
 }
 
 #fundraising .button {
@@ -349,13 +397,13 @@ p.left {
 }
 
 #fundraising .button a {
-  padding: 0.2em 0.4em;
+  padding: .2em .4em;
   font-size: 1.5em;
   color: white;
-  font-weight:bold;
-  float:left;
-  display:block;
-  background: url('/graphics/xmas-fr-button-bg.png') repeat-x bottom left;
+  font-weight: bold;
+  float: left;
+  display: block;
+  background: url("/graphics/xmas-fr-button-bg.png") repeat-x bottom left;
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -376,7 +424,7 @@ p.left {
   clear: left;
   float: left;
   font-size: 1.6em;
-  margin: 0 0 0.3em 0;
+  margin: 0 0 .3em 0;
 }
 
 #fundraising div.percentbox {
@@ -405,7 +453,6 @@ p.left {
 /* ------------------------------------------------------------------------- */
 /* Content                                                                   */
 /* ------------------------------------------------------------------------- */
-
 #content {
   clear: right;
   float: left;
@@ -418,7 +465,7 @@ p.left {
   font-size: 170%;
   font-weight: bold;
   line-height: 120%;
-  margin: 0 0 0.3em;
+  margin: 0 0 .3em;
 }
 
 h1,
@@ -433,7 +480,7 @@ h1 {
   border-bottom: 1px solid rgb(210,210,210);
   font-size: 250%;
   margin: 0;
-  padding: 0 0 0.5em;
+  padding: 0 0 .5em;
 }
 
 h2 {
@@ -475,13 +522,10 @@ h3 {
 }
 
 .captioned {
-  padding: 0.5em;
+  padding: .5em;
   border: 1px solid rgb(210,210,210);
   margin: 1em;
   text-align: center;
-}
-
-.captioned img {
 }
 
 .captioned p {
@@ -493,8 +537,8 @@ h3 {
 .postit {  /* compatibility */
   float: left;
   margin: 0 1em 1em 0;
-  border: 1px #000 solid;
-  padding: 0.3em;
+  border: 1px black solid;
+  padding: .3em;
   width: 14em;
   background: rgb(255,236,191);
   text-align: center;
@@ -751,7 +795,7 @@ h4#subpages + ul li:nth-child(odd) {
   color: rgb(110,110,110);
   text-decoration: none;
   display: block;
-  padding: 0.8em 0 0.8em 0.8em;
+  padding: .8em 0 .8em .8em;
   line-height: 120%;
   font-size: 15.5px;
 }
@@ -772,7 +816,7 @@ h4#subpages + ul li:nth-child(odd) {
 
 #menu ul li ul li a {
   font-weight: normal;
-  padding: 0.3em 0 0.4em 1.6em;
+  padding: .3em 0 .4em 1.6em;
 }
 
 #menu ul li.fsfe ul li a,
@@ -863,8 +907,9 @@ h4#subpages + ul li:nth-child(odd) {
   font-size: 15.5px;
   font-weight: normal;
   line-height: 50%;
-  padding: 0.6em 0 0.8em 1.6em;
+  padding: .6em 0 .8em 1.6em;
 }
+
 
 /* front page feeds */
 #feeds {
@@ -912,11 +957,11 @@ h4#subpages + ul li:nth-child(odd) {
   color: white;
 }
 
-.section h2 a, .section h2 span {
-    color: white;
+.section h2 a,
+.section h2 span {
     color: white;
     float: right;
-    padding: 0.2em 0.6em 0.2em 0;
+    padding: .2em .6em .2em 0;
 }
 
 .section .entry form {
@@ -952,12 +997,12 @@ h4#subpages + ul li:nth-child(odd) {
 #newsletter.section,
 #events.section,
 #contact.section,
-#donate-regular.section
-{
+#donate-regular.section {
   padding: 0 0 0 2%;
 }
 
-#team.section h2, #identica.section h2 {
+#team.section h2,
+#identica.section h2 {
   background-color: rgb(127,223,85);
 }
 
@@ -969,7 +1014,8 @@ h4#subpages + ul li:nth-child(odd) {
   float: left;
 }
 
-#identica.section h3, #identica.section h4 {
+#identica.section h3,
+#identica.section h4 {
   display: none;
 }
 
@@ -1126,10 +1172,9 @@ h4#subpages + ul li:nth-child(odd) {
 
 
 /* advocacy pages */
-
 .copyable-code {
-clear: both;
-margin: 1.5em 0;
+  clear: both;
+  margin: 1.5em 0;
 }
 
 
@@ -1220,7 +1265,7 @@ a.fn {
   height: 45px;
   margin: 1.5em 0 0 0;
   width: 100%;
-  display:none;
+  display: none;
 }
 
 a.donate-box, a.fellowship-box {
@@ -1236,12 +1281,12 @@ a.donate-box, a.fellowship-box {
 }
 
 #campaign-box-2 a.donate-box {
-  color:#3394ce;
-  -moz-box-shadow:inset 0 0 6px rgb(0,34,43);
-  -webkit-box-shadow:inset 0 0 6px rgb(0,34,43);
-  box-shadow:inset 0 0 6px rgb(0,34,43);
+  color: rgb(51,148,206);
+  -moz-box-shadow: inset 0 0 6px rgb(0,34,43);
+  -webkit-box-shadow: inset 0 0 6px rgb(0,34,43);
+  box-shadow: inset 0 0 6px rgb(0,34,43);
   margin: 0 0 12px;
-  background:url("/graphics/donate-button-bg.png") no-repeat top left;
+  background: url("/graphics/donate-button-bg.png") no-repeat top left;
 }
 
 #campaign-box-2 a.donate-box:hover,
@@ -1250,14 +1295,14 @@ a.donate-box, a.fellowship-box {
 }
 
 #campaign-box-2 a.donate-box:hover {
-  color: #2A7BAD;
+  color: rgb(42,123,173);
   -moz-box-shadow: inset 0 0 20px rgb(0,34,43);
   -webkit-box-shadow: inset 0 0 20px rgb(0,34,43);
   box-shadow: inset 0 0 20px rgb(0,34,43);
 }
 
 #campaign-box-2 a.fellowship-box {
-  color: #70d055;
+  color: rgb(112,208,85);
   -moz-box-shadow: inset 0 0 6px rgb(23,40,11);
   -webkit-box-shadow: inset 0 0 6px rgb(23,40,11);
   box-shadow: inset 0 0 6px rgb(23,40,11);
@@ -1265,7 +1310,7 @@ a.donate-box, a.fellowship-box {
 }
 
 #campaign-box-2 a.fellowship-box:hover {
-  color: #5DAC46;
+  color: rgb(93,172,70);
   -moz-box-shadow: inset 0 0 20px rgb(23,40,11);
   -webkit-box-shadow: inset 0 0 20px rgb(23,40,11);
   box-shadow: inset 0 0 20px rgb(23,40,11);
@@ -1286,7 +1331,7 @@ ul.overview {
 
 /* Article pages */
 #article-metadata {
-  margin: 0.5em 0 1.5em;
+  margin: .5em 0 1.5em;
 }
 
 #article-metadata p {
@@ -1349,63 +1394,13 @@ ul.overview {
 }
 
 
-/* tables */
-table {
-  border-collapse: collapse;
-  margin-bottom: 1em;
-  max-width: 100%;
-  font-size: 100%;
-}
-
-table th,
-table td {
-  padding: .2em .5em;
-}
-
-table th + th,
-table td + td {
-  border-left: 1px solid rgb(204,204,204);
-}
-
-table th {
-  border-bottom: 1px solid rgb(32,45,121);
-  border-top: 1px solid rgb(32,45,121);
-  color: #202d79;
-  background-color: rgb(244,248,250);
-}
-
-table td {
-  border-bottom: 1px solid rgb(204,204,204);
-}
-
-table.restricted-width {
-  max-width: 200px; /* to fix pdfreaders buglist page problems */
-}
-
-
-table td.positive {
-  background-color: rgb(208,255,208);
-}
-
-table td.negative {
-  background-color: rgb(255,208,208);
-}
-
-table.noborders td,
-table.noborders th {
-  border: 0;
-}
-
-tr.highlighted {
- background-color: rgb(208,244,0);
-}
-
 /* notices */
 #outdated-notice {
   border: 1px solid red;
-  padding: 0.5em;
+  padding: .5em;
   margin: 0 0 1.5em 0;
 }
+
 
 /* service notice */
 #service-notice {
@@ -1467,25 +1462,24 @@ tr.highlighted {
 
 
 /* People pages */
-
 .people img {
-  float:left;
-  margin-right:10px;
-  width:48px;
-  height:48px;
-  border:1px solid black;
+  float: left;
+  margin-right: 10px;
+  width: 48px;
+  height: 48px;
+  border: 1px solid black;
 }
 
 ul.people {
-  list-style-type:none;
+  list-style-type: none;
 }
 
 ul.people li {
-  display:block;
-  float:left;
-  width:48%;
-  min-width:20em;
-  padding-right:0.5em;
+  display: block;
+  float: left;
+  width: 48%;
+  min-width: 20em;
+  padding-right: .5em;
 }
 
 ul.people li:nth-child(odd) {
@@ -1493,11 +1487,11 @@ ul.people li:nth-child(odd) {
 }
 
 ul.people li:last-child {
-  margin-bottom:1.5em;
+  margin-bottom: 1.5em;
 }
 
 .people .name, .people .email {
-  display:block;
+  display: block;
 }
 
 .people .name {
@@ -1506,4 +1500,4 @@ ul.people li:last-child {
 
 .people .email {
   font-style: italic;
-}*/
+}

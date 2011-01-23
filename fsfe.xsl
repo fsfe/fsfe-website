@@ -22,6 +22,8 @@
       <xsl:attribute name="lang">
         <xsl:value-of select="/buildinfo/@language"/>
       </xsl:attribute>
+
+      <!-- Arabic is a right-to-left language -->
       <xsl:if test="/buildinfo/@language='ar'">
         <xsl:attribute name="dir">rtl</xsl:attribute>
       </xsl:if>

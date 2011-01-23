@@ -729,7 +729,7 @@
 	</xsl:for-each>
 	<xsl:text> ]</xsl:text>
 	
-      </xsl:element><!--end wrapper-->
+      </xsl:element> <!-- /wrapper-->
     </xsl:element>
   </xsl:template>
 

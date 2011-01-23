@@ -16,20 +16,23 @@ Editing rules:
   - Font sizes (apart from the first font size definition in body) and
     line heights must be set in percent.
   - Generally strive not to repeat yourself (DRY).
+  - Custom fonts should be specified in quotes (fonts other than
+    serif, sans-serif and monospace).
 
 */
 
 @import url("grid.css");
 @import url("input.css");
 
+
 /* Custom fonts */
 @font-face {
-  font-family: Lucida Sans;
+  font-family: "Lucida Sans";
   src: url("/fonts/LSANS.TTF");
 }
 
 @font-face {
-  font-family: Nimbus Sans L;
+  font-family: "Nimbus Sans L";
   src: url("/fonts/NimbusSanL-Regu");
 }
 

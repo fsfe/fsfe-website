@@ -610,8 +610,8 @@ end Newsletter form -->
 	    </p>
 
 	    <ul>
+	      <!-- Source code -->
 	      <li>
-		<!-- Link to the XHTML source -->
 		<xsl:element name="a">
 		  <xsl:attribute name="href">
 		    <xsl:text>/source</xsl:text>
@@ -624,6 +624,7 @@ end Newsletter form -->
 		</xsl:element>
 	      </li>
 
+	      <!-- Translate this page? -->
 	      <li>
 		<a href="/contribute/translators/">
 		  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'translate'" /></xsl:call-template>

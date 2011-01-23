@@ -461,6 +461,10 @@ p.left {
   width: 78%;
 }
 
+body#frontpage #content {
+  font-size: 100%;  /* small font on front page */
+}
+
 #content p#category {
   font-size: 170%;
   font-weight: bold;

@@ -579,7 +579,7 @@ end Newsletter form -->
 	<div id="footer">
 	  <div id="notice">
 	    <p>
-	      Copyright © 2001-2010 <a href="/">Free Software
+	      Copyright © 2001-2011 <a href="/">Free Software
 	      Foundation Europe</a>.  <strong><a
 	      href="/contact/contact.html"> <xsl:call-template
 	      name="fsfe-gettext"><xsl:with-param name="id"

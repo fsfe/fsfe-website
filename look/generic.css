@@ -36,11 +36,15 @@ Editing rules:
   src: url("/fonts/NimbusSanL-Regu");
 }
 
+
+/* Resetting all elements */
 * {
   margin: 0;
   padding: 0;
 }
 
+
+/* Generic elements */
 body {
   font-family: "Arial", sans-serif;
   font-size: 12px;

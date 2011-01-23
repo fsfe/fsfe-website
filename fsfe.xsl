@@ -43,12 +43,18 @@
           </xsl:choose>
         </xsl:attribute>
       </xsl:element>
+
+      <!-- Stylesheets -->
       <link rel="stylesheet" media="all" href="/look/generic.css" type="text/css" />
       <link rel="stylesheet" media="print" href="/look/print.css" type="text/css" />
       <xsl:if test="/buildinfo/@language='ar'">
         <link rel="stylesheet" media="all" href="/look/rtl.css" type="text/css" />
       </xsl:if>
+
+      <!-- Icon -->
       <link rel="shortcut icon" href="/graphics/fsfe.ico" type="image/x-icon" />
+
+      <!-- Feeds -->
       <xsl:element name="link">
         <xsl:attribute name="rel">alternate</xsl:attribute>
         <xsl:attribute name="title">FSFE <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'menu1/news'" /></xsl:call-template></xsl:attribute>
@@ -61,6 +67,8 @@
         <xsl:attribute name="href">/events/events.<xsl:value-of select="/buildinfo/@language" />.rss</xsl:attribute>
         <xsl:attribute name="type">application/rss+xml</xsl:attribute>
       </xsl:element>
+
+      <!-- JavaScripts -->
       <script type="text/javascript" src="/scripts/jquery.js"></script>
       <script type="text/javascript" src="/scripts/master.js"></script>
       <script type="text/javascript" src="/scripts/placeholder.js"></script>
@@ -89,7 +97,7 @@
 	  <span class="label"> <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'published'" /></xsl:call-template>: </span><xsl:value-of select="/buildinfo/document/html/@newsdate" />
 	</xsl:element>
       </xsl:element>
-    </xsl:if> 
+    </xsl:if>
     <!-- End apply news page rules -->
     
     <!-- Apply article rules -->

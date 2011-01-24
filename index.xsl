@@ -20,90 +20,96 @@
     <xsl:apply-templates select="node()"/>
   </xsl:template>
   
-  <!-- Display dynamic list of news items -->
+  <!--display dynamic list of news items-->
   <xsl:template match="all-news">
+    
     <xsl:call-template name="fetch-news">
     	<xsl:with-param name="tag">front-page</xsl:with-param>
     	<xsl:with-param name="nb-items" select="5" />
     </xsl:call-template>
+    
   </xsl:template>
   
-  <!-- Display dynamic list of newsletters items -->
+  <!--display dynamic list of newsletters items-->
   <xsl:template match="all-newsletters">
+
     <xsl:call-template name="fetch-newsletters">
       <xsl:with-param name="nb-items" select="2" />
     </xsl:call-template>
+	  
   </xsl:template>
   
-  <!-- Display dynamic list of event items -->
+  <!--display dynamic list of event items-->
   <xsl:template match="all-events">
     
     <!-- Current events -->
     <xsl:call-template name="fetch-events">
-      <xsl:with-param name="wanted-time" select="'present'" />
-      <xsl:with-param name="tag">front-page</xsl:with-param>
+        <xsl:with-param name="wanted-time" select="'present'" />
+        <xsl:with-param name="tag">front-page</xsl:with-param>
     </xsl:call-template>
     
     <!-- Future events -->
     <xsl:call-template name="fetch-events">
-      <xsl:with-param name="wanted-time" select="'future'" />
-      <xsl:with-param name="tag">front-page</xsl:with-param>
-      <xsl:with-param name="display-details" select="'yes'" />
-      <xsl:with-param name="nb-items" select="3" />
+        <xsl:with-param name="wanted-time" select="'future'" />
+        <xsl:with-param name="tag">front-page</xsl:with-param>
+        <xsl:with-param name="display-details" select="'yes'" />
+        <xsl:with-param name="nb-items" select="3" />
     </xsl:call-template>
     
   </xsl:template>
-    
-  <!-- Translated word "newsletter" -->
+  
+  <!--display labels-->
+  
+  <!--translated word "newsletter"-->
   <xsl:template match="newsletter-label">
     <xsl:call-template name="gettext">
       <xsl:with-param name="id" select="'newsletter'" />
     </xsl:call-template>
   </xsl:template>
   
-  <!-- Translated sentence "receive-newsletter" -->
+  <!--translated sentence "receive-newsletter"-->
   <xsl:template match="receive-newsletter">
     <xsl:call-template name="gettext">
       <xsl:with-param name="id" select="'receive-newsletter'" />
     </xsl:call-template>
   </xsl:template>
   
-  <!-- Translated word "news" -->
+  <!--translated word "news"-->
   <xsl:template match="news-label">
     <xsl:call-template name="gettext">
       <xsl:with-param name="id" select="'news'" />
     </xsl:call-template>
   </xsl:template>
 
-  <!-- Translated word "events" -->
+  <!--translated word "events"-->
   <xsl:template match="events-label">
     <xsl:call-template name="gettext">
       <xsl:with-param name="id" select="'events'" />
     </xsl:call-template>
   </xsl:template>
   
-  <!-- Translated word "more" -->
+  <!--translated word "more"-->
   <xsl:template match="more-label">
     <xsl:call-template name="gettext">
       <xsl:with-param name="id" select="'more'" />
     </xsl:call-template>
   </xsl:template>
   
-  <!-- Translated word "donate" -->
+  <!--translated word "donate"-->
   <xsl:template match="donate-label">
     <xsl:call-template name="gettext">
       <xsl:with-param name="id" select="'donate'" />
     </xsl:call-template>
   </xsl:template>
 
-  <!-- ranslated word "join" -->
+  <!--translated word "join"-->
   <xsl:template match="join-label">
     <xsl:call-template name="gettext">
       <xsl:with-param name="id" select="'join'" />
     </xsl:call-template>
   </xsl:template>
   
-  <!-- Generate subscribe button in correct language -->
+  <!--generate subscribe button in correct language-->
   <xsl:template match="subscribe-button">
     <xsl:element name="input">
       <xsl:attribute name="id">submit</xsl:attribute>

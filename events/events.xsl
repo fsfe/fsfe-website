@@ -22,7 +22,7 @@
 
   <!-- In /html/body node, append dynamic content -->
   <xsl:template match="/html/body">
-    <body>
+    <xsl:element name="body">
       <!-- First, include what's in the source file -->
       <xsl:apply-templates />
       
@@ -47,7 +47,7 @@
           <xsl:with-param name="display-details" select="'yes'" />
       </xsl:call-template>
 
-    </body>
+    </xsl:element>
   </xsl:template>
 
   <!-- Do not copy <set> and <text> to output at all -->

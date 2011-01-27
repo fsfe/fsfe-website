@@ -1,0 +1,16 @@
+
+To generate logos for a given year:
+
+
+1. modify sponsoring_buttons.svg so that it is for the correct year
+
+- Open sponsoring_buttons.svg with a text editor (svg is xml).
+- Look up what year appears, and replace all occurrences by the year you want.
+
+
+2. automatically generate png files
+
+- cd to the good directory and enter the following command:
+  $ ./generate-all.sh YYYY
+  where YYYY is for example 2012
+- results are to be found in the newly created folder named after the given year.

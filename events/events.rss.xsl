@@ -122,7 +122,7 @@
                 </xsl:when>
                 <xsl:otherwise>
                   <link>
-                    <xsl:text>http://www.fsfeurope.org/events/#</xsl:text>
+                    <xsl:text>http://fsfe.org/events/events.html#</xsl:text>
                     <xsl:value-of select="normalize-space(@start)" />
                     <xsl:text>-</xsl:text>
                     <xsl:value-of select="translate( normalize-space(title), ' ', '-' )" />

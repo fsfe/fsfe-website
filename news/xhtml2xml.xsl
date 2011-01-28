@@ -36,6 +36,10 @@
 	  <xsl:value-of select="/html/body/p[@newsteaser]"/>
 	</xsl:element>
 	
+	<xsl:element name="body-complete">
+	  <xsl:copy-of select="/html/body/node()"/>
+	</xsl:element>
+	
 	<xsl:element name="link">
 	  <xsl:variable name="the_link">
 	    <xsl:value-of select="/html/@link"/>

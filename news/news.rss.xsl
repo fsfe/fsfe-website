@@ -134,9 +134,9 @@
 
               <!-- News body -->
               <xsl:element name="description">
-                <xsl:value-of select="normalize-space(body)"/>
+                <xsl:copy-of select="body-complete/node()"/>
               </xsl:element>
-
+              
               <!-- Link -->
               <xsl:if test="link != ''">
                 <xsl:variable name="link">

@@ -123,7 +123,7 @@
                 <xsl:otherwise>
                   <link>
                     <xsl:text>http://www.fsfeurope.org/events/#</xsl:text>
-                    <xsl:value-of select="@start" />
+                    <xsl:value-of select="@start" />-
                     <xsl:value-of select="translate( normalize-space(title), ' ', '-' )" />
                   </link>
                 </xsl:otherwise>

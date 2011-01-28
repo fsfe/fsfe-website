@@ -134,7 +134,14 @@
 
               <!-- News body -->
               <xsl:element name="description">
-                <xsl:copy-of select="body-complete/node()"/>
+                <xsl:choose>
+                  <xsl:when test="body-complete">
+                    <xsl:copy-of select="body-complete/node()"/>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:copy-of select="normalize-space(body)"/>
+                  </xsl:otherwise>
+                </xsl:choose>
               </xsl:element>
               
               <!-- Link -->

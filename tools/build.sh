@@ -7,14 +7,14 @@
 # however, is done by the Perl script build.pl.
 # -----------------------------------------------------------------------------
 
-SOURCE=/home/www/fsfe
-DEST=/home/www/html
-TMP=/home/www/tmp.$$
-STATUS=/var/www/web
+SOURCE=.
+DEST=../fsfe-web-out/home/www/html
+TMP=../fsfe-web-out/home/www/tmp.$$
+STATUS=../fsfe-web-out/var/www/web
 ALARM_LOCKFILE=alarm_lockfile
 MAKEFILE_PL=${SOURCE}/Makefile.PL
-SVNUPOUTFILE=/tmp/fsfe-svnup-out
-SVNUPERRFILE=/tmp/fsfe-svnup-err
+SVNUPOUTFILE=../fsfe-web-out/tmp/fsfe-svnup-out
+SVNUPERRFILE=../fsfe-web-out/tmp/fsfe-svnup-err
 
 # Since we must grep for svn output messages,
 # let's ensure we get English messages
@@ -41,7 +41,7 @@ if [[ -n "$BUILD_STARTED" && "10#${BUILD_STARTED}" -gt 30 && ! -f ${STATUS}/${AL
 fi
 
 # Redirect output
-exec 1> ${STATUS}/status.txt 2>&1
+#exec 1> ${STATUS}/status.txt 2>&1
 
 # If some build script is already running, don't run it.
 if ps -C "build-df.sh,build-test.sh,build.sh" -o pid= | grep -q -v "$$"; then

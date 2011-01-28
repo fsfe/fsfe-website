@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-
+  
+  <xsl:import href="../tools/xsltsl/translations.xsl" />
+  <xsl:import href="../tools/xsltsl/static-elements.xsl" />
+  
   <xsl:output method="xml" encoding="ISO-8859-1" indent="yes"/>
 
   <xsl:template match="/">
@@ -40,6 +43,17 @@
   </xsl:template>
 
   <xsl:template match="set | tags"/>
+  
+  <!--translated sentence "receive-newsletter"-->
+  <xsl:template match="receive-newsletter">
+    <xsl:call-template name="gettext">
+      <xsl:with-param name="id" select="'receive-newsletter'" />
+    </xsl:call-template>
+  </xsl:template>
+  
+  <xsl:template match="subscribe-nl">
+    <xsl:call-template name="subscribe-nl" />
+  </xsl:template>
   
 </xsl:stylesheet>
 

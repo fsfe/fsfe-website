@@ -7,6 +7,7 @@
   <xsl:import href="tools/xsltsl/date-time.xsl" />
   <xsl:import href="tools/xsltsl/tagging.xsl" />
   <xsl:import href="tools/xsltsl/translations.xsl" />
+  <xsl:import href="tools/xsltsl/static-elements.xsl" />
   <xsl:output method="xml" encoding="UTF-8" indent="yes" />
   
   <!-- 
@@ -110,17 +111,8 @@
     </xsl:call-template>
   </xsl:template>
   
-  <!--generate subscribe button in correct language-->
-  <xsl:template match="subscribe-button">
-    <xsl:element name="input">
-      <xsl:attribute name="id">submit</xsl:attribute>
-      <xsl:attribute name="type">submit</xsl:attribute>
-      <xsl:attribute name="value">
-	    <xsl:call-template name="gettext">
-          <xsl:with-param name="id" select="'subscribe'" />
-        </xsl:call-template>
-      </xsl:attribute>
-    </xsl:element>
+  <xsl:template match="subscribe-nl">
+    <xsl:call-template name="subscribe-nl" />
   </xsl:template>
   
   <!-- Do not copy <set> or <text> to output at all -->

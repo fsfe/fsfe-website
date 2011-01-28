@@ -92,6 +92,13 @@
             </h2>
         </xsl:if>
         
+        <!-- provide an anchor for each event so that it can be linked to from the events rss feed -->
+        <xsl:element name="a">
+          <xsl:attribute name="name">
+            <xsl:value-of select="translate( normalize-space(title), ' ', '-' )" />
+          </xsl:attribute>
+        </xsl:element>
+        
         <!-- Now, the event block -->
         <div class="entry">
             <xsl:choose>

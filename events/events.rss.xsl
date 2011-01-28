@@ -82,7 +82,7 @@
           <link>http://www.fsfeurope.org/events/</link>
         </image>
 
-        <!-- News items -->
+        <!-- Event items -->
         <xsl:for-each select="/html/set/event
           [translate (@end, '-', '') &gt;= translate ($today, '-', '')]">
           <xsl:sort select="@start" />
@@ -123,9 +123,7 @@
                 <xsl:otherwise>
                   <link>
                     <xsl:text>http://www.fsfeurope.org/events/#</xsl:text>
-                    <xsl:value-of select="@start" />
-                    <xsl:text>-</xsl:text>
-                    <xsl:value-of select="@end" />
+                    <xsl:value-of select="translate( normalize-space(title), ' ', '-' )" />
                   </link>
                 </xsl:otherwise>
               </xsl:choose>

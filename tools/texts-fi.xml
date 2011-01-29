@@ -36,17 +36,29 @@
     osallistumisesta ja muusta 
     <a href="/contribute/contribute.html">tältä sivulta</a>.
   </text>
-  <text id="search">Search</text>
-  <text id="submit">Submit</text>
-  <text id="language">Language</text>
+
+  <text id="source">Lähdekoodi</text>
+  <text id="contact">Ota yhteyttä</text>
+  <text id="translate">Suomenna tämä sivu?</text>
+
+  <!-- Info box -->
+  <text id="under-construction">
+    <strong>Warning: </strong>This page is under construction. Please do not attempt translation as its content is subject to change.
+  </text>
+
+  <text id="search">Hae</text>
+  <text id="submit">Lähetä</text>
+
+  <text id="language">Kieli</text>
+
+ <!-- Article metadata -->
+ <text id="author">Tekijä</text>
+ <text id="published">Julkaistu</text>
+ <text id="download">Lataa</text>
 
   <!-- Conjunctions -->
   <text id="to">–</text>
 
- <!-- Article metadata -->
- <text id="author">Author</text>
- <text id="published">Published</text>
- <text id="download">Download</text>
   <!-- Menu -->
   <text id="fsfe/about">Tietoja</text>
   <text id="fsfe/projects">Työmme</text>
@@ -58,10 +70,11 @@
   <text id="fsfe/press">Lehdistö</text>
   <text id="fsfe/thankgnus">Kiitokset</text>
   <text id="fellowship/fellowship">Fellowship-jäsenet</text>
-  <text id="fellowship/1-wiki">Wiki</text>
-  <text id="fellowship/2-planet">Blogit</text>
-  <text id="fellowship/3-join">Liity</text>
-  
+  <text id="fellowship/card">Kortti</text>
+  <text id="fellowship/communicate">Yhteystiedot</text>
+  <text id="fellowship/contact">Yhteystiedot</text>
+  <text id="planet/planet/">Yhteystiedot</text>
+ 
   <!-- Date time -->
   <text id="months/1">tammikuu</text>
   <text id="months/2">helmikuu</text>
@@ -104,4 +117,7 @@
   <text id="weekdays-abbreviated/5">pe</text>
   <text id="weekdays-abbreviated/6">la</text>
   <text id="weekdays-abbreviated/7">su</text>
+
+  <text id="statement">Free Software Foundation Europe on voittoa tavoittelematon järjestö, joka on omistautunut vapaiden ohjelmistojen edistämiselle ja tekee töitä tukeakseen vapauksia kasvavassa digitaalisessa yhteiskunnassa</text>
+  <text id="learn-more">Lue lisää</text>
 </textset>

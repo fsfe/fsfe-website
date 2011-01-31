@@ -54,11 +54,11 @@ while (<TEMPLATE>) {
     print "      <input type=\"hidden\" name=\"currency\"     value=\"EUR\"/>\n";
     print "      <input type=\"hidden\" name=\"language\"     value=\"$language\"/>\n";
     print "      <!-- interface template -->\n";
-    print "      <input type=\"hidden\" name=\"TP\"           value=\"http://test.fsfe.org/donate/tmpl-concardis.$language.html\"/>\n";
+    print "      <input type=\"hidden\" name=\"TP\"           value=\"http://www.fsfe.org/projects/ftf/tickets/tmpl-concardis.$language.html\"/>\n";
     print "      <input type=\"hidden\" name=\"PMListType\"   value=\"2\"/>\n";
     print "      <!-- post-payment redirection -->\n";
-    print "      <input type=\"hidden\" name=\"accepturl\"    value=\"http://test.fsfe.org/donate/thankyou.$language.html\"/>\n";
-    print "      <input type=\"hidden\" name=\"cancelurl\"    value=\"http://test.fsfe.org/donate/cancel.$language.html\"/>\n";
+    print "      <input type=\"hidden\" name=\"accepturl\"    value=\"http://www.fsfe.org/projects/ftf/tickets/thankyou.$language.html\"/>\n";
+    print "      <input type=\"hidden\" name=\"cancelurl\"    value=\"http://www.fsfe.org/projects/ftf/tickets/cancel.$language.html\"/>\n";
     print "      <!-- SHA1 signature -->\n";
     print "      <input type=\"hidden\" name=\"SHASign\"      value=\"$shasum\"/>\n";
     print "      <!-- Javascript submit() method only works if no submit button is active -->\n";

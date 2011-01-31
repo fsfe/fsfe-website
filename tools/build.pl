@@ -676,6 +676,10 @@ sub process {
             }
 	    # replace anchor
 	    $href .= $anchor;
+            # For pages running on an external server, use full URL
+            if ($document->getAttribute("external")) {
+              $href = "http://www.fsfe.org$href";
+            }
             $_->setAttribute("href", $href);
           }
         }
@@ -754,6 +758,9 @@ sub clone_document {
         $_->unbindNode();
 	my $n = $_->cloneNode(1);
 	$doc->appendChild($n);
+    }
+    if ($sourcedoc->documentElement->getAttribute("external")) {
+      $doc->setAttribute("external", "yes");
     }
 }
 

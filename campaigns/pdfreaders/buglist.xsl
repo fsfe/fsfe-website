@@ -29,19 +29,22 @@
   <xsl:template match="dynamic-content">
     <xsl:for-each select="/html/set/buglist">
       <xsl:sort select="@country"/>
-
+      
       <xsl:variable name="country">
         <xsl:value-of select="@country"/>
       </xsl:variable>
-
+      
       <!-- Heading -->
       <xsl:element name="h2">
         <xsl:attribute name="id">
           <xsl:value-of select="$country"/>
         </xsl:attribute>
         <xsl:value-of select="/html/set/country[@id=$country]"/>
+        <xsl:variable name="nbsolved" select="count( /html/set/buglist[@country=$country]/bug[@closed != ''] )" />
+        <xsl:variable name="nbinst" select="count( /html/set/buglist[@country=$country]/bug )" />
+        (<xsl:value-of select="$nbsolved" />/<xsl:value-of select="$nbinst" /> = <xsl:value-of select="floor($nbsolved div $nbinst * 100)" />%)
       </xsl:element>
-
+      
       <!-- Table header -->
       <xsl:element name="table">
         <xsl:element name="tr">
@@ -55,13 +58,13 @@
           <xsl:element name="th"><xsl:value-of select="/html/text[@id='closedby']"/></xsl:element>
           <xsl:element name="th"><xsl:value-of select="/html/text[@id='comment']"/></xsl:element>
         </xsl:element>
-
+        
         <!-- Table rows -->
         <xsl:for-each select="bug">
           <xsl:element name="tr">
-	    <xsl:if test = "string(@closed)">
-	      <xsl:attribute name="class">highlighted</xsl:attribute>
-	    </xsl:if>
+	        <xsl:if test = "string(@closed)">
+	          <xsl:attribute name="class">highlighted</xsl:attribute>
+	        </xsl:if>
             <xsl:element name="td">
               <xsl:element name="a">
                 <xsl:attribute name="href">

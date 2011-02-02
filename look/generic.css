@@ -1500,4 +1500,17 @@ ul.people li:last-child {
 
 .people .email {
   font-style: italic;
-}*/
+}
+
+
+/* Testimonials divs */
+
+.testimonial {
+    overflow: auto;
+    clear: both;
+}
+
+.testimonial img {
+    float: left;
+    margin-right: 10px;
+}

@@ -17,7 +17,9 @@
 		
     <xsl:for-each select="/html/set/news[ translate (@date, '-', '') &lt;= translate ($today, '-', '')
                           and (tags/tag = $tag or $tag='')
-                          and tags/tag != 'newsletter' ]">
+                          and tags/tag != 'newsletter'
+                          and not( @type = 'newsletter' ) ]">
+                          <!-- @type != 'newsletter' is for legacy -->
 	    <xsl:sort select="@date" order="descending" />
 	    <xsl:if test="position() &lt;= $nb-items or $nb-items=''">
 		    <xsl:call-template name="news" />

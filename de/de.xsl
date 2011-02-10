@@ -4,8 +4,8 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:dt="http://xsltsl.org/date-time">
   
-  <xsl:import href="../../tools/xsltsl/tagging.xsl" />
-  <xsl:import href="../../tools/xsltsl/countries.xsl" />
+  <xsl:import href="../tools/xsltsl/tagging.xsl" />
+  <xsl:import href="../tools/xsltsl/countries.xsl" />
   <xsl:output method="xml" encoding="UTF-8" indent="yes" />
 
   <!-- To localise this page to a new country, copy this file and change the following:

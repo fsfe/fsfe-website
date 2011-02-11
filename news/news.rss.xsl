@@ -138,10 +138,12 @@
               </xsl:element>
               
               <!-- News body -->
-              <xsl:element name="description">
+              <xsl:element name="content:encoded">
                 <xsl:choose>
                   <xsl:when test="body-complete">
-                    <xsl:copy-of select="body-complete/node()"/>
+                    <xsl:text>&lt;![CDATA[</xsl:text>
+                      <xsl:copy-of select="body-complete/node()"/>
+                    <xsl:text>]]&gt;</xsl:text>
                   </xsl:when>
                   <xsl:otherwise>
                     <xsl:copy-of select="normalize-space(body)"/>

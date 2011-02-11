@@ -138,7 +138,7 @@
               </xsl:element>
               
               <!-- News body -->
-              <xsl:element name="content:encoded">
+              <xsl:element namespace="content" name="encoded">
                 <xsl:choose>
                   <xsl:when test="body-complete">
                     <xsl:text>&lt;![CDATA[</xsl:text>

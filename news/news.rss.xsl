@@ -132,6 +132,11 @@
                 <xsl:value-of select="title"/>
               </xsl:element>
 
+              <!-- News description -->
+              <xsl:element name="description">
+                <xsl:copy-of select="normalize-space(body)"/>
+              </xsl:element>
+              
               <!-- News body -->
               <xsl:element name="description">
                 <xsl:choose>

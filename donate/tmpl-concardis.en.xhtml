@@ -29,6 +29,10 @@
       form label {
         display: inline
       }
+      input[type="image"] {
+        margin: 0;
+        position: relative;
+      }
       -->
     </style>
   </head>
@@ -36,11 +40,17 @@
   <body>
     <h1>Donate online</h1>
 
-    <p id="introduction">
-      For online donations we use Concardis as a payment service provider. Transactions are
-      executed on their secure server; FSFE does not handle account 
-      or credit card information. Please follow the steps described below to complete your donation.
-    </p>
+    <div id="introduction">
+      <div class="image">
+        <img src="/graphics/piggy-bank-lock.png" alt="Piggy-bank"/>
+      </div>
+
+      <p>
+        For online donations we use Concardis as a payment service provider. Transactions are
+        executed on their secure server; FSFE does not handle account 
+        or credit card information. Please follow the steps described below to complete your donation.
+      </p>
+    </div>
 
     $$$PAYMENT ZONE$$$
   </body>

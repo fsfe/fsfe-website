@@ -67,7 +67,7 @@
       </xsl:if>
       <xsl:element name="link">
         <xsl:attribute name="rel">shortcut_icon</xsl:attribute>
-        <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/graphics/fsfev.ico</xsl:attribute>
+        <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/graphics/fsfev.png</xsl:attribute>
         <xsl:attribute name="type">image/x-icon</xsl:attribute>
       </xsl:element>
       <xsl:element name="link">

@@ -67,8 +67,10 @@
     <xsl:element name="a">
       <xsl:attribute name="href">/campaigns/valentine/2011/valentine-2011<xsl:value-of select="/buildinfo/@language" />.html</xsl:attribute>
       
+      <xsl:variable name="lang" select="/buildinfo/@language" />
+      
       <xsl:variable name="img-path"
-                    select="concat( '/campaigns/valentine/valentine-358x60-', /buildinfo/@language, '.png' )" />
+                    select="concat( '/campaigns/valentine/valentine-358x60-', substring($lang, 2, 2) , '.png' )" />
       
       <xsl:element name="img">
         <xsl:attribute name="src">

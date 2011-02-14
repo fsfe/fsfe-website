@@ -20,8 +20,8 @@
   <xsl:template match="identica">
     <xsl:element name="div">
       <xsl:attribute name="class">entry</xsl:attribute>
-      <xsl:attribute name="float">right</xsl:attribute>
-    
+      <xsl:attribute name="style">float: right;</xsl:attribute>
+      
       <xsl:element name="script">
         <xsl:attribute name="type">text/javascript</xsl:attribute>
         <xsl:attribute name="src">http://identi.ca/js/identica-badge.js</xsl:attribute>
@@ -38,9 +38,7 @@
 	      </xsl:text>
 	      
 	    </xsl:element>
-	    
 	  </xsl:element>
-	  
   </xsl:template>
   
   <!-- Do not copy <set> or <text> to output at all -->

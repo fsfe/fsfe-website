@@ -18,7 +18,7 @@
   </xsl:template>
   
   <xsl:template match="identica">
-    <xsl:element name="div">
+    <!--<xsl:element name="div">
       <xsl:attribute name="class">entry</xsl:attribute>
       <xsl:attribute name="style">float: right;</xsl:attribute>
       
@@ -38,7 +38,7 @@
 	      </xsl:text>
 	      
 	    </xsl:element>
-	  </xsl:element>
+	  </xsl:element>-->
   </xsl:template>
   
   <!-- Do not copy <set> or <text> to output at all -->

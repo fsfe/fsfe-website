@@ -64,19 +64,24 @@
   
   <xsl:template match="campaign-box-3">
     
-    <xsl:variable name="img-path"
-                  select="concat( '/campaigns/valentine/valentine-358x60-', /buildinfo/@language, '.png' )" />
+    <xsl:element name="a">
+      <xsl:attribute name="href">/campaigns/valentine/2010/valentine-2010.<xsl:value-of select="/buildinfo/@language" />.html</xsl:element>
     
-    <xsl:element name="img">
-      <xsl:attribute name="src">
-        <xsl:value-of select="$img-path" />
-      </xsl:attribute>
-      <!-- And on error (if previous file does not exist), we load our default image -->
-      <xsl:attribute name="onerror">
-        <xsl:text>this.src='/campaigns/valentine/valentine-358x60-en.png';</xsl:text>
-      </xsl:attribute>
-      <xsl:attribute name="alt"
-                     value="No picture" />
+      <xsl:variable name="img-path"
+                    select="concat( '/campaigns/valentine/valentine-358x60-', /buildinfo/@language, '.png' )" />
+      
+      <xsl:element name="img">
+        <xsl:attribute name="src">
+          <xsl:value-of select="$img-path" />
+        </xsl:attribute>
+        <!-- And on error (if previous file does not exist), we load our default image -->
+        <xsl:attribute name="onerror">
+          <xsl:text>this.src='/campaigns/valentine/valentine-358x60-en.png';</xsl:text>
+        </xsl:attribute>
+        <xsl:attribute name="alt"
+                       value="No picture" />
+      </xsl:element>
+    
     </xsl:element>
     
   </xsl:template>

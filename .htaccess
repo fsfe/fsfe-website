@@ -38,7 +38,6 @@ RewriteRule ^campaigns/vd2010/(.*) /campaigns/valentine/2010/$1 [redirect=perman
 RewriteRule ^campaigns/vd2010 /campaigns/valentine/2010/valentine-2010 [redirect=permanent]
 # current
 RewriteRule ^valentine/(.*) /campaigns/valentine/2011/valentine-2011$1 [redirect=permanent]
-RewriteRule ^campaigns/valentine/2011/ /campaigns/valentine/2011/valentine-2011 [redirect=permanent]
 
 
 # Temporary fix unitl we have a /freesoftware dir for contribute/advocacy/cwfs.en.html

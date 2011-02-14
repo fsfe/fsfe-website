@@ -6,7 +6,8 @@
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:dt="http://xsltsl.org/date-time"
                 xmlns:weekdays="."
-                xmlns:months=".">
+                xmlns:months="."
+                xmlns:content="http://purl.org/rss/1.0/modules/content/">
 
   <xsl:import href="date-time.xsl" />
 
@@ -138,17 +139,17 @@
               </xsl:element>
               
               <!-- News body -->
-              <xsl:element namespace="content" name="encoded">
+              <xsl:element name="content:encoded">
+                <xsl:text>&lt;![CDATA[</xsl:text>
                 <xsl:choose>
                   <xsl:when test="body-complete">
-                    <xsl:text>&lt;![CDATA[</xsl:text>
-                      <xsl:copy-of select="body-complete/node()"/>
-                    <xsl:text>]]&gt;</xsl:text>
+                    <xsl:copy-of select="body-complete/node()"/>
                   </xsl:when>
                   <xsl:otherwise>
                     <xsl:copy-of select="normalize-space(body)"/>
                   </xsl:otherwise>
                 </xsl:choose>
+                <xsl:text disable-output-escaping="yes">]]&gt;</xsl:text>
               </xsl:element>
               
               <!-- Link -->

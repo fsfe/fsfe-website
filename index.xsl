@@ -65,8 +65,8 @@
   <xsl:template match="campaign-box-3">
     
     <xsl:element name="a">
-      <xsl:attribute name="href">/campaigns/valentine/2010/valentine-2010.<xsl:value-of select="/buildinfo/@language" />.html</xsl:element>
-    
+      <xsl:attribute name="href">/campaigns/valentine/2010/valentine-2010.<xsl:value-of select="/buildinfo/@language" />.html</xsl:attribute>
+      
       <xsl:variable name="img-path"
                     select="concat( '/campaigns/valentine/valentine-358x60-', /buildinfo/@language, '.png' )" />
       

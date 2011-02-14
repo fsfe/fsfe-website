@@ -1208,13 +1208,12 @@ a.fn {
 
 #campaign-box-3 {
   -moz-border-radius: 7px 7px 7px 7px;
-  /*background-color: silver;*/
+  background-color: silver;
   float: left;
   min-height: 45px;
   margin: 1.5em 0 0 0;
   width: 100%;
-  text-align: center;
-  /*display:none;*/
+  display:none;
 }
 
 a.donate-box, a.fellowship-box {

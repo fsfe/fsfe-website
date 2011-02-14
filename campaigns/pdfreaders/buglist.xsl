@@ -24,9 +24,19 @@
 
     </xsl:for-each>
   </xsl:template>
-
+  
+  
+  <!-- <xsl:key name="indivs-by-name" match="/html/set/buglist/bug/@name" use="normalize-space(.)" />
+  <xsl:key name="groups-by-name" match="/html/set/buglist/bug/@group" use="normalize-space(.)" /> -->
+  
   <!-- Fill dynamic content -->
   <xsl:template match="dynamic-content">
+    
+    <!-- <xsl:value-of select="count( /html/set/buglist/bug[@closed != ''] ) " /><br/>
+    <xsl:value-of select="count( /html/set/buglist/bug ) " /><br/>
+    <xsl:value-of select="floor( count(/html/set/buglist/bug[@closed != '']) div count( /html/set/buglist/bug ) * 100)" /><br/>
+    -->
+    
     <xsl:for-each select="/html/set/buglist">
       <xsl:sort select="@country"/>
       
@@ -85,6 +95,33 @@
       </xsl:element>
 
     </xsl:for-each>
+    
+    <!-- List of participants -->
+    <!-- 
+    <xsl:value-of select="count(/html/set/buglist/bug/@group[ generate-id() = generate-id(key('groups-by-name', normalize-space(.))) ])" />
+    
+    <xsl:element name="ul">
+      
+      <xsl:for-each select=" /html/set/buglist/bug/@group[ generate-id() = generate-id(key('groups-by-name', normalize-space(.))) ] ">
+        <xsl:sort select="count( /html/set/buglist/bug/@name = . )" data-type="number" />
+        
+        <xsl:variable name="name" select="." />
+        
+        <xsl:if test="position() &lt;= 5">
+          
+          <xsl:element name="li">
+            <xsl:value-of select="count( /html/set/buglist/bug[@group=$name] )" />
+            <xsl:text>-</xsl:text>
+            <xsl:value-of select="$name" />
+          </xsl:element>
+          
+        </xsl:if>
+        
+      </xsl:for-each>
+    
+    </xsl:element>
+    -->
+    
   </xsl:template>
 
   <!-- Do not copy <set> and <text> to output at all -->

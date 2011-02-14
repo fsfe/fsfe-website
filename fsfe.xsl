@@ -48,7 +48,7 @@
       <xsl:element name="link">
         <xsl:attribute name="rel">stylesheet</xsl:attribute>
         <xsl:attribute name="media">all</xsl:attribute>
-        <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/generic.css</xsl:attribute>
+        <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/genericv.css</xsl:attribute>
         <xsl:attribute name="type">text/css</xsl:attribute>
       </xsl:element>
       <xsl:element name="link">
@@ -227,7 +227,7 @@
 		  <xsl:attribute name="href">/</xsl:attribute>
 		  <xsl:element name="img">
 		    <xsl:attribute name="alt">FSFE Logo</xsl:attribute>
-                    <xsl:attribute name="src"><xsl:value-of select="$urlprefix"/>/graphics/logo.png</xsl:attribute>
+                    <xsl:attribute name="src"><xsl:value-of select="$urlprefix"/>/campaigns/valentine/logo-vd-t.png</xsl:attribute>
 		  </xsl:element>
 		</xsl:element>
 	      </xsl:element>

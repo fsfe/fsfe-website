@@ -11,7 +11,7 @@
 
   <xsl:import href="date-time.xsl" />
 
-  <xsl:output method="xml" encoding="utf-8" indent="yes" />
+  <xsl:output method="xml" encoding="utf-8" indent="yes"/>
 
   <!-- $today = current date (given as <html date="...">) -->
   <xsl:variable name="today">
@@ -140,7 +140,6 @@
               
               <!-- News body -->
               <xsl:element name="content:encoded">
-                <xsl:text>&lt;![CDATA[</xsl:text>
                 <xsl:choose>
                   <xsl:when test="body-complete">
                     <xsl:copy-of select="body-complete/node()"/>
@@ -149,7 +148,6 @@
                     <xsl:copy-of select="normalize-space(body)"/>
                   </xsl:otherwise>
                 </xsl:choose>
-                <xsl:text disable-output-escaping="yes">]]&gt;</xsl:text>
               </xsl:element>
               
               <!-- Link -->

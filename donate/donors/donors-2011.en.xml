@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Please keep each list alphabetically ordered.  Emacs users want to set
+  sort-fold-case to true and run sort-lines on a region.  Vi+ users can
+  visually select the list and use the :sort command.
+
+  The date="..." should be filled with the last date when a donation from this
+  donor came in. It is important for the "current" thankgnus page.
+
+  Currently, the date="..." may only be set in a single xml file for the same
+  donor, so if you add a donor to a file of the new year, don't forget to
+  remove the date="..." in the old year's file.
+-->
+
+<donorset>
+  <patrons>
+    <donor date="2011-12-31" img="donors/freiheit.png">freiheit.com technologies</donor>
+    <donor date="2011-12-31" img="donors/linuxhotel.png">Linuxhotel Villa Vogelsang</donor>
+  </patrons>
+
+  <sustainingcontributors>
+  </sustainingcontributors>
+
+  <contributors>
+    <donor date="2011-12-31">Christian Barth</donor>
+    <donor date="2011-12-31">inmedias.it GmbH</donor>
+    <donor date="2011-12-31">Joachim Zobel</donor>
+    <donor date="2011-12-31">Mario Lardieri</donor>
+  </contributors>
+
+  <supporters>
+    <donor date="2011-12-31">Bernhard Stosik</donor>
+    <donor date="2011-12-31">Communitare GmbH</donor>
+    <donor date="2011-12-31">Fabian Schury</donor>
+    <donor date="2011-12-31">Holger Doepner</donor>
+    <donor date="2011-01-03">Hostsharing e.G.</donor>
+    <donor date="2011-01-06">Jan Hecking</donor>
+    <donor date="2011-12-31">Jan Kupfer</donor>
+    <donor date="2011-01-26">Jean-Bruno Luginbuehl</donor>
+    <donor date="2011-12-31">Joachim Krantz</donor>
+    <donor date="2011-12-31">Michael Mosmann</donor>
+    <donor date="2011-12-31">Michael Pollmeier</donor>
+    <donor date="2011-02-03">Network Theory Ltd</donor>
+    <donor date="2011-12-31">Roland Hafner</donor>
+    <donor date="2011-12-31">Thiemo Nagel</donor>
+    <donor date="2011-12-31">Torsten Loehr</donor>
+    <donor date="2011-12-31">Ulrich Walter</donor>
+    <donor date="2011-12-31">Uwe Henschel</donor>
+    <donor date="2011-12-31">Werner Wiethege</donor>
+  </supporters>
+</donorset>

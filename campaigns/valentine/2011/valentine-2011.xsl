@@ -28,7 +28,7 @@
       
         <xsl:text>
 	          {
-	            "user":"ilovefs",
+	            "user":"ireallylovefs",
 	            "server":"identi.ca",
 	            "border":"0px",
 	            "background":"none",

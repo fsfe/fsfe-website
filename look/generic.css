@@ -1513,3 +1513,14 @@ ul.people li:last-child {
     float: left;
     margin-right: 10px;
 }
+
+
+/* address div */
+address {
+  margin: .8em 0; /* should be the same as for <p> */
+}
+
+/* fieldsets - remove that ugly border */
+fieldset {
+  border: medium none;
+}

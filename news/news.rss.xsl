@@ -136,6 +136,9 @@
               <!-- News description -->
               <xsl:element name="description">
                 <xsl:copy-of select="normalize-space(body)"/>
+                <xsl:text>
+Become a member, join the Fellowship: https://fellowship.fsfe.org/login/join.php
+Support our work, make a donation: http://fsfe.org/donate/donate.html</xsl:text>
               </xsl:element>
               
               <!-- News body -->
@@ -149,6 +152,25 @@
                     <xsl:copy-of select="normalize-space(body)"/>
                   </xsl:otherwise>
                 </xsl:choose>
+                
+                <xsl:element name="p">
+                  
+                  <xsl:text>Become a member, </xsl:text>
+                  <xsl:element name="a">
+                    <xsl:attribute name="href">https://fellowship.fsfe.org/login/join.php</xsl:attribute>
+                    <xsl:text>join the Fellowship</xsl:text>
+                  </xsl:element>
+                  
+                  <xsl:element name="br" />
+                  
+                  <xsl:text>Support our work, </xsl:text>
+                  <xsl:element name="a">
+                    <xsl:attribute name="href">http://fsfe.org/donate/donate.html</xsl:attribute>
+                    <xsl:text>make a donation</xsl:text>
+                  </xsl:element>
+                  
+                </xsl:element>
+                
                 <xsl:text disable-output-escaping="yes">]]&gt;</xsl:text>
               </xsl:element>
               

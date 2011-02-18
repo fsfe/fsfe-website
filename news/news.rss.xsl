@@ -72,7 +72,7 @@
         <xsl:when test="starts-with ($link, 'https:')">
           <xsl:value-of select="$link" />
         </xsl:when>
-        <xsl:otherwise>http://www.fsfeurope.org<xsl:value-of select="$link" />
+        <xsl:otherwise>http://fsfe.org<xsl:value-of select="$link" />
         </xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
@@ -143,7 +143,7 @@
                 <xsl:text disable-output-escaping="yes">&lt;![CDATA[</xsl:text>
                 <xsl:choose>
                   <xsl:when test="body-complete">
-                    <xsl:apply-templates />
+                    <xsl:copy-of select="body-complete"/>
                   </xsl:when>
                   <xsl:otherwise>
                     <xsl:copy-of select="normalize-space(body)"/>
@@ -195,17 +195,8 @@
     </rss>
   </xsl:template>
   
-  <xsl:template match="link">
-    <xsl:choose>
-      <xsl:when test="substring(text(),1,1) = '/'">
-        <xsl:text>http://fsfe.org</xsl:text>
-        <xsl:value-of select="text()" />
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:value-of select="text()" />
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
+  <!-- Do not copy <body-complete> to output at all -->
+  <xsl:template match="body-complete"/>
   
   <!-- For all other nodes, copy verbatim -->
   <xsl:template match="@*|node()" priority="-1">

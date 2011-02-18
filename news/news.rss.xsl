@@ -143,7 +143,7 @@
                 <xsl:text disable-output-escaping="yes">&lt;![CDATA[</xsl:text>
                 <xsl:choose>
                   <xsl:when test="body-complete">
-                    <xsl:copy-of select="body-complete"/>
+                    <xsl:copy-of select="body-complete/node()"/>
                   </xsl:when>
                   <xsl:otherwise>
                     <xsl:copy-of select="normalize-space(body)"/>

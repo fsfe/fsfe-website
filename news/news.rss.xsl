@@ -127,7 +127,7 @@
           <xsl:sort select="@date" order="descending"/>
           <xsl:if test="position() &lt; 11">
             <xsl:element name="item">
-
+              
               <!-- Title -->
               <xsl:element name="title">
                 <xsl:value-of select="title"/>
@@ -143,7 +143,7 @@
                 <xsl:text disable-output-escaping="yes">&lt;![CDATA[</xsl:text>
                 <xsl:choose>
                   <xsl:when test="body-complete">
-                    <xsl:copy-of select="body-complete/node()"/>
+                    <xsl:apply-templates />
                   </xsl:when>
                   <xsl:otherwise>
                     <xsl:copy-of select="normalize-space(body)"/>
@@ -194,4 +194,24 @@
       </channel>
     </rss>
   </xsl:template>
+  
+  <xsl:template match="link">
+    <xsl:choose>
+      <xsl:when test="substring(text(),1,1) = '/'">
+        <xsl:text>http://fsfe.org</xsl:text>
+        <xsl:value-of select="text()" />
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="text()" />
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+  
+  <!-- For all other nodes, copy verbatim -->
+  <xsl:template match="@*|node()" priority="-1">
+    <xsl:copy>
+      <xsl:apply-templates select="@*|node()"/>
+    </xsl:copy>
+  </xsl:template>
+  
 </xsl:stylesheet>

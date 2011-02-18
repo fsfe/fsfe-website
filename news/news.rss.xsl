@@ -223,7 +223,7 @@ Support our work, make a donation: http://fsfe.org/donate/donate.html</xsl:text>
       <xsl:attribute name="href">
         <xsl:choose>
           <xsl:when test="substring(@href,1,1) = '/'">
-            <xsl:text>http//fsfe.org</xsl:text>
+            <xsl:text>http://fsfe.org</xsl:text>
             <xsl:value-of select="@href" />
           </xsl:when>
           <xsl:otherwise>
@@ -240,7 +240,7 @@ Support our work, make a donation: http://fsfe.org/donate/donate.html</xsl:text>
       <xsl:attribute name="src">
         <xsl:choose>
           <xsl:when test="substring(@src,1,1) = '/'">
-            <xsl:text>http//fsfe.org</xsl:text>
+            <xsl:text>http://fsfe.org</xsl:text>
             <xsl:value-of select="@src" />
           </xsl:when>
           <xsl:otherwise>

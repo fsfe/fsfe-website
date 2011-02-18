@@ -220,6 +220,7 @@ Support our work, make a donation: http://fsfe.org/donate/donate.html</xsl:text>
   <!-- take care that links within <content:encoded> are not relative -->
   <xsl:template match="a">
     <xsl:element name="a">
+      
       <xsl:attribute name="href">
         <xsl:choose>
           <xsl:when test="substring(@href,1,1) = '/'">
@@ -231,6 +232,9 @@ Support our work, make a donation: http://fsfe.org/donate/donate.html</xsl:text>
           </xsl:otherwise>
         </xsl:choose>
       </xsl:attribute>
+      
+      <xsl:value-of select="." />
+      
     </xsl:element>
   </xsl:template>
   

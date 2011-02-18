@@ -143,7 +143,7 @@
                 <xsl:text disable-output-escaping="yes">&lt;![CDATA[</xsl:text>
                 <xsl:choose>
                   <xsl:when test="body-complete">
-                    <xsl:copy-of select="body-complete/node()"/>
+                    <xsl:apply-templates select="body-complete/*"/>
                   </xsl:when>
                   <xsl:otherwise>
                     <xsl:copy-of select="normalize-space(body)"/>
@@ -193,6 +193,23 @@
         <!-- Footer -->
       </channel>
     </rss>
+  </xsl:template>
+  
+  <!-- take care that links within <content:encoded> are not relative -->
+  <xsl:template match="a">
+    <xsl:element name="a">
+      <xsl:attribute name="href">
+        <xsl:choose>
+          <xsl:when test="substring(@href,1,1) = '/'">
+            <xsl:text>http//fsfe.org</xsl:text>
+            <xsl:value-of select="@href" />
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:value-of select="@href" />
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:attribute>
+    </xsl:element>
   </xsl:template>
   
   <!-- Do not copy <body-complete> to output at all -->

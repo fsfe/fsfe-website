@@ -212,6 +212,23 @@
     </xsl:element>
   </xsl:template>
   
+  <!-- as well as images -->
+  <xsl:template match="img">
+    <xsl:element name="img">
+      <xsl:attribute name="src">
+        <xsl:choose>
+          <xsl:when test="substring(@src,1,1) = '/'">
+            <xsl:text>http//fsfe.org</xsl:text>
+            <xsl:value-of select="@src" />
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:value-of select="@src" />
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:attribute>
+    </xsl:element>
+  </xsl:template>
+  
   <!-- Do not copy <body-complete> to output at all -->
   <xsl:template match="body-complete"/>
   

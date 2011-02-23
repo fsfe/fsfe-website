@@ -1180,11 +1180,12 @@ a.fn {
 
 #campaign-box-1 a h3 {
   display: block;
-  color: #9E1321;
+  color: #202D79;
   font-family: "Lucida Sans", sans-serif;
-  font-size: 2em;
+  font-size: 1.8em;
   margin: .5em;
-  width: 50%;
+  width: 40%;
+  margin-top: 70px;
 }
 
 #campaign-box-1 a h3:hover {

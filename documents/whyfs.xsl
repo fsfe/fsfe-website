@@ -18,6 +18,9 @@
       </body>
     </html>
   </xsl:template>
+  
+  <!-- Do not copy <set> to output at all -->
+  <xsl:template match="set" />
 
   <xsl:template match="@*|node()" priority="-1">
     <xsl:copy>

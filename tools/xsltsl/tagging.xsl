@@ -25,13 +25,6 @@
 		    <xsl:call-template name="news" />
 	    </xsl:if>
 		</xsl:for-each>
-    
-    <xsl:element name="p">
-      <xsl:element name="a">
-        <xsl:attribute name="href">/news/news.html</xsl:attribute>
-        <xsl:call-template name="more-label" /><xsl:text>…</xsl:text>
-      </xsl:element>
-    </xsl:element>
 		
 	</xsl:template>
 	
@@ -117,13 +110,6 @@
 	        </xsl:otherwise>
 	    
 	    </xsl:choose>
-	    
-	    <xsl:element name="p">
-        <xsl:element name="a">
-          <xsl:attribute name="href">/events/events.html</xsl:attribute>
-          <xsl:call-template name="more-label" /><xsl:text>…</xsl:text>
-        </xsl:element>
-      </xsl:element>
 					
 	</xsl:template>
 	

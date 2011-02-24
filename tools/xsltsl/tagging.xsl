@@ -30,7 +30,7 @@
       <xsl:element name="a">
         <xsl:attribute name="href">/news/news.html</xsl:attribute>
         <xsl:call-template name="more-label" /><xsl:text>…</xsl:text>
-      <xsl:element>
+      </xsl:element>
     </xsl:element>
 		
 	</xsl:template>
@@ -122,7 +122,7 @@
         <xsl:element name="a">
           <xsl:attribute name="href">/events/events.html</xsl:attribute>
           <xsl:call-template name="more-label" /><xsl:text>…</xsl:text>
-        <xsl:element>
+        </xsl:element>
       </xsl:element>
 					
 	</xsl:template>

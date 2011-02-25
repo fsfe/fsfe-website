@@ -92,6 +92,13 @@ our %languages = (
 our $current_date = strftime "%Y-%m-%d", localtime;
 our $current_time = strftime "%Y-%m-%d %H:%M:%S", localtime;
 
+
+# This static array contains files that can't be out of date
+our %cant_be_outdated = (
+  "news/news" => 1
+);
+
+
 #
 # Parse the command line options. We need two; where to put the finished
 # pages and what to use as base for the input.
@@ -539,50 +546,51 @@ sub process {
           #
           # Now, while we're just at it, we create the RSS feeds if we want any
           #
-	  if (-f "$opts{i}/$file.rss.xsl") {
+	        if (-f "$opts{i}/$file.rss.xsl") {
             my $style_doc = $parser->parse_file("$opts{i}/$file.rss.xsl");
-	    my $stylesheet = $xslt_parser->parse_stylesheet($style_doc);
-	    my $results = $stylesheet->transform($sourcedoc);
-	    $stylesheet->output_file($results, "$opts{o}/$dir/$file.$lang.rss")
-		unless $opts{n};
+	          my $stylesheet = $xslt_parser->parse_stylesheet($style_doc);
+	          my $results = $stylesheet->transform($sourcedoc);
+	          $stylesheet->output_file($results, "$opts{o}/$dir/$file.$lang.rss")
+    	      unless $opts{n};
           }
 
-		  #
+    		  #
           # and possibly the corresponding iCal (ics) file
           #
-	      if (-f "$opts{i}/$file.ics.xsl") {
+  	      if (-f "$opts{i}/$file.ics.xsl") {
             my $style_doc = $parser->parse_file("$opts{i}/$file.ics.xsl");
-			my $stylesheet = $xslt_parser->parse_stylesheet($style_doc);
-			my $results = $stylesheet->transform($sourcedoc);
-			$stylesheet->output_file($results, "$opts{o}/$dir/$file.$lang.ics")
-			unless $opts{n};
+			      my $stylesheet = $xslt_parser->parse_stylesheet($style_doc);
+			      my $results = $stylesheet->transform($sourcedoc);
+			      $stylesheet->output_file($results, "$opts{o}/$dir/$file.$lang.ics")
+			      unless $opts{n};
           }
           
-        } else {
-          #
-          # If this wasn't an automatically updating document, we simply
-          # clone the contents of the source file into the document.
-          #
-	  clone_document($document, $source);
-        }
+          } else {
+            #
+            # If this wasn't an automatically updating document, we simply
+            # clone the contents of the source file into the document.
+            #
+      	    clone_document($document, $source);
+          }
 
-        #
-        # Find out if this translation is to be regarded as outdated or not.
-        # A translation is deemed outdated if it is more than 2 hours older
-        # than the original. This makes sure a translation committed together
-        # with the original (but maybe a second earlier) isn't marked outdated.
-        #
-        my $originalsource = "$file.".$root->getAttribute("original").".xhtml";
-	if ((stat("$opts{i}/$originalsource"))[9] > (stat($source))[9] + 7200) {
-	    $root->setAttribute("outdated", "yes");
-            if ($dir eq "global") {
-	      lock(*TRANSLATIONS);
-              print TRANSLATIONS "$lang $source $originalsource\n";
-	      unlock(*TRANSLATIONS);
-            }
-	} else {
-	    $root->setAttribute("outdated", "no");
-	}
+          #
+          # Find out if this translation is to be regarded as outdated or not.
+          # A translation is deemed outdated if it is more than 2 hours older
+          # than the original. This makes sure a translation committed together
+          # with the original (but maybe a second earlier) isn't marked outdated.
+          #
+          my $originalsource = "$file.".$root->getAttribute("original").".xhtml";
+	        if (( stat("$opts{i}/$originalsource"))[9] > (stat($source))[9] + 7200
+	              and not $cant_be_outdated{$file} ) {
+	          $root->setAttribute("outdated", "yes");
+		        if ($dir eq "global") {
+			        lock(*TRANSLATIONS);
+		          print TRANSLATIONS "$lang $source $originalsource\n";
+			        unlock(*TRANSLATIONS);
+		        }
+			} else {
+				$root->setAttribute("outdated", "no");
+			}
 
         #
         # Get the appropriate textset for this language. If one can't be

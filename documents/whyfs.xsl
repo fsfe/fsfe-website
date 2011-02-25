@@ -1,22 +1,15 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:output method="xml"
-           encoding="ISO-8859-1"
+           encoding="UTF-8"
            indent="yes"
            />
 
-  <xsl:template match="/">
-    <html>
-      <xsl:apply-templates select="html/head" />
-      <body>
-        <xsl:apply-templates select="html/body/node()" />
-        <xsl:apply-templates select="html/set/node()" />
-        <xsl:apply-templates select="html/footer/node()" />
-      </body>
-    </html>
+  <xsl:template match="speakers">
+    <xsl:copy-of select="/html/set/table" />
   </xsl:template>
   
   <!-- Do not copy <set> to output at all -->

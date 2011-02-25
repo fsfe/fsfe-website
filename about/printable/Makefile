@@ -7,9 +7,9 @@ pdfs_0 := $(leafletsources:.xhtml=.0.pdf)
 
 # FIXME: How can we cause the rebuild to be run also when a file is deleted?
 
-.PHONY: all
+#.PHONY: all
 
-all: printable.en.xml $(pdfs_F) $(pdfs_G) $(pdfs_0)
+#all: printable.en.xml $(pdfs_F) $(pdfs_G) $(pdfs_0)
 
 printable.en.xml: $(leafletsources) mk-printable-en-xml.sh get_h1.xsl get_moreinfo.xsl
 	/bin/bash mk-printable-en-xml.sh $(leafletsources)

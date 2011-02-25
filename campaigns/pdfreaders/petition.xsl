@@ -20,7 +20,7 @@
       
       <h3>
         <xsl:value-of select="/html/text[@id='osig']" />
-        <!-- (-<xsl:number count="/html/text[@id='osig']/li" />) -->
+        (<xsl:value-of select="count(/html/set/osig/li)" />)
       </h3>
       <ul>
         <xsl:apply-templates select="/html/set/osig/node()" />
@@ -28,7 +28,7 @@
 
       <h3>
       	<xsl:value-of select="/html/text[@id='bsig']" />
-      	<!-- (-<xsl:number count="/sigset/bsig/li" />) -->
+      	(<xsl:value-of select="count(/html/set/bsig/li)" />)
       </h3>
       <ul>
         <xsl:apply-templates select="/html/set/bsig/node()" />
@@ -37,6 +37,7 @@
       <h3><xsl:value-of select="/html/text[@id='isig']" /></h3>
       <ul>
         <xsl:apply-templates select="/html/set/isig/node()" />
+        (<xsl:value-of select="count(/html/set/isig/li)" />)
       </ul>
       <xsl:apply-templates select="/html/text/footer/node()" />
     </body>

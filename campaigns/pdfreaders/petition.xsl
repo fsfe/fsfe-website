@@ -34,10 +34,12 @@
         <xsl:apply-templates select="/html/set/bsig/node()" />
       </ul>
       
-      <h3><xsl:value-of select="/html/text[@id='isig']" /></h3>
+      <h3>
+        <xsl:value-of select="/html/text[@id='isig']" />
+        (<xsl:value-of select="count(/html/set/isig/li)" />)
+      </h3>
       <ul>
         <xsl:apply-templates select="/html/set/isig/node()" />
-        (<xsl:value-of select="count(/html/set/isig/li)" />)
       </ul>
       <xsl:apply-templates select="/html/text/footer/node()" />
     </body>

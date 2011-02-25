@@ -387,7 +387,8 @@ sub process {
   #
   while (my ($dir, undef) = each %countries) {
     # If we handle a focus specific file, only process it in that focus
-    next if (("$srcfocus" ne "global") && ("$dir" ne "$srcfocus"));
+    # -> we don't handle focus-specific files anymore, commenting next line out, since it's causing errors
+    #next if (("$srcfocus" ne "global") && ("$dir" ne "$srcfocus"));
 
     print STDERR "$dir " unless $opts{q};
 

@@ -5,10 +5,10 @@ FSFE Fellowship stylesheet
 */
 
 a {
-  color: rgb(99,152,41);
+  color: rgb(99,152,41) !important;
 }
 
 a:hover {
-  color: rgb(107,179,64);
+  color: rgb(107,179,64) !important;
 }
 

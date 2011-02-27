@@ -974,22 +974,13 @@ h4#subpages + ul li:nth-child(odd) {
   width: 23%;
 }
 
-.section .rss-feed {
+.section a.rss-feed,
+.section a.ical {
   display: block;
   height: 20px;
-  padding: 0;
   width: 20px;
   float: left;
-  margin: .3em 0 0 .2em;
-}
-
-.section .ical {
-  display: block;
-  height: 20px;
-  padding: 0;
-  width: 20px;
-  float: left;
-  margin: .3em 0 0 .4em;
+  margin: .4em 0 0 .2em;
 }
 
 #content .section h2 a img {

@@ -901,7 +901,7 @@ h4#subpages + ul li:nth-child(odd) {
   line-height: normal;
   margin: 1.5em 0 1em;
   min-height: 1.6em;
-  padding: 0;
+  padding: 0 -.5em;
   text-align: right;
   width: 100%;
   color: white;
@@ -920,6 +920,10 @@ h4#subpages + ul li:nth-child(odd) {
 
 .section.grid-100 {
   width: 100%;
+}
+
+#news.section {
+  margin-left: 0;
 }
 
 #news.section h2,

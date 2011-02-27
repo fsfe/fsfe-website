@@ -25,10 +25,9 @@
   
   <!--display dynamic list of news items-->
   <xsl:template match="all-news">
-    
     <xsl:call-template name="fetch-news">
-    	<xsl:with-param name="tag">front-page</xsl:with-param>
-    	<xsl:with-param name="nb-items" select="5" />
+      <xsl:with-param name="tag">front-page</xsl:with-param>
+      <xsl:with-param name="nb-items" select="5" />
     </xsl:call-template>
     
     <xsl:element name="p">
@@ -37,34 +36,30 @@
         <xsl:call-template name="more-label" /><xsl:text>…</xsl:text>
       </xsl:element>
     </xsl:element>
-    
   </xsl:template>
   
   <!--display dynamic list of newsletters items-->
   <xsl:template match="all-newsletters">
-
     <xsl:call-template name="fetch-newsletters">
       <xsl:with-param name="nb-items" select="2" />
     </xsl:call-template>
-	  
   </xsl:template>
   
   <!--display dynamic list of event items-->
   <xsl:template match="all-events">
-    
     <!-- Current events -->
     <xsl:call-template name="fetch-events">
-        <xsl:with-param name="wanted-time" select="'present'" />
-        <xsl:with-param name="tag">front-page</xsl:with-param>
-        <xsl:with-param name="display-details" select="'yes'" />
+      <xsl:with-param name="wanted-time" select="'present'" />
+      <xsl:with-param name="tag">front-page</xsl:with-param>
+      <xsl:with-param name="display-details" select="'yes'" />
     </xsl:call-template>
     
     <!-- Future events -->
     <xsl:call-template name="fetch-events">
-        <xsl:with-param name="wanted-time" select="'future'" />
-        <xsl:with-param name="tag">front-page</xsl:with-param>
-        <xsl:with-param name="display-details" select="'yes'" />
-        <xsl:with-param name="nb-items" select="3" />
+      <xsl:with-param name="wanted-time" select="'future'" />
+      <xsl:with-param name="tag">front-page</xsl:with-param>
+      <xsl:with-param name="display-details" select="'yes'" />
+      <xsl:with-param name="nb-items" select="3" />
     </xsl:call-template>
     
     <xsl:element name="p">
@@ -73,13 +68,11 @@
         <xsl:call-template name="more-label" /><xsl:text>…</xsl:text>
       </xsl:element>
     </xsl:element>
-    
   </xsl:template>
   
   <!-- display campaign box 3 -->
   
   <xsl:template match="campaign-box-3">
-    
     <xsl:element name="a">
       <xsl:attribute name="href">/campaigns/valentine/2011/valentine-2011<xsl:value-of select="/buildinfo/@language" />.html</xsl:attribute>
       
@@ -99,9 +92,7 @@
         <xsl:attribute name="alt"
                        value="No picture" />
       </xsl:element>
-    
     </xsl:element>
-    
   </xsl:template>
   
   <!--display labels-->
@@ -174,5 +165,4 @@
   </xsl:template>
 
   </div>
-
 </xsl:stylesheet>

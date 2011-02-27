@@ -904,7 +904,7 @@ h4#subpages + ul li:nth-child(odd) {
   font-weight: bold;
   letter-spacing: normal;
   line-height: normal;
-  margin: 1.5em -.5em 1em -.5em;
+  margin: 1.5em -.25em 1em;
   min-height: 1.6em;
   /*padding: 0 -.5em;*/
   text-align: right;
@@ -1167,7 +1167,6 @@ a.fn {
 /* Front page */
 #campaigns-boxes {
   overflow: hidden;
-  margin-bottom: 0;
 }
 
 #campaign-box-1 {

@@ -977,10 +977,11 @@ h4#subpages + ul li:nth-child(odd) {
 .section a.rss-feed,
 .section a.ical {
   display: block;
-  height: 20px;
-  width: 20px;
   float: left;
+  height: 20px;
   margin: .4em 0 0 .2em;
+  padding: 0;
+  width: 20px;
 }
 
 

@@ -907,10 +907,9 @@ h4#subpages + ul li:nth-child(odd) {
 }
 
 .section h2 a, .section h2 span {
-    color: white;
-    color: white;
-    float: right;
-    padding: 0.2em 0.6em 0.2em 0;
+  color: white;
+  float: right;
+  padding: .4em .6em .2em 0;
 }
 
 .section .entry form {

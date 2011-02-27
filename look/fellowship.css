@@ -4,11 +4,13 @@ FSFE Fellowship stylesheet
 
 */
 
-a {
-  color: rgb(99,152,41) !important;
+a:link {
+  color: rgb(107,179,64);
 }
 
-a:hover {
-  color: rgb(107,179,64) !important;
+h2,
+h3,
+h4 {
+  color: rgb(99,152,41);
 }
 

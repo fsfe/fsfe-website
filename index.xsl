@@ -20,9 +20,15 @@
   <xsl:template match="buildinfo">
     <xsl:apply-templates select="node()"/>
   </xsl:template>
-  
-  <div id="frontpage">
-  
+
+  <xsl:template match="/html/body">
+    <xsl:copy>
+      <div id="frontpage">
+	<xsl:apply-templates />
+      </div>
+    </xsl:copy>
+  </xsl:template>
+
   <!--display dynamic list of news items-->
   <xsl:template match="all-news">
     <xsl:call-template name="fetch-news">
@@ -163,6 +169,4 @@
       <xsl:apply-templates select="@*|node()"/>
     </xsl:copy>
   </xsl:template>
-
-  </div>
 </xsl:stylesheet>

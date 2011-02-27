@@ -291,7 +291,7 @@ p.left {
 #search input[type="image"] {
   background-color: transparent;
   border: 0;
-  margin: 10px 0 0 -35px;
+  margin-top: 10px;
   vertical-align: middle;
 }
 
@@ -299,7 +299,7 @@ p.left {
   /*padding-left: 30px;
   width: 150px;*/
   width: 80%;
-  padding: 5px 8px;
+  padding: 5px 8px 5px 30px;
 }
 
 #search p {

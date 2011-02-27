@@ -21,10 +21,8 @@
     <xsl:apply-templates select="node()"/>
   </xsl:template>
   
-  <xsl:template match="body">
-    <xsl:attribute name="id">frontpage</xsl:attribute>
-  </xsl:template>
-
+  <div id="frontpage">
+  
   <!--display dynamic list of news items-->
   <xsl:template match="all-news">
     
@@ -174,5 +172,7 @@
       <xsl:apply-templates select="@*|node()"/>
     </xsl:copy>
   </xsl:template>
+
+  </div>
 
 </xsl:stylesheet>

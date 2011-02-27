@@ -909,6 +909,7 @@ h4#subpages + ul li:nth-child(odd) {
 .section h2 a, .section h2 span {
   color: white;
   float: right;
+  font-weight: normal;
   padding: .4em .6em .2em 0;
 }
 

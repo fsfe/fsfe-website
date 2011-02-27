@@ -23,10 +23,15 @@ Editing rules:
 @import url("input.css");
 
 /* Custom fonts */
+/*
+
+This is apparently a malformed font, according to certain web browsers.
+
 @font-face {
   font-family: Lucida Sans;
   src: url("/fonts/LSANS.TTF");
 }
+*/
 
 @font-face {
   font-family: Nimbus Sans L;

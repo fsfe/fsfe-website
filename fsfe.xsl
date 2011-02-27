@@ -412,7 +412,7 @@
 		    <xsl:attribute name="type">image</xsl:attribute>
 		    <xsl:attribute name="src">/graphics/icons/search-button.png</xsl:attribute>
 		    <xsl:attribute name="title">
-		      <xsl:call-template name="fsfe-gettext"><xsl:with-param "id" select="'submit'" /></xsl:call-template>
+		      <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'submit'" /></xsl:call-template>
 		    </xsl:attribute>
 		  </xsl:element>
 

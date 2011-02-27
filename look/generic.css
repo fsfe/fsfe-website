@@ -873,7 +873,7 @@ h4#subpages + ul li:nth-child(odd) {
 .section {
   width: 48%;
   float: left;
-  margin-left: 1%;
+/*  margin-left: 1%;*/
   padding: 0 .5em;
 }
 
@@ -928,7 +928,7 @@ h4#subpages + ul li:nth-child(odd) {
 }
 
 #news.section {
-  margin-left: 0;
+  margin-right: .5em;
 }
 
 #news.section h2,

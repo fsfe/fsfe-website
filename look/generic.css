@@ -411,6 +411,11 @@ p.left {
   float: left;
   min-height: 400px;
   width: 78%;
+  font-weight: 110%;
+}
+
+#content.frontpage {
+  font-weight: 100%;
 }
 
 #content p#category {

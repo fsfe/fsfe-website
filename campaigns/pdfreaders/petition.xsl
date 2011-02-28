@@ -4,7 +4,7 @@
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:output method="xml"
-           encoding="ISO-8859-1"
+           encoding="UTF-8"
            indent="yes"
            />
 
@@ -39,7 +39,9 @@
         (<xsl:value-of select="count(/html/set/isig/li)" />)
       </h3>
       <ul>
-        <xsl:apply-templates select="/html/set/isig/node()" />
+        <xsl:apply-templates select="/html/set/isig/node()">
+          <xsl:sort select="text(.)" />
+        </xsl:apply-templates>
       </ul>
       <xsl:apply-templates select="/html/text/footer/node()" />
     </body>

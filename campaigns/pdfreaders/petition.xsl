@@ -23,7 +23,9 @@
         (<xsl:value-of select="count(/html/set/osig/li)" />)
       </h3>
       <ul>
-        <xsl:apply-templates select="/html/set/osig/node()" />
+        <xsl:apply-templates select="/html/set/osig/node()">
+          <xsl:sort select="." />
+        </xsl:apply-templates>
       </ul>
 
       <h3>
@@ -31,7 +33,9 @@
       	(<xsl:value-of select="count(/html/set/bsig/li)" />)
       </h3>
       <ul>
-        <xsl:apply-templates select="/html/set/bsig/node()" />
+        <xsl:apply-templates select="/html/set/bsig/node()">
+          <xsl:sort select="." />
+        </xsl:apply-templates>
       </ul>
       
       <h3>

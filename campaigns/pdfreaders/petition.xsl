@@ -40,7 +40,7 @@
       </h3>
       <ul>
         <xsl:apply-templates select="/html/set/isig/node()">
-          <xsl:sort select="text(.)" />
+          <xsl:sort select="." />
         </xsl:apply-templates>
       </ul>
       <xsl:apply-templates select="/html/text/footer/node()" />

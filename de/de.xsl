@@ -20,42 +20,49 @@
   <xsl:variable name="country-code">de</xsl:variable>
   
   <!--define dynamic list of country news items-->
-    <xsl:template match="country-news">
-        <xsl:call-template name="fetch-news">
-            <xsl:with-param name="tag">
-                <xsl:value-of select="$country-code" />
-            </xsl:with-param>
-        </xsl:call-template>
-    </xsl:template>
+  <xsl:template match="country-news">
+      <xsl:call-template name="fetch-news">
+          <xsl:with-param name="tag">
+              <xsl:value-of select="$country-code" />
+          </xsl:with-param>
+      </xsl:call-template>
+  </xsl:template>
+  
+  <!--define dynamic list of country event items-->
+  <xsl:template match="country-events">
+      <!-- Current events -->
+      <xsl:call-template name="fetch-events">
+          <xsl:with-param name="wanted-time" select="'present'" />
+          <xsl:with-param name="tag">
+              <xsl:value-of select="$country-code" />
+          </xsl:with-param>
+      </xsl:call-template>
+      
+      <!-- Future events -->
+      <xsl:call-template name="fetch-events">
+          <xsl:with-param name="wanted-time" select="'future'" />
+          <xsl:with-param name="nb-events" select="3" />
+          <xsl:with-param name="tag">
+              <xsl:value-of select="$country-code" />
+          </xsl:with-param>
+      </xsl:call-template>
+  </xsl:template>
+  
+  <!--define dynamic list of country team members-->
+  <xsl:template match="country-team-list">
+      <xsl:call-template name="country-people-list">
+          <xsl:with-param name="team">
+              <xsl:value-of select="$country-code" />
+          </xsl:with-param>
+      </xsl:call-template>
+  </xsl:template>
     
-    <!--define dynamic list of country event items-->
-    <xsl:template match="country-events">
-        <!-- Current events -->
-        <xsl:call-template name="fetch-events">
-            <xsl:with-param name="wanted-time" select="'present'" />
-            <xsl:with-param name="tag">
-                <xsl:value-of select="$country-code" />
-            </xsl:with-param>
-        </xsl:call-template>
-        
-        <!-- Future events -->
-        <xsl:call-template name="fetch-events">
-            <xsl:with-param name="wanted-time" select="'future'" />
-            <xsl:with-param name="nb-events" select="3" />
-            <xsl:with-param name="tag">
-                <xsl:value-of select="$country-code" />
-            </xsl:with-param>
-        </xsl:call-template>
-    </xsl:template>
-    
-    <!--define dynamic list of country team members-->
-    <xsl:template match="country-team-list">
-        <xsl:call-template name="country-people-list">
-            <xsl:with-param name="team">
-                <xsl:value-of select="$country-code" />
-            </xsl:with-param>
-        </xsl:call-template>
-    </xsl:template>
+  <!--translated word "microblog"-->
+  <xsl:template match="microblog-label">
+    <xsl:call-template name="gettext">
+      <xsl:with-param name="id" select="'microblog'" />
+    </xsl:call-template>
+  </xsl:template>
   
   <!-- Do not copy <set> or <text> to output at all -->
   <xsl:template match="set | tags"/>

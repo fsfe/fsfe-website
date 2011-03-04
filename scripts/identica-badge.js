@@ -148,7 +148,7 @@ function markupPost(raw, server) {
             }
             var s = document.styleSheets[document.styleSheets.length - 1];
             var rules = {
-               "" : "{margin:0px;padding:0px;width:" + $.a.width + ";background:" + $.a.background + ";border:" + $.a.border,
+               "" : "{margin:0px;padding:0px;width:" + $.a.width + ";background:" + $.a.background + ";border:" + $.a.border + ";}",
                "a" : "{cursor:pointer;text-decoration:none;}",
                "a:hover" : "{text-decoration:underline;}",
                ".cite" : "{" + setZoom + "font-weight:bold;margin:0px 0px 0px 4px;padding:0px;display:block;font-style:normal;line-height:" + ($.a.thumbnailSize/2) + "px;vertical-align:middle;}",

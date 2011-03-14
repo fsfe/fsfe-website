@@ -246,8 +246,8 @@
             
             <xsl:element name="a">
               <xsl:attribute name="href">/about</xsl:attribute>
-              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'learn-more'" />
               <xsl:attribute name="style">padding-left: 1em;</xsl:attribute>
+              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'learn-more'" />
             </xsl:call-template>
             </xsl:element>.<!--intentional full stop goes here-->
             

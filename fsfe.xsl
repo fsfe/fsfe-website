@@ -234,12 +234,22 @@
 	      
           <!-- Statement -->
           <xsl:element name="p">
+            
             <xsl:attribute name="id">statement</xsl:attribute>
-            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'statement'" /></xsl:call-template>.<!--intentional full stop goes here-->
+            
+            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'statement1'" /></xsl:call-template>
             <xsl:element name="a">
-              <xsl:attribute name="href">/about</xsl:attribute><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'learn-more'" />
+              <xsl:attribute name="href">/about/basics/freesoftware.<xsl:value-of select="/buildinfo/@language"/>.html</xsl:attribute>
+              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'statement-fs'" /></xsl:call-template>
+            </xsl:element>
+            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'statement2'" /></xsl:call-template>.<!--intentional full stop goes here-->
+            
+            <xsl:element name="a">
+              <xsl:attribute name="href">/about</xsl:attribute>
+              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'learn-more'" />
             </xsl:call-template>
             </xsl:element>.<!--intentional full stop goes here-->
+            
           </xsl:element>
           
         </xsl:element><!-- end Page header -->

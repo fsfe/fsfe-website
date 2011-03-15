@@ -1498,3 +1498,42 @@ address {
 fieldset {
   border: medium none;
 }
+
+
+/* AskYourCandidates - parties colors for their answers */
+.answer {
+  padding: 0.5em 1em;
+}
+
+.diegrüne {
+  background-color: #C8FFC8;
+  border-left: 10px solid #008B00;
+}
+
+.cdu {
+  background-color: #B4E6FF;
+  border-left: 10px solid #004F7A;
+}
+
+.spd {
+  background-color: #FFC8C8;
+  border-left: 10px solid #FF0000;
+}
+
+.dielinke {
+  background-color: #FFC6FF;
+  border-left: 10px solid #8B1C62;
+}
+
+.piraten {
+  background-color: #FFE9BB;
+  border-left: 10px solid #FF6600;
+}
+
+.fdp {
+  background-color: #FFFFC8;
+  border-left: 10px solid #FFFF00;
+}
+
+
+

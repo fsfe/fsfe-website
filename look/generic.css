@@ -1526,14 +1526,25 @@ fieldset {
 }
 
 .piraten {
-  background-color: #FFE9BB;
-  border-left: 10px solid #FF6600;
+   background-color: #FFE992;
+   border-left: 10px solid #F37D20;
 }
 
 .fdp {
-  background-color: #FFFFC8;
-  border-left: 10px solid #FFFF00;
+   background-color: #FFFFC8;
+   border-left: 10px solid #FFFF00;
 }
+
+.oedp {
+   background-color: #FFE9BB;
+   border-left: 10px solid #F2862B;
+}
+
+.colorless {
+   background-color: #EEEEEE;
+   border-left: 10px solid #AAAAAA;
+}
+
 
 
 

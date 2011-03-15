@@ -1501,6 +1501,12 @@ fieldset {
 
 
 /* AskYourCandidates - parties colors for their answers */
+
+.question {
+  margin-top: 60px;
+  margin-bottom: 15px;
+}
+
 .answer {
   padding: 0.5em 1em;
 }

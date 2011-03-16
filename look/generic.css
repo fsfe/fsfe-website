@@ -1511,6 +1511,13 @@ fieldset {
   padding: 0.5em 1em;
 }
 
+.colorless {
+   background-color: #EEEEEE;
+   border-left: 10px solid #AAAAAA;
+}
+
+/* Germany */
+
 .diegrüne {
   background-color: #C8FFC8;
   border-left: 10px solid #008B00;
@@ -1546,11 +1553,47 @@ fieldset {
    border-left: 10px solid #F2862B;
 }
 
-.colorless {
-   background-color: #EEEEEE;
-   border-left: 10px solid #AAAAAA;
+/* France */
+
+.partisocialiste {
+   background-color: #FFDCDC;
+   border-left: 10px solid #FF8080;
 }
 
+.ump {
+   background-color: #A0C8FF;
+   border-left: 10px solid #0066CC;
+}
+
+.pcf {
+   background-color: #FFC8C8;
+   border-left: 10px solid #DD0000;
+}
+
+.prg, .mrc {
+   background-color: #FFF0FA;
+   border-left: 10px solid #FFD1DC;
+}
+
+.eelv {
+   background-color: #C8FFC8;
+   border-left: 10px solid #00FF00;
+}
+
+.nouveaucentre {
+   background-color: #DCFFFF;
+   border-left: 10px solid #80FFFF;
+}
+
+.modem {
+   background-color: #FFE696;
+   border-left: 10px solid #FF9900;
+}
+
+.alliancecentriste {
+   background-color: #FFEBC8;
+   border-left: 10px solid #F5DEB3;
+}
 
 
 

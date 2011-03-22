@@ -1503,13 +1503,23 @@ fieldset {
 /* AskYourCandidates - parties colors for their answers */
 
 .question {
-  margin-top: 60px;
-  margin-bottom: 15px;
+   margin-bottom: 15px;
+   margin-top: 60px;
 }
 
-.answer {
+.answer,
+.question2,
+.answer2 {
   padding: 0.5em 1em;
   text-align: justify;
+}
+
+.question2 {
+  margin-left: 1em;
+}
+
+.answer2 {
+  margin-left: 2em;
 }
 
 .colorless {

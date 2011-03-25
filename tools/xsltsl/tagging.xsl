@@ -189,7 +189,6 @@
               </xsl:attribute>
               
               <xsl:value-of select="."/>
-              <xsl:text> (</xsl:text><xsl:value-of select="count( /html/set/event/tags/tag[text() = $thistag]) " /><xsl:text>)</xsl:text>
               
             </xsl:element>
           </xsl:element>

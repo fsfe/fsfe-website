@@ -40,7 +40,7 @@ RewriteRule ^campaigns/vd2010 /campaigns/valentine/2010/valentine-2010 [redirect
 RewriteRule ^valentine/(.*) /campaigns/valentine/2011/valentine-2011$1 [redirect=permanent]
 
 # AskYourCandidates redirect
-RewriteRule ^campaigns/ayc/(.*) /campaigns/askyourcandidates/$1 [redirect=permanent]
+RewriteRule ^campaigns/ayc(.*) /campaigns/askyourcandidates$1 [redirect=permanent]
 
 
 # Temporary fix unitl we have a /freesoftware dir for contribute/advocacy/cwfs.en.html

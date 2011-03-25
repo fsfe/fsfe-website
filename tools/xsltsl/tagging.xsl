@@ -122,19 +122,32 @@
 	<xsl:template name="all-tags-news">
 		
 		<xsl:element name="ul">
-		    <xsl:for-each select="/html/set/news/tags/tag">
-			    <xsl:sort select="." order="ascending" />
-			    
-			    <xsl:variable name="thistag" select="node()" />
-			    
-                <xsl:if test="generate-id() = generate-id(key('news-tags-by-value', normalize-space(.)))">
-                    <xsl:element name="li">
-                      <xsl:value-of select="."/>
-                      <xsl:text> (</xsl:text><xsl:value-of select="count( /html/set/news/tags/tag[text() = $thistag]) " /><xsl:text>)</xsl:text>
-                    </xsl:element>
-                </xsl:if>
-			    
-		    </xsl:for-each>
+	    <xsl:for-each select="/html/set/news/tags/tag">
+		    <xsl:sort select="." order="ascending" />
+		    
+		    <xsl:variable name="thistag" select="node()" />
+		    
+        <xsl:if test="generate-id() = generate-id(key('news-tags-by-value', normalize-space(.)))">
+          
+          <xsl:element name="li">
+            <xsl:element name="a">
+              
+              <xsl:attribute name="href">
+                <xsl:text>/tags/tagged.</xsl:text>
+                <xsl:value-of select="/html/@lang" />
+                <xsl:text>.html#n</xsl:text>
+                <xsl:value-of select="translate($thistag,' ','')" />
+              </xsl:attribute>
+              
+              <xsl:value-of select="."/>
+              <xsl:text> (</xsl:text><xsl:value-of select="count( /html/set/news/tags/tag[text() = $thistag]) " /><xsl:text>)</xsl:text>
+              
+            </xsl:element>
+          </xsl:element>
+          
+        </xsl:if>
+		    
+	    </xsl:for-each>
 		</xsl:element>
 		
 	</xsl:template>
@@ -146,18 +159,28 @@
 	<xsl:template name="all-tags-events">
 		
 		<xsl:element name="ul">
-		    <xsl:for-each select="/html/set/event/tags/tag">
-			    <xsl:sort select="." order="ascending" />
-			    
-                <xsl:if test="generate-id() = generate-id(key('events-tags-by-value', normalize-space(.)))">
-                    <xsl:element name="li">
-                      <xsl:value-of select="."/>
-                    </xsl:element>
-                    <xsl:text>
-</xsl:text>
-                </xsl:if>
-			    
-		    </xsl:for-each>
+	    <xsl:for-each select="/html/set/event/tags/tag">
+		    <xsl:sort select="." order="ascending" />
+		    
+		    <xsl:variable name="thistag" select="node()" />
+		    
+        <xsl:element name="li">
+          <xsl:element name="a">
+            
+            <xsl:attribute name="href">
+              <xsl:text>/tags/tagged.</xsl:text>
+              <xsl:value-of select="/html/@lang" />
+              <xsl:text>.html#e</xsl:text>
+              <xsl:value-of select="translate($thistag,' ','')" />
+            </xsl:attribute>
+            
+            <xsl:value-of select="."/>
+            <xsl:text> (</xsl:text><xsl:value-of select="count( /html/set/event/tags/tag[text() = $thistag]) " /><xsl:text>)</xsl:text>
+            
+          </xsl:element>
+        </xsl:element>
+		    
+	    </xsl:for-each>
 		</xsl:element>
 		
 	</xsl:template>
@@ -200,9 +223,19 @@
 	    <xsl:sort select="." order="ascending" />
 	    
 	    <xsl:variable name="tag" select="." />
-	    <xsl:element name="h3"><xsl:value-of select="$tag" /></xsl:element>
+	    
+	    <xsl:element name="a">
+	      <xsl:attribute name="name">
+	        <xsl:text>n</xsl:text>
+	        <xsl:value-of select="translate($tag, ' ', '')" />
+	      </xsl:attribute>
+    	  <xsl:element name="h3"><xsl:value-of select="$tag" /></xsl:element>
+    	</xsl:element>
 	    
 	    <xsl:element name="ul">
+	      
+	      <xsl:attribute name="class">taglist</xsl:attribute>
+	      
 	      <!-- loop through all news having this tag -->
 	      <xsl:for-each select="/html/set/news[tags/tag = $tag]">
 	        <xsl:element name="li">
@@ -212,8 +245,9 @@
 	          </xsl:element>
 	        </xsl:element>
 	      </xsl:for-each>
-	    </xsl:element>
 	      
+	    </xsl:element>
+	    
     </xsl:for-each>
 		
 	</xsl:template>
@@ -228,14 +262,24 @@
 	    <xsl:sort select="." order="ascending" />
 	    
 	    <xsl:variable name="tag" select="." />
-	    <xsl:element name="h3"><xsl:value-of select="$tag" /></xsl:element>
+	    
+	    <xsl:element name="a">
+	      <xsl:attribute name="name">
+	        <xsl:text>e</xsl:text>
+	        <xsl:value-of select="translate($tag, ' ', '')" />
+	      </xsl:attribute>
+    	  <xsl:element name="h3"><xsl:value-of select="$tag" /></xsl:element>
+    	</xsl:element>
 	    
 	    <xsl:element name="ul">
+	      
+	      <xsl:attribute name="class">taglist</xsl:attribute>
+	      
 	      <!-- loop through all events having this tag -->
 	      <xsl:for-each select="/html/set/event[tags/tag = $tag]">
 	        
 	        <xsl:element name="li">
-	        
+	          
 	          <xsl:element name="a">
 	            
 	            <xsl:attribute name="href">

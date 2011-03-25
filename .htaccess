@@ -30,7 +30,10 @@ RewriteRule ^help/(.*) /donate/$1 [redirect=permanent]
 
 # Valentine campaign redirects.
 # 2010
+# These two rules *must* be kept in this order
+RewriteRule ^valentine-2010/(.*)\.png /campaigns/valentine/$1.png [redirect=permanent] 
 RewriteRule ^valentine-2010/(.*) /campaigns/valentine/2010/$1 [redirect=permanent]
+
 RewriteRule ^vd2010/(.*) /campaigns/valentine/2010/$1 [redirect=permanent]
 RewriteRule ^campaigns/vd2010/vd2010(.*) /campaigns/valentine/2010/valentine-2010$1 [redirect=permanent]
 RewriteRule ^campaigns/valentine-2010/vd2010(.*) /campaigns/valentine/2010/valentine-2010$1 [redirect=permanent]

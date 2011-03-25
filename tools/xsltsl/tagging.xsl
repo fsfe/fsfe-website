@@ -130,12 +130,16 @@
 		    
 		    <xsl:variable name="thistag" select="node()" />
 		    <xsl:variable name="nb" select="count( /html/set/news/tags/tag[text() = $thistag]) " />
-		    <!-- fontsize = (MAXFONT-MINFONT) * (count-MINCOUNT) / (MAXCOUNT-MINCOUNT) + MINFONT -->
-		    <xsl:variable name="font" select="(40-16) * ($nb-16) / (40-16) + 16" />
+		    
+		    <!-- fontsize = (MAXFONT-MINFONT) * (count-MINCOUNT) / (MAXCOUNT-MINCOUNT) + MINFONT
+		         → to finish this calculation, we need to find out how many min and max tag occurrences there are -->
+		    <!-- <xsl:variable name="font" select="(40-16) * ($nb-16) / (MAXCOUNT-MINCOUNT) + 16" /> -->
+		    
 		    
         <xsl:if test="generate-id() = generate-id(key('news-tags-by-value', normalize-space(.)))">
           
           <xsl:element name="li">
+            
             <xsl:element name="a">
               
               <xsl:attribute name="href">

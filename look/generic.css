@@ -1611,6 +1611,10 @@ fieldset {
 /* Tags lists                                                           */
 /* -------------------------------------------------------------------- */
 
+ul.taglist {
+    text-align: center;
+}
+
 ul.taglist li {
     display: inline;
     margin: 5px;

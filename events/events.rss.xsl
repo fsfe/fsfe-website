@@ -3,7 +3,9 @@
 <!-- XSL stylesheet for generating RSS feeds. We use RSS 0.91 for now -->
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-
+  
+	<xsl:import href="../tools/xsltsl/events-utils.xsl" />
+  
   <xsl:output method="xml" encoding="UTF-8" omit-xml-declaration="yes"
     indent="yes" />
 
@@ -12,45 +14,7 @@
     <xsl:value-of select="/html/@date" />
   </xsl:variable>
 
-  <!-- ============= -->
-  <!-- Link handling -->
-  <!-- ============= -->
-
-  <xsl:template match="link">
-    <xsl:param name="lang" />
-
-    <!-- Original link text -->
-    <xsl:variable name="link">
-      <xsl:value-of select="normalize-space(.)" />
-    </xsl:variable>
-
-    <!-- Add leading "http://www.fsfeurope.org" if necessary -->
-    <xsl:variable name="full-link">
-      <xsl:choose>
-        <xsl:when test="starts-with ($link, 'http:')">
-          <xsl:value-of select="$link" />
-        </xsl:when>
-        <xsl:when test="starts-with ($link, 'https:')">
-          <xsl:value-of select="$link" />
-        </xsl:when>
-        <xsl:otherwise>http://www.fsfeurope.org<xsl:value-of select="$link" />
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:variable>
-
-    <!-- Insert language into link -->
-    <xsl:choose>
-      <xsl:when test="starts-with ($full-link, 'http://www.fsfeurope.org/')
-                      and substring-before ($full-link, '.html') != ''">
-        <xsl:value-of select="concat (substring-before ($full-link, '.html'),
-                                      '.', $lang, '.html')" />
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:value-of select="$full-link" />
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
-
+  
   <!-- ============ -->
   <!-- Main routine -->
   <!-- ============ -->
@@ -107,28 +71,14 @@
               <xsl:element name="description">
                 <xsl:value-of select="normalize-space(body)"/>
               </xsl:element>
-
+              
               <!-- Link -->
-              <xsl:choose>
-                <xsl:when test="link != ''">
-                  <xsl:variable name="link">
-                    <xsl:apply-templates select="link">
-                      <xsl:with-param name="lang" select="$lang"/>
-                    </xsl:apply-templates>
-                  </xsl:variable>
-                  <xsl:element name="link">
-                    <xsl:value-of select="normalize-space($link)"/>
-                  </xsl:element>
-                </xsl:when>
-                <xsl:otherwise>
-                  <link>
-                    <xsl:text>http://fsfe.org/events/events.html#</xsl:text>
-                    <xsl:value-of select="normalize-space(@start)" />
-                    <xsl:text>-</xsl:text>
-                    <xsl:value-of select="translate( normalize-space(title), ' ', '-' )" />
-                  </link>
-                </xsl:otherwise>
-              </xsl:choose>
+              <xsl:element name="link">
+                <xsl:call-template name="event-link">
+                  <xsl:with-param name="absolute-fsfe-links" select="'yes'" />
+                </xsl:call-template>
+              </xsl:element>
+              
             </item>
           </xsl:if>
         </xsl:for-each>

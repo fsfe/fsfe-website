@@ -6,8 +6,10 @@
 
 	<xsl:import href="date-time.xsl" />
 	<xsl:import href="feeds.xsl" />
+	<xsl:import href="events-utils.xsl" />
+	
 	<xsl:output method="xml" encoding="UTF-8" indent="yes" />
-
+  
 	
 	<!--display dynamic list of tagged news items-->
 	<xsl:template name="fetch-news">
@@ -189,4 +191,76 @@
 	</xsl:template>
 	
 	
+	
+	<!--display dynamic list of tagged news, sorted by tag -->
+	<xsl:template name="tagged-news">
+		
+	  <!-- loop through all tags (this complex expression loops over each tag once) -->
+    <xsl:for-each select="/html/set/news/tags/tag[ count( . | key( 'news-tags-by-value', . )[1] ) = 1 ]">
+	    <xsl:sort select="." order="ascending" />
+	    
+	    <xsl:variable name="tag" select="." />
+	    <xsl:element name="h3"><xsl:value-of select="$tag" /></xsl:element>
+	    
+	    <xsl:element name="ul">
+	      <!-- loop through all news having this tag -->
+	      <xsl:for-each select="/html/set/news[tags/tag = $tag]">
+	        <xsl:element name="li">
+	          <xsl:element name="a">
+	            <xsl:attribute name="href"><xsl:value-of select="link" /></xsl:attribute>
+	            <xsl:value-of select="title" />
+	          </xsl:element>
+	        </xsl:element>
+	      </xsl:for-each>
+	    </xsl:element>
+	      
+    </xsl:for-each>
+		
+	</xsl:template>
+	
+	
+	<!--display dynamic list of tagged events, sorted by tag -->
+	<xsl:template name="tagged-events">
+		<xsl:param name="absolute-fsfe-links" />
+		
+		<!-- loop through all tags (this complex expression loops over each tag once) -->
+    <xsl:for-each select="/html/set/event/tags/tag[ count( . | key( 'events-tags-by-value', . )[1] ) = 1 ]">
+	    <xsl:sort select="." order="ascending" />
+	    
+	    <xsl:variable name="tag" select="." />
+	    <xsl:element name="h3"><xsl:value-of select="$tag" /></xsl:element>
+	    
+	    <xsl:element name="ul">
+	      <!-- loop through all events having this tag -->
+	      <xsl:for-each select="/html/set/event[tags/tag = $tag]">
+	        
+	        <xsl:element name="li">
+	        
+	          <xsl:element name="a">
+	            
+	            <xsl:attribute name="href">
+	              <xsl:call-template name="event-link">
+	                <xsl:with-param name="absolute-fsfe-links" select="$absolute-fsfe-links" />
+	              </xsl:call-template>
+	            </xsl:attribute>
+	            
+	            <xsl:value-of select="title" />
+	            
+	          </xsl:element><!--a-->
+	          
+	        </xsl:element><!--li-->
+	        
+	      </xsl:for-each>
+	    </xsl:element>
+	      
+    </xsl:for-each>
+		
+	</xsl:template>
+	
+	
 </xsl:stylesheet>
+
+
+
+
+

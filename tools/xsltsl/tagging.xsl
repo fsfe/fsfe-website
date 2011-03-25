@@ -164,21 +164,25 @@
 		    
 		    <xsl:variable name="thistag" select="node()" />
 		    
-        <xsl:element name="li">
-          <xsl:element name="a">
-            
-            <xsl:attribute name="href">
-              <xsl:text>/tags/tagged.</xsl:text>
-              <xsl:value-of select="/html/@lang" />
-              <xsl:text>.html#e</xsl:text>
-              <xsl:value-of select="translate($thistag,' ','')" />
-            </xsl:attribute>
-            
-            <xsl:value-of select="."/>
-            <xsl:text> (</xsl:text><xsl:value-of select="count( /html/set/event/tags/tag[text() = $thistag]) " /><xsl:text>)</xsl:text>
-            
+		    <xsl:if test="generate-id() = generate-id(key('events-tags-by-value', normalize-space(.)))">
+		    
+          <xsl:element name="li">
+            <xsl:element name="a">
+              
+              <xsl:attribute name="href">
+                <xsl:text>/tags/tagged.</xsl:text>
+                <xsl:value-of select="/html/@lang" />
+                <xsl:text>.html#e</xsl:text>
+                <xsl:value-of select="translate($thistag,' ','')" />
+              </xsl:attribute>
+              
+              <xsl:value-of select="."/>
+              <xsl:text> (</xsl:text><xsl:value-of select="count( /html/set/event/tags/tag[text() = $thistag]) " /><xsl:text>)</xsl:text>
+              
+            </xsl:element>
           </xsl:element>
-        </xsl:element>
+        
+        </xsl:if>
 		    
 	    </xsl:for-each>
 		</xsl:element>

@@ -122,10 +122,16 @@
 	<xsl:template name="all-tags-news">
 		
 		<xsl:element name="ul">
+		  
+		  <xsl:attribute name="class">taglist</xsl:attribute>
+		  
 	    <xsl:for-each select="/html/set/news/tags/tag">
 		    <xsl:sort select="." order="ascending" />
 		    
 		    <xsl:variable name="thistag" select="node()" />
+		    <xsl:variable name="nb" select="count( /html/set/news/tags/tag[text() = $thistag]) " />
+		    <!-- fontsize = (MAXFONT-MINFONT) * (count-MINCOUNT) / (MAXCOUNT-MINCOUNT) + MINFONT -->
+		    <xsl:variable name="font" select="(40-16) * ($nb-16) / (40-16) + 16" />
 		    
         <xsl:if test="generate-id() = generate-id(key('news-tags-by-value', normalize-space(.)))">
           
@@ -140,7 +146,6 @@
               </xsl:attribute>
               
               <xsl:value-of select="."/>
-              <xsl:text> (</xsl:text><xsl:value-of select="count( /html/set/news/tags/tag[text() = $thistag]) " /><xsl:text>)</xsl:text>
               
             </xsl:element>
           </xsl:element>
@@ -159,6 +164,9 @@
 	<xsl:template name="all-tags-events">
 		
 		<xsl:element name="ul">
+		  
+		  <xsl:attribute name="class">taglist</xsl:attribute>
+		  
 	    <xsl:for-each select="/html/set/event/tags/tag">
 		    <xsl:sort select="." order="ascending" />
 		    
@@ -238,8 +246,6 @@
 	    
 	    <xsl:element name="ul">
 	      
-	      <xsl:attribute name="class">taglist</xsl:attribute>
-	      
 	      <!-- loop through all news having this tag -->
 	      <xsl:for-each select="/html/set/news[tags/tag = $tag]">
 	        <xsl:element name="li">
@@ -276,8 +282,6 @@
     	</xsl:element>
 	    
 	    <xsl:element name="ul">
-	      
-	      <xsl:attribute name="class">taglist</xsl:attribute>
 	      
 	      <!-- loop through all events having this tag -->
 	      <xsl:for-each select="/html/set/event[tags/tag = $tag]">

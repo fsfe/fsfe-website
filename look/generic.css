@@ -54,6 +54,12 @@ body {
   background-position: 19px 70px;
 }
 
+.text,
+p,
+li {
+ font-size :110%;
+}
+
 a:link,
 a:visited {
   text-decoration: none;
@@ -407,7 +413,7 @@ p.left {
   float: left;
   min-height: 400px;
   width: 78%;
-  font-size: 110%;
+  font-size: 100%;
 }
 
 #content.frontpage {

@@ -48,39 +48,49 @@
 
   <!-- Show a single event -->
   <xsl:template name="event">
-    <xsl:param name="header"
-               select="''" />
-    <xsl:param name="display-details"
-               select="'no'" />
-
+    <xsl:param name="header" select="''" />
+    <xsl:param name="display-details" select="'no'" />
+    <xsl:param name="display-year" select="'no'" />
+    
     <!-- Create variables -->
     <xsl:variable name="start">
       <xsl:value-of select="@start" />
     </xsl:variable>
+    
     <xsl:variable name="start_day">
       <xsl:value-of select="substring($start,9,2)" />
     </xsl:variable>
+    
     <xsl:variable name="start_month">
       <xsl:call-template name="dt:get-month-name">
         <xsl:with-param name="month"
                         select="substring($start,6,2)" />
       </xsl:call-template>
     </xsl:variable>
+    
     <xsl:variable name="end">
       <xsl:value-of select="@end" />
     </xsl:variable>
+    
     <xsl:variable name="end_day">
       <xsl:value-of select="substring($end,9,2)" />
     </xsl:variable>
+    
     <xsl:variable name="end_month">
       <xsl:call-template name="dt:get-month-name">
         <xsl:with-param name="month"
                         select="substring($end,6,2)" />
       </xsl:call-template>
     </xsl:variable>
+    
+    <xsl:variable name="end_year">
+      <xsl:value-of select="substring($end,1,4)" />
+    </xsl:variable>
+    
     <xsl:variable name="link">
       <xsl:value-of select="link" />
     </xsl:variable>
+    
     <xsl:variable name="page">
       <xsl:value-of select="page" />
     </xsl:variable>
@@ -100,9 +110,10 @@
         <xsl:value-of select="translate( normalize-space(title), ' ', '-' )" />
       </xsl:attribute>
     </xsl:element>
-
+    
     <!-- Now, the event block -->
     <div class="entry">
+      
       <xsl:choose>
         <xsl:when test="$link != ''">
           <h3>
@@ -124,6 +135,7 @@
           </h3>
         </xsl:otherwise>
       </xsl:choose>
+      
       <xsl:choose>
         <xsl:when test="$start != $end">
           <p class="date">
@@ -134,6 +146,10 @@
             <xsl:value-of select="$end_day" />
             <xsl:text> </xsl:text>
             <xsl:value-of select="$end_month" />
+            <xsl:if test="$display-year = 'yes'">
+              <xsl:text> </xsl:text>
+              <xsl:value-of select="$end_year" />
+            </xsl:if>
           </p>
         </xsl:when>
         <xsl:otherwise>
@@ -141,16 +157,23 @@
             <xsl:value-of select="$start_day" />
             <xsl:text> </xsl:text>
             <xsl:value-of select="$start_month" />
+            <xsl:if test="$display-year = 'yes'">
+              <xsl:text> </xsl:text>
+              <xsl:value-of select="$end_year" />
+            </xsl:if>
           </p>
         </xsl:otherwise>
       </xsl:choose>
+      
       <!-- and possibly details about the event -->
       <xsl:if test="$display-details = 'yes'">
         <div class="details">
           <xsl:apply-templates select="body/node()" />
         </div>
       </xsl:if>
+      
     </div>
+    
   </xsl:template>
 
   <!-- Show a person's avatar -->

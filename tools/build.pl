@@ -396,38 +396,38 @@ sub process {
     # And once for every language!
     #
     while (my ($lang, undef) = each %languages) {
-	$root->setAttribute("language", $lang);
+    	$root->setAttribute("language", $lang);
 
         #
-	# This finds the source file to use. If we can't find a translation
-	# into the language, it uses the english version instead, or that in
-	# the local language. Or the first version it finds. This should be
+	      # This finds the source file to use. If we can't find a translation
+	      # into the language, it uses the english version instead, or that in
+	      # the local language. Or the first version it finds. This should be
         # made prettier.
         #
-	my $document = $dom->createElement("document");
-	$document->setAttribute("language", $lang);
-	$root->appendChild($document);
+	      my $document = $dom->createElement("document");
+	      $document->setAttribute("language", $lang);
+	      $root->appendChild($document);
 
-	my $source = "$opts{i}/$file.$lang.xhtml";
-	unless (-f $source) {
-            my $missingsource = $source;
-            if (-f "$opts{i}/$file.en.xhtml") {
-		$document->setAttribute("language", "en");
-		$source = "$opts{i}/$file.en.xhtml";
-	    } elsif (-f "$opts{i}/$file.".$root->getAttribute("original").".xhtml") {
-		$document->setAttribute("language", $root->getAttribute("original"));
-		$source = "$opts{i}/$file.".$root->getAttribute("original").".xhtml";
-	    } else {
-                my $l = (keys %{$bases{$file}})[0];
-                $document->setAttribute("language", $l);
-		$source = "$opts{i}/$file.$l.xhtml";
-            }
-            if ($dir eq "global") {
-	      lock(*TRANSLATIONS);
-              print TRANSLATIONS "$lang $missingsource $source\n";
-	      unlock(*TRANSLATIONS);
-            }
-	}
+	      my $source = "$opts{i}/$file.$lang.xhtml";
+	      unless (-f $source) {
+          my $missingsource = $source;
+          if (-f "$opts{i}/$file.en.xhtml") {
+		        $document->setAttribute("language", "en");
+		        $source = "$opts{i}/$file.en.xhtml";
+          } elsif (-f "$opts{i}/$file.".$root->getAttribute("original").".xhtml") {
+		        $document->setAttribute("language", $root->getAttribute("original"));
+		        $source = "$opts{i}/$file.".$root->getAttribute("original").".xhtml";
+          } else {
+            my $l = (keys %{$bases{$file}})[0];
+            $document->setAttribute("language", $l);
+		        $source = "$opts{i}/$file.$l.xhtml";
+          }
+          if ($dir eq "global") {
+    	      lock(*TRANSLATIONS);
+            print TRANSLATIONS "$lang $missingsource $source\n";
+	          unlock(*TRANSLATIONS);
+          }
+    	  }
 
         if ( (stat("$opts{o}/$dir/$file.$lang.html"))[9] >
              (stat($source))[9] && $opts{u} && ! -f "$opts{i}/$file.xsl" ) {
@@ -755,26 +755,31 @@ foreach (grep(!/\.sources$/, grep(!/\.xsl$/, grep(!/\.xml$/, grep(!/\.xhtml$/,
 sub clone_document {
     my ($doc, $source) = @_;
     my $root = $doc->parentNode;
-
+    
     print "Source: $source\n" if $opts{d};
-
+    
     foreach ($root->getElementsByTagName($doc->nodeName)) {
-	$root->removeChild($_);
+    	$root->removeChild($_);
     }
     $root->appendChild($doc);
-
+    
     my $parser = XML::LibXML->new();
     $parser->load_ext_dtd(0);
     $parser->recover(1);
-
+    
     my $sourcedoc = $parser->parse_file($source);
     foreach ($sourcedoc->documentElement->childNodes) {
-        $_->unbindNode();
-	my $n = $_->cloneNode(1);
-	$doc->appendChild($n);
+      $_->unbindNode();
+	    my $n = $_->cloneNode(1);
+	    $doc->appendChild($n);
     }
     if ($sourcedoc->documentElement->getAttribute("external")) {
       $doc->setAttribute("external", "yes");
+    }
+    if ($sourcedoc->documentElement->getAttribute("newsdate")) {
+      # necessary for xhtml news files
+      # TODO: find a way to copy all such attributes!
+      $doc->setAttribute("newsdate", $sourcedoc->documentElement->getAttribute("newsdate"));
     }
 }
 

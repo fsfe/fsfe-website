@@ -118,9 +118,12 @@
     
     <!-- Apply newsletter page PRE-rules -->
     <xsl:if test="string(/buildinfo/document/@newsdate) and /buildinfo/document/@type = 'newsletter'">
-      <xsl:element name="a">
-        <xsl:attribute name="href">/news/newsletter.<xsl:value-of select="/buildinfo/@language"/>.html</xsl:attribute>
-        Newsletter
+      <xsl:element name="p">
+        <xsl:attribute name="id">category</xsl:attribute>
+        <xsl:element name="a">
+          <xsl:attribute name="href">/news/newsletter.<xsl:value-of select="/buildinfo/@language"/>.html</xsl:attribute>
+          Newsletter
+        </xsl:element>
       </xsl:element>
     </xsl:if>
     

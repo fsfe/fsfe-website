@@ -99,18 +99,37 @@
   <!-- Modify H1 -->
   <xsl:template match="h1">
     
+    <!-- Apply news page PRE-rules -->
+    <xsl:if test="string(/buildinfo/document/@newsdate)">
+      
+      <!-- add link to press/press.xx.html -->
+      <xsl:element name="p">
+        <xsl:attribute name="id">category</xsl:attribute>
+        <xsl:element name="a">
+          <xsl:attribute name="href">/press/press.<xsl:value-of select="/buildinfo/@language"/>.html</xsl:attribute>
+          Press
+        </xsl:element>
+      </xsl:element>
+      
+    </xsl:if>
+        
+    
+    <!-- copy original <h1> -->
     <xsl:copy>
       <xsl:apply-templates select="node()"/>
     </xsl:copy>
     
     <!-- Apply news page rules -->
     <xsl:if test="string(/buildinfo/document/@newsdate)">
+      
+      <!-- add publishing information (author, date) -->
       <xsl:element name="div">
         <xsl:attribute name="id">article-metadata</xsl:attribute>
           <xsl:element name="p">
             <span class="label"> <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'published'" /></xsl:call-template>: </span><xsl:value-of select="/buildinfo/document/@newsdate" />
           </xsl:element>
       </xsl:element>
+      
     </xsl:if>
     <!-- End apply news page rules -->
     

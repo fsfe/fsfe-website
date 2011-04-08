@@ -204,7 +204,6 @@ Make a one time donation: http://fsfe.org/donate/donate.html</xsl:text>
                     <xsl:with-param name="day" select="substring(@date, 9, 2)" />
                   </xsl:call-template>
                 </xsl:variable>
-                <xsl:value-of select="$day-of-week" />
                 <xsl:value-of select="document('')/*/weekdays:weekday-names/weekdays:day[@ref=$day-of-week]" />
                 <xsl:text>, </xsl:text>
                 <xsl:value-of select="substring-after(substring-after(@date, '-'), '-')" />
@@ -244,6 +243,15 @@ Make a one time donation: http://fsfe.org/donate/donate.html</xsl:text>
       </xsl:attribute>
       
       <xsl:value-of select="." />
+      
+    </xsl:element>
+  </xsl:template>
+  
+  <!-- remove newsteaser from <p> -->
+  <xsl:template match="p">
+    <xsl:element name="p">
+      
+      <xsl:apply-templates select="node()" />
       
     </xsl:element>
   </xsl:template>

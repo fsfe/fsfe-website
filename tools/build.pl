@@ -341,9 +341,9 @@ sub process {
       $srcfocus = "$1";
       $root->setAttribute("original", $countries{$1});
   }
-
+  
   $root->setAttribute("filename", "/$file");
-
+  
   #
   # Set the directory name attribute
   #
@@ -507,7 +507,7 @@ sub process {
                  my $c = $_->cloneNode(1);
                  # add the filename to nodes (news, events, …) so that we can use it as an identifier (e.g. for RSS)
                  if (ref($c) eq "XML::LibXML::Element") {
-                   $base =~ /.*\/([^\/]*$)/;
+                   $base =~ /.*[\/_]([^\/_]*$)/;
                    $c->setAttribute( "filename", $1 );
                  }
                  $auto_data->appendChild($c);

@@ -55,8 +55,9 @@
             <xsl:variable name="end"><xsl:value-of select="@end" /></xsl:variable>
             <item>
               
-              <!-- <guid> -->
+              <!-- <guid> (is also a permalink to the event page, with anchor -->
               <xsl:element name="guid">
+                <xsl:text>http://fsfe.org/events/events.html#</xsl:text>
                 <xsl:value-of select="@filename"/>
               </xsl:element>
               

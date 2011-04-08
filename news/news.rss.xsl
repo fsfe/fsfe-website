@@ -23,6 +23,7 @@
   <!-- ======== -->
 
   <weekdays:weekday-names>
+    <weekdays:day ref="0">Sun</weekdays:day> <!-- it seems that the module returns 0 for Sunday, on the "English" calendar model (Sundays first) -->
     <weekdays:day ref="1">Mon</weekdays:day>
     <weekdays:day ref="2">Tue</weekdays:day>
     <weekdays:day ref="3">Wed</weekdays:day>
@@ -203,6 +204,7 @@ Make a one time donation: http://fsfe.org/donate/donate.html</xsl:text>
                     <xsl:with-param name="day" select="substring(@date, 9, 2)" />
                   </xsl:call-template>
                 </xsl:variable>
+                <xsl:value-of select="$day-of-week" />
                 <xsl:value-of select="document('')/*/weekdays:weekday-names/weekdays:day[@ref=$day-of-week]" />
                 <xsl:text>, </xsl:text>
                 <xsl:value-of select="substring-after(substring-after(@date, '-'), '-')" />

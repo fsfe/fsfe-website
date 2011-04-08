@@ -439,13 +439,13 @@ sub process {
         # assemble other sets of informations for first (automatically
         # updated pages).
         #
-	if (-f "$opts{i}/$file.xsl") {
+      	if (-f "$opts{i}/$file.xsl") {
           #
           # Settle down please, children. First we remove all previous
           # document leftovers.
           #
           foreach ($root->getElementsByTagName("document")) {
-	    $root->removeChild($_);
+	          $root->removeChild($_);
           }
           $root->appendChild($document);
 
@@ -505,6 +505,11 @@ sub process {
               my $source_data = $parser->parse_file("$base.$l.xml");
               foreach ($source_data->documentElement->childNodes) {
                  my $c = $_->cloneNode(1);
+                 # add the filename to nodes (news, events, …) so that we can use it as an identifier (e.g. for RSS)
+                 if (ref($c) eq "XML::LibXML::Element") {
+                   $base =~ /.*\/([^\/]*$)/;
+                   $c->setAttribute( "filename", $1 );
+                 }
                  $auto_data->appendChild($c);
               }
           }

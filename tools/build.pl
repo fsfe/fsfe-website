@@ -778,8 +778,12 @@ sub clone_document {
     }
     if ($sourcedoc->documentElement->getAttribute("newsdate")) {
       # necessary for xhtml news files
-      # TODO: find a way to copy all such attributes!
       $doc->setAttribute("newsdate", $sourcedoc->documentElement->getAttribute("newsdate"));
+    }
+    if ($sourcedoc->documentElement->getAttribute("type")) {
+      # necessary to differentiate news and newsletter pages
+      # TODO: find a way to copy all such attributes!
+      $doc->setAttribute("type", $sourcedoc->documentElement->getAttribute("type"));
     }
 }
 

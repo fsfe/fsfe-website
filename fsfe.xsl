@@ -100,7 +100,7 @@
   <xsl:template match="h1">
     
     <!-- Apply news page PRE-rules -->
-    <xsl:if test="string(/buildinfo/document/@newsdate)">
+    <xsl:if test="string(/buildinfo/document/@newsdate) and /buildinfo/document/@type != 'newsletter'">
       
       <!-- add link to press/press.xx.html -->
       <xsl:element name="p">
@@ -112,15 +112,24 @@
       </xsl:element>
       
     </xsl:if>
-        
+    
+    <!-- Apply newsletter page PRE-rules -->
+    <xsl:if test="string(/buildinfo/document/@newsdate) and /buildinfo/document/@type == 'newsletter'">
+      <xsl:element name="a">
+        <xsl:attribute name="href">/news/newsletter.<xsl:value-of select="/buildinfo/@language"/>.html</xsl:attribute>
+        <xsl:call-template name="gettext"><xsl:with-param name="id" select="'newsletter'" /></xsl:call-template>
+      </xsl:element>
+    </xsl:if>
+    
     
     <!-- copy original <h1> -->
     <xsl:copy>
       <xsl:apply-templates select="node()"/>
     </xsl:copy>
     
+    
     <!-- Apply news page rules -->
-    <xsl:if test="string(/buildinfo/document/@newsdate)">
+    <xsl:if test="string(/buildinfo/document/@newsdate) and /buildinfo/document/@type != 'newsletter'">
       
       <!-- add publishing information (author, date) -->
       <xsl:element name="div">

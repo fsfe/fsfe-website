@@ -130,6 +130,7 @@
               
               <!-- guid -->
               <xsl:element name="guid">
+                <xsl:attribute name="isPermaLink">false</xsl:attribute>
                 <xsl:value-of select="@filename"/>
               </xsl:element>
               

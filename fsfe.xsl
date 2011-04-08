@@ -9,8 +9,9 @@
   -->
   
   <xsl:import href="tools/xsltsl/translations.xsl" />
+  <xsl:import href="tools/xsltsl/static-elements.xsl" />
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-public="html" />
-
+  
   <!-- The top level element of the input file is "buildinfo" -->
   <xsl:template match="buildinfo">
     <xsl:apply-templates select="node()"/>
@@ -100,7 +101,9 @@
   <xsl:template match="h1">
     
     <!-- Apply news page PRE-rules -->
-    <xsl:if test="string(/buildinfo/document/@newsdate) and /buildinfo/document/@type != 'newsletter'">
+    <xsl:if test="string(/buildinfo/document/@newsdate) and
+                    (not(string(/buildinfo/document/@type)) or
+                    /buildinfo/document/@type != 'newsletter')">
       
       <!-- add link to press/press.xx.html -->
       <xsl:element name="p">
@@ -117,7 +120,7 @@
     <xsl:if test="string(/buildinfo/document/@newsdate) and /buildinfo/document/@type = 'newsletter'">
       <xsl:element name="a">
         <xsl:attribute name="href">/news/newsletter.<xsl:value-of select="/buildinfo/@language"/>.html</xsl:attribute>
-        <xsl:call-template name="gettext"><xsl:with-param name="id" select="'newsletter'" /></xsl:call-template>
+        Newsletter
       </xsl:element>
     </xsl:if>
     
@@ -129,7 +132,9 @@
     
     
     <!-- Apply news page rules -->
-    <xsl:if test="string(/buildinfo/document/@newsdate) and /buildinfo/document/@type != 'newsletter'">
+    <xsl:if test="string(/buildinfo/document/@newsdate) and
+                    (not(string(/buildinfo/document/@type)) or
+                    /buildinfo/document/@type != 'newsletter')">
       
       <!-- add publishing information (author, date) -->
       <xsl:element name="div">
@@ -141,6 +146,12 @@
       
     </xsl:if>
     <!-- End apply news page rules -->
+    
+    <!-- Apply newsletter page -->
+    <xsl:if test="string(/buildinfo/document/@newsdate) and /buildinfo/document/@type = 'newsletter'">
+      <xsl:call-template name="subscribe-nl" />
+    </xsl:if>
+    <!-- End apply newsletter page rules -->
     
     <!-- Apply article rules -->
     <xsl:if test = "string(/buildinfo/document/head/meta[@name='author-name-1']/@content)">

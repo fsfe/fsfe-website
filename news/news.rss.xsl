@@ -7,7 +7,8 @@
                 xmlns:dt="http://xsltsl.org/date-time"
                 xmlns:weekdays="."
                 xmlns:months="."
-                xmlns:content="http://purl.org/rss/1.0/modules/content/">
+                xmlns:content="http://purl.org/rss/1.0/modules/content/"
+                xmlns:atom="http://www.w3.org/2005/Atom">
 
   <xsl:import href="date-time.xsl" />
 
@@ -121,7 +122,13 @@
           <height>31</height>
           <link>http://www.fsfeurope.org/news/</link>
         </image>
-
+        
+        <xsl:element name="atom:link">
+          <xsl:attribute name="href">http://fsfe.org/news/news.<xsl:value-of select="$lang"/>.rss</xsl:attribute>
+          <xsl:attribute name="rel">self</xsl:attribute>
+          <xsl:attribute name="type">application/rss+xml</xsl:attribute>
+        </xsl:element>
+        
         <!-- News items -->
         <xsl:for-each select="/html/set/news
           [translate (@date, '-', '') &lt;= translate ($today, '-', '')]">

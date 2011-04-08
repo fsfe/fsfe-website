@@ -101,19 +101,19 @@
         <xsl:value-of select="/html/text [@id = $header]" />
       </h2>
     </xsl:if>
-
-    <!-- provide an anchor for each event so that it can be linked to from the events rss feed -->
-    <xsl:element name="a">
-      <xsl:attribute name="name">
-        <xsl:value-of select="normalize-space(@start)" />
-        <xsl:text>-</xsl:text>
-        <xsl:value-of select="translate( normalize-space(title), ' ', '-' )" />
-      </xsl:attribute>
-    </xsl:element>
+    
     
     <!-- Now, the event block -->
     <div class="entry">
       
+      <!-- provide an anchor for each event so that it can be linked to from the events rss feed -->
+      <xsl:element name="a">
+        <xsl:attribute name="name">
+          <xsl:value-of select="@filename" />
+        </xsl:attribute>
+      </xsl:element> <!-- end <a name="…"> -->
+      
+      <!-- event title with or without link -->
       <xsl:choose>
         <xsl:when test="$link != ''">
           <h3>
@@ -136,6 +136,7 @@
         </xsl:otherwise>
       </xsl:choose>
       
+      <!-- event date -->
       <xsl:choose>
         <xsl:when test="$start != $end">
           <p class="date">

@@ -31,7 +31,7 @@
       <channel>
         <title>FSFE Events</title>
         <description>Free Software Events</description>
-        <link>http://www.fsfeurope.org/events/</link>
+        <link>http://fsfe.org/events/</link>
         <language><xsl:value-of select="$lang" /></language>
         <copyright>Copyright (c) FSF Europe. Verbatim copying and distribution
           of this entire article is permitted in any medium, provided this
@@ -39,11 +39,11 @@
         <managingEditor>press@fsfeurope.org (FSFE Press Team)</managingEditor>
         <webMaster>web@fsfeurope.org (FSFE Webmaster Team)</webMaster>
         <image>
-          <url>http://fsfeurope.org/events/fsfe-events.png</url>
+          <url>http://fsfe.org/events/fsfe-events.png</url>
           <title>FSFE Events</title>
           <width>88</width>
           <height>31</height>
-          <link>http://www.fsfeurope.org/events/</link>
+          <link>http://fsfe.org/events/</link>
         </image>
 
         <!-- Event items -->
@@ -54,7 +54,12 @@
             <xsl:variable name="start"><xsl:value-of select="@start" /></xsl:variable>
             <xsl:variable name="end"><xsl:value-of select="@end" /></xsl:variable>
             <item>
-
+              
+              <!-- <guid> -->
+              <xsl:element name="guid">
+                <xsl:value-of select="@filename"/>
+              </xsl:element>
+              
               <!-- Title -->
               <xsl:element name="title">
                 <xsl:value-of select="title"/>

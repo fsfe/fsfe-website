@@ -28,9 +28,7 @@
           </xsl:apply-templates>
         </xsl:variable>
         
-        <xsl:element name="link">
-          <xsl:value-of select="normalize-space($link)"/>
-        </xsl:element>
+        <xsl:value-of select="normalize-space($link)"/>
         
       </xsl:when>
       
@@ -45,9 +43,8 @@
         <xsl:value-of select="$lang" />
         <xsl:text>.html#</xsl:text>
         
-        <xsl:value-of select="normalize-space(@start)" />
-        <xsl:text>-</xsl:text>
-        <xsl:value-of select="translate( normalize-space(title), ' ', '-' )" />
+        <!-- anchor value -->
+        <xsl:value-of select="@filename" />
         
       </xsl:otherwise>
       

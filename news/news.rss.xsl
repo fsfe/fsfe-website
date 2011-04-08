@@ -128,6 +128,11 @@
           <xsl:if test="position() &lt; 11">
             <xsl:element name="item">
               
+              <!-- guid -->
+              <xsl:element name="guid">
+                <xsl:value-of select="@filename"/>
+              </xsl:element>
+              
               <!-- Title -->
               <xsl:element name="title">
                 <xsl:value-of select="title"/>
@@ -137,8 +142,8 @@
               <xsl:element name="description">
                 <xsl:copy-of select="normalize-space(body)"/>
                 <xsl:text>
-Become a member, join the Fellowship: https://fellowship.fsfe.org/login/join.php
-Support our work, make a donation: http://fsfe.org/donate/donate.html</xsl:text>
+Support FSFE, join the Fellowship: https://fellowship.fsfe.org/login/join.php
+Make a one time donation: http://fsfe.org/donate/donate.html</xsl:text>
               </xsl:element>
               
               <!-- News body -->
@@ -155,7 +160,7 @@ Support our work, make a donation: http://fsfe.org/donate/donate.html</xsl:text>
                 
                 <xsl:element name="p">
                   
-                  <xsl:text>Become a member, </xsl:text>
+                  <xsl:text>Support FSFE, </xsl:text>
                   <xsl:element name="a">
                     <xsl:attribute name="href">https://fellowship.fsfe.org/login/join.php</xsl:attribute>
                     <xsl:text>join the Fellowship</xsl:text>
@@ -163,10 +168,10 @@ Support our work, make a donation: http://fsfe.org/donate/donate.html</xsl:text>
                   
                   <xsl:element name="br" />
                   
-                  <xsl:text>Support our work, </xsl:text>
+                  <xsl:text>Make a </xsl:text>
                   <xsl:element name="a">
                     <xsl:attribute name="href">http://fsfe.org/donate/donate.html</xsl:attribute>
-                    <xsl:text>make a donation</xsl:text>
+                    <xsl:text>one time donation</xsl:text>
                   </xsl:element>
                   
                 </xsl:element>

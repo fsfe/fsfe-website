@@ -26,6 +26,29 @@
   </xsl:template>
   
   
+  <!-- fill in global figures -->
+  
+  <xsl:variable name="solved">
+    <xsl:value-of select="count( /html/set/buglist/bug[@closed != ''] )" />
+  </xsl:variable>
+  
+  <xsl:variable name="total">
+    <xsl:value-of select="count( /html/set/buglist/bug )" />
+  </xsl:variable>
+  
+  <xsl:template match="solved">
+    <xsl:value-of select="$solved" />
+  </xsl:template>
+  
+  <xsl:template match="bugs">
+    <xsl:value-of select="$total" />
+  </xsl:template>
+  
+  <xsl:template match="globalpct">
+    <xsl:value-of select="floor($solved div $total * 100)" />
+  </xsl:template>
+  
+  
   <!-- <xsl:key name="indivs-by-name" match="/html/set/buglist/bug/@name" use="normalize-space(.)" />
   <xsl:key name="groups-by-name" match="/html/set/buglist/bug/@group" use="normalize-space(.)" /> -->
   

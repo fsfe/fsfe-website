@@ -43,13 +43,25 @@
   
   <!--generate subscribe button in correct language-->
   <xsl:template name="subscribe-button">
+    
+    <xsl:variable name="submit">
+      <xsl:call-template name="gettext">
+        <xsl:with-param name="id" select="'subscribe'" />
+      </xsl:call-template>
+    </xsl:variable>
+    
     <xsl:element name="input">
       <xsl:attribute name="id">submit</xsl:attribute>
       <xsl:attribute name="type">submit</xsl:attribute>
       <xsl:attribute name="value">
-      <xsl:call-template name="gettext">
-          <xsl:with-param name="id" select="'subscribe'" />
-        </xsl:call-template>
+        <xsl:choose>
+          <xsl:when test="$submit != ''">
+            <xsl:value-of select="$submit" />
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:text>Submit</xsl:text>
+          </xsl:otherwise>
+        </xsl:choose>
       </xsl:attribute>
     </xsl:element>
   </xsl:template>

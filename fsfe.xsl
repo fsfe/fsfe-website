@@ -114,7 +114,7 @@
     </xsl:if>
     
     <!-- Apply newsletter page PRE-rules -->
-    <xsl:if test="string(/buildinfo/document/@newsdate) and /buildinfo/document/@type == 'newsletter'">
+    <xsl:if test="string(/buildinfo/document/@newsdate) and /buildinfo/document/@type = 'newsletter'">
       <xsl:element name="a">
         <xsl:attribute name="href">/news/newsletter.<xsl:value-of select="/buildinfo/@language"/>.html</xsl:attribute>
         <xsl:call-template name="gettext"><xsl:with-param name="id" select="'newsletter'" /></xsl:call-template>

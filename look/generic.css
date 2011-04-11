@@ -1159,17 +1159,16 @@ a.fn {
 
 #campaign-box-1 a h3 {
   display: block;
+  color: #202D79;
   font-family: "Lucida Sans", sans-serif;
-  font-size: 1.8em;
+  font-size: 2em;
   margin: .5em;
-  width: 40%;
-  margin-top: 70px;
+  width: 50%;
 }
 
-#campaign-box-1 a h3,
-#campaign-box-1 a:hover {
+#campaign-box-1 a h3:hover {
   text-decoration:none;
-  color: rgb(54,137,10);
+  color:#22284C;
 }
 
 #campaign-box-2 {

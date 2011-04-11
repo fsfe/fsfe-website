@@ -10,11 +10,6 @@
   <xsl:import href="tools/xsltsl/static-elements.xsl" />
   <xsl:output method="xml" encoding="UTF-8" indent="yes" />
   
-  <!-- 
-    For documentation on tagging (e.g. fetching news and events), take a
-    look at the documentation under
-      /tools/xsltsl/tagging-documentation.txt
-  -->
   
   <!-- The top level element of the input file is "buildinfo" -->
   <xsl:template match="buildinfo">

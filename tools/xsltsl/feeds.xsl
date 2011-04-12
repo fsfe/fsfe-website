@@ -10,10 +10,30 @@
     
   <!-- Show a single news item -->
   <xsl:template name="news">
+    <xsl:param name="display-year" select="'no'" />
+    <xsl:param name="show-date" select="'yes'" />
+    
     <xsl:variable name="link">
       <xsl:value-of select="link" />
     </xsl:variable>
+    
+    <xsl:variable name="day">
+      <xsl:value-of select="substring(@date,9,2)" />
+    </xsl:variable>
+    
+    <xsl:variable name="month">
+      <xsl:call-template name="dt:get-month-name">
+        <xsl:with-param name="month" select="substring(@date,6,2)" />
+      </xsl:call-template>
+    </xsl:variable>
+    
+    <xsl:variable name="year">
+      <xsl:value-of select="substring(@date,1,4)" />
+    </xsl:variable>
+    
     <div class="entry">
+      
+      <!-- title -->
       <xsl:choose>
         <xsl:when test="$link != ''">
           <h3>
@@ -28,10 +48,27 @@
           </h3>
         </xsl:otherwise>
       </xsl:choose>
+      
+      <!-- news date -->
+      <xsl:if test="$show-date = 'yes'">
+        <p class="date">
+          <xsl:value-of select="$day" />
+          <xsl:text> </xsl:text>
+          <xsl:value-of select="$month" />
+          <xsl:if test="$display-year = 'yes'">
+            <xsl:text> </xsl:text>
+            <xsl:value-of select="$year" />
+          </xsl:if>
+        </p>
+      </xsl:if>
+      
+      <!-- news text -->
       <div class="text">
         <xsl:apply-templates select="body/node()" />
       </div>
+      
     </div>
+    
   </xsl:template>
 
   <!-- Show a single newsletter item -->

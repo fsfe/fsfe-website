@@ -29,6 +29,7 @@
     <xsl:call-template name="fetch-news">
       <xsl:with-param name="tag">front-page</xsl:with-param>
       <xsl:with-param name="nb-items" select="5" />
+      <xsl:with-param name="show-date" select="'no'" />
     </xsl:call-template>
     
     <xsl:element name="p">

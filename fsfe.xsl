@@ -271,7 +271,7 @@
           <xsl:attribute name="href">/</xsl:attribute>
           <xsl:element name="img">
             <xsl:attribute name="alt">FSFE Logo</xsl:attribute>
-                    <xsl:attribute name="src"><xsl:value-of select="$urlprefix"/>/graphics/logo.png</xsl:attribute>
+                    <xsl:attribute name="src"><xsl:value-of select="$urlprefix"/>/graphics/logo_transparent.png</xsl:attribute>
           </xsl:element>
         </xsl:element>
           </xsl:element>

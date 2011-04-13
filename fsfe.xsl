@@ -736,7 +736,7 @@
       </xsl:element><!-- end sister organisations-->
       
       <div style="display: none">
-        <xsl:value-of select="/buildinfo/document/outdated-info" />
+        a<xsl:value-of select="/buildinfo/document/outdated-info" />z
       </div>
       
     </div> <!-- /#footer -->

@@ -628,11 +628,7 @@ sub process {
               
               if ($dir eq "global") {
 	              lock(*TRANSLATIONS);
-	              if (not $old_outdated) {
-	                print TRANSLATIONS "$lang $source* $originalsource\n";
-	              } else {
-	                print TRANSLATIONS "$lang $source $originalsource\n";
-	              }
+	              print TRANSLATIONS "$lang $source $originalsource\n";
 	              unlock(*TRANSLATIONS);
               }
               

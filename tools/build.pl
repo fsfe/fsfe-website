@@ -336,7 +336,7 @@ sub process {
   # Set the current date, to use for comparision in the XSLT.
   #
   $root->setAttribute("date", $current_date);
-
+  
   #
   # Find original language. It's en, unless we're in the country specific
   # se/, fr/, de/ and so on, directories.
@@ -347,9 +347,9 @@ sub process {
       $srcfocus = "$1";
       $root->setAttribute("original", $countries{$1});
   }
-
+  
   $root->setAttribute("filename", "/$file");
-
+  
   #
   # Set the directory name attribute
   #
@@ -387,7 +387,7 @@ sub process {
   my $backup = $dom->createElement("textsetbackup");
   $root->appendChild($backup);
   clone_document($backup, $opts{i}."/tools/texts-en.xml");
-  
+
   #
   # Transform it, once for every focus!
   #
@@ -616,7 +616,11 @@ sub process {
               
               # register information about the outdated status
             	my $info = $dom->createElement("outdated-info");
-            	$info->appendText($err);
+            	foreach $line (split(/\n/, $err)) {
+            	  my $p = $dom->createElement("p");
+            	  $p->appendText($line);
+            	  $info->appendChild($p);
+            	}
               $document->appendChild($info);
               
               if ($dir eq "global") {
@@ -786,23 +790,23 @@ foreach (grep(!/\.sources$/, grep(!/\.xsl$/, grep(!/\.xml$/, grep(!/\.xhtml$/,
 sub clone_document {
     my ($doc, $source) = @_;
     my $root = $doc->parentNode;
-
+    
     print "Source: $source\n" if $opts{d};
-
+    
     foreach ($root->getElementsByTagName($doc->nodeName)) {
-	$root->removeChild($_);
+    	$root->removeChild($_);
     }
     $root->appendChild($doc);
-
+    
     my $parser = XML::LibXML->new();
     $parser->load_ext_dtd(0);
     $parser->recover(1);
-
+    
     my $sourcedoc = $parser->parse_file($source);
     foreach ($sourcedoc->documentElement->childNodes) {
-        $_->unbindNode();
-	my $n = $_->cloneNode(1);
-	$doc->appendChild($n);
+      $_->unbindNode();
+	    my $n = $_->cloneNode(1);
+	    $doc->appendChild($n);
     }
     if ($sourcedoc->documentElement->getAttribute("external")) {
       $doc->setAttribute("external", "yes");

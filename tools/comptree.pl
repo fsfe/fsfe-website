@@ -17,7 +17,7 @@ use XML::LibXML;
 sub areEqual {
     
     my ($file1, $file2) = @_;
-
+    
     my $dom = XML::LibXML->load_xml(location => $file1);
     my $don = XML::LibXML->load_xml(location => $file2);
     
@@ -83,7 +83,7 @@ sub nodesAreEqual {
       if (not $nodes[$i]->nodeName eq $nodez[$i]->nodeName) {
         return (false, "$file2: after common $commons, " . $nodes[$i]->nodeName . " != " . $nodez[$i]->nodeName );
       }
-      $commons .= $nodes[$i]->nodeName
+      $commons .= $nodes[$i]->nodeName.","
     }
     
     # recur!

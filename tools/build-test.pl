@@ -545,15 +545,6 @@ sub process {
             # TODO: optimise getting texts-content-xx.xml and texts-content-en.xml,
             # since it does not depend on the xsl file being treated, we should do it only once!
             
-            if ( $lang eq "en" and $file eq "news/news" ) {
-	          
-              print "--->outputting test.xml\n";
-              open (TEST, '>', "/home/nicolas/FSFE/fsfe-web-out/test.xml");
-              print TEST $sourcedoc->toString();
-              close (TEST);
-
-            }
-            
             #
             # Transform the document using the XSL file and then push the
             # result into the <document> element of the document we're building.

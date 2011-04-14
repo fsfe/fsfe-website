@@ -595,8 +595,12 @@ sub process {
           # with the original (but maybe a second earlier) isn't marked outdated.
           #
           my $originalsource = "$file.".$root->getAttribute("original").".xhtml";
+          
+          my $old_outdated = 0;
 	        if (( stat("$opts{i}/$originalsource"))[9] > (stat($source))[9] + 7200
 	              and not $cant_be_outdated{$file} ) {
+	          
+	          $old_outdated = 1;
 	          
 	        } else {
 	            
@@ -624,7 +628,11 @@ sub process {
               
               if ($dir eq "global") {
 	              lock(*TRANSLATIONS);
-                print TRANSLATIONS "$lang $source $originalsource\n";
+	              if (not $old_outdated) {
+	                print TRANSLATIONS "$lang $source* $originalsource\n";
+	              } else {
+	                print TRANSLATIONS "$lang $source $originalsource\n";
+	              }
 	              unlock(*TRANSLATIONS);
               }
               

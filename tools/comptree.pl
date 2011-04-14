@@ -83,7 +83,7 @@ sub nodesAreEqual {
       if (not $nodes[$i]->nodeName eq $nodez[$i]->nodeName) {
         return (false, "$file2: after common $commons, " . $nodes[$i]->nodeName . " != " . $nodez[$i]->nodeName );
       }
-      $commons .= $nodes[$i]->nodeName.","
+      $commons .= $nodes[$i]->nodeName.",";
     }
     
     # recur!

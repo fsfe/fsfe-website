@@ -100,7 +100,7 @@ sub nodesAreEqual {
 }
 
 
-return 1;
+1;
 
 
 

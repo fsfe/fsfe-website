@@ -1162,7 +1162,7 @@ a.fn {
 #campaign-box-1 a h3,
 #campaign-box-1 a:hover {
     color: black;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 #campaign-box-2 {

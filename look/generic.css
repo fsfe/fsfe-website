@@ -785,7 +785,7 @@ h4#subpages + ul li:nth-child(odd) {
   background-color: white;
 }
 
-#menu ul li ul {  /* “submenu */
+#menu ul li ul {  /* submenu */
   border-left: none;
   font-size: 120%;
 }

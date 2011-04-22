@@ -1,8 +1,76 @@
 /*
- * rtl (right-to-left) languages, such as Arabic and Hewbrew,
+ * rtl (right-to-left) languages, such as Arabic and Hebrew,
  * needs certain elements right aligned, such as sidebar.
  */
 
+#sidebar {
+  float: right;
+}
+
+#content {
+  clear: left;
+  float: none;
+}
+
+#menu ul li {
+  border-left: 0 !important;
+}
+
+#menu ul li ul {  /* submenu */
+  border-right: none;
+}
+
+#menu ul li.fsfe a {
+  border-right: 15px solid #4ad2f0;
+}
+
+#menu ul li.fsfe a:hover {
+  border-right: 15px solid #4ad2f0;
+}
+
+#menu ul li.fsfe ul li a {
+  border-right: 15px solid #DCDCDC;
+}
+
+#menu ul li.fsfe ul li a:hover {
+  border-right: 15px solid #B2F1FF;
+}
+
+#menu ul li.planet a {
+  border-right: 15px solid #4aa0f0;
+}
+
+#menu ul li.planet ul li a {
+  border-right: 15px solid #DCDCDC;
+}
+
+#menu ul li.planet ul li a:hover {
+  border-right: 15px solid #4aa0f0;
+}
+
+#menu ul li.wiki a {
+  border-right: 15px solid #adff54;
+}
+
+#menu ul li.fellowship a {
+  border-right: 15px solid #6BC800;
+}
+
+#menu ul li.fellowship ul li a {
+  border-right: 15px solid #DCDCDC;
+}
+
+#menu ul li.fellowship ul li a:hover {
+  border-right: 15px solid #ABFF4A;
+}
+
+#menu ul li ul li #selected,
+#menu ul li ul li #selected:hover {
+  border-right: 15px solid #C1C1C1;
+  padding: .6em 1.6em .8em 0;
+}
+
+/*
 #menu {
   left: auto;
   right: 1em !important;
@@ -16,7 +84,7 @@
   /*
 	background-image: url("/graphics/corner-rtl.png");
 	background-position: top right;
-  */
+  *
 	padding-right: 1.4em;
 	padding-left: 0;
 }
@@ -31,4 +99,4 @@
 	margin-right: 220px;
 	margin-left: 0;
 }
-
+*/

@@ -5,12 +5,14 @@
 
 body {
   background-image: url("/graphics/ribbon-gray-rtl.png");
-  background-position: -379px 70px;
+  background-position: -393px 70px;
 }
 
 #wrapper {
   margin-left: 5%;
   margin-right: 1%;
+  border-left: 0;
+  border-right: 1px solid rgb(240,240,240);
 }
 
 #logo {
@@ -20,7 +22,7 @@ body {
 
 #header {
   background-image: url("/graphics/ribbon-rtl.png");
-  background-position: right;
+  background-position: right bottom;
 }
 
 #sidebar {

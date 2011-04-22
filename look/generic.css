@@ -22,22 +22,6 @@ Editing rules:
 @import url("grid.css");
 @import url("input.css");
 
-/* Custom fonts */
-/*
-
-This is apparently a malformed font, according to certain web browsers.
-
-@font-face {
-  font-family: Lucida Sans;
-  src: url("/fonts/LSANS.TTF");
-}
-*/
-
-@font-face {
-  font-family: Nimbus Sans L;
-  src: url("/fonts/NimbusSanL-Regu");
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -104,7 +88,7 @@ h3 {
 h2 {
   color: #202D79;
   font-size: 200%;
-  letter-spacing: -.5px;
+  /*letter-spacing: -.5px;*/
   line-height: 120%;
   margin: .4em -.3em .5em;
   padding: 0 .3em .2em;
@@ -333,8 +317,8 @@ p.left {
   min-height: 75px;
   margin: 0 0 2em;
   padding: 0 0 0 1em;
-  font-family: Nimbus Sans L, Helvetica, Verdana, sans-serif;
-  background: url('/graphics/xmas-fr-bg.png') no-repeat top right;
+  font-family: "Helvetica", "Verdana", sans-serif;
+  background: url("/graphics/xmas-fr-bg.png") no-repeat top right;
   border: 1px solid #800000;
   padding: 0.6em 1em 0.6em 1em;
   overflow: hidden;

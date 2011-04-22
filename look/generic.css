@@ -1227,6 +1227,41 @@ a.fellowship-box {
 }
 
 
+/* Nice buttons */
+.button {
+  padding: 5px 20px 6px;
+  font-size: 120%;
+  font-weight: bold;
+  margin-right: 1em;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .6);
+  -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, .6);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .6);
+  cursor: pointer;
+}
+
+.button .icon {
+  margin-bottom: -5px;
+  margin-left: 8px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url("");
+  width: 18px;
+  height: 19px;
+}
+
+.button.green {
+  color: white;
+  background: #4EA61B;
+  background: -webkit-gradient(linear, left top, left bottom, from(#70CE31), to(#2B6A0A));
+  background: -moz-linear-gradient(top, #70CE31, #296D07);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#70CE31", endColorstr="#2B6A0A");
+}
+
+
 /* Overview pages */
 ul.overview {
   list-style-type: none;

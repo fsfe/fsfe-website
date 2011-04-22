@@ -54,11 +54,14 @@ body {
   background-position: 19px 70px;
 }
 
+/* This is a suboptimal solution, should seek something more generic */
+/*
 .text,
 p,
 li {
  font-size :110%;
 }
+*/
 
 a:link,
 a:visited {
@@ -413,10 +416,10 @@ p.left {
   float: left;
   min-height: 400px;
   width: 78%;
-  font-size: 100%;
+  font-size: 110%;
 }
 
-#content.frontpage {
+#content #frontpage {
   font-size: 100%;
 }
 

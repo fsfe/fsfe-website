@@ -406,8 +406,8 @@
           <xsl:attribute name="id">search</xsl:attribute>
           
           <xsl:element name="h2">
-        <xsl:attribute name="class">n</xsl:attribute>
-        <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'search'" /></xsl:call-template>
+            <xsl:attribute name="class">n</xsl:attribute>
+            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'search'" /></xsl:call-template>
           </xsl:element>
 
           <xsl:element name="form">
@@ -466,7 +466,7 @@
           <xsl:element name="input">
             <xsl:attribute name="type">image</xsl:attribute>
             <xsl:attribute name="src">/graphics/icons/search-button.png</xsl:attribute>
-            <xsl:attribute name="title">
+            <xsl:attribute name="alt">
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'submit'" /></xsl:call-template>
             </xsl:attribute>
           </xsl:element>

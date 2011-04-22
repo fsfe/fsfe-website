@@ -40,7 +40,8 @@ body {
   float: none;
 }
 
-#menu ul li {
+#menu ul li,
+#menu ul li a {
   border-left: 0 !important;
 }
 

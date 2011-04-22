@@ -15,6 +15,12 @@ body {
   border-right: 1px solid rgb(240,240,240);
 }
 
+#wrapper-inner {
+  box-shadow: -3px 3px 4px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 3px;
+}
+
 #logo {
   float: right;
   margin: 1em 1% 0 0;
@@ -27,6 +33,8 @@ body {
 
 #sidebar {
   float: right;
+  padding-right: 0;
+  padding-left: 1em;
 }
 
 #content {
@@ -38,6 +46,11 @@ body {
 #search,
 #translations {
   float: none;
+}
+
+#menu {
+  margin-left: 0;
+  margin-right: -15px;
 }
 
 #menu ul li,
@@ -113,7 +126,7 @@ body {
 }
 
 #footer #notice {
-  float: none;
+  float: right;
   margin: 0 0 0 10%;
 }
 

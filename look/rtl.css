@@ -53,6 +53,11 @@ body {
   margin-right: -15px;
 }
 
+#menu a {
+  padding-left: 0;
+  padding-right: .8em;
+}
+
 #menu ul li,
 #menu ul li a {
   border-left: 0 !important;
@@ -110,6 +115,11 @@ body {
 #menu ul li ul li #selected:hover {
   border-right: 15px solid #C1C1C1;
   padding: .6em 1.6em .8em 0;
+}
+
+#menu ul li ul li a {
+  padding-left: 0;
+  padding-right: 1.6em;
 }
 
 #search input[type="image"] {

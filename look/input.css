@@ -52,7 +52,7 @@ button,
 */
 
 input[_placeholder_on] {
-  color: rgb(120,120,120);
+  color: rgb(120,120,120) !important;
 }
 
 .button-group {

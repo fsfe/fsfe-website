@@ -420,7 +420,7 @@ p.left {
 }
 
 #content #frontpage {
-  font-size: 100%;
+  font-size: 90%;
 }
 
 #content p#category {
@@ -551,7 +551,7 @@ pre.file {
 #introduction {
   border-bottom: 1px solid rgb(210,210,210);
   float: left;
-  font-size: 125%;
+  font-size: 120%;
   margin: 0 -.5em 2em -.5em;
   min-height: 60px;
   padding: 1em .5em;
@@ -566,7 +566,6 @@ pre.file {
 #introduction p,
 p#introduction {
   line-height: 190%;
-  font-size: 110%;
 }
 
 #introduction + * {

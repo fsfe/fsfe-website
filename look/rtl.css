@@ -3,12 +3,23 @@
  * needs certain elements right aligned, such as sidebar.
  */
 
+#logo {
+  float: none;
+  margin: 1em 1% 0 0;
+}
+
 #sidebar {
-  float: right;
+  float: none;
 }
 
 #content {
   clear: left;
+  float: none;
+}
+
+#menu,
+#search,
+#translations {
   float: none;
 }
 
@@ -68,6 +79,28 @@
 #menu ul li ul li #selected:hover {
   border-right: 15px solid #C1C1C1;
   padding: .6em 1.6em .8em 0;
+}
+
+#search input[type="image"] {
+  margin-right: .3em;  
+}
+
+#search input[type="text"] {
+  padding-left: 8px;
+  padding-right: 30px;
+}
+
+#campaign-box-1 h3 {
+  float: left;
+}
+
+#footer #notice {
+  float: none;
+  margin: 0 0 0 10%;
+}
+
+#footer #notice ul li {
+  margin: 0 0 0 .8em;
 }
 
 /*

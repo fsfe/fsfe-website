@@ -135,6 +135,11 @@ body {
   float: left;
 }
 
+#footer {
+  margin-left: 4em;
+  margin-right: 15px;
+}
+
 #footer #notice {
   float: right;
   margin: 0 0 0 10%;

@@ -25,8 +25,16 @@ textarea {
   -moz-border-radius: 11px;
   -webkit-border-radius: 11px;
   */
-  padding: 5px 8px;
   margin: 5px 0 0 0;
+}
+
+input[type=input],
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=submit],
+textarea {
+  padding: 5px 8px;
 }
 
 input[type="image"] {

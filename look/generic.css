@@ -888,7 +888,7 @@ h4#subpages + ul li:nth-child(odd) {
   color: black;
   float: right;
   font-size: 130%;
-  font-weight: bold;
+  font-weight: normal;
   letter-spacing: normal;
   line-height: normal;
   margin: 1.5em -1.7% 1em;

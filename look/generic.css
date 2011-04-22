@@ -1157,7 +1157,7 @@ a.fn {
 
 #campaign-box-1 a h3:hover {
   text-decoration:none;
-  color:#22284C;
+  color: #22284C;
 }
 
 #campaign-box-2 {
@@ -1181,26 +1181,25 @@ a.fn {
   min-height: 45px;
   margin: 1.5em 0 0 0;
   width: 100%;
-  display:none;
+  display: none;
 }
 
-a.donate-box, a.fellowship-box {
+a.donate-box,
+a.fellowship-box {
   display: block;
-  font-family: "Lucida Sans", sans-serif;
   height: 94px;
   border-radius: 7px;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
   text-align: center;
   font-size: 1.8em;
-  font-weight: bold;
 }
 
 #campaign-box-2 a.donate-box {
   color:#3394ce;
-  -moz-box-shadow:inset 0 0 6px #00222b;
-  -webkit-box-shadow:inset 0 0 6px #00222b;
-  box-shadow:inset 0 0 6px #00222b;
+  -moz-box-shadow: inset 0 0 2px #00222b;
+  -webkit-box-shadow: inset 0 0 2px #00222b;
+  box-shadow: inset 0 0 2px #00222b;
   margin: 0 0 12px;
   background:url("/graphics/donate-button-bg.png") no-repeat top left;
 }
@@ -1212,24 +1211,24 @@ a.donate-box, a.fellowship-box {
 
 #campaign-box-2 a.donate-box:hover {
   color: #2A7BAD;
-  -moz-box-shadow: inset 0 0 20px #00222b;
-  -webkit-box-shadow: inset 0 0 20px #00222b;
-  box-shadow: inset 0 0 20px #00222b;
+  -moz-box-shadow: inset 0 0 6px #00222b;
+  -webkit-box-shadow: inset 0 0 6px #00222b;
+  box-shadow: inset 0 0 6px #00222b;
 }
 
 #campaign-box-2 a.fellowship-box {
   color: #70d055;
-  -moz-box-shadow: inset 0 0 6px #17280b;
-  -webkit-box-shadow: inset 0 0 6px #17280b;
-  box-shadow: inset 0 0 6px #17280b;
+  -moz-box-shadow: inset 0 0 2px #17280b;
+  -webkit-box-shadow: inset 0 0 2px #17280b;
+  box-shadow: inset 0 0 2px #17280b;
   background: url("/graphics/join-button-bg.png") no-repeat top left;
 }
 
 #campaign-box-2 a.fellowship-box:hover {
   color: #5DAC46;
-  -moz-box-shadow: inset 0 0 20px #17280b;
-  -webkit-box-shadow: inset 0 0 20px #17280b;
-  box-shadow: inset 0 0 20px #17280b;
+  -moz-box-shadow: inset 0 0 6px #17280b;
+  -webkit-box-shadow: inset 0 0 6px #17280b;
+  box-shadow: inset 0 0 6px #17280b;
 }
 
 

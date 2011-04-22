@@ -222,7 +222,6 @@ p.left {
   box-shadow: 3px 3px 4px rgba(0,0,0,.1);
   -webkit-box-shadow: 3px 3px 4px rgba(0,0,0,.1);
   -moz-box-shadow: 3px 3px 4px rgba(0,0,0,.1);
-  overflow: hidden;
   width: 100%;
 }
 
@@ -401,6 +400,7 @@ p.left {
   min-height: 400px;
   width: 78%;
   font-size: 120%;
+  overflow: hidden;
 }
 
 #content #frontpage {
@@ -739,6 +739,10 @@ h4#subpages + ul li:nth-child(odd) {
 
 
 /* menu */
+#menu {
+  margin-left: -15px;
+}
+
 #menu a {
   color: rgb(110,110,110);
   text-decoration: none;

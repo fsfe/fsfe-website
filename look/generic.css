@@ -931,10 +931,6 @@ h4#subpages + ul li:nth-child(odd) {
   clear: left;
 }
 
-#newsletter.section ul li {
-  font-size: 1.2em;
-}
-
 #events.section h2 {
   background-color: #4AA0F0;
 }

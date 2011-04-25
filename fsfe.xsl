@@ -741,11 +741,11 @@
         </p>
       </div> <!-- /#notice -->          
       
-      <!-- Sister organisations -->
+      <!-- Sister organizations -->
       <xsl:element name="div">
-      <xsl:attribute name="id">sister-organisations</xsl:attribute>        
+        <xsl:attribute name="id">sister-organisations</xsl:attribute>        
         <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfnetwork'" /></xsl:call-template>
-      </xsl:element><!-- end sister organisations-->
+      </xsl:element>
       
     </div> <!-- /#footer -->
     

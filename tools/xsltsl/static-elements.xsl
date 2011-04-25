@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!-- XSL stylesheet for generation RSS feeds.  It's currently using RSS 2.0. -->
-
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:dt="http://xsltsl.org/date-time"

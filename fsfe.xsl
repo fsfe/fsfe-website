@@ -2,16 +2,10 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-  <!--
-  <xsl:output method="html" encoding="utf-8" indent="yes"
-    doctype-public="-//W3C//DTD HTML 4.0 Transitional//EN"
-    doctype-system="http://www.w3.org/TR/REC-html40/loose.dtd"/>
-  -->
-  
   <xsl:import href="tools/xsltsl/translations.xsl" />
   <xsl:import href="tools/xsltsl/static-elements.xsl" />
-  
-  <!--xsl:output method="html" encoding="utf-8" indent="yes" doctype-public="html" />-->
+
+  <!-- HTML 5 compatibility doctype, since our XSLT parser doesn't support disabling output escaping -->
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
   
   <!-- The top level element of the input file is "buildinfo" -->

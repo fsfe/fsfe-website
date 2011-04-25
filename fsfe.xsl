@@ -840,11 +840,16 @@
                tags"/>
 
   <!-- For all other nodes, copy verbatim -->
+
+  <xsl:template match="*">
+    <xsl:element name="{local-name(.)}">
+      <xsl:apply-templates />
+    </xsl:element>
+  </xsl:template>
+  
   <xsl:template match="@*|node()" priority="-1">
     <xsl:copy>
-      <xsl:element name="{local-name()}">
-        <xsl:apply-templates select="@*|node()"/>
-      </xsl:element>
+      <xsl:apply-templates select="@*|node()"/>
     </xsl:copy>
   </xsl:template>
 </xsl:stylesheet>

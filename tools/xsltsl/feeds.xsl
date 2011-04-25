@@ -141,14 +141,11 @@
     
     
     <!-- Now, the event block -->
-    <div class="entry">
-      
-      <!-- provide an anchor for each event so that it can be linked to from the events rss feed -->
-      <xsl:element name="a">
-        <xsl:attribute name="name">
-          <xsl:value-of select="@filename" />
-        </xsl:attribute>
-      </xsl:element> <!-- end <a name="…"> -->
+    <xsl:element name="div">
+      <xsl:attribute name="class">div</xsl:attribute>
+      <xsl:attribute name="name">
+        <xsl:value-of select="@filename" />
+      </xsl:attribute>
       
       <!-- event title with or without link -->
       <xsl:choose>

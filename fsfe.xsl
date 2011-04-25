@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  exclude-result-prefixes="xmlns">
 
   <xsl:import href="tools/xsltsl/translations.xsl" />
   <xsl:import href="tools/xsltsl/static-elements.xsl" />
@@ -840,16 +842,15 @@
                tags"/>
 
   <!-- For all other nodes, copy verbatim -->
-
-  <xsl:template match="*">
-    <xsl:element name="{local-name(.)}">
-      <xsl:apply-templates />
-    </xsl:element>
-  </xsl:template>
-  
   <xsl:template match="@*|node()" priority="-1">
     <xsl:copy>
-      <xsl:apply-templates select="@*|node()"/>
+      <xsl:apply-templates select="@* | node()"/>
     </xsl:copy>
+  </xsl:template>
+
+  <xsl:template match="@x:*">
+    <xsl:attribute name="{local-name()}">
+      <xsl:value-of select="." />
+    </xsl:attribute>
   </xsl:template>
 </xsl:stylesheet>

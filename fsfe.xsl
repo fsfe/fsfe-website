@@ -44,20 +44,24 @@
           </xsl:choose>
         </xsl:attribute>
       </xsl:element>
+
       <!-- For pages used on external web servers, load the CSS from absolute URL -->
       <xsl:variable name="urlprefix"><xsl:if test="/buildinfo/document/@external">https://www.fsfe.org</xsl:if></xsl:variable>
+      
       <xsl:element name="link">
         <xsl:attribute name="rel">stylesheet</xsl:attribute>
         <xsl:attribute name="media">all</xsl:attribute>
         <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/generic.css</xsl:attribute>
         <xsl:attribute name="type">text/css</xsl:attribute>
       </xsl:element>
+      
       <xsl:element name="link">
         <xsl:attribute name="rel">stylesheet</xsl:attribute>
         <xsl:attribute name="media">print</xsl:attribute>
         <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/print.css</xsl:attribute>
         <xsl:attribute name="type">text/css</xsl:attribute>
       </xsl:element>
+      
       <xsl:if test="/buildinfo/@language='ar'">
         <xsl:element name="link">
           <xsl:attribute name="rel">stylesheet</xsl:attribute>
@@ -66,33 +70,39 @@
           <xsl:attribute name="type">text/css</xsl:attribute>
         </xsl:element>
       </xsl:if>
+      
       <xsl:element name="link">
-        <xsl:attribute name="rel">shortcut_icon</xsl:attribute>
+        <xsl:attribute name="rel">icon</xsl:attribute>
         <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/graphics/fsfe.ico</xsl:attribute>
         <xsl:attribute name="type">image/x-icon</xsl:attribute>
       </xsl:element>
+      
       <xsl:element name="link">
         <xsl:attribute name="rel">alternate</xsl:attribute>
         <xsl:attribute name="title">FSFE <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'menu1/news'" /></xsl:call-template></xsl:attribute>
         <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/news/news.<xsl:value-of select="/buildinfo/@language"/>.rss</xsl:attribute>
         <xsl:attribute name="type">application/rss+xml</xsl:attribute>
       </xsl:element>
+      
       <xsl:element name="link">
         <xsl:attribute name="rel">alternate</xsl:attribute>
         <xsl:attribute name="title">FSFE <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'menu1/events'" /></xsl:call-template></xsl:attribute>
         <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/events/events.<xsl:value-of select="/buildinfo/@language"/>.rss</xsl:attribute>
         <xsl:attribute name="type">application/rss+xml</xsl:attribute>
       </xsl:element>
+      
       <script type="text/javascript" src="/scripts/jquery.js"></script>
       <script type="text/javascript" src="/scripts/master.js"></script>
       <script type="text/javascript" src="/scripts/placeholder.js"></script>
-        <xsl:comment>
-      <![CDATA[
-      [if lt IE 8]>
-      <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
-      <![endif]
-      ]]>
-    </xsl:comment>
+      
+      <xsl:comment>
+        <![CDATA[
+          [if lt IE 8]>
+            <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
+          <![endif]
+        ]]>
+      </xsl:comment>
+      
       <xsl:apply-templates select="@*|node()"/>
     </xsl:copy>
   </xsl:template>

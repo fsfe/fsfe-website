@@ -10,7 +10,9 @@
   
   <xsl:import href="tools/xsltsl/translations.xsl" />
   <xsl:import href="tools/xsltsl/static-elements.xsl" />
-  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-public="html" />
+  
+  <!--xsl:output method="html" encoding="utf-8" indent="yes" doctype-public="html" />-->
+  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
   
   <!-- The top level element of the input file is "buildinfo" -->
   <xsl:template match="buildinfo">

@@ -207,7 +207,7 @@
         </div>
       </xsl:if>
       
-    </div>
+    </xsl:element>
     
   </xsl:template>
 

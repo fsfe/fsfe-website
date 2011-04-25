@@ -31,7 +31,9 @@
       <xsl:value-of select="substring(@date,1,4)" />
     </xsl:variable>
     
-    <div class="entry">
+    <!--<div class="entry">-->
+    <xsl:element>
+      <xsl:attribute name="class">entry</xsl:attribute>
       
       <!-- title -->
       <xsl:choose>
@@ -67,7 +69,7 @@
         <xsl:apply-templates select="body/node()" />
       </div>
       
-    </div>
+    </xsl:element>
     
   </xsl:template>
 

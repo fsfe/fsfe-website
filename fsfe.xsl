@@ -354,12 +354,12 @@
               </xsl:element>
 
           </xsl:element> <!-- /li -->
-          
+
           <!-- Planet portal menu -->
           <xsl:element name="li">
             <xsl:attribute name="class">planet</xsl:attribute>
             <xsl:element name="a">
-              <xsl:attribute name="href">http://planet.fsfe.org</xsl:attribute>
+              <xsl:attribute name="href">http://planet.fsfe.org/</xsl:attribute>
               Planet
             </xsl:element>
             <!-- causes validation errors, needs li to pass validator?
@@ -372,7 +372,7 @@
           <xsl:element name="li">
             <xsl:attribute name="class">fellowship</xsl:attribute>
             <xsl:element name="a">
-              <xsl:attribute name="href">http://fellowship.fsfe.org</xsl:attribute>
+              <xsl:attribute name="href">http://fellowship.fsfe.org/</xsl:attribute>
               Fellowship
             </xsl:element>
             <xsl:element name="ul">
@@ -402,8 +402,16 @@
             </xsl:for-each>
               </xsl:element><!-- end li -->
             </xsl:element><!-- end ul -->          
-        
-        </xsl:element><!-- end ul -->
+
+          <!-- Wiki -->
+          <xsl:element name="li">
+            <xsl:attribute name="class">wiki</xsl:attribute>
+            <xsl:element name="a">
+              <xsl:attribute name="href">http://wiki.fsfe.org/</xsl:attribute>
+              Wiki
+            </xsl:element>
+          </xsl:element> <!-- /li -->
+        </xsl:element> <!-- /ul -->
 
         
           </xsl:element><!-- end menu -->

@@ -7,12 +7,14 @@
 # however, is done by the Perl script build.pl.
 # -----------------------------------------------------------------------------
 
-SOURCE=/home/ato/fsfe/design
-DEST=/srv/www/sny.no/fsfe-design
-TMP=/srv/www/sny.no/fsfe-design-tmp/tmp.$$
-STATUS=/srv/www/sny.no/fsfe-design-status
+SOURCE=/home/www/fsfe
+DEST=/home/www/html
+TMP=/home/www/tmp.$$
+STATUS=/var/www/web
 ALARM_LOCKFILE=alarm_lockfile
 MAKEFILE_PL=${SOURCE}/Makefile.PL
+SVNUPOUTFILE=/tmp/fsfe-svnup-out
+SVNUPERRFILE=/tmp/fsfe-svnup-err
 
 # Since we must grep for svn output messages,
 # let's ensure we get English messages
@@ -38,21 +40,16 @@ if [[ -n "$BUILD_STARTED" && "10#${BUILD_STARTED}" -gt 30 && ! -f ${STATUS}/${AL
   touch ${STATUS}/${ALARM_LOCKFILE}
 fi
 
-# If build is already running, don't run it again.
-if ps -C build.sh -o pid= | grep -q -v "$$"; then
-  exit
-fi
-
 # Redirect output
 exec 1> ${STATUS}/status.txt 2>&1
 
+# If some build script is already running, don't run it.
+if ps -C "build-df.sh,build-test.sh,build.sh" -o pid= | grep -q -v "$$"; then
+  echo "Another build script is currently running. Build postponed."
+  exit
+fi
+
 cd ${SOURCE}
-
-# -----------------------------------------------------------------------------
-echo "$(date)  Checking Perl modules."
-# -----------------------------------------------------------------------------
-
-perl ${MAKEFILE_PL}
 
 # -----------------------------------------------------------------------------
 echo "$(date)  Cleaning old build directories."
@@ -64,23 +61,48 @@ rm -rf ${TMP%.*}.*
 echo "$(date)  Updating source files from SVN."
 # -----------------------------------------------------------------------------
 
+# Update the svn working copy and check if any files were updated.
+# Since the "svn update" exit status cannot be trusted, and "svn update -q" is
+# always quiet, we have to test the output of "svn update" (ignoring the final
+# "At revision" line) and check for any output lines
+svn --non-interactive update 2>${SVNUPERRFILE} | grep -v 'At revision' >${SVNUPOUTFILE}
+cat ${SVNUPOUTFILE}
+
+# If "svn update" wrote anything to standard error, exit
+if test -s ${SVNUPERRFILE} ; then
+  echo "$(date)  svn update produced the following error message. Build aborted"
+  cat ${SVNUPERRFILE}
+  cat ${STATUS}/status.txt >> ${STATUS}/status-log.txt
+  exit
+fi
+
+# If there are conflicts in the working copy, exit
+if test -n "$(grep '^C' ${SVNUPOUTFILE})" ; then
+  echo "$(date)  There are conflicts in the local svn working copy. Build aborted"
+  cat ${STATUS}/status.txt >> ${STATUS}/status-log.txt
+  exit
+fi
+
 # Rebuild only if changes were made to the SVN or it hasn't run yet today
 # (unless "-f" option is used)
 #
 # We must run it once every day at least to move events from future to current
 # and from current to past.
-#
-# Since the "svn update" exit status cannot be trusted, and "svn update -q" is
-# always quiet, we have to test the output of "svn update" (ignoring the final
-# "At revision" line) and check for any output lines
-if test -z "$(svn update 2>/dev/null | grep -v 'At revision')" \
+if test ! -s ${SVNUPOUTFILE} \
     -a "$(date -r ${STATUS}/last-run +%F)" == "$(date +%F)" \
     -a "$1" != "-f" ; then
   echo "$(date)  No changes to SVN."
+  echo "$(date)  $(svn info 2>/dev/null | grep '^Revision')"
   # In this case we only append to the cumulative status-log.txt file, we don't touch status-finished.txt
   cat ${STATUS}/status.txt >> ${STATUS}/status-log.txt
   exit
 fi
+
+# -----------------------------------------------------------------------------
+echo "$(date)  Checking Perl modules."
+# -----------------------------------------------------------------------------
+
+perl ${MAKEFILE_PL}
 
 # Make sure build.sh and build.pl are executable
 # TODO: this can be removed once we set the "executable" svn property
@@ -106,11 +128,7 @@ echo "$(date)  Building HTML pages."
 touch ${STATUS}/last-run
 
 if test "x`hostname`" = "xekeberg"; then
-  tools/build.pl -t 16 -q -o ${TMP} -i .
-elif test "x`hostname`" = "xberzelius"; then
-  tools/build.pl -t 2 -q -o ${TMP} -i .
-elif test "x`hostname`" = "xorgelet"; then
-  tools/build.pl -t 6 -q -o ${TMP} -i .
+  tools/build.pl -t 4 -q -o ${TMP} -i .
 else
   tools/build.pl -q -o ${TMP} -i .
 fi
@@ -137,7 +155,8 @@ echo "$(date)  Obfuscating email addresses."
 # -----------------------------------------------------------------------------
 
 # This replaces all '@' in all html files with '&#64;'. We use '-type f'
-# because we want to exclude symlinks. Because 'sed -i' is a very expensive
+# because we want to exclude symlinks (TODO: is -type f still useful now that
+# we don't have .symlinks anymore?). Because 'sed -i' is a very expensive
 # operation, even if there is no replacement done anyway, we first limit the
 # files to operate on to those files that actually contain an '@'.
 find ${TMP} -type f -name "*.html" | xargs grep -l '@' | xargs sed -i 's/@/\&#64;/g'
@@ -163,4 +182,5 @@ echo "$(date)  Build complete."
 cp ${STATUS}/status.txt ${STATUS}/status-finished.txt
 cat ${STATUS}/status-finished.txt >> ${STATUS}/status-log.txt
 cp tools/status.php ${STATUS}/index.php
+cp tools/qa/reports/* ${STATUS}/qa/reports/
 

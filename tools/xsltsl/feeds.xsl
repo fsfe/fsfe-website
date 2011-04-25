@@ -32,7 +32,7 @@
     </xsl:variable>
     
     <!--<div class="entry">-->
-    <xsl:element>
+    <xsl:element name="div">
       <xsl:attribute name="class">entry</xsl:attribute>
       
       <!-- title -->

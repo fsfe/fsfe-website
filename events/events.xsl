@@ -31,6 +31,7 @@
           <xsl:with-param name="wanted-time" select="'present'" />
           <xsl:with-param name="header" select="'current'" />
           <xsl:with-param name="display-details" select="'yes'" />
+          <xsl:with-param name="display-year" select="'yes'" />
       </xsl:call-template>
       
       <!-- Future events -->
@@ -38,6 +39,7 @@
           <xsl:with-param name="wanted-time" select="'future'" />
           <xsl:with-param name="header" select="'future'" />
           <xsl:with-param name="display-details" select="'yes'" />
+          <xsl:with-param name="display-year" select="'yes'" />
       </xsl:call-template>
       
       <!-- Past events -->
@@ -45,6 +47,7 @@
           <xsl:with-param name="wanted-time" select="'past'" />
           <xsl:with-param name="header" select="'past'" />
           <xsl:with-param name="display-details" select="'yes'" />
+          <xsl:with-param name="display-year" select="'yes'" />
       </xsl:call-template>
 
     </xsl:element>

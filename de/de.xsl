@@ -34,6 +34,7 @@
       <!-- Current events -->
       <xsl:call-template name="fetch-events">
           <xsl:with-param name="wanted-time" select="'present'" />
+          <xsl:with-param name="display-details" select="'yes'" />
           <xsl:with-param name="tag">
               <xsl:value-of select="$country-code" />
           </xsl:with-param>
@@ -42,6 +43,7 @@
       <!-- Future events -->
       <xsl:call-template name="fetch-events">
           <xsl:with-param name="wanted-time" select="'future'" />
+          <xsl:with-param name="display-details" select="'yes'" />
           <xsl:with-param name="nb-events" select="3" />
           <xsl:with-param name="tag">
               <xsl:value-of select="$country-code" />

@@ -158,23 +158,63 @@
     <h2>Implementing a country page</h2>
     
     <p>
-        Implementing a country page won't take you long. England and Germany
-        country pages are a good example of what you can achieve easily and how.
-        You could start by copying one of these pages, and change the <var>countrycode</var>
-        variable to your country code:
+      Implementing a country page won't take you long.
+      <a href="/uk/uk.html">United Kingdom</a> and
+      <a href="/de/de.html">Germany</a> country pages are a good example
+      of what you can achieve easily and how.
+    </p>
+    
+    <p>
+      <strong>1. </strong>
+      The very first thing to do is to create a folder with your country
+      code, e.g. "/de", "/uk" or "/it" in the root folder of the fsfe-web
+      svn (you will see other country folders there).<br/>
+      You may want to copy the three common files you'll find in already
+      existing country folders, e.g uk.en.xhtml, uk.xsl and uk.sources,
+      and of course rename them accordingly.
+    </p>
+    
+    <p>
+      <strong>2. </strong>
+      You should not have to modify **.sources.
+      You want to change the <var>countrycode</var>
+      variable in the **.xsl file to your country code, modifying the
+      following line.
         
-        <p class="terminal">&lt;xsl:variable name="country-code"&gt;<var>xx</var>&lt;/xsl:variable&gt;</p>
+      <p class="terminal">&lt;xsl:variable name="country-code"&gt;<var>xx</var>&lt;/xsl:variable&gt;</p>
+      
+      In the **.**.xhtml page, you should only change the identi.ca
+      account, or deactivate it if your country team does not have one yet.
+      
+      <p class="terminal">"user":"fsfeuk",</p>
+      
+      Play further with this file if you want to change the display of
+      your country page.
+      
     </p>
     
     <h3>Using the country-people-list template</h3>
     
     <ul>
-      <li>copy the call to the country-people-list template from your favorite country page.</li>
+      <li>(the call to country-people-list in **.xsl is responsible for the displayed people list)</li>
       <li>add the <var>xx</var> tag to corresponding people in /about/people/people.en.xml, e.g.</li>
     </ul>
     
     <p class="terminal">&lt;person id="mueller" member="yes" teams="main, de"&gt;</p>
-
+    
+    <p>
+      People tagged with your country code will appear in your country
+      page's people list. (If you want to add a person that is not there yet,
+      be careful not to add him/her to the "main" team if he/she is not
+      a member of it).
+    </p>
+    
+    <p>
+      For people's pictures, you want to put a 48*48 pixels picture in the
+      /about/<var>id</var> folder, named <var>id</var>-avatar.jpg (where
+      <var>id</var> is the id defined in /about/people/people.en.xml).
+    </p>
+    
   </body>
 
   <timestamp>$Date: 2010-07-07 05:16:55 +0200 (Wed, 07 Jul 2010) $ $Author: hugo $</timestamp>

@@ -18,4 +18,7 @@
   
   <menu id="planet" />
   <menu id="planet/planet" priority="0" parent="planet">http://planet.fsfe.org/</menu>
+
+  <menu id="wiki" />
+  <menu id="wiki/wiki" priority="0" parent="wiki">http://wiki.fsfe.org/</menu>
 </menuset>

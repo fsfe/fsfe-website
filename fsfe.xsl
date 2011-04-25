@@ -2,15 +2,11 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-  <!--
-  <xsl:output method="html" encoding="utf-8" indent="yes"
-    doctype-public="-//W3C//DTD HTML 4.0 Transitional//EN"
-    doctype-system="http://www.w3.org/TR/REC-html40/loose.dtd"/>
-  -->
-  
   <xsl:import href="tools/xsltsl/translations.xsl" />
   <xsl:import href="tools/xsltsl/static-elements.xsl" />
-  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-public="html" />
+
+  <!-- HTML 5 compatibility doctype, since our XSLT parser doesn't support disabling output escaping -->
+  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
   
   <!-- The top level element of the input file is "buildinfo" -->
   <xsl:template match="buildinfo">
@@ -44,20 +40,24 @@
           </xsl:choose>
         </xsl:attribute>
       </xsl:element>
+
       <!-- For pages used on external web servers, load the CSS from absolute URL -->
       <xsl:variable name="urlprefix"><xsl:if test="/buildinfo/document/@external">https://www.fsfe.org</xsl:if></xsl:variable>
+      
       <xsl:element name="link">
         <xsl:attribute name="rel">stylesheet</xsl:attribute>
         <xsl:attribute name="media">all</xsl:attribute>
         <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/generic.css</xsl:attribute>
         <xsl:attribute name="type">text/css</xsl:attribute>
       </xsl:element>
+      
       <xsl:element name="link">
         <xsl:attribute name="rel">stylesheet</xsl:attribute>
         <xsl:attribute name="media">print</xsl:attribute>
         <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/print.css</xsl:attribute>
         <xsl:attribute name="type">text/css</xsl:attribute>
       </xsl:element>
+      
       <xsl:if test="/buildinfo/@language='ar'">
         <xsl:element name="link">
           <xsl:attribute name="rel">stylesheet</xsl:attribute>
@@ -66,33 +66,39 @@
           <xsl:attribute name="type">text/css</xsl:attribute>
         </xsl:element>
       </xsl:if>
+      
       <xsl:element name="link">
-        <xsl:attribute name="rel">shortcut_icon</xsl:attribute>
+        <xsl:attribute name="rel">icon</xsl:attribute>
         <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/graphics/fsfe.ico</xsl:attribute>
         <xsl:attribute name="type">image/x-icon</xsl:attribute>
       </xsl:element>
+      
       <xsl:element name="link">
         <xsl:attribute name="rel">alternate</xsl:attribute>
         <xsl:attribute name="title">FSFE <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'menu1/news'" /></xsl:call-template></xsl:attribute>
         <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/news/news.<xsl:value-of select="/buildinfo/@language"/>.rss</xsl:attribute>
         <xsl:attribute name="type">application/rss+xml</xsl:attribute>
       </xsl:element>
+      
       <xsl:element name="link">
         <xsl:attribute name="rel">alternate</xsl:attribute>
         <xsl:attribute name="title">FSFE <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'menu1/events'" /></xsl:call-template></xsl:attribute>
         <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/events/events.<xsl:value-of select="/buildinfo/@language"/>.rss</xsl:attribute>
         <xsl:attribute name="type">application/rss+xml</xsl:attribute>
       </xsl:element>
+      
       <script type="text/javascript" src="/scripts/jquery.js"></script>
       <script type="text/javascript" src="/scripts/master.js"></script>
       <script type="text/javascript" src="/scripts/placeholder.js"></script>
-        <xsl:comment>
-      <![CDATA[
-      [if lt IE 8]>
-      <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
-      <![endif]
-      ]]>
-    </xsl:comment>
+      
+      <xsl:comment>
+        <![CDATA[
+          [if lt IE 8]>
+            <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
+          <![endif]
+        ]]>
+      </xsl:comment>
+      
       <xsl:apply-templates select="@*|node()"/>
     </xsl:copy>
   </xsl:template>
@@ -348,12 +354,12 @@
               </xsl:element>
 
           </xsl:element> <!-- /li -->
-          
+
           <!-- Planet portal menu -->
           <xsl:element name="li">
             <xsl:attribute name="class">planet</xsl:attribute>
             <xsl:element name="a">
-              <xsl:attribute name="href">http://planet.fsfe.org</xsl:attribute>
+              <xsl:attribute name="href">http://planet.fsfe.org/</xsl:attribute>
               Planet
             </xsl:element>
             <!-- causes validation errors, needs li to pass validator?
@@ -366,7 +372,7 @@
           <xsl:element name="li">
             <xsl:attribute name="class">fellowship</xsl:attribute>
             <xsl:element name="a">
-              <xsl:attribute name="href">http://fellowship.fsfe.org</xsl:attribute>
+              <xsl:attribute name="href">http://fellowship.fsfe.org/</xsl:attribute>
               Fellowship
             </xsl:element>
             <xsl:element name="ul">
@@ -396,8 +402,16 @@
             </xsl:for-each>
               </xsl:element><!-- end li -->
             </xsl:element><!-- end ul -->          
-        
-        </xsl:element><!-- end ul -->
+
+          <!-- Wiki -->
+          <xsl:element name="li">
+            <xsl:attribute name="class">wiki</xsl:attribute>
+            <xsl:element name="a">
+              <xsl:attribute name="href">http://wiki.fsfe.org/</xsl:attribute>
+              Wiki
+            </xsl:element>
+          </xsl:element> <!-- /li -->
+        </xsl:element> <!-- /ul -->
 
         
           </xsl:element><!-- end menu -->
@@ -406,8 +420,8 @@
           <xsl:attribute name="id">search</xsl:attribute>
           
           <xsl:element name="h2">
-        <xsl:attribute name="class">n</xsl:attribute>
-        <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'search'" /></xsl:call-template>
+            <xsl:attribute name="class">n</xsl:attribute>
+            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'search'" /></xsl:call-template>
           </xsl:element>
 
           <xsl:element name="form">
@@ -466,7 +480,7 @@
           <xsl:element name="input">
             <xsl:attribute name="type">image</xsl:attribute>
             <xsl:attribute name="src">/graphics/icons/search-button.png</xsl:attribute>
-            <xsl:attribute name="title">
+            <xsl:attribute name="alt">
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'submit'" /></xsl:call-template>
             </xsl:attribute>
           </xsl:element>
@@ -729,21 +743,17 @@
         </p>
       </div> <!-- /#notice -->          
       
-      <!-- Sister organisations -->
+      <!-- Sister organizations -->
       <xsl:element name="div">
-      <xsl:attribute name="id">sister-organisations</xsl:attribute>        
+        <xsl:attribute name="id">sister-organisations</xsl:attribute>        
         <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfnetwork'" /></xsl:call-template>
-      </xsl:element><!-- end sister organisations-->
-      
-      <div style="display: none">
-        <xsl:copy-of select="/buildinfo/document/outdated-info/node()" />
-      </div>
+      </xsl:element>
       
     </div> <!-- /#footer -->
     
-        <!-- AWstats javascript tracking code -->
-        <script language="javascript" type="text/javascript" src="/scripts/awstats_misc_tracker.js" ></script>
-    <noscript><img src="/scripts/awstats_misc_tracker.js?nojs=y" height="0" width="0" border="0" style="display: none" alt="script" /></noscript>
+    <!-- AWstats javascript tracking code -->
+    <script src="/scripts/awstats_misc_tracker.js" ></script>
+    <noscript><img src="/scripts/awstats_misc_tracker.js?nojs=y" style="display: none" alt="script" /></noscript>
     
       </xsl:element>
     </xsl:copy>
@@ -835,16 +845,19 @@
                buildinfo/trlist|
                buildinfo/fundraising|
                buildinfo/localmenuset|
-               tags|
-               outdated-info"/>
+               tags"/>
 
   <!-- For all other nodes, copy verbatim -->
   <xsl:template match="@*|node()" priority="-1">
     <xsl:copy>
-      <xsl:apply-templates select="@*|node()"/>
+      <xsl:apply-templates select="@* | node()"/>
     </xsl:copy>
   </xsl:template>
+  <!--
+  <xsl:template match="@x:*">
+    <xsl:attribute name="{local-name()}">
+      <xsl:value-of select="." />
+    </xsl:attribute>
+  </xsl:template>
+  -->
 </xsl:stylesheet>
-
-
-<!--  -->

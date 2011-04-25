@@ -16,6 +16,7 @@
 		<xsl:param name="tag" select="''"/>
 		<xsl:param name="today" select="/html/@date" />
 		<xsl:param name="nb-items" select="''" />
+		<xsl:param name="show-date" select="'yes'" />
 		
     <xsl:for-each select="/html/set/news[ translate (@date, '-', '') &lt;= translate ($today, '-', '')
                           and (tags/tag = $tag or $tag='')
@@ -24,7 +25,9 @@
                           <!-- @type != 'newsletter' is for legacy -->
 	    <xsl:sort select="@date" order="descending" />
 	    <xsl:if test="position() &lt;= $nb-items or $nb-items=''">
-		    <xsl:call-template name="news" />
+		    <xsl:call-template name="news">
+		      <xsl:with-param name="show-date" select="$show-date" />
+		    </xsl:call-template>
 	    </xsl:if>
 		</xsl:for-each>
 		
@@ -54,6 +57,7 @@
 		<xsl:param name="header" select="''" />
 		<xsl:param name="nb-items" select="''" />
 		<xsl:param name="display-details" select="'no'" />
+		<xsl:param name="display-year" select="'no'" />
 		
 		<xsl:choose>
 	        <xsl:when test="$wanted-time = 'past'">
@@ -63,10 +67,9 @@
                     <xsl:sort select="@end" order="descending" />
                     <xsl:if test="position() &lt;= $nb-items or $nb-items=''">
                         <xsl:call-template name="event">
-                            <xsl:with-param name="header">
-                                <xsl:value-of select="$header" />
-                            </xsl:with-param>
+                            <xsl:with-param name="header" select="$header" />
                             <xsl:with-param name="display-details" select="$display-details" />
+                            <xsl:with-param name="display-year" select="$display-year" />
                         </xsl:call-template>
                     </xsl:if>
                 </xsl:for-each>
@@ -83,10 +86,9 @@
                     <xsl:sort select="@start" order="descending" />
                     <xsl:if test="position() &lt;= $nb-items or $nb-items=''">
                         <xsl:call-template name="event">
-                            <xsl:with-param name="header">
-                                <xsl:value-of select="$header" />
-                            </xsl:with-param>
+                            <xsl:with-param name="header" select="$header" />
                             <xsl:with-param name="display-details" select="$display-details" />
+                            <xsl:with-param name="display-year" select="$display-year" />
                         </xsl:call-template>
                     </xsl:if>
                 </xsl:for-each>
@@ -101,10 +103,9 @@
                     <xsl:sort select="@start" />
                     <xsl:if test="position() &lt;= $nb-items or $nb-items=''">
                         <xsl:call-template name="event">
-                            <xsl:with-param name="header">
-                                <xsl:value-of select="$header" />
-                            </xsl:with-param>
+                            <xsl:with-param name="header" select="$header" />
                             <xsl:with-param name="display-details" select="$display-details" />
+                            <xsl:with-param name="display-year" select="$display-year" />
                         </xsl:call-template>
                     </xsl:if>
                 </xsl:for-each>

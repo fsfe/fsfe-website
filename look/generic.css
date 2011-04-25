@@ -22,22 +22,6 @@ Editing rules:
 @import url("grid.css");
 @import url("input.css");
 
-/* Custom fonts */
-/*
-
-This is apparently a malformed font, according to certain web browsers.
-
-@font-face {
-  font-family: Lucida Sans;
-  src: url("/fonts/LSANS.TTF");
-}
-*/
-
-@font-face {
-  font-family: Nimbus Sans L;
-  src: url("/fonts/NimbusSanL-Regu");
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -53,6 +37,15 @@ body {
   background-repeat: no-repeat;
   background-position: 19px 70px;
 }
+
+/* This is a suboptimal solution, should seek something more generic */
+/*
+.text,
+p,
+li {
+ font-size :110%;
+}
+*/
 
 a:link,
 a:visited {
@@ -95,7 +88,7 @@ h3 {
 h2 {
   color: #202D79;
   font-size: 200%;
-  letter-spacing: -.5px;
+  /*letter-spacing: -.5px;*/
   line-height: 120%;
   margin: .4em -.3em .5em;
   padding: 0 .3em .2em;
@@ -211,7 +204,7 @@ p.left {
 }
 
 #wrapper {
-  margin:0 5% 0 1%;
+  margin: 0 5% 0 1%;
   padding-bottom: 0;
   max-width: 980px;
   min-width: 500px;
@@ -229,7 +222,6 @@ p.left {
   box-shadow: 3px 3px 4px rgba(0,0,0,.1);
   -webkit-box-shadow: 3px 3px 4px rgba(0,0,0,.1);
   -moz-box-shadow: 3px 3px 4px rgba(0,0,0,.1);
-  overflow: hidden;
   width: 100%;
 }
 
@@ -299,7 +291,7 @@ p.left {
 #search input[type="text"] {
   /*padding-left: 30px;
   width: 150px;*/
-  width: 80%;
+  width: 70%;
   padding: 5px 8px 5px 30px;
 }
 
@@ -324,8 +316,8 @@ p.left {
   min-height: 75px;
   margin: 0 0 2em;
   padding: 0 0 0 1em;
-  font-family: Nimbus Sans L, Helvetica, Verdana, sans-serif;
-  background: url('/graphics/xmas-fr-bg.png') no-repeat top right;
+  font-family: "Helvetica", "Verdana", sans-serif;
+  background: url("/graphics/xmas-fr-bg.png") no-repeat top right;
   border: 1px solid #800000;
   padding: 0.6em 1em 0.6em 1em;
   overflow: hidden;
@@ -407,11 +399,12 @@ p.left {
   float: left;
   min-height: 400px;
   width: 78%;
-  font-weight: 110%;
+  font-size: 120%;
+  overflow: hidden;
 }
 
-#content.frontpage {
-  font-weight: 100%;
+#content #frontpage {
+  font-size: 90%;
 }
 
 #content p#category {
@@ -542,7 +535,7 @@ pre.file {
 #introduction {
   border-bottom: 1px solid rgb(210,210,210);
   float: left;
-  font-size: 125%;
+  font-size: 120%;
   margin: 0 -.5em 2em -.5em;
   min-height: 60px;
   padding: 1em .5em;
@@ -557,7 +550,6 @@ pre.file {
 #introduction p,
 p#introduction {
   line-height: 190%;
-  font-size: 110%;
 }
 
 #introduction + * {
@@ -747,6 +739,10 @@ h4#subpages + ul li:nth-child(odd) {
 
 
 /* menu */
+#menu {
+  margin-left: -15px;
+}
+
 #menu a {
   color: rgb(110,110,110);
   text-decoration: none;
@@ -789,7 +785,7 @@ h4#subpages + ul li:nth-child(odd) {
   background-color: white;
 }
 
-#menu ul li ul {  /* “submenu */
+#menu ul li ul {  /* submenu */
   border-left: none;
   font-size: 120%;
 }
@@ -892,7 +888,7 @@ h4#subpages + ul li:nth-child(odd) {
   color: black;
   float: right;
   font-size: 130%;
-  font-weight: bold;
+  font-weight: normal;
   letter-spacing: normal;
   line-height: normal;
   margin: 1.5em -1.7% 1em;
@@ -933,10 +929,6 @@ h4#subpages + ul li:nth-child(odd) {
 
 .section ul {
   clear: left;
-}
-
-#newsletter.section ul li {
-  font-size: 1.2em;
 }
 
 #events.section h2 {
@@ -1147,22 +1139,21 @@ a.fn {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
-  background: url("/graphics/ask-candidates.png") no-repeat top right;
+  background: url("/graphics/pdf-banner.png") no-repeat top right;
   overflow: hidden;
 }
 
 #campaign-box-1 a h3 {
-    display: block;
-    font-family: "Lucida Sans",sans-serif;
-    font-size: 1.8em;
-    margin: 56px 0 0 1.5em;
-    width: 40%;
+  display: block;
+  color: #202D79;
+  font-size: 2em;
+  margin: .5em;
+  width: 50%;
 }
 
-#campaign-box-1 a h3,
-#campaign-box-1 a:hover {
-    color: black;
-    text-decoration: underline;
+#campaign-box-1 a h3:hover {
+  text-decoration:none;
+  color: #22284C;
 }
 
 #campaign-box-2 {
@@ -1176,7 +1167,6 @@ a.fn {
 #campaign-box-2 p {
   margin: 0;
   padding: 1.7em 0 0 0;
-  font-weight: bold;
 }
 
 #campaign-box-3 {
@@ -1186,26 +1176,25 @@ a.fn {
   min-height: 45px;
   margin: 1.5em 0 0 0;
   width: 100%;
-  display:none;
+  display: none;
 }
 
-a.donate-box, a.fellowship-box {
+a.donate-box,
+a.fellowship-box {
   display: block;
-  font-family: "Lucida Sans", sans-serif;
   height: 94px;
   border-radius: 7px;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
   text-align: center;
   font-size: 1.8em;
-  font-weight: bold;
 }
 
 #campaign-box-2 a.donate-box {
   color:#3394ce;
-  -moz-box-shadow:inset 0 0 6px #00222b;
-  -webkit-box-shadow:inset 0 0 6px #00222b;
-  box-shadow:inset 0 0 6px #00222b;
+  -moz-box-shadow: inset 0 0 2px #00222b;
+  -webkit-box-shadow: inset 0 0 2px #00222b;
+  box-shadow: inset 0 0 2px #00222b;
   margin: 0 0 12px;
   background:url("/graphics/donate-button-bg.png") no-repeat top left;
 }
@@ -1217,24 +1206,59 @@ a.donate-box, a.fellowship-box {
 
 #campaign-box-2 a.donate-box:hover {
   color: #2A7BAD;
-  -moz-box-shadow: inset 0 0 20px #00222b;
-  -webkit-box-shadow: inset 0 0 20px #00222b;
-  box-shadow: inset 0 0 20px #00222b;
+  -moz-box-shadow: inset 0 0 6px #00222b;
+  -webkit-box-shadow: inset 0 0 6px #00222b;
+  box-shadow: inset 0 0 6px #00222b;
 }
 
 #campaign-box-2 a.fellowship-box {
   color: #70d055;
-  -moz-box-shadow: inset 0 0 6px #17280b;
-  -webkit-box-shadow: inset 0 0 6px #17280b;
-  box-shadow: inset 0 0 6px #17280b;
+  -moz-box-shadow: inset 0 0 2px #17280b;
+  -webkit-box-shadow: inset 0 0 2px #17280b;
+  box-shadow: inset 0 0 2px #17280b;
   background: url("/graphics/join-button-bg.png") no-repeat top left;
 }
 
 #campaign-box-2 a.fellowship-box:hover {
   color: #5DAC46;
-  -moz-box-shadow: inset 0 0 20px #17280b;
-  -webkit-box-shadow: inset 0 0 20px #17280b;
-  box-shadow: inset 0 0 20px #17280b;
+  -moz-box-shadow: inset 0 0 6px #17280b;
+  -webkit-box-shadow: inset 0 0 6px #17280b;
+  box-shadow: inset 0 0 6px #17280b;
+}
+
+
+/* Nice buttons */
+.button {
+  padding: 5px 20px 6px;
+  font-size: 120%;
+  font-weight: bold;
+  margin-right: 1em;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, .6);
+  -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, .6);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .6);
+  cursor: pointer;
+}
+
+.button .icon {
+  margin-bottom: -5px;
+  margin-left: 8px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-image: url("");
+  width: 18px;
+  height: 19px;
+}
+
+.button.green {
+  color: white;
+  background: #4EA61B;
+  background: -webkit-gradient(linear, left top, left bottom, from(#70CE31), to(#2B6A0A));
+  background: -moz-linear-gradient(top, #70CE31, #296D07);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#70CE31", endColorstr="#2B6A0A");
 }
 
 
@@ -1246,7 +1270,7 @@ ul.overview {
   padding: 0;
   padding-right: 1.5%;
   float: left;
-  width: 45%;
+  width: 44%;
 }
 
 
@@ -1603,6 +1627,16 @@ fieldset {
 .alliancecentriste {
    background-color: #FFEBC8;
    border-left: 10px solid #F5DEB3;
+}
+
+
+/* -------------------------------------------------------------------- */
+/* Interviews                                                           */
+/* -------------------------------------------------------------------- */
+
+.interview-question {
+  font-style:italic;
+  font-weight:bold;
 }
 
 

@@ -7,7 +7,8 @@
                 xmlns:dt="http://xsltsl.org/date-time"
                 xmlns:weekdays="."
                 xmlns:months="."
-                xmlns:content="http://purl.org/rss/1.0/modules/content/">
+                xmlns:content="http://purl.org/rss/1.0/modules/content/"
+                xmlns:atom="http://www.w3.org/2005/Atom">
 
   <xsl:import href="date-time.xsl" />
 
@@ -23,6 +24,7 @@
   <!-- ======== -->
 
   <weekdays:weekday-names>
+    <weekdays:day ref="0">Sun</weekdays:day> <!-- it seems that the module returns 0 for Sunday, on the "English" calendar model (Sundays first) -->
     <weekdays:day ref="1">Mon</weekdays:day>
     <weekdays:day ref="2">Tue</weekdays:day>
     <weekdays:day ref="3">Wed</weekdays:day>
@@ -120,13 +122,27 @@
           <height>31</height>
           <link>http://www.fsfeurope.org/news/</link>
         </image>
-
+        
+        <xsl:element name="atom:link">
+          <xsl:attribute name="href">http://fsfe.org/news/news.<xsl:value-of select="$lang"/>.rss</xsl:attribute>
+          <xsl:attribute name="rel">self</xsl:attribute>
+          <xsl:attribute name="type">application/rss+xml</xsl:attribute>
+        </xsl:element>
+        
         <!-- News items -->
         <xsl:for-each select="/html/set/news
           [translate (@date, '-', '') &lt;= translate ($today, '-', '')]">
           <xsl:sort select="@date" order="descending"/>
           <xsl:if test="position() &lt; 11">
             <xsl:element name="item">
+              
+              <!-- guid -->
+              <xsl:element name="guid">
+                <xsl:attribute name="isPermaLink">false</xsl:attribute>
+                <xsl:value-of select="@filename"/>
+              </xsl:element>
+              
+              
               
               <!-- Title -->
               <xsl:element name="title">
@@ -137,8 +153,8 @@
               <xsl:element name="description">
                 <xsl:copy-of select="normalize-space(body)"/>
                 <xsl:text>
-Become a member, join the Fellowship: https://fellowship.fsfe.org/login/join.php
-Support our work, make a donation: http://fsfe.org/donate/donate.html</xsl:text>
+Support FSFE, join the Fellowship: https://fellowship.fsfe.org/login/join.php
+Make a one time donation: http://fsfe.org/donate/donate.html</xsl:text>
               </xsl:element>
               
               <!-- News body -->
@@ -155,7 +171,7 @@ Support our work, make a donation: http://fsfe.org/donate/donate.html</xsl:text>
                 
                 <xsl:element name="p">
                   
-                  <xsl:text>Become a member, </xsl:text>
+                  <xsl:text>Support FSFE, </xsl:text>
                   <xsl:element name="a">
                     <xsl:attribute name="href">https://fellowship.fsfe.org/login/join.php</xsl:attribute>
                     <xsl:text>join the Fellowship</xsl:text>
@@ -163,10 +179,10 @@ Support our work, make a donation: http://fsfe.org/donate/donate.html</xsl:text>
                   
                   <xsl:element name="br" />
                   
-                  <xsl:text>Support our work, </xsl:text>
+                  <xsl:text>Make a </xsl:text>
                   <xsl:element name="a">
                     <xsl:attribute name="href">http://fsfe.org/donate/donate.html</xsl:attribute>
-                    <xsl:text>make a donation</xsl:text>
+                    <xsl:text>one time donation</xsl:text>
                   </xsl:element>
                   
                 </xsl:element>
@@ -234,6 +250,15 @@ Support our work, make a donation: http://fsfe.org/donate/donate.html</xsl:text>
       </xsl:attribute>
       
       <xsl:value-of select="." />
+      
+    </xsl:element>
+  </xsl:template>
+  
+  <!-- remove newsteaser from <p> -->
+  <xsl:template match="p">
+    <xsl:element name="p">
+      
+      <xsl:apply-templates select="node()" />
       
     </xsl:element>
   </xsl:template>

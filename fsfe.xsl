@@ -845,10 +845,11 @@
       <xsl:apply-templates select="@* | node()"/>
     </xsl:copy>
   </xsl:template>
-
+  <!--
   <xsl:template match="@x:*">
     <xsl:attribute name="{local-name()}">
       <xsl:value-of select="." />
     </xsl:attribute>
   </xsl:template>
+  -->
 </xsl:stylesheet>

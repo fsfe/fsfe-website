@@ -6,7 +6,8 @@
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:dt="http://xsltsl.org/date-time"
                 xmlns:weekdays="."
-                xmlns:months=".">
+                xmlns:months="."
+                exclude-result-prefixes="dt weekdays months">
 
   <xsl:output method="xml" encoding="utf-8" indent="yes" />
   

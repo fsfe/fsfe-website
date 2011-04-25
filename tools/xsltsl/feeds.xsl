@@ -145,7 +145,7 @@
     <!-- Now, the event block -->
     <xsl:element name="div">
       <xsl:attribute name="class">div</xsl:attribute>
-      <xsl:attribute name="name">
+      <xsl:attribute name="id">
         <xsl:value-of select="@filename" />
       </xsl:attribute>
       

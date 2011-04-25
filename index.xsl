@@ -161,9 +161,15 @@
   <xsl:template match="set | tags"/>
   
   <!-- For all other nodes, copy verbatim -->
-  <xsl:template match="@*|node()" priority="-1">
+  <xsl:template match="@* | node()" priority="-1">
     <xsl:copy>
-      <xsl:apply-templates select="@*|node()"/>
+      <xsl:apply-templates select="@* | node()"/>
     </xsl:copy>
+  </xsl:template>
+
+  <xsl:template match="@dt:*">
+    <xsl:attribute name="{local-name()}">
+      <xsl:value-of select="." />
+    </xsl:attribute>
   </xsl:template>
 </xsl:stylesheet>

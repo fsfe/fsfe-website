@@ -741,17 +741,17 @@
         </p>
       </div> <!-- /#notice -->          
       
-    <!-- Sister organisations -->
-    <xsl:element name="div">
-    <xsl:attribute name="id">sister-organisations</xsl:attribute>        
-      <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfnetwork'" /></xsl:call-template>
-    </xsl:element><!-- end sister organisations-->
+      <!-- Sister organisations -->
+      <xsl:element name="div">
+      <xsl:attribute name="id">sister-organisations</xsl:attribute>        
+        <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfnetwork'" /></xsl:call-template>
+      </xsl:element><!-- end sister organisations-->
       
     </div> <!-- /#footer -->
     
-        <!-- AWstats javascript tracking code -->
-        <script language="javascript" type="text/javascript" src="/scripts/awstats_misc_tracker.js" ></script>
-    <noscript><img src="/scripts/awstats_misc_tracker.js?nojs=y" height="0" width="0" border="0" style="display: none" alt="script" /></noscript>
+    <!-- AWstats javascript tracking code -->
+    <script src="/scripts/awstats_misc_tracker.js" ></script>
+    <noscript><img src="/scripts/awstats_misc_tracker.js?nojs=y" style="display: none" alt="script" /></noscript>
     
       </xsl:element>
     </xsl:copy>

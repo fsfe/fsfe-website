@@ -18,4 +18,4 @@
     </xsl:copy>
   </xsl:template>
 
-</xml:stylesheet>
+</xsl:stylesheet>

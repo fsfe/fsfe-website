@@ -65,7 +65,7 @@
       <xsl:value-of select="normalize-space(.)" />
     </xsl:variable>
 
-    <!-- Add leading "http://www.fsfeurope.org" if necessary -->
+    <!-- Add leading "http://fsfe.org" if necessary -->
     <xsl:variable name="full-link">
       <xsl:choose>
         <xsl:when test="starts-with ($link, 'http:')">
@@ -108,7 +108,7 @@
       <channel>
         <title>FSFE News</title>
         <description>News from the Free Software Foundation Europe</description>
-        <link>http://www.fsfeurope.org/news/</link>
+        <link>http://fsfe.org/news/</link>
         <language><xsl:value-of select="$lang" /></language>
         <copyright>Copyright (c) FSF Europe. Verbatim copying and distribution
           of this entire article is permitted in any medium, provided this
@@ -116,11 +116,11 @@
         <managingEditor>press@fsfeurope.org (FSFE Press Team)</managingEditor>
         <webMaster>web@fsfeurope.org (FSFE Webmaster Team)</webMaster>
         <image>
-          <url>http://fsfeurope.org/news/fsfe-news.png</url>
+          <url>http://fsfe.org/news/fsfe-news.png</url>
           <title>FSFE News</title>
           <width>88</width>
           <height>31</height>
-          <link>http://www.fsfeurope.org/news/</link>
+          <link>http://fsfe.org/news/</link>
         </image>
         
         <xsl:element name="atom:link">

@@ -5,10 +5,12 @@
   <xsl:output method="xml" encoding="UTF-8" indent="yes" />
 
   <xsl:template match="/html/head">
-    <xsl:element name="link">
-      <xsl:attribute name="href">/look/fellowship.css</xsl:attribute>
-      <xsl:attribute name="rel">stylesheet</xsl:attribute>
-    </xsl:element>
+    <xsl:copy>
+      <xsl:element name="link">
+        <xsl:attribute name="href">/look/fellowship.css</xsl:attribute>
+        <xsl:attribute name="rel">stylesheet</xsl:attribute>
+      </xsl:element>
+    </xsl:copy>
   </xsl:template>
 
   <xsl:template match="/html/body">

@@ -10,6 +10,8 @@
         <xsl:attribute name="href">/look/fellowship.css</xsl:attribute>
         <xsl:attribute name="rel">stylesheet</xsl:attribute>
       </xsl:element>
+
+      <xsl:apply-templates />
     </xsl:copy>
   </xsl:template>
 

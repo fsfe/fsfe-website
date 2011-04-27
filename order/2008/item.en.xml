@@ -9,7 +9,7 @@
     <available size="L"/>
     <available size="XL"/>
     <available size="XXL"/>
-    <!-- <available size="XXXL"/> -->
+    <available size="XXXL"/>
     <image
       small="/order/2008/tshirt-hacking2-black-front-small.jpg"
       large="/order/2008/tshirt-hacking2-black-front-large.jpg"/>
@@ -43,7 +43,7 @@
       small="/order/2008/tshirt-dfd-white-back-small.jpg"
       large="/order/2008/tshirt-dfd-white-back-large.jpg"/>
   </item>
-  <item type="other" id="keyring-fellowship" price="7.00" date="2008-02-23">
+  <!-- <item type="other" id="keyring-fellowship" price="7.00" date="2008-02-23">
     <available size="#"/>
     <image
       small="/order/2008/keyring-fellowship-small.jpg"
@@ -54,7 +54,7 @@
     <image
       small="/order/2008/mug-fellowship-small.jpg"
       large="/order/2008/mug-fellowship-large.jpg"/>
-  </item>
+  </item> -->
 <!--
   <item type="other" id="cap-fellowship-black" price="12.00" date="2008-03-01">
     <available size="#"/>

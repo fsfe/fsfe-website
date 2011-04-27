@@ -128,6 +128,13 @@ ul {
   list-style: circle;
 }
 
+blockquote {
+  background-color: rgb(245,245,245);
+  border-left: .8em solid rgb(190,190,190);
+  color: rgb(90,90,90);
+  padding: .1em .5em .2em .9em;
+}
+
 
 /* generic classes */
 .clear {

@@ -136,6 +136,22 @@ blockquote {
   padding: .1em .5em .2em .9em;
 }
 
+aside {
+  display: block;
+  float: right;
+  background-color: rgb(214,234,245);
+  padding: 1em;
+  color: rgb(110,110,110);
+  line-height: 180%;
+  font-size: 95%;
+}
+
+aside h2 {
+  color: white;
+  background-color: rgb(129,136,179);
+  margin: -.5em -.5em 0 -.5em;
+}
+
 
 /* generic classes */
 .clear {

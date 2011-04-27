@@ -1139,21 +1139,21 @@ a.fn {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
-  background: url("/graphics/pdf-banner.png") no-repeat top right;
+  background: url("/graphics/ask-candidates.png") no-repeat top right;
   overflow: hidden;
 }
 
 #campaign-box-1 a h3 {
-  display: block;
-  color: #202D79;
-  font-size: 2em;
-  margin: .5em;
-  width: 50%;
+    color: black;
+    display: block;
+    font-family: "Lucida Sans",sans-serif;
+    font-size: 1.7em;
+    margin: 55px 0 0 25px;
+    width: 40%;
 }
 
 #campaign-box-1 a h3:hover {
-  text-decoration:none;
-  color: #22284C;
+  text-decoration: underline; 
 }
 
 #campaign-box-2 {

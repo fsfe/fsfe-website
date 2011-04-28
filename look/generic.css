@@ -836,7 +836,7 @@ h4#subpages + ul li:nth-child(odd) {
 }
 
 #menu ul li.fsfe ul li a {
-  border-left: 15px solid #DCDCDC;
+  border-left: 15px solid rgb(214,234,245); /*#DCDCDC*/
 }
 
 #menu ul li.fsfe ul li a:hover {

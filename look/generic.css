@@ -782,16 +782,25 @@ h4#subpages + ul li:nth-child(odd) {
 
 #menu ul {
   list-style: none;
-  margin: 0 0 0 0;
-  padding: 0;
+  margin: -220px 0 0 0;
+  padding: 220px 0 0 0;
+  border-left: 15px solid rgb(74,210,240);
+}
+
+#menu ul li {
+  margin-lefT: -15px;
+}
+
+#menu ul li a {
+  font-weight: bold;
 }
 
 #menu ul + ul {
   border: 0;
 }
 
-#menu ul li a {
-  font-weight: bold;
+#menu ul li ul li {
+  margin: 0;
 }
 
 #menu ul li ul li a {

@@ -268,6 +268,7 @@ p.left {
   min-height: 220px;
   margin: 0;
   width: 100%
+  padding: 0;
 }
 
 #logo {
@@ -928,10 +929,16 @@ h4#subpages + ul li:nth-child(odd) {
   letter-spacing: normal;
   line-height: normal;
   margin: 1.5em -1.7% 1em;
+  padding: 0 0.3em 0.1em 0.2em;
   min-height: 1.6em;
   text-align: right;
   width: 100%;
   color: white;
+}
+
+.section.grid-100 h2 {
+  margin: 1.5em 0 1em;
+  padding: 0 0 0.1em 0;
 }
 
 .section h2 a, .section h2 span {
@@ -946,6 +953,7 @@ h4#subpages + ul li:nth-child(odd) {
 
 .section.grid-100 {
   width: 100%;
+  padding: 0;
 }
 
 #news.section,
@@ -1008,7 +1016,7 @@ h4#subpages + ul li:nth-child(odd) {
   display: block;
   float: left;
   height: 20px;
-  margin: .4em 0 0 .2em;
+  margin: 0.3em 0 0 0.2em;
   padding: 0;
   width: 20px;
 }

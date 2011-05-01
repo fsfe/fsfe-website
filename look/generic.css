@@ -517,7 +517,7 @@ h3 {
   background: #FFECBF;
   text-align: center;
 }
-
+t
 .fineprint {  /* compatibility */
   color: rgb(120,120,120);
   font-size: 90%;
@@ -533,6 +533,22 @@ h3 {
   margin: .5em 0 0 1em;
   padding: 1em;
   width: 12em;
+}
+
+.related {
+    border: 1px solid #4AA0F0;
+    padding: 0.3em;
+    margin: 1em 0 0 0;
+    border-radius: 5px 5px 5px 5px;
+}
+.related h2 {
+    background-color: #4AD2F0;
+    color: WHITE;
+    font-size: 1.3em;
+    margin: 0 0 0.5em 0;
+    padding: 0 0.5em;
+    text-align: center;
+    border-radius: 5px 5px 5px 5px;
 }
 
 p.terminal,

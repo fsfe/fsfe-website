@@ -1336,6 +1336,7 @@ ul.overview {
 
 /* Article pages */
 #article-metadata {
+  color: rgb(150,150,150);
   margin: 0.5em 0 1.5em;
 }
 
@@ -1348,7 +1349,6 @@ ul.overview {
 }
 
 #article-metadata span.label {
-  color: #202D79;
   padding-left: 1em;
 }
 

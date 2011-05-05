@@ -1147,8 +1147,10 @@ a.fn {
     color: black;
     display: block;
     font-family: "Lucida Sans",sans-serif;
-    font-size: 1.7em;
-    margin: 55px 0 0 25px;
+    font-size: 2.2em;
+    font-weight: normal;
+    margin: 10px 0 0 10px;
+    text-shadow: 0 0 0.2em white, 0 0 0.2em white, 0 0 0.2em white;
     width: 40%;
 }
 

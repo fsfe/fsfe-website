@@ -1192,6 +1192,17 @@ a.fn {
   overflow: hidden;
 }
 
+#campaign-box-1 {
+  width: 65.5%;
+  height: 200px;
+  float: left;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: url("/graphics/ask-candidates.png") no-repeat top right;
+  overflow: hidden;
+}
+
 #campaign-box-1 a h3 {
     color: black;
     display: block;

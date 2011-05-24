@@ -131,42 +131,37 @@
 		
 		##<xsl:value-of select="$nbtags" />##<xsl:value-of select="$average" />## -->
 		
-		<xsl:element name="ul">
+		<xsl:call-template name="append-children-tags" />
 		  
-		  <xsl:attribute name="class">taglist</xsl:attribute>
-		  
-	    <xsl:for-each select="/html/set/news/tags/tag">
-		    <xsl:sort select="." order="ascending" />
-		    
-		    <xsl:variable name="thistag" select="node()" />
-		    <xsl:variable name="nb" select="count( /html/set/news/tags/tag[text() = $thistag]) " />
-		    
-		    <!-- fontsize = (MAXFONT-MINFONT) * (count-MINCOUNT) / (MAXCOUNT-MINCOUNT) + MINFONT
-		         → to finish this calculation, we need to find out how many min and max tag occurrences there are -->
-		    <!-- <xsl:variable name="font" select="(40-16) * ($nb-16) / (MAXCOUNT-MINCOUNT) + 16" /> -->
-		    
-        <xsl:if test="generate-id() = generate-id(key('news-tags-by-value', normalize-space(.)))">
+	  <!--
+    <xsl:for-each select="/html/set/news/tags/tag">
+	    <xsl:sort select="." order="ascending" />
+	    
+	    <xsl:variable name="thistag" select="node()" />
+	    <xsl:variable name="nb" select="count( /html/set/news/tags/tag[text() = $thistag]) " />
+	    
+      <xsl:if test="generate-id() = generate-id(key('news-tags-by-value', normalize-space(.)))">
+        
+        <xsl:element name="li">
           
-          <xsl:element name="li">
+          <xsl:element name="a">
             
-            <xsl:element name="a">
-              
-              <xsl:attribute name="href">
-                <xsl:text>/tags/tagged.</xsl:text>
-                <xsl:value-of select="/html/@lang" />
-                <xsl:text>.html#n</xsl:text>
-                <xsl:value-of select="translate($thistag,' ','')" />
-              </xsl:attribute>
-              
-              <xsl:value-of select="."/>
-              
-            </xsl:element>
+            <xsl:attribute name="href">
+              <xsl:text>/tags/tagged.</xsl:text>
+              <xsl:value-of select="/html/@lang" />
+              <xsl:text>.html#n</xsl:text>
+              <xsl:value-of select="translate($thistag,' ','')" />
+            </xsl:attribute>
+            
+            <xsl:value-of select="."/>
+            
           </xsl:element>
-          
-        </xsl:if>
-		    
-	    </xsl:for-each>
-		</xsl:element>
+        </xsl:element>
+        
+      </xsl:if>
+	    
+    </xsl:for-each>
+    -->
 		
 	</xsl:template>
 	
@@ -207,6 +202,55 @@
 	    </xsl:for-each>
 		</xsl:element>
 		
+	</xsl:template>
+	
+	
+	<!-- recursive, nested list of parent-region children tags -->
+	<xsl:template name="append-children-tags">
+	  <xsl:param name="parent-region" select="''" />
+	  
+	  <xsl:element name="ul">
+	    
+	    <xsl:if test="$parent-region=''">
+	      <xsl:attribute name="class">taglist</xsl:attribute>
+	    </xsl:if>
+	    
+	    <xsl:attribute name="parent-region"><xsl:value-of select="$parent-region" /></xsl:attribute>
+	    
+	    <xsl:for-each select="/html/set/tag[ (not(@parent-region) and $parent-region='') or
+	                                         @parent-region = $parent-region ]">
+	      
+	      <xsl:variable name="id" select="@id" />
+		    <!-- <xsl:variable name="nb" select="count( /html/set/news/tags/tag[text() = $id]) " /> -->
+		    
+		    <xsl:element name="li">
+            
+          <xsl:element name="a">
+            
+            <xsl:attribute name="href">
+              <xsl:text>/tags/tagged.</xsl:text>
+              <xsl:value-of select="/html/@lang" />
+              <xsl:text>.html#n</xsl:text>
+              <xsl:value-of select="translate($id,' ','')" />
+            </xsl:attribute>
+            
+            <xsl:value-of select="@name"/>
+            
+          </xsl:element>
+          
+          <!-- if there are children, add them as a sublist -->
+          <xsl:for-each select="/html/set/tag[ @parent-region = $id ]">
+            <xsl:call-template name="append-children-tags">
+              <xsl:with-param name="parent-region" select="$id" />
+            </xsl:call-template>
+          </xsl:for-each>
+          
+        </xsl:element> <!-- </li> -->
+	      
+	    </xsl:for-each>
+	    
+	  </xsl:element> <!-- </ul> -->
+	  
 	</xsl:template>
 	
 	

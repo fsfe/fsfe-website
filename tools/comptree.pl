@@ -18,12 +18,8 @@ sub areEqual {
     
     my ($file1, $file2) = @_;
     
-    #my $dom = XML::LibXML->load_xml(location => $file1);  # the load_xml() function is not part of libxml 1.66 which is used on the server
-    #my $don = XML::LibXML->load_xml(location => $file2);
-    
-    my $parser = XML::LibXML->new();
-    my $dom = $parser->parse_file($file1);
-    my $don = $parser->parse_file($file2);
+    my $dom = XML::LibXML->load_xml(location => $file1);
+    my $don = XML::LibXML->load_xml(location => $file2);
     
     my $root = $dom->documentElement();
     my $roon = $don->documentElement();
@@ -104,7 +100,7 @@ sub nodesAreEqual {
 }
 
 
-1;
+return 1;
 
 
 

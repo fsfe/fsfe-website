@@ -103,10 +103,11 @@
     </xsl:copy>
   </xsl:template>
   
+  
   <!-- Modify H1 -->
   <xsl:template match="h1">
     
-    <!-- Apply news page PRE-rules -->
+    <!-- Apply news page PRE-h1 rules -->
     <xsl:if test="string(/buildinfo/document/@newsdate) and
                     (not(string(/buildinfo/document/@type)) or
                     /buildinfo/document/@type != 'newsletter')">
@@ -122,7 +123,7 @@
       
     </xsl:if>
     
-    <!-- Apply newsletter page PRE-rules -->
+    <!-- Apply newsletter page PRE-h1 rules -->
     <xsl:if test="string(/buildinfo/document/@newsdate) and /buildinfo/document/@type = 'newsletter'">
       <xsl:element name="p">
         <xsl:attribute name="id">category</xsl:attribute>
@@ -131,6 +132,52 @@
           Newsletter
         </xsl:element>
       </xsl:element>
+    </xsl:if>
+    
+    
+    <!-- tag-based bread crumbs -->
+    <xsl:if test="/buildinfo/document/tags/tag">
+      <xsl:element name="p">
+        
+        <xsl:attribute name="id">category</xsl:attribute>
+        
+        
+        <!--  add *project* information
+              name and link of the projects are fetched from projects/*/project:global (see fsfe.sources) -->
+        
+        <xsl:variable name="projectid" select="/buildinfo/document/tags/tag[ . = /buildinfo/set/project[./link]/@id ]" />
+        
+        <xsl:if test="$projectid != ''">
+          
+          <xsl:element name="a">
+            <xsl:attribute name="href"><xsl:value-of select="/buildinfo/set/project[@id = $projectid]/link" /></xsl:attribute>
+            <xsl:value-of select="/buildinfo/set/project[@id = $projectid]/title" />
+          </xsl:element>
+          
+          <xsl:text> &gt; </xsl:text>
+          
+        </xsl:if>
+        
+        
+        <!-- add location information -->
+        
+        <xsl:for-each select="/buildinfo/document/tags/tag[ . = /buildinfo/set/tag[@type='country' and @link]/@id ]">
+          
+          <xsl:variable name="countryid" select="node()" />
+          
+          <xsl:if test="$countryid != ''">
+            
+            <xsl:element name="a">
+              <xsl:attribute name="href"><xsl:value-of select="/buildinfo/set/tag[@id = $countryid]/@link" /></xsl:attribute>
+              <xsl:value-of select="/buildinfo/set/tag[@id = $countryid]/@name" />
+            </xsl:element>
+            
+          </xsl:if>
+          
+        </xsl:for-each>
+        
+        
+      </xsl:element> <!-- </p> -->
     </xsl:if>
     
     

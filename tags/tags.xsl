@@ -19,6 +19,8 @@
     <xsl:apply-templates select="node()"/>
   </xsl:template>
   
+  <!-- TODO: add tags that correspond to project ids -->
+  
   <!--display dynamic list of news items-->
   <xsl:template match="all-tags-news">
     

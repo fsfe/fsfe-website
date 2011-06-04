@@ -179,7 +179,8 @@
             <xsl:value-of select="$start_day" />
             <xsl:text> </xsl:text>
             <xsl:value-of select="$start_month" />
-            <xsl:text> to </xsl:text>
+            <!-- <xsl:text> to </xsl:text> -->
+            <xsl:with-param name="id" select="'to'" /></xsl:call-template>
             <xsl:value-of select="$end_day" />
             <xsl:text> </xsl:text>
             <xsl:value-of select="$end_month" />

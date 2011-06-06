@@ -11,7 +11,6 @@ SOURCE=/home/www/fsfe-test
 DEST=/home/www/html-test
 TMP=/home/www/tmp-test.$$
 STATUS=/var/www/web-test
-ALARM_LOCKFILE=alarm_lockfile
 MAKEFILE_PL=${SOURCE}/Makefile.PL
 SVNUPOUTFILE=/tmp/fsfe-test-svnup-out
 SVNUPERRFILE=/tmp/fsfe-test-svnup-err
@@ -20,24 +19,20 @@ SVNUPERRFILE=/tmp/fsfe-test-svnup-err
 # let's ensure we get English messages
 export LANG=C
 
-# If there is a build-test.pl script started more than 30 minutes ago, mail alarm
+# If there is a build-test.pl script started more than 10 minutes ago, kill it and mail alarm
 BUILD_STARTED=$(ps --no-headers -C build-test.pl -o etime | cut -c 7-8 | sort -r | head -n 1)
-if [[ -n "$BUILD_STARTED" && "10#${BUILD_STARTED}" -gt 30 && ! -f ${STATUS}/${ALARM_LOCKFILE} ]] ; then
+if [[ -n "$BUILD_STARTED" && "10#${BUILD_STARTED}" -gt 10 ]] ; then
   echo -e "
-  A build-test.pl script has been running for more than 30 minutes!
+  A build-test.pl script has been running for more than 10 minutes,
+  and was automatically killed.
   
-  Please:
-  
-  - run 'ps aux | grep build-test.pl' and kill build-test.pl processes older than 30 minutes
-  - Check the build script log at http://status.fsfe.org/web-test/
-  - Fix the cause of the problem
-  - Delete the lockfile ${STATUS}/${ALARM_LOCKFILE}
+  Please check the build script log at http://status.fsfe.org/web-test/
+  and fix the cause of the problem.
 
-  " | mail -s "test.fsfe.org: build-test.pl warning" system-hackers@fsfeurope.org
+  In case of doubt, please write to system-hackers@fsfeurope.org 
 
-  # This lockfile avoids sending the mail alarm more than once;
-  # it must be deleted when the problem is solved.
-  touch ${STATUS}/${ALARM_LOCKFILE}
+  " | mail -s "test.fsfe.org: build-test.pl warning" web@fsfeurope.org system-hackers@fsfeurope.org
+
 fi
 
 # Redirect output

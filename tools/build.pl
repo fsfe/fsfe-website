@@ -1,6 +1,6 @@
 #! /usr/bin/perl
 #
-# build.pl - a tool for building FSF Europe web pages
+# build.pl - a tool for building FSFE web pages
 #
 # Copyright (C) 2003 Jonas Öberg
 # 

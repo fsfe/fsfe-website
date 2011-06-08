@@ -110,7 +110,7 @@
         <description>News from the Free Software Foundation Europe</description>
         <link>http://fsfe.org/news/</link>
         <language><xsl:value-of select="$lang" /></language>
-        <copyright>Copyright (c) FSF Europe. Verbatim copying and distribution
+        <copyright>Copyright (c) Free Software Foundation Europe. Verbatim copying and distribution
           of this entire article is permitted in any medium, provided this
           notice is preserved.</copyright>
         <managingEditor>press@fsfeurope.org (FSFE Press Team)</managingEditor>

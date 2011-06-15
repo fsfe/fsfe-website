@@ -114,11 +114,11 @@ my $account2 = "";
 if ($budget2 ne "NONE") {
   $account2 = $account{$budget2};
 }
-my $reference = "er$account1";
+my $reference = "er.$date." . substr $time, -3;
+$reference .= "/$account1";
 if ($budget2 ne "NONE") {
   $reference .= "+$account2";
 }
-$reference .= ".$date." . substr $time, -3;
 
 my $to1 = $responsible{$budget1};
 my $to2 = "";

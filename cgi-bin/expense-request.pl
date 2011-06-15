@@ -54,15 +54,15 @@ my %responsible = (
   "FELLOWSHIP-MATERIAL" => "kirschner",
   "FELLOWSHIP-CONF" => "kirschner",
   "FELLOWSHIP-LOCAL" => "kirschner",
-  "FTF-PERSONELL" => "coughlan",
-  "FTF-OFFICE" => "coughlan",
-  "FTF-TRAVEL" => "coughlan",
-  "FTF-CONF" => "coughlan",
+  "FTF-PERSONELL" => "suklje",
+  "FTF-OFFICE" => "suklje",
+  "FTF-TRAVEL" => "suklje",
+  "FTF-CONF" => "suklje",
   "POLICY-PERSONELL" => "gerloff",
   "POLICY-OFFICE" => "gerloff",
   "POLICY-CAMPAIGNS" => "gerloff",
   "POLICY-TRAVEL" => "gerloff",
-  "MERCHANDISE" => "director",
+  "MERCHANDISE" => "gerloff",
 );
 
 my %account = (

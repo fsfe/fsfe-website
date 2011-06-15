@@ -74,7 +74,6 @@ my %account = (
   "PA-TRAVEL" => "2513",
   "PA-MATERIAL" => "2514",
   "PA-CAMPAIGNS" => "2515",
-  "PA-GNUVOX" => "2516",
   "FELLOWSHIP-PERSONELL" => "2521",
   "FELLOWSHIP-OFFICE" => "2522",
   "FELLOWSHIP-MATERIAL" => "2524",
@@ -84,8 +83,6 @@ my %account = (
   "FTF-OFFICE" => "2532",
   "FTF-TRAVEL" => "2533",
   "FTF-CONF" => "2535",
-  "FTF-TRANS" => "2536",
-  "FTF-ECONOMIC" => "2537",
   "POLICY-PERSONELL" => "2541",
   "POLICY-OFFICE" => "2542",
   "POLICY-TRAVEL" => "2543",
@@ -197,7 +194,7 @@ close MAIL;
 # -----------------------------------------------------------------------------
 
 print "Content-type: text/html\n\n";
-print "Your request was sent. Thank you.<br /><br />";
+print "Your request $reference was sent. Thank you.<br /><br />";
 print "WHO: $names{$who}<br />\n\n";
 print "WHAT: $what<br />\n\n";
 print "WHEN: $when<br />\n\n";

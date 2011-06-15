@@ -420,10 +420,10 @@
             <xsl:attribute name="class">fellowship</xsl:attribute>
             <xsl:element name="a">
               <xsl:attribute name="href">http://fellowship.fsfe.org/</xsl:attribute>
-              Fellowship
+              Support FSFE
             </xsl:element>
             <xsl:element name="ul">
-          
+              
               <xsl:variable name="menu"><xsl:value-of select="@id" /></xsl:variable>
             <xsl:for-each select="/buildinfo/menuset/menu[@parent='fellowship']">
               <!--<xsl:sort select="@id"/>-->

@@ -285,10 +285,10 @@
   <person id="sandklef" association-member="yes" teams="main">
     <name>Henrik Sandklef</name>
     <country>SE</country>
-    <function country="SE">deputy/m</function>
+    <function>vice-president/m</function>
     <email>sandklef (at) fsfeurope (dot) org</email>
   </person>
-
+  
   <person id="schiessle" teams="main, de">
     <name>Björn Schießle</name>
     <country>DE</country>
@@ -317,7 +317,6 @@
   <person id="weiden" association-member="yes" teams="main">
     <name>Fernanda Weiden</name>
     <country>CH</country>
-    <function>vice-president/f</function>
     <email>weiden (at) fsfeurope (dot) org</email>
     <link>/about/weiden/weiden.html</link>
   </person>
@@ -360,5 +359,13 @@
     <email>mmoeller (at) fsfe (dot) org </email>
     <link>http://wiki.fsfe.org/Fellows/mmoeller</link>
   </person>
+  
+  <person id="willard" teams="main">
+    <name>Patrik Willard</name>
+    <country>SE</country>
+    <function country="SE">deputy/m</function>
+    <email>wildcard (at) padowi (dot) se</email>
+  </person>
+
   
 </personset>

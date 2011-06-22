@@ -12,6 +12,7 @@
   <xsl:template name="news">
     <xsl:param name="display-year" select="'no'" />
     <xsl:param name="show-date" select="'yes'" />
+    <xsl:param name="compact-view" select="'no'" />
     
     <xsl:variable name="link">
       <xsl:value-of select="link" />
@@ -31,48 +32,79 @@
       <xsl:value-of select="substring(@date,1,4)" />
     </xsl:variable>
     
-    <!--<div class="entry">-->
-    <xsl:element name="div">
-      <xsl:attribute name="class">entry</xsl:attribute>
-      
-      <!-- title -->
+    <xsl:variable name="title">
       <xsl:choose>
         <xsl:when test="$link != ''">
-          <h3>
-            <a href="{link}">
-              <xsl:value-of select="title" />
-            </a>
-          </h3>
+          <a href="{link}">
+            <xsl:value-of select="title" />
+          </a>
         </xsl:when>
         <xsl:otherwise>
-          <h3>
-            <xsl:value-of select="title" />
-          </h3>
+          <xsl:value-of select="title" />
         </xsl:otherwise>
       </xsl:choose>
-      
-      <!-- news date -->
-      <xsl:if test="$show-date = 'yes'">
-        <p class="date">
-          <xsl:value-of select="$day" />
-          <xsl:text> </xsl:text>
-          <xsl:value-of select="$month" />
-          <xsl:if test="$display-year = 'yes'">
-            <xsl:text> </xsl:text>
-            <xsl:value-of select="$year" />
-          </xsl:if>
-        </p>
+    </xsl:variable>
+    
+    <xsl:variable name="date">
+      <xsl:value-of select="$day" />
+      <xsl:text> </xsl:text>
+      <xsl:value-of select="$month" />
+      <xsl:if test="$display-year = 'yes'">
+        <xsl:text> </xsl:text>
+        <xsl:value-of select="$year" />
       </xsl:if>
+      <xsl:text>: </xsl:text>
+    </xsl:variable>
+    
+    <xsl:choose>
       
-      <!-- news text -->
-      <div class="text">
-        <xsl:apply-templates select="body/node()" />
-      </div>
+      <xsl:when test="$compact-view = 'yes'">
+        
+        <xsl:element name="div">
+          <xsl:attribute name="class">entry</xsl:attribute>
+          
+          <xsl:if test="$show-date = 'yes'">
+            <span class="date">
+              <xsl:value-of select="$date" />
+            </span>
+          </xsl:if>
+          
+          <span><xsl:value-of select="$title" /></span>
+          
+       </xsl:element>
+        
+      </xsl:when>
       
-    </xsl:element>
+      <xsl:otherwise>
+      
+        <!--<div class="entry">-->
+        <xsl:element name="div">
+          <xsl:attribute name="class">entry</xsl:attribute>
+          
+          <!-- title -->
+          <h3><xsl:value-of select="$title" /></h3>
+          
+          <!-- news date -->
+          <xsl:if test="$show-date = 'yes'">
+            <p class="date">
+              <xsl:value-of select="$date" />
+            </p>
+          </xsl:if>
+          
+          <!-- news text -->
+          <div class="text">
+            <xsl:apply-templates select="body/node()" />
+          </div>
+          
+        </xsl:element>
+        
+      </xsl:otherwise>
+    </xsl:choose>
     
   </xsl:template>
-
+  
+  
+  
   <!-- Show a single newsletter item -->
   <xsl:template name="newsletter">
     <xsl:variable name="link">
@@ -84,7 +116,9 @@
       </a>
     </li>
   </xsl:template>
-
+  
+  
+  
   <!-- Show a single event -->
   <xsl:template name="event">
     <xsl:param name="header" select="''" />

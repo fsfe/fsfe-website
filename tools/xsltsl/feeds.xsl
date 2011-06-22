@@ -82,12 +82,12 @@
           <xsl:attribute name="class">entry</xsl:attribute>
           
           <!-- title -->
-          <h3><xsl:value-of select="$title" /></h3>
+          <h3><xsl:copy-of select="$title" /></h3>
           
           <!-- news date -->
           <xsl:if test="$show-date = 'yes'">
             <p class="date">
-              <xsl:value-of select="$date" />
+              <xsl:copy-of select="$date" />
             </p>
           </xsl:if>
           

@@ -65,11 +65,11 @@
           
           <xsl:if test="$show-date = 'yes'">
             <span class="date">
-              <xsl:value-of select="$date" />
+              <xsl:copy-of select="$date" />
             </span>
           </xsl:if>
           
-          <span><xsl:value-of select="$title" /></span>
+          <span><xsl:copy-of select="$title" /></span>
           
        </xsl:element>
         

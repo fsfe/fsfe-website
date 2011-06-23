@@ -28,14 +28,14 @@ sub areEqual {
     my $root = $dom->documentElement();
     my $roon = $don->documentElement();
     
-    return nodesAreEqual($file1, $file2, $root, $roon, "/");
+    return nodesAreEqual($file1, $file2, $root, $roon, "/", '');
     
 }
 
 
 sub nodesAreEqual {
     
-    my ($file1, $file2, $node1, $node2, $uptree) = @_;
+    my ($file1, $file2, $node1, $node2, $uptree, $nodenb) = @_;
     
     # test that two nodes at the same position have the same name
     if (not $node1->nodeName eq $node2->nodeName) {
@@ -54,9 +54,9 @@ sub nodesAreEqual {
                        "** contains $uptree".$node2->nodeName."\t(".$hint2.")");
     }
     
-    $uptree .= $node1->nodeName."/";
+    $uptree .= $node1->nodeName.$nodenb."/";
     
-    # get all children of ecah node
+    # get all children of each node
     my @nodes = $node1->getChildrenByTagName('*');
     my @nodez = $node2->getChildrenByTagName('*');
     
@@ -92,7 +92,7 @@ sub nodesAreEqual {
     
     # recur!
     for my $i (0 .. $#nodes) {
-      my ($bool, $err) = nodesAreEqual($file1, $file2, $nodes[$i], $nodez[$i], $uptree);
+      my ($bool, $err) = nodesAreEqual($file1, $file2, $nodes[$i], $nodez[$i], $uptree, $i);
       if (not $bool) {
         return ($bool, $err);
       }

@@ -627,8 +627,12 @@
         <!-- Outdated note -->
         <xsl:if test="/buildinfo/@outdated='yes'">
           <xsl:element name="p">
-        <xsl:attribute name="id">outdated-notice</xsl:attribute>
-        <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'outdated'" /></xsl:call-template>
+            <xsl:attribute name="id">outdated-notice</xsl:attribute>
+            
+            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'outdated'" /></xsl:call-template>
+            
+            <xsl:copy-of select="/buildinfo/document/outdated-info" />
+            
           </xsl:element>
         </xsl:if>
         

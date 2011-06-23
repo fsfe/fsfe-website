@@ -595,6 +595,8 @@ sub process {
           #
           my $originalsource = "$file.".$root->getAttribute("original").".xhtml";
           
+          my $comment;
+          
           my $old_outdated = 0;
 	        if (( stat("$opts{i}/$originalsource"))[9] > (stat($source))[9] + 7200
 	              and not $cant_be_outdated{$file} ) {
@@ -602,9 +604,10 @@ sub process {
 	          $old_outdated = 1;
 	          
 	        } else {
-	            
+	          
 	        }
 	        
+	        my $new_outdated = 0;
 	        if ( not -e "$opts{i}/$originalsource" ) {
             
             # TODO: do something
@@ -615,21 +618,18 @@ sub process {
             if ( not $equal and not $cant_be_outdated{$file} ) {
               #print "$err\n";
               $root->setAttribute("outdated", "yes");
+              $new_outdated = 1;
               
               # register information about the outdated status
             	my $info = $dom->createElement("outdated-info");
+            	my $code = $dom->createElement("code");
+            	$code->appendChild($dom->createElement("br"));
             	foreach $line (split(/\n/, $err)) {
-            	  my $p = $dom->createElement("p");
-            	  $p->appendText($line);
-            	  $info->appendChild($p);
+            	  $code->appendText($line);
+            	  $code->appendChild($dom->createElement("br"));
             	}
+            	$info->appendChild($code);
               $document->appendChild($info);
-              
-              if ($dir eq "global") {
-	              lock(*TRANSLATIONS);
-	              print TRANSLATIONS "$lang $source $originalsource\n";
-	              unlock(*TRANSLATIONS);
-              }
               
             } else {
               
@@ -638,59 +638,75 @@ sub process {
             }
             
 	        }
+	        
+	        if ($dir eq "global" and $new_outdated != $old_outdated ) {
+	          
+	          if ( $new_outdated == 0 and $old_outdated == 1 ) {
+  	          $comment = "timestamp-OUT,structure-OK";
+  	        } elsif ( $new_outdated == 1 and $old_outdated == 0 ) {
+  	          $comment = "timestamp-OK,structure-OUT";
+  	        } else {
+  	          $comment = "-";
+  	        }
+	          
+            lock(*TRANSLATIONS);
+            print TRANSLATIONS "$lang $source $originalsource $comment\n";
+            unlock(*TRANSLATIONS);
+            
+          }
           
           #
           # Get the appropriate textset for this language. If one can't be
           # found, use the English. (I hope this never happens)
           #
-	my $textlang = $lang;
-	unless (-f $opts{i}."/tools/texts-$textlang.xml") {
-	    $textlang = "en";
-	}
+	        my $textlang = $lang;
+	        unless (-f $opts{i}."/tools/texts-$textlang.xml") {
+	            $textlang = "en";
+	        }
 
-	my $textdoc = $dom->createElement("textset");
-	$root->appendChild($textdoc);
-	clone_document($textdoc, $opts{i}."/tools/texts-$textlang.xml");
-
-
-        #
-        # Read the fundraising text, if it exists.
-        #
-	if (-f $opts{i}."/fundraising.$lang.xml") {
-	    my $fundraisingdoc = $dom->createElement("fundraising");
-	    $root->appendChild($fundraisingdoc);
-	    clone_document($fundraisingdoc, $opts{i}."/fundraising.$lang.xml");
-	} elsif (-f $opts{i}."/fundraising.en.xml") {
-	    my $fundraisingdoc = $dom->createElement("fundraising");
-	    $root->appendChild($fundraisingdoc);
-	    clone_document($fundraisingdoc, $opts{i}."/fundraising.en.xml");
-        }
+	        my $textdoc = $dom->createElement("textset");
+	        $root->appendChild($textdoc);
+	        clone_document($textdoc, $opts{i}."/tools/texts-$textlang.xml");
 
 
-	#
-        # And then we do the same thing for the menues. But first we take the
-        # global menu here, then we add any information that is specific to
-        # the focus.
-        #
-	foreach ($root->getElementsByTagName("menuset")) {
-	    $root->removeChild($_);
-	}
+          #
+          # Read the fundraising text, if it exists.
+          #
+	        if (-f $opts{i}."/fundraising.$lang.xml") {
+	            my $fundraisingdoc = $dom->createElement("fundraising");
+	            $root->appendChild($fundraisingdoc);
+	            clone_document($fundraisingdoc, $opts{i}."/fundraising.$lang.xml");
+	        } elsif (-f $opts{i}."/fundraising.en.xml") {
+	        my $fundraisingdoc = $dom->createElement("fundraising");
+	          $root->appendChild($fundraisingdoc);
+	          clone_document($fundraisingdoc, $opts{i}."/fundraising.en.xml");
+          }
 
-	my %menu;
-	foreach ('global', $dir) {
-	    if (-f $opts{i}."/tools/menu-$_.xml") {
-		my $menudoc = $parser->parse_file($opts{i}."/tools/menu-$_.xml");
-		foreach my $n ($menudoc->documentElement->getElementsByTagName("menu")) {
-		    $menu{$n->getAttribute("id")} = $n;
-		}
-	    }
-	}
-	my $menuroot = $dom->createElement("menuset");
-	while (my ($id, $n) = each %menu) {
-            my $m = $n->cloneNode(1);
-	    $menuroot->appendChild($m);
-	}
-	$root->appendChild($menuroot);
+
+          #
+          # And then we do the same thing for the menues. But first we take the
+          # global menu here, then we add any information that is specific to
+          # the focus.
+          #
+	        foreach ($root->getElementsByTagName("menuset")) {
+	            $root->removeChild($_);
+	        }
+
+	        my %menu;
+	        foreach ('global', $dir) {
+	            if (-f $opts{i}."/tools/menu-$_.xml") {
+		        my $menudoc = $parser->parse_file($opts{i}."/tools/menu-$_.xml");
+		        foreach my $n ($menudoc->documentElement->getElementsByTagName("menu")) {
+		            $menu{$n->getAttribute("id")} = $n;
+		        }
+	            }
+	        }
+	        my $menuroot = $dom->createElement("menuset");
+	        while (my ($id, $n) = each %menu) {
+                    my $m = $n->cloneNode(1);
+	            $menuroot->appendChild($m);
+	        }
+	        $root->appendChild($menuroot);
 	
 	      
         # <start addendum> (TODO: transform this into a function)

@@ -36,7 +36,9 @@ if ($anonymous) {
 } else {
   $reference = "donation.$date." . substr($time, -5);
 }
-if ($period != "o") $reference .= ".$period";
+if ($period != "o") {
+  $reference .= ".$period";
+}
 
 my $months = 0;
 if ($period == "m") {

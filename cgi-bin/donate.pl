@@ -28,7 +28,7 @@ if ($anonymous) {
 } else {
   $reference = "donation.$date." . substr($time, -5);
 }
-my $lang = substr($language, 2);
+my $lang = substr($language, 0, 2);
 
 # -----------------------------------------------------------------------------
 # Generate form to forward payment request to PayPal or Concardis

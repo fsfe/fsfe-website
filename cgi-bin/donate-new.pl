@@ -41,7 +41,7 @@ if ($period != "o") $reference .= ".$period";
 my $months = 0;
 if ($period == "m") $months = 1;
 if ($period == "y") $months = 12;
-my $day = substr($date, -2)
+my $day = substr($date, -2);
 
 my $lang = substr($language, 0, 2);
 

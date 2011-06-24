@@ -35,7 +35,7 @@ if ($period ne "o") {
   $reference .= ".$period";
 }
 
-($sec, $min, $hour, $mday, $mon, $year, $wday, $yday, $isdst) = localtime;
+# ($sec, $min, $hour, $mday, $mon, $year, $wday, $yday, $isdst) = localtime;
 
 my $months = 0;
 if ($period eq "m") {

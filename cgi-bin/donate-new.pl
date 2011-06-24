@@ -39,8 +39,12 @@ if ($anonymous) {
 if ($period != "o") $reference .= ".$period";
 
 my $months = 0;
-if ($period == "m") $months = 1;
-if ($period == "y") $months = 12;
+if ($period == "m") {
+  $months = 1;
+}
+if ($period == "y") {
+  $months = 12;
+}
 my $day = substr($date, -2);
 
 my $lang = substr($language, 0, 2);
@@ -65,7 +69,8 @@ while (<TEMPLATE>) {
         "ORDERID=$reference$passphrase" .
         "PMLISTTYPE=2$passphrase" .
         "PSPID=40F00871$passphrase";
-    if ($period != "o") $shastring .=
+    if ($period != "o") {
+      $shastring .=
         "SUB_AMOUNT=$subamount100$passphrase" .
         "SUB_COM=$text$passphrase" .
         "SUB_ENDDATE=2099-12-31$passphrase" .
@@ -76,6 +81,7 @@ while (<TEMPLATE>) {
         "SUB_STARTDATE=$date$passphrase" .
         "SUB_STATUS=1$passphrase" .
         "SUBSCRIPTION_ID=$reference$passphrase";
+    }
     $shastring .= 
         "TP=http://fsfe.org/donate/tmpl-concardis.$lang.html$passphrase";
     my $shasum = uc(sha1_hex($shastring));

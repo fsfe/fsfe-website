@@ -73,6 +73,7 @@ while (<TEMPLATE>) {
         "PSPID=40F00871$passphrase";
     if ($period ne "o") {
       $shastring .=
+        "SUBSCRIPTION_ID=$reference$passphrase" .
         "SUB_AMOUNT=$subamount100$passphrase" .
         "SUB_COM=$text$passphrase" .
         "SUB_ENDDATE=2099-12-31$passphrase" .
@@ -81,8 +82,7 @@ while (<TEMPLATE>) {
         "SUB_PERIOD_NUMBER=$months$passphrase" .
         "SUB_PERIOD_UNIT=m$passphrase" .
         "SUB_STARTDATE=$date$passphrase" .
-        "SUB_STATUS=1$passphrase" .
-        "SUBSCRIPTION_ID=$reference$passphrase";
+        "SUB_STATUS=1$passphrase";
     }
     $shastring .= 
         "TP=http://fsfe.org/donate/tmpl-concardis.$lang.html$passphrase";

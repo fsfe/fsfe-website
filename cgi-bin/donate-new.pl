@@ -35,7 +35,7 @@ if ($period ne "o") {
   $reference .= ".$period";
 }
 
-($sec, $min, $hour, $mday, $mon, $year, $wday, $yday, $isdst) = localtime
+($sec, $min, $hour, $mday, $mon, $year, $wday, $yday, $isdst) = localtime;
 
 my $months = 0;
 if ($period eq "m") {
@@ -46,7 +46,7 @@ if ($period eq "y") {
   ($year, $mon, $mday) = Add_Delta_YM($year, $mon, $mday, 1, 0);
   $months = 12;
 }
-my $start = strftime("%Y-%m-%d", ($sec, $min, $hour, $mday, $mon, $year, 0, 0, $isdst))
+my $start = strftime("%Y-%m-%d", ($sec, $min, $hour, $mday, $mon, $year, 0, 0, $isdst));
 my $day = substr($date, -2);
 
 my $lang = substr($language, 0, 2);

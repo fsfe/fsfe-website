@@ -13,7 +13,7 @@ my $query = new CGI;
 my $amount = $query->param("amount");
 my $period = substr($amount, 0, 1);
 my $amount = substr($amount, 1);
-if ($amount == "other") {
+if ($amount eq "other") {
   $amount = $query->param($period . "amount_other");
 }
 my $anonymous = $query->param("anonymous");
@@ -22,7 +22,7 @@ my $text = $query->param("text");
 
 my $amount100 = 0;
 my $subamount100 = 0;
-if ($period == "o") {
+if ($period eq "o") {
   $amount100 = $amount * 100;
 } else {
   $subamount100 = $amount * 100;
@@ -36,15 +36,15 @@ if ($anonymous) {
 } else {
   $reference = "donation.$date." . substr($time, -5);
 }
-if ($period != "o") {
+if ($period ne "o") {
   $reference .= ".$period";
 }
 
 my $months = 0;
-if ($period == "m") {
+if ($period eq "m") {
   $months = 1;
 }
-if ($period == "y") {
+if ($period eq "y") {
   $months = 12;
 }
 my $day = substr($date, -2);
@@ -60,7 +60,6 @@ print "Content-type: text/html\n\n";
 open TEMPLATE, "/home/www/html/global/donate/tmpl-donate.$lang.html";
 while (<TEMPLATE>) {
   if (/:FORM:/) {
-    print $period;
     my $passphrase = "Only4TestingPurposes";
     my $shastring = 
         "ACCEPTURL=http://fsfe.org/donate/thankyou.$lang.html$passphrase" .
@@ -72,7 +71,7 @@ while (<TEMPLATE>) {
         "ORDERID=$reference$passphrase" .
         "PMLISTTYPE=2$passphrase" .
         "PSPID=40F00871$passphrase";
-    if ($period != "o") {
+    if ($period ne "o") {
       $shastring .=
         "SUB_AMOUNT=$subamount100$passphrase" .
         "SUB_COM=$text$passphrase" .
@@ -96,7 +95,7 @@ while (<TEMPLATE>) {
     print "      <input type=\"hidden\" name=\"amount\"       value=\"$amount100\"/>\n";
     print "      <input type=\"hidden\" name=\"currency\"     value=\"EUR\"/>\n";
     print "      <input type=\"hidden\" name=\"language\"     value=\"$language\"/>\n";
-    if ($period != "o") {
+    if ($period ne "o") {
       print "      <!-- subscription parameters -->\n";
       print "      <input type=\"hidden\" name=\"SUBSCRIPTION_ID\"   value=\"$reference\"/>\n";
       print "      <input type=\"hidden\" name=\"SUB_ORDERID\"       value=\"$reference\"/>\n";

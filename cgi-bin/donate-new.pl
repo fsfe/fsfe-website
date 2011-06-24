@@ -60,6 +60,7 @@ print "Content-type: text/html\n\n";
 open TEMPLATE, "/home/www/html/global/donate/tmpl-donate.$lang.html";
 while (<TEMPLATE>) {
   if (/:FORM:/) {
+    print $query->param("amount");
     my $passphrase = "Only4TestingPurposes";
     my $shastring = 
         "ACCEPTURL=http://fsfe.org/donate/thankyou.$lang.html$passphrase" .

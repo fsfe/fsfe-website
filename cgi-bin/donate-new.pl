@@ -66,6 +66,7 @@ while (<TEMPLATE>) {
     if ($period eq "o") {
       $shastring .=
         "AMOUNT=$amount100$passphrase";
+    }
     $shastring .=
         "CANCELURL=http://fsfe.org/donate/cancel.$lang.html$passphrase" .
         "COM=$text$passphrase" .

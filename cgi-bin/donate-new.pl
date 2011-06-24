@@ -76,7 +76,6 @@ while (<TEMPLATE>) {
         "SUBSCRIPTION_ID=$reference$passphrase" .
         "SUB_AMOUNT=$subamount100$passphrase" .
         "SUB_COM=$text$passphrase" .
-        "SUB_ENDDATE=2099-12-31$passphrase" .
         "SUB_ORDERID=$reference$passphrase" .
         "SUB_PERIOD_MOMENT=$day$passphrase" .
         "SUB_PERIOD_NUMBER=$months$passphrase" .
@@ -105,7 +104,6 @@ while (<TEMPLATE>) {
       print "      <input type=\"hidden\" name=\"SUB_PERIOD_NUMBER\" value=\"$months\"/>\n";
       print "      <input type=\"hidden\" name=\"SUB_PERIOD_MOMENT\" value=\"$day\"/>\n";
       print "      <input type=\"hidden\" name=\"SUB_STARTDATE\"     value=\"$date\"/>\n";
-      print "      <input type=\"hidden\" name=\"SUB_ENDDATE\"       value=\"2099-12-31\"/>\n";
       print "      <input type=\"hidden\" name=\"SUB_STATUS\"        value=\"1\"/>\n";
     }
     print "      <!-- interface template -->\n";

@@ -2,7 +2,7 @@
 
 use CGI;
 use POSIX qw(strftime);
-use Date:Calc qw(Add_Delte_YM);
+#use Date:Calc qw(Add_Delte_YM);
 use Digest::SHA1 qw(sha1_hex);
 
 # -----------------------------------------------------------------------------
@@ -39,14 +39,14 @@ if ($period ne "o") {
 
 my $months = 0;
 if ($period eq "m") {
-  ($year, $mon, $mday) = Add_Delta_YM($year, $mon, $mday, 0, 1);
+#  ($year, $mon, $mday) = Add_Delta_YM($year, $mon, $mday, 0, 1);
   $months = 1;
 }
 if ($period eq "y") {
-  ($year, $mon, $mday) = Add_Delta_YM($year, $mon, $mday, 1, 0);
+#  ($year, $mon, $mday) = Add_Delta_YM($year, $mon, $mday, 1, 0);
   $months = 12;
 }
-my $start = strftime("%Y-%m-%d", ($sec, $min, $hour, $mday, $mon, $year, 0, 0, $isdst));
+#my $start = strftime("%Y-%m-%d", ($sec, $min, $hour, $mday, $mon, $year, 0, 0, $isdst));
 my $day = substr($date, -2);
 
 my $lang = substr($language, 0, 2);
@@ -62,8 +62,11 @@ while (<TEMPLATE>) {
   if (/:FORM:/) {
     my $passphrase = "Only4TestingPurposes";
     my $shastring = 
-        "ACCEPTURL=http://fsfe.org/donate/thankyou.$lang.html$passphrase" .
-        "AMOUNT=$amount100$passphrase" .
+        "ACCEPTURL=http://fsfe.org/donate/thankyou.$lang.html$passphrase";
+    if ($period eq "o") {
+      $shastring .=
+        "AMOUNT=$amount100$passphrase";
+    $shastring .=
         "CANCELURL=http://fsfe.org/donate/cancel.$lang.html$passphrase" .
         "COM=$text$passphrase" .
         "CURRENCY=EUR$passphrase" .
@@ -91,7 +94,9 @@ while (<TEMPLATE>) {
     print "      <input type=\"hidden\" name=\"PSPID\"        value=\"40F00871\"/>\n";
     print "      <input type=\"hidden\" name=\"orderID\"      value=\"$reference\"/>\n";
     print "      <input type=\"hidden\" name=\"com\"          value=\"$text\"/>\n";
-    print "      <input type=\"hidden\" name=\"amount\"       value=\"$amount100\"/>\n";
+    if ($period eq "o") {
+      print "      <input type=\"hidden\" name=\"amount\"       value=\"$amount100\"/>\n";
+    }
     print "      <input type=\"hidden\" name=\"currency\"     value=\"EUR\"/>\n";
     print "      <input type=\"hidden\" name=\"language\"     value=\"$language\"/>\n";
     if ($period ne "o") {

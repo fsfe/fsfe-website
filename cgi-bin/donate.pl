@@ -28,6 +28,7 @@ if ($anonymous) {
 } else {
   $reference = "donation.$date." . substr($time, -5);
 }
+my $lang = substr($language, 2);
 
 # -----------------------------------------------------------------------------
 # Generate form to forward payment request to PayPal or Concardis
@@ -35,21 +36,21 @@ if ($anonymous) {
 
 print "Content-type: text/html\n\n";
 
-open TEMPLATE, "/home/www/html/global/donate/tmpl-donate.$language.html";
+open TEMPLATE, "/home/www/html/global/donate/tmpl-donate.$lang.html";
 while (<TEMPLATE>) {
   if (/:FORM:/) {
     my $passphrase = "Only4TestingPurposes";
     my $shastring = 
-        "ACCEPTURL=http://fsfe.org/donate/thankyou.$language.html$passphrase" .
+        "ACCEPTURL=http://fsfe.org/donate/thankyou.$lang.html$passphrase" .
         "AMOUNT=$amount100$passphrase" .
-        "CANCELURL=http://fsfe.org/donate/cancel.$language.html$passphrase" .
+        "CANCELURL=http://fsfe.org/donate/cancel.$lang.html$passphrase" .
         "COM=$text$passphrase" .
         "CURRENCY=EUR$passphrase" .
         "LANGUAGE=$language$passphrase" .
         "ORDERID=$reference$passphrase" .
         "PMLISTTYPE=2$passphrase" .
         "PSPID=40F00871$passphrase" .
-        "TP=http://fsfe.org/donate/tmpl-concardis.$language.html$passphrase";
+        "TP=http://fsfe.org/donate/tmpl-concardis.$lang.html$passphrase";
     my $shasum = uc(sha1_hex($shastring));
     print "    <form name=\"donate\" action=\"https://secure.payengine.de/ncol/prod/orderstandard.asp\" method=\"post\">\n";
     print "      <!-- payment parameters -->\n";
@@ -60,11 +61,11 @@ while (<TEMPLATE>) {
     print "      <input type=\"hidden\" name=\"currency\"     value=\"EUR\"/>\n";
     print "      <input type=\"hidden\" name=\"language\"     value=\"$language\"/>\n";
     print "      <!-- interface template -->\n";
-    print "      <input type=\"hidden\" name=\"TP\"           value=\"http://fsfe.org/donate/tmpl-concardis.$language.html\"/>\n";
+    print "      <input type=\"hidden\" name=\"TP\"           value=\"http://fsfe.org/donate/tmpl-concardis.$lang.html\"/>\n";
     print "      <input type=\"hidden\" name=\"PMListType\"   value=\"2\"/>\n";
     print "      <!-- post-payment redirection -->\n";
-    print "      <input type=\"hidden\" name=\"accepturl\"    value=\"http://fsfe.org/donate/thankyou.$language.html\"/>\n";
-    print "      <input type=\"hidden\" name=\"cancelurl\"    value=\"http://fsfe.org/donate/cancel.$language.html\"/>\n";
+    print "      <input type=\"hidden\" name=\"accepturl\"    value=\"http://fsfe.org/donate/thankyou.$lang.html\"/>\n";
+    print "      <input type=\"hidden\" name=\"cancelurl\"    value=\"http://fsfe.org/donate/cancel.$lang.html\"/>\n";
     print "      <!-- SHA1 signature -->\n";
     print "      <input type=\"hidden\" name=\"SHASign\"      value=\"$shasum\"/>\n";
     print "      <!-- Javascript submit() method only works if no submit button is active -->\n";

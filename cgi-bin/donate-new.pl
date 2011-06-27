@@ -2,7 +2,7 @@
 
 use CGI;
 use POSIX qw(strftime);
-use Date:Calc qw(Add_Delte_YM);
+use Date::Calc qw(Add_Delte_YM);
 use Digest::SHA1 qw(sha1_hex);
 
 # -----------------------------------------------------------------------------

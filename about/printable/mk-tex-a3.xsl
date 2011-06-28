@@ -65,7 +65,7 @@
         \selectlanguage{english}
       </xsl:if>
       <xsl:text>
-        \bigskip \scriptsize This is an inofficial translation. Please see
+        \bigskip \scriptsize This is an unofficial translation. Please see
         http://www.fsfe.org/about/printable/printable.en.html for the
         original text.
       </xsl:text>

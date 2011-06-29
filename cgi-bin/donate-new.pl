@@ -66,11 +66,19 @@ while (<TEMPLATE>) {
     my $shastring = 
         "ACCEPTURL=http://fsfe.org/donate/thankyou.$lang.html$passphrase" .
         "AMOUNT=$amount100$passphrase" .
-        "CANCELURL=http://fsfe.org/donate/cancel.$lang.html$passphrase" .
-        "CN=$name$passphrase" .
+        "CANCELURL=http://fsfe.org/donate/cancel.$lang.html$passphrase";
+    if ($name) {
+      $shastring .=
+        "CN=$name$passphrase";
+    }
+    $shastring .=
         "COM=$text$passphrase" .
-        "CURRENCY=EUR$passphrase" .
-        "EMAIL=$email$passphrase" .
+        "CURRENCY=EUR$passphrase";
+    if ($email) {
+      $shastring .=
+        "EMAIL=$email$passphrase";
+    }
+    $shastring .=
         "LANGUAGE=$language$passphrase" .
         "ORDERID=$reference$passphrase" .
         "PMLISTTYPE=2$passphrase" .
@@ -98,8 +106,12 @@ while (<TEMPLATE>) {
     print "      <input type=\"hidden\" name=\"amount\"       value=\"$amount100\"/>\n";
     print "      <input type=\"hidden\" name=\"currency\"     value=\"EUR\"/>\n";
     print "      <input type=\"hidden\" name=\"language\"     value=\"$language\"/>\n";
-    print "      <input type=\"hidden\" name=\"CN\"           value=\"$name\"/>\n";
-    print "      <input type=\"hidden\" name=\"EMAIL\"        value=\"$email\"/>\n";
+    if ($name) {
+      print "      <input type=\"hidden\" name=\"CN\"           value=\"$name\"/>\n";
+    }
+    if ($email) {
+      print "      <input type=\"hidden\" name=\"EMAIL\"        value=\"$email\"/>\n";
+    }
     if ($period ne "o") {
       print "      <!-- subscription parameters -->\n";
       print "      <input type=\"hidden\" name=\"SUBSCRIPTION_ID\"   value=\"$reference\"/>\n";

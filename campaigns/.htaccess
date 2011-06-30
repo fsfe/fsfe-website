@@ -1,0 +1,4 @@
+RewriteEngine On
+
+RewriteRule ^valentine/valentine(.*) /campaigns/valentine/2011/valentine-2011$1 [redirect=temp]
+RewriteRule ^valentine/2011/valentine(.*) /campaigns/valentine/2011/valentine-2011$1 [redirect=temp]

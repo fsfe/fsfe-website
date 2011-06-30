@@ -59,7 +59,7 @@ print MAIL "From: $email\n";
 print MAIL "Reply-To: $replyto\n";
 print MAIL "Mail-Followup-To: $replyto\n";
 print MAIL "To: gollo\@fsfe.org\n";
-print MAIL "Cc: $email";
+print MAIL "Cc: $email\n";
 
 print MAIL "Subject: $subject\n";
 print MAIL "Mime-Version: 1.0\n";

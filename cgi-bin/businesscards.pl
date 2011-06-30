@@ -98,8 +98,6 @@ print MAIL "Number of business cards ordered: $amount\n\n";
 print MAIL "Delivery Address: $delivery\n\n";
 print MAIL "No. of approved expense request: $er\n\n";
                       
-close MAIL;
-
 print MAIL "--$boundary--\n";
                       
 close MAIL;

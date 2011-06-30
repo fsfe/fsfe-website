@@ -58,7 +58,7 @@ open(MAIL, "|/usr/lib/sendmail -t -f $email");
 print MAIL "From: $email\n";
 print MAIL "Reply-To: $replyto\n";
 print MAIL "Mail-Followup-To: $replyto\n";
-print MAIL "To: gollo\@fsfe.org\n";
+print MAIL "To: dus\@office.fsfeurope.org\n";
 print MAIL "Cc: $email\n";
 
 print MAIL "Subject: $subject\n";

@@ -1,9 +1,7 @@
-
 #!/usr/bin/perl
 
 use CGI;
 use POSIX qw(strftime);
-use Switch;
 
 
 # -----------------------------------------------------------------------------
@@ -33,11 +31,9 @@ if ($function2 ne "") {
  $function .= ", $function2";
 }
 
-switch ($radioaddress) {
- case "Berlin" { $address = "Linienstraße 141, 10115 Berlin, Germany"; }
- case "DUS" { $address = "Talstraße 110, 40127 Düsseldorf, Germany"; }
- else { $address = $otheraddress }
-}
+if ($radioaddress eq "Berlin") { $address = "Linienstraße 141, 10115 Berlin, Germany"; }
+if ($radioaddress eq "DUS") { $address = "Talstraße 110, 40127 Düsseldorf, Germany"; }
+if ($radioaddress eq "other") {  $address = "$otheraddress"; }
 
 if ($delivery eq "") {
  $delivery = "$address";

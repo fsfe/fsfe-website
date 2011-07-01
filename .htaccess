@@ -42,8 +42,8 @@ RewriteRule ^campaigns/vd2010 /campaigns/valentine/2010/valentine-2010 [redirect
 RewriteRule ^valentine/valentine(.*) /campaigns/valentine/2011/valentine-2011$1 [redirect=permanent]
 
 # trying fix the dirty hack redirection loop from 2011-06-30
-RewriteRule ^campaigns/valentine/valentine(.*) /campaigns/valentine/2011/valentine-2011$1 [redirect=temp]
-RewriteRule ^campaigns/valentine/2011/valentine.([A-Za-z]{2}).html /campaigns/valentine/2011/valentine-2011$1 [redirect=temp]
+RewriteRule ^campaigns/valentine(/?)$ /campaigns/valentine/2011/valentine-2011 [redirect=temp]
+RewriteRule ^campaigns/valentine/2011(/?)$ /campaigns/valentine/2011/valentine-2011 [redirect=temp]
 
 
 # AskYourCandidates redirect

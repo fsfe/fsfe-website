@@ -31,6 +31,7 @@ my %names = (
   "reiter" => "Bernhard Reiter",
   "roy" => "Hugo Roy",
   "sandklef" => "Henrik Sandklef",
+  "suklje" => "Matija Šuklje",
   "tuke" => "Sam Tuke",
   "weiden" => "Fernanda Weiden",
 );

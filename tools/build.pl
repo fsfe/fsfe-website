@@ -95,7 +95,8 @@ our $current_time = strftime "%Y-%m-%d %H:%M:%S", localtime;
 
 # This static array contains files that can't be out of date
 our %cant_be_outdated = (
-  "news/news" => 1
+  "news/news" => 1,
+  "index" => 1
 );
 
 

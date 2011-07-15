@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<html>
+  <head>
+    <title>ЕФСПО - Внеси пожертвование сейчас!</title>
+  </head>
+
+  <body>
+    <h1>Пожертвования</h1>
+
+    <div id="introduction">
+      <div class="image">
+        <img src="/graphics/piggy-bank.png" alt="свинья-копилка"/>
+      </div>
+
+      <p>
+        Европейский фонд свободного программного обеспечения —
+        некоммерческая неправительственная организация.
+        <a href="/projects/work.html">Наша работа</a> возможна
+        только благодаря 
+        <a href="/contribute/contribute.html">добровольцам</a>,
+        <a href="http://fellowship.fsfe.org">членам Содружества</a> и
+        <a href="thankgnus.html">спонсорам</a>. Ваши пожертвования
+        необходимы для нашей эффективности и самостоятельности. Они дают нам
+        возможность продолжать работать на благо свободного программного
+        обеспечения там, где это необходимо, и выражать независимое мнение.
+      </p>
+    </div>
+
+    <h2>Способы внесения пожертвований</h2>
+
+    <h3>Онлайн-платежи</h3>
+
+    <form action="/cgi-bin/donate-new.pl" method="post" id="donate">
+      <p>
+        <label for="name">Имя (частное лицо или компания)</label>
+        <input id="name" name="name" type="text"/>
+        (Если только вы не пожелаете сохранить анонимность, это имя будет внесено в 
+        <a href="thankgnus.html">список спонсоров</a>)
+      </p>
+      <p>
+        <input name="anonymous" type="checkbox"/> Я хочу сделать анонимное
+        пожертвование
+      </p>
+      <p>
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email"/>
+      </p>
+      <fieldset>
+        <table>
+          <tr>
+            <th>Уровень</th>
+            <th>Ежемесячно</th>
+            <th>Ежегодно</th>
+            <th>Единовременное пожертвование</th>
+          </tr>
+          <tr>
+            <td><a href="thankgnus.html#supporter">Спонсор</a><br/></td>
+            <td><input name="amount" type="radio" value="m10" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 10</td>
+            <td><input name="amount" type="radio" value="y120" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 120</td>
+            <td><input name="amount" type="radio" value="o120" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 120</td>
+          </tr>
+          <tr>
+            <td><a href="thankgnus.html#contributor">Сторонник</a><br/></td>
+            <td><input name="amount" type="radio" value="m50" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 50</td>
+            <td><input name="amount" type="radio" value="y600" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 600</td>
+            <td><input name="amount" type="radio" value="o600" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 600</td>
+          </tr>
+          <tr>
+            <td><a href="thankgnus.html#sustainingcontributor">Постоянный спонсор</a><br/></td>
+            <td><input name="amount" type="radio" value="m100" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 100</td>
+            <td><input name="amount" type="radio" value="y1200" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 1,200</td>
+            <td><input name="amount" type="radio" value="o1200" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 1,200</td>
+          </tr>
+          <tr>
+            <td><a href="thankgnus.html#patron">Меценат</a><br/></td>
+            <td><input name="amount" type="radio" value="m500" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 500</td>
+            <td><input name="amount" type="radio" value="y6000" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 6,000</td>
+            <td><input name="amount" type="radio" value="o6000" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 6,000</td>
+          </tr>
+          <tr>
+            <td style="border-bottom: medium none;">Выберите сумму:</td>
+            <td style="border-bottom: medium none;"><input name="amount" type="radio" value="mother" checked="checked" onclick="yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = false; yamount_other.disabled = true; oamount_other.disabled = true"/>
+            <input name="mamount_other" type="text" value="" palceholder="euros" style="width:5em"/></td>
+            <td style="border-bottom: medium none;"><input name="amount" type="radio" value="yother" checked="checked" onclick="mamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = false; oamount_other.disabled = true"/>
+            <input name="yamount_other" type="text" value="" palceholder="euros" style="width:5em"/></td>
+            <td style="border-bottom: medium none;"><input name="amount" type="radio" value="oother" checked="checked" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = false"/>
+            <input name="oamount_other" type="text" value="" palceholder="euros" style="width:5em"/></td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <p>
+        <!-- Translators: please replace "en" with the language code of your
+             language and translate "Donation" and "Donate" -->
+        <input type="hidden" name="language" value="ru_RU"/>
+        <input type="hidden" name="text" value="Пожертвование"/>
+        <input type="submit" value="Пожертвовать"/>
+      </p>
+    </form>
+
+    <h3>Банковский перевод</h3>
+
+    <p>
+      Пожертвования могут быть перечислены из любой страны мира на следующие
+      банковские счета:
+    </p>
+
+    <h4>Пожертвования в EUR</h4>
+
+    <address>
+      Free Software Foundation Europe e.V.<br/>
+      IBAN: DE69 3602 0030 0003 0047 32<br/>
+      National-Bank Essen, Steinstraße 13, 40212 Dusseldorf, Germany<br/>
+      SWIFT/BIC: NBAG DE3E<br/>
+    </address>
+
+    <h4>Пожертвования в CHF</h4>
+
+    <address>
+      Free Software Foundation Europe e.V.<br/>
+      Postkonto: 60-539461-0<br/>
+      IBAN: CH86 0900 0000 6053 9461 0<br/>
+      SWIFT/BIC: POFI CHBE<br/>
+    </address>
+
+    <h3>Другие способы</h3>
+
+    <p>
+      Если ни один из вышеперечисленных способов Вам не подходит, пожалуйста,
+      <a href="mailto:office@fsfeurope.org">напишите нам</a>, и мы обсудим
+      другие возможности.
+    </p>
+
+    <p>
+      Как частное лицо Вы также могли бы 
+      <a href="https://fellowship.fsfe.org/join">стать членом Содружества ЕФСПО</a>
+      вместо пожертвования или в дополнение к нему.
+    </p>
+    
+    <h2>Что дальше</h2>
+
+    <p>
+      Если Вы пожертвуете больше 120 евро в течение года, мы добавим Ваше имя в
+      <a href="thankgnus.html">список спонсоров</a>. При онлайн-переводе, если
+      Вы не желаете обнародовать Ваши данные, можно поставить отметку "Я хочу
+      сделать анонимное пожертвование". При использовании банковского перевода,
+      пожалуйста, 
+      <a href="mailto:office@fsfeurope.org">напишите нам</a>.
+    </p>
+
+    <p>
+      Кроме того, Вы можете разместить наши
+      <a href="/about/graphics/sponsoring/sponsoring.html">значки спонсоров</a>
+      на Вашем сайте.
+    </p>
+
+    <p>
+      В некоторых странах сумма вашего пожертвования может быть вычтена из
+      подоходного налога. В настоящее время к этим странам относятся
+      <a href="germany.html">Германия</a>, 
+      <a href="netherlands.html">Нидерланды</a> и
+      <a href="switzerland.html">Швейцария</a>.
+    </p>
+  </body>
+
+  <timestamp>$Date$ $Author$</timestamp>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

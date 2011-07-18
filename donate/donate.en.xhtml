@@ -30,37 +30,62 @@
     <h3>Online payment</h3>
 
     <form action="/cgi-bin/donate.pl" method="post" id="donate">
-      <fieldset>
-        <legend>Amount:</legend>
-
-        <table>
-          <tr>
-            <td><input name="amount" type="radio" value="120" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;120</td>
-            <td><a href="thankgnus.html#supporter">Supporter</a><br/></td>
-          </tr>
-          <tr>
-            <td><input name="amount" type="radio" value="600" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;600</td>
-            <td><a href="thankgnus.html#contributor">Contributor</a><br/></td>
-          </tr>
-          <tr>
-            <td><input name="amount" type="radio" value="1200" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;1,200</td>
-            <td><a href="thankgnus.html#sustainingcontributor">Sustaining Contributor</a><br/></td>
-          </tr>
-          <tr>
-            <td><input name="amount" type="radio" value="6000" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;6,000</td>
-            <td><a href="thankgnus.html#patron">Patron</a><br/></td>
-          </tr>
-          <tr>
-            <td style="border-bottom: medium none;"><input name="amount" type="radio" value="other" checked="checked" onclick="amount_other.disabled = false"/>
-            <input name="amount_other" type="text" value="" palceholder="euros" style="width:5em"/></td>
-            <td style="border-bottom: medium none;">(you choose)</td>
-          </tr>
-        </table>
-      </fieldset>
-
+      <p>
+        <label for="name">Name (person or company)</label>
+        <input id="name" name="name" type="text"/>
+        (Unless you want to remain anonymous, this name will be mentioned on
+        the <a href="thankgnus.html">donors list</a>)
+      </p>
       <p>
         <input name="anonymous" type="checkbox"/> I wish to remain anonymous
       </p>
+      <p>
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email"/>
+      </p>
+      <fieldset>
+        <table>
+          <tr>
+            <th>Level</th>
+            <th>Monthly donation</th>
+            <th>Yearly donation</th>
+            <th>One-time donation</th>
+          </tr>
+          <tr>
+            <td><a href="thankgnus.html#supporter">Supporter</a><br/></td>
+            <td><input name="amount" type="radio" value="m10" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 10</td>
+            <td><input name="amount" type="radio" value="y120" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 120</td>
+            <td><input name="amount" type="radio" value="o120" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 120</td>
+          </tr>
+          <tr>
+            <td><a href="thankgnus.html#contributor">Contributor</a><br/></td>
+            <td><input name="amount" type="radio" value="m50" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 50</td>
+            <td><input name="amount" type="radio" value="y600" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 600</td>
+            <td><input name="amount" type="radio" value="o600" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 600</td>
+          </tr>
+          <tr>
+            <td><a href="thankgnus.html#sustainingcontributor">Sustaining Contributor</a><br/></td>
+            <td><input name="amount" type="radio" value="m100" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 100</td>
+            <td><input name="amount" type="radio" value="y1200" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 1,200</td>
+            <td><input name="amount" type="radio" value="o1200" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 1,200</td>
+          </tr>
+          <tr>
+            <td><a href="thankgnus.html#patron">Patron</a><br/></td>
+            <td><input name="amount" type="radio" value="m500" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 500</td>
+            <td><input name="amount" type="radio" value="y6000" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 6,000</td>
+            <td><input name="amount" type="radio" value="o6000" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 6,000</td>
+          </tr>
+          <tr>
+            <td style="border-bottom: medium none;">Set an amount:</td>
+            <td style="border-bottom: medium none;"><input name="amount" type="radio" value="mother" checked="checked" onclick="yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = false; yamount_other.disabled = true; oamount_other.disabled = true"/>
+            <input name="mamount_other" type="text" value="" palceholder="euros" style="width:5em"/></td>
+            <td style="border-bottom: medium none;"><input name="amount" type="radio" value="yother" checked="checked" onclick="mamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = false; oamount_other.disabled = true"/>
+            <input name="yamount_other" type="text" value="" palceholder="euros" style="width:5em"/></td>
+            <td style="border-bottom: medium none;"><input name="amount" type="radio" value="oother" checked="checked" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = false"/>
+            <input name="oamount_other" type="text" value="" palceholder="euros" style="width:5em"/></td>
+          </tr>
+        </table>
+      </fieldset>
 
       <p>
         <!-- Translators: please replace "en" with the language code of your
@@ -110,11 +135,6 @@
       alternatively or additionally to a donation.
     </p>
     
-    <p>
-      <a href="http://flattr.com/thing/96089/Free-Software-Foundation-Europe" target="_blank">
-      <img src="/graphics/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
-    </p>
-    
     <h2>What happens next</h2>
 
     <p>
@@ -134,7 +154,8 @@
 
     <p>
       In some countries, donations to us can be deducted from income tax.
-      Currently, this is the case in <a href="germany.html">Germany</a> and
+      Currently, this is the case in <a href="germany.html">Germany</a>, the
+      <a href="netherlands.html">Netherlands</a>, and
       <a href="switzerland.html">Switzerland</a>.
     </p>
   </body>

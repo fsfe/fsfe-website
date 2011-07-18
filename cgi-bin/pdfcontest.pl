@@ -65,6 +65,7 @@ my $dt = DateTime->now;
 my $data = { institution_name => $query->param ('institution-name'),
              institution_country => $query->param ('institution-country'),
              institution_address => $query->param ('institution-address'),
+             institution_email => $query->param ('institution-email'),
              institution_url => $query->param ('institution-url'),
              opened => sprintf ('%d-%.2d-%.2d', $dt->year, $dt->month, $dt->day),
              name => $query->param ('name'),

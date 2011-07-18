@@ -16,6 +16,7 @@ Please validate and use the following XML snippet if appropriate:
 <bug institution-name="[% institution_name %]"
      institution-address="[% institution_address %]"
      institution-url="[% institution_url %]"
+     institution-email="[% institution_email %]"
      opened="[% opened %]"
      closed=""
      name="[% name %]"

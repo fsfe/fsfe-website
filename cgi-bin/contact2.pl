@@ -54,7 +54,7 @@ print MAIL "We have received a new message from our website contact form.\n\n";
 print MAIL "Name:   " . $query->param("name") . "\n";
 print MAIL "E-mail: " . $query->param("email") . "\n\n";
 print MAIL "---\n";
-print MAIL wrap($query->param('','',"message")) . "\n";
+print MAIL wrap('','',$query->param("message")) . "\n";
 print MAIL "---\n\n";
 
 my $output = <<ENDHTML;

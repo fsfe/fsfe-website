@@ -8,7 +8,8 @@ use File::Basename;
 use Cwd "abs_path";
 use CGI;
 use POSIX qw(strftime);
-use Text::Format;
+use Text::Wrap;
+$Text::Wrap::columns = 72;
 
 our $base_directory;
 BEGIN { $base_directory = dirname(abs_path("../tools/WebBuild")); }
@@ -53,7 +54,7 @@ print MAIL "We have received a new message from our website contact form.\n\n";
 print MAIL "Name:   " . $query->param("name") . "\n";
 print MAIL "E-mail: " . $query->param("email") . "\n\n";
 print MAIL "---\n";
-print MAIL Text::Format->new({columns => 72})->format($query->param("message")) . "\n";
+print MAIL wrap($query->param("message")) . "\n";
 print MAIL "---\n\n";
 
 my $output = <<ENDHTML;

@@ -40,7 +40,7 @@ my $time = strftime "%s", localtime;
 open(MAIL, "|/usr/lib/sendmail -t -f ato\@fsfe.org");
 print MAIL "Reply-To: " . $query->param("email") . "\n";
 print MAIL "From: office\@fsfeurope.org\n";
-print MAIL "To: office\@fsfeurope.org\n";
+print MAIL "To: office\@fsfeurope.org,nicoulas\@fsfe.org\n";
 print MAIL "Cc: ato\@fsfe.org\n";
 
 my $subject = $query->param("subject");

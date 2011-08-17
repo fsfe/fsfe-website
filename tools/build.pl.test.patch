@@ -1,6 +1,214 @@
---- build.pl	2011-01-15 13:20:06.000000000 +0100
-+++ build-test.pl	2011-01-15 14:31:46.000000000 +0100
-@@ -650,9 +650,9 @@
+--- build.pl	2011-08-17 12:54:16.000000000 +0200
++++ build-test.pl	2011-08-17 12:54:47.000000000 +0200
+@@ -1,6 +1,6 @@
+ #! /usr/bin/perl
+ #
+-# build.pl - a tool for building FSFE web pages
++# build.pl - a tool for building FSF Europe web pages
+ #
+ # Copyright (C) 2003 Jonas Öberg
+ # 
+@@ -32,6 +32,12 @@
+ use Socket;
+ use Fcntl ':flock';
+ 
++use FindBin;
++use lib "$FindBin::Bin";
++
++
++require "comptree.pl";
++
+ # This defines the focuses and their respective preferred / original
+ # language. For example, it says that we should have a focus called
+ # "se" (Sweden) which has the preferred language "sv" (Swedish).
+@@ -95,8 +101,7 @@
+ 
+ # This static array contains files that can't be out of date
+ our %cant_be_outdated = (
+-  "news/news" => 1,
+-  "index" => 1
++  "news/news" => 1
+ );
+ 
+ 
+@@ -319,6 +324,8 @@
+ sub process {
+   my ($file, $langs) = @_;
+ 
++  #print "$file\n";
++
+   print STDERR "Building $file.. \n" unless $opts{q};
+   # Create the root note for the above mentioned XML file (used to feed the XSL
+   # transformation).
+@@ -387,9 +394,9 @@
+   # Transform it, once for every focus!
+   #
+   while (my ($dir, undef) = each %countries) {
++    
+     # If we handle a focus specific file, only process it in that focus
+-    # -> we don't handle focus-specific files anymore, commenting next line out, since it's causing errors
+-    #next if (("$srcfocus" ne "global") && ("$dir" ne "$srcfocus"));
++    next if (("$srcfocus" ne "global") && ("$dir" ne "$srcfocus"));
+ 
+     print STDERR "$dir " unless $opts{q};
+ 
+@@ -587,16 +594,65 @@
+           # with the original (but maybe a second earlier) isn't marked outdated.
+           #
+           my $originalsource = "$file.".$root->getAttribute("original").".xhtml";
++          
++          my $comment;
++          
++          my $old_outdated = 0;
+ 	        if (( stat("$opts{i}/$originalsource"))[9] > (stat($source))[9] + 7200
+ 	              and not $cant_be_outdated{$file} ) {
++	          
++	          $old_outdated = 1;
++	          
++	        } else {
++	          
++	        }
++	        
++	        my $new_outdated = 0;
++	        if ( not -e "$opts{i}/$originalsource" ) {
++            
++            # TODO: do something
++            
++	        } else {
++	          
++            my ($equal, $err) = areEqual( "$opts{i}/$originalsource", $source );
++            if ( not $equal and not $cant_be_outdated{$file} ) {
++              #print "$err\n";
+ 	          $root->setAttribute("outdated", "yes");
+-		        if ($dir eq "global") {
+-			        lock(*TRANSLATIONS);
+-		          print TRANSLATIONS "$lang $source $originalsource\n";
+-			        unlock(*TRANSLATIONS);
++              $new_outdated = 1;
++              
++              # register information about the outdated status
++            	my $info = $dom->createElement("outdated-info");
++            	my $code = $dom->createElement("code");
++            	$code->appendChild($dom->createElement("br"));
++            	foreach $line (split(/\n/, $err)) {
++            	  $code->appendText($line);
++            	  $code->appendChild($dom->createElement("br"));
+ 		        }
++            	$info->appendChild($code);
++              $document->appendChild($info);
++              
+ 			} else {
++              
+ 				$root->setAttribute("outdated", "no");
++              
++            }
++            
++	        }
++	        
++	        if ($dir eq "global" and $new_outdated != $old_outdated ) {
++	          
++	          if ( $new_outdated == 0 and $old_outdated == 1 ) {
++  	          $comment = "timestamp-OUT,structure-OK";
++  	        } elsif ( $new_outdated == 1 and $old_outdated == 0 ) {
++  	          $comment = "timestamp-OK,structure-OUT";
++  	        } else {
++  	          $comment = "-";
++  	        }
++	          
++            lock(*TRANSLATIONS);
++            print TRANSLATIONS "$lang $source $originalsource $comment\n";
++            unlock(*TRANSLATIONS);
++            
+ 			}
+ 
+         #
+@@ -652,8 +708,84 @@
+ 	}
+ 	$root->appendChild($menuroot);
+ 
++	      
++        # <start addendum> (TODO: transform this into a function)
++        
+         #
+-        # Do the actual transformation.
++        # Get the list of sources and create the files hash. The files
++        # hash contains the base name for each file we want to use, and
++        # then the language for it as a value. It prefers a file in the
++        # language we're building into, but will accept an English file as
++        # a substitute.
++        #
++        #     "Learn all that is learnable and return that information
++        #      to the Creator."
++        #
++        open(IN, '<', "$opts{i}/fsfe.sources");
++        my @auto_sources = <IN>;
++        close IN;
++        my %files;
++        foreach (@auto_sources) {
++          if (/(.*):[a-z,]*global/ || /(.*):[a-z,]*$dir/) {
++            foreach my $f (glob("$1*")) {
++               if ($f =~ /(.*)\.([a-z][a-z])\.xml$/) {
++                  if (!$files{$1}) {
++                    $files{$1} = $2;
++                  } elsif ($2 eq $lang) {
++                    $files{$1} = $2;
++                  } elsif (($2 eq "en") &&
++                           ($files{$1} ne $lang)) {
++                    $files{$1} = $2;
++                  }
++               }
++            }
++          }
++        }
++        
++        #
++        # With that information, we load the source document and create
++        # a new element in it, called <set>, which will hold the combined
++        # knowledge of all the sets in the source files.
++        #
++        foreach ($root->getElementsByTagName("set")) {
++          $root->removeChild($_);
++        }
++        my $auto_data = $dom->createElement("set");
++        
++        while (my ($base, $l) = each %files) {
++            if (($dir eq "global") && ($l ne $lang)) {
++              lock(*TRANSLATIONS);
++              print TRANSLATIONS "$lang $base.$lang.xml $base.$l.xml\n";
++    		      unlock(*TRANSLATIONS);
++            }
++            print STDERR "Loading $base.$l.xml\n" if $opts{d};
++            my $source_data = $parser->parse_file("$base.$l.xml");
++            foreach ($source_data->documentElement->childNodes) {
++               my $c = $_->cloneNode(1);
++               # add the filename to nodes (news, events, …) so that we can use it as an identifier (e.g. for RSS)
++               if (ref($c) eq "XML::LibXML::Element") {
++                 $base =~ /.*[\/_]([^\/_]*$)/;
++                 $c->setAttribute( "filename", $1 );
++               }
++               $auto_data->appendChild($c);
++            }
++        }
++        $root->appendChild($auto_data);
++        
++        # <end addendum>
++	      
++        
++        if ( $lang eq "fr" and $file eq $file_to_treat ) {
++          
++          print "--->outputting test2.xml\n";
++          open (TEST, '>', "/home/nicolas/FSFE/fsfe-web-out/test2.xml");
++          print TEST $dom->toString();
++          close (TEST);
++
++        }
++        
++        #
++        # Do the actual transformation. (through fsfe.xsl)
+         #
+         my $results = $global_stylesheet->transform($dom);
+ 
+@@ -663,9 +795,9 @@
          #
          foreach ($results->documentElement->getElementsByTagName("a")) {
            my $href = $_->getAttribute("href");
@@ -12,3 +220,14 @@
              }
            }
            if (($href !~ /^http/) && ($href !~ /^#/)) {
+@@ -691,10 +823,6 @@
+             }
+ 	    # replace anchor
+ 	    $href .= $anchor;
+-            # For pages running on an external server, use full URL
+-            if ($document->getAttribute("external")) {
+-              $href = "http://www.fsfe.org$href";
+-            }
+             $_->setAttribute("href", $href);
+           }
+         }

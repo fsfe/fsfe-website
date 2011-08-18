@@ -117,7 +117,7 @@ if ($budget2 ne "NONE") {
   $account2 = $account{$budget2};
 }
 my $reference = "er.$date." . substr $time, -3;
-$reference .= "/$account1";
+$reference .= ".$account1";
 if ($budget2 ne "NONE") {
   $reference .= "+$account2";
 }

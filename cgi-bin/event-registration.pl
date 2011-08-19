@@ -63,7 +63,7 @@ my $boundary = "NextPart$reference";
 
 open(MAIL, "|/usr/lib/sendmail -t -f web\@fsfeurope.org");
 print MAIL "From: web\@fsfeurope.org\n";
-print MAIL "To: $to1\@fsfeurope.org\n";
+print MAIL "To: $to1\n";
 print MAIL "Cc: $email\n";
 print MAIL "Subject: $subject\n";
 print MAIL "Mime-Version: 1.0\n";

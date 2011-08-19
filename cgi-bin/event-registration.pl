@@ -37,10 +37,6 @@ my %recipient = (
 
 my $query = new CGI;
 
-# Spam bots will be tempted to fill in this actually invisible field
-if ($query->param("link")) {
-  goto OK;
-}
 my $eventid = $query->param("eventid");
 my $fullname = escapeHTML($query->param("fullname"));
 my $email = escapeHTML($query->param("email"));
@@ -54,6 +50,17 @@ my $reference = "$eventid.$date." . substr $time, -3;
 my $to1 = $recipient{$eventid};
 
 my $subject = "$eventname registration $reference";
+
+
+# -----------------------------------------------------------------------------
+# Prevent SPAM
+# -----------------------------------------------------------------------------
+
+# Spam bots will be tempted to fill in this actually invisible field
+if ($query->param("link")) {
+  goto OK;
+}
+
 
 # -----------------------------------------------------------------------------
 # Generate mail to responsible person

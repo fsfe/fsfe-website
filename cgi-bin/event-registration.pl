@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-use CGI;
+use CGI qw(:standard escapeHTML);
 use POSIX qw(strftime);
 
 # A form calling this CGI must have the following field:

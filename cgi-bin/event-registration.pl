@@ -42,9 +42,9 @@ if ($query->param("link")) {
   goto OK;
 }
 my $eventid = $query->param("eventid");
-my $fullname = $query->param("fullname");
-my $email = $query->param("email");
-my $comment = $query->param("comment");
+my $fullname = escapeHTML($query->param("fullname"));
+my $email = escapeHTML($query->param("email"));
+my $comment = escapeHTML($query->param("comment"));
 
 my $date = strftime "%Y-%m-%d", localtime;
 my $time = strftime "%s", localtime;
@@ -103,9 +103,9 @@ print "<body>";
 print "<h1>Registration completed</h1>";
 print "<p>";
 print "Your registration $reference was sent. Thank you.<br /><br />";
-print "Name: ".escapeHTML($fullname)."<br />\n\n";
-print "E-mail: ".escapeHTML($email)."<br />\n\n";
-print "Comment: ".escapeHTML($comment)."<br />\n\n";
+print "Name: ".$fullname."<br />\n\n";
+print "E-mail: ".$email."<br />\n\n";
+print "Comment: ".$comment."<br />\n\n";
 print "</p>";
 print "</body>";
 print "</html>";

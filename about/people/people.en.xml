@@ -35,7 +35,7 @@
     <link>http://blogs.fsfe.org/tgb/</link>
   </person>
 
-  <person id="bubestinger" teams="main">
+  <person id="bubestinger" teams="main, at">
     <name>Peter Bubestinger</name>
     <country>AT</country>
     <function country="AT">coordinator/m</function>
@@ -56,6 +56,13 @@
     <function project="ftf">coordinator/m</function>
     <email>coughlan (at) fsfeurope (dot) org</email>
     <link>/about/coughlan/coughlan.html</link>
+  </person>
+
+  <person id="dengg" teams="at">
+   <name>Albert Dengg</name>
+   <country>AT</country>
+   <function country="AT"></function>
+   <email>albert (at) fsfe (dot) org</email>
   </person>
 
   <person id="eide" teams="main">
@@ -84,7 +91,7 @@
     <link>/about/gerloff/gerloff.html</link>
   </person>
 
-  <person id="gollowitzer" teams="main">
+  <person id="gollowitzer" teams="main, at">
     <name>Martin Gollowitzer</name>
     <country>AT</country>
     <function>fellowship-deputy/m</function>
@@ -189,7 +196,7 @@
     <link>http://wiki.fsfe.org/Fellows/julia.e.klein</link>
   </person>
 
-  <person id="kneissl" teams="main">
+  <person id="kneissl" teams="main, at">
     <name>Jürgen Kneissl</name>
     <country>AT</country>
     <function country="AT">deputy/m</function>
@@ -210,7 +217,15 @@
     <email>machon (at) fsfeurope (dot) org</email>
   </person>
 
-  <person id="mueller" association-member="yes" teams="main">
+  <person id="moeller" teams="main">
+    <name>Marcus Möller</name>
+    <country>CH</country>
+    <function country="CH">coordinator/m</function>
+    <email>mmoeller (at) fsfe (dot) org </email>
+    <link>http://wiki.fsfe.org/Fellows/mmoeller</link>
+  </person>
+  
+  <person id="mueller" association-member="yes" teams="main, at">
     <name>Reinhard Müller</name>
     <country>AT</country>
     <function>financial-officer/m</function>
@@ -298,6 +313,14 @@
     <link>http://www.schiessle.org</link>
   </person>
 
+  <person id="suklje" teams="main">
+    <name>Matija Šuklje</name>
+    <country>SI</country>
+    <function project="ftf">deputy/m</function>
+    <email>hook (at) fsfe (dot) org</email>
+    <link>http://matija.suklje.name</link>
+  </person>
+  
   <person id="tolfsen" teams="main">
     <name>Andreas Tolf Tolfsen</name>
     <country>NO</country>
@@ -329,6 +352,13 @@
     <link>http://blogs.fsfe.org/west/</link>
   </person>
   
+  <person id="willard" teams="main">
+    <name>Patrik Willard</name>
+    <country>SE</country>
+    <function country="SE">deputy/m</function>
+    <email>willard (at) fsfeurope (dot) org</email>
+  </person>
+
   <person id="woolfrey" teams="gb">
     <name>Chris Woolfrey</name>
     <country>GB</country>
@@ -345,28 +375,5 @@
     <link></link>
   </person>
   
-  <person id="suklje" teams="main">
-    <name>Matija Šuklje</name>
-    <country>SI</country>
-    <function project="ftf">deputy/m</function>
-    <email>hook (at) fsfe (dot) org</email>
-    <link>http://matija.suklje.name</link>
-  </person>
-  
-  <person id="moeller" teams="main">
-    <name>Marcus Möller</name>
-    <country>CH</country>
-    <function country="CH">coordinator/m</function>
-    <email>mmoeller (at) fsfe (dot) org </email>
-    <link>http://wiki.fsfe.org/Fellows/mmoeller</link>
-  </person>
-  
-  <person id="willard" teams="main">
-    <name>Patrik Willard</name>
-    <country>SE</country>
-    <function country="SE">deputy/m</function>
-    <email>willard (at) fsfeurope (dot) org</email>
-  </person>
-
   
 </personset>

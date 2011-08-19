@@ -53,7 +53,7 @@ my $reference = "$eventid.$date." . substr $time, -3;
 
 my $to1 = $recipient{$eventid};
 
-my $subject = "$eventname registration $reference" 
+my $subject = "$eventname registration $reference";
 
 # -----------------------------------------------------------------------------
 # Generate mail to responsible person

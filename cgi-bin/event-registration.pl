@@ -37,6 +37,11 @@ my %recipient = (
 
 my $query = new CGI;
 
+# Check if the script was called with an event ID
+if ($query->param("eventid") eq '') {
+   goto OK;
+}
+
 my $eventid = $query->param("eventid");
 my $fullname = escapeHTML($query->param("fullname"));
 my $email = escapeHTML($query->param("email"));

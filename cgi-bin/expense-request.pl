@@ -8,6 +8,7 @@ use POSIX qw(strftime);
 # -----------------------------------------------------------------------------
 
 my %names = (
+  "bako" => "Eszter Bako",
   "coughlan" => "Shane Coughlan",
   "evdokimova" => "Natalia Evdokimova",
   "gerloff" => "Karsten Gerloff",
@@ -26,8 +27,10 @@ my %names = (
   "kneissl" => "Jürgen Kneissl",
   "machon" => "Pablo Machón",
   "mueller" => "Reinhard Müller",
+  "naranjo" => "Diego Naranjo",
   "oberg" => "Jonas Öberg",
   "ohnewein" => "Patrick Ohnewein",
+  "polvani" => "Alessandro Polvani",
   "reiter" => "Bernhard Reiter",
   "roy" => "Hugo Roy",
   "sandklef" => "Henrik Sandklef",

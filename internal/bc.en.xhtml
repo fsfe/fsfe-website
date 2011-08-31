@@ -22,13 +22,9 @@
 <p>
 The purpose of this form is to avoid unnecessary,
 duplicate work. In the past, the process "production
-of business cards" triggered a minimum of 10 emails
+of business cards" has often triggered a minimum of 10 emails
 (but often enough far more) per person per set of
-cards. We want to reduce this. We do not assume that
-people are stupid. We do assume that some people
-simply do not know certain things. We do not assume,
-but we are sure, that Murphy is out there to get us.
-</p>
+cards. The main problem was usually the lack of correct, complete data.</p>
 
 <h2>Generally</h2>
 
@@ -38,21 +34,17 @@ Please write an
 </p>
 
 <p>
-The question whether you get cards or not, should be
-coordinated with the others (whoever that might be).
-FIXME: Pointer to a policy, whenever it might exist.
+In general, everyone on team@ is eligible for FSFE business cards.
+If you are not on team@, or are unsure whether it makes sense for
+you to order business cards, please contact
+council@fsfeurope.org.
 </p>
 
 <p>
-The details of your card (especially the
-title/function) should be coordinated with the appropiate
-Co-ordinator(s) to fit the FSFE's policy(s).
+Before ordering business cards, please write an
+<a href="/internal/er.html">expense request</a> first. Please wait for your expense request to be approved before filling in the form.
 </p>
 
-<p>
-Please write an
-<a href="/internal/er.html">expense request</a> first.
-</p>
 
 <h3>Language</h3>
 
@@ -62,13 +54,8 @@ for good reasons, we have to produce two sets of cards.
 Please use the form below twice in this case.
 </p>
 
-<h2>Content of the card</h2>
+<h2>Contents of the card</h2>
 
-<p>
-Please wait for the approval of your
-<a href="/internal/er.html">expense request</a> before
-using that form.
-</p>
 
 <form action="/cgi-bin/businesscards.pl" method="post">
 <table>
@@ -77,14 +64,13 @@ using that form.
 
 <h3>1. First name and surname</h3>
 
-We do use the international form with all parts in lower
-cases with a leading upper case for each word.
-If there are very good reasons to use another form,
-i.e. printing the surname in upper cases, as it is
-common in France, this should be done at the localised
-version of the cards, not in the int. version.
-<br />Data might include middle initials, but no nicknames as
-to be used in IRC.
+We use the international form with all parts in lower cases with a
+leading upper case for each word.  If there are very good reasons
+to use another form, i.e. printing the surname in upper cases, as
+it is common in France, this should be done in the localised
+version of the cards, not in the international version.  <br
+/>Data might include middle initials, but no nicknames (e.g. as
+used in IRC).
 
 </td>
 <td>
@@ -105,11 +91,8 @@ to be used in IRC.
 
 A title/function should be mentioned. It might be generic,
 somehow, i.e. "German Team".
-<br />In case of interns that might be a simple "intern",
-but you can leave it empty as well, for everything else
-than producing 500 cards has no use, and interns most
-likely tend to stay active in FSFE after their internship.
-
+<br />If you are an intern, please use "Assistant to the President" as your title.
+You can leave the field empty as well.
 </td>
 <td>
 <input type="text" size="50" name="function" />
@@ -121,8 +104,7 @@ likely tend to stay active in FSFE after their internship.
 <tr>
 <td>
 
-If you have two titles (or functions), both might be
-mentioned.
+If you have two titles (or functions), you can have both of them printed on the card.
 
 </td>
 <td>
@@ -133,7 +115,7 @@ mentioned.
 <td>
 <h3>3. The line "Free Software Foundation Europe"</h3>
 
-Don't care. This will be included automatically.
+Don't worry about this. It will be included automatically.
 </td>
 <td>
 Free Software Foundation Europe
@@ -144,13 +126,9 @@ Free Software Foundation Europe
 
 <h3>4. Address</h3>
 
-This should be the official FSFE address, wherever that
-might be. If you are working at an FSFE office, use this
-address, not your home address.
+This should normally be an official FSFE address, either in Berlin or Düsseldorf. Other addresses should only be used in exceptional cases.
 
-<br />If there are very good reasons to use another address,
-please ask the others (whoever that might be).
-Do not forget to mention the country, please.
+
 
 </td>
 <td>
@@ -182,10 +160,10 @@ p +<input type="text" size="25" name="phone" />
 
 <h3>6. Mobile (optional)</h3>
 
-Your personal mobile no., e.g.
+The mobile phone number you would like to appear on your card., e.g.
 
 <br />You should be reachable by phone. So as a minimum
-5. <em>or</em> 6. should be fullfilled.
+5. <em>or</em> 6. should be filled in.
 
 </td>
 <td>
@@ -199,12 +177,9 @@ m +<input type="text" size="25" name="mobile" />
 
 <h3>7. Fax (optional)</h3>
 
-It seems to be consensus in FSFE that this is an endangered
-communication protocoll. If you really are in need to use
-it, mention it by using the format of phone.
-(I can't remember having ever seen a fax number on a FSFE
-business cards...)
-
+For FSFE's purposes, fax is more or less extinct as a
+communications protocol. If you absolutely want to include a fax
+number, please use the same format as the phone number.
 </td>
 <td>
 f +<input type="text" size="25" name="fax" />
@@ -218,8 +193,8 @@ f +<input type="text" size="25" name="fax" />
 
 <h3>8. Email</h3>
 
-This should be your fsfe.org address (or fsfeurope.org,
-if everything else fails).
+This should be your fsfe.org address (or fsfeurope.org, whichever
+you use mainly.)
 
 </td>
 <td>
@@ -231,8 +206,9 @@ E-mail <input type="text" size="25" name="email" value="@fsfe.org" />
 <td>
 <h3>9. Jabber (optional)</h3>
 
-Your FSFE jabber address. (You don't know that you have
-a jabber address? Something went wrong...)
+Your FSFE jabber address. (You don't know that you have a jabber
+address? Something went wrong, please contact
+system-hackers@fsfeurope.org.)
 
 </td>
 <td>
@@ -247,7 +223,8 @@ Jabber <input type="text" size="25" name="jabber" value="@jabber.fsfe.org" />
 The fingerprint of your GnuPG key. No, not the key ID, not
 the kind of your key. The fingerprint will be printed in two lines.
 <br />(You do not have a GnuPG key? Something went
-terribly wrong.)
+terribly wrong.) You can generate this fingerprint with the following command in a terminal: 
+[FIXME: fix formatting] $ gpg --fingerprint [yourKeyID]
 
 </td>
 <td>
@@ -269,7 +246,7 @@ terribly wrong.)
 <h3>11. URL</h3>
 
 There is no need to mention an URL. "www.fsfe.org"
-will be printed on the back side automatically.
+will be printed on the reverse side automatically.
 
 </td>
 <td>
@@ -285,7 +262,7 @@ www.fsfe.org
 Your <a href="/internal/er.html">expense request</a> is approved?
 Everything less than 500 cards will cost almost the
 same. If there are good reasons to produce another amount,
-tell here.
+tell us here.
 
 </td>
 <td>
@@ -302,8 +279,10 @@ tell here.
 <tr>
 <td>
 <h3>13. No of approved expense request</h3>
-You should have ensured that the cards are paid by FSFE.
-Please enter the number of the approved <a href="/internal/er.html">expense request</a> here.
+
+Please enter the number of the approved <a
+	href="/internal/er.html">expense request</a> here. This is
+absolutely necessary in order for FSFE to pay for the cards.
 </td>
 <td>
 <input type="text" size="20" name="er" />
@@ -317,11 +296,14 @@ Please enter the number of the approved <a href="/internal/er.html">expense requ
 
 <h3>14. Preview</h3>
 
-The printing company won't start the production before a
-preview (PDF) is approved by you. We will send it to you and will
+The printing company will send you a proof sheet as PDF, so you
+can check whether your card looks ok and all the information on it
+is correct. The printing company will not start the production
+before you approve this PDF. 
+
+We will send it to you and will
 await your approval. We will use your fsfe.org address for
-that purpose. (If that won't work, you have a serious
-problem.)
+that purpose. 
 </td>
 </tr>
 <tr>
@@ -340,14 +322,14 @@ other address, please.
 </tr>
 <tr>
 <td colspan="2">
-If <em>all</em> needed data is <em>available and correct</em>,
-and you are fast by approving, you will receive your cards within
-5 to 10 days, depending on the snail mail systems. Our all-time
-record is 24 hours. If problems are occuring, the delay will be hellish.
-Our all-time record is 6 months.
-<br />In most cases, office DUS can't answer your questions
-regarding the data. In seldom cases, we can. If in doubt, ask
-the others first.
+If <em>all</em> required data is <em>available and correct</em>,
+and you are quick to approve it, you will receive your cards
+within 5 to 10 days, depending on the snail mail systems. Our
+all-time record is 24 hours. If problems occur (incomplete or
+incorrect data etc.), the delay might turn out to be hellish.  Our
+all-time record is 6 months.  <br />In most cases, office DUS
+can't answer your questions regarding the data. In rare cases, we
+can. When in doubt, please check with council@.
 </td>
 </tr>
 <tr>

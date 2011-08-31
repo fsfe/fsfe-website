@@ -5,13 +5,6 @@
 <personset>
   <!-- Please keep this list alphabetical by last name -->
 
-  <person id="Bakó" teams="main">
-    <name>Eszter Bakó</name>
-    <country>HU</country>
-    <function>intern/f</function>
-    <email>eszter (at) fsfe (dot) org</email>
-    <link></link>
-  </person>
   
   <person id="adams" teams="gb">
     <name>Paul Adams</name>
@@ -27,6 +20,14 @@
     <function project="education">deputy/m</function>
     <email>guido (at) fsfe (dot) org</email>
     <link>http://blogs.fsfe.org/guido/</link>
+  </person>
+
+  <person id="Bakó" teams="main">
+    <name>Eszter Bakó</name>
+    <country>HU</country>
+    <function>intern/f</function>
+    <email>eszter (at) fsfe (dot) org</email>
+    <link></link>
   </person>
 
   <person id="bergius" teams="main, fi">

@@ -3,6 +3,8 @@
 use CGI qw(:standard escapeHTML);
 use POSIX qw(strftime);
 
+require "SpammerChk.pl";
+
 # A form calling this CGI must have the following field:
 # - eventid: a hidden field with the unique ID for the event. This is used for mapping below.
 # - fullname: The full name of the registrant
@@ -66,6 +68,11 @@ if ($query->param("link")) {
   goto OK;
 }
 
+$spamresult = SpammerChk::isSpammerEmail($email);
+
+if ($spamresult) {
+ goto OK;
+}
 
 # -----------------------------------------------------------------------------
 # Generate mail to responsible person

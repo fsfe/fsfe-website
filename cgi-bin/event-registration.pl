@@ -68,11 +68,11 @@ if ($query->param("link")) {
   goto OK;
 }
 
-#$spamresult = SpammerChk::isSpammerEmail($email);
+$spamresult = SpammerChk::isSpammerEmail($email);
 
-#if ($spamresult) {
-# goto OK;
-#}
+if ($spamresult) {
+ goto OK;
+}
 
 # -----------------------------------------------------------------------------
 # Generate mail to responsible person

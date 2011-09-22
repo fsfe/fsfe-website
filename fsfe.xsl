@@ -755,6 +755,10 @@
     <script src="/scripts/awstats_misc_tracker.js" ></script>
     <noscript><img src="/scripts/awstats_misc_tracker.js?nojs=y" style="display: none" alt="script" /></noscript>
     
+	<!-- Piwik Image Tracker -->
+	<img src="https://piwik.fsfe.org/piwik.php?idsite=4&rec=1" style="border:0" alt="script" />
+	<!-- End Piwik -->
+    
       </xsl:element>
     </xsl:copy>
   </xsl:template>

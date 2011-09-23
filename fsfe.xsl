@@ -756,7 +756,7 @@
     <noscript><img src="/scripts/awstats_misc_tracker.js?nojs=y" style="display: none" alt="script" /></noscript>
     
 	<!-- Piwik Image Tracker -->
-	<img src="https://piwik.fsfe.org/piwik.php?idsite=4&rec=1" style="border:0" alt="script" />
+	<img src="https://piwik.fsfe.org/piwik.php?idsite=4&amp;rec=1" style="border:0" alt="script" />
 	<!-- End Piwik -->
     
       </xsl:element>

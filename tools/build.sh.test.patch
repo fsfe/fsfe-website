@@ -1,6 +1,6 @@
---- build.sh	2011-01-15 14:46:07.000000000 +0100
-+++ build-test.sh	2011-01-15 14:47:31.000000000 +0100
-@@ -2,38 +2,38 @@
+--- build.sh	2011-09-23 16:16:28.000000000 +0200
++++ build-test.sh	2011-09-23 16:17:20.000000000 +0200
+@@ -2,36 +2,36 @@
  # -----------------------------------------------------------------------------
  # Web page build script
  # -----------------------------------------------------------------------------
@@ -19,7 +19,6 @@
 +DEST=/home/www/html-test
 +TMP=/home/www/tmp-test.$$
 +STATUS=/var/www/web-test
- ALARM_LOCKFILE=alarm_lockfile
  MAKEFILE_PL=${SOURCE}/Makefile.PL
 -SVNUPOUTFILE=/tmp/fsfe-svnup-out
 -SVNUPERRFILE=/tmp/fsfe-svnup-err
@@ -30,30 +29,29 @@
  # let's ensure we get English messages
  export LANG=C
  
--# If there is a build.pl script started more than 30 minutes ago, mail alarm
+-# If there is a build.pl script started more than 10 minutes ago, kill it and mail alarm
 -BUILD_STARTED=$(ps --no-headers -C build.pl -o etime | cut -c 7-8 | sort -r | head -n 1)
-+# If there is a build-test.pl script started more than 30 minutes ago, mail alarm
++# If there is a build-test.pl script started more than 10 minutes ago, kill it and mail alarm
 +BUILD_STARTED=$(ps --no-headers -C build-test.pl -o etime | cut -c 7-8 | sort -r | head -n 1)
- if [[ -n "$BUILD_STARTED" && "10#${BUILD_STARTED}" -gt 30 && ! -f ${STATUS}/${ALARM_LOCKFILE} ]] ; then
+ if [[ -n "$BUILD_STARTED" && "10#${BUILD_STARTED}" -gt 10 ]] ; then
    echo -e "
--  A build.pl script has been running for more than 30 minutes!
-+  A build-test.pl script has been running for more than 30 minutes!
-   
-   Please:
-   
--  - run 'ps aux | grep build.pl' and kill build.pl processes older than 30 minutes
--  - Check the build script log at http://status.fsfe.org/web/
-+  - run 'ps aux | grep build-test.pl' and kill build-test.pl processes older than 30 minutes
-+  - Check the build script log at http://status.fsfe.org/web-test/
-   - Fix the cause of the problem
-   - Delete the lockfile ${STATUS}/${ALARM_LOCKFILE}
+-  A build.pl script has been running for more than 10 minutes,
++  A build-test.pl script has been running for more than 10 minutes,
+   and was automatically killed.
+-
++  
+   Please check the build script log at http://status.fsfe.org/web-test/
+   and fix the cause of the problem.
+- 
++
+   In case of doubt, please write to system-hackers@fsfeurope.org 
  
--  " | mail -s "www.fsfe.org: build.pl warning" system-hackers@fsfeurope.org
-+  " | mail -s "test.fsfe.org: build-test.pl warning" system-hackers@fsfeurope.org
+-  " | mail -s "www.fsfe.org: build.pl warning" web@fsfeurope.org system-hackers@fsfeurope.org
++  " | mail -s "test.fsfe.org: build-test.pl warning" web@fsfeurope.org system-hackers@fsfeurope.org
  
-   # This lockfile avoids sending the mail alarm more than once;
-   # it must be deleted when the problem is solved.
-@@ -64,7 +64,7 @@
+ fi
+ 
+@@ -53,7 +53,7 @@
  rm -rf ${TMP%.*}.*
  
  # -----------------------------------------------------------------------------
@@ -62,7 +60,7 @@
  # -----------------------------------------------------------------------------
  
  # Update the svn working copy and check if any files were updated.
-@@ -97,7 +97,7 @@
+@@ -86,7 +86,7 @@
  if test ! -s ${SVNUPOUTFILE} \
      -a "$(date -r ${STATUS}/last-run +%F)" == "$(date +%F)" \
      -a "$1" != "-f" ; then
@@ -71,9 +69,9 @@
    echo "$(date)  $(svn info 2>/dev/null | grep '^Revision')"
    # In this case we only append to the cumulative status-log.txt file, we don't touch status-finished.txt
    cat ${STATUS}/status.txt >> ${STATUS}/status-log.txt
-@@ -105,10 +105,10 @@
- fi
+@@ -99,10 +99,10 @@
  
+ perl ${MAKEFILE_PL}
  
 -# Make sure build.sh and build.pl are executable
 +# Make sure build-test.sh and build-test.pl are executable
@@ -84,7 +82,7 @@
  chmod +x cgi-bin/weborder.pl cgi-bin/stacs-register-capacity.pl
  chmod +x cgi-bin/stacs-register-workshop.pl
  
-@@ -129,9 +129,9 @@
+@@ -123,9 +123,9 @@
  touch ${STATUS}/last-run
  
  if test "x`hostname`" = "xekeberg"; then
@@ -96,6 +94,15 @@
  fi
  
  if test $? -ne 0; then
+@@ -160,7 +160,7 @@
+ echo "$(date)  Generating robots.txt."
+ # -----------------------------------------------------------------------------
+ 
+-echo -e "User-agent: *\nDisallow: /source/" > ${TMP}/robots.txt
++echo -e "User-agent: *\nDisallow: /" > ${TMP}/robots.txt
+ 
+ # -----------------------------------------------------------------------------
+ echo "$(date)  Activating new output."
 @@ -174,7 +174,7 @@
  echo "$(date)  Generating translation logs."
  # -----------------------------------------------------------------------------
@@ -105,11 +112,11 @@
  
  # -----------------------------------------------------------------------------
  echo "$(date)  Build complete."
-@@ -182,6 +182,4 @@
+@@ -182,6 +182,5 @@
  
  cp ${STATUS}/status.txt ${STATUS}/status-finished.txt
  cat ${STATUS}/status-finished.txt >> ${STATUS}/status-log.txt
 -cp tools/status.php ${STATUS}/index.php
 -cp tools/qa/reports/* ${STATUS}/qa/reports/
--
 +cp tools/status-test.php ${STATUS}/index.php
+ 

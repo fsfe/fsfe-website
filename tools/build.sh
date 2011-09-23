@@ -160,7 +160,7 @@ find ${TMP} -type f -name "*.html" | xargs grep -l '@' | xargs sed -i 's/@/\&#64
 echo "$(date)  Generating robots.txt."
 # -----------------------------------------------------------------------------
 
-echo -e "User-agent: *\nDisallow: /source/" > ${TMP}/robots.txt
+echo -e "User-agent: *\nDisallow: /source/" > ${TMP}/global/robots.txt
 
 # -----------------------------------------------------------------------------
 echo "$(date)  Activating new output."

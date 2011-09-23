@@ -32,7 +32,8 @@ if [[ -n "$BUILD_STARTED" && "10#${BUILD_STARTED}" -gt 10 ]] ; then
   In case of doubt, please write to system-hackers@fsfeurope.org 
 
   " | mail -s "test.fsfe.org: build-test.pl warning" web@fsfeurope.org system-hackers@fsfeurope.org
-
+  killall build-test.pl
+  exit
 fi
 
 # Redirect output

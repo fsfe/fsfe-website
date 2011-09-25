@@ -1,6 +1,6 @@
---- build.sh	2011-09-23 18:24:33.000000000 +0200
-+++ build-test.sh	2011-09-23 18:25:21.000000000 +0200
-@@ -2,37 +2,37 @@
+--- build.sh	2011-09-25 21:55:14.000000000 +0200
++++ build-test.sh	2011-09-25 21:54:36.000000000 +0200
+@@ -2,38 +2,38 @@
  # -----------------------------------------------------------------------------
  # Web page build script
  # -----------------------------------------------------------------------------
@@ -39,8 +39,9 @@
 +  A build-test.pl script has been running for more than 10 minutes,
    and was automatically killed.
 -
+-  Please check the build script log at http://status.fsfe.org/web/
 +  
-   Please check the build script log at http://status.fsfe.org/web-test/
++  Please check the build script log at http://status.fsfe.org/web-test/
    and fix the cause of the problem.
 - 
 +
@@ -48,12 +49,14 @@
  
 -  " | mail -s "www.fsfe.org: build.pl warning" web@fsfeurope.org system-hackers@fsfeurope.org
 -  killall build.pl
+-  echo "$(date) A build.pl script has been running for more than 10 minutes, and was automatically killed."
 +  " | mail -s "test.fsfe.org: build-test.pl warning" web@fsfeurope.org system-hackers@fsfeurope.org
 +  killall build-test.pl
++  echo "$(date) A build-test.pl script has been running for more than 10 minutes, and was automatically killed."
    exit
  fi
  
-@@ -54,7 +54,7 @@
+@@ -55,7 +55,7 @@
  rm -rf ${TMP%.*}.*
  
  # -----------------------------------------------------------------------------
@@ -62,7 +65,7 @@
  # -----------------------------------------------------------------------------
  
  # Update the svn working copy and check if any files were updated.
-@@ -87,7 +87,7 @@
+@@ -88,7 +88,7 @@
  if test ! -s ${SVNUPOUTFILE} \
      -a "$(date -r ${STATUS}/last-run +%F)" == "$(date +%F)" \
      -a "$1" != "-f" ; then
@@ -71,7 +74,7 @@
    echo "$(date)  $(svn info 2>/dev/null | grep '^Revision')"
    # In this case we only append to the cumulative status-log.txt file, we don't touch status-finished.txt
    cat ${STATUS}/status.txt >> ${STATUS}/status-log.txt
-@@ -100,10 +100,10 @@
+@@ -101,10 +101,10 @@
  
  perl ${MAKEFILE_PL}
  
@@ -84,7 +87,7 @@
  chmod +x cgi-bin/weborder.pl cgi-bin/stacs-register-capacity.pl
  chmod +x cgi-bin/stacs-register-workshop.pl
  
-@@ -124,9 +124,9 @@
+@@ -125,9 +125,9 @@
  touch ${STATUS}/last-run
  
  if test "x`hostname`" = "xekeberg"; then
@@ -96,7 +99,7 @@
  fi
  
  if test $? -ne 0; then
-@@ -161,7 +161,7 @@
+@@ -162,7 +162,7 @@
  echo "$(date)  Generating robots.txt."
  # -----------------------------------------------------------------------------
  
@@ -105,7 +108,7 @@
  
  # -----------------------------------------------------------------------------
  echo "$(date)  Activating new output."
-@@ -175,7 +175,7 @@
+@@ -176,7 +176,7 @@
  echo "$(date)  Generating translation logs."
  # -----------------------------------------------------------------------------
  
@@ -114,7 +117,7 @@
  
  # -----------------------------------------------------------------------------
  echo "$(date)  Build complete."
-@@ -183,6 +183,5 @@
+@@ -184,6 +184,5 @@
  
  cp ${STATUS}/status.txt ${STATUS}/status-finished.txt
  cat ${STATUS}/status-finished.txt >> ${STATUS}/status-log.txt

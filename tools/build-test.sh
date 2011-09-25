@@ -33,6 +33,7 @@ if [[ -n "$BUILD_STARTED" && "10#${BUILD_STARTED}" -gt 10 ]] ; then
 
   " | mail -s "test.fsfe.org: build-test.pl warning" web@fsfeurope.org system-hackers@fsfeurope.org
   killall build-test.pl
+  echo "$(date) A build-test.pl script has been running for more than 10 minutes, and was automatically killed."
   exit
 fi
 
@@ -41,7 +42,7 @@ exec 1> ${STATUS}/status.txt 2>&1
 
 # If some build script is already running, don't run it.
 if ps -C "build-df.sh,build-test.sh,build.sh" -o pid= | grep -q -v "$$"; then
-  echo "Another build script is currently running. Build postponed."
+  echo "$(date) Another build script is currently running. Build postponed."
   exit
 fi
 

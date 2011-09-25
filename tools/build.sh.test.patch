@@ -1,6 +1,6 @@
---- build.sh	2011-09-25 21:55:14.000000000 +0200
-+++ build-test.sh	2011-09-25 21:54:36.000000000 +0200
-@@ -2,38 +2,38 @@
+--- build.sh	2011-09-25 22:43:17.000000000 +0200
++++ build-test.sh	2011-09-25 22:43:35.000000000 +0200
+@@ -2,18 +2,18 @@
  # -----------------------------------------------------------------------------
  # Web page build script
  # -----------------------------------------------------------------------------
@@ -27,7 +27,9 @@
  
  # Since we must grep for svn output messages,
  # let's ensure we get English messages
- export LANG=C
+@@ -22,21 +22,21 @@
+ # Redirect output
+ exec 1> ${STATUS}/status.txt 2>&1
  
 -# If there is a build.pl script started more than 10 minutes ago, kill it and mail alarm
 -BUILD_STARTED=$(ps --no-headers -C build.pl -o etime | cut -c 7-8 | sort -r | head -n 1)

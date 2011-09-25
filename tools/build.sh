@@ -19,6 +19,9 @@ SVNUPERRFILE=/tmp/fsfe-svnup-err
 # let's ensure we get English messages
 export LANG=C
 
+# Redirect output
+exec 1> ${STATUS}/status.txt 2>&1
+
 # If there is a build.pl script started more than 10 minutes ago, kill it and mail alarm
 BUILD_STARTED=$(ps --no-headers -C build.pl -o etime | cut -c 7-8 | sort -r | head -n 1)
 if [[ -n "$BUILD_STARTED" && "10#${BUILD_STARTED}" -gt 10 ]] ; then
@@ -36,9 +39,6 @@ if [[ -n "$BUILD_STARTED" && "10#${BUILD_STARTED}" -gt 10 ]] ; then
   echo "$(date) A build.pl script has been running for more than 10 minutes, and was automatically killed."
   exit
 fi
-
-# Redirect output
-exec 1> ${STATUS}/status.txt 2>&1
 
 # If some build script is already running, don't run it.
 if ps -C "build-df.sh,build-test.sh,build.sh" -o pid= | grep -q -v "$$"; then

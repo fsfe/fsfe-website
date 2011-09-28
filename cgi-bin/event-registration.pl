@@ -86,6 +86,9 @@ print MAIL "To: $to1\n";
 print MAIL "Cc: ".$email."\n";
 print MAIL "Subject: $subject\n";
 print MAIL "Mime-Version: 1.0\n";
+print MAIL "Auto-submitted: auto-generated\n";
+print MAIL "Precedence: bulk\n";
+
 print MAIL "Content-Type: multipart/mixed; boundary=$boundary\n";
 print MAIL "Content-Transfer-Encoding: 8bit\n\n\n";
 

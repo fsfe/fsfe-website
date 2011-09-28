@@ -5,7 +5,7 @@
 <personset>
   <!-- Please keep this list alphabetical by last name -->
 
-  <person id="arnold" teams="main, de">
+  <person id="arnold" teams="main, de" avatar="yes">
     <name>Guido Arnold</name>
     <country>DE</country>
     <function project="education">deputy/m</function>
@@ -42,7 +42,7 @@
     <link></link>
   </person>
 
-  <person id="coughlan" association-member="yes" teams="main">
+  <person id="coughlan" association-member="yes" teams="main" avatar="yes">
     <name>Shane M. Coughlan</name>
     <country>JP</country>
     <function project="ftf">coordinator/m</function>
@@ -65,7 +65,7 @@
     <link></link>
   </person>
   
-  <person id="gerloff" association-member="yes" teams="main, de">
+  <person id="gerloff" association-member="yes" teams="main, de" avatar="yes">
     <name>Karsten Gerloff</name>
     <country>DE</country>
     <function>president/m</function>
@@ -76,7 +76,7 @@
     <link>/about/gerloff/gerloff.html</link>
   </person>
 
-  <person id="gollowitzer" teams="main">
+  <person id="gollowitzer" teams="main" avatar="yes">
     <name>Martin Gollowitzer</name>
     <country>AT</country>
     <function>fellowship-deputy/m</function>
@@ -92,7 +92,7 @@
     <link>http://blogs.fsfe.org/bjg</link>
   </person>
 
-  <person id="greve" association-member="yes" teams="main, de">
+  <person id="greve" association-member="yes" teams="main, de" avatar="yes">
     <name>Georg C. F. Greve</name>
     <country>CH</country>
     <function>greve</function>
@@ -100,14 +100,14 @@
     <link>/about/greve/greve.html</link>
   </person>
 
-  <person id="grote" association-member="yes" teams="main, de">
+  <person id="grote" association-member="yes" teams="main, de" avatar="yes">
     <name>Torsten Grote</name>
     <country>DE</country>
     <email>grote (at) fsfeurope (dot) org</email>
     <link>http://blogs.fsfe.org/torsten.grote/</link>
   </person>
 
-  <person id="holz" association-member="no" teams="main">
+  <person id="holz" association-member="no" teams="main" avatar="yes">
     <name>Christian Holz</name>
     <country>DE</country>
     <function>executive-director/m</function>
@@ -115,7 +115,7 @@
     <link>/about/holz/holz.html</link>
   </person>
 
-<person id="jean" teams="main, fr, de">
+<person id="jean" teams="main, fr, de" avatar="yes">
     <name>Nicolas Jean</name>
     <country>DE</country>
     <function>intern/m</function>
@@ -141,7 +141,7 @@
     <link>http://blogs.fsfe.org/riepernet/</link>
   </person>    
 
-  <person id="kekalainen" teams="main">
+  <person id="kekalainen" teams="main" avatar="yes">
     <name>Otto Kekäläinen</name>
     <country>FI</country>
     <function country="FI">coordinator/m</function>
@@ -155,7 +155,7 @@
     <email>kersten (at) fsfeurope (dot) org</email>
   </person>
 
-  <person id="kirschner" association-member="yes" teams="main, de">
+  <person id="kirschner" association-member="yes" teams="main, de" avatar="yes">
     <name>Matthias Kirschner</name>
     <country>DE</country>
     <function>fellowship-coordinator/m</function>
@@ -179,7 +179,7 @@
     <email>kneissl (at) fsfeurope (dot) org</email>
   </person>
 
-  <person id="koch" association-member="yes" teams="main, de">
+  <person id="koch" association-member="yes" teams="main, de" avatar="yes">
     <name>Werner Koch</name>
     <country>DE</country>
     <email>koch (at) fsfeurope (dot) org</email>
@@ -193,7 +193,7 @@
     <email>machon (at) fsfeurope (dot) org</email>
   </person>
 
-  <person id="mueller" association-member="yes" teams="main">
+  <person id="mueller" association-member="yes" teams="main" avatar="yes">
     <name>Reinhard Müller</name>
     <country>AT</country>
     <function>financial-officer/m</function>
@@ -201,7 +201,7 @@
     <link>http://wiki.fsfe.org/Fellows/reinhard</link>
   </person>
 
-  <person id="oberg" association-member="yes" teams="main">
+  <person id="oberg" association-member="yes" teams="main" avatar="yes">
     <name>Jonas Öberg</name>
     <country>SE</country>
     <function project="stacs">coordinator/m</function>
@@ -225,7 +225,7 @@
     <link>http://piana.eu/</link>
   </person>
 
-  <person id="poderi" teams="main, it">
+  <person id="poderi" teams="main, it" avatar="yes">
     <name>Giacomo Poderi</name>
     <country>IT</country>
     <function country="IT">coordinator/m</function>
@@ -233,14 +233,14 @@
     <link>http://blogs.fsfe.org/poderi/</link>
   </person>
 
-  <person id="reiter" association-member="yes" teams="main, de">
+  <person id="reiter" association-member="yes" teams="main, de" avatar="yes">
     <name>Bernhard Reiter</name>
     <country>DE</country>
     <function country="DE">deputy/m</function>
     <email>reiter (at) fsfeurope (dot) org</email>
   </person>
 
-  <person id="rejas" teams="main">
+  <person id="rejas" teams="main" avatar="yes">
     <name>Marcus Rejås</name>
     <country>SE</country>
     <function country="SE">coordinator/m</function>
@@ -257,7 +257,7 @@
     <link>http://wiki.fsfe.org/Fellows/cri</link>
   </person>
 
-  <person id="roy" teams="main, fr">
+  <person id="roy" teams="main, fr" avatar="yes">
     <name>Hugo Roy</name>
     <country>FR</country>
     <function country="FR">coordinator/m</function>
@@ -273,7 +273,7 @@
     <email>sandklef (at) fsfeurope (dot) org</email>
   </person>
 
-  <person id="schiessle" teams="main, de">
+  <person id="schiessle" teams="main, de" avatar="yes">
     <name>Björn Schießle</name>
     <country>DE</country>
     <function volunteers="translators-de">coordinator/m</function>
@@ -281,7 +281,15 @@
     <link>http://www.schiessle.org</link>
   </person>
 
-  <person id="tolfsen" teams="main">
+  <person id="suklje" teams="main" avatar="yes">
+    <name>Matija Šuklje</name>
+    <country>SI</country>
+    <function project="ftf">deputy/m</function>
+    <email>hook (at) fsfe (dot) org</email>
+    <link>http://matija.suklje.name</link>
+  </person>
+  
+  <person id="tolfsen" teams="main" avatar="yes">
     <name>Andreas Tolf Tolfsen</name>
     <country>NO</country>
     <function volunteers="web">deputy/m</function>
@@ -289,7 +297,7 @@
     <link>http://home.e-tjenesten.org/~ato/</link>
   </person>
   
-  <person id="tuke" teams="main, gb">
+  <person id="tuke" teams="main, gb" avatar="yes">
     <name>Sam Tuke</name>
     <country>GB</country>
     <function volunteers="editors">coordinator/m</function>
@@ -298,7 +306,7 @@
     <link>/about/tuke/tuke.html</link>
   </person>
 
-  <person id="weiden" association-member="yes" teams="main">
+  <person id="weiden" association-member="yes" teams="main" avatar="yes">
     <name>Fernanda Weiden</name>
     <country>CH</country>
     <function>vice-president/f</function>
@@ -327,14 +335,6 @@
     <function country="IT"></function>
     <email></email>
     <link></link>
-  </person>
-  
-  <person id="suklje" teams="main">
-    <name>Matija Šuklje</name>
-    <country>SI</country>
-    <function project="ftf">deputy/m</function>
-    <email>hook (at) fsfe (dot) org</email>
-    <link>http://matija.suklje.name</link>
   </person>
   
 </personset>

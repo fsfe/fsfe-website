@@ -751,13 +751,18 @@
       
     </div> <!-- /#footer -->
     
-    <!-- AWstats javascript tracking code -->
-    <script src="/scripts/awstats_misc_tracker.js" ></script>
-    <noscript><img src="/scripts/awstats_misc_tracker.js?nojs=y" style="display: none" alt="script" /></noscript>
-    
-	<!-- Piwik Image Tracker -->
-	<img src="https://piwik.fsfe.org/piwik.php?idsite=4&amp;rec=1" style="border:0" alt="script" />
-	<!-- End Piwik -->
+	<!-- Piwik -->
+	<script type="text/javascript">
+	var pkBaseURL = (("https:" == document.location.protocol) ? "https://piwik.fsfe.org/" : "http://piwik.fsfe.org/");
+	document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+	</script><script type="text/javascript">
+	try {
+	var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 4);
+	piwikTracker.trackPageView();
+	piwikTracker.enableLinkTracking();
+	} catch( err ) {}
+	</script><noscript><p><img src="http://piwik.fsfe.org/piwik.php?idsite=4" style="border:0" alt="" /></p></noscript>
+	<!-- End Piwik Tracking Code -->
     
       </xsl:element>
     </xsl:copy>

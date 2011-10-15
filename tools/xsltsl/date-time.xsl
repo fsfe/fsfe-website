@@ -849,7 +849,7 @@
       <xsl:when test="$month = 11"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'months/11'" /></xsl:call-template></xsl:when>
       <xsl:when test="$month = 12"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'months/12'" /></xsl:call-template></xsl:when>
       <xsl:otherwise>error: <xsl:value-of select="$month"/></xsl:otherwise>
-
+    </xsl:choose>
 
   </xsl:template>
 

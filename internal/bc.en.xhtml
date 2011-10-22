@@ -3,21 +3,21 @@
 <head>
   <meta name="DC.Title" content="FSFE - business cards form" />
   <meta name="DC.Creator" content="Rainer Kersten" />
-  <link rel="stylesheet" media="all" href="cards.css" type="text/css" />
  <title>FSFE - internal tools - business cards form</title>
 </head>
 <body>
 
 <h1>Request Business Cards</h1>
 
-<blockquote class="r">
-   "Business cards must answer the following quetions:
+<div style="float:right; background:#ddd; padding:0.6em; border:1px #bbb solid;">
+   "Business cards must answer
+   <br />the following questions:
    <br />Who is this? 
    <br />Who is represented?
    <br />What is he/she doing there? 
    <br />How can I reach him/her?"
    <br />(Matthias Kirschner)
-</blockquote>
+</div>
 
 <p>
 The purpose of this form is to avoid unnecessary,
@@ -29,22 +29,11 @@ cards. The main problem was usually the lack of correct, complete data.</p>
 <h2>Generally</h2>
 
 <p>
-Please write an
-<a href="/internal/er.html">expense request</a> first.
-</p>
-
-<p>
 In general, everyone on team@ is eligible for FSFE business cards.
 If you are not on team@, or are unsure whether it makes sense for
 you to order business cards, please contact
-council@fsfeurope.org.
+<a href="mailto:council@fsfeurope.org">council@fsfeurope.org</a>.
 </p>
-
-<p>
-Before ordering business cards, please write an
-<a href="/internal/er.html">expense request</a> first. Please wait for your expense request to be approved before filling in the form.
-</p>
-
 
 <h3>Language</h3>
 
@@ -55,7 +44,6 @@ Please use the form below twice in this case.
 </p>
 
 <h2>Contents of the card</h2>
-
 
 <form action="/cgi-bin/businesscards.pl" method="post">
 <table>
@@ -68,20 +56,22 @@ We use the international form with all parts in lower cases with a
 leading upper case for each word.  If there are very good reasons
 to use another form, i.e. printing the surname in upper cases, as
 it is common in France, this should be done in the localised
-version of the cards, not in the international version.  <br
-/>Data might include middle initials, but no nicknames (e.g. as
+version of the cards, not in the international version.
+Data might include middle initials, but no nicknames (e.g. as
 used in IRC).
 
 </td>
 <td>
 <input type="text" size="50" name="name" />
-<pre>Joe Average</pre>
-<pre>Joe M. L. Average</pre>
-<pre>Joe Martin Average</pre>
-<pre>Dr. Joe Average</pre>
-<pre><del>Joe "Coolface" Average</del></pre>
-<pre><del>Joseph AVERAGE</del></pre>
-<pre><del>Average, Joseph</del></pre>
+<div style="background:#ddd; padding:0.6em; border:1px #bbb solid;">
+Joe Average
+<br />Joe M. L. Average
+<br />Joe Martin Average
+<br />Dr. Joe Average
+<br /><del>Joe "Coolface" Average</del>
+<br /><del>Joseph AVERAGE</del>
+<br /><del>Average, Joseph</del>
+</div>
 </td>
 </tr>
 <tr>
@@ -89,16 +79,17 @@ used in IRC).
 
 <h3>2. Your title (or function)</h3>
 
-A title/function should be mentioned. It might be generic,
-somehow, i.e. "German Team".
+A title/function should be mentioned. It might be generic, somehow, i.e. "German Team".
 <br />If you are an intern, please use "Assistant to the President" as your title.
 You can leave the field empty as well.
 </td>
 <td>
 <input type="text" size="50" name="function" />
-<pre>Coordinator of $group</pre>
-<pre>Intern</pre>
-<pre>$country team</pre>
+<div style="background:#ddd; padding:0.6em; border:1px #bbb solid;">
+Coordinator of $group
+<br />Intern
+<br />$country team
+</div>
 </td>
 </tr>
 <tr>
@@ -128,8 +119,6 @@ Free Software Foundation Europe
 
 This should normally be an official FSFE address, either in Berlin or Düsseldorf. Other addresses should only be used in exceptional cases.
 
-
-
 </td>
 <td>
     <input type="radio" name="address" value="Berlin" /> Linienstraße 141, 10115 Berlin, Germany<br />
@@ -151,8 +140,9 @@ spaces.
 </td>
 <td>
 p +<input type="text" size="25" name="phone" />
-<pre>p +49 30 275 95 290</pre>
-
+<div style="background:#ddd; padding:0.6em; border:1px #bbb solid;">
+p +49 30 275 95 290
+</div>
 </td>
 </tr>
 <tr>
@@ -162,13 +152,14 @@ p +<input type="text" size="25" name="phone" />
 
 The mobile phone number you would like to appear on your card., e.g.
 
-<br />You should be reachable by phone. So as a minimum
-5. <em>or</em> 6. should be filled in.
+<br />You should be reachable by phone. So as a minimum 5. <em style="font-weight:bold; font-style:normal;">or</em> 6. should be filled in.
 
 </td>
 <td>
 m +<input type="text" size="25" name="mobile" />
-<pre>m +49 30 275 95 290</pre>
+<div style="background:#ddd; padding:0.6em; border:1px #bbb solid;">
+m +49 30 275 95 290
+</div>
 </td>
 </tr>
 
@@ -183,8 +174,9 @@ number, please use the same format as the phone number.
 </td>
 <td>
 f +<input type="text" size="25" name="fax" />
-
-<pre>f +49 30 203 405 60</pre>
+<div style="background:#ddd; padding:0.6em; border:1px #bbb solid;">
+f +49 30 203 405 60
+</div>
 </td>
 </tr>
 
@@ -199,7 +191,12 @@ you use mainly.)
 </td>
 <td>
 E-mail <input type="text" size="25" name="email" value="@fsfe.org" />
-<pre><del>another123@freemailservice.com</del></pre>
+<div style="background:#ddd; padding:0.6em; border:1px #bbb solid;">
+name@fsfeurope.org
+<br />full.name@fsfe.org
+<br /><del>another123@freemailservice.com</del>
+<br /><del>someone@myowngeekydomain.com</del>
+</div>
 </td>
 </tr>
 <tr>
@@ -208,7 +205,7 @@ E-mail <input type="text" size="25" name="email" value="@fsfe.org" />
 
 Your FSFE jabber address. (You don't know that you have a jabber
 address? Something went wrong, please contact
-system-hackers@fsfeurope.org.)
+<a href="mailto:system-hackers@fsfeurope.org">system-hackers@fsfeurope.org</a>.)
 
 </td>
 <td>
@@ -229,12 +226,12 @@ terribly wrong.) You can generate this fingerprint with the following command in
 </td>
 <td>
 
-<input type="text" size="50" name="fingerprint"  />
+<input type="text" size="50" name="fingerprint" />
 
-<pre>
+<div style="background:#ddd; padding:0.6em; border:1px #bbb solid;">
 2F77 A3E7 70E5 C802 2295
-87D6 B8B7 8D13 B4BA 019E
-</pre>
+<br />87D6 B8B7 8D13 B4BA 019E
+</div>
 
 <br />(This is a theoretical example. It won't work!)
 
@@ -262,56 +259,37 @@ The default number for each print run is 500 cards, which will cost EUR 32. If y
 
 <br />If you need fewer than 500 cards, we can do several sets of cards in a single print run for the same price, e.g. 100 cards for 5 different people = 500 cards. If you're not in a hurry, please let us know, and we'll send you your cards whenever there are enough requests for a complete print run.
 
-
 </td>
 <td>
 <select size="1" name="amount">
-<option value="1000">1.000</option>
-<option value="500" selected="selected">500</option>
-<option value="250">250</option>
-<option valie="100">100</option>
+<option value="100">100</option>
+<option value="250" selected="selected">250</option>
+<option value="500">500</option>
 </select>
 </td>
 </tr>
 
 
 <tr>
-<td>
-<h3>13. Number of approved expense request</h3>
-
-Please enter the number of the approved <a
-	href="/internal/er.html">expense request</a> here. This is
-absolutely necessary in order for FSFE to pay for the cards. <br />
-
-You will find this number in the subject line of the mail you
-received about the expense request.
-</td>
-<td>
-<input type="text" size="20" name="er" />
-</td>
-</tr>
-
-<tr>
 <td colspan="2">
 
 <h2>What happens now?</h2>
 
-<h3>14. Preview</h3>
+<h3>13. Preview</h3>
 
 The printing company will send you a proof sheet as PDF, so you
 can check whether your card looks ok and all the information on it
 is correct. The printing company will not start the production
 before you approve this PDF. 
 
-We will send it to you and will
-await your approval. We will use your fsfe.org address for
-that purpose. 
+<br />We will send it to you and will await your approval. We will
+use your fsfe.org address for that purpose. 
 </td>
 </tr>
 <tr>
 <td>
 
-<h3>15. Delivery address</h3>
+<h3>14. Delivery address</h3>
 
 After your approval, we will send the cards to the address
 which is printed on the cards, by default.
@@ -319,7 +297,7 @@ which is printed on the cards, by default.
 other address, please.
 </td>
 <td>
-<textarea cols="40" rows="5" name="delivery_address" ></textarea>
+<textarea cols="40" rows="5" name="delivery_address" />
 </td>
 </tr>
 <tr>
@@ -329,13 +307,16 @@ and you are quick to approve it, you will receive your cards
 within 5 to 10 days, depending on the snail mail systems. Our
 all-time record is 24 hours. If problems occur (incomplete or
 incorrect data etc.), the delay might turn out to be hellish.  Our
-all-time record is 6 months.  <br />In most cases, office DUS
-can't answer your questions regarding the data. In rare cases, we
-can. When in doubt, please check with council@.
+all-time record is 6 months.
+<br />In most cases, office DUS can't answer your questions
+regarding the data. In rare cases, we can. When in doubt, please
+check with council@.
 </td>
 </tr>
 <tr>
- <td colspan="2"><input type="submit" value="Send order" /> <input type="reset" value="Reset form" /></td>
+ <td colspan="2">
+<input type="submit" value="Send order" />
+</td>
 </tr>
 </table>
 </form>
@@ -343,12 +324,12 @@ can. When in doubt, please check with council@.
 
 <div id="footer">
 Made by FSFE Office Düsseldorf
-<br/>written by Rainer 2010-09-28
+<br />written by Rainer 2010-09-28
 <br />edited by Matze ca. 2010-11
 <br />edited by Rainer 2011-02-27
 <br />edited by Rainer 2011-03-12
+<br />edited by Karsten 2011-08
+<br />edited by Rainer 2011-10-21
 </div>
-
 </body>
 </html>
-

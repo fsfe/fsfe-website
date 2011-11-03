@@ -25,9 +25,7 @@
                   <xsl:value-of select="localmenu/@set" />
                 </xsl:when>
                 <xsl:otherwise>
-                  <xsl:text>
-0
-</xsl:text>
+                  <xsl:text>0</xsl:text>
                 </xsl:otherwise>
               </xsl:choose>
             </xsl:attribute>
@@ -41,9 +39,7 @@
                   <xsl:value-of select="localmenu/@style" />
                 </xsl:when>
                 <xsl:otherwise>
-                  <xsl:text>
-default
-</xsl:text>
+                  <xsl:text>default</xsl:text>
                 </xsl:otherwise>
               </xsl:choose>
             </xsl:attribute>
@@ -71,9 +67,7 @@ default
                   <xsl:value-of select="localmenu/@set" />
                 </xsl:when>
                 <xsl:otherwise>
-                  <xsl:text>
-0
-</xsl:text>
+                  <xsl:text>0</xsl:text>
                 </xsl:otherwise>
               </xsl:choose>
             </xsl:attribute>

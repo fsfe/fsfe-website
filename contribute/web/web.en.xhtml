@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <html>
   <head>
     <title>Information for Webmasters - FSFE</title>
@@ -162,7 +162,7 @@
       check out the SVN trunk:
     </p>
 
-    <p class="terminal">svn --username <var>YOURNAME</var> co https://svn.fsfe.org/fsfe-web/trunk</p>
+    <p class="terminal">svn --username <var>YOUR_FELLOWSHIP_NAME</var> co https://svn.fsfe.org/fsfe-web/trunk</p>
 
     <p>
       To work on major changes to the website, including debugging new
@@ -170,7 +170,7 @@
       to check out the <em>test</em> branch of the SVN repository:
     </p>
 
-    <p class="terminal">svn --username <var>YOURNAME</var> co https://svn.fsfe.org/fsfe-web/branches/test</p>
+    <p class="terminal">svn --username <var>YOUR_FELLOWSHIP_NAME</var> co https://svn.fsfe.org/fsfe-web/branches/test</p>
 
     <p>
       Please note that a full working copy will require about 160M; if
@@ -180,10 +180,27 @@
         tree</a> online to find out what you are interested in.
     </p>
 
-
     <h2>Working with the repository</h2>
 
     <p>
+      In subversion, <a
+      href="http://svnbook.red-bean.com/en/1.5/svn.advanced.props.special.keywords.html">keyword
+      substitution</a> must be enabled explicitely on every file. Since we
+      use some keywords on <var>.xml</var> and <var>.xhtml</var> files (for
+      example the <var>$</var><var>Author</var><var>$</var> keyword on the
+      page footer), you should automate enabling keywords adding
+      the following snippet to your <var>~/.subversion/config</var>
+      file:
+    </p>
+
+    <pre class="file">
+enable-auto-props = yes
+
+[auto-props]
+*.xml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xml;svn:eol-style=native
+*.xhtml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xhtml;svn:eol-style=native
+    </pre>    <p>
+
       After you checked out the repository the first time, you should
       execute
     </p>
@@ -212,25 +229,6 @@
       and your default editor will open to allow for some description of your
       changes.
     </p>
-
-    <p>
-      In subversion, <a
-      href="http://svnbook.red-bean.com/en/1.5/svn.advanced.props.special.keywords.html">keyword
-      substitution</a> must be enabled explicitely on every file. Since we
-      use some keywords on <var>.xml</var> and <var>.xhtml</var> files (for
-      example the <var>$</var><var>Author</var><var>$</var> keyword on the
-      page footer), you can automate enabling keywords adding
-      the following snippet to your <var>~/.subversion/config</var>
-      file:
-    </p>
-
-    <pre class="file">
-enable-auto-props = yes
-
-[auto-props]
-*.xml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xml;svn:eol-style=native
-*.xhtml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xhtml;svn:eol-style=native
-    </pre>
 
     <p>
       If you are used to work with CVS, you will easily start working with SVN; as

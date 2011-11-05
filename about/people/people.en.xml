@@ -62,7 +62,7 @@
   <person id="coughlan" association-member="yes" teams="main">
     <name>Shane M. Coughlan</name>
     <country>JP</country>
-    <function project="ftf">coordinator/m</function>
+    <function project="ftf">Senior Counsel/m</function>
     <email>coughlan (at) fsfeurope (dot) org</email>
     <link>/about/coughlan/coughlan.html</link>
   </person>
@@ -80,13 +80,6 @@
     <link>http://blogs.fsfe.org/julipan/</link>
   </person>
 
-  <person id="naranjo" teams="main">
-    <name>Diego Naranjo</name>
-    <country>ES</country>
-    <function>intern/m</function>
-    <email>diego.javier (at) fsfe (dot) org</email>
-    <link>http://blogs.fsfe.org/diegojavier/</link>
-  </person>
   
   <person id="gerloff" association-member="yes" teams="main, de">
     <name>Karsten Gerloff</name>
@@ -138,11 +131,18 @@
     <email>holz (at) fsfeurope (dot) org</email>
     <link>/about/holz/holz.html</link>
   </person>
+  
+ <person id="husovec" teams="main">
+    <name>Martin Husovec</name>
+    <country>SK</country>
+    <function>intern/f</function>
+    <email>husovec (at) fsfe (dot) org</email>
+    <link></link>
+  </person>
 
 <person id="jean" teams="main, fr, de">
     <name>Nicolas Jean</name>
     <country>DE</country>
-    <function>intern/m</function>
     <function volunteers="web">coordinator/m</function>
     <email>nicoulas (at) fsfe (dot) org</email>
     <link>/about/jean/jean.html</link>
@@ -266,15 +266,6 @@
   </person>
 
   
-  <person id="poderi" association-member="yes">
-    <name>Giacomo Poderi</name>
-    <country>IT</country>
-    <function>Member of the General Assembly</function>
-    <email>poderi (at) fsfe (dot) org</email>
-    <link></link>
-  </person>
-
-  
   <person id="polvani" teams="main">
     <name>Alessandro Polvani</name>
     <country>IT</country>
@@ -334,7 +325,7 @@
   <person id="suklje" teams="main">
     <name>Matija Šuklje</name>
     <country>SI</country>
-    <function project="ftf">deputy/m</function>
+    <function project="ftf">coordinator/m</function>
     <email>hook (at) fsfe (dot) org</email>
     <link>http://matija.suklje.name</link>
   </person>
@@ -361,13 +352,6 @@
     <country>CH</country>
     <email>weiden (at) fsfeurope (dot) org</email>
     <link>/about/weiden/weiden.html</link>
-  </person>
-
-  <person id="west" teams="main">
-    <name>Graeme West</name>
-    <country>GB</country>
-    <email>west (at) fsfeurope (dot) org</email>
-    <link>http://blogs.fsfe.org/west/</link>
   </person>
   
   <person id="willard" teams="main">

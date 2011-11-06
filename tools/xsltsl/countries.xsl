@@ -26,7 +26,9 @@
                 <xsl:sort select="@id" />
                 <xsl:variable name="id"
                               select="@id" />
-                
+
+                <xsl:variable name="avatar" select="@avatar" />
+
                 <xsl:element name="li">
                     <xsl:element name="p">
                         <!-- Picture -->
@@ -38,7 +40,8 @@
                                     </xsl:attribute>
                                     
                                     <xsl:call-template name="avatar">
-                                        <xsl:with-param name="id" select="$id" />
+                                     <xsl:with-param name="id" select="$id" />
+                                     <xsl:with-param name="haveavatar" select="$avatar" />
                                     </xsl:call-template>
                                     
                                 </xsl:element>
@@ -46,7 +49,8 @@
                             <xsl:otherwise>
                                 
                                 <xsl:call-template name="avatar">
-                                    <xsl:with-param name="id" select="$id" />
+                                 <xsl:with-param name="id" select="$id" />
+                                 <xsl:with-param name="haveavatar" select="$avatar" />
                                 </xsl:call-template>
                                 
                             </xsl:otherwise>

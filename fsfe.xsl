@@ -117,7 +117,9 @@
         <xsl:attribute name="id">category</xsl:attribute>
         <xsl:element name="a">
           <xsl:attribute name="href">/press/press.<xsl:value-of select="/buildinfo/@language"/>.html</xsl:attribute>
-          Press
+          <xsl:call-template name="gettext">
+           <xsl:with-param name="id" select="'press'" />
+          </xsl:call-template> 
         </xsl:element>
       </xsl:element>
       
@@ -129,7 +131,9 @@
         <xsl:attribute name="id">category</xsl:attribute>
         <xsl:element name="a">
           <xsl:attribute name="href">/news/newsletter.<xsl:value-of select="/buildinfo/@language"/>.html</xsl:attribute>
-          Newsletter
+          <xsl:call-template name="gettext">
+           <xsl:with-param name="id" select="'newsletter'" />
+          </xsl:call-template> 
         </xsl:element>
       </xsl:element>
     </xsl:if>

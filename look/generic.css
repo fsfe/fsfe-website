@@ -1242,6 +1242,24 @@ a.fn {
   display: none;
 }
 
+#campaign-box-4 {
+    border: 4px solid #E0F859;
+    border-radius: 7px 7px 7px 7px;
+    float: left;
+    font-size: 1.3em;
+    margin: 1.5em 0 0;
+    text-align: center;
+    width: 98.7%;
+}
+
+#campaign-box-4 p {
+    margin: 0.5em 0;
+}
+
+#campaign-box-4 p a {
+    color: #526100;
+}
+
 a.donate-box,
 a.fellowship-box {
   display: block;

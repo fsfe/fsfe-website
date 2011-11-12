@@ -1453,14 +1453,18 @@ tr.highlighted {
  background-color :#D0F400;
 }
 
+
 /* notices */
+
 #outdated-notice {
-  border: 1px solid red;
-  padding: 0.5em;
+  background-color: rgb(255,220,220);
+  border: 1px solid rgb(253,59,59);
+  color: rgb(132,78,78);
+  padding: .5em;
   margin: 0 0 1.5em 0;
 }
 
-/* service notice */
+/* service notice, can i.e. be used for website downtime */
 #service-notice {
   position: fixed;
   background-color: rgb(51,148,206);

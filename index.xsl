@@ -73,16 +73,30 @@
     </xsl:element>
   </xsl:template>
   
-  <!-- display campaign box 3 -->
-  
-  <xsl:template match="campaign-box-3">
-    <xsl:element name="p">
-      <xsl:element name="a">
-        <xsl:attribute name="href">/contribute/marketing/internet-marketing-job<xsl:value-of select="/buildinfo/@language" />.html</xsl:attribute>
-        Free Software needs your Internet marketing skills! <span style="color: red;">More info</span>
-      
-      </xsl:element>
-    </xsl:element>
+<!--  display campaign box 3 -->
+<!--  -->
+<!--  <xsl:template match="campaign-box-3">-->
+<!--    <xsl:element name="p">-->
+<!--      <xsl:element name="a">-->
+<!--        <xsl:attribute name="href">/contribute/marketing/internet-marketing-job<xsl:value-of select="/buildinfo/@language" />.html</xsl:attribute>-->
+<!--        Free Software needs your Internet marketing skills! <span style="color: red;">More info</span>-->
+<!--      -->
+<!--      </xsl:element>-->
+<!--    </xsl:element>-->
+<!--  </xsl:template>-->
+
+  <!-- display translated campaign box 3-->
+  <xsl:template match="campaign3-label">
+    <xsl:call-template name="gettext">
+      <xsl:with-param name="id" select="'campaign3'" />
+    </xsl:call-template>
+  </xsl:template>
+
+  <!-- display translated campaign box 3 link-->
+  <xsl:template match="campaign3link-label">
+    <xsl:call-template name="gettext">
+      <xsl:with-param name="id" select="'campaign3link'" />
+    </xsl:call-template>
   </xsl:template>
   
   <!--display labels-->

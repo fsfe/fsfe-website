@@ -87,9 +87,8 @@ h3 {
 }
 
 h2 {
-  color: #202D79;
+  color: rgb(32,45,121);
   font-size: 200%;
-  /*letter-spacing: -.5px;*/
   line-height: 120%;
   margin: .4em -.3em .5em;
   padding: 0 .3em .2em;
@@ -203,12 +202,12 @@ p.left {
 }
 
 .grid-60.right {
-  padding-left:1%
-  border-left:1px solid #CCC;
+  padding-left: 1%;
+  border-left: 1px solid rgb(204,204,204);
 }
 
 .even {
-  background-color: #DEEEFF;
+  background-color: rgb(222,238,255);
 }
 
 .compare .clear .left:first-child {
@@ -344,16 +343,16 @@ p.left {
   padding: 0 0 0 1em;
   font-family: "Helvetica", "Verdana", sans-serif;
   background: url("/graphics/xmas-fr-bg.png") no-repeat top right;
-  border: 1px solid #800000;
-  padding: 0.6em 1em 0.6em 1em;
+  border: 1px solid rgb(128,0,0);
+  padding: .6em 1em .6em 1em;
   overflow: hidden;
 }
 
 #fundraising h2 {
-  color: #9d0000;
+  color: rgb(157,0,0);
   font-weight: bold;
   margin: 0.3em 1em 0.3em 0;
-  float:left;
+  float: left;
 }
 
 #fundraising .button {
@@ -376,9 +375,9 @@ p.left {
 }
 
 #fundraising .button a:hover {
-  box-shadow: 0 0 15px #00222B inset;
-  -moz-box-shadow: 0 0 15px #00222B inset;
-  -webkit-box-shadow: 0 0 15px #00222B inset;
+  box-shadow: 0 0 15px rgb(157,0,0) inset;
+  -moz-box-shadow: 0 0 15px rgb(157,0,0) inset;
+  -webkit-box-shadow: 0 0 15px rgb(157,0,0) inset;
 }
 
 #fundraising img {
@@ -394,13 +393,13 @@ p.left {
 
 #fundraising div.percentbox {
   margin: 1em 0 .5em 0;
-  border: 1px solid #202d79;
-  background-color: #4ad2f0;
+  border: 1px solid rgb(32,45,121);
+  background-color: rgb(74,210,240);
 }
 
 #fundraising div.percentbar {
   height: 1em;
-  background-color: #3394ce;
+  background-color: rgb(51,148,206);
 }
 
 #fundraising p.current {
@@ -437,19 +436,19 @@ p.left {
   font-size: 170%;
   font-weight: bold;
   line-height: 120%;
-  margin: 0 0 0.3em;
+  margin: 0 0 .3em;
 }
 
 h1,
 h2,
 h3 {
-  color: #202D79;
+  color: rgb(32,45,121);
   line-height: normal;
 }
 
 
 h1 {
-  border-bottom: 1px solid #D2D2D2;
+  border-bottom: 1px solid rgb(210,210,210);
   font-size: 250%;
   margin: 0;
   padding: 0 0 0.5em;
@@ -465,7 +464,7 @@ h3 {
 }
 
 .image {
-  background-color: #FDFDFD;
+  background-color: rgb(253,253,253);
   float: left;
 }
 
@@ -494,32 +493,29 @@ h3 {
 }
 
 .captioned {
-  padding: 0.5em;
-  border: 1px solid #D2D2D2;
+  padding: .5em;
+  border: 1px solid rgb(210,210,210);
   margin: 1em;
   text-align: center;
-}
-
-.captioned img {
 }
 
 .captioned p {
   padding: 0.5em 0.5em 0 0.5em;
   margin: 0;
-  border-top: 1px solid #dcdcdc;
+  border-top: 1px solid rgb(220,220,220);
 }
 
 .postit {  /* compatibility */
   float: left;
   margin: 0 1em 1em 0;
-  border: 1px #000 solid;
-  padding: 0.3em;
+  border: 1px black solid;
+  padding: .3em;
   width: 14em;
-  background: #FFECBF;
+  background: rgb(255,236,191);
   text-align: center;
 }
-t
-.fineprint {  /* compatibility */
+
+t.fineprint {  /* compatibility */
   color: rgb(120,120,120);
   font-size: 90%;
   border-top: 1px solid	rgb(220,220,220);
@@ -537,14 +533,15 @@ t
 }
 
 .related {
-    border: 1px solid #4AA0F0;
+    border: 1px solid rgb(74,160,240);
     padding: 0.3em;
     margin: 2em 0 0 0;
     border-radius: 5px 5px 5px 5px;
 }
+
 .related h2 {
-    background-color: #4AD2F0;
-    color: WHITE;
+    background-color: rgb(75,160,240);
+    color: white;
     font-size: 1.3em;
     margin: 0 0 0.5em 0;
     padding: 0 0.5em;
@@ -802,7 +799,7 @@ h4#subpages + ul li:nth-child(odd) {
   list-style: none;
   margin: -220px 0 0 0;
   padding: 220px 0 0 0;
-  border-left: 15px solid #F0F0F0;
+  border-left: 15px solid rgb(240,240,240);
 }
 
 #menu ul li {
@@ -827,7 +824,7 @@ h4#subpages + ul li:nth-child(odd) {
 
 #menu ul li ul li a {
   font-weight: normal;
-  padding: 0.3em 0 0.4em 1.6em;
+  padding: .3em 0 .4em 1.6em;
 }
 
 #menu ul li.fsfe ul li a,
@@ -850,27 +847,19 @@ h4#subpages + ul li:nth-child(odd) {
 }
 
 #menu ul li.fsfe a {
-  border-left: 15px solid #4ad2f0;
-}
-
-#menu ul li.fsfe a:hover {
-  /*background-color: #B2F1FF;*/
+  border-left: 15px solid rgb(74,210,240);
 }
 
 #menu ul li.fsfe ul li a {
-  border-left: 15px solid rgb(214,234,245); /*#DCDCDC*/
+  border-left: 15px solid rgb(214,234,245);
 }
 
 #menu ul li.fsfe ul li a:hover {
-  border-left: 15px solid #B2F1FF;
+  border-left: 15px solid rgb(178,241,255);
 }
 
 #menu ul li.planet a {
-  border-left: 15px solid #4aa0f0;
-}
-
-#menu ul li.planet a:hover {
-  /*background-color: #92CAFF;*/
+  border-left: 15px solid rgb(74,160,240);
 }
 
 #menu ul li.planet ul {
@@ -878,27 +867,23 @@ h4#subpages + ul li:nth-child(odd) {
 }
 
 #menu ul li.planet ul li a {
-  border-left: 15px solid #DCDCDC;
+  border-left: 15px solid rgb(220,220,220);
 }
 
 #menu ul li.planet ul li a:hover {
-  border-left: 15px solid #4aa0f0;
+  border-left: 15px solid rgb(74,160,240);
 }
 
 #menu ul li.wiki a {
-  border-left: 15px solid #adff54;
+  border-left: 15px solid rgb(173,255,84);
 }
 
 #menu ul li.fellowship a {
-  border-left: 15px solid #6BC800;
-}
-
-#menu ul li.fellowship a:hover {
-  /*background-color: #CDFF93;*/
+  border-left: 15px solid rgb(107,200,0);
 }
 
 #menu ul li.fellowship ul li a {
-  border-left:15px solid #DCDCDC;
+  border-left: 15px solid rgb(220,220,220);
 }
 
 #menu ul li.fellowship ul {
@@ -906,18 +891,18 @@ h4#subpages + ul li:nth-child(odd) {
 }
 
 #menu ul li.fellowship ul li a:hover {
-  border-left: 15px solid #ABFF4A;
+  border-left: 15px solid rgb(171,255,74);
 }
 
 #menu ul li ul li #selected,
 #menu ul li ul li #selected:hover {
-  border-left: 15px solid #C1C1C1;
-  color: #333333;
+  border-left: 15px solid rgb(193,193,193);
+  color: rgb(51,51,51);
   display: block;
   font-size: 15.5px;
   font-weight: normal;
   line-height: 50%;
-  padding: 0.6em 0 0.8em 1.6em
+  padding: .6em 0 .8em 1.6em
 }
 
 .section {
@@ -935,7 +920,7 @@ h4#subpages + ul li:nth-child(odd) {
   padding: 0;
   font-size: 100%;
   font-weight: bold;
-  color: #6e6e6e;
+  color: rgb(110,110,110);
 }
 
 .section h2 {
@@ -950,7 +935,7 @@ h4#subpages + ul li:nth-child(odd) {
   letter-spacing: normal;
   line-height: normal;
   margin: 1.5em -1.7% 1em;
-  padding: 0 0.3em 0.1em 0.2em;
+  padding: 0 .3em .1em .2em;
   min-height: 1.6em;
   text-align: right;
   width: 100%;
@@ -959,13 +944,13 @@ h4#subpages + ul li:nth-child(odd) {
 
 .section.grid-100 h2 {
   margin: 1.5em 0 1em;
-  padding: 0 0 0.1em 0;
+  padding: 0 0 .1em 0;
 }
 
 .section h2 a, .section h2 span {
   color: white;
   float: right;
-  padding: 0.2em 0.6em 0.2em 0;
+  padding: .2em .6em .2em 0;
 }
 
 .section .entry form {
@@ -984,12 +969,12 @@ h4#subpages + ul li:nth-child(odd) {
 
 #news.section h2,
 #donate-once.section h2 {
-  background-color: #4ad2f0;
+  background-color: rgb(74,210,240);
 }
 
 #newsletter.section h2,
 #donate-regular.section h2 {
-  background-color: #7fdf55;
+  background-color: rgb(127,223,85);
 }
 
 .section ul {
@@ -997,15 +982,15 @@ h4#subpages + ul li:nth-child(odd) {
 }
 
 #events.section h2 {
-  background-color: #4AA0F0;
+  background-color: rgb(74,160,240);
 }
 
 #team.section h2, #identica.section h2 {
-  background-color: #7fdf55;
+  background-color: rgb(127,223,85);
 }
 
 #contact.section h2 {
-  background-color: #BDE455;
+  background-color: rgb(189,228,85);
 }
 
 #identica.section .entry div {
@@ -1159,7 +1144,7 @@ margin: 1.5em 0;
 
 /* item-grid (used for shop/orders) */
 .item-grid h2 {
-  border-bottom: 1px solid #CCCCCC;
+  border-bottom: 1px solid rgb(204,204,204);
   margin-bottom: 0;
 }
 
@@ -1174,7 +1159,7 @@ h2#fn {
 }
 
 h2#fn + ol {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid rgb(204,204,204);
   font-size: 90%;
   margin-top: 3em;
   padding-top: .5em;
@@ -1215,7 +1200,7 @@ a.fn {
     font-size: 2.2em;
     font-weight: normal;
     margin: 10px 0 0 10px;
-    text-shadow: 0 0 0.2em white, 0 0 0.2em white, 0 0 0.2em white;
+    text-shadow: 0 0 .2em white, 0 0 .2em white, 0 0 .2em white;
     width: 40%;
 }
 
@@ -1276,10 +1261,10 @@ a.fellowship-box {
 }
 
 #campaign-box-2 a.donate-box {
-  color:#3394ce;
-  -moz-box-shadow: inset 0 0 2px #00222b;
-  -webkit-box-shadow: inset 0 0 2px #00222b;
-  box-shadow: inset 0 0 2px #00222b;
+  color: rgb(51,148,206);
+  -moz-box-shadow: inset 0 0 2px rgb(0,34,43);
+  -webkit-box-shadow: inset 0 0 2px rgb(0,34,43);
+  box-shadow: inset 0 0 2px rgb(0,34,43);
   margin: 0 0 12px;
   background:url("/graphics/donate-button-bg.png") no-repeat top left;
 }
@@ -1290,25 +1275,25 @@ a.fellowship-box {
 }
 
 #campaign-box-2 a.donate-box:hover {
-  color: #2A7BAD;
-  -moz-box-shadow: inset 0 0 6px #00222b;
-  -webkit-box-shadow: inset 0 0 6px #00222b;
-  box-shadow: inset 0 0 6px #00222b;
+  color: rgb(42,123,173);
+  -moz-box-shadow: inset 0 0 6px rgb(0,34,43);
+  -webkit-box-shadow: inset 0 0 6px rgb(0,34,43);
+  box-shadow: inset 0 0 6px rgb(0,34,43);
 }
 
 #campaign-box-2 a.fellowship-box {
-  color: #70d055;
-  -moz-box-shadow: inset 0 0 2px #17280b;
-  -webkit-box-shadow: inset 0 0 2px #17280b;
-  box-shadow: inset 0 0 2px #17280b;
+  color: rgb(112,208,85);
+  -moz-box-shadow: inset 0 0 2px rgb(23,40,11);
+  -webkit-box-shadow: inset 0 0 2px rgb(23,40,11);
+  box-shadow: inset 0 0 2px rgb(23,40,11);
   background: url("/graphics/join-button-bg.png") no-repeat top left;
 }
 
 #campaign-box-2 a.fellowship-box:hover {
-  color: #5DAC46;
-  -moz-box-shadow: inset 0 0 6px #17280b;
-  -webkit-box-shadow: inset 0 0 6px #17280b;
-  box-shadow: inset 0 0 6px #17280b;
+  color: rgb(93,172,70);
+  -moz-box-shadow: inset 0 0 6px rgb(23,40,11);
+  -webkit-box-shadow: inset 0 0 6px rgb(23,40,11);
+  box-shadow: inset 0 0 6px rgb(23,40,11);
 }
 
 
@@ -1340,9 +1325,9 @@ a.fellowship-box {
 
 .button.green {
   color: white;
-  background: #4EA61B;
-  background: -webkit-gradient(linear, left top, left bottom, from(#70CE31), to(#2B6A0A));
-  background: -moz-linear-gradient(top, #70CE31, #296D07);
+  background: rgb(78,166,27);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgb(112,206,49)), to(rgb(43,106,10)));
+  background: -moz-linear-gradient(top, rgb(112,206,49), rgb(43,106,10));
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#70CE31", endColorstr="#2B6A0A");
 }
 
@@ -1370,7 +1355,7 @@ ul.overview {
 }
 
 #article-metadata a {
-  color: #323232;
+  color: rgb(50,50,50);
 }
 
 #article-metadata span.label {
@@ -1439,18 +1424,18 @@ table td {
 
 table th + th,
 table td + td {
-  border-left: 1px solid #ccc;
+  border-left: 1px solid rgb(204,204,204);
 }
 
 table th {
-  border-bottom: 1px solid #202d79;
-  border-top: 1px solid #202d79;
-  color: #202d79;
-  background-color: #f4f8fa;
+  border-bottom: 1px solid rgb(32,45,121);
+  border-top: 1px solid rgb(32,45,121);
+  color: rgb(32,45,121);
+  background-color: rgb(244,248,250);
 }
 
 table td {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid rgb(204,204,204);
 }
 
 table.restricted-width {
@@ -1459,11 +1444,11 @@ table.restricted-width {
 
 
 table td.positive {
-  background-color: #d0ffd0;
+  background-color: rgb(208,255,208);
 }
 
 table td.negative {
-  background-color: #ffd0d0;
+  background-color: rgb(255,208,208);
 }
 
 table.noborders td,
@@ -1472,7 +1457,7 @@ table.noborders th {
 }
 
 tr.highlighted {
- background-color :#D0F400;
+  background-color: rgb(208,244,0);
 }
 
 
@@ -1548,11 +1533,11 @@ tr.highlighted {
 /* People pages */
 
 .people img {
-  float:left;
-  margin-right:10px;
-  width:48px;
-  height:48px;
-  border:1px solid #000;
+  float: left;
+  margin-right: 10px;
+  width: 48px;
+  height: 48px;
+  border: 1px solid black;
 }
 
 ul.people {
@@ -1560,11 +1545,11 @@ ul.people {
 }
 
 ul.people li {
-  display:block;
-  float:left;
-  width:48%;
-  min-width:20em;
-  padding-right:0.5em;
+  display: block;
+  float: left;
+  width: 48%;
+  min-width: 20em;
+  padding-right: .5em;
 }
 
 ul.people li:nth-child(odd) {
@@ -1572,11 +1557,11 @@ ul.people li:nth-child(odd) {
 }
 
 ul.people li:last-child {
-  margin-bottom:1.5em;
+  margin-bottom: 1.5em;
 }
 
 .people .name, .people .email {
-  display:block;
+  display: block;
 }
 
 .people .name {
@@ -1635,87 +1620,87 @@ fieldset {
 }
 
 .colorless {
-   background-color: #EEEEEE;
-   border-left: 10px solid #AAAAAA;
+   background-color: rgb(238,238,238);
+   border-left: 10px solid rgb(170,170,170);
 }
 
 /* Germany */
 
 .diegrüne {
-  background-color: #C8FFC8;
-  border-left: 10px solid #008B00;
+  background-color: rgb(200,255,200);
+  border-left: 10px solid rgb(0,139,0);
 }
 
 .cdu {
-  background-color: #B4E6FF;
-  border-left: 10px solid #004F7A;
+  background-color: rgb(180,230,255);
+  border-left: 10px solid rgb(0,79,122);
 }
 
 .spd {
-  background-color: #FFC8C8;
-  border-left: 10px solid #FF0000;
+  background-color: rgb(255,200,200);
+  border-left: 10px solid rgb(255,0,0);
 }
 
 .dielinke {
-  background-color: #FFC6FF;
-  border-left: 10px solid #8B1C62;
+  background-color: rgb(255,198,255);
+  border-left: 10px solid rgb(139,28,98);
 }
 
 .piraten {
-   background-color: #FFE992;
-   border-left: 10px solid #F37D20;
+   background-color: rgb(255,233,146);
+   border-left: 10px solid rgb(243,125,32);
 }
 
 .fdp {
-   background-color: #FFFFC8;
-   border-left: 10px solid #FFFF00;
+   background-color: rgb(255,255,200);
+   border-left: 10px solid rgb(255,255,0);
 }
 
 .oedp {
-   background-color: #FFE9BB;
-   border-left: 10px solid #F2862B;
+   background-color: rgb(255,233,187);
+   border-left: 10px solid rgb(242,134,43);
 }
 
 /* France */
 
 .partisocialiste {
-   background-color: #FFDCDC;
-   border-left: 10px solid #FF8080;
+   background-color: rgb(255,220,220);
+   border-left: 10px solid rgb(255,128,128);
 }
 
 .ump {
-   background-color: #A0C8FF;
-   border-left: 10px solid #0066CC;
+   background-color: rgb(160,200,255);
+   border-left: 10px solid rgb(0,102,204);
 }
 
 .pcf {
-   background-color: #FFC8C8;
-   border-left: 10px solid #DD0000;
+   background-color: rgb(255,200,200);
+   border-left: 10px solid rgb(221,0,0);
 }
 
 .prg, .mrc {
-   background-color: #FFF0FA;
-   border-left: 10px solid #FFD1DC;
+   background-color: rgb(255,240,250);
+   border-left: 10px solid rgb(255,209,220);
 }
 
 .eelv {
-   background-color: #C8FFC8;
-   border-left: 10px solid #00FF00;
+   background-color: rgb(200,255,200);
+   border-left: 10px solid rgb(0,255,0);
 }
 
 .nouveaucentre {
-   background-color: #DCFFFF;
-   border-left: 10px solid #80FFFF;
+   background-color: rgb(220,255,255);
+   border-left: 10px solid rgb(128,255,255);
 }
 
 .modem {
-   background-color: #FFE696;
-   border-left: 10px solid #FF9900;
+   background-color: rgb(255,230,150);
+   border-left: 10px solid rgb(255,153,0);
 }
 
 .alliancecentriste {
-   background-color: #FFEBC8;
-   border-left: 10px solid #F5DEB3;
+   background-color: rgb(255,235,200);
+   border-left: 10px solid rgb(245,222,179);
 }
 
 
@@ -1818,5 +1803,3 @@ ul.taglist li {
 .tag40 {
   font-size: 40;
 }
-
-

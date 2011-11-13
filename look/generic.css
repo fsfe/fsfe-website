@@ -1189,7 +1189,7 @@ a.fn {
   overflow: hidden;
 }
 
-#campaign-box-1 a h3 {
+#campaign-box-1 h3 a {
     color: black;
     display: block;
     font-family: "Lucida Sans", sans-serif;
@@ -1200,7 +1200,7 @@ a.fn {
     width: 40%;
 }
 
-#campaign-box-1 a h3:hover {
+#campaign-box-1 h3 a:hover {
   text-decoration: underline; 
 }
 

@@ -15,7 +15,7 @@ select,
 textarea {
   color: rgb(50,50,50);
   font-family: "Lucida Grande", "Helvetica", "Arial", sans-serif;
-  font-size: 9pt;
+  font-size: 110%;
   margin: 5px 0 0 0;
   text-decoration: none;
 }
@@ -27,6 +27,15 @@ input[type=url],
 input[type=submit],
 textarea {
   padding: 5px 8px;
+}
+
+form.expanded input[type=input],
+form.expanded input[type=text],
+form.expanded input[type=email],
+form.expanded input[type=url],
+form.expanded input[type=submit],
+form.expanded textarea {
+  width: 100%;
 }
 
 input[type="image"] {

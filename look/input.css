@@ -2,6 +2,10 @@
  * Styling for input fields and input-related stuff.
  */
 
+form {
+  width: 100%;
+}
+
 input[type=input],
 input[type=text],
 input[type=email],

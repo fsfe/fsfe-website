@@ -24,9 +24,11 @@
     </xsl:copy>
   </xsl:template>
 
+  <!--
   <xsl:template match="/html/body/div[@id='wrapper-inner']/div[@id='header']/div[@id='logo']/a/img">
     <xsl:attribute name="src">/graphics/fellowship/logo.png</xsl:attribute>
   </xsl:template>
+  -->
 
   <xsl:template match="@* | node()" priority="-1">
     <xsl:copy>

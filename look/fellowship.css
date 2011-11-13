@@ -4,6 +4,10 @@ FSFE Fellowship stylesheet
 
 */
 
+body {
+  background-image: url("/graphics/fellowship/plussy_tile_01.png");
+}
+
 a:link {
   color: rgb(107,179,64);
 }
@@ -14,3 +18,6 @@ h4 {
   color: rgb(99,152,41);
 }
 
+#header {
+  background-image: url("/graphics/fellowship/ribbon_fellowship.png");
+}

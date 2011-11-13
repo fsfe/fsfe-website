@@ -4,11 +4,12 @@
   <menu id="fsfe" />
   <menu id="fsfe/about" priority="0" parent="fsfe">/about/about.html</menu>
   <menu id="fsfe/projects" priority="1" parent="fsfe">/projects/work.html</menu>
-  <menu id="fsfe/help" priority="2" parent="fsfe">/contribute/contribute.html</menu>
-  <menu id="fsfe/donate" priority="3" parent="fsfe">/donate/donate.html</menu>
-  <menu id="fsfe/order" priority="4" parent="fsfe">/order/order.html</menu>
-  <menu id="fsfe/press" priority="5" parent="fsfe">/press/press.html</menu>
-  <menu id="fsfe/thankgnus" priority="6" parent="fsfe">/donate/thankgnus.html</menu>
+  <menu id="fsfe/campaigns" priority="2" parent="fsfe">/campaigns/campaigns.html</menu>
+  <menu id="fsfe/help" priority="3" parent="fsfe">/contribute/contribute.html</menu>
+  <menu id="fsfe/donate" priority="4" parent="fsfe">/donate/donate.html</menu>
+  <menu id="fsfe/order" priority="5" parent="fsfe">/order/order.html</menu>
+  <menu id="fsfe/press" priority="6" parent="fsfe">/press/press.html</menu>
+  <menu id="fsfe/thankgnus" priority="7" parent="fsfe">/donate/thankgnus.html</menu>
 
   <menu id="fellowship" />
   <menu id="fellowship/fellowship" priority="0" parent="fellowship">http://fellowship.fsfe.org/</menu>

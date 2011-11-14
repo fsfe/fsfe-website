@@ -15,7 +15,7 @@
   </xsl:template>
 
   <xsl:template match="/html/body">
-    <xsl:attribute name="id">fellowship</xsl:attribute>
+    <!-- xsl:attribute name="id">fellowship</xsl:attribute -->
 
     <xsl:copy>
       <div id="fellowship">

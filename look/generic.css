@@ -471,7 +471,7 @@ h3 {
   padding: 0 0 2em 2em;
 }
 
-.image p {
+.image > img + * {
   border-bottom: 1px solid rgb(210,210,210);
   border-left: 1px solid rgb(210,210,210);
   border-right: 1px solid rgb(210,210,210);
@@ -481,8 +481,9 @@ h3 {
 }
 
 .image .photographer {
-  font-size: 90%;
+  display: block;
   font-style: italic;
+  text-align: right;
 }
 
 .imgright {  /* compatibility */

@@ -462,7 +462,6 @@ h3 {
 }
 
 .image {
-  background-color: rgb(253,253,253);
   float: left;
 }
 
@@ -476,11 +475,12 @@ h3 {
   border-left: 1px solid rgb(210,210,210);
   border-right: 1px solid rgb(210,210,210);
   font-size: 90%;
-  margin-top: 0;
+  margin-top: -6px;
   padding: .5em;
 }
 
 .image .photographer {
+  font-size: 80%;
   display: block;
   font-style: italic;
   text-align: right;

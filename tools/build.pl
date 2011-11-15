@@ -146,7 +146,7 @@ my @dirs = File::Find::Rule->directory()
                            ->in($opts{i});
 
 while (my ($path, undef) = each %countries) {
-  print STDERR "Reseting path for $path\n" unless $opts{q};
+  print STDERR "Resetting path for $path\n" unless $opts{q};
   rmtree($opts{o}.'/'.$path) unless ($opts{u} || $opts{n});
   my @paths = map { $opts{o}."/$path/".$_ } grep(!/^\.\.?$/, @dirs);
   foreach (@paths) {

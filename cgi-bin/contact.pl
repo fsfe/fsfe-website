@@ -8,7 +8,8 @@ use File::Basename;
 use Cwd "abs_path";
 use CGI;
 use POSIX qw(strftime);
-use Text::Format;
+use Text::Wrap;
+$Text::Wrap::columns = 72;
 
 our $base_directory;
 BEGIN { $base_directory = dirname(abs_path("../tools/WebBuild")); }
@@ -39,15 +40,21 @@ my $time = strftime "%s", localtime;
 open(MAIL, "|/usr/lib/sendmail -t -f ato\@fsfe.org");
 print MAIL "Reply-To: " . $query->param("email") . "\n";
 print MAIL "From: office\@fsfeurope.org\n";
-print MAIL "To: office\@fsfeurope.org\n";
+print MAIL "To: office\@fsfeurope.org,nicoulas\@fsfe.org\n";
 print MAIL "Cc: ato\@fsfe.org\n";
-print MAIL "Subject: New message from website from " . $query->param("name") . "\n";
-print MAIL "Content-Type: text/plain\n\n";
+
+my $subject = $query->param("subject");
+if ($subject eq "") {
+  $subject = "New message from website from " . $query->param("name");
+}
+
+print MAIL "Subject: $subject" . "\n";
+print MAIL "Content-Type: text/plain; charset=UTF-8\n\n";
 print MAIL "We have received a new message from our website contact form.\n\n";
 print MAIL "Name:   " . $query->param("name") . "\n";
 print MAIL "E-mail: " . $query->param("email") . "\n\n";
 print MAIL "---\n";
-print MAIL Text::Format->new({columns => 72})->format($query->param("message")) . "\n";
+print MAIL wrap('','',$query->param("message")) . "\n";
 print MAIL "---\n\n";
 
 my $output = <<ENDHTML;

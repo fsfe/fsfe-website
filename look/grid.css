@@ -1,5 +1,32 @@
 /*
 
+New grid implementaiton, old one is kept further down in the file due to
+backwards-compatible reasons.
+
+@author Andreas Tolf Tolfsen <ato@fsfe.org>
+
+*/
+
+.last {
+  margin-right: 0;
+}
+
+.sixth,
+.fifth,
+.fourth,
+.third,
+.half,
+.two-thirds {
+  float: left;
+  margin-right: 1%;
+}
+
+.half  { width: 49%; }
+.third { width: 32%; }
+
+
+/*
+
 Grids are for splitting up an area in multiple columns.  Using the CSS
 class .grid-{\d}-{\d}(-{\d}), where $1 and $2 (and optionally $3) are
 percentages (integers specified in this file) you will get a

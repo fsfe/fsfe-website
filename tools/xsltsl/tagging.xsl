@@ -16,7 +16,9 @@
 		<xsl:param name="tag" select="''"/>
 		<xsl:param name="today" select="/html/@date" />
 		<xsl:param name="nb-items" select="''" />
+		<xsl:param name="display-year" select="'no'" />
 		<xsl:param name="show-date" select="'yes'" />
+		<xsl:param name="compact-view" select="'no'" />
 		
     <xsl:for-each select="/html/set/news[ translate (@date, '-', '') &lt;= translate ($today, '-', '')
                           and (tags/tag = $tag or $tag='')
@@ -27,6 +29,8 @@
 	    <xsl:if test="position() &lt;= $nb-items or $nb-items=''">
 		    <xsl:call-template name="news">
 		      <xsl:with-param name="show-date" select="$show-date" />
+		      <xsl:with-param name="compact-view" select="$compact-view" />
+		      <xsl:with-param name="display-year" select="$display-year" />
 		    </xsl:call-template>
 	    </xsl:if>
 		</xsl:for-each>

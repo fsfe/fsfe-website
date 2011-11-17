@@ -2,6 +2,10 @@
  * Styling for input fields and input-related stuff.
  */
 
+form {
+  width: 100%;
+}
+
 input[type=input],
 input[type=text],
 input[type=email],
@@ -10,22 +14,10 @@ input[type=submit],
 select,
 textarea {
   color: rgb(50,50,50);
-  text-decoration: none;
   font-family: "Lucida Grande", "Helvetica", "Arial", sans-serif;
-  font-size: 9pt;
-  /*
-  background-image: url("/graphics/input-bg.png");
-  background-repeat: repeat-x;
-  background-position: 0 0;
-  border-top: 1px solid rgb(132,132,132);
-  border-left: 1px solid rgb(193,193,193);
-  border-bottom: 1px solid rgb(225,225,225);
-  border-right: 1px solid rgb(193,193,193);
-  border-radius: 11px;
-  -moz-border-radius: 11px;
-  -webkit-border-radius: 11px;
-  */
+  font-size: 100%;
   margin: 5px 0 0 0;
+  text-decoration: none;
 }
 
 input[type=input],
@@ -37,31 +29,24 @@ textarea {
   padding: 5px 8px;
 }
 
+form.expanded input[type=input],
+form.expanded input[type=text],
+form.expanded input[type=email],
+form.expanded input[type=url],
+form.expanded input[type=submit],
+form.expanded textarea {
+  width: 100%;
+}
+
 input[type="image"] {
   margin: 5px 0 0 5px;
   position: absolute;
 }
 
-/*
-input[type=submit],
-button,
-.button {
-  background: white url("../images/input/input-bg.png") repeat-x bottom left;
-  border-radius: 6px;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  cursor: pointer;
-  /*text-shadow: rgb(120,120,120) .5px .5px 3px;*/
-  /*
-   * Opera and WebKit listens to border-radius, while Firefox requires the
-   * prefix.
-   *
-}
-*/
-
 input[_placeholder_on] {
   color: rgb(120,120,120) !important;
 }
+
 input[type=submit]:hover,
 input[type=submit]:focus,
 button:hover,
@@ -87,16 +72,12 @@ button.toggled,
    */
 }
 
-.button.toggled {
-}
-
 input[type=submit] span,
 button span,
 .button span {
-  padding: 0 0 3px 3px; /*22px;*/
+  padding: 0 0 3px 3px;
   background-repeat: no-repeat;
 }
-
 
 /* labels */
 form label {

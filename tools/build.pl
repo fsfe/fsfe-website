@@ -1,6 +1,6 @@
 #! /usr/bin/perl
 #
-# build.pl - a tool for building FSF Europe web pages
+# build.pl - a tool for building FSFE web pages
 #
 # Copyright (C) 2003 Jonas Öberg
 # 
@@ -95,7 +95,8 @@ our $current_time = strftime "%Y-%m-%d %H:%M:%S", localtime;
 
 # This static array contains files that can't be out of date
 our %cant_be_outdated = (
-  "news/news" => 1
+  "news/news" => 1,
+  "index" => 1
 );
 
 
@@ -145,7 +146,7 @@ my @dirs = File::Find::Rule->directory()
                            ->in($opts{i});
 
 while (my ($path, undef) = each %countries) {
-  print STDERR "Reseting path for $path\n" unless $opts{q};
+  print STDERR "Resetting path for $path\n" unless $opts{q};
   rmtree($opts{o}.'/'.$path) unless ($opts{u} || $opts{n});
   my @paths = map { $opts{o}."/$path/".$_ } grep(!/^\.\.?$/, @dirs);
   foreach (@paths) {

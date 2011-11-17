@@ -2,11 +2,11 @@
 
 <html>
   <head>
-    <title>FSFE - Darujte teď!</title>
+    <title>FSFE - Přispějte nyní!</title>
   </head>
 
   <body>
-    <h1>Dary</h1>
+    <h1>Darujte</h1>
 
     <div id="introduction">
       <div class="image">
@@ -14,53 +14,77 @@
       </div>
 
       <p>
-        Free Software Foundation Europe (FSFE) je nezisková nevládní
-        organizace. <a href="/projects/work.html">Naše práce</a> je
-        umožněna komunitou
-        <a href="/contribute/contribute.html">dobrovolníků</a>,
+	Evropská nadace pro svobodný software (FSFE) je nezisková nevládní organizace.
+	<a href="/projects/work.en.html">Naše práce</a> je možná díky komunitě
+        <a href="/contribute/contribute.en.html">dobrovolníků</a>,
         <a href="http://fellowship.fsfe.org">členů</a> a
-        <a href="thankgnus.html">dárců</a>. Vaše dary jsou důležité pro naši
-        sílu a samostatnost. Umožňují nám pokračovat v práci pro Free
-        Software kdekoliv je to nezbytné, a je zapotřebí nezávislý hlas.
+        <a href="thankgnus.en.html">dárců</a>. Vaše příspěvky jsou klíčové pro 
+	naši sílu a samostatnost. Umožňují nám pokračovat v práci pro svobodný 
+	software kdekoliv je to nezbytné a je zapotřebí nezávislý hlas.
       </p>
     </div>
 
-    <h2>Způsoby darování</h2>
+    <h2>Způsoby zaslání daru</h2>
 
-    <h3>On-line platby</h3>
+    <h3>Platba online</h3>
 
     <form action="/cgi-bin/donate.pl" method="post" id="donate">
-      <fieldset>
-        <legend>Částka:</legend>
-
-        <table>
-          <tr>
-            <td><input name="amount" type="radio" value="120" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;120</td>
-            <td><a href="thankgnus.html#supporter">Stoupenci</a><br/></td>
-          </tr>
-          <tr>
-            <td><input name="amount" type="radio" value="600" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;600</td>
-            <td><a href="thankgnus.html#contributor">Přispěvatelé</a><br/></td>
-          </tr>
-          <tr>
-            <td><input name="amount" type="radio" value="1200" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;1,200</td>
-            <td><a href="thankgnus.html#sustainingcontributor">Větší přispěvatelé</a><br/></td>
-          </tr>
-          <tr>
-            <td><input name="amount" type="radio" value="6000" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;6,000</td>
-            <td><a href="thankgnus.html#patron">Patroni</a><br/></td>
-          </tr>
-          <tr>
-            <td style="border-bottom: medium none;"><input name="amount" type="radio" value="other" checked="checked" onclick="amount_other.disabled = false"/>
-            <input name="amount_other" type="text" value="" palceholder="euros" style="width:5em"/></td>
-            <td style="border-bottom: medium none;">(Vaše volba)</td>
-          </tr>
-        </table>
-      </fieldset>
-
+      <p>
+        <label for="name">Jméno (osoba nebo firma)</label>
+        <input id="name" name="name" type="text"/>
+	(Pokud si nepřejete zůstat v anonymitě, bude toto jméno uvedeno na 
+        <a href="thankgnus.en.html">seznamu dárců</a>)
+      </p>
       <p>
         <input name="anonymous" type="checkbox"/> Přeji si zůstat v anonymitě
       </p>
+      <p>
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email"/>
+      </p>
+      <fieldset>
+        <table>
+          <tr>
+	    <th>Výše</th>
+            <th>Měsíční příspěvek</th>
+            <th>Roční příspěvek</th>
+            <th>Jednorázový dar</th>
+          </tr>
+          <tr>
+            <td><a href="thankgnus.html#supporter">Stoupenec</a><br/></td>
+            <td><input name="amount" type="radio" value="m10" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 10</td>
+            <td><input name="amount" type="radio" value="y120" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 120</td>
+            <td><input name="amount" type="radio" value="o120" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 120</td>
+          </tr>
+          <tr>
+            <td><a href="thankgnus.html#contributor">Přispěvatel</a><br/></td>
+            <td><input name="amount" type="radio" value="m50" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 50</td>
+            <td><input name="amount" type="radio" value="y600" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 600</td>
+            <td><input name="amount" type="radio" value="o600" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 600</td>
+          </tr>
+          <tr>
+            <td><a href="thankgnus.html#sustainingcontributor">Podporující přispěvatel</a><br/></td>
+            <td><input name="amount" type="radio" value="m100" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 100</td>
+            <td><input name="amount" type="radio" value="y1200" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 1,200</td>
+            <td><input name="amount" type="radio" value="o1200" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 1,200</td>
+          </tr>
+          <tr>
+            <td><a href="thankgnus.html#patron">Patron</a><br/></td>
+            <td><input name="amount" type="radio" value="m500" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 500</td>
+            <td><input name="amount" type="radio" value="y6000" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 6,000</td>
+            <td><input name="amount" type="radio" value="o6000" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 6,000</td>
+          </tr>
+          <tr>
+            <td style="border-bottom: medium none;">Zadejte výši:</td>
+            <td style="border-bottom: medium none;"><input name="amount" type="radio" value="mother" checked="checked" onclick="yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = false; yamount_other.disabled = true; oamount_other.disabled = true"/>
+            <input name="mamount_other" type="text" value="" palceholder="euros" style="width:5em"/></td>
+            <td style="border-bottom: medium none;"><input name="amount" type="radio" value="yother" checked="checked" onclick="mamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = false; oamount_other.disabled = true"/>
+            <input name="yamount_other" type="text" value="" palceholder="euros" style="width:5em"/></td>
+            <td style="border-bottom: medium none;"><input name="amount" type="radio" value="oother" checked="checked" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = false"/>
+            <input name="oamount_other" type="text" value="" palceholder="euros" style="width:5em"/></td>
+          </tr>
+        </table>
+      </fieldset>
 
       <p>
         <!-- Translators: please replace "en" with the language code of your
@@ -70,12 +94,10 @@
         <input type="submit" value="Darovat"/>
       </p>
     </form>
-
     <h3>Bankovní převod</h3>
 
     <p>
-      Dary mohou být zaslány odkudkoliv na světě na
-      následující účty:
+      Dary mohou být posílány odkudkoliv na světě na tyto účty:
     </p>
 
     <h4>Dary v EUR (Euro)</h4>
@@ -96,52 +118,45 @@
       SWIFT/BIC: POFI CHBE<br/>
     </address>
 
-    <h3>Ostatní možnosti</h3>
+    <h3>Další možnosti</h3>
 
     <p>
-      Pokud Vám žádná z výše uvedených možností nevyhovuje, prosím
-      <a href="mailto:office@fsfeurope.org">kontaktujte nás</a> a domluvíme se
-      s Vámi na jiných možnostech.
+      Pokud vám nevyhovuje ani jedna z předchozích možností,
+      <a href="mailto:office&#64;fsfeurope.org">napište nám</a>
+      prosím a my se s vámi domluvíme na dalších možnostech.
     </p>
 
     <p>
-      Jako jednotlivec, můžete také zvážit
-      <a href="https://fellowship.fsfe.org/join">připojení ke Členství v FSFE</a>
+      Jako jednotlivec můžete také zvážit 
+      <a href="https://fellowship.fsfe.org/join">připojení se ke členství ve FSFE</a>
       jako alternativu nebo navíc k daru.
     </p>
-    
-    <p>
-      <a href="http://flattr.com/thing/96089/Free-Software-Foundation-Europe" target="_blank">
-      <img src="/graphics/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
-    </p>
-
     
     <h2>Co se bude dít dál</h2>
 
     <p>
-      Pokud darujete více jak 120 Euro za rok, chtěli bychom přidat Vaše
-      jméno do naší <a href="thankgnus.html">dárcovské listiny</a>. Pro on-line
-      dary, můžete použít políčko "Přeji si zůstat v anonymitě" pro vyjádření
-      jestli si přejete nebo nepřejete být uveden v tomto listu. Pokud pošlete
-      svůj dar bankovním převodem, prosím
-      <a href="mailto:office@fsfeurope.org">kontaktujte nás</a> o tom.
+      Pokud darujete více než 120 euro za rok, rádi bychom vaše jméno přidali
+      na naši <a href="thankgnus.en.html">dárcovskou listinu</a>. Pokud přispíváte
+      online a přejete si zůstat v anonymitě, můžete zaškrtnou políčko "Přeji si zůstat
+      v anonymitě". U bankovních převodů nám o takovém rozhodnutí 
+      <a href="mailto:office&#64;fsfeurope.org">napište</a>.
     </p>
 
     <p>
-      Kromě toho, můžete vložit naše
-      <a href="/about/graphics/sponsoring/sponsoring.html">sponzorské tlačítka</a>
-      na Váš vlastní webové stránky a ukázat tak Vaši podporu.
+      Můžete navíc přidat naše
+      <a href="/about/graphics/sponsoring/sponsoring.en.html">sponzorská tlačítka</a>
+      na své webové stránky a tím ukázat, že nás podporujete.
     </p>
 
     <p>
-      V některých zemích, mohou být dary odečteny z daně z příjmu.
-      V současnosti, je to v případě <a href="germany.html">Německa</a> a
-      <a href="switzerland.html">Švýcarska</a>.
+      V některých zemích mohou být dary odečteny z daně z příjmu. V současnosti se to týká
+      <a href="germany.en.html">Německa</a>, <a href="netherlands.en.html">Nizozemska</a> a
+      <a href="switzerland.en.html">Švýcarska</a>.
     </p>
   </body>
 
   <timestamp>$Date$ $Author$</timestamp>
-  <translator>Pipkin</translator>
+  <translator>Pavel Kačer</translator>  
 </html>
 <!--
 Local Variables: ***

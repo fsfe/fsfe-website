@@ -2,6 +2,7 @@
 
 use CGI;
 use POSIX qw(strftime);
+use Date::Calc qw(Add_Delta_YM);
 use Digest::SHA1 qw(sha1_hex);
 
 # -----------------------------------------------------------------------------
@@ -10,9 +11,13 @@ use Digest::SHA1 qw(sha1_hex);
 
 my $query = new CGI;
 
+my $name = $query->param("name");
+my $email = $query->param("email");
 my $amount = $query->param("amount");
-if ($amount == "other") {
-  $amount = $query->param("amount_other");
+my $period = substr($amount, 0, 1);
+my $amount = substr($amount, 1);
+if ($amount eq "other") {
+  $amount = $query->param($period . "amount_other");
 }
 my $anonymous = $query->param("anonymous");
 my $language = $query->param("language");
@@ -28,6 +33,25 @@ if ($anonymous) {
 } else {
   $reference = "donation.$date." . substr($time, -5);
 }
+if ($period ne "o") {
+  $reference .= ".$period";
+}
+
+($sec, $min, $hour, $mday, $mon, $year, $wday, $yday, $isdst) = localtime;
+
+my $months = 0;
+if ($period eq "m") {
+  ($year, $mon, $mday) = Add_Delta_YM($year, $mon, $mday, 0, 1);
+  $months = 1;
+}
+if ($period eq "y") {
+  ($year, $mon, $mday) = Add_Delta_YM($year, $mon, $mday, 1, 0);
+  $months = 12;
+}
+my $start = strftime("%Y-%m-%d", ($sec, $min, $hour, $mday, $mon, $year, 0, 0, $isdst));
+my $day = substr($date, -2);
+
+my $lang = substr($language, 0, 2);
 
 # -----------------------------------------------------------------------------
 # Generate form to forward payment request to PayPal or Concardis
@@ -35,21 +59,44 @@ if ($anonymous) {
 
 print "Content-type: text/html\n\n";
 
-open TEMPLATE, "/home/www/html/global/donate/tmpl-donate.$language.html";
+open TEMPLATE, "/home/www/html/global/donate/tmpl-donate.$lang.html";
 while (<TEMPLATE>) {
   if (/:FORM:/) {
     my $passphrase = "Only4TestingPurposes";
     my $shastring = 
-        "ACCEPTURL=http://fsfe.org/donate/thankyou.$language.html$passphrase" .
+        "ACCEPTURL=http://fsfe.org/donate/thankyou.$lang.html$passphrase" .
         "AMOUNT=$amount100$passphrase" .
-        "CANCELURL=http://fsfe.org/donate/cancel.$language.html$passphrase" .
+        "CANCELURL=http://fsfe.org/donate/cancel.$lang.html$passphrase";
+    if ($name) {
+      $shastring .=
+        "CN=$name$passphrase";
+    }
+    $shastring .=
         "COM=$text$passphrase" .
-        "CURRENCY=EUR$passphrase" .
+        "CURRENCY=EUR$passphrase";
+    if ($email) {
+      $shastring .=
+        "EMAIL=$email$passphrase";
+    }
+    $shastring .=
         "LANGUAGE=$language$passphrase" .
         "ORDERID=$reference$passphrase" .
         "PMLISTTYPE=2$passphrase" .
-        "PSPID=40F00871$passphrase" .
-        "TP=http://fsfe.org/donate/tmpl-concardis.$language.html$passphrase";
+        "PSPID=40F00871$passphrase";
+    if ($period ne "o") {
+      $shastring .=
+        "SUBSCRIPTION_ID=$reference$passphrase" .
+        "SUB_AMOUNT=$amount100$passphrase" .
+        "SUB_COM=$text$passphrase" .
+        "SUB_ORDERID=$reference$passphrase" .
+        "SUB_PERIOD_MOMENT=$day$passphrase" .
+        "SUB_PERIOD_NUMBER=$months$passphrase" .
+        "SUB_PERIOD_UNIT=m$passphrase" .
+        "SUB_STARTDATE=$start$passphrase" .
+        "SUB_STATUS=1$passphrase";
+    }
+    $shastring .= 
+        "TP=http://fsfe.org/donate/tmpl-concardis.$lang.html$passphrase";
     my $shasum = uc(sha1_hex($shastring));
     print "    <form name=\"donate\" action=\"https://secure.payengine.de/ncol/prod/orderstandard.asp\" method=\"post\">\n";
     print "      <!-- payment parameters -->\n";
@@ -59,12 +106,30 @@ while (<TEMPLATE>) {
     print "      <input type=\"hidden\" name=\"amount\"       value=\"$amount100\"/>\n";
     print "      <input type=\"hidden\" name=\"currency\"     value=\"EUR\"/>\n";
     print "      <input type=\"hidden\" name=\"language\"     value=\"$language\"/>\n";
+    if ($name) {
+      print "      <input type=\"hidden\" name=\"CN\"           value=\"$name\"/>\n";
+    }
+    if ($email) {
+      print "      <input type=\"hidden\" name=\"EMAIL\"        value=\"$email\"/>\n";
+    }
+    if ($period ne "o") {
+      print "      <!-- subscription parameters -->\n";
+      print "      <input type=\"hidden\" name=\"SUBSCRIPTION_ID\"   value=\"$reference\"/>\n";
+      print "      <input type=\"hidden\" name=\"SUB_ORDERID\"       value=\"$reference\"/>\n";
+      print "      <input type=\"hidden\" name=\"SUB_COM\"           value=\"$text\"/>\n";
+      print "      <input type=\"hidden\" name=\"SUB_AMOUNT\"        value=\"$amount100\"/>\n";
+      print "      <input type=\"hidden\" name=\"SUB_PERIOD_UNIT\"   value=\"m\"/>\n";
+      print "      <input type=\"hidden\" name=\"SUB_PERIOD_NUMBER\" value=\"$months\"/>\n";
+      print "      <input type=\"hidden\" name=\"SUB_PERIOD_MOMENT\" value=\"$day\"/>\n";
+      print "      <input type=\"hidden\" name=\"SUB_STARTDATE\"     value=\"$start\"/>\n";
+      print "      <input type=\"hidden\" name=\"SUB_STATUS\"        value=\"1\"/>\n";
+    }
     print "      <!-- interface template -->\n";
-    print "      <input type=\"hidden\" name=\"TP\"           value=\"http://fsfe.org/donate/tmpl-concardis.$language.html\"/>\n";
+    print "      <input type=\"hidden\" name=\"TP\"           value=\"http://fsfe.org/donate/tmpl-concardis.$lang.html\"/>\n";
     print "      <input type=\"hidden\" name=\"PMListType\"   value=\"2\"/>\n";
     print "      <!-- post-payment redirection -->\n";
-    print "      <input type=\"hidden\" name=\"accepturl\"    value=\"http://fsfe.org/donate/thankyou.$language.html\"/>\n";
-    print "      <input type=\"hidden\" name=\"cancelurl\"    value=\"http://fsfe.org/donate/cancel.$language.html\"/>\n";
+    print "      <input type=\"hidden\" name=\"accepturl\"    value=\"http://fsfe.org/donate/thankyou.$lang.html\"/>\n";
+    print "      <input type=\"hidden\" name=\"cancelurl\"    value=\"http://fsfe.org/donate/cancel.$lang.html\"/>\n";
     print "      <!-- SHA1 signature -->\n";
     print "      <input type=\"hidden\" name=\"SHASign\"      value=\"$shasum\"/>\n";
     print "      <!-- Javascript submit() method only works if no submit button is active -->\n";

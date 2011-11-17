@@ -10,61 +10,90 @@
 
     <div id="introduction">
       <div class="image">
-        <img src="/graphics/piggy-bank.png" alt="Piggy-bank"/>
+        <img src="/graphics/piggy-bank.png" alt="свинья-копилка"/>
       </div>
 
       <p>
-        Европейский фонд свободного программного обеспечения — некоммерческая неправительственная организация.
- <a href="/projects/work.html"> Наша работа</a> возможна
+        Европейский фонд свободного программного обеспечения —
+        некоммерческая неправительственная организация.
+        <a href="/projects/work.html">Наша работа</a> возможна
         только благодаря 
         <a href="/contribute/contribute.html">добровольцам</a>,
         <a href="http://fellowship.fsfe.org">членам Содружества</a> и
-        <a href="thankgnus.html">спонсорам</a>. Ваши пожертвования необходимы для нашей независимости.
- Они дают нам возможность продолжать работать по продвижению свободного программного обеспечения и быть независимыми.
+        <a href="thankgnus.html">спонсорам</a>. Ваши пожертвования
+        необходимы для нашей эффективности и самостоятельности. Они дают нам
+        возможность продолжать работать на благо свободного программного
+        обеспечения там, где это необходимо, и выражать независимое мнение.
       </p>
     </div>
 
     <h2>Способы внесения пожертвований</h2>
 
-    <h3>Онлайн</h3>
+    <h3>Онлайн-платежи</h3>
 
     <form action="/cgi-bin/donate.pl" method="post" id="donate">
+      <p>
+        <label for="name">Имя (частное лицо или компания)</label>
+        <input id="name" name="name" type="text"/>
+        (Если только вы не пожелаете сохранить анонимность, это имя будет внесено в 
+        <a href="thankgnus.html">список спонсоров</a>)
+      </p>
+      <p>
+        <input name="anonymous" type="checkbox"/> Я хочу сделать анонимное
+        пожертвование
+      </p>
+      <p>
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email"/>
+      </p>
       <fieldset>
-        <legend>Сумма:</legend>
-
         <table>
           <tr>
-            <td><input name="amount" type="radio" value="120" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;120</td>
+            <th>Уровень</th>
+            <th>Ежемесячно</th>
+            <th>Ежегодно</th>
+            <th>Единовременное пожертвование</th>
+          </tr>
+          <tr>
             <td><a href="thankgnus.html#supporter">Спонсор</a><br/></td>
+            <td><input name="amount" type="radio" value="m10" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 10</td>
+            <td><input name="amount" type="radio" value="y120" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 120</td>
+            <td><input name="amount" type="radio" value="o120" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 120</td>
           </tr>
           <tr>
-            <td><input name="amount" type="radio" value="600" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;600</td>
             <td><a href="thankgnus.html#contributor">Сторонник</a><br/></td>
+            <td><input name="amount" type="radio" value="m50" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 50</td>
+            <td><input name="amount" type="radio" value="y600" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 600</td>
+            <td><input name="amount" type="radio" value="o600" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 600</td>
           </tr>
           <tr>
-            <td><input name="amount" type="radio" value="1200" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;1,200</td>
             <td><a href="thankgnus.html#sustainingcontributor">Постоянный спонсор</a><br/></td>
+            <td><input name="amount" type="radio" value="m100" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 100</td>
+            <td><input name="amount" type="radio" value="y1200" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 1,200</td>
+            <td><input name="amount" type="radio" value="o1200" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 1,200</td>
           </tr>
           <tr>
-            <td><input name="amount" type="radio" value="6000" onclick="amount_other.value = &quot;&quot;; amount_other.disabled = true"/> &#8364;6,000</td>
             <td><a href="thankgnus.html#patron">Меценат</a><br/></td>
+            <td><input name="amount" type="radio" value="m500" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 500</td>
+            <td><input name="amount" type="radio" value="y6000" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 6,000</td>
+            <td><input name="amount" type="radio" value="o6000" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 6,000</td>
           </tr>
           <tr>
-            <td style="border-bottom: medium none;"><input name="amount" type="radio" value="other" checked="checked" onclick="amount_other.disabled = false"/>
-            <input name="amount_other" type="text" value="" palceholder="euros" style="width:5em"/></td>
-            <td style="border-bottom: medium none;">(Ваш выбор)</td>
+            <td style="border-bottom: medium none;">Выберите сумму:</td>
+            <td style="border-bottom: medium none;"><input name="amount" type="radio" value="mother" checked="checked" onclick="yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = false; yamount_other.disabled = true; oamount_other.disabled = true"/>
+            <input name="mamount_other" type="text" value="" palceholder="euros" style="width:5em"/></td>
+            <td style="border-bottom: medium none;"><input name="amount" type="radio" value="yother" checked="checked" onclick="mamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = false; oamount_other.disabled = true"/>
+            <input name="yamount_other" type="text" value="" palceholder="euros" style="width:5em"/></td>
+            <td style="border-bottom: medium none;"><input name="amount" type="radio" value="oother" checked="checked" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = false"/>
+            <input name="oamount_other" type="text" value="" palceholder="euros" style="width:5em"/></td>
           </tr>
         </table>
       </fieldset>
 
       <p>
-        <input name="anonymous" type="checkbox"/> Я хотел бы сделать анонимное пожертвование
-      </p>
-
-      <p>
         <!-- Translators: please replace "en" with the language code of your
              language and translate "Donation" and "Donate" -->
-        <input type="hidden" name="language" value="ru"/>
+        <input type="hidden" name="language" value="ru_RU"/>
         <input type="hidden" name="text" value="Пожертвование"/>
         <input type="submit" value="Пожертвовать"/>
       </p>
@@ -73,7 +102,8 @@
     <h3>Банковский перевод</h3>
 
     <p>
-      Пожертвования могут быть перечислены из любой страны мира на следующие банковские счета:
+      Пожертвования могут быть перечислены из любой страны мира на следующие
+      банковские счета:
     </p>
 
     <h4>Пожертвования в EUR</h4>
@@ -98,28 +128,25 @@
 
     <p>
       Если ни один из вышеперечисленных способов Вам не подходит, пожалуйста,
-      <a href="mailto:office@fsfeurope.org">напишите нам</a>, и мы обсудим другие возможности.
+      <a href="mailto:office@fsfeurope.org">напишите нам</a>, и мы обсудим
+      другие возможности.
     </p>
 
     <p>
-      Вы можете также подумать о том, чтобы
+      Как частное лицо Вы также могли бы 
       <a href="https://fellowship.fsfe.org/join">стать членом Содружества ЕФСПО</a>
       вместо пожертвования или в дополнение к нему.
     </p>
     
-    <p>
-      <a href="http://flattr.com/thing/96089/Free-Software-Foundation-Europe" target="_blank">
-      <img src="/graphics/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
-    </p>
-
-    
     <h2>Что дальше</h2>
 
     <p>
-      Если Вы пожертвуете больше, чем 120 евро в течение года, мы добавим Ваше имя в <a href="thankgnus.html">список спонсоров</a>. 
-      Если Вы не желаете обнародовать Ваши данные, то для пожертвований через Интернет Вы можете сделать отметку "Я хотел бы сделать анонимное пожертвование". 
-      Если Вы пересылаете пожертвование банковским переводом, пожалуйста,
-      <a href="mailto:office@fsfeurope.org">сообщите нам</a> об этом.
+      Если Вы пожертвуете больше 120 евро в течение года, мы добавим Ваше имя в
+      <a href="thankgnus.html">список спонсоров</a>. При онлайн-переводе, если
+      Вы не желаете обнародовать Ваши данные, можно поставить отметку "Я хочу
+      сделать анонимное пожертвование". При использовании банковского перевода,
+      пожалуйста, 
+      <a href="mailto:office@fsfeurope.org">напишите нам</a>.
     </p>
 
     <p>
@@ -129,13 +156,15 @@
     </p>
 
     <p>
-      В некоторых странах сумма пожертвования может быть вычтена из дохода, облагаемого подоходным налогом.
-      В настоящее время это возможно в <a href="germany.html">Германии</a> и
-      <a href="switzerland.html">Швейцарии</a>.
+      В некоторых странах сумма вашего пожертвования может быть вычтена из
+      подоходного налога. В настоящее время к этим странам относятся
+      <a href="germany.html">Германия</a>, 
+      <a href="netherlands.html">Нидерланды</a> и
+      <a href="switzerland.html">Швейцария</a>.
     </p>
   </body>
 
-  <timestamp>$Date: 2011-02-16 10:14:48 +0100 (Mi, 16. Feb 2011) $ $Author: reinhard $</timestamp>
+  <timestamp>$Date$ $Author$</timestamp>
 </html>
 <!--
 Local Variables: ***

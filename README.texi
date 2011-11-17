@@ -1,13 +1,13 @@
 \input texinfo  @c -*-texinfo-*-
 
 @setfilename README.info
-@settitle Webmastering FSF Europe
+@settitle Webmastering FSFE
 @setchapternewpage odd
 
 @set lastupdated $Id: README.texi,v 1.3 2006-05-08 14:31:35 reinhard Exp $
 
 @titlepage
-@title Webmastering FSF Europe
+@title Webmastering FSFE
 @subtitle Last updated @value{lastupdated}
 
 @c Add yourself here if you add at least a couple of paragraphs of useful
@@ -22,9 +22,9 @@ Last updated @value{lastupdated}
 @end titlepage
 
 @node Top, Webmastering, (dir), (dir)
-@top Webmastering FSF Europe
+@top Webmastering FSFE
 
-This document contains a description of the FSF Europe web pages, both
+This document contains a description of the FSFE web pages, both
 the practice of maintaining them, and that of generating them. It is hoped
 that this document will be continuously updated by the webmasters of FSF
 Europe as the web pages evolve. It was last updated @value{lastupdated}.
@@ -79,7 +79,7 @@ Guides
 @node Webmastering, Translating, Top, Top
 @chapter Webmastering
 
-This chapter will describe how to be a webmaster of FSF Europe. It will
+This chapter will describe how to be a webmaster of FSFE. It will
 describe how the pages are envisioned, what files can be edited, how they
 should be edited and various other bits that are of particular interest
 to a webmaster.
@@ -94,7 +94,7 @@ to a webmaster.
 
 @node Focuses, Source files, Webmastering, Webmastering
 @section Focuses
-The FSF Europe web pages are divided into focuses. Each focus represents a
+The FSFE web pages are divided into focuses. Each focus represents a
 view of the web tree that contains all the information of global importance,
 aswell as the information relevant to the focus. A focus is usually a
 geographic area, such as Germany or France. A visitor can choose which focus
@@ -264,7 +264,7 @@ updated very frequently instead of those that is.
 
 @node Building, Administrating, Translating, Top
 @chapter Building
-This chapter of the FSF Europe webmastering manual will describe the
+This chapter of the FSFE webmastering manual will describe the
 steps involved in building the web pages from scratch. Normally, this
 is not something that anyone should have to bother about. As a
 webmaster and translator, it's sufficient to know how it works so that
@@ -374,7 +374,7 @@ file should be as follows:
 
 <html>
   <head>
-    <title>FSF Europe - What needs to be done?</title>
+    <title>FSFE - What needs to be done?</title>
   </head>
   <body>
     Some content for the page.
@@ -413,7 +413,7 @@ finished, the result should look like this:
   </textset>
   <document>          <!-- The actual document, as read from the XHTML -->
     <head>
-      <title>FSF Europe - What needs to be done?</title>
+      <title>FSFE - What needs to be done?</title>
     </head>
     <body>
       Some content for the page.

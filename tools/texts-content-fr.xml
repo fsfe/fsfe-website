@@ -2,18 +2,30 @@
 
 <textset-content>
 
-  <text id="news">Dernières nouvelles</text>
+  <text id="news">Actualité</text>
   <text id="newsletter">Lettre d'information</text>
   <text id="receive-newsletter">S'abonner à la lettre d'information mensuelle de la FSFE</text>
-  
-  <text id="events">Prochains évènements</text>
+  <text id="events">Évènements</text>
   <text id="more">En savoir plus</text>
   <text id="morenews">Autres nouvelles…</text>
   <text id="moreevents">Autres évènements…</text>
   
+  <text id="email">Email</text>
+  <text id="email-placeholder">Adresse email</text>
+  <text id="phone">Téléphone</text>
+  <text id="fax">fax</text>
+  <text id="contact">Contact</text>
+  
+  <text id="team">Équipe</text>
+  <text id="microblog">Microblog</text>
+  
   <text id="donate">Dons</text>
+  <text id="campaign4">Défendez votre liberté d'installer du Logiciel Libre,</text>
+  <text id="campaign4link">signez la déclaration de notre organisation sœure</text>
   <text id="join">Rejoindre</text>  
 
   <text id="subscribe">S'abonner</text>
  
+  <!-- alt text for missing avatars -->
+  <text id="no-avatar">Pas d'image</text>
 </textset-content>

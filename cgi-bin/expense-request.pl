@@ -8,7 +8,9 @@ use POSIX qw(strftime);
 # -----------------------------------------------------------------------------
 
 my %names = (
+  "bako" => "Eszter Bako",
   "coughlan" => "Shane Coughlan",
+  "evdokimova" => "Natalia Evdokimova",
   "gerloff" => "Karsten Gerloff",
   "gollowitzer" => "Martin Gollowitzer",
   "greve" => "Georg Greve",
@@ -16,20 +18,24 @@ my %names = (
   "grote" => "Torsten Grote",
   "harmuth" => "Stefan Harmuth",
   "holz" => "Christian Holz",
+  "jean" => "Nicolas Jean",
   "jensch" => "Thomas Jensch",
+  "kekalainen" => "Otto Kekäläinen",
   "kersten" => "Rainer Kersten",
-  "kekalainen" => "Otto Kekalainen",
   "kirschner" => "Matthias Kirschner",
   "klein" => "Julia Klein",
+  "kneissl" => "Jürgen Kneissl",
   "machon" => "Pablo Machón",
-  "mierlus" => "Alina Mierlus",
-  "morant" => "Benjamin Morant",
   "mueller" => "Reinhard Müller",
+  "naranjo" => "Diego Naranjo",
   "oberg" => "Jonas Öberg",
   "ohnewein" => "Patrick Ohnewein",
+  "polvani" => "Alessandro Polvani",
   "reiter" => "Bernhard Reiter",
   "roy" => "Hugo Roy",
   "sandklef" => "Henrik Sandklef",
+  "suklje" => "Matija Šuklje",
+  "tuke" => "Sam Tuke",
   "weiden" => "Fernanda Weiden",
 );
 
@@ -38,60 +44,56 @@ my %names = (
 # -----------------------------------------------------------------------------
 
 my %responsible = (
-  "ADMIN-DUS" => "director",
-  "ADMIN-TECH" => "director",
-  "ADMIN-GA" => "director",
-  "ADMIN-COORDINATION" => "director",
+  "ADMIN-PERSONELL" => "gerloff",
+  "ADMIN-OFFICE" => "gerloff",
+  "ADMIN-TRAVEL" => "gerloff",
+  "ADMIN-COORDINATION" => "gerloff",
+  "ADMIN-GA" => "gerloff",
+  "ADMIN-TECH" => "gerloff",
+  "ADMIN-FUNDRAISING" => "gerloff",
   "PA-PERSONELL" => "kirschner",
   "PA-OFFICE" => "kirschner",
   "PA-TRAVEL" => "kirschner",
   "PA-MATERIAL" => "kirschner",
   "PA-CAMPAIGNS" => "kirschner",
-  "PA-GNUVOX" => "kirschner",
   "FELLOWSHIP-PERSONELL" => "kirschner",
-  "FELLOWSHIP-OFFICE" => "kirschner",
   "FELLOWSHIP-MATERIAL" => "kirschner",
   "FELLOWSHIP-CONF" => "kirschner",
   "FELLOWSHIP-LOCAL" => "kirschner",
-  "FTF-PERSONELL" => "coughlan",
-  "FTF-OFFICE" => "coughlan",
-  "FTF-TRAVEL" => "coughlan",
-  "FTF-CONF" => "coughlan",
-  "FTF-TRANS" => "coughlan",
-  "FTF-ECONOMIC" => "coughlan",
+  "LEGAL-PERSONELL" => "suklje",
+  "LEGAL-OFFICE" => "suklje",
+  "LEGAL-TRAVEL" => "suklje",
+  "LEGAL-CONF" => "suklje",
   "POLICY-PERSONELL" => "gerloff",
   "POLICY-OFFICE" => "gerloff",
-  "POLICY-CAMPAIGNS" => "gerloff",
   "POLICY-TRAVEL" => "gerloff",
-  "MERCHANDISE" => "director",
+  "MERCHANDISE" => "gerloff",
 );
 
 my %account = (
-  "ADMIN-DUS" => "6xxx",
-  "ADMIN-TECH" => "6xxx",
-  "ADMIN-GA" => "6710",
-  "ADMIN-COORDINATION" => "6xxx",
+  "ADMIN-PERSONELL" => "2501",
+  "ADMIN-OFFICE" => "2502",
+  "ADMIN-TRAVEL" => "2503",
+  "ADMIN-COORDINATION" => "2504",
+  "ADMIN-GA" => "2505",
+  "ADMIN-TECH" => "2506",
+  "ADMIN-FUNDRAISING" => "2507",
   "PA-PERSONELL" => "2511",
   "PA-OFFICE" => "2512",
   "PA-TRAVEL" => "2513",
   "PA-MATERIAL" => "2514",
   "PA-CAMPAIGNS" => "2515",
-  "PA-GNUVOX" => "2516",
   "FELLOWSHIP-PERSONELL" => "2521",
-  "FELLOWSHIP-OFFICE" => "2522",
   "FELLOWSHIP-MATERIAL" => "2524",
   "FELLOWSHIP-CONF" => "2525",
   "FELLOWSHIP-LOCAL" => "2526",
-  "FTF-PERSONELL" => "2531",
-  "FTF-OFFICE" => "2532",
-  "FTF-TRAVEL" => "2533",
-  "FTF-CONF" => "2535",
-  "FTF-TRANS" => "2536",
-  "FTF-ECONOMIC" => "2537",
+  "LEGAL-PERSONELL" => "2531",
+  "LEGAL-OFFICE" => "2532",
+  "LEGAL-TRAVEL" => "2533",
+  "LEGAL-CONF" => "2535",
   "POLICY-PERSONELL" => "2541",
   "POLICY-OFFICE" => "2542",
   "POLICY-TRAVEL" => "2543",
-  "POLICY-CAMPAIGNS" => "2545",
   "MERCHANDISE" => "8154",
 );
 
@@ -119,11 +121,11 @@ my $account2 = "";
 if ($budget2 ne "NONE") {
   $account2 = $account{$budget2};
 }
-my $reference = "er$account1";
+my $reference = "er.$date." . substr $time, -3;
+$reference .= ".$account1";
 if ($budget2 ne "NONE") {
   $reference .= "+$account2";
 }
-$reference .= ".$date." . substr $time, -3;
 
 my $to1 = $responsible{$budget1};
 my $to2 = "";
@@ -199,7 +201,7 @@ close MAIL;
 # -----------------------------------------------------------------------------
 
 print "Content-type: text/html\n\n";
-print "Your request was sent. Thank you.<br /><br />";
+print "Your request $reference was sent. Thank you.<br /><br />";
 print "WHO: $names{$who}<br />\n\n";
 print "WHAT: $what<br />\n\n";
 print "WHEN: $when<br />\n\n";

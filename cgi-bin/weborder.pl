@@ -10,15 +10,17 @@ use POSIX qw(strftime);
 my $query = new CGI;
 
 # Search robots sometimes don't fill in the _shipping field
-if (!$query->param("_shipping")) {
-  die "Invalid order, possibly a search engine robot.";
-}
+# EDIT 2011-09-19 (Penny) useless, since there's a option preselected
+#if (!$query->param("_shipping")) {
+#  die "Invalid order, possibly a search engine robot.";
+#}
 
 my $date = strftime "%Y-%m-%d", localtime;
 my $time = strftime "%s", localtime;
 my $reference = "order.$date." . substr $time, -5;
 my $buyer = $query->param("name");
 my $amount = 0;
+my $discount = 0;
 
 # -----------------------------------------------------------------------------
 # Calculate amount and generate mail to office
@@ -34,15 +36,25 @@ if (not $query->param("url")) {
   foreach $name ($query->param) {
     $value = $query->param($name);
     if (not $name =~ /^_/ and $value) {
-      print MAIL "$name: $value\n";
       my $price = $query->param("_$name");
-      # if ($name ne "shipping") {
-      #   $price = $price * 0.75;
-      #  }
+
+      # EDIT 2010-09-19 (Penny) Change the "shipping"-value to it's price so it can be
+      # autodetected (otherwise "value" would always be "1" regardless of users choice)
+      if ($name ne "shipping") {
+        print MAIL "$name: $value\n";
+      } else {
+        print MAIL "$name: $price\n";
+      }
+
+      if ($discount > 0 && $name ne "shipping") {
+        $price *= (1 - ($discount / 100));
+      }
+
       $amount += $value * $price;
     }
   }
-  # print MAIL "discount: 25\n";
+
+  print MAIL "discount: $discount\n";
   $amount = sprintf "%.2f", $amount;
   print MAIL "Total amount: $amount\n";
   close MAIL;

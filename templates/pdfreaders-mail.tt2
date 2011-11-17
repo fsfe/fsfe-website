@@ -1,6 +1,6 @@
-From: web@fsfeurope.org
+From: hugo@fsfe.org
 MIME-Version: 1.0
-To: pdfreaders@lists.fsfe.org
+To: pdfrbugs@q.fsfe.org
 Subject: [PDFReaders] New bug for [% institution_country %]
 Content-Type: text/plain; charset=utf-8
 Content-Transfer-Encoding: 8bit
@@ -16,6 +16,7 @@ Please validate and use the following XML snippet if appropriate:
 <bug institution-name="[% institution_name %]"
      institution-address="[% institution_address %]"
      institution-url="[% institution_url %]"
+     institution-email="[% institution_email %]"
      opened="[% opened %]"
      closed=""
      name="[% name %]"
@@ -23,5 +24,3 @@ Please validate and use the following XML snippet if appropriate:
      comment="[% comment %]"
      />
 ---
-
-

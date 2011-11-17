@@ -373,7 +373,7 @@
             <xsl:attribute name="class">fellowship</xsl:attribute>
             <xsl:element name="a">
               <xsl:attribute name="href">http://fellowship.fsfe.org/</xsl:attribute>
-              Fellowship
+              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fellowship/fellowship'" /></xsl:call-template>
             </xsl:element>
             <xsl:element name="ul">
           

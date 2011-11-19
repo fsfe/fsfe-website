@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <html>
   <head>
-    <title>FSFE - Information pour les webmestres</title>
+    <title>Information pour les webmestres - FSFE</title>
   </head>
   <body>
     
@@ -44,10 +44,10 @@ Les volontaires qui souhaitent s'engager plus sérieusement dans la maintenance 
 
 <ul>
 <li>
-<a href="http://www.perl.org" target="_blank">Perl</a> – pour la maintenance et les scripts de création des pages&#160;;
+<a href="http://www.perl.org">Perl</a> – pour la maintenance et les scripts de création des pages&#160;;
 </li>
 <li>
-<a href="http://www.apache.org" target="_blank">Apache</a> – le serveur web.
+<a href="http://www.apache.org">Apache</a> – le serveur web.
 </li>
 </ul>
 
@@ -74,7 +74,7 @@ Les volontaires qui souhaitent s'engager plus sérieusement dans la maintenance 
     <h2>Accéder aux pages Web</h2>
 
     <p>
-      Les fichiers sources sont stoqués sur le <a href="https://svn.fsfe.org/fsfe-web">dépôt subversion fsfe-web</a>, lui-même hébergé sur le serveur subversion de la FSFE. D'autres services sont disponibles sur l'instance <a href="https://trac.fsfe.org/fsfe-web">Trac</a>.
+      Les fichiers sources sont stockés sur le <a href="https://svn.fsfe.org/fsfe-web">dépôt subversion fsfe-web</a>, lui-même hébergé sur le serveur subversion de la FSFE. D'autres services sont disponibles sur l'instance <a href="https://trac.fsfe.org/fsfe-web">Trac</a>.
     </p>
     <p>
       Pour avoir accès à ces outils, suivez les instructions suivantes&#160;:
@@ -82,11 +82,11 @@ Les volontaires qui souhaitent s'engager plus sérieusement dans la maintenance 
     <ul>
       <li>
         <p>
-	If you are a <a href="http://fellowship.fsfe.org">Fellow of the FSFE</a>
 	Si vous êtes un <a href="http://fellowship.fsfe.org">Fellow de la FSFE</a>, vous avez déjà accès en lecture à subversion et au trac. Il vous suffit de vous connecter avec vos noms d'utilisateurs et mot de passe habituels.
         </p>
 	<p>
-	Pour obtenir un accès en écriture au dépôt subversion, au wiki du Trac et au système de tickets, envoyez votre demande à <b>system-hackers@fsfeurope.org</b>
+	Pour obtenir un accès en écriture au dépôt subversion, au wiki du Trac et au système de tickets, envoyez votre demande à <a
+          href="mailto:system-hackers@fsfeurope.org">system-hackers@fsfeurope.org</a> (les membres de l'équipe administrative de la FSFE ont accès en écriture).
         </p>
       </li>
       <li>
@@ -117,6 +117,20 @@ Les volontaires qui souhaitent s'engager plus sérieusement dans la maintenance 
     <h2>Travailler avec le dépôt</h2>
 
     <p>
+      Dans subversion, <a
+      href="http://svnbook.red-bean.com/en/1.5/svn.advanced.props.special.keywords.html">
+      la substitution de mot-clé</a> doit être activée volontairement sur chaque fichier. Comme nous utilisons quelques mot-clés sur les fichiers <var>.xml</var> et <var>.xhtml</var> (par exemple le mot-clé <var>$</var><var>Author</var><var>$</var> en pied de page), vous devriez activer les mot-clés automatique en ajoutant dans votre fichier local <var>~/.subversion/config</var>&#160;:
+    </p>
+
+    <pre class="file">
+enable-auto-props = yes
+
+[auto-props]
+*.xml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xml;svn:eol-style=native
+*.xhtml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xhtml;svn:eol-style=native
+    </pre>    
+    
+    <p>
     Après avoir récupéré le dépôt une première fois, vous n'aurez qu'à exécuter chaque fois
     </p>
     
@@ -142,15 +156,6 @@ Les volontaires qui souhaitent s'engager plus sérieusement dans la maintenance 
       et un éditeur s'ouvrira, vous permettant d'indiquer une courte description des changements apportés.
       </p>
 
-      <p>Avec subversion, la <a href="http://svnbook.red-bean.com/en/1.5/svn.advanced.props.special.keywords.html">substitution de >substitution de mots-clés (en anglais)</a> doit être explicitement définie pour chaque fichier. Comme nous utilisons quelques mots-clés dans les fichiers <var>.xml</var> et <var>.xhtml</var> (par exemple, le mot-clé <var>$</var><var>Author</var><var>$</var> en pied de page), vous pouvez le définir une fois pour toute en ajoutant la section suivante à votre fichier de configuration de SVN <var>~/.subversion/config</var>.</p>
-      
-      <pre class="file">
-      enable-auto-props = yes
-
-      [auto-props]
-      *.xml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xml;svn:eol-style=native
-      *.xhtml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xhtml;svn:eol-style=native
-      </pre>
 
     <p>
       Si vous êtes habitué à travailler avec CVS, vous vous adapterez facilement à SVN. Comme vous l'avez constaté, les commandes de base sont très ressemblantes. Pour en savoir plus, vous pouvez consulter un aperçu des différences entre CVS et SVN sur <a href="http://svnbook.red-bean.com/en/1.5/svn.forcvs.html">Subversion for
@@ -276,6 +281,11 @@ Les volontaires qui souhaitent s'engager plus sérieusement dans la maintenance 
     Coordonnez-vous avec les autres personnes qui ont également un accès CVS afin de vous assurer que les traductions et modifications apportées par les contributeurs qui n'ont pas d'accès en écriture sont expédiées correctement après avoir été relues. Bien sûr, vérifiez ces fichiers avant de les envoyer comme vous vérifiez vos propres fichiers.
     </p>
 
+    <h2>Créer des évènements et des actualités taguées, mise en place d'une page nationale</h2>
+    
+    <p>
+      Veuillez lire <a href="/contribute/web/tagging.html">le manuel dédié</a> à cet objectif.
+    </p>
 
 <h2>Informations complémentaires</h2>
 

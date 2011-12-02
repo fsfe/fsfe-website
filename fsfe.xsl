@@ -216,10 +216,10 @@
         
         <xsl:element name="p">
  
-          <span class="label"> <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'published'" /></xsl:call-template>&#160;</span><xsl:value-of select="/buildinfo/document/head/meta[@name='publication-date']/@content" />
+          <span class="label"> <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'published'" /></xsl:call-template></span>&#160;<xsl:value-of select="/buildinfo/document/head/meta[@name='publication-date']/@content" />
           
           <xsl:if test = "string(/buildinfo/document/head/meta[@name='author-name-1']/@content)">
-            <span class="label"><br /><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'author'" />&#160;</xsl:call-template> </span>
+            <span class="label"><br /><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'author'" /></xsl:call-template> </span>&#160;
             <xsl:choose>
               <xsl:when test="/buildinfo/document/head/meta[@name='author-link-1']">
                 <xsl:variable name="author-link-1" select="/buildinfo/document/head/meta[@name='author-link-1']/@content" />

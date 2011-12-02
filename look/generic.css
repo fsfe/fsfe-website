@@ -62,7 +62,7 @@ a:hover {
 }
 
 a:visited {
-  color: rgb(153,186,206);
+  color: rgb(116,140,156);
 }
 
 a img {
@@ -1536,7 +1536,7 @@ tr.highlighted {
 
 .people img {
   float: left;
-  margin-right: 10px;
+  margin: 5px 10px 0px 0px;
   width: 48px;
   height: 48px;
   border: 1px solid black;

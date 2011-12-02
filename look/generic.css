@@ -62,7 +62,7 @@ a:hover {
 }
 
 a:visited {
-  color: rgb(153,186,206);
+  color: rgb(116,140,156);
 }
 
 a img {
@@ -1368,6 +1368,19 @@ ul.overview {
   padding-left: 0;
 }
 
+p#article-attachmt {
+  float: right;
+  margin-top: -3em;
+}
+
+/*for consistency, please make sure it looks like .people img */
+img.author-avatar {
+  float: left;
+  margin: 0px 0.5em 0px 0px;
+  width: 48px;
+  height: 48px;
+  border: 1px solid black;
+}
 
 /* identica feed */
 #identica-feed {
@@ -1536,7 +1549,7 @@ tr.highlighted {
 
 .people img {
   float: left;
-  margin-right: 10px;
+  margin: 5px 10px 0px 0px;
   width: 48px;
   height: 48px;
   border: 1px solid black;

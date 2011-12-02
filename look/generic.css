@@ -62,7 +62,7 @@ a:hover {
 }
 
 a:visited {
-  color: rgb(116,140,176);
+  color: rgb(116,140,156);
 }
 
 a img {
@@ -1366,6 +1366,11 @@ ul.overview {
 
 #article-metadata span.label:first-child {
   padding-left: 0;
+}
+
+#article-attachmt p {
+  float: right;
+  top: -2em;
 }
 
 

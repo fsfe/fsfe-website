@@ -216,10 +216,10 @@
         
         <xsl:element name="p">
  
-          <span class="label"> <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'published'" /></xsl:call-template>: </span><xsl:value-of select="/buildinfo/document/head/meta[@name='publication-date']/@content" />
+          <span class="label"> <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'published'" /></xsl:call-template>&#160;</span><xsl:value-of select="/buildinfo/document/head/meta[@name='publication-date']/@content" />
           
           <xsl:if test = "string(/buildinfo/document/head/meta[@name='author-name-1']/@content)">
-            <span class="label"><br /><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'author'" /></xsl:call-template> </span>
+            <span class="label"><br /><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'author'" />&#160;</xsl:call-template> </span>
             <xsl:choose>
               <xsl:when test="/buildinfo/document/head/meta[@name='author-link-1']">
                 <xsl:variable name="author-link-1" select="/buildinfo/document/head/meta[@name='author-link-1']/@content" />
@@ -259,9 +259,12 @@
           </xsl:if>
           
           <xsl:if test = "string(/buildinfo/document/head/meta[@name='pdf-link']/@content)">
-            <span class="label">PDF: </span>
-            <xsl:variable name="pdf-link" select="/buildinfo/document/head/meta[@name='pdf-link']/@content" />
-            <a href='{$pdf-link}'>download</a>
+            <xsl:element name="p">
+              <xsl:attribute name="id">article-attachmt</xsl:attribute>
+              <span class="label">PDF: </span>
+              <xsl:variable name="pdf-link" select="/buildinfo/document/head/meta[@name='pdf-link']/@content" />
+              <a href='{$pdf-link}'>download</a>
+            </xsl:element><!-- </p> -->
           </xsl:if>
           
         </xsl:element> <!-- </p> -->

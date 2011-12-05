@@ -41,7 +41,7 @@ if [[ -n "$BUILD_STARTED" && "10#${BUILD_STARTED}" -gt 10 ]] ; then
 fi
 
 # If some build script is already running, don't run it.
-if ps -C "build-df.sh,build-test.sh,build.sh" -o pid= | grep -q -v "$$"; then
+if ps -C "build-df.sh,build-df-test.sh,build-test.sh,build.sh" -o pid= | grep -q -v "$$"; then
   echo "$(date) Another build script is currently running. Build postponed."
   exit
 fi

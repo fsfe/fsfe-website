@@ -7,10 +7,10 @@
 # however, is done by the Perl script build.pl.
 # -----------------------------------------------------------------------------
 
-SOURCE=/home/ato/fsfe/test
-DEST=/home/ato/fsfe/build/html
-TMP=/home/ato/fsfe/build/tmp.$$
-STATUS=/home/ato/fsfe/build/status
+SOURCE=/home/www/fsfe
+DEST=/home/www/html
+TMP=/home/www/tmp.$$
+STATUS=/var/www/web
 MAKEFILE_PL=${SOURCE}/Makefile.PL
 SVNUPOUTFILE=/tmp/fsfe-svnup-out
 SVNUPERRFILE=/tmp/fsfe-svnup-err

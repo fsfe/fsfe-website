@@ -321,9 +321,9 @@ sub process {
   my ($file, $langs) = @_;
 
   print STDERR "Building $file.. \n" unless $opts{q};
+
   # Create the root note for the above mentioned XML file (used to feed the XSL
   # transformation).
-
   my $dom = XML::LibXML::Document->new("1.0", "iso-8859-1");
   my $root = $dom->createElement("buildinfo");
   $dom->setDocumentElement($root);
@@ -435,6 +435,11 @@ sub process {
              (stat($source))[9] && $opts{u} && ! -f "$opts{i}/$file.xsl" ) {
 	next;
       }
+
+      use File::Basename;
+      my $directory = dirname($source);
+      my $subsite_style_doc = $directory . "/" . basename($directory) . ".xsl";
+      die($subsite_style_doc);
 
       #
       # Here begins automated magic for those pages which we need to
@@ -572,6 +577,10 @@ sub process {
 	  $stylesheet->output_file($results, "$opts{o}/$dir/$file.$lang.ics")
 	    unless $opts{n};
 	}
+
+      } elsif (-f $subsite_style_doc) {
+
+	die("Yiiiha!!!!");
 
       } else {
 	#

@@ -445,6 +445,19 @@ sub process {
       }
 
       #
+      # If there is a stylesheet (XSL) in any directory with the same
+      # name as the directory (e.g. the directory is called "foo" and
+      # there is a file in that directory called "foo/foo.xsl", this
+      # stylesheet will replace the global stylesheet "/fsfe.xsl".
+      #
+      my $subsite_stylesheet;
+      my $subsite_style_doc_file = dirname($source)."/".basename(dirname($source)).".xsl";
+      if (-f $subsite_style_doc_file && ! -f "$opts{i}/$file.xsl") {
+	my $subsite_style_doc = $parser->parse_file($subsite_style_doc_file);
+	$subsite_stylesheet = $xslt_parser->parse_stylesheet($subsite_style_doc);
+      }
+
+      #
       # Here begins automated magic for those pages which we need to
       # assemble other sets of informations for first (automatically
       # updated pages).
@@ -831,8 +844,14 @@ sub process {
 
       print "Writing: $opts{o}/$dir/$file.$lang.html\n" if $opts{d};
 
-      $global_stylesheet->output_file($results, "$opts{o}/$dir/$file.$lang.html")
-	unless $opts{n};
+      unless ($opts{n}) {
+	if ($subsite_stylesheet) {
+	  $subsite_stylesheet->output_file($results, "$opts{o}/$dir/$file.$lang.html");
+	} else {
+	  $global_stylesheet->output_file($results, "$opts{o}/$dir/$file.$lang.html");
+	}
+      }
+
       # Add foo.html.xx link which is used by Apache's MultiViews option when
       # a user enters foo.html as URL.
       link("$opts{o}/$dir/$file.$lang.html", "$opts{o}/$dir/$file.html.$lang")

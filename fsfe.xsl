@@ -9,7 +9,7 @@
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
   
   <!-- The top level element of the input file is "buildinfo" -->
-  <xsl:template match=0"buildinfo">
+  <xsl:template match="buildinfo">
     <xsl:apply-templates select="node()"/>
   </xsl:template>
 

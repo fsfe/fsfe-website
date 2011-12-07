@@ -17,6 +17,7 @@ my %names = (
   "groot" => "Adriaan de Groot",
   "grote" => "Torsten Grote",
   "harmuth" => "Stefan Harmuth",
+  "husovec" => "Martin Husovec",
   "holz" => "Christian Holz",
   "jean" => "Nicolas Jean",
   "jensch" => "Thomas Jensch",

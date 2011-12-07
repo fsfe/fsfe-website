@@ -103,11 +103,10 @@
     </xsl:copy>
   </xsl:template>
   
-  
   <!-- Modify H1 -->
   <xsl:template match="h1">
     
-    <!-- Apply news page PRE-h1 rules -->
+    <!-- Apply news page PRE-rules -->
     <xsl:if test="string(/buildinfo/document/@newsdate) and
                     (not(string(/buildinfo/document/@type)) or
                     /buildinfo/document/@type != 'newsletter')">
@@ -123,7 +122,7 @@
       
     </xsl:if>
     
-    <!-- Apply newsletter page PRE-h1 rules -->
+    <!-- Apply newsletter page PRE-rules -->
     <xsl:if test="string(/buildinfo/document/@newsdate) and /buildinfo/document/@type = 'newsletter'">
       <xsl:element name="p">
         <xsl:attribute name="id">category</xsl:attribute>
@@ -132,52 +131,6 @@
           <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'newsletter'" /></xsl:call-template>
         </xsl:element>
       </xsl:element>
-    </xsl:if>
-    
-    
-    <!-- tag-based bread crumbs -->
-    <xsl:if test="/buildinfo/document/tags/tag">
-      <xsl:element name="p">
-        
-        <xsl:attribute name="id">category</xsl:attribute>
-        
-        
-        <!--  add *project* information
-              name and link of the projects are fetched from projects/*/project:global (see fsfe.sources) -->
-        
-        <xsl:variable name="projectid" select="/buildinfo/document/tags/tag[ . = /buildinfo/set/project[./link]/@id ]" />
-        
-        <xsl:if test="$projectid != ''">
-          
-          <xsl:element name="a">
-            <xsl:attribute name="href"><xsl:value-of select="/buildinfo/set/project[@id = $projectid]/link" /></xsl:attribute>
-            <xsl:value-of select="/buildinfo/set/project[@id = $projectid]/title" />
-          </xsl:element>
-          
-          <xsl:text> &gt; </xsl:text>
-          
-        </xsl:if>
-        
-        
-        <!-- add location information -->
-        
-        <xsl:for-each select="/buildinfo/document/tags/tag[ . = /buildinfo/set/tag[@type='country' and @link]/@id ]">
-          
-          <xsl:variable name="countryid" select="node()" />
-          
-          <xsl:if test="$countryid != ''">
-            
-            <xsl:element name="a">
-              <xsl:attribute name="href"><xsl:value-of select="/buildinfo/set/tag[@id = $countryid]/@link" /></xsl:attribute>
-              <xsl:value-of select="/buildinfo/set/tag[@id = $countryid]/@name" />
-            </xsl:element>
-            
-          </xsl:if>
-          
-        </xsl:for-each>
-        
-        
-      </xsl:element> <!-- </p> -->
     </xsl:if>
     
     
@@ -215,13 +168,8 @@
         <xsl:attribute name="id">article-metadata</xsl:attribute>
         
         <xsl:element name="p">
- 
-          <!-- Date of publication -->
-          <span class="label"> <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'published'" /></xsl:call-template></span>&#160;<xsl:value-of select="/buildinfo/document/head/meta[@name='publication-date']/@content" />
-          
-          <!-- names and links to the author(s) -->
           <xsl:if test = "string(/buildinfo/document/head/meta[@name='author-name-1']/@content)">
-            <span class="label"><br /><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'author'" /></xsl:call-template> </span>&#160;
+            <span class="label"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'author'" /></xsl:call-template>: </span>
             <xsl:choose>
               <xsl:when test="/buildinfo/document/head/meta[@name='author-link-1']">
                 <xsl:variable name="author-link-1" select="/buildinfo/document/head/meta[@name='author-link-1']/@content" />
@@ -237,12 +185,12 @@
           <xsl:if test = "string(/buildinfo/document/head/meta[@name='author-name-2']/@content)">
             <xsl:choose>
               <xsl:when test="/buildinfo/document/head/meta[@name='author-link-2']">
-                <xsl:variable name="author-link-2" select="/buildinfo/document/head/meta[@name='author-link-2']/@content" />, 
-                  <a rel='author' href='{$author-link-2}'>
+                <xsl:variable name="author-link-2" select="/buildinfo/document/head/meta[@name='author-link-2']/@content" />
+                , <a rel='author' href='{$author-link-2}'>
                 <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name-2']/@content" /> </a> 
               </xsl:when>
-              <xsl:otherwise>, 
-                <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name-2']/@content" /> 
+              <xsl:otherwise>
+                , <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name-2']/@content" /> 
               </xsl:otherwise>
             </xsl:choose>
           </xsl:if>
@@ -250,27 +198,25 @@
           <xsl:if test = "string(/buildinfo/document/head/meta[@name='author-name-3']/@content)">
             <xsl:choose>
               <xsl:when test="/buildinfo/document/head/meta[@name='author-link-3']">
-                <xsl:variable name="author-link-3" select="/buildinfo/document/head/meta[@name='author-link-3']/@content" />, 
-                  <a rel='author' href='{$author-link-3}'>
+                <xsl:variable name="author-link-3" select="/buildinfo/document/head/meta[@name='author-link-3']/@content" />
+                , <a rel='author' href='{$author-link-3}'>
                 <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name-3']/@content" /> </a> 
               </xsl:when>
-              <xsl:otherwise>, 
-                <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name-3']/@content" /> 
+              <xsl:otherwise>
+                , <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name-3']/@content" /> 
               </xsl:otherwise>
             </xsl:choose>
           </xsl:if>
-        <!-- END OF names and links to the author(s) -->
-        </xsl:element> <!-- </p> -->
+      
+          <span class="label"> <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'published'" /></xsl:call-template>: </span><xsl:value-of select="/buildinfo/document/head/meta[@name='publication-date']/@content" />
           
-        <xsl:if test = "string(/buildinfo/document/head/meta[@name='pdf-link']/@content)">
-          <xsl:element name="p">
-            <xsl:attribute name="id">article-attachmt</xsl:attribute>
+          <xsl:if test = "string(/buildinfo/document/head/meta[@name='pdf-link']/@content)">
             <span class="label">PDF: </span>
             <xsl:variable name="pdf-link" select="/buildinfo/document/head/meta[@name='pdf-link']/@content" />
             <a href='{$pdf-link}'>download</a>
-          </xsl:element><!-- </p> -->
-        </xsl:if>
-
+          </xsl:if>
+          
+        </xsl:element> <!-- </p> -->
       </xsl:element> <!-- </div> -->
     </xsl:if>
     <!-- End Apply article rules -->
@@ -427,10 +373,10 @@
             <xsl:attribute name="class">fellowship</xsl:attribute>
             <xsl:element name="a">
               <xsl:attribute name="href">http://fellowship.fsfe.org/</xsl:attribute>
-              Support FSFE
+              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fellowship/fellowship'" /></xsl:call-template>
             </xsl:element>
             <xsl:element name="ul">
-              
+          
               <xsl:variable name="menu"><xsl:value-of select="@id" /></xsl:variable>
             <xsl:for-each select="/buildinfo/menuset/menu[@parent='fellowship']">
               <!--<xsl:sort select="@id"/>-->
@@ -634,12 +580,8 @@
         <!-- Outdated note -->
         <xsl:if test="/buildinfo/@outdated='yes'">
           <xsl:element name="p">
-            <xsl:attribute name="id">outdated-notice</xsl:attribute>
-            
-            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'outdated'" /></xsl:call-template>
-            
-            <xsl:copy-of select="/buildinfo/document/outdated-info" />
-            
+        <xsl:attribute name="id">outdated-notice</xsl:attribute>
+        <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'outdated'" /></xsl:call-template>
           </xsl:element>
         </xsl:if>
         

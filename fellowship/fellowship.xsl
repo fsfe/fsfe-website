@@ -327,10 +327,10 @@
             <xsl:attribute name="class">fsfe</xsl:attribute>
             <xsl:element name="a">
               <xsl:attribute name="href">/</xsl:attribute>
-              FSFE
+              <xsl:text>FSFE</xsl:text>
             </xsl:element>
-            <xsl:element name="ul">
-	      
+
+            <xsl:element name="ul">	      
               <xsl:variable name="menu"><xsl:value-of select="@id" /></xsl:variable>
 	      <xsl:for-each select="/buildinfo/menuset/menu[@parent='fsfe']">
 		<!--<xsl:sort select="@id"/>-->
@@ -338,29 +338,33 @@
 		<xsl:variable name="id"><xsl:value-of select="@id" /></xsl:variable>
 		<xsl:element name="li">
 		  <xsl:choose>
+
+		    <!-- <menu id="fsfe" /> (illformed XML header for menu) -->
 		    <xsl:when test="not(string(.))">
 		      <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="$id" /></xsl:call-template>
 		    </xsl:when>
+
+		    <!-- Selected menu item, we're on this page -->
 		    <xsl:when test=". = concat(/buildinfo/@filename ,'.html')">
 		      <xsl:element name="span">
 			<xsl:attribute name="id">selected</xsl:attribute>
 			<xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="$id" /></xsl:call-template>
 		      </xsl:element>
 		    </xsl:when>
+
+		    <!-- Regular menu item, nonselected -->
 		    <xsl:otherwise>
 		      <xsl:element name="a">
 			<xsl:attribute name="href"><xsl:value-of select="." /></xsl:attribute>
 			<xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="$id" /></xsl:call-template>
 		      </xsl:element>
 		    </xsl:otherwise>
-		  </xsl:choose>
-		  
-		</xsl:element> <!-- /li -->
+
+		  </xsl:choose>		  
+		</xsl:element>
 	      </xsl:for-each>
-
-              </xsl:element>
-
-          </xsl:element> <!-- /li -->
+	    </xsl:element>
+          </xsl:element>
 
           <!-- Planet portal menu -->
           <xsl:element name="li">

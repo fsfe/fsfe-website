@@ -845,11 +845,11 @@ sub process {
       print "Writing: $opts{o}/$dir/$file.$lang.html\n" if $opts{d};
 
       unless ($opts{n}) {
-	if ($subsite_stylesheet) {
-	  $subsite_stylesheet->output_file($results, "$opts{o}/$dir/$file.$lang.html");
-	} else {
+#	if ($subsite_stylesheet) {
+#	  $subsite_stylesheet->output_file($results, "$opts{o}/$dir/$file.$lang.html");
+#	} else {
 	  $global_stylesheet->output_file($results, "$opts{o}/$dir/$file.$lang.html");
-	}
+#	}
       }
 
       # Add foo.html.xx link which is used by Apache's MultiViews option when

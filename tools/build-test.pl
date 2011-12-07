@@ -444,10 +444,8 @@ sub process {
       #
       my $subsite_stylesheet;
       my $subsite_style_doc_file = dirname("$opts{i}/$file.$lang.xhtml")."/".basename(dirname("$opts{i}/$file.$lang.xhtml")).".xsl";
-      print $subsite_style_doc_file . "\n";
-      print "$opts{i}/$file.xsl\n";
       if (-f $subsite_style_doc_file && ! -f "$opts{i}/$file.xsl") {
-	print "found style doc file\n";
+	print "Subsite found: $subsite_style_doc_file, and there is no $opts{i}/$file.xsl\n";
       	my $subsite_style_doc = $parser->parse_file($subsite_style_doc_file);
       	$subsite_stylesheet = $xslt_parser->parse_stylesheet($subsite_style_doc);
       }

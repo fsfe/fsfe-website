@@ -24,3 +24,8 @@ h4 {
   background-position: bottom left;
   height: 250px;
 }
+
+/* display Fellowship sidebar menu */
+#menu ul li.fellowship ul {
+  display: block;
+}

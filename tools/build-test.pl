@@ -450,8 +450,9 @@ sub process {
       # there is a file in that directory called "foo/foo.xsl", this
       # stylesheet will replace the global stylesheet "/fsfe.xsl".
       #
+      my $new_source = $source;
       my $subsite_stylesheet;
-      my $subsite_style_doc_file = dirname($source)."/".basename(dirname($source)).".xsl";
+      my $subsite_style_doc_file = dirname($new_source)."/".basename(dirname($new_source)).".xsl";
       if (-f $subsite_style_doc_file && ! -f "$opts{i}/$file.xsl") {
 	my $subsite_style_doc = $parser->parse_file($subsite_style_doc_file);
 	$subsite_stylesheet = $xslt_parser->parse_stylesheet($subsite_style_doc);

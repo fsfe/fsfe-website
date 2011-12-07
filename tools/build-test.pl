@@ -235,7 +235,7 @@ foreach my $i (1..$threads) {
   $procs[$i]{parent} = new IO::Handle;
 
   socketpair($procs[$i]{child}, $procs[$i]{parent}, AF_UNIX,
-             STREAM, PF_UNSPEC);
+             SOCK_STREAM, PF_UNSPEC);
 
   $procs[$i]{child}->autoflush(1);
   $procs[$i]{parent}->autoflush(1);

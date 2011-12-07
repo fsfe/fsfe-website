@@ -450,12 +450,12 @@ sub process {
       # there is a file in that directory called "foo/foo.xsl", this
       # stylesheet will replace the global stylesheet "/fsfe.xsl".
       #
-      my $subsite_stylesheet;
-      my $subsite_style_doc_file = dirname("$opts{i}/$file.$lang.xhtml")."/".basename(dirname("$opts{i}/$file.$lang.xhtml")).".xsl";
-      if (-f $subsite_style_doc_file && ! -f "$opts{i}/$file.xsl") {
-      	my $subsite_style_doc = $parser->parse_file($subsite_style_doc_file);
-      	$subsite_stylesheet = $xslt_parser->parse_stylesheet($subsite_style_doc);
-      }
+      # my $subsite_stylesheet;
+      # my $subsite_style_doc_file = dirname("$opts{i}/$file.$lang.xhtml")."/".basename(dirname("$opts{i}/$file.$lang.xhtml")).".xsl";
+      # if (-f $subsite_style_doc_file && ! -f "$opts{i}/$file.xsl") {
+      # 	my $subsite_style_doc = $parser->parse_file($subsite_style_doc_file);
+      # 	$subsite_stylesheet = $xslt_parser->parse_stylesheet($subsite_style_doc);
+      # }
 
       #
       # Here begins automated magic for those pages which we need to

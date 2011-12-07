@@ -674,7 +674,7 @@
     <!-- Footer -->
     <div id="footer">
       <div id="notice">
-        <p>
+        <p>FROM FELLOWSHIP.XSL!!
           Copyright © 2001-2011 <a href="/">Free Software
         Foundation Europe</a>. <strong>
         <a href="/contact/contact.html">

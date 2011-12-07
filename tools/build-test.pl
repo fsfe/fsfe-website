@@ -450,6 +450,10 @@ sub process {
       	$subsite_stylesheet = $xslt_parser->parse_stylesheet($subsite_style_doc);
       }
 
+      if ($subsite_stylesheet) {
+	print "Subsite stylesheet loaded!\n";
+      }
+
       #
       # Here begins automated magic for those pages which we need to
       # assemble other sets of informations for first (automatically

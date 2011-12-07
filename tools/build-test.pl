@@ -445,7 +445,6 @@ sub process {
       my $subsite_stylesheet;
       my $subsite_style_doc_file = dirname("$opts{i}/$file.$lang.xhtml")."/".basename(dirname("$opts{i}/$file.$lang.xhtml")).".xsl";
       if (-f $subsite_style_doc_file && $subsite_style_doc_file =~ /\/fellowship\//) { # && ! -f "$opts{i}/$file.xsl") {
-	print "For file $opts{i}/$file.$lang.xhtml: Subsite found: $subsite_style_doc_file\n";
       	my $subsite_style_doc = $parser->parse_file($subsite_style_doc_file);
       	$subsite_stylesheet = $xslt_parser->parse_stylesheet($subsite_style_doc);
       }
@@ -670,7 +669,12 @@ sub process {
       #
       # Do the actual transformation.
       #
-      my $results = $global_stylesheet->transform($dom);
+      my $results;
+      if ($subsite_stylesheet) {
+	$results = $subsite_stylesheet->transform($dom);
+      } else {
+	$results = $global_stylesheet->transform($dom);
+      }
 
       #
       # In post-processing, we replace links pointing back to ourselves
@@ -718,10 +722,8 @@ sub process {
 
       unless ($opts{n}) {
 	if ($subsite_stylesheet) {
-	  print "Outputting using subsite stylesheet: $dir/$file.$lang.html\n";
 	  $subsite_stylesheet->output_file($results, "$opts{o}/$dir/$file.$lang.html");
 	} else {
-	  print "Outputting using global stylesheet: $dir/$file.$lang.html\n";
 	  $global_stylesheet->output_file($results, "$opts{o}/$dir/$file.$lang.html");
 	}
       }

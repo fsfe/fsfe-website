@@ -1,6 +1,6 @@
 /*
 
-New grid implementaiton, old one is kept further down in the file due to
+New grid implementation, old one is kept further down in the file due to
 backwards-compatible reasons.
 
 @author Andreas Tolf Tolfsen <ato@fsfe.org>
@@ -26,6 +26,8 @@ backwards-compatible reasons.
 
 
 /*
+
+THIS IS OUTDATED.  PLEASE USE THE IMPLEMENTATION ABOVE FOR GRIDS.
 
 Grids are for splitting up an area in multiple columns.  Using the CSS
 class .grid-{\d}-{\d}(-{\d}), where $1 and $2 (and optionally $3) are

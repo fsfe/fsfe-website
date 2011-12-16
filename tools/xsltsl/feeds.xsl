@@ -10,7 +10,6 @@
     
   <!-- define content type templates-->
     
-  <!-- Show a single news item -->
   <xsl:template name="news">
     <xsl:param name="display-year" select="'no'" />
     <xsl:param name="show-date" select="'yes'" />
@@ -57,27 +56,6 @@
       </xsl:if>
       <xsl:text>: </xsl:text>
     </xsl:variable>
-    
-    <xsl:choose>
-      
-      <xsl:when test="$compact-view = 'yes'">
-        
-        <xsl:element name="div">
-          <xsl:attribute name="class">entry</xsl:attribute>
-          
-          <xsl:if test="$show-date = 'yes'">
-            <span class="date">
-              <xsl:copy-of select="$date" />
-            </span>
-          </xsl:if>
-          
-          <span><xsl:copy-of select="$title" /></span>
-          
-       </xsl:element>
-        
-      </xsl:when>
-      
-      <xsl:otherwise>
       
         <!--<div class="entry">-->
         <xsl:element name="div">
@@ -94,14 +72,13 @@
           </xsl:if>
           
           <!-- news text -->
-          <div class="text">
-            <xsl:apply-templates select="body/node()" />
-          </div>
+          <xsl:if test="$compact-view = 'no'">
+		<div class="text">
+		<xsl:apply-templates select="body/node()" />
+		</div>
+          </xsl:if>
           
         </xsl:element>
-        
-      </xsl:otherwise>
-    </xsl:choose>
     
   </xsl:template>
   

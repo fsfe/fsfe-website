@@ -23,15 +23,30 @@ my $amount = 0;
 my $discount = 0;
 
 # -----------------------------------------------------------------------------
+# Check for empty messages (Penny & Rainer, 2011-12-20)
+# -----------------------------------------------------------------------------
+
+my $check_empty = true;
+
+foreach $name ($query->param) {
+  $value = $query->param($name);
+  if ($value ne "") {
+    $check_empty = false;
+    break; 
+  }
+}
+
+
+# -----------------------------------------------------------------------------
 # Calculate amount and generate mail to office
 # -----------------------------------------------------------------------------
 
 # Spam bots will be tempted to fill in this actually invisible field
-if (not $query->param("url")) {
+if (not $query->param("url") && $check_empty == false) {
   open(MAIL, "|/usr/lib/sendmail -t -f mueller\@fsfeurope.org");
   print MAIL "From: order\@fsfeurope.org\n";
   print MAIL "To: order\@fsfeurope.org\n";
-  print MAIL "Subject: Web order $reference $buyer\n\n";
+  print MAIL "Subject: $reference $buyer\n\n";
   print MAIL "$reference\n\n";
   foreach $name ($query->param) {
     $value = $query->param($name);

@@ -30,7 +30,7 @@ my $check_empty = true;
 
 foreach $name ($query->param) {
   $value = $query->param($name);
-  if ($value ne "" && $name ne "shipping") {
+  if ($value ne "" && $name ne "shipping" && $name ne "language") {
     $check_empty = false;
     break; 
   }

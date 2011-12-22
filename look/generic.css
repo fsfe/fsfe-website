@@ -1198,13 +1198,13 @@ a.fn {
 #campaign-box-1 p {
   margin: 0px;
   overflow: hidden;
-  line-height: 18px;
+  line-height: 17px;
 }
 
 
 #campaign-box-1 a {
   position: absolute;
-  bottom: 5px;
+  bottom: 0;
   right: 5px;
 }
 

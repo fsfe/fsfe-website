@@ -1187,6 +1187,7 @@ a.fn {
     overflow: hidden;
     padding: 5px;
     width: 65.5%;
+    position: relative;
 }
 
 #campaign-box-1 img {
@@ -1197,6 +1198,14 @@ a.fn {
 #campaign-box-1 p {
   margin: 0px;
   overflow: hidden;
+  line-height: 18px;
+}
+
+
+#campaign-box-1 a {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
 }
 
 #campaign-box-1 h3 {

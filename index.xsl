@@ -18,13 +18,65 @@
   </xsl:template>
 
   <xsl:template match="/html/body">
+    
+    <script type="text/javascript">
+      
+      var quotes = [
+        <xsl:for-each select="/html/text/quote">
+          {
+            'img': "<xsl:value-of select="photo"/>",
+            'txt': "<xsl:value-of select="text"/>",
+            'guy': "<xsl:value-of select="guy"/>"
+          },
+        </xsl:for-each>
+      ];
+      
+      var index = 0;
+      function changeImage () {
+        
+        var oldIndex = index;
+        index = (index+1)%quotes.length;
+        
+        var newContent = 
+          "&lt;img src='"+quotes[index]['img']+"' /&gt;" +
+          "&lt;p&gt;"+quotes[index]['txt']+"&lt;br/&gt;"+
+          "&lt;strong&gt;"+quotes[index]['guy']+"&lt;/strong&gt;&lt;/p&gt;";
+        
+        $('#cb1-front').html($('#cb1-back').html());
+        $('#cb1-front').fadeIn(0);
+        
+        $('#cb1-back').fadeOut(0);
+        $('#cb1-back').html(newContent);
+        
+        $('#cb1-front').fadeOut('slow', function() {
+          $('#cb1-back').fadeIn('slow', function() {});
+        });
+        
+        setTimeout("changeImage();",10000);
+        
+      }
+      
+      setTimeout("changeImage();",10000);
+    </script>
+    
     <xsl:copy>
       <div id="frontpage">
 	<xsl:apply-templates />
       </div>
     </xsl:copy>
   </xsl:template>
-
+  
+  <xsl:template match="first-quote">
+    <xsl:for-each select="/html/text/quote">
+      <xsl:if test="position() = 1">
+        <xsl:element name="img">
+          <xsl:attribute name="src"><xsl:value-of select="photo"/></xsl:attribute>
+        </xsl:element>
+        <p><xsl:value-of select="text"/><br/><strong><xsl:value-of select="guy"/></strong></p>
+      </xsl:if>
+    </xsl:for-each>
+  </xsl:template>
+  
   <!--display dynamic list of news items-->
   <xsl:template match="all-news">
     <xsl:call-template name="fetch-news">

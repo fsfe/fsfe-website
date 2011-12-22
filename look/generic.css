@@ -1183,10 +1183,20 @@ a.fn {
   width: 65.5%;
   height: 200px;
   float: left;
-  -moz-border-radius: 10px;
+  /*-moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   border-radius: 10px;
-  background: url("/graphics/ask-candidates.png") no-repeat top right;
+  background: url("/graphics/ask-candidates.png") no-repeat top right;*/
+  overflow: hidden;
+}
+
+#campaign-box-1 img {
+  float: left;
+  margin-right: 10px;
+}
+
+#campaign-box-1 p {
+  margin: 0px;
   overflow: hidden;
 }
 

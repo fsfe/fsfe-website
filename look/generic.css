@@ -1180,14 +1180,13 @@ a.fn {
 }
 
 #campaign-box-1 {
-  width: 65.5%;
-  height: 200px;
-  float: left;
-  /*-moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  background: url("/graphics/ask-candidates.png") no-repeat top right;*/
-  overflow: hidden;
+    border: 2px solid #AFAFAF;
+    border-radius: 7px;
+    float: left;
+    height: 185px;
+    overflow: hidden;
+    padding: 5px;
+    width: 65.5%;
 }
 
 #campaign-box-1 img {

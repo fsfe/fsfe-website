@@ -77,6 +77,12 @@
     </xsl:for-each>
   </xsl:template>
   
+  <xsl:template match="label-ourwork2011">
+    <xsl:call-template name="gettext">
+      <xsl:with-param name="id" select="'ourwork2011'" />
+    </xsl:call-template>
+  </xsl:template>
+  
   <!--display dynamic list of news items-->
   <xsl:template match="all-news">
     <xsl:call-template name="fetch-news">
@@ -225,7 +231,7 @@
   </xsl:template>
   
   <!-- Do not copy <set> or <text> to output at all -->
-  <xsl:template match="set | tags"/>
+  <xsl:template match="set | tags | text"/>
   
   <!-- For all other nodes, copy verbatim -->
   <xsl:template match="@* | node()" priority="-1">

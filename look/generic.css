@@ -1373,6 +1373,30 @@ p#article-attachmt {
   margin-top: -3em;
 }
 
+/* creative commons license info footer */
+#cc-licenses {
+float:left;
+padding:10px;
+background-color: #cdcdcd;
+width: 96%;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 25px;
+    box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.1);
+}
+
+#cc-licenses img {
+float: left;
+margin: 0 15px 0 0;
+}
+
+#cc-licenses p {
+    color: #5D5D5D;
+    float: left;
+    line-height: 1.3em;
+    margin: 0;
+    padding: 0;
+}
+
 /*for consistency, please make sure it looks like .people img */
 img.author-avatar {
   float: left;

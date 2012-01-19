@@ -664,6 +664,26 @@
 
     </xsl:element><!--end wrapper-inner-->
     
+	<!-- cc licenses -->
+	<xsl:if test = "string(/buildinfo/document/head/meta[@name='cc-license']/@content)">
+	<xsl:element name="div">		
+		<xsl:attribute name="id">cc-licenses</xsl:attribute>
+		
+		<xsl:element name="p">
+			<xsl:element name="img">
+			<xsl:attribute name="src">/artwork/cc-logo.png</xsl:attribute>
+			<xsl:attribute name="alt">Creative Commons logo</xsl:attribute>
+			</xsl:element> <!-- </img> -->
+			<xsl:for-each select="/buildinfo/document/head/meta[@name='cc-license']">
+				<xsl:value-of select="@content"/> • 
+			</xsl:for-each>
+			<!--<xsl:value-of select="/buildinfo/document/head/meta[@name='cc-license-1']/@content" /> • -->
+		</xsl:element> <!-- </p> -->
+		
+	</xsl:element> <!-- </div> -->
+	</xsl:if>
+	<!-- End cc licenses -->
+    
     <!-- Footer -->
     <div id="footer">
       <div id="notice">

@@ -671,7 +671,7 @@
 		
 		<xsl:element name="p">
 			<xsl:element name="img">
-			<xsl:attribute name="src">/artwork/cc-logo.png</xsl:attribute>
+			<xsl:attribute name="src">/graphics/cc-logo.png</xsl:attribute>
 			<xsl:attribute name="alt">Creative Commons logo</xsl:attribute>
 			</xsl:element> <!-- </img> -->
 			<xsl:for-each select="/buildinfo/document/head/meta[@name='cc-license']">

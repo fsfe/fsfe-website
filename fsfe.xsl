@@ -688,7 +688,7 @@
     <div id="footer">
       <div id="notice">
         <p>
-          Copyright © 2001-2011 <a href="/">Free Software
+          Copyright © 2001-2012 <a href="/">Free Software
         Foundation Europe</a>. <strong>
         <a href="/contact/contact.html">
           <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'contact'" /></xsl:call-template>

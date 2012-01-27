@@ -32,7 +32,7 @@
  <person id="bako" avatar="no" teams="main">
     <name>Eszter Bakó</name>
     <country>HU</country>
-    <function>coordinator-policy/f</function>
+    <function project="policy">deputy/f</function>
     <email>eszter (at) fsfe (dot) org</email>
     <link>/about/bako/bako.html</link>
   </person>
@@ -269,7 +269,7 @@
     <country>IT</country>
     <function>intern/m</function>
     <email>alessandro (dot) polvani (at) fsfe (dot) org</email>
-    <link></link>
+    <link>http://blogs.fsfe.org/alessandro.polvani/</link>
   </person>
 
   <person id="reiter" avatar="yes" association-member="yes" teams="main, de">
@@ -349,6 +349,7 @@
     <name>Fernanda Weiden</name>
     <function>member-assembly/f</function>
     <country>CH</country>
+    <function>Member of the GA</function>
     <email>weiden (at) fsfeurope (dot) org</email>
     <link>/about/weiden/weiden.html</link>
   </person>

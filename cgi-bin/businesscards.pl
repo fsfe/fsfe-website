@@ -88,7 +88,7 @@ print MAIL "Tel: +$phone\n\n";
 print MAIL "Mobile: +$mobile\n\n";
 print MAIL "Fax: +$fax\n\n";
 print MAIL "E-Mail: $email\n\n";
-print MAIL "Jabber: $jabber\n\n";
+print MAIL "XMPP: $jabber\n\n";
 print MAIL "Fingerprint: $fp\n\n";
 print MAIL "Number of business cards ordered: $amount\n\n";
 print MAIL "Delivery Address: $delivery\n\n";

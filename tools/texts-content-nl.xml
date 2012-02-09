@@ -3,11 +3,36 @@
 <textset-content>
 
   <text id="news">Laatste nieuws</text>
+  <text id="newsletter">Nieuwsbrief</text>
+  <text id="receive-newsletter">Meld je aan op de maandelijkse FSFE nieuwsbrief</text>
   <text id="events">Aankomende evenementen</text>
+  <text id="more">Meer</text>
   <text id="morenews">Meer nieuws...</text>
   <text id="moreevents">Meer evenementen...</text>
   
+  <text id="email">E-mail</text>
+  <text id="email-placeholder">e-mailadres</text>
+  <text id="phone">Telefoon</text>
+  <text id="fax">fax</text>
+  <text id="contact">Contact</text>
+  
+  <text id="team">Team</text>
+  <text id="microblog">Microblog</text>
+  
   <text id="donate">Doneer</text>
-  <text id="join">Word lid</text>
 
+  <!-- Restricted boot box
+  <text id="campaign4">Stand up for your freedom to install Free Software,</text>
+  <text id="campaign4link">sign our statement against Restricted Boot</text>
+  -->
+
+  <text id="campaign4">Op 14 februari: </text>
+  <text id="campaign4link">Toon je liefde voor Vrije Software!</text>
+
+  <text id="join">Doe mee</text>
+  
+  <text id="subscribe">Meld je aan</text>
+
+  <!-- alt text for missing avatars -->
+  <text id="no-avatar">Geen plaatje</text>
 </textset-content>

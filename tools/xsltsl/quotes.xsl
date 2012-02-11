@@ -31,7 +31,7 @@
           </xsl:when>
           <xsl:otherwise>
             <xsl:call-template name="get-js-quotes">
-              <xsl:with-param name="quotes-xpath" select="/html/set/textset-content/quotes/quote[@tag=$tag or $tag='']" />
+              <xsl:with-param name="quotes-xpath" select="/html/set/textset-content-backup/quotes/quote[@tag=$tag or $tag='']" />
             </xsl:call-template>
           </xsl:otherwise>
         </xsl:choose>

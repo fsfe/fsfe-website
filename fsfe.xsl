@@ -8,6 +8,10 @@
   <!-- HTML 5 compatibility doctype, since our XSLT parser doesn't support disabling output escaping -->
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
   
+  <xsl:variable name="mode">
+    <xsl:value-of select="'normal'" /> <!-- can be either 'normal' or 'valentine' -->
+  </xsl:variable>
+  
   <!-- The top level element of the input file is "buildinfo" -->
   <xsl:template match="buildinfo">
     <xsl:apply-templates select="node()"/>
@@ -29,7 +33,7 @@
   <!-- HTML head -->
   <xsl:template match="head">
     <xsl:copy>
-
+      
       <!-- Don't let search engine robots index untranslated pages -->
       <xsl:element name="meta">
         <xsl:attribute name="name">robots</xsl:attribute>
@@ -51,6 +55,15 @@
         <xsl:attribute name="type">text/css</xsl:attribute>
       </xsl:element>
       
+      <xsl:if test="$mode = 'valentine'">
+        <xsl:element name="link">
+          <xsl:attribute name="rel">stylesheet</xsl:attribute>
+          <xsl:attribute name="media">all</xsl:attribute>
+          <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/genericv.css</xsl:attribute>
+          <xsl:attribute name="type">text/css</xsl:attribute>
+        </xsl:element>
+      </xsl:if>
+      
       <xsl:element name="link">
         <xsl:attribute name="rel">stylesheet</xsl:attribute>
         <xsl:attribute name="media">print</xsl:attribute>
@@ -69,7 +82,13 @@
       
       <xsl:element name="link">
         <xsl:attribute name="rel">icon</xsl:attribute>
-        <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/graphics/fsfe.ico</xsl:attribute>
+        <xsl:attribute name="href">
+          <xsl:value-of select="$urlprefix"/>
+          <xsl:choose>
+            <xsl:when test="$mode = 'valentine'">/graphics/fsfev.png</xsl:when>
+            <xsl:otherwise>/graphics/fsfe.ico</xsl:otherwise>
+          </xsl:choose>
+        </xsl:attribute>
         <xsl:attribute name="type">image/x-icon</xsl:attribute>
       </xsl:element>
       
@@ -277,7 +296,13 @@
           <xsl:attribute name="href">/</xsl:attribute>
           <xsl:element name="img">
             <xsl:attribute name="alt">FSFE Logo</xsl:attribute>
-                    <xsl:attribute name="src"><xsl:value-of select="$urlprefix"/>/graphics/logo_transparent.png</xsl:attribute>
+            <xsl:attribute name="src">
+              <xsl:value-of select="$urlprefix"/>
+              <xsl:choose>
+                <xsl:when test="$mode = 'valentine'">/graphics/logov.png</xsl:when>
+                <xsl:otherwise>/graphics/logo_transparent.png</xsl:otherwise>
+              </xsl:choose>
+            </xsl:attribute>
           </xsl:element>
         </xsl:element>
           </xsl:element>

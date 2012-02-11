@@ -35,10 +35,10 @@
       
       <xsl:choose>
         <xsl:when test="/html/set/textset-content/quotes/quote[@id=$id]/txt">
-          <xsl:apply-templates select="/html/set/textset-content/quotes/quote[@id=$id]/txt" />
+          <xsl:value-of select="/html/set/textset-content/quotes/quote[@id=$id]/txt" />
         </xsl:when>
         <xsl:otherwise>
-          <xsl:apply-templates select="/html/set/textset-content-backup/quotes/quote[@id=$id]/txt" />
+          <xsl:value-of select="/html/set/textset-content-backup/quotes/quote[@id=$id]/txt" />
         </xsl:otherwise>
       </xsl:choose>
       
@@ -50,10 +50,10 @@
       
       <xsl:choose>
         <xsl:when test="/html/set/textset-content/quotes/quote[@id=$id]/photo">
-          <xsl:apply-templates select="/html/set/textset-content/quotes/quote[@id=$id]/photo" />
+          <xsl:value-of select="/html/set/textset-content/quotes/quote[@id=$id]/photo" />
         </xsl:when>
         <xsl:otherwise>
-          <xsl:apply-templates select="/html/set/textset-content-backup/quotes/quote[@id=$id]/photo" />
+          <xsl:value-of select="/html/set/textset-content-backup/quotes/quote[@id=$id]/photo" />
         </xsl:otherwise>
       </xsl:choose>
       
@@ -65,10 +65,10 @@
       
       <xsl:choose>
         <xsl:when test="/html/set/textset-content/quotes/quote[@id=$id]/author">
-          <xsl:apply-templates select="/html/set/textset-content/quotes/quote[@id=$id]/author" />
+          <xsl:value-of select="/html/set/textset-content/quotes/quote[@id=$id]/author" />
         </xsl:when>
         <xsl:otherwise>
-          <xsl:apply-templates select="/html/set/textset-content-backup/quotes/quote[@id=$id]/author" />
+          <xsl:value-of select="/html/set/textset-content-backup/quotes/quote[@id=$id]/author" />
         </xsl:otherwise>
       </xsl:choose>
       

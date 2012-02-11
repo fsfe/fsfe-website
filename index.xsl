@@ -9,6 +9,7 @@
   <xsl:import href="tools/xsltsl/tagging.xsl" />
   <xsl:import href="tools/xsltsl/translations.xsl" />
   <xsl:import href="tools/xsltsl/static-elements.xsl" />
+  <xsl:import href="tools/xsltsl/quotes.xsl" />
   <xsl:output method="xml" encoding="UTF-8" indent="yes" />
   
   
@@ -18,63 +19,17 @@
   </xsl:template>
 
   <xsl:template match="/html/body">
-    
-    <script type="text/javascript">
-      
-      var quotes = [
-        <xsl:for-each select="/html/text/quote">
-          {
-            'img': "<xsl:value-of select="photo"/>",
-            'txt': "<xsl:value-of select="text"/>",
-            'guy': "<xsl:value-of select="guy"/>"
-          },
-        </xsl:for-each>
-      ];
-      
-      var index = 0;
-      function changeImage () {
-        
-        var oldIndex = index;
-        index = (index+1)%quotes.length;
-        
-        var newContent = 
-          "&lt;img src='"+quotes[index]['img']+"' /&gt;" +
-          "&lt;p&gt;"+quotes[index]['txt']+"&lt;br/&gt;"+
-          "&lt;strong&gt;"+quotes[index]['guy']+"&lt;/strong&gt;&lt;/p&gt;";
-        
-        $('#cb1-front').html($('#cb1-back').html());
-        $('#cb1-front').fadeIn(0);
-        
-        $('#cb1-back').fadeOut(0);
-        $('#cb1-back').html(newContent);
-        
-        $('#cb1-front').fadeOut('slow', function() {
-          $('#cb1-back').fadeIn('slow', function() {});
-        });
-        
-        setTimeout("changeImage();",10000);
-        
-      }
-      
-      setTimeout("changeImage();",10000);
-    </script>
-    
     <xsl:copy>
       <div id="frontpage">
-	<xsl:apply-templates />
+        <xsl:apply-templates />
       </div>
     </xsl:copy>
   </xsl:template>
   
-  <xsl:template match="first-quote">
-    <xsl:for-each select="/html/text/quote">
-      <xsl:if test="position() = 1">
-        <xsl:element name="img">
-          <xsl:attribute name="src"><xsl:value-of select="photo"/></xsl:attribute>
-        </xsl:element>
-        <p><xsl:value-of select="text"/><br/><strong><xsl:value-of select="guy"/></strong></p>
-      </xsl:if>
-    </xsl:for-each>
+  <xsl:template match="quote-box">
+    <xsl:call-template name="quote-box">
+      <xsl:with-param name="tag" select="@tag" />
+    </xsl:call-template>
   </xsl:template>
   
   <xsl:template match="label-ourwork2011">
@@ -135,7 +90,7 @@
   
   <xsl:template match="campaign-box-3">
     <xsl:element name="a">
-      <xsl:attribute name="href">/campaigns/valentine/2011/valentine-2011<xsl:value-of select="/buildinfo/@language" />.html</xsl:attribute>
+     <xsl:attribute name="href">/campaigns/ilovefs/ilovefs<xsl:value-of select="/buildinfo/@language" />.html</xsl:attribute>
       
       <xsl:variable name="lang" select="/buildinfo/@language" />
       

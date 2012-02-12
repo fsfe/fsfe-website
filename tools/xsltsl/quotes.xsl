@@ -44,9 +44,11 @@
         index = (index+1)%quotes.length;
         
         var newContent = 
+          "&lt;a href='/donate/donate.html'&gt;"
           "&lt;img src='"+quotes[index]['photo']+"' /&gt;" +
           "&lt;p&gt;"+quotes[index]['text']+"&lt;br/&gt;"+
-          "&lt;strong&gt;"+quotes[index]['author']+"&lt;/strong&gt;&lt;/p&gt;";
+          "&lt;strong&gt;"+quotes[index]['author']+"&lt;/strong&gt;&lt;/p&gt;"+
+          "&lt;/a&gt;";
         
         $('#cb1-front').html($('#cb1-back').html());
         $('#cb1-front').fadeIn(0);
@@ -72,6 +74,7 @@
     <xsl:param name="quotes-xpath" />
     
     <xsl:for-each select="$quotes-xpath">
+      <xsl:sort select="@pos" data-type="number" />
       {
         'photo':  "<xsl:call-template name="get-quote-photo"><xsl:with-param name="id" select="@id" /></xsl:call-template>",
         'text':   "<xsl:call-template name="get-quote-text"><xsl:with-param name="id" select="@id" /></xsl:call-template>",
@@ -105,26 +108,33 @@
     <xsl:param name="quotes-xpath" />
     
     <xsl:for-each select="$quotes-xpath">
+      <xsl:sort select="@pos" data-type="number" />
+      
       <xsl:if test="position() = 1">
-        <xsl:element name="img">
-          <xsl:attribute name="src">
-            <xsl:call-template name="get-quote-photo">
+        
+        <a href="/donate/donate.html">
+          <xsl:element name="img">
+            <xsl:attribute name="src">
+              <xsl:call-template name="get-quote-photo">
+                <xsl:with-param name="id" select="@id" />
+              </xsl:call-template>
+            </xsl:attribute>
+          </xsl:element>
+          <p>
+            <xsl:call-template name="get-quote-text">
               <xsl:with-param name="id" select="@id" />
             </xsl:call-template>
-          </xsl:attribute>
-        </xsl:element>
-        <p>
-          <xsl:call-template name="get-quote-text">
-            <xsl:with-param name="id" select="@id" />
-          </xsl:call-template>
-          <br/>
-          <strong>
-            <xsl:call-template name="get-quote-author">
-              <xsl:with-param name="id" select="@id" />
-            </xsl:call-template>
-          </strong>
-        </p>
+            <br/>
+            <strong>
+              <xsl:call-template name="get-quote-author">
+                <xsl:with-param name="id" select="@id" />
+              </xsl:call-template>
+            </strong>
+          </p>
+        </a>
+        
       </xsl:if>
+      
     </xsl:for-each>
     
   </xsl:template>

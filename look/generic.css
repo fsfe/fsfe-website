@@ -1180,14 +1180,32 @@ a.fn {
 }
 
 #campaign-box-1 {
-  width: 65.5%;
-  height: 200px;
+    border: 2px solid #AFAFAF;
+    border-radius: 7px;
+    float: left;
+    height: 185px;
+    overflow: hidden;
+    padding: 5px;
+    width: 65.5%;
+    position: relative;
+}
+
+#campaign-box-1 img {
   float: left;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  background: url("/graphics/ask-candidates.png") no-repeat top right;
+  margin-right: 10px;
+}
+
+#campaign-box-1 p {
+  margin: 0px;
   overflow: hidden;
+  line-height: 17px;
+  color: rgb(50,50,50);
+}
+
+#campaign-box-1 #our-work {
+  position: absolute;
+  bottom: 0;
+  right: 5px;
 }
 
 #campaign-box-1 h3 {

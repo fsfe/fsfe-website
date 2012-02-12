@@ -32,6 +32,39 @@
 
   <!-- alt text for missing avatars -->
   <text id="no-avatar">Kein Bild</text>
-
+  
+  
+  <!-- quotes to be displayed in a rotating box -->
+  <quotes>
+    <quote id="brunke" tag="donors" pos="3">
+      <photo>/donate/brunke.jpg</photo>
+      <txt>
+        Sinnvolles Lifecyclemanagement statt herstellerbestimmte
+        Produktzyklen; Integration über Systemgrenzen hinweg statt
+        Vendor-Lock-in; Einblick in die Sourcen statt Aktivierungspflicht -
+        Freie Software erlaubt uns als Systemhaus, unsere Kunden von Zwängen,
+        die nur den Softwareherstellern nützen, zu befreien.
+      </txt>
+      <author>Carsten Brunke - Inmedias.it</author>
+    </quote>
+    <quote id="wiesemann" tag="donors" pos="1">
+      <photo>/donate/wiesemann.jpg</photo>
+      <txt>
+        Eine virtuelle Welt ohne Freie Software ist wie eine Stadt, in der
+        man für jeden Bürgersteig eine Benutzungslizenz benötigt. Wir brauchen
+        auch Allgemeingut in der virtuellen Welt.
+      </txt>
+      <author>Reinhard Wiesemann - Linuxhotel</author>
+    </quote>
+    <quote id="ganten" tag="donors" pos="2">
+      <photo>/donate/ganten.jpg</photo>
+      <txt>
+        Freie Software ist das stabile Fundament unserer Unternehmenslösungen,
+        die FSFE leistet einen wichtigen Beitrag zur Sicherung dieses
+        Fundaments. Deswegen unterstützen wir die FSFE.
+      </txt>
+      <author>Peter Ganten - Univention</author>
+    </quote>
+  </quotes>
   
 </textset-content>

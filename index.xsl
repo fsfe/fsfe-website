@@ -9,6 +9,7 @@
   <xsl:import href="tools/xsltsl/tagging.xsl" />
   <xsl:import href="tools/xsltsl/translations.xsl" />
   <xsl:import href="tools/xsltsl/static-elements.xsl" />
+  <xsl:import href="tools/xsltsl/quotes.xsl" />
   <xsl:output method="xml" encoding="UTF-8" indent="yes" />
   
   
@@ -20,11 +21,23 @@
   <xsl:template match="/html/body">
     <xsl:copy>
       <div id="frontpage">
-	<xsl:apply-templates />
+        <xsl:apply-templates />
       </div>
     </xsl:copy>
   </xsl:template>
-
+  
+  <xsl:template match="quote-box">
+    <xsl:call-template name="quote-box">
+      <xsl:with-param name="tag" select="@tag" />
+    </xsl:call-template>
+  </xsl:template>
+  
+  <xsl:template match="label-ourwork2011">
+    <xsl:call-template name="gettext">
+      <xsl:with-param name="id" select="'ourwork2011'" />
+    </xsl:call-template>
+  </xsl:template>
+  
   <!--display dynamic list of news items-->
   <xsl:template match="all-news">
     <xsl:call-template name="fetch-news">
@@ -173,7 +186,7 @@
   </xsl:template>
   
   <!-- Do not copy <set> or <text> to output at all -->
-  <xsl:template match="set | tags"/>
+  <xsl:template match="set | tags | text"/>
   
   <!-- For all other nodes, copy verbatim -->
   <xsl:template match="@* | node()" priority="-1">

@@ -48,14 +48,14 @@ my $subject = "New reservation for the CLT Bus from " . $query->param("first_nam
 print MAIL "Subject: $subject" . "\n";
 print MAIL "Content-Type: text/plain; charset=UTF-8\n\n";
 print MAIL "We have received a new reservation for the CLT Bus.\n\n";
-print MAIL "Name:   " . $query->param("first_name") . $query->param("family_name") . "\n";
+print MAIL "Name:   " . $query->param("first_name") . " " . $query->param("family_name") . "\n";
 print MAIL "Phone: " . $query->param("tel_gsm") . "\n";
 print MAIL "E-mail: " . $query->param("email") . "\n\n";
 print MAIL "Station: " . $query->param("station") . "\n\n";
 print MAIL "---\nInvoice address:\n";
 print MAIL wrap('','',$query->param("invoice_address")) . "\n";
 print MAIL "---\nComment:\n";
-print MAIL wrap('','',$query->param("invoice_address")) . "\n";
+print MAIL wrap('','',$query->param("comment")) . "\n";
 print MAIL "---\n\n";
 
 my $output = <<ENDHTML;

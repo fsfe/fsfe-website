@@ -75,8 +75,8 @@ my $subject = "New reservation for the CLT Hotel from " . $query->param("first_n
 
 print MAIL "Subject: $subject" . "\n";
 print MAIL "Content-Type: text/plain; charset=UTF-8\n\n";
-print MAIL "We have received a new reservation for the CLT Bus.\n\n";
-print MAIL "Name:   " . $query->param("first_name") . $query->param("family_name") . "(Fellowhsip Nummer: " . $query->param("fellowship_no") . ")\n";
+print MAIL "We have received a new reservation for the CLT Hotel.\n\n";
+print MAIL "Name:   " . $query->param("first_name") . " " . $query->param("family_name") . "(Fellowhsip Nummer: " . $query->param("fellowship_no") . ")\n";
 print MAIL "Phone: " . $query->param("tel_gsm") . "\n";
 print MAIL "E-mail: " . $query->param("email") . "\n\n";
 print MAIL "Room: " . $query->param("room") . "\n";

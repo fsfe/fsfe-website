@@ -38,10 +38,10 @@ if ($form->has_errors) {
 my $date = strftime "%Y-%m-%d", localtime;
 my $time = strftime "%s", localtime;
 
-open(MAIL, "|/usr/lib/sendmail -t -f nicoulas\@fsfe.org");
+open(MAIL, "|/usr/lib/sendmail -t -f birgit.huesken\@fsfe.org");
 print MAIL "Reply-To: " . $query->param("email") . "\n";
 print MAIL "From: office\@fsfeurope.org\n";
-print MAIL "To: nicoulas\@fsfe.org\n";
+print MAIL "To: birgit.huesken\@fsfe.org\n";
 
 my $subject = "New reservation for the CLT Bus from " . $query->param("first_name") . " " . $query->param("family_name");
 

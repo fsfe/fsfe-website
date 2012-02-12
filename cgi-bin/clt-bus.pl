@@ -43,10 +43,7 @@ print MAIL "Reply-To: " . $query->param("email") . "\n";
 print MAIL "From: office\@fsfeurope.org\n";
 print MAIL "To: nicoulas\@fsfe.org\n";
 
-my $subject = $query->param("subject");
-if ($subject eq "") {
-  $subject = "New reservation for the CLT Bus from " . $query->param("first_name") . " " . $query->param("family_name");
-}
+$subject = "New reservation for the CLT Bus from " . $query->param("first_name") . " " . $query->param("family_name");
 
 print MAIL "Subject: $subject" . "\n";
 print MAIL "Content-Type: text/plain; charset=UTF-8\n\n";

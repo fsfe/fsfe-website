@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html>
+  <head>
+    <title>Contact - FSFE</title>
+    <link href="/style/grid.css" rel="stylesheet" />
+  </head>
+
+  <body>
+  
+    <h1>
+      CLT 2012
+    <br/>
+    Reservierung für den Bus nach Chemnitz
+    </h1>
+
+    <p>
+    Anmeldungen möglich bis <b>10.03.2012</b>.
+    </p>
+
+    <p>
+    Wenn Du im Bus von Düsseldorf nach Chemnitz (via Essen, Soest und Haaren) mitfahren möchtest, dann melde Dich bitte über nachstehendes Formular an.</p>
+
+    <p>
+    Die erhobenen Daten werden nicht weitergegeben. 
+    Sie werden für die Kontaktaufnahme im Rahmen der Busfahrt genutzt. 
+    Wir werden Deinen Namen und Deine E-Mail-Adresse jedoch speichern, um Dich ggf. im nächsten Jahr über den Bus zu den CLT 2013 zu informieren.
+    </p>
+
+    <p>
+    Die Busfahrt kostet hin und zurück <b>70,- €</b> pro Person.
+    </p>
+
+    <form action="/cgi-bin/clt-bus.pl" method="post">
+    <table>
+      <tbody><tr>
+        <td>
+          Vorname
+          <br /><small>Pflichtangabe</small>
+        </td>
+        <td>
+          <input size="35" name="first_name" type="text"/>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Nachname
+          <br /><small>Pflichtangabe</small>
+        </td>
+        <td>
+          <input size="35" name="family_name" type="text"/>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Mobilfunknummer
+          <br /><small>Pflichtangabe</small>
+        </td>
+        <td>
+          <input size="35" name="tel_gsm" type="text"/>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          E-Mail-Adresse
+          <br /><small>Pflichtangabe</small>
+        </td>
+        <td>
+          <input size="35" name="email" type="text"/>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Einstiegsort:
+          <br /><small>Pflichtangabe</small>
+        </td>
+        <td>
+          <input name="station" value="Duesseldorf-Staufenplatz" type="radio"/>
+            Düsseldorf, Staufenplatz checked<a href="http://www.openstreetmap.org/?mlat=51.24268&amp;mlon=6.82947&amp;zoom=16&amp;layers=M" target="_blank">(Karte bei OpenStreetMap)</a>
+          <br/>
+          <input name="station" value="Duesseldorf-FSFE" type="radio"/>
+            Düsseldorf, Talstr. (FSFE Office) <a href="http://www.openstreetmap.org/?mlat=51.211187&amp;mlon=6.77869&amp;zoom=16&amp;layers=M" target="_blank">(Karte bei OpenStreetMap)</a>
+          <br/>
+          <input name="station" value="Essen" type="radio"/>
+            Essen Hbf, Busbahnhof Freiheit <a href="http://www.openstreetmap.org/?mlat=51.45029&amp;mlon=7.01499&amp;zoom=17&amp;layers=M" target="_blank">(Karte bei OpenStreetMap)</a>
+          <br/>
+          <input name="station" value="Soest" type="radio"/>
+            A44, Ausfahrt 57 Soest-Ost, Burger King Overweg <a href="http://www.openstreetmap.org/?mlat=51.55353&amp;mlon=8.15911&amp;zoom=15&amp;layers=M" target="_blank">(Karte bei OpenStreetMap)</a>
+          <br/>
+          <input name="station" value="Haaren" type="radio"/>
+            Haaren, P&amp;R-Parkplatz Bürener Straße/B480 <a href="http://www.openstreetmap.org/?mlat=51.562108&amp;mlon=8.715476&amp;zoom=15&amp;layers=M" target="_blank">(Karte bei OpenStreetMap)</a>
+          <br/>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Ich benötige eine Quittung über den Fahrpreis. <em>Vollständige</em> Anschrift:
+        </td>
+        <td>
+          <textarea cols="35" rows="5" name="invoice_address"></textarea>
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="2">
+          Fragen? Anregungen? Kommentare?
+          <br/>
+          <textarea cols="60" rows="5" name="comment"></textarea>
+        </td>
+      </tr>
+    </tbody></table>
+    <input name="send" value="Daten absenden" type="submit"/>
+    </form>
+
+    <h3>Wie geht es weiter?</h3>
+
+    <p>
+    Du erhältst eine E-Mail mit den Zahlungsinformationen. 
+    Sobald der Geldeingang verbucht ist, gilt Deine Anmeldung als bestätigt.
+    </p>
+
+    <h3>Du benötigst noch eine Unterkunft in Chemnitz?</h3>
+    <p>
+    Du kannst über die FSFE ein <a href="hotel-clt.html">Zimmer im Hotel Europark</a> reservieren.
+    </p>
+    
+  </body>
+
+  <timestamp>$Date: 2011-11-18 14:07:15 +0100 (ven. 18 nov. 2011) $ $Author: hugo $</timestamp>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html>
+  <head>
+    <title>Contact - FSFE</title>
+    <link href="/style/grid.css" rel="stylesheet" />
+  </head>
+
+  <body>
+  
+    <h1>
+      CLT 2012
+      <br/>
+      Zimmerreservierung für Hotel Europark
+    </h1>
+
+    <p>
+    Anmeldungen möglich bis <b>10.03.2012</b> (bzw. so lange Zimmer zur Verfügung stehen).
+    </p>
+
+    <p>
+    Für die Reservierung eines Zimmers während der <a href="http://chemnitzer.linux-tage.de" target="_blank">CLT 2012</a>, fülle bitte das nachstehende Formular aus.
+    </p>
+
+    <p>
+    Die FSFE stellt lediglich den Kontakt zum Hotel Europark her. 
+    Die Zahlung des Zimmerpreises erfolgt vor Ort im Hotel Europark.
+    Evtl. anfallende Stornierungskosten gehen zu Deinen Lasten.
+    </p>
+
+    <p>
+    Der FSFE-Bus wird samstags und sonntags morgens um <b>ca. 8:30h</b> vom Hotel zum Veranstaltungsort fahren.
+    Am Samstag Abend wird es <b>eine</b> Fahrt vom Veranstaltungsort zum Hotel geben. Die Uhrzeit wird mit dem Busfahrer vor Ort abgesprochen.
+    </p>
+
+    <form action="/cgi-bin/clt-hotel.pl" method="post">
+    <table>
+      <tbody><tr>
+        <td>
+          Vorname
+          <br /><small>Pflichtangabe</small>
+        </td>
+        <td>
+          <input size="35" name="first_name" type="text"/>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Nachname
+          <br /><small>Pflichtangabe</small>
+        </td>
+        <td>
+          <input size="35" name="family_name" type="text"/> 
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Fellowship Nr.
+        </td>
+        <td>
+          <input size="5" name="fellowship_no" type="text"/>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Ich benötige
+          <br /><small>Pflichtangabe</small>
+        </td>
+        <td>
+          <select size="3" name="room">
+            <option>Doppelzimmer, Kat.1, 40,- EUR pro Nacht</option>
+            <option>Einzelzimmer, Kat.1, 30,- EUR pro Nacht</option>
+            <option>Doppelzimmer, Kat.3, 30,- EUR pro Nacht</option>
+            <option>Einzelzimmer, Kat.3, 22,- EUR pro Nacht</option>
+          </select>
+          <br />
+          <small>Die Beschreibungen der Zimmerkategorien sind beim <a href="http://www.europark.de/hotel.html" target="_blank">Hotel Europark</a> nachzulesen.</small>
+          <br/>
+          <small>Preise pro Zimmer pro Nacht, ohne Frühstück</small>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+        </td>
+        <td>
+          [Bei Doppelzimmern]
+          <br/>Name des zweiten Gastes im Doppelzimmer
+          <br/>
+          <input size="35" name="second_bed_name" type="text"/>
+          <br/><small>Für den zweiten Gast muß das Formular nicht erneut ausgefüllt werden.</small>
+          <br/>
+          <br/>
+          <input name="like_to_share" value="yes" type="checkbox"/>
+            Ich möchte das Zimmer mit einer anderen Person teilen. Bitte stellt den Kontakt zu Interessierten her!
+          <br/>
+          <br/>
+          <input name="sponsor_second_bed" value="yes" type="checkbox"/>
+            Ich möchte das zweite Bett einem weiteren Besucher zur Verfügung stellen, der es benötigt. Bitte stellt den Kontakt zu Interessierten her!
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Ich möchte das Frühstück im Hotel dazubuchen.
+          <br/>
+          <small>6,- € pro Person pro Frühstück</small>
+        </td>
+        <td>
+          <br/>
+          <br/>
+          <input name="breakfast_sa" value="yes" type="checkbox"/>
+            Frühstück am Samstag.
+            Personenzahl: <input size="1" name="breakfast_sa_no" type="text"/>
+          <br/>
+          <br/>
+          <input name="breakfast_su" value="yes" type="checkbox"/>
+            Frühstück am Sonntag.
+            Personenzahl: <input size="1" name="breakfast_su_no" type="text"/>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Ich benötige eine Quittung über den Zimmerpreis. <em>Vollständige</em> Anschrift:
+        </td>
+        <td>
+          <textarea cols="35" rows="5" name="invoice_address"></textarea>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          Mobilfunknummer
+          <br /><small>Angabe empfohlen</small>
+        </td>
+        <td>
+          <input size="35" name="tel_gsm" type="text"/> 
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          E-Mail-Adresse
+          <br /><small>Pflichtangabe</small>
+        </td>
+        <td>
+          <input size="35" name="email" type="text"/> 
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="2">
+          Fragen? Anregungen? Kommentare?
+          <br/>
+          <textarea cols="60" rows="5" name="comment"></textarea>
+        </td>
+      </tr>
+    </tbody></table>
+    <input name="send" value="Daten absenden" type="submit"/>
+    </form>
+
+    <h3>Wie geht es weiter?</h3>
+
+    <p>
+    Du erhältst eine E-Mail mit der Bestätigung, ob das Zimmer in der gewünschten Kategorie noch zur Verfügung steht.
+    </p>
+
+    <h3>Du möchtest mit dem Bus von Düsseldorf nach Chemnitz?</h3>
+    <p>
+    Die FSFE organisiert einen <a href="bus-clt.html">Bus</a>.
+    </p>
+    
+  </body>
+
+  <timestamp>$Date: 2011-11-18 14:07:15 +0100 (ven. 18 nov. 2011) $ $Author: hugo $</timestamp>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

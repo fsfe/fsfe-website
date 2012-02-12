@@ -26,8 +26,6 @@ $form->validates_presence_of("first_name");
 $form->validates_presence_of("family_name");
 $form->validates_presence_of("tel_gsm");
 $form->validates_format_of("email", type => "email");
-$form->validates_length_of("invoice_address", min => 0, max => 2500);
-$form->validates_length_of("comment", min => 0, max => 2500);
 
 $content->layout("../events/clt/clt-bus.de.html");
 

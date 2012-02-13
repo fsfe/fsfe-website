@@ -7,7 +7,7 @@ a:link {
 }
 
 a:visited {
-  color: #F57B8F;
+  color: #E24454;
 }
 
 h2 {
@@ -161,6 +161,8 @@ h3 {
 
 #campaign-box-4 {
   border: 4px solid rgb(226,54,76);
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 #campaign-box-4 p a {

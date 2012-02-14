@@ -1198,10 +1198,10 @@ a.fn {
 #campaign-box-1 p {
   margin: 0px;
   overflow: hidden;
-  line-height: 17px;
+  line-height: 19px;
+  font-size: 15px;
   color: rgb(50,50,50);
 }
-
 
 #campaign-box-1 #our-work {
   position: absolute;
@@ -1252,6 +1252,14 @@ a.fn {
 }
 
 #campaign-box-4 {
+  float: left;
+  margin: 1.5em 0 0;
+  width: 98.7%;
+  text-align: center;
+}
+
+/*
+#campaign-box-4 {
   border: 4px solid rgb(224,248,89);
   border-radius: 7px;
   float: left;
@@ -1268,6 +1276,7 @@ a.fn {
 #campaign-box-4 p a {
   color: rgb(82,97,0);
 }
+*/
 
 .donate-box,
 .fellowship-box {

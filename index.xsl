@@ -114,7 +114,7 @@
   <!-- display campaign box 4 -->
   <xsl:template match="campaign-box4">
     <div id="campaign-box-4">
-      <img src="" />
+      <img src="/graphics/valentine.png" />
     </div>
   </xsl:template>
   

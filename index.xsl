@@ -111,18 +111,13 @@
     </xsl:element>
   </xsl:template>
   
-    <!-- display translated campaign box 4-->
-  <xsl:template match="campaign4-label">
-    <xsl:call-template name="gettext">
-      <xsl:with-param name="id" select="'campaign4'" />
-    </xsl:call-template>
-  </xsl:template>
-
-  <!-- display translated campaign box 4 link-->
-  <xsl:template match="campaign4link-label">
-    <xsl:call-template name="gettext">
-      <xsl:with-param name="id" select="'campaign4link'" />
-    </xsl:call-template>
+  <!-- display campaign box 4 -->
+  <xsl:template match="campaign-box4">
+    <div id="campaign-box-4">
+      <a href="/campaigns/ilovefs/ilovefs.html">
+        <img src="/graphics/valentine.png" />
+      </a>
+    </div>
   </xsl:template>
   
   

@@ -159,18 +159,8 @@ h3 {
   box-shadow: inset 0 0 6px #17280b;
 }
 
-#campaign-box-4 {
-  border: 4px solid rgb(226,54,76);
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-#campaign-box-4 p a {
-  color: rgb(158,19,33);
-}
-
-#,campaigns-boxes a:link {
-  color: #3394CE;,
+#campaigns-boxes a:link {
+  color: #3394CE;
 }
 
 #article-metadata a {

@@ -1,0 +1,3 @@
+RewriteEngine On
+# Workaround for wrong banner links.
+RewriteRule ^ilovefs-2012(.*) /campaigns/ilovefs/2012/ilovefs$1 [redirect=permanent]

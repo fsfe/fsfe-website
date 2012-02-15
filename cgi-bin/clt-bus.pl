@@ -63,7 +63,7 @@ my $output = <<ENDHTML;
 
 <div id="flash">
   <p>
-    Deine Daten wurden gesendet. Wir werden uns schnellstmöglich mit
+    Deine Daten wurden gesendet. Wir werden uns schnellstmoeglich mit
 Dir in Verbindung setzen.
   </p>
 </div>

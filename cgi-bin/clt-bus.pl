@@ -42,6 +42,7 @@ open(MAIL, "|/usr/lib/sendmail -t -f birgit.huesken\@fsfe.org");
 print MAIL "Reply-To: " . $query->param("email") . "\n";
 print MAIL "From: office\@fsfeurope.org\n";
 print MAIL "To: birgit.huesken\@fsfe.org\n";
+print MAIL "Cc: dus\@office.fsfeurope.org\n";
 
 my $subject = "New reservation for the CLT Bus from " . $query->param("first_name") . " " . $query->param("family_name");
 
@@ -62,8 +63,8 @@ my $output = <<ENDHTML;
 
 <div id="flash">
   <p>
-    Your message was sent, and we will get in touch with you very
-    soon.
+    Deine Daten wurden gesendet. Wir werden uns schnellstmöglich mit
+Dir in Verbindung setzen.
   </p>
 </div>
 

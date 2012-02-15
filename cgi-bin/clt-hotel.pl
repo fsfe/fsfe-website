@@ -22,35 +22,6 @@ my $form = WebBuild::FormValidation->new;
 my $content = WebBuild::DynamicContent->new;
 my $query = new CGI;
 
-#   <input size="35" name="first_name" type="text">
-#   <input size="35" name="family_name" type="text"> 
-#   <input size="5" name="fellowship_no" type="text">
-#   <select size="3" name="room">
-#     <option>Doppelzimmer, Kat.1, 40,- EUR pro Nacht</option>
-#     <option>Einzelzimmer, Kat.1, 30,- EUR pro Nacht</option>
-#     <option>Doppelzimmer, Kat.3, 30,- EUR pro Nacht</option>
-#     <option>Einzelzimmer, Kat.3, 22,- EUR pro Nacht</option>
-#   </select>
-# 
-#   <input size="35" name="second_bed_name" type="text">
-# 
-#   <input name="like_to_share" value="yes" type="checkbox">
-#   <input name="sponsor_second_bed" value="yes" type="checkbox">
-# 
-#   <input name="breakfast_sa" value="yes" type="checkbox">
-#   <input name="breakfast_sa_no" value="yes" type="checkbox">
-#   <input name="breakfast_su" value="yes" type="checkbox">
-#   <input name="breakfast_su_no" value="yes" type="checkbox">
-# 
-#   <textarea cols="35" rows="5" name="invoice_address">      </textarea>
-# 
-#   <input size="35" name="tel_gsm" type="text"> 
-#   <input size="35" name="email" type="text"> 
-# 
-#   <textarea cols="60" rows="5" name="comment">      </textarea>
-# 
-# <input name="send" value="Daten absenden" type="submit">
-
 $form->validates_presence_of("first_name");
 $form->validates_presence_of("family_name");
 $form->validates_format_of("email", type => "email");
@@ -70,6 +41,7 @@ open(MAIL, "|/usr/lib/sendmail -t -f birgit.huesken\@fsfe.org");
 print MAIL "Reply-To: " . $query->param("email") . "\n";
 print MAIL "From: office\@fsfeurope.org\n";
 print MAIL "To: birgit.huesken\@fsfe.org\n";
+print MAIL "Cc: dus\@office.fsfeurope.org\n";
 
 my $subject = "New reservation for the CLT Hotel from " . $query->param("first_name") . " " . $query->param("family_name");
 
@@ -98,8 +70,8 @@ my $output = <<ENDHTML;
 
 <div id="flash">
   <p>
-    Your message was sent, and we will get in touch with you very
-    soon.
+    Deine Daten wurden gesendet. Wir werden uns schnellstmöglich mit
+Dir in Verbindung setzen.
   </p>
 </div>
 

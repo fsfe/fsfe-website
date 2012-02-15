@@ -1258,25 +1258,19 @@ a.fn {
   text-align: center;
 }
 
-/*
-#campaign-box-4 {
-  border: 4px solid rgb(224,248,89);
-  border-radius: 7px;
-  float: left;
-  font-size: 110%;
-  margin: 1.5em 0 0;
-  text-align: center;
-  width: 98.7%;
-}
-
 #campaign-box-4 p {
   margin: .5em 0;
+  font-size: 110%;
 }
 
 #campaign-box-4 p a {
   color: rgb(82,97,0);
 }
-*/
+
+.banner-border {
+  border: 4px solid rgb(224,248,89);
+  border-radius: 7px;
+}
 
 .donate-box,
 .fellowship-box {

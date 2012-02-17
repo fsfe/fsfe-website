@@ -24,7 +24,7 @@ backwards-compatible reasons.
 .half  { width: 49%; }
 .third { width: 32%; }
 
-.grid.clean {  clear:both;font-size:.1em;line-height:.1em; }
+.grid.clean {  clear:both;margin-bottom:1em;font-size:1em;line-height:.1em; margin-bottom:2em;}
 
 /*
 

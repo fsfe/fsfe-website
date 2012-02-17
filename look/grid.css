@@ -18,11 +18,11 @@ backwards-compatible reasons.
 .half,
 .two-thirds {
   float: left;
-  margin-right: 1%;
+  margin-right: 3%;
 }
 
-.half  { width: 49%; }
-.third { width: 32%; }
+.half  { width: 47%; }
+.third { width: 30%; }
 
 .grid.clean {  clear:both;margin-bottom:1em;font-size:1em;line-height:.1em; margin-bottom:2em;}
 

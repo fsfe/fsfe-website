@@ -1524,12 +1524,23 @@ tr.highlighted {
 
 /* notices */
 
-#outdated-notice {
-  background-color: rgb(255,220,220);
-  border: 1px solid rgb(253,59,59);
-  color: rgb(132,78,78);
+#outdated-notice, #infobox {
+  border-width: 1px;
+  border-style: solid;
   padding: .5em;
   margin: 0 0 1.5em 0;
+}
+
+#outdated-notice {
+  background-color: rgb(255,220,220);
+  border-color: rgb(253,59,59);
+  color: rgb(132,78,78);
+}
+
+#infobox {
+  background-color: rgb(255,245,220);
+  border-color: rgb(253,195,59);
+  color: rgb(132,78,78);
 }
 
 /* service notice, can i.e. be used for website downtime */

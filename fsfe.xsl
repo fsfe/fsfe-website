@@ -623,6 +623,7 @@
           <xsl:attribute name="id">infobox</xsl:attribute>
           <xsl:if test = "/buildinfo/document/head/meta[@name='under-construction' and @content='true']">
         <xsl:element name="p">
+          <xsl:attribute name="id">under-construction-notice</xsl:attribute>
           <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'under-construction'" /></xsl:call-template>
         </xsl:element>
           </xsl:if>

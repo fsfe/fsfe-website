@@ -1524,7 +1524,7 @@ tr.highlighted {
 
 /* notices */
 
-#outdated-notice, #infobox {
+#outdated-notice, #under-construction-notice {
   border-width: 1px;
   border-style: solid;
   padding: .5em;
@@ -1537,7 +1537,7 @@ tr.highlighted {
   color: rgb(132,78,78);
 }
 
-#infobox {
+#under-construction-notice {
   background-color: rgb(255,245,220);
   border-color: rgb(253,195,59);
   color: rgb(132,78,78);

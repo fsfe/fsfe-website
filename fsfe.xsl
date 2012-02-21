@@ -761,6 +761,12 @@
           <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'translate'" /></xsl:call-template>
         </a>
           </li>
+          
+          <li>
+        <a href="/about/legal/imprint.html">
+          <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'imprint'" /></xsl:call-template>
+        </a>
+          </li>
         </ul>
 
         <p>

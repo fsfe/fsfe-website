@@ -1359,7 +1359,7 @@ a.fn {
   margin-top: 1.5em;
 }
 
-.action a:link {
+.action a:link, .action a:visited {
   padding: .8em 1em;
   height: 2em;
   white-space: nowrap;
@@ -1367,7 +1367,7 @@ a.fn {
   font-size:.9em;
   font-weight: 700;
   background: rgba(245,245,245,1);
-  border: 1px solid rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.2);
   border-radius: 3px;
 }
 

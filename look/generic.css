@@ -1355,6 +1355,33 @@ a.fn {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#70CE31", endColorstr="#2B6A0A");
 }
 
+.action { 
+  margin-top: 1.5em;
+}
+
+.action a:link {
+  padding: .8em 1em;
+  height: 2em;
+  white-space: nowrap;
+  color: #444;
+  font-size:.9em;
+  font-weight: 700;
+  background: rgba(245,245,245,1);
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 3px;
+}
+
+.action a:hover {
+  border-color: rgba(0,0,0,0.3);
+  box-shadow: 0 2px 3px -2px rgba(0,0,0,0.3);
+  text-decoration:none;
+}
+
+.action a:active {
+  border-color: rgb(51,148,206);
+}
+ 
+
 
 /* Overview pages */
 ul.overview {

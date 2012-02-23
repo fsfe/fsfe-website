@@ -11,12 +11,12 @@ clear:both;}
 #zimmermann,
 #mueller,
 #angstalt {
-height: 350px;
+max-height: 400px;
 }
 
-#room404 {width: 400px;}
-#desk{width: 300px;}
-#programme{width: 169px;}
-#zimmermann{width: 300px;}
-#mueller{width: 200px;}
-#angstalt{width: 200px;}
+#room404, #room404 img {width: 350px;}
+#desk, #desk img{width: 350px;}
+#programme, #programme img{width: 200px;}
+#zimmermann, #zimmermann img{width: 500px;}
+#mueller, #mueller img{width: 200px;}
+#angstalt, #angstalt img{width: 200px;}

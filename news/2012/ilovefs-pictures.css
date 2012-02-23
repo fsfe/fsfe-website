@@ -4,7 +4,7 @@ margin:0;
 max-height: 400px;
 }
 
-.pictures-wall .captioned:last-child:after, .pictures-wall .one-half:nth-child(even):after, .pictures-wall .one-third:nth-child(2n+1) {
+.pictures-wall .captioned:last-child:after, .pictures-wall .one-half:nth-child(even):after, .pictures-wall .one-third:nth-child(3),.pictures-wall .one-third:nth-child(6) {
 clear:both;}
 
 .pictures-wall .one-halft, #room404, #desk, #zimmermann {width: 46%;}

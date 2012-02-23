@@ -1356,6 +1356,33 @@ a.fn {
 }
 
 
+.action { 
+  margin: 1.5em 0 1em 0;
+}
+
+.action a:link, .action a:visited {
+  padding: .8em 1em;
+  height: 2em;
+  white-space: nowrap;
+  color: #444;
+  font-size:.9em;
+  font-weight: 700;
+  background: rgba(245,245,245,1);
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 3px;
+}
+
+.action a:hover {
+  border-color: rgba(0,0,0,0.3);
+  box-shadow: 0 2px 3px -2px rgba(0,0,0,0.3);
+  text-decoration:none;
+}
+
+.action a:active {
+  border-color: rgb(51,148,206);
+}
+ 
+
 /* Overview pages */
 ul.overview {
   list-style-type: none;

@@ -3,7 +3,7 @@ float:left;
 margin:0 -1px -1px 0;
 }
 
-.pictures-wall .captioned:last-child:after, .pictures-wall .one-half:nth-child(even):after, .pictures-wall .one-third:nth-child(3),.pictures-wall .one-third:nth-child(6) {
+.pictures-wall .captioned:last-child:after, .pictures-wall .one-half:nth-child(even):after, .pictures-wall .one-third:nth-child(3):after,.pictures-wall .one-third:nth-child(6):after {
 clear:both;}
 
 .pictures-wall .one-halft, #room404, #desk, #zimmermann {width: 46%;}

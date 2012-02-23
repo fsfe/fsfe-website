@@ -1,5 +1,6 @@
 .pictures-wall .captioned {
 float:left;
+margin:0;
 }
 
 .pictures-wall .captioned:last-child:after {
@@ -14,9 +15,7 @@ clear:both;}
 max-height: 400px;
 }
 
-#room404, #room404 img {width: 350px;}
-#desk, #desk img{width: 350px;}
-#programme, #programme img{width: 200px;}
-#mueller, #mueller img{width: 200px;}
-#angstalt, #angstalt img{width: 200px;}
-#zimmermann, #zimmermann img{width: 600px;}
+#room404, #desk, #zimmermann {width: 48%;}
+#programme, #mueller,#angstalt{width: 30%;}
+
+.pictures-wall .captioned img {max-width:100%;}

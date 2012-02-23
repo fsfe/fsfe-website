@@ -1,6 +1,9 @@
-.pictures-wall {
-
+.pictures-wall .captioned {
+float:left;
 }
+
+.pictures-wall .captioned:last-child:after {
+clear:both;}
 
 #room404,
 #desk,

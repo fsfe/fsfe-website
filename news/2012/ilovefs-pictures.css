@@ -1,21 +1,13 @@
 .pictures-wall .captioned {
 float:left;
 margin:0;
-}
-
-.pictures-wall .captioned:last-child:after {
-clear:both;}
-
-#room404,
-#desk,
-#programme,
-#zimmermann,
-#mueller,
-#angstalt {
 max-height: 400px;
 }
 
-#room404, #desk, #zimmermann {width: 46%;}
-#programme, #mueller,#angstalt{width: 30%;}
+.pictures-wall .captioned:last-child:after, .pictures-wall .one-half:nth-child(even):after, .pictures-wall .one-third:nth-child(2n+1) {
+clear:both;}
+
+.pictures-wall .one-halft, #room404, #desk, #zimmermann {width: 46%;}
+.pictures-wall .one-hird, #programme, #mueller,#angstalt{width: 30%;}
 
 .pictures-wall .captioned img {max-width:100%;}

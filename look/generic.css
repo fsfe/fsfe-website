@@ -28,6 +28,13 @@ Editing rules:
   padding: 0;
 }
 
+/* Notes on fonts:
+   The website occasionnally refers to Arial or Helvetica fonts. There are Free
+   Software fonts for these typefaces too, like Nimbus Sans L. Microsoft Core
+   Fonts are proprietary software and should not be used. See:
+   https://en.wikipedia.org/wiki/Core_fonts_for_the_Web#Program_termination_and_software_licence_agreement_issues
+*/
+
 body {
   font-family: "Arial", sans-serif;
   font-size: 12px;

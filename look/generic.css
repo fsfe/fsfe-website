@@ -1380,13 +1380,15 @@ a.fn {
 }
 
 .action a:hover {
-  border-color: rgba(0,0,0,0.3);
-  box-shadow: 0 2px 3px -2px rgba(0,0,0,0.3);
+  border-color: rgb(74,160,240);
+  box-shadow: 0 3px 3px -2px rgba(0,0,0,0.3);
   text-decoration:none;
 }
 
 .action a:active {
-  border-color: rgb(51,148,206);
+  border-color: rgba(0,0,0,0.3);  
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  
 }
  
 

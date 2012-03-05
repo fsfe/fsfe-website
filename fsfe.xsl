@@ -186,8 +186,7 @@
       <xsl:element name="div">
         <xsl:attribute name="id">article-metadata</xsl:attribute>
         
-        <xsl:element name="p">
-          
+
           <!-- This is used to display author's profil pictures -hugo -->
           <!-- All people providing a profile picture must also provide a link -->
           <!--the code was taken from the code that displays links, but instead changed the xsl:when test=from "link" to "avatar" and then displays an img element taht takes the variable from "author-avatar". I removed xsl:otherwise -->
@@ -221,6 +220,47 @@
               </xsl:if>
           </xsl:if>
           <!-- END OF This is used to display author's profil pictures -->
+        
+        <xsl:element name="p">
+          <xsl:if test = "string(/buildinfo/document/head/meta[@name='author-name-1']/@content)">
+            <span class="label"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'author'" /></xsl:call-template>: </span>
+            <xsl:choose>
+              <xsl:when test="/buildinfo/document/head/meta[@name='author-link-1']">
+                <xsl:variable name="author-link-1" select="/buildinfo/document/head/meta[@name='author-link-1']/@content" />
+                <a rel='author' href='{$author-link-1}'>
+                <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name-1']/@content" /> </a> 
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name-1']/@content" /> 
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:if>
+      
+          <xsl:if test = "string(/buildinfo/document/head/meta[@name='author-name-2']/@content)">
+            <xsl:choose>
+              <xsl:when test="/buildinfo/document/head/meta[@name='author-link-2']">
+                <xsl:variable name="author-link-2" select="/buildinfo/document/head/meta[@name='author-link-2']/@content" />
+                , <a rel='author' href='{$author-link-2}'>
+                <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name-2']/@content" /> </a> 
+              </xsl:when>
+              <xsl:otherwise>
+                , <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name-2']/@content" /> 
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:if>
+          
+          <xsl:if test = "string(/buildinfo/document/head/meta[@name='author-name-3']/@content)">
+            <xsl:choose>
+              <xsl:when test="/buildinfo/document/head/meta[@name='author-link-3']">
+                <xsl:variable name="author-link-3" select="/buildinfo/document/head/meta[@name='author-link-3']/@content" />
+                , <a rel='author' href='{$author-link-3}'>
+                <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name-3']/@content" /> </a> 
+              </xsl:when>
+              <xsl:otherwise>
+                , <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name-3']/@content" /> 
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:if>
       
           <span class="label"> <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'published'" /></xsl:call-template>: </span><xsl:value-of select="/buildinfo/document/head/meta[@name='publication-date']/@content" />
           

@@ -187,45 +187,40 @@
         <xsl:attribute name="id">article-metadata</xsl:attribute>
         
         <xsl:element name="p">
+          
+          <!-- This is used to display author's profil pictures -hugo -->
+          <!-- All people providing a profile picture must also provide a link -->
+          <!--the code was taken from the code that displays links, but instead changed the xsl:when test=from "link" to "avatar" and then displays an img element taht takes the variable from "author-avatar". I removed xsl:otherwise -->
           <xsl:if test = "string(/buildinfo/document/head/meta[@name='author-name-1']/@content)">
-            <span class="label"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'author'" /></xsl:call-template>: </span>
-            <xsl:choose>
-              <xsl:when test="/buildinfo/document/head/meta[@name='author-link-1']">
+              <xsl:if test="/buildinfo/document/head/meta[@name='author-avatar-1']">
                 <xsl:variable name="author-link-1" select="/buildinfo/document/head/meta[@name='author-link-1']/@content" />
                 <a rel='author' href='{$author-link-1}'>
-                <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name-1']/@content" /> </a> 
-              </xsl:when>
-              <xsl:otherwise>
-                <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name-1']/@content" /> 
-              </xsl:otherwise>
-            </xsl:choose>
+                  <xsl:variable name="author-avatar-1" select="/buildinfo/document/head/meta[@name='author-avatar-1']/@content" />
+                  <img class="author-avatar" src="{$author-avatar-1}" alt="" />
+                </a> 
+              </xsl:if>
           </xsl:if>
-      
+          
           <xsl:if test = "string(/buildinfo/document/head/meta[@name='author-name-2']/@content)">
-            <xsl:choose>
-              <xsl:when test="/buildinfo/document/head/meta[@name='author-link-2']">
+              <xsl:if test="/buildinfo/document/head/meta[@name='author-avatar-2']">
                 <xsl:variable name="author-link-2" select="/buildinfo/document/head/meta[@name='author-link-2']/@content" />
-                , <a rel='author' href='{$author-link-2}'>
-                <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name-2']/@content" /> </a> 
-              </xsl:when>
-              <xsl:otherwise>
-                , <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name-2']/@content" /> 
-              </xsl:otherwise>
-            </xsl:choose>
+                <a rel='author' href='{$author-link-2}'>
+                  <xsl:variable name="author-avatar-2" select="/buildinfo/document/head/meta[@name='author-avatar-2']/@content" />
+                  <img class="author-avatar" src="{$author-avatar-2}" alt="" />
+                </a> 
+              </xsl:if>
           </xsl:if>
           
           <xsl:if test = "string(/buildinfo/document/head/meta[@name='author-name-3']/@content)">
-            <xsl:choose>
-              <xsl:when test="/buildinfo/document/head/meta[@name='author-link-3']">
+              <xsl:if test="/buildinfo/document/head/meta[@name='author-avatar-3']">
                 <xsl:variable name="author-link-3" select="/buildinfo/document/head/meta[@name='author-link-3']/@content" />
-                , <a rel='author' href='{$author-link-3}'>
-                <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name-3']/@content" /> </a> 
-              </xsl:when>
-              <xsl:otherwise>
-                , <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name-3']/@content" /> 
-              </xsl:otherwise>
-            </xsl:choose>
+                <a rel='author' href='{$author-link-3}'>
+                  <xsl:variable name="author-avatar-3" select="/buildinfo/document/head/meta[@name='author-avatar-3']/@content" />
+                  <img class="author-avatar" src="{$author-avatar-3}" alt="" />
+                </a> 
+              </xsl:if>
           </xsl:if>
+          <!-- END OF This is used to display author's profil pictures -->
       
           <span class="label"> <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'published'" /></xsl:call-template>: </span><xsl:value-of select="/buildinfo/document/head/meta[@name='publication-date']/@content" />
           

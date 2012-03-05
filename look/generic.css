@@ -1461,7 +1461,8 @@ img.author-avatar {
   margin: 0px 0.5em 0px 0px;
   width: 48px;
   height: 48px;
-  border: 1px solid black;
+  border: 1px solid rgb(50,50,50);
+  box-shadow: 0 0 3px  rgba(0,0,0,0.3);
 }
 
 /* identica feed */
@@ -1642,10 +1643,11 @@ tr.highlighted {
 
 .people img {
   float: left;
-  margin: 5px 10px 0px 0px;
+  margin: 5px 10px 10px 0px;
   width: 48px;
   height: 48px;
-  border: 1px solid black;
+  border: 1px solid rgb(50,50,50);
+  box-shadow: 0 0 3px  rgba(0,0,0,0.3);
 }
 
 ul.people {

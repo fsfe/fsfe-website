@@ -1377,6 +1377,7 @@ a.fn {
   background: rgba(245,245,245,1);
   border: 1px solid rgba(0,0,0,0.2);
   border-radius: 3px;
+  box-shadow: 0 3px 3px -2px rgba(0,0,0,0.15);
 }
 
 .action a:hover {
@@ -1455,14 +1456,9 @@ margin: 0 15px 0 0;
     padding: 0;
 }
 
-/*for consistency, please make sure it looks like .people img */
+/*for consistency, it looks like .people img */
 img.author-avatar {
-  float: left;
   margin: 0px 0.5em 0px 0px;
-  width: 48px;
-  height: 48px;
-  border: 1px solid rgb(50,50,50);
-  box-shadow: 0 0 3px  rgba(0,0,0,0.3);
 }
 
 /* identica feed */
@@ -1641,7 +1637,7 @@ tr.highlighted {
 
 /* People pages */
 
-.people img {
+.people img, img.author-avatar {
   float: left;
   margin: 5px 10px 10px 0px;
   width: 48px;

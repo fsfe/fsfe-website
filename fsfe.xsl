@@ -896,6 +896,8 @@
                buildinfo/set|
                buildinfo/textset|
                buildinfo/textsetbackup|
+               textset-content|
+               textset-content-backup|
                buildinfo/menuset|
                buildinfo/trlist|
                buildinfo/fundraising|

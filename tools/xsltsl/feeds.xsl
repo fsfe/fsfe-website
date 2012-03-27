@@ -207,7 +207,17 @@
           </h3>
         </xsl:otherwise>
       </xsl:choose>
-      
+     
+      <!-- event map -->
+      <xsl:if test="./place">
+        <xsl:variable name="map-id" select="position()"/>
+        <div id="map-{$map-id}">
+          <noscript>
+            <!-- TODO -->
+          </noscript>
+        </div>
+      </xsl:if>
+ 
       <!-- event date -->
       <xsl:choose>
         <xsl:when test="$start != $end">

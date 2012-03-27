@@ -20,6 +20,17 @@
     </xsl:copy>
   </xsl:template>
 
+  <!-- we need to include some things for event maps -->
+  <xsl:template match="/html/head">
+    <xsl:copy>
+      <xsl:apply-templates select="@*|node()" />
+
+      <link rel="stylesheet" href="/look/leaflet.css" />
+      <script type="text/javascript" src="/scripts/leaflet.js"></script>
+      <script type="text/javascript" src="/scripts/map.js"></script>
+    </xsl:copy>
+  </xsl:template>
+
   <!-- In /html/body node, append dynamic content -->
   <xsl:template match="/html/body">
     <xsl:element name="body">

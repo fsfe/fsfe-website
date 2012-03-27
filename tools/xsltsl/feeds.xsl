@@ -211,7 +211,7 @@
       <!-- event map -->
       <xsl:if test="./place">
         <xsl:variable name="map-id" select="position()"/>
-        <div id="map-{$map-id}">
+        <div id="map-{$map-id}" onload="map_init('map-{$map-id}', {./place/lat}, {./place/lon})">
           <noscript>
             <!-- TODO -->
           </noscript>

@@ -190,9 +190,9 @@
         <xsl:variable name="map-id" select="position()"/>
         <div id="map-{$map-id}" class="map"></div>
         <script type="text/javascript">
-          &lt;![CDATA[
+          /* &lt;![CDATA[ */
             map_init('map-<xsl:value-of select="$map-id"/>', <xsl:value-of select="./place/lat"/>, <xsl:value-of select="./place/lon"/>)
-          ]]&gt;
+          /* ]]&gt; */
         </script>
         <noscript><!-- TODO --></noscript>
       </xsl:if>

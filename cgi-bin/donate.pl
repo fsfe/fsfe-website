@@ -39,14 +39,13 @@ if ($period ne "o") {
 }
 
 ($year,$mon,$mday,$hour,$min,$sec,$yday,$wday,$isdst) = Localtime();
+($year, $mon, $mday) = Add_Delta_Days($year, $mon, $mday, 1);
 
 my $months = 0;
 if ($period eq "m") {
-  ($year, $mon, $mday) = Add_Delta_YM($year, $mon, $mday, 0, 1);
   $months = 1;
 }
 if ($period eq "y") {
-  ($year, $mon, $mday) = Add_Delta_YM($year, $mon, $mday, 1, 0);
   $months = 12;
 }
 my $start = strftime("%Y-%m-%d", ($sec, $min, $hour, $mday, $mon, $year, 0, 0, $isdst));

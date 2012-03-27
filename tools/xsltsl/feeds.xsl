@@ -191,7 +191,7 @@
         <div id="map-{$map-id}" class="map"></div>
         <script type="text/javascript">
           &lt;![CDATA[
-            map_init('map-{$map-id}', {./place/lat}, {./place/lon})
+            map_init('map-<xsl:value-of select="$map-id"/>', <xsl:value-of select="./place/lat"/>, <xsl:value-of select="./place/lon"/>)
           ]]&gt;
         </script>
         <noscript><!-- TODO --></noscript>

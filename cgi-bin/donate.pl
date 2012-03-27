@@ -42,11 +42,11 @@ if ($period ne "o") {
 
 my $months = 0;
 if ($period eq "m") {
-  ($year, $mon, $mday) = Add_Delta_YM($year, $mon, 1, 0, 1);
+  ($year, $mon, $mday) = Add_Delta_YM($year, $mon, $mday, 0, 1);
   $months = 1;
 }
 if ($period eq "y") {
-  ($year, $mon, $mday) = Add_Delta_YM($year, $mon, 1, 1, 0);
+  ($year, $mon, $mday) = Add_Delta_YM($year, $mon, $mday, 1, 0);
   $months = 12;
 }
 my $start = strftime("%Y-%m-%d", ($sec, $min, $hour, $mday, $mon, $year, 0, 0, $isdst));

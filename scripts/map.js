@@ -12,7 +12,7 @@ function map_init(mapID, lat, lng) {
 	map.addLayer(osmLayer);
 
 	//set center of the map
-	map.setView(new L.LatLng(lat, lng), 1);
+	map.setView(new L.LatLng(lat, lng), 5);
 
 	//set attribution
 	map.attributionControl.addAttribution('map data under <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a> by <a href="http://openstreetmap.org/">OpenStreetMap</a>');

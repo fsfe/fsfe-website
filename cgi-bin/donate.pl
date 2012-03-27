@@ -3,7 +3,7 @@
 use CGI;
 use POSIX qw(strftime);
 use Date::Calc qw(Localtime);
-use Date::Calc qw(Add_Delta_YM);
+use Date::Calc qw(Add_Delta_Days);
 use Digest::SHA1 qw(sha1_hex);
 
 # -----------------------------------------------------------------------------

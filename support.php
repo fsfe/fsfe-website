@@ -41,12 +41,12 @@ $db = NULL;
 //TODO: replace with standard FSFE website way of displaying feedback
 if ( isset($e) && $e ) {
     //TODO: fix link to support page
-    echo '<p>Error!</p>
+    echo '<p>Sorry, there was an error. Please notify webmaster@fsfe.org</p>
           <p><a href="support.html">Back to the support page</a></p>';
 }
 else {
     //TODO: fix link to support page
-    echo '<p>Thank you!</p>
+    echo '<p>Thank you for showing your support to the FSFE!</p>
           <p><a href="support.html">Back to the support page</a></p>';
 }
 

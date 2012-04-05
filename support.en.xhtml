@@ -38,6 +38,7 @@
             <p>
             <label id="country">Country
               <select name="country_code">
+                <option value="">Select..</option>
               <optgroup label="Europe">
                 <option value="AL">Albania (Shqipëria)</option>
                 <option value="AD">Andorra</option>
@@ -308,6 +309,7 @@ $(document).ready(function() {
 	$("form.support").validate({
 		rules: {
 			semail: {email: true, required: true}
+			lastname: {required: true}
 		 }
 	});
 });

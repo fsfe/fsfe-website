@@ -1870,12 +1870,18 @@ div.map {
 /* ------------------------------------------------------------------------- */
 
 #support_form {
-    margin-left: 250px;
+    margin-left: 150px;
 }
 .support input[type=email], .support input[type=text], .support select { 
     float: right; 
     width: 385px; 
     margin-right: 32px;
+}
+.support select {
+    width: 405px;
+}
+.support input[type=submit] {
+    margin-bottom: 64px;
 }
 .support label>label { margin-left: 7em; width: 18em; display: block; color: red; }
 

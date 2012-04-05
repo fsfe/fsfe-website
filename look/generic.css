@@ -1882,9 +1882,10 @@ div.map {
 }
 .support input[type=submit] {
     float: right;
-    width: 100px;
-    margin-right: 285px;
+    width: 200px;
+    margin-right: 240px;
     margin-bottom: 64px;
+    clear: both;
 }
 .support label>label { margin-left: 7em; width: 18em; display: block; color: red; }
 

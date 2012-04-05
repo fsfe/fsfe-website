@@ -1874,4 +1874,6 @@ div.map {
 }
 .support input[type=email], .support input[type=text], .support select { float: right; width: 300px; }
 .support p { clear: both; }
+.support label>label { margin-left: 7em; width: 18em; display: block; color: red; }
+
 

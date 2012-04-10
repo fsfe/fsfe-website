@@ -13,7 +13,7 @@ $_POST['time'] = date('Y-m-d H:i:s');
 
 try {
         //open the database
-	$db = new PDO( 'sqlite:../../db/support.sqlite' ); 
+	$db = new PDO( 'sqlite:../../db/support-test.sqlite' ); 
 }
 catch(PDOException $e) {
 	print 'Error while connecting to Database: '.$e->getMessage();

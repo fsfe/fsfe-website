@@ -1870,3 +1870,31 @@ div.map {
 	float: right;
 	margin: 3px;
 }
+
+/* ------------------------------------------------------------------------- */
+/* Support form                                                                   */
+/* ------------------------------------------------------------------------- */
+
+#support_form {
+    margin-left: 150px;
+}
+.support input[type=email], .support input[type=text], .support select { 
+    float: right; 
+    width: 385px; 
+    margin-right: 32px;
+}
+.support select {
+    width: 405px;
+}
+.support input[type=submit] {
+    float: right;
+    width: 200px;
+    margin: 0 240px 64px 150px;
+}
+.support label>label { 
+    margin-left: 180px; 
+    width: 385px; 
+    display: block; 
+    color: red; 
+}
+

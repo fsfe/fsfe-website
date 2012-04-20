@@ -32,22 +32,35 @@
     <strong>Προειδοποίηση: </strong>
     Αυτή η σελίδα δεν έχει μεταφραστεί ακόμα. Αυτό που βλέπετε παρακάτω
     είναι η πρωτότυπη έκδοση της σελίδας. Παρακαλούμε χρησιμοποιήστε
-    <a href="/contribute/contribute.html">αυτήν τη σελίδα</a> για να δείτε πώς μπορείτε
-    να βοηθήσετε στις μεταφράσεις και σε άλλες ανάγκες.
+    <a href="/contribute/contribute.html">αυτήν τη σελίδα</a> για να δείτε 
+    πώς μπορείτε να βοηθήσετε στις μεταφράσεις και σε άλλες ανάγκες.
   </text>
+
+  <text id="source">Πηγαίος κώδικας</text>
+  <text id="contact">Επικοινωνήστε μαζί μας</text>
+  <text id="translate">Θέλετε να βοηθήσετε στη μετάφραση;</text>
+  <text id="imprint">Σφραγίδα</text>
+
+  <!-- Info box -->
+  <text id="under-construction">
+    <strong>Προειδοποίηση: </strong>Αυτή η σελίδα είναι υπό κατασκευή. 
+    Παρακαλούμε όπως <strong>μη διαδίδετε</strong> ή επιχειρείτε μετάφραση
+    καθώς το περιεχόμενο πρόκειται να αλλάξει.
+  </text>
+
   <text id="search">Αναζήτηση</text>
-  <text id="submit">αναζήτηση</text>
-  <text id="language">Language</text>
-  
-<!--Info box -->
+  <text id="submit">Εγγραφή</text>
+
+  <text id="language">Γλώσσα</text>
+
+ <!-- Article metadata -->
+ <text id="author">Συγγραφέας</text>
+ <text id="published">Δημοσίευση</text>
+ <text id="download">Λήψη</text>
   
   <!-- Conjunctions -->
   <text id="to">μέχρι</text>
 
- <!-- Article metadata -->
- <text id="author">Author</text>
- <text id="published">Δημοσίευση</text>
- <text id="download">Download</text>
   <!-- Menu -->
   <text id="fsfe/about">Περίγραμμα</text>
   <text id="fsfe/projects">Η εργασία μας</text>

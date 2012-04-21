@@ -127,8 +127,8 @@ $SIG{CHLD} = 'IGNORE';
 # Create XML and XSLT parser contexts. Also create the root note for the
 # above mentioned XML file (used to feed the XSL transformation).
 
-my $parser = XML::LibXML->new();
-my $xslt_parser = XML::LibXSLT->new();
+my $parser = XML::LibXML->new('encoding'=>'utf-8');
+my $xslt_parser = XML::LibXSLT->new('encoding'=>'utf-8');
 
 # Parse the global stylesheet
 
@@ -323,7 +323,7 @@ sub process {
   # Create the root note for the above mentioned XML file (used to feed the XSL
   # transformation).
 
-  my $dom = XML::LibXML::Document->new("1.0", "iso-8859-1");
+  my $dom = XML::LibXML::Document->new("1.0", "utf-8");
   my $root = $dom->createElement("buildinfo");
   $dom->setDocumentElement($root);
 
@@ -358,10 +358,10 @@ sub process {
   #
   my $trlist = $dom->createElement("trlist");
   foreach my $lang (split(/:/, $langs)) {
-      my $tr = $dom->createElement("tr");
-      $tr->setAttribute("id", $lang);
-      $tr->appendText($languages{$lang});
-      $trlist->appendChild($tr);
+    my $tr = $dom->createElement("tr");
+    $tr->setAttribute("id", $lang);
+    $tr->appendText($languages{$lang});
+    $trlist->appendChild($tr);
   }
   $root->appendChild($trlist);
 
@@ -370,9 +370,9 @@ sub process {
   #
   my $localmenu = "$opts{i}/localmenuinfo.xml";
   if (-f $localmenu) {
-      my $menudoc = $dom->createElement("localmenuset");
-      $root->appendChild($menudoc);
-      clone_document($menudoc, $localmenu);
+    my $menudoc = $dom->createElement("localmenuset");
+    $root->appendChild($menudoc);
+    clone_document($menudoc, $localmenu);
   }
 
   #
@@ -399,15 +399,15 @@ sub process {
     while (my ($lang, undef) = each %languages) {
     	$root->setAttribute("language", $lang);
 
-        #
-	      # This finds the source file to use. If we can't find a translation
-	      # into the language, it uses the english version instead, or that in
-	      # the local language. Or the first version it finds. This should be
-        # made prettier.
-        #
-	      my $document = $dom->createElement("document");
-	      $document->setAttribute("language", $lang);
-	      $root->appendChild($document);
+      #
+      # This finds the source file to use. If we can't find a translation
+      # into the language, it uses the english version instead, or that in
+      # the local language. Or the first version it finds. This should be
+      # made prettier.
+      #
+      my $document = $dom->createElement("document");
+      $document->setAttribute("language", $lang);
+      $root->appendChild($document);
 
 	      my $source = "$opts{i}/$file.$lang.xhtml";
 	      unless (-f $source) {
@@ -599,10 +599,10 @@ sub process {
 				$root->setAttribute("outdated", "no");
 			}
 
-        #
-        # Get the appropriate textset for this language. If one can't be
-        # found, use the English. (I hope this never happens)
-        #
+	#
+	# Get the appropriate textset for this language. If one can't be
+	# found, use the English. (I hope this never happens)
+	#
 	my $textlang = $lang;
 	unless (-f $opts{i}."/tools/texts-$textlang.xml") {
 	    $textlang = "en";
@@ -611,11 +611,10 @@ sub process {
 	my $textdoc = $dom->createElement("textset");
 	$root->appendChild($textdoc);
 	clone_document($textdoc, $opts{i}."/tools/texts-$textlang.xml");
-
-
-        #
-        # Read the fundraising text, if it exists.
-        #
+	
+	#
+	# Read the fundraising text, if it exists.
+	#
 	if (-f $opts{i}."/fundraising.$lang.xml") {
 	    my $fundraisingdoc = $dom->createElement("fundraising");
 	    $root->appendChild($fundraisingdoc);
@@ -628,10 +627,10 @@ sub process {
 
 
 	#
-        # And then we do the same thing for the menues. But first we take the
-        # global menu here, then we add any information that is specific to
-        # the focus.
-        #
+	# And then we do the same thing for the menues. But first we take the
+	# global menu here, then we add any information that is specific to
+	# the focus.
+	#
 	foreach ($root->getElementsByTagName("menuset")) {
 	    $root->removeChild($_);
 	}
@@ -675,7 +674,7 @@ sub process {
 	      $anchor = "";
 	    }
 	    $href =~ s/#.*//;
-	    # proces URL
+	    # process URL
 	    if (($href =~ /\.html$/) && ($href !~ /\.[a-z][a-z]\.html$/)) {
               $href =~ s/\.html$/\.$lang.html/;
             } elsif (($href =~ /\.rss$/) && ($href !~ /\.[a-z][a-z]\.rss$/)) {
@@ -764,7 +763,7 @@ sub clone_document {
     }
     $root->appendChild($doc);
     
-    my $parser = XML::LibXML->new();
+    my $parser = XML::LibXML->new('encoding'=>'utf-8');
     $parser->load_ext_dtd(0);
     $parser->recover(1);
     

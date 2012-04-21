@@ -13,7 +13,7 @@
         <!-- parameter 'team' is your country code -->
         
         <xsl:variable name="teamcomma"><xsl:value-of select="$team" />,</xsl:variable>
-		<xsl:variable name="commateam">, <xsl:value-of select="$team" /></xsl:variable>
+        <xsl:variable name="commateam">, <xsl:value-of select="$team" /></xsl:variable>
         
         <xsl:element name="ul">
             <xsl:attribute name="class">people</xsl:attribute>
@@ -122,4 +122,22 @@
             </xsl:for-each>
         </xsl:element>
     </xsl:template>
+    
+    
+    <xsl:template name="country-list">
+			
+			<select id="country" name="country">
+				
+				<xsl:for-each select="/html/set/country">
+					<xsl:sort select="." lang="en" />
+					
+					<option><xsl:value-of select="." /></option>
+					
+				</xsl:for-each>
+				
+			</select>
+			
+    </xsl:template>
+    
+    
 </xsl:stylesheet>

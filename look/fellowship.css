@@ -14,10 +14,7 @@ a:link {
 }
 
 a:visited {
-  color: rgb(193,225,151);
-}
-
-h1,
+  color: rgb(193,225,151<rf,
 h2,
 h3,
 h4 {
@@ -32,6 +29,11 @@ h4 {
   background-image: url("/graphics/fellowship/ribbon_fellowship2.png");
   background-position: bottom left;
   height: 250px;
+}
+
+/* TODO(ato): This should be made dynamic and generalized */
+#statement {
+  width: 50%;
 }
 
 /* display Fellowship sidebar menu, hiding FSFE menu */

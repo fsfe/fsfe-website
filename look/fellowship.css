@@ -14,14 +14,15 @@ a:link {
 }
 
 a:visited {
-  color: rgb(78,130,46);
+  color: rgb(82,130,52);
 }
 
-/*h2,*/
-/*h3,*/
-/*h4 {*/
-/*  color: rgb(99,152,41);*/
-/*}*/
+h1,
+h2,
+h3,
+h4 {
+  color: rgb(66,121,32);
+}
 
 #header {
   background-image: url("/graphics/fellowship/ribbon_fellowship2.png");

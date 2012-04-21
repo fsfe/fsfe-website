@@ -945,7 +945,7 @@
                buildinfo/trlist|
                buildinfo/fundraising|
                buildinfo/localmenuset|
-               tags
+               tags|
                legal"/>
 
   <!-- For all other nodes, copy verbatim -->

@@ -152,12 +152,8 @@
       </xsl:element>
     </xsl:if>
     
-    
-    <!-- copy original <h1> -->
-    <xsl:copy>
-      <xsl:apply-templates select="node()"/>
-    </xsl:copy>
-    
+    <!-- auto generate ID for headings if doesn't already exist -->
+    <xsl:call-template name="generate-id" />
     
     <!-- Apply news page rules -->
     <xsl:if test="string(/buildinfo/document/@newsdate) and
@@ -241,7 +237,43 @@
     <!-- End Apply article rules -->
          
   </xsl:template>
-  <!-- End modifications to H1 -->  
+  <!-- End modifications to H1 --> 
+  
+  <!-- Modify H2 -->
+  <xsl:template match="h2">
+    <!-- auto generate ID for headings if doesn't already exist -->
+    <xsl:call-template name="generate-id" />
+  </xsl:template>
+  
+  <!-- Modify H3 -->
+  <xsl:template match="h3">
+    <!-- auto generate ID for headings if doesn't already exist -->
+    <xsl:call-template name="generate-id" />
+  </xsl:template>
+  
+  <!-- Modify H4 -->
+  <xsl:template match="h4">
+    <!-- auto generate ID for headings if doesn't already exist -->
+    <xsl:call-template name="generate-id" />
+  </xsl:template>
+  
+  <!-- Modify H4 -->
+  <xsl:template match="h4">
+    <!-- auto generate ID for headings if doesn't already exist -->
+    <xsl:call-template name="generate-id" />
+  </xsl:template>
+  
+  <!-- Modify H5 -->
+  <xsl:template match="h5">
+    <!-- auto generate ID for headings if doesn't already exist -->
+    <xsl:call-template name="generate-id" />
+  </xsl:template>
+  
+  <!-- Modify H6 -->
+  <xsl:template match="h6">
+    <!-- auto generate ID for headings if doesn't already exist -->
+    <xsl:call-template name="generate-id" />
+  </xsl:template>
 
   <!-- HTML body -->
   <xsl:template match="body">
@@ -385,7 +417,7 @@
             <xsl:attribute name="class">planet</xsl:attribute>
             <xsl:element name="a">
               <xsl:attribute name="href">http://planet.fsfe.org/</xsl:attribute>
-              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'planet/blogs'" /></xsl:call-template>
+              Planet
             </xsl:element>
             <!-- causes validation errors, needs li to pass validator?
             <xsl:element name="ul">
@@ -690,42 +722,7 @@
 
     </xsl:element><!--end wrapper-inner-->
     
-	<!-- licenses -->
-	
-	<xsl:if test = "/buildinfo/document/legal">
-	  <div id="legal">
-	   
-	    <p>
-              <xsl:choose> 
-                <xsl:when test = "/buildinfo/document/legal/license">	    
-	        <xsl:element name="a">
-	          <xsl:attribute name="href">
-	            <xsl:value-of select="/buildinfo/document/legal/license"/>
- 	          </xsl:attribute>
-	          <xsl:attribute name="rel">license</xsl:attribute>
-                    <xsl:if test ="/buildinfo/document/legal/@type='cc-license'">
-	                <xsl:element name="img">
-	                  <xsl:attribute name="src">/graphics/cc-logo.png</xsl:attribute>
-	                  <xsl:attribute name="alt">
-	                    <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'creative-commons-license'" /></xsl:call-template>
-	                  </xsl:attribute>
-	                </xsl:element>
-                    </xsl:if>
-                    <xsl:value-of select="/buildinfo/document/legal/notice"/>
-	        </xsl:element>
-	        </xsl:when>
-	        
-	        <xsl:otherwise>
-                  <xsl:value-of select="/buildinfo/document/legal/notice"/>
-	        </xsl:otherwise>
-	      </xsl:choose>
-            </p>  
-	    
- 	  </div>
-	</xsl:if>
-	
-	
-	<!--old cc license way-->
+	<!-- cc licenses -->
 	<xsl:if test = "string(/buildinfo/document/head/meta[@name='cc-license']/@content)">
 	<xsl:element name="div">		
 		<xsl:attribute name="id">cc-licenses</xsl:attribute>
@@ -945,8 +942,7 @@
                buildinfo/trlist|
                buildinfo/fundraising|
                buildinfo/localmenuset|
-               tags|
-               legal"/>
+               tags"/>
 
   <!-- For all other nodes, copy verbatim -->
   <xsl:template match="@*|node()" priority="-1">

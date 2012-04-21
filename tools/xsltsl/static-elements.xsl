@@ -65,4 +65,26 @@
     </xsl:element>
   </xsl:template>
 
+  <!-- auto generate ID for headings if doesn't already exist -->
+  <xsl:template name="generate-id">
+    <xsl:copy>
+	<xsl:choose>
+		<xsl:when test="not(@id)">
+			<xsl:variable name="formattedTitle" select="translate(node(),' ','-')"/>
+			<xsl:attribute name="id">
+				<xsl:value-of select="$formattedTitle" />
+			</xsl:attribute>
+		</xsl:when>
+		<xsl:otherwise>
+			<xsl:attribute name="id">
+				<xsl:value-of select="@id" />
+			</xsl:attribute>	
+		</xsl:otherwise>
+	</xsl:choose>
+     
+	<xsl:apply-templates select="node()"/>
+	
+    </xsl:copy>
+  </xsl:template>
+
 </xsl:stylesheet>

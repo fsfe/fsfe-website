@@ -705,8 +705,8 @@
 	          <xsl:attribute name="rel">license</xsl:attribute>
                     <xsl:if test ="/buildinfo/document/legal/@type='cc-license'">
 	                <xsl:element name="img">
-	                  <xsl:attribute name="src=">/graphics/cc-logo.png</xsl:attribute>
-	                  <xsl:attribute name="alt=">
+	                  <xsl:attribute name="src">/graphics/cc-logo.png</xsl:attribute>
+	                  <xsl:attribute name="alt">
 	                    <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'creative-commons-license'" /></xsl:call-template>
 	                  </xsl:attribute>
 	                </xsl:element>

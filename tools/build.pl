@@ -3,22 +3,22 @@
 # build.pl - a tool for building FSFE web pages
 #
 # Copyright (C) 2003 Jonas Öberg
-#
+# 
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation; either version 2 of the License, or
 # (at your option) any later version.
-#
+# 
 # This program is distributed in the hope that it will be useful, but
 # WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
 # General Public License for more details.
-#
+# 
 # You should have received a copy of the GNU General Public License
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  
 # 02110-1301, USA.
-
+#
 use File::Find::Rule;
 use Getopt::Std;
 use File::Path;
@@ -32,7 +32,6 @@ use IO::Select;
 use Socket;
 use Fcntl ':flock';
 
-#
 # This defines the focuses and their respective preferred / original
 # language. For example, it says that we should have a focus called
 # "se" (Sweden) which has the preferred language "sv" (Swedish).
@@ -128,8 +127,8 @@ $SIG{CHLD} = 'IGNORE';
 # Create XML and XSLT parser contexts. Also create the root note for the
 # above mentioned XML file (used to feed the XSL transformation).
 
-my $parser = XML::LibXML->new();
-my $xslt_parser = XML::LibXSLT->new();
+my $parser = XML::LibXML->new('encoding'=>'utf-8');
+my $xslt_parser = XML::LibXSLT->new('encoding'=>'utf-8');
 
 # Parse the global stylesheet
 
@@ -235,7 +234,7 @@ foreach my $i (1..$threads) {
   $procs[$i]{parent} = new IO::Handle;
 
   socketpair($procs[$i]{child}, $procs[$i]{parent}, AF_UNIX,
-             STREAM, PF_UNSPEC);
+             SOCK_STREAM, PF_UNSPEC);
 
   $procs[$i]{child}->autoflush(1);
   $procs[$i]{parent}->autoflush(1);
@@ -243,7 +242,7 @@ foreach my $i (1..$threads) {
   #$procs[$i]{parent}->blocking(false);
 
   if (fork()) {
-    #
+    # 
     # The parent doesn't do anything at this stage, except close one of
     # the filehandes not used.
     #
@@ -264,12 +263,12 @@ foreach my $i (1..$threads) {
     while (!$io->error) {
       my $cmd = <$io>;
       if ($cmd =~ /DIE/) {
-	exit;
+         exit;
       } elsif ($cmd =~ /PROCESS/) {
-	chomp($cmd);
-	my (undef, $file, $langs) = split(/\|/, $cmd);
-	process($file, $langs);
-	print $io "NEXT\n";
+         chomp($cmd);
+         my (undef, $file, $langs) = split(/\|/, $cmd);
+         process($file, $langs);
+	 print $io "NEXT\n";
       }
     }
     exit;
@@ -324,7 +323,7 @@ sub process {
   # Create the root note for the above mentioned XML file (used to feed the XSL
   # transformation).
 
-  my $dom = XML::LibXML::Document->new("1.0", "iso-8859-1");
+  my $dom = XML::LibXML::Document->new("1.0", "utf-8");
   my $root = $dom->createElement("buildinfo");
   $dom->setDocumentElement($root);
 
@@ -410,26 +409,26 @@ sub process {
       $document->setAttribute("language", $lang);
       $root->appendChild($document);
 
-      my $source = "$opts{i}/$file.$lang.xhtml";
-      unless (-f $source) {
-	my $missingsource = $source;
-	if (-f "$opts{i}/$file.en.xhtml") {
-	  $document->setAttribute("language", "en");
-	  $source = "$opts{i}/$file.en.xhtml";
-	} elsif (-f "$opts{i}/$file.".$root->getAttribute("original").".xhtml") {
-	  $document->setAttribute("language", $root->getAttribute("original"));
-	  $source = "$opts{i}/$file.".$root->getAttribute("original").".xhtml";
-	} else {
-	  my $l = (keys %{$bases{$file}})[0];
-	  $document->setAttribute("language", $l);
-	  $source = "$opts{i}/$file.$l.xhtml";
-	}
-	if ($dir eq "global") {
-	  lock(*TRANSLATIONS);
-	  print TRANSLATIONS "$lang $missingsource $source\n";
-	  unlock(*TRANSLATIONS);
-	}
-      }
+	      my $source = "$opts{i}/$file.$lang.xhtml";
+	      unless (-f $source) {
+          my $missingsource = $source;
+          if (-f "$opts{i}/$file.en.xhtml") {
+		        $document->setAttribute("language", "en");
+		        $source = "$opts{i}/$file.en.xhtml";
+          } elsif (-f "$opts{i}/$file.".$root->getAttribute("original").".xhtml") {
+		        $document->setAttribute("language", $root->getAttribute("original"));
+		        $source = "$opts{i}/$file.".$root->getAttribute("original").".xhtml";
+          } else {
+            my $l = (keys %{$bases{$file}})[0];
+            $document->setAttribute("language", $l);
+		        $source = "$opts{i}/$file.$l.xhtml";
+          }
+          if ($dir eq "global") {
+    	      lock(*TRANSLATIONS);
+            print TRANSLATIONS "$lang $missingsource $source\n";
+	          unlock(*TRANSLATIONS);
+          }
+    	  }
 
       if ( (stat("$opts{o}/$dir/$file.$lang.html"))[9] >
              (stat($source))[9] && $opts{u} && ! -f "$opts{i}/$file.xsl" ) {
@@ -765,7 +764,7 @@ sub clone_document {
   }
   $root->appendChild($doc);
 
-  my $parser = XML::LibXML->new();
+  my $parser = XML::LibXML->new('encoding'=>'utf-8');
   $parser->load_ext_dtd(0);
   $parser->recover(1);
 

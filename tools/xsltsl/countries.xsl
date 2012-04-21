@@ -122,4 +122,22 @@
             </xsl:for-each>
         </xsl:element>
     </xsl:template>
+    
+    
+    <xsl:template name="country-list">
+			
+			<select id="country" name="country">
+				
+				<xsl:for-each select="/html/set/country">
+					<xsl:sort select="." lang="en" />
+					
+					<option><xsl:value-of select="." /></option>
+					
+				</xsl:for-each>
+				
+			</select>
+			
+    </xsl:template>
+    
+    
 </xsl:stylesheet>

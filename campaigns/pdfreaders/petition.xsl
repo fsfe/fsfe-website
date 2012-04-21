@@ -2,7 +2,9 @@
 
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-
+	
+	<xsl:import href="../../tools/xsltsl/countries.xsl" />
+	
   <xsl:output method="xml"
            encoding="UTF-8"
            indent="yes"
@@ -49,6 +51,10 @@
       </ul>
       <xsl:apply-templates select="/html/text/footer/node()" />
     </body>
+  </xsl:template>
+  
+  <xsl:template match="country-list">
+    <xsl:call-template name="country-list" />
   </xsl:template>
   
   <xsl:template match="@*|node()" priority="-1">

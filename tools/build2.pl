@@ -221,7 +221,7 @@ open (TRANSLATIONS, '>', "$opts{o}/translations.log");
 # $threads is the number of child processes to fork off to build the tree
 #
 unless ($threads = $opts{t}) {
-  $threads = 3;
+  $threads = 1;
 }
 
 #

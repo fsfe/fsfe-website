@@ -700,7 +700,7 @@
                 <xsl:when test = "/buildinfo/document/legal/license">	    
 	        <xsl:element name="a">
 	          <xsl:attribute name="href">
-	            <xsl:value-of select="."/>
+	            <xsl:value-of select="/buildinfo/document/legal/license"/>
  	          </xsl:attribute>
 	          <xsl:attribute name="rel">license</xsl:attribute>
                     <xsl:if test ="/buildinfo/document/legal/@type='cc-license'">
@@ -714,6 +714,7 @@
                     <xsl:value-of select="/buildinfo/document/legal/notice"/>
 	        </xsl:element>
 	        </xsl:when>
+	        
 	        <xsl:otherwise>
                   <xsl:value-of select="/buildinfo/document/legal/notice"/>
 	        </xsl:otherwise>

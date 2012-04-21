@@ -33,3 +33,7 @@ h4 {
   background-position: bottom left;
   height: 250px;
 }
+
+/* display Fellowship sidebar menu, hiding FSFE menu */
+#menu ul li.fellowship ul { dipslay: block }
+#menu ul li.fsfe ul       { display: none  }

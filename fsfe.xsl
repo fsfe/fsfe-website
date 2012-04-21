@@ -690,7 +690,42 @@
 
     </xsl:element><!--end wrapper-inner-->
     
-	<!-- cc licenses -->
+	<!-- licenses -->
+	
+	<xsl:if test = "/buildinfo/document/legal">
+	  <div id="legal">
+	   
+	    <p>
+              <xsl:choose> 
+                <xsl:when test = "/buildinfo/document/legal/license">	    
+	        <xsl:element name="a">
+	          <xsl:attribute name="href">
+	            <xsl:value-of select="/buildinfo/document/legal/license"/>
+ 	          </xsl:attribute>
+	          <xsl:attribute name="rel">license</xsl:attribute>
+                    <xsl:if test ="/buildinfo/document/legal/@type='cc-license'">
+	                <xsl:element name="img">
+	                  <xsl:attribute name="src">/graphics/cc-logo.png</xsl:attribute>
+	                  <xsl:attribute name="alt">
+	                    <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'creative-commons-license'" /></xsl:call-template>
+	                  </xsl:attribute>
+	                </xsl:element>
+                    </xsl:if>
+                    <xsl:value-of select="/buildinfo/document/legal/notice"/>
+	        </xsl:element>
+	        </xsl:when>
+	        
+	        <xsl:otherwise>
+                  <xsl:value-of select="/buildinfo/document/legal/notice"/>
+	        </xsl:otherwise>
+	      </xsl:choose>
+            </p>  
+	    
+ 	  </div>
+	</xsl:if>
+	
+	
+	<!--old cc license way-->
 	<xsl:if test = "string(/buildinfo/document/head/meta[@name='cc-license']/@content)">
 	<xsl:element name="div">		
 		<xsl:attribute name="id">cc-licenses</xsl:attribute>
@@ -910,7 +945,8 @@
                buildinfo/trlist|
                buildinfo/fundraising|
                buildinfo/localmenuset|
-               tags"/>
+               tags|
+               legal"/>
 
   <!-- For all other nodes, copy verbatim -->
   <xsl:template match="@*|node()" priority="-1">

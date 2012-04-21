@@ -320,8 +320,8 @@ sub process {
   my ($file, $langs) = @_;
   
 #  if (not $file eq "donate/thankgnus") {
-#    return;
-#  }
+ #   return;
+  #}
   
   print "$file\n";
 

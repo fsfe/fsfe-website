@@ -164,12 +164,8 @@
       </xsl:element>
     </xsl:if>
     
-    
-    <!-- copy original <h1> -->
-    <xsl:copy>
-      <xsl:apply-templates select="node()"/>
-    </xsl:copy>
-    
+    <!-- auto generate ID for headings if doesn't already exist -->
+    <xsl:call-template name="generate-id" />
     
     <!-- Apply news page rules -->
     <xsl:if test="string(/buildinfo/document/@newsdate) and
@@ -253,7 +249,43 @@
     <!-- End Apply article rules -->
          
   </xsl:template>
-  <!-- End modifications to H1 -->  
+  <!-- End modifications to H1 --> 
+  
+  <!-- Modify H2 -->
+  <xsl:template match="h2">
+    <!-- auto generate ID for headings if doesn't already exist -->
+    <xsl:call-template name="generate-id" />
+  </xsl:template>
+  
+  <!-- Modify H3 -->
+  <xsl:template match="h3">
+    <!-- auto generate ID for headings if doesn't already exist -->
+    <xsl:call-template name="generate-id" />
+  </xsl:template>
+  
+  <!-- Modify H4 -->
+  <xsl:template match="h4">
+    <!-- auto generate ID for headings if doesn't already exist -->
+    <xsl:call-template name="generate-id" />
+  </xsl:template>
+  
+  <!-- Modify H4 -->
+  <xsl:template match="h4">
+    <!-- auto generate ID for headings if doesn't already exist -->
+    <xsl:call-template name="generate-id" />
+  </xsl:template>
+  
+  <!-- Modify H5 -->
+  <xsl:template match="h5">
+    <!-- auto generate ID for headings if doesn't already exist -->
+    <xsl:call-template name="generate-id" />
+  </xsl:template>
+  
+  <!-- Modify H6 -->
+  <xsl:template match="h6">
+    <!-- auto generate ID for headings if doesn't already exist -->
+    <xsl:call-template name="generate-id" />
+  </xsl:template>
 
   <!-- HTML body -->
   <xsl:template match="body">
@@ -397,7 +429,7 @@
             <xsl:attribute name="class">planet</xsl:attribute>
             <xsl:element name="a">
               <xsl:attribute name="href">http://planet.fsfe.org/</xsl:attribute>
-              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'planet/blogs'" /></xsl:call-template>
+              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'planet/blogs'" /></xsl:call-template> 
             </xsl:element>
             <!-- causes validation errors, needs li to pass validator?
             <xsl:element name="ul">

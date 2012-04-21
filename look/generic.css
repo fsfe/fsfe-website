@@ -510,6 +510,7 @@ h3 {
   padding: 0.5em 0.5em 0 0.5em;
   margin: 0;
   border-top: 1px solid rgb(220,220,220);
+  color: #666;
 }
 
 .postit {  /* compatibility */
@@ -1458,7 +1459,9 @@ margin: 0 15px 0 0;
     padding: 0;
 }
 
-#legal a { color: #5D5D5D; }
+#legal a {
+    color: #5D5D5D;
+}
 
 /*for consistency, it looks like .people img */
 img.author-avatar {
@@ -1902,3 +1905,18 @@ div.map {
     color: red; 
 }
 
+/* ------------------------------------------------------------------------- */
+/* Created with Free Software buttons                                        */
+/* ------------------------------------------------------------------------- */
+
+img.cwfs-button { 
+  border:none; 
+  padding:2px; 
+  background-color:#c0c0c0; 
+}
+img.cwfs-button:hover { 
+  background-color:#a0a0a0; 
+}
+.cwfs textarea {
+  width: 94%;
+} 

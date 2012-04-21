@@ -815,6 +815,7 @@ h4#subpages + ul li:nth-child(odd) {
 
 #menu ul li a {
   font-weight: bold;
+  white-space: nowrap;
 }
 
 #menu ul + ul {

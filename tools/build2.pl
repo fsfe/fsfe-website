@@ -221,7 +221,7 @@ open (TRANSLATIONS, '>', "$opts{o}/translations.log");
 # $threads is the number of child processes to fork off to build the tree
 #
 unless ($threads = $opts{t}) {
-  $threads = 1;
+  $threads = 3;
 }
 
 #
@@ -320,8 +320,8 @@ sub process {
   my ($file, $langs) = @_;
   
 #  if (not $file eq "donate/thankgnus") {
-#    return;
-#  }
+ #   return;
+  #}
   
   print "$file\n";
 

@@ -977,7 +977,8 @@
                buildinfo/trlist|
                buildinfo/fundraising|
                buildinfo/localmenuset|
-               tags"/>
+               tags|
+               legal"/>
 
   <!-- For all other nodes, copy verbatim -->
   <xsl:template match="@*|node()" priority="-1">

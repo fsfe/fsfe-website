@@ -35,5 +35,5 @@ h4 {
 }
 
 /* display Fellowship sidebar menu, hiding FSFE menu */
-#menu ul li.fellowship ul { dipslay: block }
+#menu ul li.fellowship ul { display: block }
 #menu ul li.fsfe ul       { display: none  }

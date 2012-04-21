@@ -282,6 +282,7 @@ p.left {
   float: left;
   margin: 1em 0 0 1%;
   width: 200px;
+  max-width: 40%;
 }
 
 #logo a img {
@@ -292,8 +293,9 @@ p.left {
   color: rgb(140,140,140);
   float: left;
   font-size: 120%;
-  margin: 3em 2% 0 8%;
-  width: 55%;
+  margin: 3em 2% 0 0;
+  width: 50%;
+  padding-left: 6%;
 }
 
 

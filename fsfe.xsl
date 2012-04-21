@@ -105,6 +105,18 @@
         <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/events/events.<xsl:value-of select="/buildinfo/@language"/>.rss</xsl:attribute>
         <xsl:attribute name="type">application/rss+xml</xsl:attribute>
       </xsl:element>
+
+      <xsl:for-each select="/buildinfo/trlist/tr">
+        <xsl:sort select="@id"/>
+        <xsl:element name="link">
+          <xsl:attribute name="type">text/html</xsl:attribute>
+          <xsl:attribute name="rel">alternate</xsl:attribute>
+          <xsl:attribute name="hreflang"><xsl:value-of select="@id" /></xsl:attribute>
+          <xsl:attribute name="lang"><xsl:value-of select="@id" /></xsl:attribute>
+          <xsl:attribute name="href"><xsl:value-of select="/buildinfo/@filename"/>.<xsl:value-of select="@id"/>.html</xsl:attribute>
+          <xsl:attribute name="title"><xsl:value-of select="."  disable-output-escaping="yes" /></xsl:attribute>
+        </xsl:element>
+      </xsl:for-each>
       
       <script type="text/javascript" src="/scripts/jquery.js"></script>
       <script type="text/javascript" src="/scripts/master.js"></script>

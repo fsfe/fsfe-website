@@ -281,7 +281,6 @@ p.left {
 #logo {
   float: left;
   margin: 1em 0 0 1%;
-  max-width: 29%;
   width: 200px;
 }
 
@@ -291,10 +290,10 @@ p.left {
 
 #statement {
   color: rgb(140,140,140);
-  float: left;
+  float: right;
   font-size: 120%;
-  margin: 3em 2% 0 8%;
-  width: 60%;
+  margin: 3em 2% 0 0;
+  width: 55%;
 }
 
 

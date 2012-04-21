@@ -2,6 +2,7 @@
 
 use CGI;
 use POSIX qw(strftime);
+use Date::Calc qw(Today);
 use Date::Calc qw(Add_Delta_YM);
 use Digest::SHA1 qw(sha1_hex);
 
@@ -37,7 +38,7 @@ if ($period ne "o") {
   $reference .= ".$period";
 }
 
-($sec, $min, $hour, $mday, $mon, $year, $wday, $yday, $isdst) = localtime;
+($year, $mon, $mday) = Today();
 
 my $months = 0;
 if ($period eq "m") {
@@ -48,7 +49,7 @@ if ($period eq "y") {
   ($year, $mon, $mday) = Add_Delta_YM($year, $mon, $mday, 1, 0);
   $months = 12;
 }
-my $start = strftime("%Y-%m-%d", ($sec, $min, $hour, $mday, $mon, $year, 0, 0, $isdst));
+my $start = sprintf("%04d-%02d-%02d", ($year, $mon, $mday));
 my $day = substr($date, -2);
 
 my $lang = substr($language, 0, 2);

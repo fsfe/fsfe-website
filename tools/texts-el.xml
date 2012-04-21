@@ -10,7 +10,7 @@
   <text id="translator3c"> αυτής της σελίδας.</text>
   <text id="permission">
     Η κατά λέξη αντιγραφή και αναδιανομή ολόκληρου του άρθρου επιτρέπεται
-    σε οποιοδήποτε μέσο, δεδομένου πως αυτή η σημείωση θα διατηρηθεί.
+    σε οποιοδήποτε μέσο δεδομένου ότι αυτή η σημείωση θα διατηρηθεί.
   </text>
   <text id="webmaster">
     Παρακαλούμε αναφέρετε προβλήματα με αυτήν τη σελίδα στη διεύθυνση
@@ -32,36 +32,52 @@
     <strong>Προειδοποίηση: </strong>
     Αυτή η σελίδα δεν έχει μεταφραστεί ακόμα. Αυτό που βλέπετε παρακάτω
     είναι η πρωτότυπη έκδοση της σελίδας. Παρακαλούμε χρησιμοποιήστε
-    <a href="/contribute/contribute.html">αυτήν τη σελίδα</a> για να δείτε πώς μπορείτε
-    να βοηθήσετε στις μεταφράσεις και σε άλλες ανάγκες.
+    <a href="/contribute/contribute.html">αυτήν τη σελίδα</a> για να δείτε 
+    πώς μπορείτε να βοηθήσετε στις μεταφράσεις και σε άλλες ανάγκες.
   </text>
+
+  <text id="source">Πηγαίος κώδικας</text>
+  <text id="contact">Επικοινωνήστε μαζί μας</text>
+  <text id="translate">Θέλετε να βοηθήσετε στη μετάφραση;</text>
+  <text id="imprint">Σφραγίδα</text>
+
+  <!-- Info box -->
+  <text id="under-construction">
+    <strong>Προειδοποίηση: </strong>Αυτή η σελίδα είναι υπό κατασκευή. 
+    Παρακαλούμε όπως <strong>μη διαδίδετε</strong> ή επιχειρείτε μετάφραση
+    καθώς το περιεχόμενο πρόκειται να αλλάξει.
+  </text>
+
   <text id="search">Αναζήτηση</text>
-  <text id="submit">αναζήτηση</text>
-  <text id="language">Language</text>
-  
-<!--Info box -->
+  <text id="submit">Εγγραφή</text>
+
+  <text id="language">Γλώσσα</text>
+
+ <!-- Article metadata -->
+ <text id="author">Συγγραφέας</text>
+ <text id="published">Δημοσίευση</text>
+ <text id="download">Λήψη</text>
   
   <!-- Conjunctions -->
   <text id="to">μέχρι</text>
 
- <!-- Article metadata -->
- <text id="author">Author</text>
- <text id="published">Published</text>
- <text id="download">Download</text>
   <!-- Menu -->
   <text id="fsfe/about">Περίγραμμα</text>
   <text id="fsfe/projects">Η εργασία μας</text>
+  <text id="fsfe/campaigns">Δράσεις</text>
   <text id="fsfe/documents">Έγγραφα</text>
   <text id="fsfe/help">Συμβάλλετε</text>
   <text id="fsfe/donate">Δωρεές</text>
   <text id="fsfe/order">Κατάστημα</text>
-  <text id="fsfe/lists">Κατάλογοι παραληπτών αλληλογραφίας</text>
+  <text id="fsfe/lists">Λίστες αλληλογραφίας</text>
   <text id="fsfe/press">Τύπος</text>
-  <text id="fsfe/thankgnus">Οι Δωροθέτες μας</text>
-  <text id="fellowship/fellowship">Join</text>
-  <text id="fellowship/1-wiki">Wiki</text>
-  <text id="fellowship/2-planet">Πλανήτης ιστολογίων</text>
-  <text id="fellowship/3-join">Εγγραφή</text>
+  <text id="fsfe/thankgnus">Δωροθέτες</text>
+  <text id="fellowship/fellowship">Εγγραφή</text>
+  <text id="fellowship/card">Κάρτα</text>
+  <text id="fellowship/communicate">Επαφή</text>
+  <text id="fellowship/contact">Επαφή</text>
+  <text id="planet/planet">Επαφή</text>
+  <text id="wiki/wiki">Wiki</text>
 
   <!-- Date time -->
   <text id="months/1">Ιανουάριος</text>
@@ -105,4 +121,16 @@
   <text id="weekdays-abbreviated/5">Πα</text>
   <text id="weekdays-abbreviated/6">Σα</text>
   <text id="weekdays-abbreviated/7">Κυ</text>
+
+  <text id="statement1">Το Ευρωπαϊκό Ίδρυμα Ελεύθερου Λογισμικού είναι μια
+  μη-κερδοσκοπική οργάνωση αφιερωμένη στην πρόοδο του </text>
+  <text id="statement-fs">Ελεύθερου Λογισμικού</text>
+  <text id="statement2">, η οποία εργάζεται για να προωθήσει την ελευθερία 
+  στην αναδυόμενη ψηφιακή κοινωνία</text>
+
+  <text id="learn-more">Μάθετε περισσότερα</text>
+
+  <text id="press">Τύπος</text>
+  <text id="newsletter">Ενημερωτικό δελτίο</text>
+
 </textset>

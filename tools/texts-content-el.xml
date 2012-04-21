@@ -24,14 +24,17 @@
   <text id="donate">Δωρεές</text>
 
   <!-- Campaign box on front-page, translated texts -->
-  <text id="cb-restricted-boot">Stand up for your freedom to install Free Software,</text>
-  <text id="cb-restricted-boot-link">sign our statement against Restricted Boot</text>
+  <text id="cb-restricted-boot">Αγωνισθείτε για την ελευθερία σας να 
+  εγκαθιστάτε Ελεύθερο Λογισμικό,</text>
+  <text id="cb-restricted-boot-link">υπογράψτε την πρότασή μας ενάντια στην
+  Περιοριστική Εκκίνηση</text>
 
   <text id="cb-valentine">Στις 14 Φεβρουαρίου: </text>
   <text id="cb-valentine-link">Δείξτε την αγάπη σας για το Ελεύθερο Λογισμικό!</text>
   <!-- end of texts for the campaign box -->
 
   <text id="join">Εγγραφή</text>  
+  <text id="ourwork2011">Η εργασία μας στο 2011</text>
   
   <text id="subscribe">εγγραφή</text>
 
@@ -41,17 +44,6 @@
 
   <!-- quotes to be displayed in a rotating box -->
   <quotes>
-    <quote id="brunke" tag="donors" pos="3">
-      <photo>/donate/brunke.jpg</photo>
-      <txt>Λογική διαχείριση του κύκλου ζωής αντί για κύκλους προϊόντων που
-        αποφασίζει ο κατασκευαστής. Οριζόντια ολοκλήρωση συστημάτων και των
-        ορίων τους αντί για κλείδωμα σε προμηθευτή. Επίγνωση των πηγών αντί 
-        υποχρεωτικής ενεργοποίησης. Το Ελεύθερο Λογισμικό επιτρέπει σε εμάς, 
-        ως κατασκευαστές συστημάτων, να απελευθερώσουμε τους πελάτες μας
-        από περιορισμούς που ωφελούν μόνο τον ίδιο τον κατασκευαστή.
-       </txt>
-      <author>Carsten Brunke - Inmedias.it</author>
-    </quote>
     <quote id="wiesemann" tag="donors" pos="1">
       <photo>/donate/wiesemann.jpg</photo>
       <txt>

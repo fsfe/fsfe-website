@@ -115,19 +115,22 @@
   <xsl:template match="campaign-box4">
     <div id="campaign-box-4">
       
-      <!-- here are two codes snippets that will provide for a graphical and a text banner
-           /!\ comment out one of the two, you probably only want one banner on the front page  -->
+      <!--
+        Here are two codes snippets that will provide for a graphical and a text banner.
+        /!\ comment out one of the two, you probably only want one banner on the front page.
+      -->
       
       <!-- graphical banner -->
-      <a href="/campaigns/ilovefs/ilovefs.html">
+      <!--<a href="/campaigns/ilovefs/ilovefs.html">
         <img src="/graphics/valentine.png" />
-      </a>
+      </a>-->
       
       <!--
         Text banner
         The ids used here are needed to fetch the correct texts in /tools/texts-content.**.xml
+        /!\ the text with given IDs *must* exist there!
       -->
-      <!--<div class="banner-border">
+      <div class="banner-border">
         <p>
           <xsl:call-template name="gettext">
             <xsl:with-param name="id" select="'cb-restricted-boot'" />
@@ -139,7 +142,7 @@
             </xsl:call-template>
           </a>
         </p>
-      </div>-->
+      </div>
       
     </div>
   </xsl:template>

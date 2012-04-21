@@ -13,11 +13,15 @@ a:link {
   color: rgb(107,179,64);
 }
 
+a:visited {
+  color: rgb(82,130,52);
+}
+
 h1,
 h2,
 h3,
 h4 {
-  color: rgb(99,152,41);
+  color: rgb(66,121,32);
 }
 
 #header {
@@ -25,11 +29,3 @@ h4 {
   background-position: bottom left;
   height: 250px;
 }
-
-#header #logo {
-  width: auto;
-}
-
-/* display Fellowship sidebar menu, hiding FSFE menu */
-#menu ul li.fellowship ul { display: block }
-#menu ul li.fsfe ul       { display: none  }

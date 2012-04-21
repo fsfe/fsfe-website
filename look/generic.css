@@ -28,6 +28,13 @@ Editing rules:
   padding: 0;
 }
 
+/* Notes on fonts:
+   The website occasionnally refers to Arial or Helvetica fonts. There are Free
+   Software fonts for these typefaces too, like Nimbus Sans L. Microsoft Core
+   Fonts are proprietary software and should not be used. See:
+   https://en.wikipedia.org/wiki/Core_fonts_for_the_Web#Program_termination_and_software_licence_agreement_issues
+*/
+
 body {
   font-family: "Arial", sans-serif;
   font-size: 12px;
@@ -1229,7 +1236,7 @@ a.fn {
 }
 
 #campaign-box-2 {
-  width: 32%;
+  width: 31%;
   float: right;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -1355,6 +1362,7 @@ a.fn {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#70CE31", endColorstr="#2B6A0A");
 }
 
+
 .action { 
   margin: 1.5em 0 1em 0;
 }
@@ -1369,19 +1377,21 @@ a.fn {
   background: rgba(245,245,245,1);
   border: 1px solid rgba(0,0,0,0.2);
   border-radius: 3px;
+  box-shadow: 0 3px 3px -2px rgba(0,0,0,0.15);
 }
 
 .action a:hover {
-  border-color: rgba(0,0,0,0.3);
-  box-shadow: 0 2px 3px -2px rgba(0,0,0,0.3);
+  border-color: rgb(74,160,240);
+  box-shadow: 0 3px 3px -2px rgba(0,0,0,0.3);
   text-decoration:none;
 }
 
 .action a:active {
-  border-color: rgb(51,148,206);
+  border-color: rgba(0,0,0,0.3);  
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  
 }
  
-
 
 /* Overview pages */
 ul.overview {
@@ -1446,13 +1456,9 @@ margin: 0 15px 0 0;
     padding: 0;
 }
 
-/*for consistency, please make sure it looks like .people img */
+/*for consistency, it looks like .people img */
 img.author-avatar {
-  float: left;
   margin: 0px 0.5em 0px 0px;
-  width: 48px;
-  height: 48px;
-  border: 1px solid black;
 }
 
 /* identica feed */
@@ -1631,12 +1637,13 @@ tr.highlighted {
 
 /* People pages */
 
-.people img {
+.people img, img.author-avatar {
   float: left;
-  margin: 5px 10px 0px 0px;
+  margin: 5px 10px 10px 0px;
   width: 48px;
   height: 48px;
-  border: 1px solid black;
+  border: 1px solid rgb(50,50,50);
+  box-shadow: 0 0 3px  rgba(0,0,0,0.3);
 }
 
 ul.people {
@@ -1853,7 +1860,6 @@ ul.taglist li {
 .tag39 { font-size: 39; }
 .tag40 { font-size: 40; }
 
-
 /* -------------------------------------------------------------------- */
 /* events map                                                           */
 /* -------------------------------------------------------------------- */
@@ -1883,7 +1889,7 @@ div.map {
 .support input[type=submit] {
     float: right;
     width: 200px;
-    margin: 0 240px 64px 150px;
+    margin: 12px 240px 64px 150px;
 }
 .support label>label { 
     margin-left: 180px; 
@@ -1891,5 +1897,4 @@ div.map {
     display: block; 
     color: red; 
 }
-
 

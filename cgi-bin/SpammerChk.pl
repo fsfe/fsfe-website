@@ -1,5 +1,6 @@
 #! /usr/bin/perl
-#
+# This was taken from http://www.stopforumspam.com/forum/viewtopic.php?id=210
+# 
 # ----------------------------------------------------------------------
 #
 #   SpammerChk -- A PERL module for querying the StopForumSpam API

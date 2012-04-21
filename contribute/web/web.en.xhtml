@@ -7,7 +7,7 @@
 
     <p id="category"><a href="/contribute/">Contribute</a></p>
     <h1>Webmastering</h1>
-
+    
     <p id="introduction">
       The <em>Web team </em> maintain and develop the FSFE's websites —
       ranging from <a href="/">fsfe.org</a> to project and campaign
@@ -15,8 +15,27 @@
       organization's face to the world, and to improve the technical
       solutions of our web efforts.
     </p>
-
-
+    
+    
+    <h2>Get to know us, get to know the website</h2>
+    
+    <p>
+    If you want to get an idea of what work on FSFE's website consists
+    of, the best way is to come have a chat with us. Some of the
+    webmasters are regularly on freenode's #fsfe channel, where we
+    will be happy to meet you and answer your questions!
+    To check out who is working on the website, and with
+    FSFE as a whole, visit <a href="/about/team.html">
+    our team page</a>.
+    </p>
+    
+    <p>
+    Your web coordinators, <a
+    href="/about/jean/jean.en.html">Nicolas Jean</a>
+    and <a href="http://sny.no/">Andreas Tolf Tolfsen</a>.
+    </p>
+    
+    
     <h2>Introduction</h2>
 
     <p>
@@ -62,7 +81,7 @@
     </ul>
 
 
-    <h2>Understanding how the web pages are built</h2>
+    <h2 id="Understanding">Understanding how the web pages are built</h2>
 
     <p>
       The web pages of <var>fsfe.org</var> are maintaned as a set of
@@ -95,7 +114,7 @@
     </p>
 
 
-    <h2>Getting access to the web pages</h2>
+    <h2 id="Getting">Getting access to the web pages</h2>
 
     <p>
       The source files for the web pages are stored on the <a
@@ -142,7 +161,7 @@
     </ul>
 
 
-    <h3>Checking out a SVN branch to work on</h3>
+    <h3 id="Checking">Checking out a SVN branch to work on</h3>
     
     <p>
       The subversion repository has two main code bases for the FSFE
@@ -180,7 +199,7 @@
         tree</a> online to find out what you are interested in.
     </p>
 
-    <h2>Working with the repository</h2>
+    <h2 id="Working">Working with the repository</h2>
 
     <p>
       In subversion, <a
@@ -219,6 +238,12 @@ enable-auto-props = yes
     <p class="terminal">$ svn add <em>filename</em></p>
 
     <p>
+      To enable keyword substitution for a new file, execute
+    </p>
+
+    <p class="terminal">$ svn propset svn:keywords "Date Author Id Revision" <em>filename</em></p>
+
+    <p>
       To post your changes to the server, no matter be it a new file or a
       modification in an existing file, execute
     </p>
@@ -247,7 +272,7 @@ enable-auto-props = yes
     </p>
 
 
-    <h2>Coordination tools</h2>
+    <h2 id="Coordination">Coordination tools</h2>
 
     <p>
       The work on the website pages is coordinated on the <a
@@ -276,7 +301,7 @@ enable-auto-props = yes
     </p>
 
 
-    <h2>Responsible handling of write access</h2>
+    <h2 id="Responsible">Responsible handling of write access</h2>
 
     <p>
       If you have write access to the web pages, please subscribe to the <a
@@ -403,34 +428,52 @@ enable-auto-props = yes
     </p>
     
     
-    <h2>Fetch tagged news and events, implement a country page</h2>
+    <h2 id="Creative">Use Creative Commons licensed media</h2>
+    
+    <p>
+      If you use images or other media which which has been licensed using a 
+      Creative Commons license, you can make sure that the proper licensing
+      information is displayed by adding meta tags to the head section of the
+      web page which look like this:
+    </p>
+    
+    <pre class="file">
+&lt;meta name="cc-license" content="Image depicting Stephen Fry, © 2009 Vivan Jayant, used under a Creative Commons Attribution 2.0 Generic license" /&gt;
+&lt;meta name="cc-license" content="Image depicting Peckham Library, © 2009 Ellen Forsyth, used under a Creative Commons Attribution-NonCommercial-ShareAlike 2.0 Generic license" /&gt;
+    </pre>
+    
+    <h2 id="Fetch">Fetch tagged news and events, implement a country page</h2>
     
     <p>
       Please see <a href="/contribute/web/tagging.html">the dedicated howto</a> for this purpose.
     </p>
 
 
+    <!-- This is largely outdated
     <h2>Further information</h2>
 
     <p>
-      Given that the FSFE webpage has a European/global level and user-chosen
-      local levels that supplement them for information that is
-      country-specific, the layout has a certain complexity that is hidden
-      entirely from the user of the page.
-    </p>
-
-    <p>
-      Also, there is a <a href="http://www.texinfo.org"
+      There is a <a href="http://www.texinfo.org"
       target="_blank">Texinfo</a> documentation file <em><a href="/README.texi"
       target="_blank">Webmastering FSFE</a></em> by <a
       href="mailto:oberg@fsfeurope.org">Jonas Öberg</a>, who implemented the
-      build system for the page.  Please read it to know more about how the web
+      website build system.  Please read it to know more about how the web
       pages work.
+    </p>
+    -->
+
+    <h2>Other FSFE websites</h2>
+    
+    <p>
+      Besides the main fsfe.org website, volunteers are welcome to contribute to other FSFE
+      and Fellowship websites; you can find more information about these on the 
+      <a href="http://wiki.fsfe.org/FellowshipHacks" target="_blank">FSFE wiki</a>.
     </p>
 
   </body>
 
   <timestamp>$Date$ $Author$</timestamp>
+
 </html>
 <!--
 Local Variables: ***

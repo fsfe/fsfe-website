@@ -1,11 +1,11 @@
 EVENTS GUIDELINES: How to write a good event entry?
 ---------------------------------------------------
 
-Event entries appear on our website start page. It is important to make sure
-that they are well designed and give visitors sufficient information to decide
-if if they want to go there.
+Event entries appear on our website start page if they are tagged with
+"front-page" [1]. It is important to make sure that they are well designed and
+give visitors sufficient information to decide if if they want to go there.
 
-The events are maintained over the CVS from our website. The events are stored
+The events are maintained over the SVN from our website. The events are stored
 under events/YYYY/. More information on how to get access to the website can be
 found on our webmaster website
 <http://www.fsfe.org/contribute/web/web.en.html>.
@@ -103,3 +103,5 @@ we use e.g. <link>http://wiki.fsfe.org/groups/Berlin</link>. The difference is
 that the links with <page> do not appear on the start page but only on
 http://www.fsfe.org/events, and are thus less strongly advertised, while the
 links with <link> also appear on the start page.
+
+[1] http://fsfe.org/contribute/web/tagging.en.html

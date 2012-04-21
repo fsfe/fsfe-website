@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Please keep each list alphabetically ordered.  Emacs users want to set
+  sort-fold-case to true and run sort-lines on a region.  Vi+ users can
+  visually select the list and use the :sort command.
+
+  The date="..." should be filled with the last date when a donation from this
+  donor came in. It is important for the "current" thankgnus page.
+
+  Currently, the date="..." may only be set in a single xml file for the same
+  donor, so if you add a donor to a file of the new year, don't forget to
+  remove the date="..." in the old year's file.
+-->
+
+<donorset>
+  <patrons>
+    <donor date="2012-12-31" img="donors/freiheit.png">freiheit.com technologies</donor>
+    <donor date="2012-02-17" img="donors/google.jpg">Google</donor>
+    <donor date="2012-12-31" img="donors/linuxhotel.png">Linuxhotel Villa Vogelsang</donor>
+    <donor date="2012-03-22" img="donors/linuxfoundation.png">Linux Foundation</donor>
+  </patrons>
+
+  <sustainingcontributors>
+    <donor date="2012-02-29">Bibliotek-Systemer As</donor>
+    <donor date="2012-02-21">Black Duck</donor>
+    <donor date="2012-01-03">Finceptum Oy</donor>
+    <donor date="2012-01-02">Intevation GmbH</donor>
+    <donor date="2012-03-23">LG Electronics</donor>
+    <donor date="2012-02-01">Monty Program AB</donor>
+    <donor date="2012-03-14">Open Invention Network</donor>
+    <donor date="2012-03-08">Red Hat</donor>
+  </sustainingcontributors>
+
+  <contributors>
+    <donor date="2012-12-31">Christian Barth</donor>
+    <donor date="2012-12-31">inmedias.it GmbH</donor>
+    <donor date="2012-12-31">LIHAS - LinuxHaus Stuttgart</donor>
+    <donor date="2012-12-31">Joachim Zobel</donor>
+    <donor date="2012-12-31">Mario Lardieri</donor>
+  </contributors>
+
+  <supporters>
+    <donor date="2012-03-16">Alea Soluciones SLL</donor>
+    <donor date="2012-12-31">Andreas Olsson</donor>
+    <donor date="2012-12-31">Benjamin Kirschner</donor>
+    <donor date="2012-12-31">Bernhard Stosik</donor>
+    <donor date="2012-12-31">Christof Raber</donor>
+    <donor date="2012-12-31">Communitare GmbH</donor>
+    <donor date="2012-12-31">Dirk-Rolf Aust</donor>
+    <donor date="2012-01-05">Dr. Herbert Consult GmbH</donor>
+    <donor date="2012-12-31">Fabian Schury</donor>
+    <donor date="2012-01-05">Guido Arnold</donor>
+    <donor date="2012-12-31">Holger Hampel</donor>
+    <donor date="2012-01-02">Hostsharing e.G.</donor>
+    <donor date="2012-01-06">Jan Hecking</donor>
+    <donor date="2012-12-31">Jan Kupfer</donor>
+    <donor date="2012-01-11">Jayway AB</donor>
+    <donor date="2012-01-25">Jean-Bruno Luginbuehl</donor>
+    <donor date="2012-12-31">Joachim Krantz</donor>
+    <donor date="2012-02-15">Johann "Fossy" Weinzinger</donor>
+    <donor date="2012-03-31">Julien Petter</donor>
+    <donor date="2012-02-23">Jürgen Manz</donor>
+    <donor date="2012-02-10">Leif-Jöran Olsson</donor>
+    <donor date="2012-12-31">Michael Mosmann</donor>
+    <donor date="2012-03-07">novastorm UG</donor>
+    <donor date="2012-01-16">Oskar Welzl</donor>
+    <donor date="2012-02-16">Roland Hafner</donor>
+    <donor date="2012-02-23">Rok Jaklič</donor>
+    <donor date="2012-01-11">Rolf Anders</donor>
+    <donor date="2012-12-31">Thiemo Nagel</donor>
+    <donor date="2012-12-31">Torsten Loehr</donor>
+    <donor date="2012-12-31">Ulrich Walter</donor>
+    <donor date="2012-12-31">Uwe Henschel</donor>
+    <donor date="2012-02-24">Walter van Holst</donor>
+    <donor date="2012-12-31">Werner Wiethege</donor>
+  </supporters>
+</donorset>

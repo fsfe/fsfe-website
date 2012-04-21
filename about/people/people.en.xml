@@ -14,6 +14,13 @@
     <link>http://blogs.fsfe.org/padams/</link>
   </person>
 
+  <person id="albers" avatar="no" teams="main">
+    <name>Erik Albers</name>
+    <country>DE</country>
+    <function>intern/m</function>
+    <email>albers (at) fsfeurope (dot) org</email>
+  </person>
+
   <person id="arnold" avatar="yes" teams="main, de">
     <name>Guido Arnold</name>
     <country>DE</country>
@@ -22,18 +29,12 @@
     <link>http://blogs.fsfe.org/guido/</link>
   </person>
 
- <person id="bako" avatar="no" teams="main">
+ <person id="bako" avatar="yes" teams="main">
     <name>Eszter Bakó</name>
     <country>HU</country>
-    <function>intern/f</function>
+    <function project="policy">deputy/f</function>
     <email>eszter (at) fsfe (dot) org</email>
-  </person>
-
-  <person id="bowker" avatar="no" association-member="yes">
-    <name>Gareth Bowker</name>
-    <country>GB</country>
-    <email>bowker (at) fsfeurope (dot) org</email>
-    <link>http://blogs.fsfe.org/tgb/</link>
+    <link>/about/bako/bako.html</link>
   </person>
 
   <person id="bubestinger" avatar="no" teams="main, at">
@@ -59,7 +60,7 @@
     <link>/about/coughlan/coughlan.html</link>
   </person>
 
-  <person id="dengg" avatar="no" teams="at">
+  <person id="dengg" avatar="yes" teams="at">
    <name>Albert Dengg</name>
    <country>AT</country>
    <email>albert (at) fsfe (dot) org</email>
@@ -116,20 +117,12 @@
     <link>http://blogs.fsfe.org/torsten.grote/</link>
   </person>
 
-  <person id="holz" avatar="yes" association-member="no" teams="main">
-    <name>Christian Holz</name>
-    <country>DE</country>
-    <function>executive-director/m</function>
-    <email>holz (at) fsfeurope (dot) org</email>
-    <link>/about/holz/holz.html</link>
-  </person>
-  
- <person id="husovec" avatar="no" teams="main">
+ <person id="husovec" avatar="yes" teams="main">
     <name>Martin Husovec</name>
     <country>SK</country>
     <function>intern/m</function>
     <email>husovec (at) fsfe (dot) org</email>
-    <link></link>
+    <link>/about/husovec/husovec.html</link>
   </person>
 
   <person id="jyrinki" avatar="no" teams="main, fi">
@@ -142,6 +135,7 @@
   <person id="jean" avatar="yes" teams="main, fr, de">
     <name>Nicolas Jean</name>
     <country>DE</country>
+    <country>FR</country>
     <function volunteers="web">coordinator/m</function>
     <email>nicoulas (at) fsfe (dot) org</email>
     <link>/about/jean/jean.html</link>
@@ -195,14 +189,6 @@
     <link>/about/kirschner/kirschner.html</link>
   </person>
 
-  <person id="klein" avatar="no" association-member="yes" teams="main, de">
-    <name>Julia Klein</name>
-    <country>DE</country>
-    <function>fellowship-representative/f</function>
-    <email>klein (at) fsfeurope (dot) org</email>
-    <link>http://wiki.fsfe.org/Fellows/julia.e.klein</link>
-  </person>
-
   <person id="kneissl" avatar="no" teams="main, at">
     <name>Jürgen Kneissl</name>
     <country>AT</country>
@@ -216,6 +202,13 @@
     <email>koch (at) fsfeurope (dot) org</email>
     <link>http://blogs.fsfe.org/werner/</link>
   </person>
+  
+  <person id="lamers" avatar="no" teams="main">
+    <name>Mark Lamers</name>
+    <country>NL</country>
+    <function country="NL">coordinator/m</function>
+    <email>sandwitch (at) fsfe (dot) org</email>
+  </person>
 
   <person id="machon" avatar="no" association-member="yes" teams="main">
     <name>Pablo Machón</name>
@@ -224,14 +217,6 @@
     <email>machon (at) fsfeurope (dot) org</email>
   </person>
 
-  <person id="moeller" avatar="yes" teams="main">
-    <name>Marcus Möller</name>
-    <country>CH</country>
-    <function country="CH">coordinator/m</function>
-    <email>mmoeller (at) fsfe (dot) org </email>
-    <link>http://wiki.fsfe.org/Fellows/mmoeller</link>
-  </person>
-  
   <person id="mueller" avatar="yes" association-member="yes" teams="main, at">
     <name>Reinhard Müller</name>
     <country>AT</country>
@@ -243,8 +228,6 @@
   <person id="oberg" avatar="yes" association-member="yes" teams="main">
     <name>Jonas Öberg</name>
     <country>SE</country>
-    <function project="stacs">coordinator/m</function>
-    <function project="fp7">coordinator/m</function>
     <email>oberg (at) fsfeurope (dot) org</email>
     <link>/about/oberg/oberg.html</link>
   </person>
@@ -264,13 +247,18 @@
     <link>http://piana.eu/</link>
   </person>
 
-  
-  <person id="polvani" avatar="no" teams="main">
+  <person id="poderi" avatar="yes" association-member="yes">
+    <name>Giacomo Poderi</name>
+    <country>IT</country>
+    <email>poderi (at) fsfeurope (dot) org</email>
+  </person>
+
+  <person id="polvani" avatar="yes" teams="main">
     <name>Alessandro Polvani</name>
     <country>IT</country>
     <function>intern/m</function>
     <email>alessandro (dot) polvani (at) fsfe (dot) org</email>
-    <link></link>
+    <link>/about/polvani/polvani.html</link>
   </person>
 
   <person id="reiter" avatar="yes" association-member="yes" teams="main, de">
@@ -294,6 +282,14 @@
     <function volunteers="translators-it">coordinator/m</function>
     <email>rigamonti (at) fsfeurope (dot) org</email>
     <link>http://wiki.fsfe.org/Fellows/cri</link>
+  </person>
+
+  <person id="roussos" avatar="yes" association-member="yes" teams="main">
+    <name>Nikos Roussos</name>
+    <country>GR</country>
+    <function>fellowship-representative/m</function>
+    <email>comzeradd (at) fsfeurope (dot) org</email>
+    <link>http://wiki.fsfe.org/Fellows/comzeradd</link>
   </person>
 
   <person id="roy" avatar="yes" association-member="yes" teams="main, fr">

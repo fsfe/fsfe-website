@@ -1,15 +1,16 @@
 /*
-
-/scripts/master.js -- Misc. script snippets needed for fsfe.org
-
-*/
+ * Master script snippet(s) for fsfe.org
+ *
+ * @license GPL-2.0 <https://github.com/jquery/jquery/blob/master/GPL-LICENSE.txt>
+ * @license MIT <https://github.com/jquery/jquery/blob/master/MIT-LICENSE.txt>
+ * @license-comment As this makes use of jQuery, the jQuery licensing has been concluded.
+ */
 
 $(document).ready(function() {
 
-    // Close service notice when clicking dismiss button.
+    // Close service notice on dismiss button.
     $("#service-notice .close a").click(function() {
-//	$("#service-notice").fadeOut("slow");
-	$("#service-notice").hide();
+        $("#service-notice").hide();
     });
 
 });

@@ -35,7 +35,8 @@ form.expanded input[type=email],
 form.expanded input[type=url],
 form.expanded input[type=submit],
 form.expanded textarea {
-  width: 100%;
+  /*width: 100%;*/
+  width: 94%;
 }
 
 input[type="image"] {

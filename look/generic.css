@@ -1898,3 +1898,18 @@ div.map {
     color: red; 
 }
 
+/* ------------------------------------------------------------------------- */
+/* Created with Free Software buttons                                        */
+/* ------------------------------------------------------------------------- */
+
+img.cwfs-button { 
+  border:none; 
+  padding:2px; 
+  background-color:#c0c0c0; 
+}
+img.cwfs-button:hover { 
+  background-color:#a0a0a0; 
+}
+.cwfs textarea {
+  width: 94%;
+} 

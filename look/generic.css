@@ -1433,7 +1433,7 @@ p#article-attachmt {
 }
 
 /* creative commons license info footer */
-#cc-licenses {
+#legal, #cc-licenses {
 float:left;
 padding:10px;
 background-color: #cdcdcd;
@@ -1443,18 +1443,20 @@ width: 96%;
     box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.1);
 }
 
-#cc-licenses img {
+#legal img, #cc-licenses img {
 float: left;
 margin: 0 15px 0 0;
 }
 
-#cc-licenses p {
+#legal p, #cc-licenses p {
     color: #5D5D5D;
     float: left;
     line-height: 1.3em;
     margin: 0;
     padding: 0;
 }
+
+#legal a { color: #5D5D5D; }
 
 /*for consistency, it looks like .people img */
 img.author-avatar {

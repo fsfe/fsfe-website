@@ -70,9 +70,18 @@
     <xsl:copy>
 	<xsl:choose>
 		<xsl:when test="not(@id)">
-			<xsl:variable name="formattedTitle" select="translate(node(),' ','-')"/>
+			
+			<!-- replace spaces with dashes -->
+			<xsl:variable name="formattedTitle1" select="translate(node(),' ','-')"/>
+			
+			<!-- convert uppercase to lowercase using translate -->
+			<xsl:variable name="smallcase" select="'abcdefghijklmnopqrstuvwxyz'" />
+			<xsl:variable name="uppercase" select="'ABCDEFGHIJKLMNOPQRSTUVWXYZ'" />
+
+			<xsl:variable name="formattedTitle2" select="translate($formattedTitle1, $uppercase, $smallcase)" />
+			
 			<xsl:attribute name="id">
-				<xsl:value-of select="$formattedTitle" />
+				<xsl:value-of select="$formattedTitle2" />
 			</xsl:attribute>
 		</xsl:when>
 		<xsl:otherwise>

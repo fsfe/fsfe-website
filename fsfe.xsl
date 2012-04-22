@@ -979,7 +979,7 @@
 
   <!-- Do not copy non-HTML elements to output -->
   <xsl:template match="timestamp|
-               translator|
+               buildinfo/document/translator|
                buildinfo/set|
                buildinfo/textset|
                buildinfo/textsetbackup|
@@ -989,8 +989,11 @@
                buildinfo/trlist|
                buildinfo/fundraising|
                buildinfo/localmenuset|
-               tags|
-               legal"/>
+               buildinfo/document/tags|
+               buildinfo/document/legal|
+               buildinfo/document/author|
+               buildinfo/document/date|
+               buildinfo/document/download"/>
 
   <!-- For all other nodes, copy verbatim -->
   <xsl:template match="@*|node()" priority="-1">

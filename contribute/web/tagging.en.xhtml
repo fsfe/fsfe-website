@@ -210,10 +210,37 @@
     </p>
     
     <p>
-      For people's pictures, you want to put a 48*48 pixels picture in the
-      /about/<var>id</var> folder, named <var>id</var>-avatar.jpg (where
-      <var>id</var> is the id defined in /about/people/people.en.xml).
+      For people's pictures, you should put a 48*48 pixels picture in the
+      /about/<var>id</var> folder and add a line for the <var>avatar</var> URI, 
+      named <var>id</var>-avatar.jpg (where <var>id</var> is the id defined in 
+      /about/people/people.en.xml).
     </p>
+    
+    <h3>Tagging author, date and download files</h3>
+    
+    <p>
+      In order to give proper credits to the authors of articles you can add 
+      tags like these:
+    </p>
+    
+    <pre class="file">
+        &#60;author&#62;
+          &#60;name&#62;John Doe&#60;/name&#62;
+          &#60;link&#62;http://johndoe.me&#60;/link&#62;
+          &#60;avatar&#62;http://johndoe.me/me.png&#60;/avatar&#62;
+        &#60;/author&#62;
+
+        &#60;!-- For FSFE team members, you can take the information directly
+        from /about/people/people.en.xml, for instance: --&#62;
+        &#60;author id="gerloff" /&#62;
+        
+        &#60;date&#62;
+          &#60;revision content="2010-03-24" /&#62;
+          &#60;original content="2009-11-27" /&#62;
+        &#60;/date&#62;
+        
+        &#60;download type="pdf" content="/link/to/download-file.pdf" /&#62;
+    </pre>
     
   </body>
 

@@ -1429,11 +1429,17 @@ ul.overview {
 
 #article-metadata img {
   height:24px;
-  padding-right:.2em;
+  margin:.2em;
+  margin-bottom: -0.2em;
+  box-shadow: 0 0 3px  rgba(0,0,0,0.3);
 }
 
 #article-metadata a.author {
-  padding-right:1em;
+  padding-right:.7em;
+}
+
+#article-metadata a.author:last-child {
+  padding-right:0;
 }
 
 p#article-attachmt {

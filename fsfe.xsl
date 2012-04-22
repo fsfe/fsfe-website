@@ -322,8 +322,8 @@
         <span class="label"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'published'" /></xsl:call-template>&#160;</span>
         <xsl:value-of select="/buildinfo/document/date/original/@content" />
         <xsl:if test="/buildinfo/document/date/revision">
-                <span class="label"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'revision'" /></xsl:call-template>&#160;</span>
-                <xsl:value-of select="/buildinfo/document/date/revision/@content" />
+                &#160;(<span class="label"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'revision'" /></xsl:call-template>&#160;</span>
+                <xsl:value-of select="/buildinfo/document/date/revision/@content" />)&#160;
         </xsl:if>
     </xsl:if>
     

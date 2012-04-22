@@ -272,18 +272,15 @@ p.left {
 /* header */
 #header {
   background: url("/graphics/ribbon.png") no-repeat scroll left bottom transparent;
-  min-height: 220px;
-  margin: 0;
+  min-height: 200px;
+  padding: 0 1em;
   width: 100%
   padding: 0;
 }
 
 #logo {
   float: left;
-  /*margin: 1em 0 0 1%;*/
   width: 200px;
-  margin-top: 1em;
-  /*max-width: 40%;*/
 }
 
 #logo a img {
@@ -292,12 +289,9 @@ p.left {
 
 #statement {
   color: rgb(140,140,140);
-  /*float: left;*/
   font-size: 120%;
-  /*margin: 3em 2% 0 0;*/
-  /*width: 70%;*/
   width: 100%;
-  /*padding-left: 6%;*/
+  padding-top: 1.8em;
 }
 
 

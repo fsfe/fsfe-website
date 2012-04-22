@@ -108,7 +108,7 @@ h3 {
   font-size: 190%;
 }
 
-p {
+p, dl dt {
   margin: .8em 0;
 }
 
@@ -133,6 +133,16 @@ ol {
 
 ul {
   list-style: circle;
+}
+
+dt {
+
+color: #202D79;
+font-weight: bold;
+}
+
+dd {
+    padding-left: 2em;
 }
 
 blockquote {

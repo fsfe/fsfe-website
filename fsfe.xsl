@@ -249,10 +249,11 @@
     <!-- End Apply article rules -->
 
     <!--Article authors, date -->
-    <xsl:if test="/buildinfo/document/author">
+    <xsl:if test="/buildinfo/document/author or /buildinfo/document/date or /buildinfo/document/download">
       <xsl:element name="div">
         <xsl:attribute name="id">article-metadata</xsl:attribute>
-     
+
+        <xsl:if test="/buildinfo/document/author">
             <span class="label"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'writtenby'" /></xsl:call-template></span>
             
             <xsl:for-each select="/buildinfo/document/author">
@@ -307,6 +308,8 @@
                 <xsl:attribute name="href"><xsl:value-of select="/buildinfo/document/download/@content" /></xsl:attribute>
                 <xsl:value-of select="/buildinfo/document/download/@type" />
         </xsl:element>
+    </xsl:if>
+    
       </xsl:element>
     </xsl:if>
     <!--End Article authors, date-->

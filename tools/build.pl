@@ -327,10 +327,8 @@ while (wait() != -1) {
 
 sub process {
   my ($file, $langs) = @_;
-  
-  #print "$file\n";
 
-  print STDERR "Building $file.. \n" unless $opts{q};
+  print STDERR "Building $file\n" unless $opts{q};
   # Create the root note for the above mentioned XML file (used to feed the XSL
   # transformation).
 

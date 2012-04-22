@@ -47,7 +47,7 @@
                 <!--                                    </xsl:call-template>-->
                                                         <xsl:element name="img">
                                                                 <xsl:attribute name="alt"><xsl:value-of select="name" /></xsl:attribute>
-                                                                <xsl:attribute name="src"><xsl:value-of select="avatar" /></xsl:attrivute>
+                                                                <xsl:attribute name="src"><xsl:value-of select="avatar" /></xsl:attribute>
                                                         </xsl:element>
                                                     
                                                 </xsl:element>

@@ -250,6 +250,7 @@
 
     <!--Article authors, date -->
     <xsl:if test="/buildinfo/document/author">
+    <div id="article-metadata">
             <span class="label"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'writtenby'" /></xsl:call-template></span>
             
             <xsl:for-each select="/buildinfo/document/author">
@@ -304,6 +305,7 @@
                 <xsl:attribute name="href"><xsl:value-of select="/buildinfo/document/download/@content" /></xsl:attribute>
                 <xsl:value-of select="/buildinfo/document/download/@type" />
         </xsl:element>
+    </div>    
     </xsl:if>
     <!--End Article authors, date-->
          

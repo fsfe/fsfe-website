@@ -329,9 +329,9 @@ sub process {
   my ($file, $langs) = @_;
 
   print STDERR "Building $file\n" unless $opts{q};
+
   # Create the root note for the above mentioned XML file (used to feed the XSL
   # transformation).
-
   my $dom = XML::LibXML::Document->new("1.0", "utf-8");
   my $root = $dom->createElement("buildinfo");
   $dom->setDocumentElement($root);
@@ -348,18 +348,18 @@ sub process {
   $root->setAttribute("original", "en");
   my $srcfocus = "global";
   if ($file =~ /^([a-z][a-z])\//) {
-      $srcfocus = "$1";
-      $root->setAttribute("original", $countries{$1});
+    $srcfocus = "$1";
+    $root->setAttribute("original", $countries{$1});
   }
-  
+
   $root->setAttribute("filename", "/$file");
-  
+
   #
   # Set the directory name attribute
   #
   my (undef, $current_dir, undef) = fileparse($file);
 
-  $root->setAttribute("dirname", "$current_dir");
+  $root->setAttribute("dirname", $current_dir);
 
   #
   # Find all translations for this document, and create the trlist set
@@ -396,7 +396,6 @@ sub process {
   # Transform it, once for every focus!
   #
   while (my ($dir, undef) = each %countries) {
-    
     # If we handle a focus specific file, only process it in that focus
     # -> we don't handle focus-specific files anymore, commenting next line out, since it's causing errors
     #next if (("$srcfocus" ne "global") && ("$dir" ne "$srcfocus"));

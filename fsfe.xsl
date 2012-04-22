@@ -141,6 +141,11 @@
       <script src="/scripts/master.js"></script>
       <script src="/scripts/placeholder.js"></script>
       <script src="/scripts/highlight.pack.js"></script>
+
+      <script>
+        hljs.tabReplace = "  ";
+        hljs.initHighligtingOnLoad();
+      </script>
       
       <xsl:comment>
         <![CDATA[

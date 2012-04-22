@@ -1420,7 +1420,8 @@ ul.overview {
 }
 
 #article-metadata span.label {
-  padding: 0 .5em 0 1em;
+  padding: 0 .5em 0 0;
+  margin-left: 1em;
 }
 
 #article-metadata span.label:first-child {

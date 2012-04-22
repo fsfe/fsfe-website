@@ -17,6 +17,16 @@
         <xsl:value-of select="/html/set/country[@id=$country]" />
       </xsl:element>
 
+      <!-- Team homepage -->
+      <xsl:if test="homepage != ''">
+	  <xsl:element name="a">
+	    <xsl:attribute name="href">
+		<xsl:value-of select="homepage" />
+	    </xsl:attribute>
+	    Team Homepage
+	  </xsl:element>
+      </xsl:if>
+
       <!-- Address -->
       <xsl:if test="address != ''">
       <xsl:apply-templates select="address"/>

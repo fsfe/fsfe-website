@@ -1419,14 +1419,14 @@ ul.overview {
 /*  color: rgb(50,50,50);*/
 }
 
-#article-metadata span.label {
-  padding: 0 .5em 0 0;
-  margin-left: 1em;
-}
+/*#article-metadata span.label {*/
+/*  padding: 0 .5em 0 0;*/
+/*  margin-left: 1em;*/
+/*}*/
 
-#article-metadata span.label:first-child {
-  padding-left: 0;
-}
+/*#article-metadata span.label:first-child {*/
+/*  margin-left: 0;*/
+/*}*/
 
 #article-metadata img {
   height:24px;

@@ -279,7 +279,7 @@
         <xsl:attribute name="id">article-metadata</xsl:attribute>
 
         <xsl:if test="/buildinfo/document/author">
-            <span class="label"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'writtenby'" /></xsl:call-template></span>
+            <span class="label"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'writtenby'" /></xsl:call-template>&#160;</span>
             
             <xsl:for-each select="/buildinfo/document/author">
                 <xsl:variable name="id">
@@ -319,16 +319,16 @@
     </xsl:if>
 
     <xsl:if test="/buildinfo/document/date">
-        <span class="label"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'published'" /></xsl:call-template></span>
+        <span class="label"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'published'" /></xsl:call-template>&#160;</span>
         <xsl:value-of select="/buildinfo/document/date/original/@content" />
         <xsl:if test="/buildinfo/document/date/revision">
-                <span class="label"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'revision'" /></xsl:call-template></span>
+                <span class="label"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'revision'" /></xsl:call-template>&#160;</span>
                 <xsl:value-of select="/buildinfo/document/date/revision/@content" />
         </xsl:if>
     </xsl:if>
     
     <xsl:if test="/buildinfo/document/download">
-        <span class="label"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'download'" /></xsl:call-template></span>
+        <span class="label"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'download'" /></xsl:call-template>&#160;</span>
         <xsl:element name="a">
                 <xsl:attribute name="href"><xsl:value-of select="/buildinfo/document/download/@content" /></xsl:attribute>
                 <xsl:value-of select="/buildinfo/document/download/@type" />

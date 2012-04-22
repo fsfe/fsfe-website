@@ -615,10 +615,6 @@ sub process {
       $root->appendChild($textdoc);
       clone_document($textdoc, $opts{i}."/tools/texts-$textlang.xml");
 
-      my $textdoc = $dom->createElement("textset");
-      $root->appendChild($textdoc);
-      clone_document($textdoc, $opts{i}."/tools/texts-$textlang.xml");
-
       #
       # Read the fundraising text, if it exists.
       #

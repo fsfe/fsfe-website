@@ -137,9 +137,10 @@
         </xsl:element>
       </xsl:for-each>
       
-      <script type="text/javascript" src="/scripts/jquery.js"></script>
-      <script type="text/javascript" src="/scripts/master.js"></script>
-      <script type="text/javascript" src="/scripts/placeholder.js"></script>
+      <script src="/scripts/jquery.js"></script>
+      <script src="/scripts/master.js"></script>
+      <script src="/scripts/placeholder.js"></script>
+      <script src="/scripts/highlight.pack.js"></script>
       
       <xsl:comment>
         <![CDATA[

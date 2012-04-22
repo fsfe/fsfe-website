@@ -453,22 +453,32 @@ enable-auto-props = yes
       στείλετε στον εξυπηρετητή, όπως ακριβώς ελέγχετε και τα δικά σας αρχεία.
     </p>
 
-  <h2 id="Creative">Χρησιμοποιείτε πολυμέσα με αδειοδότηση Creative Commons</h2>
+  <h2>Χρησιμοποιείτε πολυμέσα προσαρμοσμένης αδειοδότησης</h2>
     
     <p>
       Αν χρησιμοποιείτε εικόνες ή άλλα πολυμέσα με άδεια χρήσης Creative 
-      Commons, μπορείτε να βεβαιωθείτε ότι εμφανίζονται τα σωστά στοιχεία 
-      αδειοδότησης αν προσθέσετε μετα ετικέτες στην ενότητα κεφαλίδας (head)
-      της ιστοσελίδας η οποία θα φαίνεται περίπου έτσι:
+      Commons ή άλλη, μπορείτε να βεβαιωθείτε ότι εμφανίζονται τα σωστά 
+      στοιχεία αδειοδότησης αν τα προσθέσετε στο τέλος του εγγράφου πριν από
+      την ετικέτα &#60;/html&#62;. Εδώ είναι τρία παραδείγματα:
     </p>
     
     <pre class="file">
-&lt;meta name="cc-license" content="Φωτογραφία που εμφανίζει τον Stephen Fry,
-© 2009 Vivan Jayant, με άδεια χρήσης Creative Commons Attribution 2.0 Generic" 
-/&gt;
-&lt;meta name="cc-license" content="Φωτογραφία που εμφανίζει τη Βιβλιοθήκη
-Peckham, © 2009 Ellen Forsyth, με άδεια χρήσης Creative Commons 
-Attribution-NonCommercial-ShareAlike 2.0 Generic" /&gt;
+&#60;legal type="cc-license"&#62;
+  &#60;license&#62;https://creativecommons.org/licenses/by-sa/3.0/&#60;/license&#62;
+  &#60;notice&#62;Η δημοσίευση της εργασίας αυτής συνοδεύεται από την Creative Commons BY-SA 3.0 Unported license by John Doe&#60;/notice&#62;
+&#60;/legal&#62;
+
+
+&#60;legal&#62;
+  &#60;license&#62;http://www.gnu.org/licenses/fdl-1.3.txt&#60;/license&#62;
+  &#60;notice&#62;Η δημοσίευση της εργασίας αυτής συνοδεύεται από την GNU Free Documentation License 1.3 ή μεταγενέστερη&#60;/notice&#62;
+&#60;/legal&#62;
+
+&#60;legal&#62;
+  &#60;notice&#62;Η δημοσίευση της εργασίας αυτής συνοδεύεται από την CC-BY-SA 3.0 Unported license ή την &#60;a href="http://artlibre.org/"&#62;Licence Art Libre 1.3&#60;/a&#62; κατά την επιλογή σας, κτλ.&#60;/notice&#62;
+&#60;/legal&#62;
+
+
     </pre>
     
     <h2 id="Fetch">Εφαρμόστε με ετικέτες (tags) 

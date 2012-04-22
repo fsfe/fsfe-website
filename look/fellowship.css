@@ -39,11 +39,6 @@ h4 {
   height: 250px;
 }
 
-/* TODO(ato): This should be made dynamic and generalized */
-#statement {
-  width: 50%;
-}
-
 /* display Fellowship sidebar menu, hiding FSFE menu */
 #menu ul li.fellowship ul { display: block }
 #menu ul li.fsfe ul       { display: none  }

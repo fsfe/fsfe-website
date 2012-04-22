@@ -290,7 +290,7 @@
                         <xsl:when test="@id and document('about/people/people.en.xml')/personset/person[@id=$id]">
                         <!-- if the author is in fsfe's people.xml then we take information from there --> 
                           <xsl:choose>
-                            <xsl:when test="link">
+                            <xsl:when test="document('about/people/people.en.xml')/personset/person[@id=$id]/link">
                                 <xsl:element name="a">
                                         <xsl:attribute name="class">author</xsl:attribute>
                                         <xsl:attribute name="rel">author</xsl:attribute>

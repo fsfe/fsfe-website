@@ -5,8 +5,10 @@
                 xmlns:dt="http://xsltsl.org/date-time"
                 xmlns:weekdays="."
                 xmlns:months="."
+                xmlns:str='http://xsltsl.org/string'
                 exclude-result-prefixes="dt weekdays months">
-
+  <xsl:import href="string.xsl" />
+  
   <xsl:output method="xml" encoding="utf-8" indent="yes" />
   
   <xsl:template name="donate-link">
@@ -68,31 +70,35 @@
   <!-- auto generate ID for headings if doesn't already exist -->
   <xsl:template name="generate-id">
     <xsl:copy>
-	<xsl:choose>
-		<xsl:when test="not(@id)">
-			
-			<!-- replace spaces with dashes -->
-			<xsl:variable name="formattedTitle1" select="translate(node(),' ','-')"/>
-			
-			<!-- convert uppercase to lowercase using translate -->
-			<xsl:variable name="smallcase" select="'abcdefghijklmnopqrstuvwxyz'" />
-			<xsl:variable name="uppercase" select="'ABCDEFGHIJKLMNOPQRSTUVWXYZ'" />
-
-			<xsl:variable name="formattedTitle2" select="translate($formattedTitle1, $uppercase, $smallcase)" />
-			
-			<xsl:attribute name="id">
-				<xsl:value-of select="$formattedTitle2" />
-			</xsl:attribute>
-		</xsl:when>
-		<xsl:otherwise>
-			<xsl:attribute name="id">
-				<xsl:value-of select="@id" />
-			</xsl:attribute>	
-		</xsl:otherwise>
-	</xsl:choose>
-     
-	<xsl:apply-templates select="node()"/>
-	
+      <xsl:choose>
+        <xsl:when test="not(@id)">
+          
+          <!-- replace spaces with dashes -->
+          <xsl:variable name="punctuation">.,:;!?&#160;&quot;'()[]&lt;&gt;>{}</xsl:variable>
+          <xsl:variable name="formattedTitle1" select="translate(normalize-space(translate(.,$punctuation,' ')),' ','-')"/>
+          
+          <xsl:variable   name="accents">áàâäéèêëíìîïóòôöúùûü</xsl:variable>
+          <xsl:variable name="noaccents">aaaaeeeeiiiioooouuuu</xsl:variable>
+          
+          <xsl:variable name="formattedTitle2">
+            <xsl:call-template name="str:to-lower">
+              <xsl:with-param name="text" select="translate($formattedTitle1,$accents,$noaccents)" />
+            </xsl:call-template>
+          </xsl:variable>
+          
+          <xsl:attribute name="id">
+            <xsl:value-of select="concat('id-',$formattedTitle2)" />
+          </xsl:attribute>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:attribute name="id">
+            <xsl:value-of select="@id" />
+          </xsl:attribute>	
+        </xsl:otherwise>
+      </xsl:choose>
+        
+      <xsl:apply-templates select="node()"/>
+  
     </xsl:copy>
   </xsl:template>
 

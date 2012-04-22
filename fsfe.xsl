@@ -260,10 +260,10 @@
             </xsl:choose>
           </xsl:if>
       
-          <span class="label"> <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'published'" /></xsl:call-template>: </span><xsl:value-of select="/buildinfo/document/head/meta[@name='publication-date']/@content" />
+          <span class="label">&#160;<xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'published'" /></xsl:call-template>: </span><xsl:value-of select="/buildinfo/document/head/meta[@name='publication-date']/@content" />
           
           <xsl:if test = "string(/buildinfo/document/head/meta[@name='pdf-link']/@content)">
-            <span class="label">PDF: </span>
+            <span class="label">&#160;PDF: </span>
             <xsl:variable name="pdf-link" select="/buildinfo/document/head/meta[@name='pdf-link']/@content" />
             <a href='{$pdf-link}'>download</a>
           </xsl:if>

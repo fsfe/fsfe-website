@@ -60,7 +60,7 @@
                 <!--                                </xsl:call-template>-->
                                                 <xsl:element name="img">
                                                         <xsl:attribute name="alt"><xsl:value-of select="name" /></xsl:attribute>
-                                                        <xsl:attribute name="src"><xsl:value-of select="avatar" /></xsl>
+                                                        <xsl:attribute name="src"><xsl:value-of select="avatar" /></xsl:attribute>
                                                 </xsl:element>
                                                 
                                             </xsl:otherwise>
@@ -69,7 +69,7 @@
                                 <xsl:otherwise>
                                         <xsl:element name="img">
                                                 <xsl:attribute name="alt"><xsl:value-of select="name" /></xsl:attribute>
-                                                <xsl:attribute name="src">/graphics/default-avatar.png</xsl>
+                                                <xsl:attribute name="src">/graphics/default-avatar.png</xsl:attribute>
                                         </xsl:element>
                                 </xsl:otherwise>
                         </xsl:choose>

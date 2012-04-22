@@ -2,6 +2,12 @@
 
 FSFE Fellowship stylesheet
 
+This stylesheet inherits from /look/generic.css which is the main FSFE
+website stylesheet.
+
+When more subsite stylesheets are added the structure of this file
+should be reviewed so that we avoid code duplication.
+
 */
 
 body {

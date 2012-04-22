@@ -311,7 +311,9 @@
                                                 <xsl:attribute name="src"><xsl:value-of select="document('about/people/people.en.xml')/personset/person[@id=$id]/avatar" /></xsl:attribute>
                                         </xsl:element>
                                 </xsl:if>
-                                <xsl:value-of select="document('about/people/people.en.xml')/personset/person[@id=$id]/name" />
+                                <span class="author">
+                                  <xsl:value-of select="document('about/people/people.en.xml')/personset/person[@id=$id]/name" />
+                                </span>
                             </xsl:otherwise>
                           </xsl:choose>
                         </xsl:when>
@@ -338,7 +340,9 @@
                                                 <xsl:attribute name="src"><xsl:value-of select="avatar" /></xsl:attribute>
                                         </xsl:element>
                                 </xsl:if>
-                                <xsl:value-of select="name" />
+                                <span class="author">
+                                  <xsl:value-of select="name" />
+                                </span>
                             </xsl:otherwise>
                           </xsl:choose>
                         </xsl:otherwise>

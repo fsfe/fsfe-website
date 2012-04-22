@@ -1445,11 +1445,12 @@ ul.overview {
   box-shadow: 0 0 3px  rgba(0,0,0,0.3);
 }
 
-#article-metadata a.author {
+#article-metadata .author {
   padding-right:.7em;
+  color: #323232;
 }
 
-#article-metadata a.author:last-child {
+#article-metadata .author:last-child {
   padding-right:0;
 }
 

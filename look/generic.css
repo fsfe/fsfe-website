@@ -280,9 +280,10 @@ p.left {
 
 #logo {
   float: left;
-  margin: 1em 0 0 1%;
+  /*margin: 1em 0 0 1%;*/
   width: 200px;
-  max-width: 40%;
+  margin-top: 1em;
+  /*max-width: 40%;*/
 }
 
 #logo a img {
@@ -291,11 +292,12 @@ p.left {
 
 #statement {
   color: rgb(140,140,140);
-  float: left;
+  /*float: left;*/
   font-size: 120%;
-  margin: 3em 2% 0 0;
-  width: 70%;
-  padding-left: 6%;
+  /*margin: 3em 2% 0 0;*/
+  /*width: 70%;*/
+  width: 100%;
+  /*padding-left: 6%;*/
 }
 
 

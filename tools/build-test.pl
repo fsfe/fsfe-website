@@ -1,6 +1,6 @@
 #! /usr/bin/perl
 #
-# build.pl - a tool for building FSF Europe web pages
+# build.pl - a tool for building FSFE web pages
 #
 # Copyright (C) 2003 Jonas Öberg
 # 
@@ -101,7 +101,8 @@ our $current_time = strftime "%Y-%m-%d %H:%M:%S", localtime;
 
 # This static array contains files that can't be out of date
 our %cant_be_outdated = (
-  "news/news" => 1
+  "news/news" => 1,
+  "index" => 1
 );
 
 
@@ -132,8 +133,8 @@ $SIG{CHLD} = 'IGNORE';
 # Create XML and XSLT parser contexts. Also create the root note for the
 # above mentioned XML file (used to feed the XSL transformation).
 
-my $parser = XML::LibXML->new();
-my $xslt_parser = XML::LibXSLT->new();
+my $parser = XML::LibXML->new('encoding'=>'utf-8');
+my $xslt_parser = XML::LibXSLT->new('encoding'=>'utf-8');
 
 # Parse the global stylesheet
 
@@ -151,7 +152,7 @@ my @dirs = File::Find::Rule->directory()
                            ->in($opts{i});
 
 while (my ($path, undef) = each %countries) {
-  print STDERR "Reseting path for $path\n" unless $opts{q};
+  print STDERR "Resetting path for $path\n" unless $opts{q};
   rmtree($opts{o}.'/'.$path) unless ($opts{u} || $opts{n});
   my @paths = map { $opts{o}."/$path/".$_ } grep(!/^\.\.?$/, @dirs);
   foreach (@paths) {
@@ -330,7 +331,7 @@ sub process {
   # Create the root note for the above mentioned XML file (used to feed the XSL
   # transformation).
 
-  my $dom = XML::LibXML::Document->new("1.0", "iso-8859-1");
+  my $dom = XML::LibXML::Document->new("1.0", "utf-8");
   my $root = $dom->createElement("buildinfo");
   $dom->setDocumentElement($root);
 
@@ -338,7 +339,7 @@ sub process {
   # Set the current date, to use for comparision in the XSLT.
   #
   $root->setAttribute("date", $current_date);
-  
+
   #
   # Find original language. It's en, unless we're in the country specific
   # se/, fr/, de/ and so on, directories.
@@ -365,10 +366,10 @@ sub process {
   #
   my $trlist = $dom->createElement("trlist");
   foreach my $lang (split(/:/, $langs)) {
-      my $tr = $dom->createElement("tr");
-      $tr->setAttribute("id", $lang);
-      $tr->appendText($languages{$lang});
-      $trlist->appendChild($tr);
+    my $tr = $dom->createElement("tr");
+    $tr->setAttribute("id", $lang);
+    $tr->appendText($languages{$lang});
+    $trlist->appendChild($tr);
   }
   $root->appendChild($trlist);
 
@@ -377,9 +378,9 @@ sub process {
   #
   my $localmenu = "$opts{i}/localmenuinfo.xml";
   if (-f $localmenu) {
-      my $menudoc = $dom->createElement("localmenuset");
-      $root->appendChild($menudoc);
-      clone_document($menudoc, $localmenu);
+    my $menudoc = $dom->createElement("localmenuset");
+    $root->appendChild($menudoc);
+    clone_document($menudoc, $localmenu);
   }
 
   #
@@ -396,7 +397,8 @@ sub process {
   while (my ($dir, undef) = each %countries) {
     
     # If we handle a focus specific file, only process it in that focus
-    next if (("$srcfocus" ne "global") && ("$dir" ne "$srcfocus"));
+    # -> we don't handle focus-specific files anymore, commenting next line out, since it's causing errors
+    #next if (("$srcfocus" ne "global") && ("$dir" ne "$srcfocus"));
 
     print STDERR "$dir " unless $opts{q};
 
@@ -406,15 +408,15 @@ sub process {
     while (my ($lang, undef) = each %languages) {
     	$root->setAttribute("language", $lang);
 
-        #
-	      # This finds the source file to use. If we can't find a translation
-	      # into the language, it uses the english version instead, or that in
-	      # the local language. Or the first version it finds. This should be
-        # made prettier.
-        #
-	      my $document = $dom->createElement("document");
-	      $document->setAttribute("language", $lang);
-	      $root->appendChild($document);
+      #
+      # This finds the source file to use. If we can't find a translation
+      # into the language, it uses the english version instead, or that in
+      # the local language. Or the first version it finds. This should be
+      # made prettier.
+      #
+      my $document = $dom->createElement("document");
+      $document->setAttribute("language", $lang);
+      $root->appendChild($document);
 
 	      my $source = "$opts{i}/$file.$lang.xhtml";
 	      unless (-f $source) {
@@ -600,74 +602,36 @@ sub process {
           my $old_outdated = 0;
 	        if (( stat("$opts{i}/$originalsource"))[9] > (stat($source))[9] + 7200
 	              and not $cant_be_outdated{$file} ) {
-	          
-	          $old_outdated = 1;
-	          
-	        } else {
-	          
-	        }
-	        
-	        my $new_outdated = 0;
-	        if ( not -e "$opts{i}/$originalsource" ) {
-            
-            # TODO: do something
-            
-	        } else {
-	          
-            my ($equal, $err) = areEqual( "$opts{i}/$originalsource", $source );
-            if ( not $equal and not $cant_be_outdated{$file} ) {
-              #print "$err\n";
-              $root->setAttribute("outdated", "yes");
-              $new_outdated = 1;
-              
-              # register information about the outdated status
-            	my $info = $dom->createElement("outdated-info");
-            	my $code = $dom->createElement("code");
-            	$code->appendChild($dom->createElement("br"));
-            	foreach $line (split(/\n/, $err)) {
-            	  $code->appendText($line);
-            	  $code->appendChild($dom->createElement("br"));
-            	}
-            	$info->appendChild($code);
-              $document->appendChild($info);
-              
-            } else {
-              
-              $root->setAttribute("outdated", "no");
-              
-            }
-            
-	        }
-	        
-	        if ($dir eq "global" and $new_outdated != $old_outdated ) {
-	          
-	          if ( $new_outdated == 0 and $old_outdated == 1 ) {
-  	          $comment = "timestamp-OUT,structure-OK";
-  	        } elsif ( $new_outdated == 1 and $old_outdated == 0 ) {
-  	          $comment = "timestamp-OK,structure-OUT";
-  	        } else {
-  	          $comment = "-";
-  	        }
-	          
-            lock(*TRANSLATIONS);
-            print TRANSLATIONS "$lang $source $originalsource $comment\n";
-            unlock(*TRANSLATIONS);
-            
-          }
-          
-          #
-          # Get the appropriate textset for this language. If one can't be
-          # found, use the English. (I hope this never happens)
-          #
-	        my $textlang = $lang;
-	        unless (-f $opts{i}."/tools/texts-$textlang.xml") {
-	            $textlang = "en";
-	        }
+	          $root->setAttribute("outdated", "yes");
+		        if ($dir eq "global") {
+			        lock(*TRANSLATIONS);
+		          print TRANSLATIONS "$lang $source $originalsource\n";
+			        unlock(*TRANSLATIONS);
+		        }
+			} else {
+				$root->setAttribute("outdated", "no");
+			}
 
 	        my $textdoc = $dom->createElement("textset");
 	        $root->appendChild($textdoc);
 	        clone_document($textdoc, $opts{i}."/tools/texts-$textlang.xml");
 
+	my $textdoc = $dom->createElement("textset");
+	$root->appendChild($textdoc);
+	clone_document($textdoc, $opts{i}."/tools/texts-$textlang.xml");
+	
+	#
+	# Read the fundraising text, if it exists.
+	#
+	if (-f $opts{i}."/fundraising.$lang.xml") {
+	    my $fundraisingdoc = $dom->createElement("fundraising");
+	    $root->appendChild($fundraisingdoc);
+	    clone_document($fundraisingdoc, $opts{i}."/fundraising.$lang.xml");
+	} elsif (-f $opts{i}."/fundraising.en.xml") {
+	    my $fundraisingdoc = $dom->createElement("fundraising");
+	    $root->appendChild($fundraisingdoc);
+	    clone_document($fundraisingdoc, $opts{i}."/fundraising.en.xml");
+        }
 
           #
           # Read the fundraising text, if it exists.
@@ -682,6 +646,14 @@ sub process {
 	          clone_document($fundraisingdoc, $opts{i}."/fundraising.en.xml");
           }
 
+	#
+	# And then we do the same thing for the menues. But first we take the
+	# global menu here, then we add any information that is specific to
+	# the focus.
+	#
+	foreach ($root->getElementsByTagName("menuset")) {
+	    $root->removeChild($_);
+	}
 
           #
           # And then we do the same thing for the menues. But first we take the
@@ -795,9 +767,9 @@ sub process {
         #
         foreach ($results->documentElement->getElementsByTagName("a")) {
           my $href = $_->getAttribute("href");
-          if ($href =~ /^http:\/\/test.fsfe.org/) {
+          if ($href =~ /^http:\/\/www.fsfe.org/) {
             if ($_->textContent != "Our global work") {
-              $href =~ s/http:\/\/test.fsfe.org//;
+              $href =~ s/http:\/\/www.fsfe.org//;
             }
           }
           if (($href !~ /^http/) && ($href !~ /^#/)) {
@@ -823,6 +795,10 @@ sub process {
             }
 	    # replace anchor
 	    $href .= $anchor;
+            # For pages running on an external server, use full URL
+            if ($document->getAttribute("external")) {
+              $href = "http://www.fsfe.org$href";
+            }
             $_->setAttribute("href", $href);
           }
         }
@@ -892,7 +868,7 @@ sub clone_document {
     }
     $root->appendChild($doc);
     
-    my $parser = XML::LibXML->new();
+    my $parser = XML::LibXML->new('encoding'=>'utf-8');
     $parser->load_ext_dtd(0);
     $parser->recover(1);
     

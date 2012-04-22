@@ -27,33 +27,51 @@
                 <xsl:variable name="id"
                               select="@id" />
 
-                <xsl:variable name="avatar" select="@avatar" />
+<!--                <xsl:variable name="avatar" select="@avatar" />-->
 
                 <xsl:element name="li">
                     <xsl:element name="p">
                         <!-- Picture -->
                         <xsl:choose>
-                            <xsl:when test="link != ''">
-                                <xsl:element name="a">
-                                    <xsl:attribute name="href">
-                                        <xsl:value-of select="link" />
-                                    </xsl:attribute>
-                                    
-                                    <xsl:call-template name="avatar">
-                                     <xsl:with-param name="id" select="$id" />
-                                     <xsl:with-param name="haveavatar" select="$avatar" />
-                                    </xsl:call-template>
-                                    
-                                </xsl:element>
-                            </xsl:when>
-                            <xsl:otherwise>
-                                
-                                <xsl:call-template name="avatar">
-                                 <xsl:with-param name="id" select="$id" />
-                                 <xsl:with-param name="haveavatar" select="$avatar" />
-                                </xsl:call-template>
-                                
-                            </xsl:otherwise>
+                                <xsl:when test="avatar">
+                                        <xsl:choose>
+                                            <xsl:when test="link != ''">
+                                                <xsl:element name="a">
+                                                    <xsl:attribute name="href">
+                                                        <xsl:value-of select="link" />
+                                                    </xsl:attribute>
+                                                    
+                <!--                                    <xsl:call-template name="avatar">-->
+                <!--                                     <xsl:with-param name="id" select="$id" />-->
+                <!--                                     <xsl:with-param name="haveavatar" select="$avatar" />-->
+                <!--                                    </xsl:call-template>-->
+                                                        <xsl:element name="img">
+                                                                <xsl:attribute name="alt"><xsl:value-of select="name" /></xsl:attribute>
+                                                                <xsl:attribute name="src"><xsl:value-of select="avatar" /></xsl>
+                                                        </xsl:element>
+                                                    
+                                                </xsl:element>
+                                            </xsl:when>
+                                            <xsl:otherwise>
+                                                
+                <!--                                <xsl:call-template name="avatar">-->
+                <!--                                 <xsl:with-param name="id" select="$id" />-->
+                <!--                                 <xsl:with-param name="haveavatar" select="$avatar" />-->
+                <!--                                </xsl:call-template>-->
+                                                <xsl:element name="img">
+                                                        <xsl:attribute name="alt"><xsl:value-of select="name" /></xsl:attribute>
+                                                        <xsl:attribute name="src"><xsl:value-of select="avatar" /></xsl>
+                                                </xsl:element>
+                                                
+                                            </xsl:otherwise>
+                                        </xsl:choose>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                        <xsl:element name="img">
+                                                <xsl:attribute name="alt"><xsl:value-of select="name" /></xsl:attribute>
+                                                <xsl:attribute name="src">/graphics/default-avatar.png</xsl>
+                                        </xsl:element>
+                                </xsl:otherwise>
                         </xsl:choose>
                         <!-- Name; if link is given show as link -->
                         <xsl:element name="span">

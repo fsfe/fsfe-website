@@ -196,7 +196,7 @@
           </h3>
         </xsl:otherwise>
       </xsl:choose>
-      
+     
       <!-- event date -->
       <xsl:choose>
         <xsl:when test="$start != $end">
@@ -204,7 +204,7 @@
             <xsl:value-of select="$start_day" />
             <xsl:text> </xsl:text>
             <xsl:value-of select="$start_month" />
-            <xsl:text> to </xsl:text>
+            <xsl:text> to </xsl:text> 
             <xsl:value-of select="$end_day" />
             <xsl:text> </xsl:text>
             <xsl:value-of select="$end_month" />

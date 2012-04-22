@@ -118,9 +118,34 @@
         </xsl:element>
       </xsl:for-each>
       
-      <script type="text/javascript" src="/scripts/jquery.js"></script>
-      <script type="text/javascript" src="/scripts/master.js"></script>
-      <script type="text/javascript" src="/scripts/placeholder.js"></script>
+      <xsl:for-each select="/buildinfo/document/author">
+        <xsl:variable name="id">
+          <xsl:value-of select="@id" />
+        </xsl:variable>
+        <xsl:element name="meta">
+          <xsl:attribute name="name">author</xsl:attribute>
+          <xsl:attribute name="content">
+            <xsl:choose>
+              <xsl:when test="@id and document('about/people/people.en.xml')/personset/person[@id=$id]">
+                <xsl:value-of select="document('about/people/people.en.xml')/personset/person[@id=$id]/name" />
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="name" />
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:attribute>
+        </xsl:element>
+      </xsl:for-each>
+      
+      <script src="/scripts/jquery.js"></script>
+      <script src="/scripts/master.js"></script>
+      <script src="/scripts/placeholder.js"></script>
+      <script src="/scripts/highlight.pack.js"></script>
+
+      <script>
+        hljs.tabReplace = "  ";
+        hljs.initHighligtingOnLoad();
+      </script>
       
       <xsl:comment>
         <![CDATA[
@@ -189,7 +214,7 @@
     </xsl:if>
     <!-- End apply newsletter page rules -->
     
-    <!-- Apply article rules -->
+    <!-- Depreciated- see next block: Apply article rules -->
     <xsl:if test = "string(/buildinfo/document/head/meta[@name='author-name-1']/@content)">
       <xsl:element name="div">
         <xsl:attribute name="id">article-metadata</xsl:attribute>
@@ -247,6 +272,74 @@
       </xsl:element> <!-- </div> -->
     </xsl:if>
     <!-- End Apply article rules -->
+
+    <!--Article authors, date -->
+    <xsl:if test="/buildinfo/document/author or /buildinfo/document/date or /buildinfo/document/download">
+      <xsl:element name="div">
+        <xsl:attribute name="id">article-metadata</xsl:attribute>
+
+        <xsl:if test="/buildinfo/document/author">
+            <span class="label"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'writtenby'" /></xsl:call-template>&#160;</span>
+            
+            <xsl:for-each select="/buildinfo/document/author">
+                <xsl:variable name="id">
+                  <xsl:value-of select="@id" />
+                </xsl:variable>
+
+                <xsl:choose>    
+                        <xsl:when test="@id and document('about/people/people.en.xml')/personset/person[@id=$id]">
+                        <!-- if the author is in fsfe's people.xml then we take information from there --> 
+                                <xsl:element name="a">
+                                        <xsl:attribute name="class">author</xsl:attribute>
+                                        <xsl:attribute name="rel">author</xsl:attribute>
+                                        <xsl:attribute name="href"><xsl:value-of select="document('about/people/people.en.xml')/personset/person[@id=$id]/link" /></xsl:attribute>
+                                        <xsl:if test="document('about/people/people.en.xml')/personset/person[@id=$id]/avatar">
+                                                <xsl:element name="img">
+                                                        <xsl:attribute name="alt"></xsl:attribute>
+                                                        <xsl:attribute name="src"><xsl:value-of select="document('about/people/people.en.xml')/personset/person[@id=$id]/avatar" /></xsl:attribute>
+                                                </xsl:element>
+                                        </xsl:if>
+                                        <xsl:value-of select="document('about/people/people.en.xml')/personset/person[@id=$id]/name" />
+                                </xsl:element>
+                        </xsl:when>
+                        <xsl:otherwise>
+                                <xsl:element name="a">
+                                        <xsl:attribute name="class">author</xsl:attribute>
+                                        <xsl:attribute name="rel">author</xsl:attribute>
+                                        <xsl:attribute name="href"><xsl:value-of select="link" /></xsl:attribute>
+                                        <xsl:if test="avatar">
+                                                <xsl:element name="img">
+                                                        <xsl:attribute name="alt"></xsl:attribute>
+                                                        <xsl:attribute name="src"><xsl:value-of select="avatar" /></xsl:attribute>
+                                                </xsl:element>
+                                        </xsl:if>
+                                        <xsl:value-of select="name" />
+                                </xsl:element>
+                        </xsl:otherwise>
+                </xsl:choose>
+            </xsl:for-each>
+    </xsl:if>
+
+    <xsl:if test="/buildinfo/document/date">
+        <span class="label"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'published'" /></xsl:call-template>&#160;</span>
+        <xsl:value-of select="/buildinfo/document/date/original/@content" />&#160;
+        <xsl:if test="/buildinfo/document/date/revision">
+                (<span class="label"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'revision'" /></xsl:call-template>&#160;</span>
+                <xsl:value-of select="/buildinfo/document/date/revision/@content" />)&#160;
+        </xsl:if>
+    </xsl:if>
+    
+    <xsl:if test="/buildinfo/document/download">
+        <span class="label"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'download'" /></xsl:call-template>&#160;</span>
+        <xsl:element name="a">
+                <xsl:attribute name="href"><xsl:value-of select="/buildinfo/document/download/@content" /></xsl:attribute>
+                <xsl:value-of select="/buildinfo/document/download/@type" />
+        </xsl:element>
+    </xsl:if>
+    
+      </xsl:element>
+    </xsl:if>
+    <!--End Article authors, date-->
          
   </xsl:template>
   <!-- End modifications to H1 --> 
@@ -769,7 +862,7 @@
 	</xsl:if>
 	
 	
-	<!--old cc license way-->
+	<!--Depreciated: it's here only for "backward compatibility"  cc license way-->
 	<xsl:if test = "string(/buildinfo/document/head/meta[@name='cc-license']/@content)">
 	<xsl:element name="div">		
 		<xsl:attribute name="id">cc-licenses</xsl:attribute>
@@ -979,7 +1072,7 @@
 
   <!-- Do not copy non-HTML elements to output -->
   <xsl:template match="timestamp|
-               translator|
+               buildinfo/document/translator|
                buildinfo/set|
                buildinfo/textset|
                buildinfo/textsetbackup|
@@ -989,8 +1082,11 @@
                buildinfo/trlist|
                buildinfo/fundraising|
                buildinfo/localmenuset|
-               tags|
-               legal"/>
+               buildinfo/document/tags|
+               buildinfo/document/legal|
+               buildinfo/document/author|
+               buildinfo/document/date|
+               buildinfo/document/download"/>
 
   <!-- For all other nodes, copy verbatim -->
   <xsl:template match="@*|node()" priority="-1">

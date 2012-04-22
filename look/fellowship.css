@@ -2,6 +2,12 @@
 
 FSFE Fellowship stylesheet
 
+This stylesheet inherits from /look/generic.css which is the main FSFE
+website stylesheet.
+
+When more subsite stylesheets are added the structure of this file
+should be reviewed so that we avoid code duplication.
+
 */
 
 body {
@@ -14,14 +20,17 @@ a:link {
 }
 
 a:visited {
-  color: rgb(82,130,52);
+  color: rgb(193,225,151);
 }
 
-h1,
 h2,
 h3,
 h4 {
   color: rgb(66,121,32);
+}
+
+#logo {
+  width: auto;
 }
 
 #header {
@@ -29,3 +38,7 @@ h4 {
   background-position: bottom left;
   height: 250px;
 }
+
+/* display Fellowship sidebar menu, hiding FSFE menu */
+#menu ul li.fellowship ul { display: block }
+#menu ul li.fsfe ul       { display: none  }

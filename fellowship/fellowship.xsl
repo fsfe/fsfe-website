@@ -344,8 +344,11 @@
 			  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="$id" /></xsl:call-template>
 			</xsl:when>
 
-			<xsl:when test=". = concat(/buildinfo/@filename ,'.html')">
-			  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="$id" /></xsl:call-template>
+                        <xsl:when test=". = concat(/buildinfo/@filename ,'.html')">
+                          <xsl:element name="span">
+                            <xsl:attribute name="id">selected</xsl:attribute>
+                            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="$id" /></xsl:call-template>
+                          </xsl:element>
 			</xsl:when>
 
 			<xsl:otherwise>

@@ -24,6 +24,7 @@
 # Constants
 # -----------------------------------------------------------------------------
 
+testroot="http://test.fsfe.org"
 srcroot="http://test.fsfe.org/source"
 cvsroot="https://trac.fsfe.org/fsfe-web/log/branches/test"
 
@@ -67,11 +68,11 @@ done
 sort "${infile}" \
   | uniq \
   | sed --expression='s/\.\///g' \
-  | while read language wantfile havefile; do
+  | while read language wantfile havefile comment; do
   if [ -f "${wantfile}" ]; then
     date1="$(date --iso-8601 --reference=${wantfile})"
     date2="$(date --iso-8601 --reference=${havefile})"
-    echo "outdated ${date2} ${wantfile} ${date1} ${havefile}" >> "${infile}.${language}"
+    echo "outdated ${date2} ${wantfile} ${date1} ${havefile} ${comment}" >> "${infile}.${language}"
   fi
 done
 
@@ -95,7 +96,7 @@ for file in ${infile}.*; do
     echo "      <a href=\"translations.html\">« Back to <em>Translation status overview</em></a>"
     echo "    </p>"
     lastgroup=""
-    sort --reverse ${file} | while read group date2 wantfile date1 havefile; do
+    sort --reverse ${file} | while read group date2 wantfile date1 havefile comment; do
       if [ "${group}" != "${lastgroup}" ]; then
         if [ "${group}" == "outdated" ]; then
           echo "    <h2>Outdated translations</h2>"
@@ -141,7 +142,7 @@ for file in ${infile}.*; do
       echo "      <tr>"
       if [ "${group}" = "outdated" ]; then
         echo "        <td>"
-        echo "          <a href=\"${srcroot}/${wantfile}\">${wantfile}</a>"
+        echo "          <a href=\"${srcroot}/${wantfile}\">${wantfile}</a> (${comment} - <a href=\"${testroot}/${wantfile:0:${#wantfile}-5}html\">test</a>)"
         echo "        </td>"
         echo "        <td align=\"center\">${date1}</td>"
         echo "        <td>"
@@ -208,10 +209,10 @@ grep --no-filename "^outdated" ${infile}.* \
     echo "        <th colspan=\"3\">translated file</th>"
     echo "        <th colspan=\"3\">original file</th>"
     echo "      </tr>"
-    while read group date2 wantfile date1 havefile; do
+    while read group date2 wantfile date1 havefile comment; do
       echo "      <tr>"
       echo "        <td>"
-      echo "          <a href=\"${srcroot}/${wantfile}\">${wantfile}</a>"
+      echo "          <a href=\"${srcroot}/${wantfile}\">${wantfile}</a> (${comment})"
       echo "        </td>"
       echo "        <td align=\"center\">${date1}</td>"
       echo "        <td>"

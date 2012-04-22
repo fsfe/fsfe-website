@@ -43,7 +43,7 @@ body {
   background-color: rgb(240,240,240);
   background-image: url("/graphics/ribbon-gray.png");
   background-repeat: no-repeat;
-  background-position: 19px 70px;
+  background-position: 19px 61px;
 }
 
 /* This is a suboptimal solution, should seek something more generic */
@@ -282,16 +282,15 @@ p.left {
 /* header */
 #header {
   background: url("/graphics/ribbon.png") no-repeat scroll left bottom transparent;
-  min-height: 220px;
-  margin: 0;
+  min-height: 200px;
+  padding: 0 1em;
   width: 100%
   padding: 0;
 }
 
 #logo {
   float: left;
-  margin: 1em 0 0 1%;
-  max-width: 29%;
+  padding-right: 1em;
   width: 200px;
 }
 
@@ -301,10 +300,9 @@ p.left {
 
 #statement {
   color: rgb(140,140,140);
-  float: left;
   font-size: 120%;
-  margin: 3em 2% 0 8%;
-  width: 60%;
+  width: 100%;
+  padding-top: 1.8em;
 }
 
 
@@ -827,6 +825,7 @@ h4#subpages + ul li:nth-child(odd) {
 
 #menu ul li a {
   font-weight: bold;
+  white-space: nowrap;
 }
 
 #menu ul + ul {
@@ -1419,7 +1418,7 @@ ul.overview {
 /* Article pages */
 #article-metadata {
   color: rgb(150,150,150);
-  margin: 0.5em 0 1.5em;
+  margin: 0.5em 0;
 }
 
 #article-metadata p {
@@ -1427,18 +1426,34 @@ ul.overview {
 }
 
 #article-metadata a {
-  color: rgb(50,50,50);
+/*  color: rgb(50,50,50);*/
 }
 
-#article-metadata span.label {
-  padding-left: 1em;
+/*#article-metadata span.label {*/
+/*  padding: 0 .5em 0 0;*/
+/*  margin-left: 1em;*/
+/*}*/
+
+/*#article-metadata span.label:first-child {*/
+/*  margin-left: 0;*/
+/*}*/
+
+#article-metadata img {
+  height:24px;
+  margin:.2em;
+  margin-bottom: -0.2em;
+  box-shadow: 0 0 3px  rgba(0,0,0,0.3);
 }
 
-#article-metadata span.label:first-child {
-  padding-left: 0;
+#article-metadata a.author {
+  padding-right:.7em;
 }
 
-p#article-attachmt {
+#article-metadata a.author:last-child {
+  padding-right:0;
+}
+
+#article-attachmt {
   float: right;
   margin-top: -3em;
 }

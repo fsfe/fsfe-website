@@ -818,7 +818,7 @@
 
   <xsl:template name="dt:get-month-name">
     <xsl:param name="month"/>
-
+    <!--
     <xsl:choose>
       <xsl:when test="$month = 1">January</xsl:when>
       <xsl:when test="$month = 2">February</xsl:when>

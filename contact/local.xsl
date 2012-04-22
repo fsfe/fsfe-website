@@ -19,12 +19,14 @@
 
       <!-- Team homepage -->
       <xsl:if test="homepage != ''">
-	  <xsl:element name="a">
-	    <xsl:attribute name="href">
-		<xsl:value-of select="homepage" />
-	    </xsl:attribute>
-	    Team Homepage
-	  </xsl:element>
+	  <xsl:element name="strong">
+		  <xsl:element name="a">
+		    <xsl:attribute name="href">
+			<xsl:value-of select="homepage" />
+		    </xsl:attribute>
+		    Team Homepage
+		  </xsl:element>
+		</xsl:element>
       </xsl:if>
 
       <!-- Address -->

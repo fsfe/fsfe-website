@@ -1407,7 +1407,7 @@ ul.overview {
 /* Article pages */
 #article-metadata {
   color: rgb(150,150,150);
-  margin: 0.5em 0 1.5em;
+  margin: 0.5em 0;
 }
 
 #article-metadata p {
@@ -1415,15 +1415,24 @@ ul.overview {
 }
 
 #article-metadata a {
-  color: rgb(50,50,50);
+/*  color: rgb(50,50,50);*/
 }
 
 #article-metadata span.label {
-  padding-left: 1em;
+  padding: 0 .5em 0 1em;
 }
 
 #article-metadata span.label:first-child {
   padding-left: 0;
+}
+
+#article-metadata img {
+  height:24px;
+  padding-right:.2em;
+}
+
+#article-metadata a.author {
+  padding-right:1em;
 }
 
 p#article-attachmt {

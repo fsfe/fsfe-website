@@ -118,6 +118,25 @@
         </xsl:element>
       </xsl:for-each>
       
+      <xsl:for-each select="/buildinfo/document/author">
+        <xsl:variable name="id">
+          <xsl:value-of select="@id" />
+        </xsl:variable>
+        <xsl:element name="meta">
+          <xsl:attribute name="name">author</xsl:attribute>
+          <xsl:attribute name="content">
+            <xsl:choose>
+              <xsl:when test="@id and document('about/people/people.en.xml')/personset/person[@id=$id]">
+                <xsl:value-of select="document('about/people/people.en.xml')/personset/person[@id=$id]/name" />
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="name" />
+              </xsl:otherwise>
+            </xsl:choose>
+          </xsl:attribute>
+        </xsl:element>
+      </xsl:for-each>
+      
       <script type="text/javascript" src="/scripts/jquery.js"></script>
       <script type="text/javascript" src="/scripts/master.js"></script>
       <script type="text/javascript" src="/scripts/placeholder.js"></script>
@@ -258,9 +277,9 @@
             
             <xsl:for-each select="/buildinfo/document/author">
                 <xsl:variable name="id">
-                        <xsl:value-of select="@id" />
+                  <xsl:value-of select="@id" />
                 </xsl:variable>
-                <xsl:variable name="avatar" select="@avatar" />
+
                 <xsl:choose>    
                         <xsl:when test="@id and document('about/people/people.en.xml')/personset/person[@id=$id]">
                         <!-- if the author is in fsfe's people.xml then we take information from there --> 

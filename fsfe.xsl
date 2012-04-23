@@ -301,8 +301,8 @@
                                                         <xsl:attribute name="src"><xsl:value-of select="document('about/people/people.en.xml')/personset/person[@id=$id]/avatar" /></xsl:attribute>
                                                 </xsl:element>
                                         </xsl:if>
-                                        <xsl:value-of select="document('about/people/people.en.xml')/personset/person[@id=$id]/name" />&#160;
-                                </xsl:element>
+                                        <xsl:value-of select="document('about/people/people.en.xml')/personset/person[@id=$id]/name" />
+                                </xsl:element>&#160;
                             </xsl:when>
                             <xsl:otherwise>
                                 <xsl:if test="document('about/people/people.en.xml')/personset/person[@id=$id]/avatar">
@@ -330,8 +330,8 @@
                                                         <xsl:attribute name="src"><xsl:value-of select="avatar" /></xsl:attribute>
                                                 </xsl:element>
                                         </xsl:if>
-                                        <xsl:value-of select="name" />&#160;
-                                </xsl:element>
+                                        <xsl:value-of select="name" />
+                                </xsl:element>&#160;
                             </xsl:when>
                             <xsl:otherwise>
                                 <xsl:if test="avatar">

@@ -301,7 +301,7 @@
                                                         <xsl:attribute name="src"><xsl:value-of select="document('about/people/people.en.xml')/personset/person[@id=$id]/avatar" /></xsl:attribute>
                                                 </xsl:element>
                                         </xsl:if>
-                                        <xsl:value-of select="document('about/people/people.en.xml')/personset/person[@id=$id]/name" />
+                                        <xsl:value-of select="document('about/people/people.en.xml')/personset/person[@id=$id]/name" />&#160;
                                 </xsl:element>
                             </xsl:when>
                             <xsl:otherwise>
@@ -312,7 +312,7 @@
                                         </xsl:element>
                                 </xsl:if>
                                 <span class="author">
-                                  <xsl:value-of select="document('about/people/people.en.xml')/personset/person[@id=$id]/name" />
+                                  <xsl:value-of select="document('about/people/people.en.xml')/personset/person[@id=$id]/name" />&#160;
                                 </span>
                             </xsl:otherwise>
                           </xsl:choose>
@@ -330,7 +330,7 @@
                                                         <xsl:attribute name="src"><xsl:value-of select="avatar" /></xsl:attribute>
                                                 </xsl:element>
                                         </xsl:if>
-                                        <xsl:value-of select="name" />
+                                        <xsl:value-of select="name" />&#160;
                                 </xsl:element>
                             </xsl:when>
                             <xsl:otherwise>
@@ -341,7 +341,7 @@
                                         </xsl:element>
                                 </xsl:if>
                                 <span class="author">
-                                  <xsl:value-of select="name" />
+                                  <xsl:value-of select="name" />&#160;
                                 </span>
                             </xsl:otherwise>
                           </xsl:choose>

@@ -260,10 +260,10 @@
             </xsl:choose>
           </xsl:if>
       
-          <span class="label"> <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'published'" /></xsl:call-template>: </span><xsl:value-of select="/buildinfo/document/head/meta[@name='publication-date']/@content" />
+          <span class="label">&#160;<xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'published'" /></xsl:call-template>: </span><xsl:value-of select="/buildinfo/document/head/meta[@name='publication-date']/@content" />
           
           <xsl:if test = "string(/buildinfo/document/head/meta[@name='pdf-link']/@content)">
-            <span class="label">PDF: </span>
+            <span class="label">&#160;PDF: </span>
             <xsl:variable name="pdf-link" select="/buildinfo/document/head/meta[@name='pdf-link']/@content" />
             <a href='{$pdf-link}'>download</a>
           </xsl:if>
@@ -289,6 +289,8 @@
                 <xsl:choose>    
                         <xsl:when test="@id and document('about/people/people.en.xml')/personset/person[@id=$id]">
                         <!-- if the author is in fsfe's people.xml then we take information from there --> 
+                          <xsl:choose>
+                            <xsl:when test="document('about/people/people.en.xml')/personset/person[@id=$id]/link">
                                 <xsl:element name="a">
                                         <xsl:attribute name="class">author</xsl:attribute>
                                         <xsl:attribute name="rel">author</xsl:attribute>
@@ -301,9 +303,24 @@
                                         </xsl:if>
                                         <xsl:value-of select="document('about/people/people.en.xml')/personset/person[@id=$id]/name" />
                                 </xsl:element>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:if test="document('about/people/people.en.xml')/personset/person[@id=$id]/avatar">
+                                        <xsl:element name="img">
+                                                <xsl:attribute name="alt"></xsl:attribute>
+                                                <xsl:attribute name="src"><xsl:value-of select="document('about/people/people.en.xml')/personset/person[@id=$id]/avatar" /></xsl:attribute>
+                                        </xsl:element>
+                                </xsl:if>
+                                <span class="author">
+                                  <xsl:value-of select="document('about/people/people.en.xml')/personset/person[@id=$id]/name" />
+                                </span>
+                            </xsl:otherwise>
+                          </xsl:choose>
                         </xsl:when>
                         <xsl:otherwise>
-                                <xsl:element name="a">
+                          <xsl:choose>
+                            <xsl:when test="link">
+                              <xsl:element name="a">
                                         <xsl:attribute name="class">author</xsl:attribute>
                                         <xsl:attribute name="rel">author</xsl:attribute>
                                         <xsl:attribute name="href"><xsl:value-of select="link" /></xsl:attribute>
@@ -315,6 +332,19 @@
                                         </xsl:if>
                                         <xsl:value-of select="name" />
                                 </xsl:element>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:if test="avatar">
+                                        <xsl:element name="img">
+                                                <xsl:attribute name="alt"></xsl:attribute>
+                                                <xsl:attribute name="src"><xsl:value-of select="avatar" /></xsl:attribute>
+                                        </xsl:element>
+                                </xsl:if>
+                                <span class="author">
+                                  <xsl:value-of select="name" />
+                                </span>
+                            </xsl:otherwise>
+                          </xsl:choose>
                         </xsl:otherwise>
                 </xsl:choose>
             </xsl:for-each>

@@ -354,8 +354,10 @@
         <span class="label"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'published'" /></xsl:call-template>&#160;</span>
         <xsl:value-of select="/buildinfo/document/date/original/@content" />&#160;
         <xsl:if test="/buildinfo/document/date/revision">
-                (<span class="label"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'revision'" /></xsl:call-template>&#160;</span>
-                <xsl:value-of select="/buildinfo/document/date/revision/@content" />)&#160;
+                (<span class="label"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'revision'" /></xsl:call-template></span>
+<xsl:for-each select="/buildinfo/document/date/revision">                
+&#160;<xsl:value-of select="@content" />
+</xsl:for-each>)&#160;
         </xsl:if>
     </xsl:if>
     

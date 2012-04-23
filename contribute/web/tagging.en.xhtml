@@ -211,9 +211,9 @@
     
     <p>
       For people's pictures, you should put a 48*48 pixels picture in the
-      /about/<var>id</var> folder and add a line for the <var>avatar</var> URI, 
-      named <var>id</var>-avatar.jpg (where <var>id</var> is the id defined in 
-      /about/people/people.en.xml).
+      /about/<var>id</var> folder named <var>id</var>-avatar.jpg. Then edit
+      <var>/about/people/people.en.xml</var> and add a line for
+      <var>avatar</var> to the picture URL.
     </p>
     
     <h3>Tagging author, date and download files</h3>
@@ -238,6 +238,8 @@
           &#60;revision content="2010-03-24" /&#62;
           &#60;original content="2009-11-27" /&#62;
         &#60;/date&#62;
+        
+        &#60;!-- Feel free to add more than one revision tag if see fit --&#62;
         
         &#60;download type="pdf" content="/link/to/download-file.pdf" /&#62;
     </pre>

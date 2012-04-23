@@ -836,18 +836,18 @@
     </xsl:choose>
     -->
     <xsl:choose>
-      <xsl:when test="$month = 1"><xsl:call-template name="gettext"><xsl:with-param name="id" select="'months/1'" /></xsl:call-template></xsl:when>
-      <xsl:when test="$month = 2"><xsl:call-template name="gettext"><xsl:with-param name="id" select="'months/2'" /></xsl:call-template></xsl:when>
-      <xsl:when test="$month = 3"><xsl:call-template name="gettext"><xsl:with-param name="id" select="'months/3'" /></xsl:call-template></xsl:when>
-      <xsl:when test="$month = 4"><xsl:call-template name="gettext"><xsl:with-param name="id" select="'months/4'" /></xsl:call-template></xsl:when>
-      <xsl:when test="$month = 5"><xsl:call-template name="gettext"><xsl:with-param name="id" select="'months/5'" /></xsl:call-template></xsl:when>
-      <xsl:when test="$month = 6"><xsl:call-template name="gettext"><xsl:with-param name="id" select="'months/6'" /></xsl:call-template></xsl:when>
-      <xsl:when test="$month = 7"><xsl:call-template name="gettext"><xsl:with-param name="id" select="'months/7'" /></xsl:call-template></xsl:when>
-      <xsl:when test="$month = 8"><xsl:call-template name="gettext"><xsl:with-param name="id" select="'months/8'" /></xsl:call-template></xsl:when>
-      <xsl:when test="$month = 9"><xsl:call-template name="gettext"><xsl:with-param name="id" select="'months/9'" /></xsl:call-template></xsl:when>
-      <xsl:when test="$month = 10"><xsl:call-template name="gettext"><xsl:with-param name="id" select="'months/10'" /></xsl:call-template></xsl:when>
-      <xsl:when test="$month = 11"><xsl:call-template name="gettext"><xsl:with-param name="id" select="'months/11'" /></xsl:call-template></xsl:when>
-      <xsl:when test="$month = 12"><xsl:call-template name="gettext"><xsl:with-param name="id" select="'months/12'" /></xsl:call-template></xsl:when>
+      <xsl:when test="$month = 1"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'months/1'" /></xsl:call-template></xsl:when>
+      <xsl:when test="$month = 2"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'months/2'" /></xsl:call-template></xsl:when>
+      <xsl:when test="$month = 3"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'months/3'" /></xsl:call-template></xsl:when>
+      <xsl:when test="$month = 4"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'months/4'" /></xsl:call-template></xsl:when>
+      <xsl:when test="$month = 5"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'months/5'" /></xsl:call-template></xsl:when>
+      <xsl:when test="$month = 6"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'months/6'" /></xsl:call-template></xsl:when>
+      <xsl:when test="$month = 7"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'months/7'" /></xsl:call-template></xsl:when>
+      <xsl:when test="$month = 8"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'months/8'" /></xsl:call-template></xsl:when>
+      <xsl:when test="$month = 9"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'months/9'" /></xsl:call-template></xsl:when>
+      <xsl:when test="$month = 10"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'months/10'" /></xsl:call-template></xsl:when>
+      <xsl:when test="$month = 11"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'months/11'" /></xsl:call-template></xsl:when>
+      <xsl:when test="$month = 12"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'months/12'" /></xsl:call-template></xsl:when>
       <xsl:otherwise>error: <xsl:value-of select="$month"/></xsl:otherwise>
     </xsl:choose>
 

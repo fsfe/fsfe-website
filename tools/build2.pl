@@ -319,9 +319,9 @@ while (wait() != -1) {
 sub process {
   my ($file, $langs) = @_;
   
-  if (not $file eq "contact/local") {
-    return;
-  }
+#  if (not $file eq "donate/thankgnus") {
+ #   return;
+  #}
   
   print "$file\n";
 

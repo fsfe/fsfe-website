@@ -2,7 +2,19 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:output method="xml" encoding="UTF-8" indent="yes" />
-
+  
+  <xsl:template match="number-of-businesses">
+    <xsl:value-of select="count(/html/set/bsig/li)" />
+  </xsl:template>
+  
+  <xsl:template match="number-of-orgs">
+    <xsl:value-of select="count(/html/set/osig/li)" />
+  </xsl:template>
+  
+  <xsl:template match="number-of-individuals">
+    <xsl:value-of select="count(/html/set/isig/li)" />
+  </xsl:template>
+  
   <!-- Fill dynamic content -->
   <xsl:template match="dynamic-content">
     <xsl:for-each select="/html/set/buglist">

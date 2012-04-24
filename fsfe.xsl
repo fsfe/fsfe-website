@@ -351,7 +351,7 @@
     </xsl:if>
 
     <xsl:if test="/buildinfo/document/date">
-        <span class="label"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'published'" /></xsl:call-template>&#160;</span>
+        <span class="label"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'published'" /></xsl:call-template>&#160;</span> 
         <xsl:value-of select="/buildinfo/document/date/original/@content" />&#160;
         <xsl:if test="/buildinfo/document/date/revision">
                 (<span class="label"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'revision'" /></xsl:call-template></span>

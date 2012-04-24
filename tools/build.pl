@@ -1,27 +1,24 @@
-#!/usr/bin/perl
-
+#! /usr/bin/perl
 #
 # build.pl - a tool for building FSFE web pages
 #
 # Copyright (C) 2003 Jonas Öberg
-# Copyright (C) 2012 Free Software Foundation Europe, e.V.
-#
+# 
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation; either version 2 of the License, or
 # (at your option) any later version.
-#
+# 
 # This program is distributed in the hope that it will be useful, but
 # WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
 # General Public License for more details.
-#
+# 
 # You should have received a copy of the GNU General Public License
 # along with this program; if not, write to the Free Software
-# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  
 # 02110-1301, USA.
 #
-
 use File::Find::Rule;
 use Getopt::Std;
 use File::Path;
@@ -34,12 +31,6 @@ use IO::Handle;
 use IO::Select;
 use Socket;
 use Fcntl ':flock';
-
-use FindBin;
-use lib "$FindBin::Bin";
-
-
-require "comptree.pl";
 
 # This defines the focuses and their respective preferred / original
 # language. For example, it says that we should have a focus called
@@ -328,10 +319,10 @@ while (wait() != -1) {
 sub process {
   my ($file, $langs) = @_;
 
-  print STDERR "Building $file\n" unless $opts{q};
-
+  print STDERR "Building $file.. \n" unless $opts{q};
   # Create the root note for the above mentioned XML file (used to feed the XSL
   # transformation).
+
   my $dom = XML::LibXML::Document->new("1.0", "utf-8");
   my $root = $dom->createElement("buildinfo");
   $dom->setDocumentElement($root);
@@ -348,18 +339,18 @@ sub process {
   $root->setAttribute("original", "en");
   my $srcfocus = "global";
   if ($file =~ /^([a-z][a-z])\//) {
-    $srcfocus = "$1";
-    $root->setAttribute("original", $countries{$1});
+      $srcfocus = "$1";
+      $root->setAttribute("original", $countries{$1});
   }
-
+  
   $root->setAttribute("filename", "/$file");
-
+  
   #
   # Set the directory name attribute
   #
   my (undef, $current_dir, undef) = fileparse($file);
 
-  $root->setAttribute("dirname", $current_dir);
+  $root->setAttribute("dirname", "$current_dir");
 
   #
   # Find all translations for this document, and create the trlist set
@@ -596,10 +587,6 @@ sub process {
           # with the original (but maybe a second earlier) isn't marked outdated.
           #
           my $originalsource = "$file.".$root->getAttribute("original").".xhtml";
-          
-          my $comment;
-          
-          my $old_outdated = 0;
 	        if (( stat("$opts{i}/$originalsource"))[9] > (stat($source))[9] + 7200
 	              and not $cant_be_outdated{$file} ) {
 	          $root->setAttribute("outdated", "yes");
@@ -612,9 +599,14 @@ sub process {
 				$root->setAttribute("outdated", "no");
 			}
 
-	        my $textdoc = $dom->createElement("textset");
-	        $root->appendChild($textdoc);
-	        clone_document($textdoc, $opts{i}."/tools/texts-$textlang.xml");
+	#
+	# Get the appropriate textset for this language. If one can't be
+	# found, use the English. (I hope this never happens)
+	#
+	my $textlang = $lang;
+	unless (-f $opts{i}."/tools/texts-$textlang.xml") {
+	    $textlang = "en";
+	}
 
 	my $textdoc = $dom->createElement("textset");
 	$root->appendChild($textdoc);
@@ -633,18 +625,6 @@ sub process {
 	    clone_document($fundraisingdoc, $opts{i}."/fundraising.en.xml");
         }
 
-          #
-          # Read the fundraising text, if it exists.
-          #
-	        if (-f $opts{i}."/fundraising.$lang.xml") {
-	            my $fundraisingdoc = $dom->createElement("fundraising");
-	            $root->appendChild($fundraisingdoc);
-	            clone_document($fundraisingdoc, $opts{i}."/fundraising.$lang.xml");
-	        } elsif (-f $opts{i}."/fundraising.en.xml") {
-	        my $fundraisingdoc = $dom->createElement("fundraising");
-	          $root->appendChild($fundraisingdoc);
-	          clone_document($fundraisingdoc, $opts{i}."/fundraising.en.xml");
-          }
 
 	#
 	# And then we do the same thing for the menues. But first we take the
@@ -655,109 +635,24 @@ sub process {
 	    $root->removeChild($_);
 	}
 
-          #
-          # And then we do the same thing for the menues. But first we take the
-          # global menu here, then we add any information that is specific to
-          # the focus.
-          #
-	        foreach ($root->getElementsByTagName("menuset")) {
-	            $root->removeChild($_);
-	        }
+	my %menu;
+	foreach ('global', $dir) {
+	    if (-f $opts{i}."/tools/menu-$_.xml") {
+		my $menudoc = $parser->parse_file($opts{i}."/tools/menu-$_.xml");
+		foreach my $n ($menudoc->documentElement->getElementsByTagName("menu")) {
+		    $menu{$n->getAttribute("id")} = $n;
+		}
+	    }
+	}
+	my $menuroot = $dom->createElement("menuset");
+	while (my ($id, $n) = each %menu) {
+            my $m = $n->cloneNode(1);
+	    $menuroot->appendChild($m);
+	}
+	$root->appendChild($menuroot);
 
-	        my %menu;
-	        foreach ('global', $dir) {
-	            if (-f $opts{i}."/tools/menu-$_.xml") {
-		        my $menudoc = $parser->parse_file($opts{i}."/tools/menu-$_.xml");
-		        foreach my $n ($menudoc->documentElement->getElementsByTagName("menu")) {
-		            $menu{$n->getAttribute("id")} = $n;
-		        }
-	            }
-	        }
-	        my $menuroot = $dom->createElement("menuset");
-	        while (my ($id, $n) = each %menu) {
-                    my $m = $n->cloneNode(1);
-	            $menuroot->appendChild($m);
-	        }
-	        $root->appendChild($menuroot);
-	
-	      
-        # <start addendum> (TODO: transform this into a function)
-        
         #
-        # Get the list of sources and create the files hash. The files
-        # hash contains the base name for each file we want to use, and
-        # then the language for it as a value. It prefers a file in the
-        # language we're building into, but will accept an English file as
-        # a substitute.
-        #
-        #     "Learn all that is learnable and return that information
-        #      to the Creator."
-        #
-        open(IN, '<', "$opts{i}/fsfe.sources");
-        my @auto_sources = <IN>;
-        close IN;
-        my %files;
-        foreach (@auto_sources) {
-          if (/(.*):[a-z,]*global/ || /(.*):[a-z,]*$dir/) {
-            foreach my $f (glob("$1*")) {
-               if ($f =~ /(.*)\.([a-z][a-z])\.xml$/) {
-                  if (!$files{$1}) {
-                    $files{$1} = $2;
-                  } elsif ($2 eq $lang) {
-                    $files{$1} = $2;
-                  } elsif (($2 eq "en") &&
-                           ($files{$1} ne $lang)) {
-                    $files{$1} = $2;
-                  }
-               }
-            }
-          }
-        }
-        
-        #
-        # With that information, we load the source document and create
-        # a new element in it, called <set>, which will hold the combined
-        # knowledge of all the sets in the source files.
-        #
-        foreach ($root->getElementsByTagName("set")) {
-          $root->removeChild($_);
-        }
-        my $auto_data = $dom->createElement("set");
-        
-        while (my ($base, $l) = each %files) {
-            if (($dir eq "global") && ($l ne $lang)) {
-              lock(*TRANSLATIONS);
-              print TRANSLATIONS "$lang $base.$lang.xml $base.$l.xml\n";
-    		      unlock(*TRANSLATIONS);
-            }
-            print STDERR "Loading $base.$l.xml\n" if $opts{d};
-            my $source_data = $parser->parse_file("$base.$l.xml");
-            foreach ($source_data->documentElement->childNodes) {
-               my $c = $_->cloneNode(1);
-               # add the filename to nodes (news, events, …) so that we can use it as an identifier (e.g. for RSS)
-               if (ref($c) eq "XML::LibXML::Element") {
-                 $base =~ /.*[\/_]([^\/_]*$)/;
-                 $c->setAttribute( "filename", $1 );
-               }
-               $auto_data->appendChild($c);
-            }
-        }
-        $root->appendChild($auto_data);
-        
-        # <end addendum>
-	      
-        
-        if ( $lang eq "fr" and $file eq $file_to_treat ) {
-          
-          print "--->outputting test2.xml\n";
-          open (TEST, '>', "/home/nicolas/FSFE/fsfe-web-out/test2.xml");
-          print TEST $dom->toString();
-          close (TEST);
-
-        }
-        
-        #
-        # Do the actual transformation. (through fsfe.xsl)
+        # Do the actual transformation.
         #
         my $results = $global_stylesheet->transform($dom);
 
@@ -773,14 +668,14 @@ sub process {
             }
           }
           if (($href !~ /^http/) && ($href !~ /^#/)) {
-	        # Save possible anchor and remove it from URL
-	        my $anchor = $href;
-	        if (!($anchor =~ s/.*#/#/)) {
-	          $anchor = "";
-	        }
-	        $href =~ s/#.*//;
-	        # proces URL
-	        if (($href =~ /\.html$/) && ($href !~ /\.[a-z][a-z]\.html$/)) {
+	    # Save possible anchor and remove it from URL
+	    my $anchor = $href;
+	    if (!($anchor =~ s/.*#/#/)) {
+	      $anchor = "";
+	    }
+	    $href =~ s/#.*//;
+	    # process URL
+	    if (($href =~ /\.html$/) && ($href !~ /\.[a-z][a-z]\.html$/)) {
               $href =~ s/\.html$/\.$lang.html/;
             } elsif (($href =~ /\.rss$/) && ($href !~ /\.[a-z][a-z]\.rss$/)) {
               $href =~ s/\.rss$/\.$lang.rss/;

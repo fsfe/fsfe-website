@@ -97,7 +97,7 @@ fi
 echo "$(date)  Checking Perl modules."
 # -----------------------------------------------------------------------------
 
-perl ${MAKEFILE_PL}
+#perl ${MAKEFILE_PL}
 
 # Make sure build.sh and build2.pl are executable
 # TODO: this can be removed once we set the "executable" svn property
@@ -114,7 +114,7 @@ fi
 echo "$(date)  Running Makefiles."
 # -----------------------------------------------------------------------------
 
-make --silent
+#make --silent
 
 # -----------------------------------------------------------------------------
 echo "$(date)  Building HTML pages."

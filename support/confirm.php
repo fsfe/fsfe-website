@@ -16,7 +16,6 @@ catch(PDOException $e) {
 
 try {
 	// check data
-//	$query = $db->prepare("SELECT * FROM t1 where secret='$secret' AND confirmed=''");
 	$query = $db->prepare("SELECT * FROM t1 where secret='$secret'");
 	$query->execute();
 }
@@ -25,40 +24,32 @@ catch(PDOException $e) {
 	print_r($db->errorInfo());
 }
 
-echo "alive 1..";
-
 while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
     // true if at least one row to return
 
     $found = True;
 
-echo "alive 2..";
-    
-    try {
-	    $query = $db->prepare("UPDATE t1 SET 
-	        confirmed='". date('Y-m-d H:i:s') ."'
-		    where secret='$secret'");
-	    $query->execute();
+    if ($row['confirmed'] == ''){
+        try {
+	        $query = $db->prepare("UPDATE t1 SET 
+	            confirmed='". date('Y-m-d H:i:s') ."'
+		        where secret='$secret'");
+	        $query->execute();
+        }
+        catch(PDOException $e) {
+	        print "Database Error: \n";
+	        print_r($db->errorInfo());
+        }
     }
-    catch(PDOException $e) {
-	    print "Database Error: \n";
-	    print_r($db->errorInfo());
-    }
-    
-echo "alive 3..";
-
+        
     echo "<h1>Hello ".$row['firstname']." ".$row['lastname']."</h1>
     <p>Your address ".$row['email']." was confirmed ".$row['confirmed'].".</p>
     <p>Thank you for your support to the FSFE!</p>";
 }
 
-echo "alive 4..";
-
 if ($found == False) {
     echo "No address was confirmed. Please sign up again.";
 }
-
-echo "alive 5..";
 
 // close the database connection
 $db = NULL;

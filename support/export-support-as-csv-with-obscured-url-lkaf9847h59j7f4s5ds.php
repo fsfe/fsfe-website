@@ -4,18 +4,17 @@
 
 $db = new PDO("sqlite:../../../db/support.sqlite");
 
-$query = $db->query("alter table t1 add column secret TEXT");
-$query = $db->query("alter table t1 add column signed DATE");
-$query = $db->query("alter table t1 add column confirmed DATE");
-$query = $db->query("alter table t1 add column updated DATE");
+//$query = $db->query("alter table t1 add column secret TEXT");
+$query = $db->query("alter table t1 drop column signed");
+//$query = $db->query("alter table t1 add column confirmed DATE");
+//$query = $db->query("alter table t1 add column updated DATE");
 
 $query = $db->query("select * from t1");
 
-
 $outstream = fopen("php://output",'w'); 
-header("Content-type: text/csv");  
-header("Cache-Control: no-store, no-cache");  
-header('Content-Disposition: attachment; filename="supporters.csv"');
+//header("Content-type: text/csv");  
+//header("Cache-Control: no-store, no-cache");  
+//header('Content-Disposition: attachment; filename="supporters.csv"');
 
 
 $first_row = true;
@@ -29,12 +28,15 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC))
     $first_row = false;
     $number_of_fields = count($row);
     $field_names = array_keys($row);
-    $first_field_name = $field_names[0];
+    fputcsv($outstream, $field_names, ',', '"');  
   }
   // do stuff here with the row
   fputcsv($outstream, $row, ',', '"');  
 }
 
 fclose($outstream);
+
+// close the database connection
+$db = NULL;
 
 ?>

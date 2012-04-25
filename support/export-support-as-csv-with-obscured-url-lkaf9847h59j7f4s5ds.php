@@ -3,7 +3,14 @@
 // to develop email confirmation function
 
 $db = new PDO("sqlite:../../../db/support.sqlite");
+
+$query = $db->query("alter table t1 add column secret TEXT");
+$query = $db->query("alter table t1 add column signed DATE");
+$query = $db->query("alter table t1 add column confirmed DATE");
+$query = $db->query("alter table t1 add column updated DATE");
+
 $query = $db->query("select * from t1");
+
 
 $outstream = fopen("php://output",'w'); 
 header("Content-type: text/csv");  

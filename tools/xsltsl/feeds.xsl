@@ -203,7 +203,9 @@
           <p class="date">
             <xsl:value-of select="$start_day" />
             <xsl:text> </xsl:text>
-            <xsl:value-of select="$start_month" />
+            <xsl:if test="$start_month != $end_month">
+              <xsl:value-of select="$start_month" />
+            </xsl:if>
             <xsl:text> to </xsl:text> 
             <xsl:value-of select="$end_day" />
             <xsl:text> </xsl:text>

@@ -14,11 +14,11 @@
       </div>
 
       <p>
-	Evropská nadace pro svobodný software (FSFE) je nezisková nevládní organizace.
-	<a href="/projects/work.en.html">Naše práce</a> je možná díky komunitě
-        <a href="/contribute/contribute.en.html">dobrovolníků</a>,
-        <a href="http://fellowship.fsfe.org">členů</a> a
-        <a href="thankgnus.en.html">dárců</a>. Vaše příspěvky jsou klíčové pro 
+        Evropská nadace pro svobodný software (FSFE) je nezisková nevládní organizace.
+	<a href="/projects/work.html">Naše práce</a> je možná díky komunitě
+        <a href="/contribute/contribute.html">dobrovolníků</a>,
+        <a href="http://fellowship.fsfe.org">členů</a> a 
+        <a href="thankgnus.html">dárců</a>. Vaše příspěvky jsou klíčové pro 
 	naši sílu a samostatnost. Umožňují nám pokračovat v práci pro svobodný 
 	software kdekoliv je to nezbytné a je zapotřebí nezávislý hlas.
       </p>
@@ -32,8 +32,8 @@
       <p>
         <label for="name">Jméno (osoba nebo firma)</label>
         <input id="name" name="name" type="text"/>
-	(Pokud si nepřejete zůstat v anonymitě, bude toto jméno uvedeno na 
-        <a href="thankgnus.en.html">seznamu dárců</a>)
+        (Pokud nechcete zůstat v anonymitě, bude toto jméno uvedeno na 
+        <a href="thankgnus.html">seznamu dárců</a>)
       </p>
       <p>
         <input name="anonymous" type="checkbox"/> Přeji si zůstat v anonymitě
@@ -45,16 +45,24 @@
       <fieldset>
         <table>
           <tr>
-	    <th>Výše</th>
+            <th>Úroveň (do roku 2012)</th>
             <th>Měsíční příspěvek</th>
             <th>Roční příspěvek</th>
             <th>Jednorázový dar</th>
+            <th>Úroveň (od roku 2013)</th>
           </tr>
           <tr>
-            <td><a href="thankgnus.html#supporter">Stoupenec</a><br/></td>
+            <td rowspan="2"><a href="thankgnus.html#supporter">Stoupenec</a><br/></td>
             <td><input name="amount" type="radio" value="m10" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 10</td>
             <td><input name="amount" type="radio" value="y120" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 120</td>
             <td><input name="amount" type="radio" value="o120" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 120</td>
+            <td>Dárce</td>
+          </tr>
+          <tr>
+            <td><input name="amount" type="radio" value="m40" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 40</td>
+            <td><input name="amount" type="radio" value="y480" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 480</td>
+            <td><input name="amount" type="radio" value="o480" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 480</td>
+            <td rowspan="3">Bronzový dárce</td>
           </tr>
           <tr>
             <td><a href="thankgnus.html#contributor">Přispěvatel</a><br/></td>
@@ -63,16 +71,28 @@
             <td><input name="amount" type="radio" value="o600" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 600</td>
           </tr>
           <tr>
-            <td><a href="thankgnus.html#sustainingcontributor">Podporující přispěvatel</a><br/></td>
+            <td rowspan="2"><a href="thankgnus.html#sustainingcontributor">Podporující přispěvatel</a><br/></td>
             <td><input name="amount" type="radio" value="m100" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 100</td>
             <td><input name="amount" type="radio" value="y1200" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 1,200</td>
             <td><input name="amount" type="radio" value="o1200" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 1,200</td>
           </tr>
           <tr>
-            <td><a href="thankgnus.html#patron">Patron</a><br/></td>
+            <td><input name="amount" type="radio" value="m200" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 200</td>
+            <td><input name="amount" type="radio" value="y2400" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 2,400</td>
+            <td><input name="amount" type="radio" value="o2400" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 2,400</td>
+            <td rowspan="2">Stříbrný dárce</td>
+          </tr>
+          <tr>
+            <td rowspan="2"><a href="thankgnus.html#patron">Patron</a><br/></td>
             <td><input name="amount" type="radio" value="m500" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 500</td>
             <td><input name="amount" type="radio" value="y6000" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 6,000</td>
             <td><input name="amount" type="radio" value="o6000" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 6,000</td>
+          </tr>
+          <tr>
+            <td><input name="amount" type="radio" value="m1000" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 1,000</td>
+            <td><input name="amount" type="radio" value="y12000" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 12,000</td>
+            <td><input name="amount" type="radio" value="o12000" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 12,000</td>
+            <td>Zlatý dárce</td>
           </tr>
           <tr>
             <td style="border-bottom: medium none;">Zadejte výši:</td>
@@ -94,6 +114,7 @@
         <input type="submit" value="Darovat"/>
       </p>
     </form>
+
     <h3>Bankovní převod</h3>
 
     <p>
@@ -122,8 +143,7 @@
 
     <p>
       Pokud vám nevyhovuje ani jedna z předchozích možností,
-      <a href="mailto:office&#64;fsfeurope.org">napište nám</a>
-      prosím a my se s vámi domluvíme na dalších možnostech.
+      <a href="mailto:office@fsfeurope.org">napište nám</a> a my se s Vámi domluvíme na dalších možnostech.
     </p>
 
     <p>
@@ -136,27 +156,28 @@
 
     <p>
       Pokud darujete více než 120 euro za rok, rádi bychom vaše jméno přidali
-      na naši <a href="thankgnus.en.html">dárcovskou listinu</a>. Pokud přispíváte
+      na naši <a href="thankgnus.html">dárcovskou listinu</a>. Pokud přispíváte
       online a přejete si zůstat v anonymitě, můžete zaškrtnou políčko "Přeji si zůstat
-      v anonymitě". U bankovních převodů nám o takovém rozhodnutí 
-      <a href="mailto:office&#64;fsfeurope.org">napište</a>.
+      v anonymitě". U bankovních převodů nám o takovém rozhodnutí
+      <a href="mailto:office@fsfeurope.org">napište</a>.
     </p>
 
     <p>
       Můžete navíc přidat naše
-      <a href="/about/graphics/sponsoring/sponsoring.en.html">sponzorská tlačítka</a>
+      <a href="/about/graphics/sponsoring/sponsoring.html">sponzorská tlačítka</a>
       na své webové stránky a tím ukázat, že nás podporujete.
     </p>
 
     <p>
-      V některých zemích mohou být dary odečteny z daně z příjmu. V současnosti se to týká
-      <a href="germany.en.html">Německa</a>, <a href="netherlands.en.html">Nizozemska</a> a
-      <a href="switzerland.en.html">Švýcarska</a>.
+     V některých zemích mohou být dary odečteny z daně z příjmu.
+      V současnosti se to týká <a href="germany.html">Německa</a>,
+      <a href="netherlands.html">Nizozemska</a>, and
+      <a href="switzerland.html">Švýcarska</a>.
     </p>
   </body>
 
   <timestamp>$Date$ $Author$</timestamp>
-  <translator>Pavel Kačer</translator>  
+  <translator>Jiří Konopáč</translator>  
 </html>
 <!--
 Local Variables: ***

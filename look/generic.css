@@ -1904,7 +1904,7 @@ div.map {
 /* ------------------------------------------------------------------------- */
 /* Support form                                                                   */
 /* ------------------------------------------------------------------------- */
-.support_page img[alt="Stars"] {
+#introduction.support_page  img[alt="Stars"] {
     margin-bottom: 200px;
 }
 #support_form {

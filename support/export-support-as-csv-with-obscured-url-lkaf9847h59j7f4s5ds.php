@@ -2,6 +2,8 @@
 // This file is temporary - now I just need so see the db contents 
 // to develop email confirmation function
 
+die("This file is for debugging only.");
+
 $db = new PDO("sqlite:../../../db/support.sqlite");
 
 //$query = $db->query("alter table t1 drop column signed");
@@ -9,11 +11,11 @@ $db = new PDO("sqlite:../../../db/support.sqlite");
 
 $query = $db->query("select * from t1");
 
-$outstream = fopen("php://output",'w'); 
-//header("Content-type: text/csv");  
-//header("Cache-Control: no-store, no-cache");  
-//header('Content-Disposition: attachment; filename="supporters.csv"');
+header("Content-type: text/csv");  
+header("Cache-Control: no-store, no-cache");  
+header('Content-Disposition: attachment; filename="supporters.csv"');
 
+$outstream = fopen("php://output",'w'); 
 
 $first_row = true;
 while ($row = $query->fetch(PDO::FETCH_ASSOC))

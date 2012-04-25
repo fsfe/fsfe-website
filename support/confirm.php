@@ -1,7 +1,8 @@
 <?php
 if (preg_match("/[a-z0-9]/i", $_SERVER["QUERY_STRING"])) {
     $secret = $_SERVER["QUERY_STRING"];
-    echo "<p>Checking code $secret..</p>";
+    $timestamp = date('Y-m-d H:i:s');
+    //echo "<p>Checking code $secret..</p>";
 } else {
     die("This page must be called with a parameter");
 }
@@ -30,9 +31,10 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
     $found = True;
 
     if ($row['confirmed'] == ''){
+        $row['confirmed'] = $timestamp;
         try {
 	        $query = $db->prepare("UPDATE t1 SET 
-	            confirmed='". date('Y-m-d H:i:s') ."'
+	            confirmed='$timestamp'
 		        where secret='$secret'");
 	        $query->execute();
         }
@@ -44,7 +46,7 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
         
     echo "<h1>Hello ".$row['firstname']." ".$row['lastname']."</h1>
     <p>Your address ".$row['email']." was confirmed ".$row['confirmed'].".</p>
-    <p>Thank you for your support to the FSFE!</p>";
+    <p>Thank you for your support to the <a href='http://fsfe.org/'>FSFE</a>!</p>";
 }
 
 if ($found == False) {

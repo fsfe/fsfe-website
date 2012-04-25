@@ -48,6 +48,7 @@ if ( isset($e) && $e ) {
 }
 else {
     echo '<p>Thank you for showing your support to the FSFE!</p>
+          <p>A confirmation message has been sent to your e-mail '. $_POST['email'] .'</p>
           <p><a href="/">Go to the FSFE main page</a></p>';
 
     $message = '

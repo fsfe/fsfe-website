@@ -1,6 +1,6 @@
 <?php
-if (preg_match("/[a-z0-9]/i", _SERVER["QUERY_STRING"])) {
-    $secret = _SERVER["QUERY_STRING"]
+if (preg_match("/[a-z0-9]/i", $_SERVER["QUERY_STRING"])) {
+    $secret = $_SERVER["QUERY_STRING"];
 } else {
     die("This page must be called with a parameter");
 }
@@ -30,7 +30,7 @@ catch(PDOException $e) {
 	print_r($db->errorInfo());
 }
 
-while ($row = $query->fetch(PDO::FETCH_ASSOC))
+while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
     // true if at least one row to return
 
     $found = True;
@@ -40,8 +40,8 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC))
 		where secret='$secret'");
 	$query->execute();
 
-    echo "<h1>Hello $row['firstname'] $row['lastname']</h1>
-    <p>Your address $row['email'] was confirmed $row['confirmed'].</p>
+    echo "<h1>Hello ".$row['firstname']." ".$row['lastname']."</h1>
+    <p>Your address ".$row['email']." was confirmed ".$row['confirmed'].".</p>
     <p>Thank you for your support to the FSFE!</p>";
 }
 

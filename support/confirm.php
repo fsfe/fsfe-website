@@ -16,7 +16,8 @@ catch(PDOException $e) {
 
 try {
 	// check data
-	$query = $db->prepare("SELECT * FROM t1 where secret='$secret' AND confirmed=''");
+//	$query = $db->prepare("SELECT * FROM t1 where secret='$secret' AND confirmed=''");
+	$query = $db->prepare("SELECT * FROM t1 where secret='$secret'");
 	$query->execute();
 }
 catch(PDOException $e) {
@@ -53,7 +54,7 @@ echo "alive 3..";
 
 echo "alive 4..";
 
-if ($found === False) {
+if ($found == False) {
     echo "No address was confirmed. Please sign up again.";
 }
 

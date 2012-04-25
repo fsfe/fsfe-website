@@ -4,6 +4,13 @@
 
 $db = new PDO("sqlite:../../../db/support.sqlite");
 $query = $db->query("select * from t1");
+
+$outstream = fopen("php://output",'w'); 
+header("Content-type: text/csv");  
+header("Cache-Control: no-store, no-cache");  
+header('Content-Disposition: attachment; filename="supporters.csv"');
+
+
 $first_row = true;
 while ($row = $query->fetch(PDO::FETCH_ASSOC))
 {
@@ -18,6 +25,9 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC))
     $first_field_name = $field_names[0];
   }
   // do stuff here with the row
-  print_r($row);
+  fputcsv($outstream, $row, ',', '"');  
 }
+
+fclose($outstream);
+
 ?>

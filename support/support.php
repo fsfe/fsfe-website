@@ -6,13 +6,16 @@
 
  
 
-$params = array('time', 'firstname', 'lastname', 'email', 'country_code');
+$params = array('time', 'firstname', 'lastname', 'email', 'country_code', 'secret');
 
 // Save time in "YYYY-MM-DD HH:MM:SS"
 $_POST['time'] = date('Y-m-d H:i:s');
+$_POST['secret'] = md5("salt:ksflei54sif76u" . date('Y-m-d H:i:s') . $_POST['email']);
+// salt guarantees uniquness for this database
+// timestamp guarantees uniquess for each entry, even if e-mail is the same
 
 try {
-        //open the database
+    //open the database
 	$db = new PDO( 'sqlite:../../../db/support.sqlite' ); 
 }
 catch(PDOException $e) {
@@ -46,6 +49,21 @@ if ( isset($e) && $e ) {
 else {
     echo '<p>Thank you for showing your support to the FSFE!</p>
           <p><a href="/">Go to the FSFE main page</a></p>';
+
+    $message = '
+    Thank you for showing your support to the FSFE!
+
+    Please confirm you e-mail address by opening the page
+    http://fsfe.org/support/confirm?'. $_POST['secret'] .'
+
+    Thank you!
+    ';    
+              
+    $to      = $_POST['email']; 
+    // TODO: is this safe, should we ereg() input first to check correct form?
+    $subject = 'Confirm sign up as supporter';
+    $headers = 'From: no-reply@fsfe.org' . "\r\n";
+    mail($to, $subject, $message, $headers);
 }
 
 ?>

@@ -4,10 +4,8 @@
 
 $db = new PDO("sqlite:../../../db/support.sqlite");
 
-//$query = $db->query("alter table t1 add column secret TEXT");
-$query = $db->query("alter table t1 drop column signed");
-//$query = $db->query("alter table t1 add column confirmed DATE");
-//$query = $db->query("alter table t1 add column updated DATE");
+//$query = $db->query("alter table t1 drop column signed");
+// not possible to drop columns in LiteSQL
 
 $query = $db->query("select * from t1");
 

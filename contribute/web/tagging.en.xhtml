@@ -31,7 +31,7 @@
     
     <p>In order to retrieve news items or events with a given tag, these
     have of course to be tagged accordingly. To do that, add as many 
-    &lt;tag&gt;...&lt;/tag&gt; as necessary in the tags section.</p>
+    <var>&lt;tag&gt;...&lt;/tag&gt;</var> as necessary in the tags section.</p>
     
     <p>
       A list of tags currently in use can be found <a href="/tags/tags.html">here</a>.
@@ -41,7 +41,7 @@
       <li>For news items and newsletters, within &lt;html&gt; &lt;/html&gt; if your file has the <var>xhtml</var> extension:</li>
     </ul>
     
-    <p class="terminal">
+    <pre class="file">
       &lt;html&gt;<br/>
       [...]<br/>
       &lt;tags&gt;<br/>
@@ -50,13 +50,13 @@
       &lt;tag&gt;novell&lt;/tag&gt;<br/>
       &lt;/tags&gt;<br/>
       &lt;/html&gt;
-    </p>
+    </pre>
     
     <ul>
       <li>And, within &lt;news&gt; &lt;/news&gt; if your file has the <var>xml</var> extension:</li>
     </ul>
     
-    <p class="terminal">
+    <pre class="file">
       &lt;news&gt;<br/>
       [...]<br/>
       &lt;tags&gt;<br/>
@@ -65,13 +65,13 @@
       &lt;tag&gt;novell&lt;/tag&gt;<br/>
       &lt;/tags&gt;<br/>
       &lt;/news&gt;
-    </p>
+    </pre>
     
     <ul>
       <li>For events, within &lt;event&gt; &lt;/event&gt;:</li>
     </ul>
     
-    <p class="terminal">
+    <pre class="file">
       &lt;event&gt;<br/>
       [...]<br/>
       &lt;tags&gt;<br/>
@@ -79,7 +79,7 @@
       &lt;tag&gt;it&lt;/tag&gt;<br/>
       &lt;/tags&gt;<br/>
       &lt;/event&gt;
-    </p>
+    </pre>
     
     <p>Please note that only events and news items being tagged as <var>front-page</var>
     will appear on the front page of fsfe.org!</p>
@@ -101,7 +101,7 @@
       </li>
     </ul>
     
-    <p class="terminal">&lt;xsl:with-param name="tag" select="'<var>your tag</var>'"/&gt;</p>
+    <pre class="file">&lt;xsl:with-param name="tag" select="'<var>your tag</var>'"/&gt;</pre>
     
     <ul>
       <li>
@@ -109,7 +109,7 @@
       </li>
     </ul>
     
-    <p class="terminal">&lt;xsl:with-param name="nb-items" select="'<var>x</var>'" /&gt;</p>
+    <pre class="file">&lt;xsl:with-param name="nb-items" select="'<var>x</var>'" /&gt;</pre>
     
     
     <h3>Using the fetch-newsletter template</h3>
@@ -131,7 +131,7 @@
       </li>
     </ul>
     
-    <p class="terminal">&lt;xsl:with-param name="wanted-time" select="'<var>future|present|past</var>'" /&gt;</p>
+    <pre class="file">&lt;xsl:with-param name="wanted-time" select="'<var>future|present|past</var>'" /&gt;</pre>
     
     <ul>
       <li>
@@ -142,7 +142,7 @@
       </li>
     </ul>
     
-    <p class="terminal">&lt;xsl:with-param name="header" select="'<var>future|current|past</var>'" /&gt;</p>
+    <pre class="file">&lt;xsl:with-param name="header" select="'<var>future|current|past</var>'" /&gt;</pre>
     
     <ul>
       <li>
@@ -151,7 +151,7 @@
       </li>
     </ul>
     
-    <p class="terminal">&lt;xsl:with-param name="display-details" select="'<var>yes|no</var>'" /&gt;</p>
+    <pre class="file">&lt;xsl:with-param name="display-details" select="'<var>yes|no</var>'" /&gt;</pre>
     
     
     
@@ -181,12 +181,12 @@
       variable in the **.xsl file to your country code, modifying the
       following line.
         
-      <p class="terminal">&lt;xsl:variable name="country-code"&gt;<var>xx</var>&lt;/xsl:variable&gt;</p>
+    <pre class="file">&lt;xsl:variable name="country-code"&gt;<var>xx</var>&lt;/xsl:variable&gt;</pre>
       
       In the **.**.xhtml page, you should only change the identi.ca
       account, or deactivate it if your country team does not have one yet.
       
-      <p class="terminal">"user":"fsfeuk",</p>
+    <pre class="file">"user":"fsfeuk",</pre>
       
       Play further with this file if you want to change the display of
       your country page.
@@ -200,7 +200,7 @@
       <li>add the <var>xx</var> tag to corresponding people in /about/people/people.en.xml, e.g.</li>
     </ul>
     
-    <p class="terminal">&lt;person id="mueller" member="yes" teams="main, de"&gt;</p>
+    <pre class="file">&lt;person id="mueller" member="yes" teams="main, de"&gt;</pre>
     
     <p>
       People tagged with your country code will appear in your country

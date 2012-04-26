@@ -23,7 +23,7 @@
         <a href="thankgnus.html">спонсорам</a>. Ваши пожертвования
         необходимы для нашей эффективности и самостоятельности. Они дают нам
         возможность продолжать работать на благо свободного программного
-        обеспечения там, где это необходимо, и выражать независимое мнение.
+        обеспечения везде, где это необходимо, и выражать независимое мнение.
       </p>
     </div>
 
@@ -35,8 +35,8 @@
       <p>
         <label for="name">Имя (частное лицо или компания)</label>
         <input id="name" name="name" type="text"/>
-        (Если только вы не пожелаете сохранить анонимность, это имя будет внесено в 
-        <a href="thankgnus.html">список спонсоров</a>)
+        (Это имя будет внесено в <a href="thankgnus.html">список спонсоров</a>,
+        если только вы не пожелаете сохранить анонимность.)
       </p>
       <p>
         <input name="anonymous" type="checkbox"/> Я хочу сделать анонимное
@@ -49,16 +49,24 @@
       <fieldset>
         <table>
           <tr>
-            <th>Уровень</th>
+            <th>Уровень (до 2012 года)</th>
             <th>Ежемесячно</th>
             <th>Ежегодно</th>
             <th>Единовременное пожертвование</th>
+            <th>Уровень (начиная с 2013 года)</th>
           </tr>
           <tr>
             <td><a href="thankgnus.html#supporter">Спонсор</a><br/></td>
             <td><input name="amount" type="radio" value="m10" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 10</td>
             <td><input name="amount" type="radio" value="y120" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 120</td>
             <td><input name="amount" type="radio" value="o120" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 120</td>
+            <td>Простой</td>
+          </tr>
+          <tr>
+            <td><input name="amount" type="radio" value="m40" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 40</td>
+            <td><input name="amount" type="radio" value="y480" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 480</td>
+            <td><input name="amount" type="radio" value="o480" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 480</td>
+            <td rowspan="3">Бронзовый</td>
           </tr>
           <tr>
             <td><a href="thankgnus.html#contributor">Сторонник</a><br/></td>
@@ -73,10 +81,22 @@
             <td><input name="amount" type="radio" value="o1200" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 1,200</td>
           </tr>
           <tr>
+            <td><input name="amount" type="radio" value="m200" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 200</td>
+            <td><input name="amount" type="radio" value="y2400" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 2,400</td>
+            <td><input name="amount" type="radio" value="o2400" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 2,400</td>
+            <td rowspan="2">Серебряный</td>
+          </tr>
+          <tr>
             <td><a href="thankgnus.html#patron">Меценат</a><br/></td>
             <td><input name="amount" type="radio" value="m500" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 500</td>
             <td><input name="amount" type="radio" value="y6000" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 6,000</td>
             <td><input name="amount" type="radio" value="o6000" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 6,000</td>
+          </tr>
+          <tr>
+            <td><input name="amount" type="radio" value="m1000" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 1,000</td>
+            <td><input name="amount" type="radio" value="y12000" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 12,000</td>
+            <td><input name="amount" type="radio" value="o12000" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 12,000</td>
+            <td>Золотой</td>
           </tr>
           <tr>
             <td style="border-bottom: medium none;">Выберите сумму:</td>

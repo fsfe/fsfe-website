@@ -1,0 +1,27 @@
+.diagram-indicator {
+        width: 16px;
+        height: 16px;
+        border: 1px solid #000;
+}
+
+#income { }
+
+#donations .diagram-indicator {
+        background-color: #78d2ee
+}
+
+#fellowship .diagram-indicator {
+        background-color: #70d055
+}
+
+#eu .diagram-indicator {
+        background-color: #e0f859
+}
+
+#merchandise .diagram-indicator {
+        background-color: #d6eaf5
+}
+
+#interest .diagram-indicator {
+        background-color: #202d79
+}

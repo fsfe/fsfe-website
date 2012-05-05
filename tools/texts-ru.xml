@@ -3,55 +3,65 @@
 <textset>
   <!-- Footer -->
   <text id="lastchanged"> Последнее обновление: </text>
-  <text id="translator1a"></text>
-  <text id="translator1b"></text>
+  <text id="translator1a">Мы благодарим </text>
+  <text id="translator1b"> за этот перевод.</text>
   <text id="translator2">Это неофициальный перевод. </text>
-  <text id="translator3a"></text>
-  <text id="translator3b">Английская версия страницы.</text>
-  <text id="translator3c"></text>
+  <text id="translator3a">См. также</text>
+  <text id="translator3b">оригинал</text>
+  <text id="translator3c"> этой страницы.</text>
   <text id="permission">
-    Разрешается дословное копирование и распространение любым способом информации данной веб-страницы при сохранении этого примечания.
+    Разрешается дословное копирование и распространение любым способом
+    всей этой статьи при сохранении этого примечания.
   </text>
   <text id="webmaster">
-    Если вы обнаружили на странице ошибку, сообщите об этом по адресу
-    <em>webmaster at fsfeurope.org</em>.
+    Если вы обнаружили на странице ошибку, сообщите об этом по адресу
+    <em>webmaster at fsfeurope.org</em>.
   </text>
   <text id="fsfnetwork">
-    <a href="/about/fsfnetwork.html">Родственные организации</a> ЕФСПО: в <a
-      href="http://www.fsf.org/">Северной Америке</a>, <a
-      href="http://www.fsf.org.in/">Индии</a> и <a
-      href="http://www.fsfla.org/">Латинской Америке</a>.
+    <a href="/about/fsfnetwork.html">Родственные организации</a> ЕФСПО:
+     в <a href="http://www.fsf.org/">Северной Америке</a>,
+     в <a href="http://www.fsf.org.in/">Индии</a> и
+     в <a href="http://www.fsfla.org/">Латинской Америке</a>.
   </text>
+  <text id="creative-commons-license">Лицензия Creative Commons</text>
   <text id="outdated">
     <strong>Внимание: </strong>
-    Оригинальная версия этой страницы обновлена. Если вы хотите устранить разночтения и помочь с переводом, перейдите по <a href="/contribute/contribute.html">этой ссылке</a>.
+    Оригинальная версия этой страницы обновлена. Если вы хотите
+устранить разночтения и помочь с переводом, перейдите по <a
+href="/contribute/contribute.html">этой ссылке</a>.
   </text>
   <text id="notranslation">
     <strong>Внимание: </strong>
-    Эта страница не переведена. Ниже представлен оригинальный текст. Если Вы хотите перевести эту страницу и помочь проекту, перейдите <a href="/contribute/contribute.html">по этой ссылке</a>.
+    Эта страница не переведена. Ниже представлен оригинальный текст.
+Если вы хотите помочь с переводами, перейдите по <a
+href="/contribute/contribute.html">этой ссылке</a>.
   </text>
 
   <text id="source">Исходный текст</text>
   <text id="contact">Контакты</text>
   <text id="translate">Перевести эту страницу?</text>
+  <text id="imprint">Реквизиты</text>
   
   <!-- Info box -->
   <text id="under-construction">
-    <strong>Внимание: </strong>Эта страница находится в работе.
-    Пожалуйста, подождите с переводом, поскольку содержимое будет изменяться.
+    <strong>Внимание: </strong>Эта страница находится в работе.
+    Пожалуйста, <strong>подождите</strong> с переводом,
+    поскольку содержимое будет изменяться.
   </text>
   <text id="search">Поиск</text>
-  <text id="submit">Найти</text>
+  <text id="submit">Отправить</text>
 
   <text id="language">Язык</text>
 
  <!-- Article metadata -->
  <text id="author">Автор</text>
- <text id="published">Опубликовано</text>
+ <text id="writtenby">Написано</text>
+ <text id="published">опубликовано</text>
+ <text id="revision">обновлено</text>
  <text id="download">Загрузить</text>
  
   <!-- Conjunctions -->
-  <text id="to">to</text>
+  <text id="to">до</text>
 
   <!-- Menu -->
   <text id="fsfe/about">О нас</text>
@@ -63,15 +73,15 @@
   <text id="fsfe/order">Магазин</text>
   <text id="fsfe/lists">Списки рассылки</text>
   <text id="fsfe/press">Пресса</text>
-  <text id="fsfe/thankgnus">Благодарности GNU</text>
+  <text id="fsfe/thankgnus">Благодарности</text>
   <text id="fellowship/fellowship">Присоединяйтесь</text>
   <text id="fellowship/card">Электронная карта</text>
   <text id="fellowship/communicate">Связь</text>
   <text id="fellowship/contact">Контакты</text>
   <text id="planet/planet/">Контакты</text>
+  <text id="planet/blogs">Блоги</text>
   <text id="wiki/wiki">Вики</text>
 
-  <text id="fellowship/2-planet">Блог</text>
   <text id="fellowship/3-join">Содружество</text>
   <text id="menu3/priority">Ссылки</text>
   <text id="menu3/priority/com-pkg">Профессиональные услуги</text>
@@ -127,12 +137,14 @@
   <text id="weekdays-abbreviated/7">Вск</text>
 
 
-  <text id="statement1">Европейский фонд </text>
+  <text id="statement1">Европейский фонд свободного программного
+   обеспечения — некоммерческая организация, задачей которой является развитие </text>
   <text id="statement-fs">свободного программного обеспечения</text>
-  <text id="statement2"> — некоммерческая организация, задачей которой является развитие свободного
-программного обеспечения. Работа ЕФСПО состоит в содействии свободе
-в растущем цифровом обществе</text>
+  <text id="statement2">. Работа ЕФСПО состоит в содействии свободе
+в растущем цифровом обществе</text>
   
   <text id="learn-more">Подробности</text>
+  <text id="press">Пресса</text>
+  <text id="newsletter">Новости</text>
 </textset>
 

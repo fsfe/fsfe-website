@@ -29,12 +29,13 @@ h1, h2, h3 {
 
 #logo {
   width: auto;
+  padding-right: 2.5em;
 }
 
 #header {
   background-image: url("/graphics/fellowship/ribbon_fellowship2.png");
   background-position: bottom left;
-  height: 250px;
+  height: 210px;
 }
 
 /* display Fellowship sidebar menu, hiding FSFE menu */

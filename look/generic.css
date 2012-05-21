@@ -1289,8 +1289,7 @@ a.fn {
   border-radius: 7px;
 }
 
-.donate-box,
-.fellowship-box {
+.donate-box, .fellowship-box, .support-box {
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
   border-radius: 7px;
@@ -1310,8 +1309,7 @@ a.fn {
   background: url("/graphics/donate-button-bg.png") no-repeat top left;
 }
 
-#campaign-box-2 .donate-box:hover,
-#campaign-box-2 .fellowship-box:hover {
+#campaign-box-2 .donate-box:hover, #campaign-box-2 .fellowship-box:hover, #campaign-box-2 .support-box:hover {
   text-decoration: none;
 }
 
@@ -1322,7 +1320,7 @@ a.fn {
   box-shadow: inset 0 0 6px rgb(0,34,43);
 }
 
-#campaign-box-2 .fellowship-box {
+#campaign-box-2 .fellowship-box, #campaign-box-2 .support-box {
   color: rgb(112,208,85);
   -moz-box-shadow: inset 0 0 2px rgb(23,40,11);
   -webkit-box-shadow: inset 0 0 2px rgb(23,40,11);
@@ -1330,7 +1328,7 @@ a.fn {
   background: url("/graphics/join-button-bg.png") no-repeat top left;
 }
 
-#campaign-box-2 .fellowship-box:hover {
+#campaign-box-2 .fellowship-box:hover, #campaign-box-2 .support-box:hover {
   color: rgb(93,172,70);
   -moz-box-shadow: inset 0 0 6px rgb(23,40,11);
   -webkit-box-shadow: inset 0 0 6px rgb(23,40,11);

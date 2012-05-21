@@ -202,6 +202,13 @@
       <xsl:with-param name="id" select="'join'" />
     </xsl:call-template>
   </xsl:template>
+
+  <!--translated word "support"-->
+  <xsl:template match="support-label">
+    <xsl:call-template name="gettext">
+      <xsl:with-param name="id" select="'support'" />
+    </xsl:call-template>
+  </xsl:template>
   
   <xsl:template match="subscribe-nl">
     <xsl:call-template name="subscribe-nl" />

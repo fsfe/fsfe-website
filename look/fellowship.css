@@ -23,22 +23,25 @@ a:visited {
   color: rgb(193,225,151);
 }
 
-h2,
-h3,
-h4 {
-  color: rgb(66,121,32);
+h1, h2, h3 {
+  color: #173B00;
 }
 
 #logo {
   width: auto;
+  padding-right: 2.5em;
 }
 
 #header {
   background-image: url("/graphics/fellowship/ribbon_fellowship2.png");
   background-position: bottom left;
-  height: 250px;
+  height: 210px;
 }
 
 /* display Fellowship sidebar menu, hiding FSFE menu */
 #menu ul li.fellowship ul { display: block }
 #menu ul li.fsfe ul       { display: none  }
+
+dt {
+	color: #173B00;
+}

@@ -413,7 +413,7 @@
 		<xsl:attribute name="class">planet</xsl:attribute>
 		<xsl:element name="a">
 		  <xsl:attribute name="href">http://planet.fsfe.org/</xsl:attribute>
-		  Planet
+		  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'planet/blogs'" /></xsl:call-template>
 		</xsl:element>
 		<!-- causes validation errors, needs li to pass validator?
 		     <xsl:element name="ul">

@@ -67,8 +67,7 @@
   <!-- Email -->
     <xsl:if test="email != ''">
       <xsl:element name="p">
-        <xsl:value-of select="/buildinfo/textset/text[@id='email']" />
-        <xsl:text> </xsl:text>
+        Team mailing-list: <xsl:value-of select="/buildinfo/textset/text[@id='email']" />
         <xsl:element name="a">
           <xsl:attribute name="href">
             <xsl:text>mailto:</xsl:text>

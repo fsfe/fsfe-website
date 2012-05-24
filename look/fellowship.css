@@ -41,3 +41,7 @@ h1, h2, h3 {
 /* display Fellowship sidebar menu, hiding FSFE menu */
 #menu ul li.fellowship ul { display: block }
 #menu ul li.fsfe ul       { display: none  }
+
+dt {
+	color: #173B00;
+}

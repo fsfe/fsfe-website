@@ -20,28 +20,28 @@
 
 <p>FSFE's goal is to ensure that the owners of IT devices are always in full 
 and sole control of them. <!-- German: permanent die volle und alleinige 
-Verfügungsgewalt über ihre IT-Geräte innehaben) -->  This basic principle is currently being challenged.</p>
+Verfügungsgewalt über ihre IT-Geräte innehaben) -->  This fundamental principle is recently being challenged.</p>
 
 <p>With a function called "Secure Boot", which will be deployed in computers
 starting 2012, manufacturers of IT hardware and software components are striving to 
 get into a position where they permanently control the IT devices they produce.
 Hence such devices will be "secure" from the manufacturer's perspective, but
-not necessarily from the owner's point of view: The owner is essentially treated as an 
-adversary. By preventing uses of the device which manufacturers disagree with, they can control 
+not necessarily from the owner's point of view: The owner can be treated as an 
+adversary. By preventing uses of the device which the manufacturer does not intend, they can control 
 and limit what a general purpose IT machine (e.g. a PC, laptop, netbook) may be used for.  
 In case of IT devices with internet access, they can alter these usage
 restrictions at any time without even informing the device owner. As a result, 
-IT manufacturers at their sole discretion can strip owners of the rights
-usually associated with owning a device.</p>
+IT manufacturers at their will can take away common rights owners of products 
+usually receive.</p>
 
-<h2>"SecureBoot": Gatekeeper before the operating system</h2>
+<h2>"Secure Boot": Gatekeeper before the operating system</h2>
 
-<p>When powered on, every IT devices executes a startup process called 
+<p>When powered on, IT devices execute a startup process called 
 booting.  In case of computers this startup process is comprised of executing 
-firmware [FIXME optional: which resides on the devices main board.]. This firmware, in
-turn, starts another program called a boot loader, which then powers up the
-actual operating system, on top of which users run their applications. 
-In [FIXME: when? early? late?] 2012 the industry-wide
+firmware. This firmware, in
+turn, starts another program called a boot loader, which then launches the
+actual operating system, on top of which applications can be executed. 
+In 2012 the industry-wide
 transition of PCs, notebooks, servers, and other computers' firmware
 from conventional BIOS
 to <a href="http://en.wikipedia.org/wiki/UEFI|UEFI">UEFI</a> will
@@ -59,12 +59,10 @@ boot loader, the operating system kernel, etc.) before starting it. Therefore
 the cryptographic signatures to be utilised have to be deployed in the UEFI
 signature database of each IT-device equipped with UEFI "Secure Boot",
 <strong>before</strong> a cryptographically signed software component can be
-started on that specific machine. [FIXME: this is a key sentence, but
-it needs to be much clearer. What does it mean for a signature to be
-"deployed in the signature database"?]</p>
+started on that specific machine.</p>
 
 <p>FSFE expects that the vast majority of the computer manufacturers will
-implement "Secure Boot", as Microsoft has announced [FIXME: link?] that computer manufacturers
+implement "Secure Boot", as Microsoft <a href="TODO-MS-HW-8">has announced</a> that computer manufacturers
 must implement UEFI "Secure Boot", if they want to acquire a Windows 8
 certification for devices they build, e.g. for putting the "Compatible with
 Windows 8" logo on them. </p>
@@ -72,15 +70,16 @@ Windows 8" logo on them. </p>
 <h2>The computer: A general purpose machine</h2>
 <!-- TODO: Put that in a "info box"? -->
 
-<p>Developing the computer as a general purpose machine over the past decades,
-our society has created a powerful tool. We can now perform all kinds of tasks using a
-single machine. Now IT manufacturers have discovered that they may have an
+<p>Evolving the computer as a general purpose machine over the past decades, 
+our society has created a powerful tool to perform all kinds of tasks with a
+single machine.
+Now IT manufacturers have discovered that they may have an
 economic interest to arbitrarily limit what these machines can achieve.  With
 "Secure Boot" the owners of IT devices will not be able to independently
 determine the usage of their machines, as they cannot decide which software to
 run.</p>
 
-<p>Whoever controls which software can be executed
+<p>The entity who eventually controls which software can be executed
 on a device and thus determines the specific functions the device performs,
 ultimately can control any data processed and stored by the device. In result,
 the owner of an IT device may not be in sole control of their own data any
@@ -92,13 +91,13 @@ more.</p>
 "Windows 8 Hardware Certification Requirements", published by Microsoft in
 December 2011.  It is understood that Microsoft did and still does not have to
 make any versions of these hardware-certification requirements public, as they
-are the basis of an individual contract between Microsoft and each hardware
+are the base of an individual contract between Microsoft and each hardware
 manufacturer seeking to obtain Microsoft's Windows 8 Certification for their
 computer-products. Hence the "Windows 8 Hardware Certification Requirements"
 can change anytime without public notice, or specific details of the
-logo-requirements differ between manufacturers: Everything happens at
-Microsoft's will and mostly behind closed doors. It is therefore not
-  possible to rely on the
+logo-requirements may differ between manufacturers: Everything happens at
+Microsoft's will and mostly behind closed doors. Thus nobody can rely
+on the 
 published version of the "Windows 8 Hardware Certification Requirements" being
 static, but realise the details devised for "Secure Boot" as a "moving
 target".</p>
@@ -126,11 +125,11 @@ beside Windows 8 it is currently only enforced for Windows device drivers.</p>
 
 <h2>Threat to general purpose computing</h2>
 
-<p>If all these measures would be solely under control of device owners, they
+<p>If all these measures would be solely under control of device owners, these
 could be in their best interest, helping them to enhance security of the boot
 process, which today is mostly unsecured. This would be the case
 <strong>if</strong> the security subsystems specified by the UEFI consortium
-and the Trusted Computing Group (TCG) would guarantee the owner's permanent,
+and the Trusted Computing Group (TCG) would <strong>technically</strong> <!-- they can garantee a lot, but they have to do it technically --> guarantee the owner's permanent,
 full and sole control over configuration and management of these
 security-subsystems, which includes the creation, storage, use and deletion of
 cryptographic keys, certificates and signatures.  But as soon as other entities
@@ -152,8 +151,8 @@ order to duly inform a potential buyer.</p>
 
 <p>IT savvy people may think that they have seen such measures before, and most
 of them were cracked. This was the case in various models of the PlayStation
-and Xbox game consoles, as well as many newer mobile phones. But the
-implementation is much tighter this time, and the scope is much greater:</p>
+and Xbox gaming consoles, as well as many newer mobile phones. But the
+quality and breadth is wider this time:</p>
 
 <ul>
 
@@ -176,7 +175,7 @@ implementation is much tighter this time, and the scope is much greater:</p>
 
   <li>Security flaws in "Secure Boot" implementations are expected (as in all
   software), but as there will be commercial competition between UEFI vendors,
-  it is in the vendors' best interest to resolve these security flaws. In contrast, in
+  it is in their best interest to resolve these security flaws. In contrast, in
   the past only individual manufacturers implemented cryptographically restricted
   boot-processes for their own, specific devices: TiVo Inc. for their TIVOs,
   Microsoft for various generations of their Xbox, as well as Sony for their
@@ -189,8 +188,8 @@ implementation is much tighter this time, and the scope is much greater:</p>
 <p>For maintaining sustained growth in the development and use of software, the
 broad availability of general purpose computers is crucial.</p>
 
-<p>FSFE demands that before purchasing a device, buyers must receive clear and
-concise information  about the technical measures implemented in the device, as
+<p>FSFE demands that before purchasing a device, buyers must be informed 
+concisely about the technical measures implemented in the device, as
 well as the specific usage restrictions and their consequences for the owner
 [[FIXME: is this part necessary? -- in IT devices with signature based
 restrictions.].</p>

@@ -4,7 +4,9 @@
 //ini_set( "display_errors","1" );
 //ERROR_REPORTING( E_ALL) ;
 
- //TODO: check that _POST contains as least email and country selection
+if ($_POST['email'] == '' || $_POST['country_code'] == '') {
+    die("Post data missing. This page should only be accessed via the sign up form.");
+}
 
 $params = array('time', 'firstname', 'lastname', 'email', 'country_code', 'secret');
 

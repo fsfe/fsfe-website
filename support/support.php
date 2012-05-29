@@ -4,7 +4,7 @@
 //ini_set( "display_errors","1" );
 //ERROR_REPORTING( E_ALL) ;
 
- 
+ //TODO: check that _POST contains as least email and country selection
 
 $params = array('time', 'firstname', 'lastname', 'email', 'country_code', 'secret');
 
@@ -49,7 +49,20 @@ if ( isset($e) && $e ) {
 else {
     echo '<p>Thank you for showing your support to the FSFE!</p>
           <p>A confirmation message has been sent to your e-mail '. $_POST['email'] .'</p>
-          <p><a href="http://fsfe.org/">Go to the FSFE main page</a></p>';
+          <p><a href="http://fsfe.org/">Go to the FSFE main page</a></p>
+          
+          <script type="text/javascript">
+	var pkBaseURL = (("https:" == document.location.protocol) ? "https://piwik.fsfe.org/" : "http://piwik.fsfe.org/");
+	document.write(unescape("%3Cscript src=\'" + pkBaseURL + "piwik.js\' type=\'text/javascript\'%3E%3C/script%3E"));
+	</script><script type="text/javascript">
+	try {
+	var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 4);
+	piwikTracker.trackPageView();
+	piwikTracker.enableLinkTracking();
+	} catch( err ) {}
+	</script><noscript><p><img src="http://piwik.fsfe.org/piwik.php?idsite=4" style="border:0" alt=""></p></noscript>
+
+          ';
 
     $message = '
     Thank you for showing your support to the FSFE!

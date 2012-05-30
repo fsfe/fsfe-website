@@ -70,7 +70,8 @@ my %responsible = (
   "POLICY-PERSONELL" => "gerloff",
   "POLICY-OFFICE" => "gerloff",
   "POLICY-TRAVEL" => "gerloff",
-  "MERCHANDISE" => "gerloff",
+  "MERCHANDISE-PURCHASE" => "gerloff",
+  "MERCHANDISE-SHIPPING" => "gerloff",
 );
 
 my %account = (
@@ -98,7 +99,8 @@ my %account = (
   "POLICY-PERSONELL" => "2541",
   "POLICY-OFFICE" => "2542",
   "POLICY-TRAVEL" => "2543",
-  "MERCHANDISE" => "8154",
+  "MERCHANDISE-PURCHASE" => "8154",
+  "MERCHANDISE-SHIPPING" => "8159",
 );
 
 # -----------------------------------------------------------------------------

@@ -1336,6 +1336,32 @@ a.fn {
 }
 
 
+/* Boxe for aside paragraph or information see /campaigns/generalpurposecomputing/secure-boot-analysis.en.html for example */
+
+.box {
+width:34%;
+padding:0.5em 1.5em;
+margin: 1.5em;
+z-index:3;
+font-size:90%;
+line-height:120%;
+/*background-color: rgba(214,234,245,0.8);*/
+background-color:#F7FFCC;
+/*color: #17215A;*/
+border:1px solid #FFF;
+border-radius:.5em;
+box-shadow:0 0 .5em rgba(0,0,0,0.1);
+}
+
+.box.right {
+margin-right:1em;
+}
+
+        .box h2 {font-size:140%;margin-top:0.75em}
+        .box h3 {font-size:120%;margin-top:0.5em}
+
+
+
 /* Nice buttons */
 .button {
   padding: 5px 20px 6px;

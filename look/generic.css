@@ -1347,10 +1347,11 @@ z-index:3;
 line-height:120%;
 /*background-color: rgba(214,234,245,0.8);*/
 background-color:#F7FFCC;
-/*color: #17215A;*/
+color: #202D79;
 border:1px solid #FFF;
 border-radius:.5em;
-box-shadow:0 0 .5em rgba(0,0,0,0.1);
+box-shadow:3px 2px .5em rgba(0,0,0,0.1);
+
 }
 
 .box.right {

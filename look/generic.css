@@ -1338,7 +1338,7 @@ a.fn {
 
 /* Boxe for aside paragraph or information see /campaigns/generalpurposecomputing/secure-boot-analysis.en.html for example */
 
-.box {
+.aside-box {
 width:34%;
 padding:0.5em 1.5em;
 margin: 1.5em;
@@ -1354,7 +1354,7 @@ box-shadow:3px 2px .5em rgba(0,0,0,0.1);
 
 }
 
-.box.right {
+.aside-box.right {
 margin-right:1em;
 }
 

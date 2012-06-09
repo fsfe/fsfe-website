@@ -87,7 +87,7 @@ our %languages = (
   sr => 'Srpski',
   sv => 'Svenska',
   tr => 'T&#252;rk&#231;e',
-  uk => '&#0423;&#043A;&#0440;&#0430;&#0457;&#043D;&#0441;&#044C;&#043A;&#0430;',
+  uk => '&#x423;&#x43A;&#x440;&#x430;&#x457;&#x43D;&#x441;&#x44C;&#x43A;&#x430;',
 );
 
 our $current_date = strftime "%Y-%m-%d", localtime;

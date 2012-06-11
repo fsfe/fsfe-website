@@ -1339,27 +1339,38 @@ a.fn {
 /* Boxe for aside paragraph or information see /campaigns/generalpurposecomputing/secure-boot-analysis.en.html for example */
 
 .aside-box {
-width:34%;
-padding:0.5em 1.5em;
-margin: 1.5em;
-z-index:3;
-/*font-size:90%;*/
-line-height:120%;
-/*background-color: rgba(214,234,245,0.8);*/
-background-color:#F7FFCC;
-color: #202D79;
-border:1px solid #FFF;
-border-radius:.5em;
-box-shadow:3px 2px .5em rgba(0,0,0,0.1);
-
+	width:34%;
+	padding:0.5em 1.5em;
+	margin: 1.5em;
+	z-index:3;
+	/*font-size:90%;*/
+	line-height:120%;
+	/*background-color: rgba(214,234,245,0.8);*/
+	background-color:#F7FFCC;
+	color: #202D79;
+	border:1px solid #FFF;
+	border-radius:.5em;
+	box-shadow:3px 2px .5em rgba(0,0,0,0.1);
 }
 
 .aside-box.right {
-margin-right:1em;
+	margin-right:1em;
 }
 
-        .box h2 {font-size:140%;margin-top:0.75em}
-        .box h3 {font-size:120%;margin-top:0.5em}
+.aside-box h2 {
+	margin: 0;
+	padding:0;
+}
+
+.box h2 {
+	font-size:140%;
+	margin-top:0.75em
+}
+
+.box h3 {
+	font-size:120%;
+	margin-top:0.5em
+}
 
 
 

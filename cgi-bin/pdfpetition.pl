@@ -36,7 +36,14 @@ use constant UPLOAD   => "$root/upload/pdfreaders";
 my $form = WebBuild::FormValidation->new;
 my $content = WebBuild::DynamicContent->new;
 my $query = CGI->new;
-$content->layout ("$root/campaigns/pdfreaders/petition.en.html");
+
+my $lang = $query->param('lang');
+unless ($lang =~ m/^[a-z]{2}$/ and -e "$root/campaigns/pdfreaders/petition.$lang.html")
+  {
+    $lang = 'en'
+  }
+
+$content->layout ("$root/campaigns/pdfreaders/petition.$lang.html");
 
 $form->validates_presence_of ('name');
 $form->validates_presence_of ('surname');

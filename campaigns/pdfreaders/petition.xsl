@@ -59,7 +59,7 @@
 
   <!-- Add a hidden field to the form to identify the language used. -->
   <xsl:template match="add-language">
-  	<input type="hidden" value="@language" name="lang" id="lang" />
+  	<input type="hidden" value="/html/@lang" name="lang" id="lang" />
   </xsl:template>
 
   <xsl:template match="@*|node()" priority="-1">

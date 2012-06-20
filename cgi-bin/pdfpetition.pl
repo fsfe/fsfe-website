@@ -36,7 +36,7 @@ use constant UPLOAD   => "$root/upload/pdfreaders";
 my $form = WebBuild::FormValidation->new;
 my $content = WebBuild::DynamicContent->new;
 my $query = CGI->new;
-$content->layout ("$root/campaigns/pdfreaders/petition.en.html");
+$content->layout ("$root/campaigns/pdfreaders/petition.html");
 
 $form->validates_presence_of ('name');
 $form->validates_presence_of ('surname');

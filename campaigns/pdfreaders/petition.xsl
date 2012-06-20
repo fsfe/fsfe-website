@@ -56,7 +56,12 @@
   <xsl:template match="country-list">
     <xsl:call-template name="country-list" />
   </xsl:template>
-  
+
+  <!-- Add a hidden field to the form to identify the language used. -->
+  <xsl:template match="add-language">
+  	<input type="hidden" value="petition_language" id="petition_language" />
+  </xsl:template>
+
   <xsl:template match="@*|node()" priority="-1">
     <xsl:copy>
       <xsl:apply-templates select="@*|node()"/>

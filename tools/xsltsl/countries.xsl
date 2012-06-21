@@ -143,11 +143,11 @@
     
     
     <xsl:template name="country-list">
-			
+			<xsl:variable name="lang" select="/html/@lang" />
 			<select id="country" name="country">
 				
 				<xsl:for-each select="/html/set/country">
-					<xsl:sort select="." lang="{/html/@lang}" />
+					<xsl:sort select="." lang="{$lang}" />
 					
 					<option><xsl:value-of select="." /></option>
 					

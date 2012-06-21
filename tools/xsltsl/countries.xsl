@@ -147,7 +147,7 @@
 			<select id="country" name="country">
 				
 				<xsl:for-each select="/html/set/country">
-					<xsl:sort select="." lang="/html/@lang" />
+					<xsl:sort select="." lang="en" />
 					
 					<option><xsl:value-of select="." /></option>
 					

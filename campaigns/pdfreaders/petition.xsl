@@ -55,7 +55,9 @@
   
   <xsl:template match="country-list">
     <xsl:call-template name="country-list">
-      <xsl:with-param name="lang" select="/html/@lang" />
+      <xsl:with-param name="lang">
+        <xsl:value-of select="/html/@lang" />
+      </xsl:with-param>
     </xsl:call-template>
   </xsl:template>
 

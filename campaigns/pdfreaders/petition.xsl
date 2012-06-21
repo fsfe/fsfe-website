@@ -54,7 +54,9 @@
   </xsl:template>
   
   <xsl:template match="country-list">
-    <xsl:call-template name="country-list" />
+    <xsl:call-template name="country-list">
+      <xsl:with-param name="lang" select="/html/@lang" />
+    </xsl:call-template>
   </xsl:template>
 
   <!-- Add a hidden field to the form to identify the language used. -->

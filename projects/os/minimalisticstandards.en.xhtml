@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html>
+  <head>
+    <title>Minimalistic Data Format – Open Standards – FSFE</title>
+  </head>
+  <body id="article">
+    <p id="category">
+      <a href="/projects/os/os.html">Open Standards</a>
+    </p>
+    <h1>Minimalistic Standard, because being an Open Standard is not enough.</h1>
+
+    <p>A tool is useless without a piece to work on. What are workpieces to our
+    computers? Data, information, knowledge, opinions, art – in short: Content. It is being 
+    created, processed and transmitted. In most cases electronically direct. Most people have 
+    a device with internet connection available and evolute their collaboration. 
+    </p>
+
+    <p>Content wanders from one user to another and back again. For this it needs to take
+    on some sort of form: The data-format. It defines rules how content and 
+    wrapping is handled, what is allowed content and how it correctly looks within a file 
+    or on an <!-- TODO: Frage, wie ist das gemeint: Über eine Internetverbindung aussehen -->
+    online connection. Whoever wants to participate needs a software that understands this 
+    data-format. Otherwise the content would look to the application like a foreign language. 
+    When a data-format doesn’t allow to save pictures, then I simply can’t save pictures with
+    this file. The choice which data-format is used dictates how long I may view the content 
+    and what I may do with it.
+    </p>
+
+    <p>With every time he saves a file a single user probably won’t recognise the effect 
+    of his decision. When a IT-department or a public authorities 
+    decides which data-format they want to use it has a great impact. The choice of software 
+    connected with this data-format has an effect for year or decades. The more precious 
+    writings, recordings or pictures are saved electronically the more precious it is to be 
+    able to access them. <!-- TODO: Fehlt was in der deutsches Version -->
+    The development and improvement of such data-formats is being financed consciously or 
+    indirectly. Many software manufacturer intentionally try to influence users to 
+    use one of the data-formats the manufacturer controls. For example for technical schematics of 
+    vehicles, buildings or machinery. The producer of the according CAD application 
+    receives effectually this data of a company as a dead pledge. <!-- TODO: Lieber Deposit?? -->
+    From the vendor’s point of view this is a strong position in a negotiation about the price 
+    of the new version of this application. Sometimes whole states get into such a situation.
+    </p>
+
+    <p>That’s why a good data-format can only be an<a
+      href="/projects/os/def.html">Open Standard</a>.
+    This requirement however is not enough. The data-format needs to solve a problem properly. 
+    It needs to fit from a functional as well as from a technical point of view. 
+    Many features need to be taken into account. The <a
+      href="http://jendryschik.de/wsdev/trans/designguide/">Essay by Bert
+      Bos</a> about the underlying design of the W3C’s organisation, which develops the formats 
+    of the world wide web, names among others efficiency, maintainability, accessibility, 
+    extensibility, learnability, simplicity and durability.</p>
+
+    <p>Two central questions hereby are:</p><ul>
+      <li>How well does the data-format solve the problem? And:</li>
+      <li>Is it the most simple data-format available or is there an even more simple one?</li></ul>
+
+
+    <p>The first question is self-explanatory: Who wants to save, transmit and search within 
+    a text does not want to choose a format for pixel based pictures – though it is inevitable
+    using such a format during the first steps of scanning papers or facsimiles.</p>
+
+    <p>The second question is much more exciting: Is the format as easy or complicated as 
+    possible? It hard to design or choose a date-format which correspondents to this minimal 
+    rule.</p>
+
+    <p>There is the bad influence of <a
+      href="http://sourcemaking.com/antipatterns/design-by-committee">“Design
+      by Committee”</a>, that is the <a
+      href="http://webstandard.kulando.de/post/2010/07/21/design-by-committee-gestaltung-durch-viele-entscheider">
+      participation of several decision makers</a> on a technical elaboration. Many people like 
+      to participate on the development of a standard. The decisions about what software is to
+      be used within 
+      an organisation – especially an public one – are also made by many committees. It quickly 
+      happens that too many cooks spoil the broth and add more than 
+      actually necessary. The W3C <a
+      href="http://www.w3.org/People/Bos/DesignGuide/committee.html">
+      is aware of this issue, says Bos</a>. Many others are not.</p>
+
+
+    <p>In addition many software solutions are being judged by a list. Everyone involved can 
+    add something to the list. These wishes often are specific ideas for a solution and they 
+    are compressed to a dense list with all the necessary requirements for the new software.
+    The package with the most fitting features wins. Mostly this results in a data-format which 
+    has many features which are not needed. It would be better if the wishes are being added 
+    to the list on a problem orientated manner and give more points for solutions which 
+    correspondent with many easy extensible data-formats.</p>
+
+    <p>Software manufacturers know their customers. The more features on the list are ticked 
+    the more precious a software appears. That is because it can – on a quick glimpse – 
+    handle many needs. Except simple elegance. That’s how the software and the data-format 
+    looks like: Bloated with many features so many ideas are directly apparent. Another 
+    advantage for the producer: Any competitors are getting a hard time 
+    to process the format the same way the producer does or to offer a superior alternative 
+    solution. The customer is forced to by completely or not at all. Why another data-format 
+    when there is one that can everything?</p>
+
+    <p>Every additional feature or guideline complicates the description of the data-format 
+    exponentially. The disadvantages are immane. The developers of a software 
+    that needs to handle a data-format need to understand the description fully. This includes 
+    the whole text as well as all possible combinations of the contained elements. To read less 
+    and understand more leads to a more easy and secure software. This leads to more software 
+    packages that can handle this data-format on a high level. What follows is more competition, 
+    choice and therefore more user for this format.</p>
+
+    <p>The more tricky a data-format is, the greater the chance there are 
+    rarely needed features. This format and the implementation are comparable to a 
+    huge and angled house. Some rooms are very populated others are virtually never entered. 
+    Of course such a house is hard to secure. Burglars could open a long forgotten window to 
+    the basement or while walking through the hallway hide something in a dark staircase.</p>
+
+    <p>Experts see complexity as the greatest problem for software security. Because of this 
+    many are critical or even hostile towards standards. 
+    <a class="fn" id="ref-complexity" href="#fn-complexity">1</a></p>
+
+    <p>To grasp the risks just take a look at how a computer renders fonts: There is the very 
+    commonly used standard ISO/IEC 8859-15 (Latin-9). More than 20, mostly western European 
+    languages could be processed with it. For a single character there are 256 different possibilities.
+    A new standard namely Unicode (ISO 10646) is supposed to encode all languages. It needs many 
+    more – more than one million – possibilities. In addition a character could be coded with 
+    two different ways. For example with UTF-8 or UCS-2. On one side Unicode is a blessing:
+    Programmed correctly once an application is prepared to feature hundreds of languages. On 
+    the other hand a programmer can’t possibly predict what could happen with all the characters 
+    in the source code. With the 256 cases with Latin-9 she could. With Unicode this overview 
+    is missing. A feisty attacker might find combinations the developer didn’t think of. This 
+    happens on a regular basis. Here are two examples: 1. (DE)<a
+      href="http://de.wikipedia.org/wiki/Homographischer_Angriff">Der
+      homographische Angriff</a>/(EN)<a href="http://en.wikipedia.org/wiki/IDN_homograph_attack">
+      the homograph attack</a> 
+    frauds the user with similar looking Internet addresses. Cyrillic from the Unicode-Fonts is 
+    suitable for this. 2. The developers of a well known webserver have been <a
+      href="https://www.bsi.bund.de/ContentBSI/grundschutz/kataloge/m/m05/m05102.html">pwned by URIs in 
+    Unicode</a>.</p>
+
+
+    <p>It is to no surprise that there are more applications out there that can handle Latin-9 
+    more correctly than Unicode. The problem is identical with every “thicker” specified data-format: 
+    There are applications that don’t understand the exotic features. Especially because there 
+    are so many features so it is impossible to test. The adverts say the software can read the 
+    data-format “X” but whether this works in practice is questionable.</p>
+
+    <p>Some data-formats use this problem on purpose: There are different versions. Who likes to 
+    certainty of all applications are compatible needs to express exactly which version. 
+    For example there are three (1.0, 1.1 and 1.2) variants from the Open Document Format (ODF). 
+    Probably with increasing complexity. Are probably many uses in which version 1.0 is 
+    sufficient. But the preset would probably be the newest version the application supports. 
+    For PDF this problem is even more significant. Some <a
+      href="http://pdfreaders.org/os.de.html">versions or parts of a PDF</a> doesn’t even 
+    suffice as an open standard.</p>
+
+    <p>Who likes to understand computers is being told that there are two different things: 
+    Data and programmes. While data is merely processed the programmes contain commands for 
+    the computer. The difference is clarified with a sticky note saying: Jump from a bridge! 
+    I can read this note, write it and pass it on (process) without any problems. But if I 
+    regard it as a command and execute it then I probably will land on my nose. With computers 
+    it’s the same. Data-formats like ODF, Doc an PDF may contain data and commands for automatic 
+    procession (“Macros”) or interactive elements (Javascript). This turns a regular file into 
+    a potential application with commands for your computer. Naturally attackers try to take 
+    advantage of this. Like with the (DE)<a
+      href="https://www.bsi-fuer-buerger.de/ContentBSIFB/GefahrenImNetz/Schadprogramme/Viren/viren.html">
+      Macro-Viruses</a>/(EN)<a href="http://en.wikipedia.org/wiki/Macro_virus">Macro-Viruses</a>.</p>
+
+    <p>Most texts which are transmitted only need a small fraction of that what common 
+    data-formats have to offer on formatting, mark-up or layout. Since decades a simple file 
+    composed of Latin-9 characters can be edited on every computer with a simple text editor 
+    and all word processors. With increasing demands a small part of HTML 2 could suffice for 
+    headlines, lists and links. Or a (DE)<a
+      href="http://de.wikipedia.org/wiki/Creole_(Markup)">simple</a>/(EN)<a href="http://en.wikipedia.org/wiki/Creole_%28markup%29">
+      simple textbased markup</a>, as it is used in Wikis. Wikipedias and Weblogs of the world 
+    proof that lots of content can be expressed with these simple means.</p>
+
+    <p>All –  except manufacturers of proprietary software – are interested in competing 
+    software and secure products which are interoperable. The minimal rule for data-formats 
+    facilitates all this. It’s meaning is to leave away everything that is not necessarily 
+    needed. The aim is a (DE)<a
+      href="http://magplot.de/TasteForMakers">simple and elegant design</a>/<a href="http://www.paulgraham.com/taste.html">
+      simple and elegant design</a>.  A nice solution is a kit with which infinite works may 
+    be created with just a few elements.</p>
+
+    <p>Even though there are good reasons to choose a data-format which covers several 
+    requirements we should ask ourselves: “Can’t we do that simpler?”</p>
+
+    <h2 id="fn">Footnotes</h2>
+    <ol>
+      <li id="fn-complexity">"Complexity is the main enemy of security",
+    Ferguson, Niels, and Schneier, Bruce - Practical Cryptography, Wiley, 2003,
+    ISBN 0-471-22357-3. p146 "9.4.1 Simplicity", pp365- "23 Standards"
+    <a href="http://www.macfergus.com/pc">http://www.macfergus.com/pc</a>  [<a href="#ref-complexity">&#8626;</a>]</li>
+  </ol>
+
+  </body>
+
+  <timestamp>$Date$ $Author$</timestamp>
+<tags>
+<tag>open-standards</tag>
+</tags>
+<legal type="cc-license">
+ <license>https://creativecommons.org/licenses/by-sa/3.0/</license><notice>Neben der Standardlizenz der Webseite steht dieser Artikel unter der Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)</notice>
+</legal>
+<author id="reiter" />
+<date>
+  <original content="2012-03-23" />
+</date>
+<translator>Philipp Kammerer</translator>
+</html>

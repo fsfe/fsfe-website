@@ -194,6 +194,10 @@ p.left {
   padding: 0 2% 0 0;
 }
 
+p.right {
+	padding: 0 0 0 2%;
+}
+
 .right {
   float: right;
 }
@@ -217,6 +221,15 @@ p.left {
 .grid-60 {
   width: 56%;
 }
+
+.grid-70 {
+	width: 66%;
+}
+
+.grid-30 {
+	width: 28%;
+}
+
 
 .grid-60.right {
   padding-left: 1%;
@@ -474,6 +487,10 @@ h2 {
 h3 {
   font-size: 140%;
   margin: 1.5em 0 .2em 0;
+}
+
+.margin-vertical {
+	margin: 1em 0;
 }
 
 .image {

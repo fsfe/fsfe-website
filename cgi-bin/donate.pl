@@ -26,13 +26,13 @@ my $text = $query->param("text");
 
 my $amount100 = $amount * 100;
 
-my $date = strftime("%Y-%m-%d", localtime);
+my $date = strftime("%y%j", localtime);
 my $time = strftime("%s", localtime);
 my $reference = "";
 if ($anonymous) {
-  $reference = "adonation.$date." . substr($time, -5);
+  $reference = "DL$date" . substr($time, -3);   # DL = Donation Listed
 } else {
-  $reference = "donation.$date." . substr($time, -5);
+  $reference = "DA$date" . substr($time, -3);   # DA = Donation Anonymous
 }
 if ($period ne "o") {
   $reference .= ".$period";

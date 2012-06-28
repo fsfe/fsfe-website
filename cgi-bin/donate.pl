@@ -50,7 +50,7 @@ if ($period eq "y") {
   $months = 12;
 }
 my $start = sprintf("%04d-%02d-%02d", ($year, $mon, $mday));
-my $day = substr($date, -2);
+my $day = strftime("%d", localtime);
 
 my $lang = substr($language, 0, 2);
 

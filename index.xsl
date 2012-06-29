@@ -136,7 +136,7 @@
             <xsl:with-param name="id" select="'cb-restricted-boot'" />
           </xsl:call-template>
           <xsl:text> </xsl:text>
-          <a href="http://www.fsf.org/campaigns/secure-boot-vs-restricted-boot/statement">
+          <a href="/campaigns/generalpurposecomputing/secure-boot-analysis.html">
             <xsl:call-template name="gettext">
               <xsl:with-param name="id" select="'cb-restricted-boot-link'" />
             </xsl:call-template>

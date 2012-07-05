@@ -1658,6 +1658,12 @@ tr.highlighted {
   color: rgb(132,78,78);
 }
 
+.green {
+	background-color: #F7FFC8;
+	border-color: green;
+	color: #0A3100;
+}
+
 /* service notice, can i.e. be used for website downtime */
 #service-notice {
   position: fixed;

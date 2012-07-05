@@ -774,7 +774,7 @@
         <!-- Outdated note -->
         <xsl:if test="/buildinfo/@outdated='yes'">
           <xsl:element name="p">
-        <xsl:attribute name="id">outdated-notice</xsl:attribute>
+        <xsl:attribute name="class">warning red</xsl:attribute>
         <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'outdated'" /></xsl:call-template>
           </xsl:element>
         </xsl:if>
@@ -782,7 +782,7 @@
         <!-- Missing translation note -->
         <xsl:if test="/buildinfo/@language!=/buildinfo/document/@language">
           <xsl:element name="p">
-        <xsl:attribute name="id">outdated-notice</xsl:attribute>
+        <xsl:attribute name="class">warning red</xsl:attribute>
         <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'notranslation'" /></xsl:call-template>
           </xsl:element>
         </xsl:if>
@@ -792,7 +792,7 @@
           <xsl:attribute name="id">infobox</xsl:attribute>
           <xsl:if test = "/buildinfo/document/head/meta[@name='under-construction' and @content='true']">
         <xsl:element name="p">
-          <xsl:attribute name="id">under-construction-notice</xsl:attribute>
+          <xsl:attribute name="class">warning yellow</xsl:attribute>
           <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'under-construction'" /></xsl:call-template>
         </xsl:element>
           </xsl:if>

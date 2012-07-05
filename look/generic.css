@@ -1639,20 +1639,20 @@ tr.highlighted {
 
 /* notices */
 
-#outdated-notice, #under-construction-notice {
+.warning {
   border-width: 1px;
   border-style: solid;
   padding: .5em;
   margin: 0 0 1.5em 0;
 }
 
-#outdated-notice {
+.red {
   background-color: rgb(255,220,220);
   border-color: rgb(253,59,59);
   color: rgb(132,78,78);
 }
 
-#under-construction-notice {
+.yellow {
   background-color: rgb(255,245,220);
   border-color: rgb(253,195,59);
   color: rgb(132,78,78);

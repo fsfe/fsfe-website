@@ -778,7 +778,7 @@
         <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'outdated'" /></xsl:call-template>
           </xsl:element>
         </xsl:if>
-        
+	
         <!-- Missing translation note -->
         <xsl:if test="/buildinfo/@language!=/buildinfo/document/@language">
           <xsl:element name="p">
@@ -786,17 +786,29 @@
         <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'notranslation'" /></xsl:call-template>
           </xsl:element>
         </xsl:if>
-            
+	
         <!-- Info box -->
-        <xsl:element name="div"> 
-          <xsl:attribute name="id">infobox</xsl:attribute>
-          <xsl:if test = "/buildinfo/document/head/meta[@name='under-construction' and @content='true']">
-        <xsl:element name="p">
-          <xsl:attribute name="class">warning yellow</xsl:attribute>
-          <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'under-construction'" /></xsl:call-template>
-        </xsl:element>
-          </xsl:if>
-        </xsl:element>
+	<xsl:element name="div"> 
+		<xsl:attribute name="id">infobox</xsl:attribute>
+		<!-- Add under construction message -->
+		<xsl:if test = "/buildinfo/document/head/meta[@name='under-construction' and @content='true']">
+			<xsl:element name="p">
+				<xsl:attribute name="class">warning yellow</xsl:attribute>
+				<xsl:call-template name="fsfe-gettext">
+					<xsl:with-param name="id" select="'under-construction'" />
+				</xsl:call-template>
+			</xsl:element>
+		</xsl:if>
+		<!-- Add project completed message -->
+		<xsl:if test = "/buildinfo/document/head/meta[@name='project-complete' and @content='true']">
+			<xsl:element name="p">
+				<xsl:attribute name="class">warning green</xsl:attribute>
+				<xsl:call-template name="fsfe-gettext">
+					<xsl:with-param name="id" select="'project-complete'" />
+				</xsl:call-template>
+			</xsl:element>
+		</xsl:if>
+	</xsl:element>
         
         <!-- Fundraising box
           <xsl:element name="div">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <set>
-  <buglist country="EU">
+<buglist country="EU">
 <bug institution-name="European Union"
      institution-address="B-1049 Bruxelles"
      institution-url="http://europa.eu/abouteuropa/faq/index_sl.htm"
@@ -33,5 +33,13 @@ Switzerland"
      group=""
      comment=""
      />
-  </buglist>
+<bug institution-name="Tv Newsroom of the European Council"
+     institution-address="Rue de la Loi 175, B-1048 Brussels, Belgium"
+     institution-url="http://tvnewsroom.consilium.europa.eu/"
+     opened="2012-07-04"
+     closed=""
+     name="Repentinus"
+     group="Akademy 2012"
+     />
+</buglist>
 </set>

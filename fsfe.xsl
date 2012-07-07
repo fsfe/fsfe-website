@@ -144,7 +144,8 @@
 
       <script>
         hljs.tabReplace = "  ";
-        hljs.initHighligtingOnLoad();
+//        hljs.initHighligtingOnLoad();
+// above line throws error: Uncaught TypeError: Object [object Object] has no method 'initHighligtingOnLoad'
       </script>
       
       <xsl:comment>

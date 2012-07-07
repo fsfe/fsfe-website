@@ -309,6 +309,12 @@
 <script type="text/javascript" src="/scripts/jquery.validate.min.js"></script>
 <script type="text/javascript">
 /* <![CDATA[ */
+/*
+// not needed as normal required:true checks that a selection has been done
+jQuery.validator.addMethod("country", function(value, element, params) { 
+ return this.optional(element) || value.substr(-2) != ".."; // field not of form "Select.."
+}, jQuery.format("Please select your country."));
+*/
 $(document).ready(function() {
 	$("form.support").validate({
 		rules: {

@@ -1,4 +1,8 @@
 <?php
+// report errors
+error_reporting(E_ALL);
+ini_set('display_errors', 'On');
+
 if (preg_match("/[a-z0-9]/i", $_SERVER["QUERY_STRING"])) {
     $secret = $_SERVER["QUERY_STRING"];
     $timestamp = date('Y-m-d H:i:s');

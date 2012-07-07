@@ -1,7 +1,9 @@
 <?php
 // report errors
+/*
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
+*/
 
 if (preg_match("/[a-z0-9]/i", $_SERVER["QUERY_STRING"])) {
     $secret = $_SERVER["QUERY_STRING"];
@@ -64,6 +66,7 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
 	} catch( err ) {}
 	</script><noscript><p><img src="http://piwik.fsfe.org/piwik.php?idsite=4" style="border:0" alt=""></p></noscript>
     ';
+}
 
 if ($found == False) {
     echo "No address was confirmed. Please sign up again.";

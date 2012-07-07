@@ -39,7 +39,7 @@
             </label>
             </p>
             <p>
-            <label id="semail">Email (requis)
+            <label id="email">Email (requis)
               <input type="email" name="email" required="required" />
             </label>
             </p>
@@ -321,7 +321,8 @@
 $(document).ready(function() {
 	$("form.support").validate({
 		rules: {
-			semail: {email: true, required: true}
+			email: {email: true, required: true},
+			country_code: {required: true}
 		 }
 	});
 });

@@ -30,9 +30,9 @@ my $date = strftime("%y%j", localtime);
 my $time = strftime("%s", localtime);
 my $reference = "";
 if ($anonymous) {
-  $reference = "DL$date" . substr($time, -3);   # DL = Donation Listed
-} else {
   $reference = "DA$date" . substr($time, -3);   # DA = Donation Anonymous
+} else {
+  $reference = "DL$date" . substr($time, -3);   # DL = Donation Listed
 }
 if ($period ne "o") {
   $reference .= ".$period";

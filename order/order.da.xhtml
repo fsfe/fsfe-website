@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<html>
+  <head>
+    <title>Free Software Foundation Europe - Merchandise</title>
+  </head>
+
+  <body>
+    <h1>FSFE-merchandise</h1>
+
+    <div id="introduction">
+      <div class="image">
+        <img src="/graphics/stars-smaller.png" alt="Stars" />
+      </div>
+
+      <p>
+        Vis at du elsker fri software ved at anvende og iklæde dig den neden for 
+        nævnte mærkevarer.  Fri software-beklædning er en fantastisk måde at 
+        skabe opmærksomhed inden for dit lokale fællesskab, og hvert salg giver 
+        øknomiske midler til vigtige FSFE-projekter.
+        <br />
+        <br />
+        Vi har også en række <a href="#other-items">kontorartikler, krus, badges 
+        og nøgleringe</a>.
+      </p>
+
+    </div>
+
+    <form action="/cgi-bin/weborder.pl" method="post" class="item-grid">
+      <h2>T-shirts til mænd</h2>
+ 
+      <dynamic-content type="t-shirt"/>
+
+      <h2>T-shirts til kvinder</h2>
+ 
+      <dynamic-content type="girlie"/>
+
+      <h2>Trøjer med hætte</h2>
+ 
+      <dynamic-content type="hooded"/>
+
+      <a name="other-items"><a name="other-items"><h2 id="other-items">Andre varer</h2></a></a>
+
+      <dynamic-content type="other"/>
+
+      <h2>Reklameartikler</h2>
+    
+      <p>
+	Se vores <a href="/documents/printable/printable.html">side med 
+	udskrivbart informationsmateriale</a>, for at bestille foldere og 
+	brochurer.
+      </p>
+
+      <h2>Forsendelse</h2>
+
+      <p>
+        <input type="hidden" name="shipping" value="1"/>
+        <input type="radio" name="_shipping" value="3"/>
+        Forsendelse inden for Tyskland (€3,00)<br/>
+        <input type="radio" name="_shipping" value="7" checked="Y"/>
+        Forsendelse inden for Europa (€7,00)<br/>
+        <input type="radio" name="_shipping" value="12"/>
+        Forsendelse uden for Europa (€12,00)<br/>
+      </p>
+
+      <table>
+        <tr>
+          <td><p>Navn:</p></td>
+          <td>
+            <input type="text" size="80" style="width:500px" name="name"/>
+          </td>
+        </tr>
+        <tr>
+          <td><p>Adresse:</p></td>
+          <td>
+            <textarea cols="80" rows="5" style="width:500px" name="address"/>
+          </td>
+        </tr>
+        <tr>
+          <td><p>E-mail:</p></td>
+          <td>
+            <input type="text" size="80" style="width:500px" name="email"/>
+          </td>
+        </tr>
+        <tr>
+          <td><p>Telefon:</p></td>
+          <td>
+            <input type="text" size="80" style="width:500px" name="phone"/>
+          </td>
+        </tr>
+      </table>
+
+      <!-- Should help against spam -->
+      <p class="n">
+        Vær venlig ikke at skrive noget her:
+        <input type="text" size="40" name="url"/>
+      </p>
+
+      <center>
+        <!-- Translators: Please also translate the value here, it's the label
+                          of the button -->
+        <input type="submit" value="Bestil de valgte varer"/>
+      </center>
+      <!-- Translators: Please change the value here to your language -->
+      <input type="hidden" name="language" value="da"/>
+    </form>
+  </body>
+
+  <timestamp>$Date$ $Author$</timestamp>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

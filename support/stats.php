@@ -20,7 +20,7 @@ catch(PDOException $e) {
 
 try {
 	// check data
-	$query = $db->prepare("SELECT COUNT(*) AS supporters FROM t1 GROUP BY country_code ORDER BY supporters DESC");
+	$query = $db->prepare("SELECT *, COUNT(*) AS supporters FROM t1 GROUP BY country_code ORDER BY supporters DESC");
 	$query->execute();
 }
 catch(PDOException $e) {

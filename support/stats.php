@@ -1,4 +1,4 @@
-<table>
+<table border="1" style="text-align: left;">
 <tr><th>Country code</th><th>Supporters</th><th>Latest at</th></tr>
 
 <?php
@@ -10,6 +10,7 @@ ini_set('display_errors', 'On');
 /*
 TODO:
 - implement nicer stats with http://www.jqplot.com/ (used in Piwik) or http://code.shutterstock.com/rickshaw/ (d3.js based)
+- refactor to use standard FSFE header and footer
 */
 
 try {
@@ -36,15 +37,15 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
     // true if at least one row to return
 
 /*    print_r($row);
-Array
+example: Array
 (
     [id] => 157
     [time] => 2012-07-13 05:27:41
-    [firstname] => Krista
-    [lastname] => Toivola
-    [email] => krista.toivola@luukku.com
+    [firstname] => Krrtrtta
+    [lastname] => Toirtrla
+    [email] => krifgfga.tofgfgla@luukku.com
     [country_code] => FI
-    [secret] => 7c016a4ab30efa2899a0ec76a9299f6b
+    [secret] => 7c016a4ab30efa2899a0ec76a92fg6b
     [signed] => 
     [confirmed] => 
     [updated] => 
@@ -63,4 +64,27 @@ $db = NULL;
 </table>
 
 <p><strong>Supporters in total: <?php echo $total; ?></strong></p>
+
+<p>Last 10 joined at:
+<ul>
+<?php
+
+try {
+	// check data
+	$query = $db->prepare("SELECT * FROM t1 ORDER BY time DESC, LIMIT 0,10");
+	$query->execute();
+}
+catch(PDOException $e) {
+	print "Database Error: \n";
+	print_r($db->errorInfo());
+}
+
+while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
+    // true if at least one row to return
+
+    echo '<li>'. $row["time"] .'</li>';
+}
+?>
+</ul>
+</p>
 

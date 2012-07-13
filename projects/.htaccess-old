@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteRule ^community(.*) /projects/work$1 [redirect=permanent]
+RewriteRule ^legal(.*) /projects/work$1 [redirect=permanent]
+RewriteRule ^other(.*) /projects/work$1 [redirect=permanent]
+RewriteRule ^technical(.*) /projects/work$1 [redirect=permanent]

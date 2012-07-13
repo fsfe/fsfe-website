@@ -1962,7 +1962,7 @@ div.map {
 /* ------------------------------------------------------------------------- */
 /* Support form                                                                   */
 /* ------------------------------------------------------------------------- */
-#introduction.support_page  img[alt="Stars"] {
+#introduction.support_page > .image > img {
     margin-bottom: 200px;
 }
 #support_form {

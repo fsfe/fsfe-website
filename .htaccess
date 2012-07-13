@@ -73,7 +73,3 @@ RewriteRule ^projects/fellowship http://fellowship.fsfe.org [redirect=permanent]
 RewriteRule ^en/rss/feed/news.xml /news/news.en.rss [redirect=permanent]
 RewriteRule ^en/rss/feed/events.xml /events/events.en.rss  [redirect=permanent]
 RewriteRule ^news/fsfe-fr-channel.fr.xml /news/news.fr.rss [redirect=permanent]
-
-# Rewrite for contents of old projects section
-RewriteRule ^projects/(.*) /campaigns/$1 [redirect=permanent]
-RewriteRule ^/projects/(drm|education|os)(.*) /activities/$1$2 [redirect=permanent]

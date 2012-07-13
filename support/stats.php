@@ -51,8 +51,8 @@ Array
     [supporters] => 116
 )
 */
-    $total += $row[supporters];
-    echo '<tr><td>'.$row[country_code] .'</td><td>'. $row[supporters] .'</td><td>'. $row[time] .'</td></tr>';
+    $total += $row["supporters"];
+    echo '<tr><td>'.$row["country_code"] .'</td><td>'. $row["supporters"] .'</td><td>'. $row["time"] .'</td></tr>';
     
 }
 

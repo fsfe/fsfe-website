@@ -1,4 +1,6 @@
-<pre>
+<table>
+<tr><th>Country code</th><th>Supporters</th><th>Latest at</th></tr>
+
 <?php
 // report errors
 
@@ -28,15 +30,37 @@ catch(PDOException $e) {
 	print_r($db->errorInfo());
 }
 
+$total = 0;
+
 while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
     // true if at least one row to return
 
-    print_r($row);
-
+/*    print_r($row);
+Array
+(
+    [id] => 157
+    [time] => 2012-07-13 05:27:41
+    [firstname] => Krista
+    [lastname] => Toivola
+    [email] => krista.toivola@luukku.com
+    [country_code] => FI
+    [secret] => 7c016a4ab30efa2899a0ec76a9299f6b
+    [signed] => 
+    [confirmed] => 
+    [updated] => 
+    [supporters] => 116
+)
+*/
+    $total += $row[supporters];
+    echo '<tr><td>'.$row[country_code] .'</td><td>'. $row[supporters] .'</td><td>'. $row[time] .'</td></tr>';
+    
 }
 
 // close the database connection
 $db = NULL;
 
 ?>
-</pre>
+</table>
+
+<p><strong>Supporters in total: <?php echo $total; ?></strong></p>
+

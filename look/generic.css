@@ -1968,6 +1968,9 @@ div.map {
 #support_form {
     margin-left: 150px;
 }
+#support_form p {
+    clear: both;
+}
 .support input[type=email], .support input[type=text], .support select { 
     float: right; 
     width: 385px; 
@@ -1987,9 +1990,6 @@ div.map {
     width: 385px; 
     display: block; 
     color: red; 
-}
-.support_page p {
-    clear: both;
 }
 
 /* ------------------------------------------------------------------------- */

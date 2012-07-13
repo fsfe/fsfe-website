@@ -1976,6 +1976,7 @@ div.map {
 .support select {
     width: 405px;
 }
+
 .support input[type=submit] {
     float: right;
     width: 200px;
@@ -1986,6 +1987,9 @@ div.map {
     width: 385px; 
     display: block; 
     color: red; 
+}
+.support p {
+    clear: both;
 }
 
 /* ------------------------------------------------------------------------- */

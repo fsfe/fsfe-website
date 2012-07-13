@@ -1,10 +1,11 @@
 <pre>
 <?php
 // report errors
-/*
+
 error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 
+/*
 TODO:
 - implement nicer stats with http://www.jqplot.com/ (used in Piwik) or http://code.shutterstock.com/rickshaw/ (d3.js based)
 */
@@ -19,7 +20,7 @@ catch(PDOException $e) {
 
 try {
 	// check data
-	$query = $db->prepare("SELECT COUNT(*) AS supporters FROM t1 GROUP BY country_code SORT BY supporters DESC");
+	$query = $db->prepare("SELECT COUNT(*) AS supporters FROM t1 GROUP BY country_code ORDER BY supporters DESC");
 	$query->execute();
 }
 catch(PDOException $e) {

@@ -57,9 +57,6 @@ example: Array
     
 }
 
-// close the database connection
-$db = NULL;
-
 ?>
 </table>
 
@@ -71,7 +68,7 @@ $db = NULL;
 
 try {
 	// check data
-	$query = $db->prepare("SELECT * FROM t1 ORDER BY time DESC, LIMIT 0,10");
+	$query = $db->prepare("SELECT * FROM t1 ORDER BY time DESC LIMIT 0,10");
 	$query->execute();
 }
 catch(PDOException $e) {
@@ -87,4 +84,9 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
 ?>
 </ul>
 </p>
+
+<?php
+// close the database connection
+$db = NULL;
+?>
 

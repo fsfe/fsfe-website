@@ -8,7 +8,7 @@ if ($_POST['email'] == '' || $_POST['country_code'] == '') {
     die("Post data missing. This page should only be accessed via the sign up form.");
 }
 
-$params = array('time', 'firstname', 'lastname', 'email', 'country_code', 'secret');
+$params = array('time', 'firstname', 'lastname', 'email', 'country_code', 'secret', 'ref_url', 'ref_id');
 
 // Save time in "YYYY-MM-DD HH:MM:SS"
 $_POST['time'] = date('Y-m-d H:i:s');
@@ -23,12 +23,6 @@ try {
 catch(PDOException $e) {
 	print 'Error while connecting to Database: '.$e->getMessage();
 }
-
-	$query = $db->prepare("alter table t1 add ref_url char(100)");
-	$query->execute();
-	$query = $db->prepare("alter table t1 add ref_id char(100)");
-	$query->execute();
-
 
 try {
 	// insert data

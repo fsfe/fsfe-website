@@ -30,7 +30,7 @@ function epoc_days_ago($days) {
 
 $series = array();
 
-for ($i = 0; $i < 14; $i++) {
+for ($i = 50; $i >= 0; $i--) {
 
     try {
 	    // check data
@@ -118,6 +118,7 @@ foreach ($series as $k => $v) {
         position: relative;
         display: inline-block;
         font-family: Arial, Helvetica, sans-serif;
+        left: 13em;
     }
     #chart {
         display: inline-block;
@@ -143,8 +144,8 @@ foreach ($series as $k => $v) {
         font-size: 11pt; 
         color: #555;
         position: absolute;
-        right: 24px;
-        top: 24px;
+        left: 1em;
+        top: 2em;
     }
 
     #statusbox strong {
@@ -159,8 +160,15 @@ foreach ($series as $k => $v) {
 
 </head>
 <body>
-
+h
 <h1>Supporter count status <small><?php date("Y-m-d") ?></small></h1>
+
+<div id="statusbox">
+
+    <h3>Total supporters</h3>
+    <p><strong><?php echo $total; ?></strong></p>
+
+</div>
 
 <div id="chart_container">
     <div id="y_axis"></div>
@@ -178,7 +186,7 @@ Rickshaw.Series.zeroFill(seriesData);
 var graph = new Rickshaw.Graph( {
         element: document.querySelector("#chart"),
         width: 550,
-        height: 250,
+        height: 350,
         series: seriesData
 } );
 
@@ -204,16 +212,6 @@ graph.render();
 
 </script>
 
-<br>
-g
-<br>
-
-<div id="statusbox">
-
-    <h3>Total supporters</h3>
-    <p><strong><?php echo $total; ?></strong></p>
-
-</div>
 
 <h3>Last 10 sign ups</h3>
 <table id="lastlog">

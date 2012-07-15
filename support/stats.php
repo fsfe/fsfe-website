@@ -123,9 +123,6 @@ graph.render();
 
 b
 
-<table border="1" style="text-align: left;">
-<tr><th>Country code</th><th>Supporters</th><th>Latest at</th></tr>
-
 <?php
 
 function ts_days_ago($days) {
@@ -142,58 +139,60 @@ echo "<br>today epoc: ". epoc_days_ago(0);
 
 $series = array();
 
-try {
-	// check data
-	$query = $db->prepare("SELECT *, COUNT(*) AS supporters FROM t1 WHERE time <= Datetime('". ts_days_ago(0) ."') GROUP BY country_code ORDER BY supporters DESC");
-	$query->execute();
+for (i = 0; i < 14; i++) {
+
+    try {
+	    // check data
+	    $query = $db->prepare("SELECT *, COUNT(*) AS supporters FROM t1 WHERE time <= Datetime('". ts_days_ago($i) ."') GROUP BY country_code ORDER BY supporters DESC");
+	    $query->execute();
+    }
+    catch(PDOException $e) {
+	    print "Database Error: \n";
+	    print_r($db->errorInfo());
+    }
+
+    if (i == 0) { $total = 0; }
+
+    while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
+        // true if at least one row to return
+
+        $series[$row["country_code"]][] = array(
+            "x" => epoc_days_ago($i),
+            "y" => $row["supporters"]
+        );
+        
+        /*    print_r($row);
+        example: Array
+        (
+            [id] => 157
+            [time] => 2012-07-13 05:27:41
+            [firstname] => Krrtrtta
+            [lastname] => Toirtrla
+            [email] => krifgfga.tofgfgla@luukku.com
+            [country_code] => FI
+            [secret] => 7c016a4ab30efa2899a0ec76a92fg6b
+            [signed] => 
+            [confirmed] => 
+            [updated] => 
+            [supporters] => 116
+        )
+        */
+
+        if (i == 0) { $total += $row["supporters"]; }
+        
+    }
+
 }
-catch(PDOException $e) {
-	print "Database Error: \n";
-	print_r($db->errorInfo());
-}
-
-$total = 0;
-
-while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
-    // true if at least one row to return
-
-    $series[$row["country_code"]][] = array(
-        "x" => epoc_days_ago(0),
-        "y" => $row["supporters"]
-    );
-    
-/*    print_r($row);
-example: Array
-(
-    [id] => 157
-    [time] => 2012-07-13 05:27:41
-    [firstname] => Krrtrtta
-    [lastname] => Toirtrla
-    [email] => krifgfga.tofgfgla@luukku.com
-    [country_code] => FI
-    [secret] => 7c016a4ab30efa2899a0ec76a92fg6b
-    [signed] => 
-    [confirmed] => 
-    [updated] => 
-    [supporters] => 116
-)
-*/
-    $total += $row["supporters"];
-    echo '<tr><td>'.$row["country_code"] .'</td><td>'. $row["supporters"] .'</td><td>'. $row["time"] .'</td></tr>';
-    
-}
-
 ?>
-</table>
 
-<p><strong>Supporters in total: <?php echo $total; ?></strong></p>
+<p style="border: 1px solid #888; background: #ccc; padding: 1em; font-size: 18pt; color: #888;"><strong>Supporters in total: <?php echo $total; ?></strong></p>
+
+<pre><?php print_r($series); ?></pre>
+
 
 <p>Last 10 joined at:
 <ul>
 <?php
-
-print_r($series);
-
 try {
 	// check data
 	$query = $db->prepare("SELECT * FROM t1 ORDER BY time DESC LIMIT 0,10");

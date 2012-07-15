@@ -127,12 +127,14 @@ b
 <tr><th>Country code</th><th>Supporters</th><th>Latest at</th></tr>
 
 <?php
+
 function ts_days_ago($days) {
-    $days_ago = mktime(0, 0, 0, date("m")  , date("d")-$days, date("Y"));
+    $days_ago = mktime(0, 0, 0, date("m"), date("d")-$days, date("Y"));
     return date("Y-m-d", $days_ago) . " 00:00:00";
 }
+
 function epoc_days_ago($days) {
-    return = mktime(0, 0, 0, date("m")  , date("d")-$days, date("Y"));
+    return mktime(0, 0, 0, date("m"), date("d")-$days, date("Y"));
 }
 
 echo "today ts: ". ts_days_ago(0);

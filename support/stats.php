@@ -153,6 +153,9 @@ foreach ($series as $k => $v) {
         left: 2em;
     }
 
+    .statusbox p {
+        margin: 0;
+    }
     .statusbox strong {
         font-size: 60pt; 
     }
@@ -164,21 +167,22 @@ foreach ($series as $k => $v) {
     
     #lastlog {
         background: #ccc; 
-        padding: 2px;
+        padding: 1px;
     }
 
     #lastlog th {
-        text-align: right;
+        text-align: left;
     }
     
     #lastlog td {
         background: #eee;
+        padding: 2px;
     }
     </style>
 
 </head>
 <body>
-h
+
 <h1>Supporter count status <small><?php date("Y-m-d") ?></small></h1>
 
 <div class="statusbox">
@@ -186,7 +190,7 @@ h
     <p><strong><?php echo $total; ?></strong></p>
 </div>
 
-<div class="statusbox">
+<div class="statusbox" style="top:20em;">
     <p>Three months days ago there where only <em><?php echo $total_at_beginning; ?></em> supporters, so growth was <em><?php echo $growth; ?></em>. If groth continues at same pace, we'll have <em><?php echo $estimate; ?></em> supporters a year from now!</p>
 </div>
 
@@ -227,6 +231,11 @@ var legend = new Rickshaw.Graph.Legend( {
 var hoverDetail = new Rickshaw.Graph.HoverDetail( {
 	graph: graph
 } );
+
+var shelving = new Rickshaw.Graph.Behavior.Series.Toggle({
+    graph: graph,
+    legend: legend
+});
 
 graph.render();
 

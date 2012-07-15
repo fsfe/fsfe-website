@@ -110,25 +110,29 @@ foreach ($series as $k => $v) {
     <script src="rickshaw.min.js"></script>
 
     <style>
+    body {
+        font-family: Sans-serif;
+    }
+
     #chart_container {
-            position: relative;
-            display: inline-block;
-            font-family: Arial, Helvetica, sans-serif;
+        position: relative;
+        display: inline-block;
+        font-family: Arial, Helvetica, sans-serif;
     }
     #chart {
-            display: inline-block;
-            margin-left: 40px;
+        display: inline-block;
+        margin-left: 40px;
     }
     #y_axis {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 40px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 40px;
     }
     #legend {
-            display: inline-block;
-            vertical-align: top;
-            margin: 0 0 0 10px;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 0 0 10px;
     }
 
     #statusbox {
@@ -137,7 +141,6 @@ foreach ($series as $k => $v) {
         background: #eee; 
         padding: 1em; 
         font-size: 11pt; 
-        font-family: Sans-serif;
         color: #555;
         position: absolute;
         right: 24px;
@@ -146,6 +149,11 @@ foreach ($series as $k => $v) {
 
     #statusbox strong {
         font-size: 60pt; 
+    }
+    
+    #lastlog {
+        border: 1px solid #ccc; 
+        background: #eee; 
     }
     </style>
 
@@ -197,7 +205,7 @@ graph.render();
 </script>
 
 <br>
-f
+g
 <br>
 
 <div id="statusbox">
@@ -205,28 +213,26 @@ f
     <h3>Total supporters</h3>
     <p><strong><?php echo $total; ?></strong></p>
 
-    <h3>Last 10 sign ups</h3>
-    <p>
-    <?php
-    try {
-	    // check data
-	    $query = $db->prepare("SELECT * FROM t1 ORDER BY time DESC LIMIT 0,10");
-	    $query->execute();
-    }
-    catch(PDOException $e) {
-	    print "Database Error: \n";
-	    print_r($db->errorInfo());
-    }
-
-    while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
-        // true if at least one row to return
-
-        echo $row["time"] .'<br>';
-    }
-    ?>
-    </p>
-
 </div>
+
+<h3>Last 10 sign ups</h3>
+<table id="lastlog">
+<?php
+try {
+    // check data
+    $query = $db->prepare("SELECT * FROM t1 ORDER BY time DESC LIMIT 0,10");
+    $query->execute();
+}
+catch(PDOException $e) {
+    print "Database Error: \n";
+    print_r($db->errorInfo());
+}
+
+while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
+    echo '<tr><td>'. $row["time"] .'</td><td>'. $row["country_code"] .'</td><td>'. $row["ref_url"] .'</td><td>'. $row["ref_id"] .'</td></tr>';
+}
+?>
+</table>
 
 
 
@@ -236,7 +242,7 @@ f
 $db = NULL;
 ?>
   </body>
-  <timestamp>$Date: 2012-04-22 12:37:59 +0300 (su, 22 huhti 2012) $ $Author: otto $</timestamp>
+  <timestamp>$Date$ $Author$</timestamp>
 </html>
 <!--
 Local Variables: ***

@@ -123,7 +123,7 @@ graph.render();
 
 </script>
 
-b
+c
 
 <?php
 
@@ -153,7 +153,7 @@ for ($i = 0; $i < 14; $i++) {
 	    print_r($db->errorInfo());
     }
 
-    if (i == 0) { $total = 0; }
+    if ($i == 0) { $total = 0; }
 
     while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
         // true if at least one row to return
@@ -180,19 +180,40 @@ for ($i = 0; $i < 14; $i++) {
         )
         */
 
-        if (i == 0) { $total += $row["supporters"]; }
+        if ($i == 0) { $total += $row["supporters"]; }
         
     }
 
 }
+
+$series_json = "";
+
+foreach ($series as $k => $v) {
+
+    $series_json += '
+    {
+        name: "'. $k .'",
+        data: [ ';
+
+        foreach ($v as $subk => $subv) {
+            $series_json += '{ x: '. $subv["x"] .', y: '. $subv["y"] .' },';
+        }
+
+    $series_json += ' ],
+        color: palette.color()
+    },
+    ';
+
+}
 ?>
+
+
+<pre><?php print_r($series); ?></pre>
+<pre><?php print_r($series_json); ?></pre>
 
 <div id="statusbox">
 
     <p><strong>Supporters in total: <?php echo $total; ?></strong></p>
-
-    <pre><?php print_r($series); ?></pre>
-
 
     <p>Last 10 joined at:
     <ul>

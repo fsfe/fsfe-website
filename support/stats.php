@@ -107,11 +107,21 @@ var legend = new Rickshaw.Graph.Legend( {
         graph: graph
 } );
 
+var hoverDetail = new Rickshaw.Graph.HoverDetail( {
+	graph: graph
+} );
+
+
+var shelving = new Rickshaw.Graph.Behavior.Series.Toggle( {
+	graph: graph,
+	legend: legend
+} );
+
 graph.render();
 
 </script>
 
-a
+b
 
 <table border="1" style="text-align: left;">
 <tr><th>Country code</th><th>Supporters</th><th>Latest at</th></tr>
@@ -132,7 +142,7 @@ $series = array();
 
 try {
 	// check data
-	$query = $db->prepare("SELECT *, COUNT(*) AS supporters FROM t1 GROUP BY country_code ORDER BY supporters DESC WHERE time <= Datetime('". ts_days_ago(0) ."')");
+	$query = $db->prepare("SELECT *, COUNT(*) AS supporters FROM t1 WHERE time <= Datetime('". ts_days_ago(0) ."') GROUP BY country_code ORDER BY supporters DESC");
 	$query->execute();
 }
 catch(PDOException $e) {
@@ -145,7 +155,7 @@ $total = 0;
 while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
     // true if at least one row to return
 
-    $series[$row["country_code"]] = array(
+    $series[$row["country_code"]][] = array(
         "x" => epoc_days_ago(0),
         "y" => $row["supporters"]
     );

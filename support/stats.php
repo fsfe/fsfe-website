@@ -117,15 +117,17 @@ graph.render();
 <?php
 function ts_days_ago($days) {
     $days_ago = mktime(0, 0, 0, date("m")  , date("d")-$days, date("Y"));
-    return date("Y-m-d", $days_ago);
+    return date("Y-m-d", $days_ago) . " 00:00:00";
 }
 
 $today = ts_days_ago(0);
 echo "today: $today";
 
+$series = array();
+
 try {
 	// check data
-	$query = $db->prepare("SELECT *, COUNT(*) AS supporters FROM t1 GROUP BY country_code ORDER BY supporters DESC WHERE ts =< '$today'");
+	$query = $db->prepare("SELECT *, COUNT(*) AS supporters FROM t1 GROUP BY country_code ORDER BY supporters DESC WHERE time <= '". ts_days_ago(0) ."'");
 	$query->execute();
 }
 catch(PDOException $e) {
@@ -138,6 +140,11 @@ $total = 0;
 while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
     // true if at least one row to return
 
+    $series[$row["country_code"]] = array(
+        "x" => ts_days_ago(0),
+        "y" => $row["supporters"]
+    );
+    
 /*    print_r($row);
 example: Array
 (
@@ -167,6 +174,8 @@ example: Array
 <p>Last 10 joined at:
 <ul>
 <?php
+
+print_r($series);
 
 try {
 	// check data

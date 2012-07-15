@@ -54,7 +54,8 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
     <p>Your address ".$row['email']." was confirmed ".$row['confirmed'].".</p>
     <p>Thank you for your support to the <a href='http://fsfe.org/'>FSFE</a>!</p>";
     
-    echo '
+?>
+
     <script type="text/javascript">
 	var pkBaseURL = (("https:" == document.location.protocol) ? "https://piwik.fsfe.org/" : "http://piwik.fsfe.org/");
 	document.write(unescape("%3Cscript src=\'" + pkBaseURL + "piwik.js\' type=\'text/javascript\'%3E%3C/script%3E"));
@@ -65,7 +66,8 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
 	piwikTracker.enableLinkTracking();
 	} catch( err ) {}
 	</script><noscript><p><img src="http://piwik.fsfe.org/piwik.php?idsite=4" style="border:0" alt=""></p></noscript>
-    ';
+
+<?php
 }
 
 if ($found == False) {

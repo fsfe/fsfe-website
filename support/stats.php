@@ -127,7 +127,7 @@ $series = array();
 
 try {
 	// check data
-	$query = $db->prepare("SELECT *, COUNT(*) AS supporters FROM t1 GROUP BY country_code ORDER BY supporters DESC WHERE time <= '". ts_days_ago(0) ."'");
+	$query = $db->prepare("SELECT *, COUNT(*) AS supporters FROM t1 GROUP BY country_code ORDER BY supporters DESC WHERE time <= Datetime('". ts_days_ago(0) ."')");
 	$query->execute();
 }
 catch(PDOException $e) {

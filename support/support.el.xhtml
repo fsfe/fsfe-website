@@ -302,6 +302,8 @@
 
        <p><input type="submit" name="submit" value="Υποστηρίζω το FSFE!" /></p>
         
+          <input type="hidden" name="ref_url" value="" />
+          <input type="hidden" name="ref_id" value="" />
         </form>
 
   <p><em>Έχουμε μια απλή πολιτική για το ιδιωτικό απόρρητο: Δεν θα μοιραστούμε 
@@ -314,6 +316,9 @@
 <script type="text/javascript">
 /* <![CDATA[ */
 $(document).ready(function() {
+    $("input[name=ref_url]").val(document.referrer);
+    $("input[name=ref_id]").val(window.location.search.slice(1));
+
 	$("form.support").validate({
 		rules: {
 			email: {email: true, required: true},

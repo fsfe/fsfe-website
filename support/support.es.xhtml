@@ -301,6 +301,8 @@ consideremos importante.
 
           <p><input type="submit" name="submit" value="¡Apoyo la FSFE!" /></p>
         
+          <input type="hidden" name="ref_url" value="" />
+          <input type="hidden" name="ref_id" value="" />
         </form>
 
       <p><em>Nuestra política de privacidad es simple. Nunca compartiremos tus datos
@@ -319,6 +321,9 @@ jQuery.validator.addMethod("country", function(value, element, params) {
 }, jQuery.format("Please select your country."));
 */
 $(document).ready(function() {
+    $("input[name=ref_url]").val(document.referrer);
+    $("input[name=ref_id]").val(window.location.search.slice(1));
+
 	$("form.support").validate({
 		rules: {
 			email: {email: true, required: true},

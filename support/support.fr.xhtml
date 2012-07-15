@@ -301,6 +301,8 @@
 
           <p><input type="submit" name="submit" value="Je soutiens la FSFE !" /></p>
         
+          <input type="hidden" name="ref_url" value="" />
+          <input type="hidden" name="ref_id" value="" />
         </form>
 
       <p><em>Notre politique de confidentialité est simple&#160;: Nous ne 
@@ -319,6 +321,9 @@
 <script type="text/javascript">
 /* <![CDATA[ */
 $(document).ready(function() {
+    $("input[name=ref_url]").val(document.referrer);
+    $("input[name=ref_id]").val(window.location.search.slice(1));
+
 	$("form.support").validate({
 		rules: {
 			email: {email: true, required: true},

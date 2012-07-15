@@ -154,7 +154,12 @@ foreach ($series as $k => $v) {
     
     #lastlog {
         border: 1px solid #ccc; 
-        background: #eee; 
+        background: #fff; 
+        padding: 2px;
+    }
+    
+    #lastlog td {
+        background: #ccc;
     }
     </style>
 

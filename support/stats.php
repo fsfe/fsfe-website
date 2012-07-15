@@ -167,7 +167,7 @@ foreach ($series as $k => $v) {
     
     #lastlog {
         background: #ccc; 
-        padding: 1px;
+        font-size: 10pt;
     }
 
     #lastlog th {
@@ -176,7 +176,7 @@ foreach ($series as $k => $v) {
     
     #lastlog td {
         background: #eee;
-        padding: 2px;
+        padding: 6px;
     }
     </style>
 

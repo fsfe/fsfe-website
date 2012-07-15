@@ -233,10 +233,15 @@ var hoverDetail = new Rickshaw.Graph.HoverDetail( {
     yFormatter: function(y) { return Math.floor(y) + " supporters" }
 } );
 
+/* 
+// does not work, result area becomes white!
+// assume issue is missing jquery libs and extra css stuff
+
 var shelving = new Rickshaw.Graph.Behavior.Series.Toggle({
     graph: graph,
     legend: legend
 });
+*/
 
 graph.render();
 

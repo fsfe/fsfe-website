@@ -54,6 +54,14 @@ catch(PDOException $e) {
         vertical-align: top;
         margin: 0 0 0 10px;
 }
+
+#statusbox {
+    border: 1px solid #888; 
+    background: #ccc; 
+    padding: 1em; 
+    font-size: 18pt; 
+    color: #888;
+}
 </style>
 
 <div id="chart_container">
@@ -111,12 +119,6 @@ var hoverDetail = new Rickshaw.Graph.HoverDetail( {
 	graph: graph
 } );
 
-
-var shelving = new Rickshaw.Graph.Behavior.Series.Toggle( {
-	graph: graph,
-	legend: legend
-} );
-
 graph.render();
 
 </script>
@@ -139,7 +141,7 @@ echo "<br>today epoc: ". epoc_days_ago(0);
 
 $series = array();
 
-for (i = 0; i < 14; i++) {
+for ($i = 0; $i < 14; $i++) {
 
     try {
 	    // check data
@@ -185,32 +187,39 @@ for (i = 0; i < 14; i++) {
 }
 ?>
 
-<p style="border: 1px solid #888; background: #ccc; padding: 1em; font-size: 18pt; color: #888;"><strong>Supporters in total: <?php echo $total; ?></strong></p>
+<div id="statusbox">
 
-<pre><?php print_r($series); ?></pre>
+    <p><strong>Supporters in total: <?php echo $total; ?></strong></p>
+
+    <pre><?php print_r($series); ?></pre>
 
 
-<p>Last 10 joined at:
-<ul>
-<?php
-try {
-	// check data
-	$query = $db->prepare("SELECT * FROM t1 ORDER BY time DESC LIMIT 0,10");
-	$query->execute();
-}
-catch(PDOException $e) {
-	print "Database Error: \n";
-	print_r($db->errorInfo());
-}
+    <p>Last 10 joined at:
+    <ul>
+    <?php
+    try {
+	    // check data
+	    $query = $db->prepare("SELECT * FROM t1 ORDER BY time DESC LIMIT 0,10");
+	    $query->execute();
+    }
+    catch(PDOException $e) {
+	    print "Database Error: \n";
+	    print_r($db->errorInfo());
+    }
 
-while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
-    // true if at least one row to return
+    while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
+        // true if at least one row to return
 
-    echo '<li>'. $row["time"] .'</li>';
-}
-?>
-</ul>
-</p>
+        echo '<li>'. $row["time"] .'</li>';
+    }
+    ?>
+    </ul>
+    </p>
+
+</div>
+
+
+
 
 <?php
 // close the database connection

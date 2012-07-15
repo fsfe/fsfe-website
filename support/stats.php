@@ -1,3 +1,23 @@
+<?php
+// report errors
+
+error_reporting(E_ALL);
+ini_set('display_errors', 'On');
+
+/*
+TODO:
+- implement nicer stats with http://www.jqplot.com/ (used in Piwik) or http://code.shutterstock.com/rickshaw/ (d3.js based)
+- refactor to use standard FSFE header and footer
+*/
+
+try {
+    // open the database
+	$db = new PDO( 'sqlite:../../../db/support.sqlite' ); 
+}
+catch(PDOException $e) {
+	print 'Error while connecting to Database: '.$e->getMessage();
+}
+?>
 <!doctype html public "✰">
 <head>
     <meta charset="utf-8">
@@ -95,28 +115,17 @@ graph.render();
 <tr><th>Country code</th><th>Supporters</th><th>Latest at</th></tr>
 
 <?php
-// report errors
-
-error_reporting(E_ALL);
-ini_set('display_errors', 'On');
-
-/*
-TODO:
-- implement nicer stats with http://www.jqplot.com/ (used in Piwik) or http://code.shutterstock.com/rickshaw/ (d3.js based)
-- refactor to use standard FSFE header and footer
-*/
-
-try {
-    // open the database
-	$db = new PDO( 'sqlite:../../../db/support.sqlite' ); 
+function ts_days_ago($days) {
+    $days_ago = mktime(0, 0, 0, date("m")  , date("d")-$days, date("Y"));
+    return date("Y-m-d", $days_ago);
 }
-catch(PDOException $e) {
-	print 'Error while connecting to Database: '.$e->getMessage();
-}
+
+$today = ts_days_ago(0);
+echo "today: $today";
 
 try {
 	// check data
-	$query = $db->prepare("SELECT *, COUNT(*) AS supporters FROM t1 GROUP BY country_code ORDER BY supporters DESC");
+	$query = $db->prepare("SELECT *, COUNT(*) AS supporters FROM t1 GROUP BY country_code ORDER BY supporters DESC WHERE ts =< '$today'");
 	$query->execute();
 }
 catch(PDOException $e) {
@@ -183,7 +192,7 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
 $db = NULL;
 ?>
   </body>
-  <timestamp>$Date: $ $Author: $</timestamp>
+  <timestamp>$Date$ $Author$</timestamp>
 </html>
 <!--
 Local Variables: ***

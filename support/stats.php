@@ -160,7 +160,7 @@ foreach ($series as $k => $v) {
         font-size: 60pt; 
     }
 
-    .statusbox cite {
+    .statusbox em {
         font-size: 12pt; 
         font-weight: bold; 
     }
@@ -191,7 +191,7 @@ foreach ($series as $k => $v) {
 </div>
 
 <div class="statusbox" style="top:20em;">
-    <p>Three months days ago there where only <em><?php echo $total_at_beginning; ?></em> supporters, so growth was <em><?php echo $growth; ?></em>. If groth continues at same pace, we'll have <em><?php echo $estimate; ?></em> supporters a year from now!</p>
+    <p>Three months ago there where <em><?php echo $total_at_beginning; ?></em> supporters, so growth was <em><?php echo $growth; ?></em> supporters. If groth continues at the same pace, we'll have <em><?php echo $estimate; ?></em> supporters in a year from now!</p>
 </div>
 
 <div id="chart_container">
@@ -229,7 +229,8 @@ var legend = new Rickshaw.Graph.Legend( {
 } );
 
 var hoverDetail = new Rickshaw.Graph.HoverDetail( {
-	graph: graph
+	graph: graph,
+    yFormatter: function(y) { return Math.floor(y) + " supporters" }
 } );
 
 var shelving = new Rickshaw.Graph.Behavior.Series.Toggle({

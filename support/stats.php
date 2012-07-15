@@ -56,12 +56,20 @@ catch(PDOException $e) {
 }
 
 #statusbox {
-    width: 20em;
+    width: 15em;
     border: 1px solid #ccc; 
     background: #eee; 
     padding: 1em; 
-    font-size: 14pt; 
-    color: #888;
+    font-size: 11pt; 
+    font-family: Sans-serif;
+    color: #555;
+    position: absolute;
+    right: 24px;
+    top: 24px;
+}
+
+#statusbox strong {
+    font-size: 18pt; 
 }
 </style>
 
@@ -128,7 +136,7 @@ graph.render();
 
 </script>
 
-c
+d
 
 <?php
 
@@ -216,9 +224,12 @@ foreach ($series as $k => $v) {
 
 <div id="statusbox">
 
-    <p><strong>Supporters in total: <?php echo $total; ?></strong></p>
+    <p>
+        Supporters in total:<br>
+        <strong><?php echo $total; ?></strong>
+    </p>
 
-    <p>Last 10 joined at:
+    <p>Last 10 joined at:<br>
     <?php
     try {
 	    // check data

@@ -1,6 +1,6 @@
 <?php
 
-//TODO: change in production
+//TODO: save value of ref_url and ref_id in support.xhtml, then save into database here
 //ini_set( "display_errors","1" );
 //ERROR_REPORTING( E_ALL) ;
 

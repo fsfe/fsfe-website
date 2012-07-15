@@ -46,6 +46,8 @@ for ($i = 0; $i < 14; $i++) {
 
     while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
         // true if at least one row to return
+        
+        if ($row["country_code"] == "") { continue; } // skip to next row if country empty
 
         $series[$row["country_code"]][] = array(
             "x" => epoc_days_ago($i),
@@ -130,7 +132,7 @@ foreach ($series as $k => $v) {
     }
 
     #statusbox {
-        width: 15em;
+        width: 10em;
         border: 1px solid #ccc; 
         background: #eee; 
         padding: 1em; 
@@ -143,12 +145,14 @@ foreach ($series as $k => $v) {
     }
 
     #statusbox strong {
-        font-size: 18pt; 
+        font-size: 60pt; 
     }
     </style>
 
 </head>
 <body>
+
+<h1>Supporter count status <small><?php date("Y-m-d") ?></small></h1>
 
 <div id="chart_container">
     <div id="y_axis"></div>
@@ -157,15 +161,17 @@ foreach ($series as $k => $v) {
 </div>
 
 <script>
+var seriesData = [ <?php echo $series_json; ?> ];
+
+Rickshaw.Series.zeroFill(seriesData);
+
 var palette = new Rickshaw.Color.Palette();
 
 var graph = new Rickshaw.Graph( {
         element: document.querySelector("#chart"),
         width: 550,
         height: 250,
-        series: [
-            <?php echo $series_json; ?>
-        ]
+        series: seriesData
 } );
 
 var x_axis = new Rickshaw.Graph.Axis.Time( { graph: graph } );
@@ -196,12 +202,11 @@ e
 
 <div id="statusbox">
 
-    <p>
-        Supporters in total:<br>
-        <strong><?php echo $total; ?></strong>
-    </p>
+    <h3>Total supporters</h3>
+    <p><strong><?php echo $total; ?></strong></p>
 
-    <p>Last 10 joined at:<br>
+    <h3>Last 10 sign ups</h3>
+    <p>
     <?php
     try {
 	    // check data

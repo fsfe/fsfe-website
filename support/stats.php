@@ -195,16 +195,16 @@ $series_json = "";
 
 foreach ($series as $k => $v) {
 
-    $series_json += '
+    $series_json .= '
     {
         name: "'. $k .'",
         data: [ ';
 
         foreach ($v as $subk => $subv) {
-            $series_json += '{ x: '. $subv["x"] .', y: '. $subv["y"] .' },';
+            $series_json .= '{ x: '. $subv["x"] .', y: '. $subv["y"] .' },';
         }
 
-    $series_json += ' ],
+    $series_json .= ' ],
         color: palette.color()
     },
     ';
@@ -212,8 +212,6 @@ foreach ($series as $k => $v) {
 }
 ?>
 
-
-<pre><?php print_r($series); ?></pre>
 <pre><?php print_r($series_json); ?></pre>
 
 <div id="statusbox">
@@ -250,7 +248,7 @@ foreach ($series as $k => $v) {
 $db = NULL;
 ?>
   </body>
-  <timestamp>$Date$ $Author$</timestamp>
+  <timestamp>$Date: 2012-04-22 12:37:59 +0300 (su, 22 huhti 2012) $ $Author: otto $</timestamp>
 </html>
 <!--
 Local Variables: ***

@@ -161,11 +161,11 @@ foreach ($series as $k => $v) {
 </div>
 
 <script>
+var palette = new Rickshaw.Color.Palette();
+
 var seriesData = [ <?php echo $series_json; ?> ];
 
 Rickshaw.Series.zeroFill(seriesData);
-
-var palette = new Rickshaw.Color.Palette();
 
 var graph = new Rickshaw.Graph( {
         element: document.querySelector("#chart"),
@@ -197,7 +197,7 @@ graph.render();
 </script>
 
 <br>
-e
+f
 <br>
 
 <div id="statusbox">

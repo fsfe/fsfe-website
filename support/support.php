@@ -24,6 +24,11 @@ catch(PDOException $e) {
 	print 'Error while connecting to Database: '.$e->getMessage();
 }
 
+	$query = $db->prepare("alter table t1 add ref_url char(100)");
+	$query->execute();
+	$query = $db->prepare("alter table t1 add ref_id char(100)");
+	$query->execute();
+
 
 try {
 	// insert data

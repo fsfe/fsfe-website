@@ -300,6 +300,8 @@
     
           <p><input type="submit" name="submit" value="Tuen FSFE:n toimintaa!" /></p>
         
+          <input type="hidden" name="ref_url" value="" />
+          <input type="hidden" name="ref_id" value="" />
         </form>
 
       <p><em>Yksityisyyslausekkeemme on yksinkertainen: Emme tule koskaan jakamaan tietojasi kenellekään FSFE:n ulkopuolella. Piste.</em></p> 
@@ -311,6 +313,9 @@
 <script type="text/javascript">
 /* <![CDATA[ */
 $(document).ready(function() {
+    $("input[name=ref_url]").val(document.referrer);
+    $("input[name=ref_url]").val(window.location.search.slice(1));
+
 	$("form.support").validate({
 		rules: {
 			email: {email: true, required: true},

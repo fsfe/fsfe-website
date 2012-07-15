@@ -111,6 +111,8 @@ graph.render();
 
 </script>
 
+a
+
 <table border="1" style="text-align: left;">
 <tr><th>Country code</th><th>Supporters</th><th>Latest at</th></tr>
 
@@ -119,9 +121,12 @@ function ts_days_ago($days) {
     $days_ago = mktime(0, 0, 0, date("m")  , date("d")-$days, date("Y"));
     return date("Y-m-d", $days_ago) . " 00:00:00";
 }
+function epoc_days_ago($days) {
+    return = mktime(0, 0, 0, date("m")  , date("d")-$days, date("Y"));
+}
 
-$today = ts_days_ago(0);
-echo "today: $today";
+echo "today ts: ". ts_days_ago(0);
+echo "<br>today epoc: ". epoc_days_ago(0);
 
 $series = array();
 
@@ -141,7 +146,7 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
     // true if at least one row to return
 
     $series[$row["country_code"]] = array(
-        "x" => ts_days_ago(0),
+        "x" => epoc_days_ago(0),
         "y" => $row["supporters"]
     );
     

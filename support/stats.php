@@ -56,19 +56,24 @@ catch(PDOException $e) {
 }
 
 #statusbox {
-    border: 1px solid #888; 
-    background: #ccc; 
+    width: 20em;
+    border: 1px solid #ccc; 
+    background: #eee; 
     padding: 1em; 
-    font-size: 18pt; 
+    font-size: 14pt; 
     color: #888;
 }
 </style>
 
 <div id="chart_container">
-        <div id="y_axis"></div>
-        <div id="chart"></div>
+    <div id="y_axis"></div>
+	<div id="chart"></div>
+	<div id="legend_container">
+		<div id="smoother" title="Smoothing"></div>
+		<div id="legend"></div>
+	</div>
+	<div id="slider"></div>
 </div>
-<div id="legend"></div>
 
 <script>
 var palette = new Rickshaw.Color.Palette();
@@ -216,7 +221,6 @@ foreach ($series as $k => $v) {
     <p><strong>Supporters in total: <?php echo $total; ?></strong></p>
 
     <p>Last 10 joined at:
-    <ul>
     <?php
     try {
 	    // check data
@@ -231,10 +235,9 @@ foreach ($series as $k => $v) {
     while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
         // true if at least one row to return
 
-        echo '<li>'. $row["time"] .'</li>';
+        echo $row["time"] .'<br>';
     }
     ?>
-    </ul>
     </p>
 
 </div>

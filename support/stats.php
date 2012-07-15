@@ -73,7 +73,7 @@ for ($i = 90; $i >= 0; $i--) {
         */
 
         if ($i == 0) { $total += $row["supporters"]; }
-        if ($i == 90) { $total_at_beginning = += $row["supporters"]; }
+        if ($i == 90) { $total_at_beginning += $row["supporters"]; }
         
     }
 

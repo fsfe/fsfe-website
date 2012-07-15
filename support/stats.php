@@ -30,7 +30,7 @@ function epoc_days_ago($days) {
 
 $series = array();
 
-for ($i = 50; $i >= 0; $i--) {
+for ($i = 90; $i >= 0; $i--) {
 
     try {
 	    // check data
@@ -43,6 +43,7 @@ for ($i = 50; $i >= 0; $i--) {
     }
 
     if ($i == 0) { $total = 0; }
+    if ($i == 90) { $total_at_beginning = 0; }
 
     while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
         // true if at least one row to return
@@ -72,10 +73,14 @@ for ($i = 50; $i >= 0; $i--) {
         */
 
         if ($i == 0) { $total += $row["supporters"]; }
+        if ($i == 90) { $total_at_beginning = += $row["supporters"]; }
         
     }
 
 }
+
+$growth = $total - $total_at_beginning;
+$estimate = $total + $growth*4;
 
 $series_json = "";
 
@@ -112,6 +117,8 @@ foreach ($series as $k => $v) {
     <style>
     body {
         font-family: Sans-serif;
+        color: #555;
+        padding: 1em;
     }
 
     #chart_container {
@@ -136,30 +143,36 @@ foreach ($series as $k => $v) {
         margin: 0 0 0 10px;
     }
 
-    #statusbox {
+    .statusbox {
         width: 10em;
         border: 1px solid #ccc; 
         background: #eee; 
         padding: 1em; 
         font-size: 11pt; 
-        color: #555;
         position: absolute;
-        left: 1em;
-        top: 2em;
+        left: 2em;
     }
 
-    #statusbox strong {
+    .statusbox strong {
         font-size: 60pt; 
+    }
+
+    .statusbox cite {
+        font-size: 12pt; 
+        font-weight: bold; 
     }
     
     #lastlog {
-        border: 1px solid #ccc; 
-        background: #fff; 
+        background: #ccc; 
         padding: 2px;
+    }
+
+    #lastlog th {
+        text-align: right;
     }
     
     #lastlog td {
-        background: #ccc;
+        background: #eee;
     }
     </style>
 
@@ -168,11 +181,13 @@ foreach ($series as $k => $v) {
 h
 <h1>Supporter count status <small><?php date("Y-m-d") ?></small></h1>
 
-<div id="statusbox">
-
+<div class="statusbox">
     <h3>Total supporters</h3>
     <p><strong><?php echo $total; ?></strong></p>
+</div>
 
+<div class="statusbox">
+    <p>Three months days ago there where only <em><?php echo $total_at_beginning; ?></em> supporters, so growth was <em><?php echo $growth; ?></em>. If groth continues at same pace, we'll have <em><?php echo $estimate; ?></em> supporters a year from now!</p>
 </div>
 
 <div id="chart_container">
@@ -190,7 +205,7 @@ Rickshaw.Series.zeroFill(seriesData);
 
 var graph = new Rickshaw.Graph( {
         element: document.querySelector("#chart"),
-        width: 550,
+        width: 650,
         height: 350,
         series: seriesData
 } );
@@ -220,6 +235,12 @@ graph.render();
 
 <h3>Last 10 sign ups</h3>
 <table id="lastlog">
+<tr>
+    <th>Timestamp</th>
+    <th>Country</th>
+    <th>Referrer url</th>
+    <th>Referrer id (support?xxxx)</th>
+</tr>
 <?php
 try {
     // check data
@@ -244,8 +265,9 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
 // close the database connection
 $db = NULL;
 ?>
-  </body>
+  <br>
   <timestamp>$Date$ $Author$</timestamp>
+  </body>
 </html>
 <!--
 Local Variables: ***

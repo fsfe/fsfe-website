@@ -148,20 +148,23 @@ foreach ($series as $k => $v) {
         border: 1px solid #ccc; 
         background: #eee; 
         padding: 1em; 
-        font-size: 11pt; 
+        font-size: 14px; 
         position: absolute;
         left: 2em;
     }
 
+    .statusbox h3 {
+        font-size: 17px;
+    }
     .statusbox p {
         margin: 0;
     }
     .statusbox strong {
-        font-size: 60pt; 
+        font-size: 70px; 
     }
 
     .statusbox em {
-        font-size: 12pt; 
+        font-size: 15px; 
         font-weight: bold; 
     }
     

@@ -116,7 +116,7 @@ foreach ($series as $k => $v) {
 
     <style>
     body {
-        font-family: Sans-serif;
+        font-family: Arial, Helvetica, sans-serif;
         color: #555;
         padding: 1em;
     }
@@ -124,7 +124,6 @@ foreach ($series as $k => $v) {
     #chart_container {
         position: relative;
         display: inline-block;
-        font-family: Arial, Helvetica, sans-serif;
         left: 13em;
     }
     #chart {
@@ -148,7 +147,7 @@ foreach ($series as $k => $v) {
         border: 1px solid #ccc; 
         background: #eee; 
         padding: 1em; 
-        font-size: 14px; 
+        font-size: 15px; 
         position: absolute;
         left: 2em;
     }
@@ -160,11 +159,11 @@ foreach ($series as $k => $v) {
         margin: 0;
     }
     .statusbox strong {
-        font-size: 70px; 
+        font-size: 80px; 
     }
 
     .statusbox em {
-        font-size: 15px; 
+        font-size: 16px; 
         font-weight: bold; 
     }
     
@@ -213,7 +212,7 @@ Rickshaw.Series.zeroFill(seriesData);
 var graph = new Rickshaw.Graph( {
         element: document.querySelector("#chart"),
         width: 650,
-        height: 350,
+        height: 360,
         series: seriesData
 } );
 

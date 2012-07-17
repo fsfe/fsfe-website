@@ -21,7 +21,7 @@ catch(PDOException $e) {
 
 function ts_days_ago($days) {
     $days_ago = mktime(0, 0, 0, date("m"), date("d")-$days, date("Y"));
-    return date("Y-m-d", $days_ago) . " 00:00:00";
+    return date("Y-m-d", $days_ago) . " 23:59:59";
 }
 
 function epoc_days_ago($days) {
@@ -41,11 +41,11 @@ for ($i = 90; $i >= 0; $i--) {
 	        $sql .= "AND ref_id = '". sqlite_escape_string($_GET['ref_id']) ."' ";
 	    }
 	    if (isset($_GET['ref_url'])) {
-	        $sql .= "AND ref_url LIKE '". sqlite_escape_string($_GET['ref_url']) ."%' ";
+	        $sql .= "AND ref_url LIKE '%". sqlite_escape_string($_GET['ref_url']) ."%' ";
 	    }
 
 	    $sql .= "GROUP BY country_code ORDER BY supporters DESC";
-	    echo $sql;
+	    //echo $sql;
 	    $query = $db->prepare($sql);
 	    $query->execute();
     }
@@ -197,9 +197,9 @@ foreach ($series as $k => $v) {
 </head>
 <body>
 
-<h1>a Supporter count status 
+<h1>Supporter count status 
 <?php
-if (isset($_GET['ref_url'])) { echo " for referrer URLs starting with ". htmlspecialchars($_GET['ref_url']); }
+if (isset($_GET['ref_url'])) { echo " for referrer URLs containing ". htmlspecialchars($_GET['ref_url']); }
 if (isset($_GET['ref_id'])) { echo " for referrer fsfe.org/support?". htmlspecialchars($_GET['ref_id']); }
 ?>
 <small><?php date("Y-m-d") ?></small></h1>
@@ -277,8 +277,19 @@ graph.render();
 </tr>
 <?php
 try {
-    // check data
-    $query = $db->prepare("SELECT * FROM t1 ORDER BY time DESC LIMIT 0,10");
+    $sql = "SELECT * FROM t1 ";
+
+    // enable stats for single referrers
+    if (isset($_GET['ref_id'])) {
+        $sql .= "WHERE ref_id = '". sqlite_escape_string($_GET['ref_id']) ."' ";
+    }
+    if (isset($_GET['ref_url'])) {
+        $sql .= "WHERE ref_url LIKE '". sqlite_escape_string($_GET['ref_url']) ."%' ";
+    }
+
+    $sql .= "ORDER BY time DESC LIMIT 0,10";
+
+    $query = $db->prepare($sql);
     $query->execute();
 }
 catch(PDOException $e) {

@@ -38,10 +38,10 @@ for ($i = 90; $i >= 0; $i--) {
 
         // enable stats for single referrers
 	    if (isset($_GET['ref_id'])) {
-	        $sql .= "AND WHERE ref_id = '". sqlite_escape_string($_GET['ref_id']) ."' ";
+	        $sql .= "AND ref_id = '". sqlite_escape_string($_GET['ref_id']) ."' ";
 	    }
 	    if (isset($_GET['ref_url'])) {
-	        $sql .= "AND WHERE ref_url LIKE '". sqlite_escape_string($_GET['ref_url']) ."%' ";
+	        $sql .= "AND ref_url LIKE '". sqlite_escape_string($_GET['ref_url']) ."%' ";
 	    }
 
 	    $sql .= "GROUP BY country_code ORDER BY supporters DESC";

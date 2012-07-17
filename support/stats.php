@@ -37,14 +37,15 @@ for ($i = 90; $i >= 0; $i--) {
 	    $sql = "SELECT *, COUNT(*) AS supporters FROM t1 WHERE time <= Datetime('". ts_days_ago($i) ."') ";
 
         // enable stats for single referrers
-	    if ($_GET['ref_id'] != '') {
+	    if (isset($_GET['ref_id'])) {
 	        $sql .= "AND WHERE ref_id = '". sqlite_escape_string($_GET['ref_id']) ."' ";
 	    }
-	    if ($_GET['ref_url'] != '') {
+	    if (isset($_GET['ref_url'])) {
 	        $sql .= "AND WHERE ref_url LIKE '". sqlite_escape_string($_GET['ref_url']) ."%' ";
 	    }
 
 	    $sql .= "GROUP BY country_code ORDER BY supporters DESC";
+	    echo $sql;
 	    $query = $db->prepare($sql);
 	    $query->execute();
     }
@@ -196,10 +197,10 @@ foreach ($series as $k => $v) {
 </head>
 <body>
 
-<h1>Supporter count status 
+<h1>a Supporter count status 
 <?php
-if ($_GET['ref_url'] != '') { echo " for referrer URLs starting with ". htmlspecialchars($_GET['ref_url']); }
-if ($_GET['ref_id'] != '') { echo " for referrer fsfe.org/support?". htmlspecialchars($_GET['ref_id']); }
+if (isset($_GET['ref_url'])) { echo " for referrer URLs starting with ". htmlspecialchars($_GET['ref_url']); }
+if (isset($_GET['ref_id'])) { echo " for referrer fsfe.org/support?". htmlspecialchars($_GET['ref_id']); }
 ?>
 <small><?php date("Y-m-d") ?></small></h1>
 

@@ -28,16 +28,24 @@ function epoc_days_ago($days) {
     return mktime(0, 0, 0, date("m"), date("d")-$days, date("Y"));
 }
 
-// enable stats for single referrer id
-echo $_SERVER['QUERY_STRING'];
-
 $series = array();
 
 for ($i = 90; $i >= 0; $i--) {
 
     try {
 	    // check data
-	    $query = $db->prepare("SELECT *, COUNT(*) AS supporters FROM t1 WHERE time <= Datetime('". ts_days_ago($i) ."') GROUP BY country_code ORDER BY supporters DESC");
+	    $sql = "SELECT *, COUNT(*) AS supporters FROM t1 WHERE time <= Datetime('". ts_days_ago($i) ."') ";
+
+        // enable stats for single referrers
+	    if ($_GET['ref_id']) {
+	        $sql .= "AND WHERE ref_id = '". mysql_real_escape_string($_GET['ref_id']) ."' ";
+	    }
+	    if ($_GET['ref_url']) {
+	        $sql .= "AND WHERE ref_url LIKE '". mysql_real_escape_string($_GET['ref_url']) ."%' ";
+	    }
+
+	    $sql .= "GROUP BY country_code ORDER BY supporters DESC"
+	    $query = $db->prepare($sql);
 	    $query->execute();
     }
     catch(PDOException $e) {
@@ -188,7 +196,12 @@ foreach ($series as $k => $v) {
 </head>
 <body>
 
-<h1>Supporter count status <small><?php date("Y-m-d") ?></small></h1>
+<h1>Supporter count status 
+<?php
+if ($_GET['ref_url']) { echo " for referrer URLs starting with ". htmlspecialchars$_GET['ref_url']); }
+if ($_GET['ref_id']) { echo " for referrer ID ". htmlspecialchars$_GET['ref_id']); }
+?>
+<small><?php date("Y-m-d") ?></small></h1>
 
 <div class="statusbox">
     <h3>Total supporters</h3>

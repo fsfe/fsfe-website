@@ -28,6 +28,9 @@ function epoc_days_ago($days) {
     return mktime(0, 0, 0, date("m"), date("d")-$days, date("Y"));
 }
 
+// enable stats for single referrer id
+echo $_SERVER['QUERY_STRING'];
+
 $series = array();
 
 for ($i = 90; $i >= 0; $i--) {
@@ -193,7 +196,7 @@ foreach ($series as $k => $v) {
 </div>
 
 <div class="statusbox" style="top:20em;">
-    <p>Three months ago there where <em><?php echo $total_at_beginning; ?></em> supporters, so growth was <em><?php echo $growth; ?></em> supporters. If groth continues at the same pace, we'll have <em><?php echo $estimate; ?></em> supporters in a year from now!</p>
+    <p>Three months ago there where <em><?php echo $total_at_beginning; ?></em> supporters, so growth was <em><?php echo $growth; ?></em> supporters. If growth continues at the same pace, we'll have <em><?php echo $estimate; ?></em> supporters in a year from now!</p>
 </div>
 
 <div id="chart_container">

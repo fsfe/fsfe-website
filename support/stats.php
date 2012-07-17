@@ -44,7 +44,7 @@ for ($i = 90; $i >= 0; $i--) {
 	        $sql .= "AND WHERE ref_url LIKE '". mysql_real_escape_string($_GET['ref_url']) ."%' ";
 	    }
 
-	    $sql .= "GROUP BY country_code ORDER BY supporters DESC"
+	    $sql .= "GROUP BY country_code ORDER BY supporters DESC";
 	    $query = $db->prepare($sql);
 	    $query->execute();
     }
@@ -198,8 +198,8 @@ foreach ($series as $k => $v) {
 
 <h1>Supporter count status 
 <?php
-if ($_GET['ref_url']) { echo " for referrer URLs starting with ". htmlspecialchars$_GET['ref_url']); }
-if ($_GET['ref_id']) { echo " for referrer ID ". htmlspecialchars$_GET['ref_id']); }
+if ($_GET['ref_url']) { echo " for referrer URLs starting with ". htmlspecialchars($_GET['ref_url']); }
+if ($_GET['ref_id']) { echo " for referrer fsfe.org/support?". htmlspecialchars($_GET['ref_id']); }
 ?>
 <small><?php date("Y-m-d") ?></small></h1>
 

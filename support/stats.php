@@ -301,8 +301,8 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
     echo '<tr>
     <td>'. $row["time"] .'</td>
     <td>'. $row["country_code"] .'</td>
-    <td><a href="?red_url='. $row["ref_url"] .'">'. $row["ref_url"] .'</a></td>
-    <td><a href="?red_id='. $row["ref_id"] .'">'. $row["ref_id"] .'</a></td>
+    <td><a href="?ref_url='. $row["ref_url"] .'">'. $row["ref_url"] .'</a></td>
+    <td><a href="?ref_id='. $row["ref_id"] .'">'. $row["ref_id"] .'</a></td>
     </tr>';
 }
 ?>

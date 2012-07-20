@@ -43,7 +43,7 @@ close MAIL;
 # -----------------------------------------------------------------------------
 
 print "Content-type: text/html\n\n";
-open TEMPLATE, "/home/www/html/global/projects/stacs/tmpl-london." . $query->param("language") . ".html";
+open TEMPLATE, "/home/www/html/global/campaigns/stacs/tmpl-london." . $query->param("language") . ".html";
 while (<TEMPLATE>) {
   s/:REFERENCE:/$reference/g;
   print;

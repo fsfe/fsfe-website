@@ -27,8 +27,6 @@ RewriteRule ^wsis(.*)                  /campaigns/wsis$1 [redirect=permanent]
 RewriteRule ^active(.*)html$           /campaigns/campaigns$1html [redirect=permanent]
 RewriteRule ^finished(.*)html$         /campaigns/campaigns$1html [redirect=permanent]
 RewriteRule ^inactive(.*)html$         /campaigns/campaigns$1html [redirect=permanent]
-# TODO: the following have to be confirmed
-#RewriteRule ^igf(.*)                /campaigns/igf$1 [redirect=permanent]
 
 
 # The following projects were moved to the /activities section
@@ -38,18 +36,20 @@ RewriteRule ^drm(.*)                  /activities/drm$1 [redirect=permanent]
 RewriteRule ^education(.*)            /activities/education$1 [redirect=permanent]
 RewriteRule ^os(.*)                   /activities/os$1 [redirect=permanent]
 RewriteRule ^procurement(.*)          /activities/procurement$1 [redirect=permanent]
-# TODO: the following have to be confirmed
-#RewriteRule ^eu(.*)                   /activities/eu$1 [redirect=permanent]
-#RewriteRule ^ftf(.*)                  /activities/ftf$1 [redirect=permanent]
-#RewriteRule ^ms-vs-eu(.*)             /activities/ms-vs-eu$1 [redirect=permanent]
-#RewriteRule ^un(.*)                   /activities/un$1 [redirect=permanent]
-#RewriteRule ^wipo(.*)                 /activities/wipo$1 [redirect=permanent]
+RewriteRule ^eu(.*)                   /activities/eu$1 [redirect=permanent]
+RewriteRule ^ftf(.*)                  /activities/ftf$1 [redirect=permanent]
+RewriteRule ^fla(.*)                  /activities/ftf$1 [redirect=permanent]
+RewriteRule ^ms-vs-eu(.*)             /activities/ms-vs-eu$1 [redirect=permanent]
+RewriteRule ^un(.*)                   /activities/un$1 [redirect=permanent]
+RewriteRule ^wipo(.*)                 /activities/wipo$1 [redirect=permanent]
+RewriteRule ^fp6(.*)                  /activities/fp6$1 [redirect=permanent]
+RewriteRule ^fp7(.*)                  /activities/fp7$1 [redirect=permanent]
+RewriteRule ^map(.*)                  /activities/map$1 [redirect=permanent]
+RewriteRule ^igf(.*)                  /activities/igf$1 [redirect=permanent]
 
-# TODO: the following have to be decided
-#RewriteRule ^fellowship(.*)            ??? [redirect=permanent]
-#RewriteRule ^fla(.*)                   ??? [redirect=permanent]
-#RewriteRule ^fp6(.*)                   ??? [redirect=permanent]
-#RewriteRule ^fp7(.*)                   ??? [redirect=permanent]
-#RewriteRule ^map(.*)                   ??? [redirect=permanent]
-#RewriteRule ^projects(.*)html(.*)      ??? [redirect=permanent]
-#RewriteRule ^work(.*)html(.*)          ??? [redirect=permanent]
+
+# The following projects were moved somewhere else
+#
+RewriteRule ^projects(.*)html(.*)     /projects$1html$2 [redirect=permanent]
+RewriteRule ^work(.*)html(.*)         /work$1html$2 [redirect=permanent]
+RewriteRule ^leaflet-fellowship-FSA(.*)html(.*) /about/printable/leaflet-fellowship-FSA$1html$2 [redirect=permanent]

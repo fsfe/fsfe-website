@@ -15,6 +15,7 @@
   <xsl:template match="body">
     <xsl:text>\documentclass[a4paper]{article}</xsl:text>
     <xsl:if test="$language='el'">\usepackage[english,greek]{babel}</xsl:if>
+    <xsl:if test="$language='ru'">\usepackage[russian]{babel}</xsl:if>
     <xsl:text>\usepackage{ucs}
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}

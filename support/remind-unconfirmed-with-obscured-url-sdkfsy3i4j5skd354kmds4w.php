@@ -53,10 +53,10 @@ $db = NULL;
 function send_reminder($reminder_number, $row) {
     GLOBAL $db, $timestamp;
 
-    if (file_exists('template-reminder.'. $row['lang'] .'.inc')) {
-        require('template-reminder.'. $row['lang'] .'.inc');
+    if (file_exists('template-email-confirm.'. $row['lang'] .'.inc')) {
+        require('template-email-confirm.'. $row['lang'] .'.inc');
     } else {    
-        require('template-reminder.en.inc');
+        require('template-email-confirm.en.inc');
     }
     
     $to      = $row['email']; 

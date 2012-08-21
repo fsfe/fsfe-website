@@ -9,7 +9,7 @@ if (preg_match("/[a-z0-9]/i", $_SERVER["QUERY_STRING"])) {
     // keep old way to be backwards compatible
     $secret = $_SERVER["QUERY_STRING"];
     $lang = "en";
-} elseif ($_GET['s'] != '' && $_GET['lang']) {
+} elseif ($_GET['s'] != '' && $_GET['lang'] != '') {
     // new way with variable language
     $secret = $_GET['s'];
     $lang = $_GET['lang'];
@@ -27,7 +27,8 @@ catch(PDOException $e) {
 
 try {
 	// check data
-	$query = $db->prepare("SELECT * FROM t1 where secret='$secret'");
+	echo $secret;
+	$query = $db->prepare("SELECT * FROM t1 where secret='". sqlite_escape_string($secret) ."'");
 	$query->execute();
 }
 catch(PDOException $e) {

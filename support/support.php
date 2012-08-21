@@ -45,7 +45,7 @@ if ($row['email']) {
         try {
 	        $query = $db->prepare("UPDATE t1 SET
 	            firstname = '". sqlite_escape_string($_POST['firstname']) ."',
-	            lasname = '". sqlite_escape_string($_POST['lastname']) ."'
+	            lastname = '". sqlite_escape_string($_POST['lastname']) ."'
 	            where email='". sqlite_escape_string($_POST['email']) ."'");
 	        $query->execute();
         }

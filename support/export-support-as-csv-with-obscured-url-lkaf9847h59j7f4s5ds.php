@@ -2,7 +2,7 @@
 // This file is temporary - now I just need so see the db contents 
 // to develop email confirmation function
 
-//die("This file is for debugging only.");
+die("This file is for debugging only.");
 
 $db = new PDO("sqlite:../../../db/support.sqlite");
 

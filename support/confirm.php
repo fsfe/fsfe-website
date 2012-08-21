@@ -6,9 +6,13 @@ ini_set('display_errors', 'On');
 */
 
 if (preg_match("/[a-z0-9]/i", $_SERVER["QUERY_STRING"])) {
+    // keep old way to be backwards compatible
     $secret = $_SERVER["QUERY_STRING"];
-    $timestamp = date('Y-m-d H:i:s');
-    //echo "<p>Checking code $secret..</p>";
+    $lang = "en";
+} elseif ($_GET['s'] != '' && $_GET['lang']) {
+    // new way with variable language
+    $secret = $_GET['s'];
+    $lang = $_GET['lang'];
 } else {
     die("This page must be called with a parameter");
 }
@@ -37,6 +41,7 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
     $found = True;
 
     if ($row['confirmed'] == ''){
+        $timestamp = date('Y-m-d H:i:s');
         $row['confirmed'] = $timestamp;
         try {
 	        $query = $db->prepare("UPDATE t1 SET 

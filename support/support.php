@@ -7,7 +7,7 @@ if ($_POST['email'] == '' || $_POST['country_code'] == '') {
     die("Post data missing. This page should only be accessed via the sign up form.");
 }
 
-$params = array('time', 'firstname', 'lastname', 'email', 'country_code', 'secret', 'ref_url', 'ref_id');
+$params = array('time', 'firstname', 'lastname', 'email', 'country_code', 'secret', 'ref_url', 'ref_id', 'lang');
 
 // Save time in "YYYY-MM-DD HH:MM:SS"
 $_POST['time'] = date('Y-m-d H:i:s');
@@ -22,6 +22,9 @@ try {
 catch(PDOException $e) {
 	print 'Error while connecting to Database: '.$e->getMessage();
 }
+
+// save as comment in case some day need to add new field
+$query = $db->query("alter table t1 add column lang TEXT");
 
 
 // check if e-mail address already in database
@@ -99,8 +102,7 @@ else {
 	piwikTracker.enableLinkTracking();
 	} catch( err ) {}
 	</script><noscript><p><img src="http://piwik.fsfe.org/piwik.php?idsite=4" style="border:0" alt=""></p></noscript>
-
-          ';
+    ';
 
     if ($email_found === True){
         // message if e-mail already existed in database

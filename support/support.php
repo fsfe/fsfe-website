@@ -116,7 +116,7 @@ else {
     $to      = $_POST['email']; 
     // TODO: is this safe, should we ereg() input first to check correct form?
     $subject = 'Confirm sign up as supporter';
-    $headers = 'From: office@fsfe.org' . "\r\n";
+    $headers = 'From: "Free Software Foundation Europe <office@fsfe.org>"' . "\r\n";
     mail($to, $subject, $message, $headers);
 }
 

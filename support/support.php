@@ -24,18 +24,49 @@ catch(PDOException $e) {
 	print 'Error while connecting to Database: '.$e->getMessage();
 }
 
+
+// check if e-mail address already in database
 try {
-	// insert data
-	$query = $db->prepare("INSERT INTO t1
-		( " . implode(', ', $params) . " )
-		VALUES ( :" . implode(', :', $params) . " )");
-	foreach ( $params as $param )
-		$query->bindParam(":$param", htmlspecialchars(substr($_POST[$param],0,60)));
+	// check data
+	$query = $db->prepare("SELECT * FROM t1 where email='". sqlite_escape_string($_POST['email']) ."'");
 	$query->execute();
 }
 catch(PDOException $e) {
-	print "Database Error: \n";
-	print_r($db->errorInfo());
+    print "Database Error: \n";
+    print_r($db->errorInfo());
+}
+
+if ($row = $query->fetch(PDO::FETCH_ASSOC)) {
+    // e-mail already found, don't add a new row
+
+    if ($row['firstname'] == '' || $row['lastname'] == ''){
+        // if e-mail found but name missing, update row
+	    $query = $db->prepare("UPDATE t1 SET
+	        firstname = '". sqlite_escape_string($_POST['firstname']) ."',
+	        lasname = '". sqlite_escape_string($_POST['lastname']) ."'
+	        where email='". sqlite_escape_string($_POST['email']) ."'");
+	    $query->execute();
+    }
+    
+    $email_found = true; // track so that e-mail can be customized
+
+} else {
+
+    // if e-mail not found, add new row
+    try {
+	    // insert data
+	    $query = $db->prepare("INSERT INTO t1
+		    ( " . implode(', ', $params) . " )
+		    VALUES ( :" . implode(', :', $params) . " )");
+	    foreach ( $params as $param )
+		    $query->bindParam(":$param", htmlspecialchars(substr($_POST[$param],0,60)));
+	    $query->execute();
+    }
+    catch(PDOException $e) {
+	    print "Database Error: \n";
+	    print_r($db->errorInfo());
+    }
+
 }
 
 // close the database connection
@@ -44,7 +75,7 @@ $db = NULL;
 
 
 if ( isset($e) && $e ) {
-    echo '<p>Sorry, there was an error. Please notify webmaster@fsfe.org</p>
+    echo '<p>Sorry, there was an error. Please notify <a ref="mailto:webmaster@fsfe.org">webmaster@fsfe.org</a></p>
           <p><a href="javascript: history.go(-1)">Back to the support page</a></p>';
 }
 else {
@@ -65,15 +96,33 @@ else {
 
           ';
 
-    $message = '
-    Thank you for showing your support to the FSFE!
+    if ($email_found === True){
+        // message if e-mail already existed in database
+        // Rationale: this requires e-mail account access to see.
+        // Don't show "already exists" messages in webpage form, since
+        // that could leak database contents information and breach privacy.
+        $message = '
+        Thank you for showing your support to the FSFE!
+        
+        However, this e-mail address was already signed up earlier.
 
-    Please confirm you e-mail address by opening the page
-    http://fsfe.org/support/confirm?'. $_POST['secret'] .'
+        Please see details by opening the page
+        http://fsfe.org/support/confirm?'. $_POST['secret'] .'
 
-    Thank you!
-    ';    
-              
+        Thank you!
+        ';
+    } else { 
+        // default message for new supporters
+        $message = '
+        Thank you for showing your support to the FSFE!
+
+        Please confirm your e-mail address by opening the page
+        http://fsfe.org/support/confirm?'. $_POST['secret'] .'
+
+        Thank you!
+        ';
+    }    
+
     $to      = $_POST['email']; 
     // TODO: is this safe, should we ereg() input first to check correct form?
     $subject = 'Confirm sign up as supporter';

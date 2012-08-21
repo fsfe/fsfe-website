@@ -1,5 +1,5 @@
 <?php
-$subject = 'Confirm your e-mail address';
+$subject = 'Thanks for supporting the FSFE';
 
 $message = '
 Thank you for showing your support to the FSFE!

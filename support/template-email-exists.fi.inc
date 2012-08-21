@@ -1,12 +1,12 @@
 <?php
-$subject = 'Vahvista sähköpostiosoitteesi';
+$subject = 'Kiitos FSFE:n tukemisesta';
 
 $message = '
 Kiitos tukesi osoittamisesta FSFE:lle!
 
 Havaitsimme, että sähköpostiosoitettasi on jo käytettu tukijaksi ilmoittautumisessa.
 
-Katso lisätiedot avaamalla sivu
+Tietosi löytyy sivulta
 http://fsfe.org/support/confirm?'. $secret_from_db .'
 
 Kiitos!

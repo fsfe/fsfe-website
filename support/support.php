@@ -35,16 +35,24 @@ catch(PDOException $e) {
     print_r($db->errorInfo());
 }
 
-if ($row = $query->fetch(PDO::FETCH_ASSOC)) {
+$row = $query->fetch(PDO::FETCH_ASSOC);
+
+if ($row['email']) {
     // e-mail already found, don't add a new row
 
     if ($row['firstname'] == '' || $row['lastname'] == ''){
         // if e-mail found but name missing, update row
-	    $query = $db->prepare("UPDATE t1 SET
-	        firstname = '". sqlite_escape_string($_POST['firstname']) ."',
-	        lasname = '". sqlite_escape_string($_POST['lastname']) ."'
-	        where email='". sqlite_escape_string($_POST['email']) ."'");
-	    $query->execute();
+        try {
+	        $query = $db->prepare("UPDATE t1 SET
+	            firstname = '". sqlite_escape_string($_POST['firstname']) ."',
+	            lasname = '". sqlite_escape_string($_POST['lastname']) ."'
+	            where email='". sqlite_escape_string($_POST['email']) ."'");
+	        $query->execute();
+        }
+        catch(PDOException $e) {
+	        print "Database Error: \n";
+	        print_r($db->errorInfo());
+        }
     }
     
     $email_found = true; // track so that e-mail can be customized

@@ -1,7 +1,6 @@
 <pre>
 Sending reminders to supporters who's e-mail is still unconfirmed...
 <?php
-echo date('Y-m-d', time()-60*60*24*2);
 
 /*
 ini_set( "display_errors","1" );
@@ -18,21 +17,23 @@ catch(PDOException $e) {
 	print 'Error while connecting to Database: '.$e->getMessage();
 }
 
-
 // get all unconfirmed rows
 try {
 	$query = $db->prepare("SELECT * FROM t1 WHERE confirmed='' 
 	    AND time > '".date('Y-m-d', time()-60*60*24*2)." 00:00:00'"); // restrict to rows younger than last two days
 	$query->execute();
+	// debug
+	echo "SELECT * FROM t1 WHERE confirmed='' 
+	    AND time > '".date('Y-m-d', time()-60*60*24*2)." 00:00:00'";
 }
 catch(PDOException $e) {
     print "Database Error: \n";
     print_r($db->errorInfo());
 }
 
+echo "while starts";
 while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
-    echo "
-    ".print_r($row); // debug info
+    echo print_r($row); // debug
     
     if ($row['reminder1'] == '') {
         send_reminder("1", $row);

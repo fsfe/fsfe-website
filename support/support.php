@@ -40,7 +40,7 @@ catch(PDOException $e) {
 
 $row = $query->fetch(PDO::FETCH_ASSOC);
 
-if ($row['email']) {
+if ($row['email'] != '') {
     // e-mail already found, don't add a new row
 
     if ($row['firstname'] == '' || $row['lastname'] == ''){
@@ -63,6 +63,8 @@ if ($row['email']) {
 
 } else {
 
+    $email_found = false;
+    
     // if e-mail not found, add new row
     try {
 	    // insert data
@@ -104,7 +106,7 @@ else {
 	</script><noscript><p><img src="http://piwik.fsfe.org/piwik.php?idsite=4" style="border:0" alt=""></p></noscript>
     ';
 
-    if ($email_found === True){
+    if ($email_found == true){
         // message if e-mail already existed in database
         // Rationale: this requires e-mail account access to see.
         // Don't show "already exists" messages in webpage form, since

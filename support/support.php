@@ -1,11 +1,14 @@
 <?php
-
+/*
 ini_set( "display_errors","1" );
 ERROR_REPORTING( E_ALL) ;
+*/
 
 if ($_POST['email'] == '' || $_POST['country_code'] == '') {
     die("Post data missing. This page should only be accessed via the sign up form.");
 }
+
+$lang = $_POST['lang'];
 
 $params = array('time', 'firstname', 'lastname', 'email', 'country_code', 'secret', 'ref_url', 'ref_id', 'lang');
 
@@ -24,7 +27,7 @@ catch(PDOException $e) {
 }
 
 // save as comment in case some day need to add new field
-$query = $db->query("alter table t1 add column lang TEXT");
+//$query = $db->query("alter table t1 add column lang TEXT");
 
 
 // check if e-mail address already in database
@@ -40,7 +43,7 @@ catch(PDOException $e) {
 
 $row = $query->fetch(PDO::FETCH_ASSOC);
 
-if ($row['email'] != '') {
+if ($row['email']) {
     // e-mail already found, don't add a new row
 
     if ($row['firstname'] == '' || $row['lastname'] == ''){
@@ -92,7 +95,11 @@ if ( isset($e) && $e ) {
           <p><a href="javascript: history.go(-1)">Back to the support page</a></p>';
 }
 else {
-    require('template-thankyou.en.inc');
+    if (file_exists('template-thankyou.'. $lang .'.inc') {
+        require('template-thankyou.'. $lang .'.inc');
+    } else {    
+        require('template-thankyou.en.inc');
+    }
     echo '       
     <script type="text/javascript">
 	var pkBaseURL = (("https:" == document.location.protocol) ? "https://piwik.fsfe.org/" : "http://piwik.fsfe.org/");
@@ -111,16 +118,24 @@ else {
         // Rationale: this requires e-mail account access to see.
         // Don't show "already exists" messages in webpage form, since
         // that could leak database contents information and breach privacy.
-        require('template-email-exists.en.inc');
+        if (file_exists('template-email-exists.'. $lang .'.inc') {
+            require('template-email-exists.'. $lang .'.inc');
+        } else {    
+            require('template-email-exists.en.inc');
+        }
     } else { 
         // default message for new supporters
-        require('template-email-confirm.en.inc');
-    }    
+        if (file_exists('template-email-confirm.'. $lang .'.inc') {
+            require('template-email-confirm.'. $lang .'.inc');
+        } else {    
+            require('template-email-confirm.en.inc');
+        }
+    }
 
     $to      = $_POST['email']; 
     // TODO: is this safe, should we ereg() input first to check correct form?
     $subject = 'Confirm sign up as supporter';
-    $headers = 'From: "FSFE Support" <office@fsfe.org>' . "\r\n";
+    $headers = 'From: "FSFE Supporter form" <office@fsfe.org>' . "\r\n";
     mail($to, $subject, $message, $headers);
 }
 

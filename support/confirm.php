@@ -55,7 +55,11 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
         }
     }
     
-    require('template-confirm-done.en.inc');
+    if (file_exists('template-confirm-done.'. $lang .'.inc') {
+        require('template-confirm-done.'. $lang .'.inc');
+    } else {
+        require('template-confirm-done.en.inc');
+    }
 ?>
 
     <script type="text/javascript">
@@ -73,7 +77,11 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
 }
 
 if ($found == False) {
-    require('template-confirm-false.en.inc');
+    if (file_exists('template-confirm-false.'. $lang .'.inc') {
+        require('template-confirm-false.'. $lang .'.inc');
+    } else {
+        require('template-confirm-false.en.inc');
+    }
 }
 
 // close the database connection

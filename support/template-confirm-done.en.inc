@@ -17,9 +17,9 @@ echo '
 <ul>
 <li><a href="http://fsfe.org/news/newsletter">Subscribe to the FSFE newsletter</a></li>
 <li><a href="http://fsfe.org/contact/community">Join interesting mailing lists</a></li>
-<li><a href="http://fsfe.org/contact/local">Meet your country team</a></li>
+<li><a href="http://fsfe.org/uk/">Meet your country team</a></li>
 <li><a href="http://fellowship.fsfe.org/">Join the Fellowship</a></li>
-<li><a href="http://fsfe.org/donate/"></a>Donate to the FSFE</li>
+<li><a href="http://fsfe.org/donate/">Donate to the FSFE</a></li>
 </ul>
 
 <p><a href="http://fsfe.org/contribute/">View all options to contribute</a></p>

@@ -49,11 +49,8 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
 	        print_r($db->errorInfo());
         }
     }
-        
-    echo "<h1>Hello ".$row['firstname']." ".$row['lastname']."</h1>
-    <p>Your address ".$row['email']." was confirmed ".$row['confirmed'].".</p>
-    <p>Thank you for your support to the <a href='http://fsfe.org/'>FSFE</a>!</p>";
     
+    require('template-confirm-done.en.inc');
 ?>
 
     <script type="text/javascript">
@@ -71,7 +68,7 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
 }
 
 if ($found == False) {
-    echo "No address was confirmed. Please sign up again.";
+    require('template-confirm-false.en.inc');
 }
 
 // close the database connection

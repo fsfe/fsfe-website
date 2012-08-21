@@ -55,6 +55,7 @@ if ($row['email']) {
         }
     }
     
+    $secret_from_db = $row['secret'];
     $email_found = true; // track so that e-mail can be customized
 
 } else {

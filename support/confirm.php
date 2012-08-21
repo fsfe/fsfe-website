@@ -5,14 +5,14 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 */
 
-if (preg_match("/[a-z0-9]/i", $_SERVER["QUERY_STRING"])) {
-    // keep old way to be backwards compatible
-    $secret = $_SERVER["QUERY_STRING"];
-    $lang = "en";
-} elseif ($_GET['s'] != '' && $_GET['lang'] != '') {
+if ($_GET['s'] != '' && $_GET['lang'] != '') {
     // new way with variable language
     $secret = $_GET['s'];
     $lang = $_GET['lang'];
+} elseif (preg_match("/[a-z0-9]/i", $_SERVER["QUERY_STRING"])) {
+    // keep old way to be backwards compatible
+    $secret = $_SERVER["QUERY_STRING"];
+    $lang = "en";
 } else {
     die("This page must be called with a parameter");
 }

@@ -23,18 +23,19 @@ try {
 	    AND time > '".date('Y-m-d', time()-60*60*24*2)." 00:00:00'"); // restrict to rows younger than last two days
 	$query->execute();
 	// debug
-	echo "SELECT * FROM t1 WHERE confirmed='' 
-	    AND time > '".date('Y-m-d', time()-60*60*24*2)." 00:00:00'";
+	echo "SELECT * FROM t1 WHERE confirmed='' ";
+	//	    AND time > '".date('Y-m-d', time()-60*60*24*2)." 00:00:00'";
 }
 catch(PDOException $e) {
     print "Database Error: \n";
     print_r($db->errorInfo());
 }
 
-echo "while starts";
+
 while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
     echo print_r($row); // debug
     
+    die();
     if ($row['reminder1'] == '') {
         send_reminder("1", $row);
     } elseif ($row['reminder2'] == '') {

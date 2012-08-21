@@ -55,7 +55,7 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
         }
     }
     
-    if (file_exists('template-confirm-done.'. $lang .'.inc') {
+    if (file_exists('template-confirm-done.'. $lang .'.inc')) {
         require('template-confirm-done.'. $lang .'.inc');
     } else {
         require('template-confirm-done.en.inc');
@@ -77,7 +77,7 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
 }
 
 if ($found == False) {
-    if (file_exists('template-confirm-false.'. $lang .'.inc') {
+    if (file_exists('template-confirm-false.'. $lang .'.inc')) {
         require('template-confirm-false.'. $lang .'.inc');
     } else {
         require('template-confirm-false.en.inc');

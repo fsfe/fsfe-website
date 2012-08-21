@@ -95,7 +95,7 @@ if ( isset($e) && $e ) {
           <p><a href="javascript: history.go(-1)">Back to the support page</a></p>';
 }
 else {
-    if (file_exists('template-thankyou.'. $lang .'.inc') {
+    if (file_exists('template-thankyou.'. $lang .'.inc')) {
         require('template-thankyou.'. $lang .'.inc');
     } else {    
         require('template-thankyou.en.inc');
@@ -118,14 +118,14 @@ else {
         // Rationale: this requires e-mail account access to see.
         // Don't show "already exists" messages in webpage form, since
         // that could leak database contents information and breach privacy.
-        if (file_exists('template-email-exists.'. $lang .'.inc') {
+        if (file_exists('template-email-exists.'. $lang .'.inc')) {
             require('template-email-exists.'. $lang .'.inc');
         } else {    
             require('template-email-exists.en.inc');
         }
     } else { 
         // default message for new supporters
-        if (file_exists('template-email-confirm.'. $lang .'.inc') {
+        if (file_exists('template-email-confirm.'. $lang .'.inc')) {
             require('template-email-confirm.'. $lang .'.inc');
         } else {    
             require('template-email-confirm.en.inc');

@@ -1,5 +1,5 @@
 <pre>
-Sending reminders to supporters whos e-mail is still unconfirmed...
+Sending reminders to supporters who's e-mail is still unconfirmed...
 <?php
 /*
 ini_set( "display_errors","1" );
@@ -16,15 +16,11 @@ catch(PDOException $e) {
 	print 'Error while connecting to Database: '.$e->getMessage();
 }
 
-$query = $db->query("alter table t1 add column reminder1 DATETIME");
-$query = $db->query("alter table t1 add column reminder2 DATETIME");
-$query = $db->query("alter table t1 add column reminder3 DATETIME");
-
 
 // get all unconfirmed rows
 try {
-	$query = $db->prepare("SELECT * FROM t1 where confirmed='' 
-	    AND time >= '".date('Y-m-d', time()-60*60*24*2)."'"); // restrict to rows younger than last two days
+	$query = $db->prepare("SELECT * FROM t1 WHERE confirmed='' 
+	    AND time > '".date('Y-m-d', time()-60*60*24*2)."'"); // restrict to rows younger than last two days
 	$query->execute();
 }
 catch(PDOException $e) {

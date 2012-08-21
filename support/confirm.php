@@ -5,14 +5,9 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 */
 
-if ($_GET['s'] != '' && $_GET['lang'] != '') {
-    // new way with variable language
-    $secret = $_GET['s'];
-    $lang = $_GET['lang'];
-} elseif (preg_match("/[a-z0-9]/i", $_SERVER["QUERY_STRING"])) {
+if (preg_match("/[a-z0-9]/i", $_SERVER["QUERY_STRING"])) {
     // keep old way to be backwards compatible
     $secret = $_SERVER["QUERY_STRING"];
-    $lang = "en";
 } else {
     die("This page must be called with a parameter");
 }
@@ -55,6 +50,8 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
         }
     }
     
+    $lang = $row['lang'];
+    
     if (file_exists('template-confirm-done.'. $lang .'.inc')) {
         require('template-confirm-done.'. $lang .'.inc');
     } else {
@@ -77,11 +74,7 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
 }
 
 if ($found == False) {
-    if (file_exists('template-confirm-false.'. $lang .'.inc')) {
-        require('template-confirm-false.'. $lang .'.inc');
-    } else {
-        require('template-confirm-false.en.inc');
-    }
+    echo "There was an error in confirming the e-mail address. Please sign up again. If the problem presists, please send feedback at <a href='http://fsfe.org/contact/'>fsfe.org/contact</a>.";
 }
 
 // close the database connection

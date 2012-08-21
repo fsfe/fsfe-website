@@ -1,4 +1,5 @@
 <?php
+$subject = 'Vahvista sähköpostiosoitteesi';
 
 $message = '
 Kiitos tukesi osoittamisesta FSFE:lle!

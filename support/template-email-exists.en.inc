@@ -1,3 +1,5 @@
+<?php
+
 $message = '
 Thank you for showing your support to the FSFE!
 
@@ -9,3 +11,4 @@ http://fsfe.org/support/confirm?'. $_POST['secret'] .'
 Thank you!
 ';
 
+?>

@@ -1,6 +1,8 @@
 <pre>
 Sending reminders to supporters who's e-mail is still unconfirmed...
 <?php
+echo date('Y-m-d', time()-60*60*24*2);
+
 /*
 ini_set( "display_errors","1" );
 ERROR_REPORTING( E_ALL) ;

@@ -27,7 +27,6 @@ catch(PDOException $e) {
 
 try {
 	// check data
-	echo $secret;
 	$query = $db->prepare("SELECT * FROM t1 where secret='". sqlite_escape_string($secret) ."'");
 	$query->execute();
 }

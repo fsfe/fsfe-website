@@ -37,7 +37,7 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
     " 2: ".$row['reminder2'].
     " 3: ".$row['reminder3']."\n";
     
-    $two_days_ago = date('Y-m-d', time()-60*60*24*2)." 00:00:00'");
+    $two_days_ago = date('Y-m-d', time()-60*60*24*2)." 00:00:00";
     
     if ($row['reminder1'] == '') {
         send_reminder("1", $row);

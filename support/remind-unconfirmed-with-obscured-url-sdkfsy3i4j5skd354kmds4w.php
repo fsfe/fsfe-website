@@ -41,13 +41,15 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
     
     // send only one reminder
     // don't send reminders more frequent than every third day
-    if ($row['reminder1'] == '' && $row['time'] < $two_days_ago) {
-        send_reminder("1", $row);
+    if ($row['reminder1'] == '') {
+        if ($row['time'] < $two_days_ago) {
+            send_reminder("1", $row);
+        } // else do nothing
     } elseif ($row['reminder2'] == '' && $row['reminder1'] < $two_days_ago) {
         send_reminder("2", $row);
     } elseif ($row['reminder3'] == '' && $row['reminder2'] < $two_days_ago) {
         send_reminder("3", $row);
-    }
+    } // else do nothing
 }
 
 

@@ -30,7 +30,12 @@ catch(PDOException $e) {
 
 
 while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
-    echo $row['email']." signed up ".$row['time'].", reminder 1: ".$row['reminder1']." 2: ".$row['reminder2']." 3: ".$row['reminder3']." confirmed: ".$row['confirmed']." ".; // debug
+    echo $row['email']." signed up ".
+    $row['time'].
+    ", reminder 1: ".$row['reminder1'].
+    " 2: ".$row['reminder2'].
+    " 3: ".$row['reminder3'].
+    " confirmed: ".$row['confirmed']; // debug
     
     if ($row['reminder1'] == '') {
         send_reminder("1", $row);

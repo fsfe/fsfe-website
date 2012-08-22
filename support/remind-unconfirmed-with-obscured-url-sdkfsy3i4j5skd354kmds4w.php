@@ -42,9 +42,9 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
     if ($row['reminder1'] == '') {
         send_reminder("1", $row);
     // don't send reminders more frequent than every third day
-    } elseif ($row['reminder2'] == '' || $row['reminder1'] < $two_days_ago) {
+    } elseif ($row['reminder2'] == '' && $row['reminder1'] < $two_days_ago) {
         send_reminder("2", $row);
-    } elseif ($row['reminder3'] == '' || $row['reminder2'] < $two_days_ago) {
+    } elseif ($row['reminder3'] == '' && $row['reminder2'] < $two_days_ago) {
         send_reminder("3", $row);
     }
 }

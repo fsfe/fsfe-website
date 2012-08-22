@@ -20,7 +20,7 @@ catch(PDOException $e) {
 // get all unconfirmed rows
 try {
 	$query = $db->prepare("SELECT * FROM t1 WHERE confirmed is NULL 
-	    AND time > '".date('Y-m-d', time()-60*60*24*30)." 00:00:00'"); // restrict to rows younger than a month
+	    AND time > '".date('Y-m-d', time()-60*60*24*90)." 00:00:00'"); // restrict to rows younger than a month
 	$query->execute();
 }
 catch(PDOException $e) {

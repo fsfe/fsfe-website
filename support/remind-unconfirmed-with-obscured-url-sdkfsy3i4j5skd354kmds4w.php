@@ -30,10 +30,10 @@ catch(PDOException $e) {
 
 
 while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
-    echo $row['email'].
+    echo "\n".$row['email'].
     " signed up ".$row['time'].
     ", confirmed: ".$row['confirmed']."\n".
-    "   reminder 1: ".$row['reminder1'].
+    "    reminder 1: ".$row['reminder1'].
     " 2: ".$row['reminder2'].
     " 3: ".$row['reminder3']."\n";
     
@@ -68,7 +68,7 @@ function send_reminder($reminder_number, $row) {
     $headers = 'From: "FSFE" <office@fsfe.org>' . "\r\n";
     mail($to, $subject, $message, $headers);
 
-    echo "  => Sent reminder number ".$reminder_number." to ".$row['email']."\n";
+    echo "    => Sent reminder number ".$reminder_number." to ".$row['email']."\n";
     
     try {
         $query = $db->prepare("UPDATE t1 SET

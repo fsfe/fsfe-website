@@ -2,8 +2,6 @@
 Sending reminders to supporters who's e-mail is still unconfirmed...
 <?php
 
-//die("Disabled to avoid unintentional sending of reminders.");
-
 /*
 ini_set( "display_errors","1" );
 ERROR_REPORTING( E_ALL) ;
@@ -22,7 +20,7 @@ catch(PDOException $e) {
 // get all unconfirmed rows
 try {
 	$query = $db->prepare("SELECT * FROM t1 WHERE confirmed is NULL 
-	    AND time > '".date('Y-m-d', time()-60*60*24*2)." 00:00:00'"); // restrict to rows younger than last two days
+	    AND time > '".date('Y-m-d', time()-60*60*24*30)." 00:00:00'"); // restrict to rows younger than a month
 	$query->execute();
 }
 catch(PDOException $e) {
@@ -39,11 +37,14 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
     " 3: ".$row['reminder3'].
     " confirmed: ".$row['confirmed']."\n"; // debug
     
+    $two_days_ago = date('Y-m-d', time()-60*60*24*2)." 00:00:00'");
+    
     if ($row['reminder1'] == '') {
         send_reminder("1", $row);
-    } elseif ($row['reminder2'] == '') {
+    // don't send reminders more frequent than every third day
+    } elseif ($row['reminder2'] == '' || $row['reminder1'] < $two_days_ago) {
         send_reminder("2", $row);
-    } elseif ($row['reminder3'] == '') {
+    } elseif ($row['reminder3'] == '' || $row['reminder2'] < $two_days_ago) {
         send_reminder("3", $row);
     }
 }

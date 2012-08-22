@@ -22,9 +22,6 @@ try {
 	$query = $db->prepare("SELECT * FROM t1 WHERE confirmed is NULL 
 	    AND time > '".date('Y-m-d', time()-60*60*24*2)." 00:00:00'"); // restrict to rows younger than last two days
 	$query->execute();
-	// debug
-	echo "SELECT * FROM t1 WHERE confirmed='' ";
-	//	    AND time > '".date('Y-m-d', time()-60*60*24*2)." 00:00:00'";
 }
 catch(PDOException $e) {
     print "Database Error: \n";
@@ -33,9 +30,8 @@ catch(PDOException $e) {
 
 
 while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
-    echo print_r($row); // debug
+    echo $row['email']." signed up ".$row['time'].", reminder 1: ".$row['reminder1']." 2: ".$row['reminder2']." 3: ".$row['reminder3']." confirmed: ".$row['confirmed']." ".; // debug
     
-    die();
     if ($row['reminder1'] == '') {
         send_reminder("1", $row);
     } elseif ($row['reminder2'] == '') {

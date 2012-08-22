@@ -15,6 +15,7 @@ $params = array('time', 'firstname', 'lastname', 'email', 'country_code', 'secre
 // Save time in "YYYY-MM-DD HH:MM:SS"
 $_POST['time'] = date('Y-m-d H:i:s');
 $_POST['secret'] = md5("salt:ksflei54sif76u" . date('Y-m-d H:i:s') . $_POST['email']);
+$secret = $_POST['secret'];
 // salt guarantees uniquness for this database
 // timestamp guarantees uniquess for each entry, even if e-mail is the same
 

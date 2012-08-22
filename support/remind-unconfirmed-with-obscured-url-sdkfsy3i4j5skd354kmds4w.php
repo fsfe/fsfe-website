@@ -2,6 +2,8 @@
 Sending reminders to supporters who's e-mail is still unconfirmed...
 <?php
 
+//die("Disabled to avoid unintentional sending of reminders.");
+
 /*
 ini_set( "display_errors","1" );
 ERROR_REPORTING( E_ALL) ;
@@ -35,7 +37,7 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
     ", reminder 1: ".$row['reminder1'].
     " 2: ".$row['reminder2'].
     " 3: ".$row['reminder3'].
-    " confirmed: ".$row['confirmed']; // debug
+    " confirmed: ".$row['confirmed']."\n"; // debug
     
     if ($row['reminder1'] == '') {
         send_reminder("1", $row);
@@ -53,6 +55,7 @@ $db = NULL;
 
 function send_reminder($reminder_number, $row) {
     GLOBAL $db, $timestamp;
+    $secret = $row['secret'];
 
     if (file_exists('template-email-confirm.'. $row['lang'] .'.inc')) {
         require('template-email-confirm.'. $row['lang'] .'.inc');
@@ -64,7 +67,7 @@ function send_reminder($reminder_number, $row) {
     $headers = 'From: "FSFE" <office@fsfe.org>' . "\r\n";
     mail($to, $subject, $message, $headers);
 
-    echo "Sent reminder number ".$reminder_number." to ".$row['email']."\n";
+    echo "  => Sent reminder number ".$reminder_number." to ".$row['email']."\n";
     
     try {
         $query = $db->prepare("UPDATE t1 SET

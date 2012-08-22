@@ -30,12 +30,12 @@ catch(PDOException $e) {
 
 
 while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
-    echo $row['email']." signed up ".
-    $row['time'].
-    ", reminder 1: ".$row['reminder1'].
+    echo $row['email'].
+    " signed up ".$row['time'].
+    ", confirmed: ".$row['confirmed']."\n".
+    "   reminder 1: ".$row['reminder1'].
     " 2: ".$row['reminder2'].
-    " 3: ".$row['reminder3'].
-    " confirmed: ".$row['confirmed']."\n"; // debug
+    " 3: ".$row['reminder3']."\n";
     
     $two_days_ago = date('Y-m-d', time()-60*60*24*2)." 00:00:00'");
     

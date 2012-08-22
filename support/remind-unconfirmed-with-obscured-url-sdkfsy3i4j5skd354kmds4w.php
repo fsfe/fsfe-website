@@ -19,7 +19,7 @@ catch(PDOException $e) {
 
 // get all unconfirmed rows
 try {
-	$query = $db->prepare("SELECT * FROM t1 WHERE confirmed='' 
+	$query = $db->prepare("SELECT * FROM t1 WHERE confirmed is NULL 
 	    AND time > '".date('Y-m-d', time()-60*60*24*2)." 00:00:00'"); // restrict to rows younger than last two days
 	$query->execute();
 	// debug

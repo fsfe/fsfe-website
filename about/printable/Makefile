@@ -1,5 +1,5 @@
 foldersources := $(wildcard folder.??.xhtml)
-leafletsources := $(wildcard folder.??.xhtml) $(wildcard ../../projects/*/leaflet-*.??.xhtml)
+leafletsources := $(wildcard folder.??.xhtml) $(wildcard ../../activities/*/leaflet-*.??.xhtml)
 
 pdfs_F := $(foldersources:.xhtml=.F.pdf)
 pdfs_G := $(leafletsources:.xhtml=.G.pdf)

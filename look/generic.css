@@ -441,6 +441,14 @@ p.left {
   overflow: hidden;
 }
 
+#content div.highlight {
+  border-width: 2px;
+  border-style: dotted;
+  border-color: rgb(107,200,0);
+  background-color: rgb(173,255,84);
+  padding: .5em;
+}
+
 #content #frontpage {
   font-size: 90%;
 }

@@ -106,6 +106,7 @@ else {
     } else {    
         require('template-thankyou.en.inc');
     }
+    // TODO: check if this JS is really loaded via XMLHttpRequest or just the picture
     echo '       
     <script type="text/javascript">
 	try {

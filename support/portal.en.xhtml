@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<html>
+  <head>
+    <title>Support - FSFE</title>
+  </head>
+
+  <body>
+    <h1>Hello <firstname/> <lastname/></h1>
+    <div id="introduction" class="support_page">
+      <div class="image">
+        <img src="/graphics/stars-smaller.png" alt="Stars"/>
+      </div>
+
+      <p>Your address <email/> was confirmed on <confirmed/>.</p>
+      <p>Thank you for your support to the <a href="http://fsfe.org/">FSFE</a>!</p>
+
+      <h2>Contribute more?</h2>
+
+      <p>If you want to contribute more than just signing up as a supporter, you may also:</p>
+      <ul>
+      <li><a href="http://fsfe.org/news/newsletter">Subscribe to the FSFE newsletter</a></li>
+      <li><a href="http://fsfe.org/contact/community">Join interesting mailing lists</a></li>
+      <li><a href="http://fsfe.org/uk/">Meet your country team</a></li>
+      <li><a href="http://fellowship.fsfe.org/">Join the Fellowship</a></li>
+      <li><a href="http://fsfe.org/donate/">Donate to the FSFE</a></li>
+      </ul>
+
+      <p><a href="http://fsfe.org/contribute/">View all options to contribute</a></p>
+         
+        <div id="support_form">
+
+        <form method="post" action="" class="support">
+            <p>
+            <label id="firstname">First name
+              <input type="text" name="firstname" />
+            </label>
+            </p>
+            <p>
+            <label id="lastname">Last name
+              <input type="text" name="lastname" />
+            </label>
+            </p>
+            <p>
+            <label id="email">E-mail (required)
+              <input type="email" name="email" required="required" />
+            </label>
+            </p>
+            <p>
+            <label id="country">Country (required)
+              <select name="country_code" required="required">
+                <option value="">Select..</option>
+                <optgroup label="Europe">
+                  <country-list-europe/>
+                </optgroup>
+                <optgroup label="Europe">
+                  <country-list-other-continents/>
+                </optgroup>
+              </select>
+            </label>
+            </p>
+
+          <p><input type="submit" name="submit" value="I Support the FSFE!" data-loading-text="Sending.."/></p>
+        
+          <input type="hidden" name="ref_url" value="" />
+          <input type="hidden" name="ref_id" value="" />
+          <input type="hidden" name="lang" value="en" />
+        </form>
+
+      <p><em>Our privacy policy is simple: We will never share your data with anyone outside FSFE. Period.</em></p>
+
+      </div>
+
+
+    <support-portal-javascript/>
+  </div>
+        
+  </body>
+
+  <timestamp>$Date: 2012-08-30 14:53:43 +0300 (to, 30 elo 2012) $ $Author: otto $</timestamp>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

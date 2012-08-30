@@ -441,7 +441,7 @@ p.left {
   overflow: hidden;
 }
 
-#content div.highlight {
+#content .highlight {
   border-width: 2px;
   border-style: dotted;
   border-color: rgb(107,200,0);

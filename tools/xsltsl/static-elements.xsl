@@ -119,7 +119,13 @@
     $(document).ready(function() {
         var secret = window.location.search.slice(1);
         $.getJSON('portal-backend?'+secret, function(data) {
-            map_json_to_html(data);
+            $("#support_portal_loading").hide();
+            $("#support_portal").show();
+            if (data.error) {
+                $("#support_portal").html(data.error);
+            } else {
+                map_json_to_html(data);
+            }
         });
     });
     /* ]]> */
@@ -153,6 +159,7 @@
                   function(data) {
                       $("#support_form").fadeOut();
                       $("#introduction").append('<div id="support_form_sent">'+data+'</div>');
+                      piwikTracker.trackGoal(2); // logs a conversion for goal 2
                   }
                 );
 

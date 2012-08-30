@@ -2014,6 +2014,11 @@ div.map {
     border: 2px solid #7FDF55;
 }
 
+#support_portal {
+    visibility: hidden;
+    margin-left: 150px;
+}
+
 /* ------------------------------------------------------------------------- */
 /* Created with Free Software buttons                                        */
 /* ------------------------------------------------------------------------- */

@@ -8,14 +8,17 @@ ERROR_REPORTING( E_ALL) ;
 header("Access-Control-Allow-Origin: *");
 
 if ($_POST['email'] == '' || $_POST['country_code'] == '') {
-    die("Post data missing. This page should only be accessed via the sign up form.");
+    die("Required post data missing (e-mail and country). This page should only be accessed via the sign up form.");
+    /* If JavaScript is enabled in the form, this should never happen. 
+       If JS is not enabled, the user can press back, fill the missing fields and repost.
+       If JS not enabled, the row will be missing language and referrer data, but we can live with that. */
 }
 
 $lang = $_POST['lang'];
 
 $params = array('time', 'firstname', 'lastname', 'email', 'country_code', 'secret', 'ref_url', 'ref_id', 'lang');
 
-// Save time in "YYYY-MM-DD HH:MM:SS"
+// save time in "YYYY-MM-DD HH:MM:SS"
 $_POST['time'] = date('Y-m-d H:i:s');
 $_POST['secret'] = md5("salt:ksflei54sif76u" . date('Y-m-d H:i:s') . $_POST['email']);
 $secret = $_POST['secret'];
@@ -23,7 +26,7 @@ $secret = $_POST['secret'];
 // timestamp guarantees uniquess for each entry, even if e-mail is the same
 
 try {
-    //open the database
+    // open the database
 	$db = new PDO( 'sqlite:../../../db/support.sqlite' ); 
 }
 catch(PDOException $e) {
@@ -95,8 +98,7 @@ $db = NULL;
 
 
 if ( isset($e) && $e ) {
-    echo '<p>Sorry, there was an error. Please notify <a ref="mailto:webmaster@fsfe.org">webmaster@fsfe.org</a></p>
-          <p><a href="javascript: history.go(-1)">Back to the support page</a></p>';
+    echo '<p>Sorry, there was an error. Please notify <a ref="mailto:webmaster@fsfe.org">webmaster@fsfe.org</a></p>';
 }
 else {
     if (file_exists('template-thankyou.'. $lang .'.inc')) {
@@ -106,9 +108,6 @@ else {
     }
     echo '       
     <script type="text/javascript">
-	var pkBaseURL = (("https:" == document.location.protocol) ? "https://piwik.fsfe.org/" : "http://piwik.fsfe.org/");
-	document.write(unescape("%3Cscript src=\'" + pkBaseURL + "piwik.js\' type=\'text/javascript\'%3E%3C/script%3E"));
-	</script><script type="text/javascript">
 	try {
 	var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 4);
 	piwikTracker.trackPageView();

@@ -157,4 +157,6 @@
 			
     </xsl:template>
     
+    <!-- please note that there is also a country list ordered by continent (Europe or not) in static-elements.xsl -->
+    
 </xsl:stylesheet>

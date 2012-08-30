@@ -1309,7 +1309,7 @@ a.fn {
 }
 
 #front-page-introduction {
-    font-size: 120%;
+    font-size: 135%;
 }
 
 #front-page-introduction p {
@@ -2015,7 +2015,7 @@ div.map {
 }
 
 #support_portal {
-    visibility: hidden;
+    display: none;
     margin-left: 150px;
 }
 

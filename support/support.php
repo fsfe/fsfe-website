@@ -4,6 +4,9 @@ ini_set( "display_errors","1" );
 ERROR_REPORTING( E_ALL) ;
 */
 
+// allow XMLHttpRequest from any domain
+header("Access-Control-Allow-Origin: *");
+
 if ($_POST['email'] == '' || $_POST['country_code'] == '') {
     die("Post data missing. This page should only be accessed via the sign up form.");
 }

@@ -643,10 +643,8 @@ p#introduction {
 /* ------------------------------------------------------------------------- */
 /* Promopack order form                                                      */
 /* ------------------------------------------------------------------------- */
-#orderpromo {
-  font-weight: bold;
-}
 #orderpromo .formlabel {
+  font-weight: bold;
   display: inline-block;
   text-align: right;
   vertical-align: top;

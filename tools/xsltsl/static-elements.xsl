@@ -121,29 +121,29 @@
 		    rules: {
 			    email: {email: true, required: true},
 			    country_code: {required: true}
-		     }
+		     },
+		     submitHandler: function(form) {
+
+                /* stop form from submitting normally */
+                event.preventDefault();
+                
+                /* cannot use this directly as it is an HTMLFormElement */
+                var $form = $(this);
+                var $submitbutton = $("form.support input[type='submit']");
+                $submitbutton.val($submitbutton.attr("data-loading-text"))
+                
+                /* Send the data using post and put the results in a div */
+                $.post($form.attr("action"), $form.serialize(),
+                  function(data) {
+                      $("#support_form").fadeOut();
+                      $("#introduction").append('<div id="support_form_sent">'+data+'</div>');
+                  }
+                );
+
+             }
 	    });
     });
 
-    /* attach a submit handler to the form */
-    $("form.support").submit(function(event) {
-
-        /* stop form from submitting normally */
-        event.preventDefault();
-        
-        /* cannot use this directly as it is an HTMLFormElement */
-        var $form = $(this);
-        var $submitbutton = $("form.support input[type='submit']");
-        $submitbutton.val($submitbutton.attr("data-loading-text"))
-        
-        /* Send the data using post and put the results in a div */
-        $.post($form.attr("action"), $form.serialize(),
-          function(data) {
-              $("#support_form").fadeOut();
-              $("#introduction").append('<div id="support_form_sent">'+data+'</div>');
-          }
-        );
-    });
     /* ]]> */
     </script>
 

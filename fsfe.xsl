@@ -215,6 +215,18 @@
     </xsl:if>
     <!-- End apply newsletter page rules -->
     
+    <!-- Apply support page -->
+    <xsl:template match="support-form-javascript">
+      <xsl:call-template name="support-form-javascript" />
+    </xsl:template>
+    <xsl:template match="country-list-europe">
+      <xsl:call-template name="country-list-europe" />
+    </xsl:template>
+    <xsl:template match="country-list-other-continents">
+      <xsl:call-template name="country-list-other-continents" />
+    </xsl:template>
+    <!-- End apply support page rules -->
+
     <!-- Depreciated- see next block: Apply article rules -->
     <xsl:if test = "string(/buildinfo/document/head/meta[@name='author-name-1']/@content)">
       <xsl:element name="div">

@@ -22,7 +22,7 @@ if (
   and $email
   and $address
   and $specifics
-  and not $query->param("url");
+  and not $query->param("url")
 ) {
 
   #send mail
@@ -51,10 +51,10 @@ Your friendly automatic web order program.
 ";
   close MAIL;
 
-  print "Location: /order/orderpromo-thanks.en.html\n\n"
+  print "Location: /order/orderpromo-thanks.en.html\n\n";
 } else {
 
   #something was wrong with the input
-  print "Location: /order/orderpromo-error.en.html\n\n"
+  print "Location: /order/orderpromo-error.en.html\n\n";
 
 }

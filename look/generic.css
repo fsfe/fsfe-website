@@ -640,6 +640,16 @@ p#introduction {
   text-align: right;
 }
 
+/* ------------------------------------------------------------------------- */
+/* Promopack order form                                                      */
+/* ------------------------------------------------------------------------- */
+#orderpromo .formlabel {
+  text-align: right;
+  width: 40em;
+}
+#orderpromo textarea {
+  display: inline;
+}
 
 /* ------------------------------------------------------------------------- */
 /* Subpages menu                                                             */

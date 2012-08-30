@@ -44,9 +44,21 @@ in general we just send packages up to 1kg. If you need more, please ask.</p>
 <p>Please be aware that these are rough numbers and they will vary from order to order. They might also vary from your location, as we do have promotion material which is not yet available in English, for example the Flyer "Freiheit!"</p>
 
 		</div>
-		<p><em>*This should be a form to fill out*<br/>
-		Please send promotion to:<br/>Name, Lastname: [field]<br/>Address: [field]<br/>Email: [field]<br/>I would like to have the default promotion package: Yes | No<br/>Instead of sending me the default package, I would like the promotion package to focus on: [comment field]<br/>Any comment:
-[comment field]</em></p>
+		<form id="orderpromo" method="post" action="" accept-charset="utf-8">
+		Please send promotion to:<br/>
+		<span class="formlabel">First name, Last name:</span>
+		  <input type="text" name="firstname" placeholder="First Name" size="20" />
+		  <input type="text"  name="lastname" placeholder="Last Name" size="20" /><br/>
+		<span class="formlabel">Email:</span>
+		  <input type="text" name="email" placeholder="Email" size="40" /><br/>
+		<span class="formlabel">Address:</span>
+		  <textarea name="address" rows="4" cols="40"></textarea><br/>
+		<input type="checkbox" name="defaultpack" value="true" checked="checked" />I would like to have the default promotion package<br/>
+		Instead of sending me the default package, I would like the promotion package to focus on:<br/>
+		  <textarea name="specifics" rows="6" cols="40"></textarea><br/>
+		Any comment:<br/>
+		  <textarea name="comment" rows="4" cols="40"></textarea><br/>
+		</form>
 
 
 		<h2 id="id-available-promotion-material">Available promotion material</h2>

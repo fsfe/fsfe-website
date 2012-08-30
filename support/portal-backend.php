@@ -66,7 +66,7 @@ if ($row['email'] != '') {
     
 } else {
 
-    echo "There was an error in confirming the e-mail address. Please sign up again. If the problem presists, please send feedback at <a href='http://fsfe.org/contact/'>fsfe.org/contact</a>.";
+    echo '{"error":"There was an error in confirming the e-mail address. Please sign up again. If the problem presists, please send feedback at <a href=\'http://fsfe.org/contact/\'>fsfe.org/contact</a>."}';
 
 }
 

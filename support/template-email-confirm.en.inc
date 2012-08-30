@@ -1,4 +1,6 @@
 <?php
+// This is the contents of the e-mail sent to a new signup
+
 $subject = 'Confirm your e-mail address';
 
 $message = '

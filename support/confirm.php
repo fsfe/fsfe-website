@@ -51,7 +51,15 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
     }
     
     $lang = $row['lang'];
-    
+
+?>
+<html lang="<?php echo $row['lang']; ?>">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="refresh" content="3;URL='http://fsfe.org/support/portal?<?php echo $row['secret']; ?>'">
+</head>
+    <body>
+<?php    
     if (file_exists('template-confirm-done.'. $lang .'.inc')) {
         require('template-confirm-done.'. $lang .'.inc');
     } else {
@@ -69,6 +77,9 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
 	piwikTracker.enableLinkTracking();
 	} catch( err ) {}
 	</script><noscript><p><img src="http://piwik.fsfe.org/piwik.php?idsite=4" style="border:0" alt=""></p></noscript>
+
+	</body>
+</html>
 
 <?php
 }

@@ -22,7 +22,16 @@ catch(PDOException $e) {
 
 try {
 	// check data
-	$query = $db->prepare("SELECT * FROM t1 where secret='". sqlite_escape_string($secret) ."'");
+	$query = $db->prepare("SELECT 
+	confirmed,
+    country_code,
+    email,
+    firstname,
+    lastname,
+    lang,
+    zip,
+    city
+	FROM t1 where secret='". sqlite_escape_string($secret) ."'");
 	$query->execute();
 }
 catch(PDOException $e) {

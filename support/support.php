@@ -35,6 +35,8 @@ catch(PDOException $e) {
 
 // save as comment in case some day need to add new field
 //$query = $db->query("alter table t1 add column lang TEXT");
+$query = $db->query("alter table t1 add column zip TEXT");
+$query = $db->query("alter table t1 add column city TEXT");
 
 
 // check if e-mail address already in database

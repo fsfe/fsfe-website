@@ -108,8 +108,25 @@
     </xsl:copy>
   </xsl:template>
   
+  <xsl:template name="support-portal-javascript">
+    <script type="text/javascript">
+    /* <![CDATA[ */
+    function map_json_to_html(data) {
+        for (x in data) {
+            $(x).html(data[x]);
+        }
+    }
+    $(document).ready(function() {
+        var secret = window.location.search.slice(1);
+        $.getJSON('portal-backend?'+secret, function(data) {
+            map_json_to_html(data);
+        });
+    });
+    /* ]]> */
+    </script>
+  </xsl:template>
+  
   <xsl:template name="support-form-javascript">
-    
     <script type="text/javascript" src="/scripts/jquery.validate.min.js"></script>
     <script type="text/javascript">
     /* <![CDATA[ */
@@ -145,7 +162,6 @@
 
     /* ]]> */
     </script>
-
   </xsl:template>
 
     <!-- refactored these her from the support form -->

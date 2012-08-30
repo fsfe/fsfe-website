@@ -33,38 +33,48 @@
         <form method="post" action="" class="support">
             <p>
             <label id="firstname">First name
-              <input type="text" name="firstname" />
+              <input type="text" name="firstname" required="required"/>
             </label>
             </p>
             <p>
             <label id="lastname">Last name
-              <input type="text" name="lastname" />
+              <input type="text" name="lastname" required="required"/>
             </label>
             </p>
             <p>
-            <label id="email">E-mail (required)
-              <input type="email" name="email" required="required" />
+            <label id="zip">Zip code
+              <input type="text" name="zip" />
             </label>
             </p>
             <p>
-            <label id="country">Country (required)
+            <label id="city">City
+              <input type="text" name="city" />
+            </label>
+            </p>
+            <p>
+            <label id="country">Country
               <select name="country_code" required="required">
                 <option value="">Select..</option>
                 <optgroup label="Europe">
                   <country-list-europe/>
                 </optgroup>
-                <optgroup label="Europe">
+                <optgroup label="Other continents">
                   <country-list-other-continents/>
                 </optgroup>
               </select>
             </label>
             </p>
+            <!-- p>
+            <label id="lang">Language
+              <select name="lang" required="required">
+                <option value="">Select..</option>
+                 where to get a ISO 639-1 list here..?
+              </select>
+            </label>
+            </p -->
 
-          <p><input type="submit" name="submit" value="I Support the FSFE!" data-loading-text="Sending.."/></p>
-        
-          <input type="hidden" name="ref_url" value="" />
-          <input type="hidden" name="ref_id" value="" />
-          <input type="hidden" name="lang" value="en" />
+          <p><input type="submit" name="submit" value="Update" data-loading-text="Sending.."/></p>
+  
         </form>
 
         <p><em>Our privacy policy is simple: We will never share your data with anyone outside FSFE. Period.</em></p>

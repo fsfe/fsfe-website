@@ -414,6 +414,9 @@
   </xsl:template>
 
   <!-- Apply support page -->
+  <xsl:template match="support-portal-javascript">
+    <xsl:call-template name="support-portal-javascript" />
+  </xsl:template>
   <xsl:template match="support-form-javascript">
     <xsl:call-template name="support-form-javascript" />
   </xsl:template>

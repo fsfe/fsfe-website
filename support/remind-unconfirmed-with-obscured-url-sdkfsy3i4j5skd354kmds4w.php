@@ -1,7 +1,9 @@
-<pre>
-Sending reminders to supporters who's e-mail is still unconfirmed...
 <?php
+header("Content-Type: text/plain")
+?>
+Sending reminders to supporters who's e-mail is still unconfirmed:
 
+<?
 /*
 ini_set( "display_errors","1" );
 ERROR_REPORTING( E_ALL) ;
@@ -41,13 +43,11 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
     
     // send only one reminder
     // don't send reminders more frequent than every third day
-    if ($row['reminder1'] == '') {
-        if ($row['time'] < $two_days_ago) {
-            send_reminder("1", $row);
-        } // else do nothing
-    } elseif ($row['reminder2'] == '' && $row['reminder1'] < $two_days_ago) {
+    if ($row['reminder1'] == '' && $row['time'] < $two_days_ago) {
+        send_reminder("1", $row);
+    } elseif ($row['reminder2'] == '' && $row['reminder1'] != '' && $row['reminder1'] < $two_days_ago) {
         send_reminder("2", $row);
-    } elseif ($row['reminder3'] == '' && $row['reminder2'] < $two_days_ago) {
+    } elseif ($row['reminder3'] == '' && $row['reminder2'] != '' && $row['reminder2'] < $two_days_ago) {
         send_reminder("3", $row);
     } // else do nothing
 }
@@ -89,4 +89,3 @@ function send_reminder($reminder_number, $row) {
 }
 
 ?>
-</pre>

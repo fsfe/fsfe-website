@@ -1300,6 +1300,15 @@ a.fn {
   color: rgb(82,97,0);
 }
 
+#campaign-box-5 {
+    -moz-box-shadow: inset 0 0 6px rgb(23,40,11);
+    -webkit-box-shadow: inset 0 0 6px rgb(23,40,11);
+    box-shadow: inset 0 0 6px rgb(23,40,11);
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+}
+
 .banner-border {
   border: 4px solid rgb(224,248,89);
   border-radius: 7px;

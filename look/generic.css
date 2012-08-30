@@ -445,7 +445,7 @@ p.left {
   border-width: 2px;
   border-style: dotted;
   border-color: rgb(107,200,0);
-  background-color: rgb(94,255,128);
+  background-color: rgb(194,255,128);
   padding: .5em;
 }
 
@@ -649,7 +649,8 @@ p#introduction {
 #orderpromo .formlabel {
   display: inline-block;
   text-align: right;
-  width: 40%;
+  vertical-align: top;
+  width: 30%;
 }
 #orderpromo textarea {
   display: inline-block;

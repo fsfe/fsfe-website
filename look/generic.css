@@ -445,7 +445,7 @@ p.left {
   border-width: 2px;
   border-style: dotted;
   border-color: rgb(107,200,0);
-  background-color: rgb(173,255,84);
+  background-color: rgb(208,255,128);
   padding: .5em;
 }
 
@@ -644,11 +644,13 @@ p#introduction {
 /* Promopack order form                                                      */
 /* ------------------------------------------------------------------------- */
 #orderpromo .formlabel {
+  display: inline-block;
   text-align: right;
   width: 40em;
+  font-weight: bold;
 }
 #orderpromo textarea {
-  display: inline;
+  display: inline-block;
 }
 
 /* ------------------------------------------------------------------------- */

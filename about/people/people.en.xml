@@ -33,7 +33,14 @@
     <avatar>/about/arnold/arnold-avatar.jpg</avatar>
   </person>
 
- <person id="bako" avatar="yes" teams="main">
+  <person id="baillard" avatar="no" teams="main">
+    <name>Leopold Baillard</name>
+    <country>DE</country>
+    <function>intern/m</function>
+    <email>baillard (at) fsfeurope (dot) org</email>
+  </person>
+
+  <person id="bako" avatar="yes" teams="main">
     <name>Eszter Bakó</name>
     <country>HU</country>
     <function project="policy">deputy/f</function>

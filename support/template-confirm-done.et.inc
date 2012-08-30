@@ -1,4 +1,5 @@
 <?php
+// this has become obsolete, can be removed once text has been moved to new portal.et.xhtml page
 
 echo '
 <html lang="en">

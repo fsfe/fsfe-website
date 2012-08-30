@@ -7,7 +7,7 @@ $message = '
 Thank you for showing your support to the FSFE!
 
 Please confirm your e-mail address by opening the page
-http://fsfe.org/support/confirm?'. $secret .'
+http://fsfe.org/support/portal?'. $secret .'
 
 Thank you!
 ';

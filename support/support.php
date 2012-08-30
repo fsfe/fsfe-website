@@ -35,8 +35,6 @@ catch(PDOException $e) {
 
 // save as comment in case some day need to add new field
 //$query = $db->query("alter table t1 add column lang TEXT");
-$query = $db->query("alter table t1 add column zip TEXT");
-$query = $db->query("alter table t1 add column city TEXT");
 
 
 // check if e-mail address already in database
@@ -108,17 +106,8 @@ else {
     } else {    
         require('template-thankyou.en.inc');
     }
-    // TODO: check if this JS is really loaded via XMLHttpRequest or just the picture
-    echo '       
-    <script type="text/javascript">
-	try {
-	var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 4);
-	piwikTracker.trackPageView();
-	piwikTracker.enableLinkTracking();
-	} catch( err ) {}
-	</script><noscript><p><img src="http://piwik.fsfe.org/piwik.php?idsite=4" style="border:0" alt=""></p></noscript>
-    ';
-
+    // removed Piwik script from here, instead trigger manual goal in submission JS code
+    
     if ($email_found == true){
         // message if e-mail already existed in database
         // Rationale: this requires e-mail account access to see.

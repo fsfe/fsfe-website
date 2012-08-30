@@ -61,7 +61,7 @@ if ($row['email'] != '') {
         }
     }
     
-    // send json off to JS code at the portal page
+    // send JSON off to JS code waiting to recieve it at the portal page
     echo json_encode($row);
     
 } else {

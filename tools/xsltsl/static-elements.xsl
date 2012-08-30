@@ -127,12 +127,11 @@
                 /* stop form from submitting normally */
                 event.preventDefault();
                 
-                /* cannot use this directly as it is an HTMLFormElement */
-                var $form = $(this);
                 var $submitbutton = $("form.support input[type='submit']");
                 $submitbutton.val($submitbutton.attr("data-loading-text"))
                 
                 /* Send the data using post and put the results in a div */
+                var $form = $("form.support");
                 $.post($form.attr("action"), $form.serialize(),
                   function(data) {
                       $("#support_form").fadeOut();

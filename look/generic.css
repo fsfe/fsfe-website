@@ -1301,11 +1301,8 @@ a.fn {
 }
 
 #campaign-box-5 {
-    width: 88%;
+    width: 92%;
     margin: 0 auto;
-    -moz-box-shadow: inset 0 0 6px rgb(23,40,11);
-    -webkit-box-shadow: inset 0 0 6px rgb(23,40,11);
-    box-shadow: inset 0 0 6px rgb(23,40,11);
     -moz-border-radius: 7px;
     -webkit-border-radius: 7px;
     border-radius: 7px;
@@ -1315,8 +1312,8 @@ a.fn {
     font-size: 120%;
 }
 
-#campaign-box-5.action a {
-    margin-left: 18px;
+#front-page-introduction p {
+    margin-bottom: 0;
 }
 
 .banner-border {

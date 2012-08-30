@@ -210,6 +210,13 @@
     </xsl:call-template>
   </xsl:template>
   
+  <xsl:template match="about-work-label">
+    <xsl:call-template name="gettext">
+      <xsl:with-param name="id" select="'about-work'" />
+    </xsl:call-template>
+  </xsl:template>
+
+
   <xsl:template match="subscribe-nl">
     <xsl:call-template name="subscribe-nl" />
   </xsl:template>

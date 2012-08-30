@@ -2,7 +2,6 @@
 header("Content-Type: text/plain")
 ?>
 Sending reminders to supporters who's e-mail is still unconfirmed:
-
 <?
 /*
 ini_set( "display_errors","1" );

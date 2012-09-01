@@ -1,5 +1,5 @@
 <?php
-// This is the contents of the e-mail sent to a signup where the e-mail was
+// This is the contents of the e-mail sent to a signup whos the e-mail was
 // already found in the supporter database.
 
 $subject = 'Thanks for supporting the FSFE';

@@ -118,15 +118,19 @@
     }
     $(document).ready(function() {
         var secret = window.location.search.slice(1);
-        $.getJSON('portal-backend?'+secret, function(data) {
-            $("#support_portal_loading").hide();
-            $("#support_portal").show();
-            if (data.error) {
-                $("#support_portal").html(data.error);
-            } else {
-                map_json_to_html(data);
-            }
-        });
+        if (secret.length == 32) {
+            $.getJSON('portal-backend?'+secret, function(data) {
+                $("#support_portal_loading").hide();
+                $("#support_portal").show();
+                if (data.error) {
+                    $("#support_portal").html(data.error);
+                } else {
+                    map_json_to_html(data);
+                }
+            });
+        } else {
+            $("#support_portal_loading").html("Expected parameter not found, nothing to show here.");
+        }
     });
     /* ]]> */
     </script>

@@ -5,7 +5,7 @@ $message = '
 Täname sind selle eest, et avaldasid FSFEle toetust!
 
 Palun kinnita oma e-posti aadress külastades aadressi
-<http://fsfe.org/support/portal?'. $secret .'>.
+<http://fsfe.org/support/portal.et?'. $secret .'>.
 
 Aitäh sulle!
 ';

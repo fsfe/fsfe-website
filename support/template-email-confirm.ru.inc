@@ -7,7 +7,7 @@ $message = '
 Благодарим за выражение вашей поддержки ЕФСПО!
 
 Пожалуйста, подтвердите ваш адрес электронной почты открытием страницы
-http://fsfe.org/support/portal.en?'. $secret .'
+http://fsfe.org/support/portal.ru?'. $secret .'
 
 Спасибо!
 ';

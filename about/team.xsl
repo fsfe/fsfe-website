@@ -8,7 +8,7 @@
   <!-- 
     For documentation on tagging (e.g. display a people list), take a
     look at the documentation under
-      /tools/xsltsl/tagging-documentation.txt
+      /tools/xsltsl/documentation-tagging.txt
   -->
   
   <!-- Fill dynamic content -->

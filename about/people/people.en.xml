@@ -162,13 +162,6 @@
     <avatar>/about/husovec/husovec-avatar.jpg</avatar>
   </person>
 
-  <person id="jyrinki" avatar="no" teams="main, fi">
-    <name>Timo Jyrinki</name>
-    <country>FI</country>
-    <function country="FI">deputy/m</function>
-    <email>jyrinki (at) fsfeurope (dot) org</email>
-  </person>
-
   <person id="jean" avatar="yes" teams="main, fr, de">
     <name>Nicolas Jean</name>
     <country>DE</country>
@@ -197,10 +190,11 @@
     <avatar>/about/jensch/jensch-avatar.jpg</avatar>
   </person>    
 
-  <person id="jyrinki" avatar="yes" teams="fi">
+  <person id="jyrinki" avatar="yes" teams="main, fi">
     <name>Timo Jyrinki</name>
     <country>FI</country>
     <function volunteers="translators-fi">coordinator/m</function>
+    <function country="FI">deputy/m</function>
     <email>mirv (at) fsfe (dot) org</email>
     <link>http://iki.fi/tjyrinki/</link>
     <avatar>/about/jyrinki/jyrinki-avatar.jpg</avatar>
@@ -210,7 +204,7 @@
     <name>Otto Kekäläinen</name>
     <country>FI</country>
     <function country="FI">coordinator/m</function>
-    <email>kekalainen (at) fsfeurope (dot) org</email>
+    <email>otto (at) fsfe (dot) org</email>
     <avatar>/about/kekalainen/kekalainen-avatar.jpg</avatar>
   </person>
 

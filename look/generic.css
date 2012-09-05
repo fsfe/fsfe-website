@@ -1996,10 +1996,18 @@ div.map {
     width: 405px;
 }
 
-.support input[type=submit], .support input[type=button] {
+.support input[type=submit] {
     float: right;
     width: 215px;
     margin: 12px 220px 64px 150px;
+}
+/* hack thing to make Firefox work */
+.support input[type=button] {
+    float: right;
+    width: 215px;
+    margin: 12px 220px 64px 150px;
+    font-size: 100%;
+    padding: 0.5em;
 }
 .support label>label { 
     margin-left: 180px; 

@@ -152,7 +152,7 @@
 		     submitHandler: function(form) {
 
                 /* stop form from submitting normally */
-                event.preventDefault();
+                event.preventDefault(); // does not seem to work in Firefox
                 
                 var $submitbutton = $("form.support input[type='submit']");
                 $submitbutton.val($submitbutton.attr("data-loading-text"))
@@ -167,6 +167,7 @@
                   }
                 );
 
+                return false; // prevent submit (at least in Firefox)
              }
 	    });
     });

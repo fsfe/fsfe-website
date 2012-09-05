@@ -1996,7 +1996,7 @@ div.map {
     width: 405px;
 }
 
-.support input[type=submit] {
+.support input[type=submit], .support input[type=button] {
     float: right;
     width: 215px;
     margin: 12px 220px 64px 150px;

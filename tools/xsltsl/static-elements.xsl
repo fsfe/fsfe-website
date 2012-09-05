@@ -147,18 +147,44 @@
     $(document).ready(function() {
         $("input[name=ref_url]").val(document.referrer);
         $("input[name=ref_id]").val(window.location.search.slice(1));
-
+        
 	    $("form.support").validate({
 		    rules: {
 			    email: {email: true, required: true},
 			    country_code: {required: true}
 		     },
+		     /* // didn't work with Firefox! Terrible hack written below
 		     submitHandler: function(form, event) {
 
-                /* stop form from submitting normally */
-                event.preventDefault();
+                // stop form from submitting normally
+                event.preventDefault(); // does not seem to work on Firefox
                 
                 var $submitbutton = $("form.support input[type='submit']");
+                $submitbutton.val($submitbutton.attr("data-loading-text"))
+                
+                // Send the data using post and put the results in a div
+                var $form = $("form.support");
+                $.post($form.attr("action"), $form.serialize(),
+                  function(data) {
+                      $("#support_form").fadeOut();
+                      $("#introduction").append('<div id="support_form_sent">'+data+'</div>');
+                      piwikTracker.trackGoal(2); // logs a conversion for goal 2
+                  }
+                );
+
+                return false; // prevent submit, not sure if has any effect
+             }
+             */
+	    });
+	    
+	    // terrible hack to prevent submit in Firefox!
+	    var newbutton = '<input type="button" value="' + $("form.support input[type='submit']").val() + '" data-loading-text="' + $("form.support input[type='submit']").attr("data-loading-text") + '"/>';
+	    $("form.support input[type='submit']").after(newbutton);
+	    $("form.support input[type='submit']").remove();
+	    $("form.support input[type='button']").click(function(){
+            if ( $("form.support").valid() ) {
+
+                var $submitbutton = $("form.support input[type='button']");
                 $submitbutton.val($submitbutton.attr("data-loading-text"))
                 
                 /* Send the data using post and put the results in a div */
@@ -171,8 +197,7 @@
                   }
                 );
 
-                return false; // prevent submit, not sure if has any effect
-             }
+            }
 	    });
     });
 

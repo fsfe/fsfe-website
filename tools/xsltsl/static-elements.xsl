@@ -138,6 +138,10 @@
   
   <xsl:template name="support-form-javascript">
     <script type="text/javascript" src="/scripts/jquery.validate.min.js"></script>
+    <!-- 
+        script type="text/javascript" src="/scripts/jquery.validate-lozalization/messages_fi.js"></script 
+        *How to inser lang code in above?*
+     -->
     <script type="text/javascript">
     /* <![CDATA[ */
     $(document).ready(function() {
@@ -167,7 +171,7 @@
                   }
                 );
 
-                return false; // prevent submit (at least in Firefox)
+                return false; // prevent submit
              }
 	    });
     });

@@ -153,10 +153,10 @@
 			    email: {email: true, required: true},
 			    country_code: {required: true}
 		     },
-		     submitHandler: function(form) {
+		     submitHandler: function(form, event) {
 
                 /* stop form from submitting normally */
-                event.preventDefault(); // does not seem to work in Firefox
+                event.preventDefault();
                 
                 var $submitbutton = $("form.support input[type='submit']");
                 $submitbutton.val($submitbutton.attr("data-loading-text"))
@@ -171,7 +171,7 @@
                   }
                 );
 
-                return false; // prevent submit
+                return false; // prevent submit, not sure if has any effect
              }
 	    });
     });

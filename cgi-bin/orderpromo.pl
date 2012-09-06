@@ -15,6 +15,7 @@ my $email = $query->param("email");
 my $address = $query->param("address");
 my $specifics = $query->param("specifics");
 my $comment = $query->param("comment");
+my $lang = $query->param("language");
 
 if (
   # validate input (more or less)
@@ -46,15 +47,17 @@ $specifics
 Comments:
 $comments
 
+Preferred language was: $lang
+
 KTHXBYE
 Your friendly automatic web order program.
 ";
   close MAIL;
 
-  print "Location: /order/orderpromo-thanks.en.html\n\n";
+  print "Location: /order/orderpromo-thanks.$lang.html\n\n";
 } else {
 
   #something was wrong with the input
-  print "Location: /order/orderpromo-error.en.html\n\n";
+  print "Location: /order/orderpromo-error.$lang.html\n\n";
 
 }

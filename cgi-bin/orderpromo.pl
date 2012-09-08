@@ -55,10 +55,10 @@ Your friendly automatic web order program.
 ";
   close MAIL;
 
-  print "Location: /order/orderpromo-thanks.$lang.html\n\n";
+  print "Location: http://fsfe.org/order/orderpromo-thanks.$lang.html\n\n";
 } else {
 
   #something was wrong with the input
-  print "Location: /order/orderpromo-error.$lang.html\n\n";
+  print "Location: http://fsfe.org/order/orderpromo-error.$lang.html\n\n";
 
 }

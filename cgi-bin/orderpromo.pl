@@ -27,10 +27,11 @@ if (
 ) {
 
   #send mail
-  open(MAIL, "|/usr/lib/sendmail -t -f paul\@fsfe.org");
+  open(MAIL, "|/usr/lib/sendmail -t -f promoorder\@fsfe.org");
   print MAIL
-"From: paul\@fsfe.org
-To: paul\@fsfe.org
+"From: promoorder\@fsfe.org
+To: assist\@fsfe.org
+Cc: paul\@fsfe.org
 Subject: $reference $firstname $lastname
 
 Hey, someone ordered promotional material:

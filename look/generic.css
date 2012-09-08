@@ -465,6 +465,15 @@ p.right {
   margin: 0 0 .3em;
 }
 
+#content .highlight {
+  /* Used in: order/promopack.*.xhtml*/
+  border-width: 2px;
+  border-style: dotted;
+  border-color: rgb(107,200,0);
+  background-color: rgb(194,255,128);
+  padding: .5em;
+}
+
 h1,
 h2,
 h3 {
@@ -649,6 +658,21 @@ p#introduction {
   text-align: right;
 }
 
+/* ------------------------------------------------------------------------- */
+/* Promopack order form                                                      */
+/* ------------------------------------------------------------------------- */
+
+/* Used in: orders/promopack.*.xhtml */
+#orderpromo .formlabel {
+  font-weight: bold;
+  display: inline-block;
+  text-align: right;
+  vertical-align: top;
+  width: 30%;
+}
+#orderpromo textarea {
+  display: inline-block;
+}
 
 /* ------------------------------------------------------------------------- */
 /* Subpages menu                                                             */

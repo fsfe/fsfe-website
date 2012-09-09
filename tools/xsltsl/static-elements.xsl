@@ -229,6 +229,7 @@
         <option value="IS">Iceland (Ísland)</option>
         <option value="IE">Ireland</option>
         <option value="IT">Italy (Italia)</option>
+        <option value="XK">Kosovo</option>
         <option value="LI">Liechtenstein</option>
         <option value="LT">Lithuania (Lietuva)</option>
         <option value="LU">Luxembourg (Lëtzebuerg)</option>

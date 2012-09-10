@@ -75,7 +75,7 @@
       <xsl:with-param name="wanted-time" select="'future'" />
       <xsl:with-param name="tag">front-page</xsl:with-param>
       <xsl:with-param name="display-details" select="'yes'" />
-      <xsl:with-param name="nb-items" select="3" />
+      <xsl:with-param name="nb-items" select="4" />
     </xsl:call-template>
     
     <xsl:element name="p">

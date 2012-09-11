@@ -18,9 +18,10 @@
     <xsl:text>\usepackage{ucs}
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
+</xsl:text>
 <xsl:if test="$language='ru'">\usepackage[russian]{babel}
 </xsl:if>
-</xsl:text><xsl:if test="$language!='el'">\usepackage{helvet}</xsl:if><xsl:text>
+<xsl:if test="$language!='el'">\usepackage{helvet}</xsl:if><xsl:text>
 \usepackage{fancyhdr}
 \usepackage{multicol}
 </xsl:text><xsl:if test="$style='G'">\usepackage{graphics}
@@ -35,9 +36,11 @@
 \setlength{\oddsidemargin}{-32pt}
 \setlength{\columnsep}{10pt}
 \setlength{\textwidth}{514pt}
+</xsl:text>
 <xsl:if test="$language!='ru'">
 \raggedright
 </xsl:if>
+<xsl:text>
 
 % Header and footer
 \chead{}

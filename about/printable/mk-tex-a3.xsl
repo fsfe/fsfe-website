@@ -18,9 +18,10 @@
     <xsl:text>\usepackage{ucs}
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
+</xsl:text>
 <xsl:if test="$language='ru'">\usepackage[russian]{babel}
 </xsl:if>
-</xsl:text><xsl:if test="$language!='el'">\usepackage{helvet}</xsl:if><xsl:text>
+<xsl:if test="$language!='el'">\usepackage{helvet}</xsl:if><xsl:text>
 \usepackage{graphics}
 \usepackage{color}
 \usepackage[absolute]{textpos}
@@ -74,8 +75,10 @@
       </xsl:text>
       </xsl:if>
       <xsl:if test="$language='ru'">
+      <xsl:text>
         \bigskip \scriptsize Это неофициальный перевод. Оригинальный текст
         см. на http://www.fsfe.org/about/printable/printable.en.html
+      </xsl:text>
       </xsl:if>
     </xsl:if>
 

@@ -9,30 +9,43 @@ my $date = strftime "%Y-%m-%d", localtime;
 my $time = strftime "%s", localtime;
 my $reference = "order.$date." . substr $time, -5;
 
-my $firstname = $query->param("firstname");
+# technically we only need the last name for shipping
+my $firstname = $query->param("firstname") || $firstname = '';
 my $lastname = $query->param("lastname");
 my $email = $query->param("email");
-my $address = $query->param("address");
+
+my $street = $query->param("street");
+my $city = $query->param("city");
+my $country = $query->param("country");
+#my $address = $query->param("address");
+
 my $specifics = $query->param("specifics");
 my $comment = $query->param("comment");
 my $lang = $query->param("language");
 
 if (
   # validate input (more or less)
-  ($firstname or $lastname)
+  $lastname
   and $email
-  and $address
+
+  and $street
+  and $city
+  and $country
+#  and $address
+
   and $specifics
   and not $query->param("url")
 ) {
 
   #send mail
-  open(MAIL, "|/usr/lib/sendmail -t -f promoorder\@fsfe.org");
+  open(MAIL, "|/usr/lib/sendmail -t -f $email");
   print MAIL
-"From: promoorder\@fsfe.org
+"Content-Transfer-Encoding: 8bit
+Content-type: text/plain; charset=UTF-8
+From: $email
 To: assist\@fsfe.org
 Cc: paul\@fsfe.org
-Subject: $reference $firstname $lastname
+Subject: [promo order] $reference $firstname $lastname
 
 Hey, someone ordered promotional material:
 First Name: $firstname
@@ -40,7 +53,9 @@ Last Name:  $lastname
 EMail:      $email
 
 Address:
-$address
+$street
+$city
+$country
 
 Specifics of the Order:
 $specifics
@@ -49,9 +64,6 @@ Comments:
 $comments
 
 Preferred language was: $lang
-
-KTHXBYE
-Your friendly automatic web order program.
 ";
   close MAIL;
 

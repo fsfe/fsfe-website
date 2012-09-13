@@ -10,7 +10,7 @@ my $time = strftime "%s", localtime;
 my $reference = "order.$date." . substr $time, -5;
 
 # technically we only need the last name for shipping
-my $firstname = $query->param("firstname") || $firstname = '';
+my $firstname = $query->param("firstname");
 my $lastname = $query->param("lastname");
 my $email = $query->param("email");
 

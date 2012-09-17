@@ -20,29 +20,6 @@ catch(PDOException $e) {
 
 
 
-// total confirmed supporters ever
-try {
-    $sql = "SELECT *, COUNT(*) AS supporters FROM t1 WHERE confirmed != '' ";
-    
-    // enable stats for single referrers
-    if (isset($_GET['ref_id'])) {
-        $sql .= "AND ref_id = '". sqlite_escape_string($_GET['ref_id']) ."' ";
-    }
-    if (isset($_GET['ref_url'])) {
-        $sql .= "AND ref_url LIKE '%". sqlite_escape_string($_GET['ref_url']) ."%' ";
-    }
-    $query = $db->prepare($sql);
-    $query->execute();
-}
-catch(PDOException $e) {
-    print "Database Error: \n";
-    print_r($db->errorInfo());
-}
-
-$row = $query->fetch(PDO::FETCH_ASSOC);
-$total_confirmed = $row['supporters'];
-
-
 // total supporters ever, including unconfirmed
 try {
     $sql = "SELECT *, COUNT(*) AS supporters FROM t1 ";
@@ -102,7 +79,7 @@ for ($i = 90; $i >= 0; $i--) {
 	    print_r($db->errorInfo());
     }
 
-    if ($i == 0) { $total_confirmed_in_timeframe = 0; }
+    if ($i == 0) { $total_confirmed = 0; }
     if ($i == 90) { $total_confirmed_at_beginning = 0; }
 
     while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
@@ -132,14 +109,14 @@ for ($i = 90; $i >= 0; $i--) {
         )
         */
 
-        if ($i == 0) { $total_confirmed_in_timeframe += $row["supporters"]; }
+        if ($i == 0) { $total_confirmed += $row["supporters"]; } // at the end of the time period, equals totals now
         if ($i == 90) { $total_confirmed_at_beginning += $row["supporters"]; }
         
     }
 
 }
 
-$growth = $total_confirmed_in_timeframe - $total_confirmed_at_beginning;
+$growth = $total_confirmed - $total_confirmed_at_beginning;
 $estimate = $total_confirmed + $growth*4;
 
 
@@ -600,7 +577,7 @@ for (i = 0; i < seriesData.length; i++) {
 </script>
 
 
-<h3>Last 10 sign ups</h3>
+<h3>Latest 20 sign ups</h3>
 <table id="lastlog">
 <tr>
     <th>Timestamp</th>

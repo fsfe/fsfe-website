@@ -34,7 +34,7 @@ for ($i = 90; $i >= 0; $i--) {
 
     try {
 	    // check data
-	    $sql = "SELECT *, COUNT(*) AS supporters FROM t1 WHERE time <= Datetime('". ts_days_ago($i) ."') ";
+	    $sql = "SELECT *, COUNT(*) AS supporters FROM t1 WHERE confirmed != '' AND time <= Datetime('". ts_days_ago($i) ."') ";
 
         // enable stats for single referrers
 	    if (isset($_GET['ref_id'])) {
@@ -54,8 +54,8 @@ for ($i = 90; $i >= 0; $i--) {
 	    print_r($db->errorInfo());
     }
 
-    if ($i == 0) { $total = 0; }
-    if ($i == 90) { $total_at_beginning = 0; }
+    if ($i == 0) { $total_confirmed = 0; }
+    if ($i == 90) { $total_confirmed_at_beginning = 0; }
 
     while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
         // true if at least one row to return
@@ -84,15 +84,15 @@ for ($i = 90; $i >= 0; $i--) {
         )
         */
 
-        if ($i == 0) { $total += $row["supporters"]; }
-        if ($i == 90) { $total_at_beginning += $row["supporters"]; }
+        if ($i == 0) { $total_confirmed += $row["supporters"]; }
+        if ($i == 90) { $total_confirmed_at_beginning += $row["supporters"]; }
         
     }
 
 }
 
-$growth = $total - $total_at_beginning;
-$estimate = $total + $growth*4;
+$growth = $total_confirmed - $total_confirmed_at_beginning;
+$estimate = $total_confirmed + $growth*4;
 
 $series_json = "";
 
@@ -113,6 +113,22 @@ foreach ($series as $k => $v) {
     ';
 
 }
+
+
+try {
+    // check data
+    $sql = "SELECT *, COUNT(*) AS supporters FROM t1";
+    $query = $db->prepare($sql);
+    $query->execute();
+}
+catch(PDOException $e) {
+    print "Database Error: \n";
+    print_r($db->errorInfo());
+}
+
+$row = $query->fetch(PDO::FETCH_ASSOC);
+$total = $row['supporters'];
+    
 ?>
 <!doctype html public "✰">
 <head>
@@ -206,11 +222,12 @@ if (isset($_GET['ref_id'])) { echo " for referrer fsfe.org/support?". htmlspecia
 
 <div class="statusbox">
     <h3>Total supporters</h3>
-    <p><strong><?php echo $total; ?></strong></p>
+    <p><strong><?php echo $total_confirmed; ?></strong></p>
+    <p>with e-mail confirmed. Total including unconfirmed is <?php echo $total; ?></p>
 </div>
 
 <div class="statusbox" style="top:20em;">
-    <p>Three months ago there where <em><?php echo $total_at_beginning; ?></em> supporters, so growth was <em><?php echo $growth; ?></em> supporters. If growth continues at the same pace, we'll have <em><?php echo $estimate; ?></em> supporters in a year from now!</p>
+    <p>Three months ago there where <em><?php echo $total_confirmed_at_beginning; ?></em> supporters, so growth was <em><?php echo $growth; ?></em> supporters. If growth continues at the same pace, we'll have <em><?php echo $estimate; ?></em> supporters in a year from now!</p>
 </div>
 
 <div id="chart_container">
@@ -228,19 +245,12 @@ Rickshaw.Series.zeroFill(seriesData);
 
 var graph = new Rickshaw.Graph( {
         element: document.querySelector("#chart"),
-        width: 650,
-        height: 360,
+        width: 700,
+        height: 500,
         series: seriesData
 } );
 
-var x_axis = new Rickshaw.Graph.Axis.Time( { graph: graph } );
-
-var y_axis = new Rickshaw.Graph.Axis.Y( {
-        graph: graph,
-        orientation: 'left',
-        tickFormat: Rickshaw.Fixtures.Number.formatKMBT,
-        element: document.getElementById('y_axis'),
-} );
+graph.render();
 
 var legend = new Rickshaw.Graph.Legend( {
         element: document.querySelector('#legend'),
@@ -262,7 +272,16 @@ var shelving = new Rickshaw.Graph.Behavior.Series.Toggle({
 });
 */
 
-graph.render();
+var x_axis = new Rickshaw.Graph.Axis.Time( { graph: graph } );
+
+var y_axis = new Rickshaw.Graph.Axis.Y( {
+        graph: graph,
+        orientation: 'left',
+        tickFormat: Rickshaw.Fixtures.Number.formatKMBT,
+        element: document.getElementById('y_axis'),
+} );
+
+x_axis.render();
 
 </script>
 
@@ -274,6 +293,7 @@ graph.render();
     <th>Country</th>
     <th>Referrer url</th>
     <th>Referrer id (support?xxxx)</th>
+    <th>E-mail confirmed</th>
 </tr>
 <?php
 try {
@@ -287,7 +307,7 @@ try {
         $sql .= "WHERE ref_url LIKE '". sqlite_escape_string($_GET['ref_url']) ."%' ";
     }
 
-    $sql .= "ORDER BY time DESC LIMIT 0,10";
+    $sql .= "ORDER BY time DESC LIMIT 0,20";
 
     $query = $db->prepare($sql);
     $query->execute();
@@ -303,6 +323,7 @@ while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
     <td>'. $row["country_code"] .'</td>
     <td><a href="?ref_url='. $row["ref_url"] .'">'. $row["ref_url"] .'</a></td>
     <td><a href="?ref_id='. $row["ref_id"] .'">'. $row["ref_id"] .'</a></td>
+    <td>'. $row["confirmed"] .'</td>
     </tr>';
 }
 ?>

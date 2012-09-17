@@ -223,10 +223,11 @@ if (isset($_GET['ref_id'])) { echo " for referrer fsfe.org/support?". htmlspecia
 <div class="statusbox">
     <h3>Total supporters</h3>
     <p><strong><?php echo $total_confirmed; ?></strong></p>
-    <p>with e-mail confirmed. Total including unconfirmed is <?php echo $total; ?></p>
+    <p>with e-mail confirmed.</p>
+    <p>Total with unconfirmed included is <em><?php echo $total; ?></em>.</p>
 </div>
 
-<div class="statusbox" style="top:20em;">
+<div class="statusbox" style="top:26em;">
     <p>Three months ago there where <em><?php echo $total_confirmed_at_beginning; ?></em> supporters, so growth was <em><?php echo $growth; ?></em> supporters. If growth continues at the same pace, we'll have <em><?php echo $estimate; ?></em> supporters in a year from now!</p>
 </div>
 
@@ -247,10 +248,18 @@ var graph = new Rickshaw.Graph( {
         element: document.querySelector("#chart"),
         width: 700,
         height: 500,
+        renderer: 'bar',
         series: seriesData
 } );
 
-graph.render();
+var x_axis = new Rickshaw.Graph.Axis.Time( { graph: graph } );
+
+var y_axis = new Rickshaw.Graph.Axis.Y( {
+        graph: graph,
+        orientation: 'left',
+        tickFormat: Rickshaw.Fixtures.Number.formatKMBT,
+        element: document.getElementById('y_axis'),
+} );
 
 var legend = new Rickshaw.Graph.Legend( {
         element: document.querySelector('#legend'),
@@ -272,16 +281,8 @@ var shelving = new Rickshaw.Graph.Behavior.Series.Toggle({
 });
 */
 
-var x_axis = new Rickshaw.Graph.Axis.Time( { graph: graph } );
+graph.render();
 
-var y_axis = new Rickshaw.Graph.Axis.Y( {
-        graph: graph,
-        orientation: 'left',
-        tickFormat: Rickshaw.Fixtures.Number.formatKMBT,
-        element: document.getElementById('y_axis'),
-} );
-
-x_axis.render();
 
 </script>
 

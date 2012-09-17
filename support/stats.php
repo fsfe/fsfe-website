@@ -1,13 +1,12 @@
 <?php
 // report errors
-
-error_reporting(E_ALL);
-ini_set('display_errors', 'On');
+//error_reporting(E_ALL);
+//ini_set('display_errors', 'On');
 
 /*
 TODO:
-- implement nicer stats with http://www.jqplot.com/ (used in Piwik) or http://code.shutterstock.com/rickshaw/ (d3.js based)
 - refactor to use standard FSFE header and footer
+- restrict access to FSFE Fellows
 */
 
 try {
@@ -283,6 +282,17 @@ var shelving = new Rickshaw.Graph.Behavior.Series.Toggle({
 
 graph.render();
 
+// reverse list to match legend sorting
+seriesDate.reverse()
+
+legendlist = document.querySelectorAll('#legend li');
+
+// iterate all and add count in legend
+for (i = 0; i < seriesData.length; i++) {
+    sum = document.createElement("span");
+    sum.innerHTML = ": " + seriesData[i].data.slice(-1)[0].y;
+    legendlist[i].appendChild(sum);
+}
 
 </script>
 

@@ -7,6 +7,7 @@ ini_set('display_errors', 'On');
 TODO:
 - refactor to use standard FSFE header and footer
 - restrict access to FSFE Fellows
+- sort countries by sum of last date, not on sum of first date like is done now
 */
 
 try {
@@ -21,7 +22,7 @@ catch(PDOException $e) {
 
 // total confirmed supporters ever
 try {
-    $sql = "SELECT *, COUNT(*) AS supporters WHERE confirmed != '' ";
+    $sql = "SELECT *, COUNT(*) AS supporters FROM t1 WHERE confirmed != '' ";
     
     // enable stats for single referrers
     if (isset($_GET['ref_id'])) {
@@ -30,7 +31,6 @@ try {
     if (isset($_GET['ref_url'])) {
         $sql .= "AND ref_url LIKE '%". sqlite_escape_string($_GET['ref_url']) ."%' ";
     }
-    $sql .= "FROM t1";
     $query = $db->prepare($sql);
     $query->execute();
 }
@@ -54,7 +54,7 @@ try {
     if (isset($_GET['ref_url'])) {
         $sql .= "WHERE ref_url LIKE '%". sqlite_escape_string($_GET['ref_url']) ."%' ";
     }
-    $sql .= "FROM t1";
+    $sql .= " FROM t1";
     $query = $db->prepare($sql);
     $query->execute();
 }

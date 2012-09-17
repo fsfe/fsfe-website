@@ -18,6 +18,56 @@ catch(PDOException $e) {
 }
 
 
+
+// total confirmed supporters ever
+try {
+    $sql = "SELECT *, COUNT(*) AS supporters WHERE confirmed != '' ";
+    
+    // enable stats for single referrers
+    if (isset($_GET['ref_id'])) {
+        $sql .= "AND ref_id = '". sqlite_escape_string($_GET['ref_id']) ."' ";
+    }
+    if (isset($_GET['ref_url'])) {
+        $sql .= "AND ref_url LIKE '%". sqlite_escape_string($_GET['ref_url']) ."%' ";
+    }
+    $sql .= "FROM t1";
+    $query = $db->prepare($sql);
+    $query->execute();
+}
+catch(PDOException $e) {
+    print "Database Error: \n";
+    print_r($db->errorInfo());
+}
+
+$row = $query->fetch(PDO::FETCH_ASSOC);
+$total_confirmed = $row['supporters'];
+
+
+// total supporters ever, including unconfirmed
+try {
+    $sql = "SELECT *, COUNT(*) AS supporters ";
+    
+    // enable stats for single referrers
+    if (isset($_GET['ref_id'])) {
+        $sql .= "WHERE ref_id = '". sqlite_escape_string($_GET['ref_id']) ."' ";
+    }
+    if (isset($_GET['ref_url'])) {
+        $sql .= "WHERE ref_url LIKE '%". sqlite_escape_string($_GET['ref_url']) ."%' ";
+    }
+    $sql .= "FROM t1";
+    $query = $db->prepare($sql);
+    $query->execute();
+}
+catch(PDOException $e) {
+    print "Database Error: \n";
+    print_r($db->errorInfo());
+}
+
+$row = $query->fetch(PDO::FETCH_ASSOC);
+$total = $row['supporters'];
+
+
+
 function ts_days_ago($days) {
     $days_ago = mktime(0, 0, 0, date("m"), date("d")-$days, date("Y"));
     return date("Y-m-d", $days_ago) . " 23:59:59";
@@ -53,7 +103,7 @@ for ($i = 90; $i >= 0; $i--) {
 	    print_r($db->errorInfo());
     }
 
-    if ($i == 0) { $total_confirmed = 0; }
+    if ($i == 0) { $total_confirmed_in_timeframe = 0; }
     if ($i == 90) { $total_confirmed_at_beginning = 0; }
 
     while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
@@ -83,14 +133,14 @@ for ($i = 90; $i >= 0; $i--) {
         )
         */
 
-        if ($i == 0) { $total_confirmed += $row["supporters"]; }
+        if ($i == 0) { $total_confirmed_in_timeframe += $row["supporters"]; }
         if ($i == 90) { $total_confirmed_at_beginning += $row["supporters"]; }
         
     }
 
 }
 
-$growth = $total_confirmed - $total_confirmed_at_beginning;
+$growth = $total_confirmed_in_timeframe - $total_confirmed_at_beginning;
 $estimate = $total_confirmed + $growth*4;
 
 
@@ -381,23 +431,7 @@ foreach ($series as $k => $v) {
     },
     ';
 
-}
-
-
-try {
-    // check data
-    $sql = "SELECT *, COUNT(*) AS supporters FROM t1";
-    $query = $db->prepare($sql);
-    $query->execute();
-}
-catch(PDOException $e) {
-    print "Database Error: \n";
-    print_r($db->errorInfo());
-}
-
-$row = $query->fetch(PDO::FETCH_ASSOC);
-$total = $row['supporters'];
-    
+}    
 ?>
 <!doctype html public "✰">
 <head>

@@ -1,7 +1,7 @@
 <?php
 // report errors
-error_reporting(E_ALL);
-ini_set('display_errors', 'On');
+//error_reporting(E_ALL);
+//ini_set('display_errors', 'On');
 
 /*
 TODO:
@@ -45,7 +45,7 @@ $total_confirmed = $row['supporters'];
 
 // total supporters ever, including unconfirmed
 try {
-    $sql = "SELECT *, COUNT(*) AS supporters ";
+    $sql = "SELECT *, COUNT(*) AS supporters FROM t1 ";
     
     // enable stats for single referrers
     if (isset($_GET['ref_id'])) {
@@ -54,7 +54,6 @@ try {
     if (isset($_GET['ref_url'])) {
         $sql .= "WHERE ref_url LIKE '%". sqlite_escape_string($_GET['ref_url']) ."%' ";
     }
-    $sql .= " FROM t1";
     $query = $db->prepare($sql);
     $query->execute();
 }

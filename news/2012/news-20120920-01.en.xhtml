@@ -26,15 +26,35 @@
 	
 	<body>
 		<h1>Results: Free Software voice &amp; video testing</h1>
+		
+		<p newsteaser="yes">Last weekend on Software Freedom Day the Manchester FSFE Fellowship group, assisted by additional participants in Britain and Germany, spent the afternoon testing Free Software alternatives to Skype.</p>
+		
+		<h3>Results</h3>
+		
+		<p>The 25 sets of results were recorded, and can be browsed, sorted, and searched below.</p>
+		
+		<p>Six audio tests succesfully passed (24%), as did five video tests (20%). Mumble was the most successful client, passing 100% of tests (audio only, video is not yet supported). XMPP passed four out of 14 audio tests, whereas SIP passed only one out of ten (both vide and audio). Of nine apps tested, only Mumble, Pidgin, Jitsi, and Google Talk's we client achieved passes.</p>
+		
+		<h3>Conclusions</h3>
+		
+		<p>The clients tested performed more poorly than expected, generally due to network errors. One of the difficulties in testing was that generally there was little or no information about why the test had failed. Improving debugging output in the event of a problem would be a significant step forward.</p>
+		
+		<p>The only client and protocol which consistently did what it promised was Mumble, which had 100% test pass rate. Unlike all other clients, Mumble uses its own protocol, and also offers audio conferencing and text-to-speech by default. Mumble users are constrained to using the same server however, unlike SIP and XMPP users who can each use a separate server of their choice.</p>
+		
+		<p>SIP clients couldn't connect successfully except when both testers used the same client, and accounts on the same server. This was surprising considering several of the accounts used were from professional companies with paid for support.</p>
+		
+		<p>It would have been useful to have a local SIP and XMPP server on the same network as the testers in order to better identify network related problems. This would help to determine whether troublesome clients are genuinely at fault, or merely suffering from having to deal with an unreliable server.</p>
+		
+		<p>Examining STUN and ICE configurations was beyond the scope of our tests, but as these technologies seem critical to whether calls succeed or fail, they merit careful examination when choosing or configuring SIP and XMPP servers.</p>
 
 		<table cellpadding="0" cellspacing="0" border="0" class="display" id="results">
 
 			<thead>
 				<tr>
-					<th>From IM</th>
+					<th>From Client</th>
 					<th>From OS</th>
 					<th>From DE</th>
-					<th>To IM</th>
+					<th>To Client</th>
 					<th>To OS</th>
 					<th>To DE</th>
 					<th>Report</th>

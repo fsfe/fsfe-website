@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html newsdate="2012-09-20">
+
+	<head>
+		<title>Results: Free Software voice &amp; video testing</title>
+		<style type="text/css" title="currentStyle">
+			@import "/scripts/data-tables/media/css/demo_page.css"; @import "/media/css/header.ccss";
+			@import "/scripts/data-tables/media/css/demo_table.css";
+		</style>
+		<script type="text/javascript" src="/scripts/data-tables/media/js/jquery.js"></script>
+		<script type="text/javascript" src="/scripts/data-tables/media/js/jquery.dataTables.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$('#results').dataTable( {
+			"aoColumnDefs": [
+				{ "bVisible": false, "aTargets": [ 11 ] },
+				{ "bVisible": false, "aTargets": [ 12 ] },
+				{ "bVisible": false, "aTargets": [ 13 ] }
+			] } );
+		} );
+		</script>
+	</head>
+	
+	<body>
+		<h1>Results: Free Software voice &amp; video testing</h1>
+
+		<table cellpadding="0" cellspacing="0" border="0" class="display" id="results">
+
+			<thead>
+				<tr>
+					<th>From IM</th>
+					<th>From OS</th>
+					<th>From DE</th>
+					<th>To IM</th>
+					<th>To OS</th>
+					<th>To DE</th>
+					<th>Report</th>
+					<th>Local</th>
+					<th>type</th>
+					<th>Audio</th>
+					<th>Video</th>
+					<th>Notes</th>
+					<th>Account 1</th>
+					<th>Account 2</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Pidgin 2.7.3</td>
+					<td>Crunchbang</td>
+					<td>openbox</td>
+					<td>Pidgin 2.1</td>
+					<td>Fedora 17</td>
+					<td>Gnome</td>
+					<td>Anna</td>
+					<td>true</td>
+					<td>XMPP</td>
+					<td>pass</td>
+					<td>pass</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Pidgin 2.7.3</td>
+					<td>Crunchbang</td>
+					<td>openbox</td>
+					<td>gajim 0.15</td>
+					<td>Fedora 17</td>
+					<td>Gnome</td>
+					<td>Anna</td>
+					<td>true</td>
+					<td>XMPP</td>
+					<td>fail</td>
+					<td>pass</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Jitsi 1.0-build.3967</td>
+					<td>Ubuntu 12.04</td>
+					<td>Gnome/Unity</td>
+					<td>Gajim 0.15</td>
+					<td>Fedora 17</td>
+					<td>Gnome</td>
+					<td>Jamie</td>
+					<td>true</td>
+					<td>XMPP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td>Options were greyed out on Gajim</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Pidgin 2.10.6</td>
+					<td>Ms Win XP</td>
+					<td>na</td>
+					<td>Pidgin 2.7.3</td>
+					<td>crunchbang</td>
+					<td> openbox</td>
+					<td>David</td>
+					<td>false</td>
+					<td>XMPP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Empathy 3.4.2.3</td>
+					<td>Fedora 17</td>
+					<td>Gnome</td>
+					<td>Empathy 3.4.2.3</td>
+					<td>Ubuntu 12.04</td>
+					<td>Gnome/Unity</td>
+					<td>Sam</td>
+					<td>true</td>
+					<td>XMPP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td>only text chat worked - no indication of a call request was received for either video or voice calls</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>snom220 hardphone snom220-SIP 3.56z</td>
+					<td>Snom Linux</td>
+					<td>NA</td>
+					<td> </td>
+					<td></td>
+					<td></td>
+					<td>Wookey</td>
+					<td>false</td>
+					<td>SIP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td>call connection failed: 'No such domain' - local DNS failure</td>
+					<td>3858102@SIPgate.co.uk</td>
+					<td>wellybob@jabber.me</td>
+				</tr>
+				<tr>
+					<td>snom220 hardphone snom220-SIP 3.56z</td>
+					<td>Snom Linux</td>
+					<td>NA</td>
+					<td> </td>
+					<td></td>
+					<td></td>
+					<td>wookey</td>
+					<td>false</td>
+					<td>SIP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td>call connection failed: 'No such domain' - local DNS failure</td>
+					<td>3858102@SIPgate.co.uk</td>
+					<td>samtuke@SIP.linphone.org</td>
+				</tr>
+				<tr>
+					<td>snom220 hardphone snom220-SIP 3.56z</td>
+					<td>Snom Linux</td>
+					<td>NA</td>
+					<td>n900 app</td>
+					<td>Maemo 5</td>
+					<td>hildon</td>
+					<td>wookey</td>
+					<td>false</td>
+					<td>SIP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td>call connection failed: 'No such domain' - local DNS failure</td>
+					<td>3858102@SIPgate.co.uk</td>
+					<td>2542654@localphone.com</td>
+				</tr>
+				<tr>
+					<td>n900 21.2011.38-1</td>
+					<td>Maemo 5</td>
+					<td>Hildon</td>
+					<td>linphone</td>
+					<td></td>
+					<td></td>
+					<td>wookey</td>
+					<td>false</td>
+					<td>SIP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td>call connection failed: 'unable to call, contact offline</td>
+					<td>9178850@SIPgate.co.uk</td>
+					<td>samtuke@SIP.linphone.org</td>
+				</tr>
+				<tr>
+					<td>n900 21.2011.38-1</td>
+					<td>Maemo 5</td>
+					<td>Hildon</td>
+					<td>n900 app</td>
+					<td>Maemo 5</td>
+					<td>hildon</td>
+					<td>wookey</td>
+					<td>false</td>
+					<td>SIP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td>call connection failed: 'unable to call, contact offline</td>
+					<td>9178850@SIPgate.co.uk</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>n900 21.2011.38-1</td>
+					<td>Maemo 5</td>
+					<td>Hildon</td>
+					<td>snom220 hardphone snom220-SIP 3.56z</td>
+					<td>Snom Linux</td>
+					<td>NA</td>
+					<td>Sam</td>
+					<td>false</td>
+					<td>SIP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td>call connection failed: no response&quot; 1st time, call unauthorised 2nd time&quot;</td> <td>samtuke@SIP.linphone.org | 2542654@localphone.com</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>n900 21.2011.38-1</td>
+					<td>Maemo 5</td>
+					<td>Hildon</td>
+					<td>n900 21.2011.38-1</td>
+					<td>Maemo 5</td>
+					<td>Hildon</td>
+					<td>Sam</td>
+					<td>false</td>
+					<td>SIP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td>call connection failed</td>
+					<td>samtuke@SIP.linphone.org | 2542654@localphone.com</td>
+					<td>3858102@SIPgate.co.uk</td>
+				</tr>
+				<tr>
+					<td>Jitsi 1.0-build.3967</td>
+					<td>Ubuntu 12.04</td>
+					<td>Gnome/Unity</td>
+					<td>Jitsi 1</td>
+					<td>Fedora 17</td>
+					<td>Gnome</td>
+					<td>Jamie</td>
+					<td>true</td>
+					<td>XMPP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td>ICE failed</td>
+					<td>9178850@SIPgate.co.uk</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Pidgin unknown</td>
+					<td>Ubuntu 12.04</td>
+					<td>Gnome/Unity</td>
+					<td>Pidgin 2.1</td>
+					<td>Fedora 17</td>
+					<td>Gnome</td>
+					<td>Jamie</td>
+					<td>true</td>
+					<td>XMPP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td>ICE failed</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>mumble 1.2.3</td>
+					<td>Fedora 17</td>
+					<td>Gnome</td>
+					<td>Murmur murmur-static_x86-1.2.3-412</td>
+					<td>Debian Wheezy</td>
+					<td></td>
+					<td>Sam</td>
+					<td>false</td>
+					<td>mumble</td>
+					<td>pass</td>
+					<td>na</td>
+					<td>using bens server, it just works</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Pidgin 2.7.3</td>
+					<td>Crunchbang</td>
+					<td>openbox</td>
+					<td>kopete 1.2.5</td>
+					<td>Fedora 17</td>
+					<td>Gnome</td>
+					<td>Anna</td>
+					<td>true</td>
+					<td>XMPP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td>kopete couldn't initiate call with pidigin, only pidgin could initiate with kopete</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Kopete 1.0.0</td>
+					<td>Crunchbang</td>
+					<td>openbox</td>
+					<td>Pidgin 2.1</td>
+					<td>Fedora 17</td>
+					<td>Gnome</td>
+					<td>Anna</td>
+					<td>true</td>
+					<td>XMPP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Jitsi 1.0-build.3967</td>
+					<td>OSX 10.6.8</td>
+					<td>NA</td>
+					<td>Pidgin? ?</td>
+					<td>Ubuntu</td>
+					<td>KDE</td>
+					<td>Robin</td>
+					<td>false</td>
+					<td>XMPP</td>
+					<td>pass</td>
+					<td>pass</td>
+					<td>notes</td>
+					<td> </td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Jitsi 1.0-build.3967</td>
+					<td>OSX 10.6.8</td>
+					<td>NA</td>
+					<td>Jitsi 1.0-build.3967</td>
+					<td>Fedora</td>
+					<td>Gnome</td>
+					<td>Robin</td>
+					<td>true</td>
+					<td>SIP</td>
+					<td>pass</td>
+					<td>pass</td>
+					<td>Audio one one was pretty garbled, both using SIP2SIP</td>
+					<td> </td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Jitsi 1.0-build.3967</td>
+					<td>OSX 10.6.8</td>
+					<td>NA</td>
+					<td>Jitsi 1.0-build.3967</td>
+					<td>Fedora</td>
+					<td>Gnome</td>
+					<td>Robin</td>
+					<td>true</td>
+					<td>SIP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td>failed using different servers: SIP2SIP and localphone</td>
+					<td> </td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>linphone 3.5.2</td>
+					<td>Fedora 17</td>
+					<td>Gnome</td>
+					<td>Jitsi 1.0-build.3967</td>
+					<td>OSX 10.6.8</td>
+					<td>NA</td>
+					<td>Sam</td>
+					<td>true</td>
+					<td>SIP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td>failed using different servers: SIP2SIP and linphone</td>
+					<td> </td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Pidgin 2.10.3</td>
+					<td>Kubuntu 12.04</td>
+					<td>KDE</td>
+					<td>Google Talk, webclient ???</td>
+					<td>OSX, Android</td>
+					<td>NA</td>
+					<td>Steffi</td>
+					<td>true</td>
+					<td>XMPP</td>
+					<td>pass</td>
+					<td>pass</td>
+					<td> </td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Pidgin 2.10.3</td>
+					<td>Kubuntu 12.04</td>
+					<td>KDE</td>
+					<td>Google Talk, webclient ???</td>
+					<td>???</td>
+					<td>NA</td>
+					<td>Steffi</td>
+					<td>false</td>
+					<td>XMPP</td>
+					<td>pass</td>
+					<td>fail</td>
+					<td>Video was fine, audio worked but the quality was very low</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Psi 0.14</td>
+					<td>Fedora 17</td>
+					<td>Gnome</td>
+					<td>psi+ 0.15.5337</td>
+					<td>OSX</td>
+					<td>NA</td>
+					<td>Sam</td>
+					<td>true</td>
+					<td>XMPP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Psi/Psi+ v0.15.5339-webkit</td>
+					<td>Fedora 17</td>
+					<td>Gnome</td>
+					<td>psi+ Psi+ v0.15.3910</td>
+					<td>KKubuntu 12.04</td>
+					<td>KDE</td>
+					<td>Sam</td>
+					<td>true</td>
+					<td>XMPP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td>auth requests never appeared, voice chat enabled via pssimedia client</td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+
+	</body>
+
+	<tags>
+		<tag>front-page</tag>
+		<tag>eu</tag>
+		<tag>swpat</tag>
+		<tag>patents</tag>
+	</tags>
+
+</html>

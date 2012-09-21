@@ -30,8 +30,7 @@ if (
   open(MAIL, "|/usr/lib/sendmail -t -f promoorder\@fsfe.org");
   print MAIL
 "From: promoorder\@fsfe.org
-To: assist\@fsfe.org
-Cc: paul\@fsfe.org
+To: paul\@fsfe.org
 Subject: $reference $firstname $lastname
 
 Hey, someone ordered promotional material:
@@ -55,10 +54,10 @@ Your friendly automatic web order program.
 ";
   close MAIL;
 
-  print "Location: /order/orderpromo-thanks.$lang.html\n\n";
+  print "Location: http://test.fsfe.org/order/orderpromo-thanks.$lang.html\n\n";
 } else {
 
   #something was wrong with the input
-  print "Location: /order/orderpromo-error.$lang.html\n\n";
+  print "Location: http://test.fsfe.org/order/orderpromo-error.$lang.html\n\n";
 
 }

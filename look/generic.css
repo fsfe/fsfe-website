@@ -643,14 +643,14 @@ p#introduction {
 /* ------------------------------------------------------------------------- */
 /* Promopack order form                                                      */
 /* ------------------------------------------------------------------------- */
-#orderpromo .formlabel {
+.labeledform .formlabel {
   font-weight: bold;
   display: inline-block;
   text-align: right;
   vertical-align: top;
   width: 30%;
 }
-#orderpromo textarea {
+.labeledform .formlabel {
   display: inline-block;
 }
 

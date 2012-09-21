@@ -18,16 +18,16 @@
         <!-- Translators: please set the value for the language to your language code -->
         <input type="hidden" name="language" value="en" />
         <span class="formlabel">First name, Last name:</span>
-          <input type="text" name="firstname" placeholder="First Name" size="20" />
-          <input type="text"  name="lastname" placeholder="Last Name" size="20" /><br/>
+          <input type="text" name="firstname" placeholder="First Name" size="20" required="required" />
+          <input type="text"  name="lastname" placeholder="Last Name" size="20" required="required" /><br/>
         <span class="formlabel">Short Biography:</span>
-          <textarea name="biography" rows="6" cols="40"></textarea><br/>
+          <textarea name="biography" rows="6" cols="40" required="required"></textarea><br/>
         <span class="formlabel">Motivation:</span>
-          <textarea name="motivation" rows="4" cols="40"></textarea><br/>
+          <textarea name="motivation" rows="4" cols="40" required="required"></textarea><br/>
         <span class="formlabel">Website:</span>
-          <input type="text" name="website" placeholder="Website" size="40" /><br/>
+          <input type="text" name="website" placeholder="Website" size="40" required="required" /><br/>
 
-        <h3>Contact</h3>
+        <h3>Nominee Contact</h3>
         Please enter at least either the email address, or the phone number, or the full postal address of the person you want to nominate. <br />
         <span class="formlabel">Email:</span>
           <input type="text" name="email" placeholder="Email" size="40" /><br/>
@@ -35,14 +35,16 @@
           <input type="text" name="phone" placeholder="Telephone Number" size="40" /><br/>
         <span class="formlabel">Street, No.:</span>
           <input type="text" name="street" size="40" /><br/>
-        <span class="formlabel">City, Zip:</span>
+        <span class="formlabel">Zip, City:</span>
           <input type="text" name="city" size="40" /><br/>
         <span class="formlabel">Country:</span>
-          <input type="text" name="country" size="40" /><br/>
+          <select name="country" required="required">
+            <country-list-europe/>
+          </select>
 
         <input type="submit" name="url" value="I am a spam robot" style="display:none;" />
         <!-- Translators: please translate the label of this button (the value field) -->
-        <input type="submit" name="dothis" value="Order now!"/>
+        <input type="submit" name="dothis" value="Nominate now!"/>
         <input type="submit" name="url" value="I am a spam robot" style="display:none;" /><br/>
       </form>
     </p>

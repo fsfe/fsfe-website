@@ -650,7 +650,8 @@ p#introduction {
   vertical-align: top;
   width: 30%;
 }
-.labeledform .formlabel {
+.labeledform textarea,
+.labeledform select {
   display: inline-block;
 }
 

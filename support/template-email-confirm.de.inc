@@ -4,10 +4,10 @@
 $subject = 'Bestätigen Sie Ihre E-Mail-Adresse';
 
 $message = '
-Vielen Dank für Ihre Unterstütung der FSFE!
+Vielen Dank, dass Sie die FSFE unterstützen!
 
 Bitte bestätigen Sie Ihre E-Mail-Adresse durch Aufrufen folgender URL:
-http://fsfe.org/support/portal.en?'. $secret .'
+http://fsfe.org/support/portal.de?'. $secret .'
 
 Vielen Dank!
 ';

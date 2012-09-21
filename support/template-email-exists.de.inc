@@ -5,12 +5,12 @@
 $subject = 'Danke, dass Sie die FSFE unterstützen';
 
 $message = '
-Vielen Dank dass sie die FSFE unterstützen!
+Vielen Dank, dass Sie die FSFE unterstützen!
 
 Diese E-Mail-Adresse ist jedoch bereits registriert.
 
 Erfahren Sie nähere Details auf
-http://fsfe.org/support/portal.en?'. $secret_from_db .'
+http://fsfe.org/support/portal.de?'. $secret_from_db .'
 
 Dies ist Ihre persönliche URL. Sie können darüber auf Ihre Unterstützerdetails
 zugreifen wann immer Sie mögen. Dazu müssen Sie sich kein weiteres Passwort

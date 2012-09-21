@@ -40,11 +40,11 @@ if (
 ) {
 
   #send mail
-  open(MAIL, "|/usr/lib/sendmail -t -f $email");
+  open(MAIL, "|/usr/lib/sendmail -t -f noreply\@fsfe.org");
   print MAIL
 "Content-Transfer-Encoding: 8bit
 Content-type: text/plain; charset=UTF-8
-From: $email
+From: noreply\@fsfe.org
 To: paul\@fsfe.org
 Subject: [NFSA Nomination] $reference $firstname $lastname
 
@@ -70,9 +70,9 @@ Preferred language was: $lang
 ";
   close MAIL;
 
-  print "Location: http://fsfe.org/activities/nordic-free-software-award/nfsa-nominate-thanks.$lang.html\n\n";
+  print "Location: http://test.fsfe.org/activities/nordic-free-software-award/nfsa-nominate-thanks.$lang.html\n\n";
 } else {
 
   #something was wrong with the input
-  print "Location: http://fsfe.org/activities/nordic-free-software-award/nfsa-nominate-error.$lang.html\n\n";
+  print "Location: http://test.fsfe.org/activities/nordic-free-software-award/nfsa-nominate-error.$lang.html\n\n";
 }

@@ -6,6 +6,7 @@ ERROR_REPORTING( E_ALL) ;
 
 // allow XMLHttpRequest from any domain
 header("Access-Control-Allow-Origin: *");
+header('Content-Type: text/html; charset="utf-8"');
 
 if ($_POST['email'] == '' || $_POST['country_code'] == '') {
     die("Required post data missing (e-mail and country). This page should only be accessed via the sign up form.");

@@ -6,7 +6,7 @@ ERROR_REPORTING( E_ALL) ;
 
 // allow XMLHttpRequest from any domain
 header("Access-Control-Allow-Origin: *");
-header('Content-Type: text/html; charset="utf-8"');
+header('Content-Type: text/plain; charset="utf-8"');
 
 if ($_POST['email'] == '' || $_POST['country_code'] == '') {
     die("Required post data missing (e-mail and country). This page should only be accessed via the sign up form.");
@@ -14,6 +14,8 @@ if ($_POST['email'] == '' || $_POST['country_code'] == '') {
        If JS is not enabled, the user can press back, fill the missing fields and repost.
        If JS not enabled, the row will be missing language and referrer data, but we can live with that. */
 }
+
+// TODO: add eregi testing of values that e-mail field is email
 
 $lang = $_POST['lang'];
 

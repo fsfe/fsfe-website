@@ -129,8 +129,11 @@ else {
 
     $to      = $_POST['email']; 
     // TODO: is this safe, should we ereg() input first to check correct form?
-    $headers = 'From: "FSFE" <office@fsfe.org>' . "\r\n";
-    mail($to, $subject, $message, $headers);
+    $headers = 'Content-Type: text/plain; charset="utf-8"' . "\r\n";
+    $headers .= 'MIME-Version: 1.0' . "\r\n";
+    $headers .= 'Content-Transfer-Encoding: 8bit' . "\r\n";
+    $headers .= 'From: "FSFE" <office@fsfe.org>' . "\r\n";
+    mail($to, '=?UTF-8?B?'.base64_encode($subject).'?=', $message, $headers);
 }
 
 ?>

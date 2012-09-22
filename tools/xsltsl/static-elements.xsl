@@ -146,7 +146,7 @@
     /* <![CDATA[ */
     $(document).ready(function() {
         $("input[name=ref_url]").val(document.referrer);
-        $("input[name=ref_id]").val(window.location.search.slice(1));
+        $("input[name=ref_id]").val(window.location.search.toString().slice(1));
         
 	    $("form.support").validate({
 		    rules: {

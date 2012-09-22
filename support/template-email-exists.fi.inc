@@ -4,7 +4,7 @@ $subject = 'Kiitos FSFE:n tukemisesta';
 $message = '
 Kiitos tukesi osoittamisesta FSFE:lle!
 
-Havaitsimme, että sähköpostiosoitettasi on jo käytettu 
+Havaitsimme, että sähköpostiosoitettasi on jo käytetty 
 tukijaksi ilmoittautumisessa.
 
 Tietosi löytyy sivulta

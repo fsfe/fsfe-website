@@ -387,6 +387,7 @@ $countries = array (
   'ZM' => 'Zambia',
   'ZW' => 'Zimbabwe',
   'ZZ' => 'Unknown or Invalid Region',
+  'XK' => 'Kosovo',
 );
 
 $series_json = "";

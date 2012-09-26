@@ -44,7 +44,6 @@ if (
 Content-type: text/plain; charset=UTF-8
 From: $email
 To: assist\@fsfe.org
-Cc: paul\@fsfe.org
 Subject: [promo order] $reference $firstname $lastname
 
 Hey, someone ordered promotional material:

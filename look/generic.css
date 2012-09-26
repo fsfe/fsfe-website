@@ -659,18 +659,22 @@ p#introduction {
 }
 
 /* ------------------------------------------------------------------------- */
-/* Promopack order form                                                      */
+/* Form Label
 /* ------------------------------------------------------------------------- */
 
-/* Used in: orders/promopack.*.xhtml */
-#orderpromo .formlabel {
+/* Used in: orders/promopack.*.xhtml 
+            activities/nordic-free-software-award/...
+*/
+
+.labeledform .formlabel {
   font-weight: bold;
   display: inline-block;
   text-align: right;
   vertical-align: top;
   width: 30%;
 }
-#orderpromo textarea {
+.labeledform textarea,
+.labeledform select {
   display: inline-block;
 }
 

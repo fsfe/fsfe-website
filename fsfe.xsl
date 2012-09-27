@@ -549,6 +549,14 @@
 
           </xsl:element> <!-- /li -->
 
+          <xsl:element name="li">
+            <xsl:attribute name="class">support</xsl:attribute>
+            <xsl:element name="a">
+              <xsl:attribute name="href">/support/</xsl:attribute>
+              Support
+            </xsl:element>
+          </xsl:element> <!-- /li -->
+
           <!-- Planet portal menu -->
           <xsl:element name="li">
             <xsl:attribute name="class">planet</xsl:attribute>

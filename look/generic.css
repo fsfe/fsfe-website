@@ -865,6 +865,7 @@ h4#subpages + ul li:nth-child(odd) {
 
 #menu ul li.fsfe ul li a,
 #menu ul li.fellowship ul li a,
+#menu ul li.support ul li a,
 #menu ul li.planet ul li a,
 #menu ul li.wiki ul li a {
   font-weight: normal;
@@ -872,6 +873,7 @@ h4#subpages + ul li:nth-child(odd) {
 
 #menu ul li.fsfe ul li a:hover,
 #menu ul li.fellowship ul li a:hover,
+#menu ul li.support ul li a:hover,
 #menu ul li.planet ul li a:hover,
 #menu ul li.wiki ul li a:hover {
   background-color: white;
@@ -895,7 +897,7 @@ h4#subpages + ul li:nth-child(odd) {
 }
 
 #menu ul li.planet a {
-  border-left: 15px solid rgb(74,160,240);
+  border-left: 15px solid rgb(112,208,85);
 }
 
 #menu ul li.planet ul {
@@ -912,6 +914,14 @@ h4#subpages + ul li:nth-child(odd) {
 
 #menu ul li.wiki a {
   border-left: 15px solid rgb(173,255,84);
+}
+
+#menu ul li.support a {
+  border-left: 15px solid rgb(74,160,240);
+}
+
+#menu ul li.support ul {
+  display: none;
 }
 
 #menu ul li.fellowship a {

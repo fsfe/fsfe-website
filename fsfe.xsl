@@ -554,7 +554,7 @@
             <xsl:attribute name="class">support</xsl:attribute>
             <xsl:element name="a">
               <xsl:attribute name="href">/support/</xsl:attribute>
-              Support
+              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'support/support'" /></xsl:call-template> 
             </xsl:element>
           </xsl:element> <!-- /li -->
 

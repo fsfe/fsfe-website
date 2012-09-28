@@ -27,33 +27,49 @@
 	<body>
 		<h1>Results: Free Software voice &amp; video testing</h1>
 		
-		<p newsteaser="yes">Last weekend on Software Freedom Day the Manchester FSFE Fellowship group, assisted by additional participants in Britain and Germany, spent the afternoon testing Free Software alternatives to Skype.</p>
+		<p newsteaser="yes">Last weekend on Software Freedom Day the Manchester FSFE Fellowship group, assisted by additional participants in Britain and Germany, spent the afternoon <a href="http://etherpad.fsfe.org/j2uametMf3">testing Free Software alternatives to Skype</a>.</p>
 		
 		<h3>Results</h3>
 		
-		<p>The 25 sets of results were recorded, and can be browsed, sorted, and searched below.</p>
+		<p>The 25 sets of results were recorded, and can be browsed, sorted, and searched <a href="#id-table">below</a>.</p>
 		
-		<p>Six audio tests succesfully passed (24%), as did five video tests (20%). Mumble was the most successful client, passing 100% of tests (audio only, video is not yet supported). XMPP passed four out of 14 audio tests, whereas SIP passed only one out of ten (both vide and audio). Of nine apps tested, only Mumble, Pidgin, Jitsi, and Google Talk's we client achieved passes.</p>
+		<p>Six audio tests successfully passed (24%), as did five video tests (20%). <a href="http://mumble.sourceforge.net/FAQ#What_is_Mumble.3F">Mumble</a> was the most successful client, passing 100% of tests (audio only, video is not yet supported). XMPP passed four out of 14 audio tests, whereas SIP passed only one out of ten (both video and audio). Of nine apps tested, only Mumble, <a href="http://www.pidgin.im/">Pidgin</a>, <a href="https://jitsi.org/">Jitsi</a>, and Google Talk's we client achieved passes.</p>
 		
 		<h3>Conclusions</h3>
 		
-		<p>The clients tested performed more poorly than expected, probably due to network errors. One of the difficulties in testing was that generally there was little or no information about why the test had failed. Improving debugging output in the event of a problem would be a significant step forward.</p>
+		<p>The clients tested performed more poorly than expected, probably due to network problems. One of the difficulties in testing was that generally there was little or no information about why the test had failed.</p>
 		
-		<p>SIP clients couldn't connect successfully except when both testers used the same client, and accounts on the same server. This was surprising considering several of the accounts used were from professional companies with paid for support.</p>
+		<p>SIP clients couldn't connect successfully except when both testers used the same client, and had accounts on the same SIP server. This was surprising, especially considering that the accounts used for testing were is many cases paid for and commercially supported.</p>
 		
-		<p>The only client and protocol which consistently did what it promised was Mumble, which had 100% test pass rate. Unlike all other clients, Mumble uses its own protocol, and also offers audio conferencing and text-to-speech by default. Mumble users are constrained to using the same server however, unlike SIP and XMPP users who can each use a separate server of their choice.</p>
+		<p>The only client and protocol which consistently did what it promised was Mumble, which had 100% test pass rate. Unlike all other clients, Mumble uses its own protocol, and also offers audio conferencing and text-to-speech by default. Mumble users are constrained to using the same server however, unlike SIP and XMPP users who should theoretically each be able to use a separate server of their choice.</p>
 		
-		<p>It would have been useful to have a local SIP and XMPP server on the same network as the testers in order to better identify network related problems. This would help to determine whether troublesome clients are genuinely at fault, or merely suffering from having to deal with an unreliable server.</p>
+		<p>It would have been useful to have a local SIP and XMPP server on the same network as the testers in order to better identify network related problems. This could have helped determine whether failures stemmed from the client, network, or server..</p>
 		
-		<p>Examining STUN and ICE configurations was beyond the scope of our tests, but as these technologies seem critical to whether calls succeed or fail, they merit careful examination when choosing or configuring SIP and XMPP servers.</p>
+		<p>Examining <a hfer="https://en.wikipedia.org/wiki/STUN">STUN</a> and <a href="https://en.wikipedia.org/wiki/Interactive_Connectivity_Establishment">ICE</a> configurations was beyond the scope of our tests, but as these technologies seem critical to whether calls succeed or fail, they merit careful examination when choosing or configuring SIP and XMPP servers.</p>
+		
+		<p>FSFE Fellows will be pleased to note that XMPP calls using <a href="http://wiki.fsfe.org/XMPP">FSFE's own XMPP server</a> were often successful: several volunteers could see and hear each other when both were using their @jabber.fsfe.org accounts.</p>
 		
 		<h3>A Skype alternative?</h3>
 		
-		<p>Skype uses a <a href="http://computerworld.co.nz/news.nsf/news/7AB67323D6305E49CC2570A1001698C0">variety</a> of <a href="http://www.h-online.com/security/features/How-Skype-Co-get-round-firewalls-747197.html">notorious</a> methods to punch through network obstacles like firewalls, and to ensure it can locate the intended call recipient wherever they may be. It also makes life easy for itself by being a centralised system where, if necessary, all roads lead to Rome (or a Skype managed server, at least).</p>
+		<p>Skype uses a <a href="http://computerworld.co.nz/news.nsf/news/7AB67323D6305E49CC2570A1001698C0">variety</a> of <a href="http://www.h-online.com/security/features/How-Skype-Co-get-round-firewalls-747197.html">notorious</a> methods to punch through network obstacles like firewalls, and to ensure it can locate the intended call recipient wherever they may be. It also benefits from being a centralised system where, if necessary, all roads lead to Rome (or a Skype managed server, at least).</p>
 		
-		<p>Contrastingly, Free Software systems play by conventional rules of network traffic, and try and connect callers using established procedures. They also have to communicate with a variety of different servers, which may operate in ways they don't know or expect. In addition to this, some of the chat clients have only recently added support for more than text-based chatting (Gajim in Debian testing is too old for video), and probably add a few problems of their own into the mix.</p>
+		<p>Contrastingly, Free Software systems play by conventional rules of network traffic, and try and connect callers using established procedures. They also have to communicate with a variety of different servers, which may operate in ways they don't know or expect. In addition to this, some of the chat clients that we tested have only recently added support for more than text-based chatting (<a href="http://gajim.org/">Gajim</a> in Debian testing is too old for video, for example), and probably add a few problems of their own into the mix.</p>
 		
 		<p>Based on our test results, those looking for a Free Software Skype alternative should use either Mumble, or SIP with all callers on the same server and using the same client.</p>
+		
+		<h3>Moving Forward</h3>
+		
+		<p>We had hoped to publish a conclusive compatibility table of chat clients, providing a reference for people needing to know "what works with what", and "what is easiest". Instead, we have table of subjective results, and a list of questions:</p>
+		
+		<ul>
+			<li>How can we determine whether an XMPP server supports audio and video ('<a href="https://en.wikipedia.org/wiki/Jingle_%28protocol%29">Jingle</a>')?</li>
+			<li>How can we gather more detailed information about why a call failed?</li>
+			<li>How can we determine whether a SIP or XMPP server supports STUN (and should therefore be less prone to network issues)?</li>
+		</ul>
+		
+		<p>If you have answers to these questions, please share them in the comments of the <a href="">blog edition</a> of this article.</p>
+		
+		<h3>Table</h3>
 		
 		<style>
 		#results_length {

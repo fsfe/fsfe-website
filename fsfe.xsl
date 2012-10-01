@@ -565,19 +565,15 @@
 
           </xsl:element> <!-- /li -->
 
-          <!-- Planet portal menu -->
+          <!-- Support portal menu item -->
           <xsl:element name="li">
-            <xsl:attribute name="class">planet</xsl:attribute>
+            <xsl:attribute name="class">support</xsl:attribute>
             <xsl:element name="a">
-              <xsl:attribute name="href">http://planet.fsfe.org/</xsl:attribute>
-              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'planet/blogs'" /></xsl:call-template> 
+              <xsl:attribute name="href">/support/</xsl:attribute>
+              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'support/support'" /></xsl:call-template> 
             </xsl:element>
-            <!-- causes validation errors, needs li to pass validator?
-            <xsl:element name="ul">
-            
-            </xsl:element>-->
-          </xsl:element>
-          
+          </xsl:element> <!-- /li -->
+
           <!-- Fellowship portal menu -->
           <xsl:element name="li">
             <xsl:attribute name="class">fellowship</xsl:attribute>
@@ -612,7 +608,20 @@
             </xsl:for-each>
               </xsl:element><!-- end li -->
             </xsl:element><!-- end ul -->          
-
+          
+          <!-- Planet portal menu -->
+          <xsl:element name="li">
+            <xsl:attribute name="class">planet</xsl:attribute>
+            <xsl:element name="a">
+              <xsl:attribute name="href">http://planet.fsfe.org/</xsl:attribute>
+              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'planet/blogs'" /></xsl:call-template> 
+            </xsl:element>
+            <!-- causes validation errors, needs li to pass validator?
+            <xsl:element name="ul">
+            
+            </xsl:element>-->
+          </xsl:element>
+          
           <!-- Wiki -->
           <xsl:element name="li">
             <xsl:attribute name="class">wiki</xsl:attribute>

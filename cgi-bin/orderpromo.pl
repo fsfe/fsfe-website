@@ -45,6 +45,7 @@ Content-type: text/plain; charset=UTF-8
 From: $email
 To: assist\@fsfe.org
 Subject: [promo order] $reference $firstname $lastname
+Precedence: bulk
 
 Hey, someone ordered promotional material:
 First Name: $firstname

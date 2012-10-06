@@ -53,6 +53,19 @@
       large="/order/2010/images/tshirt-fsfs-redback.jpg"/>
   </item>
   
+  <item type="t-shirt" id="tshirt-fsfs-brasil" price="18.00" date="2012-10-06">
+    <available size="S"/>
+    <available size="M"/>
+    <available size="XL"/>
+    <available size="XXL"/>
+    <image
+      small="/order/2010/images/thumbnails/tshirt-fsfs-brasilfront.png"
+      large="/order/2010/images/tshirt-fsfs-brasilfront.jpg"/>
+    <image
+      small="/order/2010/images/thumbnails/tshirt-fsfs-brasilback.png"
+      large="/order/2010/images/tshirt-fsfs-brasilback.jpg"/>
+  </item>
+  
   <item type="other" id="ballpen-riva" price="5.00" date="2010-02-08">
     <available size="#"/>
     <image

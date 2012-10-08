@@ -34,7 +34,7 @@
   
   <xsl:template match="label-ourwork2011">
     <xsl:call-template name="gettext">
-      <xsl:with-param name="id" select="'ourwork2011'" />
+      <xsl:with-param name="id" select="'support'" />
     </xsl:call-template>
   </xsl:template>
   

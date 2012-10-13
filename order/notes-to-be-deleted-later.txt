@@ -1,0 +1,116 @@
+Resorting <svn>/branches/test/order/ for to
+
+- cleaning up the mess
+- deleting outdated material/data
+- more consistency in paths, filenames, article tags
+- adding new articles
+    baby bodies
+    cufflinks
+    gnu-pins
+    bio/fair trade hoodies
+    tshirt-ilovefs
+    shirt-fsfs-red
+- including more and more better photos (hopefully)
+
+These are just some notes to make life easier for web@ and
+translators@, hopefully.
+
+New directory tree
+
+I mkdired /order/articles/
+to distinguish to other $things like /promotion/.
+I mkdired /order/articles/images/thumbnails/
+to store the images consistently.
+
+At /articles/, there should be just one item.en.xml and just
+one info.<language>.xml for each language. 
+
+The articles are sorted roughly as they are displayed at
+fsfe.org/order There is no technical reason for that, it just
+should ease editing.
+
+Getting rid of /<year>/
+
+The following directories contained old articles. All
+files in those directories are moved into an archive at
+DUS office, beyond svn, for there is no reason to have a
+version control for them.
+
+These directories are useless now and can be deleted. No
+need for anyone to take further action.
+
+/2001/
+/2002/
+/2003/
+/2004/
+/2006/
+/2007/
+
+/2005/ contained both, old and actual articles. The data
+and pictures of the old ones was handled as above, the
+actual data have been moved to /order/articles/item.en.xml
+and .../info.<language>.xml
+The images have been moved to /articles/images/[thumbnails]/
+Filenames of images and paths in item.en.xml have been
+changed accordingly.
+
+The following directories contained actual data. It was
+handled as above.
+
+/2009/
+/2010/
+
+Questions to web@: 
+
+- in all info.ru.xml, the first character (even before
+the prolog) is ﻿. Is that intended? I didn't deleted it yet.
+
+- Do I suggest correct that the only purpose of 
+'date="<introducing_date>"' at item.en.xml and        
+<xsl:sort select="@date" order="descending"/> at order.xsl
+is to sort the articles?
+
+- Before, the built script had to search in all /order/<year>/
+I do not know where to tell him how to proceed now. Can you
+help here?
+
+- How to proceed on? First asking translators@ to take care
+of the few changes, then moving to production branch, ot the
+other way round?
+
+TODO Rainer:
+
+  svn del for directories /<year>/ when moving to production branch
+  rename article tags in OTK:
+    tshirt-hacking2-black -> tshirt-hacking-black
+    mug-fellowship -> mug-fellowship-black
+    mug-white -> mug-fellowship-white
+    mug-white -> mug-fellowship-white
+    zipped-fsfs-grey -> hooded-fsfs-grey-zip
+    check all hoodies! -> hooded-fsfs...
+    ballpen-riva -> ballpen-green
+    ballpen-senator -> ballpen-blue
+  make photos 
+    hooded-fsfs-blue-bio
+    hooded-fsfs-grey (logo not actual!)
+    baby bodies
+    gnu/plussy cufflinks
+    gnu pins
+    organise better, consistent photos of all articles anyway
+  write one sentence about bio and fair trade for
+    hooded-fsfs-black-bio
+    hooded-fsfs-blue-bio
+
+TODO translators:
+  
+As most data could be transferred smoothly, in most cases a
+rough check should be sufficient. .nb and .fr versions are
+just rudimental yet, in other versions some articles are missing
+(I would like to encourage the spanish friends...)
+
+remarks:
+  remove "second edition" at tshirt-hacking-black
+  text on back side of girlie-hacking-black has changed
+  add new articles
+
+written by Rainer 2012-10-13

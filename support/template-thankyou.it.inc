@@ -16,7 +16,7 @@ echo '
 // This is the HTML contents shown after user submitted the support form
 
 echo '
-<p>Grazie per esprimere il tuo sostegno alla FSFE!</p>
+<p>Grazie per aver espresso il tuo sostegno alla FSFE!</p>
 <p>Un messaggio di conferma è stato inviato alla tua casella e-mail  '. $_POST['email'] .'</p>
 ';
 

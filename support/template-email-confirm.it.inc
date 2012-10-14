@@ -20,7 +20,7 @@ Thank you!
 $subject = 'Conferma il tuo indirizzo e-mail';
 
 $message = '
-Grazie per esprimere il tuo sostegno alla FSFE!
+Grazie per aver espresso il tuo sostegno alla FSFE!
 
 Ti preghiamo di confermare il tuo indirizzo e-mail aprendo la pagina
 http://fsfe.org/support/portal.it?'. $secret .'

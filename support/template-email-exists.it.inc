@@ -25,10 +25,10 @@ Thank you!
 // This is the contents of the e-mail sent to a signup whos the e-mail was
 // already found in the supporter database.
 
-$subject = 'Grazie per il vostro sostegno alla FSFE';
+$subject = 'Grazie per il tuo sostegno alla FSFE';
 
 $message = '
-Vi ringraziamo per aver espresso il vostro sostegno alla FSFE!
+Ti ringraziamo per aver espresso il tuo sostegno alla FSFE!
 
 Tuttavia, questo indirizzo e-mail era già presente tra quelli dei nostri sostenitori.
 

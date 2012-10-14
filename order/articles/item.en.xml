@@ -66,6 +66,7 @@
       small="/order/articles/images/thumbnails/tshirt-fsfs-brasil-back.jpg"
       large="/order/articles/images/tshirt-fsfs-brasil-back.jpg"/>
   </item>
+
   <item type="t-shirt" id="tshirt-hacking-black" price="18.00" date="2008-02-23">
     <available size="S"/>
     <available size="M"/>
@@ -108,6 +109,18 @@
     <image
       small="/order/articles/images/thumbnails/tshirt-dfd-white-back.jpg"
       large="/order/articles/images/tshirt-dfd-white-back.jpg"/>
+  </item>
+
+  <item type="girlie" id="girlie-hacking-black" price="18.00" date="2008-02-23">
+    <available size="M"/>
+    <available size="L"/>
+    <available size="XL"/>
+    <image
+      small="/order/articles/images/thumbnails/girlie-hacking-black-front.jpg"
+      large="/order/articles/images/girlie-hacking-black-front.jpg"/>
+    <image
+      small="/order/articles/images/thumbnails/girlie-hacking-black-back.jpg"
+      large="/order/articles/images/girlie-hacking-black-back.jpg"/>
   </item>
 
   <item type="hooded" id="hooded-fsfs-black" price="35.00" date="2012-09-29">

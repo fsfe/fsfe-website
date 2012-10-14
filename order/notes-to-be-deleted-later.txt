@@ -41,23 +41,6 @@ All outdated data and images was saved at an archive at
 DUS office, beyond svn, for there is no need for a version
 control.
 
-<<<<<<< .mine
-=======
-/2005/ contained both, old and actual articles. The data
-and pictures of the old ones was handled as above, the
-actual data have been moved to /order/articles/item.en.xml
-and .../info.<language>.xml
-The images have been moved to /articles/images/[thumbnails]/
-Filenames of images and paths in item.en.xml have been
-changed accordingly.
-
-The following directories contained actual data. It was
-handled as above.
-
-/2009/
-/2010/
-
->>>>>>> .r24634
 Questions to web@: 
 
 - in all info.ru.xml, the first character (even before
@@ -87,19 +70,19 @@ TODO Rainer:
     mug-white -> mug-fellowship-white
     mug-white -> mug-fellowship-white
     zipped-fsfs-grey -> hooded-fsfs-grey-zip
-    check all hoodies! -> hooded-fsfs...
+    check all "hoodies"! -> _hooded_-fsfs...
     ballpen-riva -> ballpen-green
     ballpen-senator -> ballpen-blue
   make photos and include new articles
-    hooded-fsfs-blue-bio
+    hooded-fsfs-blue ... done
     hooded-fsfs-grey (logo not actual!)
     baby bodies
     gnu/plussy cufflinks
     gnu pins
     organise better, consistent photos of all articles anyway
   write one sentence about bio and fair trade for
-    hooded-fsfs-black-bio
-    hooded-fsfs-blue-bio
+    hooded-fsfs-black
+    hooded-fsfs-blue
 
 TODO translators:
   

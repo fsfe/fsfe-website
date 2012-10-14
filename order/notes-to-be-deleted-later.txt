@@ -1,8 +1,9 @@
 Resorting <svn>/branches/test/order/ for to
 
-- cleaning up the mess
-- deleting outdated material/data
-- more consistency in paths, filenames, article tags
+- cleaning up the mess.... done
+- deleting outdated material/data...... done
+- more consistency in paths, filenames, article tags... done
+
 - adding new articles
     baby bodies
     cufflinks
@@ -26,19 +27,22 @@ At /articles/, there should be just one item.en.xml and just
 one info.<language>.xml for each language. 
 
 The articles are sorted roughly as they are displayed at
-fsfe.org/order There is no technical reason for that, it just
-should ease editing.
+fsfe.org/order 
+There is no technical reason for that, it just should ease
+editing.
 
-Getting rid of /<year>/
+Getting rid of /order/<year>/ ..... done
 
-The following directories contained old articles. All
-files in those directories are moved into an archive at
-DUS office, beyond svn, for there is no reason to have a
-version control for them.
+All data and images, incl. all existing translations, where
+merged into one appropiate file in
+/order/articles/[images/[thumbnails]]
 
-These directories are useless now and can be deleted. No
-need for anyone to take further action.
+All outdated data and images was saved at an archive at
+DUS office, beyond svn, for there is no need for a version
+control.
 
+<<<<<<< .mine
+=======
 /2005/ contained both, old and actual articles. The data
 and pictures of the old ones was handled as above, the
 actual data have been moved to /order/articles/item.en.xml
@@ -53,27 +57,30 @@ handled as above.
 /2009/
 /2010/
 
+>>>>>>> .r24634
 Questions to web@: 
 
 - in all info.ru.xml, the first character (even before
 the prolog) is ﻿. Is that intended? I didn't deleted it yet.
+
+Gollo takes care
 
 - Do I suggest correct that the only purpose of 
 'date="<introducing_date>"' at item.en.xml and        
 <xsl:sort select="@date" order="descending"/> at order.xsl
 is to sort the articles?
 
-- Before, the built script had to search in all /order/<year>/
-I do not know where to tell him how to proceed now. Can you
-help here?
+Gollo agrees.
 
 - How to proceed on? First asking translators@ to take care
 of the few changes, then moving to production branch, ot the
 other way round?
 
+Gollo says: In this special case: Translating in test branch,
+then moving.
+
 TODO Rainer:
 
-  svn del for directories /<year>/ when moving to production branch
   rename article tags in OTK:
     tshirt-hacking2-black -> tshirt-hacking-black
     mug-fellowship -> mug-fellowship-black
@@ -83,7 +90,7 @@ TODO Rainer:
     check all hoodies! -> hooded-fsfs...
     ballpen-riva -> ballpen-green
     ballpen-senator -> ballpen-blue
-  make photos 
+  make photos and include new articles
     hooded-fsfs-blue-bio
     hooded-fsfs-grey (logo not actual!)
     baby bodies
@@ -99,7 +106,6 @@ TODO translators:
 As most data could be transferred smoothly, in most cases a
 rough check should be sufficient. .nb and .fr versions are
 just rudimental yet, in other versions some articles are missing
-(I would like to encourage the spanish friends...)
 
 remarks:
   remove "second edition" at tshirt-hacking-black
@@ -107,3 +113,5 @@ remarks:
   add new articles
 
 written by Rainer 2012-10-13
+edited by Rainer 2012-10-14
+[status: old version 28 MB, new version 10 MB]

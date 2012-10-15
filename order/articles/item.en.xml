@@ -210,6 +210,48 @@
       large="/order/articles/images/baby-romper-fork-white-front.jpg"/>
   </item>
 
+  <item type="other" id="pin-gnu" price="3.00" date="2012-10-15">
+    <available size="17mm"/>
+    <image
+      small="/order/articles/images/thumbnails/missing.jpg"
+      large="/order/articles/images/missing.jpg"/>
+  </item>
+
+  <item type="other" id="pin-gnu-magnet" price="3.00" date="2012-10-14">
+    <available size="17mm"/>
+    <image
+      small="/order/articles/images/thumbnails/missing.jpg"
+      large="/order/articles/images/missing.jpg"/>
+  </item>
+
+  <item type="other" id="cufflinks-gnu" price="18.00" date="2012-10-13">
+    <available size="#"/>
+    <image
+      small="/order/articles/images/thumbnails/missing.jpg"
+      large="/order/articles/images/missing.jpg"/>
+  </item>
+  
+  <item type="other" id="pin-fellowship" price="3.00" date="2012-10-12">
+    <available size="17mm"/>
+    <image
+      small="/order/articles/images/thumbnails/pin-fellowship.jpg"
+      large="/order/articles/images/pin-fellowship.jpg"/>
+  </item>
+
+  <item type="other" id="pin-fellowship-magnet" price="3.00" date="2012-10-11">
+    <available size="17mm"/>
+    <image
+      small="/order/articles/images/thumbnails/missing.jpg"
+      large="/order/articles/images/missing.jpg"/>
+  </item>
+
+  <item type="other" id="cufflinks-fellowship" price="8.00" date="2012-10-10">
+    <available size="#"/>
+    <image
+      small="/order/articles/images/thumbnails/missing.jpg"
+      large="/order/articles/images/missing.jpg"/>
+  </item>
+  
   <item type="other" id="ballpen-green" price="5.00" date="2010-02-08">
     <available size="#"/>
     <image
@@ -252,17 +294,4 @@
       large="/order/articles/images/lanyard-fellowship.jpg"/>
   </item>
 
-  <item type="other" id="pin-fellowship" price="3.00" date="2005-01-01">
-    <available size="17mm"/>
-    <image
-      small="/order/articles/images/thumbnails/pin-fellowship.jpg"
-      large="/order/articles/images/pin-fellowship.jpg"/>
-  </item>
-
-  <item type="other" id="pin-fellowship-magnet" price="3.00" date="2005-01-01">
-    <available size="17mm"/>
-    <image
-      small="/order/articles/images/thumbnails/missing.jpg"
-      large="/order/articles/images/missing.jpg"/>
-  </item>
 </itemset>

@@ -18,11 +18,11 @@ if ($_POST['email'] == '' || $_POST['country_code'] == '') {
 // debugging code
 $msg = "supporter form debug\n\n SERVER:\n";
 foreach ($_SERVER as $key => $value) {
-    $msg .= "Key: $key; Value: $value<br />\n";
+    $msg .= "$key: $value\n";
 }
 $msg .= "\n\n POST:\n";
 foreach ($_POST as $key => $value) {
-    $msg .= "Key: $key; Value: $value<br />\n";
+    $msg .= "$key: $value\n";
 }
 
 if ($_POST['rname'] != '') {

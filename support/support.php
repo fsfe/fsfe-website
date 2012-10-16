@@ -30,7 +30,7 @@ if ($_POST['rname'] != '') {
     die("Thanks"); // ..for admitting that you are a robot!
 }
 
-mail("otto@fsfe.org", $msg);
+mail("otto@fsfe.org", 'debug supporter form', $msg);
 
 
     

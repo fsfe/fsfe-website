@@ -15,7 +15,7 @@ if ($_POST['email'] == '' || $_POST['country_code'] == '') {
        If JS not enabled, the row will be missing language and referrer data, but we can live with that. */
 }
 
-if ($_POST['support_robotfield'] == '') {
+if ($_POST['rname'] != '') {
     mail("otto@fsfe.org", 'debug supporter form', "robot stopped");
     die("Thanks"); // ..for admitting that you are a robot!
 }

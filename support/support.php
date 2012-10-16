@@ -17,11 +17,11 @@ if ($_POST['email'] == '' || $_POST['country_code'] == '') {
 
 // debugging code
 $msg = "supporter form debug\n\n SERVER:\n";
-foreach ($arr as $key => $value) {
+foreach ($_SERVER as $key => $value) {
     $msg .= "Key: $key; Value: $value<br />\n";
 }
 $msg .= "\n\n POST:\n";
-foreach ($arr as $key => $value) {
+foreach ($_POST as $key => $value) {
     $msg .= "Key: $key; Value: $value<br />\n";
 }
 

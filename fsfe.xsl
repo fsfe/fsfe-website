@@ -496,6 +496,18 @@
             </xsl:element>.<!--intentional full stop goes here-->
             
           </xsl:element>
+
+          <!-- Signup Button -->
+	  <xsl:element name="div">
+	    <xsl:attribute name="id">signupbutton</xsl:attribute>
+	    <xsl:element name="a">
+              <xsl:attribute name="href">/support/</xsl:attribute>
+	      <xsl:element name="img">
+                <xsl:attribute name="src">/graphics/+1Supporter.png</xsl:attribute>
+                <xsl:attribute name="alt">Sign up as Supporter</xsl:attribute>
+	      </xsl:element>
+	    </xsl:element>
+	  </xsl:element>
           
         </xsl:element><!-- end Page header -->
         

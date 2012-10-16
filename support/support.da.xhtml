@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<html>
+  <head>
+    <title>Støtte - FSFE</title>
+  </head>
+
+  <body>
+    <h1>Støt FSFE</h1>
+    <div id="introduction" class="support_page">
+      <div class="image">
+        <img src="/graphics/stars-smaller.png" alt="Stars"/>
+      </div>
+
+<!-- These wordings are delicate. Please discuss any ideas at web@ before making any changes! -->
+    <p>
+	Bliv medlem for at vise at du kan lide fri software og støtter <a href="/work">FSFE's 
+	aktiviteter</a>.
+	</p>
+	<p>
+	Vi offentliggør ikke dit navn, kun det totale antal støtter.  Antallet 
+	af FSFE's støtter viser politikere på nationalt og EU-niveau, at fri 
+	software er vigtig.  Støtter vil også lejlighedsvist modtage vigtige 
+	oplysninger, højest tre gange om året.
+        </p>
+
+        <div id="support_form">
+
+        <form method="post" action="support.php" class="support">
+            <p>
+            <label id="firstname">Fornavn(e)
+              <input type="text" name="firstname" />
+            </label>
+            </p>
+            <p>
+            <label id="lastname">Efternavn
+              <input type="text" name="lastname" />
+            </label>
+            </p>
+            <p>
+            <label id="email">E-mail (krævet)
+              <input type="email" name="email" required="required" />
+            </label>
+            </p>
+            <p>
+            <label id="country">Land (krævet)
+              <select name="country_code" required="required">
+                <option value="">Vælg ...</option>
+                <optgroup label="Europa">
+                  <country-list-europe/>
+                </optgroup>
+                <optgroup label="Andre kontinenter">
+                  <country-list-other-continents/>
+                </optgroup>
+              </select>
+            </label>
+            </p>
+
+          <p><input type="submit" name="submit" value="Jeg støtter FSFE!" data-loading-text="Sender ..."/></p>
+
+          <input type="hidden" name="ref_url" value="" />
+          <input type="hidden" name="ref_id" value="" />
+          <input type="hidden" name="lang" value="da" />
+        </form>
+
+      <p><em>Vores privatlivserklæring er simpel: Vi vil aldrig udveksle dine data med nogen uden for FSFE. Punktum.</em></p>
+
+      </div>
+
+
+<support-form-javascript/>
+  </div>
+
+  </body>
+
+  <timestamp>$Date$ $Author$</timestamp>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

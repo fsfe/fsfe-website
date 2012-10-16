@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<html>
+  <head>
+    <title>Soutien - FSFE</title>
+  </head>
+
+  <body>
+    <h1>Soutenez la FSFE</h1>
+    <div id="introduction" class="support_page">
+      <div class="image">
+        <img src="/graphics/stars-smaller.png" alt="Stars"/>
+      </div>
+      
+    <p>
+        Signez pour apporter votre soutien à <a href="/work">l'action de la FSFE</a>&#160;! 
+		</p>
+		<p> Nous ne publierons pas votre nom, seulement le nombre total de sympathisants. Le nombre de sympathisants permet de montrer aux politiciens, que ce soit au niveau national ou européen, que le logiciel libre est important. Les sympathisants pourront recevoir occasionnellement (au maximum trois fois par an) des informations importantes de la part de la FSFE.
+	</p>
+<!-- this translation should be updated! -->
+
+        <div id="support_form">
+
+        <form method="post" action="support.php" class="support">
+            <p>
+            <label id="firstname">Prénom
+              <input type="text" name="firstname" />
+            </label>
+            </p>
+            <p>
+            <label id="lastname">Nom de famille
+              <input type="text" name="lastname" />
+            </label>
+            </p>
+            <p>
+            <label id="email">Email (requis)
+              <input type="email" name="email" required="required" />
+            </label>
+            </p>
+            <p>
+            <label id="country">Pays (requis)
+              <select name="country_code">
+                <option value="">Sélectionner..</option>
+              <optgroup label="Europe">
+                  <country-list-europe/>
+                </optgroup>
+                <optgroup label="Other continents">
+                  <country-list-other-continents/>
+                </optgroup>
+              </select>
+            </label>
+            </p>
+
+          <p><input type="submit" name="submit" value="Je soutiens la FSFE !" data-loading-text="Sending.."/></p>
+        
+          <input type="hidden" name="ref_url" value="" />
+          <input type="hidden" name="ref_id" value="" />
+          <input type="hidden" name="lang" value="fr" />
+        </form>
+
+      <p><em>Notre politique de confidentialité est simple&#160;: Nous ne 
+      partagerons jamais vos données avec qui que ce soit en dehors de la FSFE.
+      Point.</em></p>
+      <p><em>
+      Vous pourrez demander à être retiré de notre liste de soutiens à n'importe
+      quel moment&#160;: il suffit d'écrire à 
+      <a href="mailto:office&#64;fsfeurope.org">office&#64;fsfeurope.org</a></em></p>
+
+      </div>
+
+
+<support-form-javascript/>
+  </div>
+        
+  </body>
+
+  <timestamp>$Date$ $Author$</timestamp>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

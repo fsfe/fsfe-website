@@ -31,6 +31,9 @@ try {
     if (isset($_GET['ref_url'])) {
         $sql .= "WHERE ref_url LIKE '%". sqlite_escape_string($_GET['ref_url']) ."%' ";
     }
+    if (isset($_GET['country_code'])) {
+        $sql .= "WHERE country_code  = '". sqlite_escape_string($_GET['country_code']) ."' ";
+    }    
     $query = $db->prepare($sql);
     $query->execute();
 }

@@ -15,11 +15,7 @@ if ($_POST['email'] == '' || $_POST['country_code'] == '') {
        If JS not enabled, the row will be missing language and referrer data, but we can live with that. */
 }
 
-if ($_POST['rname'] != '') {
-    mail("otto@fsfe.org", 'debug supporter form', "robot stopped");
-    die("Thanks"); // ..for admitting that you are a robot!
-}
-
+// debugging code
 $msg = "supporter form debug\n\n SERVER:\n";
 foreach ($arr as $key => $value) {
     $msg .= "Key: $key; Value: $value<br />\n";
@@ -29,7 +25,14 @@ foreach ($arr as $key => $value) {
     $msg .= "Key: $key; Value: $value<br />\n";
 }
 
+if ($_POST['rname'] != '') {
+    mail("otto@fsfe.org", 'debug supporter form', "Reason: robot stopped\n\n" + $msg);
+    die("Thanks"); // ..for admitting that you are a robot!
+}
+
 mail("otto@fsfe.org", $msg);
+
+
     
 // TODO: add eregi testing of values that e-mail field is email
 

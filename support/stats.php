@@ -68,7 +68,10 @@ for ($i = 90; $i >= 0; $i--) {
 	    if (isset($_GET['ref_url'])) {
 	        $sql .= "AND ref_url LIKE '%". sqlite_escape_string($_GET['ref_url']) ."%' ";
 	    }
-
+	    if (isset($_GET['country_code'])) {
+	        $sql .= "AND country_code  = '". sqlite_escape_string($_GET['country_code']) ."' ";
+	    }
+	    
 	    $sql .= "GROUP BY country_code ORDER BY supporters DESC";
 	    //echo $sql;
 	    $query = $db->prepare($sql);
@@ -432,7 +435,7 @@ foreach ($series as $k => $v) {
     #chart_container {
         position: relative;
         display: inline-block;
-        left: 13em;
+        left: 14em;
     }
     #chart {
         display: inline-block;
@@ -451,7 +454,7 @@ foreach ($series as $k => $v) {
     }
 
     .statusbox {
-        width: 10em;
+        width: 12em;
         border: 1px solid #ccc; 
         background: #eee; 
         padding: 1em; 
@@ -527,7 +530,7 @@ Rickshaw.Series.zeroFill(seriesData);
 var graph = new Rickshaw.Graph( {
         element: document.querySelector("#chart"),
         width: 700,
-        height: 500,
+        height: 700,
         renderer: 'bar',
         series: seriesData
 } );
@@ -598,7 +601,9 @@ try {
     if (isset($_GET['ref_url'])) {
         $sql .= "WHERE ref_url LIKE '". sqlite_escape_string($_GET['ref_url']) ."%' ";
     }
-
+    if (isset($_GET['country_code'])) {
+        $sql .= "WHERE country_code = '". sqlite_escape_string($_GET['country_code']) ."' ";
+    }
     $sql .= "ORDER BY time DESC LIMIT 0,20";
 
     $query = $db->prepare($sql);
@@ -612,7 +617,7 @@ catch(PDOException $e) {
 while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
     echo '<tr>
     <td>'. $row["time"] .'</td>
-    <td>'. $row["country_code"] .'</td>
+    <td><a href="?country_code='. $row["country_code"] .'">'. $row["country_code"] .'</a></td>
     <td><a href="?ref_url='. $row["ref_url"] .'">'. $row["ref_url"] .'</a></td>
     <td><a href="?ref_id='. $row["ref_id"] .'">'. $row["ref_id"] .'</a></td>
     <td>'. $row["confirmed"] .'</td>

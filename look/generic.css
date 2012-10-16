@@ -2054,6 +2054,10 @@ div.map {
     color: red; 
 }
 
+#support_robotfield {
+    display: none;
+}
+
 #support_form_sent {
     margin: 18px 18px 18px 150px;
     padding: 18px;

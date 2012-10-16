@@ -20,11 +20,11 @@ if ($_POST['support_robotfield'] == '') {
     die("Thanks"); // ..for admitting that you are a robot!
 }
 
-$msg = "supporter form debug\n\n SERVER:\n"
+$msg = "supporter form debug\n\n SERVER:\n";
 foreach ($arr as $key => $value) {
     $msg .= "Key: $key; Value: $value<br />\n";
 }
-$msg .= "\n\n POST:\n"
+$msg .= "\n\n POST:\n";
 foreach ($arr as $key => $value) {
     $msg .= "Key: $key; Value: $value<br />\n";
 }

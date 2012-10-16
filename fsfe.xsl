@@ -499,8 +499,12 @@
 
           <!-- Signup Button -->
 	  <xsl:element name="div">
+	    <xsl:attribute name="id">signupinlineform</xsl:attribute>
+	  </xsl:element>
+	  <xsl:element name="div">
 	    <xsl:attribute name="id">signupbutton</xsl:attribute>
 	    <xsl:element name="a">
+	      <xsl:attribute name="id">signuplink</xsl:attribute>
               <xsl:attribute name="href">/support/</xsl:attribute>
 	      <xsl:element name="img">
                 <xsl:attribute name="src">/graphics/+1Supporter.png</xsl:attribute>

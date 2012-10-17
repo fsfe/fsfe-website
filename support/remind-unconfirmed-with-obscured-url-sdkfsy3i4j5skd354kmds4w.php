@@ -60,6 +60,12 @@ function send_reminder($reminder_number, $row) {
     GLOBAL $db, $timestamp;
     $secret = $row['secret'];
 
+    // don't send reminders to yahoo.com addresses
+    if (preg_match("/yahoo.com/i", $row['email'])) {
+        echo "  => Don't send reminder to Yahoo.com address.";
+        return false;
+    }    
+
     if (file_exists('template-email-confirm.'. $row['lang'] .'.inc')) {
         require('template-email-confirm.'. $row['lang'] .'.inc');
     } else {    

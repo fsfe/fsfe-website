@@ -230,6 +230,7 @@
         <option value="IE">Ireland</option>
         <option value="IT">Italy (Italia)</option>
         <option value="XK">Kosovo</option>
+        <option value="LV">Latvia (Latvija)</option>
         <option value="LI">Liechtenstein</option>
         <option value="LT">Lithuania (Lietuva)</option>
         <option value="LU">Luxembourg (Lëtzebuerg)</option>
@@ -353,7 +354,6 @@
         <option value="KW">Kuwait (‫الكويت‬‎)</option>
         <option value="KG">Kyrgyzstan (Кыргызстан)</option>
         <option value="LA">Laos (ນລາວ)</option>
-        <option value="LV">Latvia (Latvija)</option>
         <option value="LB">Lebanon (‫لبنان‬‎)</option>
         <option value="LS">Lesotho</option>
         <option value="LR">Liberia</option>

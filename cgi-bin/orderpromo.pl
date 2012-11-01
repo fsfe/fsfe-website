@@ -20,6 +20,7 @@ my $country = $query->param("country");
 #my $address = $query->param("address");
 
 my $specifics = $query->param("specifics");
+my $usage = $query->param("usage");
 my $comment = $query->param("comment");
 my $lang = $query->param("language");
 
@@ -59,6 +60,9 @@ $country
 
 Specifics of the Order:
 $specifics
+
+The material is going to be used for:
+$usage
 
 Comments:
 $comments

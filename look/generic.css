@@ -1799,15 +1799,15 @@ tr.highlighted {
   color: rgb(32,45,121);
 }
 
-#patrons table td {
+table#patrons td {
     padding: 1em!important;
 }
 
-#patrons table td:first-child {
+table#patrons td:first-child {
     text-align: center;
 }
 
-#patrons table td img {
+table#patrons td img {
     max-height: 90px;
 }
 

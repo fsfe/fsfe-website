@@ -1799,6 +1799,17 @@ tr.highlighted {
   color: rgb(32,45,121);
 }
 
+#patrons table td {
+    padding: 1em!important;
+}
+
+#patrons table td:first-child {
+    text-align: center;
+}
+
+#patrons table td img {
+    max-height: 90px;
+}
 
 /* People pages */
 

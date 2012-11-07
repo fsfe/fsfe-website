@@ -19,6 +19,7 @@
     <xsl:choose>
       <xsl:when test="$group='patrons'">
         <xsl:element name="table">
+          <xsl:attribute name="id">patrons</xsl:attribute>
           <xsl:for-each select="/html/set/*[name(.)=$group]/donor[translate(@date,'-','')&gt;=translate($frommonth,'-','')]">
             <xsl:sort select="translate(node(),'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ')"/>
             <xsl:element name="tr">

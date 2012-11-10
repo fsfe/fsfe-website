@@ -106,91 +106,105 @@
     The customer is forced to buy all or nothing. Why bother with another data-format 
     when there is one that can do everything?</p>
 
-MARK
-
     <p>Every additional feature or guideline complicates the description of the data-format 
-    exponentially. The disadvantages are immane <!-- TODO: What's immane? Is it like countless?-->. The developers of a software 
-    that needs to handle a data-format need to understand the description fully. This includes 
-    the whole text as well as all possible combinations of the contained elements. To read less 
-    and understand more leads to a more easy and secure software. This leads to more software 
-    packages that can handle this data-format on a high level. What follows is more competition, 
-    choice and therefore more user for this format.</p>
+    exponentially. The disadvantages are enormous. The developers of a software 
+    that needs to handle a data-format need to understand the description in total. This includes 
+    the whole text and then all possible combinations of the contained elements. 
+    Having to read and understand less means the resulting software implementation will 
+    be simpler and more secure. This leads to more software which can handle the data-format 
+    on a high level. What follows is more competition, 
+    choice and therefore more users for this format.</p>
 
-    <p>The more tricky a data-format is, the greater the chance there are 
-    rarely needed features. This format and the implementation are comparable to a 
-    huge and angled house. Some rooms are very populated others are virtually never entered. 
-    Of course such a house is hard to secure. Burglars could open a long forgotten window to 
-    the basement or while walking through the hallway hide something in a dark staircase.</p>
+    <p>The more involved a data-format is, the greater the chance it has
+    rarely needed features. So the format and the implementation are comparable to a 
+    huge and angled mansion. Some rooms are very popular, other places are never visited
+    by people. Of course such a house is hard to secure. 
+    Burglars could push open a lonely forgotten window to 
+    the basement or hide tools in a comb-webbed corner during an official visit to
+    the premises.
+    </p>
 
-    <p>Experts see complexity as the greatest problem for software security. Because of this 
-    many are critical or even hostile towards standards. 
+    <p>Experts see complexity as the biggest threat to software security. This is why
+    many of them are critical or even hostile towards standards. 
     <a class="fn" id="ref-complexity" href="#fn-complexity">1</a></p>
 
-    <p>To grasp the risks just take a look at how a computer renders fonts: There is the very 
-    commonly used standard ISO/IEC 8859-15 (Latin-9). More than 20, mostly western European 
-    languages could be processed with it. For a single character there are 256 different possibilities.
-    A new standard namely Unicode (ISO 10646) is supposed to encode all languages. It needs many 
-    more – more than one million – possibilities. In addition a character could be coded with 
-    two different ways. For example with UTF-8 or UCS-2. On one side Unicode is a blessing:
-    Programmed correctly once an application is prepared to feature hundreds of languages. On 
-    the other hand a programmer can’t possibly predict what could happen with all the characters 
-    in the source code. With the 256 cases with Latin-9 she could. With Unicode this overview 
-    is missing. A feisty attacker might find combinations the developer didn’t think of. This 
-    happens on a regular basis. Here are two examples: 1. (DE)<a
-      href="http://de.wikipedia.org/wiki/Homographischer_Angriff">Der
-      homographische Angriff</a> / (EN)<a href="http://en.wikipedia.org/wiki/IDN_homograph_attack">
-      the homograph attack</a> 
-    frauds the user with similar looking Internet addresses. Cyrillic from the Unicode-Fonts is 
-    suitable for this. 2. The developers of a well known webserver have been <a
-      href="https://www.bsi.bund.de/ContentBSI/grundschutz/kataloge/m/m05/m05102.html">pwned by URIs in 
-    Unicode</a>.</p>
+    <p>To get an understanding of the risks let us take a look at how a computer deals
+    with written characters. A commonly used standard is Latin-9 (ISO/IEC 8859-15).
+    It enables a computer to save texts in more than 20 languages - mostly western European ones.
+    For a single electronic character there are 256 different possibilities.
+    A new standard called Unicode (ISO 10646) is supposed to encode all languages of the world. 
+    Therefor it comes with more than a million possibilities.
+    To make things worse, a single character could be encoded in several different ways.
+    For example in "UTF-8" or "UCS-2". On one side Unicode is a blessing:
+    Once implemented correctly an application is prepared to handle hundreds of languages. On 
+    the other hand a programmer cannot fully calculate in her head all effects
+    a character might have when looking at the source code of a software.
+    With the 256 cases of Latin-9 she could. With Unicode this overview gets lost. 
+    A clever attacker might find combinations the developer did not think of. This 
+    happens on a regular basis. Here are two examples: 
+     1. <a href="http://en.wikipedia.org/wiki/IDN_homograph_attack">the IDN homograph attack</a> 
+     plays tricks on the users with similar looking Internet addresses. 
+     Cyrillic from the Unicode-Fonts is well suitable for this. 
+     2. The developers of a well known webserver fell prey to 
+     <a href="http://web.nvd.nist.gov/view/vuln/detail?vulnId=CAN-2000-0884"
+     >the possibilities of Unicode in URLs</a>.</p>
 
-
-    <p>It is to no surprise that there are more applications out there that can handle Latin-9 
-    more correctly than Unicode. The problem is identical with every “thicker” specified data-format: 
-    There are applications that don’t understand the exotic features. Especially because there 
-    are so many features so it is impossible to test. The adverts say the software can read the 
+    <p>Unsurprisingly there are more applications out there that can handle Latin-9 
+    correctly than Unicode. It is the same problem with every "fat" data-format: 
+    There are applications that do not understand the more exotic features. 
+    If not just because it has become impossible to test the myriad of features.
+    The software will advertise that it can read data-format 
     data-format “X” but whether this works in practice is questionable.</p>
 
-    <p>Some data-formats use this problem on purpose: There are different versions. Who likes the 
-    certainty of all applications are compatible needs to express exactly which version. 
-    For example there are three (1.0, 1.1 and 1.2) variants from the Open Document Format (ODF). 
-    Probably with increasing complexity. Are probably many uses in which version 1.0 is 
-    sufficient. But the preset would probably be the newest version the application supports. 
+    <p>Some data-formats create this problem on purpose: 
+    There come in different revisions. To be sure that software packages are compatible,
+    you have to give the precise version of the used data-format.
+    For example there are three variants (1.0, 1.1 and 1.2) of the Open Document Format (ODF). 
+    It is likely the complexity grows with the number. Certainly there are many 
+    cases where using the features of version 1.0 would be completely okay.
+    But the default probably is to save files in the newest version the software supports. 
     For PDF this problem is even more significant. Some <a
-      href="http://pdfreaders.org/os.de.html">versions or parts of a PDF</a> doesn’t even 
-    suffice as an open standard.</p>
+      href="http://pdfreaders.org/os.en.html">versions or parts of PDFs</a> do not even 
+    make an open standard.</p>
 
-    <p>Who likes to understand computers is being told that there are two different things: 
-    Data and programmes. While data is merely processed the programmes contain commands for 
-    the computer. The difference is clarified with a sticky note saying: Jump from a bridge! 
-    I can read this note, write it and pass it on (process) without any problems. But if I 
-    regard it as a command and execute it then I probably will land on my nose. With computers 
-    it’s the same. Data-formats like ODF, Doc an PDF may contain data and commands for automatic 
-    procession (“Macros”) or interactive elements (JavaScript). This turns a regular file into 
-    a potential application with commands for your computer. Naturally attackers try to take 
-    advantage of this. Like with the (DE)<a
-      href="https://www.bsi-fuer-buerger.de/ContentBSIFB/GefahrenImNetz/Schadprogramme/Viren/viren.html">Macro-Viruses</a> / (EN)<a href="http://en.wikipedia.org/wiki/Macro_virus">Macro-Viruses</a>.</p>
+    <p>We teach school children who learn about computers to make distinction between
+    data and instructions. While data is merely processed, the instructions command
+    the computer. Imagine the writing of a piece of paper: Jump off the bridge! 
+    I can read the data, process it by writing it down or handing to someone else
+    without problems. But if I consider it to be instructions, I may easily get hurt
+    following them. It is the same for computers.
+    Data-formats like ODF, DOC and PDF beside data may also contain instructions for automatic 
+    execution (“Macros”) or interactive elements (Javascript). This turns a regular file into 
+    a potential application controling your computer. Naturally attackers try to take 
+    advantage of this. Like with the 
+    <a href="http://www.cert.org/tech_tips/Melissa_FAQ.html"
+	    >Melissa Macro Virus from 1999</a>.</p>
 
-    <p>Most texts which are transmitted only need a small fraction of that what common 
-    data-formats have to offer on formatting, mark-up or layout. Since decades a simple file 
-    composed of Latin-9 characters can be edited on every computer with a simple text editor 
-    and all word processors. With increasing demands a small part of HTML 2 could suffice for 
-    headlines, lists and links. Or a (DE)<a
-      href="http://de.wikipedia.org/wiki/Creole_(Markup)">simple</a> / (EN)<a href="http://en.wikipedia.org/wiki/Creole_%28markup%29">
-      simple textbased markup</a>, as it is used in Wikis. Wikipedias and Weblogs of the world 
-    proof that lots of content can be expressed with these simple means.</p>
+    <p>Most texts flowing around only need a small fraction of that what common 
+    data-formats have to offer in terms of formatting, mark-up or layout. 
+    Since decades a simple file 
+    composed of Latin-9 characters can be edited on every computer by means of 
+    a simple text editor or any word processor. 
+    A small subset of HTML 2 could cater for advanced needs like
+    headlines, bullet-lists and hyperlinks. Alternatively any 
+    <a href="http://en.wikipedia.org/wiki/Creole_%28markup%29"
+	    >simple textbased markup language</a> 
+    like used by Wikis would do.
+    The wikipedia pages and weblogs of the world proof
+    that lot of content can be expressed with these simple means.</p>
 
-    <p>All –  except manufacturers of proprietary software – are interested in competing 
-    software and secure products which are interoperable. The minimal rule for data-formats 
-    facilitates all this. It’s meaning is to leave away everything that is not necessarily 
-    needed. The aim is a (DE)<a
-      href="http://magplot.de/TasteForMakers">simple and elegant design</a> / (EN)<a href="http://www.paulgraham.com/taste.html">
-      simple and elegant design</a>. A nice solution is a kit with which infinite works may 
-    be created with just a few elements.</p>
+    <p>Everyone –  except a vendor of proprietary software – profits from different
+    software products competing which each other, while being secure and interopable.
+    The minimal principle for data-formats promotes all this. 
+    It just has one rule: Remove everything that is not absolutely necessary.
+    Aim for your design to be 
+    <a href="http://www.paulgraham.com/taste.html">simple and elegant</a>. 
+    A good solution resembles as set of building blocks where 
+    an infinite number of buildings can be made, just by combining 
+    a few types of elements.</p>
 
-    <p>Even though there are good reasons to choose a data-format which covers several 
-    requirements we should ask ourselves: “Can’t we do that simpler?”</p>
+    <p>Even though there may be good reasons to choose a data-format which covers several 
+    requirements we should ask ourselves each time: “Can this be done simpler?”</p>
 
     <h2 id="fn">Footnotes</h2>
     <ol> 

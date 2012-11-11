@@ -6,6 +6,9 @@
 .half {
     width: 47%;
 }
+.last:after {
+    clear: both;
+}
 .third {
     width: 30%;
 }

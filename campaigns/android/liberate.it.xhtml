@@ -3,11 +3,9 @@
 <html>
   <head>
     <title>Libera il tuo dispositivo - Libera il tuo Android! - FSFE</title>
+    <meta content="Riprendi il controllo del tuo dispositivo Android e dei tuoi dati: questa campagna si occupa di libertà, controllo e privacy." name="description" />
+<meta content="android smart phone operating system drivers apps Replicant OS CyanogenMod F-Droid FoeBuD e.V. fsf ansol free software phone mobile phone open source GTA04 Maemo/MeeGo Mer Tizen Carrier IQ spying spy analytics" name="keywords" />
     <link type="text/css" href="/campaigns/android/android.css" rel="stylesheet" media="screen and (min-device-width:1280px) and (min-width:1200px)" />
-    <meta name="cc-license" content="Portions of this page are 
-		modifications based on work created and shared by Google and 
-		used according to terms described in the Creative Commons 3.0 
-		Attribution License. Android is a trademark of Google Inc." />
   </head>
   <body>
     
@@ -41,7 +39,10 @@
 	che ti impedisce l'avvio o l'installazione di altri sistemi operativi.
 	Se vuoi acquistare un telefono Android, assicurati che il boot loader possa essere <a
         href="http://wiki.cyanogenmod.com/?search=&quot;unlock+bootloader&quot;">sbloccato</a>.
-	Su alcuni dispositivi può essere sbloccato solo con hack intelligenti.
+	Su alcuni dispositivi può essere sbloccato solo con hack ingegnosi e i produttori
+	tendono a dichiarare non valida la garanzia se si sblocca il loro boot loader.
+	Ma, secondo la Direttiva Europea 1999/44/CE, la modifica del software di un
+	dispositivo non è una ragione sufficiente per annullare la garanzia. <a href="http://piana.eu/root" title="Does rooting your phone invalidate its warranty?">Si veda il blog di Carlo Piana</a> per maggiori informazioni.
 	Esistono anche aziende che spediscono i loro dispositivi con un boot loader sbloccato o 
 	forniscono i mezzi per sbloccarlo. Oltre a questo, è una buona idea
 	controllare se esistano versioni gratuite di Android che <a
@@ -74,9 +75,9 @@ dispositivo</a>.
 offre
 	più libertà sul tuo dispositivo. CyanogenMod è Software Libero sviluppato
 	da una comunità attiva.
-	CyanogenMod continua a richiedere
+	Per poter funzionare su così tanti dispositivi, fa uso di
 	<a href="https://github.com/CyanogenMod/android_device_semc_iyokan/blob/gingerbread/proprietary-files.txt">driver e firmware del dispositivo non liberi</a> che sono <a href="https://github.com/CyanogenMod/android_device_semc_iyokan/blob/gingerbread/extract-files.sh">recuperati dal dispositivo</a> 
-	e sono inclusi in ROM.
+	e inclusi nella ROM.
       </p>
       
       <p>
@@ -84,31 +85,30 @@ offre
 	essere sbloccato. Alcuni produttori considerano la garanzia decaduta
 	se sblocchi il boot loader. Il <a
         href="http://wiki.cyanogenmod.com/wiki/Main_Page">Wiki di
-        CyanogenMod</a> fornisce istruzioni dettagliate per installarlo.
+        CyanogenMod</a> fornisce istruzioni dettagliate su come installarlo.
       </p>
       
       <p>
 	Dopo l'installazione il telefono sarà liberato da tutte quelle applicazioni
-	proprietarie pre installate e non ci sarà bisogno di connettere il tuo telefono
+	proprietarie preinstallate e non ci sarà bisogno di connettere il tuo telefono
 	al tuo account Google. Ad eccezione di alcuni driver non liberi, il tuo telefono 
 	avrà solo Software Libero. Se sei a conoscenza di software non libero aggiunto a 
 	CyanogenMod, per favore <a
-        href="mailto:android&#64;lists.fsfe.org">faccelo sapere</a>! C'è un fornitore di 
-	app DRM che può essere <a
-        href="http://wiki.cyanogenmod.com/wiki/Barebones">rimosso</a>.
+        href="mailto:android&#64;lists.fsfe.org">faccelo sapere</a>!
      </p>
 
 	  <p>
 	Abbiamo raccolto alcune informazioni
 	riguardo a come puoi <a href="/campaigns/android/help.html#OS">aiutarci per fare 
-	in modo che CyanogenMod rimanga libero</a>.
+	in modo che CyanogenMod rimanga libero</a> e a come puoi identificare e togliere
+	parti non libere.
 	  </p>
       
       <h2 id="Apps">Le App</h2>
       
       <p>
 	Per la maggior parte delle persone, il <a href="https://market.android.com/">Google
-        Market di Android</a> è la sola o la più importante sorgente per le loro
+    Play Store di Android</a> (noto un tempo come Android Market) è la sola o la più importante sorgente per le loro
 	applicazioni. Non vi dice nemmeno se una app è Software Libero oppure no, 
 	figuriamoci la sua licenza. Purtroppo, la maggior parte delle applicazioni da questo o 
 	da altri market sono proprietarie. Anche se installi una app di Software Libero,
@@ -118,7 +118,7 @@ offre
 
       <h3 id="F-Droid">F-Droid</h3>
 
-      <div class="image" id="hello-free-droid">
+      <div class="image">
         <img alt="F-Droid" src="/campaigns/android/f-droid.png" />
       </div>
 
@@ -152,10 +152,10 @@ offre
 
       <p>
 	Quando si esegue solo Software Libero e quando non ci si basa su servizi di 
-	rete non liberi come quelli offerti da Google, si perde la convenienza 
-	di sincronizzare i contatti, il calendario e gli altri dati con
-	altri dispositivi. Fortunatamente, vi è abbondanza di Software Libero che svolge
-	anche questo lavoro:
+	rete non liberi come quelli offerti da Google, potrebbe sembrare che si perda
+	la comodità della sincronizzazione dei contatti, del calendario e di altri
+	dati con gli altri dispositivi. Fortunatamente, vi è abbondanza di Software
+	Libero che svolge anche questo lavoro:
       </p>
 
       <ul>
@@ -172,6 +172,10 @@ offre
           href="http://www.kolab.org/">Kolab</a>/IMAP.
         </li>
         <li>
+	    Il <a href="http://f-droid.org/repository/browse/?fdid=com.funambol.androidsync">client Funambol Sync</a>
+		usa SyncML per sincronizzare il calendario e la rubrica con varie applicazioni.
+	  </li>
+        <li>
           <a
           href="http://wiki.cyanogenmod.com/wiki/Howto:_Connect_to_Device_with_SSH">SSH
           Daemon dropbear</a> è pre installato su CyanogenMod è può essere usato ad esempio
@@ -180,7 +184,13 @@ offre
       </ul>
 
   </body>
-  <timestamp>$Date: 2012-02-17 15:16:09 +0100 (ven. 17 févr. 2012) $ $Author: hugo $</timestamp>
+  <timestamp>$Date$ $Author$</timestamp>
+  <legal type="cc-license">
+   <license>http://creativecommons.org/licenses/by/3.0/</license>
+    <notice>Parti di questa pagina sono modifiche basate sul lavoro 
+		di Google, utilizzato secondo i termini descritti nella licenza 
+		Creative Commons 3.0 Attribution License. Android è un marchio di Google Inc.</notice>
+  </legal>
 <translator>Massimo Barbieri</translator>
 </html>
 <!--

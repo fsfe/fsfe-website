@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<html>
+  <head>
+    <title>Free Software Foundation Europe - Artikuj Tregtarë</title>
+  </head>
+
+  <body>
+    <h1>Artikuj Tregtarë FSFE</h1>
+
+    <div id="introduction">
+      <div class="image">
+        <img src="/graphics/stars-smaller.png" alt="Yje" />
+      </div>
+
+      <p>
+        Shpaloseni dashurinë tuaj për Software-in e Lirë duke përdorur
+        dhe veshur artikujt më poshtë që përdorin markën tonë. Veshja e
+        diçkaje që demonstron Software-in e Lirë është një rrugë e bukur
+        për rritjen e ndërgjegjësimit brenda bashkësisë suaj vendore, 
+        dhe çdo shitje ndihmon financimin e projekteve kritike të FSFE-së.
+        <br />
+        <br />
+        Kemi gjendje gjithashtu  një gamë <a href="#other-items">artikujsh kancelerie, kupa, stema, dhe mbajtëse çelësash</a>.
+      </p>
+      
+    </div>
+
+    <form action="/cgi-bin/weborder.pl" method="post" class="item-grid">
+      <h2>Bluza për Meshkuj</h2>
+ 
+      <dynamic-content type="t-shirt"/>
+
+      <h2>Bluza për Femra</h2>
+ 
+      <dynamic-content type="girlie"/>
+
+      <h2>Bluza me Kapuç</h2>
+ 
+      <dynamic-content type="hooded"/>
+
+      <a name="other-items"><a name="other-items"><h2 id="other-items">Artikuj të Tjerë</h2></a></a>
+
+      <dynamic-content type="other"/>
+
+      <h2>Materiale promocionale</h2>
+    
+      <p>
+	Hidhuni një sy <a href="/documents/printable/printable.html">faqes
+	sonë të materialeve informative të shtypshme</a> që të porosisni dosje dhe fletëpalosje.
+      </p>
+
+      <h2>Dërgimi</h2>
+
+      <p>
+        <input type="hidden" name="shipping" value="1"/>
+        <input type="radio" name="_shipping" value="3"/>
+        Dërgim brenda Gjermanisë (€3.00)<br/>
+        <input type="radio" name="_shipping" value="7" checked="Y"/>
+        Dërgim brenda Europës (€7.00)<br/>
+        <input type="radio" name="_shipping" value="12"/>
+        Dërgim jashtë Europës (€12.00)<br/>
+      </p>
+
+      <table>
+        <tr>
+          <td><p>Emër:</p></td>
+          <td>
+            <input type="text" size="80" style="width:500px" name="name"/>
+          </td>
+        </tr>
+        <tr>
+          <td><p>Adresë:</p></td>
+          <td>
+            <textarea cols="80" rows="5" style="width:500px" name="address"/>
+          </td>
+        </tr>
+        <tr>
+          <td><p>Email:</p></td>
+          <td>
+            <input type="text" size="80" style="width:500px" name="email"/>
+          </td>
+        </tr>
+        <tr>
+          <td><p>Telefon:</p></td>
+          <td>
+            <input type="text" size="80" style="width:500px" name="phone"/>
+          </td>
+        </tr>
+      </table>
+
+      <!-- Should help against spam -->
+      <p class="n">
+        Please do not put anything in here:
+        <input type="text" size="40" name="url"/>
+      </p>
+
+      <center>
+        <!-- Translators: Please also translate the value here, it's the label
+                          of the button -->
+        <input type="submit" value="Bëni kërkesën për këto objekte"/>
+      </center>
+      <!-- Translators: Please change the value here to your language -->
+      <input type="hidden" name="language" value="sq"/>
+    </form>
+  </body>
+
+  <timestamp>$Date$ $Author$</timestamp>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

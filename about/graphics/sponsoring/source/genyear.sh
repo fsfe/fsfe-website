@@ -19,7 +19,7 @@ xhtml="${odir}/xhtml"
 echo "<h2>$year Buttons</h2>" >"$xhtml"
 
 for type in Donor BronzeDonor SilverDonor GoldDonor; do
-  echo "  <h3>Supporter $year</h3>\n"\
+  echo "  <h3>$type $year</h3>\n"\
        "   <p class=\"indent\">\n"\
        "     <img src=\"${odir}/${type}${year}_w_medium.png\" border=\"0\" alt=\"$type $year button\"/><br />"\
 	>>"$xhtml"

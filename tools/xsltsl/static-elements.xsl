@@ -216,6 +216,7 @@
         <option value="BA">Bosnia and Herzegovina (Bosna i Hercegovina)</option>
         <option value="BG">Bulgaria (България)</option>
         <option value="HR">Croatia (Hrvatska)</option>
+        <option value="CY">Cyprus (Κυπρος)</option>
         <option value="CZ">Czech Republic (Česko)</option>
         <option value="DK">Denmark (Danmark)</option>
         <option value="EE">Estonia (Eesti)</option>
@@ -308,7 +309,6 @@
         <option value="CR">Costa Rica</option>
         <option value="CI">Côte d’Ivoire</option>
         <option value="CU">Cuba</option>
-        <option value="CY">Cyprus (Κυπρος)</option>
         <option value="DJ">Djibouti</option>
         <option value="DM">Dominica</option>
         <option value="DO">Dominican Republic</option>

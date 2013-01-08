@@ -32,6 +32,7 @@
           <option value="pt">Português</option>
           <option value="ru">Русский</option>
           <option value="sv">Svenska</option>
+          <option value="sq">Shqip</option>
         </select>
         
         <input id="email" name="email" type="email" placeholder="email address" />

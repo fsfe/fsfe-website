@@ -2,21 +2,21 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-  <xsl:output method="xml" encoding="ISO-8859-1" indent="yes" />
+  <xsl:import href="../fsfe.xsl" />
+  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
 
   <!-- In /html/body node, append dynamic content -->
-  <xsl:template match="/html/body">
-    <xsl:copy>
+  <xsl:template match="body">
       <!-- First, include what's in the source file -->
       <xsl:apply-templates />
 
       <!-- $today = current date (given as <html date="...">) -->
       <xsl:variable name="today">
-        <xsl:value-of select="/html/@date" />
+        <xsl:value-of select="/buildinfo/@date" />
       </xsl:variable>
 
       <!-- Show news except those in the future, but no newsletters -->
-      <xsl:for-each select="/html/set/news
+      <xsl:for-each select="/buildinfo/document/set/news
         [translate (@date, '-', '') &lt;= translate ($today, '-', '') and
          not (@type = 'newsletter')]">
         <xsl:sort select="@date" order="descending" />
@@ -43,29 +43,17 @@
         <!-- End news entry -->
 
       </xsl:for-each>
-    </xsl:copy>
   </xsl:template>
 
-  <!-- Do not copy <set> and <text> to output at all -->
-  <xsl:template match="/html/set" />
-  <xsl:template match="/html/text" />
-
   <!-- How to show a link -->
-  <xsl:template match="/html/set/news/link">
+  <xsl:template match="/buildinfo/document/set/news/link">
     <xsl:element name="a">
       <xsl:attribute name="href">
         <xsl:value-of select="text()" />
       </xsl:attribute>
       <xsl:text>[</xsl:text>
-      <xsl:value-of select="/html/text[@id='more']" />
+        <xsl:value-of select="/buildinfo/document/text[@id='more']" />
       <xsl:text>]</xsl:text>
     </xsl:element>
-  </xsl:template>
-
-  <!-- For all other nodes, copy verbatim -->
-  <xsl:template match="@*|node()" priority="-1">
-    <xsl:copy>
-      <xsl:apply-templates select="@*|node()"/>
-    </xsl:copy>
   </xsl:template>
 </xsl:stylesheet>

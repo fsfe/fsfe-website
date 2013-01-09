@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<textset-content>
+
+  <text id="news">Letzte Meldungen</text>
+  <text id="newsletter">Newsletter</text>
+  <text id="receive-newsletter">FSFE-Newsletter abonnieren</text>
+
+  <text id="events">Nächste Veranstaltungen</text>
+  <text id="more">Mehr</text>
+  <text id="morenews">Weitere Meldungen…</text>
+  <text id="moreevents">Weitere Veranstaltungen…</text>
+  
+  <text id="email">E-mail</text>
+  <text id="email-placeholder">E-Mail-Adresse</text>
+  <text id="phone">Telefon</text>
+  <text id="fax">Fax</text>
+  <text id="contact">Kontakt</text>
+  
+  <text id="donate">Spenden</text>
+  
+  <!-- Campaign box on front-page, translated texts -->
+  <text id="cb-restricted-boot">"Secure Boot": Wer wird Ihren nächsten Computer kontrollieren?</text>
+  <text id="cb-restricted-boot-link">Wir oder Gerätehersteller?</text>
+  
+  <text id="cb-valentine">Am 14. Februar: </text>
+  <text id="cb-valentine-link">Zeigen Sie Ihre Liebe zu Freier Software!</text>
+  <!-- end of texts for the campaign box -->
+  
+  <text id="join">Beitreten</text>
+
+  <text id="subscribe">Eintragen</text>
+
+  <!-- alt text for missing avatars -->
+  <text id="no-avatar">Kein Bild</text>
+  
+  
+  <!-- quotes to be displayed in a rotating box -->
+  <quotes>
+    <quote id="wiesemann" tag="donors" pos="1">
+      <photo>/donate/wiesemann.jpg</photo>
+      <txt>
+        Eine virtuelle Welt ohne Freie Software ist wie eine Stadt, in der
+        man für jeden Bürgersteig eine Benutzungslizenz benötigt. Wir brauchen
+        auch Allgemeingut in der virtuellen Welt.
+      </txt>
+      <author>Reinhard Wiesemann - Linuxhotel</author>
+    </quote>
+    <quote id="ganten" tag="donors" pos="2">
+      <photo>/donate/ganten.jpg</photo>
+      <txt>
+        Freie Software ist das stabile Fundament unserer Unternehmenslösungen,
+        die FSFE leistet einen wichtigen Beitrag zur Sicherung dieses
+        Fundaments. Deswegen unterstützen wir die FSFE.
+      </txt>
+      <author>Peter Ganten - Univention</author>
+    </quote>
+  </quotes>
+  
+</textset-content>

@@ -4,8 +4,7 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:dt="http://xsltsl.org/date-time">
   
-  <xsl:import href="../../../fsfe.xsl" />
-  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
+  <xsl:output method="xml" encoding="UTF-8" indent="yes" />
   
   <!-- 
     For documentation on tagging (e.g. fetching news and events), take a
@@ -42,4 +41,14 @@
 	  </xsl:element>-->
   </xsl:template>
   
+  <!-- Do not copy <set> or <text> to output at all -->
+  <xsl:template match="set | tags"/>
+  
+  <!-- For all other nodes, copy verbatim -->
+  <xsl:template match="@*|node()" priority="-1">
+    <xsl:copy>
+      <xsl:apply-templates select="@*|node()"/>
+    </xsl:copy>
+  </xsl:template>
+
 </xsl:stylesheet>

@@ -37,7 +37,7 @@
   </text>
 
   <text id="source">Πηγαίος κώδικας</text>
-  <text id="contact-us">Επικοινωνήστε μαζί μας</text>
+  <text id="contact">Επικοινωνήστε μαζί μας</text>
   <text id="translate">Θέλετε να βοηθήσετε στη μετάφραση;</text>
   <text id="imprint">Σφραγίδα</text>
 
@@ -142,70 +142,5 @@
 
   <text id="press">Τύπος</text>
   <text id="newsletter">Ενημερωτικό δελτίο</text>
-  
-  <text id="news">Νέα</text>
-  <text id="receive-newsletter">Εγγραφείτε για το μηνιαίο ενημερωτικό δελτίο του FSFE</text>
-  <text id="events">Εκδηλώσεις</text>
-  <text id="more">Περισσότερα
-</text>
-  <text id="morenews">Περισσότερα νέα…</text>
-  <text id="moreevents">Περισσότερες eκδηλώσεις…</text>
-
-  
-  <text id="email">Email</text>
-  <text id="email-placeholder">e-mail διεύθυνση</text>
-  <text id="phone">Τηλέφωνο</text>
-  <text id="fax">φαξ</text>
-  <text id="contact">Επικοινωνία</text>
-  
-  <text id="team">Oμάδα</text>
-  <text id="microblog">Μικρο-ιστολόγιο</text>
-
-  <text id="donate">Δωρεές</text>
-
-  <!-- Campaign box on front-page, translated texts -->
-  <text id="cb-restricted-boot">«Ασφαλής Εκκίνηση»: Ποιος θα ελέγχει τον
-  επόμενο υπολογιστή μας;</text>
-  <text id="cb-restricted-boot-link">Εμείς ή οι κατασκευαστές συσκευών;</text>
-
-  <text id="cb-valentine">Στις 14 Φεβρουαρίου: </text>
-  <text id="cb-valentine-link">Δείξτε την αγάπη σας για το Ελεύθερο Λογισμικό!</text>
-  <!-- end of texts for the campaign box -->
-
-  <text id="join">Εγγραφή</text>  
-  <text id="ourwork2011">Η εργασία μας στο 2011</text>
-  <text id="support">Υποστηρίξτε το FSFE</text>
-  
-  <text id="subscribe">Εγγραφή</text>
-
-  <!-- alt text for missing avatars -->
-  <text id="no-avatar">No Picture</text>
-  
-  <!-- petitions -->
-  <text id="osig">Οργανισμοί</text>
-  <text id="isig">Άτομα</text>
-
-
-  <!-- quotes to be displayed in a rotating box -->
-  <quotes>
-    <quote id="wiesemann" tag="donors" pos="1">
-      <photo>/donate/wiesemann.jpg</photo>
-      <txt>
-        Ένας εικονικός κόσμος χωρίς Ελεύθερο Λογισμικό είναι όπως μια πόλη
-        στην οποία είστε αναγκασμένοι να έχετε μια άδεια χρήσης για κάθε 
-        πεζοδρόμιο. Χρειαζόμαστε και τα κοινά στον εικονικό κόσμο.
-      </txt>
-      <author>Reinhard Wiesemann - Linuxhotel</author>
-    </quote>
-    <quote id="ganten" tag="donors" pos="2">
-      <photo>/donate/ganten.jpg</photo>
-      <txt>
-        Το Ελεύθερο Λογισμικό είναι το σταθερό θεμέλιο των επιχειρηματικών
-        μας λύσεων. Το FSFE παρέχει μια σημαντική συμβολή για να διασφαλιστεί
-        το θεμέλιο αυτό, συνεπώς εμείς υποστηρίζουμε το FSFE.
-      </txt>
-      <author>Peter Ganten - Univention</author>
-    </quote>
-  </quotes>
 
 </textset>

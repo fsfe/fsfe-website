@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:import href="../fsfe.xsl" />
-  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
+  <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
 
   <!-- Fill dynamic content -->
   <xsl:template match="dynamic-content">
@@ -11,7 +10,7 @@
     <xsl:element name="table">
       <xsl:attribute name="id">merchandise</xsl:attribute>
 
-      <xsl:for-each select="/buildinfo/document/set/item [@type = $type]">
+      <xsl:for-each select="/html/set/item [@type = $type]">
         <xsl:sort select="@date" order="descending"/>
         <xsl:variable name="id"><xsl:value-of select="@id"/></xsl:variable>
         <xsl:variable name="price"><xsl:value-of select="@price"/></xsl:variable>
@@ -42,14 +41,14 @@
             <xsl:attribute name="class">description</xsl:attribute>
 
             <xsl:element name="h3">
-              <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/name"/>
+              <xsl:value-of select="/html/set/info[@id=$id]/name"/>
               <xsl:text> (€</xsl:text>
               <xsl:value-of select="@price"/>
               <xsl:text>)</xsl:text>
             </xsl:element>
 
             <xsl:apply-templates
-              select="/buildinfo/document/set/info[@id=$id]/description/node()"/>
+              select="/html/set/info[@id=$id]/description/node()"/>
           </xsl:element>
 
           <!-- Order quantity -->
@@ -92,6 +91,16 @@
         </xsl:element>
       </xsl:for-each>
     </xsl:element>
+  </xsl:template>
+
+  <!-- Do not copy <set> or <text> to output at all -->
+  <xsl:template match="set | tags"/>
+  
+  <!-- For all other nodes, copy verbatim -->
+  <xsl:template match="@*|node()" priority="-1">
+    <xsl:copy>
+      <xsl:apply-templates select="@*|node()"/>
+    </xsl:copy>
   </xsl:template>
 
 </xsl:stylesheet>

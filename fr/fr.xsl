@@ -7,8 +7,7 @@
   <xsl:import href="../tools/xsltsl/tagging.xsl" />
   <xsl:import href="../tools/xsltsl/countries.xsl" />
   <xsl:import href="../tools/xsltsl/translations.xsl" />
-  <xsl:import href="../fsfe.xsl" />
-  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
+  <xsl:output method="xml" encoding="UTF-8" indent="yes" />
 
   <!-- To localise this page to a new country, copy this file and change the following:
   
@@ -61,7 +60,7 @@
   <!--define contact information-->
   
   <xsl:template match="contact-details">
-    <xsl:for-each select="/buildinfo/document/set/contact">
+    <xsl:for-each select="/html/set/contact">
 
     <xsl:if test="@id = 'FR'">
   
@@ -146,5 +145,15 @@
             </xsl:with-param>
         </xsl:call-template>
     </xsl:template>
+  
+  <!-- Do not copy <set> or <text> to output at all -->
+  <xsl:template match="set | tags"/>
+
+  <!-- For all other nodes, copy verbatim -->
+  <xsl:template match="@*|node()" priority="-1">
+    <xsl:copy>
+      <xsl:apply-templates select="@*|node()"/>
+    </xsl:copy>
+  </xsl:template>
 
 </xsl:stylesheet>

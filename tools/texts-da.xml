@@ -38,7 +38,7 @@
   </text>
 
   <text id="source">Kildekode</text>
-  <text id="contact-us">Kontakt os</text>
+  <text id="contact">Kontakt os</text>
   <text id="translate">Oversæt denne side?</text>
   <text id="imprint">Kolofon</text>
 
@@ -138,62 +138,4 @@
 
   <text id="press">Presse</text>
   <text id="newsletter">Nyhedsbrev</text>
-  
-  
-  <text id="news">Nyheder</text>
-  <text id="receive-newsletter">Tegn abonnement på FSFE's månedlige nyhedsbrev</text>
-  <text id="events">Arrangementer</text>
-  <text id="more">Mere</text>
-  <text id="morenews">Flere nyheder …</text>
-  <text id="moreevents">Flere arrangementer …</text>
-
-  <text id="email">E-mail</text>
-  <text id="email-placeholder">e-mail-adresse</text>
-  <text id="phone">Telefon</text>
-  <text id="fax">fax</text>
-  <text id="contact">Kontakt</text>
-
-  <text id="team">Team</text>
-  <text id="microblog">Mikroblog</text>
-
-  <text id="donate">Donér</text>
-
-  <!-- Campaign box on front-page, translated texts -->
-  <text id="cb-restricted-boot">"Secure Boot": Hvem kommer til at kontrollere din næste computer?</text>
-  <text id="cb-restricted-boot-link">Vi eller fabrikanterne?</text>
-
-  <text id="cb-valentine">Den 14. februar: </text>
-  <text id="cb-valentine-link">Vis at du elsker fri software!</text>
-  <!-- end of texts for the campaign box -->
-
-  <text id="join">Tilmeld</text>
-  <text id="ourwork2011">Vores arbejde i 2011</text>
-  <text id="support">Støt FSFE</text>
-
-  <text id="subscribe">Tegn abonnement</text>
-
-  <!-- alt text for missing avatars -->
-  <text id="no-avatar">Intet billede</text>
-
-  <!-- quotes to be displayed in a rotating box -->
-  <quotes>
-    <quote id="wiesemann" tag="donors" pos="1">
-      <photo>/donate/wiesemann.jpg</photo>
-      <txt>
-        En virtuel verden uden fri software er som en by, hvor man skal 
-        have licens til at benytte ethvert fortov.  Vi har også brug for 
-        fælleder i den virtuelle verden.
-      </txt>
-      <author>Reinhard Wiesemann - Linuxhotel</author>
-    </quote>
-    <quote id="ganten" tag="donors" pos="2">
-      <photo>/donate/ganten.jpg</photo>
-      <txt>
-        Fri software er det solide grundlag for vores enterpriseløsninger.
-        FSFE er et vigtigt element i sikringen af at dette grundlag er til 
-        stede, derfor støtter vi FSFE.
-      </txt>
-      <author>Peter Ganten - Univention</author>
-    </quote>
-  </quotes>
 </textset>

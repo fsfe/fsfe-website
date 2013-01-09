@@ -4,11 +4,10 @@
   
   <xsl:import href="../../tools/xsltsl/tagging.xsl" />
   
-  <xsl:import href="../../fsfe.xsl" />
-  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
+  <xsl:output method="xml" encoding="UTF-8" indent="yes" />
 
   <!-- In /html/body node, append dynamic content -->
-  <xsl:template match="tagged-docs">
+  <xsl:template match="/html/body/tagged-docs">
     
     <xsl:call-template name="fetch-news">
       <xsl:with-param name="tag" select="'avmgplviolation'" />
@@ -17,5 +16,16 @@
       <xsl:with-param name="compact-view" select="'yes'" />
     </xsl:call-template>
     
+  </xsl:template>
+
+  <!-- Do not copy <set> and <text> to output at all -->
+  <xsl:template match="/html/set" />
+  <xsl:template match="/html/text" />
+
+  <!-- For all other nodes, copy verbatim -->
+  <xsl:template match="@*|node()" priority="-1">
+    <xsl:copy>
+      <xsl:apply-templates select="@*|node()"/>
+    </xsl:copy>
   </xsl:template>
 </xsl:stylesheet>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<textset-content>
+
+  <text id="news">Последние новости</text>
+  <text id="newsletter">Выпуски новостей</text>
+  <text id="receive-newsletter">Подписаться на ежемесячные выпуски новостей ЕФСПО</text>
+  <text id="events">Предстоящие события</text>
+  <text id="more">Далее</text>
+  <text id="morenews">Архив новостей</text>
+  <text id="moreevents">Архив событий</text>
+  
+  <text id="email">Электронная почта</text>
+  <text id="email-placeholder">адрес электронной почты</text>
+  <text id="phone">Телефон</text>
+  <text id="fax">Факс</text>
+  <text id="contact">Координаты</text>
+
+  <text id="team">Команда</text>
+  <text id="microblog">Микроблог</text>
+
+  <text id="donate">Пожертвования</text>
+
+  <!-- Campaign box on front-page, translated texts -->
+  <text id="cb-restricted-boot">«Безопасная загрузка»: Кто будет
+    контролировать ваш следующий компьютер?</text>
+  <text id="cb-restricted-boot-link">Вы или производитель компьютера?</text>
+  
+  <text id="cb-valentine">14 февраля: </text>
+  <text id="cb-valentine-link">Покажите, как вы любите
+    свободные программы!</text>
+  <!-- end of texts for the campaign box -->
+
+  <text id="join">Присоединяйтесь</text>
+  <text id="ourwork2011">Наша работа в 2011 году</text>
+  <text id="support">Поддержи ЕФСПО</text>
+
+  <text id="subscribe">Подписаться</text>
+
+  <!-- alt text for missing avatars -->
+  <text id="no-avatar">Нет изображения</text>
+
+  <!-- quotes to be displayed in a rotating box -->
+  <quotes>
+    <quote id="wiesemann" tag="donors" pos="1">
+      <photo>/donate/wiesemann.jpg</photo>
+      <txt>
+        Виртуальный мир без свободных программ подобен городу, в котором
+        вы обязаны получать лицензию на пользование каждым тротуаром.
+        В виртуальном мире нам тоже нужны общественные места.
+      </txt>
+      <author>Рейнхард Виземан — Линуксотель</author>
+    </quote>
+    <quote id="ganten" tag="donors" pos="2">
+      <photo>/donate/ganten.jpg</photo>
+      <txt>
+        Свободные программы — прочный фундамент для проектов нашего
+        предприятия. ЕФСПО вносит важный вклад в охрану этого
+        фундамента, вот почему мы поддерживаем ЕФСПО.
+      </txt>
+      <author>Питер Гэнтен — Юнивеншн</author>
+    </quote>
+  </quotes>
+
+</textset-content>

@@ -16,7 +16,7 @@
 
   <!-- $today = current date (given as <html date="...">) -->
   <xsl:variable name="today">
-    <xsl:value-of select="/buildinfo/@date" />
+    <xsl:value-of select="/html/@date" />
   </xsl:variable>
 
   <!-- ======== -->
@@ -130,7 +130,7 @@
         </xsl:element>
         
         <!-- News items -->
-        <xsl:for-each select="/buildinfo/document/set/news
+        <xsl:for-each select="/html/set/news
           [translate (@date, '-', '') &lt;= translate ($today, '-', '')]">
           <xsl:sort select="@date" order="descending"/>
           <xsl:if test="position() &lt; 11">
@@ -278,6 +278,16 @@ Make a one time donation: http://fsfe.org/donate/donate.html</xsl:text>
         </xsl:choose>
       </xsl:attribute>
     </xsl:element>
+  </xsl:template>
+  
+  <!-- Do not copy <body-complete> to output at all -->
+  <xsl:template match="body-complete"/>
+  
+  <!-- For all other nodes, copy verbatim -->
+  <xsl:template match="@*|node()" priority="-1">
+    <xsl:copy>
+      <xsl:apply-templates select="@*|node()"/>
+    </xsl:copy>
   </xsl:template>
   
 </xsl:stylesheet>

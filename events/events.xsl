@@ -5,8 +5,7 @@
   xmlns:dt="http://xsltsl.org/date-time">
 
   <xsl:import href="../tools/xsltsl/tagging.xsl" />
-  <xsl:import href="../fsfe.xsl" />
-  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
+  <xsl:output method="xml" encoding="UTF-8" indent="yes" />
   
   <!-- 
       For documentation on tagging (e.g. fetching news and events), take a
@@ -14,27 +13,27 @@
         /tools/xsltsl/tagging-documentation.txt
   -->
 
+  <!-- Basically, copy everything -->
+  <xsl:template match="/">
+    <xsl:copy>
+      <xsl:apply-templates select="@*|node()" />
+    </xsl:copy>
+  </xsl:template>
+
   <!-- we need to include some things for event maps -->
-  <xsl:template match="head">
-    <head>
-      <xsl:call-template name="fsfe-head" />
-      <xsl:element name="link">
-        <xsl:attribute name="rel">stylesheet</xsl:attribute>
-        <xsl:attribute name="href">/look/leaflet.css</xsl:attribute>
-      </xsl:element>
-      <xsl:element name="script">
-        <xsl:attribute name="type">text/javascript</xsl:attribute>
-        <xsl:attribute name="src">/scripts/leaflet.js</xsl:attribute>
-      </xsl:element>
-      <xsl:element name="script">
-        <xsl:attribute name="type">text/javascript</xsl:attribute>
-        <xsl:attribute name="src">/scripts/map.js</xsl:attribute>
-      </xsl:element>
-    </head>
+  <xsl:template match="/html/head">
+    <xsl:copy>
+      <xsl:apply-templates select="@*|node()" />
+
+      <link rel="stylesheet" href="/look/leaflet.css" />
+      <script type="text/javascript" src="/scripts/leaflet.js"></script>
+      <script type="text/javascript" src="/scripts/map.js"></script>
+    </xsl:copy>
   </xsl:template>
 
   <!-- In /html/body node, append dynamic content -->
-  <xsl:template match="body">
+  <xsl:template match="/html/body">
+    <xsl:element name="body">
       <!-- First, include what's in the source file -->
       <xsl:apply-templates />
       
@@ -62,6 +61,18 @@
           <xsl:with-param name="display-year" select="'yes'" />
       </xsl:call-template>
 
+    </xsl:element>
+  </xsl:template>
+
+  <!-- Do not copy <set> and <text> to output at all -->
+  <xsl:template match="set" />
+  <xsl:template match="text" />
+
+  <!-- For all other nodes, copy verbatim -->
+  <xsl:template match="@*|node()" priority="-1">
+    <xsl:copy>
+      <xsl:apply-templates select="@*|node()"/>
+    </xsl:copy>
   </xsl:template>
 
 </xsl:stylesheet>

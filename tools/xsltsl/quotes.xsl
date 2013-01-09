@@ -24,14 +24,14 @@
       
       var quotes = [
         <xsl:choose>
-          <xsl:when test="count(/buildinfo/textset/quotes/quote[@tag=$tag or $tag=''])>0">
+          <xsl:when test="/html/set/textset-content/quotes/quote[@tag=$tag or $tag='']">
             <xsl:call-template name="get-js-quotes">
-              <xsl:with-param name="quotes-xpath" select="/buildinfo/textset/quotes/quote[@tag=$tag or $tag='']" />
+              <xsl:with-param name="quotes-xpath" select="/html/set/textset-content/quotes/quote[@tag=$tag or $tag='']" />
             </xsl:call-template>
           </xsl:when>
           <xsl:otherwise>
             <xsl:call-template name="get-js-quotes">
-              <xsl:with-param name="quotes-xpath" select="/buildinfo/textsetbackup/quotes/quote[@tag=$tag or $tag='']" />
+              <xsl:with-param name="quotes-xpath" select="/html/set/textset-content-backup/quotes/quote[@tag=$tag or $tag='']" />
             </xsl:call-template>
           </xsl:otherwise>
         </xsl:choose>
@@ -89,14 +89,14 @@
     <xsl:param name="tag" />
     
     <xsl:choose>
-      <xsl:when test="count(/buildinfo/textset/quotes/quote[@tag=$tag or $tag=''])>0">
+      <xsl:when test="/html/set/textset-content/quotes/quote[@tag=$tag or $tag='']">
         <xsl:call-template name="display-first-quote">
-          <xsl:with-param name="quotes-xpath" select="/buildinfo/textset/quotes/quote[@tag=$tag or $tag='']" />
+          <xsl:with-param name="quotes-xpath" select="/html/set/textset-content/quotes/quote[@tag=$tag or $tag='']" />
         </xsl:call-template>
       </xsl:when>
       <xsl:otherwise >
         <xsl:call-template name="display-first-quote">
-          <xsl:with-param name="quotes-xpath" select="/buildinfo/textsetbackup/quotes/quote[@tag=$tag or $tag='']" />
+          <xsl:with-param name="quotes-xpath" select="/html/set/textset-content-backup/quotes/quote[@tag=$tag or $tag='']" />
         </xsl:call-template>
       </xsl:otherwise>
     </xsl:choose>

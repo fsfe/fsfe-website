@@ -1,20 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:dt="http://xsltsl.org/date-time"
+  exclude-result-prefixes="dt">
   
   <xsl:import href="tools/xsltsl/date-time.xsl" />
   <xsl:import href="tools/xsltsl/tagging.xsl" />
   <xsl:import href="tools/xsltsl/translations.xsl" />
   <xsl:import href="tools/xsltsl/static-elements.xsl" />
   <xsl:import href="tools/xsltsl/quotes.xsl" />
+  <xsl:output method="xml" encoding="UTF-8" indent="yes" />
   
-  <xsl:import href="fsfe.xsl" />
-  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
   
-  <xsl:template match="body">
+  <!-- The top level element of the input file is "buildinfo" -->
+  <xsl:template match="buildinfo">
+    <xsl:apply-templates select="node()"/>
+  </xsl:template>
+
+  <xsl:template match="/html/body">
+    <xsl:copy>
       <div id="frontpage">
         <xsl:apply-templates />
       </div>
+    </xsl:copy>
   </xsl:template>
   
   <xsl:template match="quote-box">
@@ -212,4 +221,19 @@
     <xsl:call-template name="subscribe-nl" />
   </xsl:template>
   
+  <!-- Do not copy <set> or <text> to output at all -->
+  <xsl:template match="set | tags | text"/>
+  
+  <!-- For all other nodes, copy verbatim -->
+  <xsl:template match="@* | node()" priority="-1">
+    <xsl:copy>
+      <xsl:apply-templates select="@* | node()"/>
+    </xsl:copy>
+  </xsl:template>
+
+  <xsl:template match="@dt:*">
+    <xsl:attribute name="{local-name()}">
+      <xsl:value-of select="." />
+    </xsl:attribute>
+  </xsl:template>
 </xsl:stylesheet>

@@ -24,8 +24,8 @@
     <xsl:template name="gettext">
       <xsl:param name="id" />
       
-      <xsl:value-of select="/buildinfo/textset/text[@id=$id] |
-                            /buildinfo/textsetbackup/text[ @id=$id and not(@id=/buildinfo/textset/text/@id) ]"/>
+      <xsl:value-of select="/html/set/textset-content/text[@id=$id] |
+                            /html/set/textset-content-backup/text[ @id=$id and not(@id=/html/set/textset-content/text/@id) ]"/>
       
     </xsl:template>
     
@@ -34,11 +34,11 @@
       <xsl:param name="id" />
       
       <xsl:choose>
-        <xsl:when test="/buildinfo/textset/quotes/quote[@id=$id]/txt">
-          <xsl:value-of select="normalize-space(/buildinfo/textset/quotes/quote[@id=$id]/txt)" />
+        <xsl:when test="/html/set/textset-content/quotes/quote[@id=$id]/txt">
+          <xsl:value-of select="normalize-space(/html/set/textset-content/quotes/quote[@id=$id]/txt)" />
         </xsl:when>
         <xsl:otherwise>
-          <xsl:value-of select="normalize-space(/buildinfo/textsetbackup/quotes/quote[@id=$id]/txt)" />
+          <xsl:value-of select="normalize-space(/html/set/textset-content-backup/quotes/quote[@id=$id]/txt)" />
         </xsl:otherwise>
       </xsl:choose>
       
@@ -49,11 +49,11 @@
       <xsl:param name="id" />
       
       <xsl:choose>
-        <xsl:when test="/buildinfo/textset/quotes/quote[@id=$id]/photo">
-          <xsl:value-of select="normalize-space(/buildinfo/textset/quotes/quote[@id=$id]/photo)" />
+        <xsl:when test="/html/set/textset-content/quotes/quote[@id=$id]/photo">
+          <xsl:value-of select="normalize-space(/html/set/textset-content/quotes/quote[@id=$id]/photo)" />
         </xsl:when>
         <xsl:otherwise>
-          <xsl:value-of select="normalize-space(/buildinfo/textsetbackup/quotes/quote[@id=$id]/photo)" />
+          <xsl:value-of select="normalize-space(/html/set/textset-content-backup/quotes/quote[@id=$id]/photo)" />
         </xsl:otherwise>
       </xsl:choose>
       
@@ -64,11 +64,11 @@
       <xsl:param name="id" />
       
       <xsl:choose>
-        <xsl:when test="/buildinfo/textset/quotes/quote[@id=$id]/author">
-          <xsl:value-of select="normalize-space(/buildinfo/textset/quotes/quote[@id=$id]/author)" />
+        <xsl:when test="/html/set/textset-content/quotes/quote[@id=$id]/author">
+          <xsl:value-of select="normalize-space(/html/set/textset-content/quotes/quote[@id=$id]/author)" />
         </xsl:when>
         <xsl:otherwise>
-          <xsl:value-of select="normalize-space(/buildinfo/textsetbackup/quotes/quote[@id=$id]/author)" />
+          <xsl:value-of select="normalize-space(/html/set/textset-content-backup/quotes/quote[@id=$id]/author)" />
         </xsl:otherwise>
       </xsl:choose>
       

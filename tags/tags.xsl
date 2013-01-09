@@ -6,8 +6,7 @@
   
   <xsl:import href="../tools/xsltsl/date-time.xsl" />
   <xsl:import href="../tools/xsltsl/tagging.xsl" />
-  <xsl:import href="../fsfe.xsl" />
-  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
+  <xsl:output method="xml" encoding="UTF-8" indent="yes" />
   
   <!-- 
     For documentation on tagging (e.g. fetching news and events), take a
@@ -34,6 +33,17 @@
     
     <xsl:call-template name="all-tags-events"/>
 	
+  </xsl:template>
+  
+  
+  <!-- Do not copy <set> or <text> to output at all -->
+  <xsl:template match="set | tags"/>
+
+  <!-- For all other nodes, copy verbatim -->
+  <xsl:template match="@*|node()" priority="-1">
+    <xsl:copy>
+      <xsl:apply-templates select="@*|node()"/>
+    </xsl:copy>
   </xsl:template>
 
 </xsl:stylesheet>

@@ -13,7 +13,7 @@
     <xsl:param name="absolute-fsfe-links" select="'yes'" /> <!-- yes: http://fsfe.org/events/events.en.html#…
                                                                  no:  /events/events.en.html#…                 -->
     
-    <xsl:variable name="lang" select="/buildinfo/@language" />
+    <xsl:variable name="lang" select="/html/@lang" />
     
     <!-- Link -->
     <xsl:choose>

@@ -9,4 +9,8 @@
     <xsl:if test="../@id='fsfe'"> - </xsl:if>
     <xsl:if test="../@id='free_software'"> - </xsl:if>
   </xsl:template>
+  
+  <xsl:template match="@*|node()" priority="-1">
+    <xsl:apply-templates select="@*|node()"/>
+  </xsl:template>
 </xsl:stylesheet>

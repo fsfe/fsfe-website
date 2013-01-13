@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Please keep each list alphabetically ordered.  Emacs users want to set
+  sort-fold-case to true and run sort-lines on a region.  Vi+ users can
+  visually select the list and use the :sort command.
+
+  The date="..." should be filled with the last date when a donation from this
+  donor came in. It is important for the "current" thankgnus page.
+
+  Currently, the date="..." may only be set in a single xml file for the same
+  donor, so if you add a donor to a file of the new year, don't forget to
+  remove the date="..." in the old year's file.
+-->
+
+<donorset>
+  <gold>
+    <donor date="2013-12-31" img="donors/linuxhotel.png">Linuxhotel Villa Vogelsang</donor>
+  </gold>
+
+  <silver>
+    <donor date="2013-12-31" img="donors/freiheit.png">freiheit.com technologies</donor>
+  </silver>
+
+  <bronze>
+    <donor date="2013-01-03">Best Of Open Technologies e.V.</donor>
+    <donor date="2013-12-31">inmedias.it GmbH</donor>
+    <donor date="2013-12-31">LIHAS - LinuxHaus Stuttgart</donor>
+    <donor date="2013-12-31">Joachim Zobel</donor>
+    <donor date="2013-12-31">Mario Lardieri</donor>
+    <donor date="2013-01-04">Tobias Schlüter</donor>
+  </bronze>
+
+  <donors>
+    <donor date="2013-12-31">Bernhard Stosik</donor>
+    <donor date="2013-12-31">Christian Barth</donor>
+    <donor date="2013-12-31">Deyan Ginev</donor>
+    <donor date="2013-12-31">Dirk-Rolf Aust</donor>
+    <donor date="2013-12-31">Fabian Schury</donor>
+    <donor date="2013-01-02">Florian Reck</donor>
+    <donor date="2013-12-31">Holger Hampel</donor>
+    <donor date="2013-12-31">Jan Kupfer</donor>
+    <donor date="2013-12-31">Joachim Krantz</donor>
+    <donor date="2013-01-07">Körtner &amp; Muth GmbH</donor>
+    <donor date="2013-12-31">Michael Mosmann</donor>
+    <donor date="2013-12-31">Nils Wilgen</donor>
+    <donor date="2013-12-31">Sergi Blanch-Torné</donor>
+    <donor date="2013-12-31">Stefan Seifert</donor>
+    <donor date="2013-12-31">Torsten Löhr</donor>
+    <donor date="2013-12-31">Ulrich Walter</donor>
+    <donor date="2013-12-31">Uwe Henschel</donor>
+    <donor date="2013-12-31">Werner Wiethege</donor>
+  </donors>
+</donorset>

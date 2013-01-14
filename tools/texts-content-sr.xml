@@ -2,13 +2,60 @@
 
 <textset-content>
 
-  <text id="news">Najnovije vesti</text>
-  <text id="events">Događaji koji slede</text>
-  <text id="more">Pročitajte više...</text>
-  <text id="morenews">Više vesti...</text>
-  <text id="moreevents">Više o događajima...</text>
+  <text id="news">Најновије вести</text>
+  <text id="newsletter">Билтен</text>
+  <text id="receive-newsletter">Пријавите се на месечном билтену FSFE</text>
+  <text id="events">Догађаји који следе</text>
+  <text id="more">Прочитајте више...</text>
+  <text id="morenews">Више вести...</text>
+  <text id="moreevents">Више о догађајима...</text>
   
-  <text id="donate">Donacije</text>
-  <text id="join">Join</text>
+  <text id="email">Email</text>
+  <text id="email-placeholder">email адреса</text>
+  <text id="phone">Телефон</text>
+  <text id="fax">факс</text>
+  <text id="contact">Контакт</text>
+  
+  <text id="team">Eкипа</text>
+  <text id="microblog">Microblog</text>
+  
+  <text id="donate">Донације</text>
+   <!-- Campaign box on front-page, translated texts -->
+  <text id="cb-restricted-boot">Stand up for your freedom to install Free Software,</text>
+  <text id="cb-restricted-boot-link">sign our statement against Restricted Boot</text>
+  
+  <text id="cb-valentine">14. фебруара:</text>
+  <text id="cb-valentine-link">Покажите своју љубав Слободном Софтверу!</text>
+  <!-- end of texts for the campaign box -->
 
+  <text id="join">Join</text>
+  <text id="ourwork2011">Наш рад у 2011</text>
+  
+  <text id="subscribe">Пријавите се</text>
+
+  <!-- alt text for missing avatars -->
+  <text id="no-avatar">Нема слике</text>
+  
+  
+  <!-- quotes to be displayed in a rotating box -->
+  <quotes>
+    <quote id="wiesemann" tag="donors" pos="1">
+      <photo>/donate/wiesemann.jpg</photo>
+      <txt>
+        A virtual world without Free Software is like a city in which you are
+        obliged to have a usage license for every pavement. We also need
+        commons in the virtual world.
+      </txt>
+      <author>Reinhard Wiesemann - Linuxhotel</author>
+    </quote>
+    <quote id="ganten" tag="donors" pos="2">
+      <photo>/donate/ganten.jpg</photo>
+      <txt>
+        Free Software is the solid grounding of our enterprise
+        solutions. The FSFE provides an important contribution to secure this
+        grounding, therefore we support the FSFE.
+      </txt>
+      <author>Peter Ganten - Univention</author>
+    </quote>
+  </quotes>
 </textset-content>

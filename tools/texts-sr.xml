@@ -38,7 +38,7 @@
   <text id="fsfe/projects">Пројекти</text>
   <text id="fsfe/documents">Документи</text>
   <text id="fsfe/help">Укључите се</text>
-  <text id="fsfe/donate">Донације</text>
+  <text id="fsfe/donate">Донирајте</text>
   <text id="fsfe/order">Наручивање</text>
   <text id="fsfe/lists">Еmail листе</text>
   <text id="fsfe/thankgnus">GNU захвалнице</text>
@@ -51,6 +51,60 @@
   <text id="menu3/sisters/fsf">FSF</text>
   <text id="menu3/sisters/fsf_india">FSF India</text>
   <text id="menu3/sisters/fsf_la">FSF Latin America</text>
+  
+    <text id="news">Најновије вести</text>
+  <text id="newsletter">Билтен</text>
+  <text id="receive-newsletter">Претплатите се на FSFE-ов месечни билтен</text>
+  <text id="events">Догађаји који следе</text>
+  <text id="more">Прочитајте више...</text>
+  <text id="morenews">Више вести...</text>
+  <text id="moreevents">Више о догађајима...</text>
+  
+  <text id="email">Email</text>
+  <text id="email-placeholder">email адреса</text>
+  <text id="phone">Телефон</text>
+  <text id="fax">факс</text>
+  <text id="contact">Контакт</text>
+  
+  <text id="team">Eкипа</text>
+  <text id="microblog">Microblog</text>
+  
+  <text id="donate">Донације</text>
+   <!-- Campaign box on front-page, translated texts -->
+  <text id="cb-restricted-boot">Заузмите се за своју слободу да инсталирате Слободан Софтвер,</text>
+  <text id="cb-restricted-boot-link">потпишите нашу изјаву против Restricted Boot</text>
+  
+  <text id="cb-valentine">14. фебруара:</text>
+  <text id="cb-valentine-link">Покажите своју љубав Слободном Софтверу!</text>
+  <!-- end of texts for the campaign box -->
+
+  <text id="join">Придружите нам се</text>
+  <text id="ourwork2011">О нашем раду 2011-те</text>
+  
+  <text id="subscribe">Претплатите се</text>
+
+  <!-- alt text for missing avatars -->
+  <text id="no-avatar">Нема слике</text>
+  
+  
+  <!-- quotes to be displayed in a rotating box -->
+  <quotes>
+    <quote id="wiesemann" tag="donors" pos="1">
+      <photo>/donate/wiesemann.jpg</photo>
+      <txt>
+        Виртуални свет без Слободног Софтвера је као град у којем сте обавезни да имате употребну дозволу за сваки тротоар. Требамо заједничка добра и у виртуелном свету.
+      </txt>
+      <author>Reinhard Wiesemann - Linuxhotel</author>
+    </quote>
+    <quote id="ganten" tag="donors" pos="2">
+      <photo>/donate/ganten.jpg</photo>
+      <txt>
+        Слободан Софтвер представља чврст темељ нашег ентерприсе солутионс-а.FSFE чини важан допринос учвршћивању овог темеља, стога подржавамо FSFE.
+      </txt>
+      <author>Peter Ganten - Univention</author>
+    </quote>
+  </quotes>
+  
 </textset>
 
 

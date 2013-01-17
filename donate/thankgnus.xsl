@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:output method="xml" encoding="utf-8" indent="yes"/>
+  <xsl:import href="../fsfe.xsl" />
+  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
 
   <!-- $today = current date (given as <html date="...">) -->
   <xsl:variable name="today">
-    <xsl:value-of select="/html/@date"/>
+    <xsl:value-of select="/buildinfo/@date"/>
   </xsl:variable>
 
   <!-- $frommonth = date from which the list should start -->
@@ -20,7 +21,7 @@
       <xsl:when test="$group='patrons'">
         <xsl:element name="table">
           <xsl:attribute name="id">patrons</xsl:attribute>
-          <xsl:for-each select="/html/set/*[name(.)=$group]/donor[translate(@date,'-','')&gt;=translate($frommonth,'-','')]">
+          <xsl:for-each select="/buildinfo/document/set/*[name(.)=$group]/donor[translate(@date,'-','')&gt;=translate($frommonth,'-','')]">
             <xsl:sort select="translate(node(),'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ')"/>
             <xsl:element name="tr">
               <xsl:element name="td">
@@ -38,7 +39,7 @@
       </xsl:when>
       <xsl:otherwise>
         <xsl:element name="ul">
-          <xsl:for-each select="/html/set/*[name(.)=$group]/donor[translate(@date,'-','')&gt;=translate($frommonth,'-','')]">
+          <xsl:for-each select="/buildinfo/document/set/*[name(.)=$group]/donor[translate(@date,'-','')&gt;=translate($frommonth,'-','')]">
             <xsl:sort select="translate(node(),'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ')"/>
             <xsl:element name="li">
               <xsl:apply-templates select="node()"/>
@@ -47,16 +48,6 @@
         </xsl:element>
       </xsl:otherwise>
     </xsl:choose>
-  </xsl:template>
-
-  <!-- Do not copy <set> to output at all -->
-  <xsl:template match="set | tags"/>
-
-  <!-- For all other nodes, copy verbatim -->
-  <xsl:template match="@*|node()" priority="-1">
-    <xsl:copy>
-      <xsl:apply-templates select="@*|node()"/>
-    </xsl:copy>
   </xsl:template>
 </xsl:stylesheet>
 

@@ -4,7 +4,8 @@
   
   <xsl:import href="../../tools/xsltsl/tagging.xsl" />
   
-  <xsl:output method="xml" encoding="UTF-8" indent="yes" />
+  <xsl:import href="../../fsfe.xsl" />
+  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
   
   
   <xsl:template match="fetch-news">
@@ -14,28 +15,16 @@
     </xsl:call-template>
   </xsl:template>
   
-  
-  <!-- Do not copy <set> and <text> to output at all -->
-  <xsl:template match="/html/set" />
-  <xsl:template match="/html/text" />
-  
   <!-- How to show a link -->
-  <xsl:template match="/html/set/news/link">
+  <xsl:template match="/buildinfo/document/set/news/link">
     <xsl:element name="a">
       <xsl:attribute name="href">
         <xsl:value-of select="text()" />
       </xsl:attribute>
       <xsl:text>[</xsl:text>
-      <xsl:value-of select="/html/text[@id='more']" />
+      <xsl:value-of select="/buildinfo/document/text[@id='more']" />
       <xsl:text>]</xsl:text>
     </xsl:element>
-  </xsl:template>
-
-  <!-- For all other nodes, copy verbatim -->
-  <xsl:template match="@*|node()" priority="-1">
-    <xsl:copy>
-      <xsl:apply-templates select="@*|node()"/>
-    </xsl:copy>
   </xsl:template>
   
 </xsl:stylesheet>

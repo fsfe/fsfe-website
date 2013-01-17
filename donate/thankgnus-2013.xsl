@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:output method="xml" encoding="utf-8" indent="yes"/>
+  <xsl:import href="../fsfe.xsl" />
+  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
 
   <!-- Fill dynamic content -->
   <xsl:template match="dynamic-content">
@@ -9,7 +10,7 @@
     <xsl:choose>
       <xsl:when test="$group='gold'">
         <xsl:element name="table">
-          <xsl:for-each select="/html/set/*[name(.)=$group]/donor">
+          <xsl:for-each select="/buildinfo/document/set/*[name(.)=$group]/donor">
             <xsl:element name="tr">
               <xsl:element name="td">
                 <xsl:element name="img">
@@ -26,7 +27,7 @@
       </xsl:when>
       <xsl:otherwise>
         <xsl:element name="ul">
-          <xsl:for-each select="/html/set/*[name(.)=$group]/donor">
+          <xsl:for-each select="/buildinfo/document/set/*[name(.)=$group]/donor">
             <xsl:element name="li">
               <xsl:apply-templates select="node()"/>
             </xsl:element>
@@ -34,16 +35,6 @@
         </xsl:element>
       </xsl:otherwise>
     </xsl:choose>
-  </xsl:template>
-
-  <!-- Do not copy <set> or <text> to output at all -->
-  <xsl:template match="set | tags"/>
-
-  <!-- For all other nodes, copy verbatim -->
-  <xsl:template match="@*|node()" priority="-1">
-    <xsl:copy>
-      <xsl:apply-templates select="@*|node()"/>
-    </xsl:copy>
   </xsl:template>
 </xsl:stylesheet>
 

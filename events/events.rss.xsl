@@ -11,7 +11,7 @@
 
   <!-- $today = current date (given as <html date="...">) -->
   <xsl:variable name="today">
-    <xsl:value-of select="/html/@date" />
+    <xsl:value-of select="/buildinfo/@date" />
   </xsl:variable>
 
   
@@ -47,7 +47,7 @@
         </image>
 
         <!-- Event items -->
-        <xsl:for-each select="/html/set/event
+        <xsl:for-each select="/buildinfo/document/set/event
           [translate (@end, '-', '') &gt;= translate ($today, '-', '')]">
           <xsl:sort select="@start" />
           <xsl:if test="position() &lt; 11">

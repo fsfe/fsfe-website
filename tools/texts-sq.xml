@@ -39,7 +39,7 @@
   </text>
   
   <text id="source">Kod burim</text>
-  <text id="contact">Lidhuni me ne</text>
+  <text id="contact-us">Lidhuni me ne</text>
   <text id="translate">Doni të përktheni këtë faqe?</text>
   <text id="imprint">Imprint</text>
   
@@ -139,5 +139,63 @@
 
   <text id="press">Për Shtypin</text>
   <text id="newsletter">Buletin</text>
+  
+  <text id="news">Lajme</text>
+  <text id="receive-newsletter">Pajtohuni te buletini mujor i FSFE-së</text>
+  <text id="events">Veprimtari</text>
+  <text id="more">Më Tepër</text>
+  <text id="morenews">Më tepër lajme…</text>
+  <text id="moreevents">Më tepër veprimtari…</text>
+  
+  <text id="email">Email</text>
+  <text id="email-placeholder">adresë email</text>
+  <text id="phone">Telefon</text>
+  <text id="fax">faks</text>
+  <text id="contact">Kontakt</text>
+  
+  <text id="team">Ekip</text>
+  <text id="microblog">Mikroblog</text>
+  
+  <text id="donate">Dhuroni</text>
+
+  <!-- Campaign box on front-page, translated texts -->
+  <text id="cb-restricted-boot">"Nisje e Sigurt": Kush do ta kontrollojë kompjuterin tuaj të ardhshëm?</text>
+  <text id="cb-restricted-boot-link">Ne apo prodhuesit e pajisjeve?</text>
+
+  <text id="cb-valentine">Më 14 Shkurt: </text>
+  <text id="cb-valentine-link">Shpaloseni dashurinë tuaj për Software-in e Lirë!</text>
+  <!-- end of texts for the campaign box -->
+
+  <text id="join">Bëhuni pjesë</text>
+  <text id="ourwork2011">Puna jonë më 2011</text>
+  <text id="support">Përkrahni FSFE-në</text>
+  
+  <text id="subscribe">Pajtohuni</text>
+
+  <!-- alt text for missing avatars -->
+  <text id="no-avatar">Pa Figurë</text>
+  
+  
+  <!-- quotes to be displayed in a rotating box -->
+  <quotes>
+    <quote id="wiesemann" tag="donors" pos="1">
+      <photo>/donate/wiesemann.jpg</photo>
+      <txt>
+        Një botë virtuale pa Software të Lirë është si një qytet në të cilin
+        jeni të detyruar të paguani leje përdorimi për çdo kalldrëm. Edhe në botën
+        virtuale kemi nevojë për gjëra të përbashkëta.
+      </txt>
+      <author>Reinhard Wiesemann - Linuxhotel</author>
+    </quote>
+    <quote id="ganten" tag="donors" pos="2">
+      <photo>/donate/ganten.jpg</photo>
+      <txt>
+        Software-i i Lirë përbën themelin e qëndrueshëm të zgjidhjeve që ofrojmë
+        për ndërmarrje. FSFE-ja furnizon kontribut të rëndësishëm për ta bërë
+        të sigurt këtë themel, ndaj e përkrahim FSFE-në.
+      </txt>
+      <author>Peter Ganten - Univention</author>
+    </quote>
+  </quotes>
   
 </textset>

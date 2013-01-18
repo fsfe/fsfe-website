@@ -44,7 +44,7 @@
       
   </xsl:template>
   
-  <xsl:template match="/buildinfo">
+  <xsl:template match="/">
     <xsl:apply-templates select="/buildinfo/document" />
   </xsl:template>
   

@@ -31,27 +31,24 @@
     </xsl:variable>
 
     <!-- Now, the event block -->
+    <xsl:text>BEGIN:VEVENT</xsl:text><xsl:call-template name="nl" />
 
-	<xsl:text>BEGIN:VEVENT</xsl:text><xsl:call-template name="nl" />
+    <xsl:text>SUMMARY:</xsl:text><xsl:value-of select="title" /><xsl:call-template name="nl" />
 
-	<xsl:text>SUMMARY:</xsl:text><xsl:value-of select="title" /><xsl:call-template name="nl" />
+    <xsl:text>DTSTART;VALUE=DATE:</xsl:text><xsl:value-of select="$start" /><xsl:call-template name="nl" />
+    <xsl:text>DTEND;VALUE=DATE:</xsl:text><xsl:value-of select="$end" /><xsl:call-template name="nl" />
+    
+    <xsl:text>DESCRIPTION:</xsl:text><xsl:value-of select="normalize-space(body/node())" /><xsl:call-template name="nl" />
 
-	<xsl:text>DTSTART;VALUE=DATE:</xsl:text><xsl:value-of select="$start" /><xsl:call-template name="nl" />
-	<xsl:text>DTEND;VALUE=DATE:</xsl:text><xsl:value-of select="$end" /><xsl:call-template name="nl" />
-	
-	<xsl:text>DESCRIPTION:</xsl:text><xsl:value-of select="normalize-space(body/node())" /><xsl:call-template name="nl" />
-
-	<xsl:text>END:VEVENT</xsl:text><xsl:call-template name="nl" />
-	
+    <xsl:text>END:VEVENT</xsl:text><xsl:call-template name="nl" />
+      
   </xsl:template>
   
   <xsl:template match="/buildinfo">
-    <xsl:copy>
-      <xsl:apply-templates select="/buildinfo/document/set/event/body" />
-    </xsl:copy>
+    <xsl:apply-templates select="/buildinfo/document/set/event/body" />
   </xsl:template>
   
-  <xsl:template match="body">
+  <xsl:template match="/buildinfo/document/set/event/body">
 	  <xsl:text>BEGIN:VCALENDAR</xsl:text><xsl:call-template name="nl" />
 	  <xsl:text>VERSION:2.0</xsl:text><xsl:call-template name="nl" />
 	  <xsl:text>PRODID:fsfe.org/events/events.ics.xsl</xsl:text><xsl:call-template name="nl" />

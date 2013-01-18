@@ -4,15 +4,8 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   
   <xsl:output method="text" encoding="UTF-8" indent="no" />
-  <xsl:strip-space elements="body"/> 
+  <xsl:strip-space elements="body"/>
   
-  <!-- only play with the body -->
-  <xsl:template match="/">
-    <xsl:copy>
-      <xsl:apply-templates select="/html/body" />
-    </xsl:copy>
-  </xsl:template>
-
   <!-- new line template -->
   <xsl:template name="nl"><xsl:text>&#13;&#10;</xsl:text></xsl:template>
 
@@ -51,8 +44,13 @@
 	<xsl:text>END:VEVENT</xsl:text><xsl:call-template name="nl" />
 	
   </xsl:template>
-
-  <!-- In /html/body node, append dynamic content -->
+  
+  <xsl:template match="/buildinfo">
+    <xsl:copy>
+      <xsl:apply-templates select="/buildinfo/document/set/event/body" />
+    </xsl:copy>
+  </xsl:template>
+  
   <xsl:template match="body">
 	  <xsl:text>BEGIN:VCALENDAR</xsl:text><xsl:call-template name="nl" />
 	  <xsl:text>VERSION:2.0</xsl:text><xsl:call-template name="nl" />

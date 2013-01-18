@@ -19,11 +19,15 @@
   <!-- Main routine -->
   <!-- ============ -->
 
-  <xsl:template match="html">
+  <xsl:template match="/buildinfo">
+    <xsl:apply-templates select="document" />
+  </xsl:template>
+  
+  <xsl:template match="/buildinfo/document">
 
     <!-- Language -->
     <xsl:variable name="lang">
-      <xsl:value-of select="@lang" />
+      <xsl:value-of select="@language" />
     </xsl:variable>
 
     <!-- Header -->

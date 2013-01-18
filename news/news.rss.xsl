@@ -95,12 +95,15 @@
   <!-- ============ -->
   <!-- Main routine -->
   <!-- ============ -->
-
-  <xsl:template match="html">
-
+  
+  <xsl:template match="/buildinfo">
+    <xsl:apply-templates select="document" />
+  </xsl:template>
+  
+  <xsl:template match="/buildinfo/document">
     <!-- Language -->
     <xsl:variable name="lang">
-      <xsl:value-of select="@lang" />
+      <xsl:value-of select="@language" />
     </xsl:variable>
 
     <!-- Header -->
@@ -130,8 +133,7 @@
         </xsl:element>
         
         <!-- News items -->
-        <xsl:for-each select="/buildinfo/document/set/news
-          [translate (@date, '-', '') &lt;= translate ($today, '-', '')]">
+        <xsl:for-each select="/buildinfo/document/set/news[translate (@date, '-', '') &lt;= translate ($today, '-', '')]">
           <xsl:sort select="@date" order="descending"/>
           <xsl:if test="position() &lt; 11">
             <xsl:element name="item">
@@ -256,11 +258,9 @@ Make a one time donation: http://fsfe.org/donate/donate.html</xsl:text>
   
   <!-- remove newsteaser from <p> -->
   <xsl:template match="p">
-    <xsl:element name="p">
-      
+    <xsl:copy>
       <xsl:apply-templates select="node()" />
-      
-    </xsl:element>
+    </xsl:copy>
   </xsl:template>
   
   <!-- as well as images -->
@@ -279,5 +279,8 @@ Make a one time donation: http://fsfe.org/donate/donate.html</xsl:text>
       </xsl:attribute>
     </xsl:element>
   </xsl:template>
+  
+  <!-- Do not copy <body-complete> to output at all -->
+  <xsl:template match="body-complete"/>
   
 </xsl:stylesheet>

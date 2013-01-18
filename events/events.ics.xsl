@@ -45,10 +45,10 @@
   </xsl:template>
   
   <xsl:template match="/buildinfo">
-    <xsl:apply-templates select="/buildinfo/document/set/event/body" />
+    <xsl:apply-templates select="/buildinfo/document" />
   </xsl:template>
   
-  <xsl:template match="/buildinfo/document/set/event/body">
+  <xsl:template match="/buildinfo/document">
 	  <xsl:text>BEGIN:VCALENDAR</xsl:text><xsl:call-template name="nl" />
 	  <xsl:text>VERSION:2.0</xsl:text><xsl:call-template name="nl" />
 	  <xsl:text>PRODID:fsfe.org/events/events.ics.xsl</xsl:text><xsl:call-template name="nl" />
@@ -57,8 +57,7 @@
         <xsl:value-of select="/buildinfo/@date" />
       </xsl:variable>
       <!-- Future events -->
-      <xsl:for-each select="/buildinfo/document/set/event
-        [translate (@start, '-', '') &gt;= translate ($today, '-', '')]">
+      <xsl:for-each select="/buildinfo/document/set/event[translate (@start, '-', '') &gt;= translate ($today, '-', '')]">
         <xsl:sort select="@start" order="descending" />
         <xsl:call-template name="event">
           <xsl:with-param name="header">current</xsl:with-param>

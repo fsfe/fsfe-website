@@ -7,6 +7,8 @@ fr/documents/document:fr
 it/documents/document:it
 se/documents/document:se
 projects/*/document:global
+activities/*/project:global
+campaigns/*/project:global
 de/projects/*/document:de
 es/projects/*/document:es
 fr/projects/*/document:fr

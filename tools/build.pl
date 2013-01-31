@@ -646,7 +646,7 @@ sub process {
 			if (-f "$opts{i}/$file.ics.xsl") {
 				my $style_doc_ics = $parser->parse_file("$opts{i}/$file.ics.xsl");
 				my $stylesheet_ics = $xslt_parser->parse_stylesheet($style_doc_ics);
-				my $results_ics = $stylesheet_ics->transform($sourcedoc);
+				my $results_ics = $stylesheet_ics->transform($dom);
 				$stylesheet_ics->output_file($results_ics, "$opts{o}/$dir/$file.$lang.ics") unless $opts{n};
 			}
 

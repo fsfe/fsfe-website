@@ -1,5 +1,5 @@
---- build.sh	2011-09-25 22:43:17.000000000 +0200
-+++ build-test.sh	2011-09-25 22:43:35.000000000 +0200
+--- build.sh	2013-02-04 13:37:46.000000000 +0100
++++ build-test.sh	2013-02-04 13:41:42.000000000 +0100
 @@ -2,18 +2,18 @@
  # -----------------------------------------------------------------------------
  # Web page build script
@@ -67,7 +67,25 @@
  # -----------------------------------------------------------------------------
  
  # Update the svn working copy and check if any files were updated.
-@@ -88,7 +88,7 @@
+@@ -75,7 +75,7 @@
+ 
+   `cat ${SVNUPERRFILE}`
+ 
+-  Please check the build script log at http://status.fsfe.org/web/
++  Please check the build script log at http://status.fsfe.org/web-test/
+   and fix the cause of the problem.
+  
+   In case of doubt, please write to system-hackers@fsfeurope.org 
+@@ -93,7 +93,7 @@
+ 
+   `cat ${SVNUPOUTFILE}`
+ 
+-  Please check the build script log at http://status.fsfe.org/web/
++  Please check the build script log at http://status.fsfe.org/web-test/
+   and fix the cause of the problem.
+  
+   In case of doubt, please write to system-hackers@fsfeurope.org 
+@@ -110,7 +110,7 @@
  if test ! -s ${SVNUPOUTFILE} \
      -a "$(date -r ${STATUS}/last-run +%F)" == "$(date +%F)" \
      -a "$1" != "-f" ; then
@@ -76,7 +94,7 @@
    echo "$(date)  $(svn info 2>/dev/null | grep '^Revision')"
    # In this case we only append to the cumulative status-log.txt file, we don't touch status-finished.txt
    cat ${STATUS}/status.txt >> ${STATUS}/status-log.txt
-@@ -101,10 +101,10 @@
+@@ -123,10 +123,10 @@
  
  perl ${MAKEFILE_PL}
  
@@ -89,7 +107,7 @@
  chmod +x cgi-bin/weborder.pl cgi-bin/stacs-register-capacity.pl
  chmod +x cgi-bin/stacs-register-workshop.pl
  
-@@ -125,9 +125,9 @@
+@@ -147,9 +147,9 @@
  touch ${STATUS}/last-run
  
  if test "x`hostname`" = "xekeberg"; then
@@ -101,7 +119,7 @@
  fi
  
  if test $? -ne 0; then
-@@ -162,7 +162,7 @@
+@@ -184,7 +184,7 @@
  echo "$(date)  Generating robots.txt."
  # -----------------------------------------------------------------------------
  
@@ -110,7 +128,7 @@
  
  # -----------------------------------------------------------------------------
  echo "$(date)  Activating new output."
-@@ -176,7 +176,7 @@
+@@ -198,7 +198,7 @@
  echo "$(date)  Generating translation logs."
  # -----------------------------------------------------------------------------
  
@@ -119,11 +137,9 @@
  
  # -----------------------------------------------------------------------------
  echo "$(date)  Build complete."
-@@ -184,6 +184,5 @@
+@@ -206,4 +206,4 @@
  
  cp ${STATUS}/status.txt ${STATUS}/status-finished.txt
  cat ${STATUS}/status-finished.txt >> ${STATUS}/status-log.txt
 -cp tools/status.php ${STATUS}/index.php
--cp tools/qa/reports/* ${STATUS}/qa/reports/
 +cp tools/status-test.php ${STATUS}/index.php
- 

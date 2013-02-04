@@ -70,6 +70,17 @@ if test -s ${SVNUPERRFILE} ; then
   echo "$(date)  svn update produced the following error message. Build aborted"
   cat ${SVNUPERRFILE}
   cat ${STATUS}/status.txt >> ${STATUS}/status-log.txt
+  echo -e "
+  svn update produced the following error message. Build aborted
+
+  `cat ${SVNUPERRFILE}`
+
+  Please check the build script log at http://status.fsfe.org/web/
+  and fix the cause of the problem.
+ 
+  In case of doubt, please write to system-hackers@fsfeurope.org 
+
+  " | mail -s "www.fsfe.org: svn error" web@fsfeurope.org system-hackers@fsfeurope.org
   exit
 fi
 
@@ -77,6 +88,17 @@ fi
 if test -n "$(grep '^C' ${SVNUPOUTFILE})" ; then
   echo "$(date)  There are conflicts in the local svn working copy. Build aborted"
   cat ${STATUS}/status.txt >> ${STATUS}/status-log.txt
+  echo -e "
+  There are conflicts in the local svn working copy. Build aborted
+
+  `cat ${SVNUPOUTFILE}`
+
+  Please check the build script log at http://status.fsfe.org/web/
+  and fix the cause of the problem.
+ 
+  In case of doubt, please write to system-hackers@fsfeurope.org 
+
+  " | mail -s "www.fsfe.org: svn conflict" web@fsfeurope.org system-hackers@fsfeurope.org
   exit
 fi
 

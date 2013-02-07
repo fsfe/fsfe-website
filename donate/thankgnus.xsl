@@ -18,9 +18,9 @@
   <xsl:template match="dynamic-content">
     <xsl:variable name="group"><xsl:value-of select="@group"/></xsl:variable>
     <xsl:choose>
-      <xsl:when test="$group='patrons'">
+      <xsl:when test="$group='gold'">
         <xsl:element name="table">
-          <xsl:attribute name="id">patrons</xsl:attribute>
+          <xsl:attribute name="id">gold</xsl:attribute>
           <xsl:for-each select="/buildinfo/document/set/*[name(.)=$group]/donor[translate(@date,'-','')&gt;=translate($frommonth,'-','')]">
             <xsl:sort select="translate(node(),'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ')"/>
             <xsl:element name="tr">

@@ -636,7 +636,7 @@ sub process {
 			if (-f "$opts{i}/$file.rss.xsl") {
 				my $style_doc_rss = $parser->parse_file("$opts{i}/$file.rss.xsl");
 				my $stylesheet_rss = $xslt_parser->parse_stylesheet($style_doc_rss);
-				my $results_rss = $stylesheet_rss->transform($sourcedoc);
+				my $results_rss = $stylesheet_rss->transform($dom);
 				$stylesheet_rss->output_file($results_rss, "$opts{o}/$dir/$file.$lang.rss") unless $opts{n};
 			}
 			

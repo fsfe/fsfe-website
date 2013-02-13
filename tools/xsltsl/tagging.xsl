@@ -17,7 +17,7 @@
     <xsl:param name="tag" select="''"/>
     <xsl:param name="today" select="/buildinfo/@date" />
     <xsl:param name="nb-items" select="''" />
-    <xsl:param name="display-year" select="'no'" />
+    <xsl:param name="display-year" select="'yes'" />
     <xsl:param name="show-date" select="'yes'" />
     <xsl:param name="compact-view" select="'no'" />
     
@@ -62,7 +62,7 @@
     <xsl:param name="header" select="''" />
     <xsl:param name="nb-items" select="''" />
     <xsl:param name="display-details" select="'no'" />
-    <xsl:param name="display-year" select="'no'" />
+    <xsl:param name="display-year" select="'yes'" />
     
     <xsl:choose>
       <xsl:when test="$wanted-time = 'past'">

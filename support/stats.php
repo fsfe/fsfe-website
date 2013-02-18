@@ -619,7 +619,7 @@ catch(PDOException $e) {
 
 while ($row = $query->fetch(PDO::FETCH_ASSOC)) {
     echo '<tr>
-    <td>'. $row["time"] .'</td>
+    <td>'. substr($row["time"], 0, 10) .'</td>
     <td><a href="?country_code='. $row["country_code"] .'">'. $row["country_code"] .'</a></td>
     <td><a href="?ref_url='. $row["ref_url"] .'">'. $row["ref_url"] .'</a></td>
     <td><a href="?ref_id='. $row["ref_id"] .'">'. $row["ref_id"] .'</a></td>

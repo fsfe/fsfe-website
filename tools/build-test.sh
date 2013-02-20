@@ -17,7 +17,7 @@ SVNUPERRFILE=/tmp/fsfe-test-svnup-err
 
 # Since we must grep for svn output messages,
 # let's ensure we get English messages
-export LANG=C
+export LANG="en_US.UTF-8"
 
 # Redirect output
 exec 1> ${STATUS}/status.txt 2>&1

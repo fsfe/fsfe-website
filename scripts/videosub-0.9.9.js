@@ -2,7 +2,7 @@
 // VideoSub v0.9.9
 // by Thomas Sturm, June 2010 - August 2012
 // http://www.storiesinflight.com
-// Freeware, Attribution Appreciated
+// License MIT
 //
 // Ender is licensed under MIT - copyright 2012 Dustin Diaz & Jacob Thornton
 // http://ender.no.de/

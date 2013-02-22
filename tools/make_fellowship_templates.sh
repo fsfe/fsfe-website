@@ -6,13 +6,14 @@
 
 # Directory where the /fellowship html files are written by the build process
 #
-# This is supplied by build.sh as the $DEST directory (so that we can reuse
-# this script in both production and test instance)
+# We assume that the script is called by build.sh passing $1 as the $DEST
+# directory defined in build.sh (so that we can reuse this script in both production
+# and test instances)
 if [ -z "$1" ] ; then
   echo "You must supply a DEST directory"
   exit 1
 else
-  FELLDIR=$1
+  FELLDIR=$1/fellowship
 fi
 
 # Directory where the template files are expected by the AMS

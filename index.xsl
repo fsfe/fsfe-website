@@ -34,7 +34,7 @@
   
   <xsl:template match="label-ourwork2011">
     <xsl:call-template name="gettext">
-      <xsl:with-param name="id" select="'ourwork2011'" />
+      <xsl:with-param name="id" select="'support'" />
     </xsl:call-template>
   </xsl:template>
   
@@ -75,7 +75,7 @@
       <xsl:with-param name="wanted-time" select="'future'" />
       <xsl:with-param name="tag">front-page</xsl:with-param>
       <xsl:with-param name="display-details" select="'yes'" />
-      <xsl:with-param name="nb-items" select="3" />
+      <xsl:with-param name="nb-items" select="4" />
     </xsl:call-template>
     
     <xsl:element name="p">
@@ -136,7 +136,7 @@
             <xsl:with-param name="id" select="'cb-restricted-boot'" />
           </xsl:call-template>
           <xsl:text> </xsl:text>
-          <a href="http://www.fsf.org/campaigns/secure-boot-vs-restricted-boot/statement">
+          <a href="/campaigns/generalpurposecomputing/secure-boot-analysis.html">
             <xsl:call-template name="gettext">
               <xsl:with-param name="id" select="'cb-restricted-boot-link'" />
             </xsl:call-template>
@@ -202,7 +202,21 @@
       <xsl:with-param name="id" select="'join'" />
     </xsl:call-template>
   </xsl:template>
+
+  <!--translated word "support"-->
+  <xsl:template match="support-label">
+    <xsl:call-template name="gettext">
+      <xsl:with-param name="id" select="'support'" />
+    </xsl:call-template>
+  </xsl:template>
   
+  <xsl:template match="about-work-label">
+    <xsl:call-template name="gettext">
+      <xsl:with-param name="id" select="'about-work'" />
+    </xsl:call-template>
+  </xsl:template>
+
+
   <xsl:template match="subscribe-nl">
     <xsl:call-template name="subscribe-nl" />
   </xsl:template>

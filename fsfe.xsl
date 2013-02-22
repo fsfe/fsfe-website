@@ -144,7 +144,8 @@
 
       <script>
         hljs.tabReplace = "  ";
-        hljs.initHighligtingOnLoad();
+//        hljs.initHighligtingOnLoad();
+// above line throws error: Uncaught TypeError: Object [object Object] has no method 'initHighligtingOnLoad'
       </script>
       
       <xsl:comment>
@@ -213,7 +214,7 @@
       <xsl:call-template name="subscribe-nl" />
     </xsl:if>
     <!-- End apply newsletter page rules -->
-    
+
     <!-- Depreciated- see next block: Apply article rules -->
     <xsl:if test = "string(/buildinfo/document/head/meta[@name='author-name-1']/@content)">
       <xsl:element name="div">
@@ -302,7 +303,7 @@
                                                 </xsl:element>
                                         </xsl:if>
                                         <xsl:value-of select="document('about/people/people.en.xml')/personset/person[@id=$id]/name" />
-                                </xsl:element>
+                                </xsl:element>&#160;
                             </xsl:when>
                             <xsl:otherwise>
                                 <xsl:if test="document('about/people/people.en.xml')/personset/person[@id=$id]/avatar">
@@ -312,7 +313,7 @@
                                         </xsl:element>
                                 </xsl:if>
                                 <span class="author">
-                                  <xsl:value-of select="document('about/people/people.en.xml')/personset/person[@id=$id]/name" />
+                                  <xsl:value-of select="document('about/people/people.en.xml')/personset/person[@id=$id]/name" />&#160;
                                 </span>
                             </xsl:otherwise>
                           </xsl:choose>
@@ -331,7 +332,7 @@
                                                 </xsl:element>
                                         </xsl:if>
                                         <xsl:value-of select="name" />
-                                </xsl:element>
+                                </xsl:element>&#160;
                             </xsl:when>
                             <xsl:otherwise>
                                 <xsl:if test="avatar">
@@ -341,7 +342,7 @@
                                         </xsl:element>
                                 </xsl:if>
                                 <span class="author">
-                                  <xsl:value-of select="name" />
+                                  <xsl:value-of select="name" />&#160;
                                 </span>
                             </xsl:otherwise>
                           </xsl:choose>
@@ -351,7 +352,7 @@
     </xsl:if>
 
     <xsl:if test="/buildinfo/document/date">
-        <span class="label"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'published'" /></xsl:call-template>&#160;</span>
+        <span class="label"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'published'" /></xsl:call-template>&#160;</span> 
         <xsl:value-of select="/buildinfo/document/date/original/@content" />&#160;
         <xsl:if test="/buildinfo/document/date/revision">
                 (<span class="label"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'revision'" /></xsl:call-template></span>
@@ -412,6 +413,21 @@
     <xsl:call-template name="generate-id" />
   </xsl:template>
 
+  <!-- Apply support page -->
+  <xsl:template match="support-portal-javascript">
+    <xsl:call-template name="support-portal-javascript" />
+  </xsl:template>
+  <xsl:template match="support-form-javascript">
+    <xsl:call-template name="support-form-javascript" />
+  </xsl:template>
+  <xsl:template match="country-list-europe">
+    <xsl:call-template name="country-list-europe" />
+  </xsl:template>
+  <xsl:template match="country-list-other-continents">
+    <xsl:call-template name="country-list-other-continents" />
+  </xsl:template>
+  <!-- End apply support page rules -->
+    
   <!-- HTML body -->
   <xsl:template match="body">
     <xsl:copy>
@@ -496,22 +512,6 @@
             </xsl:element>.<!--intentional full stop goes here-->
             
           </xsl:element>
-
-          <!-- Signup Button -->
-	  <xsl:element name="div">
-	    <xsl:attribute name="id">signupinlineform</xsl:attribute>
-	  </xsl:element>
-	  <xsl:element name="div">
-	    <xsl:attribute name="id">signupbutton</xsl:attribute>
-	    <xsl:element name="a">
-	      <xsl:attribute name="id">signuplink</xsl:attribute>
-              <xsl:attribute name="href">/support/</xsl:attribute>
-	      <xsl:element name="img">
-                <xsl:attribute name="src">/graphics/+1Supporter.png</xsl:attribute>
-                <xsl:attribute name="alt">Sign up as Supporter</xsl:attribute>
-	      </xsl:element>
-	    </xsl:element>
-	  </xsl:element>
           
         </xsl:element><!-- end Page header -->
         
@@ -608,7 +608,7 @@
             </xsl:for-each>
               </xsl:element><!-- end li -->
             </xsl:element><!-- end ul -->          
-
+          
           <!-- Planet portal menu -->
           <xsl:element name="li">
             <xsl:attribute name="class">planet</xsl:attribute>
@@ -645,7 +645,7 @@
 
           <xsl:element name="form">
         <xsl:attribute name="method">get</xsl:attribute>
-        <xsl:attribute name="action">http://search.fsfe.org/yacysearch.html</xsl:attribute>
+        <xsl:attribute name="action">http://fsfe.yacy.net/yacysearch.html</xsl:attribute>
 
         <xsl:element name="input">
           <xsl:attribute name="type">hidden</xsl:attribute>
@@ -736,7 +736,7 @@
 
         <xsl:element name="form">
           <xsl:attribute name="method">get</xsl:attribute>
-          <xsl:attribute name="action">http://search.fsfe.org/yacysearch.html</xsl:attribute>
+          <xsl:attribute name="action">http://fsfe.yacy.net/yacysearch.html</xsl:attribute>
 
           <xsl:element name="p">
           
@@ -799,29 +799,41 @@
         <!-- Outdated note -->
         <xsl:if test="/buildinfo/@outdated='yes'">
           <xsl:element name="p">
-        <xsl:attribute name="id">outdated-notice</xsl:attribute>
+        <xsl:attribute name="class">warning red</xsl:attribute>
         <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'outdated'" /></xsl:call-template>
           </xsl:element>
         </xsl:if>
-        
+	
         <!-- Missing translation note -->
         <xsl:if test="/buildinfo/@language!=/buildinfo/document/@language">
           <xsl:element name="p">
-        <xsl:attribute name="id">outdated-notice</xsl:attribute>
+        <xsl:attribute name="class">warning red</xsl:attribute>
         <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'notranslation'" /></xsl:call-template>
           </xsl:element>
         </xsl:if>
-            
+	
         <!-- Info box -->
-        <xsl:element name="div"> 
-          <xsl:attribute name="id">infobox</xsl:attribute>
-          <xsl:if test = "/buildinfo/document/head/meta[@name='under-construction' and @content='true']">
-        <xsl:element name="p">
-          <xsl:attribute name="id">under-construction-notice</xsl:attribute>
-          <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'under-construction'" /></xsl:call-template>
-        </xsl:element>
-          </xsl:if>
-        </xsl:element>
+	<xsl:element name="div"> 
+		<xsl:attribute name="id">infobox</xsl:attribute>
+		<!-- Add under construction message -->
+		<xsl:if test = "/buildinfo/document/head/meta[@name='under-construction' and @content='true']">
+			<xsl:element name="p">
+				<xsl:attribute name="class">warning yellow</xsl:attribute>
+				<xsl:call-template name="fsfe-gettext">
+					<xsl:with-param name="id" select="'under-construction'" />
+				</xsl:call-template>
+			</xsl:element>
+		</xsl:if>
+		<!-- Add project completed message -->
+		<xsl:if test = "/buildinfo/document/head/meta[@name='project-complete' and @content='true']">
+			<xsl:element name="p">
+				<xsl:attribute name="class">warning green</xsl:attribute>
+				<xsl:call-template name="fsfe-gettext">
+					<xsl:with-param name="id" select="'project-complete'" />
+				</xsl:call-template>
+			</xsl:element>
+		</xsl:if>
+	</xsl:element>
         
         <!-- Fundraising box
           <xsl:element name="div">

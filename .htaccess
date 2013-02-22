@@ -14,7 +14,6 @@ RewriteRule ^gbn(.*) /projects/gbn$1 [redirect=permanent]
 RewriteRule ^law/eucd/(.*) /projects/eucd$1 [redirect=permanent]
 RewriteRule ^law(.*) /projects/law$1 [redirect=permanent]
 RewriteRule ^swpat(.*) /projects/swpat$1 [redirect=permanent]
-RewriteRule ^work\.(.*) /projects/work.$1 [redirect=permanent]
 RewriteRule ^donate.html /donate/donate.en.html [redirect=permanent]
 
 # New year's resolution in 2009.

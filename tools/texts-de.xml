@@ -41,7 +41,7 @@
   </text>
 
   <text id="source">Quellcode</text>
-  <text id="contact">Kontaktieren Sie uns</text>
+  <text id="contact-us">Kontaktieren Sie uns</text>
   <text id="translate">Diese Seite übersetzen ?</text>
   <text id="imprint">Impressum</text>
 
@@ -49,11 +49,16 @@
   <text id="under-construction">
     <strong>Warnung: </strong>Diese Seite ist unter Bearbeitung. Bitte übersetzen Sie sie nicht, da sie noch stark verändert wird.
   </text>
+  <text id="project-complete">
+	  Dieses Projekt wurde erfolgreich abgeschlossen. Diese Seiten dienen als Archiv für die darauf befindlichen Informationen. 
+  </text>
   
   <!-- Article metadata -->
   <text id="author">Autor</text>
-  <text id="published">Veröffentlicht</text>
-  <text id="download">Download</text>
+  <text id="writtenby">Von</text>
+  <text id="published">am</text>
+  <text id="revision">aktualisiert am</text>
+  <text id="download">Herunterladen</text>
   
   <text id="search">Suchen</text>
   <text id="submit">Abonnieren</text>
@@ -73,6 +78,7 @@
   <text id="fsfe/lists">Mailinglisten</text>
   <text id="fsfe/press">Presse</text>
   <text id="fsfe/thankgnus">Unsere Spender</text>
+  <text id="support/support">Unterstützen</text>
   <text id="fellowship/fellowship">Beitreten</text>
   <text id="fellowship/1-wiki">Wiki</text>
   <text id="fellowship/2-planet">Blog Planet</text>
@@ -129,4 +135,62 @@
   
   <text id="press">Presse</text>
   <text id="newsletter">Newsletter</text>
+  
+  <text id="news">Letzte Meldungen</text>
+  <text id="receive-newsletter">FSFE-Newsletter abonnieren</text>
+
+  <text id="events">Nächste Veranstaltungen</text>
+  <text id="more">Mehr</text>
+  <text id="morenews">Weitere Meldungen…</text>
+  <text id="moreevents">Weitere Veranstaltungen…</text>
+  
+  <text id="email">E-mail</text>
+  <text id="email-placeholder">E-Mail-Adresse</text>
+  <text id="phone">Telefon</text>
+  <text id="fax">Fax</text>
+  <text id="contact">Kontakt</text>
+  
+  <text id="donate">Spenden</text>
+  
+  <!-- Campaign box on front-page, translated texts -->
+  <text id="cb-restricted-boot">"Secure Boot": Wer wird Ihren nächsten Computer kontrollieren?</text>
+  <text id="cb-restricted-boot-link">Wir oder Gerätehersteller?</text>
+  
+  <text id="cb-valentine">Am 14. Februar: </text>
+  <text id="cb-valentine-link">Zeigen Sie Ihre Liebe zu Freier Software!</text>
+  <!-- end of texts for the campaign box -->
+  
+  <text id="join">Beitreten</text>
+
+  <text id="subscribe">Eintragen</text>
+
+  <!-- alt text for missing avatars -->
+  <text id="no-avatar">Kein Bild</text>
+  
+  <!-- petitions -->
+  <text id="osig">Organisationen</text>
+  <text id="isig">Personen</text>
+  
+  
+  <!-- quotes to be displayed in a rotating box -->
+  <quotes>
+    <quote id="wiesemann" tag="donors" pos="1">
+      <photo>/donate/wiesemann.jpg</photo>
+      <txt>
+        Eine virtuelle Welt ohne Freie Software ist wie eine Stadt, in der
+        man für jeden Bürgersteig eine Benutzungslizenz benötigt. Wir brauchen
+        auch Allgemeingut in der virtuellen Welt.
+      </txt>
+      <author>Reinhard Wiesemann - Linuxhotel</author>
+    </quote>
+    <quote id="ganten" tag="donors" pos="2">
+      <photo>/donate/ganten.jpg</photo>
+      <txt>
+        Freie Software ist das stabile Fundament unserer Unternehmenslösungen,
+        die FSFE leistet einen wichtigen Beitrag zur Sicherung dieses
+        Fundaments. Deswegen unterstützen wir die FSFE.
+      </txt>
+      <author>Peter Ganten - Univention</author>
+    </quote>
+  </quotes>
 </textset>

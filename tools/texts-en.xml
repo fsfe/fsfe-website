@@ -39,13 +39,16 @@
   </text>
   
   <text id="source">Source code</text>
-  <text id="contact">Contact us</text>
+  <text id="contact-us">Contact us</text>
   <text id="translate">Translate this page?</text>
   <text id="imprint">Imprint</text>
   
   <!-- Info box -->
   <text id="under-construction">
     <strong>Warning: </strong>This page is under construction. Please <strong>do not spread</strong> or attempt translation as its content is subject to change.
+  </text>
+  <text id="project-complete">
+	  This project has been successfully finished. These pages are kept here for archiving purposes.
   </text>
   
   <text id="search">Search</text>
@@ -128,13 +131,79 @@
   <text id="weekdays-abbreviated/6">Sat</text>
   <text id="weekdays-abbreviated/7">Sun</text>
   
-  <text id="statement1">Free Software Foundation Europe is a non-profit organisation dedicated to the furthering of </text>
+  <text id="statement1">Free Software Foundation Europe is a non-profit
+	organisation dedicated to promoting </text>
   <text id="statement-fs">Free Software</text>
-  <text id="statement2">, and works to promote freedom in emerging digital society</text>
+  <text id="statement2">, working to build a free digital society</text>
   
   <text id="learn-more">Learn more</text>
 
   <text id="press">Press</text>
   <text id="newsletter">Newsletter</text>
+	
+	
+	<!-- These used to be in /tools/texts-content-**.xml -->
+	<text id="news">News</text>
+  <text id="receive-newsletter">Subscribe to FSFE's monthly newsletter</text>
+  <text id="events">Events</text>
+  <text id="more">More</text>
+  <text id="morenews">More news…</text>
+  <text id="moreevents">More events…</text>
+  
+  <text id="email">Email</text>
+  <text id="email-placeholder">email address</text>
+  <text id="phone">Phone</text>
+  <text id="fax">fax</text>
+  <text id="contact">Contact</text>
+  
+  <text id="team">Team</text>
+  <text id="microblog">Microblog</text>
+  
+  <text id="donate">Donate</text>
+
+  <!-- Campaign box on front-page, translated texts -->
+  <text id="cb-restricted-boot">"Secure Boot": Who will control your next computer?</text>
+  <text id="cb-restricted-boot-link">We or device manufacturers?</text>
+
+  <text id="cb-valentine">On February 14th: </text>
+  <text id="cb-valentine-link">Show your love to Free Software!</text>
+  <!-- end of texts for the campaign box -->
+
+  <text id="join">Join</text>
+  <text id="ourwork2011">Our work in 2011</text>
+  <text id="support">Support the FSFE</text>
+  
+  <text id="subscribe">Subscribe</text>
+
+  <!-- alt text for missing avatars -->
+  <text id="no-avatar">No Picture</text>
+  
+  <!-- petitions -->
+  <text id="osig">Organisations</text>
+  <text id="isig">Individuals</text>
+  <text id="bsig">Businesses</text>
+  
+  
+  <!-- quotes to be displayed in a rotating box -->
+  <quotes>
+    <quote id="wiesemann" tag="donors" pos="1">
+      <photo>/donate/wiesemann.jpg</photo>
+      <txt>
+        A virtual world without Free Software is like a city in which you are
+        obliged to have a usage license for every pavement. We also need
+        commons in the virtual world.
+      </txt>
+      <author>Reinhard Wiesemann - Linuxhotel</author>
+    </quote>
+    <quote id="ganten" tag="donors" pos="2">
+      <photo>/donate/ganten.jpg</photo>
+      <txt>
+        Free Software is the solid grounding of our enterprise
+        solutions. The FSFE provides an important contribution to secure this
+        grounding, therefore we support the FSFE.
+      </txt>
+      <author>Peter Ganten - Univention</author>
+    </quote>
+  </quotes>
   
 </textset>

@@ -2,9 +2,7 @@
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:import href="feeds.xsl" />
-    <xsl:output method="xml"
-                encoding="UTF-8"
-                indent="yes" />
+    <xsl:output method="xml" encoding="UTF-8" indent="yes" />
     
     <!-- displays list of people for a given country (or a given team, i.e. "main") -->
     <xsl:template name="country-people-list">
@@ -17,11 +15,11 @@
         
         <xsl:element name="ul">
             <xsl:attribute name="class">people</xsl:attribute>
-            <xsl:for-each select="/html/set/person[
+            <xsl:for-each select="/buildinfo/document/set/person[
                                     contains(@teams, $commateam) or
-				                    contains(@teams, $teamcomma) or
-				                    @teams=$team or
-				                    $team='']"> 
+                                    contains(@teams, $teamcomma) or
+                                    @teams=$team or
+                                    $team='']"> 
                 
                 <xsl:sort select="@id" />
                 <xsl:variable name="id"
@@ -107,13 +105,13 @@
                             <xsl:variable name="function">
                                 <xsl:value-of select="." />
                             </xsl:variable>
-                            <xsl:apply-templates select="/html/set/function[@id=$function]/node()" />
+                            <xsl:apply-templates select="/buildinfo/document/set/function[@id=$function]/node()" />
                             <xsl:if test="@country != ''">
                                 <xsl:text> </xsl:text>
                                 <xsl:variable name="country">
                                     <xsl:value-of select="@country" />
                                 </xsl:variable>
-                                <xsl:value-of select="/html/set/country[@id=$country]" />
+                                <xsl:value-of select="/buildinfo/document/set/country[@id=$country]" />
                             </xsl:if>
                             <xsl:if test="@project != ''">
                                 <xsl:text> </xsl:text>
@@ -122,9 +120,9 @@
                                 </xsl:variable>
                                 <xsl:element name="a">
                                     <xsl:attribute name="href">
-                                        <xsl:value-of select="/html/set/project[@id=$project]/link" />
+                                        <xsl:value-of select="/buildinfo/document/set/project[@id=$project]/link" />
                                     </xsl:attribute>
-                                    <xsl:value-of select="/html/set/project[@id=$project]/title" />
+                                    <xsl:value-of select="/buildinfo/document/set/project[@id=$project]/title" />
                                 </xsl:element>
                             </xsl:if>
                             <xsl:if test="@volunteers != ''">
@@ -132,7 +130,7 @@
                                 <xsl:variable name="volunteers">
                                     <xsl:value-of select="@volunteers" />
                                 </xsl:variable>
-                                <xsl:apply-templates select="/html/set/volunteers[@id=$volunteers]/node()" />
+                                <xsl:apply-templates select="/buildinfo/document/set/volunteers[@id=$volunteers]/node()" />
                             </xsl:if>
                         </xsl:for-each>
                     </xsl:element>
@@ -143,13 +141,20 @@
     
     
     <xsl:template name="country-list">
-        <select id="country" name="country">
-            <xsl:for-each select="/html/set/country">
-                <xsl:sort select="." lang="{/html/@lang}" />
-                <option><xsl:value-of select="." /></option>
-            </xsl:for-each>
-        </select>
+			
+			<select id="country" name="country">
+				
+				<xsl:for-each select="/buildinfo/document/set/country">
+					<xsl:sort select="." lang="en" />
+					
+					<option><xsl:value-of select="." /></option>
+					
+				</xsl:for-each>
+				
+			</select>
+			
     </xsl:template>
     
+    <!-- please note that there is also a country list ordered by continent (Europe or not) in static-elements.xsl -->
     
 </xsl:stylesheet>

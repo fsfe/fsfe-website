@@ -11,7 +11,7 @@
   <text id="translator3c">.</text>
   <text id="permission">
     Selle artikli sõnasõnaline kopeerimine ning levitamine on lubatud
-		mistahes kujul, tingimusel, et käesolev teade säilitatakse.
+		mistahes kujul tingimusel, et käesolev teade säilitatakse.
   </text>
   <text id="webmaster">
     Lehel esinevate probleemide korral saada e-kiri aadressile
@@ -71,6 +71,7 @@
   <text id="fsfe/lists">Meililistid</text>
   <text id="fsfe/press">Press</text>
   <text id="fsfe/thankgnus">Toetajad</text>
+  <text id="support/support">Avalda toetust</text>
   <text id="fellowship/fellowship">Ühine</text>
   <text id="fellowship/card">Kaart</text>
   <text id="fellowship/communicate">Kontakt</text>
@@ -123,8 +124,37 @@
   
   <text id="statement1">Euroopa Vaba Tarkvara Fond on vabaühendus, mis on pühendunud </text>
   <text id="statement-fs">vaba tarkvara</text>
-	<text id="statement2"> edendamisele, ning töötab selleks, et toetada
-	vabadust arenevas digitaalses ühiskonnas</text>
+	<text id="statement2"> edendamisele ning töötab arenevas digitaalses
+	ühiskonnas vabaduse kindlustamise nimel</text>
   
   <text id="learn-more">Loe lisa</text>
+  
+  <text id="news">Uudised</text>
+  <text id="receive-newsletter">Telli FSFE igakuine uudiskiri</text>
+  <text id="events">Üritused</text>
+  <text id="more">Rohkem</text>
+  <text id="morenews">Rohkem uudiseid…</text>
+  <text id="moreevents">Rohkem üritusi…</text>
+  
+  <text id="email">E-post</text>
+  <text id="email-placeholder">meiliaadress</text>
+  <text id="phone">Telefon</text>
+  <text id="fax">faks</text>
+  
+  <text id="team">Tiim</text>
+  <text id="microblog">Mikroblogi</text>
+  
+  <text id="donate">Anneta</text>
+  
+  <!-- Campaign box on front-page, translated texts -->
+  <text id="cb-restricted-boot">"Turvaline alglaadimine": Kes kontrollib su järgmist arvutit? </text>
+  <text id="cb-restricted-boot-link">Sina või tootja?</text>
+  <!-- end of texts for the campaign box -->
+  
+  <text id="join">Liitu</text>
+  <text id="support">Avalda toetust</text>  
+  
+  <text id="subscribe">Telli</text>
+  <!-- alt text for missing avatars -->
+  <text id="no-avatar">Pilt puudub</text>
 </textset>

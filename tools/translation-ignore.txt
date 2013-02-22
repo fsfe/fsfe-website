@@ -9,9 +9,9 @@
  contribute/designers/styleguide
  contribute/contribute-test
  fellowship/
- projects/map/
+ activities/map/
  freesoftware
- projects/ftf/tickets/
+ activities/ftf/tickets/
 #
 # Internal pages
 #
@@ -32,8 +32,8 @@
  about/people/people.en.xml
  donate/donors/donors
  documents/whyfs-companies
- projects/wipo/wiwo-sig
- projects/swpat/memorandum.en.xml
+ activities/wipo/wiwo-sig
+ campaigns/swpat/memorandum.en.xml
 #
 # T-shirt sizes
 #
@@ -59,6 +59,8 @@
  news/2007
  news/2008
  news/2009
+ news/2010
+ news/2011
 #
 # Old news-releated articles
 #
@@ -67,7 +69,7 @@
 # Newsletters (FSFE newsletter and Tux&GNU@school column)
 #
  news/nl
- projects/education/tgs/tagatschool
+ activities/education/tgs/tagatschool
 #
 # Old events
 #
@@ -77,18 +79,20 @@
  events/2007
  events/2008
  events/2009
+ events/2010
+ events/2011
 #
 # Historic projects
 #
- projects/agnula
- projects/bgw
- projects/eucd
- projects/fp6
- projects/gplv3
- projects/mankind
- projects/ms-vs-eu
- projects/self
- projects/wsis
+ campaigns/agnula
+ campaigns/bgw
+ campaigns/eucd
+ activities/policy/fp6
+ campaigns/gplv3
+ campaigns/mankind
+ activities/ms-vs-eu
+ campaigns/self
+ campaigns/wsis
  documents/fp6
 #
 # Stuff not really important for other languages
@@ -100,6 +104,14 @@
  donate/germany
  donate/netherlands
  donate/switzerland
+ at
+ de
+ es
+ fi
+ fr
+ it
+ se
+ uk
 #
 # The boilerplate
 #

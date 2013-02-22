@@ -1,54 +1,201 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <textset>
+  <!-- Footer -->
   <text id="lastchanged"> Ndryshuar së fundmi: </text>
   <text id="translator1a">Falënderojmë </text>
-  <text id="translator1b"> për këtë përkthim jozyrtar. </text>
-  <text id="translator2">This is an unofficial translation. </text>
-  <text id="translator3a">Ju lutemi referojuni </text>
-  <text id="translator3b">tekstit origjinal</text>
-  <text id="translator3c"> për versionin zyrtar të kësaj faqeje.</text>
+  <text id="translator1b"> për këtë përkthim. </text>
+  <text id="translator2">Ky është një përkthim jozyrtar. </text>
+  <text id="translator3a">Ju lutemi, shihni edhe </text>
+  <text id="translator3b">tekstin origjinal</text>
+  <text id="translator3c"> të kësaj faqeje.</text>
   <text id="permission">
     Lejohet kopjimi fjalë për fjalë dhe shpërndarja e tërë këtij artikulli
     në çfarëdo media, me kusht që të ruhet ky shënim.
   </text>
   <text id="webmaster">
-    Ju lutem raportoni probleme me këtë faqe te
+    Ju lutemi, problemet me këtë faqe raportojini te
     <em>webmaster at fsfeurope.org</em>.
   </text>
+  <text id="fsfnetwork">
+    FSFE-ja ka <a href="/about/fsfnetwork.html">organizma simotër</a> në <a
+      href="http://www.fsf.org/">Amerikën e Veriut</a>, <a
+      href="http://www.fsf.org.in/">Indi</a> dhe <a
+      href="http://www.fsfla.org/">Amerikë Latine</a>.
+  </text>
+  <text id="creative-commons-license">leje Creative Commons</text>
   <text id="outdated">
     <strong>Kujdes: </strong>
-    Kjo faqe mund të jetë e vjetëruar në krahasim me origjinalin. Ju lutemi përdorni
-    <a href="/contribute/contribute.html">këtë faqe</a> për të parë se si mund të ndihmoni
+    Kjo faqe mund të jetë e vjetruar në krahasim me origjinalin. Ju lutemi, përdorni
+    <a href="/contribute/contribute.html">këtë faqe</a> që të shihni se si mund të ndihmoni
     te përkthimet, dhe anë të tjera.
   </text>
   <text id="notranslation">
     <strong>Kujdes: </strong>
     Kjo faqe nuk është përkthyer ende. Ajo që po shihni më poshtë
-    është versioni origjinal i faqes. Ju lutemi përdorni
-    <a href="/contribute/contribute.html">këtë faqe</a> për të parë se si mund të ndihmoni
+    është versioni origjinal i faqes. Ju lutemi, përdorni
+    <a href="/contribute/contribute.html">këtë faqe</a> që të shihni se si mund të ndihmoni
     te përkthimet, dhe anë të tjera.
   </text>
   
-  <text id="search">Search</text>
-  <text id="submit">Submit</text>
-  <text id="language">Language</text>
+  <text id="source">Kod burim</text>
+  <text id="contact-us">Lidhuni me ne</text>
+  <text id="translate">Doni të përktheni këtë faqe?</text>
+  <text id="imprint">Imprint</text>
   
+  <!-- Info box -->
+  <text id="under-construction">
+    <strong>Kujdes: </strong>Kjo faqe është në ndërtim e sipër. Ju lutemi, <strong>mos e përhapni</strong> ose mos provoni ende ta përktheni, meqë për lëndën e saj priten ndryshime.
+  </text>
+  <text id="project-complete">
+	  Ky projekt është përfunduar me sukses. Këto faqe mbahen këtu vetëm për qëllimi arkivimi.
+  </text>
+  
+  <text id="search">Kërkoni</text>
+  <text id="submit">Pajtohuni</text>
+
+  <text id="language">Gjuhë</text>
+
+ <!-- Article metadata -->
+ <text id="author">Autor</text>
+ <text id="writtenby">Shkruar&#160;nga</text>
+ <text id="published">më</text>
+ <text id="revision">përditësuar&#160;më</text>
+ <text id="download">Shkarkojeni</text>
+ 
+  <!-- Conjunctions -->
+  <text id="to">to</text>
+
+  <!-- Menu -->
   <text id="fsfe/about">Rreth</text>
-  <text id="fsfe/projects">Projekte</text>
-  <text id="fsfe/documents">Dokumenta</text>
-  <text id="fsfe/help">Hidhuni Në Veprim</text>
+  <text id="fsfe/projects">Puna jonë</text>
+  <text id="fsfe/campaigns">Fushata</text>
+  <text id="fsfe/documents">Dokumente</text>
+  <text id="fsfe/help">Kontribuoni</text>
   <text id="fsfe/donate">Dhuroni</text>
-  <text id="fsfe/order">Porosisni</text>
+  <text id="fsfe/order">Blini</text>
   <text id="fsfe/lists">Lista Postimesh</text>
-  <text id="fsfe/thankgnus">Thank GNUs</text>
-  <text id="fellowship/priority">Priority Links</text>
-  <text id="menu3/priority/com-pkg">Commercial Services</text>
-  <text id="fellowship/priority/fellowship">Fellowship</text>
-  <text id="fellowship/priority/ftf">Freedom Task Force</text>
-  <text id="fellowship/priority/os">Open Standards</text>
-  <text id="menu3/sisters">Our sister organisations</text>
-  <text id="menu3/sisters/fsf">FSF</text>
-  <text id="menu3/sisters/fsf_india">FSF India</text>
-  <text id="menu3/sisters/fsf_la">FSF Latin America</text>
+  <text id="fsfe/press">Për Shtypin</text>
+  <text id="fsfe/thankgnus">Dhurues</text>
+  <text id="support/support">Përkrahje</text>
+  <text id="fellowship/fellowship">Bëhuni pjesë</text>
+  <text id="fellowship/card">Kartë</text>
+  <text id="fellowship/communicate">Komunikoni</text>
+  <text id="fellowship/get-active">Bëhuni aktiv</text>
+  <text id="fellowship/faq">F.A.Q.</text>
+  <text id="fellowship/contact">Kontakte</text>
+  <text id="planet/planet">Planet</text>
+  <text id="planet/blogs">Blogje</text>
+  <text id="wiki/wiki">Wiki</text>
+
+  <!-- Date time -->
+  <text id="months/1">Janar</text>
+  <text id="months/2">Shkurt</text>
+  <text id="months/3">Mars</text>
+  <text id="months/4">Prill</text>
+  <text id="months/5">Maj</text>
+  <text id="months/6">Qershor</text>
+  <text id="months/7">Korrik</text>
+  <text id="months/8">Gusht</text>
+  <text id="months/9">Shtator</text>
+  <text id="months/10">Tetor</text>
+  <text id="months/11">Nëntor</text>
+  <text id="months/12">Dhjetor</text>
+ 
+  <text id="months-abbreviated/1">Jan</text>
+  <text id="months-abbreviated/2">Shk</text>
+  <text id="months-abbreviated/3">Mar</text>
+  <text id="months-abbreviated/4">Pri</text>
+  <text id="months-abbreviated/5">Maj</text>
+  <text id="months-abbreviated/6">Qer</text>
+  <text id="months-abbreviated/7">Kor</text>
+  <text id="months-abbreviated/8">Gus</text>
+  <text id="months-abbreviated/9">Sht</text>
+  <text id="months-abbreviated/10">Tet</text>
+  <text id="months-abbreviated/11">Nën</text>
+  <text id="months-abbreviated/12">Dhj</text>
+
+  <text id="weekdays/1">E hënë</text>
+  <text id="weekdays/2">E martë</text>
+  <text id="weekdays/3">E mërkurë</text>
+  <text id="weekdays/4">E enjte</text>
+  <text id="weekdays/5">E premte</text>
+  <text id="weekdays/6">E shtunë</text>
+  <text id="weekdays/7">E dielë</text>
+
+  <text id="weekdays-abbreviated/1">Hën</text>
+  <text id="weekdays-abbreviated/2">Mar</text>
+  <text id="weekdays-abbreviated/3">Mër</text>
+  <text id="weekdays-abbreviated/4">Enj</text>
+  <text id="weekdays-abbreviated/5">Pre</text>
+  <text id="weekdays-abbreviated/6">Sht</text>
+  <text id="weekdays-abbreviated/7">Die</text>
+  
+  <text id="statement1">Free Software Foundation Europe është një organizëm jofitimprurës i përkushtuar shpënies përpara të </text>
+  <text id="statement-fs">Software-it të Lirë</text>
+  <text id="statement2">, dhe punon që të ndërtojë një shoqërinë dixhitale të lirë</text>
+  
+  <text id="learn-more">Mësoni më tepër</text>
+
+  <text id="press">Për Shtypin</text>
+  <text id="newsletter">Buletin</text>
+  
+  <text id="news">Lajme</text>
+  <text id="receive-newsletter">Pajtohuni te buletini mujor i FSFE-së</text>
+  <text id="events">Veprimtari</text>
+  <text id="more">Më Tepër</text>
+  <text id="morenews">Më tepër lajme…</text>
+  <text id="moreevents">Më tepër veprimtari…</text>
+  
+  <text id="email">Email</text>
+  <text id="email-placeholder">adresë email</text>
+  <text id="phone">Telefon</text>
+  <text id="fax">faks</text>
+  <text id="contact">Kontakt</text>
+  
+  <text id="team">Ekip</text>
+  <text id="microblog">Mikroblog</text>
+  
+  <text id="donate">Dhuroni</text>
+
+  <!-- Campaign box on front-page, translated texts -->
+  <text id="cb-restricted-boot">"Nisje e Sigurt": Kush do ta kontrollojë kompjuterin tuaj të ardhshëm?</text>
+  <text id="cb-restricted-boot-link">Ne apo prodhuesit e pajisjeve?</text>
+
+  <text id="cb-valentine">Më 14 Shkurt: </text>
+  <text id="cb-valentine-link">Shpaloseni dashurinë tuaj për Software-in e Lirë!</text>
+  <!-- end of texts for the campaign box -->
+
+  <text id="join">Bëhuni pjesë</text>
+  <text id="ourwork2011">Puna jonë më 2011</text>
+  <text id="support">Përkrahni FSFE-në</text>
+  
+  <text id="subscribe">Pajtohuni</text>
+
+  <!-- alt text for missing avatars -->
+  <text id="no-avatar">Pa Figurë</text>
+  
+  
+  <!-- quotes to be displayed in a rotating box -->
+  <quotes>
+    <quote id="wiesemann" tag="donors" pos="1">
+      <photo>/donate/wiesemann.jpg</photo>
+      <txt>
+        Një botë virtuale pa Software të Lirë është si një qytet në të cilin
+        jeni të detyruar të paguani leje përdorimi për çdo kalldrëm. Edhe në botën
+        virtuale kemi nevojë për gjëra të përbashkëta.
+      </txt>
+      <author>Reinhard Wiesemann - Linuxhotel</author>
+    </quote>
+    <quote id="ganten" tag="donors" pos="2">
+      <photo>/donate/ganten.jpg</photo>
+      <txt>
+        Software-i i Lirë përbën themelin e qëndrueshëm të zgjidhjeve që ofrojmë
+        për ndërmarrje. FSFE-ja furnizon kontribut të rëndësishëm për ta bërë
+        të sigurt këtë themel, ndaj e përkrahim FSFE-në.
+      </txt>
+      <author>Peter Ganten - Univention</author>
+    </quote>
+  </quotes>
+  
 </textset>

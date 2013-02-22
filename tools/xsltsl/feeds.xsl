@@ -5,7 +5,7 @@
                 exclude-result-prefixes="dt">
 
   <xsl:import href="translations.xsl" />
-
+  <xsl:import href="static-elements.xsl" />
   <xsl:output method="xml" encoding="utf-8" indent="yes" />
     
   <!-- define content type templates-->
@@ -62,7 +62,12 @@
           <xsl:attribute name="class">entry</xsl:attribute>
           
           <!-- title -->
-          <h3><xsl:copy-of select="$title" /></h3>
+          <h3>
+            <xsl:call-template name="generate-id-attribute">
+              <xsl:with-param name="title" select="title" />
+            </xsl:call-template>
+            <xsl:copy-of select="$title" />
+          </h3>
           
           <!-- news date -->
           <xsl:if test="$show-date = 'yes'">
@@ -150,7 +155,10 @@
     <!-- Before the first event, include the header -->
     <xsl:if test="position() = 1 and $header != ''">
       <h2>
-        <xsl:value-of select="/html/text [@id = $header]" />
+        <xsl:call-template name="generate-id-attribute">
+          <xsl:with-param name="title" select="/buildinfo/document/text[@id = $header]" />
+        </xsl:call-template>
+        <xsl:value-of select="/buildinfo/document/text[@id = $header]" />
       </h2>
     </xsl:if>
     
@@ -175,27 +183,26 @@
       </xsl:if>
  
       <!-- event title with or without link -->
-      <xsl:choose>
-        <xsl:when test="$link != ''">
-          <h3>
-            <a href="{link}">
-              <xsl:value-of select="title" />
-            </a>
-          </h3>
-        </xsl:when>
-        <xsl:when test="$page != ''">
-          <h3>
-            <a href="{page}">
-              <xsl:value-of select="title" />
-            </a>
-          </h3>
-        </xsl:when>
-        <xsl:otherwise>
-          <h3>
-            <xsl:value-of select="title" />
-          </h3>
-        </xsl:otherwise>
-      </xsl:choose>
+      <h3>
+				<xsl:call-template name="generate-id-attribute">
+					<xsl:with-param name="title" select="title" />
+				</xsl:call-template>
+				<xsl:choose>
+					<xsl:when test="$link != ''">
+						<a href="{link}">
+							<xsl:value-of select="title" />
+						</a>
+					</xsl:when>
+					<xsl:when test="$page != ''">
+						<a href="{page}">
+							<xsl:value-of select="title" />
+						</a>
+					</xsl:when>
+					<xsl:otherwise>
+						<xsl:value-of select="title" />
+					</xsl:otherwise>
+				</xsl:choose>
+			</h3>
      
       <!-- event date -->
       <xsl:choose>
@@ -203,7 +210,9 @@
           <p class="date">
             <xsl:value-of select="$start_day" />
             <xsl:text> </xsl:text>
-            <xsl:value-of select="$start_month" />
+            <xsl:if test="$start_month != $end_month">
+              <xsl:value-of select="$start_month" />
+            </xsl:if>
             <xsl:text> to </xsl:text> 
             <xsl:value-of select="$end_day" />
             <xsl:text> </xsl:text>

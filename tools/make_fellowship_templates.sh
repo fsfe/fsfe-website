@@ -13,7 +13,7 @@ if [ -z "$1" ] ; then
   echo "You must supply a DEST directory"
   exit 1
 else
-  FELLDIR=$1/fellowship
+  FELLDIR=$1/global/fellowship
 fi
 
 # Directory where the template files are expected by the AMS

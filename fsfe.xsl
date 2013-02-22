@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:dt="http://xsltsl.org/date-time"
+  exclude-result-prefixes="dt"
+  xmlns:str="http://exslt.org/strings"
+  extension-element-prefixes="str">
 
   <xsl:import href="tools/xsltsl/translations.xsl" />
   <xsl:import href="tools/xsltsl/static-elements.xsl" />
@@ -13,8 +17,8 @@
   </xsl:variable>
   
   <!-- The top level element of the input file is "buildinfo" -->
-  <xsl:template match="buildinfo">
-    <xsl:apply-templates select="node()"/>
+  <xsl:template match="/">
+    <xsl:apply-templates select="buildinfo/document"/>
   </xsl:template>
 
   <!-- The actual HTML tree is in "buildinfo/document" -->
@@ -26,138 +30,146 @@
       <xsl:if test="/buildinfo/@language='ar'">
         <xsl:attribute name="dir">rtl</xsl:attribute>
       </xsl:if>
-      <xsl:apply-templates select="node()"/>
+      <!--<xsl:apply-templates select="node()"/>-->
+      <xsl:apply-templates select="head" />
+      <xsl:call-template name="fsfe-body" />
     </xsl:element>
   </xsl:template>
-
+  
+  
   <!-- HTML head -->
   <xsl:template match="head">
-    <xsl:copy>
-      
-      <!-- Don't let search engine robots index untranslated pages -->
-      <xsl:element name="meta">
-        <xsl:attribute name="name">robots</xsl:attribute>
-        <xsl:attribute name="content">
-          <xsl:choose>
-            <xsl:when test="/buildinfo/@language=/buildinfo/document/@language">index, follow</xsl:when>
-            <xsl:otherwise>noindex</xsl:otherwise>
-          </xsl:choose>
-        </xsl:attribute>
-      </xsl:element>
+    <head>
+      <xsl:call-template name="fsfe-head" />
+    </head>
+  </xsl:template>
+  
+  
+  <xsl:template name="fsfe-head">
+    
+    <!-- Don't let search engine robots index untranslated pages -->
+    <xsl:element name="meta">
+      <xsl:attribute name="name">robots</xsl:attribute>
+      <xsl:attribute name="content">
+        <xsl:choose>
+          <xsl:when test="/buildinfo/@language=/buildinfo/document/@language">index, follow</xsl:when>
+          <xsl:otherwise>noindex</xsl:otherwise>
+        </xsl:choose>
+      </xsl:attribute>
+    </xsl:element>
 
-      <!-- For pages used on external web servers, load the CSS from absolute URL -->
-      <xsl:variable name="urlprefix"><xsl:if test="/buildinfo/document/@external">https://www.fsfe.org</xsl:if></xsl:variable>
-      
+    <!-- For pages used on external web servers, load the CSS from absolute URL -->
+    <xsl:variable name="urlprefix"><xsl:if test="/buildinfo/document/@external">https://fsfe.org</xsl:if></xsl:variable>
+    
+    <xsl:element name="link">
+      <xsl:attribute name="rel">stylesheet</xsl:attribute>
+      <xsl:attribute name="media">all</xsl:attribute>
+      <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/generic.css</xsl:attribute>
+      <xsl:attribute name="type">text/css</xsl:attribute>
+    </xsl:element>
+    
+    <xsl:if test="$mode = 'valentine'">
       <xsl:element name="link">
         <xsl:attribute name="rel">stylesheet</xsl:attribute>
         <xsl:attribute name="media">all</xsl:attribute>
-        <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/generic.css</xsl:attribute>
+        <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/genericv.css</xsl:attribute>
         <xsl:attribute name="type">text/css</xsl:attribute>
       </xsl:element>
-      
-      <xsl:if test="$mode = 'valentine'">
-        <xsl:element name="link">
-          <xsl:attribute name="rel">stylesheet</xsl:attribute>
-          <xsl:attribute name="media">all</xsl:attribute>
-          <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/genericv.css</xsl:attribute>
-          <xsl:attribute name="type">text/css</xsl:attribute>
-        </xsl:element>
-      </xsl:if>
-      
+    </xsl:if>
+    
+    <xsl:element name="link">
+      <xsl:attribute name="rel">stylesheet</xsl:attribute>
+      <xsl:attribute name="media">print</xsl:attribute>
+      <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/print.css</xsl:attribute>
+      <xsl:attribute name="type">text/css</xsl:attribute>
+    </xsl:element>
+    
+    <xsl:if test="/buildinfo/@language='ar'">
       <xsl:element name="link">
         <xsl:attribute name="rel">stylesheet</xsl:attribute>
-        <xsl:attribute name="media">print</xsl:attribute>
-        <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/print.css</xsl:attribute>
+        <xsl:attribute name="media">all</xsl:attribute>
+        <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/rtl.css</xsl:attribute>
         <xsl:attribute name="type">text/css</xsl:attribute>
       </xsl:element>
-      
-      <xsl:if test="/buildinfo/@language='ar'">
-        <xsl:element name="link">
-          <xsl:attribute name="rel">stylesheet</xsl:attribute>
-          <xsl:attribute name="media">all</xsl:attribute>
-          <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/rtl.css</xsl:attribute>
-          <xsl:attribute name="type">text/css</xsl:attribute>
-        </xsl:element>
-      </xsl:if>
-      
+    </xsl:if>
+    
+    <xsl:element name="link">
+      <xsl:attribute name="rel">icon</xsl:attribute>
+      <xsl:attribute name="href">
+        <xsl:value-of select="$urlprefix"/>
+        <xsl:choose>
+          <xsl:when test="$mode = 'valentine'">/graphics/fsfev.png</xsl:when>
+          <xsl:otherwise>/graphics/fsfe.ico</xsl:otherwise>
+        </xsl:choose>
+      </xsl:attribute>
+      <xsl:attribute name="type">image/x-icon</xsl:attribute>
+    </xsl:element>
+    
+    <xsl:element name="link">
+      <xsl:attribute name="rel">alternate</xsl:attribute>
+      <xsl:attribute name="title">FSFE <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'menu1/news'" /></xsl:call-template></xsl:attribute>
+      <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/news/news.<xsl:value-of select="/buildinfo/@language"/>.rss</xsl:attribute>
+      <xsl:attribute name="type">application/rss+xml</xsl:attribute>
+    </xsl:element>
+    
+    <xsl:element name="link">
+      <xsl:attribute name="rel">alternate</xsl:attribute>
+      <xsl:attribute name="title">FSFE <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'menu1/events'" /></xsl:call-template></xsl:attribute>
+      <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/events/events.<xsl:value-of select="/buildinfo/@language"/>.rss</xsl:attribute>
+      <xsl:attribute name="type">application/rss+xml</xsl:attribute>
+    </xsl:element>
+
+    <xsl:for-each select="/buildinfo/trlist/tr">
+      <xsl:sort select="@id"/>
       <xsl:element name="link">
-        <xsl:attribute name="rel">icon</xsl:attribute>
-        <xsl:attribute name="href">
-          <xsl:value-of select="$urlprefix"/>
+        <xsl:attribute name="type">text/html</xsl:attribute>
+        <xsl:attribute name="rel">alternate</xsl:attribute>
+        <xsl:attribute name="hreflang"><xsl:value-of select="@id" /></xsl:attribute>
+        <xsl:attribute name="lang"><xsl:value-of select="@id" /></xsl:attribute>
+        <xsl:attribute name="href"><xsl:value-of select="/buildinfo/@filename"/>.<xsl:value-of select="@id"/>.html</xsl:attribute>
+        <xsl:attribute name="title"><xsl:value-of select="."  disable-output-escaping="yes" /></xsl:attribute>
+      </xsl:element>
+    </xsl:for-each>
+    
+    <xsl:for-each select="/buildinfo/document/author">
+      <xsl:variable name="id">
+        <xsl:value-of select="@id" />
+      </xsl:variable>
+      <xsl:element name="meta">
+        <xsl:attribute name="name">author</xsl:attribute>
+        <xsl:attribute name="content">
           <xsl:choose>
-            <xsl:when test="$mode = 'valentine'">/graphics/fsfev.png</xsl:when>
-            <xsl:otherwise>/graphics/fsfe.ico</xsl:otherwise>
+            <xsl:when test="@id and document('about/people/people.en.xml')/personset/person[@id=$id]">
+              <xsl:value-of select="document('about/people/people.en.xml')/personset/person[@id=$id]/name" />
+            </xsl:when>
+            <xsl:otherwise>
+              <xsl:value-of select="name" />
+            </xsl:otherwise>
           </xsl:choose>
         </xsl:attribute>
-        <xsl:attribute name="type">image/x-icon</xsl:attribute>
       </xsl:element>
-      
-      <xsl:element name="link">
-        <xsl:attribute name="rel">alternate</xsl:attribute>
-        <xsl:attribute name="title">FSFE <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'menu1/news'" /></xsl:call-template></xsl:attribute>
-        <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/news/news.<xsl:value-of select="/buildinfo/@language"/>.rss</xsl:attribute>
-        <xsl:attribute name="type">application/rss+xml</xsl:attribute>
-      </xsl:element>
-      
-      <xsl:element name="link">
-        <xsl:attribute name="rel">alternate</xsl:attribute>
-        <xsl:attribute name="title">FSFE <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'menu1/events'" /></xsl:call-template></xsl:attribute>
-        <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/events/events.<xsl:value-of select="/buildinfo/@language"/>.rss</xsl:attribute>
-        <xsl:attribute name="type">application/rss+xml</xsl:attribute>
-      </xsl:element>
+    </xsl:for-each>
+    
+    <script src="/scripts/jquery.js"></script>
+    <script src="/scripts/master.js"></script>
+    <script src="/scripts/placeholder.js"></script>
+    <script src="/scripts/highlight.pack.js"></script>
 
-      <xsl:for-each select="/buildinfo/trlist/tr">
-        <xsl:sort select="@id"/>
-        <xsl:element name="link">
-          <xsl:attribute name="type">text/html</xsl:attribute>
-          <xsl:attribute name="rel">alternate</xsl:attribute>
-          <xsl:attribute name="hreflang"><xsl:value-of select="@id" /></xsl:attribute>
-          <xsl:attribute name="lang"><xsl:value-of select="@id" /></xsl:attribute>
-          <xsl:attribute name="href"><xsl:value-of select="/buildinfo/@filename"/>.<xsl:value-of select="@id"/>.html</xsl:attribute>
-          <xsl:attribute name="title"><xsl:value-of select="."  disable-output-escaping="yes" /></xsl:attribute>
-        </xsl:element>
-      </xsl:for-each>
-      
-      <xsl:for-each select="/buildinfo/document/author">
-        <xsl:variable name="id">
-          <xsl:value-of select="@id" />
-        </xsl:variable>
-        <xsl:element name="meta">
-          <xsl:attribute name="name">author</xsl:attribute>
-          <xsl:attribute name="content">
-            <xsl:choose>
-              <xsl:when test="@id and document('about/people/people.en.xml')/personset/person[@id=$id]">
-                <xsl:value-of select="document('about/people/people.en.xml')/personset/person[@id=$id]/name" />
-              </xsl:when>
-              <xsl:otherwise>
-                <xsl:value-of select="name" />
-              </xsl:otherwise>
-            </xsl:choose>
-          </xsl:attribute>
-        </xsl:element>
-      </xsl:for-each>
-      
-      <script src="/scripts/jquery.js"></script>
-      <script src="/scripts/master.js"></script>
-      <script src="/scripts/placeholder.js"></script>
-      <script src="/scripts/highlight.pack.js"></script>
-
-      <script>
-        hljs.tabReplace = "  ";
+    <script>
+      hljs.tabReplace = "  ";
 //        hljs.initHighligtingOnLoad();
 // above line throws error: Uncaught TypeError: Object [object Object] has no method 'initHighligtingOnLoad'
-      </script>
-      
-      <xsl:comment>
-        <![CDATA[
-          [if lt IE 8]>
-            <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
-          <![endif]
-        ]]>
-      </xsl:comment>
-      
-      <xsl:apply-templates select="@*|node()"/>
-    </xsl:copy>
+    </script>
+    
+    <xsl:comment>
+      <![CDATA[
+        [if lt IE 8]>
+          <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
+        <![endif]
+      ]]>
+    </xsl:comment>
+    
+    <xsl:apply-templates select="@*|node()"/>
   </xsl:template>
   
   <!-- Modify H1 -->
@@ -190,7 +202,7 @@
       </xsl:element>
     </xsl:if>
     
-    <!-- auto generate ID for headings if doesn't already exist -->
+    <!-- auto generate ID for headings if it doesn't already exist -->
     <xsl:call-template name="generate-id" />
     
     <!-- Apply news page rules -->
@@ -379,37 +391,37 @@
   
   <!-- Modify H2 -->
   <xsl:template match="h2">
-    <!-- auto generate ID for headings if doesn't already exist -->
+    <!-- auto generate ID for headings if it doesn't already exist -->
     <xsl:call-template name="generate-id" />
   </xsl:template>
   
   <!-- Modify H3 -->
   <xsl:template match="h3">
-    <!-- auto generate ID for headings if doesn't already exist -->
+    <!-- auto generate ID for headings if it doesn't already exist -->
     <xsl:call-template name="generate-id" />
   </xsl:template>
   
   <!-- Modify H4 -->
   <xsl:template match="h4">
-    <!-- auto generate ID for headings if doesn't already exist -->
+    <!-- auto generate ID for headings if it doesn't already exist -->
     <xsl:call-template name="generate-id" />
   </xsl:template>
   
   <!-- Modify H4 -->
   <xsl:template match="h4">
-    <!-- auto generate ID for headings if doesn't already exist -->
+    <!-- auto generate ID for headings if it doesn't already exist -->
     <xsl:call-template name="generate-id" />
   </xsl:template>
   
   <!-- Modify H5 -->
   <xsl:template match="h5">
-    <!-- auto generate ID for headings if doesn't already exist -->
+    <!-- auto generate ID for headings if it doesn't already exist -->
     <xsl:call-template name="generate-id" />
   </xsl:template>
   
   <!-- Modify H6 -->
   <xsl:template match="h6">
-    <!-- auto generate ID for headings if doesn't already exist -->
+    <!-- auto generate ID for headings if it doesn't already exist -->
     <xsl:call-template name="generate-id" />
   </xsl:template>
 
@@ -429,9 +441,9 @@
   <!-- End apply support page rules -->
     
   <!-- HTML body -->
-  <xsl:template match="body">
-    <xsl:copy>
-
+  <!--<xsl:template match="body">-->
+  <xsl:template name="fsfe-body">
+    <body>
       <!-- For pages used on external web servers, use absolute URLs -->
       <xsl:variable name="urlprefix"><xsl:if test="/buildinfo/document/@external">https://fsfe.org</xsl:if></xsl:variable>
 
@@ -774,19 +786,19 @@
           <xsl:choose>
             <xsl:when test="@id=/buildinfo/@language">
               <xsl:element name="li">
-            <xsl:value-of select="." disable-output-escaping="yes"/>
+                <xsl:value-of select="." disable-output-escaping="yes"/>
               </xsl:element>
             </xsl:when>
             <xsl:otherwise>
               <xsl:element name="li">
-            <xsl:element name="a">
-              <xsl:attribute name="href"><xsl:value-of select="/buildinfo/@filename"/>.<xsl:value-of select="@id"/>.html</xsl:attribute>
-              <xsl:value-of select="." disable-output-escaping="yes"/>
-            </xsl:element>
+                <xsl:element name="a">
+                  <xsl:attribute name="href"><xsl:value-of select="/buildinfo/@filename"/>.<xsl:value-of select="@id"/>.html</xsl:attribute>
+                  <xsl:value-of select="." disable-output-escaping="yes"/>
+                </xsl:element>
               </xsl:element>
             </xsl:otherwise>
           </xsl:choose>
-          </xsl:for-each>
+        </xsl:for-each>
         </xsl:element><!-- end translations -->
         
       </xsl:element><!-- End sidebar -->
@@ -803,7 +815,7 @@
         <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'outdated'" /></xsl:call-template>
           </xsl:element>
         </xsl:if>
-	
+  
         <!-- Missing translation note -->
         <xsl:if test="/buildinfo/@language!=/buildinfo/document/@language">
           <xsl:element name="p">
@@ -811,29 +823,29 @@
         <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'notranslation'" /></xsl:call-template>
           </xsl:element>
         </xsl:if>
-	
+  
         <!-- Info box -->
-	<xsl:element name="div"> 
-		<xsl:attribute name="id">infobox</xsl:attribute>
-		<!-- Add under construction message -->
-		<xsl:if test = "/buildinfo/document/head/meta[@name='under-construction' and @content='true']">
-			<xsl:element name="p">
-				<xsl:attribute name="class">warning yellow</xsl:attribute>
-				<xsl:call-template name="fsfe-gettext">
-					<xsl:with-param name="id" select="'under-construction'" />
-				</xsl:call-template>
-			</xsl:element>
-		</xsl:if>
-		<!-- Add project completed message -->
-		<xsl:if test = "/buildinfo/document/head/meta[@name='project-complete' and @content='true']">
-			<xsl:element name="p">
-				<xsl:attribute name="class">warning green</xsl:attribute>
-				<xsl:call-template name="fsfe-gettext">
-					<xsl:with-param name="id" select="'project-complete'" />
-				</xsl:call-template>
-			</xsl:element>
-		</xsl:if>
-	</xsl:element>
+        <xsl:element name="div"> 
+          <xsl:attribute name="id">infobox</xsl:attribute>
+          <!-- Add under construction message -->
+          <xsl:if test = "/buildinfo/document/head/meta[@name='under-construction' and @content='true']">
+            <xsl:element name="p">
+              <xsl:attribute name="class">warning yellow</xsl:attribute>
+              <xsl:call-template name="fsfe-gettext">
+                <xsl:with-param name="id" select="'under-construction'" />
+              </xsl:call-template>
+            </xsl:element>
+          </xsl:if>
+          <!-- Add project completed message -->
+          <xsl:if test = "/buildinfo/document/head/meta[@name='project-complete' and @content='true']">
+            <xsl:element name="p">
+              <xsl:attribute name="class">warning green</xsl:attribute>
+              <xsl:call-template name="fsfe-gettext">
+                <xsl:with-param name="id" select="'project-complete'" />
+              </xsl:call-template>
+            </xsl:element>
+          </xsl:if>
+        </xsl:element>
         
         <!-- Fundraising box
           <xsl:element name="div">
@@ -881,7 +893,7 @@
         <!-- End Fundraising box -->
 
         <!-- Here goes the actual content of the <body> node of the input file -->
-        <xsl:apply-templates select="node()"/>
+        <xsl:apply-templates select="body | /buildinfo/document/event/body | /buildinfo/document/news/body" />
 
         <!-- Link to top -->
         <xsl:element name="p">
@@ -896,69 +908,67 @@
 
     </xsl:element><!--end wrapper-inner-->
     
-	<!-- licenses -->
-	
-	<xsl:if test = "/buildinfo/document/legal">
-	  <div id="legal">
-	   
-	    <p>
-              <xsl:choose> 
-                <xsl:when test = "/buildinfo/document/legal/license">	    
-	        <xsl:element name="a">
-	          <xsl:attribute name="href">
-	            <xsl:value-of select="/buildinfo/document/legal/license"/>
- 	          </xsl:attribute>
-	          <xsl:attribute name="rel">license</xsl:attribute>
-                    <xsl:if test ="/buildinfo/document/legal/@type='cc-license'">
-	                <xsl:element name="img">
-	                  <xsl:attribute name="src">/graphics/cc-logo.png</xsl:attribute>
-	                  <xsl:attribute name="alt">
-	                    <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'creative-commons-license'" /></xsl:call-template>
-	                  </xsl:attribute>
-	                </xsl:element>
-                    </xsl:if>
-                    <xsl:value-of select="/buildinfo/document/legal/notice"/>
-	        </xsl:element>
-	        </xsl:when>
-	        
-	        <xsl:otherwise>
+    <!-- licenses -->
+    
+    <xsl:if test = "/buildinfo/document/legal">
+      <div id="legal">
+        <p>
+          <xsl:choose> 
+            <xsl:when test = "/buildinfo/document/legal/license">      
+              <xsl:element name="a">
+                <xsl:attribute name="href">
+                  <xsl:value-of select="/buildinfo/document/legal/license"/>
+                </xsl:attribute>
+                <xsl:attribute name="rel">license</xsl:attribute>
+                  <xsl:if test ="/buildinfo/document/legal/@type='cc-license'">
+                    <xsl:element name="img">
+                      <xsl:attribute name="src">/graphics/cc-logo.png</xsl:attribute>
+                      <xsl:attribute name="alt">
+                        <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'creative-commons-license'" /></xsl:call-template>
+                      </xsl:attribute>
+                    </xsl:element>
+                  </xsl:if>
                   <xsl:value-of select="/buildinfo/document/legal/notice"/>
-	        </xsl:otherwise>
-	      </xsl:choose>
-            </p>  
-	    
- 	  </div>
-	</xsl:if>
-	
-	
-	<!--Depreciated: it's here only for "backward compatibility"  cc license way-->
-	<xsl:if test = "string(/buildinfo/document/head/meta[@name='cc-license']/@content)">
-	<xsl:element name="div">		
-		<xsl:attribute name="id">cc-licenses</xsl:attribute>
-		
-		<xsl:element name="p">
-			<xsl:element name="img">
-			<xsl:attribute name="src">/graphics/cc-logo.png</xsl:attribute>
-			<xsl:attribute name="alt">Creative Commons logo</xsl:attribute>
-			</xsl:element> <!-- </img> -->
-			<xsl:for-each select="/buildinfo/document/head/meta[@name='cc-license']">
-				<xsl:value-of select="@content"/> • 
-			</xsl:for-each>
-			<!--<xsl:value-of select="/buildinfo/document/head/meta[@name='cc-license-1']/@content" /> • -->
-		</xsl:element> <!-- </p> -->
-		
-	</xsl:element> <!-- </div> -->
-	</xsl:if>
-	<!-- End cc licenses -->
+              </xsl:element>
+            </xsl:when>
+            
+            <xsl:otherwise>
+              <xsl:value-of select="/buildinfo/document/legal/notice"/>
+            </xsl:otherwise>
+          </xsl:choose>
+        </p>
+      </div>
+    </xsl:if>
+  
+  
+  <!--Depreciated: it's here only for "backward compatibility"  cc license way-->
+  <xsl:if test = "string(/buildinfo/document/head/meta[@name='cc-license']/@content)">
+  <xsl:element name="div">    
+    <xsl:attribute name="id">cc-licenses</xsl:attribute>
+    
+    <xsl:element name="p">
+      <xsl:element name="img">
+      <xsl:attribute name="src">/graphics/cc-logo.png</xsl:attribute>
+      <xsl:attribute name="alt">Creative Commons logo</xsl:attribute>
+      </xsl:element> <!-- </img> -->
+      <xsl:for-each select="/buildinfo/document/head/meta[@name='cc-license']">
+        <xsl:value-of select="@content"/> • 
+      </xsl:for-each>
+      <!--<xsl:value-of select="/buildinfo/document/head/meta[@name='cc-license-1']/@content" /> • -->
+    </xsl:element> <!-- </p> -->
+    
+  </xsl:element> <!-- </div> -->
+  </xsl:if>
+  <!-- End cc licenses -->
     
     <!-- Footer -->
     <div id="footer">
       <div id="notice">
         <p>
-          Copyright © 2001-2012 <a href="/">Free Software
+          Copyright © 2001-2013 <a href="/">Free Software
         Foundation Europe</a>. <strong>
         <a href="/contact/contact.html">
-          <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'contact'" /></xsl:call-template>
+          <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'contact-us'" /></xsl:call-template>
         </a></strong>.<br />
 
           <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'permission'" /></xsl:call-template><br />
@@ -1060,7 +1070,7 @@
 	<!-- End Piwik Tracking Code -->
     
       </xsl:element>
-    </xsl:copy>
+    </body>
   </xsl:template>
 
   <!-- Insert local menu -->
@@ -1138,15 +1148,18 @@
   <xsl:template match="latin">
     <xsl:apply-templates select="@*|node()"/>
   </xsl:template>
-
+  
+  <!-- If no template matching <body> is found in the current page's XSL file, this one will be used -->
+  <xsl:template match="body" priority="-1">
+    <xsl:apply-templates />
+  </xsl:template>
+  
   <!-- Do not copy non-HTML elements to output -->
   <xsl:template match="timestamp|
                buildinfo/document/translator|
                buildinfo/set|
                buildinfo/textset|
                buildinfo/textsetbackup|
-               textset-content|
-               textset-content-backup|
                buildinfo/menuset|
                buildinfo/trlist|
                buildinfo/fundraising|
@@ -1156,6 +1169,8 @@
                buildinfo/document/author|
                buildinfo/document/date|
                buildinfo/document/download"/>
+  
+  <xsl:template match="set | tags | text"/>
 
   <!-- For all other nodes, copy verbatim -->
   <xsl:template match="@*|node()" priority="-1">
@@ -1163,6 +1178,13 @@
       <xsl:apply-templates select="@* | node()"/>
     </xsl:copy>
   </xsl:template>
+  
+  <xsl:template match="@dt:*">
+    <xsl:attribute name="{local-name()}">
+      <xsl:value-of select="." />
+    </xsl:attribute>
+  </xsl:template>
+  
   <!--
   <xsl:template match="@x:*">
     <xsl:attribute name="{local-name()}">

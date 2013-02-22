@@ -142,7 +142,7 @@ font-weight: bold;
 }
 
 dd {
-    padding-left: 2em;
+	padding: 0 0 0.5em 2em;
 }
 
 blockquote {
@@ -194,6 +194,10 @@ p.left {
   padding: 0 2% 0 0;
 }
 
+p.right {
+	padding: 0 0 0 2%;
+}
+
 .right {
   float: right;
 }
@@ -217,6 +221,15 @@ p.left {
 .grid-60 {
   width: 56%;
 }
+
+.grid-70 {
+	width: 66%;
+}
+
+.grid-30 {
+	width: 28%;
+}
+
 
 .grid-60.right {
   padding-left: 1%;
@@ -305,17 +318,6 @@ p.left {
   padding-top: 1.8em;
 }
 
-
-#signupinlineform {
-  display: none;
-}
-#signupbutton {
-  float: right;
-  display: block;
-  margin-top: 120px;
-  margin-right: 20px;
-  padding: 0px;
-}
 
 /* sidebar */
 #menu,
@@ -452,14 +454,6 @@ p.left {
   overflow: hidden;
 }
 
-#content .highlight {
-  border-width: 2px;
-  border-style: dotted;
-  border-color: rgb(107,200,0);
-  background-color: rgb(194,255,128);
-  padding: .5em;
-}
-
 #content #frontpage {
   font-size: 90%;
 }
@@ -469,6 +463,15 @@ p.left {
   font-weight: bold;
   line-height: 120%;
   margin: 0 0 .3em;
+}
+
+#content .highlight {
+  /* Used in: order/promopack.*.xhtml*/
+  border-width: 2px;
+  border-style: dotted;
+  border-color: rgb(107,200,0);
+  background-color: rgb(194,255,128);
+  padding: .5em;
 }
 
 h1,
@@ -493,6 +496,10 @@ h2 {
 h3 {
   font-size: 140%;
   margin: 1.5em 0 .2em 0;
+}
+
+.margin-vertical {
+	margin: 1em 0;
 }
 
 .image {
@@ -652,8 +659,13 @@ p#introduction {
 }
 
 /* ------------------------------------------------------------------------- */
-/* Promopack order form                                                      */
+/* Form Label
 /* ------------------------------------------------------------------------- */
+
+/* Used in: orders/promopack.*.xhtml 
+            activities/nordic-free-software-award/...
+*/
+
 .labeledform .formlabel {
   font-weight: bold;
   display: inline-block;
@@ -1071,7 +1083,6 @@ h4#subpages + ul li:nth-child(odd) {
 
 #newsletter #submit {
   min-width: 6em;
-  width: 23%;
 }
 
 .section a.rss-feed,
@@ -1173,9 +1184,9 @@ h4#subpages + ul li:nth-child(odd) {
 }
 
 
-#frontpage .entry {
-  margin-bottom: 3em;
-}
+/*#frontpage .entry {*/
+/*  margin-bottom: 3em;*/
+/*}*/
 
 
 /* announcement */
@@ -1327,13 +1338,28 @@ a.fn {
   color: rgb(82,97,0);
 }
 
+#campaign-box-5 {
+    width: 92%;
+    margin: 0 auto;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+}
+
+#front-page-introduction {
+    font-size: 135%;
+}
+
+#front-page-introduction p {
+    margin-bottom: 0;
+}
+
 .banner-border {
   border: 4px solid rgb(224,248,89);
   border-radius: 7px;
 }
 
-.donate-box,
-.fellowship-box {
+.donate-box, .fellowship-box, .support-box {
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
   border-radius: 7px;
@@ -1353,8 +1379,7 @@ a.fn {
   background: url("/graphics/donate-button-bg.png") no-repeat top left;
 }
 
-#campaign-box-2 .donate-box:hover,
-#campaign-box-2 .fellowship-box:hover {
+#campaign-box-2 .donate-box:hover, #campaign-box-2 .fellowship-box:hover, #campaign-box-2 .support-box:hover {
   text-decoration: none;
 }
 
@@ -1365,7 +1390,7 @@ a.fn {
   box-shadow: inset 0 0 6px rgb(0,34,43);
 }
 
-#campaign-box-2 .fellowship-box {
+#campaign-box-2 .fellowship-box, #campaign-box-2 .support-box {
   color: rgb(112,208,85);
   -moz-box-shadow: inset 0 0 2px rgb(23,40,11);
   -webkit-box-shadow: inset 0 0 2px rgb(23,40,11);
@@ -1373,36 +1398,51 @@ a.fn {
   background: url("/graphics/join-button-bg.png") no-repeat top left;
 }
 
-#campaign-box-2 .fellowship-box:hover {
+#campaign-box-2 .fellowship-box:hover, #campaign-box-2 .support-box:hover {
   color: rgb(93,172,70);
   -moz-box-shadow: inset 0 0 6px rgb(23,40,11);
   -webkit-box-shadow: inset 0 0 6px rgb(23,40,11);
   box-shadow: inset 0 0 6px rgb(23,40,11);
 }
 
+
 /* Boxe for aside paragraph or information see /campaigns/generalpurposecomputing/secure-boot-analysis.en.html for example */
 
-.box {
-width:34%;
-padding:0.5em 1.5em;
-margin: 1.5em;
-z-index:3;
-font-size:90%;
-line-height:120%;
-/*background-color: rgba(214,234,245,0.8);*/
-background-color:#F7FFCC;
-/*color: #17215A;*/
-border:1px solid #FFF;
-border-radius:.5em;
-box-shadow:0 0 .5em rgba(0,0,0,0.1);
+.aside-box {
+	width:34%;
+	padding:0.5em 1.5em;
+	margin: 1.5em;
+	z-index:3;
+	/*font-size:90%;*/
+	line-height:120%;
+	/*background-color: rgba(214,234,245,0.8);*/
+	background-color:#F7FFCC;
+	color: #202D79;
+	border:1px solid #FFF;
+	border-radius:.5em;
+	box-shadow:3px 2px .5em rgba(0,0,0,0.1);
 }
 
-.box.right {
-margin-right:1em;
+.aside-box.right {
+	margin-right:1em;
 }
 
-        .box h2 {font-size:140%;margin-top:0.75em}
-        .box h3 {font-size:120%;margin-top:0.5em}
+.aside-box h2 {
+	margin: 0;
+	padding:0;
+}
+
+.box h2 {
+	font-size:140%;
+	margin-top:0.75em
+}
+
+.box h3 {
+	font-size:120%;
+	margin-top:0.5em
+}
+
+
 
 /* Nice buttons */
 .button {
@@ -1511,11 +1551,11 @@ ul.overview {
   box-shadow: 0 0 3px  rgba(0,0,0,0.3);
 }
 
-#article-metadata .author {
+#article-metadata a.author {
   padding-right:.7em;
 }
 
-#article-metadata .author:last-child {
+#article-metadata a.author:last-child {
   padding-right:0;
 }
 
@@ -1653,23 +1693,29 @@ tr.highlighted {
 
 /* notices */
 
-#outdated-notice, #under-construction-notice {
+.warning {
   border-width: 1px;
   border-style: solid;
   padding: .5em;
   margin: 0 0 1.5em 0;
 }
 
-#outdated-notice {
+.red {
   background-color: rgb(255,220,220);
   border-color: rgb(253,59,59);
   color: rgb(132,78,78);
 }
 
-#under-construction-notice {
+.yellow {
   background-color: rgb(255,245,220);
   border-color: rgb(253,195,59);
   color: rgb(132,78,78);
+}
+
+.green {
+	background-color: #F7FFC8;
+	border-color: green;
+	color: #0A3100;
 }
 
 /* service notice, can i.e. be used for website downtime */
@@ -1970,9 +2016,14 @@ div.map {
 /* ------------------------------------------------------------------------- */
 /* Support form                                                                   */
 /* ------------------------------------------------------------------------- */
-
+#introduction.support_page > .image > img {
+    margin-bottom: 100px;
+}
 #support_form {
     margin-left: 150px;
+}
+#support_form p {
+    clear: both;
 }
 .support input[type=email], .support input[type=text], .support select { 
     float: right; 
@@ -1982,16 +2033,40 @@ div.map {
 .support select {
     width: 405px;
 }
+
 .support input[type=submit] {
     float: right;
-    width: 200px;
-    margin: 12px 240px 64px 150px;
+    width: 215px;
+    margin: 12px 220px 64px 150px;
+}
+/* hack thing to make Firefox work */
+.support input[type=button] {
+    float: right;
+    width: 245px;
+    margin: 12px 192px 64px 150px;
+    font-size: 100%;
+    padding: 0.5em;
 }
 .support label>label { 
     margin-left: 180px; 
     width: 385px; 
     display: block; 
     color: red; 
+}
+
+#support_robotfield {
+    display: none;
+}
+
+#support_form_sent {
+    margin: 18px 18px 18px 150px;
+    padding: 18px;
+    border: 2px solid #7FDF55;
+}
+
+#support_portal {
+    display: none;
+    margin-left: 150px;
 }
 
 /* ------------------------------------------------------------------------- */

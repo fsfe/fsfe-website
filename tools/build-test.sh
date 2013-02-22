@@ -201,6 +201,12 @@ echo "$(date)  Generating translation logs."
 tools/translation-log-test.sh ${DEST}/translations.log ${STATUS}
 
 # -----------------------------------------------------------------------------
+echo "$(date)  Generating Fellowship header/footer templates."
+# -----------------------------------------------------------------------------
+
+tools/make_fellowship_templates.sh $DEST
+
+# -----------------------------------------------------------------------------
 echo "$(date)  Build complete."
 # -----------------------------------------------------------------------------
 

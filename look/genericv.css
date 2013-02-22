@@ -77,6 +77,14 @@ h3 {
   border-left: 15px solid rgb(245,200,245);
 }
 
+#menu ul li.support a {
+  border-left: 15px solid #BB1627;
+}
+
+#menu ul li.support ul {
+  display: none;
+}
+
 #menu ul li.fellowship a {
   border-left: 15px solid #F57B8F;
 }
@@ -121,6 +129,11 @@ h3 {
   background-color: #BDE455;
 }
 
+.banner-border {
+  border: 4px solid #E2364C;
+  border-radius: 7px;
+}
+
 #campaign-box-1 h3 a {
   color: #9E1321;
 }
@@ -159,9 +172,9 @@ h3 {
   box-shadow: inset 0 0 6px #17280b;
 }
 
-#campaigns-boxes a:link {
+/*#campaigns-boxes a:link {
   color: #3394CE;
-}
+}*/
 
 #article-metadata a {
   color: #323232;

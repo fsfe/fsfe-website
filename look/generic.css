@@ -1520,6 +1520,29 @@ ul.overview {
   width: 44%;
 }
 
+ul.overview-horizontal {
+  float: left;
+  list-style-type: none;
+  margin: 0 0 1em 0;
+  padding: 0;
+}
+
+ul.overview-horizontal li {
+  float: left;
+  width: 44%;
+  padding: 0 1.5% 0 0;
+}
+
+ul.overview-horizontal h3 {
+  margin: 0 0 0.2em 0;
+}
+
+ul.overview-horizontal li img.inline {
+  float: left;
+  margin: 0 1.2em 0 0;
+  padding: 0;
+  max-width: 40%;
+}
 
 /* Article pages */
 #article-metadata {
@@ -1776,6 +1799,17 @@ tr.highlighted {
   color: rgb(32,45,121);
 }
 
+table#patrons td {
+    padding: 1em!important;
+}
+
+table#patrons td:first-child {
+    text-align: center;
+}
+
+table#patrons td img {
+    max-height: 90px;
+}
 
 /* People pages */
 

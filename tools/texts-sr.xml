@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <textset>
+  <!-- Footer -->
   <text id="lastchanged"> Последње измене: </text>
   <text id="translator1a">Захваљујемо се </text>
   <text id="translator1b"> за овај неофицијални превод. </text>
@@ -16,6 +17,13 @@
     Проблеме са овом страном пријавите на
     <em>webmaster at fsfeurope.org</em>.
   </text>
+  <text id="fsfnetwork">
+    FSFE has <a href="/about/fsfnetwork.html">sister organisations</a> in <a
+      href="http://www.fsf.org/">North America</a>, <a
+      href="http://www.fsf.org.in/">India</a> and <a
+      href="http://www.fsfla.org/">Latin America</a>.
+  </text>
+  <text id="creative-commons-license">Creative Commons license</text>
   <text id="outdated">
     <strong>Упозорење: </strong>
     Ова страна може бити застарела. Погледајте
@@ -30,10 +38,35 @@
     у превођењу и свему осталом.
   </text>
   
+  <text id="source">Source code</text>
+  <text id="contact-us">Contact us</text>
+  <text id="translate">Translate this page?</text>
+  <text id="imprint">Imprint</text>
+  
+  <!-- Info box -->
+  <text id="under-construction">
+    <strong>Warning: </strong>This page is under construction. Please <strong>do not spread</strong> or attempt translation as its content is subject to change.
+  </text>
+  <text id="project-complete">
+	  This project has been successfully finished. These pages are kept here for archiving purposes.
+  </text>
+  
   <text id="search">Претражити</text>
   <text id="submit">Потврдити</text>
+  
   <text id="language">Језик</text>
   
+  <!-- Article metadata -->
+ <text id="author">Author</text>
+ <text id="writtenby">Written&#160;by</text>
+ <text id="published">on</text>
+ <text id="revision">updated&#160;on</text>
+ <text id="download">Download</text>
+ 
+  <!-- Conjunctions -->
+  <text id="to">to</text>
+  
+  <!-- Menu -->
   <text id="fsfe/about">О нама</text>
   <text id="fsfe/projects">Пројекти</text>
   <text id="fsfe/documents">Документи</text>
@@ -42,34 +75,91 @@
   <text id="fsfe/order">Наручивање</text>
   <text id="fsfe/lists">Еmail листе</text>
   <text id="fsfe/thankgnus">GNU захвалнице</text>
-  <text id="fellowship/priority">Приоритетне линкови</text>
-  <text id="menu3/priority/com-pkg">Трговинске услуге</text>
-  <text id="fellowship/priority/fellowship">Fellowship</text>
-  <text id="fellowship/priority/ftf">Freedom Task Force</text>
-  <text id="fellowship/priority/os">Отворени стандарди</text>
-  <text id="menu3/sisters">Our sister organisations</text>
-  <text id="menu3/sisters/fsf">FSF</text>
-  <text id="menu3/sisters/fsf_india">FSF India</text>
-  <text id="menu3/sisters/fsf_la">FSF Latin America</text>
+  <text id="support/support">Support</text>
+  <text id="fellowship/fellowship">Join</text>
+  <text id="fellowship/card">Card</text>
+  <text id="fellowship/communicate">Communicate</text>
+  <text id="fellowship/get-active">Get active</text>
+  <text id="fellowship/faq">F.A.Q.</text>
+  <text id="fellowship/contact">Contact</text>
+  <text id="planet/planet">Planet</text>
+  <text id="planet/blogs">Blogs</text>
+  <text id="wiki/wiki">Wiki</text>
   
-    <text id="news">Најновије вести</text>
-  <text id="newsletter">Билтен</text>
+  
+  <!-- Date time -->
+  <text id="months/1">Јануар</text>
+  <text id="months/2">Фебруар</text>
+  <text id="months/3">Март</text>
+  <text id="months/4">Април</text>
+  <text id="months/5">Мај</text>
+  <text id="months/6">Јун</text>
+  <text id="months/7">Јул</text>
+  <text id="months/8">Август</text>
+  <text id="months/9">Септембар</text>
+  <text id="months/10">Октобар</text>
+  <text id="months/11">Новембар</text>
+  <text id="months/12">Децамбар</text>
+ 
+  <text id="months-abbreviated/1">Јан</text>
+  <text id="months-abbreviated/2">Феб</text>
+  <text id="months-abbreviated/3">Мар</text>
+  <text id="months-abbreviated/4">Апр</text>
+  <text id="months-abbreviated/5">Мај</text>
+  <text id="months-abbreviated/6">Јун</text>
+  <text id="months-abbreviated/7">Јул</text>
+  <text id="months-abbreviated/8">Авг</text>
+  <text id="months-abbreviated/9">Сеп</text>
+  <text id="months-abbreviated/10">Окт</text>
+  <text id="months-abbreviated/11">Нов</text>
+  <text id="months-abbreviated/12">Дец</text>
+
+  <text id="weekdays/1">Понедељак</text>
+  <text id="weekdays/2">Уторак</text>
+  <text id="weekdays/3">Среда</text>
+  <text id="weekdays/4">Четвртак</text>
+  <text id="weekdays/5">Петак</text>
+  <text id="weekdays/6">Субота</text>
+  <text id="weekdays/7">Недења</text>
+
+  <text id="weekdays-abbreviated/1">Пон</text>
+  <text id="weekdays-abbreviated/2">Утр</text>
+  <text id="weekdays-abbreviated/3">Сре</text>
+  <text id="weekdays-abbreviated/4">Чтв</text>
+  <text id="weekdays-abbreviated/5">Пет</text>
+  <text id="weekdays-abbreviated/6">Суб</text>
+  <text id="weekdays-abbreviated/7">Нед</text>
+  
+  <text id="statement1">Free Software Foundation Europe is a non-profit
+	organisation dedicated to promoting </text>
+  <text id="statement-fs">Free Software</text>
+  <text id="statement2">, working to build a free digital society</text>
+  
+  <text id="learn-more">Learn more</text>
+
+  <text id="press">Press</text>
+  <text id="newsletter">Newsletter</text>
+	
+	
+  <!-- These used to be in /tools/texts-content-**.xml -->
+  <text id="news">Најновије вести</text>
   <text id="receive-newsletter">Претплатите се на FSFE-ов месечни билтен</text>
   <text id="events">Догађаји који следе</text>
   <text id="more">Прочитајте више...</text>
   <text id="morenews">Више вести...</text>
   <text id="moreevents">Више о догађајима...</text>
   
-  <text id="email">Email</text>
-  <text id="email-placeholder">email адреса</text>
+  <text id="email">Ел.Пошта</text>
+  <text id="email-placeholder">адреса ел.поште</text>
   <text id="phone">Телефон</text>
   <text id="fax">факс</text>
   <text id="contact">Контакт</text>
   
   <text id="team">Eкипа</text>
-  <text id="microblog">Microblog</text>
+  <text id="microblog">Микроблог</text>
   
   <text id="donate">Донације</text>
+   
    <!-- Campaign box on front-page, translated texts -->
   <text id="cb-restricted-boot">Заузмите се за своју слободу да инсталирате Слободан Софтвер,</text>
   <text id="cb-restricted-boot-link">потпишите нашу изјаву против Restricted Boot</text>
@@ -80,12 +170,17 @@
 
   <text id="join">Придружите нам се</text>
   <text id="ourwork2011">О нашем раду 2011-те</text>
+  <text id="support">Support the FSFE</text>
   
   <text id="subscribe">Претплатите се</text>
 
   <!-- alt text for missing avatars -->
   <text id="no-avatar">Нема слике</text>
   
+  <!-- petitions -->
+  <text id="osig">Organisations</text>
+  <text id="isig">Individuals</text>
+  <text id="bsig">Businesses</text>
   
   <!-- quotes to be displayed in a rotating box -->
   <quotes>

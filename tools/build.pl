@@ -696,6 +696,7 @@ sub process {
 			print "Writing: $opts{o}/$dir/$file.$lang.html\n" if $opts{d};
       
       my $st = $stylesheet->output_as_chars($results);
+      $st =~ s/@/&#64;/g;
       
       unless ($opts{n}) {
 #         print "$st\n\n\n\n\n\n\n\n\n";

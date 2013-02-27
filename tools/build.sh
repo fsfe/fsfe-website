@@ -170,17 +170,6 @@ done
 cd ${SOURCE}
 
 # -----------------------------------------------------------------------------
-echo "$(date)  Obfuscating email addresses."
-# -----------------------------------------------------------------------------
-
-# This replaces all '@' in all html files with '&#64;'. We use '-type f'
-# because we want to exclude symlinks (TODO: is -type f still useful now that
-# we don't have .symlinks anymore?). Because 'sed -i' is a very expensive
-# operation, even if there is no replacement done anyway, we first limit the
-# files to operate on to those files that actually contain an '@'.
-find ${TMP} -type f -name "*.html" | xargs grep -l '@' | xargs sed -i 's/@/\&#64;/g'
-
-# -----------------------------------------------------------------------------
 echo "$(date)  Generating robots.txt."
 # -----------------------------------------------------------------------------
 

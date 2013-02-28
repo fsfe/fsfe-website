@@ -20,7 +20,7 @@ SVNUPERRFILE=/tmp/fsfe-test-svnup-err
 export LANG="en_US.UTF-8"
 
 # Redirect output
-exec 1> ${STATUS}/status.txt 2>&1
+exec 1>> ${STATUS}/status.txt 2>&1
 
 # If there is a build-test.pl script started more than 10 minutes ago, kill it and mail alarm
 BUILD_STARTED=$(ps --no-headers -C build-test.pl -o etime | cut -c 7-8 | sort -r | head -n 1)
@@ -154,7 +154,7 @@ fi
 
 if test $? -ne 0; then
    echo "$(date)  Build not complete. Aborting."
-   cp ${STATUS}/status.txt ${STATUS}/status-finished.txt
+   mv ${STATUS}/status.txt ${STATUS}/status-finished.txt
    cat ${STATUS}/status-finished.txt >> ${STATUS}/status-log.txt
    exit 1
 fi
@@ -199,6 +199,6 @@ tools/make_fellowship_templates.sh $DEST
 echo "$(date)  Build complete."
 # -----------------------------------------------------------------------------
 
-cp ${STATUS}/status.txt ${STATUS}/status-finished.txt
+mv ${STATUS}/status.txt ${STATUS}/status-finished.txt
 cat ${STATUS}/status-finished.txt >> ${STATUS}/status-log.txt
 cp tools/status-test.php ${STATUS}/index.php

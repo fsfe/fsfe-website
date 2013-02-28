@@ -22,7 +22,7 @@ if ( file_exists('status.txt') ) {
   echo '
   <h2>Currently running build</h2>
   <p><pre>
-  ';
+';
   $status = file_get_contents("status.txt");
   echo htmlspecialchars($status);
   echo '
@@ -35,7 +35,7 @@ if ( file_exists('status-attempted.txt') ) {
   echo '
   <h2>Last attempted build</h2>
   <p><pre>
-  ';
+';
   $status = file_get_contents("status-attempted.txt");
   echo htmlspecialchars($status);
   echo '

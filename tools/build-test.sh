@@ -203,5 +203,5 @@ echo "$(date)  Build complete."
 
 cat ${STATUS}/status.txt >> ${STATUS}/status-log.txt
 mv ${STATUS}/status.txt ${STATUS}/status-finished.txt
-rm ${STATUS}/status-attempted.txt
+rm -f ${STATUS}/status-attempted.txt
 cp tools/status-test.php ${STATUS}/index.php

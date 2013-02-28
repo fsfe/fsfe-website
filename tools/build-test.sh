@@ -70,6 +70,7 @@ if test -s ${SVNUPERRFILE} ; then
   echo "$(date)  svn update produced the following error message. Build aborted"
   cat ${SVNUPERRFILE}
   cat ${STATUS}/status.txt >> ${STATUS}/status-log.txt
+  mv  ${STATUS}/status.txt ${STATUS}/status-attempted.txt
   echo -e "
   svn update produced the following error message. Build aborted
 
@@ -88,6 +89,7 @@ fi
 if test -n "$(grep '^C' ${SVNUPOUTFILE})" ; then
   echo "$(date)  There are conflicts in the local svn working copy. Build aborted"
   cat ${STATUS}/status.txt >> ${STATUS}/status-log.txt
+  mv  ${STATUS}/status.txt ${STATUS}/status-attempted.txt
   echo -e "
   There are conflicts in the local svn working copy. Build aborted
 
@@ -102,8 +104,8 @@ if test -n "$(grep '^C' ${SVNUPOUTFILE})" ; then
   exit
 fi
 
-# Rebuild only if changes were made to the SVN or it hasn't run yet today
-# (unless "-f" option is used)
+# Don't rebuild the site if no changes were made to the SVN
+# (unless it hasn't run yet today, or unless the "-f" option is used)
 #
 # We must run it once every day at least to move events from future to current
 # and from current to past.
@@ -112,8 +114,8 @@ if test ! -s ${SVNUPOUTFILE} \
     -a "$1" != "-f" ; then
   echo "$(date)  No changes to SVN test branch."
   echo "$(date)  $(svn info 2>/dev/null | grep '^Revision')"
-  # In this case we only append to the cumulative status-log.txt file, we don't touch status-finished.txt
   cat ${STATUS}/status.txt >> ${STATUS}/status-log.txt
+  mv  ${STATUS}/status.txt ${STATUS}/status-attempted.txt
   exit
 fi
 
@@ -154,8 +156,8 @@ fi
 
 if test $? -ne 0; then
    echo "$(date)  Build not complete. Aborting."
-   mv ${STATUS}/status.txt ${STATUS}/status-finished.txt
-   cat ${STATUS}/status-finished.txt >> ${STATUS}/status-log.txt
+   cat ${STATUS}/status.txt >> ${STATUS}/status-log.txt
+   mv  ${STATUS}/status.txt ${STATUS}/status-attempted.txt
    exit 1
 fi
 
@@ -199,6 +201,7 @@ tools/make_fellowship_templates.sh $DEST
 echo "$(date)  Build complete."
 # -----------------------------------------------------------------------------
 
+cat ${STATUS}/status.txt >> ${STATUS}/status-log.txt
 mv ${STATUS}/status.txt ${STATUS}/status-finished.txt
-cat ${STATUS}/status-finished.txt >> ${STATUS}/status-log.txt
+rm ${STATUS}/status-attempted.txt
 cp tools/status-test.php ${STATUS}/index.php

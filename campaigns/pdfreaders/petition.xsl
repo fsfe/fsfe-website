@@ -5,58 +5,48 @@
 	
 	<xsl:import href="../../tools/xsltsl/countries.xsl" />
 	
-  <xsl:output method="xml"
-           encoding="UTF-8"
-           indent="yes"
-           />
+  <xsl:import href="../../fsfe.xsl" />
+  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
 
-  <xsl:template match="/">
-    <xsl:copy>
-      <xsl:apply-templates select="@*|node()" />
-    </xsl:copy>
-  </xsl:template>
-
-  <xsl:template match="/html/body">
-    <body>
+  <xsl:template match="body">
       <xsl:apply-templates />
       
-      <h3>
-        <xsl:value-of select="/html/text[@id='osig']" />
-        (<xsl:value-of select="count(/html/set/osig/li)" />)
+      <h3 id="organisations">
+        <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'osig'" /></xsl:call-template>
+        (<xsl:value-of select="count(/buildinfo/document/set/osig/li)" />)
       </h3>
       <ul>
-        <xsl:apply-templates select="/html/set/osig/node()">
+        <xsl:apply-templates select="/buildinfo/document/set/osig/node()">
           <xsl:sort select="." />
         </xsl:apply-templates>
       </ul>
       
-      <h3>
-      	<xsl:value-of select="/html/text[@id='bsig']" />
-      	(<xsl:value-of select="count(/html/set/bsig/li)" />)
+      <h3 id="businesses">
+      	<xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'bsig'" /></xsl:call-template>
+      	(<xsl:value-of select="count(/buildinfo/document/set/bsig/li)" />)
       </h3>
       <ul>
-        <xsl:apply-templates select="/html/set/bsig/node()">
+        <xsl:apply-templates select="/buildinfo/document/set/bsig/node()">
           <xsl:sort select="." />
         </xsl:apply-templates>
       </ul>
       
-      <h3>
-        <xsl:value-of select="/html/text[@id='isig']" />
-        (<xsl:value-of select="count(/html/set/isig/li)" />)
+      <h3 id="individuals">
+        <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'isig'" /></xsl:call-template>
+        (<xsl:value-of select="count(/buildinfo/document/set/isig/li)" />)
       </h3>
       <ul>
-        <xsl:apply-templates select="/html/set/isig/node()">
+        <xsl:apply-templates select="/buildinfo/document/set/isig/node()">
           <xsl:sort select="." />
         </xsl:apply-templates>
       </ul>
-      <xsl:apply-templates select="/html/text/footer/node()" />
-    </body>
+      <xsl:apply-templates select="/buildinfo/document/text/footer/node()" />
   </xsl:template>
   
   <xsl:template match="country-list">
     <xsl:call-template name="country-list" />
   </xsl:template>
-
+  
   <!-- Add a hidden field to the form to identify the language used. -->
   <xsl:template match="add-language">
     <xsl:element name="input">
@@ -64,17 +54,8 @@
       <xsl:attribute name="id">lang</xsl:attribute>
       <xsl:attribute name="name">lang</xsl:attribute>
       <xsl:attribute name="value">
-        <xsl:value-of select="/html/@lang" />
+        <xsl:value-of select="/buildinfo/document/@language" />
       </xsl:attribute>
     </xsl:element>
   </xsl:template>
-
-  <xsl:template match="@*|node()" priority="-1">
-    <xsl:copy>
-      <xsl:apply-templates select="@*|node()"/>
-    </xsl:copy>
-  </xsl:template>
-
-  <xsl:template match="/html/set" />
-  <xsl:template match="/html/text" />
 </xsl:stylesheet>

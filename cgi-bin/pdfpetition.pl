@@ -12,8 +12,6 @@ Sam Tuke <mail@samtuke.com>, extending Alexander Kahl <e-user@fsfe.org>
 
 =cut
 
-use feature 'unicode_strings'
-
 use open ":encoding(utf8)";
 use open IN => ":encoding(utf8)", OUT => ":utf8";
 

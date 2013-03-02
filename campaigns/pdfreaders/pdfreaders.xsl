@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:output method="xml" encoding="UTF-8" indent="yes" />
-
+  <xsl:import href="../../fsfe.xsl" />
+  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
+  
+  <xsl:template match="number-of-businesses">
+    <xsl:value-of select="count(/buildinfo/document/set/bsig/li)" />
+  </xsl:template>
+  
+  <xsl:template match="number-of-orgs">
+    <xsl:value-of select="count(/buildinfo/document/set/osig/li)" />
+  </xsl:template>
+  
+  <xsl:template match="number-of-individuals">
+    <xsl:value-of select="count(/buildinfo/document/set/isig/li)" />
+  </xsl:template>
+  
   <!-- Fill dynamic content -->
   <xsl:template match="dynamic-content">
-    <xsl:for-each select="/html/set/buglist">
+    <xsl:for-each select="/buildinfo/document/set/buglist">
       <xsl:sort select="@country"/>
 
       <xsl:variable name="country">
@@ -14,20 +27,20 @@
 
       <!-- Heading -->
       <xsl:element name="h3">
-        <xsl:value-of select="/html/set/country[@id=$country]"/>
+        <xsl:value-of select="/buildinfo/document/set/country[@id=$country]"/>
       </xsl:element>
 
       <!-- Table header -->
       <xsl:element name="table">
         <xsl:element name="tr">
-          <xsl:element name="th"><xsl:value-of select="/html/text[@id='institution-name']"/></xsl:element>
-          <xsl:element name="th"><xsl:value-of select="/html/text[@id='institution-address']"/></xsl:element>
-          <xsl:element name="th"><xsl:value-of select="/html/text[@id='institution-url']"/></xsl:element>
-          <xsl:element name="th"><xsl:value-of select="/html/text[@id='opened']"/></xsl:element>
-          <xsl:element name="th"><xsl:value-of select="/html/text[@id='closed']"/></xsl:element>
-          <xsl:element name="th"><xsl:value-of select="/html/text[@id='name']"/></xsl:element>
-          <xsl:element name="th"><xsl:value-of select="/html/text[@id='group']"/></xsl:element>
-          <xsl:element name="th"><xsl:value-of select="/html/text[@id='comment']"/></xsl:element>
+          <xsl:element name="th"><xsl:value-of select="/buildinfo/document/text[@id='institution-name']"/></xsl:element>
+          <xsl:element name="th"><xsl:value-of select="/buildinfo/document/text[@id='institution-address']"/></xsl:element>
+          <xsl:element name="th"><xsl:value-of select="/buildinfo/document/text[@id='institution-url']"/></xsl:element>
+          <xsl:element name="th"><xsl:value-of select="/buildinfo/document/text[@id='opened']"/></xsl:element>
+          <xsl:element name="th"><xsl:value-of select="/buildinfo/document/text[@id='closed']"/></xsl:element>
+          <xsl:element name="th"><xsl:value-of select="/buildinfo/document/text[@id='name']"/></xsl:element>
+          <xsl:element name="th"><xsl:value-of select="/buildinfo/document/text[@id='group']"/></xsl:element>
+          <xsl:element name="th"><xsl:value-of select="/buildinfo/document/text[@id='comment']"/></xsl:element>
         </xsl:element>
 
         <!-- Table rows -->
@@ -40,7 +53,7 @@
                 <xsl:attribute name="href">
                   <xsl:value-of select="@institution-url"/>
                 </xsl:attribute>
-                <xsl:value-of select="/html/text[@id='link']"/>
+                <xsl:value-of select="/buildinfo/document/text[@id='link']"/>
               </xsl:element>
             </xsl:element>
             <xsl:element name="td"><xsl:value-of select="@opened"/></xsl:element>
@@ -53,16 +66,6 @@
       </xsl:element>
 
     </xsl:for-each>
-  </xsl:template>
-
-  <!-- Do not copy <set> and <text> to output at all -->
-  <xsl:template match="set | tags"/>
-
-  <!-- For all other nodes, copy verbatim -->
-  <xsl:template match="@*|node()" priority="-1">
-    <xsl:copy>
-      <xsl:apply-templates select="@*|node()"/>
-    </xsl:copy>
   </xsl:template>
 
 </xsl:stylesheet>

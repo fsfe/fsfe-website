@@ -97,7 +97,7 @@ while (<TEMPLATE>) {
         "SUB_STATUS=1$passphrase";
     }
     $shastring .= 
-        "TP=http://fsfe.org/donate/tmpl-concardis.$lang.html$passphrase";
+        "TP=https://fsfe.org/donate/tmpl-concardis.$lang.html$passphrase";
     my $shasum = uc(sha1_hex($shastring));
     print "    <form name=\"donate\" action=\"https://secure.payengine.de/ncol/prod/orderstandard.asp\" method=\"post\">\n";
     print "      <!-- payment parameters -->\n";
@@ -126,7 +126,7 @@ while (<TEMPLATE>) {
       print "      <input type=\"hidden\" name=\"SUB_STATUS\"        value=\"1\"/>\n";
     }
     print "      <!-- interface template -->\n";
-    print "      <input type=\"hidden\" name=\"TP\"           value=\"http://fsfe.org/donate/tmpl-concardis.$lang.html\"/>\n";
+    print "      <input type=\"hidden\" name=\"TP\"           value=\"https://fsfe.org/donate/tmpl-concardis.$lang.html\"/>\n";
     print "      <input type=\"hidden\" name=\"PMListType\"   value=\"2\"/>\n";
     print "      <!-- post-payment redirection -->\n";
     print "      <input type=\"hidden\" name=\"accepturl\"    value=\"http://fsfe.org/donate/thankyou.$lang.html\"/>\n";

@@ -41,11 +41,10 @@ my $content = WebBuild::DynamicContent->new;
 my $query = CGI->new;
 
 my $lang = $query->param('lang');
-unless ($lang =~ m/^[a-z]{2}$/ and -e "$root/campaigns/pdfreaders/petition.$lang.html")
+unless ($lang =~ m/^[a-z]{2}$/ and -f "$root/campaigns/pdfreaders/petition.$lang.html")
   {
-    $lang = 'en'
+    $lang = 'en';
   }
-
 $content->layout ("$root/campaigns/pdfreaders/petition.$lang.html");
 
 $form->validates_presence_of ('name');

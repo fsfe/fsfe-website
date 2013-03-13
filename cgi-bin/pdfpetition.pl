@@ -12,6 +12,9 @@ Sam Tuke <mail@samtuke.com>, extending Alexander Kahl <e-user@fsfe.org>
 
 =cut
 
+use open ":encoding(utf8)";
+use open IN => ":encoding(utf8)", OUT => ":utf8";
+
 use Cwd qw (abs_path);
 use File::Basename qw (dirname);
 
@@ -36,7 +39,13 @@ use constant UPLOAD   => "$root/upload/pdfreaders";
 my $form = WebBuild::FormValidation->new;
 my $content = WebBuild::DynamicContent->new;
 my $query = CGI->new;
-$content->layout ("$root/campaigns/pdfreaders/petition.en.html");
+
+my $lang = $query->param('lang');
+unless ($lang =~ m/^[a-z]{2}$/ and -f "$root/campaigns/pdfreaders/petition.$lang.html")
+  {
+    $lang = 'en';
+  }
+$content->layout ("$root/campaigns/pdfreaders/petition.$lang.html");
 
 $form->validates_presence_of ('name');
 $form->validates_presence_of ('surname');
@@ -82,4 +91,4 @@ my $output = <<'EOF';
 EOF
 
 $content->content ($output);
-$content->render
+$content->render_utf8

@@ -44,8 +44,10 @@ sub transform {
   my @output = $output_parser->disembowel;
 
   my $document_parser = HTML::TreeBuilder::XPath->new;
-  $document_parser->parse_file($self->{layout}) or croak $!;
-
+  open(my $fh, "<:encoding(UTF-8)", $self->{layout});
+  $document_parser->parse_file($fh) or croak $!;
+  close($fh);
+  
   my $content = $document_parser->findnodes('//div[@id="content"]')->[0];
 
   if ($self->{layout} =~ /boilerplate/) {

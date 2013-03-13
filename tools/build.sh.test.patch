@@ -1,5 +1,5 @@
---- build.sh	2013-02-04 13:37:46.000000000 +0100
-+++ build-test.sh	2013-02-04 13:41:42.000000000 +0100
+--- build.sh	2013-03-13 17:36:00.000000000 +0100
++++ build-test.sh	2013-02-28 13:41:21.000000000 +0100
 @@ -2,18 +2,18 @@
  # -----------------------------------------------------------------------------
  # Web page build script
@@ -29,7 +29,7 @@
  # let's ensure we get English messages
 @@ -22,21 +22,21 @@
  # Redirect output
- exec 1> ${STATUS}/status.txt 2>&1
+ exec 1>> ${STATUS}/status.txt 2>&1
  
 -# If there is a build.pl script started more than 10 minutes ago, kill it and mail alarm
 -BUILD_STARTED=$(ps --no-headers -C build.pl -o etime | cut -c 7-8 | sort -r | head -n 1)
@@ -67,7 +67,7 @@
  # -----------------------------------------------------------------------------
  
  # Update the svn working copy and check if any files were updated.
-@@ -75,7 +75,7 @@
+@@ -76,7 +76,7 @@
  
    `cat ${SVNUPERRFILE}`
  
@@ -76,7 +76,7 @@
    and fix the cause of the problem.
   
    In case of doubt, please write to system-hackers@fsfeurope.org 
-@@ -93,7 +93,7 @@
+@@ -95,7 +95,7 @@
  
    `cat ${SVNUPOUTFILE}`
  
@@ -85,16 +85,16 @@
    and fix the cause of the problem.
   
    In case of doubt, please write to system-hackers@fsfeurope.org 
-@@ -110,7 +110,7 @@
+@@ -112,7 +112,7 @@
  if test ! -s ${SVNUPOUTFILE} \
      -a "$(date -r ${STATUS}/last-run +%F)" == "$(date +%F)" \
      -a "$1" != "-f" ; then
 -  echo "$(date)  No changes to SVN."
 +  echo "$(date)  No changes to SVN test branch."
    echo "$(date)  $(svn info 2>/dev/null | grep '^Revision')"
-   # In this case we only append to the cumulative status-log.txt file, we don't touch status-finished.txt
    cat ${STATUS}/status.txt >> ${STATUS}/status-log.txt
-@@ -123,10 +123,10 @@
+   mv  ${STATUS}/status.txt ${STATUS}/status-attempted.txt
+@@ -125,10 +125,10 @@
  
  perl ${MAKEFILE_PL}
  
@@ -107,7 +107,7 @@
  chmod +x cgi-bin/weborder.pl cgi-bin/stacs-register-capacity.pl
  chmod +x cgi-bin/stacs-register-workshop.pl
  
-@@ -147,9 +147,9 @@
+@@ -149,9 +149,9 @@
  touch ${STATUS}/last-run
  
  if test "x`hostname`" = "xekeberg"; then
@@ -119,7 +119,7 @@
  fi
  
  if test $? -ne 0; then
-@@ -184,7 +184,7 @@
+@@ -175,7 +175,7 @@
  echo "$(date)  Generating robots.txt."
  # -----------------------------------------------------------------------------
  
@@ -128,7 +128,7 @@
  
  # -----------------------------------------------------------------------------
  echo "$(date)  Activating new output."
-@@ -198,7 +198,7 @@
+@@ -189,7 +189,7 @@
  echo "$(date)  Generating translation logs."
  # -----------------------------------------------------------------------------
  
@@ -136,10 +136,10 @@
 +tools/translation-log-test.sh ${DEST}/translations.log ${STATUS}
  
  # -----------------------------------------------------------------------------
- echo "$(date)  Build complete."
-@@ -206,4 +206,4 @@
- 
- cp ${STATUS}/status.txt ${STATUS}/status-finished.txt
- cat ${STATUS}/status-finished.txt >> ${STATUS}/status-log.txt
+ echo "$(date)  Generating Fellowship header/footer templates."
+@@ -204,4 +204,4 @@
+ cat ${STATUS}/status.txt >> ${STATUS}/status-log.txt
+ mv ${STATUS}/status.txt ${STATUS}/status-finished.txt
+ rm -f ${STATUS}/status-attempted.txt
 -cp tools/status.php ${STATUS}/index.php
 +cp tools/status-test.php ${STATUS}/index.php

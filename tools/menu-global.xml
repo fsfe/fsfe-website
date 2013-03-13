@@ -17,6 +17,7 @@
   <menu id="fellowship/contact" priority="2" parent="fellowship">/fellowship/contact.html</menu>
   <menu id="fellowship/get-active" priority="3" parent="fellowship">/fellowship/get-active.html</menu>
   <menu id="fellowship/faq" priority="4" parent="fellowship">/fellowship/faq.html</menu>
+  <menu id="fellowship/login" priority="5" parent="fellowship">/fellowship/login</menu>
   
   <menu id="planet" />
   <menu id="planet/planet" priority="0" parent="planet">http://planet.fsfe.org/</menu>

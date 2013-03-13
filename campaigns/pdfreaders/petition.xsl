@@ -47,4 +47,15 @@
     <xsl:call-template name="country-list" />
   </xsl:template>
   
+  <!-- Add a hidden field to the form to identify the language used. -->
+  <xsl:template match="add-language">
+    <xsl:element name="input">
+      <xsl:attribute name="type">hidden</xsl:attribute>
+      <xsl:attribute name="id">lang</xsl:attribute>
+      <xsl:attribute name="name">lang</xsl:attribute>
+      <xsl:attribute name="value">
+        <xsl:value-of select="/buildinfo/document/@language" />
+      </xsl:attribute>
+    </xsl:element>
+  </xsl:template>
 </xsl:stylesheet>

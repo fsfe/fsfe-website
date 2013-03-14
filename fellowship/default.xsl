@@ -286,7 +286,7 @@
           <xsl:element name="div">
         <xsl:attribute name="id">logo</xsl:attribute>
         <xsl:element name="a">
-          <xsl:attribute name="href">/</xsl:attribute>
+          <xsl:attribute name="href">/fellowship</xsl:attribute>
           <xsl:element name="img">
             <xsl:attribute name="alt">FSFE Fellowship Logo</xsl:attribute>
             <xsl:attribute name="src"><xsl:value-of select="$urlprefix"/>/graphics/fellowship/logo.png</xsl:attribute>

@@ -48,7 +48,6 @@
     <available size="M"/>
     <available size="L"/>
     <available size="XL"/>
-    <available size="XXL"/>
     <image 
       small="/order/articles/images/thumbnails/tshirt-fsfs-orange-front.jpg"
       large="/order/articles/images/tshirt-fsfs-orange-front.jpg"/>
@@ -69,9 +68,9 @@
   
   <item type="t-shirt" id="shirt-fsfs-red" price="18.00" date="2010-02-06">
     <available size="S"/>
-    <available size="M"/>
     <available size="L"/>
     <available size="XL"/>
+    <available size="XXL"/>
     <image
       small="/order/articles/images/thumbnails/shirt-fsfs-red-front.jpg"
       large="/order/articles/images/shirt-fsfs-red-front.jpg"/>
@@ -97,10 +96,9 @@
 
   <item type="t-shirt" id="tshirt-mdf-green" price="18.00" date="2008-11-02">
     <available size="S"/>
-    <available size="M"/>
     <available size="L"/>
     <available size="XL"/>
-    <!-- <available size="XXL"/> -->
+    <available size="XXL"/>
     <image
       small="/order/articles/images/thumbnails/tshirt-mdf-green-front.jpg"
       large="/order/articles/images/tshirt-mdf-green-front.jpg"/>
@@ -110,12 +108,9 @@
   </item>
 
   <item type="t-shirt" id="tshirt-dfd-white" price="18.00" date="2008-03-01">
-    <!-- <available size="S"/> -->
-    <!-- <available size="M"/> -->
     <available size="L"/>
     <available size="XL"/>
-    <!-- <available size="XXL"/> -->
-    <!-- <available size="XXXL"/> -->
+    <available size="XXL"/>
     <image
       small="/order/articles/images/thumbnails/tshirt-dfd-white-front.jpg"
       large="/order/articles/images/tshirt-dfd-white-front.jpg"/>
@@ -136,6 +131,7 @@
       large="/order/articles/images/girlie-hacking-black-back.jpg"/>
   </item>
 
+<!--
   <item type="hooded" id="hooded-fsfs-black" price="35.00" date="2012-09-29">
     <available size="S"/>
     <available size="M"/>
@@ -149,7 +145,7 @@
       small="/order/articles/images/thumbnails/hooded-fsfs-black-back.jpg"
       large="/order/articles/images/hooded-fsfs-black-back.jpg"/>
   </item>
-
+-->
   <item type="hooded" id="hooded-fsfs-blue" price="35.00" date="2012-09-29">
     <available size="S"/>
     <available size="M"/>
@@ -181,9 +177,11 @@
 
   <item type="hooded" id="hooded-fsfs-grey-zip" price="35.00" date="2010-02-08">
     <available size="S"/>
+<!--
     <available size="M"/>
     <available size="L"/>
     <available size="XL"/>
+-->
     <available size="XXL"/>
     <available size="XXXL"/>
     <image
@@ -195,32 +193,32 @@
   </item>
 
   <item type="baby-clothes" id="baby-romper-fork-blue" price="18.00" date="2012-10-06">
-    <available size="0-3"/>
     <available size="3-6"/>
     <available size="6-12"/>
     <available size="12-18"/>
-    <available size="18-24"/>
     <image
       small="/order/articles/images/thumbnails/baby-romper-fork-blue-front.jpg"
       large="/order/articles/images/baby-romper-fork-blue-front.jpg"/>
   </item>
 
   <item type="baby-clothes" id="baby-romper-fork-green" price="18.00" date="2012-10-06">
+<!--
     <available size="0-3"/>
     <available size="3-6"/>
+-->
     <available size="6-12"/>
     <available size="12-18"/>
-    <available size="18-24"/>
+<!--    <available size="18-24"/> -->
     <image
       small="/order/articles/images/thumbnails/baby-romper-fork-green-front.jpg"
       large="/order/articles/images/baby-romper-fork-green-front.jpg"/>
   </item>
   <item type="baby-clothes" id="baby-romper-fork-white" price="18.00" date="2012-10-06">
-    <available size="0-3"/>
+<!--    <available size="0-3"/> -->
     <available size="3-6"/>
     <available size="6-12"/>
-    <available size="12-18"/>
-    <available size="18-24"/>
+<!--    <available size="12-18"/> -->
+<!--    <available size="18-24"/> -->
     <image
       small="/order/articles/images/thumbnails/baby-romper-fork-white-front.jpg"
       large="/order/articles/images/baby-romper-fork-white-front.jpg"/>
@@ -289,14 +287,14 @@
       large="/order/articles/images/keyring-fellowship.jpg"/>
   </item>
 
-  <item type="other" id="mug-fellowship-black" price="8.00" date="2008-03-01">
+  <item type="other" id="mug-fellowship-black" price="10.00" date="2008-03-01">
     <available size="#"/>
     <image
       small="/order/articles/images/thumbnails/mug-fellowship-black.jpg"
       large="/order/articles/images/mug-fellowship-black.jpg"/>
   </item>
 
-  <item type="other" id="mug-fellowship-white" price="8.00" date="2008-03-01">
+  <item type="other" id="mug-fellowship-white" price="10.00" date="2008-03-01">
     <available size="#"/>
     <image
       small="/order/articles/images/thumbnails/mug-fellowship-white.jpg"

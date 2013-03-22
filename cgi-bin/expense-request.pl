@@ -28,6 +28,7 @@ my %names = (
   "klein" => "Julia Klein",
   "kneissl" => "Jürgen Kneissl",
   "machon" => "Pablo Machón",
+  "morris" => "Anna Morris",
   "mueller" => "Reinhard Müller",
   "naranjo" => "Diego Naranjo",
   "oberg" => "Jonas Öberg",

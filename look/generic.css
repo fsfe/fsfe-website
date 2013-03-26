@@ -1251,12 +1251,12 @@ a.fn {
 }
 
 #campaign-box-1 {
-    border: 2px solid #AFAFAF;
+/*     border: 2px solid #AFAFAF; */
     border-radius: 7px;
     float: left;
     height: 185px;
     overflow: hidden;
-    padding: 5px;
+/*     padding: 5px; */
     width: 65.5%;
     position: relative;
 }

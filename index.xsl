@@ -123,13 +123,9 @@
       -->
       <div class="banner-border">
         <p>
-          <xsl:call-template name="gettext">
-            <xsl:with-param name="id" select="'cb-restricted-boot'" />
-          </xsl:call-template>
-          <xsl:text> </xsl:text>
-          <a href="/campaigns/generalpurposecomputing/secure-boot-analysis.html">
+          <a href="http://documentfreedom.org">
             <xsl:call-template name="gettext">
-              <xsl:with-param name="id" select="'cb-restricted-boot-link'" />
+              <xsl:with-param name="id" select="'dfd-2013'" />
             </xsl:call-template>
           </a>
         </p>

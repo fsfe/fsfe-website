@@ -84,7 +84,7 @@ our %languages = (
   sk => 'Sloven&#269;ina',
   sl => 'Sloven&#353;&#269;ina',
   sq => 'Shqip',
-  sr => 'Srpski',
+  sr => '&#1057;&#1088;&#1087;&#1089;&#1082;&#1080;',
   sv => 'Svenska',
   tr => 'T&#252;rk&#231;e',
 );

@@ -108,8 +108,7 @@
     <xsl:element name="link">
       <xsl:attribute name="rel">apple-touch-icon</xsl:attribute>
       <xsl:attribute name="href">
-        <xsl:value-of select="$urlprefix"/>/graphics/touch-icon.png
-      </xsl:attribute>
+        <xsl:value-of select="$urlprefix"/>/graphics/touch-icon.png</xsl:attribute>
       <xsl:attribute name="type">image/png</xsl:attribute>
     </xsl:element>
     

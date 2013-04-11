@@ -123,9 +123,9 @@
       -->
       <div class="banner-border">
         <p>
-          <a href="http://documentfreedom.org">
+          <a href="http://www.defectivebydesign.org/no-drm-in-html5">
             <xsl:call-template name="gettext">
-              <xsl:with-param name="id" select="'dfd-2013'" />
+              <xsl:with-param name="id" select="'no-drm-in-html5'" />
             </xsl:call-template>
           </a>
         </p>

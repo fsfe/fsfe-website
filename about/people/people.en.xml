@@ -33,10 +33,10 @@
     <avatar>/about/arnold/arnold-avatar.jpg</avatar>
   </person>
 
-  <person id="baillard" avatar="no" teams="main">
+  <person id="baillard" avatar="no" teams="main, fr">
     <name>Leopold Baillard</name>
     <country>DE</country>
-    <function>intern/m</function>
+    <function country="FR"></function>
     <email>baillard (at) fsfeurope (dot) org</email>
     <avatar>/about/baillard/baillard-avatar.jpg</avatar>
   </person>

@@ -104,13 +104,9 @@
       </xsl:attribute>
       <xsl:attribute name="type">image/x-icon</xsl:attribute>
     </xsl:element>
-
-    <xsl:element name="link">
-      <xsl:attribute name="rel">apple-touch-icon</xsl:attribute>
-      <xsl:attribute name="href">
-        <xsl:value-of select="$urlprefix"/>/graphics/touch-icon.png</xsl:attribute>
-      <xsl:attribute name="type">image/png</xsl:attribute>
-    </xsl:element>
+    
+    <link rel="apple-touch-icon" href="{$urlprefix}/graphics/touch-icon.png" type="image/png" />
+    <link rel="apple-touch-icon-precomposed" href="{$urlprefix}/graphics/touch-icon.png" type="image/png" />
     
     <xsl:element name="link">
       <xsl:attribute name="rel">alternate</xsl:attribute>

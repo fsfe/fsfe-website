@@ -22,6 +22,8 @@ a, a:link, a:visited {
   margin: 0;
   padding:0;
   width: auto;
+  border: none;
+  box-shadow: none;
 }
 
 #wrapper-inner {
@@ -34,7 +36,7 @@ a, a:link, a:visited {
 }
 
 #header {
-  height: auto;
+  display: none;
 }
 
 /* We don't need margins for the content */
@@ -42,6 +44,43 @@ a, a:link, a:visited {
   margin: 0;
   padding: 0;
   width: auto;
+}
+
+h1 {
+	font-size: 1.8em;
+	padding: 0;
+	border: 0;
+}
+
+h2 {
+	font-size: 1.4em;
+}
+
+h3 {
+	font-size: 1.2em;
+}
+
+#content p#category {
+	font-size: 1.2em;
+}
+
+#formnl {
+	display: none;
+}
+
+#article-metadata {
+	margin: 0;
+}
+
+#introduction {
+	border: none;
+}
+
+#introduction p, p#introduction {
+	line-height: inherit;
+	margin: 0.8em 0;
+	font-size: 1em;
+	font-style: italic;
 }
 
 /* remove donate box on donation page */
@@ -54,13 +93,33 @@ a, a:link, a:visited {
 }
 
 #footer {
-  font-size: 80%;
-  border: 5px #FFFFFF solid;
+	margin: 0;
+	padding: 0;
+	font-size: 80%;
+	border: 5px #FFFFFF solid;
 }
-
 
 #footer div {
   float: none;
+}
+
+#notice {
+	float: none;
+	margin: 0;
+	width: auto;
+	padding:0;
+}
+
+#notice ul {
+	display: none;
+}
+
+#contact-us-link strong {
+	display: none;
+}
+
+#contact-us-link:after {
+	content: 'Email: office@fsfe.org';
 }
 
 .newsleft dt span, .newsright dt span {

@@ -968,11 +968,16 @@
     <div id="footer">
       <div id="notice">
         <p>
-          Copyright © 2001-2013 <a href="/">Free Software
-        Foundation Europe</a>. <strong>
-        <a href="/contact/contact.html">
-          <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'contact-us'" /></xsl:call-template>
-        </a></strong>.<br />
+        Copyright © 2001-2013 <a href="/">Free Software
+        Foundation Europe</a>. 
+        <span id="contact-us-link">
+		<strong>
+			<a href="/contact/contact.html">
+				<xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'contact-us'" /></xsl:call-template>
+			</a>
+		</strong>
+        </span>
+        .<br />
 
           <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'permission'" /></xsl:call-template><br />
 

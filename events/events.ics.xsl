@@ -38,6 +38,13 @@
     <xsl:text>DTSTART;VALUE=DATE:</xsl:text><xsl:value-of select="$start" /><xsl:call-template name="nl" />
     <xsl:text>DTEND;VALUE=DATE:</xsl:text><xsl:value-of select="$end" /><xsl:call-template name="nl" />
     
+    <xsl:text>URL:</xsl:text>
+    <xsl:choose>
+      <xsl:when test="$page != ''"><xsl:value-of select="$page" /></xsl:when>
+      <xsl:otherwise>http://fsfe.org/events/events.<xsl:value-of select="/buildinfo/@language" />.html</xsl:otherwise>
+    </xsl:choose>
+    <xsl:call-template name="nl" />
+    
     <xsl:text>DESCRIPTION:</xsl:text><xsl:value-of select="normalize-space(body/node())" /><xsl:call-template name="nl" />
 
     <xsl:text>END:VEVENT</xsl:text><xsl:call-template name="nl" />

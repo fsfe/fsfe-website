@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <xsl:stylesheet version="1.0"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:str="http://exslt.org/strings"
+  extension-element-prefixes="str">
   
   <xsl:output method="text" encoding="UTF-8" indent="no" />
   <xsl:strip-space elements="body"/>
@@ -33,7 +35,11 @@
     <!-- Now, the event block -->
     <xsl:text>BEGIN:VEVENT</xsl:text><xsl:call-template name="nl" />
 
-    <xsl:text>SUMMARY:</xsl:text><xsl:value-of select="title" /><xsl:call-template name="nl" />
+    <xsl:text>SUMMARY:</xsl:text>
+    <xsl:call-template name="ical-escape">
+      <xsl:with-param name="text" select="title" />
+    </xsl:call-template>
+    <xsl:call-template name="nl" />
 
     <xsl:text>DTSTART;VALUE=DATE:</xsl:text><xsl:value-of select="$start" /><xsl:call-template name="nl" />
     <xsl:text>DTEND;VALUE=DATE:</xsl:text><xsl:value-of select="$end" /><xsl:call-template name="nl" />
@@ -45,7 +51,11 @@
     </xsl:choose>
     <xsl:call-template name="nl" />
     
-    <xsl:text>DESCRIPTION:</xsl:text><xsl:value-of select="normalize-space(body/node())" /><xsl:call-template name="nl" />
+    <xsl:text>DESCRIPTION:</xsl:text>
+    <xsl:call-template name="ical-escape">
+      <xsl:with-param name="text" select="normalize-space(body/node())" />
+    </xsl:call-template>
+    <xsl:call-template name="nl" />
 
     <xsl:text>END:VEVENT</xsl:text><xsl:call-template name="nl" />
       
@@ -71,6 +81,14 @@
         </xsl:call-template>
       </xsl:for-each>
 	  <xsl:text>END:VCALENDAR</xsl:text>
+  </xsl:template>
+  
+  
+  <xsl:template name="ical-escape">
+    <xsl:param name="text" />
+    
+    <!-- characters to be backslahed: \;, -->
+    <xsl:value-of select="str:replace(str:replace(str:replace($text,'\','\\'),',','\,'),';','\;')" />
   </xsl:template>
 
 </xsl:stylesheet>

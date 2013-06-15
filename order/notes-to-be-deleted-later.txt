@@ -1,29 +1,38 @@
 Resorting <svn>/branches/test/order/ for to
 
 - cleaning up the mess ... done
-- deleting outdated material/data ... done
-- more consistency in paths, filenames, article tags ... done
+(status: old version 28 MB, new version 7 MB)
+
+- moving outdated material/data out of the way ... prepared for deleting
+
+- consistency in paths, filenames, article tags ... done
 
 - adding new articles
-    baby bodies ... done
-    cufflinks
-    gnu-pins
-    bio/fair trade hoodies ... done
+    baby rompers ... done
+    cufflinks ... done
+    gnu-pins ... done
+    bio/fair trade hoodies ... done partially, delivery problems
     tshirt-ilovefs ... done
-    shirt-fsfs-red
-- including more and more better photos (hopefully)
+    shirt-fsfs-red ... done
+
+- including more and better photos ... done
 
 These are just some notes to make life easier for web@ and
 translators@, hopefully.
 
 New directory tree
 
-I mkdired /order/articles/
+Everything is now in /order/articles/
 to distinguish to other $things like /promotion/.
-I mkdired /order/articles/images/thumbnails/
-to store the images consistently.
 
-At /articles/, there should be just one item.en.xml and just
+All data and images, incl. all existing translations, where
+merged into appropiate files/directories in
+/order/articles/[images/[thumbnails]]
+
+In /order/articles/images/[thumbnails/]
+all images are stored and named consistently.
+
+At /articles/, there ist just one item.en.xml and just
 one info.<language>.xml for each language. 
 
 The articles are sorted roughly as they are displayed at
@@ -31,70 +40,64 @@ fsfe.org/order
 There is no technical reason for that, it just should ease
 editing.
 
-Getting rid of /order/<year>/ ... done
+All directories /order/<year>/ can be deleted after having
+moved articles/ into live stage.
 
-All data and images, incl. all existing translations, where
-merged into one appropiate file in
-/order/articles/[images/[thumbnails]]
-
-All outdated data and images was saved at an archive at
-DUS office, beyond svn, for there is no need for a version
+All outdated data and images are saved at an archive at
+DUS office, outside svn, for there is no need for a version
 control.
 
 Questions to web@: 
 
 - in all info.ru.xml, the first character (even before
 the prolog) is ﻿. Is that intended? I didn't deleted it yet.
-
-Gollo takes care
+... Gollo said he would take care.
 
 - Do I suggest correct that the only purpose of 
 'date="<introducing_date>"' at item.en.xml and        
 <xsl:sort select="@date" order="descending"/> at order.xsl
 is to sort the articles?
-
-Gollo agrees.
+... Gollo confirmed this.
 
 - How to proceed on? First asking translators@ to take care
 of the few changes, then moving to production branch, ot the
 other way round?
 
-Gollo says: In this special case: Translating in test branch,
+... Gollo said: In this special case: Translating in test branch,
 then moving.
 
 TODO Rainer:
 
-  rename article tags in OTK:
-    tshirt-hacking2-black -> tshirt-hacking-black
-    mug-fellowship -> mug-fellowship-black
-    mug-white -> mug-fellowship-white
-    mug-white -> mug-fellowship-white
-    zipped-fsfs-grey -> hooded-fsfs-grey-zip
-    check all "hoodies"! -> _hooded_-fsfs...
-    ballpen-riva -> ballpen-green
-    ballpen-senator -> ballpen-blue
-  make photos and include new articles
-    hooded-fsfs-blue ... done
-    hooded-fsfs-grey (logo not actual!)
-    baby bodies ... done
-    gnu/plussy cufflinks
-    gnu pins
-    organise better, consistent photos of all articles anyway
-  write one sentence about bio and fair trade for
-    hooded-fsfs-black
-    hooded-fsfs-blue
+explain details about "bio" and "fair trade" standards/labels
+on an different page, to be linked at the appropiate articles.
+
+TODO $whoever:
+
+include in the xslt magic the possibility to set remarks at articles,
+preferable differenciated even for each size:
+
+- "out of stock, deliverable at $date again"
+- "out of stock, won't be produced again"
+- "remaining stock, won't be produced again"
+
+same for to display "Bio"/"Fair Trade" Labels with links.
 
 TODO translators:
   
-As most data could be transferred smoothly, in most cases a
-rough check should be sufficient. .nb and .fr versions are
-just rudimental yet, in other versions some articles are missing
+- As most data could be transferred smoothly, in most cases a
+rough check should be sufficient.
+- .nb and .fr versions are just rudimental yet
+- in other versions some articles are missing
+- please remove "second edition" at tshirt-hacking-black
+- text on back side of girlie-hacking-black has changed
+- add new articles
 
-remarks:
-  remove "second edition" at tshirt-hacking-black
-  text on back side of girlie-hacking-black has changed
-  add new articles
+TODO all:
+
+Discuss whether are "real online shop" is a better solution - and
+which one! Our assortment is growing slowly, but steadily. There
+will come the time where a single html form isn't sufficient anymore.
 
 written by Rainer 2012-10-13
 edited by Rainer 2012-10-14
-[status: old version 28 MB, new version 7 MB]
+edited by Rainer 2013-06-15

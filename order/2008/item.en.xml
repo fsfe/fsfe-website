@@ -19,8 +19,8 @@
   </item>
   <item type="t-shirt" id="tshirt-mdf-green" price="18.00" date="2008-11-02">
     <available size="S"/>
+    <available size="M"/>
     <available size="L"/>
-    <available size="XL"/>
     <available size="XXL"/>
     <image
       small="/order/2008/tshirt-mdf-green-front-small.jpg"
@@ -29,6 +29,7 @@
       small="/order/2008/tshirt-mdf-green-back-small.jpg"
       large="/order/2008/tshirt-mdf-green-back-large.jpg"/>
   </item>
+<!--
   <item type="t-shirt" id="tshirt-dfd-white" price="18.00" date="2008-03-01">
     <available size="L"/>
     <available size="XL"/>
@@ -40,6 +41,7 @@
       small="/order/2008/tshirt-dfd-white-back-small.jpg"
       large="/order/2008/tshirt-dfd-white-back-large.jpg"/>
   </item>
+-->
   <item type="other" id="keyring-fellowship" price="7.00" date="2008-02-23">
     <available size="#"/>
     <image

@@ -1,0 +1,133 @@
+.imgright {
+	float: right;
+	padding-left: 5px;
+}
+
+.imgleft {
+	float: left;
+	padding-right: 5px;
+}
+
+#frame {
+	background-image: url("bk.png");
+	background-repeat: no-repeat;
+	font-size: 85%;
+	height: 1045px;
+	width: 594px;
+}
+
+#story-column {
+	margin: 0 auto;
+	width: 360px;
+}
+
+h1 {
+	font-size: 180%;
+}
+
+h2 {
+	font-size: 110%;
+	padding: 5px 0 30px 0;
+}
+
+.box {
+	height: 95px;
+	margin-top: 10px;
+	width: 100%;
+}
+
+.box p {
+	padding-top: 10px;
+}
+
+.g1 {
+	width: 100%;
+	margin: 0;
+}
+
+.g2 {
+	width: 360px;
+	margin-left: 100px;
+}
+
+.g3 {
+	width: 390px;
+	margin-left: 30px;
+}
+
+.g3 p {
+	padding-top: 22px;
+}
+
+.g4 {
+	margin-left: 160px;
+	width: 240px;
+}
+
+.g4 img {
+	margin: 25px 0 0 215px;
+	position: absolute;
+}
+
+.g5 {
+	width: 400px;
+}
+
+.g5 img {
+	padding-right: 20px;
+}
+
+.g5 p {
+	padding-top: 30px;
+}
+
+.g6 {
+	margin-left: 100px;
+}
+			
+.g6 p {
+	padding-top: 30px;
+}
+
+.g6 img {
+	margin-top: -10px;
+}
+
+.g7 {
+	height: 248px;
+	margin: -70px 0 0 -100px;
+	width: 580px;
+}
+
+.g7 p {
+	background-image: url("7b.png");
+	background-position: 80px 55px;
+	background-repeat: no-repeat;
+	font-size: 130%;
+	height: 100px;
+	padding: 150px 0 0 220px;
+	width: 320px;
+}
+
+#g7 img {
+	padding-right: 20px;
+}
+
+#inline-footer {
+	background-color: rgb(230,230,230);
+	height: 155px;
+}
+
+#join {
+	float: left;
+	padding: 30px 10px 30px 30px;
+	width: 53%;
+}
+
+#logos {
+	padding-top: 25px;
+}
+
+#fsfelogo {
+	margin-left: -14px;
+}

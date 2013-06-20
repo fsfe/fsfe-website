@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html newsdate="2009-10-19">
+<head>
+  <title>
+        Windows 7 to hit consumers with known security problem
+  </title>
+</head>
+<body>
+
+  <h1>Windows 7 to hit consumers with known security problem</h1>
+	<h2>FSFE: Microsoft's neglect highlights value of Free Software</h2>
+
+  <p newsteaser="yes">
+  Microsoft's latest operating system, Windows 7, is currently
+  shipping with a potentially serious defect. Ahead of the product's
+  global launch on Thursday, Germany's federal IT security agency
+  (BSI) has issued a warning <a href="#foot1" id="anchor1">[1]</a> about a high-risk vulnerability in
+  the SMB2 protocol. This can be exploited over the network to shut
+  down a computer with a Denial of Service (DoS) attack.
+</p><p>
+  This incident illustrates how proprietary software often poses a
+  security risk. "Only Microsoft can fix the problem. But they have
+  apparently closed their eyes to this vulnerability for a long time,
+  hoping that it wouldn't spoil the retail launch of Windows 7 this
+  Thursday," says Karsten Gerloff, President of the Free Software
+  Foundation Europe (FSFE).
+</p><p>
+  Following responsible disclosure practices, the BSI has not
+  published details in its announcement (<a href="#bsi">English translation below</a>)
+  from October 6. While it is generally a good strategy to give
+  vendors time to repair vulnerabilities before announcing them
+  publicly, in this case the BSI should consider publishing the full
+  details of the problem to put more pressure on Microsoft. The agency
+  says that the security hole affects Windows 7 and Windows Vista in
+  both their 32-bit and 64-bit versions, as well as Windows Server
+  2008. This vulnerability is different from an earlier SMB2 issue <a href="#foot2" id="anchor2">[2]</a>
+  for which Microsoft published the patch MS09-050 in September.
+</p><p>
+  FSFE's Gerloff explains: "Microsoft's software locks its users in,
+  so they have to stay even if the company knowingly exposes them to a
+  security risk like this. With Free Software like GNU/Linux -
+  software that you can study, share and improve - several independent
+  entities can fix the problem. Consumers should not support
+  Microsoft's negligent behaviour by buying its products. Free
+  Software offers an alternative, and is available from many
+  independent vendors."
+</p><p>
+  Microsoft has not yet responded to the BSI's warning. There is no
+  indication that the company will manage to fix the gaping hole in
+  its flagship operating system before the global launch of Windows 7
+  this Thursday. The vulnerability remains open even after Microsoft's
+  October patch day.
+</p><p>
+  The company's security practices have long been a cause for
+  concern. In just one recent incident <a href="#foot3" id="anchor3">[3]</a>, Microsoft knew about
+  another vulnerability in SMB2 since July 2009. While it did fix the
+  problem in the final version of Windows 7 in early August, it did
+  nothing to repair the same problem in Windows Vista or Windows
+  Server 2008 until an independent security researcher went public
+  about the issue. German IT news site Heise speculates that the issue
+  ended up on a Microsoft-internal list of low-priority bugs which the
+  company tries to fix silently, in order to avoid negative publicity.
+</p><p>
+
+<a href="#anchor1" id="foot1">[1]</a> <a href="https://www.cert-bund.de/advisoryshort/CB-K09-0315%20UPDATE%201">Germany's federal IT security agency (BSI) has issued a warning</a><br />
+<a href="#anchor2" id="foot2">[2]</a> <a href="http://www.microsoft.com/technet/security/advisory/975497.mspx">Microsoft Security Advisory (975497): Vulnerabilities in SMB Could Allow Remote Code Execution</a><br />
+<a href="#anchor3" id="foot3">[3]</a> <a href="http://www.h-online.com/security/news/item/Microsoft-has-known-of-the-SMB2-hole-for-some-time-832175.html"> Microsoft has known of the SMB2 hole for some time </a>
+</p>
+
+ 
+
+<hr />
+
+<h2 id="bsi">Translation of the BSI's security advisory: </h2>
+<p>
+Threat level: "4 high risk" (out of 1-5, with 5 being "very high").<br />
+Title:  Microsoft Windows SMB2-Protocol: Another vulnerability allows denial
+of service (Windows Vista and Windows 7 vulnerable).<br />
+  Date:  2009-10-06<br />
+  Software:  Microsoft Windows 7, Microsoft Windows 7 x64 Edition, Microsoft
+Windows Vista / SP1 / SP2, Microsoft Windows Vista x64 Edition / SP1 / SP2,
+Microsoft Windows Server 2008<br />
+  Platform:  Windows<br />
+  Effect:  Denial-of-Service<br />
+  Remoteexploitable:  Yes<br />
+  Risk:  high<br />
+  Reference:   internal research<br />
+Description:
+</p>
+<p>
+Server Message Block (SMB) is a protocol which enables shared access
+to printers and files. SMB2 is a new version of this protocol, which
+was introduced with Windows Vista and Windows Server 2008, and which
+is also available on Windows 7. Current implementations of SMB2 are
+affected by this vulnerability. This is a new vulnerability, not the
+one described in Microsoft Security Advisory 975497. The listed
+operating systems can therefore still be successfully attacked even
+after installation of the updates of Microsoft's October patchday
+(MS09-050). 
+</p><p>
+Currently there is no update or patch available from the vendor. The
+only recommended actions are to be aware of and track the
+vulnerability. As a workaround it can only be recommended to limit
+access to SMB2 servers to trusted systems by firewalls, or to disable
+the SMB2 service.
+	</p>
+
+  </body>
+  <timestamp>$Date$ $Author$</timestamp>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

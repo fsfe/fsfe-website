@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html newsdate="2012-09-20">
+	<author id="tuke" />
+	<date>
+		<revision content="2012-09-28" />
+		<original content="2012-09-20" />
+	</date>
+	<head>
+		<title>Results: Free Software voice &amp; video testing</title>
+		<style type="text/css" title="currentStyle">
+			@import "/scripts/data-tables/media/css/demo_page.css"; @import "/media/css/header.ccss";
+			@import "/scripts/data-tables/media/css/demo_table.css";
+		</style>
+		<script type="text/javascript" src="/scripts/data-tables/media/js/jquery.js"></script>
+		<script type="text/javascript" src="/scripts/data-tables/media/js/jquery.dataTables.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function() {
+			$('#results').dataTable( {
+			"aoColumnDefs": [
+				{ "bVisible": false, "aTargets": [ 2 ] },
+				{ "bVisible": false, "aTargets": [ 4 ] },
+				{ "bVisible": false, "aTargets": [ 11 ] },
+				{ "bVisible": false, "aTargets": [ 12 ] },
+				{ "bVisible": false, "aTargets": [ 13 ] }
+			] } );
+		} );
+		</script>
+	</head>
+	
+	<body>
+		<h1>Results: Free Software voice &amp; video testing</h1>
+		
+		<p newsteaser="yes">Last weekend on Software Freedom Day the Manchester FSFE Fellowship group, assisted by additional participants in Britain and Germany, spent the afternoon <a href="http://etherpad.fsfe.org/j2uametMf3">testing Free Software alternatives to Skype</a>.</p>
+		
+		<h3>Results</h3>
+		
+		<p>The 25 sets of results were recorded, and can be browsed, sorted, and searched <a href="#id-table">below</a>.</p>
+		
+		<p>Six audio tests successfully passed (24%), as did five video tests (20%). <a href="http://mumble.sourceforge.net/FAQ#What_is_Mumble.3F">Mumble</a> was the most successful client, passing 100% of tests (audio only, video is not yet supported). XMPP passed four out of 14 audio tests, whereas SIP passed only one out of ten (both video and audio). Of nine apps tested, only Mumble, <a href="http://www.pidgin.im/">Pidgin</a>, <a href="https://jitsi.org/">Jitsi</a>, and Google Talk's web client achieved passes.</p>
+		
+		<h3>Conclusions</h3>
+		
+		<p>The clients tested performed more poorly than expected, probably due to network problems. One of the difficulties in testing was that generally there was little or no information about why the test had failed.</p>
+		
+		<p>SIP clients couldn't connect successfully except when both testers used the same client, and had accounts on the same SIP server. This was surprising, especially considering that the accounts used for testing were is many cases paid for and commercially supported.</p>
+		
+		<p>The only client and protocol which consistently did what it promised was Mumble, which had 100% test pass rate. Unlike all other clients, Mumble uses its own protocol, and also offers audio conferencing and text-to-speech by default. Mumble users are constrained to using the same server however, unlike SIP and XMPP users who should theoretically each be able to use a separate server of their choice.</p>
+		
+		<p>It would have been useful to have a local SIP and XMPP server on the same network as the testers in order to better identify network related problems. This could have helped determine whether failures stemmed from the client, network, or server..</p>
+		
+		<p>Examining <a hfer="https://en.wikipedia.org/wiki/STUN">STUN</a> and <a href="https://en.wikipedia.org/wiki/Interactive_Connectivity_Establishment">ICE</a> configurations was beyond the scope of our tests, but as these technologies seem critical to whether calls succeed or fail, they merit careful examination when choosing or configuring SIP and XMPP servers.</p>
+		
+		<p>FSFE Fellows will be pleased to note that XMPP calls using <a href="http://wiki.fsfe.org/XMPP">FSFE's own XMPP server</a> were often successful: several volunteers could see and hear each other when both were using their @jabber.fsfe.org accounts.</p>
+		
+		<h3>A Skype alternative?</h3>
+		
+		<p>Skype uses a <a href="http://computerworld.co.nz/news.nsf/news/7AB67323D6305E49CC2570A1001698C0">variety</a> of <a href="http://www.h-online.com/security/features/How-Skype-Co-get-round-firewalls-747197.html">notorious</a> methods to punch through network obstacles like firewalls, and to ensure it can locate the intended call recipient wherever they may be. It also benefits from being a centralised system where, if necessary, all roads lead to Rome (or a Skype managed server, at least).</p>
+		
+		<p>Contrastingly, Free Software systems play by conventional rules of network traffic, and try and connect callers using established procedures. They also have to communicate with a variety of different servers, which may operate in ways they don't know or expect. In addition to this, some of the chat clients that we tested have only recently added support for more than text-based chatting (<a href="http://gajim.org/">Gajim</a> in Debian testing is too old for video, for example), and probably add a few problems of their own into the mix.</p>
+		
+		<p>Based on our test results, those looking for a Free Software Skype alternative should use either Mumble, or SIP with all callers on the same server and using the same client.</p>
+		
+		<h3>Moving Forward</h3>
+		
+		<p>We had hoped to publish a conclusive compatibility table of chat clients, providing a reference for people needing to know "what works with what", and "what is easiest". Instead, we have table of subjective results, and a list of questions:</p>
+		
+		<ul>
+			<li>How can we determine whether an XMPP server supports audio and video ('<a href="https://en.wikipedia.org/wiki/Jingle_%28protocol%29">Jingle</a>')?</li>
+			<li>How can we gather more detailed information about why a call failed?</li>
+			<li>How can we determine whether a SIP or XMPP server supports STUN (and should therefore be less prone to network issues)?</li>
+		</ul>
+		
+		<p><strong>If you have answers to these questions, please share them in the comments of the <a href="http://blogs.fsfe.org/samtuke/?p=414">blog edition</a> of this article.</strong></p>
+		
+		<h3>Table</h3>
+		
+		<p>More data is available in the table source code.</p>
+		
+		<style>
+		#results_length {
+			float:left;
+		}
+		#results_filter {
+			float: right;
+		}
+		#results_info {
+		clear: left;
+		float:left;
+		}
+		#results_info {
+			clear: left;
+			float:left;
+		}
+		#results_paginate {
+			float: right;
+		}
+		</style>
+		
+		<table style="clear:both; float:left;" cellpadding="0" cellspacing="0" border="0" class="display" id="results">
+
+			<thead>
+				<tr>
+					<th>From Client</th>
+					<th>From OS</th>
+					<th>From DE</th>
+					<th>To Client</th>
+					<th>To OS</th>
+					<th>To DE</th>
+					<th>Report</th>
+					<th>Local</th>
+					<th>type</th>
+					<th>Audio</th>
+					<th>Video</th>
+					<th>Notes</th>
+					<th>Account 1</th>
+					<th>Account 2</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Pidgin 2.7.3</td>
+					<td>Crunchbang</td>
+					<td>openbox</td>
+					<td>Pidgin 2.1</td>
+					<td>Fedora 17</td>
+					<td>Gnome</td>
+					<td>Anna</td>
+					<td>true</td>
+					<td>XMPP</td>
+					<td>pass</td>
+					<td>pass</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Pidgin 2.7.3</td>
+					<td>Crunchbang</td>
+					<td>openbox</td>
+					<td>gajim 0.15</td>
+					<td>Fedora 17</td>
+					<td>Gnome</td>
+					<td>Anna</td>
+					<td>true</td>
+					<td>XMPP</td>
+					<td>fail</td>
+					<td>pass</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Jitsi 1.0-build.3967</td>
+					<td>Ubuntu 12.04</td>
+					<td>Gnome/Unity</td>
+					<td>Gajim 0.15</td>
+					<td>Fedora 17</td>
+					<td>Gnome</td>
+					<td>Jamie</td>
+					<td>true</td>
+					<td>XMPP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td>Options were greyed out on Gajim</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Pidgin 2.10.6</td>
+					<td>Ms Win XP</td>
+					<td>na</td>
+					<td>Pidgin 2.7.3</td>
+					<td>crunchbang</td>
+					<td> openbox</td>
+					<td>David</td>
+					<td>false</td>
+					<td>XMPP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Empathy 3.4.2.3</td>
+					<td>Fedora 17</td>
+					<td>Gnome</td>
+					<td>Empathy 3.4.2.3</td>
+					<td>Ubuntu 12.04</td>
+					<td>Gnome/Unity</td>
+					<td>Sam</td>
+					<td>true</td>
+					<td>XMPP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td>only text chat worked - no indication of a call request was received for either video or voice calls</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>snom220 hardphone snom220-SIP 3.56z</td>
+					<td>Snom Linux</td>
+					<td>NA</td>
+					<td> </td>
+					<td></td>
+					<td></td>
+					<td>Wookey</td>
+					<td>false</td>
+					<td>SIP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td>call connection failed: 'No such domain' - local DNS failure</td>
+					<td>3858102@SIPgate.co.uk</td>
+					<td>wellybob@jabber.me</td>
+				</tr>
+				<tr>
+					<td>snom220 hardphone snom220-SIP 3.56z</td>
+					<td>Snom Linux</td>
+					<td>NA</td>
+					<td> </td>
+					<td></td>
+					<td></td>
+					<td>wookey</td>
+					<td>false</td>
+					<td>SIP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td>call connection failed: 'No such domain' - local DNS failure</td>
+					<td>3858102@SIPgate.co.uk</td>
+					<td>samtuke@SIP.linphone.org</td>
+				</tr>
+				<tr>
+					<td>snom220 hardphone snom220-SIP 3.56z</td>
+					<td>Snom Linux</td>
+					<td>NA</td>
+					<td>n900 app</td>
+					<td>Maemo 5</td>
+					<td>hildon</td>
+					<td>wookey</td>
+					<td>false</td>
+					<td>SIP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td>call connection failed: 'No such domain' - local DNS failure</td>
+					<td>3858102@SIPgate.co.uk</td>
+					<td>2542654@localphone.com</td>
+				</tr>
+				<tr>
+					<td>n900 21.2011.38-1</td>
+					<td>Maemo 5</td>
+					<td>Hildon</td>
+					<td>linphone</td>
+					<td></td>
+					<td></td>
+					<td>wookey</td>
+					<td>false</td>
+					<td>SIP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td>call connection failed: 'unable to call, contact offline</td>
+					<td>9178850@SIPgate.co.uk</td>
+					<td>samtuke@SIP.linphone.org</td>
+				</tr>
+				<tr>
+					<td>n900 21.2011.38-1</td>
+					<td>Maemo 5</td>
+					<td>Hildon</td>
+					<td>n900 app</td>
+					<td>Maemo 5</td>
+					<td>hildon</td>
+					<td>wookey</td>
+					<td>false</td>
+					<td>SIP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td>call connection failed: 'unable to call, contact offline</td>
+					<td>9178850@SIPgate.co.uk</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>n900 21.2011.38-1</td>
+					<td>Maemo 5</td>
+					<td>Hildon</td>
+					<td>snom220 hardphone snom220-SIP 3.56z</td>
+					<td>Snom Linux</td>
+					<td>NA</td>
+					<td>Sam</td>
+					<td>false</td>
+					<td>SIP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td>call connection failed: no response&quot; 1st time, call unauthorised 2nd time&quot;</td> <td>samtuke@SIP.linphone.org | 2542654@localphone.com</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>n900 21.2011.38-1</td>
+					<td>Maemo 5</td>
+					<td>Hildon</td>
+					<td>n900 21.2011.38-1</td>
+					<td>Maemo 5</td>
+					<td>Hildon</td>
+					<td>Sam</td>
+					<td>false</td>
+					<td>SIP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td>call connection failed</td>
+					<td>samtuke@SIP.linphone.org | 2542654@localphone.com</td>
+					<td>3858102@SIPgate.co.uk</td>
+				</tr>
+				<tr>
+					<td>Jitsi 1.0-build.3967</td>
+					<td>Ubuntu 12.04</td>
+					<td>Gnome/Unity</td>
+					<td>Jitsi 1</td>
+					<td>Fedora 17</td>
+					<td>Gnome</td>
+					<td>Jamie</td>
+					<td>true</td>
+					<td>XMPP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td>ICE failed</td>
+					<td>9178850@SIPgate.co.uk</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Pidgin unknown</td>
+					<td>Ubuntu 12.04</td>
+					<td>Gnome/Unity</td>
+					<td>Pidgin 2.1</td>
+					<td>Fedora 17</td>
+					<td>Gnome</td>
+					<td>Jamie</td>
+					<td>true</td>
+					<td>XMPP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td>ICE failed</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>mumble 1.2.3</td>
+					<td>Fedora 17</td>
+					<td>Gnome</td>
+					<td>Murmur murmur-static_x86-1.2.3-412</td>
+					<td>Debian Wheezy</td>
+					<td></td>
+					<td>Sam</td>
+					<td>false</td>
+					<td>mumble</td>
+					<td>pass</td>
+					<td>na</td>
+					<td>using bens server, it just works</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Pidgin 2.7.3</td>
+					<td>Crunchbang</td>
+					<td>openbox</td>
+					<td>kopete 1.2.5</td>
+					<td>Fedora 17</td>
+					<td>Gnome</td>
+					<td>Anna</td>
+					<td>true</td>
+					<td>XMPP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td>kopete couldn't initiate call with pidigin, only pidgin could initiate with kopete</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Kopete 1.0.0</td>
+					<td>Crunchbang</td>
+					<td>openbox</td>
+					<td>Pidgin 2.1</td>
+					<td>Fedora 17</td>
+					<td>Gnome</td>
+					<td>Anna</td>
+					<td>true</td>
+					<td>XMPP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Jitsi 1.0-build.3967</td>
+					<td>OSX 10.6.8</td>
+					<td>NA</td>
+					<td>Pidgin? ?</td>
+					<td>Ubuntu</td>
+					<td>KDE</td>
+					<td>Robin</td>
+					<td>false</td>
+					<td>XMPP</td>
+					<td>pass</td>
+					<td>pass</td>
+					<td>notes</td>
+					<td> </td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Jitsi 1.0-build.3967</td>
+					<td>OSX 10.6.8</td>
+					<td>NA</td>
+					<td>Jitsi 1.0-build.3967</td>
+					<td>Fedora</td>
+					<td>Gnome</td>
+					<td>Robin</td>
+					<td>true</td>
+					<td>SIP</td>
+					<td>pass</td>
+					<td>pass</td>
+					<td>Audio one one was pretty garbled, both using SIP2SIP</td>
+					<td> </td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Jitsi 1.0-build.3967</td>
+					<td>OSX 10.6.8</td>
+					<td>NA</td>
+					<td>Jitsi 1.0-build.3967</td>
+					<td>Fedora</td>
+					<td>Gnome</td>
+					<td>Robin</td>
+					<td>true</td>
+					<td>SIP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td>failed using different servers: SIP2SIP and localphone</td>
+					<td> </td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>linphone 3.5.2</td>
+					<td>Fedora 17</td>
+					<td>Gnome</td>
+					<td>Jitsi 1.0-build.3967</td>
+					<td>OSX 10.6.8</td>
+					<td>NA</td>
+					<td>Sam</td>
+					<td>true</td>
+					<td>SIP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td>failed using different servers: SIP2SIP and linphone</td>
+					<td> </td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Pidgin 2.10.3</td>
+					<td>Kubuntu 12.04</td>
+					<td>KDE</td>
+					<td>Google Talk, webclient ???</td>
+					<td>OSX, Android</td>
+					<td>NA</td>
+					<td>Steffi</td>
+					<td>true</td>
+					<td>XMPP</td>
+					<td>pass</td>
+					<td>pass</td>
+					<td> </td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Pidgin 2.10.3</td>
+					<td>Kubuntu 12.04</td>
+					<td>KDE</td>
+					<td>Google Talk, webclient ???</td>
+					<td>???</td>
+					<td>NA</td>
+					<td>Steffi</td>
+					<td>false</td>
+					<td>XMPP</td>
+					<td>pass</td>
+					<td>fail</td>
+					<td>Video was fine, audio worked but the quality was very low</td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Psi 0.14</td>
+					<td>Fedora 17</td>
+					<td>Gnome</td>
+					<td>psi+ 0.15.5337</td>
+					<td>OSX</td>
+					<td>NA</td>
+					<td>Sam</td>
+					<td>true</td>
+					<td>XMPP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Psi/Psi+ v0.15.5339-webkit</td>
+					<td>Fedora 17</td>
+					<td>Gnome</td>
+					<td>psi+ Psi+ v0.15.3910</td>
+					<td>KKubuntu 12.04</td>
+					<td>KDE</td>
+					<td>Sam</td>
+					<td>true</td>
+					<td>XMPP</td>
+					<td>fail</td>
+					<td>fail</td>
+					<td>auth requests never appeared, voice chat enabled via pssimedia client</td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+
+	</body>
+
+	<tags>
+		<tag>front-page</tag>
+		<tag>gb</tag>
+		<tag>manchester</tag>
+		<tag>sfd</tag>
+		<tag>xmpp</tag>
+		<tag>sip</tag>
+		<tag>madlab</tag>
+		<tag>fellowship</tag>
+		<tag>workshop</tag>
+	</tags>
+
+</html>

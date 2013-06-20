@@ -1,0 +1,38 @@
+#frame {
+	background-image: url("ie/bk.gif");
+}
+
+.g7 p {
+	background-image: url("ie/7b.gif");
+}
+
+.noie {
+	display: none;
+}
+
+.g2 {
+	margin-left: 250px;
+}
+
+.g3 {
+	margin-left: 160px;
+	width: 400px;
+}
+
+.g4 {
+	margin-left: 280px;
+}
+
+.g6 {
+	padding-top: 50px;
+	margin: -50px 0 0 180px;
+}
+
+.g7 img {
+	margin: 50px 0 0 110px;
+}
+
+.g7 p {
+	margin: -235px 0 0 150px;
+	width: 320px;
+}

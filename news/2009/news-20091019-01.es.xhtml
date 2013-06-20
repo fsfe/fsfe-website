@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html newsdate="2009-10-19">
+<head>
+  <title>
+    Windows 7 llegará a los consumidores con un problema de seguridad conocido
+        
+  </title>
+</head>
+<body>
+
+  <h1>Windows 7 llegará a los consumidores con un problema de seguridad conocido</h1>
+	<h2>FSFE: La negligencia de Microsoft pone de relieve el valor del Software Libre</h2>
+
+  <p newsteaser="yes">
+  El último sistema operativo de Microsoft, Windows 7, se está comercializando actualmente con un defecto potencialmente serio. Con anterioridad al lanzamiento mundial de éste jueves, la Agencia Federal Alemana para la Seguridad en Tecnologías de la Información ha emitido un aviso <a href="#foot1" id="anchor1">[1]</a> acerca de una vulnerabilidad de alto riesgo en el protocolo SMB2. Puede ser explotado en una red para apagar un ordenador mediante un ataque de denegación de servicio (DoS).
+</p><p>
+  Esta incidencia ilustra cómo el software privativo a menudo supone un riesgo de seguridad. "Sólo Microsoft puede arreglar el problema. Pero aparentemente han cerrado los ojos a esta vulnerabilidad durante un tiempo prolongado, esperando que no se frustrase el lanzamiento comercial de Windows 7 este jueves", dice Karsten Gerloff, Presidente de la Free Software Foundation Europa (FSFE).
+</p><p>
+Siguiendo las prácticas responsables de confidencialidad, la BSI no ha publicado los detalles en su comunicado del 6 de octubre (traducción a Español más abajo). Aunque es generalmente una buena estrategia dar tiempo a los fabricantes para reparar las vulnerabilidades antes de anunciarlas públicamente, en este caso la BSI debería considerar publicar todos los detalles del problema para aplicar más presión a Microsoft. La agencia dice que el agujero de seguridad afecta a Windows 7 y a Windows Vista en sus versiones tanto de 32 bits como de 64 bits, así como en Windows Server 2008. Ésta vulnerabilidad es diferente de una incidencia anterior en SMB2 <a href="#foot2" id="anchor2">[2]</a> para la que Microsoft publicó el parche MS09-050 en septiembre.
+</p><p>
+Gerloff, de FSFE, explica: "El software de Microsoft bloquea a los usuarios con esa empresa, de modo que tienen que permanecer con ella incluso si la compañía les expone, conociéndolo, a un riesgo de seguridad como éste. Con Software Libre como GNU/Linux - software que usted puede estudiar, compartir y mejorar - varias entidades independientes pueden arreglar el problema. Los consumidores no deberían apoyar el comportamiento negligente de Microsoft comprando sus productos. El Software Libre ofrece una alternativa, y está disponible en muchos fabricantes independientes".
+</p><p>
+Microsoft no ha respondido aun al viso de BSI. No hay indicio de que la compañía sea capaz de arreglar el agujero en su sistema operativo estandarte antes de la fecha de lanzamiento muncial de Windows 7 éste jueves. La vulnerabilidad permanece abierta incluso tras la jornada de parcheo Microsoft de Octubre.
+</p><p>
+Las prácticas de seguridad de la compañía han sido motivo de preocupación desde hace tiempo. En otra incidencia reciente <a href="#foot3" id="anchor3">[3]</a>, Microsoft supo de otra vulnerabilidad en SMB2 desde julio de 2009. Aunque arregló el problema en la versión final de Windows 7 al principio de agosto, no hizo nada para reparar el mismo problema en Windows Vista o Windows Server 2008 hasta que un investigador de seguridad independiente hizo pública la incidencia. El sitio web sobre informática, Heise, especula sobre la posibilidad de que la  incidencia terminase en una lista de errores interna de Microsoft, de baja prioridad, que la compañía trata de arreglar silenciosamente para evitar publicidad negativa.
+</p><p>
+
+<a href="#anchor1" id="foot1">[1]</a> <a href="https://www.cert-bund.de/advisoryshort/CB-K09-0315%20UPDATE%201">La Agencia Federal Alemana para la Seguridad en Tecnologías de la Información ha emitido un aviso</a><br />
+<a href="#anchor2" id="foot2">[2]</a> <a href="http://www.microsoft.com/technet/security/advisory/975497.mspx">
+
+Aviso de Seguridad Microsoft (975497): Vulnerabilidades en SMB podrían permitir ejecución remota de código</a><br />
+<a href="#anchor3" id="foot3">[3]</a> <a href="http://www.h-online.com/security/news/item/Microsoft-has-known-of-the-SMB2-hole-for-some-time-832175.html"> Microsoft ha conocido el agujero SMB2 desde hace cierto tiempo</a>
+</p>
+<hr />
+
+<h2 id="bsi">Traducción del comunicado de seguridad de BSI: </h2>
+<p>
+  Nivel de amenaza: "4 alto riesgo" (rango 1-5, siendo 5 "muy alto").<br />
+  Título:  Protocolo Microsoft Windows SMB2: Otra vulnerabilidad permite denegación de servicio (Windows Vista y Windows 7).<br />
+  Fecha:  06-10-2009<br />
+  Software:  Microsoft Windows 7, Microsoft Windows 7 x64 Edition, Microsoft 
+Windows Vista / SP1 / SP2, Microsoft Windows Vista x64 Edition / SP1 / SP2, 
+Microsoft Windows Server 2008<br />
+  Platforma:  Windows	<br />
+  Efecto:  Denegación-de-Servicio<br />
+  Explotable remotamente:  Sí<br />
+  Riesgo:  alto<br />
+  Referencia:   investigación interna<br />
+  Descripción:
+</p>
+<p>
+Server Message Block (SMB) es un protocolo que permite acceso compartido a impresoras y archivos. SMB2 es una nueva versión de este protocolo, que se ha presentado en Windows Vista y Windows Server 2008, y que está también disponible en Windows 7. Las implementaciónes actuales de SMB2 están afectadas por esta vulnerabilidad. Esta es una nueva vulnerabilidad, no la descrita en Microsoft Security Advisiry 975497. Los sistemas operativos enumerados pueden ser atacados, por lo tanto, incluso tras la instalación de las actualizaciones del Microsoft's October patchday (MS09-050). 
+</p><p>
+En este momento no existe actualización o parche disponible por parte del fabricante. Las únicas acciones recomendadas son ser conscientes y hacer un seguimiento de la vulnerabilidad. Como solución sólo puede recomendarse limitar el acceso en los servidores SMB2 a sistemas confiables mediante el uso de cortafuegos, o desactivar el servicio SMB2.
+</p>
+  </body>
+  <timestamp>$Date$ $Author$</timestamp>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

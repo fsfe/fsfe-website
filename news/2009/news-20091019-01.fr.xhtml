@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html newsdate="2009-10-19">
+<head>
+  <title>
+	Windows 7 va nuire à ses consommateurs avec un problème de sécurité connu
+  </title>
+</head>
+<body>
+
+  <h1>Windows 7 va nuire à ses consommateurs avec un problème de sécurité connu</h1>
+	<h2>FSFE: La négligence de Microsoft met en valeur les bénéfices du Logiciel Libre</h2>
+
+  <p newsteaser="yes">Le dernier système d'exploitation de Microsoft, Windows 7, est actuellement livré avec un défaut potentiellement grave. Avant la sortie mondiale du produit jeudi, l'agence fédérale de sécurité en TIC allemande (BSI) a émis un avertissement <a href="#foot1" id="anchor1">[1]</a> à propos d'un risque élevé de vulnérabilité dans le protocole SMB2. Cette vulbérabilité peut être exploitée à travers le réseau pour mettre à l'arrêt un ordinateur avec une attaque de déni de service (Denial of Service, DoS).</p>
+
+<p>Cet incident illustre comment le logiciel propriétaire représente souvent un risque de sécurité. &#171;&#160;Seul Microsoft peut régler le problème. Mais apparemment, ils ont fermé les yeux sur cette vulnérabilité depuis un long moment, espérant que cela ne gâcherait pas le lancement des ventes de Windows 7 dès jeudi&#160;&#187; estime Karsten Gerloff, Président de la Free Software Foundation Europe (FSFE).</p>
+
+<p>Suivant des pratiques de divulgation responsables, la BSI n'a pas publié de détails dans son annonce (<a href="#bsi">traduite en français ci-après</a>) le 6 octobre. Alors que c'est généralement une bonne stratégie de donner au vendeur le temps de réparer les vulnérabilités avant de les annoncer publiquement, il semblerait dans ce cas que la BSI devrait considérer de publier tous les détails afin de mettre plus de pression sur Microsoft. L'agence dit que la faille de sécurité affecte Windows 7 et Windows Vista tant dans leur version 32-bits que dans leur versions 64-bits, ainsi que Windows Server 2008. Cette vulnérabilité est encore différente d'une autre moins récente concernant SMB2 <a href="#foot2" id="anchor2">[2]</a> pour laquelle Microsoft a publié le correctif MS09-050 en septembre.
+</p>
+
+<p>Le Président de la FSFE, Karsten Gerloff, explique&#160;: &#171;&#160;Les logiciels de Microsoft enferme ses utilisateurs afin qu'ils soient bloqués même si la compagnie les expose à un risque de sécurité comme celui-ci en toute connaissance de cause. Avec du Logiciel Libre comme GNU/Linux - que vous pouvez étudier, partager et améliorer - de nombreuses entités indépendantes peuvent régler le problème. Les consommateurs ne devraient pas avoir à encourager le comportement négligent de Microsoft en achetant ses produits. Le Logiciel Libre offre une alternative, et est disponible auprès de nombreux fournisseurs indépendants.&#160;&#187; 
+</p>
+
+<p>Microsoft n'a pas encore répondu à l'avertissement de la BSI. Il n'y a aucun signe que la compagnie réussira à réparer la faille de sécurité dans son système d'exploitation phare avant le lancement mondial de Windows 7 ce jeudi. La vulnérabilité reste entière même après les correctifs apportés par Microsoft en octobre.
+</p>
+
+<p>Les pratiques de la compagne en matière de sécurité ont longtemps été la cause d'inquiétudes. Dans un incident récent <a href="#foot3" id="anchor3">[3]</a>, Microsoft avait connaissance d'une autre vulnérabilité dans SMB2 depuis juillet 2009. Alors que le problème était bien corrigé pour la version finale de Windows 7 plus tôt en août, rien n'a été fait pour réparer le même problème connu dans Windows Vista et Windows Server 2008 tant qu'un chercheur indépendant en sécurité ne révèle publiquement cette faille. Heise, site allemand dédié aux TIC, avance que le problème a terminé chez Microsoft dans une liste interne de bugs peu prioritaires que la compagnie tente de réparer silencieusement, afin d'éviter d'entâcher son image de marque.</p>
+
+<p>
+<a href="#anchor1" id="foot1">[1]</a> <a href="https://www.cert-bund.de/advisoryshort/CB-K09-0315%20UPDATE%201">Germany's federal IT security agency (BSI) has issued a warning</a><br />
+<a href="#anchor2" id="foot2">[2]</a> <a href="http://www.microsoft.com/technet/security/advisory/975497.mspx">Microsoft Security Advisory (975497): Vulnerabilities in SMB Could Allow Remote Code Execution</a><br />
+<a href="#anchor3" id="foot3">[3]</a> <a href="http://www.h-online.com/security/news/item/Microsoft-has-known-of-the-SMB2-hole-for-some-time-832175.html"> Microsoft has known of the SMB2 hole for some time </a>
+</p>
+
+ 
+
+<hr />
+
+<h2 id="bsi">Traduction du conseil de sécurité de la BSI&#160;:</h2>
+<p>
+Niveau de menace&#160;: 4 risque élevé (sur une échelle de 1 à 5, 5 étant «&#160;très élevé&#160;»).<br />
+Titre: Protocole Microsoft Windows SMB2: Une autre vulnérabilité permet un déni de service (vulnérabilité de Windows Vista et Windows 7).<br />
+Date: 2009-10-06<br />
+Logiciel&#160;:  Microsoft Windows 7, Microsoft Windows 7 x64 Edition, Microsoft
+Windows Vista / SP1 / SP2, Microsoft Windows Vista x64 Edition / SP1 / SP2,
+Microsoft Windows Server 2008<br />
+  Plateforme&#160;:  Windows<br />
+  Effet&#160;:  Déni de service<br />
+  Exploitable à distance:  Oui<br />
+  Risque&#160;:  élevé<br />
+  Référence&#160;:   recherche interne<br />
+Description&#160;:
+</p>
+<p>Server Message Block (SMB) est un protocle qui permet l'accès partagé aux imprimantes et aux fichiers. SMB2 est la nouvelle version de ce protocole, qui a été introduite avec Windows Vista et Windows Server 2008, et qui est aussi livrée avec Windows 7. Les implémentations actuelles de SMB2 sont affectées par cette vulnérabilité. Il s'agit d'une nouvelle vulnérabilité, non de celle décrite dans Microsoft Security Advisory 975497. Les systèmes d'exploitations mentionés peuvent donc être attaqué même après l'installation des mises à jour du Microsoft's October patchday (MS09-050). 
+</p><p>
+Pour l'instant, il n'y a pas de mise à jour ni de correctif mis à disposition par l'éditeur. Les seules actions recommandées sont de prendre connaissance et de suivre ces vulnérabilités. Pour contourner cette vulnérabilité, il ne peut qu'être recommandé de limiter l'accès via SMB2 à des serveurs connus avec des pare-feux, ou de désactiver le service SMB2.
+	</p>
+
+  </body>
+  <timestamp>$Date$ $Author$</timestamp>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html newsdate="2014-06-25">
+  <head>
+        <title>FSFE compliance workshop discovers GPL violation by FANTEC, Welte wins in court</title>
+  </head>
+  
+  <body>
+    <h1>FSFE compliance workshop discovers GPL violation by FANTEC, Welte wins in court</h1>
+
+    <p newsteaser="yes">The <a
+      href="http://www.ifross.org/sites/default/files/130618%20Urteil%20Fantec.pdf">Regional
+      Court of Hamburg [Landgericht Hamburg] found FANTEC GmbH guilty of
+      violating the GNU General Public License</a> in their media player FANTEC
+    3DFHDL. In the case between Harald Welte versus FANTEC GmbH the court
+    decided that FANTEC has to pay a penalty fee plus additional costs for the
+    lawyers, and has to give out the exact information about their chain of
+    distribution of the FANTEC 3DFHDL Media Player.</p>
+
+    <p>FANTEC was using the netfilter/iptables software (firewalling software
+    for GNU/Linux) in one of the FANTEC 3DFHDL firmwares offered online. They
+    distributed the firmware without complete corresponding source code as
+    required by the GNU General Public License, version 2 (GPLv2) that governs
+    the netfilter/iptables software. Attempts to resolve this issue failed,
+    after which Harald Welte, one of the copyright holders of iptables, decided
+    to go to court. The court decided that FANTEC acted negligently: they would
+    have had to ensure to distribute the software under the conditions of the
+    GPLv2. The court made explicit that it is insufficient for FANTEC to rely
+    on the assurance of license compliance of their suppliers. FANTEC itself is
+    required to ascertain that no rights of third parties are violated.</p>
+
+    <blockquote><p>"It is great to see that the court acknowledges the fact
+      that vendors themselves are responsible for checking their products for
+      GNU GPL compliance. Especially FANTEC, who already had earlier issues
+      with GNU GPL compliance, should have known better. This was just
+      laziness," says Harald Welte, founder of <a
+        href="http://gpl-violations.org">gpl-violations.org</a> and plaintiff
+      in the case.</p></blockquote>
+
+    <p>The GNU GPL violation was found at a "Hacking for Compliance workshop"
+    of the Free Software Foundation Europe in May 2012 in Berlin. Several
+    volunteers helped checking different devices for GNU GPL compliance.
+    Afterwards the results where forwarded to gpl-violations.org and their
+    lawyers, who followed up on it.</p>
+
+    <p>Although FANTEC denied at first, compliance engineers of FSFE and
+    gpl-violations.org were able to prove that the software iptables version
+    1.3.7 was on the device, even though FANTEC did not include the sources for
+    this program in the provided source code. Besides they showed that the
+    software was compiled on another date than the offered source code, proving
+    that the source code offered by FANTEC was outdated.</p>
+
+    <blockquote><p>"Together with our volunteers we will continue to ensure that users
+    receive the freedom to use, study, share, and improve the software on their
+    products. These are the basic principles of the Free Software community,
+    and every company distributing the software has to comply with the
+    respective licenses. Companies obviously see the benefit in building upon
+    Free Software, and they should stick to these basic and simple rules." says
+    Matthias Kirschner, FSFE's German coordinator and one of the organiser of
+    the compliance workshop.</p></blockquote>
+
+  <p>FSFE provides some <a href="/activities/ftf/useful-tips-for-vendors.html">
+    easy steps</a> to follow to make your product GNU GPL compliant.</p>
+    
+  <p>The court decision (DE) is available on the <a
+    href="http://www.ifross.org/sites/default/files/130618%20Urteil%20Fantec.pdf">IFRFOSS
+    site (PDF)</a>.</p>
+
+    <p>Other news related to GNU GPL violation cases: </p>
+    <ul>
+      <li>2011-11-10: "<a
+        href="https://fsfe.org/news/2011/news-20111110-01.en.html">Court
+        rejects AVM´s claims opposing third party modifications of GPL
+        software"</a>.</li>
+    </ul>
+
+  </body>
+  <tags>
+    <tag>front-page</tag>
+    <tag>compliance</tag>
+    <tag>legal</tag>
+    <tag>licenses</tag>
+  </tags>
+  <timestamp></timestamp>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

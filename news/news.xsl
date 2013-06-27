@@ -35,13 +35,7 @@
 	  <!-- Flattr Link -->
 	  <xsl:element name="a">
 	    <xsl:attribute name="href">
-	      https://flattr.com/submit/auto?user_id=fsfe\
-		&amp;url=<xsl:value-of select="text()" />\
-		&amp;title=<xsl:value-of select="title" />\
-		&amp;description=<xsl:apply-templates select="body/node()" />\
-		&amp;language=en\
-		&amp;tags=news\
-		&amp;category=text
+	      https://flattr.com/submit/auto?user_id=fsfe&amp;url=<xsl:value-of select="/html/@link" />&amp;title=<xsl:value-of select="title" />&amp;description=<xsl:apply-templates select="body/node()" />&amp;tags=news&amp;category=text
 	    </xsl:attribute>
 	    <xsl:text>Flattr</xsl:text>
 	  </xsl:element>

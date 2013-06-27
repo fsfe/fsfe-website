@@ -43,7 +43,7 @@
 		&amp;tags=news\
 		&amp;category=text
 	    </xsl:attribute>
-	    <xsl:text>Flattr<xsl:text>
+	    <xsl:text>Flattr</xsl:text>
 	  </xsl:element>
           <xsl:element name="br" />
 

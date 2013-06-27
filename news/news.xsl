@@ -31,13 +31,17 @@
             <xsl:text>) </xsl:text>
             <xsl:value-of select="title" />
           </xsl:element>
-	  
+          <xsl:text> </xsl:text>
+
 	  <!-- Flattr Link -->
 	  <xsl:element name="a">
 	    <xsl:attribute name="href">
-	      https://flattr.com/submit/auto?user_id=fsfe&amp;url=<xsl:value-of select="/html/@link" />&amp;title=<xsl:value-of select="title" />&amp;description=<xsl:apply-templates select="body/node()" />&amp;tags=news&amp;category=text
+	      https://flattr.com/submit/auto?user_id=fsfe&amp;url=<xsl:value-of select="link" />&amp;title=<xsl:value-of select="title" />&amp;description=<xsl:apply-templates select="body/node()" />&amp;tags=news&amp;category=text
 	    </xsl:attribute>
-	    <xsl:text>Flattr</xsl:text>
+	    <xsl:element name="img">
+	      <xsl:attribute name="src">https://api.flattr.com/button/flattr-badge-large.png</xsl:attribute>
+	      <xsl:attribute name="alt">Flattr this</xsl:attribute>
+	    </xsl:element>
 	  </xsl:element>
           <xsl:element name="br" />
 

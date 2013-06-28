@@ -49,16 +49,6 @@ control.
 
 Questions to web@: 
 
-- in all info.ru.xml, the first character (even before
-the prolog) is ﻿. Is that intended? I didn't deleted it yet.
-... Gollo said he would take care.
-
-- Do I suggest correct that the only purpose of 
-'date="<introducing_date>"' at item.en.xml and        
-<xsl:sort select="@date" order="descending"/> at order.xsl
-is to sort the articles?
-... Gollo confirmed this.
-
 - How to proceed on? First asking translators@ to take care
 of the few changes, then moving to production branch, ot the
 other way round?
@@ -92,12 +82,7 @@ rough check should be sufficient.
 - text on back side of girlie-hacking-black has changed
 - add new articles
 
-TODO all:
-
-Discuss whether a "real online shop" is a better solution - and
-which one! Our assortment is growing slowly, but steadily. There
-will come the time where a single html form isn't sufficient anymore.
-
 written by Rainer 2012-10-13
 edited by Rainer 2012-10-14
 edited by Rainer 2013-06-15
+edited by Rainer 2013-06-28

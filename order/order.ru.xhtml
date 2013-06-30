@@ -10,52 +10,54 @@
 
     <div id="introduction">
       <div class="image">
-        <img src="/graphics/stars-smaller.png" alt="Звезды" />
+        <img src="/graphics/stars-smaller.png" alt="Звёзды" />
       </div>
 
-<p>Покажите, что вы любите свободные программы. Пусть ваша одежда
-и другие предметы рассказывают о них в вашем обществе. Каждая покупка
-помогает финансировать критичные проекты ЕФСПО.
-<br />
-<br />
-У нас есть также <a href="#other-items">канцтовары, посуда, значки
-и брелоки</a>.</p>
+      <p>
+Покажите, что вы любите свободное ПО. Пусть ваша одежда и другие
+предметы рассказывают о нём в вашем обществе. Каждая покупка помогает
+финансировать критичные проекты ЕФСПО.
+        <br />
+        <br />
+У нас есть также <a href="#other-items">канцтовары, посуда, значки и брелоки</a>.
+      </p>
       
-</div>
+    </div>
 
-<form action="/cgi-bin/weborder.pl" method="post">
-<h2>Мужские футболки</h2>
+    <form action="/cgi-bin/weborder.pl" method="post">
+      <h2>Футболки</h2>
  
-<dynamic-content type="t-shirt"/>
+      <dynamic-content type="t-shirt"/>
 
-<h2>Женские футболки</h2>
+      <h2>Женские футболки</h2>
  
-<dynamic-content type="girlie"/>
+      <dynamic-content type="girlie"/>
 
-<h2>Куртка с капюшоном</h2>
+      <h2>Толстовка с капюшоном</h2>
  
-<dynamic-content type="hooded"/>
+      <dynamic-content type="hooded"/>
 
-<a name="other-items"><h2>Другие товары</h2></a>
+      <a name="other-items"><h2>Другие товары</h2></a>
 
-<dynamic-content type="other"/>
+      <dynamic-content type="other"/>
 
-<h2>Рекламные материалы</h2>
+      <h2>Рекламные материалы</h2>
     
-<p>Рекламные брошюры и листовки находятся на странице <a
-href="/documents/printable/printable.html">печатных материалов</a>.</p>
+      <p>
+	Рекламные брошюры и листовки находятся на странице <a href="/documents/printable/printable.html">печатных материалов</a>.
+      </p>
 
-<h2>Доставка</h2>
+      <h2>Доставка</h2>
 
-<p>
-<input type="hidden" name="shipping" value="1"/>
-<input type="radio" name="_shipping" value="3"/>
-Доставка по Германии (3 евро)
-<input type="radio" name="_shipping" value="7" checked="Y"/>
-Доставка по Европе (7 евро)
-<input type="radio" name="_shipping" value="12"/>
-Доставка за пределы Европы (12 евро)
-</p>
+      <p>
+        <input type="hidden" name="shipping" value="1"/>
+        <input type="radio" name="_shipping" value="3"/>
+        Доставка по Германии (3 евро)
+        <input type="radio" name="_shipping" value="7" checked="Y"/>
+        Доставка по Европе (7 евро)
+        <input type="radio" name="_shipping" value="12"/>
+        Доставка за пределы Европы (12 евро)
+      </p>
 
       <table>
         <tr>
@@ -85,20 +87,20 @@ href="/documents/printable/printable.html">печатных материалов
       </table>
 
       <!-- Should help against spam -->
-<p class="n">
-Пожалуйста, не вводите здесь ничего:
-<input type="text" size="40" name="url"/>
-</p>
+      <p class="n">
+        Please do not put anything in here:
+        <input type="text" size="40" name="url"/>
+      </p>
 
-<center>
-<!-- Translators: Please also translate the value here, it's the label
+      <center>
+        <!-- Translators: Please also translate the value here, it's the label
                           of the button -->
-<input type="submit" value="Заказать товары"/>
-</center>
-<!-- Translators: Please change the value here to your language -->
-<input type="hidden" name="language" value="ru"/>
-</form>
-</body>
+        <input type="submit" value="Заказать товары"/>
+      </center>
+      <!-- Translators: Please change the value here to your language -->
+      <input type="hidden" name="language" value="ru"/>
+    </form>
+  </body>
 
   <timestamp>$Date$ $Author$</timestamp>
 </html>

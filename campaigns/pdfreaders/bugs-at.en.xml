@@ -7,9 +7,10 @@
      institution-url="http://www.bmvit.gv.at/service/hilfe.html"
      opened="2010-09-13"
      closed="2011-04-29"
-     name="Jürgen Mathwich / (closed by: Peter B.)"
-     comment="Added link to pdfreaders.org (At the top of their list)"
+     name="Jürgen Mathwich"
      group=""
+     closedby="Peter B."
+     comment="Added link to pdfreaders.org (At the top of their list)"
      />
 
 <bug institution-name="Stadtregierung Linz"
@@ -52,9 +53,11 @@
      institution-address="Museumstr. 7, 1070, Wien"
      institution-url="http://www.justiz.gv.at/internet/html/default/8ab4ac8322985dd501229ce38af900a6.de.html"
      opened="2010-09-13"
-     closed=""
+     closed="2013-06-18"
      name="Jürgen"
      group=""
+     closedby="cw"
+     comment="Es wird nun empfohlen allgemein nach einem PDF-Reader zu suchen. Kein Verweis zu Adobe Reader mehr vorhanden."
      />
 
 <bug institution-name="Magistrat der Stadt Salzburg"
@@ -116,8 +119,9 @@
      institution-url="http://www.judenburg.at/presse/stnr/stnr_archiv.htm"
      opened="2010-09-13"
      closed="2011-04-29"
-     name="Bernd Schlapsi / (closed by: Peter B.)"
+     name="Bernd Schlapsi"
      group=""
+     closedby="Peter B."
      comment="Added pdfreaders.org-button next to Adobe button"
      />
 
@@ -147,6 +151,7 @@
      closed=""
      name="Bernd Schlapsi"
      group=""
+     comment="Status not clear, link dead."
      />
 
 <bug institution-name="Verwaltungsgerichtshof"
@@ -156,6 +161,7 @@
      closed=""
      name="Bernd Schlapsi"
      group=""
+     comment="Status not clear, link dead."
      />
 
 <bug institution-name="Amt der Steiermärkischen Landesregierung, Fachabteilung 1C, Dokumentation, Öffentlichkeitsarbeit  und Perspektiven"
@@ -165,6 +171,7 @@
      closed=""
      name="Bernd Schlapsi"
      group=""
+     comment="Status not clear, link dead."
      />
 
 <bug institution-name="Marktgemeinde Nußdorf ob der Traisen"
@@ -219,6 +226,7 @@
      closed=""
      name="Bernd Schlapsi"
      group=""
+     comment="Status not clear, link dead."
      />
 
 <bug institution-name="Magistrat der Stadt Wien"
@@ -228,6 +236,7 @@
      closed=""
      name="Bernd Schlapsi"
      group=""
+     comment="Status not clear, link dead."
      />
 
 <bug institution-name="Bundesministerium für Inneres - Bundeskriminalamt"
@@ -255,15 +264,18 @@
      closed=""
      name="Martin Knoch"
      group=""
+     comment="Status not clear, link dead."
      />
 
 <bug institution-name="Magistratsabteilung 35 (Öffentlichkeitsarbeit)"
      institution-address="Rathaus, 1082 Wien"
      institution-url="http://www.wien.gv.at/amtshelfer/dokumente/personenwesen/staatsbuergerschaft/beibehaltung.html"
      opened="2010-09-14"
-     closed=""
+     closed="2013-06-18"
      name="Gerhard Strohmaier"
      group=""
+     closedby="cw"
+     comment="Link to Wikipedia: 'Liste von PDF-Software'. No more advertisement for Adobe Reader."
      />
 
 <bug institution-name="Amt der NÖ Landesregierung  "
@@ -282,7 +294,7 @@
      closed=""
      name="PDFSET"
      group=""
-     comment=""
+     comment="Status not clear, link dead."
      />
 
 <bug institution-name="Bundesministerium für Gesundheit"
@@ -292,7 +304,7 @@
      closed=""
      name="PDFSET"
      group=""
-     comment=""
+     comment="Status not clear, link dead."
      />
 
 <bug institution-name="Bundesministerium für Land- und Forstwirtschaft, Umwelt und Wasserwirtschaft"
@@ -302,7 +314,7 @@
      closed=""
      name="PDFSET"
      group=""
-     comment=""
+     comment="Status not clear, link dead."
      />
 
 <bug institution-name="Bundesministerium für Unterricht, Kunst und Kultur"
@@ -322,7 +334,7 @@
      closed=""
      name="PDFSET"
      group=""
-     comment=""
+     comment="Status not clear, link dead."
      />
 <bug institution-name="Gemeindeamt Bildstein"
      institution-address="Dorf 83, 6858 Bildstein"
@@ -421,6 +433,7 @@
      group=""
      comment=""
      />
+     
 <bug institution-name="Stadtgemeinde Klosterneuburg"
      institution-address="Rathausplatz 1 3400 Klosterneuburg"
      institution-url="http://www.klosterneuburg.gv.at/system/web/sonderseite.aspx?menuonr=220468537&amp;detailonr=220468537&amp;bezirkonr=0"
@@ -429,6 +442,27 @@
      name="Fabian Kromer"
      group="Liste SAU"
      />
-
+     
+<bug institution-name="eAMS"
+     institution-address=""
+     institution-url=""
+     opened="2013-06-10"
+     closed=""
+     name="cw"
+     group=""
+     closedby=""
+     comment="When retrieving PDF files, it is recommended to download Adobe Reader."
+     />
+     
+<bug institution-name="ÖBB"
+     institution-address=""
+     institution-url=""
+     opened="2013-06-10"
+     closed=""
+     name="cw"
+     group=""
+     closedby="cw"
+     comment="When buying online tickets, it is recommended to view them with Adobe Reader."
+     />
   </buglist>
 </set>

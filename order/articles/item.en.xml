@@ -201,18 +201,18 @@
       large="/order/articles/images/baby-romper-fork-blue-front.jpg"/>
   </item>
 
-  <item type="baby-clothes" id="baby-romper-fork-green" price="18.00" date="2012-10-06">
 <!--
+  <item type="baby-clothes" id="baby-romper-fork-green" price="18.00" date="2012-10-06">
     <available size="0-3"/>
     <available size="3-6"/>
+    <available size="6-12"/>
     <available size="12-18"/>
     <available size="18-24"/>
--->
-    <available size="6-12"/>
     <image
       small="/order/articles/images/thumbnails/baby-romper-fork-green-front.jpg"
       large="/order/articles/images/baby-romper-fork-green-front.jpg"/>
   </item>
+-->
   <item type="baby-clothes" id="baby-romper-fork-white" price="18.00" date="2012-10-06">
 <!--
     <available size="0-3"/>

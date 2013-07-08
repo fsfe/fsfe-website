@@ -187,6 +187,15 @@
           <xsl:attribute name="href">/press/press.<xsl:value-of select="/buildinfo/@language"/>.html</xsl:attribute>
           <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'press'" /></xsl:call-template>
         </xsl:element>
+
+	<!-- Flattr Link -->
+        <xsl:element name="a">
+          <xsl:attribute name="href">https://flattr.com/submit/auto?user_id=fsfe&amp;url=http://fsfe.org/<xsl:value-of select="link" />&amp;title=<xsl:value-of select="title" />&amp;description=<xsl:apply-templates select="body/node()" />&amp;tags=news&amp;category=text</xsl:attribute>
+          <xsl:element name="img">
+            <xsl:attribute name="src">/graphics/flattr-badge-large.png</xsl:attribute>
+            <xsl:attribute name="alt">Flattr this</xsl:attribute>
+          </xsl:element>
+        </xsl:element>
       </xsl:element>
       
     </xsl:if>

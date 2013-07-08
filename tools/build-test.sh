@@ -22,11 +22,11 @@ export LANG="en_US.UTF-8"
 # Redirect output
 exec 1>> ${STATUS}/status.txt 2>&1
 
-# If there is a build-test.pl script started more than 10 minutes ago, kill it and mail alarm
+# If there is a build-test.pl script started more than 15 minutes ago, kill it and mail alarm
 BUILD_STARTED=$(ps --no-headers -C build-test.pl -o etime | cut -c 7-8 | sort -r | head -n 1)
-if [[ -n "$BUILD_STARTED" && "10#${BUILD_STARTED}" -gt 10 ]] ; then
+if [[ -n "$BUILD_STARTED" && "10#${BUILD_STARTED}" -gt 15 ]] ; then
   echo -e "
-  A build-test.pl script has been running for more than 10 minutes,
+  A build-test.pl script has been running for more than 15 minutes,
   and was automatically killed.
   
   Please check the build script log at http://status.fsfe.org/web-test/
@@ -36,7 +36,7 @@ if [[ -n "$BUILD_STARTED" && "10#${BUILD_STARTED}" -gt 10 ]] ; then
 
   " | mail -s "test.fsfe.org: build-test.pl warning" web@fsfeurope.org system-hackers@fsfeurope.org
   killall build-test.pl
-  echo "$(date) A build-test.pl script has been running for more than 10 minutes, and was automatically killed."
+  echo "$(date) A build-test.pl script has been running for more than 15 minutes, and was automatically killed."
   exit
 fi
 

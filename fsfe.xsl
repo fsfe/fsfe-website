@@ -191,7 +191,7 @@
 	<!-- Flattr Link -->
         <xsl:element name="a">
 	  <xsl:attribute name="class">flattr-link</xsl:attribute>
-          <xsl:attribute name="href">https://flattr.com/submit/auto?user_id=fsfe&amp;url=http://fsfe.org/&amp;title=<xsl:value-of select="/html/head/title" />&amp;description=<xsl:value-of select="/html/body/p[@newsteaser]" />&amp;tags=<xsl:for-each select="/html/tags/tag"><xsl:value-of select="node()" />,</xsl:for-each>&amp;category=text</xsl:attribute>
+          <xsl:attribute name="href">https://flattr.com/submit/auto?user_id=fsfe&amp;url=http://fsfe.org/<xsl:value-of select="/buildinfo/@filename">&amp;title=<xsl:value-of select="/buildinfo/document/html/head/title" />&amp;description=<xsl:value-of select="/buildinfo/document/html/body/p[@newsteaser]" />&amp;tags=<xsl:for-each select="/buildinfo/document/html/tags/tag"><xsl:value-of select="node()" />,</xsl:for-each>&amp;category=text</xsl:attribute>
           <xsl:element name="img">
             <xsl:attribute name="src">/graphics/flattr-badge-large.png</xsl:attribute>
             <xsl:attribute name="alt">Flattr this</xsl:attribute>

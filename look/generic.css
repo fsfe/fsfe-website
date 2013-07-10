@@ -86,10 +86,6 @@ h6,
   font-family: "Helvetica", "Arial", sans-serif;
 }
 
-.flattr-link {
-  float: right;
-}
-
 h1,
 h2,
 h3 {
@@ -1570,6 +1566,14 @@ ul.overview-horizontal li img.inline {
 /*#article-metadata span.label:first-child {*/
 /*  margin-left: 0;*/
 /*}*/
+
+#article-metadata .flattr-link img {
+  float: right;
+  height:20px;
+  margin: 0em;
+  margin-bottom: 0em;
+  box-shadow: 0 0 0px  rgba(0,0,0,0.3);
+}
 
 #article-metadata img {
   height:24px;

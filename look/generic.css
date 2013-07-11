@@ -1567,8 +1567,10 @@ ul.overview-horizontal li img.inline {
 /*  margin-left: 0;*/
 /*}*/
 
-#article-metadata .flattr-link img {
+.flattr-link {
   float: right;
+}
+#article-metadata .flattr-link img {
   height:20px;
   margin: 0em;
   margin-bottom: 0em;

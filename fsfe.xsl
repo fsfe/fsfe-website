@@ -209,23 +209,22 @@
                     (not(string(/buildinfo/document/@type)) or
                     /buildinfo/document/@type != 'newsletter')">
       
+      <!-- Flattr Link -->
+      <xsl:element name="a">
+        <xsl:attribute name="class">flattr-link</xsl:attribute>
+        <xsl:attribute name="href">https://flattr.com/submit/auto?user_id=fsfe&amp;url=http://fsfe.org/<xsl:value-of select="/buildinfo/@filename" />.html&amp;title=<xsl:value-of select="/buildinfo/document/head/title" />&amp;description=<xsl:value-of select="/buildinfo/document/body/p[@newsteaser]" />&amp;tags=<xsl:for-each select="/buildinfo/document/tags/tag"><xsl:value-of select="node()" />,</xsl:for-each>&amp;category=text</xsl:attribute>
+        <xsl:element name="img">
+          <xsl:attribute name="src">/graphics/flattr-badge-large.png</xsl:attribute>
+          <xsl:attribute name="alt">Flattr this</xsl:attribute>
+        </xsl:element>
+      </xsl:element>
+      <!-- End Flattr Link -->
+
       <!-- add publishing information (author, date) -->
       <xsl:element name="div">
         <xsl:attribute name="id">article-metadata</xsl:attribute>
           <xsl:element name="p">
             <span class="label"> <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'published'" /></xsl:call-template>: </span><xsl:value-of select="/buildinfo/document/@newsdate" />
-
-            <!-- Flattr Link -->
-            <xsl:element name="a">
-              <xsl:attribute name="class">flattr-link</xsl:attribute>
-              <xsl:attribute name="href">https://flattr.com/submit/auto?user_id=fsfe&amp;url=http://fsfe.org/<xsl:value-of select="/buildinfo/@filename" />.html&amp;title=<xsl:value-of select="/buildinfo/document/head/title" />&amp;description=<xsl:value-of select="/buildinfo/document/body/p[@newsteaser]" />&amp;tags=<xsl:for-each select="/buildinfo/document/tags/tag"><xsl:value-of select="node()" />,</xsl:for-each>&amp;category=text</xsl:attribute>
-              <xsl:element name="img">
-                <xsl:attribute name="src">/graphics/flattr-badge-large.png</xsl:attribute>
-                <xsl:attribute name="alt">Flattr this</xsl:attribute>
-              </xsl:element>
-            </xsl:element>
-            <!-- End Flattr Link -->
-
           </xsl:element>
       </xsl:element>
       

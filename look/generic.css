@@ -1569,13 +1569,16 @@ ul.overview-horizontal li img.inline {
 
 .flattr-link {
   float: right;
+  margin-top: 7px;
 }
+/*
 #article-metadata .flattr-link img {
   height:20px;
   margin: 0em;
   margin-bottom: 0em;
   box-shadow: 0 0 0px  rgba(0,0,0,0.3);
 }
+*/
 
 #article-metadata img {
   height:24px;

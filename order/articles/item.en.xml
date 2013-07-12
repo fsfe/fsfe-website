@@ -5,10 +5,11 @@
 <itemset>
   <item type="t-shirt" id="tshirt-ilovefs-black" price="18.00" date="2012-10-06">
     <available size="S"/>
+<!--
     <available size="M"/>
-    <!-- <available size="L"/> -->
+    <available size="L"/>
     <available size="XL"/>
-    <image
+ -->    <image
       small="/order/articles/images/thumbnails/tshirt-ilovefs-black-front.jpg"
       large="/order/articles/images/tshirt-ilovefs-black-front.jpg"/>
     <image
@@ -32,7 +33,9 @@
   <item type="t-shirt" id="tshirt-fsfs-blue" price="18.00" date="2010-02-09">
     <available size="S"/>
     <available size="M"/>
+<!--
     <available size="L"/>
+-->
     <available size="XL"/>
     <available size="XXL"/>
     <image
@@ -42,21 +45,23 @@
       small="/order/articles/images/thumbnails/tshirt-fsfs-blue-back.jpg"
       large="/order/articles/images/tshirt-fsfs-blue-back.jpg"/>
   </item>
-  
+
   <item type="t-shirt" id="tshirt-fsfs-orange" price="18.00" date="2010-02-08">
     <available size="S"/>
+<!--
     <available size="M"/>
     <available size="L"/>
+-->
     <available size="XL"/>
     <available size="XXL"/>
-    <image 
+    <image
       small="/order/articles/images/thumbnails/tshirt-fsfs-orange-front.jpg"
       large="/order/articles/images/tshirt-fsfs-orange-front.jpg"/>
-    <image 
+    <image
       small="/order/articles/images/thumbnails/tshirt-fsfs-orange-back.jpg"
       large="/order/articles/images/tshirt-fsfs-orange-back.jpg"/>
   </item>
-  
+
   <item type="t-shirt" id="tshirt-fsfs-red" price="18.00" date="2010-02-07">
     <available size="S"/>
     <available size="XXL"/>
@@ -67,11 +72,13 @@
       small="/order/articles/images/thumbnails/tshirt-fsfs-red-back.jpg"
       large="/order/articles/images/tshirt-fsfs-red-back.jpg"/>
   </item>
-  
+
   <item type="t-shirt" id="shirt-fsfs-red" price="18.00" date="2010-02-06">
     <available size="S"/>
     <available size="L"/>
-    <available size="XL"/>
+<!--
+		<available size="XL"/>
+-->
     <available size="XXL"/>
     <image
       small="/order/articles/images/thumbnails/shirt-fsfs-red-front.jpg"
@@ -80,12 +87,14 @@
       small="/order/articles/images/thumbnails/shirt-fsfs-red-back.jpg"
       large="/order/articles/images/shirt-fsfs-red-back.jpg"/>
   </item>
-  
+
   <item type="t-shirt" id="tshirt-hacking-black" price="18.00" date="2008-02-23">
     <available size="S"/>
-    <available size="M"/>
+<!--
+		<available size="M"/>
     <available size="L"/>
     <available size="XL"/>
+-->
     <available size="XXL"/>
     <available size="XXXL"/>
     <image
@@ -97,9 +106,12 @@
   </item>
 
   <item type="t-shirt" id="tshirt-mdf-green" price="18.00" date="2008-11-02">
+<!--
     <available size="S"/>
+-->
     <available size="M"/>
     <available size="L"/>
+    <available size="XL"/>
     <available size="XXL"/>
     <image
       small="/order/articles/images/thumbnails/tshirt-mdf-green-front.jpg"
@@ -212,19 +224,19 @@
       small="/order/articles/images/thumbnails/baby-romper-fork-green-front.jpg"
       large="/order/articles/images/baby-romper-fork-green-front.jpg"/>
   </item>
--->
+
   <item type="baby-clothes" id="baby-romper-fork-white" price="18.00" date="2012-10-06">
-<!--
     <available size="0-3"/>
     <available size="3-6"/>
     <available size="12-18"/>
     <available size="18-24"/>
--->
     <available size="6-12"/>
     <image
       small="/order/articles/images/thumbnails/baby-romper-fork-white-front.jpg"
       large="/order/articles/images/baby-romper-fork-white-front.jpg"/>
   </item>
+-->
+
   <item type="baby-clothes" id="baby-romper-fork-beige" price="18.00" date="2012-10-04">
 <!--
     <available size="0-3"/>
@@ -260,7 +272,7 @@
       small="/order/articles/images/thumbnails/cufflinks-gnu.jpg"
       large="/order/articles/images/cufflinks-gnu.jpg"/>
   </item>
-  
+
   <item type="other" id="pin-fellowship" price="3.00" date="2012-10-12">
     <available size="17mm"/>
     <image
@@ -281,14 +293,14 @@
       small="/order/articles/images/thumbnails/cufflinks-fellowship.jpg"
       large="/order/articles/images/cufflinks-fellowship.jpg"/>
   </item>
-  
+
   <item type="other" id="ballpen-green" price="5.00" date="2010-02-08">
     <available size="#"/>
     <image
       small="/order/articles/images/thumbnails/pen-green.png"
       large="/order/articles/images/pen-green.jpg"/>
   </item>
-  
+
   <item type="other" id="ballpen-blue" price="12.00" date="2010-02-08">
     <available size="#"/>
     <image

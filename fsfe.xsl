@@ -204,7 +204,7 @@
     <!-- auto generate ID for headings if it doesn't already exist -->
     <xsl:call-template name="generate-id" />
 
-    <xsl:variable name="original_file" select="concat(string(/buildinfo/@filename), '.' ,string(/buildinfo/@original), '.xhtml')" as="xs:string"/>
+    <xsl:variable name="original_file" select="concat('file:/', string(/buildinfo/@filename), '.' ,string(/buildinfo/@original), '.xhtml')" as="xs:string"/>
     
     <!-- Apply news page rules -->
     <xsl:if test="string(/buildinfo/document/@newsdate) and

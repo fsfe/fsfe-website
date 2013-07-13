@@ -175,7 +175,7 @@
   <!-- Modify H1 -->
   <xsl:template match="h1">
     <xsl:variable name="original_file"
-     select="concat(substring(string(/buildinfo/@filename), 1), '.' ,string(/buildinfo/@original), '.xhtml')"
+     select="concat(substring(string(/buildinfo/@filename), 2), '.' ,string(/buildinfo/@original), '.xhtml')"
      as="xs:string" />
     
     <!-- Apply news page PRE-rules -->

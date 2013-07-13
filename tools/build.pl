@@ -31,6 +31,7 @@ use IO::Handle;
 use IO::Select;
 use Socket;
 use Fcntl ':flock';
+use Cwd;
 
 # This defines the focuses and their respective preferred / original
 # language. For example, it says that we should have a focus called
@@ -351,7 +352,7 @@ sub process {
   my (undef, $current_dir, undef) = fileparse($file);
 
   $root->setAttribute("dirname", "$current_dir");
-  $root->setAttribute("workdir", $ENV{'PWD'});
+  $root->setAttribute("workdir", getcwd());
 
   #
   # Find all translations for this document, and create the trlist set

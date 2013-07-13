@@ -351,6 +351,7 @@ sub process {
   my (undef, $current_dir, undef) = fileparse($file);
 
   $root->setAttribute("dirname", "$current_dir");
+  $root->setAttribute("workdir", $ENV{'PWD'});
 
   #
   # Find all translations for this document, and create the trlist set

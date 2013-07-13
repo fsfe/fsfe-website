@@ -174,6 +174,9 @@
   
   <!-- Modify H1 -->
   <xsl:template match="h1">
+    <xsl:variable name="original_file"
+     select="concat(tokenize(string(/buildinfo/@filename), '/')[last()], '.' ,string(/buildinfo/@original), '.xhtml')"
+     as="xs:string" />
     
     <!-- Apply news page PRE-rules -->
     <xsl:if test="string(/buildinfo/document/@newsdate) and
@@ -210,8 +213,6 @@
                     /buildinfo/document/@type != 'newsletter')">
       
       <!-- Flattr Link -->
-      <xsl:variable name="original_file"
-       select="concat(tokenize(string(/buildinfo/@filename), '/')[last()], '.' ,string(/buildinfo/@original), '.xhtml')" />
       <xsl:element name="a">
         <xsl:attribute name="class">flattr-link</xsl:attribute>
         <xsl:attribute name="href">https://flattr.com/submit/auto?user_id=fsfe&amp;url=http://fsfe.org/<xsl:value-of select="/buildinfo/@filename" />.html&amp;title=<xsl:value-of select="document($original_file)/html/head/title" />&amp;description=<xsl:value-of select="document($original_file)/html/body/p[@newsteaser]" />&amp;tags=<xsl:for-each select="document($original_file)/html/tags/tag"><xsl:value-of select="node()" />,</xsl:for-each>&amp;category=text</xsl:attribute>
@@ -237,8 +238,6 @@
     <xsl:if test="string(/buildinfo/document/@newsdate) and /buildinfo/document/@type = 'newsletter'">
 
       <!-- Flattr Link -->
-      <xsl:variable name="original_file"
-       select="concat(tokenize(string(/buildinfo/@filename), '/')[last()], '.' ,string(/buildinfo/@original), '.xhtml')" />
       <xsl:element name="a">
         <xsl:attribute name="class">flattr-link</xsl:attribute>
         <xsl:attribute name="href">https://flattr.com/submit/auto?user_id=fsfe&amp;url=http://fsfe.org/<xsl:value-of select="/buildinfo/@filename" />.html&amp;title=<xsl:value-of select="document($original_file)/html/head/title" />&amp;description=<xsl:value-of select="document($original_file)/html/body/p[@newsteaser]" />&amp;tags=<xsl:for-each select="document($original_file)/html/tags/tag"><xsl:value-of select="node()" />,</xsl:for-each>&amp;category=text</xsl:attribute>

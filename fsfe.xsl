@@ -204,14 +204,14 @@
     <!-- auto generate ID for headings if it doesn't already exist -->
     <xsl:call-template name="generate-id" />
 
-    <xsl:variable name="original_file" select="concat(substring(string(/buildinfo/@filename),12), '.' ,string(/buildinfo/@original), '.xhtml')" as="xs:string"/>
-    
     <!-- Apply news page rules -->
     <xsl:if test="string(/buildinfo/document/@newsdate) and
                     (not(string(/buildinfo/document/@type)) or
                     /buildinfo/document/@type != 'newsletter')">
       
       <!-- Flattr Link -->
+      <xsl:variable name="original_file"
+       select="concat(tokenize(string(/buildinfo/@filename), '/')[last()], '.' ,string(/buildinfo/@original), '.xhtml')" />
       <xsl:element name="a">
         <xsl:attribute name="class">flattr-link</xsl:attribute>
         <xsl:attribute name="href">https://flattr.com/submit/auto?user_id=fsfe&amp;url=http://fsfe.org/<xsl:value-of select="/buildinfo/@filename" />.html&amp;title=<xsl:value-of select="document($original_file)/html/head/title" />&amp;description=<xsl:value-of select="document($original_file)/html/body/p[@newsteaser]" />&amp;tags=<xsl:for-each select="document($original_file)/html/tags/tag"><xsl:value-of select="node()" />,</xsl:for-each>&amp;category=text</xsl:attribute>
@@ -235,16 +235,20 @@
     
     <!-- Apply newsletter page -->
     <xsl:if test="string(/buildinfo/document/@newsdate) and /buildinfo/document/@type = 'newsletter'">
+
       <!-- Flattr Link -->
+      <xsl:variable name="original_file"
+       select="concat(tokenize(string(/buildinfo/@filename), '/')[last()], '.' ,string(/buildinfo/@original), '.xhtml')" />
       <xsl:element name="a">
         <xsl:attribute name="class">flattr-link</xsl:attribute>
-        <xsl:attribute name="href">https://flattr.com/submit/auto?user_id=fsfe&amp;url=http://fsfe.org/<xsl:value-of select="/buildinfo/@filename" />.html&amp;title=<xsl:value-of select="/buildinfo/document/head/title" />&amp;description=<xsl:value-of select="/buildinfo/document/body/p[@newsteaser]" />&amp;tags=<xsl:for-each select="/buildinfo/document/tags/tag"><xsl:value-of select="node()" />,</xsl:for-each>&amp;category=text</xsl:attribute>
+        <xsl:attribute name="href">https://flattr.com/submit/auto?user_id=fsfe&amp;url=http://fsfe.org/<xsl:value-of select="/buildinfo/@filename" />.html&amp;title=<xsl:value-of select="document($original_file)/html/head/title" />&amp;description=<xsl:value-of select="document($original_file)/html/body/p[@newsteaser]" />&amp;tags=<xsl:for-each select="document($original_file)/html/tags/tag"><xsl:value-of select="node()" />,</xsl:for-each>&amp;category=text</xsl:attribute>
         <xsl:element name="img">
           <xsl:attribute name="src">/graphics/flattr-badge-large.png</xsl:attribute>
           <xsl:attribute name="alt">Flattr this</xsl:attribute>
         </xsl:element>
       </xsl:element>
       <!-- End Flattr Link -->
+
       <xsl:call-template name="subscribe-nl" />
     </xsl:if>
     <!-- End apply newsletter page rules -->

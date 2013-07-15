@@ -177,6 +177,7 @@
     <xsl:variable name="original_file"
      select="concat(substring(string(/buildinfo/@filename), 2), '.' ,string(/buildinfo/@original), '.xhtml')"
      as="xs:string" />
+    <xsl:variable name="originalDocument" select="document($original_file)/html">
     
     <!-- Apply news page PRE-rules -->
     <xsl:if test="string(/buildinfo/document/@newsdate) and
@@ -215,18 +216,18 @@
       <!-- Social Links -->
       <xsl:element name="a">
         <xsl:attribute name="class">social-link</xsl:attribute>
-        <xsl:attribute name="href">/support</xsl:attribute>
+        <xsl:attribute name="href">https://flattr.com/submit/auto?user_id=fsfe&amp;url=http://fsfe.org/<xsl:value-of select="/buildinfo/@filename" />.html&amp;title=<xsl:value-of select="$originalDocument/head/title" />&amp;description=<xsl:value-of select="$originalDocument/body/p[@newsteaser]" />&amp;tags=<xsl:for-each select="$originalDocument/tags/tag"><xsl:value-of select="node()" />,</xsl:for-each>&amp;category=text</xsl:attribute>
         <xsl:element name="img">
-          <xsl:attribute name="src">/graphics/supporter/FSFE_plus1_48x22_b.png</xsl:attribute>
-          <xsl:attribute name="alt">Support FSFE</xsl:attribute>
+          <xsl:attribute name="src">/graphics/flattr-badge-large.png</xsl:attribute>
+          <xsl:attribute name="alt">Flattr this</xsl:attribute>
         </xsl:element>
       </xsl:element>
       <xsl:element name="a">
         <xsl:attribute name="class">social-link</xsl:attribute>
-        <xsl:attribute name="href">https://flattr.com/submit/auto?user_id=fsfe&amp;url=http://fsfe.org/<xsl:value-of select="/buildinfo/@filename" />.html&amp;title=<xsl:value-of select="document($original_file)/html/head/title" />&amp;description=<xsl:value-of select="document($original_file)/html/body/p[@newsteaser]" />&amp;tags=<xsl:for-each select="document($original_file)/html/tags/tag"><xsl:value-of select="node()" />,</xsl:for-each>&amp;category=text</xsl:attribute>
+        <xsl:attribute name="href">/support</xsl:attribute>
         <xsl:element name="img">
-          <xsl:attribute name="src">/graphics/flattr-badge-large.png</xsl:attribute>
-          <xsl:attribute name="alt">Flattr this</xsl:attribute>
+          <xsl:attribute name="src">/graphics/supporter/FSFE_plus1_48x22_b.png</xsl:attribute>
+          <xsl:attribute name="alt">Support FSFE</xsl:attribute>
         </xsl:element>
       </xsl:element>
       <!-- End Social Links -->
@@ -248,18 +249,18 @@
       <!-- Social Links -->
       <xsl:element name="a">
         <xsl:attribute name="class">social-link</xsl:attribute>
-        <xsl:attribute name="href">/support</xsl:attribute>
+        <xsl:attribute name="href">https://flattr.com/submit/auto?user_id=fsfe&amp;url=http://fsfe.org/<xsl:value-of select="/buildinfo/@filename" />.html&amp;title=<xsl:value-of select="$originalDocument/head/title" />&amp;description=<xsl:value-of select="$originalDocument/body/p[@newsteaser]" />&amp;tags=<xsl:for-each select="$originalDocument/tags/tag"><xsl:value-of select="node()" />,</xsl:for-each>&amp;category=text</xsl:attribute>
         <xsl:element name="img">
-          <xsl:attribute name="src">/graphics/supporter/FSFE_plus1_48x22_b.png</xsl:attribute>
-          <xsl:attribute name="alt">Support FSFE</xsl:attribute>
+          <xsl:attribute name="src">/graphics/flattr-badge-large.png</xsl:attribute>
+          <xsl:attribute name="alt">Flattr this</xsl:attribute>
         </xsl:element>
       </xsl:element>
       <xsl:element name="a">
         <xsl:attribute name="class">social-link</xsl:attribute>
-        <xsl:attribute name="href">https://flattr.com/submit/auto?user_id=fsfe&amp;url=http://fsfe.org/<xsl:value-of select="/buildinfo/@filename" />.html&amp;title=<xsl:value-of select="document($original_file)/html/head/title" />&amp;description=<xsl:value-of select="document($original_file)/html/body/p[@newsteaser]" />&amp;tags=<xsl:for-each select="document($original_file)/html/tags/tag"><xsl:value-of select="node()" />,</xsl:for-each>&amp;category=text</xsl:attribute>
+        <xsl:attribute name="href">/support</xsl:attribute>
         <xsl:element name="img">
-          <xsl:attribute name="src">/graphics/flattr-badge-large.png</xsl:attribute>
-          <xsl:attribute name="alt">Flattr this</xsl:attribute>
+          <xsl:attribute name="src">/graphics/supporter/FSFE_plus1_48x22_b.png</xsl:attribute>
+          <xsl:attribute name="alt">Support FSFE</xsl:attribute>
         </xsl:element>
       </xsl:element>
       <!-- End Social Links -->

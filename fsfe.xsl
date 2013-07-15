@@ -177,7 +177,7 @@
     <xsl:variable name="original_file"
      select="concat(substring(string(/buildinfo/@filename), 2), '.' ,string(/buildinfo/@original), '.xhtml')"
      as="xs:string" />
-    <xsl:variable name="originalDocument" select="document($original_file)/html">
+    <xsl:variable name="originalDocument" select="document($original_file)/html" />
     
     <!-- Apply news page PRE-rules -->
     <xsl:if test="string(/buildinfo/document/@newsdate) and

@@ -1666,6 +1666,8 @@ img.author-avatar {
 table {
   border-collapse: collapse;
   margin-bottom: 1em;
+  table-layout: fixed;
+  word-wrap: break-word;
   max-width: 100%;
   font-size: 100%;
 }

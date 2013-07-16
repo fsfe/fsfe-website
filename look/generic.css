@@ -1666,10 +1666,9 @@ img.author-avatar {
 table {
   border-collapse: collapse;
   margin-bottom: 1em;
-  table-layout: fixed;
-  word-wrap: break-word;
-  max-width: 100%;
   font-size: 100%;
+  table-layout: fixed;
+  max-width: 100%;
 }
 
 table th,
@@ -1691,6 +1690,7 @@ table th {
 
 table td {
   border-bottom: 1px solid rgb(204,204,204);
+  word-wrap: break-word;
 }
 
 table.restricted-width {

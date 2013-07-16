@@ -121,7 +121,7 @@
         The ids used here are needed to fetch the correct texts in /tools/texts-content.**.xml
         /!\ the text with given IDs *must* exist there!
       -->
-      <div class="banner-border">
+      <!--div class="banner-border">
         <p>
           <a href="http://www.defectivebydesign.org/no-drm-in-html5">
             <xsl:call-template name="gettext">
@@ -129,7 +129,7 @@
             </xsl:call-template>
           </a>
         </p>
-      </div>
+      </div -->
       
     </div>
   </xsl:template>

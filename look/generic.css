@@ -1567,6 +1567,12 @@ ul.overview-horizontal li img.inline {
 /*  margin-left: 0;*/
 /*}*/
 
+.social-link { /*Flattr and Supporter*/
+  float: right;
+  margin-top: 7px;
+  margin-right: 4px;
+}
+
 #article-metadata img {
   height:24px;
   margin:.2em;

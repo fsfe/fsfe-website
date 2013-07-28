@@ -40,6 +40,7 @@
   <text id="source">Lähdekoodi</text>
   <text id="contact-us">Ota yhteyttä</text>
   <text id="translate">Suomenna tämä sivu?</text>
+  <text id="imprint">Imprint</text>
 
   <!-- Info box -->
   <text id="under-construction">
@@ -56,7 +57,9 @@
 
  <!-- Article metadata -->
  <text id="author">Tekijä</text>
- <text id="published">Julkaistu</text>
+ <text id="writtenby">Kirjoittaja</text>
+ <text id="published">, </text>
+ <text id="revision">päivitetty</text>
  <text id="download">Lataa</text>
 
   <!-- Conjunctions -->
@@ -82,6 +85,7 @@
   <text id="fellowship/contact">Yhteystiedot</text>
   <text id="fellowship/login">Kirjaudu</text>
   <text id="planet/planet">Yhteystiedot</text>
+  <text id="planet/blogs">Blogit</text>
   <text id="wiki/wiki">Wiki</text>
  
   <!-- Date time -->
@@ -136,6 +140,7 @@
   <text id="press">Lehdistö</text>
   <text id="newsletter">Uutiskirje</text>
   
+
 	<!-- These used to be in /tools/texts-content-**.xml -->
   <text id="news">Tuoreimmat uutiset</text>
   <text id="receive-newsletter">Tilaa FSFE:n kuukausittainen uutiskirje</text>
@@ -168,7 +173,6 @@
   <text id="join">Liity</text>  
   <text id="ourwork2011">Työmme vuonna 2011</text>
   <text id="support">Tue FSFE:tä</text>  
-  <text id="about-work">Lue lisää FSFE:n toiminnasta</text>  
   
   <text id="subscribe">Tilaa</text>
 

@@ -45,6 +45,9 @@
   <text id="under-construction">
     <strong>Warning: </strong>This page is under construction. Please do not attempt translation as its content is subject to change.
   </text>
+  <text id="project-complete">
+	  Tämä projekti on saatu päätökseen onnistuneesti. Nämä sivut säilytetään arkistointimielessä.
+  </text>
 
   <text id="search">Hae</text>
   <text id="submit">Lähetä</text>
@@ -74,7 +77,10 @@
   <text id="fellowship/fellowship">Liity</text>
   <text id="fellowship/card">Kortti</text>
   <text id="fellowship/communicate">Yhteystiedot</text>
+  <text id="fellowship/get-active">Ryhdy aktiiviksi</text>
+  <text id="fellowship/faq">UKK</text>
   <text id="fellowship/contact">Yhteystiedot</text>
+  <text id="fellowship/login">Kirjaudu</text>
   <text id="planet/planet">Yhteystiedot</text>
   <text id="wiki/wiki">Wiki</text>
  
@@ -123,13 +129,14 @@
 
   <text id="statement1">Free Software Foundation Europe on voittoa tavoittelematon järjestö, joka on omistautunut </text>
   <text id="statement-fs">vapaiden ohjelmistojen</text>
-  <text id="statement2"> edistämiselle ja tekee töitä tukeakseen vapauksia kasvavassa digitaalisessa yhteiskunnassa</text>
+  <text id="statement2"> edistämiselle ja työskentelee rakentaakseen vapaata digitaalista yhteiskuntaa</text>
   
   <text id="learn-more">Lue lisää</text>
 
   <text id="press">Lehdistö</text>
   <text id="newsletter">Uutiskirje</text>
   
+	<!-- These used to be in /tools/texts-content-**.xml -->
   <text id="news">Tuoreimmat uutiset</text>
   <text id="receive-newsletter">Tilaa FSFE:n kuukausittainen uutiskirje</text>
   <text id="events">Tulevat tapahtumat</text>
@@ -141,6 +148,7 @@
   <text id="email-placeholder">sähköpostiosoite</text>
   <text id="phone">Puhelin</text>
   <text id="fax">fax</text>
+  <text id="contact">Yhteystiedot</text>
   
   <text id="team">Tiimi</text>
   <text id="microblog">Mikroblogi</text>
@@ -148,11 +156,17 @@
   <text id="donate">Lahjoitukset</text>
   
   <!-- Campaign box on front-page, translated texts -->
-  <text id="cb-restricted-boot">Puolusta vapauttasi asentaa vapaita ohjelmistoja,</text>
-  <text id="cb-restricted-boot-link">allekirjoita lausuntomme rajoitettua käynnistämistä vastaan</text>
+  <text id="cb-restricted-boot">”Secure Boot”: Kuka hallitsee seuraavaa tietokonettasi?</text>
+  <text id="cb-restricted-boot-link">Sinä vai laitevalmistajat?</text>
+  <text id="dfd-2013">Document Freedom Day! Löydä tapahtumat ja kampanjat lähelläsi</text>
+  <text id="no-drm-in-html5">Kerro W3C:lle: Emme halua Hollywebiä</text>
+
+  <text id="cb-valentine">Helmikuun neljäntenätoista: </text>
+  <text id="cb-valentine-link">Näytä ihastuksesi vapaisiin ohjelmistoihin!</text>
   <!-- end of texts for the campaign box -->
   
   <text id="join">Liity</text>  
+  <text id="ourwork2011">Työmme vuonna 2011</text>
   <text id="support">Tue FSFE:tä</text>  
   <text id="about-work">Lue lisää FSFE:n toiminnasta</text>  
   
@@ -160,5 +174,43 @@
 
   <!-- alt text for missing avatars -->
   <text id="no-avatar">Ei kuvaa</text>
+
+  <!-- petitions -->
+  <text id="osig">Järjestöt</text>
+  <text id="isig">Yksityishenkilöt</text>
+  <text id="bsig">Yritykset</text>
+  
+  
+  <!-- quotes to be displayed in a rotating box -->
+  <quotes>
+    <quote id="zacchiroli" tag="donors" pos="1">
+      <photo>/donate/zacchiroli.jpg</photo>
+      <txt>
+        A world without Free Software is a world where we are all hostages of
+        proprietary software vendors that run our lives. To fight such a
+        nightmare scenario we need organisations like Free Software Foundation
+        Europe.
+      </txt>
+      <author>Stefano "Zack" Zacchiroli, entinen Debian-projektin vetäjä</author>
+    </quote>
+    <quote id="wiesemann" tag="donors" pos="2">
+      <photo>/donate/wiesemann.jpg</photo>
+      <txt>
+        A virtual world without Free Software is like a city in which you are
+        obliged to have a usage license for every pavement. We also need
+        commons in the virtual world.
+      </txt>
+      <author>Reinhard Wiesemann - Linuxhotel</author>
+    </quote>
+    <quote id="ganten" tag="donors" pos="3">
+      <photo>/donate/ganten.jpg</photo>
+      <txt>
+        Free Software is the solid grounding of our enterprise
+        solutions. The FSFE provides an important contribution to secure this
+        grounding, therefore we support the FSFE.
+      </txt>
+      <author>Peter Ganten - Univention</author>
+    </quote>
+  </quotes>
  
 </textset>

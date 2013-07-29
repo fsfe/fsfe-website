@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html>
+	<head>
+		<title>Avalik kiri vabadusest ja Interneti-hääletusest Vabariigi Valimiskomisjonile - FSFE</title>
+	</head>
+	<body>
+		<h1>Avalik kiri vabadusest ja Interneti-hääletusest Vabariigi Valimiskomisjonile</h1>
+
+		<p>Lugupeetud härra või proua</p>
+
+		<p>Teema: <strong>Interneti-hääletus Eesti valimistel: probleemid ja soovitused nende leevendamiseks</strong></p>
+
+		<p>Käesoleva kirja eesmärgiks on tuua välja mõned probleemid Eesti Interneti-hääletuse süsteemis ning pakkuda lahendusi nende leevendamiseks. Oleme välja valinud järgnevad valdkonnad, mille kohta soovime teha allpool mõned märkused: kasutaja vabadus &amp; hääletamisprotsessi läbipaistvus, usaldus matemaatika <i>vs</i> inimeste vastu ja kaughääletamisega kaasnevad ohud.</p>
+
+		<p><strong>1) Kasutaja vabadus &amp; hääletamisprotsessi läbipaistvus</strong></p>
+
+		<p>Hääletamine on demokraatia seisukohast kriitiline protsess, mistõttu ei tule seda mitte ainult läbi viia nii turvaliselt ja verifitseeritavalt kui võimalik, vaid asjaolu, et hääletamist viiakse läbi just sellisel moel, peab olema nähtav ka väljapoole. Selle nõude täitmata jätmine seab õigustatult kahtluse alla protsessi legitiimsuse. Demokraatliku ja läbipaistva kaughääletamissüsteemi eelduseks on kogu valimistel kasutatava tarkvara, kaasa arvatud kogu valimisserveritel jooksva tarkvara ning kliendipoolse hääletamisrakenduse, avaldamine vaba tarkvarana<a href="#fn0">⁰</a> (viite nimekirjale vaba tarkvara litsentsidest leiab allmärkusest <a href="#fn1">¹</a>). Hiljuti avalikustas<a href="#fn2">²</a> VVK otseselt hääletamisprotsessiga seotud serverirakenduste lähtekoodi. Tegu oli sammuga õiges suunas, ent see polnud piisav: hääletamisprotsessiga on seotud veel tarkvarakomponente ning need komponendid pole endiselt üldsusele kättesaadavad. Avalikkusel peab olema ka võimalus veenduda, et muu valimisserveritel jooksev tarkvara (näiteks operatsioonisüsteem) töötab õigesti.</p>
+
+		<p>On ehk olulisemgi, et valijarakendus avaldataks vaba tarkvarana. Nii saaks valija kontrollida, et valijarakendus teeb täpselt seda, mida ta tegema peaks. See leevendaks kartusi, et valijarakendust võidakse kasutada nuhkvara levitamiseks – hetkel on tegu  laialt levinud<a href="#fn3">³</a> musta kastiga, mille valijapoolne kontroll pole võimalik. Hiljutiste sündmuste<a href="#fn4">⁴</a> valguses on tegu mõistliku murega. Lisaeelisena näeme, et vigu (nagu näiteks see 2011. aasta Riigikogu valimistel mõne kandidaadi kuvamist mõjutanud viga, mida arutas hiljem Riigikohus asjas nr 3-4-1-6-11) märkaks, neist teavitaks ning neid parandaks rohkem inimesi; ka suureneks hääletamist võimaldavate platvormide hulk (õigem oleks siin küll valijarakendus rajada laialdaselt toetatud avatud standarditele<a href="#fn5">⁵</a>).</p>
+
+		<p>Eelkirjeldatud eeliste realiseerumiseks on nõutav, et tarkvara avaldatakse vaba tarkvarana (CC-BY-NC-ND litsents, mida kasutatakse hetkel serverirakenduste avaldamisel, ei kvalifitseeru vaba tarkvara litsentsina). Võimalus lähtekoodiga vaid tutvuda ei võimalda teadlastel ja kodanikel vigu paranda[da], tarkvarast paremaid versioone arendada ega seda muul moel enda vajadustele vastavaks kohandada. Lisaks saadab see vale signaali, piirates sobimatult võimalusi, mil üldsus võib suhestuda avalike vahenditega arendatud tarkvaraga. Lisaks tuleks tarkvara arendusprotsess üldsusele avada, et paremini ära kasutada avalikkuse võimekust tarkvara testida, veateateid edastada ning koodipaiku pakkuda. Hääletamine on kollektiivne, avalik protsess – miks peaks hääletamistarkvara arendamine teistsugune olema?</p>
+
+		<p>Eeltoodud põhjustel palume lugupidavalt, et VVK avaldaks kogu hääletamisprotsessis rakendatava tarkvara, kaasa arvatud kogu valimisserveritel jooksva tarkvara, vaba tarkvarana ning võimaldaks üldsusel osaleda selle tulevases arenduses.</p>
+
+		<p><strong>2) Maksimaalne toetumine matemaatikale</strong></p>
+
+		<p>Krüptograafia jääb meie põhikompetentsist väljapoole, mistõttu ei esita me selles vallas täpseid soovitusi. Küll aga tundub meile, et praegune süsteem toetub tugevalt valimisi korraldavate inimeste aususele, jättes seeläbi võimaluse süüdistusteks valimispettuses. Me soovitame uurida lahendusi, mis vähendavad süsteemi sõltuvust inimeste aususest, tuginedes selle asemel matemaatilistele tõestustele.</p>
+
+		<p><strong>3) Kaughääletamisega kaasnevad ohud</strong></p>
+
+		<p>Interneti teel hääletamine võimaldab suuremat kodanike osalust. Ent sellel on oma hind – suurem toetumine tehnilistele protsessidele, mis peavad olema disainitud ülima hoolega turvalisust silmas pidades ning suurimat võimalikku läbipaistvust taotledes, et kindlustada valimiste jätkuv usaldusväärsus.</p>
+
+		<p>Igasugusel kaughääletamissüsteemil peab olema mehhanism valijasunniga (ing k <i>voter coercion</i>) tegelemiseks. Eesti süsteem leevendab seda probleemi, võimaldades valijal enda häält etteantud ajavahemiku jooksul muuta. See strateegia eeldab, et valija on sunnist teadlik ning tahab ja suudab oma häält hiljem muuta.</p>
+
+		<p>Võime ja tahe sunnile vastu seista võib enamikul valijasunni juhtudest olla olemas või mitte, kuid võimet ega tahet sunnile vastu seista ei saa esineda juhtudel, kus valija ei tea, et tema tahet arvesse ei võeta. Seetõttu peaksid olema hääletajate kompromiteeritud masinad üks suur murekoht. Vähim, mida VVK tegema peaks, on need ohud võimalikult laialdaselt teatavaks teha koos juhistega, kuidas mõne riski realiseerumise korral toimida.</p>
+
+		<p>Täname teid tähelepanu eest. Me oleme saadaval, et neid olulisi küsimusi Teiega edasi arutada, ning jääme ootama Teie vastust, mille palume saata elektronpostiga aadressile [[välja jäetud]].</p>
+
+		<p>
+			Lugupidamisega teie<br />
+			Heiki Ojasild<br />
+			Fellowship Representative
+		</p>
+
+		<p id="fn0"><a href="https://fsfe.org/about/basics/freesoftware.html">https://fsfe.org/about/basics/freesoftware.html</a></p>
+		<p id="fn1"><a href="http://opensource.org/licenses/alphabetical">http://opensource.org/licenses/alphabetical</a> (ing k)</p>
+		<p id="fn2"><a href="http://uudised.err.ee/index.php?06283207">http://uudised.err.ee/index.php?06283207</a></p>
+		<p id="fn3">VVK ametliku statistika (<a href="http://vvk.ee/valijale/e-haaletamine/e-statistika/">http://vvk.ee/valijale/e-haaletamine/e-statistika/</a>) kohaselt hääletas 2011. aasta Riigikogu valimistel 140 846 inimest ehk 24.3% kõigist hääletanutest Interneti teel.</p>
+		<p id="fn4"><a href="http://www.guardian.co.uk/world/2013/jun/06/us-tech-giants-nsa-data">http://www.guardian.co.uk/world/2013/jun/06/us-tech-giants-nsa-data</a> (ing k)</p>
+		<p id="fn5"><a href="https://fsfe.org/activities/os/def.html">https://fsfe.org/activities/os/def.html</a></p>
+	</body>
+	<translator>Repentinus</translator>
+</html>

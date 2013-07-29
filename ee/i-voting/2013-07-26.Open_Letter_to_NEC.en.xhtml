@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html>
+	<head>
+		<title>Open Letter on Freedom and Internet Voting to Estonia's National Electoral Committee - FSFE</title>
+	</head>
+	<body>
+		<h1>Open Letter on Freedom and Internet Voting to Estonia's National Electoral Committee</h1>
+
+		<p>Dear Sir/Madam,</p>
+
+		<p>Subject: <strong>Internet voting in Estonian elections: Issues &amp; Recommendations to Alleviate Concerns</strong></p>
+
+		<p>The purpose of this letter is to present concerns regarding the Estonian Internet voting system, and to offer suggestions on alleviating these concerns. We have identified the following areas we would like to comment on below: user freedom and process transparency, mathematics vs trust in people, and dangers inherent to remote voting.</p>
+
+		<p><strong>1) User Freedom &amp; Process Transparency</strong></p>
+
+		<p>Voting is a crucial process for a democracy, and must therefore not only be conducted as securely and verifiably as possible, but it must also be apparent that the voting process is conducted in this way. Failing to meet this requirement rightfully casts doubt on the legitimacy of the process. Publishing all software, including any and all software running on the election servers and the client side voting application, used in the election process as Free Software<a href="#fn0">⁰</a> (for a list of Free Software licences, please see <a href="#fn1">¹</a>) is a must for a democratic and transparent remote voting system. The recent publication<a href="#fn2">²</a> of the source code to the server applications directly responsible for the voting process was a step in the right direction. However, it was not enough: other software components are involved in the voting process, and these components remain unavailable to the public. The public must also have the ability to verify that other software running on the election servers (the operating system, for instance) is operating as it should.</p>
+		
+		<p>Furthermore, and perhaps more importantly, the client side software must also be published as Free Software. This would enable voters to verify that the software does exactly what it is supposed to do, alleviating concerns that the client application – at the moment a widely distributed<a href="#fn3">³</a> black box which does not allow a review of its functioning – could be used to distribute spyware. This is a reasonable concern, especially in light of the recent events<a href="#fn4">⁴</a>. More people spotting, reporting and fixing bugs (like the one that affected displaying the names of certain candidates during the parliamentary elections of 2011 and subsequently became subject of the Supreme Court case no. 3-4-1-6-11) and the ability to vote on more platforms (although this would be properly resolved by basing the client application on widely supported Open Standards<a href="#fn5">⁵</a>) would be additional advantages.</p>
+
+		<p>In order to realise these advantages, it is also imperative that the software is released as Free Software (the CC-BY-NC-ND licence the server side software is currently released under does not qualify as a Free Software licence). Merely being able to look at the source code does not enable researchers and citizens to fix bugs, develop better versions of the software, or otherwise adapt it to their needs. It also sends the wrong signal in that it places undue restrictions on how the public can interact with software developed with public funds. Furthermore, the development process of the voting software should be opened up to public participation in order to properly leverage the public's ability to provide testing, bug reports and patches. Voting is a collective, public process, so why should the development of voting software be any different?</p>
+
+		<p>Wherefore, we respectfully request that the NEC publish all software used in the elections process, including any and all software running on the election servers, as Free Software and enable public participation in its future development.</p>
+
+		<p><strong>2) Maximising Reliance on Mathematics</strong></p>
+
+		<p>As cryptography is outside our core area of expertise, we will not make specific recommendations in this field. However, it seems to us that the current system relies quite a bit on the integrity of the people organising elections, opening the door to potential accusations of electoral fraud. We would recommend investigating ways to reduce the reliance on the integrity of people in favour of mathematically proven techniques.</p>
+
+		<p><strong>3) Dangers Inherent to Remote Voting</strong></p>
+
+		<p>Voting via Internet opens up opportunities for increased citizen participation. Yet these opportunities come at the cost of increased reliance on technical processes, which must be designed with the utmost care for security and the highest priority for transparency in order to ensure that elections remain credible.</p>
+
+		<p>Any kind of remote voting system must have a mechanism in place to deal with voter coercion. While the Estonian system mitigates this by enabling the voter to change his or her vote during a set period of time, the mitigation strategy assumes that the voter knows s/he is being coerced, and is willing and able to change their vote later.</p>
+
+		<p>The ability and willingness to resist coercion may or may not exist in the majority of cases where knowledge of coercion exists; however, they must be lacking in scenarios where the voter has no knowledge of the subversion of their will. Hence, compromised client machines should be a major concern. At the very least, the NEC should take steps to publicise the dangers as widely as possible, along with instructions to minimise the risk and rectify the situation should a risk realise.</p>
+
+		<p>Thank you for your attention. We remain available to discuss these important issues with you, and are looking forward to your response, which we would like to receive electronically at [[redacted]].</p>
+
+		<p>
+			Faithfully yours,<br />
+			Heiki Ojasild<br />
+			Fellowship Representative
+		</p>
+
+		<p id="fn0"><a href="https://fsfe.org/about/basics/freesoftware.html">https://fsfe.org/about/basics/freesoftware.html</a></p>
+		<p id="fn1"><a href="http://opensource.org/licenses/alphabetical">http://opensource.org/licenses/alphabetical</a></p>
+		<p id="fn2"><a href="http://news.err.ee/politics/0233b688-b116-44c3-98ca-89a4057acad8">http://news.err.ee/politics/0233b688-b116-44c3-98ca-89a4057acad8</a></p>
+		<p id="fn3">According to the official statistics found at <a href="http://vvk.ee/voting-methods-in-estonia/engindex/statistics/">http://vvk.ee/voting-methods-in-estonia/engindex/statistics/</a>, 140 846 people, or 24.3% of participating voters, cast their vote over the Internet in the parliamentary elections of 2011.</p>
+		<p id="fn4"><a href="http://www.guardian.co.uk/world/2013/jun/06/us-tech-giants-nsa-data">http://www.guardian.co.uk/world/2013/jun/06/us-tech-giants-nsa-data</a></p>
+		<p id="fn5"><a href="https://fsfe.org/activities/os/def.html">https://fsfe.org/activities/os/def.html</a></p>
+	</body>
+</html>

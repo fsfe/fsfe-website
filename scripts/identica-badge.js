@@ -5,6 +5,8 @@
 // (see http://willdaniels.co.uk/blog/tech-stuff/26-identica-badge-xhtml)
 // copyright Kent Brewster 2008
 // see http://kentbrewster.com/identica-badge for info
+//
+// Licensed under CC-BY-SA as stated on http://kentbrewster.com/rights-and-permissions/
 
 function createHTMLElement(tagName) {
    if(document.createElementNS)

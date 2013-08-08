@@ -1,5 +1,8 @@
 // awstats_misc_tracker.js
 //-------------------------------------------------------------------
+// Released under GPLv3+
+// see http://awstats.cvs.sourceforge.net/viewvc/awstats/awstats/wwwroot/js/ for details
+//-------------------------------------------------------------------
 // You can add this file onto some of your web pages (main home page can
 // be enough) by adding the following HTML code to your page body:
 //

@@ -99,44 +99,57 @@ function send_mail ( $to, $from, $subject, $message, $bcc = NULL, $att = NULL, $
   return mail( $to, $subject, $message, $headers );
 }
 
-// error_reporting(E_ALL|E_STRICT);
-// ini_set('display_errors', 1);
-// echo 'I am : ' . `whoami`;
-// $result = mail('mail@samtuke.com','Testing 1 2 3','This is a test.');
-// echo '<hr>Result was: ' . ( $result === FALSE ? 'FALSE' : 'TRUE') . $result;
-// echo '<hr>';
+$lang = $_POST['language'];
 
+# Sanity checks (*very* sloppy input validation)
+if (empty($_POST['lastname'])  ||
+    empty($_POST['email'])     ||
+    empty($_POST['street'])    ||
+    empty($_POST['city'])      ||
+    empty($_POST['country'])   ||
+    empty($_POST['specifics']) ||
+   !empty($_POST['url']) ) {
 
-$subject = "Promo pack ordered by '{$_POST['name']}'";
+  header("Location: http://fsfe.org/order/orderpromo-error.$lang.html");
+  exit();
+}
 
-$msg = "New promo pack ordered on " . date( 'l jS \of F Y h:i:s A' ) . ".\n\n".
-       "{$_POST['email']}\n\n".
-       "{$_POST['name']}\n".
-       "{$_POST['line1']}, {$_POST['line2']}\n".
+$reference = "order.".date("%Y-%m-%d").".".(date("%U") % 100000);
+$subject = "[promo order] $reference {$_POST['firstname']} {$_POST['lastname']}";
+$msg = "Hey, someone ordered promotional material:\n".
+       "First Name: {$_POST['firstname']}\n".
+       "Last Name:  {$_POST['lastname']}\n".
+       "EMail:      {$_POST['email']}\n".
+       "\n".
+       "Address:\n".
+       "{$_POST['street']}\n".
        "{$_POST['city']}\n".
-       "{$_POST['region']}, {$_POST['zip']}\n".
-       "{$_POST['country']}";
+       "{$_POST['country']}\n".
+       "\n".
+       "Specifics of the Order:\n".
+       "{$_POST['specifics']}\n".
+       "\n".
+       "The material is going to be used for:\n".
+       "{$_POST['usage']}\n".
+       "\n".
+       "Comments:\n".
+       "{$_POST['comment']}\n".
+       "\n".
+       "Preferred language was: {$_POST['language']}\n";
 
 if (isset($_POST['donate']) && ($_POST['donate'] > 0)) {
-  $_POST['donationID'] = "DAPROMO".gen_alnum(5);
+  $_POST['donationID'] = "FSPROMO".gen_alnum(5);
   $msg .= "\n\nThe orderer choose to make a Donation of {$_POST['donate']} Euro.\n".
           "Please do not assume that this donation has been made until you receive\n".
           "confirmation from Concardis for the order: {$_POST['donationID']}";
 }
 
-$test = send_mail ( "dfd@lists.fsfe.org", "documentfreedom.org", $subject, $msg );
-
-// echo "
-// <h2>Thanks you for your request, it will be processed shortly</h2>
-// <p><a href="/">Back to website</a></p>";
+$test = send_mail ( "assist@fsfe.org", $_POST['email'], $subject, $msg );
 
 if (isset($_POST['donate']) && ($_POST['donate'] > 0)) {
   relay_donation($_POST['donationID']);
 } else {
-  echo eval_xml_template('blank.en.html', array(
-    'head' => '<title>Success - DFD</title>',
-    'body' => '<h4>Thanks for your order! It should be posted shortly.</h4>',
-  ));
+  header("Location: http://fsfe.org/order/orderpromo-thanks.$lang.html");
 }
 
 ?>

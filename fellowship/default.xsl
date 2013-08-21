@@ -289,7 +289,7 @@
           <xsl:attribute name="href">/fellowship</xsl:attribute>
           <xsl:element name="img">
             <xsl:attribute name="alt">FSFE Fellowship Logo</xsl:attribute>
-            <xsl:attribute name="src"><xsl:value-of select="$urlprefix"/>/graphics/fellowship/logo.png</xsl:attribute>
+            <xsl:attribute name="src"><xsl:value-of select="$urlprefix"/>/graphics/fellowship/fellowship-page-logo-300x91.png</xsl:attribute>
           </xsl:element>
         </xsl:element>
           </xsl:element>

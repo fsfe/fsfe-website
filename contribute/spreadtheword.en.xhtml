@@ -182,7 +182,7 @@ material you need or prefer. For example, if you plan to support a
 special FSFE`s campaign. Please keep in mind, that for postal reasons, 
 in general we just send packages up to 1kg. If you need more, please ask.</p>
 
-		<form class="highlight labeledform" id="orderpromo" method="post" action="/cgi-bin/orderpromo.pl" accept-charset="utf-8">
+		<form class="highlight labeledform" id="orderpromo" method="post" action="/cgi-bin/promotion.php" accept-charset="utf-8">
                 <!-- Translators: please set the value for the language to your language code -->
                 <input type="hidden" name="language" value="en" />
                 <h3>Please send promotional material to:</h3>
@@ -211,6 +211,8 @@ No focus, just send me the default package. That means we will try to ensure tha
                 <span class="formlabel">Any comment:</span>
                   <textarea name="comment" rows="4" cols="40"></textarea><br/>
                   <input type="submit" name="url" value="I am a spam robot" style="display:none;" />
+                <span class="formlabel">Optional Donation:</span>
+		  <input type="number" name="donate" value="0" min="0" step="5"/>€
                   <!-- Translators: please translate the label of this button (the value field) -->
                   <input type="submit" name="dothis" value="Order now!"/>
                   <input type="submit" name="url" value="I am a spam robot" style="display:none;" /><br/>

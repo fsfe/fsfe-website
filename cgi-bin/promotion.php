@@ -138,7 +138,7 @@ $msg = "Hey, someone ordered promotional material:\n".
        "Preferred language was: {$_POST['language']}\n";
 
 if (isset($_POST['donate']) && ($_POST['donate'] > 0)) {
-  $_POST['donationID'] = "FSPROMO".gen_alnum(5);
+  $_POST['donationID'] = "DAFSPCK".gen_alnum(5);
   $msg .= "\n\nThe orderer choose to make a Donation of {$_POST['donate']} Euro.\n".
           "Please do not assume that this donation has been made until you receive\n".
           "confirmation from Concardis for the order: {$_POST['donationID']}";

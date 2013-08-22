@@ -26,9 +26,9 @@ function relay_donation($orderID) {
   $lang = substr($language, 0, 2);
 
   $PSPID = "40F00871";
-  $TP = "http://documentfreedom.org/donate/tmpl-concardis.$lang.html";
-  $acceptURL = "http://documentfreedom.org/donate/thankyou.$lang.html";
-  $cancelURL = "http://documentfreedom.org/donate/cancel.$lang.html";
+  $TP = "https://fsfe.org/donate/tmpl-concardis.$lang.html";
+  $acceptURL = "https://fsfe.org/donate/thankyou.$lang.html";
+  $cancelURL = "https://fsfe.org/donate/cancel.$lang.html";
 
   $salt = "Only4TestingPurposes";
   $shasum = strtoupper(sha1(

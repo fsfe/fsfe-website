@@ -1,7 +1,7 @@
 <?php
 
 function eval_xml_template($template, $data) {
-  $dir = dirname(__FILE__) . '/templates';
+  $dir = dirname(__FILE__) . '/../templates';
   $result = file_get_contents("$dir/$template");
   foreach ($data as $key => $value)
     $result = preg_replace("/<tpl name=\"$key\"><\/tpl>/", $value, $result);
@@ -26,9 +26,9 @@ function relay_donation($orderID) {
   $lang = substr($language, 0, 2);
 
   $PSPID = "40F00871";
-  $TP = "https://fsfe.org/donate/tmpl-concardis.$lang.html";
-  $acceptURL = "https://fsfe.org/donate/thankyou.$lang.html";
-  $cancelURL = "https://fsfe.org/donate/cancel.$lang.html";
+  $TP = "http://fsfe.org/donate/tmpl-concardis.$lang.html";
+  $acceptURL = "http://fsfe.org/donate/thankyou.$lang.html";
+  $cancelURL = "http://fsfe.org/donate/cancel.$lang.html";
 
   $salt = "Only4TestingPurposes";
   $shasum = strtoupper(sha1(

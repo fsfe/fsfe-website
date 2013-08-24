@@ -228,7 +228,7 @@
       </xsl:element>
       <xsl:element name="a">
         <xsl:attribute name="class">social-link</xsl:attribute>
-        <xsl:attribute name="href">/support</xsl:attribute>
+        <xsl:attribute name="href">/support?pr</xsl:attribute>
         <xsl:element name="img">
           <xsl:attribute name="src">/graphics/supporter/FSFE_plus1_48x22_b.png</xsl:attribute>
           <xsl:attribute name="alt">Support FSFE</xsl:attribute>
@@ -265,7 +265,7 @@
       </xsl:element>
       <xsl:element name="a">
         <xsl:attribute name="class">social-link</xsl:attribute>
-        <xsl:attribute name="href">/support</xsl:attribute>
+        <xsl:attribute name="href">/support?pr</xsl:attribute>
         <xsl:element name="img">
           <xsl:attribute name="src">/graphics/supporter/FSFE_plus1_48x22_b.png</xsl:attribute>
           <xsl:attribute name="alt">Support FSFE</xsl:attribute>

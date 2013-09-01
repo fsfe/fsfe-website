@@ -50,6 +50,13 @@
     <avatar>/about/bako/bako-avatar.jpg</avatar>
   </person>
 
+  <person id="beck" avatar="no" association-member="no" teams="main">
+    <name>Tilman Beck</name>
+    <country>DE</country>
+    <function>intern/m</function>
+    <email>beck (at) fsfeurope (dot) org</email>
+  </person>
+
   <person id="bubestinger" avatar="no" teams="main, at">
     <name>Peter Bubestinger</name>
     <country>AT</country>
@@ -215,13 +222,6 @@
     <country>ES</country>
     <function country="ES">coordinator/m</function>
     <email>machon (at) fsfeurope (dot) org</email>
-  </person>
-
-  <person id="marti" avatar="no" association-member="no" teams="main">
-    <name>Daniel Martí</name>
-    <country>DE</country>
-    <function>intern/m</function>
-    <email>marti (at) fsfeurope (dot) org</email>
   </person>
 
   <person id="mueller" avatar="yes" association-member="yes" teams="main, at">

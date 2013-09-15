@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<html>
+  <head>
+    <title>Donate online - FSFE</title>
+  </head>
+
+  <body>
+    <h1>Donate online</h1>
+
+    <div id="introduction">
+      <div class="image">
+        <img src="/graphics/piggy-bank-lock.png" alt="Piggy-bank"/>
+      </div>
+
+      <p>
+        You will now be forwarded to the secure payment page.
+      </p>
+    </div>
+      <form name="donate" action="https://secure.payengine.de/ncol/prod/orderstandard.asp" method="post">
+        <!-- payment parameters -->
+	<tpl name="PSPID"></tpl>
+        <tpl name="orderID"></tpl>
+        <tpl name="amount"></tpl>
+	<!-- input type="hidden" name="com"   value="Donation" /-->
+	<input type="hidden" name="currency"   value="EUR" />
+        <tpl name="language"></tpl>
+        <!-- tpl name="CN"></tpl-->
+        <tpl name="EMAIL"></tpl>
+        <!-- interface template -->
+	<tpl name="TP"></tpl>
+	<input type="hidden" name="PMListType" value="2" />
+        <!-- post-payment redirection -->
+	<tpl name="accepturl"></tpl>
+	<tpl name="cancelurl"></tpl>
+        <!-- SHA1 signature -->
+        <tpl name="SHASign"></tpl>
+        <!-- Javascript submit() method only works if no submit button is active -->
+        <noscript>
+          <!-- submit button -->
+          <input type="submit" name="submit"       value="OK" />
+        </noscript>
+      </form>
+      <script type="text/javascript">document.donate.submit()</script>
+  </body>
+
+  <timestamp>$Date: 2013-03-21 17:11:37 +0100 (Thu, 21 Mar 2013) $ $Author: paul $</timestamp>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

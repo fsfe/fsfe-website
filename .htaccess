@@ -70,6 +70,7 @@ RewriteRule ^en/layout/set/rss/content/view/full/4974 http://blogs.fsfe.org/grev
 RewriteRule ^en/news http://fsfe.org/news/ [redirect=permanent]
 RewriteRule ^people/greve /about/greve/ [redirect=permanent]
 RewriteRule ^projects/fellowship /fellowship/ [redirect=permanent]
+RewriteRule ^fellowship/contact /contact/contact.html [redirect=permanent]
 RewriteRule ^en/rss/feed/news.xml /news/news.en.rss [redirect=permanent]
 RewriteRule ^en/rss/feed/events.xml /events/events.en.rss  [redirect=permanent]
 RewriteRule ^news/fsfe-fr-channel.fr.xml /news/news.fr.rss [redirect=permanent]

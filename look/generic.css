@@ -2158,3 +2158,27 @@ a.quote-box {
   font-style: none;
   color: rgb(50,50,50);
 }
+
+
+div.logo-list {
+  width: 100%;
+  float: left;
+  clear: left;
+  min-height: 90px;
+  padding: 5px;
+}
+div.logo-list .img {
+  float: left;
+  width: 28%;
+  padding-right: 1%;
+}
+div.logo-list .cont {
+  float: left;
+  width: 68%;
+  /* valign */
+  margin: auto 0;
+}
+div.logo-list img {
+  max-width: 100%;
+  max-height: 100%;
+}

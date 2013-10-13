@@ -32,7 +32,7 @@
 			/* &lt;![CDATA[ */
 
 			var quotes = [
-			<xsl:for-each select="/html/set/quotes/quote[@tag=$tag or $tag='']">
+			<xsl:for-each select="/buildinfo/textset/quotes/quote[@tag=$tag or $tag='']">
 				{
 					'txt': '<xsl:call-template name="escape"><xsl:with-param name="string" select="normalize-space(txt)"/></xsl:call-template>',
 					'photo': '<xsl:value-of select="normalize-space(photo)"/>',

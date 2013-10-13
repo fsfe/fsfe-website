@@ -1113,9 +1113,6 @@
     
 	<!-- Piwik -->
 	<script type="text/javascript">
-	//var pkBaseURL = (("https:" == document.location.protocol) ? "https://piwik.fsfe.org/" : "http://piwik.fsfe.org/");
-	//document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
-	
 	//enable piwik on plain text page only
 	pkBaseURL = "http://piwik.fsfe.org/";
 	if ("http:" == document.location.protocol) {
@@ -1128,7 +1125,7 @@
 	piwikTracker.trackPageView();
 	piwikTracker.enableLinkTracking();
 	} catch( err ) {}
-	</script><noscript><p><img src="http://piwik.fsfe.org/piwik.php?idsite=4" style="border:0" alt="" /></p></noscript>
+	</script>
 	<!-- End Piwik Tracking Code -->
     
       </xsl:element>

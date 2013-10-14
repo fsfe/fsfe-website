@@ -52,7 +52,7 @@
 
 				$('#quote-box-inner').fadeOut('slow', function() {
 					$('#quote-box-inner div.img').html('<img src="'+quotes[index]['photo']+'"/>');
-					$('#quote-box-inner div.cont').html('<p class="txt"><a href="#">'
+					$('#quote-box-inner div.cont').html('<p class="txt">'
 					                              + quotes[index]['txt']
 					                              + '</a></p><p><span class="author">'
 					                              + quotes[index]['author']

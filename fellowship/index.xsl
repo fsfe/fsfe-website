@@ -10,4 +10,12 @@
         <xsl:apply-templates />
       </div>
   </xsl:template>
+
+	<!-- rotating quotes -->
+  <xsl:template match="quote-box">
+    <xsl:call-template name="quote-box">
+      <xsl:with-param name="tag" select="string(@tag)" />
+    </xsl:call-template>
+  </xsl:template>
+
 </xsl:stylesheet>

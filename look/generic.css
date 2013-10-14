@@ -2137,3 +2137,61 @@ img.cwfs-button:hover {
 .cwfs textarea {
   width: 94%;
 } 
+
+
+/* ------------------------------------------------------------------------- */
+/* Fellowship Quotebox                                                       */
+/* ------------------------------------------------------------------------- */
+
+div.quote {min-height: 170px;}
+div.quote .img {width: 18%;}
+div.quote .cont {width: 78%;}
+div.quote .txt:before {content: open-quote;}
+div.quote .txt:after {content: close-quote;}
+div.quote .author {font-weight: bold}
+div.quote .author:before {content: "— "}
+div.quote .license {font-style: italic}
+div.quote .license:before {content: " "}
+
+#quote-box {
+	border: 1px solid #23350A;
+	clear: left;
+	float: left;
+	margin: 1em 0 0;
+	overflow: hidden;
+	padding: 0;
+	width: 99%;
+}
+
+#quote-box p {
+	margin: 0;
+	padding: 0;
+}
+
+a.quote-box {
+  font-style: none;
+  color: rgb(50,50,50);
+}
+
+div.logo-list {
+  width: 100%;
+  float: left;
+  clear: left;
+  min-height: 90px;
+  padding: 5px;
+}
+div.logo-list .img {
+  float: left;
+  width: 28%;
+  padding-right: 1%;
+}
+div.logo-list .cont {
+  float: left;
+  width: 68%;
+  /* valign */
+  margin: auto 0;
+}
+div.logo-list img {
+  max-width: 100%;
+  max-height: 100%;
+}

@@ -20,4 +20,20 @@
     </xsl:call-template>
   </xsl:template>
 
+<!-- News -->
+  <xsl:template match="fellowship-news">
+    <xsl:call-template name="fetch-news">
+      <xsl:with-param name="tag">front-page</xsl:with-param>
+      <xsl:with-param name="nb-items" select="5" />
+      <xsl:with-param name="show-date" select="'no'" />
+    </xsl:call-template>
+    
+    <xsl:element name="p">
+      <xsl:element name="a">
+        <xsl:attribute name="href">/news/news.html</xsl:attribute>
+        <xsl:call-template name="more-label" /><xsl:text>…</xsl:text>
+      </xsl:element>
+    </xsl:element>
+  </xsl:template>
+
 </xsl:stylesheet>

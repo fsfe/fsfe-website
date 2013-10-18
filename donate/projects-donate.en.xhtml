@@ -34,9 +34,12 @@
       <p>
         <label for="email">E-mail</label>
         <input id="email" name="email" type="email"/>
-        <label for="amount">Amount in €</label>
-        <!--        <input name="amount" type="text" value="30" palceholder="" style="width:5em"/> -->
-        <input name="amount" type="text" value="30" style="width:5em"/>
+
+        <input type="hidden" name="amount" value="oother"/>
+
+        <label for="oamount_other">Amount in €</label>
+        <input name="oamount_other" type="text" value="30" style="width:5em"/>
+
         <input type="hidden" name="language" value="en_US"/>
         <input type="hidden" name="text" value="Donation"/>
         <input type="submit" value="Donate"/>

@@ -49,11 +49,9 @@
 
   <item type="t-shirt" id="tshirt-fsfs-orange" price="18.00" date="2010-02-08">
     <available size="S"/>
-<!--
-    <available size="M"/>
-    <available size="L"/>
+	  <available size="M" />
+	  <available size="L" />
     <available size="XL"/>
--->
     <available size="XXL"/>
     <image
       small="/order/articles/images/thumbnails/tshirt-fsfs-orange-front.jpg"
@@ -65,6 +63,7 @@
 
   <item type="t-shirt" id="tshirt-fsfs-red" price="18.00" date="2010-02-07">
     <available size="S"/>
+    <available size="M" />
     <available size="XXL"/>
     <image
       small="/order/articles/images/thumbnails/tshirt-fsfs-red-front.jpg"
@@ -91,11 +90,11 @@
 
   <item type="t-shirt" id="tshirt-hacking-black" price="18.00" date="2008-02-23">
     <available size="S"/>
-<!--
+    <!--
 		<available size="M"/>
+-->
     <available size="L"/>
     <available size="XL"/>
--->
     <available size="XXL"/>
     <available size="XXXL"/>
     <image

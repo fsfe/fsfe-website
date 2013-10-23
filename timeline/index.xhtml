@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html>
+  <head>
+    <title>FSFE Success Timeline</title>
+    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <script src="api/timeline-api.js?bundle=true" type="text/javascript"></script>
+    <script>
+        var tl;
+        function onLoad() {
+            var eventSource = new Timeline.DefaultEventSource(0);
+            
+            var theme = Timeline.ClassicTheme.create();
+            theme.event.bubble.width = 350;
+            theme.event.bubble.height = 300;
+            var d = Timeline.DateTime.parseGregorianDateTime("2005")
+            var bandInfos = [
+                Timeline.createBandInfo({
+                    width:          "100%", 
+                    intervalUnit:   Timeline.DateTime.DECADE, 
+                    intervalPixels: 400,
+                    eventSource:    eventSource,
+                    date:           d,
+                    theme:          theme,
+                    layout:         'original'  // original, overview, detailed
+                })
+            ];
+            
+            tl = Timeline.create(document.getElementById("tl"), bandInfos, Timeline.HORIZONTAL);
+            tl.loadXML("fsfe.xml", function(xml, url) { eventSource.loadXML(xml, url); });
+            
+            setupFilterHighlightControls(document.getElementById("controls"), tl, [0,1], theme);
+        }
+        var resizeTimerID = null;
+        function onResize() {
+            if (resizeTimerID == null) {
+                resizeTimerID = window.setTimeout(function() {
+                    resizeTimerID = null;
+                    tl.layout();
+                }, 500);
+            }
+        }
+    </script>
+  </head>
+
+<body onload="onLoad();" onresize="onResize();">
+
+<div id="body">
+    <h1>FSFE Timeline</h1>
+    <div id="tl" class="timeline-default" style="height: 200px;"></div>
+</div>
+
+
+  </body>
+  <timestamp>$Date: 2013-01-16 13:36:48 +0100 (Wed, 16 Jan 2013) $ $Author: gerloff $</timestamp>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

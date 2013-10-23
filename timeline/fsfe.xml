@@ -1,0 +1,77 @@
+<data
+	dateTimeFormat="iso8601"
+	>
+	
+<!-- DURATION SPANS -->
+<event 
+	start="2008-03-01" end="2014-03-01" isDuration="true"
+	title="DFD campaigns"
+	color="red"
+	>
+	Document Freedom Day campaigns worldwide
+</event>
+<event 
+	start="2003-09-01" end="2013-06-01" isDuration="true"
+	title="Software Patents"
+	color="blue"
+	>
+	Fight against Software patents in EU and on national levels
+</event>
+
+<!-- DFD EVENTS -->
+<event 
+	start="2008-03-01"
+	title="Document Freedom Day 2008"
+	icon="graphics/dark-red-circle.png"
+	>
+	First Document Freedom Day EVA!
+</event>
+<event 
+	start="2009-03-01"
+	title="Document Freedom Day 2009"
+	icon="graphics/dark-red-circle.png"
+	>
+	Second DFD
+</event>
+<event 
+	start="2010-03-01"
+	title="Document Freedom Day 2010"
+	icon="graphics/dark-red-circle.png"
+	>
+	Third DFD *yawn*
+</event>
+
+<!-- SWPAT -->
+<event 
+	start="2003-09-01"
+	title="EU parliament against SWPats"
+	color="blue"
+	>
+	The European parliament votes against the Software patents
+</event>
+<event 
+	start="2004-05-01"
+	title="EU action week against SWPats"
+	icon=""
+	color="blue"
+	>
+	Desciption
+</event>
+<event 
+	start="2013-06-01"
+	title="Joint motion in German Parliament"
+	icon=""
+	color="blue"
+	>
+	All German Parties subscribe a joint motion letter against Software Patents!
+</event>
+
+<!-- INTERNAL SUCCESSES -->
+<event 
+	start="2001-04-24"
+	title="Founding FSFE"
+	>
+	Founded by Greve and some other cool guys!
+</event>
+
+</data> 

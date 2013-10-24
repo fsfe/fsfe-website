@@ -240,14 +240,11 @@
 -->
 
   <item type="baby-clothes" id="baby-romper-fork-beige" price="18.00" date="2012-10-04">
-<!--
     <available size="0-3"/>
-    <available size="12-18"/>
-    <available size="18-24"/>
-    <available size="6-12"/>
--->
     <available size="3-6"/>
+    <available size="6-12"/>
 <!--
+    <available size="6-12"/>
     <image
       small="/order/articles/images/thumbnails/baby-romper-fork-beige-front.jpg"
       large="/order/articles/images/baby-romper-fork-beige-front.jpg"/>

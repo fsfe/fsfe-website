@@ -4,6 +4,7 @@
   <xsl:import href="default.xsl" />
   <xsl:import href="xsl/quotes.xsl" />
   <xsl:import href="../tools/xsltsl/tagging.xsl" />
+  <xsl:import href="../tools/xsltsl/translations.xsl" />
 
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
 
@@ -14,14 +15,21 @@
       </div>
   </xsl:template>
 
-	<!-- rotating quotes -->
+  <!-- rotating quotes -->
   <xsl:template match="quote-box">
     <xsl:call-template name="quote-box">
       <xsl:with-param name="tag" select="string(@tag)" />
     </xsl:call-template>
   </xsl:template>
 
-<!-- News -->
+  <!--translated word "events"-->
+  <xsl:template match="events-label">
+    <xsl:call-template name="gettext">
+      <xsl:with-param name="id" select="'events'" />
+    </xsl:call-template>
+  </xsl:template>
+
+  <!-- News -->
   <xsl:template match="fellowship-news">
     <xsl:call-template name="fetch-news">
       <xsl:with-param name="tag">front-page</xsl:with-param>

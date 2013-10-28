@@ -1,10 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
 <html>
-  <head>
+<head>
     <title>FSFE Success Timeline</title>
-    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <link rel='stylesheet' href='styles.css' type='text/css' />
+
+
+    <!-- ############################################################################ -->
+    <!-- To use this file on your own system, replace ../../api/timeline-api.js with  -->
+    <!--     http://static.simile.mit.edu/timeline/api-2.3.0/timeline-api.js          -->
+    <!-- (Where 2.3.0 is the current release number.)                                 -->
     <script src="api/timeline-api.js?bundle=true" type="text/javascript"></script>
+
     <script>
         var tl;
         function onLoad() {
@@ -41,8 +46,7 @@
             }
         }
     </script>
-  </head>
-
+</head>
 <body onload="onLoad();" onresize="onResize();">
 
 <div id="body">
@@ -50,12 +54,5 @@
     <div id="tl" class="timeline-default" style="height: 200px;"></div>
 </div>
 
-
-  </body>
-  <timestamp>$Date: 2013-01-16 13:36:48 +0100 (Wed, 16 Jan 2013) $ $Author: gerloff $</timestamp>
+</body>
 </html>
-<!--
-Local Variables: ***
-mode: xml ***
-End: ***
--->

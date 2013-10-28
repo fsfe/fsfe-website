@@ -17,6 +17,13 @@
 	>
 	Fight against Software patents in EU and on national levels
 </event>
+<event 
+	start="2003-01-01" end="2007-06-01" isDuration="true"
+	title="Project2"
+	color="green"
+	>
+	Fight against Software patents in EU and on national levels
+</event>
 
 <!-- DFD EVENTS -->
 <event 
@@ -39,6 +46,29 @@
 	icon="graphics/dark-red-circle.png"
 	>
 	Third DFD *yawn*
+</event>
+
+<!-- Project2 -->
+<event 
+	start="2003-04-23"
+	title="Project2 Event1"
+	color="green"
+	>
+	blahblah
+</event>
+<event 
+	start="2004-12-01"
+	title="Project2 Event2"
+	color="green"
+	>
+	cool description
+</event>
+<event 
+	start="2007-05-03"
+	title="Project2 Event3"
+	color="green"
+	>
+	is somebody even reading that?
 </event>
 
 <!-- SWPAT -->

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
+  <xsl:import href="../../fsfe.xsl" />
+  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
 
   <!-- Fill dynamic content -->
   <xsl:template match="dynamic-content">
@@ -12,7 +13,7 @@
     <xsl:variable name="text-pdf-0"><xsl:value-of select="text[@id='pdf-0']"/></xsl:variable>
     <xsl:variable name="text-moreinfo"><xsl:value-of select="text[@id='moreinfo']"/></xsl:variable>
 
-    <xsl:for-each select="/html/set/printable[@type=$type]">
+    <xsl:for-each select="/buildinfo/document/set/printable[@type=$type]">
       <xsl:sort select="@id"/>
       <xsl:variable name="id"><xsl:value-of select="@id"/></xsl:variable>
 
@@ -20,8 +21,8 @@
       <xsl:element name="h3">
         <xsl:attribute name="id"><xsl:value-of select="$id"/></xsl:attribute>
         <xsl:choose>
-          <xsl:when test="translation[@lang=/html/@lang]!=''">
-            <xsl:value-of select="translation[@lang=/html/@lang]"/>
+          <xsl:when test="translation[@lang=/buildinfo/@language]!=''">
+            <xsl:value-of select="translation[@lang=/buildinfo/@language]"/>
           </xsl:when>
           <xsl:otherwise>
             <xsl:value-of select="translation[@lang='en']"/>
@@ -126,16 +127,6 @@
 
       </xsl:element>
     </xsl:for-each>
-  </xsl:template>
-  
-  <!-- Do not copy <set> or <text> to output at all -->
-  <xsl:template match="set" />
-
-  <!-- For all other nodes, copy verbatim -->
-  <xsl:template match="@*|node()" priority="-1">
-    <xsl:copy>
-      <xsl:apply-templates select="@*|node()"/>
-    </xsl:copy>
   </xsl:template>
 
 </xsl:stylesheet>

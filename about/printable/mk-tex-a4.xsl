@@ -18,7 +18,10 @@
     <xsl:text>\usepackage{ucs}
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
-</xsl:text><xsl:if test="$language!='el'">\usepackage{helvet}</xsl:if><xsl:text>
+</xsl:text>
+<xsl:if test="$language='ru'">\usepackage[russian]{babel}
+</xsl:if>
+<xsl:if test="$language!='el'">\usepackage{helvet}</xsl:if><xsl:text>
 \usepackage{fancyhdr}
 \usepackage{multicol}
 </xsl:text><xsl:if test="$style='G'">\usepackage{graphics}
@@ -33,7 +36,11 @@
 \setlength{\oddsidemargin}{-32pt}
 \setlength{\columnsep}{10pt}
 \setlength{\textwidth}{514pt}
+</xsl:text>
+<xsl:if test="$language!='ru'">
 \raggedright
+</xsl:if>
+<xsl:text>
 
 % Header and footer
 \chead{}
@@ -104,9 +111,16 @@
     <!-- Disclaimer -->
     <xsl:if test="$language!='de' and $language!='en' and $language!='es' and $language!='it'">
       <xsl:if test="$language='el'">\selectlanguage{english}</xsl:if>
-      <xsl:text>This is an unofficial translation. Please see </xsl:text>
-      <xsl:text>http://www.fsfe.org/about/printable/printable.en.html</xsl:text>
-      <xsl:text> for the original text.</xsl:text>
+      <xsl:if test="$language!='ru'">
+        <xsl:text>This is an unofficial translation. Please see </xsl:text>
+        <xsl:text>http://www.fsfe.org/about/printable/printable.en.html</xsl:text>
+        <xsl:text> for the original text.</xsl:text>
+      </xsl:if>
+      <xsl:if test="$language='ru'">
+        <xsl:text>Это неофициальный перевод. </xsl:text>
+        <xsl:text>Оригинальный текст см. на </xsl:text>
+        <xsl:text>http://www.fsfe.org/about/printable/printable.en.html.</xsl:text>
+      </xsl:if>
     </xsl:if>
     <xsl:text>}</xsl:text>
   </xsl:template>

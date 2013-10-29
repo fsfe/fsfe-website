@@ -1,16 +1,15 @@
-
 To generate logos for a given year:
 
+run
+./genyear.sh year outputdir
 
-1. modify sponsoring_buttons.svg so that it is for the correct year
+Where year is the the year for which the buttons should be generated, preferably a 4 digit number but something lile "Mar 18" or 2018/03 would work as well (and probably break the template layout).
 
-- Open sponsoring_buttons.svg with a text editor (svg is xml).
-- Look up what year appears, and replace all occurrences by the year you want.
+Where outputdir is the name of a directory where the files will be generated. If outputdir is not given, it defaults to the current dir. The directory must already exist, it will *not* be automatically created by the script.
 
+Make sure that button_template.svg is available when you run the script.
 
-2. automatically generate png files
+The script will also generate xhtml chunks for inclusion in the sponsoring.xhtml file. You can find the xhtml code in the output directory (file: xhtml) after running the script. To be provided with correct path names in the xhtml output it is recommended to run the script from the directory containing "sponsoring.xhtml".
 
-- cd to the good directory and enter the following command:
-  $ ./generate-all.sh YYYY
-  where YYYY is for example 2012
-- results are to be found in the newly created folder named after the given year.
+Note:
+generate-all.sh and sponsoring_buttons.svg are DEPRECATED.

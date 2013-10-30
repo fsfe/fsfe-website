@@ -10,12 +10,48 @@
   <body>
     <h1>Traduction des pages web</h1>
 
-    <h2>Comprendre comment les pages web sont construites</h2>
+ <h2>Guide rapide Pas à Pas</h2>
+
+<p>Ce petit guide ne devrait être utilisé que si vous connaissez déjà les grands principes des traductions : Comment les pages sont construites, comment trouver quelles sont les traductions manquantes ou périmées, etc.
+</p>
+
+<p>Dans cet exemple, nous voulons traduire https://fsfe.org/contribute/spreadtheword.en.html en Français.</p>
+
+<ol>
+	<li>Descendez en bas de la page que vous souhaitez traduire pour trouver le lien "Source code" en pied de page.</li>
+
+<!-- <img src="/graphics/translators-shortguide1.png" alt="find source code"/> -->
+
+	<li>Téléchargez le fichier .xhtml (dans notre cas https://fsfe.org/source/contribute/spreadtheword.en.xhtml).</li>
+
+	<li>Envoyez un court mail à translators@fsfeurope.org (vous devriez déjà être membre de cette mailing-liste) pour indiquer que vous commencez cette traduction.<br />
+Veuillez ouvrir un nouveau fil de discussion pour chaque nouvelle page et ajouter <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">les deux lettres du code pays </a>correspondant à la langue vers laquelle vous traduisez dans le sujet.</li>
+
+<!-- <img src="/graphics/translators-shortguide3.png" alt="write an email"/> -->
+
+	<li>Ouvrez le fichier que vous avez téléchargé dans un éditeur de texte (gedit, Kate, Mousepad etc. sur un système d'exploitation Libre, Notepad++ sous Windows).</li>
+
+	<li>Traduisez tout le texte sauf les balises html dans votre langue. Par exemple :<br />
+<em>&lt;p&gt;Hi there, please visit &lt;a href="https://fsfe.org"&gt;our website&lt;/a&gt;.&lt;/p&gt;</em> should become<br />
+<em>&lt;p&gt;Salut, s'il vous plaît visitez &lt;a href="https://fsfe.org"&gt;notre site web&lt;/a&gt;.&lt;/p&gt;</em><br />
+Veuillez changer les <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">deux lettres Code Pays</a> du fichier traduit de "en" vers celles correspondant à votre langue (par exemple Français = "spreadtheword.fr.xhtml").</li>
+
+<!-- <img src="/graphics/translators-shortguide5.png" alt="translate the text"/> -->
+
+	<li>Quand vous avez fini, veuillez répondre à votre fil de discussion sur translators@fsfeurope.org et demandez à ce qu'on relise votre fichier. Si tout le monde est d'accord, il sera ajouté sur le site par une personne de la mailing-liste.</li>
+
+<!-- <img src="/graphics/translators-shortguide6.png" alt="ask for proofreading"/> -->
+
+</ol>
+
+
+
+    <h2>Guide détaillé : comprendre comment les pages web sont construites</h2>
 
     <p>
       Les pages web de fsfe.org sont maintenues comme un jeu de fichiers XML.
-      Toutes les cinq minutes, le serveur web génère automatiquement les pages HTML à partir de ces fichiers. 
-      Par conséquent l'édition des pages est entièrement réalisée dans les fichiers XML&#160;; le HTML n'est jamais édité directement.
+      Toutes les dix minutes, le serveur web génère automatiquement les pages HTML à partir de ces fichiers. 
+      Ainsi, l'édition des pages est entièrement réalisée dans les fichiers XML&#160;; le HTML n'est jamais édité directement.
     </p>
 
     <p>
@@ -42,7 +78,7 @@
     <h2>Tout le monde peut aider aux traductions</h2>
 
     <p>
-      Tous les fichiers source (i.e. tous les fichiers .xhtml et .xml) sont téléchargeables, aussi chacun peut aider spontanément à la traduction sans avoir à s'enregistrer.
+      Tous les fichiers source (i.e. tous les fichiers .xhtml et .xml) sont téléchargeables, chacun peut ainsi aider spontanément à la traduction sans avoir à s'enregistrer.
       Cependant, chaque fois que vous commencez une traduction et que vous pensez y consacrer du temps, veuillez écrire un court message à la  
       <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">mailing-liste des traducteurs
       </a> pour éviter qu'une autre personne ne commence à travailler sur le même texte simultanément.
@@ -51,9 +87,9 @@
     <h3>Aider aux traductions manquantes</h3>
 
     <p>
-      Si une page ouverte sur votre navigateur n'est pas encore traduite dans votre langue, faites défiler la page jusqu'à la fin, cliquez sur le lien "Source code" et sauvegardez le fichiers que vous avez obtenu.
+      Si une page ouverte dans votre navigateur n'est pas encore traduite dans votre langue, faites défiler la page jusqu'à la fin, cliquez sur le lien "Source code" et sauvegardez le fichier obtenu.
       Vous aurez le fichier .xhtml en anglais. Renommez le fichier avec le code de votre langue au lieu du code "en", et ouvrez-le dans un éditeur de texte. Maintenant, dans le fichier traduisez tout le texte qui se trouve 
-      en dehors des signes "&lt;…&gt;"; ne changez rien à l'intérieur de ces marques (le texte entre les signes sont des commandes XHTML qui influent sur l'aspect de la page web résultante).
+      en dehors des signes "&lt;…&gt;"; ne changez rien à l'intérieur de ces marques (le texte entre les signes sont des commandes XHTML qui influent sur la structure de la page web résultante).
     </p>
 
     <p>
@@ -69,11 +105,11 @@
       finira par l'envoyer au serveur.
     </p>
 
-    <h3>Mise à jour des traductions périmées</h3>
+    <h3>Mettre à jour des traductions périmées</h3>
 
     <p>
       Si une page ouverte sur votre navigateur est une traduction périmée
-      (indiqué par une note en haut de la page), faites défiler la page jusqu'à la fin, cliquez sur le lien "[XHTML]" et sauvegardez le fichier que vous avez obtenu.
+      (indiqué par une note en haut de la page), faites défiler la page jusqu'à la fin, cliquez sur le lien "[XHTML]" et sauvegardez le fichier.
       Ce fichier est la version traduite (et périmée). Ensuite, utilisez le lien "English" en haut de la page pour passer à la version anglaise et cliquez à nouveau sur le lien "[XHTML]" qu'elle contient. Le fichier que vous obtenez alors est la version anglaise (à jour). Maintenant vous pouvez comparer les deux fichiers et mettre à jour la traduction. Veuillez noter que tout ce qui est inclus entre les signes
       "&lt;…&gt;" ne doit pas être traduit.
     </p>
@@ -94,7 +130,7 @@
 
     <p>
       Une 
-      <a href="http://status.fsfe.org/web/translations.html">liste autogénérée de tous les langages</a> est disponible. Sur cette page, chaque code de langue est un lien vers une page distincte faisant la liste de toutes les traductions manquantes ou périmées dans cette langue.
+      <a href="http://status.fsfe.org/web/translations.html">liste autogénérée de toutes les langages</a> est disponible. Sur cette page, chaque code de langue est un lien vers une page distincte faisant la liste de toutes les traductions manquantes ou périmées dans cette langue.
     </p>
 
     <p>
@@ -105,19 +141,19 @@
     </p>
 
     <p>
-      Cette page d'état de la traduction est également le seul moyen de télécharger les fichiers .xml créés dans les pages dynamiques, comme les fichiers contenant des nouvelles ou des arrivées d'événements.
+      Cette page d'état de la traduction est également le seul moyen de télécharger les fichiers .xml créés dans les pages dynamiques, comme les fichiers contenant des nouvelles ou des événements.
     </p>
 
     <h3>Télécharger l'arbre complet du fichier source avec Subversion</h3>
     
     <p>
-      Si vous pouvez utiliser Subversion, vous pouvez télécharger l'arbre complet des fichiers sources en une fois. Veuillez vous réferez à <a
+      Si vous pouvez utiliser Subversion, vous pouvez télécharger l'arbre complet des fichiers sources en une seule fois. Veuillez consulter <a
       href="/contribute/web/web.html">la page d'information des webmestres de la FSFE</a> pour les instructions détaillées.
     </p>
   </body>
 
   <timestamp>$Date$ $Author$</timestamp>
-  <translator>Michel Roche (Vercors), Hugo Roy</translator>
+  <translator>Michel Roche (Vercors), Hugo Roy et Cryptie</translator>
 </html>
 <!--
 Local Variables: ***

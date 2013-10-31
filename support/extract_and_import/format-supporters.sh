@@ -24,7 +24,7 @@
 
 
 # CHANGE these files if needed
-INPUT=supporters.csv
+INPUT=input_test.csv
 OUTPUT=supporters_format.csv
 COUNTRIES=countries.txt
 
@@ -76,7 +76,7 @@ do
 	CCODE=$(echo $line | awk -F, '{ print $6 }')
 	#SECRET=$(echo $line | awk -F, '{ print $7 }')
 	#SIGNED=$(echo $line | awk -F, '{ print $8 }')
-	#CONFIRMDATE=$(echo $line | awk -F, '{ print $9 }')
+	CONFIRMDATE=$(echo $line | awk -F, '{ print $9 }')
 	#UPDATEDATE=$(echo $line | awk -F, '{ print $10 }')
 	#REFURL=$(echo $line | awk -F, '{ print $11 }')
 	#REFID=$(echo $line | awk -F, '{ print $12 }')
@@ -108,7 +108,8 @@ do
 	
 	
 	# Output of all interesting strings with "" surrounded, only if Firstname not empty
-	if [ "$FIRSTNAME" != "" ]; then
+	# if ! ([ "$FIRSTNAME" = "" ] || [ "$CONFIRMDATE" = "" ]); then		# this also kicks out the first subscripted supporters
+	if [ "$FIRSTNAME" != "" ]; then		# this also contains supporters whose emails are not confirmed yet
 		echo "\"$FIRSTNAME\",\"$LASTNAME\",$EMAIL,\"$CCODE\"" >> temp131031.txt
 	fi
 	

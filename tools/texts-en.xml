@@ -219,25 +219,53 @@
     </quote>
 
     <!-- quotes for fellowship page -->
-    <quote id="allison" tag="fellowship" pos="1">
-      <photo>/fellowship/graphics/people/Jeremyallison.jpg</photo>
+    <quote id="morris" tag="fellowship">
+      <photo>/fellowship/graphics/people/annamorris.jpg</photo>
       <txt>
-        Document Freedom Day celebrates the importance of Open Standards for all
-        electronic documents, whether public or private. If we want to <strong>preserve
-        our digital heritage</strong> we all need to select Open Standards, implementable
-        by anyone, as our default storage choice.
+            Free Software challenges you to learn: to do for yourself, to be fearlessly
+            independent when it comes to your tech. In the past few years I have taken
+            pride in watching my skill base catchup with and overtake that of my
+			proprietary-loving peers, even some paid professionals, simply by having a
+			free and curious mindset. Free Software frees you in many ways.
       </txt>
-      <author>Jeremy Allison, Samba core developer</author>
-    </quote>
-    
-    <quote id="beckedahl" tag="fellowship" pos="2">
-      <photo>/fellowship/graphics/people/beckedahl.jpg</photo>
-      <txt>
-        Open Standards garantee a free development of the infrastructure and
-        therefore a self-determined and free communication.
-      </txt>
-      <author>Markus Beckedahl, Digitale Gesellschaft, netzpolitik.org</author>
+      <author>Anna Morris</author>
     </quote>
 
+    <quote id="roy" tag="fellowship">
+      <photo>/fellowship/graphics/people/hugoroy.png</photo>
+      <txt>
+			The Free Software Foundation Europe (FSFE) brings together
+			dedicated and engaged activists from all over Europe to seize the
+			opportunities to secure our rights to use, share, study, and
+			improve software because without Free Software, technology
+			subjugates us instead of enhancing our freedom.
+      </txt>
+      <author>Hugo Roy - French Fellowship Coordinator</author>
+    </quote>
+
+    <quote id="keijzer" tag="fellowship">
+      <photo>/fellowship/graphics/people/kevinkeijzer.jpg</photo>
+      <txt>
+			I joined the Fellowship to stop being 'a minority of one', as George
+			Orwell once put it. I wanted to meet people who shared my ideals and
+			beliefs, so it would no longer feel as if I was fighting the system all
+			by myself. It's reassuring to know that you're not alone, which probably
+			motivates people to keep up with the work they are doing, even if it's
+			not always as successful as they would like it to be.
+      </txt>
+      <author>Kevin Keijzer - Political activist - Member of FSFE's Education team</author>
+    </quote>
+
+    <quote id="nascimento" tag="fellowship">
+      <photo>/fellowship/graphics/people/mauricionascimento.jpg</photo>
+      <txt>
+			Freedom is one of the core values of our Society and one of the basic
+			concepts of Democracy. Supporting and spreading Free Software is one 
+			way to build creative alternatives for social inclusion and to protect our 
+			citizens from the digital exploitation. We are responsible to build a better World
+			as a gift for our future generations.
+      </txt>
+      <author>Mauricio Nascimento - Middlerware Engineer - FSFE Fellowship Coordination team</author>
+    </quote>
   </quotes>  
 </textset>

@@ -108,8 +108,8 @@ do
 	
 	
 	# Output of all interesting strings with "" surrounded, only if Firstname not empty
-	# if ! ([ "$FIRSTNAME" = "" ] || [ "$CONFIRMDATE" = "" ]); then		# this also kicks out the first subscripted supporters
-	if [ "$FIRSTNAME" != "" ]; then		# this also contains supporters whose emails are not confirmed yet
+	if ! ([ "$FIRSTNAME" = "" ] || [ "$CONFIRMDATE" = "" ]); then		# this also kicks out the first subscripted supporters, but only in first import
+	# if [ "$FIRSTNAME" != "" ]; then		# this also contains supporters whose emails are not confirmed yet
 		echo "\"$FIRSTNAME\",\"$LASTNAME\",$EMAIL,\"$CCODE\"" >> temp131031.txt
 	fi
 	

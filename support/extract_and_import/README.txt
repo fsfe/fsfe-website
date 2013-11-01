@@ -35,7 +35,7 @@ The download should start now. If not, doublecheck step 1 or wait a bit longer (
 if not, everybody would be able to download sensitive data.
 
 
-## IMPORTING
+## FORMATTING
 If you want to import this data in CiviCRM, you need to format it first. For example, many names are lower/uppercase only or are empty. The Country Codes are not supported in CiviCRM as well. Additionally, some data is completely useless. If you have another feeling, feel free to change the script.
 
 For this, you can use format-supporters.sh in addition to countries.txt. Just define a file to import (default: supporters.csv), the desired filename at output (default: supporters_format.csv) and the CountryCode-to-Country-Name file (default: countries.txt).
@@ -47,3 +47,6 @@ After ~5-10 minutes, all entries should be written to the output file. Please do
 
 
 To understand what the script exactly does, please see the comments in the bash script.
+
+
+## IMPORTING

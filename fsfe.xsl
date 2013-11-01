@@ -561,7 +561,7 @@
             
             <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'statement1'" /></xsl:call-template>
             <xsl:element name="a">
-              <xsl:attribute name="href">/about/basics/freesoftware.<xsl:value-of select="/buildinfo/@language"/>.html</xsl:attribute>
+              <xsl:attribute name="href">/freesoftware/index.<xsl:value-of select="/buildinfo/@language"/>.html</xsl:attribute>
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'statement-fs'" /></xsl:call-template>
             </xsl:element>
             <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'statement2'" /></xsl:call-template>.<!--intentional full stop goes here-->

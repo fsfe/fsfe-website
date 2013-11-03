@@ -10,7 +10,59 @@
   <body>
     <h1>Μεταφράσεις ιστοσελίδων</h1>
 
-    <h2>Η κατανόηση της δημιουργίας των ιστοσελίδων</h2>
+    <h2>Σύντομος οδηγός βήμα προς βήμα</h2>
+
+<p>Αυτός ο σύντομος οδηγός πρέπει να χρησιμοποιείται μόνο αν ήδη γνωρίζετε
+το υπόβαθρο των μεταφράσεων: Πώς παράγονται οι σελίδε ςμας, πώς να βρίσκετε
+ποιες μεταφράσεις λείπουν ή χρειάζονται ανανέωση κ.ο.κ.</p>
+
+<p>Στο παράδειγμα αυτό, θέλουμε να μεταφράσουμε το 
+https://fsfe.org/contribute/spreadtheword.en.html στα Ισπανικά.</p>
+
+<ol>
+        <li>Πηγαίνετε στο τέλος της σελίδας και δείτε το σημείο στο υποσέλιδο
+που γράφει «Πηγαίος κώδικας».</li>
+
+<!-- <img src="/graphics/translators-shortguide1.png" alt="find source code"/> -->
+
+        <li>Κάνετε λήψη του .xhtml αρχείου (στην περίπτωση αυτή
+https://fsfe.org/source/contribute/spreadtheword.en.xhtml).</li>
+
+        <li>Στείλτε ένα σύντομο μήνυμα αλληλογραφίας στο 
+translators@fsfeurope.org (θα πρέπει να έχετε ήδη εγγραφεί στη σχετική λίστα
+αλληλογραφίας) και αναφέρετε ότι ξεκινάτε τη μετάφραση.<br />
+Για κάθε νέα σελίδα ανοίξτε ένα νέο νήμα αλληλογραφίας και προσθέστε τον 
+<a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">δύο χαρακτήρων
+Κωδικό της χώρας</a> σας στο Θέμα.</li>
+
+<!-- <img src="/graphics/translators-shortguide3.png" alt="write an email"/> -->
+
+        <li>Ανοίξτε το ληφθέν αρχείο με έναν επεξεργαστή κειμένου 
+(gedit, Kate, Mousepad κτλ σε Ελεύθερα λειτουργικά συστήματα, 
+Notepad++ σε Windows).</li>
+
+        <li>Μεταφράστε στη γλώσσα σας όλο το αγγλικό κείμενο που δεν βρίσκεται 
+μέσα σε ετικέτες html. Για παράδειγμα:<br />
+<em>&lt;p&gt;Hi there, please visit &lt;a href="https://fsfe.org"&gt;our website&lt;/a&gt;.&lt;/p&gt;</em> should become<br />
+<em>&lt;p&gt;Hallo, bitte besuchen Sie &lt;a href="https://fsfe.org"&gt;unsere Webseite&lt;/a&gt;.&lt;/p&gt;</em><br />
+Αλλάξτε τον 
+<a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">δύο χαρακτήρων
+Κώδικα χώρας</a> στο όνομα του μεταφρασμένου αρχείου από "en" σε εκείνον που
+αντιστοιχεί στη γλώσσα σας 
+(για παράδειγμα για τα Ισπανικά = "spreadtheword.es.xhtml").</li>
+
+<!-- <img src="/graphics/translators-shortguide5.png" alt="translate the text"/> -->
+
+        <li>Έπειτα, μέσα στο σχετικό νήμα αλληλογραφίας στείλτε μια απάντηση
+στο translators@fsfeurope.org και ζητήστε να επιμεληθεί το αρχείο σας. 
+Αν όλοι συμφωνούν, θα ενημερωθεί από άλλους η λίστα αλληλογραφίας για 
+τη δημοσίευση του αρχείου.</li>
+
+<!-- <img src="/graphics/translators-shortguide6.png" alt="ask for proofreading"/> -->
+
+</ol>
+
+    <h2>Λεπτομερής οδηγός: Η κατανόηση της δημιουργίας των ιστοσελίδων</h2>
 
     <p>
       Οι ιστοσελίδες του fsfe.org συντηρούνται ως ένα σύνολο από XML αρχεία.

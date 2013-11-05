@@ -63,7 +63,7 @@
 					$('#quote-box-inner').fadeIn('slow', function() {});
 				});
 
-				setTimeout("changeImage();",10000);
+				setTimeout("changeImage();",15000);
 
 			}
 

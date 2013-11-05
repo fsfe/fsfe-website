@@ -31,7 +31,7 @@ if ($function2 ne "") {
  $function .= ", $function2";
 }
 
-if ($radioaddress eq "Berlin") { $address = "Linienstraße 141, 10115 Berlin, Germany"; }
+if ($radioaddress eq "Berlin") { $address = "Schönhauser Allee 6/7, 10119 Berlin, Germany"; }
 if ($radioaddress eq "DUS") { $address = "Talstraße 110, 40127 Düsseldorf, Germany"; }
 if ($radioaddress eq "other") {  $address = "$otheraddress"; }
 
@@ -93,9 +93,9 @@ print MAIL "Fingerprint: $fp\n\n";
 print MAIL "Number of business cards ordered: $amount\n\n";
 print MAIL "Delivery Address: $delivery\n\n";
 print MAIL "No. of approved expense request: $er\n\n";
-                      
+
 print MAIL "--$boundary--\n";
-                      
+
 close MAIL;
 
 

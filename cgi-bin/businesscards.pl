@@ -92,7 +92,6 @@ print MAIL "XMPP: $jabber\n\n";
 print MAIL "Fingerprint: $fp\n\n";
 print MAIL "Number of business cards ordered: $amount\n\n";
 print MAIL "Delivery Address: $delivery\n\n";
-print MAIL "No. of approved expense request: $er\n\n";
 
 print MAIL "--$boundary--\n";
 

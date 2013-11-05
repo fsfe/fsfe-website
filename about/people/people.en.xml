@@ -6,7 +6,7 @@
   <!-- Please keep this list alphabetical by last name -->
 
   
-  <person id="adams" avatar="yes" teams="gb">
+  <person id="adams" avatar="yes" teams="gb, test">
     <name>Paul Adams</name>
     <country>GB</country>
     <function country="GB"></function>
@@ -15,7 +15,7 @@
     <avatar>/about/adams/adams-avatar.jpg</avatar>
   </person>
 
-  <person id="albers" avatar="yes" teams="main, de">
+  <person id="albers" avatar="yes" teams="main, de, test">
     <name>Erik Albers</name>
     <country>DE</country>
     <function>fellowship-deputy/m</function>
@@ -24,7 +24,7 @@
     <avatar>/about/albers/albers-avatar.jpg</avatar>
   </person>
 
-  <person id="arnold" avatar="yes" teams="main, de">
+  <person id="arnold" avatar="yes" teams="main, de, test">
     <name>Guido Arnold</name>
     <country>DE</country>
     <function project="education">deputy/m</function>
@@ -101,8 +101,6 @@
     <link>/about/gerloff/gerloff.html</link>
     <avatar>/about/gerloff/gerloff-avatar.jpg</avatar>
   </person>
-
-TESTT TEST TEST
 
   <person id="gollowitzer" avatar="yes" association-member="yes" teams="main, at">
     <name>Martin Gollowitzer</name>
@@ -220,7 +218,7 @@ TESTT TEST TEST
     <email>machon (at) fsfeurope (dot) org</email>
   </person>
 
-  <person id="mehl" avatar="no" association-member="no" teams="main">
+  <person id="mehl" avatar="no" association-member="no" teams="main, test">
     <name>Max Mehl</name>
     <country>DE</country>
     <function>intern/m</function>

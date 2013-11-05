@@ -18,5 +18,12 @@
       <xsl:with-param name="team" select="'main'" />
     </xsl:call-template>
   </xsl:template>
+  
+  <!-- Fill dynamic content -->
+  <xsl:template match="test-members">
+    <xsl:call-template name="country-people-list">
+      <xsl:with-param name="team" select="'test'" />
+    </xsl:call-template>
+  </xsl:template>
 
 </xsl:stylesheet>

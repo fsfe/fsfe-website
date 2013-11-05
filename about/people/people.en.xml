@@ -4,9 +4,10 @@
 
 <personset>
   <!-- Please keep this list alphabetical by last name -->
-
+  <!-- for the teams-tag, please only use $country and (if it's the case) one of these: council, ga, staff, coordinators, team -->
+  <!-- only exception: coordinators. If someone is a coordinator, he can appear two times on the page -->
   
-  <person id="adams" avatar="yes" teams="gb, test">
+  <person id="adams" avatar="yes" teams="gb">
     <name>Paul Adams</name>
     <country>GB</country>
     <function country="GB"></function>
@@ -15,7 +16,7 @@
     <avatar>/about/adams/adams-avatar.jpg</avatar>
   </person>
 
-  <person id="albers" avatar="yes" teams="main, de, test">
+  <person id="albers" avatar="yes" teams="de, staff">
     <name>Erik Albers</name>
     <country>DE</country>
     <function>fellowship-deputy/m</function>
@@ -24,10 +25,10 @@
     <avatar>/about/albers/albers-avatar.jpg</avatar>
   </person>
 
-  <person id="arnold" avatar="yes" teams="main, de, test">
+  <person id="arnold" avatar="yes" teams="de, coordinator">
     <name>Guido Arnold</name>
     <country>DE</country>
-    <function project="education">deputy/m</function>
+    <function project="education">coordinator/m</function>
     <email>guido (at) fsfe (dot) org</email>
     <link>http://blogs.fsfe.org/guido/</link>
     <avatar>/about/arnold/arnold-avatar.jpg</avatar>
@@ -41,7 +42,7 @@
     <avatar>/about/baillard/baillard-avatar.jpg</avatar>
   </person>
 
-  <person id="bako" avatar="yes" teams="main">
+  <person id="bako" avatar="yes" teams="team">
     <name>Eszter Bakó</name>
     <country>HU</country>
     <function project="policy">deputy/f</function>
@@ -50,14 +51,14 @@
     <avatar>/about/bako/bako-avatar.jpg</avatar>
   </person>
 
-  <person id="beck" avatar="no" association-member="no" teams="main">
+  <person id="beck" avatar="no" teams="staff">
     <name>Tilman Beck</name>
     <country>DE</country>
     <function>intern/m</function>
     <email>beck (at) fsfeurope (dot) org</email>
   </person>
 
-  <person id="bubestinger" avatar="no" teams="main, at">
+  <person id="bubestinger" avatar="no" teams="at, coordinator">
     <name>Peter Bubestinger</name>
     <country>AT</country>
     <function country="AT">coordinator/m</function>
@@ -72,7 +73,7 @@
     <link></link>
   </person>
 
-  <person id="coughlan" avatar="yes" association-member="yes" teams="main">
+  <person id="coughlan" avatar="yes" association-member="yes" teams="ga">
     <name>Shane M. Coughlan</name>
     <country>JP</country>
     <function project="ftf">seniorcounsel/m</function>
@@ -88,7 +89,7 @@
    <avatar>/about/dengg/dengg-avatar.jpg</avatar>
   </person>
 
-  <person id="gerloff" avatar="yes" association-member="yes" teams="main, de">
+  <person id="gerloff" avatar="yes" association-member="yes" teams="de, council">
     <name>Karsten Gerloff</name>
     <country>DE</country>
     <function>president/m</function>
@@ -102,7 +103,7 @@
     <avatar>/about/gerloff/gerloff-avatar.jpg</avatar>
   </person>
 
-  <person id="gollowitzer" avatar="yes" association-member="yes" teams="main, at">
+  <person id="gollowitzer" avatar="yes" association-member="yes" teams="at, ga">
     <name>Martin Gollowitzer</name>
     <country>AT</country>
     <function>fellowship-deputy/m</function>
@@ -112,7 +113,7 @@
     <avatar>/about/gollowitzer/gollowitzer-avatar.jpg</avatar>
   </person>
 
-  <person id="greve" avatar="yes" association-member="yes" teams="main, de">
+  <person id="greve" avatar="yes" association-member="yes" teams="de, ga">
     <name>Georg C. F. Greve</name>
     <country>CH</country>
     <function>greve</function>
@@ -121,7 +122,7 @@
     <avatar>/about/greve/greve-avatar.jpg</avatar>
   </person>
 
-  <person id="grote" avatar="yes" association-member="yes" teams="main, de">
+  <person id="grote" avatar="yes" association-member="yes" teams="de, team">
     <name>Torsten Grote</name>
     <country>DE</country>
     <function country="DE">deputy/m</function>
@@ -130,7 +131,7 @@
     <avatar>/about/grote/grote-avatar.jpg</avatar>
   </person>
 
-  <person id="jean" avatar="yes" teams="main, fr, de">
+  <person id="jean" avatar="yes" teams="fr, de, coordinator">
     <name>Nicolas Jean</name>
     <country>DE</country>
     <country>FR</country>
@@ -140,16 +141,16 @@
     <avatar>/about/jean/jean-avatar.jpg</avatar>
   </person>
 
-  <person id="jensch" avatar="yes" teams="main, de">
+  <person id="jensch" avatar="yes" teams="de, team">
     <name>Thomas Jensch</name>
     <country>DE</country>
-    <function project="education">coordinator/m</function>
+    <function project="education">deputy/m</function>
     <email>jensch (at) fsfeurope (dot) org</email>
     <link>http://blogs.fsfe.org/riepernet/</link>
     <avatar>/about/jensch/jensch-avatar.jpg</avatar>
   </person>    
 
-  <person id="jyrinki" avatar="yes" teams="main, fi">
+  <person id="jyrinki" avatar="yes" teams="fi, coordinator">
     <name>Timo Jyrinki</name>
     <country>FI</country>
     <function volunteers="translators-fi">coordinator/m</function>
@@ -159,7 +160,7 @@
     <avatar>/about/jyrinki/jyrinki-avatar.jpg</avatar>
   </person>
 
-  <person id="kekalainen" avatar="yes" teams="main, fi">
+  <person id="kekalainen" avatar="yes" teams="fi, coordinator">
     <name>Otto Kekäläinen</name>
     <country>FI</country>
     <function country="FI">coordinator/m</function>
@@ -179,14 +180,14 @@
     <email>timo.lindfors (at) iki (dot) fi</email>
   </person>
 
-  <person id="kersten" avatar="no" teams="main, de">
+  <person id="kersten" avatar="no" teams="de, staff">
     <name>Rainer Kersten</name>
     <country>DE</country>
     <function>office/m</function>
     <email>kersten (at) fsfeurope (dot) org</email>
   </person>
 
-  <person id="kirschner" avatar="yes" association-member="yes" teams="main, de">
+  <person id="kirschner" avatar="yes" association-member="yes" teams="de, council">
     <name>Matthias Kirschner</name>
     <country>DE</country>
     <function>fellowship-coordinator/m</function>
@@ -196,14 +197,14 @@
     <avatar>/about/kirschner/kirschner-avatar.jpg</avatar>
   </person>
 
-  <person id="kneissl" avatar="no" teams="main, at">
+  <person id="kneissl" avatar="no" teams="at, team">
     <name>Jürgen Kneissl</name>
     <country>AT</country>
     <function country="AT">deputy/m</function>
     <email>kneissl (at) fsfeurope (dot) org</email>
   </person>
 
-  <person id="koch" avatar="yes" association-member="yes" teams="main, de">
+  <person id="koch" avatar="yes" association-member="yes" teams="de, ga">
     <name>Werner Koch</name>
     <country>DE</country>
     <email>koch (at) fsfeurope (dot) org</email>
@@ -211,14 +212,14 @@
     <avatar>/about/koch/koch-avatar.jpg</avatar>
   </person>
 
-  <person id="machon" avatar="no" association-member="yes" teams="main">
+  <person id="machon" avatar="no" association-member="yes" teams="ga, coordinator">
     <name>Pablo Machón</name>
     <country>ES</country>
     <function country="ES">coordinator/m</function>
     <email>machon (at) fsfeurope (dot) org</email>
   </person>
 
-  <person id="mehl" avatar="no" association-member="no" teams="main, test">
+  <person id="mehl" avatar="no" teams="staff">
     <name>Max Mehl</name>
     <country>DE</country>
     <function>intern/m</function>
@@ -227,7 +228,7 @@
 	<avatar>/about/mehl/mehl-avatar.jpg</avatar>
   </person>
 
-  <person id="mueller" avatar="yes" association-member="yes" teams="main, at">
+  <person id="mueller" avatar="yes" association-member="yes" teams="at, council">
     <name>Reinhard Müller</name>
     <country>AT</country>
     <function>financial-officer/m</function>
@@ -236,7 +237,7 @@
     <avatar>/about/mueller/mueller-avatar.jpg</avatar>
   </person>
 
-  <person id="oberg" avatar="yes" association-member="yes" teams="main">
+  <person id="oberg" avatar="yes" association-member="yes" teams="ga">
     <name>Jonas Öberg</name>
     <country>SE</country>
     <email>oberg (at) fsfeurope (dot) org</email>
@@ -244,7 +245,7 @@
     <avatar>/about/oberg/oberg-avatar.jpg</avatar>
   </person>
 
-  <person id="ohnewein" avatar="yes" association-member="yes" teams="main, it">
+  <person id="ohnewein" avatar="yes" association-member="yes" teams="it, ga">
     <name>Patrick Ohnewein</name>
     <country>IT</country>
     <function country="IT">deputy/m</function>
@@ -252,7 +253,7 @@
     <avatar>/about/ohnewein/ohnewein-avatar.jpg</avatar>
   </person>
 
-  <person id="ojasild" avatar="yes" association-member="yes" teams="main">
+  <person id="ojasild" avatar="yes" association-member="yes" teams="ga">
     <name>Heiki Ojasild</name>
     <country>EE</country>
     <function>fellowship-representative/m</function>
@@ -261,7 +262,7 @@
     <avatar>/about/ojasild/ojasild-avatar.png</avatar>
   </person>
   
-  <person id="piana" avatar="yes" teams="it, ftf">
+  <person id="piana" avatar="yes" teams="it, ftf, ga">
     <name>Carlo Piana</name>
     <country>IT</country>
     <function country="IT"></function>
@@ -270,14 +271,14 @@
     <avatar>/about/piana/piana-avatar.jpg</avatar>
   </person>
 
-  <person id="poderi" avatar="yes" association-member="yes">
+  <person id="poderi" avatar="yes" association-member="yes" teams="ga">
     <name>Giacomo Poderi</name>
     <country>IT</country>
     <email>poderi (at) fsfeurope (dot) org</email>
     <avatar>/about/poderi/poderi-avatar.jpg</avatar>
   </person>
 
-  <person id="polvani" avatar="yes" teams="main, it">
+  <person id="polvani" avatar="yes" teams="it, team">
     <name>Alessandro Polvani</name>
     <country>IT</country>
     <function country="IT">deputy/m</function>
@@ -286,7 +287,7 @@
     <avatar>/about/polvani/polvani-avatar.jpg</avatar>
   </person>
 
-  <person id="reiter" avatar="yes" association-member="yes" teams="main, de">
+  <person id="reiter" avatar="yes" association-member="yes" teams="de, ga">
     <name>Bernhard Reiter</name>
     <country>DE</country>
     <email>reiter (at) fsfeurope (dot) org</email>
@@ -294,7 +295,7 @@
     <avatar>/about/reiter/reiter-avatar.jpg</avatar>
   </person>
 
-  <person id="rejas" avatar="yes" teams="main">
+  <person id="rejas" avatar="yes" teams="se, coordinator">
     <name>Marcus Rejås</name>
     <country>SE</country>
     <function country="SE">coordinator/m</function>
@@ -303,7 +304,7 @@
     <avatar>/about/rejas/rejas-avatar.jpg</avatar>
   </person>
 
-  <person id="rigamonti" avatar="yes" teams="main, it">
+  <person id="rigamonti" avatar="yes" teams="it, coordinator, team">
     <name>Cristian Rigamonti</name>
     <country>IT</country>
     <function>sysadmin/m</function>
@@ -313,7 +314,7 @@
     <avatar>/about/rigamonti/rigamonti-avatar.jpg</avatar>
   </person>
 
-  <person id="roussos" avatar="yes" association-member="yes" teams="main">
+  <person id="roussos" avatar="yes" association-member="yes" teams="ga">
     <name>Nikos Roussos</name>
     <country>GR</country>
     <function>fellowship-representative/m</function>
@@ -322,7 +323,7 @@
     <avatar>/about/roussos/roussos-avatar.jpg</avatar>
   </person>
 
-  <person id="roy" avatar="yes" association-member="yes" teams="main, fr, ftf">
+  <person id="roy" avatar="yes" association-member="yes" teams="fr, ftf, ga">
     <name>Hugo Roy</name>
     <country>FR</country>
     <function country="FR">coordinator/m</function>
@@ -332,7 +333,7 @@
     <avatar>/about/roy/roy-avatar.jpg</avatar>
   </person>
 
-  <person id="sandklef" avatar="yes" association-member="yes" teams="main">
+  <person id="sandklef" avatar="yes" association-member="yes" teams="ga">
     <name>Henrik Sandklef</name>
     <country>SE</country>
     <function>vice-president/m</function>
@@ -341,7 +342,7 @@
     <avatar>/about/sandklef/sandklef-avatar.jpg</avatar>
   </person>
   
-  <person id="schiessle" avatar="yes" teams="main, de">
+  <person id="schiessle" avatar="yes" teams="de, coordinator">
     <name>Björn Schießle</name>
     <country>DE</country>
     <function volunteers="translators-de">coordinator/m</function>
@@ -350,7 +351,7 @@
     <avatar>/about/schiessle/schiessle-avatar.jpg</avatar>
   </person>
 
-  <person id="suklje" avatar="yes" teams="main, ftf">
+  <person id="suklje" avatar="yes" teams="ftf, staff, coordinator">
     <name>Matija Šuklje</name>
     <country>SI</country>
     <function project="ftf">coordinator/m</function>
@@ -359,7 +360,7 @@
     <avatar>/about/suklje/suklje-avatar.jpg</avatar>
   </person>
   
-  <person id="tuke" avatar="yes" teams="main, gb">
+  <person id="tuke" avatar="yes" teams="gb, staff, coordinator">
     <name>Sam Tuke</name>
     <country>GB</country>
     <function>campaign-manager/m</function>
@@ -369,7 +370,7 @@
     <avatar>/about/tuke/tuke-avatar.jpg</avatar>
   </person>
 
-  <person id="weiden" avatar="yes" association-member="yes" teams="main">
+  <person id="weiden" avatar="yes" association-member="yes" teams="ga">
     <name>Fernanda Weiden</name>
     <country>CH</country>
     <email>weiden (at) fsfeurope (dot) org</email>
@@ -377,7 +378,7 @@
     <avatar>/about/weiden/weiden-avatar.jpg</avatar>
   </person>
   
-  <person id="willard" avatar="yes" teams="main">
+  <person id="willard" avatar="yes" teams="team">
     <name>Patrik Willard</name>
     <country>SE</country>
     <function country="SE">deputy/m</function>
@@ -385,7 +386,7 @@
     <avatar>/about/willard/willard-avatar.jpg</avatar>
   </person>
 
-  <person id="woolfrey" avatar="yes" teams="gb">
+  <person id="woolfrey" avatar="yes" teams="gb, team">
     <name>Chris Woolfrey</name>
     <country>GB</country>
     <function>fellowship-interviews/m</function>

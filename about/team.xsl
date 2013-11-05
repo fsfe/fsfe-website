@@ -13,17 +13,47 @@
   -->
   
   <!-- Fill dynamic content -->
-  <xsl:template match="team-members">
+  <!-- All people with main tag -->
+  <xsl:template match="main-members">
     <xsl:call-template name="country-people-list">
       <xsl:with-param name="team" select="'main'" />
     </xsl:call-template>
   </xsl:template>
   
-  <!-- Fill dynamic content -->
-  <xsl:template match="test-members">
+  <!-- All people with council tag -->
+  <xsl:template match="council-members">
     <xsl:call-template name="country-people-list">
-      <xsl:with-param name="team" select="'test'" />
+      <xsl:with-param name="team" select="'council'" />
     </xsl:call-template>
   </xsl:template>
+  
+  <!-- All people with ga tag -->
+  <xsl:template match="ga-members">
+    <xsl:call-template name="country-people-list">
+      <xsl:with-param name="team" select="'ga'" />
+    </xsl:call-template>
+  </xsl:template>
+  
+  <!-- All people with staff tag -->
+  <xsl:template match="staff-members">
+    <xsl:call-template name="country-people-list">
+      <xsl:with-param name="team" select="'staff'" />
+    </xsl:call-template>
+  </xsl:template>
+  
+  <!-- All people with coordinator tag -->
+  <xsl:template match="coordinator-members">
+    <xsl:call-template name="country-people-list">
+      <xsl:with-param name="team" select="'coordinator'" />
+    </xsl:call-template>
+  </xsl:template>
+  
+  <!-- All people with team tag -->
+  <xsl:template match="team-members">
+    <xsl:call-template name="country-people-list">
+      <xsl:with-param name="team" select="'team'" />
+    </xsl:call-template>
+  </xsl:template>
+
 
 </xsl:stylesheet>

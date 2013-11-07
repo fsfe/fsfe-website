@@ -43,7 +43,6 @@
 			];
 
 			<![CDATA[
-
 			var index = Math.floor(Math.random()*quotes.length);
 			function changeImage () {
 
@@ -69,6 +68,7 @@
 			}
 
 			changeImage();
+                        ]]>
 
 			/* ]]&gt; */
 		</script>

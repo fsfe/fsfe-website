@@ -43,40 +43,11 @@
 			];
 
 			<![CDATA[
-/*TEST*/
 
-          var index = Math.floor(Math.random()*quotes.length);
-
+			var index = Math.floor(Math.random()*quotes.length);
 			function changeImage () {
 
-                            var index = (index+1)%quotes.length;
-
-				$('#quote-box-inner').fadeOut('slow', function() {
-					$('#quote-box-inner div.img').html('<img src="'+quotes[index]['photo']+'"/>');
-					$('#quote-box-inner div.cont').html('<p class="txt">'
-					                              + quotes[index]['txt']
-					                              + '</a></p><p><span class="author">'
-					                              + quotes[index]['author']
-					                              + '</span><span class="license">'
-					                              + quotes[index]['license']
-					                              + '</span></p>'
-					);
-					$('#quote-box-inner').fadeIn('slow', function() {});
-				});
-
-				setTimeout("changeImage();",3000);
-				//setTimeout("changeImage();",15000);
-
-			}
-
-			changeImage();
-			]]>
-
-/*ORIGINAL
-			var index = 0;
-			function changeImage () {
-
-				var oldIndex = index;
+				//var oldIndex = index;
 				index = (index+1)%quotes.length;
 				//index = Math.floor(Math.random()*quotes.length);
 
@@ -98,7 +69,7 @@
 			}
 
 			changeImage();
-*/
+
 			/* ]]&gt; */
 		</script>
 

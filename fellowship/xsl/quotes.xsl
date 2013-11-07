@@ -44,7 +44,7 @@
 
 			<![CDATA[
 /*TEST*/
-			var index = Math.floor(Math.random()*quotes.length);
+			var index = (index+1)%quotes.length;
 
 			function changeImage () {
 
@@ -61,16 +61,8 @@
 					$('#quote-box-inner').fadeIn('slow', function() {});
 				});
 
-				setTimeout("changeImage();",15000);
-				
-				// Proceed to the next quote
-				index++;
-
-				// If the end of quote list is reached, start at the beginning
-				if (index>quotes.length)
-				{
-					index=0;
-				}
+				setTimeout("changeImage();",3000);
+				//setTimeout("changeImage();",15000);
 
 			}
 

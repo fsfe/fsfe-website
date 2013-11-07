@@ -44,9 +44,12 @@
 
 			<![CDATA[
 /*TEST*/
-			var index = (index+1)%quotes.length;
+
+          var index = Math.floor(Math.random()*quotes.length);
 
 			function changeImage () {
+
+                            var index = (index+1)%quotes.length;
 
 				$('#quote-box-inner').fadeOut('slow', function() {
 					$('#quote-box-inner div.img').html('<img src="'+quotes[index]['photo']+'"/>');
@@ -74,8 +77,8 @@
 			function changeImage () {
 
 				var oldIndex = index;
-				//index = (index+1)%quotes.length;
-				index = Math.floor(Math.random()*quotes.length);
+				index = (index+1)%quotes.length;
+				//index = Math.floor(Math.random()*quotes.length);
 
 				$('#quote-box-inner').fadeOut('slow', function() {
 					$('#quote-box-inner div.img').html('<img src="'+quotes[index]['photo']+'"/>');

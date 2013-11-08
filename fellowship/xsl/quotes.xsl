@@ -46,10 +46,6 @@
 			var index = Math.floor(Math.random()*quotes.length);
 			function changeImage () {
 
-				//var oldIndex = index;
-				index = (index+1)%quotes.length;
-				//index = Math.floor(Math.random()*quotes.length);
-
 				$('#quote-box-inner').fadeOut('slow', function() {
 					$('#quote-box-inner div.img').html('<img src="'+quotes[index]['photo']+'"/>');
 					$('#quote-box-inner div.cont').html('<p class="txt">'
@@ -63,6 +59,7 @@
 					$('#quote-box-inner').fadeIn('slow', function() {});
 				});
 
+				index = (index+1)%quotes.length;
 				setTimeout("changeImage();",15000);
 
 			}

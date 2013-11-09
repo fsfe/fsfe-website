@@ -35,10 +35,14 @@
       
       <xsl:choose>
         <xsl:when test="/buildinfo/textset/quotes/quote[@id=$id]/txt">
-          <xsl:value-of select="normalize-space(/buildinfo/textset/quotes/quote[@id=$id]/txt)" />
+          <xsl:call-template name="escapeQuote">
+            <xsl:with-param name="pText" select="normalize-space(/buildinfo/textset/quotes/quote[@id=$id]/txt)"/>
+          </xsl:call-template>
         </xsl:when>
         <xsl:otherwise>
-          <xsl:value-of select="normalize-space(/buildinfo/textsetbackup/quotes/quote[@id=$id]/txt)" />
+          <xsl:call-template name="escapeQuote">
+            <xsl:with-param name="pText" select="normalize-space(/buildinfo/textsetbackup/quotes/quote[@id=$id]/txt)"/>
+          </xsl:call-template>
         </xsl:otherwise>
       </xsl:choose>
       
@@ -65,13 +69,35 @@
       
       <xsl:choose>
         <xsl:when test="/buildinfo/textset/quotes/quote[@id=$id]/author">
-          <xsl:value-of select="normalize-space(/buildinfo/textset/quotes/quote[@id=$id]/author)" />
+          <xsl:call-template name="escapeQuote">
+            <xsl:with-param name="pText" select="normalize-space(/buildinfo/textset/quotes/quote[@id=$id]/author)"/>
+          </xsl:call-template>
         </xsl:when>
         <xsl:otherwise>
-          <xsl:value-of select="normalize-space(/buildinfo/textsetbackup/quotes/quote[@id=$id]/author)" />
+          <xsl:call-template name="escapeQuote">
+            <xsl:with-param name="pText" select="normalize-space(/buildinfo/textsetbackup/quotes/quote[@id=$id]/author)"/>
+          </xsl:call-template>
         </xsl:otherwise>
       </xsl:choose>
       
+    </xsl:template>
+
+   <xsl:template name="escapeQuote">
+      <xsl:param name="pText" select="."/>
+
+      <xsl:if test="string-length($pText) >0">
+       <xsl:value-of select=
+        "substring-before(concat($pText, '&quot;'), '&quot;')"/>
+
+       <xsl:if test="contains($pText, '&quot;')">
+        <xsl:text>\"</xsl:text>
+
+        <xsl:call-template name="escapeQuote">
+          <xsl:with-param name="pText" select=
+          "substring-after($pText, '&quot;')"/>
+        </xsl:call-template>
+       </xsl:if>
+      </xsl:if>
     </xsl:template>
 
 </xsl:stylesheet>

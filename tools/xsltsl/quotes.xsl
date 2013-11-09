@@ -77,8 +77,8 @@
       <xsl:sort select="@pos" data-type="number" />
       {
         'photo':  "<xsl:call-template name="get-quote-photo"><xsl:with-param name="id" select="@id" /></xsl:call-template>",
-        'text':   "<xsl:call-template name="get-quote-text"><xsl:with-param name="id" select="@id" /></xsl:call-template>",
-        'author': "<xsl:call-template name="get-quote-author"><xsl:with-param name="id" select="@id" /></xsl:call-template>"
+        'text':   "<xsl:call-template name="get-quote-text-escaped"><xsl:with-param name="id" select="@id" /></xsl:call-template>",
+        'author': "<xsl:call-template name="get-quote-author-escaped"><xsl:with-param name="id" select="@id" /></xsl:call-template>"
       },
     </xsl:for-each>
     

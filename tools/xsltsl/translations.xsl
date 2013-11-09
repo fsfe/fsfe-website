@@ -35,6 +35,21 @@
       
       <xsl:choose>
         <xsl:when test="/buildinfo/textset/quotes/quote[@id=$id]/txt">
+          <xsl:value-of select="normalize-space(/buildinfo/textset/quotes/quote[@id=$id]/txt)"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="normalize-space(/buildinfo/textsetbackup/quotes/quote[@id=$id]/txt)"/>
+        </xsl:otherwise>
+      </xsl:choose>
+      
+    </xsl:template>
+
+    <!-- this template is to be called to get the text of _quotes_ contained in "tools/texts-xx.xml" files -->
+    <xsl:template name="get-quote-text-escaped">
+      <xsl:param name="id" />
+      
+      <xsl:choose>
+        <xsl:when test="/buildinfo/textset/quotes/quote[@id=$id]/txt">
           <xsl:call-template name="escapeQuote">
             <xsl:with-param name="pText" select="normalize-space(/buildinfo/textset/quotes/quote[@id=$id]/txt)"/>
           </xsl:call-template>
@@ -69,6 +84,20 @@
       
       <xsl:choose>
         <xsl:when test="/buildinfo/textset/quotes/quote[@id=$id]/author">
+          <xsl:value-of select="normalize-space(/buildinfo/textset/quotes/quote[@id=$id]/author)"/>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="normalize-space(/buildinfo/textsetbackup/quotes/quote[@id=$id]/author)"/>
+        </xsl:otherwise>
+      </xsl:choose>
+      
+    </xsl:template>
+
+    <xsl:template name="get-quote-author-escaped">
+      <xsl:param name="id" />
+      
+      <xsl:choose>
+        <xsl:when test="/buildinfo/textset/quotes/quote[@id=$id]/author">
           <xsl:call-template name="escapeQuote">
             <xsl:with-param name="pText" select="normalize-space(/buildinfo/textset/quotes/quote[@id=$id]/author)"/>
           </xsl:call-template>
@@ -81,6 +110,7 @@
       </xsl:choose>
       
     </xsl:template>
+
 
    <xsl:template name="escapeQuote">
       <xsl:param name="pText" select="."/>

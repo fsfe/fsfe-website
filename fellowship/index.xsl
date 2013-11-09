@@ -47,4 +47,15 @@
     </xsl:element>
   </xsl:template>
 
+  <!--translated word "more"-->
+  <xsl:template match="more-label">
+    <xsl:call-template name="more-label" /><xsl:text>…</xsl:text>
+  </xsl:template>
+  
+  <xsl:template name="more-label">
+    <xsl:call-template name="gettext">
+      <xsl:with-param name="id" select="'more'" />
+    </xsl:call-template>
+  </xsl:template>
+
 </xsl:stylesheet>

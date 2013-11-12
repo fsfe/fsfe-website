@@ -32,7 +32,7 @@ if ($function2 ne "") {
 }
 
 if ($radioaddress eq "Berlin") { $address = "Schönhauser Allee 6/7, 10119 Berlin, Germany"; }
-if ($radioaddress eq "DUS") { $address = "Talstraße 110, 40127 Düsseldorf, Germany"; }
+if ($radioaddress eq "DUS") { $address = "Bilker Allee 173, 40217 Düsseldorf, Germany"; }
 if ($radioaddress eq "other") {  $address = "$otheraddress"; }
 
 if ($delivery eq "") {

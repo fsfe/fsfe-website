@@ -13,6 +13,7 @@ my %names = (
   "harmuth" => "Stefan Harmuth",
   "kersten" => "Rainer Kersten",
   "kirschner" => "Matthias Kirschner",
+  "kekalainen" => "Otto Kekäläinen", 
   "morris" => "Anna Morris",
   "mueller" => "Reinhard Müller",
   "roy" => "Hugo Roy",

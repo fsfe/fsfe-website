@@ -22,18 +22,13 @@
     <form action="/cgi-bin/donate.pl" method="post" id="donate">
       <p>
         <label for="name">Name (person or company)</label>
-        <!-- <input id="name" name="name" type="text"/>
-        (Unless you want to remain anonymous, this name will be mentioned on
-        the <a href="thankgnus.html">donors list</a>)
-      </p>
-      <p>
-        <input name="anonymous" type="checkbox"/> I wish to remain anonymous
-      -->
+        <input id="name" name="name" type="text"/> (Optional)
       </p>
       <p>
         <label for="email">E-mail</label>
-        <input id="email" name="email" type="email"/>
-
+        <input id="email" name="email" type="email"/> (Optional)
+      </p>
+      <p>
         <input type="hidden" name="amount" value="oother"/>
 
         <label for="oamount_other">Amount in €</label>

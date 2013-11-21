@@ -38,6 +38,17 @@ h1, h2, h3 {
   height: 210px;
 }
 
+#events {
+  margin-top: 3em;
+  background: #EEE;
+}
+#events h2 {
+  margin-top: -.5em;
+}
+#events .entry {
+  padding-left: 1em;
+}
+
 /* display Fellowship sidebar menu, hiding FSFE menu */
 #menu ul li.fellowship ul { display: block }
 #menu ul li.fsfe ul       { display: none  }

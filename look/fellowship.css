@@ -40,6 +40,8 @@ h1, h2, h3 {
 
 #events {
   margin-top: 3em;
+  margin-left: 1em;
+  padding-left: 0;
   background: #EEE;
 }
 #events h2 {
@@ -47,6 +49,9 @@ h1, h2, h3 {
 }
 #events .entry {
   padding-left: 1em;
+}
+#events p {
+  margin: .6em 1em .4em .8em;
 }
 
 /* display Fellowship sidebar menu, hiding FSFE menu */

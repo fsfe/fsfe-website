@@ -44,7 +44,7 @@
         index = (index+1)%quotes.length;
         
         var newContent = 
-          "&lt;a href='/donate/donate.html'&gt;" +
+          "&lt;a href='/join/join.html'&gt;" +
           "&lt;img src='"+quotes[index]['photo']+"' /&gt;" +
           "&lt;p&gt;"+quotes[index]['text']+"&lt;br/&gt;"+
           "&lt;strong&gt;"+quotes[index]['author']+"&lt;/strong&gt;&lt;/p&gt;"+

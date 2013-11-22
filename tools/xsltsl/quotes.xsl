@@ -112,7 +112,7 @@
       
       <xsl:if test="position() = 1">
         
-        <a href="/donate/donate.html">
+        <a href="/join/join.html">
           <xsl:element name="img">
             <xsl:attribute name="src">
               <xsl:call-template name="get-quote-photo">

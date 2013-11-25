@@ -20,7 +20,6 @@ my %names = (
   "sandklef" => "Henrik Sandklef",
   "suklje" => "Matija Šuklje",
   "tuke" => "Sam Tuke",
-  "weiden" => "Fernanda Weiden",
 );
 
 # -----------------------------------------------------------------------------

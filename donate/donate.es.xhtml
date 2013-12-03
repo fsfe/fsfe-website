@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html>
+  <head>
+    <title>FSFE - ¡Donar ahora!</title>
+  </head>
+
+  <body>
+    <h1>Donar</h1>
+
+    <div id="introduction">
+      <div class="image">
+        <img src="money.jpg" alt="Donate"/>
+      </div>
+
+      <p>
+        La Fundación del Software Libre Europa es una organización no gubernamental
+        sin ánimo de lucro. <a href="/work.html">Nuestro trabajo</a> es posible
+        por la existencia de una comunidad
+        <a href="/contribute/contribute.html">de voluntarios</a>,
+        <a href="http://fellowship.fsfe.org">Fellows</a> y
+        <a href="thankgnus.html">donantes</a>. Sus donaciones son fundamentales para 
+        nuestro fortalecimiento y autonomía. Nos permite seguir trabajando por el Software
+        Libre donde sea necesario y que seamos una voz independiente.
+      </p>
+    </div>
+
+    <h2>Formas de hacer donaciones</h2>
+
+    <h3>Pago en línea</h3>
+
+    <form action="/cgi-bin/donate.pl" method="post" id="donate">
+      <p>
+        <label for="name">Nombre (persona o razón social)</label>
+        <input id="name" name="name" type="text"/>
+        (A menos que usted prefiera permanecer anónimo, este nombre figurará en
+        la <a href="thankgnus.html">lista de donantes</a>)
+      </p>
+      <p>
+        <input name="anonymous" type="checkbox"/> Deseo permanecer anónimo
+      </p>
+      <p>
+        <label for="email">Correo electrónico</label>
+        <input id="email" name="email" type="email"/>
+      </p>
+      <fieldset>
+        <table>
+          <tr>
+            <th>Donación</th>
+            <th>Mensual</th>
+            <th>Anual</th>
+            <th>Una sola vez</th>
+          </tr>
+          <tr>
+            <td><a href="thankgnus.html#donor">Cantidad</a><br/></td>
+            <td><input name="amount" type="radio" value="m10" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/>10 €</td>
+            <td><input name="amount" type="radio" value="y120" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/>120 €</td>
+            <td><input name="amount" type="radio" value="o120" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/>120 €</td>
+          </tr>
+          <tr>
+            <td><a href="thankgnus.html#bronze">Donante de Bronce</a><br/></td>
+            <td><input name="amount" type="radio" value="m40" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/>40 €</td>
+            <td><input name="amount" type="radio" value="y480" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/>480 €</td>
+            <td><input name="amount" type="radio" value="o480" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/>480 €</td>
+          </tr>
+          <tr>
+            <td><a href="thankgnus.html#silver">Donante de Plata</a><br/></td>
+            <td><input name="amount" type="radio" value="m200" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/>200 €</td>
+            <td><input name="amount" type="radio" value="y2400" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/>2.400 €</td>
+            <td><input name="amount" type="radio" value="o2400" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/>2.400 €</td>
+          </tr>
+          <tr>
+            <td><a href="thankgnus.html#gold">Donante de Oro</a><br/></td>
+            <td><input name="amount" type="radio" value="m1000" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/>1.000 €</td>
+            <td><input name="amount" type="radio" value="y12000" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/>12.000 €</td>
+            <td><input name="amount" type="radio" value="o12000" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/>12.000 €</td>
+          </tr>
+          <tr>
+            <td style="border-bottom: medium none;">Fije una cantidad:</td>
+            <td style="border-bottom: medium none;"><input name="amount" type="radio" value="mother" checked="checked" onclick="yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = false; yamount_other.disabled = true; oamount_other.disabled = true"/>
+            <input name="mamount_other" type="text" value="" palceholder="euros" style="width:5em"/></td>
+            <td style="border-bottom: medium none;"><input name="amount" type="radio" value="yother" checked="checked" onclick="mamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = false; oamount_other.disabled = true"/>
+            <input name="yamount_other" type="text" value="" palceholder="euros" style="width:5em"/></td>
+            <td style="border-bottom: medium none;"><input name="amount" type="radio" value="oother" checked="checked" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = false"/>
+            <input name="oamount_other" type="text" value="" palceholder="euros" style="width:5em"/></td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <p>
+        <!-- Translators: please replace "en" with the language code of your
+             language and translate "Donation" and "Donate" -->
+        <input type="hidden" name="language" value="es"/>
+        <input type="hidden" name="text" value="Donación"/>
+        <input type="submit" value="Donar"/>
+      </p>
+    </form>
+
+    <h3>Transferencia bancaria</h3>
+
+    <address>
+      Free Software Foundation Europe e.V.<br/>
+      IBAN: DE69 3602 0030 0003 0047 32<br/>
+      National-Bank Essen, Steinstraße 13, 40212 Dusseldorf, Alemania<br/>
+      SWIFT/BIC: NBAG DE3E<br/>
+    </address>
+
+    <h3>Otras opciones</h3>
+
+    <p>
+      Si no le complacen ninguna de las opciones anteriores, por favor
+      <a href="mailto:office@fsfeurope.org">contáctenos</a> y veremos con
+      usted otras alternativas.
+    </p>
+
+    <p>
+      De forma individual, usted también puede tener en cuenta la posibilidad
+      <a href="https://fellowship.fsfe.org/join">de afiliarse a la Fellowship de la FSFE</a>
+      como alternativa o además de la donación.
+    </p>
+    
+    <h2>Que sucederá a continuación</h2>
+
+    <p>
+      Si usted dona más de 120 Euros en un año, nos gustaría agregar su
+      nombre a nuestra <a href="thankgnus.html">lista de donantes</a>. Para 
+      donaciones en línea, puede usar la casilla "Quiero permanecer anónimo" 
+      para indicar si quiere figurar o no en la lista. Si nos envía su
+      donación por transferencia bancaria, por favor
+      <a href="mailto:office@fsfeurope.org">contacte con nosotros</a>.
+    </p>
+
+    <p>
+      Además, puede incluir nuestra
+      <a href="/about/graphics/sponsoring/sponsoring.html">chapa publicitaria</a>
+      en su propia página web para mostrarnos su apoyo.
+    </p>
+
+    <p>
+      En algunos países, se pueden deducir las donaciones a nuestra organización de la declaración
+      de Hacienda. Este es caso de <a href="germany.html">Alemania</a>, Países
+      <a href="netherlands.html">Bajos</a>, y
+      <a href="switzerland.html">Suiza</a>.
+    </p>
+  </body>
+
+  <timestamp>$Date: 2013-05-31 09:01:36 +0200 (Fri, 31 May 2013) $ $Author: reinhard $</timestamp>
+<translator>Eulalio Barbero</translator></html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

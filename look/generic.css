@@ -2154,19 +2154,24 @@ div.quote .license {font-style: italic}
 div.quote .license:before {content: " "}
 
 #quote-box {
-	border: 1px solid #23350A;
-	clear: left;
-	float: left;
-	margin: 1em 0 0;
-	overflow: hidden;
-	padding: 0;
-	width: 99%;
-	min-height: 13em;
+  border: 1px solid #23350A;
+  clear: left;
+  float: left;
+  margin: 1em 0 0;
+  overflow: hidden;
+  padding: 0;
+  width: 99%;
+  height: 13em;
+  overflow: hidden;
+}
+
+#quote-box img {
+  max-height: 165px;
 }
 
 #quote-box p {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 a.quote-box {

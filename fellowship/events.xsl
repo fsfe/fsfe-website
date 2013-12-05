@@ -29,4 +29,7 @@
       <xsl:with-param name="display-details" select="'yes'" />
       <xsl:with-param name="nb-items" select="4" />
     </xsl:call-template>
+    
+  </xsl:template>
+
 </xsl:stylesheet>

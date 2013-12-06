@@ -30,6 +30,7 @@
           <option value="it">Italiano</option>
           <option value="nl">Nederlands</option>
           <option value="pt">Português</option>
+          <option value="ro">Română</option>
           <option value="ru">Русский</option>
           <option value="sv">Svenska</option>
           <option value="sq">Shqip</option>

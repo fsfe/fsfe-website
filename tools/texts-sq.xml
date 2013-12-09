@@ -23,7 +23,7 @@
       href="http://www.fsf.org.in/">Indi</a> dhe <a
       href="http://www.fsfla.org/">Amerikë Latine</a>.
   </text>
-  <text id="creative-commons-license">leje Creative Commons</text>
+  <text id="creative-commons-license">licence Creative Commons</text>
   <text id="outdated">
     <strong>Kujdes: </strong>
     Kjo faqe mund të jetë e vjetruar në krahasim me origjinalin. Ju lutemi, përdorni
@@ -48,7 +48,7 @@
     <strong>Kujdes: </strong>Kjo faqe është në ndërtim e sipër. Ju lutemi, <strong>mos e përhapni</strong> ose mos provoni ende ta përktheni, meqë për lëndën e saj priten ndryshime.
   </text>
   <text id="project-complete">
-	  Ky projekt është përfunduar me sukses. Këto faqe mbahen këtu vetëm për qëllimi arkivimi.
+	  Ky projekt është përfunduar me sukses. Këto faqe mbahen këtu vetëm për qëllime arkivimi.
   </text>
   
   <text id="search">Kërkoni</text>
@@ -84,6 +84,7 @@
   <text id="fellowship/get-active">Bëhuni aktiv</text>
   <text id="fellowship/faq">F.A.Q.</text>
   <text id="fellowship/contact">Kontakte</text>
+<text id="fellowship/login">Hyrje</text>
   <text id="planet/planet">Planet</text>
   <text id="planet/blogs">Blogje</text>
   <text id="wiki/wiki">Wiki</text>
@@ -121,7 +122,7 @@
   <text id="weekdays/4">E enjte</text>
   <text id="weekdays/5">E premte</text>
   <text id="weekdays/6">E shtunë</text>
-  <text id="weekdays/7">E dielë</text>
+  <text id="weekdays/7">E diel</text>
 
   <text id="weekdays-abbreviated/1">Hën</text>
   <text id="weekdays-abbreviated/2">Mar</text>
@@ -133,7 +134,7 @@
   
   <text id="statement1">Free Software Foundation Europe është një organizëm jofitimprurës i përkushtuar shpënies përpara të </text>
   <text id="statement-fs">Software-it të Lirë</text>
-  <text id="statement2">, dhe punon që të ndërtojë një shoqërinë dixhitale të lirë</text>
+  <text id="statement2">, dhe punon që të ndërtojë një shoqëri dixhitale të lirë</text>
   
   <text id="learn-more">Mësoni më tepër</text>
 
@@ -181,12 +182,10 @@
     <quote id="zacchiroli" tag="donors" pos="1">
       <photo>/donate/zacchiroli.jpg</photo>
       <txt>
-        A world without Free Software is a world where we are all hostages of
-        proprietary software vendors that run our lives. To fight such a
-        nightmare scenario we need organisations like Free Software Foundation
+        Një botë pa Software të Lirë është një botë ku të tërë ne jemi robër të tregtuesve të software-it pronësor që xhiron jetët tona. Për ta luftuar këtë skenar makthi na duhen organizma të tillë si Free Software Foundation
         Europe.
       </txt>
-      <author>Stefano "Zack" Zacchiroli, Former Debian Project Leader</author>
+      <author>Stefano "Zack" Zacchiroli, Ish-drejtues i Projektit Debian</author>
     </quote>
     <quote id="wiesemann" tag="donors" pos="2">
       <photo>/donate/wiesemann.jpg</photo>

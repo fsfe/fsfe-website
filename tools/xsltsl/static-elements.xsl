@@ -5,8 +5,9 @@
                 xmlns:dt="http://xsltsl.org/date-time"
                 xmlns:weekdays="."
                 xmlns:months="."
+                xmlns:nl="."
                 xmlns:str='http://xsltsl.org/string'
-                exclude-result-prefixes="dt weekdays months">
+                exclude-result-prefixes="dt weekdays months nl">
   <xsl:import href="string.xsl" />
   
   <xsl:output method="xml" encoding="utf-8" indent="yes" />
@@ -18,30 +19,74 @@
     
   </xsl:template>
   
+  <nl:langs>
+    <nl:lang value="en">English</nl:lang>
+    <nl:lang value="el">Ελληνικά</nl:lang>
+    <nl:lang value="es">Español</nl:lang>
+    <nl:lang value="de">Deutsch</nl:lang>
+    <nl:lang value="fr">Français</nl:lang>
+    <nl:lang value="it">Italiano</nl:lang>
+    <nl:lang value="nl">Nederlands</nl:lang>
+    <nl:lang value="pt">Português</nl:lang>
+    <nl:lang value="ro">Română</nl:lang>
+    <nl:lang value="ru">Русский</nl:lang>
+    <nl:lang value="sv">Svenska</nl:lang>
+    <nl:lang value="sq">Shqip</nl:lang>
+  </nl:langs>
+
   <xsl:template name="subscribe-nl">
-    <form id="formnl" name="formnl" method="post" action="http://mail.fsfeurope.org/mailman/subscribe/newsletter-en">
-      <p>
-        <select id="language" name="language" onchange="var form = document.getElementById('formnl'); var sel=document.getElementById('language'); form.action='http://mail.fsfeurope.org/mailman/subscribe/newsletter-'+sel.options[sel.options.selectedIndex].value">
-          <option value="en" selected="selected">English</option>
-          <option value="el">Ελληνικά</option>	
-          <option value="es">Español</option>
-          <option value="de">Deutsch</option>
-          <option value="fr">Français</option>
-          <option value="it">Italiano</option>
-          <option value="nl">Nederlands</option>
-          <option value="pt">Português</option>
-          <option value="ro">Română</option>
-          <option value="ru">Русский</option>
-          <option value="sv">Svenska</option>
-          <option value="sq">Shqip</option>
-        </select>
-        
-        <input id="email" name="email" type="email" placeholder="email address" />
-        
-        <xsl:call-template name="subscribe-button" />
-        
-      </p>
-    </form>
+
+    <xsl:variable name="lang">
+      <xsl:value-of select="/buildinfo/document/@language"/>
+    </xsl:variable>
+
+    <xsl:variable name="nl-lang">
+      <xsl:choose>
+	<xsl:when test="boolean(document('')/xsl:stylesheet/nl:langs/nl:lang[@value = $lang])">
+	  <xsl:value-of select="$lang" />
+	</xsl:when>
+	<xsl:otherwise>
+	  <xsl:text>en</xsl:text>
+	</xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+
+    <xsl:element name="form">
+      <xsl:attribute name="id">formnl</xsl:attribute>
+      <xsl:attribute name="name">formnl</xsl:attribute>
+      <xsl:attribute name="method">post</xsl:attribute>
+      <xsl:attribute name="action">
+	<xsl:text>http://mail.fsfeurope.org/mailman/subscribe/newsletter-</xsl:text>
+	<xsl:value-of select="$nl-lang"/>
+      </xsl:attribute>
+      <xsl:element name="p">
+	<xsl:element name="select">
+	  <xsl:attribute name="id">language</xsl:attribute>
+	  <xsl:attribute name="name">language</xsl:attribute>
+	  <xsl:attribute name="onchange">
+	    <xsl:text>var form = document.getElementById('formnl'); var sel=document.getElementById('language'); form.action='http://mail.fsfeurope.org/mailman/subscribe/newsletter-'+sel.options[sel.options.selectedIndex].value</xsl:text>
+	  </xsl:attribute>
+	  <xsl:for-each select="document('')/xsl:stylesheet/nl:langs/nl:lang">	  
+	    <xsl:element name="option">
+	      <xsl:attribute name="value">
+		<xsl:value-of select="@value" />
+	      </xsl:attribute>
+	      <xsl:if test="$nl-lang = @value">
+		<xsl:attribute name="selected" />
+	      </xsl:if>
+	      <xsl:value-of select="." />
+	    </xsl:element>
+	  </xsl:for-each>
+	</xsl:element> <!-- select -->
+	<xsl:element name="input">
+	  <xsl:attribute name="id">email</xsl:attribute>
+	  <xsl:attribute name="name">email</xsl:attribute>
+	  <xsl:attribute name="type">email</xsl:attribute>
+	  <xsl:attribute name="placeholder">email address</xsl:attribute>
+	</xsl:element> <!-- input -->
+	<xsl:call-template name="subscribe-button" />
+      </xsl:element> <!-- p -->
+    </xsl:element> <!-- form -->
   </xsl:template>
   
   <!--generate subscribe button in correct language-->

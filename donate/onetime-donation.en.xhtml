@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<html>
+  <head>
+    <title>FSFE - Support us with a onetime donation!</title>
+  </head>
+
+  <body>
+    <h1>Support FSFE's work with a onetime donation</h1>
+
+    <div id="introduction">
+
+      <p>Intro Text</p> </div>
+
+    <h2>Online payment</h2>
+
+    <form action="/cgi-bin/donate.pl" method="post" id="donate">
+      <p>
+        <label for="name">Name (person or company)</label>
+        <input id="name" name="name" type="text"/> (Optional)
+      </p>
+      <p>
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email"/> (Optional)
+      </p>
+      <p>
+        <input type="hidden" name="amount" value="oother"/>
+
+        <label for="oamount_other">Amount in €</label>
+        <input name="oamount_other" type="text" value="20" style="width:5em"/>
+
+        <input type="hidden" name="language" value="en_US"/>
+        <input type="hidden" name="text" value="Donation"/>
+        <input type="submit" value="Donate"/>
+      </p>
+    </form>
+
+    <h2>Or by bank transfer</h2>
+
+    <address>
+      Free Software Foundation Europe e.V.<br/>
+      IBAN: DE69 3602 0030 0003 0047 32<br/>
+      National-Bank Essen, Steinstraße 13, 40212 Dusseldorf, Germany<br/>
+      SWIFT/BIC: NBAG DE3E<br/>
+    </address>
+
+    <h2>Tax deduction</h2>
+
+    <p>
+      In some countries, donations to us can be deducted from income tax.
+      Currently, this is the case in <a href="germany.html">Germany</a>, the
+      <a href="netherlands.html">Netherlands</a>, and
+      <a href="switzerland.html">Switzerland</a>.
+    </p>
+
+  </body>
+
+  <timestamp>$Date$ $Author$</timestamp>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

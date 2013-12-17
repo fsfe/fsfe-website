@@ -25,7 +25,7 @@
 		<country> Where the person lives (TODO: Where is this used?!)
 		<function> The function(s) of the person (you can have more). This is a bit more complicated to express, as it uses several sources of possible functions:
 			- functions.en.xml: This is the most important file. Here are all "normal" functions like intern or sysadmin, but also "ranks" for other projects
-			- projects.en.xml: There are several projects like Legal Team or Open Standards
+            - projects.en.xml: There are several projects like Legal Team (ftf), Education (education) or Open Standards (os)
 			- countries.en.xml: (translated) names for countries, i.e. for coordinators of a country team
 			- function-fellowship.en.xml: Functions related to the fellowship
 			- volunteers.en.xml: Functions for volunteers (web team, translation coordinator...)
@@ -128,7 +128,7 @@
     <name>Shane M. Coughlan</name>
     <country>JP</country>
     <!--
-    <function project="legal">seniorcounsel/m</function>
+    <function project="ftf">seniorcounsel/m</function>
     -->
     <email>coughlan (at) fsfeurope (dot) org</email>
     <link>/about/coughlan/coughlan.html</link>
@@ -402,7 +402,7 @@
     <name>Hugo Roy</name>
     <country>FR</country>
     <function country="FR">coordinator/m</function>
-    <function project="legal">deputy/m</function>
+    <function project="ftf">deputy/m</function>
     <email>hugo (at) fsfe (dot) org</email>
     <link>/about/roy/roy.html</link>
     <avatar>/about/roy/roy-avatar.jpg</avatar>
@@ -428,7 +428,7 @@
   <person id="suklje" avatar="yes" teams="ftf, core">
     <name>Matija Šuklje</name>
     <country>SI</country>
-    <function project="legal">coordinator/m</function>
+    <function project="ftf">coordinator/m</function>
     <email>hook (at) fsfe (dot) org</email>
     <link>http://matija.suklje.name</link>
     <avatar>/about/suklje/suklje-avatar.jpg</avatar>

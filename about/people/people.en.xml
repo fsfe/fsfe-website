@@ -238,20 +238,6 @@
     <avatar>/about/kekalainen/kekalainen-avatar.jpg</avatar>
   </person>
 
-  <person id="lammi" avatar="no" teams="intern">
-    <name>Matti Lammi</name>
-    <country>FI</country>
-    <function>intern/m</function>
-    <email>lammi (at) fsfeurope (dot) org</email>
-    <employee>full</employee>
-  </person>
-
-  <person id="lindfors" avatar="no" teams="fi">
-    <name>Timo Juhani Lindfors</name>
-    <country>FI</country>
-    <email>timo.lindfors (at) iki (dot) fi</email>
-  </person>
-
   <person id="kersten" avatar="no" teams="de, core">
     <name>Rainer Kersten</name>
     <country>DE</country>
@@ -284,6 +270,20 @@
     <email>koch (at) fsfeurope (dot) org</email>
     <link>http://blogs.fsfe.org/werner/</link>
     <avatar>/about/koch/koch-avatar.jpg</avatar>
+  </person>
+
+  <person id="lammi" avatar="no" teams="intern">
+    <name>Matti Lammi</name>
+    <country>FI</country>
+    <function>intern/m</function>
+    <email>lammi (at) fsfeurope (dot) org</email>
+    <employee>full</employee>
+  </person>
+
+  <person id="lindfors" avatar="no" teams="fi">
+    <name>Timo Juhani Lindfors</name>
+    <country>FI</country>
+    <email>timo.lindfors (at) iki (dot) fi</email>
   </person>
 
   <person id="machon" avatar="no" association-member="yes" teams="ga, es">

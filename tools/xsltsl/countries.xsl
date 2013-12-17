@@ -36,7 +36,7 @@
 						<xsl:when test="employee = 'part'">
 							<xsl:attribute name="style">background-color: #E4F7E4</xsl:attribute>
                         </xsl:when>
-                        <xsl:when test="employee = 'fee'">
+                        <xsl:when test="employee = 'freelancer'">
 							<xsl:attribute name="style">background-color: #EFF2FB</xsl:attribute>
 						</xsl:when>
 						<xsl:otherwise>

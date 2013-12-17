@@ -46,7 +46,7 @@
         <employee> Working status inside the FSFE, defined by the earned money. Only nexessary if the person receives money on a regular basis for his/her work
             full: Person is working 4 or 5 days a week
             part: Person is working 3 or less days a week
-            fee: Person is working on honorary basis, no matter which salary or how long
+            freelancer: Person is working on honorary basis, no matter which salary or how long
   -->
   <!--
     Technical information:
@@ -159,7 +159,7 @@
     <function project="igf">coordinator/m</function>
     <function project="wipo">coordinator/m</function>
     -->
-    <email>gerloff (at) fsfeurope (dot) org</email>
+    <email>gerloff (at) fsfe (dot) org</email>
     <link>/about/gerloff/gerloff.html</link>
     <avatar>/about/gerloff/gerloff-avatar.jpg</avatar>
     <employee>full</employee>
@@ -198,7 +198,7 @@
     <country>DE</country>
     <function>sysadmin/m</function>
     <email>paul (at) fsfe (dot) org</email>
-    <employee>fee</employee>
+    <employee>freelancer</employee>
   </person>
 
   <person id="jean" avatar="yes" teams="fr, de, core">
@@ -265,7 +265,7 @@
     <country>DE</country>
     <function>vice-president/m</function>
     <function country="DE">coordinator/m</function>
-    <email>kirschner (at) fsfeurope (dot) org</email>
+    <email>mk (at) fsfe (dot) org</email>
     <link>/about/kirschner/kirschner.html</link>
     <avatar>/about/kirschner/kirschner-avatar.jpg</avatar>
     <employee>full</employee>
@@ -468,7 +468,7 @@
     <email>willebra (at) fsfe (dot) org</email>
   </person>
 
-  <person id="woolfrey" avatar="yes" teams="gb, core">
+  <person id="woolfrey" avatar="yes" teams="gb">
     <name>Chris Woolfrey</name>
     <country>GB</country>
     <function>fellowship-interviews/m</function>

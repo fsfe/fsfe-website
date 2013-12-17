@@ -33,7 +33,7 @@
 				<function>president/f</function>: Female president
 				<function>intern/m</function>: Male intern
 				<function country="DE">deputy/m</function>: Deputy of the German team
-				<function projects="legal">coordinator/m</function>: Coordinator of the Legal team
+				<function project="legal">coordinator/m</function>: Coordinator of the Legal team
 				<function volunteers="translators-it">coordinator/m</function>: Coordinator of italian translations
 			Note: You can use more than one function tag.
 			Note: If someone has no function inside the FSFE, he can ignore the function-tag (like person from associative organisations)
@@ -88,7 +88,7 @@
   <person id="arnold" avatar="yes" teams="de, core">
     <name>Guido Arnold</name>
     <country>DE</country>
-    <function projects="education">deputy/m</function>
+    <function project="education">deputy/m</function>
     <email>guido (at) fsfe (dot) org</email>
     <link>http://blogs.fsfe.org/guido/</link>
     <avatar>/about/arnold/arnold-avatar.jpg</avatar>
@@ -105,7 +105,7 @@
   <person id="bako" avatar="yes" teams="core">
     <name>Eszter Bakó</name>
     <country>HU</country>
-    <function projects="policy">deputy/f</function>
+    <function project="policy">deputy/f</function>
     <email>eszter (at) fsfe (dot) org</email>
     <link>/about/bako/bako.html</link>
     <avatar>/about/bako/bako-avatar.jpg</avatar>
@@ -155,7 +155,7 @@
     <country>DE</country>
     <function>president/m</function>
     <!--
-    <function projects="os">coordinator/m</function>
+    <function project="os">coordinator/m</function>
     <function project="igf">coordinator/m</function>
     <function project="wipo">coordinator/m</function>
     -->
@@ -214,7 +214,7 @@
   <person id="jensch" avatar="yes" teams="de, core">
     <name>Thomas Jensch</name>
     <country>DE</country>
-    <function projects="education">coordinator/m</function>
+    <function project="education">coordinator/m</function>
     <email>jensch (at) fsfeurope (dot) org</email>
     <link>http://blogs.fsfe.org/riepernet/</link>
     <avatar>/about/jensch/jensch-avatar.jpg</avatar>
@@ -402,7 +402,7 @@
     <name>Hugo Roy</name>
     <country>FR</country>
     <function country="FR">coordinator/m</function>
-    <function projects="legal">deputy/m</function>
+    <function project="legal">deputy/m</function>
     <email>hugo (at) fsfe (dot) org</email>
     <link>/about/roy/roy.html</link>
     <avatar>/about/roy/roy-avatar.jpg</avatar>
@@ -428,7 +428,7 @@
   <person id="suklje" avatar="yes" teams="ftf, core">
     <name>Matija Šuklje</name>
     <country>SI</country>
-    <function projects="legal">coordinator/m</function>
+    <function project="legal">coordinator/m</function>
     <email>hook (at) fsfe (dot) org</email>
     <link>http://matija.suklje.name</link>
     <avatar>/about/suklje/suklje-avatar.jpg</avatar>

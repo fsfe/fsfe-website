@@ -28,6 +28,22 @@
 <!--                <xsl:variable name="avatar" select="@avatar" />-->
 
                 <xsl:element name="li">
+					<!-- background color depending from employee status -->
+					<xsl:choose>
+						<xsl:when test="employee = 'full'">
+							<xsl:attribute name="style">background-color: #BEF5BE</xsl:attribute>
+						</xsl:when>
+						<xsl:when test="employee = 'part'">
+							<xsl:attribute name="style">background-color: #E4F7E4</xsl:attribute>
+                        </xsl:when>
+                        <xsl:when test="employee = 'fee'">
+							<xsl:attribute name="style">background-color: #EFF2FB</xsl:attribute>
+						</xsl:when>
+						<xsl:otherwise>
+						</xsl:otherwise>
+					</xsl:choose>
+					<!-- /background color --> 
+                    
                     <xsl:element name="p">
                         <!-- Picture -->
                         <xsl:choose>
@@ -44,14 +60,13 @@
                 <!--                                     <xsl:with-param name="haveavatar" select="$avatar" />-->
                 <!--                                    </xsl:call-template>-->
                                                         <xsl:element name="img">
-                                                                <xsl:attribute name="alt"><xsl:value-of select="name" /></xsl:attribute>
-                                                                <xsl:attribute name="src"><xsl:value-of select="avatar" /></xsl:attribute>
+															<xsl:attribute name="alt"><xsl:value-of select="name" /></xsl:attribute>
+															<xsl:attribute name="src"><xsl:value-of select="avatar" /></xsl:attribute>
                                                         </xsl:element>
-                                                    
                                                 </xsl:element>
                                             </xsl:when>
                                             <xsl:otherwise>
-                                                
+
                 <!--                                <xsl:call-template name="avatar">-->
                 <!--                                 <xsl:with-param name="id" select="$id" />-->
                 <!--                                 <xsl:with-param name="haveavatar" select="$avatar" />-->
@@ -60,7 +75,7 @@
                                                         <xsl:attribute name="alt"><xsl:value-of select="name" /></xsl:attribute>
                                                         <xsl:attribute name="src"><xsl:value-of select="avatar" /></xsl:attribute>
                                                 </xsl:element>
-                                                
+
                                             </xsl:otherwise>
                                         </xsl:choose>
                                 </xsl:when>
@@ -97,6 +112,15 @@
                                 <xsl:value-of select="email" />
                             </xsl:if>
                         </xsl:element>
+
+                        <!-- Association organisation name -->
+                        <!-- not used
+                        <xsl:if test="association != ''">
+                        	<xsl:element name="span">
+                                <xsl:value-of select="association" />
+                            </xsl:element>
+                        </xsl:if> -->
+
                         <!-- Functions -->
                         <xsl:for-each select="function">
                             <xsl:if test="position()!=1">
@@ -131,6 +155,13 @@
                                     <xsl:value-of select="@volunteers" />
                                 </xsl:variable>
                                 <xsl:apply-templates select="/buildinfo/document/set/volunteers[@id=$volunteers]/node()" />
+                            </xsl:if>
+                            <xsl:if test="@projects != ''">
+                                <xsl:text> </xsl:text>
+                                <xsl:variable name="projects">
+                                    <xsl:value-of select="@projects" />
+                                </xsl:variable>
+                                <xsl:apply-templates select="/buildinfo/document/set/projects[@id=$projects]/node()" />
                             </xsl:if>
                         </xsl:for-each>
                     </xsl:element>

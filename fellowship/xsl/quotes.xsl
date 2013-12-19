@@ -70,6 +70,31 @@
     </script>
   </xsl:template>
 
+  <xsl:template name="quote-list">
+    <xsl:param name="tag" select="''"/> <!-- if left empty, all quotes will be selected -->
+
+    <xsl:for-each select="/buildinfo/textset/quotes/quote[@tag=$tag or $tag='']">
+      <div id="quote-box">
+      	<div id="quote-box-inner" class="logo-list quote">
+          <div class="img">
+            <xsl:value-of select="normalize-space(photo)"/>
+          </div>
+          
+          <div class="cont">
+            <p class="txt">
+              <xsl:call-template name="escape"><xsl:with-param name="string" select="normalize-space(txt)"/></xsl:call-template>
+            </p>
+            <p><span class="author"><xsl:call-template name="escape">
+	      <xsl:with-param name="string" select="normalize-space(author)"/></xsl:call-template>
+            </span><span class="license">
+              <xsl:call-template name="escape"><xsl:with-param name="string" select="normalize-space(license)"/></xsl:call-template>
+            </span></p>
+          </div>
+      	</div>
+      </div>
+    </xsl:for-each>
+  </xsl:template>
+
   <xsl:template name="escape">
     <xsl:param name="string"/>
     <xsl:variable name="apos" select='"&apos;"' />

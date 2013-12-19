@@ -16,8 +16,8 @@
   </xsl:template>
 
   <!-- rotating quotes -->
-  <xsl:template match="quote-box">
-    <xsl:call-template name="quote-box">
+  <xsl:template match="quote-list">
+    <xsl:call-template name="quote-list">
       <xsl:with-param name="tag" select="string(@tag)" />
     </xsl:call-template>
   </xsl:template>

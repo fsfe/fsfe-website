@@ -77,7 +77,11 @@
       <div id="quote-box">
       	<div id="quote-box-inner" class="logo-list quote">
           <div class="img">
-            <xsl:value-of select="normalize-space(photo)"/>
+	    <xsl:element name="img">
+              <xsl:attribute name="src">
+                <xsl:value-of select="normalize-space(photo)"/>
+              </xsl:attribute>
+            </xsl:element>
           </div>
           
           <div class="cont">

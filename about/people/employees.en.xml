@@ -1,9 +1,13 @@
 <?xml version="1.0"?>
 
 <employeeset>
-  <employee id="full">Full-time&#160;employee</employee>
-  <employee id="part">Part-time&#160;employee</employee>
-  <employee id="intern">Intern</employee>
+  <employee id="full/m">Full-time&#160;employee</employee>
+  <employee id="full/f">Full-time&#160;employee</employee>
+  <employee id="part/m">Part-time&#160;employee</employee>
+  <employee id="part/f">Part-time&#160;employee</employee>
+  <employee id="intern/m">Intern</employee>
+  <employee id="intern/f">Intern</employee>
   <!--You should use the intern function rather than this, but maybe this will be needed-->
-  <employee id="freelancer">Freelancer</employee>
+  <employee id="freelancer/m">Freelancer</employee>
+  <employee id="freelancer/f">Freelancer</employee>
 </employeeset>

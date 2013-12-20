@@ -170,16 +170,16 @@
                         <xsl:for-each select="employee">
                             <xsl:element name="span">
                                 <xsl:choose>
-                                    <xsl:when test=" . = 'full'">
+                                    <xsl:when test="substring-before( . , '/') = 'full'">
                                         <xsl:attribute name="class">employee full</xsl:attribute>
                                     </xsl:when>
-                                    <xsl:when test=" . = 'part'">
+                                    <xsl:when test="substring-before( . , '/') = 'part'">
                                         <xsl:attribute name="class">employee part</xsl:attribute>
                                     </xsl:when>
-                                    <xsl:when test=" . = 'freelancer'">
+                                    <xsl:when test="substring-before( . , '/') = 'freelancer'">
                                         <xsl:attribute name="class">employee freelancer</xsl:attribute>
                                     </xsl:when>
-                                    <xsl:when test=" . = 'intern'">
+                                    <xsl:when test="substring-before( . , '/') = 'intern'">
                                         <xsl:attribute name="class">employee intern</xsl:attribute>
                                     </xsl:when>
                                     <xsl:otherwise></xsl:otherwise>

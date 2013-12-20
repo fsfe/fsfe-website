@@ -28,7 +28,7 @@
 <!--                <xsl:variable name="avatar" select="@avatar" />-->
 
                 <xsl:element name="li">
-					<!-- background color depending from employee status -->
+					<!-- background color depending from employee status - NOT USED ANYMORE
 					<xsl:choose>
 						<xsl:when test="employee = 'full'">
 							<xsl:attribute name="style">background-color: #BEF5BE</xsl:attribute>
@@ -42,7 +42,7 @@
 						<xsl:otherwise>
 						</xsl:otherwise>
 					</xsl:choose>
-					<!-- /background color --> 
+					!-/background color --> 
                     
                     <xsl:element name="p">
                         <!-- Picture -->
@@ -164,6 +164,34 @@
                                 <xsl:apply-templates select="/buildinfo/document/set/projects[@id=$projects]/node()" />
                             </xsl:if>
                         </xsl:for-each>
+                        
+                        <!-- Employee status for transparency reasons-->
+                        <!-- TODO: I (hugo) did this, so there s probably room for improvement -->
+                        <xsl:for-each select="employee">
+                            <xsl:element name="span">
+                                <xsl:choose>
+                                    <xsl:when test=" . = 'full'">
+                                        <xsl:attribute name="class">employee full</xsl:attribute>
+                                    </xsl:when>
+                                    <xsl:when test=" . = 'part'">
+                                        <xsl:attribute name="class">employee part</xsl:attribute>
+                                    </xsl:when>
+                                    <xsl:when test=" . = 'freelancer'">
+                                        <xsl:attribute name="class">employee freelancer</xsl:attribute>
+                                    </xsl:when>
+                                    <xsl:when test=" . = 'intern'">
+                                        <xsl:attribute name="class">employee intern</xsl:attribute>
+                                    </xsl:when>
+                                    <xsl:otherwise></xsl:otherwise>
+                                </xsl:choose>
+                                <xsl:variable name="employee">
+                                    <xsl:value-of select="." />
+                                </xsl:variable>
+                                <xsl:apply-templates select="/buildinfo/document/set/employee[@id=$employee]/node()" />
+                            </xsl:element>
+                        </xsl:for-each>
+                        <!-- / employee status -->
+                        
                     </xsl:element>
                 </xsl:element>
             </xsl:for-each>

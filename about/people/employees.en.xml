@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<employeeset>
+  <employee id="full">Full-time&#160;employee</employee>
+  <employee id="part">Part-time&#160;employee</employee>
+  <employee id="intern">Intern</employee>
+  <!--You should use the intern function rather than this, but maybe this will be needed-->
+  <employee id="fee">Freelancer</employee>
+</employeeset>

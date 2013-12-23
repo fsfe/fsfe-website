@@ -1821,6 +1821,10 @@ table#patrons td img {
 
 /* People pages */
 
+#show-people h2 {
+    clear: both;
+}
+
 .people img, img.author-avatar {
   float: left;
   margin: 5px 10px 10px 0px;

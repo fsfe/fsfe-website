@@ -201,9 +201,8 @@
     <employee>freelancer/m</employee>
   </person>
 
-  <person id="jean" avatar="yes" teams="fr, de, core">
+  <person id="jean" avatar="yes" teams="fr, core">
     <name>Nicolas Jean</name>
-    <country>DE</country>
     <country>FR</country>
     <function volunteers="web">coordinator/m</function>
     <email>nicoulas (at) fsfe (dot) org</email>
@@ -341,7 +340,7 @@
   <person id="piana" avatar="yes" teams="it, ftf">
     <name>Carlo Piana</name>
     <country>IT</country>
-    <function country="IT"></function>
+    <function country="IT">seniorcounsel/m</function>
     <email></email>
     <link>http://piana.eu/</link>
     <avatar>/about/piana/piana-avatar.jpg</avatar>

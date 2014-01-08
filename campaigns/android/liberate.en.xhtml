@@ -39,7 +39,12 @@
         If you want to buy an Android phone, make sure that the boot loader can
         be <a
         href="http://wiki.cyanogenmod.com/?search=&quot;unlock+bootloader&quot;">unlocked</a>.
-        On some devices it can only be unlocked with clever hacks and their manufacturers tend to declare your warranty void when you unlock their device's boot loader. But, given European  Directive 1999/44/CE, just the fact that you modified or changed the software of your device, is not a sufficient reason to void your statutory warranty. <a href="http://piana.eu/root" title="Does rooting your phone invalidate its warranty?">See Carlo Piana's blog</a> for more information. There are
+        On some devices it can only be unlocked with clever hacks
+        and their manufacturers tend to declare your warranty void when you unlock their device's boot loader.
+        But, given European  Directive 1999/44/CE, just the fact that you modified or changed the software of your device,
+        is not a sufficient reason to void your statutory warranty.
+        <a href="http://piana.eu/root" title="Does rooting your phone invalidate its warranty?">See Carlo Piana's blog</a> for more information.
+        There are
         also companies that ship their devices with an unlocked bootloader or
         provide you with the means to unlock it. Besides that, it is a good idea
         to check if there are free versions of Android <a
@@ -143,41 +148,143 @@
 	    We collected some information about how you can <a href="/campaigns/android/help.html#Apps">help out F-Droid</a>.
 	  </p>
 
-      <h2 id="Sync">Synchronising Your Data</h2>
+      <h2 id="Sync">Synchronizing Your Data</h2>
 
       <p>
         When you run only Free Software and when you do not rely on non-free
         network services like the ones Google offers, it might look like you lose the convenience
-        of synchronising your contacts, your calender and other data with your
+        of synchronizing your contacts, your calender and other data with your
         other devices. Fortunately, there is plenty of Free Software that does
-        this job as well:
+        this job as well.
       </p>
 
+      <h3 id="sync-pim">Synchronizing Calendar and Contacts</h3>
+      <p>
+	      There are several Free Software server implementations of
+	      <a href="https://en.wikipedia.org/wiki/CalDAV">CalDAV</a> and
+	      <a href="https://en.wikipedia.org/wiki/CardDAV">CardDAV</a> that you can use, such as:
+      </p>
       <ul>
         <li>
-          <a href="http://acal.me/">ACal</a> synchronises your Android
-          addressbook and calendar to <a
-          href="https://en.wikipedia.org/wiki/CalDAV">CalDAV</a>/<a
-          href="https://en.wikipedia.org/wiki/CardDAV">CardDAV</a> servers like
-          <a href="http://owncloud.org/">ownCloud</a>.
+            <a href="http://owncloud.org">ownCloud</a>
+            &#8212; commercial "key in hand" available at <a href="https://owncloud.com/">ownCloud Inc.</a>
+            and other hosting options listed in <a href="http://owncloud.org/providers/">ownCloud supported service providers</a>
+		</li>
+	    <li>
+            <a href="http://kolab.org/">Kolab</a>
+            &#8212; commercial "key in hand" available at <a href="https://mykolab.com/">MyKolab</a>;
+            information on how to configure client applications available on
+            <a href="https://mykolab.com/clients">MyKolab Client Configuration</a> page
         </li>
-        <li>
-          <a href="https://code.google.com/p/kolab-android/">kolab-android</a>
-          synchronizes your Android addressbook and calendar to <a
-          href="http://www.kolab.org/">Kolab</a>/IMAP folders.
-	  </li>
-	  <li>
-	    The <a href="http://f-droid.org/repository/browse/?fdid=com.funambol.androidsync">Funambol Sync client</a>
-		uses SyncML to synchronize your calendar and addressbook with various applications.
-	  </li>
-        <li>
-          <a
-          href="http://wiki.cyanogenmod.com/wiki/Howto:_Connect_to_Device_with_SSH">SSH
-          Daemon dropbear</a> is pre-installed on CyanogenMod and can be used to
-          e.g. run <a href="https://en.wikipedia.org/wiki/Rsync">rsync</a>.
+	    <li>
+            <a href="http://www.sogo.nu">SoGO</a>
+            &#8212; can replace Microsoft Exchange servers;
+            commercial support available at <a href="http://www.sogo.nu/english/support/commercial_support.html">SoGO consulting services</a>;
+        </li>
+	    <li><a href="http://baikal-server.com">baikal</a></li>
+	    <li><a href="http://davical.org">DAViCal</a></li>
+	    <li>
+            <a href="http://davmail.sourceforge.net/">davmail</a>
+            &#8212; is not actually a contacts and calendar server,
+            but a gateway to Microsoft Exchange servers providing CardDAV and CalDAV access access.
+            It might be the first step to liberate your PIM data from proprietary solutions.
         </li>
       </ul>
 
+      <p>
+	      Each of the devices where you would like to have access to your contacts and calendar needs a CardDAV and a CalDAV client.
+	      For desktop you can use:
+      </p>
+
+      <ul>
+	      <li>
+            <a href="https://www.mozilla.org/en-US/thunderbird">Thunderbird</a>
+            with the <a href="https://www.mozilla.org/projects/calendar/lightning/">Lightening</a> calendar extension
+          </li>
+	      <li><a href="http://kontact.org">KDE Kontact</a></li>
+	      <li><a href="https://wiki.gnome.org/Apps/Evolution">Gnome Evolution</a></li>
+	      <li>
+            <a href="http://lostpackets.de/pycarddav/">pyCardDAV</a>
+            to use CardDAV as a address book in <a href="http://www.mutt.org/">mutt</a>
+            (and maybe other email clients) or consulting the CardDAV server from command line.
+          </li>
+      </ul>
+
+      <p>
+	      In the Android devices you can use:
+      </p>
+
+      <ul>
+	      <li>
+		      <a href="http://acal.me">ACal</a>
+		      (<a href="https://f-droid.org/repository/browse/?fdid=com.morphoss.acal">at F-Droid</a>) &#8212;
+		      although it doesn't update the Android calendar and contact database it still a very competent PIM application;
+	      </li>
+	      <li>
+		      <a href="http://davdroid.bitfire.at">DAVdroid</a>
+		      (<a href="https://f-droid.org/repository/browse/?fdid=at.bitfire.davdroid">at F-Droid</a>);
+	      </li>
+	      <li>
+		      <a href="https://github.com/gggard/AndroidCaldavSyncAdapater">CalDAV Sync Adapter</a>
+		      (<a href="https://f-droid.org/repository/browse/?fdid=org.gege.caldavsyncadapter">at F-Droid</a>).
+	      </li>
+      </ul>
+
+      <h3 id="sync-files">Synchronizing files</h3>
+      <p>
+	      To keep files synchronized between devices
+      </p>
+      <ul>
+	      <li>
+		      <a href="https://github.com/owncloud/android">ownCloud android client</a>
+		      (<a href="https://f-droid.org/repository/browse/?fdid=com.owncloud.android">at F-Droid</a>) &#8212;
+		      file synchronization and has a instant upload for photos and videos taken using the device;
+	      </li>
+	      <li>
+		      <a href="http://wiki.cyanogenmod.org/w/Doc:_dropbear">SSH Daemon dropbear</a> &#8212;
+		      is pre-installed on CyanogenMod and can be used to e.g. run <a href="https://en.wikipedia.org/wiki/Rsync">rsync</a>.
+	      </li>
+      </ul>
+      
+      <h3 id="sync-rss">Synchronizing feed readers</h3>
+      
+      <p>
+	      If you usually keep track of
+          <a href="https://en.wikipedia.org/wiki/Rss">RSS</a>/<a href="https://en.wikipedia.org/wiki/Atom_%28standard%29">Atom</a> feeds,
+          then it's nice to be able to keep all devices synchronized. Here are some suggestions of possible free solutions you can use:
+      </p>
+      <ul>
+	      <li>
+		      <a href="http://apps.owncloud.com/content/show.php/News?content=158434">ownCloud New Reader</a>
+		      (<a href="https://f-droid.org/repository/browse/?fdid=de.luhmer.owncloudnewsreader">at F-Droid</a>)
+	      </li>
+	      <li>
+		      <a href="http://tt-rss.org/redmine/projects/tt-rss">Tiny Tiny RSS</a>
+		      (<a href="https://github.com/gothfox/Tiny-Tiny-RSS-for-Honeycomb">source of the official Android client</a>,
+              <a href="https://f-droid.org/repository/browse/?fdid=org.ttrssreader">alternative Android client at F-Droid</a>)
+	      </li>
+	      <li>
+		      <a href="https://github.com/samuelclay/NewsBlur">NewsBlur</a>
+		      (<a href="https://f-droid.org/repository/browse/?fdid=com.newsblur">at F-Droid</a>)
+	      </li>
+      </ul>
+
+      <h3 id="sync-webbrowser">Synchronizing Web Browsers</h3>
+      <p>
+	      It's possible to host your own Firefox synchronization server
+      </p>
+      <ul>
+	      <li>deploying your own <a href="http://docs.services.mozilla.com/howtos/run-sync.html">Mozilla Sync Server</a></li>
+	      <li>using ownCloud <a href="http://apps.owncloud.com/content/show.php/Mozilla+Sync?content=161793">Mozilla Sync application</a></li>
+      </ul>
+      <p>
+	      It's then possible to use Firefox Web Browser advanced setup of the sync configuration to define the new server and credentials to use.
+      </p>
+      <p>
+	      Although there is some documentation on how to host your own Chrome Web Browser synchronization server,
+          it is all very "in the air".
+          See <a href="https://code.google.com/p/chromium/issues/detail?id=181429">issue 181429</a> of the chromium development issue tracker.
+      </p>
   </body>
   <timestamp>$Date: 2012-02-17 15:16:09 +0100 (ven. 17 févr. 2012) $ $Author: hugo $</timestamp>
   <legal type="cc-license">
@@ -192,4 +299,13 @@
 Local Variables: ***
 mode: xml ***
 End: ***
+-->
+
+<!--  LocalWords:  FSFE CalDAV CardDAV ownCloud baikal DAViCal SoGO
+-->
+<!--  LocalWords:  Kolab MyKolab davmail PIM KDE Kontact pyCardDAV
+-->
+<!--  LocalWords:  ACal DAVdroid dropbear rsync RSS NewsBlur ven févr
+-->
+<!--  LocalWords:  hugo
 -->

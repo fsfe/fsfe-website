@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Please keep each list alphabetically ordered.  Emacs users want to set
+  sort-fold-case to true and run sort-lines on a region.  Vi+ users can
+  visually select the list and use the :sort command.
+
+  The date="..." should be filled with the last date when a donation from this
+  donor came in. It is important for the "current" thankgnus page.
+
+  Currently, the date="..." may only be set in a single xml file for the same
+  donor, so if you add a donor to a file of the new year, don't forget to
+  remove the date="..." in the old year's file.
+-->
+
+<donorset>
+  <gold>
+    <donor date="2014-12-31" img="donors/linuxhotel.png">Linuxhotel Villa Vogelsang</donor>
+  </gold>
+
+  <silver>
+    <donor date="2014-12-31" img="donors/silver-freiheit.png">freiheit.com technologies</donor>
+  </silver>
+
+  <bronze>
+    <donor date="2014-01-09">Bibliotek-Systemer As</donor>
+    <donor date="2014-12-31">inmedias.it GmbH</donor>
+    <donor date="2014-12-31">Joachim Zobel</donor>
+    <donor date="2014-12-31">LIHAS - LinuxHaus Stuttgart</donor>
+    <donor date="2014-12-31">Mario Lardieri</donor>
+  </bronze>
+</donorset>

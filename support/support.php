@@ -172,7 +172,7 @@ else {
     $headers = 'Content-Type: text/plain; charset="utf-8"' . "\r\n";
     $headers .= 'MIME-Version: 1.0' . "\r\n";
     $headers .= 'Content-Transfer-Encoding: 8bit' . "\r\n";
-    $headers .= 'From: "FSFE" <office@fsfe.org>' . "\r\n";
+    $headers .= 'From: "FSFE" <supporters@fsfeurope.org>' . "\r\n";
     mail($to, '=?UTF-8?B?'.base64_encode($subject).'?=', $message, $headers);
 }
 

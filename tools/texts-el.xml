@@ -188,7 +188,7 @@
 
   <!-- quotes to be displayed in a rotating box -->
   <quotes>
-    <quote id="zacchiroli" tag="donors" pos="1">
+    <quote id="zacchiroli" tag="donors" pos="2">
       <photo>/donate/zacchiroli.jpg</photo>
       <txt>
         Ένας κόσμος χωρίς Ελεύθερο Λογισμικό είναι ένας κόσμος στον οποίο
@@ -199,7 +199,7 @@
       </txt>
       <author>Stefano "Zack" Zacchiroli, Former Debian Project Leader</author>
     </quote>
-    <quote id="wiesemann" tag="donors" pos="2">
+    <quote id="wiesemann" tag="donors" pos="3">
       <photo>/donate/wiesemann.jpg</photo>
       <txt>
         Ένας εικονικός κόσμος χωρίς Ελεύθερο Λογισμικό είναι όπως μια πόλη
@@ -208,7 +208,7 @@
       </txt>
       <author>Reinhard Wiesemann - Linuxhotel</author>
     </quote>
-    <quote id="ganten" tag="donors" pos="3">
+    <quote id="ganten" tag="donors" pos="4">
       <photo>/donate/ganten.jpg</photo>
       <txt>
         Το Ελεύθερο Λογισμικό είναι το σταθερό θεμέλιο των επιχειρηματικών
@@ -217,6 +217,19 @@
       </txt>
       <author>Peter Ganten - Univention</author>
     </quote>
+
+    <quote id="appelbaum" tag="donors" pos="1">
+      <photo>/fellowship/graphics/people/jacobappelbaum.png</photo>
+      <txt>
+         Πιστεύω ότι οι ενέργειες υποστήριξης προς το FSFE είναι σημαντικές για
+         την ενθάρρυνση της ανάπτυξης και υιοθέτησης του Ελεύθερου Λογισμικού
+         στην Ευρώπη καθώς επίσης και στον υπόλοιπο κόσμο. Είμαι Μέλος του
+         FSFE γιατί η οικονομική υποστήριξη του σκοπού του Ελεύθερου Λογισμικού
+         επιφέρει θετικές βελτιώσεις στις κοινωνίες σε όλον τον κόσμο.
+      </txt>
+      <author>Jacob Appelbaum - Spokesperson for The TOR Project</author>
+    </quote>
+
   </quotes>
 
 </textset>

@@ -3,7 +3,7 @@
 <menuset>
   <menu id="fsfe" />
   <menu id="fsfe/about" priority="0" parent="fsfe">/about/about.html</menu>
-  <menu id="fsfe/mission" priority="1" parent="fsfe">/mission.html</menu>
+  <!--menu id="fsfe/mission" priority="1" parent="fsfe">/mission.html</menu-->
   <menu id="fsfe/projects" priority="2" parent="fsfe">/work.html</menu>
   <menu id="fsfe/campaigns" priority="3" parent="fsfe">/campaigns/campaigns.html</menu>
   <menu id="fsfe/help" priority="4" parent="fsfe">/contribute/contribute.html</menu>

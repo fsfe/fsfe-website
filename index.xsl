@@ -34,22 +34,25 @@
     <xsl:call-template name="fetch-news">
       <xsl:with-param name="tag">front-page</xsl:with-param>
       <xsl:with-param name="nb-items" select="5" />
-      <xsl:with-param name="show-date" select="'no'" />
+      <xsl:with-param name="show-date" select="'yes'" />
+      <!--TODO enable a "Read More" link with class "learn-more" at the end of newsteaser-->
     </xsl:call-template>
     
-    <xsl:element name="p">
-      <xsl:element name="a">
-        <xsl:attribute name="href">/news/news.html</xsl:attribute>
-        <xsl:call-template name="more-label" /><xsl:text>…</xsl:text>
-      </xsl:element>
-    </xsl:element>
   </xsl:template>
   
   <!--display dynamic list of newsletters items-->
   <xsl:template match="all-newsletters">
     <xsl:call-template name="fetch-newsletters">
-      <xsl:with-param name="nb-items" select="2" />
+      <xsl:with-param name="nb-items" select="0" />
     </xsl:call-template>
+
+    <xsl:element name="p">
+      <xsl:element name="a">
+        <xsl:attribute name="href">/news/news.html</xsl:attribute>
+        <xsl:attribute name="class">learn-more</xsl:attribute>
+        <xsl:call-template name="more-news" /><xsl:text></xsl:text>
+      </xsl:element>
+    </xsl:element>
   </xsl:template>
   
   <!--display dynamic list of event items-->
@@ -72,7 +75,8 @@
     <xsl:element name="p">
       <xsl:element name="a">
         <xsl:attribute name="href">/events/events.html</xsl:attribute>
-        <xsl:call-template name="more-label" /><xsl:text>…</xsl:text>
+        <xsl:attribute name="class">learn-more</xsl:attribute>
+        <xsl:call-template name="more-events" /><xsl:text></xsl:text>
       </xsl:element>
     </xsl:element>
   </xsl:template>
@@ -104,7 +108,7 @@
   
   <!-- display campaign box 4 -->
   <xsl:template match="campaign-box4">
-    <div id="campaign-box-4">
+    <!--div id="campaign-box-4"-->
       
       <!--
         Here are two codes snippets that will provide for a graphical and a text banner.
@@ -131,7 +135,7 @@
         </p>
       </div -->
       
-    </div>
+    <!--/div-->
   </xsl:template>
   
   
@@ -167,7 +171,7 @@
   
   <!--translated word "more"-->
   <xsl:template match="more-label">
-    <xsl:call-template name="more-label" /><xsl:text>…</xsl:text>
+    <xsl:call-template name="more-label" /><xsl:text></xsl:text>
   </xsl:template>
   
   <xsl:template name="more-label">
@@ -175,6 +179,29 @@
       <xsl:with-param name="id" select="'more'" />
     </xsl:call-template>
   </xsl:template>
+  
+  <!--translated word "more news"-->
+  <xsl:template match="more-news">
+    <xsl:call-template name="more-news" /><xsl:text></xsl:text>
+  </xsl:template>
+  
+  <xsl:template name="more-news">
+    <xsl:call-template name="gettext">
+      <xsl:with-param name="id" select="'morenews'" />
+    </xsl:call-template>
+  </xsl:template>
+  
+  <!--translated word "more events"-->
+  <xsl:template match="more-events">
+    <xsl:call-template name="more-events" /><xsl:text></xsl:text>
+  </xsl:template>
+  
+  <xsl:template name="more-events">
+    <xsl:call-template name="gettext">
+      <xsl:with-param name="id" select="'moreevents'" />
+    </xsl:call-template>
+  </xsl:template>
+  
   
   <!--translated word "donate"-->
   <xsl:template match="donate-label">

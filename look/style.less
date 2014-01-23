@@ -560,17 +560,19 @@ h1.heading {
           display: block;
         }
 
-        ul#subpages, h2#subpages + ul, h3#subpages + ul, h4#subpages + ul, ul.subheadings {
+        ul#subpages, h2#subpages + ul, h3#subpages + ul, h4#subpages + ul, ul.subheadings, ul.overview {
+            clear: both;
             .subsite #content .subheadings;
+
+            li {
+                .make-sm-column(6);
+            }
             
-            @media (min-width: @screen-sm) {
+            /*@media (min-width: @screen-sm) {
                 li {
                     display: inline-block;   
-                    float: left;
-                    width: 50%;
-                    padding-left: 1em;
                 }
-            }
+            }*/
         }
 
 .subsite {

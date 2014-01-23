@@ -397,6 +397,28 @@ h1.heading {
 
 
 #content {
+    h1 {
+        .page-header;
+    }
+
+    aside {
+        @media (min-width: @screen-md) {
+            float: right;
+            margin-left: 100%;
+            position: absolute;
+
+            p {
+                width: 100%;
+                min-width: 320px;
+                max-width: 340px;
+            }
+        }
+        p {
+            border-left: 1px solid @brand-primary;
+            padding-left: 1em;
+            font-size: 0.9em;
+        }
+    }
     
 /* blocks that stand out */
 
@@ -494,24 +516,6 @@ h1.heading {
         margin-right: auto;
     }
 
-    aside {
-        @media (min-width: @screen-md) {
-            float: right;
-            margin-left: 100%;
-            position: absolute;
-
-            p {
-                width: 100%;
-                min-width: 320px;
-                max-width: 340px;
-            }
-        }
-        p {
-            border-left: 1px solid @brand-primary;
-            padding-left: 1em;
-            font-size: 0.9em;
-        }
-    }
 }
 
 
@@ -961,6 +965,13 @@ a.learn-more:hover:after {
 .right { .pull-right; }
 
 #introduction .image img { float: left; margin-right: 0.5em;}
+
+.grid-50-50 {
+    .make-row;
+    .box {
+        .make-sm-column(6);
+    }
+}
 
 /*fixing style for pages not up to date with the new design*/
 #content #frontpage {

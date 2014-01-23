@@ -673,7 +673,7 @@
             <xsl:element name="li">
               <xsl:element name="a">
                 <xsl:attribute name="href">/press/press.html</xsl:attribute>
-                <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'news/press'" /></xsl:call-template>
+                <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfe/press'" /></xsl:call-template>
               </xsl:element>
             </xsl:element>
           </xsl:element>

@@ -46,13 +46,13 @@
       <xsl:with-param name="nb-items" select="0" />
     </xsl:call-template>
 
-    <xsl:element name="p">
+    <!--xsl:element name="p">
       <xsl:element name="a">
         <xsl:attribute name="href">/news/news.html</xsl:attribute>
         <xsl:attribute name="class">learn-more</xsl:attribute>
         <xsl:call-template name="more-news" /><xsl:text></xsl:text>
       </xsl:element>
-    </xsl:element>
+    </xsl:element-->
   </xsl:template>
   
   <!--display dynamic list of event items-->

@@ -543,7 +543,7 @@
           <xsl:attribute name="data-toggle">collapse</xsl:attribute>
           <xsl:attribute name="data-target">#translations</xsl:attribute>
           <xsl:attribute name="href">#</xsl:attribute>
-          ×&#160;<xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'close-this'" /></xsl:call-template>
+          ×
         </xsl:element>
 
         <xsl:element name="a">

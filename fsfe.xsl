@@ -298,7 +298,7 @@
         <xsl:attribute name="id">article-metadata</xsl:attribute>
         
         <xsl:if test = "string(/buildinfo/document/head/meta[@name='author-name-1']/@content)">
-          <span class="label"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'author'" /></xsl:call-template>: </span>
+          <span class="written-by"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'author'" /></xsl:call-template>: </span>
           <xsl:choose>
             <xsl:when test="/buildinfo/document/head/meta[@name='author-link-1']">
               <xsl:variable name="author-link-1" select="/buildinfo/document/head/meta[@name='author-link-1']/@content" />
@@ -359,7 +359,7 @@
         <xsl:attribute name="id">article-metadata</xsl:attribute>
 
         <xsl:if test="/buildinfo/document/author">
-            <span class="label"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'writtenby'" /></xsl:call-template>&#160;</span>
+            <span class="written-by"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'writtenby'" /></xsl:call-template>&#160;</span>
             
           <xsl:for-each select="/buildinfo/document/author">
               <xsl:variable name="id">

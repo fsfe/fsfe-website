@@ -638,7 +638,7 @@
               <xsl:element name="i">
                 <xsl:attribute name="class">fa fa-home fa-lg</xsl:attribute>
               </xsl:element>
-              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'rootpage'" /></xsl:call-template>
+              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfeurope'" /></xsl:call-template>
             </xsl:element>
 
           </xsl:element>
@@ -788,7 +788,9 @@
 
           <xsl:element name="div">
             <xsl:attribute name="id">logo</xsl:attribute>
-            <xsl:element name="span">Free Software Foundation&#160;Europe</xsl:element>
+            <xsl:element name="span">
+                  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfeurope'" /></xsl:call-template>
+              </xsl:element>
           </xsl:element>
           <!--/div#logo-->
 
@@ -1226,7 +1228,7 @@
               <xsl:attribute name="class">fsfe</xsl:attribute>
               <xsl:element name="a">
                 <xsl:attribute name="href">/</xsl:attribute>
-                Free Software Foundation&#160;Europe
+                  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfeurope'" /></xsl:call-template>
               </xsl:element>
 
               <xsl:element name="ul">
@@ -1579,8 +1581,7 @@
         <xsl:element name="section">
           <xsl:attribute name="id">legal-info</xsl:attribute>
 
-          <p>Copyright © 2001-2014 <a href="/">Free Software Foundation
-              Europe</a>.</p> 
+          <p>Copyright © 2001-2014 <a href="/"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfeurope'" /></xsl:call-template></a>.</p> 
           <ul>
             <li><a href="/contact/contact.html"> <xsl:call-template
                   name="fsfe-gettext"><xsl:with-param name="id"

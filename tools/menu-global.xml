@@ -40,7 +40,7 @@
   <menu id="campaigns/fya" priority="1" parent="campaigns">/campaigns/android/android.html</menu>
   <menu id="campaigns/pdf" priority="2" parent="campaigns">/campaigns/pdfreaders/pdfreaders.html</menu>
   <menu id="campaigns/ayc" priority="3" parent="campaigns">/campaigns/askyourcandidates/askyourcandidates.html</menu>
-  <menu id="campaigns/drm" priority="4" parent="campaigns">/campaigns/drm/drm.html</menu>
+  <menu id="campaigns/drm" priority="4" parent="campaigns">http://drm.info</menu>
 
   <menu id="ftf" />
   <menu id="ftf/services" priority="0" parent="ftf">/activities/ftf/services.html</menu>

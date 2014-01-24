@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<html>
+	<head>
+		<meta name="DC.Title" content="FSFE - nametags form" />
+		<meta name="DC.Creator" content="Albert Dengg" />
+		<title>FSFE - internal tools - name tags</title>
+		<style>
+			.field-annotation {
+				background:#ddd;
+				padding:0.5em;
+				margin: 1.5em 0.5em 0.5em 0;
+				border:1px #bbb solid;
+			}
+			
+			form label {
+				display:inline;
+			}
+		</style>
+	</head>
+	<body>
+
+		<h1>Nametags</h1>
+
+		<div class="field-annotation right">
+			Nametags must answer
+			<br />the following questions:
+			<br />Who is this? 
+			<br />Who is represented?
+			<br />what languages does she/he speak?
+		</div>
+
+		<form action="http://78.41.115.190/cgi-bin/nt" method="post" enctype="multipart/form-data">
+			<table>
+				<tr>
+					<td colspan="2">
+					<input type="file" name="data" />
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+					<input type="submit" value="Send order" />
+					</td>
+				</tr>
+			</table>
+		</form>
+
+
+		<div id="footer">
+			Made by albert
+			<br />written by Albert 2014-01-20
+		</div>
+	</body>
+</html>

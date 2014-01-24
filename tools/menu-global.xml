@@ -16,12 +16,13 @@
   <!--menu id="support/funds" priority="3" parent="support">/about/funds/funds.html</menu-->
   
   <menu id="fellowship" />
-  <menu id="fellowship/card" priority="0" parent="fellowship">/fellowship/card.html</menu>
-  <menu id="fellowship/communicate" priority="1" parent="fellowship">/fellowship/communicate.html</menu>
+  <menu id="fellowship/join" priority="0" parent="fellowship">/fellowship/join.html</menu>
+  <menu id="fellowship/card" priority="1" parent="fellowship">/fellowship/card.html</menu>
+  <menu id="fellowship/communicate" priority="2" parent="fellowship">/fellowship/communicate.html</menu>
   <!--menu id="fellowship/contact" priority="2" parent="fellowship">/fellowship/contact.html</menu-->
   <!--menu id="fellowship/get-active" priority="3" parent="fellowship">/fellowship/get-active.html</menu-->
   <menu id="fellowship/faq" priority="4" parent="fellowship">/fellowship/faq.html</menu>
-  <menu id="fellowship/login" priority="5" parent="fellowship">/fellowship/login</menu>
+  <!--menu id="fellowship/login" priority="5" parent="fellowship">/fellowship/login</menu-->
   
   <menu id="news" />
   <menu id="news/press" priority="0" parent="news">/press/press.html</menu>

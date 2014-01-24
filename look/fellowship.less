@@ -87,9 +87,21 @@ a.the-fellowship {
     }
 
     #events {
-        float: right;
-        width: 50%;
-        margin-left: 1em;
+
+        @media (min-width: @screen-md) {
+            float: right;
+            width: 50%;
+            margin: 1em 0 1em 1em;
+            padding-top: .5em 1.5em;
+        }
+
+        background: rgba(23,59,0,0.1);
+
+        h2 {
+            .subsite #content .heading;
+            min-width: 0;
+            background: rgba(23,59,0,0.1);
+        }
 
         .date {
             color: @gray-light;

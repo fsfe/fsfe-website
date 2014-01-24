@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<html>
+  <head>
+    <title>Documentation - LESS CSS</title>
+  </head>
+  <body class="article web" microformats="h-entry" id="less-css-doc">
+
+    <p id="category"><a href="/contribute/web/">Webmastering</a></p>
+    <h1 class="p-name">Edit the CSS with LESS</h1>
+
+    <div class="e-content">
+    
+    <p id="introduction">
+    The new design makes heavy use of <a
+        href="http://getbootstrap.com/">bootstrap’s</a> LESS variables. This
+    can be very powerful, but that means you will have to learn how to compile
+    LESS into CSS when you modify fsfe.org stylesheets.
+    </p>
+
+    <p>
+    First, you need to install LESS. Follow the <a href="http://lesscss.org/">official instructions</a> or install it from your distribution’s package manager (the package is often called <code>lessc</code>). Now you can write your style in <code>.less</code> files and you will be able to compile them into CSS.
+    </p>
+
+    <p>
+    The main stylesheet file for fsfe.org is <code>/look/style.less</code>. Then, depending on which part of the websites you’re in, the build system is going to select a css file. For instance, fsfe.org has <code>/look/fsfe.min.css</code>, but fsfe.org/fellowship has <code>/look/fellowship.min.css</code>. These css files are minified: do not edit these css files. Rather, you need to edit the less files, and then compile them to the minified css.
+    </p>
+
+    <p>
+    If you modify fsfe.less, you need to compile your modifications into css by running:
+    </p>
+
+    <pre><code>lessc fsfe.less -x fsfe.min.css</code></pre> 
+
+    <p>
+    Then you can commit your changes with subversion.
+    </p>
+
+    <p>
+    If you modify style.less, you will need to compile all css. Here’s the currente list:
+    </p>
+    
+    <pre><code>lessc fsfe.less -x fsfe.min.css
+lessc fellowship.less -x fellowship.min.css</code></pre> 
+
+    <h2>Variables</h2>
+
+    <p>
+    Bootstrap’s LESS is located in <code>/look/bootstrap/</code>. These files
+    should be left unchanged and they should be updated to later versions of
+    bootstrap with care.  However, you can edit the variables in
+    <code>/look/bootstrap/variables.less</code>.
+    </p>
+
+    
+    </div>
+    <!--/e-content-->
+
+  </body>
+<sidebar promo="about-fsfe">
+    <div id="related-content">
+        <h3>Other howtos:</h3>
+        <ul>
+            <li>
+            <a href="/contribute/web/tagging.html">Use tags and article metadata, implement a country page</a>
+            </li>
+            <li>
+            <a href="/contribute/template.html">A template article, to use the new webdesign</a>
+            </li>
+        </ul>
+    </div>
+</sidebar>
+<date>
+    <original content="2014-01-24"/>
+</date>
+<author id="roy" />
+<tags>
+    <tag>webmaster</tag>
+</tags>
+
+  <timestamp>$Date: 2013-09-26 15:32:30 +0200 (Thu 26 Sep 2013) $ $Author: paul $</timestamp>
+
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

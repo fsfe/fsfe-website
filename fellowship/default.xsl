@@ -791,7 +791,7 @@
             <xsl:attribute name="id">link-home</xsl:attribute>
             <xsl:element name="a">
               <xsl:attribute name="href">
-                  <xsl:value-of select="$urlprefix"/>
+                  <xsl:value-of select="$urlprefix"/>/fellowship/index.html
               </xsl:attribute>
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'rootpage'" /></xsl:call-template>
             </xsl:element>

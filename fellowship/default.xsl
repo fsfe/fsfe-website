@@ -990,6 +990,50 @@
               <xsl:element name="aside">
                 <xsl:attribute name="id">sidebar</xsl:attribute>
                 
+                <xsl:element name="ul">
+
+                  <!-- Fellowship portal menu -->
+                  <xsl:element name="li">
+                    <xsl:attribute name="class">fellowship</xsl:attribute>
+
+                    <xsl:element name="a">
+                      <xsl:attribute name="href">/fellowship/join</xsl:attribute>
+                      <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fellowship/fellowship'" /></xsl:call-template>
+                    </xsl:element>
+
+                    <xsl:element name="ul">
+                      <xsl:variable name="menu"><xsl:value-of select="@id" /></xsl:variable>
+
+                      <xsl:for-each select="/buildinfo/menuset/menu[@parent='fellowship']">
+                        <xsl:sort select="@priority" />
+                        <xsl:variable name="id"><xsl:value-of select="@id" /></xsl:variable>
+
+                        <xsl:element name="li">
+                          <xsl:choose>
+                            <xsl:when test="not(string(.))">
+                              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="$id" /></xsl:call-template>
+                            </xsl:when>
+
+                            <xsl:when test=". = concat(/buildinfo/@filename ,'.html')">
+                              <xsl:element name="span">
+                                <xsl:attribute name="id">selected</xsl:attribute>
+                                <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="$id" /></xsl:call-template>
+                              </xsl:element>
+                            </xsl:when>
+
+                            <xsl:otherwise>
+                              <xsl:element name="a">
+                                <xsl:attribute name="href"><xsl:value-of select="." /></xsl:attribute>
+                                <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="$id" /></xsl:call-template>
+                              </xsl:element>
+                            </xsl:otherwise>
+                          </xsl:choose>         
+                        </xsl:element>
+                      </xsl:for-each>
+                    </xsl:element>
+                  </xsl:element>
+                </xsl:element>
+
                 <xsl:apply-templates select="/buildinfo/document/sidebar/node()" />
                 
                 <!--FIXME xsl:if test = "/buildinfo/document/sidebar/@news">

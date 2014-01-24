@@ -109,9 +109,13 @@ a.the-fellowship {
         h2 {
             min-width: 0;
             background: rgba(23,59,0,0.4);
-            margin: -0.5em -1.5em 0;
             color: #fff;
             a {color: #FFF;}
+            margin: 0;
+            padding: 0.3em;
+            @media (min-width: @screen-md) {
+                margin: -0.3em -0.9em 0.5em;
+            }
         }
 
         .date {

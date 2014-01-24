@@ -6,7 +6,7 @@
   <xsl:import href="tools/xsltsl/tagging.xsl" />
   <xsl:import href="tools/xsltsl/translations.xsl" />
   <xsl:import href="tools/xsltsl/static-elements.xsl" />
-  <xsl:import href="tools/xsltsl/quotes.xsl" />
+  <!-- TODO xsl:import href="tools/xsltsl/campaigns.xsl" /-->
   
   <xsl:import href="fsfe.xsl" />
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
@@ -104,6 +104,25 @@
                        value="No picture" />
       </xsl:element>
     </xsl:element>
+  </xsl:template>
+
+  <xsl:template match="campaigns">
+    <div  id="campaigns-boxes" class="cycle-slideshow"  data-cycle-pause-on-hover="true" data-cycle-speed="500"  data-cycle-timeout="9000" data-cycle-slides="a"  data-cycle-fx="scrollHorz" data-cycle-swipe="true">
+        <div class="cycle-pager"/>
+
+        <xsl:for-each select="   /buildinfo/textset/campaigns/campaign[  @id = 'zacchiroli' or @id = 'dfd'  ]  ">
+
+            <a href="{link}" class="campaign-box" id="{@id}">
+                <img src="{photo}" alt="" />
+                <p class="text">
+                    <xsl:value-of select="   text   " />
+                </p>
+                <span class="author">
+                    <xsl:value-of select="   author   " />
+                </span>
+            </a>
+        </xsl-for-each>
+    </div>
   </xsl:template>
   
   <!-- display campaign box 4 -->

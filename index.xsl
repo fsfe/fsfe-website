@@ -122,7 +122,7 @@
                     <xsl:value-of select="   author   " />
                 </span>
             </a>
-        </xsl-for-each>
+        </xsl:for-each>
     </div>
   </xsl:template>
   

@@ -17,11 +17,11 @@
       </div>
   </xsl:template>
   
-  <xsl:template match="quote-box">
+  <!--xsl:template match="quote-box">
     <xsl:call-template name="quote-box">
       <xsl:with-param name="tag" select="@tag" />
     </xsl:call-template>
-  </xsl:template>
+  </xsl:template-->
   
   <xsl:template match="label-ourwork2011">
     <xsl:call-template name="gettext">

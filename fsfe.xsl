@@ -74,7 +74,7 @@
     </xsl:element>
     
     <xsl:choose>
-      <xsl:when test="/buildinfo/document/body/[@class=fellowship]">
+      <xsl:when test="/buildinfo/document/body/[@class='fellowship']">
         <!--TODO ↑ make the test for class that includes fellowship - because a body can have multiple classes -->
         <xsl:element name="link">
           <xsl:attribute name="rel">stylesheet</xsl:attribute>

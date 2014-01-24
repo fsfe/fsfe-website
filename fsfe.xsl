@@ -854,7 +854,15 @@
               ×
             </xsl:element>
               <xsl:element name="p">
-        <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'outdated'" /></xsl:call-template>
+        <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'outdated-1'" /></xsl:call-template>
+              <xsl:element name="a">
+                <xsl:attribute name="href">
+                  <xsl:value-of select="/buildinfo/@filename"/>
+                  <xsl:text>.en.html</xsl:text>
+                </xsl:attribute>
+                <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'translator3b'" /></xsl:call-template>
+              </xsl:element>.
+        <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'outdated-2'" /></xsl:call-template>
           </xsl:element>
           </xsl:element>
         </xsl:if>

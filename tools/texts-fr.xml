@@ -264,4 +264,25 @@ permise sur tout support, pourvu que cette notice soit préservée.
   <text id="contribute">Contribuer</text>
   <text id="contribute-intro"><p>Notre travail est rendu possible grâce à la communauté qui soutient notre engagement en faveur des Logiciels Libres. Si vous désirez nous aider à atteindre nos buts, sachez qu'il existe de nombreuses manières d'y contribuer, quelles que soient vos connaissances ou contraintes horaires.
   </p></text>
+
+  <campaigns>
+    <campaign id="zacchiroli" tag="donors" pos="1">
+      <photo>/donate/zacchiroli.jpg</photo>
+      <text>
+          Un monde sans Logiciel Libre est un monde où nous sommes tous otages des 
+          fournisseurs de logiciels privateurs qui dirigeraient nos vies. Pour
+          lutter contre ce scénario-catastrophe, nous avons besoin d'organisations
+          comme la Free Software Foundation Europe.
+      </text>
+      <author>Stefano "Zack" Zacchiroli, ancien Debian Project Leader</author>
+      <link>/donate/donate.html</link>
+    </campaign>
+    <campaign id="dfd">
+        <photo>//documentfreedom.org/graphics/dove-header.png</photo>
+        <text>
+            Célèbre l'accès à l'information et sensibilise aux Standards Ouverts.
+        </text>
+        <link>//documentfreedom.org</link>
+    </campaign>
+</campaigns>
 </textset>

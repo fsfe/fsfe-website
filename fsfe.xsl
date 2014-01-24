@@ -73,12 +73,25 @@
       <xsl:attribute name="content">width=device-width, initial-scale=1.0"</xsl:attribute>
     </xsl:element>
     
-    <xsl:element name="link">
-      <xsl:attribute name="rel">stylesheet</xsl:attribute>
-      <xsl:attribute name="media">all</xsl:attribute>
-      <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/fsfe.min.css</xsl:attribute>
-      <xsl:attribute name="type">text/css</xsl:attribute>
-    </xsl:element>
+    <xsl:choose>
+      <xsl:when test="/buildinfo/document/body/[@class=fellowship]">
+        <!--TODO ↑ make the test for class that includes fellowship - because a body can have multiple classes -->
+        <xsl:element name="link">
+          <xsl:attribute name="rel">stylesheet</xsl:attribute>
+          <xsl:attribute name="media">all</xsl:attribute>
+          <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/fellowship.min.css</xsl:attribute>
+          <xsl:attribute name="type">text/css</xsl:attribute>
+        </xsl:element>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:element name="link">
+          <xsl:attribute name="rel">stylesheet</xsl:attribute>
+          <xsl:attribute name="media">all</xsl:attribute>
+          <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/fsfe.min.css</xsl:attribute>
+          <xsl:attribute name="type">text/css</xsl:attribute>
+        </xsl:element>
+      </xsl:otherwise>
+    </xsl:choose>
     
     <xsl:if test="$mode = 'valentine'">
       <xsl:element name="link">

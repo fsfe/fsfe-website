@@ -808,7 +808,7 @@
 
           <xsl:element name="div">
             <xsl:attribute name="id">motto</xsl:attribute>
-            <xsl:element name="span"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'motto-fsfs'" /></xsl:call-template></xsl:element>
+            <xsl:element name="span"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'motto-fellowship'" /></xsl:call-template></xsl:element>
             <!-- TODO different motto content depending on planet (use 'motto-planet'), wiki (use 'motto-wiki'), or fsfe dot org, page, so we may have to change this to another way-->
           </xsl:element>
           <!--/div#motto-->

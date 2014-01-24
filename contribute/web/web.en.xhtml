@@ -181,7 +181,7 @@
           check out the SVN trunk:
         </p>
 
-        <p class="terminal">svn --username <var>YOUR_FELLOWSHIP_NAME</var> co https://svn.fsfe.org/fsfe-web/trunk</p>
+        <pre class="term"><code>svn --username <var>YOUR_FELLOWSHIP_NAME</var> co https://svn.fsfe.org/fsfe-web/trunk</code></pre>
 
         <p>
           To work on major changes to the website, including debugging new
@@ -189,7 +189,7 @@
           to check out the <em>test</em> branch of the SVN repository:
         </p>
 
-        <p class="terminal">svn --username <var>YOUR_FELLOWSHIP_NAME</var> co https://svn.fsfe.org/fsfe-web/branches/test</p>
+        <pre class="term"><code>svn --username <var>YOUR_FELLOWSHIP_NAME</var> co https://svn.fsfe.org/fsfe-web/branches/test</code></pre>
 
         <p>
           Please note that a full working copy will require about 160M; if
@@ -203,7 +203,7 @@
           To checkout the Document Freedom Day SVN, use:
         </p>
         
-        <p class="terminal">svn --username <var>YOUR_FELLOWSHIP_NAME</var> co https://svn.fsfe.org/df-web/trunk</p>
+        <pre class="term"><code>svn --username <var>YOUR_FELLOWSHIP_NAME</var> co https://svn.fsfe.org/df-web/trunk</code></pre>
 
         <h2 id="Working">Working with the repository</h2>
 
@@ -230,7 +230,7 @@
           execute
         </p>
 
-        <p class="terminal">$ svn update</p>
+        <pre class="term"><code>svn update</code></pre>
 
         <p>
           every time before you work on a specific file.
@@ -241,20 +241,20 @@
           execute
         </p>
 
-        <p class="terminal">$ svn add <em>filename</em></p>
+        <pre class="term"><code>svn add <em>filename</em></code></pre>
 
         <p>
           To enable keyword substitution for a new file, execute
         </p>
 
-        <p class="terminal">$ svn propset svn:keywords "Date Author Id Revision" <em>filename</em></p>
+        <pre class="term"><code>svn propset svn:keywords "Date Author Id Revision" <em>filename</em></code></pre>
 
         <p>
           To post your changes to the server, no matter be it a new file or a
           modification in an existing file, execute
         </p>
 
-        <p class="terminal">$ svn commit <em>filename</em></p>
+        <pre class="term"><code>svn commit <em>filename</em></code></pre>
 
         <p>
           and your default editor will open to allow for some description of your
@@ -349,9 +349,7 @@
               code), then run the command
             </p>
 
-            <p class="terminal">
-              aspell -H -d <em>language</em> -c file.xhtml
-            </p>
+            <pre class="term"><code>aspell -H -d <em>language</em> -c file.xhtml</code></pre>
 
             <p>
               where "language" is the name of the dictionary for your language; the
@@ -393,7 +391,7 @@
               <em>libxml2-utils</em> package; run the command
             </p>
 
-            <p class="terminal">xmllint --noout <em>file</em>.xhtml</p>
+            <pre class="term"><code>xmllint --noout <em>file</em>.xhtml</code></pre>
 
             <p>
               where <em>file</em> specifies the file you want checked, and watch
@@ -411,7 +409,7 @@
               "latin-1" encoding), the first line of the file should read
             </p>
 
-            <p class="file">&lt;?xml version="1.0" encoding="iso-8859-1" ?&gt;</p>
+            <pre class="file">&lt;?xml version="1.0" encoding="iso-8859-1" ?&gt;</pre>
 
             <p>
               Another valid encoding is the unicode, or "UTF-8" encoding.  If you
@@ -420,7 +418,7 @@
               file from the "latin1" to the "utf-8" encoding):
             </p>
 
-            <p class="terminal">iconv -f LATIN1 -t UTF8 <em>inputfile</em> &gt; <em>outputfile</em></p>
+            <pre class="term"><code>iconv -f LATIN1 -t UTF8 <em>inputfile</em> &gt; <em>outputfile</em></code></pre>
 
           </li>
         </ul>

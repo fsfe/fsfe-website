@@ -244,17 +244,19 @@ q, .en q {
 /* the main and follow up sections */
 
     /* grid */
+    .article, .planet {
+        #content, #planet-posts {
+            .make-xs-column(12);
+            .make-md-column(8);
+            padding-left: 0;
+        }
+        #sidebar {
+            .make-xs-column(12);
+            .make-md-column(4);
+            padding-right: 0;
+        }
+    }
 
-    .article #content, .planet #planet-posts, .wiki #text {
-        .make-xs-column(12);
-        .make-md-column(8);
-        padding-left: 0;
-    }
-    .article #sidebar, .planet #sidebar, .wiki #sidebar {
-        .make-xs-column(12);
-        .make-md-column(4);
-        padding-right: 0;
-    }
     #content + #sidebar {
         .article #sidebar;
     }

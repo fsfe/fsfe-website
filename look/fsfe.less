@@ -142,30 +142,7 @@ a.the-fellowship {
     font-weight: 300;
     padding: 0;
 }
-@media (min-width: @screen-sm) {
-    #news {
-        display: inline-block;
-        float: left;
-        width: 69%;
-    }
-    #newsletter {
-        display: inline-block;
-        float: right;
-        width: 30%;
-        padding-left: 2%;
-        
-        input {
-            display: block;
-            margin: .5em 0;
-        }
-    }
-}
 
-@media (min-width: @screen-md) {
-}
-
-@media (min-width: @screen-lg-min) {
-}
 
 #events {
     clear: both;
@@ -186,6 +163,25 @@ a.the-fellowship {
     }
     a.learn-more {
         line-height: 2;
+    }
+}
+
+@media (min-width: @screen-sm) {
+    #news {
+        display: inline-block;
+        float: left;
+        width: 69%;
+    }
+    #newsletter, .country.frontpage #events {
+        display: inline-block;
+        float: right;
+        width: 30%;
+        padding-left: 2%;
+        
+        input {
+            display: block;
+            margin: .5em 0;
+        }
     }
 }
 

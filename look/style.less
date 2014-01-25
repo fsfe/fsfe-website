@@ -996,6 +996,12 @@ ul.people {
     font-size: 0.9em;
 }
 
+ul.people:after {
+clear: both;
+margin-right:100%;
+content: " ";
+}
+
 ul.people li {
   display: block;
   float: left;
@@ -1009,7 +1015,7 @@ ul.people li:nth-child(odd) {
 }
 
 ul.people li:last-child {
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
 }
 
 ul.people li:last-child:after {

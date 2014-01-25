@@ -1060,7 +1060,7 @@
                 </xsl:call-template>
                 <xsl:element name="a"> 
                   <xsl:attribute name="href">/donate/donate.html?sidebar</xsl:attribute>
-                  <xsl:attribute name="class">learn-more</xsl:attribute>
+                  <xsl:attribute name="class">learn-more big-donate</xsl:attribute>
                   <xsl:call-template name="fsfe-gettext">
                     <xsl:with-param name="id" select="'donate'" />
                   </xsl:call-template>

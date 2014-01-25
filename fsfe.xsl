@@ -1211,7 +1211,7 @@
             </xsl:element>
             <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'join-paragraph'" /></xsl:call-template>
             <xsl:element name="a">
-              <xsl:attribute name="href">/fellowship/ams/join.php?ref=followupbox</xsl:attribute>
+              <xsl:attribute name="href">/fellowship/join.html?ref=followupbox</xsl:attribute>
               <xsl:attribute name="class">btn</xsl:attribute>
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'join'" /></xsl:call-template>
             </xsl:element>

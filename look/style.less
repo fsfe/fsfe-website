@@ -558,7 +558,7 @@ q, .en q {
 
 .press, .country.frontpage, #donate-fsfe {
     #content {
-        h1, .heading { .subsite #content .heading; }
+        .heading { .subsite #content .heading; }
     }
 }
 
@@ -566,6 +566,12 @@ q, .en q {
     .article;
 
     .p-summary { .article #content.h-entry .p-summary; }
+}
+
+#donate-fsfe, .country.frontpage {
+    #content {
+        h1 { .subsite #content .heading; }
+    }
 }
 
         /* subpages "backward compatibility" */

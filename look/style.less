@@ -38,6 +38,11 @@ q, .en q {
     quotes: "“" "”" "‘" "’";
 }
 
+.action a {
+    .btn;
+    .btn-lg;
+}
+
 
 /* page structure and grids */
 
@@ -46,6 +51,13 @@ q, .en q {
 }
 #translations, #top, #main, #followup, #bottom, #fsfe-web, #full-menu, #notifications {
     .container; 
+}
+
+div#subpages, .grid-row {
+    .make-row();
+    .half {
+        .make-sm-column(6);
+    }
 }
 
 /* choose your language */

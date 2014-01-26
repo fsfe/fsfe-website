@@ -276,6 +276,7 @@
 
     <!-- Apply newsletter page -->
     <xsl:if test="string(/buildinfo/document/@newsdate) and /buildinfo/document/@type = 'newsletter'">
+      <xsl:call-template name="subscribe-nl" />
 
       <!-- Social Links -->
       <xsl:variable name="original_file"
@@ -300,7 +301,6 @@
       </xsl:element>
       <!-- End Social Links -->
 
-      <xsl:call-template name="subscribe-nl" />
     </xsl:if>
     <!-- End apply newsletter page rules -->
 

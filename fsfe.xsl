@@ -276,7 +276,6 @@
 
     <!-- Apply newsletter page -->
     <xsl:if test="string(/buildinfo/document/@newsdate) and /buildinfo/document/@type = 'newsletter'">
-      <xsl:call-template name="subscribe-nl" />
 
       <!-- Social Links -->
       <xsl:variable name="original_file"
@@ -996,6 +995,15 @@
         <xsl:if test = "/buildinfo/document/sidebar">
           <xsl:element name="aside">
             <xsl:attribute name="id">sidebar</xsl:attribute>
+
+            <xsl:if test="string(/buildinfo/document/@newsdate) and /buildinfo/document/@type = 'newsletter'">
+              <xsl:element name="h3">
+                <xsl:call-template name="fsfe-gettext">
+                  <xsl:with-param name="id" select="'receive-newsletter'" />
+                </xsl:call-template>
+              </xsl:element>
+              <xsl:call-template name="subscribe-nl" />
+            </xsl:if>
             
             <xsl:apply-templates select="/buildinfo/document/sidebar/node()" />
             

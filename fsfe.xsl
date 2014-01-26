@@ -276,6 +276,8 @@
 
     <!-- Apply newsletter page -->
     <xsl:if test="string(/buildinfo/document/@newsdate) and /buildinfo/document/@type = 'newsletter'">
+        <!--TODO: this moved to the sidebar, but it would be nice to show it for newsletters which do not have sidebars-->
+              <xsl:call-template name="subscribe-nl" />
 
       <!-- Social Links -->
       <xsl:variable name="original_file"

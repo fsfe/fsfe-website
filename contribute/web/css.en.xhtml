@@ -22,7 +22,17 @@
     </p>
 
     <p>
-    The main stylesheet file for fsfe.org is <code>/look/style.less</code>. Then, depending on which part of the websites you’re in, the build system is going to select a css file. For instance, fsfe.org has <code>/look/fsfe.min.css</code>, but fsfe.org/fellowship has <code>/look/fellowship.min.css</code>. These css files are minified: do not edit these css files. Rather, you need to edit the less files, and then compile them to the minified css.
+    The main stylesheet file for all pages on fsfe.org is
+    <code>/look/style.less</code>. Then, depending on which part of the
+    websites you’re in, the build system is going to select a css file. For
+    instance,</p> 
+    <ul>
+        <li>fsfe.org has <code>/look/fsfe.min.css</code> which is compiled from <code>/look/fsfe.less</code>,</li>
+        <li>fsfe.org/fellowship has <code>/look/fellowship.min.css</code> which is compiled from <code>/look/fellowship.less</code>.</li>
+    </ul>
+    <p>
+    These css files are minified: do not edit these css files. Rather, you need
+    to edit the less files, and then compile them to the minified css.
     </p>
 
     <p>

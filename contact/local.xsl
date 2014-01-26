@@ -14,22 +14,24 @@
       </xsl:variable>
 
       <!-- Heading -->
-      <h3>
+      <h2>
         <xsl:call-template name="generate-id-attribute" />
-        <xsl:value-of select="/buildinfo/document/set/country[@id=$country]" />
-      </h3>
-
-      <!-- Team homepage -->
-      <xsl:if test="homepage != ''">
-        <xsl:element name="strong">
-          <xsl:element name="a">
-            <xsl:attribute name="href">
-              <xsl:value-of select="homepage" />
-            </xsl:attribute>
-            Team Homepage
-          </xsl:element>
-        </xsl:element>
-      </xsl:if>
+        <xsl:choose>
+            <xsl:when test="homepage != ''">
+                <xsl:element name="strong">
+                  <xsl:element name="a">
+                    <xsl:attribute name="href">
+                      <xsl:value-of select="homepage" />
+                    </xsl:attribute>
+                    <xsl:value-of select="/buildinfo/document/set/country[@id=$country]" />
+                  </xsl:element>
+                </xsl:element>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="/buildinfo/document/set/country[@id=$country]" />
+            </xsl:otherwise>
+        </xsl:choose>
+      </h2>
 
       <!-- Address -->
       <xsl:if test="address != ''">
@@ -70,7 +72,7 @@
       </xsl:if>
 
       <!-- Core team members -->
-      <xsl:element name="p">
+      <!--xsl:element name="p">
         <xsl:choose>
           <xsl:when test="count(/buildinfo/document/set/person[count(country[text()=$country])>0 and contains(@teams, 'main')])>0">
             <xsl:value-of select="/buildinfo/document/text[@id='members']" />
@@ -98,7 +100,7 @@
             <xsl:value-of select="/buildinfo/document/text[@id='nomembers']" />
           </xsl:otherwise>
         </xsl:choose>
-      </xsl:element>
+      </xsl:element-->
 
     </xsl:for-each>
   </xsl:template>

@@ -176,13 +176,18 @@
         </xsl:attribute>
       </xsl:element>
     </xsl:for-each>
-    
+
+    <!--[if lt IE 9]>
+         <script src="/scripts/html5shiv.js"></script>
+    <![endif]-->
+
     <script src="/scripts/jquery-1.10.2.min.js"></script>
     <script src="/scripts/modernizr.custom.30122.js"></script>
     <script src="/scripts/bootstrap-3.0.3.min.js"></script>
     <script src="/scripts/master.js"></script>
     <script src="/scripts/placeholder.js"></script>
     <script src="/scripts/highlight.pack.js"></script>
+
 
     <script>
       hljs.tabReplace = "  ";

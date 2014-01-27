@@ -238,7 +238,11 @@ div#subpages, .grid-row {
     
     label, input[type="image"] {
         position: absolute;
-        margin: .6em;
+        font-size: 0.0001em;
+        width: 25px;
+        height: 25px;
+        margin: 5px;
+        opacity: 0;
     }
     
     button, input[name="query"] {
@@ -248,9 +252,11 @@ div#subpages, .grid-row {
         text-align: left;
         width: 70%;
         transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s, width 0.15s ease-in-out 0s;
+        background: url(/graphics/icons/search-button.png) 0.6em 50% no-repeat rgba(255,255,255,0.75);
     }
     button, input[name="query"]:focus {
         width: 100%;
+        background-color: rgb(255,255,255);
     }
 }
 

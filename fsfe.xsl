@@ -8,6 +8,7 @@
 
   <xsl:import href="tools/xsltsl/translations.xsl" />
   <xsl:import href="tools/xsltsl/static-elements.xsl" />
+  <xsl:import href="tools/xsltsl/tagging.xsl" />
 
   <!-- HTML 5 compatibility doctype, since our XSLT parser doesn't support disabling output escaping -->
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
@@ -1017,17 +1018,18 @@
             
             <xsl:apply-templates select="/buildinfo/document/sidebar/node()" />
             
-            <!--FIXME xsl:if test = "/buildinfo/document/sidebar/@news">
+            <xsl:if test = "/buildinfo/document/sidebar/@news">
               <xsl:element name="h4">
                 <xsl:call-template name="fsfe-gettext">
                   <xsl:with-param name="id" select="'related-news'" />
                 </xsl:call-template>
               </xsl:element>
-              <ul class="placeholder"><li>
+              <fetch-news />
+              <!--FIXME-->
+              <!--ul class="placeholder"><li>
                   <span class="dt-published">11 June 2013</span><a href="/news/2013/news-20130611-01.en.html">Filing taxes without non-free software: Slovak company appeals fines</a>
-              </li></ul>
-              <xsl:call-template name="show-news-sidebar" />
-            </xsl:if-->
+              </li></ul-->
+            </xsl:if>
 
             <xsl:choose>
               <xsl:when test = "/buildinfo/document/sidebar/@promo = 'our-work'">
@@ -1789,4 +1791,14 @@
     </xsl:attribute>
   </xsl:template>
   -->
+
+  <xsl:template match="fetch-news">
+    <xsl:call-template name="fetch-news">
+      <xsl:with-param name="tag" select="/buildinfo/document/sidebar/@news"/>
+      <xsl:with-param name="nb-items" select="4"/>
+    </xsl:call-template>
+  </xsl:template>
+
+
 </xsl:stylesheet>
+

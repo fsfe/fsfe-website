@@ -179,6 +179,7 @@
 
     <!--[if lt IE 9]>
          <script src="/scripts/html5shiv.js"></script>
+         <script src="/scripts/respond.min.js"></script>
     <![endif]-->
 
     <script src="/scripts/jquery-1.10.2.min.js"></script>

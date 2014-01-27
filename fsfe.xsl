@@ -177,10 +177,6 @@
       </xsl:element>
     </xsl:for-each>
 
-    <!--[if lt IE 9]>
-         <script src="/scripts/html5shiv.js"></script>
-         <script src="/scripts/respond.min.js"></script>
-    <![endif]-->
 
     <script src="/scripts/jquery-1.10.2.min.js"></script>
     <script src="/scripts/modernizr.custom.30122.js"></script>
@@ -200,6 +196,12 @@
       <![CDATA[
         [if lt IE 8]>
           <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
+        <![endif]
+      ]]>
+      <![CDATA[
+        [if lt IE 9]>
+         <script src="/scripts/html5shiv.js"></script>
+         <script src="/scripts/respond.min.js"></script>
         <![endif]
       ]]>
     </xsl:comment>

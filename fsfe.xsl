@@ -1018,18 +1018,19 @@
             
             <xsl:apply-templates select="/buildinfo/document/sidebar/node()" />
             
-            <xsl:if test = "/buildinfo/document/sidebar/@news">
+            <!--xsl:if test = "/buildinfo/document/sidebar/@news">
               <xsl:element name="h4">
                 <xsl:call-template name="fsfe-gettext">
                   <xsl:with-param name="id" select="'related-news'" />
                 </xsl:call-template>
               </xsl:element>
               <fetch-news />
+              -->
               <!--FIXME-->
               <!--ul class="placeholder"><li>
                   <span class="dt-published">11 June 2013</span><a href="/news/2013/news-20130611-01.en.html">Filing taxes without non-free software: Slovak company appeals fines</a>
               </li></ul-->
-            </xsl:if>
+            <!--/xsl:if-->
 
             <xsl:choose>
               <xsl:when test = "/buildinfo/document/sidebar/@promo = 'our-work'">
@@ -1791,7 +1792,7 @@
     </xsl:attribute>
   </xsl:template>
   -->
-
+ <!--FIXME ↓-->
   <xsl:template match="fetch-news">
     <xsl:call-template name="fetch-news">
       <xsl:with-param name="tag" select="'/buildinfo/document/sidebar/@news'"/>

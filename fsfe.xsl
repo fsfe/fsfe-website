@@ -201,6 +201,7 @@
       ]]>
       <![CDATA[
         [if lt IE 9]>
+         <script src="/scripts/css3-mediaqueries.js"></script>
          <script src="/scripts/html5shiv.js"></script>
          <script src="/scripts/respond.min.js"></script>
         <![endif]

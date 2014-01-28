@@ -51,8 +51,8 @@ RewriteRule ^campaigns/valentine/2011(/?)$ /campaigns/valentine/2011/valentine-2
 RewriteRule ^campaigns/ayc(.*) /campaigns/askyourcandidates$1 [redirect=permanent]
 
 # Redirection for IloveFS campaign. Should always redirect to the most recent year
-RewriteRule ^campaigns/ilovefs(/)?$ /campaigns/ilovefs/2013/ilovefs.html
-RewriteRule ^campaigns/ilovefs/ilovefs(.*)html$ /campaigns/ilovefs/2013/ilovefs$1html
+RewriteRule ^campaigns/ilovefs(/)?$ /campaigns/ilovefs/2014/ilovefs.html
+RewriteRule ^campaigns/ilovefs/ilovefs(.*)html$ /campaigns/ilovefs/2014/ilovefs$1html
 
 # Temporary fix unitl we have a /freesoftware dir for contribute/advocacy/cwfs.en.html
 RewriteRule ^freesoftware/freesoftware(.*) /about/basics/freesoftware$1 [redirect=temp]

@@ -73,6 +73,12 @@
       <xsl:attribute name="name">viewport</xsl:attribute>
       <xsl:attribute name="content">width=device-width, initial-scale=1.0"</xsl:attribute>
     </xsl:element>
+
+    <!--For old versions of IE-->
+    <xsl:element name="meta">
+      <xsl:attribute name="http-equiv">X-UA-Compatible</xsl:attribute>
+      <xsl:attribute name="content">IE=edge</xsl:attribute>
+    </xsl:element>
     
     <xsl:choose>
       <xsl:when test="/buildinfo/document/body[  contains( @class, 'fellowship' )  ]">

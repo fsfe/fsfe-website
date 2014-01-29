@@ -185,14 +185,6 @@
     </xsl:for-each>
 
 
-    <script src="/scripts/jquery-1.10.2.min.js"></script>
-    <script src="/scripts/modernizr.custom.30122.js"></script>
-    <script src="/scripts/bootstrap-3.0.3.min.js"></script>
-    <script src="/scripts/master.js"></script>
-    <script src="/scripts/placeholder.js"></script>
-    <script src="/scripts/highlight.pack.js"></script>
-
-
     <script>
       hljs.tabReplace = "  ";
 //        hljs.initHighligtingOnLoad();
@@ -201,13 +193,10 @@
     
     <xsl:comment>
       <![CDATA[
-        [if lt IE 8]>
-          <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
-        <![endif]
-      ]]>
-      <![CDATA[
         [if lt IE 9]>
+         <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
          <script src="/scripts/html5shiv.js"></script>
+         <script src="/scripts/respond.min.js"></script>
         <![endif]
       ]]>
     </xsl:comment>
@@ -1674,8 +1663,12 @@
 	</script>
 	<!-- End Piwik Tracking Code -->
 
-        <!--This is for IE-->
-        <script src="/scripts/css3-mediaqueries.js"></script>
+        <script src="/scripts/jquery-1.10.2.min.js"></script>
+        <script src="/scripts/modernizr.custom.30122.js"></script>
+        <script src="/scripts/bootstrap-3.0.3.min.js"></script>
+        <script src="/scripts/master.js"></script>
+        <script src="/scripts/placeholder.js"></script>
+        <script src="/scripts/highlight.pack.js"></script>
     </body>
   </xsl:template>
 

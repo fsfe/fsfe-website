@@ -184,6 +184,8 @@
       </xsl:element>
     </xsl:for-each>
 
+    <script src="/scripts/jquery-1.10.2.min.js"></script>
+    <script src="/scripts/modernizr.custom.30122.js"></script>
 
     <script>
       hljs.tabReplace = "  ";
@@ -1663,8 +1665,6 @@
 	</script>
 	<!-- End Piwik Tracking Code -->
 
-        <script src="/scripts/jquery-1.10.2.min.js"></script>
-        <script src="/scripts/modernizr.custom.30122.js"></script>
         <script src="/scripts/bootstrap-3.0.3.min.js"></script>
         <script src="/scripts/master.js"></script>
         <script src="/scripts/placeholder.js"></script>

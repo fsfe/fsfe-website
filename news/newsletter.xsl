@@ -23,7 +23,7 @@
         <xsl:value-of select="body"/>
         <xsl:variable name="link"><xsl:value-of select="link"/></xsl:variable>
         <xsl:if test="$link!=''">
-          [<a href="{link}"><xsl:value-of select="/buildinfo/document/text[@id='more']"/>]</a>
+          &#160;<a href="{link}" class="learn-more"><xsl:value-of select="/buildinfo/document/text[@id='more']"/></a>
         </xsl:if>
       </p>
     </xsl:for-each>

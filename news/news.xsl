@@ -47,13 +47,13 @@
 
   <!-- How to show a link -->
   <xsl:template match="/buildinfo/document/set/news/link">
+    <xsl:text>&#160;</xsl:text>
     <xsl:element name="a">
       <xsl:attribute name="href">
         <xsl:value-of select="text()" />
       </xsl:attribute>
-      <xsl:text>[</xsl:text>
+      <xsl:attribute name="class=">learn-more</xsl:attribute>
         <xsl:value-of select="/buildinfo/document/text[@id='more']" />
-      <xsl:text>]</xsl:text>
     </xsl:element>
   </xsl:template>
 </xsl:stylesheet>

@@ -186,6 +186,7 @@
 
     <script src="/scripts/jquery-1.10.2.min.js"></script>
     <script src="/scripts/modernizr.custom.65251.js"></script>
+    <script src="/scripts/css3-mediaqueries.js"></script>
 
     <script>
       hljs.tabReplace = "  ";
@@ -196,10 +197,12 @@
     <xsl:comment>
       <![CDATA[
         [if lt IE 9]>
+         <script src="/scripts/html5shiv.js"></script>
          <script src="/scripts/respond.min.js"></script>
         <![endif]
       ]]>
     </xsl:comment>
+         <!--script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script-->
     
     <xsl:apply-templates select="@*|node()"/>
   </xsl:template>

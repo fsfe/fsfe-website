@@ -8397,7 +8397,7 @@ textarea#search input[name="query"] {
 }
 #sidebar ul li a {
   display: block;
-  widht: 100%;
+  width: 100%;
 }
 #sidebar .dt-published {
   display: block;
@@ -10459,4 +10459,39 @@ table#gold > tbody > tr:hover > th {
     float: left;
     width: 33.33333333333333%;
   }
+}
+#content aside {
+  float: right;
+  margin-left: 100%;
+  position: absolute;
+}
+#content aside p {
+  width: 100%;
+  min-width: 320px;
+  max-width: 340px;
+}
+ul#subpages li,
+h2#subpages + ul li,
+h3#subpages + ul li,
+h4#subpages + ul li,
+ul.subheadings li,
+ul.overview li {
+  float: left;
+  width: 50%;
+  display: inline-block;
+}
+.subsite .heading {
+  width: 50%;
+  margin: -1em 0 1em 0;
+}
+#full-menu-list li {
+  float: left;
+  width: 16.6%;
+}
+#legal-info p,
+#source p,
+#legal-info ul,
+#source ul {
+  float: left;
+  width: 33.3%;
 }

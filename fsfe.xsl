@@ -200,6 +200,8 @@
          <script src="/scripts/respond.min.js"></script>
          <![endif]
       ]]>
+    </xsl:comment>
+    <xsl:comment>
       <![CDATA[
         [if (lt IE 9) & (!IEMobile)]>
          <link rel="stylesheet" media="all" href="/look/ie.min.css" type="text/css">

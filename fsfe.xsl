@@ -193,22 +193,13 @@
 // above line throws error: Uncaught TypeError: Object [object Object] has no method 'initHighligtingOnLoad'
     </script>
     
-    <xsl:comment>
-      <![CDATA[
-        [if lt IE 9]>
+    <xsl:comment><![CDATA[[if lt IE 9]>
          <script src="/scripts/html5shiv.js"></script>
          <script src="/scripts/respond.min.js"></script>
-         <![endif]
-      ]]>
-    </xsl:comment>
-    <xsl:comment>
-      <![CDATA[
-        [if (lt IE 9) & (!IEMobile)]>
+         <![endif]]]></xsl:comment>
+    <xsl:comment><![CDATA[[if (lt IE 9) & (!IEMobile)]>
          <link rel="stylesheet" media="all" href="/look/ie.min.css" type="text/css">
-        <![endif]
-      ]]>
-    </xsl:comment>
-         <!--script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script-->
+        <![endif]]]></xsl:comment>
     
     <xsl:apply-templates select="@*|node()"/>
   </xsl:template>

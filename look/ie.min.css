@@ -10495,3 +10495,20 @@ ul.overview li {
   float: left;
   width: 33.3%;
 }
+/* fsfe.less */
+#campaigns-boxes #zacchiroli .text {
+  font-size: 1.3em;
+}
+#news {
+  display: inline-block;
+  padding: 0 0.5em;
+  float: left;
+  width: 69%;
+}
+#newsletter,
+.country.frontpage #events {
+  display: inline-block;
+  float: right;
+  width: 30%;
+  padding-left: 2%;
+}

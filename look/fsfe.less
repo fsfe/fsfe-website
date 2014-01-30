@@ -1,0 +1,307 @@
+@import "style.less";
+
+/* fsfe.org pages */
+
+body {
+    background: url(/graphics/fellowship/plussy_tile_03.png) top left fixed #F9F9F9;
+    font-family: "Roboto", sans-serif;
+}
+
+#logo {
+    background: url(/graphics/logo_transparent.png) top left no-repeat;
+}
+
+#masthead, #logo {
+    min-height: 85px;
+    min-width: 158px;
+}
+
+#link-home a {
+    width: 158px; 
+    height: 85px; 
+}
+
+#menu {
+    @media (min-width: @screen-xs) {
+        margin-left: 200px;
+    }
+}
+
+#followup {
+    background: url(/graphics/ribbon.png) no-repeat 100% -40px @body-bg; 
+    text-shadow: rgb(255,255,255) 0 0 .5em;
+
+    @media (min-width: @screen-sm) {
+        background: url(/graphics/ribbon.png) no-repeat 100% -100% @body-bg; 
+    }
+}
+
+#followup.join {
+    background: url(/graphics/fellowship/ribbon_fellowship2.png) no-repeat 100% -30px @body-bg; 
+    @media (min-width: @screen-sm) {
+        background: url(/graphics/fellowship/ribbon_fellowship2.png) no-repeat 100% -50% @body-bg; 
+    }
+}
+
+
+#full-menu {
+    background: url(/graphics/logo_bw_transparent_small.png) no-repeat top left @body-bg;
+}
+
+a.the-fellowship {
+    padding: 8px 20px 0 0;   
+    background: url(/graphics/plussy-bright-20.png) no-repeat top right transparent;
+}
+
+/* fsfe.org front page */
+
+.frontpage { 
+    #motto {
+        display: block;
+    }
+    
+    #campaigns-boxes {
+
+        height: 300px;
+        background: url('/graphics/ribbon.png') top right no-repeat transparent;
+
+        .campaign-box {
+            height: 300px;
+
+            img {max-width: 33%;}
+        }
+
+        #zacchiroli {
+            background: url('/graphics/group-blur-800.jpg')  center 33%  no-repeat transparent;
+            text-shadow: 0px 1px 2px rgb(0,0,0);
+
+            img { float: right; margin-left: 1em; }
+            .text { .quote; } 
+            .author:before {content: "– ";}
+
+            @media (min-width: @screen-md) {
+                img { margin-left: 3em; }
+                .text {font-size: 1.3em; }
+                .text, .author {max-width: 80ex; margin: 1em auto; display: block;}
+            }
+
+        }
+        #dfd {
+            text-align: center;
+            background: url('/graphics/fellowship/plussy_tile_01-33alpha.png') rgba(118, 181, 32,0.7);
+            font-size: 1.3em;
+
+            img {height: 200px;margin-bottom: 10px;margin-top:-70px;max-width: none;}
+        }
+
+    }
+}
+
+
+#news {
+    padding-bottom: 1.5em;
+
+    .dt-published {
+        color: @gray-light;
+        font-size: .9em;
+        display: block;
+
+        @media (min-width: @screen-sm) {
+            display: inline-block;
+            padding: 0 0.5em;
+        }
+    }
+
+    .entry {
+        h3 {
+            display: inline-block;
+        }
+        p.date {
+            display: inline-block;
+            #news .dt-published;
+            font-weight: 300;
+            margin-bottom: 0;
+        }
+    } 
+    
+    .entry:nth-child(1n+3) {
+
+        h3 {
+            font-size: 1em;
+            margin: 0.7em 0 0  0;
+        }
+        .text, p { display: none; }
+        p.date { display: inline-block; }
+    }
+    
+}
+
+#latest-news-list, #more-news-list {
+    list-style-type: none;
+    font-size: 1.2em;
+    font-weight: 300;
+    padding: 0;
+}
+
+
+#events {
+    clear: both;
+    padding-top: 1.5em;
+
+    #map { height: 280px; }
+
+    .entry {
+        h3 {
+            display: inline-block;
+        }
+        p.date {
+            #news .dt-published;
+            font-size: 1.3em;
+            font-weight: 300;
+            margin-bottom: 0;
+        }
+    }
+    a.learn-more {
+        line-height: 2;
+    }
+}
+
+@media (min-width: @screen-sm) {
+    #news {
+        display: inline-block;
+        float: left;
+        width: 69%;
+    }
+    #newsletter, .country.frontpage #events {
+        display: inline-block;
+        float: right;
+        width: 30%;
+        padding-left: 2%;
+        clear: none;
+        padding-top: 0;
+    }
+}
+
+#newsletter, .newsletter #sidebar, .country.frontpage #events {
+    input {
+        display: block;
+        margin: .5em 0;
+    }
+}
+
+#feeds {
+    a.ical, a.rss-feed {
+        .small;
+        color: @gray-light;
+
+        i.fa {
+        }
+    }
+}
+
+
+/* Testimonials divs */
+
+.testimonial {
+    overflow: auto;
+    clear: both;
+}
+
+.testimonial img {
+    float: left;
+    margin-right: 10px;
+}
+
+
+
+/* donate */
+
+#donate-fsfe {
+    table {
+        .table;
+        .table-hover;
+    }
+
+    form {
+        .form-group input {
+            .form-control;
+            max-width: 25em;
+        }
+        #donate-validate {
+            .btn;
+            .btn-lg;
+            .btn-success;
+            margin-bottom: 1em;
+        }
+    }
+
+}
+
+/* Android campaign style */
+
+#hello-free-droid {
+    background: url('/campaigns/android/robot.png') no-repeat top left transparent;
+    height: 209px;
+    width: 200px;
+    float: left;
+    margin-left: -6em;
+    margin-right: 1.5em;
+
+    @media (min-width: @screen-md) {
+        position: absolute;
+        margin-left: -200px;
+        margin-top:-10em;
+    }
+    img {display: none;}
+}
+
+
+/* Planet style */
+
+.planet #motto {
+    clear: none;
+    font-size: 1em;
+    text-align: left;
+    position: absolute;
+}
+
+#planet-sources a {
+    display: inline-block;
+    width: 90%;
+}
+
+#planet-sources a:before {
+    content: "→ ";
+}
+
+#planet-posts {
+    .daygroup {
+    	h2:first-child {
+            color: @brand-strong;
+        }
+        .blogitem {
+            padding-bottom: 3em;
+            margin-bottom: 3em;
+        }
+    }
+}
+
+/* wiki */
+
+.wiki #motto {
+    .planet #motto;
+}
+
+.wiki #direct-links {
+    visibility: visible;
+    
+    a {
+        display:inline-block;
+    }
+}
+
+.wiki #text h1 {
+    color: @brand-strong;
+}
+
+@import "fonts.less";

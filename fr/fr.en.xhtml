@@ -7,7 +7,7 @@
     <meta name="keywords" content="free software france fsfe open source foss floss fsf government public sector gpl" />
   </head>
 
-  <body>
+  <body class="country france frontpage">
     <!-- <p id="category"><a href="/about/people/people.html">People</a></p> -->
     <h1>France</h1>
     
@@ -39,10 +39,10 @@
     
     <div id="news" class="section">
       <h2>
+	<a href="/news/news.html"><news-label /></a>
 	<a class="rss-feed" href="/news/news.rss"><img src="/graphics/rss.png" alt="News RSS" title="news RSS feed" /></a>
 	<a class="ical" href="http://identi.ca/fsfefrance"><img src="/graphics/identica.png" alt="identica" title="follow FSFE France on identi.ca"/></a>
 	
-	<a href="/news/news.html"><news-label /></a>
 	
       </h2>
       
@@ -53,10 +53,10 @@
   
     <div id="events" class="section">
       <h2>
+	<a href="/events/events.html"><events-label /></a>
 	<a class="rss-feed" href="/events/events.rss"><img src="/graphics/rss.png" alt="Events RSS" title="events RSS feed" /></a>
 	<a class="ical" href="webcal://fsfe.org/events/events.ics"><img src="/graphics/ical.png" alt="iCal" title="FSFE events as iCal feed" /></a>
 	
-	<a href="/events/events.html"><events-label /></a>
 	
       </h2>
   
@@ -65,50 +65,22 @@
   
     </div><!--end #events-->
     
-    <div class="clear">
+
+  
+  <div id="contact" class="section">
     
-      <!-- enable or disable this div to show or hide an identica feed. change 'user' 
-      parameter to filter the 'dents' that will be shown -->
-      <div id="identica" class="section">
-	
-	<h2>
-	  <a class="ical" href="http://identi.ca/fsfefrance"><img src="/graphics/identica.png" alt="identica" title="follow FSFE France on identi.ca"/></a>
-	  
-	  <span><microblog-label /></span>
-	</h2>
-	
-	<div class="entry">
-      
-	  <script type="text/javascript" src="http://identi.ca/js/identica-badge.js">
-	  {
-	    "user":"fsfefrance",
-	    "server":"identi.ca",
-	    "border":"0px",
-	    "background":"none",
-	    "width":"360px",
-	    "height":"200px"
-	  }
-	  </script>
-	  
-	</div>
+    <h2><span><contact-label /></span></h2>
     
-      </div><!--end #identica-->
-      
-      <div id="contact" class="section">
-	
-	<h2><span><contact-label /></span></h2>
-	
-	<div class="entry">
-      
-	  <!-- this element fetches contact details from /contact/local.en.xml - edit 
-	  this file to change the contact details that will be listed -->
-	  <contact-details />
-	     
-	</div>
-    
-      </div><!--end #contact-->
-    
-    </div><!-- end .clear -->
+    <div class="entry">
+  
+      <!-- this element fetches contact details from /contact/local.en.xml - edit 
+      this file to change the contact details that will be listed -->
+      <contact-details />
+         
+    </div>
+
+  </div><!--end #contact-->
+
     
     <div id="team" class="section grid-100">
     

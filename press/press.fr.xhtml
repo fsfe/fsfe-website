@@ -2,18 +2,31 @@
 
 <html>
   <head>
-    <link href="/style/grid.css" rel="stylesheet"/>
-
     <title>FSFE - Espace presse</title>
+    <script>
+
+      /*
+       * Fields that carry values at page load will be emptied if this
+       * is called and the field has not been edited before.
+       */
+      var changedFields = new Array();
+
+      function removeValue(field) {
+        if (!changedFields[field.getAttribute("name")]) {
+          changedFields[field.getAttribute("name")] = true;
+          field.value = "";
+        }
+
+        return false;
+      }
+
+    </script>
   </head>
 
-  <body>
-    <h1>Espace presse</h1>
+  <body class="press" id="press-room">
+    <h1 class="heading">Espace presse</h1>
 
   <div id="introduction">
-      <div class="image">
-        <img src="/graphics/stars-smaller.png" alt="Stars"/>
-      </div>
 
 <p>
       La FSFE croit que l'accès aux logiciels déterminent qui peut ou non prendre part à la société de l'information. Les libertés <a href="/about/basics/freesoftware.html">d'utiliser, copier, modifier et redistribuer</a> sont nécessaires à permettre l'égalité à l'âge de l'information.
@@ -35,7 +48,7 @@
         <form method="post" action="http://mail.fsfeurope.org/mailman/subscribe/press-release">
           <p>
             <input type="text" name="email" value="your@email.com" onChange="this.value = ''" onClick="this.value = ''" />
-            <input type="submit" value="Subscribe" />
+            <input type="submit" value="S’abonner" />
           </p>
         </form>
 

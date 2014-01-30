@@ -1,0 +1,74 @@
+@import "bootstrap/bootstrap.less";
+@import "style.less";
+
+#translations ul { width: 100%; }
+#motto { font-size: 2.7em; }
+#menu { .pull-right; text-align: right; }
+#direct-to-menu-list {visibility: hidden; display: none; }
+#menu-list, #search { display: inline-block; }
+#menu-list {.collapse.in;padding-bottom: 0.5em; }
+.no-js #menu-list {display: inline-block; padding-bottom: 0.5em; }
+.article, .planet {
+    #content, #planet-posts {
+        float: left;
+        width: 66%;
+    }
+    #sidebar {
+        float: left;
+        width: 33%;
+    }
+}
+#content + #sidebar { .article #sidebar; }
+
+#content aside { 
+            float: right;
+            margin-left: 100%;
+            position: absolute;
+
+            p {
+                width: 100%;
+                min-width: 320px;
+                max-width: 340px;
+            }
+        }
+
+ul#subpages, h2#subpages + ul, h3#subpages + ul, h4#subpages + ul, ul.subheadings, ul.overview {
+    li {
+        float: left;
+        width: 50%;
+        display: inline-block;   
+    }
+}
+
+.subsite .heading { width: 50%; margin: -1em 0 1em 0; }
+
+#full-menu-list {
+    li {
+        float: left;
+        width: 16.6%;
+    }
+}
+
+#legal-info, #source { 
+    p, ul {
+        float: left;
+        width: 33.3%;
+    }
+}
+
+/* fsfe.less */
+
+#campaigns-boxes #zacchiroli {.text {font-size: 1.3em;}}
+
+#news {
+    display: inline-block;
+    padding: 0 0.5em;
+    float: left;
+    width: 69%;
+}
+#newsletter, .country.frontpage #events {
+    display: inline-block;
+    float: right;
+    width: 30%;
+    padding-left: 2%;
+}

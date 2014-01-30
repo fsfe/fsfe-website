@@ -3,23 +3,56 @@
 <menuset>
   <menu id="fsfe" />
   <menu id="fsfe/about" priority="0" parent="fsfe">/about/about.html</menu>
-  <menu id="fsfe/projects" priority="1" parent="fsfe">/work.html</menu>
-  <menu id="fsfe/campaigns" priority="2" parent="fsfe">/campaigns/campaigns.html</menu>
-  <menu id="fsfe/help" priority="3" parent="fsfe">/contribute/contribute.html</menu>
-  <menu id="fsfe/donate" priority="4" parent="fsfe">/donate/donate.html</menu>
-  <menu id="fsfe/order" priority="5" parent="fsfe">/order/order.html</menu>
-  <menu id="fsfe/press" priority="6" parent="fsfe">/press/press.html</menu>
-  <menu id="fsfe/thankgnus" priority="7" parent="fsfe">/donate/thankgnus.html</menu>
+  <!--menu id="fsfe/mission" priority="1" parent="fsfe">/mission.html</menu-->
+  <menu id="fsfe/projects" priority="2" parent="fsfe">/work.html</menu>
+  <menu id="fsfe/campaigns" priority="3" parent="fsfe">/campaigns/campaigns.html</menu>
+  <menu id="fsfe/help" priority="4" parent="fsfe">/contribute/contribute.html</menu>
+  <menu id="fsfe/contact" priority="5" parent="fsfe">/contact/contact.html</menu>
 
-  <menu id="fellowship" />
-  <menu id="fellowship/card" priority="0" parent="fellowship">/fellowship/card.html</menu>
-  <menu id="fellowship/communicate" priority="1" parent="fellowship">/fellowship/communicate.html</menu>
-  <menu id="fellowship/faq" priority="4" parent="fellowship">/fellowship/faq.html</menu>
-  <menu id="fellowship/login" priority="5" parent="fellowship">/fellowship/login</menu>
+  <menu id="support" />
+  <menu id="support/support" priority="0" parent="support">/support/support.html</menu>
+  <menu id="support/order" priority="1" parent="support">/order/order.html</menu>
+  <menu id="support/thankgnus" priority="2" parent="support">/donate/thankgnus.html</menu>
+  <!--menu id="support/funds" priority="3" parent="support">/about/funds/funds.html</menu-->
   
-  <menu id="planet" />
-  <menu id="planet/planet" priority="0" parent="planet">http://planet.fsfe.org/</menu>
+  <menu id="fellowship" />
+  <menu id="fellowship/join" priority="0" parent="fellowship">/fellowship/join.html</menu>
+  <menu id="fellowship/card" priority="1" parent="fellowship">/fellowship/card.html</menu>
+  <!--menu id="fellowship/communicate" priority="2" parent="fellowship">/fellowship/communicate.html</menu-->
+  <!--menu id="fellowship/contact" priority="2" parent="fellowship">/fellowship/contact.html</menu-->
+  <!--menu id="fellowship/get-active" priority="3" parent="fellowship">/fellowship/get-active.html</menu-->
+  <menu id="fellowship/faq" priority="4" parent="fellowship">/fellowship/faq.html</menu>
+  <!--menu id="fellowship/login" priority="5" parent="fellowship">/fellowship/login</menu-->
+  
+  <menu id="news" />
+  <menu id="news/press" priority="0" parent="news">/press/press.html</menu>
+  <menu id="news/nl" priority="1" parent="news">/news/newsletter.html</menu>
+  <menu id="news/planet" priority="2" parent="news">http://planet.fsfe.org/</menu>
+  <menu id="news/events" priority="3" parent="news">/events/events.html</menu>
 
   <menu id="wiki" />
   <menu id="wiki/wiki" priority="0" parent="wiki">http://wiki.fsfe.org/</menu>
+  <menu id="wiki/events" priority="1" parent="wiki">http://wiki.fsfe.org/FellowshipEvents</menu>
+  <menu id="wiki/fellows" priority="2" parent="wiki">http://wiki.fsfe.org/Fellows</menu>
+  <menu id="wiki/rc" priority="3" parent="wiki">http://wiki.fsfe.org/RecentChanges</menu>
+
+  <menu id="campaigns" />
+  <menu id="campaigns/dfd" priority="0" parent="campaigns">http://www.documentfreedom.org</menu>
+  <menu id="campaigns/fya" priority="1" parent="campaigns">/campaigns/android/android.html</menu>
+  <menu id="campaigns/pdf" priority="2" parent="campaigns">/campaigns/pdfreaders/pdfreaders.html</menu>
+  <menu id="campaigns/ayc" priority="3" parent="campaigns">/campaigns/askyourcandidates/askyourcandidates.html</menu>
+  <menu id="campaigns/drm" priority="4" parent="campaigns">http://drm.info</menu>
+
+  <menu id="ftf" />
+  <menu id="ftf/services" priority="0" parent="ftf">/activities/ftf/services.html</menu>
+  <menu id="ftf/doc" priority="1" parent="ftf">/activities/ftf/documentation.html</menu>
+  <menu id="ftf/network" priority="2" parent="ftf">/activities/ftf/network.html</menu>
+  <menu id="ftf/conference" priority="3" parent="ftf">/activities/ftf/legal-conference.html</menu>
+  <!--menu id="ftf/contact" priority="4" parent="ftf">mailto:legal@fsfeurope.org</menu-->
+
+  <menu id="fs" />
+  <menu id="fs/def" priority="0" parent="fs">/freesoftware/basics/summary.html</menu>
+  <menu id="fs/soc" priority="1" parent="fs">/freesoftware/society/society.html</menu>
+  <menu id="fs/edu" priority="2" parent="fs">/freesoftware/education/education.html</menu>
+  <menu id="fs/buz" priority="3" parent="fs">/freesoftware/enterprise/enterprise.html</menu>
 </menuset>

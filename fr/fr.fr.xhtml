@@ -8,7 +8,7 @@ soutien de la liberté logicielle." />
     <meta name="keywords" content="logiciel libre france fsfe open source foss floss gouvernement public gpl licence générale publique" />
   </head>
 
-  <body>
+  <body class="country france frontpage">
     <!-- <p id="category"><a href="/about/people/people.html">People</a></p> -->
     <h1>France</h1>
     
@@ -40,10 +40,10 @@ soutien de la liberté logicielle." />
     
     <div id="news" class="section">
       <h2>
+	<a href="/news/news.html"><news-label /></a>
 	<a class="rss-feed" href="/news/news.rss"><img src="/graphics/rss.png" alt="Actualités RSS" title="flux RSS des nouvelles" /></a>
 	<a class="ical" href="http://identi.ca/fsfefrance"><img src="/graphics/identica.png" alt="identica" title="suivez l'équipe française de la FSFE sur identi.ca"/></a>
 	
-	<a href="/news/news.html"><news-label /></a>
 	
       </h2>
       
@@ -54,10 +54,10 @@ soutien de la liberté logicielle." />
   
     <div id="events" class="section">
       <h2>
+	<a href="/events/events.html"><events-label /></a>
 	<a class="rss-feed" href="/events/events.rss"><img src="/graphics/rss.png" alt="Évènements RSS" title="flux RSS des évènements" /></a>
 	<a class="ical" href="webcal://fsfe.org/events/events.ics"><img src="/graphics/ical.png" alt="iCal" title="FSFE events as iCal feed" /></a>
 	
-	<a href="/events/events.html"><events-label /></a>
 	
       </h2>
   
@@ -66,50 +66,23 @@ soutien de la liberté logicielle." />
   
     </div><!--end #events-->
     
-    <div class="clear">
+    <hr />
     
-      <!-- enable or disable this div to show or hide an identica feed. change 'user' 
-      parameter to filter the 'dents' that will be shown -->
-      <div id="identica" class="section">
-	
-	<h2>
-	  <a class="ical" href="http://identi.ca/fsfefrance"><img src="/graphics/identica.png" alt="identica" title="suivez l'équipe française sur identi.ca"/></a>
-	  
-	  <span><microblog-label /></span>
-	</h2>
-	
-	<div class="entry">
       
-	  <script type="text/javascript" src="http://identi.ca/js/identica-badge.js">
-	  {
-	    "user":"fsfefrance",
-	    "server":"identi.ca",
-	    "border":"0px",
-	    "background":"none",
-	    "width":"360px",
-	    "height":"200px"
-	  }
-	  </script>
-	  
-	</div>
+  <div id="contact" class="section">
     
-      </div><!--end #identica-->
-      
-      <div id="contact" class="section">
-	
-	<h2><span><contact-label /></span></h2>
-	
-	<div class="entry">
-      
-	  <!-- this element fetches contact details from /contact/local.en.xml - edit 
-	  this file to change the contact details that will be listed -->
-	  <contact-details />
-	     
-	</div>
+    <h2><span><contact-label /></span></h2>
     
-      </div><!--end #contact-->
+    <div class="entry">
+  
+      <!-- this element fetches contact details from /contact/local.en.xml - edit 
+      this file to change the contact details that will be listed -->
+      <contact-details />
+         
+    </div>
+
+  </div><!--end #contact-->
     
-    </div><!-- end .clear -->
     
     <div id="team" class="section grid-100">
     

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<html>
+  <head>
+    <title>Documentation - LESS CSS</title>
+  </head>
+  <body class="article web" microformats="h-entry" id="less-css-doc">
+
+    <p id="category"><a href="/contribute/web/">Webmastering</a></p>
+    <h1 class="p-name">Edit the CSS with LESS</h1>
+
+    <div class="e-content">
+    
+    <p id="introduction">
+    The new design makes heavy use of <a
+        href="http://getbootstrap.com/">bootstrap’s</a> LESS variables. This
+    can be very powerful, but that means you will have to learn how to compile
+    LESS into CSS when you modify fsfe.org stylesheets.
+    </p>
+
+    <p>
+    First, you need to install LESS. Follow the <a href="http://lesscss.org/">official instructions</a> or install it from your distribution’s package manager (the package is somtimes called <code>lessc</code> or <code>node-less</code> in Debian). Now you can write your style in <code>.less</code> files and you will be able to compile them into CSS.
+    </p>
+
+    <p>
+    The main stylesheet file for all pages on fsfe.org is
+    <code>/look/style.less</code>. Then, depending on which part of the
+    websites you’re in, the build system is going to select a css file. For
+    instance,</p> 
+    <ul>
+        <li>fsfe.org has <code>/look/fsfe.min.css</code> which is compiled from <code>/look/fsfe.less</code>,</li>
+        <li>fsfe.org/fellowship has <code>/look/fellowship.min.css</code> which is compiled from <code>/look/fellowship.less</code>.</li>
+    </ul>
+    <p>
+    These css files are minified: do not edit these css files. Rather, you need
+    to edit the less files, and then compile them to the minified css.
+    </p>
+
+    <p>
+    If you modify fsfe.less, you need to compile your modifications into css by running:
+    </p>
+
+    <pre class="term"><code>lessc fsfe.less -x fsfe.min.css</code></pre> 
+
+    <p>
+    Then you can commit your changes with subversion.
+    </p>
+
+    <p>
+    If you modify style.less, you will need to compile all css. Here’s the current list:
+    </p>
+    
+    <pre class="term"><code>lessc fsfe.less -x fsfe.min.css</code>
+<code>lessc fellowship.less -x fellowship.min.css</code></pre> 
+
+    <h2>Why LESS?</h2>
+
+    <p>
+    You might wonder what’s the point of using LESS. Fortunately, there’s a
+    reason beyond producing minified css. Indeed, LESS is very, very useful to
+    create more powerful, more simple, simply better style. I direct you to the 
+    <a href="http://www.lesscss.org/#docs">official LESS documentation</a> to
+    learn how to edit in the less language.
+    </p>
+
+    <p>
+    If you’re not sure about LESS, do not worry, you can still write plain CSS in LESS files.
+    </p>
+
+    <h2>Bootstrap</h2>
+
+    <p>
+    Bootstrap’s LESS is located in <code>/look/bootstrap/</code>. These files
+    should be left unchanged and they should be updated to later versions of
+    bootstrap with care.  However, you can edit the variables in
+    <code>/look/bootstrap/variables.less</code>.
+    </p>
+
+    <p>
+    If you want to know more about how to use Bootstrap, I refer you to the
+    <a href="http://getbootstrap.com/css/">official documentation</a>.
+    </p>
+
+    </div>
+    <!--/e-content-->
+
+  </body>
+<sidebar promo="about-fsfe">
+    <div id="related-content">
+        <h3>Other howtos:</h3>
+        <ul>
+            <li>
+            <a href="/contribute/web/tagging.html">Use tags and article metadata, implement a country page</a>
+            </li>
+            <li>
+            <a href="/contribute/template.html">A template article, to use the new webdesign</a>
+            </li>
+        </ul>
+    </div>
+</sidebar>
+<date>
+    <original content="2014-01-24"/>
+</date>
+<author id="roy" />
+<tags>
+    <tag>webmaster</tag>
+</tags>
+
+  <timestamp>$Date: 2013-09-26 15:32:30 +0200 (Thu 26 Sep 2013) $ $Author: paul $</timestamp>
+
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

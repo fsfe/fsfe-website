@@ -24,6 +24,7 @@
       href="http://www.fsf.org.in/">Indien</a> und <a
       href="http://www.fsfla.org/">Lateinamerika</a>.
   </text>
+  <text id="creative-commons-license">Creative-Commons-Lizenz</text>
   <text id="outdated">
     <strong>Achtung: </strong>
     Diese Seite ist eine Übersetzung, deren Original sich seit der
@@ -40,10 +41,21 @@
     bei Übersetzungen und anderen Dingen unterstützen können.
   </text>
 
+  <text id="change-lang">Sprache ändern</text>
+  <text id="menu">Menü</text>
+  <text id="content">Inhalt</text>
+  <text id="page-info">Seiteninformation</text>
+  <text id="rootpage">Free Software Foundation Europe</text>
+  <text id="close-this">Schließen</text>
+  <text id="sitemap">Sitemap</text>
+
+  <text id="go-top">Zum Anfang gehen</text>
   <text id="source">Quellcode</text>
   <text id="contact-us">Kontaktieren Sie uns</text>
-  <text id="translate">Diese Seite übersetzen ?</text>
+  <text id="translate">Diese Seite übersetzen?</text>
+  <text id="contribute-web">Helfen Sie unserem Webteam</text>
   <text id="imprint">Impressum</text>
+  <text id="privacy-policy">Datenschutzrichtlinie</text>
 
   <!-- Info box -->
   <text id="under-construction">
@@ -53,36 +65,70 @@
 	  Dieses Projekt wurde erfolgreich abgeschlossen. Diese Seiten dienen als Archiv für die darauf befindlichen Informationen. 
   </text>
   
+  <text id="search">Suche</text>
+  <text id="submit">Abonnieren</text>
+  <text id="subscribe">Einschreiben</text>
+
+  <text id="language">Sprache</text>
+
   <!-- Article metadata -->
   <text id="author">Autor</text>
   <text id="writtenby">Von</text>
   <text id="published">am</text>
   <text id="revision">aktualisiert am</text>
   <text id="download">Herunterladen</text>
-  
-  <text id="search">Suchen</text>
-  <text id="submit">Abonnieren</text>
-  <text id="language">Sprache</text>
-
   <!-- Conjunctions -->
   <text id="to">bis</text>
+  <text id="go-to">Gehe zu:</text>
 
   <!-- Menu -->
   <text id="fsfe/about">Über Uns</text>
+  <text id="fsfe/mission">Mission</text>
   <text id="fsfe/projects">Unsere Arbeit</text>
-  <text id="fsfe/documents">Dokumente</text>
   <text id="fsfe/campaigns">Kampagnen</text>
+  <!--text id="fsfe/documents">Dokumente</text>-->
   <text id="fsfe/help">Mitmachen</text>
+  <text id="fsfe/contact">Kontakt</text>
+  <text id="fsfe/press">Presse</text>
+  <!-- text id="fsfe/lists">Mailinglisten</text>-->
+  <text id="support/support">Unterstützen</text>
   <text id="fsfe/donate">Spenden</text>
   <text id="fsfe/order">Bestellung</text>
-  <text id="fsfe/lists">Mailinglisten</text>
-  <text id="fsfe/press">Presse</text>
-  <text id="fsfe/thankgnus">Unsere Spender</text>
-  <text id="support/support">Unterstützen</text>
-  <text id="fellowship/fellowship">Beitreten</text>
-  <text id="fellowship/1-wiki">Wiki</text>
-  <text id="fellowship/2-planet">Blog Planet</text>
-  <text id="fellowship/3-join">Beitreten</text>
+  <text id="support/thankgnus">Unsere Spender</text>
+  <text id="support/funds">Ein- und Ausgaben</text>
+  <text id="fellowship/fellowship">Dem Fellowship beitreten</text>
+  <text id="fellowship/card">Karte</text>
+  <text id="fellowship/communicate">Kommunizieren</text>
+  <text id="fellowship/get-active">Aktiv werden</text>
+  <text id="fellowship/faq">F.A.Q.</text>
+  <text id="fellowship/contact">Kontakt</text>
+  <text id="fellowship/login">Login</text>
+  <text id="news/news">Letzte Meldungen</text>
+  <text id="news/events">Nächste Veranstaltungen</text>
+  <text id="news/press">Presse</text>
+  <text id="news/nl">Newsletter</text>
+  <text id="news/planet">Blog Planet</text>
+  <!--text id="planet/blogs">Blogs</text-->
+  <text id="wiki/wiki">Wiki</text>
+  <text id="wiki/events">Fellowship Veranstaltungen</text>
+  <text id="wiki/fellows">Fellows</text>
+  <text id="wiki/rc">Letzte Änderungen</text>
+  <text id="campaigns/dfd">Document Freedom Day</text>
+  <text id="campaigns/fya">Befreien Sie Ihr Android</text>
+  <text id="campaigns/pdf">Frei PDF-Betrachter</text>
+  <text id="campaigns/ayc">Frage Deine Kandidaten</text>
+  <text id="campaigns/drm">DRM.info</text>
+  <text id="ftf/legal">Rechtliche Unterstützung</text>
+  <text id="ftf/services">Angebote und Treuhänder</text>
+  <text id="ftf/doc">Dokumentation</text>
+  <text id="ftf/network">Netzwerk zu Rechtsfragen</text>
+  <text id="ftf/conference">Konferenzen</text>
+  <text id="ftf/contact">Kontakt zum juristischen Team</text>
+  <text id="fs/fs">Freie Software</text>
+  <text id="fs/def">Definition</text>
+  <text id="fs/soc">Freie Gesellschaft</text>
+  <text id="fs/edu">Bildung</text>
+  <text id="fs/buz">Wirtschaft</text>
 
   <!-- Date time -->
   <text id="months/1">Januar</text>
@@ -130,15 +176,21 @@
   <text id="statement1">Die Free Software Foundation Europe ist eine gemeinnützige Organisation, die sich der Förderung </text>
   <text id="statement-fs">Freier Software</text>
   <text id="statement2"> und der Arbeit für Freiheit in einer sich entwickelnden digitalen Gesellschaft widmet</text>
+  <text id="motto-fsfs">Freie Software, Freie Gesellschaft!</text>
+  <text id="motto-planet">Blog Planet, betrieben vom <a href="https://fellowship.fsfe.org" class="the-fellowship">Fellowship</a></text>
+  <text id="motto-wiki">Wiki, betrieben vom <a href="https://fellowship.fsfe.org" class="the-fellowship">Fellowship</a></text>
   
   <text id="learn-more">Mehr darüber</text>
-  
+  <text id="read-more">Mehr dazu lesen</text>
+
   <text id="press">Presse</text>
   <text id="newsletter">Newsletter</text>
-  
+
+
+	<!-- These used to be in /tools/texts-content-**.xml -->
   <text id="news">Letzte Meldungen</text>
   <text id="receive-newsletter">FSFE-Newsletter abonnieren</text>
-
+  <text id="subscribe-newsletter">Newsletter abonnieren</text>
   <text id="events">Nächste Veranstaltungen</text>
   <text id="more">Mehr</text>
   <text id="morenews">Weitere Meldungen…</text>
@@ -149,9 +201,23 @@
   <text id="phone">Telefon</text>
   <text id="fax">Fax</text>
   <text id="contact">Kontakt</text>
+
+  <text id="team">Team</text>
+  <text id="microblog">Mikroblog</text>
   
   <text id="donate">Spenden</text>
-  
+  <text id="donate-paragraph"><p>
+        Die Free Software Foundation Europe ist eine gemeinnützige
+        Nichtregierungsorganisation. <a href="/work.en.html">Unsere Arbeit</a>
+        wird durch eine Gemeinschaft von 
+        <a href="/contribute/contribute.en.html">ehrenamtlichen Mitarbeitern</a>, 
+        <a href="http://fellowship.fsfe.org">Fellows</a> und 
+        <a href="thankgnus.en.html">Spendern</a> ermöglicht. Ihre Spenden
+        sind essenziell für unsere Stärke und Unabhängigkeit. Sie ermöglichen
+        es uns, weiterhin für Freie Software zu arbeiten, wo immer das nötig
+        ist, und machen uns zu einer unabhängigen Stimme.
+      </p></text>
+
   <!-- Campaign box on front-page, translated texts -->
   <text id="cb-restricted-boot">"Secure Boot": Wer wird Ihren nächsten Computer kontrollieren?</text>
   <text id="cb-restricted-boot-link">Wir oder Gerätehersteller?</text>
@@ -159,10 +225,16 @@
   <text id="cb-valentine">Am 14. Februar: </text>
   <text id="cb-valentine-link">Zeigen Sie Ihre Liebe zu Freier Software!</text>
   <!-- end of texts for the campaign box -->
-  
-  <text id="join">Beitreten</text>
 
-  <text id="subscribe">Eintragen</text>
+  <text id="join">Beitreten</text>
+  <text id="join-paragraph"><p>Become a Fellow of the FSFE to empower our work and help to assure our financial independence. By joining the Fellowship you will become a donating, sustaining member of the FSFE - including access to our infrastructure.</p></text>
+  <text id="join-fellowship">Treten Sie dem Fellowship bei</text>
+
+  <text id="ourwork2011">Unsere Arbeit 2011</text>
+  <text id="support">Unterstützen Sie die FSFE</text>
+  <text id="show-support">Zeigen Sie Ihre Unterstütung!</text>
+  <text id="show-support-paragraph"><p>FSFE benötigt Ihre Unterstützung, um gehört zu werden! Jeder Treffer zählt!</p></text>
+  <text id="support-fsfe">Ich unterstütze die FSFE!</text>
 
   <!-- alt text for missing avatars -->
   <text id="no-avatar">Kein Bild</text>
@@ -170,11 +242,51 @@
   <!-- petitions -->
   <text id="osig">Organisationen</text>
   <text id="isig">Personen</text>
+  <text id="bsig">Unternehmen</text>
+
+  <!-- Sidebars -->
+  <text id="related-news">Verwandte Meldungen</text>
+  <text id="our-work">Unsere Arbeit</text>
+  <text id="our-work-intro"><p>Als gemeinnützige Nichtregierungsorganisation arbeiten wir daran, allgemeines Verständnis von und Unterstützung für Freie Software und Offene Standards in Politik, Wirtschaft, Recht und der Gesellschaft als Ganzes zu schaffen.</p></text>
+  <text id="about-fsfe">Über die FSFE</text>
+  <text id="about-fsfe-intro">
+      <p>
+        Die Free Software Foundation Europe widmet sich der Förderung Freier
+        Software und der Arbeit für <strong>Freiheit</strong>in einer sich
+        entwickelnden digitalen Gesellschaft.
+      </p>
+      <p>
+        Der Zugang zu Software bestimmt, wer an einer digitalen Gesellschaft
+        teilnehmen darf. Die Freiheiten, <a
+          href="/about/basics/freesoftware.en.html">Software zu verwenden, zu
+          verstehen, zu verbreiten und zu verbessern</a> erlauben eine
+        <strong>gleichberechtigte</strong> Teilnahme und sind daher sehr
+        wichtig.
+      </p>
+  </text>
+  <text id="contribute">Mitmachen</text>
+  <text id="contribute-intro">
+    <p>
+      Unsere Arbeit wird durch eine Gemeinschaft ermöglicht, die unseren
+      Einsatz für Freie Software unterstützt. Sie können uns auf verschiedene
+      Arten helfen unsere Ziele zu erreichen. Je nachdem welche Interessen und
+      wieviel Zeit Sie haben.
+    </p>
+  </text>
   
-  
-  <!-- quotes to be displayed in a rotating box -->
-  <quotes>
-    <quote id="zacchiroli" tag="donors" pos="1">
+  <!-- campaigns to be displayed in a rotating box -->
+  <campaigns>
+    <campaign id="wiesemann" tag="donors" pos="1">
+      <photo>/donate/wiesemann.jpg</photo>
+      <txt>
+        Eine virtuelle Welt ohne Freie Software ist wie eine Stadt, in der
+        man für jeden Bürgersteig eine Benutzungslizenz benötigt. Wir brauchen
+        auch Allgemeingut in der virtuellen Welt.
+      </txt>
+      <author>Reinhard Wiesemann - Linuxhotel</author>
+      <link>/donate/donate.html</link>
+    </campaign>
+    <campaign id="zacchiroli" tag="donors" pos="1">
       <photo>/donate/zacchiroli.jpg</photo>
       <txt>
         Eine Welt ohne Freie Software ist eine Welt in der wir Gefangene von
@@ -183,17 +295,10 @@
         Software Foundation Europe.
       </txt>
       <author>Stefano "Zack" Zacchiroli, Former Debian Project Leader</author>
-    </quote>
-    <quote id="wiesemann" tag="donors" pos="2">
-      <photo>/donate/wiesemann.jpg</photo>
-      <txt>
-        Eine virtuelle Welt ohne Freie Software ist wie eine Stadt, in der
-        man für jeden Bürgersteig eine Benutzungslizenz benötigt. Wir brauchen
-        auch Allgemeingut in der virtuellen Welt.
-      </txt>
-      <author>Reinhard Wiesemann - Linuxhotel</author>
-    </quote>
-    <quote id="ganten" tag="donors" pos="3">
+      <link>/donate/donate.html</link>
+    </campaign>
+
+    <campaign id="ganten" tag="donors fellowship" pos="2">
       <photo>/donate/ganten.jpg</photo>
       <txt>
         Freie Software ist das stabile Fundament unserer Unternehmenslösungen,
@@ -201,10 +306,32 @@
         Fundaments. Deswegen unterstützen wir die FSFE.
       </txt>
       <author>Peter Ganten - Univention</author>
-    </quote>
+      <link>/donate/donate.html</link>
+    </campaign>
 
     <!-- quotes for fellowship page -->
+    <!-- campaigns for fellowship page -->
+    <!-- TODO -->
+    <campaign id="allison" tag="fellowship" pos="1">
+      <photo>/fellowship/graphics/people/Jeremyallison.jpg</photo>
+      <txt>
+        Document Freedom Day celebrates the importance of Open Standards for all
+        electronic documents, whether public or private. If we want to <strong>preserve
+        our digital heritage</strong> we all need to select Open Standards, implementable
+        by anyone, as our default storage choice.
+      </txt>
+      <author>Jeremy Allison, Samba core developer</author>
+      <link>/donate/donate.html</link>
+    </campaign>
+    <campaign id="beckedahl" tag="fellowship" pos="2">
+      <photo>/fellowship/graphics/people/beckedahl.jpg</photo>
+      <txt>
+        Open Standards garantee a free development of the infrastructure and
+        therefore a self-determined and free communication.
+      </txt>
+      <author>Markus Beckedahl, Digitale Gesellschaft, netzpolitik.org</author>
+      <link>/donate/donate.html</link>
+    </campaign>
 
-
-  </quotes>
+  </campaigns>
 </textset>

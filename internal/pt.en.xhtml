@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <html>
 	<head>
-		<meta name="DC.Title" content="FSFE - pricetags form" />
+		<meta name="DC.Title" content="FSFE - nametags form" />
 		<meta name="DC.Creator" content="Albert Dengg" />
 		<title>FSFE - internal tools - name tags</title>
 		<style>
@@ -19,7 +19,15 @@
 	</head>
 	<body>
 
-		<h1>Price Tags</h1>
+		<h1>Nametags</h1>
+
+		<div class="field-annotation right">
+			Pricetags must answer
+			<br />the following questions:
+			<br />Name of Product 
+			<br />Price
+			<br />
+		</div>
 
 		<form action="http://78.41.115.190/cgi-bin/pt" method="post" enctype="multipart/form-data">
 			<table>
@@ -28,15 +36,7 @@
 						Product:
 					</td>
 					<td>
-						<input type="text" name="product" />
-					</td>
-				</tr>
-				<tr>
-					<td>
-						Product additional info:
-					</td>
-					<td>
-						<input type="text" name="product2" />
+						<input type="text" maxlength="15" name="product" />
 					</td>
 				</tr>
 				<tr>
@@ -44,7 +44,7 @@
 						Price (including currency symbol):
 					</td>
 					<td>
-						<input type="text" name="price" />
+						<input type="text" maxlength="15" name="price" />
 					</td>
 				</tr>
 				<tr>
@@ -52,7 +52,7 @@
 						Additional information (like fair trade, ...):
 					</td>
 					<td>
-						<input type="text" name="info" />
+						<input type="text" maxlength="15" name="info" />
 					</td>
 				</tr>
 				<tr>

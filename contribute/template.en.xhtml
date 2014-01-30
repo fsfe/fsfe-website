@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html>
+  <head>
+    <title>Template article – Contribute – FSFE</title>
+  </head>
+  <body class="article" microformats="h-entry" id="the-template-2014">
+
+    <p id="category" class="p-category">
+      <a href="/contribute/contribute.html">Contribute</a>
+    </p>
+    <h1 class="p-name">A template article, to use the new webdesign</h1>
+
+    <div class="e-content">
+
+    <p class="p-summary">
+        So, you are publishing an article on fsfe.org? Let’s have a look at
+        this <a href="/source/template.en.xhtml">template page source code</a> to see how you can make use of the many
+        features at your disposal with this new design!
+        <a class="fn" id="ref-name-that-footnote" href="#fn-name-that-footnote">1</a> 
+        All code samples are pasted directly from the source file of this page.
+    </p>
+
+    <p>
+        Just like before, fsfe.org web pages are built from xml source files.
+        You can actually see the source code directly by clicking on the link
+        at <a href="#source">the bottom of each page</a>. So there’s no big
+        change here, go on to read more about the website in genral if you want
+        to know more (there’s a link in the sidebar, on the right).
+    </p>
+
+    <h2>Page styling and metadata</h2>
+
+    <p>
+        The first thing with the new design are the <code>&#60;body&#62;</code>
+        attributes. This page has:
+    </p>
+
+    <pre><code>&#60;body class="article" microformats="h-entry" id="the-template-2014"&#62;</code></pre>
+
+    <p>
+        A file can have more than one class and more than one microformats
+        (separated by a space), but a file can only have one id. These
+        attributes are very useful to have different kinds of styling depending
+        on what kind of content we’re showing. 
+    </p>
+
+    <p>
+        For instance, the page <a href="/about/">About FSFE</a> is not an
+        article, but one of the four main sections of the website. It’s a way
+        to get to other pages relating to what FSFE is about. For this kind of
+        pages, there are some specific styling (using <code>&#60;body
+        class="subsite"&#62;</code>). In doubt, it’s always useful to find a
+        page that’s as close as possible to what you have to edit, and see how
+        this one is made. And of course, you can always <a
+            href="https://mail.fsfeurope.org/mailman/listinfo/web">get in touch
+        with the web team</a>. What’s more, all pages which are on
+        wiki.fsfe.org have the wiki class, all pages on planet.fsfe.org have the
+        planet class, etc.
+    </p>
+
+    <p>
+        So, all articles should have an "article" class. However, it is
+        optional for them to have an id. If you put an id, please choose it
+        carefully. Id can be very useful to apply very specific styling. If you
+        need to write new CSS style for a page, please make sure to put an id
+        and then use that id for the rules in the CSS files.
+    </p>
+
+    <p>
+        Microformats attribute are both about style and about metadata of a
+        page.  If you want to know what microformats are, please read <a
+            href="http://microformats.org">microformats.org</a>. If you are not
+        going to use microformats markup inside a source file, there’s no need
+        to enable them, so remove the "microformats" information from the
+        &#60;body&#62; element. This page, as most articles, news entries,
+        event items, should have proper metadata and use microformats.
+    </p>
+
+
+    <p>
+        Articles should use the <a
+            href="http://microformats.org/wiki/h-entry">h-entry
+        microformat</a>. This page has:
+    </p>
+
+    <pre><code>&#60;body class="article" <strong>microformats="h-entry"</strong> id="the-template-2014"&#62;
+    &#60;p id="category" class="p-category"&#62;
+      &#60;a href="/contribute/contribute.html"&#62;Contribute&#60;/a&#62;
+    &#60;/p&#62;
+    &#60;h1 class="p-name"&#62;A template article, to use the new webdesign&#60;/h1&#62;
+
+    &#60;div class="e-content"&#62;
+
+    &#60;p class="p-summary"&#62;So, you are…
+
+    …
+
+    &#60;/div&#62;&#60;!--/e-content--&#62;
+    </code></pre>
+
+    <p>
+        The rest of the metadata (author, date, etc.) should be taken care of.
+        But do not hesitate to use other h-entry classes in the body of the
+        article, and <a
+            href="http://indiewebify.waterpigs.co.uk/validate-h-entry/">check
+            their validity</a>. If you want to know more about how fsfe.org
+        deals with other metadata like tags, author, dates, etc. you can read
+        the <a href="/source/template.en.xhtml">source code of this page</a>. You should also <a
+            href="/contribute/web/tagging.fr.html">read the how-to on tagging
+        fsfe.org</a>.
+    </p>
+
+    <h2>The sidebar</h2>
+
+    <aside>
+        <p>
+            By the way, did you notice that, if you inspect the HTML of this page
+            as rendered in your web browser, each title automatically gets an id?
+            That way you can easily <a href="#id-the-sidebar">link to a specific
+                part</a> of a page on fsfe.org by using anchors. For example, the title
+            above probably has <code>&#60;h2 id="<a
+                href="#id-the-sidebar">id-the-sidebar</a>"&#62;The
+            sidebar&#60;h2&#62;</code>
+        </p>
+    </aside>
+
+    <pre><code>&#60;sidebar news="ilovefs" promo="about-fsfe"&#62;
+    &#60;div id="related-content"&#62;
+        &#60;h3&#62;Get involved&#60;/h3&#62;
+
+        &#60;ul&#62;&#60;li&#62;&#60;a href="/contribute/web/web.html"&#62;Webmastering&#60;/a&#62;&#60;/li&#62;
+        &#60;li&#62;&#60;a href="/contribute/editors/editors.html"&#62;Information for editors&#60;/a&#62;&#60;/li&#62;
+        &#60;li&#62;&#60;a href="/contribute/contribute.html"&#62;Contribute&#60;/a&#62;&#60;/li&#62;&#60;/ul&#62; 
+        
+        &#60;h4&#62;Ongoing campaigns&#60;/h4&#62;
+        &#60;ul&#62;&#60;li&#62;&#60;a href="//documentfreedom.org"&#62;Document Freedom Day!&#60;/a&#62;&#60;/li&#62;&#60;/ul&#62;
+    &#60;/div&#62;
+&#60;/sidebar&#62;
+    </code></pre>
+
+    <p>
+        The sidebar is what’s showing on the right side of this very page (if
+        your screen is large enough!). Articles should really have a sidebar
+        and we encourage you to add things in it. They are useful to provide
+        context to an article, and to give more things to read if somebody’s
+        interested. So you should show related articles, and/or related
+        campaigns if that makes sense. See the code above: you can write
+        directly inside the <code>&#60;sidebar&#62;</code> elements.
+    </p>
+
+    <p>
+        However, the sidebar is not just another place to write, it’s also a
+        useful tool where we can automatically put stuff. So if you are very lazy,
+        or if there’s nothing to write in, just write
+        <code>&#60;sidebar&#62;</code> without anything in it, and the build system
+        will automatically decide what to show for you. Note: the sidebar
+        element should be after the body element, not within. It’s at the same
+        place that timestamp, tags and translator elements.
+    </p>
+
+    <h3>Sidebar options</h3>
+
+    <p>You can also give parameters to your sidebar. This page has the following sidebar parameters:</p>
+
+    <pre><code>&#60;sidebar news="ilovefs" promo="about-fsfe"&#62;</code></pre>
+
+    <p>The news value is <a href="/contribute/web/tagging.html">a tag</a>.
+    It’s going to fetch some news items that match the given tag and display
+    them in the sidebar. For matter of demonstration, this page displays links
+    to news items with the "ilovefs" tag.</p>
+
+    <p><strong>Note:</strong> The news feature of the sidebar is disabled until
+    Nicolas finds a better way of building the tag. Your help is welcome!</p>
+
+    <p>The promo parameter is a paragraph promoting one important aspect of
+    FSFE. This page promotes the "about-fsfe" paragraph, which is a general
+    paragraph about FSFE which is going to invite the user to go read the
+    about-page. If you don’t want to show any promotional paragraph, set
+    <code>promo="no"</code>. If you do not choose which paragraph to promote in
+    your sidebar, the build system is going to default to one paragraph for
+    you.</p>
+
+    <p>These paragraphs should already be ready for translation like other
+    generic parts of the website. For now, you can choose to promote among:</p>
+
+    <ul>
+        <li>our-work</li>
+        <li>about-fsfe</li>
+        <li>donate</li>
+        <li>More to come… Do not hesitate to ask the web team to add one.</li>
+    </ul>
+
+    <h3>Table of contents</h3>
+
+    <p>Right now, it’s not automated. But the sidebar should be very a nice place
+    to add a table of contents, especially if you wrote a long article. More to
+    come on that.</p>
+
+    <h2>The follow-up</h2>
+
+    <p>It’s important to help people engage and support FSFE and to make it
+    easy for them. This is why we have the "followup" box. This box is the
+    second section of each page on fsfe.org, which you can see below the
+    license information of this page. Why is it at the bottom? The idea is
+    that, if somebody reaches the end of an article on fsfe.org, it’s probably
+    a very good sign that this person is interested! So we should engage with
+    them, give them a way to follow up on that enthusiasm! By default, if you
+    don’t put anything, the build system is going to insert a followup box for
+    you. If you don’t want to show a followup box for some reason, then please
+    write <code>&#60;followup&#62;no&#60;/followup&#62;</code>.</p>
+
+    <p>This page chooses to help people engage by subscribing to our monthly
+    newsletter. So, after the body element, it has:</p>
+
+    <pre><code>&#60;followup&#62;subscribe-nl&#60;/followup&#62;</code></pre>
+
+    <p>These boxes should already be ready for translation like other generic
+    parts of the website. For now, you can choose to follow up on:</p>
+
+    <ul>
+        <li>"subscribe-nl" to subscribe to the newsletter</li>
+        <li>"support" to sign as a supporter</li>
+        <li>"donate" to make a one-time or recurrent donation</li>
+        <li>"join" to promote joining the fellowship</li>
+    </ul>
+
+    <h2>Misc</h2>
+
+    <p>If you need to add a quote, proceed as follows:</p>
+
+    <blockquote>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
+        
+        <footer>
+            – <cite>Cicero</cite>
+        </footer>
+    </blockquote>
+
+    <p>Alternative, you can also <q cite="http://example.org">quote an example inline</q> (the quotation marks will vary depending on the language).</p>
+
+
+    <div class="captioned" style="max-width: 2000px;">
+        <header>
+            <p>An article would not be complete without a picture!</p>
+        </header>
+        <img src="https://hroy.eu/images/fsfe_ecm-group_pic/2013-09-ECM-group-picture.JPG" alt="group picture!" />
+        <footer>
+            <p>This is a picture from the Group coordinators meeting in Berlin, September 2013!</p>
+        </footer>
+    </div>
+
+    <p>If you want to use the <code>div class="captioned"</code> to display
+    a picture like the above, please specify a <code>style="max-width:
+        Xpx;"</code> property where X is the width of the picture.</p> 
+
+    <p>If you want to center the picture, add the <code>center-block</code>
+    class. If you want to make it float on the left, add the class
+    <code>left</code>, and <code>right</code> to make it float… to the
+    right!</p>
+
+    <h2>General design</h2>
+
+    <p>Please avoid adding inline css styles in your css. Use css classes
+    instead. If you need new classes, create new classes, or try to see if the
+    current design does not already solve what you want to do! Also check with
+    bootstrap if there’s not something standard to use. To understand how to
+    edit the stylesheets of the new design, <a
+    href="/contribute/web/css.html">head to the documentation</a>.</p>
+
+    <p>The new design uses bootstrap.  Visit <a
+        href="http://getbootstrap.com/">getbootstrap.com</a> for more
+    information about that. This should allow you to have some nice things on
+    fsfe.org pages now! However if you are doing something a bit out of the
+    ordinary or if you are not sure of yourself, do not hesitate to <a
+        href="https://mail.fsfeurope.org/mailman/listinfo/web">get in touch
+    with the web team</a>.</p>
+
+    <h2>Some notes on typography</h2>
+
+    <p>Typography matters. Please, if you share my love for typography, letters, spaces and symboles, try to use curly quotes and real apostrophes. I know this article did not respect that rule and used "stright quotes" instead of “curly quotes” because I needed to imitate the source code in order not to confuse anyone. However, for most articles on fsfe.org there’s no need for this. Especially, since we use utf-8, there’s no reason not to put some utf-8 in our pages! ☺ </p>
+
+
+    <h2>Other examples to take inspiration from</h2>
+
+    <p>This template should get you going for most articles, i.e. pages which
+    are mostly about “content”. However, not all pages are like that. So here’s
+    a selection of well designed pages that should help you to get some
+    inspiration from.</p>
+
+    <p>
+    If you have trouble producing the correct quotation marks for your language on your keyboard, look up the html escapes in
+    <a href="http://en.wikipedia.org/wiki/Quotation_mark_glyphs#Quotation_marks_in_Unicode">the wikipedia article</a> (or <a href="http://unicode-table.com/en/sets/quotation-marks/">unicode table</a>).
+    </p>
+
+    <ul>
+        <li><a href="http://test.fsfe.org/about/about.en.html">Subsite pages</a> for navigating to different parts of the website.</li>
+        <li><a href="http://test.fsfe.org/news/2014/news-20140116-01.en.html">Press Releases</a></li>
+        <li><a href="http://test.fsfe.org/news/nl/nl-201401.en.html">Newsletters</a></li>
+        <li><a href="http://test.fsfe.org/about/roy/roy.en.html">Personal Bio pages</a></li>
+        <li><a href="http://test.fsfe.org/fr/index.en.html">Country page</a></li>
+        <li><a href="http://test.fsfe.org/fellowship/card.en.html">Fellowship page</a> (You might also want to edit <code>/tools/menu-global.xml</code> and <code>/tools/texts-**.xml</code>)</li>
+    </ul>
+
+    <h2 id="fn">Footnotes</h2>
+    <ol> 
+      <li id="fn-name-that-footnote">
+      This is just a footnote! Please read <a href="/source/template.en.xhtml">the source code of this page</a> to see
+      how footnotes should be made.
+      <a href="#ref-name-that-footnote" class="ref">&#8617;</a></li>
+    </ol>
+
+    </div><!--/e-content-->
+
+  </body>
+<tags>
+  <tag>webmaster</tag>
+</tags>
+<sidebar news="ilovefs" promo="about-fsfe">
+    <div id="related-content">
+        <h3>Get involved</h3>
+
+        <ul><li><a href="/contribute/web/web.html">Webmastering</a></li>
+        <li><a href="/contribute/editors/editors.html">Information for editors</a></li>
+        <li><a href="/contribute/contribute.html">Contribute</a></li></ul> 
+        
+        <h4>Ongoing campaigns</h4>
+        <ul><li><a href="//documentfreedom.org">Document Freedom Day!</a></li></ul>
+    </div>
+</sidebar>
+<followup>subscribe-nl</followup>
+<timestamp>$Date: 2013-12-31 13:55:36 +0100 (Tue 31 Dec 2013) $ $Author: hugo $</timestamp>
+<date>
+  <original content="2014-01-05" />
+  <revision content="2014-01-06" />
+  <revision content="2014-01-07" />
+</date>
+<!--Please help FSFE make the switch to Creative Commons: use this license for your publication:-->
+<legal type="cc-license">
+  <license>https://creativecommons.org/licenses/by/4.0/deed.en</license>
+  <notice>This work is licensed under a Creative Commons Attribution 4.0 International License.</notice>
+</legal>
+<author id="roy" />
+<translator>Hugo Roy</translator>
+</html>

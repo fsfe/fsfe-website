@@ -1,0 +1,141 @@
+@import "style.less";
+
+/* apply fellowship colors*/
+@brand-primary: @fellowship-dark;
+@brand-secondary: @fellowship-bright;
+@brand-strong: @fellowship-strong;
+@brand-strong-semialpha: @fellowship-strong-semialpha;
+
+/* fsfe.org/fellowship pages */
+
+body {
+    background: url(/graphics/fellowship/plussy_tile_03.png) top left fixed #F9F9F9;
+    font-family: "Roboto", sans-serif;
+}
+
+#logo {
+    background: url(/graphics/fellowship/fellowship-page-logo-300x91.png) top left no-repeat;
+}
+
+#motto {
+    padding-left: 1em;
+}
+
+#masthead, #logo {
+    padding-left: 0;
+    min-height: 90px;
+    min-width: 300px;
+}
+
+#link-home a {
+    height: 90px;
+    width: 300px;
+}
+
+#menu {
+    @media (min-width: @screen-xs) {
+        margin-left: 300px;
+    }
+}
+
+#followup {
+    background: url(/graphics/fellowship/ribbon_fellowship2.png) no-repeat 100% -30px @body-bg; 
+    text-shadow: rgb(255,255,255) 0 0 .5em;
+
+    @media (min-width: @screen-sm) {
+        background: url(/graphics/fellowship/ribbon_fellowship2.png) no-repeat 100% -50% @body-bg; 
+    }
+}
+
+
+#full-menu {
+    background: url(/graphics/logo_bw_transparent_small.png) no-repeat top left @body-bg;
+}
+
+a.the-fellowship {
+    padding: 8px 20px 0 0;   
+    background: url(/graphics/plussy-bright-20.png) no-repeat top right transparent;
+}
+
+/* fsfe.org front page */
+
+.frontpage { 
+    #motto {
+        display: block;
+    }
+
+    #testimonials {
+        text-decoration: none !important;
+        color: @brand-strong;
+        text-shadow: 0px 1px 2px @brand-primary;
+    }
+    
+    #quote-box {
+        padding: 1.5em;
+        margin-bottom: 1em;
+        height: 250px;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        #quote-box-inner {
+        }
+
+        img {
+            float: left;
+            margin: 0 1em 1em 0;
+            max-width: 33%;
+        }
+    }
+
+    #events {
+
+        @media (min-width: @screen-md) {
+            float: right;
+            width: 50%;
+            margin: 2em 0 1em 1em;
+            padding: .5em 1.5em;
+        }
+
+        background: rgba(23,59,0,0.1);
+        margin-bottom: 2em;
+
+        h2 {
+            min-width: 0;
+            background: rgba(23,59,0,0.4);
+            color: #fff;
+            a {color: #FFF;}
+            margin: 0;
+            padding: 0.3em;
+            @media (min-width: @screen-md) {
+                margin: -0.3em -0.9em 0.5em;
+            }
+        }
+
+        .date {
+            color: @gray-light;
+            font-size: .9em;
+            font-weight: 300;
+        }
+    }
+}
+
+
+/* Testimonials divs */
+
+.testimonial {
+    overflow: auto;
+    clear: both;
+}
+
+.testimonial img {
+    float: left;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+@import "fonts.less";

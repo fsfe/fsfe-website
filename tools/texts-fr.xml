@@ -30,6 +30,15 @@ permise sur tout support, pourvu que cette notice soit préservée.
     <a href="/contribute/contribute.html">cette page</a> pour tout renseignement
     sur la manière de participer, entre autres, aux traductions.
   </text>
+  <text id="outdated-1">
+    <strong>Avertissement&#160;: </strong>
+    Cette page traduite pourrait ne pas être à jour par rapport au
+  </text>
+  <text id="outdated-2">
+    Merci de consulter 
+    <a href="/contribute/contribute.html">cette page</a> pour tout renseignement
+    sur la manière de participer, entre autres, aux traductions.
+  </text>
   <text id="notranslation">
     <strong>Avertissement&#160;: </strong>
     Cette page n'a pas encore été traduite. Vous voyez ci-dessous la
@@ -37,10 +46,22 @@ permise sur tout support, pourvu que cette notice soit préservée.
     <a href="/contribute/contribute.html">cette page</a> pour tout renseignement
     sur la manière de participer, entre autres, aux traductions.
   </text>
-
+ 
+  <text id="change-lang">Changer de langue</text> 
+  <text id="menu">Menu</text> 
+  <text id="content">Contenu</text> 
+  <text id="page-info">Infos de la page</text> 
+  <text id="rootpage">Accueil</text> 
+  <text id="close-this">Fermer&#160;ceci</text> 
+  <text id="sitemap">Plan du site</text> 
+ 
+  <text id="go-top">Aller en haut</text> 
   <text id="source">Code source</text>
   <text id="contact-us">Contactez-nous</text>
   <text id="translate">Traduire cette page&#160;?</text>
+  <text id="contribute-web">S’impliquer dans l’équipe Web</text> 
+  <text id="imprint">Mentions légales</text> 
+  <text id="privacy-policy">Politique de confidentialité</text>
 
   <!-- Info box -->
   <text id="under-construction">
@@ -48,7 +69,8 @@ permise sur tout support, pourvu que cette notice soit préservée.
   </text>
   
   <text id="search">Rechercher</text>
-  <text id="submit">S'abonner</text>
+  <text id="submit">Envoyer</text>
+  <text id="subscribe">S'abonner</text>
 
   <text id="language">Langue</text>
   
@@ -59,11 +81,17 @@ permise sur tout support, pourvu que cette notice soit préservée.
  <text id="revision">mis-à-jour le</text>
  <text id="download">Télécharger</text>
 
+  <!-- Conjunctions --> 
+  <text id="to">à</text> 
+  <text id="go-to">Aller&#160;à:</text> 
+
   <!-- Menu -->
   <text id="fsfe/about">À propos</text>
+  <text id="fsfe/mission">Mission</text>
   <text id="fsfe/projects">Notre action</text>
   <text id="fsfe/campaigns">Campagnes</text>
   <text id="fsfe/documents">Documents</text>
+  <text id="fsfe/contact">Nous contacter</text>
   <text id="fsfe/help">Contribuer</text>
   <text id="fsfe/donate">Dons</text>
   <text id="fsfe/order">Boutique</text>
@@ -71,13 +99,43 @@ permise sur tout support, pourvu que cette notice soit préservée.
   <text id="fsfe/press">Presse</text>
   <text id="fsfe/thankgnus">Nos donateurs</text>
   <text id="support/support">Nous soutenir</text>
-  <text id="fellowship/fellowship">Rejoignez-nous</text>
+  <text id="support/donate">Faire un don</text>
+  <text id="support/order">Boutique</text>
+  <text id="support/thankgnus">Nos donateurs</text>
+  <text id="support/funds">Comptabilité</text>
+  <text id="fellowship/fellowship">La Fellowship</text>
+  <text id="fellowship/join">Adhérer</text>
   <text id="fellowship/card">Carte</text>
   <text id="fellowship/communicate">Communiquer</text>
   <text id="fellowship/contact">Contact</text>
+  <text id="fellowship/login">Connexion</text>
   <text id="planet/planet">Planète</text>
   <text id="planet/blogs">Blogs</text>
+  <text id="news/news">Dernières nouvelles</text>
+  <text id="news/events">Évènements à venir</text>
+  <text id="news/press">Espace presse</text>
+  <text id="news/nl">Lettres d’actualité</text>
+  <text id="news/planet">Blogs du planète</text>
   <text id="wiki/wiki">Wiki</text>
+  <text id="wiki/events">Évènements de la Fellowship</text>
+  <text id="wiki/fellows">Fellows</text>
+  <text id="wiki/rc">Changements récents</text>
+  <text id="campaigns/dfd">Document Freedom Day</text> 
+  <text id="campaigns/fya">Libérez votre Android&#160;!</text> 
+  <text id="campaigns/pdf">Lecteurs PDF</text> 
+  <text id="campaigns/ayc">Questionnez vos candidats</text> 
+  <text id="campaigns/drm">DRM.info</text> 
+  <text id="ftf/legal">Assistance juridique</text> 
+  <text id="ftf/services">Services et fiducie</text> 
+  <text id="ftf/doc">Documentation</text> 
+  <text id="ftf/network">Réseau juridique</text> 
+  <text id="ftf/conference">Conférences</text> 
+  <text id="ftf/contact">Contacter l’équipe juridique FSFE</text> 
+  <text id="fs/fs">Logiciel Libre</text> 
+  <text id="fs/def">Définition</text> 
+  <text id="fs/soc">Société libre</text> 
+  <text id="fs/edu">Éducation</text> 
+  <text id="fs/buz">Économie</text> 
   <text id="fellowship/1-wiki">Wiki</text>
   <text id="fellowship/2-planet">Planète blogues</text>
   <text id="fellowship/3-join">Rejoindre</text>
@@ -136,17 +194,22 @@ permise sur tout support, pourvu que cette notice soit préservée.
   
   <text id="statement1">La Free Software Foundation Europe est une organisation à but non lucratif dédiée à la promotion des </text>
   <text id="statement-fs">Logiciels Libres</text>
-  <text id="statement2"> et œuvre en faveur de la liberté dans la société de l'information</text>
+  <text id="statement2">œuvrant en faveur de la liberté dans la société de l'information</text>
   
+  <text id="motto-fsfs">Logiciel Libre, Société Libre&#160;!</text> 
+  <text id="motto-planet">Planète, propulsé par <a href="https://fellowship.fsfe.org" class="the-fellowship">la Fellowship</a></text> 
+  <text id="motto-wiki">Wiki, propulsé par <a href="https://fellowship.fsfe.org" class="the-fellowship">la Fellowship</a></text> 
+
   <text id="learn-more">En savoir plus</text>
   
   <text id="news">Actualité</text>
   <text id="newsletter">Lettre d'information</text>
-  <text id="receive-newsletter">S'abonner à la lettre d'information mensuelle de la FSFE</text>
+  <text id="receive-newsletter">S'abonner à la lettre d'information mensuelle de la FSFE</text>  
+  <text id="subscribe-newsletter">S’abonner à la lettre d’information</text> 
   <text id="events">Évènements</text>
   <text id="more">En savoir plus</text>
-  <text id="morenews">Autres nouvelles…</text>
-  <text id="moreevents">Autres évènements…</text>
+  <text id="morenews">Voir toutes les actualités</text>
+  <text id="moreevents">Voir tous les évènements</text>
   
   <text id="email">Email</text>
   <text id="email-placeholder">Adresse email</text>
@@ -157,7 +220,17 @@ permise sur tout support, pourvu que cette notice soit préservée.
   <text id="team">Équipe</text>
   <text id="microblog">Microblog</text>
   
-  <text id="donate">Dons</text>
+  <text id="donate">Faire un don</text>
+  <text id="donate-paragraph"><p> 
+        La Free Software Foundation Europe est une organisation non-gouvernementale
+        à but non-lucratif. <a href="/work.fr.html">Notre travail</a> est rendu possible
+        grâce à une communauté de
+        <a href="/contribute/contribute.fr.html">volontaires</a>,
+        de <a href="http://fellowship.fsfe.org/">Fellows</a> et
+        de <a href="thankgnus.fr.html">donateurs</a>. Vos dons sont vitaux pour
+        notre force et notre autonomie. Ils nous permettent de continuer à défendre
+        les Logiciels Libres partout où cela est nécessaire et en toute indépendance.
+      </p></text> 
 
   <!-- Campaign box on front-page, translated texts -->
   <text id="cb-restricted-boot">«&#160;Secure Boot&#160;»&#160;: Qui contrôlera votre prochain ordinateur&#160;?</text>
@@ -168,8 +241,15 @@ permise sur tout support, pourvu que cette notice soit préservée.
   <!-- end of texts for the campaign box -->
   
   <text id="join">Rejoindre</text>  
-  <text id="subscribe">S'abonner</text>
+  <text id="join-paragraph"><p>
+    Devenez un Fellow de la FSFE pour soutenir notre action et nous aider à garantir notre indépendence financière. En rejoignant la Fellowship vous deviendrez un soutien durable de la FSFE — et vous aurez accès à notre infrastructure.
+  </p></text> 
+  <text id="join-fellowship">Rejoignez la Fellowship</text>
  
+  <text id="show-support">Montrez votre soutien&#160;!</text> 
+  <text id="show-support-paragraph"><p>La FSFE a besoin de voutre soutien pour que sa voix soit entendue&#160;! Chaque soutien est important&#160;!</p></text> 
+  <text id="support-fsfe">Je soutiens la FSFE&#160;!</text> 
+
   <!-- alt text for missing avatars -->
   <text id="no-avatar">Pas d'image</text>
   
@@ -177,4 +257,43 @@ permise sur tout support, pourvu que cette notice soit préservée.
   <text id="osig">Organisations</text>
   <text id="isig">Individus</text>
   
+  <!-- Sidebars -->
+  <text id="related-news">Communiqués à ce propos</text>
+  <text id="our-work">Notre action</text>
+  <text id="our-work-intro"><p>En tant qu'organisme non gouvernemental (ONG) à but non-lucratif, la Free Software Foundation Europe œuvre à la compréhension de l'intérêt des Logiciels Libres et des Standards Ouverts, ainsi qu'à obtenir le soutien de ceux-ci auprès des politiques, des entreprises, dans les lois et dans la société dans son ensemble.
+  </p></text>
+  <text id="about-fsfe">À propos de la FSFE</text>
+  <text id="about-fsfe-intro"><p>
+        La Free Software Foundation Europe (FSFE&#160;: Fondation européenne
+        pour le Logiciel Libre) est une organisation dédiée à la promotion des
+        Logiciels Libres œuvrant en faveur de la <strong>liberté</strong>
+        dans la société de l'information.
+      </p><p>
+      L'accès aux logiciels est déterminant dans la participation de chacun à la société numérique. Les libertés <a href="/about/basics/freesoftware.fr.html">d'utiliser, copier, modifier et redistribuer</a> les logiciels permettent donc d'assurer <strong>l'égalité</strong> de tous dans la participation à l'ère de l'information, ce qui est capital&#160;!
+      </p>
+  </text>
+  <text id="contribute">Contribuer</text>
+  <text id="contribute-intro"><p>Notre travail est rendu possible grâce à la communauté qui soutient notre engagement en faveur des Logiciels Libres. Si vous désirez nous aider à atteindre nos buts, sachez qu'il existe de nombreuses manières d'y contribuer, quelles que soient vos connaissances ou contraintes horaires.
+  </p></text>
+
+  <campaigns>
+    <campaign id="zacchiroli" tag="donors" pos="1">
+      <photo>/donate/zacchiroli.jpg</photo>
+      <text>
+          Un monde sans Logiciel Libre est un monde où nous sommes tous otages des 
+          fournisseurs de logiciels privateurs qui dirigeraient nos vies. Pour
+          lutter contre ce scénario-catastrophe, nous avons besoin d'organisations
+          comme la Free Software Foundation Europe.
+      </text>
+      <author>Stefano "Zack" Zacchiroli, ancien Debian Project Leader</author>
+      <link>/donate/donate.html</link>
+    </campaign>
+    <campaign id="dfd">
+        <photo>/graphics/robot-protest-light.svg</photo>
+        <text>
+            Célèbre l'accès à l'information et sensibilise aux Standards Ouverts.
+        </text>
+        <link>//documentfreedom.org</link>
+    </campaign>
+</campaigns>
 </textset>

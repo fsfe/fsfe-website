@@ -1,5 +1,21 @@
 @import "bootstrap/bootstrap.less";
+@import "style.less";
 
 #translations ul { width: 100%; }
 #motto { font-size: 2.7em; }
 #menu { .pull-right; text-align: right; }
+#direct-to-menu-list {visibility: hidden; display: none; }
+#menu-list, #search { display: inline-block; }
+#menu-list {.collapse.in;padding-bottom: 0.5em; }
+.no-js #menu-list {display: inline-block; padding-bottom: 0.5em; }
+.article, .planet {
+    #content, #planet-posts {
+        float: left;
+        width: 66%;
+    }
+    #sidebar {
+        float: left;
+        width: 33%;
+    }
+}
+#content + #sidebar { .article #sidebar; }

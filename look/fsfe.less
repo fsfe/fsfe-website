@@ -10,6 +10,9 @@ body {
 #logo {
     background: url(/graphics/logo_transparent.png) top left no-repeat;
 }
+.svg #logo {
+    background: url(/graphics/logo_transparent.svg) top left no-repeat;
+}
 
 #masthead, #logo {
     min-height: 85px;
@@ -33,6 +36,12 @@ body {
 
     @media (min-width: @screen-sm) {
         background: url(/graphics/ribbon.png) no-repeat 100% -100% @body-bg; 
+    }
+}
+
+.svg #followup {
+    @media (min-width: @screen-sm) {
+        background: url(/graphics/ribbon.svg) no-repeat 100% -100% @body-bg; 
     }
 }
 

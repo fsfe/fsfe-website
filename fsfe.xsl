@@ -202,7 +202,7 @@
       ]]>
       <![CDATA[
         [if (lt IE 9) & (!IEMobile)]>
-         <link rel="stylesheet" media="all" href="/look/iefix.min.css" type="text/css">
+         <link rel="stylesheet" media="all" href="/look/ie.min.css" type="text/css">
         <![endif]
       ]]>
     </xsl:comment>

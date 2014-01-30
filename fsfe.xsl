@@ -186,7 +186,6 @@
 
     <script src="/scripts/jquery-1.10.2.min.js"></script>
     <script src="/scripts/modernizr.custom.65251.js"></script>
-    <script src="/scripts/css3-mediaqueries.js"></script>
 
     <script>
       hljs.tabReplace = "  ";
@@ -199,6 +198,11 @@
         [if lt IE 9]>
          <script src="/scripts/html5shiv.js"></script>
          <script src="/scripts/respond.min.js"></script>
+         <![endif]
+      ]]>
+      <![CDATA[
+        [if (lt IE 9) & (!IEMobile)]>
+         <link rel="stylesheet" media="all" href="/look/iefix.min.css" type="text/css">
         <![endif]
       ]]>
     </xsl:comment>

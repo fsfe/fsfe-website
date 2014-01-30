@@ -1,0 +1,21 @@
+
+/* fixing fonts icons for no-script tools */
+
+.no-js {
+
+    .fa {
+        font-family: @font-family-sans-serif;
+    }
+    .fa.fa-home:before {
+        content: "";
+    }
+    .fa.fa-rss:before {
+        content: "RSS";
+    }
+    .fa.fa-comments-o:before {
+        content: "identi.ca";
+    }
+    .fa.fa-calendar-o:before {
+        content: "iCal";
+    }
+}

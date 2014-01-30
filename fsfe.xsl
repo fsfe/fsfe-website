@@ -1074,7 +1074,7 @@
                   <xsl:with-param name="id" select="'donate-paragraph'" />
                 </xsl:call-template>
                 <xsl:element name="a"> 
-                  <xsl:attribute name="href">/donate/donate.html?sidebar</xsl:attribute>
+                  <xsl:attribute name="href">/donate/donate.html#ref-sidebar</xsl:attribute>
                   <xsl:attribute name="class">learn-more big-donate</xsl:attribute>
                   <xsl:call-template name="fsfe-gettext">
                     <xsl:with-param name="id" select="'donate'" />
@@ -1214,7 +1214,7 @@
             </xsl:element>
             <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'donate-paragraph'" /></xsl:call-template>
             <xsl:element name="a">
-              <xsl:attribute name="href">/donate/donate.html?followupbox</xsl:attribute>
+              <xsl:attribute name="href">/donate/donate.html#ref-followupbox</xsl:attribute>
               <xsl:attribute name="class">btn</xsl:attribute>
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'donate'" /></xsl:call-template>
             </xsl:element>
@@ -1226,7 +1226,7 @@
             </xsl:element>
             <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'join-paragraph'" /></xsl:call-template>
             <xsl:element name="a">
-              <xsl:attribute name="href">/fellowship/join.html?ref=followupbox</xsl:attribute>
+              <xsl:attribute name="href">/fellowship/join.html#ref-followupbox</xsl:attribute>
               <xsl:attribute name="class">btn</xsl:attribute>
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'join'" /></xsl:call-template>
             </xsl:element>
@@ -1301,7 +1301,7 @@
             <xsl:element name="li">
               <xsl:attribute name="class">support</xsl:attribute>
               <xsl:element name="a">
-                <xsl:attribute name="href">/donate/donate.html?fullmenu</xsl:attribute>
+                <xsl:attribute name="href">/donate/donate.html#ref-fullmenu</xsl:attribute>
                 <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'support/donate'" /></xsl:call-template> 
               </xsl:element>
 

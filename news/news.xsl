@@ -52,7 +52,7 @@
       <xsl:attribute name="href">
         <xsl:value-of select="text()" />
       </xsl:attribute>
-      <xsl:attribute name="class=">learn-more</xsl:attribute>
+      <xsl:attribute name="class">learn-more</xsl:attribute>
         <xsl:value-of select="/buildinfo/document/text[@id='more']" />
     </xsl:element>
   </xsl:template>

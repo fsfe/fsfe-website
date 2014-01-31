@@ -16,7 +16,7 @@
           
           <div class="cont">
             <noscript>
-              <p class="txt">It is time once and for all to end the pointless 
+              <p class="text txt">It is time once and for all to end the pointless 
                              nonsense of one document sent on one platform being incomprehensible 
           		     to the user of another.
               </p><p><span class="author">
@@ -33,7 +33,7 @@
       var quotes = [
       <xsl:for-each select="/buildinfo/textset/quotes/quote[@tag=$tag or $tag='']">
       {
-        'txt': '<xsl:call-template name="escape"><xsl:with-param name="string" select="normalize-space(txt)"/></xsl:call-template>',
+        'text': '<xsl:call-template name="escape"><xsl:with-param name="string" select="normalize-space(text)"/></xsl:call-template>',
         'photo': '<xsl:value-of select="normalize-space(photo)"/>',
         'author': '<xsl:call-template name="escape"><xsl:with-param name="string" select="normalize-space(author)"/></xsl:call-template>',
         'license': '<xsl:call-template name="escape"><xsl:with-param name="string" select="normalize-space(license)"/></xsl:call-template>',
@@ -47,8 +47,8 @@
       
       	$('#quote-box-inner').fadeOut('slow', function() {
       	  $('#quote-box-inner div.img').html('<img src="'+quotes[index]['photo']+'"/>');
-      	  $('#quote-box-inner div.cont').html('<p class="txt">'
-      	                                + quotes[index]['txt']
+      	  $('#quote-box-inner div.cont').html('<p class="text txt">'
+      	                                + quotes[index]['text']
       	                                + '</a></p><p><span class="author">'
       	                                + quotes[index]['author']
       	                                + '</span><span class="license">'
@@ -85,8 +85,8 @@
           </div>
           
           <div class="cont">
-            <p class="txt">
-              <xsl:call-template name="escape"><xsl:with-param name="string" select="normalize-space(txt)"/></xsl:call-template>
+            <p class="text txt">
+              <xsl:call-template name="escape"><xsl:with-param name="string" select="normalize-space(text)"/></xsl:call-template>
             </p>
             <p><span class="author"><xsl:call-template name="escape">
 	      <xsl:with-param name="string" select="normalize-space(author)"/></xsl:call-template>

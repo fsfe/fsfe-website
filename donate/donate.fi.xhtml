@@ -5,39 +5,35 @@
     <title>FSFE - lahjoitukset</title>
   </head>
 
-  <body>
+  <body id="donate-fsfe">
     <h1>Lahjoita</h1>
 
-    <div id="introduction">
-      <div class="image">
-        <img src="money.jpg" alt="Lahjoita"/>
-      </div>
-
-      <p>
+      <div id="introduction">
+          <p>
         Free Software Foundation Europe on voittoa tavoittelematon, ei-valtiollinen 
         järjestö. <a href="/work.html">Työmme</a> on mahdollista vain yhteisön avulla, johon kuuluvat 
          <a href="/contribute/contribute.html">vapaaehtoiset</a>,
         <a href="http://fellowship.fsfe.org/index.fi.html">Fellowship-jäsenet</a> sekä
         <a href="thankgnus.html">lahjoittajat</a>. Lahjoituksesi ovat elintärkeitä vahvuuksiemme ja itsenäisyytemme varmistamiseksi. Niiden avulla voimme jatkaa työskentelyä vapaiden ohjelmistojen eteen kaikkialla missä se on tarpeen, riippumattomana äänenä.
       </p>
-    </div>
+  </div>
 
     <h2>Lahjoitustavat</h2>
 
     <h3>Verkkomaksu</h3>
 
-    <form action="/cgi-bin/donate.pl" method="post" id="donate">
-      <p>
+    <form action="/cgi-bin/donate.pl" method="post" id="donate" role="form">
+        <p class="form-group">
         <label for="name">Nimi (henkilö tai yritys)</label>
         <input id="name" name="name" type="text"/>
-        (jos et halua pysyä nimettömänä, tämä nimi mainitaan
-        <a href="thankgnus.html">lahjoittajien luettelossa</a>)
+        <span class="help-block">(jos et halua pysyä nimettömänä, tämä nimi mainitaan
+        <a href="thankgnus.html">lahjoittajien luettelossa</a>)</span>
       </p>
-      <p>
+      <p class="checkbox">
         <input name="anonymous" type="checkbox"/> Haluan pysyä nimettömänä
       </p>
-      <p>
-        <label for="email">E-mail</label>
+      <p class="form-group">
+        <label for="email">Sähköposti</label>
         <input id="email" name="email" type="email"/>
       </p>
       <fieldset>
@@ -89,7 +85,7 @@
              language and translate "Donation" and "Donate" -->
         <input type="hidden" name="language" value="fi"/>
         <input type="hidden" name="text" value="Lahjoitus"/>
-        <input type="submit" value="Lahjoita"/>
+        <input type="submit" id="donate-validate" value="Lahjoita"/>
       </p>
     </form>
 
@@ -132,12 +128,21 @@
       WWW-sivustollesi.
     </p>
 
+    <h2>Verovähennykset</h2>
+
     <p>
       Joissain maissa lahjoitukset voidaan vähentää veroista. Tällä hetkellä 
       tämä on mahdollista <a href="germany.html">Saksassa</a>, 
       <a href="netherlands.html">Hollannissa</a> ja
       <a href="switzerland.html">Sveitsissä</a>.
     </p>
+
+    <h2>Lisätietoja</h2>
+    <ul>
+        <li><a href="/about/funds/">FSFE:n varojen käyttö</a></li>
+        <li><a href="/donate/thankgnus.html">Lahjoittajamme</a></li>
+        <li><a href="/donate/hardware.html">Laitelahjoitukset</a></li>
+    </ul>
   </body>
 
   <timestamp>$Date: 2011-03-07 14:30:59 +0200 (ma, 07 maalis 2011) $ $Author: nicoulas $</timestamp>

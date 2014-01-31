@@ -111,7 +111,7 @@
     <div  id="campaigns-boxes" class="cycle-slideshow"  data-cycle-pause-on-hover="true" data-cycle-speed="500"  data-cycle-timeout="9000" data-cycle-slides="a"  data-cycle-fx="scrollHorz" data-cycle-swipe="true">
         <div class="cycle-pager"/>
 
-        <xsl:for-each select="   /buildinfo/textset/campaigns/campaign[ @tag='donors' or @tag='' or @id='dfd' ]">
+        <xsl:for-each select="   /buildinfo/textset/campaigns/campaign[ @id='zacchiroli' or @id='dfd' ]">
 
             <a href="{link}" class="campaign-box" id="{@id}">
                 <img src="{photo}" alt="" />

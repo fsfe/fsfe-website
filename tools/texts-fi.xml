@@ -66,12 +66,12 @@
   <text id="contact-us">Ota yhteyttä</text>
   <text id="translate">Suomenna tämä sivu?</text>
   <text id="contribute-web">Auta web-tiimiä</text>
-  <text id="imprint">Imprint</text>
-  <text id="privacy-policy">Privacy Policy</text>
+  <text id="imprint">Julkaisutiedot</text>
+  <text id="privacy-policy">Yksityisyyssuoja</text>
 
   <!-- Info box -->
   <text id="under-construction">
-    <strong>Warning: </strong>This page is under construction. Please do not attempt translation as its content is subject to change.
+    <strong>Huomautus: </strong>Tämä sivu on rakenteilla. Älä suunnittele sen kääntämistä suomeksi tässä vaiheessa, sillä sen sisältö voi muuttua.
   </text>
   <text id="project-complete">
 	  Tämä projekti on saatu päätökseen onnistuneesti. Nämä sivut säilytetään arkistointimielessä.
@@ -224,14 +224,13 @@
   
   <text id="donate">Lahjoitukset</text>
   <text id="donate-paragraph"><p>
-        The Free Software Foundation Europe is a non-profit non-governmental
-        organisation. <a href="/work.en.html">Our work</a> is made
-        possible by a community of
-        <a href="/contribute/contribute.en.html">volunteers</a>,
-        <a href="http://fellowship.fsfe.org">Fellows</a> and
-        <a href="thankgnus.en.html">donors</a>. Your donations are critical to our
-        strength and autonomy. They enable us to continue working for Free
-        Software wherever necessary, and to be an independent voice.
+        Free Software Foundation Europe on voittoa tavoittelematon, ei-valtiollinen 
+        järjestö. <a href="/work.html">Työmme</a> mahdollistaa yhteisö, johon kuuluvat 
+         <a href="/contribute/contribute.html">vapaaehtoiset</a>,
+        <a href="http://fellowship.fsfe.org/index.fi.html">Fellowship-jäsenet</a> sekä
+        <a href="thankgnus.html">lahjoittajat</a>. Lahjoituksesi ovat elintärkeitä vahvuuksiemme 
+        ja itsenäisyytemme varmistamiseksi. Niiden avulla voimme jatkaa työskentelyä vapaiden 
+        ohjelmistojen eteen kaikkialla missä se on tarpeen, riippumattomana äänenä.
       </p></text>
 
   <!-- Campaign box on front-page, translated texts -->
@@ -249,8 +248,8 @@
   <text id="ourwork2011">Työmme vuonna 2011</text>
   <text id="support">Tue FSFE:tä</text>  
   <text id="show-support">Show your support!</text>
-  <text id="show-support-paragraph"><p>FSFE needs your support to get its voice heard! Every hit counts!</p></text>
-  <text id="support-fsfe">I support the FSFE!</text>
+  <text id="show-support-paragraph"><p>FSFE tarvitsee Sinun tukeasi tullakseen kuulluksi!</p></text>
+  <text id="support-fsfe">Tuen FSFE:tä!</text>
   
   <!-- alt text for missing avatars -->
   <text id="no-avatar">Ei kuvaa</text>
@@ -263,23 +262,24 @@
   <!-- Sidebars -->
   <text id="related-news">Aiheeseen liittyviä uutisia</text>
   <text id="our-work">Työmme</text>
-  <text id="our-work-intro"><p>As a non-profit, non-governmental organisation, Free Software Foundation Europe works to create general understanding and support for Free Software and Open Standards in politics, business, law and society at large.</p></text>
+  <text id="our-work-intro"><p>Free Software Foundation Europe on voittoa tavoittelematon kansalaisjärjestö, joka työskentelee vapaiden ohjelmistojen ja avoimien standardien ymmärryksen lisäämiseksi politiikassa, liike-elämässä, juridisesti ja laajemmin yhteiskunnallisesti.</p></text>
   <text id="about-fsfe">Tietoja FSFE:stä</text>
   <text id="about-fsfe-intro">
       <p>
-        Free Software Foundation Europe is dedicated to the furthering of Free
-        Software and working for <strong>freedom</strong> in the emerging
-        digital society.
+        Free Software Foundation Europe on omistautunut vapaiden ohjelmistojen
+        edistämiselle ja työskentelee <strong>vapauksien</strong> eteen
+        kasvavassa digitaalisessa yhteiskunnassa.
       </p>
       <p>
-        Access to software determines who may participate in a digital
-        society.  The freedoms to <a href="/about/basics/freesoftware.en.html">use, study, share, and
-          improve</a> software allow <strong>equal</strong>
-        participation, and are extremely important.
+        Pääsy ohjelmistoihin määrää, ketkä voivat osallistua digitaaliseen 
+        yhteiskuntaan. Vapaudet <a href="/about/basics/freesoftware.fi.html">
+        käyttää, tutkia, jakaa ja parantaa</a> ohjelmistoja mahdollistavat 
+        <strong>tasa-arvoisen</strong> osallistumisen ja ovat erittäin 
+        tärkeitä.
       </p>
   </text>
-  <text id="contribute">Contribute</text>
-  <text id="contribute-intro"><p>We are a community of people who are committed to Free Software. Please join us in our work! There are many ways to do so and you will find a way that fits your interests and skills.</p></text>
+  <text id="contribute">Osallistu</text>
+  <text id="contribute-intro"><p>Olemme vapaita ohjelmistoja edistävistä ihmisistä koostuva yhteisö. Liity mukaan, työtä riittää! Jokaiselle löytyy kiinnostuksen kohteisiin ja taitoihin sopiva tapa alkaa toimia.</p></text>
     
   <!-- campaigns to be displayed in a rotating box -->
   <campaigns>

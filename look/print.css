@@ -13,8 +13,8 @@ a, a:link, a:visited {
   color: #000000;
 }
 
-/* Hide sidebar */
-#sidebar {
+/* Hide things */
+#sidebar, #full-menu, #followup, #top, .social-link {
   display: none;
 }
 

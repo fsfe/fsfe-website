@@ -548,6 +548,11 @@
           <xsl:value-of select="/buildinfo/document/body/@class" /> press release
         </xsl:attribute>
       </xsl:if>
+      <xsl:if test="string(/buildinfo/document/@newsdate) and /buildinfo/document/@type = 'newsletter'">
+        <xsl:attribute name="class">
+          <xsl:value-of select="/buildinfo/document/body/@class" /> newsletter article
+        </xsl:attribute>
+      </xsl:if>
 
       <!-- For pages used on external web servers, use absolute URLs -->
       <xsl:variable name="urlprefix"><xsl:if test="/buildinfo/document/@external">https://fsfe.org</xsl:if></xsl:variable>

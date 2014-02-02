@@ -1056,22 +1056,6 @@
                     </xsl:call-template>
                   </a>
                 </p>
-                <xsl:element name="h3">
-                  <xsl:attribute name="class">promo</xsl:attribute>
-                  <xsl:call-template name="fsfe-gettext">
-                    <xsl:with-param name="id" select="'about-fsfe'" />
-                  </xsl:call-template>
-                </xsl:element>
-                <xsl:call-template name="fsfe-gettext">
-                  <xsl:with-param name="id" select="'about-fsfe-intro'" />
-                </xsl:call-template>
-                <xsl:element name="a"> 
-                  <xsl:attribute name="href">/about/about.html</xsl:attribute>
-                  <xsl:attribute name="class">learn-more</xsl:attribute>
-                  <xsl:call-template name="fsfe-gettext">
-                    <xsl:with-param name="id" select="'learn-more'" />
-                  </xsl:call-template>
-                </xsl:element>
             </xsl:if>
             <!--xsl:if test = "/buildinfo/document/sidebar/@news">
               <xsl:element name="h4">

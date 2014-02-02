@@ -1002,7 +1002,7 @@
         </xsl:element>
         <!--/article#content-->
 
-        <xsl:if test = "/buildinfo/document/sidebar">
+        <xsl:if test = "/buildinfo/document/sidebar or /buildinfo/document/@newsdate">
           <xsl:element name="aside">
             <xsl:attribute name="id">sidebar</xsl:attribute>
 

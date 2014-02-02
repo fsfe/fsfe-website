@@ -1016,10 +1016,22 @@
                 </xsl:call-template>
               </xsl:element>
               <xsl:call-template name="subscribe-nl" />
+              <ul>
+                <li><a href="/news/newsletter.html">
+                  <xsl:call-template name="fsfe-gettext">
+                      <xsl:with-param name="id" select="'news/nl'" />
+                  </xsl:call-template>
+                </a></li>
+                <li><a href="/events/events.html">
+                  <xsl:call-template name="fsfe-gettext">
+                      <xsl:with-param name="id" select="'news/events'" />
+                  </xsl:call-template>
+                </a></li>
+              </ul>
             </xsl:if>
             
             <xsl:if test="string(/buildinfo/document/@newsdate) and count(/buildinfo/document/@type) = 0">
-                <h3 class="promo">
+                <h3>
                   <xsl:call-template name="fsfe-gettext">
                       <xsl:with-param name="id" select="'fsfe/press'" />
                   </xsl:call-template>

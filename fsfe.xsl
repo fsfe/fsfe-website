@@ -1015,8 +1015,6 @@
               <xsl:call-template name="subscribe-nl" />
             </xsl:if>
             
-            <xsl:apply-templates select="/buildinfo/document/sidebar/node()" />
-            
             <xsl:if test="string(/buildinfo/document/@newsdate) and count(/buildinfo/document/@type) = 0">
                 <h3 class="promo">
                   <xsl:call-template name="fsfe-gettext">

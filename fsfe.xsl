@@ -1128,7 +1128,8 @@
               </xsl:when>
               <xsl:when test = "/buildinfo/document/sidebar/@promo = 'no'">
               </xsl:when>
-              <xsl:otherwise test = "/buildinfo/document/sidebar/@promo = 'about-fsfe'">
+              <!--otherwise display about-fsfe-->
+              <xsl:otherwise>
                 <xsl:element name="h3">
                   <xsl:attribute name="class">promo</xsl:attribute>
                   <xsl:call-template name="fsfe-gettext">

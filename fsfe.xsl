@@ -543,6 +543,11 @@
       <xsl:if test="/buildinfo/document/body/@id">
         <xsl:attribute name="id"><xsl:value-of select="/buildinfo/document/body/@id" /></xsl:attribute>
       </xsl:if>
+      <xsl:if test="string(/buildinfo/document/@newsdate) and count(/buildinfo/document/@type) = 0">
+        <xsl:attribute name="class">
+          <xsl:value-of select="/buildinfo/document/body/@class" /> press release
+        </xsl:attribute>
+      </xsl:if>
 
       <!-- For pages used on external web servers, use absolute URLs -->
       <xsl:variable name="urlprefix"><xsl:if test="/buildinfo/document/@external">https://fsfe.org</xsl:if></xsl:variable>

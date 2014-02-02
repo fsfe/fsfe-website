@@ -439,18 +439,14 @@ div#subpages, .grid-row {
         margin-top: 1.5em;
         margin-bottom: 1.5em;
         margin-left: -1.5em;
+        @media (min-width: @screen-sm) {
+            margin-left: -3em;
+        }
     }
     .standout-text {
         .standout;
         padding-left: 1.5em;
-    }
-
-    @media (min-width: @screen-sm) {
-        .standout {
-            margin-left: -3em;
-        }
-        .standout-text {
-            margin-left: -3em;
+        @media (min-width: @screen-sm) {
             padding-left: 3em;
         }
     }

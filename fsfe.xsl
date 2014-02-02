@@ -1041,6 +1041,11 @@
                     </a>
                   </li>
                 </ul>
+              </xsl:if>
+
+            <xsl:apply-templates select="/buildinfo/document/sidebar/node()" />
+            
+            <xsl:if test="string(/buildinfo/document/@newsdate) and count(/buildinfo/document/@type) = 0">
                 <p>
                   <a href="/donate/index.html" class="small-donate">
                     <xsl:call-template name="fsfe-gettext">

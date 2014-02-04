@@ -433,23 +433,6 @@ div#subpages, .grid-row {
         }
     }
     
-/* blocks that stand out */
-
-    .standout {
-        margin-top: 1.5em;
-        margin-bottom: 1.5em;
-        margin-left: -1.5em;
-        @media (min-width: @screen-sm) {
-            margin-left: -3em;
-        }
-    }
-    .standout-text {
-        .standout;
-        padding-left: 1.5em;
-        @media (min-width: @screen-sm) {
-            padding-left: 3em;
-        }
-    }
 
     blockquote {
         .quote;
@@ -457,7 +440,6 @@ div#subpages, .grid-row {
         padding: 20px;
         /* does not work, weird: background-color: lighten(@brand-secondary, 77%);*/
         background-color: rgba(116, 140, 156,0.23); 
-        .standout-text;
 
         p {
             line-height: 1.35;
@@ -478,7 +460,6 @@ div#subpages, .grid-row {
     }
 
     pre {
-        .standout-text;
         font-size: 1em;
         padding-left: 3em;
         margin-bottom: 10px;
@@ -506,7 +487,6 @@ div#subpages, .grid-row {
     }
 
     .captioned {
-        .standout;
         text-align: center;
 
         img {
@@ -587,6 +567,42 @@ div#subpages, .grid-row {
             font-weight: 300;
         }
 
+    }
+/* blocks that stand out */
+
+    .standout {
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+        margin-left: -1.5em;
+        @media (min-width: @screen-sm) {
+            margin-left: -3em;
+        }
+    }
+    .standout-text {
+        .standout;
+        padding-left: 1.5em;
+        @media (min-width: @screen-sm) {
+            padding-left: 3em;
+        }
+    }
+    
+    blockquote,pre {
+        .standout-text;
+    }
+    .captioned {
+        .standout;
+    }
+    .captioned.center-block, .captioned.center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .captioned.right {
+        margin-left: 1.5em;
+        margin-right: 0;
+    }
+    .captioned.left {
+        margin-right: 1.5em;
+        margin-left: 0;
     }
 }
 

@@ -14,7 +14,7 @@ a, a:link, a:visited {
 }
 
 /* Hide things */
-#sidebar, #full-menu, #followup, #top, .social-link, #translations {
+#sidebar, #full-menu, #followup, #top, .social-link, #translations, #translations a, #translations ul {
   display: none;
 }
 

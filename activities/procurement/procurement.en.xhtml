@@ -5,14 +5,17 @@
   <title>Public Procurement - Overview - FSFE</title>
 </head>
 
-<body>
+<body class="article" microformats="h-entry">
 
- <p id="category"><a href="/work.html">Our Work</a></p>
+ <p id="category" class="p-category"><a href="/work.html">Our Work</a></p>
 
- <h1>Public procurement</h1>
+ <h1 class="p-name">Public procurement</h1>
 
- <div id="introduction">
+ <div class="e-content">
 
+ <div id="introduction" class="p-summary">
+
+  <!--What's this class background? Where does it come from? Please don't put random classes-->
   <p class="background">
   <a href="/freesoftware/basics/4freedoms.en.html">Free Software</a>
   is a perfect fit for the public sector. It is a public resource that
@@ -21,7 +24,7 @@
   and the freedom to interact with their government in the way that
   suits them best. 
   </p>
-  <p class="background">
+  <p class="background p-summary">
   But not all government institutions are taking advantage of Free
   Software. In consequence, public funds are being wasted, and
   that programs that should be free are being locked away. This
@@ -52,7 +55,7 @@ ways of buying software.
 
 
     <p>
-Public procurement spending equals nearly 20% of the EU's GDP <a href="#not1" id="anc1">[1]</a>. The
+Public procurement spending equals nearly 20% of the EU's GDP <a class="fn" id="ref-ofe-procurement" href="#fn-ofe-procurement">1</a>. The
 public sector's procurement choices have very real effects on the
 economy, and play a significant role in determining the sort of firms
 that thrive in the market.
@@ -60,7 +63,7 @@ that thrive in the market.
 Even with current procurement practices, Free Software already
 delivers very significant benefits for the European economy. Daffara
 (2012) estimates that Europeans enjoy 114 billion EUR per year in
-direct cost savings thanks to Free Software. <a href="#not2" id="anc2">[2]</a>.Anecdotal evidence points in the same direction. Many public adminstrations that begin using Free Software see their IT costs drop by 50-90%.
+direct cost savings thanks to Free Software. <a class="fn" id="ref-daffara-estimate" href="#fn-daffara-estimate">2</a>.Anecdotal evidence points in the same direction. Many public adminstrations that begin using Free Software see their IT costs drop by 50-90%.
     </p>
 
     <p>
@@ -105,7 +108,7 @@ excellent start.
 </p>
 
 
-    <h2>...and offers independent solutions</h2>
+<h2>…and offers independent solutions</h2>
 
 
     <p>
@@ -135,16 +138,32 @@ excellent start.
       <a href="https://fsfe.org/support/index.en.html">support us</a> in this effort.
     </p>
     
-    <hr />
     
-     <p><a id="not1" href="#anc1">[1]</a> Open Forum Europe (2013): <a href="http://openforumeurope.org/openprocurement/open-procurement-library/Report_2012_2ndSnapshot%20final.pdf/at_download/file">OFE Procurement Monitoring Report 2012 </a>, 2nd Snapshot, p. 2</p>
-    
-    <p><a id="not2" href="#anc2">[2]</a> Carlo Dafarra (2012): Estimating the Economic Contribution of Open Source Software to the European Economy. In: Shane Coughlan (ed.)(2012): <em>The First OpenForum Academy Conference Proceedings</em>, pp. 11-14</p>
-    
-    
-      <hr />
- 
 
+   
+
+    <h2 id="fn">Footnotes</h2>
+    <ol> 
+      <li id="fn-ofe-procurement">Open Forum Europe (2013): <a href="http://openforumeurope.org/openprocurement/open-procurement-library/Report_2012_2ndSnapshot%20final.pdf/at_download/file">OFE Procurement Monitoring Report 2012 </a>, 2nd Snapshot, p. 2
+      <a href="#ref-ofe-procurement" class="ref">&#8617;</a></li>
+      <li id="fn-daffara-estimate">Carlo Dafarra (2012): Estimating the Economic Contribution of Open Source Software to the European Economy. In: Shane Coughlan (ed.)(2012): <em>The First OpenForum Academy Conference Proceedings</em>, pp. 11-14
+      <a href="#ref-daffara-estimate" class="ref">&#8617;</a></li>
+    </ol>
+
+    </div><!--/e-content-->
+
+     
+
+
+<h2>Related News</h2>
+
+
+ <fetch-news />
+
+
+</body>
+<sidebar promo="our-work">
+<!-- FIXME: add related links to FSFE work & publications here -->
 <h2>Publications</h2>
 
  <dynamic-content />     
@@ -168,19 +187,9 @@ frontier</a> [pdf] (Karsten Gerloff, 2013) is a detailed discussion of procureme
  
 
  </ul>
-   
-
-<!-- FIXME: add related links to FSFE work & publications here -->
-     
-
-
-<h2>Related News</h2>
-
-
- <fetch-news />
 
 <h2>Blog entries</h2>
-
+<ul>
  <li><a href="https://blogs.fsfe.org/gerloff/2013/04/17/european-parliament-to-report-on-own-use-of-free-software/">European Parliament to report on own use of Free Software</a></li>
 
 <li><a href="https://blogs.fsfe.org/gerloff/2012/07/18/helping-the-european-parliament-to-release-its-own-free-software/">Helping the European Parliament to release its own Free Software</a></li>
@@ -189,7 +198,7 @@ frontier</a> [pdf] (Karsten Gerloff, 2013) is a detailed discussion of procureme
 The European Commission’s locked-in syndrome</a></li>
 
 <li><a href="https://blogs.fsfe.org/gerloff/2014/01/15/european-commission-still-in-denial-on-vendor-lock-in/"> European Commission still in denial on vendor lock-in</a></li>
-
+</ul>
  <h2>External links of interest</h2>
  
  <ul>
@@ -204,10 +213,7 @@ The European Commission’s locked-in syndrome</a></li>
   <li><a href="http://blogs.fsfe.org/greve/?p=160">"An emerging understanding of Open Standards"</a> by <a href="/about/greve/">Georg Greve</a></li>
    <li><a href="http://www.openforumeurope.org/openprocurement">Open Forum Europe, procurement work</a></li>
  </ul>
-
-
-</body>
-
+</sidebar>
 <timestamp>$Date: 2013-11-26 14:38:52 +0100 (Tue, 26 Nov 2013) $ $Author: max.mehl $</timestamp>
 
 </html>

@@ -1098,7 +1098,7 @@
                   <xsl:with-param name="id" select="'our-work-intro'" />
                 </xsl:call-template>
                 <xsl:element name="a"> 
-                  <xsl:attribute name="href">/about/about.html</xsl:attribute>
+                  <xsl:attribute name="href">/work.html</xsl:attribute>
                   <xsl:attribute name="class">learn-more</xsl:attribute>
                   <xsl:call-template name="fsfe-gettext">
                     <xsl:with-param name="id" select="'learn-more'" />

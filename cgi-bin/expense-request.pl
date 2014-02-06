@@ -150,7 +150,7 @@ $subject .= ")";
 
 my $boundary = "NextPart$reference";
 
-my $replyto = "finances\@fsfeurope.org, $who\@fsfeurope.org, $to1\@fsfeurope.org";
+my $replyto = "finance\@fsfeurope.org, $who\@fsfeurope.org, $to1\@fsfeurope.org";
 if ($budget2 ne "NONE") {
   $replyto .= ", $to2\@fsfeurope.org";
 }

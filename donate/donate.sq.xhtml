@@ -2,43 +2,40 @@
 
 <html>
   <head>
-    <title>FSFE - Dhuroni tani!</title>
+    <title>FSFE - Dhuroni tani!!</title>
   </head>
 
-  <body>
+  <body id="donate-fsfe">
     <h1>Dhuroni</h1>
 
-    <div id="introduction">
-      <div class="image">
-        <img src="money.jpg" alt="Dhuroni"/>
-      </div>
-
-      <p>
-        Free Software Foundation Europe është organizëm jofitimprurë dhe joqeveritar.
-        <a href="/work.html">Puna jonë</a> është mundësuar nga një bashkësi
+      <div id="introduction">
+          <p>
+        Free Software Foundation Europe është organizëm jofitimprurë dhe 
+        joqeveritar. <a href="/work.html">Puna jonë</a> bëhet e mundur
+        nga një bashkësi
         <a href="/contribute/contribute.html">vullnetarësh</a>,
         <a href="http://fellowship.fsfe.org">Anëtarësh Shok</a> dhe
         <a href="thankgnus.html">dhuruesish</a>. Dhurimet tuaja janë kritike për
         fuqinë dhe autonominë tonë. Ato na bëjnë të aftë të vazhdojmë punën me
-        Software-in e Lirë kurdo që të jetë e nevojshme, dhe që të jemi një zë i pavarur.
+        Software-in e Lirë, kurdo që të jetë e nevojshme, dhe që të jemi një zë i pavarur.
       </p>
-    </div>
+  </div>
 
-    <h2>Rrugë dhurimi</h2>
+    <h2>Mënyra dhurimi</h2>
 
-    <h3>Pagesa online</h3>
+    <h3>Pagesa në linjë</h3>
 
-    <form action="/cgi-bin/donate.pl" method="post" id="donate">
-      <p>
+    <form action="/cgi-bin/donate.pl" method="post" id="donate" role="form">
+        <p class="form-group">
         <label for="name">Emër (person ose kompani)</label>
         <input id="name" name="name" type="text"/>
-        (Veç në daçi të mbeteni anonim, ky emër do të shfaqet te
-        <a href="thankgnus.html">lista e dhuruesve</a>)
+        <span class="help-block">(Veç në daçi të shfaqeni i paemër, ky emër do të shfaqet te
+            the <a href="thankgnus.html">lista e dhuruesve</a>)</span>
       </p>
-      <p>
-        <input name="anonymous" type="checkbox"/> Dua të mbetem anonim
+      <p class="checkbox">
+        <input name="anonymous" type="checkbox"/> Dua të shfaqem i paemër
       </p>
-      <p>
+      <p class="form-group">
         <label for="email">E-mail</label>
         <input id="email" name="email" type="email"/>
       </p>
@@ -91,7 +88,7 @@
              language and translate "Donation" and "Donate" -->
         <input type="hidden" name="language" value="sq"/>
         <input type="hidden" name="text" value="Dhurim"/>
-        <input type="submit" value="Dhuroni"/>
+        <input type="submit" id="donate-validate" value="Dhuroni"/>
       </p>
     </form>
 
@@ -114,7 +111,7 @@
 
     <p>
       Si individ, mund të shihni gjithashtu edhe 
-      <a href="https://fellowship.fsfe.org/join">pjesëmarrjen në programin Fellowship of FSFE</a>
+      <a href="https://fellowship.fsfe.org/join">pjesëmarrjen në programin Fellowship of FSFE</a>,
       si rrugë alternative ose shtesë për një dhurim.
     </p>
     
@@ -123,9 +120,10 @@
     <p>
       Nëse dhuroni më shumë se 480 Euro në vit, do të donim ta shtonim emrin tuaj
       te <a href="thankgnus.html">lista jonë e dhuruesve</a>. Për dhurimet online
-      mund t'i vini shenjë kutizës "Dua të mbetem anonim" që të tregoni nëse e keni
-      a jo problem paraqitjen në këtë listë. Nëse dhurimin e dërgoni me transfertë bankare,
-      ju lutemi, <a href="mailto:office@fsfeurope.org">lidhuni me ne</a> për këtë.
+      mund t'i vini shenjë kutizës "Dua të shfaqem i paemër", që të tregoni nëse 
+      e keni apo jo problem paraqitjen në këtë listë. Nëse dhurimin e dërgoni me 
+      transfertë bankare, ju lutemi, <a href="mailto:office@fsfeurope.org">lidhuni 
+      me ne</a> për këtë.
     </p>
 
     <p>
@@ -134,15 +132,24 @@
       te faqja juaj web.
     </p>
 
+    <h2>Zbritje nga taksat</h2>
+
     <p>
       Në disa vende, dhurimet mund të zbriten nga të ardhurat e taksueshme.
       Deri më sot kjo është mundur në <a href="germany.html">Gjermani</a>,
       <a href="netherlands.html">Hollandë</a>, dhe
       <a href="switzerland.html">Zvicër</a>.
     </p>
+
+    <h2>Transparencë</h2>
+    <ul>
+        <li><a href="/about/funds/">Fondet e FSFE-së</a></li>
+        <li><a href="/donate/thankgnus.html">Dhuruesit tanë</a></li>
+        <li><a href="/donate/hardware.html">Dhurime në hardware</a></li>
+    </ul>
   </body>
 
-  <timestamp>$Date$ $Author$</timestamp>
+  <timestamp>$Date: 2014-01-30 15:31:50 +0200 (Thu, 30 Jan 2014) $ $Author: paul $</timestamp>
 </html>
 <!--
 Local Variables: ***

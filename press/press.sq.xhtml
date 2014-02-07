@@ -3,16 +3,30 @@
 <html>
   <head>
     <title>Zona e Shtypit - FSFE</title>
-    <link href="/style/grid.css" rel="stylesheet" />
+    <script>
+
+      /*
+       * Fields that carry values at page load will be emptied if this
+       * is called and the field has not been edited before.
+       */
+      var changedFields = new Array();
+
+      function removeValue(field) {
+        if (!changedFields[field.getAttribute("name")]) {
+          changedFields[field.getAttribute("name")] = true;
+          field.value = "";
+        }
+
+        return false;
+      }
+
+    </script>
   </head>
 
-  <body>
-    <h1>Shtypi</h1>
+  <body class="press" id="press-room">
+    <h1 class="heading">Shtypi</h1>
 
   <div id="introduction">
-      <div class="image">
-        <img src="/graphics/stars-smaller.png" alt="Yje"/>
-      </div>
 
 <p>
       FSFE-ja beson se cilët mund të marrin pjesë në shoqërinë

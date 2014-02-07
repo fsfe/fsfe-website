@@ -99,9 +99,15 @@ a.the-fellowship {
             background: url('/graphics/ilovefs-hashtag-campaignbox.png')  center 33%  no-repeat transparent;
             font-size: 1.3em;
 
-            img {height: 200px;margin-bottom: 10px;margin-top:-70px;max-width: none;}
-        }
+            img { float: right; margin-left: 1em; }
+            .text { .quote; } 
 
+            @media (min-width: @screen-md) {
+                img { margin-left: 3em; }
+                .text {font-size: 1.3em; }
+                .text, .author {max-width: 80ex; margin: 1em auto; display: block;}
+            }
+		}
     }
 }
 

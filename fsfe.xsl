@@ -96,17 +96,16 @@
           <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/fsfe.min.css</xsl:attribute>
           <xsl:attribute name="type">text/css</xsl:attribute>
         </xsl:element>
+        <xsl:if test="$mode = 'valentine'">
+          <xsl:element name="link">
+            <xsl:attribute name="rel">stylesheet</xsl:attribute>
+            <xsl:attribute name="media">all</xsl:attribute>
+            <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/valentine.min.css</xsl:attribute>
+            <xsl:attribute name="type">text/css</xsl:attribute>
+          </xsl:element>
+        </xsl:if>
       </xsl:otherwise>
     </xsl:choose>
-    
-    <xsl:if test="$mode = 'valentine'">
-      <xsl:element name="link">
-        <xsl:attribute name="rel">stylesheet</xsl:attribute>
-        <xsl:attribute name="media">all</xsl:attribute>
-        <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/valentine.min.css</xsl:attribute>
-        <xsl:attribute name="type">text/css</xsl:attribute>
-      </xsl:element>
-    </xsl:if>
     
     <xsl:element name="link">
       <xsl:attribute name="rel">stylesheet</xsl:attribute>

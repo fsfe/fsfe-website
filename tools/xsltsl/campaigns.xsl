@@ -12,7 +12,7 @@
         <div class="cycle-pager"/>
         <!--xsl:for-each select="   /buildinfo/textset/campaigns/campaign   "-->
 
-        <xsl:for-each select="   /buildinfo/textset/campaigns/campaign[  @id = 'zacchiroli' or @id = 'dfd'  ]  ">
+        <xsl:for-each select="   /buildinfo/textset/campaigns/campaign[  @id = 'zacchiroli' or @id = 'dfd' or @id = 'ilovefs' ]  ">
             <!--TODO select only campaigns asked from index.xsl-->
 
             <a href="{link}" class="campaign-box" id="{@id}">

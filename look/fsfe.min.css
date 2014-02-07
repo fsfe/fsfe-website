@@ -1342,7 +1342,7 @@ a.the-fellowship{padding:8px 20px 0 0;background:url(/graphics/plussy-bright-20.
 .frontpage #campaigns-boxes #dfd{text-align:center;background:url('/graphics/fellowship/plussy_tile_01-33alpha.png') rgba(118,181,32,0.7);font-size:1.3em}.frontpage #campaigns-boxes #dfd img{height:200px;margin-bottom:10px;margin-top:-70px;max-width:none}
 .frontpage #campaigns-boxes #ilovefs{text-align:center;background:url('/graphics/ilovefs-hashtag-campaignbox.png') center 33% no-repeat transparent;font-size:1.3em}.frontpage #campaigns-boxes #ilovefs img{float:right;margin-left:1em}
 .frontpage #campaigns-boxes #ilovefs .text{font-family:"Roboto Slab","DejaVu Serif",Georgia,"Times New Roman",Times,serif}
-@media (min-width:992px){.frontpage #campaigns-boxes #ilovefs img{margin-left:3em} .frontpage #campaigns-boxes #ilovefs .text{font-size:1.3em} .frontpage #campaigns-boxes #ilovefs .text,.frontpage #campaigns-boxes #ilovefs .author{max-width:80ex;margin:1em auto;display:block}}
+@media (min-width:992px){.frontpage #campaigns-boxes #ilovefs img{margin-left:3em} .frontpage #campaigns-boxes #ilovefs .text{font-size:1.3em}}
 #news{padding-bottom:1.5em}#news .dt-published{color:#999;font-size:.9em;display:block}@media (min-width:768px){#news .dt-published{display:inline-block;padding:0 .5em}}
 #news .entry h3{display:inline-block}
 #news .entry p.date{display:inline-block;color:#999;font-size:.9em;display:block;font-weight:300;margin-bottom:0}@media (min-width:768px){#news .entry p.date{display:inline-block;padding:0 .5em}}

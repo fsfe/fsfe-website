@@ -14,6 +14,7 @@
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
   
   <xsl:variable name="mode">
+    <!-- here you can set the mode to switch between normal and IloveFS style -->
     <xsl:value-of select="'normal'" /> <!-- can be either 'normal' or 'valentine' -->
   </xsl:variable>
   

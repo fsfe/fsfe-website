@@ -299,19 +299,19 @@
       <author>Stefano "Zack" Zacchiroli, Former Debian Project Leader</author>
       <link>/donate/donate.html</link>
     </campaign>
-    <campaign id="dfd">
-        <photo>/graphics/robot-protest-light.svg</photo>
-        <text>
-        Guter Zugang zu Informationen und mehr Aufklärung für Offene Standards.
-        </text>
-        <link>//documentfreedom.org</link>
-    </campaign>
     <campaign id="ilovefs">
         <photo></photo>
         <text>
         Zeige, dass Du Freie Software liebst und danke ihren Entwicklern.
         </text>
         <link>/campaigns/ilovefs/ilovefs.html</link>
+    </campaign>
+    <campaign id="dfd">
+        <photo>/graphics/robot-protest-light.svg</photo>
+        <text>
+        Guter Zugang zu Informationen und mehr Aufklärung für Offene Standards.
+        </text>
+        <link>//documentfreedom.org</link>
     </campaign>
     <campaign id="ganten" tag="donors fellowship" pos="2">
       <photo>/donate/ganten.jpg</photo>

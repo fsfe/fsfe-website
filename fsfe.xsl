@@ -14,7 +14,7 @@
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
   
   <xsl:variable name="mode">
-    <xsl:value-of select="'valentine'" /> <!-- can be either 'normal' or 'valentine' -->
+    <xsl:value-of select="'normal'" /> <!-- can be either 'normal' or 'valentine' -->
   </xsl:variable>
   
   <!-- The top level element of the input file is "buildinfo" -->

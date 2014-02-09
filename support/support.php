@@ -43,7 +43,7 @@ foreach ($_POST as $key => $value) {
 }
 
 if ($_POST['rname'] != '') {
-    mail("otto@fsfe.org", 'debug supporter form', "Reason: robot stopped\n\n" + $msg);
+    mail("otto@fsfe.org", 'Supporter form stopped robot submission', "Reason: robot stopped\n\n" + $msg);
     die("Thanks"); // ..for admitting that you are a robot!
 }
 

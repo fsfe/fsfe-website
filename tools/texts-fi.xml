@@ -106,7 +106,7 @@
   <text id="fsfe/thankgnus">Kiitokset</text>
   <!--text id="fsfe/lists">Sähköpostilistat</text-->
   <text id="support/support">Tue</text>
-  <text id="support/donate">Lahjoitukset</text>
+  <text id="support/donate">Donate</text>
   <text id="support/order">Kauppa</text>
   <text id="support/thankgnus">Lahjoittajamme</text>
   <text id="support/funds">Varojen käyttö</text>
@@ -140,6 +140,7 @@
   <text id="ftf/conference">Konferenssit</text>
   <text id="ftf/contact">Ota yhteyttä FSFE:n lakiasioiden tiimiin</text>
   <text id="fs/fs">Vapaa ohjelmisto</text>
+  <text id="fs/basics">Perustietoja vapaista ohjelmistoista</text>
   <text id="fs/def">Määritelmä</text>
   <text id="fs/soc">Vapaa yhteiskunta</text>
   <text id="fs/edu">Opetus</text>
@@ -222,17 +223,6 @@
   <text id="team">Tiimi</text>
   <text id="microblog">Mikroblogi</text>
   
-  <text id="donate">Lahjoitukset</text>
-  <text id="donate-paragraph"><p>
-        Free Software Foundation Europe on voittoa tavoittelematon, ei-valtiollinen 
-        järjestö. <a href="/work.html">Työmme</a> mahdollistaa yhteisö, johon kuuluvat 
-         <a href="/contribute/contribute.html">vapaaehtoiset</a>,
-        <a href="http://fellowship.fsfe.org/index.fi.html">Fellowship-jäsenet</a> sekä
-        <a href="thankgnus.html">lahjoittajat</a>. Lahjoituksesi ovat elintärkeitä vahvuuksiemme 
-        ja itsenäisyytemme varmistamiseksi. Niiden avulla voimme jatkaa työskentelyä vapaiden 
-        ohjelmistojen eteen kaikkialla missä se on tarpeen, riippumattomana äänenä.
-      </p></text>
-
   <!-- Campaign box on front-page, translated texts -->
   <text id="cb-restricted-boot">”Secure Boot”: Kuka hallitsee seuraavaa tietokonettasi?</text>
   <text id="cb-restricted-boot-link">Me vai laitevalmistajat?</text>
@@ -242,12 +232,12 @@
   <!-- end of texts for the campaign box -->
   
   <text id="join">Liity</text>  
-  <text id="join-paragraph"><p>Ryhtymällä FSFE:n Fellow-jäseneksi autat työtämme ja taloudellista riippumattomuuttamme. Liittymisesi lahjoituksella ylläpidät FSFE:tä sen Fellowship-jäsenenä ja voit käyttää eri palveluitamme.</p></text>
+  <text id="join-paragraph"><p>Alkamalla FSFE:n Fellow-jäseneksi autat työtämme ja taloudellista riippumattomuuttamme. Liittymällä ylläpidät FSFE:tä sen Fellowship-jäsenenä ja voit käyttää eri palveluitamme.</p></text>
   <text id="join-fellowship">Liity jäseneksi</text>
 
   <text id="ourwork2011">Työmme vuonna 2011</text>
   <text id="support">Tue FSFE:tä</text>  
-  <text id="show-support">Show your support!</text>
+  <text id="show-support">Näytä tukesi!</text>
   <text id="show-support-paragraph"><p>FSFE tarvitsee Sinun tukeasi tullakseen kuulluksi!</p></text>
   <text id="support-fsfe">Tuen FSFE:tä!</text>
   
@@ -303,6 +293,13 @@
       </text>
       <author>Stefano "Zack" Zacchiroli, Former Debian Project Leader</author>
       <link>/donate/donate.html</link>
+    </campaign>
+    <campaign id="ilovefs">
+        <photo></photo>
+        <text>
+        Näytä tunteesi vapaita ohjelmistoja kohtaan ja kiitä kehittäjiä!
+        </text>
+        <link>/campaigns/ilovefs/ilovefs.html</link>
     </campaign>
     <campaign id="dfd">
         <photo>/graphics/robot-protest-light.png</photo>

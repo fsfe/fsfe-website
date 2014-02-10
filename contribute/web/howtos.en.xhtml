@@ -42,13 +42,13 @@
     Free Software" campaign, paste:
     </p>
     <pre class="file">
-        &lt;campaign id="ilovefs"&gt; &lt;!-- Unique ID--&gt;
-        &lt;photo&gt;&lt;/photo&gt; &lt;!-- If there's an author, link to his photo here --&gt;
-        &lt;text&gt;
-        Show your love for Free Software and thank developers.
-        &lt;/text&gt;
-        &lt;link&gt;/campaigns/ilovefs/ilovefs.html&lt;/link&gt;
-        &lt;/campaign&gt;
+&lt;campaign id="ilovefs"&gt; &lt;!-- Unique ID--&gt;
+&lt;photo&gt;&lt;/photo&gt; &lt;!-- If there's an author, link to his photo here --&gt;
+&lt;text&gt;
+Show your love for Free Software and thank developers.
+&lt;/text&gt;
+&lt;link&gt;/campaigns/ilovefs/ilovefs.html&lt;/link&gt;
+&lt;/campaign&gt;
     </pre>
     <p>
     The order of appearance is defined by the position of the item (not 
@@ -73,7 +73,7 @@
     term like this:
     </p>
     <pre class="file">
-            &lt;xsl:for-each select="   /buildinfo/textset/campaigns/campaign[ @id='zacchiroli' or @id='dfd' or @id = 'ilovefs' ]"&gt;
+&lt;xsl:for-each select="   /buildinfo/textset/campaigns/campaign[ @id='zacchiroli' or @id='dfd' or @id = 'ilovefs' ]"&gt;
     </pre>
     <p>
     Insert your new campaign by the unique ID you have defined in the first 

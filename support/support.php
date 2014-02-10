@@ -33,17 +33,17 @@ if ($_POST['email'] == '' || $_POST['country_code'] == '') {
 }
 
 // debugging code
-$msg = "supporter form debug\n\n SERVER:\n";
+$msg = "Debug data:\n SERVER:\n";
 foreach ($_SERVER as $key => $value) {
     $msg .= "$key: $value\n";
 }
-$msg .= "\n\n POST:\n";
+$msg .= "\nPOST:\n";
 foreach ($_POST as $key => $value) {
     $msg .= "$key: $value\n";
 }
 
 if ($_POST['rname'] != '') {
-    mail("otto@fsfe.org", 'Supporter form stopped robot submission', "Reason: robot stopped\n\n" + $msg);
+    mail("otto@fsfe.org", 'Supporter form stopped robot submission', $msg);
     die("Thanks"); // ..for admitting that you are a robot!
 }
 

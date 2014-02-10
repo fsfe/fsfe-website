@@ -109,21 +109,31 @@
 
   <xsl:template match="campaigns">
     <div  id="campaigns-boxes" class="cycle-slideshow"  data-cycle-pause-on-hover="true" data-cycle-speed="500"  data-cycle-timeout="9000" data-cycle-slides="a"  data-cycle-fx="scrollHorz" data-cycle-swipe="true">
-        <div class="cycle-pager"/>
-
-        <xsl:for-each select="   /buildinfo/textset/campaigns/campaign[ @id='zacchiroli' or @id='dfd' or @id = 'ilovefs' or @id = 'fightback' ]">
-
-            <a href="{link}" class="campaign-box" id="{@id}">
-                <img src="{photo}" alt="" />
-                <p class="text">
-                    <xsl:value-of select="   text   " />
-                </p>
-                <span class="author">
-                    <xsl:value-of select="   author   " />
-                </span>
-            </a>
-        </xsl:for-each>
+      <div class="cycle-pager"/>
+      
+      <xsl:for-each select="/buildinfo/textsetbackup/campaigns/campaign[ @id='zacchiroli' or @id='dfd' or @id = 'ilovefs' or @id = 'fightback' ]">
+        <xsl:choose>
+          <xsl:when test="count(/buildinfo/textset/campaigns/campaign[@id = current()/@id]) > 0">
+            <xsl:apply-templates match="/buildinfo/textset/campaigns/campaign[@id = current()/@id]" mode="slideshow" />
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:apply-templates match="." mode="slideshow" />
+          </xsl:otherwise>
+      </xsl:for-each>
+      
     </div>
+  </xsl:template>
+  
+  <xsl:template match="campaign" mode="slideshow">
+    <a href="{link}" class="campaign-box" id="{@id}">
+      <img src="{photo}" alt="" />
+      <p class="text">
+        <xsl:value-of select="   text   " />
+      </p>
+      <span class="author">
+        <xsl:value-of select="   author   " />
+      </span>
+    </a>
   </xsl:template>
   
   <!-- display campaign box 4 -->

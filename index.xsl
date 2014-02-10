@@ -114,10 +114,10 @@
       <xsl:for-each select="/buildinfo/textsetbackup/campaigns/campaign[ @id='zacchiroli' or @id='dfd' or @id = 'ilovefs' or @id = 'fightback' ]">
         <xsl:choose>
           <xsl:when test="count(/buildinfo/textset/campaigns/campaign[@id = current()/@id]) > 0">
-            <xsl:apply-templates match="/buildinfo/textset/campaigns/campaign[@id = current()/@id]" mode="slideshow" />
+            <xsl:apply-templates select="/buildinfo/textset/campaigns/campaign[@id = current()/@id]" mode="slideshow" />
           </xsl:when>
           <xsl:otherwise>
-            <xsl:apply-templates match="." mode="slideshow" />
+            <xsl:apply-templates select="." mode="slideshow" />
           </xsl:otherwise>
         </xsl:choose>
       </xsl:for-each>

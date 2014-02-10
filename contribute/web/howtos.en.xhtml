@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<html>
+  <head>
+    <title>Documentation - Smaller Procedures</title>
+  </head>
+  <body class="article web" microformats="h-entry" id="documentation-tags">
+
+    <p id="category"><a href="/contribute/web/">Webmastering</a></p>
+    <h1 class="p-name">Documentation: Smaller Procedures</h1>
+
+    <div class="e-content">
+
+    <p id="introduction" class="p-summary">
+    Every time you edit news articles, events, or campaign pages you are 
+    already involved in some of the activities of the <a 
+    href="/contribute/web/">web team</a>. But don't be afraid, some of the 
+    fancy things of the new design (2014) like campaign boxes on the 
+    frontpage, sidebars and so on aren't very complicated to include - you 
+    only have to know how. This page collects small HowTos and you should 
+    insert a small step by step guide everytime you figured something out.
+    </p>
+    
+    <h2>Adding a new campaign box on the frontpage</h2>
+    <p>
+    You should know the rotating boxes on the start page of fsfe.org. They are 
+    very important to generate attention for current campaigns or activities. 
+    The following guide might look very complicated but in fact it's easier 
+    than you think.
+    </p>
+    
+    <p>
+    All in all, you have to edit following files: <var>/index.xsl, 
+    /look/fsfe.less and /tools/texts-en.xml</var>. Please test all changes in 
+    the test SVN first.
+    </p>
+    <p>
+    First, edit the file /tools/texts-en.xml. Here you can find lots of texts 
+    which appear on various places on the website. In this case, everything 
+    below <var>  &lt;!-- campaigns to be displayed in a rotating box 
+    --&gt;</var> is interesting for us. Have a look at the existing campaign 
+    items, copy and modify them. For example, to add a new box for the "I love 
+    Free Software" campaign, paste:
+    </p>
+    <pre class="file">
+        &lt;campaign id="ilovefs"&gt; &lt;!-- Unique ID--&gt;
+        &lt;photo&gt;&lt;/photo&gt; &lt;!-- If there's an author, link to his photo here --&gt;
+        &lt;text&gt;
+        Show your love for Free Software and thank developers.
+        &lt;/text&gt;
+        &lt;link&gt;/campaigns/ilovefs/ilovefs.html&lt;/link&gt;
+        &lt;/campaign&gt;
+    </pre>
+    <p>
+    The order of appearance is defined by the position of the item (not 
+    pos="").
+    </p>
+    <p>
+    Now that you have the text content, you should care about the design. For 
+    this, have a look at the CSS file <var>/look/fsfe.less</var>. The easiest 
+    way is to copy similar campaign boxes and modify things like the 
+    background image. The class of the new css item has to be the same as the 
+    unique ID in tools-en.xhtml, in this example "ilovefs"
+    </p>
+    <p> 
+    After editing the .less file, you have to compile it to fsfe.min.css. 
+    Afterwards, you should also compile fellowship.less and valentine.less. 
+    Have a look at our <a href="/contribute/web/css.html">CSS documentation
+    </a> for further info about that.
+    </p>
+    <p>
+    The last step is to tell the website generator to include your new 
+    campaign to the box. For this, open <var>/index.xsl</var> and search for a 
+    term like this:
+    </p>
+    <pre class="file">
+            &lt;xsl:for-each select="   /buildinfo/textset/campaigns/campaign[ @id='zacchiroli' or @id='dfd' or @id = 'ilovefs' ]"&gt;
+    </pre>
+    <p>
+    Insert your new campaign by the unique ID you have defined in the first 
+    and second step while separating it with an 'or' like you can see in the 
+    example above. The order does not matter, this is defined in 
+    /tools/texts-en.xml.
+    </p>
+    <p>
+    Now you should be able to commit it and see the results after the website 
+    has built. Now you only have an english text, you can also add translation 
+    to the other texts-**.xml files. For not already translated campaign 
+    texts, the website should fallback to the english version. Images and 
+    style are always the same, no matter which language, so you might consider 
+    to save some space for languages which mostly have longer words than 
+    English.
+    </p>
+    </div>
+    <!--/e-content-->
+    
+  </body>
+<sidebar promo="about-fsfe">
+    <div id="related-content">
+        <h3>Other howtos:</h3>
+        <ul>
+            <li>
+            <a href="/contribute/web/css.html">Edit the CSS with LESS</a>
+            </li>
+            <li>
+            <a href="/contribute/web/tagging.html">Use tags and article 
+            metadata implement a country page</a>
+            </li>
+            <li>
+            <a href="/contribute/template.html">A template article, to use the new webdesign</a>
+            </li>
+        </ul>
+    </div>
+</sidebar>
+<tags>
+    <tag>webmaster</tag>
+</tags>
+
+  <timestamp>$Date$ $Author$</timestamp>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

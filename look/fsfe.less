@@ -290,6 +290,32 @@ a.the-fellowship {
     img {display: none;}
 }
 
+/* Valentine for ILOVEFS style */
+
+.valentine-ilovefs {
+    #logo {
+        background: url(/graphics/logov.png) top left no-repeat;
+    }
+    .svg #logo {
+        background: url(/graphics/logov.svg) top left no-repeat;
+    }
+
+    #followup {
+        background: url(/graphics/ribbonv.png) no-repeat 100% -40px @body-bg; 
+
+        @media (min-width: @screen-sm) {
+            background: url(/graphics/ribbonv.png) no-repeat 100% -70px @body-bg; 
+        }
+    }
+}
+
+.svg .valentine-ilovefs #followup {
+    @media (min-width: @screen-sm) {
+        background: url(/graphics/ribbonv.svg) no-repeat 100% -70px @body-bg; 
+    }
+}
+
+
 
 /* Planet style */
 

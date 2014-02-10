@@ -119,6 +119,7 @@
           <xsl:otherwise>
             <xsl:apply-templates match="." mode="slideshow" />
           </xsl:otherwise>
+        </xsl:choose>
       </xsl:for-each>
       
     </div>

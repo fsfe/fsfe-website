@@ -127,10 +127,9 @@
   
   <xsl:template match="campaign" mode="slideshow">
       <a href="{link}" class="campaign-box" id="{@id}">
-          <!--FIXME only show the img when there is actually a picture element in the campaign source-->
-        <!--xsl:if test="/buildinfo/textset/campaigns/campaign[@id = current()/picture]"-->
-            <img src="{photo}" alt="" />
-        <!--/xsl:if-->
+          <xsl:if test=" photo != '' ">
+              <img src="{photo}" alt="" />
+          </xsl:if>
       <p class="text">
         <xsl:value-of select="   text   " />
       </p>

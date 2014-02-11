@@ -83,22 +83,21 @@ a.the-fellowship {
 
             img {max-width: 33%;}
         }
-        
-        #zacchiroli
-        , dfd
-        , fightback
-        , ilovefs {
-            .text { 
-                .quote; 
-            }
-        }
 
+        .campaign-box-center {
+            text-align: center;
+            font-size: 1.3em;
+        }
+        
         #zacchiroli {
             background: url('/graphics/group-blur-800.jpg')  center 33%  no-repeat #666;
             text-shadow: 0px 1px 2px rgb(0,0,0);
 
             img { float: right; margin-left: 1em; }
             .author:before {content: "– ";}
+            .text { 
+                .quote; 
+            }
 
             @media (min-width: @screen-md) {
                 img { margin-left: 3em; }
@@ -108,32 +107,19 @@ a.the-fellowship {
 
         }
         #dfd {
-            text-align: center;
+            .campaign-box-center;
             background: url('/graphics/fellowship/plussy_tile_01-33alpha.png') rgba(118, 181, 32,1);
-            font-size: 1.3em;
-
             img {height: 200px;margin-bottom: 10px;margin-top:-70px;max-width: none;}
         }
         
         #ilovefs {
-            text-align: center;
+            .campaign-box-center;
             background: url('/graphics/ilovefs-hashtag-campaignbox.png')  center 33%  no-repeat transparent;
-            font-size: 1.3em;
-
-            img { 
-                float: right; 
-                margin-left: 1em; 
-            }
         }
         
         #fightback {
-            text-align: center;
+            .campaign-box-center;
             background: url('/graphics/thedaywefightback.png')  center 33%  no-repeat transparent;
-
-            img { 
-                float: right; 
-                margin-left: 1em; 
-            }
         }
     }
 }

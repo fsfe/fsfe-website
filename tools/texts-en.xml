@@ -298,6 +298,12 @@
     <campaign id="fightback">
         <link>/news/2014/news-20140210-01.html</link>
     </campaign>
+    <campaign id="ilovefs">
+        <text>
+        Show your love for Free Software and thank developers.
+        </text>
+        <link>/campaigns/ilovefs/ilovefs.html</link>
+    </campaign>
     <campaign id="zacchiroli" tag="donors" pos="1">
       <photo>/donate/zacchiroli.jpg</photo>
       <text>
@@ -308,12 +314,6 @@
       </text>
       <author>Stefano "Zack" Zacchiroli, Former Debian Project Leader</author>
       <link>/donate/donate.html</link>
-    </campaign>
-    <campaign id="ilovefs">
-        <text>
-        Show your love for Free Software and thank developers.
-        </text>
-        <link>/campaigns/ilovefs/ilovefs.html</link>
     </campaign>
     <campaign id="dfd">
         <photo>/graphics/robot-protest-light.png</photo>

@@ -288,6 +288,13 @@
       <author>Reinhard Wiesemann - Linuxhotel</author>
       <link>/donate/donate.html</link>
     </campaign>
+    <campaign id="ilovefs">
+        <photo></photo>
+        <text>
+        Zeige, dass Du Freie Software liebst und danke ihren Entwicklern.
+        </text>
+        <link>/campaigns/ilovefs/ilovefs.html</link>
+    </campaign>
     <campaign id="zacchiroli" tag="donors" pos="1">
       <photo>/donate/zacchiroli.jpg</photo>
       <text>
@@ -298,13 +305,6 @@
       </text>
       <author>Stefano "Zack" Zacchiroli, Former Debian Project Leader</author>
       <link>/donate/donate.html</link>
-    </campaign>
-    <campaign id="ilovefs">
-        <photo></photo>
-        <text>
-        Zeige, dass Du Freie Software liebst und danke ihren Entwicklern.
-        </text>
-        <link>/campaigns/ilovefs/ilovefs.html</link>
     </campaign>
     <campaign id="dfd">
         <photo>/graphics/robot-protest-light.svg</photo>

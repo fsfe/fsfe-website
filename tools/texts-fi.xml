@@ -273,50 +273,12 @@
     
   <!-- campaigns to be displayed in a rotating box -->
   <campaigns>
-    <campaign id="wiesemann" tag="donors" pos="1">
-      <photo>/donate/wiesemann.jpg</photo>
-      <text>
-        A virtual world without Free Software is like a city in which you are
-        obliged to have a usage license for every pavement. We also need
-        commons in the virtual world.
-      </text>
-      <author>Reinhard Wiesemann - Linuxhotel</author>
-      <link>/donate/donate.html</link>
-    </campaign>
-    <campaign id="zacchiroli" tag="donors" pos="1">
-      <photo>/donate/zacchiroli.jpg</photo>
-      <text>
-        A world without Free Software is a world where we are all hostages of
-        proprietary software vendors that run our lives. To fight such a
-        nightmare scenario we need organisations like Free Software Foundation
-        Europe.
-      </text>
-      <author>Stefano "Zack" Zacchiroli, Former Debian Project Leader</author>
-      <link>/donate/donate.html</link>
-    </campaign>
     <campaign id="ilovefs">
         <photo></photo>
         <text>
         Näytä tunteesi vapaita ohjelmistoja kohtaan ja kiitä kehittäjiä!
         </text>
         <link>/campaigns/ilovefs/ilovefs.html</link>
-    </campaign>
-    <campaign id="dfd">
-        <photo>/graphics/robot-protest-light.png</photo>
-        <text>
-        Celebrating information accessibility and raising awareness of Open Standards.
-        </text>
-        <link>//documentfreedom.org</link>
-    </campaign>
-    <campaign id="ganten" tag="donors fellowship" pos="2">
-      <photo>/donate/ganten.jpg</photo>
-      <text>
-        Free Software is the solid grounding of our enterprise
-        solutions. The FSFE provides an important contribution to secure this
-        grounding, therefore we support the FSFE.
-      </text>
-      <author>Peter Ganten - Univention</author>
-      <link>/donate/donate.html</link>
     </campaign>
 
     <!-- campaigns for fellowship page -->

@@ -54,10 +54,10 @@ RewriteRule ^campaigns/ayc(.*) /campaigns/askyourcandidates$1 [redirect=permanen
 RewriteRule ^campaigns/ilovefs(/)?$ /campaigns/ilovefs/2014/ilovefs.html
 RewriteRule ^campaigns/ilovefs/ilovefs(.*)html$ /campaigns/ilovefs/2014/ilovefs$1html
 # Only for 2014, following 4 rules could be savely removed for 2015
-RewriteRule ^campaigns/ilovefs/2013/ilovefs(.*)html$ /campaigns/ilovefs/2014/ilovefs$1html
-RewriteRule ^campaigns/ilovefs/2013/banners(.*)html$ /campaigns/ilovefs/artwork/artwork$1html
-RewriteRule ^campaigns/ilovefs/2013/whylovefs(.*)html$ /campaigns/ilovefs/whylovefs/whylovefs$1html
-RewriteRule ^campaigns/ilovefs/2014/whylovefs(.*)html$ /campaigns/ilovefs/whylovefs/whylovefs$1html
+RewriteRule ^campaigns/ilovefs/2013/ilovefs(.*)html$ /campaigns/ilovefs/2014/ilovefs$1html [redirect=permanent]
+RewriteRule ^campaigns/ilovefs/2013/banners(.*)html$ /campaigns/ilovefs/artwork/artwork$1html [redirect=permanent]
+RewriteRule ^campaigns/ilovefs/2013/whylovefs(.*)html$ /campaigns/ilovefs/whylovefs/whylovefs$1html [redirect=permanent]
+RewriteRule ^campaigns/ilovefs/2014/whylovefs(.*)html$ /campaigns/ilovefs/whylovefs/whylovefs$1html [redirect=permanent]
 
 
 # Temporary fix unitl we have a /freesoftware dir for contribute/advocacy/cwfs.en.html

@@ -80,7 +80,7 @@ function send_mail ( $to, $from, $subject, $message, $bcc = NULL, $att = NULL, $
      
     // message
     $headers .= "--".$separator.$eol;
-    $headers .= "Content-Type: text/html; charset=\"iso-8859-1\"".$eol;
+    $headers .= "Content-Type: text/plain; charset=\"UTF-8\"".$eol;
     $headers .= "Content-Transfer-Encoding: 8bit".$eol.$eol;
     $headers .= $message.$eol.$eol;
      
@@ -93,7 +93,7 @@ function send_mail ( $to, $from, $subject, $message, $bcc = NULL, $att = NULL, $
     $headers .= $att_f.$eol.$eol;
     $headers .= "--".$separator."--";
   } else {
-    $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
   }
   
   return mail( $to, $subject, $message, $headers );

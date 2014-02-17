@@ -1,62 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <html>
   <head>
     <title>FSFE - Free Software Foundation Europe</title>
-    <script src="/scripts/jquery.cycle2.min.js" type="text/javascript"></script>
-    <meta name="description" content="Almennyttig organisation, der arbejder på at skabe generel forståelse af og støtte til softwarefrihed. Herunder nyheder, arrangementer og kampagner." />
-    <meta name="keywords" content="fsfe free software fri software open source foss floss oss fsf government regering public sector offentlig sektor gpl" />
+    <script src="/scripts/jquery.cycle2.min.js" type="text/javascript"/>
+    <meta name="description" content="Almennyttig organisation, der arbejder på at skabe generel forståelse af og støtte til softwarefrihed. Herunder nyheder, arrangementer og kampagner."/>
+    <meta name="keywords" content="fsfe free software fri software open source foss floss oss fsf government regering public sector offentlig sektor gpl"/>
   </head>
 
   <body class="frontpage" id="index-html">
 
-        <campaigns />
+        <campaigns/>
 
         <h1 class="hide">Free Software Foundation Europe</h1>
 
     <div id="feeds">
       <div id="news" class="section">
         <h2>
-          <a class="rss-feed" href="/news/news.rss"><img src="/graphics/rss.png" alt="Nyheds-RSS" title="nyheds-RSS-feed" /></a>
-          <a class="ical" href="http://identi.ca/fsfe"><img src="/graphics/identica.png" alt="identica" title="følg FSFE på identi.ca"/></a>
-          <a href="/news/news.html"><news-label /></a>
+          <a href="/news/news.html"><news-label/></a>
+          <a class="rss-feed" href="/news/news.rss" title="nyheds-RSS-feed"><i class="fa fa-rss"/></a>
+          <a class="ical" href="http://identi.ca/fsfe" title="følg FSFE på identi.ca"><i class="fa fa-comments-o"/></a>
         </h2>
 
-        <all-news />
+        <all-news/>
       </div>
 
       <div id="newsletter" class="section">
-        <h2><a href="/news/newsletter.html"><newsletter-label /></a></h2>
+        <h2><a href="/news/newsletter.html"><newsletter-label/></a></h2>
 
-        <div class="entry">
-          <p>
-            <strong><receive-newsletter />:</strong>
-          </p>
 
           <subscribe-nl/>
 
-          <ul>
-            <all-newsletters />
-            <li><a href="news/newsletter.html"><more-label /></a></li>
+          <ul id="more-news-list">
+              <li><a href="/news/news.html" class="learn-more">Se alle nyheder</a></li>
+              <li><a href="http://planet.fsfe.org/en" class="learn-more">Læs FSFE blogs</a></li>
           </ul>
 
-        </div>
+          <a class="big-donate" href="donate/donate.html#ref-frontpage">Donér til FSFE</a>
+
       </div>
+
+      <hr/>
 
       <div id="events" class="section">
         <h2>
-          <a class="rss-feed" href="/events/events.rss"><img src="/graphics/rss.png" alt="Arrangements-RSS" title="arrangements-RSS-feed" /></a>
-          <a class="ical" href="webcal://fsfe.org/events/events.ics"><img src="/graphics/ical.png" alt="iCal" title="FSFE-arrangementer som iCal-feed" /></a>
-          <a href="/events/events.html"><events-label /></a>
+          <a href="/events/events.html"><events-label/></a>
+          <a class="rss-feed" href="/events/events.rss" title="begivenheds-RSS-feed"><i class="fa fa-rss"/></a>
+          <a class="ical" href="webcal://fsfe.org/events/events.ics" title="FSFE begivenheder som iCal feed"><i class="fa fa-calendar-o"/></a>
         </h2>
 
-        <all-events />
+        <all-events/>
       </div>
     </div>
   </body>
 
+  <!--Do not translate this ↓-->
+  <followup>join</followup>
+
   <timestamp>$Date$ $Author$</timestamp>
-</html> 
+</html>
 <!--
 Local Variables: ***
 mode: xml ***

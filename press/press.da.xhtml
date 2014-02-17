@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <html>
   <head>
     <title>Presseværelse - FSFE</title>
-    <link href="/style/grid.css" rel="stylesheet" />
     <script>
 
       /*
@@ -24,13 +22,10 @@
     </script>
   </head>
 
-  <body>
-    <h1>Presse</h1>
+  <body class="press" id="press-room">
+    <h1 class="heading">Presse</h1>
 
   <div id="introduction">
-      <div class="image">
-        <img src="/graphics/stars-smaller.png" alt="Stars"/>
-      </div>
 
     <p>
       FSFE mener, at adgang til software afgør hvem der kan deltage i det 
@@ -65,8 +60,8 @@
 
         <form method="post" action="http://mail.fsfeurope.org/mailman/subscribe/press-release">
           <p>
-            <input type="text" name="email" value="dinmail@example.com" onClick="removeValue(this)" />
-            <input type="submit" value="Tilmeld" />
+            <input type="text" name="email" value="dinmail@example.com" onClick="removeValue(this)"/>
+            <input type="submit" value="Tilmeld"/>
           </p>
         </form>
 
@@ -80,7 +75,7 @@
       <div class="box">
         <h2><a href="/news/news.html" class="feed">Seneste nyheder</a></h2>
 
-        <dynamic-content />
+        <dynamic-content/>
       </div>
     </div>
 
@@ -94,9 +89,9 @@
     </p>
 
     <address>
-      Free Software Foundation Europe e.V.<br />
-      Schönhauser Allee 6/7<br />
-      10119 Berlin<br />
+      Free Software Foundation Europe e.V.<br/>
+      Schönhauser Allee 6/7<br/>
+      10119 Berlin<br/>
       Tyskland
     </address>
 

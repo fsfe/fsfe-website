@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<html>
+  <head>
+    <title>FSFE - Lahjoita nyt!</title>
+  </head>
+
+  <body id="donate-fsfe">
+    <h1>Lahjoita</h1>
+
+      <div id="introduction">
+        <p>
+          Free Software Foundation Europe on voittoa tavoittelematon 
+          kansalaisjärjestö. <a href="/work.html">Työmme</a> tekee 
+          mahdolliseksi <a href="/contribute/contribute.html">vapaa-ehtoisten
+          </a>, <a href="http://fellowship.fsfe.org">kannatajajäsenten</a> ja 
+          <a href="thankgnus.html">lahjoittajien</a> muodostama yhteisö. 
+          Lahjoituksesi ovat välttämättömiä toimintakykymme ja 
+          riippumattomuutemme kannalta. Ne mahdollistavat jatkuvuuden työllemme 
+          vapaiden ohjelmistojen puolesta, ja riippumattomana olemisen.
+      </p>
+  </div>
+
+    <h2>Lahjoitustapoja</h2>
+
+    <h3>Nettimaksu</h3>
+
+    <form action="/cgi-bin/donate.pl" method="post" id="donate" role="form">
+        <p class="form-group">
+        <label for="name">Nimi (henkilön tai yrityksen)</label>
+        <input id="name" name="name" type="text"/>
+        <span class="help-block">(Mikäli et halua pysyä nimettömänä, tämä nimi mainitaan <a href="thankgnus.html">lahjoittajat</a> sivullamme)</span>
+      </p>
+      <p class="checkbox">
+        <input name="anonymous" type="checkbox"/> Haluan pysyä nimettömänä
+      </p>
+      <p class="form-group">
+        <label for="email">Sähköposti</label>
+        <input id="email" name="email" type="email"/>
+      </p>
+      <fieldset>
+        <table>
+          <tr>
+            <th>Taso</th>
+            <th>Kuukausittainen lahjoitus</th>
+            <th>Vuosittainen lahjoitus</th>
+            <th>Kertalahjoitus</th>
+          </tr>
+          <tr>
+            <td><a href="thankgnus.html#donor">Lahjoittaja</a><br/></td>
+            <td><input name="amount" type="radio" value="m10" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 10</td>
+            <td><input name="amount" type="radio" value="y120" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 120</td>
+            <td><input name="amount" type="radio" value="o120" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 120</td>
+          </tr>
+          <tr>
+            <td><a href="thankgnus.html#bronze">Bronssi-lahjoittaja</a><br/></td>
+            <td><input name="amount" type="radio" value="m40" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 40</td>
+            <td><input name="amount" type="radio" value="y480" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 480</td>
+            <td><input name="amount" type="radio" value="o480" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 480</td>
+          </tr>
+          <tr>
+            <td><a href="thankgnus.html#silver">Hopea-lahjoittaja</a><br/></td>
+            <td><input name="amount" type="radio" value="m200" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 200</td>
+            <td><input name="amount" type="radio" value="y2400" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 2,400</td>
+            <td><input name="amount" type="radio" value="o2400" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 2,400</td>
+          </tr>
+          <tr>
+            <td><a href="thankgnus.html#gold">Kulta-lahjoittaja</a><br/></td>
+            <td><input name="amount" type="radio" value="m1000" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 1,000</td>
+            <td><input name="amount" type="radio" value="y12000" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 12,000</td>
+            <td><input name="amount" type="radio" value="o12000" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 12,000</td>
+          </tr>
+          <tr>
+            <td style="border-bottom: medium none;">Määritä summa:</td>
+            <td style="border-bottom: medium none;"><input name="amount" type="radio" value="mother" checked="checked" onclick="yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = false; yamount_other.disabled = true; oamount_other.disabled = true"/>
+            <input name="mamount_other" type="text" value="" palceholder="euros" style="width:5em"/></td>
+            <td style="border-bottom: medium none;"><input name="amount" type="radio" value="yother" checked="checked" onclick="mamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = false; oamount_other.disabled = true"/>
+            <input name="yamount_other" type="text" value="" palceholder="euros" style="width:5em"/></td>
+            <td style="border-bottom: medium none;"><input name="amount" type="radio" value="oother" checked="checked" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = false"/>
+            <input name="oamount_other" type="text" value="" palceholder="euros" style="width:5em"/></td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <p>
+        <!-- Translators: please replace "en" with the language code of your
+             language and translate "Donation" and "Donate" -->
+        <input type="hidden" name="language" value="fi"/>
+        <input type="hidden" name="text" value="Lahjoitus"/>
+        <input type="submit" id="donate-validate" value="Lahjoita"/>
+      </p>
+    </form>
+
+    <h3>Tilisiirto</h3>
+
+    <address>
+      Free Software Foundation Europe e.V.<br/>
+      IBAN: DE69 3602 0030 0003 0047 32<br/>
+      National-Bank Essen, Steinstraße 13, 40212 Dusseldorf, Germany<br/>
+      SWIFT/BIC: NBAG DE3E<br/>
+    </address>
+
+    <h3>Muut tavat</h3>
+
+    <p>
+      Mikäli yksikään edellisistä vaihtoehdoista ei sovi sinulle, niin 
+      <a href="mailto:office@fsfeurope.org">ota yhteyttä</a> ja me 
+      keskustelemme muista mahdollisuuksista kanssasi.
+    </p>
+
+    <p>
+      Yksityishenkilönä, voit harkita 
+      <a href="https://fellowship.fsfe.org/join">liittymistä FSFE:n 
+      kannattajajäseneksi</a> vaihtoehtona lahjoitukselle tai sen lisänä.
+    </p>
+    
+    <h2>Mitä tapahtuu seuraavaksi?</h2>
+
+    <p>
+      Mikäli lahjoitat enemmän kuin 480 Euroa vuodessa, me haluaisimme lisätä 
+      nimesi <a href="thankgnus.html">lahjoittajat listaamme</a>. Nettimaksun 
+      yhteydessä voit rastittaa ruudun "Haluan pysyä nimettömänä" kertoaksesi 
+      meille mikäli et halua meidän lisäävän nimeäsi listallemme. Jos lähetät 
+      lahjoituksesi tilisiirtona, niin <a href="mailto:office@fsfeurope.org"
+      >otathan meihin yhteyttä</a> tämän aisian tiimoilta.
+    </p>
+
+    <p>
+      Voit myös lisätä 
+      <a href="/about/graphics/sponsoring/sponsoring.html"
+      >sponsorointinappimme</a> omalle nettisivullesi tukesi osoituksena.
+    </p>
+
+    <h2>Verovähennys</h2>
+
+    <p>
+      Joissain maissa, meille tehtävät lahjoitukset voidaan vähentää 
+      tuloverosta. Tällä hetkellä tämä on mahdollista 
+      <a href="germany.html">Saksassa</a>, <a href="netherlands.html"
+      >Alankomaissa</a>, ja <a href="switzerland.html">Sveitsissä</a>.
+    </p>
+
+    <h2>Vastuullisuus</h2>
+    <ul>
+        <li><a href="/about/funds/">FSFE:n kassavirta</a></li>
+        <li><a href="/donate/thankgnus.html">Lahjoittajamme</a></li>
+        <li><a href="/donate/hardware.html">Laitelahjoitukset</a></li>
+    </ul>
+  </body>
+
+  <timestamp>$Date: 2014-01-30 14:31:50 +0100 (Thu, 30 Jan 2014) $ $Author: paul $</timestamp>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

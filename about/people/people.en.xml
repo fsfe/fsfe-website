@@ -142,12 +142,12 @@
    <avatar>/about/dengg/dengg-avatar.jpg</avatar>
   </person>
 
-  <person id="falgueyrac" avatar="no" teams="intern">
+  <person id="falgueyrac" avatar="no" teams="fr, core">
     <name>Lucile Falgueyrac</name>
     <country>FR</country>
-    <function>intern/f</function>
+    <!--function>intern/f</function-->
     <email>lucile.falg (at) fsfe (dot) org</email>
-    <employee>full/f</employee>
+    <!--employee>full/f</employee-->
   </person>
 
   <person id="gerloff" avatar="yes" association-member="yes" teams="de, council, ga">
@@ -218,6 +218,12 @@
     <link>http://blogs.fsfe.org/riepernet/</link>
     <avatar>/about/jensch/jensch-avatar.jpg</avatar>
   </person>    
+  
+  <person id="jost" avatar="no" teams="fr">
+      <name>Thomas Jost</name>
+      <country>FR</country>
+      <email>schnouki (at) fsfe (dot) org</email>
+  </person>
 
   <person id="jyrinki" avatar="yes" teams="fi, core">
     <name>Timo Jyrinki</name>
@@ -407,6 +413,12 @@
     <email>hugo (at) fsfe (dot) org</email>
     <link>/about/roy/roy.html</link>
     <avatar>/about/roy/roy-avatar.jpg</avatar>
+  </person>
+
+  <person id="roche" avatar="no" teams="fr">
+      <name>Michel Roche</name>
+      <country>FR</country>
+      <email>pichel (at) fsfe (dot) org</email>
   </person>
 
   <person id="sandklef" avatar="yes" association-member="yes" teams="ga">

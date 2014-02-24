@@ -98,9 +98,9 @@
           <xsl:value-of select="$img-path" />
         </xsl:attribute>
         <!-- And on error (if previous file does not exist), we load our default image -->
-        <xsl:attribute name="onerror">
+        <!-- xsl:attribute name="onerror">
           <xsl:text>this.src='/campaigns/valentine/valentine-358x60-en.png';</xsl:text>
-        </xsl:attribute>
+        </xsl:attribute -->
         <xsl:attribute name="alt"
                        value="No picture" />
       </xsl:element>
@@ -111,7 +111,7 @@
     <div  id="campaigns-boxes" class="cycle-slideshow"  data-cycle-pause-on-hover="true" data-cycle-speed="500"  data-cycle-timeout="9000" data-cycle-slides="a"  data-cycle-fx="scrollHorz" data-cycle-swipe="true">
       <div class="cycle-pager"/>
       
-      <xsl:for-each select="/buildinfo/textsetbackup/campaigns/campaign[ @id='zacchiroli' or @id='dfd' or @id = 'ilovefs' ]">
+      <xsl:for-each select="/buildinfo/textsetbackup/campaigns/campaign[ @id='zacchiroli' or @id='dfd' ]">
         <xsl:choose>
           <xsl:when test="count(/buildinfo/textset/campaigns/campaign[@id = current()/@id]) > 0">
             <xsl:apply-templates select="/buildinfo/textset/campaigns/campaign[@id = current()/@id]" mode="slideshow" />

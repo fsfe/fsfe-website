@@ -20,6 +20,13 @@
     </xsl:call-template>
   </xsl:template>
   
+  <!-- Copenhagen -->
+    <xsl:template match="copenhagen-members">
+    <xsl:call-template name="country-people-list">
+      <xsl:with-param name="team" select="'copenhagen'" />
+    </xsl:call-template>
+  </xsl:template>
+  
   <!-- Paris -->
   <xsl:template match="paris-members">
     <xsl:call-template name="country-people-list">

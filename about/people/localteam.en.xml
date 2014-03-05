@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+
+<!-- Do not translate this file -->
+
+<personset>
+  <!-- Please keep this list alphabetical by last name -->
+  <!--
+		This list contains all team members of FSFE plus people from associated organisations
+		If you want to add or update a person, please stick to following tagging sheme:
+		
+		id= Surname, without special characters
+		avatar= "yes" if you have one in the <avatar>-tags. "no" if the default avatar should be used. We recommend using one!
+		association-member= "yes" if you are in the General Assembly. You can ignore this tag if you are no GA member
+		teams= Insert the teams/groups of the person. There are several ones:
+			gb, de, fr, it...: Country teams
+			ga: General Assembly. Every member of the GA needs this tag!
+            core: Member of the European Core Team
+                The person is (deputy-)coordinator of some group (country, translation team, workgroup, but not local fellowship group)
+                The person is an essential part of the team
+                This tag is not needed if the person is member of the GA
+			council: The person is member of FSFE's council (president, vice, executive director)
+			ftf: member of Legal team, former Freedom Task Force
+            intern: The person is intern (dont forget to add <employee>part</employee>
+		<name> Full name of the person
+		<country> Where the person lives (TODO: Where is this used?!)
+		<function> The function(s) of the person (you can have more). This is a bit more complicated to express, as it uses several sources of possible functions:
+			- functions.en.xml: This is the most important file. Here are all "normal" functions like intern or sysadmin, but also "ranks" for other projects
+            - projects.en.xml: There are several projects like Legal Team (ftf), Education (education) or Open Standards (os)
+			- countries.en.xml: (translated) names for countries, i.e. for coordinators of a country team
+			- function-fellowship.en.xml: Functions related to the fellowship
+			- volunteers.en.xml: Functions for volunteers (web team, translation coordinator...)
+			Here are some examples:
+				<function>president/f</function>: Female president
+				<function>intern/m</function>: Male intern
+				<function country="DE">deputy/m</function>: Deputy of the German team
+				<function project="legal">coordinator/m</function>: Coordinator of the Legal team
+				<function volunteers="translators-it">coordinator/m</function>: Coordinator of italian translations
+			Note: You can use more than one function tag.
+			Note: If someone has no function inside the FSFE, he can ignore the function-tag (like person from associative organisations)
+			
+		<email> Email address of the person. Please use (at) and (dot) for spam protection reasons
+		<link> If someone clicks on a name, he can be redirected to a page with further information.
+			In most cases, it's /about/surname/surname.html (if there's a page)
+		<avatar> If you have "avatar=yes" in the <person>-tag, you can link to an image. 
+            Please only use local images like /about/surname/surname.png
+        <employee> Working status inside the FSFE, defined by the earned money. Only nexessary if the person receives money on a regular basis for his/her work
+            full: Person is working 4 or 5 days a week
+            part: Person is working 3 or less days a week
+            freelancer: Person is working on honorary basis, no matter which salary or how long
+  -->
+  <!--
+    Technical information:
+        The teampage derives its information from many files and XSL scripts.
+        - /about/people/people.en.xml (this file): All FSFE-teammembers, even those not belonging to team@ (i.e. country teams)#+
+        - /about/team.**.xhtml: The frame of the team page: Information texts, Headlines etc
+        - /about/team.xsl: In this file, tags like <council-members /> are defined. 
+        - /about/team.sources: Where to look for people-files, translations of functions/projects/countries and so on
+        - /tools/xsltsl/countries.xsl: The building of the team lists itself: Links, Background colors, inclusion of avatars etc 
+  -->
+  <!--
+    Improvement ideas:
+        When improving this teampage, we had some other ideas for which we had no time to implement:
+        - Not background colors but badges/text behind every person indicating, what salaray basis he/she is working on and what employment status
+        - A map where the residency of every team member is shown
+        - (Dynamic) overview of sectors (like education, policy, legal) and their members
+        - Making this whole thing more simple than it is now ;)  
+  -->
+  
+  <person id="albers" avatar="yes" teams="berlin">
+    <name>Erik Albers</name>
+    <country>DE</country>
+    <function>fellowship-coordinator/m</function>
+    <email>eal (at) fsfe (dot) org</email>
+    <link>/about/albers/albers.en.html</link>
+    <avatar>/about/albers/albers-avatar.jpg</avatar>
+  </person>
+
+  <person id="heintze" avatar="yes" teams="berlin">
+    <name>Silvan Heintze</name>
+    <email>silvan (at) fsfe (dot) org</email>
+    <link>http://blogs.fsfe.org/padams/</link>
+    <avatar></avatar>
+  </person>
+
+  <person id="roy" avatar="yes" association-member="yes" teams="paris">
+    <name>Hugo Roy</name>
+    <country>FR</country>
+    <function country="FR">coordinator/m</function>
+    <function project="ftf">deputy/m</function>
+    <email>hugo (at) fsfe (dot) org</email>
+    <link>/about/roy/roy.html</link>
+    <avatar>/about/roy/roy-avatar.jpg</avatar>
+  </person>
+  
+</personset>

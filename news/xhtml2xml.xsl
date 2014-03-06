@@ -33,7 +33,7 @@
 	</xsl:element>
 
 	<xsl:element name="body">
-	  <xsl:value-of select="/html/body/p[@newsteaser]"/>
+	  <xsl:value-of select="/html/body//p[@newsteaser]"/>
 	</xsl:element>
 	
 	<xsl:element name="body-complete">

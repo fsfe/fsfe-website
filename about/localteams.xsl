@@ -35,4 +35,11 @@
   </xsl:template>
 
 
+  <!-- Zurich -->
+  <xsl:template match="zurich-members">
+    <xsl:call-template name="country-people-list">
+      <xsl:with-param name="team" select="'zurich'" />
+    </xsl:call-template>
+  </xsl:template>
+  
 </xsl:stylesheet>

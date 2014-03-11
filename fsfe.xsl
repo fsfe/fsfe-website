@@ -708,7 +708,7 @@
 
               <xsl:element name="form">
                 <xsl:attribute name="method">get</xsl:attribute>
-                <xsl:attribute name="action">http://fsfe.yacy.net/yacysearch.html</xsl:attribute>
+                <xsl:attribute name="action">http://fsfe.yacy.de/yacysearch.html</xsl:attribute>
 
                 <xsl:element name="input">
                   <xsl:attribute name="type">hidden</xsl:attribute>

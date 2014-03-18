@@ -22,7 +22,9 @@
     <available size="S"/>
     <available size="M"/>
     <available size="L"/>
+<!--
     <available size="XL"/>
+-->
     <available size="XXL"/>
     <image
       small="/order/articles/images/thumbnails/tshirt-fsfs-brasil-front.jpg"
@@ -49,8 +51,8 @@
 
   <item type="t-shirt" id="tshirt-fsfs-orange" price="18.00" date="2010-02-08">
     <available size="S"/>
-	  <available size="M" />
 <!--
+	  <available size="M" />
 	  <available size="L" />
     <available size="XL"/>
 -->
@@ -101,7 +103,6 @@
 <!--
     <available size="XXL"/>
 -->
-    <available size="XXXL"/>
     <image
       small="/order/articles/images/thumbnails/tshirt-hacking-black-front.jpg"
       large="/order/articles/images/tshirt-hacking-black-front.jpg"/>
@@ -138,11 +139,9 @@
   </item>
 -->
   <item type="girlie" id="girlie-hacking-black" price="18.00" date="2008-02-23">
-<!--
     <available size="S"/>
     <available size="M"/>
     <available size="L"/>
--->
     <available size="XL"/>
     <image
       small="/order/articles/images/thumbnails/girlie-hacking-black-front.jpg"
@@ -331,14 +330,13 @@
       large="/order/articles/images/mug-fellowship-black.jpg"/>
   </item>
 
-<!--
   <item type="other" id="mug-fellowship-white" price="10.00" date="2008-03-01">
     <available size="#"/>
     <image
       small="/order/articles/images/thumbnails/mug-fellowship-white.jpg"
       large="/order/articles/images/mug-fellowship-white.jpg"/>
   </item>
--->
+
   <item type="other" id="lanyard-fellowship" price="3.00" date="2005-01-01">
     <available size="80cm"/>
     <image

@@ -6,6 +6,8 @@
   <item type="t-shirt" id="tshirt-dfd-purple" price="20.00" date="2014-03-18">
     <available size="S"/>
     <available size="M"/>
+    <available size="L"/>
+    <available size="XL"/>
  	<image
       small="/order/articles/images/thumbnails/tshirt-dfd-purple-front.jpg"/>
   </item>
@@ -13,15 +15,10 @@
   <item type="t-shirt" id="tshirt-dfd-black" price="20.00" date="2014-03-18">
     <available size="S"/>
     <available size="M"/>
+    <available size="L"/>
+    <available size="XL"/>
  	<image
       small="/order/articles/images/thumbnails/tshirt-dfd-black-front.jpg"/>
-  </item>
-
-  <item type="t-shirt" id="tshirt-dfd-purple" price="20.00" date="2014-03-18">
-    <available size="S"/>
-    <available size="M"/>
- 	<image
-      small="/order/articles/images/thumbnails/tshirt-dfd-purple-front.jpg"/>
   </item>
 
   <item type="t-shirt" id="tshirt-ilovefs-black" price="18.00" date="2012-10-06">
@@ -159,6 +156,25 @@
       large="/order/articles/images/tshirt-dfd-white-back.jpg"/>
   </item>
 -->
+  <item type="t-shirt" id="girlie-dfd-purple" price="20.00" date="2014-03-18">
+    <available size="S"/>
+    <available size="M"/>
+    <available size="L"/>
+    <available size="XL"/>
+ 	<image
+      small="/order/articles/images/thumbnails/girlie-dfd-purple-front.jpg"/>
+  </item>
+
+  <item type="t-shirt" id="girlie-dfd-black" price="20.00" date="2014-03-18">
+    <available size="S"/>
+    <available size="M"/>
+    <available size="L"/>
+    <available size="XL"/>
+ 	<image
+      small="/order/articles/images/thumbnails/girlie-dfd-black-front.jpg"/>
+  </item>
+
+
   <item type="girlie" id="girlie-hacking-black" price="18.00" date="2008-02-23">
     <available size="S"/>
     <available size="M"/>

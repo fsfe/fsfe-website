@@ -41,6 +41,7 @@ my $content = WebBuild::DynamicContent->new;
 my $query = CGI->new;
 
 my $lang = $query->param('lang');
+if (not $lang) {$lang = "en";}
 unless ($lang =~ m/^[a-z]{2}$/ and -f "$root/campaigns/pdfreaders/petition.$lang.html")
   {
     $lang = 'en';

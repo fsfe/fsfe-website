@@ -277,6 +277,13 @@ permise sur tout support, pourvu que cette notice soit préservée.
   </p></text>
 
   <campaigns>
+    <campaign id="dfd">
+        <photo>/graphics/robot-protest-light.png</photo>
+        <text>
+            Célèbre l'accès à l'information et sensibilise aux Standards Ouverts.
+        </text>
+        <link>//documentfreedom.org</link>
+    </campaign>
     <campaign id="ilovefs">
         <photo></photo>
         <text>
@@ -294,13 +301,6 @@ permise sur tout support, pourvu que cette notice soit préservée.
       </text>
       <author>Stefano "Zack" Zacchiroli, ancien Debian Project Leader</author>
       <link>/donate/donate.html</link>
-    </campaign>
-    <campaign id="dfd">
-        <photo>/graphics/robot-protest-light.png</photo>
-        <text>
-            Célèbre l'accès à l'information et sensibilise aux Standards Ouverts.
-        </text>
-        <link>//documentfreedom.org</link>
     </campaign>
 </campaigns>
 </textset>

@@ -201,6 +201,13 @@
     <email>paul (at) fsfe (dot) org</email>
     <employee>freelancer/m</employee>
   </person>
+  
+  <person id="harmuth" avatar="no" association-member="yes" teams="ga">
+    <name>Stefan Harmuth</name>
+    <country>DE</country>
+    <function>fellowship-representative/m</function>
+    <email>harmuth (at) fsfeurope (dot) org</email>
+  </person>
 
   <person id="jean" avatar="yes" teams="fr, core">
     <name>Nicolas Jean</name>
@@ -397,6 +404,7 @@
     <avatar>/about/rigamonti/rigamonti-avatar.jpg</avatar>
   </person>
 
+  <!--
   <person id="roussos" avatar="yes" association-member="yes" teams="ga">
     <name>Nikos Roussos</name>
     <country>GR</country>
@@ -405,6 +413,7 @@
     <link>http://wiki.fsfe.org/Fellows/comzeradd</link>
     <avatar>/about/roussos/roussos-avatar.jpg</avatar>
   </person>
+  -->
 
   <person id="roy" avatar="yes" association-member="yes" teams="fr, ftf, ga">
     <name>Hugo Roy</name>

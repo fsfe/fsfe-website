@@ -13,6 +13,15 @@
   -->
   
   <!-- Fill dynamic content -->  
+  
+  <!-- Austria -->
+  <xsl:template match="austria-members">
+    <xsl:call-template name="country-people-list">
+      <xsl:with-param name="team" select="'austria'" />
+    </xsl:call-template>
+  </xsl:template>
+   
+  
   <!-- Berlin -->
   <xsl:template match="berlin-members">
     <xsl:call-template name="country-people-list">
@@ -27,10 +36,24 @@
     </xsl:call-template>
   </xsl:template>
   
+    <!-- Linz -->
+  <xsl:template match="linz-members">
+    <xsl:call-template name="country-people-list">
+      <xsl:with-param name="team" select="'linz'" />
+    </xsl:call-template>
+  </xsl:template>
+  
   <!-- Paris -->
   <xsl:template match="paris-members">
     <xsl:call-template name="country-people-list">
       <xsl:with-param name="team" select="'paris'" />
+    </xsl:call-template>
+  </xsl:template>
+  
+    <!-- Vienna -->
+  <xsl:template match="vienna-members">
+    <xsl:call-template name="country-people-list">
+      <xsl:with-param name="team" select="'vienna'" />
     </xsl:call-template>
   </xsl:template>
 

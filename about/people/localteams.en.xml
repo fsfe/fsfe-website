@@ -66,6 +66,15 @@
         - Making this whole thing more simple than it is now ;)  
   -->
   
+  
+  <person id="agger" avatar="no" teams="copenhagen">
+    <name>Carsten Agger</name>
+    <country>DK</country>
+    <function country="DK">coordinator/m</function>
+    <email>agger (at) fsfe (dot) org</email>
+    <link></link>
+  </person>
+    
   <person id="albers" avatar="yes" teams="berlin">
     <name>Erik Albers</name>
     <country>DE</country>
@@ -73,10 +82,39 @@
     <link>/about/albers/albers.en.html</link>
     <avatar>/about/albers/albers-avatar.jpg</avatar>
   </person>
+  
+  <person id="bubestinger" avatar="no" teams="austria">
+    <name>Peter Bubestinger</name>
+    <country>AT</country>
+    <email>bubestinger (at) fsfe (dot) org</email>
+    <function country="AT">coordinator/m</function>
+  </person>
 
   <person id="heintze" avatar="no" teams="berlin">
     <name>Silvan Heintze</name>
     <email>silvan (at) fsfe (dot) org</email>
+  </person>
+  
+  <person id="hornbacher" avatar="no" teams="linz">
+    <name>Simon Hornbacher</name>
+    <country>AT</country>
+    <function>deputy/m</function>
+    <email>something (at) fsfe (dot) org</email>
+  </person>
+  
+  <person id="kneissl" avatar="yes" teams="austria">
+    <name>Jürgen Kneissl</name>
+    <country>AT</country>
+    <function country="AT">deputy/m</function>
+    <email>kneissl (at) fsfe (dot) org</email>
+    <avatar>/about/kneissl/kneissl-avatar.jpg</avatar>
+  </person>
+  
+  <person id="koppensteiner" avatar="no" teams="linz">
+    <name>Mario Koppensteiner</name>
+    <country>AT</country>
+    <function>coordinator/m</function>
+    <email>something (at) fsfe (dot) org</email>
   </person>
 
   <person id="roy" avatar="yes" association-member="yes" teams="paris">
@@ -87,13 +125,7 @@
     <avatar>/about/roy/roy-avatar.jpg</avatar>
   </person>
   
-  <person id="agger" avatar="no" teams="copenhagen">
-    <name>Carsten Agger</name>
-    <country>DK</country>
-    <function country="DK">coordinator/m</function>
-    <email>agger (at) fsfe (dot) org</email>
-    <link></link>
-  </person>
+  
   
   <!-- andere Funktion heißt deputy -->
   
@@ -103,6 +135,14 @@
     <function>coordinator/m</function>
     <email>swaechter (at) fsfe (dot) org</email>
     <link>http://wiki.fsfe.org/Fellows/swaechter</link>
+    <avatar>/fellowship/graphics/people/swaechter-avatar.jpeg</avatar>
+  </person>
+  
+   <person id="wg" avatar="no" teams="vienna">
+    <name>Wolfgang G</name>
+    <country>AT</country>
+    <function>coordinator/m</function>
+    <email>wg (at) fsfe (dot) org</email>
     <avatar>/fellowship/graphics/people/swaechter-avatar.jpeg</avatar>
   </person>
   

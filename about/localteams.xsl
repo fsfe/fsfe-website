@@ -20,6 +20,20 @@
       <xsl:with-param name="team" select="'austria'" />
     </xsl:call-template>
   </xsl:template>
+  
+  <!-- Barcelona -->
+  <xsl:template match="barcelona-members">
+    <xsl:call-template name="country-people-list">
+      <xsl:with-param name="team" select="'barcelona'" />
+    </xsl:call-template>
+  </xsl:template>
+  
+  <!-- Bari -->
+  <xsl:template match="bari-members">
+    <xsl:call-template name="country-people-list">
+      <xsl:with-param name="team" select="'bari'" />
+    </xsl:call-template>
+  </xsl:template>
    
   
   <!-- Berlin -->
@@ -29,10 +43,60 @@
     </xsl:call-template>
   </xsl:template>
   
+  <!-- Bonn -->
+  <xsl:template match="bonn-members">
+    <xsl:call-template name="country-people-list">
+      <xsl:with-param name="team" select="'bonn'" />
+    </xsl:call-template>
+  </xsl:template>
+  
+  <!-- Cologne -->
+  <xsl:template match="cologne-members">
+    <xsl:call-template name="country-people-list">
+      <xsl:with-param name="team" select="'cologne'" />
+    </xsl:call-template>
+  </xsl:template>
+  
+  
   <!-- Copenhagen -->
     <xsl:template match="copenhagen-members">
     <xsl:call-template name="country-people-list">
       <xsl:with-param name="team" select="'copenhagen'" />
+    </xsl:call-template>
+  </xsl:template>
+  
+  <!-- Düsseldorf -->
+  <xsl:template match="dusseldorf-members">
+    <xsl:call-template name="country-people-list">
+      <xsl:with-param name="team" select="'dusseldorf'" />
+    </xsl:call-template>
+  </xsl:template>
+  
+  <!-- Frankfurt -->
+  <xsl:template match="frankfurt-members">
+    <xsl:call-template name="country-people-list">
+      <xsl:with-param name="team" select="'frankfurt'" />
+    </xsl:call-template>
+  </xsl:template>
+  
+  <!-- Germany -->
+    <xsl:template match="germany-members">
+    <xsl:call-template name="country-people-list">
+      <xsl:with-param name="team" select="'germany'" />
+    </xsl:call-template>
+  </xsl:template>
+  
+  <!-- Hamburg -->
+  <xsl:template match="hamburg-members">
+    <xsl:call-template name="country-people-list">
+      <xsl:with-param name="team" select="'hamburg'" />
+    </xsl:call-template>
+  </xsl:template>
+  
+  <!-- Italy -->
+  <xsl:template match="italy-members">
+    <xsl:call-template name="country-people-list">
+      <xsl:with-param name="team" select="'italy'" />
     </xsl:call-template>
   </xsl:template>
   
@@ -43,10 +107,38 @@
     </xsl:call-template>
   </xsl:template>
   
+  <!-- München -->
+  <xsl:template match="munich-members">
+    <xsl:call-template name="country-people-list">
+      <xsl:with-param name="team" select="'munich'" />
+    </xsl:call-template>
+  </xsl:template>
+  
+  <!-- Netherlands -->
+  <xsl:template match="netherlands-members">
+    <xsl:call-template name="country-people-list">
+      <xsl:with-param name="team" select="'netherlands'" />
+    </xsl:call-template>
+  </xsl:template>
+  
   <!-- Paris -->
   <xsl:template match="paris-members">
     <xsl:call-template name="country-people-list">
       <xsl:with-param name="team" select="'paris'" />
+    </xsl:call-template>
+  </xsl:template>
+  
+  <!-- Spain -->
+  <xsl:template match="spain-members">
+    <xsl:call-template name="country-people-list">
+      <xsl:with-param name="team" select="'spain'" />
+    </xsl:call-template>
+  </xsl:template>
+  
+  <!-- Switzerland -->
+  <xsl:template match="switzerland-members">
+    <xsl:call-template name="country-people-list">
+      <xsl:with-param name="team" select="'switzerland'" />
     </xsl:call-template>
   </xsl:template>
   

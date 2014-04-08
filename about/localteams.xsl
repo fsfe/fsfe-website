@@ -14,6 +14,15 @@
   
   <!-- Fill dynamic content -->  
   
+  <!-- Athens -->
+    <xsl:template match="athens-members">
+    <xsl:call-template name="country-people-list">
+      <xsl:with-param name="team" select="'athens'" />
+    </xsl:call-template>
+  </xsl:template>
+  
+  
+  
   <!-- Austria -->
   <xsl:template match="austria-members">
     <xsl:call-template name="country-people-list">
@@ -59,16 +68,16 @@
   
   
   <!-- Copenhagen -->
-    <xsl:template match="copenhagen-members">
+    <xsl:template match="aarhus-members">
     <xsl:call-template name="country-people-list">
-      <xsl:with-param name="team" select="'copenhagen'" />
+      <xsl:with-param name="team" select="'aarhus'" />
     </xsl:call-template>
   </xsl:template>
   
   <!-- Düsseldorf -->
-  <xsl:template match="dusseldorf-members">
+  <xsl:template match="duesseldorf-members">
     <xsl:call-template name="country-people-list">
-      <xsl:with-param name="team" select="'dusseldorf'" />
+      <xsl:with-param name="team" select="'duesseldorf'" />
     </xsl:call-template>
   </xsl:template>
   
@@ -85,6 +94,8 @@
       <xsl:with-param name="team" select="'germany'" />
     </xsl:call-template>
   </xsl:template>
+  
+  
   
   <!-- Hamburg -->
   <xsl:template match="hamburg-members">
@@ -106,6 +117,14 @@
       <xsl:with-param name="team" select="'linz'" />
     </xsl:call-template>
   </xsl:template>
+  
+  <!-- Manchester -->
+    <xsl:template match="manchester-members">
+    <xsl:call-template name="country-people-list">
+      <xsl:with-param name="team" select="'manchester'" />
+    </xsl:call-template>
+  </xsl:template>
+  
   
   <!-- München -->
   <xsl:template match="munich-members">

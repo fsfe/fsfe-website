@@ -67,12 +67,12 @@
   -->
   
   
-  <person id="agger" avatar="no" teams="copenhagen">
+  <person id="agger" avatar="yes" teams="aarhus">
     <name>Carsten Agger</name>
     <country>DK</country>
     <function country="DK">coordinator/m</function>
     <email>agger (at) fsfe (dot) org</email>
-    <link></link>
+    <avatar>/fellowship/graphics/people/carstenagger-avatar.jpg</avatar>
   </person>
     
   <person id="albers" avatar="yes" teams="berlin">
@@ -113,6 +113,13 @@
     <email>maltegraebner (at) fsfe (dot) org</email>
     <function>coordinator/m</function>
   </person>
+  
+  <person id="harmuth" avatar="no" association-member="yes" teams="representatives">
+    <name>Stefan Harmuth</name>
+    <country>DE</country>
+    <function>fellowship-representative/m</function>
+    <email>harmuth (at) fsfeurope (dot) org</email>
+  </person>
 
   <person id="heintze" avatar="no" teams="berlin">
     <name>Silvan Heintze</name>
@@ -141,11 +148,12 @@
     <function>coordinator/m</function>
   </person>
   
-  <person id="kehl" avatar="no" teams="bonn">
+  <person id="kehl" avatar="yes" teams="bonn">
     <name>Robert Kehl</name>
     <country>DE</country>
     <email>rk23 (at) fsfe (dot) org</email>
     <function>deputy/m</function>
+    <avatar>/fellowship/graphics/people/robertkehl-avatar.jpg</avatar>
   </person>
   
   <person id="kesper" avatar="no" teams="bonn">
@@ -194,6 +202,14 @@
     <email>mvdan (at) fsfe (dot) org</email>
   </person>
   
+  <person id="morris" avatar="yes" teams="manchester">
+    <name>Anna Morris</name>
+    <country>DK</country>
+    <function country="DK">coordinator/f</function>
+    <email>anna.morris (at) fsfe (dot) org</email>
+    <avatar>/fellowship/graphics/people/annamorris-avatar.jpg</avatar>
+  </person>
+  
   <person id="ohnewein" avatar="yes" teams="italy">
     <name>Patrick Ohnewein</name>
     <country>IT</country>
@@ -201,12 +217,30 @@
     <email>ohnewein (at) fsfeurope (dot) org</email>
     <avatar>/about/ohnewein/ohnewein-avatar.jpg</avatar>
   </person>
+  
+  <person id="ojasild" avatar="yes" association-member="yes" teams="representatives">
+    <name>Heiki Ojasild</name>
+    <country>EE</country>
+    <function>fellowship-representative/m</function>
+    <email>repentinus (at) fsfe (dot) org</email>
+    <link>/about/ojasild/ojasild.html</link>
+    <avatar>/about/ojasild/ojasild-avatar.png</avatar>
+  </person>
 
   <person id="rathke" avatar="no" teams="hamburg">
     <name>Eike Rathke</name>
     <country>DE</country>
     <email>erack (at) fsfe (dot) org</email>
     <function>coordinator/m</function>
+  </person>
+  
+  <person id="roussos" avatar="yes" teams="athens">
+    <name>Nikos Roussos</name>
+    <country>GR</country>
+    <function>coordinator/m</function>
+    <email>comzeradd (at) fsfe (dot) org</email>
+    <link>http://wiki.fsfe.org/Fellows/comzeradd</link>
+    <avatar>/about/roussos/roussos-avatar.jpg</avatar>
   </person>
     
   <person id="roy" avatar="yes" teams="paris">
@@ -225,18 +259,19 @@
     <email>flx (at) fsfe (dot) org</email>
   </person>
   
-  <person id="stehmann" avatar="no" teams="dusseldorf">
+  <person id="stehmann" avatar="no" teams="duesseldorf">
     <name>Michael Stehmann</name>
     <country>DE</country>
     <function>coordinator/m</function>
     <email>something (at) fsfe (dot) org</email>
   </person>
   
-  <person id="verheesen" avatar="no" teams="netherlands">
+  <person id="verheesen" avatar="yes" teams="netherlands">
     <name>Maurice Verheesen</name>
     <country>NL</country>
     <function country="NL">deputy/m</function>
     <email>mho (at) fsfe (dot) org</email>
+    <avatar>/fellowship/graphics/people/mauriceverheesen-avatar.jpg</avatar>
   </person>
   
   

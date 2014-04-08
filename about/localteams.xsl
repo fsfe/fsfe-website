@@ -147,6 +147,13 @@
     </xsl:call-template>
   </xsl:template>
   
+  <!-- Representatives -->
+  <xsl:template match="representatives-members">
+    <xsl:call-template name="country-people-list">
+      <xsl:with-param name="team" select="'representatives'" />
+    </xsl:call-template>
+  </xsl:template>
+  
   <!-- Spain -->
   <xsl:template match="spain-members">
     <xsl:call-template name="country-people-list">

@@ -114,6 +114,15 @@
     <function>coordinator/m</function>
   </person>
   
+  <person id="grote" avatar="yes" association-member="yes" teams="germany">
+    <name>Torsten Grote</name>
+    <country>DE</country>
+    <function country="DE">deputy/m</function>
+    <email>grote (at) fsfeurope (dot) org</email>
+    <link>http://blogs.fsfe.org/torsten.grote/</link>
+    <avatar>/about/grote/grote-avatar.jpg</avatar>
+  </person>
+  
   <person id="harmuth" avatar="no" association-member="yes" teams="representatives">
     <name>Stefan Harmuth</name>
     <country>DE</country>
@@ -151,7 +160,8 @@
   <person id="kehl" avatar="yes" teams="bonn">
     <name>Robert Kehl</name>
     <country>DE</country>
-    <email>rk23 (at) fsfe (dot) org</email>
+    <email><a href="mailto:rk23@fsfe.org">rk23 (at) fsfe (dot) org</a></email>
+    <link>http://wiki.fsfe.org/Fellows/rk23</link>
     <function>deputy/m</function>
     <avatar>/fellowship/graphics/people/robertkehl-avatar.jpg</avatar>
   </person>
@@ -161,6 +171,7 @@
     <country>DE</country>
     <email>mkesper (at) fsfe (dot) org</email>
     <function>coordinator/m</function>
+    <avatar>/fellowship/graphics/people/michaelkesper-avatar.jpg</avatar>
   </person>
   
   <person id="kirschner" avatar="yes" association-member="yes" teams="germany">
@@ -245,10 +256,10 @@
   <person id="roussos" avatar="yes" teams="athens">
     <name>Nikos Roussos</name>
     <country>GR</country>
-    <function>coordinator/m</function>
+    <function country="GR">coordinator/m</function>
     <email>comzeradd (at) fsfe (dot) org</email>
-    <link>http://wiki.fsfe.org/Fellows/comzeradd</link>
-    <avatar>/about/roussos/roussos-avatar.jpg</avatar>
+    <link>http://www.roussos.cc/</link>
+    <avatar>/fellowship/graphics/people/nikosroussos-avatar.jpg</avatar>
   </person>
     
   <person id="roy" avatar="yes" teams="paris">

@@ -196,6 +196,7 @@
   <person id="hansch" avatar="no" teams="core">
     <name>Paul Hänsch</name>
     <country>DE</country>
+    <function volunteers="web">coordinator/m</function>
     <function>sysadmin/m</function>
     <email>paul (at) fsfe (dot) org</email>
     <employee>freelancer/m</employee>
@@ -211,7 +212,7 @@
   <person id="jean" avatar="yes" teams="fr, core">
     <name>Nicolas Jean</name>
     <country>FR</country>
-    <function volunteers="web">coordinator/m</function>
+    <function country="FR">deputy/m</function>
     <email>nicoulas (at) fsfe (dot) org</email>
     <link>/about/jean/jean.html</link>
     <avatar>/about/jean/jean-avatar.jpg</avatar>
@@ -307,14 +308,20 @@
     <email>machon (at) fsfeurope (dot) org</email>
   </person>
 
+  <person id="marrali" avatar="no" teams="intern">
+    <name>Michele Marrali</name>
+    <country>IT</country>
+    <function>intern/m</function>
+    <email>puster (at) fsfe (dot) org</email>
+    <employee>full/m</employee>
+  </person>
+
   <person id="mehl" avatar="yes" teams="de, intern">
     <name>Max Mehl</name>
     <country>DE</country>
-    <function>intern/m</function>
     <email>max.mehl (at) fsfe (dot) org</email>
     <link>/about/mehl/mehl.html</link>
     <avatar>/about/mehl/mehl-avatar.jpg</avatar>
-    <employee>full/m</employee>
   </person>
 
   <person id="mueller" avatar="yes" association-member="yes" teams="ga, council, at">

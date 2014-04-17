@@ -1,7 +1,7 @@
 XSL_STYLESHEET := xhtml2xml.xsl
 
 # For a correct generation of the link, use full path from this directory
-FILES := ../news/*/*.xhtml ../projects/*/*.xhtml
+FILES := ../pdfreaders/*/*.xhtml ../projects/*/*.xhtml
 
 # Trying to keep things readable
 ACTUAL_PREREQUISITE = ../$$(echo $* | sed -e 's,___,/,g').xhtml

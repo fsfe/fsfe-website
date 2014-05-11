@@ -4,6 +4,8 @@
   <head>
     <title>FSFE - Ευρωπαϊκό Ίδρυμα Ελεύθερου Λογισμικού</title>
     <script src="/scripts/jquery.cycle2.min.js" type="text/javascript"></script>
+    <meta name="description" content="Μη κερδοσκοπική οργάνωση αφοσιωμένη στην απόκτηση γενικής κατανόησης και υποστήριξης για την ελευθερία στο λογισμικό. Περιλαμβάνει ειδήσεις, εκδηλώσεις και δράσεις." />
+    <meta name="keywords" content="fsfe ελεύθερο λογισμικό ανοιχτός κώδικας foss floss oss fsf κυβέρνηση δημόσιος τομέας gpl" />
   </head>
 
   <body class="frontpage" id="index-html">
@@ -15,9 +17,9 @@
     <div id="feeds">
       <div id="news" class="section">
         <h2>
-          <a class="rss-feed" href="/news/news.rss"><img src="/graphics/rss.png" alt="News RSS" title="news RSS feed" /></a>
-          <a class="ical" href="http://identi.ca/fsfe"><img src="/graphics/identica.png" alt="identica" title="follow FSFE on identi.ca"/></a>
           <a href="/news/news.html"><news-label /></a>
+          <a class="rss-feed" href="/news/news.rss" title="news RSS feed"><i class="fa fa-rss"></i></a>
+          <a class="ical" href="http://identi.ca/fsfe" title="ακολουθήστε το FSFE στο identi.ca"><i class="fa fa-comments-o"></i></a>
         </h2>
 
         <all-news />
@@ -26,31 +28,33 @@
       <div id="newsletter" class="section">
         <h2><a href="/news/newsletter.html"><newsletter-label /></a></h2>
 
-        <div class="entry">
-          <p>
-            <strong><receive-newsletter />:</strong>
-          </p>
-
           <subscribe-nl />
 
-          <ul>
-            <all-newsletters />
-            <li><a href="news/newsletter.html"><more-label /></a></li>
+          <ul id="more-news-list">
+              <li><a href="/news/news.html" class="learn-more">Δείτε όλες τις ειδήσεις</a></li>
+              <li><a href="http://planet.fsfe.org/en" class="learn-more">Διαβάστε τα ιστολόγια του FSFE</a></li>
           </ul>
-        </div>
+
+          <a class="big-donate" href="donate/donate.html#ref-frontpage">Δωρεές προς το FSFE</a>
+
       </div>
+
+      <hr />
 
       <div id="events" class="section">
         <h2>
-          <a class="rss-feed" href="/events/events.rss"><img src="/graphics/rss.png" alt="Events RSS" title="events RSS feed" /></a>
-          <a class="ical" href="webcal://fsfe.org/events/events.ics"><img src="/graphics/ical.png" alt="iCal" title="FSFE events as iCal feed" /></a>
           <a href="/events/events.html"><events-label /></a>
+          <a class="rss-feed" href="/events/events.rss" title="events RSS feed"><i class="fa fa-rss"></i></a>
+          <a class="ical" href="webcal://fsfe.org/events/events.ics" title="Εκδηλώσεις του FSFE ως ροή iCal"><i class="fa fa-calendar-o"></i></a>
         </h2>
 
         <all-events />
       </div>
     </div>
   </body>
+
+  <!--Do not translate this ↓-->
+  <followup>join</followup>
 
   <timestamp>$Date$ $Author$</timestamp>
 </html> 

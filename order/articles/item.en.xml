@@ -4,27 +4,28 @@
 
 <itemset>
   <item type="tshirt" id="tshirt-dfd-purple" price="20.00" date="2014-03-18">
-    <available size="S"/>
     <available size="M"/>
 <!--
+    <available size="S"/>
     <available size="L"/>
--->
     <available size="XL"/>
+-->
  	<image
       small="/order/articles/images/thumbnails/tshirt-dfd-purple-front.jpg"
-      large="/order/articles/images/tshirt-dfd-purple-front.jpg"
-/>
+      large="/order/articles/images/tshirt-dfd-purple-front.jpg"/>
   </item>
 
+<!--
   <item type="tshirt" id="tshirt-dfd-black" price="20.00" date="2014-03-18">
-    <available size="S"/>
     <available size="M"/>
+    <available size="S"/>
     <available size="L"/>
     <available size="XL"/>
  	<image
       small="/order/articles/images/thumbnails/tshirt-dfd-black-front.jpg"
       large="/order/articles/images/tshirt-dfd-black-front.jpg"/>
   </item>
+-->
 
   <item type="tshirt" id="tshirt-ilovefs-blue" price="20.00" date="2012-10-07">
     <available size="S"/>
@@ -180,8 +181,8 @@
 <!--
     <available size="S"/>
     <available size="M"/>
--->
     <available size="L"/>
+-->
     <available size="XL"/>
  	<image
       small="/order/articles/images/thumbnails/girlie-dfd-purple-front.jpg"
@@ -191,9 +192,9 @@
   <item type="girlie" id="girlie-dfd-black" price="20.00" date="2014-03-18">
 <!--
     <available size="S"/>
+    <available size="L"/>
 -->
     <available size="M"/>
-    <available size="L"/>
     <available size="XL"/>
  	<image
       small="/order/articles/images/thumbnails/girlie-dfd-black-front.jpg"
@@ -287,16 +288,16 @@
       large="/order/articles/images/hooded-fsfs-grey-back.jpg"/>
   </item>
 
+<!--
   <item type="baby-clothes" id="baby-romper-fork-blue" price="18.00" date="2012-10-06">
     <available size="6-12m"/>
-<!--
     <available size="3-6m"/>
     <available size="12-18m"/>
--->
     <image
       small="/order/articles/images/thumbnails/baby-romper-fork-blue-front.jpg"
       large="/order/articles/images/baby-romper-fork-blue-front.jpg"/>
   </item>
+-->
 
 <!-- finally out of stock
   <item type="baby-clothes" id="baby-romper-fork-green" price="18.00" date="2012-10-06">

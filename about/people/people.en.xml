@@ -404,7 +404,7 @@
     <name>Cristian Rigamonti</name>
     <country>IT</country>
     <function>sysadmin/m</function>
-    <function volunteers="translators-it">coordinator/m</function>
+    <!-- <function volunteers="translators-it">coordinator/m</function> -->
     <email>rigamonti (at) fsfeurope (dot) org</email>
     <link>http://wiki.fsfe.org/Fellows/cri</link>
     <avatar>/about/rigamonti/rigamonti-avatar.jpg</avatar>
@@ -459,6 +459,20 @@
     <country>AT</country>
     <email>kelvan (at) fsfe (dot) org</email>
     <link>http://wiki.fsfe.org/Fellows/kelvan</link>
+  </person>
+
+  <person id="seeger" avatar="no" teams="intern">
+    <name>Bela Seeger</name>
+    <country>NL</country>
+    <function>intern/m</function>
+    <email>seeger (at) fsfeurope (dot) org</email>
+    <!-- <employee>full/m</employee> -->
+  </person>
+
+  <person id="stegerman" avatar="no" teams="nl, core">
+    <name>Felix Stegerman</name>
+    <country>NL</country>
+    <email>stegerman (at) fsfeurope (dot) org</email>
   </person>
 
   <person id="suklje" avatar="yes" teams="ftf, core">

@@ -287,6 +287,7 @@
     <avatar>/about/koch/koch-avatar.jpg</avatar>
   </person>
 
+  <!--
   <person id="lammi" avatar="no" teams="intern">
     <name>Matti Lammi</name>
     <country>FI</country>
@@ -294,6 +295,7 @@
     <email>lammi (at) fsfeurope (dot) org</email>
     <employee>full/m</employee>
   </person>
+  -->
 
   <person id="lindfors" avatar="no" teams="fi">
     <name>Timo Juhani Lindfors</name>
@@ -463,15 +465,16 @@
 
   <person id="seeger" avatar="no" teams="intern">
     <name>Bela Seeger</name>
-    <country>NL</country>
+    <country>DE</country>
     <function>intern/m</function>
     <email>seeger (at) fsfeurope (dot) org</email>
-    <!-- <employee>full/m</employee> -->
+    <employee>full/m</employee>
   </person>
 
   <person id="stegerman" avatar="no" teams="nl, core">
     <name>Felix Stegerman</name>
     <country>NL</country>
+    <function country="NL">deputy/m</function>
     <email>stegerman (at) fsfeurope (dot) org</email>
   </person>
 

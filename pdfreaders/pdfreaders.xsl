@@ -39,8 +39,8 @@
       <xsl:attribute name="type">image/x-icon</xsl:attribute>
     </xsl:element>
     
-    <link rel="apple-touch-icon" href="{$urlprefix}/graphics/touch-icon.png" type="image/png" />
-    <link rel="apple-touch-icon-precomposed" href="{$urlprefix}/graphics/touch-icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/graphics/touch-icon.png" type="image/png" />
+    <link rel="apple-touch-icon-precomposed" href="/graphics/touch-icon.png" type="image/png" />
     
     <xsl:for-each select="/buildinfo/trlist/tr">
       <xsl:sort select="@id"/>

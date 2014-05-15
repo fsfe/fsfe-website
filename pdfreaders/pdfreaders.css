@@ -1,5 +1,8 @@
 .reader {
+  display: inline-block;
   float: left;
+  width: 25%;
+  margin: 2em 5%;
   border-style: solid;
   border-width: 1px;
 }

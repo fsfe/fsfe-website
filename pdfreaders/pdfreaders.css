@@ -1,8 +1,30 @@
+body {
+  width: 70%;
+  margin: 0 15%;
+  padding: 1em;
+  border-style: none solid;
+  border-width: 4px;
+  border-color: #693;
+}
+
+#translations {
+  display: inline-block;
+  float: left;
+  width: 60%;
+}
+#translations > a {
+  display: none;
+}
+#translations ul li {
+  display: inline;
+}
+
 .reader {
   display: inline-block;
   float: left;
-  width: 25%;
-  margin: 2em 5%;
+  width: 28%;
+  margin: 2em 2%;
+  padding: 1ex;
   border-style: solid;
-  border-width: 1px;
+  border-width: 2px;
 }

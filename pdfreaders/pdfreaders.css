@@ -10,37 +10,55 @@ body > * {
   margin: 1em 1%;
 }
 
-#translations {
-  display: inline-block;
-  float: left;
-  width: 60%;
-}
-#translations > a {
+#translations > a.close {
   display: none;
 }
 #translations ul li {
   display: inline;
 }
 
-.reader {
+#top, #top > * {
+  display: inline-block;
+  clear: none;
+}
+#top #masthead {
+  float: left;
+  width: 20%;
+}
+#top #masthead #logo {
+  background-image: url("graphics/pdfreaders-logo.png");
+}
+#top #menu {
+  float: right;
+  width: 70%;
+}
+
+#main, #followup, #bottom, #source, #legal-info, #sister-organisations {
+  display: block;
+  clear: both;
+}
+
+#main .reader {
   display: inline-block;
   float: left;
-  width: 28%;
-  margin: 2em 2%;
-  padding: 1ex;
+  width: 29%;
+  margin: 2em 1%;
+  padding: 1ex 1%;
   border-style: solid;
   border-width: 2px;
 }
 
-#followup, #bottom {
-  display: block;
+#bottom hr {
   clear: both;
 }
 
 #full-menu-list > li {
   display: inline-block;
   float: left;
+  width: 12%;
+  margin: 0 2%;
 }
-#full-menu-list * {
+#full-menu-list ul {
   list-style-type: none;
+  padding-left: 2ex;
 }

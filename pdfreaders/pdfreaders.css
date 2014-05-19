@@ -1,10 +1,13 @@
 body {
   width: 70%;
   margin: 0 15%;
-  padding: 1em;
   border-style: none solid;
   border-width: 4px;
   border-color: #693;
+}
+
+body > * {
+  margin: 1em 1%;
 }
 
 #translations {
@@ -27,4 +30,17 @@ body {
   padding: 1ex;
   border-style: solid;
   border-width: 2px;
+}
+
+#followup, #bottom {
+  display: block;
+  clear: both;
+}
+
+#full-menu-list > li {
+  display: inline-block;
+  float: left;
+}
+#full-menu-list * {
+  list-style-type: none;
 }

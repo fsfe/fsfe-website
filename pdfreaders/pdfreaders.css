@@ -13,7 +13,7 @@ body > * {
 #translations > a.close {
   display: none;
 }
-#translations ul li {
+#translations ul li, #translations ul {
   display: inline;
 }
 
@@ -27,6 +27,9 @@ body > * {
 }
 #top #masthead #logo {
   background-image: url("graphics/pdfreaders-logo.png");
+  background-repeat: no-repeat;
+  min-width: 103px;
+  min-height: 158px;
 }
 #top #menu {
   float: right;
@@ -52,6 +55,9 @@ body > * {
   clear: both;
 }
 
+#full-menu-list {
+  padding: 0;
+}
 #full-menu-list > li {
   display: inline-block;
   float: left;

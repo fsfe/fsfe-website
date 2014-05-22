@@ -4,10 +4,10 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:dt="http://xsltsl.org/date-time">
   
-  <xsl:import href="../tools/xsltsl/tagging.xsl" />
-  <xsl:import href="../tools/xsltsl/countries.xsl" />
-  <xsl:import href="../tools/xsltsl/translations.xsl" />
-  <xsl:import href="../fsfe.xsl" />
+  <xsl:import href="../../tools/xsltsl/tagging.xsl" />
+  <xsl:import href="../../tools/xsltsl/countries.xsl" />
+  <xsl:import href="../../tools/xsltsl/translations.xsl" />
+  <xsl:import href="../../fsfe.xsl" />
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
 
   <!-- To localise this page to a new country, copy this file and change the following:

@@ -19,7 +19,7 @@
     
   -->
   
-  <xsl:variable name="country-code">activities/education</xsl:variable>
+  <xsl:variable name="country-code">education</xsl:variable>
   
   <!--display labels-->
 

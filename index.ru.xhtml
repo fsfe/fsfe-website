@@ -14,14 +14,14 @@
 
         <campaigns />
 
-        <h1 class="hide">ЕФСПО - Европейский фонд свободного программного обеспечения</h1>
+        <h1 class="hide">Европейский фонд свободного программного обеспечения</h1>
 
     <div id="feeds">
       <div id="news" class="section">
         <h2>
-          <a class="rss-feed" href="/news/news.rss"><img src="/graphics/rss.png" alt="Новости RSS" title="Новостная лента RSS" /></a>
-          <a class="ical" href="http://identi.ca/fsfe"><img src="/graphics/identica.png" alt="identica" title="Следите за ЕФСПО на identi.ca"/></a>
           <a href="/news/news.html"><news-label /></a>
+          <a class="rss-feed" href="/news/news.rss" title="Новостная лента RSS"><i class="fa fa-rss"></i></a>
+          <a class="ical" href="http://identi.ca/fsfe" title="Следите за ЕФСПО на identi.ca"><i class="fa fa-comments-o"></i></a>
         </h2>
 
         <all-news />
@@ -30,31 +30,34 @@
       <div id="newsletter" class="section">
         <h2><a href="/news/newsletter.html"><newsletter-label /></a></h2>
 
-        <div class="entry">
-          <p>
-            <strong><receive-newsletter />:</strong>
-          </p>
 
           <subscribe-nl />
 
-          <ul>
-            <all-newsletters />
-            <li><a href="news/newsletter.html"><more-label />...</a></li>
+          <ul id="more-news-list">
+              <li><a href="/news/news.html" class="learn-more">Читать все новости</a></li>
+              <li><a href="http://planet.fsfe.org/en" class="learn-more">Читать блоги ЕФСПО</a></li>
           </ul>
-        </div>
+
+          <a class="big-donate" href="donate/donate.html#ref-frontpage">Пожертвования</a>
+
       </div>
+
+      <hr />
 
       <div id="events" class="section">
         <h2>
-          <a class="rss-feed" href="/events/events.rss"><img src="/graphics/rss.png" alt="События RSS" title="Лента RSS событий" /></a>
-          <a class="ical" href="webcal://fsfe.org/events/events.ics"><img src="/graphics/ical.png" alt="iCal" title="События ЕФСПО в виде ленты iCal" /></a>
           <a href="/events/events.html"><events-label /></a>
+          <a class="rss-feed" href="/events/events.rss" title="Лента RSS событий"><i class="fa fa-rss"></i></a>
+          <a class="ical" href="webcal://fsfe.org/events/events.ics" title="События ЕФСПО в виде ленты iCal"><i class="fa fa-calendar-o"></i></a>
         </h2>
 
         <all-events />
       </div>
     </div>
   </body>
+
+  <!--Do not translate this ↓-->
+  <followup>join</followup>
 
   <timestamp>$Date$ $Author$</timestamp>
 </html> 

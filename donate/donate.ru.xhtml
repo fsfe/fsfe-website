@@ -5,13 +5,10 @@
     <title>ЕФСПО - Внеси пожертвование сейчас!</title>
   </head>
 
-  <body>
+  <body id="donate-fsfe">
     <h1>Пожертвования</h1>
 
     <div id="introduction">
-      <div class="image">
-        <img src="money.jpg" alt="Пожертвования"/>
-      </div>
 
       <p>
         Европейский фонд свободного программного обеспечения —
@@ -32,17 +29,17 @@
     <h3>Онлайн-платежи</h3>
 
     <form action="/cgi-bin/donate.pl" method="post" id="donate">
-      <p>
+      <p class="form-group">
         <label for="name">Имя (частное лицо или компания)</label>
         <input id="name" name="name" type="text"/>
         (Это имя будет внесено в <a href="thankgnus.html">список спонсоров</a>,
         если только Вы не пожелаете сохранить анонимность.)
       </p>
-      <p>
+      <p class="checkbox">
         <input name="anonymous" type="checkbox"/> Я хочу сделать анонимное
         пожертвование
       </p>
-      <p>
+      <p class="form-group">
         <label for="email">E-mail</label>
         <input id="email" name="email" type="email"/>
       </p>
@@ -145,6 +142,13 @@ href="thankgnus.html">список спонсоров</a>. При перевод
       <a href="netherlands.html">Нидерланды</a> и
       <a href="switzerland.html">Швейцария</a>.
     </p>
+
+    <h2>Фонды ЕФСПО</h2>
+    <ul>
+        <li><a href="/about/funds/">Доходы и расходы</a></li>
+        <li><a href="/donate/thankgnus.html">Наши спонсоры</a></li>
+        <li><a href="/donate/hardware.html">Пожертвования аппаратуры</a></li>
+    </ul>
   </body>
 
   <timestamp>$Date$ $Author$</timestamp>

@@ -7,7 +7,7 @@
   <!--
 		This list contains all team members of FSFE plus people from associated organisations
 		If you want to add or update a person, please stick to following tagging sheme:
-		
+
 		id= Surname, without special characters
 		avatar= "yes" if you have one in the <avatar>-tags. "no" if the default avatar should be used. We recommend using one!
 		association-member= "yes" if you are in the General Assembly. You can ignore this tag if you are no GA member
@@ -37,11 +37,11 @@
 				<function volunteers="translators-it">coordinator/m</function>: Coordinator of italian translations
 			Note: You can use more than one function tag.
 			Note: If someone has no function inside the FSFE, he can ignore the function-tag (like person from associative organisations)
-			
+
 		<email> Email address of the person. Please use (at) and (dot) for spam protection reasons
 		<link> If someone clicks on a name, he can be redirected to a page with further information.
 			In most cases, it's /about/surname/surname.html (if there's a page)
-		<avatar> If you have "avatar=yes" in the <person>-tag, you can link to an image. 
+		<avatar> If you have "avatar=yes" in the <person>-tag, you can link to an image.
             Please only use local images like /about/surname/surname.png
         <employee> Working status inside the FSFE, defined by the earned money. Only nexessary if the person receives money on a regular basis for his/her work
             full: Person is working 4 or 5 days a week
@@ -53,9 +53,9 @@
         The teampage derives its information from many files and XSL scripts.
         - /about/people/people.en.xml (this file): All FSFE-teammembers, even those not belonging to team@ (i.e. country teams)#+
         - /about/team.**.xhtml: The frame of the team page: Information texts, Headlines etc
-        - /about/team.xsl: In this file, tags like <council-members /> are defined. 
+        - /about/team.xsl: In this file, tags like <council-members /> are defined.
         - /about/team.sources: Where to look for people-files, translations of functions/projects/countries and so on
-        - /tools/xsltsl/countries.xsl: The building of the team lists itself: Links, Background colors, inclusion of avatars etc 
+        - /tools/xsltsl/countries.xsl: The building of the team lists itself: Links, Background colors, inclusion of avatars etc
   -->
   <!--
     Improvement ideas:
@@ -63,7 +63,7 @@
         - Not background colors but badges/text behind every person indicating, what salaray basis he/she is working on and what employment status
         - A map where the residency of every team member is shown
         - (Dynamic) overview of sectors (like education, policy, legal) and their members
-        - Making this whole thing more simple than it is now ;)  
+        - Making this whole thing more simple than it is now ;)
   -->
 
   <person id="adams" avatar="yes" teams="gb">
@@ -201,7 +201,7 @@
     <email>paul (at) fsfe (dot) org</email>
     <employee>freelancer/m</employee>
   </person>
-  
+
   <person id="harmuth" avatar="no" association-member="yes" teams="ga">
     <name>Stefan Harmuth</name>
     <country>DE</country>
@@ -225,8 +225,8 @@
     <email>jensch (at) fsfeurope (dot) org</email>
     <link>http://blogs.fsfe.org/riepernet/</link>
     <avatar>/about/jensch/jensch-avatar.jpg</avatar>
-  </person>    
-  
+  </person>
+
   <person id="jost" avatar="no" teams="fr">
       <name>Thomas Jost</name>
       <country>FR</country>
@@ -359,7 +359,7 @@
     <link>/about/ojasild/ojasild.html</link>
     <avatar>/about/ojasild/ojasild-avatar.png</avatar>
   </person>
-  
+
   <person id="piana" avatar="yes" teams="it, ftf">
     <name>Carlo Piana</name>
     <country>IT</country>
@@ -446,7 +446,7 @@
     <link>/about/sandklef/sandklef.html</link>
     <avatar>/about/sandklef/sandklef-avatar.jpg</avatar>
   </person>
-  
+
   <person id="schiessle" avatar="yes" teams="de, core">
     <name>Björn Schießle</name>
     <country>DE</country>
@@ -471,11 +471,13 @@
     <employee>full/m</employee>
   </person>
 
-  <person id="stegerman" avatar="no" teams="nl, core">
+  <person id="stegerman" avatar="yes" teams="nl, core">
     <name>Felix Stegerman</name>
     <country>NL</country>
     <function country="NL">deputy/m</function>
-    <email>stegerman (at) fsfeurope (dot) org</email>
+    <email>flx (at) fsfe (dot) org</email>
+    <link>https://wiki.fsfe.org/Fellows/flx</link>
+    <avatar>/about/stegerman/stegerman-avatar.png</avatar>
   </person>
 
   <person id="suklje" avatar="yes" teams="ftf, core">
@@ -488,7 +490,7 @@
     <avatar>/about/suklje/suklje-avatar.jpg</avatar>
     <employee>full/m</employee>
   </person>
-  
+
   <person id="verheesen" avatar="yes" teams="nl, core">
     <name>Maurice Verheesen</name>
     <country>NL</country>
@@ -498,7 +500,6 @@
     <avatar>/about/verheesen/mo-avatar.jpg</avatar>
   </person>
 
-
   <person id="weiden" avatar="yes" association-member="yes" teams="ga">
     <name>Fernanda Weiden</name>
     <country>CH</country>
@@ -506,7 +507,7 @@
     <link>/about/weiden/weiden.html</link>
     <avatar>/about/weiden/weiden-avatar.jpg</avatar>
   </person>
-  
+
   <person id="willard" avatar="yes" teams="se, core">
     <name>Patrik Willard</name>
     <country>SE</country>
@@ -537,7 +538,7 @@
     <email></email>
     <link></link>
   </person>
-  
 
-  
+
+
 </personset>

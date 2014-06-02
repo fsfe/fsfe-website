@@ -1,131 +1,142 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <html>
   <head>
-    <link href="/style/grid.css" rel="stylesheet"/>
+    <title>Perskamer - FSFE</title>
+    <script>
 
-    <title>FSFE - Perskamer</title>
+      /*
+       * Fields that carry values at page load will be emptied if this
+       * is called and the field has not been edited before.
+       */
+      var changedFields = new Array();
+
+      function removeValue(field) {
+        if (!changedFields[field.getAttribute("name")]) {
+          changedFields[field.getAttribute("name")] = true;
+          field.value = "";
+        }
+
+        return false;
+      }
+
+    </script>
   </head>
 
-  <body>
-    <h1>Pers</h1>
+  <body class="press" id="press-room">
+    <h1 class="heading">Pers</h1>
 
-  <div id="introduction">
-      <div class="image">
-        <img src="/graphics/stars-smaller.png" alt="Stars"/>
-      </div>
-
-<p>
-      De FSFE gelooft dat de toegang tot software bepaalt wie kan
-      deelnemen aan de digitale samenleving. De vrijheden om software
-      te kunnen
-      <a href="/about/basics/freesoftware.html">gebruiken, bestuderen,
-      delen en verbeteren</a> zijn noodzakelijk als we iedereen
-      gelijke kansen willen bieden in het informatietijdperk.
-    </p></div>
+    <div id="introduction">
+      <p>
+        De FSFE gelooft dat de toegang tot software bepaalt wie kan
+        deelnemen aan de digitale samenleving.  De vrijheden om
+        software te kunnen <a
+        href="/about/basics/freesoftware.html">gebruiken, bestuderen,
+        delen en verbeteren</a> zijn noodzakelijk als we iedereen
+        gelijke kansen willen bieden in het informatietijdperk.
+      </p>
+    </div>
 
     <p>
-      De Free Software Foundation Europe(FSFE) is een
-      niet-gouvernementele organisatie zonder winstoogmerk. Wij zijn
+      De Free Software Foundation Europe (FSFE) is een
+      niet-gouvernementele organisatie zonder winstoogmerk.  Wij zijn
       actief in <a href="/contact/local.html">verschillende Europese
       landen</a> en betrokken bij verschillende internationale
-      activiteiten. De toegang tot software bepaalt je betrokkenheid
-      in de digitale samenleving: Om iedereen gelijke kansen te geven
+      activiteiten.  De toegang tot software is bepalend voor deelname
+      aan de digitale samenleving: Om iedereen gelijke kansen te geven
       in het informatietijdperk en vrije concurrentie mogelijk te
-      houden zet de Free Software Foundation zich in voor de promotie
-      en de aanwending van Vrije Software, gedefinieerd volgens de
+      maken zet de Free Software Foundation Europe zich in voor de
+      promotie en het gebruik van Vrije Software, gedefinieerd door de
       vrijheden om de software te kunnen gebruiken, bestuderen,
-      aanpassen en verdelen. Sinds 2001 vragen wij aandacht voor deze
-      problematiek, proberen wij Vrije Software een plaats te geven in
-      de politiek en de wetgeving, en geven wij mensen de kans om bij
-      te dragen aan de ontwikkeling van Vrije Software. Dit zijn onze
+      aanpassen en verdelen.  Sinds 2001 vragen wij aandacht voor deze
+      uitdaging, proberen wij Vrije Software een plaats te geven in de
+      politiek en de wetgeving, en geven wij mensen vrijheid door bij
+      te dragen aan de ontwikkeling van Vrije Software.  Dit zijn onze
       kerntaken.
     </p>
 
     <div class="grid-50-50">
       <div class="box first">
-	<h2>Ontvang onze persberichten</h2>
+        <h2>Ontvang onze persberichten</h2>
 
-	<p>
-	  U kan zich inschrijven op onze nieuwsfeeds en mailinglists
-	  om geïnformeerd te blijven over het laatste nieuws in de
-	  Vrije Softwarewereld.
-	</p>
+        <p>
+          U kunt zich inschrijven op onze nieuwsfeeds en
+          mailinglijsten om geïnformeerd te blijven over het laatste
+          nieuws in de Vrije Softwarewereld.
+        </p>
 
         <form method="post" action="http://mail.fsfeurope.org/mailman/subscribe/press-release">
           <p>
-            <input type="text" name="email" value="uw@email.adres" onChange="this.value = ''" onClick="this.value = ''" />
+            <input type="text" name="email" value="youremail@example.com" onClick="removeValue(this)" />
             <input type="submit" value="Inschrijven" />
           </p>
         </form>
 
-	<p>
-	  Voor snelle updates en nieuws heet van de naald kan u ons
-	  ook volgen op <a href="http://identi.ca/fsfe">Identi.ca</a>
-	  en <a href="http://twitter.com/fsfe">Twitter</a>.
-	</p>
+        <p>
+          Voor directe updates en nieuws kunt u ons ook volgen <a
+            href="http://identi.ca/fsfe">op Identi.ca</a> of <a
+            href="http://twitter.com/fsfe">op Twitter</a>.
+        </p>
       </div>
 
       <div class="box">
-	<h2>
-	  <a href="/news/news.html" class="feed">Recent	nieuws</a>
-	</h2>
+        <h2><a href="/news/news.html" class="feed">Laatste nieuws</a></h2>
 
-	<dynamic-content/>
+        <dynamic-content />
       </div>
     </div>
+
 
     <h2>Vragen</h2>
 
     <p>
-      U kan vragen stellen
-      via <a href="mailto:press@fsfeurope.org">press@fsfeurope.org</a>
-      of ons schrijven:
+      Stel uw directe vragen alstublieft aan <a
+        href="mailto:press@fsfeurope.org">press@fsfeurope.org</a>, of per post aan:
     </p>
 
     <address>
-      Free Software Foundation Europe e.V.<br/>
-      Schönhauser Allee 6/7<br/>
-      10119 Berlijn <br/>
+      Free Software Foundation Europe e.V.<br />
+      Schönhauser Allee 6/7<br />
+      10119 Berlin<br />
       Duitsland
     </address>
 
-    <p>Telefoon: +49-30-27595290</p>
-
     <p>
-      U vindt meer algemene gegevens op onze pagina
-      met <a href="/contact/contact.html">contactinformatie</a>
+      Telefoon: +49-30-27595290
     </p>
 
-    <h2 id="subpages" class="show-heading">Bronmateriaal</h2>
+    <p>
+      Kijk voor algemene vragen alstublieft op onze pagina met
+      <a href="/contact/contact.html">contactinformatie</a>.
+    </p>
+
+
+    <h2 id="subpages" class="show-heading">Bronnen</h2>
 
     <ul>
       <li>
-	<h3>
-	  <a href="/about/graphics/graphics.html">Logo en
-	  afbeeldingen</a>
-	</h3>
-	<p>Download ons logo en andere afbeeldingen.</p></li>
-      <!-- 
-	 we should have a link to a subset of people on our people
-	 page who can give official press statements -->
+        <h3><a href="/about/graphics/graphics.html">Logo en Afbeeldingen</a></h3>
+        <p>
+          Download ons logo en andere afbeeldingen.
+        </p>
+      </li>
+
+      <!--
+        We should have a link to a subset of people on our people page who can
+        give official press statements
+      -->
+
       <li>
-	<h3>
-	  <a href="/about/basics/freesoftware.html">Beginselen van
-	  Vrije Software</a>
-	</h3>
-	<!-- Later this should link to /freesoftware/ -->
-	<p>
-	  Leer over de verschillen tussen Vrije Software, Open Source
-	  en Libre Software.
-	</p>
+        <h3><a href="/about/basics/freesoftware.html">Beginselen van Vrije Software</a></h3>
+        <!-- Later this should link to /freesoftware/ -->
+        <p>
+          Leer over het verschil tussen Vrije Software, Open Source en Libre Software.
+        </p>
       </li>
     </ul>
-
   </body>
 
   <timestamp>$Date$ $Author$</timestamp>
-
 </html>
 <!--
 Local Variables: ***

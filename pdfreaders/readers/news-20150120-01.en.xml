@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<html newsdate="2015-01-20">
-	<head>
-		<title>FSFE is looking out for a marketing intern</title>
-	</head>
-	<body>
+<newsset>
+  <news newsdate="2015-01-20">
+    <title>FSFE is looking out for a marketing intern</title>
+    <body>
 
 		<p newsteaser="yes">We're on the look out for a talented marketing intern who wants to extend their skills by enacting their passion for Free Software. If you want to find opportunities to pitch political issues based on strategic data insights, read on.</p>
 
@@ -25,12 +24,13 @@
 
 		<p>More information about requirements and what applicants can expect is on our dedicated <a href="http://fsfe.org/contribute/internship.html">internships page</a>.</p>
 
-	</body>
-	<tags>
-		<tag>front-page</tag>
-		<tag>interns</tag>
-		<tag>berlin</tag>
-		<tag>office</tag>
-		<tag>marketing</tag>
-	</tags>
-</html>
+    </body>
+    <tags>
+    	<tag>front-page</tag>
+    	<tag>interns</tag>
+    	<tag>berlin</tag>
+    	<tag>office</tag>
+    	<tag>marketing</tag>
+    </tags>
+  </news>
+</newsset>

@@ -14,7 +14,7 @@
   <text id="translator1b"> за этот перевод. </text>
   <text id="translator2">Это неофициальный перевод. </text>
   <text id="translator3a">См. также </text>
-  <text id="translator3b">оригинал</text>
+  <text id="translator3b">оригинальный текст</text>
   <text id="translator3c"> этой страницы.</text>
   <text id="permission">
     Разрешается дословное копирование и распространение любым способом
@@ -102,7 +102,7 @@ href="/contribute/contribute.html">этой ссылке</a>.
 
   <text id="fsfe/about">О нас</text>
   <text id="fsfe/mission">Цели фонда</text>
-  <text id="fsfe/projects">Работа фонда</text>
+  <text id="fsfe/projects">Наша работа</text>
   <text id="fsfe/campaigns">Кампании</text>
   <!--text id="fsfe/documents">Документы</text-->
   <text id="fsfe/help">Участвовать</text>
@@ -113,7 +113,7 @@ href="/contribute/contribute.html">этой ссылке</a>.
   <text id="support/donate">Пожертвования</text>
   <text id="support/order">Магазин</text>
   <text id="support/thankgnus">Благодарности</text>
-  <text id="support/funds">Финансовый отчет</text>
+  <text id="support/funds">Бюджет</text>
   <text id="fellowship/fellowship">Содружество</text>
   <text id="fellowship/join">Присоединяйтесь</text>
   <text id="fellowship/card">Смарт-карта</text>
@@ -124,7 +124,7 @@ href="/contribute/contribute.html">этой ссылке</a>.
   <text id="fellowship/login">Авторизоваться</text>
   <text id="news/news">Последние новости</text>
   <text id="news/events">Предстоящие события</text>
-  <text id="news/press">Публикации</text>
+  <text id="news/press">Пресс-центр</text>
   <text id="news/nl">Информационный бюллетень</text>
   <text id="news/planet">Блоги «Планета»</text>
   <!--text id="planet/blogs">Blogs</text-->
@@ -140,15 +140,15 @@ href="/contribute/contribute.html">этой ссылке</a>.
   <text id="ftf/legal">Юридическая поддержка</text>
   <text id="ftf/services">Услуги и доверенности</text>
   <text id="ftf/doc">Документация</text>
-  <text id="ftf/network">Юридическая сеть</text>
+  <text id="ftf/network">Правовая сеть</text>
   <text id="ftf/conference">Конференции</text>
   <text id="ftf/contact">Связаться с юристами</text>
   <text id="fs/fs">Свободные программы</text>
   <text id="fs/basics">Основы</text>
-  <text id="fs/def">Определение</text>
+  <text id="fs/def">Истоки и определение</text>
   <text id="fs/soc">Свободное общество</text>
   <text id="fs/edu">Образование</text>
-  <text id="fs/buz">Предприятия</text>
+  <text id="fs/buz">Бизнес</text>
 
   <!-- Date time -->
   <text id="months/1">Январь</text>
@@ -209,7 +209,7 @@ href="/contribute/contribute.html">этой ссылке</a>.
   <text id="read-more">Подробности</text>
 
   <text id="press">Пресса</text>
-  <text id="newsletter">Информационный бюллетень</text>
+  <text id="newsletter">Ежемесячный бюллетень</text>
   
 	<!-- These used to be in /tools/texts-content-**.xml -->
   <text id="news">Последние новости</text>
@@ -254,10 +254,11 @@ href="/contribute/contribute.html">этой ссылке</a>.
 
   <text id="join">Присоединяйтесь</text>
   <text id="join-paragraph"><p>Вступите в Содружество ЕФСПО, чтобы шире участвовать
-    в нашей работе и помогать нам поддерживать финансовую независимость. Присоединяясь к
-    Содружеству, вы становитесь спонсором и сможете поддержать ЕФСПО, получая доступ ко
-    всей нашей инфрастуктуре.</p></text>
-  <text id="join-fellowship">Присоединяйтесь к содружеству</text>
+    в нашей работе и помогать нам поддерживать нашу финансовую независимость.
+    Присоединяясь к Содружеству, вы станете финансировать ЕФСПО и сможете
+    участвовать в его работе, получая доступ ко всей нашей
+    инфраструктуре.</p></text>
+  <text id="join-fellowship">Присоединяйтесь к Содружеству</text>
 
   <text id="ourwork2011">Наша работа в 2011 году</text>
   <text id="support">Поддержи ЕФСПО</text>
@@ -335,13 +336,13 @@ href="/contribute/contribute.html">этой ссылке</a>.
         жизнями. Чтобы противостоять такому кошмару, нам нужны организации,
         подобные Европейскому фонду свободного программного обеспечения.
       </text>
-      <author>Стефано «Zack» Закироли, бывший руководитель проекта Debian</author>
+      <author>Стефано Закироли (Zack), бывший руководитель проекта Debian</author>
       <link>/donate/donate.html</link>
     </campaign>
     <campaign id="racketware">
-        <comment>where to find the banner in YOUR language: http://no.more.racketware.info/web-banners/#int</comment>
+        <comment>найти эмблему на ВАШЕМ языке: http://no.more.racketware.info/web-banners/#int</comment>
         <photo>http://racketware.info/media/image/racketiciel/racketware_English_453x227_2013-07-11.png</photo>
-        <text>Software: choose before you pay, sign petition!</text>
+        <text>Программы: сделайте выбор до того как заплатите, подпишите петицию!</text>
         <link>http://racketware.info/petition/click/en</link>
     </campaign>
     <campaign id="ganten" tag="donors fellowship" pos="2">
@@ -360,21 +361,23 @@ href="/contribute/contribute.html">этой ссылке</a>.
     <campaign id="allison" tag="fellowship" pos="1">
       <photo>/fellowship/graphics/people/Jeremyallison.jpg</photo>
       <text>
-        Document Freedom Day celebrates the importance of Open Standards for all
-        electronic documents, whether public or private. If we want to <strong>preserve
-        our digital heritage</strong> we all need to select Open Standards, implementable
-        by anyone, as our default storage choice.
+        День свободы документов отмечает важность открытых форматов
+        для всех электронных документов, будь они публичные или частные.
+        Если мы хотим <strong>сохранить наше цифровое наследие</strong>,
+        нам всем необходимо выбирать открытые стандарты как основной формат
+	для его хранения, потому что они могут быть реализованы
+        кем угодно.
       </text>
-      <author>Jeremy Allison, Samba core developer</author>
+      <author>Джереми Эллисон, основной разработчик Samba</author>
       <link>/donate/donate.html</link>
     </campaign>
     <campaign id="beckedahl" tag="fellowship" pos="2">
       <photo>/fellowship/graphics/people/beckedahl.jpg</photo>
       <text>
-        Open Standards garantee a free development of the infrastructure and
-        therefore a self-determined and free communication.
+        Открытые стандарты гарантируют свободу развития инфраструктуры
+        и, следовательно, независимое и свободное общение.
       </text>
-      <author>Markus Beckedahl, Digitale Gesellschaft, netzpolitik.org</author>
+      <author>Маркус Бекедаль, Digitale Gesellschaft, netzpolitik.org</author>
       <link>/donate/donate.html</link>
     </campaign>
 
@@ -392,7 +395,7 @@ href="/contribute/contribute.html">этой ссылке</a>.
         жизнями. Чтобы противостоять такому кошмару, нам нужны организации,
         подобные Европейскому фонду свободного программного обеспечения.
       </text>
-      <author>Стефано «Zack» Закироли, бывший руководитель проекта Debian</author>
+      <author>Стефано Закироли (Zack), бывший руководитель проекта Debian</author>
     </quote>
     <quote id="wiesemann" tag="donors" pos="2">
       <photo>/donate/wiesemann.jpg</photo>
@@ -416,150 +419,177 @@ href="/contribute/contribute.html">этой ссылке</a>.
     <quote id="appelbaum" tag="donors" pos="1">
       <photo>/fellowship/graphics/people/jacobappelbaum.png</photo>
       <text>
-			I believe that actions of support for the FSFE are important for
-  			encouraging Free Software development and adoption in Europe as well
-  			as the rest of the world. I&#39;m an FSFE Fellow because financially
-  			supporting the cause of Free Software brings positive improvements to
- 			all societies throughout the world.
+        Я убежден, что действия по поддержке ЕФСПО важны для поощрения
+        разработки и применения свободных программ Европе, а также
+        и в остальном мире. Я стал членом Содружества ЕФСПО потому,
+        что финансовая поддержка свободных программ вносит позитивные
+        изменения во все общества на Земле.
       </text>
-      <author>Jacob Appelbaum - Spokesperson for The TOR Project</author>
+      <author>Якоб Аппельбаум - пресс-секретарь проекта TOR</author>
     </quote> 
 
     <!-- quotes for fellowship page -->
     <quote id="morris" tag="fellowship">
       <photo>/fellowship/graphics/people/annamorris.jpg</photo>
       <text>
-            Free Software challenges you to learn: to do for yourself, to be fearlessly
-            independent when it comes to your tech. In the past few years I have taken
-            pride in watching my skill base catchup with and overtake that of my
-			proprietary-loving peers, even some paid professionals, simply by having a
-			free and curious mindset. Free Software frees you in many ways.
+        Свободные программы заставляют вас развиваться: делать все для себя,
+        проявлять бесстрашие и независимость, когда дело касается своих
+        технических знаний. В течение нескольких прошедших лет я с гордостью
+        наблюдаю рост моих умений, больший, чем у моих сверстников, использующих
+        несвободные программы, включая некоторых настоящих профессионалов,
+        просто потому, что приходится приходится проявлять такие качества, как
+        свобода ума и любопытство. Свободные программы делают вас свободными во
+        многих областях.
       </text>
-      <author>Anna Morris (Co-Founder of ethical-pets.co.uk and Free Software advocate)</author>
+      <author>Анна Моррис (соосновательница ethical-pets.co.uk
+        и сторонница свободных программ)</author>
     </quote>
 
     <quote id="roy" tag="fellowship">
       <photo>/fellowship/graphics/people/hugoroy.png</photo>
       <text>
-			The Free Software Foundation Europe (FSFE) brings together
-			dedicated and engaged activists from all over Europe to seize the
-			opportunities to secure our rights to use, share, study, and
-			improve software because without Free Software, technology
-			subjugates us instead of enhancing our freedom.
+        Европейский фонд свободного программного обеспечения (ЕФСПО)
+        сводит вместе постоянных и вовлеченных активистов со всей Европы,
+        чтобы использовать возможности защитить наши права использовать,
+        распространять, изучать и модифицировать программы, поскольку без
+        свободных программ техника подчиняет нас вместо того, чтобы
+        увеличивать нашу свободу.
       </text>
-      <author>Hugo Roy (Law student)</author>
+      <author>Гюго Руа (исследователь права)</author>
     </quote>
 
     <quote id="keijzer" tag="fellowship">
       <photo>/fellowship/graphics/people/kevinkeijzer.jpg</photo>
       <text>
-			I joined the Fellowship to stop being &#39;a minority of one&#39;, as George
-			Orwell once put it. I wanted to meet people who shared my ideals and
-			beliefs, so it would no longer feel as if I was fighting the system all
-			by myself. It&#39;s reassuring to know that you&#39;re not alone, which probably
-			motivates people to keep up with the work they are doing, even if it&#39;s
-			not always as successful as they would like it to be.
+        Я вступил в Содружество чтобы перестать быть «тем, кто в меньшинстве,
+        в единственном числе», как когда-то сказал Оруэлл. Я хотел встретить
+        людей, которые разделяют мои идеалы и убеждения так, чтобы я не
+        чувствовал себя больше борющимся с системой в одиночку. Когда
+        знаешь, что ты не один, это ободряет, побуждает продолжать
+        свою работу, даже если результаты не всегда такие, как того бы
+        хотелось.
       </text>
-      <author>Kevin Keijzer (Political activist)</author>
+      <author>Кевин Кайзер (политический активист)</author>
     </quote>
 
     <quote id="nascimento" tag="fellowship">
       <photo>/fellowship/graphics/people/mauricionascimento.jpg</photo>
       <text>
-			Freedom is one of the core values of our Society and one of the basic
-			concepts of Democracy. Supporting and spreading Free Software is one 
-			way to build creative alternatives for social inclusion and to protect our 
-			citizens from the digital exploitation. We are responsible to build a better World
-			as a gift for our future generations.
+        Свобода является одной из коренных ценностей нашего общества и одним
+        из основных принципов демократии. Поддержка и внедрение свободных
+        программ — это один из способов создать творческие альтернативы
+        для социальной интеграции и для защиты наших граждан от цифровой
+        эксплуатации. Мы отвечаем за то, чтобы построить лучший мир для
+        будущих поколений.
       </text>
-      <author>Mauricio Nascimento (Middleware Engineer)</author>
+      <author>Маурисио Насименто (инженер-программист)</author>
     </quote>
 
     <quote id="guenther" tag="fellowship">
       <photo>/fellowship/graphics/people/guidoguenther.jpg</photo>
       <text>
-			I&#39;m very impressed with what the FSFE has achieved on the EU and national
-			level. Back when I was working in the public sector I was able to glimpse
-			the vast amounts of money that are thrown at lobbying for proprietary
-			software and so called industry standards in Germany and the EU. It&#39;s
-			astonishing how the FSFE has still managed to get itself heard. Supporting
-			this was one of my motivations for becoming a fellow.
+        Я очень впечатлен тем, чего ЕФСПО достиг на европейском и национальных
+        уровнях. В то время, когда я работал в государственном секторе,
+        мне бросились в глаза огромные суммы, которые тратились на продвижение
+        несвободных программ и так
+        называемые промышленные стандарты ЕС и Германии. Поразительно, как
+        ЕФСПО удалось все же добиться, чтобы к нему прислушивались. Поддержка
+        этого была одной из моих побудительных причин вступления в Содружество.
       </text>
-      <author>Guido Günther (Freelancer and Debian Developer)</author>
+      <author>Гвидо Гюнтер (внештатный работник и разработчик Debian)</author>
     </quote>
     
     <quote id="verheesen" tag="fellowship">
       <photo>/fellowship/graphics/people/mauriceverheesen.jpg</photo>
       <text>
-    		Free software is important in our time. It needs professional
-			representation which is hard work and expensive. Joining the fellowship
-			meant a way for me to contributing my skills and some money back to the free
-			software movement to ensure it&#39;s future.
+        Свободные программы в наше время играют важную роль. Они нуждаются
+        в профессиональном представительстве, что является непростым и
+        дорогостоящим делом. Вступление в Содружество означало для меня
+        возможность вложить мои умения и кое-какие деньги обратно в движение
+        свободных программ чтобы обеспечить его будущее.
       </text>
-      <author>Maurice Verheesen</author>
+      <author>Маурис Верхесен</author>
     </quote>
 
     <quote id="agger" tag="fellowship">
       <photo>/fellowship/graphics/people/carstenagger.jpg</photo>
       <text>
-			I was a solitary voice for years, explaining the principles behind Free
-			Software and its importance for people in my country in numerous
-			articles and blog posts. I wanted to belong to an organization with the
-			goal of building the digital society on 100% free software, and
-			supporting the FSFE and gaining access to its blogging and fellowship
-			infrastructure seemed like a logical first step.
+        Долгие годы я был одиноким голосом, который в многочисленных статьях
+        и сообщениях в блоге разъяснял, как важны для народа моей страны
+        принципы, стоящие за свободными программами. Я хотел вступить в
+        организацию, чьей целью было бы построение цифрового общества на 100%
+        свободных программах, и поддержка ЕФСПО с получением доступа к
+        инфраструктуре блогов и Содружества выглядит как логичный первый шаг.
       </text>
-      <author>Carsten Agger (Software Engineer)</author>
+      <author>Карстен Аггер (инженер-программист)</author>
     </quote>
     
     
     <quote id="kehl" tag="fellowship">
       <photo>/fellowship/graphics/people/robertkehl.jpg</photo>
       <text>
-			I joined the Fellowship because Free Software helps to bring more and
-			real freedom into the world. To fight for this is my goal as a Fellow
-			of the FSFE.
+        Я вступил в Содружество потому, что свободные программы помогают
+        принести больше настоящей свободы в мир. Борьба за это — моя цель как
+        члена Содружества ЕФСПО.
       </text>
-      <author>Robert Kehl (IT Professional)</author>
+      <author>Роберт Кель (профессионал в области компьютерных технологий)</author>
     </quote>
     
     <quote id="appelbaum" tag="fellowship">
       <photo>/fellowship/graphics/people/jacobappelbaum.png</photo>
       <text>
-			I believe that actions of support for the FSFE are important for
-  			encouraging Free Software development and adoption in Europe as well
-  			as the rest of the world. I&#39;m an FSFE Fellow because financially
-  			supporting the cause of Free Software brings positive improvements to
- 			all societies throughout the world.
+        Я убежден, что действия по поддержке ЕФСПО важны для поощрения
+        разработки и применения свободных программ Европе, а также
+        и в остальном мире. Я являюсь членом Содружества ЕФСПО потому, что
+        когда финансовая поддержка на стороне свободных программ — это
+        приводит к позитивным изменениям в обществе по всему миру.
       </text>
-      <author>Jacob Appelbaum (Spokesperson for The TOR Project)</author>
+      <author>Якоб Аппельбаум - пресс-секретарь проекта TOR</author>
     </quote> 
     
     
     <quote id="mortier" tag="fellowship">
       <photo>/fellowship/graphics/people/mortier.jpg</photo>
       <text>
-			I&#39;m a free sofware supporter for a long time, I fought against software patents in Brussels, co-organised the system theme at the Libre Software Meeting (RMLL) and run a Free Software company. Free Software is an essential part of our global freedom, so it was natural to become a Fellowship member at the FSFE.
+        Я уже долгое время являюсь сторонником свободных программ, я боролся
+        против патентов на программы в Брюсселе, участвовал в организации
+        системного окружения на Libre Software Meeting (RMLL) и руководил
+        предприятием по разработке свободных программ. Свободные программы
+        являются неотъемлемой частью нашей глобальной свободы, так что
+        для меня было естественно вступить в Содружество ЕФСПО.
       </text>
-      <author>Benoit Mortier (Owner of OpenSides, Manager of FusionDirectory)</author>
+      <author>Бенуа Мортье (владелец OpenSides, управляющий FusionDirectory)</author>
     </quote> 
     
     
     <quote id="nermin" tag="fellowship">
       <photo>/fellowship/graphics/people/nermincanik.jpg</photo>
       <text>
-			Free software and FSFE is to me: sharing, learning, being independent of monopolies, producing things together, passion and freedom! Since I've been a Fellow, I am finding new friends who help me in Free Software and other topics, teaching new things every day even though we are kilometers away. It is magnificent to be in a community that continually supports my Free Software passion and motivation!
+        Свободные программы для меня — это: распространение, изучение,
+        независимость от монополий, сложение воедино, страсть и свобода!
+        С тех пор, как я — член Содружества, я нахожу новых друзей, которые
+        помогают мне со свободными программами и в других областях, каждый
+        день я узнаю что-то новое, даже если нас разделяют километры. Это
+        восхитительно — быть в сообществе, которое поддерживает
+        мою заинтересованность и любовь к свободным программам!
       </text>
-      <author>Nermin Canik (IT Business Analyst)</author>
+      <author>Нермин Джаник (деловой аналитик компьютерных технологий)</author>
     </quote> 
     
     
     <quote id="guido" tag="fellowship">
       <photo>/fellowship/graphics/people/guidoarnold.jpg</photo>
       <text>
-			Free Software needs a voice in politics. We volunteers do amazing things together, but some tasks are not that much fun, or are time sensitive or need extensive expertise. FSFE can only tap its full potential with paid staff to do the things the volunteers wouldn't get to. By now, I met all of the staff and can say that I don't regret a cent I've given to allow the FSFE to operate.
+        Свободным программам необходим голос в политике. Мы, добровольцы,
+        вместе делаем удивительные вещи, но некоторые задачи не приносят
+        радости, или они критичны ко времени, или нуждаются в обширных
+        познаниях. ЕФСПО может полностью раскрыть свой потенциал только
+        с помощью штатных сотрудников, чтобы делать то, что добровольцы
+        делать не могут. До сих пор я встречался со всеми сотрудниками
+        и могу сказать, что не жалею ни об одном центе, который я отдал
+        на деятельность ЕФСПО.
       </text>
-      <author>Guido Arnold</author>
+      <author>Гвидо Арнольд</author>
     </quote> 
 
   </quotes>

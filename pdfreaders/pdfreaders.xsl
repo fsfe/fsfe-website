@@ -63,11 +63,6 @@
       <!-- First, include what's in the source file -->
       <xsl:apply-templates />
 
-      <!-- $today = current date (given as <html date="...">) -->
-      <xsl:variable name="today">
-        <xsl:value-of select="/buildinfo/@date" />
-      </xsl:variable>
-
       <!-- Show news except those in the future, but no newsletters -->
       <xsl:for-each select="/buildinfo/document/set/news">
         <xsl:sort select="@priority" order="ascending" />
@@ -76,13 +71,37 @@
         <xsl:element name="div">
 	  <xsl:attribute name="class">reader</xsl:attribute>
 
-          <!-- Date and title -->
+	  <xsl:element name="img">
+            <xsl:attribute name="class">logo</xsl:attribute>
+            <xsl:attribute name="src">logos/<xsl:value-of select="logo" /></xsl:attribute>
+            <xsl:attribute name="alt"></xsl:attribute>
+	  </xsl:element>
+
           <xsl:element name="h1">
             <xsl:value-of select="name" />
           </xsl:element>
 
-          <!-- Text -->
-          <xsl:apply-templates select="body/node()" />
+          <xsl:apply-templates select="description/node()" />
+
+	  <xsl:element name="span"> <xsl:attribute name="class">label homepage</xsl:attribute>
+	    Homepage:
+	  </xsl:element>
+	  <xsl:element name="a"> <xsl:attribute name="class">info homepage</xsl:attribute>
+            <xsl:attribute name="href"><xsl:value-of select="homepage" /></xsl:attribute>
+            <xsl:attribute name="alt"></xsl:attribute>
+	    <xsl:value-of select="homepage" />
+	  </xsl:element>
+
+	  <xsl:element name="span"> <xsl:attribute name="class">label platform</xsl:attribute>
+	    Platforms:
+	  </xsl:element>
+          <xsl:for-each select="platform">
+	    <xsl:element name="a"> <xsl:attribute name="class">info platform</xsl:attribute>
+              <xsl:attribute name="href"><xsl:value-of select="installer" /></xsl:attribute>
+              <xsl:attribute name="alt"></xsl:attribute>
+	      <xsl:value-of select="name" />
+	    </xsl:element>
+          </xsl:for-each>
 
         </xsl:element>
         <!-- End news entry -->

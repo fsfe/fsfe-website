@@ -69,10 +69,8 @@
       </xsl:variable>
 
       <!-- Show news except those in the future, but no newsletters -->
-      <xsl:for-each select="/buildinfo/document/set/news
-        [translate (@date, '-', '') &lt;= translate ($today, '-', '') and
-         not (@type = 'newsletter')]">
-        <xsl:sort select="@date" order="descending" />
+      <xsl:for-each select="/buildinfo/document/set/news">
+        <xsl:sort select="@priority" order="ascending" />
 
         <!-- This is a news entry -->
         <xsl:element name="div">
@@ -80,14 +78,11 @@
 
           <!-- Date and title -->
           <xsl:element name="h1">
-            <xsl:value-of select="title" />
+            <xsl:value-of select="name" />
           </xsl:element>
 
           <!-- Text -->
           <xsl:apply-templates select="body/node()" />
-
-          <!-- Link -->
-          <xsl:apply-templates select="link" />
 
         </xsl:element>
         <!-- End news entry -->

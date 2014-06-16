@@ -14,6 +14,7 @@
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
   
   <xsl:variable name="mode">
+    <!-- here you can set the mode to switch between normal and IloveFS style -->
     <xsl:value-of select="'normal'" /> <!-- can be either 'normal' or 'valentine' -->
   </xsl:variable>
   
@@ -96,17 +97,16 @@
           <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/fsfe.min.css</xsl:attribute>
           <xsl:attribute name="type">text/css</xsl:attribute>
         </xsl:element>
+        <xsl:if test="$mode = 'valentine'">
+          <xsl:element name="link">
+            <xsl:attribute name="rel">stylesheet</xsl:attribute>
+            <xsl:attribute name="media">all</xsl:attribute>
+            <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/valentine.min.css</xsl:attribute>
+            <xsl:attribute name="type">text/css</xsl:attribute>
+          </xsl:element>
+        </xsl:if>
       </xsl:otherwise>
     </xsl:choose>
-    
-    <xsl:if test="$mode = 'valentine'">
-      <xsl:element name="link">
-        <xsl:attribute name="rel">stylesheet</xsl:attribute>
-        <xsl:attribute name="media">all</xsl:attribute>
-        <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/valentine.min.css</xsl:attribute>
-        <xsl:attribute name="type">text/css</xsl:attribute>
-      </xsl:element>
-    </xsl:if>
     
     <xsl:element name="link">
       <xsl:attribute name="rel">stylesheet</xsl:attribute>
@@ -543,6 +543,14 @@
       <xsl:if test="/buildinfo/document/body/@id">
         <xsl:attribute name="id"><xsl:value-of select="/buildinfo/document/body/@id" /></xsl:attribute>
       </xsl:if>
+      <xsl:if test="string(/buildinfo/document/@newsdate) and count(/buildinfo/document/@type) = 0">
+        <xsl:attribute name="class">
+          <xsl:value-of select="/buildinfo/document/body/@class" /> press release</xsl:attribute>
+      </xsl:if>
+      <xsl:if test="string(/buildinfo/document/@newsdate) and /buildinfo/document/@type = 'newsletter'">
+        <xsl:attribute name="class">
+          <xsl:value-of select="/buildinfo/document/body/@class" /> newsletter article</xsl:attribute>
+      </xsl:if>
 
       <!-- For pages used on external web servers, use absolute URLs -->
       <xsl:variable name="urlprefix"><xsl:if test="/buildinfo/document/@external">https://fsfe.org</xsl:if></xsl:variable>
@@ -700,7 +708,7 @@
 
               <xsl:element name="form">
                 <xsl:attribute name="method">get</xsl:attribute>
-                <xsl:attribute name="action">http://fsfe.yacy.net/yacysearch.html</xsl:attribute>
+                <xsl:attribute name="action">http://fsfe.yacy.de/yacysearch.html</xsl:attribute>
 
                 <xsl:element name="input">
                   <xsl:attribute name="type">hidden</xsl:attribute>
@@ -997,7 +1005,7 @@
         </xsl:element>
         <!--/article#content-->
 
-        <xsl:if test = "/buildinfo/document/sidebar">
+        <xsl:if test = "/buildinfo/document/sidebar or /buildinfo/document/@newsdate">
           <xsl:element name="aside">
             <xsl:attribute name="id">sidebar</xsl:attribute>
 
@@ -1008,10 +1016,62 @@
                 </xsl:call-template>
               </xsl:element>
               <xsl:call-template name="subscribe-nl" />
+              <ul>
+                <li><a href="/news/newsletter.html">
+                  <xsl:call-template name="fsfe-gettext">
+                      <xsl:with-param name="id" select="'news/nl'" />
+                  </xsl:call-template>
+                </a></li>
+                <li><a href="/events/events.html">
+                  <xsl:call-template name="fsfe-gettext">
+                      <xsl:with-param name="id" select="'news/events'" />
+                  </xsl:call-template>
+                </a></li>
+              </ul>
             </xsl:if>
             
+            <xsl:if test="string(/buildinfo/document/@newsdate) and count(/buildinfo/document/@type) = 0">
+                <h3>
+                  <xsl:call-template name="fsfe-gettext">
+                      <xsl:with-param name="id" select="'fsfe/press'" />
+                  </xsl:call-template>
+                </h3>
+                <ul>
+                  <li>
+                    <a href="/press/press.html">
+                      <xsl:call-template name="fsfe-gettext">
+                          <xsl:with-param name="id" select="'news/press'" />
+                      </xsl:call-template>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/news/news.html">
+                      <xsl:call-template name="fsfe-gettext">
+                          <xsl:with-param name="id" select="'news/news'" />
+                      </xsl:call-template>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/about/basics/freesoftware.html">
+                      <xsl:call-template name="fsfe-gettext">
+                        <xsl:with-param name="id" select="'fs/basics'" />
+                      </xsl:call-template>
+                    </a>
+                  </li>
+                </ul>
+              </xsl:if>
+
             <xsl:apply-templates select="/buildinfo/document/sidebar/node()" />
             
+            <xsl:if test="string(/buildinfo/document/@newsdate)">
+                <p>
+                  <a href="/donate/index.html" class="small-donate">
+                    <xsl:call-template name="fsfe-gettext">
+                      <xsl:with-param name="id" select="'donate'" />
+                    </xsl:call-template>
+                  </a>
+                </p>
+            </xsl:if>
             <!--xsl:if test = "/buildinfo/document/sidebar/@news">
               <xsl:element name="h4">
                 <xsl:call-template name="fsfe-gettext">
@@ -1038,7 +1098,7 @@
                   <xsl:with-param name="id" select="'our-work-intro'" />
                 </xsl:call-template>
                 <xsl:element name="a"> 
-                  <xsl:attribute name="href">/about/about.html</xsl:attribute>
+                  <xsl:attribute name="href">/work.html</xsl:attribute>
                   <xsl:attribute name="class">learn-more</xsl:attribute>
                   <xsl:call-template name="fsfe-gettext">
                     <xsl:with-param name="id" select="'learn-more'" />
@@ -1074,7 +1134,7 @@
                   <xsl:with-param name="id" select="'donate-paragraph'" />
                 </xsl:call-template>
                 <xsl:element name="a"> 
-                  <xsl:attribute name="href">/donate/donate.html?sidebar</xsl:attribute>
+                  <xsl:attribute name="href">/donate/donate.html#ref-sidebar</xsl:attribute>
                   <xsl:attribute name="class">learn-more big-donate</xsl:attribute>
                   <xsl:call-template name="fsfe-gettext">
                     <xsl:with-param name="id" select="'donate'" />
@@ -1083,7 +1143,8 @@
               </xsl:when>
               <xsl:when test = "/buildinfo/document/sidebar/@promo = 'no'">
               </xsl:when>
-              <xsl:otherwise test = "/buildinfo/document/sidebar/@promo = 'about-fsfe'">
+              <!--otherwise display about-fsfe-->
+              <xsl:otherwise>
                 <xsl:element name="h3">
                   <xsl:attribute name="class">promo</xsl:attribute>
                   <xsl:call-template name="fsfe-gettext">
@@ -1214,7 +1275,7 @@
             </xsl:element>
             <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'donate-paragraph'" /></xsl:call-template>
             <xsl:element name="a">
-              <xsl:attribute name="href">/donate/donate.html?followupbox</xsl:attribute>
+              <xsl:attribute name="href">/donate/donate.html#ref-followupbox</xsl:attribute>
               <xsl:attribute name="class">btn</xsl:attribute>
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'donate'" /></xsl:call-template>
             </xsl:element>
@@ -1226,7 +1287,7 @@
             </xsl:element>
             <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'join-paragraph'" /></xsl:call-template>
             <xsl:element name="a">
-              <xsl:attribute name="href">/fellowship/join.html?ref=followupbox</xsl:attribute>
+              <xsl:attribute name="href">/fellowship/join.html#ref-followupbox</xsl:attribute>
               <xsl:attribute name="class">btn</xsl:attribute>
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'join'" /></xsl:call-template>
             </xsl:element>
@@ -1301,7 +1362,7 @@
             <xsl:element name="li">
               <xsl:attribute name="class">support</xsl:attribute>
               <xsl:element name="a">
-                <xsl:attribute name="href">/donate/donate.html?fullmenu</xsl:attribute>
+                <xsl:attribute name="href">/donate/donate.html#ref-fullmenu</xsl:attribute>
                 <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'support/donate'" /></xsl:call-template> 
               </xsl:element>
 

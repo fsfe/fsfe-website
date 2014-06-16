@@ -6,10 +6,9 @@
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
 
   <!-- Remove FSFE menu -->
-  <xsl:template match="node()|@*">
-    <xsl:copy> <xsl:apply-templates select="node()|@*"/> </xsl:copy>
+  <xsl:template match="ul[@id='menu-list']">
+    look, here is the menu template
   </xsl:template>
-  <xsl:template match="ul[@id='menu-list']"/>
 
   <!-- HTML head -->
   <xsl:template match="head">

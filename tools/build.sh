@@ -169,11 +169,10 @@ echo "$(date)  Building HTML pages."
 
 touch ${STATUS}/last-run
 
-if test "x`hostname`" = "xekeberg"; then
-  tools/build.pl -t 4 -q -o ${TMP} -i .
-else
-  tools/build.pl -q -o ${TMP} -i .
-fi
+cpu_cores="$(cat /proc/cpuinfo |grep ^processor |wc -l)"
+[ "$cpu_cores" -eq 0 ] && cpu_cores=1
+
+tools/build.pl -t "$cpu_cores" -q -o ${TMP} -i .
 
 if test $? -ne 0; then
    echo "$(date)  Build not complete. Aborting."

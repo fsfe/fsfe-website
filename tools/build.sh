@@ -34,7 +34,6 @@ else
   ROBOTS="Disallow: /source/"
   REPODESIGNATION="SVN trunk"
 fi
-MAKEFILE_PL=${SOURCE}/Makefile.PL
 
 # Since we must grep for svn output messages,
 # let's ensure we get English messages
@@ -144,7 +143,7 @@ fi
 echo "$(date)  Checking Perl modules."
 # -----------------------------------------------------------------------------
 
-perl ${MAKEFILE_PL}
+perl ${SOURCE}/build/checkdepends.pl
 
 # Make sure build.sh and build.pl are executable
 # TODO: this can be removed once we set the "executable" svn property

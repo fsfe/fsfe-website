@@ -25,19 +25,16 @@ use POSIX qw(strftime);
 # -----------------------------------------------------------------------------
 
 my %names = (
+  "fellowship" => "Local Fellowship Group",
   "albers" => "Erik Albers",
   "gerloff" => "Karsten Gerloff",
   "gollowitzer" => "Martin Gollowitzer",
-  "harmuth" => "Stefan Harmuth",
   "kersten" => "Rainer Kersten",
   "kirschner" => "Matthias Kirschner",
-  "kekalainen" => "Otto Kekäläinen", 
-  "morris" => "Anna Morris",
   "mueller" => "Reinhard Müller",
   "roy" => "Hugo Roy",
   "sandklef" => "Henrik Sandklef",
   "suklje" => "Matija Šuklje",
-  "tuke" => "Sam Tuke",
 );
 
 # -----------------------------------------------------------------------------
@@ -54,7 +51,7 @@ my %responsible = (
   "ADMIN-FUNDRAISING" => "gerloff",
   "PA-PERSONELL" => "kirschner",
   "PA-OFFICE" => "kirschner",
-  "PA-TRAVEL" => "kirschner",
+  "PA-EVENTS" => "kirschner",
   "PA-MATERIAL" => "kirschner",
   "PA-CAMPAIGNS" => "kirschner",
   "FELLOWSHIP-PERSONELL" => "albers",
@@ -83,7 +80,7 @@ my %account = (
   "ADMIN-FUNDRAISING" => "2507",
   "PA-PERSONELL" => "2511",
   "PA-OFFICE" => "2512",
-  "PA-TRAVEL" => "2513",
+  "PA-EVENTS" => "2513",
   "PA-MATERIAL" => "2514",
   "PA-CAMPAIGNS" => "2515",
   "FELLOWSHIP-PERSONELL" => "2521",
@@ -154,7 +151,6 @@ my $replyto = "finance\@fsfeurope.org, $who\@fsfeurope.org, $to1\@fsfeurope.org"
 if ($budget2 ne "NONE") {
   $replyto .= ", $to2\@fsfeurope.org";
 }
-$replyto .= ", council\@fsfeurope.org";
 
 open(MAIL, "|/usr/lib/sendmail -t -f $who\@fsfeurope.org");
 print MAIL "From: $who\@fsfeurope.org\n";

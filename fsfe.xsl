@@ -10,12 +10,13 @@
   <xsl:import href="tools/xsltsl/static-elements.xsl" />
   <xsl:import href="tools/xsltsl/tagging.xsl" />
 
+<!--
   <xsl:import href="build/xslt/fsfe_head.xsl" />
   <xsl:import href="build/xslt/fsfe_body.xsl" />
   <xsl:import href="build/xslt/fsfe_document.xsl" />
   <xsl:import href="build/xslt/fsfe_headings.xsl" />
   <xsl:import href="build/xslt/fsfe_localmenu.xsl" />
-
+-->
   <xsl:import href="build/xslt/support_js.xsl" />
   <xsl:import href="build/xslt/support_countries.xsl" />
 

@@ -42,7 +42,7 @@
 
       <!-- Social Links -->
       <xsl:variable name="original_file"
-       select="concat(substring(string(/buildinfo/@filename), 2), '.' ,string(/buildinfo/@original), '.xhtml')"
+       select="concat('../../', substring(string(/buildinfo/@filename), 2), '.' ,string(/buildinfo/@original), '.xhtml')"
        as="xs:string" />
       <xsl:variable name="originalDocument" select="document($original_file)/html" />
       <xsl:element name="a">
@@ -83,7 +83,7 @@
 
       <!-- Social Links -->
       <xsl:variable name="original_file"
-       select="concat(substring(string(/buildinfo/@filename), 2), '.' ,string(/buildinfo/@original), '.xhtml')"
+       select="concat('../../', substring(string(/buildinfo/@filename), 2), '.' ,string(/buildinfo/@original), '.xhtml')"
        as="xs:string" />
       <xsl:variable name="originalDocument" select="document($original_file)/html" />
       <xsl:element name="a">
@@ -182,32 +182,32 @@
               </xsl:variable>
 
               <xsl:choose>    
-                  <xsl:when test="@id and document('about/people/people.en.xml')/personset/person[@id=$id]">
+                  <xsl:when test="@id and document('../../about/people/people.en.xml')/personset/person[@id=$id]">
                   <!-- if the author is in fsfe's people.xml then we take information from there --> 
                     <xsl:choose>
-                      <xsl:when test="document('about/people/people.en.xml')/personset/person[@id=$id]/link">
+                      <xsl:when test="document('../../about/people/people.en.xml')/personset/person[@id=$id]/link">
                           <xsl:element name="a">
                                   <xsl:attribute name="class">author p-author h-card</xsl:attribute>
                                   <xsl:attribute name="rel">author</xsl:attribute>
-                                  <xsl:attribute name="href"><xsl:value-of select="document('about/people/people.en.xml')/personset/person[@id=$id]/link" /></xsl:attribute>
-                                  <xsl:if test="document('about/people/people.en.xml')/personset/person[@id=$id]/avatar">
+                                  <xsl:attribute name="href"><xsl:value-of select="document('../../about/people/people.en.xml')/personset/person[@id=$id]/link" /></xsl:attribute>
+                                  <xsl:if test="document('../../about/people/people.en.xml')/personset/person[@id=$id]/avatar">
                                           <xsl:element name="img">
                                                   <xsl:attribute name="alt"></xsl:attribute>
-                                                  <xsl:attribute name="src"><xsl:value-of select="document('about/people/people.en.xml')/personset/person[@id=$id]/avatar" /></xsl:attribute>
+                                                  <xsl:attribute name="src"><xsl:value-of select="document('../../about/people/people.en.xml')/personset/person[@id=$id]/avatar" /></xsl:attribute>
                                           </xsl:element>
                                   </xsl:if>
-                                  <xsl:value-of select="document('about/people/people.en.xml')/personset/person[@id=$id]/name" />
+                                  <xsl:value-of select="document('../../about/people/people.en.xml')/personset/person[@id=$id]/name" />
                           </xsl:element>&#160;
                       </xsl:when>
                       <xsl:otherwise>
-                          <xsl:if test="document('about/people/people.en.xml')/personset/person[@id=$id]/avatar">
+                          <xsl:if test="document('../../about/people/people.en.xml')/personset/person[@id=$id]/avatar">
                                   <xsl:element name="img">
                                           <xsl:attribute name="alt"></xsl:attribute>
-                                          <xsl:attribute name="src"><xsl:value-of select="document('about/people/people.en.xml')/personset/person[@id=$id]/avatar" /></xsl:attribute>
+                                          <xsl:attribute name="src"><xsl:value-of select="document('../../about/people/people.en.xml')/personset/person[@id=$id]/avatar" /></xsl:attribute>
                                   </xsl:element>
                           </xsl:if>
                           <span class="author p-author">
-                            <xsl:value-of select="document('about/people/people.en.xml')/personset/person[@id=$id]/name" />&#160;
+                            <xsl:value-of select="document('../../about/people/people.en.xml')/personset/person[@id=$id]/name" />&#160;
                           </span>
                       </xsl:otherwise>
                     </xsl:choose>

@@ -48,11 +48,16 @@ outdir=$2
 # Performance seems to be much better if we do it in 2 separate runs.
 # Otherwise, we would have to run the grep for each line of the file.
 
+# Addition by Paul, 2014-06-23 - The egrep filters out some malformed input
+# lines produced by build pl. Those faulty lines should not be there in the
+# first place, so this is a lousy workaround.
+
 # First run: missing translations
 sort "${infile}" \
   | uniq \
   | sed --expression='s/\.\///g' \
   | grep --invert-match --file="tools/translation-ignore.txt" \
+  | egrep '?? .+ .+' translations.log \
   | while read language wantfile havefile; do
   if [ ! -f "${wantfile}" ]; then
     if test -z "${havefile}" ; then

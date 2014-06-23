@@ -73,6 +73,7 @@ done
 sort "${infile}" \
   | uniq \
   | sed --expression='s/\.\///g' \
+  | egrep '?? .+ .+' translations.log \
   | while read language wantfile havefile comment; do
   if [ -f "${wantfile}" ]; then
     date1="$(date --iso-8601 --reference=${wantfile})"

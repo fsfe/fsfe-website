@@ -11,7 +11,7 @@
   <xsl:import href="tools/xsltsl/tagging.xsl" />
 
   <xsl:import href="build/xslt/fsfe_head.xsl" />
-<!--
+<!-- 
   <xsl:import href="build/xslt/fsfe_body.xsl" />
   <xsl:import href="build/xslt/fsfe_document.xsl" />
   <xsl:import href="build/xslt/fsfe_headings.xsl" />

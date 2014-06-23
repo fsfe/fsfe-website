@@ -49,7 +49,7 @@
     </xsl:call-template>
   </xsl:template>
 
-<!-- Hard include for head -- >
+<!-- Hard include for head -->
 
   <xsl:variable name="mode">
     <!-- here you can set the mode to switch between normal and IloveFS style -->

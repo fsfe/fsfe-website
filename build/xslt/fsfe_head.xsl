@@ -29,11 +29,6 @@
       </xsl:attribute>
     </xsl:element>
 
-    <!-- For pages used on external web servers, load the CSS from absolute URL -->
-    <xsl:variable name="urlprefix">
-      <xsl:if test="/buildinfo/document/@external">https://fsfe.org</xsl:if>
-    </xsl:variable>
-
     <!-- For a mobile/tablet/etc. friendly website -->
     <xsl:element name="meta">
       <xsl:attribute name="name">viewport</xsl:attribute>

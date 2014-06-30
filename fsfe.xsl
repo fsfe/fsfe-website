@@ -10,6 +10,11 @@
   <xsl:import href="tools/xsltsl/static-elements.xsl" />
   <xsl:import href="tools/xsltsl/tagging.xsl" />
 
+  <!-- For pages used on external web servers, load the CSS from absolute URL -->
+  <xsl:variable name="urlprefix">
+    <xsl:if test="/buildinfo/document/@external">https://fsfe.org</xsl:if>
+  </xsl:variable>
+
   <xsl:include href="build/xslt/fsfe_head.xsl" />
   <xsl:include href="build/xslt/fsfe_body.xsl" />
   <xsl:include href="build/xslt/fsfe_document.xsl" />

@@ -41,7 +41,7 @@
       </xsl:element-->
       <!--/nav#breadcrumbs-->
 
-      <xsl:call-template name="fsfe_followupsection.xsl" />
+      <xsl:call-template name="fsfe_followupsection" />
 
       <xsl:element name="footer">
         <xsl:attribute name="id">bottom</xsl:attribute>

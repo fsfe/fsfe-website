@@ -26,4 +26,10 @@
       <xsl:call-template name="fsfe-body" />
     </xsl:element>
   </xsl:template>
+
+  <!-- If no template matching <body> is found in the current page's XSL file, this one will be used -->
+  <xsl:template match="body" priority="-1">
+    <xsl:apply-templates />
+  </xsl:template>
+
 </xsl:stylesheet>

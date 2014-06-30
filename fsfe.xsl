@@ -16,9 +16,6 @@
   <xsl:include href="build/xslt/fsfe_headings.xsl" />
   <xsl:include href="build/xslt/fsfe_localmenu.xsl" />
 
-  <xsl:include href="build/xslt/support_js.xsl" />
-  <xsl:include href="build/xslt/support_countries.xsl" />
-
   <!-- Do not copy non-HTML elements to output -->
   <xsl:include href="build/xslt/fsfe_nolocal.xsl" />
 
@@ -30,17 +27,6 @@
     <xsl:apply-templates select="@*|node()"/>
   </xsl:template>
   
-  <!-- If no template matching <body> is found in the current page's XSL file, this one will be used -->
-  <xsl:template match="body" priority="-1">
-    <xsl:apply-templates />
-  </xsl:template>
-
-  <xsl:template match="@dt:*">
-    <xsl:attribute name="{local-name()}">
-      <xsl:value-of select="." />
-    </xsl:attribute>
-  </xsl:template>
-
  <!--FIXME ↓-->
   <xsl:template match="fetch-news">
     <xsl:call-template name="fetch-news">

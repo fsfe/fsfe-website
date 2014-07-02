@@ -144,6 +144,20 @@
   <text id="osig">Organisaties</text>
   <text id="isig">Personen</text>
 
+<!-- campaigns to be displayed in a rotating box -->
+  <campaigns>
+    <campaign id="zacchiroli" tag="donors" pos="1">
+      <photo>/donate/zacchiroli.jpg</photo>
+      <text>
+        Een wereld zonder Vrije Software is een wereld waarin we allemaal gegijzeld
+		zijn door de verkopers van niet-vrije software die onze levens bepalen. Om
+		tegen zo'n nachtmerrie-scenario te vechten hebben we organisaties nodig als
+		de Free Software Foundation Europe.
+      </text>
+      <author>Stefano "Zack" Zacchiroli, voormalig Debian Projectleider</author>
+      <link>/donate/donate.html</link>
+    </campaign>
+  </campaigns>
 
   <!-- quotes to be displayed in a rotating box -->
   <quotes>

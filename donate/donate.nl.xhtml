@@ -2,46 +2,39 @@
 
 <html>
   <head>
-    <title>FSFE - Doneer nu!</title>
+    <title>FSFE - Nu doneren!</title>
   </head>
 
-  <body>
+  <body id="donate-fsfe">
     <h1>Doneren</h1>
 
-    <div id="introduction">
-      <div class="image">
-        <img src="money.jpg" alt="Doneren"/>
-      </div>
+      <div id="introduction">
+          <p>
+        De Free Software Foundation Europe is een non-gouvernementele organisatie zonder 
+winstoogmerk. <a href="/work.html">Ons werk</a> wordt mede mogelijk gemaakt door een 
+gemeenschap <a href="/contribute/contribute.html">vrijwilligers</a>,
+        <a href="http://fellowship.fsfe.org">Fellows</a> en
+        <a href="thankgnus.html">donoren</a>.  Uw donaties zijn essentieel voor onze kracht en 
+autonomie. Zij stellen ons in staat om te blijven werken voor Vrije Software waar dat nodig is en 
+om een onafhankelijke stem te blijven. </p>
+  </div>
 
-	  <p> 
-		De Free Software Foundation Europe is een onafhankelijke non-profit
-		organisatie. <a href="/work.html">Ons werk</a> wordt mogelijk
-		gemaakt door een gemeenschap van <a
-		href="/contribute/contribute.html">vrijwilligers</a>, <a
-		href="http://fellowship.fsfe.org">Fellows</a> en <a
-		href="thankgnus.html">donateurs</a>. Uw donaties zijn een essentieel
-		onderdeel van onze kracht en autonomie. Ze maken het mogelijk dat we
-		onafhankelijk blijven en ons werk voor Vrije Software kunnen
-		voortzetten!
-      </p>
-    </div>
+    <h2>Hoe u kunt doneren</h2>
 
-    <h2>Donatiemogelijkheden</h2>
+    <h3>Online betalen</h3>
 
-    <h3>Online donatie</h3>
-
-    <form action="/cgi-bin/donate.pl" method="post" id="donate">
-      <p>
+    <form action="/cgi-bin/donate.pl" method="post" id="donate" role="form">
+        <p class="form-group">
         <label for="name">Naam (persoon of bedrijf)</label>
         <input id="name" name="name" type="text"/>
-        (Tenzij u anoniem wenst te blijven zal uw naam vermeld worden op de
-		<a href="thankgnus.html">lijst van donateurs</a>)
+        <span class="help-block">(Tenzij u anoniem wil blijven zal deze naam genoemd worden op
+ de <a href="thankgnus.html">lijst van donoren</a>)</span>
       </p>
-      <p>
-        <input name="anonymous" type="checkbox"/>Ik wil anoniem blijven.
+      <p class="checkbox">
+        <input name="anonymous" type="checkbox"/> Ik wil graag anoniem blijven
       </p>
-      <p>
-        <label for="email">E-mailadres</label>
+      <p class="form-group">
+        <label for="email">E-mail</label>
         <input id="email" name="email" type="email"/>
       </p>
       <fieldset>
@@ -53,31 +46,31 @@
             <th>Eenmalige donatie</th>
           </tr>
           <tr>
-            <td><a href="thankgnus.html#donor">Donateur</a><br/></td>
+            <td><a href="thankgnus.html#donor">Donor</a><br/></td>
             <td><input name="amount" type="radio" value="m10" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 10</td>
             <td><input name="amount" type="radio" value="y120" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 120</td>
             <td><input name="amount" type="radio" value="o120" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 120</td>
           </tr>
           <tr>
-            <td><a href="thankgnus.html#bronze">Brons</a><br/></td>
+            <td><a href="thankgnus.html#bronze">Bronzen Donor</a><br/></td>
             <td><input name="amount" type="radio" value="m40" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 40</td>
             <td><input name="amount" type="radio" value="y480" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 480</td>
             <td><input name="amount" type="radio" value="o480" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 480</td>
           </tr>
           <tr>
-            <td><a href="thankgnus.html#silver">Zilver</a><br/></td>
+            <td><a href="thankgnus.html#silver">Zilveren Donor</a><br/></td>
             <td><input name="amount" type="radio" value="m200" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 200</td>
             <td><input name="amount" type="radio" value="y2400" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 2,400</td>
             <td><input name="amount" type="radio" value="o2400" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 2,400</td>
           </tr>
           <tr>
-            <td><a href="thankgnus.html#gold">Goud</a><br/></td>
+            <td><a href="thankgnus.html#gold">Gouden Donor</a><br/></td>
             <td><input name="amount" type="radio" value="m1000" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 1,000</td>
             <td><input name="amount" type="radio" value="y12000" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 12,000</td>
             <td><input name="amount" type="radio" value="o12000" onclick="mamount_other.value = &quot;&quot;; yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = true; oamount_other.disabled = true"/> &#8364; 12,000</td>
           </tr>
           <tr>
-            <td style="border-bottom: medium none;">(U kiest):</td>
+            <td style="border-bottom: medium none;">Bepaal een bedrag:</td>
             <td style="border-bottom: medium none;"><input name="amount" type="radio" value="mother" checked="checked" onclick="yamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = false; yamount_other.disabled = true; oamount_other.disabled = true"/>
             <input name="mamount_other" type="text" value="" palceholder="euros" style="width:5em"/></td>
             <td style="border-bottom: medium none;"><input name="amount" type="radio" value="yother" checked="checked" onclick="mamount_other.value = &quot;&quot;; oamount_other.value = &quot;&quot;; mamount_other.disabled = true; yamount_other.disabled = false; oamount_other.disabled = true"/>
@@ -91,9 +84,9 @@
       <p>
         <!-- Translators: please replace "en" with the language code of your
              language and translate "Donation" and "Donate" -->
-        <input type="hidden" name="language" value="nl_NL"/>
+        <input type="hidden" name="language" value="nl"/>
         <input type="hidden" name="text" value="Donatie"/>
-        <input type="submit" value="Doneren"/>
+        <input type="submit" id="donate-validate" value="Doneer"/>
       </p>
     </form>
 
@@ -102,50 +95,55 @@
     <address>
       Free Software Foundation Europe e.V.<br/>
       IBAN: DE69 3602 0030 0003 0047 32<br/>
-      National-Bank Essen, Steinstraße 13, 40212 Dusseldorf, Germany<br/>
+      National-Bank Essen, Steinstraße 13, 40212 Düsseldorf, Duitsland<br/>
       SWIFT/BIC: NBAG DE3E<br/>
     </address>
 
-    <h3>Overige opties</h3>
+    <h3>Andere mogelijkheden</h3>
 
     <p>
-	  Als geen van de bovenstaande opties voor u beschikbaar zijn, gelieve dan
-	  <a href="mailto:office@fsfeurope.org">contact</a> met ons op te nemen zodat
-	  we de mogelijkheden kunnen bespreken. 
-	</p>
+      Als geen van bovenstaande mogelijkheden voor u passend is, neem dan alstublieft 
+      <a href="mailto:office@fsfeurope.org">contact op</a> en we zullen met u de mogelijkheden 
+bespreken.</p>
 
     <p>
-	  Als een individu kunt u ook overwegen om <a
-	  href="https://fellowship.fsfe.org/join">lid te worden van de Fellowship
-	  van FSFE</a> als alternatief of naast een donatie.
+      Als particulier kunt u ook overwegen om in plaats van of naast uw donatie 
+      <a href="https://fellowship.fsfe.org/join">lid te worden van de Fellowship van de FSFE</a>.
     </p>
     
-    <h2>Wat gebeurt er hierna?</h2>
+    <h2>Wat er hierna gebeurt</h2>
 
     <p>
-	  Als u meer dan 480 Euro per jaar doneert, willen we uw naam graag op onze
-	  <a href="thankgnus.html">lijst van donateurs</a> plaatsen. Voor online donaties
-	  kunt u de optie "Ik wil graag anoniem blijven" gebruiken om aan te geven
-	  of u akkoord gaat met opname in de lijst. Als u doneert via een
-	  bankoverschrijving, gelieve dan hierover <a
-          href="mailto:office@fsfeurope.org">contact</a> met ons op te nemen.
+      Als u meer dan 480 Euro per jaar doneert zouden wij graag uw naam willen toevoegen aan
+onze <a href="thankgnus.html">lijst van donoren</a>. In het geval van online donaties kunt u 
+aangeven of u wel of niet anoniem wil blijven. Neem als u uw donatie per bank overschrijft hierover
+alstublieft <a href="mailto:office@fsfeurope.org">contact met ons op</a>.
     </p>
 
     <p>
-	  Daarnaast kunt u onze <a
-	  href="/about/graphics/sponsoring/sponsoring.html">sponsorplaatjes</a> op uw
-	  website plaatsen als blijk van uw support.
-    </p>
+      Bovendien kunt u uw steun voor ons laten zien met onze 
+      <a href="/about/graphics/sponsoring/sponsoring.html">Sponsorbuttons</a>
+      op uw webpagina.
+    </p> 
+
+    <h2>Belastingaftrek</h2>
 
     <p>
-	  In sommige landen zijn donaties aan ons belastingaftrekbaar. Op dit moment
-          is dat mogelijk in <a href="netherlands.html">Nederland</a>,
-          <a href="germany.html">Duitsland</a> en
-          <a href="switzerland">Zwitserland</a>.
+      In sommige landen kan uw donatie aan ons worden afgetrokken van de inkomstenbelasting.
+      Op dit moment is dat het geval in <a href="germany.html">Duitsland</a>, 
+      <a href="netherlands.html">Nederland</a>, en
+      <a href="switzerland.html">Zwitserland</a>.
     </p>
+
+    <h2>Verantwoording</h2>
+    <ul>
+        <li><a href="/about/funds/">FSFE Cash flow</a></li>
+        <li><a href="/donate/thankgnus.html">Onze donoren</a></li>
+        <li><a href="/donate/hardware.html">Hardware donaties</a></li>
+    </ul>
   </body>
 
-  <timestamp>$Date$ $Author$</timestamp>
+  <timestamp>$Datum: 2014-01-30 14:31:50 +0100 (Don, 30 Jan 2014) $ $Auteur: paul $</timestamp>
 </html>
 <!--
 Local Variables: ***

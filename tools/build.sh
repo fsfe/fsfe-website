@@ -7,13 +7,33 @@
 # however, is done by the Perl script build.pl.
 # -----------------------------------------------------------------------------
 
-SOURCE=/home/www/fsfe
-DEST=/home/www/html
-TMP=/home/www/tmp.$$
-STATUS=/var/www/web
-MAKEFILE_PL=${SOURCE}/Makefile.PL
-SVNUPOUTFILE=/tmp/fsfe-svnup-out
-SVNUPERRFILE=/tmp/fsfe-svnup-err
+if [ "$1" = "test" ]; then
+  SOURCE=/home/www/fsfe-test
+  DEST=/home/www/html-test
+  TMP=/home/www/tmp-test.$$
+  STATUS=/var/www/web-test
+  SVNUPOUTFILE=/tmp/fsfe-test-svnup-out
+  SVNUPERRFILE=/tmp/fsfe-test-svnup-err
+  DOMAIN=test.fsfe.org
+  STATUS_URI="http://status.fsfe.org/web-test/"
+  TRANS_SCRIPT=translation-log-test.sh
+  STATUS_SCRIPT=status-test.php
+  ROBOTS="Disallow: /"
+  REPODESIGNATION="SVN test branch"
+else
+  SOURCE=/home/www/fsfe
+  DEST=/home/www/html
+  TMP=/home/www/tmp.$$
+  STATUS=/var/www/web
+  SVNUPOUTFILE=/tmp/fsfe-svnup-out
+  SVNUPERRFILE=/tmp/fsfe-svnup-err
+  DOMAIN=www.fsfe.org
+  STATUS_URI="http://status.fsfe.org/web/"
+  TRANS_SCRIPT=translation-log.sh
+  STATUS_SCRIPT=status.php
+  ROBOTS="Disallow: /source/"
+  REPODESIGNATION="SVN trunk"
+fi
 
 # Since we must grep for svn output messages,
 # let's ensure we get English messages
@@ -29,12 +49,12 @@ if [[ -n "$BUILD_STARTED" && "10#${BUILD_STARTED}" -gt 10 ]] ; then
   A build.pl script has been running for more than 10 minutes,
   and was automatically killed.
 
-  Please check the build script log at http://status.fsfe.org/web/
+  Please check the build script log at $STATUS_URI
   and fix the cause of the problem.
  
   In case of doubt, please write to system-hackers@fsfeurope.org 
 
-  " | mail -s "www.fsfe.org: build.pl warning" web@fsfeurope.org system-hackers@fsfeurope.org
+  " | mail -s "${DOMAIN}: build.pl warning" web@fsfeurope.org system-hackers@fsfeurope.org
   killall build.pl
   echo "$(date) A build.pl script has been running for more than 10 minutes, and was automatically killed."
   exit
@@ -55,7 +75,7 @@ echo "$(date)  Cleaning old build directories."
 rm -rf ${TMP%.*}.*
 
 # -----------------------------------------------------------------------------
-echo "$(date)  Updating source files from SVN."
+echo "$(date)  Updating source files from ${REPODESIGNATION}."
 # -----------------------------------------------------------------------------
 
 # Update the svn working copy and check if any files were updated.
@@ -76,12 +96,12 @@ if test -s ${SVNUPERRFILE} ; then
 
   `cat ${SVNUPERRFILE}`
 
-  Please check the build script log at http://status.fsfe.org/web/
+  Please check the build script log at $STATUS_URI
   and fix the cause of the problem.
  
   In case of doubt, please write to system-hackers@fsfeurope.org 
 
-  " | mail -s "www.fsfe.org: svn error" web@fsfeurope.org system-hackers@fsfeurope.org
+  " | mail -s "${DOMAIN}: svn error" web@fsfeurope.org system-hackers@fsfeurope.org
   exit
 fi
 
@@ -95,12 +115,12 @@ if test -n "$(grep '^C' ${SVNUPOUTFILE})" ; then
 
   `cat ${SVNUPOUTFILE}`
 
-  Please check the build script log at http://status.fsfe.org/web/
+  Please check the build script log at $STATUS_URI
   and fix the cause of the problem.
  
   In case of doubt, please write to system-hackers@fsfeurope.org 
 
-  " | mail -s "www.fsfe.org: svn conflict" web@fsfeurope.org system-hackers@fsfeurope.org
+  " | mail -s "${DOMAIN}: svn conflict" web@fsfeurope.org system-hackers@fsfeurope.org
   exit
 fi
 
@@ -112,7 +132,7 @@ fi
 if test ! -s ${SVNUPOUTFILE} \
     -a "$(date -r ${STATUS}/last-run +%F)" == "$(date +%F)" \
     -a "$1" != "-f" ; then
-  echo "$(date)  No changes to SVN."
+  echo "$(date)  No changes to ${REPODESIGNATION}."
   echo "$(date)  $(svn info 2>/dev/null | grep '^Revision')"
   cat ${STATUS}/status.txt >> ${STATUS}/status-log.txt
   mv  ${STATUS}/status.txt ${STATUS}/status-attempted.txt
@@ -123,7 +143,7 @@ fi
 echo "$(date)  Checking Perl modules."
 # -----------------------------------------------------------------------------
 
-perl ${MAKEFILE_PL}
+perl ${SOURCE}/build/checkdepends.pl
 
 # Make sure build.sh and build.pl are executable
 # TODO: this can be removed once we set the "executable" svn property
@@ -148,11 +168,10 @@ echo "$(date)  Building HTML pages."
 
 touch ${STATUS}/last-run
 
-if test "x`hostname`" = "xekeberg"; then
-  tools/build.pl -t 4 -q -o ${TMP} -i .
-else
-  tools/build.pl -q -o ${TMP} -i .
-fi
+cpu_cores="$(cat /proc/cpuinfo |grep ^processor |wc -l)"
+[ "$cpu_cores" -eq 0 ] && cpu_cores=1
+
+tools/build.pl -t "$cpu_cores" -q -o ${TMP} -i .
 
 if test $? -ne 0; then
    echo "$(date)  Build not complete. Aborting."
@@ -175,7 +194,7 @@ cd ${SOURCE}
 echo "$(date)  Generating robots.txt."
 # -----------------------------------------------------------------------------
 
-echo -e "User-agent: *\nDisallow: /source/" > ${TMP}/global/robots.txt
+echo -e "User-agent: *\n${ROBOTS}" > ${TMP}/global/robots.txt
 
 # -----------------------------------------------------------------------------
 echo "$(date)  Activating new output."
@@ -189,7 +208,7 @@ rm -rf ${DEST}.old
 echo "$(date)  Generating translation logs."
 # -----------------------------------------------------------------------------
 
-tools/translation-log.sh ${DEST}/translations.log ${STATUS}
+tools/${TRANS_SCRIPT} ${DEST}/translations.log ${STATUS}
 
 # -----------------------------------------------------------------------------
 echo "$(date)  Generating Fellowship header/footer templates."
@@ -204,4 +223,4 @@ echo "$(date)  Build complete."
 cat ${STATUS}/status.txt >> ${STATUS}/status-log.txt
 mv ${STATUS}/status.txt ${STATUS}/status-finished.txt
 rm -f ${STATUS}/status-attempted.txt
-cp tools/status.php ${STATUS}/index.php
+cp tools/${STATUS_SCRIPT} ${STATUS}/index.php

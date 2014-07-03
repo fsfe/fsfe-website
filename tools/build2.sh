@@ -11,7 +11,6 @@ SOURCE=.
 DEST=../fsfe-web-out/home/www/html
 TMP=../fsfe-web-out/home/www/tmp.$$
 STATUS=../fsfe-web-out/var/www/web
-MAKEFILE_PL=${SOURCE}/Makefile.PL
 SVNUPOUTFILE=../fsfe-web-out/tmp/fsfe-svnup-out
 SVNUPERRFILE=../fsfe-web-out/tmp/fsfe-svnup-err
 
@@ -97,7 +96,7 @@ fi
 echo "$(date)  Checking Perl modules."
 # -----------------------------------------------------------------------------
 
-perl ${MAKEFILE_PL}
+perl ${SOURCE}/build/checkdepends.pl
 
 # Make sure build.sh and build2.pl are executable
 # TODO: this can be removed once we set the "executable" svn property

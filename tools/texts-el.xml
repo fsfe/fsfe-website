@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <textset>
+    <!--
+  <text id=""></text>
+         -->
+
+ <text id="fsfeurope">Free Software Foundation&#160;Europe</text>
+ <text id="freesoftwarefoundationeurope">Free Software Foundation Europe</text>
+
+  <!-- Footer -->
   <text id="lastchanged"> Τελευταία αλλαγή: </text>
   <text id="translator1a">Ευχαριστούμε </text>
   <text id="translator1b"> για αυτήν τη μετάφραση. </text>
   <text id="translator2">Αυτή είναι μια ανεπίσημη μετάφραση. </text>
-  <text id="translator3a">Παρακαλούμε ανατρέξτε στο </text>
+  <text id="translator3a">Παρακαλούμε ανατρέξτε και στο </text>
   <text id="translator3b">πρωτότυπο κείμενο</text>
   <text id="translator3c"> αυτής της σελίδας.</text>
   <text id="permission">
@@ -22,12 +30,22 @@
       href="http://www.fsf.org.in/">Ινδία</a> και <a
       href="http://www.fsfla.org/">Λατινική Αμερική</a>.
   </text>
+  <text id="creative-commons-license">Άδεια χρήσης Creative Commons</text>
   <text id="outdated">
     <strong>Προειδοποίηση: </strong>
-    Αυτή η σελίδα μπορεί να είναι παλαιότερη της πρωτότυπης. Παρακαλούμε χρησιμοποιήστε
+    Αυτή η σελίδα μπορεί να είναι παλαιότερη της πρωτότυπης. Χρησιμοποιήστε
     <a href="/contribute/contribute.html">αυτήν τη σελίδα</a> για να δείτε πώς μπορείτε
     να βοηθήσετε στις μεταφράσεις και σε άλλες ανάγκες.
   </text> 
+  <text id="outdated-1">
+    <strong>Προειδοποίηση: </strong>
+    Αυτή η σελίδα μπορεί να είναι παλαιότερη σε σχέση με το
+  </text>
+  <text id="outdated-2">
+    Χρησιμοποιήστε
+    <a href="/contribute/contribute.html">αυτήν τη σελίδα</a> για να δείτε πώς μπορείτε
+    να βοηθήσετε στις μεταφράσεις και σε άλλες ανάγκες.
+  </text>
   <text id="notranslation">
     <strong>Προειδοποίηση: </strong>
     Αυτή η σελίδα δεν έχει μεταφραστεί ακόμα. Αυτό που βλέπετε παρακάτω
@@ -36,10 +54,21 @@
     πώς μπορείτε να βοηθήσετε στις μεταφράσεις και σε άλλες ανάγκες.
   </text>
 
+  <text id="change-lang">Αλλαγή γλώσσας</text>
+  <text id="menu">Μενού</text>
+  <text id="content">Περιεχόμενο</text>
+  <text id="page-info">Πληροφορίες σελίδας</text>
+  <text id="rootpage">Αρχική</text>
+  <text id="close-this">Κλείσιμο</text>
+  <text id="sitemap">Επισκόπηση ιστοχώρου</text>
+
+  <text id="go-top">Μετάβαση στην κορυφή</text>
   <text id="source">Πηγαίος κώδικας</text>
   <text id="contact-us">Επικοινωνήστε μαζί μας</text>
   <text id="translate">Θέλετε να βοηθήσετε στη μετάφραση;</text>
+  <text id="contribute-web">Συμβάλλετε στην ομάδα του ιστοχώρου</text>
   <text id="imprint">Σφραγίδα</text>
+  <text id="privacy-policy">Πολιτική ιδιωτικού απορρήτου</text>
 
   <!-- Info box -->
   <text id="under-construction">
@@ -54,40 +83,70 @@
 
   <text id="search">Αναζήτηση</text>
   <text id="submit">Εγγραφή</text>
+  <text id="subscribe">Εγγραφή</text>
 
   <text id="language">Γλώσσα</text>
 
  <!-- Article metadata -->
  <text id="author">Συγγραφέας</text>
- <text id="writtenby">Γράφτηκε&#160;από</text>
- <text id="published">δημοσίευση</text>
+ <text id="writtenby">Δημοσίευση</text>
+ <text id="published"></text>
  <text id="revision">ενημέρωση</text>
  <text id="download">Λήψη</text>
   
   <!-- Conjunctions -->
   <text id="to">μέχρι</text>
+  <text id="go-to">Μετάβαση:</text>
 
   <!-- Menu -->
   <text id="fsfe/about">Περίγραμμα</text>
+  <text id="fsfe/mission">Αποστολή</text>
   <text id="fsfe/projects">Η εργασία μας</text>
   <text id="fsfe/campaigns">Δράσεις</text>
-  <text id="fsfe/documents">Έγγραφα</text>
+  <!--text id="fsfe/documents">Έγγραφα</text-->
   <text id="fsfe/help">Συμβάλλετε</text>
-  <text id="fsfe/donate">Δωρεές</text>
-  <text id="fsfe/order">Κατάστημα</text>
-  <text id="fsfe/lists">Λίστες αλληλογραφίας</text>
+  <text id="fsfe/contact">Επικοινωνήστε μαζί μας</text>
   <text id="fsfe/press">Τύπος</text>
-  <text id="fsfe/thankgnus">Δωροθέτες</text>
+  <!--text id="fsfe/lists">Λίστες αλληλογραφίας</text-->
   <text id="support/support">Υποστήριξη</text> 
-  <text id="fellowship/fellowship">Εγγραφή</text>
+  <text id="support/donate">Δωρεές</text>
+  <text id="support/order">Κατάστημα</text>
+  <text id="support/thankgnus">Δωροθέτες</text>
+  <text id="support/funds">Ταμείο</text>
+  <text id="fellowship/fellowship">Κοινότητα</text>
+  <text id="fellowship/join">Εγγραφή</text>
   <text id="fellowship/card">Κάρτα</text>
   <text id="fellowship/communicate">Επικοινωνία</text>
   <text id="fellowship/get-active">Δραστηριοποιηθείτε</text> 
   <text id="fellowship/faq">Συχνές ερωτήσεις</text>
   <text id="fellowship/contact">Επαφή</text>
-  <text id="planet/planet">Πλανήτης</text>
-  <text id="planet/blogs">Ιστολόγια</text>
+  <text id="fellowship/login">Σύνδεση</text>
+  <text id="news/news">Τελευταία νέα</text>
+  <text id="news/events">Επόμενες εκδηλώσεις</text>
+  <text id="news/press">Αίθουσα Τύπου</text>
+  <text id="news/nl">Ενημερωτικά δελτία</text>
+  <text id="news/planet">Ιστολόγια Μελών</text>
+  <!--text id="planet/blogs">Ιστολόγια</text-->
   <text id="wiki/wiki">Wiki</text>
+  <text id="wiki/events">Εκδηλώσεις της Κοινότητας</text>
+  <text id="wiki/fellows">Μέλη</text>
+  <text id="wiki/rc">Πρόσφατες αλλαγές</text>
+  <text id="campaigns/dfd">Ημέρα Ελευθερίας Εγγράφων</text>
+  <text id="campaigns/fya">Ελευθερώστε το Android σας</text>
+  <text id="campaigns/pdf">Προγράμματα ανάγνωσης αρχείων PDF</text>
+  <text id="campaigns/ayc">Ρωτήστε τους υποψηφίους σας</text>
+  <text id="campaigns/drm">DRM.info</text>
+  <text id="ftf/legal">Νομική υποστήριξη</text>
+  <text id="ftf/services">Υπηρεσίες και Εμπιστευτικότητα</text>
+  <text id="ftf/doc">Τεκμηρίωση</text>
+  <text id="ftf/network">Νομικό δίκτυο</text>
+  <text id="ftf/conference">Συνέδρια</text>
+  <text id="ftf/contact">Επαφή με τη Νομική Ομάδα του FSFE</text>
+  <text id="fs/fs">Ελεύθερο Λογισμικό</text>
+  <text id="fs/def">Ορισμός</text>
+  <text id="fs/soc">Ελεύθερη Κοινωνία</text>
+  <text id="fs/edu">Εκπαίδευση</text>
+  <text id="fs/buz">Επιχειρήσεις</text>
 
   <!-- Date time -->
   <text id="months/1">Ιανουάριος</text>
@@ -135,23 +194,28 @@
   <text id="statement1">Το Ευρωπαϊκό Ίδρυμα Ελεύθερου Λογισμικού είναι μια
   μη-κερδοσκοπική οργάνωση αφιερωμένη στην πρόοδο του </text>
   <text id="statement-fs">Ελεύθερου Λογισμικού</text>
-  <text id="statement2">, η οποία εργάζεται για να προωθήσει την ελευθερία 
-  στην αναδυόμενη ψηφιακή κοινωνία</text>
+  <text id="statement2">, η οποία εργάζεται για να οικοδομήσει μια ελεύθερη ψηφιακή κοινωνία</text>
+
+  <text id="motto-fsfs">Ελεύθερο Λογισμικό, Ελεύθερη Κοινωνία!</text>
+  <text id="motto-fellowship">Εγγραφείτε στην κοινότητα του FSFE!</text>
+  <text id="motto-planet">Planet, powered by <a href="https://fellowship.fsfe.org" class="the-fellowship">the Fellowship</a></text>
+  <text id="motto-wiki">Wiki, powered by <a href="https://fellowship.fsfe.org" class="the-fellowship">the Fellowship</a></text>
 
   <text id="learn-more">Μάθετε περισσότερα</text>
+  <text id="read-more">Διαβάστε περισσότερα</text>
 
   <text id="press">Τύπος</text>
   <text id="newsletter">Ενημερωτικό δελτίο</text>
   
+        <!-- These used to be in /tools/texts-content-**.xml -->
   <text id="news">Νέα</text>
   <text id="receive-newsletter">Εγγραφείτε για το μηνιαίο ενημερωτικό δελτίο του FSFE</text>
+  <text id="subscribe-newsletter">Εγγραφείτε για το ενημερωτικό δελτίο</text>
   <text id="events">Εκδηλώσεις</text>
-  <text id="more">Περισσότερα
-</text>
-  <text id="morenews">Περισσότερα νέα…</text>
-  <text id="moreevents">Περισσότερες eκδηλώσεις…</text>
+  <text id="more">Δείτε περισσότερα</text>
+  <text id="morenews">Δείτε όλα τα νέα</text>
+  <text id="moreevents">Δείτε όλες τις εκδηλώσεις</text>
 
-  
   <text id="email">Email</text>
   <text id="email-placeholder">e-mail διεύθυνση</text>
   <text id="phone">Τηλέφωνο</text>
@@ -162,6 +226,17 @@
   <text id="microblog">Μικρο-ιστολόγιο</text>
 
   <text id="donate">Δωρεές</text>
+  <text id="donate-paragraph"><p>
+        Το Ευρωπαϊκό Ίδρυμα Ελεύθερου Λογισμικού είναι μια μη-κερδοσκοπική
+        μη-κυβερνητική οργάνωση. Η <a href="/work.en.html">εργασία μας</a> 
+        πραγματοποιείται από μια κοινότητα
+        <a href="/contribute/contribute.el.html">εθελοντών</a>,
+        <a href="http://fellowship.fsfe.org">Μελών</a> και
+        <a href="thankgnus.el.html">δωρητών</a>. Οι δωρεές σας είναι κρίσιμες
+        για την ισχύ και την αυτονομία μας. Μας παροτρύνουν να συνεχίσουμε
+        τη δραστηριότητά μας για το Ελεύθερο Λογισμικό όπου είναι αναγκαίο
+        και να έχουμε ανεξάρτητη φωνή.
+      </p></text>
 
   <!-- Campaign box on front-page, translated texts -->
   <text id="cb-restricted-boot">«Ασφαλής Εκκίνηση»: Ποιος θα ελέγχει τον
@@ -173,62 +248,284 @@
   <!-- end of texts for the campaign box -->
 
   <text id="join">Εγγραφή</text>  
-  <text id="ourwork2011">Η εργασία μας στο 2011</text>
+ <text id="join-paragraph"><p>Γίνετε Μέλος του FSFE για να ενισχύσετε την
+  εργασία μας και να βοηθήσετε στη διασφάλιση της οικονομικής μας ανεξαρτησίας.
+  Με την εγγραφή σας στην Κοινότητα γίνεστε μόνιμο μέλος του FSFE - συμπεριλαμβάνεται η πρόσβαση στην υποδομή μας.</p></text>
+  <text id="join-fellowship">Εγγραφείτε στην Κοινότητα</text>
+
+  <text id="ourwork2011">Η εργασία μας το 2011</text>
   <text id="support">Υποστηρίξτε το FSFE</text>
-  
-  <text id="subscribe">Εγγραφή</text>
+  <text id="show-support">Αποδείξτε την υποστήρίξή σας!</text>
+  <text id="show-support-paragraph"><p>Το FSFE χρειάζεται την υποστηριξή σας
+  για να ακουστεί η φωνή του! Κάθε παροχή μετράει!</p></text>
+  <text id="support-fsfe">Υποστηρίζω το FSFE!</text>
 
   <!-- alt text for missing avatars -->
-  <text id="no-avatar">No Picture</text>
+  <text id="no-avatar">Χωρίς φωτογραφία</text>
   
   <!-- petitions -->
   <text id="osig">Οργανισμοί</text>
   <text id="isig">Άτομα</text>
+  <text id="bsig">Επιχειρήσεις</text>
 
+  <!-- Sidebars -->
+  <text id="related-news">Σχετικές ειδήσεις</text>
+  <text id="our-work">Η εργασία μας</text>
+  <text id="our-work-intro"><p>Ως μια μη-κερδοσκοπική, μη-κυβερνητική οργάνωση,
+  το Ευρωπαϊκό Ίδρυμα Ελεύθερου Λογισμικού εργάζεται για να θεμελιώσει τη
+  γενική συνειδητοποίηση και υποστήριξη για το Ελεύθερο Λογισμικό και τα 
+  Ανοιχτά Πρότυπα στην πολιτική, στις επιχειρήσεις, στη νομοθεσία και στην
+  κοινωνία γενικότερα.</p></text>
+  <text id="about-fsfe">Σχετικά με το FSFE</text>
+  <text id="about-fsfe-intro">
+      <p>
+        Το Ευρωπαϊκό Ίδρυμα Ελεύθερου Λογισμικού είναι αφοσιωμένο 
+        στην ανάπτυξη του Ελεύθερου Λογισμικού και εργάζεται για την 
+        <strong>ελευθερία</strong> στην αναδυόμενη ψηφιακή κοινωνία.
+      </p>
+      <p>
+        Η πρόσβαση στο λογισμικό καθορίζει τη συμμετοχή σε μια ψηφιακή 
+        κοινωνία. Οι ελευθερίες για 
+        <a href="/about/basics/freesoftware.en.html">χρήση, μελέτη, 
+        διαμοιρασμό και βελτίωση</a> του λογισμικού επιτρέπουν την 
+        <strong>ισότιμη</strong> συμμετοχή και είναι εξαιρετικά σημαντικές.
+      </p>
+  </text>
+  <text id="contribute">Συμβάλλετε</text>
+  <text id="contribute-intro"><p>Είμαστε μια κοινότητα ανθρώπων δεσμευμένων
+  στο Ελεύθερο Λογισμικό. Εργαστείτε μαζί μας! Υπάρχουν πολλοί τρόποι να το
+  κάνετε και θα βρείτε εκείνον που ταιριάζει στα ενδιαφέροντα και τις 
+  ικανότητές σας.</p></text>
 
+  <!-- campaigns to be displayed in a rotating box -->
+  <campaigns>
+    <campaign id="wiesemann" tag="donors" pos="1">
+      <photo>/donate/wiesemann.jpg</photo>
+      <text>
+        Ένας εικονικός κόσμος χωρίς Ελεύθερο Λογισμικό μοιάζει με πόλη στην 
+        οποία είστε υποχρεωμένοι να έχετε άδεια χρήσης για κάθε πεζοδρόμιο.
+        Χρειαζόμαστε και τα κοινά στον εικονικό κόσμο.
+      </text>
+      <author>Reinhard Wiesemann - Linuxhotel</author>
+      <link>/donate/donate.html</link>
+    </campaign>
+    <campaign id="zacchiroli" tag="donors" pos="1">
+      <photo>/donate/zacchiroli.jpg</photo>
+      <text>
+        Ένας κόσμος χωρίς Ελεύθερο Λογισμικό είναι ένας κόσμος όπου είμαστε
+        όλοι όμηροι των προμηθευτών ιδιοκτησιακού λογισμικού που ορίζουν τις
+        ζωές μας. Για να πολεμήσουμε ένα τέτοιο εφιαλτικό σενάριο χρειαζόμαστε
+        οργανισμούς όπως το Ευρωπαϊκό Ίδρυμα Ελεύθερου Λογισμικού.
+      </text>
+      <author>Stefano "Zack" Zacchiroli, Former Debian Project Leader</author>
+      <link>/donate/donate.html</link>
+    </campaign>
+    <campaign id="dfd">
+        <photo>/graphics/robot-protest-light.png</photo>
+        <text>
+        Γιορτή για την προσβασιμότητα στην πληροφορία και την απόκτηση
+        συνειδητοποίησης για τα Ανοιχτά Πρότυπα.
+        </text>
+        <link>//documentfreedom.org</link>
+    </campaign>
+    <campaign id="ganten" tag="donors fellowship" pos="2">
+      <photo>/donate/ganten.jpg</photo>
+      <text>
+        Το Ελεύθερο Λογισμικό είναι το στέρεο έδαφος για τις επιχειρηματικές
+        μας λύσεις. Το FSFE παρέχει μια σημαντική συμβολή για την εξασφάλισή
+        του, συνεπώς υποστηρίζουμε το FSFE.
+      </text>
+      <author>Peter Ganten - Univention</author>
+      <link>/donate/donate.html</link>
+    </campaign>
+
+    <!-- campaigns for fellowship page -->
+    <campaign id="allison" tag="fellowship" pos="1">
+      <photo>/fellowship/graphics/people/Jeremyallison.jpg</photo>
+      <text>
+        Η Ημέρα Ελευθερίας Εγγράφων είναι αφιερωμένη στη σημασία που έχουν
+        τα Ανοιχτά Πρότυπα για όλα τα ηλεκτρονικά έγγραφα, δημόσια ή ιδιωτικά.
+        Αν θέλουμε να <strong>διατηρήσουμε την ψηφιακή μας κληρονομιά</strong> 
+        όλοι πρέπει να επιλέξουμε Ανοιχτά Πρότυπα, εφαρμόσιμα από όλους,
+        ως την προκαθορισμένη επιλογή αποθήκευσης.
+      </text>
+      <author>Jeremy Allison, Samba core developer</author>
+      <link>/donate/donate.html</link>
+    </campaign>
+    <campaign id="beckedahl" tag="fellowship" pos="2">
+      <photo>/fellowship/graphics/people/beckedahl.jpg</photo>
+      <text>
+        Τα Ανοιχτά Πρότυπα είναι εγγύηση ελεύθερης ανάπτυξης της υποδομής
+        και συνεπώς μιας αυτοκαθορισμένης και ελεύθερης επικοινωνίας.
+      </text>
+      <author>Markus Beckedahl, Digitale Gesellschaft, netzpolitik.org</author>
+      <link>/donate/donate.html</link>
+    </campaign>
+
+  </campaigns>
   <!-- quotes to be displayed in a rotating box -->
   <quotes>
     <quote id="zacchiroli" tag="donors" pos="2">
       <photo>/donate/zacchiroli.jpg</photo>
-      <txt>
+      <text>
         Ένας κόσμος χωρίς Ελεύθερο Λογισμικό είναι ένας κόσμος στον οποίο
         είμαστε όλοι όμηροι των προμηθευτών ιδιοκτησιακού λογισμικού που
         καθορίζουν τις ζωές μας. Για να αντιμετωπίσουμε αυτό το εφιαλτικό
         σενάριο χρειαζόμαστε οργανισμούς όπως το Ευρωπαϊκό Ίδρυμα Ελεύθερου
         Λογισμικού.
-      </txt>
+      </text>
       <author>Stefano "Zack" Zacchiroli, Former Debian Project Leader</author>
     </quote>
     <quote id="wiesemann" tag="donors" pos="3">
       <photo>/donate/wiesemann.jpg</photo>
-      <txt>
-        Ένας εικονικός κόσμος χωρίς Ελεύθερο Λογισμικό είναι όπως μια πόλη
-        στην οποία είστε αναγκασμένοι να έχετε μια άδεια χρήσης για κάθε 
-        πεζοδρόμιο. Χρειαζόμαστε και τα κοινά στον εικονικό κόσμο.
-      </txt>
+      <text>
+        Ένας εικονικός κόσμος χωρίς Ελεύθερο Λογισμικό μοιάζει με πόλη στην 
+        οποία είστε υποχρεωμένοι να έχετε άδεια χρήσης για κάθε πεζοδρόμιο.
+        Χρειαζόμαστε και τα κοινά στον εικονικό κόσμο.
+      </text>
       <author>Reinhard Wiesemann - Linuxhotel</author>
     </quote>
     <quote id="ganten" tag="donors" pos="4">
       <photo>/donate/ganten.jpg</photo>
-      <txt>
-        Το Ελεύθερο Λογισμικό είναι το σταθερό θεμέλιο των επιχειρηματικών
-        μας λύσεων. Το FSFE παρέχει μια σημαντική συμβολή για να διασφαλιστεί
-        το θεμέλιο αυτό, συνεπώς εμείς υποστηρίζουμε το FSFE.
-      </txt>
+      <text>
+        Το Ελεύθερο Λογισμικό είναι το στέρεο έδαφος για τις επιχειρηματικές
+        μας λύσεις. Το FSFE παρέχει μια σημαντική συμβολή για την εξασφάλισή
+        του, συνεπώς υποστηρίζουμε το FSFE.
+      </text>
       <author>Peter Ganten - Univention</author>
     </quote>
 
     <quote id="appelbaum" tag="donors" pos="1">
       <photo>/fellowship/graphics/people/jacobappelbaum.png</photo>
-      <txt>
+      <text>
          Πιστεύω ότι οι ενέργειες υποστήριξης προς το FSFE είναι σημαντικές για
          την ενθάρρυνση της ανάπτυξης και υιοθέτησης του Ελεύθερου Λογισμικού
          στην Ευρώπη καθώς επίσης και στον υπόλοιπο κόσμο. Είμαι Μέλος του
          FSFE γιατί η οικονομική υποστήριξη του σκοπού του Ελεύθερου Λογισμικού
          επιφέρει θετικές βελτιώσεις στις κοινωνίες σε όλον τον κόσμο.
-      </txt>
+      </text>
       <author>Jacob Appelbaum - Spokesperson for The TOR Project</author>
     </quote>
+
+   <!-- quotes for fellowship page -->
+    <quote id="morris" tag="fellowship">
+      <photo>/fellowship/graphics/people/annamorris.jpg</photo>
+      <text>
+            Free Software challenges you to learn: to do for yourself, to be fearlessly
+            independent when it comes to your tech. In the past few years I have taken
+            pride in watching my skill base catchup with and overtake that of my
+                        proprietary-loving peers, even some paid professionals, simply by having a
+                        free and curious mindset. Free Software frees you in many ways.
+      </text>
+      <author>Anna Morris (Co-Founder of ethical-pets.co.uk and Free Software advocate)</author>
+    </quote>
+
+    <quote id="roy" tag="fellowship">
+      <photo>/fellowship/graphics/people/hugoroy.png</photo>
+      <text>
+                        The Free Software Foundation Europe (FSFE) brings together
+                        dedicated and engaged activists from all over Europe to seize the
+                        opportunities to secure our rights to use, share, study, and
+                        improve software because without Free Software, technology
+                        subjugates us instead of enhancing our freedom.
+      </text>
+      <author>Hugo Roy (Law student)</author>
+    </quote>
+
+    <quote id="keijzer" tag="fellowship">
+      <photo>/fellowship/graphics/people/kevinkeijzer.jpg</photo>
+      <text>
+                        I joined the Fellowship to stop being &#39;a minority of one&#39;, as George
+                        Orwell once put it. I wanted to meet people who shared my ideals and
+                        beliefs, so it would no longer feel as if I was fighting the system all
+                        by myself. It&#39;s reassuring to know that you&#39;re not alone, which probably
+                        motivates people to keep up with the work they are doing, even if it&#39;s
+                        not always as successful as they would like it to be.
+      </text>
+      <author>Kevin Keijzer (Political activist)</author>
+    </quote>
+
+    <quote id="nascimento" tag="fellowship">
+      <photo>/fellowship/graphics/people/mauricionascimento.jpg</photo>
+      <text>
+                        Freedom is one of the core values of our Society and one of the basic
+                        concepts of Democracy. Supporting and spreading Free Software is one
+                        way to build creative alternatives for social inclusion and to protect our
+                        citizens from the digital exploitation. We are responsible to build a better World
+                        as a gift for our future generations.
+      </text>
+      <author>Mauricio Nascimento (Middleware Engineer)</author>
+    </quote>
+
+    <quote id="guenther" tag="fellowship">
+      <photo>/fellowship/graphics/people/guidoguenther.jpg</photo>
+      <text>
+                        I&#39;m very impressed with what the FSFE has achieved on the EU and national
+                        level. Back when I was working in the public sector I was able to glimpse
+                        the vast amounts of money that are thrown at lobbying for proprietary
+                        software and so called industry standards in Germany and the EU. It&#39;s
+                        astonishing how the FSFE has still managed to get itself heard. Supporting
+                        this was one of my motivations for becoming a fellow.
+      </text>
+      <author>Guido Günther (Freelancer and Debian Developer)</author>
+    </quote>
+
+    <quote id="verheesen" tag="fellowship">
+      <photo>/fellowship/graphics/people/mauriceverheesen.jpg</photo>
+      <text>
+                Free software is important in our time. It needs professional
+                        representation which is hard work and expensive. Joining the fellowship
+                        meant a way for me to contributing my skills and some money back to the free
+                        software movement to ensure it&#39;s future.
+      </text>
+      <author>Maurice Verheesen</author>
+    </quote>
+
+    <quote id="agger" tag="fellowship">
+      <photo>/fellowship/graphics/people/carstenagger.jpg</photo>
+      <text>
+                        I was a solitary voice for years, explaining the principles behind Free
+                        Software and its importance for people in my country in numerous
+                        articles and blog posts. I wanted to belong to an organization with the
+                        goal of building the digital society on 100% free software, and
+                        supporting the FSFE and gaining access to its blogging and fellowship
+                        infrastructure seemed like a logical first step.
+      </text>
+      <author>Carsten Agger (Software Engineer)</author>
+    </quote>
+
+
+    <quote id="kehl" tag="fellowship">
+      <photo>/fellowship/graphics/people/robertkehl.jpg</photo>
+      <text>
+                        I joined the Fellowship because Free Software helps to bring more and
+                        real freedom into the world. To fight for this is my goal as a Fellow
+                        of the FSFE.
+      </text>
+      <author>Robert Kehl (IT Professional)</author>
+    </quote>
+
+    <quote id="appelbaum" tag="fellowship">
+      <photo>/fellowship/graphics/people/jacobappelbaum.png</photo>
+      <text>
+                        I believe that actions of support for the FSFE are important for
+                        encouraging Free Software development and adoption in Europe as well
+                        as the rest of the world. I&#39;m an FSFE Fellow because financially
+                        supporting the cause of Free Software brings positive improvements to
+                        all societies throughout the world.
+      </text>
+      <author>Jacob Appelbaum (Spokesperson for The TOR Project)</author>
+    </quote>
+
+
+    <quote id="mortier" tag="fellowship">
+      <photo>/fellowship/graphics/people/mortier.jpg</photo>
+      <text>
+                        I&#39;m a free sofware supporter for a long time, I fought against software patents in Brussels, co-organised the system theme at the Libre Software Meeting (RMLL) and run a Free Software company. Free Software is an essential part of our global freedom, so it was natural to become a Fellowship member at the FSFE.
+      </text>
+      <author>Benoit Mortier (Owner of OpenSides, Manager of FusionDirectory)</author>
+    </quote>
+
 
   </quotes>
 

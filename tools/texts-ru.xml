@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <textset>
+    <!--
+  <text id=""></text>
+         -->
+
+ <text id="fsfeurope">Европейский фонд свободного программного обеспечения</text>
+ <text id="freesoftwarefoundationeurope">Европейский фонд свободного программного обеспечения</text>
+
   <!-- Footer -->
   <text id="lastchanged"> Последнее обновление: </text>
   <text id="translator1a">Мы благодарим </text>
   <text id="translator1b"> за этот перевод. </text>
   <text id="translator2">Это неофициальный перевод. </text>
   <text id="translator3a">См. также </text>
-  <text id="translator3b">оригинал</text>
+  <text id="translator3b">оригинальный текст</text>
   <text id="translator3c"> этой страницы.</text>
   <text id="permission">
     Разрешается дословное копирование и распространение любым способом
-    всей этой статьи при сохранении этого примечания.
+    всей этой статьи при условии сохранения этого примечания.
   </text>
   <text id="webmaster">
     Если вы обнаружили на странице ошибку, сообщите об этом по адресу
@@ -30,6 +37,14 @@
 устранить разночтения и помочь с переводом, перейдите по <a
 href="/contribute/contribute.html">этой ссылке</a>.
   </text>
+  <text id="outdated-1">
+    <strong>Внимание: </strong>
+    Перевод этой страницы мог устареть. См. 
+  </text>
+  <text id="outdated-2">
+    Если вы хотите устранить разночтения и помочь с переводом, перейдите по <a
+href="/contribute/contribute.html">этой ссылке</a>.
+  </text>
   <text id="notranslation">
     <strong>Внимание: </strong>
     Эта страница не переведена. Ниже представлен оригинальный текст.
@@ -37,21 +52,40 @@ href="/contribute/contribute.html">этой ссылке</a>.
 href="/contribute/contribute.html">этой ссылке</a>.
   </text>
 
-  <text id="source">Исходный текст</text>
-  <text id="contact-us">Контакты</text>
+  <text id="change-lang">Изменить язык</text>
+  <text id="menu">Меню</text>
+  <text id="content">Текст страницы</text>
+  <text id="page-info">Исходный текст</text>
+  <text id="rootpage">Главная</text>
+  <text id="close-this">Закрыть</text>
+  <text id="sitemap">Карта сайта</text>
+
+  <text id="go-top">Перейти наверх страницы</text>
+  <text id="source">Исходный текст страницы</text>
+  <text id="contact-us">Контактная информация</text>
   <text id="translate">Перевести эту страницу?</text>
+  <text id="contribute-web">Участвовать в разработке сайта</text>
   <text id="imprint">Реквизиты</text>
+  <text id="privacy-policy">Политика&#160;конфиденциальности</text>
+
   
   <!-- Info box -->
+
   <text id="under-construction">
     <strong>Внимание: </strong>Эта страница находится в работе.
     Пожалуйста, <strong>подождите</strong> с переводом,
     поскольку содержимое будет изменяться.
   </text>
+  <text id="project-complete">
+	  Этот проект успешно завершен. Страницы оставлены здесь в архивных целях.
+  </text>
+  
   <text id="search">Поиск</text>
   <text id="submit">Отправить</text>
+  <text id="subscribe">Подписаться</text>
 
   <text id="language">Язык</text>
+
 
  <!-- Article metadata -->
  <text id="author">Автор</text>
@@ -62,31 +96,59 @@ href="/contribute/contribute.html">этой ссылке</a>.
  
   <!-- Conjunctions -->
   <text id="to">до</text>
+  <text id="go-to">Перейти:</text>
 
   <!-- Menu -->
+
   <text id="fsfe/about">О нас</text>
+  <text id="fsfe/mission">Цели фонда</text>
   <text id="fsfe/projects">Наша работа</text>
   <text id="fsfe/campaigns">Кампании</text>
-  <text id="fsfe/documents">Документы</text>
-  <text id="fsfe/help">Принять участие</text>
-  <text id="fsfe/donate">Пожертвования</text>
-  <text id="fsfe/order">Магазин</text>
-  <text id="fsfe/lists">Списки рассылки</text>
+  <!--text id="fsfe/documents">Документы</text-->
+  <text id="fsfe/help">Участвовать</text>
+  <text id="fsfe/contact">Контакты</text>
   <text id="fsfe/press">Пресса</text>
-  <text id="fsfe/thankgnus">Благодарности</text>
+  <!--text id="fsfe/lists">Списки рассылки</text-->
   <text id="support/support">Поддержка</text>
-  <text id="fellowship/fellowship">Присоединяйтесь</text>
-  <text id="fellowship/card">Электронная карта</text>
+  <text id="support/donate">Пожертвования</text>
+  <text id="support/order">Магазин</text>
+  <text id="support/thankgnus">Благодарности</text>
+  <text id="support/funds">Бюджет</text>
+  <text id="fellowship/fellowship">Содружество</text>
+  <text id="fellowship/join">Присоединяйтесь</text>
+  <text id="fellowship/card">Смарт-карта</text>
   <text id="fellowship/communicate">Связь</text>
   <text id="fellowship/get-active">Действуйте</text>
   <text id="fellowship/faq">Вопросы и ответы</text>
   <text id="fellowship/contact">Контакты</text>
   <text id="fellowship/login">Авторизоваться</text>
-  <text id="planet/planet">Планета</text>
-  <text id="planet/blogs">Блоги</text>
+  <text id="news/news">Последние новости</text>
+  <text id="news/events">Предстоящие события</text>
+  <text id="news/press">Пресс-центр</text>
+  <text id="news/nl">Информационный бюллетень</text>
+  <text id="news/planet">Блоги «Планета»</text>
+  <!--text id="planet/blogs">Blogs</text-->
   <text id="wiki/wiki">Вики</text>
-
-  <text id="fellowship/3-join">Содружество</text>
+  <text id="wiki/events">События Содружества</text>
+  <text id="wiki/fellows">Члены Содружества</text>
+  <text id="wiki/rc">Последние правки</text>
+  <text id="campaigns/dfd">День свободы документов</text>
+  <text id="campaigns/fya">Освободи свой Android</text>
+  <text id="campaigns/pdf">Программы чтения PDF</text>
+  <text id="campaigns/ayc">Спроси своих кандидатов</text>
+  <text id="campaigns/drm">DRM.info</text>
+  <text id="ftf/legal">Юридическая поддержка</text>
+  <text id="ftf/services">Услуги и доверенности</text>
+  <text id="ftf/doc">Документация</text>
+  <text id="ftf/network">Правовая сеть</text>
+  <text id="ftf/conference">Конференции</text>
+  <text id="ftf/contact">Связаться с юристами</text>
+  <text id="fs/fs">Свободные программы</text>
+  <text id="fs/basics">Основы</text>
+  <text id="fs/def">Истоки и определение</text>
+  <text id="fs/soc">Свободное общество</text>
+  <text id="fs/edu">Образование</text>
+  <text id="fs/buz">Бизнес</text>
 
   <!-- Date time -->
   <text id="months/1">Январь</text>
@@ -137,15 +199,24 @@ href="/contribute/contribute.html">этой ссылке</a>.
   <text id="statement-fs">свободного программного обеспечения</text>
   <text id="statement2">. Работа ЕФСПО состоит в содействии свободе
 в растущем цифровом обществе</text>
+
+  <text id="motto-fsfs">Свободные программы — свободное общество!</text>
+  <text id="motto-fellowship">Присоединяйтесь к сообществу ЕФСПО!</text>
+  <text id="motto-planet">«Планета», при участии <a href="https://fellowship.fsfe.org" class="the-fellowship">Содружества</a></text>
+  <text id="motto-wiki">Вики, при участии <a href="https://fellowship.fsfe.org" class="the-fellowship">Содружества</a></text>
   
-  <text id="learn-more"> Подробности</text>
+  <text id="learn-more">Подробности</text>
+  <text id="read-more">Подробности</text>
+
   <text id="press">Пресса</text>
-  <text id="newsletter">Новости</text>
+  <text id="newsletter">Ежемесячный бюллетень</text>
   
+	<!-- These used to be in /tools/texts-content-**.xml -->
   <text id="news">Последние новости</text>
   <text id="receive-newsletter">Подписаться на ежемесячные выпуски новостей ЕФСПО</text>
+  <text id="subscribe-newsletter">Подписаться на выпуски новостей</text>
   <text id="events">Предстоящие события</text>
-  <text id="more">Далее</text>
+  <text id="more">Подробнее</text>
   <text id="morenews">Архив новостей</text>
   <text id="moreevents">Архив событий</text>
   
@@ -159,6 +230,17 @@ href="/contribute/contribute.html">этой ссылке</a>.
   <text id="microblog">Микроблог</text>
 
   <text id="donate">Пожертвования</text>
+  <text id="donate-paragraph"><p>
+        Европейский фонд свободного программного обеспечения — некоммерческая
+        неправительственная организация. <a href="/work.en.html">Наша работа</a> возможна
+        только благодаря
+        <a href="/contribute/contribute.en.html">добровольцам</a>,
+        <a href="http://fellowship.fsfe.org">членам Содружества</a> и
+        <a href="thankgnus.en.html">спонсорам</a>. Ваши пожертвования необходимы для
+        нашей эффективности и самостоятельности. Они дают нам возможность продолжать
+        работать на благо свободного программного обеспечения везде, где это необходимо,
+        и выражать независимое мнение. 
+      </p></text>
 
   <!-- Campaign box on front-page, translated texts -->
   <text id="cb-restricted-boot">«Безопасная загрузка»: Кто будет
@@ -171,48 +253,345 @@ href="/contribute/contribute.html">этой ссылке</a>.
   <!-- end of texts for the campaign box -->
 
   <text id="join">Присоединяйтесь</text>
+  <text id="join-paragraph"><p>Вступите в Содружество ЕФСПО, чтобы шире участвовать
+    в нашей работе и помогать нам поддерживать нашу финансовую независимость.
+    Присоединяясь к Содружеству, вы станете финансировать ЕФСПО и сможете
+    участвовать в его работе, получая доступ ко всей нашей
+    инфраструктуре.</p></text>
+  <text id="join-fellowship">Присоединяйтесь к Содружеству</text>
+
   <text id="ourwork2011">Наша работа в 2011 году</text>
   <text id="support">Поддержи ЕФСПО</text>
-
-  <text id="subscribe">Подписаться</text>
-
+  <text id="show-support">Продемонстрируй свою поддержку!</text>
+  <text id="show-support-paragraph"><p>Для того, чтобы голос ЕФСПО был услышан, он
+    нуждается в вашей поддержке. Важен каждый ваш голос!</p></text>
+  <text id="support-fsfe">Я поддерживаю ЕФСПО!</text>
+ 
   <!-- alt text for missing avatars -->
   <text id="no-avatar">Нет изображения</text>
   
   <!-- petitions -->
   <text id="osig">Организации</text>
   <text id="isig">Частные лица</text>
+  <text id="bsig">Предприятия</text>
+ 
+  <!-- Sidebars -->
+  <text id="related-news">Новости по теме</text>
+  <text id="our-work">Наша работа</text>
+  <text id="our-work-intro"><p>ЕФСПО как некоммерческая неправительственная организация
+    ставит целью популяризацию и поддержку свободного программного обеспечения и
+    открытых стандартов на политическом, деловом и правовом уровнях, а также на уровне
+    общества в целом.</p></text>
+  <text id="about-fsfe">О ЕФСПО</text>
+  <text id="about-fsfe-intro">
+      <p>
+        Главной целью Европейского фонда свободного программного обеспечения (ЕФСПО)
+        является продвижение свободного программного обеспечения и поддержка свободы в
+        растущем цифровом обществе.
+      </p>
+      <p>
+        Полноправным членом цифрового общества может стать только тот, у кого есть
+        доступ к программному обеспечению. Свободы <a
+        href="/about/basics/freesoftware.ru.html">использования, изучения,
+        распространения и совершенствования</a> программ обеспечивают равноправие членов
+        общества в информационную эпоху и поэтому крайне важны.
+      </p>
+  </text>
+  <text id="contribute">Участвуйте!</text>
+  <text id="contribute-intro"><p>Наше сообщество состоит из людей, преданных идеям
+    свободного программного обеспечения. Подключайтесь, пожалуйста, к нашей работе!
+    Это можно делать по-разному, и вы обязательно найдете способ, который
+    отвечает вашим склонностям и умениям.</p></text>
+
+  <!-- campaigns to be displayed in a rotating box -->
+  <campaigns>
+    <campaign id="dfd">
+        <photo>/graphics/robot-protest-light.png</photo>
+        <text>
+        Празднуем доступность информации и популяризуем открытые стандарты.
+        </text>
+        <link>//documentfreedom.org</link>
+    </campaign>
+    <campaign id="wiesemann" tag="donors" pos="1">
+      <photo>/donate/wiesemann.jpg</photo>
+      <text>
+        Виртуальный мир без свободных программ подобен городу, в котором
+        вы обязаны получать лицензию на пользование каждым тротуаром.
+        В виртуальном мире нам тоже нужны общественные места.
+      </text>
+      <author>Рейнхард Виземан — Линуксотель</author>
+     <link>/donate/donate.html</link>
+    </campaign>
+    <campaign id="ilovefs">
+        <text>
+        Покажи свою любовь к свободным программам — поблагодари разработчиков.
+        </text>
+        <link>/campaigns/ilovefs/ilovefs.html</link>
+    </campaign>
+    <campaign id="zacchiroli" tag="donors" pos="1">
+      <photo>/donate/zacchiroli.jpg</photo>
+      <text>
+        Мир без свободных программ — это мир, где все мы — заложники
+        производителей несвободных программ, которые манипулируют нашими
+        жизнями. Чтобы противостоять такому кошмару, нам нужны организации,
+        подобные Европейскому фонду свободного программного обеспечения.
+      </text>
+      <author>Стефано Закироли (Zack), бывший руководитель проекта Debian</author>
+      <link>/donate/donate.html</link>
+    </campaign>
+    <campaign id="racketware">
+        <comment>найти эмблему на ВАШЕМ языке: http://no.more.racketware.info/web-banners/#int</comment>
+        <photo>http://racketware.info/media/image/racketiciel/racketware_English_453x227_2013-07-11.png</photo>
+        <text>Программы: сделайте выбор до того как заплатите, подпишите петицию!</text>
+        <link>http://racketware.info/petition/click/en</link>
+    </campaign>
+    <campaign id="ganten" tag="donors fellowship" pos="2">
+      <photo>/donate/ganten.jpg</photo>
+      <text>
+        Свободные программы — прочный фундамент для проектов нашего
+        предприятия. ЕФСПО вносит важный вклад в охрану этого
+        фундамента, вот почему мы поддерживаем ЕФСПО.
+      </text>
+      <author>Питер Гэнтен — Юнивеншн</author>
+     <link>/donate/donate.html</link>
+    </campaign>
+
+
+    <!-- campaigns for fellowship page -->
+    <campaign id="allison" tag="fellowship" pos="1">
+      <photo>/fellowship/graphics/people/Jeremyallison.jpg</photo>
+      <text>
+        День свободы документов отмечает важность открытых форматов
+        для всех электронных документов, будь они публичные или частные.
+        Если мы хотим <strong>сохранить наше цифровое наследие</strong>,
+        нам всем необходимо выбирать открытые стандарты как основной формат
+	для его хранения, потому что они могут быть реализованы
+        кем угодно.
+      </text>
+      <author>Джереми Эллисон, основной разработчик Samba</author>
+      <link>/donate/donate.html</link>
+    </campaign>
+    <campaign id="beckedahl" tag="fellowship" pos="2">
+      <photo>/fellowship/graphics/people/beckedahl.jpg</photo>
+      <text>
+        Открытые стандарты гарантируют свободу развития инфраструктуры
+        и, следовательно, независимое и свободное общение.
+      </text>
+      <author>Маркус Бекедаль, Digitale Gesellschaft, netzpolitik.org</author>
+      <link>/donate/donate.html</link>
+    </campaign>
+
+  </campaigns>
+
+
 
   <!-- quotes to be displayed in a rotating box -->
   <quotes>
     <quote id="zacchiroli" tag="donors" pos="1">
       <photo>/donate/zacchiroli.jpg</photo>
-      <txt>
-        A world without Free Software is a world where we are all hostages of
-        proprietary software vendors that run our lives. To fight such a
-        nightmare scenario we need organisations like Free Software Foundation
-        Europe.
-      </txt>
-      <author>Stefano "Zack" Zacchiroli, Former Debian Project Leader</author>
+      <text>
+        Мир без свободных программ — это мир, где все мы — заложники
+        производителей несвободных программ, которые манипулируют нашими
+        жизнями. Чтобы противостоять такому кошмару, нам нужны организации,
+        подобные Европейскому фонду свободного программного обеспечения.
+      </text>
+      <author>Стефано Закироли (Zack), бывший руководитель проекта Debian</author>
     </quote>
     <quote id="wiesemann" tag="donors" pos="2">
       <photo>/donate/wiesemann.jpg</photo>
-      <txt>
+      <text>
         Виртуальный мир без свободных программ подобен городу, в котором
         вы обязаны получать лицензию на пользование каждым тротуаром.
         В виртуальном мире нам тоже нужны общественные места.
-      </txt>
+      </text>
       <author>Рейнхард Виземан — Линуксотель</author>
     </quote>
     <quote id="ganten" tag="donors" pos="3">
       <photo>/donate/ganten.jpg</photo>
-      <txt>
+      <text>
         Свободные программы — прочный фундамент для проектов нашего
         предприятия. ЕФСПО вносит важный вклад в охрану этого
         фундамента, вот почему мы поддерживаем ЕФСПО.
-      </txt>
+      </text>
       <author>Питер Гэнтен — Юнивеншн</author>
     </quote>
+
+    <quote id="appelbaum" tag="donors" pos="1">
+      <photo>/fellowship/graphics/people/jacobappelbaum.png</photo>
+      <text>
+        Я убежден, что действия по поддержке ЕФСПО важны для поощрения
+        разработки и применения свободных программ Европе, а также
+        и в остальном мире. Я стал членом Содружества ЕФСПО потому,
+        что финансовая поддержка свободных программ вносит позитивные
+        изменения во все общества на Земле.
+      </text>
+      <author>Якоб Аппельбаум - пресс-секретарь проекта TOR</author>
+    </quote> 
+
+    <!-- quotes for fellowship page -->
+    <quote id="morris" tag="fellowship">
+      <photo>/fellowship/graphics/people/annamorris.jpg</photo>
+      <text>
+        Свободные программы заставляют вас развиваться: делать все для себя,
+        проявлять бесстрашие и независимость, когда дело касается своих
+        технических знаний. В течение нескольких прошедших лет я с гордостью
+        наблюдаю рост моих умений, больший, чем у моих сверстников, использующих
+        несвободные программы, включая некоторых настоящих профессионалов,
+        просто потому, что приходится приходится проявлять такие качества, как
+        свобода ума и любопытство. Свободные программы делают вас свободными во
+        многих областях.
+      </text>
+      <author>Анна Моррис (соучредительница ethical-pets.co.uk
+        и сторонница свободных программ)</author>
+    </quote>
+
+    <quote id="roy" tag="fellowship">
+      <photo>/fellowship/graphics/people/hugoroy.png</photo>
+      <text>
+        Европейский фонд свободного программного обеспечения (ЕФСПО)
+        сводит вместе постоянных и вовлеченных активистов со всей Европы,
+        чтобы использовать возможности защитить наши права использовать,
+        распространять, изучать и модифицировать программы, поскольку без
+        свободных программ техника подчиняет нас вместо того, чтобы
+        увеличивать нашу свободу.
+      </text>
+      <author>Гюго Руа (исследователь права)</author>
+    </quote>
+
+    <quote id="keijzer" tag="fellowship">
+      <photo>/fellowship/graphics/people/kevinkeijzer.jpg</photo>
+      <text>
+        Я вступил в Содружество чтобы перестать быть «тем, кто в меньшинстве,
+        в единственном числе», как когда-то сказал Оруэлл. Я хотел встретить
+        людей, которые разделяют мои идеалы и убеждения так, чтобы я не
+        чувствовал себя больше борющимся с системой в одиночку. Когда
+        знаешь, что ты не один, это ободряет, побуждает продолжать
+        свою работу, даже если результаты не всегда такие, как того бы
+        хотелось.
+      </text>
+      <author>Кевин Кайзер (политический активист)</author>
+    </quote>
+
+    <quote id="nascimento" tag="fellowship">
+      <photo>/fellowship/graphics/people/mauricionascimento.jpg</photo>
+      <text>
+        Свобода является одной из коренных ценностей нашего общества и одним
+        из основных принципов демократии. Поддержка и внедрение свободных
+        программ — это один из способов создать творческие альтернативы
+        для социальной интеграции и для защиты наших граждан от цифровой
+        эксплуатации. Мы отвечаем за то, чтобы построить лучший мир для
+        будущих поколений.
+      </text>
+      <author>Маурисио Насименто (инженер-программист)</author>
+    </quote>
+
+    <quote id="guenther" tag="fellowship">
+      <photo>/fellowship/graphics/people/guidoguenther.jpg</photo>
+      <text>
+        Я очень впечатлен тем, чего ЕФСПО достиг на европейском и национальных
+        уровнях. В то время, когда я работал в государственном секторе,
+        мне бросились в глаза огромные суммы, которые тратились на продвижение
+        несвободных программ и так
+        называемые промышленные стандарты ЕС и Германии. Поразительно, как
+        ЕФСПО удалось все же добиться, чтобы к нему прислушивались. Поддержка
+        этого была одной из моих побудительных причин вступления в Содружество.
+      </text>
+      <author>Гвидо Гюнтер (внештатный работник и разработчик Debian)</author>
+    </quote>
+    
+    <quote id="verheesen" tag="fellowship">
+      <photo>/fellowship/graphics/people/mauriceverheesen.jpg</photo>
+      <text>
+        Свободные программы в наше время играют важную роль. Они нуждаются
+        в профессиональном представительстве, что является непростым и
+        дорогостоящим делом. Вступление в Содружество означало для меня
+        возможность вложить мои умения и кое-какие деньги обратно в движение
+        свободных программ чтобы обеспечить его будущее.
+      </text>
+      <author>Маурис Верхесен</author>
+    </quote>
+
+    <quote id="agger" tag="fellowship">
+      <photo>/fellowship/graphics/people/carstenagger.jpg</photo>
+      <text>
+        Долгие годы я был одиноким голосом, который в многочисленных статьях
+        и сообщениях в блоге разъяснял, как важны для народа моей страны
+        принципы, стоящие за свободными программами. Я хотел вступить в
+        организацию, чьей целью было бы построение цифрового общества на 100%
+        свободных программах, и поддержка ЕФСПО с получением доступа к
+        инфраструктуре блогов и Содружества выглядит как логичный первый шаг.
+      </text>
+      <author>Карстен Аггер (инженер-программист)</author>
+    </quote>
+    
+    
+    <quote id="kehl" tag="fellowship">
+      <photo>/fellowship/graphics/people/robertkehl.jpg</photo>
+      <text>
+        Я вступил в Содружество потому, что свободные программы помогают
+        принести больше настоящей свободы в мир. Борьба за это — моя цель как
+        члена Содружества ЕФСПО.
+      </text>
+      <author>Роберт Кель (профессионал в области компьютерных технологий)</author>
+    </quote>
+    
+    <quote id="appelbaum" tag="fellowship">
+      <photo>/fellowship/graphics/people/jacobappelbaum.png</photo>
+      <text>
+        Я убежден, что действия по поддержке ЕФСПО важны для поощрения
+        разработки и применения свободных программ Европе, а также
+        и в остальном мире. Я являюсь членом Содружества ЕФСПО потому, что
+        когда финансовая поддержка на стороне свободных программ — это
+        приводит к позитивным изменениям в обществе по всему миру.
+      </text>
+      <author>Якоб Аппельбаум - пресс-секретарь проекта TOR</author>
+    </quote> 
+    
+    
+    <quote id="mortier" tag="fellowship">
+      <photo>/fellowship/graphics/people/mortier.jpg</photo>
+      <text>
+        Я уже долгое время являюсь сторонником свободных программ, я боролся
+        против патентов на программы в Брюсселе, участвовал в организации
+        системного окружения на Libre Software Meeting (RMLL) и руководил
+        предприятием по разработке свободных программ. Свободные программы
+        являются неотъемлемой частью нашей глобальной свободы, так что
+        для меня было естественно вступить в Содружество ЕФСПО.
+      </text>
+      <author>Бенуа Мортье (владелец OpenSides, управляющий FusionDirectory)</author>
+    </quote> 
+    
+    
+    <quote id="nermin" tag="fellowship">
+      <photo>/fellowship/graphics/people/nermincanik.jpg</photo>
+      <text>
+        Свободные программы для меня — это: распространение, изучение,
+        независимость от монополий, сложение воедино, страсть и свобода!
+        С тех пор, как я — член Содружества, я нахожу новых друзей, которые
+        помогают мне со свободными программами и в других областях, каждый
+        день я узнаю что-то новое, даже если нас разделяют километры. Это
+        восхитительно — быть в сообществе, которое поддерживает
+        мою заинтересованность и любовь к свободным программам!
+      </text>
+      <author>Нермин Джаник (деловой аналитик компьютерных технологий)</author>
+    </quote> 
+    
+    
+    <quote id="guido" tag="fellowship">
+      <photo>/fellowship/graphics/people/guidoarnold.jpg</photo>
+      <text>
+        Свободным программам необходим голос в политике. Мы, добровольцы,
+        вместе делаем удивительные вещи, но некоторые задачи не приносят
+        радости, или они критичны ко времени, или нуждаются в обширных
+        познаниях. ЕФСПО может полностью раскрыть свой потенциал только
+        с помощью штатных сотрудников, чтобы делать то, что добровольцы
+        делать не могут. До сих пор я встречался со всеми сотрудниками
+        и могу сказать, что не жалею ни об одном центе, который я отдал
+        на деятельность ЕФСПО.
+      </text>
+      <author>Гвидо Арнольд</author>
+    </quote> 
+
   </quotes>
 </textset>
 

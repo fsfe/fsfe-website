@@ -96,7 +96,8 @@
   <text id="fsfe/order">Bestellung</text>
   <text id="support/thankgnus">Unsere Spender</text>
   <text id="support/funds">Ein- und Ausgaben</text>
-  <text id="fellowship/fellowship">Dem Fellowship beitreten</text>
+  <text id="fellowship/fellowship">Fellowship</text>
+  <text id="fellowship/join">Beitreten</text>
   <text id="fellowship/card">Karte</text>
   <text id="fellowship/communicate">Kommunizieren</text>
   <text id="fellowship/get-active">Aktiv werden</text>
@@ -172,10 +173,11 @@
   <text id="weekdays-abbreviated/5">Fre</text>
   <text id="weekdays-abbreviated/6">Sam</text>
   <text id="weekdays-abbreviated/7">Son</text>
-  
+
   <text id="statement1">Die Free Software Foundation Europe ist eine gemeinnützige Organisation, die sich der Förderung </text>
   <text id="statement-fs">Freier Software</text>
   <text id="statement2"> und der Arbeit für Freiheit in einer sich entwickelnden digitalen Gesellschaft widmet</text>
+
   <text id="motto-fsfs">Freie Software, Freie Gesellschaft!</text>
   <text id="motto-planet">Blog Planet, betrieben vom <a href="https://fellowship.fsfe.org" class="the-fellowship">Fellowship</a></text>
   <text id="motto-wiki">Wiki, betrieben vom <a href="https://fellowship.fsfe.org" class="the-fellowship">Fellowship</a></text>
@@ -252,7 +254,7 @@
   <text id="about-fsfe-intro">
       <p>
         Die Free Software Foundation Europe widmet sich der Förderung Freier
-        Software und der Arbeit für <strong>Freiheit</strong>in einer sich
+        Software und der Arbeit für <strong>Freiheit</strong> in einer sich
         entwickelnden digitalen Gesellschaft.
       </p>
       <p>
@@ -276,35 +278,48 @@
   
   <!-- campaigns to be displayed in a rotating box -->
   <campaigns>
+    <campaign id="dfd">
+        <photo>/graphics/robot-protest-light.svg</photo>
+        <text>
+        Guter Zugang zu Informationen und mehr Aufklärung für Offene Standards.
+        </text>
+        <link>//documentfreedom.org</link>
+    </campaign>
     <campaign id="wiesemann" tag="donors" pos="1">
       <photo>/donate/wiesemann.jpg</photo>
-      <txt>
+      <text>
         Eine virtuelle Welt ohne Freie Software ist wie eine Stadt, in der
         man für jeden Bürgersteig eine Benutzungslizenz benötigt. Wir brauchen
         auch Allgemeingut in der virtuellen Welt.
-      </txt>
+      </text>
       <author>Reinhard Wiesemann - Linuxhotel</author>
       <link>/donate/donate.html</link>
     </campaign>
+    <campaign id="ilovefs">
+        <photo></photo>
+        <text>
+        Zeige, dass Du Freie Software liebst und danke ihren Entwicklern.
+        </text>
+        <link>/campaigns/ilovefs/ilovefs.html</link>
+    </campaign>
     <campaign id="zacchiroli" tag="donors" pos="1">
       <photo>/donate/zacchiroli.jpg</photo>
-      <txt>
+      <text>
         Eine Welt ohne Freie Software ist eine Welt in der wir Gefangene von
         propritären Software-Anbietern sind, die unser Leben betreiben. Um
         diesen Alptraum zu bekämpfen benötigen wir Organisationen wie die Free
         Software Foundation Europe.
-      </txt>
+      </text>
       <author>Stefano "Zack" Zacchiroli, Former Debian Project Leader</author>
       <link>/donate/donate.html</link>
     </campaign>
-
     <campaign id="ganten" tag="donors fellowship" pos="2">
       <photo>/donate/ganten.jpg</photo>
-      <txt>
+      <text>
         Freie Software ist das stabile Fundament unserer Unternehmenslösungen,
         die FSFE leistet einen wichtigen Beitrag zur Sicherung dieses
         Fundaments. Deswegen unterstützen wir die FSFE.
-      </txt>
+      </text>
       <author>Peter Ganten - Univention</author>
       <link>/donate/donate.html</link>
     </campaign>
@@ -314,24 +329,191 @@
     <!-- TODO -->
     <campaign id="allison" tag="fellowship" pos="1">
       <photo>/fellowship/graphics/people/Jeremyallison.jpg</photo>
-      <txt>
+      <text>
         Document Freedom Day celebrates the importance of Open Standards for all
         electronic documents, whether public or private. If we want to <strong>preserve
         our digital heritage</strong> we all need to select Open Standards, implementable
         by anyone, as our default storage choice.
-      </txt>
+      </text>
       <author>Jeremy Allison, Samba core developer</author>
       <link>/donate/donate.html</link>
     </campaign>
     <campaign id="beckedahl" tag="fellowship" pos="2">
       <photo>/fellowship/graphics/people/beckedahl.jpg</photo>
-      <txt>
+      <text>
         Open Standards garantee a free development of the infrastructure and
         therefore a self-determined and free communication.
-      </txt>
+      </text>
       <author>Markus Beckedahl, Digitale Gesellschaft, netzpolitik.org</author>
       <link>/donate/donate.html</link>
     </campaign>
 
   </campaigns>
+  <!-- quotes to be displayed in a rotating box -->
+  <quotes>
+    <quote id="zacchiroli" tag="donors" pos="2">
+      <photo>/donate/zacchiroli.jpg</photo>
+      <text>
+        Eine Welt ohne Freie Software ist eine Welt in der wir Gefangene von
+        propritären Software-Anbietern sind, die unser Leben betreiben. Um
+        diesen Alptraum zu bekämpfen benötigen wir Organisationen wie die Free
+        Software Foundation Europe.
+      </text>
+      <author>Stefano "Zack" Zacchiroli, Ehemaliger Debian-Projektleiter</author>
+    </quote>
+    <quote id="wiesemann" tag="donors" pos="3">
+      <photo>/donate/wiesemann.jpg</photo>
+      <text>
+        Eine virtuelle Welt ohne Freie Software ist wie eine Stadt, in der
+        man für jeden Bürgersteig eine Benutzungslizenz benötigt. Wir brauchen
+        auch Allgemeingut in der virtuellen Welt.
+      </text>
+      <author>Reinhard Wiesemann - Linuxhotel</author>
+    </quote>
+    <quote id="ganten" tag="donors" pos="4">
+      <photo>/donate/ganten.jpg</photo>
+      <text>
+        Freie Software ist das stabile Fundament unserer Unternehmenslösungen,
+        die FSFE leistet einen wichtigen Beitrag zur Sicherung dieses
+        Fundaments. Deswegen unterstützen wir die FSFE.
+      </text>
+      <author>Peter Ganten - Univention</author>
+    </quote>
+
+    <!-- TODO translate -->
+    <quote id="appelbaum" tag="donors" pos="1">
+      <photo>/fellowship/graphics/people/jacobappelbaum.png</photo>
+      <text>
+			I believe that actions of support for the FSFE are important for
+  			encouraging Free Software development and adoption in Europe as well
+  			as the rest of the world. I&#39;m an FSFE Fellow because financially
+  			supporting the cause of Free Software brings positive improvements to
+ 			all societies throughout the world.
+      </text>
+      <author>Jacob Appelbaum - Spokesperson for The TOR Project</author>
+    </quote> 
+
+    <!-- quotes for fellowship page -->
+    <quote id="morris" tag="fellowship">
+      <photo>/fellowship/graphics/people/annamorris.jpg</photo>
+      <text>
+            Free Software challenges you to learn: to do for yourself, to be fearlessly
+            independent when it comes to your tech. In the past few years I have taken
+            pride in watching my skill base catchup with and overtake that of my
+			proprietary-loving peers, even some paid professionals, simply by having a
+			free and curious mindset. Free Software frees you in many ways.
+      </text>
+      <author>Anna Morris (Co-Founder of ethical-pets.co.uk and Free Software advocate)</author>
+    </quote>
+
+    <quote id="roy" tag="fellowship">
+      <photo>/fellowship/graphics/people/hugoroy.png</photo>
+      <text>
+			The Free Software Foundation Europe (FSFE) brings together
+			dedicated and engaged activists from all over Europe to seize the
+			opportunities to secure our rights to use, share, study, and
+			improve software because without Free Software, technology
+			subjugates us instead of enhancing our freedom.
+      </text>
+      <author>Hugo Roy (Law student)</author>
+    </quote>
+
+    <quote id="keijzer" tag="fellowship">
+      <photo>/fellowship/graphics/people/kevinkeijzer.jpg</photo>
+      <text>
+			I joined the Fellowship to stop being &#39;a minority of one&#39;, as George
+			Orwell once put it. I wanted to meet people who shared my ideals and
+			beliefs, so it would no longer feel as if I was fighting the system all
+			by myself. It&#39;s reassuring to know that you&#39;re not alone, which probably
+			motivates people to keep up with the work they are doing, even if it&#39;s
+			not always as successful as they would like it to be.
+      </text>
+      <author>Kevin Keijzer (Political activist)</author>
+    </quote>
+
+    <quote id="nascimento" tag="fellowship">
+      <photo>/fellowship/graphics/people/mauricionascimento.jpg</photo>
+      <text>
+			Freedom is one of the core values of our Society and one of the basic
+			concepts of Democracy. Supporting and spreading Free Software is one 
+			way to build creative alternatives for social inclusion and to protect our 
+			citizens from the digital exploitation. We are responsible to build a better World
+			as a gift for our future generations.
+      </text>
+      <author>Mauricio Nascimento (Middleware Engineer)</author>
+    </quote>
+
+    <quote id="guenther" tag="fellowship">
+      <photo>/fellowship/graphics/people/guidoguenther.jpg</photo>
+      <text>
+			I&#39;m very impressed with what the FSFE has achieved on the EU and national
+			level. Back when I was working in the public sector I was able to glimpse
+			the vast amounts of money that are thrown at lobbying for proprietary
+			software and so called industry standards in Germany and the EU. It&#39;s
+			astonishing how the FSFE has still managed to get itself heard. Supporting
+			this was one of my motivations for becoming a fellow.
+      </text>
+      <author>Guido Günther (Freelancer and Debian Developer)</author>
+    </quote>
+    
+    <quote id="verheesen" tag="fellowship">
+      <photo>/fellowship/graphics/people/mauriceverheesen.jpg</photo>
+      <text>
+    		Free software is important in our time. It needs professional
+			representation which is hard work and expensive. Joining the fellowship
+			meant a way for me to contributing my skills and some money back to the free
+			software movement to ensure it&#39;s future.
+      </text>
+      <author>Maurice Verheesen</author>
+    </quote>
+
+    <quote id="agger" tag="fellowship">
+      <photo>/fellowship/graphics/people/carstenagger.jpg</photo>
+      <text>
+			I was a solitary voice for years, explaining the principles behind Free
+			Software and its importance for people in my country in numerous
+			articles and blog posts. I wanted to belong to an organization with the
+			goal of building the digital society on 100% free software, and
+			supporting the FSFE and gaining access to its blogging and fellowship
+			infrastructure seemed like a logical first step.
+      </text>
+      <author>Carsten Agger (Software Engineer)</author>
+    </quote>
+    
+    
+    <quote id="kehl" tag="fellowship">
+      <photo>/fellowship/graphics/people/robertkehl.jpg</photo>
+      <text>
+			I joined the Fellowship because Free Software helps to bring more and
+			real freedom into the world. To fight for this is my goal as a Fellow
+			of the FSFE.
+      </text>
+      <author>Robert Kehl (IT Professional)</author>
+    </quote>
+    
+    <quote id="appelbaum" tag="fellowship">
+      <photo>/fellowship/graphics/people/jacobappelbaum.png</photo>
+      <text>
+			I believe that actions of support for the FSFE are important for
+  			encouraging Free Software development and adoption in Europe as well
+  			as the rest of the world. I&#39;m an FSFE Fellow because financially
+  			supporting the cause of Free Software brings positive improvements to
+ 			all societies throughout the world.
+      </text>
+      <author>Jacob Appelbaum (Spokesperson for The TOR Project)</author>
+    </quote> 
+    
+    
+    <quote id="mortier" tag="fellowship">
+      <photo>/fellowship/graphics/people/mortier.jpg</photo>
+      <text>
+			I&#39;m a free sofware supporter for a long time, I fought against software patents in Brussels, co-organised the system theme at the Libre Software Meeting (RMLL) and run a Free Software company. Free Software is an essential part of our global freedom, so it was natural to become a Fellowship member at the FSFE.
+      </text>
+      <author>Benoit Mortier (Owner of OpenSides, Manager of FusionDirectory)</author>
+    </quote> 
+    
+    
+  
+  </quotes>  
+
 </textset>

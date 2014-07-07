@@ -147,4 +147,11 @@
         </xsl:call-template>
     </xsl:template>
 
+  <!-- Paris -->
+  <xsl:template match="paris-members">
+    <xsl:call-template name="country-people-list">
+      <xsl:with-param name="team" select="'paris'" />
+    </xsl:call-template>
+  </xsl:template>
+
 </xsl:stylesheet>

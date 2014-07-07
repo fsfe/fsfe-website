@@ -98,9 +98,9 @@
           <xsl:value-of select="$img-path" />
         </xsl:attribute>
         <!-- And on error (if previous file does not exist), we load our default image -->
-        <xsl:attribute name="onerror">
+        <!-- xsl:attribute name="onerror">
           <xsl:text>this.src='/campaigns/valentine/valentine-358x60-en.png';</xsl:text>
-        </xsl:attribute>
+        </xsl:attribute -->
         <xsl:attribute name="alt"
                        value="No picture" />
       </xsl:element>
@@ -109,21 +109,34 @@
 
   <xsl:template match="campaigns">
     <div  id="campaigns-boxes" class="cycle-slideshow"  data-cycle-pause-on-hover="true" data-cycle-speed="500"  data-cycle-timeout="9000" data-cycle-slides="a"  data-cycle-fx="scrollHorz" data-cycle-swipe="true">
-        <div class="cycle-pager"/>
-
-        <xsl:for-each select="   /buildinfo/textset/campaigns/campaign[  @id = 'zacchiroli' or @id = 'dfd' or @id = 'ilovefs' ]  ">
-
-            <a href="{link}" class="campaign-box" id="{@id}">
-                <img src="{photo}" alt="" />
-                <p class="text">
-                    <xsl:value-of select="   text   " />
-                </p>
-                <span class="author">
-                    <xsl:value-of select="   author   " />
-                </span>
-            </a>
-        </xsl:for-each>
+      <div class="cycle-pager"/>
+      
+      <xsl:for-each select="/buildinfo/textsetbackup/campaigns/campaign[@id='zacchiroli']">
+        <xsl:choose>
+          <xsl:when test="count(/buildinfo/textset/campaigns/campaign[@id = current()/@id]) > 0">
+            <xsl:apply-templates select="/buildinfo/textset/campaigns/campaign[@id = current()/@id]" mode="slideshow" />
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:apply-templates select="." mode="slideshow" />
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:for-each>
+      
     </div>
+  </xsl:template>
+  
+  <xsl:template match="campaign" mode="slideshow">
+      <a href="{link}" class="campaign-box" id="{@id}">
+          <xsl:if test=" photo != '' ">
+              <img src="{photo}" alt="" />
+          </xsl:if>
+      <p class="text">
+        <xsl:value-of select="   text   " />
+      </p>
+      <span class="author">
+        <xsl:value-of select="   author   " />
+      </span>
+    </a>
   </xsl:template>
   
   <!-- display campaign box 4 -->

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<employeeset>
+  <employee id="full/m">Штатный&#160;сотрудник</employee>
+  <employee id="full/f">Штатная&#160;сотрудница</employee>
+  <employee id="part/m">Внештатный&#160;сотрудник</employee>
+  <employee id="part/f">Внештатная&#160;сотрудница</employee>
+  <employee id="intern/m">Стажер</employee>
+  <employee id="intern/f">Стажер</employee>
+  <!--You should use the intern function rather than this, but maybe this will be needed-->
+  <employee id="freelancer/m">Работник по договорам</employee>
+  <employee id="freelancer/f">Работница по договорам</employee>
+</employeeset>

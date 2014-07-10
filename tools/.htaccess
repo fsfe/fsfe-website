@@ -1,2 +1,4 @@
-Deny From All
-
+<Directory />
+  Order Deny,Allow
+  Deny from All
+</Directory>

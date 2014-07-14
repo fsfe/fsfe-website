@@ -10,29 +10,12 @@
                 xmlns:content="http://purl.org/rss/1.0/modules/content/"
                 xmlns:atom="http://www.w3.org/2005/Atom">
 
-  <xsl:import href="date-time.xsl" />
-
   <xsl:output method="xml" encoding="utf-8" indent="yes"/>
 
   <!-- $today = current date (given as <html date="...">) -->
   <xsl:variable name="today">
     <xsl:value-of select="/buildinfo/@date" />
   </xsl:variable>
-
-  <!-- ======== -->
-  <!-- Weekdays --> 
-  <!-- ======== -->
-
-  <weekdays:weekday-names>
-    <weekdays:day ref="0">Sun</weekdays:day> <!-- it seems that the module returns 0 for Sunday, on the "English" calendar model (Sundays first) -->
-    <weekdays:day ref="1">Mon</weekdays:day>
-    <weekdays:day ref="2">Tue</weekdays:day>
-    <weekdays:day ref="3">Wed</weekdays:day>
-    <weekdays:day ref="4">Thu</weekdays:day>
-    <weekdays:day ref="5">Fri</weekdays:day>
-    <weekdays:day ref="6">Sat</weekdays:day>
-    <weekdays:day ref="7">Sun</weekdays:day>
-  </weekdays:weekday-names>
 
   <!-- ====== -->
   <!-- Months -->
@@ -205,16 +188,6 @@ Make a one time donation: http://fsfe.org/donate/donate.html</xsl:text>
               </xsl:if>
 
               <!-- Date -->
-              <xsl:element name="pubDate">
-                <xsl:variable name="day-of-week">
-                  <xsl:call-template name="dt:calculate-day-of-the-week">
-                    <xsl:with-param name="year" select="substring(@date, 0, 5)" />
-                    <xsl:with-param name="month" select="substring(@date, 6, 2)" />
-                    <xsl:with-param name="day" select="substring(@date, 9, 2)" />
-                  </xsl:call-template>
-                </xsl:variable>
-                <xsl:value-of select="document('')/*/weekdays:weekday-names/weekdays:day[@ref=$day-of-week]" />
-                <xsl:text>, </xsl:text>
                 <xsl:value-of select="substring-after(substring-after(@date, '-'), '-')" />
                 <xsl:variable name="month">
                   <xsl:value-of select="substring-before(substring-after(@date, '-'), '-')" />

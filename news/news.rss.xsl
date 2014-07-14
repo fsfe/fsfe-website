@@ -188,6 +188,7 @@ Make a one time donation: http://fsfe.org/donate/donate.html</xsl:text>
               </xsl:if>
 
               <!-- Date -->
+              <xsl:element name="pubDate">
                 <xsl:value-of select="substring-after(substring-after(@date, '-'), '-')" />
                 <xsl:variable name="month">
                   <xsl:value-of select="substring-before(substring-after(@date, '-'), '-')" />

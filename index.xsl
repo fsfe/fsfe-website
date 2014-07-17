@@ -5,7 +5,6 @@
   <xsl:import href="tools/xsltsl/tagging.xsl" />
   <xsl:import href="tools/xsltsl/translations.xsl" />
   <xsl:import href="tools/xsltsl/static-elements.xsl" />
-  <!-- TODO xsl:import href="tools/xsltsl/campaigns.xsl" /-->
   
   <xsl:import href="fsfe.xsl" />
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />

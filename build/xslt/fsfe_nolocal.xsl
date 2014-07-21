@@ -32,10 +32,4 @@
     </xsl:copy>
   </xsl:template>
 
-  <xsl:template match="@dt:*">
-    <xsl:attribute name="{local-name()}">
-      <xsl:value-of select="." />
-    </xsl:attribute>
-  </xsl:template>
-
 </xsl:stylesheet>

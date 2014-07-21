@@ -6,6 +6,7 @@
 
   <xsl:import href="translations.xsl" />
   <xsl:import href="static-elements.xsl" />
+  <xsl:import href="date-time.xsl" />
   <xsl:output method="xml" encoding="utf-8" indent="yes" />
     
   <!-- define content type templates-->
@@ -87,8 +88,6 @@
     
   </xsl:template>
   
-  
-  
   <!-- Show a single newsletter item -->
   <xsl:template name="newsletter">
     <xsl:variable name="link">
@@ -100,8 +99,6 @@
       </a>
     </li>
   </xsl:template>
-  
-  
   
   <!-- Show a single event -->
   <xsl:template name="event">
@@ -184,25 +181,25 @@
  
       <!-- event title with or without link -->
       <h3>
-				<xsl:call-template name="generate-id-attribute">
-					<xsl:with-param name="title" select="title" />
-				</xsl:call-template>
-				<xsl:choose>
-					<xsl:when test="$link != ''">
-						<a href="{link}">
-							<xsl:value-of select="title" />
-						</a>
-					</xsl:when>
-					<xsl:when test="$page != ''">
-						<a href="{page}">
-							<xsl:value-of select="title" />
-						</a>
-					</xsl:when>
-					<xsl:otherwise>
-						<xsl:value-of select="title" />
-					</xsl:otherwise>
-				</xsl:choose>
-			</h3>
+     	<xsl:call-template name="generate-id-attribute">
+          <xsl:with-param name="title" select="title" />
+     	</xsl:call-template>
+     	<xsl:choose>
+     	  <xsl:when test="$link != ''">
+     	    <a href="{link}">
+     	      <xsl:value-of select="title" />
+     	    </a>
+     	  </xsl:when>
+     	  <xsl:when test="$page != ''">
+     	    <a href="{page}">
+     	      <xsl:value-of select="title" />
+     	    </a>
+     	  </xsl:when>
+     	  <xsl:otherwise>
+     	  	<xsl:value-of select="title" />
+     	  </xsl:otherwise>
+     	</xsl:choose>
+      </h3>
      
       <!-- event date -->
       <xsl:choose>

@@ -4,7 +4,6 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:dt="http://xsltsl.org/date-time">
 
-  <xsl:import href="date-time.xsl" />
   <xsl:import href="feeds.xsl" />
   <xsl:import href="events-utils.xsl" />
   

@@ -55,7 +55,7 @@ q, .en q {
     .make-row();
 }
 #translations, #top, #main, #followup, #bottom, #fsfe-web, #full-menu, #notifications {
-    .container; 
+    .container;
 }
 
 div#subpages, .grid-row {
@@ -83,13 +83,13 @@ div#subpages, .grid-row {
         .make-xs-column(12);
         .make-md-column(2);
     }
-    
+
     ul {
         .list-no-style;
         .make-xs-column(12);
         .make-md-column(9);
     }
-    
+
     li {
     	display: inline-block;
         margin-right: .5em;
@@ -114,29 +114,29 @@ div#subpages, .grid-row {
     padding: 2em 2em 3em;
     display: block;
     width: 100%;
-    
+
     @media (min-width: @screen-sm) {
         padding-left: 3em;
     }
 }
 
-#logo span { 
-    font-size: .00001em; 
-    color: transparent; 
-    visibility: hidden; 
+#logo span {
+    font-size: .00001em;
+    color: transparent;
+    visibility: hidden;
 }
 
 #link-home a {
-    display: block; 
-    position: absolute; 
-    font-size:0.00001em; 
+    display: block;
+    position: absolute;
+    font-size:0.00001em;
     color: transparent;
 }
 
 #motto {
     display: none;
     clear: both;
-    font-weight: 300;   
+    font-weight: 300;
     font-size: 1.7em;
     padding: .5em 0 0 0;
     text-align: center;
@@ -157,16 +157,16 @@ div#subpages, .grid-row {
 #direct-links {
     visibility: hidden;
     margin-bottom: 2em;
-    
+
     span, a {
         display: none;
         padding: .5em;
     }
-    
+
     #direct-to-menu-list, #direct-to-translations, #direct-to-home, #direct-to-login {
         visibility: visible;
         display: inline-block;
-        
+
         .fa {
             padding-right: .3em;
         }
@@ -190,7 +190,7 @@ div#subpages, .grid-row {
 
 @media (min-width: @screen-xs) {
     #menu-list, #search {
-        display: inline-block; 
+        display: inline-block;
     }
 }
 
@@ -198,20 +198,20 @@ div#subpages, .grid-row {
     .list-no-style;
     .collapse;
     padding-bottom: 1.5em;
-    
+
     @media (min-width: @screen-xs) {
         .collapse.in;
-        display: inline-block; 
+        display: inline-block;
         padding-bottom: 0.5em;
     }
 
     li {
         display: inline-block;
-        
+
         a {
             .btn;
             font-weight: 400;
-            
+
             @media (min-width: @screen-md) {
                 .btn-lg;
             }
@@ -227,19 +227,19 @@ div#subpages, .grid-row {
     .collapse.in;
 
     @media (min-width: @screen-xs) {
-        display: inline-block; 
+        display: inline-block;
         padding-bottom: 0.5em;
     }
 }
 
 #search {
-    
+
     form, p {
         margin: 0;
         padding: 0;
     }
 
-    
+
     label, input[type="image"] {
         position: absolute;
         font-size: 0.0001em;
@@ -248,7 +248,7 @@ div#subpages, .grid-row {
         margin: 5px;
         opacity: 0;
     }
-    
+
     button, input[name="query"] {
         .form-control;
         padding-left: 2.5em;
@@ -291,7 +291,7 @@ div#subpages, .grid-row {
     padding: 1.5em;
     font-size: 1.1em;
     box-shadow: 0 .4em 1em rgb(200,200,200);
-    
+
     @media (min-width: @screen-sm) {
         padding: 3em;
     }
@@ -328,7 +328,7 @@ div#subpages, .grid-row {
     }
 
     footer.copyright.notice {
-        min-height: 30px; 
+        min-height: 30px;
         a {color: @gray;}
     }
     footer.creativecommons {
@@ -346,15 +346,15 @@ div#subpages, .grid-row {
 #sidebar {
     color: @gray-light;
     padding-bottom: 2em;
-    
+
     ul {
         .list-no-style;
         margin-bottom: 1em;
-        
+
         li {
             border-bottom: 1px solid @gray-lighter;
             padding: .3em 0;
-            
+
             a {
                 display: block;
                 width: 100%;
@@ -376,9 +376,9 @@ div#subpages, .grid-row {
     width:42%;
     padding: .5em;
     margin: -2em 0 0;
-    
+
     a:before {
-            content: "‹ ";   
+            content: "‹ ";
     }
 }
 
@@ -386,7 +386,7 @@ div#subpages, .grid-row {
 #article-metadata {
     font-weight: 300;
     margin-bottom: 1.5em;
-    
+
     img {
         height: 24px;
         margin: -0.2em 0.2em -0.2em;
@@ -436,7 +436,7 @@ div#subpages, .grid-row {
             font-size: 0.9em;
         }
     }
-    
+
 
     blockquote {
         .quote;
@@ -444,7 +444,7 @@ div#subpages, .grid-row {
         padding-top: 20px;
         padding-bottom: 20px;
         /* does not work, weird: background-color: lighten(@brand-secondary, 77%);*/
-        background-color: rgba(116, 140, 156,0.23); 
+        background-color: rgba(116, 140, 156,0.23);
 
         p {
             line-height: 1.35;
@@ -452,7 +452,7 @@ div#subpages, .grid-row {
 
         footer {
             cite {
-                font-style: italic; 
+                font-style: italic;
             }
         }
     }
@@ -480,7 +480,7 @@ div#subpages, .grid-row {
     pre.term {
         background: #0C141F;
         color: #E6FFFF;
-        
+
         code:before {
             content: "$ ";
         }
@@ -498,7 +498,7 @@ div#subpages, .grid-row {
             display: block;
             box-shadow: 0.2em 0.2em 1em rgba(0,0,0,0.3)
         }
-        
+
         header, footer, img + p {
             padding: 10px 15px;
         }
@@ -557,13 +557,13 @@ div#subpages, .grid-row {
     #content {
         max-width: none;
     }
-}   
+}
 
 .article {
 
     #content {
         display: inline-block;
-        
+
         .p-name, h1 {
             color: @brand-strong;
         }
@@ -586,7 +586,7 @@ div#subpages, .grid-row {
             padding-left: 3em;
         }
     }
-    
+
     blockquote, pre {
         .standout-text;
     }
@@ -643,10 +643,10 @@ div#subpages, .grid-row {
             li {
                 .make-sm-column(6);
             }
-            
+
             @media (min-width: @screen-sm) {
                 li {
-                    display: inline-block;   
+                    display: inline-block;
                 }
             }
         }
@@ -689,7 +689,7 @@ div#subpages, .grid-row {
                 .make-xs-column(12);
                 .make-sm-column(6);
             }
-            
+
             @media (min-width: @screen-xs) {
                 li:nth-child(odd) {
                     clear: both;
@@ -699,7 +699,7 @@ div#subpages, .grid-row {
             li ul {
                 padding: 0;
             }
-        
+
             li ul li {
                 float: none;
                 width: 100%;
@@ -717,7 +717,7 @@ div#subpages, .grid-row {
                 .make-xs-column(6);
                 .make-sm-column(4);
             }
-            
+
             @media (min-width: @screen-xs) {
                 li:nth-child(odd) {
                     clear: none;
@@ -738,7 +738,7 @@ div#subpages, .grid-row {
             margin-right: .5em;
         }
     }
-    
+
 }
 
 
@@ -746,7 +746,7 @@ div#subpages, .grid-row {
 
 #followup {
     .clearfix();
-    
+
     h2 {
         padding:0;
     }
@@ -754,7 +754,7 @@ div#subpages, .grid-row {
     form {
         display: inline-block;
     }
-    
+
     input#email {
         margin:0 1em;
         max-width: 18em;
@@ -783,7 +783,7 @@ div#subpages, .grid-row {
     p {
         .make-sm-column(8);
         padding: 0;
-    }   
+    }
     a.btn {
         .make-sm-column(2);
         .make-sm-column-offset(4);
@@ -793,7 +793,7 @@ div#subpages, .grid-row {
 /* footer#bottom */
 
 #bottom {
-    background: @body-bg;   
+    background: @body-bg;
     box-shadow: 1em 0 1em 1em @body-bg;
     margin: 5em 0 0;
     padding: 5em 0;
@@ -809,7 +809,7 @@ div#subpages, .grid-row {
     clear: both;
     min-height: 3em;
     padding: .5em 1.8em;
-    
+
     a {
         /* like #fsfe-web a; */
         display: inline-block;
@@ -827,7 +827,7 @@ div#subpages, .grid-row {
 
 #fsfe-web {
     margin-bottom: 2em;
-    
+
 	a {
             display: inline-block;
             padding: 1em .5em;
@@ -885,7 +885,7 @@ div#subpages, .grid-row {
     }
 }
 
-#legal-info, #source { 
+#legal-info, #source {
     .make-row;
 
     p, ul {
@@ -931,14 +931,14 @@ div#subpages, .grid-row {
         }
     }
     /* pager */
-    .cycle-pager { 
+    .cycle-pager {
     text-align: center; bottom:0; width: 100%; z-index: 500; position: absolute;  overflow: hidden;
     height: 35px;
     padding-top: 7px;
     }
-    .cycle-pager span { 
-    width: 16px; height: 16px; 
-    display: inline-block; color: transparent; cursor: pointer; 
+    .cycle-pager span {
+    width: 16px; height: 16px;
+    display: inline-block; color: transparent; cursor: pointer;
     border-radius: 50px;
     background: rgba(255,255,255,0.4);
     margin: 0.1em;
@@ -975,11 +975,11 @@ h2#fn + ol {
     font-size: 0.9em;
     margin: 2em 0;
     padding-top: 1em;
-}	
+}
 
 /* trivia */
 
-form input#email {	
+form input#email {
     .form-control;
     max-width: 25em;
     display: inline-block;
@@ -1131,9 +1131,9 @@ ul.people li:last-child:after {
 
 .bio {
     .article;
-    
+
     #sidebar ul li a {
-        display: inline; 
+        display: inline;
     }
 }
 
@@ -1178,6 +1178,7 @@ table#gold {
 }
 #orderpromo {
     background: rgb(223, 240, 216);
+    padding: 0.1em 1em 1em;
     .formlabel {
         display: block;
     }
@@ -1225,6 +1226,182 @@ table#gold {
     }
 }
 
+
+/* -------------------------------------------------------------------- */
+/* Tags lists                                                           */
+/* -------------------------------------------------------------------- */
+
+ul.taglist {
+    text-align: center;
+}
+
+ul.taglist li {
+    display: inline;
+    margin: 5px;
+    white-space: nowrap;
+}
+
+.tag16 { font-size: 16; }
+.tag17 { font-size: 17; }
+.tag18 { font-size: 18; }
+.tag19 { font-size: 19; }
+.tag20 { font-size: 20; }
+.tag21 { font-size: 21; }
+.tag22 { font-size: 22; }
+.tag23 { font-size: 23; }
+.tag24 { font-size: 24; }
+.tag25 { font-size: 25; }
+.tag26 { font-size: 26; }
+.tag27 { font-size: 27; }
+.tag28 { font-size: 28; }
+.tag29 { font-size: 29; }
+.tag30 { font-size: 30; }
+.tag31 { font-size: 31; }
+.tag32 { font-size: 32; }
+.tag33 { font-size: 33; }
+.tag34 { font-size: 34; }
+.tag35 { font-size: 35; }
+.tag36 { font-size: 36; }
+.tag37 { font-size: 37; }
+.tag38 { font-size: 38; }
+.tag39 { font-size: 39; }
+.tag40 { font-size: 40; }
+/* AskYourCandidates - parties colors for their answers */
+
+.question {
+   margin-bottom: 15px;
+   margin-top: 60px;
+}
+
+.answer,
+.question2,
+.answer2 {
+  padding: 0.5em 1em;
+  text-align: justify;
+}
+
+.question2 {
+  margin-left: 1em;
+}
+
+.answer2 {
+  margin-left: 2em;
+}
+
+.colorless {
+   background-color: rgb(238,238,238);
+   border-left: 10px solid rgb(170,170,170);
+}
+
+/* Germany */
+
+.diegrüne {
+  background-color: rgb(200,255,200);
+  border-left: 10px solid rgb(0,139,0);
+}
+
+.cdu {
+  background-color: rgb(180,230,255);
+  border-left: 10px solid rgb(0,79,122);
+}
+
+.csu {
+  background-color: #B4E6FF;
+  border-left: 10px solid #00304A;
+}
+
+.spd {
+  background-color: rgb(255,200,200);
+  border-left: 10px solid rgb(255,0,0);
+}
+
+.dielinke {
+  background-color: rgb(255,198,255);
+  border-left: 10px solid rgb(139,28,98);
+}
+
+.piraten {
+   background-color: rgb(255,233,146);
+   border-left: 10px solid rgb(243,125,32);
+}
+
+.fdp {
+   background-color: rgb(255,255,200);
+   border-left: 10px solid rgb(255,255,0);
+}
+
+.oedp {
+   background-color: rgb(255,233,187);
+   border-left: 10px solid rgb(242,134,43);
+}
+
+.bayernpartei {
+   background-color: rgb(85,144,202);
+   border-left: 10px solid rgb(28,38,236);
+}
+
+.violetten {
+   background-color: rgb(124,62,139);
+   border-left: 10px solid rgb(210,0,255);
+}
+
+.afd {
+  background-color: #009EE0;
+  border-left: 10px solid #E40F27;
+}
+
+
+/* France */
+
+.partisocialiste {
+   background-color: rgb(255,220,220);
+   border-left: 10px solid rgb(255,128,128);
+}
+
+.ump {
+   background-color: rgb(160,200,255);
+   border-left: 10px solid rgb(0,102,204);
+}
+
+.pcf {
+   background-color: rgb(255,200,200);
+   border-left: 10px solid rgb(221,0,0);
+}
+
+.prg, .mrc {
+   background-color: rgb(255,240,250);
+   border-left: 10px solid rgb(255,209,220);
+}
+
+.eelv {
+   background-color: rgb(200,255,200);
+   border-left: 10px solid rgb(0,255,0);
+}
+
+.nouveaucentre {
+   background-color: rgb(220,255,255);
+   border-left: 10px solid rgb(128,255,255);
+}
+
+.modem {
+   background-color: rgb(255,230,150);
+   border-left: 10px solid rgb(255,153,0);
+}
+
+.alliancecentriste {
+   background-color: rgb(255,235,200);
+   border-left: 10px solid rgb(245,222,179);
+}
+
+
+/* -------------------------------------------------------------------- */
+/* Interviews                                                           */
+/* -------------------------------------------------------------------- */
+
+.interview-question {
+  font-style:italic;
+  font-weight:bold;
+}
 /*fixing style for pages not up to date with the new design*/
 #content #frontpage {
     #campaign-box-1, #campaign-box-2 {display: none;}

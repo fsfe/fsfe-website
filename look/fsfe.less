@@ -6,9 +6,15 @@ body {
     background: url(/graphics/fellowship/plussy_tile_03.png) top left fixed #F9F9F9;
     font-family: "Roboto", sans-serif;
 }
+.svg body {
+    background: url(/graphics/fellowship/plussy_tile_03.svg) top left fixed #F9F9F9;
+}
 
 #logo {
     background: url(/graphics/logo_transparent.png) top left no-repeat;
+}
+.svg #logo {
+    background: url(/graphics/logo_transparent.svg) top left no-repeat;
 }
 
 #masthead, #logo {
@@ -32,7 +38,13 @@ body {
     text-shadow: rgb(255,255,255) 0 0 .5em;
 
     @media (min-width: @screen-sm) {
-        background: url(/graphics/ribbon.png) no-repeat 100% -100% @body-bg; 
+        background: url(/graphics/ribbon.png) no-repeat 100% -70px @body-bg; 
+    }
+}
+
+.svg #followup {
+    @media (min-width: @screen-sm) {
+        background: url(/graphics/ribbon.svg) no-repeat 100% -70px @body-bg; 
     }
 }
 
@@ -67,17 +79,25 @@ a.the-fellowship {
 
         .campaign-box {
             height: 300px;
+            width: 100%;
 
             img {max-width: 33%;}
         }
 
+        .campaign-box-center {
+            text-align: center;
+            font-size: 1.3em;
+        }
+        
         #zacchiroli {
-            background: url('/graphics/group-blur-800.jpg')  center 33%  no-repeat transparent;
+            background: url('/graphics/group-blur-800.jpg')  center 33%  no-repeat #666;
             text-shadow: 0px 1px 2px rgb(0,0,0);
 
             img { float: right; margin-left: 1em; }
-            .text { .quote; } 
             .author:before {content: "– ";}
+            .text { 
+                .quote; 
+            }
 
             @media (min-width: @screen-md) {
                 img { margin-left: 3em; }
@@ -87,26 +107,32 @@ a.the-fellowship {
 
         }
         #dfd {
-            text-align: center;
-            background: url('/graphics/fellowship/plussy_tile_01-33alpha.png') rgba(118, 181, 32,0.7);
-            font-size: 1.3em;
-
+            .campaign-box-center;
+            background: url('/graphics/fellowship/plussy_tile_01-33alpha.png') rgba(118, 181, 32,1);
             img {height: 200px;margin-bottom: 10px;margin-top:-70px;max-width: none;}
         }
         
         #ilovefs {
-            text-align: center;
+            .campaign-box-center;
             background: url('/graphics/ilovefs-hashtag-campaignbox.png')  center 33%  no-repeat transparent;
-            font-size: 1.3em;
+        }
+        
+        #racketware {
+            .campaign-box-center;
+            background:  center 33%  no-repeat #FFF;
 
-            img { float: right; margin-left: 1em; }
-            .text { .quote; } 
+            .text { display: none; }
+        }
 
-            @media (min-width: @screen-md) {
-                img { margin-left: 3em; }
-                .text {font-size: 1.3em; }
-            }
-		}
+        #fightback {
+            .campaign-box-center;
+            background: url('/graphics/thedaywefightback.png')  center 33%  no-repeat transparent;
+        }
+    }
+}
+.svg #campaigns-boxes #dfd {
+    img {
+        /*TODO: can we maybe change it to svg here?*/
     }
 }
 
@@ -149,6 +175,7 @@ a.the-fellowship {
     
 }
 
+
 #latest-news-list, #more-news-list {
     list-style-type: none;
     font-size: 1.2em;
@@ -185,7 +212,7 @@ a.the-fellowship {
         float: left;
         width: 69%;
     }
-    #newsletter, .country.frontpage #events {
+    #newsletter, .country.frontpage #teams  {
         display: inline-block;
         float: right;
         width: 30%;
@@ -195,7 +222,7 @@ a.the-fellowship {
     }
 }
 
-#newsletter, .newsletter #sidebar, .country.frontpage #events {
+#newsletter, .newsletter #sidebar {
     input {
         display: block;
         margin: .5em 0;
@@ -254,8 +281,8 @@ a.the-fellowship {
 
 #hello-free-droid {
     background: url('/campaigns/android/robot.png') no-repeat top left transparent;
-    height: 209px;
-    width: 200px;
+    height: 200px;
+    width: 230px;
     float: left;
     margin-left: -6em;
     margin-right: 1.5em;
@@ -267,6 +294,32 @@ a.the-fellowship {
     }
     img {display: none;}
 }
+
+/* Valentine for ILOVEFS style */
+
+.valentine-ilovefs {
+    #logo {
+        background: url(/graphics/logov.png) top left no-repeat;
+    }
+    .svg #logo {
+        background: url(/graphics/logov.svg) top left no-repeat;
+    }
+
+    #followup {
+        background: url(/graphics/ribbonv.png) no-repeat 100% -40px @body-bg; 
+
+        @media (min-width: @screen-sm) {
+            background: url(/graphics/ribbonv.png) no-repeat 100% -70px @body-bg; 
+        }
+    }
+}
+
+.svg .valentine-ilovefs #followup {
+    @media (min-width: @screen-sm) {
+        background: url(/graphics/ribbonv.svg) no-repeat 100% -70px @body-bg; 
+    }
+}
+
 
 
 /* Planet style */
@@ -318,3 +371,5 @@ a.the-fellowship {
 }
 
 @import "fonts.less";
+@import "font-icon-no-js.less";
+

@@ -3,179 +3,19 @@
  * needs certain elements right aligned, such as sidebar.
  */
 
-body {
-  background-image: url("/graphics/ribbon-gray-rtl.png");
-  background-position: -393px 70px;
-}
 
-#wrapper {
-  margin-left: 5%;
-  margin-right: 1%;
-  border-left: 0;
-  border-right: 1px solid rgb(240,240,240);
-}
+/* TODO
+ *
+ * change alignment of fsfe logo to the right and menu on the left
+ *
+ * frontpage: newsletter on the left, news on the right 
+ *
+ * sidebar on the right
+ *
+ * menu items bottom on the right first
+ *
+ */
 
-#wrapper-inner {
-  box-shadow: -3px 3px 4px rgba(0, 0, 0, 0.1);
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 3px;
+[lang=ar] {
+  direction: rtl;
 }
-
-#logo {
-  float: right;
-  margin: 1em 1% 0 0;
-}
-
-#header {
-  background-image: url("/graphics/ribbon-rtl.png");
-  background-position: right bottom;
-}
-
-#sidebar {
-  float: right;
-  padding-right: 0;
-  padding-left: 1em;
-}
-
-#content {
-  clear: left;
-  float: none;
-}
-
-#menu,
-#search,
-#translations {
-  float: none;
-}
-
-#menu {
-  margin-left: 0;
-  margin-right: -15px;
-}
-
-#menu a {
-  padding-left: 0;
-  padding-right: .8em;
-}
-
-#menu ul li,
-#menu ul li a {
-  border-left: 0 !important;
-}
-
-#menu ul li ul {  /* submenu */
-  border-right: none;
-}
-
-#menu ul li.fsfe a {
-  border-right: 15px solid #4ad2f0;
-}
-
-#menu ul li.fsfe a:hover {
-  border-right: 15px solid #4ad2f0;
-}
-
-#menu ul li.fsfe ul li a {
-  border-right: 15px solid #DCDCDC;
-}
-
-#menu ul li.fsfe ul li a:hover {
-  border-right: 15px solid #B2F1FF;
-}
-
-#menu ul li.planet a {
-  border-right: 15px solid #4aa0f0;
-}
-
-#menu ul li.planet ul li a {
-  border-right: 15px solid #DCDCDC;
-}
-
-#menu ul li.planet ul li a:hover {
-  border-right: 15px solid #4aa0f0;
-}
-
-#menu ul li.wiki a {
-  border-right: 15px solid #adff54;
-}
-
-#menu ul li.fellowship a {
-  border-right: 15px solid #6BC800;
-}
-
-#menu ul li.fellowship ul li a {
-  border-right: 15px solid #DCDCDC;
-}
-
-#menu ul li.fellowship ul li a:hover {
-  border-right: 15px solid #ABFF4A;
-}
-
-#menu ul li ul li #selected,
-#menu ul li ul li #selected:hover {
-  border-right: 15px solid #C1C1C1;
-  padding: .6em 1.6em .8em 0;
-}
-
-#menu ul li ul li a {
-  padding-left: 0;
-  padding-right: 1.6em;
-}
-
-#search input[type="image"] {
-  margin-right: .3em;  
-}
-
-#search input[type="text"] {
-  padding-left: 8px;
-  padding-right: 30px;
-}
-
-#campaign-box-1 h3 {
-  float: left;
-}
-
-#footer {
-  margin-left: 4em;
-  margin-right: 15px;
-}
-
-#footer #notice {
-  float: right;
-  margin: 0 0 0 10%;
-}
-
-#footer #notice ul li {
-  margin: 0 0 0 .8em;
-}
-
-/*
-#menu {
-  left: auto;
-  right: 1em !important;
-}
-
-#content {
-	margin-left: 0;
-}
-
-#menu ul {
-  /*
-	background-image: url("/graphics/corner-rtl.png");
-	background-position: top right;
-  *
-	padding-right: 1.4em;
-	padding-left: 0;
-}
-
-#menu ul ul {
-	padding-right: 0.6em;
-	padding-left: 0.6em;
-}
-
-#language,
-#fundraising {
-	margin-right: 220px;
-	margin-left: 0;
-}
-*/

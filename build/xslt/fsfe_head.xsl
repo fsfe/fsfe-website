@@ -9,15 +9,16 @@
   </xsl:variable>
 
   <!-- HTML head -->
-  <xsl:template match="head">
+  <!-- xsl:template match="head">
     <head>
       <xsl:call-template name="fsfe-head" />
     </head>
-  </xsl:template>
+  </xsl:template -->
   
   
-  <xsl:template name="fsfe-head">
+  <!-- xsl:template name="fsfe-head" -->
     
+  <xsl:template match="head">
     <!-- Don't let search engine robots index untranslated pages -->
     <xsl:element name="meta">
       <xsl:attribute name="name">robots</xsl:attribute>

@@ -4,9 +4,9 @@
   <xsl:output method="xml" encoding="UTF-8" indent="yes" />
 
   <!-- The top level element of the input file is "buildinfo" -->
-  <xsl:template match="/">
+  <!-- xsl:template match="/">
     <xsl:apply-templates select="buildinfo/document"/>
-  </xsl:template>
+  </xsl:template -->
   
   <!-- The actual HTML tree is in "buildinfo/document" -->
   <xsl:template match="buildinfo/document">
@@ -17,9 +17,9 @@
   
       <xsl:attribute name="class"><xsl:value-of select="/buildinfo/@language" /> no-js</xsl:attribute>
   
-      <xsl:if test="/buildinfo/@language='ar'">
+      <!-- xsl:if test="/buildinfo/@language='ar'">
         <xsl:attribute name="dir">rtl</xsl:attribute>
-      </xsl:if>
+      </xsl:if -->
   
       <!--<xsl:apply-templates select="node()"/>-->
       <xsl:apply-templates select="head" />

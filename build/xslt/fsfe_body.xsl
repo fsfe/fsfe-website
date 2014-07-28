@@ -16,8 +16,8 @@
 
   <!-- HTML body -->
   <!--<xsl:template match="body">-->
-  <xsl:template name="fsfe-body">
-    <body>
+  <xsl:template match="body" name="fsfe-body">
+    <xsl:element name="body">
 
       <xsl:call-template name="fsfe_pageclass" />
 
@@ -63,7 +63,7 @@
     
       <xsl:call-template name="body_scripts" />
 
-    </body>
+    </xsl:element>
   </xsl:template>
 
 </xsl:stylesheet>

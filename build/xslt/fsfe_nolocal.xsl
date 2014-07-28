@@ -26,10 +26,10 @@
   <xsl:template match="set | tags | text"/>
 
   <!-- For all other nodes, copy verbatim -->
-  <xsl:template match="@*|node()" priority="-1">
+  <!-- xsl:template match="@*|node()" priority="-1">
     <xsl:copy>
       <xsl:apply-templates select="@* | node()"/>
     </xsl:copy>
-  </xsl:template>
+  </xsl:template -->
 
 </xsl:stylesheet>

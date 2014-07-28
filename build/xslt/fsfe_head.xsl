@@ -18,7 +18,7 @@
   
   <!-- xsl:template name="fsfe-head" -->
     
-  <xsl:template match="head">
+  <xsl:template match="head" name="fsfe-head">
     <!-- Don't let search engine robots index untranslated pages -->
     <xsl:element name="meta">
       <xsl:attribute name="name">robots</xsl:attribute>

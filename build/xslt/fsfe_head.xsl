@@ -9,17 +9,15 @@
   </xsl:variable>
 
   <!-- HTML head -->
-  <!-- xsl:template match="head">
-    <head>
+  <xsl:template match="head">
+    <xsl:element name="head">
       <xsl:call-template name="fsfe-head" />
-    </head>
-  </xsl:template -->
-  
+    </xsl:element>
+  </xsl:template>
   
   <!-- xsl:template name="fsfe-head" -->
     
-  <xsl:template match="head" name="fsfe-head">
-    <head>
+  <xsl:template name="fsfe-head">
     <!-- Don't let search engine robots index untranslated pages -->
     <xsl:element name="meta">
       <xsl:attribute name="name">robots</xsl:attribute>
@@ -164,7 +162,6 @@
         <![endif]]]></xsl:comment>
     
     <xsl:apply-templates select="@*|node()"/>
-    </head>
   </xsl:template>
 
 </xsl:stylesheet>

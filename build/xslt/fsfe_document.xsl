@@ -13,9 +13,8 @@
         <xsl:value-of select="/buildinfo/@language" /> no-js
       </xsl:attribute>
   
-  
       <!-- xsl:apply-templates select="node()"/ -->
-      <xsl:call-template name="fsfe-head" />
+      <xsl:apply-templates select="head" />
       <xsl:call-template name="fsfe-body" />
     </xsl:element>
   </xsl:template>

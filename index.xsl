@@ -2,9 +2,11 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   
+  <xsl:import href="tools/xsltsl/date-time.xsl" />
   <xsl:import href="tools/xsltsl/tagging.xsl" />
   <xsl:import href="tools/xsltsl/translations.xsl" />
   <xsl:import href="tools/xsltsl/static-elements.xsl" />
+  <!-- TODO xsl:import href="tools/xsltsl/campaigns.xsl" /-->
   
   <xsl:import href="fsfe.xsl" />
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
@@ -109,7 +111,7 @@
     <div  id="campaigns-boxes" class="cycle-slideshow"  data-cycle-pause-on-hover="true" data-cycle-speed="500"  data-cycle-timeout="9000" data-cycle-slides="a"  data-cycle-fx="scrollHorz" data-cycle-swipe="true">
       <div class="cycle-pager"/>
       
-      <xsl:for-each select="/buildinfo/textsetbackup/campaigns/campaign[@id='zacchiroli']">
+      <xsl:for-each select="/buildinfo/textsetbackup/campaigns/campaign[@id='zacchiroli' or @id='becomefellow']">
         <xsl:choose>
           <xsl:when test="count(/buildinfo/textset/campaigns/campaign[@id = current()/@id]) > 0">
             <xsl:apply-templates select="/buildinfo/textset/campaigns/campaign[@id = current()/@id]" mode="slideshow" />

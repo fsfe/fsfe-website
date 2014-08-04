@@ -20,15 +20,15 @@
     <h2>Add the campaign information for translators</h2>
 
     <p>
-        It should be easy for translators to update the campaign information. All this information can be found in <code>tools/texts-**.xml</code> where “**” is the language code used by FSFE. Please make sure that en English version is always provided. Then find the information between <code>&#60;campaigns&#62; … &#60;campaigns&#62;</code>. If you want to add a new campaign, add this:
+        It should be easy for translators to update the campaign information. All this information can be found in <code>tools/texts-**.xml</code> where “**” is the language code used by FSFE. Please make sure that an English version is always provided. Then find the information between <code>&#60;campaigns&#62; … &#60;/campaigns&#62;</code>. If you want to add a new campaign, add this:
     </p>
 
     <pre><code>
     &#60;campaign id="new-campaign-id"&#62;
         &#60;comment&#62;You can add a comment in here like: please enable between January and April&#60;/comment&#62;
         &#60;photo&#62;This will be a picture, like the campaign’s logo, or a person’s portrait if the picture goes with a quote for instance. Be careful, this is not the background image used for the box, this is done with CSS&#60;/photo&#62;
-        &#60;text&#62;Software: choose before you pay, sign petition!&#60;/text&#62;
-        &#60;link&#62;http://racketware.info/petition/click/en&#60;/link&#62;
+        &#60;text&#62;This text will be displayed! Make it not too long!&#60;/text&#62;
+        &#60;link&#62;when-the-user-clicks-go-to-this-page&#60;/link&#62;
     &#60;/campaign&#62;
     </code></pre>
 
@@ -47,11 +47,11 @@
     </code></pre>
 
     <p>
-        Then add the campaign’s identifier in this xsl code:
+        Then add the campaign’s identifier at the end of this xsl code:
     </p>
 
     <pre><code>
-      &#60;xsl:for-each select="/buildinfo/textsetbackup/campaigns/campaign[@id='present-campaign-id' or @id='new-campaign-id']"&#62;
+&#60;xsl:for-each select="/buildinfo/textsetbackup/campaigns/campaign[@id='present-campaign-id' <strong>or @id='new-campaign-id'</strong>]"&#62;
     </code></pre>
 
     <p>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<html>
+  <head>
+    <title>Documentation - Campaign banners on the frontpage</title>
+  </head>
+  <body class="article web" microformats="h-entry" id="campaigns-frontpage-doc">
+
+    <p id="category"><a href="/contribute/web/">Webmastering</a></p>
+    <h1 class="p-name">Add and select campaign banners for the frontpage</h1>
+
+    <div class="e-content">
+    
+    <p id="introduction">
+        We display campaign banners on the frontpage, to promote current
+        campaigns or a donation campaign for FSFE. However, these  banners are
+        supposed to be changed depending on the timely context. For instance,
+        it’s usual to add the banner for Document Freedom Day in January.
+    </p>
+
+    <h2>Add the campaign information for translators</h2>
+
+    <p>
+        It should be easy for translators to update the campaign information. All this information can be found in <code>tools/texts-**.xml</code> where “**” is the language code used by FSFE. Please make sure that en English version is always provided. Then find the information between <code>&#60;campaigns&#62; … &#60;campaigns&#62;</code>. If you want to add a new campaign, add this:
+    </p>
+
+    <pre><code>
+    &#60;campaign id="new-campaign-id"&#62;
+        &#60;comment&#62;You can add a comment in here like: please enable between January and April&#60;/comment&#62;
+        &#60;photo&#62;This will be a picture, like the campaign’s logo, or a person’s portrait if the picture goes with a quote for instance. Be careful, this is not the background image used for the box, this is done with CSS&#60;/photo&#62;
+        &#60;text&#62;Software: choose before you pay, sign petition!&#60;/text&#62;
+        &#60;link&#62;http://racketware.info/petition/click/en&#60;/link&#62;
+    &#60;/campaign&#62;
+    </code></pre>
+
+    <p>
+        Probably none of these fields are mandatory (should be checked) but at least <code>text</code> (or <code>photo</code>) and <code>link</code> should be provided.
+    </p>
+
+    <h2>Select which banner to display</h2>
+
+    <p>
+        For banners showing up on the <a href="/">frontpage of fsfe.org</a>, you need to edit <code>index.xsl</code>. Look for:
+    </p>
+
+    <pre><code>
+  &#60;xsl:template match="campaigns"&#62;
+    </code></pre>
+
+    <p>
+        Then add the campaign’s identifier in this xsl code:
+    </p>
+
+    <pre><code>
+      &#60;xsl:for-each select="/buildinfo/textsetbackup/campaigns/campaign[@id='present-campaign-id' or @id='new-campaign-id']"&#62;
+    </code></pre>
+
+    <p>
+        If you need help with XSL please ask the <a href="/contribute/web/web.html">web team</a>.
+    </p>
+
+    <h2>Style the campaign banner</h2>
+
+    <p>
+        Don’t forget to style the campaign banner any way you like. You can take inspiration from other banner’s styles. Find it in <code>look/fsfe.less</code>. For a basic style, add:
+    </p>
+
+    <pre><code>
+        #new-campaign-id {
+            .campaign-box-center;
+            background: url('/graphics/choose-a-picture.jpg')  center 33%  no-repeat #666;
+        }
+    </code></pre>
+
+    <p>
+        If you need help to edit the style of fsfe.org, see <a href="css.html">How to edit the CSS with LESS</a>.
+    </p>
+
+    </div>
+    <!--/e-content-->
+
+  </body>
+<sidebar promo="about-fsfe">
+    <div id="related-content">
+        <h3>Other howtos:</h3>
+        <ul>
+            <li>
+            <a href="/contribute/web/tagging.html">Use tags and article metadata, implement a country page</a>
+            </li>
+            <li>
+            <a href="/contribute/template.html">A template article, to use the new webdesign</a>
+            </li>
+        </ul>
+    </div>
+</sidebar>
+<date>
+    <original content="2014-01-24"/>
+</date>
+<author id="roy" />
+<tags>
+    <tag>webmaster</tag>
+</tags>
+
+  <timestamp>$Date: 2013-09-26 15:32:30 +0200 (Thu 26 Sep 2013) $ $Author: paul $</timestamp>
+
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

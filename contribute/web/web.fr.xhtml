@@ -3,415 +3,503 @@
   <head>
     <title>Information pour les webmestres - FSFE</title>
   </head>
-  <body>
+  <body class="article web" microformats="h-entry" id="information-webmasters">
 
     <p id="category"><a href="/contribute/">Contribuer</a></p>
-    <h1>Webmestres</h1>
+    <h1 class="p-name">Webmestres</h1>
 
-    <p id="introduction">
-	L'<em>équipe Web</em> maintient et développe les sites de la FSFE — allant de <a href="/index.html">fsfe.org</a> aux sites de projet ou de campagne. Les webmestres sont des volontaires qui améliore le visage que l'organisation donne au monde et apportent des solutions techniques à nos efforts sur le Web.
-	</p>
+    <div class="e-content">
 
-	<h2>Apprenez à nous connaître, apprenez à connaître le site</h2>
+      <p id="introduction">
+        L'<em>équipe Web</em> maintient et développe les sites de la FSFE —
+        allant de <a href="/index.html">fsfe.org</a> aux sites de projet ou de
+        campagne. Les webmestres sont des volontaires qui améliore le visage
+        que l'organisation donne au monde et apportent des solutions techniques
+        à nos efforts sur le Web.
+      </p>
 
-    <p>
-	Si vous voulez avoir une idée de ce à quoi correspond travailler sur le site de la FSFE, le meilleur point de départ est de venir discuter avec nous. Certains des webmesters sont régulièrement sur le canal freenode #fsfe, où nous seront ravis de vous rencontrer et de répondre à vos questions &#160;! Pour connaitre ce qui travaillent sur le site, et avec la FSFE dans son ensemble, visitez la page sur <a href="/about/team.html">notre équipe</a>.
-    </p>
+      <h2>Apprenez à nous connaître, apprenez à connaître le site</h2>
 
-
-	<p>
-    Vos coordinateurs web <a href="/about/jean/jean.en.html">Nicolas Jean</a>
-    et <a href="http://sny.no/">Andreas Tolf Tolfsen</a>.
-    </p>
-
-
-    <h2>Introduction</h2>
-
-    <p>
-      Les technologies employées pour la maintenance des pages web de la FSFE
-      apparaitront sans doute familières à beaucoup de développeurs ou auteurs,
-      et leur description pourrait intéresser ceux qui ne les ont pas encore découvertes.
-    </p>
-
-	<p>
-	Les traducteurs et bénévoles occasionnels seront probablement principalement à faire avec &#160;:
-	</p>
-
-<ul>
-<li>
-        <a href="http://en.wikipedia.org/wiki/XHTML">XHTML</a> – grâce auquel les pages web son générées &#160;;
-      </li>
-      <li>
-        <a href="http://subversion.tigris.org/" target="_blank">Subversion</a> –
-        pour le versionnage des fichiers source &#160;;
-      </li>
-      <li>
-      <a href="http://trac.edgewall.org/" target="_blank">Trac</a> – pour la gestion des droits d'accès, le suivi des dysfonctionnements et autres services.
-      </li>
-</ul>
-
-
-<p>
-Les volontaires qui souhaitent s'engager plus profondément dans la
-maintenance du site devraient également être familiers de &#160;:
-</p>
-
-<ul>
-<li>
-<a href="http://www.perl.org">Perl</a> – pour la maintenance et les scripts de création des pages ;
-</li>
-<li>
-<a href="http://www.apache.org">Apache</a> – le serveur web
-</li>
-</ul>
-
-    <h2 id="Understanding">Comprendre le mécanisme de construction des pages web</h2>
-
-    <p>
-    Les pages web de <var>fsfe.org</var> sont maintenues comme un
-ensemble de fichiers XML. Le serveur web génère automatiquement les
-pages HTML à partir de ces fichiers XML, toutes les cinq minutes. Ainsi,
- toute l'édition des pages se fait dans les fichiers XML, et on ne
-travaille jamais directement sur les fichiers HTML.</p>
-
-    <p>
-    Chaque page de fsfe.org est nommée <var><em>nomdelapage</em>.<em>langue</em>.html</var> (<em>langue</em> étant le code à deux lettres <a href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO-639 de la langue</a>, comme "en" pour l'anglais ou "fr" pour le français). Les fichiers source sont nommés <var><em>nomdelapage</em>.<em>langue</em>.xhtml</var>.
+      <p>
+        Si vous voulez avoir une idée de ce à quoi correspond travailler sur le
+        site de la FSFE, le meilleur point de départ est de venir discuter avec
+        nous. Certains des webmesters sont régulièrement sur le canal freenode
+        #fsfe, où nous seront ravis de vous rencontrer et de répondre à vos
+        questions &#160;! Pour connaitre ce qui travaillent sur le site, et
+        avec la FSFE dans son ensemble, visitez la page sur <a
+        href="/about/team.html">notre équipe</a>.
       </p>
 
 
       <p>
-      Certaines pages ont un contenu dynamique : hormis les textes fixes
- tirés du fichier XHTML, elles contiennent des informations provenant
-d'un ou plusieurs fichiers XML. Lorsqu'une telle page est construite, le
- système prend les fichiers XML traduits s'ils sont disponibles, et
-prend la version anglaise de ces fichiers sinon. De telles pages peuvent
- donc afficher certaines parties traduites alors que d'autres seront
-encore en anglais. La
-      <a href="/index.html">page d'accueil</a>, la
-      <a href="/news/news.html">page des nouvelles</a>, et la
-      <a href="/events/events.html">page des évènements</a> par exemple, sont construites ainsi.
-    </p>
-
-
-    <h2>Accéder aux pages Web</h2>
-
-    <p>
-      Les fichiers sources sont stockés sur le <a href="https://trac.fsfe.org/fsfe-web/browser">dépôt subversion fsfe-web</a>, lui-même hébergé sur le serveur subversion de la FSFE. D'autres services sont disponibles sur l'instance <a href="https://trac.fsfe.org/fsfe-web">Trac</a>.
-    </p>
-
-
-    <p>
-      Pour avoir accès à ces outils, suivez les instructions suivantes :
-    </p>
-
-    <ul>
-      <li>
-        <p>
-	Si vous êtes un <a href="http://fellowship.fsfe.org">Fellow de la FSFE</a>,
- vous avez déjà accès en lecture à subversion et trac. Il vous suffit
- de vous connecter avec vos noms d'utilisateurs et mot de passe
-habituels.
-        </p>
-	  </li>
-
-	  <li>
-      <p>
-      Sinon, vous pouvez créer un compte invité pour subversion et trac en remplissant le formulaire suivant : <a href="https://trac.fsfe.org/fsfe-web/register">https://trac.fsfe.org/fsfe-web/register</a>.
- Dès que vous vous serez enregistré, vous aurez accès en lecture au
-dépôt et au trac (notez que votre nom d'utilisateur sera préfixé par <var>guest-</var>). Un message automatique sera envoyé à l'administrateur qui donnera les droits d'écriture dès que possible.
-        </p>
-	   </li>
-    </ul>
-
-
-	<p>
-	Pour obtenir un accès en écriture au dépôt subversion, au wiki du Trac et au système de tickets, envoyez votre demande à <a href="mailto:system-hackers@fsfeurope.org">system-hackers@fsfeurope.org</a>.
-
-
-	</p>
-
-
-    <h3 id="Checking">Rapatrier une version de travail depuis Subversion</h3>
-
-    <p>
-      Le dépôt subversion est constitué de deux éléments majeurs pour le site de la FSFE : le <a href="https://trac.fsfe.org/fsfe-web/browser/trunk">SVN trunk</a> (tronc SVN) qui est utilisé pour construire les pages du site public <a href="http://fsfe.org">http://fsfe.org</a> et la <a href="https://trac.fsfe.org/fsfe-web/browser/branches/test">branche «test»</a> qui est utilisée pour générer le site de test <a href="http://test.fsfe.org">http://test.fsfe.org</a>.
-    </p>
-
-
-    <p>
-      Pour le travail de tous les jours, comme ajouter des nouvelles, traduire
-des pages ou introduire de petites corrections, vous devrez récupérer le
- tronc :
-    </p>
-
-    <p class="terminal">svn --username <var>VOTRE_NOM_DE_FELLOW</var> co https://svn.fsfe.org/fsfe-web/trunk</p>
-
-    <p>
-      Pour travailler sur des changements plus profond, comme débugger
-de nouvelles fonctionnalités qui pourraient casser le site, vous
-êtes invités à utiliser la branche de <em>test</em> du dépôt SVN :
-    </p>
-
-    <p class="terminal">svn --username <var>VOTRE_NOM_DE_FELLOW</var> co https://svn.fsfe.org/fsfe-web/branches/test</p>
-
-    <p>
-      À noter qu'une version complète du dépôt requiert environ 160 Mo.
- Aussi, si vous pensez travailler uniquement sur certaines parties, vous
- pouvez rapatrier uniquement celles-ci. Vous pouvez <a href="https://trac.fsfe.org/fsfe-web/browser">parcourir la branche SVN</a> en ligne pour trouver ce qui vous intéresse.
-    </p>
-
-	<p>
-    Pour rapatrier le SVN du "Document Freedom Day", utilisez:
-    </p>
-
-    <p class="terminal">svn --username <var>VOTRE_NOM_DE_FELLOWS</var> co https://svn.fsfe.org/df-web/trunk</p>
-
-    <h2 id="Working">Travailler avec le dépôt</h2>
-
-    <p>
-      Dans subversion, <a href="http://svnbook.red-bean.com/en/1.5/svn.advanced.props.special.keywords.html">
-      la substitution de mot-clé</a> doit être activée volontairement sur chaque fichier. Comme nous utilisons quelques mot-clés sur les fichiers <var>.xml</var> et <var>.xhtml</var> (par exemple le mot-clé <var>$</var><var>Author</var><var>$</var> en pied de page), vous devriez activer les mot-clés automatiques en ajoutant dans votre fichier local <var>~/.subversion/config</var> :
-    </p>
-
-    <pre class="file">
-enable-auto-props = yes
-
-[auto-props]
-*.xml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xml;svn:eol-style=native
-*.xhtml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xhtml;svn:eol-style=native
-    </pre>
-
-    <p>
-    Après avoir récupéré le dépôt une première fois, vous n'aurez qu'à exécuter chaque fois
-    </p>
-
-    <p class="terminal">$ svn update</p>
-
-    <p>
-      juste avant de vous mettre à travailler sur un fichier donné.
-    </p>
-
-    <p>
-    Si vous souhaitez ajouter de nouveaux fichiers au dépôt, exécutez
-    </p>
-
-    <p class="terminal">$ svn add <em>nomdufichier</em></p>
-
-	<p>
-      Pour permettre la substitution de mots-clés pour un nouveau fichier, exécutez
-	</p>
-
-    <p class="terminal">$ svn propset svn:keywords "Date Author Id Revision" <em>filename</em></p>
-
-    <p>
-    Pour envoyer vos changements au serveur, qu'il s'agisse d'un nouveau
- fichier ou de la modification d'un fichier existant, exécutez
-    </p>
-
-    <p class="terminal">$ svn commit <em>nomdufichier</em></p>
-
-    <p>
-      et votre éditeur par défaut s'ouvrira, vous permettant d'indiquer une courte description des changements apportés.
+        Vos coordinateurs web <a href="/about/jean/jean.en.html">Nicolas Jean</a>
+        et <a href="http://sny.no/">Andreas Tolf Tolfsen</a>.
       </p>
 
 
-    <p>
-      Si vous êtes habitué à travailler avec CVS, vous vous adapterez
-facilement à SVN. Comme vous l'avez constaté, les commandes de base sont
- très ressemblantes. Pour en savoir plus, vous pouvez consulter un
-aperçu des différences entre CVS et SVN sur <a href="http://svnbook.red-bean.com/en/1.5/svn.forcvs.html">Subversion for CVS Users</a> ainsi qu'un aperçu des différences entre commandes sur <a href="http://svn.apache.org/repos/asf/subversion/trunk/doc/user/cvs-crossover-guide.html">CVS to SVN Crossover Guide</a>.
-    </p>
+      <h2>Introduction</h2>
+
+      <p>
+        Les technologies employées pour la maintenance des pages web de la FSFE
+        apparaitront sans doute familières à beaucoup de développeurs ou auteurs,
+        et leur description pourrait intéresser ceux qui ne les ont pas encore découvertes.
+      </p>
+
+      <p>
+        Les traducteurs et bénévoles occasionnels seront probablement principalement à faire avec &#160;:
+      </p>
+
+      <ul>
+        <li>
+          <a href="http://en.wikipedia.org/wiki/XHTML">XHTML</a> – grâce auquel
+          les pages web son générées &#160;;
+        </li>
+        <li>
+          <a href="http://subversion.tigris.org/"
+            target="_blank">Subversion</a> – pour le versionnage des fichiers
+          source &#160;;
+        </li>
+        <li>
+          <a href="http://trac.edgewall.org/" target="_blank">Trac</a> – pour
+          la gestion des droits d'accès, le suivi des dysfonctionnements et
+          autres services.
+        </li>
+      </ul>
 
 
-    <p>
-    Vous pouvez télécharger un manuel détaillé de SVN, le <a href="http://svnbook.red-bean.com/">Subversion book</a> (nous utilisons la version 1.5 de SVN).
-    </p>
+      <p>
+        Les volontaires qui souhaitent s'engager plus profondément dans la
+        maintenance du site devraient également être familiers de&#160;:
+      </p>
+
+      <ul>
+        <li>
+          <a href="http://www.perl.org">Perl</a> – pour la maintenance et les
+          scripts de création des pages ;
+        </li>
+        <li>
+          <a href="http://www.apache.org">Apache</a> – le serveur web
+        </li>
+      </ul>
+
+      <h2 id="Understanding">Comprendre le mécanisme de construction des pages web</h2>
+
+      <p>
+        Les pages web de <var>fsfe.org</var> sont maintenues comme un ensemble
+        de fichiers XML. Le serveur web génère automatiquement les pages HTML à
+        partir de ces fichiers XML, toutes les cinq minutes. Ainsi, toute
+        l'édition des pages se fait dans les fichiers XML, et on ne travaille
+        jamais directement sur les fichiers HTML.
+      </p>
+
+      <p>
+        Chaque page de fsfe.org est nommée
+        <var><em>nomdelapage</em>.<em>langue</em>.html</var> (<em>langue</em>
+        étant le code à deux lettres <a
+          href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO-639
+          de la langue</a>, comme "en" pour l'anglais ou "fr" pour le
+        français). Les fichiers source sont nommés
+        <var><em>nomdelapage</em>.<em>langue</em>.xhtml</var>.
+      </p>
 
 
-    <h2 id="Coordination">Outils de coordination</h2>
-
- <p>
-   Les travaux sur les pages du site sont coordonnés sur la <a href="http://mail.fsfeurope.org/mailman/listinfo/web">liste de diffusion des webmestres (en anglais)</a>.
-    </p>
-
-    <p>
-      L'instance Trac <a href="https://trac.fsfe.org/fsfe-web">fsfe-web</a> fournit d'autres outils liés à la coordination comme un navigateur de dépôt SVN en ligne, un traqueur de bogues et un wiki.
-    </p>
-
-    <p>
-      Vous pourrez trouver plus d'informations sur l'utilisation du trac sur la page <a href="https://trac.fsfe.org/fsfe-web/wiki/TracGuide">TracGuide</a> du wiki.
-    </p>
-
-
-    <p>
-    Si vous souhaitez conserver une trace de toutes les modifications apportées aux sources des pages web, souscrivez à la
-      <a href="http://mail.fsfeurope.org/mailman/listinfo/web-cvs-notify">liste de diffusion des notifications</a>, vous recevrez ainsi un mail à chaque changement posté à l'arbre des sources.
-    </p>
+      <p>
+        Certaines pages ont un contenu dynamique : hormis les textes fixes tirés
+        du fichier XHTML, elles contiennent des informations provenant d'un ou
+        plusieurs fichiers XML. Lorsqu'une telle page est construite, le système
+        prend les fichiers XML traduits s'ils sont disponibles, et prend la
+        version anglaise de ces fichiers sinon. De telles pages peuvent donc
+        afficher certaines parties traduites alors que d'autres seront encore en
+        anglais. La <a href="/index.html">page d'accueil</a>, la <a
+          href="/news/news.html">page des nouvelles</a>, et la <a
+          href="/events/events.html">page des évènements</a> par exemple, sont
+        construites ainsi.
+      </p>
 
 
-    <h2 id="Responsible">Les responsabilités incombant à l'accès en écriture</h2>
+      <h2>Accéder aux pages Web</h2>
 
-    <p>
-    Si vous avez un accès en écriture aux pages web, inscrivez-vous à la
-      <a href="http://mail.fsfeurope.org/mailman/listinfo/web">liste de diffusion des webmestres</a>.
-    </p>
+      <p>
+        Les fichiers sources sont stockés sur le <a
+          href="https://trac.fsfe.org/fsfe-web/browser">dépôt subversion
+          fsfe-web</a>, lui-même hébergé sur le serveur subversion de la FSFE.
+        D'autres services sont disponibles sur l'instance <a
+          href="https://trac.fsfe.org/fsfe-web">Trac</a>.
+      </p>
 
-    <p>
-    Gardez à l'esprit que toutes vos modifications seront effectives et
-visibles automatiquement, sans autre action de la part de quiconque. En
-conséquence, il y a un certain nombre de choses que nous vous demandons lorsque vous postez des changements ou des nouveaux fichiers &#160;:
-    </p>
+      <p>
+        Pour avoir accès à ces outils, suivez les instructions suivantes :
+      </p>
 
-    <ul>
-      <li>
-        <p>
-        La FSFE est responsable du contenu des pages web. Ne postez pas de modifications qui changent le sens du texte sans
- l'approbation préalable d'un <a href="/about/members.html">membre de l'équipe de la FSFE</a>.
-          (Ceci n'est pas nécessaire lors de la traduction d'un contenu existant)
+      <ul>
+        <li>
+          <p>
+            Si vous êtes un <a href="http://fellowship.fsfe.org">Fellow de la
+              FSFE</a>, vous avez déjà accès en lecture à subversion et trac.
+            Il vous suffit de vous connecter avec vos noms d'utilisateurs et
+            mot de passe habituels.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            Sinon, vous pouvez créer un compte invité pour subversion et trac
+            en remplissant le formulaire suivant : <a
+              href="https://trac.fsfe.org/fsfe-web/register">https://trac.fsfe.org/fsfe-web/register</a>.
+            Dès que vous vous serez enregistré, vous aurez accès en lecture au
+            dépôt et au trac (notez que votre nom d'utilisateur sera préfixé
+            par <var>guest-</var>). Un message automatique sera envoyé à
+            l'administrateur qui donnera les droits d'écriture dès que
+            possible.
         </p>
-      </li>
+       </li>
+      </ul>
 
-      <li>
-        <p>
-        Lorsque vous postez des traductions, et qu'il y a une chance que
- d'autres puissent la relire, utilisez cette opportunité. Vous pouvez
-utiliser la
-          <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">liste de diffusion des traducteurs</a> pour demander une relecture. Que vous traduisiez des pages ou les
-relisiez, nous vous encourageons à vérifier l'orthographe de vos
-fichiers à l'aide d'outils automatisés, comme GNU aspell, ispell ou votre correcteur orthographique préféré. Pour utiliser
-          <a href="http://aspell.net/">GNU aspell</a> par exemple sur un système Debian GNU/Linux, il vous suffit d'installer les paquets <em>aspell</em> et
-          <em>aspell-<strong>XX</strong></em> (où "XX" est votre code de langue), et de lancer ensuite la commande
+
+      <p>
+        Pour obtenir un accès en écriture au dépôt subversion, au wiki du
+        Trac et au système de tickets, envoyez votre demande à <a
+        href="mailto:system-hackers@fsfeurope.org">system-hackers@fsfeurope.org</a>.
+      </p>
+
+
+      <h3 id="Checking">Rapatrier une version de travail depuis Subversion</h3>
+
+      <p>
+        Le dépôt subversion est constitué de deux éléments majeurs pour le site
+        de la FSFE : le <a
+        href="https://trac.fsfe.org/fsfe-web/browser/trunk">SVN trunk</a>
+        (tronc SVN) qui est utilisé pour construire les pages du site public <a
+        href="http://fsfe.org">http://fsfe.org</a> et la <a
+        href="https://trac.fsfe.org/fsfe-web/browser/branches/test">branche
+        «test»</a> qui est utilisée pour générer le site de test <a
+        href="http://test.fsfe.org">http://test.fsfe.org</a>.
+      </p>
+
+
+      <p>
+        Pour le travail de tous les jours, comme ajouter des nouvelles,
+        traduire des pages ou introduire de petites corrections, vous devrez
+        récupérer le tronc :
+      </p>
+
+      <pre class="term"><code>svn --username <var>VOTRE_NOM_DE_FELLOW</var> co https://svn.fsfe.org/fsfe-web/trunk</code></pre>
+
+      <p>
+        Pour travailler sur des changements plus profond, comme débugger de
+        nouvelles fonctionnalités qui pourraient casser le site, vous êtes
+        invités à utiliser la branche de <em>test</em> du dépôt SVN :
+      </p>
+
+      <pre class="term"><code>svn --username <var>VOTRE_NOM_DE_FELLOW</var> co https://svn.fsfe.org/fsfe-web/branches/test</code></pre>
+
+      <p>
+        À noter qu'une version complète du dépôt requiert environ 160 Mo.
+        Aussi, si vous pensez travailler uniquement sur certaines parties, vous
+        pouvez rapatrier uniquement celles-ci. Vous pouvez <a
+        href="https://trac.fsfe.org/fsfe-web/browser">parcourir la branche
+        SVN</a> en ligne pour trouver ce qui vous intéresse.
+      </p>
+
+      <p>
+        Pour rapatrier le SVN du "Document Freedom Day", utilisez:
+      </p>
+
+      <pre class="term"><code>svn --username <var>VOTRE_NOM_DE_FELLOW</var> co https://svn.fsfe.org/df-web/trunk</code></pre>
+
+      <h2 id="Working">Travailler avec le dépôt</h2>
+
+      <p>
+        Dans subversion, <a
+          href="http://svnbook.red-bean.com/en/1.5/svn.advanced.props.special.keywords.html">
+          la substitution de mot-clé</a> doit être activée volontairement sur
+        chaque fichier. Comme nous utilisons quelques mot-clés sur les fichiers
+        <var>.xml</var> et <var>.xhtml</var> (par exemple le mot-clé
+        <var>$</var><var>Author</var><var>$</var> en pied de page), vous
+        devriez activer les mot-clés automatiques en ajoutant dans votre
+        fichier local <var>~/.subversion/config</var> :
+      </p>
+
+      <pre class="file">
+  enable-auto-props = yes
+
+  [auto-props]
+  *.xml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xml;svn:eol-style=native
+  *.xhtml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xhtml;svn:eol-style=native
+      </pre>
+
+      <p>
+      Après avoir récupéré le dépôt une première fois, vous n'aurez qu'à exécuter chaque fois
+      </p>
+
+      <pre class="term"><code>svn update</code></pre>
+
+      <p>
+        juste avant de vous mettre à travailler sur un fichier donné.
+      </p>
+
+      <p>
+        Si vous souhaitez ajouter de nouveaux fichiers au dépôt, exécutez
+      </p>
+
+      <pre class="term"><code>svn add <em>nomdufichier</em></code></pre>
+
+      <p>
+        Pour permettre la substitution de mots-clés pour un nouveau fichier,
+        exécutez
+      </p>
+
+      <pre class="term"><code>svn propset svn:keywords "Date Author Id Revision" <em>nomdufichier</em></code></pre>
+
+      <p>
+      Pour envoyer vos changements au serveur, qu'il s'agisse d'un nouveau
+   fichier ou de la modification d'un fichier existant, exécutez
+      </p>
+
+      <pre class="term"><code>svn commit <em>nomdufichier</em></code></pre>
+
+      <p>
+        et votre éditeur par défaut s'ouvrira, vous permettant d'indiquer une courte description des changements apportés.
+        </p>
+
+
+      <p>
+        Si vous êtes habitué à travailler avec CVS, vous vous adapterez
+  facilement à SVN. Comme vous l'avez constaté, les commandes de base sont
+   très ressemblantes. Pour en savoir plus, vous pouvez consulter un
+  aperçu des différences entre CVS et SVN sur <a href="http://svnbook.red-bean.com/en/1.5/svn.forcvs.html">Subversion for CVS Users</a> ainsi qu'un aperçu des différences entre commandes sur <a href="http://svn.apache.org/repos/asf/subversion/trunk/doc/user/cvs-crossover-guide.html">CVS to SVN Crossover Guide</a>.
+      </p>
+
+
+      <p>
+      Vous pouvez télécharger un manuel détaillé de SVN, le <a href="http://svnbook.red-bean.com/">Subversion book</a> (nous utilisons la version 1.5 de SVN).
+      </p>
+
+
+      <h2 id="Coordination">Outils de coordination</h2>
+
+   <p>
+     Les travaux sur les pages du site sont coordonnés sur la <a href="http://mail.fsfeurope.org/mailman/listinfo/web">liste de diffusion des webmestres (en anglais)</a>.
+      </p>
+
+      <p>
+        L'instance Trac <a href="https://trac.fsfe.org/fsfe-web">fsfe-web</a> fournit d'autres outils liés à la coordination comme un navigateur de dépôt SVN en ligne, un traqueur de bogues et un wiki.
+      </p>
+
+      <p>
+        Vous pourrez trouver plus d'informations sur l'utilisation du trac sur la page <a href="https://trac.fsfe.org/fsfe-web/wiki/TracGuide">TracGuide</a> du wiki.
+      </p>
+
+
+      <p>
+      Si vous souhaitez conserver une trace de toutes les modifications apportées aux sources des pages web, souscrivez à la
+        <a href="http://mail.fsfeurope.org/mailman/listinfo/web-cvs-notify">liste de diffusion des notifications</a>, vous recevrez ainsi un mail à chaque changement posté à l'arbre des sources.
+      </p>
+
+
+      <h2 id="Responsible">Les responsabilités incombant à l'accès en écriture</h2>
+
+      <p>
+      Si vous avez un accès en écriture aux pages web, inscrivez-vous à la
+        <a href="http://mail.fsfeurope.org/mailman/listinfo/web">liste de diffusion des webmestres</a>.
+      </p>
+
+      <p>
+      Gardez à l'esprit que toutes vos modifications seront effectives et
+  visibles automatiquement, sans autre action de la part de quiconque. En
+  conséquence, il y a un certain nombre de choses que nous vous demandons lorsque vous postez des changements ou des nouveaux fichiers &#160;:
+      </p>
+
+      <ul>
+        <li>
+          <p>
+          La FSFE est responsable du contenu des pages web. Ne postez pas de modifications qui changent le sens du texte sans
+   l'approbation préalable d'un <a href="/about/members.html">membre de l'équipe de la FSFE</a>.
+            (Ceci n'est pas nécessaire lors de la traduction d'un contenu existant)
+          </p>
+        </li>
+
+        <li>
+          <p>
+          Lorsque vous postez des traductions, et qu'il y a une chance que
+   d'autres puissent la relire, utilisez cette opportunité. Vous pouvez
+  utiliser la
+            <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">liste de diffusion des traducteurs</a> pour demander une relecture. Que vous traduisiez des pages ou les
+  relisiez, nous vous encourageons à vérifier l'orthographe de vos
+  fichiers à l'aide d'outils automatisés, comme GNU aspell, ispell ou votre correcteur orthographique préféré. Pour utiliser
+            <a href="http://aspell.net/">GNU aspell</a> par exemple sur un système Debian GNU/Linux, il vous suffit d'installer les paquets <em>aspell</em> et
+            <em>aspell-<strong>XX</strong></em> (où "XX" est votre code de langue), et de lancer ensuite la commande
+            </p>
+
+            <p class="terminal">aspell -H -d <em>langue</em> -c file.xhtml</p>
+
+            <p>
+            (où "langue" est le nom du dictionnaire pour votre langue ;
+            l'option <var>-d</var> peut être omise si votre locale UNIX est la même que celle du dictionnaire à utiliser).
+          </p>
+        </li>
+
+        <li>
+          <p>
+          Assurez-vous que tous les fichiers sont des XML bien formés. Par
+   défault, le serveur SVN va vérifier la syntaxe XML des fichiers aux
+  extensions .xml et .xhtml et refusera les changements si des erreurs XML
+   sont trouvées. Pour éviter cela, vérifiez vos fichiers avant de les
+  envoyer, avec l'une des solutions suivantes :
           </p>
 
-          <p class="terminal">aspell -H -d <em>langue</em> -c file.xhtml</p>
-
           <p>
-          (où "langue" est le nom du dictionnaire pour votre langue ;
-          l'option <var>-d</var> peut être omise si votre locale UNIX est la même que celle du dictionnaire à utiliser).
-        </p>
-      </li>
-
-      <li>
-        <p>
-        Assurez-vous que tous les fichiers sont des XML bien formés. Par
- défault, le serveur SVN va vérifier la syntaxe XML des fichiers aux
-extensions .xml et .xhtml et refusera les changements si des erreurs XML
- sont trouvées. Pour éviter cela, vérifiez vos fichiers avant de les
-envoyer, avec l'une des solutions suivantes :
-        </p>
-
-        <p>
-          Le script <var>/trunk/tools/validate.pl</var> vous aide à trouver les
-          erreurs dans les balises. Du code XML mal écrit enraye le processus de
-          construction automatique des pages Web et bloque les mises à jour
-          ultérieures du site Web. Si vous suspectez le processus d'être bloqué,
-          vous pouvez <a href="http://status.fsfe.org/">vérifier la construction en cours</a>.
-        </p>
-
-        <p>
-          Le script <var>validate.pl</var> requiert le module Perl
-          <em>XML::LibXML</em>; si celui-ci n'est pas installé sur votre
-          système, vous pouvez valider les fichiers avec votre validateur XML
-          favori. Par exemple en ligne de commande vous pouvez utiliser
-          <em>xmllint</em>, du projet <a href="http://xmlsoft.org/"><em>libxml2</em></a>.
-        </p>
-
-          <p>
-          Si vous utilisez une distribution Debian GNU/Linux, installez le paquet <em>libxml2-utils</em> &#160;; lancez la commande
+            Le script <var>/trunk/tools/validate.pl</var> vous aide à trouver les
+            erreurs dans les balises. Du code XML mal écrit enraye le processus de
+            construction automatique des pages Web et bloque les mises à jour
+            ultérieures du site Web. Si vous suspectez le processus d'être bloqué,
+            vous pouvez <a href="http://status.fsfe.org/">vérifier la construction en cours</a>.
           </p>
 
-          <p class="terminal">xmllint --noout <em>fichier</em>.xhtml</p>
-
           <p>
-          où <em>fichier</em> représente le nom du fichier que vous souhaitez vérifier, et lisez les éventuels messages d'erreur.
-        </p>
-      </li>
-
-      <li>
-        <p>
-        Assurez-vous que l'encodage du fichier soit consistant avec le
-contenu de l'attribut "&#160;encoding&#160;" déclaré sur la première ligne du
-fichier. Par exemple, si votre fichier est codé en «&#160;iso-8859-1&#160;»
-(également connu sous le nom de «&#160;latin-1&#160;»), la première ligne du fichier
- devrait être
-        </p>
-
-        <p class="file">&lt;?xml version="1.0" encoding="iso-8859-1" ?&gt;</p>
-
-        <p>
-          Un autre encodage valide est l'unicode, ou "&#160;utf-8&#160;". Si vous
-souhaitez modifier l'encodage d'un fichier, vous pouvez utiliser
-l'utilitaire standard <em>iconv</em>, comme dans l'exemple suivant (qui convertit un fichier de l'encodage "&#160;latin1&#160;" vers l'"&#160;utf-8&#160;") ;
+            Le script <var>validate.pl</var> requiert le module Perl
+            <em>XML::LibXML</em>; si celui-ci n'est pas installé sur votre
+            système, vous pouvez valider les fichiers avec votre validateur XML
+            favori. Par exemple en ligne de commande vous pouvez utiliser
+            <em>xmllint</em>, du projet <a href="http://xmlsoft.org/"><em>libxml2</em></a>.
           </p>
 
-          <p class="terminal">iconv -f LATIN1 -t UTF8 <em>fichieroriginal</em> &gt; <em>fichierdesortie</em></p>
+            <p>
+            Si vous utilisez une distribution Debian GNU/Linux, installez le paquet <em>libxml2-utils</em> &#160;; lancez la commande
+            </p>
 
-          </li>
-    </ul>
+            <pre class="term"><code>xmllint --noout <em>fichier</em>.xhtml</code></pre>
 
-    <p>
-    Coordonnez-vous avec les autres personnes qui ont également un accès
- SVN afin de vous assurer que les traductions et modifications apportées
- par les contributeurs qui n'ont pas d'accès en écriture sont expédiées
-correctement après avoir été relues. Bien sûr, vérifiez ces fichiers
-avant de les envoyer comme vous vérifiez vos propres fichiers.
-    </p>
+            <p>
+            où <em>fichier</em> représente le nom du fichier que vous souhaitez vérifier, et lisez les éventuels messages d'erreur.
+          </p>
+        </li>
+
+        <li>
+          <p>
+          Assurez-vous que l'encodage du fichier soit consistant avec le
+  contenu de l'attribut "&#160;encoding&#160;" déclaré sur la première ligne du
+  fichier. Par exemple, si votre fichier est codé en «&#160;iso-8859-1&#160;»
+  (également connu sous le nom de «&#160;latin-1&#160;»), la première ligne du fichier
+   devrait être
+          </p>
+
+          <pre class="file">&lt;?xml version="1.0" encoding="iso-8859-1" ?&gt;</pre>
+
+          <p>
+            Un autre encodage valide est l'unicode, ou "&#160;utf-8&#160;". Si vous
+  souhaitez modifier l'encodage d'un fichier, vous pouvez utiliser
+  l'utilitaire standard <em>iconv</em>, comme dans l'exemple suivant (qui convertit un fichier de l'encodage "&#160;latin1&#160;" vers l'"&#160;utf-8&#160;") ;
+            </p>
+
+            <pre class="term">iconv -f LATIN1 -t UTF8 <em>fichieroriginal</em> &gt; <em>fichierdesortie</em></pre>
+
+            </li>
+      </ul>
+
+      <p>
+      Coordonnez-vous avec les autres personnes qui ont également un accès
+   SVN afin de vous assurer que les traductions et modifications apportées
+   par les contributeurs qui n'ont pas d'accès en écriture sont expédiées
+  correctement après avoir été relues. Bien sûr, vérifiez ces fichiers
+  avant de les envoyer comme vous vérifiez vos propres fichiers.
+      </p>
+
+        <h2>License du code source</h2>
+        <p>
+          Lorsque vous introduisez du code serveur (ex&#160;: PHP, Perl) ou du code java script au site web, veuillez respecter notre politique de licences. Plus spécifiquement, cela signifie&#160;:
+        </p>
+          <ul>
+            <li> Lorsque vous écrivez un script pour le compte de la FSFE,
+              merci de le mettre sous licence <a
+              href="http://www.gnu.org/licenses/agpl.html">AGPLv3+</a> (il
+              s’agit de la licence AGPL version 3 ou toute version
+              ultérieure)</li>
+            <li> Lorsque vous introduisez des scripts écrits par un tiers,
+              veuillez vous assurez qu’ils sont sous une licence libre listée
+              sur <a
+              href="http://www.gnu.org/licenses/license-list.html">http://www.gnu.org/licenses/license-list.html</a></li>
+            <li>Lorsque vous écrivez un script pour la FSFE (mais que vous
+              n’êtes pas employé) nous préférons avoir le script sous licence
+              AGPLv3+, GPLv3+, LGPLv3+, Apache 2.0 ou CC0, publier le code sous
+              une licence libre est une obligation pour la FSFE.</li>
+          </ul>
+
+          
+          <h2>Utiliser des licences personnalisées</h2>
+
+      <p>
+        Si vous utilisez des images ou tout autre media qui a été mis sous une
+        Creative Commons license ou tout autre licence, vous pouvez vous assurer que
+            les bonnes informations soient affichées en les ajoutant à la fin du document avant
+            &lt;/html&gt;. Voici trois exemples :
+      </p>
+
+      <pre class="file">
+
+  &lt;legal type="cc-license"&gt;
+
+  &lt;license&gt;https://creativecommons.org/licenses/by-sa/3.0/&lt;/license&gt;
+
+    &lt;notice&gt;This work is published under the Creative Commons BY-SA
+  3.0 Unported license by John Doe&lt;/notice&gt;
+  &lt;/legal&gt;
 
 
-	<h2>Utiliser des licences personnalisées</h2>
+  &lt;legal&gt;
+    &lt;license&gt;http://www.gnu.org/licenses/fdl-1.3.txt&lt;/license&gt;
+    &lt;notice&gt;This page is published under the GNU Free Documentation
+  License 1.3 or later&lt;/notice&gt;
+  &lt;/legal&gt;
 
-    <p>
-      Si vous utilisez des images ou tout autre media qui a été mis sous une
-      Creative Commons license ou tout autre licence, vous pouvez vous assurer que
-	  les bonnes informations soient affichées en les ajoutant à la fin du document avant
-	  &lt;/html&gt;. Voici trois exemples :
-    </p>
-
-    <pre class="file">
-
-&lt;legal type="cc-license"&gt;
-
-&lt;license&gt;https://creativecommons.org/licenses/by-sa/3.0/&lt;/license&gt;
-
-  &lt;notice&gt;This work is published under the Creative Commons BY-SA
-3.0 Unported license by John Doe&lt;/notice&gt;
-&lt;/legal&gt;
+  &lt;legal&gt;
+    &lt;notice&gt;This work is published undere the CC-BY-SA 3.0 Unported
+  license or the &lt;a href="http://artlibre.org/"&gt;Licence Art Libre
+  1.3&lt;/a&gt; at your option, etc.&lt;/notice&gt;
+  &lt;/legal&gt;
 
 
-&lt;legal&gt;
-  &lt;license&gt;http://www.gnu.org/licenses/fdl-1.3.txt&lt;/license&gt;
-  &lt;notice&gt;This page is published under the GNU Free Documentation
-License 1.3 or later&lt;/notice&gt;
-&lt;/legal&gt;
-
-&lt;legal&gt;
-  &lt;notice&gt;This work is published undere the CC-BY-SA 3.0 Unported
-license or the &lt;a href="http://artlibre.org/"&gt;Licence Art Libre
-1.3&lt;/a&gt; at your option, etc.&lt;/notice&gt;
-&lt;/legal&gt;
-
-
-    </pre>
-
-
-    <h2>Tags&#160;: metadata des articles autheurs, date. Créer des évènements et des actualités taguées, mise en place d'une page nationale</h2>
-
-    <p>
-      Veuillez lire <a href="/contribute/web/tagging.html">le manuel dédié</a> à cet objectif.
-    </p>
-
-
-    <h2>Autre site FSFE</h2>
-
-    <p>
-      En dehors du site principal fsfe.org, les volontaires sont encouragés à contribuer aux
-	  autres sites FSFE et Fellowship&#160; vous pourrez trouver plus d'information sur ces sites
-	  sur le <a href="http://wiki.fsfe.org/FellowshipHacks" target="_blank">wiki FSFE</a>.
-    </p>
+      </pre>
 
 
 
-  <div xmlns="http://www.w3.org/1999/xhtml" id="presBubble" style="visibility: hidden; z-index: 2147483647; position: absolute; text-decoration: none;"></div><div xmlns="http://www.w3.org/1999/xhtml" id="presBubble" style="visibility: hidden; z-index: 2147483647; position: absolute; text-decoration: none;"></div><div xmlns="http://www.w3.org/1999/xhtml" id="presBubble" style="visibility: hidden; z-index: 2147483647; position: absolute; text-decoration: none;"></div><div xmlns="http://www.w3.org/1999/xhtml" id="presBubble" style="visibility: hidden; z-index: 2147483647; position: absolute; text-decoration: none;"></div><div xmlns="http://www.w3.org/1999/xhtml" id="presBubble" style="visibility: hidden; z-index: 2147483647; position: absolute; text-decoration: none;"></div><div xmlns="http://www.w3.org/1999/xhtml" id="presBubble" style="visibility: hidden; z-index: 2147483647; position: absolute; text-decoration: none;"></div><div xmlns="http://www.w3.org/1999/xhtml" id="presBubble" style="visibility: hidden; z-index: 2147483647; position: absolute; text-decoration: none;"></div><div xmlns="http://www.w3.org/1999/xhtml" id="presBubble" style="visibility: hidden; z-index: 2147483647; position: absolute; text-decoration: none;"></div><div xmlns="http://www.w3.org/1999/xhtml" id="presBubble" style="visibility: hidden; z-index: 2147483647; position: absolute; text-decoration: none;"></div><div xmlns="http://www.w3.org/1999/xhtml" id="presBubble" style="visibility: hidden; z-index: 2147483647; position: absolute; text-decoration: none;"></div><div xmlns="http://www.w3.org/1999/xhtml" id="presBubble" style="visibility: hidden; z-index: 2147483647; position: absolute; text-decoration: none;"></div><div xmlns="http://www.w3.org/1999/xhtml" id="presBubble" style="visibility: hidden; z-index: 2147483647; position: absolute; text-decoration: none;"></div></body>
+
+      <h2>Autres sites de la FSFE</h2>
+
+      <p>
+        En dehors du site principal fsfe.org, les volontaires sont encouragés à contribuer aux
+            autres sites FSFE et Fellowship&#160; vous pourrez trouver plus d'information sur ces sites
+            sur le <a href="http://wiki.fsfe.org/FellowshipHacks" target="_blank">wiki FSFE</a>.
+      </p>
+
+
+
+    </div>
+    <!--/e-content-->
+
+  </body>
+<sidebar promo="about-fsfe">
+    <div id="related-content">
+      <h3>Tutoriels&#160;:</h3>
+        <ul>
+            <li>
+            <a href="/contribute/web/tagging.html">Utiliser les tags et les métadonnées des articles, mettre en place la page d’un pays</a>
+            </li>
+            <li>
+            <a href="/contribute/web/css.html">Éditer le CSS avec LESS</a>
+            </li>
+            <li>
+            <a href="/contribute/web/campaigns-frontpage.html">Ajouter et sélectionner les bannières des campagnes sur la page d’accueil</a>
+            </li>
+            <li>
+            <a href="/contribute/template.html">Un article modèle, pour utiliser le nouveau design</a>
+            </li>
+        </ul>
+    </div>
+</sidebar>
+<tags>
+    <tag>webmaster</tag>
+</tags>
 
   <timestamp>$Date$ $Author$</timestamp>
   <translator>Michel Roche (Vercors - France), Jil Larner (Mont Blanc, France) et Cryptie</translator>

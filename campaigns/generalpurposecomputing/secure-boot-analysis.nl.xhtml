@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html>
+  <head>
+    <title>"Veilig opstarten": wie zal uw volgende computer controleren?</title>
+  </head>
+  <body id="secure-boot-analysis" class="article" microformats="h-entry">
+   <!--<p id="category">
+      <a href="/freesoftware/freesoftware.html">Free Software</a>
+    </p>-->
+
+<h1 class="p-name">"Veilig opstarten": wie zal uw volgende computer controleren?</h1>
+
+<div class="e-content">
+<p class="p-summary">Het doel van de FSFE is om er zeker van te zijn dat 
+eigenaren van IT-apparaten altijd de volledige en exclusieve controle over hen 
+hebben. <!-- German: permanent die volle und alleinige
+Verfügungsgewalt über ihre IT-Geräte innehaben) -->  Dit fundamentele principe 
+is onlangs ter discussie gesteld.</p>
+
+<p>Met de functie "Veilig opstarten", die vanaf 2012 aan computers wordt 
+toegevoegd, streven fabrikanten van hard- en software ernaar om in een positie 
+te komen waarin zij permanente controle hebben over de IT-apparaten die zij 
+produceren. Dus deze apparaten zullen "veilig" zijn vanuit het perspectief van 
+de fabrikant, maar niet noodzakelijk ook vanuit het standpunt van de eigenaar. 
+De eigenaar kan behandeld worden als een rivaal worden gezien. Door het te 
+voorkomen dat een apparaat wordt gebruikt voor doelen waar de fabrikant het niet 
+voor bedoelde, kunnen zij een voor algemeen gebruik bedoeld IT-apparaat (PC, 
+laptop, netbook) controleren en beperken. In het geval van IT-apparaten met 
+internettoegang kunne zij het gebruik op ieder moment beperken zonder zelfs de 
+eigenaar van het apparaat hierover te informeren. Hiermee kunnen IT-fabrikanten 
+wanneer zij dat willen gewone rechten die eigenaren van producten gewoonlijk 
+hebben van het afpakken.</p>
+
+<h2>"Veilig opstarten": Toegangscontrole voor het besturingssysteem</h2>
+
+<p>Als een IT-apparaat wordt aangezet voert het een proces uit genaamd opstarten. 
+In het geval van computers bestaat dit opstarten uit het uitvoeren van in de 
+hardware ingeprogrammeerde software ("firmware"). Deze firmware start op haar 
+beurt weer een ander programma genaamd opstartlader ("boot loader"), die dan 
+het besturingssysteem start. Bovenop het besturingssysteem kunnen de programma's 
+worden uitgevoerd. In 2012 is de industrie-brede overgang van firmware op PC's, 
+notebooks, servers en andere computers van gewone BIOS naar <a
+  href="http://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface">UEFI</a> 
+vrijwel geheel compleet. In vergelijk met gewone BIOS heeft UEFI verschillende 
+voordelen, zoals een snellere opstarttijd, drivers die onafhankelijk zijn van 
+het besturingssysteem, en de belofte van verbeterde veiligheid.</p>
+
+<p>Het veiligheidsaspect wordt uitgevoerd door de functie Veilig opstarten 
+("Secure Boot"). Sinds UEFI 2.3.1. (uitgebracht op 8 april 2011) verzekert 
+"Secure Boot" u ervan dat tijdens het opstartproces er alleen software wordt 
+uitgevoerd die voldoet aan vooraf vastgestelde cryptografische handtekeningen. 
+Dit wordt gedaan om te voorkomen dat u ongewenste software gebruikt tijdens het 
+opstarten van de computer. Voordat ieder softwaregedeelte (verschillende stadia 
+van UEFI firmware, de opstartlader, de kernel van het besturingssysteem) 
+kan worden gestart wordt de handtekening van iedere computer cryptografisch 
+geverifieerd. <strong>Voordat</strong> een cryptografisch gesigneerd softwaregedeelte kan 
+worden gestart op een specifieke machine moeten de te gebruiken cryptografische 
+handtekeningen worden toegevoegd aan de UEFI handtekeningen-database van ieder 
+IT-apparaat dat voorzien is van UEFI "Veilig opstarten".</p>
+
+<p>FSFE verwacht dat de grote meerderheid van computerfabrikanten zullen overgaan 
+tot "Veilig opstarten". Dit omdat Microsoft <a
+  href="http://msdn.microsoft.com/en-us/library/windows/hardware/hh748200.aspx">heeft
+  aangekondigd</a> dat computerfabrikanten UEFI "Veilig opstarten" zullen moeten 
+uitvoeren als zij een Windows 8 certificaat voor een apparaat dat zij bouwen 
+willen behalen. Bijvoorbeeld als zij er een "Geschikt voor Windows 8"-logo op 
+willen plakken.</p>
+
+<aside>
+<h2>De computer: een machine voor algemeen gebruik</h2>
+
+<p>Onze samenleving heeft de computer de afgelopen decennia doen evolueren tot 
+een machine voor algemeen gebruik. Daarmee heeft zij met een enkele machine een 
+krachtig apparaat gemaakt voor allerlei taken. Nu hebben IT-fabrikanten ontdekt 
+dat zij een economisch belang zouden kunnen hebben aan het beperken van wat 
+deze machines kunnen bereiken. Met "Veilig opstarten" zullen de eigenaren van 
+IT-apparaten niet in staat zijn onafhankelijk het gebruik van hun machines te 
+bepalen omdat zij niet kunnen bepalen welke software zij gebruiken.</p>
+
+<p>De entiteit die uiteindelijk controleert welke software kan worden uitgevoerd 
+op een apparaat en dus de specifieke functies van het apparaat bepaalt, kan 
+uiteindelijk iedere dataverwerking en -opslag door het apparaat bepalen. Dit 
+betekent dat de eigenaar van een IT-apparaat niet alleen de controle heeft 
+over de eigen data.</p>
+</aside>
+
+<h2>Voor welke apparaten geldt dit?</h2>
+
+<p>Op dit moment baseren veel mensen hun analyse over de UEFI-situatie op een 
+publicatie van Microsoft uit december 2011: "Windows 8 Hardware 
+Certificeringsvoorwaarden" ("Windows 8 Hardware Certification Requirements")
+Begrepen wordt dat Microsoft geen enkele versie van deze hardware-certificeringsvoorwaarden 
+publiek hoeft te maken omdat deze de basis vormt van een individueel contract 
+tussen Microsoft en iedere hardwarefabrikant die Windows 8-Certificering zoekt 
+voor haar computerproducten. Dus de "Windows 8 Hardware Certificeringsvoorwaarden" 
+kunnen ieder moment veranderen zonder dat het publiek wordt geïnformeerd. 
+Specifieke details van de logo-voorwaarden kunnen mogelijk verschillen tussen 
+fabrikanten onderling. Alles vindt plaats naar de wil van Microsoft en meestal 
+achter gesloten deuren. Dus niemand kan erop vertrouwen dat een gepubliceerde 
+versie van "Windows 8 Hardware Certificeringsvoorwaarden" statisch is. Men zal 
+zich realiseren dat de details van "Veilig opstarten" voortdurend "in beweging 
+zijn".</p>
+
+<p>Dus het probleem van "Veilig opstarten" is niet noodzakelijkerwijs beperkt tot 
+"Verbonden Stand-By Systemen" (waarschijnlijk een groot deel van de toekomstige 
+markt van notebooks, netbooks en PC's) en computers gebaseerd op ARM-microprocessors 
+(vooral tabletten en mobiele telefoons), maar kan door Microsoft ook op ieder 
+moment worden toegepast op ieder ander type apparaat. Zo kunnen ook 
+hardwarefabrikanten die geen Windows-8 apparaten produceren UEFI "Veilig 
+opstarten" of andere, door cryptografische handtekeningen beperkte, 
+opstartprocessen toevoegen aan hun apparaten. TiVo heeft dit al langer dan een 
+decennium gedaan en verschillende spelconsoles van Sony tot Microsoft gebruiken 
+ook door cryptografische handtekeningen beperkte opstartprocessen. Andere 
+fabrikanten kunnen aan "Windows 8 Hardware-certificeringsvoorwaarden" 
+vergelijkbare voorwaarden stellen om zo kunstmatig de mogelijkheden van 
+IT-apparaten te beperken.</p>
+
+<h2>Beperkingen voor alle toepassingen?</h2>
+
+<p>De UEFI "Veilig opstarten"-specificatie (en ook de specificatie van 
+"Betrouwbaar opstarten" ("Trusted Boot") van de Trusted Computing Groep gaan 
+over het primaire opstartproces tot aan de kernel van het besturingssysteem.
+Tegelijkertijd is de infrastructuur voor het controleren van handtekeningen op 
+alle computersoftware nu volwassen geworden en is zij werkend aanwezig in 
+verschillende besturingssystemen. Maar naast Windows 8 is zij alleen verplicht 
+gesteld voor drivers van Windows-apparaten.</p>
+
+<h2>Bedreiging voor computers met een algemeen doel</h2>
+
+<p>Het opstartproces verloopt vandaag de dag meestal onveilig. Als al deze 
+maatregelen alleen door eigenaren van apparaten zouden worden beheerd dan zouden 
+zij in hun beste belang kunnen zijn en hen helpen de veiligheid van het 
+opstartproces te verbeteren. Dit zou het geval zijn <strong>als</strong> de 
+veiligheidssubsystemen zoals gespecificeerd door het UEFI-forum en de Trusted 
+Computing Group (TCG) <strong>technisch</strong> <!-- they can
+guarantee a lot, but they have to do it technically --> garanderen dat de 
+eigenaren permanente, volledige en exclusieve controle hebben over de configuratie 
+en het management van deze veiligheidssubsystemen. Hierbij wordt het ook het 
+maken, opslaan, gebruiken en verwijderen van cryptografische sleutels, 
+certificaten en handtekeningen bedoeld. Maar op het moment dat andere entiteiten 
+dan de eigenaar van het apparaat deze veiligheidssubsystemen kan gebruiken, 
+stellen zij hem in staat om ongewenst of eenvoudigweg onvoorzien gebruik van deze 
+IT-apparaten te verhinderen.</p>
+
+<p>Dus wordt met de invoering van "Veilig opstarten" de beschikbaarheid van 
+computers voor werkelijk algemeen gebruik onder volledig beheer van de gebruiker 
+sterk verminderd. Apparaten die sterk beperkt zijn door maatregel als "Veilig 
+opstarten" onder beheer van bedrijven worden meestal toepassingen of computers 
+met een bepaald doel genoemd (bijvoorbeeld mediacenters, telefoons, boeklezers).
+ Dus tenminste een deel van de Windows 8-apparaten zullen meer een 
+Windows-toepassing zijn dan een aangepaste computer. Hoewel er een markt voor 
+zulke computertoepassingen kan zijn roept de FSFE krachtig op om zulke 
+IT-apparaten te benoemen als zijnde door een bedrijf beperkt te gebruiken modellen, 
+om zo een mogelijke koper juist te informeren.</p>
+
+<h2>Is het om deze beperkingen heen handelen een mogelijkheid?</h2>
+
+<p>Mensen met veel verstand van IT zouden kunnen denken dat ze zulke 
+maatregelen eerder hebben gezien en dat de meeste ervan zijn gekraakt. 
+Dit was het geval in verschillende modellen van PlayStation en Xbox 
+spelconsoles en in veel nieuwe mobiele telefoons. Maar de kwaliteit en 
+het bereik is deze keer breder:</p>
+
+<ul>
+
+  <li>UEFI "Veilig opstarten" is vooral gericht op traditionele PC's.</li>
+
+  <li>Steun door grote delen van de IT-industrie, zie bijvoorbeeld <a
+    href="http://www.uefi.org/about/">de leden van het UEFI-forum.</a></li>
+
+  <li>Ontwerp en specificatie zijn het resultaat van een gemeenschappelijke 
+inspanning van IT-ingenieurs van verschillende bedrijven. Er is al een 
+decennium ervaring met op handtekeningen gebaseerde opstartprocessen en dus 
+worden veel klassieke valkuilen voorkomen, bijvoorbeeld het gebrek aan juist 
+gespecificeerde en cryptografisch beveiligde firmware (UEFI) update-processen.</li>
+
+  <li>Gebruik van op hardware gebaseerde veiligheidssubsystemen, bijvoorbeeld 
+zoals gespecificeerd door de TCG (TPM of MTM en bijbehorende specificaties): 
+terwijl de UEFI-specificatie een specifieke uitvoering van "veilige opslag" 
+mandateert voor cryptografische sleutels, certificaten en handtekeningen, passen 
+de recente TCG-specificaties (sinds 2011) goed.</li>
+
+  <li>Uitvoeringen met beveiligingsfouten in "Veilig opstarten" worden verwacht 
+(zoals in alle software), maar omdat er commerciële competitie zal zijn tussen 
+UEFI-verkopers is het in hun beste belang om deze beveiligingsfouten op te lossen. 
+In het verleden voerden individuele fabrikanten door cryptografie beperkte 
+opstartprocessen voor hun eigen, specifieke apparaten in: Tivo Inc. voor hun 
+TIVO's, Microsoft voor verschillende generaties Xbox'en en Sony voor hun 
+PlayStations.</li>
+
+</ul>
+
+<p>Zelfs al zijn vergelijkbare gebruiksbeperkingen in het verleden 
+gekraakt, dan toont dit slechts aan dat hun technische uitvoeringen fouten 
+hebben bevat en openstonden voor malware, en niet de "veiligheid" bieden waar 
+zij voor zijn ontworpen. Hoewel dit ook voor enkele "Veilig opstarten"-
+uitvoeringen van toepassing zal zijn, kan het breken van zulke mechanismen 
+nooit een oplossing zijn voor vrijheidsbeperkingen of het gebrek aan 
+controle over een apparaat door de eigenaar.</p>
+
+<h2>Eisen van de FSFE</h2>
+
+<p>Voor het handhaven van duurzame groei in de ontwikkeling en het gebruik 
+van software is de grote beschikbaarheid van voor algemeen gebruik bedoelde 
+computers cruciaal.</p>
+
+<p>FSFE eist dat voordat een apparaat wordt gekocht, de kopers juist geïnformeerd 
+worden over de technische maatregelen die in deze machine zijn uitgevoerd en 
+over de specifieke gebruiksbeperkingen en hun gevolgen voor de eigenaar.</p>
+
+<p>Verder raadt de FSFE sterk aan om alleen IT-apparaten te kopen die hun 
+eigenaren de volledige, exclusieve en permanente controle bieden over 
+beveiligingssubsystemen (bijvoorbeeld op handtekening gebaseerde gebruiksbeperkingen) 
+om zo de de mogelijkheid open te houden om omstreden software 
+te installeren en tenslotte om de exclusieve controle over de eigen data te 
+behouden.</p>
+</div>
+<!--/e-content-->
+
+  </body>
+
+  <sidebar promo="our-work" />
+
+  <timestamp>$Datum: 2014-05-01 16:47:04 +0200 (Don, 01 Mei 2014) $ $Auteur: Matthias Kirschner$</timestamp>
+  <author id="kirschner" />
+  <date>
+    <original content="2012-06-01" />
+  </date>
+</html>

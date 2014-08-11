@@ -405,17 +405,16 @@
             <p>
               Make sure the encoding of the file is consistent with the content of
               the "encoding" attribute declared in the first line of the file. For
-              example, if your file is encoded as "iso-8859-1" (also known as
-              "latin-1" encoding), the first line of the file should read
+              example, if your file is encoded as "UTF-8" , the first line of the
+              file should read
             </p>
 
-            <pre class="file">&lt;?xml version="1.0" encoding="iso-8859-1" ?&gt;</pre>
+            <pre class="file">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;</pre>
 
             <p>
-              Another valid encoding is the unicode, or "UTF-8" encoding.  If you
-              want to change the encoding of a file, you can use the standard
+              If you want to change the encoding of a file, you can use the standard
               <em>iconv</em> utility, as in the following example (which converts a
-              file from the "latin1" to the "utf-8" encoding):
+              file from the "latin1" to the "UTF-8" encoding):
             </p>
 
             <pre class="term"><code>iconv -f LATIN1 -t UTF8 <em>inputfile</em> &gt; <em>outputfile</em></code></pre>

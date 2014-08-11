@@ -377,16 +377,14 @@ enable-auto-props = yes
         <p>
           Stellen Sie sicher, dass die Codierung der Datei konsistent ist und
           sie dem Inhalt des "encoding"-Attributs in der ersten Zeile
-          entspricht. Wenn Ihre Datei zum Beispiel als "iso-8859-1" (auch
-          bekannt als "latin-1"-Codierung) codiert ist, sollte in der ersten
-          Zeile der Datei stehen:
+          entspricht. Wenn Ihre Datei zum Beispiel als "UTF-8" codiert ist,
+          sollte in der ersten Zeile der Datei stehen:
 		  </p>
-          <p class="file">&lt;?xml version="1.0" encoding="iso-8859-1" ?&gt;</p>
+          <p class="file">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;</p>
 		  <p>
-          Eine weitere gültige Codierung ist die Unicode- oder
-          "UTF-8"-Codierung. Wenn Sie die Codierung einer Datei ändern wollen,
-          können Sie das Standardwerkzeug <em>iconv</em> wie in folgendem
-          Beispiel benutzen (hier wird eine Datei von der "latin1" auf "utf-8"
+          Wenn Sie die Codierung einer Datei ändern wollen, können Sie das
+          Standardwerkzeug <em>iconv</em> wie in folgendem Beispiel benutzen
+          (hier wird eine Datei von der "latin1" auf "UTF-8"
           umcodiert):
 		  </p>
           <p class="terminal">iconv -f LATIN1 -t UTF8 <em>inputfile</em> &gt; <em>outputfile</em></p>

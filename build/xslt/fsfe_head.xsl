@@ -8,16 +8,6 @@
     <xsl:value-of select="'normal'" /> <!-- can be either 'normal' or 'valentine' -->
   </xsl:variable>
 
-  <!-- HTML head -->
-  <!-- xsl:template match="head">
-    <head>
-      <xsl:call-template name="fsfe-head" />
-    </head>
-  </xsl:template -->
-  
-  
-  <!-- xsl:template name="fsfe-head" -->
-    
   <xsl:template match="head" name="fsfe-head">
     <xsl:element name="head">
     <!-- Don't let search engine robots index untranslated pages -->

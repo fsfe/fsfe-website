@@ -31,16 +31,6 @@
       <xsl:call-template name="fsfe_pageheader" />
       <xsl:call-template name="notifications" />
       <xsl:call-template name="fsfe_mainsection" />
-
-      <!--TODO nice to have a breadcrumb navigation: xsl:element name="nav">
-        <xsl:attribute name="id">breadcrumbs</xsl:attribute>
-        <a href="#"><i class="fa fa-home"></i> FSFE</a>
-        <a href="#">Work</a>
-        <a href="#">Open Standards</a>
-        <a href="#">Minimalgebot für…i <i class="fa fa-anchor"></i></a>
-      </xsl:element-->
-      <!--/nav#breadcrumbs-->
-
       <xsl:call-template name="fsfe_followupsection" />
 
       <xsl:element name="footer">

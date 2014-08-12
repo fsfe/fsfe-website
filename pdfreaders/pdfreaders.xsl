@@ -15,6 +15,7 @@
   <xsl:include href="../build/xslt/footer_legal.xsl" />
   <!--xsl:include href="../build/xslt/body_scripts.xsl" /-->
 
+  <xsl:include href="../tools/xsltsl/generate-id.xsl" />
   <xsl:include href="../tools/xsltsl/translations.xsl" />
 
       <!--xsl:call-template name="fsfe_pageclass" />

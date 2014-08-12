@@ -2,7 +2,7 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:import href="pdfreaders_head.xsl" />
-  <xsl:import href="../build/xslt/fsfe_headings.xsl" />
+  <!-- xsl:import href="../build/xslt/fsfe_headings.xsl" /-->
 
   <!--xsl:include href="../build/xslt/fsfe_pageclass.xsl" /-->
   <xsl:include href="../build/xslt/translation_list.xsl" />

@@ -37,7 +37,7 @@
   <xsl:template match="body">
      <xsl:call-template name="translation_list" />
      <!-- First, include what's in the source file -->
-     <xsl:apply-templates />
+     <!-- xsl:apply-templates / -->
 
      <!-- Show news except those in the future, but no newsletters -->
      <xsl:for-each select="/buildinfo/document/set/news">

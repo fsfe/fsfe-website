@@ -28,14 +28,28 @@
 
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
 
-  <!-- HTML head -->
-  <xsl:template match="head">
-    <xsl:call-template name="pdfreaders-head" />
+<xsl:template match="/">
+    <xsl:apply-templates select="buildinfo/document"/>
+  </xsl:template>
+
+  <!-- The actual HTML tree is in "buildinfo/document" -->
+  <xsl:template match="buildinfo/document">
+    <xsl:element name="html">
+      <xsl:attribute name="lang">
+        <xsl:value-of select="/buildinfo/@language"/>
+      </xsl:attribute>
+      <xsl:attribute name="class">
+        <xsl:value-of select="/buildinfo/@language" /> no-js
+      </xsl:attribute>
+  
+      <xsl:apply-templates select="head" />
+      <xsl:call-template name="pdfreaders-body" />
+    </xsl:element>
   </xsl:template>
   
   <!-- In /html/body node, append dynamic content -->
-  <xsl:template match="body">
-     <!-- xsl:call-template name="translation_list" / -->
+  <xsl:template match="body" name="pdfreaders-body">
+     <xsl:call-template name="translation_list" />
      <!-- First, include what's in the source file -->
      <!-- xsl:apply-templates / -->
 
@@ -81,7 +95,7 @@
        </xsl:element>
      </xsl:for-each>
 
-     <!--xsl:element name="footer">
+     <xsl:element name="footer">
        <xsl:attribute name="id">bottom</xsl:attribute>
 
        <xsl:call-template name="footer_sitenav" />
@@ -93,7 +107,7 @@
          <xsl:attribute name="id">sister-organisations</xsl:attribute>
          <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfnetwork'" /></xsl:call-template>
        </xsl:element>
-     </xsl:element -->
+     </xsl:element>
 
   </xsl:template>
 </xsl:stylesheet>

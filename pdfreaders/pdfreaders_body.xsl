@@ -28,9 +28,6 @@
         <xsl:call-template name="translation_list" />
       </xsl:element>
  
-      <!-- First, include what's in the source file -->
-      <xsl:apply-templates select="@*|node()"/>
- 
       <xsl:element name="section"> <xsl:attribute name="id">main</xsl:attribute>
         <xsl:for-each select="/buildinfo/document/set/news">
           <xsl:sort select="@priority" order="ascending" />

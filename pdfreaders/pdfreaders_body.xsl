@@ -24,7 +24,7 @@
 
   <xsl:template match="body" name="pdfreaders-body">
      <!-- First, include what's in the source file -->
-     <xsl:apply-templates />
+     <xsl:apply-templates select="@*|node()"/>
 
      <xsl:element name="header"> <xsl:attribute name="id">top</xsl:attribute>
        <xsl:call-template name="translation_list" />

@@ -7,7 +7,7 @@
   <!--xsl:include href="../build/xslt/fsfe_mainsection.xsl" /-->
   <!--xsl:include href="../build/xslt/fsfe_followupsection.xsl" /-->
   <!--xsl:include href="../build/xslt/body_scripts.xsl" /-->
-  <xsl:import href="../build/xslt/fsfe_headings.xsl" />
+  <!--xsl:import href="../build/xslt/fsfe_headings.xsl" /-->
   <xsl:include href="../build/xslt/translation_list.xsl" />
   <xsl:include href="../build/xslt/footer_sitenav.xsl" />
   <xsl:include href="../build/xslt/footer_sourcelink.xsl" />
@@ -24,7 +24,7 @@
 
   <xsl:template match="body" name="pdfreaders-body">
      <!-- First, include what's in the source file -->
-     <xsl:apply-templates />
+     <!--xsl:apply-templates /-->
 
      <xsl:element name="header"> <xsl:attribute name="class">top</xsl:attribute>
        <xsl:call-template name="translation_list" />

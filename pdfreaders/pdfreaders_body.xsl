@@ -26,11 +26,11 @@
      <!-- First, include what's in the source file -->
      <!--xsl:apply-templates /-->
 
-     <xsl:element name="header"> <xsl:attribute name="class">top</xsl:attribute>
+     <xsl:element name="header"> <xsl:attribute name="id">top</xsl:attribute>
        <xsl:call-template name="translation_list" />
      </xsl:element>
 
-     <xsl:element name="section"> <xsl:attribute name="class">main</xsl:attribute>
+     <xsl:element name="section"> <xsl:attribute name="id">main</xsl:attribute>
        <xsl:for-each select="/buildinfo/document/set/news">
          <xsl:sort select="@priority" order="ascending" />
 

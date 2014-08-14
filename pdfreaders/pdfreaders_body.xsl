@@ -22,13 +22,13 @@
       <xsl:call-template name="fsfe_mainsection" />
       <xsl:call-template name="fsfe_followupsection" /-->
 
-  <xsl:template match="body" name="pdfreaders-body">
-     <!-- First, include what's in the source file -->
-     <xsl:apply-templates select="@*|node()"/>
-
+  <xsl:template name="pdfreaders-body">
      <xsl:element name="header"> <xsl:attribute name="id">top</xsl:attribute>
        <xsl:call-template name="translation_list" />
      </xsl:element>
+
+     <!-- First, include what's in the source file -->
+     <xsl:apply-templates select="@*|node()"/>
 
      <xsl:element name="section"> <xsl:attribute name="id">main</xsl:attribute>
        <xsl:for-each select="/buildinfo/document/set/news">

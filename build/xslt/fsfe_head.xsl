@@ -153,7 +153,7 @@
          <link rel="stylesheet" media="all" href="/look/ie.min.css" type="text/css">
         <![endif]]]></xsl:comment>
     
-    <xsl:apply-templates select="@*|node()"/>
+    <!-- xsl:apply-templates select="@*|node()"/ -->
     </xsl:element>
   </xsl:template>
 

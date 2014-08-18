@@ -16,7 +16,7 @@
 
   <!-- HTML body -->
   <!--<xsl:template match="body">-->
-  <xsl:template name="fsfe-body">
+  <xsl:template name="page-body">
     <xsl:element name="body">
 
       <xsl:call-template name="fsfe_pageclass" />

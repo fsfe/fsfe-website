@@ -8,7 +8,7 @@
     <xsl:value-of select="'normal'" /> <!-- can be either 'normal' or 'valentine' -->
   </xsl:variable>
 
-  <xsl:template match="head" name="fsfe-head">
+  <xsl:template name="page-head">
     <xsl:element name="head">
     <!-- Don't let search engine robots index untranslated pages -->
     <xsl:element name="meta">

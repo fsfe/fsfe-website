@@ -8,7 +8,7 @@
     <xsl:value-of select="'normal'" /> <!-- can be either 'normal' or 'valentine' -->
   </xsl:variable>
 
-  <xsl:template name="page-head">
+  <xsl:template match="head" name="page-head">
     <xsl:element name="head">
     <!-- Don't let search engine robots index untranslated pages -->
     <xsl:element name="meta">
@@ -153,7 +153,7 @@
          <link rel="stylesheet" media="all" href="/look/ie.min.css" type="text/css">
         <![endif]]]></xsl:comment>
     
-    <!-- xsl:apply-templates select="@*|node()"/ -->
+    <xsl:apply-templates select="@*|node()"/>
     </xsl:element>
   </xsl:template>
 

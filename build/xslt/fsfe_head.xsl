@@ -9,8 +9,10 @@
   </xsl:variable>
 
   <xsl:template name="page-head">
-    <xsl:apply-templates select="@*|node()"/>
     <xsl:element name="head">
+
+    <xsl:apply-templates select="head" />
+
     <!-- Don't let search engine robots index untranslated pages -->
     <xsl:element name="meta">
       <xsl:attribute name="name">robots</xsl:attribute>

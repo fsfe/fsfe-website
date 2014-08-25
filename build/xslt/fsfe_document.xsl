@@ -19,7 +19,6 @@
   
       <xsl:call-template name="page-head" />
       <xsl:call-template name="page-body" />
-      <!-- xsl:apply-templates select="node()"/ -->
     </xsl:element>
   </xsl:template>
 

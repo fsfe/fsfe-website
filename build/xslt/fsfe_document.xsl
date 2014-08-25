@@ -17,7 +17,7 @@
         <xsl:value-of select="/buildinfo/@language" /> no-js
       </xsl:attribute>
   
-      <!-- xsl:apply-templates select="node()"/ -->
+      <xsl:apply-templates select="node()"/>
       <xsl:call-template name="page-head" />
       <xsl:call-template name="page-body" />
     </xsl:element>

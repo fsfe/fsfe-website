@@ -8,11 +8,7 @@
     <xsl:value-of select="'normal'" /> <!-- can be either 'normal' or 'valentine' -->
   </xsl:variable>
 
-  <xsl:template name="page-head">
-    <xsl:element name="head">
-
-    <xsl:apply-templates select="head" />
-
+  <xsl:template name="page-head"><xsl:element name="head">
     <!-- Don't let search engine robots index untranslated pages -->
     <xsl:element name="meta">
       <xsl:attribute name="name">robots</xsl:attribute>
@@ -156,8 +152,9 @@
          <link rel="stylesheet" media="all" href="/look/ie.min.css" type="text/css">
         <![endif]]]></xsl:comment>
     
-    </xsl:element>
-  </xsl:template>
+    <!-- Copy head element from the xhtml source file (and possibly from external xsl rules) -->
+    <xsl:apply-templates select="head" />
+  </xsl:element></xsl:template>
 
 </xsl:stylesheet>
 

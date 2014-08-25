@@ -18,7 +18,7 @@
       </xsl:attribute>
   
       <!-- xsl:apply-templates select="node()"/ -->
-      <xsl:apply-templates select="head" />
+      <xsl:call-template name="page-head" />
       <xsl:call-template name="page-body" />
     </xsl:element>
   </xsl:template>

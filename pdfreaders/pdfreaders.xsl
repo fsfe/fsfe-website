@@ -5,7 +5,7 @@
   <xsl:import href="pdfreaders_body.xsl" />
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
 
-  <xsl:include href="../build/xslt/fsfe_document.xsl">
+  <xsl:include href="../build/xslt/fsfe_document.xsl" />
 
   <xsl:include href="../build/xslt/fsfe_nolocal.xsl" />
 </xsl:stylesheet>

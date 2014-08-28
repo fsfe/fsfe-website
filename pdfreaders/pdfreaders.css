@@ -81,7 +81,8 @@ body > * {
 }
 
 .reader .description {
-  height: 1.5em;
+  float: left;
+  max-height: 1.5em;
   overflow: hidden;
   border-width: 1px;
   border-color: #888;
@@ -89,11 +90,9 @@ body > * {
   border-radius: .25em;
 }
 .reader .description:hover{
-  border-width: 1px;
-  border-color: #888;
   border-style: none solid solid solid;
-  border-radius: .25em;
   background-color: #FFF;
+  max-height: 15em;
 }
 
 #bottom hr {

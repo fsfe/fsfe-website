@@ -42,12 +42,16 @@ body > * {
 }
 
 #main .reader {
+  box-sizing: border-box;
   display: inline-block;
   float: left;
-  width: 29%; height: 12em;
+  width: 31%;
+  height: 12em;
   overflow: visible;
-  margin: 2em 1%;
+
+  margin: .5em 1%;
   padding: 1ex 1%;
+
   border-style: solid;
   border-width: 2px;
   border-color: #888;
@@ -60,12 +64,22 @@ body > * {
 }
 .reader .label {
   display: inline-block;
+  float: left;
+  clear: left;
   font-weight: bold;
-  margin-top: 1em;
+}
+.reader .info {
+  float: left;
+  clear: left;
+  display: inline-block;
+}
+.reader .info.homepage {
+  margin-bottom: 1em;
 }
 .reader .info.platform {
   margin: 0 .25em;
 }
+
 .reader .description {
   height: 1.5em;
   overflow: hidden;
@@ -74,7 +88,7 @@ body > * {
   border-style: solid solid none solid;
   border-radius: .25em;
 }
-.reader .description :hover{
+.reader .description:hover{
   border-width: 1px;
   border-color: #888;
   border-style: none solid solid solid;

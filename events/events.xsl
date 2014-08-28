@@ -17,7 +17,7 @@
   <!-- we need to include some things for event maps -->
   <xsl:template match="head">
     <head>
-      <xsl:call-template name="fsfe-head" />
+      <xsl:call-template name="page-head" />
       <xsl:element name="link">
         <xsl:attribute name="rel">stylesheet</xsl:attribute>
         <xsl:attribute name="href">/look/leaflet.css</xsl:attribute>

@@ -3,11 +3,11 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <!--xsl:include href="../build/xslt/fsfe_pageclass.xsl" /-->
   <!--xsl:include href="../build/xslt/fsfe_pageheader.xsl" /-->
-  <!--xsl:include href="../build/xslt/notifications.xsl" /-->
+  <xsl:include href="../build/xslt/notifications.xsl" />
   <!--xsl:include href="../build/xslt/fsfe_mainsection.xsl" /-->
   <!--xsl:include href="../build/xslt/fsfe_followupsection.xsl" /-->
   <!--xsl:include href="../build/xslt/body_scripts.xsl" /-->
-  <!--xsl:import href="../build/xslt/fsfe_headings.xsl" /-->
+  <xsl:import href="../build/xslt/fsfe_headings.xsl" />
   <xsl:include href="../build/xslt/translation_list.xsl" />
   <xsl:include href="../build/xslt/footer_sitenav.xsl" />
   <xsl:include href="../build/xslt/footer_sourcelink.xsl" />
@@ -18,17 +18,21 @@
 
       <!--xsl:call-template name="fsfe_pageclass" />
       <xsl:call-template name="fsfe_pageheader" />
-      <xsl:call-template name="notifications" />
       <xsl:call-template name="fsfe_mainsection" />
       <xsl:call-template name="fsfe_followupsection" /-->
 
-  <xsl:template name="pdfreaders-body">
+  <xsl:template name="page-body">
     <xsl:element name="body">
       <xsl:element name="header"> <xsl:attribute name="id">top</xsl:attribute>
         <xsl:call-template name="translation_list" />
       </xsl:element>
  
+      <xsl:call-template name="notifications" />
+
       <xsl:element name="section"> <xsl:attribute name="id">main</xsl:attribute>
+
+        <xsl:apply-templates select="body" />
+
         <xsl:for-each select="/buildinfo/document/set/news">
           <xsl:sort select="@priority" order="ascending" />
  

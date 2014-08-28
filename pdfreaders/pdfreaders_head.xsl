@@ -3,7 +3,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:output method="xml" encoding="UTF-8" indent="yes" />
 
-  <xsl:template name="pdfreaders-head">
+  <xsl:template name="page-head">
     <xsl:element name="head">
       <!-- Don't let search engine robots index untranslated pages -->
       <xsl:element name="meta">
@@ -44,7 +44,7 @@
         </xsl:element>
       </xsl:for-each>
 
-      <xsl:apply-templates select="@*|node()"/>
+      <xsl:apply-templates select="head"/>
     </xsl:element>
   </xsl:template>
 

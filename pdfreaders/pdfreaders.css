@@ -44,12 +44,14 @@ body > * {
 #main .reader {
   display: inline-block;
   float: left;
-  width: 29%; height: 20em;
-  overflow: none;
+  width: 29%; height: 12em;
+  overflow: visible;
   margin: 2em 1%;
   padding: 1ex 1%;
   border-style: solid;
   border-width: 2px;
+  border-color: #888;
+  border-radius: .25em;
 }
 .reader .logo {
   float: left;
@@ -61,8 +63,23 @@ body > * {
   font-weight: bold;
   margin-top: 1em;
 }
-.reader .platform {
-  margin: 0 .5em;
+.reader .info.platform {
+  margin: 0 .25em;
+}
+.reader .description {
+  height: 1.5em;
+  overflow: hidden;
+  border-width: 1px;
+  border-color: #888;
+  border-style: solid solid none solid;
+  border-radius: .25em;
+}
+.reader .description :hover{
+  border-width: 1px;
+  border-color: #888;
+  border-style: none solid solid solid;
+  border-radius: .25em;
+  background-color: #FFF;
 }
 
 #bottom hr {

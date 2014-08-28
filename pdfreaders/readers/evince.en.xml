@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<readerset> <reader priority="1">
+<readers> <reader priority="1">
   <name>Evince</name>
   <logo>evince.png</logo>
   <homepage>http://projects.gnome.org/evince/</homepage>
@@ -15,4 +15,4 @@
   <description>
     The document viewer of the Gnome project can display many document formats beside PDF.
   </description>
-</reader> </readerset>
+</reader> </readers>

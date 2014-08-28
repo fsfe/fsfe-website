@@ -33,7 +33,7 @@
 
         <xsl:apply-templates select="body" />
 
-        <xsl:for-each select="/buildinfo/document/set/news | /buildinfo/document/set/readers | /buildinfo/document/set/reader">
+        <xsl:for-each select="/buildinfo/document/set/reader">
           <xsl:sort select="@priority" order="ascending" />
  
           <xsl:element name="div">
@@ -47,10 +47,6 @@
  
             <xsl:element name="h1">
               <xsl:value-of select="name" />
-            </xsl:element>
- 
-            <xsl:element name="p"> <xsl:attribute name="class">description</xsl:attribute>
-              <xsl:apply-templates select="description/node()" />
             </xsl:element>
  
             <xsl:element name="span"> <xsl:attribute name="class">label homepage</xsl:attribute>
@@ -72,6 +68,10 @@
                 <xsl:value-of select="name" />
               </xsl:element>
             </xsl:for-each>
+ 
+            <xsl:element name="p"> <xsl:attribute name="class">description</xsl:attribute>
+              <xsl:apply-templates select="description/node()" />
+            </xsl:element>
  
           </xsl:element>
         </xsl:for-each>

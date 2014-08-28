@@ -33,7 +33,7 @@
 
         <xsl:apply-templates select="body" />
 
-        <xsl:for-each select="/buildinfo/document/set/news">
+        <xsl:for-each select="/buildinfo/document/set/news | /buildinfo/document/set/readers | /buildinfo/document/set/reader">
           <xsl:sort select="@priority" order="ascending" />
  
           <xsl:element name="div">

@@ -44,11 +44,25 @@ body > * {
 #main .reader {
   display: inline-block;
   float: left;
-  width: 29%;
+  width: 29%; height: 20em;
+  overflow: none;
   margin: 2em 1%;
   padding: 1ex 1%;
   border-style: solid;
   border-width: 2px;
+}
+.reader .logo {
+  float: left;
+  height: 3em;
+  margin-right: 1.5em;
+}
+.reader .label {
+  display: inline-block;
+  font-weight: bold;
+  margin-top: 1em;
+}
+.reader .platform {
+  margin: 0 .5em;
 }
 
 #bottom hr {

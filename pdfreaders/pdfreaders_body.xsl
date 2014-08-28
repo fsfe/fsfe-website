@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <!-- xsl:import href="../build/xslt/fsfe_headings.xsl" / -->
   <!--xsl:include href="../build/xslt/fsfe_pageclass.xsl" /-->
   <!--xsl:include href="../build/xslt/fsfe_pageheader.xsl" /-->
   <xsl:include href="../build/xslt/notifications.xsl" />
   <!--xsl:include href="../build/xslt/fsfe_mainsection.xsl" /-->
   <!--xsl:include href="../build/xslt/fsfe_followupsection.xsl" /-->
   <!--xsl:include href="../build/xslt/body_scripts.xsl" /-->
-  <xsl:import href="../build/xslt/fsfe_headings.xsl" />
   <xsl:include href="../build/xslt/translation_list.xsl" />
   <xsl:include href="../build/xslt/footer_sitenav.xsl" />
   <xsl:include href="../build/xslt/footer_sourcelink.xsl" />

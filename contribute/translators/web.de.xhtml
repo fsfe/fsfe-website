@@ -3,18 +3,71 @@
 <html>
   <head>
     <title>
-      FSFE - Mitarbeiten - Informationen für Übersetzer - Webseiten
+      FSFE - Machen Sie mit - Informationen für Übersetzer - Webseiten
     </title>
   </head>
 
   <body>
     <h1>Webseiten übersetzen</h1>
 
-    <h2>Verstehen, wie die Webseiten generiert werden</h2>
+	<h2>Kurze Schritt-für-Schritt-Anleitung</h2>    
+
+<p>Diese kleine Anleitung sollte nur dann Verwendung finden, wenn Sie bereits 
+den Ablauf der Übersetzung kennen: Wie die Seiten erzeugt werden, welche 
+Übersetzungen fehlen oder welche veraltet sind und so weiter.</p>
+
+<p>In diesem Beispiel wollen wir die Seite 
+https://fsfe.org/contribute/spreadtheword.en.html ins Deutsche übersetzen.</p>
+
+<ol>
+	<li>Scrollen Sie ans Ende der zu übersetzenden Seite und suchen Sie "Source 
+	code" bzw. "Quelltext" in der Fußzeile.</li>
+
+<!-- <img src="/graphics/translators-shortguide1.png" alt="find source code"/> -->
+
+	<li>Laden Sie die .xhtml Datei herunter (in diesem Fall 
+	https://fsfe.org/source/contribute/spreadtheword.en.xhtml).</li>
+
+	<li>Informieren Sie per E-Mail translators@fsfeurope.org (Sie sollten bereits in dieser Mailing-Liste eingeschrieben sein) über Ihre Übersetzungsabsicht.<br />
+Bitte legen Sie für jede neue Seite einen neuen Thread an und fügen Sie Ihr <a 
+href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">2-stelliges 
+Länder-Kürzel</a> im Betreff hinzu (in diesem Beispiel "[DE] Übersetzung 
+spreadtheword.en.xhtml").</li>
+
+<!-- <img src="/graphics/translators-shortguide3.png" alt="write an email"/> -->
+
+	<li>Öffen Sie die heruntergeladene Datei mit einem Texteditor ihrer Wahl 
+	(gedit, Kate, Mousepad etc. bei freien Betriebsystemen, Notepad++ unter 
+	Windows).</li>
+
+	<li>Übersetzen Sie den englischen Text in Ihre Sprache. HTML-Tags bleiben. 
+	Beispiel:<br />
+<em>&lt;p&gt;Hi there, please visit &lt;a href="https://fsfe.org"&gt;our 
+website&lt;/a&gt;.&lt;/p&gt;</em> sollte werden:<br />
+<em>&lt;p&gt;Hallo, bitte besuchen Sie &lt;a href="https://fsfe.org"&gt;unsere 
+Webseite&lt;/a&gt;.&lt;/p&gt;</em><br />
+Bitte ändern Sie das <a 
+href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">2-stellige 
+Länder-Kürzel</a> der übersetzten Datei von "en" in das Ihrer Sprache (als 
+Beispiel Deutsch = "spreadtheword.de.xhtml").</li>
+
+<!-- <img src="/graphics/translators-shortguide5.png" alt="translate the text"/> -->
+
+	<li>Bitte antworten Sie danach auf Ihren ursprünglichen Beitrag in der 
+	translators@fsfeurope.org-Liste und bitten Sie andere Übersetzer um das 
+	Gegenlesen Ihrer Datei. Wenn jeder seine Zustimmung signalisiert, wird Ihre 
+	Übersetzung von anderen auf der Mailing-Liste auf die Webseite 
+	hochgeladen.</li>
+
+<!-- <img src="/graphics/translators-shortguide6.png" alt="ask for proofreading"/> -->
+
+</ol>
+
+	<h2>Ausführliche Anleitung: Verstehen, wie die Webseiten generiert werden</h2>
 
     <p>
       Die Webseiten von fsfe.org werden als Menge von XML Dateien
-      gewartet. Der Webserver generiert jede zehn Minuten HTML Seiten aus
+      gewartet. Der Webserver generiert alle zehn Minuten HTML Seiten aus
       diesen XML-Dateien. Deshalb werden alle Änderungen in den XML Dateien
       vorgenommen und niemals direkt in den HTML Dateien.  
     </p>
@@ -92,12 +145,12 @@
       Wenn Sie eine Seite in Ihrem Webbrowser geöffnet haben, deren Übersetzung
       veraltet ist (angezeigt durch eine Notiz oben auf der Seite), dann
       scrollen Sie bis zum Ende der Seiten, klicken Sie auf
-      den <strong>„Source code”</strong>-Link und speichern Sie die Datei, die Sie
+      den <strong>„Source code / Quellcode”</strong>-Link und speichern Sie die Datei, die Sie
       dort bekommen. Diese Datei ist die (veraltete) übersetzte Version. Als
       nächstes benutzen Sie den
       <strong>English</strong>-Link oben auf der Seite, um zur englischen
       Version zu wechseln und klicken Sie dort ebenfalls auf
-      den <strong>„Source code”</strong>-Link. Die Datei, die Sie dort bekommen ist
+      den <strong>„Source code / Quellcode”</strong>-Link. Die Datei, die Sie dort bekommen ist
       die (aktualisierte) englische Version. Bitte beachten Sie, dass alles
       innerhalb der "&lt;...&gt;" Markierungen nicht übersetzt werden darf.
     </p>

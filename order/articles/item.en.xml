@@ -13,17 +13,19 @@
       small="/order/articles/images/thumbnails/tshirt-dfd-purple-front.jpg"
       large="/order/articles/images/tshirt-dfd-purple-front.jpg"/>
   </item>
+-->
 
   <item type="tshirt" id="tshirt-dfd-black" price="20.00" date="2014-03-18">
     <available size="M"/>
     <available size="S"/>
     <available size="L"/>
+<!--
     <available size="XL"/>
+-->
  	<image
       small="/order/articles/images/thumbnails/tshirt-dfd-black-front.jpg"
       large="/order/articles/images/tshirt-dfd-black-front.jpg"/>
   </item>
--->
 
   <item type="tshirt" id="tshirt-ilovefs-blue" price="20.00" date="2012-10-07">
     <available size="S"/>

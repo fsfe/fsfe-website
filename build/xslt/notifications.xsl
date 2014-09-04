@@ -22,7 +22,7 @@
             web team</a>.
           </p>
         </div>
-      </div>-->
+      </div> -->
   
       <!-- Outdated note -->
       <xsl:if test="/buildinfo/@outdated='yes'">
@@ -86,7 +86,7 @@
               </xsl:call-template>
             </xsl:element>
           </xsl:element>
-        </xsl:if><!-- End Info Box -->
+        </xsl:if>
 
         <!-- Add project completed message -->
         <xsl:if test = "/buildinfo/document/head/meta[@name='project-complete' and @content='true']">
@@ -106,11 +106,11 @@
             </xsl:element>
           </xsl:element>
         </xsl:if>
-      </xsl:element>
+      </xsl:element><!-- End Info Box -->
                                                                                               
       <!-- Fundraising box
-        <xsl:element name="div">
-      <xsl:attribute name="id">fundraising</xsl:attribute>
+      <xsl:element name="div">
+        <xsl:attribute name="id">fundraising</xsl:attribute>
         <xsl:element name="h2">
           <xsl:apply-templates select="/buildinfo/fundraising/call1/node()"/>
         </xsl:element>
@@ -150,7 +150,7 @@
             <xsl:text>€ 100 000</xsl:text>
           </xsl:element>
         </xsl:if> c
-      </xsl:element>-->
+      </xsl:element> -->
       <!-- End Fundraising box -->
     </xsl:element>
   </xsl:template>

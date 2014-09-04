@@ -1,21 +1,18 @@
-body {
+* {
+  box-sizing: border-box;
+}
+header#top, section#main {
   width: 70%;
   margin: 0 15%;
   border-style: none solid;
   border-width: 4px;
   border-color: #693;
 }
-
-body > * {
-  margin: 1em 1%;
-  box-sizing: border-box;
+section#main {
+  padding: 1em;
 }
-
-#translations > a.close {
-  display: none;
-}
-#translations ul li, #translations ul {
-  display: inline;
+footer#bottom {
+  border-top: solid 1px #888;
 }
 
 header {
@@ -24,39 +21,46 @@ header {
   width: 100%;
   margin: 0 0 3em 0;
 }
-header #logo {
+#logo { float: left; }
+#fsfe-logo { float: right; }
+#logo, #fsfe-logo {
+  padding: 1em;
+  width: 20%;
+}
+#logo img, #fsfe-logo img {
+  width: 100%;
+}
+#translations {
   float: left;
-  margin: 0 15px 15px 0;
-}
-header #fsfe-logo {
-  float: right;
-}
-header #translations {
+  width: 60%;
+  padding: 2em;
   font-size: .75em;
-  margin: 0 auto 10px auto;
   text-align: center;
 }
-header #translations * {
+#translations > a.close {
+  display: none;
+}
+#translations * {
   display: inline;
 }
-header #menu {
+#menu {
   clear: both;
 }
-header #menu ul {
+#menu ul {
   margin: auto;
   text-align: center;
   width: 80%;
   border-top: 3px solid #693;
   border-bottom: 3px solid #693;
 }
-header #menu ul li {
+#menu ul li {
   display: inline;
   padding: 2px 10px;
   margin-right: 6px;
   position: relative;
   left: -20px
 }
-header #menu ul li a {
+#menu ul li a {
   text-decoration: none;
   font-weight: bold;
   color: #693;
@@ -69,10 +73,7 @@ header #menu ul li a {
 
 #main .reader {
   display: inline-block;
-  float: left;
   width: 31%;
-  height: 12em;
-  overflow: visible;
 
   margin: .5em 1%;
   padding: 1ex 1%;
@@ -92,6 +93,7 @@ header #menu ul li a {
   float: left;
   clear: left;
   font-weight: bold;
+  margin-right: 1ex;
 }
 .reader .info {
   float: left;
@@ -103,20 +105,8 @@ header #menu ul li a {
 .reader .info.platform {
   margin: 0 .25em;
 }
-
 .reader .description {
   float: left;
-  max-height: 1.5em;
-  overflow: hidden;
-  border-width: 1px;
-  border-color: #888;
-  border-style: solid solid none solid;
-  border-radius: .25em;
-}
-.reader .description:hover{
-  border-style: none solid solid solid;
-  background-color: #FFF;
-  max-height: 15em;
 }
 
 #bottom hr {

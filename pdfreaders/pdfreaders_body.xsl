@@ -86,7 +86,7 @@
 
       <xsl:element name="section"> <xsl:attribute name="id">main</xsl:attribute>
 
-        <xsl:apply-templates select="body" />
+        <xsl:apply-templates select="body/node()" />
 
         <xsl:for-each select="/buildinfo/document/set/reader">
           <xsl:sort select="@priority" order="ascending" />

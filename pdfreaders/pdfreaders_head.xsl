@@ -44,7 +44,7 @@
         </xsl:element>
       </xsl:for-each>
 
-      <xsl:apply-templates select="head"/>
+      <xsl:apply-templates select="head/node()"/>
     </xsl:element>
   </xsl:template>
 

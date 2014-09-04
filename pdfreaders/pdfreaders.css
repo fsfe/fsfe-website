@@ -71,7 +71,7 @@ header {
   clear: both;
 }
 
-#main .reader {
+#main .readerlist .reader {
   display: inline-block;
   width: 23%;
 
@@ -83,7 +83,7 @@ header {
   border-color: #888;
   border-radius: .25em;
 }
-#main #readers .reader:nth-child(-n+3) {
+#main .readerlist .reader:nth-child(-n+3) {
   width: 31%;
 }
 .reader .logo {

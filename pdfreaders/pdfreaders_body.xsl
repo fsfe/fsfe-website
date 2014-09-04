@@ -23,8 +23,63 @@
 
   <xsl:template name="page-body">
     <xsl:element name="body">
-      <xsl:element name="header"> <xsl:attribute name="id">top</xsl:attribute>
+      <xsl:element name="header">
+        <xsl:attribute name="id">top</xsl:attribute>
+
+        <xsl:element name="div">
+          <xsl:attribute name="id">logo</xsl:attribute>
+          <xsl:element name="a">
+            <xsl:attribute name="href">http://pdfreaders.org</xsl:attribute>
+            <xsl:element name="img">
+              <xsl:attribute name="src">graphics/pdfreaders-logo.png</xsl:attribute>
+              <xsl:attribute name="alt">PDFreaders.org</xsl:attribute>
+            </xsl:element>
+          </xsl:element>
+        </xsl:element>
+
+        <xsl:element name="div">
+          <xsl:attribute name="id">fsfe-logo</xsl:attribute>
+          <xsl:element name="a">
+            <xsl:attribute name="href">http://www.fsfe.org</xsl:attribute>
+            <xsl:element name="img">
+              <xsl:attribute name="src">/graphics/logo_transparent.svg</xsl:attribute>
+              <xsl:attribute name="alt">FSFE.org</xsl:attribute>
+            </xsl:element>
+          </xsl:element>
+        </xsl:element>
+
         <xsl:call-template name="translation_list" />
+
+        <xsl:element name="div">
+          <xsl:attribute name="id">menu</xsl:attribute>
+          <xsl:element name="ul">
+            <xsl:element name="li">
+              <xsl:element name="a">
+                <xsl:attribute name="href">pdfreaders.html</xsl:attribute>
+		The Readers
+              </xsl:element>
+            </xsl:element>
+            <xsl:element name="li">
+              <xsl:element name="a">
+                <xsl:attribute name="href">graphics.html</xsl:attribute>
+                Graphics
+              </xsl:element>
+            </xsl:element>
+            <xsl:element name="li">
+              <xsl:element name="a">
+                <xsl:attribute name="href">about.html</xsl:attribute>
+                About
+              </xsl:element>
+            </xsl:element>
+            <xsl:element name="li">
+              <xsl:element name="a">
+                <xsl:attribute name="href">openstandards.html</xsl:attribute>
+                Open Standards
+              </xsl:element>
+            </xsl:element>
+          </xsl:element>
+        </xsl:element>
+
       </xsl:element>
  
       <xsl:call-template name="notifications" />

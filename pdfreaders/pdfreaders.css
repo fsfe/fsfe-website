@@ -8,6 +8,7 @@ body {
 
 body > * {
   margin: 1em 1%;
+  box-sizing: border-box;
 }
 
 #translations > a.close {
@@ -17,23 +18,48 @@ body > * {
   display: inline;
 }
 
-#top, #top > * {
-  display: inline-block;
-  clear: none;
+header {
+  display: block;
+  clear: both;
+  width: 100%;
+  margin: 0 0 3em 0;
 }
-#top #masthead {
+header #logo {
   float: left;
-  width: 20%;
+  margin: 0 15px 15px 0;
 }
-#top #masthead #logo {
-  background-image: url("graphics/pdfreaders-logo.png");
-  background-repeat: no-repeat;
-  min-width: 103px;
-  min-height: 158px;
-}
-#top #menu {
+header #fsfe-logo {
   float: right;
-  width: 70%;
+}
+header #translations {
+  font-size: .75em;
+  margin: 0 auto 10px auto;
+  text-align: center;
+}
+header #translations * {
+  display: inline;
+}
+header #menu {
+  clear: both;
+}
+header #menu ul {
+  margin: auto;
+  text-align: center;
+  width: 80%;
+  border-top: 3px solid #693;
+  border-bottom: 3px solid #693;
+}
+header #menu ul li {
+  display: inline;
+  padding: 2px 10px;
+  margin-right: 6px;
+  position: relative;
+  left: -20px
+}
+header #menu ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #693;
 }
 
 #main, #followup, #bottom, #source, #legal-info, #sister-organisations {
@@ -42,7 +68,6 @@ body > * {
 }
 
 #main .reader {
-  box-sizing: border-box;
   display: inline-block;
   float: left;
   width: 31%;

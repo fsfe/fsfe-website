@@ -27,7 +27,7 @@
       <!-- Outdated note -->
       <xsl:if test="/buildinfo/@outdated='yes'">
         <xsl:element name="div">
-      <xsl:attribute name="class">alert warning red</xsl:attribute>
+          <xsl:attribute name="class">alert warning red</xsl:attribute>
           <xsl:element name="a">
             <xsl:attribute name="class">close</xsl:attribute>
             <xsl:attribute name="data-dismiss">alert</xsl:attribute>
@@ -35,8 +35,8 @@
             <xsl:attribute name="aria-hidden">true</xsl:attribute>
             ×
           </xsl:element>
-            <xsl:element name="p">
-      <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'outdated-1'" /></xsl:call-template>
+          <xsl:element name="p">
+            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'outdated-1'" /></xsl:call-template>
             <xsl:element name="a">
               <xsl:attribute name="href">
                 <xsl:value-of select="/buildinfo/@filename"/>
@@ -44,15 +44,15 @@
               </xsl:attribute>
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'translator3b'" /></xsl:call-template>
             </xsl:element>.
-      <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'outdated-2'" /></xsl:call-template>
+            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'outdated-2'" /></xsl:call-template>
+          </xsl:element>
         </xsl:element>
-        </xsl:element>
-      </xsl:if>
+      </xsl:if> <!-- End Outdated note -->
   
       <!-- Missing translation note -->
       <xsl:if test="/buildinfo/@language!=/buildinfo/document/@language">
         <xsl:element name="div">
-      <xsl:attribute name="class">alert warning red</xsl:attribute>
+          <xsl:attribute name="class">alert warning red</xsl:attribute>
           <xsl:element name="a">
             <xsl:attribute name="class">close</xsl:attribute>
             <xsl:attribute name="data-dismiss">alert</xsl:attribute>
@@ -61,49 +61,50 @@
             ×
           </xsl:element>
             <xsl:element name="p">
-      <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'notranslation'" /></xsl:call-template>
+            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'notranslation'" /></xsl:call-template>
+          </xsl:element>
         </xsl:element>
-        </xsl:element>
-      </xsl:if>
+      </xsl:if> <!-- End Missing translation note -->
   
       <!-- Info box -->
       <xsl:element name="div">
         <xsl:attribute name="id">infobox</xsl:attribute>
-        <!-- Add under construction message -->
         <xsl:if test = "/buildinfo/document/head/meta[@name='under-construction' and @content='true']">
+          <!-- Add under construction message -->
           <xsl:element name="div">
             <xsl:attribute name="class">alert warning yellow</xsl:attribute>
-          <xsl:element name="a">
-            <xsl:attribute name="class">close</xsl:attribute>
-            <xsl:attribute name="data-dismiss">alert</xsl:attribute>
-            <xsl:attribute name="href">#</xsl:attribute>
-            <xsl:attribute name="aria-hidden">true</xsl:attribute>
-            ×
-          </xsl:element>
+            <xsl:element name="a">
+              <xsl:attribute name="class">close</xsl:attribute>
+              <xsl:attribute name="data-dismiss">alert</xsl:attribute>
+              <xsl:attribute name="href">#</xsl:attribute>
+              <xsl:attribute name="aria-hidden">true</xsl:attribute>
+              ×
+            </xsl:element>
             <xsl:element name="p">
-            <xsl:call-template name="fsfe-gettext">
-              <xsl:with-param name="id" select="'under-construction'" />
-            </xsl:call-template>
+              <xsl:call-template name="fsfe-gettext">
+                <xsl:with-param name="id" select="'under-construction'" />
+              </xsl:call-template>
+            </xsl:element>
           </xsl:element>
-        </xsl:element>
-        </xsl:if>
+        </xsl:if><!-- End Info Box -->
+
         <!-- Add project completed message -->
         <xsl:if test = "/buildinfo/document/head/meta[@name='project-complete' and @content='true']">
           <xsl:element name="div">
             <xsl:attribute name="class">alert warning green</xsl:attribute>
-          <xsl:element name="a">
-            <xsl:attribute name="class">close</xsl:attribute>
-            <xsl:attribute name="data-dismiss">alert</xsl:attribute>
-            <xsl:attribute name="href">#</xsl:attribute>
-            <xsl:attribute name="aria-hidden">true</xsl:attribute>
-            ×
-          </xsl:element>
+            <xsl:element name="a">
+              <xsl:attribute name="class">close</xsl:attribute>
+              <xsl:attribute name="data-dismiss">alert</xsl:attribute>
+              <xsl:attribute name="href">#</xsl:attribute>
+              <xsl:attribute name="aria-hidden">true</xsl:attribute>
+              ×
+            </xsl:element>
             <xsl:element name="p">
-            <xsl:call-template name="fsfe-gettext">
-              <xsl:with-param name="id" select="'project-complete'" />
-            </xsl:call-template>
+              <xsl:call-template name="fsfe-gettext">
+                <xsl:with-param name="id" select="'project-complete'" />
+              </xsl:call-template>
+            </xsl:element>
           </xsl:element>
-        </xsl:element>
         </xsl:if>
       </xsl:element>
                                                                                               

@@ -10,7 +10,92 @@
   <body>
     <h1>Webseiten übersetzen</h1>
 
-    <h2>Verstehen, wie die Webseiten generiert werden</h2>
+	<h2>Kurze Schritt-für-Schritt-Anleitung</h2>
+
+	<p>
+		Diese kleine Anleitung sollte nur benutzt werden, wenn Sie bereits mit 
+		dem Hintergrund von Übersetzungen bei uns vertraut sind: Wie unsere 
+		Seiten generiert werden, wie man herausfindet, welche Übersetzung 
+		fehlen oder veraltet sind und so weiter.
+	</p>
+
+	<p>
+		In diesem Beispiel wollen wir 
+		https://fsfe.org/contribute/spreadtheword.en.html ins Spanische 
+		übersetzen. Bitte klicken Sie auf die Bilder, um sie größer 
+		darzustellen.
+	</p>
+
+	<ol>
+
+	<li>
+		<div style="max-width: 100px; width: 100px" class="captioned left">
+			<a href="/graphics/translators-shortguide1.png"><img width="100%" alt="Suchen Sie den Quellcode" src="/graphics/translators-shortguide1.png" /></a>
+		</div>
+		Scrollen Sie ans untere Ende der Seite, die sie übersetzen möchten, und 
+		suchen Sie dort nach "Quellcode".
+	</li>
+	<p><br class="clear" /></p>
+
+	<li>
+		Laden Sie die .xhtml-Datei mit "Speichern unter..." in Ihrem Browser 
+		oder mit anderen Programmen herunter (in diesem Beispiel 
+		https://fsfe.org/source/contribute/spreadtheword.en.xhtml).
+	</li>
+
+	<li>
+		<div style="max-width: 100px; width: 100px" class="captioned left">
+			<a href="/graphics/translators-shortguide3.png"><img width="100%" alt="Schreiben Sie eine E-Mail an die Übersetzerliste" src="/graphics/translators-shortguide3.png" /></a>
+		</div>
+		Schreiben Sie eine kurze E-Mail an translators@fsfeurope.org (Sie 
+		sollten bereits Mitglied auf dieser Mailing-Liste sein) und schreiben 
+		Sie den anderen auf der Liste, dass Sie mit der Übersetzung beginnen 
+		möchten.<br />
+		Bitte eröffnen Sie für jede neue Seite, die Sie übersetzen möchten, ein 
+		separates Thema mit unterschiedlichem Betreff und fügen Sie Ihren <a 
+		href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">zweistelligen 
+		Ländercode</a> im Betreff hinzu.
+	</li>
+	<p><br class="clear" /></p>
+
+	<li>
+		Öffnen Sie die heruntergeladene Datei mit einem Texteditor (gedit, 
+		Kate, Mousepad etc. auf Freien Betriebssystemen, Notepad++ auf 
+		Windows).
+	</li>
+
+	<li>
+		<div style="max-width: 100px; width: 100px" class="captioned left">
+			<a href="/graphics/translators-shortguide5.png"><img width="100%" alt="Übersetzen Sie Text in Ihre Sprache" src="/graphics/translators-shortguide5.png" /></a>
+		</div>
+		Übersetzen Sie den gesamten Englischen Text außerhalb der HTML tags in 
+		Ihre Sprache. Zum Beispiel:<br />
+		<em>&lt;p&gt;&lt;a href="/contribute/"&gt;Contribute&lt;/a&gt;&lt;/p&gt;</em> 
+		sollte werden<br />
+		<em>&lt;p&gt;&lt;a href="/contribute/"&gt;Colabore&lt;/a&gt;&lt;/p&gt;</em><br />
+		
+		Bitte ändern Sie den <a 
+		href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">zweistelligen 
+		Ländercode</a> der übersetzten Datei von "en" zu dem Ihrer Sprache (in 
+		diesem Beispiel Spanisch = "spreadtheword.es.xhtml").
+	</li>
+	<p><br class="clear" /></p>
+
+	<li>
+		<div style="max-width: 100px; width: 100px" class="captioned left">
+			<a href="/graphics/translators-shortguide6.png"><img width="100%" alt="Senden Sie Ihre Übersetzung und bitten Sie um Gegenlesen" src="/graphics/translators-shortguide6.png" /></a>
+		</div>
+		Danach antworten Sie bitte auf Ihre eigene Mail in 
+		translators@fsfeurope.org und bitten Sie andere Leute, Ihre Übersetzung 
+		gegenzulesen. Wenn jeder zustimmt, wird Ihre Übersetzung von anderen 
+		auf der Mailing Liste hochgeladen.
+	</li>
+	<p><br class="clear" /></p>
+
+	</ol>
+
+
+    <h2>Detaillierte Anleitung: Verstehen, wie die Webseiten generiert werden</h2>
 
     <p>
       Die Webseiten von fsfe.org werden als Menge von XML Dateien

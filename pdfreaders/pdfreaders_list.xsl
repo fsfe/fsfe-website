@@ -3,7 +3,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:template match="readerlist">
-    <xsl:element name="p"><xsl:attribute name="class">readerlist</xsl:attribute>
+    <xsl:element name="div"><xsl:attribute name="class">readerlist</xsl:attribute>
       <xsl:for-each select="/buildinfo/document/set/reader">
         <xsl:sort select="@priority" order="ascending" />
  
@@ -25,7 +25,6 @@
           </xsl:element>
           <xsl:element name="a"> <xsl:attribute name="class">info homepage</xsl:attribute>
             <xsl:attribute name="href"><xsl:value-of select="homepage" /></xsl:attribute>
-            <xsl:attribute name="alt"></xsl:attribute>
             <xsl:value-of select="homepage" />
           </xsl:element>
  
@@ -35,7 +34,6 @@
           <xsl:for-each select="platform">
             <xsl:element name="a"> <xsl:attribute name="class">info platform</xsl:attribute>
               <xsl:attribute name="href"><xsl:value-of select="installer" /></xsl:attribute>
-              <xsl:attribute name="alt"></xsl:attribute>
               <xsl:value-of select="name" />
             </xsl:element>
           </xsl:for-each>

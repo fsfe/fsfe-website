@@ -1,18 +1,20 @@
 * {
   box-sizing: border-box;
 }
+body {
+  background-color: #EEE;
+  margin: 0;
+}
 header#top, section#main {
   width: 70%;
   margin: 0 15%;
   border-style: none solid;
   border-width: 4px;
   border-color: #693;
+  background-color: #FFF;
 }
 section#main {
   padding: 1em;
-}
-footer#bottom {
-  border-top: solid 1px #888;
 }
 
 header {
@@ -83,6 +85,7 @@ header {
   border-color: #888;
   border-radius: .25em;
   overflow: hidden;
+  vertical-align: top;
 }
 #main .readerlist .reader:nth-child(-n+3) {
   width: 31%;
@@ -102,7 +105,8 @@ header {
 }
 .reader .info {
   float: left;
-  display: inline-block;
+  max-width: 100%;
+  word-wrap: break-word;
 }
 .reader .info.homepage {
   margin-bottom: 1em;
@@ -114,8 +118,13 @@ header {
   float: left;
 }
 
-#bottom hr {
-  clear: both;
+#bottom {
+  margin: 3em 0 0 0;
+  padding 1em 10%;
+  background-color: #FFF;
+}
+#bottom a {
+  color: #39C;
 }
 
 #full-menu-list {
@@ -123,9 +132,13 @@ header {
 }
 #full-menu-list > li {
   display: inline-block;
-  float: left;
   width: 12%;
   margin: 0 2%;
+  font-weight: bold;
+  vertical-align: top;
+}
+#full-menu-list > li ul {
+  font-weight: normal;
 }
 #full-menu-list ul {
   list-style-type: none;

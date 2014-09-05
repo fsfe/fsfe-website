@@ -5,6 +5,11 @@
     <title>
       FSFE - Contribute - Information for translators - Web pages
     </title>
+  <style type="text/css">
+	.clear {
+		clear: both;
+	}
+  </style>
   </head>
 
   <body>
@@ -12,42 +17,81 @@
 
     <h2>Short Step by Step Guide</h2>
 
-<p>This little guide should only be used if you already know the background of translations: How our pages are generated, how to find out which translations are missing or outdated and so on.</p>
+	<p>
+		This little guide should only be used if you already know the 
+		background of translations: How our pages are generated, how to find 
+		out which translations are missing or outdated and so on.
+	</p>
 
-<p>In this example, we want to translate https://fsfe.org/contribute/spreadtheword.en.html into Spanish.</p>
+	<p>
+		In this example, we want to translate 
+		https://fsfe.org/contribute/spreadtheword.en.html into Spanish. Please 
+		click the images to enlarge the pictures.
+	</p>
 
-<ol>
-	<li>Scroll down the page which you want to translate and find "Source code" in the footer.</li>
+	<ol>
 
-<!-- <img src="/graphics/translators-shortguide1.png" alt="find source code"/> -->
+	<li>
+		<div style="max-width: 100px; width: 100px" class="captioned left">
+			<a href="/graphics/translators-shortguide1.png"><img width="100%" alt="Find the source code" src="/graphics/translators-shortguide1.png" /></a>
+		</div>
+		Scroll down the page which you want to translate and find "Source code" 
+		in the footer.
+	</li>
+	<p><br class="clear" /></p>
 
-	<li>Download the .xhtml file (in this case https://fsfe.org/source/contribute/spreadtheword.en.xhtml).</li>
+	<li>
+		Download the .xhtml file with "Save As..." in your browser or other 
+		tools (in this case 
+		https://fsfe.org/source/contribute/spreadtheword.en.xhtml).
+	</li>
 
-	<li>Write a short e-mail to translators@fsfeurope.org (you should already be subscriber of this mailing list) and tell them that you start with the translation.<br />
-Please open for each new page a new thread and add your <a
-href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">two
-letter Language Code</a> in the subject.</li>
+	<li>
+		<div style="max-width: 100px; width: 100px" class="captioned left">
+			<a href="/graphics/translators-shortguide3.png"><img width="100%" alt="Write an email to the translators list" src="/graphics/translators-shortguide3.png" /></a>
+		</div>
+		Write a short e-mail to translators@fsfeurope.org (you should already 
+		be subscriber of this mailing list) and tell them that you start with 
+		the translation.<br />
+		Please open for each new page a new thread and add your <a 
+		href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">two letter 
+		Language Code</a> in the subject.
+	</li>
+	<p><br class="clear" /></p>
 
-<!-- <img src="/graphics/translators-shortguide3.png" alt="write an email"/> -->
+	<li>
+		Open the downloaded file with a text editor (gedit, Kate, Mousepad etc 
+		on Free operating systems, Notepad++ on Windows).
+	</li>
 
-	<li>Open the downloaded file with a text editor (gedit, Kate, Mousepad etc on Free operating systems, Notepad++ on Windows).</li>
+	<li>
+		<div style="max-width: 100px; width: 100px" class="captioned left">
+			<a href="/graphics/translators-shortguide5.png"><img width="100%" alt="Translate text to your language" src="/graphics/translators-shortguide5.png" /></a>
+		</div>
+		Translate all english text outside the HTML tags into your language. 
+		For example:<br />
+		<em>&lt;p&gt;&lt;a href="/contribute/"&gt;Contribute&lt;/a&gt;&lt;/p&gt;</em> 
+		should become<br />
+		<em>&lt;p&gt;&lt;a href="/contribute/"&gt;Colabore&lt;/a&gt;&lt;/p&gt;</em><br />
+		
+		Please change the <a 
+		href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">two letter 
+		Language Code</a> of the translated file from "en" to the one of your 
+		language (for example Spanish = "spreadtheword.es.xhtml").
+	</li>
+	<p><br class="clear" /></p>
 
-	<li>Translate all english text outside the html tags into your language. For example:<br />
-<em>&lt;p&gt;Hi there, please visit &lt;a href="https://fsfe.org"&gt;our website&lt;/a&gt;.&lt;/p&gt;</em> should become<br />
-<em>&lt;p&gt;Hallo, bitte besuchen Sie &lt;a href="https://fsfe.org"&gt;unsere Webseite&lt;/a&gt;.&lt;/p&gt;</em><br />
-Please change the <a
-href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">two
-letter Language Code</a> of the translated file from "en" to the one
-of your language (for example Spanish =
-"spreadtheword.es.xhtml").</li>
+	<li>
+		<div style="max-width: 100px; width: 100px" class="captioned left">
+			<a href="/graphics/translators-shortguide6.png"><img width="100%" alt="Send file and ask for proofreading" src="/graphics/translators-shortguide6.png" /></a>
+		</div>
+		Afterwards, please reply to your thread in translators@fsfeurope.org 
+		and ask other people to proofread your file. If everybody agrees, it 
+		will be uploaded by others on the mailing list.
+	</li>
+	<p><br class="clear" /></p>
 
-<!-- <img src="/graphics/translators-shortguide5.png" alt="translate the text"/> -->
-
-	<li>Afterwards, please reply to your thread in translators@fsfeurope.org and ask other people to proofread your file. If everybody agrees, it will be uploaded by others on the mailing list.</li>
-
-<!-- <img src="/graphics/translators-shortguide6.png" alt="ask for proofreading"/> -->
-
-</ol>
+	</ol>
 
     <h2>Detailed guide: Understanding how the web pages are built</h2>
 
@@ -168,7 +212,7 @@ of your language (for example Spanish =
 
     <p>
       The list of outdated translations provides an extra feature helpful for
-      updating: you can not only download the (outdated) translated file and the
+      updating: you can not only downlad the (outdated) translated file and the
       (up to date) English original; you can also view the changelog of both
       files, a protocol of all modifications done to the respective file.
       Comparing the two changelogs usually makes it easy to find out which

@@ -3,71 +3,103 @@
 <html>
   <head>
     <title>
-      FSFE - Machen Sie mit - Informationen für Übersetzer - Webseiten
+      FSFE - Mitarbeiten - Informationen für Übersetzer - Webseiten
     </title>
   </head>
 
   <body>
     <h1>Webseiten übersetzen</h1>
 
-	<h2>Kurze Schritt-für-Schritt-Anleitung</h2>    
+	<h2>Kurze Schritt-für-Schritt-Anleitung</h2>
 
-<p>Diese kleine Anleitung sollte nur dann Verwendung finden, wenn Sie bereits 
-den Ablauf der Übersetzung kennen: Wie die Seiten erzeugt werden, welche 
-Übersetzungen fehlen oder welche veraltet sind und so weiter.</p>
+	<p>
+		Diese kleine Anleitung sollte nur benutzt werden, wenn Sie bereits mit 
+		dem Hintergrund von Übersetzungen bei uns vertraut sind: Wie unsere 
+		Seiten generiert werden, wie man herausfindet, welche Übersetzung 
+		fehlen oder veraltet sind und so weiter.
+	</p>
 
-<p>In diesem Beispiel wollen wir die Seite 
-https://fsfe.org/contribute/spreadtheword.en.html ins Deutsche übersetzen.</p>
+	<p>
+		In diesem Beispiel wollen wir 
+		https://fsfe.org/contribute/spreadtheword.en.html ins Spanische 
+		übersetzen. Bitte klicken Sie auf die Bilder, um sie größer 
+		darzustellen.
+	</p>
 
-<ol>
-	<li>Scrollen Sie ans Ende der zu übersetzenden Seite und suchen Sie "Source 
-	code" bzw. "Quelltext" in der Fußzeile.</li>
+	<ol>
 
-<!-- <img src="/graphics/translators-shortguide1.png" alt="find source code"/> -->
+	<li>
+		<div style="max-width: 100px; width: 100px" class="captioned left">
+			<a href="/graphics/translators-shortguide1.png"><img width="100%" alt="Suchen Sie den Quellcode" src="/graphics/translators-shortguide1.png" /></a>
+		</div>
+		Scrollen Sie ans untere Ende der Seite, die sie übersetzen möchten, und 
+		suchen Sie dort nach "Quellcode".
+	</li>
+	<p><br class="clear" /></p>
 
-	<li>Laden Sie die .xhtml Datei herunter (in diesem Fall 
-	https://fsfe.org/source/contribute/spreadtheword.en.xhtml).</li>
+	<li>
+		Laden Sie die .xhtml-Datei mit "Speichern unter..." in Ihrem Browser 
+		oder mit anderen Programmen herunter (in diesem Beispiel 
+		https://fsfe.org/source/contribute/spreadtheword.en.xhtml).
+	</li>
 
-	<li>Informieren Sie per E-Mail translators@fsfeurope.org (Sie sollten bereits in dieser Mailing-Liste eingeschrieben sein) über Ihre Übersetzungsabsicht.<br />
-Bitte legen Sie für jede neue Seite einen neuen Thread an und fügen Sie Ihr <a 
-href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">2-stelliges 
-Länder-Kürzel</a> im Betreff hinzu (in diesem Beispiel "[DE] Übersetzung 
-spreadtheword.en.xhtml").</li>
+	<li>
+		<div style="max-width: 100px; width: 100px" class="captioned left">
+			<a href="/graphics/translators-shortguide3.png"><img width="100%" alt="Schreiben Sie eine E-Mail an die Übersetzerliste" src="/graphics/translators-shortguide3.png" /></a>
+		</div>
+		Schreiben Sie eine kurze E-Mail an translators@fsfeurope.org (Sie 
+		sollten bereits Mitglied auf dieser Mailing-Liste sein) und schreiben 
+		Sie den anderen auf der Liste, dass Sie mit der Übersetzung beginnen 
+		möchten.<br />
+		Bitte eröffnen Sie für jede neue Seite, die Sie übersetzen möchten, ein 
+		separates Thema mit unterschiedlichem Betreff und fügen Sie Ihren <a 
+		href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">zweistelligen 
+		Ländercode</a> im Betreff hinzu.
+	</li>
+	<p><br class="clear" /></p>
 
-<!-- <img src="/graphics/translators-shortguide3.png" alt="write an email"/> -->
+	<li>
+		Öffnen Sie die heruntergeladene Datei mit einem Texteditor (gedit, 
+		Kate, Mousepad etc. auf Freien Betriebssystemen, Notepad++ auf 
+		Windows).
+	</li>
 
-	<li>Öffen Sie die heruntergeladene Datei mit einem Texteditor ihrer Wahl 
-	(gedit, Kate, Mousepad etc. bei freien Betriebsystemen, Notepad++ unter 
-	Windows).</li>
+	<li>
+		<div style="max-width: 100px; width: 100px" class="captioned left">
+			<a href="/graphics/translators-shortguide5.png"><img width="100%" alt="Übersetzen Sie Text in Ihre Sprache" src="/graphics/translators-shortguide5.png" /></a>
+		</div>
+		Übersetzen Sie den gesamten Englischen Text außerhalb der HTML tags in 
+		Ihre Sprache. Zum Beispiel:<br />
+		<em>&lt;p&gt;&lt;a href="/contribute/"&gt;Contribute&lt;/a&gt;&lt;/p&gt;</em> 
+		sollte werden<br />
+		<em>&lt;p&gt;&lt;a href="/contribute/"&gt;Colabore&lt;/a&gt;&lt;/p&gt;</em><br />
+		
+		Bitte ändern Sie den <a 
+		href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">zweistelligen 
+		Ländercode</a> der übersetzten Datei von "en" zu dem Ihrer Sprache (in 
+		diesem Beispiel Spanisch = "spreadtheword.es.xhtml").
+	</li>
+	<p><br class="clear" /></p>
 
-	<li>Übersetzen Sie den englischen Text in Ihre Sprache. HTML-Tags bleiben. 
-	Beispiel:<br />
-<em>&lt;p&gt;Hi there, please visit &lt;a href="https://fsfe.org"&gt;our 
-website&lt;/a&gt;.&lt;/p&gt;</em> sollte werden:<br />
-<em>&lt;p&gt;Hallo, bitte besuchen Sie &lt;a href="https://fsfe.org"&gt;unsere 
-Webseite&lt;/a&gt;.&lt;/p&gt;</em><br />
-Bitte ändern Sie das <a 
-href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">2-stellige 
-Länder-Kürzel</a> der übersetzten Datei von "en" in das Ihrer Sprache (als 
-Beispiel Deutsch = "spreadtheword.de.xhtml").</li>
+	<li>
+		<div style="max-width: 100px; width: 100px" class="captioned left">
+			<a href="/graphics/translators-shortguide6.png"><img width="100%" alt="Senden Sie Ihre Übersetzung und bitten Sie um Gegenlesen" src="/graphics/translators-shortguide6.png" /></a>
+		</div>
+		Danach antworten Sie bitte auf Ihre eigene Mail in 
+		translators@fsfeurope.org und bitten Sie andere Leute, Ihre Übersetzung 
+		gegenzulesen. Wenn jeder zustimmt, wird Ihre Übersetzung von anderen 
+		auf der Mailing Liste hochgeladen.
+	</li>
+	<p><br class="clear" /></p>
 
-<!-- <img src="/graphics/translators-shortguide5.png" alt="translate the text"/> -->
+	</ol>
 
-	<li>Bitte antworten Sie danach auf Ihren ursprünglichen Beitrag in der 
-	translators@fsfeurope.org-Liste und bitten Sie andere Übersetzer um das 
-	Gegenlesen Ihrer Datei. Wenn jeder seine Zustimmung signalisiert, wird Ihre 
-	Übersetzung von anderen auf der Mailing-Liste auf die Webseite 
-	hochgeladen.</li>
 
-<!-- <img src="/graphics/translators-shortguide6.png" alt="ask for proofreading"/> -->
-
-</ol>
-
-	<h2>Ausführliche Anleitung: Verstehen, wie die Webseiten generiert werden</h2>
+    <h2>Detaillierte Anleitung: Verstehen, wie die Webseiten generiert werden</h2>
 
     <p>
       Die Webseiten von fsfe.org werden als Menge von XML Dateien
-      gewartet. Der Webserver generiert alle zehn Minuten HTML Seiten aus
+      gewartet. Der Webserver generiert jede zehn Minuten HTML Seiten aus
       diesen XML-Dateien. Deshalb werden alle Änderungen in den XML Dateien
       vorgenommen und niemals direkt in den HTML Dateien.  
     </p>
@@ -145,12 +177,12 @@ Beispiel Deutsch = "spreadtheword.de.xhtml").</li>
       Wenn Sie eine Seite in Ihrem Webbrowser geöffnet haben, deren Übersetzung
       veraltet ist (angezeigt durch eine Notiz oben auf der Seite), dann
       scrollen Sie bis zum Ende der Seiten, klicken Sie auf
-      den <strong>„Source code / Quellcode”</strong>-Link und speichern Sie die Datei, die Sie
+      den <strong>„Source code”</strong>-Link und speichern Sie die Datei, die Sie
       dort bekommen. Diese Datei ist die (veraltete) übersetzte Version. Als
       nächstes benutzen Sie den
       <strong>English</strong>-Link oben auf der Seite, um zur englischen
       Version zu wechseln und klicken Sie dort ebenfalls auf
-      den <strong>„Source code / Quellcode”</strong>-Link. Die Datei, die Sie dort bekommen ist
+      den <strong>„Source code”</strong>-Link. Die Datei, die Sie dort bekommen ist
       die (aktualisierte) englische Version. Bitte beachten Sie, dass alles
       innerhalb der "&lt;...&gt;" Markierungen nicht übersetzt werden darf.
     </p>

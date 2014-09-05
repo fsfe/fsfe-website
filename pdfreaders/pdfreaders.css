@@ -75,16 +75,18 @@ header {
   display: inline-block;
   width: 23%;
 
-  margin: .5em 1%;
+  margin: .5em .75%;
   padding: 1ex 1%;
 
   border-style: solid;
   border-width: 2px;
   border-color: #888;
   border-radius: .25em;
+  overflow: hidden;
 }
 #main .readerlist .reader:nth-child(-n+3) {
   width: 31%;
+  margin: 1%;
 }
 .reader .logo {
   float: left;

@@ -152,7 +152,7 @@
         <![endif]]]></xsl:comment>
     
     <!-- Copy head element from the xhtml source file (and possibly from external xsl rules) -->
-    <xsl:apply-templates select="head" />
+    <xsl:apply-templates select="head/node()" />
   </xsl:element></xsl:template>
 
 </xsl:stylesheet>

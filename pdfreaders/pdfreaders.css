@@ -110,7 +110,7 @@ header {
 .reader .logo {
   float: left;
   height: 2em;
-  margin-right: 1.5em;
+  margin-right: 1em;
 }
 #main .readerlist .reader:nth-child(-n+3) {
   width: 31%;
@@ -119,7 +119,8 @@ header {
   font-size: 1.5em;
 }
 #main .readerlist .reader:nth-child(-n+3) .logo {
-  height: 2em;
+  height: 3em;
+  margin-right: 1.5em;
 }
 
 .reader .label {

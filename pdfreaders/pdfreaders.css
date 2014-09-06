@@ -76,6 +76,7 @@ header {
 #main .readerlist .reader {
   display: inline-block;
   width: 23%;
+  font-size: .75em;
 
   margin: .5em .75%;
   padding: 1ex 1%;
@@ -89,7 +90,7 @@ header {
 }
 #main .readerlist .reader:nth-child(-n+3) {
   width: 31%;
-  margin: 1%;
+  font-size: 1em;
 }
 .reader .logo {
   float: left;
@@ -129,6 +130,10 @@ header {
 #bottom #full-menu > * {
   padding: 0;
   margin: 1em 10%;
+}
+
+#full-menu {
+  padding: 1em 0;
 }
 
 #full-menu-list > li {

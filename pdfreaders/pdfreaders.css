@@ -73,10 +73,14 @@ header {
   clear: both;
 }
 
+#main .readerlist {
+  text-align: center;
+}
 #main .readerlist .reader {
   display: inline-block;
   width: 23%;
   font-size: .75em;
+  text-align: left;
 
   margin: .5em .75%;
   padding: 1ex 1%;

@@ -73,6 +73,19 @@ header {
   clear: both;
 }
 
+.graphic-link {
+  font-style: italic;
+  color: #080;
+  font-size: .75em;
+}
+.htmlcode {
+  font-family: monospace;
+  border: 1px dashed #000;
+  background-color: #DDD;
+  padding: .5em;
+  margin: -1em 1em 0 0;
+}
+
 #main .readerlist {
   text-align: center;
 }

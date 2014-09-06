@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<!-- DISABLED
+Ghostscript is not a standalone viewer
+but a backend used by other programs listed
+on this site. It doesn't make sense to
+display it as an option to the user.
+ -Paul 2014-09-06
+-->
+
 <readers> <reader priority="8">
   <name>Ghostscript</name>
   <logo>ghostscript.png</logo>

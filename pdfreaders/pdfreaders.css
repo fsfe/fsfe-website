@@ -92,7 +92,6 @@ header {
 #main .readerlist .reader {
   display: inline-block;
   width: 23%;
-  font-size: .75em;
   text-align: left;
 
   margin: .5em .75%;
@@ -105,15 +104,24 @@ header {
   overflow: hidden;
   vertical-align: top;
 }
-#main .readerlist .reader:nth-child(-n+3) {
-  width: 31%;
-  font-size: 1em;
+.reader h1 {
+  font-size: 1.25em;
 }
 .reader .logo {
   float: left;
-  height: 3em;
+  height: 2em;
   margin-right: 1.5em;
 }
+#main .readerlist .reader:nth-child(-n+3) {
+  width: 31%;
+}
+#main .readerlist .reader:nth-child(-n+3) h1 {
+  font-size: 1.5em;
+}
+#main .readerlist .reader:nth-child(-n+3) .logo {
+  height: 2em;
+}
+
 .reader .label {
   display: inline-block;
   float: left;

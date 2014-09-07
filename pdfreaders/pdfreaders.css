@@ -91,8 +91,9 @@ header {
 }
 #main .readerlist .reader {
   display: inline-block;
-  width: 23%;
   text-align: left;
+  width: 23%;
+  min-height: 16em;
 
   margin: .5em .75%;
   padding: 1ex 1%;
@@ -114,6 +115,10 @@ header {
 }
 #main .readerlist .reader:nth-child(-n+3) {
   width: 31%;
+  min-height: 20em;
+  margin-top: 2em;
+  margin-bottom: 5em;
+  border-width: 3px;
 }
 #main .readerlist .reader:nth-child(-n+3) h1 {
   font-size: 1.5em;

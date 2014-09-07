@@ -2,25 +2,16 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-  <!-- xsl:import href="../build/xslt/fsfe_headings.xsl" / -->
-  <!--xsl:include href="../build/xslt/fsfe_pageclass.xsl" /-->
-  <!--xsl:include href="../build/xslt/fsfe_pageheader.xsl" /-->
-  <xsl:include href="../build/xslt/notifications.xsl" />
-  <!--xsl:include href="../build/xslt/fsfe_mainsection.xsl" /-->
-  <!--xsl:include href="../build/xslt/fsfe_followupsection.xsl" /-->
-  <!--xsl:include href="../build/xslt/body_scripts.xsl" /-->
-  <xsl:include href="../build/xslt/translation_list.xsl" />
-  <xsl:include href="../build/xslt/footer_sitenav.xsl" />
-  <xsl:include href="../build/xslt/footer_sourcelink.xsl" />
-  <xsl:include href="../build/xslt/footer_legal.xsl" />
+  <!-- xsl:import href="../../build/xslt/fsfe_headings.xsl" / -->
+  <xsl:include href="../../build/xslt/notifications.xsl" />
+  <!--xsl:include href="../../build/xslt/fsfe_followupsection.xsl" /-->
+  <xsl:include href="../../build/xslt/translation_list.xsl" />
+  <xsl:include href="../../build/xslt/footer_sitenav.xsl" />
+  <xsl:include href="../../build/xslt/footer_sourcelink.xsl" />
+  <xsl:include href="../../build/xslt/footer_legal.xsl" />
 
-  <xsl:include href="../tools/xsltsl/static-elements.xsl" />
-  <xsl:include href="../tools/xsltsl/translations.xsl" />
-
-      <!--xsl:call-template name="fsfe_pageclass" />
-      <xsl:call-template name="fsfe_pageheader" />
-      <xsl:call-template name="fsfe_mainsection" />
-      <xsl:call-template name="fsfe_followupsection" /-->
+  <xsl:include href="../../tools/xsltsl/static-elements.xsl" />
+  <xsl:include href="../../tools/xsltsl/translations.xsl" />
 
   <xsl:template name="page-body">
     <xsl:element name="body">

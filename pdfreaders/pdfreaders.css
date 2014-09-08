@@ -93,7 +93,7 @@ header {
   display: inline-block;
   text-align: left;
   width: 23%;
-  min-height: 16em;
+  min-height: 20em;
 
   margin: .5em .75%;
   padding: 1ex 1%;
@@ -115,7 +115,7 @@ header {
 }
 #main .readerlist .reader:nth-child(-n+3) {
   width: 31%;
-  min-height: 20em;
+  min-height: 25em;
   margin-top: 2em;
   margin-bottom: 5em;
   border-width: 3px;

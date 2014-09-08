@@ -45,6 +45,13 @@ header {
 #translations * {
   display: inline;
 }
+#translations li {
+  margin: auto .5em;
+}
+#translations a {
+  text-decoration: none;
+  color: #237;
+}
 #menu {
   clear: both;
 }

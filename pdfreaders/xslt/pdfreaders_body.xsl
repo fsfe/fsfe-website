@@ -53,6 +53,12 @@
             </xsl:element>
             <xsl:element name="li">
               <xsl:element name="a">
+                <xsl:attribute name="href">openstandards.html</xsl:attribute>
+                Open Standards
+              </xsl:element>
+            </xsl:element>
+            <xsl:element name="li">
+              <xsl:element name="a">
                 <xsl:attribute name="href">graphics.html</xsl:attribute>
                 Graphics
               </xsl:element>
@@ -61,12 +67,6 @@
               <xsl:element name="a">
                 <xsl:attribute name="href">about.html</xsl:attribute>
                 About
-              </xsl:element>
-            </xsl:element>
-            <xsl:element name="li">
-              <xsl:element name="a">
-                <xsl:attribute name="href">openstandards.html</xsl:attribute>
-                Open Standards
               </xsl:element>
             </xsl:element>
           </xsl:element>

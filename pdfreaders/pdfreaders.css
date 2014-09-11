@@ -115,6 +115,10 @@ header {
 .reader h1 {
   font-size: 1.25em;
 }
+.reader h1 a {
+  text-decoration: underline;
+  color: #237;
+}
 .reader .logo {
   float: left;
   height: 2em;

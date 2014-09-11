@@ -17,15 +17,10 @@
           </xsl:element>
  
           <xsl:element name="h1">
-            <xsl:value-of select="name" />
-          </xsl:element>
- 
-          <xsl:element name="span"> <xsl:attribute name="class">label homepage</xsl:attribute>
-            Homepage:
-          </xsl:element>
-          <xsl:element name="a"> <xsl:attribute name="class">info homepage</xsl:attribute>
-            <xsl:attribute name="href"><xsl:value-of select="homepage" /></xsl:attribute>
-            <xsl:value-of select="homepage" />
+            <xsl:element name="a"> <xsl:attribute name="class">info homepage</xsl:attribute>
+              <xsl:attribute name="href"><xsl:value-of select="homepage" /></xsl:attribute>
+              <xsl:value-of select="name" />
+            </xsl:element>
           </xsl:element>
  
           <xsl:element name="span"> <xsl:attribute name="class">label platform</xsl:attribute>

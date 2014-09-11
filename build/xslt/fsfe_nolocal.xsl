@@ -4,8 +4,6 @@
   xmlns:dt="http://xsltsl.org/date-time"
   exclude-result-prefixes="dt">
 
-  <xsl:output method="xml" encoding="UTF-8" indent="yes" />
-
   <!-- Do not copy non-HTML elements to output -->
   <xsl:template match="timestamp|
                buildinfo/document/translator|

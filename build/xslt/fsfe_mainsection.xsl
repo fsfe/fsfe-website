@@ -14,7 +14,7 @@
         </xsl:if>
   
         <!-- Here goes the actual content of the <body> node of the input file -->
-        <xsl:apply-templates select="body/node() | /buildinfo/document/event/body | /buildinfo/document/news/body" />
+        <xsl:apply-templates select="body | /buildinfo/document/event/body | /buildinfo/document/news/body" />
   
   
       </xsl:element>

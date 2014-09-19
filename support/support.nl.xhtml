@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<html>
+  <head>
+    <title>Steun - FSFE</title>
+  </head>
+
+  <body>
+    <h1>Steun de FSFE</h1>
+    <div id="introduction" class="support_page">
+      <div class="image right">
+        <img src="/graphics/stars-smaller.png" alt="Stars"/>
+      </div>
+      
+<!-- These wordings are delicate. Please discuss any ideas at web@ before making any changes! -->
+      <p>
+	  Onderteken om te laten zien dat u geeft om Vrije Software en dat u <a href="/work">de activiteiten van de FSFE</a> steunt.
+	  </p>
+	  <p>
+We zullen niet uw naam publiceren maar slechts het totale aantal supporters. 
+Het aantal supporters van de FSFE toont politici op zowel nationaal alswel EU-niveau dat Vrije Software 
+belangrijk is. Supporters kunnen mogelijk ook af en toe belangrijke informatie ontvangen, maar niet meer 
+dan drie keer per jaar.</p>
+
+      <div id="support_form">
+
+        <form method="post" action="support.php" class="support">
+            <p>
+            <label id="firstname">Voornaam
+              <input type="text" name="firstname" />
+            </label>
+            </p>
+            <p>
+            <label id="lastname">Achternaam
+              <input type="text" name="lastname" />
+            </label>
+            </p>
+            <p>
+            <label id="email">E-mail (vereist)
+              <input type="email" name="email" required="required" />
+            </label>
+            </p>
+            <p>
+            <label id="country">Land (vereist)
+              <select name="country_code" required="required">
+                <option value="">Selecteer..</option>
+                <optgroup label="Europe">
+                  <country-list-europe/>
+                </optgroup>
+                <optgroup label="Other continents">
+                  <country-list-other-continents/>
+                </optgroup>
+              </select>
+            </label>
+            </p>
+            <p id="support_robotfield" class="n">
+            <label id="rname">Vul dit veld in als u een robot bent
+              <input type="text" name="rname" />
+            </label>
+            </p>
+
+          <p><input type="submit" name="submit" value="I Support the FSFE!" data-loading-text="Sending.."/></p>
+        
+          <input type="hidden" name="ref_url" value="" />
+          <input type="hidden" name="ref_id" value="" />
+          <input type="hidden" name="lang" value="en" />
+        </form>
+
+<p><em>Ons privacybeleid is eenvoudig: we zullen uw data nooit met iemand buiten FSFE delen. Einde privacybeleid.</em></p>
+
+      </div>
+
+      <support-form-javascript/>
+  </div>
+        
+  </body>
+
+  <timestamp>$Datum: 2014-02-10 16:56:23 +0100 (Maa, 10 Feb 2014) $ $Auteur: paul $</timestamp>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

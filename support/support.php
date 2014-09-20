@@ -146,7 +146,6 @@ else {
     } else {    
         require('template-thankyou.en.inc');
     }
-    // removed Piwik script from here, instead trigger manual goal in submission JS code
     
     if ($email_found == true){
         // message if e-mail already existed in database

@@ -2,51 +2,49 @@
 
 <html>
   <head>
-    <title>Apoya a la FSFE</title>
+    <title>Steun - FSFE</title>
   </head>
 
   <body>
-    <h1>Apoya a la FSFE</h1>
+    <h1>Steun de FSFE</h1>
     <div id="introduction" class="support_page">
       <div class="image right">
         <img src="/graphics/stars-smaller.png" alt="Stars"/>
       </div>
       
 <!-- These wordings are delicate. Please discuss any ideas at web@ before making any changes! -->
-    <p>
-	Firma como muestra de tu apoyo al Software Libre y a las <a href="/work">actividades de la
-FSFE</a>.
-	</p>
-	<p>
-	No publicaremos tu nombre, sólo el número total de apoyos recibidos. 
-El número de apoyos muestra a los políticos a nivel estatal y
-europeo que el Software Libre es importante. Al firmar como simpatizante
-podrás recibir información importante adicional de forma ocasional (3 veces al año, como máximo).
-        </p>
+      <p>
+	  Onderteken om te laten zien dat u geeft om Vrije Software en dat u <a href="/work">de activiteiten van de FSFE</a> steunt.
+	  </p>
+	  <p>
+We zullen niet uw naam publiceren maar slechts het totale aantal supporters. 
+Het aantal supporters van de FSFE toont politici op zowel nationaal alswel EU-niveau dat Vrije Software 
+belangrijk is. Supporters kunnen mogelijk ook af en toe belangrijke informatie ontvangen, maar niet meer 
+dan drie keer per jaar.</p>
 
-        <div id="support_form">
+      <div id="support_form">
 
         <form method="post" action="support.php" class="support">
             <p>
-            <label id="firstname">Nombre
+            <label id="firstname">Voornaam
               <input type="text" name="firstname" />
             </label>
             </p>
             <p>
-            <label id="lastname">Apellidos
+            <label id="lastname">Achternaam
               <input type="text" name="lastname" />
             </label>
             </p>
             <p>
-            <label id="email">E-mail (necesario)
+            <label id="email">E-mail (vereist)
               <input type="email" name="email" required="required" />
             </label>
             </p>
             <p>
-            <label id="country">Estado (necesario)
+            <label id="country">Land (vereist)
               <select name="country_code" required="required">
-                <option value="">Selecciona</option>
-              <optgroup label="Europe">
+                <option value="">Selecteer..</option>
+                <optgroup label="Europe">
                   <country-list-europe/>
                 </optgroup>
                 <optgroup label="Other continents">
@@ -56,30 +54,28 @@ podrás recibir información importante adicional de forma ocasional (3 veces al
             </label>
             </p>
             <p id="support_robotfield" class="n">
-            <label id="rname">Fill this field if you are a robot
+            <label id="rname">Vul dit veld in als u een robot bent
               <input type="text" name="rname" />
             </label>
             </p>
 
-          <p><input type="submit" name="submit" value="¡Apoyo la FSFE!" data-loading-text="Sending.."/></p>
+          <p><input type="submit" name="submit" value="I Support the FSFE!" data-loading-text="Sending.."/></p>
         
           <input type="hidden" name="ref_url" value="" />
           <input type="hidden" name="ref_id" value="" />
-          <input type="hidden" name="lang" value="es" />
+          <input type="hidden" name="lang" value="en" />
         </form>
 
-      <p><em>Nuestra política de privacidad es simple. Nunca compartiremos tus datos
-con nadie ajeno a la FSFE. Y punto.</em></p>
+<p><em>Ons privacybeleid is eenvoudig: we zullen uw data nooit met iemand buiten FSFE delen. Einde privacybeleid.</em></p>
 
       </div>
 
-
-<support-form-javascript/>
+      <support-form-javascript/>
   </div>
         
   </body>
 
-  <timestamp>$Date: 2012-07-07 21:21:45 +0300 (la, 07 heinä 2012) $ $Author: otto $</timestamp>
+  <timestamp>$Datum: 2014-02-10 16:56:23 +0100 (Maa, 10 Feb 2014) $ $Auteur: paul $</timestamp>
 </html>
 <!--
 Local Variables: ***

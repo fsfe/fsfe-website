@@ -33,17 +33,17 @@ if ($_POST['email'] == '' || $_POST['country_code'] == '') {
 }
 
 // debugging code
-$msg = "supporter form debug\n\n SERVER:\n";
+$msg = "Debug data:\n SERVER:\n";
 foreach ($_SERVER as $key => $value) {
     $msg .= "$key: $value\n";
 }
-$msg .= "\n\n POST:\n";
+$msg .= "\nPOST:\n";
 foreach ($_POST as $key => $value) {
     $msg .= "$key: $value\n";
 }
 
 if ($_POST['rname'] != '') {
-    mail("otto@fsfe.org", 'debug supporter form', "Reason: robot stopped\n\n" + $msg);
+    mail("otto@fsfe.org", 'Supporter form stopped robot submission', $msg);
     die("Thanks"); // ..for admitting that you are a robot!
 }
 
@@ -146,7 +146,6 @@ else {
     } else {    
         require('template-thankyou.en.inc');
     }
-    // removed Piwik script from here, instead trigger manual goal in submission JS code
     
     if ($email_found == true){
         // message if e-mail already existed in database

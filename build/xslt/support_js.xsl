@@ -62,7 +62,6 @@
                   function(data) {
                       $("#support_form").fadeOut();
                       $("#introduction").append('<div id="support_form_sent">'+data+'</div>');
-                      piwikTracker.trackGoal(2); // logs a conversion for goal 2
                   }
                 );
 
@@ -87,7 +86,6 @@
                   function(data) {
                       $("#support_form").fadeOut();
                       $("#introduction").append('<div id="support_form_sent">'+data+'</div>');
-                      piwikTracker.trackGoal(2); // logs a conversion for goal 2
                   }
                 );
 

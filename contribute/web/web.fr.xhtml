@@ -379,17 +379,17 @@
           <p>
           Assurez-vous que l'encodage du fichier soit consistant avec le
   contenu de l'attribut "&#160;encoding&#160;" déclaré sur la première ligne du
-  fichier. Par exemple, si votre fichier est codé en «&#160;iso-8859-1&#160;»
+  fichier. Par exemple, si votre fichier est codé en «&#160;UTF-8&#160;»
   (également connu sous le nom de «&#160;latin-1&#160;»), la première ligne du fichier
    devrait être
           </p>
 
-          <pre class="file">&lt;?xml version="1.0" encoding="iso-8859-1" ?&gt;</pre>
+          <pre class="file">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;</pre>
 
           <p>
             Un autre encodage valide est l'unicode, ou "&#160;utf-8&#160;". Si vous
   souhaitez modifier l'encodage d'un fichier, vous pouvez utiliser
-  l'utilitaire standard <em>iconv</em>, comme dans l'exemple suivant (qui convertit un fichier de l'encodage "&#160;latin1&#160;" vers l'"&#160;utf-8&#160;") ;
+  l'utilitaire standard <em>iconv</em>, comme dans l'exemple suivant (qui convertit un fichier de l'encodage "&#160;latin1&#160;" vers l'"&#160;UTF-8&#160;") ;
             </p>
 
             <pre class="term">iconv -f LATIN1 -t UTF8 <em>fichieroriginal</em> &gt; <em>fichierdesortie</em></pre>

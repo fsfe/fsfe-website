@@ -1,0 +1,215 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #EEE;
+  margin: 0;
+}
+header#top, section#main {
+  width: 70%;
+  margin: 0 15%;
+  border-style: none solid;
+  border-width: 4px;
+  border-color: #693;
+  background-color: #FFF;
+}
+section#main {
+  padding: 1em;
+}
+
+header {
+  display: block;
+  clear: both;
+  width: 100%;
+  margin: 0 0 3em 0;
+}
+#logo { float: left; }
+#fsfe-logo { float: right; }
+#logo, #fsfe-logo {
+  padding: 1em;
+  width: 20%;
+}
+#logo img, #fsfe-logo img {
+  width: 100%;
+}
+#translations {
+  float: left;
+  width: 60%;
+  padding: 2em;
+  font-size: .75em;
+  text-align: center;
+}
+#translations > a.close {
+  display: none;
+}
+#translations * {
+  display: inline;
+}
+#translations li {
+  margin: auto .5em;
+}
+#translations a {
+  text-decoration: none;
+  color: #237;
+}
+#menu {
+  clear: both;
+}
+#menu ul {
+  margin: auto;
+  text-align: center;
+  width: 80%;
+  border-top: 3px solid #693;
+  border-bottom: 3px solid #693;
+}
+#menu ul li {
+  display: inline;
+  padding: 2px 10px;
+  margin-right: 6px;
+  position: relative;
+  left: -20px
+}
+#menu ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #693;
+}
+
+#main, #followup, #bottom, #source, #legal-info, #sister-organisations {
+  display: block;
+  clear: both;
+}
+
+.graphic-link {
+  font-style: italic;
+  color: #080;
+  font-size: .75em;
+}
+.htmlcode {
+  font-family: monospace;
+  border: 1px dashed #000;
+  background-color: #DDD;
+  padding: .5em;
+  margin: -1em 1em 0 0;
+}
+
+#main .readerlist {
+  text-align: center;
+}
+#main .readerlist .reader {
+  display: inline-block;
+  text-align: left;
+  width: 23%;
+  min-height: 18em;
+
+  margin: .5em .75%;
+  padding: 1ex 1%;
+
+  border-style: solid;
+  border-width: 2px;
+  border-color: #888;
+  border-radius: .25em;
+  overflow: hidden;
+  vertical-align: top;
+}
+.reader h1 {
+  font-size: 1.25em;
+}
+.reader h1 a {
+  text-decoration: underline;
+  color: #237;
+}
+.reader .logo {
+  float: left;
+  height: 2em;
+  margin-right: 1em;
+}
+#main .readerlist .reader:nth-child(-n+3) {
+  width: 31%;
+  min-height: 22em;
+  margin-top: 2em;
+  margin-bottom: 5em;
+  border-width: 3px;
+}
+#main .readerlist .reader:nth-child(-n+3) h1 {
+  font-size: 1.5em;
+}
+#main .readerlist .reader:nth-child(-n+3) .logo {
+  height: 3em;
+  margin-right: 1.5em;
+}
+
+.reader .label {
+  display: inline-block;
+  float: left;
+  clear: left;
+  font-weight: bold;
+  margin-right: 1ex;
+}
+.reader .info {
+  float: left;
+  max-width: 100%;
+  word-wrap: break-word;
+}
+.reader .info.homepage {
+  margin-bottom: 1em;
+}
+.reader .info.platform {
+  margin: 0 .25em;
+}
+.reader .description {
+  float: left;
+}
+
+#bottom {
+  margin: 3em 0 0 0;
+  padding 1em 10%;
+  background-color: #FFF;
+}
+#bottom a {
+  color: #39C;
+}
+#bottom #full-menu > * {
+  padding: 0;
+  margin: 1em 10%;
+}
+
+#full-menu {
+  padding: 1em 0;
+}
+
+#full-menu-list > li {
+  display: inline-block;
+  width: 12%;
+  margin: 0 2%;
+  vertical-align: top;
+}
+#full-menu-list ul,
+#full-menu-list > li > ul:nth-child(3) > li > ul{
+  list-style-type: none;
+  padding-left: 2ex;
+}
+#full-menu-list > li > :first-child,
+#full-menu-list > li > ul:nth-child(3) > li > :first-child {
+  font-weight: bold;
+}
+#full-menu-list > li > ul:nth-child(3) {
+  padding-left: 0;
+}
+
+#bottom hr {
+  border: 1px solid #DDD;
+  border-style: solid none none none;
+}
+
+#bottom #source, 
+#bottom #legal-info,
+#bottom #sister-organisations {
+  margin: 0 10%;
+}
+#bottom #source > *, 
+#bottom #legal-info > * {
+  display: inline-block;
+  vertical-align: top;
+  width: 33%;
+}

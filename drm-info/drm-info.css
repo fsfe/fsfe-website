@@ -9,6 +9,57 @@ body {
     margin: 0;
     padding: 15px;
 }
+
+ul.menu {
+  list-style: none;
+  border: none;
+  text-align:left; /* LTR */
+}
+ul.menu li {
+  margin: 0 0 0 0.5em; /* LTR */
+}
+li.expanded {
+  list-style-type: circle;
+  list-style-image: url(../../misc/menu-expanded.png);
+  padding: 0.2em 0.5em 0 0; /* LTR */
+  margin: 0;
+}
+li.collapsed {
+  list-style-type: disc;
+  list-style-image: url(../../misc/menu-collapsed.png); /* LTR */
+  padding: 0.2em 0.5em 0 0; /* LTR */
+  margin: 0;
+}
+li.leaf {
+  list-style-type: square;
+  list-style-image: url(../../misc/menu-leaf.png);
+  padding: 0.2em 0.5em 0 0; /* LTR */
+  margin: 0;
+}
+li a.active {
+  color: #000;
+}
+td.menu-disabled {
+  background: #ccc;
+}
+ul.links {
+  margin: 0;
+  padding: 0;
+}
+ul.links.inline {
+  display: inline;
+}
+ul.links li {
+  display: inline;
+  list-style-type: none;
+  padding: 0 0.5em;
+}
+.block ul {
+  margin: 0;
+  padding: 0 0 0.25em 1em; /* LTR */
+}
+
+
 img {
     border: 0 none;
 }
@@ -134,46 +185,52 @@ hr.cleaner {
     top: 159px;
 }
 #menu {
-    background-image: url("img/drm_navi.png");
-    background-position: left top;
-    background-repeat: no-repeat;
-    height: 34px;
-    margin-top: 4px;
-    text-align: center;
-    width: 825px;
+	margin-top: 4px;
+	width: 825px;
+	height: 34px;
+	background-image: url("img/drm_navi.png");
+	background-repeat: no-repeat;
+	background-position: top left;
+	text-align: center;
 }
+
 #menu .container {
-    padding: 8px;
+	padding: 8px;
 }
+
 #menu .container A {
-    color: #FFFFFF;
-    font-family: verdana,arial,sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-decoration: none;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-family: verdana, arial, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #FFF;
+	text-decoration: none;
 }
+
 #menu .container A:hover {
-    color: #ED9203;
+	color: #ed9203;
 }
+
 #submenu {
-    height: 28px;
-    margin-top: 4px;
-    text-align: center;
-    width: 825px;
+	margin-top: 4px;
+	width: 825px;
+	height: 28px;
+	text-align: center;
 }
+
 #submenu A {
-    color: #666666;
-    font-family: verdana,arial,sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-    padding-left: 10px;
-    padding-right: 10px;
-    text-decoration: none;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-family: verdana, arial, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #666;
+	text-decoration: none;
 }
+
 #submenu A:hover {
-    color: #ED9203;
+	color: #ed9203;
 }
 #body {
     margin-top: 10px;

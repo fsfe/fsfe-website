@@ -1,0 +1,358 @@
+
+body {
+    background-color: #E1E1E1;
+    background-image: url("img/drm_bg.png");
+    background-position: center top;
+    background-repeat: repeat-y;
+    font-family: Verdana,arial,sans-serif;
+    font-size: 11px;
+    margin: 0;
+    padding: 15px;
+}
+img {
+    border: 0 none;
+}
+a {
+    color: #9A1408;
+    font-weight: bold;
+    text-decoration: none;
+}
+a:hover {
+    color: #9A1408;
+}
+h1 {
+    font-size: 1.5em;
+}
+h2 {
+    font-size: 1.4em;
+}
+h3 {
+    font-size: 1.3em;
+}
+h4, h5, h6 {
+    font-size: 1.2em;
+}
+.content_links A {
+    color: #000000;
+    font-family: verdana,arial,sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.content_links A:hover {
+    color: #ED9203;
+}
+input.loginbox {
+    background-color: #EFEFEF;
+    border: 1px solid #999999;
+    font-size: 11px;
+    width: 6em;
+}
+input.loginbutton {
+    background-color: #990F08;
+    border: 1px solid #666666;
+    color: #FFFFFF;
+    font-size: 11px;
+}
+input {
+    background-color: #EFEFEF;
+    border: 1px solid #999999;
+}
+hr.cleaner {
+    border: medium none;
+    clear: both;
+    height: 0;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
+}
+#header {
+    text-align: left;
+    width: 825px;
+}
+.logo {
+    background-image: url("img/drm_logo_top.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    float: left;
+    height: 207px;
+    text-align: left;
+    width: 647px;
+}
+.login {
+    margin: 0 0 0 620px;
+    padding-top: 20px;
+    text-align: left;
+}
+.login A {
+    color: #990F08;
+    font-family: verdana,arial,sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.login A:hover {
+    color: #ED9203;
+}
+.login A.password {
+    color: #999999;
+    font-family: verdana,arial,sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.login A.password:hover {
+    color: #000000;
+}
+.login A.lang {
+    color: #000000;
+    font-family: verdana,arial,sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 2px;
+    text-decoration: none;
+}
+.login A.lang:hover {
+    color: #990F08;
+}
+.slogan1 {
+    color: #999999;
+    font-family: verdana,arial,sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    left: 331px;
+    position: relative;
+    top: 94px;
+}
+.slogan2 {
+    color: #FFFFFF;
+    font-family: verdana,arial,sans-serif;
+    font-size: 11px;
+    left: 98px;
+    position: relative;
+    top: 159px;
+}
+#menu {
+    background-image: url("img/drm_navi.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    height: 34px;
+    margin-top: 4px;
+    text-align: center;
+    width: 825px;
+}
+#menu .container {
+    padding: 8px;
+}
+#menu .container A {
+    color: #FFFFFF;
+    font-family: verdana,arial,sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+}
+#menu .container A:hover {
+    color: #ED9203;
+}
+#submenu {
+    height: 28px;
+    margin-top: 4px;
+    text-align: center;
+    width: 825px;
+}
+#submenu A {
+    color: #666666;
+    font-family: verdana,arial,sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+}
+#submenu A:hover {
+    color: #ED9203;
+}
+#body {
+    margin-top: 10px;
+    text-align: left;
+    width: 825px;
+}
+#blocks TABLE {
+}
+.form-submit {
+    background-color: #990F08;
+    border: 1px solid #666666;
+    color: #FFFFFF;
+    font-size: 11px;
+}
+.col1 {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 114px;
+}
+.col2 {
+    float: left;
+    margin-left: 10px;
+    padding: 0;
+    width: 660px;
+}
+.col3 {
+    margin: 0 0 0 679px;
+    padding: 0;
+    width: 124px;
+}
+.contenido {
+    background-color: #FFFFFF;
+    font-family: verdana,arial,sans-serif;
+    font-size: 12px;
+    width: 660px;
+}
+.even {
+    color: #999999;
+    font-family: verdana,arial,sans-serif;
+    font-size: 12px;
+}
+.odd {
+    color: #9A1408;
+    font-family: verdana,arial,sans-serif;
+    font-size: 12px;
+}
+.active {
+    font-size: 12px;
+}
+.help {
+    color: #999999;
+    font-family: verdana,arial,sans-serif;
+    font-size: 12px;
+}
+.description {
+    color: #999999;
+    font-family: verdana,arial,sans-serif;
+    font-size: 10px;
+    margin-bottom: 0;
+    width: 500px;
+}
+.description2 A {
+    color: #999999;
+    font-family: verdana,arial,sans-serif;
+    font-size: 10px;
+    margin-bottom: 0;
+}
+.description2 A:hover {
+    color: #9A1408;
+    font-family: verdana,arial,sans-serif;
+    font-size: 10px;
+    text-decoration: underline;
+}
+.block_links A {
+    font-family: verdana,arial,sans-serif;
+    font-size: 10px;
+}
+.block_links A:hover {
+    color: #999999;
+    font-family: verdana,arial,sans-serif;
+    font-size: 10px;
+    text-decoration: underline;
+}
+.title {
+    color: #000000;
+    font-family: verdana,arial,sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.option {
+    font-family: verdana,arial,sans-serif;
+    font-size: 12px;
+    width: 500px;
+}
+.tabs {
+    color: #999999;
+    font-size: 12px;
+    margin-bottom: 0;
+}
+.borders {
+    margin: 0;
+    padding: 0;
+}
+.borders_top {
+    background-image: url("img/drm_contentbg_top.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    height: 29px;
+    margin: 0;
+    padding: 0;
+    width: 660px;
+}
+.borders_bottom {
+    background-image: url("img/drm_contentbg_bottom.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    width: 660px;
+}
+.inner_content {
+    background-image: url("img/drm_contentbg_middle.png");
+    background-repeat: repeat-y;
+    font-family: verdana,arial,sans-serif;
+    font-size: 13px;
+    padding-left: 20px;
+    padding-right: 30px;
+}
+.title1 {
+    color: #990F08;
+    font-family: verdana,arial,sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+.title2 {
+    color: #990F08;
+    font-family: verdana,arial,sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+.breadcrumb {
+    color: #999999;
+    font-family: verdana,arial,sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+}
+.node {
+    margin-bottom: 0;
+    padding: 10px;
+}
+.profile {
+    margin-bottom: 0;
+    padding: 10px;
+}
+.node.sticky {
+    background: none repeat scroll 0 0 #CCCCCC;
+}
+.node .submitted {
+    color: #999999;
+    font-size: 9px;
+}
+.node h2 {
+    margin-top: 3px;
+    padding-top: 0;
+}
+.node .info {
+    font-size: 0.83em;
+    font-style: italic;
+    text-align: left;
+}
+.node .links {
+    padding-left: 10px;
+}
+#footer {
+    margin-top: 30px;
+    text-align: center;
+    width: 825px;
+}
+

@@ -9,7 +9,7 @@
       <xsl:element name="link">
         <xsl:attribute name="rel">stylesheet</xsl:attribute>
         <xsl:attribute name="media">all</xsl:attribute>
-        <xsl:attribute name="href">drm_info.css</xsl:attribute>
+        <xsl:attribute name="href">drm-info.css</xsl:attribute>
         <xsl:attribute name="type">text/css</xsl:attribute>
       </xsl:element>
 

@@ -2,7 +2,17 @@
 
 <textset>
 
+<!-- ALL STATIC TEXTS -->
+
+  <!-- Basic texts -->
   <text id="fsfeurope">Free Software Foundation&#160;Europe</text>
+  <text id="fsfnetwork">
+    FSFE has <a href="/about/fsfnetwork.html">sister organisations</a> in <a
+      href="http://www.fsf.org/">North America</a>, <a
+      href="http://www.fsf.org.in/">India</a> and <a
+      href="http://www.fsfla.org/">Latin America</a>.
+  </text>
+
 
   <!-- Footer -->
   <text id="lastchanged"> Last changed: </text>
@@ -16,12 +26,9 @@
     Verbatim copying and distribution of this entire article is permitted
     in any medium, provided this notice is preserved.
   </text>
-  <text id="fsfnetwork">
-    FSFE has <a href="/about/fsfnetwork.html">sister organisations</a> in <a
-      href="http://www.fsf.org/">North America</a>, <a
-      href="http://www.fsf.org.in/">India</a> and <a
-      href="http://www.fsfla.org/">Latin America</a>.
-  </text>
+
+
+  <!-- Warning info boxes -->
   <text id="outdated">
     <strong>Warning: </strong>
     This page may be out of date with the original. Please use
@@ -44,112 +51,62 @@
     <a href="/contribute/contribute.html">this page</a> to see how you can help
     with translations, and other things.
   </text>
-
-  <text id="change-lang">Change language</text>
-  <text id="menu">Menu</text>
-  <text id="content">Content</text>
-  <text id="page-info">Page info</text>
-  <text id="rootpage">Home</text>
-  <text id="sitemap">Sitemap</text>
-
-  <text id="go-top">Go to the top</text>
-  <text id="source">Source code</text>
-  <text id="contact-us">Contact us</text>
-  <text id="translate">Translate this page?</text>
-  <text id="contribute-web">Contribute to the Web team</text>
-  <text id="imprint">Imprint</text>
-  <text id="privacy-policy">Privacy Policy</text>
-  
-  <!-- Info box -->
-  <text id="under-construction">
+    <text id="under-construction">
     <strong>Warning: </strong>This page is under construction. Please <strong>do not spread</strong> or attempt translation as its content is subject to change.
   </text>
-  <text id="project-complete">This project has been successfully finished. These pages are kept here for archiving purposes.  </text>
-  <text id="search">Search</text>
-  <text id="submit">Submit</text>
-  <text id="subscribe">Subscribe</text>
-
- <!-- Article metadata -->
-  <text id="author">Author</text>
-  <text id="writtenby">Written&#160;by</text>
-  <text id="published">on</text>
-  <text id="revision">updated&#160;on</text>
-  <text id="download">Download</text>
- 
-  <!-- Conjunctions -->
-  <text id="go-to">Go to:</text>
-
-  <!-- Menu -->
+    <text id="project-complete">This project has been successfully finished. These pages are kept here for archiving purposes.  </text>
+  
+  
+  <!-- Menu, Navigation, Buttons -->
   <text id="fsfe/about">About</text>
   <text id="fsfe/projects">Our Work</text>
   <text id="fsfe/campaigns">Campaigns</text>
   <text id="fsfe/help">Contribute</text>
   <text id="fsfe/press">Press</text>
+  <text id="fsfe/contact">Contact us</text>
   <text id="support/donate">Donate</text>
+  <text id="support/support">Support</text>
+  <text id="support/donate">Donate</text>
+  <text id="support/order">Shop</text>
+  <text id="support/thankgnus">Donors</text>
   <text id="fellowship/fellowship">Fellowship</text>
   <text id="fellowship/login">Login</text>
+  <text id="fellowship/join">Join</text>
+  <text id="fellowship/card">Card</text>
+  <text id="fellowship/faq">F.A.Q.</text>
+  <text id="campaigns/dfd">Document Freedom Day</text>
+  <text id="campaigns/fya">Free Your Android</text>
+  <text id="campaigns/pdf">PDF readers</text>
+  <text id="campaigns/ayc">Ask your candidates</text>
+  <text id="campaigns/drm">DRM.info</text>
   <text id="news/news">Latest News</text>
   <text id="news/events">Upcoming Events</text>
   <text id="news/press">Press Room</text>
   <text id="news/nl">Newsletters</text>
+  <text id="news/planet">Planet blogs</text>
   <text id="ftf/legal">Legal support</text>
+  <text id="ftf/services">Services and Fiduciary</text>
+  <text id="ftf/doc">Documentation</text>
+  <text id="ftf/network">Legal Network</text>
+  <text id="ftf/conference">Conferences</text>
+  <text id="ftf/contact">Contact FSFE Legal Team</text>
   <text id="fs/fs">Free Software</text>
   <text id="fs/basics">Free Software Basics</text>
-
-  <!-- Date time -->
-  <text id="months/1">January</text>
-  <text id="months/2">February</text>
-  <text id="months/3">March</text>
-  <text id="months/4">April</text>
-  <text id="months/5">May</text>
-  <text id="months/6">June</text>
-  <text id="months/7">July</text>
-  <text id="months/8">August</text>
-  <text id="months/9">September</text>
-  <text id="months/10">October</text>
-  <text id="months/11">November</text>
-  <text id="months/12">December</text>
- 
-  <text id="months-abbreviated/1">Jan</text>
-  <text id="months-abbreviated/2">Feb</text>
-  <text id="months-abbreviated/3">Mar</text>
-  <text id="months-abbreviated/4">Apr</text>
-  <text id="months-abbreviated/5">May</text>
-  <text id="months-abbreviated/6">Jun</text>
-  <text id="months-abbreviated/7">Jul</text>
-  <text id="months-abbreviated/8">Aug</text>
-  <text id="months-abbreviated/9">Sep</text>
-  <text id="months-abbreviated/10">Oct</text>
-  <text id="months-abbreviated/11">Nov</text>
-  <text id="months-abbreviated/12">Dec</text>
-
-  <text id="weekdays/1">Monday</text>
-  <text id="weekdays/2">Tuesday</text>
-  <text id="weekdays/3">Wednesday</text>
-  <text id="weekdays/4">Thursday</text>
-  <text id="weekdays/5">Friday</text>
-  <text id="weekdays/6">Saturday</text>
-  <text id="weekdays/7">Sunday</text>
-
-  <text id="weekdays-abbreviated/1">Mon</text>
-  <text id="weekdays-abbreviated/2">Tue</text>
-  <text id="weekdays-abbreviated/3">Wed</text>
-  <text id="weekdays-abbreviated/4">Thu</text>
-  <text id="weekdays-abbreviated/5">Fri</text>
-  <text id="weekdays-abbreviated/6">Sat</text>
-  <text id="weekdays-abbreviated/7">Sun</text>
-
-
+  <text id="fs/def">Definition</text>
+  <text id="fs/soc">Free Society</text>
+  <text id="fs/edu">Education</text>
+  <text id="fs/buz">Business</text>
+  
   <text id="motto-fsfs">Free Software, Free Society!</text>
   <text id="motto-fellowship">Join FSFE’s community!</text>
-  
   <text id="learn-more">Learn more</text>
-
   <text id="press">Press</text>
   <text id="newsletter">Newsletter</text>
-	
-	
-  <!-- These used to be in /tools/texts-content-**.xml -->
+  
+  <text id="go-to">Go to:</text>
+  <text id="search">Search</text>
+  <text id="submit">Submit</text>
+  <text id="subscribe">Subscribe</text>
   <text id="news">News</text>
   <text id="receive-newsletter">Subscribe to FSFE's monthly newsletter</text>
   <text id="subscribe-newsletter">Subscribe to the newsletter</text>
@@ -157,46 +114,39 @@
   <text id="more">See more</text>
   <text id="morenews">See all news</text>
   <text id="moreevents">See all events</text>
-  
   <text id="contact">Contact</text>
-  
   <text id="team">Team</text>
   <text id="microblog">Microblog</text>
-  
-  <text id="donate">Donate</text>
-  <text id="donate-paragraph">
-    <p>
-      The Free Software Foundation Europe is a non-profit non-governmental
-      organisation. <a href="/work.en.html">Our work</a> is made
-      possible by a community of
-      <a href="/contribute/contribute.en.html">volunteers</a>,
-      <a href="http://fellowship.fsfe.org">Fellows</a> and
-      <a href="thankgnus.en.html">donors</a>. Your donations are critical to our
-      strength and autonomy. They enable us to continue working for Free
-      Software wherever necessary, and to be an independent voice.
-    </p>
-  </text>
-
-  <!-- end of texts for the campaign box -->
-
-  <text id="join">Join</text>
-  <text id="join-paragraph">
-    <p>Become a Fellow of the FSFE to empower our work and help to assure our financial independence. By joining the Fellowship you will become a donating, sustaining member of the FSFE - including access to our infrastructure.</p>
-  </text>
-  <text id="join-fellowship">Join the Fellowship</text>
-
-  <text id="support">Support the FSFE</text>
-  <text id="show-support">Show your support!</text>
-  <text id="show-support-paragraph"><p>FSFE needs your support to get its voice heard! Every hit counts!</p></text>
-  <text id="support-fsfe">I support the FSFE!</text>
-  
-  <!-- alt text for missing avatars -->
   <text id="no-avatar">No Picture</text>
-  
+
+  <text id="change-lang">Change language</text>
+  <text id="menu">Menu</text>
+  <text id="content">Content</text>
+  <text id="page-info">Page info</text>
+  <text id="rootpage">Home</text>
+  <text id="sitemap">Sitemap</text>
+  <text id="go-top">Go to the top</text>
+  <text id="source">Source code</text>
+  <text id="contact-us">Contact us</text>
+  <text id="translate">Translate this page?</text>
+  <text id="contribute-web">Contribute to the Web team</text>
+  <text id="imprint">Imprint</text>
+  <text id="privacy-policy">Privacy Policy</text>
+
+
+  <!-- Article metadata -->
+  <text id="author">Author</text>
+  <text id="writtenby">Written&#160;by</text>
+  <text id="published">on</text>
+  <text id="revision">updated&#160;on</text>
+  <text id="download">Download</text>
+
+
   <!-- petitions -->
   <text id="osig">Organisations</text>
   <text id="isig">Individuals</text>
   <text id="bsig">Businesses</text>
+  
   
   <!-- Sidebars -->
   <text id="related-news">Related News</text>
@@ -220,8 +170,41 @@
       participation, and are extremely important.
     </p>
   </text>
-    
-  <!-- campaigns to be displayed in a rotating box -->
+
+
+  <!-- Motivational texts for fellowship, support or donations -->
+  <text id="join">Join</text>
+  <text id="join-paragraph">
+    <p>Become a Fellow of the FSFE to empower our work and help to assure our financial independence. By joining the Fellowship you will become a donating, sustaining member of the FSFE - including access to our infrastructure.</p>
+  </text>
+  <text id="join-fellowship">Join the Fellowship</text>
+
+  <text id="support">Support the FSFE</text>
+  <text id="show-support">Show your support!</text>
+  <text id="show-support-paragraph">
+      <p>FSFE needs your support to get its voice heard! Every hit counts!</p>
+  </text>
+  <text id="support-fsfe">I support the FSFE!</text>
+
+  <text id="donate">Donate</text>
+  <text id="donate-paragraph">
+    <p>
+      The Free Software Foundation Europe is a non-profit non-governmental
+      organisation. <a href="/work.en.html">Our work</a> is made
+      possible by a community of
+      <a href="/contribute/contribute.en.html">volunteers</a>,
+      <a href="http://fellowship.fsfe.org">Fellows</a> and
+      <a href="thankgnus.en.html">donors</a>. Your donations are critical to our
+      strength and autonomy. They enable us to continue working for Free
+      Software wherever necessary, and to be an independent voice.
+    </p>
+  </text>
+
+
+
+<!-- ALL CAMPAIGN TEXTS -->
+
+  <!-- campaigns to be displayed in a rotating box on frontpage -->
   <campaigns>
     <campaign id="dfd">
         <photo>/graphics/robot-protest-light.png</photo>
@@ -306,7 +289,10 @@
 
   </campaigns>
   
-  <!-- quotes to be displayed in a rotating box -->
+
+<!-- ALL QUOTES -->
+
+  <!-- quotes to be displayed in a rotating box on front page -->
   <quotes>
     <quote id="zacchiroli" tag="donors" pos="2">
       <photo>/donate/zacchiroli.jpg</photo>
@@ -585,5 +571,3 @@
 
   </quotes>  
 </textset>
-
-

@@ -77,7 +77,7 @@
       <xsl:element name="section"> <xsl:attribute name="id">main</xsl:attribute>
         <xsl:apply-templates select="body/node()" />
       </xsl:element>
- 
+      <xsl:element name="hr" /> 
       <xsl:element name="footer">
         <xsl:attribute name="id">bottom</xsl:attribute>
  

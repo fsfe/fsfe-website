@@ -19,7 +19,7 @@
         <xsl:attribute name="id">top</xsl:attribute>
 
         <xsl:element name="div">
-          <xsl:attribute name="id">logo</xsl:attribute>
+          <xsl:attribute name="class">logo</xsl:attribute>
           <xsl:element name="a">
             <xsl:attribute name="href">http://drm.info</xsl:attribute>
             <xsl:element name="img">
@@ -33,32 +33,38 @@
 
         <xsl:element name="div">
           <xsl:attribute name="id">menu</xsl:attribute>
-          <xsl:element name="ul">
-            <xsl:element name="li">
-              <xsl:element name="a">
-                <xsl:attribute name="href">pdfreaders.html</xsl:attribute>
-		The Readers
+	  <xsl:element name="div">
+            <xsl:attribute name="class">container</xsl:attribute>
+
+            <xsl:element name="ul">
+	    <xsl:attribute name="class">links</xsl:attribute>
+              <xsl:element name="li">
+                <xsl:attribute name="class">menu-302 first</xsl:attribute>
+		<xsl:element name="a">
+                  <xsl:attribute name="href">pdfreaders.html</xsl:attribute>
+		  The Readers
+                </xsl:element>
+              </xsl:element>
+              <xsl:element name="li">
+                <xsl:element name="a">
+                  <xsl:attribute name="href">openstandards.html</xsl:attribute>
+                  Open Standards
+                </xsl:element>
+              </xsl:element>
+              <xsl:element name="li">
+                <xsl:element name="a">
+                  <xsl:attribute name="href">graphics.html</xsl:attribute>
+                  Graphics
+                </xsl:element>
+              </xsl:element>
+              <xsl:element name="li">
+                <xsl:element name="a">
+                  <xsl:attribute name="href">about.html</xsl:attribute>
+                  About
+                </xsl:element>
               </xsl:element>
             </xsl:element>
-            <xsl:element name="li">
-              <xsl:element name="a">
-                <xsl:attribute name="href">openstandards.html</xsl:attribute>
-                Open Standards
-              </xsl:element>
-            </xsl:element>
-            <xsl:element name="li">
-              <xsl:element name="a">
-                <xsl:attribute name="href">graphics.html</xsl:attribute>
-                Graphics
-              </xsl:element>
-            </xsl:element>
-            <xsl:element name="li">
-              <xsl:element name="a">
-                <xsl:attribute name="href">about.html</xsl:attribute>
-                About
-              </xsl:element>
-            </xsl:element>
-          </xsl:element>
+	  </xsl:element>
         </xsl:element>
 
       </xsl:element>

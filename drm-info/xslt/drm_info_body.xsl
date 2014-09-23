@@ -42,22 +42,25 @@
                 <xsl:attribute name="class">menu-302 first</xsl:attribute>
 		<xsl:element name="a">
                   <xsl:attribute name="href">pdfreaders.html</xsl:attribute>
-		  The Readers
+		  What is DRM
                 </xsl:element>
               </xsl:element>
               <xsl:element name="li">
-                <xsl:element name="a">
+                 <xsl:attribute name="class">menu-302 first</xsl:attribute>
+		<xsl:element name="a">
                   <xsl:attribute name="href">openstandards.html</xsl:attribute>
-                  Open Standards
+                  Citizens Rights
                 </xsl:element>
               </xsl:element>
               <xsl:element name="li">
+		 <xsl:attribute name="class">menu-302 first</xsl:attribute>
                 <xsl:element name="a">
                   <xsl:attribute name="href">graphics.html</xsl:attribute>
-                  Graphics
+                  Losing Heritage
                 </xsl:element>
               </xsl:element>
               <xsl:element name="li">
+		 <xsl:attribute name="class">menu-302 first</xsl:attribute>
                 <xsl:element name="a">
                   <xsl:attribute name="href">about.html</xsl:attribute>
                   About

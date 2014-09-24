@@ -24,6 +24,11 @@ li.expanded {
   padding: 0.2em 0.5em 0 0; /* LTR */
   margin: 0;
 }
+ul.col3
+{
+  list-style:none;
+  text-algn:left;
+}
 li.collapsed {
   list-style-type: disc;
   list-style-image: url(../../misc/menu-collapsed.png); /* LTR */

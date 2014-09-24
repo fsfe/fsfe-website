@@ -72,6 +72,23 @@
 
       </xsl:element>
       <xsl:element name="section"><xsl:attribute name="id">sidebar</xsl:attribute>
+<xsl:element name="h3">Powered By</xsl:element>
+         <xsl:element name="ul">
+           <xsl:element name="li">
+             <xsl:element name="a"><xsl:attribute name="href">https://fsfe.org/</xsl:attribute>
+               <xsl:element name="img">
+                 <xsl:attribute name="src">logos/logosmall.png</xsl:attribute>
+                 <xsl:attribute name="alt">FSFE</xsl:attribute>
+                 <xsl:attribute name="title">FSF Europe</xsl:attribute>
+               </xsl:element>
+             </xsl:element>
+           </xsl:element>
+</xsl:element>
+
+
+           <ul><li><a href="http://fsfe.org"><img src="logos/logosmall.png" alt="FSFE" title="FSF Europe"/> </a></li>
+        </ul>
+
 	 <xsl:element name="h4">In Collaboration with</xsl:element>
 	 <xsl:element name="ul">
 	   <xsl:element name="li">
@@ -121,7 +138,7 @@
           <xsl:apply-templates select="body/node()" />
 	</xsl:element>
       </xsl:element>
-      <xsl:element name="hr" /> 
+<!--      <xsl:element name="hr" /> 
       <xsl:element name="footer">
         <xsl:attribute name="id">bottom</xsl:attribute>
  
@@ -133,8 +150,8 @@
         <xsl:element name="section">
           <xsl:attribute name="id">sister-organisations</xsl:attribute>
           <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfnetwork'" /></xsl:call-template>
-        </xsl:element>
-      </xsl:element>
+        </xsl:element> 
+      </xsl:element> -->
     </xsl:element>
   </xsl:template>
 </xsl:stylesheet>

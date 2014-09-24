@@ -33,7 +33,7 @@
             <xsl:otherwise>
               <xsl:element name="li">
                 <xsl:element name="a">
-                  <xsl:attribute name="href"><xsl:value-of select="substring-after(/buildinfo/@filename, concat('/', /buildinfo/@dirname))"/>.<xsl:value-of select="@id"/>.html</xsl:attribute>
+                  <xsl:attribute name="href"><xsl:value-of select="/buildinfo/@filename"/>.<xsl:value-of select="@id"/>.html</xsl:attribute>
                   <xsl:value-of select="." disable-output-escaping="yes"/>
                 </xsl:element>
               </xsl:element>

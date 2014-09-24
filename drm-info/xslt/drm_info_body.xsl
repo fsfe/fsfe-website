@@ -84,29 +84,29 @@
 	     </xsl:element>
 	   </xsl:element>
 	   <xsl:element name="li">
-             <xsl:element name="a"><xsl:attribute name="href">https://digitalegesellschaft.de/</xsl:attribute>
+             <xsl:element name="a"><xsl:attribute name="href">http://www.defectivebydesign.org/</xsl:attribute>
                <xsl:element name="img">
-                 <xsl:attribute name="src">logos/digitalle-gesellschaft-logo.png</xsl:attribute>
-                 <xsl:attribute name="alt">Digitalle Gesellschaft</xsl:attribute>
-                 <xsl:attribute name="title">Digitalle Gesellschaft</xsl:attribute>
+                 <xsl:attribute name="src">logos/dbd-logo-small.png</xsl:attribute>
+                 <xsl:attribute name="alt">Defective By Design</xsl:attribute>
+                 <xsl:attribute name="title">Defective By Design</xsl:attribute>
                </xsl:element>
              </xsl:element>
            </xsl:element>
 	  <xsl:element name="li">
-             <xsl:element name="a"><xsl:attribute name="href">https://digitalegesellschaft.de/</xsl:attribute>
+             <xsl:element name="a"><xsl:attribute name="href">http://www.eff.org/</xsl:attribute>
                <xsl:element name="img">
-                 <xsl:attribute name="src">logos/digitalle-gesellschaft-logo.png</xsl:attribute>
-                 <xsl:attribute name="alt">Digitalle Gesellschaft</xsl:attribute>
-                 <xsl:attribute name="title">Digitalle Gesellschaft</xsl:attribute>
+                 <xsl:attribute name="src">logos/EFF-logo-trans.thumbnail.png</xsl:attribute>
+                 <xsl:attribute name="alt">Electronic Frontier Foundation</xsl:attribute>
+                 <xsl:attribute name="title">Electronic Frontier Foundation</xsl:attribute>
                </xsl:element>
              </xsl:element>
            </xsl:element>
 	   <xsl:element name="li">
-             <xsl:element name="a"><xsl:attribute name="href">https://digitalegesellschaft.de/</xsl:attribute>
+             <xsl:element name="a"><xsl:attribute name="href">http://www.ccc.de/</xsl:attribute>
                <xsl:element name="img">
-                 <xsl:attribute name="src">logos/digitalle-gesellschaft-logo.png</xsl:attribute>
-                 <xsl:attribute name="alt">Digitalle Gesellschaft</xsl:attribute>
-                 <xsl:attribute name="title">Digitalle Gesellschaft</xsl:attribute>
+                 <xsl:attribute name="src">logos/ccc.png</xsl:attribute>
+                 <xsl:attribute name="alt">Chaos Computer Club</xsl:attribute>
+                 <xsl:attribute name="title">Chaos Computer Club</xsl:attribute>
                </xsl:element>
              </xsl:element>
            </xsl:element>

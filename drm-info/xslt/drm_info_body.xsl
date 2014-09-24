@@ -17,7 +17,7 @@
     <xsl:element name="body">
       <xsl:element name="header">
         <xsl:attribute name="id">top</xsl:attribute>
-
+<!--
         <xsl:element name="div">
           <xsl:attribute name="class">logo</xsl:attribute>
           <xsl:element name="a">
@@ -28,7 +28,7 @@
             </xsl:element>
           </xsl:element>
         </xsl:element>
-
+-->
         <xsl:call-template name="translation_list" />
 
         <xsl:element name="div">
@@ -71,13 +71,71 @@
         </xsl:element>
 
       </xsl:element>
- 
-      <xsl:call-template name="notifications" />
+      <xsl:element name="div"><xsl:attribute name="class">col3</xsl:attribute>
+<xsl:element name="h3">Powered By</xsl:element>
+         <xsl:element name="ul">
+           <xsl:element name="li">
+             <xsl:element name="a"><xsl:attribute name="href">https://fsfe.org/</xsl:attribute>
+               <xsl:element name="img">
+                 <xsl:attribute name="src">logos/logosmall.png</xsl:attribute>
+                 <xsl:attribute name="alt">FSFE</xsl:attribute>
+                 <xsl:attribute name="title">FSF Europe</xsl:attribute>
+               </xsl:element>
+             </xsl:element>
+           </xsl:element>
+</xsl:element>
+        
 
-      <xsl:element name="section"> <xsl:attribute name="id">main</xsl:attribute>
-        <xsl:apply-templates select="body/node()" />
+	 <xsl:element name="h4">In Collaboration with</xsl:element>
+	 <xsl:element name="ul">
+	   <xsl:element name="li">
+	     <xsl:element name="a"><xsl:attribute name="href">https://digitalegesellschaft.de/</xsl:attribute>
+	       <xsl:element name="img">
+	         <xsl:attribute name="src">logos/digitalle-gesellschaft-logo.png</xsl:attribute>
+		 <xsl:attribute name="alt">Digitalle Gesellschaft</xsl:attribute>
+		 <xsl:attribute name="title">Digitalle Gesellschaft</xsl:attribute>
+	       </xsl:element>
+	     </xsl:element>
+	   </xsl:element>
+	   <xsl:element name="li">
+             <xsl:element name="a"><xsl:attribute name="href">http://www.defectivebydesign.org/</xsl:attribute>
+               <xsl:element name="img">
+                 <xsl:attribute name="src">logos/dbd-logo-small.png</xsl:attribute>
+                 <xsl:attribute name="alt">Defective By Design</xsl:attribute>
+                 <xsl:attribute name="title">Defective By Design</xsl:attribute>
+               </xsl:element>
+             </xsl:element>
+           </xsl:element>
+	  <xsl:element name="li">
+             <xsl:element name="a"><xsl:attribute name="href">http://www.eff.org/</xsl:attribute>
+               <xsl:element name="img">
+                 <xsl:attribute name="src">logos/EFF-logo-trans.thumbnail.png</xsl:attribute>
+                 <xsl:attribute name="alt">Electronic Frontier Foundation</xsl:attribute>
+                 <xsl:attribute name="title">Electronic Frontier Foundation</xsl:attribute>
+               </xsl:element>
+             </xsl:element>
+           </xsl:element>
+	   <xsl:element name="li">
+             <xsl:element name="a"><xsl:attribute name="href">http://www.ccc.de/</xsl:attribute>
+               <xsl:element name="img">
+                 <xsl:attribute name="src">logos/ccc.png</xsl:attribute>
+                 <xsl:attribute name="alt">Chaos Computer Club</xsl:attribute>
+                 <xsl:attribute name="title">Chaos Computer Club</xsl:attribute>
+               </xsl:element>
+             </xsl:element>
+           </xsl:element>
+	</xsl:element>	
+</xsl:element>
+
+ 
+<!--      <xsl:call-template name="notifications" /> -->
+
+      <xsl:element name="div"> <xsl:attribute name="class">col2</xsl:attribute>
+	<xsl:element name="center">
+          <xsl:apply-templates select="body/node()" />
+	</xsl:element>
       </xsl:element>
-      <xsl:element name="hr" /> 
+<!--      <xsl:element name="hr" /> 
       <xsl:element name="footer">
         <xsl:attribute name="id">bottom</xsl:attribute>
  
@@ -89,8 +147,8 @@
         <xsl:element name="section">
           <xsl:attribute name="id">sister-organisations</xsl:attribute>
           <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfnetwork'" /></xsl:call-template>
-        </xsl:element>
-      </xsl:element>
+        </xsl:element> 
+      </xsl:element> -->
     </xsl:element>
   </xsl:template>
 </xsl:stylesheet>

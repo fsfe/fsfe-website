@@ -32,9 +32,9 @@
         <xsl:element name="div">
           <xsl:attribute name="id">fsfe-logo</xsl:attribute>
           <xsl:element name="a">
-            <xsl:attribute name="href">http://www.fsfe.org</xsl:attribute>
+            <xsl:attribute name="href">http://fsfe.org</xsl:attribute>
             <xsl:element name="img">
-              <xsl:attribute name="src">/graphics/logo_transparent.svg</xsl:attribute>
+              <xsl:attribute name="src">//fsfe.org//graphics/logo_transparent.svg</xsl:attribute>
               <xsl:attribute name="alt">FSFE.org</xsl:attribute>
             </xsl:element>
           </xsl:element>

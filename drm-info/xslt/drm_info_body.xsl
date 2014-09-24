@@ -15,6 +15,8 @@
 
   <xsl:template name="page-body">
     <xsl:element name="body">
+<xsl:element name="center">
+
       <xsl:element name="header">
         <xsl:attribute name="id">top</xsl:attribute>
 <!--
@@ -131,7 +133,6 @@
 <!--      <xsl:call-template name="notifications" /> -->
 
       <xsl:element name="div"> <xsl:attribute name="class">col2</xsl:attribute>
-	<xsl:element name="center">
           <xsl:apply-templates select="body/node()" />
 	</xsl:element>
       </xsl:element>
@@ -150,5 +151,6 @@
         </xsl:element> 
       </xsl:element> -->
     </xsl:element>
-  </xsl:template>
+   </xsl:element> 
+ </xsl:template>
 </xsl:stylesheet>

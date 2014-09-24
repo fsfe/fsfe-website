@@ -15,7 +15,7 @@
 
   <xsl:template name="page-body">
     <xsl:element name="body">
-<xsl:element name="center">
+	<xsl:element name="center">
 
       <xsl:element name="header">
         <xsl:attribute name="id">top</xsl:attribute>
@@ -128,7 +128,7 @@
            </xsl:element>
 	</xsl:element>	
 </xsl:element>
-
+</xsl:element>
  
 <!--      <xsl:call-template name="notifications" /> -->
 
@@ -150,7 +150,6 @@
           <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfnetwork'" /></xsl:call-template>
         </xsl:element> 
       </xsl:element> -->
-    </xsl:element>
-   </xsl:element> 
+    </xsl:element> 
  </xsl:template>
 </xsl:stylesheet>

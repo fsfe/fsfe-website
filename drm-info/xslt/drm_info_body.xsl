@@ -71,7 +71,7 @@
         </xsl:element>
 
       </xsl:element>
-      <xsl:element name="div"><xsl:attribute name="id">col3</xsl:attribute>
+      <xsl:element name="div"><xsl:attribute name="class">col3</xsl:attribute>
 <xsl:element name="h3">Powered By</xsl:element>
          <xsl:element name="ul">
            <xsl:element name="li">
@@ -130,7 +130,7 @@
  
 <!--      <xsl:call-template name="notifications" /> -->
 
-      <xsl:element name="div"> <xsl:attribute name="id">col3</xsl:attribute>
+      <xsl:element name="div"> <xsl:attribute name="class">col3</xsl:attribute>
 	<xsl:element name="center">
           <xsl:apply-templates select="body/node()" />
 	</xsl:element>

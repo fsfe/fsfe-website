@@ -15,7 +15,7 @@
 
   <xsl:template name="page-body">
     <xsl:element name="body">
-	<xsl:element name="center">
+	
 
       <xsl:element name="header">
         <xsl:attribute name="id">top</xsl:attribute>
@@ -127,7 +127,7 @@
              </xsl:element>
            </xsl:element>
 	</xsl:element>	
-</xsl:element>
+
 </xsl:element>
  
 <!--      <xsl:call-template name="notifications" /> -->

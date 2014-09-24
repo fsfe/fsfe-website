@@ -71,6 +71,48 @@
         </xsl:element>
 
       </xsl:element>
+      <xsl:element name="section"><xsl:attribute name="id">sidebar</xsl:attribute>
+	 <xsl:element name="h4">In Collaboration with</xsl:element>
+	 <xsl:element name="ul">
+	   <xsl:element name="li">
+	     <xsl:element name="a"><xsl:attribute name="href">https://digitalegesellschaft.de/</xsl:attribute>
+	       <xsl:element name="img">
+	         <xsl:attribute name="src">logos/digitalle-gesellschaft-logo.png</xsl:attribute>
+		 <xsl:attribute name="alt">Digitalle Gesellschaft</xsl:attribute>
+		 <xsl:attribute name="title">Digitalle Gesellschaft</xsl:attribute>
+	       </xsl:element>
+	     </xsl:element>
+	   </xsl:element>
+	   <xsl:element name="li">
+             <xsl:element name="a"><xsl:attribute name="href">https://digitalegesellschaft.de/</xsl:attribute>
+               <xsl:element name="img">
+                 <xsl:attribute name="src">logos/digitalle-gesellschaft-logo.png</xsl:attribute>
+                 <xsl:attribute name="alt">Digitalle Gesellschaft</xsl:attribute>
+                 <xsl:attribute name="title">Digitalle Gesellschaft</xsl:attribute>
+               </xsl:element>
+             </xsl:element>
+           </xsl:element>
+	  <xsl:element name="li">
+             <xsl:element name="a"><xsl:attribute name="href">https://digitalegesellschaft.de/</xsl:attribute>
+               <xsl:element name="img">
+                 <xsl:attribute name="src">logos/digitalle-gesellschaft-logo.png</xsl:attribute>
+                 <xsl:attribute name="alt">Digitalle Gesellschaft</xsl:attribute>
+                 <xsl:attribute name="title">Digitalle Gesellschaft</xsl:attribute>
+               </xsl:element>
+             </xsl:element>
+           </xsl:element>
+	   <xsl:element name="li">
+             <xsl:element name="a"><xsl:attribute name="href">https://digitalegesellschaft.de/</xsl:attribute>
+               <xsl:element name="img">
+                 <xsl:attribute name="src">logos/digitalle-gesellschaft-logo.png</xsl:attribute>
+                 <xsl:attribute name="alt">Digitalle Gesellschaft</xsl:attribute>
+                 <xsl:attribute name="title">Digitalle Gesellschaft</xsl:attribute>
+               </xsl:element>
+             </xsl:element>
+           </xsl:element>
+	</xsl:element>	
+</xsl:element>
+
  
       <xsl:call-template name="notifications" />
 

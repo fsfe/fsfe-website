@@ -30,18 +30,6 @@
         </xsl:element>
 -->
         <xsl:call-template name="translation_list" />
-        <xsl:element name="div">
-          <xsl:attribute name="id">wrap</xsl:attribute>
-	  <xsl:element name="div">
-            <xsl:attribute name="id">col2</xsl:attribute>
-	  </xsl:element>
-	  <xsl:element name="div">
-             <xsl:attribute name="id">col3</xsl:attribute>
-	  </xsl:element>
-   	  <xsl:element name="div">
-            <xsl:attribute name="id">footer</xsl:attribute>
-	  </xsl:element>
-        </xsl:element>
 
 		<xsl:element name="div">
           <xsl:attribute name="id">menu</xsl:attribute>

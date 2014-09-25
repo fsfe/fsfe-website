@@ -1,9 +1,40 @@
 @import "style.less";
 
+
+/* UPDATE with the PDFreaders colors */
+@brand-primary: @fellowship-dark;
+@brand-secondary: @fellowship-bright;
+@brand-strong: @fellowship-strong;
+@brand-strong-semialpha: @fellowship-strong-semialpha;
+
+
 body {
     background-image: none;
     background-color: #EEE;
 }
 
+header#top, section#main {
+    border-style: none solid;
+    border-width: 4px;
+    border-color: #693; /*FIXME COLOR variable*/
+}
+
+header#top {
+    background: #FFF;
+}
+
+section#main {
+    margin: auto;
+    box-shadow: none;
+    border-bottom: solid;
+}
 
 /* look at ../pdfreaders/pdfreaders.css to continue porting the css to this LESS file to avoid duplicated content and maintain unified design */
+
+
+/* TODO:
+ *
+ * use the same menu structure as fsfe.org
+ * use the same translation menu as fsfe.org
+ * place the fsfe Logo on the right
+ * import the style that’s specific from pdfreaders.css - most probably the only thing specific is the grid view of the front page */

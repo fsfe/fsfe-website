@@ -89,7 +89,7 @@
  <xsl:element name="center">
  
 <!--      <xsl:call-template name="notifications" /> -->
-<xsl:element name="center">
+
       <xsl:element name="div"> <xsl:attribute name="class">col2</xsl:attribute>
 	
           <xsl:apply-templates select="body/node()" />
@@ -166,7 +166,7 @@
           <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfnetwork'" /></xsl:call-template>
         </xsl:element> 
       </xsl:element> -->
-    </xsl:element>
+
     </xsl:element>
   </xsl:template>
 </xsl:stylesheet>

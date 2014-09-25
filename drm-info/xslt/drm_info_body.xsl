@@ -85,6 +85,8 @@
       </xsl:element>
       
 
+ <!--Try a new center tag -->
+ <xsl:element name="center">
  
 <!--      <xsl:call-template name="notifications" /> -->
 
@@ -94,9 +96,7 @@
 	</xsl:element>
       </xsl:element>
       
-      <!--
-      SOme paste
-      -->
+    
       <xsl:element name="div"><xsl:attribute name="class">col3</xsl:attribute>
 <xsl:element name="h3">Powered By</xsl:element>
          <xsl:element name="ul">
@@ -166,6 +166,7 @@
           <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfnetwork'" /></xsl:call-template>
         </xsl:element> 
       </xsl:element> -->
+    </xsl:element>
     </xsl:element>
   </xsl:template>
 </xsl:stylesheet>

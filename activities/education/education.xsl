@@ -63,7 +63,7 @@
   <xsl:template match="contact-details">
     <xsl:for-each select="/buildinfo/document/set/contact">
 
-    <xsl:if test="@id = 'GB'">
+    <xsl:if test="@id = 'education'">
   
   <!-- Email -->
     <xsl:if test="email != ''">

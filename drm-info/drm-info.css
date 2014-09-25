@@ -261,11 +261,15 @@ hr.cleaner {
     margin-left: 10px;
     padding: 0;
     width: 660px;
+    margin-left:auto;
+    margin-right:auto;
 }
 .col3 {
     margin: 0 0 0 679px;
     padding: 0;
     width: 124px;
+    margin-right:260px;
+    margin-left: auto;
 }
 .contenido {
     background-color: #FFFFFF;

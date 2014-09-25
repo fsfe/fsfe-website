@@ -85,8 +85,7 @@
       </xsl:element>
       
 
- <!--Try a new center tag -->
- <xsl:element name="center">
+
  
 <!--      <xsl:call-template name="notifications" /> -->
 
@@ -100,6 +99,7 @@
       <xsl:element name="div"><xsl:attribute name="class">col3</xsl:attribute>
 <xsl:element name="h3">Powered By</xsl:element>
          <xsl:element name="ul">
+           <xsl:attribute name="class">links</xsl:attribute>
            <xsl:element name="li">
              <xsl:element name="a"><xsl:attribute name="href">https://fsfe.org/</xsl:attribute>
                <xsl:element name="img">
@@ -114,6 +114,7 @@
 
 	 <xsl:element name="h4">In Collaboration with</xsl:element>
 	 <xsl:element name="ul">
+	   <xsl:attribute name="class">links</xsl:attribute>
 	   <xsl:element name="li">
 	     <xsl:element name="a"><xsl:attribute name="href">https://digitalegesellschaft.de/</xsl:attribute>
 	       <xsl:element name="img">
@@ -167,6 +168,6 @@
         </xsl:element> 
       </xsl:element> -->
 
-    </xsl:element>
+   
   </xsl:template>
 </xsl:stylesheet>

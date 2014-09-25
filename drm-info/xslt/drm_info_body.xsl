@@ -85,8 +85,8 @@
       
     
       <xsl:element name="div"><xsl:attribute name="class">col3</xsl:attribute>
-<xsl:element name="h3">Powered By</xsl:element>
-         <xsl:element name="ul">
+	<xsl:element name="h3">Powered By</xsl:element>
+        <xsl:element name="ul">
            <xsl:attribute name="class">links</xsl:attribute>
            <xsl:element name="li">
              <xsl:element name="a"><xsl:attribute name="href">https://fsfe.org/</xsl:attribute>

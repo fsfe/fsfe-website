@@ -57,16 +57,11 @@
 	</div>
 	<div>
 	  <label for="location">Location</label><input name="location" value="" onkeyup="geocode(this.value)" type="text" />
-	  <div style="margin-left: 12em;"> <!-- just a quick hack -->
-	    <p>Please select which of the result matches best. 
-	      We need this to show your event on a map.
-	    </p>
-	    <select id="geocode_select" name="geodata"></select>
-	    <noscript>
-	    <p><strong>To use this feature javascript must be enabled.</strong></p>
-	    </noscript>
-	  </div>
 	</div>
+	<div>
+          <label for="location">City and Country</label><input name="location" value="" required="required" type="text" />
+        </div>
+
 
 		<!--</fieldset>-->
 

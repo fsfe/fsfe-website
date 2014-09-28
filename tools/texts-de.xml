@@ -6,7 +6,7 @@
 
 
 <!-- Basic texts -->
-<!-- !! MISSING TRANSLATION --> <text id="fsfeurope">Free Software Foundation Europe</text>
+<text id="fsfeurope">Free Software Foundation Europe</text>
 <text id="fsfnetwork">
     Die FSFE hat <a href="/about/fsfnetwork.html">Schwester-Organisationen</a> in <a href="http://www.fsf.org/">Nordamerika</a>, <a href="http://www.fsf.org.in/">Indien</a> und <a href="http://www.fsfla.org/">Lateinamerika</a>.
   </text>
@@ -35,13 +35,14 @@
     darüber, wie Sie uns bei Übersetzungen und anderen Dingen
     unterstützen können.
   </text>
-<!-- !! MISSING TRANSLATION --> <text id="outdated-1"><strong>Warning: </strong>
-    This page may be out of date with the
+<text id="outdated-1"><strong>Achtung: </strong>
+    Diese Seite ist eine Übersetzung, deren 
   </text>
-<!-- !! MISSING TRANSLATION --> <text id="outdated-2">
-    Please use
-    <a href="/contribute/contribute.html">this page</a> to see how you can help
-    with translations, and other things.
+<text id="outdated-2">
+	sich seit der Übersetzung geändert hat. Sie sehen also möglicherweise eine 
+	ältere Version. Bitte informieren Sie sich <a 
+	href="/contribute/contribute.html">hier</a> darüber, wie Sie uns bei 
+	Übersetzungen und anderen Dingen unterstützen können.
   </text>
 <text id="notranslation"><strong>Achtung: </strong>
     Von dieser Seite existiert noch keine Übersetzung. Im Moment
@@ -63,9 +64,9 @@
 <text id="fsfe/help">Mitmachen</text>
 <text id="fsfe/press">Presse</text>
 <text id="fsfe/contact">Kontakt</text>
-<!-- !! MISSING TRANSLATION --> <text id="support/donate">Donate</text>
+<text id="support/donate">Spenden</text>
 <text id="support/support">Unterstützen</text>
-<!-- !! MISSING TRANSLATION --> <text id="support/order">Shop</text>
+<text id="support/order">Fanartikel</text>
 <text id="support/thankgnus">Unsere Spender</text>
 <text id="fellowship/fellowship">Fellowship</text>
 <text id="fellowship/login">Login</text>
@@ -89,13 +90,13 @@
 <text id="ftf/conference">Konferenzen</text>
 <text id="ftf/contact">Kontakt zum juristischen Team</text>
 <text id="fs/fs">Freie Software</text>
-<!-- !! MISSING TRANSLATION --> <text id="fs/basics">Free Software Basics</text>
+<text id="fs/basics">Grundlagen über Freie Software</text>
 <text id="fs/def">Definition</text>
 <text id="fs/soc">Freie Gesellschaft</text>
 <text id="fs/edu">Bildung</text>
 <text id="fs/buz">Wirtschaft</text>
 <text id="motto-fsfs">Freie Software, Freie Gesellschaft!</text>
-<!-- !! MISSING TRANSLATION --> <text id="motto-fellowship">Join FSFE’s community!</text>
+<text id="motto-fellowship">Der FSFE-Gemeinschaft beitreten!</text>
 <text id="learn-more">Mehr darüber</text>
 <text id="press">Presse</text>
 <text id="newsletter">Newsletter</text>
@@ -169,7 +170,10 @@
 <!-- Motivational texts for fellowship, support or donations -->
 <text id="join">Beitreten</text>
 <text id="join-paragraph">
-  <p>Become a Fellow of the FSFE to empower our work and help to assure our financial independence. By joining the Fellowship you will become a donating, sustaining member of the FSFE - including access to our infrastructure.</p>
+  <p>Werden Sie ein Fellow der FSFE, um unsere Arbeit zu unterstützen und 
+  unsere finanzielle Unabhängigkeit zu sichern. Mit dem Beitreten zum 
+  Fellowship werden Sie ein spendendes Fördermitglied der FSFE - mit Zugriff 
+  auf unsere Infrastruktur.</p>
 </text>
 <text id="join-fellowship">Treten Sie dem Fellowship bei</text>
 <text id="support">Unterstützen Sie die FSFE</text>

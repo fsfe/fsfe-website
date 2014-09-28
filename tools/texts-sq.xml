@@ -1,387 +1,229 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <textset>
-    <!--
-  <text id=""></text>
-         -->
 
- <text id="fsfeurope">Free Software Foundation&#160;Europe</text>
- <text id="freesoftwarefoundationeurope">Free Software Foundation Europe</text>
+<!-- ALL STATIC TEXTS -->
 
-  <!-- Footer -->
-  <text id="lastchanged"> Ndryshuar së fundi më: </text>
-  <text id="translator1a">Falënderojmë </text>
-  <text id="translator1b"> për këtë përkthim. </text>
-  <text id="translator2">Ky është një përkthim jozyrtar. </text>
-  <text id="translator3a">Ju lutemi, shihni edhe </text>
-  <text id="translator3b">tekstin origjinal</text>
-  <text id="translator3c"> të kësaj faqeje.</text>
-  <text id="permission">
+
+<!-- Basic texts -->
+<text id="fsfeurope">Free Software Foundation Europe</text>
+<text id="fsfnetwork">
+    FSFE-ja ka <a href="/about/fsfnetwork.html">organizma simotër</a> në <a href="//www.fsf.org/">Amerikën e Veriut</a>, <a href="http://fsf.org.in/">Indi</a> dhe <a href="http://www.fsfla.org/">Amerikë Latine</a>.
+  </text>
+
+
+<!-- Footer -->
+<text id="lastchanged"> Ndryshuar së fundi më: </text>
+<text id="translator1a">Falënderojmë </text>
+<text id="translator1b"> për këtë përkthim. </text>
+<text id="translator2">Ky është një përkthim jozyrtar. </text>
+<text id="translator3a">Ju lutemi, shihni edhe </text>
+<text id="translator3b">tekstin origjinal</text>
+<text id="translator3c"> të kësaj faqeje.</text>
+<text id="permission">
     Lejohet kopjimi fjalë për fjalë dhe shpërndarja e tërë këtij artikulli
     në çfarëdo media, me kusht që të ruhet ky shënim.
   </text>
-  <text id="webmaster">
-    Ju lutemi, problemet me këtë faqe raportojini te
-    <em>webmaster at fsfeurope.org</em>.
-  </text>
-  <text id="fsfnetwork">
-    FSFE-ja ka <a href="/about/fsfnetwork.html">organizma simotër</a> në <a
-      href="//www.fsf.org/">Amerikën e Veriut</a>, <a
-      href="http://fsf.org.in/">Indi</a> dhe <a
-      href="http://www.fsfla.org/">Amerikë Latine</a>.
-  </text>
-  <text id="creative-commons-license">licencë Creative Commons</text>
-  <text id="outdated">
-    <strong>Kujdes: </strong>
+
+
+<!-- Warning info boxes -->
+<text id="outdated"><strong>Kujdes: </strong>
     Kjo faqe mund të jetë e vjetruar kundrejt origjinalit. Ju lutemi, përdorni
     <a href="/contribute/contribute.html">këtë faqe</a> që të shihni se si mund të ndihmoni
     te përkthimet dhe anë të tjera.</text>
-
-  <text id="outdated-1">
-    <strong>Kujdes: </strong>
+<text id="outdated-1"><strong>Kujdes: </strong>
     Kjo faqe mund të jetë e vjetruar kundrejt
   </text>
-  <text id="outdated-2">
+<text id="outdated-2">
     Ju lutemi, përdorni
     <a href="/contribute/contribute.html">këtë faqe</a> që të shihni se si mund të ndihmoni
     te përkthimet dhe anë të tjera.
   </text>
-  <text id="notranslation">
-    <strong>Kujdes: </strong>
+<text id="notranslation"><strong>Kujdes: </strong>
     Kjo faqe nuk është përkthyer ende. Ajo që po shihni më poshtë
     është faqja në versionin origjinal. Ju lutemi, përdorni
     <a href="/contribute/contribute.html">këtë faqe</a> që të shihni se si mund të ndihmoni
     te përkthimet dhe anë të tjera.
   </text>
-  
-  <text id="change-lang">Ndryshoni gjuhën</text>
-  <text id="menu">Menu</text>
-  <text id="content">Lëndë</text>
-  <text id="page-info">Të dhëna faqeje</text>
-  <text id="rootpage">Kreu</text>
-  <text id="close-this">Mbylle&#160;këtë</text>
-  <text id="sitemap">Hartë sajti</text>
-
-  <text id="go-top">Shkoni në krye</text>
-  <text id="source">Kod burim</text>
-  <text id="contact-us">Lidhuni me ne</text>
-  <text id="translate">Doni të përktheni këtë faqe?</text>
-  <text id="contribute-web">Kontribuoni te ekipi Web</text>
-  <text id="imprint">Informacion ligjor</text>
-  <text id="privacy-policy">Rregulla Privatësie</text>
-  
-  <!-- Info box -->
-  <text id="under-construction">
-    <strong>Kujdes: </strong>Kjo faqe është në ndërtim e sipër. Ju lutemi, <strong>mos e përhapni</strong> ose mos provoni ende ta përktheni, meqë për lëndën e saj priten ndryshime.
+<text id="under-construction"><strong>Kujdes: </strong>Kjo faqe është në ndërtim e sipër. Ju lutemi, <strong>mos e përhapni</strong> ose mos provoni ende ta përktheni, meqë për lëndën e saj priten ndryshime.
   </text>
-  <text id="project-complete">
+<text id="project-complete">
 	  Ky projekt është përfunduar me sukses. Këto faqe mbahen këtu vetëm për qëllime arkivimi.
   </text>
-  
-  <text id="search">Kërkoni</text>
-  <text id="submit">Parashtroni</text>
-  <text id="subscribe">Pajtohuni</text>
 
-  <text id="language">Gjuhë</text>
 
- <!-- Article metadata -->
- <text id="author">Autor</text>
- <text id="writtenby">Shkruar&#160;nga</text>
- <text id="published">më</text>
- <text id="revision">përditësuar&#160;më</text>
- <text id="download">Shkarkojeni</text>
- 
-  <!-- Conjunctions -->
-  <text id="to">te</text>
-  <text id="go-to">Shkoni te:</text>
+<!-- Menu, Navigation, Buttons -->
+<text id="fsfe/about">Rreth Nesh</text>
+<text id="fsfe/projects">Puna Jonë</text>
+<text id="fsfe/campaigns">Fushata</text>
+<text id="fsfe/help">Kontribuoni</text>
+<text id="fsfe/press">Për Shtypin</text>
+<text id="fsfe/contact">Lidhuni Me Ne</text>
+<text id="support/donate">Dhuroni</text>
+<text id="support/support">Përkrahje</text>
+<text id="support/order">Blini</text>
+<text id="support/thankgnus">Dhurues</text>
+<text id="fellowship/fellowship">Anëtarësi Shok</text>
+<text id="fellowship/login">Hyrje</text>
+<text id="fellowship/join">Bëhuni Pjesë</text>
+<text id="fellowship/card">Kartë</text>
+<text id="fellowship/faq">F.A.Q.</text>
+<text id="campaigns/dfd">Dita e Lirisë së Dokumenteve</text>
+<text id="campaigns/fya">Çlironi Androidin Tuaj</text>
+<text id="campaigns/pdf">Lexues PDF-sh</text>
+<text id="campaigns/ayc">Pyetni Kandidatët Tuaj</text>
+<text id="campaigns/drm">DRM.info</text>
+<text id="news/news">Lajmet e Reja</text>
+<text id="news/events">Veprimtari të Ardhshme</text>
+<text id="news/press">Zyra e Shtypit</text>
+<text id="news/nl">Buletine</text>
+<text id="news/planet">Blogje Planet</text>
+<text id="ftf/legal">Asistencë Ligjore</text>
+<text id="ftf/services">Shërbime dhe Garant Ligjor</text>
+<text id="ftf/doc">Dokumentim</text>
+<text id="ftf/network">Rrjet Ligjor</text>
+<text id="ftf/conference">Konferenca</text>
+<text id="ftf/contact">Lidhuni me Ekipin Ligjor të FSFE-së</text>
+<text id="fs/fs">Software-i i Lirë</text>
+<!-- !! MISSING TRANSLATION --> <text id="fs/basics">Free Software Basics</text>
+<text id="fs/def">Përkufizim</text>
+<text id="fs/soc">Shoqëri e Lirë</text>
+<text id="fs/edu">Edukim</text>
+<text id="fs/buz">Biznes</text>
+<text id="motto-fsfs">Software i Lirë, Shoqëri e Lirë!</text>
+<text id="motto-fellowship">Bëhuni pjesë e bashkësisë së FSFE-së!</text>
+<text id="learn-more">Mësoni më tepër</text>
+<text id="press">Për shtypin</text>
+<text id="newsletter">Buletin</text>
+<text id="go-to">Shkoni te:</text>
+<text id="search">Kërkoni</text>
+<text id="submit">Parashtroni</text>
+<text id="subscribe">Pajtohuni</text>
+<text id="news">Lajme</text>
+<text id="receive-newsletter">Pajtohuni te buletini mujor i FSFE-së</text>
+<text id="subscribe-newsletter">Pajtohuni te buletini</text>
+<text id="events">Veprimtari</text>
+<text id="more">Shihni më tepër</text>
+<text id="morenews">Shihni krejt lajmet</text>
+<text id="moreevents">Shihini krejt veprimtaritë</text>
+<text id="contact">Kontakt</text>
+<text id="team">Ekip</text>
+<text id="microblog">Mikroblog</text>
+<text id="no-avatar">Pa Figurë</text>
+<text id="change-lang">Ndryshoni gjuhën</text>
+<text id="menu">Menu</text>
+<text id="content">Lëndë</text>
+<text id="page-info">Të dhëna faqeje</text>
+<text id="rootpage">Kreu</text>
+<text id="sitemap">Hartë sajti</text>
+<text id="go-top">Shkoni në krye</text>
+<text id="source">Kod burim</text>
+<text id="contact-us">Lidhuni me ne</text>
+<text id="translate">Doni të përktheni këtë faqe?</text>
+<text id="contribute-web">Kontribuoni te ekipi Web</text>
+<text id="imprint">Informacion ligjor</text>
+<text id="privacy-policy">Rregulla Privatësie</text>
 
-  <!-- Menu -->
-  <text id="fsfe/about">Rreth Nesh</text>
-  <text id="fsfe/mission">Misioni</text>
-  <text id="fsfe/projects">Puna Jonë</text>
-  <text id="fsfe/campaigns">Fushata</text>
-  <!--text id="fsfe/documents">Dokumentr</text-->
-  <text id="fsfe/help">Kontribuoni</text>
-  <text id="fsfe/contact">Lidhuni Me Ne</text>
-  <text id="fsfe/press">Për Shtypin</text>
-  <!--text id="fsfe/lists">Lista Postimesh</text-->
-  <text id="support/support">Përkrahje</text>
-  <text id="support/donate">Dhuroni</text>
-  <text id="support/order">Blini</text>
-  <text id="support/thankgnus">Dhurues</text>
-  <text id="support/funds">Mbi Fondet</text>
-  <text id="fellowship/fellowship">Anëtarësi Shok</text>
-  <text id="fellowship/join">Bëhuni Pjesë</text>
-  <text id="fellowship/card">Kartë</text>
-  <text id="fellowship/communicate">Komunikoni</text>
-  <text id="fellowship/get-active">Bëhuni Aktiv</text>
-  <text id="fellowship/faq">F.A.Q.</text>
-  <text id="fellowship/contact">Kontakte</text>
-  <text id="fellowship/login">Hyrje</text>
-  <text id="news/news">Lajmet e Reja</text>
-  <text id="news/events">Veprimtari të Ardhshme</text>
-  <text id="news/press">Zyra e Shtypit</text>
-  <text id="news/nl">Buletine</text>
-  <text id="news/planet">Blogje Planet</text>
-  <!--text id="planet/blogs">Blogje</text-->
-  <text id="wiki/wiki">Wiki</text>
-  <text id="wiki/events">Veprimtari Anëtarësie Shok</text>
-  <text id="wiki/fellows">Anëtarë Shok</text>
-  <text id="wiki/rc">Ndryshime Së Fundi</text>
-  <text id="campaigns/dfd">Dita e Lirisë së Dokumenteve</text>
-  <text id="campaigns/fya">Çlironi Androidin Tuaj</text>
-  <text id="campaigns/pdf">Lexues PDF-sh</text>
-  <text id="campaigns/ayc">Pyetni Kandidatët Tuaj</text>
-  <text id="campaigns/drm">DRM.info</text>
-  <text id="ftf/legal">Asistencë Ligjore</text>
-  <text id="ftf/services">Shërbime dhe Garant Ligjor</text>
-  <text id="ftf/doc">Dokumentim</text>
-  <text id="ftf/network">Rrjet Ligjor</text>
-  <text id="ftf/conference">Konferenca</text>
-  <text id="ftf/contact">Lidhuni me Ekipin Ligjor të FSFE-së</text>
-  <text id="fs/fs">Software-i i Lirë</text>
-  <text id="fs/def">Përkufizim</text>
-  <text id="fs/soc">Shoqëri e Lirë</text>
-  <text id="fs/edu">Edukim</text>
-  <text id="fs/buz">Biznes</text>
 
-  <!-- Date time -->
-  <text id="months/1">Janar</text>
-  <text id="months/2">Shkurt</text>
-  <text id="months/3">Mars</text>
-  <text id="months/4">Prill</text>
-  <text id="months/5">Maj</text>
-  <text id="months/6">Qershor</text>
-  <text id="months/7">Korrik</text>
-  <text id="months/8">Gusht</text>
-  <text id="months/9">Shtator</text>
-  <text id="months/10">Tetor</text>
-  <text id="months/11">Nëntor</text>
-  <text id="months/12">Dhjetor</text>
- 
-  <text id="months-abbreviated/1">Jan</text>
-  <text id="months-abbreviated/2">Shk</text>
-  <text id="months-abbreviated/3">Mar</text>
-  <text id="months-abbreviated/4">Pri</text>
-  <text id="months-abbreviated/5">Maj</text>
-  <text id="months-abbreviated/6">Qer</text>
-  <text id="months-abbreviated/7">Kor</text>
-  <text id="months-abbreviated/8">Gus</text>
-  <text id="months-abbreviated/9">Sht</text>
-  <text id="months-abbreviated/10">Tet</text>
-  <text id="months-abbreviated/11">Nën</text>
-  <text id="months-abbreviated/12">Dhj</text>
+<!-- Article metadata -->
+<text id="author">Autor</text>
+<text id="writtenby">Shkruar nga</text>
+<text id="published">më</text>
+<text id="revision">përditësuar më</text>
+<text id="download">Shkarkojeni</text>
 
-  <text id="weekdays/1">E hënë</text>
-  <text id="weekdays/2">E martë</text>
-  <text id="weekdays/3">E mërkurë</text>
-  <text id="weekdays/4">E enjte</text>
-  <text id="weekdays/5">E premte</text>
-  <text id="weekdays/6">E shtunë</text>
-  <text id="weekdays/7">E diel</text>
 
-  <text id="weekdays-abbreviated/1">Hën</text>
-  <text id="weekdays-abbreviated/2">Mar</text>
-  <text id="weekdays-abbreviated/3">Mër</text>
-  <text id="weekdays-abbreviated/4">Enj</text>
-  <text id="weekdays-abbreviated/5">Pre</text>
-  <text id="weekdays-abbreviated/6">Sht</text>
-  <text id="weekdays-abbreviated/7">Die</text>
-  
-  <text id="statement1">Free Software Foundation Europe është një organizëm jofitimprurës, i përkushtuar shpënies përpara të </text>
-  <text id="statement-fs">Software-it të Lirë</text>
-  <text id="statement2">, dhe punon që të ndërtojë një shoqëri dixhitale të lirë</text>
-  
-  <text id="motto-fsfs">Software i Lirë, Shoqëri e Lirë!</text>
-  <text id="motto-fellowship">Bëhuni pjesë e bashkësisë së FSFE-së!</text>
-  <text id="motto-planet">Planet, bazuar në <a href="https://fellowship.fsfe.org" class="the-fellowship">Anëtarësinë Shok</a></text>
-  <text id="motto-wiki">Wiki, bazuar në <a href="https://fellowship.fsfe.org" class="the-fellowship">Anëtarësinë Shok</a></text>
+<!-- Petitions -->
+<text id="osig">Organizma</text>
+<text id="isig">Individë</text>
+<text id="bsig">Biznese</text>
 
-  <text id="learn-more">Mësoni më tepër</text>
-  <text id="read-more">Lexoni më tepër</text>
 
-  <text id="press">Për shtypin</text>
-  <text id="newsletter">Buletin</text>
-  
-	
-	<!-- These used to be in /tools/texts-content-**.xml -->
-	<text id="news">Lajme</text>
-  <text id="receive-newsletter">Pajtohuni te buletini mujor i FSFE-së</text>
-  <text id="subscribe-newsletter">Pajtohuni te buletini</text>
-  <text id="events">Veprimtari</text>
-  <text id="more">Shihni më tepër</text>
-  <text id="morenews">Shihni krejt lajmet</text>
-  <text id="moreevents">Shihini krejt veprimtaritë</text>
-  
-  <text id="email">Email</text>
-  <text id="email-placeholder">Adresë email</text>
-  <text id="phone">Telefon</text>
-  <text id="fax">Faks</text>
-  <text id="contact">Kontakt</text>
-  
-  <text id="team">Ekip</text>
-  <text id="microblog">Mikroblog</text>
-  
-  <text id="donate">Dhuroni</text>
-  <text id="donate-paragraph"><p>
+<!-- Sidebars -->
+<text id="related-news">Lajme të Afërta</text>
+<text id="our-work">Puna Jonë</text>
+<text id="our-work-intro">
+  <p>Si një shoqatë jofitimprurëse, joqeveritare, Free Software Foundation Europe punon që të krijojë një ide dhe përkrahje të përgjithshme të Software-it të Lirë dhe Standardeve të Hapura nga politika, biznesi, ligji dhe shoqëria në përgjithësi.</p>
+</text>
+<text id="about-fsfe">Rreth FSFE-së</text>
+<text id="about-fsfe-intro">
+  <p>
+        Free Software Foundation Europe i është përkushtuar shpënies përpara të Software-it të Lirë dhe punës për <strong>lirinë</strong> në shoqërinë dixhitale që po lind.
+      </p>
+  <p>
+        Aksesi te software-i përcakton se cili mund të marrë pjesë në një shoqëri dixhitale.  Liria për <a href="/about/basics/freesoftware.en.html">përdorur, studiuar, ndarë me të tjerët, dhe
+          përmirësuar</a> software-in lejon pjesëmarrrje <strong>të barazvlefshme</strong>,
+        dhe është tejet e rëndësishme.
+      </p>
+</text>
+
+
+<!-- Motivational texts for fellowship, support or donations -->
+<text id="join">Bëhuni pjesë</text>
+<text id="join-paragraph">
+  <p>Bëhuni një Anëtar Shok i FSFE-së, që të fuqizoni punën tonë dhe të ndihmoni të garantohet pavarësia jonë financiare. Duke u bërë pjesë e Anëtarësisë Shok do të bëheni një anëtar dhurues, mbështetës i FSFE-së - përfshi edhe pjesëmarrjen në infrastrukturën tonë.</p>
+</text>
+<text id="join-fellowship">Bëhuni një Anëtar Shok</text>
+<text id="support">Përkrahni FSFE-në</text>
+<text id="show-support">Dëshmojeni përkrahjen tuaj!</text>
+<text id="show-support-paragraph">
+  <p>FSFE-ja ka nevojë për përkrahjen tuaj që zëri i saj të dëgjohet! Çdo klikim ka vlerë!</p>
+</text>
+<text id="support-fsfe">E përkrah FSFE-në!</text>
+<text id="donate">Dhuroni</text>
+<text id="donate-paragraph">
+  <p>
         Free Software Foundation Europe është një organizëm joqeveritar dhe 
 jofitimprurës. <a href="/work.en.html">Puna jonë</a> bëhet e mundur
         nga një bashkësi
         <a href="/contribute/contribute.en.html">vullnetarësh</a>,
         <a href="http://fellowship.fsfe.org">Anëtarësh Shok</a> dhe
         <a href="thankgnus.en.html">dhuruesish</a>. Dhurimet tuaja janë kyçe për fuqinë dhe autonominë tonë. Ato na lejojnë të vazhdojmë punën për Software-in e Lirë, kurdo që të jetë e nevojshme, dhe të jemi një zë i pavarur.
-      </p></text>
-
-  <!-- Campaign box on front-page, translated texts -->
-  <text id="cb-restricted-boot">"Nisje e Sigurt": Kush do ta kontrollojë kompjuterin tuaj të ardhshëm?</text>
-  <text id="cb-restricted-boot-link">Ne apo prodhuesit e pajisjeve?</text>
-
-  <text id="cb-valentine">Më 14 Shkurt: </text>
-  <text id="cb-valentine-link">Shpaloseni dashurinë tuaj për Software-in e Lirë!</text>
-  <!-- end of texts for the campaign box -->
-
-  <text id="join">Bëhuni pjesë</text>
-  <text id="join-paragraph"><p>Bëhuni një Anëtar Shok i FSFE-së, që të fuqizoni punën tonë dhe të ndihmoni të garantohet pavarësia jonë financiare. Duke u bërë pjesë e Anëtarësisë Shok do të bëheni një anëtar dhurues, mbështetës i FSFE-së - përfshi edhe pjesëmarrjen në infrastrukturën tonë.</p></text>
-  <text id="join-fellowship">Bëhuni një Anëtar Shok</text>
-
-  <text id="ourwork2011">Puna jonë më 2011</text>
-  <text id="support">Përkrahni FSFE-në</text>
-  <text id="show-support">Dëshmojeni përkrahjen tuaj!</text>
-  <text id="show-support-paragraph"><p>FSFE-ja ka nevojë për përkrahjen tuaj që zëri i saj të dëgjohet! Çdo klikim ka vlerë!</p></text>
-  <text id="support-fsfe">E përkrah FSFE-në!</text>
-
-  <!-- alt text for missing avatars -->
-  <text id="no-avatar">Pa Figurë</text>
-  
-  <!-- petitions -->
-  <text id="osig">Organizma</text>
-  <text id="isig">Individë</text>
-  <text id="bsig">Biznese</text>
-  
-  <!-- Sidebars -->
-  <text id="related-news">Lajme të Afërta</text>
-  <text id="our-work">Puna Jonë</text>
-  <text id="our-work-intro"><p>Si një shoqatë jofitimprurëse, joqeveritare, Free Software Foundation Europe punon që të krijojë një ide dhe përkrahje të përgjithshme të Software-it të Lirë dhe Standardeve të Hapura nga politika, biznesi, ligji dhe shoqëria në përgjithësi.</p></text>
-  <text id="about-fsfe">Rreth FSFE-së</text>
-  <text id="about-fsfe-intro">
-      <p>
-        Free Software Foundation Europe i është përkushtuar shpënies përpara të Software-it të Lirë dhe punës për <strong>lirinë</strong> në shoqërinë dixhitale që po lind.
       </p>
-      <p>
-        Aksesi te software-i përcakton se cili mund të marrë pjesë në një shoqëri dixhitale.  Liria për <a href="/about/basics/freesoftware.en.html">përdorur, studiuar, ndarë me të tjerët, dhe
-          përmirësuar</a> software-in lejon pjesëmarrrje <strong>të barazvlefshme</strong>,
-        dhe është tejet e rëndësishme.
-      </p>
-  </text>
-  <text id="contribute">Kontribuoni</text>
-  <text id="contribute-intro"><p>Jemi një bashkësi njerëzish që i janë përkushtuar Software-it të Lirë. Ju lutemi, bashkojuni punës sonë! Ka mjaft rrugë për ta bërë këtë dhe do të gjeni një rrugë që përputhet me interesat dhe aftësitë tuaja.</p></text>
-    
-  <!-- campaigns to be displayed in a rotating box -->
-  <campaigns>
-    <campaign id="wiesemann" tag="donors" pos="1">
-      <photo>/donate/wiesemann.jpg</photo>
-      <text>
-        Një botë virtuale pa Software të Lirë është si një qytet në të cilin jeni të detyruar të paguani një pagesë licence për çdo kalldrëm. Edhe në botën virtuale na duhen gjëra të përbashkëta.
-      </text>
-      <author>Reinhard Wiesemann - Linuxhotel</author>
-      <link>/donate/donate.html</link>
-    </campaign>
-    <campaign id="zacchiroli" tag="donors" pos="1">
-      <photo>/donate/zacchiroli.jpg</photo>
-      <text>
+</text>
+
+
+<!-- ALL CAMPAIGN TEXTS -->
+
+<campaigns>
+  <!-- campaigns to be displayed in a rotating box on frontpage -->
+  <campaign id="dfd">
+    <photo>/graphics/robot-protest-light.png</photo>
+    <text>
+        T'i gëzohemi përdorshmërisë së informacionit dhe të shtojmë ndërgjegjësimin rreth Standardeve të Hapura.
+        </text>
+    <link>//documentfreedom.org</link>
+  </campaign>
+  <campaign id="ilovefs">
+    <text>
+        Show your love for Free Software and thank developers.
+        </text>
+    <link>/campaigns/ilovefs/ilovefs.html</link>
+  </campaign>
+  <campaign id="zacchiroli" tag="donors" pos="1">
+    <photo>/donate/zacchiroli.jpg</photo>
+    <text>
         Bota pa Software të Lirë është një botë ku të gjithë ne jemi robër të tregtuesve të software-it pronësor dhe këta xhirojnë jetën tonë. Për të luftuar një skenar të tillë makthi na duhen organizma si Free Software Foundation
         Europe.
       </text>
-      <author>Stefano "Zack" Zacchiroli, Former Debian Project Leader</author>
-      <link>/donate/donate.html</link>
-    </campaign>
-    <campaign id="dfd">
-        <photo>/graphics/robot-protest-light.png</photo>
-        <text>
-        T'i gëzohemi përdorshmërisë së informacionit dhe të shtojmë ndërgjegjësimin rreth Standardeve të Hapura.
+    <author>Stefano "Zack" Zacchiroli, Former Debian Project Leader</author>
+    <link>/fellowship/index.html</link>
+  </campaign>
+  <campaign id="becomefellow">
+    <photo>/graphics/fellowship/fellowship-page-logo-300x91.png</photo>
+    <text>
+          Become a Fellow of the FSFE to empower our work and help to assure
+          our financial independence! 
         </text>
-        <link>//documentfreedom.org</link>
-    </campaign>
-    <campaign id="ganten" tag="donors fellowship" pos="2">
-      <photo>/donate/ganten.jpg</photo>
-      <text>
-        Software-i i Lirë përbën themelin e qëndrueshëm të zgjidhjeve që
-        ofrojmë për ndërmarrje. FSFE-ja furnizon kontribut të rëndësishëm për 
-        t'i bërë të sigurta këto themele, prandaj e përkrahim FSFE-në.
-      </text>
-      <author>Peter Ganten - Univention</author>
-      <link>/donate/donate.html</link>
-    </campaign>
+    <link>/fellowship/</link>
+  </campaign>
+</campaigns>
 
-    <!-- campaigns for fellowship page -->
-    <campaign id="allison" tag="fellowship" pos="1">
-      <photo>/fellowship/graphics/people/Jeremyallison.jpg</photo>
-      <text>
-        Dita e Lirisë së Dokumenteve i kushtohet rëndësisë së Standardeve 
-        të Hapura për krejt dokumentet elektronike, qofshin publike apo 
-        private. Nëse duam ta <strong>ruajmë trashëgiminë tonë dixhitale</strong> 
-        na duhet që të gjithë të zgjedhim Standardet e Hapura, të sendërtueshme 
-        nga kushdo, si mundësia jonë parazgjedhje për çdo depozitim të tyre.
-      </text>
-      <author>Jeremy Allison, një nga zhvilluesit kryesorë të Samba-s</author>
-      <link>/donate/donate.html</link>
-    </campaign>
-    <campaign id="beckedahl" tag="fellowship" pos="2">
-      <photo>/fellowship/graphics/people/beckedahl.jpg</photo>
-      <text>
-        Standardet e Hapura garantojnë një zhvillim të lirë të infrastrukturës dhe
-        prandaj edhe një komunikim të lirë dhe të vetë-përcaktuar.
-      </text>
-      <author>Markus Beckedahl, Digitale Gesellschaft, netzpolitik.org</author>
-      <link>/donate/donate.html</link>
-    </campaign>
 
-  </campaigns>
-  <!-- quotes to be displayed in a rotating box -->
-  <quotes>
-    <quote id="zacchiroli" tag="donors" pos="2">
-      <photo>/donate/zacchiroli.jpg</photo>
-      <text>
-        Bota pa Software të Lirë është një botë ku të gjithë ne jemi robër të 
-        tregtuesve të software-it pronësor dhe këta xhirojnë jetën tonë. Për 
-        ta luftuar një skenar të tillë makthi na duhen organizma si Free 
-        Software Foundation Europe.
-      </text>
-      <author>Stefano "Zack" Zacchiroli, Ish-drejtues i Projektit Debian</author>
-    </quote>
-    <quote id="wiesemann" tag="donors" pos="3">
-      <photo>/donate/wiesemann.jpg</photo>
-      <text>
-        Një botë virtuale pa Software të Lirë është si një qytet në të cilin 
-        jeni të detyruar të paguani një pagesë licence për çdo kalldrëm. Edhe 
-        në botën virtuale na duhen gjëra të përbashkëta.
-      </text>
-      <author>Reinhard Wiesemann - Linuxhotel</author>
-    </quote>
-    <quote id="ganten" tag="donors" pos="4">
-      <photo>/donate/ganten.jpg</photo>
-      <text>
-        Software-i i Lirë përbën themelin e qëndrueshëm të zgjidhjeve që
-        ofrojmë për ndërmarrje. FSFE-ja furnizon kontribut të rëndësishëm për 
-        t'i bërë të sigurta këto themele, prandaj e përkrahim FSFE-në.
-      </text>
-      <author>Peter Ganten - Univention</author>
-    </quote>
+<!-- ALL QUOTE TEXTS -->
 
-    <quote id="appelbaum" tag="donors" pos="1">
-      <photo>/fellowship/graphics/people/jacobappelbaum.png</photo>
-      <text>
-	Besoj se aktet për përkrahjen e FSFE-së janë të rëndësishme për 
-        nxitjen e zhvillimit të Software-it të Lirë dhe gjithashtu për 
-        adoptimin e tij në Europë, por edhe në pjesën tjetër të botës. Jam 
-        anëtar shok i FSFE-së, ngaqë mbështetja financiarisht e kauzës së 
-        Software-it të Lirë sjell përmirësime pozitive për krejt shoqëritë, 
-        në gjithë botën.
-      </text>
-      <author>Jacob Appelbaum - Zëdhënës i Projektit TOR</author>
-    </quote> 
-
-    <!-- quotes for fellowship page -->
+<quotes>
+  <!-- quotes for fellowship page -->
     <quote id="morris" tag="fellowship">
       <photo>/fellowship/graphics/people/annamorris.jpg</photo>
       <text>
@@ -509,7 +351,101 @@ jofitimprurës. <a href="/work.en.html">Puna jonë</a> bëhet e mundur
       <author>Benoit Mortier (Pronar i OpenSides, administrator i FusionDirectory)</author>
     </quote> 
     
-    
-  
-  </quotes>  
+  <quote id="nermin" tag="fellowship">
+    <photo>/fellowship/graphics/people/nermincanik.jpg</photo>
+    <text>
+        Free software and FSFE is to me: sharing, learning, being independent 
+        of monopolies, producing things together, passion and freedom! Since 
+        I've been a Fellow, I am finding new friends who help me in Free 
+        Software and other topics, teaching new things every day even though we 
+        are kilometers away. It is magnificent to be in a community that 
+        continually supports my Free Software passion and motivation!
+      </text>
+    <author>Nermin Canik (IT Business Analyst)</author>
+  </quote>
+  <quote id="guido" tag="fellowship">
+    <photo>/fellowship/graphics/people/guidoarnold.jpg</photo>
+    <text>
+        Free Software needs a voice in politics. We volunteers do amazing 
+        things together, but some tasks are not that much fun, or are time 
+        sensitive or need extensive expertise. FSFE can only tap its full 
+        potential with paid staff to do the things the volunteers wouldn't get 
+        to. By now, I met all of the staff and can say that I don't regret a 
+        cent I've given to allow the FSFE to operate.
+      </text>
+    <author>Guido Arnold</author>
+  </quote>
+  <quote id="laura" tag="fellowship">
+    <photo>/fellowship/graphics/people/lauralarjona.jpg</photo>
+    <text>
+        If software is licensed as free software, we can audit it, and be sure 
+        that it does what it's intended to do (and nothing else). Public 
+        institutions develop software, and hire companies to make it, and the 
+        citizens should own and reuse all that code. I contribute to free 
+        software with translations, user help desk, finding free software 
+        alternatives at the University... but I cannot reach the policy-makers, 
+        nor people and institutions in other countries. I'm fellow to support 
+        the FSFE doing this task, and as one more way to say thank you to the 
+        free software community.
+      </text>
+    <author>Laura Arjona Reina (IT Assistant at Technical University of Madrid and Debian contributor)</author>
+  </quote>
+  <quote id="volker" tag="fellowship">
+    <photo>/fellowship/graphics/people/Grabsch.jpg</photo>
+    <text>
+        I have always been fascinated by free software. I'm supporting free 
+        software projects in my spare time. My education as well as my work 
+        would not be possible without free software. The fellow group in Berlin 
+        showed me how to contribute to free software in a non-technical way. It 
+        was and still is great fun to work with them in a cogenial atmosphere. 
+        As I'm involed in the group now, I think it is time to join the FSFE 
+        officially and to support them financially.
+      </text>
+    <author>Volker Grabsch (Software development)</author>
+  </quote>
+  <quote id="johannes" tag="fellowship">
+    <photo>/fellowship/graphics/people/JohannesZarl.jpg</photo>
+    <text>
+        I join the fellowship because I'm seeing more and more that writing 
+        free code is ultimately not enough to foster a culture where free 
+        software is seen as an integral part of society. Free software should 
+        not be a fringe topic supported solely by geeks.
+      </text>
+    <author>Johannes Zarl (IT Professional)</author>
+  </quote>
+  <quote id="oliver" tag="fellowship">
+    <photo>/fellowship/graphics/people/Springer.jpg</photo>
+    <text>
+        I have been using free software for years, during the last couple month 
+        I started "giving" back, by supporting on forums and writing smaller 
+        patches. But I felt like free software deserves some money, too. And 
+        the Free Software Foundation is simply the best place for the money to 
+        go. I also wanted to show my support for Free Software publicly.
+      </text>
+    <author>Oliver Springer (Systems Administrator Trainee)</author>
+  </quote>
+  <quote id="tom" tag="fellowship">
+    <photo>/fellowship/graphics/people/Tom.jpg</photo>
+    <text>
+        I started doing UNIX sysadmin work while a visiting scientist at MIT in 
+        the early '90s, concentrated more and more on free software as time 
+        went on, and have made a living entirely from sysadminning free 
+        software for the past eight years.  It's well past time that I gave 
+        money back.
+      </text>
+    <author>Tom Yates (Free Software Consultant Sysadmin)</author>
+  </quote>
+  <quote id="nicole" tag="fellowship">
+    <photo>/fellowship/graphics/people/Lieger.jpg</photo>
+    <text>
+        I'm interested in values, politics, society; in new forms of 
+        production, based on free co-operation in egalitarian structures; in 
+        knowledge commons and collective intelligence. That's why I'm here and 
+        why I wish to support the free software movement. I have no technical 
+        background, and neither do most of the people I know.
+      </text>
+    <author>Nicole Lieger (Political Scientist and member of Civil Society)</author>
+  </quote>
+</quotes>
+
 </textset>

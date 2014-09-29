@@ -53,7 +53,7 @@
             </xsl:element>
             <xsl:element name="li">
               <xsl:element name="a">
-                <xsl:attribute name="href">openstandards.html</xsl:attribute>
+                <xsl:attribute name="href">os.html</xsl:attribute>
                 Open Standards
               </xsl:element>
             </xsl:element>

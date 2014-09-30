@@ -30,6 +30,7 @@
         <!-- Link to the XHTML source -->
         <xsl:element name="a">
           <xsl:attribute name="href">
+            <xsl:value-of select="$linkresources"/>
             <xsl:text>/source</xsl:text>
             <xsl:value-of select="/buildinfo/@filename"/>
             <xsl:text>.</xsl:text>

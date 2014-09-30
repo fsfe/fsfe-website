@@ -40,14 +40,14 @@
         </xsl:element>
       </li><li>
         <xsl:element name="a">
-          <xsl:attribute name="href"><xsl:value-of select="$linkresource"/>/contribute/web/</xsl:attribute>
+          <xsl:attribute name="href"><xsl:value-of select="$linkresources"/>/contribute/web/</xsl:attribute>
           <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'contribute-web'" /></xsl:call-template>
         </xsl:element>
       </li></ul>
   
       <p>
         <xsl:element name="a">
-          <xsl:attribute name="href"><xsl:value-of select="$linkresource"/>/contribute/translators/</xsl:attribute>
+          <xsl:attribute name="href"><xsl:value-of select="$linkresources"/>/contribute/translators/</xsl:attribute>
           <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'translate'" /></xsl:call-template>
         </xsl:element>
         <!-- Insert the appropriate translation notice -->

@@ -6,7 +6,7 @@
   <xsl:include href="../../build/xslt/notifications.xsl" />
   <!--xsl:include href="../../build/xslt/fsfe_followupsection.xsl" /-->
   <xsl:include href="../../build/xslt/translation_list.xsl" />
-  <xsl:include href="../../build/xslt/footer_sitenav.xsl" />
+  <!-- xsl:include href="../../build/xslt/footer_sitenav.xsl" / -->
   <xsl:include href="../../build/xslt/footer_sourcelink.xsl" />
   <xsl:include href="../../build/xslt/footer_legal.xsl" />
 
@@ -83,8 +83,8 @@
       <xsl:element name="footer">
         <xsl:attribute name="id">bottom</xsl:attribute>
  
-        <xsl:call-template name="footer_sitenav" />
-        <xsl:element name="hr" />
+        <!-- xsl:call-template name="footer_sitenav" />
+        <xsl:element name="hr" / -->
         <xsl:call-template name="footer_sourcelink" />
         <xsl:call-template name="footer_legal" />
  

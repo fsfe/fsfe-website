@@ -155,7 +155,7 @@
                     </xsl:when>
                     <xsl:otherwise>
                       <xsl:element name="a">
-                        <xsl:attribute name="href"><xsl:value-of select="$linkresources"/><xsl:value-of select="." /></xsl:attribute>
+                        <xsl:attribute name="href"><xsl:value-of select="." /></xsl:attribute>
                         <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="$id" /></xsl:call-template>
                       </xsl:element>
                     </xsl:otherwise>

@@ -26,29 +26,30 @@
         </xsl:if>
       </p>
   
-      <ul>
-        <li>
-          <!-- Link to the XHTML source -->
-          <xsl:element name="a">
-            <xsl:attribute name="href">
-              <xsl:text>/source</xsl:text>
-              <xsl:value-of select="/buildinfo/@filename"/>
-              <xsl:text>.</xsl:text>
-              <xsl:value-of select="/buildinfo/document/@language"/>
-              <xsl:text>.xhtml</xsl:text>
-            </xsl:attribute>
-            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'source'" /></xsl:call-template>
-          </xsl:element>
-        </li>
-        <li>
-            <a href="/contribute/web/"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'contribute-web'" /></xsl:call-template></a>
-        </li>
-      </ul>
+      <ul><li>
+        <!-- Link to the XHTML source -->
+        <xsl:element name="a">
+          <xsl:attribute name="href">
+            <xsl:text>/source</xsl:text>
+            <xsl:value-of select="/buildinfo/@filename"/>
+            <xsl:text>.</xsl:text>
+            <xsl:value-of select="/buildinfo/document/@language"/>
+            <xsl:text>.xhtml</xsl:text>
+          </xsl:attribute>
+          <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'source'" /></xsl:call-template>
+        </xsl:element>
+      </li><li>
+        <xsl:element name="a">
+          <xsl:attribute name="href"><xsl:value-of select="$linkresource"/>/contribute/web/</xsl:attribute>
+          <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'contribute-web'" /></xsl:call-template>
+        </xsl:element>
+      </li></ul>
   
       <p>
-        <a href="/contribute/translators/">
+        <xsl:element name="a">
+          <xsl:attribute name="href"><xsl:value-of select="$linkresource"/>/contribute/translators/</xsl:attribute>
           <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'translate'" /></xsl:call-template>
-        </a>
+        </xsl:element>
         <!-- Insert the appropriate translation notice -->
         <xsl:if test="/buildinfo/document/@language!=/buildinfo/@original">
           <xsl:element name="br"></xsl:element>

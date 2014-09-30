@@ -17,7 +17,7 @@
   
       <xsl:element name="a">
         <xsl:attribute name="class">contribute-translation</xsl:attribute>
-        <xsl:attribute name="href">/contribute/translators/</xsl:attribute>
+        <xsl:attribute name="href"><xsl:value-of select="$linkresources"/>/contribute/translators/</xsl:attribute>
         <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'translate'" /></xsl:call-template>
       </xsl:element>
   

@@ -6,6 +6,10 @@
     <xsl:apply-templates select="buildinfo/document"/>
   </xsl:template>
 
+  <!-- Pages available through external domains need to link back to the
+       main site in various places (i.e. footer menu etc.) -->
+  <xsl:variable name="linkresources">//fsfe.org</xsl:variable>
+
   <!-- The actual HTML tree is in "buildinfo/document" -->
   <xsl:template match="buildinfo/document">
     <xsl:element name="html">

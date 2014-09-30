@@ -6,18 +6,25 @@
     <xsl:element name="section">
       <xsl:attribute name="id">legal-info</xsl:attribute>
   
-      <p>Copyright © 2001-2014 <a href="/"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfeurope'" /></xsl:call-template></a>.</p>
-      <ul>
-        <li><a href="/contact/contact.html"> <xsl:call-template
-              name="fsfe-gettext"><xsl:with-param name="id"
-                select="'contact-us'" /></xsl:call-template></a></li>
-        <li><a href="/about/legal/imprint.html"> <xsl:call-template
-              name="fsfe-gettext"><xsl:with-param name="id"
-                select="'imprint'" /></xsl:call-template> </a> /
-          <a href="/about/legal/imprint.html#id-privacy-policy" class="privacy-policy"> <xsl:call-template
-              name="fsfe-gettext"><xsl:with-param name="id"
-                select="'privacy-policy'" /></xsl:call-template> </a> </li>
-      </ul>
+      <p>Copyright © 2001-2014<xsl:element name="a">
+        <xsl:attribute name="href"><xsl:value-of select="$linkresources"/>/</xsl:attribute>
+        <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfeurope'" /></xsl:call-template>
+      </xsl:element>.</p>
+      <ul><li>
+        <xsl:element name="a">
+          <xsl:attribute name="href"><xsl:value-of select="$linkresources"/>/contact/contact.html</xsl:attribute>
+          <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'contact-us'" /></xsl:call-template>
+        </xsl:element>
+      </li><li>
+        <xsl:element name="a">
+          <xsl:attribute name="href"><xsl:value-of select="$linkresources"/>/about/legal/imprint.html</xsl:attribute>
+          <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'imprint'" /></xsl:call-template>
+        </xsl:element> / <xsl:element name="a">
+          <xsl:attribute name="href"><xsl:value-of select="$linkresources"/>/about/legal/imprint.html#id-privacy-policy</xsl:attribute>
+          <xsl:attribute name="class">privacy-policy</xsl:attribute>
+          <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'privacy-policy'" /></xsl:call-template>
+        </xsl:element>
+      </li></ul>
       <p><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id"
             select="'permission'" /></xsl:call-template></p>
     </xsl:element>

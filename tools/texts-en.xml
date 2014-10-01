@@ -202,9 +202,13 @@
 
 
 <!-- ALL CAMPAIGN TEXTS -->
+<!-- campaigns to be displayed in a rotating box on frontpage --> 
 
   <campaigns>
-    <!-- campaigns to be displayed in a rotating box on frontpage -->
+    <campaign id="freesociety">
+        <text id="motto-fsfs">Free Software, Free Society!</text>
+        <link>/freesoftware/</link>
+    </campaign>
     <campaign id="dfd">
         <photo>/graphics/robot-protest-light.png</photo>
         <text>

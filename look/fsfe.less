@@ -74,14 +74,18 @@ a.the-fellowship {
     #campaigns-boxes {
 
         background: url('/graphics/ribbon.png') top right no-repeat transparent;
-        height: 430px;
+        height: 400px;
 
-        @media (min-width: @screen-sm) {
+        @media (min-width: @screen-xs) {
             height: 300px;
         }
 
         .campaign-box {
-            height: 300px;
+            height: 400px;
+
+            @media (min-width: @screen-xs) {
+                height: 300px;
+            }
             width: 100%;
 
             img {max-width: 33%;}
@@ -94,7 +98,7 @@ a.the-fellowship {
 
         #freesociety {
             .campaign-box-center;
-            font-size: 1.5em;
+            font-size: 2em;
             background: url('/graphics/motto.png') top center no-repeat #666;
         }
         

@@ -9,8 +9,8 @@
 $(document).ready(function() {
 
     // Close service notice on dismiss button.
-    $("#service-notice .close a").click(function() {
-        $("#service-notice").hide();
+    $(".alert a.close").click(function() {
+        $(".alert").hide();
     });
 
 });

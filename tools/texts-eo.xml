@@ -191,6 +191,10 @@
 
 <campaigns>
   <!-- campaigns to be displayed in a rotating box on frontpage -->
+  <campaign id="freesociety">
+      <text>Free Software, <br />Free Society!</text>
+      <link>/freesoftware/</link>
+  </campaign>
   <campaign id="dfd">
     <photo>/graphics/robot-protest-light.png</photo>
     <text>

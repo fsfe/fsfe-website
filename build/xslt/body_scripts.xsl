@@ -3,10 +3,8 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:template name="body_scripts">
-    <script src="/scripts/bootstrap-3.0.3.min.js"></script>
     <script src="/scripts/master.js"></script>
     <script src="/scripts/placeholder.js"></script>
-    <script src="/scripts/highlight.pack.js"></script>
   </xsl:template>
 
 </xsl:stylesheet>

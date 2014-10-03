@@ -1,5 +1,6 @@
 @import "bootstrap/bootstrap.less";
-@import "hover.less";
+@import "hover.less"; /* FIXME: do we still use this? */
+
 
 /* very generic elements */
 
@@ -7,10 +8,6 @@ body {
     @media (min-width: @screen-lg) {
         font-size: ceil(@font-size-base * 1.1428); // ~16px
     }
-}
-
-h1, h2, h3, h4 {
-    font-weight: 300;
 }
 
 hr {
@@ -46,6 +43,13 @@ q, .en q {
 
 .n {
     .hide;
+}
+
+
+/* Typography */
+
+h1, h2, h3, h4 {
+    font-weight: 300;
 }
 
 

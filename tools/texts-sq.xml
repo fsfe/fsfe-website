@@ -85,7 +85,7 @@
 <text id="ftf/conference">Konferenca</text>
 <text id="ftf/contact">Lidhuni me Ekipin Ligjor të FSFE-së</text>
 <text id="fs/fs">Software-i i Lirë</text>
-<!-- !! MISSING TRANSLATION --> <text id="fs/basics">Free Software Basics</text>
+<text id="fs/basics">Bazat e Software-it të Lirë</text>
 <text id="fs/def">Përkufizim</text>
 <text id="fs/soc">Shoqëri e Lirë</text>
 <text id="fs/edu">Edukim</text>
@@ -188,7 +188,7 @@ jofitimprurës. <a href="/work.en.html">Puna jonë</a> bëhet e mundur
 <campaigns>
   <!-- campaigns to be displayed in a rotating box on frontpage -->
   <campaign id="freesociety">
-      <text>Free Software, <br />Free Society!</text>
+      <text>Software i Lirë <br />Shoqëri e Lirë!</text>
       <link>/freesoftware/</link>
   </campaign>
   <campaign id="dfd">
@@ -200,7 +200,7 @@ jofitimprurës. <a href="/work.en.html">Puna jonë</a> bëhet e mundur
   </campaign>
   <campaign id="ilovefs">
     <text>
-        Show your love for Free Software and thank developers.
+        Shpalosni dashurinë tuaj për Software-in e Lirë dhe falënderoni zhvilluesit.
         </text>
     <link>/campaigns/ilovefs/ilovefs.html</link>
   </campaign>
@@ -210,14 +210,14 @@ jofitimprurës. <a href="/work.en.html">Puna jonë</a> bëhet e mundur
         Bota pa Software të Lirë është një botë ku të gjithë ne jemi robër të tregtuesve të software-it pronësor dhe këta xhirojnë jetën tonë. Për të luftuar një skenar të tillë makthi na duhen organizma si Free Software Foundation
         Europe.
       </text>
-    <author>Stefano "Zack" Zacchiroli, Former Debian Project Leader</author>
+    <author>Stefano "Zack" Zacchiroli, Ish-udhëheqës i Projektit Debian</author>
     <link>/fellowship/index.html</link>
   </campaign>
   <campaign id="becomefellow">
     <photo>/graphics/fellowship/fellowship-page-logo-300x91.png</photo>
     <text>
-          Become a Fellow of the FSFE to empower our work and help to assure
-          our financial independence! 
+          Bëhuni një Anëtar Shok i FSFE-së që të fuqizoni veprën tonë dhe të ndihmono të sigurohet
+          pavarësia jonë financiare! 
         </text>
     <link>/fellowship/</link>
   </campaign>
@@ -315,7 +315,7 @@ jofitimprurës. <a href="/work.en.html">Puna jonë</a> bëhet e mundur
                         mundësia për të përdorur infrastrukturën e tyre për blogime, dukej 
                         si hapi i parë logjik.
       </text>
-      <author>Carsten Agger (Inxhinier software-i)</author>
+      <author>Carsten Agger (Inxhinier software-esh)</author>
     </quote>
     
     
@@ -358,24 +358,25 @@ jofitimprurës. <a href="/work.en.html">Puna jonë</a> bëhet e mundur
   <quote id="nermin" tag="fellowship">
     <photo>/fellowship/graphics/people/nermincanik.jpg</photo>
     <text>
-        Free software and FSFE is to me: sharing, learning, being independent 
-        of monopolies, producing things together, passion and freedom! Since 
-        I've been a Fellow, I am finding new friends who help me in Free 
-        Software and other topics, teaching new things every day even though we 
-        are kilometers away. It is magnificent to be in a community that 
-        continually supports my Free Software passion and motivation!
+        Software-i i Lirë dhe FSFE-ja për mua janë: ndarje me të tjerët, nxënie, 
+        të qenët i pavarur nga monopole, prodhim gjërash së bashku, pasion dhe liri! 
+        Qëkurse jam Anëtar Shok, po bëj miq të rinj që më ndihmojnë për Software-in 
+        e Lirë dhe tema të tjera,  duke mësuar gjëra të reja përditë, edhe pse jemi
+        kilometra të tërë larg. Të jesh në një bashkësi që përkrah vazhdimisht pasionin
+        dhe motivimin tim lidhur me Software-in e Lirë është madhështore!
       </text>
-    <author>Nermin Canik (IT Business Analyst)</author>
+    <author>Nermin Canik (Analist Biznesi TI)</author>
   </quote>
   <quote id="guido" tag="fellowship">
     <photo>/fellowship/graphics/people/guidoarnold.jpg</photo>
     <text>
-        Free Software needs a voice in politics. We volunteers do amazing 
-        things together, but some tasks are not that much fun, or are time 
-        sensitive or need extensive expertise. FSFE can only tap its full 
-        potential with paid staff to do the things the volunteers wouldn't get 
-        to. By now, I met all of the staff and can say that I don't regret a 
-        cent I've given to allow the FSFE to operate.
+        Software i Lirë ka nevojë për një zë në politikë. Ne vullnetarët bëjmë
+        gjëra mahnitëse tok, por disa nga punët nuk janë edhe aq zbavitëse, 
+        ose duan kohë, ose lypin ekspertizë të thelluar. FSFE-ja mund ta shfrytëzojë
+        potencialin e vet të plotë vetëm me staf të paguar që kryejnë punët të cilat
+        vullnetarët nuk do t'i bënin dot. Deri sot, i kam takuar të gjithë të stafit
+        dhe nuk më vjen keq për asnjë qindarkë që kam dhënë për t'a lejuar FSFE-në të
+        funksionojë.
       </text>
     <author>Guido Arnold</author>
   </quote>

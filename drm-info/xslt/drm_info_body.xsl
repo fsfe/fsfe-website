@@ -73,14 +73,6 @@
                   Act!
                 </xsl:element>
               </xsl:element>
-
-              <xsl:element name="li">
-		 <xsl:attribute name="class">menu-302 first</xsl:attribute>
-                <xsl:element name="a">
-                  <xsl:attribute name="href">about.html</xsl:attribute>
-                  About
-                </xsl:element>
-              </xsl:element>
             </xsl:element>
 	  </xsl:element>
         </xsl:element>

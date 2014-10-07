@@ -41,24 +41,39 @@
               <xsl:element name="li">
                 <xsl:attribute name="class">menu-302 first</xsl:attribute>
 		<xsl:element name="a">
-                  <xsl:attribute name="href">pdfreaders.html</xsl:attribute>
+                  <xsl:attribute name="href">what-is-drm.en.html</xsl:attribute>
 		  What is DRM
                 </xsl:element>
               </xsl:element>
               <xsl:element name="li">
                  <xsl:attribute name="class">menu-302 first</xsl:attribute>
 		<xsl:element name="a">
-                  <xsl:attribute name="href">openstandards.html</xsl:attribute>
+                  <xsl:attribute name="href">citizen-rights.en.html</xsl:attribute>
                   Citizens Rights
                 </xsl:element>
               </xsl:element>
               <xsl:element name="li">
 		 <xsl:attribute name="class">menu-302 first</xsl:attribute>
                 <xsl:element name="a">
-                  <xsl:attribute name="href">graphics.html</xsl:attribute>
-                  Losing Heritage
+                  <xsl:attribute name="href">privacy.en.html</xsl:attribute>
+                  Privacy
                 </xsl:element>
               </xsl:element>
+	      <xsl:element name="li">
+                 <xsl:attribute name="class">menu-302 first</xsl:attribute>
+                <xsl:element name="a">
+                  <xsl:attribute name="href">creativity.en.html</xsl:attribute>
+                  Creativity
+                </xsl:element>
+              </xsl:element>
+	      <xsl:element name="li">
+                 <xsl:attribute name="class">menu-302 first</xsl:attribute>
+                <xsl:element name="a">
+                  <xsl:attribute name="href">act-now.en.html</xsl:attribute>
+                  Act!
+                </xsl:element>
+              </xsl:element>
+
               <xsl:element name="li">
 		 <xsl:attribute name="class">menu-302 first</xsl:attribute>
                 <xsl:element name="a">

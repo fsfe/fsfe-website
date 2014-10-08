@@ -294,8 +294,8 @@
 	    
 	    <xsl:variable name="tag" select="." />
 	    
-	    <xsl:element name="a">
-	      <xsl:attribute name="name">
+	    <xsl:element name="div">
+	      <xsl:attribute name="class">tag-<xsl:value-of select="$tag" /> tag title</xsl:attribute>
 	        <xsl:text>n</xsl:text>
 	        <xsl:value-of select="translate($tag, ' ', '')" />
 	      </xsl:attribute>
@@ -306,6 +306,7 @@
     	</xsl:element>
 	    
 	    <xsl:element name="ul">
+	      <xsl:attribute name="class">tag-<xsl:value-of select="$tag" /> tag list</xsl:attribute>
 	      
 	      <!-- loop through all news having this tag -->
 	      <xsl:for-each select="/buildinfo/document/set/news[tags/tag = $tag]">
@@ -347,6 +348,7 @@
     	</xsl:element>
 	    
 	    <xsl:element name="ul">
+	      <xsl:attribute name="class">tag-<xsl:value-of select="$tag" /> tag list</xsl:attribute>
 	      
 	      <!-- loop through all events having this tag -->
 	      <xsl:for-each select="/buildinfo/document/set/event[tags/tag = $tag]">

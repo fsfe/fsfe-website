@@ -20,7 +20,7 @@
         <xsl:if test="string(/buildinfo/document/@newsdate) and count(/buildinfo/document/@type) = 0">
           <xsl:if test="/buildinfo/document/tags">
             <footer class="tags">
-              <span>
+              <span id="tags">
                 <xsl:call-template name="fsfe-gettext">
                   <xsl:with-param name="id" select="'tags'" />
                 </xsl:call-template>

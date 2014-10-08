@@ -318,6 +318,7 @@ div#subpages, .grid-row {
 
     footer.tags {
         margin-top: 3em;
+        font-size: 0.9em;
 
         a.tag {
             display: inline-block;
@@ -325,6 +326,11 @@ div#subpages, .grid-row {
             background: lighten(@brand-primary,40%);
             border-radius: 4px;
             margin-left: 0.5em;
+        }
+
+        /* hide specific tags */
+        a.tag-front-page, a.tag-othertags {
+            display: none;
         }
     }
 

@@ -32,12 +32,24 @@
 
     <p>
       A tag should be in <a href="https://en.wikipedia.org/wiki/CamelCase">CamelCase</a> except for special tags like <code>front-page</code>, <code>newsletter</code>. So for instance, the tag “very important subject” should be <code>VeryImportantSubject</code>. 
-      A tag should contain a <code>content</code> attribute except for special tags. <bold>This attribute should be translated and human readable</bold>, because it will be shown on certain pages. For instance, if you tag a page about the Windows Tax and about a ruling:
+      A tag should contain a <code>content</code> attribute except for special tags. <bold>This attribute should be translated and human readable</bold>, because it will be shown on certain pages. For instance, if you tag a page about the Windows Tax.
     </p>
 
     <pre class="file">
       &lt;tag content="Windows Tax"&gt;WindowsTax&lt;/tag&gt;
-      &lt;tag content="Ruling"&gt;Ruling&lt;/tag&gt;
+    </pre>
+
+    <p>
+    If you are translating, you should never edit what is “here” between <code>&lt;tag&gt;here&lt;/tag&gt;</code> but you can add a translated <code>content</code> attribute. For instance, take an English file with:</p>
+
+    <pre class="file">
+      &lt;tag&gt;Ruling&lt;/tag&gt;
+    </pre>
+
+    <p>“Ruling” in French would be “Décision de justice” so you should do:</p>
+
+    <pre class="file">
+      &lt;tag content="Décision de justice"&gt;Ruling&lt;/tag&gt;
     </pre>
 
 

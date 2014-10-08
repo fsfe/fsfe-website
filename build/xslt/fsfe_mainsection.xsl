@@ -15,7 +15,27 @@
   
         <!-- Here goes the actual content of the <body> node of the input file -->
         <xsl:apply-templates select="body | /buildinfo/document/event/body | /buildinfo/document/news/body" />
-  
+      
+        <!-- Show tags if this is a news press release -->
+        <xsl:if test="string(/buildinfo/document/@newsdate) and count(/buildinfo/document/@type) = 0">
+          <xsl:if test="/buildinfo/document/tags">
+            <footer class="tags">
+              <span>
+                <xsl:call-template name="fsfe-gettext">
+                  <xsl:with-param name="id" select="'tags'" />
+                </xsl:call-template>
+              </span>
+
+              <xsl:for-each select="/buildinfo/document/tags/tag">
+                <xsl:element name="a">
+                  <xsl:attribute name="href">/tags/tagged.html#id-<xsl:value-of select="."/></xsl:attribute>
+                  <xsl:attribute name="class">tag tag-<xsl:value-of select="."/> p-category</xsl:attribute>
+                  <xsl:value-of select="."/> 
+                </xsl:element>
+              </xsl:for-each>
+            </footer>
+          </xsl:if>
+        </xsl:if>
   
       </xsl:element>
       <!--/article#content-->

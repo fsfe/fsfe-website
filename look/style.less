@@ -317,6 +317,7 @@ div#subpages, .grid-row {
     }
 
     footer.tags {
+        clear: both;
         color: @gray-light;
         margin: 3em 0 -2em 0;
         font-size: 0.8em;
@@ -1287,8 +1288,35 @@ ul.taglist li {
     margin-top: 4em;
 }
 
-/* hide specific tags */
-.tag-front-page, .tag-newsletter, .tag-othertags {
+/* hide special tags including "language" or country tags */
+/* Real tags should all be CamelCase */
+.tag-front-page, 
+.tag-newsletter, 
+.tag-en,
+.tag-gb,
+.tag-uk,
+.tag-at,
+.tag-de,
+.tag-ee,
+.tag-es,
+.tag-fi,
+.tag-fr,
+.tag-it,
+.tag-se,
+.tag-sq,
+.tag-sk,
+.tag-si,
+.tag-ro,
+.tag-pt,
+.tag-pl,
+.tag-no,
+.tag-nl,
+.tag-hu,
+.tag-hr,
+.tag-ch,
+.tag-br,
+.tag-be,
+.tag-othertags {
     display: none !important;
 }
 

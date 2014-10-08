@@ -30,7 +30,7 @@
                 <xsl:if test="/buildinfo/document/@newsdate">
                     <a href="/tags/tagged.html#n{.}" class="tag tag-{.} p-category">
                       <xsl:choose>
-                        <xsl:when test="/buildinfo/document/tags/tag/@content">
+                        <xsl:when test="@content">
                           <xsl:value-of select="@content"/>
                         </xsl:when>
                         <xsl:otherwise>
@@ -42,7 +42,7 @@
                 <xsl:if test="/buildinfo/document/event">
                     <a href="/tags/tagged.html#e{.}" class="tag tag-{.} p-category">
                       <xsl:choose>
-                        <xsl:when test="/buildinfo/document/tags/tag/@content">
+                        <xsl:when test="@content">
                           <xsl:value-of select="@content"/>
                         </xsl:when>
                         <xsl:otherwise>

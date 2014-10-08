@@ -334,7 +334,8 @@
 	    
 	    <xsl:variable name="tag" select="." />
 	    
-	    <xsl:element name="a">
+	    <xsl:element name="div">
+	      <xsl:attribute name="class">tag-<xsl:value-of select="$tag" /> title</xsl:attribute>
 	      <xsl:attribute name="name">
 	        <xsl:text>e</xsl:text>
 	        <xsl:value-of select="translate($tag, ' ', '')" />

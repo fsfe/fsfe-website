@@ -29,12 +29,26 @@
               <xsl:for-each select="/buildinfo/document/tags/tag">
                 <xsl:if test="/buildinfo/document/@newsdate">
                     <a href="/tags/tagged.html#n{.}" class="tag tag-{.} p-category">
-                      <xsl:value-of select="."/>
+                      <xsl:choose>
+                        <xsl:when test="/buildinfo/document/tags/tag/@content">
+                          <xsl:value-of select="@content"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                          <xsl:value-of select="."/>
+                        </xsl:otherwise>
+                      </xsl:choose>
                     </a>
                 </xsl:if>
                 <xsl:if test="/buildinfo/document/event">
                     <a href="/tags/tagged.html#e{.}" class="tag tag-{.} p-category">
-                      <xsl:value-of select="."/>
+                      <xsl:choose>
+                        <xsl:when test="/buildinfo/document/tags/tag/@content">
+                          <xsl:value-of select="@content"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                          <xsl:value-of select="."/>
+                        </xsl:otherwise>
+                      </xsl:choose>
                     </a>
                 </xsl:if>
               </xsl:for-each>

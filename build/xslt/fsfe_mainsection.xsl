@@ -16,9 +16,8 @@
         <!-- Here goes the actual content of the <body> node of the input file -->
         <xsl:apply-templates select="body | /buildinfo/document/event/body | /buildinfo/document/news/body" />
       
-        <!-- Show tags if this is a news press release -->
-        <xsl:if test="string(/buildinfo/document/@newsdate) and count(/buildinfo/document/@type) = 0">
-          <xsl:if test="/buildinfo/document/tags">
+        <!-- Show tags if this is a news press release or an event -->
+        <xsl:if test="count(/buildinfo/document/tags/tag[. != 'front-page' and . != 'newsletter']) > 0">
             <footer class="tags">
               <span id="tags">
                 <xsl:call-template name="fsfe-gettext">

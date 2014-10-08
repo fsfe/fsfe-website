@@ -301,9 +301,6 @@
 	        <xsl:value-of select="translate($tag, ' ', '')" />
 	      </xsl:attribute>
     	  <xsl:element name="h3">
-	      <xsl:attribute name="name">
-	        <xsl:value-of select="translate($tag, ' ', '')" />
-	      </xsl:attribute>
           <xsl:call-template name="generate-id-attribute" />
           <xsl:value-of select="$tag" />
         </xsl:element>
@@ -346,9 +343,6 @@
 	        <xsl:value-of select="translate($tag, ' ', '')" />
 	      </xsl:attribute>
     	  <xsl:element name="h3">
-	      <xsl:attribute name="name">
-	        <xsl:value-of select="translate($tag, ' ', '')" />
-	      </xsl:attribute>
           <xsl:call-template name="generate-id-attribute" />
           <xsl:value-of select="$tag" />
         </xsl:element>

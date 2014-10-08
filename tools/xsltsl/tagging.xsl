@@ -300,10 +300,17 @@
 	        <xsl:text>n</xsl:text>
 	        <xsl:value-of select="translate($tag, ' ', '')" />
 	      </xsl:attribute>
-    	  <xsl:element name="h3">
-          <xsl:call-template name="generate-id-attribute" />
-          <xsl:value-of select="$tag" />
-        </xsl:element>
+              <xsl:element name="h3">
+                <xsl:call-template name="generate-id-attribute" />
+                <xsl:choose>
+                  <xsl:when test="@content">
+                    <xsl:value-of select="@content"/>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:value-of select="$tag" />
+                  </xsl:otherwise>
+                </xsl:choose>
+              </xsl:element>
     	</xsl:element>
 	    
 	    <xsl:element name="ul">
@@ -342,10 +349,17 @@
 	        <xsl:text>e</xsl:text>
 	        <xsl:value-of select="translate($tag, ' ', '')" />
 	      </xsl:attribute>
-    	  <xsl:element name="h3">
-          <xsl:call-template name="generate-id-attribute" />
-          <xsl:value-of select="$tag" />
-        </xsl:element>
+              <xsl:element name="h3">
+                <xsl:call-template name="generate-id-attribute" />
+                <xsl:choose>
+                  <xsl:when test="@content">
+                    <xsl:value-of select="@content"/>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:value-of select="$tag" />
+                  </xsl:otherwise>
+                </xsl:choose>
+              </xsl:element>
     	</xsl:element>
 	    
 	    <xsl:element name="ul">

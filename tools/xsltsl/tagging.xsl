@@ -296,6 +296,7 @@
 	    
 	    <xsl:element name="div">
 	      <xsl:attribute name="class">tag-<xsl:value-of select="$tag" /> tag title</xsl:attribute>
+	      <xsl:attribute name="name">
 	        <xsl:text>n</xsl:text>
 	        <xsl:value-of select="translate($tag, ' ', '')" />
 	      </xsl:attribute>

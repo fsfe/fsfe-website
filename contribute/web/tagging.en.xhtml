@@ -28,15 +28,27 @@
       xml-style one.
     </p>
 
+    <h2>Basic instructions</h2>
+
+    <p>
+      A tag should be in <a href="https://en.wikipedia.org/wiki/CamelCase">CamelCase</a> except for special tags like <code>front-page</code>, <code>newsletter</code>. So for instance, the tag “very important subject” should be <code>VeryImportantSubject</code>. 
+      A tag should contain a <code>content</code> attribute except for special tags. This attribute should be translated and human readable, because it will be shown on certain pages. For instance, if you tag a page about the Windows Tax:
+    </p>
+
+    <pre class="file">
+      &lt;tag content="Windows Tax"&gt;WindowsTax&lt;/tag&gt;
+    </pre>
+
 
     <h2>Tagged news and events</h2>
     
     <p>In order to retrieve news items or events with a given tag, these
     have of course to be tagged accordingly. To do that, add as many 
-    <var>&lt;tag&gt;...&lt;/tag&gt;</var> as necessary in the tags section.</p>
+    <var>&lt;tag content=""&gt;...&lt;/tag&gt;</var> as necessary in the tags section.</p>
     
     <p>
       A list of tags currently in use can be found <a href="/tags/tags.html">here</a>.
+      We also have a list of <a href="/tags/tagged.html">all tagged pages, events and news</a>. <strong>Please check these pages first</strong> to avoid making duplicated tags, use existing tags if possible to keep things consistent.
     </p>
     
     <ul>
@@ -48,8 +60,8 @@
       [...]
       &lt;tags&gt;
       &lt;tag&gt;front-page&lt;/tag&gt;
-      &lt;tag&gt;swpats&lt;/tag&gt;
-      &lt;tag&gt;novell&lt;/tag&gt;
+      &lt;tag content="Software Patents"&gt;Swpats&lt;/tag&gt;
+      &lt;tag content="Novell"&gt;Novell&lt;/tag&gt;
       &lt;/tags&gt;
       &lt;/html&gt;
     </pre>
@@ -63,8 +75,8 @@
       [...]
       &lt;tags&gt;
       &lt;tag&gt;front-page&lt;/tag&gt;
-      &lt;tag&gt;swpats&lt;/tag&gt;
-      &lt;tag&gt;novell&lt;/tag&gt;
+      &lt;tag content="Software Patents"&gt;Swpats&lt;/tag&gt;
+      &lt;tag content="Novell"&gt;Novell&lt;/tag&gt;
       &lt;/tags&gt;
       &lt;/news&gt;
     </pre>
@@ -78,7 +90,7 @@
       [...]
       &lt;tags&gt;
       &lt;tag&gt;front-page&lt;/tag&gt;
-      &lt;tag&gt;it&lt;/tag&gt;
+      &lt;tag content="Italy"&gt;it&lt;/tag&gt;
       &lt;/tags&gt;
       &lt;/event&gt;
     </pre>

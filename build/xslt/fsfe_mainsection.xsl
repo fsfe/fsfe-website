@@ -26,11 +26,9 @@
               </span>
 
               <xsl:for-each select="/buildinfo/document/tags/tag">
-                <xsl:element name="a">
-                  <xsl:attribute name="href">/tags/tagged.html#id-<xsl:value-of select="."/></xsl:attribute>
-                  <xsl:attribute name="class">tag tag-<xsl:value-of select="."/> p-category</xsl:attribute>
-                  <xsl:value-of select="."/> 
-                </xsl:element>
+                <a href="/tags/tagged.html#id-{.}" class="tag tag-{.} p-category">
+                  <xsl:value-of select="."/>
+                </a>
               </xsl:for-each>
             </footer>
           </xsl:if>

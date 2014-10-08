@@ -27,9 +27,16 @@
               </span>
 
               <xsl:for-each select="/buildinfo/document/tags/tag">
-                <a href="/tags/tagged.html#id-{.}" class="tag tag-{.} p-category">
+        <xsl:if test="/buildinfo/document/@newsdate">
+                <a href="/tags/tagged.html#n{.}" class="tag tag-{.} p-category">
                   <xsl:value-of select="."/>
                 </a>
+            </xsl:if>
+        <xsl:if test="/buildinfo/document/event">
+                <a href="/tags/tagged.html#e{.}" class="tag tag-{.} p-category">
+                  <xsl:value-of select="."/>
+                </a>
+            </xsl:if>
               </xsl:for-each>
             </footer>
           </xsl:if>

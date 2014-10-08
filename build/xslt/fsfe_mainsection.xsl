@@ -37,9 +37,26 @@
                     <xsl:with-param name="id" select="'news/nl'" />
                 </xsl:call-template>
               </a></li>
+              <li>
+                  <a href="/news/news.html">
+                    <xsl:call-template name="fsfe-gettext">
+                        <xsl:with-param name="id" select="'news/news'" />
+                    </xsl:call-template>
+                  </a>
+              </li>
               <li><a href="/events/events.html">
                 <xsl:call-template name="fsfe-gettext">
                     <xsl:with-param name="id" select="'news/events'" />
+                </xsl:call-template>
+              </a></li>
+              <li><a href="//planet.fsfe.org">
+                <xsl:call-template name="fsfe-gettext">
+                    <xsl:with-param name="id" select="'news/planet'" />
+                </xsl:call-template>
+              </a></li>
+              <li><a href="/contact/community.html">
+                <xsl:call-template name="fsfe-gettext">
+                    <xsl:with-param name="id" select="'community/discuss'" />
                 </xsl:call-template>
               </a></li>
             </ul>

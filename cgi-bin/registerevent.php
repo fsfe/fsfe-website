@@ -1,5 +1,5 @@
 <?php
-e/ Copyright (C) 2012 by Tobias Bengfort <tobias.bengfort@gmx.net>
+// Copyright (C) 2012 by Tobias Bengfort <tobias.bengfort@gmx.net>
 
 function eval_xml_template($template, $data) {
 	$dir = realpath(dirname(__FILE__) . '/../templates');
@@ -99,7 +99,7 @@ function send_registration_mail() {
 		$data['location'] = $geodata->address->city . ", " . $geodata->address->country; // overwriting the value given by the user
 	}
 */
-	$data['event'] = eval_template('registerevent/event.php', $data);
+//	$data['event'] = eval_template('registerevent/event.php', $data);
 
 	$message = eval_template('registerevent/mail.php', $data);
 

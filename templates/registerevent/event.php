@@ -23,6 +23,7 @@
 		<contact>
 			<name><?=htmlspecialchars($name)?></name>
 			<email><?=htmlspecialchars($email)?></email>
+			<cityandcountry><?=htmlspecialchars($cityandcountry)?></cityandcountry>
 		</contact>
 
 		<tags> 

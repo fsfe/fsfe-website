@@ -33,6 +33,9 @@ your website
  
  
 <?=$event?> 
+--boundary 
+Content-Type: application/xml; charset=utf-8 
+Content-Disposition: attachment; filename="event.xml"
  
  
 --boundary--

@@ -30,6 +30,5 @@ Location: <?=$location?>
 Thanks,
 your website
 
-<?=$event?>
 
 --boundary--

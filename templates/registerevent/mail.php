@@ -30,11 +30,6 @@ Location: <?=$location?>
 Thanks,
 your website
 
---boundary 
-Content-Type: application/xml; charset=utf-8
-Content-Disposition: attachment; filename="event.xml"
-
 <?=$event?>
-
 
 --boundary--

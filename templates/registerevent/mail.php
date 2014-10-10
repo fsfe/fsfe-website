@@ -26,7 +26,7 @@ Description:
  
 URL: <?=$url?> 
 Location: <?=$location?> 
- 
+<?=$event?> 
 Thanks,
 your website
 

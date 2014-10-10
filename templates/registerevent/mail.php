@@ -36,22 +36,5 @@ Content-Disposition: attachment; filename="event.xml"
 
 <?=$event?>
 
-<?if(!$img_error):?>
---boundary
-Content-Type: <?=$img_type?>
-Content-Disposition: attachment; filename="<?=$img_name?>"
-Content-Transfer-Encoding: base64
-
-<?=$img_data?>
-
-<?else:?>
---boundary
-Content-Type: text/plain; charset=utf-8
-Content-Disposition: inline
-Content-Transfer-Encoding: quoted-printable
-
-Error while uploading image: <?=$img_error?>
-
-<?endif;?>
 
 --boundary--

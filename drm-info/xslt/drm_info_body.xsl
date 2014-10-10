@@ -84,10 +84,10 @@
  
 <!--      <xsl:call-template name="notifications" /> -->
 
-      <xsl:element name="div"> <xsl:attribute name="class">col2</xsl:attribute>
-	
+<!--      <xsl:element name="div"> <xsl:attribute name="class">col2</xsl:attribute>
+-->	
           <xsl:apply-templates select="body/node()" />
-	</xsl:element>
+<!--	</xsl:element> -->
       </xsl:element>
       
     

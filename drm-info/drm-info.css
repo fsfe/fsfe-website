@@ -10,6 +10,12 @@ body {
     padding: 15px;
 }
 
+translations.alert{
+  position: fixed;
+  margin-right: 80%;
+  margin-left: 74%;
+  top: 17%;
+}
 ul.menu {
   list-style: none;
   border: none;
@@ -24,6 +30,7 @@ li.expanded {
   padding: 0.2em 0.5em 0 0; /* LTR */
   margin: 0;
 }
+
 ul.col3
 {
   list-style:none;
@@ -131,10 +138,7 @@ hr.cleaner {
     background-image: url("img/drm_logo_top.png");
     background-position: left top;
     background-repeat: no-repeat;
-    float: left;
-    height: 207px;
-    text-align: left;
-    width: 647px;
+    margin-left:12%;
 }
 .login {
     margin: 0 0 0 620px;
@@ -190,7 +194,7 @@ hr.cleaner {
     top: 159px;
 }
 #menu {
-	margin-top: 4px;
+	margin-top: 0px;
 	width: 825px;
 	height: 34px;
 	background-image: url("img/drm_navi.png");
@@ -267,7 +271,7 @@ hr.cleaner {
     margin-right:auto;
 }
 .col3 {
-top:24%;
+top:69%;
 bottom:0;
 position:fixed;
        width: 10%;

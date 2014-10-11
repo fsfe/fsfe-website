@@ -88,7 +88,7 @@
 -->	
           <xsl:apply-templates select="body/node()" />
 <!--	</xsl:element> -->
-      </xsl:element>
+<!--      </xsl:element> -->
       
     
       <xsl:element name="div"><xsl:attribute name="class">col3</xsl:attribute>
@@ -160,8 +160,8 @@
         <xsl:element name="section">
           <xsl:attribute name="id">sister-organisations</xsl:attribute>
           <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfnetwork'" /></xsl:call-template>
-        </xsl:element> 
-      </xsl:element> -->
+        </xsl:element> --> 
+      </xsl:element> 
 
    
   </xsl:template>

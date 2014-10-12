@@ -20,6 +20,15 @@
 
         <xsl:element name="div">
           <xsl:attribute name="class">logo</xsl:attribute>
+	  <xsl:element name="div">
+            <xsl:attribute name="class">slogan1</xsl:attribute>
+	     Digital Restrictions Management
+	  </xsl:element>
+	  <xsl:element name="div">
+            <xsl:attribute name="class">slogan2</xsl:attribute>
+             What you should know about Digital Restrictions Management
+          </xsl:element>
+ 
           <xsl:element name="a">
             <xsl:attribute name="href">http://drm.info</xsl:attribute>
             <xsl:element name="img">

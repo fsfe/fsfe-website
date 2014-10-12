@@ -15,20 +15,8 @@ is valid.
  
 If it is not, please correct it in the xml file. 
  
-Name: <?=$name?> 
-Email: <?=$email?> 
-Title: <?=$title?> 
-Groupname: <?=$groupname?> 
-Date: <?=$date?> (yyyy-mm-dd) 
-Description: 
- 
-<?=$description?> 
- 
-URL: <?=$url?> 
-Location: <?=$location?> 
  
 Thanks,
 your website
-<?=$event?>
 
 --boundary--

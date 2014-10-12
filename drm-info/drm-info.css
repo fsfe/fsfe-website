@@ -250,6 +250,11 @@ hr.cleaner {
     margin-left:15%;
     
 }
+.inner-content
+{
+width:60%;
+float:left;
+}
 #blocks TABLE {
 }
 .form-submit {
@@ -271,9 +276,6 @@ hr.cleaner {
     margin-right:auto;
 }
 .col3 {
-top:69%;
-bottom:0;
-position:fixed;
        width: 10%;
     margin-left:65%;
 }

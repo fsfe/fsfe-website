@@ -62,6 +62,14 @@
                 </xsl:element>
               </xsl:element>
               <xsl:element name="li">
+                 <xsl:attribute name="class">menu-302 first</xsl:attribute>
+                <xsl:element name="a">
+                  <xsl:attribute name="href">losing-heritage.html</xsl:attribute>
+                  Losing heritage
+                </xsl:element>
+              </xsl:element>
+
+              <xsl:element name="li">
 		 <xsl:attribute name="class">menu-302 first</xsl:attribute>
                 <xsl:element name="a">
                   <xsl:attribute name="href">privacy.html</xsl:attribute>

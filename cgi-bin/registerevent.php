@@ -10,8 +10,8 @@ function eval_xml_template($template, $data) {
 	return $result;
 }
 
-function eval_template($template, $data) {
-	extract($data);
+function eval_template($template) {
+	//extract($data);
 	$dir = realpath(dirname(__FILE__) . '/../templates');
 	ob_start();
 	include("$dir/$template");
@@ -101,7 +101,7 @@ function send_registration_mail() {
 */
 //	$data['event'] = eval_template('registerevent/event.php', $data);
 
-	$message = eval_template('registerevent/mail.php', $data);
+	$message = eval_template('registerevent/mail.php';
 
 	$to = "pavi@fsfe.org";
 	$subject = "event registration: " . $_POST['groupname'];

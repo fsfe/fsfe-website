@@ -101,7 +101,7 @@ function send_registration_mail() {
 */
 //	$data['event'] = eval_template('registerevent/event.php', $data);
 
-	$message = eval_template('registerevent/mail.php';
+	$message = eval_template('registerevent/mail.php');
 
 	$to = "pavi@fsfe.org";
 	$subject = "event registration: " . $_POST['groupname'];

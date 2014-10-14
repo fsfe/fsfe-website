@@ -36,9 +36,9 @@
               <xsl:attribute name="alt">DRM.Info</xsl:attribute>
             </xsl:element>
           </xsl:element>
+	<xsl:call-template name="translation_list" />
         </xsl:element>
 
-        <xsl:call-template name="translation_list" />
 
 		<xsl:element name="div">
           <xsl:attribute name="id">menu</xsl:attribute>

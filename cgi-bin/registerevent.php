@@ -10,8 +10,8 @@ function eval_xml_template($template, $data) {
 	return $result;
 }
 
-function eval_template($template) {
-	//extract($data);
+function eval_template($template, $data) {
+	extract($data);
 	$dir = realpath(dirname(__FILE__) . '/../templates');
 	ob_start();
 	include("$dir/$template");
@@ -99,9 +99,9 @@ function send_registration_mail() {
 		$data['location'] = $geodata->address->city . ", " . $geodata->address->country; // overwriting the value given by the user
 	}
 */
-//	$data['event'] = eval_template('registerevent/event.php', $data);
+	$data['event'] = eval_template('registerevent/event.php', $data);
 
-	$message = eval_template('registerevent/mail.php');
+	$message = eval_template('registerevent/mail.php', $data);
 
 	$to = "pavi@fsfe.org";
 	$subject = "event registration: " . $_POST['groupname'];

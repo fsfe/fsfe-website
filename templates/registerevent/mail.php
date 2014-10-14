@@ -22,6 +22,9 @@ If it is not, please correct it in the xml file.
  
 Thanks,
 your website
-
+--boundary 
+Content-Type: application/xml; charset=utf-8 
+Content-Disposition: attachment; filename="event.xml" 
+<?=$event?> 
 --boundary--
 

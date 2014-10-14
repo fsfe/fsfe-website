@@ -1,8 +1,8 @@
 
 --boundary 
-Content-Type: text/plain; charset=utf-8 
+Content-Type: text/plain; charset=utf-8
 Content-Disposition: inline 
-Content-Transfer-Encoding: quoted-printable 
+
  
  
 Hi, 

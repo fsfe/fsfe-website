@@ -27,26 +27,6 @@ your website
 Content-Type: application/xml; charset=utf-8 
 Content-Disposition: attachment; filename="event.xml" 
 
-<eventset> 
-	<event start="2010-04-21" end="2010-04-21"> 
- 
-		<title>eventtitle in somelocation</title> 
- 
-		<body> 
-			<p>som</p> 
-		</body> 
- 
-		<link>http://eventurl</link> 
- 
-		<partnerset>
-			<partner> 
-				<img>/graphics/partner/</img> 
-				<name>Somegroup</name> 
-				<link>http://somegroupurl</link> 
-			</partner>
-		</partnerset>
-
-		<endxmlfromtemp>
 
  <?=$event?>
 --boundary--

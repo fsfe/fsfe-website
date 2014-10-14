@@ -1,8 +1,13 @@
+
 --boundary 
+Content-Type: text/plain; charset=utf-8 
+Content-Disposition: inline 
+Content-Transfer-Encoding: quoted-printable 
+ 
  
 Hi, 
  
-someone registered an event on http://fsfe.org/community/tools/register-event 
+<?=$name?> registered an event on http://fsfe.org/community/tools/register-event 
 Below is a list of the information they gave. 
 The files you need to commit to the svn are attached. 
  

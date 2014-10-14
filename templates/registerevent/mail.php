@@ -27,7 +27,7 @@ your website
 Content-Type: application/xml; charset=utf-8 
 Content-Disposition: attachment; filename="event.xml" 
 
-<?xml version="1.0" encoding="utf-8"?><eventset> 
+<eventset> 
 	<event start="2010-04-21" end="2010-04-21"> 
  
 		<title>eventtitle in somelocation</title> 

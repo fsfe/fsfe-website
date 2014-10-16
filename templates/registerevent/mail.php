@@ -12,6 +12,7 @@ Below is a list of the information they gave.
 Name: <?=$name?> 
 Email: <?=$email?> 
 Groupname: <?=$groupname?>
+
 Location: <?=$location?>
  
 The files you need to commit to the svn are attached. 

@@ -10,17 +10,13 @@
 			<p><?=$description?></p> 
 		</body><?if($url):?> 
  
-		<link><?=htmlspecialchars($url)?></link><?endif;?><?if($geodata):?> 
- 
-		<?=$geodata?><?endif;?> 
+		<link><?=htmlspecialchars($url)?></link><?endif;?> 
  
 
-		<contact>
-			<name><?=htmlspecialchars($name)?></name>
-			<email><?=htmlspecialchars($email)?></email>
-			<city><?=htmlspecialchars($city)?></city>
-			<country><?=htmlspecialchars($country)?></country>
-		</contact>
+		<tags>
+			<tag><?=htmlspecialchars($city)?></tag>
+			<tag><?=htmlspecialchars($country)?></tag>
+		</tags>
 
  
 	</event> 

@@ -81,8 +81,8 @@ function send_registration_mail() {
 		'description' => $_POST['description'],
 		'url' => htmlspecialchars($_POST['url']),
 		'location' => $_POST['location'],
-		'cityandcountry' => $_POST['cityandcountry'],
-		'register_partner' => isset($_POST['register_partner']),
+		'city' => $_POST['city'],
+		'country' => $_POST['country'],
 	);
 
 //	$data = array_merge($data, partner_img());

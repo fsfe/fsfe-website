@@ -8,7 +8,12 @@ Content-Disposition: inline
 Hi, 
  
 <?=$name?> registered an event on http://fsfe.org/community/tools/register-event 
-Below is a list of the information they gave. 
+Below is a list of the information they gave.
+Name: <?=$name?> 
+Email: <?=$email?> 
+Groupname: <?=$groupname?>
+Location: <?=$location?>
+ 
 The files you need to commit to the svn are attached. 
  
 Please reply to the person who registerd saying "Hi" and 
@@ -20,12 +25,11 @@ If it is not, please correct it in the xml file.
  
 Thanks,
 your website
-<?=$event?>
 --boundary 
 Content-Type: application/xml; charset=utf-8 
 Content-Disposition: attachment; filename="event.xml" 
 
 
- <?=$event?>
+<?=$event?>
 --boundary--
 

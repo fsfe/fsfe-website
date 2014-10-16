@@ -1,4 +1,5 @@
 <?='<?xml version="1.0" encoding="utf-8"?>'?>
+
 <eventset> 
 	<event start="<?=htmlspecialchars($date)?>" end="<?=htmlspecialchars($date)?>"> 
  
@@ -12,24 +13,14 @@
  
 		<?=$geodata?><?endif;?> 
  
-		<partnerset>
-			<partner><?if(!$img_error):?> 
-				<img>/graphics/partner/<?=htmlspecialchars($img_name)?></img><?endif;?> 
-				<name><?=htmlspecialchars($groupname)?></name><?if($groupurl):?> 
-				<link><?=htmlspecialchars($groupurl)?></link><?endif;?> 
-			</partner>
-		</partnerset>
 
 		<contact>
 			<name><?=htmlspecialchars($name)?></name>
 			<email><?=htmlspecialchars($email)?></email>
-			<cityandcountry><?=htmlspecialchars($cityandcountry)?></cityandcountry>
+			<city><?=htmlspecialchars($city)?></city>
+			<country><?=htmlspecialchars($country)?></country>
 		</contact>
 
-		<tags> 
-			<tag>2014</tag><?if($geo_country_code):?> 
-			<tag><?=htmlspecialchars($geo_country_code)?></tag><?endif;?> 
-		</tags> 
  
 	</event> 
 </eventset> 

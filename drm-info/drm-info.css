@@ -11,10 +11,8 @@ body {
 }
 
 #translations.alert{
-  position: fixed;
-  margin-right: 80%;
-  margin-left: 70%;
-  top: 14%;
+  margin-right: 23%;
+  float:right;
 }
 ul.menu {
   list-style: none;
@@ -137,7 +135,7 @@ hr.cleaner {
 .logo {
     background-position: left top;
     background-repeat: no-repeat;
-    margin-left:16%;
+    margin-left:18%;
 }
 .login {
     margin: 0 0 0 620px;
@@ -200,7 +198,7 @@ hr.cleaner {
 	background-repeat: no-repeat;
 	background-position: top left;
 	text-align: center;
-	margin-left:16%;
+	margin-left:18%;
 	margin-right:auto;
 }
 

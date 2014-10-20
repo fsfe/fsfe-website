@@ -6,7 +6,7 @@
 # HTML pages from the .xhtml, .xml and .xsl source files. Most of the work,
 # however, is done by the Perl script build.pl.
 # -----------------------------------------------------------------------------
-
+ 
 if [ "$1" = "test" ]; then
   SOURCE=/home/www/fsfe-test
   DEST=/home/www/html-test

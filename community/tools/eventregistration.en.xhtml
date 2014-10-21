@@ -3,24 +3,79 @@
 <html>
   <head>
     <title>Announce your FSFE community event</title>
+	<style type="text/css">
+	form label {
+	width:12em;
+	}
+	input {
+	border-radius: 7px 7px 7px 7px;
+	}
+	</style>
   </head>
   <body>
  
     <h1>Announce your FSFE community event</h1>
 
     <div id="introduction">
-
-    <p>Here you find register and announce every event that is related to a FSFE activity. Is it a Fellowship-meeting or a talk or a booth in the streets: Let the community and the world know what's happening.</p>
-
+      <p>Use the form below to announce every event that is related to a FSFE activity. If it's a Fellowship-meeting or a talk, if it's a booth in the streets or a radio podcast: Let the community and the world know what's happening.</p>
+      <p>After filling out the form and confirming the "add event" button, a xml-file will be generated and sent to the Fellowship of FSFE. If approved, your event entry will be uploaded and should appear on fsfe.org/events during the next 24 hours.</p> 
     </div>
 
-	<h1>Register your event</h1>
+    <h1>Register your event</h1>
 
-	<p>Please fill out this form so we can promote your event</p>
-	
+    <p>Please fill out this form so we can promote your event</p>
+    <form action="/cgi-bin/registerevent.php" method="POST" class="register_event" enctype="multipart/form-data">
+      <input name="register_event" type="hidden" />
+
+	<!--<fieldset id="register_event">-->
+
+      <div>
+	<label for="name">Your name *</label><input name="name" value="" required="required" type="text" />
+      </div>
+      <div>
+	 <label for="email">Email *</label><input name="email" value="" required="required" type="email" />
+      </div>
+	<div>
+	  <label for="groupname">Groupname</label><input name="groupname" value="" type="text" />
+	</div>
+	<div>
+	  <label for="groupurl">URL for your group</label><input name="groupurl" value="" type="text" />
+	</div>
+	<div>
+	  <label for="title">Event title *</label><input name="title" value="" required="required" type="text" />
+	</div>
+	<div>
+	  <label for="date">Date (yyyy-mm-dd) *</label><input name="date" value="" required="required" type="date" />
+	</div>
+	<div>
+	  <label for="description" style="vertical-align: top;">Description *</label>
+
+	  <div style="margin-left: 12em;"> <!-- just a quick hack -->
+	    <p> Please explain briefly what your event is about, how to attend and what participants can expect. 
+	    </p>
+	    <textarea name="description" required="required" style="min-width: 60%; min-height: 150px;"></textarea>
+	  </div>
+	</div>
+	<div>
+	  <label for="url">Event URL</label><input name="url" value="" type="text" />
+	</div>
+	<div>
+	  <label for="location">Location</label><input name="location" value="" required="required" type="text" />
+	</div>
+	<div>
+          <label for="city">City</label><input name="city" value="" required="required" type="text" />
+	</div>
+	<div>
+	  <label for="country">Country</label><input name="country" value="" required="required" type="text" />
+        </div>
 
 
+		<!--</fieldset>-->
+
+	<!-- Should help against spam -->
+
+		
+	<input value="Add event" name="submit" type="submit" />
+    </form>
   </body>
-
-  <timestamp>$Date: 2013-12-18 14:20:21 +0100 (Wed, 18 Dec 2013) $ $Author: eal $</timestamp>
-</html>
+ </html>

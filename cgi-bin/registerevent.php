@@ -103,7 +103,7 @@ function send_registration_mail() {
 
 	$message = eval_template('registerevent/mail.php', $data);
 
-	$to = "".$email.",fellowship@fsfeurope.org";
+	$to = $email.",fellowship@fsfeurope.org";
 	$subject = "event registration: " . $_POST['name'];
 	$headers = "From: no-reply@fsfe.org\n"
 		. "MIME-Version: 1.0\n"

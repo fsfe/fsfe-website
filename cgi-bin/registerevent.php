@@ -32,36 +32,6 @@ function get_mime_type($path) {
 	else
 		return mime_content_type($path);
 }
-/*
-function json2xml($json) {
-	// a quick hack for converting the nominatim data. 
-	// this will probably not work elsewhere
-
-	if ( !$json )
-		return '';
-
-	$result = '';
-	$place = json_decode($json);
-
-	$result .= "<place>\n";
-	foreach ( $place as $key => $value ) {
-		$result .= "\t<$key>";
-		if ( is_string($value) )
-			$result .= "$value";
-		elseif ( is_array($value) )
-			$result .= implode(',', $value);
-		else {
-			$result .= "\n";
-			foreach ( $value as $k => $v )
-				$result .= "\t\t<$k>$v</$k>\n";
-			$result .= "\t";
-		}
-		$result .= "</$key>\n";
-	}
-	$result .= "</place>";
-	return $result;
-}
-*/
 //removed partner img function
 
 function eval_date($date) {
@@ -85,25 +55,11 @@ function send_registration_mail() {
 		'country' => $_POST['country'],
 	);
 
-//	$data = array_merge($data, partner_img());
-/*
-	$geodata_json = rawurldecode($_POST['geodata']);
-	if ( $geodata_json ) {
-		$geodata = json_decode($geodata_json);
-
-		foreach ( $geodata->address as $k => $v )
-			$data["geo_$k"] = $v;
-
-		$data['geodata'] = preg_replace("/\n/", "\n\t\t", json2xml($geodata_json));
-
-		$data['location'] = $geodata->address->city . ", " . $geodata->address->country; // overwriting the value given by the user
-	}
-*/
 	$data['event'] = eval_template('registerevent/event.php', $data);
 
 	$message = eval_template('registerevent/mail.php', $data);
 
-	$to = $email.",fellowship@fsfeurope.org";
+	$to = $email.",pavi@fsfe.org";
 	$subject = "event registration: " . $_POST['name'];
 	$headers = "From: no-reply@fsfe.org\n"
 		. "MIME-Version: 1.0\n"

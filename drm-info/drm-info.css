@@ -2,6 +2,7 @@
 body {
     background-color: #E1E1E1;
     background-image: url("img/drm_bg.png");
+    background-size: 70%;
     background-position: center top;
     background-repeat: repeat-y;
     font-family: Verdana,arial,sans-serif;
@@ -194,9 +195,11 @@ hr.cleaner {
 	margin-top: 0px;
 	width: 825px;
 	height: 34px;
-	background-image: url("img/drm_navi.png");
-	background-repeat: no-repeat;
-	background-position: top left;
+        background-color: #900;
+        border-radius: 12px;
+/*	background-image: url("img/drm_navi.png"); */
+/*	background-repeat: no-repeat; */
+/*	background-position: top left; */
 	text-align: center;
 	margin-left:18%;
 	margin-right:auto;

@@ -16,7 +16,7 @@ Below is the list of the information you gave.
 	Location: <?=$location?>
  
 You find all other information in the xml file attached. It will be uploaded
-in the next 24 hours. If not, or in case you like to change some information,
+in the next 48 hours. If not, or in case you like to change some information,
 please contact fellowship@fsfeurope.org
  
 Thanks,

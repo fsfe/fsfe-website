@@ -128,12 +128,21 @@
           <xsl:if test=" photo != '' ">
               <img src="{photo}" alt="" />
           </xsl:if>
-      <p class="text">
-        <xsl:value-of select="   text   " />
-      </p>
-      <span class="author">
-        <xsl:value-of select="   author   " />
-      </span>
+          <xsl:if test=" text != '' ">
+              <p class="text">
+                <xsl:value-of select="." />
+              </p>
+          </xsl:if>
+          <xsl:if test=" author != '' ">
+              <span class="author">
+                <xsl:value-of select="." />
+              </span>
+          </xsl:if>
+          <xsl:if test=" copyright != '' ">
+              <span class="copyright">
+                <xsl:value-of select="." />
+              </span>
+          </xsl:if>
     </a>
   </xsl:template>
   

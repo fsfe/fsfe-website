@@ -130,17 +130,17 @@
           </xsl:if>
           <xsl:if test=" text != '' ">
               <p class="text">
-                <xsl:value-of select="." />
+                <xsl:value-of select="text" />
               </p>
           </xsl:if>
           <xsl:if test=" author != '' ">
               <span class="author">
-                <xsl:value-of select="." />
+                <xsl:value-of select="author" />
               </span>
           </xsl:if>
           <xsl:if test=" copyright != '' ">
               <span class="copyright">
-                <xsl:value-of select="." />
+                <xsl:value-of select="copyright" />
               </span>
           </xsl:if>
     </a>

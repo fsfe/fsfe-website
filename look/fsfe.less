@@ -145,7 +145,11 @@ a.the-fellowship {
 
         #appelbaum {
             background: url('/graphics/appelbaum.jpg')  top right  no-repeat #070400;
-            background-size: contain;
+            background-size: cover;
+
+            @media (min-width: @screen-sm) {
+                background-size: contain;
+            }
 
             img { display: none; }
             .author:before {content: "– ";}

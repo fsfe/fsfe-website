@@ -142,6 +142,28 @@ a.the-fellowship {
             }
 
         }
+
+        #appelbaum {
+            background: url('/graphics/appelbaum.jpg')  top right  no-repeat #070400;
+
+            img { display: none; }
+            .author:before {content: "– ";}
+            .text { 
+                .quote; 
+            }
+            .author, .text {
+                display: block;
+                margin-right: 45%;
+                background-color: rgba(0,0,0,0.5);
+                padding: 0.5em;
+            }
+            .copyright {
+                font-size: 0.6em;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
         
         #zacchiroli {
             background: url('/graphics/group-blur-800.jpg')  center 33%  no-repeat #666;
@@ -188,23 +210,6 @@ a.the-fellowship {
             background: url('/graphics/thedaywefightback.png')  center 33%  no-repeat transparent;
         }
         
-        #appelbaum {
-            background: url('/graphics/group-blur-800.jpg')  center 33%  no-repeat #666;
-            text-shadow: 0px 1px 2px rgb(0,0,0);
-
-            img { float: right; margin-left: 1em; }
-            .author:before {content: "– ";}
-            .text { 
-                .quote; 
-            }
-
-            @media (min-width: @screen-md) {
-                img { margin-left: 3em; }
-                .text {font-size: 1.25em; }
-                .text, .author {max-width: 80ex; margin: 1em auto; display: block;}
-            }
-
-        }
     }
 }
 .svg #campaigns-boxes #dfd {

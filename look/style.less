@@ -562,30 +562,22 @@ div#subpages, .grid-row {
 }
 
 .fsfe-form {
-
-    label, input {
-        padding: 6px 12px;
-    }
-
-    label {
-        @media (min-width: @screen-md) {
-            width: 33%;
-        }
-    }
-
-    label + input {
+    label + input, label + textarea {
         .form-control;
-        @media (min-width: @screen-md) {
-            width: 66%;
+        margin-bottom: 1.25em;
+
+        & + .help-block {
+            margin-top: -1em;
+            margin-bottom: 1.25em;
         }
     }
     textarea {
-        .form-control;
         min-height: 150px;
     }
     button, input[type="submit"] {
         .btn-lg;
         display: block;
+        margin: 1em;
     }
 }
 

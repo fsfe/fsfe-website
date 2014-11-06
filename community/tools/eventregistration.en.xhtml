@@ -20,27 +20,27 @@
 
 	<!--<fieldset id="register_event">-->
 
-        <label for="name">Your name *</label>
+        <label for="name" class="required">Your name<span class="star">*</span></label>
         <input name="name" value="" required="required" type="text" />
 
-        <label for="email">Email *</label>
+        <label for="email" class="required">Email<span class="star">*</span></label>
         <input name="email" value="" required="required" type="email" /> 
 
         <p class="help-block">Please note: your personal information will never be shared nor sold. It is used only to get in contact with you if there are any call backs or problems.</p>
 
-        <label for="groupname">Groupname</label>
+        <label for="groupname">Group Name</label>
         <input name="groupname" value="" type="text" />
 
         <label for="groupurl">URL for your group</label>
         <input name="groupurl" value="" type="text" />
 
-        <label for="title">Event title *</label>
+        <label for="title" class="required">Event title<span class="star">*</span></label>
         <input name="title" value="" required="required" type="text" />
 
-        <label for="date">Date (yyyy-mm-dd) *</label>
-        <input name="date" value="" required="required" type="date" />
+        <label for="date" class="required">Date<span class="star">*</span></label>
+        <input name="date" value="" required="required" type="date" placeholder="YYYY-MM-DD" />
 
-        <label for="description" style="vertical-align: top;">Description *</label>
+        <label for="description" class="required">Description<span class="star">*</span></label>
         <p class="help-block">Please explain briefly what your event is about, how to attend and what participants can expect.</p>
         <textarea name="description" required="required"></textarea>
 

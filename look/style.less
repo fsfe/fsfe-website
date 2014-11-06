@@ -561,6 +561,33 @@ div#subpages, .grid-row {
     }
 }
 
+.fsfe-form {
+
+    label, input {
+        padding: 6px 12px;
+    }
+
+    label {
+        @media (min-width: @screen-md) {
+            width: 33%;
+        }
+    }
+
+    label + input {
+        .form-control;
+        @media (min-width: @screen-md) {
+            width: 66%;
+        }
+    }
+    textarea {
+        .form-control;
+        min-height: 150px;
+    }
+    button, input[type="submit"] {
+        .btn-lg;
+        display: block;
+    }
+}
 
 /* style specific to certain pages */
 

@@ -126,10 +126,16 @@ a.the-fellowship {
             }
             .author, .text {
                 display: block;
-                margin-left: 45%;
                 background-color: rgba(0,0,0,0.5);
                 padding: 0.5em;
             }
+
+            @media (min-width: @screen-sm) {
+                .author, .text {
+                    margin-right: 45%;
+                }
+            }
+
             .copyright {
                 font-size: 0.6em;
                 position: absolute;
@@ -158,10 +164,16 @@ a.the-fellowship {
             }
             .author, .text {
                 display: block;
-                margin-right: 45%;
                 background-color: rgba(0,0,0,0.5);
                 padding: 0.5em;
             }
+
+            @media (min-width: @screen-sm) {
+                .author, .text {
+                    margin-right: 45%;
+                }
+            }
+
             @media (min-width: @screen-md) {
                 .author, .text {
                     margin-right: 35%;

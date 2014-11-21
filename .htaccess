@@ -60,7 +60,7 @@ RewriteRule ^campaigns/ilovefs/2014/whylovefs(.*) /campaigns/ilovefs/whylovefs/w
 
 
 # Temporary fix unitl we have a /freesoftware dir for contribute/advocacy/cwfs.en.html
-RewriteRule ^freesoftware/freesoftware(.*) /about/basics/freesoftware$1 [redirect=temp]
+# RewriteRule ^freesoftware/freesoftware(.*) /about/basics/freesoftware$1 [redirect=temp]
 
 # Rewrite for dead links to gnupg-ccid stuff
 RewriteRule ^en/content/download/17665/125518/file/gnupg-ccid.rules http://wiki.fsfe.org/Card_howtos/Card_reader_setup_(udev)?action=AttachFile&do=view&target=gnupg-ccid.rules [redirect=permanent]

@@ -56,7 +56,7 @@
       <xsl:attribute name="name">formnl</xsl:attribute>
       <xsl:attribute name="method">post</xsl:attribute>
       <xsl:attribute name="action">
-	<xsl:text>http://norobot:norobot@mail.fsfeurope.org/mailman/subscribe/newsletter-</xsl:text>
+	<xsl:text>//norobot:norobot@mail.fsfeurope.org/mailman/subscribe/newsletter-</xsl:text>
 	<xsl:value-of select="$nl-lang"/>
       </xsl:attribute>
       <xsl:element name="p">
@@ -64,7 +64,7 @@
 	  <xsl:attribute name="id">language</xsl:attribute>
 	  <xsl:attribute name="name">language</xsl:attribute>
 	  <xsl:attribute name="onchange">
-	    <xsl:text>var form = document.getElementById('formnl'); var sel=document.getElementById('language'); form.action='http://norobot:norobot@mail.fsfeurope.org/mailman/subscribe/newsletter-'+sel.options[sel.options.selectedIndex].value</xsl:text>
+	    <xsl:text>var form = document.getElementById('formnl'); var sel=document.getElementById('language'); form.action='//norobot:norobot@mail.fsfeurope.org/mailman/subscribe/newsletter-'+sel.options[sel.options.selectedIndex].value</xsl:text>
 	  </xsl:attribute>
 	  <xsl:for-each select="document('')/xsl:stylesheet/nl:langs/nl:lang">	  
 	    <xsl:element name="option">

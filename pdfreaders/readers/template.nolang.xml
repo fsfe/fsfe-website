@@ -18,11 +18,13 @@
      reader is displayed on the website (higher number means further down the list).
      Readers are allowed to have identical priorities, in which case their relative
      position toward each other will be undetermined. 
+     Initially we set the priorities in steps of 10, starting at 10 for the first in
+     the list.
 -->
 <readers>
-<reader priority="30">
+<reader priority="1000">
   <name>Reader Name</name> <!-- The name displayed in the headline -->
-  <logo>xpdf.png</logo>    <!-- The filename of the logo in the headline,
+  <logo>logofile.png</logo>    <!-- The filename of the logo in the headline,
                                 logos must reisde in pdfreaders/logos/ -->
   <homepage>http://example.com/</homepage> <!-- URL of the readers web home page
                                                 If the homepage is available in

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ When setting up a new reader for display, you can use this file as a template
+
+ svn cp template.nolang.xml newreader.en.xml
+ Use a single reader definition per file. You can have different language
+ versions of each file. Just change the .en. in the filename and adjust
+ the content accordingly.
+
+ Here is an explanation of the fields to fill out.
+-->
+
+<!-- For historical reasons: the top level xml element in a file can be arbitrary, but
+     I recommend, to choose "readers". The second level element is important as it will
+     be processed by the build system.
+     The element name must be "reader", the priority indicates at which position the
+     reader is displayed on the website (higher number means further down the list).
+     Readers are allowed to have identical priorities, in which case their relative
+     position toward each other will be undetermined. 
+-->
+<readers>
+<reader priority="30">
+  <name>Reader Name</name> <!-- The name displayed in the headline -->
+  <logo>xpdf.png</logo>    <!-- The filename of the logo in the headline,
+                                logos must reisde in pdfreaders/logos/ -->
+  <homepage>http://example.com/</homepage> <!-- URL of the readers web home page
+                                                If the homepage is available in
+                                                multiple languages, link to the
+                                                language, this file should be in
+                                                If in doubt, prefer english.
+                                           -->
+  <license>GPLv2</license> <!-- Name of the license the reader is under, not currently displayed 
+                                make sure the reader is entirely under a Free Software license -->
+  <!-- Platforms: a platform name and a link to the installer/download page for the reader
+       If the projects keeps the download links for different platforms on one page, it is OK
+       to link to this page multiple times.
+       Preferably you should not link to the download file directly, but rather to a web page
+       containing the download links.
+       For pages in multiple languages, apply the same rules as with the home page.
+  -->
+  <platform><name>GNU/Linux</name><installer>https://example.com/Download/gnubsd/</installer></platform>
+  <platform><name>Free BSD</name><installer>https://example.com/Download/gnubsd/</installer></platform>
+  <platform><name>Windows</name><installer>https://example.com/Download/billdoze/</installer></platform>
+
+  <!-- Tags for every language the reader software is available in 
+       This is completely independet of the languages we host the reader file in
+       Also it is currently ignored.
+  -->
+  <language>en</language>
+  <language>fr</language>
+  <language>de</language>
+  
+  <!-- Description text displayed in the reader box. Shouldn't be too long -->
+  <description>Lorem ipsum dolor sit amet....</description>
+</reader>
+</readers>

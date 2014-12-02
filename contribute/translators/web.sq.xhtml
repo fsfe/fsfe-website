@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<html>
+  <head>
+    <title>
+      FSFE - Jepni Ndihmesë - Informacion për përkthyes- Faqet Web
+    </title>
+  <style type="text/css">
+	.clear {
+		clear: both;
+	}
+  </style>
+  </head>
+
+  <body>
+    <h1>Përkthimi i faqeve web</h1>
+
+    <h2>Udhërrëfyes i Shkurtër Hap Pas Hapi</h2>
+
+	<p>
+		Ky udhërrëfyes i vockël duhet përdorur vetëm nëse e njihni tashmë
+		kuadrin e përkthimeve: Si prodhohen faqet tona, si të zbulohet se
+		cilat përkthime mungojnë ose janë të vjetruar, e me radhë.
+	</p>
+
+	<p>
+		Në këtë shembull duam të përkthejmë 
+		https://fsfe.org/contribute/spreadtheword.en.html në Spanjisht. Ju lutemi,
+		klikoni mbi figurat që të zmadhohen fotot.
+	</p>
+
+	<ol>
+
+	<li>
+		<div style="max-width: 100px; width: 100px" class="captioned left">
+			<a href="/graphics/translators-shortguide1.png"><img width="100%" alt="Gjeni kodin burim" src="/graphics/translators-shortguide1.png" /></a>
+		</div>
+		Rrëshqitni poshtë faqes që dëshironi të përktheni dhe gjeni "Kod burim" 
+		te poshtëshënimi.
+	</li>
+	<p><br class="clear" /></p>
+
+	<li>
+		Shkarkoni kartelën .xhtml përmes mundësisë "Ruajeni Si..." të shfletuesit tuaj ose përmes 
+		mjetesh të tjera (në këtë rast 
+		https://fsfe.org/source/contribute/spreadtheword.en.xhtml).
+	</li>
+
+	<li>
+		<div style="max-width: 100px; width: 100px" class="captioned left">
+			<a href="/graphics/translators-shortguide3.png"><img width="100%" alt="Shkruani një email për listën e përkthyesve" src="/graphics/translators-shortguide3.png" /></a>
+		</div>
+		Shkruajini një email të shkurtër translators@fsfeurope.org (duhet të jeni
+                i pajtuar tashmë te kjo listë postimesh) dhe u thoni se po filloni me
+                përkthimin.<br />
+		Ju lutemi, hapni një rrjedhë të re për çdo faqe dhe shtoni te subjekti <a 
+		href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">Kodin dygermësh
+                të gjuhës suaj</a>.
+	</li>
+	<p><br class="clear" /></p>
+
+	<li>
+		Hapeni kartelën e shkarkuar me një përpunues tekstesh (gedit, Kate, Mousepad etj 
+		në sisteme të Lirë operativë, Notepad++ në Windows).
+	</li>
+
+	<li>
+		<div style="max-width: 100px; width: 100px" class="captioned left">
+			<a href="/graphics/translators-shortguide5.png"><img width="100%" alt="Përktheni tekstin në gjuhën tuaj" src="/graphics/translators-shortguide5.png" /></a>
+		</div>
+		Përktheni në gjuhën tuaj krejt tekstin anglisht jashtë etiketave HTML. 
+		Për shembull:<br />
+		<em>&lt;p&gt;&lt;a href="/contribute/"&gt;Contribute&lt;/a&gt;&lt;/p&gt;</em> 
+		do të kalohej në<br />
+		<em>&lt;p&gt;&lt;a href="/contribute/"&gt;Colabore&lt;/a&gt;&lt;/p&gt;</em><br />
+		
+		Ju lutemi, ndërrojeni <a 
+		href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">Kodin
+                dygermësh të Gjuhës</a> të kartelës së përkthyer nga "en" për Anglishten
+                në atë të gjuhës suaj (për shembull, për Spanjishten = "spreadtheword.es.xhtml").
+	</li>
+	<p><br class="clear" /></p>
+
+	<li>
+		<div style="max-width: 100px; width: 100px" class="captioned left">
+			<a href="/graphics/translators-shortguide6.png"><img width="100%" alt="Dërgojeni kartelën dhe kërkoni redaktim të përkthimit" src="/graphics/translators-shortguide6.png" /></a>
+		</div>
+		Më pas, ju lutemi, përgjigjuni te rrjedha juaj te translators@fsfeurope.org 
+		dhe kërkojuni personave të tjerë të redaktojnë kartelën tuaj. Nëse të gjithë
+                pajtohen me përkthimin dhe/ose redaktimin, ai do të ngarkohet në sajt nga
+                persona të tjerë të pranishëm te lista e postimeve.
+	</li>
+	<p><br class="clear" /></p>
+
+	</ol>
+
+    <h2>Udhërrëfyes i hollësishëm: Të kuptuarit se si janë ndërtuar faqet web</h2>
+
+    <p>
+      Faqet web të fsfe.org-ut janë ndërtuar si një grup kartelash XML.
+      Shërbyesi web i prodhon faqet HTML prej këtyre kartelave XML
+      vetvetiu çdo dhjetë minuta. Për pasojë, krejt përpunimet e faqeve
+      kryhen në kartelat XML, kurse kartelat HTML nuk përpunohen kurrë
+      drejtpërsëdrejti.
+    </p>
+
+    <p>
+      Çdo faqe te fsfe.org emërtohet sipas trajtës
+      <var><em>emërfaqeje</em>.<em>gjuhë</em>.html</var> (ku <em>gjuhë</em>
+      është <a
+      href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">kodi
+      dygermësh ISO-639-1</a> për gjuhën e dhënë, fjala vjen "en" për Anglishten
+      ose "de" për Gjermanishten). Kartelat burim emërtohen
+      <var><em>emërfaqeje</em>.<em>gjuhë</em>.xhtml</var>.
+	</p>
+
+	<p>
+      Disa faqe kanë një pjesë dinamike. Përveç tekstit të fiksuar të marrë
+      nga kartela XHTML, ato përmbajnë të dhëna nga një ose disa kartela të
+      tjera XML. Kurdoherë që krijohet një faqe e tillë, sistemi i krijimit
+      përdor kartelat XML të përkthyera, në pastë, ose versionin në Anglisht
+      të tyre nëse nuk janë përkthyer ende. Prej kësaj, faqe të tilla 
+      përfundojnë me disa pjesë të tekstit të përkthyer dhe disa të tjera
+      ende në Anglisht. Shembuj faqesh të tilla do të ishin 
+      <a href="/index.html">faqja e fillimit</a>,
+      <a href="/news/news.html">faqja e lajmeve</a>, dhe
+      <a href="/events/events.html">faqja e veprimtarive</a>.
+    </p>
+
+    <h2>Përkthime mund të ofrojë kushdo</h2>
+
+    <p>
+      Krejt kartelat burim (d.m.th. krejt kartelat XHTML dhe XML) janë 
+      publike, dhe mund të shkarkohem, kështu që cilido mund të japë
+      ndihmesë vetvetiu me një përkthim, pa u dashur të regjistrohet
+      diku. Megjithatë, kurdo që filloni një përkthim, dhe parashikoni 
+      se do t’ju hajë ca kohë, ju lutemi, shkruani një shënim të shkurtër
+      për <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">listën
+      e postimeve të Përkthyesve</a> për të shmangur mundësinë që dikush
+      tjetër të zërë e të merret me të njëjtin tekst njëkohësisht me ju.
+    </p>
+
+    <h3>Ndihmesë me përkthime që mungojnë</h3>
+
+    <p>
+      Nëse keni të hapur në shfletuesin tuaj një faqe që nuk është përkthyer
+      ende në gjuhën tuaj, shkoni te fundi i faqes, klikoni mbi lidhjen
+      <strong>Kod burim</strong> dhe ruajeni diku kartelën e lidhur atje.  Kështu
+      do të merrni kartelën XHTML në Anglisht. Riemërtojeni kartelën me
+      kodin e gjuhës suaj, në vend se "en", dhe hapeni me një përpunues
+      tekstesh. Dhe tani, përktheni krejt tekstin te kartela, atë
+      jashtë etiketave "&lt;…&gt;"; mos prekni gjë brenda këtyre etiketave
+      (teksti brenda etiketave janë urdhrat XHTML
+      që ndikojnë strukturën e faqes web përkatëse).
+    </p>
+
+	<!--
+	     Note to translators for the above sentence:
+	     _structure_ not _appearance_.  XHTML = structure, CSS = appearance.
+    -->
+
+    <p>
+      Në fund të kartelës do të gjeni një rresht që thotë <var>&lt;/html&gt;</var>.
+      Drejt e <em>sipër</em> këtij rreshti, shtoni një rresht që shkruan
+      <var>&lt;translator&gt;<em>emri juaj</em>&lt;/translator&gt;</var>.
+    </p>
+
+    <p>
+      Kur të keni mbaruar, dërgojeni kartelën e përkthyer te 
+      <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">lista
+      e postimeve të Përkthyesve</a>. Të tjerë anëtarë të kësaj liste mund ta
+      redaktojnë përkthimin, dhe dikush në atë listë do ta ngarkojë
+      përfundimisht te shërbyesi.
+    </p>
+
+    <h3>Përditësimi i përkthimeve të vjetruara</h3>
+
+    <p>
+      Nëse shihni te shfletuesi juaj një përkthim të vjetruar (treguar si i tillë
+      përmes një shënimi në krye të faqes), shkoni te fundi i faqes, klikoni mbi
+      lidhjen <strong>Kod burim</strong> dhe ruajeni kartelën që ju del.  Kjo kartelë
+      është versioni (i vjetruar) i përkthimit. Më tej, përdorni lidhjen
+      <strong>Anglisht</strong> në krye të faqes për të kaluar te versioni anglisht
+      i faqes dhe klikoni mbi lidhjen <strong>Kod burim</strong> edhe këtu. Kartela
+      që merrni është versioni (i përditësuar) në Anglisht. Tani mund të krahasoni 
+      dy kartelat dhe të përditësoni përkthimin. Ju lutemi, mbani parasysh se gjithçka
+      brenda etiketave "&lt;…&gt;" nuk duhet prekur.
+    </p>
+
+    <p>
+      Një rrugë tjetër është përdorimi i <a
+      href="https://trac.fsfe.org/fsfe-web/browser/trunk">depos web të
+      të burimeve</a> te <a href="https://trac.fsfe.org/fsfe-web">sajti
+      trac fsfe-web</a> për krijim diff-esh, dhe për të parë përditësimet
+      e fundit për krejt kartelat burim.
+    </p>
+
+    <p>
+      Pasi të keni mbaruar, dërgojeni kartelën e përkthyer te
+      <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">lista
+      e postimeve të Përkthyesve</a>. Të tjerë anëtarë të kësaj liste mund ta
+      redaktojnë përkthimin, dhe dikush në atë listë do ta ngarkojë
+      përfundimisht te shërbyesi.
+    </p>
+
+    <h3>Si të gjeni se çfarë lyp punë</h3>
+
+    <p>
+      Ka një
+      <a href="http://status.fsfe.org/web/translations.html">listë
+      të prodhuar automatikisht të krejt gjuhëve</a> në lojë. Te kjo
+      faqe, çdo kod gjuhe është një lidhje për te një faqe veçmas,
+      e cila radhit krejt përkthimet që mungojnë dhe ato të vjetruara
+      për atë gjuhë.
+    </p>
+
+    <p>
+      Lista e përkthimeve të vjetruara ofron një veçori ekstra të dobishme
+      për përditësimet: jo vetëm që mund të shkarkoni kartelën (e vjetruar)
+      të përkthimit dhe atë (të përditësuar) të origjinalit në Anglisht;
+      mundeni po ashtu të shihni regjistrin e ndryshimeve për të dyja kartelat,
+      një protokoll të krejt ndryshimeve të bëra në kartelat përkatëse.
+      Krahasimi i dy regjistrave të ndryshimeve zakonisht e lehtëson gjetjen
+      e pjesëve që janë ndryshuar te origjinali që prej kohës që përkthimi
+      u ndryshua për herë të fundit.
+    </p>
+
+    <p>
+      Kjo faqe e gjendjes së përkthimeve është gjithashtu e vetmja rrugë për
+      të shkarkuar kartelat XML që marrin pjesë në ndërtimin e faqeve dinamike,
+      fjala vjen, kartelat që përmbajnë zëra lajmesh apo veprimtarish.
+    </p>
+
+    <h3>Shkarkimi i krejt pemës së kartelave burim përmes Subversion-it</h3>
+
+    <p>
+      Mundeni të përdorni Subversion-in, për të shkarkuar krejt pemën e kartelave
+      burim njëherazi.  Ju lutemi, për udhëzime të hollësishme, shihni <a
+      href="/contribute/web/web.html">faqen e informacioneve për webmaster-a
+      të FSFE-së</a>.
+    </p>
+  </body>
+
+  <timestamp>$Date: 2014-09-05 15:55:40 +0300 (Fri, 05 Sep 2014) $ $Author: max.mehl $</timestamp>
+
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

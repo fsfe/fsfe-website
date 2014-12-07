@@ -7,7 +7,7 @@ $subject = 'Faleminderit që përkrahni FSFE-në';
 $message = '
 Faleminderit që demonstroni përkrahjen tuaj për FSFE-në!
 
-Sidoqoftë, kjo adresë e-mail është regjistruar tashmë më herët.
+Sidoqoftë, kjo adresë e-mail është regjistruar më herët.
 
 Ju lutemi, shihni hollësitë duke hapur faqen
 http://fsfe.org/support/portal.sq?'. $secret_from_db .'

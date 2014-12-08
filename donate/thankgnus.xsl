@@ -20,7 +20,7 @@
     <xsl:choose>
       <xsl:when test="$group='gold'">
         <xsl:element name="table">
-          <xsl:attribute name="id">gold</xsl:attribute>
+          <xsl:attribute name="id">gold-donors</xsl:attribute>
           <xsl:for-each select="/buildinfo/document/set/*[name(.)=$group]/donor[translate(@date,'-','')&gt;=translate($frommonth,'-','')]">
             <xsl:sort select="translate(node(),'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ')"/>
             <xsl:element name="tr">
@@ -39,7 +39,7 @@
       </xsl:when>
       <xsl:when test="$group='silver'">
         <xsl:element name="table">
-          <xsl:attribute name="id">gold</xsl:attribute>
+          <xsl:attribute name="id">silver-donors</xsl:attribute>
           <xsl:for-each select="/buildinfo/document/set/*[name(.)=$group]/donor[translate(@date,'-','')&gt;=translate($frommonth,'-','')]">
             <xsl:sort select="translate(node(),'abcdefghijklmnopqrstuvwxyz','ABCDEFGHIJKLMNOPQRSTUVWXYZ')"/>
             <xsl:element name="tr">

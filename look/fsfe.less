@@ -68,17 +68,24 @@ a.the-fellowship {
 /* fsfe.org front page */
 
 .frontpage { 
-    #motto {
-        display: block;
-    }
+
+/* motto not displayed */
     
     #campaigns-boxes {
 
-        height: 300px;
         background: url('/graphics/ribbon.png') top right no-repeat transparent;
+        height: 400px;
+
+        @media (min-width: @screen-xs) {
+            height: 300px;
+        }
 
         .campaign-box {
-            height: 300px;
+            height: 400px;
+
+            @media (min-width: @screen-xs) {
+                height: 300px;
+            }
             width: 100%;
 
             img {max-width: 33%;}
@@ -87,6 +94,97 @@ a.the-fellowship {
         .campaign-box-center {
             text-align: center;
             font-size: 1.3em;
+        }
+
+        #freesociety {
+            .campaign-box-center;
+            font-family: 'GNUTypewriter', @font-family-monospace; 
+            background: url('/graphics/motto.jpg') top center no-repeat #666;
+            background-size: cover;
+            font-size: 2em;
+            @media (min-width: @screen-xs) {
+                font-size: 2.7em;
+                padding-top: 1.8em;
+            }
+            p.text {
+                /*background: url('/graphics/fsfs.png') top center no-repeat transparent; 
+                background-size: contain; */
+                -moz-hyphens: manual;
+                -webkit-hyphens: manual;
+                hyphens: manual;
+            }
+        }
+
+        #amaelle {
+            background: url('/graphics/amaelle.jpg')  center 33%  no-repeat #666;
+            background-size: cover;
+            text-shadow: 0px 1px 8px rgb(0,0,0);
+
+            .author:before {content: "– ";}
+            .text { 
+                .quote; 
+            }
+            .author, .text {
+                display: block;
+                background-color: rgba(0,0,0,0.5);
+                padding: 0.5em;
+            }
+
+            @media (min-width: @screen-sm) {
+                .author, .text {
+                    margin-left: 45%;
+                }
+            }
+
+            .copyright {
+                font-size: 0.6em;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+
+            @media (min-width: @screen-md) {
+                .text {font-size: 1.25em; }
+            }
+
+        }
+
+        #appelbaum {
+            background: url('/graphics/appelbaum.jpg')  top right  no-repeat #070400;
+            background-size: cover;
+
+            @media (min-width: @screen-sm) {
+                background-size: contain;
+            }
+
+            img { display: none; }
+            .author:before {content: "– ";}
+            .text { 
+                .quote; 
+            }
+            .author, .text {
+                display: block;
+                background-color: rgba(0,0,0,0.5);
+                padding: 0.5em;
+            }
+
+            @media (min-width: @screen-sm) {
+                .author, .text {
+                    margin-right: 45%;
+                }
+            }
+
+            @media (min-width: @screen-md) {
+                .author, .text {
+                    margin-right: 35%;
+                }
+            }
+            .copyright {
+                font-size: 0.6em;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
         }
         
         #zacchiroli {
@@ -124,10 +222,16 @@ a.the-fellowship {
             .text { display: none; }
         }
 
+        #becomefellow {
+            .campaign-box-center;
+            background: url('/graphics/group-blur-800.jpg')  center 33%  no-repeat #666;
+        }
+
         #fightback {
             .campaign-box-center;
             background: url('/graphics/thedaywefightback.png')  center 33%  no-repeat transparent;
         }
+        
     }
 }
 .svg #campaigns-boxes #dfd {
@@ -135,6 +239,7 @@ a.the-fellowship {
         /*TODO: can we maybe change it to svg here?*/
     }
 }
+
 
 
 #news {
@@ -147,13 +252,14 @@ a.the-fellowship {
 
         @media (min-width: @screen-sm) {
             display: inline-block;
-            padding: 0 0.5em;
+            padding: 0;
         }
     }
 
     .entry {
         h3 {
             display: inline-block;
+            padding-right: 0.5em;
         }
         p.date {
             display: inline-block;
@@ -196,9 +302,11 @@ a.the-fellowship {
         }
         p.date {
             #news .dt-published;
-            font-size: 1.3em;
-            font-weight: 300;
+            display: block;
             margin-bottom: 0;
+            @media (min-width: @screen-sm) {
+                display: block;
+            }
         }
     }
     a.learn-more {
@@ -207,12 +315,12 @@ a.the-fellowship {
 }
 
 @media (min-width: @screen-sm) {
-    #news {
+    #news, #events {
         display: inline-block;
         float: left;
         width: 69%;
     }
-    #newsletter, .country.frontpage #teams  {
+    #newsletter, #shop-promo, .country.frontpage #teams  {
         display: inline-block;
         float: right;
         width: 30%;
@@ -276,6 +384,16 @@ a.the-fellowship {
     }
 
 }
+
+/* thank donors */
+
+#thank-donors {
+    table {
+        .table;
+        .table-striped;
+    }
+}
+
 
 /* Android campaign style */
 

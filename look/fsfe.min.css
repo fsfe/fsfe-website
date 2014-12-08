@@ -1388,9 +1388,19 @@ body{background:url(/graphics/fellowship/plussy_tile_03.png) top left fixed #f9f
 #followup.join{background:url(/graphics/fellowship/ribbon_fellowship2.png) no-repeat 100% -30px #fff}@media (min-width:768px){#followup.join{background:url(/graphics/fellowship/ribbon_fellowship2.png) no-repeat 100% -50% #fff}}
 #full-menu{background:url(/graphics/logo_bw_transparent_small.png) no-repeat top left #fff}
 a.the-fellowship{padding:8px 20px 0 0;background:url(/graphics/plussy-bright-20.png) no-repeat top right transparent}
-.frontpage #motto{display:block}
-.frontpage #campaigns-boxes{height:300px;background:url('/graphics/ribbon.png') top right no-repeat transparent}.frontpage #campaigns-boxes .campaign-box{height:300px;width:100%}.frontpage #campaigns-boxes .campaign-box img{max-width:33%}
+.frontpage{}.frontpage #campaigns-boxes{background:url('/graphics/ribbon.png') top right no-repeat transparent;height:400px}@media (min-width:480px){.frontpage #campaigns-boxes{height:300px}}.frontpage #campaigns-boxes .campaign-box{height:400px;width:100%}@media (min-width:480px){.frontpage #campaigns-boxes .campaign-box{height:300px}}.frontpage #campaigns-boxes .campaign-box img{max-width:33%}
 .frontpage #campaigns-boxes .campaign-box-center{text-align:center;font-size:1.3em}
+.frontpage #campaigns-boxes #freesociety{text-align:center;font-size:1.3em;font-family:'GNUTypewriter',"Inconsolata",Inconsolata,Menlo,Monaco,Consolas,"Courier New",monospace;background:url('/graphics/motto.jpg') top center no-repeat #666;background-size:cover;font-size:2em}@media (min-width:480px){.frontpage #campaigns-boxes #freesociety{font-size:2.7em;padding-top:1.8em}}.frontpage #campaigns-boxes #freesociety p.text{-moz-hyphens:manual;-webkit-hyphens:manual;hyphens:manual}
+.frontpage #campaigns-boxes #amaelle{background:url('/graphics/amaelle.jpg') center 33% no-repeat #666;background-size:cover;text-shadow:0 1px 8px #000}.frontpage #campaigns-boxes #amaelle .author:before{content:"– "}
+.frontpage #campaigns-boxes #amaelle .text{font-family:"Roboto Slab","DejaVu Serif",Georgia,"Times New Roman",Times,serif}
+.frontpage #campaigns-boxes #amaelle .author,.frontpage #campaigns-boxes #amaelle .text{display:block;background-color:rgba(0,0,0,0.5);padding:.5em}
+@media (min-width:768px){.frontpage #campaigns-boxes #amaelle .author,.frontpage #campaigns-boxes #amaelle .text{margin-left:45%}}.frontpage #campaigns-boxes #amaelle .copyright{font-size:.6em;position:absolute;bottom:0;right:0}
+@media (min-width:992px){.frontpage #campaigns-boxes #amaelle .text{font-size:1.25em}}
+.frontpage #campaigns-boxes #appelbaum{background:url('/graphics/appelbaum.jpg') top right no-repeat #070400;background-size:cover}@media (min-width:768px){.frontpage #campaigns-boxes #appelbaum{background-size:contain}}.frontpage #campaigns-boxes #appelbaum img{display:none}
+.frontpage #campaigns-boxes #appelbaum .author:before{content:"– "}
+.frontpage #campaigns-boxes #appelbaum .text{font-family:"Roboto Slab","DejaVu Serif",Georgia,"Times New Roman",Times,serif}
+.frontpage #campaigns-boxes #appelbaum .author,.frontpage #campaigns-boxes #appelbaum .text{display:block;background-color:rgba(0,0,0,0.5);padding:.5em}
+@media (min-width:768px){.frontpage #campaigns-boxes #appelbaum .author,.frontpage #campaigns-boxes #appelbaum .text{margin-right:45%}}@media (min-width:992px){.frontpage #campaigns-boxes #appelbaum .author,.frontpage #campaigns-boxes #appelbaum .text{margin-right:35%}}.frontpage #campaigns-boxes #appelbaum .copyright{font-size:.6em;position:absolute;bottom:0;right:0}
 .frontpage #campaigns-boxes #zacchiroli{background:url('/graphics/group-blur-800.jpg') center 33% no-repeat #666;text-shadow:0 1px 2px #000}.frontpage #campaigns-boxes #zacchiroli img{float:right;margin-left:1em}
 .frontpage #campaigns-boxes #zacchiroli .author:before{content:"– "}
 .frontpage #campaigns-boxes #zacchiroli .text{font-family:"Roboto Slab","DejaVu Serif",Georgia,"Times New Roman",Times,serif}
@@ -1398,20 +1408,21 @@ a.the-fellowship{padding:8px 20px 0 0;background:url(/graphics/plussy-bright-20.
 .frontpage #campaigns-boxes #dfd{text-align:center;font-size:1.3em;background:url('/graphics/fellowship/plussy_tile_01-33alpha.png') #76b520}.frontpage #campaigns-boxes #dfd img{height:200px;margin-bottom:10px;margin-top:-70px;max-width:none}
 .frontpage #campaigns-boxes #ilovefs{text-align:center;font-size:1.3em;background:url('/graphics/ilovefs-hashtag-campaignbox.png') center 33% no-repeat transparent}
 .frontpage #campaigns-boxes #racketware{text-align:center;font-size:1.3em;background:center 33% no-repeat #fff}.frontpage #campaigns-boxes #racketware .text{display:none}
+.frontpage #campaigns-boxes #becomefellow{text-align:center;font-size:1.3em;background:url('/graphics/group-blur-800.jpg') center 33% no-repeat #666}
 .frontpage #campaigns-boxes #fightback{text-align:center;font-size:1.3em;background:url('/graphics/thedaywefightback.png') center 33% no-repeat transparent}
 .svg #campaigns-boxes #dfd img{}
-#news{padding-bottom:1.5em}#news .dt-published{color:#999;font-size:.9em;display:block}@media (min-width:768px){#news .dt-published{display:inline-block;padding:0 .5em}}
-#news .entry h3{display:inline-block}
-#news .entry p.date{display:inline-block;color:#999;font-size:.9em;display:block;font-weight:300;margin-bottom:0}@media (min-width:768px){#news .entry p.date{display:inline-block;padding:0 .5em}}
+#news{padding-bottom:1.5em}#news .dt-published{color:#999;font-size:.9em;display:block}@media (min-width:768px){#news .dt-published{display:inline-block;padding:0}}
+#news .entry h3{display:inline-block;padding-right:.5em}
+#news .entry p.date{display:inline-block;color:#999;font-size:.9em;display:block;font-weight:300;margin-bottom:0}@media (min-width:768px){#news .entry p.date{display:inline-block;padding:0}}
 #news .entry:nth-child(1n+3) h3{font-size:1em;margin:.7em 0 0 0}
 #news .entry:nth-child(1n+3) .text,#news .entry:nth-child(1n+3) p{display:none}
 #news .entry:nth-child(1n+3) p.date{display:inline-block}
 #latest-news-list,#more-news-list{list-style-type:none;font-size:1.2em;font-weight:300;padding:0}
 #events{clear:both;padding-top:1.5em}#events #map{height:280px}
 #events .entry h3{display:inline-block}
-#events .entry p.date{color:#999;font-size:.9em;display:block;font-size:1.3em;font-weight:300;margin-bottom:0}@media (min-width:768px){#events .entry p.date{display:inline-block;padding:0 .5em}}
+#events .entry p.date{color:#999;font-size:.9em;display:block;margin-bottom:0}@media (min-width:768px){#events .entry p.date{display:inline-block;padding:0}}@media (min-width:768px){#events .entry p.date{display:block}}
 #events a.learn-more{line-height:2}
-@media (min-width:768px){#news{display:inline-block;float:left;width:69%} #newsletter,.country.frontpage #teams{display:inline-block;float:right;width:30%;padding-left:2%;clear:none;padding-top:0}}#newsletter input,.newsletter #sidebar input{display:block;margin:.5em 0}
+@media (min-width:768px){#news,#events{display:inline-block;float:left;width:69%} #newsletter,#shop-promo,.country.frontpage #teams{display:inline-block;float:right;width:30%;padding-left:2%;clear:none;padding-top:0}}#newsletter input,.newsletter #sidebar input{display:block;margin:.5em 0}
 #feeds a.ical,#feeds a.rss-feed{font-size:85%;color:#999}
 .testimonial{overflow:auto;clear:both}
 .testimonial img{float:left;margin-right:10px}
@@ -1440,6 +1451,16 @@ textarea#donate-fsfe form .form-group input{height:auto}
 #donate-fsfe form #donate-validate:active,#donate-fsfe form #donate-validate.active,.open .dropdown-toggle#donate-fsfe form #donate-validate{background-image:none}
 #donate-fsfe form #donate-validate.disabled,#donate-fsfe form #donate-validate[disabled],fieldset[disabled] #donate-fsfe form #donate-validate,#donate-fsfe form #donate-validate.disabled:hover,#donate-fsfe form #donate-validate[disabled]:hover,fieldset[disabled] #donate-fsfe form #donate-validate:hover,#donate-fsfe form #donate-validate.disabled:focus,#donate-fsfe form #donate-validate[disabled]:focus,fieldset[disabled] #donate-fsfe form #donate-validate:focus,#donate-fsfe form #donate-validate.disabled:active,#donate-fsfe form #donate-validate[disabled]:active,fieldset[disabled] #donate-fsfe form #donate-validate:active,#donate-fsfe form #donate-validate.disabled.active,#donate-fsfe form #donate-validate[disabled].active,fieldset[disabled] #donate-fsfe form #donate-validate.active{background-color:#5cb85c;border-color:#4cae4c}
 #donate-fsfe form #donate-validate .badge{color:#5cb85c;background-color:#fff}
+#thank-donors table{width:100%;margin-bottom:20px}#thank-donors table>thead>tr>th,#thank-donors table>tbody>tr>th,#thank-donors table>tfoot>tr>th,#thank-donors table>thead>tr>td,#thank-donors table>tbody>tr>td,#thank-donors table>tfoot>tr>td{padding:8px;line-height:1.428571429;vertical-align:top;border-top:1px solid #ddd}
+#thank-donors table>thead>tr>th{vertical-align:bottom;border-bottom:2px solid #ddd}
+#thank-donors table>caption+thead>tr:first-child>th,#thank-donors table>colgroup+thead>tr:first-child>th,#thank-donors table>thead:first-child>tr:first-child>th,#thank-donors table>caption+thead>tr:first-child>td,#thank-donors table>colgroup+thead>tr:first-child>td,#thank-donors table>thead:first-child>tr:first-child>td{border-top:0}
+#thank-donors table>tbody+tbody{border-top:2px solid #ddd}
+#thank-donors table .table{background-color:#fff}
+#thank-donors table>thead>tr>.active,#thank-donors table>tbody>tr>.active,#thank-donors table>tfoot>tr>.active,#thank-donors table>thead>.active>td,#thank-donors table>tbody>.active>td,#thank-donors table>tfoot>.active>td,#thank-donors table>thead>.active>th,#thank-donors table>tbody>.active>th,#thank-donors table>tfoot>.active>th{background-color:#f5f5f5}
+#thank-donors table>thead>tr>.success,#thank-donors table>tbody>tr>.success,#thank-donors table>tfoot>tr>.success,#thank-donors table>thead>.success>td,#thank-donors table>tbody>.success>td,#thank-donors table>tfoot>.success>td,#thank-donors table>thead>.success>th,#thank-donors table>tbody>.success>th,#thank-donors table>tfoot>.success>th{background-color:#dff0d8}
+#thank-donors table>thead>tr>.danger,#thank-donors table>tbody>tr>.danger,#thank-donors table>tfoot>tr>.danger,#thank-donors table>thead>.danger>td,#thank-donors table>tbody>.danger>td,#thank-donors table>tfoot>.danger>td,#thank-donors table>thead>.danger>th,#thank-donors table>tbody>.danger>th,#thank-donors table>tfoot>.danger>th{background-color:#f2dede}
+#thank-donors table>thead>tr>.warning,#thank-donors table>tbody>tr>.warning,#thank-donors table>tfoot>tr>.warning,#thank-donors table>thead>.warning>td,#thank-donors table>tbody>.warning>td,#thank-donors table>tfoot>.warning>td,#thank-donors table>thead>.warning>th,#thank-donors table>tbody>.warning>th,#thank-donors table>tfoot>.warning>th{background-color:#fcf8e3}
+#thank-donors table>tbody>tr:nth-child(odd)>td,#thank-donors table>tbody>tr:nth-child(odd)>th{background-color:#f9f9f9}
 #hello-free-droid{background:url('/campaigns/android/robot.png') no-repeat top left transparent;height:200px;width:230px;float:left;margin-left:-6em;margin-right:1.5em}@media (min-width:992px){#hello-free-droid{position:absolute;margin-left:-200px;margin-top:-10em}}#hello-free-droid img{display:none}
 .valentine-ilovefs #logo{background:url(/graphics/logov.png) top left no-repeat}
 .valentine-ilovefs .svg #logo{background:url(/graphics/logov.svg) top left no-repeat}

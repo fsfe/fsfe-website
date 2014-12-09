@@ -559,6 +559,31 @@ div#subpages, .grid-row {
         font-size: 1.2em;
         font-weight: 300;
     }
+
+    .action-after {
+        display: table;
+
+        .action-describe, .action-main {
+            display: table-cell;
+            vertical-align: middle;
+            padding: 0.5em 1em;
+        }
+
+        .action-describe {
+            background: lighten(@brand-primary,40%);
+            color: @brand-strong;
+            width: 23%;
+            text-align: right;
+            &:after {
+                padding-left: 0.3em;
+                content: " ▸";
+            }
+        }
+        .action-main {
+            background: @gray-lighter;
+            width: 77%;
+        }
+    }
 }
 
 .fsfe-form {
@@ -633,7 +658,7 @@ div#subpages, .grid-row {
     blockquote, pre {
         .standout-text;
     }
-    .captioned {
+    .captioned, .action-after {
         .standout;
     }
     .captioned.center-block, .captioned.center {

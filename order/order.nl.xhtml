@@ -1,16 +1,30 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 <html>
   <head>
-    <title>FSFE - Bestellen</title>
+    <title>FSFE - Winkel</title>
   </head>
 
   <body>
+    <h1>FSFE Winkel</h1>
 
-    <h1>FSFE koopwaar</h1>
+    <div id="introduction">
+      <div class="image">
+        <img src="/graphics/stars-smaller.png" alt="Sterren"/>
+      </div>
 
-    <form action="/cgi-bin/weborder.pl" method="post">
-      <h2>T-Shirts</h2>
+      <p>
+        Toon je liefde voor Vrije Software door de promotie-artikelen hieronder te gebruiken en te dragen.
+        Vrije Software kleding is een goede manier om de bekendheid te vergroten in je lokale
+        gemeenschap, en elke verkoop helpt de belangrijke FSFE projecten te financieren.
+        <br/>
+        <br/>
+        We hebben ook een voorraad van <a href="#other-items">bureau-accessoires, mokken, badges, en sleutelhangers</a>.
+      </p>
+      
+    </div>
+
+    <form action="/cgi-bin/weborder.pl" method="post" class="item-grid">
+      <h2>T-Shirts, mannelijk model</h2>
  
       <dynamic-content type="tshirt"/>
 
@@ -22,16 +36,18 @@
  
       <dynamic-content type="hooded"/>
 
-      <a name="other-items"><h2>Andere voorwerpen</h2></a>
+      <h2>Babykleding</h2>
+ 
+      <dynamic-content type="baby-clothes"/>
+
+      <a name="other-items"><a name="other-items"><h2 id="other-items">Andere artikelen</h2></a></a>
 
       <dynamic-content type="other"/>
 
       <h2>Promotiemateriaal</h2>
     
       <p>
-	U vindt informatie om folders en infobladen te bestellen op
-	onze <a href="/documents/printable/printable.html">pagina met
-	afdrukbaar informatiemateriaal</a>.
+	Bekijk onze <a href="/contribute/spreadtheword.html#promo-material">bestelpagina voor informatie-materiaal</a> om folders, stickers en andere artikelen te bestellen.
       </p>
 
       <h2>Verzending</h2>
@@ -39,11 +55,11 @@
       <p>
         <input type="hidden" name="shipping" value="1"/>
         <input type="radio" name="_shipping" value="3"/>
-        Verzending binnen Duitsland (€3.00)<br/>
+        Verzenden binnen Duitsland (€3.00)<br/>
         <input type="radio" name="_shipping" value="7" checked="Y"/>
-        Verzending binnen Europa (€7.00)<br/>
+        Verzenden binnen Europa (€7.00)<br/>
         <input type="radio" name="_shipping" value="12"/>
-        Verzending buiten Europa (€12.00)<br/>
+        Verzenden buiten Europa (€12.00)<br/>
       </p>
 
       <table>
@@ -75,7 +91,7 @@
 
       <!-- Should help against spam -->
       <p class="n">
-        Please do not put anything in here:
+        Type hier alstublieft niets:
         <input type="text" size="40" name="url"/>
       </p>
 
@@ -89,7 +105,7 @@
     </form>
   </body>
 
-  <timestamp>$Date$ $Author$</timestamp>
+  <timestamp>$Datum: 2014-10-02 20:58:20 +0200 (Don, 02 okt 2014) $ $Auteur: mk $</timestamp>
 </html>
 <!--
 Local Variables: ***

@@ -48,7 +48,7 @@ sub transform {
   $document_parser->parse_file($fh) or croak $!;
   close($fh);
   
-  my $content = $document_parser->findnodes('//div[@id="content"]')->[0];
+  my $content = $document_parser->findnodes('//[@id="content"]')->[0];
 
   if ($self->{layout} =~ /boilerplate/) {
     $content->findnodes("//p")->[0]->delete;

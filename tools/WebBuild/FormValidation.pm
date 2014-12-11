@@ -34,7 +34,7 @@ sub has_errors {
   #use Data::Dumper;
   #die Dumper($self->{errors});
 
-  if (scalar($self->{errors}) > 0) {
+  if ($self->{errors} && (scalar($self->{errors}) > 0)) {
     return 1;
   } else {
     return 0;

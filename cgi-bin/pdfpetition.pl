@@ -69,7 +69,10 @@ my $template = Template->new ({ INCLUDE_PATH => "$root/templates" });
 
 my $mail;
 my $dt = DateTime->now;
+
 if (!$query->param('group')) {$query->param('group') = '';}
+if (!$query->param('newsletter')) {$query->param('newsletter') = '';}
+
 my $data = { country => $query->param ('country'),
              date => sprintf ('%d-%.2d-%.2d', $dt->year, $dt->month, $dt->day),
              name => $query->param ('name'),

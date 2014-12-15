@@ -1,5 +1,6 @@
 #!/bin/sh
 
+basedir="$(dirname $0)/.."
 
 include_xml(){
   # include second level elements of a given XML file
@@ -9,16 +10,16 @@ include_xml(){
   file="$1"
 
   if [ -r "$file" ]; then
-    # guess encoding xml header
+    # guess encoding from xml header
     # we will convert everything to utf-8 prior to processing
     enc="$(sed -nr 's:^.*<\?.*encoding="([^"]+)".*$:\1:p' "$file")"
     [ -z "$enc" ] && enc="UTF-8"
 
     iconv -f "$enc" -t "UTF-8" "$file" \
     | tr '\n\t\r' '   ' \
-    | sed -r 's:<\?[xX][mM][lL][^>]+>::g
-              s:<[^>]*>::;
-              s:</[^>]*>[^<]*(<[^>]+/>|<[?!][^>]+>)*[^<]*$:\1:;'
+    | sed -r 's:<(\?[xX][mM][lL]|!DOCTYPE) [^>]+>::g
+              s:<[^!][^>]*>::;
+              s:</[^>]*>([^<]*((<[^>]+/>|<![^>]+>|<\?[^>]+>)[^<]*)*)?$:\1:;'
   fi
 }
 
@@ -29,20 +30,21 @@ list_sources(){
   sourcesfile="$1"
   lang="$2"
 
-  [ -r "$sourcesfile" ] \
-  && sed -rn 's;:global$;*.[a-z][a-z].xml;gp' "$sourcesfile" \
-  | while read glob; do ls $glob; done \
-  | sed -r 's:\.[a-z]{2}\.xml$::' \
-  | sort -u \
-  | while read base; do
-    if [ -r "${base}.${lang}.xml" ]; then
-      echo "${base}.${lang}.xml"
-    elif [ -r "${base}.en.xml" ]; then
-      echo "${base}.en.xml"
-    else
-      ls ${base}.[a-z][a-z].xml |head -n1
-    fi
-  done 
+  if [ -r "$sourcesfile" ]; then
+    sed -rn 's;:global$;*.[a-z][a-z].xml;gp' "$sourcesfile" \
+    | while read glob; do ls "$basedir/"$glob 2>/dev/null; done \
+    | sed -r 's:\.[a-z]{2}\.xml$::' \
+    | sort -u \
+    | while read base; do
+      if [ -r "${base}.${lang}.xml" ]; then
+        echo "${base}.${lang}.xml"
+      elif [ -r "${base}.en.xml" ]; then
+        echo "${base}.en.xml"
+      else
+        ls ${base}.[a-z][a-z].xml |head -n1
+      fi
+    done 
+  fi
 }
 
 auto_sources(){
@@ -106,24 +108,42 @@ list_langs(){
   | sed -r 's:^([a-z]{2}) (.+)$:<tr id="\1">\2</tr>:g'
 }
 
-get_language(){ echo "$(echo "$1" |sed -r 's:^.*\.([a-z]{2})\.xhtml$:\1:')"; }
-get_shortname(){ echo "$(echo "$1" | sed -r 's:\.[a-z]{2}.xhtml$::')"; }
+get_language(){
+  # extract language indicator from a given file name
+  echo "$(echo "$1" |sed -r 's:^.*\.([a-z]{2})\.xhtml$:\1:')";
+}
+get_shortname(){
+  # get shortened version of a given file name
+  # required for internal processing
+  echo "$(echo "$1" | sed -r 's:\.[a-z]{2}.xhtml$::')";
+}
 get_textsfile(){
-  if [ -r "tools/texts-${1}.xml" ]; then
-    echo "tools/texts-${1}.xml"
+  # get the texts file for a given language
+  # fall back to english if necessary
+
+  if [ -r "$basedir/tools/texts-${1}.xml" ]; then
+    echo "$basedir/tools/texts-${1}.xml"
   else
-    echo "tools/texts-en.xml"
+    echo "$basedir/tools/texts-en.xml"
   fi
 }
 get_fundraisingfile(){
-  if [ -r "fundraising-${1}.xml" ]; then
-    echo "fundraising-${1}.xml"
-  elif [ -r "fundraising-en.xml" ]; then
-    echo "fundraising-en.xml"
+  # get the fundraising file for a given language
+  # TODO: integrate with regular texts function
+
+  if [ -r "$basedir/fundraising-${1}.xml" ]; then
+    echo "$basedir/fundraising-${1}.xml"
+  elif [ -r "$basedir/fundraising-en.xml" ]; then
+    echo "$basedir/fundraising-en.xml"
   fi
 }
 
 get_processor(){
+  # find the xslt script which is responsible for processing
+  # a given xhtml file.
+  # expects the shortname of the file as input (i.e. the
+  # the file path without language and file endings)
+
   filename="$(basename "$1").xsl"
   location="$(dirname "$1")"
 
@@ -138,8 +158,12 @@ get_processor(){
 }
 
 build_xmlstream(){
+  # assemble the xml stream for feeding into xsltproc
+  # the expected shortname and language flag indicate 
+  # a single xhtml page to be built
   shortname="$1"
   lang="$2"
+
   infile="${shortname}.${lang}.xhtml"
   texts_xml=$(get_textsfile $lang)
   fundraising_xml=$(get_fundraisingfile $lang)
@@ -149,52 +173,172 @@ build_xmlstream(){
   dirname="$(dirname "$infile")"
   outdated=no
   
-  cat <<__EOF
-  <buildinfo
-    date="$date"
-    original="en"
-    filename="$shortname"
-    dirname="$dirname"
-    language="$lang"
-    outdated="$outdated"
-  >
-  
-  <trlist>
-    $(list_langs "$shortname")
-  </trlist>
-  
-  <menuset>$(include_xml tools/menu-global.xml)</menuset>
-  <textsetbackup>$(include_xml tools/texts-en.xml)</textsetbackup>
-  <textset>$(include_xml "$texts_xml")</textset>
-  <fundraising>$(include_xml "$fundraising_xml")</fundraising>
-  
-  <document
-    language="$lang"
-    type=""
-    external=""
-    newsdate=""
-  >
-    <timestamp>
-      \$Date:$date $time \$
-      \$Author: automatic \$
-    </timestamp>
-    <set>
-      $(auto_sources "${shortname}.sources" "$lang")
-    </set>
-  
-    $(include_xml "$infile")
-  </document>
-  
-  </buildinfo>
-__EOF
+  cat <<-EOF
+	<buildinfo
+	  date="$date"
+	  original="en"
+	  filename="$shortname"
+	  dirname="$dirname"
+	  language="$lang"
+	  outdated="$outdated"
+	>
+	
+	<trlist>
+	  $(list_langs "$shortname")
+	</trlist>
+	
+	<menuset>$(include_xml "$basedir/tools/menu-global.xml")</menuset>
+	<textsetbackup>$(include_xml "$basedir/tools/texts-en.xml")</textsetbackup>
+	<textset>$(include_xml "$texts_xml")</textset>
+	<fundraising>$(include_xml "$fundraising_xml")</fundraising>
+	
+	<document
+	  language="$lang"
+	  type=""
+	  external=""
+	  newsdate=""
+	>
+	  <timestamp>
+	    \$Date:$date $time \$
+	    \$Author: automatic \$
+	  </timestamp>
+	  <set>
+	    $(auto_sources "${shortname}.sources" "$lang")
+	  </set>
+	
+	  $(include_xml "$infile")
+	</document>
+	
+	</buildinfo>
+	EOF
 }
 
-process_file(){
+mes(){
+  # make escape... escape a filename for ridiculous make syntax
+  # probably not complete
+  while [ -n "$1" ]; do
+    echo "$1"
+    shift 1
+  done \
+  | sed -r 's;( |#);\\\\\1;g' \
+  | tr '\n' ' '
+}
+
+xhtml_maker(){
   infile="$1"
+  outpath="$2"
+
   shortname=$(get_shortname "$infile")
   lang=$(get_language "$infile")
 
-  processor="$(get_processor "$shortname")"
+  outfile="${outpath}/$(basename "$shortname").${lang}.html"
+  outlink="${outpath}/$(basename "$shortname").html.$lang"
 
-  build_xmlstream "$shortname" "$lang" |xsltproc "$processor" -
+  processor="$(get_processor "$shortname")"
+  textsfile="$(get_textsfile "$lang")"
+  textsen="$(get_textsfile "en")"
+  menufile="$basedir/tools/menu-global.xml"
+  fundraisingfile="$(get_fundraisingfile "$lang")"
+  sources="$(list_sources "${shortname}.sources" "$lang" |while read src; do mes "$src"; done)"
+
+  cat <<-MakeEND
+	all: $(mes "$outfile" "$outlink")
+	$(mes "$outfile"): $(mes "$infile" "$processor" "$textsen" "$textsfile" "$fundraisingfile" "$menufile") $sources
+	~$0 build_xmlstream "${shortname}.${lang}.xhtml" |xsltproc -o "${outfile}" "${processor}" -
+	
+	$(mes "$outlink"):
+	~ln -s "${outfile}" "${outlink}"
+	MakeEND
+
+  if [ ! -f "$(dirname "$infile")/index.${lang}.xhtml" ] && \
+     [ "$(basename "$shortname")" = "$(basename $(dirname "$infile"))" ]; then
+    cat <<-MakeEND
+	all: $(mes "$outpath/index.${lang}.html" "$outpath/index.html.$lang")
+	$(mes "$outpath/index.${lang}.html"): $(mes "$outfile")
+	~ln -s "$outfile" "$outpath/index.${lang}.html"
+	$(mes "$outpath/index.html.$lang"): $(mes "$outfile")
+	~ln -s "$outfile" "$outpath/index.html.$lang"
+	MakeEND
+  fi
 }
+
+copy_maker(){
+  infile="$1"
+  outfile="$2/$(basename "$infile")"
+  cat <<-MakeEND
+	all: $(mes "$outfile")
+	$(mes "$outfile"): $(mes "$infile")
+	~cp "$infile" "$outfile"
+	MakeEND
+}
+
+dir_maker(){
+  dir="$1"
+  cat <<-MakeEND
+	all: $(mes "$dir")
+	$(mes "$dir"):
+	~mkdir -p "$dir"
+	MakeEND
+}
+
+tree_maker(){
+  input="$(echo "$1" |sed -r 's:/$::')"
+  output="$(echo "$2" |sed -r 's:/$::')"
+
+  echo ".PHONY: all"
+  echo ".RECIPEPREFIX := ~"
+  find "$input" \
+  | sed -r "/(^|\/)\.svn($|\/)|^\.\.$/d;s;^$input/*;;" \
+  | while read filepath; do
+    inpfile="${input}/$filepath"
+    if [ -d "$inpfile" ]; then
+      dir_maker "$output/$filepath"
+    else case "$filepath" in
+      *.xsl) true;;
+      *.xml) true;;
+      *.sources) true;;
+      *.xhtml) xhtml_maker "$inpfile" "$output/$(dirname "$filepath")";;
+      *) copy_maker "$inpfile" "$output/$(dirname "$filepath")";;
+    esac; fi
+  done
+}
+
+build_into(){
+  target="$1"
+
+  tree_maker "$basedir" "$target" |make -f -
+}
+
+command="$1"
+[ -n "$1" ] && shift 1
+case "$command" in
+  build_xmlstream)
+    build_xmlstream "$(get_shortname "$1")" "$(get_language "$1")"
+    ;;
+  tree_maker)
+    tree_maker "$1" "$2"
+    ;;
+  build_into)
+    build_into "$1"
+    ;;
+  * ) cat <<-EOHELP
+
+	Usage:
+	------------------------------------------------------------------------------
+	
+	$0 build_xmlstream "file.xhtml"
+	  Compile an xml stream from the specified file, additional sources will be
+	  determined and included automatically. The stream is suitable for being
+	  passed into xsltproc.
+	
+	$0 tree_maker "input_dir" "output_dir"
+	  Generate a set of make rules to build the website contained in input_dir.
+	  output_dir should be the www root of a web server.
+	
+	$0 build_into "target_dir"
+	  Perform the page build. Write output to target_dir. The input directory
+	  is determined from the build scripts own location.
+	
+	EOHELP
+    ;;
+esac

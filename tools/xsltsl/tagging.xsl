@@ -342,7 +342,6 @@
                   </xsl:otherwise>
                 </xsl:choose>
               </xsl:element>
-    	</xsl:element>
 	    
 	    <xsl:element name="ul">
 	      <xsl:attribute name="class">tag-<xsl:value-of select="$tag" /> tag list</xsl:attribute>
@@ -369,6 +368,7 @@
                 </xsl:element>
             </p>
 	    
+    	</xsl:element>
     </xsl:for-each>
 		
 	</xsl:template>
@@ -401,7 +401,6 @@
                   </xsl:otherwise>
                 </xsl:choose>
               </xsl:element>
-    	</xsl:element>
 	    
 	    <xsl:element name="ul">
 	      <xsl:attribute name="class">tag-<xsl:value-of select="$tag" /> tag list</xsl:attribute>
@@ -438,6 +437,7 @@
                     <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'news'" /></xsl:call-template>
                 </xsl:element>
             </p>
+    	</xsl:element>
 
     </xsl:for-each>
 		

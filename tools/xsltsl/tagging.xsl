@@ -123,6 +123,37 @@
 
   <!--display dynamic list of tags used in news-->
   <xsl:template name="all-tags-news">
+
+		<xsl:element name="ul">
+		  
+		  <xsl:attribute name="class">taglist</xsl:attribute>
+		  
+	    <xsl:for-each select="/buildinfo/document/set/news/tags/tag">
+		    <xsl:sort select="." order="ascending" />
+		    
+		    <xsl:variable name="thistag" select="node()" />
+		    
+		    <xsl:if test="generate-id() = generate-id(key('news-tags-by-value', normalize-space(.)))">
+		    
+          <xsl:element name="li">
+            <xsl:element name="a">
+              
+              <xsl:attribute name="href">
+                <xsl:text>/tags/tagged.</xsl:text>
+                <xsl:value-of select="/buildinfo/@language" />
+                <xsl:text>.html#n</xsl:text>
+                <xsl:value-of select="translate($thistag,' ','')" />
+              </xsl:attribute>
+              
+              <xsl:value-of select="."/>
+              
+            </xsl:element>
+          </xsl:element>
+        
+        </xsl:if>
+		    
+	    </xsl:for-each>
+		</xsl:element>
     
     <!-- <xsl:variable name="nbtags" select="count(
                                           /buildinfo/document/set/news/tags/tag[
@@ -133,7 +164,7 @@
     
     ##<xsl:value-of select="$nbtags" />##<xsl:value-of select="$average" />## -->
     
-    <xsl:call-template name="append-children-tags" />
+<!--    <xsl:call-template name="append-children-tags" />-->
       
     <!--
     <xsl:for-each select="/buildinfo/document/set/news/tags/tag">

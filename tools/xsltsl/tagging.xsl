@@ -427,16 +427,6 @@
 	      </xsl:for-each>
 	    </xsl:element>
 	      
-
-            <p class="tag also">
-                <xsl:element name="a">
-                    <xsl:attribute name="href">
-                        <xsl:text>n</xsl:text>
-                        <xsl:value-of select="translate($tag, ' ', '')" />
-                    </xsl:attribute>
-                    <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'news'" /></xsl:call-template>
-                </xsl:element>
-            </p>
     	</xsl:element>
 
     </xsl:for-each>

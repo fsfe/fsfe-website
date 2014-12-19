@@ -323,11 +323,7 @@ div#subpages, .grid-row {
         font-size: 0.8em;
 
         a.tag {
-            display: inline-block;
-            padding: 0.3em;
-            background: lighten(@brand-primary,40%);
-            border-radius: 4px;
-            margin: 0 0 0.3em 0.5em;
+            .tagginglabel;
         }
     }
 
@@ -1299,12 +1295,22 @@ table#gold {
 
 ul.taglist {
     text-align: center;
+    li {
+        display: inline;
+        margin: 5px;
+        white-space: nowrap;
+        a {
+            .tagginglabel;
+        }
+    }
 }
 
-ul.taglist li {
-    display: inline;
-    margin: 5px;
-    white-space: nowrap;
+.tagginglabel {
+            display: inline-block;
+            padding: 0.3em;
+            background: lighten(@brand-primary,40%);
+            border-radius: 4px;
+            margin: 0 0 0.3em 0.5em;
 }
 
 .tag16 { font-size: 16; }

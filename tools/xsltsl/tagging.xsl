@@ -417,14 +417,16 @@
 	</xsl:template>
 
 
+	<xsl:key name="all-tags-by-value" match="tags/tag" use="."/>
+
 	<!-- display list of tagged news and events sorted by tag -->
 
 	<xsl:template name="tagged-news-and-events">
 
 		<!-- loop through all tags accross news and events -->
-		<!--  [FIXME: this should select all tags from news and events]
-		<xsl:for-each select="/buildinfo/document/set/news/tags/tag[ count( . | key( 'events-tags-by-value', . )[1] ) = 1 ]"> 
-
+		<xsl:for-each select="/buildinfo/document/set/news/tags/tag[ count( . | key( news-tags-by-value', . )[1] ) = 1 ]
+                              and /buildinfo/document/set/event/tags/tag[ count( . | key( events-tags-by-value', . )[1] ) = 1 ]">
+		  
 			<xsl:sort select="." order="ascending" />
 
 			<xsl:variable name="tag" select="." />
@@ -448,9 +450,7 @@
 					</xsl:choose>
 				</xsl:element>
 
-				[FIXME: only show this if there is at least one news
-				with this tag]
-				<xsl:if test="/buildinfo/document/set/news/tags/tag[ count( . | key( 'events-tags-by-value', . )[1] ) = 1 ]"> 
+				<xsl:if test="/buildinfo/document/set/news[tags/tag = $tag]">
 
 					<xsl:element name="ul">
 						<xsl:attribute name="class">tag-<xsl:value-of select="$tag" /> tag list</xsl:attribute>
@@ -474,9 +474,7 @@
 
 				</xsl:if>
 
-				[FIXME: only show this if there is at least one event
-				with this tag]
-				<xsl:if test="/buildinfo/document/set/event/tags/tag[ count( . | key( 'events-tags-by-value', . )[1] ) = 1 ]"> 
+				<xsl:if test="/buildinfo/document/set/event[tags/tag = $tag]">
 
 					<xsl:element name="ul">
 						<xsl:attribute name="class">tag-<xsl:value-of select="$tag" /> tag list</xsl:attribute>
@@ -507,8 +505,6 @@
 			</xsl:element>
 
 		</xsl:for-each>
-
-		-->
 
 	</xsl:template>
 	

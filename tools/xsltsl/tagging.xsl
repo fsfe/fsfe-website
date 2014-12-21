@@ -314,7 +314,7 @@
 
 	<!-- <xsl:template name="tagged-news"> -->
 
-	<!-- 	<\!-- loop through all tags (this complex expression loops over each tag once) -\-> -->
+	 	<!-- loop through all tags (this complex expression loops over each tag once) --> 
 	<!-- 	<xsl:for-each select="/buildinfo/document/set/news/tags/tag[ count( . | key( 'news-tags-by-value', . )[1] ) = 1 ]"> -->
 
 	<!-- 		<xsl:sort select="." order="ascending" /> -->
@@ -343,7 +343,7 @@
 	<!-- 			<xsl:element name="ul"> -->
 	<!-- 				<xsl:attribute name="class">tag-<xsl:value-of select="$tag" /> tag list</xsl:attribute> -->
 
-	<!-- 				<\!-- loop through all news having this tag -\-> -->
+	 				<!-- loop through all news having this tag -->
 	<!-- 				<xsl:for-each select="/buildinfo/document/set/news[tags/tag = $tag]"> -->
 	<!-- 					<xsl:element name="li"> -->
 	<!-- 						<xsl:element name="a"> -->
@@ -367,7 +367,7 @@
 	<!-- <xsl:template name="tagged-events"> -->
 	<!-- 	<xsl:param name="absolute-fsfe-links" /> -->
 		
-	<!-- 	<\!-- loop through all tags (this complex expression loops over each tag once) -\-> -->
+	 	<!-- loop through all tags (this complex expression loops over each tag once) -->
 	<!-- 	<xsl:for-each select="/buildinfo/document/set/event/tags/tag[ count( . | key( 'events-tags-by-value', . )[1] ) = 1 ]"> -->
 	<!-- 		<xsl:sort select="." order="ascending" /> -->
 	<!-- 		<xsl:variable name="tag" select="." /> -->
@@ -393,7 +393,7 @@
 	<!-- 			<xsl:element name="ul"> -->
 	<!-- 				<xsl:attribute name="class">tag-<xsl:value-of select="$tag" /> tag list</xsl:attribute> -->
 
-	<!-- 				<\!-- loop through all events having this tag -\-> -->
+	 				<!-- loop through all events having this tag-->
 	<!-- 				<xsl:for-each select="/buildinfo/document/set/event[tags/tag = $tag]"> -->
 
 	<!-- 					<xsl:element name="li"> -->
@@ -404,8 +404,8 @@
 	<!-- 								</xsl:call-template> -->
 	<!-- 							</xsl:attribute> -->
 	<!-- 							<xsl:value-of select="title" /> -->
-	<!-- 						</xsl:element><\!--a-\-> -->
-	<!-- 					</xsl:element><\!--li-\-> -->
+	<!-- 						</xsl:element> -->
+	<!-- 					</xsl:element> -->
 
 	<!-- 				</xsl:for-each> -->
 	<!-- 			</xsl:element> -->

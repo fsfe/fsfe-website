@@ -35,4 +35,14 @@
 	
   </xsl:template>
 
+  <!-- displayy dynamic list of news and events -->
+  <xsl:template match="tagged-news-and-events">
+    
+    <xsl:call-template name="tagged-news-and-events">
+      <xsl:with-param name="absolute-fsfe-links" select="'no'" />
+    </xsl:call-template>
+	
+  </xsl:template>
+	
+
 </xsl:stylesheet>

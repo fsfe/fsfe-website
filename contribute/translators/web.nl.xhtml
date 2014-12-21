@@ -1,167 +1,199 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
+<?xml version="1.0" encoding="utf-8"?>
 <html>
   <head>
     <title>
-      FSFE - Word actief - Informatie voor vertalers - Webpagina's
+      FSFE - Bijdragen - Informatie voor vertalers - webpagina's
     </title>
+  <style type="text/css">
+	.clear {
+		clear: both;
+	}
+  </style>
   </head>
 
   <body>
     <h1>Webpagina's vertalen</h1>
 
-    <h2>Hoe worden de webpagina's gemaakt</h2>
+    <h2>Korte stap-voor-stap gids</h2>
 
-    <p>
-      De webpagina's van fsfe.org worden onderhouden als een
-      verzameling XML-bestanden. De webserver hervormt deze XML-bestanden alle
-      tien minuten automatisch naar HTML-pagina's. Het is hierdoor
-      logisch dat alle wijzigingen gebeuren in de XML-bestanden, de
-      HTML-pagina's worden nooit rechtstreeks bewerkt. 
+	<p>Deze kleine gids zou alleen moeten worden gebruikt als u de achtergrond van vertalingen 
+al kent: hoe onze pagina's worden gegenereerd, hoe uit te vinden welke vertalingen ontbreken enzovoort.</p>
+
+	<p>In dit voorbeeld willen we https://fsfe.org/contribute/spreadtheword.en.html in het Spaans vertalen. Klik alstublieft op de afbeeldingen om ze te vergroten.
+	</p>
+
+	<ol>
+
+	<li>
+		<div style="max-width: 100px; width: 100px" class="captioned left">
+			<a href="/graphics/translators-shortguide1.png"><img width="100%" alt="Find the source code" src="/graphics/translators-shortguide1.png"/></a>
+		</div>
+		Scroll naar beneden op de pagina die u wil vertalen en vind "Source code" in de voettekst.
+	</li>
+	<p><br class="clear"/></p>
+
+	<li>
+		Download het .xhtml-bestand met "Save As..." in uw browser of ander programma (in dit geval 
+		https://fsfe.org/source/contribute/spreadtheword.en.xhtml).
+	</li>
+
+	<li>
+		<div style="max-width: 100px; width: 100px" class="captioned left">
+			<a href="/graphics/translators-shortguide3.png"><img width="100%" alt="Write an email to the translators list" src="/graphics/translators-shortguide3.png"/></a>
+		</div>
+		Schrijf een korte e-mail aan translators@fsfeurope.org (u zou al een abonnee van deze e-maillijst moeten zijn) en vertel hen dat u begint met de vertaling.<br/>
+		Open alstublieft voor iedere pagina een nieuw draadje en voeg uw <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">twee-letterige taalcode</a> toe aan het onderwerp.
+	</li>
+	<p><br class="clear"/></p>
+
+	<li>
+		Open het gedownloade bestand met een teksteditor (gedit, Kate, Mousepad etc. op vrije 
+besturingssytemen; Notepad++ op Windows).
+	</li>
+
+	<li>
+		<div style="max-width: 100px; width: 100px" class="captioned left">
+			<a href="/graphics/translators-shortguide5.png"><img width="100%" alt="Translate text to your language" src="/graphics/translators-shortguide5.png"/></a>
+		</div>
+		Vertaal alle Engelse tekst buiten de HTML-tags in uw taal. 
+		Bijvoorbeeld:<br/>
+		<em>&lt;p&gt;&lt;a href="/contribute/"&gt;Contribute&lt;/a&gt;&lt;/p&gt;</em> 
+		zou moeten worden<br/>
+		<em>&lt;p&gt;&lt;a href="/contribute/"&gt;Colabore&lt;/a&gt;&lt;/p&gt;</em><br/>
+		
+		Verander alstublieft de <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">twee-letterige taalcode</a> van het vertaalde bestand van "en" in die van uw taal (bijvoorbeeld Spaans = "spreadtheword.es.xhtml").
+	</li>
+	<p><br class="clear"/></p>
+
+	<li>
+		<div style="max-width: 100px; width: 100px" class="captioned left">
+			<a href="/graphics/translators-shortguide6.png"><img width="100%" alt="Send file and ask for proofreading" src="/graphics/translators-shortguide6.png"/></a>
+		</div>
+		Antwoord na afloop alstublieft aan uw draadje in translators@fsfeurope.org 
+		en vraag aan andere mensen om uw bestand te proeflezen. Als iedereen het ermee eens is zal het door anderen op de e-maillijst worden geüpload.
+	</li>
+	<p><br class="clear"/></p>
+
+	</ol>
+
+    <h2>Gedetailleerde gids: begrijpen hoe webpagina's worden gebouwd</h2>
+
+    <p>De webpagina's van fsfe.org worden beheerd als een verzameling XML-bestanden. 
+De webserver genereert de HTML-pagina's iedere tien minuten automatisch uit deze XML-bestanden. 
+Daarom worden alle bewerkingen gedaan in de XML-bestanden, en word de HTML nooit direct bewerkt.
     </p>
 
     <p>
-      De naam van elke webpagina bij fsfe.org heeft dezelfde structuur,
+      Iedere pagina op fsfe.org is als volgt genaamd:
       <var><em>paginanaam</em>.<em>taal</em>.html</var> (<em>taal</em>
-      is <a href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">de
-      2-letter iso-639 code</a> voor de gebruikte taal, zoals "en"
-      voor Engels of "nl" voor Nederlands). De naam van de
-      basisbestanden heeft de
-      structuur, <var><em>paginanaam</em>.<em>taal</em>.xhtml</var>.
+      zijnde de <a href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">twee-letterige
+      ISO-639-1 code</a> van de taal, zoals "en" voor Engels of "de" voor
+      Duits). De bronbestanden zijn genaamd:
+      <var><em>paginanaam</em>.<em>taal</em>.xhtml</var>.
+	</p>
+
+	<p>Sommige pagina's hebben een dynamisch deel. Buiten de vaste teksten uit het XHTML-
+bestand bevatten zij informatie uit een of verschillende XML-bestanden. Als zo'n pagina wordt 
+opgebouwd neemt het systeem de vertaalde XML-bestanden als zij beschikbaar zijn en valt zij 
+terug op de Engelse versie van de XML-bestanden die nog niet zijn vertaald. Op deze manier kunnen 
+pagina's bestaan uit delen waarvan de tekst vertaald is en andere delen die nog steeds in het Engels zijn. 
+Voorbeelden van zulke pagina's zijn de 
+      <a href="/index.html">voorpagina</a>, de
+      <a href="/news/news.html">nieuwspagina</a> en de
+      <a href="/events/events.html">evenementenpagina</a>.
+    </p>
+
+    <h2>Iedereen kan bijdragen aan vertalingen</h2>
+
+    <p>Alle bronbestanden (dus alle XHTL- en XML-bestanden) zijn publiek beschikbaar om 
+te downloaden, dus iedereen kan spontaan bijdragen aan een vertaling zonder zich ergens te 
+moeten registreren. Als u echter aan een vertaling begint waarvan u verwacht dat deze langer 
+duurt, schrijf dan alstublieft een korte notitie aan de 
+      <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">vertalers e-maillijst</a> om 
+te voorkomen dat iemand anders gelijktijdig aan dezelfde tekst begint te werken.
+    </p>
+
+    <h3>Bijdragen aan ontbrekende vertalingen</h3>
+
+    <p>Als u een pagina geopend hebt in uw webbrowser die nog niet in uw taal is vertaald, 
+scroll dan naar het eind van de pagina, klik op de 
+<strong>Source code</strong>-link en bewaar het bestand dat u dan krijgt. U krijgt het 
+Engelse XHTML-bestand. Hernoem het bestand om het van uw landcode te voorzien in plaats 
+van de "en"-code, en open het in een teksteditor. Vertaal nu alle tekst in het bestand dat zich buiten 
+de "&lt;…&gt;" tekens bevindt; verander niets binnen deze tekens (de tekst binnen de tekens zijn 
+XHTML-commando's die invloed hebben op de structuur van de resulterende webpagina).
+    </p>
+
+	<!--
+	     Note to translators for the above sentence:
+	     _structure_ not _appearance_.  XHTML = structure, CSS = appearance.
+    -->
+
+    <p>Aan het eind van het bestand zal er een regel zijn met daarin <var>&lt;/html&gt;</var>.
+      Voeg direct <em>boven</em> deze regel de volgende regel toe:
+      <var>&lt;translator&gt;<em>uw naam</em>&lt;/translator&gt;</var>.
     </p>
 
     <p>
-      Sommige pagina's hebben een dynamisch deel: buiten het vaste
-      tekstgedeelte van het XHTML-bestand, wordt informatie toegevoegd
-      van verschillende XML-bestanden. Telkens als zo'n pagina gebouwd
-      wordt, gebruikt het systeem de vertaalde XML-bestanden. Als er
-      geen vertaalde versies bestaan van die bestanden gebruikt het
-      systeem de Engelse versie. Door deze werkwijze kan het gebeuren
-      dat deze pagina's slechts gedeeltelijk vertaald zijn.
-      Voorbeelden van zo'n pagina's zijn vaak
-      <a href="/index.html">de startpagina</a>,
-      <a href="/news/news.html">de nieuwspagina</a> en
-      <a href="/events/events.html">de evenementenpagina</a>.
+      Als u klaar bent, stuur dan het vertaalde bestand naar de 
+      <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">vertalers e-maillijst
+      </a>. Andere leden van deze lijst kunnen de vertaling proeflezen en iemand op die lijst zal 
+haar uiteindelijk op de server plaatsen.
     </p>
 
-    <h2>Iedereen kan vertalingen maken</h2>
+    <h3>Verouderde vertalingen bijwerken</h3>
 
-    <p>
-      Alle basisbestanden (de XHTML- en XML-bestanden) zijn vrij
-      beschikbaar om te downloaden, dus kan iedereen een vertaling
-      maken zonder zich ergens te registreren. Maar als u van plan
-      bent een vertaling te maken, waarvan u weet dat het wat langer
-      kan duren, stuur dan een kort berichtje naar
-      de <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">
-      Translators mailinglist</a>. Zo voorkomt u dat iemand anders op
-      hetzelfde moment aan hetzelfde bestand werkt.
+    <p>Als u een pagina in uw webbrowser hebt geopend waarvan de vertaling is verouderd 
+(als indicatie bevind zich een notitie hiervan bovenaan de pagina), scroll dan naar het eind van 
+de pagina, klik op de <strong>Source code</strong>-link en bewaar het bestand dat u dan krijgt. 
+Dit bestand is de (verouderde) vertaalde versie. Gebruik daarna de <strong>English</strong>-link 
+bovenaan de pagina om naar de Engelse versie van de pagina te gaan en klik daar ook op de 
+<strong>Source code</strong>-link. Het bestand dat u daar krijgt is de (bijgewerkte) Engelse versie. 
+Nu kan u beide bestanden vergelijken en de vertaling bijwerken. Let u er alstublieft op dat alles binnen 
+de "&lt;…&gt;" tekens niet mag worden vertaald.
     </p>
 
-    <h3>Ontbrekende vertalingen maken</h3>
-
-    <p>
-      Als u een pagina opent in uw webbrowser, die nog niet vertaald
-      is naar uw taal, scroll naar het einde van de pagina en druk
-      op de <strong>[XHTML]</strong> link, bewaar het bestand dat u
-      hier krijgt.  Hernoem het bestand zodat het uw taalcode krijgt
-      in plaats van de "en" code en open het bestand in een editor
-      naar keuze. Vertaal al de tekst in het bestand die buiten de
-      "&lt;…&gt;" tekens staat.  Verander niets dat binnen deze tekens
-      staat (de tekst binnen deze tekens zijn de XHTML-commando's die
-      invloed hebben op de structuur van de gegenereerde
-      HTML-bestanden).
+    <p>U mag bij wijze van alternatief ook 
+<a href="https://trac.fsfe.org/fsfe-web/browser/trunk">de webgebaseerde bronbestanden</a> op de <a href="https://trac.fsfe.org/fsfe-web">fsfe-web
+      trac site</a> gebruiken om diffs te maken, en om de laatste bijwerkingen te zien van alle bronbestanden.
     </p>
 
-    <p>
-      Op het einde van het bestand is er een regel met de volgende
-      inhoud: <var>&lt;/html&gt;</var>. Onmiddellijk
-      <em>boven</em> deze regel, plaats je het volgende:
-      <var>&lt;translator&gt;<em>uw
-      naam</em>&lt;/translator&gt;</var>.
+    <p>Stuur als u klaar bent het vertaalde bestand aan de 
+      <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">vertalers e-maillijst</a>. 
+Andere leden van deze lijst kunnen de vertaling proeflezen, en iemand op die lijst zal haar 
+uiteindelijk op de server plaatsen.
     </p>
 
-    <p>
-      Als u klaar bent, stuurt u uw bestand naar
-      de <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">
-      Translators mailinglist</a>. Andere leden van de lijst kunnen
-      uw vertaling dan nalezen en iemand op de lijst zal het bestand
-      uiteindelijk op de server plaatsen.
+    <h3>Er achter komen waaraan gewerkt moet worden</h3>
+
+    <p>Er is een 
+      <a href="http://status.fsfe.org/web/translations.html">automatisch gegenereerde 
+lijst van alle talen</a> beschikbaar. Op die pagina is iedere taalcode een link naar een aparte pagina 
+met een lijst van alle verouderde en ontbrekende vertalingen voor die taal.
     </p>
 
-    <h3>Verouderde pagina's updaten</h3>
-
-    <p>
-      Als u een pagina opent in uw webbrowser, waarvan de vertaling
-      verouderd is (dat kan u lezen in een opmerking bovenaan de
-      pagina), scroll naar het einde van de pagina en druk op de
-      <strong>[XHTML]</strong> link, bewaar het bestand dat u hier
-      krijgt. Het bestand dat u krijgt is de verouderde vertaalde
-      versie. Gebruik de <strong>English</strong> tab bovenaan de
-      pagina om de Engelse versie van de webpagina te krijgen, gebruik
-      ook hier de <strong>[XHTML]</strong> link, om de meest recente
-      Engelse versie te krijgen. Nu kan u beide bestanden vergelijken
-      en de vertaling bijwerken. Houd er rekening mee dat alles binnen
-      de "&lt;…&gt;" tekens niet vertaald mag worden.
+    <p>De lijst met verouderde vertalingen biedt een extra handige mogelijkheid voor het 
+bijwerken: u kan niet alleen het (verouderde) vertaalde bestand en het (bijgewerkte) Engelse origineel 
+downloaden; u kan ook de changelog inzien van beide bestanden, een protocol van alle gemaakte 
+wijzigingen aan ieder bestand. De twee changelogs vergelijken maakt het meestal gemakkelijk om 
+uit te vinden welke delen van het origineel zijn veranderd sinds de vertaling het laatst is bijgewerkt.
     </p>
 
-    <p>
-      U kan eventueel
-      ook <a href="https://trac.fsfe.org/fsfe-web/browser/trunk">de
-      webinterface voor de broncode</a>
-      van <a href="https://trac.fsfe.org/fsfe-web">het trac beheersysteem</a> gebruiken om
-      diffs te generen en om de laatste versies van de bestanden te
-      raadplegen.
+    <p>Deze vertalingstatuspagina is ook de enige manier om de XML-bestanden te downloaden 
+die opgebouwd zijn uit dynamische pagina's, zoals bestanden die nieuwsitems of evenementen 
+bevatten.
     </p>
 
-    <p>
-      Als u klaar bent, stuurt u uw bestand naar
-      de <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">
-      Translators mailinglist</a>. Andere leden van de lijst kunnen uw
-      bestand dan nalezen en iemand op de lijst zal het bestand
-      uiteindelijk op de server plaatsen.
+    <h3>De complete bronbestandsboom downloaden met subversion</h3>
+
+    <p>Als het voor u mogelijk is om subversion te gebruiken, dan kan u ook de complete 
+bronbestandsboom in een keer downloaden. Bekijk alstublieft de <a href="/contribute/web/web.html">FSFE webmaster informatiepagina</a> voor gedetailleerde instructies.
     </p>
-
-    <h3>Uitzoeken wat er moet gebeuren</h3>
-
-    <p>
-      Er is voor alle
-      talen <a href="http://status.fsfe.org/web/translations.html">
-      een automatisch gegenereerde lijst</a> beschikbaar. Op deze
-      pagina staat voor elke taalcode een link naar een aparte pagina, daar
-      vindt u een lijst met alle ontbrekende en verouderde vertalingen
-      voor die taal.
-    </p>
-
-    <p>
-      De lijst van verouderde vertalingen biedt nog een handig
-      extraatje voor het updaten: u kan hier niet alleen de
-      basisbestanden van de verouderde vertaling en de Engelse versie
-      downloaden; U kan ook de geschiedenislogs van beide files
-      bekijken, dat is een overzicht van alle wijzigingen aan het
-      bestand. Als u deze logs goed bekijkt, is het vaak veel
-      gemakkelijker om te zien waar de Engelse bestanden veranderd
-      zijn sinds de laatste update.
-    </p>
-
-    <p>
-      Deze statuspagina's voor vertalers, zijn ook de enige manier om
-      de XML-bestanden te kunnen downloaden, die gebruikt worden voor het
-      opbouwen van de dynamische pagina's, dit zijn vooral files voor
-      de nieuws- en evenementenkoppen.
-    </p>
-
-    <h3>Alle basisbestanden downloaden met subversion</h3>
-
-    <p>
-      Als u subversion ter beschikking heeft kan u alle bronbestanden
-      in één keer downloaden. Raadpleeg
-      onze <a href="/contribute/web/web.html">FSFE webmaster
-      informatiepagina</a> voor een gedetailleerde uitleg. 
-    </p>
-
   </body>
 
-  <timestamp>$Date$ $Author$</timestamp>
+  <timestamp>$Datum: 2014-09-05 14:55:40 +0200 (vrij, 05 sep 2014) $ $Auteur: max.mehl $</timestamp>
+
+      <var>&lt;translator&gt;<em>André Ockers</em>&lt;/translator&gt;</var>.
 </html>
 <!--
 Local Variables: ***

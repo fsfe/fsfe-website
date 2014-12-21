@@ -172,7 +172,7 @@ touch ${STATUS}/last-run
 cpu_cores="$(cat /proc/cpuinfo |grep ^processor |wc -l)"
 [ "$cpu_cores" -eq 0 ] && cpu_cores=1
 
-tools/build.pl -t "$cpu_cores" -q -o ${TMP} -i . | grep -v "I/O warning : failed to load external entity"
+tools/build.pl -t "$cpu_cores" -q -o ${TMP} -i .
 
 if test $? -ne 0; then
    echo "$(date)  Build not complete. Aborting."

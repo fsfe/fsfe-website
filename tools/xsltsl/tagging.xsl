@@ -37,7 +37,6 @@
 		</xsl:for-each>
 
 	</xsl:template>
-  
 
 	<!--display dynamic list of (not yet tagged) newsletters items-->
 

@@ -6,7 +6,7 @@
 # HTML pages from the .xhtml, .xml and .xsl source files. Most of the work,
 # however, is done by the Perl script build.pl.
 # -----------------------------------------------------------------------------
-
+ 
 if [ "$1" = "test" ]; then
   SOURCE=/home/www/fsfe-test
   DEST=/home/www/html-test
@@ -42,26 +42,27 @@ export LANG="en_US.UTF-8"
 # Redirect output
 exec 1>> ${STATUS}/status.txt 2>&1
 
-# If there is a build.pl script started more than 10 minutes ago, kill it and mail alarm
+# If there is a build.pl script started more than 15 minutes ago, kill it and mail alarm
 BUILD_STARTED=$(ps --no-headers -C build.pl -o etime | cut -c 7-8 | sort -r | head -n 1)
-if [[ -n "$BUILD_STARTED" && "10#${BUILD_STARTED}" -gt 10 ]] ; then
+if [[ -n "$BUILD_STARTED" && "10#${BUILD_STARTED}" -gt 15 ]] ; then
   echo -e "
-  A build.pl script has been running for more than 10 minutes,
+  A build.pl script has been running for more than 15 minutes,
   and was automatically killed.
 
-  Please check the build script log at $STATUS_URI
-  and fix the cause of the problem.
+  To debug the problem, please see:
+  - Build script log: $STATUS_URI
+  - Latest changes in the repository: https://trac.fsfe.org/fsfe-web/timeline
  
   In case of doubt, please write to system-hackers@fsfeurope.org 
 
   " | mail -s "${DOMAIN}: build.pl warning" web@fsfeurope.org system-hackers@fsfeurope.org
   killall build.pl
-  echo "$(date) A build.pl script has been running for more than 10 minutes, and was automatically killed."
+  echo "$(date) A build.pl script has been running for more than 15 minutes, and was automatically killed."
   exit
 fi
 
 # If some build script is already running, don't run it.
-if ps -C "build-df.sh,build-df-test.sh,build-test.sh,build.sh" -o pid= | grep -q -v "$$"; then
+if ps -C "build-df.sh,build-df-test.sh,build.sh" -o pid= | grep -q -v "$$"; then
   echo "$(date) Another build script is currently running. Build postponed."
   exit
 fi
@@ -171,7 +172,7 @@ touch ${STATUS}/last-run
 cpu_cores="$(cat /proc/cpuinfo |grep ^processor |wc -l)"
 [ "$cpu_cores" -eq 0 ] && cpu_cores=1
 
-tools/build.pl -t "$cpu_cores" -q -o ${TMP} -i .
+tools/build.pl -t "$cpu_cores" -q -o ${TMP} -i . | grep -v "I/O warning : failed to load external entity"
 
 if test $? -ne 0; then
    echo "$(date)  Build not complete. Aborting."

@@ -488,7 +488,7 @@
 								<xsl:element name="a">
 									<xsl:attribute name="href">
 										<xsl:call-template name="event-link">
-											<xsl:with-param name="absolute-fsfe-links" select="$absolute-fsfe-links" />
+											<!--xsl:with-param name="absolute-fsfe-links" select="$absolute-fsfe-links" /-->
 										</xsl:call-template>
 									</xsl:attribute>
 									<xsl:value-of select="title" />

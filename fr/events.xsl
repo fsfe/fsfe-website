@@ -11,7 +11,7 @@
   <xsl:template match="fetch-events">
     <xsl:call-template name="fetch-events">
       <xsl:with-param name="tag" select="'fr'"/>
-      <xsl:with-param name="nb-items" select="99"/>
+      <xsl:with-param name="nb-items" select="9"/>
     </xsl:call-template>
   </xsl:template>
   

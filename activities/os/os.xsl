@@ -10,7 +10,7 @@
   
   <xsl:template match="fetch-news">
     <xsl:call-template name="fetch-news">
-      <xsl:with-param name="tag" select="'open-standards'"/>
+      <xsl:with-param name="tag" select="'OpenStandards'"/>
       <xsl:with-param name="nb-items" select="5"/>
     </xsl:call-template>
   </xsl:template>

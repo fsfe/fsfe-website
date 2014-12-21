@@ -11,7 +11,7 @@
   <xsl:template match="tagged-docs">
     
     <xsl:call-template name="fetch-news">
-      <xsl:with-param name="tag" select="'avmgplviolation'" />
+      <xsl:with-param name="tag" select="'AVM'" />
       <xsl:with-param name="show-date" select="'yes'" />
       <xsl:with-param name="display-year" select="'yes'" />
       <xsl:with-param name="compact-view" select="'yes'" />

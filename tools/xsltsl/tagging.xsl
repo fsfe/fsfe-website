@@ -424,7 +424,8 @@
 	<xsl:template name="tagged-news-and-events">
 
 		<!-- loop through all tags accross news and events -->
-		<xsl:for-each select="/buildinfo/document/set/news/tags/tag and /buildinfo/document/set/event/tags/tag">
+		<xsl:for-each select="/buildinfo/document/set/news/tags/tag[ count( . | key( news-tags-by-value', . )[1] ) = 1 ]
+                              | /buildinfo/document/set/event/tags/tag[ count( . | key( events-tags-by-value', . )[1] ) = 1 ]">
 		  
 			<xsl:sort select="." order="ascending" />
 

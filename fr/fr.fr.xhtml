@@ -52,13 +52,6 @@ soutien de la liberté logicielle." />
 	
     </div><!--end #news-->    
 
-    <div id="teams">
-        <ul>
-            <li><a href="#team">Équipe nationale</a></li>
-            <li><a href="#Paris">Groupe parisien</a></li>
-        </ul>
-    </div>
-  
     <div id="events" class="section">
       <h2>
 	<a href="/events/events.html"><events-label /></a>
@@ -76,20 +69,19 @@ soutien de la liberté logicielle." />
     <hr />
     
       
-  <div id="contact" class="section">
+  <!-- <div id="contact" class="section"> -->
     
-    <h2><span><contact-label /></span></h2>
+  <!--   <h2><span><contact-label /></span></h2> -->
     
-    <div class="entry">
+  <!--   <div class="entry"> -->
   
-      <!-- this element fetches contact details from /contact/local.en.xml - edit 
-      this file to change the contact details that will be listed -->
-      <contact-details />
+     <!-- this element fetches contact details from /contact/local.en.xml - edit  -->
+  <!--     this file to change the contact details that will be listed  -->
+  <!--     <contact-details /> -->
          
-    </div>
+  <!--   </div> -->
 
-  </div><!--end #contact-->
-    
+<!-- </div>  -->
     
     <div id="team" class="section grid-100">
     
@@ -113,6 +105,20 @@ soutien de la liberté logicielle." />
     </div><!--end #team-->
     
   </body>
+  <sidebar promo="about-fsfe">
+	<div class="contacteznous" id="contact">
+		<h3><contact-label /></h3>
+		<contact-details />
+		<a href="https://twitter.com/fsfefrance">Suivez nous sur Twitter</a>
+	</div>
+    <div id="teams">
+	    <h3>Équipes et groupes locaux</h3>
+        <ul>
+            <li><a href="#team">Équipe nationale</a></li>
+            <li><a href="#Paris">Groupe parisien</a></li>
+        </ul>
+    </div>
+  </sidebar>
 
   <timestamp>$Date: 2010-03-19 16:00:25 +0100 (ven. 19 mars 2010) $ $Author: hugo $</timestamp>
 </html>

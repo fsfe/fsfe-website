@@ -1,439 +1,454 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 <html>
   <head>
-    <title>
-      FSFE - Help ons - Informatie voor webmasters
-    </title>
+    <title>Informatie voor webmasters - FSFE</title>
   </head>
-  <body>
+  <body class="article web" microformats="h-entry" id="information-webmasters">
 
-    <h1>Informatie voor webmasters</h1>
+    <p id="category"><a href="/contribute/">Bijdragen</a></p>
+    <h1 class="p-name">Webmasteren</h1>
 
-    <h2>Inleiding</h2>
-
-    <p>
-      De technologieën en programma's die gebruikt worden voor het
-      onderhouden van de FSFE-webpagina's zouden goed bekend moeten
-      zijn bij ontwikkelaars en auteurs, en kunnen zeker
-      interessant zijn voor diegenen die ze nog niet ontdekten.
-    </p>
-
-    <p>
-      Vertalers en occasionele vrijwilligers komen hoogst
-      waarschijnlijk alleen in contact met:
-    </p>
-
-    <ul>
-      <li>
-        <a href="http://en.wikipedia.org/wiki/XHTML" target="_blank">XHTML</a>
-        -- de basis voor onze webpagina's.</li>
-      <li>
-        <a href="http://subversion.tigris.org"
-        target="_blank">Subversion</a> --  het versiebeheersysteem
-        voor de basisbestanden van onze webpagina´s.</li>
-      <li>
-	<a href="http://trac.edgewall.org/" target="_blank">Trac</a>
-	-- voor het toegangsbeheer, het opvolgen van problemen en
-	aanverwante diensten.</li>
-    </ul>
-
-    <p>
-      Vrijwilligers die zich verder willen engageren in het onderhoud
-      zouden ook ervaring moeten hebben met
-    </p>
-
-    <ul>
-      <li>
-        <a href="http://www.perl.org" target="_blank">Perl</a> - voor
-        het maken van de scripts die instaan voor het onderhoud en
-        aanmaken van de pagina's.</li>
-      <li>
-        <a href="http://www.apache.org" target="_blank">Apache</a> -
-        onze webserver.</li>
-    </ul>
-
-    <h2>Hoe worden de webpagina's gecreëerd?</h2>
-
-    <p>
-      De webpagina's van <var>fsfe.org</var> worden beheerd
-      als een verzameling van XML-bestanden. Alle tien minuten
-      genereert de webserver automatisch de HTML pagina's van de
-      XML-bestanden. Vanzelfsprekend gebeuren al de aanpassingen van
-      de pagina's in de XML-bestanden, de HTML wordt nooit direct
-      veranderd.
-    </p>
-
-    <p>
-      De naam van elke webpagina bij fsfe.org heeft dezelfde
-      structuur, <var><em>paginanaam</em>.<em>taal</em>.html</var>
-      (<em>taal</em>is de 2-letter iso-639 code voor de gebruikte
-      taal, zoals "en" voor Engels of "nl" voor Nederlands). De naam
-      van de basisbestanden heeft de structuur,
-      <var><em>paginanaam</em>.<em>taal</em>.xhtml</var>.
-    </p>
-
-    <p>
-      Sommige pagina's hebben een dynamisch deel: buiten het vaste
-      tekstgedeelte van het xhtml-bestand, wordt informatie toegevoegd
-      van verschillende .xml-bestanden. Telkens als zo'n pagina gebouwd
-      wordt, gebruikt het systeem de vertaalde .xml-bestanden. Als er geen
-      vertaalde versies bestaan van die .xml-bestanden, gebruikt het
-      systeem de Engelse versies. Door deze werkwijze kan het gebeuren
-      dat deze pagina's slechts gedeeltelijk vertaald zijn.
-      Voorbeelden van zo'n pagina's zijn vaak <a href="/index.html">de
-      startpagina</a>,
-      <a href="/news/news.html">de nieuwspagina</a> en
-      <a href="/events/events.html">de evenementenpagina</a>.
-    </p>
-
-    <h2>Toegang krijgen tot de basisbestanden</h2>
-
-    <p>
-      De basisbestanden voor de webpagina´s worden bewaard in het
-      <a href="https://svn.fsfe.org/fsfe-web">fsfe-web subversion
-      repository</a> op onze subversionserver. Andere diensten zijn
-      beschikbaar via het
-      gekoppelde  <a href="https://trac.fsfe.org/fsfe-web">trac
-      beheersysteem</a>.
-    </p>
-
-    <p>
-      Volg de instructies om toegang te krijgen tot deze hulpmiddelen:
-    </p>
-
-    <ul>
-      <li>
-	<p>
-	  Als u een <a href="http://fellowship.fsfe.org">Fellow van de
-	  FSFE</a> bent, heeft u al toegang tot de subversionserver
-	  en het trac beheersysteem. Gebruik uw Fellowship
-	  gebruikernaam en paswoord.
-        </p></li>
-
-      <li>
-	<p>
-	  Als u rechten wil krijgen om bestanden te veranderen op de
-	  subversionserver en de tracwiki schrijf
-	  naar <b>system-hackers@fsfeurope.org</b>.
-        </p></li>
-
-      <li>
-	<p>
-	  Andere personen kunnen zich laten registreren als gast via
-	  het webformulier
-	  op <a href="https://trac.fsfe.org/fsfe-web/register">https://trac.fsfe.org/fsfe-web/register</a>.
-	  Onmiddellijk na uw registratie hebt u leesrechten op de
-	  subversionserver en kan u inloggen op de tracwiki (de
-	  gebruikernaam die u kiest zal de prefix <var>guest-</var>
-	  krijgen). De beheerder van de subversionserver krijgt een
-	  melding van uw verzoek en zal u zo vlug als mogelijk
-	  schrijftoegang geven.
-        </p></li>
-    </ul>
-
-    <h3>Een lokale werkkopij van het subversionarchief installeren</h3>
-
-    <p>
-      Op de subversionserver staan twee archieven voor de
-      FSFE-website. Het <a href="https://trac.fsfe.org/fsfe-web/browser/trunk">SVN
-      "trunk" archief</a> wordt gebruikt om de "officiële" versie
-      (<a href="http://fsfe.org">http://fsfe.org</a>) van de website
-      te
-      bouwen. Het <a href="https://trac.fsfe.org/fsfe-web/browser/branches/test">"test"
-      archief</a> wordt gebruikt om de "test" versie
-      (<a href="http://test.fsfe.org">http://test.fsfe.org</a>) te bouwen.
-    </p>
-
-    <p>
-      Voor alledaagse taken zoals het toevoegen van nieuwsberichten,
-      het vertalen van webpagina's of zelfs voor kleine aanpassingen
-      aan de website volstaat een kopij van het trunkarchief:
-    </p>
-
-    <p class="terminal">
-      svn --username YOURNAME co https://svn.fsfe.org/fsfe-web/trunk
-    </p>
-
-    <p>
-      Als u grotere veranderingen aan de website wil maken of mee
-      nieuwe functies wil ontwikkelen of debuggen kan u best ook een
-      kopij van het testarchief downloaden:
-    </p>
-
-    <p class="terminal">
-      svn --username YOURNAME co
-      https://svn.fsfe.org/fsfe-web/branches/test
-    </p>
-
-    <p>
-      Houd er rekening mee dat een werkkopij ongeveer 160Mb
-      inneemt. Als u van plan bent om slechts aan bepaalde delen van
-      de website te werken kan u kopijen downloaden van de mappen die
-      u interesseren.
-    </p>
-
-    <h2>Werken met het archief</h2>
-
-    <p>
-      Nadat u het archief een eerste keer kopiëerde, moet u steeds
-    </p>
-
-    <p class="terminal">$ svn update</p>
-
-    <p>
-      uitvoeren voordat u aan een specifiek bestand begint te werken.
-    </p>
+    <div class="e-content">
     
-    
-    <p>
-      Als u een nieuw bestand of een nieuwe map aan het archief wil
-      toevoegen moet u de volgende code uitvoeren:
-    </p>
-
-    <p class="terminal">$ svn add <em>bestandsnaam</em></p>
-
-    <p>
-      Om bestanden naar de server te zenden, of het nu een nieuw
-      bestand is, of de aangepaste versie van een bestaand bestand,
-      voert u de volgende code uit
-    </p>
-
-    <p class="terminal">$ svn commit <em>bestandsnaam</em></p>
-
-    <p>
-      je standaardeditor zal een venster openen waarin je een korte
-      beschrijving kan geven van de veranderingen die je doorstuurt.
-    </p>
-
-    <p>
-      In een subversion archief moet de optie  <a
-      href="http://svnbook.red-bean.com/en/1.5/svn.advanced.props.special.keywords.html">trefwoordvervangen</a>
-      voor elk bestand individueel ingesteld worden. Wij
-      maken gebruik van trefwoorden in onze <var>.xml</var>
-      en <var>.xhtml</var> bestanden (bijvoorbeeld
-      het <var>$</var><var>Author</var><var>$</var> trefwoord in de
-      voettekst van onze pagina's). U kan trefwoordvervanging
-      automatisch instellen voor deze bestanden door volgende tekst in
-      uw <var>~/.subversion/config</var> bestand op te nemen:
-
-      <pre>
-	enable-auto-props = yes
-	
-	[auto-props]
-	*.xml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xml;svn:eol-style=native
-	*.xhtml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xhtml;svn:eol-style=native
-      </pre>
-    </p>
-
-    <p>
-      Als u gewoon bent met CVS te werken zal U makkelijk de
-      overstap naar SVN kunnen maken. Zoals u reeds kon zien zijn de
-      basiscommando's vergelijkbaar. Als u hier wat meer over wil
-      leren kan u een overzicht bekijken van de verschillen tussen CVS
-      en SVN
-      via <a href="http://svnbook.red-bean.com/en/1.5/svn.forcvs.html">Subversion
-      for CVS Users</a> of een korte referentiepagina raadplegen die
-      CVS-commando's vergelijkt met SVN-commando's in de <a
-      href="http://svn.collab.net/repos/svn/trunk/doc/user/cvs-crossover-guide.html">CVS
-      to SVN Crossover Guide</a>.
-    </p>
-
-    <p>
-      U kan een gedetailleerde handleiding downloaden op de
-      <a href="http://svnbook.red-bean.com/">Subversion book</a>
-      pagina (wij gebruiken de 1.5 versie van SVN).
-    </p>
-
-    <h2>Coördinatie van de werkzaamheden</h2>
-
-    <p>
-      Het werk aan de website wordt in de eerste plaats gecoördineerd
-      via
-      de <a href="http://mail.fsfeurope.org/mailman/listinfo/web">mailinglist
-      voor webmasters</a>
-    </p>
-
-    <p>
-      De <a href="https://trac.fsfe.org/fsfe-web">fsfe-web trac
-      interface</a> voorziet in enkele handige hulpmiddelen: een
-      webbrowser voor het SVN-archief, een opvolgsysteem voor
-      problemen en een wiki.
-    </p>
-
-    <p>
-      Als u op de hoogte wil blijven van alle veranderingen die
-      worden doorgevoerd in het archief, kan u zich inschrijven bij de
-      <a href="http://mail.fsfeurope.org/mailman/listinfo/web-cvs-notify">commit
-      notification mailinglist</a>, dan krijgt u een mail bij elke
-      verandering aan het archief.
-    </p>
-
-    <h2>Verantwoord handelen bij schrijftoegang</h2>
-
-    <p>
-      Als u schrijftoegang hebt tot de webpagina's, schrijf u dan
-      alsjeblieft ook in voor de
-      <a href="http://mail.fsfeurope.org/mailman/listinfo/web">Webmasters
-        mailing list</a>.
-    </p>
-
-    <p>
-      Houd alsjeblieft steeds in gedachten dat al uw veranderingen
-      direct worden doorgevoerd en zichtbaar worden, zonder enige
-      tussenkomst van iemand anders. Daarom vragen we u om enkele
-      regels te respecteren wanneer u veranderingen of nieuwe files
-      naar de server stuurt.
-    </p>
-
-    <ul>
-      <li>
+        <p id="introduction" class="p-summary">
+Het <em>Web team </em> beheert en ontwikkelt de websites van FSFE — 
+van <a href="/">fsfe.org</a> tot project- en campagnesites. 
+Webmasters zijn vrijwilligers die het gezicht van de organisatie naar de wereld toe 
+en de technische oplossingen van onze webinspanningen verbeteren.</p>
+        
+        
+        <h2>Ons en de website leren kennen</h2>
+        
+        <p>Als u een idee wil krijgen over waaruit het werk aan de FSFE-website 
+bestaat, is de beste manier om een chat met ons te hebben. Sommige webmasters 
+zijn regelmatig te vinden op #fsfe op freenode, waar we u graag ontmoeten 
+en uw vragen beantwoorden! Om uit te vinden wie er aan het website werkt, en met FSFE 
+als geheel, bezoekt u <a href="/about/team.html">
+        onze teampagina</a>.
+        </p>
+        
         <p>
-          De FSFE is verantwoordelijk voor de inhoud van haar
-          webpagina's. Maak geen wijzigingen die de betekenis van de
-          tekst veranderen zonder toestemming van een lid
-          van <a href="/about/members.html">het kernteam van de
-          FSFE</a>.  (Dit is niet nodig voor vertalingen van bestaande
-          documenten)
-        </p></li>
+        Uw webcoördinatoren, <a href="/about/jean/jean.en.html">Nicolas Jean</a>
+        en <a href="http://sny.no/">Andreas Tolf Tolfsen</a>.
+        </p>
+        
+        
+        <h2>Introductie</h2>
 
-      <li>
         <p>
-          Als u vertalingen doorstuurt, en u hebt de kans om ze door
-          anderen te laten lezen, gebruik die mogelijkheid. U kan
-          de<a href="http://mail.fsfeurope.org/mailman/listinfo/translators">
-          Translators mailing list</a> vragen om iets na te lezen. Of
-          u nu vertalingen maakt, of ze naleest, controleer steeds de
-          spelling van de tekst, er zijn geautomatiseerde
-          gereedschappen, zoals GNU aspell, ispell of een andere
-          spellingcorrector. Als u
-          bijvoorbeeld <a href="http://aspell.net/">GNU aspell</a> wil
-          gebruiken op een Debian GNU/Linux systeem, installeer dan de
-          pakketten <em>aspell</em> en
-          <em>aspell-<strong>XX</strong></em> ("XX" is uw taalcode),
-          en voer dan de volgende code uit
-	</p>
-
-	<p class="terminal">
-	  aspell -H -d <em>language</em> -c file.xhtml
-	</p>
-
-	<p>
-	  Waar "language" de naam is van het woordenboek van uw taal;
-          de <var>-d</var> optie kan u achterwege laten als uw UNIX
-          locale dezelfde is als de taal van je woordenboek.
-        </p></li>
-
-      <li>
-        <p>
-          Zorg ervoor dat al uw bestanden een juiste XML-code
-          hebben. De subversionserver controleert standaard de
-          XML-syntaxis van bestanden met een .xml- en .xhtml-extensie
-          en zal geen bestanden aanvaarden die niet voldoen. U kan uw
-          bestanden zelf controleren vooraleer u ze aanbiedt.
-	</p>
-
-	<p>
-	  Er is een script <var>/trunc/tools/validate.pl</var> genoemd dat kan helpen om
-          fouten te vinden in de markup. Slecht gevormde XML verbreekt
-          het automatische proces voor het maken van de webpagina's,
-          en blokkeert het updaten van de hele FSFE website. Als u
-          vermoedt dat het automatisch proces verstoord is, kan u het
-          logboek van de laatste poging bekijken op
-          onze <a href="http://status.fsfe.org/web/">statuspagina's</a>.
+De technologieën en programma's die gebruikt worden om een FSFE-webpagina te 
+beheren zouden al bekend moeten zijn bij veel ontwikkelaren en auteurs en zouden 
+interessant kunnen zijn voor hen de ze nog niet hebben ontdekt.
         </p>
 
         <p>
-          Het <var>validate.pl</var> script heeft
-          de <em>XML::LibXML</em> Perl module nodig; als dit niet
-          geïnstalleerd is op uw systeem, kan u uw bestanden
-          controleren met uw favoriete gereedschap. U kan
-          bijvoorbeeld het <em>xmllint</em> programma gebruiken
-          vanuit de console. Dit programma maakt deel uit van
-          <a href="http://xmlsoft.org/">het <em>libxml2</em>
-          project</a>
-	</p>
+Vertalers en gelegenheidsvrijwilligers zullen waarschijnlijk alleen in contact komen met:
+        </p>
 
-	<p>
-	  Als u een Debian GNU/Linux systeem hebt,
-          installeer <em>het libxml2-utils</em> pakket; u typt
-          in de console
-	</p>
-	
-	<p class="terminal">xmllint --noout <em>file</em>.xhtml</p>
+        <ul>
+          <li>
+            <a href="http://en.wikipedia.org/wiki/XHTML">XHTML</a> – van waaruit de webpagina's worden 
+gegenereerd
+          </li>
+          <li>
+            <a href="http://subversion.tigris.org/">Subversion</a> – voor versiecontrole van webpaginabronnen
+          </li>
+          <li>
+            <a href="http://trac.edgewall.org/">Trac</a> – voor permissiemanagement,
+issue tracking en andere verwante diensten.
+          </li>
+        </ul>
 
-	<p>
-	  waar <em>file</em> het bestand is dat u wil
-          controleren. Eventuele fouten krijgt uw in de console te
-          zien.
-	</p></li>            
-      <li>
         <p>
-          Kijk goed na of de codering van uw bestand overeenkomt met
-          de waarde die u aan het "encoding" attribuut geeft in de
-          eerste regel van uw bestand. Als uw bestand bijvoorbeeld
-          gecodeerd is als "iso-8859-1" (ook bekend als "latin-1"
-          codering), dan zou de eerste regel van uw bestand er als volgt
-          moeten uitzien
-	</p>
+Vrijwilligers die interesse hebben om meer te weten over het beheer zouden ook kennis moeten hebben 
+van: </p>
 
-        <p class="file">
-	  &lt;?xml version="1.0" encoding="iso-8859-1" ?&gt;
-	</p>
-
-	<p>
-	  Een andere geldige codering is de unicode, of
-          UTF-8 codering. Als u de codering van een file wil
-          veranderen kan u het standaard <em>iconv</em> programma
-          gebruiken, zoals in het volgende voorbeeld (waar we een
-          bestand van "latin1" codering naar "utf-8" codering
-          omzetten):
-	</p>
-
-        <p class="terminal">
-	  iconv -f LATIN1 -t UTF8 <em>inputfile</em>
-          &gt; <em>outputfile</em>
-	</p></li>
-    </ul>
-
-    <p>
-      Probeer afspraken te maken met andere mensen die toegang hebben
-      tot het SVN-archief, zodat bijdragen van mensen zonder deze
-      toegang eventueel na proeflezen aan het kunnen toegevoegd
-      worden. Controleer de files, zoals u met uw eigen files zou
-      doen, voor u ze toevoegt.
-    </p>
+        <ul>
+          <li>
+            <a href="http://www.perl.org/">Perl</a> – voor het beheer en de scripts om pagina's te maken
+          </li>
+          <li>
+            <a href="http://www.apache.org/">Apache</a> – de webserver
+          </li>
+        </ul>
 
 
-    <h2>Extra informatie</h2>
+        <h2 id="Understanding">Begrijpen hoe de webpagina's worden opgebouwd</h2>
 
-    <p>
-      Aangezien de webpagina's van de FSFE een Europees/globaal deel
-      hebben, maar ook een door de gebruikers bepaald lokaal deel, met
-      informatie op landen-niveau, heeft de structuur van de CVS een
-      zekere complexiteit die volledig verborgen wordt voor de
-      gebruiker van de website.
-    </p>
+        <p>
+De webpagina's van <var>fsfe.org</var> worden beheerd als een verzameling XML-bestanden. 
+De webserver genereert de HTML-pagina's automatisch iedere tien minuten uit deze XML-bestanden. 
+Daarom vinden alle bewerkingen van de pagina's plaats in de XML-bestanden en wordt de HTML nooit 
+direct bewerkt.
+        </p>
 
-    <p>
-      Tenzij u alleen pagina's wil vertalen, kan u best de pagina
-      <a href="Webpage-Structure.txt" target="_blank">structural
-        reference</a> eens doornemen.
-    </p>
+        <p>
+Iedere pagina op fsfe.org heeft als naam
+          <var><em>paginanaam</em>.<em>taal</em>.html</var>
+          (<em>taal</em> is de tweeletterige <a href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO-639
+          code</a> van de taal, zoals "en" voor Engels of "de" voor Duits).
+          De bronbestanden hebben als naam
+          <var><em>paginanaam</em>.<em>taal</em>.xhtml</var>.
+        </p>
 
-    <p>
-      Er is ook een <a href="http://www.texinfo.org"
-      target="_blank">Texinfo</a> documentatiebestand
-      <em><a href="/README.texi" target="_blank">Webmastering FSF
-      Europe</a></em> geschreven
-      door <a href="mailto:oberg@fsfeurope.org">Jonas Öberg</a>, die
-      ook de implementatie schreef voor het automatisch genereren van
-      de html-pagina's. U kan deze tekst best lezen, zo zal u beter
-      begrijpen hoe u met de webpagina's moet werken.
-    </p>
+        <p>
+Sommige pagina's hebben een dynamisch deel: buiten de vaste teksten uit 
+het XHTML-bestand bevatten zij informatie uit een of verschillende XML-bestanden. 
+Als zo'n pagina word opgebouwd neemt het systeem het vertaalde XML-bestand als het 
+beschikbaar is, en valt het terug op de Engelse versie van die XML-bestanden die nog 
+niet zijn vertaald. Op die manier kunnen zulke pagina's zijn opgebouwd uit delen waarvan 
+de tekst is vertaald en andere delen die nog steeds in het Engels zijn. Voorbeelden van 
+zulke pagina's zijn de <a href="/">startpagina</a>, de
+          <a href="/news/">nieuwspagina</a> en de <a href="/events/">evenementenpagina</a>.
+        </p>
+
+
+        <h2 id="Getting">Toegang krijgen tot de webpagina's</h2>
+
+        <p>
+De bronbestanden voor de webpagina's zijn opgeslagen op de <a href="https://trac.fsfe.org/fsfe-web/browser">fsfe-web subversion
+          repository</a> die gehost word op de FSFE subversionserver.  Andere diensten zijn 
+beschikbaar op de verwante <a href="https://trac.fsfe.org/fsfe-web">trac instance</a>.
+        </p>
+
+        <p>
+Om toegang tot deze diensten te krijgen hoeft u alleen deze instructies te volgen:
+        </p>
+
+        <ul>
+          <li>
+            <p>
+              Als u een <a href="http://fellowship.fsfe.org">Fellow van de FSFE</a> bent 
+dan heeft u al leestoegang tot subversion en trac. Log in met uw gewone Fellowship-gebruikersnaam 
+en wachtwoord.
+</p>
+          </li>
+
+          <li>
+            <p>
+Iedereen kan een gastaccount registreren voor subversion en trac door gebruik te maken van het 
+webformulier op <a href="https://trac.fsfe.org/fsfe-web/register">https://trac.fsfe.org/fsfe-web/register</a>.
+Meteen als u zich registreert heeft u leestoegang tot de subversion repository en kan u inloggen op de 
+trac-site (let alstublieft op dat een <var>guest-</var> voorvoegsel aan de door u gekozen gebruikersnaam 
+zal worden toegevoegd).
+            </p>
+          </li>
+        </ul>
+
+        <p>
+Om schrijftoegang op de subversion repository, de trac wiki en het ticket system te verkrijgen 
+schrijft u gewoon aan 
+          <a href="mailto:system-hackers@fsfeurope.org">system-hackers@fsfeurope.org</a>
+        </p>
+
+
+        <h3 id="Checking">Een SVN-tak vinden om aan te werken</h3>
+        
+        <p>
+De subversion repository heeft twee hoofdbases met code voor de FSFE-website: 
+de <a href="https://trac.fsfe.org/fsfe-web/browser/trunk">SVN
+            <em>trunk</em></a> ("basis"), die wordt gebruikt om de productie-instance van te website 
+te bouwen op <a href="http://fsfe.org/">http://fsfe.org/</a> en
+          de <a href="https://trac.fsfe.org/fsfe-web/browser/branches/test"><em>test</em>
+            tak</a>, die gebruikt wordt om <a href="http://test.fsfe.org/">http://test.fsfe.org/</a> te bouwen.
+        </p>
+
+        <p>
+Voor dagelijks werk, zoals het toevoegen van nieuwsberichten, het vertalen van pagina's 
+(of zelfs het ontwikkelen van kleine veranderingen aan de website) zou u de SVN-basis 
+moeten bekijken:
+        </p>
+
+        <pre class="term"><code>svn --gebruikersnaam <var>UW_FELLOWSHIP_NAAM</var> co https://svn.fsfe.org/fsfe-web/trunk</code></pre>
+
+        <p>
+Om aan belangrijke veranderingen aan de website te werken, zoals het debuggen van 
+nieuwe dingen die mogelijk de site zouden kunnen breken, wordt u aangemoedigd om 
+te kijken naar de <em>test</em>-tak van de SVN repository:
+        </p>
+
+        <pre class="term"><code>svn --gebruikersnaam <var>UW_FELLOWSHIP_NAAM</var> co https://svn.fsfe.org/fsfe-web/branches/test</code></pre>
+
+        <p>
+Let alstublieft op dat een volledig werkende kopie ongeveer 160 MB nodig heeft; 
+als u van plan bent om aan een deel van de website te werken dan kan u kijken naar 
+alleen de mappen waarin u interesse heeft. U kan 
+<a href="https://trac.fsfe.org/fsfe-web/browser">de SVN-tak</a> online doorzoeken om uit te vinden waarin u geïnteresseerd bent.
+        </p>
+        
+        <p>
+          Om de Document Vrijheidsdag SVN te bekijken gebruikt u:
+        </p>
+        
+        <pre class="term"><code>svn --gebruikersnaam <var>UW_FELLOWSHIP_NAAM</var> co https://svn.fsfe.org/df-web/trunk</code></pre>
+
+        <h2 id="Working">Werken met de repository</h2>
+
+        <p>In subversion moet <a href="http://svnbook.red-bean.com/en/1.5/svn.advanced.props.special.keywords.html">keyword
+          substitution</a> ("trefwoord vervangen") expliciet op ieder bestand zijn toegestaan. 
+Omdat we enkele trefwoorden gebruiken op <var>.xml</var> en <var>.xhtml</var>-bestanden (voor
+bijvoorbeeld het <var>$</var><var>Author</var><var>$</var>-trefwoord in de voetnoot van de pagina), 
+zou u trefwoorden automatisch moeten toestaan door het toevoegen van het 
+volgende knipsel aan uw <var>~/.subversion/config</var>-bestand:
+        </p>
+
+        <pre class="file">
+    enable-auto-props = yes
+
+    [auto-props]
+    *.xml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xml;svn:eol-style=native
+    *.xhtml = svn:keywords=Date Author Id Revision;svn:mime-type=text/xhtml;svn:eol-style=native
+        </pre>    <p>
+
+          Nadat u de repository voor het eerst hebt bekeken zou u 
+        </p>
+
+        <pre class="term"><code>svn update</code></pre>
+
+        <p>
+          iedere keer moeten uitvoeren voordat u aan een specifiek bestand begint.
+        </p>
+        
+        <p>
+          Als u nieuwe bestanden of mappen toe wil voegen aan de repository dan moet u 
+        </p>
+
+        <pre class="term"><code>svn add <em>filename</em></code></pre>
+
+        <p>
+          uitvoeren. Om trefwoordvervanging voor een nieuw bestand toe te staan, voert u uit:
+        </p>
+
+        <pre class="term"><code>svn propset svn:keywords "Date Author Id Revision" <em>filename</em></code></pre>
+
+        <p>
+          Om uw veranderingen aan de server te posten, ongeacht of het een nieuw bestand is of een 
+wijziging van een bestaand bestand, voert u uit:
+        </p>
+
+        <pre class="term"><code>svn commit <em>filename</em></code></pre>
+
+        <p>
+en uw standaardeditor zal worden geopend om een beschrijving van uw veranderingen mogelijk te maken.
+        </p>
+
+        <p>
+Als u gewend bent om met CVS te werken dan zal u gemakkelijk beginnen te werken met SVN; 
+zoals u heeft opgemerkt zijn de basiscommando's erg vergelijkbaar. Om meer te weten te komen kan 
+u een overzicht van de verschillen tussen CVS en SVN zien op 
+          <a href="http://svnbook.red-bean.com/en/1.5/svn.forcvs.html">Subversion voor
+          CVS-gebruikers</a> en een snelle referentievergelijking tussen CVS en SVN-commando's op
+          <a href="http://svn.apache.org/repos/asf/subversion/trunk/doc/user/cvs-crossover-guide.html">CVS naar SVN overstapgids</a>
+        </p>
+
+        <p>U kan een gedetailleerde handleiding voor SVN vinden op de <a href="http://svnbook.red-bean.com/">Subversion boek</a> pagina
+          (we gebruiken de 1.5-versie van SVN).
+        </p>
+
+
+        <h2 id="Coordination">Coördinatiegereedschappen</h2>
+
+        <p>Het werk op de webpagina's word gecoördineerd op de <a href="http://mail.fsfeurope.org/mailman/listinfo/web">Webmasters e-maillijst</a>.
+        </p>
+
+        <p>
+          De <a href="https://trac.fsfe.org/fsfe-web">fsfe-web trac instance</a>
+          biedt nog meer gereedschap om te helpen bij de coördinatie: een SVN repository webbrowser, 
+een tracksysteem voor uitdagingen en een wiki.
+        </p>
+
+        <p>
+          U kan meer te weten komen over het gebruik van trac op de <a href="https://trac.fsfe.org/fsfe-web/wiki/TracGuide">TracGuide</a> wikipagina.
+        </p>
+
+        <p>
+Als u alle commits bij wil houden die aan de webpaginabronnen worden gedaan, dan kan u zich ook abonneren op de <a href="http://mail.fsfeurope.org/mailman/listinfo/web-cvs-notify">commit
+          notificatie e-maillijst</a> en u zal een e-mail ontvangen voor iedere verandering aan de bronnen.
+        </p>
+
+
+        <h2 id="Responsible">Verantwoord omgaan met schrijftoegang</h2>
+
+        <p>
+          Als u schrijftoegang hebt tot de webpagina's, abonneert u zich dan alstublieft op de <a href="http://mail.fsfeurope.org/mailman/listinfo/web">Webmasters e-maillijst</a>.
+        </p>
+
+        <p>
+Ben er alstublieft van bewust dat al uw veranderingen automatisch tot stand komen en zichtbaar worden, 
+zonder enige verdere actie van wie dan ook. Daarom zij er enkele dingen die we aan u zouden willen vragen 
+om te doen als u veranderingen aanbrengt of nieuwe bestanden toevoegt:
+        </p>
+
+        <ul>
+          <li>
+            <p>
+De FSFE word verantwoordelijk gehouden voor de inhoud van de webpagina's. 
+Breng alstublieft geen wijzigingen aan die de betekenis van de tekst veranderen zonder 
+dat u toestemming heeft van een <a href="/about/members.html">lid van het kernteam van 
+de FSFE</a> (dit is niet noodzakelijk voor vertalingen van al bestaande inhoud).
+            </p>
+          </li>
+
+          <li>
+
+            <p>
+Als u vertalingen post en er bestaat een kans dat anderen ze kunnen proeflezen, gebruik 
+die kans dan. U kan op de <a href="http://mail.fsfeurope.org/mailman/listinfo/translators">Vertalers e-maillijst </a> vragen of iemand wil proeflezen. Of u nu bestanden vertaalt of ze proefleest, u word aangemoedigd om 
+de spelling van bestanden te controleren met automatisch gereedschap, zoals GNU aspell, ispell of uw 
+favoriete spellingscontrole. Om bijvoorbeeld <a href="http://aspell.net/">GNU aspell</a> te gebruiken op Debian GNU/Linux installeert u gewoon de pakketten <em>aspell</em> en
+              <em>aspell-<strong>XX</strong></em> (waar "XX" uw taalcode is), en voer dan het volgende commando uit:          </p>
+
+            <pre class="term"><code>aspell -H -d <em>taal</em> -c file.xhtml</code></pre>
+
+            <p>
+              waar "taal" de naam van het woordenboek van uw taal is; de 
+              <var>-d</var> optie kan u overslaan als uw UNIX-taalinstelling dezelfde is als de taal van het woordenboek.
+            </p>
+
+          </li>
+
+          <li>
+
+            <p>
+Verzeker uzelf ervan dat alle bestanden juist XML zijn. De SVN-server controleert 
+standaard de XML-syntax van bestanden met .xml- en .xhtml-extensies en zal 
+u verbieden iets te plaatsen als er XML-fouten worden gevonden. Om dit te vermijden 
+kan u uw bestanden vooraf controleren op een van de volgende manieren:
+            </p>
+            <p>
+              Er is een script genaamd
+              <var>/trunk/tools/validate.pl</var> die helpt fouten te vinden in de opmaak. 
+Onjuist XML breekt automatisch het bouwproces van webpagina's en blokkeert updates 
+voor de gehele FSFE-website. Als u vermoed dat het bouwproces is gebroken dan kan u 
+<a href="http://status.fsfe.org/">de log bekijken van de laatstgebouwde versie</a> op onze <a href="http://status.fsfe.org/">statuspagina's</a>.
+            </p>
+
+            <p>
+              Het <var>validate.pl</var>-script vereist de <em>XML::LibXML</em>
+              Perl-module; als dit niet is geïnstalleerd op uw systeem dan kan u bestanden valideren 
+met uw favoriete XML-validatieprogramma. U kan bijvoorbeeld op de commandoregel het <em>xmllint</em>-gereedschap gebruiken van het <a href="http://xmlsoft.org/"><em>libxml2</em>-project</a>.
+            </p>
+           
+            <p>
+Als u de GNU/Linux Debian-distributie gebruikt, installeert u dan het <em>libxml2-utils</em>-pakket; 
+voer het volgende commando in:
+            </p>
+
+            <pre class="term"><code>xmllint --noout <em>bestand</em>.xhtml</code></pre>
+
+            <p>
+              waar <em>bestand</em> het bestand specificeert dat u wil controleren, en kijk naar mogelijke 
+foutmeldingen.
+            </p>
+
+          </li>
+          
+          <li>
+
+            <p>
+Verzeker uzelf ervan dat de codering van het bestand consistent is met de inhoud 
+van de "encoding"-attribuutverklaring in de eerste regel van het bestand. Als uw bestand 
+bijvoorbeeld de codering "UTF-8" heeft dan zou de eerste regel van het bestand moeten 
+zijn:      </p>
+
+            <pre class="file">&lt;?xml version="1.0" encoding="UTF-8" ?&gt;</pre>
+
+            <p>
+Als u de codering van een bestand wil veranderen dan kan u het standaard <em>iconv</em>-gereedschap 
+gebruiken, zoals in het volgende voorbeeld (dat een bestand omzet van een "latin1"- naar een "UTF-8"-codering):
+            </p>
+
+            <pre class="term"><code>iconv -f LATIN1 -t UTF8 <em>inputfile</em> &gt; <em>outputfile</em></code></pre>
+
+          </li>
+        </ul>
+
+        <p>
+Coördineer alstublieft met andere mensen die ook SVN-commit toegang hebben om er 
+zeker van te zijn dat vertalingen en wijzigingen van mensen zonder committoegang op de 
+juiste wijze op de site worden geplaatst na het proeflezen. Controleert u deze bestanden 
+alstublieft voordat u ze op de site plaatst zoals u uw eigen bestanden controleert.
+        </p>
+        
+        <h2>Broncodelicenties</h2>
+        <p>
+Of u nu serverside programmacode (bijvoorbeeld PHP, Perl) danwel javascriptcode op de website 
+plaatst, verzeker uzelf er dan alstublieft van dat ze overeenkomen met ons licentiebeleid. Dit betekent 
+specifiek:
+        </p>
+          <ul>
+            <li>Als u scripts schrijft namens de FSFE, plaatst u ze dan alstublieft onder <a href="http://www.gnu.org/licenses/agpl.html">AGPLv3+</a> (dat is AGPL 3.0 met de toevoeging "or any later version")</li>
+            <li>Als u scripts aanlevert vanuit derde partijen, verzeker uzelf er dan alstublieft van dat ze zijn voorzien van een Vrije Softwarelicentie die staat op <a href="http://www.gnu.org/licenses/license-list.html">http://www.gnu.org/licenses/license-list.html</a></li>
+        <li>Als u scripts schrijft voor FSFE (maar niet werkzaam bent voor FSFE) dan zouden we er de voorkeur aan geven als het script een van een AGPLv3+, GPLv3+,
+ LGPLv3+, Apache 2.0 of CC0-licentie is voorzien. Het hebben van een Vrije Softwarelicentie is voor FSFE verplicht om het te kunnen gebruiken.</li>
+          </ul>
+        
+        <h2>Gebruik van media met een aangepaste licentie</h2>
+        
+        <p>
+Als u afbeeldingen of andere media gebruikt die zijn voorzien van een Creative 
+Commons- of andere licentie dan kan u er zeker van zijn dat de juiste licentie-informatie 
+word getoond door het volgende toe te voegen aan het eind van het document voor &lt;/html&gt;. 
+Hier zijn drie voorbeelden:
+        </p>
+        
+        <pre class="file">
+
+    &#60;legal type="cc-license"&#62;
+      &#60;license&#62;https://creativecommons.org/licenses/by-sa/3.0/&#60;/license&#62;
+      &#60;notice&#62;This work is published under the Creative Commons BY-SA 3.0 Unported license by John Doe&#60;/notice&#62;
+    &#60;/legal&#62;
+
+
+    &#60;legal&#62;
+      &#60;license&#62;http://www.gnu.org/licenses/fdl-1.3.txt&#60;/license&#62;
+      &#60;notice&#62;This page is published under the GNU Free Documentation License 1.3 or later&#60;/notice&#62;
+    &#60;/legal&#62;
+
+    &#60;legal&#62;
+      &#60;notice&#62;This work is published undere the CC-BY-SA 3.0 Unported license or the &#60;a href="http://artlibre.org/"&#62;Licence Art Libre 1.3&#60;/a&#62; at your option, etc.&#60;/notice&#62;
+    &#60;/legal&#62;
+
+
+        </pre>
+
+        <h2>Andere FSFE websites</h2>
+        
+        <p>
+Vrijwilligers zijn uitgenodigd om naast de fsfe.org-hoofdwebsite ook bij te dragen aan andere FSFE- en 
+Fellowshipwebsites; u kan hierover meer informatie vinden op de  
+          <a href="http://wiki.fsfe.org/FellowshipHacks" target="_blank">FSFE wiki</a>.
+        </p>
+
+    </div>
+    <!--/e-content-->
+
   </body>
+<sidebar promo="about-fsfe">
+    <div id="related-content">
+        <h3>Uitleg:</h3>
+        <ul>
+            <li>
+            <a href="/contribute/web/tagging.html">Gebruik van tags en metadata bij artikelen, een landenpagina opzetten</a>
+            </li>
+            <li>
+            <a href="/contribute/web/css.html">De CSS bewerken met LESS</a>
+            </li>
+            <li>
+            <a href="/contribute/web/campaigns-frontpage.html">Campagnebanners toevoegen en selecteren voor de voorpagina</a>
+            </li>
+            <li>
+            <a href="/contribute/template.html">Een sjabloonartikel om het nieuwe webdesign te gebruiken</a>
+            </li>
+        </ul>
+    </div>
+</sidebar>
+<tags>
+    <tag>webmaster</tag>
+</tags>
+<timestamp>$Datum: 2014-08-11 16:24:52 +0200 (maa, 11 aug 2014) $ $Auteur: paul $</timestamp>
 
-  <timestamp>$Date$ $Author$</timestamp>
+<var>&lt;translator&gt;<em>André Ockers</em>&lt;/translator&gt;</var>
 </html>
 <!--
 Local Variables: ***

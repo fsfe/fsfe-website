@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<readers> <reader priority="50">
+  <name>gv</name>
+  <logo>gv.png</logo>
+  <homepage>http://www.gnu.org/software/gv/</homepage>
+  <license>GPLv3</license>
+  <platform><name>גנו/לינוקס</name><installer>http://ftp.gnu.org/gnu/gv/</installer></platform>
+  <platform><name>מק</name><installer>http://trac.macports.org/browser/trunk/dports/print/gv/Portfile</installer></platform>
+  <language>en</language>
+  <language>fr</language>
+  <language>de</language>
+
+  <description>מציג postscript ו־PDF קליל בעל מנשק xaw3d. ממשיך דרכו של ghostview.</description>
+</reader> </readers>

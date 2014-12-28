@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<readers> <reader priority="70">
+  <name>ePDFView</name>
+  <logo>epdfview.png</logo>
+  <homepage>http://trac.emma-soft.com/epdfview/</homepage>
+  <license>GPLv2</license>
+  <platform><name>גנו/לינוקס</name><installer>http://trac.emma-soft.com/epdfview/wiki/Download</installer></platform>
+  <language>en</language>
+  <language>fr</language>
+  <language>de</language>
+
+  <description>המטרה של ePDFView היא לספק קורא מסמכי PDF פשוט שדומה ל־Evince אך אינו תלוי בספריות של GNOME.</description>
+</reader> </readers>

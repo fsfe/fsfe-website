@@ -1,0 +1,15 @@
+<readers> <reader priority="20">
+  <name>Okular</name>
+  <logo>okular.png</logo>
+  <homepage>http://okular.kde.org/</homepage>
+  <license>GPL</license>
+  <platform><name>גנו/לינוקס</name><installer>http://okular.kde.org/download.php</installer></platform>
+  <platform><name>חלונות</name><installer>http://okular.kde.org/download.php</installer></platform>
+  <language>en</language>
+  <language>fr</language>
+  <language>de</language>
+
+  <description>
+    מציג המסמכים של פרויקט KDE מציג גם odt, doc, postscript ועוד. הוא עובד בשיתוף עם הדפדפנים Konqueror ו־Rekonq.
+  </description>
+</reader> </readers>

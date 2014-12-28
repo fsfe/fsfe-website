@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<readers> <reader priority="30">
+  <name>Xpdf</name>
+  <logo>xpdf.png</logo>
+  <homepage>http://www.foolabs.com/xpdf/</homepage>
+  <license>GPLv2</license>
+  <platform><name>גנו/לינוקס</name></platform>
+  <platform><name>חלונות</name></platform>
+  <language>en</language>
+  <language>fr</language>
+  <language>de</language>
+  
+  <description>מציג PDF קליל ופשוט בעל מנשק motif.</description>
+</reader> </readers>

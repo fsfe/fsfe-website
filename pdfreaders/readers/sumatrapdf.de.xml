@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<readers>
+<reader priority="35">
+  <name>SumatraPDF</name>
+  <logo>sumatrapdf.png</logo>
+  <homepage>http://blog.kowalczyk.info/software/sumatrapdf/free-pdf-reader.html</homepage>
+  <license>GPLv3</license>
+  <platform><name>Windows</name><installer>http://blog.kowalczyk.info/software/sumatrapdf/download-free-pdf-viewer.html</installer></platform>
+  <language>en</language>
+  <description>Ein freier PDF-, E-Book-, XPS-, DjVu-, CHM- und Comic-Betrachter für Windows. SumatraPDF ist leistungsfähig, klein, portabel und startet sehr schnell.</description>
+</reader>
+</readers>

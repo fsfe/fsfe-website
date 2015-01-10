@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<readers> <reader priority="20">
+  <name>PDF.JS</name>
+  <logo>pdf.js.png</logo>
+  <homepage>http://mozilla.github.io/pdf.js/</homepage>
+  <license>Apache 2.0</license>
+  <platform><name>Firefox</name><installer>https://addons.mozilla.org/firefox/addon/pdfjs</installer></platform>
+  <language>ar</language>
+  <language>ca</language>
+  <language>cs</language>
+  <language>da</language>
+  <language>de</language>
+  <language>el</language>
+  <language>en</language>
+  <language>es</language>
+  <language>fi</language>
+  <language>fr</language>
+  <language>he</language>
+  <language>it</language>
+  <language>ja</language>
+  <language>ko</language>
+  <language>lt</language>
+  <language>nl</language>
+  <language>pl</language>
+  <language>pt</language>
+  <language>ro</language>
+  <language>ru</language>
+  <language>sr</language>
+  <language>sv</language>
+  <language>tr</language>
+  <language>vi</language>
+  <language>zh</language>
+
+  <description>PDF.JS ist keine unabhängige Anwendung, um PDFs zu betrachten, sondern ein Plugin, das für verschiedene Webbrowser verfügbar ist. Es kann nützlich sein, wenn man online oder in einer Umgebung, in der man keine vollständige Anwendung installieren kann oder will, mit vielen PDF-Dokumenten arbeitet.</description>
+</reader> </readers>

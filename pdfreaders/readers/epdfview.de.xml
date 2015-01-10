@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<readers> <reader priority="70">
+  <name>ePDFView</name>
+  <logo>epdfview.png</logo>
+  <homepage>http://trac.emma-soft.com/epdfview/</homepage>
+  <license>GPLv2</license>
+  <platform><name>GNU/Linux</name><installer>http://trac.emma-soft.com/epdfview/wiki/Download</installer></platform>
+  <language>en</language>
+  <language>fr</language>
+  <language>de</language>
+
+  <description>Das Ziel von ePDFView ist es, einen einfachen PDF-Betrachter bereitzustellen, ähnlich wie Evince, aber ohne Verwendung der GNOME-Bibliotheken.</description>
+</reader> </readers>

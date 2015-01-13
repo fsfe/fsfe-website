@@ -44,14 +44,13 @@
   </item>
 -->
 
+<!--
   <item type="tshirt" id="tshirt-fsfs-brasil" price="18.00" date="2010-02-10">
     <available size="S"/>
     <available size="XXL"/>
-<!--
     <available size="M"/>
     <available size="L"/>
     <available size="XL"/>
--->
     <image
       small="/order/articles/images/thumbnails/tshirt-fsfs-brasil-front.jpg"
       large="/order/articles/images/tshirt-fsfs-brasil-front.jpg"/>
@@ -62,11 +61,9 @@
 
   <item type="tshirt" id="tshirt-fsfs-blue" price="18.00" date="2010-02-09">
     <available size="S"/>
-<!--
     <available size="M"/>
     <available size="XL"/>
     <available size="XXL"/>
--->
     <image
       small="/order/articles/images/thumbnails/tshirt-fsfs-blue-front.jpg"
       large="/order/articles/images/tshirt-fsfs-blue-front.jpg"/>
@@ -77,12 +74,10 @@
 
   <item type="tshirt" id="tshirt-fsfs-orange" price="18.00" date="2010-02-08">
     <available size="S"/>
-<!--
 	  <available size="M" />
 	  <available size="L" />
     <available size="XL"/>
     <available size="XXL"/>
--->
     <image
       small="/order/articles/images/thumbnails/tshirt-fsfs-orange-front.jpg"
       large="/order/articles/images/tshirt-fsfs-orange-front.jpg"/>
@@ -91,7 +86,6 @@
       large="/order/articles/images/tshirt-fsfs-orange-back.jpg"/>
   </item>
 
-<!--
   <item type="tshirt" id="tshirt-fsfs-red" price="18.00" date="2010-02-07">
     <available size="S"/>
     <available size="XXL"/>
@@ -366,14 +360,12 @@
       large="/order/articles/images/cufflinks-fellowship.jpg"/>
   </item>
 
-<!--
   <item type="other" id="ballpen-green" price="5.00" date="2010-02-08">
     <available size="#"/>
     <image
       small="/order/articles/images/thumbnails/pen-green.png"
       large="/order/articles/images/pen-green.jpg"/>
   </item>
--->
   <item type="other" id="ballpen-blue" price="12.00" date="2010-02-08">
     <available size="#"/>
     <image

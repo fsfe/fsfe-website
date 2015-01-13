@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html>
+  <head>
+    <title>Press Room - FSFE</title>
+    <script>
+
+      /*
+       * Fields that carry values at page load will be emptied if this
+       * is called and the field has not been edited before.
+       */
+      var changedFields = new Array();
+
+      function removeValue(field) {
+        if (!changedFields[field.getAttribute("name")]) {
+          changedFields[field.getAttribute("name")] = true;
+          field.value = "";
+        }
+
+        return false;
+      }
+
+    </script>
+  </head>
+
+  <body class="press" id="press-room">
+    <h1 class="heading">Štampa</h1>
+
+  <div id="introduction">
+
+<p>
+      FSFE smatra da pristup softveru određuje ko može učestvovati u digitalnom društvu. Slobode
+      <a href="/about/basics/freesoftware.html">korišćenja, proučavanja, deljenja  poboljšavanja</a>
+      softvera su neophodne za ravnopravno učešće u dobu informacija. 
+    </p></div>
+
+    <p>
+      Fondacija za slobodni softver Evrope (FSFE) je neprofitna nevladina organizacija aktivna u
+      <a href="/contact/local.html">mnogim evropskim zemljama</a> i uključena u mnoge globalne aktivnosti. Pristup softveru određuje učešće u digitalnom društvu: kako bi se omogućilo ravnopravno učešće u dobu informacija, kao i sloboda konkurencije, FSFE teži i posvećena je širenju slobodnog softvera, definisanog slobodom korišćenja, proučavanja, unapređivanja i umnožavanja. Glavni problemi kojima se ova organizacija osnovana 2001. godine bavi jesu stvaranje svesti o ovim pitanjima, političko i pravno osiguravanje slobodnog softvera i omogućavanje slobode za ljude podržavanjem razvoja slobodnog softvera.
+    </p>
+
+
+    <div class="grid-50-50">
+      <div class="box first">
+        <h2>Primajte na mejl naše izjave za štampu</h2>
+
+        <p>
+          Pretplatom na naše mejling liste možete biti u toku sa najnovijim vestima iz sveta slobodnog softvera.
+        </p>
+
+        <form method="post" action="http://mail.fsfeurope.org/mailman/subscribe/press-release">
+          <p>
+            <input type="text" name="email" value="youremail@example.com" onClick="removeValue(this)"/>
+            <input type="submit" value="Subscribe"/>
+          </p>
+        </form>
+
+        <p>
+          Za trenutna obaveštenja i najnovije vesti takođe nas možete pratiti na sajtovima <a href="http://identi.ca/fsfe">Identi.ca</a> ili <a href="http://twitter.com/fsfe">Twitter</a>.
+        </p>
+      </div>
+
+      <div class="box">
+        <h2><a href="/news/news.html" class="feed">Najnovije vesti</a></h2>
+
+        <dynamic-content/>
+      </div>
+    </div>
+
+
+    <h2>Pitanja</h2>
+
+    <p>
+      Za sva pitanja možete nas kontaktirati direktno na<a href="mailto:press@fsfeurope.org">press@fsfeurope.org</a>, ili poštom
+      na:
+    </p>
+
+    <address>
+      Free Software Foundation Europe e.V.<br/>
+      Schönhauser Allee 6/7<br/>
+      10119 Berlin<br/>
+      Germany
+    </address>
+
+    <p>
+      Telefon: +49-30-27595290
+    </p>
+
+    <p>
+      Za opšta pitanja molimo pogledajte naše
+      <a href="/contact/contact.html">kontakt informacije</a>.
+    </p>
+
+
+    <h2 id="subpages" class="show-heading">Izvori</h2>
+
+    <ul>
+      <li>
+        <h3><a href="/about/graphics/graphics.html">Logo i grafika</a></h3>
+        <p>
+          Preuzmite naš logo i ostalu grafiku.
+        </p>
+      </li>
+
+      <!--
+        We should have a link to a subset of people on our people page who can
+        give official press statements
+      -->
+
+      <li>
+        <h3><a href="/freesoftware/freesoftware.html">Osnove slobodnog softvera</a></h3>
+        <p>
+          Naučite razliku između slobodnog softvera, otvorenih izvora i Libre softvera.
+        </p>
+      </li>
+    </ul>
+  </body>
+
+  <timestamp>10-01-23 17:58:15 +0100 (Sam, 23. Jän 2010) $ $Author: mk $</timestamp>
+ <translator>Marija Šaban</translator>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

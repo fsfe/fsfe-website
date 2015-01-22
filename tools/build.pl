@@ -75,6 +75,7 @@ our %languages = (
   hu => 'Magyar',
   it => 'Italiano',
   ku => 'Kurd&#238;',
+  lv => 'Latviešu',
   mk => 'M&#1072;&#1082;&#1077;&#1076;&#1086;&#1085;&#1089;&#1082;&#1080;',
   nb => 'Norsk&nbsp;(bokm&aring;l)',
   nl => 'Nederlands',

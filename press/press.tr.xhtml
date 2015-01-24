@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<html>
+  <head>
+    <title>Basın Odası - FSFE</title>
+    <script>
+
+      /*
+       * Fields that carry values at page load will be emptied if this
+       * is called and the field has not been edited before.
+       */
+      var changedFields = new Array();
+
+      function removeValue(field) {
+        if (!changedFields[field.getAttribute("name")]) {
+          changedFields[field.getAttribute("name")] = true;
+          field.value = "";
+        }
+
+        return false;
+      }
+
+    </script>
+  </head>
+
+  <body class="press" id="press-room">
+    <h1 class="heading">Basın</h1>
+
+  <div id="introduction">
+
+  <!-- for the following two paragraphs, please have a look at http://fsfe.org/about/mission -->
+
+    <p>Avrupa Özgür Yazılım Vakfı, kullanıcıları, teknolojiyi denetimleri altında tutmaları yönünde güçlendiren bir vakıftır. Yazılım, yaşamımızın bütün boyutlarını derinliğine kuşatmış durumda. Bu teknolojinin bizi kısıtlamaktan ziyade güçlendirmesi önemlidir. Özgür Yazılım herkese yazılımı kullanma, anlama, uyarlama ve paylaşma hakkını verir. Bu haklar ifade özgürlüğü, basın özgürlüğü ve mahremiyet gibi diğer özgürlükleri desteklemekte yardımcı olur.</p>
+
+  </div>
+
+  <p>Avrupa Özgür Yazılım Vakfı bireylere ve örgütlere Özgür Yazılımın özgürlük, şeffaflık ve özerklik açısından nasıl katkı sağladığını anlama konusunda yardımcı olur, Özgür Yazılımı benimsemenin önündeki engelleri yıkarak kullanıcıların haklarını geliştirir, insanları Özgür Yazılım kullanma ve geliştirme konusunda teşvik eder ve Avrupa çapında Özgür Yazılım'ı daha fazla tanıtmak üzere herkese olanak sunmak için kaynaklar sağlar.</p>
+
+    <div class="grid-50-50">
+      <div class="box first">
+        <h2>Basın Bültenlerimizi Alın</h2>
+
+        <p>
+	Haber akışlarımıza veya posta listelerimize abone olarak
+        Özgür Yazılım dünyasındaki en güncel haberlere ulaşabilirsiniz.
+        </p>
+
+        <form method="post" action="http://mail.fsfeurope.org/mailman/subscribe/press-release">
+          <p>
+            <input type="text" name="email" value="youremail@example.com" onClick="removeValue(this)" />
+            <input type="submit" value="Abone Ol" />
+          </p>
+        </form>
+
+        <p>
+          Anlık güncelleme ve sıcak haberler için ayrıca bizi <a
+            href="http://identi.ca/fsfe">Identi.ca</a> veya <a
+            href="http://twitter.com/fsfe">Twitter</a>'da takip edebilirsiniz.
+        </p>
+      </div>
+
+      <div class="box">
+        <h2><a href="/news/news.html" class="feed">En son haberler</a></h2>
+
+        <dynamic-content />
+      </div>
+    </div>
+
+
+    <h2>Sorular</h2>
+
+    <p>
+      Lütfen sorularınızı e-posta olarak <a
+        href="mailto:press@fsfeurope.org">press@fsfeurope.org</a> adresine, veya posta ile şu adrese gönderin:
+    </p>
+
+    <address>
+      Free Software Foundation Europe e.V.<br />
+      Schönhauser Allee 6/7<br />
+      10119 Berlin<br />
+      Germany
+    </address>
+
+    <p>
+      Telefon: +49-30-27595290
+    </p>
+
+    <p>
+      Genel sorular için lütfen <a href="/contact/contact.html">iletişim bilgisine</a> bakınız.
+    </p>
+
+
+    <h2 id="subpages" class="show-heading">Kaynaklar</h2>
+
+    <ul>
+      <li>
+        <h3><a href="/about/graphics/graphics.html">Logo and Grafikler</a></h3>
+        <p>
+          Logo ve diğer grafiklerimizi indirin.
+        </p>
+      </li>
+
+      <!--
+        We should have a link to a subset of people on our people page who can
+        give official press statements
+      -->
+
+      <li>
+        <h3><a href="/freesoftware/freesoftware.html">Özgür Yazılım Temelleri</a></h3>
+        <p>
+          Özgür Yazılım, Açık Kaynak ve Libre Yazılım arasındaki farkları öğrenin.
+        </p>
+      </li>
+    </ul>
+  </body>
+
+  <timestamp>15-01-24 08:47:15 +0100 (tekrei, 24 Jan 2015) $ $Author: tekrei $</timestamp>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

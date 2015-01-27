@@ -54,6 +54,58 @@
         </xsl:element>
         <!-- / Description -->
         
+        <!-- Details -->
+        <xsl:element name="p">
+          <xsl:attribute name="class">right grid-70</xsl:attribute>
+          
+          <!-- Type -->
+          <xsl:element name="strong">
+            <xsl:text>Type: </xsl:text>
+          </xsl:element>
+          <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/type" />
+          <xsl:element name="br"></xsl:element>
+        
+          <!-- Size -->
+          <xsl:element name="strong">
+            <xsl:text>Size: </xsl:text>
+          </xsl:element>
+          <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/size" />
+          <xsl:element name="br"></xsl:element>
+          
+          <!-- Available formats to download -->
+          <xsl:element name="strong">
+            <xsl:text>Available formats (to download): </xsl:text>
+          </xsl:element>
+          <xsl:element name="br"></xsl:element>
+          <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/download" />
+          <xsl:element name="br"></xsl:element>
+          
+          <!-- Available languages to download -->
+          <xsl:element name="strong">
+            <xsl:text>Available languages (to download): </xsl:text>
+          </xsl:element>
+          <xsl:element name="br"></xsl:element>
+          <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/languages" />
+          <xsl:element name="br"></xsl:element>
+          
+          <!-- Printed versions (order) -->
+          <xsl:element name="strong">
+            <xsl:text>Printed versions (order): </xsl:text>
+          </xsl:element>
+          <xsl:element name="br"></xsl:element>
+          <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/printed" />
+          <xsl:element name="br"></xsl:element>
+          
+          <!-- License -->
+          <xsl:element name="strong">
+            <xsl:text>License: </xsl:text>
+          </xsl:element>
+          <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/license" />
+          <xsl:element name="br"></xsl:element>
+        
+        </xsl:element>
+        <!-- / Details -->
+        
         
       </xsl:for-each>
     </xsl:element>

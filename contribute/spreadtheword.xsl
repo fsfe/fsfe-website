@@ -27,28 +27,30 @@
         <!-- / Name -->
         
         <!-- Image -->
-        <xsl:element name="a">
-          <xsl:attribute name="href">
-            <xsl:value-of select="@imglarge" />
-          </xsl:attribute>
-          <xsl:attribute name="title">
-            <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/name" />
-          </xsl:attribute>
-          
-          <xsl:element name="img">
-            <xsl:attribute name="class">left grid-30</xsl:attribute>
-            <xsl:attribute name="src">
-              <xsl:value-of select="@imgsmall" />
+        <xsl:for-each select="image">
+          <xsl:element name="a">
+            <xsl:attribute name="href">
+              <xsl:value-of select="@imglarge" />
             </xsl:attribute>
+            <xsl:attribute name="title">
+              <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/name" />
+            </xsl:attribute>
+          
+            <xsl:element name="img">
+              <xsl:attribute name="class">left grid-30</xsl:attribute>
+              <xsl:attribute name="src">
+                <xsl:value-of select="@imgsmall" />
+              </xsl:attribute>
+            </xsl:element>
           </xsl:element>
-        </xsl:element>
+        </xsl:for-each>
         <!-- /Image -->
         
         <!-- Description -->
         <xsl:element name="p">
           <xsl:attribute name="class">right grid-70</xsl:attribute>
           <xsl:attribute name="style">margin-top:0;</xsl:attribute>
-          <xsl:value-of select="@description" />
+          <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/description" />
         </xsl:element>
         <!-- / Description -->
         

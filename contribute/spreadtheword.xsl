@@ -59,7 +59,7 @@
           <xsl:attribute name="class">right grid-70</xsl:attribute>
           
           <!-- Type -->
-          <xsl:if test="type != ''">
+          <xsl:if test="/buildinfo/document/set/info[@id=$id]/type != ''">
             <xsl:element name="strong">
               <xsl:text>Type: </xsl:text>
             </xsl:element>
@@ -82,7 +82,7 @@
               <xsl:text>Available formats (to download): </xsl:text>
             </xsl:element>
             <xsl:element name="br"></xsl:element>
-            <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/download" />
+            <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/download" />
             <xsl:element name="br"></xsl:element>
           </xsl:if>
           
@@ -91,7 +91,7 @@
             <xsl:text>Available languages (to download): </xsl:text>
           </xsl:element>
           <xsl:element name="br"></xsl:element>
-          <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/languages" />
+          <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/languages" />
           <xsl:element name="br"></xsl:element>
           
           <!-- Printed versions (order) -->
@@ -99,14 +99,14 @@
             <xsl:text>Printed versions (order): </xsl:text>
           </xsl:element>
           <xsl:element name="br"></xsl:element>
-          <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/printed" />
+          <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/printed" />
           <xsl:element name="br"></xsl:element>
           
           <!-- License -->
           <xsl:element name="strong">
             <xsl:text>License: </xsl:text>
           </xsl:element>
-          <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/license" />
+          <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/license" />
           <xsl:element name="br"></xsl:element>
         
         </xsl:element>

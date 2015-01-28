@@ -50,7 +50,7 @@
         <xsl:element name="p">
           <xsl:attribute name="class">right grid-70</xsl:attribute>
           <xsl:attribute name="style">margin-top:0;</xsl:attribute>
-          <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/description" />
+          <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/description" />
         </xsl:element>
         <!-- / Description -->
         
@@ -59,26 +59,32 @@
           <xsl:attribute name="class">right grid-70</xsl:attribute>
           
           <!-- Type -->
-          <xsl:element name="strong">
-            <xsl:text>Type: </xsl:text>
-          </xsl:element>
-          <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/type" />
-          <xsl:element name="br"></xsl:element>
+          <xsl:if test="type != ''">
+            <xsl:element name="strong">
+              <xsl:text>Type: </xsl:text>
+            </xsl:element>
+            <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/type" />
+            <xsl:element name="br"></xsl:element>
+          </xsl:if>
         
           <!-- Size -->
-          <xsl:element name="strong">
-            <xsl:text>Size: </xsl:text>
-          </xsl:element>
-          <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/size" />
-          <xsl:element name="br"></xsl:element>
+          <xsl:if test="size != ''">
+            <xsl:element name="strong">
+              <xsl:text>Size: </xsl:text>
+            </xsl:element>
+            <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/size" />
+            <xsl:element name="br"></xsl:element>
+          </xsl:if>
           
           <!-- Available formats to download -->
-          <xsl:element name="strong">
-            <xsl:text>Available formats (to download): </xsl:text>
-          </xsl:element>
-          <xsl:element name="br"></xsl:element>
-          <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/download" />
-          <xsl:element name="br"></xsl:element>
+          <xsl:if test="download != ''">
+            <xsl:element name="strong">
+              <xsl:text>Available formats (to download): </xsl:text>
+            </xsl:element>
+            <xsl:element name="br"></xsl:element>
+            <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/download" />
+            <xsl:element name="br"></xsl:element>
+          </xsl:if>
           
           <!-- Available languages to download -->
           <xsl:element name="strong">

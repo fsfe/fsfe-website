@@ -61,7 +61,8 @@
           <!-- Type -->
           <xsl:if test="/buildinfo/document/set/info[@id=$id]/type != ''">
             <xsl:element name="strong">
-              <xsl:text>Type: </xsl:text>
+              <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/type/@content" />
+              <xsl:text> </xsl:text>
             </xsl:element>
             <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/type" />
             <xsl:element name="br"></xsl:element>

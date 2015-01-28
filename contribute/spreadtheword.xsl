@@ -60,14 +60,12 @@
           
           <!-- Type -->
           <xsl:if test="/buildinfo/document/set/info[@id=$id]/type != ''">
-            <xsl:template match="type">
-              <xsl:element name="strong">
-                <xsl:value-of select="@content" />
-                <xsl:text> </xsl:text>
-              </xsl:element>
-              <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/type" />
-              <xsl:element name="br"></xsl:element>
-            </xsl:template>
+            <xsl:element name="strong">
+              <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/type/@content" />
+              <xsl:text> </xsl:text>
+            </xsl:element>
+            <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/type" />
+            <xsl:element name="br"></xsl:element>
           </xsl:if>
         
           <!-- Size -->

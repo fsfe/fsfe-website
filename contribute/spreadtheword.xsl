@@ -8,12 +8,12 @@
   <xsl:template match="dynamic-content">
     <xsl:variable name="type"><xsl:value-of select="@type"/></xsl:variable>
 
-    <!-- Full Item -->
-    <xsl:element name="div">
-      <xsl:attribute name="class">left break margin-vertical</xsl:attribute>
-
-      <xsl:for-each select="/buildinfo/document/set/item [@type = $type]">
-        <xsl:sort select="@order" order="descending"/>
+    <xsl:for-each select="/buildinfo/document/set/item [@type = $type]">
+      <xsl:sort select="@order" order="ascending"/>
+      
+      <!-- Full Item -->
+      <xsl:element name="div">
+        <xsl:attribute name="class">left break margin-vertical</xsl:attribute>
         
         <xsl:variable name="id"><xsl:value-of select="@id"/></xsl:variable>
 
@@ -118,10 +118,10 @@
         </xsl:element>
         <!-- / Details -->
         
+      </xsl:element>
+      <!-- / Full Item -->
         
-      </xsl:for-each>
-    </xsl:element>
-    <!-- / Full Item -->
+    </xsl:for-each>
     
   </xsl:template>
 

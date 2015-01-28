@@ -63,51 +63,57 @@
             <xsl:element name="strong">
               <xsl:text>Type: </xsl:text>
             </xsl:element>
-            <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/type" />
+            <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/type" />
             <xsl:element name="br"></xsl:element>
           </xsl:if>
         
           <!-- Size -->
-          <xsl:if test="size != ''">
+          <xsl:if test="/buildinfo/document/set/info[@id=$id]/size != ''">
             <xsl:element name="strong">
               <xsl:text>Size: </xsl:text>
             </xsl:element>
-            <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/size" />
+            <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/size" />
             <xsl:element name="br"></xsl:element>
           </xsl:if>
           
           <!-- Available formats to download -->
-          <xsl:if test="download != ''">
+          <xsl:if test="/buildinfo/document/set/info[@id=$id]/formats != ''">
             <xsl:element name="strong">
               <xsl:text>Available formats (to download): </xsl:text>
             </xsl:element>
             <xsl:element name="br"></xsl:element>
-            <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/download" />
+            <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/formats" />
             <xsl:element name="br"></xsl:element>
           </xsl:if>
           
           <!-- Available languages to download -->
-          <xsl:element name="strong">
-            <xsl:text>Available languages (to download): </xsl:text>
-          </xsl:element>
-          <xsl:element name="br"></xsl:element>
-          <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/languages" />
-          <xsl:element name="br"></xsl:element>
+          <xsl:if test="/buildinfo/document/set/info[@id=$id]/languages != ''">
+            <xsl:element name="strong">
+              <xsl:text>Available languages (to download): </xsl:text>
+            </xsl:element>
+            <xsl:element name="br"></xsl:element>
+            <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/languages" />
+            <xsl:element name="br"></xsl:element>
+          </xsl:if>
           
           <!-- Printed versions (order) -->
-          <xsl:element name="strong">
-            <xsl:text>Printed versions (order): </xsl:text>
-          </xsl:element>
-          <xsl:element name="br"></xsl:element>
-          <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/printed" />
-          <xsl:element name="br"></xsl:element>
+          <xsl:if test="/buildinfo/document/set/info[@id=$id]/printed != ''">
+            <xsl:element name="strong">
+              <xsl:text>Printed versions (order): </xsl:text>
+            </xsl:element>
+            <xsl:element name="br"></xsl:element>
+            <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/printed" />
+            <xsl:element name="br"></xsl:element>
+          </xsl:if>
           
           <!-- License -->
-          <xsl:element name="strong">
-            <xsl:text>License: </xsl:text>
-          </xsl:element>
-          <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/license" />
-          <xsl:element name="br"></xsl:element>
+          <xsl:if test="/buildinfo/document/set/info[@id=$id]/license != ''">
+            <xsl:element name="strong">
+              <xsl:text>License: </xsl:text>
+            </xsl:element>
+            <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/license" />
+            <xsl:element name="br"></xsl:element>
+          </xsl:if>
         
         </xsl:element>
         <!-- / Details -->

@@ -4,448 +4,768 @@
 
 <!-- ALL STATIC TEXTS -->
 
-
-<!-- Basic texts -->
-<!-- !! MISSING TRANSLATION --> <text id="fsfeurope">Free Software Foundation Europe</text>
-<text id="fsfnetwork">
-    La FSFE tiene <a href="/about/fsfnetwork.html">organizaciones hermanas</a> en <a href="//www.fsf.org/">América del Norte</a>, <a href="http://fsf.org.in/">India</a> y <a href="http://www.fsfla.org/">América Latina</a>.
+  <!-- Basic texts -->
+ <text id="fsfeurope">Fundación del Software Libre de Europa</text>
+  <text id="fsfnetwork">
+    La FSFE tiene <a href="/about/fsfnetwork.html">organizaciones hermanas</a> en <a
+      href="http://www.fsf.org/">América del Norte</a>, <a
+      href="http://www.fsf.org.in/">India</a> y <a
+      href="http://www.fsfla.org/">América Latina</a>.
   </text>
 
 
-<!-- Footer -->
-<text id="lastchanged"> Última actualización: </text>
-<text id="translator1a">Agradecemos a </text>
-<text id="translator1b"> la traducción de esta página. </text>
-<text id="translator2">Ésta es una traducción no oficial. </text>
-<text id="translator3a">También puede consultar el </text>
-<text id="translator3b">texto original</text>
-<text id="translator3c">.</text>
-<text id="permission">
+  <!-- Footer -->
+  <text id="lastchanged"> Última actualización: </text>
+  <text id="translator1a">Agradecemos a </text>
+  <text id="translator1b"> la traducción de esta página. </text>
+  <text id="translator2">Ésta es una traducción no oficial. </text>
+  <text id="translator3a">También puede consultar el </text>
+  <text id="translator3b">texto original</text>
+  <text id="translator3c"> de esta página.</text>
+  <text id="permission">
       Se permite la copia y distribución de este documento completo
       en cualquier medio, siempre que se incluya este aviso.
   </text>
 
 
-<!-- Warning info boxes -->
-<text id="outdated"><strong>Aviso: </strong>
+  <!-- Warning info boxes -->
+  <text id="outdated">
+    <strong>Aviso: </strong>
     Esta página puede estar desactualizada con respecto a la original.
     Por favor, consulte
     <a href="/contribute/contribute.html">esta página</a> para informarse de 
     cómo puede ayudar con las traducciones y hacer otras contribuciones.
   </text>
-<!-- !! MISSING TRANSLATION --> <text id="outdated-1"><strong>Warning: </strong>
-    This page may be out of date with the
+  <text id="outdated-1">
+    <strong>Aviso: </strong>
+    Esta página puede estar desactualizada con respecto a la
   </text>
-<!-- !! MISSING TRANSLATION --> <text id="outdated-2">
-    Please use
-    <a href="/contribute/contribute.html">this page</a> to see how you can help
-    with translations, and other things.
+  <text id="outdated-2">
+    Por favor, consulte
+    <a href="/contribute/contribute.html">esta página</a> para informarse de cómo puede ayudar
+    con traducciones y otros temas.
   </text>
-<text id="notranslation"><strong>Aviso: </strong>
+  <text id="notranslation">
+    <strong>Aviso: </strong>
     Esta página no se ha traducido todavía. Lo que está viendo es
     la versión original de la página. Por favor, consulte
     <a href="/contribute/contribute.html">esta página</a> para informarse de 
     cómo puede ayudar con las traducciones y hacer otras contribuciones.
   </text>
-<!-- !! MISSING TRANSLATION --> <text id="under-construction"><strong>Warning: </strong>This page is under construction. Please <strong>do not spread</strong> or attempt translation as its content is subject to change.
+  <text id="under-construction">
+    <strong>Aviso: </strong>Esta página está en construcción. Por favor <strong>no la difunda</strong> o intente traducirla, pues su contenido está sujeto a cambios.
   </text>
-<!-- !! MISSING TRANSLATION --> <text id="project-complete">This project has been successfully finished. These pages are kept here for archiving purposes.  </text>
+  <text id="project-complete">
+	  Este proyecto ha terminado con éxito. Estas páginas se mantienen a efectos de archivo.
+  </text>
 
 
-<!-- Menu, Navigation, Buttons -->
-<text id="fsfe/about">Acerca de</text>
-<text id="fsfe/projects">Proyectos</text>
-<!-- !! MISSING TRANSLATION --> <text id="fsfe/campaigns">Campaigns</text>
-<text id="fsfe/help">Colabore</text>
-<text id="fsfe/press">Prensa</text>
-<!-- !! MISSING TRANSLATION --> <text id="fsfe/contact">Contact us</text>
-<!-- !! MISSING TRANSLATION --> <text id="support/donate">Donate</text>
-<text id="support/support">Support</text>
-<!-- !! MISSING TRANSLATION --> <text id="support/order">Shop</text>
-<!-- !! MISSING TRANSLATION --> <text id="support/thankgnus">Donors</text>
-<text id="fellowship/fellowship">Join</text>
-<!-- !! MISSING TRANSLATION --> <text id="fellowship/login">Login</text>
-<!-- !! MISSING TRANSLATION --> <text id="fellowship/join">Join</text>
-<!-- !! MISSING TRANSLATION --> <text id="fellowship/card">Card</text>
-<!-- !! MISSING TRANSLATION --> <text id="fellowship/faq">F.A.Q.</text>
-<!-- !! MISSING TRANSLATION --> <text id="campaigns/dfd">Document Freedom Day</text>
-<!-- !! MISSING TRANSLATION --> <text id="campaigns/fya">Free Your Android</text>
-<!-- !! MISSING TRANSLATION --> <text id="campaigns/pdf">PDF readers</text>
-<!-- !! MISSING TRANSLATION --> <text id="campaigns/ayc">Ask your candidates</text>
-<!-- !! MISSING TRANSLATION --> <text id="campaigns/drm">DRM.info</text>
-<!-- !! MISSING TRANSLATION --> <text id="news/news">Latest News</text>
-<!-- !! MISSING TRANSLATION --> <text id="news/events">Upcoming Events</text>
-<!-- !! MISSING TRANSLATION --> <text id="news/press">Press Room</text>
-<!-- !! MISSING TRANSLATION --> <text id="news/nl">Newsletters</text>
-<!-- !! MISSING TRANSLATION --> <text id="news/planet">Planet blogs</text>
-<!-- !! MISSING TRANSLATION --> <text id="ftf/legal">Legal support</text>
-<!-- !! MISSING TRANSLATION --> <text id="ftf/services">Services and Fiduciary</text>
-<!-- !! MISSING TRANSLATION --> <text id="ftf/doc">Documentation</text>
-<!-- !! MISSING TRANSLATION --> <text id="ftf/network">Legal Network</text>
-<!-- !! MISSING TRANSLATION --> <text id="ftf/conference">Conferences</text>
-<!-- !! MISSING TRANSLATION --> <text id="ftf/contact">Contact FSFE Legal Team</text>
-<!-- !! MISSING TRANSLATION --> <text id="fs/fs">Free Software</text>
-<!-- !! MISSING TRANSLATION --> <text id="fs/basics">Free Software Basics</text>
-<!-- !! MISSING TRANSLATION --> <text id="fs/def">Definition</text>
-<!-- !! MISSING TRANSLATION --> <text id="fs/soc">Free Society</text>
-<!-- !! MISSING TRANSLATION --> <text id="fs/edu">Education</text>
-<!-- !! MISSING TRANSLATION --> <text id="fs/buz">Business</text>
-<text id="community/discuss">Discusiones sobre Software Libre</text>
-<!-- !! MISSING TRANSLATION --> <text id="motto-fsfs">Free Software, Free Society!</text>
-<!-- !! MISSING TRANSLATION --> <text id="motto-fellowship">Join FSFE’s community!</text>
-<text id="learn-more">Saber más</text>
-<!-- !! MISSING TRANSLATION --> <text id="press">Press</text>
-<!-- !! MISSING TRANSLATION --> <text id="newsletter">Newsletter</text>
-<!-- !! MISSING TRANSLATION --> <text id="go-to">Go to:</text>
-<text id="search">Buscar</text>
-<text id="submit">Buscar</text>
-<text id="subscribe">Registrarse</text>
-<text id="news">Últimas noticias</text>
-<text id="receive-newsletter">Recibir la newsletter mensual de la FSFE</text>
-<!-- !! MISSING TRANSLATION --> <text id="subscribe-newsletter">Subscribe to the newsletter</text>
-<text id="events">Próximos eventos</text>
-<text id="more">Leer más</text>
-<text id="morenews">Más noticias…</text>
-<text id="moreevents">Más eventos…</text>
-<!-- !! MISSING TRANSLATION --> <text id="contact">Contact</text>
-<!-- !! MISSING TRANSLATION --> <text id="team">Team</text>
-<!-- !! MISSING TRANSLATION --> <text id="microblog">Microblog</text>
-<!-- !! MISSING TRANSLATION --> <text id="no-avatar">No Picture</text>
-<!-- !! MISSING TRANSLATION --> <text id="change-lang">Change language</text>
-<!-- !! MISSING TRANSLATION --> <text id="menu">Menu</text>
-<!-- !! MISSING TRANSLATION --> <text id="content">Content</text>
-<!-- !! MISSING TRANSLATION --> <text id="page-info">Page info</text>
-<!-- !! MISSING TRANSLATION --> <text id="rootpage">Home</text>
-<!-- !! MISSING TRANSLATION --> <text id="sitemap">Sitemap</text>
-<!-- !! MISSING TRANSLATION --> <text id="go-top">Go to the top</text>
-<text id="source">Código fuente</text>
-<text id="contact-us">Contáctenos</text>
-<text id="translate">Traducir esta página?</text>
-<!-- !! MISSING TRANSLATION --> <text id="contribute-web">Contribute to the Web team</text>
-<!-- !! MISSING TRANSLATION --> <text id="imprint">Imprint</text>
-<!-- !! MISSING TRANSLATION --> <text id="privacy-policy">Privacy Policy</text>
+ <!-- Menu, Navigation, Buttons -->
+  <text id="fsfe/about">Acerca de</text>
+  <text id="fsfe/projects">Nuestro trabajo</text>
+  <text id="fsfe/campaigns">Campañas</text>
+  <text id="fsfe/help">Colabore</text>
+  <text id="fsfe/press">Prensa</text>
+  <text id="fsfe/contact">Contactar</text>
+  <text id="support/donate">Donaciones</text>
+  <text id="support/support">Soporte</text>
+  <text id="support/order">Tienda</text>
+  <text id="support/thankgnus">Gracias GNUs</text>
+  <text id="fellowship/fellowship">Fellowship</text>
+  <text id="fellowship/login">Iniciar sesión</text>
+  <text id="fellowship/join">Únase</text>
+  <text id="fellowship/card">Tarjeta</text>
+  <text id="fellowship/faq">F.A.Q.</text>
+  <text id="campaigns/dfd">Día de los Documentos Libres</text>
+  <text id="campaigns/fya">Libera tu Android</text>
+  <text id="campaigns/pdf">Lectores de PDF</text>
+  <text id="campaigns/ayc">Pregunte a sus candidatos</text>
+  <text id="campaigns/drm">DRM.info</text>
+  <text id="news/news">Últimas noticias</text>
+  <text id="news/events">Próximos actos</text>
+  <text id="news/press">Sala de Prensa</text>
+  <text id="news/nl">Boletín de noticias</text>
+  <text id="news/planet">Planeta de blogs</text>
+  <text id="ftf/legal">Soporte legal</text>
+  <text id="ftf/services">Servicios y fiduciarios</text>
+  <text id="ftf/doc">Documentación</text>
+  <text id="ftf/network">Red Legal</text>
+  <text id="ftf/conference">Conferencias</text>
+  <text id="ftf/contact">Contactar con el equipo legal de la FSFE</text>
+  <text id="fs/fs">Software Libre</text>
+  <text id="fs/basics">Lo básico sobre Software Libre</text>
+  <text id="fs/def">Definición</text>
+  <text id="fs/soc">Sociedad Libre</text>
+  <text id="fs/edu">Educación</text>
+  <text id="fs/buz">Empresas</text>
+  <text id="community/discuss">Discusiones sobre Software Libre</text>
+
+  <text id="motto-fsfs">¡Software Libre, Sociedad Libre!</text>
+  <text id="motto-fellowship">¡Únase a la comunidad de la FSFE!</text>
+  <text id="learn-more">Saber más</text>
+  <text id="press">Prensa</text>
+  <text id="newsletter">Boletín de noticias</text>	
+
+  <text id="go-top">Ir al inicio</text>
+  <text id="search">Buscar</text>
+  <text id="submit">Enviar</text>
+  <text id="subscribe">Suscribirse</text>
+  <text id="news">Noticias</text>
+  <text id="receive-newsletter">Suscribirse al boletín de noticias mensual de la FSFE</text>
+  <text id="subscribe-newsletter">Suscribirse al boletín de noticias</text>
+  <text id="events">Actos</text>
+  <text id="more">Ver más</text>
+  <text id="morenews">Ver todas las noticias</text>
+  <text id="moreevents">Ver todos los actos</text>
+  <text id="contact">Contactar</text>
+  <text id="team">Equipo</text>
+  <text id="microblog">Microblog</text>
+  <text id="no-avatar">Sin foto</text>
+
+  <text id="change-lang">Cambiar idioma</text>
+  <text id="menu">Menú</text>
+  <text id="content">Contenido</text>
+  <text id="page-info">Información de la página</text>
+  <text id="rootpage">Inicio</text>
+  <text id="sitemap">Mapa del sitio</text>
+  <text id="go-top">Ir al principio</text>
+  <text id="source">Código fuente</text>
+  <text id="contact-us">Contactar</text>
+  <text id="translate">¿Traducir esta página?</text>
+  <text id="contribute-web">Contribuir al equipo de la web</text>
+  <text id="imprint">Edición</text>
+  <text id="privacy-policy">Política de privacidad</text>
+  <text id="tags">Etiquetas</text>
 
 
-<!-- Article metadata -->
-<text id="author">Autor</text>
-<!-- !! MISSING TRANSLATION --> <text id="writtenby">Written by</text>
-<text id="published">Publicado</text>
-<!-- !! MISSING TRANSLATION --> <text id="revision">updated on</text>
-<text id="download">Bajar</text>
+ <!-- Article metadata -->
+ <text id="author">Autor</text>
+ <text id="writtenby">Redactado&#160;por</text>
+ <text id="published">Publicado</text>
+ <text id="revision">actualizado&#160;el</text>
+ <text id="download">Descargar</text>
+ 
+
+  <!-- Petitions -->
+  <text id="osig">Organizaciones</text>
+  <text id="isig">Individuos</text>
+  <text id="bsig">Empresas</text>
+  
+
+  <!-- Sidebars -->
+  <text id="related-news">Noticias relacionadas</text>
+  <text id="our-work">Nuestro trabajo</text>
+  <text id="our-work-intro"><p>Como organización no gubernamental sin ánimo de lucro,
+la Fundación del Software Libre de Europa trabaja para crear conciencia general y apoyo al 
+Software Libre y los Estándares Abiertos en la política, las empresas, las leyes y la sociedad
+en su conjunto.</p></text>
+  <text id="about-fsfe">Acerca de la FSFE</text>
+  <text id="about-fsfe-intro">
+      <p>
+        La Fundación del Software Libre de Europa se dedica a promocionar el Software Libre
+        y trabajar por la <strong>libertad</strong> en la 
+sociedad digital emergente.
+      </p>
+      <p>
+        El acceso al software determina quién puede participar en una sociedad digital.
+        Las libertades de <a href="/about/basics/freesoftware.en.html">usar, estudiar, compartir
+        y mejorar</a> el software permiten una participación <strong>equitativa</strong>,
+        y son extremadamente importantes.
+      </p>
+  </text>
 
 
-<!-- Petitions -->
-<text id="osig">Organizaciones</text>
-<text id="isig">Individuos</text>
-<!-- !! MISSING TRANSLATION --> <text id="bsig">Businesses</text>
-
-
-<!-- Sidebars -->
-<!-- !! MISSING TRANSLATION --> <text id="related-news">Related News</text>
-<!-- !! MISSING TRANSLATION --> <text id="our-work">Our Work</text>
-<!-- !! MISSING TRANSLATION --> <text id="our-work-intro">
-  <p>As a non-profit, non-governmental organisation, Free Software Foundation 
-    Europe works to create general understanding and support for Free Software 
-    and Open Standards in politics, business, law and society at large.</p>
+  <!-- Motivational texts for fellowship, support or donations -->
+  <text id="join">Únase</text>
+  <text id="join-paragraph">
+<p>Hágase «Fellow» (miembro de la comunidad) de la FSFE 
+para fortalecer nuestro trabajo y ayudar a asegurar nuestra independencia económica. Al
+unirse a la «Fellowship» se hará un miembro sostenedor, donante, de la FSFE - incluyendo
+acceso a nuestra infraestructura.</p>
 </text>
-<!-- !! MISSING TRANSLATION --> <text id="about-fsfe">About FSFE</text>
-<!-- !! MISSING TRANSLATION --> <text id="about-fsfe-intro">
-  <p>
-      Free Software Foundation Europe is dedicated to the furthering of Free 
-      Software and working for <strong>freedom</strong> in the emerging digital 
-      society.
-    </p>
-  <p>
-      Access to software determines who may participate in a digital society.  
-      The freedoms to <a href="/about/basics/freesoftware.html">use, study, 
-      share, and improve</a> software allow <strong>equal</strong> 
-      participation, and are extremely important.
-    </p>
+  <text id="join-fellowship">Únase a la Fellowship</text>
+
+  <text id="support">Apoyar a la FSFE</text>
+  <text id="show-support">¡Muestre su apoyo!</text>
+  <text id="show-support-paragraph">
+	<p>¡La FSFE necesita su apoyo para que se oiga su voz! ¡Cada apoyo cuenta!</p>
+</text>
+  <text id="support-fsfe">¡Yo apoyo a la FSFE!</text>
+
+ <text id="donate">Donar</text>
+  <text id="donate-paragraph"><p>
+        La Fundación del Software Libre de Europa es una organización no gubernamental
+        sin ánimo de lucro. <a href="/work.es.html">Nuestro trabajo</a> es posible
+        gracias a una comunidad de
+        <a href="/contribute/contribute.es.html">voluntarios</a>,
+        <a href="http://fellowship.fsfe.org">Fellows</a> y
+        <a href="thankgnus.es.html">donantes</a>. Sus donaciones son críticas para 
+        nuestra fuerza y autonomía. Nos posibilitan continuar trabajando por el Software
+        Libre donde sea necesario, y ser una voz independiente.
+      </p>
 </text>
 
-
-<!-- Motivational texts for fellowship, support or donations -->
-<text id="join">Únase</text>
-<!-- !! MISSING TRANSLATION --> <text id="join-paragraph">
-  <p>Become a Fellow of the FSFE to empower our work and help to assure our financial independence. By joining the Fellowship you will become a donating, sustaining member of the FSFE - including access to our infrastructure.</p>
-</text>
-<!-- !! MISSING TRANSLATION --> <text id="join-fellowship">Join the Fellowship</text>
-<!-- !! MISSING TRANSLATION --> <text id="support">Support the FSFE</text>
-<!-- !! MISSING TRANSLATION --> <text id="show-support">Show your support!</text>
-<!-- !! MISSING TRANSLATION --> <text id="show-support-paragraph">
-  <p>FSFE needs your support to get its voice heard! Every hit counts!</p>
-</text>
-<!-- !! MISSING TRANSLATION --> <text id="support-fsfe">I support the FSFE!</text>
-<text id="donate">Donaciones</text>
-<!-- !! MISSING TRANSLATION --> <text id="donate-paragraph">
-  <p>
-      The Free Software Foundation Europe is a non-profit non-governmental
-      organisation. <a href="/work.html">Our work</a> is made
-      possible by a community of
-      <a href="/contribute/contribute.html">volunteers</a>,
-      <a href="/fellowship">Fellows</a> and
-      <a href="/donate/thankgnus.html">donors</a>. Your donations are critical to our
-      strength and autonomy. They enable us to continue working for Free
-      Software wherever necessary, and to be an independent voice.
-    </p>
-</text>
 
 
 <!-- ALL CAMPAIGN TEXTS -->
 
-<campaigns>
-  <!-- campaigns to be displayed in a rotating box on frontpage -->
-  <campaign id="freesociety">
-      <text>Free Software, <br />Free Society!</text>
-      <link>/freesoftware/</link>
-  </campaign>
-  <campaign id="dfd">
-    <photo>/graphics/robot-protest-light.png</photo>
-    <text>
-        Celebrating information accessibility and raising awareness of Open Standards.
+  <campaigns>
+  <!-- campaigns to be displayed in a rotating box -->
+    <campaign id="freesociety">
+        <text>¡Software Libre, <br />Sociedad Libre!</text>
+        <link>/freesoftware/</link>
+    </campaign>
+    <campaign id="dfd">
+        <photo>/graphics/robot-protest-light.png</photo>
+        <text>
+        Celebrando la accesibilidad a la información y creando conciencia sobre los Estándares Abiertos.
         </text>
-    <link>//documentfreedom.org</link>
-  </campaign>
-  <campaign id="ilovefs">
-    <text>
-        Show your love for Free Software and thank developers.
+        <link>//documentfreedom.org</link>
+    </campaign>
+
+    <campaign id="ilovefs">
+        <text>
+        Muestre su amor por el Software Libre y dé las gracias a sus desarrolladores.
         </text>
-    <link>/campaigns/ilovefs/ilovefs.html</link>
-  </campaign>
-  <campaign id="zacchiroli" tag="donors" pos="1">
-    <photo>/donate/zacchiroli.jpg</photo>
-    <text>
-        A world without Free Software is a world where we are all hostages of
-        proprietary software vendors that run our lives. To fight such a
-        nightmare scenario we need organisations like Free Software Foundation
-        Europe.
+        <link>/campaigns/ilovefs/ilovefs.html</link>
+    </campaign>
+    <campaign id="zacchiroli" tag="donors" pos="1">
+      <photo>/donate/zacchiroli.jpg</photo>
+      <text>
+Un mundo sin Software Libre es un mundo en el que todos somos cautivos de los
+proveedores del software propietario que gestiona nuestras vidas. Para combatir
+ese escenario de pesadilla, necesitamos organizaciones como la Fundación del Software Libre
+        de Europa.
       </text>
-    <author>Stefano "Zack" Zacchiroli, Former Debian Project Leader</author>
-    <link>/fellowship/index.html</link>
-  </campaign>
-  <campaign id="becomefellow">
-    <photo>/graphics/fellowship/fellowship-page-logo-300x91.png</photo>
-    <text>
-          Become a Fellow of the FSFE to empower our work and help to assure
-          our financial independence! 
+      <author>Stefano "Zack" Zacchiroli, Antiguo Líder del Proyecto Debian</author>
+      <link>/fellowship/index.html</link>
+    </campaign>
+
+    <campaign id="amaelle">
+      <text>
+	El Software Libre nunca ha sido más necesario para periodistas y
+	activistas en todo el mundo. La FSFE ayuda a formar un mundo en el que
+	la tecnología nos fortalece en lugar de oprimirnos.
+      </text>
+      <author>Amaelle Guiton, periodista sobre cultura hacker y privacidad</author>
+      <link>/fellowship/index.html</link>
+      <copyright>Foto de Amaelle por Gregory Fabre @grrr usada con licencia CC BY SA 4.0.</copyright>
+    </campaign>
+
+    <campaign id="becomefellow">
+        <photo>/graphics/fellowship/fellowship-page-logo-300x91.png</photo>
+        <text>
+	¡Hágase «Fellow» (miembro de la comunidad) de la FSFE para fortalecer 
+	nuestro trabajo y ayudar a asegurar nuestra independencia económica!
         </text>
-    <link>/fellowship/</link>
-  </campaign>
-</campaigns>
+      <link>/fellowship/</link>
+    </campaign>
+  
+    <campaign id="appelbaum" tag="donors" pos="2">
+      <photo>/fellowship/graphics/people/jacobappelbaum.png</photo>
+      <text>
+	Creo que las acciones de apoyo a la FSFE son importantes para fortalecer
+	el desarrollo y adopción del Software Libre en Europa y en el resto del mundo.
+	Soy un «Fellow» de la FSFE porque apoyar económicamente la causa del Software 
+	Libre trae mejoras positivas a todas las sociedades del mundo.
+      </text>
+      <author>Jacob Appelbaum - Portavoz del proyecto TOR</author>
+      <link>/fellowship/index.html</link>
+      <copyright>Foto de Jacob Appelbaum por Stephan Röhl (Heinrich-Böll-Stiftung) usada con licencia CC BY SA 2.0.</copyright>
+    </campaign>
+  </campaigns>
+  
 
 
-<!-- ALL QUOTE TEXTS -->
 
-<quotes>
-  <!-- quotes for fellowship page -->
-  <quote id="morris" tag="fellowship">
-    <photo>/fellowship/graphics/people/annamorris.jpg</photo>
-    <text>
-        Free Software challenges you to learn: to do for yourself, to be 
-        fearlessly independent when it comes to your tech. In the past few 
-        years I have taken pride in watching my skill base catchup with and 
-        overtake that of my proprietary-loving peers, even some paid 
-        professionals, simply by having a free and curious mindset. Free 
-        Software frees you in many ways.
+<!-- ALL QUOTES -->
+
+  <quotes>
+
+
+    <!-- quotes for fellowship page -->
+   <quote id="giedke" tag="fellowship">
+      <photo>/fellowship/graphics/people/giedke.jpg</photo>
+      <text>
+	Apoyo fervientemente las ideas que hay detrás del software libre, y soy
+	un usuario diario de software libre. Creo que es de importancia vital
+	que exista una voz que explique
+	por qué el Software Libre es bueno para la sociedad y cuáles son las 
+	condiciones bajo las cuales el ecosistema del Software Libre puede crecer.
+	Al unirme a la FSF y la FSFE, quería dar las gracias a todos los
+	desarrolladores y personas que apoyan el software libre y ayudar
+	a mantener condiciones políticas que permitan y favorezcan el desarrollo y 
+	uso de software libre.
       </text>
-    <author>Anna Morris (Co-Founder of ethical-pets.co.uk and Free Software advocate)</author>
-  </quote>
-  <quote id="roy" tag="fellowship">
-    <photo>/fellowship/graphics/people/hugoroy.png</photo>
-    <text>
-        The Free Software Foundation Europe (FSFE) brings together dedicated 
-        and engaged activists from all over Europe to seize the opportunities 
-        to secure our rights to use, share, study, and improve software because 
-        without Free Software, technology subjugates us instead of enhancing 
-        our freedom.
+      <author>Geza Giedke (ciencia de la información cuántica, óptica cuántica) en el DIPC, San Sebastian, Spain</author>
+    </quote>
+
+   <quote id="mats" tag="fellowship">
+      <photo>/fellowship/graphics/people/mats.jpg</photo>
+      <text>
+	Me uní como «Fellow» pues quería apoyar el trabajo de la FSFE promoviendo
+	el software libre. Como persona que usa ordenadores intensivamente cada día,
+	me preocupa mucho la tendencia actual hacia el bloqueo de la informática,
+	que aleja el control de los usuarios. Esto cada vez es más problemático
+	ya que las vidas de las personas dependen más y más de los ordenadores, para 
+	comunicaciones personales, gestión de su economía, empleo, etc.
+	El Software Libre es un requisito necesario para mantener el control de tu informática.
       </text>
-    <author>Hugo Roy (Law student)</author>
-  </quote>
-  <quote id="keijzer" tag="fellowship">
-    <photo>/fellowship/graphics/people/kevinkeijzer.jpg</photo>
-    <text>
-        I joined the Fellowship to stop being 'a minority of one', as 
-        George Orwell once put it. I wanted to meet people who shared my ideals 
-        and beliefs, so it would no longer feel as if I was fighting the system 
-        all by myself. It's reassuring to know that you're not alone, 
-        which probably motivates people to keep up with the work they are 
-        doing, even if it's not always as successful as they would like it 
-        to be.
+      <author>Mats Sjöberg (Investigador en Ciencias de la Computación)</author>
+    </quote>
+
+    <quote id="magnusson" tag="fellowship">
+      <photo>/fellowship/graphics/people/magnusson.jpg</photo>
+      <text>
+	Creo que la FSFE hace un trabajo importante. Y es la única organización que creo
+	que trabaja dentro del sistema de la UE. Era una cuestión natural para mi apoyarla
+	con tantos fondos como pudiera aportar.
       </text>
-    <author>Kevin Keijzer (Political activist)</author>
-  </quote>
-  <quote id="nascimento" tag="fellowship">
-    <photo>/fellowship/graphics/people/mauricionascimento.jpg</photo>
-    <text>
-        Freedom is one of the core values of our Society and one of the basic 
-        concepts of Democracy. Supporting and spreading Free Software is one 
-        way to build creative alternatives for social inclusion and to protect 
-        our citizens from the digital exploitation. We are responsible to build 
-        a better World as a gift for our future generations.
+      <author>Peter Magnusson (programador)</author>
+    </quote>
+
+ <quote id="volker" tag="fellowship">
+      <photo>/fellowship/graphics/people/Grabsch.jpg</photo>
+      <text>
+	Siempre me ha fascinado el software libre. Apoyo proyectos de software libre
+	en mi tiempo libre. Ni mi educación ni mi trabajo serían posibles sin el software libre.
+	El grupo de «fellows» en Berlín me mostró cómo contribuir al software libre de una
+	manera no técnica. Era y sigue siendo muy divertido trabajar en una atmósfera
+	agradable. Como me he implicado en el grupo, creo que es hora de unirse a la FSFE
+	de manera oficial y apoyar económicamente.
       </text>
-    <author>Mauricio Nascimento (Middleware Engineer)</author>
-  </quote>
-  <quote id="guenther" tag="fellowship">
-    <photo>/fellowship/graphics/people/guidoguenther.jpg</photo>
-    <text>
-        I'm very impressed with what the FSFE has achieved on the EU and 
-        national level. Back when I was working in the public sector I was able 
-        to glimpse the vast amounts of money that are thrown at lobbying for 
-        proprietary software and so called industry standards in Germany and 
-        the EU. It's astonishing how the FSFE has still managed to get 
-        itself heard. Supporting this was one of my motivations for becoming a 
-        fellow.
+      <author>Volker Grabsch (desarrollador de software)</author>
+    </quote> 
+ 
+    <quote id="johannes" tag="fellowship">
+      <photo>/fellowship/graphics/people/JohannesZarl.jpg</photo>
+      <text>
+	Me uno a la «fellowship» porque veo más y más que escribir código libre
+	no es suficiente para favorecer una cultura donde el software libre se vea
+	como parte integral de la sociedad. El software libre no debería ser un tema
+	marginal, de interés sólo para «geeks».</text>
+      <author>Johannes Zarl (Profesional de TI)</author>
+    </quote> 
+
+    <quote id="oliver" tag="fellowship">
+      <photo>/fellowship/graphics/people/Springer.jpg</photo>
+      <text>
+	He estado usando software libre desde hace años, durante los últimos
+	dos meses empecé a "devolver" algo, apoyando en foros y escribiendo
+	pequeños parches. Pero sentí que el software libre merece dinero, también.
+	Y la Fundación del Software Libre es simplemente el mejor lugar donde el dinero
+	puede ir. También quería mostrar públicamente mi apoyo al Software Libre.
       </text>
-    <author>Guido Günther (Freelancer and Debian Developer)</author>
-  </quote>
-  <quote id="verheesen" tag="fellowship">
-    <photo>/fellowship/graphics/people/mauriceverheesen.jpg</photo>
-    <text>
-        Free software is important in our time. It needs professional 
-        representation which is hard work and expensive. Joining the fellowship 
-        meant a way for me to contributing my skills and some money back to the 
-        free software movement to ensure it's future.
+      <author>Oliver Springer (Administrador de Sistemas en prácticas)</author>
+    </quote> 
+
+    <quote id="tom" tag="fellowship">
+      <photo>/fellowship/graphics/people/Tom.jpg</photo>
+      <text>
+	Empecé a trabajar administrando sistemas UNIX durante la visita de un científico
+	en el MIT a principios de los 90, concentrándome más y más en el software libre
+	a medida que pasaba el tiempo, y me he ganado la vida durante los últimos ocho
+	años administrando sistemas de software libre. Ya era hora de que devolviera algo 
+	de dinero.
       </text>
-    <author>Maurice Verheesen</author>
-  </quote>
-  <quote id="agger" tag="fellowship">
-    <photo>/fellowship/graphics/people/carstenagger.jpg</photo>
-    <text>
-        I was a solitary voice for years, explaining the principles behind Free 
-        Software and its importance for people in my country in numerous 
-        articles and blog posts. I wanted to belong to an organization with the 
-        goal of building the digital society on 100% free software, and 
-        supporting the FSFE and gaining access to its blogging and fellowship 
-        infrastructure seemed like a logical first step.
+      <author>Tom Yates (Consultor Administrador de Sistemas de Software Libre)</author>
+    </quote> 
+
+    <quote id="nicole" tag="fellowship">
+      <photo>/fellowship/graphics/people/Lieger.jpg</photo>
+      <text>
+	Estoy interesada en los valores, la política, la sociedad; en las nuevas formas
+	de producción, basadas en la cooperación libre en estructuras igualitarias;
+	en el conocimiento procomún y la inteligencia colectiva. Por ello estoy aquí y 
+	es por lo que apoyo el movimiento del software libre. No tengo historial técnico,
+	ni lo tienen la mayoría de las personas que conozco.
       </text>
-    <author>Carsten Agger (Software Engineer)</author>
-  </quote>
-  <quote id="kehl" tag="fellowship">
-    <photo>/fellowship/graphics/people/robertkehl.jpg</photo>
-    <text>
-        I joined the Fellowship because Free Software helps to bring more and 
-        real freedom into the world. To fight for this is my goal as a Fellow 
-        of the FSFE.
+      <author>Nicole Lieger (Científica Política y miembro de la Sociedad Civil)</author>
+    </quote> 
+
+
+ <quote id="morris" tag="fellowship">
+      <photo>/fellowship/graphics/people/annamorris.jpg</photo>
+      <text>
+	El Software Libre es un reto de aprendizaje: a hacer por tí misma, a ser independiente
+	y sin temores cuando se trata de la tecnología. En los últimos años he visto
+	orgullosa cómo mi base de habilidades alcanzaba y superaba a la de mis colegas
+	amantes del software propietario, incluso a la de algunos profesionales, simplemente
+	por tener un esquema mental libre y curioso. El Software Libre te libera de muchas
+	maneras.
+	 </text>
+      <author>Anna Morris (Co-Fundadora de ethical-pets.co.uk y defensora del Software Libre)</author>
+    </quote>
+
+    <quote id="roy" tag="fellowship">
+      <photo>/fellowship/graphics/people/hugoroy.png</photo>
+      <text>
+	La Fundación del Software Libre de Europa (FSFE) reúne a activistas dedicados y 
+	comprometidos de toda Europa para aprovechar las oportunidades de asegurar
+	nuestros derechos de usar, compartir, estudiar y mejorar el software, porque
+	sin Software Libre, la tecnología nos subyuga en lugar de mejorar 
+	nuestra libertad.
       </text>
-    <author>Robert Kehl (IT Professional)</author>
-  </quote>
-  <quote id="appelbaum" tag="fellowship">
-    <photo>/fellowship/graphics/people/jacobappelbaum.png</photo>
-    <text>
-        I believe that actions of support for the FSFE are important for 
-        encouraging Free Software development and adoption in Europe as well as 
-        the rest of the world. I'm an FSFE Fellow because financially 
-        supporting the cause of Free Software brings positive improvements to 
-        all societies throughout the world.
+      <author>Hugo Roy (estudiante de derecho)</author>
+    </quote>
+
+    <quote id="keijzer" tag="fellowship">
+      <photo>/fellowship/graphics/people/kevinkeijzer.jpg</photo>
+      <text>
+	Me uní a la «Fellowship» para dejar de ser "una minoría de uno", como dijo una vez
+	George Orwell. Quería conocer gente que compartiera mis ideales y creencias, así 
+	no me sentiría ya como si estuviera luchando contra el sistema yo solo.
+	Es reforzar la conciencia de que no estás solo, que probablemente motiva a la gente
+	a continuar con el trabajo que hacen, incluso si no siempre da los resultados que
+	se esperan.
       </text>
-    <author>Jacob Appelbaum (Spokesperson for The TOR Project)</author>
-  </quote>
-  <quote id="mortier" tag="fellowship">
-    <photo>/fellowship/graphics/people/mortier.jpg</photo>
-    <text>
-        I'm a free sofware supporter for a long time, I fought against 
-        software patents in Brussels, co-organised the system theme at the 
-        Libre Software Meeting (RMLL) and run a Free Software company. Free 
-        Software is an essential part of our global freedom, so it was natural 
-        to become a Fellowship member at the FSFE.
+      <author>Kevin Keijzer (Activista político)</author>
+    </quote>
+
+    <quote id="nascimento" tag="fellowship">
+      <photo>/fellowship/graphics/people/mauricionascimento.jpg</photo>
+      <text>
+	La libertad es uno de los valores esenciales de nuestra Sociedad y uno de los 
+	conceptos básicos de la Democracia. Apoyar y extender el Software Libre es una
+	manera de construir alternativas creativas para la inclusión social y para proteger
+	a nuestros ciudadanos de la explotación digital. Somos responsables de construir
+	un Mundo mejor como regalo para las futuras generaciones.
       </text>
-    <author>Benoit Mortier (Owner of OpenSides, Manager of FusionDirectory)</author>
-  </quote>
-  <quote id="nermin" tag="fellowship">
-    <photo>/fellowship/graphics/people/nermincanik.jpg</photo>
-    <text>
-        Free software and FSFE is to me: sharing, learning, being independent 
-        of monopolies, producing things together, passion and freedom! Since 
-        I've been a Fellow, I am finding new friends who help me in Free 
-        Software and other topics, teaching new things every day even though we 
-        are kilometers away. It is magnificent to be in a community that 
-        continually supports my Free Software passion and motivation!
+      <author>Mauricio Nascimento (Ingeniero de Middleware)</author>
+    </quote>
+
+    <quote id="guenther" tag="fellowship">
+      <photo>/fellowship/graphics/people/guidoguenther.jpg</photo>
+  	<text>
+	Estoy impresionado con lo que la FSFE ha conseguido en la UE y a nivel nacional.
+	Cuando trabajaba en el sector público podía vislumbrar las grandes cantidades de 
+	dinero que se invertían en la presión por el software propietario y los llamados
+	estándares de la industria en Alemania y la UE.
+	Es impresionante cómo la FSFE ha conseguido que se oiga su voz a pesar de todo.
+	Apoyar esto era una de mis motivaciones para hacerme «fellow».
       </text>
-    <author>Nermin Canik (IT Business Analyst)</author>
-  </quote>
-  <quote id="guido" tag="fellowship">
-    <photo>/fellowship/graphics/people/guidoarnold.jpg</photo>
-    <text>
-        Free Software needs a voice in politics. We volunteers do amazing 
-        things together, but some tasks are not that much fun, or are time 
-        sensitive or need extensive expertise. FSFE can only tap its full 
-        potential with paid staff to do the things the volunteers wouldn't get 
-        to. By now, I met all of the staff and can say that I don't regret a 
-        cent I've given to allow the FSFE to operate.
+      <author>Guido Günther (Autónomo y Desarrollador de Debian)</author>  
+    </quote>
+    
+    <quote id="verheesen" tag="fellowship">
+      <photo>/fellowship/graphics/people/mauriceverheesen.jpg</photo>
+	<text>
+	El software libre es importante para nuestro tiempo. Necesita representación
+	profesional, lo que es un trabajo duro y caro. Unirse a la comunidad
+	significó para mí una manera de contribuir con mis habilidades y mi dinero 
+	al movimiento del software libre, para asegurar su futuro.
       </text>
-    <author>Guido Arnold</author>
-  </quote>
-  <quote id="laura" tag="fellowship">
-    <photo>/fellowship/graphics/people/lauralarjona.jpg</photo>
-    <text>
-        If software is licensed as free software, we can audit it, and be sure 
-        that it does what it's intended to do (and nothing else). Public 
-        institutions develop software, and hire companies to make it, and the 
-        citizens should own and reuse all that code. I contribute to free 
-        software with translations, user help desk, finding free software 
-        alternatives at the University... but I cannot reach the policy-makers, 
-        nor people and institutions in other countries. I'm fellow to support 
-        the FSFE doing this task, and as one more way to say thank you to the 
-        free software community.
+      <author>Maurice Verheesen</author>
+   
+    </quote>
+
+    <quote id="agger" tag="fellowship">
+      <photo>/fellowship/graphics/people/carstenagger.jpg</photo>
+       <text>
+	He sido una voz solitaria durante años, explicando los principios detrás del
+	Software Libre y su importancia a personas de mi país en numerosas publicaciones y 
+	artículos de blog. Quería pertenecer a una organización con el objetivo de construir
+	una sociedad digital basada 100% en software libre, y apoyar la FSFE y ganar acceso
+	a su sistema de blogs e infraestructura era un primer paso lógico.
       </text>
-    <author>Laura Arjona Reina (IT Assistant at Technical University of Madrid and Debian contributor)</author>
-  </quote>
-  <quote id="volker" tag="fellowship">
-    <photo>/fellowship/graphics/people/Grabsch.jpg</photo>
-    <text>
-        I have always been fascinated by free software. I'm supporting free 
-        software projects in my spare time. My education as well as my work 
-        would not be possible without free software. The fellow group in Berlin 
-        showed me how to contribute to free software in a non-technical way. It 
-        was and still is great fun to work with them in a cogenial atmosphere. 
-        As I'm involed in the group now, I think it is time to join the FSFE 
-        officially and to support them financially.
+      <author>Carsten Agger (Ingeniero de Software)</author>
+    </quote>
+    
+    
+    <quote id="kehl" tag="fellowship">
+      <photo>/fellowship/graphics/people/robertkehl.jpg</photo>
+        <text>
+	Me uní a la «Fellowship» porque el Software Libre ayuda a traer mayor libertad y
+	una libertad más real al mundo. Luchar por ello es mi objetivo como miembro 
+	de la FSFE.
       </text>
-    <author>Volker Grabsch (Software development)</author>
-  </quote>
-  <quote id="johannes" tag="fellowship">
-    <photo>/fellowship/graphics/people/JohannesZarl.jpg</photo>
-    <text>
-        I join the fellowship because I'm seeing more and more that writing 
-        free code is ultimately not enough to foster a culture where free 
-        software is seen as an integral part of society. Free software should 
-        not be a fringe topic supported solely by geeks.
+      <author>Robert Kehl (Profesional de TI)</author>
+    </quote>
+        
+    <quote id="appelbaum" tag="fellowship">
+      <photo>/fellowship/graphics/people/jacobappelbaum.png</photo>
+      <text>
+	Creo que las acciones de apoyo a la FSFE son importantes para fortalecer
+	el desarrollo y adopción del Software Libre en Europa y en el resto del mundo.
+	Soy un «Fellow» de la FSFE porque apoyar económicamente la causa del Software 
+	Libre trae mejoras positivas 
+	a todas las sociedades del mundo.
       </text>
-    <author>Johannes Zarl (IT Professional)</author>
-  </quote>
-  <quote id="oliver" tag="fellowship">
-    <photo>/fellowship/graphics/people/Springer.jpg</photo>
-    <text>
-        I have been using free software for years, during the last couple month 
-        I started "giving" back, by supporting on forums and writing smaller 
-        patches. But I felt like free software deserves some money, too. And 
-        the Free Software Foundation is simply the best place for the money to 
-        go. I also wanted to show my support for Free Software publicly.
+      <author>Jacob Appelbaum (Portavoz del Proyecto TOR)</author>
+    </quote> 
+
+    
+    <quote id="mortier" tag="fellowship">
+      <photo>/fellowship/graphics/people/mortier.jpg</photo>
+      <text>
+	Apoyo el software libre desde hace mucho tiempo, he luchado contra las patentes
+	de software en Bruselas, co-organizado el tema del sistema en los encuentros de
+        software libre (RMLL) y dirigido una empresa de Software Libre. El Software Libre
+        es una parte esencial de nuestra libertad global, así que era algo natural hacerme
+        miembro de la «Fellowship» de la FSFE.
       </text>
-    <author>Oliver Springer (Systems Administrator Trainee)</author>
-  </quote>
-  <quote id="tom" tag="fellowship">
-    <photo>/fellowship/graphics/people/Tom.jpg</photo>
-    <text>
-        I started doing UNIX sysadmin work while a visiting scientist at MIT in 
-        the early '90s, concentrated more and more on free software as time 
-        went on, and have made a living entirely from sysadminning free 
-        software for the past eight years.  It's well past time that I gave 
-        money back.
+      <author>Benoit Mortier (Dueño de OpenSides, Gestor de FusionDirectory)</author>
+    </quote> 
+    
+        
+    <quote id="nermin" tag="fellowship">
+      <photo>/fellowship/graphics/people/nermincanik.jpg</photo>
+      <text>
+	El Software Libre y la FSFE son para mí: compartir, aprender, ser independiente de 
+	los monopolios, producir cosas juntos, pasión y ¡libertad! Desde que me he hecho 
+	«Fellow», estoy encontrando nuevos amigos que me ayudan con el Software Libre y otros
+	temas, enseñándome cosas nuevas cada día incluso aunque estemos separados por kilómetros.
+	¡Es magnífico estar en una comunidad que continuamente apoya mi pasión y motivación por
+	el Software Libre!
       </text>
-    <author>Tom Yates (Free Software Consultant Sysadmin)</author>
-  </quote>
-  <quote id="nicole" tag="fellowship">
-    <photo>/fellowship/graphics/people/Lieger.jpg</photo>
-    <text>
-        I'm interested in values, politics, society; in new forms of 
-        production, based on free co-operation in egalitarian structures; in 
-        knowledge commons and collective intelligence. That's why I'm here and 
-        why I wish to support the free software movement. I have no technical 
-        background, and neither do most of the people I know.
+      <author>Nermin Canik (Analista de Negocios de TI)</author>
+    </quote> 
+    
+
+    <quote id="guido" tag="fellowship">
+      <photo>/fellowship/graphics/people/guidoarnold.jpg</photo>
+      <text>
+	El Software Libre necesita una voz en la política. Nosotros los voluntarios hacemos
+	cosas estupendas juntos, pero algunas tareas no son tan divertidas, o dependen
+	de ciertas fechas o necesitan gran experiencia. La FSFE sólo puede llegar a su potencial
+	total con personal pagado que haga las tareas que los voluntarios no consiguen. Por
+	ahora, he conocido a todo el personal y puedo decir que no me arrepiento de
+	cada céntimo que he aportado a la FSFE para que pueda operar.
       </text>
-    <author>Nicole Lieger (Political Scientist and member of Civil Society)</author>
-  </quote>
-</quotes>
+      <author>Guido Arnold</author>
+    </quote> 
+  
+        
+    <quote id="laura" tag="fellowship">
+      <photo>/fellowship/graphics/people/lauralarjona.jpg</photo>
+      <text>
+	Si el software se licencia como software libre, podemos auditarlo,
+	y estar seguros de que hace lo que dice que hace (y nada más). Las
+	instituciones públicas desarrollan software, y contratan a empresas para
+	hacerlo, y los ciudadanos deberían poseer y reutilizar todo ese código.
+	Contribuyo al software libre con traducciones, soporte a usuarios, encontrando
+	alternativas de software libre en la Universidad... pero no puedo llegar
+	a los que hacen las políticas, ni a las personas e instituciones en otros
+	países. Soy «fellow» para apoyar a la FSFE en esta tarea, y como una manera
+	más de dar las gracias a la comunidad del software libre.
+      </text>
+      <author>Laura Arjona Reina (Técnica auxiliar de Informática en la Universidad Politécnica de Madrid, 
+	y contribuidora de Debian)</author>
+    </quote> 
+      
+   
+  </quotes>
+
 
 </textset>
+
+<!-- OLD TEXTS AND QUOTES, TRANSLATED TO SPANISH
+
+
+ <text id="freesoftwarefoundationeurope">Fundación del Software Libre de Europa</text>
+
+
+  <text id="wiki/wiki">Wiki</text>
+  <text id="wiki/events">Actos de la Fellowship</text>
+  <text id="wiki/fellows">Miembros</text>
+  <text id="wiki/rc">Cambios recientes</text>
+  <text id="motto-planet">Planeta, animado por la <a href="https://fellowship.fsfe.org" class="the-fellowship">Fellowship</a></text>
+  <text id="motto-wiki">Wiki, animada por la <a href="https://fellowship.fsfe.org" class="the-fellowship">Fellowship</a></text>
+
+  <text id="webmaster">
+    Por favor, informe de los problemas de esta página a
+    <em>webmaster en fsfeurope.org</em>.
+  </text>
+
+  <text id="creative-commons-license">Licencia Creative Commons</text>
+
+
+
+  <text id="fsfe/mission">Misión</text>
+  <text id="support/funds">Financiación</text>
+
+
+  <text id="contribute">Colabore</text>
+  <text id="contribute-intro"><p>Somos una comunidad de personas que se comprometen con el
+  Software Libre. Por favor ¡únase a nuestro trabajo! 
+Hay muchas maneras de hacerlo y con seguridad encontrará una forma que se ajuste a sus 
+intereses y habilidades.</p></text>
+    
+
+  
+  <text id="statement1">La Fundación del Software Libre de Europa es una organización sin ánimo de lucro 
+dedicada a la promoción del </text>
+  <text id="statement-fs">Software Libre</text>
+  <text id="statement2">, trabajando en favor de la libertad en la sociedad de la información</text>
+ 
+
+	<text id="news">Noticias</text>
+  <text id="receive-newsletter">Suscribirse al boletín mensual de noticias de la FSFE</text>
+  <text id="subscribe-newsletter">Suscribirse al boletín de noticias</text>
+  <text id="events">Actos</text>
+  <text id="more">Ver más</text>
+  <text id="morenews">Ver todas las noticias</text>
+  <text id="moreevents">Ver todos los actos</text>
+
+
+  <text id="email">Correo electrónico</text>
+  <text id="email-placeholder">dirección de correo electrónico</text>
+  <text id="phone">Teléfono</text>
+  <text id="fax">fax</text>
+  <text id="contact">Contacto</text>
+  
+  <text id="team">Equipo</text>
+  <text id="microblog">Microblog</text>
+  
+  <text id="donate">Donar</text>
+  <text id="donate-paragraph"><p>
+        La Fundación del Software Libre de Europa es una organización no gubernamental
+        sin ánimo de lucro. <a href="/work.es.html">Nuestro trabajo</a> es posible
+        gracias a una comunidad de
+        <a href="/contribute/contribute.es.html">voluntarios</a>,
+        <a href="http://fellowship.fsfe.org">Fellows</a> y
+        <a href="thankgnus.es.html">donantes</a>. Sus donaciones son críticas para 
+        nuestra fuerza y autonomía. Nos posibilitan continuar trabajando por el Software
+        Libre donde sea necesario, y ser una voz independiente.
+      </p></text>
+
+
+  <text id="cb-restricted-boot">"Arranque seguro": ¿quién controlará su próximo ordenador?</text>
+  <text id="cb-restricted-boot-link">¿usted o el fabricante?</text>
+
+  <text id="cb-valentine">El 14 de febrero: </text>
+  <text id="cb-valentine-link">¡Muestre su amor por el Software Libre!</text>
+
+
+  <text id="no-avatar">Sin foto</text>
+
+
+  <text id="to">a</text>
+  <text id="go-to">Ir a:</text>
+
+
+  <text id="months/1">Enero</text>
+  <text id="months/2">Febrero</text>
+  <text id="months/3">Marzo</text>
+  <text id="months/4">Abril</text>
+  <text id="months/5">Mayo</text>
+  <text id="months/6">Junio</text>
+  <text id="months/7">Julio</text>
+  <text id="months/8">Agosto</text>
+  <text id="months/9">Septiembre</text>
+  <text id="months/10">Octubre</text>
+  <text id="months/11">Noviembre</text>
+  <text id="months/12">Diciembre</text>
+ 
+  <text id="months-abbreviated/1">Ene</text>
+  <text id="months-abbreviated/2">Feb</text>
+  <text id="months-abbreviated/3">Mar</text>
+  <text id="months-abbreviated/4">Abr</text>
+  <text id="months-abbreviated/5">May</text>
+  <text id="months-abbreviated/6">Jun</text>
+  <text id="months-abbreviated/7">Jul</text>
+  <text id="months-abbreviated/8">Ago</text>
+  <text id="months-abbreviated/9">Sep</text>
+  <text id="months-abbreviated/10">Oct</text>
+  <text id="months-abbreviated/11">Nov</text>
+  <text id="months-abbreviated/12">Dic</text>
+
+  <text id="weekdays/1">Lunes</text>
+  <text id="weekdays/2">Martes</text>
+  <text id="weekdays/3">Miércoles</text>
+  <text id="weekdays/4">Jueves</text>
+  <text id="weekdays/5">Viernes</text>
+  <text id="weekdays/6">Sábado</text>
+  <text id="weekdays/7">Domingo</text>
+
+  <text id="weekdays-abbreviated/1">Lun</text>
+  <text id="weekdays-abbreviated/2">Mar</text>
+  <text id="weekdays-abbreviated/3">Mie</text>
+  <text id="weekdays-abbreviated/4">Jue</text>
+  <text id="weekdays-abbreviated/5">Vie</text>
+  <text id="weekdays-abbreviated/6">Sab</text>
+  <text id="weekdays-abbreviated/7">Dom</text>
+
+
+    <campaign id="wiesemann" tag="donors" pos="1">
+      <photo>/donate/wiesemann.jpg</photo>
+      <text>
+Un mundo virtual sin Software Libre es como una ciudad en la que estás obligado
+a tener licencia de uso para cada acera. También necesitamos bienes comunes en el
+mundo virtual.
+      </text>
+      <author>Reinhard Wiesemann - Linuxhotel</author>
+      <link>/donate/donate.html</link>
+    </campaign>
+
+    <campaign id="racketware">
+        <comment>Dónde encontrar un cartel en SU idioma: http://no.more.racketware.info/web-banners/#int</comment>
+        <photo>http://racketware.info/media/image/racketiciel/racketware_English_453x227_2013-07-11.png</photo>
+        <text>Software: ¡elija antes de pagar, firme la petición!</text>
+        <link>http://racketware.info/petition/click/es</link>
+    </campaign>
+    <campaign id="ganten" tag="donors fellowship" pos="2">
+      <photo>/donate/ganten.jpg</photo>
+      <text>
+        El Software Libre es la base sólida de nuestras soluciones de empresa.
+        La FSFE proporciona una importante contribución a asegurar esa base, por eso
+	apoyamos FSFE.
+      </text>
+      <author>Peter Ganten - Univention</author>
+      <link>/donate/donate.html</link>
+    </campaign>
+
+
+
+    <campaign id="allison" tag="fellowship" pos="1">
+      <photo>/fellowship/graphics/people/Jeremyallison.jpg</photo>
+      <text>
+        El Día de los Documentos Libres celebra la importancia de los Estándares
+	Abiertos para todos los documentos electrónicos, ya sean públicos o privados.
+	Si queremos <strong>preservar
+        nuestra herencia digital</strong>, necesitamos seleccionar Estándares Abiertos,
+	implementables por cualquiera, como nuestro modo de almacenamiento predeterminado.
+      </text>
+      <author>Jeremy Allison, desarrollador de Samba</author>
+      <link>/donate/donate.html</link>
+    </campaign>
+    <campaign id="beckedahl" tag="fellowship" pos="2">
+      <photo>/fellowship/graphics/people/beckedahl.jpg</photo>
+      <text>
+        Los Estándares Abiertos garantizan un desarrollo libre de la infraestructura
+	y por tanto una comunicación libre e independiente.
+      </text>
+      <author>Markus Beckedahl, Digitale Gesellschaft, netzpolitik.org</author>
+      <link>/donate/donate.html</link>
+    </campaign>
+
+  </campaigns>
+
+
+  <quotes>
+
+
+    <quote id="wiesemann" tag="donors" pos="3">
+      <photo>/donate/wiesemann.jpg</photo>
+      <text>
+Un mundo virtual sin Software Libre es como una ciudad en la que estás obligado
+a tener licencia de uso para cada acera. También necesitamos bienes comunes en el
+mundo virtual.
+      </text>
+      <author>Reinhard Wiesemann - Linuxhotel</author>
+    </quote>
+    <quote id="ganten" tag="donors" pos="4">
+      <photo>/donate/ganten.jpg</photo>
+      <text>
+        El Software Libre es la base sólida de nuestras soluciones de empresa.
+        La FSFE proporciona una importante contribución a asegurar esa base, por eso
+	apoyamos FSFE.
+      </text>
+      <author>Peter Ganten - Univention</author>
+    </quote>
+
+
+  
+  </quotes>  
+  -->
+

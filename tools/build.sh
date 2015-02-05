@@ -6,38 +6,81 @@
 # HTML pages from the .xhtml, .xml and .xsl source files. Most of the work,
 # however, is done by the Perl script build.pl.
 # -----------------------------------------------------------------------------
- 
-if [ "$1" = "test" ]; then
-  SOURCE=/home/www/fsfe-test
-  DEST=/home/www/html-test
-  TMP=/home/www/tmp-test.$$
-  STATUS=/var/www/web-test
-  SVNUPOUTFILE=/tmp/fsfe-test-svnup-out
-  SVNUPERRFILE=/tmp/fsfe-test-svnup-err
-  DOMAIN=test.fsfe.org
-  STATUS_URI="http://status.fsfe.org/web-test/"
-  TRANS_SCRIPT=translation-log-test.sh
-  STATUS_SCRIPT=status-test.php
-  ROBOTS="Disallow: /"
-  REPODESIGNATION="SVN test branch"
-else
-  SOURCE=/home/www/fsfe
-  DEST=/home/www/html
-  TMP=/home/www/tmp.$$
-  STATUS=/var/www/web
-  SVNUPOUTFILE=/tmp/fsfe-svnup-out
-  SVNUPERRFILE=/tmp/fsfe-svnup-err
-  DOMAIN=www.fsfe.org
-  STATUS_URI="http://status.fsfe.org/web/"
-  TRANS_SCRIPT=translation-log.sh
-  STATUS_SCRIPT=status.php
-  ROBOTS="Disallow: /source/"
-  REPODESIGNATION="SVN trunk"
-fi
 
 # Since we must grep for svn output messages,
 # let's ensure we get English messages
 export LANG="en_US.UTF-8"
+
+# SOURCE=$HOME/fsfe
+SOURCE="$(dirname "$0"/..)"
+DEST=$HOME/html
+TMP=$HOME/tmp.$$
+STATUS_URI="http://status.fsfe.org/web/"
+STATUS=/var/www/web
+DOMAIN=www.fsfe.org
+ROBOTS="Disallow: /source/"
+
+TRANS_SCRIPT=translation-log.sh
+STATUS_SCRIPT=status.php
+SVNUPOUTFILE=/tmp/fsfe-svnup-out
+SVNUPERRFILE=/tmp/fsfe-svnup-err
+
+while [ -n "$1" ]; do
+  case "$1" in
+    test)
+      # SOURCE=$HOME/fsfe-test
+      DEST=$HOME/html-test
+      TMP=$HOME/tmp-test.$$
+      STATUS_URI="http://status.fsfe.org/web-test/"
+      STATUS=/var/www/web-test
+      DOMAIN=test.fsfe.org
+      ROBOTS="Disallow: /"
+
+      TRANS_SCRIPT=translation-log-test.sh
+      STATUS_SCRIPT=status-test.php
+      SVNUPOUTFILE=/tmp/fsfe-test-svnup-out
+      SVNUPERRFILE=/tmp/fsfe-test-svnup-err
+      ;;
+    -d|--dest|--destination) # build destination directory
+      shift 1
+      DEST="$1"
+      ;;
+    --domain) # domain name of web site
+      shift 1
+      DOMAIN="$1"
+      ;;
+    --tmp|--temp) # temporary build directory, will be moved to dest when finished
+      shift 1
+      TMP="$1"
+      ;;
+    --statusdir|--status-dir) # Where to write status
+      shift 1
+      STATUS="$1"
+      ;;
+    --statusuri|--status-uri|--statusurl|--status-url) # shoud be HTTP URL to statusdir, only for email message
+      shift 1
+      STATUS_URI="$1"
+      ;;
+    --robots) # Content of robots.txt file
+      shift 1
+      ROBOTS="$1"
+      ;;
+  esac
+  shift 1
+done
+
+repourl="$(svn info "$SOURCE" |sed -nr "s;^URL: (.*)$;\1;p")"
+case "$repourl" in
+  https://svn.fsfe.org/fsfe-web/trunk)
+    REPODESIGNATION="SVN trunk"
+    ;;
+  https://svn.fsfe.org/fsfe-web/branches/test)
+    REPODESIGNATION="SVN test branch"
+    ;;
+  *)
+    REPODESIGNATION="$repourl"
+    ;;
+esac
 
 # Redirect output
 exec 1>> ${STATUS}/status.txt 2>&1
@@ -107,7 +150,7 @@ if test -s ${SVNUPERRFILE} ; then
 fi
 
 # If there are conflicts in the working copy, exit
-if test -n "$(grep '^C' ${SVNUPOUTFILE})" ; then
+if grep -q '^C' "${SVNUPOUTFILE}"; then
   echo "$(date)  There are conflicts in the local svn working copy. Build aborted"
   cat ${STATUS}/status.txt >> ${STATUS}/status-log.txt
   mv  ${STATUS}/status.txt ${STATUS}/status-attempted.txt

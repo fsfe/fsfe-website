@@ -12,7 +12,7 @@
 export LANG="en_US.UTF-8"
 
 # SOURCE=$HOME/fsfe
-SOURCE="$(dirname "$0"/..)"
+SOURCE="$(dirname "$0")/.."
 DEST=$HOME/html
 TMP=$HOME/tmp.$$
 STATUS_URI="http://status.fsfe.org/web/"

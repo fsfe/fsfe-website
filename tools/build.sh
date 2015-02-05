@@ -12,7 +12,7 @@
 export LANG="en_US.UTF-8"
 
 # SOURCE=$HOME/fsfe
-SOURCE="$(dirname "$0")/.."
+SOURCE="$(realpath "$(dirname "$0")/..")"
 DEST=$HOME/html
 TMP=$HOME/tmp.$$
 STATUS_URI="http://status.fsfe.org/web/"
@@ -40,6 +40,9 @@ while [ -n "$1" ]; do
       STATUS_SCRIPT=status-test.php
       SVNUPOUTFILE=/tmp/fsfe-test-svnup-out
       SVNUPERRFILE=/tmp/fsfe-test-svnup-err
+      ;;
+    -f) # force a rebuild even without svn updates
+      forcebuild=true
       ;;
     -d|--dest|--destination) # build destination directory
       shift 1
@@ -175,7 +178,7 @@ fi
 # and from current to past.
 if test ! -s ${SVNUPOUTFILE} \
     -a "$(date -r ${STATUS}/last-run +%F)" == "$(date +%F)" \
-    -a "$1" != "-f" ; then
+    -a -z "$forcebuild"; then
   echo "$(date)  No changes to ${REPODESIGNATION}."
   echo "$(date)  $(svn info 2>/dev/null | grep '^Revision')"
   cat ${STATUS}/status.txt >> ${STATUS}/status-log.txt
@@ -192,11 +195,11 @@ perl ${SOURCE}/build/checkdepends.pl
 # Make sure build.sh and build.pl are executable
 # TODO: this can be removed once we set the "executable" svn property
 # to these files
-chmod +x tools/build.sh tools/build.pl
-chmod +x cgi-bin/weborder.pl cgi-bin/stacs-register-capacity.pl
-chmod +x cgi-bin/stacs-register-workshop.pl
+chmod +x "${SOURCE}/tools/build.sh" "${SOURCE}/tools/build.pl"
+chmod +x "${SOURCE}/cgi-bin/weborder.pl" "${SOURCE}/cgi-bin/stacs-register-capacity.pl"
+chmod +x "${SOURCE}/cgi-bin/stacs-register-workshop.pl"
 
-if test "$1" == "-f" ; then
+if test -n "$forcebuild"; then
   echo "Forced rebuild"
 fi
 

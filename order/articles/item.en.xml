@@ -16,11 +16,10 @@
 
   <item type="tshirt" id="tshirt-ilovefs-blue" price="20.00" date="2012-10-07">
     <available size="S"/>
-<!--
     <available size="M"/>
     <available size="L"/>
     <available size="XL"/>
--->
+    <available size="XXL"/>
  	<image
       small="/order/articles/images/thumbnails/tshirt-ilovefs-blue-front.jpg"
       large="/order/articles/images/tshirt-ilovefs-blue-front.jpg"/>
@@ -164,8 +163,6 @@
       small="/order/articles/images/thumbnails/tshirt-dfd-white-back.jpg"
       large="/order/articles/images/tshirt-dfd-white-back.jpg"/>
   </item>
--->
-<!--
   <item type="girlie" id="girlie-dfd-purple" price="20.00" date="2014-03-18">
     <available size="S"/>
     <available size="M"/>
@@ -177,10 +174,10 @@
   </item>
 -->
   <item type="girlie" id="girlie-dfd-black" price="20.00" date="2014-03-18">
-    <available size="M"/>
-<!--
     <available size="S"/>
     <available size="L"/>
+<!--
+    <available size="M"/>
     <available size="XL"/>
 -->
  	<image
@@ -202,11 +199,9 @@
   </item>
 
   <item type="girlie" id="girlie-hacking-black" price="18.00" date="2008-02-23">
-<!--
     <available size="S"/>
-    <available size="L"/>
--->
     <available size="M"/>
+    <available size="L"/>
     <available size="XL"/>
     <image
       small="/order/articles/images/thumbnails/girlie-hacking-black-front.jpg"
@@ -216,7 +211,7 @@
       large="/order/articles/images/girlie-hacking-black-back.jpg"/>
   </item>
 
-  <item type="hooded" id="hooded-fsfs-black-zip" price="45.00" date="2014-03-08">
+  <item type="hooded" id="hooded-fsfs-black-zip" price="50.00" date="2014-03-08">
     <available size="S"/>
     <available size="M"/>
     <available size="L"/>
@@ -245,7 +240,7 @@
       large="/order/articles/images/hooded-fsfs-black-back.jpg"/>
   </item>
 -->
-  <item type="hooded" id="hooded-fsfs-blue" price="35.00" date="2012-09-29">
+  <item type="hooded" id="hooded-fsfs-blue" price="45.00" date="2012-09-29">
     <available size="S"/>
     <available size="M"/>
     <available size="L"/>
@@ -261,11 +256,11 @@
 
   <item type="hooded" id="hooded-fsfs-grey" price="28.00" date="2009-09-29">
     <available size="S"/>
+    <available size="M"/>
     <available size="XL"/>
     <available size="XXL"/>
 <!--
     <available size="L"/>
-    <available size="M"/>
     <available size="XXXL"/>
 -->
     <image
@@ -285,13 +280,11 @@
       small="/order/articles/images/thumbnails/baby-romper-fork-blue-front.jpg"
       large="/order/articles/images/baby-romper-fork-blue-front.jpg"/>
   </item>
-
+-->
   <item type="baby-clothes" id="baby-romper-fork-green" price="18.00" date="2012-10-06">
     <available size="0-3m"/>
-    <available size="3-6m"/>
     <available size="6-12m"/>
     <available size="12-18m"/>
-    <available size="18-24m"/>
     <image
       small="/order/articles/images/thumbnails/baby-romper-fork-green-front.jpg"
       large="/order/articles/images/baby-romper-fork-green-front.jpg"/>
@@ -300,14 +293,14 @@
   <item type="baby-clothes" id="baby-romper-fork-white" price="18.00" date="2012-10-06">
     <available size="0-3m"/>
     <available size="3-6m"/>
-    <available size="12-18m"/>
-    <available size="18-24m"/>
     <available size="6-12m"/>
+    <available size="12-18m"/>
     <image
       small="/order/articles/images/thumbnails/baby-romper-fork-white-front.jpg"
       large="/order/articles/images/baby-romper-fork-white-front.jpg"/>
   </item>
 
+<!--
   <item type="baby-clothes" id="baby-romper-fork-beige" price="18.00" date="2012-10-04">
     <available size="0-3m"/>
     <available size="3-6m"/>

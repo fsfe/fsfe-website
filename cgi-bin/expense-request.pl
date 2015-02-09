@@ -28,6 +28,7 @@ my %names = (
   "fellowship" => "Local Fellowship Group",
   "albers" => "Erik Albers",
   "gerloff" => "Karsten Gerloff",
+  "oberg" => "Jonas Öberg",
   "gollowitzer" => "Martin Gollowitzer",
   "kersten" => "Rainer Kersten",
   "kirschner" => "Matthias Kirschner",

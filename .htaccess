@@ -55,7 +55,7 @@ RewriteRule ^campaigns/ilovefs(/)?$ /campaigns/ilovefs/2014/ilovefs.html
 RewriteRule ^campaigns/ilovefs/ilovefs(.*)html$ /campaigns/ilovefs/2014/ilovefs$1html
 
 # Redirect convince your friends easy pages to the wiki page
-RewriteRule	^/(cyf|convince).*	http://wiki.fsfe.org/ConvinceYourFriends	[redirect=permanent]
+RewriteRule	^(cyf|convince).*	http://wiki.fsfe.org/ConvinceYourFriends	[redirect=permanent]
 
 # Temporary fix unitl we have a /freesoftware dir for contribute/advocacy/cwfs.en.html
 RewriteRule ^freesoftware/freesoftware(.*) /about/basics/freesoftware$1 [redirect=temp]

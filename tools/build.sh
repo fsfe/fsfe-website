@@ -56,7 +56,7 @@ while [ -n "$1" ]; do
       shift 1
       TMP="$1"
       ;;
-    --statusdir|--status-dir) # Where to write status
+    -s|--statusdir|--status-dir) # Where to write status
       shift 1
       STATUS="$1"
       ;;
@@ -84,6 +84,10 @@ case "$repourl" in
     REPODESIGNATION="$repourl"
     ;;
 esac
+
+mkdir -p "$STATUS"
+mkdir -p "$DEST"
+mkdir -p "$TMP"
 
 # Redirect output
 exec 1>> ${STATUS}/status.txt 2>&1

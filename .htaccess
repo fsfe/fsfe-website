@@ -54,6 +54,8 @@ RewriteRule ^campaigns/ayc(.*) /campaigns/askyourcandidates$1 [redirect=permanen
 RewriteRule ^campaigns/ilovefs(/?)$ /campaigns/ilovefs/2015/ilovefs.html
 RewriteRule ^campaigns/ilovefs/ilovefs(.*) /campaigns/ilovefs/2015/ilovefs$1
 
+# Redirect convince your friends easy pages to the wiki page
+RewriteRule   ^(cyf|convince).*      http://wiki.fsfe.org/ConvinceYourFriends        [R=permanent]
 
 # Temporary fix unitl we have a /freesoftware dir for contribute/advocacy/cwfs.en.html
 # RewriteRule ^freesoftware/freesoftware(.*) /about/basics/freesoftware$1 [redirect=temp]

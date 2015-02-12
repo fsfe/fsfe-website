@@ -8,7 +8,8 @@ PDFreaders petition form processing script.
 
 =head1 AUTHOR
 
-Sam Tuke <mail@samtuke.com>, extending Alexander Kahl <e-user@fsfe.org>
+2015 - Paul Hänsch <paul@fsfe.org>
+Previous authors: Sam Tuke <mail@samtuke.com>, extending Alexander Kahl <e-user@fsfe.org>
 
 =cut
 
@@ -37,7 +38,6 @@ use constant UPLOAD   => "$root/upload/pdfreaders";
 
 # Start actual logic
 my $form = WebBuild::FormValidation->new;
-my $content = WebBuild::DynamicContent->new;
 my $query = CGI->new;
 
 my $lang = $query->param('lang');
@@ -46,8 +46,6 @@ unless ($lang =~ m/^[a-z]{2}$/ and -f "$root/campaigns/pdfreaders/petition.$lang
   {
     $lang = 'en';
   }
-$content->layout ("$root/campaigns/pdfreaders/petition.$lang.html");
-
 $form->validates_presence_of ('name');
 $form->validates_presence_of ('surname');
 $form->validates_presence_of ('country');
@@ -55,8 +53,7 @@ $form->validate_format ('email', type => 'email');
 
 if ($form->has_errors)
   {
-    $content->content ($form->get_errors);
-    $content->render;
+    print "Location: /campaigns/pdfreaders/petition-error.$lang.html\n\n";
     exit;
   }
 elsif ($query->param ('url')) # Bot!!
@@ -84,13 +81,4 @@ open MAIL, "|/usr/lib/sendmail -t";
 print MAIL $mail;
 close MAIL;
 
-my $output = <<'EOF';
-
-<div id="flash">
-  <p>Thank you for signing - your signature has been recorded, and will be added shortly.</p>
-</div>
-
-EOF
-
-$content->content ($output);
-$content->render_utf8
+print "Location: /campaigns/pdfreaders/petition-success.$lang.html\n\n";

@@ -13,7 +13,7 @@
    height="75"
    id="svg5601"
    version="1.1"
-   inkscape:version="0.48.3.1 r9886"
+   inkscape:version="0.48.5 r10040"
    sodipodi:docname="ilovefs-banner-medium-nl.svg">
   <defs
      id="defs5603">
@@ -52,9 +52,9 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:window-width="1366"
-     inkscape:window-height="713"
+     inkscape:window-height="725"
      inkscape:window-x="0"
-     inkscape:window-y="27"
+     inkscape:window-y="0"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata5606">
@@ -64,7 +64,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -555,35 +555,41 @@
                y="516.36218" /></text>
         </g>
       </g>
-      <flowRoot
+      <text
          xml:space="preserve"
-         id="flowRoot4071"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-         transform="translate(16,104.5)"><flowRegion
-           id="flowRegion4073"><rect
-             id="rect4075"
-             width="133"
-             height="25.5"
-             x="212"
-             y="405.36218" /></flowRegion><flowPara
-           id="flowPara4077"
-           style="font-size:16px;font-weight:bold;letter-spacing:0.17px;fill:#ffffff;-inkscape-font-specification:Nimbus Sans L Bold">Valentijnsdag</flowPara></flowRoot>      <path
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         x="228"
+         y="525.10052"
+         id="text3091"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           x="228"
+           y="525.10052"
+           id="tspan3093"><tspan
+             x="228"
+             y="525.10052"
+             style="font-size:16px;font-weight:bold;letter-spacing:0.17000000000000001px;-inkscape-font-specification:Nimbus Sans L Bold;fill:#ffffff"
+             id="tspan3095">Valentijnsdag</tspan></tspan></text>
+      <path
          inkscape:connector-curvature="0"
          d="m 365.20545,522.26647 c -1.07875,0.53775 -1.93937,0.99188 -2.86925,1.77338 -0.92988,-0.78162 -1.79537,-1.23563 -2.87412,-1.77338 -1.08988,-0.54337 -2.22288,-1.311 -2.248,-2.73037 -0.0354,-2.03738 1.23962,-2.9655 2.9685,-2.99575 1.0425,-0.0181 1.694,0.44913 2.14874,1.30225 0.45526,-0.85337 1.11113,-1.32037 2.15363,-1.30225 1.72875,0.0303 3.00388,0.95837 2.96838,2.99575 -0.0246,1.41937 -1.15775,2.187 -2.24788,2.73037 z"
          style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
          id="path2654" />
-      <flowRoot
+      <text
          xml:space="preserve"
-         id="flowRoot4071-9"
-         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-         transform="translate(164.59525,104.34168)"><flowRegion
-           id="flowRegion4073-6"><rect
-             id="rect4075-9"
-             width="338.5"
-             height="32"
-             x="212"
-             y="405.36218" /></flowRegion><flowPara
-           id="flowPara4077-1"
-           style="font-size:16px;font-weight:bold;letter-spacing:0.17px;fill:#ffffff;-inkscape-font-specification:Nimbus Sans L Bold">Toon uw liefde voor Vrije Software</flowPara></flowRoot>    </g>
+         style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         x="376.59525"
+         y="524.9422"
+         id="text3097"
+         sodipodi:linespacing="125%"><tspan
+           sodipodi:role="line"
+           x="376.59525"
+           y="524.9422"
+           id="tspan3099"><tspan
+             x="376.59525"
+             y="524.9422"
+             style="font-size:16px;font-weight:bold;letter-spacing:0.17000000000000001px;-inkscape-font-specification:Nimbus Sans L Bold;fill:#ffffff"
+             id="tspan3101">Toon uw liefde voor Vrije Software</tspan></tspan></text>
+    </g>
   </g>
 </svg>

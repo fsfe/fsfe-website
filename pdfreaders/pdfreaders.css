@@ -6,7 +6,8 @@ body {
   background-color: #EEE;
   margin: 0;
 }
-header#top, section#main {
+
+header#top, section#main, body div#notifications {
   width: 70%;
   margin: 0 15%;
   border-style: none solid;
@@ -14,8 +15,12 @@ header#top, section#main {
   border-color: #693;
   background-color: #FFF;
 }
-section#main {
+section#main, body div#notifications {
   padding: 1em;
+}
+.alert.warning.red {
+  background-color: #EB8;
+  padding: .5em;
 }
 
 header {

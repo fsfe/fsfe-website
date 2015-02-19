@@ -59,9 +59,10 @@ function send_registration_mail() {
 
 	$message = eval_template('registerevent/mail.php', $data);
 
-	$to = $_POST['email'].",fellowship@fsfeurope.org";
+	$to = $_POST['email'].",eal@fsfe.org,fellowship@fsfeurope.org";
 	$subject = "event registration: " . $_POST['name'];
 	$headers = "From: no-reply@fsfe.org\n"
+		. "CC: eal@3rik.cc\n"
 		. "MIME-Version: 1.0\n"
 		. "Content-Type: multipart/mixed; boundary=boundary";
 

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<readers> <reader priority="90">
+  <name>Zathura</name>
+  <logo>zathura.png</logo>
+  <homepage>http://pwmt.org/projects/zathura/</homepage>
+  <license>BSD like</license>
+  <platform><name>GNU/Linux</name><installer>http://pwmt.org/projects/zathura/download/</installer></platform>
+  <language>en</language>
+  <language>fr</language>
+  <language>de</language>
+</reader> </readers>

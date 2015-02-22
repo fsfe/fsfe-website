@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<readers> <reader priority="10">
+  <name>Evince</name>
+  <logo>evince.png</logo>
+  <homepage>http://projects.gnome.org/evince/</homepage>
+  <license>GPL</license>
+  <platform><name>GNU/Linux</name><installer>https://wiki.gnome.org/Apps/Evince/Downloads</installer></platform>
+  <platform><name>Windows</name><installer>https://wiki.gnome.org/Apps/Evince/Downloads</installer></platform>
+  <language>en</language>
+  <language>fr</language>
+  <language>de</language>
+
+  <description>
+    De document-lezer van het GNOME-project kan naast PDF ook verschillende andere documentformaten weergeven.
+  </description>
+</reader> </readers>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<readers> <reader priority="50">
+  <name>gv</name>
+  <logo>gv.png</logo>
+  <homepage>http://www.gnu.org/software/gv/</homepage>
+  <license>GPLv3</license>
+  <platform><name>GNU/Linux</name><installer>http://ftp.gnu.org/gnu/gv/</installer></platform>
+  <platform><name>Mac OS X</name><installer>http://trac.macports.org/browser/trunk/dports/print/gv/Portfile</installer></platform>
+  <language>en</language>
+  <language>fr</language>
+  <language>de</language>
+
+  <description>Een lichte PostScript en PDF-lezer met een xaw3d-interface. Opvolger van ghostview.</description>
+</reader> </readers>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<readers> <reader priority="40">
+  <name>qpdfview</name>
+  <logo>qpdfview.png</logo>
+  <homepage>https://launchpad.net/qpdfview</homepage>
+  <license>GPLv2+</license>
+  <platform><name>GNU/Linux</name><installer>https://launchpad.net/qpdfview/+download</installer></platform>
+  <platform><name>NetBSD</name><installer>http://pkgsrc.se/print/qpdfview</installer></platform>
+  <platform><name>FreeBSD</name><installer>http://svnweb.freebsd.org/ports/head/print/qpdfview/</installer></platform>
+  <language>az</language>
+  <language>bg</language>
+  <language>bs</language>
+  <language>ca</language>
+  <language>cs</language>
+  <language>da</language>
+  <language>de</language>
+  <language>en</language>
+  <language>eo</language>
+  <language>es</language>
+  <language>eu</language>
+  <language>fr</language>
+  <language>gl</language>
+  <language>he</language>
+  <language>hr</language>
+  <language>it</language>
+  <language>ms</language>
+  <language>pl</language>
+  <language>pt</language>
+  <language>ro</language>
+  <language>ru</language>
+  <language>sk</language>
+  <language>tr</language>
+  <language>ug</language>
+  <language>uk</language>
+  <language>zh</language>
+
+  <description>Een eenvoudige PDF-lezer met tabbladen.</description>
+</reader> </readers>

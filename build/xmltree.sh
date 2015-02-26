@@ -164,9 +164,11 @@ build_xmlstream(){
   shortname="$1"
   lang="$2"
 
+  metaname="$(echo "$shortname" |sed -r 's;.*/\.\.(/.+)$;\1;')"
   infile="${shortname}.${lang}.xhtml"
   texts_xml=$(get_textsfile $lang)
   fundraising_xml=$(get_fundraisingfile $lang)
+
   
   date="$(date +%Y-%m-%d)"
   time="$(date +%H:%M:%S)"
@@ -177,7 +179,7 @@ build_xmlstream(){
 	<buildinfo
 	  date="$date"
 	  original="en"
-	  filename="$shortname"
+	  filename="$metaname"
 	  dirname="$dirname"
 	  language="$lang"
 	  outdated="$outdated"
@@ -220,7 +222,7 @@ mes(){
     echo "$1"
     shift 1
   done \
-  | sed -r 's;( |#);\\\\\1;g' \
+  | sed -r 's;([ #]);\\\1;g' \
   | tr '\n' ' '
 }
 
@@ -231,7 +233,8 @@ xhtml_maker(){
   shortname=$(get_shortname "$infile")
   lang=$(get_language "$infile")
 
-  outfile="${outpath}/$(basename "$shortname").${lang}.html"
+  outbase="$(basename "$shortname").${lang}.html"
+  outfile="${outpath}/${outbase}"
   outlink="${outpath}/$(basename "$shortname").html.$lang"
 
   processor="$(get_processor "$shortname")"
@@ -241,44 +244,64 @@ xhtml_maker(){
   fundraisingfile="$(get_fundraisingfile "$lang")"
   sources="$(list_sources "${shortname}.sources" "$lang" |while read src; do mes "$src"; done)"
 
-  cat <<-MakeEND
-	all: $(mes "$outfile" "$outlink")
-	$(mes "$outfile"): $(mes "$infile" "$processor" "$textsen" "$textsfile" "$fundraisingfile" "$menufile") $sources
-	~$0 build_xmlstream "${shortname}.${lang}.xhtml" |xsltproc -o "${outfile}" "${processor}" -
-	
-	$(mes "$outlink"):
-	~ln -s "${outfile}" "${outlink}"
-	MakeEND
+  cat <<MakeEND
+all: $(mes "$outfile" "$outlink")
+$(mes "$outfile"): $(mes "$infile" "$processor" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" "$outpath") $sources
+	$0 build_xmlstream "${shortname}.${lang}.xhtml" |xsltproc -o "${outfile}" "${processor}" -
+
+$(mes "$outlink"): $(mes "$outfile" "$outpath")
+	ln -sf "${outbase}" "${outlink}"
+MakeEND
 
   if [ ! -f "$(dirname "$infile")/index.${lang}.xhtml" ] && \
      [ "$(basename "$shortname")" = "$(basename $(dirname "$infile"))" ]; then
-    cat <<-MakeEND
-	all: $(mes "$outpath/index.${lang}.html" "$outpath/index.html.$lang")
-	$(mes "$outpath/index.${lang}.html"): $(mes "$outfile")
-	~ln -s "$outfile" "$outpath/index.${lang}.html"
-	$(mes "$outpath/index.html.$lang"): $(mes "$outfile")
-	~ln -s "$outfile" "$outpath/index.html.$lang"
-	MakeEND
+    cat <<MakeEND
+all: $(mes "$outpath/index.${lang}.html" "$outpath/index.html.$lang")
+$(mes "$outpath/index.${lang}.html"): $(mes "$outfile" "$outpath")
+	ln -sf "$outbase" "$outpath/index.${lang}.html"
+$(mes "$outpath/index.html.$lang"): $(mes "$outfile" "$outpath")
+	ln -sf "$outbase" "$outpath/index.html.$lang"
+MakeEND
   fi
 }
 
 copy_maker(){
   infile="$1"
   outfile="$2/$(basename "$infile")"
-  cat <<-MakeEND
-	all: $(mes "$outfile")
-	$(mes "$outfile"): $(mes "$infile")
-	~cp "$infile" "$outfile"
-	MakeEND
+  cat <<MakeEND
+all: $(mes "$outfile")
+$(mes "$outfile"): $(mes "$infile")
+	cp "$infile" "$outfile"
+MakeEND
+}
+
+xslt_dependencies(){
+  file="$1"
+
+  cat "$file" \
+  | tr '\n' ' ' \
+  | sed -r 's;(<xsl:(include|import)[^>]*>);\n\1\n;g' \
+  | sed -nr '/<xsl:(include|import)[^>]*>/s;^.*href="([^"]*)".*$;\1;gp'
+}
+
+xslt_maker(){
+  file="$1"
+  dir="$(dirname "$file")"
+
+  deps="$(xslt_dependencies "$file" |while read dep; do mes "$dir/$dep"; done)"
+  cat <<MakeEND
+$(mes "$file"): $deps
+	touch "$file"
+MakeEND
 }
 
 dir_maker(){
   dir="$1"
-  cat <<-MakeEND
-	all: $(mes "$dir")
-	$(mes "$dir"):
-	~mkdir -p "$dir"
-	MakeEND
+  cat <<MakeEND
+all: $(mes "$dir")
+$(mes "$dir"):
+	mkdir -p "$dir"
+MakeEND
 }
 
 tree_maker(){
@@ -286,7 +309,7 @@ tree_maker(){
   output="$(echo "$2" |sed -r 's:/$::')"
 
   echo ".PHONY: all"
-  echo ".RECIPEPREFIX := ~"
+  #echo ".RECIPEPREFIX := ~"
   find "$input" \
   | sed -r "/(^|\/)\.svn($|\/)|^\.\.$/d;s;^$input/*;;" \
   | while read filepath; do
@@ -294,10 +317,10 @@ tree_maker(){
     if [ -d "$inpfile" ]; then
       dir_maker "$output/$filepath"
     else case "$filepath" in
-      *.xsl) true;;
+      *.xsl) xslt_maker "$inpfile";;
       *.xml) true;;
       *.sources) true;;
-      *.xhtml) xhtml_maker "$inpfile" "$output/$(dirname "$filepath")";;
+      *.[a-z][a-z].xhtml) xhtml_maker "$inpfile" "$output/$(dirname "$filepath")";;
       *) copy_maker "$inpfile" "$output/$(dirname "$filepath")";;
     esac; fi
   done

@@ -110,7 +110,8 @@
       <div class="cycle-pager"/>
       
       <!-- For DFD <xsl:for-each select="/buildinfo/textsetbackup/campaigns/campaign[@id='dfd' or @id='amaelle' or @id='freesociety' or @id='appelbaum']"> -->
-      <xsl:for-each select="/buildinfo/textsetbackup/campaigns/campaign[@id='freesociety' or @id='amaelle' or @id='appelbaum']"> 
+      <xsl:for-each select="/buildinfo/textsetbackup/campaigns/campaign[@id='dfd' or @id='amaelle' or @id='appelbaum']"> 
+      <!-- <xsl:for-each select="/buildinfo/textsetbackup/campaigns/campaign[@id='freesociety' or @id='amaelle' or @id='appelbaum']"> -->
         <xsl:choose>
           <xsl:when test="count(/buildinfo/textset/campaigns/campaign[@id = current()/@id]) > 0">
             <xsl:apply-templates select="/buildinfo/textset/campaigns/campaign[@id = current()/@id]" mode="slideshow" />

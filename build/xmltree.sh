@@ -19,7 +19,7 @@ include_xml(){
     | tr '\n\t\r' '   ' \
     | sed -r 's:<(\?[xX][mM][lL]|!DOCTYPE) [^>]+>::g
               s:<[^!][^>]*>::;
-              s:</[^>]*>([^<]*((<[^>]+/>|<![^>]+>|<\?[^>]+>)[^<]*)*)?$:\1:;'
+              s:</[^>]*>([^<]*((<[^>]+/>|<!([^>]|<[^>]*>)*>|<\?[^>]+>)[^<]*)*)?$:\1:;'
   fi
 }
 
@@ -218,7 +218,7 @@ build_xmlstream(){
 mes(){
   # make escape... escape a filename for ridiculous make syntax
   # probably not complete
-  while [ -n "$1" ]; do
+  while [ -n "$*" ]; do
     echo "$1"
     shift 1
   done \
@@ -247,7 +247,7 @@ xhtml_maker(){
   cat <<MakeEND
 all: $(mes "$outfile" "$outlink")
 $(mes "$outfile"): $(mes "$infile" "$processor" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" "$outpath") $sources
-	$0 build_xmlstream "${shortname}.${lang}.xhtml" |xsltproc -o "${outfile}" "${processor}" -
+	$0 build_xmlstream "${shortname}.${lang}.xhtml" |xsltproc "${processor}" - >"${outfile}"
 
 $(mes "$outlink"): $(mes "$outfile" "$outpath")
 	ln -sf "${outbase}" "${outlink}"
@@ -267,10 +267,11 @@ MakeEND
 
 copy_maker(){
   infile="$1"
-  outfile="$2/$(basename "$infile")"
+  outpath="$2"
+  outfile="$outpath/$(basename "$infile")"
   cat <<MakeEND
 all: $(mes "$outfile")
-$(mes "$outfile"): $(mes "$infile")
+$(mes "$outfile"): $(mes "$infile" "$outpath")
 	cp "$infile" "$outfile"
 MakeEND
 }
@@ -328,8 +329,9 @@ tree_maker(){
 
 build_into(){
   target="$1"
+  ncpu="$(cat /proc/cpuinfo |grep ^processor |wc -l)"
 
-  tree_maker "$basedir" "$target" |make -f -
+  tree_maker "$basedir" "$target" |make -j $ncpu -f -
 }
 
 command="$1"

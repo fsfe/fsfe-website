@@ -32,8 +32,8 @@ list_sources(){
 
   if [ -r "$sourcesfile" ]; then
     sed -rn 's;:global$;*.[a-z][a-z].xml;gp' "$sourcesfile" \
-    | while read glob; do ls "$basedir/"$glob 2>/dev/null; done \
-    | sed -r 's:\.[a-z]{2}\.xml$::' \
+    | while read glob; do echo "$basedir/"$glob 2>/dev/null; done \
+    | sed -r 's:\.[a-z]{2}\.xml( |$):\n:g' \
     | sort -u \
     | while read base; do
       if [ -r "${base}.${lang}.xml" ]; then
@@ -41,9 +41,9 @@ list_sources(){
       elif [ -r "${base}.en.xml" ]; then
         echo "${base}.en.xml"
       else
-        ls ${base}.[a-z][a-z].xml |head -n1
+        ls "${base}".[a-z][a-z].xml |head -n1
       fi
-    done 
+    done 2>/dev/null
   fi
 }
 
@@ -144,15 +144,15 @@ get_processor(){
   # expects the shortname of the file as input (i.e. the
   # the file path without language and file endings)
 
-  filename="$(basename "$1").xsl"
-  location="$(dirname "$1")"
+  shortname="$1"
 
-  until [ -r "$location/$filename" -o -r "$location/default.xsl" -o "$location" = / ]; do
-    location="$(dirname "$location")"
-  done
-  if [ -r "$location/$filename" ]; then
-    echo "$location/$filename"
-  elif [ -r "$location/default.xsl" ]; then
+  if [ -r "${shortname}.xsl" ]; then
+    echo "${shortname}.xsl"
+  else
+    location="$(dirname "$shortname")"
+    until [ -r "$location/default.xsl" -o "$location" = . -o "$location" = / ]; do
+      location="$(dirname "$location")"
+    done
     echo "$location/default.xsl"
   fi
 }
@@ -242,14 +242,14 @@ xhtml_maker(){
   textsen="$(get_textsfile "en")"
   menufile="$basedir/tools/menu-global.xml"
   fundraisingfile="$(get_fundraisingfile "$lang")"
-  sources="$(list_sources "${shortname}.sources" "$lang" |while read src; do mes "$src"; done)"
+  sources="$(list_sources "${shortname}.sources" "$lang")"
 
   cat <<MakeEND
 all: $(mes "$outfile" "$outlink")
-$(mes "$outfile"): $(mes "$infile" "$processor" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" "$outpath") $sources
+$(mes "$outfile"): $(mes "$infile" "$processor" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" "$outpath" $sources)
 	$0 build_xmlstream "${shortname}.${lang}.xhtml" |xsltproc "${processor}" - >"${outfile}"
 
-$(mes "$outlink"): $(mes "$outfile" "$outpath")
+$(mes "$outlink"): $(mes "$outpath")
 	ln -sf "${outbase}" "${outlink}"
 MakeEND
 
@@ -257,9 +257,9 @@ MakeEND
      [ "$(basename "$shortname")" = "$(basename $(dirname "$infile"))" ]; then
     cat <<MakeEND
 all: $(mes "$outpath/index.${lang}.html" "$outpath/index.html.$lang")
-$(mes "$outpath/index.${lang}.html"): $(mes "$outfile" "$outpath")
+$(mes "$outpath/index.${lang}.html"): $(mes "$outpath")
 	ln -sf "$outbase" "$outpath/index.${lang}.html"
-$(mes "$outpath/index.html.$lang"): $(mes "$outfile" "$outpath")
+$(mes "$outpath/index.html.$lang"): $(mes "$outpath")
 	ln -sf "$outbase" "$outpath/index.html.$lang"
 MakeEND
   fi

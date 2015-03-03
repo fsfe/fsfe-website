@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<employeeset>
+  <employee id="full/m">Voltijdsmedewerker</employee>
+  <employee id="full/f">Voltijdsmedewerkster</employee>
+  <employee id="part/m">Deeltijdsmedewerker</employee>
+  <employee id="part/f">Deeltijdsmedewerkster</employee>
+  <employee id="intern/m">Stagiair</employee>
+  <employee id="intern/f">Stagiaire</employee>
+  <!--You should use the intern function rather than this, but maybe this will be needed-->
+  <employee id="freelancer/m">Freelancer</employee>
+  <employee id="freelancer/f">Freelancer</employee>
+</employeeset>

@@ -246,10 +246,10 @@ xhtml_maker(){
 
   cat <<MakeEND
 all: $(mes "$outfile" "$outlink")
-$(mes "$outfile"): $(mes "$infile" "$processor" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" "$outpath" $sources)
+$(mes "$outfile"): $(mes "$infile" "$processor" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" $sources)
 	$0 build_xmlstream "${shortname}.${lang}.xhtml" |xsltproc "${processor}" - >"${outfile}"
 
-$(mes "$outlink"): $(mes "$outpath")
+$(mes "$outlink"):
 	ln -sf "${outbase}" "${outlink}"
 MakeEND
 
@@ -257,9 +257,9 @@ MakeEND
      [ "$(basename "$shortname")" = "$(basename $(dirname "$infile"))" ]; then
     cat <<MakeEND
 all: $(mes "$outpath/index.${lang}.html" "$outpath/index.html.$lang")
-$(mes "$outpath/index.${lang}.html"): $(mes "$outpath")
+$(mes "$outpath/index.${lang}.html"):
 	ln -sf "$outbase" "$outpath/index.${lang}.html"
-$(mes "$outpath/index.html.$lang"): $(mes "$outpath")
+$(mes "$outpath/index.html.$lang"):
 	ln -sf "$outbase" "$outpath/index.html.$lang"
 MakeEND
   fi
@@ -271,7 +271,7 @@ copy_maker(){
   outfile="$outpath/$(basename "$infile")"
   cat <<MakeEND
 all: $(mes "$outfile")
-$(mes "$outfile"): $(mes "$infile" "$outpath")
+$(mes "$outfile"): $(mes "$infile")
 	cp "$infile" "$outfile"
 MakeEND
 }
@@ -297,12 +297,17 @@ MakeEND
 }
 
 dir_maker(){
-  dir="$1"
-  cat <<MakeEND
-all: $(mes "$dir")
-$(mes "$dir"):
-	mkdir -p "$dir"
-MakeEND
+  input="$(echo "$1" |sed -r 's:/$::')"
+  output="$(echo "$2" |sed -r 's:/$::')"
+
+  curpath="$output"
+  find "$input" -depth -type d \
+  | sed -r "/(^|\/)\.svn($|\/)|^\.\.$/d;s;^$input/*;;" \
+  | while read filepath; do
+    oldpath="$curpath"
+    curpath="$output/$filepath"
+    echo "$oldpath" |grep -q "^$curpath" || mkdir -p "$curpath"
+  done
 }
 
 tree_maker(){
@@ -310,20 +315,17 @@ tree_maker(){
   output="$(echo "$2" |sed -r 's:/$::')"
 
   echo ".PHONY: all"
-  #echo ".RECIPEPREFIX := ~"
-  find "$input" \
+  find "$input" -type f \
   | sed -r "/(^|\/)\.svn($|\/)|^\.\.$/d;s;^$input/*;;" \
   | while read filepath; do
     inpfile="${input}/$filepath"
-    if [ -d "$inpfile" ]; then
-      dir_maker "$output/$filepath"
-    else case "$filepath" in
+    case "$filepath" in
       *.xsl) xslt_maker "$inpfile";;
       *.xml) true;;
       *.sources) true;;
       *.[a-z][a-z].xhtml) xhtml_maker "$inpfile" "$output/$(dirname "$filepath")";;
       *) copy_maker "$inpfile" "$output/$(dirname "$filepath")";;
-    esac; fi
+    esac
   done
 }
 
@@ -331,6 +333,7 @@ build_into(){
   target="$1"
   ncpu="$(cat /proc/cpuinfo |grep ^processor |wc -l)"
 
+  dir_maker "$basedir" "$target"
   tree_maker "$basedir" "$target" |make -j $ncpu -f -
 }
 

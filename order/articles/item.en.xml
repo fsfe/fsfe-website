@@ -4,6 +4,16 @@
 
 <itemset>
 
+  <item type="tshirt" id="tshirt-dfd-lightblue" price="20.00" date="2015-03-04">
+    <available size="S"/>
+    <available size="M"/>
+    <available size="L"/>
+    <available size="XL"/>
+ 	<image
+      small="/order/articles/images/thumbnails/tshirt-dfd-lightblue-front.jpg"
+      large="/order/articles/images/tshirt-dfd-lightblue-front.jpg"/>
+  </item>
+
   <item type="tshirt" id="tshirt-dfd-black" price="20.00" date="2014-03-18">
     <available size="M"/>
     <available size="L"/>
@@ -171,6 +181,16 @@
       large="/order/articles/images/girlie-dfd-purple-front.jpg"/>
   </item>
 -->
+  <item type="girlie" id="girlie-dfd-blue" price="20.00" date="2015-03-04">
+    <available size="S"/>
+    <available size="L"/>
+    <available size="M"/>
+    <available size="XL"/>
+ 	<image
+      small="/order/articles/images/thumbnails/girlie-dfd-blue-front.jpg"
+      large="/order/articles/images/girlie-dfd-blue-front.jpg"/>
+  </item>
+
   <item type="girlie" id="girlie-dfd-black" price="20.00" date="2014-03-18">
     <available size="S"/>
     <available size="L"/>
@@ -207,6 +227,19 @@
     <image
       small="/order/articles/images/thumbnails/girlie-hacking-black-back.jpg"
       large="/order/articles/images/girlie-hacking-black-back.jpg"/>
+  </item>
+
+  <item type="girlie" id="girlie-hacking-grey" price="18.00" date="2015-03-04">
+    <available size="S"/>
+    <available size="M"/>
+    <available size="L"/>
+    <available size="XL"/>
+    <image
+      small="/order/articles/images/thumbnails/girlie-hacking-grey-front.jpg"
+      large="/order/articles/images/girlie-hacking-grey-front.jpg"/>
+    <image
+      small="/order/articles/images/thumbnails/girlie-hacking-grey-back.jpg"
+      large="/order/articles/images/girlie-hacking-grey-back.jpg"/>
   </item>
 
   <item type="hooded" id="hooded-fsfs-black-zip" price="50.00" date="2014-03-08">

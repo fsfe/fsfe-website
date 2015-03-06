@@ -4,14 +4,30 @@
 
 <itemset>
 
-  <item type="tshirt" id="tshirt-dfd-lightblue" price="20.00" date="2015-03-04">
+  <item type="tshirt" id="tshirt-ilovefs-lightblue" price="20.00" date="2015-03-04">
     <available size="S"/>
     <available size="M"/>
     <available size="L"/>
     <available size="XL"/>
  	<image
-      small="/order/articles/images/thumbnails/tshirt-dfd-lightblue-front.jpg"
-      large="/order/articles/images/tshirt-dfd-lightblue-front.jpg"/>
+      small="/order/articles/images/thumbnails/tshirt-ilovefs-lightblue-front.jpg"
+      large="/order/articles/images/tshirt-ilovefs-lightblue-front.jpg"/>
+ 	<image
+      small="/order/articles/images/thumbnails/tshirt-ilovefs-lightblue-back.jpg"
+      large="/order/articles/images/tshirt-ilovefs-lightblue-back.jpg"/>
+  </item>
+
+  <item type="tshirt" id="tshirt-dfd-kaki" price="20.00" date="2015-03-04">
+    <available size="S"/>
+    <available size="M"/>
+    <available size="L"/>
+    <available size="XL"/>
+ 	<image
+      small="/order/articles/images/thumbnails/tshirt-dfd-kaki-front.jpg"
+      large="/order/articles/images/tshirt-dfd-kaki-front.jpg"/>
+ 	<image
+      small="/order/articles/images/thumbnails/tshirt-dfd-kaki-back.jpg"
+      large="/order/articles/images/tshirt-dfd-kaki-back.jpg"/>
   </item>
 
   <item type="tshirt" id="tshirt-dfd-black" price="20.00" date="2014-03-18">

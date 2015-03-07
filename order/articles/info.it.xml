@@ -1,22 +1,67 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <infoset>
+
+  <info id="tshirt-dfd-kaki">
+    <name>Meglietta del DFD campaign 2015</name>
+    <description>
+      <p>
+        Maglietta con il testo "open standards" davanti, e l'URL "documentfreedom.org" dietro.
+      </p>
+    </description>
+  </info>
+
+  <info id="tshirt-ilovefs-lightblue">
+    <name>"I love Free Software", blu chiaro</name>
+    <description>
+      <p>
+        Maglietta con il testo "I love Free Software" davanti, e l'URL "fsfe.org" dietro.
+			</p>
+    </description>
+  </info>
+
+  <info id="tshirt-ilovefs-black">
+    <name>"I love Free Software", nero</name>
+    <description>
+      <p>
+        Maglietta con il testo "I love Free Software" davanti, e l'URL "fsfe.org" dietro.
+			</p>
+    </description>
+  </info>
+
+  <info id="tshirt-dfd-kaki">
+    <name>Meglietta del DFD campaign 2015</name>
+    <description>
+      <p>
+        Maglietta con il testo "open standards" davanti, e l'URL "documentfreedom.org" dietro.
+      </p>
+    </description>
+  </info>
+
+  <info id="tshirt-dfd-black">
+    <name>Meglietta del DFD campaign 2014, nero</name>
+    <description>
+      <p>
+        Maglietta con il testo "open standards" davanti, e l'URL "documentfreedom.org" dietro.
+      </p>
+    </description>
+  </info>
+
   <info id="tshirt-hacking-black">
     <name>Hacking for Freedom, nero</name>
     <description>
       <p>
         Maglietta con il logo della Fellowship e il testo "Hacking for
-        Freedom" davanti, e l'URL del sito della Fellowship (www.fsfe.org)
-        dietro.
+        Freedom" davanti, e l'URL "www.fsfe.org" dietro.
       </p>
     </description>
   </info>
 
-  <info id="hooded-fsfs-black">
+  <info id="hooded-fsfs-black-zip">
     <name>Free Software Free Society, felpa, nero</name>
     <description>
       <p>
-        Felpa con cappuccio, con un logo piccolo di Fellowship davanti e la scritta
+        Felpa con cappuccio e cerniera, con un logo piccolo di Fellowship davanti e la scritta
         "Free Software Free Society" sul retro.
       </p>
     </description>
@@ -38,6 +83,53 @@
       <p>
         Felpa con un piccolo logo della Fellowship davanti e il testo
         "Free Software Free Society" dietro.
+      </p>
+    </description>
+  </info>
+
+  <info id="girlie-dfd-blue">
+    <name>Meglietta del DFD campaign 2015, azurro</name>
+    <description>
+      <p>
+        Maglietta con il testo "open standards" davanti, e l'URL "documentfreedom.org" dietro.
+      </p>
+    </description>
+  </info>
+
+  <info id="girlie-dfd-black">
+    <name>Meglietta del DFD campaign 2014, nero</name>
+    <description>
+      <p>
+        Maglietta con il testo "open standards" davanti, e l'URL "documentfreedom.org" dietro.
+      </p>
+    </description>
+  </info>
+
+  <info id="girlie-ilovefs-beige">
+    <name>"I love Free Software", beige</name>
+    <description>
+      <p>
+        Maglietta con il testo "I love Free Software" davanti, e l'URL "fsfe.org" dietro.
+			</p>
+    </description>
+  </info>
+
+  <info id="girlie-hacking-grey">
+    <name>Hacking for Freedom, grigio</name>
+    <description>
+      <p>
+        Maglietta con il logo della Fellowship e il testo "Hacking for
+        Freedom" davanti, e l'URL "www.fsfe.org" dietro.
+      </p>
+    </description>
+  </info>
+
+  <info id="girlie-hacking-black">
+    <name>Hacking for Freedom, nero</name>
+    <description>
+      <p>
+        Maglietta con il logo della Fellowship e il testo "Hacking for
+        Freedom" davanti, e l'URL "www.fsfe.org" dietro.
       </p>
     </description>
   </info>
@@ -79,4 +171,50 @@
       </p>
     </description>
   </info>
+
+  <info id="pin-fellowship-magnet">
+    <name>Spilla Fellowship magnetici</name>
+    <description>
+      <p>
+        Una spilla con il logo della Fellowship.
+      </p>
+    </description>
+  </info>
+
+  <info id="cufflinks-fellowship">
+    <name>Gemelli Fellowship</name>
+    <description>
+      <p>
+        Gemelli con il logo della Fellowship.
+      </p>
+    </description>
+  </info>
+
+  <info id="pin-gnu">
+    <name>Spilla GNU</name>
+    <description>
+      <p>
+        Una spilla con il GNU.
+      </p>
+    </description>
+  </info>
+
+  <info id="pin-fellowship-magnet">
+    <name>Spilla GNU magnetici</name>
+    <description>
+      <p>
+        Una spilla con il GNU.
+      </p>
+    </description>
+  </info>
+
+  <info id="cufflinks-gnu">
+    <name>Gemelli GNU</name>
+    <description>
+      <p>
+        Gemelli con il GNU.
+      </p>
+    </description>
+  </info>
+
 </infoset>

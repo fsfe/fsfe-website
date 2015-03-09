@@ -1,6 +1,26 @@
 #!/bin/sh
 
-basedir="$(dirname $0)/.."
+print_help(){
+  cat <<-EOHELP
+
+	Usage:
+	------------------------------------------------------------------------------
+	
+	$0 build_xmlstream "file.xhtml"
+	  Compile an xml stream from the specified file, additional sources will be
+	  determined and included automatically. The stream is suitable for being
+	  passed into xsltproc.
+	
+	$0 tree_maker "input_dir" "output_dir"
+	  Generate a set of make rules to build the website contained in input_dir.
+	  output_dir should be the www root of a web server.
+	
+	$0 build_into [options] "target_dir"
+	  Perform the page build. Write output to target_dir. The input directory
+	  is determined from the build scripts own location.
+	
+	EOHELP
+}
 
 include_xml(){
   # include second level elements of a given XML file
@@ -216,8 +236,8 @@ build_xmlstream(){
 }
 
 mes(){
-  # make escape... escape a filename for ridiculous make syntax
-  # probably not complete
+  # make escape... escape a filename for make syntax
+  # possibly not complete
   while [ -n "$*" ]; do
     echo "$1"
     shift 1
@@ -227,6 +247,9 @@ mes(){
 }
 
 xhtml_maker(){
+  # generate make rules for building html files out of xhtml
+  # account for included xml files and xls rules
+
   infile="$1"
   outpath="$2"
 
@@ -266,6 +289,8 @@ MakeEND
 }
 
 copy_maker(){
+  # generate make rule for copying a plain file
+
   infile="$1"
   outpath="$2"
   outfile="$outpath/$(basename "$infile")"
@@ -286,6 +311,9 @@ xslt_dependencies(){
 }
 
 xslt_maker(){
+  # find external references in a xsl file and generate
+  # Make dependencies accordingly
+
   file="$1"
   dir="$(dirname "$file")"
 
@@ -297,6 +325,10 @@ MakeEND
 }
 
 dir_maker(){
+  # set up directory tree for output
+  # optimise by only issuing mkdir commands
+  # for leaf directories
+
   input="$(echo "$1" |sed -r 's:/$::')"
   output="$(echo "$2" |sed -r 's:/$::')"
 
@@ -305,12 +337,14 @@ dir_maker(){
   | sed -r "/(^|\/)\.svn($|\/)|^\.\.$/d;s;^$input/*;;" \
   | while read filepath; do
     oldpath="$curpath"
-    curpath="$output/$filepath"
+    curpath="$output/$filepath/"
     echo "$oldpath" |grep -q "^$curpath" || mkdir -p "$curpath"
   done
 }
 
 tree_maker(){
+  # walk through file tree and issue Make rules according to file type
+
   input="$(echo "$1" |sed -r 's:/$::')"
   output="$(echo "$2" |sed -r 's:/$::')"
 
@@ -321,6 +355,7 @@ tree_maker(){
     inpfile="${input}/$filepath"
     case "$filepath" in
       *.xsl) xslt_maker "$inpfile";;
+      Makefile) true;;
       *.xml) true;;
       *.sources) true;;
       *.[a-z][a-z].xhtml) xhtml_maker "$inpfile" "$output/$(dirname "$filepath")";;
@@ -329,14 +364,52 @@ tree_maker(){
   done
 }
 
-build_into(){
-  target="$1"
-  ncpu="$(cat /proc/cpuinfo |grep ^processor |wc -l)"
+logstatus(){
+  # pipeline atom to write data streams into a log file
+  # log file will be created inside statusdir
+  # if statusdir is not enabled, we won't log to a file
+  file="$1"
 
-  dir_maker "$basedir" "$target"
-  tree_maker "$basedir" "$target" |make -j $ncpu -f -
+  if [ -n "$statusdir" ] && mkdir -p "$statusdir"; then
+    tee "$statusdir/$file"
+  else
+    cat
+  fi
 }
 
+build_into(){
+  ncpu="$(cat /proc/cpuinfo |grep ^processor |wc -l)"
+
+  while [ -n "$*" ]; do
+    case "$1" in
+      -s|--statusdir|--status-dir)
+        shift 1
+        statusdir="$1"
+        ;;
+      --source)
+        shift 1
+        basedir="$1"
+        ;;
+      -d|--dest|--destination)
+        shift 1
+        target="$1"
+        ;;
+      *)
+        [ -z "$target" ] && target="$1" || print_help
+        ;;
+    esac
+    shift 1
+  done
+  [ -z "$target" ] && print_help && exit 1
+
+  dir_maker "$basedir" "$target"
+  tree_maker "$basedir" "$target" \
+  | logstatus Makefile \
+  | make -j $ncpu -f - \
+  | logstatus buildlog
+}
+
+basedir="$(dirname $0)/.."
 command="$1"
 [ -n "$1" ] && shift 1
 case "$command" in
@@ -347,26 +420,8 @@ case "$command" in
     tree_maker "$1" "$2"
     ;;
   build_into)
-    build_into "$1"
+    build_into $*
     ;;
-  * ) cat <<-EOHELP
-
-	Usage:
-	------------------------------------------------------------------------------
-	
-	$0 build_xmlstream "file.xhtml"
-	  Compile an xml stream from the specified file, additional sources will be
-	  determined and included automatically. The stream is suitable for being
-	  passed into xsltproc.
-	
-	$0 tree_maker "input_dir" "output_dir"
-	  Generate a set of make rules to build the website contained in input_dir.
-	  output_dir should be the www root of a web server.
-	
-	$0 build_into "target_dir"
-	  Perform the page build. Write output to target_dir. The input directory
-	  is determined from the build scripts own location.
-	
-	EOHELP
+  *) print_help
     ;;
 esac

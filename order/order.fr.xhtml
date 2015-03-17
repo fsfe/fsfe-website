@@ -7,27 +7,45 @@
 
   <body>
     <h1>La boutique de la FSFE</h1>
-    
+
+    <div id="introduction">
+      <div class="image">
+        <img src="/graphics/stars-smaller.png" alt="Stars" />
+      </div>
+
+      <p>
+				Affichez votre amour pour le Logiciel Libre et montrez le en arborant l'un des articles ci-dessous. Les vetements sont un excellent moyen de sensibilisation pour le Logiciel Libre auprès des communautés locales, de plus chaque achat d'articles contribue au financement des projets soutenus par la FSFE.
+        <br />
+        <br />
+				Nous avons également en stock des <a href="#other-items">articles de bureau, des mugs, badges et des porte-clés</a>.
+      </p>
+
+    </div>
+
     <form action="/cgi-bin/weborder.pl" method="post">
 
-      <h2>T-Shirts homme</h2>
- 
+      <h2>T-Shirts</h2>
+
       <dynamic-content type="tshirt"/>
 
       <h2>T-Shirts femme</h2>
- 
+
       <dynamic-content type="girlie"/>
 
       <h2>Sweatshirts à capuche</h2>
- 
+
       <dynamic-content type="hooded"/>
+
+      <h2>Vêtements pour bébés</h2>
+
+      <dynamic-content type="baby-clothes"/>
 
       <a name="other-items"><h2>Autres objets</h2></a>
 
       <dynamic-content type="other"/>
-      
+
       <h2>Objets promotionnels</h2>
-    
+
       <p>
 	Visitez la <a href="/contribute/spreadtheword.html#promo-material">page de commande de supports d'information</a> pour commander des dossiers et des tracts.
       </p>
@@ -37,11 +55,11 @@
       <p>
         <input type="hidden" name="shipping" value="1"/>
         <input type="radio" name="_shipping" value="3"/>
-        Expédition en Allemagne (3,00 €)<br/>
+        Expédition en Allemagne (3,00 € )<br/>
         <input type="radio" name="_shipping" value="7" checked="Y"/>
-        Expédition en Europe (7,00 €)<br/>
+        Expédition en Europe (7,00 € )<br/>
         <input type="radio" name="_shipping" value="12"/>
-        Expédition en dehors de l'Europe (12,00 €)<br/>
+        Expédition en dehors de l'Europe (12,00 € )<br/>
       </p>
 
       <table>
@@ -71,7 +89,6 @@
         </tr>
       </table>
 
-      <!-- Should help against spam -->
       <p class="n">
         Merci de ne rien écrire dans cette case&#160;:
         <input type="text" size="40" name="url"/>

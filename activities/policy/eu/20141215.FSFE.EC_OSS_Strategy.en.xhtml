@@ -1,0 +1,865 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<html>
+<head>
+    <title>Considerations on Updating the European Commission's Open
+    Source Strategy - Public Bodies - FSFE</title>
+</head>
+
+<body class="article" microformats="h-entry">
+    <p id="category"><a href="/activities/policy/eu/policy-goals.html">
+		Policy goals 2014 - 2019</a></p>
+
+
+		<h1>Considerations on Updating the European Commission's Open Source
+		Strategy</h1>
+
+		<div id="introduction">
+		  <p>
+		  The European Commission has a published <a
+		  href="http://ec.europa.eu/dgs/informatics/oss_tech/index_en.htm">"Open
+		  Source Strategy"</a>, describing the use it makes of
+		  Free Software internally. In November
+		  2014, the Commission asked FSFE for input to an
+		  upcoming revision of this "strategy". In response to
+		  this request, we produced the document below. 
+		  </p>
+		  <p>
+		   The EC's current "strategy" is rather limited in
+		   scope and ambition, and the Commission has
+		   indicated that future versions of the strategy will
+		   remain within similar constraints. Accordingly, we
+		   have opted to focus our input on achieving the
+		   maximum possible amount of progress within those
+		   limits. In parallel, we are continuing our efforts
+		   to set the Commission, and other European
+		   institutions, on a course for software freedom in
+		   both policy and practice.
+		  </p>
+		</div>
+		   
+		  
+	
+<!-- Table of contents -->
+	<!--<h2>Table of Contents</h2>
+	<ul>
+		<li><a href="#sec-1">1. Introduction</a></li>
+		<li><a href="#sec-2">2. Contributing to external Free Software
+		projects</a>
+		<ul>
+			<li><a href="#sec-2-1">2.1. Clarify copyright ownership among EC and
+			agencies</a></li>
+			<li><a href="#sec-2-2">2.2. Create a policy</a></li>
+			<li><a href="#sec-2-3">2.3. Make contributing simple</a></li>
+			<li><a href="#sec-2-4">2.4. Incentivise developers to
+			contribute</a></li>
+			<li><a href="#sec-2-5">2.5. Under which licenses should the
+			European Commission release contributions to Free Software
+			projects?</a></li>
+			<li><a href="#sec-2-6">2.6. Contributor agreements</a></li>
+		</ul></li>
+		<li><a href="#sec-3">3. Distributing software developed by or for
+		the EC</a>
+		<ul>
+			<li><a href="#sec-3-1">3.1. Why should the European Commission
+			release its own programs as Free Software?</a></li>
+			<li><a href="#sec-3-2">3.2. Current Free Software releases by the
+			European Commission</a></li>
+			<li><a href="#sec-3-3">3.3. Making releasing software under a Free
+			Software license easy</a></li>
+		</ul></li>
+		<li><a href="#sec-4">4. Further considerations</a>
+		<ul>
+			<li><a href="#sec-4-1">4.1. Liability</a>
+			<ul>
+			<li><a href="#sec-4-1-1">4.1.1. Outbound liability</a></li>
+			<li><a href="#sec-4-1-2">4.1.2. Inbound liability</a></li>
+			</ul></li>
+			<li><a href="#sec-4-2">4.2. Remarks on software
+			procurement</a></li>
+		</ul></li>
+		<li><a href="#sec-5">5. Conclusions</a></li>
+	</ul>-->
+
+<!-- Introduction -->
+	<div><h2 id="sec-1">1. Introduction</h2>
+		<div>
+			<p>The purpose of this document is to provide input on a number of
+			specific questions to the team tasked with updating the EC's Open
+			Source Strategy, which is meant to guide the decisions of those in
+			charge of the Commission's IT systems and IT procurement, with respect
+			to contributing and releasing software under a Free Software license.<sup>
+			<a id="fnr.1" name="fnr.1" href="#fn.1">1</a></sup> The	ultimate goal
+			of this paper is to enable the European Commission to maximise the
+			value for money it obtains from its IT systems, by leveraging the
+			advantages of Free Software and open file formats.</p>
+			
+			<p>This document does not constitute legal advice. If legal advice from a
+			specialist is required, FSFE will be honoured to facilitate contacts
+			with competent lawyers.</p>
+			
+			<p>While in this document we focus on the European Commission, the
+			information contained herein applies equally to other EU institutions,
+			as well as to public bodies more generally.</p>
+			
+			<p>The terms "Free Software" and "open source software" both refer to
+			computer programs which recipients may <a href="http://fsfe.org/about/basics/freesoftware.en.html">
+			use, study, share, and improve</a>. In this document, the term "Free
+			Software" is preferred. Both terms cover the same set of programs<sup>
+			<a id="fnr.2" name="fnr.2" href="#fn.2">2</a></sup>.</p>
+		</div>
+	</div>
+
+<!-- Contributing to external Free Software projects -->	
+	<div><h2 id="sec-2">2. Contributing to external Free Software projects</h2>
+		<div>
+		<p>The Commission, and other European institutions, are currently
+		making use of numerous Free Software programs and applications
+		<sup><a id="fnr.3" name="fnr.3" href="#fn.3">3</a></sup>.
+		At the same time, the Commission admits that it is "in a situation
+		of effective captivity with Microsoft as regards its desktop
+		operating systems and office productivity tools"<sup><a id="fnr.4"
+		name="fnr.4" class="footref" href="#fn.4">4</a></sup>. Making
+		greater use of Free Software tools is an essential step in loosening
+		the bonds of this captivity. In addition, the Commission's IT
+		services are adapting, patching and improving Free Software
+		programs for their own use. If the European Commission contributes
+		to outside Free Software tools which it uses itself, those
+		contributions will help to make	those tools more useful, quickly
+		and in a cost-effective manner.</p>
+	
+		<p>Permitting such contributions is the most cost-effective way of
+		improving the tools that the Commission is using. Ideally, these
+		contributions will become part of the mainline project; this would
+		eliminate the need for the Commission's developers to repeatedly apply
+		Commission-specific patches to subsequent versions of the programs in
+		question, freeing up their time for more useful tasks. (It should be
+		noted that such improvements are out of the question with non-free
+		software; here, the Commission is fully dependent on the vendor of the
+		program for any fixes or improvements.</p>
+		
+		<p>Already in 2005, the Commission published a "Guideline for Public
+		Administrations on Partnering with Free Software Developers"
+		<sup><a id="fnr.5" name="fnr.5" href="#fn.5">5</a></sup>, which
+		remains a useful resource.</p>
+				
+		<p>It is useful to distinguish between contributing to an external
+		project as a way to improve it (e.g. by providing upstream patches and
+		modules), and releasing an internally-developed program to the public
+		under a Free Software license.</p>
+		
+		<p>Contributions to an existing project are only a matter of internal
+		organization of the Commission. Contrary to what happens if the public
+		entity distributes software under a closed or "proprietary" license
+		software which may compete with existing applications in the same
+		market, contributing to a public Free Software project does not put
+		the Commission in a situation of competition with commercial actors.</p></div>
+	</div>
+
+	<div><h3 id="sec-2-1">2.1. Clarify copyright ownership among EC and agencies</h3>
+		<div>
+			<p>Currently, the copyright on code and documentation created
+			by Commission staff is held by the Commission. The contracts
+			with service suppliers normally state that all software
+			developed for the Commission in the context of the contract
+			is owned by the	Commission. The relevant director-general 
+			decides on issues related to copyright and trademarks, after
+			having consulted the legal service and the Joint Research
+			Centre.</p>
+			
+			<p>When contributions are created by contractors external to
+			the Commission, copyright ownership will depend on the terms
+			of the contract in question. Where the Commission holds
+			copyright on the work created under these contracts, it may
+			decide to distribute the work in question under a Free
+			Software license of its choice.</p>
+			
+			<p>Alternatively, the EC could choose to let copyright in
+			the newly created code and documentation remain with the
+			contractor, and impose a contractual obligation for the
+			contractor to publish these assets in a suitable manner under
+			a Free Software license (and perhaps participate in their
+			maintenance for a specified period of time).</p>
+			
+			<p>As the expert on the specific project, the contractor is
+			in a much better position to handle the distribution of the
+			software and documentation in a productive and sustainable
+			way, by bringing the necessary technical and legal expertise
+			to bear. At the same time, it is important to recognise that
+			distributing software is not among the Commission's primary
+			responsibilities; this task should therefore be handled in
+			the most efficient manner possible. For this approach to work,
+			the Commission however needs to set the right requirements
+			and	incentives. (This is an approach adopted in Sweden, for
+			example.)</p>
+		</div>
+	</div>
+
+	<div><h3 id="sec-2-2">2.2. Create a policy</h3>
+		<div>
+			<p>Contributions to outside Free Software projects by
+			developers working for the Commission could be enabled
+			through a simple policy signed by the relevant Director
+			General. This policy could be approved after consultation
+			with the legal service and the joint research centre.</p>
+			
+			<p>As an important first step, the EC should state publicly
+			that developers working on Commission software projects and
+			using or implementing Free Software solutions can contribute
+			to the upstream	projects any bug fixes and new functionality.</p>
+			
+			<p>Where a more explicit policy is required, it should be as
+			simple as possible, both in administrative and linguistic
+			terms. The policy should contain the following elements:</p>
+			
+			<ul>
+				<li>Rationale for the policy
+					<ul>
+						<li>e.g. Free Software serves to avoid lock-in,
+						and	enables a more effective IT strategies in
+						the public sector.</li>
+					</ul>
+				</li>
+				
+				<li>Operational part, describing steps that developers
+				should follow:
+					<ul>
+						<li>Identification of the Free Software project
+						to which developers will contribute (the "target
+						project")</li>
+						
+						<li>Identification of copyright and trademark
+						ownership regime for potential contributions from
+						the EC</li>
+			
+						<li>Identification of the target project's license
+						and contribution policy</li>
+			
+						<li>Identification of person(s) involved in the
+						process, and their approval (if required)</li>
+			
+						<li>Identification of required documentation</li>
+			
+						<li>Example header files</li>
+					</ul>
+				</li>
+			</ul>
+			
+			<p>For cases where explicit approval is required, the policy
+			should stipulate a clear approval path, a time period during
+			which the developer can expect to receive approval, e.g. one
+			week.</p>
+		</div>
+	</div>
+			
+	<div><h3 id="sec-2-3">2.3. Make contributing simple</h3>
+		<div>
+			<p>If useful adaptations of software tools to the Commission's
+			needs are actually to occur, making such improvements simple
+			is the first step. In order to ensure that these improvements
+			will be contained in future versions of the outside project,
+			it is important to simplify the process for developers to
+			contribute these improvements "upstream" to the outside project
+			<sup><a id="fnr.6" name="fnr.6" href="#fn.6">6</a></sup>.</p>
+			
+			<p>We recommend to use the above-mentioned policy to give
+			developers working for the Commission and other European
+			institutions blanket permissions for small contributions
+			that are directly related to Free Software projects which
+			are currently in use within the institution in question.</p>
+			
+			<p>For more substantial contributions, or in cases where the
+			usefulness of the contribution requires further explanation,
+			we suggest that the Commission Free Software policy should
+			outline and set up a simple, efficient approval process.
+			This process should provide developers with a clear decision
+			path, and a clear timeline indicating how long after their
+			inquiry they can expect to receive a decision.</p>
+			
+			<p>In order to make the process efficient, we recommend to
+			apply the Commission's rules on public statements by its
+			employees in a sensible manner. As a rule, source code does
+			not serve to convey	views or opinions. Concerns that
+			developers through their contributions might make statements
+			that would be potentially damaging to the Commission are in 
+			our view largely unwarranted. While it is theoretically
+			conceivable that a developer might choose to make damaging
+			statements as part of his or her contribution, current
+			Commission employment rules and policies provide ample means
+			to handle any such incidents, in the very unlikely case that
+			they were to occur at all.</p>
+			
+			<p>Theoretically, one could argue that while the
+			contributions will not convey views or opinions, the fact
+			that the Commission contributes to a particular Free Software
+			product may be conceived as a statement of support/approval
+			of this product. While the author has never once encountered
+			this sort of problem in practice during the past 10	years,
+			such concerns could be addressed with a public disclaimer
+			posted alongside an explanation of the Commission's contribution
+			policy, or even alongside the updated Open Source Strategy.</p>
+		</div>
+	</div>
+
+	<div><h3 id="sec-2-3">2.4. Incentivise developers to contribute</h3>
+		<div>
+			<p>If useful adaptations of software tools to the Commission's
+			needs are actually to occur, making such improvements simple
+			is only the first step. In addition, we recommend a few simple
+			measures to incentivise developers in this regard.</p>
+
+			<p>The first measure is to set up efficient and painless
+			processes for contribution. Not only should contributing to
+			the mainline project not require additional effort; doing so
+			should ideally be <i>easier</i>	for a developer than applying
+			a patch only to the copy of the	software that is being used
+			within the Commission.</p>
+			
+			<p>The second measure is to permit developers to attach their name to
+			their contributions, while the copyright remains with the European
+			Commission or another EU institution. Contributions to Free Software
+			projects are an important and valued component of a developer's
+			experience and resume, since they permit future employers to get a
+			realistic impression of a potential hire's skills. Permitting
+			developers to attach their name to the contributions they make would
+			allow them to build up a portfolio of demonstrable work experience
+			during their time with the Commission, and would make the Commission
+			a more attractive employer.</p>
+			
+			<p>In practice, the best path would be to allow developers to write the
+			copyright notices on their contribution in roughly the following way:</p>
+			
+			<blockquote><p>This code contributed by Jane Smith
+			&lt;jane.smith@ec.europa.eu&gt;. &#169; 2014 European
+			Commission.</p></blockquote>
+			
+			<p>It should be noted that both measures are simple steps
+			to take, and require little more than an administrative
+			decision. They also do not add costs; on the contrary, they
+			may well contribute to reducing costs for maintenance and
+			adaptions in the medium term.</p>
+		</div>
+	</div>
+
+	<div><h3 id="sec-2-5">2.5. Under which licenses should the European
+	Commission release contributions to Free Software projects?</h3>
+		<div>
+			<p>When developers associated with the Commission contribute
+			to existing Free Software projects, such contributions will
+			as a rule need to be made under the same Free Software license
+			as the main project. In fact, most projects would refuse
+			contributions under any other license, because mixing different
+			licenses in the same project would quickly lead to conflicting
+			sets of copyright rules, creating problems that are difficult
+			or impossible to resolve.</p>
+		</div>
+	</div>
+
+	<div><h3 id="sec-2-6">2.6. Contributor agreements</h3>
+		<div>
+			<p>Some Free Software projects demand that contributors
+			assign the copyright in their contributions to an organisation,
+			usually either a company or a foundation acting as a fiduciary.
+			These agreements have the purpose of making projects with a
+			large number of contributors easier to manage on the legal
+			level.</p>
+			
+			<p>If developers, or the organisations where they work, are required to
+			sign a contribution agreement in order to contribute to a project, we
+			recommend to submit the proposed agreement to a competent lawyer for
+			consideration. Most likely, such questions will need to be decided by
+			the Director General after having consulted the Commission's Legal
+			Service and the relevant department in the Joint Research Centre. A
+			repository of approved contribution agreements could be maintained, to
+			avoide repeated legal review. The required effort should be weighed
+			against the benefit of having the software in question adapted to the
+			Commission's needs<sup><a id="fnr.7" name="fnr.7" href="#fn.7">7</a></sup>.</p>
+		</div>
+	</div>
+
+<!-- Distributing software developed by or for the EC -->
+	<div><h2 id="sec-3">3 Distributing software developed by or for the EC</h2>
+		<div>
+			<p>Public administrations are always at liberty to develop software for
+			their own purposes, or contract out such work to third parties. Once
+			this software has been developed, the public administration may decide
+			to make the program available to others as well.</p>
+		</div>
+	</div>
+
+	<div><h3 id="sec-3-1">3.1. Why should the European Commission release
+	its own programs as Free Software?</h3>
+		<div>
+			<p>Software is a <a href="http://en.wikipedia.org/wiki/Rivalry_%2528economics%2529">non-rival</a>
+			good: If a citizen or company makes use of a computer program
+			paid for by the European Commission, this use does not in any
+			way interfere with the Commission's own use of that program<sup><a id="fnr.8" name="fnr.8" href="#fn.8">8</a></sup>.
+			Quite to the contrary: The program might actually generate
+			additional value for the citizen or company which was not
+			previously available. According to a study by Carlo Daffara, Free
+			Software contributes 450 billion Euro each year to Europe's economy,
+			in direct savings and increased productivity and efficiency<sup><a id="fnr.9" name="fnr.9" href="#fn.9">9</a></sup>.</p>
+
+			<p>It is important to understand that the value of any software released
+			by the Commission under a Free Software license is in the eye of the
+			beholder, i.e. the external user. As with Open Data, external users
+			may put these programs to useful purposes that the Commission could
+			not predict ahead of time, thus generating added value for Europe's
+			economy at no additional cost to the taxpayer<sup><a id="fnr.10" name="fnr.10" href="#fn.10">10</a></sup>.
+			Since distributing software is not among the primary responsibilities
+			of the European Commission, it is important that this process
+			should be designed to be as efficient as possible.</p>
+
+			<p>The European Commission is ultimately funded through the taxes of
+			European citizens. It is only logical that wherever possible, the
+			assets created with public funds should be made available to the
+			public. On its Joinup portal<sup><a id="fnr.11" name="fnr.11" href="#fn.11">11</a></sup>,
+			the Commission offers a platform for public administrations
+			to make their software available for re-use. Some European
+			regions, such as Andalusia and the Basque Country in Spain,
+			are requiring all programs developed with public funds to be
+			made available as Free Software. These policies follow an
+			economic logic of stimulating the development of competent IT
+			companies in those regions, and we consider them an example which the
+			European Commission might wish to follow.</p>
+		</div>
+	</div>
+
+	<div><h3 id="sec-3-2">3.2. Current Free Software releases by the
+	European Commission</h3>
+		<div>
+			<p>The European Commission has developed a Free Software license of its
+			own explicitely for this purpose: The European Union Public License
+			(EUPL)<sup><a id="fnr.12" name="fnr.12" href="#fn.12">12</a></sup>.</p>
+
+			<p>Already now, the The European Commission is making numerous Free
+			Software solutions publicly available through the <a href="https://joinup.ec.europa.eu/">Joinup</a> repository
+			and collaborative platform, a project by DG DIGIT's ISA
+			Programme. Examples include:</p>
+
+			<ul>
+				<li>Open ePrior (now being implemented by the Belgian Federal and the
+				government of the Flemish region)</li>
+
+				<li>Open eTrustEX</li>
+
+				<li>ECI Validation Tool for Statements of Support (VTECI)</li>
+
+				<li>ECI Online Collection Software (OCS)</li>
+
+				<li>SPOCS-Simple Procedures Online for Crossborder Services</li>
+
+				<li>Tarîqa</li>
+
+				<li>Multilingual Electronic Dossier</li>
+
+				<li>Inspire Registry</li>
+
+				<li>Inspire Geoportal</li>
+
+				<li>Inspire validator</li>
+
+				<li>mAggregator</li>
+
+				<li>mDownloader</li>
+
+				<li>ePetition (renamed euSurvey)</li>
+
+				<li>Stork</li>
+
+				<li>Joinup (now reused by the government of Vietnam,
+				South Australia and Australia and New Zealand)</li>
+
+				<li>OS toolbox</li>
+
+				<li>Echo Offline eSingle form</li>
+			</ul>
+
+			<p>These examples indicate that the EC already has substantial practical
+			experience in sharing software. We recommend to systematically review
+			the lessons learned, identify potential improvements to the process,
+			and implement them.</p>
+		</div>
+	</div>
+
+	<div><h3 id="sec-3-3">3.3. Making releasing software under a Free Software license easy</h3>
+		<div>
+			<p>As discussed in relation to contributions to existing projects
+			discussed above, the decision procedure within the Commission is the
+			same in both cases: the relevant Director General consult the Legal
+			Service and the Joint Research Centre and takes a decision.</p>
+
+			<p>When releasing software, we recommend that the Commission should
+			follow accepted best practices of the Free Software
+			community. Projects should have a modular structure, and should
+			ideally be hosted on a public version control platform that makes it
+			easy for both in-house and outside developers to contribute to the
+			project.</p>
+
+			<p>Before distributing or publishing newly developed software, the
+			Commission should carefully check that the finished program complies
+			with all license requirements on inbound code (i.e. existing Free
+			Software components used in the project). The EC should also select a
+			Free Software license under which to distribute the project. In the
+			past, the Commission has given preference to the
+			<a href="https://joinup.ec.europa.eu/software/page/eupl">European Union Public
+			License</a> (EUPL). Depending on the inbound code being reused, it may be
+			necessary to distribute the project under another license, such as the
+			<a href="https://www.gnu.org/licenses/gpl">GNU General Public License</a>.</p>
+		</div>
+	</div>
+
+<!-- Further considerations -->
+
+	<div><h2 id="sec-4">4. Further considerations</h2></div>
+	
+	<div><h3 id="sec-4-1">4.1. Liability</h3></div>
+	
+	<div><h4 id="sec-4-1-1">4.1.1. Outbound liability</h4>
+		<div>
+			<p>The question of liability is sometimes raised in connection with
+			oublic bodies releasing Free Software, or to contribute to external
+			Free Software projects. While this is a prudent consideration to
+			undertake, it does not present an obstacle to such releases or
+			contributions in practice.</p>
+
+			<p>This section is based on a legal opinion published by Dr
+			Till Jaeger and Dr Carsten Schulz, which in addition to being the
+			leading document in this field can be considered to have stood the
+			test of time<sup><a id="fnr.13" name="fnr.13" href="#fn.13">13</a></sup>.
+			The opinion is based on German liability law, which carries
+			perhaps the most stringent liability rules in the EU.</p>
+
+			<p>According to Jaeger and Schulz, software that is distributed free of
+			charge has the legal status of a gift. This means that the
+			institution providing the software (in this case, the Commission or
+			another European institution) will only be liable for defects which
+			it has maliciously concealed<sup><a id="fnr.14" name="fnr.14" href="#fn.14">14</a></sup>.</p>
+
+			<p>Should the program turn out to infringe any third-party rights (such
+			as copyright, patents or trademarks held by others), the Commission
+			would only be liable if it had introduced such infringements knowingly
+			and willingly.<sup><a id="fnr.15" name="fnr.15" href="#fn.15">15</a></sup>.</p>
+
+
+			<p>In addition to these considerations, it is worth pointing out that
+			neither the author of this document (despite a decade of personal
+			experience in the field) nor any of the experts that have contributed
+			to this text are aware of a single successful liability complaint
+			brought against a person or institution who has distributed Free
+			Software free of charge.</p>
+		</div>
+	</div>
+
+	<div><h4 id="sec-4-1-2">4.1.2. Inbound liability</h4>
+		<div>
+			<p>Where the Commission uses Free Software produced externally, the
+			developers and distributors of the programs in question normally
+			cannot be held liable for any problems or malfunctions. Where the
+			Commission deems it necessary to have an external party to hold liable
+			for problems, it may enter into a service contract with a suitable
+			company.</p>
+
+			<p>It is worth noting that in practice, there is little or no difference
+			between Free and non-free software in this regard. The makers of
+			non-free programs typically design their end-user license agreements
+			to exclude liability to the maximum extent possible under the
+			law. This means that even in extreme circumstances, software makers
+			can only be held liable for defects which they have maliciously
+			concealed.</p>
+		</div>
+	</div>
+	
+	<div><h3 id="sec-4-2">4.2. Remarks on software procurement</h3>
+		<div>
+			<p>Free Software represents only a part of the software used by the
+			Commission. Significant benefits are available from updates to the
+			Commission's approach to software procurement.</p>
+
+			<p>IT procurement is a complex and dynamic field. It would therefore be
+			prudent for the Commission to stay abreast with the rapid development
+			of best practices in the field. A particularly valuable example are
+			the "Red Lines for IT procurement" announced by the UK Government in
+			January 2014<sup><a id="fnr.16" name="fnr.16" href="#fn.16">16</a></sup>.</p>
+
+			<p>Besides putting an explicit limit on the size of individual contracts,
+			these rules state that:</p>
+			
+			<blockquote><ul>
+				<li>companies with a contract for service provision will not be
+				allowed to provide system integration in the same part of
+				government</li>
+
+				<li>there will be no automatic contract extensions; the government
+				won’t extend existing contracts unless there is a compelling
+				case</li>
+
+				<li>new hosting contracts will not last for more than 2 years</li>
+			</ul></blockquote>
+			
+			<div>
+				<p><img src="/graphics/UKGsuppliers2010.png" alt="UKGsuppliers2010.png" /></p>
+				<p>Figure 1: Geographical distribution of the UK Government's IT supply chain, 2010</p>
+			</div>
+			
+			<p>Pointing out that "[s]marter purchasing realised savings of £3.8
+			billion in 2012 to 2013 alone", the government's chief procurement
+			officer said that these steps were intended to counter monopolistic or
+			oligopolistic behaviour among suppliers<sup><a id="fnr.17" name="fnr.17" href="#fn.17">17</a></sup>
+			of precisely the sort that have lead the Commission into its
+			current "effective captivity" to Microsoft in particular.</p>
+
+			<p>When procuring new solutions, the Commission should consider future
+			exit costs during the process of assessing new solutions, along the
+			lines of the UK Government's Technology Code of Practice:</p>
+
+			<blockquote>
+				<p>"Ensure a level-playing field for open source software. Demonstrate
+				an active and fair consideration of using open source software –
+				taking account of the total lifetime cost of ownership of the
+				solution, including exit and transition costs."<sup><a id="fnr.18" name="fnr.18" href="#fn.18">18</a></sup></p>
+			</blockquote>
+			
+			<div>
+				<p><img src="/graphics/UKGsuppliers2014.png" alt="UKGsuppliers2014.png" /></p>
+				<p>Figure 2: Geographical distribution of the UK Government's IT supply chain, 2014</p>
+			</div>
+			
+			<p>In addition, the UK Government's Open Standards principles deal with
+			the issue of exit costs:</p>
+
+			<blockquote>
+				<p>"As part of examining the total cost of ownership of a
+				government IT solution, the costs of exit for a component should be
+				estimated at the start of implementation. As unlocking costs are
+				identified, these must be associated with the incumbent
+				supplier/system and not be associated with cost of new IT projects."<sup><a id="fnr.19" name="fnr.19" href="#fn.19">19</a></sup></p>
+			</blockquote>
+			
+			<p>Taken together, the UK Government's Open Standards policy and the
+			changes made to IT procurement have already resulted in a significant
+			diversification of the government's IT supply chain, as indicated by
+			the changed geographical distribution of the government's IT
+			suppliers (see Figures 1 and 2).</p>
+
+
+			<p>Concerning framework agreements, Sweden's central procurement agency
+			Kammarkollegiet offers a useful example. The agency has recently
+			published a set of framework agreements for software and
+			services. Each agreement covers Free Software, non-free software, and
+			cloud services at the same level, making it possible to directly
+			compare value for money for each particular use case.</p>		
+		</div>
+	</div>
+
+<!-- Conclusions -->
+
+	<div><h2 id="sec-5">5. Conclusions</h2>
+		<div>
+			<p>The European Commission stands to gain significant advantages from
+			allowing its developers and contractors to contribute to outside Free
+			Software projects. By distributing its own programs as Free Software,
+			the Commission can enable the interoperability gains and efficiency
+			savings that come with reuse. Such releases also make valuable assets
+			available to the taxpayers who paid for them, enabling further
+			economic exploitation. Provided that appropriate policies and
+			processes are put in place, neither contributions to outside projects
+			nor the release of programs as Free Software carries any significant
+			risks or downsides for the Commission.</p>
+			
+			<p>Main considerations related to contributing to external
+			Free Software projects:</p>
+
+			<ul>
+				<li>Allowing the EC's developers and contractors to contribute to
+				upstream projects currently in use at the Commission is an
+				effective way of ensuring that these programs fill suit the
+				Commission's needs in future. Such contributions will not, as a
+				rule, put the Commission in competition with commercial actors.</li>
+
+				<li>The first step in enabling developers and contractors to contribute
+				to upstream projects is to clarify who holds copyright in their
+				contributions, and therefore is in a position to decide on the
+				license conditions under which the contribution shall be distributed.</li>
+
+				<li>To actually enable contributions to outside upstream projects, the
+				EC should publish a statement clarifying that such contributions by
+				Commission staff and contractors are permitted and desired.</li>
+
+				<li>As a next step, the Commission should create a simple policy for
+				more substantial contributions and other cases where explicit
+				approval is required. This policy should state a clear approval
+				path for contribution requests, along with the maximum time that
+				the requesting developer will have to wait for an answer.</li>
+
+				<li>Besides making the process of contributing to outside projects as
+				simple as possible, the Commission can incentivise its developers
+				to engage in such contributions by allowing them to include their
+				name in the copyright notice (while copyright remains with the EC).</li>
+			</ul>
+
+			<p>Main considerations related to the EC releasing programs developed by
+			the EC as Free Software:</p>
+
+			<ul>
+				<li>Software created by or for the European Commission is ultimately
+				funded by European taxpayers. The Commission should make such
+				software available for reuse by default; Free Software licenses
+				provide an efficient mechanism for this.</li>
+
+				<li>Already now, the EC distributes numerous programs under Free
+				Software licenses, and has gained significant experience in this
+				regard.</li>
+
+				<li>When distributing its own programs as Free Software, the Commission
+				is free to choosing a license which it considers suitable. If
+				pre-existing Free Software components were used in the project, the
+				EC's choice of license will have to fulfil the license requirements
+				of those inbound components.</li>
+
+				<li>The EC would only be liable for defects in programs it distributes
+				if it has maliciously concealed those defects. In practice, it is
+				extremely unlikely that such programs will present a source of
+				liability claims against the Commission.</li>
+			</ul>
+
+			<p>In addition to these considerations, we recommend that the EC should
+			review its approach to software procurement to take into account best
+			practices that were recently developed, such as the standards and
+			procurement policies issued by the UK government in 2013-14.</p>		
+		</div>
+	</div>
+
+<!-- Footnotes  -->
+	<blockquote>
+		<h2>Footnotes: </h2>
+				<p><sup><a id="fn.1" name="fn.1" href="#fnr.1">1</a></sup>
+					The author wishes to express his gratitude to the following
+					experts who contributed to this document: Karel de Vriendt, Carlo
+					Piana, Malcolm Bain, Gijs Hillenius, Daniel Melin. Any mistakes are
+					the author's own.
+				</p>
+
+				<p><sup><a id="fn.2" name="fn.2" href="#fnr.2">2</a></sup>
+					A detailed explanation is available at
+					<a href="http://fsfe.org/about/basics/freesoftware.en.html">http://fsfe.org/about/basics/freesoftware.en.html</a>
+				</p>
+
+				<p><sup><a id="fn.3" name="fn.3" href="#fnr.3">3</a></sup>
+					<a href="http://ec.europa.eu/dgs/informatics/oss_tech/index_en.htm">http://ec.europa.eu/dgs/informatics/oss_tech/index_en.htm</a>
+				</p>
+
+				<p><sup><a id="fn.4" name="fn.4" href="#fnr.4">4</a></sup>
+					European Commission, "Future Office Automation Environment",
+					p.1. Document released by Secretary General Catherine Day in response
+					to questions from MEP Andersdotter on January 31, 2014.
+				</p>
+
+				<p><sup><a id="fn.5" name="fn.5" href="#fnr.5">5</a></sup>
+					<a href="https://joinup.ec.europa.eu/elibrary/case/guidelines-public-administrations-partnering-free-software-developers-2005">https://joinup.ec.europa.eu/elibrary/case/guidelines-public-administrations-partnering-free-software-developers-2005</a>
+				</p>
+
+				<p><sup><a id="fn.6" name="fn.6" href="#fnr.6">6</a></sup>
+					An important resource in this regard is the
+					<a href="https://joinup.ec.europa.eu/sites/default/files/84/fc/28/Report%2520on%2520policies%2520and%2520initiatives%2520on%2520sharing%2520and%2520re-use%2520of%2520assets.pdf">Report on policies
+					and initiatives on sharing and re-use</a> published
+					by the ISA programme in February 2013.
+				</p>
+
+				<p><sup><a id="fn.7" name="fn.7" href="#fnr.7">7</a></sup>
+					FSFE offers a <a href="http://fsfe.org/activities/ftf/fla.en.html">Fiduciary Licensing Agreement</a>
+					as a legal tool for	Free Software projects that wish
+					to centralise their copyright in a single legal entity.
+				</p>
+
+				<p><sup><a id="fn.8" name="fn.8" ref="#fnr.8">8</a></sup>
+					The opposite would be the case
+					for an office chair or desk: It could not reasonably
+					be used by a Commission official at the same time
+					as it is being used by a citizen or company.
+				</p>
+
+				<p><sup><a id="fn.9" name="fn.9" href="#fnr.9">9</a></sup>
+					Daffara, Carlo (2012): Estimating
+					the Economic Contribution of Open Source Software to
+					the European Economy. In: Shane Coughlan (ed.):
+					First OpenForum Academy Conference Proceedings. Available at
+					<a href="http://www.openforumacademy.org/library/ofa-research/first-conference-proceedingsA4.pdf">http://www.openforumacademy.org/library/ofa-research/first-conference-proceedingsA4.pdf</a>
+				</p>
+
+				<p><sup><a id="fn.10" name="fn.10" href="#fnr.10">10</a></sup>
+					See <a href="http://data.gov.uk/about">http://data.gov.uk/about</a>
+				</p>
+
+				<p><sup><a id="fn.11" name="fn.11" href="#fnr.11">11</a></sup>
+					<a href="http://joinup.ec.europa.eu">http://joinup.ec.europa.eu</a>
+				</p>
+
+				<p><sup><a id="fn.12" name="fn.12" href="#fnr.12">12</a></sup>
+					See <a href="https://joinup.ec.europa.eu/software/page/eupl">https://joinup.ec.europa.eu/software/page/eupl</a>
+				</p>
+
+				<p><sup><a id="fn.13" name="fn.13" href="#fnr.13">13</a></sup>
+					Dr Till Jaeger, Dr Carsten Schulz:
+					Gutachten zu ausgewählten rechtlichen Aspekten der
+					Open Source Software. JBB Rechtsanwälte, 2005.
+					Available at <i>www.ifross.org/ifross\_html/art47.pdf</i>.
+				</p>
+
+				<p><sup><a id="fn.14" name="fn.14" href="#fnr.14">14</a></sup>
+					Jaeger/Schulz 2005, p.67
+				</p>
+
+				<p><sup><a id="fn.15" name="fn.15" href="#fnr.15">15</a></sup>
+					Jaeger/Schulz 2005, p.69
+				</p>
+
+				<p><sup><a id="fn.16" name="fn.16" href="#fnr.16">16</a></sup>
+					<a href="https://www.gov.uk/government/news/government-draws-the-line-on-bloated-and-wasteful-it-contracts">https://www.gov.uk/government/news/government-draws-the-line-on-bloated-and-wasteful-it-contracts</a>
+				</p>
+
+				<p><sup><a id="fn.17" name="fn.17" href="#fnr.17">17</a></sup>
+					See <a href="http://www.bbc.com/news/uk-politics-25884915">http://www.bbc.com/news/uk-politics-25884915</a>
+				</p>
+
+				<p><sup><a id="fn.18" name="fn.18" href="#fnr.18">18</a></sup>
+					<a href="https://www.gov.uk/service-manual/technology/code-of-practice.html">https://www.gov.uk/service-manual/technology/code-of-practice.html</a>
+				</p>
+
+				<p><sup><a id="fn.19" name="fn.19" href="#fnr.19">19</a></sup>
+					<a href="https://www.gov.uk/government/publications/open-standards-principles/open-standards-principles#principle-4-we-adopt-open-standards-that-support-sustainable-cost">Gov.uk Open Standards Principle 4</a>
+				</p>
+	</blockquote>
+	
+</body>
+	
+<sidebar promo="our-work">
+	<h2>Table of Contents</h2>
+	<ul>
+		<li><a href="#sec-1">1. Introduction</a></li>
+		<li><a href="#sec-2">2. Contributing to external Free Software
+		projects</a></li>		
+		<li><a href="#sec-3">3. Distributing software developed by or for
+		the EC</a></li>		
+		<li><a href="#sec-4">4. Further considerations</a></li>
+		<li><a href="#sec-5">5. Conclusions</a></li>
+	</ul>
+	<h2>Our policy goals</h2>
+	<ul>
+		<li><a href="/activities/policy/eu/policy-goals/consumer-rights.html">Consumer rights and device sovereignty</a></li>
+		<li><a href="/activities/policy/eu/policy-goals/privacy.html">Privacy, surveillance and cryptography</a></li>
+		<li><a href="/activities/policy/eu/policy-goals/distributed-systems.html">Distributed systems</a></li>
+	</ul>
+</sidebar>
+
+ <author id="gerloff" />
+<date>
+          <original content="2014-12-15" />
+</date>
+<download type="pdf" content="/activities/policy/eu/20141215.FSFE.EC_OSS_Strategy-input.pdf"/>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

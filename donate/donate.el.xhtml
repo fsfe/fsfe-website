@@ -5,13 +5,10 @@
     <title>FSFE - Δωρίστε τώρα!</title>
   </head>
 
-  <body>
+  <body id="donate-fsfe">
     <h1>Δωρίστε</h1>
 
     <div id="introduction">
-      <div class="image">
-        <img src="money.jpg" alt="Δωρίστε"/>
-      </div>
 
       <p>
         Το Ευρωπαϊκό Ίδρυμα Ελεύθερου Λογισμικού (Free Software Foundation
@@ -31,17 +28,18 @@
 
     <h3>Ηλεκτρονική πληρωμή</h3>
 
-    <form action="/cgi-bin/donate.pl" method="post" id="donate">
-      <p>
+    <form action="/cgi-bin/donate.pl" method="post" id="donate" role="form">
+        <p class="form-group">
         <label for="name">Όνομα (φυσικό ή νομικό πρόσωπο)</label>
         <input id="name" name="name" type="text"/>
-        (Εκτός αν θέλετε να παραμείνετε ανώνυμοι, το όνομα αυτό θα αναφερθεί
-        στη <a href="thankgnus.html">λίστα με τους δωροθέτες</a>)
+        <span class="help-block">(Εκτός αν θέλετε να παραμείνετε ανώνυμοι,
+        το όνομα αυτό θα αναφερθεί στη 
+        <a href="thankgnus.html">λίστα με τους δωροθέτες</a>)</span>
       </p>
-      <p>
+      <p class="checkbox">
         <input name="anonymous" type="checkbox"/> Επιθυμώ να παραμείνω ανώνυμος
       </p>
-      <p>
+      <p class="form-group">
         <label for="email">E-mail</label>
         <input id="email" name="email" type="email"/>
       </p>
@@ -94,7 +92,7 @@
              language and translate "Donation" and "Donate" -->
         <input type="hidden" name="language" value="el_GR"/>
         <input type="hidden" name="text" value="Δωρεά"/>
-        <input type="submit" value="Δωρίστε"/>
+        <input type="submit" id="donate-validate" value="Δωρίστε"/>
       </p>
     </form>
 
@@ -110,7 +108,7 @@
     <h3>Άλλες επιλογές</h3>
 
     <p>
-      Αν καμία από τις παραπάνω επιλογές δε σας ταιριάζει, παρακαλούμε
+      Αν καμία από τις παραπάνω επιλογές δε σας ταιριάζει,
       <a href="mailto:office@fsfeurope.org">επικοινωνήστε μαζί μας</a>
       ώστε να συζητήσουμε τις πιθανές εναλλακτικές.
     </p>
@@ -130,7 +128,7 @@
       διαδικτυακές δωρεές, μπορείτε να χρησιμοποιήσετε την επιλογή
       "Επιθυμώ να παραμείνω ανώνυμος" για να υποδείξετε εάν επιθυμείτε
       ή όχι να προστεθείτε στη λίστα. Εάν καταθέσετε τη δωρεά σας μέσω
-      τραπεζικού εμβάσματος, παρακαλούμε
+      τραπεζικού εμβάσματος,
       <a href="mailto:office@fsfeurope.org">επικοινωνήστε μαζί μας</a>
       σχετικά με το θέμα αυτό.
     </p>
@@ -141,6 +139,8 @@
       στην ιστοσελίδα σας.
     </p>
 
+    <h2 id="tax-deduction">Απαλλαγή από φόρο</h2>
+
     <p>
       Σε ορισμένες χώρες, οι δωρεές σας στο FSFE μπορούν να αφαιρεθούν
       από το φόρο εισοδήματος. Έως τώρα, αυτό ισχύει σε
@@ -148,6 +148,13 @@
       <a href="netherlands.html">Ολλανδία</a> και
       <a href="switzerland.html">Ελβετία</a>.
     </p>
+
+    <h2>Απολογισμός</h2>
+    <ul>
+        <li><a href="/about/funds/">Ταμειακή ροή του FSFE</a></li>
+        <li><a href="/donate/thankgnus.html">Οι δωρητές μας</a></li>
+        <li><a href="/donate/hardware.html">Δωρεές υλικού</a></li>
+    </ul>
   </body>
 
   <timestamp>$Date: 2011-07-18 20:22:33 +0300 (Mon, 18 Jul 2011) $ $Author: reinhard $</timestamp>

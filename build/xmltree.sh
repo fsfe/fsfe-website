@@ -1,23 +1,49 @@
 #!/bin/sh
 
+
 print_help(){
   cat <<-EOHELP
 
 	Usage:
 	------------------------------------------------------------------------------
 	
-	$0 build_xmlstream "file.xhtml"
+	$0 [options] build_xmlstream "file.xhtml"
 	  Compile an xml stream from the specified file, additional sources will be
 	  determined and included automatically. The stream is suitable for being
 	  passed into xsltproc.
 	
-	$0 tree_maker "input_dir" "output_dir"
+	$0 [options] tree_maker [input_dir] "destination_dir"
 	  Generate a set of make rules to build the website contained in input_dir.
-	  output_dir should be the www root of a web server.
+	  destination_dir should be the www root of a web server.
+	  If input_dir is omitted, it will be the source directory determined from
+	  the build scripts location.
 	
-	$0 build_into [options] "target_dir"
-	  Perform the page build. Write output to target_dir. The input directory
+	$0 [options] build_into "destination_dir"
+	  Perform the page build. Write output to destination_dir. The source directory
 	  is determined from the build scripts own location.
+
+	OPTIONS
+        -------
+
+	--source "source_dir"
+	  Force a specific source directory. If not explicitly given source_dir is
+	  determined from the build scripts own location. 
+	  Pathes given in .sources files are interpreted as relative to source_dir
+	  making this option useful when building a webpage outside of the build
+	  scripts "regular" tree.
+
+	--destination "destination_dir"
+	  The directory into which the website will be built. This option can be used
+	  in conjunction with the tree_maker and build_into commands. It will override
+	  the destination_dir option given after those commands and is therefore
+	  redundant. The option exists to provide backward compatibility to the 2002
+	  build script.
+
+	--statusdir "status_dir"
+	  A directory to which messages are written. If no status_dir is provided
+	  information will be written to stdout. The directory will also be used
+	  to store some temporary files, which would otherwise be set up in the
+	  system wide temp directory.
 	
 	EOHELP
 }
@@ -270,7 +296,7 @@ xhtml_maker(){
   cat <<MakeEND
 all: $(mes "$outfile" "$outlink")
 $(mes "$outfile"): $(mes "$infile" "$processor" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" $sources)
-	$0 build_xmlstream "${shortname}.${lang}.xhtml" |xsltproc "${processor}" - >"${outfile}"
+	$0 --source "$basedir" build_xmlstream "${shortname}.${lang}.xhtml" |xsltproc "${processor}" - >"${outfile}"
 
 $(mes "$outlink"):
 	ln -sf "${outbase}" "${outlink}"
@@ -370,58 +396,144 @@ logstatus(){
   # if statusdir is not enabled, we won't log to a file
   file="$1"
 
-  if [ -n "$statusdir" ] && mkdir -p "$statusdir"; then
+  if [ -w "$statusdir" ]; then
     tee "$statusdir/$file"
   else
     cat
   fi
 }
 
+print_error(){
+  echo "Error: $*" |logstatus lasterror >/dev/stderr
+  echo "Run '$0 --help' to see usage instructions" >/dev/stderr
+}
+
+build_manifest(){
+  # pass Makefile throug on pipe and generate
+  # list of all make tagets
+
+  outfile="$1"
+  while line="$(line)"; do
+    echo "$line"
+    echo "$line" \
+    | sed -nr 's;/\./;/;g;s;\\ ; ;g;s;([^:]+) :.*;\1;p' \
+    >> "$outfile"
+  done
+}
+
+remove_orphans(){
+  # read list of files which should be in a directory tree
+  # and remove everything else
+
+  tree="$1"
+
+  # idea behind the algorithm:
+  # find will list every existing file once
+  # the manifest of all make targets will list all wanted files once
+  # concatenate all lines from manifest and find
+  # every file which is listed twice is wanted and exists,
+  # we use 'uniq -u' to drop those from the list
+  # remaining single files exist only in the tree and are to be removed
+
+  (find "$tree" -type f -or -type l; cat) \
+  | sort \
+  | uniq -u \
+  | while read file; do
+    echo "$file" \
+    | egrep -q "^$tree" \
+    && rm -v "$file"
+  done
+}
+
 build_into(){
   ncpu="$(cat /proc/cpuinfo |grep ^processor |wc -l)"
 
-  while [ -n "$*" ]; do
-    case "$1" in
-      -s|--statusdir|--status-dir)
-        shift 1
-        statusdir="$1"
-        ;;
-      --source)
-        shift 1
-        basedir="$1"
-        ;;
-      -d|--dest|--destination)
-        shift 1
-        target="$1"
-        ;;
-      *)
-        [ -z "$target" ] && target="$1" || print_help
-        ;;
-    esac
-    shift 1
-  done
-  [ -z "$target" ] && print_help && exit 1
+  [ -w "$statusdir" -a -d "$statusdir" ] && \
+     manifest="$(tempfile -d "$statusdir" -p mnfst)" \
+  || manifest="$(tempfile -p w3bld)"
 
   dir_maker "$basedir" "$target"
   tree_maker "$basedir" "$target" \
   | logstatus Makefile \
+  | build_manifest "$manifest" \
   | make -j $ncpu -f - \
   | logstatus buildlog
+
+  remove_orphans "$target" <"$manifest" \
+  | logstatus removed
+
+  [ -w "$statusdir" -a -d "$statusdir" ] && \
+     mv "$manifest" "$statusdir/manifest" \
+  || rm "$manifest"
 }
 
 basedir="$(dirname $0)/.."
-command="$1"
-[ -n "$1" ] && shift 1
+while [ -n "$*" ]; do
+  case "$1" in
+    -s|--statusdir|--status-dir)
+      shift 1
+      statusdir="$1"
+      ;;
+    --source)
+      shift 1
+      basedir="$1"
+      ;;
+    -d|--dest|--destination)
+      shift 1
+      target="$1"
+      ;;
+    build_into)
+      command="build_into"
+      ;;
+    build_xmlstream)
+      command="build_xmlstream"
+      ;;
+    tree_maker)
+      command="tree_maker"
+      ;;
+    *)
+      if [ $command = "build_into" -a -z "$target" ]; then
+        target="$1"
+      elif [ $command = "build_xmlstream" -a -z "$workfile" ]; then
+        workfile="$1"
+      elif [ $command = "tree_maker" -a -z "$tree" ]; then
+        tree="$1"
+      elif [ $command = "tree_maker" -a -z "$target" ]; then
+        target="$1"
+      else
+        print_error "Unknown option $1"
+        exit 1
+      fi
+      ;;
+  esac
+  shift 1
+done
+
+if [ -n "$statusdir" ]; then
+  mkdir -p "$statusdir"
+  if [ ! -w "$statusdir" -o ! -d "$statusdir" ]; then
+    print_error "Unable to set up status directory in \"$statusdir\",
+either select a status directory that exists and is writable,
+or run the build script without output to a status directory"
+    exit 1
+  fi
+fi
+
 case "$command" in
+  build_into)
+    [ -z "$target" ] && print_error "Missing destination directory" && exit 1
+    build_into
+    ;;
   build_xmlstream)
-    build_xmlstream "$(get_shortname "$1")" "$(get_language "$1")"
+    [ -z "$workfile" ] && print_error "Missing destination directory" && exit 1
+    build_xmlstream "$(get_shortname "$workfile")" "$(get_language "$workfile")"
     ;;
   tree_maker)
-    tree_maker "$1" "$2"
+    [ -z "$tree" ] && tree="$basedir"
+    [ -z "$target" ] && print_error "Missing target location" && exit 1
+    tree_maker "$tree" "$target"
     ;;
-  build_into)
-    build_into $*
-    ;;
-  *) print_help
+  *)
+    print_error "Urecognised command or no command given"
     ;;
 esac

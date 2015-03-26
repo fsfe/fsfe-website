@@ -4,7 +4,7 @@
   xmlns:str="http://exslt.org/strings"
   extension-element-prefixes="str">
 
-  <xsl:import href="../tools/xsltsl/translations.xsl" />
+  <xsl:import href="../build/xslt/gettext.xsl" />
   <xsl:import href="../tools/xsltsl/static-elements.xsl" />
   <xsl:import href="../tools/xsltsl/tagging.xsl" />
 

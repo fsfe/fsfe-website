@@ -23,7 +23,7 @@ print_help(){
 	  is determined from the build scripts own location.
 
 	OPTIONS
-        -------
+	-------
 
 	--source "source_dir"
 	  Force a specific source directory. If not explicitly given source_dir is
@@ -482,23 +482,26 @@ while [ -n "$*" ]; do
       shift 1
       target="$1"
       ;;
+    -h|--help)
+      command="help"
+      ;;
     build_into)
-      command="build_into"
+      command="build_into$command"
       ;;
     build_xmlstream)
-      command="build_xmlstream"
+      command="build_xmlstream$command"
       ;;
     tree_maker)
-      command="tree_maker"
+      command="tree_maker$command"
       ;;
     *)
-      if [ $command = "build_into" -a -z "$target" ]; then
+      if [ "$command" = "build_into" -a -z "$target" ]; then
         target="$1"
-      elif [ $command = "build_xmlstream" -a -z "$workfile" ]; then
+      elif [ "$command" = "build_xmlstream" -a -z "$workfile" ]; then
         workfile="$1"
-      elif [ $command = "tree_maker" -a -z "$tree" ]; then
+      elif [ "$command" = "tree_maker" -a -z "$tree" ]; then
         tree="$1"
-      elif [ $command = "tree_maker" -a -z "$target" ]; then
+      elif [ "$command" = "tree_maker" -a -z "$target" ]; then
         target="$1"
       else
         print_error "Unknown option $1"
@@ -532,6 +535,9 @@ case "$command" in
     [ -z "$tree" ] && tree="$basedir"
     [ -z "$target" ] && print_error "Missing target location" && exit 1
     tree_maker "$tree" "$target"
+    ;;
+  *help*)
+    print_help
     ;;
   *)
     print_error "Urecognised command or no command given"

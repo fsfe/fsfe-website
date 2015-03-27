@@ -8,15 +8,16 @@ body {
 }
 
 header#top, section#main, body div#notifications {
-  width: 70%;
-  margin: 0 15%;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
   border-style: none solid;
   border-width: 4px;
   border-color: #693;
   background-color: #FFF;
 }
 section#main, body div#notifications {
-  padding: 1em;
+  padding: 1%;
 }
 .alert.warning.red {
   background-color: #EB8;
@@ -63,17 +64,16 @@ header {
 }
 #menu ul {
   margin: auto;
+  padding: 0 1em;
   text-align: center;
   width: 80%;
   border-top: 3px solid #693;
   border-bottom: 3px solid #693;
 }
 #menu ul li {
-  display: inline;
+  display: inline-block;
   padding: 2px 10px;
-  margin-right: 6px;
-  position: relative;
-  left: -20px
+  margin: 0em 1em;
 }
 #menu ul li a {
   text-decoration: none;
@@ -109,7 +109,7 @@ header {
   min-height: 18em;
 
   margin: .5em .75%;
-  padding: 1ex 1%;
+  padding: 1ex;
 
   border-style: solid;
   border-width: 2px;
@@ -218,4 +218,32 @@ header {
   display: inline-block;
   vertical-align: top;
   width: 33%;
+}
+
+@media (max-width: 700px){
+  #menu ul {
+    width: 95%;
+    max-width: 504px;
+  }
+  header#top, section#main, body div#notifications {
+    width:99%; 
+    max-width:630px; 
+  }
+}
+@media (max-width: 630px){
+  #main .readerlist .reader {
+    width: 48%;
+  }
+  #main .readerlist .reader:nth-child(-n+3) {
+    width: 98%;
+    min-height: 1em;
+    margin: .5em .75%;
+  }
+}
+@media (max-width: 380px){
+  #menu ul li { display: block; }
+  #main .readerlist .reader {
+    width: 98%;
+    min-height: 1em;
+  }
 }

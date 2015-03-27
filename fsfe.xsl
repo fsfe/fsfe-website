@@ -6,17 +6,18 @@
   xmlns:str="http://exslt.org/strings"
   extension-element-prefixes="str">
 
-  <xsl:import href="tools/xsltsl/translations.xsl" />
+  <xsl:import href="build/xslt/gettext.xsl" />
   <xsl:import href="tools/xsltsl/static-elements.xsl" />
   <xsl:import href="tools/xsltsl/tagging.xsl" />
+
+  <xsl:import href="build/xslt/fsfe_head.xsl" />
+  <xsl:import href="build/xslt/fsfe_body.xsl" />
 
   <!-- For pages used on external web servers, load the CSS from absolute URL -->
   <xsl:variable name="urlprefix">
     <xsl:if test="/buildinfo/document/@external">https://fsfe.org</xsl:if>
   </xsl:variable>
 
-  <xsl:include href="build/xslt/fsfe_head.xsl" />
-  <xsl:include href="build/xslt/fsfe_body.xsl" />
   <xsl:include href="build/xslt/fsfe_document.xsl" />
   <xsl:include href="build/xslt/fsfe_headings.xsl" />
   <xsl:include href="build/xslt/fsfe_localmenu.xsl" />

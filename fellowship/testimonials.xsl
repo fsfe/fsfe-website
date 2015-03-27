@@ -4,7 +4,6 @@
   <xsl:import href="default.xsl" />
   <xsl:import href="xsl/quotes.xsl" />
   <xsl:import href="../tools/xsltsl/tagging.xsl" />
-  <xsl:import href="../tools/xsltsl/translations.xsl" />
 
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
 

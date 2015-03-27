@@ -9,9 +9,9 @@
   <!-- xsl:include href="../../build/xslt/footer_sitenav.xsl" / -->
   <xsl:include href="../../build/xslt/footer_sourcelink.xsl" />
   <xsl:include href="../../build/xslt/footer_legal.xsl" />
+  <xsl:include href="../../build/xslt/gettext.xsl" />
 
   <xsl:include href="../../tools/xsltsl/static-elements.xsl" />
-  <xsl:include href="../../tools/xsltsl/translations.xsl" />
 
   <xsl:template name="page-body">
     <xsl:element name="body">

@@ -7,10 +7,16 @@ print_help(){
 	Usage:
 	------------------------------------------------------------------------------
 	
+	$0 [options] build_into "destination_dir"
+	  Perform the page build. Write output to destination_dir. The source directory
+	  is determined from the build scripts own location.
+
 	$0 [options] build_xmlstream "file.xhtml"
 	  Compile an xml stream from the specified file, additional sources will be
 	  determined and included automatically. The stream is suitable for being
 	  passed into xsltproc.
+
+	$0 [options] process_file "file.xhtml" [processor.xsl]
 	
 	$0 [options] tree_maker [input_dir] "destination_dir"
 	  Generate a set of make rules to build the website contained in input_dir.
@@ -18,10 +24,6 @@ print_help(){
 	  If input_dir is omitted, it will be the source directory determined from
 	  the build scripts location.
 	
-	$0 [options] build_into "destination_dir"
-	  Perform the page build. Write output to destination_dir. The source directory
-	  is determined from the build scripts own location.
-
 	OPTIONS
 	-------
 
@@ -272,6 +274,32 @@ mes(){
   | tr '\n' ' '
 }
 
+process_file(){
+  infile="$1"
+  processor="$2"
+
+  shortname=$(get_shortname "$infile")
+  lang=$(get_language "$infile")
+  [ -z "$processor" ] && processor="$(get_processor "$shortname")"
+
+  build_xmlstream "$shortname" "$lang" \
+  | xsltproc "$processor" - \
+  | sed -r '
+      s;< *(a|link)( [^>]*)? href="https?://'"$domain"'/([^"]*)";<\1\2 href="/\3";g
+      s;< *(a|link)( [^>]*)? href='\''https?://'"$domain"'/([^'\'']*)'\'';<\1\2 href='\''/\3'\'';g
+
+      s;< *(a|link)( [^>]*)? href="(https?://[^"]*)";<\1\2 href="#== norewrite ==\3";g
+      s;< *(a|link)( [^>]*)? href="([^#"])([^"]*/)?([^\./"]*\.)(html|rss|ics)(#[^"]*)?";<\1\2 href="\3\4\5'"$lang"'.\6\7";g
+      s;< *(a|link)( [^>]*)? href="([^#"]*/)(#[^"]*)?";<\1\2 href="\3index.'"$lang"'.html\4";g
+      s;< *(a|link)( [^>]*)? href="#== norewrite ==(https?://[^"]*)";<\1\2 href="\3";g
+
+      s;< *(a|link)( [^>]*)? href='\''(https?://[^'\'']*)'\'';<\1\2 href='\''#== norewrite ==\3'\'';g
+      s;< *(a|link)( [^>]*)? href='\''([^#'\''])([^'\'']*/)?([^\./'\'']*\.)(html|rss|ics)(#[^'\'']*)?'\'';<\1\2 href='\''\3\4\5'"$lang"'.\6\7'\'';g
+      s;< *(a|link)( [^>]*)? href='\''([^#'\'']*/)(#[^'\'']*)?'\'';<\1\2 href='\''\3index.'"$lang"'.html\4'\'';g
+      s;< *(a|link)( [^>]*)? href='\''#== norewrite ==(https?://[^'\'']*)'\'';<\1\2 href='\''\3'\'';g
+  '
+}
+
 xhtml_maker(){
   # generate make rules for building html files out of xhtml
   # account for included xml files and xls rules
@@ -296,7 +324,7 @@ xhtml_maker(){
   cat <<MakeEND
 all: $(mes "$outfile" "$outlink")
 $(mes "$outfile"): $(mes "$infile" "$processor" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" $sources)
-	$0 --source "$basedir" build_xmlstream "${shortname}.${lang}.xhtml" |xsltproc "${processor}" - >"${outfile}"
+	$0 --source "$basedir" process_file "${shortname}.${lang}.xhtml" "$processor" >"$outfile"
 
 $(mes "$outlink"):
 	ln -sf "${outbase}" "${outlink}"
@@ -468,11 +496,17 @@ build_into(){
 }
 
 basedir="$(dirname $0)/.."
+domain="www.fsfe.org"
+
 while [ -n "$*" ]; do
   case "$1" in
     -s|--statusdir|--status-dir)
       shift 1
       statusdir="$1"
+      ;;
+    --domain)
+      shift 1
+      domain="$1"
       ;;
     --source)
       shift 1
@@ -494,6 +528,9 @@ while [ -n "$*" ]; do
     tree_maker)
       command="tree_maker$command"
       ;;
+    process_file)
+      command="process_file$command"
+      ;;
     *)
       if [ "$command" = "build_into" -a -z "$target" ]; then
         target="$1"
@@ -503,6 +540,10 @@ while [ -n "$*" ]; do
         tree="$1"
       elif [ "$command" = "tree_maker" -a -z "$target" ]; then
         target="$1"
+      elif [ "$command" = "process_file" -a -z "$workfile" ]; then
+        workfile="$1"
+      elif [ "$command" = "process_file" -a -z "$processor" ]; then
+        processor="$1"
       else
         print_error "Unknown option $1"
         exit 1
@@ -526,6 +567,10 @@ case "$command" in
   build_into)
     [ -z "$target" ] && print_error "Missing destination directory" && exit 1
     build_into
+    ;;
+  process_file)
+    [ -z "$workfile" ] && print_error "Need at least input file" && exit 1
+    process_file "$workfile" "$processor"
     ;;
   build_xmlstream)
     [ -z "$workfile" ] && print_error "Missing destination directory" && exit 1

@@ -44,10 +44,10 @@ my %names = (
 # -----------------------------------------------------------------------------
 
 my %responsible = (
-  "ADMIN-COORDINATION" => "gerloff",
-  "ADMIN-GA" => "gerloff",
-  "ADMIN-TECH" => "gerloff",
-  "ADMIN-FUNDRAISING" => "gerloff",
+  "ADMIN-COORDINATION" => "oberg",
+  "ADMIN-GA" => "oberg",
+  "ADMIN-TECH" => "oberg",
+  "ADMIN-FUNDRAISING" => "oberg",
   "PA-EVENTS" => "kirschner",
   "PA-MATERIAL" => "kirschner",
   "PA-CAMPAIGNS" => "kirschner",

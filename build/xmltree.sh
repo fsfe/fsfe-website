@@ -486,9 +486,8 @@ tree_maker(){
       *.sources) true;;
       Makefile) true;;
       *.xsl) xslt_maker "$inpfile";;
-      *.en.xhtml)
-        xhtml_maker "$(get_shortname "$inpfile")" "$output/$(dirname "$filepath")"
-        ;;
+      *.en.xhtml) xhtml_maker "$(get_shortname "$inpfile")" "$output/$(dirname "$filepath")";;
+      *.xhtml) true;;
       *) copy_maker "$inpfile" "$output/$(dirname "$filepath")";;
     esac
   done
@@ -556,6 +555,9 @@ build_into(){
      manifest="$(tempfile -d "$statusdir" -p mnfst)" \
   || manifest="$(tempfile -p w3bld)"
 
+  make -C "$basedir" \
+  | logstatus premake
+
   dir_maker "$basedir" "$target"
   tree_maker "$basedir" "$target" \
   | logstatus Makefile \
@@ -567,8 +569,8 @@ build_into(){
   | logstatus removed
 
   [ -w "$statusdir" -a -d "$statusdir" ] && \
-     mv "$manifest" "$statusdir/manifest" \
-  || rm "$manifest"
+    mv "$manifest" "$statusdir/manifest" \
+  ||rm "$manifest"
 }
 
 basedir="$(dirname $0)/.."

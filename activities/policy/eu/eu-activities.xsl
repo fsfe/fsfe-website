@@ -11,7 +11,7 @@
   <xsl:template match="fetch-news">
     <xsl:call-template name="fetch-news">
       <xsl:with-param name="tag" select="'EuropeanCommission'"/>
-      <xsl:with-param name="nb-items" select="10"/>
+      <xsl:with-param name="nb-items" select="5"/>
     </xsl:call-template>
   </xsl:template>
   

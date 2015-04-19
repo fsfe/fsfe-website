@@ -26,6 +26,8 @@ print_help(){
 	  destination_dir should be the www root of a web server.
 	  If input_dir is omitted, it will be the source directory determined from
 	  the build scripts location.
+          Note: if destination_dir is set via previous options, and only one paramter
+	  is given, then this parameter will be interpreted as input_dir
 	
 	OPTIONS
 	-------
@@ -97,6 +99,19 @@ sourceglobs(){
   fi
 }
 
+all_sources(){
+  # read a .sources file and glob up all referenced
+  # source files
+  sourcesfile="$1"
+
+  if [ -r "$sourcesfile" ]; then
+    sed -rn 's;:global$;*.[a-z][a-z].xml;gp' "$sourcesfile" \
+    | while read glob; do
+      echo "$basedir/"$glob |grep -vF "$basedir/$glob" 2>/dev/null;
+    done
+  fi
+}
+
 list_sources(){
   # read a .sources file and generate a list
   # of all referenced xml files with preference
@@ -127,8 +142,13 @@ auto_sources(){
   sourcesfile="$1"
   lang="$2"
 
-  list_sources "$sourcesfile" "$lang" \
-  | while read source; do
+  globfile="$(echo "$sourcesfile" |sed -r 's;(^|.*/)([^/]+).sources$;\1_._._\2.'"$lang"'.sourceglobs;')"
+
+  if [ -e "$globfile" ];then
+    cat "$globfile"
+  else
+    list_sources "$sourcesfile" "$lang"
+  fi | while read source; do
     echo -n "$source\t"
     include_xml "$source" 
     echo
@@ -365,6 +385,45 @@ process_file(){
   '
 }
 
+cast_globfile(){
+  sourceglobfile="$1"
+  lang="$2"
+  globfile="$3"
+
+  sources="$(list_sources "###" "$lang" "$(cat "$sourceglobfile")")"
+
+  [ -e "$globfile" ] && \
+    [ "$sources" = "$(cat "$globfile")" ] \
+  || echo "$sources" >"$globfile"
+
+  if [ "$sourceglobfile" -nt "$globfile" ]; then
+    echo "$sources" | while read incfile; do
+      [ "$incfile" -nt "$globfile" ] && touch "$globfile"
+    done
+  fi
+}
+
+glob_maker(){
+  sourcesfile="$1"
+
+  filedir=$(dirname "$sourcesfile")
+  shortbase="$(basename "$sourcesfile" |sed -r 's;\.sources$;;')"
+  sourceglobfile="${filedir}/_._._${shortbase}.sourceglobs"
+
+  cat <<MakeEND
+$(mes "$sourceglobfile"): $(mes $(all_sources "$sourcesfile"))
+	$0 --source "$basedir" sourceglobs "$sourcesfile" >"$sourceglobfile"
+MakeEND
+
+  for lang in $(get_languages); do
+    globfile="${filedir}/_._._${shortbase}.${lang}.sourceglobs"
+    cat <<MakeEND
+$(mes "$globfile"): $(mes "$sourceglobfile")
+	$0 --source "$basedir" cast_globfile "$sourceglobfile" "$lang" "$globfile"
+MakeEND
+  done
+}
+
 xhtml_maker(){
   # generate make rules for building html files out of xhtml
   # account for included xml files and xls rules
@@ -373,12 +432,14 @@ xhtml_maker(){
   outpath="$2"
 
   shortbase="$(basename "$shortname")"
+  filedir="$(dirname "$shortname")"
   processor="$(get_processor "$shortname")"
   textsen="$(get_textsfile "en")"
   menufile="$basedir/tools/menu-global.xml"
 
-  sourceglobs="$(sourceglobs "${shortname}.sources")"
-  if [ "${shortbase}" = "$(basename "$(dirname "$shortname")")" ] && \
+  [ -e "${shortname}.sources" ] && sourceinc=true || sourceinc=false
+
+  if [ "${shortbase}" = "$(basename "$filedir")" ] && \
      [ ! -f "$(dirname "$shortname")/index.en.xhtml" ]; then
     indexname=true
   else
@@ -395,11 +456,11 @@ xhtml_maker(){
 
     textsfile="$(get_textsfile "$lang")"
     fundraisingfile="$(get_fundraisingfile "$lang")"
-    sources="$(list_sources "${shortname}.sources" "$lang" "$sourceglobs")"
+    [ "$sourceinc" = "true" ] && sourceglobs="${filedir}/_._._${shortbase}.${lang}.sourceglobs" || unset sourceglobs
 
     cat <<MakeEND
 all: $(mes "$outfile" "$outlink")
-$(mes "$outfile"): $(mes "$depfile" "$processor" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" $sources)
+$(mes "$outfile"): $(mes "$depfile" "$processor" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" "$sourceglobs")
 	$0 --source "$basedir" process_file "${infile}" "$processor" >"$outfile"
 $(mes "$outlink"):
 	ln -sf "${outbase}" "${outlink}"
@@ -483,8 +544,9 @@ tree_maker(){
     inpfile="${input}/$filepath"
     case "$filepath" in
       *.xml) true;;
-      *.sources) true;;
       Makefile) true;;
+      *.sourceglobs) true;;
+      *.sources) glob_maker "$inpfile";;
       *.xsl) xslt_maker "$inpfile";;
       *.en.xhtml) xhtml_maker "$(get_shortname "$inpfile")" "$output/$(dirname "$filepath")";;
       *.xhtml) true;;
@@ -598,25 +660,32 @@ while [ -n "$*" ]; do
       command="help"
       ;;
     build_into)
-      command="build_into$command"
+      command="$1$command"
       ;;
     build_xmlstream)
-      command="build_xmlstream$command"
+      command="$1$command"
+      shift 1; workfile="$1"
       ;;
     tree_maker)
-      command="tree_maker$command"
+      command="$1$command"
+      [ -n "$target" -o -n "$3" ] && shift 1 && tree="$1"
+      shift 1; [ -n "$1" ] && target="$1"
       ;;
     process_file)
-      command="process_file$command"
+      command="$1$command"
+      ;;
+    sourceglobs)
+      command="$1$command"
+      shift 1; sourcesfile="$1"
+      ;;
+    cast_globfile)
+      command="$1$command"
+      shift 1; sourceglobfile="$1"
+      shift 1; lang="$1"
+      shift 1; globfile="$1"
       ;;
     *)
       if [ "$command" = "build_into" -a -z "$target" ]; then
-        target="$1"
-      elif [ "$command" = "build_xmlstream" -a -z "$workfile" ]; then
-        workfile="$1"
-      elif [ "$command" = "tree_maker" -a -z "$tree" ]; then
-        tree="$1"
-      elif [ "$command" = "tree_maker" -a -z "$target" ]; then
         target="$1"
       elif [ "$command" = "process_file" -a -z "$workfile" ]; then
         workfile="$1"
@@ -658,6 +727,14 @@ case "$command" in
     [ -z "$tree" ] && tree="$basedir"
     [ -z "$target" ] && print_error "Missing target location" && exit 1
     tree_maker "$tree" "$target"
+    ;;
+  sourceglobs)
+    [ -z "$sourcesfile" ] && print_error "Missing .sources file" && exit 1
+    sourceglobs "$sourcesfile"
+    ;;
+  cast_globfile)
+    [ -z "$sourceglobfile" -o -z "$lang" -o -z "$globfile" ] && print_error "Need source globfile language and globfile" && exit 1
+    cast_globfile "$sourceglobfile" "$lang" "$globfile"
     ;;
   *help*)
     print_help

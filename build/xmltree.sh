@@ -397,8 +397,8 @@ cast_globfile(){
   || echo "$sources" >"$globfile"
 
   if [ "$sourceglobfile" -nt "$globfile" ]; then
-    echo "$sources" | while read incfile; do
-      [ "$incfile" -nt "$globfile" ] && touch "$globfile"
+    echo "$sources" |while read incfile; do
+      [ "$incfile" -nt "$globfile" ] && touch "$globfile" || true
     done
   fi
 }

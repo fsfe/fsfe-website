@@ -3815,10 +3815,11 @@
      institution-address="Via Ciamarra Antonio, 144 - 00173 Roma"
      institution-url="http://www.agenziaterritorio.gov.it/site.php?id=675"
      opened="2010-09-30"
-     closed=""
+     closed="2015-04-21"
+     closedby="Nicola Feltrin"
      name="alle"
      group="LUG Scandiano"
-     comment=""
+     comment="Duplicated bug. Moreover the site doesn't exist anymore"
      />
 
 <bug institution-name="Provincia Firenze"
@@ -3845,7 +3846,8 @@
      institution-address="via Garessio 15, 10100, Torino"
      institution-url="http://math.i-learn.unito.it/"
      opened="2010-09-30"
-     closed=""
+     closed="2015-04-21"
+     closedby="Nicola Feltrin"
      name="Matteo Gamba"
      group="Guri"
      comment=""
@@ -3853,31 +3855,31 @@
 
 <bug institution-name="Governo Italiano"
      institution-address="via Garessio 15, 10100, Torino"
-     institution-url="http://www.governo.it/GovernoInforma/Dossier/comunicazione_impresa/Guida_ComUnica.pdf"
+     institution-url="http://www.governo.it/Presidenza/USRI/confessioni/pubblicazione_indice.html"
      opened="2010-09-30"
      closed=""
      name="Matteo Gamba"
      group="Guri"
-     comment=""
+     comment="Original link broken. Link updated on 2015-04-21 by Nicola Feltrin"
      />
 <bug institution-name=" Fondo di Previdenza per il personale del Ministero dell’Economia e delle Finanze"
      institution-address="Via Luigi Ziliotto, 31 - 00143 Roma"
-     institution-url="http://www.fondoprevidenzafinanze.it/modulistica/"
+     institution-url="http://www.fondoprevidenzafinanze.it/index.php?option=com_content&amp;view=article&amp;id=99:convenzioni&amp;catid=1:latest-news&amp;Itemid=73"
      opened="2010-10-01"
      closed=""
      name="Max-B"
      group="LUG Scandiano"
-     comment=""
+     comment="Original link broken. Link updated on 2015-04-21 by Nicola Feltrin"
      />
 
 <bug institution-name="Ministero della Giustizia"
      institution-address="via Arenula 70 - 00186 Roma"
-     institution-url="http://www.giustizia.it/giustizia/it/mg_3_8_9.wp;jsessionid=245FBC51052843BB18F294EBAAF536CB.ajpAL02"
+     institution-url="http://www.giustizia.it/giustizia/it/mg_3_8_1.wp"
      opened="2010-10-01"
      closed=""
      name="Max-B"
      group="LUG Scandiano"
-     comment=""
+     comment="Fixed in the original link. References to proprietary software still present elsewhere on the website. Link updated on 2015-04-21 by Nicola Feltrin."
      />
 
 <bug institution-name="Motorizzazione Civile di Vercelli"
@@ -3914,12 +3916,12 @@
 
 <bug institution-name="Autorità per le garanzie nelle telecomunicazioni"
      institution-address="Centro Direzionale, Isola B5 - 80143 Napoli"
-     institution-url="http://www.agcom.it/Default.aspx?message=contenuto&amp;DCId=350"
+     institution-url="http://www.agcom.it/documents/10179/1/document/d9eac2e2-5317-4dc7-93cf-8de244a4e318"
      opened="2010-10-01"
      closed=""
      name="Max-B"
      group="LUG Scandiano"
-     comment=""
+     comment="Original link broken. Link updated on 2015-04-21 by Nicola Feltrin"
      />
 
 <bug institution-name="Tribunale di Teramo"
@@ -3936,20 +3938,21 @@
      institution-address="Via L. Gambara, 40, Brescia"
      institution-url="http://www.tribunale.brescia.it/guida.aspx"
      opened="2010-10-01"
-     closed=""
+     closed="2015-04-21"
+     closedby="Nicola Feltrin"
      name="Max-B"
      group="LUG Scandiano"
-     comment=""
+     comment="Added reference to free pdf readers"
      />
 
 <bug institution-name="Camera Penale di Milano"
      institution-address="Via Freguglia, 1 20122 Milano"
      institution-url="http://www.camerapenalemilano.it/InfoPage.aspx?id=10"
      opened="2010-10-01"
-     closed=""
+     closed="2015-04-21"
      name="Max-B"
      group="LUG Scandiano"
-     comment=""
+     comment="Original link broken. Can't find proprietary software references on the new website."
      />
 
 <bug institution-name="AIFA"
@@ -4041,12 +4044,12 @@
 
 <bug institution-name="Libera Università Maria Ss. Assunta"
      institution-address="Via della Traspontina, 21 00193 Roma "
-     institution-url="http://www.lumsa.it/Lumsa/site/523/Default.aspx"
+     institution-url="http://www.lumsa.it/sites/default/files/guide/Guida_prenotazione_on_line_esami.pdf"
      opened="2010-10-03"
      closed=""
      name="Max-B"
      group="LUG Scandiano"
-     comment=""
+     comment="Original link broken. Link updated on 2015-04-21 by Nicola Feltrin"
      />
 
 <bug institution-name="Università Ca' Foscari Venezia"
@@ -4062,12 +4065,12 @@
 
 <bug institution-name="Facoltà di Scienze e Tecnologie"
      institution-address="Campus Scientifico ex Sogesta - Via Ca Le Suore 2/4 - 61029 Urbino (PU)"
-     institution-url="http://scitec.uniurb.it/facolta/studenti_facolta.aspx"
+     institution-url="http://scitec.uniurb.it/disteva/Studenti/materialeonline.aspx"
      opened="2010-10-03"
      closed=""
      name="Max-B"
      group="LUG Scandiano"
-     comment=""
+     comment="Fixed in the original link. References to proprietary software still present elsewhere on the website. Link updated on 2015-04-21 by Nicola Feltrin."
      />
 
 <bug institution-name="Dipartimento di Sociologia e di Scienza Politica - UNIVERSITà DELLA CALABRIA"
@@ -4094,12 +4097,12 @@
 
 <bug institution-name="Dipartimento di Metodi e Modelli Matematici per le scienze applicate - Università di Roma"
      institution-address="Piazzale Aldo Moro 5, 00185 Roma"
-     institution-url="http://www.dmmm.uniroma1.it/dottorato/tesi/tesi.htm"
+     institution-url="http://www.dmmm.uniroma1.it/~micol.amar/analisiIII.html"
      opened="2010-10-03"
      closed=""
      name="Max-B"
      group="LUG Scandiano"
-     comment=""
+     comment="Original link broken. Link updated on 2015-04-21 by Nicola Feltrin"
      />
 
 <bug institution-name="IPASVI LECCE"
@@ -4201,11 +4204,12 @@
      institution-address="Piazza S. Marco, 5 - 42022 Boretto (RE)"
      institution-url="http://www.comune.boretto.re.it/ita_musei.htm"
      opened="2010-10-03"
-     closed=""
+     closed="2015-04-21"
+     closedby="Nicola Feltrin"
      name="Max-B"
      contact="Contatto locale: LUG Scandiano: massimo.barbieri@42019.it"
      group="LUG Scandiano"
-     comment=""
+     comment="Original link broken. Can't find proprietary software references on the new website."
      />
 
 <bug institution-name="Comune di Padenghe sul Garda"
@@ -4294,10 +4298,11 @@
      institution-address="via G.Mazzini, 69 - 24022 Alzano Lombardo (BG)"
      institution-url="http://www.comune.alzano.bg.it/AlzanoNet/portale/CadmoDriver_s_125349"
      opened="2010-10-05"
-     closed=""
+     closed="2015-04-21"
+	 closedby="Nicola Feltrin"
      name="Federico Lanzalotta"
      group=""
-     comment=""
+     comment="Original link broken. Can't find proprietary software references on the new website."
      />
 
 <bug institution-name="Comune di Bagheria"
@@ -4325,10 +4330,11 @@
      institution-address="Via Garibaldi, 16, 64028 Silvi"
      institution-url="http://www.comune.silvi.te.it/silvi08/internal.asp?cat_id=54410&amp;category_name=La%20Giunta"
      opened="2010-10-05"
-     closed=""
+     closed="2015-04-21"
+	 closedby="Nicola Feltrin"
      name="Max-B"
      group="LUG Scandiano"
-     comment=""
+     comment="Original link broken. Can't find proprietary software references on the new website."
      />
 
 <bug institution-name="Comune di Castiglione del Lago"
@@ -4377,7 +4383,8 @@
      institution-address="Piazza Vittoria, 11, Sona"
      institution-url="http://www.comune.sona.vr.it/informagiovani/"
      opened="2010-10-06"
-     closed=""
+     closed="2015-04-21"
+	 closedby="Nicola Feltrin"
      name="Max-B"
      group="LUG Scandiano"
      comment=""
@@ -4405,12 +4412,12 @@
 
 <bug institution-name="Comune di Torino"
      institution-address="Piazza Palazzo di Città 1 - 10122 Torino"
-     institution-url="http://bandi.comune.torino.it/portal/page?_pageid=56,1669934&amp;_dad=portal&amp;_schema=PORTAL&amp;_piref56_1669935_56_1669934_1669934.strutsAction=%2FsetCurrentBandoAction.do%3FRiga%3D10547.0&amp;Riga=10547.0"
+     institution-url="http://bandi.comune.torino.it/portal/page?_pageid=56,1434782&amp;_dad=portal&amp;_schema=PORTAL&amp;action=setCurrentBando&amp;Riga=11081.0"
      opened="2010-10-06"
      closed=""
      name="Federico Lanzalotta"
      group=""
-     comment=""
+     comment="Original link broken. Link updated on 2015-04-21 by Nicola Feltrin"
      />
 
 <bug institution-name="Segretariato Sociale Latina"
@@ -4425,12 +4432,12 @@
 
 <bug institution-name="Comune di FRASSINETTO"
      institution-address="Via Roma n.39 - 10080 FRASSINETTO (TO)"
-     institution-url="http://www.comune.frassinetto.to.it/ComSServizio.asp?Id=366&amp;IdS=147"
+     institution-url="http://www.comune.frassinetto.to.it/ComProcedimenti.asp"
      opened="2010-10-07"
      closed=""
      name="Max-B"
      group="LUG Scandiano"
-     comment=""
+     comment="Original link broken. Link updated on 2015-04-21 by Nicola Feltrin"
      />
 
 <bug institution-name="Comune di Ponzano Veneto"
@@ -4479,10 +4486,11 @@
      institution-address="Piazza XIX Maggio n.10, 04024 Gaeta (LT)"
      institution-url="http://www.comune.gaeta.lt.it/comune/vsettore/delibere.asp"
      opened="2010-10-08"
-     closed=""
+     closed="2015-04-21"
+	 closedby="Nicola Feltrin"
      name="Max-B"
      group="LUG Scandiano"
-     comment=""
+     comment="Original link broken. Can't find proprietary software references on the new website."
      />
 
 <bug institution-name="Comune di Santa Luce"
@@ -4530,10 +4538,11 @@
      institution-address="Via Margutta, 17 00187 Roma"
      institution-url="http://www.camerepenali.it/Documenti.aspx?idCat=2"
      opened="2010-10-10"
-     closed=""
+     closed="2015-04-21"
+	 closedby="Nicola Feltrin"
      name="Max-B"
      group="LUG Scandiano"
-     comment=""
+     comment="Original link broken. Can't find proprietary software references on the new website."
      />
 
 <bug institution-name="Consiglio Regionale della Puglia"
@@ -4550,10 +4559,11 @@
      institution-address="Piazza Umberto I, 1, 06033 Cannara (PG)"
      institution-url="http://www.comune.cannara.pg.it/it/istituzione/convocazioni/convocazione_consiglio_comunale_23_24_luglio_2009"
      opened="2010-10-10"
-     closed=""
+     closed="2015-04-21"
+	 closedby="Nicola Feltrin"
      name="Max-B"
      group="LUG Scandiano"
-     comment=""
+     comment="Original link broken. Can't find proprietary software references on the new website."
      />
 
 <bug institution-name="Comune di CEPPO MORELLI"
@@ -4622,10 +4632,11 @@
      institution-address="Via Roma, 28 36040 (VI)"
      institution-url="http://www.comune.tonezzadelcimone.vi.it/a_93_IT_689_1.html"
      opened="2010-10-13"
-     closed=""
+     closed="2015-04-21"
+	 closedby="Nicola Feltrin"
      name="Max-B"
      group="LUG Scandiano"
-     comment=""
+     comment="Original link broken. Bug closed as duplicate."
      />
 <bug institution-name="Istituto Compresivo G.Carducci"
      institution-address="80030 Mariglianella (NA)"
@@ -4800,20 +4811,22 @@
      institution-address="Piazza Castello, 165 - Torino"
      institution-url="http://www.regione.piemonte.it/oopp/osservatorio/progetti_to2006/s14/s14.htm"
      opened="2010-10-16"
-     closed=""
+     closed="2015-04-21"
+	 closedby="Nicola Feltrin"
      name="alle"
      group="LUG Scandiano"
-     comment=""
+     comment="Original link broken. Can't find proprietary software references on the new website."
      />
 
 <bug institution-name="Liceo Linguistico Grazia Deledda"
      institution-address="Via Bertani, 6 16125 Genova"
      institution-url="http://www.deledda.it/"
      opened="2010-10-16"
-     closed=""
+     closed="2015-04-21"
+	 closedby="Nicola Feltrin"
      name="Max-B"
      group="LUG Scandiano"
-     comment=""
+     comment="Website is unreachable."
      />
 
 <bug institution-name="Istituto Comprensivo Montessori"
@@ -4841,10 +4854,11 @@
      institution-address="via Presidio n. 38 - 81031 Aversa"
      institution-url="http://www.liceoartisticoaversa.it/index.htm"
      opened="2010-10-16"
-     closed=""
+     closed="2015-04-21"
+	 closedby="Nicola Feltrin"
      name="alle"
      group="LUG Scandiano"
-     comment=""
+     comment="Website is unreachable."
      />
 
 <bug institution-name="ISTITUTO COMPRENSIVO Zoppola"
@@ -4915,32 +4929,33 @@
 
 <bug institution-name="ISTITUTO INTERNAZIONALE DI STORIA ECONOMICA 'F. DATINI'"
      institution-address="Via L. Muzzi 38, I 59100 Prato"
-     institution-url="http://www.istitutodatini.it/biblio/htm/volumi.htm"
+     institution-url="http://www.istitutodatini.it/temi/htm/temi40.htm"
      opened="2010-10-16"
      closed=""
      name="Max-B"
      group="LUG Scandiano"
-     comment=""
+     comment="Fixed in the original link. References to proprietary software still present elsewhere on the website. Link updated on 2015-04-21 by Nicola Feltrin."
      />
 
 <bug institution-name="Conservatorio di Musica Lorenzo Perosi"
      institution-address="Viale Principe di Piemonte, 2/A - 86100 Campobasso"
      institution-url="http://www.conservatorioperosi.it/www/index.php"
      opened="2010-10-16"
-     closed=""
+     closed="2015-04-21"
+	 closedby="Nicola Feltrin"
      name="alle"
      group=""
-     comment=""
+     comment="Original link broken. Can't find proprietary software references on the new website."
      />
 
 <bug institution-name="Liceo Scientifico Statale 'Renato Caccioppoli'"
      institution-address="via Nuova del Campo 22r, 80142 Napoli"
-     institution-url="http://www.liceocaccioppoli.it/libri%20di%20testo.html"
+     institution-url="http://www.liceocaccioppoli.it/orario%20docenti.html"
      opened="2010-10-16"
      closed=""
      name="Max-B"
      group="LUG Scandiano"
-     comment=""
+     comment="Original link broken. Link updated on 2015-04-21 by Nicola Feltrin"
      />
 
 <bug institution-name="Scuola Media Statale 'Don Bosco'"
@@ -5022,10 +5037,11 @@
      institution-address="Aversa 81031 via Presidio n. 38"
      institution-url="http://www.liceoartisticoaversa.it/index.htm"
      opened="2010-10-16"
-     closed=""
+     closed="2015-04-21"
+	 closedby="Nicola Feltrin"
      name="Max-B"
      group="LUG Scandiano"
-     comment=""
+     comment="Website is unreachable."
      />
 
 <bug institution-name="Liceo Scientifico Statale Primo Levi"
@@ -5075,20 +5091,22 @@
      institution-address="Via Matteotti, 139 - 70032 Bitonto (BA)"
      institution-url="http://www.sylosprimogrado.it/"
      opened="2010-10-16"
-     closed=""
+     closed="2015-04-21"
+	 closedby="Nicola Feltrin"
      name="alle"
      group="LUG Scandiano"
-     comment=""
+     comment="Website is unreachable."
      />
 
 <bug institution-name="Direzione Didattica Statale I Circolo Pavia"
      institution-address="Corso Cavour 49 - 27100 Pavia"
      institution-url="http://www.1circolopavia.it/pof.htm"
      opened="2010-10-16"
-     closed=""
+     closed="2015-04-21"
+	 closedby="Nicola Feltrin"
      name="alle"
      group="LUG Scandiano"
-     comment=""
+     comment="Website is unreachable."
      />
 
 <bug institution-name="Istituto Comprensivo Statale Michelangelo Buonarroti"

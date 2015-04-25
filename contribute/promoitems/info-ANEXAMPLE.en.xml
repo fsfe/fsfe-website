@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="UNIQUEID (e.g. nocloud)">
+    <name>HEADLINE OF THIS ITEM</name>
+    <description>
+      DESCRIPTION TEXT
+    </description>
+    <!-- Labels (label="xyz") should be translated to your language! -->
+    <!-- Leave a tag like <printready> blank or erase it if you don't want to appear it -->
+    <type label="Type">TYPE OF ITEM (e.g. Leaflet)</type>
+    <size label="Size">SIZE OF ITEM (e.g. 85mm x 55mm)</size>
+    <languages label="Available languages (to download)">
+      <a href="LINK1">LANGUAGE1</a>, <a href="LINK2">LANGUAGE2</a>
+    </languages>
+    <printed label="Printed versions (to order)">
+      <a href="LINK1">LANGUAGE1</a>, <a href="LINK2">LANGUAGE2</a>
+    </printed>
+    <source label="Available source files (to download)">AVAILABLE SOURCE FILES (SVG)</source> 
+    <printready label="Print-ready files (to download)">AVAILABLE PRINT-READY FILES</printready>
+    <license label="License">LICENSE OF ITEM</license>
+  </info>
+
+</infoset>

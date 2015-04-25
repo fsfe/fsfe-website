@@ -77,17 +77,6 @@
             <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/size" />
             <xsl:element name="br"></xsl:element>
           </xsl:if>
-
-          <!-- Available formats to download -->
-          <xsl:if test="/buildinfo/document/set/info[@id=$id]/formats != ''">
-            <xsl:element name="strong">
-              <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/formats/@label" />
-              <xsl:text>: </xsl:text>
-            </xsl:element>
-            <xsl:element name="br"></xsl:element>
-            <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/formats" />
-            <xsl:element name="br"></xsl:element>
-          </xsl:if>
           
           <!-- Available languages to download -->
           <xsl:if test="/buildinfo/document/set/info[@id=$id]/languages != ''">
@@ -108,6 +97,28 @@
             </xsl:element>
             <xsl:element name="br"></xsl:element>
             <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/printed" />
+            <xsl:element name="br"></xsl:element>
+          </xsl:if>
+          
+          <!-- Available source files to download -->
+          <xsl:if test="/buildinfo/document/set/info[@id=$id]/source != ''">
+            <xsl:element name="strong">
+              <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/source/@label" />
+              <xsl:text>: </xsl:text>
+            </xsl:element>
+            <xsl:element name="br"></xsl:element>
+            <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/source" />
+            <xsl:element name="br"></xsl:element>
+          </xsl:if>
+          
+          <!-- Available print ready files to download -->
+          <xsl:if test="/buildinfo/document/set/info[@id=$id]/printready != ''">
+            <xsl:element name="strong">
+              <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/printready/@label" />
+              <xsl:text>: </xsl:text>
+            </xsl:element>
+            <xsl:element name="br"></xsl:element>
+            <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/printready" />
             <xsl:element name="br"></xsl:element>
           </xsl:if>
           

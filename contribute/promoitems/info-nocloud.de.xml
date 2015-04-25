@@ -7,13 +7,14 @@
     </description>
     <type label="Typ">Aufkleber</type>
     <size>85mm x 55mm</size>
-    <languages>
+    <formats label="Verfügbare Formate (zum Herunterladen)"></formats>
+    <languages label="Verfügbare Sprachen (zum Herunterladen)">
       <a href="http://download.fsfe.org/advocacy/stickers/thereisnocloud/thereisnocloud-final-85mm.png">Englisch</a>
     </languages>
-    <printed>
+    <printed label="Gedruckte Versionen (zum Bestellen)">
       <a href="http://download.fsfe.org/advocacy/stickers/thereisnocloud/thereisnocloud-final-85mm.png">Englisch</a>
     </printed>
-    <license>CC0</license>
+    <license label="Lizenz">CC0</license>
   </info>
 
 </infoset>

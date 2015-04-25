@@ -4,8 +4,8 @@
   <logo>xpdf.png</logo>
   <homepage>http://www.foolabs.com/xpdf/</homepage>
   <license>GPLv2</license>
-  <platform><name>GNU/Linux</name></platform>
-  <platform><name>Windows</name></platform>
+  <platform><name>GNU/Linux</name><installer>http://www.foolabs.com/xpdf/download.html</installer></platform>
+  <platform><name>Windows</name><installer>http://www.foolabs.com/xpdf/download.html</installer></platform>
   <language>en</language>
   <language>fr</language>
   <language>de</language>

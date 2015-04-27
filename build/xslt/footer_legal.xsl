@@ -6,7 +6,7 @@
     <xsl:element name="section">
       <xsl:attribute name="id">legal-info</xsl:attribute>
   
-      <p>Copyright © 2001-2014 <xsl:element name="a">
+      <p>Copyright © 2001-2015 <xsl:element name="a">
         <xsl:attribute name="href"><xsl:value-of select="$linkresources"/>/</xsl:attribute>
         <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfeurope'" /></xsl:call-template>
       </xsl:element>.</p>

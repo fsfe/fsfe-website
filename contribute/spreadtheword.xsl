@@ -61,11 +61,8 @@
           <!-- Type -->
           <xsl:if test="/buildinfo/document/set/info[@id=$id]/type != ''">
             <xsl:element name="strong">
-              <!--
-              <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/type/@label" />
-              <xsl:text>: </xsl:text>
-              -->
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-type'" /></xsl:call-template>
+              <xsl:text>: </xsl:text>
             </xsl:element>
             <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/type" />
             <xsl:element name="br"></xsl:element>
@@ -74,7 +71,7 @@
           <!-- Size -->
           <xsl:if test="/buildinfo/document/set/info[@id=$id]/size != ''">
             <xsl:element name="strong">
-              <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/size/@label" />
+              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-size'" /></xsl:call-template>
               <xsl:text>: </xsl:text>
             </xsl:element>
             <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/size" />
@@ -84,7 +81,7 @@
           <!-- Available languages to download -->
           <xsl:if test="/buildinfo/document/set/info[@id=$id]/languages != ''">
             <xsl:element name="strong">
-              <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/languages/@label" />
+              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-languages'" /></xsl:call-template>
               <xsl:text>: </xsl:text>
             </xsl:element>
             <xsl:element name="br"></xsl:element>
@@ -95,7 +92,7 @@
           <!-- Printed versions (order) -->
           <xsl:if test="/buildinfo/document/set/info[@id=$id]/printed != ''">
             <xsl:element name="strong">
-              <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/printed/@label" />
+              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-printed'" /></xsl:call-template>
               <xsl:text>: </xsl:text>
             </xsl:element>
             <xsl:element name="br"></xsl:element>
@@ -106,7 +103,7 @@
           <!-- Available source files to download -->
           <xsl:if test="/buildinfo/document/set/info[@id=$id]/source != ''">
             <xsl:element name="strong">
-              <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/source/@label" />
+              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-source'" /></xsl:call-template>
               <xsl:text>: </xsl:text>
             </xsl:element>
             <xsl:element name="br"></xsl:element>
@@ -117,7 +114,7 @@
           <!-- Available print ready files to download -->
           <xsl:if test="/buildinfo/document/set/info[@id=$id]/printready != ''">
             <xsl:element name="strong">
-              <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/printready/@label" />
+              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-printready'" /></xsl:call-template>
               <xsl:text>: </xsl:text>
             </xsl:element>
             <xsl:element name="br"></xsl:element>
@@ -128,7 +125,7 @@
           <!-- License -->
           <xsl:if test="/buildinfo/document/set/info[@id=$id]/license != ''">
             <xsl:element name="strong">
-              <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/license/@label" />
+              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-license'" /></xsl:call-template>
               <xsl:text>: </xsl:text>
             </xsl:element>
             <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/license" />

@@ -1,23 +1,25 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <infoset>
   <info id="testitem">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
     <name>Testitem for new spreadtheword page</name>
     <description>
       This is just a testitem to see if every field is working.
     </description>
-    <!-- Labels (label="xyz") should be translated to your language! -->
-    <!-- Leave a tag like <printready> blank or erase it if you don't want to appear it -->
-    <type label="Type">Sticker</type>
-    <size label="Size">42 m²</size>
-    <languages label="Available languages (to download)">
+    <type>Sticker</type>
+    <size>42 m²</size>
+    <languages>
       <a href="http://fsfe.org">Language 1</a>, <a href="http://test.fsfe.org">Language 2</a>, <a href="http://fsfe.org">Language 3</a>
     </languages>
-    <printed label="Printed versions (to order)">
+    <printed>
       <a href="http://fsfe.org">Language 1</a>, <a href="http://test.fsfe.org">Language 2</a>
     </printed>
-    <source label="Available source files (to download)"><a href="http://fsfe.org">English (SVG)</a></source> 
-    <printready label="Print-ready files (to download)"><a href="http://fsfe.org">English (PDF)</a></printready>
-    <license label="License">CC BY-SA 3.0 (by Captain Designaah)</license>
+    <source><a href="http://fsfe.org">English (SVG)</a></source> 
+    <printready><a href="http://fsfe.org">English (PDF)</a></printready>
+    <license>CC BY-SA 3.0 (by Captain Designaah)</license>
   </info>
 
 </infoset>

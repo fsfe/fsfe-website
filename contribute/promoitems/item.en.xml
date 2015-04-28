@@ -7,27 +7,23 @@
   <!-- Test -->
   <item type="test" id="testitem" order="1">
  	<image
-    imglarge="http://fsfe.org"
     imgsmall="/graphics/megaphone.png"/>
   </item>
 
   <!-- FSFE and Fellowship -->
   <item type="fsfe" id="fellowship-leaflet" order="1">
  	<image
-    imglarge="http://download.fsfe.org/advocacy/leaflets/fellowship-leaflet-nyr2.1.en.pdf"
     imgsmall="/contribute/promopics/fellowship-leaflet-thumb.png"/>
   </item>
 
   <item type="fsfe" id="fsfe-folder" order="2">
  	<image
-    imglarge="/about/printable/folder.en.F.pdf"
     imgsmall="/contribute/promopics/folder-fsfe-en1_thumb.png"/>
   </item>
 
   <!-- Free Software and users freedom -->
-  <item type="fsfreedom" id="nocloud" order="1">
+  <item type="fsfreedom" id="nocloud-sticker" order="1">
  	<image
-    imglarge="http://download.fsfe.org/advocacy/stickers/thereisnocloud/thereisnocloud-final-85mm.png"
     imgsmall="/contribute/promopics/thereisnocloud_thumb.png"/>
   </item>
 

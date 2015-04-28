@@ -28,21 +28,21 @@
         
         <!-- Image -->
         <xsl:for-each select="image">
-          <xsl:element name="a">
+          <!-- <xsl:element name="a">
             <xsl:attribute name="href">
               <xsl:value-of select="@imglarge" />
             </xsl:attribute>
             <xsl:attribute name="title">
               <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/name" />
-            </xsl:attribute>
+            </xsl:attribute> -->
           
             <xsl:element name="img">
               <xsl:attribute name="class">left grid-30</xsl:attribute>
               <xsl:attribute name="src">
                 <xsl:value-of select="@imgsmall" />
               </xsl:attribute>
-            </xsl:element>
-          </xsl:element>
+            </xsl:element> <!-- /img -->
+          <!-- </xsl:element> --> <!-- /a -->
         </xsl:for-each>
         <!-- /Image -->
         
@@ -100,6 +100,16 @@
             <xsl:element name="br"></xsl:element>
           </xsl:if>
           
+          <!-- Context (e.g Campaign) -->
+          <xsl:if test="/buildinfo/document/set/info[@id=$id]/context != ''">
+            <xsl:element name="strong">
+              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-context'" /></xsl:call-template>
+              <xsl:text>: </xsl:text>
+            </xsl:element>
+            <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/context" />
+            <xsl:element name="br"></xsl:element>
+          </xsl:if>
+          
           <!-- Available source files to download -->
           <xsl:if test="/buildinfo/document/set/info[@id=$id]/source != ''">
             <xsl:element name="strong">
@@ -129,6 +139,26 @@
               <xsl:text>: </xsl:text>
             </xsl:element>
             <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/license" />
+            <xsl:element name="br"></xsl:element>
+          </xsl:if>
+          
+          <!-- Author -->
+          <xsl:if test="/buildinfo/document/set/info[@id=$id]/author != ''">
+            <xsl:element name="strong">
+              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-author'" /></xsl:call-template>
+              <xsl:text>: </xsl:text>
+            </xsl:element>
+            <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/author" />
+            <xsl:element name="br"></xsl:element>
+          </xsl:if>
+          
+          <!-- Year -->
+          <xsl:if test="/buildinfo/document/set/info[@id=$id]/year != ''">
+            <xsl:element name="strong">
+              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-year'" /></xsl:call-template>
+              <xsl:text>: </xsl:text>
+            </xsl:element>
+            <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/year" />
             <xsl:element name="br"></xsl:element>
           </xsl:if>
         

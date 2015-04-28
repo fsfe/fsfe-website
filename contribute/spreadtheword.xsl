@@ -138,20 +138,19 @@
             <xsl:element name="span">
               <xsl:attribute name="style">font-size:0.9em</xsl:attribute>
               
-              <xsl:element name="abbr">
+              <xsl:element name="abbr"> <!-- mouseover info text -->
                 <xsl:attribute name="title">
                   <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-license-tooltip'" /></xsl:call-template>
                 </xsl:attribute>
                 
-                <xsl:element name="strong">
+                <xsl:element name="strong"> <!-- Field name -->
                   <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-license'" /></xsl:call-template>
                   <xsl:text>: </xsl:text>
                 </xsl:element> <!-- /strong -->
-                
               </xsl:element> <!-- /abbr -->
+              
+              <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/license" /> <!-- Dynamic value of the field -->
             </xsl:element> <!-- /span -->
-            
-            <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/license" />
             <xsl:element name="br"></xsl:element>
           </xsl:if>
           

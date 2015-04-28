@@ -134,10 +134,23 @@
           
           <!-- License -->
           <xsl:if test="/buildinfo/document/set/info[@id=$id]/license != ''">
-            <xsl:element name="strong">
-              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-license'" /></xsl:call-template>
-              <xsl:text>: </xsl:text>
-            </xsl:element>
+            
+            <xsl:element name="span">
+              <xsl:attribute name="style">font-size:0.9em</xsl:attribute>
+              
+              <xsl:element name="abbr">
+                <xsl:attribute name="title">
+                  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-license-tooltip'" /></xsl:call-template>
+                </xsl:attribute>
+                
+                <xsl:element name="strong">
+                  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-license'" /></xsl:call-template>
+                  <xsl:text>: </xsl:text>
+                </xsl:element> <!-- /strong -->
+                
+              </xsl:element> <!-- /abbr -->
+            </xsl:element> <!-- /span -->
+            
             <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/license" />
             <xsl:element name="br"></xsl:element>
           </xsl:if>

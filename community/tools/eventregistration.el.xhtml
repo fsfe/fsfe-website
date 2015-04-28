@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html>
+  <head>
+    <title>Ανακοινώστε τη δική σας εκδήλωση της κοινότητας του FSFE</title>
+  </head>
+  <body>
+ 
+    <h1>Ανακοινώστε τη δική σας εκδήλωση της κοινότητας του FSFE</h1>
+
+    <div id="introduction">
+      <p>Χρησιμοποιήστε την παρακάτω φόρμα για να ανακοινώσετε κάθε εκδήλωση
+σχετική με κάποια δραστηριότητα του FSFE. Αν πρόκειται για τοπική συνάντηση
+του FSFE ή για ομιλία, αν είναι ένα περίπτερο στο δρόμο ή ένα αρχείο
+ραδιοφωνικής εκπομπής: Βοηθήστε την κοινότητα και τον κόσμο να μάθουν
+τι συμβαίνει.</p>
+      <!-- Why "fellowship-meeting", we could just say local FSFE meeting for instance 😉  -->
+    </div>
+
+    <h2>Καταχώριση</h2>
+
+    <form action="/cgi-bin/registerevent.php" method="POST" class="register_event fsfe-form" enctype="multipart/form-data" role="form">
+      <input name="register_event" type="hidden" />
+
+	<!--<fieldset id="register_event">-->
+
+        <label for="name" class="required">Το όνομά σας<span class="star">*</span></label>
+        <input name="name" value="" required="required" type="text" />
+
+        <label for="email" class="required">Το email σας<span class="star">*</span></label>
+        <input name="email" value="" required="required" type="email" /> 
+
+        <p class="help-block">Σημείωση: οι προσωπικές σας πληροφορίες ποτέ
+δεν θα διαμοιραστούν ή πουληθούν. Χρησιμοποιούνται μόνο για να έρθουμε σε
+επαφή μαζί σας αν υπάρξουν κλήσεις από εσάς ή προβλήματα.</p>
+
+        <label for="groupname">Όνομα ομάδας</label>
+        <input name="groupname" value="" type="text" />
+
+        <label for="groupurl">URL ομάδας</label>
+        <input name="groupurl" value="" type="text" />
+
+        <label for="title" class="required">Τίτλος εκδήλωσης<span class="star">*</span></label>
+        <input name="title" value="" required="required" type="text" />
+
+        <label for="date" class="required">Ημερομηνία<span class="star">*</span></label>
+        <input name="date" value="" required="required" type="date" placeholder="YYYY-MM-DD" />
+
+        <label for="description" class="required">Περιγραφή<span class="star">*</span></label>
+        <textarea name="description" required="required"></textarea>
+
+        <p class="help-block">Εξηγείστε με συντομία το σκοπό της εκδήλωσής σας,
+πώς θα τη διοργανώσετε και ποιους αναμένετε να συμμετάσχουν.</p>
+
+        <label for="url">URL εκδήλωσης</label>
+        <input name="url" value="" type="text" />
+
+        <label for="location">Τοποθεσία εκδήλωσης</label>
+        <input name="location" value="" required="required" type="text" />
+
+
+        <!-- Please give more guidance - make sure that the format is correct because these will be used to generate tags also -->
+
+        <label for="city">Πόλη/Δήμος</label>
+        <input name="city" value="" required="required" type="text" />
+
+        <label for="country">Χώρα</label>
+        <input name="country" value="" required="required" type="text" />
+
+        <!--</fieldset>-->
+	<!-- Should help against spam -->
+		
+	<input value="Προσθήκη εκδήλωσης" name="submit" type="submit" />
+
+    </form>
+    
+    <p>Μετά από τη συμπλήρωση και την αποστολή της φόρμας πιέζοντας το
+κουμπί «Προσθήκη εκδήλωσης», ένα xml-αρχείο θα παραχθεί και θα αποσταλεί
+στην Κοινότητα του FSFE. Αν εγκριθεί, η εκδήλωσή σας θα πρέπει να εμφανιστεί
+στο fsfe.org/events μέσα στις επόμενες 48 ώρες. Σημειώστε ότι προβάλλουμε
+μόνο δραστηριότητες της Κοινότητας ή σχετικές με το FSFE και όχι κάποιες
+άλλες δραστηριότητες για το Ελεύθερο Λογισμικό (χωρίς εξαιρέσεις - ανεξάρτητα
+από τη σπουδαιότητά τους).</p> 
+     
+  </body>
+ </html>

@@ -6,9 +6,9 @@
 
   <!-- Fill dynamic content -->
   <xsl:template match="dynamic-content">
-    <xsl:variable name="type"><xsl:value-of select="@type"/></xsl:variable>
+    <xsl:variable name="year"><xsl:value-of select="@year"/></xsl:variable>
 
-    <xsl:for-each select="/buildinfo/document/set/item [@type = $type]">
+    <xsl:for-each select="/buildinfo/document/set/item [@year = $year]">
       <xsl:sort select="@order" order="ascending"/>
       
       <!-- Full Item -->
@@ -17,7 +17,7 @@
         
         <!-- Load item variables id and year -->
         <xsl:variable name="id"><xsl:value-of select="@id"/></xsl:variable>
-        <xsl:variable name="year"><xsl:value-of select="@year"/></xsl:variable>
+        <xsl:variable name="type"><xsl:value-of select="@type"/></xsl:variable>
 
         <!-- Name -->
         <xsl:element name="p">
@@ -149,12 +149,13 @@
           </xsl:if>
           
           <!-- Year -->
+          <!--
           <xsl:element name="strong">
             <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-year'" /></xsl:call-template>
             <xsl:text>: </xsl:text>
           </xsl:element>
           <xsl:value-of select="$year"/>
-          <xsl:element name="br"></xsl:element>
+          <xsl:element name="br"></xsl:element>-->
           
           
           <!-- SMALLER TEXT -->

@@ -78,28 +78,6 @@
             <xsl:element name="br"></xsl:element>
           </xsl:if>
           
-          <!-- Available languages to download -->
-          <xsl:if test="/buildinfo/document/set/info[@id=$id]/languages != ''">
-            <xsl:element name="strong">
-              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-languages'" /></xsl:call-template>
-              <xsl:text>: </xsl:text>
-            </xsl:element>
-            <xsl:element name="br"></xsl:element>
-            <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/languages" />
-            <xsl:element name="br"></xsl:element>
-          </xsl:if>
-          
-          <!-- Printed versions (order) -->
-          <xsl:if test="/buildinfo/document/set/info[@id=$id]/printed != ''">
-            <xsl:element name="strong">
-              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-printed'" /></xsl:call-template>
-              <xsl:text>: </xsl:text>
-            </xsl:element>
-            <xsl:element name="br"></xsl:element>
-            <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/printed" />
-            <xsl:element name="br"></xsl:element>
-          </xsl:if>
-          
           <!-- Context (e.g Campaign) -->
           <xsl:if test="/buildinfo/document/set/info[@id=$id]/context != ''">
             <xsl:element name="strong">
@@ -110,45 +88,57 @@
             <xsl:element name="br"></xsl:element>
           </xsl:if>
           
-          <!-- Available source files to download -->
-          <xsl:if test="/buildinfo/document/set/info[@id=$id]/source != ''">
-            <xsl:element name="strong">
-              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-source'" /></xsl:call-template>
+          <!-- Languages -->
+          <xsl:if test="/buildinfo/document/set/info[@id=$id]/languages != ''">
+            <xsl:element name="span">
+              <!--<xsl:attribute name="style">font-size:0.9em</xsl:attribute>-->
+              <xsl:element name="abbr"> <!-- mouseover info text -->
+                <xsl:attribute name="title">
+                  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-languages-tooltip'" /></xsl:call-template>
+                </xsl:attribute>
+                <xsl:element name="strong"> <!-- Field name -->
+                  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-languages'" /></xsl:call-template>
+                </xsl:element> <!-- /strong -->
+              </xsl:element> <!-- /abbr -->
               <xsl:text>: </xsl:text>
-            </xsl:element>
-            <xsl:element name="br"></xsl:element>
-            <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/source" />
+              <xsl:element name="br"></xsl:element>
+              <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/languages" /> <!-- Dynamic value of the field -->
+            </xsl:element> <!-- /span -->
             <xsl:element name="br"></xsl:element>
           </xsl:if>
           
-          <!-- Available print ready files to download -->
-          <xsl:if test="/buildinfo/document/set/info[@id=$id]/printready != ''">
-            <xsl:element name="strong">
-              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-printready'" /></xsl:call-template>
+          <!-- Printed version -->
+          <xsl:if test="/buildinfo/document/set/info[@id=$id]/printed != ''">
+            <xsl:element name="span">
+              <!--<xsl:attribute name="style">font-size:0.9em</xsl:attribute>-->
+              <xsl:element name="abbr"> <!-- mouseover info text -->
+                <xsl:attribute name="title">
+                  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-printed-tooltip'" /></xsl:call-template>
+                </xsl:attribute>
+                <xsl:element name="strong"> <!-- Field name -->
+                  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-printed'" /></xsl:call-template>
+                </xsl:element> <!-- /strong -->
+              </xsl:element> <!-- /abbr -->
               <xsl:text>: </xsl:text>
-            </xsl:element>
-            <xsl:element name="br"></xsl:element>
-            <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/printready" />
+              <xsl:element name="br"></xsl:element>
+              <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/printed" /> <!-- Dynamic value of the field -->
+            </xsl:element> <!-- /span -->
             <xsl:element name="br"></xsl:element>
           </xsl:if>
           
           <!-- License -->
           <xsl:if test="/buildinfo/document/set/info[@id=$id]/license != ''">
-            
             <xsl:element name="span">
               <xsl:attribute name="style">font-size:0.9em</xsl:attribute>
-              
               <xsl:element name="abbr"> <!-- mouseover info text -->
                 <xsl:attribute name="title">
                   <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-license-tooltip'" /></xsl:call-template>
                 </xsl:attribute>
-                
                 <xsl:element name="strong"> <!-- Field name -->
                   <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-license'" /></xsl:call-template>
-                  <xsl:text>: </xsl:text>
                 </xsl:element> <!-- /strong -->
               </xsl:element> <!-- /abbr -->
-              
+              <xsl:text>: </xsl:text>
               <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/license" /> <!-- Dynamic value of the field -->
             </xsl:element> <!-- /span -->
             <xsl:element name="br"></xsl:element>
@@ -171,6 +161,46 @@
               <xsl:text>: </xsl:text>
             </xsl:element>
             <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/year" />
+            <xsl:element name="br"></xsl:element>
+          </xsl:if>
+          
+          
+          <!-- SMALLER TEXT -->
+          <!-- Source -->
+          <xsl:if test="/buildinfo/document/set/info[@id=$id]/source != ''">
+            <xsl:element name="span">
+              <xsl:attribute name="style">font-size:0.9em</xsl:attribute>
+              <xsl:element name="abbr"> <!-- mouseover info text -->
+                <xsl:attribute name="title">
+                  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-source-tooltip'" /></xsl:call-template>
+                </xsl:attribute>
+                <xsl:element name="strong"> <!-- Field name -->
+                  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-source'" /></xsl:call-template>
+                </xsl:element> <!-- /strong -->
+              </xsl:element> <!-- /abbr -->
+              <xsl:text>: </xsl:text>
+              <xsl:element name="br"></xsl:element>
+              <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/source" /> <!-- Dynamic value of the field -->
+            </xsl:element> <!-- /span -->
+            <xsl:element name="br"></xsl:element>
+          </xsl:if>
+          
+          <!-- Printready -->
+          <xsl:if test="/buildinfo/document/set/info[@id=$id]/printready != ''">
+            <xsl:element name="span">
+              <xsl:attribute name="style">font-size:0.9em</xsl:attribute>
+              <xsl:element name="abbr"> <!-- mouseover info text -->
+                <xsl:attribute name="title">
+                  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-printready-tooltip'" /></xsl:call-template>
+                </xsl:attribute>
+                <xsl:element name="strong"> <!-- Field name -->
+                  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-printready'" /></xsl:call-template>
+                </xsl:element> <!-- /strong -->
+              </xsl:element> <!-- /abbr -->
+              <xsl:text>: </xsl:text>
+              <xsl:element name="br"></xsl:element>
+              <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/printready" /> <!-- Dynamic value of the field -->
+            </xsl:element> <!-- /span -->
             <xsl:element name="br"></xsl:element>
           </xsl:if>
         

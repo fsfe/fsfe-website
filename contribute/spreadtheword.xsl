@@ -91,7 +91,7 @@
           <!-- Languages -->
           <xsl:if test="/buildinfo/document/set/info[@id=$id]/languages != ''">
             <xsl:element name="span">
-              <!--<xsl:attribute name="style">font-size:0.9em</xsl:attribute>-->
+              <!--<xsl:attribute name="style">font-size:0.8em</xsl:attribute>-->
               <xsl:element name="abbr"> <!-- mouseover info text -->
                 <xsl:attribute name="title">
                   <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-languages-tooltip'" /></xsl:call-template>
@@ -110,7 +110,7 @@
           <!-- Printed version -->
           <xsl:if test="/buildinfo/document/set/info[@id=$id]/printed != ''">
             <xsl:element name="span">
-              <!--<xsl:attribute name="style">font-size:0.9em</xsl:attribute>-->
+              <!--<xsl:attribute name="style">font-size:0.8em</xsl:attribute>-->
               <xsl:element name="abbr"> <!-- mouseover info text -->
                 <xsl:attribute name="title">
                   <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-printed-tooltip'" /></xsl:call-template>
@@ -128,19 +128,11 @@
           
           <!-- License -->
           <xsl:if test="/buildinfo/document/set/info[@id=$id]/license != ''">
-            <xsl:element name="span">
-              <xsl:attribute name="style">font-size:0.9em</xsl:attribute>
-              <xsl:element name="abbr"> <!-- mouseover info text -->
-                <xsl:attribute name="title">
-                  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-license-tooltip'" /></xsl:call-template>
-                </xsl:attribute>
-                <xsl:element name="strong"> <!-- Field name -->
-                  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-license'" /></xsl:call-template>
-                </xsl:element> <!-- /strong -->
-              </xsl:element> <!-- /abbr -->
+            <xsl:element name="strong">
+              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-license'" /></xsl:call-template>
               <xsl:text>: </xsl:text>
-              <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/license" /> <!-- Dynamic value of the field -->
-            </xsl:element> <!-- /span -->
+            </xsl:element>
+            <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/license" />
             <xsl:element name="br"></xsl:element>
           </xsl:if>
           
@@ -169,7 +161,7 @@
           <!-- Source -->
           <xsl:if test="/buildinfo/document/set/info[@id=$id]/source != ''">
             <xsl:element name="span">
-              <xsl:attribute name="style">font-size:0.9em</xsl:attribute>
+              <xsl:attribute name="style">font-size:0.8em</xsl:attribute>
               <xsl:element name="abbr"> <!-- mouseover info text -->
                 <xsl:attribute name="title">
                   <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-source-tooltip'" /></xsl:call-template>
@@ -188,7 +180,7 @@
           <!-- Printready -->
           <xsl:if test="/buildinfo/document/set/info[@id=$id]/printready != ''">
             <xsl:element name="span">
-              <xsl:attribute name="style">font-size:0.9em</xsl:attribute>
+              <xsl:attribute name="style">font-size:0.8em</xsl:attribute>
               <xsl:element name="abbr"> <!-- mouseover info text -->
                 <xsl:attribute name="title">
                   <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-printready-tooltip'" /></xsl:call-template>

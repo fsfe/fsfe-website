@@ -15,7 +15,9 @@
       <xsl:element name="div">
         <xsl:attribute name="class">left break margin-vertical</xsl:attribute>
         
+        <!-- Load item variables id and year -->
         <xsl:variable name="id"><xsl:value-of select="@id"/></xsl:variable>
+        <xsl:variable name="year"><xsl:value-of select="@year"/></xsl:variable>
 
         <!-- Name -->
         <xsl:element name="p">
@@ -147,14 +149,12 @@
           </xsl:if>
           
           <!-- Year -->
-          <xsl:if test="/buildinfo/document/set/info[@id=$id]/year != ''">
-            <xsl:element name="strong">
-              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-year'" /></xsl:call-template>
-              <xsl:text>: </xsl:text>
-            </xsl:element>
-            <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/year" />
-            <xsl:element name="br"></xsl:element>
-          </xsl:if>
+          <xsl:element name="strong">
+            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-year'" /></xsl:call-template>
+            <xsl:text>: </xsl:text>
+          </xsl:element>
+          <xsl:value-of select="$year"/>
+          <xsl:element name="br"></xsl:element>
           
           
           <!-- SMALLER TEXT -->

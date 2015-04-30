@@ -11,15 +11,17 @@
     </description>
     <type>TYPE OF ITEM (e.g. Leaflet)</type>
     <size>SIZE OF ITEM (e.g. 85mm x 55mm)</size>
+    <context><a href="/campaign">NAME OF RELATED SITE/CAMPAIGN</a></context>
     <languages>
       <a href="LINK1">LANGUAGE1</a>, <a href="LINK2">LANGUAGE2</a>
     </languages>
     <printed>
       <a href="LINK1">LANGUAGE1</a>, <a href="LINK2">LANGUAGE2</a>
     </printed>
+    <license>LICENSE OF ITEM</license>
+    <author>Captain Designaah</author>
     <source>AVAILABLE SOURCE FILES (SVG)</source> 
     <printready>AVAILABLE PRINT-READY FILES</printready>
-    <license>LICENSE OF ITEM</license>
   </info>
 
 </infoset>

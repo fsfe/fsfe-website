@@ -187,13 +187,12 @@
           </xsl:if>
           
           <!-- Year -->
-          <!--
           <xsl:element name="strong">
             <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-year'" /></xsl:call-template>
             <xsl:text>: </xsl:text>
           </xsl:element>
           <xsl:value-of select="$year"/>
-          <xsl:element name="br"></xsl:element>-->
+          <xsl:element name="br"></xsl:element>
           
           
           <!-- SMALLER TEXT -->

@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <infoset>
-  <info id="testitem">
+  <info id="testitem-archive">
     <!-- Leave a tag like <printready> blank or erase it if you don't 
     want to appear it -->
     <!-- Translations for "Type", "Size" etc. can be found in 
     /tools/texts-**.xml -->
-    <name>Testitem for new spreadtheword page</name>
+    <name>Archived test item</name>
     <description>
-      This is just a testitem to see if every field is working.
+      This is a test item which should only appear in the promo-archive.
     </description>
-    <type>Sticker</type>
-    <size>42 m²</size>
+    <type>Poster</type>
+    <size>2mm x 2mm</size>
     <languages>
       <a href="http://fsfe.org">Language 1</a>, <a href="http://test.fsfe.org">Language 2</a>, <a href="http://fsfe.org">Language 3</a>
     </languages>
     <printed>
       <a href="http://fsfe.org">Language 1</a>, <a href="http://test.fsfe.org">Language 2</a>
     </printed>
-    <context><a href="/activities/routers">Compulsory Routers</a></context>
+    <context><a href="/">Nothing</a></context>
     <source><a href="http://fsfe.org">English (SVG)</a></source> 
     <printready><a href="http://fsfe.org">English (PDF)</a></printready>
     <license>CC BY-SA 3.0</license>
-    <author>Captain Designaah</author>
+    <author>Chief Inkscape</author>
   </info>
 
 </infoset>

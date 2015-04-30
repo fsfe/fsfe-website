@@ -5,7 +5,12 @@
 <itemset>
 
   <!-- Test -->
-  <item type="test" id="testitem" year="2042" order="1">
+  <item type="test" id="testitem-archive" year="2042" order="1">
+ 	<image
+    imgsmall="/graphics/trusted-computing-vid.png"/>
+  </item>
+  
+  <item type="test" id="testitem" year="2042" order="2">
  	<image
     imgsmall="/graphics/megaphone.png"/>
   </item>

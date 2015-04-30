@@ -5,24 +5,24 @@
 <itemset>
 
   <!-- Test -->
-  <item type="test" id="testitem" order="1">
+  <item type="test" id="testitem" year="2042" order="1">
  	<image
     imgsmall="/graphics/megaphone.png"/>
   </item>
 
   <!-- FSFE and Fellowship -->
-  <item type="fsfe" id="fellowship-leaflet" order="1">
+  <item type="fsfe" id="fellowship-leaflet" year="2008" order="1">
  	<image
     imgsmall="/contribute/promopics/fellowship-leaflet-thumb.png"/>
   </item>
 
-  <item type="fsfe" id="fsfe-folder" order="2">
+  <item type="fsfe" id="fsfe-folder" year="2005" order="2">
  	<image
     imgsmall="/contribute/promopics/folder-fsfe-en1_thumb.png"/>
   </item>
 
   <!-- Free Software and users freedom -->
-  <item type="fsfreedom" id="nocloud-sticker" order="1">
+  <item type="fsfreedom" id="nocloud-sticker" year="2015" order="1">
  	<image
     imgsmall="/contribute/promopics/thereisnocloud_thumb.png"/>
   </item>

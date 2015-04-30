@@ -5,32 +5,41 @@
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
 
   <xsl:template match="toc">
-    <xsl:element name="ul">
+    <xsl:element name="div">
+      <xsl:attribute name="id">toc</xsl:attribute>
+      <xsl:element name="ul">
       
-      <xsl:for-each select="/buildinfo/document/set/item">
-        <xsl:sort select="@type" order="ascending" />
-        <xsl:variable name="id"><xsl:value-of select="@id"/></xsl:variable>
-        <xsl:variable name="link" select="concat('#', $id)"/>
-        <xsl:variable name="type"><xsl:value-of select="@type"/></xsl:variable>
+        <xsl:for-each select="/buildinfo/document/set/item">
+          <xsl:sort select="@type" order="ascending" />
+          <xsl:variable name="id"><xsl:value-of select="@id"/></xsl:variable>
+          <xsl:variable name="link" select="concat('#', $id)"/>
+          <xsl:variable name="type"><xsl:value-of select="@type"/></xsl:variable>
+          <xsl:variable name="year"><xsl:value-of select="@year"/></xsl:variable>
+          
+          <xsl:element name="li">
+            <xsl:text>[</xsl:text>
+            <xsl:value-of select="$type"/> <!-- e.g. [dfd] -->
+            <xsl:text>] </xsl:text>
+            
+            <xsl:element name="a">
+              <xsl:attribute name="href">
+                <xsl:value-of select="$link"/> <!-- #id-of-item -->
+              </xsl:attribute>
+              <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/name" /> <!-- name of the item -->
+              <xsl:text> (</xsl:text>
+                <xsl:value-of select="$year"/> <!-- (20xx) -->
+              <xsl:text>)</xsl:text>
+            </xsl:element> <!-- /a -->
+            
+            
+          </xsl:element> <!-- /li -->
+          
+        </xsl:for-each>
         
-        <xsl:element name="li">
-          <xsl:text>[</xsl:text>
-          <xsl:value-of select="$type"/>
-          <xsl:text>] </xsl:text>
-          
-          <xsl:element name="a">
-            <xsl:attribute name="href">
-              <xsl:value-of select="$link"/>
-            </xsl:attribute>
-            <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/name" />
-          </xsl:element> <!-- /a -->
-          
-          
-        </xsl:element> <!-- /li -->
-        
-      </xsl:for-each>
+      </xsl:element> <!-- /ul -->
       
-    </xsl:element> <!-- /ul -->
+    </xsl:element> <!-- /div -->
+    
   </xsl:template>
 
   <!-- Fill dynamic content -->

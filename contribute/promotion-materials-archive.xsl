@@ -6,16 +6,31 @@
 
   <xsl:template match="toc">
     <xsl:element name="ul">
+      
       <xsl:for-each select="/buildinfo/document/set/item">
         <xsl:sort select="@type" order="ascending" />
         <xsl:variable name="id"><xsl:value-of select="@id"/></xsl:variable>
+        <xsl:variable name="link" select="concat('#', $id)"/>
+        <xsl:variable name="type"><xsl:value-of select="@type"/></xsl:variable>
         
         <xsl:element name="li">
-          <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/name" />
-        </xsl:element>
+          <xsl:text>[</xsl:text>
+          <xsl:value-of select="$type"/>
+          <xsl:text>] </xsl:text>
+          
+          <xsl:element name="a">
+            <xsl:attribute name="href">
+              <xsl:value-of select="$link"/>
+            </xsl:attribute>
+            <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/name" />
+          </xsl:element> <!-- /a -->
+          
+          
+        </xsl:element> <!-- /li -->
         
       </xsl:for-each>
-    </xsl:element>
+      
+    </xsl:element> <!-- /ul -->
   </xsl:template>
 
   <!-- Fill dynamic content -->

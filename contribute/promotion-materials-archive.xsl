@@ -4,6 +4,20 @@
   <xsl:import href="../fsfe.xsl" />
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
 
+  <xsl:template match="toc">
+    <xsl:element name="ul">
+      <xsl:for-each select="/buildinfo/document/set/item">
+        <xsl:sort select="@type" order="ascending" />
+        <xsl:variable name="id"><xsl:value-of select="@id"/></xsl:variable>
+        
+        <xsl:element name="li">
+          <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/name" />
+        </xsl:element>
+        
+      </xsl:for-each>
+    </xsl:element>
+  </xsl:template>
+
   <!-- Fill dynamic content -->
   <xsl:template match="dynamic-content">
     <xsl:variable name="year"><xsl:value-of select="@year"/></xsl:variable>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html>
+  <head>
+    <title>Anuncie su evento comunitario FSFE</title>
+  </head>
+  <body>
+ 
+    <h1>Anuncie su evento comunitario FSFE</h1>
+
+    <div id="introduction">
+      <p>Utilice el siguiente formulario para anunciar cada evento que está relacionado con una actividad FSFE. Si se trata de una reunión de becas o una charla, si se trata de un stand en la calle o un podcast de radio: Deje que la comunidad y el mundo sepan lo que está pasando.</p>
+      <!-- Why "fellowship-meeting", we could just say local FSFE meeting for instance 😉  -->
+    </div>
+
+    <h2>Registrarse</h2>
+
+    <form action="/cgi-bin/registerevent.php" method="POST" class="register_event fsfe-form" enctype="multipart/form-data" role="form">
+      <input name="register_event" type="hidden" />
+
+	<!--<fieldset id="register_event">-->
+
+        <label for="name" class="required">Su nombre<span class="star">*</span></label>
+        <input name="name" value="" required="required" type="text" />
+
+        <label for="email" class="required">Su correo electrónico<span class="star">*</span></label>
+        <input name="email" value="" required="required" type="email" /> 
+
+        <p class="help-block">Tenga en cuenta que: su información personal nunca será compartida, ni vendida. Sólo se utilizará para ponernos en contacto con usted o si hay algún problema.</p>
+
+        <label for="groupname">Nombre del grupo</label>
+        <input name="groupname" value="" type="text" />
+
+        <label for="groupurl">URL del grupo</label>
+        <input name="groupurl" value="" type="text" />
+
+        <label for="title" class="required">Título del evento<span class="star">*</span></label>
+        <input name="title" value="" required="required" type="text" />
+
+        <label for="date" class="required">Fecha<span class="star">*</span></label>
+        <input name="date" value="" required="required" type="date" placeholder="YYYY-MM-DD" />
+
+        <label for="description" class="required">Descripción<span class="star">*</span></label>
+        <textarea name="description" required="required"></textarea>
+
+        <p class="help-block">Por favor, explique brevemente de que trata su evento, cómo asistir y que le espera a los participantes.</p>
+
+        <label for="url">URL del evento</label>
+        <input name="url" value="" type="text" />
+
+        <label for="location">Lugar del evento</label>
+        <input name="location" value="" required="required" type="text" />
+
+
+        <!-- Please give more guidance - make sure that the format is correct because these will be used to generate tags also -->
+
+        <label for="city">Ciudad</label>
+        <input name="city" value="" required="required" type="text" />
+
+        <label for="country">País</label>
+        <input name="country" value="" required="required" type="text" />
+
+        <!--</fieldset>-->
+	<!-- Should help against spam -->
+		
+	<input value="Add event" name="submit" type="submit" />
+
+    </form>
+    
+    <p>Después de llenar el formulario y confirmar su entrada con el botón "Añadir evento", se generará un archivo xml, este será enviado a la Fellowship de la FSFE. Si se aprueba, su evento será subido y debe aparecer en fsfe.org/events durante las próximas 48 horas. Tenga en cuenta que sólo promovemos actividades relacionadas con  Fellowship o FSFE y no cualquier otro tipo de actividades relacionadas al Software Libre (sin excepciones - lo importante es que lo sean alguna vez).</p> 
+     
+  </body>
+ </html>

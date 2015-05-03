@@ -65,6 +65,10 @@ debug(){
   fi
 }
 
+match(){
+  echo -E "$1" |egrep -q "$2"
+}
+
 include_xml(){
   # include second level elements of a given XML file
   # this emulates the behaviour of the original
@@ -72,7 +76,7 @@ include_xml(){
   # level elements from any file
   file="$1"
 
-  if [ -r "$file" ]; then
+  if [ -f "$file" ]; then
     # guess encoding from xml header
     # we will convert everything to utf-8 prior to processing
     enc="$(sed -nr 's:^.*<\?.*encoding="([^"]+)".*$:\1:p' "$file")"
@@ -86,14 +90,26 @@ include_xml(){
   fi
 }
 
+get_attributes(){
+  # get attributes of top level element in a given
+  # XHTML file
+  file="$1"
+
+  cat "$file" \
+  | tr '\n\t\r' '   ' \
+  | sed -rn 's;^.*< *[hH]?[xXtT][mM][lL] +([^>]*)>.*$;\1;p'
+}
+
 sourceglobs(){
   # read a .sources file and glob up referenced
   # source files for processing in list_sources
   sourcesfile="$1"
 
-  if [ -r "$sourcesfile" ]; then
+  if [ -f "$sourcesfile" ]; then
     sed -rn 's;:global$;*.[a-z][a-z].xml;gp' "$sourcesfile" \
-    | while read glob; do echo "$basedir/"$glob 2>/dev/null; done \
+    | while read glob; do
+      echo "$basedir/"$glob |grep -vF "$basedir/$glob"
+    done \
     | sed -r 's:\.[a-z]{2}\.xml( |$):\n:g' \
     | sort -u
   fi
@@ -104,10 +120,10 @@ all_sources(){
   # source files
   sourcesfile="$1"
 
-  if [ -r "$sourcesfile" ]; then
+  if [ -f "$sourcesfile" ]; then
     sed -rn 's;:global$;*.[a-z][a-z].xml;gp' "$sourcesfile" \
     | while read glob; do
-      echo "$basedir/"$glob |grep -vF "$basedir/$glob" 2>/dev/null;
+      echo "$basedir/"$glob |grep -vF "$basedir/$glob"
     done
   fi
 }
@@ -126,14 +142,14 @@ list_sources(){
   || sourceglobs="$(sourceglobs "$sourcesfile")"
 
   for base in $sourceglobs; do
-    if [ -r "${base}.${lang}.xml" ]; then
+    if [ -f "${base}.${lang}.xml" ]; then
       echo "${base}.${lang}.xml"
-    elif [ -r "${base}.en.xml" ]; then
+    elif [ -f "${base}.en.xml" ]; then
       echo "${base}.en.xml"
     else
-      ls "${base}".[a-z][a-z].xml |head -n1
+      ls "${base}".[a-z][a-z].xml 2>/dev/null |head -n1
     fi
-  done 2>/dev/null
+  done
 }
 
 auto_sources(){
@@ -142,7 +158,7 @@ auto_sources(){
   sourcesfile="$1"
   lang="$2"
 
-  globfile="$(echo "$sourcesfile" |sed -r 's;(^|.*/)([^/]+).sources$;\1_._._\2.'"$lang"'.sourceglobs;')"
+  globfile="$(echo "$sourcesfile" |sed -r 's;(^|.*/)([^/]+).sources$;\1._._\2.'"$lang"'.sourceglobs;')"
 
   if [ -e "$globfile" ];then
     cat "$globfile"
@@ -214,7 +230,7 @@ list_langs(){
 
 get_language(){
   # extract language indicator from a given file name
-  echo "$(echo "$1" |sed -r 's:^.*\.([a-z]{2})\.xhtml$:\1:')";
+  echo "$(echo "$1" |sed -r 's:^.*\.([a-z]{2})\.[^\.]+$:\1:')";
 }
 get_shortname(){
   # get shortened version of a given file name
@@ -240,7 +256,7 @@ get_textsfile(){
 
   if [ -n "$cache_textsfile" ]; then
     echo "$cache_textsfile" |sed -r 's;^.* '"$lang"':<([^>]+)> .*$;\1;p'
-  elif [ -r "$basedir/tools/texts-${1}.xml" ]; then
+  elif [ -f "$basedir/tools/texts-${1}.xml" ]; then
     echo "$basedir/tools/texts-${1}.xml"
   else
     echo "$basedir/tools/texts-en.xml"
@@ -249,9 +265,9 @@ get_textsfile(){
 
 cache_fundraising(){
   cache_fundraising="$(for lang in $(get_languages); do
-    if [ -r "$basedir/fundraising-${lang}.xml" ]; then
+    if [ -f "$basedir/fundraising-${lang}.xml" ]; then
       echo -n " ${lang}:<$basedir/fundraising-${lang}.xml> "
-    elif [ -r "$basedir/fundraising-en.xml" ]; then
+    elif [ -f "$basedir/fundraising-en.xml" ]; then
       echo -n " ${lang}:<$basedir/fundraising-en.xml> "
     fi
   done)"
@@ -263,9 +279,9 @@ get_fundraisingfile(){
 
   if [ -n "$cache_fundraising" ]; then
     echo "$cache_fundraising" |sed -r 's;^.* '"$lang"':<([^>]+)> .*$;\1;p'
-  elif [ -r "$basedir/fundraising-${lang}.xml" ]; then
+  elif [ -f "$basedir/fundraising-${lang}.xml" ]; then
     echo "$basedir/fundraising-${lang}.xml"
-  elif [ -r "$basedir/fundraising-en.xml" ]; then
+  elif [ -f "$basedir/fundraising-en.xml" ]; then
     echo "$basedir/fundraising-en.xml"
   fi
 }
@@ -278,11 +294,11 @@ get_processor(){
 
   shortname="$1"
 
-  if [ -r "${shortname}.xsl" ]; then
+  if [ -f "${shortname}.xsl" ]; then
     echo "${shortname}.xsl"
   else
     location="$(dirname "$shortname")"
-    until [ -r "$location/default.xsl" -o "$location" = . -o "$location" = / ]; do
+    until [ -f "$location/default.xsl" -o "$location" = . -o "$location" = / ]; do
       location="$(dirname "$location")"
     done
     echo "$location/default.xsl"
@@ -295,23 +311,30 @@ build_xmlstream(){
   # a single xhtml page to be built
   shortname="$1"
   lang="$2"
+  olang="$3"
 
-  [ -r "${shortname}.${lang}.xhtml" ] && act_lang="$lang" || act_lang="en"
-
+  dirname="$(dirname "$shortname")"
   metaname="$(echo "$shortname" |sed -r 's;.*/\.\.(/.+)$;\1;')"
-  infile="${shortname}.${act_lang}.xhtml"
   texts_xml=$(get_textsfile $lang)
   fundraising_xml=$(get_fundraisingfile $lang)
-  
   date="$(date +%Y-%m-%d)"
   time="$(date +%H:%M:%S)"
-  dirname="$(dirname "$infile")"
   outdated=no
+
+  [ -z "$olang" ] && olang="en"
+  if [ -f "${shortname}.${lang}.xhtml" ]; then
+    act_lang="$lang"
+    [ "${shortname}.${olang}.xhtml" -nt "${shortname}.${lang}.xhtml" ] && outdated=yes
+  else
+    act_lang="$olang"
+  fi
+
+  infile="${shortname}.${act_lang}.xhtml"
 
   cat <<-EOF
 	<buildinfo
 	  date="$date"
-	  original="en"
+	  original="$olang"
 	  filename="$metaname"
 	  dirname="$dirname"
 	  language="$lang"
@@ -329,9 +352,7 @@ build_xmlstream(){
 	
 	<document
 	  language="$act_lang"
-	  type=""
-	  external=""
-	  newsdate=""
+	  $(get_attributes "$infile")
 	>
 	  <timestamp>
 	    \$Date:$date $time \$
@@ -362,12 +383,13 @@ mes(){
 process_file(){
   infile="$1"
   processor="$2"
+  olang="$3"
 
   shortname=$(get_shortname "$infile")
   lang=$(get_language "$infile")
   [ -z "$processor" ] && processor="$(get_processor "$shortname")"
 
-  build_xmlstream "$shortname" "$lang" \
+  build_xmlstream "$shortname" "$lang" "$olang" \
   | xsltproc "$processor" - \
   | sed -r '
       s;< *(a|link)( [^>]*)? href="https?://'"$domain"'/([^"]*)";<\1\2 href="/\3";g
@@ -392,7 +414,7 @@ cast_globfile(){
 
   sources="$(list_sources "###" "$lang" "$(cat "$sourceglobfile")")"
 
-  [ -e "$globfile" ] && \
+  [ -f "$globfile" ] && \
     [ "$sources" = "$(cat "$globfile")" ] \
   || echo "$sources" >"$globfile"
 
@@ -408,7 +430,7 @@ glob_maker(){
 
   filedir=$(dirname "$sourcesfile")
   shortbase="$(basename "$sourcesfile" |sed -r 's;\.sources$;;')"
-  sourceglobfile="${filedir}/_._._${shortbase}.sourceglobs"
+  sourceglobfile="${filedir}/._._${shortbase}.sourceglobs"
 
   cat <<MakeEND
 $(mes "$sourceglobfile"): $(mes $(all_sources "$sourcesfile"))
@@ -416,7 +438,7 @@ $(mes "$sourceglobfile"): $(mes $(all_sources "$sourcesfile"))
 MakeEND
 
   for lang in $(get_languages); do
-    globfile="${filedir}/_._._${shortbase}.${lang}.sourceglobs"
+    globfile="${filedir}/._._${shortbase}.${lang}.sourceglobs"
     cat <<MakeEND
 $(mes "$globfile"): $(mes "$sourceglobfile")
 	$0 --source "$basedir" cast_globfile "$sourceglobfile" "$lang" "$globfile"
@@ -426,29 +448,36 @@ MakeEND
 
 xhtml_maker(){
   # generate make rules for building html files out of xhtml
-  # account for included xml files and xls rules
+  # account for included xml files and xsl rules
 
   shortname="$1"
   outpath="$2"
 
-  shortbase="$(basename "$shortname")"
-  filedir="$(dirname "$shortname")"
-  processor="$(get_processor "$shortname")"
   textsen="$(get_textsfile "en")"
   menufile="$basedir/tools/menu-global.xml"
+  filedir="$(dirname "$shortname")"
+  shortbase="$(basename "$shortname")"
+  processor="$(get_processor "$shortname")"
 
-  [ -e "${shortname}.sources" ] && sourceinc=true || sourceinc=false
+  if [ -f "${shortname}.en.xhtml" ]; then
+    olang="en"
+  else
+    fullname="$(ls "${shortname}".[a-z][a-z].xhtml |head -n1)"
+    olang="$(get_language "$fullname")"
+  fi
 
   if [ "${shortbase}" = "$(basename "$filedir")" ] && \
-     [ ! -f "$(dirname "$shortname")/index.en.xhtml" ]; then
+     [ ! -f "${filedir}/index.${olang}.xhtml" ]; then
     indexname=true
   else
     indexname=false
   fi
 
+  [ -f "${shortname}.sources" ] && sourceinc=true || sourceinc=false
+
   for lang in $(get_languages); do
     infile="${shortname}.${lang}.xhtml"
-    [ -f "$infile" ] && depfile="$infile" || depfile="${shortname}.en.xhtml" 
+    [ -f "$infile" ] && depfile="$infile" || depfile="${shortname}.${olang}.xhtml" 
 
     outbase="${shortbase}.${lang}.html"
     outfile="${outpath}/${outbase}"
@@ -456,12 +485,12 @@ xhtml_maker(){
 
     textsfile="$(get_textsfile "$lang")"
     fundraisingfile="$(get_fundraisingfile "$lang")"
-    [ "$sourceinc" = "true" ] && sourceglobs="${filedir}/_._._${shortbase}.${lang}.sourceglobs" || unset sourceglobs
+    [ "$sourceinc" = "true" ] && sourceglobs="${filedir}/._._${shortbase}.${lang}.sourceglobs" || unset sourceglobs
 
     cat <<MakeEND
 all: $(mes "$outfile" "$outlink")
 $(mes "$outfile"): $(mes "$depfile" "$processor" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" "$sourceglobs")
-	$0 --source "$basedir" process_file "${infile}" "$processor" >"$outfile"
+	$0 --source "$basedir" process_file "${infile}" "$processor" "$olang" >"$outfile"
 $(mes "$outlink"):
 	ln -sf "${outbase}" "${outlink}"
 MakeEND
@@ -525,7 +554,8 @@ dir_maker(){
   | while read filepath; do
     oldpath="$curpath"
     curpath="$output/$filepath/"
-    echo "$oldpath" |grep -q "^$curpath" || mkdir -p "$curpath"
+    srcdir="$output/source/$filepath/"
+    match "$oldpath" "^$curpath" || mkdir -p "$curpath" "$srcdir"
   done
 }
 
@@ -543,15 +573,21 @@ tree_maker(){
   | while read filepath; do
     inpfile="${input}/$filepath"
     case "$filepath" in
+      Makefile)	true;;
       *.xml) true;;
-      Makefile) true;;
       *.sourceglobs) true;;
       *.sources) glob_maker "$inpfile";;
       *.xsl) xslt_maker "$inpfile";;
-      *.en.xhtml) xhtml_maker "$(get_shortname "$inpfile")" "$output/$(dirname "$filepath")";;
-      *.xhtml) true;;
+      *.xhtml) copy_maker "$inpfile" "$output/source/$(dirname "$filepath")";;
       *) copy_maker "$inpfile" "$output/$(dirname "$filepath")";;
     esac
+  done
+
+  find "$input" -type f -and -name '*.[a-z][a-z].xhtml' \
+  | sed -r "/(^|\/)\.svn($|\/)|^\.\.$/d;s;^$input/*(.+)\.[a-z]{2}\.xhtml$;\1;" \
+  | sort -u \
+  | while read shortpath; do
+    xhtml_maker "${input}/$shortpath" "$output/$(dirname "$shortpath")"
   done
 }
 
@@ -604,9 +640,7 @@ remove_orphans(){
   | sort \
   | uniq -u \
   | while read file; do
-    echo "$file" \
-    | egrep -q "^$tree" \
-    && rm -v "$file"
+    match "$file" "^$tree" && rm -v "$file"
   done
 }
 
@@ -641,30 +675,28 @@ domain="www.fsfe.org"
 while [ -n "$*" ]; do
   case "$1" in
     -s|--statusdir|--status-dir)
-      shift 1
-      statusdir="$1"
+      [ -n "$*" ] && shift 1 && statusdir="$1"
       ;;
     --domain)
-      shift 1
-      domain="$1"
+      [ -n "$*" ] && shift 1 && domain="$1"
       ;;
     --source)
-      shift 1
-      basedir="$1"
+      [ -n "$*" ] && shift 1 && basedir="$1"
       ;;
     -d|--dest|--destination)
-      shift 1
-      target="$1"
+      [ -n "$*" ] && shift 1 && target="$1"
       ;;
     -h|--help)
       command="help"
       ;;
     build_into)
       command="$1$command"
+      [ -n "$*" ] && shift 1 && target="$1"
       ;;
     build_xmlstream)
       command="$1$command"
-      shift 1; workfile="$1"
+      [ -n "$*" ] && shift 1 && workfile="$1"
+      [ -n "$*" ] && shift 1 && olang="$1"
       ;;
     tree_maker)
       command="$1$command"
@@ -673,31 +705,26 @@ while [ -n "$*" ]; do
       ;;
     process_file)
       command="$1$command"
+      [ -n "$*" ] && shift 1 && workfile="$1"
+      [ -n "$*" ] && shift 1 && processor="$1"
+      [ -n "$*" ] && shift 1 && olang="$1"
       ;;
     sourceglobs)
       command="$1$command"
-      shift 1; sourcesfile="$1"
+      [ -n "$*" ] && shift 1 && sourcesfile="$1"
       ;;
     cast_globfile)
       command="$1$command"
-      shift 1; sourceglobfile="$1"
-      shift 1; lang="$1"
-      shift 1; globfile="$1"
+      [ -n "$*" ] && shift 1 && sourceglobfile="$1"
+      [ -n "$*" ] && shift 1 && lang="$1"
+      [ -n "$*" ] && shift 1 && globfile="$1"
       ;;
     *)
-      if [ "$command" = "build_into" -a -z "$target" ]; then
-        target="$1"
-      elif [ "$command" = "process_file" -a -z "$workfile" ]; then
-        workfile="$1"
-      elif [ "$command" = "process_file" -a -z "$processor" ]; then
-        processor="$1"
-      else
-        print_error "Unknown option $1"
-        exit 1
-      fi
+      print_error "Unknown option $1"
+      exit 1
       ;;
   esac
-  shift 1
+  [ -n "$*" ] && shift 1
 done
 
 if [ -n "$statusdir" ]; then
@@ -717,11 +744,11 @@ case "$command" in
     ;;
   process_file)
     [ -z "$workfile" ] && print_error "Need at least input file" && exit 1
-    process_file "$workfile" "$processor"
+    process_file "$workfile" "$processor" "$olang"
     ;;
   build_xmlstream)
-    [ -z "$workfile" ] && print_error "Missing destination directory" && exit 1
-    build_xmlstream "$(get_shortname "$workfile")" "$(get_language "$workfile")"
+    [ -z "$workfile" ] && print_error "Missing xhtml file name" && exit 1
+    build_xmlstream "$(get_shortname "$workfile")" "$(get_language "$workfile")" "$olang"
     ;;
   tree_maker)
     [ -z "$tree" ] && tree="$basedir"

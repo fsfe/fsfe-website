@@ -453,7 +453,7 @@ div#subpages, .grid-row {
     }
 
 
-    blockquote {
+    blockquote, .blockQuote {
         .quote;
         border: 0;
         padding-top: 20px;
@@ -470,9 +470,9 @@ div#subpages, .grid-row {
                 font-style: italic;
             }
         }
-    }
-    blockquote + blockquote {
-        margin-top: -1.3em;
+        & + & {
+            margin-top: -1.3em;
+        }
     }
 
     pre, pre code {
@@ -579,6 +579,10 @@ div#subpages, .grid-row {
             background: @gray-lighter;
             width: 77%;
         }
+    }
+
+    .MatthisHighlightPleaseFindANewName {
+        .blockQuote;
     }
 }
 

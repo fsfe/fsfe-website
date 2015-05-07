@@ -97,7 +97,7 @@ get_attributes(){
 
   cat "$file" \
   | tr '\n\t\r' '   ' \
-  | sed -rn 's;^.*< *[hH]?[xXtT][mM][lL] +([^>]*)>.*$;\1;p'
+  | sed -rn 's;^.*< *([xX]|[xX]?[hH][tT])[mM][lL] +([^>]*)>.*$;\2;p'
 }
 
 sourceglobs(){
@@ -108,9 +108,9 @@ sourceglobs(){
   if [ -f "$sourcesfile" ]; then
     sed -rn 's;:global$;*.[a-z][a-z].xml;gp' "$sourcesfile" \
     | while read glob; do
-      echo "$basedir/"$glob |grep -vF "$basedir/$glob"
+      echo "$basedir/"$glob
     done \
-    | sed -r 's:\.[a-z]{2}\.xml( |$):\n:g' \
+    | sed -rn 's:\.[a-z]{2}\.xml( |$):\n:gp' \
     | sort -u
   fi
 }
@@ -123,8 +123,8 @@ all_sources(){
   if [ -f "$sourcesfile" ]; then
     sed -rn 's;:global$;*.[a-z][a-z].xml;gp' "$sourcesfile" \
     | while read glob; do
-      echo "$basedir/"$glob |grep -vF "$basedir/$glob"
-    done
+      echo "$basedir/"$glob
+    done |grep -vF "[a-z][a-z].xml"
   fi
 }
 
@@ -142,14 +142,8 @@ list_sources(){
   || sourceglobs="$(sourceglobs "$sourcesfile")"
 
   for base in $sourceglobs; do
-    if [ -f "${base}.${lang}.xml" ]; then
-      echo "${base}.${lang}.xml"
-    elif [ -f "${base}.en.xml" ]; then
-      echo "${base}.en.xml"
-    else
-      ls "${base}".[a-z][a-z].xml 2>/dev/null |head -n1
-    fi
-  done
+    echo "${base}".[a-z][a-z].xml "${base}".en.[x]ml "${base}.${lang}".[x]ml
+  done |sed -rn 's;^.*\.([a-z]{2})\.xml.*$;\1;p'
 }
 
 auto_sources(){
@@ -459,22 +453,21 @@ xhtml_maker(){
   shortbase="$(basename "$shortname")"
   processor="$(get_processor "$shortname")"
 
-  if [ -f "${shortname}.en.xhtml" ]; then
-    olang="en"
-  else
-    fullname="$(ls "${shortname}".[a-z][a-z].xhtml |head -n1)"
-    olang="$(get_language "$fullname")"
-  fi
+  [ -f "$shortname".rss.xsl ] && bool_rss=true || bool_rss=false
+  [ -f "$shortname".ics.xsl ] && bool_ics=true || bool_ics=false
+
+  olang="$(echo "${shortname}".[a-z][a-z].xhtml "${shortname}".[e]n.xhtml |sed -rn 's;^.*\.([a-z]{2})\.xhtml.*$;\1;p')"
 
   if [ "${shortbase}" = "$(basename "$filedir")" ] && \
      [ ! -f "${filedir}/index.${olang}.xhtml" ]; then
-    indexname=true
+    bool_indexname=true
   else
-    indexname=false
+    bool_indexname=false
   fi
 
-  [ -f "${shortname}.sources" ] && sourceinc=true || sourceinc=false
+  [ -f "${shortname}.sources" ] && bool_sourceinc=true || bool_sourceinc=false
 
+  # For speed considerations: avoid all disk I/O in this loop
   for lang in $(get_languages); do
     infile="${shortname}.${lang}.xhtml"
     [ -f "$infile" ] && depfile="$infile" || depfile="${shortname}.${olang}.xhtml" 
@@ -482,10 +475,12 @@ xhtml_maker(){
     outbase="${shortbase}.${lang}.html"
     outfile="${outpath}/${outbase}"
     outlink="${outpath}/${shortbase}.html.$lang"
+    rssfile="${outpath}/${shortbase}.${lang}.rss"
+    icsfile="${outpath}/${shortbase}.${lang}.ics"
 
     textsfile="$(get_textsfile "$lang")"
     fundraisingfile="$(get_fundraisingfile "$lang")"
-    [ "$sourceinc" = "true" ] && sourceglobs="${filedir}/._._${shortbase}.${lang}.sourceglobs" || unset sourceglobs
+    $bool_sourceinc && sourceglobs="${filedir}/._._${shortbase}.${lang}.sourceglobs" || unset sourceglobs
 
     cat <<MakeEND
 all: $(mes "$outfile" "$outlink")
@@ -494,7 +489,17 @@ $(mes "$outfile"): $(mes "$depfile" "$processor" "$textsen" "$textsfile" "$fundr
 $(mes "$outlink"):
 	ln -sf "${outbase}" "${outlink}"
 MakeEND
-    [ "$indexname" = "true" ] && cat <<MakeEND
+    $bool_rss && cat<<MakeEND
+all: $(mes "$rssfile")
+$(mes "$rssfile"): $(mes "$depfile" "${shortname}.rss.xsl" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" "$sourceglobs")
+	$0 --source "$basedir" process_file "${infile}" "${shortname}.rss.xsl" "$olang" >"$rssfile"
+MakeEND
+    $bool_ics && cat<<MakeEND
+all: $(mes "$icsfile")
+$(mes "$icsfile"): $(mes "$depfile" "${shortname}.ics.xsl" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" "$sourceglobs")
+	$0 --source "$basedir" process_file "${infile}" "${shortname}.ics.xsl" "$olang" >"$icsfile"
+MakeEND
+    $bool_indexname && cat <<MakeEND
 all: $(mes "$outpath/index.${lang}.html" "$outpath/index.html.$lang")
 $(mes "$outpath/index.${lang}.html"):
 	ln -sf "$outbase" "$outpath/index.${lang}.html"

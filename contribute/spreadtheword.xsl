@@ -64,7 +64,7 @@
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-type'" /></xsl:call-template>
               <xsl:text>: </xsl:text>
             </xsl:element>
-            <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/type" />
+            <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/type" />
             <xsl:element name="br"></xsl:element>
           </xsl:if>
           

@@ -16,6 +16,7 @@
         <xsl:attribute name="class">left break margin-vertical</xsl:attribute>
         
         <xsl:variable name="id"><xsl:value-of select="@id"/></xsl:variable>
+        <xsl:variable name="year"><xsl:value-of select="@year"/></xsl:variable>
 
         <!-- Name -->
         <xsl:element name="p">
@@ -50,7 +51,7 @@
         <xsl:element name="p">
           <xsl:attribute name="class">right grid-70</xsl:attribute>
           <xsl:attribute name="style">margin-top:0;</xsl:attribute>
-          <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/description" />
+          <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/description" />
         </xsl:element>
         <!-- / Description -->
         
@@ -74,7 +75,7 @@
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-size'" /></xsl:call-template>
               <xsl:text>: </xsl:text>
             </xsl:element>
-            <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/size" />
+            <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/size" />
             <xsl:element name="br"></xsl:element>
           </xsl:if>
           
@@ -84,7 +85,7 @@
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-context'" /></xsl:call-template>
               <xsl:text>: </xsl:text>
             </xsl:element>
-            <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/context" />
+            <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/context" />
             <xsl:element name="br"></xsl:element>
           </xsl:if>
           
@@ -102,7 +103,7 @@
               </xsl:element> <!-- /abbr -->
               <xsl:text>: </xsl:text>
               <xsl:element name="br"></xsl:element>
-              <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/printed" /> <!-- Dynamic value of the field -->
+              <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/printed" /> <!-- Dynamic value of the field -->
             </xsl:element> <!-- /span -->
             <xsl:element name="br"></xsl:element>
           </xsl:if>
@@ -121,7 +122,7 @@
               </xsl:element> <!-- /abbr -->
               <xsl:text>: </xsl:text>
               <xsl:element name="br"></xsl:element>
-              <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/languages" /> <!-- Dynamic value of the field -->
+              <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/languages" /> <!-- Dynamic value of the field -->
             </xsl:element> <!-- /span -->
             <xsl:element name="br"></xsl:element>
           </xsl:if>
@@ -132,7 +133,7 @@
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-license'" /></xsl:call-template>
               <xsl:text>: </xsl:text>
             </xsl:element>
-            <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/license" />
+            <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/license" />
             <xsl:element name="br"></xsl:element>
           </xsl:if>
           
@@ -142,7 +143,7 @@
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-author'" /></xsl:call-template>
               <xsl:text>: </xsl:text>
             </xsl:element>
-            <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/author" />
+            <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/author" />
             <xsl:element name="br"></xsl:element>
           </xsl:if>
           
@@ -152,7 +153,7 @@
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-year'" /></xsl:call-template>
               <xsl:text>: </xsl:text>
             </xsl:element>
-            <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/year" />
+            <xsl:value-of select="$year"/>
             <xsl:element name="br"></xsl:element>
           </xsl:if>
           
@@ -172,7 +173,7 @@
               </xsl:element> <!-- /abbr -->
               <xsl:text>: </xsl:text>
               <xsl:element name="br"></xsl:element>
-              <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/source" /> <!-- Dynamic value of the field -->
+              <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/source" /> <!-- Dynamic value of the field -->
             </xsl:element> <!-- /span -->
             <xsl:element name="br"></xsl:element>
           </xsl:if>
@@ -191,7 +192,7 @@
               </xsl:element> <!-- /abbr -->
               <xsl:text>: </xsl:text>
               <xsl:element name="br"></xsl:element>
-              <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/printready" /> <!-- Dynamic value of the field -->
+              <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/printready" /> <!-- Dynamic value of the field -->
             </xsl:element> <!-- /span -->
             <xsl:element name="br"></xsl:element>
           </xsl:if>

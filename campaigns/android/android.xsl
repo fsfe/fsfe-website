@@ -16,7 +16,7 @@
           
           <xsl:element name="a">
             <xsl:attribute name="href">
-              <xsl:copy-of select="/buildinfo/document/set/supporter[@id=$id]/link" />
+              <xsl:value-of select="/buildinfo/document/set/supporter[@id=$id]/link" />
             </xsl:attribute>
             
             <xsl:element name="img">
@@ -30,11 +30,11 @@
               
               <!-- title -->
               <xsl:attribute name="title">
-                <xsl:copy-of select="/buildinfo/document/set/supporter[@id=$id]/name" />
+                <xsl:value-of select="/buildinfo/document/set/supporter[@id=$id]/name" />
               </xsl:attribute>              
               
               <!-- src -->
-              <xsl:attribute name="class">
+              <xsl:attribute name="src">
                 <xsl:value-of select="/buildinfo/document/set/supporter[@id=$id]/image" />
               </xsl:attribute>              
 

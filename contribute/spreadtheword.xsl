@@ -103,7 +103,7 @@
               </xsl:element> <!-- /abbr -->
               <xsl:text>: </xsl:text>
               <xsl:element name="br"></xsl:element>
-              <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/printed" /> <!-- Dynamic value of the field -->
+              <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/printed" /> <!-- Dynamic value of the field -->
             </xsl:element> <!-- /span -->
             <xsl:element name="br"></xsl:element>
           </xsl:if>
@@ -122,7 +122,7 @@
               </xsl:element> <!-- /abbr -->
               <xsl:text>: </xsl:text>
               <xsl:element name="br"></xsl:element>
-              <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/languages" /> <!-- Dynamic value of the field -->
+              <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/languages" /> <!-- Dynamic value of the field -->
             </xsl:element> <!-- /span -->
             <xsl:element name="br"></xsl:element>
           </xsl:if>
@@ -173,7 +173,7 @@
               </xsl:element> <!-- /abbr -->
               <xsl:text>: </xsl:text>
               <xsl:element name="br"></xsl:element>
-              <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/source" /> <!-- Dynamic value of the field -->
+              <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/source" /> <!-- Dynamic value of the field -->
             </xsl:element> <!-- /span -->
             <xsl:element name="br"></xsl:element>
           </xsl:if>
@@ -192,7 +192,7 @@
               </xsl:element> <!-- /abbr -->
               <xsl:text>: </xsl:text>
               <xsl:element name="br"></xsl:element>
-              <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/printready" /> <!-- Dynamic value of the field -->
+              <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/printready" /> <!-- Dynamic value of the field -->
             </xsl:element> <!-- /span -->
             <xsl:element name="br"></xsl:element>
           </xsl:if>

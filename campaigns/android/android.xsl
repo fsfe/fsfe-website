@@ -32,7 +32,7 @@
                 
                 <!-- alt -->
                 <xsl:attribute name="alt">
-                  <xsl:value-of select="/buildinfo/document/set/supporter[@id=$id]/descr" />
+                  <xsl:value-of select="/buildinfo/document/set/supporter[@id=$id]/name" />
                 </xsl:attribute>
                 
                 <!-- title -->
@@ -96,6 +96,7 @@
               
               <!-- Description -->
               <xsl:element name="td">
+                <xsl:attribute name="style">vertical-align: middle;</xsl:attribute>
                 <xsl:value-of select="/buildinfo/document/set/supporter[@id=$id]/descr" />
               </xsl:element>
               <!-- /Description -->

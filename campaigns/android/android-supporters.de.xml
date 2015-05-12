@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
+<!-- Please fill out the necessary fields for every supporting organisation or similar.
+  "id" should be a short unique identifying string. It's not visible on the website
+  "order" defines the placement in the list of logos or the table
+  "image" is a link to the image file. Please use small logos, they won't be shrinked automatically
+  "link" defines the destination when clicking on the image
+  "descr" is currently only used when using the table-type. It defines the text on the right hand side in the table
+-->
+
 <supporterset>
+  
   <supporter id="dc" order="1">
     <name>DC</name>
     <image>/campaigns/android/foebud.png</image>

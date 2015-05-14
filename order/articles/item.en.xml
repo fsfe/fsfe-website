@@ -444,6 +444,13 @@
       large="/order/articles/images/keyring-fellowship.jpg"/>
   </item>
 
+  <item type="other" id="lanyard-fellowship" price="3.00" date="2005-01-01">
+    <available size="80cm"/>
+    <image
+      small="/order/articles/images/thumbnails/lanyard-fellowship.jpg"
+      large="/order/articles/images/lanyard-fellowship.jpg"/>
+  </item>
+
 <!--
   <item type="other" id="mug-fellowship-black" price="10.00" date="2008-03-01">
     <available size="#"/>
@@ -457,14 +464,6 @@
       small="/order/articles/images/thumbnails/mug-fellowship-white.jpg"
       large="/order/articles/images/mug-fellowship-white.jpg"/>
   </item>
--->
-
-  <item type="other" id="lanyard-fellowship" price="3.00" date="2005-01-01">
-    <available size="80cm"/>
-    <image
-      small="/order/articles/images/thumbnails/lanyard-fellowship.jpg"
-      large="/order/articles/images/lanyard-fellowship.jpg"/>
-  </item>
 
   <item type="other" id="sticker-metal-gnulinux-inside" price="3.00" date="2015-03-07">
     <available size="#"/>
@@ -472,5 +471,6 @@
       small="/order/articles/images/thumbnails/sticker-metal-gnulinux-inside.jpg"
       large="/order/articles/images/sticker-metal-gnulinux-inside.jpg"/>
   </item>
+-->
 
 </itemset>

@@ -1106,7 +1106,7 @@ textarea#search button,textarea#search input[name="query"]{height:auto}
 #content .action-after{display:table}#content .action-after .action-describe,#content .action-after .action-main{display:table-cell;vertical-align:middle;padding:.5em 1em}
 #content .action-after .action-describe{background:#c8e7a6;color:#173b00;width:23%;text-align:right}#content .action-after .action-describe:after{padding-left:.3em;content:" ▸"}
 #content .action-after .action-main{background:#eee;width:77%}
-#content .blockHighlight{font-family:"Roboto Slab","DejaVu Serif",Georgia,"Times New Roman",Times,serif;border:0;padding-top:20px;padding-bottom:20px;background-color:rgba(116,140,156,0.23)}#content .blockHighlight p{line-height:1.35}
+#content .blockHighlight{font-family:"Roboto Slab","DejaVu Serif",Georgia,"Times New Roman",Times,serif;border:0;padding-top:20px;padding-bottom:20px;background-color:rgba(116,140,156,0.23);padding-right:20px}#content .blockHighlight p{line-height:1.35}
 #content .blockHighlight footer cite{font-style:italic}
 #content .blockHighlight+#content .blockHighlight{margin-top:-1.3em}
 .fsfe-form label.required .star{font-weight:400}

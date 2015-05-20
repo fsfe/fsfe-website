@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html>
+  <head>
+    <title>FSFE's Fellows</title>
+     <link href="/look/jqvmap.css" media="screen" rel="stylesheet" type="text/css" />
+    
+	    <script src="/scripts/jquery-1.10.2.min.js" type="text/javascript"></script>
+	    <script src="/scripts/jqvmap/jquery.vmap.js" type="text/javascript"></script>
+	    <script src="/scripts/jqvmap/maps/jquery.vmap.europe.js" type="text/javascript"></script>
+    
+		<script type="text/javascript">
+			
+			// Each country receive a color depending of the number of fellows he has. Color values are:
+			// Less than 5 fellows: #cefdc9
+			// Between 5 and 20: #9af191
+			// Between 20 and 40: #70d765
+			// Between 40 and 60: #4cb841
+			// Between 60 and 80: #369f2b
+			// Between 80 and 100: #208215
+			// More than 100: #095501
+			
+		
+			var countries_colors = {
+				at: '#208215',  //Austria
+				by: '#cefdc9',  //Belarus                
+				be:	'#70d765',  //Belgium                
+				bg:	'#cefdc9',  //Bulgaria               
+				cy:	'#cefdc9',  //Cyprus                 
+				cz:	'#9af191',  //Czech Republic         
+				dk:	'#9af191',  //Denmark                
+				fi:	'#70d765',  //Finland                
+				fr:	'#4cb841',  //France                 
+				de:	'#095501',  //Germany                
+				gr:	'#9af191',  //Greece                 
+				hu:	'#cefdc9',  //Hungary                
+				ie:	'#9af191',  //Ireland                
+				it:	'#208215',  //Italy                  
+				lv:	'#cefdc9',  //Latvia                 
+				li:	'#cefdc9',  //Liechtenstein          
+				lt:	'#cefdc9',  //Lithuania              
+				lu:	'#9af191',  //Luxembourg             
+				mk:	'#cefdc9',  //Macedonia, Republic of 
+				nl:	'#4cb841',  //Netherlands            
+				no:	'#70d765',  //Norway                 
+				pl:	'#9af191',  //Poland                 
+				pt:	'#cefdc9',  //Portugal               
+				ro:	'#cefdc9',  //Romania                
+				ru:	'#cefdc9',  //Russian Federation     
+				rs:	'#cefdc9',  //Serbia                 
+				sk:	'#cefdc9',  //Slovakia               
+				si:	'#9af191',  //Slovenia               
+				es:	'#369f2b',  //Spain                  
+				se:	'#4cb841',  //Sweden                 
+				ch:	'#208215',  //Switzerland            
+				gb:	'#208215',  //United Kingdom         
+			}
+			
+			
+			// Each country receive a color depending of the number of fellows *per millions inhabitants* he has. Color values are:
+			// Between 0 and 1 fellow per million: #cefdc9
+			// Between 1 and 2: #9af191
+			// Between 2 and 4: #70d765
+			// Between 4 and 6: #4cb841
+			// Between 6 and 8: #369f2b
+			// Between 8 and 10: #208215
+			// More than 10: #095501
+			
+			var countries_colors_millions = {
+				at: '#095501',  //Austria
+				by: '#cefdc9',	//Belarus                
+				be:	'#70d765',  //Belgium                
+				bg:	'#cefdc9',  //Bulgaria               
+				cy:	'#9af191',  //Cyprus                 
+				cz:	'#cefdc9',  //Czech Republic         
+				dk:	'#70d765',  //Denmark                
+				fi:	'#4cb841',  //Finland                
+				fr:	'#cefdc9',  //France                 
+				de:	'#369f2b',  //Germany                
+				gr:	'#cefdc9',  //Greece                 
+				hu:	'#cefdc9',  //Hungary                
+				ie:	'#9af191',  //Ireland                
+				it:	'#9af191',  //Italy                  
+				lv:	'#cefdc9',  //Latvia                 
+				li:	'#095501',  //Liechtenstein          
+				lt:	'#cefdc9',  //Lithuania              
+				lu:	'#095501',  //Luxembourg             
+				mk:	'#cefdc9',  //Macedonia, Republic of 
+				nl:	'#70d765',  //Netherlands            
+				no:	'#4cb841',  //Norway                 
+				pl:	'#cefdc9',  //Poland                 
+				pt:	'#cefdc9',  //Portugal               
+				ro:	'#cefdc9',  //Romania                
+				ru:	'#cefdc9',  //Russian Federation     
+				rs:	'#cefdc9',  //Serbia                 
+				sk:	'#cefdc9',  //Slovakia               
+				si:	'#70d765',  //Slovenia               
+				es:	'#9af191',  //Spain                  
+				se:	'#4cb841',  //Sweden                 
+				ch:	'#095501',  //Switzerland            
+				gb:	'#9af191',  //United Kingdom         
+			}
+			
+		jQuery(document).ready(function() {
+			jQuery('#vmap').vectorMap(
+			{ 
+				map: 'europe_en',
+				color: '#d4d4d4',
+				colors: countries_colors,
+				enableZoom: false,
+				hoverOpacity: '0.5',
+				backgroundColor: null,
+				borderColor: '#05609a',
+			});
+		});
+		
+		jQuery(document).ready(function() {
+			jQuery('#vmapPerMillions').vectorMap(
+			{ 
+				map: 'europe_en',
+				color: '#d4d4d4',
+				colors: countries_colors_millions,
+				enableZoom: false,
+				hoverOpacity: '0.5',
+				backgroundColor: null,
+				borderColor: '#05609a',
+			});
+		});
+		
+		</script>
+  </head>
+  
+  
+  <body>
+
+    <p id="category">
+      <a href="/about/index.html">About</a>
+    </p>
+    <h1>FSFE's Fellows</h1>
+
+    <div id="introduction">
+		<p></p>
+    </div>
+
+    <h2>Number of Fellows per country</h2>
+	
+    <div id="vmap" style="width: 695px; height: 463px;"></div>
+    <footer>
+		<div class="grid-50-50">
+			<div class="box first">
+				<ul class="list-unstyled">
+					<li><img style="background-color:#cefdc9;" alt="Rectangle for Legend" href="/graphics/rectangleForMapLegend.png"></img>Less than 5 fellows</li>
+					<li><img style="background-color:#9af191;" alt="Rectangle for Legend" href="/graphics/rectangleForMapLegend.png"></img>Between 5 and 20</li>
+					<li><img style="background-color:#70d765;" alt="Rectangle for Legend" href="/graphics/rectangleForMapLegend.png"></img>Between 20 and 40</li>
+					<li><img style="background-color:#4cb841;" alt="Rectangle for Legend" href="/graphics/rectangleForMapLegend.png"></img>Between 40 and 60</li>
+				</ul>
+			</div>
+			<div class="box">
+				<ul class="list-unstyled">
+					<li><img style="background-color:#369f2b;" alt="Rectangle for Legend" href="/graphics/rectangleForMapLegend.png"></img>Between 60 and 80</li>
+					<li><img style="background-color:#208215;" alt="Rectangle for Legend" href="/graphics/rectangleForMapLegend.png"></img>Between 80 and 100</li>
+					<li><img style="background-color:#095501;" alt="Rectangle for Legend" href="/graphics/rectangleForMapLegend.png"></img>More than 100</li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+    <h2>Number of Fellows per millions of inhabitants per country</h2>
+
+	<div id="vmapPerMillions" style="width: 695px; height: 463px;"></div>
+	<footer>
+		<div class="grid-50-50">
+			<div class="box first">
+				<ul class="list-unstyled">
+					<li><img style="background-color:#cefdc9;" alt="Rectangle for Legend" href="/graphics/rectangleForMapLegend.png"></img>Between 0 and 1 fellow per millions inhabitants</li>
+					<li><img style="background-color:#9af191;" alt="Rectangle for Legend" href="/graphics/rectangleForMapLegend.png"></img>Between 1 and 2</li>
+					<li><img style="background-color:#70d765;" alt="Rectangle for Legend" href="/graphics/rectangleForMapLegend.png"></img>Between 2 and 4</li>
+					<li><img style="background-color:#4cb841;" alt="Rectangle for Legend" href="/graphics/rectangleForMapLegend.png"></img>Between 4 and 6</li>
+				</ul>
+			</div>
+			<div class="box">
+				<ul class="list-unstyled">
+					<li><img style="background-color:#369f2b;" alt="Rectangle for Legend" href="/graphics/rectangleForMapLegend.png"></img>Between 6 and 8</li>
+					<li><img style="background-color:#208215;" alt="Rectangle for Legend" href="/graphics/rectangleForMapLegend.png"></img>Between 8 and 10</li>
+					<li><img style="background-color:#095501;" alt="Rectangle for Legend" href="/graphics/rectangleForMapLegend.png"></img>More than 10</li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+  </body>
+</html>

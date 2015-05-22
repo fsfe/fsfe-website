@@ -2,6 +2,10 @@
 
 inc_misc=true
 
+print_help(){
+  cat "$basedir/build/HELP"
+}
+
 debug(){
   dbg_file=/dev/stderr
 

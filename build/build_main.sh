@@ -4,7 +4,6 @@ basedir="$(dirname $0)/.."
 
 [ -z "$inc_filenames" ] && . "$basedir/build/filenames.sh"
 [ -z "$inc_buildrun" ] && . "$basedir/build/buildrun.sh"
-[ -z "$inc_help" ] && . "$basedir/build/help.sh"
 [ -z "$inc_languages" ] && . "$basedir/build/languages.sh"
 [ -z "$inc_makerules" ] && . "$basedir/build/makerules.sh"
 [ -z "$inc_misc" ] && . "$basedir/build/misc.sh"

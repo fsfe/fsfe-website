@@ -12,7 +12,7 @@ build_into(){
      manifest="$(tempfile -d "$statusdir" -p mnfst)" \
   || manifest="$(tempfile -p w3bld)"
 
-  make -C "$basedir" \
+  make -j $ncpu -C "$basedir" \
   | logstatus premake
 
   dir_maker "$basedir" "$target"

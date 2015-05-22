@@ -84,19 +84,19 @@ xhtml_maker(){
     cat <<MakeEND
 all: $(mes "$outfile" "$outlink")
 $(mes "$outfile"): $(mes "$depfile" "$processor" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" "$sourceglobs")
-	$0 --source "$basedir" process_file "${infile}" "$processor" "$olang" >"$outfile"
+	\${PROCESSOR} \${PROCFLAGS} "${infile}" "$processor" "$olang" >"$outfile"
 $(mes "$outlink"):
 	ln -sf "${outbase}" "${outlink}"
 MakeEND
     $bool_rss && cat<<MakeEND
 all: $(mes "$rssfile")
 $(mes "$rssfile"): $(mes "$depfile" "${shortname}.rss.xsl" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" "$sourceglobs")
-	$0 --source "$basedir" process_file "${infile}" "${shortname}.rss.xsl" "$olang" >"$rssfile"
+	\${PROCESSOR} \${PROCFLAGS} "${infile}" "${shortname}.rss.xsl" "$olang" >"$rssfile"
 MakeEND
     $bool_ics && cat<<MakeEND
 all: $(mes "$icsfile")
 $(mes "$icsfile"): $(mes "$depfile" "${shortname}.ics.xsl" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" "$sourceglobs")
-	$0 --source "$basedir" process_file "${infile}" "${shortname}.ics.xsl" "$olang" >"$icsfile"
+	\${PROCESSOR} \${PROCFLAGS} "${infile}" "${shortname}.ics.xsl" "$olang" >"$icsfile"
 MakeEND
     $bool_indexname && cat <<MakeEND
 all: $(mes "$outpath/index.${lang}.html" "$outpath/index.html.$lang")
@@ -152,7 +152,12 @@ tree_maker(){
   cache_textsfile
   cache_fundraising
 
-  echo ".PHONY: all"
+  cat <<-MakeHead
+	.PHONY: all
+	PROCESSOR = "$basedir/build/process_file.sh"
+	PROCFLAGS = --source "$basedir" --statusdir "$statusdir" --domain "$domain"
+	MakeHead
+
   find "$input" -type f \
   | sed -r "/(^|\/)\.svn($|\/)|^\.\.$/d;s;^$input/*;;" \
   | while read filepath; do

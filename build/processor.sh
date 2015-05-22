@@ -9,7 +9,7 @@ process_file(){
   processor="$2"
   olang="$3"
 
-  domain="www.fsfe.org"
+  [ -z "$domain" ] && domain="www.fsfe.org"
 
   shortname=$(get_shortname "$infile")
   lang=$(get_language "$infile")

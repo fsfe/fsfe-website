@@ -27,14 +27,14 @@ glob_maker(){
 
   cat <<MakeEND
 $(mes "$sourceglobfile"): $(mes $(all_sources "$sourcesfile"))
-	$0 --source "$basedir" sourceglobs "$sourcesfile" >"$sourceglobfile"
+	\${PSOURCEGLOBS} \${PROCFLAGS} "$sourcesfile" >"$sourceglobfile"
 MakeEND
 
   for lang in $(get_languages); do
     globfile="${filedir}/._._${shortbase}.${lang}.sourceglobs"
     cat <<MakeEND
 $(mes "$globfile"): $(mes "$sourceglobfile")
-	$0 --source "$basedir" cast_globfile "$sourceglobfile" "$lang" "$globfile"
+	\${PGLOBCASTER} \${PROCFLAGS} "$sourceglobfile" "$lang" "$globfile"
 MakeEND
   done
 }
@@ -155,6 +155,8 @@ tree_maker(){
   cat <<-MakeHead
 	.PHONY: all
 	PROCESSOR = "$basedir/build/process_file.sh"
+	PSOURCEGLOBS = "$basedir/build/source_globber.sh" sourceglobs
+	PGLOBCASTER = "$basedir/build/source_globber.sh" cast_globfile
 	PROCFLAGS = --source "$basedir" --statusdir "$statusdir" --domain "$domain"
 	MakeHead
 

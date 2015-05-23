@@ -6,7 +6,7 @@ basedir="$(dirname $0)/.."
 
 buildpids=$(
   ps -eo pid,command \
-  | egrep '[b]uild_main.sh' \
+  | egrep 'sh .*[b]uild_main.sh .*' \
   | wc -l
 )
 if [ "$buildpids" -gt 2 ]; then

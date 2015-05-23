@@ -2,11 +2,17 @@
 
 basedir="$(dirname $0)/.."
 
+[ -z "$inc_misc" ] && . "$basedir/build/misc.sh"
+
+if ps -eo command |egrep -q '[b]uild_main.sh'; then
+  print_error "build script is already running"
+  exit 0
+fi
+
 [ -z "$inc_filenames" ] && . "$basedir/build/filenames.sh"
 [ -z "$inc_buildrun" ] && . "$basedir/build/buildrun.sh"
 [ -z "$inc_languages" ] && . "$basedir/build/languages.sh"
 [ -z "$inc_makerules" ] && . "$basedir/build/makerules.sh"
-[ -z "$inc_misc" ] && . "$basedir/build/misc.sh"
 [ -z "$inc_processor" ] && . "$basedir/build/processor.sh"
 [ -z "$inc_scaffold" ] && . "$basedir/build/scaffold.sh"
 [ -z "$inc_sources" ] && . "$basedir/build/sources.sh"

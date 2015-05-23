@@ -4,7 +4,12 @@ basedir="$(dirname $0)/.."
 
 [ -z "$inc_misc" ] && . "$basedir/build/misc.sh"
 
-if ps -eo command |egrep -q '[b]uild_main.sh'; then
+buildpids=$(
+  ps -eo pid,command \
+  | egrep '[b]uild_main.sh' \
+  | wc -l
+)
+if [ "$buildpids" -gt 2 ]; then
   print_error "build script is already running"
   exit 0
 fi

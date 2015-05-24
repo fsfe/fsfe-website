@@ -1,6 +1,7 @@
 #!/bin/sh
 
 inc_makerules=true
+[ -z "$inc_misc" ] && . "$basedir/build/misc.sh"
 [ -z "$inc_translations" ] && . "$basedir/build/translations.sh"
 [ -z "$inc_filenames" ] && . "$basedir/build/filenames.sh"
 [ -z "$inc_fundraising" ] && . "$basedir/build/fundraising.sh"
@@ -144,6 +145,18 @@ $(mes "$file"): $deps
 MakeEND
 }
 
+xhtml_rules(){
+  input="$(echo "$1" |sed -r 's:/$::')"
+  output="$(echo "$2" |sed -r 's:/$::')"
+
+  find "$input" -type f -and -name '*.[a-z][a-z].xhtml' \
+  | sed -r "/(^|\/)\.svn($|\/)|^\.\.$/d;s;^$input/*(.+)\.[a-z]{2}\.xhtml$;\1;" \
+  | sort -u \
+  | while read shortpath; do
+    xhtml_maker "${input}/$shortpath" "$output/$(dirname "$shortpath")"
+  done
+}
+
 tree_maker(){
   # walk through file tree and issue Make rules according to file type
   input="$(echo "$1" |sed -r 's:/$::')"
@@ -152,7 +165,7 @@ tree_maker(){
   cache_textsfile
   cache_fundraising
 
-  cat <<-MakeHead
+  logstatus Make_head <<-MakeHead
 	.PHONY: all
 	PROCESSOR = "$basedir/build/process_file.sh"
 	PSOURCEGLOBS = "$basedir/build/source_globber.sh" sourceglobs
@@ -160,26 +173,41 @@ tree_maker(){
 	PROCFLAGS = --source "$basedir" --statusdir "$statusdir" --domain "$domain"
 	MakeHead
 
-  find "$input" -type f \
+  find "$input" -type f -name '*.sources' \
   | sed -r "/(^|\/)\.svn($|\/)|^\.\.$/d;s;^$input/*;;" \
   | while read filepath; do
-    inpfile="${input}/$filepath"
-    case "$filepath" in
-      Makefile)	true;;
-      *.xml) true;;
-      *.sourceglobs) true;;
-      *.sources) glob_maker "$inpfile";;
-      *.xsl) xslt_maker "$inpfile";;
-      *.xhtml) copy_maker "$inpfile" "$output/source/$(dirname "$filepath")";;
-      *) copy_maker "$inpfile" "$output/$(dirname "$filepath")";;
-    esac
-  done
+    glob_maker "$input/$filepath"
+  done \
+  | logstatus Make_globs
 
-  find "$input" -type f -and -name '*.[a-z][a-z].xhtml' \
-  | sed -r "/(^|\/)\.svn($|\/)|^\.\.$/d;s;^$input/*(.+)\.[a-z]{2}\.xhtml$;\1;" \
-  | sort -u \
-  | while read shortpath; do
-    xhtml_maker "${input}/$shortpath" "$output/$(dirname "$shortpath")"
-  done
+  find "$input" -type f -name '*.xsl' \
+  | sed -r "/(^|\/)\.svn($|\/)|^\.\.$/d;s;^$input/*;;" \
+  | while read filepath; do
+    xslt_maker "$input/$filepath"
+  done \
+  | logstatus Make_xslt
+
+  find "$input" -type f -name '*.xhtml'  \
+  | sed -r "/(^|\/)\.svn($|\/)|^\.\.$/d;s;^$input/*;;" \
+  | while read filepath; do
+    copy_maker "$input/$filepath" "$output/source/$(dirname "$filepath")"
+  done \
+  | logstatus Make_sourcecopy
+
+  find "$input" -type f \
+       \! -name 'Makefile' \
+       \! -name '*.sourceglobs' \
+       \! -name '*.sources' \
+       \! -name '*.xml' \
+       \! -name '*.xsl' \
+       \! -name '*.xhtml' \
+  | sed -r "/(^|\/)\.svn($|\/)|^\.\.$/d;s;^$input/*;;" \
+  | while read filepath; do
+    copy_maker "$input/$filepath" "$output/$(dirname "$filepath")"
+  done \
+  | logstatus Make_copy
+
+  xhtml_rules "$input" "$output" \
+  | logstatus Make_xhtml
 }
 

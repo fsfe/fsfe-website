@@ -27,6 +27,8 @@ build_manifest(){
   # list of all make tagets
 
   outfile="$1"
+  truncate -s 0 "$outfile"
+
   while line="$(line)"; do
     echo "$line"
     echo "$line" \

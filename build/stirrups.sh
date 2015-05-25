@@ -27,14 +27,7 @@ build_manifest(){
   # list of all make tagets
 
   outfile="$1"
-  truncate -s 0 "$outfile"
-
-  while line="$(line)"; do
-    echo "$line"
-    echo "$line" \
-    | sed -nr 's;/\./;/;g;s;\\ ; ;g;s;([^:]+) :.*;\1;p' \
-    >> "$outfile"
-  done
+  sed -nr 'p;s;/\./;/;g;s;\\ ; ;g;s;([^:]+) :.*;\1;w'"$outfile"
 }
 
 remove_orphans(){
@@ -43,13 +36,13 @@ remove_orphans(){
 
   tree="$1"
 
-  # idea behind the algorithm:
-  # `find` will list every existing file once
-  # the manifest of all make targets will list all wanted files once
-  # concatenate all lines from manifest and `find`
-  # every file which is listed twice is wanted and exists,
-  # we use 'uniq -u' to drop those from the list
-  # remaining single files exist only in the tree and are to be removed
+  # Idea behind the algorithm:
+  # `find` will list every existing file once.
+  # The manifest of all make targets will list all wanted files once.
+  # Concatenate all lines from manifest and `find`.
+  # Every file which is listed twice is wanted and exists.
+  # We use 'uniq -u' to drop those from the list.
+  # Remaining single files exist only in the tree and are to be removed
 
   (find "$tree" -type f -or -type l; cat) \
   | sort \

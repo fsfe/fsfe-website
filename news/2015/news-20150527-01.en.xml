@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<newsset>
+  <news date="2015-05-27">
+    <title>FSFE is looking for a systems administrator and
+    architect</title>
+    <body>
+      <h1>FSFE is looking for a systems administrator and
+      architect</h1>
+      <p newsteaser="yes">The Free Software Foundation Europe was
+      founded in 2001 and has gone through a tremendous growth
+      since then, both in the number of volunteers and staff, and
+      also in the complexity of our technical infrastructure and
+      the number of services we run and offer for both internal and
+      external use. We're currently looking for a system
+      administrator and architect that, for a limited time, can
+      support us in our work to migrate our services to a new
+      infrastructure.</p>
+      <p>The migration project will move our services to a new
+      infrastructure and revise the services we currently offer.
+      The goal of the project is to make the infrastructure more
+      coherent, with less dependencies, and with a separation of
+      services that make it easier for volunteers to manage and
+      help the organisation manage individual services in the long
+      term.</p>
+      <h2>Who we're looking for</h2>
+      <p>We're looking for a senior system administrator or systems
+      architect that can work in close coordination with our
+      existing system administrators, staff and volunteers, to
+      support our migration project through all of its stages,
+      starting with the archaeological challenge of creating a high
+      level overview of our services and their dependencies, and
+      ending with the migration of our core services. Key skills
+      will include technical documentation, virtualization
+      environments, MTAs (Postfix), database servers and web
+      services.</p>
+      <h2>What we need to do</h2>
+      <p>The person we're looking with will be tasked with the
+      following. Please note that the first steps are more detailed
+      than the latter steps, and we'll work together to
+      continuously revise this plan as we go. All of this will also
+      involve coordination with others, and a lot of information,
+      especially for the first parts, can be gotten from existing
+      documentation or from other system administrators.</p>
+      <ol>
+        <li>Create a high level service documentation, with a focus
+        on (for each service): 
+        <ol>
+          <li>Authentication mechanisms</li>
+          <li>Code base (custom work, patches, or off the shelf
+          components)</li>
+          <li>Interdependencies with other services</li>
+          <li>Physical / virtual infrastructure location</li>
+          <li>Usage (estimate usage from logs etc, as well as a
+          brief synopsis of who the main users are:
+          external, internal, etc)</li>
+        </ol></li>
+        <li>Additional documentation that may be needed for
+        specific services (such as mail), the nature of which will
+        need to be discussed and determined at a later time, when
+        the first high level overview is complete.</li>
+        <li>Analyse the current services and propose a new
+        architecture, focusing on the services and the dependencies
+        between them.</li>
+        <li>Provide a migration plan that detail the steps needed
+        to be taken in order to successfully migrate our existing
+        services to the new architecture and infrastructure.</li>
+        <li>Migrate, and support the migration, of core services to
+        it, including shutting down and removing old services in an
+        orderly fashion.</li>
+      </ol>
+      <h2>Location and travel</h2>
+      <p>The FSFE system administrators work largely remotely, and
+      most of the work can be done from anywhere in the world. It's
+      beneficial for communication that the person helping us is
+      roughly located in Europe, and one or two trips may be needed
+      to meet with other system administrators and staff.</p>
+    </body>
+    <sidebar promo="about-fsfe"></sidebar>
+    <tags>
+      <tag>front-page</tag>
+    </tags>
+  </news>
+</newsset>

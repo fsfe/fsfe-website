@@ -23,11 +23,10 @@ dir_maker(){
 }
 
 build_manifest(){
-  # pass Makefile throug on pipe and generate
+  # read a Makefile from stdin and generate
   # list of all make tagets
 
-  outfile="$1"
-  sed -nr 'p;s;/\./;/;g;s;\\ ; ;g;s;([^:]+) :.*;\1;w'"$outfile"
+  sed -nr 's;/\./;/;g;s;\\ ; ;g;s;([^:]+) :.*;\1;p'
 }
 
 remove_orphans(){
@@ -44,7 +43,7 @@ remove_orphans(){
   # We use 'uniq -u' to drop those from the list.
   # Remaining single files exist only in the tree and are to be removed
 
-  (find "$tree" -type f -or -type l; cat) \
+  (find "$tree" -type f -o -type l; cat) \
   | sort \
   | uniq -u \
   | while read file; do

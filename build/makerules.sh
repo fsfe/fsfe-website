@@ -8,6 +8,10 @@ inc_makerules=true
 [ -z "$inc_languages" ] && . "$basedir/build/languages.sh"
 [ -z "$inc_sources" ] && . "$basedir/build/sources.sh"
 
+sourcefind() {
+  find "$input" -name .svn -prune -o -type f "$@" -printf '%P\n'
+}
+
 mes(){
   # make escape... escape a filename for make syntax
   # possibly not complete
@@ -38,6 +42,12 @@ $(mes "$globfile"): $(mes "$sourceglobfile")
 	\${PGLOBCASTER} \${PROCFLAGS} "$sourceglobfile" "$lang" "$globfile"
 MakeEND
   done
+}
+glob_makers(){
+  sourcefind -name '*.sources' \
+  | while read filepath; do
+    glob_maker "$input/$filepath"
+  done 
 }
 
 xhtml_maker(){
@@ -108,6 +118,14 @@ $(mes "$outpath/index.html.$lang"):
 MakeEND
   done
 }
+xhtml_makers(){
+  sourcefind -name '*.[a-z][a-z].xhtml' \
+  | sed -r "s;^(.+)\.[a-z][a-z]\.xhtml$;\1;" \
+  | sort -u \
+  | while read shortpath; do
+    xhtml_maker "$input/$shortpath" "$output/$(dirname "$shortpath")"
+  done 
+}
 
 copy_maker(){
   # generate make rule for copying a plain file
@@ -120,6 +138,13 @@ all: $(mes "$outfile")
 $(mes "$outfile"): $(mes "$infile")
 	cp "$infile" "$outfile"
 MakeEND
+}
+copy_makers(){
+  sourcefind \! -name 'Makefile' \! -name '*.sourceglobs' \! -name '*.sources' \
+             \! -name '*.xhtml' \! -name '*.xml' \! -name '*.xsl' \
+  | while read filepath; do
+    copy_maker "$input/$filepath" "$output/$(dirname "$filepath")"
+  done 
 }
 
 xslt_dependencies(){
@@ -144,16 +169,17 @@ $(mes "$file"): $deps
 	touch "$file"
 MakeEND
 }
+xslt_makers(){
+  sourcefind -name '*.xsl' \
+  | while read filepath; do
+    xslt_maker "$input/$filepath"
+  done 
+}
 
-xhtml_rules(){
-  input="$(echo "$1" |sed -r 's:/$::')"
-  output="$(echo "$2" |sed -r 's:/$::')"
-
-  find "$input" -type f -and -name '*.[a-z][a-z].xhtml' \
-  | sed -r "/(^|\/)\.svn($|\/)|^\.\.$/d;s;^$input/*(.+)\.[a-z]{2}\.xhtml$;\1;" \
-  | sort -u \
-  | while read shortpath; do
-    xhtml_maker "${input}/$shortpath" "$output/$(dirname "$shortpath")"
+copy_sources(){
+  sourcefind -name '*.xhtml' \
+  | while read filepath; do
+    copy_maker "$input/$filepath" "$output/source/$(dirname "$filepath")"
   done
 }
 
@@ -173,41 +199,26 @@ tree_maker(){
 	PROCFLAGS = --source "$basedir" --statusdir "$statusdir" --domain "$domain"
 	MakeHead
 
-  find "$input" -type f -name '*.sources' \
-  | sed -r "/(^|\/)\.svn($|\/)|^\.\.$/d;s;^$input/*;;" \
-  | while read filepath; do
-    glob_maker "$input/$filepath"
-  done \
-  | logstatus Make_globs
+  forcelog Make_globs;      Make_globs="$(logname Make_globs)"
+  forcelog Make_xslt;       Make_xslt="$(logname Make_xslt)"
+  forcelog Make_copy;       Make_copy="$(logname Make_copy)"
+  forcelog Make_sourcecopy; Make_sourcecopy="$(logname Make_sourcecopy)"
+  forcelog Make_xhtml;      Make_xhtml="$(logname Make_xhtml)"
 
-  find "$input" -type f -name '*.xsl' \
-  | sed -r "/(^|\/)\.svn($|\/)|^\.\.$/d;s;^$input/*;;" \
-  | while read filepath; do
-    xslt_maker "$input/$filepath"
-  done \
-  | logstatus Make_xslt
+  [ "$regen_globs" != true -a -s "$Make_globs" ] \
+  || glob_makers >"$Make_globs" &
+  [ "$regen_xslt" != true -a -s "$Make_xslt" ] \
+  || xslt_makers >"$Make_xslt" &
+  [ "$regen_copy" != true -a -s "$Make_copy" ] \
+  || copy_makers >"$Make_copy" &
+  [ "$regen_xhtml" != true -a -s "$Make_sourcecopy" ] \
+  || copy_sources >"$Make_sourcecopy" &
+  [ "$regen_xhtml" != true -a -s "$Make_xhtml" ] \
+  || xhtml_makers >"$Make_xhtml" &
 
-  find "$input" -type f -name '*.xhtml'  \
-  | sed -r "/(^|\/)\.svn($|\/)|^\.\.$/d;s;^$input/*;;" \
-  | while read filepath; do
-    copy_maker "$input/$filepath" "$output/source/$(dirname "$filepath")"
-  done \
-  | logstatus Make_sourcecopy
-
-  find "$input" -type f \
-       \! -name 'Makefile' \
-       \! -name '*.sourceglobs' \
-       \! -name '*.sources' \
-       \! -name '*.xml' \
-       \! -name '*.xsl' \
-       \! -name '*.xhtml' \
-  | sed -r "/(^|\/)\.svn($|\/)|^\.\.$/d;s;^$input/*;;" \
-  | while read filepath; do
-    copy_maker "$input/$filepath" "$output/$(dirname "$filepath")"
-  done \
-  | logstatus Make_copy
-
-  xhtml_rules "$input" "$output" \
-  | logstatus Make_xhtml
+  trap "trap - 0 2 3 6 9 15; killall \"$(basename "$0")\"" 0 2 3 6 9 15
+  wait
+  trap - 0 2 3 6 9 15
+  cat "$Make_globs" "$Make_xslt" "$Make_copy" "$Make_sourcecopy" "$Make_xhtml"
 }
 

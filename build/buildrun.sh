@@ -2,17 +2,15 @@
 
 inc_buildrun=true
 [ -z "$inc_makerules" ] && . "$basedir/build/makerules.sh"
-[ -z "$inc_misc" ] && . "$basedir/build/misc.sh"
 [ -z "$inc_stirrups" ] && . "$basedir/build/stirrups.sh"
+[ -z "$inc_logging" ] && . "$basedir/build/logging.sh"
 
-svn_build(){
+svn_update(){
   run_make=true
   regen_globs=false
   regen_xsldeps=false
   regen_xhtml=false
   regen_copy=false
-
-  forcelog additions
 
   svn update "$basedir" 2>&1 \
   | logstatus SVNchanges \
@@ -42,15 +40,20 @@ svn_build(){
       ????" "*) regen_copy=true;;
       *) true;;
     esac
-  done \
-  | cut -c6- \
+  done | cut -c6-
+}
+
+svn_build_into(){
+  svn_update \
   | logstatus additions
+
+  build_into
 }
 
 build_into(){
-  ncpu="$(cat /proc/cpuinfo |grep ^processor |wc -l)"
+  ncpu="$(grep -c ^processor /proc/cpuinfo)"
 
-  forcelog manifest
+  forcelog Makefile
 
   make -j $ncpu -C "$basedir" \
   | logstatus premake
@@ -59,10 +62,11 @@ build_into(){
 
   tree_maker "$basedir" "$target" \
   | logstatus Makefile \
-  | build_manifest "$(logname manifest)" \
-  | make -j $ncpu -f - \
-  | logstatus buildlog
-
-  remove_orphans "$target" <"$(logname manifest)" \
+  | build_manifest \
+  | logstatus manifest \
+  | remove_orphans "$target" \
   | logstatus removed
+
+  make -j $ncpu -f "$(logname Makefile)" \
+  | logstatus buildlog
 }

@@ -26,14 +26,16 @@ build_manifest(){
   # read a Makefile from stdin and generate
   # list of all make tagets
 
-  sed -nr 's;/\./;/;g;s;\\ ; ;g;s;([^:]+) :.*;\1;p'
+  sed -nr 's;/\./;/;g;
+           s;\\ ; ;g;
+           s;\\#;#;g;
+           s;\$\{OUTPUTDIR\}/([^:]+) :.*;\1;p'
 }
 
 remove_orphans(){
   # read list of files which should be in a directory tree
   # and remove everything else
-
-  tree="$1"
+  tree="${1%/}"
 
   # Idea behind the algorithm:
   # `find` will list every existing file once.
@@ -43,7 +45,7 @@ remove_orphans(){
   # We use 'uniq -u' to drop those from the list.
   # Remaining single files exist only in the tree and are to be removed
 
-  (find "$tree" -type f -o -type l; cat) \
+  (find "$tree" -type f -o -type l; sed "s;^.*$;$tree/&;") \
   | sort \
   | uniq -u \
   | while read file; do

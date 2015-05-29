@@ -12,41 +12,53 @@ sourcefind() {
   find "$input" -name .svn -prune -o -type f "$@" -printf '%P\n'
 }
 
+mio(){
+  # make input/output abstraction, produce reusable makefiles
+  # by replacing in and out pathes with make variables.
+  for each in "$@"; do
+    if [ "${each#$input/}" != "$each" ]; then
+      echo "\${INPUTDIR}/${each#$input/}"
+    elif [ "${each#$output}" != "$each" ]; then
+      echo "\${OUTPUTDIR}/${each#$output/}"
+    else
+      echo "$each"
+    fi
+  done
+}
+
 mes(){
   # make escape... escape a filename for make syntax
   # possibly not complete
-  while [ -n "$*" ]; do
-    echo "$1"
-    shift 1
-  done \
+  mio "$@" \
   | sed -r 's;([ #]);\\\1;g' \
   | tr '\n' ' '
 }
 
 glob_maker(){
-  sourcesfile="$1"
+  # issue make rules for preglobbed sources files
+  sourcesfile="$input/$1"
 
-  filedir=$(dirname "$sourcesfile")
+  filedir="\${INPUTDIR}/$(dirname "$sourcesfile")"
   shortbase="$(basename "$sourcesfile" |sed -r 's;\.sources$;;')"
   sourceglobfile="${filedir}/._._${shortbase}.sourceglobs"
 
   cat <<MakeEND
-$(mes "$sourceglobfile"): $(mes $(all_sources "$sourcesfile"))
-	\${PSOURCEGLOBS} \${PROCFLAGS} "$sourcesfile" >"$sourceglobfile"
+$(mes "$sourceglobfile"): $(mes $(all_sources "$input/$sourcesfile"))
+	\${PGLOBBER} \${PROCFLAGS} sourceglobs "\${INPUTDIR}/$sourcesfile" >"$sourceglobfile"
 MakeEND
 
   for lang in $(get_languages); do
     globfile="${filedir}/._._${shortbase}.${lang}.sourceglobs"
     cat <<MakeEND
 $(mes "$globfile"): $(mes "$sourceglobfile")
-	\${PGLOBCASTER} \${PROCFLAGS} "$sourceglobfile" "$lang" "$globfile"
+	\${PGLOBBER} \${PROCFLAGS} cast_globfile "$sourceglobfile" "$lang" "$globfile"
 MakeEND
   done
 }
 glob_makers(){
   sourcefind -name '*.sources' \
   | while read filepath; do
-    glob_maker "$input/$filepath"
+    glob_maker "$filepath"
   done 
 }
 
@@ -54,8 +66,8 @@ xhtml_maker(){
   # generate make rules for building html files out of xhtml
   # account for included xml files and xsl rules
 
-  shortname="$1"
-  outpath="$2"
+  shortname="$input/$1"
+  outpath="\${OUTPUTDIR}/$2"
 
   textsen="$(get_textsfile "en")"
   menufile="$basedir/tools/menu-global.xml"
@@ -80,8 +92,9 @@ xhtml_maker(){
   # For speed considerations: avoid all disk I/O in this loop
   for lang in $(get_languages); do
     infile="${shortname}.${lang}.xhtml"
-    [ -f "$infile" ] && depfile="$infile" || depfile="${shortname}.${olang}.xhtml" 
+    [ -e "$infile" ] && depfile="$infile" || depfile="${shortname}.${olang}.xhtml" 
 
+    infile="$(mio "$infile")"
     outbase="${shortbase}.${lang}.html"
     outfile="${outpath}/${outbase}"
     outlink="${outpath}/${shortbase}.html.$lang"
@@ -95,19 +108,19 @@ xhtml_maker(){
     cat <<MakeEND
 all: $(mes "$outfile" "$outlink")
 $(mes "$outfile"): $(mes "$depfile" "$processor" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" "$sourceglobs")
-	\${PROCESSOR} \${PROCFLAGS} "${infile}" "$processor" "$olang" >"$outfile"
+	\${PROCESSOR} \${PROCFLAGS} "${infile}" "$(mio "$processor")" "$olang" >"$outfile"
 $(mes "$outlink"):
 	ln -sf "${outbase}" "${outlink}"
 MakeEND
     $bool_rss && cat<<MakeEND
 all: $(mes "$rssfile")
 $(mes "$rssfile"): $(mes "$depfile" "${shortname}.rss.xsl" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" "$sourceglobs")
-	\${PROCESSOR} \${PROCFLAGS} "${infile}" "${shortname}.rss.xsl" "$olang" >"$rssfile"
+	\${PROCESSOR} \${PROCFLAGS} "${infile}" "$(mio "${shortname}.rss.xsl")" "$olang" >"$rssfile"
 MakeEND
     $bool_ics && cat<<MakeEND
 all: $(mes "$icsfile")
 $(mes "$icsfile"): $(mes "$depfile" "${shortname}.ics.xsl" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" "$sourceglobs")
-	\${PROCESSOR} \${PROCFLAGS} "${infile}" "${shortname}.ics.xsl" "$olang" >"$icsfile"
+	\${PROCESSOR} \${PROCFLAGS} "${infile}" "$(mio "${shortname}.ics.xsl")" "$olang" >"$icsfile"
 MakeEND
     $bool_indexname && cat <<MakeEND
 all: $(mes "$outpath/index.${lang}.html" "$outpath/index.html.$lang")
@@ -123,16 +136,16 @@ xhtml_makers(){
   | sed -r "s;^(.+)\.[a-z][a-z]\.xhtml$;\1;" \
   | sort -u \
   | while read shortpath; do
-    xhtml_maker "$input/$shortpath" "$output/$(dirname "$shortpath")"
+    xhtml_maker "$shortpath" "$(dirname "$shortpath")"
   done 
 }
 
 copy_maker(){
   # generate make rule for copying a plain file
-
-  infile="$1"
-  outpath="$2"
+  infile="\${INPUTDIR}/$1"
+  outpath="\${OUTPUTDIR}/$2"
   outfile="$outpath/$(basename "$infile")"
+
   cat <<MakeEND
 all: $(mes "$outfile")
 $(mes "$outfile"): $(mes "$infile")
@@ -143,7 +156,7 @@ copy_makers(){
   sourcefind \! -name 'Makefile' \! -name '*.sourceglobs' \! -name '*.sources' \
              \! -name '*.xhtml' \! -name '*.xml' \! -name '*.xsl' \
   | while read filepath; do
-    copy_maker "$input/$filepath" "$output/$(dirname "$filepath")"
+    copy_maker "$filepath" "$(dirname "$filepath")"
   done 
 }
 
@@ -151,35 +164,35 @@ xslt_dependencies(){
   file="$1"
 
   cat "$file" \
-  | tr '\n' ' ' \
+  | tr '\n\t' '  ' \
   | sed -r 's;(<xsl:(include|import)[^>]*>);\n\1\n;g' \
-  | sed -nr '/<xsl:(include|import)[^>]*>/s;^.*href="([^"]*)".*$;\1;gp'
+  | sed -nr '/<xsl:(include|import)[^>]*>/s;^.*href *= *"([^"]*)".*$;\1;gp'
 }
 
 xslt_maker(){
   # find external references in a xsl file and generate
   # Make dependencies accordingly
 
-  file="$1"
+  file="$input/$1"
   dir="$(dirname "$file")"
 
-  deps="$(xslt_dependencies "$file" |while read dep; do mes "$dir/$dep"; done)"
+  deps="$(xslt_dependencies "$file" |sed "s;^.*$;$dir/&;")"
   cat <<MakeEND
-$(mes "$file"): $deps
-	touch "$file"
+$(mes "$file"): $(mes $deps)
+	touch "$(mio "$file")"
 MakeEND
 }
 xslt_makers(){
   sourcefind -name '*.xsl' \
   | while read filepath; do
-    xslt_maker "$input/$filepath"
+    xslt_maker "$filepath"
   done 
 }
 
 copy_sources(){
   sourcefind -name '*.xhtml' \
   | while read filepath; do
-    copy_maker "$input/$filepath" "$output/source/$(dirname "$filepath")"
+    copy_maker "$filepath" "source/$(dirname "$filepath")"
   done
 }
 
@@ -191,19 +204,22 @@ tree_maker(){
   cache_textsfile
   cache_fundraising
 
-  logstatus Make_head <<-MakeHead
+  cat <<-MakeHead
 	.PHONY: all
 	PROCESSOR = "$basedir/build/process_file.sh"
-	PSOURCEGLOBS = "$basedir/build/source_globber.sh" sourceglobs
-	PGLOBCASTER = "$basedir/build/source_globber.sh" cast_globfile
+	PGLOBBER = "$basedir/build/source_globber.sh"
 	PROCFLAGS = --source "$basedir" --statusdir "$statusdir" --domain "$domain"
+	INPUTDIR = $input
+	OUTPUTDIR = $output
 	MakeHead
 
   forcelog Make_globs;      Make_globs="$(logname Make_globs)"
   forcelog Make_xslt;       Make_xslt="$(logname Make_xslt)"
   forcelog Make_copy;       Make_copy="$(logname Make_copy)"
   forcelog Make_sourcecopy; Make_sourcecopy="$(logname Make_sourcecopy)"
-  forcelog Make_xhtml;      Make_xhtml="$(logname Make_xhtml)"
+                            Make_xhtml="$(logname Make_xhtml)"
+
+  trap "trap - 0 2 3 6 9 15; killall \"$(basename "$0")\"" 0 2 3 6 9 15
 
   [ "$regen_globs" = false -a -s "$Make_globs" ] \
   || glob_makers >"$Make_globs" &
@@ -213,12 +229,13 @@ tree_maker(){
   || copy_makers >"$Make_copy" &
   [ "$regen_xhtml" = false -a -s "$Make_sourcecopy" ] \
   || copy_sources >"$Make_sourcecopy" &
-  [ "$regen_xhtml" = false -a -s "$Make_xhtml" ] \
-  || xhtml_makers >"$Make_xhtml" &
 
-  trap "trap - 0 2 3 6 9 15; killall \"$(basename "$0")\"" 0 2 3 6 9 15
+  [ "$regen_xhtml" = false -a -s "$Make_xhtml" ] && \
+     cat "$Make_xhtml" \
+  || xhtml_makers |tee "$Make_xhtml"
+
   wait
   trap - 0 2 3 6 9 15
-  cat "$Make_globs" "$Make_xslt" "$Make_copy" "$Make_sourcecopy" "$Make_xhtml"
+  cat "$Make_globs" "$Make_xslt" "$Make_copy" "$Make_sourcecopy"
 }
 

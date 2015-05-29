@@ -67,6 +67,6 @@ build_into(){
   | remove_orphans "$target" \
   | logstatus removed
 
-  make -j $ncpu -f "$(logname Makefile)" \
+  make -j $ncpu -f "$(logname Makefile)" all \
   | logstatus buildlog
 }

@@ -205,15 +205,15 @@ tree_maker(){
   forcelog Make_sourcecopy; Make_sourcecopy="$(logname Make_sourcecopy)"
   forcelog Make_xhtml;      Make_xhtml="$(logname Make_xhtml)"
 
-  [ "$regen_globs" != true -a -s "$Make_globs" ] \
+  [ "$regen_globs" = false -a -s "$Make_globs" ] \
   || glob_makers >"$Make_globs" &
-  [ "$regen_xslt" != true -a -s "$Make_xslt" ] \
+  [ "$regen_xslt" = false -a -s "$Make_xslt" ] \
   || xslt_makers >"$Make_xslt" &
-  [ "$regen_copy" != true -a -s "$Make_copy" ] \
+  [ "$regen_copy" = false -a -s "$Make_copy" ] \
   || copy_makers >"$Make_copy" &
-  [ "$regen_xhtml" != true -a -s "$Make_sourcecopy" ] \
+  [ "$regen_xhtml" = false -a -s "$Make_sourcecopy" ] \
   || copy_sources >"$Make_sourcecopy" &
-  [ "$regen_xhtml" != true -a -s "$Make_xhtml" ] \
+  [ "$regen_xhtml" = false -a -s "$Make_xhtml" ] \
   || xhtml_makers >"$Make_xhtml" &
 
   trap "trap - 0 2 3 6 9 15; killall \"$(basename "$0")\"" 0 2 3 6 9 15

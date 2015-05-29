@@ -5,6 +5,7 @@ basedir="$(dirname $0)/.."
 [ -z "$inc_misc" ] && . "$basedir/build/misc.sh"
 [ -z "$inc_processor" ] && . "$basedir/build/processor.sh"
 
+domain="www.fsfe.org"
 while [ -n "$*" ]; do
   case "$1" in
     -s|--statusdir|--status-dir)

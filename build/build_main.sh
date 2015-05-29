@@ -22,6 +22,8 @@ fi
 [ -z "$inc_scaffold" ] && . "$basedir/build/scaffold.sh"
 [ -z "$inc_sources" ] && . "$basedir/build/sources.sh"
 
+domain="www.fsfe.org"
+
 while [ -n "$*" ]; do
   case "$1" in
     -s|--statusdir|--status-dir)

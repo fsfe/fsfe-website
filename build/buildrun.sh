@@ -31,7 +31,8 @@ svn_update(){
       A???" "*.xsl) echo "$update";;
   [UGR]???" "*.xsl) regen_xsldeps=true;;
       ????" "*.xsl) regen_xsldeps=true;;
-      A???" "*.xhtml) regen_xhtml=true;;
+      A???" "*.xhtml) echo "$update"
+                      regen_globs=true;;
   [UGR]???" "*.xhtml) true;;
       ????" "*.xhtml) regen_xhtml=true;;
       ????" "*Makefile) true;;

@@ -16,13 +16,11 @@ mio(){
   # make input/output abstraction, produce reusable makefiles
   # by replacing in and out pathes with make variables.
   for each in "$@"; do
-    if [ "${each#$input/}" != "$each" ]; then
-      echo "\${INPUTDIR}/${each#$input/}"
-    elif [ "${each#$output}" != "$each" ]; then
-      echo "\${OUTPUTDIR}/${each#$output/}"
-    else
-      echo "$each"
-    fi
+    case "$each" in
+      "$input"/*)  echo "\${INPUTDIR}/${each#$input/}" ;;
+      "$output"/*) echo "\${OUTPUTDIR}/${each#$output/}" ;;
+      *) echo "$each" ;;
+    esac
   done
 }
 
@@ -176,7 +174,7 @@ xslt_maker(){
   file="$input/$1"
   dir="$(dirname "$file")"
 
-  deps="$(xslt_dependencies "$file" |sed "s;^.*$;$dir/&;")"
+  deps="$( xslt_dependencies "$file" |xargs -I'{}' realpath -m "$dir/{}" )"
   cat <<MakeEND
 $(mes "$file"): $(mes $deps)
 	touch "$(mio "$file")"
@@ -198,8 +196,8 @@ copy_sources(){
 
 tree_maker(){
   # walk through file tree and issue Make rules according to file type
-  input="$(echo "$1" |sed -r 's:/$::')"
-  output="$(echo "$2" |sed -r 's:/$::')"
+  input="$(realpath "$1")"
+  output="$(realpath -m "$2")"
 
   cache_textsfile
   cache_fundraising

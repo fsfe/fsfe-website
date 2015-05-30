@@ -7,13 +7,11 @@ dir_maker(){
   # set up directory tree for output
   # optimise by only issuing mkdir commands
   # for leaf directories
-
-  input="$(echo "$1" |sed -r 's:/$::')"
-  output="$(echo "$2" |sed -r 's:/$::')"
+  input="${1%/}"
+  output="${2%/}"
 
   curpath="$output"
-  find "$input" -depth -type d \
-  | sed -r "/(^|\/)\.svn($|\/)|^\.\.$/d;s;^$input/*;;" \
+  find "$input" -depth -type d \! -path '*/.svn' -printf '%P\n' \
   | while read filepath; do
     oldpath="$curpath"
     curpath="$output/$filepath/"
@@ -26,8 +24,7 @@ build_manifest(){
   # read a Makefile from stdin and generate
   # list of all make tagets
 
-  sed -nr 's;/\./;/;g;
-           s;\\ ; ;g;
+  sed -nr 's;\\ ; ;g;
            s;\\#;#;g;
            s;\$\{OUTPUTDIR\}/([^:]+) :.*;\1;p'
 }

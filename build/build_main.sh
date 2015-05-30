@@ -1,6 +1,6 @@
 #!/bin/sh
 
-basedir="$(dirname $0)/.."
+basedir="$(realpath -m "$0/../..")"
 
 [ -z "$inc_misc" ] && . "$basedir/build/misc.sh"
 
@@ -79,8 +79,14 @@ while [ -n "$*" ]; do
   [ -n "$*" ] && shift 1
 done
 
+[ -z "$tree" ] && tree="$basedir"
+tree="$(realpath "$tree")"
+basedir="$(realpath "$basedir")"
+target="$(realpath "$target")"
+
 if [ -n "$statusdir" ]; then
   mkdir -p "$statusdir"
+  statusdir="$(realpath "$statusdir")"
   if [ ! -w "$statusdir" -o ! -d "$statusdir" ]; then
     print_error "Unable to set up status directory in \"$statusdir\",
 either select a status directory that exists and is writable,
@@ -103,7 +109,6 @@ case "$command" in
     build_xmlstream "$(get_shortname "$workfile")" "$(get_language "$workfile")" "$olang"
     ;;
   tree_maker)
-    [ -z "$tree" ] && tree="$basedir"
     [ -z "$target" ] && print_error "Missing target location" && exit 1
     tree_maker "$tree" "$target"
     ;;

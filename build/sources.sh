@@ -46,7 +46,7 @@ list_sources(){
 
   for base in $sourceglobs; do
     echo "${base}".[a-z][a-z].xml "${base}".en.[x]ml "${base}.${lang}".[x]ml
-  done |sed -rn 's;^.*\.([a-z]{2})\.xml.*$;\1;p'
+  done |sed -rn 's;^(.* )?([^ ]+\.[a-z]{2}\.xml).*$;\2;p'
 }
 
 auto_sources(){

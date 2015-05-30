@@ -20,7 +20,7 @@ get_textsfile(){
   lang="$1"
 
   if [ -n "$cache_textsfile" ]; then
-    echo "$cache_textsfile" |sed -r 's;^.* '"$lang"':<([^>]+)> .*$;\1;p'
+    echo "$cache_textsfile" |sed -nr 's;^.* '"$lang"':<([^>]+)> .*$;\1;p'
   elif [ -f "$basedir/tools/texts-${1}.xml" ]; then
     echo "$basedir/tools/texts-${1}.xml"
   else

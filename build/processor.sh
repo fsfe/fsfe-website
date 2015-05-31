@@ -1,15 +1,13 @@
 #!/bin/sh
 
 inc_processor=true
-[ -z "$inc_filenames"   ] && . "$basedir/build/filenames.sh"
-[ -z "$inc_scaffold" ] && . "$basedir/build/scaffold.sh"
+[ -z "$inc_filenames" ] && . "$basedir/build/filenames.sh"
+[ -z "$inc_scaffold" ]  && . "$basedir/build/scaffold.sh"
 
 process_file(){
   infile="$1"
   processor="$2"
   olang="$3"
-
-  [ -z "$domain" ] && domain="www.fsfe.org"
 
   shortname=$(get_shortname "$infile")
   lang=$(get_language "$infile")

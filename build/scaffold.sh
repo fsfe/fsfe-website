@@ -23,7 +23,6 @@ build_xmlstream(){
   time="$(date +%H:%M:%S)"
   outdated=no
 
-  [ -z "$olang" ] && olang="en"
   if [ -f "${shortname}.${lang}.xhtml" ]; then
     act_lang="$lang"
     [ "${shortname}.${olang}.xhtml" -nt "${shortname}.${lang}.xhtml" ] && outdated=yes

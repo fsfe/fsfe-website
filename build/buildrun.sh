@@ -4,52 +4,7 @@ inc_buildrun=true
 [ -z "$inc_makerules" ] && . "$basedir/build/makerules.sh"
 [ -z "$inc_stirrups" ] && . "$basedir/build/stirrups.sh"
 [ -z "$inc_logging" ] && . "$basedir/build/logging.sh"
-
-svn_update(){
-  run_make=true
-  regen_globs=false
-  regen_xsldeps=false
-  regen_xhtml=false
-  regen_copy=false
-
-  svn update "$basedir" 2>&1 \
-  | logstatus SVNchanges \
-  | while read update; do
-    case "$update" in
-      Updating*) true;;
-      Updated*) true;;
-      "At revision"*) run_make=false;;
-      C???" "*) conflict=true;;
-      ?C??" "*) conflict=true;;
-      ???C" "*) conflict=true;;
-      A???" "*.xml) regen_globs=true;;
-  [UGR]???" "*.xml) true;;
-      ????" "*.xml) regen_globs=true;;
-      A???" "*.sources) echo "$update";;
-  [UGR]???" "*.sources) regen_globs=true;;
-      ????" "*.sources) regen_globs=true;;
-      A???" "*.xsl) echo "$update";;
-  [UGR]???" "*.xsl) regen_xsldeps=true;;
-      ????" "*.xsl) regen_xsldeps=true;;
-      A???" "*.xhtml) echo "$update"
-                      regen_globs=true;;
-  [UGR]???" "*.xhtml) true;;
-      ????" "*.xhtml) regen_xhtml=true;;
-      ????" "*Makefile) true;;
-      A???" "*) echo "$update";;
-  [UGR]???" "*) true;;
-      ????" "*) regen_copy=true;;
-      *) true;;
-    esac
-  done | cut -c6-
-}
-
-svn_build_into(){
-  svn_update \
-  | logstatus additions
-
-  build_into
-}
+[ -z "$inc_misc" ] && . "$basedir/build/misc.sh"
 
 build_into(){
   ncpu="$(grep -c ^processor /proc/cpuinfo)"
@@ -61,7 +16,7 @@ build_into(){
 
   dir_maker "$basedir" "$target"
 
-  tree_maker "$basedir" "$target" \
+  tree_maker "$basedir" "$target" "$@" \
   | logstatus Makefile \
   | build_manifest \
   | logstatus manifest \
@@ -70,4 +25,41 @@ build_into(){
 
   make -j $ncpu -f "$(logname Makefile)" all \
   | logstatus buildlog
+}
+
+svn_build_into(){
+  forcelog SVNchanges; SVNchanges="$(logname SVNchanges)"
+  forcelog SVNerrors;  SVNerrors="$(logname SVNerrors)"
+
+  svn update "$basedir" >"$SVNchanges" 2>"$SVNerrors"
+
+  if [ -s "$SVNerrors" ]; then
+    print_error "SVN reported the following problem:\n" \
+                "$(cat "$SVNerrors")"
+    exit 1
+  elif egrep '^(C...|.C..|...C) .+' "$SVNchanges"; then
+    print_error "SVN encountered a conflict:\n" \
+                "$(cat "$SVNchanges")"
+    exit 1
+  elif egrep '^At revision [0-9]+\.' "$SVNchanges"; then
+    debug "No changes to SVN:\n" \
+          "$(cat "$SVNchanges")"
+    exit 0
+  else
+    regen_globs=false
+    regen_xhtml=false
+    regen_xsldeps=false
+    regen_copy=false
+
+    egrep -q '^[^UGR]... .*\.xml'    "$SVNchanges" && regen_globs=true
+    egrep -q '^[^A]... .*\.sources'  "$SVNchanges" && regen_globs=true
+    egrep -q '^A... .*\.xhtml'       "$SVNchanges" && regen_globs=true
+    egrep -q '^[^AUGR]... .*\.xhtml' "$SVNchanges" && regen_xhtml=true
+    egrep -q '^A... .*\.xsl'         "$SVNchanges" && regen_xhtml=true
+    egrep -q '^[^A]... .*\.xsl'      "$SVNchanges" && regen_xsldeps=true
+    sed -r '/.*\.(xml|xsl|xhtml|sources)$/d;/Makefile$/d' "$SVNchanges" \
+    | egrep -q '^[AUGR]... .*'                     && regen_copy=true
+
+    build_into $(sed -rn '/.*(Makefile|\.xml)$/d;s;^A... (.+)$;\1;p' "$SVNchanges")
+  fi
 }

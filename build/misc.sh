@@ -25,3 +25,8 @@ print_error(){
   echo "Error: $@" |logstatus lasterror >/dev/stderr
   echo "Run '$0 --help' to see usage instructions" >/dev/stderr
 }
+
+die(){
+  print_error "$@"
+  exit 1
+}

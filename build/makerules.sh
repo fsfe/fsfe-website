@@ -53,11 +53,23 @@ $(mes "$globfile"): $(mes "$sourceglobfile")
 MakeEND
   done
 }
+
 glob_makers(){
+  # generate make rules for globbing all .sources files
+  # within input tree
   sourcefind -name '*.sources' \
   | while read filepath; do
     glob_maker "$filepath"
   done 
+}
+
+glob_additions(){
+  printf "$input/%s\n" "$@" \
+  | egrep '.+\.sources$' \
+  | xargs realpath \
+  | while read addition; do
+    glob_maker "${addition#$input/}"
+  done
 }
 
 xhtml_maker(){
@@ -106,19 +118,19 @@ xhtml_maker(){
     cat <<MakeEND
 all: $(mes "$outfile" "$outlink")
 $(mes "$outfile"): $(mes "$depfile" "$processor" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" "$sourceglobs")
-	\${PROCESSOR} \${PROCFLAGS} "${infile}" "$(mio "$processor")" "$olang" >"$outfile"
+	\${PROCESSOR} \${PROCFLAGS} process_file "${infile}" "$(mio "$processor")" "$olang" >"$outfile"
 $(mes "$outlink"):
 	ln -sf "${outbase}" "${outlink}"
 MakeEND
     $bool_rss && cat<<MakeEND
 all: $(mes "$rssfile")
 $(mes "$rssfile"): $(mes "$depfile" "${shortname}.rss.xsl" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" "$sourceglobs")
-	\${PROCESSOR} \${PROCFLAGS} "${infile}" "$(mio "${shortname}.rss.xsl")" "$olang" >"$rssfile"
+	\${PROCESSOR} \${PROCFLAGS} process_file "${infile}" "$(mio "${shortname}.rss.xsl")" "$olang" >"$rssfile"
 MakeEND
     $bool_ics && cat<<MakeEND
 all: $(mes "$icsfile")
 $(mes "$icsfile"): $(mes "$depfile" "${shortname}.ics.xsl" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" "$sourceglobs")
-	\${PROCESSOR} \${PROCFLAGS} "${infile}" "$(mio "${shortname}.ics.xsl")" "$olang" >"$icsfile"
+	\${PROCESSOR} \${PROCFLAGS} process_file "${infile}" "$(mio "${shortname}.ics.xsl")" "$olang" >"$icsfile"
 MakeEND
     $bool_indexname && cat <<MakeEND
 all: $(mes "$outpath/index.${lang}.html" "$outpath/index.html.$lang")
@@ -129,13 +141,25 @@ $(mes "$outpath/index.html.$lang"):
 MakeEND
   done
 }
+
 xhtml_makers(){
+  # generate make rules concerning all .xhtml files in source tree
   sourcefind -name '*.[a-z][a-z].xhtml' \
-  | sed -r "s;^(.+)\.[a-z][a-z]\.xhtml$;\1;" \
+  | sed -r 's;\.[a-z][a-z]\.xhtml$;;' \
   | sort -u \
   | while read shortpath; do
     xhtml_maker "$shortpath" "$(dirname "$shortpath")"
   done 
+}
+
+xhtml_additions(){
+  printf "$input/%s\n" "$@" \
+  | sed -rn 's;\.[a-z][a-z]\.xhtml$;;p' \
+  | sort -u \
+  | xargs realpath \
+  | while read addition; do
+    xhtml_maker "${addition#$input/}" "$(dirname "${addition#$input/}")"
+  done
 }
 
 copy_maker(){
@@ -150,7 +174,9 @@ $(mes "$outfile"): $(mes "$infile")
 	cp "$infile" "$outfile"
 MakeEND
 }
+
 copy_makers(){
+  # generate copy rules for entire input tree
   sourcefind \! -name 'Makefile' \! -name '*.sourceglobs' \! -name '*.sources' \
              \! -name '*.xhtml' \! -name '*.xml' \! -name '*.xsl' \
   | while read filepath; do
@@ -158,7 +184,19 @@ copy_makers(){
   done 
 }
 
+copy_additions(){
+  printf "$input/%s\n" "$@" \
+  | egrep -v '.+(\.sources|\.sourceglobs|\.xhtml|\.xml|\.xsl|/Makefile|/)$' \
+  | xargs realpath \
+  | while read addition; do
+    copy_maker "${addition#$input/}" "$(dirname "${addition#$input/}")"
+  done
+}
+
 xslt_dependencies(){
+  # list referenced xsl files for a given xsl file
+  # *not* recursive since Make will handle recursive
+  # dependency resolution
   file="$1"
 
   cat "$file" \
@@ -180,24 +218,47 @@ $(mes "$file"): $(mes $deps)
 	touch "$(mio "$file")"
 MakeEND
 }
+
 xslt_makers(){
+  # generate make dependencies for all .xsl files in input tree
   sourcefind -name '*.xsl' \
   | while read filepath; do
     xslt_maker "$filepath"
   done 
 }
 
+xslt_additions(){
+  printf "$input/%s\n" "$@" \
+  | egrep '.+\.xsl$' \
+  | xargs realpath \
+  | while read addition; do
+    xslt_maker "${addition#$input/}"
+  done
+}
+
 copy_sources(){
+  # generate rules to copy all .xhtml files in the input to
+  # the public source directory
   sourcefind -name '*.xhtml' \
   | while read filepath; do
     copy_maker "$filepath" "source/$(dirname "$filepath")"
   done
 }
 
+copy_sourceadditions(){
+  printf "$input/%s\n" "$@" \
+  | egrep '.+\.xhtml$' \
+  | xargs realpath \
+  | while read addition; do
+    copy_maker "${addition#$input/}" "source/$(dirname "${addition#$input/}")"
+  done
+}
+
 tree_maker(){
   # walk through file tree and issue Make rules according to file type
   input="$(realpath "$1")"
-  output="$(realpath -m "$2")"
+  output="$(realpath "$2")"
+  shift 2
 
   cache_textsfile
   cache_fundraising
@@ -219,21 +280,28 @@ tree_maker(){
 
   trap "trap - 0 2 3 6 9 15; killall \"$(basename "$0")\"" 0 2 3 6 9 15
 
-  [ "$regen_globs" = false -a -s "$Make_globs" ] \
+  [ "$regen_globs" = false -a -s "$Make_globs" ] && \
+     glob_additions "$@" >>"$Make_globs" \
   || glob_makers >"$Make_globs" &
-  [ "$regen_xslt" = false -a -s "$Make_xslt" ] \
+  [ "$regen_xslt" = false -a -s "$Make_xslt" ] && \
+     xslt_additions "$@" >>"$Make_xslt" \
   || xslt_makers >"$Make_xslt" &
-  [ "$regen_copy" = false -a -s "$Make_copy" ] \
+  [ "$regen_copy" = false -a -s "$Make_copy" ] && \
+     copy_additions "$@" >>"$Make_copy" \
   || copy_makers >"$Make_copy" &
-  [ "$regen_xhtml" = false -a -s "$Make_sourcecopy" ] \
+  [ "$regen_xhtml" = false -a -s "$Make_sourcecopy" ] && \
+     copy_sourceadditions "$@" >>"$Make_sourcecopy" \
   || copy_sources >"$Make_sourcecopy" &
-
-  [ "$regen_xhtml" = false -a -s "$Make_xhtml" ] && \
-     cat "$Make_xhtml" \
-  || xhtml_makers |tee "$Make_xhtml"
+  if [ "$regen_xhtml" = false -a -s "$Make_xhtml" ]; then
+    cat "$Make_xhtml"
+    xhtml_additions "$@" |tee -a "$Make_xhtml"
+  else
+    xhtml_makers |tee "$Make_xhtml"
+  fi
 
   wait
   trap - 0 2 3 6 9 15
+
   cat "$Make_globs" "$Make_xslt" "$Make_copy" "$Make_sourcecopy"
 }
 

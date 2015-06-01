@@ -5,9 +5,18 @@ basedir="$(dirname "$0")/.."
 
 . "$basedir/build/arguments.sh"
 
+if [ -n "$statusdir" ]; then
+  mkdir -p "$statusdir"
+  [ ! -w "$statusdir" -o ! -d "$statusdir" ] && \
+  die "Unable to set up status directory in \"$statusdir\",\n" \
+      "either select a status directory that exists and is writable,\n" \
+      "or run the build script without output to a status directory"
+fi
+readonly statusdir="${statusdir:+$(realpath "$statusdir")}"
+
 buildpids=$(
-  ps -eo pid,command \
-  | egrep 'sh .*[b]uild_main.sh .*' \
+  ps -eo command \
+  | egrep "[s]h .*${0} .*" \
   | wc -l
 )
 if [ $command = "build_into" -o $command = "svn_build_into" ] && [ "$buildpids" -gt 2 ]; then
@@ -23,14 +32,7 @@ fi
 [ -z "$inc_scaffold" ]  && . "$basedir/build/scaffold.sh"
 [ -z "$inc_sources" ]   && . "$basedir/build/sources.sh"
 
-if [ -n "$statusdir" ]; then
-  mkdir -p "$statusdir"
-  [ ! -w "$statusdir" -o ! -d "$statusdir" ] && \
-  die "Unable to set up status directory in \"$statusdir\",\n" \
-      "either select a status directory that exists and is writable,\n" \
-      "or run the build script without output to a status directory"
-fi
-readonly statusdir="${statusdir:+$(realpath "$statusdir")}"
+[ -s "$(logname debug)" ] && truncate -s 0 "$(logname debug)"
 
 case "$command" in
   build_into)      build_into ;;

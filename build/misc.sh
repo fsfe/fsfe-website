@@ -20,7 +20,6 @@ debug(){
     tee -a "$dbg_file"
   fi
 }
-[ -s "$(logname debug)" ] && truncate -s 0 "$(logname debug)"
 
 print_error(){
   echo "Error: $@" |logstatus lasterror >&2

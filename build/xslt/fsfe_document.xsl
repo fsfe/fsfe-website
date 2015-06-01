@@ -19,6 +19,9 @@
       <xsl:attribute name="class">
         <xsl:value-of select="/buildinfo/@language" /> no-js
       </xsl:attribute>
+      <xsl:if test="/buildinfo/@language = 'ar' or /buildinfo/@language = 'fa' or /buildinfo/@language = 'he'">
+        <xsl:attribute name="dir">rtl</xsl:attribute>
+      </xsl:if>
   
       <xsl:call-template name="page-head" />
       <xsl:call-template name="page-body" />

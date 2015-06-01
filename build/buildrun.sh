@@ -58,7 +58,7 @@ svn_build_into(){
     egrep -q '^A... .*\.xsl'         "$SVNchanges" && regen_xhtml=true
     egrep -q '^[^A]... .*\.xsl'      "$SVNchanges" && regen_xsldeps=true
     sed -r '/.*\.(xml|xsl|xhtml|sources)$/d;/Makefile$/d' "$SVNchanges" \
-    | egrep -q '^[AUGR]... .*'                     && regen_copy=true
+    | egrep -q '^[^AUGR]... .*'                     && regen_copy=true
 
     build_into $(sed -rn '/.*(Makefile|\.xml)$/d;s;^A... (.+)$;\1;p' "$SVNchanges")
   fi

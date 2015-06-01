@@ -31,7 +31,7 @@ svn_build_into(){
   forcelog SVNchanges; SVNchanges="$(logname SVNchanges)"
   forcelog SVNerrors;  SVNerrors="$(logname SVNerrors)"
 
-  svn update "$basedir" >"$SVNchanges" 2>"$SVNerrors"
+  svn --non-interactive update "$basedir" >"$SVNchanges" 2>"$SVNerrors"
 
   if [ -s "$SVNerrors" ]; then
     print_error "SVN reported the following problem:\n" \

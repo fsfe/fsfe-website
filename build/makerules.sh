@@ -212,7 +212,7 @@ xslt_maker(){
   file="$input/$1"
   dir="$(dirname "$file")"
 
-  deps="$( xslt_dependencies "$file" |xargs -I'{}' realpath -m "$dir/{}" )"
+  deps="$( xslt_dependencies "$file" |xargs -I'{}' realpath "$dir/{}" )"
   cat <<MakeEND
 $(mes "$file"): $(mes $deps)
 	touch "$(mio "$file")"

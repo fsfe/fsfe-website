@@ -1,6 +1,6 @@
 #!/bin/sh
 
-basedir="$(realpath -m "$0/../..")"
+basedir="$(realpath "$(dirname "$0")/..")"
 [ -z "$inc_misc" ] && . "$basedir/build/misc.sh"
 
 while [ "$#" -gt 0 ]; do

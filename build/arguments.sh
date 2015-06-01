@@ -66,7 +66,6 @@ olang="${olang:-en}"
 tree="${tree:-$basedir}"
 readonly tree="${tree:+$(realpath "$tree")}"
 readonly basedir="${basedir:+$(realpath "$basedir")}"
-readonly statusdir="${statusdir:+$(realpath "$statusdir")}"
 readonly target="${target:+$(realpath "$target")}"
 readonly domain="${domain:-www.fsfe.org}"
 readonly command

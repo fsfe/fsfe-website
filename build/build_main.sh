@@ -30,6 +30,7 @@ if [ -n "$statusdir" ]; then
       "either select a status directory that exists and is writable,\n" \
       "or run the build script without output to a status directory"
 fi
+readonly statusdir="${statusdir:+$(realpath "$statusdir")}"
 
 case "$command" in
   build_into)      build_into ;;

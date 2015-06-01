@@ -2,7 +2,7 @@
 
 [ -z "$inc_misc" ] && . "$basedir/build/misc.sh"
 
-if [ -z "$inc_arguments" ]
+if [ -z "$inc_arguments" ]; then
   inc_arguments=true
   basedir="$(realpath "$(dirname "$0")/..")"
 

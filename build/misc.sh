@@ -12,18 +12,19 @@ match(){
 }
 
 debug(){
-  dbg_file=/dev/stderr
+  dbg_file="$(logname debug)"
 
   if [ "$#" -ge 1 ]; then
-    echo "$@" >>"$dbg_file"
+    echo "$@" |tee -a "$dbg_file"
   else
     tee -a "$dbg_file"
   fi
 }
+[ -s "$(logname debug)" ] && truncate -s 0 "$(logname debug)"
 
 print_error(){
-  echo "Error: $@" |logstatus lasterror >/dev/stderr
-  echo "Run '$0 --help' to see usage instructions" >/dev/stderr
+  echo "Error: $@" |logstatus lasterror >&2
+  echo "Run '$0 --help' to see usage instructions" >&2
 }
 
 die(){

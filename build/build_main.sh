@@ -16,7 +16,7 @@ readonly statusdir="${statusdir:+$(realpath "$statusdir")}"
 
 buildpids=$(
   ps -eo command \
-  | egrep "[s]h .*${0} .*" \
+  | egrep "[s]h ${0} .*" \
   | wc -l
 )
 if [ $command = "build_into" -o $command = "svn_build_into" ] && [ "$buildpids" -gt 2 ]; then

@@ -38,7 +38,7 @@ glob_maker(){
 
   filedir="\${INPUTDIR}/$(dirname "$sourcesfile")"
   shortbase="$(basename "$sourcesfile" |sed -r 's;\.sources$;;')"
-  sourceglobfile="${filedir}/._._${shortbase}.sourceglobs"
+  sourceglobfile="${filedir%/.}/._._${shortbase}.sourceglobs"
 
   cat <<MakeEND
 $(mes "$sourceglobfile"): $(mes $(all_sources "$input/$sourcesfile"))
@@ -46,7 +46,7 @@ $(mes "$sourceglobfile"): $(mes $(all_sources "$input/$sourcesfile"))
 MakeEND
 
   for lang in $(get_languages); do
-    globfile="${filedir}/._._${shortbase}.${lang}.sourceglobs"
+    globfile="${filedir%/.}/._._${shortbase}.${lang}.sourceglobs"
     cat <<MakeEND
 $(mes "$globfile"): $(mes "$sourceglobfile")
 	\${PGLOBBER} \${PROCFLAGS} cast_globfile "$sourceglobfile" "$lang" "$globfile"
@@ -113,7 +113,7 @@ xhtml_maker(){
 
     textsfile="$(get_textsfile "$lang")"
     fundraisingfile="$(get_fundraisingfile "$lang")"
-    $bool_sourceinc && sourceglobs="${filedir}/._._${shortbase}.${lang}.sourceglobs" || unset sourceglobs
+    $bool_sourceinc && sourceglobs="${filedir#./}/._._${shortbase}.${lang}.sourceglobs" || unset sourceglobs
 
     cat <<MakeEND
 all: $(mes "$outfile" "$outlink")

@@ -16,7 +16,6 @@ build_xmlstream(){
   olang="$3"
 
   dirname="$(dirname "$shortname")"
-  metaname="$(echo "$shortname" |sed -r 's;.*/\.\.(/.+)$;\1;')"
   texts_xml=$(get_textsfile $lang)
   fundraising_xml=$(get_fundraisingfile $lang)
   date="$(date +%Y-%m-%d)"
@@ -36,8 +35,8 @@ build_xmlstream(){
 	<buildinfo
 	  date="$date"
 	  original="$olang"
-	  filename="$metaname"
-	  dirname="$dirname"
+	  filename="${shortname#$basedir}"
+	  dirname="${dirname#$basedir}"
 	  language="$lang"
 	  outdated="$outdated"
 	>

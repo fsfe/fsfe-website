@@ -42,10 +42,10 @@ remove_orphans(){
   # We use 'uniq -u' to drop those from the list.
   # Remaining single files exist only in the tree and are to be removed
 
-  (find "$dtree" -type f -o -type l; sed "s;^.*$;$dtree/&;") \
+  (find "$dtree" \( -type f -o -type l \) -printf '%P\n' ; cat) \
   | sort \
   | uniq -u \
   | while read file; do
-    match "$file" "^$dtree" && rm -v "$file"
+    rm -v "$dtree/$file"
   done
 }

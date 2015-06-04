@@ -77,7 +77,8 @@ xhtml_maker(){
   # account for included xml files and xsl rules
 
   shortname="$input/$1"
-  outpath="\${OUTPUTDIR}/${2#./}"
+  outpath="\${OUTPUTDIR}/${2}"
+  outpath="${outpath%/.}"
 
   textsen="$(get_textsfile "en")"
   menufile="$basedir/tools/menu-global.xml"
@@ -165,7 +166,8 @@ xhtml_additions(){
 copy_maker(){
   # generate make rule for copying a plain file
   infile="\${INPUTDIR}/$1"
-  outpath="\${OUTPUTDIR}/${2#./}"
+  outpath="\${OUTPUTDIR}/${2}"
+  outpath="${outpath%/.}"
   outfile="$outpath/$(basename "$infile")"
 
   cat <<MakeEND

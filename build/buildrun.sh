@@ -14,17 +14,21 @@ build_into(){
   make -j $ncpu -C "$basedir" \
   | logstatus premake
 
-  dir_maker "$basedir" "$target"
+  dir_maker "$basedir" "$stagedir"
 
-  tree_maker "$basedir" "$target" "$@" \
+  tree_maker "$basedir" "$stagedir" "$@" \
   | logstatus Makefile \
   | build_manifest \
   | logstatus manifest \
-  | remove_orphans "$target" \
+  | remove_orphans "$stagedir" \
   | logstatus removed
 
   make -j $ncpu -f "$(logname Makefile)" all \
   | logstatus buildlog
+
+  [ "$stagedir" != "$target" ] && \
+    rsync -av --del "$stagedir/" "$target/" \
+    | logstatus stagesync
 }
 
 svn_build_into(){

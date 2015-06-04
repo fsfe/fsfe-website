@@ -17,6 +17,9 @@ if [ -z "$inc_arguments" ]; then
       --source)
         [ "$#" -gt 0 ] && shift 1 && basedir="$1"
         ;;
+      --stage|--stagedir)
+        [ "$#" -gt 0 ] && shift 1 && stagedir="$1"
+        ;;
       -d|--dest|--destination)
         [ "$#" -gt 0 ] && shift 1 && target="$1"
         ;;
@@ -67,7 +70,9 @@ if [ -z "$inc_arguments" ]; then
   
   olang="${olang:-en}"
   tree="${tree:-$basedir}"
+  stagedir=${stagedir:-$target}
   readonly tree="${tree:+$(realpath "$tree")}"
+  readonly stagedir="${stagedir:+$(realpath "$stagedir")}"
   readonly basedir="${basedir:+$(realpath "$basedir")}"
   readonly target="${target:+$(realpath "$target")}"
   readonly domain="${domain:-www.fsfe.org}"

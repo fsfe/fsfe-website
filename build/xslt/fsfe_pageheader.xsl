@@ -203,9 +203,7 @@
         <xsl:element name="div">
           <xsl:attribute name="id">link-home</xsl:attribute>
           <xsl:element name="a">
-            <xsl:attribute name="href">
-                <xsl:value-of select="$urlprefix"/>
-            </xsl:attribute>
+            <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/</xsl:attribute>
             <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'rootpage'" /></xsl:call-template>
           </xsl:element>
         </xsl:element>

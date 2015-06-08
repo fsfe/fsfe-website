@@ -134,6 +134,15 @@
     </description>
   </info>
 
+  <info id="bag-no-cloud-black">
+    <name>Borsa "There is no cloud...", nero</name>
+    <description>
+      <p>
+				Una graziosa borsa in cottone, indossabile anche come zainetto, con la scritta  "There is no cloud, just other people's computers".
+      </p>
+    </description>
+  </info>
+
   <info id="keyring-fellowship">
     <name>Portachiavi della Fellowship</name>
     <description>
@@ -159,6 +168,23 @@
     <description>
       <p>
         Molti Fellow lo usano per portare al collo la propria crypto card.
+      </p>
+    </description>
+  </info>
+
+  <info id="ballpen-green">
+    <name>Stampante analogica, penna stile geek, blu scuro</name>
+    <description>
+      <p>
+				Questa stampante analogica e' interoperabile e funziona su qualsiasi piattaforma. Altamente hackerabile e usa standard aperti.
+      </p>
+    </description>
+  </info>
+  <info id="ballpen-blue">
+    <name>Stampante analogica, penna stile business, blu scuro</name>
+    <description>
+      <p>
+				Questa stampante analogica e' interoperabile e funziona su qualsiasi piattaforma. Altamente hackerabile, usa standard aperti ed e' fornita in una scatola fiammante.
       </p>
     </description>
   </info>
@@ -191,19 +217,28 @@
   </info>
 
   <info id="pin-gnu">
-    <name>Spilla GNU</name>
+    <name>Spilla Gnu</name>
     <description>
       <p>
-        Una spilla con il GNU.
+        Una spilla con il classico Gnu.
       </p>
     </description>
   </info>
 
   <info id="pin-gnu-magnet">
-    <name>Spilla GNU magnetici</name>
+    <name>Spilla Gnu magnetici</name>
     <description>
       <p>
-        Una spilla con il GNU.
+        Una spilletta magnetica con il classico Gnu.
+      </p>
+    </description>
+  </info>
+
+  <info id="pin-gnu-gold">
+    <name>Spilletta Gnu, colore oro, versione americana</name>
+    <description>
+      <p>
+        Una spilletta con il classico Gnu. Testo: "Free Software Foundation established 1985"
       </p>
     </description>
   </info>

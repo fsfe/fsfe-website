@@ -2,9 +2,9 @@
 
 
 <eventset> 
-	<event start="<?=htmlspecialchars($date)?>" end="<?=htmlspecialchars($date)?>"> 
+	<event start="<?=htmlspecialchars($startdate)?>" end="<?if($enddate):?><?=htmlspecialchars($enddate)?><?else:?><?=htmlspecialchars($startdate)?>"> 
  
-		<title><?if($title):?><?=htmlspecialchars($title)?><?else:?>Fellowship event<?endif;?><?if($location):?> in <?=htmlspecialchars($location)?><?endif;?></title> 
+		<title><?if($title):?><?=htmlspecialchars($title)?><?else:?>Fellowship event<?endif;?><?if($city):?> in <?=htmlspecialchars($city)?><?endif;?><?if($country):?>, <?=htmlspecialchars($country)?><?endif;?></title> 
  
 		<body> 
 			<p><?=$description?></p> 
@@ -14,8 +14,8 @@
  
 
 		<tags>
-			<tag><?=htmlspecialchars($city)?></tag>
-			<tag><?=htmlspecialchars($country)?></tag>
+			<tag content=""></tag>
+			<tag>front-page</tag>
 		</tags>
 
  

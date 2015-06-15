@@ -72,7 +72,7 @@ function send_registration_mail() {
 	return $data['img_error'];
 }
 
-if ( isset($_POST['register_event']) && empty($_POST['spam']) && eval_date($_POST['startdate']) && (empty($_POST['enddate']) || eval_date($_POST['enddate'])) ) {
+if ( isset($_POST['register_event']) && empty($_POST['spam']) && preg_match([0-9]{4}, eval_date($_POST['startdate'])) && (empty($_POST['enddate']) || preg_match([0-9]{4}, eval_date($_POST['enddate']))) ) {
 	$error = send_registration_mail();
 
 	echo eval_xml_template('registerevent/success.en.html', array(
@@ -80,10 +80,8 @@ if ( isset($_POST['register_event']) && empty($_POST['spam']) && eval_date($_POS
 	));
 }
 else {
-	echo eval_xml_template('blank.en.html', array(
-		'head' => '<title>Error!</title>',
-		'body' => '<h1>Oops!</h1>
-			<p>You probably shouldn\'t be here.</p>',
+	echo eval_xml_template('registerevent/error.en.html', array(
+		'notice' => '', // TODO display the error here
 	));
 }
 

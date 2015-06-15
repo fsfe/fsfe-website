@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="dfd-cartoon">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Document Freedom Day</name>
+    <description>
+      The cartoon series to promote our <a href="http://www.documentfreedom.org/">Document Freedom Day</a> campaign. On the other side you can find an illustrated explanation of open formats.   
+    </description>
+    <type>Cartoon</type>
+    <size>A4 (21 cm x 29, 5)</size>
+    <context><a href="http://www.documentfreedom.org/">Document Freedom Day</a></context>
+    <languages>
+      <a href="http://download.fsfe.org/campaigns/dfd/artwork/2014/cartoon/cartoon.jpg">English Front</a>, <a href="http://media.april.org/docs/formats_ouverts/open_formats_poster_A3_EN_print.png">English Back</a>
+    </languages>
+    <printed>
+      Yes.
+    </printed>
+    <license>CC-BY-SA 4.0</license>
+    <author>Jamie Cosley, April</author>
+    <source>http://download.fsfe.org/campaigns/dfd/artwork/2014/cartoon/cartoon.en.svg</source> 
+    <printready></printready>
+  </info>
+
+</infoset>

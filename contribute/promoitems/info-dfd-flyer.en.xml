@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="dfd-flyer">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Document Freedom Day</name>
+    <description>
+      The flyer to promote our <a href="http://www.documentfreedom.org/">Document Freedom Day</a> campaign. It says the date, homepage and a short message in six languages. 
+    </description>
+    <type>Flyer</type>
+    <size>A7 (7,4 x 10,5cm)</size>
+    <context><a href="http://www.documentfreedom.org/">Document Freedom Day</a></context>
+    <languages>
+      <a href="http://download.fsfe.org/campaigns/dfd/artwork/2015/fliers/a7/a7-front.mu.pdf">Multilanguage Cover</a>, <a href="http://download.fsfe.org/campaigns/dfd/artwork/2015/fliers/a7/a7-back.mu.pdf">Multilanguage Inside</a>
+    </languages>
+    <printed>
+      Yes. Six languages on the same flyer: English, French, German, Portuguese, Spanish, Turkish.
+    </printed>
+    <license></license>
+    <author></author>
+    <source>campaigns/dfd/artwork/2014/fliers/dfd-2014-a7-front-mu.svg</source> 
+    <printready></printready>
+  </info>
+
+</infoset>

@@ -47,7 +47,8 @@ function send_registration_mail() {
 		'title' => $_POST['title'],
 		'groupname' => $_POST['groupname'],
 		'groupurl' => $_POST['groupurl'],
-		'date' => $_POST['date'],
+		'startdate' => $_POST['startdate'],
+		'enddate' => $_POST['enddate'],
 		'description' => $_POST['description'],
 		'url' => htmlspecialchars($_POST['url']),
 		'location' => $_POST['location'],
@@ -59,9 +60,10 @@ function send_registration_mail() {
 
 	$message = eval_template('registerevent/mail.php', $data);
 
-	$to = $_POST['email'].",pavi@fsfe.org";
+	$to = $_POST['email'].",eal@fsfe.org";
 	$subject = "event registration: " . $_POST['name'];
 	$headers = "From: no-reply@fsfe.org\n"
+		. "CC: fellowship@fsfeurope.org\n"
 		. "MIME-Version: 1.0\n"
 		. "Content-Type: multipart/mixed; boundary=boundary";
 
@@ -70,7 +72,7 @@ function send_registration_mail() {
 	return $data['img_error'];
 }
 
-if ( isset($_POST['register_event']) && empty($_POST['spam']) && eval_date($_POST['date']) ) {
+if ( isset($_POST['register_event']) && empty($_POST['spam']) && eval_date($_POST['startdate']) && (empty($_POST['enddate']) || eval_date($_POST['enddate'])) ) {
 	$error = send_registration_mail();
 
 	echo eval_xml_template('registerevent/success.en.html', array(

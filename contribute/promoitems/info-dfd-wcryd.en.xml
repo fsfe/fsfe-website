@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="dfd-wcryd">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>We Cannot Read Your Documents Sticker</name>
+    <description>
+      The "We cannot read your documents" stickers address our <a href="http://www.documentfreedom.org/">Document Freedom Day campaign</a>. The slogan highlights the problem in the use of proprietary file formats, as they exclude all people not using the same proprietary software from reading of their documents.
+    </description>
+    <type>Sticker</type>
+    <size>74x74mm</size>
+    <context><a href="http://www.documentfreedom.org/">Document Freedom Day</a></context>
+    <languages>
+      <a href="http://download.fsfe.org/campaigns/dfd/artwork/wcryd-stickers/we-cannot-read-your-documents.png">English</a>
+    </languages>
+    <printed>
+      <a href="http://download.fsfe.org/campaigns/dfd/artwork/wcryd-stickers/we-cannot-read-your-documents.png">English</a>
+    </printed>
+    <license>CC-BY-SA 3.0</license>
+    <author>FSFE</author>
+    <source><a href="http://download.fsfe.org/campaigns/dfd/artwork/wcryd-stickers/we-cannot-read-your-documents.svg">English (SVG)</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

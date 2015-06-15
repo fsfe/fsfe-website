@@ -5,12 +5,12 @@
     want to appear it -->
     <!-- Translations for "Type", "Size" etc. can be found in 
     /tools/texts-**.xml -->
-    <name>Document Freedom Day</name>
+    <name>Document Freedom Day - Cartoon</name>
     <description>
       The cartoon series to promote our <a href="http://www.documentfreedom.org/">Document Freedom Day</a> campaign. On the other side of the printed English version you can find an illustrated explanation of open formats.   
     </description>
     <type>Cartoon</type>
-    <size>A4 (21 cm x 29, 5)</size>
+    <size>A4 (21x29,5cm)</size>
     <context><a href="http://www.documentfreedom.org/">Document Freedom Day</a></context>
     <languages>
       <a href="http://download.fsfe.org/campaigns/dfd/artwork/2014/cartoon/cartoon.jpg">English Front</a>, <a href="http://media.april.org/docs/formats_ouverts/open_formats_poster_A3_EN_print.png">English Back</a>, <a href="http://download.fsfe.org/campaigns/dfd/artwork/2014/cartoon/cartoon.ca.png">Catalan</a>, <a href="http://download.fsfe.org/campaigns/dfd/artwork/2014/cartoon/cartoon.de.png">German</a>, <a href="http://download.fsfe.org/campaigns/dfd/artwork/2014/cartoon/cartoon.es.png">Spanish</a>, <a href="http://download.fsfe.org/campaigns/dfd/artwork/2014/cartoon/cartoon.fr.svg">French</a>, <a href="http://download.fsfe.org/campaigns/dfd/artwork/2014/cartoon/cartoon.gl.png">Galician</a>, <a href="http://download.fsfe.org/campaigns/dfd/artwork/2014/cartoon/cartoon.ru.png">Russian</a>, <a href="http://download.fsfe.org/campaigns/dfd/artwork/2014/cartoon/cartoon.tr.png">Turkish</a> 
@@ -20,7 +20,7 @@
     </printed>
     <license>CC-BY-SA 4.0</license>
     <author>Jamie Cosley, April</author>
-    <source>http://download.fsfe.org/campaigns/dfd/artwork/2014/cartoon/cartoon.en.svg</source> 
+    <source><a href="http://download.fsfe.org/campaigns/dfd/artwork/2014/cartoon/cartoon.en.svg">English (SVG)</a></source> 
     <printready></printready>
   </info>
 

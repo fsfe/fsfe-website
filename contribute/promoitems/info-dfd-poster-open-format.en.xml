@@ -5,7 +5,7 @@
     want to appear it -->
     <!-- Translations for "Type", "Size" etc. can be found in 
     /tools/texts-**.xml -->
-    <name>Poster</name>
+    <name>Open Formats Poster</name>
     <description>
       The illustrated explanation of Open formats to promote our <a href="http://www.documentfreedom.org/">Document Freedom Day</a> campaign.
     </description>
@@ -13,12 +13,13 @@
     <size>A3 (29,5 cm x 42 cm)</size>
     <context><a href="http://www.documentfreedom.org/">Document Freedom Day</a></context>
     <languages>
+		<a href="http://media.april.org/docs/formats_ouverts/open_formats_poster_A3_EN.pdf">English</a>, <a href="http://media.april.org/docs/formats_ouverts/formats_ouverts_poster_A3.png">French</a>
     </languages>
     <printed>
     </printed>
     <license>CC-BY-SA 4.0</license>
     <author>April</author>
-    <source></source> 
+    <source><a href="http://media.april.org/docs/formats_ouverts/open_formats_source.tgz">English (Scribus)</a>, <a href="http://media.april.org/docs/formats_ouverts/sources_formats_ouverts.zip">French (Scribus)</a></source> 
     <printready></printready>
   </info>
   

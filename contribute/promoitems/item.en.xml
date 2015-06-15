@@ -49,19 +49,34 @@ to every item in this file -->
     imgsmall=""/>
   </item>
   
-    <item type="dfd" id="dfd-chance-poster" year="2014" order="1">
+    <item type="dfd" id="dfd-chance-poster" year="2014" order="4">
  	<image
     imgsmall="/contribute/promopics/a2.mu_thumb.png"/>
   </item>
   
-  <item type="dfd" id="dfd-flyer" year="2014" order="1">
+  <item type="dfd" id="dfd-flyer" year="2015" order="5">
  	<image
     imgsmall="/contribute/promopics/dfd-2015-a7-front-mu.png"/>
   </item>
   
-  <item type="dfd" id="dfd-cartoon" year="2014" order="1">
+    <item type="dfd" id="dfd-poster-open-format" year="2014" order="6">
  	<image
     imgsmall="/contribute/promopics/open_formats_poster_ENthumb.png"/>
+  </item>
+  
+  <item type="dfd" id="dfd-cartoon" year="2014" order="7">
+ 	<image
+    imgsmall="/contribute/promopics/open_formats_poster_ENthumb.png"/>
+  </item>
+  
+     <item type="dfd" id="dfd-wcryd" year="2014" order="8">
+ 	<image
+    imgsmall=""/>
+  </item>
+  
+  <item type="dfd" id="dfd-postcard" year="2014" order="9">
+ 	<image
+    imgsmall=""/>
   </item>
 
 </itemset>

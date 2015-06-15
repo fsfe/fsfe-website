@@ -74,7 +74,7 @@ function send_registration_mail() {
 	return $data['img_error'];
 }
 
-if ( isset($_POST['register_event']) && empty($_POST['spam']) && eval_date($_POST['startdate'])  && (empty($_POST['enddate']) || eval_date($_POST['enddate'])) ) {
+if ( isset($_POST['register_event']) && empty($_POST['spam']) && eval_date($_POST['startdate']) ) {
 	$error = send_registration_mail();
 
 	echo eval_xml_template('registerevent/success.en.html', array(

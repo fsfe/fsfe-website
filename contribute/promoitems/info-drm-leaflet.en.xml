@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="drm-leaflet">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Digital Restrictions Management</name>
+    <description>
+      This is a leaflet about <a href="http://drm.info">Digital Restriction Management</a> and its dangers. We produced this leaflet together with <a href="https://digitalegesellschaft.de">Digitale Gesellschaft</a> and it comes as a good summary of this complex topic.
+    </description>
+    <type>Leaflet</type>
+    <size>A5 (148 x 21 cm, folded); A4 (29,7 x 21 cm, unfolded)</size>
+    <context><a href="http://drm.info">Digital Restriction Management</a></context>
+    <languages><a href= "http://download.fsfe.org/advocacy/leaflets/DRM_handcuffs.en.pdf">English</a>, <a href="http://download.fsfe.org/advocacy/leaflets/DRM_handcuffs.fr.pdf">French</a>, <a href="http://download.fsfe.org/advocacy/leaflets/DRM_handcuffs.de.pdf">German</a>
+    </languages>
+    <printed>
+      <a href="http://download.fsfe.org/advocacy/leaflets/DRM_handcuffs.en.pdf">English</a>, <a href="http://download.fsfe.org/advocacy/leaflets/DRM_handcuffs.fr.pdf">French</a>, <a href="http://download.fsfe.org/advocacy/leaflets/DRM_handcuffs.de.pdf">German</a>
+    </printed>
+    <license>CC-BY-SA 4.0</license>
+    <author>FSFE, EDRi</author>
+    <source><a href="http://download.fsfe.org/advocacy/leaflets/DRM_handcuffs.en.pdf">English (PDF)</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

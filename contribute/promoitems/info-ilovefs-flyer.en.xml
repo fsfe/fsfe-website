@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="ilovefs-flyer">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>I love Free Software - Flyer</name>
+    <description>
+      The flyer of our <a href="/campaigns/ilovefs/ilovefs.en.html">I love Free Software campaign</a>. The flyer is two-sided: One side with the IloveFS-heart, same as in the poster (see next item). The other side is showing the date (Valentine's Day) and the URL of the campaign - as you see in the thumbnail image. 
+    </description>
+    <type>Flyer</type>
+    <size>A7 (74 x 105 mm)</size>
+    <context><a href="/campaigns/ilovefs/ilovefs.en.html">I love Free Software</a></context>
+    <languages>
+      <a href="http://download.fsfe.org/advocacy/leaflets/ilovefs-flyer-A7.pdf">English</a>
+    </languages>
+    <printed>
+      English.
+    </printed>
+    <license></license>
+    <author></author>
+    <source></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

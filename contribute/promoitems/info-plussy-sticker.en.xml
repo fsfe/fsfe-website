@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="plussy-sticker">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Plussy sticker</name>
+    <description>
+      The classic Plussy stickers,the symbol of FSFE's Fellowship. The background is transparent, so the sticker integrates perfectly in any sourrounding - not just on laptops.
+    </description>
+    <type>Sticker</type>
+    <size>7 x 7 cm </size>
+    <context></context>
+    <languages>
+      <a href="/graphics/fellowship/plussy.png">PNG</a>, <a href="/graphics/fellowship/plussy_plain.svg">SVG</a>
+    </languages>
+    <printed>
+      Yes.
+    </printed>
+    <license></license>
+    <author></author>
+    <source><a href="http://download.fsfe.org/advocacy/stickers/plain-plussy.svg">SVG</a></source> 
+    <printready>AVAILABLE PRINT-READY FILES</printready>
+  </info>
+
+</infoset>

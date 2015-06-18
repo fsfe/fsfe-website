@@ -137,7 +137,22 @@ to every item in this file -->
     imgsmall="/contribute/promopics/ilovefs_poster_A1_thumb.png"/>
   </item> 
   
-  
+   <!-- They Dont Want You.To -->
+  <item type="tdwyt" id="tdwy-sticker" year="2014" order="1">
+ 	<image
+    imgsmall="/contribute/promopics/tdwyt-laptop-thumb.png"/>
+  </item> 
+ 
+  <item type="tdwyt" id="tdwy-sticker-big" year="2014" order="2">
+ 	<image
+    imgsmall="/contribute/promopics/tdwyt-billboard-small-thumb.png"/>
+  </item>   
+
+  <item type="tdwyt" id="tdwy-sticker-triangle" year="2014" order="3">
+ 	<image
+    imgsmall="/contribute/promopics/tdwyt-triangle-thumb.png"/>
+  </item>   
+
   
 
 </itemset>

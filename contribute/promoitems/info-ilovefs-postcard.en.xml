@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="ilovefs-postcard">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>I love Free Software - Postcard</name>
+    <description>
+      The postcard is two-sided: One side with the slogan "I love Free Software - ... but I love YOU more!", the other side is like normal postcards with spaces for text and the recipient's address.
+    </description>
+    <type>Postcard</type>
+    <size>154 x 111 mm</size>
+    <context><a href="/campaigns/ilovefs/ilovefs.en.html">I love Free Software campaign</a></context>
+    <languages>
+      <a href="/campaigns/ilovefs/artwork/graphics/printable/ilovefs-postcard.pdf">English</a>
+    </languages>
+    <printed>
+      English.
+    </printed>
+    <license></license>
+    <author></author>
+    <source></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

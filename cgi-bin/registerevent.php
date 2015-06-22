@@ -82,7 +82,7 @@ if ( eval_date($_POST['startdate']) ) {
 }
 
 
-if ( isset($_POST['register_event']) AND empty($_POST['spam']) AND preg_match("^[0-9]{4}$", $startyear) AND preg_match("^[0-9]{4}$", $endyear) || empty($_POST['enddate'])  ) {
+if ( isset($_POST['register_event']) AND empty($_POST['spam']) AND preg_match("/^[0-9]{4}$/", $startyear) AND preg_match("/^[0-9]{4}$/", $endyear) || empty($_POST['enddate'])  ) {
 	$error = send_registration_mail();
 
 	echo eval_xml_template('registerevent/success.en.html', array(

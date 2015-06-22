@@ -36,7 +36,7 @@ function get_mime_type($path) {
 
 function eval_date($date) {
 	$dt = date_parse($date);
-	return (!$dt['errors'] && preg_match("/^[0-9]{4}$/", $dt['year']) === 1);
+	return (!$dt['errors'] && $dt['year'] && preg_match("#^(19|20)\d\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])$#", $date));
 }
 
 
@@ -71,16 +71,6 @@ function send_registration_mail() {
 
 	return $data['img_error'];
 }
-
-if ( eval_date($_POST['startdate']) ) {
-	$startdt = date_parse($_POST['startdate']);
-	$startyear = $startdt['year'];
-	if ( eval_date($_POST['enddate']) ) {
-		$enddt = date_parse($_POST['enddate']);
-		$endyear = $enddt['year'];
-	}
-}
-
 
 if ( isset($_POST['register_event']) AND empty($_POST['spam']) AND eval_date($_POST['startdate']) AND eval_date($_POST['enddate']) || empty($_POST['enddate'])  ) {
 	$error = send_registration_mail();

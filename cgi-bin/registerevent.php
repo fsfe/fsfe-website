@@ -36,7 +36,7 @@ function get_mime_type($path) {
 
 function eval_date($date) {
 	$dt = date_parse($date);
-		return (!$dt['errors'] && $dt['year']);
+	return (!$dt['errors'] && preg_match("/^[0-9]{4}$/", $dt['year']) === 1);
 }
 
 

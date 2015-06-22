@@ -36,7 +36,7 @@ function get_mime_type($path) {
 
 function eval_date($date) {
 	$dt = date_parse($date);
-		return (/*!$dt['errors'] && */$dt['year']);
+		return (!$dt['errors'] && $dt['year']);
 }
 
 
@@ -72,7 +72,17 @@ function send_registration_mail() {
 	return $data['img_error'];
 }
 
-if ( isset($_POST['register_event']) AND empty($_POST['spam']) AND 	preg_match("#^[0-9]{4}$#", eval_date($_POST['startdate'])) AND preg_match("#^[0-9]{4}$#", eval_date($_POST['enddate'])) || empty($_POST['enddate'])  ) {
+if ( eval_date($_POST['startdate']) ) {
+	$startdt = date_parse($_POST['startdate']);
+	$startyear = $startdt['year'];
+	if ( eval_date($_POST['enddate']) ) {
+		$enddt = date_parse($_POST['enddate']);
+		$endyear = $enddt['year'];
+	}
+}
+
+
+if ( isset($_POST['register_event']) AND empty($_POST['spam']) AND preg_match("^[0-9]{4}$", $startyear) AND preg_match("^[0-9]{4}$", $endyear) || empty($_POST['enddate'])  ) {
 	$error = send_registration_mail();
 
 	echo eval_xml_template('registerevent/success.en.html', array(

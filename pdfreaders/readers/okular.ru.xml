@@ -1,0 +1,17 @@
+<readers> <reader priority="20">
+  <name>Okular</name>
+  <logo>okular.png</logo>
+  <homepage>http://okular.kde.org/</homepage>
+  <license>GPL</license>
+  <platform><name>GNU/Linux</name><installer>http://okular.kde.org/download.php</installer></platform>
+  <platform><name>Windows</name><installer>http://okular.kde.org/download.php</installer></platform>
+  <language>en</language>
+  <language>fr</language>
+  <language>de</language>
+
+<description>
+Программа просмотра документов проекта KDE показывает также
+PostScript, DOC, ODT и другие форматы. Она хорошо интегрирована
+с браузерами KDE Konqueror и Rekonq.
+</description>
+</reader> </readers>

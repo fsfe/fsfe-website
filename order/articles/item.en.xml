@@ -137,15 +137,12 @@
       small="/order/articles/images/thumbnails/shirt-fsfs-red-back.jpg"
       large="/order/articles/images/shirt-fsfs-red-back.jpg"/>
   </item>
--->
 
   <item type="tshirt" id="tshirt-hacking-black" price="20.00" date="2008-02-23">
     <available size="S"/>
-<!--
     <available size="M"/>
     <available size="XXL"/>
     <available size="XL"/>
--->
     <available size="L"/>
     <image
       small="/order/articles/images/thumbnails/tshirt-hacking-black-front.jpg"
@@ -155,6 +152,7 @@
       large="/order/articles/images/tshirt-hacking-black-back.jpg"/>
   </item>
 
+-->
 <!-- finally out of stock
   <item type="tshirt" id="tshirt-dfd-purple" price="20.00" date="2014-03-18">
     <available size="M"/>

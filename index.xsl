@@ -122,6 +122,7 @@
   </xsl:template>
   
   <xsl:template match="campaign" mode="slideshow">
+    <xsl:variable name="id"><xsl:value-of select="@id"/></xsl:variable>
       <a href="{link}" class="campaign-box" id="{@id}">
           <xsl:if test=" photo != '' ">
               <img src="{photo}" alt="" />
@@ -129,9 +130,21 @@
       <p class="text">
         <xsl:value-of select="   text   " />
       </p>
-      <span class="author">
-        <xsl:value-of select="   author   " />
-      </span>
+      
+      <!-- Test ignoring of empty fields -->
+      <xsl:if test="/buildinfo/textset/campaigns/campaign[@id=$id]/author != ''">
+        <span class="author">
+          <xsl:value-of select="   author   " />
+        </span>
+      </xsl:if>
+      
+      <!-- Copyright field -->
+      <xsl:if test="/buildinfo/textset/campaigns/campaign[@id=$id]/copyright != ''">
+        <span class="copyright">
+          <xsl:value-of select="   copyright   " />
+        </span>
+      </xsl:if>
+      
     </a>
   </xsl:template>
   

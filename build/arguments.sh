@@ -8,6 +8,9 @@ if [ -z "$inc_arguments" ]; then
 
   while [ "$#" -gt 0 ]; do
     case "$1" in
+      --legacyglobs)
+        readonly legacyglobs=true
+        ;;
       -s|--statusdir|--status-dir)
         [ "$#" -gt 0 ] && shift 1 && statusdir="$1"
         ;;
@@ -50,6 +53,11 @@ if [ -z "$inc_arguments" ]; then
         [ "$#" -gt 0 ] && shift 1 && processor="$1"
         [ "$#" -gt 0 ] && shift 1 && olang="$1"
         ;;
+      map_tags)
+        command="$1$command"
+        shift 1
+        break
+        ;;
       sourceglobs)
         command="$1$command"
         [ "$#" -gt 0 ] && shift 1 && sourcesfile="$1"
@@ -86,6 +94,7 @@ if [ -z "$inc_arguments" ]; then
     tree_maker)      [ -z "$target" ]      && die "Missing target location" ;;
     sourceglobs)     [ -z "$sourcesfile" ] && die "Missing .sources file" ;;
     cast_globfile)   [ -z "$sourceglobfile" -o -z "$lang" -o -z "$globfile" ] && die "Need source globfile language and globfile" ;;
+    map_tags)        true;;
     *help*)          print_help; exit 0 ;;
     *)               die "Urecognised command or no command given" ;;
   esac

@@ -3,7 +3,57 @@
 inc_sources=true
 [ -z "$inc_xmlfiles" ] && . "$basedir/build/xmlfiles.sh"
 
-sourceglobs(){
+map_tags(){
+  for xml in "$@"; do
+    printf '%s ' "$xml"
+    sed -rn ':a;N;$!ba
+             s;<!([^>]|<[^>]*>)*>;;g
+             s;[\n\t ]+; ;g
+             s; ?([</>]) ?;\1;g
+             tb;Tb;:b
+             s;.*<tags( [^>]+)?>[^<]*<tag( [^>]+)?>(.*)</tag>[^<]*</tags>.*;\3;;Tc
+             s; ;+;g
+             s;</tag>[^<]*<tag(\+[^>]+)?>; ;g;p;q
+             :c;a\
+             ' "$xml"
+  done
+}
+
+tagging_sourceglobs(){
+  # read a .sources file and glob up referenced xml files for processing in list_sources
+  sourcesfile="$1"
+
+  [ -f "$sourcesfile" ] && grep ':\[.*\]$' "$sourcesfile" \
+  | while read line; do
+    glob="${line%:\[*\]}"
+    tags="$(printf %s "$line" |sed -r 's;^.+:\[(.*)\]$;\1;;s; ;+;g;s;,; ;g')"
+ 
+    # Input file must match *all* tags from line definition.
+    # Build a sed expression, that performs conjunctive match
+    # at once, e.g. to match all of the tags 'spam', 'eggs',
+    # and 'bacon' the expression will have roughly the form 
+    # "/spam/{/eggs/{/bacon/{p}}}"
+  
+    match="$(printf '%s' "$glob" |sed -r 's;\*;.*;g;s;\?;.;g')"
+    matchline="s;^(${basedir}/${match}.*)\.[a-z]{2}\.xml .*$;\1;p"
+    for tag in $tags ; do
+      matchline="/ $tag( |$)/{${matchline}}"
+    done
+
+    if [ -z "$tags" ]; then
+      # save the i/o if tags are empty, i.e. always match
+      printf '%s \n' "$basedir/"${glob}*.[a-z][a-z].xml |sed -rn "$matchline"
+    elif [ -f "$basedir/tagmap" ]; then
+      sed -rn "$matchline" <"$basedir/tagmap"
+    else
+      map_tags "$basedir/"${glob}*.[a-z][a-z].xml \
+      | sed -rn "$matchline"
+    fi 
+  done \
+  | sort -u
+}
+
+legacy_sourceglobs(){
   # read a .sources file and glob up referenced
   # source files for processing in list_sources
   sourcesfile="$1"
@@ -15,6 +65,18 @@ sourceglobs(){
     done \
     | sed -rn 's:\.[a-z]{2}\.xml( |$):\n:gp' \
     | sort -u
+  fi
+}
+
+[ -z "$inc_misc" ] && . "$basedir/build/misc.sh"
+sourceglobs(){
+  if [ "$legacyglobs" = true ]; then
+    legacy_sourceglobs "$@"
+  elif ! egrep -q '^.+:\[.*\]$' "$1"; then
+    debug "WARNING! File in legacy format: $1"
+    legacy_sourceglobs "$@"
+  else
+    tagging_sourceglobs "$@"
   fi
 }
 

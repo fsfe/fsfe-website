@@ -6,6 +6,7 @@ basedir="$(dirname $0)/.."
 . "$basedir/build/arguments.sh"
 
 case "$command" in
+  map_tags)      map_tags "$@";;
   sourceglobs)   sourceglobs "$sourcesfile" ;;
   cast_globfile) cast_globfile "$sourceglobfile" "$lang" "$globfile" ;;
   *)             die "Urecognised command or no command given" ;;

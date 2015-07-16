@@ -35,6 +35,7 @@ fi
 [ -s "$(logname debug)" ] && truncate -s 0 "$(logname debug)"
 
 case "$command" in
+  map_tags)        map_tags "$@";;
   build_into)      build_into ;;
   svn_build_into)  svn_build_into ;;
   process_file)    process_file "$workfile" "$processor" "$olang" ;;

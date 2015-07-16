@@ -41,7 +41,7 @@ glob_maker(){
   sourceglobfile="${filedir%/.}/._._${shortbase}.sourceglobs"
 
   cat <<MakeEND
-$(mes "$sourceglobfile"): $(mes $(all_sources "$input/$sourcesfile"))
+$(mes "$sourceglobfile"): $(mes $(all_sources "$input/$sourcesfile")) \${INPUTDIR}/tagmap
 	\${PGLOBBER} \${PROCFLAGS} sourceglobs "\${INPUTDIR}/$sourcesfile" >"$sourceglobfile"
 MakeEND
 
@@ -180,7 +180,7 @@ MakeEND
 copy_makers(){
   # generate copy rules for entire input tree
   sourcefind \! -name 'Makefile' \! -name '*.sourceglobs' \! -name '*.sources' \
-             \! -name '*.xhtml' \! -name '*.xml' \! -name '*.xsl' \
+             \! -name '*.xhtml' \! -name '*.xml' \! -name '*.xsl' \! -name 'tagmap' \
   | while read filepath; do
     copy_maker "$filepath" "$(dirname "$filepath")"
   done 
@@ -265,14 +265,18 @@ tree_maker(){
   cache_textsfile
   cache_fundraising
 
-  cat <<-MakeHead
-	.PHONY: all
-	PROCESSOR = "$basedir/build/process_file.sh"
-	PGLOBBER = "$basedir/build/source_globber.sh"
-	PROCFLAGS = --source "$basedir" --statusdir "$statusdir" --domain "$domain"
-	INPUTDIR = $input
-	OUTPUTDIR = $output
-	MakeHead
+  cat <<MakeHead
+.PHONY: all
+PROCESSOR = "$basedir/build/process_file.sh"
+PGLOBBER = "$basedir/build/source_globber.sh"
+PROCFLAGS = --source "$basedir" --statusdir "$statusdir" --domain "$domain"
+INPUTDIR = $input
+OUTPUTDIR = $output
+
+xmlfiles := \$(shell find "$basedir" -name '*.[a-z][a-z].xml')
+\${INPUTDIR}/tagmap: \$(xmlfiles)
+	\${PGLOBBER} \${PROCFLAGS} map_tags \$(xmlfiles) >\${INPUTDIR}/tagmap
+MakeHead
 
   forcelog Make_globs;      Make_globs="$(logname Make_globs)"
   forcelog Make_xslt;       Make_xslt="$(logname Make_xslt)"

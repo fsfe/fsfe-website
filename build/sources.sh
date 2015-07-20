@@ -72,7 +72,7 @@ legacy_sourceglobs(){
 sourceglobs(){
   if [ "$legacyglobs" = true ]; then
     legacy_sourceglobs "$@"
-  elif ! egrep -q '^.+:\[.*\]$' "$1"; then
+  elif [ -f "$1" ] && ! egrep -q '^.+:\[.*\]$' "$1"; then
     debug "WARNING! File in legacy format: $1"
     legacy_sourceglobs "$@"
   else

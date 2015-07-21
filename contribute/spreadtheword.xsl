@@ -49,7 +49,9 @@
         
           <!-- Printed version -->
           <xsl:if test="/buildinfo/document/set/info[@id=$id]/printed != ''">
-            <xsl:element name="span">
+            <xsl:element name="p">
+				<xsl:attribute name="class">right grid-70</xsl:attribute>
+				<xsl:attribute name="style">margin-top:0;</xsl:attribute>
               <!--<xsl:attribute name="style">font-size:0.8em</xsl:attribute>-->
               <xsl:element name="abbr"> <!-- mouseover info text -->
                 <xsl:attribute name="title">
@@ -62,14 +64,14 @@
               <xsl:text>: </xsl:text>
               <xsl:element name="br"></xsl:element>
               <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/printed" /> <!-- Dynamic value of the field -->
-            </xsl:element> <!-- /span -->
-            <xsl:element name="br"></xsl:element>
+            </xsl:element> <!-- /p -->
+            <!--<xsl:element name="br"></xsl:element>-->
           </xsl:if>
         
         <!-- Description -->
         <xsl:element name="p">
           <xsl:attribute name="class">right grid-70</xsl:attribute>
-          <xsl:attribute name="style">margin-top:0;</xsl:attribute>
+          <!--<xsl:attribute name="style">margin-top:0;</xsl:attribute>-->
           <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/description" />
         </xsl:element>
         <!-- / Description -->

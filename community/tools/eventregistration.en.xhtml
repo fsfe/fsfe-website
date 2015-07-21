@@ -36,17 +36,22 @@
 
         <label for="title" class="required">Event title<span class="star">*</span></label>
         <input name="title" value="" required="required" type="text" />
-
-        <label for="startdate" class="required">Start date<span class="star">*</span></label>
-        <input name="startdate" value="" required="required" type="date" placeholder="YYYY-MM-DD" />
-        
-        <label for="enddate" >End date</label>
-        <input name="enddate" value="" type="date" placeholder="YYYY-MM-DD" />
-
+		<table>
+			<tr>
+			<td>
+				<label for="startdate" class="required">Start date<span class="star">*</span></label>
+				<input name="startdate" value="" required="required" type="date" placeholder="YYYY-MM-DD" />
+			</td>
+			<td>
+				<label for="enddate" >End date</label>
+				<input name="enddate" value="" type="date" placeholder="YYYY-MM-DD" />
+			</td>
+			</tr>
+		</table>
         <label for="description" class="required">Description<span class="star">*</span></label>
         <textarea name="description" required="required"></textarea>
 
-        <p class="help-block">Please explain briefly what your event is about, how to attend and what participants can expect. </p>
+        <p class="help-block">Please explain briefly what your event is about, how to attend and what participants can expect. If you write the description in another language than English, please consider to register your event a second time afterwards, this time translated in English.</p>
 
         <label for="url">Event URL</label>
         <input name="url" value="" type="text" />
@@ -67,7 +72,7 @@
 	<!-- Should help against spam -->
 		
 	<input value="Add event" name="submit" type="submit" />
-	<p class="help-block">If you register your event in another language than English, please consider to also upload an English version.</p>
+	<p class="help-block"><span class="star">*</span> = required fields</p>
 
     </form>
     

@@ -47,6 +47,25 @@
         </xsl:for-each>
         <!-- /Image -->
         
+          <!-- Printed version -->
+          <xsl:if test="/buildinfo/document/set/info[@id=$id]/printed != ''">
+            <xsl:element name="span">
+              <!--<xsl:attribute name="style">font-size:0.8em</xsl:attribute>-->
+              <xsl:element name="abbr"> <!-- mouseover info text -->
+                <xsl:attribute name="title">
+                  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-printed-tooltip'" /></xsl:call-template>
+                </xsl:attribute>
+                <xsl:element name="strong"> <!-- Field name -->
+                  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-printed'" /></xsl:call-template>
+                </xsl:element> <!-- /strong -->
+              </xsl:element> <!-- /abbr -->
+              <xsl:text>: </xsl:text>
+              <xsl:element name="br"></xsl:element>
+              <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/printed" /> <!-- Dynamic value of the field -->
+            </xsl:element> <!-- /span -->
+            <xsl:element name="br"></xsl:element>
+          </xsl:if>
+        
         <!-- Description -->
         <xsl:element name="p">
           <xsl:attribute name="class">right grid-70</xsl:attribute>
@@ -86,25 +105,6 @@
               <xsl:text>: </xsl:text>
             </xsl:element>
             <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/context" />
-            <xsl:element name="br"></xsl:element>
-          </xsl:if>
-          
-          <!-- Printed version -->
-          <xsl:if test="/buildinfo/document/set/info[@id=$id]/printed != ''">
-            <xsl:element name="span">
-              <!--<xsl:attribute name="style">font-size:0.8em</xsl:attribute>-->
-              <xsl:element name="abbr"> <!-- mouseover info text -->
-                <xsl:attribute name="title">
-                  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-printed-tooltip'" /></xsl:call-template>
-                </xsl:attribute>
-                <xsl:element name="strong"> <!-- Field name -->
-                  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-printed'" /></xsl:call-template>
-                </xsl:element> <!-- /strong -->
-              </xsl:element> <!-- /abbr -->
-              <xsl:text>: </xsl:text>
-              <xsl:element name="br"></xsl:element>
-              <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/printed" /> <!-- Dynamic value of the field -->
-            </xsl:element> <!-- /span -->
             <xsl:element name="br"></xsl:element>
           </xsl:if>
           

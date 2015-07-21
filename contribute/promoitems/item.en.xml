@@ -37,28 +37,6 @@ to every item in this file -->
     imgsmall="/contribute/promopics/joinfellowship-poster_thumb.png"/>
   </item>  
   
-  <!-- Free Software and users freedom -->
-  <item type="fsfreedom" id="nocloud-sticker" year="2015" order="1">
- 	<image
-    imgsmall="/contribute/promopics/thereisnocloud-v2-preview.png"/>
-  </item>
-
-  <item type="fsfreedom" id="nocloud-postcard" year="2014" order="2">
- 	 <image
-     imgsmall=""/>
-  </item>
-  
-  <item type="fsfreedom" id="nocloud-poster" year="2015" order="3">
- 	<image
-    imgsmall=""/>
-  </item>  
-    
-  <item type="fsfreedom" id="fs-and-tools" year="2014" order="3">
- 	<image
-    imgsmall="/contribute/promopics/freiheit-thumb.png"/>
-  </item>
-  
-  
   <!-- Document Freedom Day -->
   <item type="dfd" id="dfd-leaflet" year="2014" order="1">
  	<image
@@ -121,6 +99,13 @@ to every item in this file -->
  	<image
     imgsmall="/contribute/promopics/fya-flyer-en_thumb.png"/>
   </item> 
+  
+  <!-- FSTools -->
+  
+    <item type="fstools" id="fs-and-tools" year="2014" order="">
+ 	<image
+    imgsmall="/contribute/promopics/freiheit-thumb.png"/>
+  </item>
  
   <!-- Email self-defense -->
   <item type="gnupg" id="gnupg-leaflet" year="2014" order="1">
@@ -143,6 +128,23 @@ to every item in this file -->
  	<image
     imgsmall="/contribute/promopics/ilovefs_poster_A1_thumb.png"/>
   </item> 
+  
+  <!-- No cloud -->
+  
+    <item type="nocloud" id="nocloud-sticker" year="2015" order="1">
+ 	<image
+    imgsmall="/contribute/promopics/thereisnocloud-v2-preview.png"/>
+  </item>
+
+  <item type="nocloud" id="nocloud-postcard" year="2014" order="2">
+ 	 <image
+     imgsmall=""/>
+  </item>
+  
+  <item type="nocloud" id="nocloud-poster" year="2015" order="3">
+ 	<image
+    imgsmall=""/>
+  </item>  
   
    <!-- They Dont Want You.To -->
   <item type="tdwyt" id="tdwyt-sticker" year="2012" order="1">

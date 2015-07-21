@@ -14,7 +14,8 @@
  
 
 		<tags>
-			<tag content=""></tag>
+			<tag content=""><?=htmlspecialchars($city)?></tag>
+			<tag content=""><?=htmlspecialchars($country)?></tag>
 			<tag>front-page</tag>
 		</tags>
 

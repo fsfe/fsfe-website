@@ -1,5 +1,18 @@
 <?php
-// Copyright (C) 2012 by Tobias Bengfort <tobias.bengfort@gmx.net>
+/* Copyright (C) 2012, Tobias Bengfort <tobias.bengfort@gmx.net> & Marius Jammes for FSFE e.V.
+ 
+	This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>. */
 
 function eval_xml_template($template, $data) {
 	$dir = realpath(dirname(__FILE__) . '/../templates');
@@ -36,7 +49,7 @@ function get_mime_type($path) {
 
 function eval_date($date) {
 	$dt = date_parse($date);
-	return (!$dt['errors'] && $dt['year']);
+	return (!$dt['errors'] && $dt['year'] && preg_match("#^(19|20)\d\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])$#", $date) === 1);
 }
 
 
@@ -47,7 +60,8 @@ function send_registration_mail() {
 		'title' => $_POST['title'],
 		'groupname' => $_POST['groupname'],
 		'groupurl' => $_POST['groupurl'],
-		'date' => $_POST['date'],
+		'startdate' => $_POST['startdate'],
+		'enddate' => $_POST['enddate'],
 		'description' => $_POST['description'],
 		'url' => htmlspecialchars($_POST['url']),
 		'location' => $_POST['location'],
@@ -71,7 +85,7 @@ function send_registration_mail() {
 	return $data['img_error'];
 }
 
-if ( isset($_POST['register_event']) && empty($_POST['spam']) && eval_date($_POST['date']) ) {
+if ( isset($_POST['register_event']) AND empty($_POST['spam']) AND eval_date($_POST['startdate']) AND eval_date($_POST['enddate']) || empty($_POST['enddate'])  ) {
 	$error = send_registration_mail();
 
 	echo eval_xml_template('registerevent/success.en.html', array(
@@ -79,10 +93,8 @@ if ( isset($_POST['register_event']) && empty($_POST['spam']) && eval_date($_POS
 	));
 }
 else {
-	echo eval_xml_template('blank.en.html', array(
-		'head' => '<title>Error!</title>',
-		'body' => '<h1>Oops!</h1>
-			<p>You probably shouldn\'t be here.</p>',
+	echo eval_xml_template('registerevent/error.en.html', array(
+		'notice' => '', // TODO display the error here
 	));
 }
 

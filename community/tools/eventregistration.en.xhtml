@@ -28,42 +28,51 @@
 
         <p class="help-block">Please note: your personal information will never be shared nor sold. It is used only to get in contact with you if there are any call backs or problems.</p>
 
-        <label for="groupname">Group name</label>
-        <input name="groupname" value="" type="text" />
+        <!--<label for="groupname">Group name</label>
+        <input name="groupname" value="" type="text" />-->
 
         <label for="groupurl">Group URL</label>
         <input name="groupurl" value="" type="text" />
 
         <label for="title" class="required">Event title<span class="star">*</span></label>
         <input name="title" value="" required="required" type="text" />
-
-        <label for="date" class="required">Date<span class="star">*</span></label>
-        <input name="date" value="" required="required" type="date" placeholder="YYYY-MM-DD" />
-
+		<table>
+			<tr>
+			<td>
+				<label for="startdate" class="required">Start date<span class="star">*</span></label>
+				<input name="startdate" value="" required="required" type="date" placeholder="YYYY-MM-DD" />
+			</td>
+			<td>
+				<label for="enddate" >End date</label>
+				<input name="enddate" value="" type="date" placeholder="YYYY-MM-DD" />
+			</td>
+			</tr>
+		</table>
         <label for="description" class="required">Description<span class="star">*</span></label>
         <textarea name="description" required="required"></textarea>
 
-        <p class="help-block">Please explain briefly what your event is about, how to attend and what participants can expect.</p>
+        <p class="help-block">Please explain briefly what your event is about, how to attend and what participants can expect. If you register your event in another language than English, please consider to also upload an English version <strong>to make sure we understand it</strong>.</p>
 
         <label for="url">Event URL</label>
         <input name="url" value="" type="text" />
 
-        <label for="location">Event Location</label>
-        <input name="location" value="" required="required" type="text" />
+        <!--<label for="location">Event Location</label>
+        <input name="location" value="" type="text" />-->
 
 
         <!-- Please give more guidance - make sure that the format is correct because these will be used to generate tags also -->
 
-        <label for="city">City</label>
+        <label for="city">City<span class="star">*</span></label>
         <input name="city" value="" required="required" type="text" />
 
-        <label for="country">Country</label>
+        <label for="country">Country<span class="star">*</span></label>
         <input name="country" value="" required="required" type="text" />
 
         <!--</fieldset>-->
 	<!-- Should help against spam -->
 		
 	<input value="Add event" name="submit" type="submit" />
+	<p class="help-block"><span class="star">*</span> = required fields</p>
 
     </form>
     

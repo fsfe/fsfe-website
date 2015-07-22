@@ -93,7 +93,7 @@ if ( isset($_POST['register_event']) AND empty($_POST['spam']) AND eval_date($_P
 	));
 }
 else {
-	echo eval_xml_template('registerevent/error.html', array(
+	echo eval_xml_template('registerevent/error.en.html', array(
 		'notice' => '', // TODO display the error here
 	));
 }

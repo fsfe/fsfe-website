@@ -75,7 +75,7 @@ function send_registration_mail() {
 
 	$to = $_POST['email'].",eal@fsfe.org";
 	$subject = "event registration: " . $_POST['name'];
-	$headers = "From: no-reply@fsfe.org\n"
+	$headers = "From: fellowship@fsfe.org\n"
 		. "CC: fellowship@fsfeurope.org\n"
 		. "MIME-Version: 1.0\n"
 		. "Content-Type: multipart/mixed; boundary=boundary";

@@ -10,17 +10,6 @@ to every item in this file -->
 
 <itemset>
 
-  <!-- Test -->
-  <item type="test" id="testitem-archive" year="2042" order="1">
- 	<image
-    imgsmall="/graphics/trusted-computing-vid.png"/>
-  </item>
-  
-  <item type="test" id="testitem" year="2042" order="2">
- 	<image
-    imgsmall="/graphics/megaphone.png"/>
-  </item>
-
   <!-- FSFE and Fellowship -->
   <item type="fsfe" id="fellowship-leaflet" year="2008" order="1">
  	<image

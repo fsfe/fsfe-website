@@ -8,25 +8,23 @@ print_help(){
 }
 
 match(){
-  echo -E "$1" |egrep -q "$2"
+  printf %s "$1" |egrep -q "$2"
 }
 
 debug(){
-  dbg_file="$(logname debug)"
-
   if [ "$#" -ge 1 ]; then
-    echo "$@" |tee -a "$dbg_file"
+    echo "$(date '+%F %T'): $@" |logappend debug
   else
-    tee -a "$dbg_file"
+    logappend debug
   fi
 }
 
 print_error(){
-  echo "Error: $@" |logstatus lasterror >&2
+  echo "Error - $@" |logappend lasterror >&2
   echo "Run '$0 --help' to see usage instructions" >&2
 }
 
 die(){
-  print_error "$@"
+  echo "$(date '+%F %T'): Fatal - $@" |logappend lasterror >&2
   exit 1
 }

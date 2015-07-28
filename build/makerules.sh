@@ -41,7 +41,7 @@ glob_maker(){
   sourceglobfile="${filedir%/.}/._._${shortbase}.sourceglobs"
 
   cat <<MakeEND
-$(mes "$sourceglobfile"): $(mes $(all_sources "$input/$sourcesfile")) \${INPUTDIR}/tagmap
+$(mes "$sourceglobfile"): \${INPUTDIR}/tagmap
 	\${PGLOBBER} \${PROCFLAGS} sourceglobs "\${INPUTDIR}/$sourcesfile" >"$sourceglobfile"
 MakeEND
 

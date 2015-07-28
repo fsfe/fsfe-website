@@ -3,6 +3,13 @@
 inc_sources=true
 [ -z "$inc_xmlfiles" ] && . "$basedir/build/xmlfiles.sh"
 
+validate_tagmap(){
+  tagmap="$basedir/tagmap"
+  sed -rn 's;^(.*\.xml) +.*$;\1;p' "$tagmap" |while read fn; do
+    [ -f "$fn" ] || touch -cd@0 "$tagmap"
+  done
+}
+
 map_tags(){
   for xml in "$@"; do
     printf '%s ' "$xml"
@@ -80,19 +87,6 @@ sourceglobs(){
   fi
 }
 
-all_sources(){
-  # read a .sources file and glob up all referenced
-  # source files
-  sourcesfile="$1"
-
-  if [ -f "$sourcesfile" ]; then
-    sed -rn 's;:global$;*.[a-z][a-z].xml;gp' "$sourcesfile" \
-    | while read glob; do
-      echo "$basedir/"$glob
-    done |grep -vF "[a-z][a-z].xml"
-  fi
-}
-
 list_sources(){
   # read a .sources file and generate a list
   # of all referenced xml files with preference
@@ -138,12 +132,11 @@ cast_globfile(){
 
   sources="$(list_sources "###" "$lang" "$(cat "$sourceglobfile")")"
 
-  [ -f "$globfile" ] && \
-    [ "$sources" = "$(cat "$globfile")" ] \
-  || echo "$sources" >"$globfile"
+  [ -f "$globfile" ] && [ "$sources" = "$(cat "$globfile")" ] \
+  || printf %s "$sources" >"$globfile"
 
   if [ "$sourceglobfile" -nt "$globfile" ]; then
-    echo "$sources" |while read incfile; do
+    printf %s "$sources" |while read incfile; do
       [ "$incfile" -nt "$globfile" ] && touch "$globfile" || true
     done
   fi

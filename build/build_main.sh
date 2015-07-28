@@ -20,7 +20,7 @@ buildpids=$(
   | wc -l
 )
 if [ $command = "build_into" -o $command = "svn_build_into" ] && [ "$buildpids" -gt 2 ]; then
-  print_error "build script is already running"
+  debug "build script is already running"
   exit 0
 fi
 
@@ -31,8 +31,6 @@ fi
 [ -z "$inc_processor" ] && . "$basedir/build/processor.sh"
 [ -z "$inc_scaffold" ]  && . "$basedir/build/scaffold.sh"
 [ -z "$inc_sources" ]   && . "$basedir/build/sources.sh"
-
-[ -s "$(logname debug)" ] && truncate -s 0 "$(logname debug)"
 
 case "$command" in
   map_tags)        map_tags "$@";;

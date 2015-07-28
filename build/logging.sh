@@ -27,3 +27,8 @@ logstatus(){
   # pipeline atom to write data streams into a log file
   tee "$(logname "$1")"
 }
+
+logappend(){
+  # pipeline atom to write data streams into a log file
+  tee -a "$(logname "$1")"
+}

@@ -2,6 +2,14 @@
 
 inc_stirrups=true
 [ -z "$inc_misc" ] && . "$basedir/build/misc.sh"
+[ -z "$inc_sources" ] && . "$basedir/build/sources.sh"
+
+validate_caches(){
+  # outdate / remove cache files if necessary
+  # hook functions here as required
+
+  validate_tagmap  # hook from sources.sh
+}
 
 dir_maker(){
   # set up directory tree for output
@@ -40,7 +48,9 @@ remove_orphans(){
   # Concatenate all lines from manifest and `find`.
   # Every file which is listed twice is wanted and exists.
   # We use 'uniq -u' to drop those from the list.
-  # Remaining single files exist only in the tree and are to be removed
+  # Remaining single files exist only in the tree and are to be
+  # removed (or were just added to the manifest and cannot be removed
+  # from the tree)
 
   (find "$dtree" \( -type f -o -type l \) -printf '%P\n' ; cat) \
   | sort \

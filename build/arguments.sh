@@ -69,7 +69,7 @@ if [ -z "$inc_arguments" ]; then
         [ "$#" -gt 0 ] && shift 1 && globfile="$1"
         ;;
       *)
-        print_error "Unknown option $1"
+        print_error "Unknown option: $1"
         exit 1
         ;;
     esac

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="fellowship-poster">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Join the Fellowship - Poster</name>
+    <description>
+      The "Join the Fellowship" poster is to promote the Fellowship and therefore to pin on a prominent place, for example inside a meeting room or a Hackerspace - and for use at any public activity. 
+    </description>
+    <type>Poster (folded for delivery)</type>
+    <size>A1 (59,4 x 84,1 cm)</size>
+    <context></context>
+    <languages>
+      <a href="http://download.fsfe.org/advocacy/promomaterial/FSFE/fellowship-xl-en.pdf">English</a>
+      <a href="http://download.fsfe.org/advocacy/promomaterial/FSFE/fellowship-xl-de.pdf">German</a>
+    </languages>
+    <printed>
+      English
+    </printed>
+    <license>CC-BY-SA 4.0</license>
+    <author>Markus Meier</author>
+    <source></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

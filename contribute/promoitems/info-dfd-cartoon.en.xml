@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="dfd-cartoon">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Document Freedom Day - Cartoon</name>
+    <description>
+      The cartoon series to promote our <a href="http://www.documentfreedom.org/">Document Freedom Day</a> campaign. On the other side of the printed English version you can find an illustrated explanation of open formats.   
+    </description>
+    <type>Cartoon</type>
+    <size>A4 (21 x 29,5 cm)</size>
+    <context><a href="http://www.documentfreedom.org/">Document Freedom Day</a></context>
+    <languages>
+		<a href="http://download.fsfe.org/advocacy/promomaterial/DFD/cartoon_and_open_formats.en.pdf">English - Cartoon &amp;Open formats</a><br/> 
+		Cartoon only: <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/cartoon.ca.png">Catalan</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/cartoon.en.jpg">English</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/cartoon.gl.png">Galician</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/cartoon.de.png">German</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/cartoon.ru.png">Russian</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/cartoon.es.png">Spanish</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/cartoon.tr.png">Turkish</a> 
+    </languages>
+    <printed>
+      English version.
+    </printed>
+    <license>CC-BY-SA 4.0</license>
+    <author>Jamie Cosley, April</author>
+    <source><a href="http://download.fsfe.org/advocacy/promomaterial/DFD/cartoon_sources.tar.gz">English - Cartoon only</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/cartoon_and_open_formats_sources.tar.gz">English - Cartoon &amp; Open Formats</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="dfd-postcard">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Open Standards Postcard</name>
+    <description>
+      The "Open Standards" postcards address our <a href="http://www.documentfreedom.org/">Document Freedom Day campaign</a>. Send them in the entire world!
+    </description>
+    <type>Postcard</type>
+    <size>A6</size>
+    <context><a href="http://www.documentfreedom.org/">Document Freedom Day</a></context>
+    <languages>
+      <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_ROBOTS_postcard_5000.pdf">English</a>
+    </languages>
+    <printed>
+      English
+    </printed>
+    <license>CC-BY-SA 4.0</license>
+    <author>Markus MEier</author>
+    <source><a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_ROBOTS_postcard_5000_sources.tar.gz">English</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="UNIQUEID (e.g. nocloud)">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>HEADLINE OF THIS ITEM</name>
+    <description>
+      DESCRIPTION TEXT
+    </description>
+    <type>TYPE OF ITEM (e.g. Leaflet)</type>
+    <size>SIZE OF ITEM (e.g. 85mm x 55mm)</size>
+    <context><a href="/campaign">NAME OF RELATED SITE/CAMPAIGN</a></context>
+    <languages>
+      <a href="LINK1">LANGUAGE1</a>, <a href="LINK2">LANGUAGE2</a>
+    </languages>
+    <printed>
+      LANGUAGE1, LANGUAGE2
+    </printed>
+    <license>LICENSE OF ITEM</license>
+    <author>Captain Designaah</author>
+    <source>AVAILABLE SOURCE FILES (SVG)</source> 
+    <printready>AVAILABLE PRINT-READY FILES</printready>
+  </info>
+
+</infoset>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="plussy-sticker">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Plussy sticker</name>
+    <description>
+      The classic Plussy stickers,the symbol of FSFE's Fellowship. The background is transparent, so the sticker integrates perfectly in any sourrounding - not just on laptops.
+    </description>
+    <type>Sticker</type>
+    <size>7 x 7 cm </size>
+    <context></context>
+    <languages>
+      <a href="http://download.fsfe.org/advocacy/promomaterial/FSFE/plussy-sticker.png">PNG</a>
+    </languages>
+    <printed>
+      Available
+    </printed>
+    <license>The Fellowship logo (and variations of it) can be used to advertise the Fellowship of the FSFE and in association with any Free Software related activity performed by FSFE Fellows. It can also be incorporated into logos of local Fellowship groups if so desired. However, if you do not have a mandate by FSFE, we ask you not to create the impression that you speak officially for FSFE, or that FSFE has certified or endorsed you to do so in any way.</license>
+    <author>Free Software Foundation Europe</author>
+    <source><a href="http://download.fsfe.org/advocacy/promomaterial/FSFE/plain-plussy.svg">SVG</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

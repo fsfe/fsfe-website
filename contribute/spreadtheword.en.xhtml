@@ -40,7 +40,41 @@
 			To order promotion material please use the following order form. You might either order our default package or tell us explicitly what kind of promotion material you need or prefer. For example, if you plan to support a special FSFE`s campaign. Please keep in mind, that for postal reasons, in general we just send packages up to 1kg. If you need more, please ask.
 			</p>
 			
-			<!-- TODO: Include order form -->
+			<form class="highlight labeledform" id="orderpromo" method="post" action="/cgi-bin/promotion.php" accept-charset="utf-8">
+                <!-- Translators: please set the value for the language to your language code -->
+                <input type="hidden" name="language" value="en" />
+                <h3>Please send promotional material to:</h3>
+                <span class="formlabel">First name, Last name:</span>
+                  <input type="text" name="firstname" placeholder="First Name" size="20" />
+                  <input type="text"  name="lastname" placeholder="Last Name" size="20" /><br/>
+                <span class="formlabel">Email:</span>
+                  <input type="text" name="email" placeholder="Email" size="40" /><br/>
+
+		<span class="formlabel">Street, No.:</span>
+                  <input type="text" name="street" size="40" /><br/>
+		<span class="formlabel">Zip, City:</span>
+                  <input type="text" name="city" size="40" /><br/>
+		<span class="formlabel">Country:</span>
+                  <input type="text" name="country" size="40" /><br/>
+
+                <!-- span class="formlabel">Address:</span>
+                  <textarea name="address" rows="4" cols="40"></textarea><br/ -->
+
+                <span class="formlabel">I would like the promotion package to focus on:</span>
+                  <textarea name="specifics" rows="6" cols="40">
+No focus, just send me the default package. That means we will try to ensure that you receive something from everything listed here. If you have any preferences, please delete this text and state them here.
+                  </textarea><br/>
+                <span class="formlabel">I would like to use the material for (short description):</span>
+                  <textarea name="usage" rows="4" cols="40"></textarea><br/>
+                <span class="formlabel">Any comment:</span>
+                  <textarea name="comment" rows="4" cols="40"></textarea><br/>
+                  <input type="submit" name="url" value="I am a spam robot" style="display:none;" />
+		  <span class="formlabel">Support our work with a donation of 10€ or more: </span>
+                  <input type="number" name="donate" value="0" min="0" step="5"/>€ 
+                  <!-- Translators: please translate the label of this button (the value field) -->
+                  <input type="submit" name="dothis" value="Order now!"/>
+                  <input type="submit" name="url" value="I am a spam robot" style="display:none;" /><br/>
+                </form>
 		
 		<h2 id="id-available-promotion-material">Available promotion material</h2>
 

@@ -22,6 +22,23 @@ to every item in this file -->
     imgsmall="/contribute/promopics/joinfellowship-poster_thumb.png"/>
   </item>  
   
+    <!-- FS and users freedoms -->
+  
+    <item type="freedom" id="fs-and-tools" year="2014" order="1">
+ 	<image
+    imgsmall="/contribute/promopics/freiheit-thumb.png"/>
+  </item>
+
+  <item type="freedom" id="gnupg-leaflet" year="2014" order="2">
+ 	<image
+    imgsmall="/contribute/promopics/gnupg-leaflet-en-thumb.png"/>
+  </item>  
+   
+  <item type="freedom" id="drm-leaflet" year="2012" order="3">
+ 	<image
+    imgsmall="/contribute/promopics/drm_thumb.png"/>
+  </item>
+  
   <!-- Document Freedom Day -->
   <item type="dfd" id="dfd-leaflet" year="2014" order="1">
  	<image
@@ -67,31 +84,12 @@ to every item in this file -->
  	<image
     imgsmall="/contribute/promopics/dfd-robots-postcard_thumb.png"/>
   </item>
-
-  <!-- Digital Restrictions Management -->  
-  <item type="drm" id="drm-leaflet" year="2012" order="1">
- 	<image
-    imgsmall="/contribute/promopics/drm_thumb.png"/>
-  </item>
  
    <!-- F-droid -->
   <item type="f-droid" id="f-droid-leaflet" year="2014" order="1">
  	<image
     imgsmall="/contribute/promopics/fdroid-flyer_thumb.png"/>
   </item> 
-  
-  <!-- FSTools -->
-  
-    <item type="fstools" id="fs-and-tools" year="2014" order="">
- 	<image
-    imgsmall="/contribute/promopics/freiheit-thumb.png"/>
-  </item>
- 
-  <!-- Email self-defense -->
-  <item type="gnupg" id="gnupg-leaflet" year="2014" order="1">
- 	<image
-    imgsmall="/contribute/promopics/gnupg-leaflet-en-thumb.png"/>
-  </item>  
   
   <!-- I love Free Software -->
   <item type="ilovefs" id="ilovefs-postcard" year="2014" order="1">

@@ -64,7 +64,7 @@ glob_makers(){
 }
 
 glob_additions(){
-  printf "$input/%s\n" "$@" \
+  printf "%s\n" "$@" \
   | egrep '.+\.sources$' \
   | xargs realpath \
   | while read addition; do
@@ -154,7 +154,7 @@ xhtml_makers(){
 }
 
 xhtml_additions(){
-  printf "$input/%s\n" "$@" \
+  printf "%s\n" "$@" \
   | sed -rn 's;\.[a-z][a-z]\.xhtml$;;p' \
   | sort -u \
   | xargs realpath \
@@ -187,7 +187,7 @@ copy_makers(){
 }
 
 copy_additions(){
-  printf "$input/%s\n" "$@" \
+  printf "%s\n" "$@" \
   | egrep -v '.+(\.sources|\.sourceglobs|\.xhtml|\.xml|\.xsl|/Makefile|/)$' \
   | xargs realpath \
   | while read addition; do
@@ -230,7 +230,7 @@ xslt_makers(){
 }
 
 xslt_additions(){
-  printf "$input/%s\n" "$@" \
+  printf "%s\n" "$@" \
   | egrep '.+\.xsl$' \
   | xargs realpath \
   | while read addition; do
@@ -248,7 +248,7 @@ copy_sources(){
 }
 
 copy_sourceadditions(){
-  printf "$input/%s\n" "$@" \
+  printf "%s\n" "$@" \
   | egrep '.+\.xhtml$' \
   | xargs realpath \
   | while read addition; do
@@ -298,6 +298,7 @@ MakeHead
   [ "$regen_xhtml" = false -a -s "$Make_sourcecopy" ] && \
      copy_sourceadditions "$@" >>"$Make_sourcecopy" \
   || copy_sources >"$Make_sourcecopy" &
+
   if [ "$regen_xhtml" = false -a -s "$Make_xhtml" ]; then
     cat "$Make_xhtml"
     xhtml_additions "$@" |tee -a "$Make_xhtml"

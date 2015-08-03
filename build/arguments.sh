@@ -62,11 +62,15 @@ if [ -z "$inc_arguments" ]; then
         command="$1$command"
         [ "$#" -gt 0 ] && shift 1 && sourcesfile="$1"
         ;;
-      cast_globfile)
+      lang_sources)
         command="$1$command"
         [ "$#" -gt 0 ] && shift 1 && sourceglobfile="$1"
         [ "$#" -gt 0 ] && shift 1 && lang="$1"
+        ;;
+      cast_refglobs)
+        command="$1$command"
         [ "$#" -gt 0 ] && shift 1 && globfile="$1"
+        [ "$#" -gt 0 ] && shift 1 && reffile="$1"
         ;;
       *)
         print_error "Unknown option: $1"
@@ -93,7 +97,8 @@ if [ -z "$inc_arguments" ]; then
     build_xmlstream) [ -z "$workfile" ]    && die "Missing xhtml file name" ;;
     tree_maker)      [ -z "$target" ]      && die "Missing target location" ;;
     sourceglobs)     [ -z "$sourcesfile" ] && die "Missing .sources file" ;;
-    cast_globfile)   [ -z "$sourceglobfile" -o -z "$lang" -o -z "$globfile" ] && die "Need source globfile language and globfile" ;;
+    lang_sources)    [ -z "$sourceglobfile" -o -z "$lang" ] && die "Need source globfile and language" ;;
+    cast_refglobs)    [ -z "$globfile" -o -z "$reffile" ] && die "Need globfile and reffile" ;;
     map_tags)        true;;
     *help*)          print_help; exit 0 ;;
     *)               die "Urecognised command or no command given" ;;

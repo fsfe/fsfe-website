@@ -40,5 +40,6 @@ case "$command" in
   build_xmlstream) build_xmlstream "$(get_shortname "$workfile")" "$(get_language "$workfile")" "$olang" ;;
   tree_maker)      tree_maker "$tree" "$target" ;;
   sourceglobs)     sourceglobs "$sourcesfile" ;;
-  cast_globfile)   cast_globfile "$sourceglobfile" "$lang" "$globfile" ;;
+  lang_sources)    lang_sources "$sourceglobfile" "$lang" ;;
+  cast_refglobs)   cast_refglobs "$globfile" "$reffile" ;;
 esac

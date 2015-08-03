@@ -46,6 +46,7 @@ tagging_sourceglobs(){
     for tag in $tags ; do
       matchline="/ $tag( |$)/{${matchline}}"
     done
+    printf '%s\n' "$matchline"
 
     if [ -z "$tags" ]; then
       # save the i/o if tags are empty, i.e. always match
@@ -125,20 +126,29 @@ auto_sources(){
   | sed -r 's:^([^\t]+)\t[^<]*(< *[^ >]+)([^>]*>):\2 filename="\1" \3:'
 }
 
-cast_globfile(){
+#cast_globfile(){
+#  sourceglobfile="$1"
+#  lang="$2"
+#  globfile="$3"
+#
+#  list_sources "###" "$lang" "$(cat "$sourceglobfile")" >"$globfile"
+#}
+
+lang_sources(){
   sourceglobfile="$1"
   lang="$2"
-  globfile="$3"
 
-  sources="$(list_sources "###" "$lang" "$(cat "$sourceglobfile")")"
-
-  [ -f "$globfile" ] && [ "$sources" = "$(cat "$globfile")" ] \
-  || printf %s "$sources" >"$globfile"
-
-  if [ "$sourceglobfile" -nt "$globfile" ]; then
-    printf %s "$sources" |while read incfile; do
-      [ "$incfile" -nt "$globfile" ] && touch "$globfile" || true
-    done
-  fi
+  list_sources "###" "$lang" "$(cat "$sourceglobfile")"
 }
 
+cast_refglobs(){
+  globfile="$1"
+  reffile="$2"
+
+  if [ -f "$globfile" ] && diff "$globfile" "$reffile" >/dev/null; then
+    incfile="$(cat "$globfile" |xargs -d\\n ls -t |sed -n '1p')"
+    [ "$incfile" -nt "$globfile" ] && touch "$globfile"
+  else
+    cp "$globfile" "$reffile"
+  fi
+}

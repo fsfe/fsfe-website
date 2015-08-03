@@ -47,9 +47,12 @@ MakeEND
 
   for lang in $(get_languages); do
     globfile="${filedir%/.}/._._${shortbase}.${lang}.sourceglobs"
+    refglobs="${filedir%/.}/._._${shortbase}.${lang}.refglobs"
     cat <<MakeEND
 $(mes "$globfile"): $(mes "$sourceglobfile")
-	\${PGLOBBER} \${PROCFLAGS} cast_globfile "$sourceglobfile" "$lang" "$globfile"
+	\${PGLOBBER} \${PROCFLAGS} lang_sources "$sourceglobfile" "$lang" >"$globfile"
+$(mes "$refglobs"): $(mes "$globfile")
+	\${PGLOBBER} \${PROCFLAGS} cast_refglobs "$globfile" "$refglobs"
 MakeEND
   done
 }
@@ -114,7 +117,7 @@ xhtml_maker(){
 
     textsfile="$(get_textsfile "$lang")"
     fundraisingfile="$(get_fundraisingfile "$lang")"
-    $bool_sourceinc && sourceglobs="${filedir#./}/._._${shortbase}.${lang}.sourceglobs" || unset sourceglobs
+    $bool_sourceinc && sourceglobs="${filedir#./}/._._${shortbase}.${lang}.refglobs" || unset sourceglobs
 
     cat <<MakeEND
 all: $(mes "$outfile" "$outlink")
@@ -179,8 +182,9 @@ MakeEND
 
 copy_makers(){
   # generate copy rules for entire input tree
-  sourcefind \! -name 'Makefile' \! -name '*.sourceglobs' \! -name '*.sources' \
-             \! -name '*.xhtml' \! -name '*.xml' \! -name '*.xsl' \! -name 'tagmap' \
+  sourcefind \! -name 'Makefile' \! -name '*.sourceglobs' \! -name '*.refglobs' \
+             \! -name '*.sources' \! -name '*.xhtml' \! -name '*.xml' \
+             \! -name '*.xsl' \! -name 'tagmap' \
   | while read filepath; do
     copy_maker "$filepath" "$(dirname "$filepath")"
   done 
@@ -188,7 +192,7 @@ copy_makers(){
 
 copy_additions(){
   printf "%s\n" "$@" \
-  | egrep -v '.+(\.sources|\.sourceglobs|\.xhtml|\.xml|\.xsl|/Makefile|/)$' \
+  | egrep -v '.+(\.sources|\.sourceglobs|\.refglobs|\.xhtml|\.xml|\.xsl|/Makefile|/)$' \
   | xargs realpath \
   | while read addition; do
     copy_maker "${addition#$input/}" "$(dirname "${addition#$input/}")"

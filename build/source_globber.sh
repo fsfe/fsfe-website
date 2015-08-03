@@ -8,6 +8,7 @@ basedir="$(dirname $0)/.."
 case "$command" in
   map_tags)      map_tags "$@";;
   sourceglobs)   sourceglobs "$sourcesfile" ;;
-  cast_globfile) cast_globfile "$sourceglobfile" "$lang" "$globfile" ;;
+  lang_sources)  lang_sources "$sourceglobfile" "$lang" ;;
+  cast_refglobs) cast_refglobs "$globfile" "$reffile" ;;
   *)             die "Urecognised command or no command given" ;;
 esac

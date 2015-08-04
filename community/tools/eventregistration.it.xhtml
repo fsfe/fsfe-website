@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html>
+  <head>
+    <title>Annuncia il tuo evento collegato alla FSFE</title>
+  </head>
+  <body>
+ 
+    <h1>Annuncia il tuo evento collegato alla FSFE</h1>
+
+    <div id="introduction">
+      <p>Usa il modulo qui sotto per annunciare ogni evento collegato
+      alle attività della FSFE. Che sia un raduno della Fellowship o una
+      conferenza, che sia un banchetto per strada o un podcast: fallo
+      sapere alla comunità e al mondo.</p>
+      <!-- Why "fellowship-meeting", we could just say local FSFE meeting for instance 😉  -->
+    </div>
+
+    <h2>Registrazione</h2>
+
+    <form action="/cgi-bin/registerevent.php" method="POST" class="register_event fsfe-form" enctype="multipart/form-data" role="form">
+      <input name="register_event" type="hidden" />
+
+	<!--<fieldset id="register_event">-->
+
+        <label for="name" class="required">Nome<span class="star">*</span></label>
+        <input name="name" value="" required="required" type="text" />
+
+        <label for="email" class="required">Email<span class="star">*</span></label>
+        <input name="email" value="" required="required" type="email" /> 
+
+        <p class="help-block">Avvertenza: le tue informazioni personali
+        non saranno mai condivise né vendute, ma utilizzate
+        esclusivamente per contattarti se ci fosse bisogno di ulteriori
+        dettagli o ci fosse qualche problema.</p>
+
+        <!--<label for="groupname">Group name</label>
+        <input name="groupname" value="" type="text" />-->
+
+        <label for="groupurl">URL del gruppo</label>
+        <input name="groupurl" value="" type="text" />
+
+        <label for="title" class="required">Titolo dell’evento<span class="star">*</span></label>
+        <input name="title" value="" required="required" type="text" />
+		<table>
+			<tr>
+			<td>
+				<label for="startdate" class="required">Inizia il<span class="star">*</span></label>
+				<input name="startdate" value="" required="required" type="date" placeholder="YYYY-MM-DD" />
+			</td>
+			<td>
+				<label for="enddate" >Termina il</label>
+				<input name="enddate" value="" type="date" placeholder="YYYY-MM-DD" />
+			</td>
+			</tr>
+		</table>
+        <label for="description" class="required">Descrizione<span class="star">*</span></label>
+        <textarea name="description" required="required"></textarea>
+
+        <p class="help-block">Spiega brevemente di cosa si tratta, come
+        partecipare all’evento e quanti partecipanti sono previsti. Se
+        registri l’evento in una lingua diversa, potresti registrarne
+        anche una versione in inglese <strong>per farci capire di cosa
+        si tratta</strong>.</p>
+
+        <label for="url">URL dell’evento</label>
+        <input name="url" value="" type="text" />
+
+        <!--<label for="location">Event Location</label>
+        <input name="location" value="" type="text" />-->
+
+
+        <!-- Please give more guidance - make sure that the format is correct because these will be used to generate tags also -->
+
+        <label for="city">Città<span class="star">*</span></label>
+        <input name="city" value="" required="required" type="text" />
+
+        <label for="country">Paese<span class="star">*</span></label>
+        <input name="country" value="" required="required" type="text" />
+
+        <!--</fieldset>-->
+	<!-- Should help against spam -->
+		
+	<input value="Aggiungi evento" name="submit" type="submit" />
+	<p class="help-block"><span class="star">*</span> = campi obbligatori</p>
+
+    </form>
+    
+    <p>Dopo aver completato il modulo e confermato la registrazione
+    tramite il bottone "Aggiungi evento", un file xml sarà generato ed
+    inviato alla Fellowship della FSFE. Se approvato, il tuo evento sarà
+    caricato e dovrebbe apparire su fsfe.org/events nelle successive 48
+    ore. Tieni presente che promuoviamo solo attività legate alla
+    Fellowship o alla FSFE e non altri tipi di attività variamente
+    connesse con il Software Libero (senza eccezioni - indipendentemente
+    dalla loro rilevanza).</p>
+     
+  </body>
+ </html>

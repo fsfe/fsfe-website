@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html>
+  <head>
+    <title>Mach Deine FSFE Veranstaltung bekannt</title>
+  </head>
+  <body>
+ 
+    <h1>Mach Deine FSFE Veranstaltung bekannt</h1>
+
+    <div id="introduction">
+
+      <p>Nutze dieses Formular um jegliche FSFE Veranstaltung bekannt zu machen. Sei es ein Treffen oder ein Vortrag, sei es ein Straßenstand oder eine Radiosendung: Lass unserer Gemeinschaft und die gesamte Welt wissen, was passiert.</p>
+
+    </div>
+
+<!--    <h2>Registrieren</h2> -->
+
+    <form action="/cgi-bin/registerevent.php" method="POST" class="register_event fsfe-form" enctype="multipart/form-data" role="form">
+      <input name="register_event" type="hidden" />
+
+	<!--<fieldset id="register_event">-->
+
+        <label for="name" class="required">Dein Name<span class="star">*</span></label>
+        <input name="name" value="" required="required" type="text" />
+
+        <label for="email" class="required">Deine Email<span class="star">*</span></label>
+        <input name="email" value="" required="required" type="email" /> 
+
+        <p class="help-block">Deine persönlichen Informationen werden nicht verbreitet oder verkauft. Sie werden lediglich dazu verwendet Dich zu kontaktieren falls es Rückfragen oder Probleme gibt. </p>
+
+        <!--<label for="groupname">Group name</label>
+        <input name="groupname" value="" type="text" />-->
+
+        <!--<label for="groupurl">Group URL</label>
+        <input name="groupurl" value="" type="text" />-->
+
+        <label for="title" class="required">Name der Veranstaltung<span class="star">*</span></label>
+        <input name="title" value="" required="required" type="text" />
+		<table>
+			<tr>
+			<td>
+				<label for="startdate" class="required">Beginn<span class="star">*</span></label>
+				<input name="startdate" value="" required="required" type="date" placeholder="YYYY-MM-DD" />
+			</td>
+			<td>
+				<label for="enddate" >Ende</label>
+				<input name="enddate" value="" type="date" placeholder="YYYY-MM-DD" />
+			</td>
+			</tr>
+		</table>
+        <label for="description" class="required">Beschreibung<span class="star">*</span></label>
+        <textarea name="description" required="required"></textarea>
+
+        <p class="help-block">Bitter erkläre kurz worum es bei dieser Veranstaltung geht, wie man teilnehmen kann und was Teilnehmende erwarten können. Falls Du Deine Veranstaltung in einer anderen Sprache als Englisch registrierst, bitte erwäge auch eine englische Version derselben Veranstaltung zu registrieren, um <strong>sicher zu sein, dass wir die Beschreibung verstehen</strong>. Bitte nehme auch zur Kenntnis, dass wir (aus technischen Gründen) nur englischsprachige Veranstaltungen auf unserer Startseite fsfe.org einbinden können - alle anderen Sprachversionen sind lediglich unter fsfe.org/events sichtbar.
+</p>
+
+        <label for="url">URL zur Veranstaltung</label>
+        <input name="url" value="" type="text" />
+
+        <!--<label for="location">Event Location</label>
+        <input name="location" value="" type="text" />-->
+
+
+        <!-- Please give more guidance - make sure that the format is correct because these will be used to generate tags also -->
+
+        <label for="city">Stadt<span class="star">*</span></label>
+        <input name="city" value="" required="required" type="text" />
+
+        <label for="country">Land<span class="star">*</span></label>
+        <input name="country" value="" required="required" type="text" />
+
+        <!--</fieldset>-->
+	<!-- Should help against spam -->
+		
+	<input value="Add event" name="submit" type="submit" />
+	<p class="help-block"><span class="star">*</span> = benötigte Felder</p>
+
+    </form>
+    
+    <p>Nachdem Du das Formular ausgefüllt und deinen Inhalt mit "Veranstaltung eintragen" bestätigt hast, wird eine xml-Datei erstellt und an uns gesendet. Nach unserer Bestätigung wird Dein Eintrag hochgeladen und sollte innerhalb von 48 Stunden auf fsfe.org und/oder fsfe.org/events erscheinen. Bitte nehme zur Kenntnis, dass wir ausschließlich FSFE und FSFE community Veranstaltungen bewerben und keine anderen Freie Software Aktivitäten (Ja, ohne Ausnahme - wie wichtig diese andere Veranstaltung auch sein mag).</p> 
+     
+  </body>
+ </html>

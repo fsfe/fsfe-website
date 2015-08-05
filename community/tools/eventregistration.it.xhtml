@@ -10,13 +10,12 @@
 
     <div id="introduction">
       <p>Usa il modulo qui sotto per annunciare ogni evento collegato
-      alle attività della FSFE. Che sia un raduno della Fellowship o una
-      conferenza, che sia un banchetto per strada o un podcast: fallo
-      sapere alla comunità e al mondo.</p>
-      <!-- Why "fellowship-meeting", we could just say local FSFE meeting for instance 😉  -->
+      alle attività della FSFE. Che sia un raduno o una conferenza, che
+      sia un banchetto per strada o un podcast: fallo sapere alla
+      comunità e al mondo.</p>
     </div>
 
-    <h2>Registrazione</h2>
+    <!--<h2>Registrazione</h2>-->
 
     <form action="/cgi-bin/registerevent.php" method="POST" class="register_event fsfe-form" enctype="multipart/form-data" role="form">
       <input name="register_event" type="hidden" />
@@ -29,16 +28,16 @@
         <label for="email" class="required">Email<span class="star">*</span></label>
         <input name="email" value="" required="required" type="email" /> 
 
-        <p class="help-block">Avvertenza: le tue informazioni personali
-        non saranno mai condivise né vendute, ma utilizzate
-        esclusivamente per contattarti se ci fosse bisogno di ulteriori
-        dettagli o ci fosse qualche problema.</p>
+        <p class="help-block">Le tue informazioni personali non saranno
+        mai condivise né vendute, ma utilizzate esclusivamente per
+        contattarti se ci fosse bisogno di ulteriori dettagli o ci fosse
+        qualche problema.</p>
 
         <!--<label for="groupname">Group name</label>
         <input name="groupname" value="" type="text" />-->
 
-        <label for="groupurl">URL del gruppo</label>
-        <input name="groupurl" value="" type="text" />
+        <!--<label for="groupurl">URL del gruppo</label>
+        <input name="groupurl" value="" type="text" />-->
 
         <label for="title" class="required">Titolo dell’evento<span class="star">*</span></label>
         <input name="title" value="" required="required" type="text" />
@@ -61,7 +60,10 @@
         partecipare all’evento e quanti partecipanti sono previsti. Se
         registri l’evento in una lingua diversa, potresti registrarne
         anche una versione in inglese <strong>per farci capire di cosa
-        si tratta</strong>.</p>
+        si tratta</strong>. Inoltre, considera che (per ragioni tecniche)
+        possiamo pubblicare sulla nostra pagina principale fsfe.org solo
+        gli eventi che hanno una descrizione in inglese - gli eventi in
+        altre lingue saranno visibili solo alla pagina fsfe.org/events.</p>
 
         <label for="url">URL dell’evento</label>
         <input name="url" value="" type="text" />
@@ -88,11 +90,11 @@
     
     <p>Dopo aver completato il modulo e confermato la registrazione
     tramite il bottone "Aggiungi evento", un file xml sarà generato ed
-    inviato alla Fellowship della FSFE. Se approvato, il tuo evento sarà
-    caricato e dovrebbe apparire su fsfe.org/events nelle successive 48
-    ore. Tieni presente che promuoviamo solo attività legate alla
-    Fellowship o alla FSFE e non altri tipi di attività variamente
-    connesse con il Software Libero (senza eccezioni - indipendentemente
+    inviatoci. Se approvato, il tuo evento sarà caricato e dovrebbe
+    apparire su fsfe.org e/o su fsfe.org/events nelle successive 48 ore.
+    Tieni presente che promuoviamo solo attività legate alla FSFE ed alla
+    comunità della FSFE ma non altri tipi di attività variamente connesse
+    al Software Libero (sì, non si fanno eccezioni - indipendentemente
     dalla loro rilevanza).</p>
      
   </body>

@@ -4,17 +4,9 @@
 
 <!-- ALL STATIC TEXTS -->
 
-  <!-- Spreadtheword page -->
-  <text id="stw-type">Typ</text>
-  <text id="stw-size">Größe</text>
-  <text id="stw-languages">Verfügbare Sprachen (zum Herunterladen)</text>
-  <text id="stw-printed">Gedruckte Versionen (zum Bestellen)</text>
-  <text id="stw-source">Verfügbare Quelldateien (zum Herunterladen)</text>
-  <text id="stw-printready">Druckfertige Dateien (zum Herunterladen)</text>
-  <text id="stw-license">Lizenz</text>
 
 <!-- Basic texts -->
-<!-- !! MISSING TRANSLATION --> <text id="fsfeurope">Free Software Foundation Europe</text>
+<text id="fsfeurope">Free Software Foundation Europe</text>
 <text id="fsfnetwork">
     Die FSFE hat <a href="/about/fsfnetwork.html">Schwester-Organisationen</a> in <a href="http://www.fsf.org/">Nordamerika</a>, <a href="http://www.fsf.org.in/">Indien</a> und <a href="http://www.fsfla.org/">Lateinamerika</a>.
   </text>
@@ -43,13 +35,14 @@
     darüber, wie Sie uns bei Übersetzungen und anderen Dingen
     unterstützen können.
   </text>
-<!-- !! MISSING TRANSLATION --> <text id="outdated-1"><strong>Warning: </strong>
-    This page may be out of date with the
+<text id="outdated-1"><strong>Achtung: </strong>
+    Diese Seite ist eine Übersetzung, deren 
   </text>
-<!-- !! MISSING TRANSLATION --> <text id="outdated-2">
-    Please use
-    <a href="/contribute/contribute.html">this page</a> to see how you can help
-    with translations, and other things.
+<text id="outdated-2">
+	sich seit der Übersetzung geändert hat. Sie sehen also möglicherweise eine 
+	ältere Version. Bitte informieren Sie sich <a 
+	href="/contribute/contribute.html">hier</a> darüber, wie Sie uns bei 
+	Übersetzungen und anderen Dingen unterstützen können.
   </text>
 <text id="notranslation"><strong>Achtung: </strong>
     Von dieser Seite existiert noch keine Übersetzung. Im Moment
@@ -71,9 +64,9 @@
 <text id="fsfe/help">Mitmachen</text>
 <text id="fsfe/press">Presse</text>
 <text id="fsfe/contact">Kontakt</text>
-<!-- !! MISSING TRANSLATION --> <text id="support/donate">Donate</text>
+<text id="support/donate">Spenden</text>
 <text id="support/support">Unterstützen</text>
-<!-- !! MISSING TRANSLATION --> <text id="support/order">Shop</text>
+<text id="support/order">Fanartikel</text>
 <text id="support/thankgnus">Unsere Spender</text>
 <text id="fellowship/fellowship">Fellowship</text>
 <text id="fellowship/login">Login</text>
@@ -82,8 +75,8 @@
 <text id="fellowship/faq">F.A.Q.</text>
 <text id="campaigns/dfd">Document Freedom Day</text>
 <text id="campaigns/fya">Befreien Sie Ihr Android</text>
-<text id="campaigns/pdf">Frei PDF-Betrachter</text>
-<text id="campaigns/ayc">Frage Deine Kandidaten</text>
+<text id="campaigns/pdf">Freie PDF-Betrachter</text>
+<text id="campaigns/ayc">Fragen Sie Ihre Kandidaten</text>
 <text id="campaigns/drm">DRM.info</text>
 <text id="news/news">Letzte Meldungen</text>
 <text id="news/events">Nächste Veranstaltungen</text>
@@ -97,13 +90,15 @@
 <text id="ftf/conference">Konferenzen</text>
 <text id="ftf/contact">Kontakt zum juristischen Team</text>
 <text id="fs/fs">Freie Software</text>
-<!-- !! MISSING TRANSLATION --> <text id="fs/basics">Free Software Basics</text>
+<text id="fs/basics">Grundlagen über Freie Software</text>
 <text id="fs/def">Definition</text>
 <text id="fs/soc">Freie Gesellschaft</text>
 <text id="fs/edu">Bildung</text>
 <text id="fs/buz">Wirtschaft</text>
+<text id="community/discuss">Diskussionen über Freie Software</text>
+
 <text id="motto-fsfs">Freie Software, Freie Gesellschaft!</text>
-<!-- !! MISSING TRANSLATION --> <text id="motto-fellowship">Join FSFE’s community!</text>
+<text id="motto-fellowship">Der FSFE-Gemeinschaft beitreten!</text>
 <text id="learn-more">Mehr darüber</text>
 <text id="press">Presse</text>
 <text id="newsletter">Newsletter</text>
@@ -177,7 +172,10 @@
 <!-- Motivational texts for fellowship, support or donations -->
 <text id="join">Beitreten</text>
 <text id="join-paragraph">
-  <p>Become a Fellow of the FSFE to empower our work and help to assure our financial independence. By joining the Fellowship you will become a donating, sustaining member of the FSFE - including access to our infrastructure.</p>
+  <p>Werden Sie ein Fellow der FSFE, um unsere Arbeit zu unterstützen und 
+  unsere finanzielle Unabhängigkeit zu sichern. Wenn Sie dem  
+  Fellowship beitreten werden Sie Fördermitglied der FSFE - mit Zugriff 
+  auf unsere Infrastruktur.</p>
 </text>
 <text id="join-fellowship">Treten Sie dem Fellowship bei</text>
 <text id="support">Unterstützen Sie die FSFE</text>
@@ -205,84 +203,42 @@
 <!-- ALL CAMPAIGN TEXTS -->
 
 <campaigns>
+  <!-- campaigns to be displayed in a rotating box on frontpage -->
+  <campaign id="freesociety">
+      <text>Freie Software, <br />Freie Gesellschaft!</text>
+      <link>/freesoftware/</link>
+  </campaign>
   <campaign id="dfd">
     <photo>/graphics/robot-protest-light.png</photo>
     <text>
-        Celebrating information accessibility and raising awareness of Open Standards.
-        </text>
+        Guter Zugang zu Informationen und mehr Aufklärung für Offene Standards.
+    </text>
     <link>//documentfreedom.org</link>
-  </campaign>
-  <campaign id="wiesemann" tag="donors" pos="1">
-    <photo>/donate/wiesemann.jpg</photo>
-    <text>
-        A virtual world without Free Software is like a city in which you are
-        obliged to have a usage license for every pavement. We also need
-        commons in the virtual world.
-      </text>
-    <author>Reinhard Wiesemann - Linuxhotel</author>
-    <link>/donate/donate.html</link>
   </campaign>
   <campaign id="ilovefs">
     <text>
-        Show your love for Free Software and thank developers.
+        Zeige, dass Du Freie Software liebst und danke ihren Entwicklern.
         </text>
     <link>/campaigns/ilovefs/ilovefs.html</link>
   </campaign>
   <campaign id="zacchiroli" tag="donors" pos="1">
     <photo>/donate/zacchiroli.jpg</photo>
     <text>
-        A world without Free Software is a world where we are all hostages of
-        proprietary software vendors that run our lives. To fight such a
-        nightmare scenario we need organisations like Free Software Foundation
-        Europe.
+        Eine Welt ohne Freie Software ist eine Welt, in der wir Gefangene von
+        proprietären Software-Anbietern sind, die unser Leben betreiben. Um
+        diesen Alptraum zu bekämpfen, benötigen wir Organisationen wie die Free
+        Software Foundation Europe.
       </text>
-    <author>Stefano "Zack" Zacchiroli, Former Debian Project Leader</author>
+    <author>Stefano "Zack" Zacchiroli, Ehemaliger Debian Projektleiter</author>
     <link>/fellowship/index.html</link>
-  </campaign>
-  <campaign id="racketware">
-    <comment>where to find the banner in YOUR language: http://no.more.racketware.info/web-banners/#int</comment>
-    <photo>http://racketware.info/media/image/racketiciel/racketware_English_453x227_2013-07-11.png</photo>
-    <text>Software: choose before you pay, sign petition!</text>
-    <link>http://racketware.info/petition/click/en</link>
   </campaign>
   <campaign id="becomefellow">
     <photo>/graphics/fellowship/fellowship-page-logo-300x91.png</photo>
     <text>
-          Become a Fellow of the FSFE to empower our work and help to assure
-          our financial independence! 
+		  Werden Sie ein Fellow der FSFE, um unsere Arbeit zu unterstützen und 
+		  unsere finanzielle Unabhängigkeit zu sichern!
         </text>
     <link>/fellowship/</link>
-  </campaign>
-  <campaign id="ganten" tag="donors fellowship" pos="2">
-    <photo>/donate/ganten.jpg</photo>
-    <text>
-        Free Software is the solid grounding of our enterprise
-        solutions. The FSFE provides an important contribution to secure this
-        grounding, therefore we support the FSFE.
-      </text>
-    <author>Peter Ganten - Univention</author>
-    <link>/donate/donate.html</link>
-  </campaign>
-  <!-- campaigns for fellowship page -->
-  <campaign id="allison" tag="fellowship" pos="1">
-    <photo>/fellowship/graphics/people/Jeremyallison.jpg</photo>
-    <text>
-        Document Freedom Day celebrates the importance of Open Standards for all
-        electronic documents, whether public or private. If we want to <strong>preserve
-        our digital heritage</strong> we all need to select Open Standards, implementable
-        by anyone, as our default storage choice.
-      </text>
-    <author>Jeremy Allison, Samba core developer</author>
-    <link>/donate/donate.html</link>
-  </campaign>
-  <campaign id="beckedahl" tag="fellowship" pos="2">
-    <photo>/fellowship/graphics/people/beckedahl.jpg</photo>
-    <text>
-        Open Standards garantee a free development of the infrastructure and
-        therefore a self-determined and free communication.
-      </text>
-    <author>Markus Beckedahl, Digitale Gesellschaft, netzpolitik.org</author>
-    <link>/donate/donate.html</link>
   </campaign>
 </campaigns>
 
@@ -290,46 +246,6 @@
 <!-- ALL QUOTE TEXTS -->
 
 <quotes>
-  <quote id="zacchiroli" tag="donors" pos="2">
-    <photo>/donate/zacchiroli.jpg</photo>
-    <text>
-        A world without Free Software is a world where we are all hostages of
-        proprietary software vendors that run our lives. To fight such a
-        nightmare scenario we need organisations like Free Software Foundation
-        Europe.
-      </text>
-    <author>Stefano "Zack" Zacchiroli, Former Debian Project Leader</author>
-  </quote>
-  <quote id="wiesemann" tag="donors" pos="3">
-    <photo>/donate/wiesemann.jpg</photo>
-    <text>
-        A virtual world without Free Software is like a city in which you are
-        obliged to have a usage license for every pavement. We also need
-        commons in the virtual world.
-      </text>
-    <author>Reinhard Wiesemann - Linuxhotel</author>
-  </quote>
-  <quote id="ganten" tag="donors" pos="4">
-    <photo>/donate/ganten.jpg</photo>
-    <text>
-        Free Software is the solid grounding of our enterprise
-        solutions. The FSFE provides an important contribution to secure this
-        grounding, therefore we support the FSFE.
-      </text>
-    <author>Peter Ganten - Univention</author>
-  </quote>
-  <quote id="appelbaum" tag="donors" pos="1">
-    <photo>/fellowship/graphics/people/jacobappelbaum.png</photo>
-    <text>
-        I believe that actions of support for the FSFE are important for 
-        encouraging Free Software development and adoption in Europe as well as 
-        the rest of the world. I'm an FSFE Fellow because financially 
-        supporting the cause of Free Software brings positive improvements to 
-        all societies throughout the world.
-      </text>
-    <author>Jacob Appelbaum - Spokesperson for The TOR Project</author>
-    <link>/fellowship/index.html</link>
-  </quote>
   <!-- quotes for fellowship page -->
   <quote id="morris" tag="fellowship">
     <photo>/fellowship/graphics/people/annamorris.jpg</photo>

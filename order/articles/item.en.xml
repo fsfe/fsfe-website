@@ -29,7 +29,9 @@
 -->
 
   <item type="tshirt" id="tshirt-ilovefs-darkblue" price="20.00" date="2012-10-07">
+<!--
     <available size="S"/>
+-->
     <available size="M"/>
     <available size="L"/>
     <available size="XL"/>
@@ -142,9 +144,9 @@
   <item type="tshirt" id="tshirt-hacking-black" price="20.00" date="2008-02-23">
     <available size="S"/>
     <available size="M"/>
+     <available size="XL"/>
+   <available size="XL"/>
     <available size="XXL"/>
-    <available size="XL"/>
-    <available size="L"/>
     <image
       small="/order/articles/images/thumbnails/tshirt-hacking-black-front.jpg"
       large="/order/articles/images/tshirt-hacking-black-front.jpg"/>
@@ -199,7 +201,9 @@
   </item>
 -->
   <item type="girlie" id="girlie-dfd-blue" price="20.00" date="2015-03-04">
+<!--
     <available size="S"/>
+-->
     <available size="M"/>
     <available size="L"/>
     <available size="XL"/>
@@ -224,10 +228,8 @@
 -->
 
   <item type="girlie" id="girlie-ilovefs-beige" price="20.00" date="2014-03-16">
-<!--
     <available size="S"/>
--->
-    <!-- <available size="M"/> -->
+    <available size="M"/>
     <available size="L"/>
     <available size="XL"/>
  	<image
@@ -254,8 +256,8 @@
 -->
 
   <item type="girlie" id="girlie-hacking-grey" price="20.00" date="2015-03-04">
-    <!--    <available size="S"/>
-    <available size="M"/> -->
+    <!--    <available size="S"/> -->
+    <available size="M"/>
     <available size="L"/>
     <available size="XL"/>
     <image
@@ -298,11 +300,9 @@
   <item type="hooded" id="hooded-fsfs-blue" price="45.00" date="2012-09-29">
     <available size="S"/>
     <available size="M"/>
-    <available size="XL"/>
-<!--
-    <available size="XXL"/>
     <available size="L"/>
--->
+    <available size="XL"/>
+    <available size="XXL"/>
     <image
       small="/order/articles/images/thumbnails/hooded-fsfs-blue-front.jpg"
       large="/order/articles/images/hooded-fsfs-blue-front.jpg"/>
@@ -349,10 +349,12 @@
   </item>
 
   <item type="baby-clothes" id="baby-romper-fork-white" price="18.00" date="2012-10-06">
+<!--
     <available size="0-3m"/>
     <available size="3-6m"/>
-    <!-- <available size="6-12m"/> -->
-    <!--  <available size="12-18m"/> -->
+    <available size="6-12m"/>
+    <available size="12-18m"/>
+ -->
     <image
       small="/order/articles/images/thumbnails/baby-romper-fork-white-front.jpg"
       large="/order/articles/images/baby-romper-fork-white-front.jpg"/>

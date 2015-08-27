@@ -223,7 +223,6 @@
   <person id="grote" avatar="yes" association-member="yes" teams="de, ga">
     <name>Torsten Grote</name>
     <country>DE</country>
-    <function country="DE">deputy/m</function>
     <email>Torsten.Grote (at) fsfe (dot) org</email>
     <link>https://blog.grobox.de</link>
     <avatar>/about/grote/grote-avatar.jpg</avatar>
@@ -308,7 +307,6 @@
     <name>Matthias Kirschner</name>
     <country>DE</country>
     <function>vice-president/m</function>
-    <function country="DE">coordinator/m</function>
     <email>mk (at) fsfe (dot) org</email>
     <link>/about/kirschner/kirschner.html</link>
     <avatar>/about/kirschner/kirschner-avatar.jpg</avatar>
@@ -367,6 +365,7 @@
   <person id="mehl" avatar="yes" teams="de">
     <name>Max Mehl</name>
     <country>DE</country>
+    <function country="DE">coordinator/m</function>
     <email>max.mehl (at) fsfe (dot) org</email>
     <link>/about/mehl/mehl.html</link>
     <avatar>/about/mehl/mehl-avatar.jpg</avatar>
@@ -516,7 +515,8 @@
   <person id="schiessle" avatar="yes" teams="de, core">
     <name>Björn Schießle</name>
     <country>DE</country>
-    <function volunteers="translators-de">coordinator/m</function>
+    <function country="DE">deputy/m</function>
+    <!-- <function volunteers="translators-de">coordinator/m</function> -->
     <email>schiessle (at) fsfeurope (dot) org</email>
     <link>http://www.schiessle.org</link>
     <avatar>/about/schiessle/schiessle-avatar.jpg</avatar>

@@ -42,11 +42,11 @@
   </item>
 
   <item type="tshirt" id="tshirt-ilovefs-lightblue" price="20.00" date="2015-03-04">
-    <available size="S"/>
 <!--
+    <available size="S"/>
     <available size="M"/>
+    <available size="L"/>
 -->
-    <!-- <available size="L"/> -->
     <available size="XL"/>
  	<image
       small="/order/articles/images/thumbnails/tshirt-ilovefs-lightblue-front.jpg"
@@ -307,7 +307,7 @@
       small="/order/articles/images/thumbnails/hooded-fsfs-blue-front.jpg"
       large="/order/articles/images/hooded-fsfs-blue-front.jpg"/>
     <image
-      small="/order/articles/images/thumbnails/hooded-fsfs-blue-back.jpg"
+      small="/orderarticles/images/thumbnails/hooded-fsfs-blue-back.jpg"
       large="/order/articles/images/hooded-fsfs-blue-back.jpg"/>
   </item>
 

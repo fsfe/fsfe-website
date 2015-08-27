@@ -107,20 +107,19 @@
     <function>coordinator/m</function>
   </person>
   
+  <person id="dietrich" avatar="yes" association-member="yes" teams="representatives">
+    <name>Nicolas Dietrich</name>
+    <country>DE</country>
+    <email>nidi (at) fsfe (dot) org</email>
+    <function>fellowship-representative/m</function>
+    <avatar>/fellowship/graphics/people/nicolasdietrich-avatar.jpg</avatar>
+  </person>
+  
   <person id="graebner" avatar="no" teams="cologne">
     <name>Malte Gräbner</name>
     <country>DE</country>
     <email>maltegraebner (at) fsfe (dot) org</email>
     <function>coordinator/m</function>
-  </person>
-  
-  <person id="grote" avatar="yes" association-member="yes" teams="germany">
-    <name>Torsten Grote</name>
-    <country>DE</country>
-    <function country="DE">deputy/m</function>
-    <email>Torsten.Grote (at) fsfe (dot) org</email>
-    <link>https://blog.grobox.de</link>
-    <avatar>/about/grote/grote-avatar.jpg</avatar>
   </person>
   
   <person id="harmuth" avatar="no" association-member="yes" teams="representatives">
@@ -189,30 +188,12 @@
     <avatar>/fellowship/graphics/people/michaelkesper-avatar.jpg</avatar>
   </person>
   
-  <person id="kirschner" avatar="yes" association-member="yes" teams="germany">
-    <name>Matthias Kirschner</name>
-    <country>DE</country>
-    <function country="DE">coordinator/m</function>
-    <email>mk (at) fsfe (dot) org</email>
-    <link>/about/kirschner/kirschner.html</link>
-    <avatar>/about/kirschner/kirschner-avatar.jpg</avatar>
-  </person>
-  
-  
   <person id="kneissl" avatar="yes" teams="austria">
     <name>Jürgen Kneissl</name>
     <country>AT</country>
     <function country="AT">deputy/m</function>
     <email>kneissl (at) fsfe (dot) org</email>
     <avatar>/about/kneissl/kneissl-avatar.jpg</avatar>
-  </person>
-  
-  <person id="zarl" avatar="no" teams="linz">
-    <name>Johannes Zarl</name>
-    <country>AT</country>
-    <function>deputy/m</function>
-    <email>jzarl (at) fsfe (dot) org</email>
-     <avatar>/fellowship/graphics/people/JohannesZarl.jpg</avatar>
   </person>
   
   <person id="lovergine" avatar="no" teams="bari">
@@ -227,6 +208,15 @@
     <country>AT</country>
     <function>coordinator/m</function>
     <email>mvdan (at) fsfe (dot) org</email>
+  </person>
+  
+  <person id="mehl" avatar="yes" teams="germany">
+    <name>Max Mehl</name>
+    <country>DE</country>
+    <function country="DE">coordinator/m</function>
+    <email>max.mehl (at) fsfe (dot) org</email>
+    <link>/about/mehl/mehl.html</link>
+    <avatar>/about/mehl/mehl-avatar.jpg</avatar>
   </person>
   
   
@@ -265,15 +255,6 @@
     <function>coordinator/m</function>
   </person>
   
-  <person id="dietrich" avatar="yes" association-member="yes" teams="representatives">
-    <name>Nicolas Dietrich</name>
-    <country>DE</country>
-    <email>nidi (at) fsfe (dot) org</email>
-    <function>fellowship-representative/m</function>
-    <avatar>/fellowship/graphics/people/nicolasdietrich-avatar.jpg</avatar>
-  </person>
-  
-  
 <!-- representative 2013-2015
   
   <person id="repentinus" avatar="yes" association-member="yes" teams="representatives">
@@ -304,6 +285,15 @@
     <avatar>/about/roy/roy-avatar.jpg</avatar>
   </person>
   
+  <person id="schiessle" avatar="yes" teams="germany">
+    <name>Björn Schiessle</name>
+    <country>DE</country>
+    <function country="DE">deputy/m</function>
+    <email>schiessle (at) fsfeurope (dot) org</email>
+    <link>http://www.schiessle.org</link>
+    <avatar>/about/schiessle/schiessle-avatar.jpg</avatar>
+  </person>
+  
   <person id="stegerman" avatar="no" teams="netherlands">
     <name>Felix Stegerman</name>
     <country>NL</country>
@@ -326,8 +316,6 @@
     <email>hook (at) fsfe (dot) org</email>
     <avatar>https://fsfe.org/about/suklje/suklje-avatar.jpg</avatar>
   </person>
-    
-  
   
   <person id="verheesen" avatar="yes" teams="netherlands">
     <name>Maurice Verheesen</name>
@@ -356,6 +344,14 @@
     <country>AT</country>
     <function>coordinator/m</function>
     <email>wg (at) fsfe (dot) org</email>
+  </person>
+  
+  <person id="zarl" avatar="no" teams="linz">
+    <name>Johannes Zarl</name>
+    <country>AT</country>
+    <function>deputy/m</function>
+    <email>jzarl (at) fsfe (dot) org</email>
+     <avatar>/fellowship/graphics/people/JohannesZarl.jpg</avatar>
   </person>
   
 </personset>

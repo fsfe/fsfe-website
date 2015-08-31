@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html>
+  <head>
+    <title>Kondig jouw FSFE-gemeenschapsevenement aan</title>
+  </head>
+  <body>
+ 
+    <h1>Kondig jouw FSFE-gemeenschapsevenement aan</h1>
+
+    <div id="introduction">
+      <p>Gebruik het formulier hieronder om ieder evenement aan te kondigen dat verwant is aan een FSFE-activiteit. Of het nu een Fellowship-ontmoeting of een praatje is, of het een kraam op straat of een radio-podcast is: laat de gemeenschap en de wereld weten wat er gebeurt.</p>
+      <!-- Why "fellowship-meeting", we could just say local FSFE meeting for instance 😉  -->
+    </div>
+
+    <h2>Registreren</h2>
+
+    <form action="/cgi-bin/registerevent.php" method="POST" class="register_event fsfe-form" enctype="multipart/form-data" role="form">
+      <input name="register_event" type="hidden" />
+
+	<!--<fieldset id="register_event">-->
+
+        <label for="name" class="required">Jouw naam<span class="star">*</span></label>
+        <input name="name" value="" required="required" type="text" />
+
+        <label for="email" class="required">Jouw e-mail<span class="star">*</span></label>
+        <input name="email" value="" required="required" type="email" /> 
+
+        <p class="help-block">Let op: jouw persoonlijke informatie zal nooit worden gedeeld of verkocht. Deze wordt alleen gebruikt om contact met je op te nemen als er voor gebeld wordt of als er problemen zijn.</p>
+
+        <!--<label for="groupname">Group name</label>
+        <input name="groupname" value="" type="text" />-->
+
+        <label for="groupurl">Groep URL</label>
+        <input name="groupurl" value="" type="text" />
+
+        <label for="title" class="required">Evenement titel<span class="star">*</span></label>
+        <input name="title" value="" required="required" type="text" />
+		<table>
+			<tr>
+			<td>
+				<label for="startdate" class="required">Startdatum<span class="star">*</span></label>
+				<input name="startdate" value="" required="required" type="date" placeholder="YYYY-MM-DD" />
+			</td>
+			<td>
+				<label for="enddate" >Einddatum</label>
+				<input name="enddate" value="" type="date" placeholder="YYYY-MM-DD" />
+			</td>
+			</tr>
+		</table>
+        <label for="description" class="required">Beschrijving<span class="star">*</span></label>
+        <textarea name="description" required="required"></textarea>
+
+        <p class="help-block">Leg alsjeblieft duidelijk uit waar het evenement over gaat, hoe je kan deelnemen en wat deelnemers kunnen verwachten. Als je jouw evenement registreert in een andere taal dan in het Engels, overweeg dan alsjeblieft om ook een Engelse versie te uploaden <strong>om zeker te stellen dat we het begrijpen</strong>.</p>
+
+        <label for="url">Evenement URL</label>
+        <input name="url" value="" type="text" />
+
+        <!--<label for="location">Event Location</label>
+        <input name="location" value="" type="text" />-->
+
+
+        <!-- Please give more guidance - make sure that the format is correct because these will be used to generate tags also -->
+
+        <label for="city">Stad<span class="star">*</span></label>
+        <input name="city" value="" required="required" type="text" />
+
+        <label for="country">Land<span class="star">*</span></label>
+        <input name="country" value="" required="required" type="text" />
+
+        <!--</fieldset>-->
+	<!-- Should help against spam -->
+		
+	<input value="Add event" name="submit" type="submit" />
+	<p class="help-block"><span class="star">*</span> = vereiste velden</p>
+
+    </form>
+    
+    <p>Na het invullen van dit formulier en het bevestigen met de "voeg evenement toe"-knop zal er een xml-bestand worden gegenereerd en verzonden naar de FSFE Fellowship. Als jouw evenement word goedgekeurd wordt deze geüpload en zou deze binnen 48 uur moeten verschijnen op fsfe.org/events. Let op dat we alleen Fellowship- of FSFE-gerelateerde activiteiten promoten en geen andere Vrije Software-activiteiten (zonder uitzonderingen; hoe belangrijk ze ook zijn).</p> 
+     
+  </body>
+<translator>André Ockers</translator>
+ </html>

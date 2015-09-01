@@ -4,13 +4,11 @@
 
 <!-- ALL STATIC TEXTS -->
 
-
 <!-- Basic texts -->
 <text id="fsfeurope">Free Software Foundation Europe</text>
 <text id="fsfnetwork">
       A FSFE tem <a href="/about/fsfnetwork.html">organizações irmãs</a> em <a href="//www.fsf.org/">América do Norte</a>, <a href="http://fsf.org.in/">Índia</a> e <a href="http://www.fsfla.org/">América Latina</a>.
   </text>
-
 
 <!-- Footer -->
 <text id="lastchanged"> Última modificação: </text>
@@ -21,7 +19,6 @@
 <text id="translator3b">texto original</text>
 <text id="translator3c">.</text>
 <text id="permission">Permite-se a cópia e distribuição deste documento completo em qualquer médio, sempre que se inclua este aviso.</text>
-
 
 <!-- Warning info boxes -->
 <text id="outdated"><strong>Atenção: </strong> Esta página pode estar desatualizada com relação a original. Por favor consulte <a href="/contribute/contribute.html">esta página</a> para saber como ajudar com a tradução e fazer outras contribuições.
@@ -39,7 +36,6 @@
 <text id="under-construction"><strong>Atenção: </strong>Esta página está em construção, Por favor <strong>não espalhe</strong> ou tente traduzir visto que o seu conteúdo pode ser alterado.
   </text>
 <text id="project-complete">Este projecto terminou com sucesso. Estas páginas são mantidas aqui por motivos de arquivo.  </text>
-
 
 <!-- Menu, Navigation, Buttons -->
 <text id="fsfe/about">Sobre</text>
@@ -114,7 +110,6 @@
 <text id="imprint">Marca</text>
 <text id="privacy-policy">Política de Privacidade</text>
 
-
 <!-- Article metadata -->
 <text id="author">Autor</text>
 <text id="writtenby">Escrito por</text>
@@ -122,12 +117,10 @@
 <text id="revision">actualizado em</text>
 <text id="download">Baixar</text>
 
-
 <!-- Petitions -->
 <text id="osig">Organizações</text>
 <text id="isig">Indivíduos</text>
 <text id="bsig">Negócios</text>
-
 
 <!-- Sidebars -->
 <text id="related-news">Notícias relacionadas</text>
@@ -151,7 +144,6 @@
       participação, e são extremamente importantes.
     </p>
 </text>
-
 
 <!-- Motivational texts for fellowship, support or donations -->
 <text id="join">Junte-se</text>
@@ -177,7 +169,6 @@
       quando necessário, e para ser uma voz independente.
     </p>
 </text>
-
 
 <!-- ALL CAMPAIGN TEXTS -->
 
@@ -220,221 +211,5 @@
     <link>/fellowship/</link>
   </campaign>
 </campaigns>
-
-
-<!-- ALL QUOTE TEXTS -->
-
-<quotes>
-  <!-- quotes for fellowship page -->
-  <quote id="morris" tag="fellowship">
-    <photo>/fellowship/graphics/people/annamorris.jpg</photo>
-    <text>
-        O Software Livre desafia-o a aprender: a fazer por si prório, a ser
-		destemidamente independente quando se trata de tecnologia. Nos últimos
-		anos tenho-me orgulhado de ver as minhas habilidades aumentarem e
-		ultrapassarem as dos meus pares amantes do priprietário, mesmo alguns profissionais
-		pagos, simplesmente por ter um mindset livre e curioso. Software
-		Livre liberta-o de muitas formas.
-      </text>
-    <author>Anna Morris (Co-Fundadora do ethical-pets.co.uk e defensora do Software Livre)</author>
-  </quote>
-  <quote id="roy" tag="fellowship">
-    <photo>/fellowship/graphics/people/hugoroy.png</photo>
-    <text>
-	    A Free Software Foundation Europe (FSFE) junta activistas dedicados
-		e comprometidos de toda a Europa para aproveitar as oportunidades
-		de garantir os nossos direitos de usar, partilhar, estudar e melhorar software porque
-		sem Software Livre, a tecnologia subjuga-nos em vez de melhorar
-		a nossa liberdade.
-      </text>
-    <author>Hugo Roy (estudante de Direito)</author>
-  </quote>
-  <quote id="keijzer" tag="fellowship">
-    <photo>/fellowship/graphics/people/kevinkeijzer.jpg</photo>
-    <text>
-	    Eu tornei-me membro para deixar de ser 'uma minoria de um', como uma vez disse
-		George Orwell. Queria conhecer pessoas que partilhavam os meus ideais
-		e crenças, para que parasse de ter a impressão que estava a lutar contra o sistema
-		sozinho. É tranquilizador saber que não estou só,
-		o que provavelmente motiva as pessoas a continuar o trabalho que estão a
-		fazer, mesmo se nem sempre são tão bem sucedidos como gostariam de
-		ser.
-      </text>
-    <author>Kevin Keijzer (activista Político)</author>
-  </quote>
-  <quote id="nascimento" tag="fellowship">
-    <photo>/fellowship/graphics/people/mauricionascimento.jpg</photo>
-    <text>
-	    Liberdade é um dos valores nuclear da nossa Sociedade e um dos conceitos
-		básicos da Democracia. Apoiar e divulgar o Software Livre é uma das formas
-		de construir alternativas criativas para a inclusão social e para proteger
-		os nossos cidadãos da exploração digital. Somos responsáveis por construir
-		um Mundo melhor como um presente para as nossas gerações futuras.
-      </text>
-    <author>Mauricio Nascimento (Engenheiro de Middleware)</author>
-  </quote>
-  <quote id="guenther" tag="fellowship">
-    <photo>/fellowship/graphics/people/guidoguenther.jpg</photo>
-    <text>
-	    Estou muito impressionado com aquilo que a FSFE conseguiu a nível Europeu
-		e nacional. Quando estava a trabalhar no sector público tive oportunidade
-		de observar a vasta quantidade de dinheiro que é gasto com lobbying para
-		software proprietário e a chamada indústria de normas na Alemanha e
-		na Europa. É espantoso como a FSFE ainda assim conseguiu ser
-		ouvida. Apoiar isso foi uma das minhas motivações para me tornar
-		Membro.
-      </text>
-    <author>Guido Günther (Freelancer e Programador do Debian)</author>
-  </quote>
-  <quote id="verheesen" tag="fellowship">
-    <photo>/fellowship/graphics/people/mauriceverheesen.jpg</photo>
-    <text>
-		Software Livre é importante nos dias de hoje. Precisa de representação
-		profissional, o que é um trabalho duro e caro. Juntar-me à fellowship
-		foi para mim uma forma de contribuir com os meus conhecimentos e algum dinheiro de voltar para o
-		movimento do Software Livre para garantir o seu futuro.
-      </text>
-    <author>Maurice Verheesen</author>
-  </quote>
-  <quote id="agger" tag="fellowship">
-    <photo>/fellowship/graphics/people/carstenagger.jpg</photo>
-    <text>
-	    Fui durante anos uma voz solitária, explicando os princípios por detrás do Software
-		Livre e a sua importância a pessoas no meu país em inúmeros
-		artigos e textos no blog. Queria pertencer a uma organização com o
-		objectivo de construir a sociedade digital 100% com Software Livre, e
-		apoiar a FSFE ganhando acesso à sua 
-		infraestrutura pareceu-me um lógico primeiro passo.
-      </text>
-    <author>Carsten Agger (Engenheiro de Software)</author>
-  </quote>
-  <quote id="kehl" tag="fellowship">
-    <photo>/fellowship/graphics/people/robertkehl.jpg</photo>
-    <text>
-	    Juntei-me à Fellowship porque o Software Livre ajuda a trazer mais e
-		uma real liberdade ao mundo. Lutar por isso é o meu objectivo como
-		Membro da FSFE.
-      </text>
-    <author>Robert Kehl (Profissional IT)</author>
-  </quote>
-  <quote id="appelbaum" tag="fellowship">
-    <photo>/fellowship/graphics/people/jacobappelbaum.png</photo>
-    <text>
-	    Acredito que acções de apoio à FSFE são importants para
-		encorajar o desenvolvimento de Software Livre e a sua adopção na Europa e
-		no mundo. Sou um Membro da FSFE porque apoiar
-		financeiramente a causa do Software Livre causa melhorias positivas a
-		todas as sociedades pelo mundo.
-      </text>
-    <author>Jacob Appelbaum (Porta-Voz do Projecto TOR)</author>
-  </quote>
-  <quote id="mortier" tag="fellowship">
-    <photo>/fellowship/graphics/people/mortier.jpg</photo>
-    <text>
-	    Sou um apoiante do Software Livre há muito tempo. Lutei contra as
-		patentes de software em Bruxelas, co-organizei o tema de sistema na
-        Libre Software Meeting (RMLL) e dirijo uma empresa de Software Livre. Software
-        Livre é uma parte essencial da nossa liberdade global, pelo que foi natural
-        tornar-me Membro da FSFE.
-      </text>
-    <author>Benoit Mortier (Dono da OpenSides, Gestor da FusionDirectory)</author>
-  </quote>
-  <quote id="nermin" tag="fellowship">
-    <photo>/fellowship/graphics/people/nermincanik.jpg</photo>
-    <text>
-		Software Livre e a FSFE são para mim: partilhar, aprender, ser independente
-		de monopólios, criar coisas em conjunto, paixão e liberdade! Desde
-		que me tornei Membro, tenho feito novas amizades que me ajudam com Software
-		Livre e noutros tópicos, ensinando coisas novas todos os dias apesar de
-		estarmos a kilómetros de distância. É magnífico estar numa comunidade que
-		apoia continuamente a minha paixão e motivação pelo Software Livre!
-      </text>
-    <author>Nermin Canik (Analista IT de Negócio)</author>
-  </quote>
-  <quote id="guido" tag="fellowship">
-    <photo>/fellowship/graphics/people/guidoarnold.jpg</photo>
-    <text>
-		O Software Livre precisa de uma voz na política. Nós, voluntários, fazemos
-		coisas espantosas juntos, mas há algumas tarefas que não são tão interessantes,
-		têm prazos apertados ou precisam de ampla experiência. A FSFE apenas consegue usar o seu
-		potencial total com pessoal pago para fazer as coisas que os voluntários não iriam conseguir
-		fazer. Hoje em dia, já conheci todos os funcionários e posso dizer que não lamento um
-		cêntimo do que dei para permitir à FSFE operar.
-      </text>
-    <author>Guido Arnold</author>
-  </quote>
-  <quote id="laura" tag="fellowship">
-    <photo>/fellowship/graphics/people/lauralarjona.jpg</photo>
-    <text>
-		Se um programa for licenciado como Software Livre, nós podemos auditá-lo,
-		e ter a certeza que ele faz o que é suposto fazer (e nada mais). Instituições
-		Públicas desenvolvem software, e contratam empresas para o fazer, e os
-		cidadãos deveriam ser donos e reutilizar todo esse código. Eu contribuo para Software
-		Livre com traduções, ajuda ao utilizador, encontrar alternativas em Software Livre
-		na Universidade... mas não consigo chegar aos decisores políticos,
-		nem a pessoas e instituições noutros países. Sou sócio da FSFE para a apoiar
-		nesta tarefa, e como mais uma forma de agradecer à
-		comunidade de Software Livre.
-      </text>
-    <author>Laura Arjona Reina (Assisstente IT na Universidade Técnica de Madrid e contribuidora do Debian)</author>
-  </quote>
-  <quote id="volker" tag="fellowship">
-    <photo>/fellowship/graphics/people/Grabsch.jpg</photo>
-    <text>
-		Sempre fui fascinado por Software Livre. Estou a apoiar projectos de Software
-		Livre nos meus tempos livres. A minha educação tal como o meu trabalho não
-		seriam possíveis sem Software Livre. O grupo de membros em Berlim
-		mostrou-me como contribuir para o Software Livre de uma forma não-técnica. Foi
-		e ainda é muito divertido trabalhar com eles numa atmosfera agradável.
-		Como hoje em dia estou envolvido no grupo, acho que chegou a altura de me juntar à FSFE
-		oficialmente e apoiá-los financeiramente.
-      </text>
-    <author>Volker Grabsch (Desenvolvimento de Software)</author>
-  </quote>
-  <quote id="johannes" tag="fellowship">
-    <photo>/fellowship/graphics/people/JohannesZarl.jpg</photo>
-    <text>
-		Eu juntei-me à FSFE porque tenho visto mais e mais que escrever Software
-		Livre, em última análise, não é o suficiente para nutir uma cultura onde o Software Livre
-		é visto como uma parte integral da sociedade. O Software Livre não devia
-		ser um tópico de nicho, apoiado apenas por geeks.
-      </text>
-    <author>Johannes Zarl (Profissional IT)</author>
-  </quote>
-  <quote id="oliver" tag="fellowship">
-    <photo>/fellowship/graphics/people/Springer.jpg</photo>
-    <text>
-		Eu tenho vindo a usar Software Livre há anos, e durante o último par de meses
-		comecei a "dar de voltar", apoiando-o em forums e escrevendo pequenas
-		correcções. Mas senti que o Software Livre merece também algum dinheiro. E
-		a Free Software Foundation é simplesmente o melhor sítio para onde o dinheiro pode
-		ir. Queria também mostrar o meu apoio ao Software Livre publicamente.
-      </text>
-    <author>Oliver Springer (Estagiário de Administração de Sistemas)</author>
-  </quote>
-  <quote id="tom" tag="fellowship">
-    <photo>/fellowship/graphics/people/Tom.jpg</photo>
-    <text>
-		Eu comecei a fazer trabalho de administração de sistemas UNIX quando era um cientista visitante no MIT no
-		início da década de 90, concentrando-me mais e mais em Software Livre com o passar do tempo,
-		e faço a minha vida inteiramente sendo administrador de sistemas em Software
-		Livre nos últimos oito anos. Já estava mais que na altura de dar algum
-		dinheiro de volta.
-      </text>
-    <author>Tom Yates (Administrador de Sistemas Consultor de Software Livre)</author>
-  </quote>
-  <quote id="nicole" tag="fellowship">
-    <photo>/fellowship/graphics/people/Lieger.jpg</photo>
-    <text>
-		Eu interesso-me por valores, políticas, sociedade: em novas formas de
-		produção, baseadas em cooperação livre em estruturas egalitárias; em
-		bens comuns de conhecimento e inteligência colectiva. É por isso que estou aqui e
-		porque quero apoiar o movimento do Software Livre. Eu não tenho um background
-		técnico, nem a maioria das pessoas que conheço.
-        background, and neither do most of the people I know.
-      </text>
-    <author>Nicole Lieger (Cientista Política e Membro da Sociedade Civil)</author>
-  </quote>
-</quotes>
 
 </textset>

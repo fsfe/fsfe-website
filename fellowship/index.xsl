@@ -2,7 +2,7 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:import href="default.xsl" />
-  <xsl:import href="xsl/quotes.xsl" />
+  <xsl:import href="xsl/testimonials.xsl" />
   <xsl:import href="../tools/xsltsl/tagging.xsl" />
 
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
@@ -15,9 +15,8 @@
   </xsl:template>
 
   <!-- rotating quotes -->
-  <xsl:template match="quote-box">
-    <xsl:call-template name="quote-box">
-      <xsl:with-param name="tag" select="string(@tag)" />
+  <xsl:template match="testimonial-box">
+    <xsl:call-template name="testimonial-box">
     </xsl:call-template>
   </xsl:template>
 

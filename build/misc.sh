@@ -13,9 +13,9 @@ match(){
 
 debug(){
   if [ "$#" -ge 1 ]; then
-    echo "$(date '+%F %T'): $@" |logappend debug
+    echo "$(date '+%F %T'): $@" |logappend debug >&2
   else
-    logappend debug
+    logappend debug >&2
   fi
 }
 

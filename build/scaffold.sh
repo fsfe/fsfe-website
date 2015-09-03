@@ -55,7 +55,7 @@ build_xmlstream(){
 	  $(get_attributes "$infile")
 	>
 	  <timestamp>
-	    \$Date:$date $time \$
+	    \$Date: $date $time \$
 	    \$Author: automatic \$
 	  </timestamp>
 	  <set>

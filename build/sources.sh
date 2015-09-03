@@ -145,7 +145,7 @@ cast_refglobs(){
   globfile="$1"
   reffile="$2"
 
-  if [ -f "$globfile" ] && diff "$globfile" "$reffile" >/dev/null; then
+  if [ -s "$globfile" ] && diff "$globfile" "$reffile" >/dev/null; then
     incfile="$(cat "$globfile" |xargs -d\\n ls -t |sed -n '1p')"
     [ "$incfile" -nt "$globfile" ] && touch "$globfile"
   else

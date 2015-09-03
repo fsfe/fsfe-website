@@ -182,67 +182,6 @@ De Free Software Foundation Europe is een non-gouvernementele organisatie zonder
     </p>
   </text>
 
-<!-- ALL CAMPAIGN TEXTS -->
-
-  <campaigns>
-    <!-- campaigns to be displayed in a rotating box on frontpage --> 
-    <campaign id="freesociety">
-        <text>Vrije Software, <br />Vrije Samenleving!</text>
-        <link>/freesoftware/</link>
-    </campaign>
-    <campaign id="dfd">
-        <photo>/graphics/robot-protest-light.png</photo>
-        <text>
-        Vier de toegang tot informatie en verhoog het bewustzijn over Open Standaarden.
-        </text>
-        <link>//documentfreedom.org</link>
-    </campaign>
-
-    <campaign id="ilovefs">
-        <text>
-        Toon uw liefde voor Vrije Software en bedank ontwikkelaars.
-        </text>
-        <link>/campaigns/ilovefs/ilovefs.html</link>
-    </campaign>
-    
-    <campaign id="zacchiroli" tag="donors" pos="1">
-      <photo>/donate/zacchiroli.jpg</photo>
-      <text>
-        Een wereld zonder Vrije Software is een wereld waarin we allemaal gegijzeld zijn door de verkopers van niet-vrije software die onze levens bepalen. Om tegen zo'n nachtmerrie-scenario te vechten hebben we organisaties nodig als de Free Software Foundation Europe. 
-      </text>
-      <author>Stefano "Zack" Zacchiroli, voormalig Debian Projectleider</author>
-      <link>/fellowship/index.html</link>
-    </campaign>
-    
-    <campaign id="amaelle">
-      <text>
-          Vrije Software is nooit meer noodzakelijk geweest voor journalisten en activisten over heel de wereld. 
-De FSFE helpt een wereld vorm te geven waar technologie ons tot dingen in staat stelt in plaats van ons te onderdrukken.
-      </text>
-      <author>Amaelle Guiton, journalist over hacker-cultuur en privacy</author>
-      <link>/fellowship/index.html</link>
-      <copyright>Amaelle's achtergrondfoto door Gregory Fabre @grrr gebruikt met een CC BY SA 4.0 licentie.</copyright>
-    </campaign>
-
-    <campaign id="becomefellow">
-        <photo>/graphics/fellowship/fellowship-page-logo-300x91.png</photo>
-        <text>
-          Word een Fellow van de FSFE om ons werk mogelijk te maken en ons helpen zeker te zijn van onze financiële onafhankelijkheid! 
-        </text>
-      <link>/fellowship/</link>
-    </campaign>
-    
-    <campaign id="appelbaum" tag="donors" pos="2">
-      <photo>/fellowship/graphics/people/jacobappelbaum.png</photo>
-      <text>
-        Ik geloof dat het steunen van de FSFE belangrijk is voor de ontwikkeling van en het overgaan op 
-Vrije Software in Europa en de rest van de wereld. Ik ben een FSFE Fellow omdat het financieel steunen van Vrije Software positieve verbeteringen veroorzaakt in alle samenlevingen over de wereld.
-      </text>
-      <author>Jacob Appelbaum - Woordvoerder van het TOR Project</author>
-      <link>/fellowship/index.html</link>
-      <copyright>Jacob Appelbaum's foto door Stephan Röhl (Heinrich-Böll-Stiftung) gebruikt met een CC BY SA 2.0 licentie</copyright>
-    </campaign>
-  </campaigns>
   
 
   

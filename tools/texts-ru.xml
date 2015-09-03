@@ -188,46 +188,4 @@
       </p>
 </text>
 
-<!-- ALL CAMPAIGN TEXTS -->
-
-<campaigns>
-  <!-- campaigns to be displayed in a rotating box on frontpage -->
-  <campaign id="freesociety">
-      <text>Free Software, <br />Free Society!</text>
-      <link>/freesoftware/</link>
-  </campaign>
-  <campaign id="dfd">
-    <photo>/graphics/robot-protest-light.png</photo>
-    <text>
-        Празднуем доступность информации и популяризуем открытые стандарты.
-        </text>
-    <link>//documentfreedom.org</link>
-  </campaign>
-  <campaign id="ilovefs">
-    <text>
-        Покажи свою любовь к свободным программам — поблагодари разработчиков.
-        </text>
-    <link>/campaigns/ilovefs/ilovefs.html</link>
-  </campaign>
-  <campaign id="zacchiroli" tag="donors" pos="1">
-    <photo>/donate/zacchiroli.jpg</photo>
-    <text>
-        Мир без свободных программ — это мир, где все мы — заложники
-        производителей несвободных программ, которые манипулируют нашими
-        жизнями. Чтобы противостоять такому кошмару, нам нужны организации,
-        подобные Европейскому фонду свободного программного обеспечения.
-      </text>
-    <author>Стефано Закироли (Zack), бывший руководитель проекта Debian</author>
-    <link>/fellowship/index.html</link>
-  </campaign>
-  <campaign id="becomefellow">
-    <photo>/graphics/fellowship/fellowship-page-logo-300x91.png</photo>
-    <text>
-          Become a Fellow of the FSFE to empower our work and help to assure
-          our financial independence! 
-        </text>
-    <link>/fellowship/</link>
-  </campaign>
-</campaigns>
-
 </textset>

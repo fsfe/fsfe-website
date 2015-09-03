@@ -1,7 +1,9 @@
-news/*/news:global
-news/generated_xml/:global
-events/*/event:global
+news/*/news:[]
+news/generated_xml/:[]
+events/*/event:[]
+tools/frontpage/:[]
 
 news/*/news:[front-page]
 news/generated_xml/:[front-page]
 events/*/event:[front-page]
+

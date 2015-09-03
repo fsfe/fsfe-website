@@ -193,47 +193,4 @@
       </p>
 </text>
 
-<!-- ALL CAMPAIGN TEXTS -->
-
-<campaigns>
-  <!-- campaigns to be displayed in a rotating box on frontpage -->
-  <campaign id="freesociety">
-      <text>Free Software, <br />Free Society!</text>
-      <link>/freesoftware/</link>
-  </campaign>
-  <campaign id="dfd">
-    <photo>/graphics/robot-protest-light.png</photo>
-    <text>
-        Γιορτή για την προσβασιμότητα στην πληροφορία και την απόκτηση
-        συνειδητοποίησης για τα Ανοιχτά Πρότυπα.
-        </text>
-    <link>//documentfreedom.org</link>
-  </campaign>
-  <campaign id="ilovefs">
-    <text>
-        Show your love for Free Software and thank developers.
-        </text>
-    <link>/campaigns/ilovefs/ilovefs.html</link>
-  </campaign>
-  <campaign id="zacchiroli" tag="donors" pos="1">
-    <photo>/donate/zacchiroli.jpg</photo>
-    <text>
-        Ένας κόσμος χωρίς Ελεύθερο Λογισμικό είναι ένας κόσμος όπου είμαστε
-        όλοι όμηροι των προμηθευτών ιδιοκτησιακού λογισμικού που ορίζουν τις
-        ζωές μας. Για να πολεμήσουμε ένα τέτοιο εφιαλτικό σενάριο χρειαζόμαστε
-        οργανισμούς όπως το Ευρωπαϊκό Ίδρυμα Ελεύθερου Λογισμικού.
-      </text>
-    <author>Stefano "Zack" Zacchiroli, Former Debian Project Leader</author>
-    <link>/fellowship/index.html</link>
-  </campaign>
-  <campaign id="becomefellow">
-    <photo>/graphics/fellowship/fellowship-page-logo-300x91.png</photo>
-    <text>
-          Become a Fellow of the FSFE to empower our work and help to assure
-          our financial independence! 
-        </text>
-    <link>/fellowship/</link>
-  </campaign>
-</campaigns>
-
 </textset>

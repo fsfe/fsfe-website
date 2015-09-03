@@ -179,46 +179,4 @@
     </p>
 </text>
 
-<!-- ALL CAMPAIGN TEXTS -->
-
-<campaigns>
-  <!-- campaigns to be displayed in a rotating box on frontpage -->
-  <campaign id="freesociety">
-      <text>Free Software, <br />Free Society!</text>
-      <link>/freesoftware/</link>
-  </campaign>
-  <campaign id="dfd">
-    <photo>/graphics/robot-protest-light.png</photo>
-    <text>
-        Celebrating information accessibility and raising awareness of Open Standards.
-        </text>
-    <link>//documentfreedom.org</link>
-  </campaign>
-  <campaign id="ilovefs">
-    <text>
-        Show your love for Free Software and thank developers.
-        </text>
-    <link>/campaigns/ilovefs/ilovefs.html</link>
-  </campaign>
-  <campaign id="zacchiroli" tag="donors" pos="1">
-    <photo>/donate/zacchiroli.jpg</photo>
-    <text>
-        A world without Free Software is a world where we are all hostages of
-        proprietary software vendors that run our lives. To fight such a
-        nightmare scenario we need organisations like Free Software Foundation
-        Europe.
-      </text>
-    <author>Stefano "Zack" Zacchiroli, Former Debian Project Leader</author>
-    <link>/fellowship/index.html</link>
-  </campaign>
-  <campaign id="becomefellow">
-    <photo>/graphics/fellowship/fellowship-page-logo-300x91.png</photo>
-    <text>
-          Become a Fellow of the FSFE to empower our work and help to assure
-          our financial independence! 
-        </text>
-    <link>/fellowship/</link>
-  </campaign>
-</campaigns>
-
 </textset>

@@ -46,7 +46,6 @@ tagging_sourceglobs(){
     for tag in $tags ; do
       matchline="/ $tag( |$)/{${matchline}}"
     done
-    printf '%s\n' "$matchline"
 
     if [ -z "$tags" ]; then
       # save the i/o if tags are empty, i.e. always match

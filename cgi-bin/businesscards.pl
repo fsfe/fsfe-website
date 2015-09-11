@@ -32,7 +32,6 @@ if ($function2 ne "") {
 }
 
 if ($radioaddress eq "Berlin") { $address = "Schönhauser Allee 6/7, 10119 Berlin, Germany"; }
-if ($radioaddress eq "DUS") { $address = "Bilker Allee 173, 40217 Düsseldorf, Germany"; }
 if ($radioaddress eq "other") {  $address = "$otheraddress"; }
 
 if ($delivery eq "") {
@@ -52,13 +51,13 @@ my $subject = "Business card order $reference";
 
 my $boundary = "NextPart$reference";
 
-my $replyto = "dus\@office.fsfeurope.org, $email";
+my $replyto = "office\@fsfeurope.org, $email";
 
 open(MAIL, "|/usr/lib/sendmail -t -f $email");
 print MAIL "From: $email\n";
 print MAIL "Reply-To: $replyto\n";
 print MAIL "Mail-Followup-To: $replyto\n";
-print MAIL "To: dus\@office.fsfeurope.org\n";
+print MAIL "To: office\@fsfeurope.org\n";
 print MAIL "Cc: $email\n";
 
 print MAIL "Subject: $subject\n";

@@ -56,13 +56,14 @@ cat <<HTML_END
     <!--
 body { width: 100%; margin: 0; padding: 1ex; }
 * {
+  margin: auto auto;
   box-sizing: border-box;
-  transition: all .3s linear;
+  transition: all .2s linear;
 }
 
 dl {
   display: block;
-  width: 30%;
+  width: 60%;
   min-width: 320px;
 }
 dt, dd {
@@ -74,33 +75,40 @@ dt, dd {
   vertical-align: top;
 }
 dt {
-  width: 30%;
+  width: 40%;
   font-weight: bold;
 }
-dd { width: 70%; }
+dd { width: 60%; }
 
 input.tabhandle { display: none;}
 input.tabhandle + label + .tabcontent {
   width: 75%; min-width: 300px;
-  height: 1px;
+  min-height: 1px; max-height: 1px;
   overflow: hidden;
   padding-top: 0; padding-bottom: 0;
   margin-top: 0; margin-bottom: 0;
   border-style: none none solid none;
 }
 input.tabhandle:checked + label.filled + .tabcontent {
-  width: auto;
-  height: auto;
+  width: 100%;
+  min-height: 1px; max-height: 110em;
   border-style: dashed solid solid solid;
   overflow: auto;
 }
+input.tabhandle + label.filled { color: #008;}
 input.tabhandle + label::before { content: '\25b9 \00a0';}
-input.tabhandle + label.filled::before { content: '\25b8 \00a0';}
+input.tabhandle + label.filled::before { content: '\25b8 \00a0'; color: initial;}
 input.tabhandle + label.filled::after { content: ', more...';}
 input.tabhandle:checked + label::before { content: '\25b9 \00a0';}
-input.tabhandle:checked + label.filled::before { content: '\25be \00a0';}
+input.tabhandle:checked + label.filled::before { content: '\25be \00a0'; color: initial;}
 input.tabhandle:checked + label.filled::after { content: ', less...';}
 
+h1 {
+  text-align: center;
+  border-width: 1px;
+  border-style: none none solid none;
+  margin-bottom: 1ex;
+}
 h2, h3, label {
   display: inline-block;
   font-size: 1em;
@@ -133,6 +141,7 @@ label  {
   margin: 0;
   padding: 1ex 1ex;
 }
+.tabcontent pre { margin: 1em 0;}
     -->
     </style>
   </head><body>
@@ -164,11 +173,11 @@ label  {
     if [ $start_time -lt $t_makefile ]; then
       web_tab Makefiletab "Generation time: $(duration $(($t_makefile - $t_premake)) )" "
       <h3>Header</h3>$(web_tab Makeheadertab "" "<pre>$(head Makefile |htmlcat)</pre>")
-      <h3>Copy rules</h3>$(web_tab Makecopytab "Generation time: $(duration $(($t_makecopy - $t_premake)))" "$(tail Make_copy |htmlcat)")
-      <h3>Source copy rules</h3>$(web_tab Makescopytab "Generation time: $(duration $(($t_makesourcecopy - $t_premake)))" "$(tail Make_sourcecopy |htmlcat)")
-      <h3>Glob rules</h3>$(web_tab Makeglobstab "Generation time: $(duration $(($t_makeglobrules - $t_premake)))" "$(tail Make_globs |htmlcat)")
-      <h3>XSLT rules</h3>$(web_tab Makexslttab "Generation time: $(duration $(($t_makexslt - $t_premake)))" "$(tail Make_xslt |htmlcat)")
-      <h3>XHTML rules</h3>$(web_tab Makexhtmltab "Generation time: $(duration $(($t_makexhtml - $t_premake)))" "$(tail Make_xhtml |htmlcat)")
+      <h3>Copy rules</h3>$(web_tab Makecopytab "Generation time: $(duration $(($t_makecopy - $t_premake)))" "<pre>$(tail Make_copy |htmlcat)</pre>")
+      <h3>Source copy rules</h3>$(web_tab Makescopytab "Generation time: $(duration $(($t_makesourcecopy - $t_premake)))" "<pre>$(tail Make_sourcecopy |htmlcat)</pre>")
+      <h3>Glob rules</h3>$(web_tab Makeglobstab "Generation time: $(duration $(($t_makeglobrules - $t_premake)))" "<pre>$(tail Make_globs |htmlcat)</pre>")
+      <h3>XSLT rules</h3>$(web_tab Makexslttab "Generation time: $(duration $(($t_makexslt - $t_premake)))" "<pre>$(tail Make_xslt |htmlcat)</pre>")
+      <h3>XHTML rules</h3>$(web_tab Makexhtmltab "Generation time: $(duration $(($t_makexhtml - $t_premake)))" "<pre>$(tail Make_xhtml |htmlcat)</pre>")
       <h3>Full Makefile</h3>$(web_tab Makefilefull "<a href="Makefile">view</a>" "")"
    else
       web_tab Makefiletab "waiting..." ""
@@ -203,7 +212,7 @@ label  {
 
     <h2>Files updated</h2>$(
     if [ ${start_time} -lt ${t_stagesync} -a -s stagesync ]; then
-      web_tab Updatedtab "$(( $(wc -l stagesync |cut -f1 -d\ ) - 3 ))" "<pre>$(htmlcat stagesync)</pre>"
+      web_tab Updatedtab "Updated $(( $(wc -l stagesync |cut -f1 -d\ ) - 4 )) files" "<pre>$(htmlcat stagesync)</pre>"
     elif [ -z ${term_status} ]; then
       web_tab Updatedtab "waiting..." ""
     else

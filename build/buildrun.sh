@@ -9,8 +9,10 @@ inc_buildrun=true
 build_into(){
   ncpu="$(grep -c ^processor /proc/cpuinfo)"
 
+  [ -n "$statusdir" ] && cp "$basedir/build/status.html.sh" "$statusdir/index.cgi"
   printf %s "$start_time" |logstatus start_time
   [ -s "$(logname debug)" ] && truncate -s 0 "$(logname debug)"
+
   forcelog Makefile
 
   validate_caches

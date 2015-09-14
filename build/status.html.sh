@@ -79,7 +79,7 @@ dd { width: 70%; }
 
 input.tabhandle { display: none;}
 input.tabhandle + label + .tabcontent {
-  width: 70%; min-width: 300px;
+  width: 75%; min-width: 300px;
   height: 1px;
   overflow: hidden;
   padding-top: 0; padding-bottom: 0;
@@ -144,16 +144,16 @@ label  {
 
     <h2>SVN changes</h2>$(
     if [ ${start_time} -lt ${t_svnupdate} ]; then
-      web_tab SVN_tab "Update at $(timestamp ${t_svnupdate})" "<pre>$(htmlcat SVNlatest)</pre>"
+      web_tab SVN_tab "at $(timestamp ${t_svnupdate})" "<pre>$(htmlcat SVNlatest)</pre>"
     else
       web_tab SVN_tab "Unconditional build, changes ignored" ""
     fi)
 
     <h2>Premake</h2>$(
     if [ $start_time -lt $t_premake -a $start_time -lt $t_svnupdate ]; then
-      web_tab Premaketab "Premake run time $(duration $(($t_premake - $t_svnupdate)))" "$(htmlcat premake)"
+      web_tab Premaketab "Premake run time $(duration $(($t_premake - $t_svnupdate)))" "<pre>$(tail premake |htmlcat)</pre><a href="premake">full log</a>"
     elif [ $start_time -lt $t_premake ]; then
-      web_tab Premaketab "Premake run time $(duration $(($t_premake - $start_time)))" "$(htmlcat premake)"
+      web_tab Premaketab "Premake run time $(duration $(($t_premake - $start_time)))" "<pre>$(tail premake |htmlcat)</pre><a href="premake">full log</a>"
     else
       web_tab Premaketab "waiting..." ""
     fi)
@@ -161,20 +161,20 @@ label  {
     <h2>Makefile</h2>$(
     if [ $start_time -lt $t_makefile ]; then
       web_tab Makefiletab "Generation time: $(duration $(($t_makefile - $t_premake)) )" "
-      <pre>$(head Makefile |htmlcat)</pre>
+      <h3>Header</h3>$(web_tab Makeheadertab "" "<pre>$(head Makefile |htmlcat)</pre>")
       <h3>Copy rules</h3>$(web_tab Makecopytab "Generation time: $(duration $(($t_makecopy - $t_premake)))" "$(tail Make_copy |htmlcat)")
       <h3>Source copy rules</h3>$(web_tab Makescopytab "Generation time: $(duration $(($t_makesourcecopy - $t_premake)))" "$(tail Make_sourcecopy |htmlcat)")
       <h3>Glob rules</h3>$(web_tab Makeglobstab "Generation time: $(duration $(($t_makeglobrules - $t_premake)))" "$(tail Make_globs |htmlcat)")
       <h3>XSLT rules</h3>$(web_tab Makexslttab "Generation time: $(duration $(($t_makexslt - $t_premake)))" "$(tail Make_xslt |htmlcat)")
       <h3>XHTML rules</h3>$(web_tab Makexhtmltab "Generation time: $(duration $(($t_makexhtml - $t_premake)))" "$(tail Make_xhtml |htmlcat)")
-      <a href="Makefile">Makefile</a>"
+      <h3>Full Makefile</h3>$(web_tab Makefilefull "<a href="Makefile">view</a>" "")"
    else
       web_tab Makefiletab "waiting..." ""
    fi)
 
     <h2>Makerun</h2>$(
     if [ $start_time -lt $t_makerun ]; then
-      web_tab Makeruntab "Build time: $(duration $(($t_makerun - $t_makefile)) )" "<pre>$(tail buildlog |htmlcat)</pre>"
+      web_tab Makeruntab "Build time: $(duration $(($t_makerun - $t_makefile)) )" "<pre>$(tail buildlog |htmlcat)</pre><a href=\"buildlog\">view full</a>"
     else
       web_tab Makeruntab "waiting..." ""
     fi)

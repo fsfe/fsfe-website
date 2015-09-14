@@ -2,6 +2,7 @@
 
 basedir="$(dirname "$0")/.."
 [ -z "$inc_misc" ] && . "$basedir/build/misc.sh"
+readonly start_time="$(date +%s)"
 
 . "$basedir/build/arguments.sh"
 
@@ -23,6 +24,7 @@ if [ $command = "build_into" -o $command = "svn_build_into" ] && [ "$buildpids" 
   debug "build script is already running"
   exit 0
 fi
+[ -n "$statusdir" ] && cp "$basedir/build/status.html.sh" "$statusdir/index.cgi"
 
 [ -z "$inc_filenames" ] && . "$basedir/build/filenames.sh"
 [ -z "$inc_buildrun" ]  && . "$basedir/build/buildrun.sh"

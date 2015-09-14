@@ -9,6 +9,7 @@ inc_buildrun=true
 build_into(){
   ncpu="$(grep -c ^processor /proc/cpuinfo)"
 
+  printf %s "$start_time" |logstatus start_time
   [ -s "$(logname debug)" ] && truncate -s 0 "$(logname debug)"
   forcelog Makefile
 
@@ -32,6 +33,8 @@ build_into(){
   [ "$stagedir" != "$target" ] && \
     rsync -av --del "$stagedir/" "$target/" \
     | logstatus stagesync
+
+  date +%s |logstatus end_time
 }
 
 svn_build_into(){
@@ -39,8 +42,9 @@ svn_build_into(){
   forcelog SVNerrors;  SVNerrors="$(logname SVNerrors)"
 
   svn --non-interactive update "$basedir" >"$SVNchanges" 2>"$SVNerrors"
+  svnterm="$?"
 
-  if [ -s "$SVNerrors" ]; then
+  if [ "$svnterm" -ne 0 ]; then
     die "SVN reported the following problem:\n" \
         "$(cat "$SVNerrors")"
   elif egrep '^(C...|.C..|...C) .+' "$SVNchanges"; then

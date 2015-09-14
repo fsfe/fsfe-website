@@ -26,5 +26,6 @@ print_error(){
 
 die(){
   echo "$(date '+%F %T'): Fatal - $@" |logappend lasterror >&2
+  date +%s |logstatus end_time
   exit 1
 }

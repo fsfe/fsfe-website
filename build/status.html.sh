@@ -23,7 +23,7 @@ htmlcat(){
        s;'\'';\&apos\;;g;' $@
 }
 
-start_time=$(stat -c %Y "SVNchanges" ||echo 0)
+start_time=$(cat "start_time" || stat -c %Y "$0" || echo 0)
 t_svnupdate=$(stat -c %Y "SVNlatest" ||echo 0)
 t_premake=$(stat -c %Y "premake" ||echo 0)
 t_makefile=$(stat -c %Y "Makefile" ||echo 0)
@@ -37,9 +37,13 @@ t_makerun=$(stat -c %Y "buildlog" ||echo 0)
 t_errors=$(stat -c %Y "lasterror" ||echo 0)
 t_removed=$(stat -c %Y "removed" ||echo 0)
 t_stagesync=$(stat -c %Y "stagesync" ||echo 0)
-end_time=$(stat -c %Y stagesync removed lasterror buildlog |sort -n |tail -n1)
+end_time=$(cat "end_time" || echo 0)
 duration=$(($end_time - $start_time))
-term_status=$([ "$duration" -gt 0 -a lasterror -nt buildlog ] && echo Error || [ "$duration" -gt 0 ] && echo Success)
+term_status=$(if [ "$duration" -gt 0 -a lasterror -nt start_time ]; then
+                echo Error
+              elif [ "$duration" -gt 0 ]; then
+                echo Success
+              fi)
 
 printf %s\\n\\n "Content-Type: text/html;charset=utf-8"
 cat <<HTML_END
@@ -86,6 +90,7 @@ input.tabhandle:checked + label.filled + .tabcontent {
   width: auto;
   height: auto;
   border-style: dashed solid solid solid;
+  overflow: auto;
 }
 input.tabhandle + label::before { content: '\25b9 \00a0';}
 input.tabhandle + label.filled::before { content: '\25b8 \00a0';}
@@ -167,8 +172,6 @@ label  {
       web_tab Makefiletab "waiting..." ""
    fi)
 
-    <h2>File Manifest</h2>$(web_tab Manifesttab "Number of files: $(wc -l manifest |cut -d\  -f1), <a href=\"manifest\">view</a>" "")
-
     <h2>Makerun</h2>$(
     if [ $start_time -lt $t_makerun ]; then
       web_tab Makeruntab "Build time: $(duration $(($t_makerun - $t_makefile)) )" "<pre>$(tail buildlog |htmlcat)</pre>"
@@ -183,9 +186,13 @@ label  {
       web_tab Errortab "none" ""
     fi)
 
+    <h2>File Manifest</h2>$(web_tab Manifesttab "Number of files: $(wc -l manifest |cut -d\  -f1)" "<pre>$(tail manifest |htmlcat)</pre><a href=\"manifest\">view full</a>")
+
     <h2>Files removed</h2>$(
-    if [ $start_time -lt $t_removed ]; then
+    if [ $start_time -lt $t_removed -a -s "removed" ]; then
       web_tab Removedtab "$(wc -l removed |cut -f1 -d\ )" "<pre>$(htmlcat removed)</pre>"
+    elif [ $start_time -lt $t_removed ]; then
+      web_tab Removedtab "none" ""
     elif [ -z ${term_status} ]; then
       web_tab Removedtab "waiting..." ""
     else

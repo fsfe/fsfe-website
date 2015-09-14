@@ -1,5 +1,7 @@
 #!/bin/sh
 
+exec 2>/dev/null
+
 timestamp(){
   date -d "@$1" +"%F %T (%Z)"
 }
@@ -200,8 +202,8 @@ label  {
     fi)
 
     <h2>Files updated</h2>$(
-    if [ ${start_time} -lt ${t_stagesync} ]; then
-      web_tab Updatedtab "$(wc -l stagesync)" "<pre>$(htmlcat stagesync)</pre>"
+    if [ ${start_time} -lt ${t_stagesync} -a -s stagesync ]; then
+      web_tab Updatedtab "$(( $(wc -l stagesync |cut -f1 -d\ ) - 3 ))" "<pre>$(htmlcat stagesync)</pre>"
     elif [ -z ${term_status} ]; then
       web_tab Updatedtab "waiting..." ""
     else

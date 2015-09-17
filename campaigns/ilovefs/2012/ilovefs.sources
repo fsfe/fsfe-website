@@ -1,8 +1,3 @@
-news/*/news:global
-news/generated_xml/:global
-news/nl/nl:global
-de/news/*/news:de
-es/news/*/news:es
-fr/news/*/news:fr
-it/news/*/news:it
-se/news/*/news:se
+news/*/news:[ilovefs]
+news/generated_xml/:[ilovefs]
+news/nl/nl:[ilovefs]

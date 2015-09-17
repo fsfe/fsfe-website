@@ -41,15 +41,18 @@ glob_maker(){
   sourceglobfile="${filedir%/.}/._._${shortbase}.sourceglobs"
 
   cat <<MakeEND
-$(mes "$sourceglobfile"): $(mes $(all_sources "$input/$sourcesfile"))
+$(mes "$sourceglobfile"): \${INPUTDIR}/tagmap
 	\${PGLOBBER} \${PROCFLAGS} sourceglobs "\${INPUTDIR}/$sourcesfile" >"$sourceglobfile"
 MakeEND
 
   for lang in $(get_languages); do
     globfile="${filedir%/.}/._._${shortbase}.${lang}.sourceglobs"
+    refglobs="${filedir%/.}/._._${shortbase}.${lang}.refglobs"
     cat <<MakeEND
 $(mes "$globfile"): $(mes "$sourceglobfile")
-	\${PGLOBBER} \${PROCFLAGS} cast_globfile "$sourceglobfile" "$lang" "$globfile"
+	\${PGLOBBER} \${PROCFLAGS} lang_sources "$sourceglobfile" "$lang" >"$globfile"
+$(mes "$refglobs"): $(mes "$globfile")
+	\${PGLOBBER} \${PROCFLAGS} cast_refglobs "$globfile" "$refglobs"
 MakeEND
   done
 }
@@ -64,7 +67,7 @@ glob_makers(){
 }
 
 glob_additions(){
-  printf "$input/%s\n" "$@" \
+  printf "%s\n" "$@" \
   | egrep '.+\.sources$' \
   | xargs realpath \
   | while read addition; do
@@ -114,7 +117,7 @@ xhtml_maker(){
 
     textsfile="$(get_textsfile "$lang")"
     fundraisingfile="$(get_fundraisingfile "$lang")"
-    $bool_sourceinc && sourceglobs="${filedir#./}/._._${shortbase}.${lang}.sourceglobs" || unset sourceglobs
+    $bool_sourceinc && sourceglobs="${filedir#./}/._._${shortbase}.${lang}.refglobs" || unset sourceglobs
 
     cat <<MakeEND
 all: $(mes "$outfile" "$outlink")
@@ -154,7 +157,7 @@ xhtml_makers(){
 }
 
 xhtml_additions(){
-  printf "$input/%s\n" "$@" \
+  printf "%s\n" "$@" \
   | sed -rn 's;\.[a-z][a-z]\.xhtml$;;p' \
   | sort -u \
   | xargs realpath \
@@ -179,16 +182,17 @@ MakeEND
 
 copy_makers(){
   # generate copy rules for entire input tree
-  sourcefind \! -name 'Makefile' \! -name '*.sourceglobs' \! -name '*.sources' \
-             \! -name '*.xhtml' \! -name '*.xml' \! -name '*.xsl' \
+  sourcefind \! -name 'Makefile' \! -name '*.sourceglobs' \! -name '*.refglobs' \
+             \! -name '*.sources' \! -name '*.xhtml' \! -name '*.xml' \
+             \! -name '*.xsl' \! -name 'tagmap' \
   | while read filepath; do
     copy_maker "$filepath" "$(dirname "$filepath")"
   done 
 }
 
 copy_additions(){
-  printf "$input/%s\n" "$@" \
-  | egrep -v '.+(\.sources|\.sourceglobs|\.xhtml|\.xml|\.xsl|/Makefile|/)$' \
+  printf "%s\n" "$@" \
+  | egrep -v '.+(\.sources|\.sourceglobs|\.refglobs|\.xhtml|\.xml|\.xsl|/Makefile|/)$' \
   | xargs realpath \
   | while read addition; do
     copy_maker "${addition#$input/}" "$(dirname "${addition#$input/}")"
@@ -230,7 +234,7 @@ xslt_makers(){
 }
 
 xslt_additions(){
-  printf "$input/%s\n" "$@" \
+  printf "%s\n" "$@" \
   | egrep '.+\.xsl$' \
   | xargs realpath \
   | while read addition; do
@@ -248,7 +252,7 @@ copy_sources(){
 }
 
 copy_sourceadditions(){
-  printf "$input/%s\n" "$@" \
+  printf "%s\n" "$@" \
   | egrep '.+\.xhtml$' \
   | xargs realpath \
   | while read addition; do
@@ -265,14 +269,18 @@ tree_maker(){
   cache_textsfile
   cache_fundraising
 
-  cat <<-MakeHead
-	.PHONY: all
-	PROCESSOR = "$basedir/build/process_file.sh"
-	PGLOBBER = "$basedir/build/source_globber.sh"
-	PROCFLAGS = --source "$basedir" --statusdir "$statusdir" --domain "$domain"
-	INPUTDIR = $input
-	OUTPUTDIR = $output
-	MakeHead
+  cat <<MakeHead
+.PHONY: all
+PROCESSOR = "$basedir/build/process_file.sh"
+PGLOBBER = "$basedir/build/source_globber.sh"
+PROCFLAGS = --source "$basedir" --statusdir "$statusdir" --domain "$domain"
+INPUTDIR = $input
+OUTPUTDIR = $output
+
+# cannot store find results in variable because it will result in too many arguments for the shell
+\${INPUTDIR}/tagmap: \$(shell find "$basedir" -name '*.[a-z][a-z].xml')
+	find "$basedir" -name '*.[a-z][a-z].xml' |xargs \${PGLOBBER} \${PROCFLAGS} map_tags >\${INPUTDIR}/tagmap
+MakeHead
 
   forcelog Make_globs;      Make_globs="$(logname Make_globs)"
   forcelog Make_xslt;       Make_xslt="$(logname Make_xslt)"
@@ -294,6 +302,7 @@ tree_maker(){
   [ "$regen_xhtml" = false -a -s "$Make_sourcecopy" ] && \
      copy_sourceadditions "$@" >>"$Make_sourcecopy" \
   || copy_sources >"$Make_sourcecopy" &
+
   if [ "$regen_xhtml" = false -a -s "$Make_xhtml" ]; then
     cat "$Make_xhtml"
     xhtml_additions "$@" |tee -a "$Make_xhtml"

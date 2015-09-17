@@ -3,7 +3,64 @@
 inc_sources=true
 [ -z "$inc_xmlfiles" ] && . "$basedir/build/xmlfiles.sh"
 
-sourceglobs(){
+validate_tagmap(){
+  tagmap="$basedir/tagmap"
+  sed -rn 's;^(.*\.xml) +.*$;\1;p' "$tagmap" |while read fn; do
+    [ -f "$fn" ] || touch -cd@0 "$tagmap"
+  done
+}
+
+map_tags(){
+  for xml in "$@"; do
+    printf '%s ' "$xml"
+    sed -rn ':a;N;$!ba
+             s;<!([^>]|<[^>]*>)*>;;g
+             s;[\n\t ]+; ;g
+             s; ?([</>]) ?;\1;g
+             tb;Tb;:b
+             s;.*<tags( [^>]+)?>[^<]*<tag( [^>]+)?>(.*)</tag>[^<]*</tags>.*;\3;;Tc
+             s; ;+;g
+             s;</tag>[^<]*<tag(\+[^>]+)?>; ;g;p;q
+             :c;a\
+             ' "$xml"
+  done
+}
+
+tagging_sourceglobs(){
+  # read a .sources file and glob up referenced xml files for processing in list_sources
+  sourcesfile="$1"
+
+  [ -f "$sourcesfile" ] && grep ':\[.*\]$' "$sourcesfile" \
+  | while read line; do
+    glob="${line%:\[*\]}"
+    tags="$(printf %s "$line" |sed -r 's;^.+:\[(.*)\]$;\1;;s; ;+;g;s;,; ;g')"
+ 
+    # Input file must match *all* tags from line definition.
+    # Build a sed expression, that performs conjunctive match
+    # at once, e.g. to match all of the tags 'spam', 'eggs',
+    # and 'bacon' the expression will have roughly the form 
+    # "/spam/{/eggs/{/bacon/{p}}}"
+  
+    match="$(printf '%s' "$glob" |sed -r 's;\*;.*;g;s;\?;.;g')"
+    matchline="s;^(${basedir}/${match}.*)\.[a-z]{2}\.xml .*$;\1;p"
+    for tag in $tags ; do
+      matchline="/ $tag( |$)/{${matchline}}"
+    done
+
+    if [ -z "$tags" ]; then
+      # save the i/o if tags are empty, i.e. always match
+      printf '%s \n' "$basedir/"${glob}*.[a-z][a-z].xml |sed -rn "$matchline"
+    elif [ -f "$basedir/tagmap" ]; then
+      sed -rn "$matchline" <"$basedir/tagmap"
+    else
+      map_tags "$basedir/"${glob}*.[a-z][a-z].xml \
+      | sed -rn "$matchline"
+    fi 
+  done \
+  | sort -u
+}
+
+legacy_sourceglobs(){
   # read a .sources file and glob up referenced
   # source files for processing in list_sources
   sourcesfile="$1"
@@ -18,16 +75,15 @@ sourceglobs(){
   fi
 }
 
-all_sources(){
-  # read a .sources file and glob up all referenced
-  # source files
-  sourcesfile="$1"
-
-  if [ -f "$sourcesfile" ]; then
-    sed -rn 's;:global$;*.[a-z][a-z].xml;gp' "$sourcesfile" \
-    | while read glob; do
-      echo "$basedir/"$glob
-    done |grep -vF "[a-z][a-z].xml"
+[ -z "$inc_misc" ] && . "$basedir/build/misc.sh"
+sourceglobs(){
+  if [ "$legacyglobs" = true ]; then
+    legacy_sourceglobs "$@"
+  elif [ -f "$1" ] && ! egrep -q '^.+:\[.*\]$' "$1"; then
+    debug "WARNING! File in legacy format: $1"
+    legacy_sourceglobs "$@"
+  else
+    tagging_sourceglobs "$@"
   fi
 }
 
@@ -69,21 +125,29 @@ auto_sources(){
   | sed -r 's:^([^\t]+)\t[^<]*(< *[^ >]+)([^>]*>):\2 filename="\1" \3:'
 }
 
-cast_globfile(){
+#cast_globfile(){
+#  sourceglobfile="$1"
+#  lang="$2"
+#  globfile="$3"
+#
+#  list_sources "###" "$lang" "$(cat "$sourceglobfile")" >"$globfile"
+#}
+
+lang_sources(){
   sourceglobfile="$1"
   lang="$2"
-  globfile="$3"
 
-  sources="$(list_sources "###" "$lang" "$(cat "$sourceglobfile")")"
-
-  [ -f "$globfile" ] && \
-    [ "$sources" = "$(cat "$globfile")" ] \
-  || echo "$sources" >"$globfile"
-
-  if [ "$sourceglobfile" -nt "$globfile" ]; then
-    echo "$sources" |while read incfile; do
-      [ "$incfile" -nt "$globfile" ] && touch "$globfile" || true
-    done
-  fi
+  list_sources "###" "$lang" "$(cat "$sourceglobfile")"
 }
 
+cast_refglobs(){
+  globfile="$1"
+  reffile="$2"
+
+  if [ -s "$globfile" ] && diff "$globfile" "$reffile" >/dev/null; then
+    incfile="$(cat "$globfile" |xargs -d\\n ls -t |sed -n '1p')"
+    [ "$incfile" -nt "$globfile" ] && touch "$globfile" || true
+  else
+    cp "$globfile" "$reffile"
+  fi
+}

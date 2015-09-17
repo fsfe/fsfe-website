@@ -1,13 +1,2 @@
-events/*/event:global
-events/*/*/event:global
-de/events/*/event:de
-de/events/*/*/event:de
-es/events/*/event:es
-es/events/*/*/event:es
-fi/events/*/event:fi
-fr/events/*/event:fr
-fr/events/*/*/event:fr
-it/events/*/event:it
-it/events/*/*/event:it
-se/events/*/event:se
-se/events/*/*/event:se
+events/*/event:[]
+events/*/*/event:[]

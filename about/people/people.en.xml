@@ -187,7 +187,7 @@
     <employee>full/m</employee>
   </person>
 
-  <person id="gerloff" avatar="yes" association-member="yes" teams="de, council, ga">
+  <person id="gerloff" avatar="yes" association-member="yes" teams="de, ga">
     <name>Karsten Gerloff</name>
     <country>DE</country>
     <function>president/m</function>
@@ -308,7 +308,7 @@
   <person id="kirschner" avatar="yes" association-member="yes" teams="de, ga, council">
     <name>Matthias Kirschner</name>
     <country>DE</country>
-    <function>vice-president/m</function>
+    <function>president/m</function>
     <email>mk (at) fsfe (dot) org</email>
     <link>/about/kirschner/kirschner.html</link>
     <avatar>/about/kirschner/kirschner-avatar.jpg</avatar>
@@ -434,7 +434,7 @@
     <employee>full/f</employee>
   </person>
 
-  <person id="polvani" avatar="yes" teams="it, core">
+  <person id="polvani" avatar="yes" teams="it, core, council">
     <name>Alessandro Polvani</name>
     <country>IT</country>
     <function country="IT">deputy/m</function>
@@ -520,6 +520,7 @@
     <person id="rubini" avatar="yes" association-member="yes" teams="ga">
     <name>Alessandro Rubini</name>
     <country>IT</country>
+    <function>vice-president/m</function>
     <email>rubini (at) fsfe (dot) org</email>
     <avatar>/about/rubini/rubini-avatar.jpg</avatar>
   </person>

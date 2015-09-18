@@ -433,7 +433,7 @@
     <employee>full/f</employee>
   </person>
 
-  <person id="polvani" avatar="yes" teams="it, core, council">
+  <person id="polvani" avatar="yes" teams="it, core">
     <name>Alessandro Polvani</name>
     <country>IT</country>
     <function country="IT">deputy/m</function>
@@ -579,14 +579,6 @@ ga">
     <employee>full/m</employee>
   </person>
 
-  <person id="tuke" avatar="yes" teams=""> 
-    <name>Sam Tuke</name> 
-    <country>GB</country> 
-    <email>samtuke (at) fsfe (dot) org</email> 
-    <link>/about/tuke/tuke.html</link> 
-    <avatar>/about/tuke/tuke-avatar.jpg</avatar> 
-  </person> 
-
   <person id="verheesen" avatar="yes" teams="nl, core">
     <name>Maurice Verheesen</name>
     <country>NL</country>
@@ -598,8 +590,8 @@ ga">
 
   <person id="weiden" avatar="yes" association-member="yes" teams="ga">
     <name>Fernanda Weiden</name>
-    <country>CH</country>
-    <email>weiden (at) fsfeurope (dot) org</email>
+    <country>UK</country>
+    <email>nanda (at) fsfe (dot) org</email>
     <link>/about/weiden/weiden.html</link>
     <avatar>/about/weiden/weiden-avatar.jpg</avatar>
   </person>
@@ -616,15 +608,6 @@ ga">
     <name>Martin von Willebrand</name>
     <country>FI</country>
     <email>willebra (at) fsfe (dot) org</email>
-  </person>
-
-  <person id="woolfrey" avatar="yes" teams="gb">
-    <name>Chris Woolfrey</name>
-    <country>GB</country>
-    <function>fellowship-interviews/m</function>
-    <email>chriswoolfrey (at) fsfe (dot) org</email>
-    <link>http://chriswoolfrey.co.uk/</link>
-    <avatar>/about/woolfrey/woolfrey-avatar.jpg</avatar>
   </person>
 
   <person id="zanga" avatar="no" teams="it">

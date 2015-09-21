@@ -89,6 +89,9 @@ xhtml_maker(){
   shortbase="$(basename "$shortname")"
   processor="$(get_processor "$shortname")"
 
+  langglob="$filedir/._._${shortbase}.langglob"
+  cast_langglob "$shortname" "$langglob"
+
   [ -f "$shortname".rss.xsl ] && bool_rss=true || bool_rss=false
   [ -f "$shortname".ics.xsl ] && bool_ics=true || bool_ics=false
 
@@ -121,7 +124,7 @@ xhtml_maker(){
 
     cat <<MakeEND
 all: $(mes "$outfile" "$outlink")
-$(mes "$outfile"): $(mes "$depfile" "$processor" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" "$sourceglobs")
+$(mes "$outfile"): $(mes "$depfile" "$processor" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" "$sourceglobs" "$langglob")
 	\${PROCESSOR} \${PROCFLAGS} process_file "${infile}" "$(mio "$processor")" "$olang" >"$outfile"
 $(mes "$outlink"):
 	ln -sf "${outbase}" "${outlink}"

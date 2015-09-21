@@ -125,14 +125,6 @@ auto_sources(){
   | sed -r 's:^([^\t]+)\t[^<]*(< *[^ >]+)([^>]*>):\2 filename="\1" \3:'
 }
 
-#cast_globfile(){
-#  sourceglobfile="$1"
-#  lang="$2"
-#  globfile="$3"
-#
-#  list_sources "###" "$lang" "$(cat "$sourceglobfile")" >"$globfile"
-#}
-
 lang_sources(){
   sourceglobfile="$1"
   lang="$2"
@@ -144,10 +136,22 @@ cast_refglobs(){
   globfile="$1"
   reffile="$2"
 
-  if [ -s "$globfile" ] && diff "$globfile" "$reffile" >/dev/null; then
+  if [ -s "$globfile" ] && diff -q "$globfile" "$reffile" >/dev/null; then
     incfile="$(cat "$globfile" |xargs -d\\n ls -t |sed -n '1p')"
     [ "$incfile" -nt "$globfile" ] && touch "$globfile" || true
   else
     cp "$globfile" "$reffile"
+  fi
+}
+
+cast_langglob(){
+  shortname="$1"
+  langglob="$2"
+
+  langsources="$(printf %s\\n "${shortname}".*.xhtml)"
+  if [ -e "$langglob" ] && printf %s "$langsources" |diff -q - "$langglob" >/dev/null; then
+    true
+  else
+    printf %s "$langsources" >"$langglob"
   fi
 }

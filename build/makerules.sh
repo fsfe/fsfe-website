@@ -187,7 +187,7 @@ copy_makers(){
   # generate copy rules for entire input tree
   sourcefind \! -name 'Makefile' \! -name '*.sourceglobs' \! -name '*.refglobs' \
              \! -name '*.sources' \! -name '*.xhtml' \! -name '*.xml' \
-             \! -name '*.xsl' \! -name 'tagmap' \
+             \! -name '*.xsl' \! -name 'tagmap' \! -name '*.langglob' \
   | while read filepath; do
     copy_maker "$filepath" "$(dirname "$filepath")"
   done 

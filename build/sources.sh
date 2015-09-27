@@ -136,11 +136,15 @@ cast_refglobs(){
   globfile="$1"
   reffile="$2"
 
-  if [ -s "$globfile" ] && diff -q "$globfile" "$reffile" >/dev/null; then
+  read globsize refsize <<-x
+	$(stat --printf=\ %s "$globfile" "$reffile" 2>/dev/null)
+	x
+
+  if [ "$globsize" != "$refsize" ]; then
+    cp "$globfile" "$reffile"
+  elif [ "$globsize" -gt 0 ] && diff -q "$globfile" "$reffile" >/dev/null; then
     incfile="$(cat "$globfile" |xargs -d\\n ls -t |sed -n '1p')"
     [ "$incfile" -nt "$reffile" ] && touch "$reffile" || true
-  else
-    cp "$globfile" "$reffile"
   fi
 }
 

@@ -9,7 +9,6 @@ activities/*/project:[]
 campaigns/*/project:[]
 contact/local:[]
 
-# tags that match country codes
-news/*/news:[[a-z]{2}]
-news/generated_xml/:[[a-z]{2}]
-events/*/event:[[a-z]{2}]
+news/*/news:[education]
+news/generated_xml/:[education]
+events/*/event:[education]

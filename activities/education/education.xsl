@@ -8,17 +8,6 @@
   <xsl:import href="../../fsfe.xsl" />
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
 
-  <!-- To localise this page to a new country, copy this file and change the following:
-  
-    # <xsl:variable name="country-code">de</xsl:variable> -> change xx to your country code
-    
-    For more information, take a look at the documentation at
-        http://fsfe.org/contribute/web/tagging.html
-    
-  -->
-  
-  <xsl:variable name="country-code">education</xsl:variable>
-  
   <!--display labels-->
 
   <!--translated word "news"-->
@@ -107,7 +96,7 @@
     <xsl:template match="country-news">
         <xsl:call-template name="fetch-news">
             <xsl:with-param name="tag">
-                <xsl:value-of select="$country-code" />
+                <xsl:value-of select="education" />
             </xsl:with-param>
             <xsl:with-param name="nb-items" select="3" />
         </xsl:call-template>
@@ -119,7 +108,7 @@
         <xsl:call-template name="fetch-events">
             <xsl:with-param name="wanted-time" select="'present'" />
             <xsl:with-param name="tag">
-                <xsl:value-of select="$country-code" />
+                <xsl:value-of select="education" />
             </xsl:with-param>
             <xsl:with-param name="display-details" select="'yes'" />
         </xsl:call-template>
@@ -129,7 +118,7 @@
             <xsl:with-param name="wanted-time" select="'future'" />
             <xsl:with-param name="nb-items" select="3" />
             <xsl:with-param name="tag">
-                <xsl:value-of select="$country-code" />
+                <xsl:value-of select="education" />
             </xsl:with-param>
             <xsl:with-param name="display-details" select="'yes'" />
         </xsl:call-template>
@@ -139,7 +128,7 @@
     <xsl:template match="country-team-list">
         <xsl:call-template name="country-people-list">
             <xsl:with-param name="team">
-                <xsl:value-of select="$country-code" />
+                <xsl:value-of select="education" />
             </xsl:with-param>
         </xsl:call-template>
     </xsl:template>

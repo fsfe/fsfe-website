@@ -21,7 +21,7 @@ too_xml := $(addprefix ./generated_xml/, $(first_step:.xhtml=.xml))
 all: $(too_xml) remove_artifacts
 
 generated_xml/%.xml: $(sources)
-	for FILE in $?; do if [ "$$FILE" = "$(ACTUAL_PREREQUISITE)" ]; then $(TRANSFORM); else touch $@ ;  fi; done
+	for FILE in $?; do if [ "$$FILE" = "$(ACTUAL_PREREQUISITE)" ]; then $(TRANSFORM); fi; done
 
 # Remove xml files for files thas are no longer in CVS
 .PHONY: remove_artifacts

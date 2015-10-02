@@ -1455,7 +1455,7 @@ img.signatory-logo{padding:10px}
 #events .entry h3{display:inline-block}
 #events .entry p.date{color:#999;font-size:.9em;display:block;margin-bottom:0}@media (min-width:768px){#events .entry p.date{display:inline-block;padding:0}}@media (min-width:768px){#events .entry p.date{display:block}}
 #events a.learn-more{line-height:2}
-@media (min-width:768px){#news,#events{display:inline-block;float:left;width:69%} #newsletter,#shop-promo,.country.frontpage #teams{display:inline-block;float:right;width:30%;padding-left:2%;clear:none;padding-top:0}}#newsletter input,.newsletter #sidebar input{display:block;margin:.5em 0}
+@media (min-width:768px){#news,#events{display:inline-block;float:left;width:69%} #team{display:inline-block;float:left} #newsletter,#shop-promo,.country.frontpage #teams{display:inline-block;float:right;width:30%;padding-left:2%;clear:none;padding-top:0}}#newsletter input,.newsletter #sidebar input{display:block;margin:.5em 0}
 #feeds a.ical,#feeds a.rss-feed{font-size:85%;color:#999}
 .testimonial{overflow:auto;clear:both}
 .testimonial img{float:left;margin-right:10px}

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html>
+  <head>
+    <title>FSFE topluluk etkinliğinizi duyurun</title>
+  </head>
+  <body>
+ 
+    <h1>FSFE topluluk etkinliğinizi duyurun</h1>
+
+    <div id="introduction">
+      <p>Bir FSFE faaliyetleriyle ilişkili bütün etkinliklerinizi duyurmak için aşağıdaki formu kullanabilirsiniz. İster bir buluşma veya söyleşi olsun, isterse sokaklardaki bir stand veya radyodaki bir yayın olsun, topluluğu ve dünyayı yapılanlardan haberdar kılın.</p>
+
+    </div>
+
+    <!--<h2>Kayıt</h2>-->
+
+    <form action="/cgi-bin/registerevent.php" method="POST" class="register_event fsfe-form" enctype="multipart/form-data" role="form">
+      <input name="register_event" type="hidden" />
+
+	<!--<fieldset id="register_event">-->
+
+        <label for="name" class="required">Adınız<span class="star">*</span></label>
+        <input name="name" value="" required="required" type="text" />
+
+        <label for="email" class="required">E-postanız<span class="star">*</span></label>
+        <input name="email" value="" required="required" type="email" /> 
+
+        <p class="help-block">Kişisel bilgileriniz hiç bir şekilde paylaşılmayacak ve satılmayacaktır. Herhangi bir sorun veya geri arama olduğunda sizinle bağlantı kurmak için kullanılacaktır.</p>
+
+        <!--<label for="groupname">Grup adı</label>
+        <input name="groupname" value="" type="text" />-->
+
+        <!--<label for="groupurl">Grup URL</label>
+        <input name="groupurl" value="" type="text" />-->
+
+        <label for="title" class="required">Etkinlik adı<span class="star">*</span></label>
+        <input name="title" value="" required="required" type="text" />
+		<table>
+			<tr>
+			<td>
+				<label for="startdate" class="required">Başlangıç tarihi<span class="star">*</span></label>
+				<input name="startdate" value="" required="required" type="date" placeholder="YYYY-AA-GG" />
+			</td>
+			<td>
+				<label for="enddate" >Bitiş tarihi</label>
+				<input name="enddate" value="" type="date" placeholder="YYYY-AA-GG" />
+			</td>
+			</tr>
+		</table>
+        <label for="description" class="required">Açıklama<span class="star">*</span></label>
+        <textarea name="description" required="required"></textarea>
+
+        <p class="help-block">Lütfen etkinliğinizin kapsamı, katılımcıların nasıl katılabileceği ve ne beklemesi gerektiği hakkında kısaca bilgi veriniz. Eğer etkinliğinizi İngilizce dışında bir dilde kaydediyorsanız, ayrıca <strong>bizim de anlamamızı güvence altına almak için</strong> İngilizce bir sürümü de yüklemeyi göz önünde bulundurun. Ayrıca (teknik nedenlerden dolayı) fsfe.org anasayfamızda yalnızca İngilizce etkinlik girdilerini listelediğimizi de söyleyelim. Diğer dildeki girdiler sadece fsfe.org/events sayfasında görünmektedir.</p>
+
+        <label for="url">Etkinlik URL</label>
+        <input name="url" value="" type="text" />
+
+        <!--<label for="location">Etkinlik yeri</label>
+        <input name="location" value="" type="text" />-->
+
+
+        <!-- Please give more guidance - make sure that the format is correct because these will be used to generate tags also -->
+
+        <label for="city">Şehir<span class="star">*</span></label>
+        <input name="city" value="" required="required" type="text" />
+
+        <label for="country">Ülke<span class="star">*</span></label>
+        <input name="country" value="" required="required" type="text" />
+
+        <!--</fieldset>-->
+	<!-- Should help against spam -->
+		
+	<input value="Etkinliği ekle" name="submit" type="submit" />
+	<p class="help-block"><span class="star">*</span> = zorunlu alanlar</p>
+
+    </form>
+    
+    <p>Siz formu doldurup "Etkinliği ekle" düğmesiyle onayladıktan sonra, bir XML dosyası üretilerek bize gönderilecektir. Onaylanması durumunda, etkinlik girdiniz sisteme yüklenecek ve sonraki 48 saat içerisinde fsfe.org ve/veya fsfe.org/events sayfalarında görünecektir. Her türdeki Özgür Yazılım etkinliklerini (ne kadar önemli olursa olsun istisnasız) değil de yalnızca FSFE ve FSFE topluluğuyla ilişkili etkinlikleri desteklediğimizi unutmayın.</p> 
+     
+  </body>
+ </html>

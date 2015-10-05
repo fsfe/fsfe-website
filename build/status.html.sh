@@ -49,6 +49,7 @@ term_status=$(if [ "$duration" -gt 0 -a lasterror -nt start_time ]; then
 
 printf %s\\n\\n "Content-Type: text/html;charset=utf-8"
 cat <<HTML_END
+<!DOCTYPE HTML>
 <html>
   <head>
     <title>Build status</title>
@@ -152,6 +153,16 @@ label  {
       <dt>Duration:</dt><dd>$([ "$duration" -gt 0 ] && duration ${duration})</dd>
       <dt>Termination Status:</dt><dd>${term_status:-running...}</dd>
     </dl>
+
+    <h2>Previous builds</h2>$(
+      web_tab prev_tab '' "$(
+        ls -t status_*.html |head -n10 |while read stat; do
+          t="${stat#status_}"
+          t="${t%.html}"
+          printf '%s' "<a href=\"$stat\">$(timestamp "$t")</a> - $(sed -rn 's;^.*<dt>Duration:</dt><dd>(.+)</dd>.*$;\1;p;T;q' "$stat")<br>"
+        done
+      )"
+    )
 
     <h2>SVN changes</h2>$(
     if [ ${start_time} -lt ${t_svnupdate} ]; then

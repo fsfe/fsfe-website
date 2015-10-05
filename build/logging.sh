@@ -28,6 +28,13 @@ logstatus(){
   tee "$(logname "$1")"
 }
 
+t_logstatus(){
+  # pipeline atom to write data streams into a log file
+  while read line; do
+    printf "[$(date +%T)] %s\n" "$line"
+  done |logstatus "$@"
+}
+
 logappend(){
   # pipeline atom to write data streams into a log file
   tee -a "$(logname "$1")"

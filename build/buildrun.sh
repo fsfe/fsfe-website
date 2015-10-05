@@ -18,7 +18,7 @@ build_into(){
   validate_caches
 
   make -j $ncpu -C "$basedir" \
-  | logstatus premake
+  | t_logstatus premake
 
   dir_maker "$basedir" "$stagedir"
 
@@ -30,13 +30,18 @@ build_into(){
   | logstatus removed
 
   make -j $ncpu -f "$(logname Makefile)" all \
-  | logstatus buildlog
+  | t_logstatus buildlog
 
   [ "$stagedir" != "$target" ] && \
     rsync -av --del "$stagedir/" "$target/" \
-    | logstatus stagesync
+    | t_logstatus stagesync
 
   date +%s |logstatus end_time
+  if [ -n "$statusdir" ]; then
+    cd "$statusdir"
+    ./index.cgi |tail -n+3 >status_$(date +%s).html
+    cd -
+  fi
 }
 
 svn_build_into(){

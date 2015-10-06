@@ -34,7 +34,7 @@ my %names = (
   "kirschner" => "Matthias Kirschner",
   "mueller" => "Reinhard Müller",
   "roy" => "Hugo Roy",
-  "sandklef" => "Henrik Sandklef",
+  "rubini" => "Alessandro Rubini",
   "sliwinski" => "Ulrike Sliwinski",
   "suklje" => "Matija Šuklje",
 );

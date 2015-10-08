@@ -4,7 +4,10 @@
   <head>
     <title>FSFE - Free Software Foundation Europe</title>
     <script src="/scripts/jquery.cycle2.min.js" type="text/javascript"></script>
+    <meta name="description" content="Organização sem fins lucrativos dedicada à promoção do software livre que trabalha pela liberdade na sociedade da informação. Inclui notícias, eventos e campanhas." />
+    <meta name="keywords" content="fsfe software livre código aberto foss floss oss fsf governo setor sector público gpl" />
   </head>
+
   <body class="frontpage" id="index-html">
 
         <campaigns />
@@ -14,9 +17,9 @@
     <div id="feeds">
       <div id="news" class="section">
         <h2>
-          <a class="rss-feed" href="/news/news.rss"><img src="/graphics/rss.png" alt="News RSS" title="news RSS feed" /></a>
-          <a class="ical" href="http://identi.ca/fsfe"><img src="/graphics/identica.png" alt="identica" title="follow FSFE on identi.ca"/></a>
           <a href="/news/news.html"><news-label /></a>
+          <a class="rss-feed" href="/news/news.rss" title="news RSS feed"><i class="fa fa-rss"></i></a>
+          <a class="ical" href="http://identi.ca/fsfe" title="follow FSFE on identi.ca"><i class="fa fa-comments-o"></i></a>
         </h2>
 
         <all-news />
@@ -25,31 +28,41 @@
       <div id="newsletter" class="section">
         <h2><a href="/news/newsletter.html"><newsletter-label /></a></h2>
 
-        <div class="entry">
-          <p>
-            <strong><receive-newsletter />:</strong>
-          </p>
 
           <subscribe-nl />
 
-          <ul>
-            <all-newsletters />
-            <li><a href="news/newsletter.html"><more-label />...</a></li>
+          <ul id="more-news-list">
+              <li><a href="/news/news.html" class="learn-more">Ver todas as notícias</a></li>
+              <li><a href="http://planet.fsfe.org/en" class="learn-more">Ler os blogues da FSFE</a></li>
           </ul>
-        </div>
+
+          <a class="big-donate" href="donate/donate.html#ref-frontpage">Doar à FSFE</a>
+
       </div>
+
+      <hr />
 
       <div id="events" class="section">
         <h2>
-          <a class="rss-feed" href="/events/events.rss"><img src="/graphics/rss.png" alt="Events RSS" title="events RSS feed" /></a>
-          <a class="ical" href="webcal://fsfe.org/events/events.ics"><img src="/graphics/ical.png" alt="iCal" title="FSFE events as iCal feed" /></a>
           <a href="/events/events.html"><events-label /></a>
+          <a class="rss-feed" href="/events/events.rss" title="events RSS feed"><i class="fa fa-rss"></i></a>
+          <a class="ical" href="webcal://fsfe.org/events/events.ics" title="FSFE events as iCal feed"><i class="fa fa-calendar-o"></i></a>
         </h2>
 
         <all-events />
       </div>
+
+      <div id="shop-promo" class="section">
+          <img src="/graphics/tshirt-promo.jpg" alt="" />
+
+          <a class="big-donate" href="/order/order.html#ref-frontpage">Loja</a>
+      </div>
+
     </div>
   </body>
+
+  <!--Do not translate this ↓-->
+  <followup>join</followup>
 
   <timestamp>$Date$ $Author$</timestamp>
 </html> 

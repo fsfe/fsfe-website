@@ -126,10 +126,10 @@ auto_sources(){
 }
 
 lang_sources(){
-  sourceglobfile="$1"
+  sourcesfile="$1"
   lang="$2"
 
-  list_sources "###" "$lang" "$(cat "$sourceglobfile")"
+  list_sources "$sourcesfile" "$lang"
 }
 
 cast_refglobs(){

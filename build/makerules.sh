@@ -38,19 +38,13 @@ glob_maker(){
 
   filedir="\${INPUTDIR}/$(dirname "$sourcesfile")"
   shortbase="$(basename "$sourcesfile" |sed -r 's;\.sources$;;')"
-  sourceglobfile="${filedir%/.}/._._${shortbase}.sourceglobs"
-
-  cat <<MakeEND
-$(mes "$sourceglobfile"): $(mes "\${INPUTDIR}/tagmap" "\${INPUTDIR}/$sourcesfile")
-	\${PGLOBBER} \${PROCFLAGS} sourceglobs "\${INPUTDIR}/$sourcesfile" >"$sourceglobfile"
-MakeEND
 
   for lang in $(get_languages); do
     globfile="${filedir%/.}/._._${shortbase}.${lang}.sourceglobs"
     refglobs="${filedir%/.}/._._${shortbase}.${lang}.refglobs"
     cat <<MakeEND
-$(mes "$globfile"): $(mes "$sourceglobfile")
-	\${PGLOBBER} \${PROCFLAGS} lang_sources "$sourceglobfile" "$lang" >"$globfile"
+$(mes "$globfile"): $(mes "\${INPUTDIR}/tagmap" "\${INPUTDIR}/$sourcesfile")
+	\${PGLOBBER} \${PROCFLAGS} lang_sources "\${INPUTDIR}/$sourcesfile" "$lang" >"$globfile"
 $(mes "$refglobs"): $(mes "$globfile")
 	\${PGLOBBER} \${PROCFLAGS} cast_refglobs "$globfile" "$refglobs"
 MakeEND

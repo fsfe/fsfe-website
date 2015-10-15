@@ -12,8 +12,11 @@ web_tab(){
   tabname="$1"
   tablabel="$2"
   tabcontent="$3"
+  [ -n "$4" ] && checked='checked="checked"' || checked=''
+
   cat <<EOF
-<input type="checkbox" class="tabhandle" id="$tabname"><label class="$([ -n "$tabcontent" ] && echo filled)" for="$tabname">${tablabel}</label>
+<input type="checkbox" class="tabhandle" id="$tabname" ${checked}
+><label class="$([ -n "$tabcontent" ] && echo filled)" for="$tabname">${tablabel}</label>
 <div class="tabcontent">${tabcontent}</div>
 EOF
 }
@@ -166,7 +169,7 @@ label  {
 
     <h2>SVN changes</h2>$(
     if [ ${start_time} -lt ${t_svnupdate} ]; then
-      web_tab SVN_tab "at $(timestamp ${t_svnupdate})" "<pre>$(htmlcat SVNlatest)</pre>"
+      web_tab SVN_tab "at $(timestamp ${t_svnupdate})" "<pre>$(htmlcat SVNlatest)</pre>" checked
     else
       web_tab SVN_tab "Unconditional build, changes ignored" ""
     fi)

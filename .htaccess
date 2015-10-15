@@ -10,6 +10,9 @@ RewriteRule ^campaigns/ayc(.*) /campaigns/askyourcandidates$1 [redirect=permanen
 # NoCloud campaign, as printed on posters
 RewriteRUle ^nocloud(/.*)?	/activities/nocloud$1	[redirect=permanent]
 
+# Short cut for promo order
+RewriteRUle ^promo(/.*)?	/contribute/spreadtheword$1	[redirect=permanent]
+
 # Redirect convince your friends easy pages to the wiki page
 RewriteRule   ^(cyf|convince).*      http://wiki.fsfe.org/ConvinceYourFriends        [R=permanent]
 

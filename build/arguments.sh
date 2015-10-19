@@ -4,7 +4,7 @@
 
 if [ -z "$inc_arguments" ]; then
   inc_arguments=true
-  basedir="$(realpath "$(dirname "$0")/..")"
+  basedir="$(realpath "${0%/*}/..")"
 
   while [ "$#" -gt 0 ]; do
     case "$1" in

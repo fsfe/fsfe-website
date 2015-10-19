@@ -36,7 +36,7 @@ glob_maker(){
   # issue make rules for preglobbed sources files
   sourcesfile="$1"
 
-  filedir="\${INPUTDIR}/$(dirname "$sourcesfile")"
+  filedir="\${INPUTDIR}/${sourcesfile%/*}"
   shortbase="$(basename "$sourcesfile" |sed -r 's;\.sources$;;')"
 
   for lang in $(get_languages); do
@@ -80,8 +80,8 @@ xhtml_maker(){
   textsen="$(get_textsfile "en")"
   localmenufile="$basedir/localmenuinfo.xml"
   menufile="$basedir/tools/menu-global.xml"
-  filedir="$(dirname "$shortname")"
-  shortbase="$(basename "$shortname")"
+  filedir="${shortname%/*}"
+  shortbase="${shortname##*/}"
   processor="$(get_processor "$shortname")"
 
   langglob="$filedir/._._${shortbase}.langglob"
@@ -92,7 +92,7 @@ xhtml_maker(){
 
   olang="$(echo "${shortname}".[a-z][a-z].xhtml "${shortname}".[e]n.xhtml |sed -rn 's;^.*\.([a-z]{2})\.xhtml.*$;\1;p')"
 
-  if [ "${shortbase}" = "$(basename "$filedir")" ] && \
+  if [ "${shortbase}" = "${filedir##*/}" ] && \
      [ ! -f "${filedir}/index.${olang}.xhtml" ]; then
     bool_indexname=true
   else
@@ -150,7 +150,7 @@ xhtml_makers(){
   | sed -r 's;\.[a-z][a-z]\.xhtml$;;' \
   | sort -u \
   | while read shortpath; do
-    xhtml_maker "$shortpath" "$(dirname "$shortpath")"
+    xhtml_maker "$shortpath" "${shortpath%/*}"
   done 
 }
 
@@ -169,7 +169,7 @@ copy_maker(){
   infile="\${INPUTDIR}/$1"
   outpath="\${OUTPUTDIR}/${2}"
   outpath="${outpath%/.}"
-  outfile="$outpath/$(basename "$infile")"
+  outfile="$outpath/${infile##*/}"
 
   cat <<MakeEND
 all: $(mes "$outfile")
@@ -184,7 +184,7 @@ copy_makers(){
              \! -name '*.sources' \! -name '*.xhtml' \! -name '*.xml' \
              \! -name '*.xsl' \! -name 'tagmap' \! -name '*.langglob' \
   | while read filepath; do
-    copy_maker "$filepath" "$(dirname "$filepath")"
+    copy_maker "$filepath" "${filepath%/*}"
   done 
 }
 
@@ -214,7 +214,7 @@ xslt_maker(){
   # Make dependencies accordingly
 
   file="$input/$1"
-  dir="$(dirname "$file")"
+  dir="${file%/*}"
 
   deps="$( xslt_dependencies "$file" |xargs -I'{}' realpath "$dir/{}" )"
   cat <<MakeEND
@@ -245,7 +245,7 @@ copy_sources(){
   # the public source directory
   sourcefind -name '*.xhtml' \
   | while read filepath; do
-    copy_maker "$filepath" "source/$(dirname "$filepath")"
+    copy_maker "$filepath" "source/${filepath%/*}"
   done
 }
 
@@ -286,7 +286,7 @@ MakeHead
   forcelog Make_sourcecopy; Make_sourcecopy="$(logname Make_sourcecopy)"
                             Make_xhtml="$(logname Make_xhtml)"
 
-  trap "trap - 0 2 3 6 9 15; killall \"$(basename "$0")\"" 0 2 3 6 9 15
+  trap "trap - 0 2 3 6 9 15; killall \"${0##*/}\"" 0 2 3 6 9 15
 
   [ "$regen_globs" = false -a -s "$Make_globs" ] && \
      glob_additions "$@" >>"$Make_globs" \

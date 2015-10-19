@@ -1,6 +1,6 @@
 #!/bin/sh
 
-basedir="$(dirname "$0")/.."
+basedir="${0%/*}/.."
 [ -z "$inc_misc" ] && . "$basedir/build/misc.sh"
 readonly start_time="$(date +%s)"
 

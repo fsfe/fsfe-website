@@ -78,11 +78,19 @@
 	    </xsl:element>
 	  </xsl:for-each>
 	</xsl:element> <!-- select -->
+  
+  <!-- get translation for "email address" -->
+  <xsl:variable name="email">
+    <xsl:call-template name="gettext">
+      <xsl:with-param name="id" select="'email'" />
+    </xsl:call-template>
+  </xsl:variable>
+  
 	<xsl:element name="input">
 	  <xsl:attribute name="id">email</xsl:attribute>
 	  <xsl:attribute name="name">email</xsl:attribute>
 	  <xsl:attribute name="type">email</xsl:attribute>
-	  <xsl:attribute name="placeholder">email address</xsl:attribute>
+	  <xsl:attribute name="placeholder"><xsl:value-of select="$email" /></xsl:attribute>
 	</xsl:element> <!-- input -->
 	<xsl:call-template name="subscribe-button" />
       </xsl:element> <!-- p -->

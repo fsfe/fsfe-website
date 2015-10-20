@@ -32,6 +32,7 @@ my %names = (
   "gollowitzer" => "Martin Gollowitzer",
   "kersten" => "Rainer Kersten",
   "kirschner" => "Matthias Kirschner",
+  "mehl" => "Max Mehl",
   "mueller" => "Reinhard Müller",
   "roy" => "Hugo Roy",
   "rubini" => "Alessandro Rubini",

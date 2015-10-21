@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html newsdate="2015-10-22">
+	<head>
+	<title>Testing automatic news release</title>
+	</head>
+
+<body class="press release">
+
+<h1>Test for nightly news updates</h1>
+
+<p newsteaser="yes">
+If you can read this, the build scripts 4wt0m4t1c n3wZ r3134z0r ran through.
+</p>
+
+<p>
+OK, there is a difference to the old build script. The old build script 
+simply ran through at midnight the same way it ran whenever there was 
+a change to the SVN. At the occasion it rebuilt all pages and thus 
+included updates to news, events, etc.
+</p><p>
+Simply running the build doesn't cover it with the new script though. 
+That is because files that don't change don't get updated, not at 
+midnight, not at a scheduled time, not on an unrelated commit, not 
+ever.
+</p><p>
+Until now I didn't understand the way, the nightly news releases used 
+to work. The tricky thing that I see now, is that the XSLT rules 
+contain selection mechanisms which allow them to produce different 
+output at diferent times, even if all input files are the same.
+</p><p>
+The dependency based build however does not (and should not) attempt to
+rebuild a page if all its input files are the same as at the time of 
+the last run.
+</p><p>
+For now I simply forced an update of the news item and all dependent 
+pages (i.e. the front page, the news page, and the rss feeds) by 
+changing a white space in the news file, and commiting it.
+</p><p>
+I'll think of something to enable automatic news releases again.
+</p>
+
+<p>
+News items that are in the future at the time of their commit are not
+considered for the content of dependent files (e.g. news.html, index.html).
+This function performs a `touch` on all files which are to be released at
+the presented date, thus forcing a subsequent buildrun to rebuild dependent
+files even though the input files may not have changed their content.
+The date option defaults to the present date, if given it must adhere to
+the form YYYY-MM-DD.
+</p>
+  
+</body>
+
+<tags>
+   <tag>front-page</tag>
+</tags>
+</html>

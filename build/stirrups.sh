@@ -59,3 +59,13 @@ remove_orphans(){
     rm -v "$dtree/$file"
   done
 }
+
+wakeup_news(){
+  # Performs a `touch` on all files which are to be released at the
+  # presented date.
+  today="$1"
+
+  find "$basedir" -name '*.xml' \
+  | xargs egrep -l "<[^>]+ date=[\"']${today}[\"'][^>]*>" \
+  | xargs touch -c 2>&- || true
+}

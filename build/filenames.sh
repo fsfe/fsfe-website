@@ -44,7 +44,7 @@ get_processor(){
   else
     location="${shortname%/*}"
     until [ -f "$location/default.xsl" -o "$location" = . -o "$location" = / ]; do
-      location="${shortname%/*}"
+      location="${location%/*}"
     done
     echo "$location/default.xsl"
   fi

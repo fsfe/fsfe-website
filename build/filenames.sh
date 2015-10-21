@@ -36,7 +36,6 @@ get_processor(){
   # a given xhtml file.
   # expects the shortname of the file as input (i.e. the
   # the file path without language and file endings)
-  
   shortname="$1"
   
   if [ -f "${shortname}.xsl" ]; then

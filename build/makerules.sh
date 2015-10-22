@@ -36,12 +36,14 @@ glob_maker(){
   # issue make rules for preglobbed sources files
   sourcesfile="$1"
 
-  filedir="\${INPUTDIR}/${sourcesfile%/*}"
-  shortbase="$(basename "$sourcesfile" |sed -r 's;\.sources$;;')"
+  filedir="\${INPUTDIR}/${sourcesfile}"
+  filedir="${filedir%/*}"
+  shortbase="${sourcesfile##*/}"
+  shortbase="${shortbase%.sources}"
 
   for lang in $(get_languages); do
-    globfile="${filedir%/.}/._._${shortbase}.${lang}.sourceglobs"
-    refglobs="${filedir%/.}/._._${shortbase}.${lang}.refglobs"
+    globfile="${filedir}/._._${shortbase}.${lang}.sourceglobs"
+    refglobs="${filedir}/._._${shortbase}.${lang}.refglobs"
     cat <<MakeEND
 $(mes "$globfile"): $(mes "\${INPUTDIR}/tagmap" "\${INPUTDIR}/$sourcesfile")
 	\${PGLOBBER} \${PROCFLAGS} lang_sources "\${INPUTDIR}/$sourcesfile" "$lang" >"$globfile"
@@ -75,7 +77,7 @@ xhtml_maker(){
 
   shortname="$input/$1"
   outpath="\${OUTPUTDIR}/${2}"
-  outpath="${outpath%/.}"
+  outpath="${outpath%/*}"
 
   textsen="$(get_textsfile "en")"
   localmenufile="$basedir/localmenuinfo.xml"
@@ -150,7 +152,7 @@ xhtml_makers(){
   | sed -r 's;\.[a-z][a-z]\.xhtml$;;' \
   | sort -u \
   | while read shortpath; do
-    xhtml_maker "$shortpath" "${shortpath%/*}"
+    xhtml_maker "$shortpath" "${shortpath}"
   done 
 }
 
@@ -160,16 +162,14 @@ xhtml_additions(){
   | sort -u \
   | xargs realpath \
   | while read addition; do
-    xhtml_maker "${addition#$input/}" "$(dirname "${addition#$input/}")"
+    xhtml_maker "${addition#$input/}" "${addition#$input/}"
   done
 }
 
 copy_maker(){
   # generate make rule for copying a plain file
   infile="\${INPUTDIR}/$1"
-  outpath="\${OUTPUTDIR}/${2}"
-  outpath="${outpath%/.}"
-  outfile="$outpath/${infile##*/}"
+  outfile="\${OUTPUTDIR}/$2"
 
   cat <<MakeEND
 all: $(mes "$outfile")
@@ -184,7 +184,7 @@ copy_makers(){
              \! -name '*.sources' \! -name '*.xhtml' \! -name '*.xml' \
              \! -name '*.xsl' \! -name 'tagmap' \! -name '*.langglob' \
   | while read filepath; do
-    copy_maker "$filepath" "${filepath%/*}"
+    copy_maker "$filepath" "$filepath"
   done 
 }
 
@@ -193,7 +193,7 @@ copy_additions(){
   | egrep -v '.+(\.sources|\.sourceglobs|\.refglobs|\.xhtml|\.xml|\.xsl|/Makefile|/)$' \
   | xargs realpath \
   | while read addition; do
-    copy_maker "${addition#$input/}" "$(dirname "${addition#$input/}")"
+    copy_maker "${addition#$input/}" "${addition#$input/}"
   done
 }
 
@@ -245,7 +245,7 @@ copy_sources(){
   # the public source directory
   sourcefind -name '*.xhtml' \
   | while read filepath; do
-    copy_maker "$filepath" "source/${filepath%/*}"
+    copy_maker "$filepath" "source/$filepath"
   done
 }
 
@@ -254,7 +254,7 @@ copy_sourceadditions(){
   | egrep '.+\.xhtml$' \
   | xargs realpath \
   | while read addition; do
-    copy_maker "${addition#$input/}" "source/$(dirname "${addition#$input/}")"
+    copy_maker "${addition#$input/}" "source/${addition#$input/}"
   done
 }
 

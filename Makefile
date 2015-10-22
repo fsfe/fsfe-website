@@ -32,16 +32,9 @@ sources := $(shell grep -l -R --include='*.xhtml' $(SELECT) . )
 
 localmenus: localmenuinfo.xml
 
-$(HELPERFILE) :
-	rm -f $(HELPERFILE)
+localmenuinfo.xml: $(sources)
 	echo \<localmenuset\> > $(HELPERFILE)
 	grep -R --include='*.xhtml' $(SELECT) .| sed -e 's,$(FIND),$(REPLACE),' >> $(HELPERFILE)
 	echo \</localmenuset\> >> $(HELPERFILE)
-
-localmenuinfo.xml: $(HELPERFILE) $(sources)
 	xsltproc -o $@ $(STYLESHEET) $(HELPERFILE) 
-	rm -f $(HELPERFILE)
-
-%.html : %.xhtml $(HELPERFILE)
-	perl tools/bogus-build.pl $< | xsltproc -o $@ fsfeurope.xsl -
-
+	rm $(HELPERFILE)

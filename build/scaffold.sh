@@ -35,8 +35,8 @@ build_xmlstream(){
 	<buildinfo
 	  date="$date"
 	  original="$olang"
-	  filename="${shortname#$basedir}"
-	  dirname="${dirname#$basedir}"
+	  filename="${shortname#$basedir/}"
+	  dirname="${dirname#$basedir/}"
 	  language="$lang"
 	  outdated="$outdated"
 	>

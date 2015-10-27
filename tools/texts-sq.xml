@@ -4,6 +4,22 @@
 
 <!-- ALL STATIC TEXTS -->
 
+  <!-- Spreadtheword page -->
+  <text id="stw-type">Lloj</text>
+  <text id="stw-size">Madhësi</text>
+  <text id="stw-context">Informacion Konteksti</text>
+  <text id="stw-printed"><a href="#id-how-and-what-to-order">Porositni prej stokut tonë </a> në</text>
+  <text id="stw-printed-tooltip">Këto versione të shtypura mund t’i porositni te ne përmes formularit të porosive.</text>
+  <text id="stw-languages">Gati për shkarkim në </text>
+  <text id="stw-languages-tooltip">Nëse doni të përhapni informacion dhe materiale promocionale për ne në Internet, mos ngurroni t’i shkarkoni në gjuhët e gatshme.</text>
+  <text id="stw-license">Licencë</text>
+  <text id="stw-author">Autor</text>
+  <text id="stw-year">Viti</text>
+  <text id="stw-source">Kartela burim</text>
+  <text id="stw-source-tooltip">Mund të shkarkoni kartelat burim të këtij materiali promocional, për ta ndryshuar ose përkthyer. Ju lutemi, respektoni licencën për të.</text>
+  <text id="stw-printready">Kartela gati për shtypje</text>
+  <text id="stw-printready-tooltip">Këto janë kartelat që dërgojmë në shtypje, përfshi rrjedhjen dhe të tjera rregullimet specifike për shtypjen. Kjo këto kartela mund të jenë shumë të mëdha (~5-25MB).</text>
+
   <!-- Basic texts -->
   <text id="fsfeurope">Free Software Foundation&#160;Europe</text>
   <text id="fsfnetwork">
@@ -107,7 +123,7 @@
   <text id="search">Kërkoni</text>
   <text id="submit">Parashtroni</text>
   <text id="subscribe">Pajtohuni</text>
-<!-- !! MISSING TRANSLATION --> <text id="email">email address</text>
+  <text id="email">adresë email</text>
   <text id="news">Lajme</text>
   <text id="receive-newsletter">Pajtohuni te buletini mujor i FSFE-së</text>
   <text id="subscribe-newsletter">Pajtohuni te buletini</text>
@@ -210,6 +226,8 @@
     <campaign id="freesociety">
         <text>Software i Lirë, <br />Shoqëri e Lirë!</text>
         <link>/freesoftware/</link>
+        <author></author>
+        <copyright></copyright>
     </campaign>
     <campaign id="dfd">
         <photo>/graphics/robot-protest-light.png</photo>

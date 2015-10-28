@@ -36,12 +36,14 @@ glob_maker(){
   # issue make rules for preglobbed sources files
   sourcesfile="$1"
 
-  filedir="\${INPUTDIR}/$(dirname "$sourcesfile")"
-  shortbase="$(basename "$sourcesfile" |sed -r 's;\.sources$;;')"
+  filedir="\${INPUTDIR}/${sourcesfile}"
+  filedir="${filedir%/*}"
+  shortbase="${sourcesfile##*/}"
+  shortbase="${shortbase%.sources}"
 
   for lang in $(get_languages); do
-    globfile="${filedir%/.}/._._${shortbase}.${lang}.sourceglobs"
-    refglobs="${filedir%/.}/._._${shortbase}.${lang}.refglobs"
+    globfile="${filedir}/._._${shortbase}.${lang}.sourceglobs"
+    refglobs="${filedir}/._._${shortbase}.${lang}.refglobs"
     cat <<MakeEND
 $(mes "$globfile"): $(mes "\${INPUTDIR}/tagmap" "\${INPUTDIR}/$sourcesfile")
 	\${PGLOBBER} \${PROCFLAGS} lang_sources "\${INPUTDIR}/$sourcesfile" "$lang" >"$globfile"
@@ -75,12 +77,12 @@ xhtml_maker(){
 
   shortname="$input/$1"
   outpath="\${OUTPUTDIR}/${2}"
-  outpath="${outpath%/.}"
+  outpath="${outpath%/*}"
 
   textsen="$(get_textsfile "en")"
   menufile="$basedir/tools/menu-global.xml"
-  filedir="$(dirname "$shortname")"
-  shortbase="$(basename "$shortname")"
+  filedir="${shortname%/*}"
+  shortbase="${shortname##*/}"
   processor="$(get_processor "$shortname")"
 
   langglob="$filedir/._._${shortbase}.langglob"
@@ -91,7 +93,7 @@ xhtml_maker(){
 
   olang="$(echo "${shortname}".[a-z][a-z].xhtml "${shortname}".[e]n.xhtml |sed -rn 's;^.*\.([a-z]{2})\.xhtml.*$;\1;p')"
 
-  if [ "${shortbase}" = "$(basename "$filedir")" ] && \
+  if [ "${shortbase}" = "${filedir##*/}" ] && \
      [ ! -f "${filedir}/index.${olang}.xhtml" ]; then
     bool_indexname=true
   else
@@ -149,7 +151,7 @@ xhtml_makers(){
   | sed -r 's;\.[a-z][a-z]\.xhtml$;;' \
   | sort -u \
   | while read shortpath; do
-    xhtml_maker "$shortpath" "$(dirname "$shortpath")"
+    xhtml_maker "$shortpath" "${shortpath}"
   done 
 }
 
@@ -159,16 +161,14 @@ xhtml_additions(){
   | sort -u \
   | xargs realpath \
   | while read addition; do
-    xhtml_maker "${addition#$input/}" "$(dirname "${addition#$input/}")"
+    xhtml_maker "${addition#$input/}" "${addition#$input/}"
   done
 }
 
 copy_maker(){
   # generate make rule for copying a plain file
   infile="\${INPUTDIR}/$1"
-  outpath="\${OUTPUTDIR}/${2}"
-  outpath="${outpath%/.}"
-  outfile="$outpath/$(basename "$infile")"
+  outfile="\${OUTPUTDIR}/$2"
 
   cat <<MakeEND
 all: $(mes "$outfile")
@@ -183,7 +183,7 @@ copy_makers(){
              \! -name '*.sources' \! -name '*.xhtml' \! -name '*.xml' \
              \! -name '*.xsl' \! -name 'tagmap' \! -name '*.langglob' \
   | while read filepath; do
-    copy_maker "$filepath" "$(dirname "$filepath")"
+    copy_maker "$filepath" "$filepath"
   done 
 }
 
@@ -192,7 +192,7 @@ copy_additions(){
   | egrep -v '.+(\.sources|\.sourceglobs|\.refglobs|\.xhtml|\.xml|\.xsl|/Makefile|/)$' \
   | xargs realpath \
   | while read addition; do
-    copy_maker "${addition#$input/}" "$(dirname "${addition#$input/}")"
+    copy_maker "${addition#$input/}" "${addition#$input/}"
   done
 }
 
@@ -213,7 +213,7 @@ xslt_maker(){
   # Make dependencies accordingly
 
   file="$input/$1"
-  dir="$(dirname "$file")"
+  dir="${file%/*}"
 
   deps="$( xslt_dependencies "$file" |xargs -I'{}' realpath "$dir/{}" )"
   cat <<MakeEND
@@ -244,7 +244,7 @@ copy_sources(){
   # the public source directory
   sourcefind -name '*.xhtml' \
   | while read filepath; do
-    copy_maker "$filepath" "source/$(dirname "$filepath")"
+    copy_maker "$filepath" "source/$filepath"
   done
 }
 
@@ -253,7 +253,7 @@ copy_sourceadditions(){
   | egrep '.+\.xhtml$' \
   | xargs realpath \
   | while read addition; do
-    copy_maker "${addition#$input/}" "source/$(dirname "${addition#$input/}")"
+    copy_maker "${addition#$input/}" "source/${addition#$input/}"
   done
 }
 
@@ -285,7 +285,7 @@ MakeHead
   forcelog Make_sourcecopy; Make_sourcecopy="$(logname Make_sourcecopy)"
                             Make_xhtml="$(logname Make_xhtml)"
 
-  trap "trap - 0 2 3 6 9 15; killall \"$(basename "$0")\"" 0 2 3 6 9 15
+  trap "trap - 0 2 3 6 9 15; killall \"${0##*/}\"" 0 2 3 6 9 15
 
   [ "$regen_globs" = false -a -s "$Make_globs" ] && \
      glob_additions "$@" >>"$Make_globs" \

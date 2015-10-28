@@ -4,7 +4,7 @@
 
 if [ -z "$inc_arguments" ]; then
   inc_arguments=true
-  basedir="$(realpath "$(dirname "$0")/..")"
+  basedir="$(realpath "${0%/*}/..")"
 
   while [ "$#" -gt 0 ]; do
     case "$1" in
@@ -72,6 +72,10 @@ if [ -z "$inc_arguments" ]; then
         [ "$#" -gt 0 ] && shift 1 && globfile="$1"
         [ "$#" -gt 0 ] && shift 1 && reffile="$1"
         ;;
+      wakeup_news)
+        command="$1$command"
+        [ "$#" -gt 0 ] && shift 1 && today="$1"
+        ;;
       *)
         print_error "Unknown option: $1"
         exit 1
@@ -82,7 +86,8 @@ if [ -z "$inc_arguments" ]; then
   
   olang="${olang:-en}"
   tree="${tree:-$basedir}"
-  stagedir=${stagedir:-$target}
+  stagedir="${stagedir:-$target}"
+  today="${today:-$(date +%F)}"
   readonly tree="${tree:+$(realpath "$tree")}"
   readonly stagedir="${stagedir:+$(realpath "$stagedir")}"
   readonly basedir="${basedir:+$(realpath "$basedir")}"
@@ -98,8 +103,9 @@ if [ -z "$inc_arguments" ]; then
     tree_maker)      [ -z "$target" ]      && die "Missing target location" ;;
     sourceglobs)     [ -z "$sourcesfile" ] && die "Missing .sources file" ;;
     lang_sources)    [ -z "$sourceglobfile" -o -z "$lang" ] && die "Need source globfile and language" ;;
-    cast_refglobs)    [ -z "$globfile" -o -z "$reffile" ] && die "Need globfile and reffile" ;;
+    cast_refglobs)   [ -z "$globfile" -o -z "$reffile" ] && die "Need globfile and reffile" ;;
     map_tags)        true;;
+    wakeup_news)     true;;
     *help*)          print_help; exit 0 ;;
     *)               die "Urecognised command or no command given" ;;
   esac

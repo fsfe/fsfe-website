@@ -3,8 +3,8 @@ Usage:
 ------------------------------------------------------------------------------
 
 build_main.sh [options] build_into "destination_dir"
-  Perform the page build. Write output to destination_dir. The source directory
-  is determined from the build scripts own location.
+  Perform the page build. Write output to destination_dir. The source
+  directory is determined from the build scripts own location.
 
 build_main.sh [options] build_xmlstream "file.xhtml"
   Compile an xml stream from the specified file, additional sources will be
@@ -23,6 +23,15 @@ build_main.sh [options] tree_maker [input_dir] "destination_dir"
   the build scripts location.
   Note: if destination_dir is set via previous options, and only one paramter
   is given, then this parameter will be interpreted as input_dir
+
+build_main.sh [options] wakeup_news [date]
+  News items that are in the future at the time of their commit are not
+  considered for the content of dependent files (e.g. news.html, index.html).
+  This function performs a `touch` on all files which are to be released at
+  the presented date, thus forcing a subsequent buildrun to rebuild dependent
+  files even though the input files may not have changed their content.
+  The date option defaults to the present date, if given it must adhere to
+  the form YYYY-MM-DD.
 
 OPTIONS
 -------

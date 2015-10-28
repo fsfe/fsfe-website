@@ -1,6 +1,6 @@
 #!/bin/sh
 
-basedir="$(dirname "$0")/.."
+basedir="${0%/*}/.."
 [ -z "$inc_misc" ] && . "$basedir/build/misc.sh"
 readonly start_time="$(date +%s)"
 
@@ -32,6 +32,7 @@ fi
 [ -z "$inc_processor" ] && . "$basedir/build/processor.sh"
 [ -z "$inc_scaffold" ]  && . "$basedir/build/scaffold.sh"
 [ -z "$inc_sources" ]   && . "$basedir/build/sources.sh"
+[ -z "$inc_stirrups" ]  && . "$basedir/build/stirrups.sh"
 
 case "$command" in
   map_tags)        map_tags "$@";;
@@ -43,4 +44,5 @@ case "$command" in
   sourceglobs)     sourceglobs "$sourcesfile" ;;
   lang_sources)    lang_sources "$sourceglobfile" "$lang" ;;
   cast_refglobs)   cast_refglobs "$globfile" "$reffile" ;;
+  wakeup_news)     wakeup_news "$today" ;;
 esac

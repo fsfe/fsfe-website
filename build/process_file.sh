@@ -1,6 +1,6 @@
 #!/bin/sh
 
-basedir="$(dirname $0)/.."
+basedir="${0%/*}/.."
 [ -z "$inc_processor" ] && . "$basedir/build/processor.sh"
 
 . "$basedir/build/arguments.sh"

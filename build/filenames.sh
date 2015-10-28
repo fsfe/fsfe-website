@@ -36,15 +36,14 @@ get_processor(){
   # a given xhtml file.
   # expects the shortname of the file as input (i.e. the
   # the file path without language and file endings)
-  
   shortname="$1"
   
   if [ -f "${shortname}.xsl" ]; then
     echo "${shortname}.xsl"
   else
-    location="$(dirname "$shortname")" 
+    location="${shortname%/*}"
     until [ -f "$location/default.xsl" -o "$location" = . -o "$location" = / ]; do
-      location="$(dirname "$location")"
+      location="${location%/*}"
     done
     echo "$location/default.xsl"
   fi

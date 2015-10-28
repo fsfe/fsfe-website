@@ -1,6 +1,6 @@
 #!/bin/sh
 
-basedir="$(dirname $0)/.."
+basedir="${0%/*}/.."
 [ -z "$inc_sources" ] && . "$basedir/build/sources.sh"
 
 . "$basedir/build/arguments.sh"

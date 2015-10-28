@@ -45,7 +45,6 @@ build_xmlstream(){
 	  $(list_langs "$shortname")
 	</trlist>
 	
-	<localmenuset>$(include_xml "$basedir/localmenuinfo.xml")</localmenuset>
 	<menuset>$(include_xml "$basedir/tools/menu-global.xml")</menuset>
 	<textsetbackup>$(include_xml "$basedir/tools/texts-en.xml")</textsetbackup>
 	<textset>$(include_xml "$texts_xml")</textset>

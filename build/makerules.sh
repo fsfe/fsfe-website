@@ -80,7 +80,6 @@ xhtml_maker(){
   outpath="${outpath%/*}"
 
   textsen="$(get_textsfile "en")"
-  localmenufile="$basedir/localmenuinfo.xml"
   menufile="$basedir/tools/menu-global.xml"
   filedir="${shortname%/*}"
   shortbase="${shortname##*/}"
@@ -121,7 +120,7 @@ xhtml_maker(){
 
     cat <<MakeEND
 all: $(mes "$outfile" "$outlink")
-$(mes "$outfile"): $(mes "$depfile" "$processor" "$textsen" "$textsfile" "$fundraisingfile" "$localmenufile" "$menufile" "$sourceglobs" "$langglob")
+$(mes "$outfile"): $(mes "$depfile" "$processor" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" "$sourceglobs" "$langglob")
 	\${PROCESSOR} \${PROCFLAGS} process_file "${infile}" "$(mio "$processor")" "$olang" >"$outfile"
 $(mes "$outlink"):
 	ln -sf "${outbase}" "${outlink}"

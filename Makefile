@@ -30,9 +30,9 @@ sources := $(shell grep -l -R --include='*.xhtml' $(SELECT) . )
 
 .PHONY: localmenus
 
-localmenus: localmenuinfo.xml
+localmenus: localmenuinfo.en.xml
 
-localmenuinfo.xml: $(sources)
+localmenuinfo.en.xml: $(sources)
 	echo \<localmenuset\> > $(HELPERFILE)
 	grep -R --include='*.xhtml' $(SELECT) .| sed -e 's,$(FIND),$(REPLACE),' >> $(HELPERFILE)
 	echo \</localmenuset\> >> $(HELPERFILE)

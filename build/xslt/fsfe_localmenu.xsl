@@ -26,16 +26,16 @@
       <xsl:element name="p">
         <xsl:text>[ </xsl:text>
 
-        <xsl:for-each select="/buildinfo/localmenuset/localmenuitems/menu[@dir=$dir and @set=$set]">
+        <xsl:for-each select="/buildinfo/document/set/localmenuitems/menu[@dir=$dir and @set=$set]">
           <xsl:sort select="@id"/>
 
           <xsl:variable name="style"><xsl:value-of select="@style"/></xsl:variable>
           <xsl:variable name="id"><xsl:value-of select="@id"/></xsl:variable>
           <xsl:variable name="localmenutext">
-            <xsl:choose><xsl:when test="/buildinfo/localmenuset/translate/lang_part[@dir=$dir and @id=$id and @language=$language]">
-              <xsl:value-of select="/buildinfo/localmenuset/translate/lang_part[@dir=$dir and @id=$id and @language=$language]"/>
+            <xsl:choose><xsl:when test="/buildinfo/document/set/translate/lang_part[@dir=$dir and @id=$id and @language=$language]">
+              <xsl:value-of select="/buildinfo/document/set/translate/lang_part[@dir=$dir and @id=$id and @language=$language]"/>
             </xsl:when><xsl:otherwise>
-              <xsl:value-of select="/buildinfo/localmenuset/translate/lang_part[@dir=$dir and @id=$id and @language='en']"/>
+              <xsl:value-of select="/buildinfo/document/set/translate/lang_part[@dir=$dir and @id=$id and @language='en']"/>
             </xsl:otherwise></xsl:choose>
           </xsl:variable>
 

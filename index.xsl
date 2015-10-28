@@ -107,43 +107,29 @@
     <div  id="campaigns-boxes" class="cycle-slideshow"  data-cycle-pause-on-hover="true" data-cycle-speed="500"  data-cycle-timeout="9000" data-cycle-slides="a"  data-cycle-fx="scrollHorz" data-cycle-swipe="true">
       <div class="cycle-pager"/>
       
-      <!-- <xsl:for-each select="/buildinfo/textsetbackup/campaigns/campaign[@id='dfd' or @id='amaelle' or @id='appelbaum']"> -->
-      <xsl:for-each select="/buildinfo/textsetbackup/campaigns/campaign[@id='freesociety' or @id='amaelle' or @id='appelbaum']">
-        <xsl:choose>
-          <xsl:when test="count(/buildinfo/textset/campaigns/campaign[@id = current()/@id]) > 0">
-            <xsl:apply-templates select="/buildinfo/textset/campaigns/campaign[@id = current()/@id]" mode="slideshow" />
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:apply-templates select="." mode="slideshow" />
-          </xsl:otherwise>
-        </xsl:choose>
+      <xsl:for-each select="/buildinfo/document/set/campaign[@running = 'yes']">
+        <xsl:apply-templates select="." mode="slideshow" />
       </xsl:for-each>
       
     </div>
   </xsl:template>
   
   <xsl:template match="campaign" mode="slideshow">
-    <xsl:variable name="id"><xsl:value-of select="@id"/></xsl:variable>
-    <a href="{link}" class="campaign-box" id="{@id}">
-      <xsl:if test=" photo != '' ">
-          <img src="{photo}" alt="" />
-      </xsl:if>
+    <a href="{link}" class="campaign-box">
+      <xsl:attribute name="id"><xsl:value-of select="@id" /></xsl:attribute>
+      <xsl:if test=" photo != '' "><img src="{photo}" alt="" /></xsl:if>
       <p class="text">
         <xsl:value-of select="text" />
       </p>
       
       <!-- Author (if existing) -->
-      <xsl:if test="/buildinfo/textset/campaigns/campaign[@id=$id]/author != ''">
-        <span class="author">
-          <xsl:value-of select="author" />
-        </span>
+      <xsl:if test="author != ''">
+        <span class="author"><xsl:value-of select="author" /></span>
       </xsl:if>
           
       <!-- Copyright notice (if existing) -->
-      <xsl:if test="/buildinfo/textset/campaigns/campaign[@id=$id]/copyright != ''">
-        <span class="copyright">
-          <xsl:value-of select="copyright" />
-        </span>
+      <xsl:if test="copyright != ''">
+        <span class="copyright"><xsl:value-of select="copyright" /></span>
       </xsl:if>
     </a>
   </xsl:template>

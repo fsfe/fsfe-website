@@ -71,6 +71,7 @@ svn_build_into(){
     egrep -q '^[^UGR]... .*\.xml'   "$SVNchanges" && regen_globs=true
     egrep -q '^[^A]... .*\.sources' "$SVNchanges" && regen_globs=true
     egrep -q '^A... .*\.xhtml'      "$SVNchanges" && regen_globs=true
+    egrep -q '^[AD]... .*\.sources' "$SVNchanges" && regen_xhtml=true
     egrep -q '^[^UGR]... .*\.xhtml' "$SVNchanges" && regen_xhtml=true
     egrep -q '^A... .*\.xsl'        "$SVNchanges" && regen_xhtml=true
     egrep -q '^[^A]... .*\.xsl'     "$SVNchanges" && regen_xsldeps=true

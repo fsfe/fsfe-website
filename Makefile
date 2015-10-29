@@ -23,7 +23,7 @@ HELPERFILE := menuhelper
 SELECT := '<localmenu.*</localmenu>'
 STYLESHEET := ./tools/buildmenu.xsl 
 
-FIND := ./\(.*/\)*\(.*\)\.\([a-z][a-z]\)\.xhtml:[ \t]*\(.*\)
+FIND := ./\(.*\)/*\(.*\)\.\([a-z][a-z]\)\.xhtml:[ \t]*\(.*\)
 REPLACE := <menuitem language="\3"><dir>\1</dir><link>\2.html</link>\4</menuitem>
 
 sources := $(shell grep -l -R --include='*.xhtml' $(SELECT) . )

@@ -2,7 +2,7 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:import href="default.xsl" />
-  <xsl:import href="xsl/quotes.xsl" />
+  <xsl:import href="xsl/testimonials.xsl" />
   <xsl:import href="../tools/xsltsl/tagging.xsl" />
 
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
@@ -21,4 +21,7 @@
     </xsl:call-template>
   </xsl:template>
 
+  <xsl:template match="testimonial-list">
+    <xsl:call-template name="testimonial-list" />
+  </xsl:template>
 </xsl:stylesheet>

@@ -13,13 +13,8 @@
       </xsl:otherwise></xsl:choose>
     </xsl:variable>
 
-    <xsl:variable name="dir">
-      <xsl:value-of select="/buildinfo/@dirname"/>
-    </xsl:variable>
-
-    <xsl:variable name="language">
-      <xsl:value-of select="/buildinfo/@language"/>
-    </xsl:variable>
+    <xsl:variable name="dir"><xsl:value-of select="/buildinfo/@dirname"/></xsl:variable>
+    <xsl:variable name="language"><xsl:value-of select="/buildinfo/@language"/></xsl:variable>
 
     <xsl:element name="div">
       <xsl:attribute name="class">localmenu</xsl:attribute>

@@ -140,11 +140,13 @@ cast_refglobs(){
 	$(stat --printf=\ %s "$globfile" "$reffile" 2>/dev/null)
 	x
 
-  if [ "$globsize" != "$refsize" ]; then
+  if [ "$globsize" != "$refsize" ]; then  # quick pre check
     cp "$globfile" "$reffile"
   elif [ "$globsize" -gt 0 ] && diff -q "$globfile" "$reffile" >/dev/null; then
     incfile="$(cat "$globfile" |xargs -d\\n ls -t |sed -n '1p')"
     [ "$incfile" -nt "$reffile" ] && touch "$reffile" || true
+  elif [ "$globsize" -gt 0 ]; then  # files passed pre check, but are different anyway
+    cp "$globfile" "$reffile"
   fi
 }
 

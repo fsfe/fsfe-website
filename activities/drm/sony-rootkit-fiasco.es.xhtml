@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html>
+  <head>
+	<title>Revisando el fiasco de Sony Rootkit</title>
+  </head>
+  <body class="article" microformats="h-entry">
+
+<!-- Breadcumb -->
+<p id="category"><a href="/activities/drm/">Gestión digital de restricciones (DRM)</a></p>
+<!-- / Breadcumb -->
+
+<h1 class="p-name">Revisando el Rootkit de Sony</h1>
+
+<div class="e-content">
+
+<h2 id="introduction">Introducción</h2>
+
+<p>Imagine que alguien compra, en una tienda, un CD de música. Al llegar a casa lo pone en el
+ordenador para oírlo. Sin su conocimiento, se instala un programa que comprueba, 
+de forma secreta, si esa persona está usando un programa para copiar CDs. 
+Si es así, le obliga a parar.
+
+También ralentiza el ordenador y abre puertas secretas
+que permiten atacar al PC.</p>
+
+<div class="captioned right" style="max-width: 650px; width: 40%">
+	<a href="http://static.fsf.org/nosvn/dbd/2012/day-against-drm/image2.png">
+<img src="/news/2015/graphics/hi-res-in-chains.png" alt="hi res version"/></a>
+<footer><a href="#restrictions-pictures">Vaya al final para ver más imágenes de restricciones</a></footer>
+</div>
+	
+<p>Esto es lo que pasó hace 10 años si compró uno de los 25 millones de CDs de música de Sony. Este ataque de Sony a los ordenadores personales se descubrió el 31 de 
+octubre del 2005 y posteriormente fue conocido como el "Sony rootkit". Afectó a más 
+de 550.000 redes en más de cien países, incluyendo miles 
+de redes militares y de defensa de los EE.UU.</p>
+
+<p>El rootkit de Sony es un buen ejemplo de lo que las empresas están dispuestas a hacer para 
+restringir con medios técnicos el comportamiento de los usuarios. Aunque el rootkit de Sony es
+de hace 10 años, las restricciones digitales dañinas están en todas partes. Se encuentran 
+en PCs, portátiles, netbooks, lectores de ebook, equipos de sonido, coches, máquinas de café,
+y otros dispositivos. Como la Gestión Digital de Restricciones (DRM) evita usos del
+dispositivo que el fabricante no desea, pueden controlar y limitar el uso de
+un ordenador de propósito general. En el caso de los dispositivos con 
+acceso a internet, pueden alterar estas restricciones de uso en cualquier momento sin
+informar al propietario del dispositivo. En consecuencia, los fabricantes de TI pueden eliminar a su gusto
+los derechos que los propietarios de los productos suelen adquirir.</p>
+
+<blockquote><p>"Los fabricantes nunca deberían estar
+en una posición que les permita 
+controlar permanentemente los dispositivos que han fabricado. Los propietarios de los dispositivos, sean
+personas, compañías, organizaciones públicas o no, han de ser las únicas
+que puedan controlarlos y usarlos legalmente." ha declarado el presidente de la FSFE 
+Matthias Kirschner. "Tales restricciones limitan el crecimiento sostenido en el desarrollo y
+uso del software, para el que son cruciales los ordenadores de propósito general."</p></blockquote>
+
+
+<h2 id="what-sony-did">Lo que hizo Sony</h2>
+
+<p>El 31 de octubre del 2005, el experto en seguridad informática Mark Russinovich publicó su
+descubrimiento en <a href="http://blogs.technet.com/b/markrussinovich/archive/2005/10/31/sony-rootkits-and-digital-rights-management-gone-too-far.aspx">
+su blog</a> sobre un software espía, conocido como rootkit, que se había instalado
+secretamente en su ordenador. Dedujo que el rootkit estaba conectado con el reproductor de música que venía
+incluido en CDs de música de Sony. El programa oculto rootkit se usaba para espiar a los usuarios y sus hábitos de escucha,
+compartiendo esta información con Sony, así como evitaba la lectura <a href="http://www.technologyreview.com/featuredstory/405741/inside-the-spyware-scandal/page/8/">del disco</a>
+por parte de terceros.</p>
+
+<p>En el proceso de espionaje, el rootkit <a href="https://freedom-to-tinker.com/blog/jhalderm/cd-drm-makes-computers-less-secure/">
+creaba fallos adicionales de seguridad</a> que abrían las puertas para
+otros ataques peores. Incluso si los usuarios detectaban el rootkit, desinstalarlo de forma segura sin dañar la máquina era otro problema.</p>
+
+<p>El rootkit se cargó en un total de <a href="https://w2.eff.org/IP/DRM/Sony-BMG/">
+aproximadamente 25 millones de CDs</a> e <a href="https://www.eff.org/deeplinks/2005/11/kaminsky-rootkit-causing-widespread-infection">
+infectó más de 550.000 redes en más de cien
+países, incluyendo miles de redes militares y de defensa de los EE.UU.</a></p>
+
+<p>Pero el presidente de Sony BMG, Thomas Hesse, desestimó totalmente el problema, y declaró
+<a href="http://www.npr.org/templates/story/story.php?storyId=4989260">
+textualmente "La mayoría de la gente, creo, ni siquiera sabe lo que es un Rootkit, así que
+¿por qué han de preocuparse?".</a> La prensa publicó lo que Sony estaba haciendo de forma 
+secreta a la propiedad privada de los usuarios y Sony se vio forzada a pagar <a href="http://news.bbc.co.uk/2/hi/technology/4577536.stm">
+numerosos procesos judiciales</a> y recuperar la confianza de los usuarios tan pronto como fuese posible.</p>
+
+<p>A pesar de las consecuencias del experimento rookit de Sony, 10 años después las restricciones
+a la propiedad privada de los usuarios son más frecuentes que nunca. Es común encontrar restricciones en 
+los ebooks comprados legítimamente, hardware de vídeojuegos, y en todo tipo de
+software propietario. Incluso se ha encontrado en <a href="https://www.eff.org/deeplinks/2013/11/drm-cars-will-drive-consumers-crazy">
+coches</a> y <a href="http://www.wired.com/2015/05/keurig-k-cup-drm/">máquinas de café</a>.
+Hasta Steve Jobs lamentó el forzoso <a href="http://macdailynews.com/2007/02/06/apple_ceo_steve_jobs_posts_rare_open_letter_thoughts_on_music/">uso de software restrictivo</a>,
+software que era bien sabido que usaba su compañía.</p>
+
+<h2 id="The-computer:-a-general-purpose-machine">El ordenador: una máquina de propósito general</h2>
+
+<p>Resultan peligrosas las restricciones tecnológicas en el uso legítimo de los dispositivos 
+ya que van transformando lentamente nuestros ordenadores, de ser unas máquinas de propósito 
+general con diferentes capacidades, a unos dispositivos singulares con un poder de
+alcance limitado. Las empresas privadas limitan la funcionalidad de los ordenadores ya que es
+mejor para los negocios cuando los usuarios están sometidos a un proveedor de servicios
+concreto.</p>
+
+<p>Cuando los usuarios se encuentran bloqueados por las restricciones de los proveedores de contenidos y
+la legislación opresiva del copyright, la sociedad sufre, ya que la gente pierde
+posibilidades de innovación y de experimentar con nuevos productos o servicios,
+así como la habilidad para mejorar y arreglar sus propios dispositivos. Al intentar
+restringir el uso de los dispositivos o contenidos para un caso concreto (p.ej. la copia
+no autorizada o para prevenir que terceras partes accedan al dispositivo), las empresas evitan 
+que se use el ordenador para todos los demás fines legítimos a los que tienen derecho los
+usuarios.</p>
+
+<p>Esto es un gran obstáculo para futuras innovaciones y destruye al ordenador 
+como una máquina de propósito general. Es más, estas restricciones no
+diferencian entre manipulación legítima o ilegal realizadas en el 
+equipo por sus usuarios, imponiendo amplias trabas a todo el mundo. En
+consecuencia, sólo el fabricante tiene el control de la máquina que
+controla nuestra vida, y los datos se almacenan en ella.</p>
+
+<blockquote><p>"Intente construir un cuchillo de cocina que evite que otros  
+ puedan matar con él. No se puede restringir técnicamente el uso de algo sin
+ restringir, al mismo tiempo, el uso de otros." declara Matthias Kirschner.</p></blockquote>
+
+<h2 id="fsfe-demands">Demandas de la FSFE</h2>
+
+<p>El objetivo de la FSFE es asegurar que los propietarios de los dispositivos tengan el
+control completo de éstos. Para mantener un crecimiento sostenido en el desarrollo 
+y uso del software, es crucial la amplia disponibilidad de los ordenadores de propósito
+general.</p>
+
+<ol>
+
+<li>La FSFE exige que antes de comprar un dispositivo, <strong>el comprador ha de ser informado</strong>
+de forma concisa sobre las medidas técnicas implementadas en el mismo, así como
+las restricciones de uso concretas y sus consecuencias para el propietario.</li>
+
+<li><a href="/news/2015/news-20150506-01.en.html">La FSFE y otras organizaciones
+hacen un llamamiento a los legisladores para que protejan la libertad de cacharrear</a> a todo el mundo.
+La libertad de cacharrear garantiza que cualquier propietario de un dispositivo puede
+sustituir o mejorar el software en su dispositivo, por lo que 
+confiere al propietario el control de su propiedad. <strong>Para asegurar esta 
+protección,
+la FSFE pide a la Comisión Europea que proponga una legislación que fortalezca los derechos del propietario
+del ordenador, al exigir que todo dueño de ordenador pueda 
+modificar y cambiar el software y hardware de cualquier dispositivo informático, 
+y pueda venderlo con dichas modificaciones.</strong></li>
+
+<li> Resulta evidente que cualquier derecho a cacharrear ha de ir acompañado de una provisión
+legal que autorice la elusión de las restricciones tecnológicas en
+tales casos.
+<strong>Por esta razón, la FSFE solicita
+a la Comisión que proponga una legislación que asegure que los consumidores puedan usar los bienes digitales que han adquirido, dentro de la gama completa de limitaciones y excepciones del copyright.</strong></li>
+
+</ol>
+
+<h2 id="related-links">Vínculos relacionados</h2>
+
+<ul>
+  <li><a href="http://www.defectivebydesign.org/">Defective By Design</a> - Blog específico de la EFF contra la DRM</li>
+  <li><a href="https://www.eff.org/search/site/DRM">Base de datos sobre DRM de la EFF</a> - Base de datos de la EFF de todo lo relaccionado con la DRM</li>
+  <li><a href="http://boingboing.net/2005/11/14/sony-anticustomer-te.html">Cronología BoingBoing</a> - cubre los mayores actos que siguieron al artículo de blog de Russinovich</li>
+  <li><a href="http://www.technologyreview.com/featuredstory/405741/inside-the-spyware-scandal/">MIT Technology Review</a> - Artículo en profundidad sobre la tecnología, las empresas, y las consecuencias del rootkit de Sony</li>
+  <li><a href="http://fsfe.org/contribute/spreadtheword#drm-leaflet">Folletos sobre DRM.info</a> - Folletos de la FSFE sobre los peligros de la DRM, disponibles para bajarse o copia impresa</li>
+  <li><a href="http://ftp5.gwdg.de/pub/linux/kde/extrafiles/akademy/2015/videos/Matthias%20Kirschner%20-%20An%20Endangered%20Species:%20The%20Computer%20as%20a%20Universal%20Machine.webm">Ideas básicas sobre los ordenadores de propósito general</a> - por Matthias Kirschner, Presidente de la FSFE</li>
+</ul>
+
+<h2 id="restrictions-pictures">Imágenes relacionados</h2>
+
+	<div class="captioned left" style="width: 40%">
+		<a href="http://static.fsf.org/nosvn/dbd/2012/day-against-drm/image2.png">
+			<img src="/news/2015/graphics/hi-res-in-chains.png" alt="hi-res in-chains"/></a>
+			<footer><a href="http://creativecommons.org/licenses/by-sa/3.0/deed.es_ES">CC BY SA 3.0</a> por Brendan Mruk y Matt Lee
+			<p><a href="http://static.fsf.org/nosvn/dbd/2012/day-against-drm/image2.png">Alta resolución</a>
+			<a href="http://static.fsf.org/nosvn/dbd/2012/day-against-drm/in-chains.png">Baja resolución</a></p></footer>
+			
+			</div>
+
+	<div class="captioned right" style="width: 40%">
+	<a href="http://www.geograph.org.uk/photo/3478665">
+	<img src="/news/2015/graphics/Locked-library.jpg" alt="locked library"/></a>
+		<footer><a href="http://creativecommons.org/licenses/by-sa/2.0/deed.es">CC BY-SA 2.0</a> por Chris Downer</footer>
+		
+		</div>
+
+	<div class="captioned right" style="width: 40%">
+		<a href="https://pixabay.com/en/privacy-policy-data-security-445156/">
+			<img src="/news/2015/graphics/Locked-CD.jpg" alt="locked cd"/></a>
+			<footer><a href="https://creativecommons.org/publicdomain/zero/1.0/deed.es">CC0 1.0 Public Domain</a></footer>
+			
+			</div>
+			
+	<div class="captioned left" style="width: 40%">
+		<a href="https://pixabay.com/en/keyboard-sure-privacy-policy-castle-628703/">
+		<img src="/news/2015/graphics/Locked-keyboard.jpg" alt="locked keyboard"/></a>
+		<footer><a href="https://creativecommons.org/publicdomain/zero/1.0/deed.es_ES">CC0 1.0 Public Domain</a></footer>
+		
+		</div>
+
+</div>
+</body>
+
+<sidebar promo="our-work">
+<!-- TODO update at the end to make sure it is correct -->
+
+	<h2>Tabla de Contenidos</h2>
+	<ul>
+		<li><a href="#introduction">Introducción</a></li>
+		<li><a href="#what-sony-did">Lo que hizo Sony</a></li>
+		<li><a href="#The-computer:-a-general-purpose-machine">El ordenador: una máquina de propósito general</a></li>	
+		<li><a href="#fsfe-demands">Demandas de la FSFE</a></li>
+		<li><a href="#related-links">Vínculos relacionados</a></li>
+		<li><a href="#restrictions-pictures">Imágenes relacionadas</a></li>
+		
+	</ul>
+
+</sidebar>
+
+    <tags>
+		<tag content="DRM">DRM</tag>
+		<tag content="General Purpose Computing">OrdenadoresdePropósitoGeneral</tag>
+    </tags>
+  <timestamp>$Fecha: 2015-02-04 21:45:09 +0000 (Mier, 04 Feb 2015) $ $Autor: lucabon $</timestamp>
+<translator>Eulalio Barbero</translator></html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

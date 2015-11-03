@@ -109,7 +109,7 @@ my $why = $query->param("why");
 my $estimate = $query->param("estimate");
 my $budget1 = $query->param("budget1");
 my $percent1 = $query->param("percent1");
-my $budget2 = $query->param("budget2");
+my $budget2 = "NONE" # $query->param("budget2");
 my $percent2 = $query->param("percent2");
 my $refund = $query->param("refund");
 

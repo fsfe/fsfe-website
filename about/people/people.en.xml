@@ -405,7 +405,7 @@
   <person id="ohnewein" avatar="yes" association-member="yes" teams="it, ga">
     <name>Patrick Ohnewein</name>
     <country>IT</country>
-    <function country="IT">deputy/m</function>
+    <function country="IT">coordinator/m</function>
     <email>ohnewein (at) fsfeurope (dot) org</email>
     <avatar>/about/ohnewein/ohnewein-avatar.jpg</avatar>
   </person>
@@ -434,6 +434,7 @@
     <employee>full/f</employee>
   </person>
 
+  <!--
   <person id="polvani" avatar="yes" teams="it, core">
     <name>Alessandro Polvani</name>
     <country>IT</country>
@@ -442,6 +443,7 @@
     <link>/about/polvani/polvani.html</link>
     <avatar>/about/polvani/polvani-avatar.jpg</avatar>
   </person>
+  -->
 
   <person id="reiter" avatar="yes" association-member="yes" teams="de, ga">
     <name>Bernhard Reiter</name>
@@ -482,13 +484,15 @@
   </person>
   -->
 
-<person id="ritz" avatar="no" teams="intern">
-<name>Asa Ritz</name>
-<country>US</country>
-<function>intern/m</function>
-<email>asawritz (at) fsfe (dot) org</email>
-<employee>full/m</employee>
-</person>
+  <!--
+  <person id="ritz" avatar="no" teams="intern">
+    <name>Asa Ritz</name>
+    <country>US</country>
+    <function>intern/m</function>
+    <email>asawritz (at) fsfe (dot) org</email>
+    <employee>full/m</employee>
+  </person>
+  -->
 
   <person id="roy" avatar="yes" association-member="yes" teams="fr, ftf, ga">
     <name>Hugo Roy</name>

@@ -158,7 +158,9 @@ label  {
     </dl>
 
     <h2>Previous builds</h2>$(
-      web_tab prev_tab '' "$(
+      web_tab prev_tab '' "
+      <a href=\"./\">latest</a>
+      $(
         ls -t status_*.html |head -n10 |while read stat; do
           t="${stat#status_}"
           t="${t%.html}"

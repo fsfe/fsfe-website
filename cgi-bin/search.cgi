@@ -8,6 +8,9 @@ q="$(printf %s "$QUERY_STRING" |sed -rn '1s;^(.*&)?q=([^&]+)(&.*)?$;\2;p')"
 # this would prevent multisite usage, overriding request instead
 unset REQUEST_METHOD
 
+printf %s\\n\\n "Content-Type: text/html;charset=utf-8"
+
 /usr/lib/cgi-bin/htsearch -c "$c" "restrict=${l:-en}.html&words=${q}" \
+| head -n+3 \
 | xmllint --html --encode iso-8859-1 - \
 | sed -r '2s;charset=iso-8859-1;charset=utf-8;'

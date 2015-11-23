@@ -1,7 +1,7 @@
 #!/bin/sh
 
 c=/home/www/fsfe.org_htdig/htdig.conf
-l="$(printf %s "$QUERY_STRING" |sed -rn '1s;^(.*&)?l=([^&]+)(&.*)?$;\2;p')"
+l="$(printf %s "$QUERY_STRING" |sed -rn '1s;^(.*&)?l=([a-z-]+)(&.*)?$;\2;p')"
 q="$(printf %s "$QUERY_STRING" |sed -rn '1s;^(.*&)?q=([^&]+)(&.*)?$;\2;p')"
 
 # htdig forces default config file if reading cgi-variabled directly
@@ -18,4 +18,5 @@ printf %s\\n\\n "Content-Type: text/html;charset=utf-8"
 | tail -n+3 \
 | sed -r 's;&euro\;;\xa4;g' \
 | xmllint --html --encode iso-8859-1 - \
-| sed -r '2s;charset=iso-8859-1;charset=utf-8;'
+| sed -r '2s;charset=iso-8859-1;charset=utf-8;' \
+| sed "s;#LANG;${l};"

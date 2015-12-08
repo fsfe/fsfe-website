@@ -2,10 +2,14 @@
 
 <html>
   <head>
-    <title>Το Ελεύθερο Λογισμικό στην Εκπαίδευση - FSFE</title>
+    <title>FSFE - Το Ελεύθερο Λογισμικό στην Εκπαίδευση</title>
   </head>
-  <body>
-     <p id="category"><a href="/work.html">Η εργασία μας</a></p>
+<body class="article" microformats="h-entry">
+
+     <p id="category">
+     <a href="/work.html">Η εργασία μας</a>
+    </p>
+
   <h1>Το Ελεύθερο Λογισμικό στην Εκπαίδευση</h1>
 
 <p id="introduction"> 
@@ -15,18 +19,22 @@
 </p>
 
 <p>
-  Έχουμε συστήσει μια 
+  Ήδη από την πρώτη γενική του συνέλευση, το FSFE προσδιόρισε
+  <a href="http://fsfe.org/about/reports/es-2003">την εκπαίδευση ως μία
+    από τις σημαντικότερες περιοχές δραστηριοποίησης</a> για να έχουν
+  οι νέοι σε ηλικία και οι σπουδαστές την ευκαιρία να έρθουν σε επαφή
+  με τη γνώση αντί ενός απλουστευτικού σχολικού προϊόντος. Έτσι το FSFE
+  εγκαινίασε την
   <a href="/activities/education/eduteam.html">Ομάδα Εργασίας για την 
-  Εκπαίδευση</a> με επίκεντρο αυτές τις προσπάθειες. Λειτουργεί ως κόμβος 
-  και παρακολουθεί την Ευρωπαϊκή κατάσταση. Συμμετέχουμε σε εκδηλώσεις 
-  Ελεύθερου Λογισμικού και βοηθάμε άλλες πρωτοβουλίες ώστε να γίνει αυτή
-  η αλλαγή εφικτή.
+  Εκπαίδευση</a> με επίκεντρο αυτές τις προσπάθειες. Σήμερα, λειτουργεί
+  ως κόμβος και παρακολουθεί την Ευρωπαϊκή κατάσταση. Συμμετέχουμε σε
+  εκδηλώσεις Ελεύθερου Λογισμικού και βοηθάμε άλλες πρωτοβουλίες ώστε
+  να γίνει αυτή η αλλαγή εφικτή.
 </p>
 
 <p>
-  Η ομάδα αναπτύσσει έναν οδηγό για έναν επιτυχημένο τρόπο πλήρους 
-  εκμετάλλευσης του Ελεύθερου Λογισμικού σε σχολεία και πανεπιστήμια. 
-  Ανάμεσα σε άλλα επιχειρήματα παραθέτουμε τέσσερα από τα οφέλη κλειδιά:
+  Ανάμεσα σε άλλα επιχειρήματα, παραθέτουμε τέσσερα από τα οφέλη κλειδιά
+  για την εκπαίδευση:
 </p>
 
 <ul>
@@ -48,53 +56,69 @@
 
 </ul>
 
-  <fetch-news /><h2 id="subpages">Πλοήγηση</h2>
+    <div id="news" class="section">
+      <h2>
+        <a class="rss-feed" href="/news/news.rss"><img src="/graphics/rss.png" alt="News RSS" title="news RSS feed" /></a>
+  <!-- remove identica? add twitter? <a class="ical" href="http://www.twitter.com/fsfe"><img src="/graphics/identica.png" alt="twitter" title="follow FSFE on twitteridenti.ca"/></a> -->
+        
+        <a href="/news/news.html"><news-label /></a>
+        
+      </h2>
 
-  <ul>
-  <li>
-  <h3><a href="/freesoftware/education/argumentation.html">Λεπτομερής 
-   επιχειρηματολογία</a></h3>
-   <p>
-    Περισσότεροι λόγοι για να 
-    <a href="/freesoftware/education/argumentation.html">χρησιμοποιήσετε 
-    Ελεύθερο Λογισμικό</a> και να
-    <a href="/activities/education/argumentation.html">δώσετε προτεραιότητα 
-    στο ελεύθερο λογισμικό στα σχολεία</a>. 
-    <!--Paragraph to add when these section will be completed <a 
-href="http://fsfe.org/activities/education/leaflet-edu-reasonsforstudents.html">
-Λόγοι για να υιοθετήσουν οι μαθητές το Ελεύθερο Λογισμικό</a> και <a 
-href="http://fsfe.org/activities/education/leaflet-edu-reasonsforparents.html">
-οι γονείς να προτιμούν Ελεύθερο Λογισμικό για την εκπαίδευση των παιδιών τους
-</a>. -->
-   </p>
-   </li>
+      <!-- this element fetches all news items which have the relevant country tag -->
+      <country-news />
 
-   <li>
-   <h3><a href="http://lists.gnu.org/mailman/listinfo/edu-eu">Κατάλογος 
-   παραληπτών ηλεκτρονικού ταχυδρομείου για την Εκπαίδευση</a></h3>
-        <p>
-          Συμμετέχετε στο διάλογο για το Ελεύθερο Λογισμικό στην εκπαίδευση.
-        </p>
-      </li>
+    </div><!--end #news-->
 
-      <li>    
-          <h3><a href="/activities/education/eduteam.html">Ποιοι είμαστε</a></h3>
-          <p>Δραστηριοποιηθείτε στην Ομάδα Εργασίας για την Εκπαίδευση.</p>
-     </li>
+    <div id="events" class="section">
+      <h2>
+        <a class="rss-feed" href="/events/events.rss"><img src="/graphics/rss.png" alt="Events RSS" title="events RSS feed" /></a>
+        <a class="ical" href="webcal://fsfe.org/events/events.ics"><img src="/graphics/ical.png" alt="iCal" title="FSFE events as iCal feed" /></a>
+        
+        <a href="/events/events.html"><events-label /></a>
+        
+      </h2>
 
-      <li>
-        <h3><a href="http://www.gnu.org/education">Η σελίδα του GNU για 
-        την εκπαίδευση</a></h3>
-        <p>
-          Το <a href="/about/basics/gnuproject.html">έργο GNU</a> διατηρεί 
-          και μια ενημερωτική σελίδα για το Ελεύθερο Λογισμικό στην εκπαίδευση.
-        </p>
-      </li>
-    </ul>
+      <!-- this element fetches all event items which have the relevant country tag -->
+      <country-events />
+
+    </div><!--end #events-->
+
   </body>
 
-  <timestamp>$Date$ 
-  $Author$</timestamp>
+<sidebar news="ilovefs" promo="about-fsfe">
+    <div id="related-content">
+        <h3>Περισσότερες πληροφορίες</h3>
+        <ul>
+          <li><a href="/freesoftware/education/argumentation.html">
+              Γιατί Ελεύθερο Λογισμικό στην Εκπαίδευση</a></li>
+          <li><a href="/activities/education/edu-related-content.html">
+          Επισκόπηση όλης της σχετικής με την εκπαίδευση θεματικής</a></li>
+          <li><a href="http://www.gnu.org/education">
+          Η σελίδα του GNU για την εκπαίδευση</a></li>
+          <li><a href="https://wiki.fsfe.org/Education">
+          Σελίδες για την εκπαίδευση στο Wiki μας</a></li>
+          <li><a href="http://blogs.fsfe.org/guido/category/education/">
+          Ειδήσεις για την Εκπαίδευση με Ελεύθερο Λογισμικό</a></li>
+        </ul>
+
+        <h3></h3>
+        <ul>
+          <li><a href="//documentfreedom.org">Ημέρα Ελευθερίας Εγγράφων!</a></li>
+          <li><a href="/campaigns/nledu/">Ξεκλειδώνοντας την εκπαίδευση στην Ολλανδία</a></li>
+        </ul>
+
+        <h3>Δραστηριοποιηθείτε</h3>
+        <ul>
+          <li><a href="http://lists.gnu.org/mailman/listinfo/edu-eu">Γίνετε μέλη στη λίστα συζητήσεων</a></li>
+          <li><a href="/about/printable/">Διαδώστε τα φυλάδια για την εκπαίδευση</a></li>
+          <li><a href="mailto:edu-team@fsfeurope.org">Επικοινωνήστε μαζί μας</a></li>
+
+        </ul>
+    </div>
+</sidebar>
+
+  <timestamp>$Date$ $Author$</timestamp>
 </html>
 <!--
 Local Variables: ***

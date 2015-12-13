@@ -4,20 +4,6 @@
 
 <itemset>
 
-  <item type="tshirt" id="tshirt-nocloud-bordeaux" price="20.00" date="2015-12-07">
-    <available size="S"/>
-    <available size="M"/>
-    <available size="L"/>
-    <!-- <available size="XL"/> -->
-    <!-- <available size="XXL"/> -->
- 	<image
-      small="/order/articles/images/thumbnails/tshirt-nocloud-bordeaux-front.jpg"
-      large="/order/articles/images/tshirt-nocloud-bordeaux-front.jpg"/>
- 	<image
-      small="/order/articles/images/thumbnails/tshirt-nocloud-bordeaux-back.jpg"
-      large="/order/articles/images/tshirt-nocloud-bordeaux-back.jpg"/>
-  </item>
-
   <item type="tshirt" id="tshirt-dfd-kaki" price="20.00" date="2015-03-04">
     <available size="S"/>
     <available size="M"/>
@@ -35,10 +21,10 @@
   <item type="tshirt" id="tshirt-ilovefs-darkblue" price="20.00" date="2012-10-07">
 <!--
     <available size="S"/>
-    <available size="M"/>
-    <available size="L"/>
     <available size="XXL"/>
+    <available size="L"/>
 -->
+    <available size="M"/>
     <available size="XL"/>
  	<image
       small="/order/articles/images/thumbnails/tshirt-ilovefs-darkblue-front.jpg"
@@ -114,9 +100,9 @@
   <item type="girlie" id="girlie-hacking-black" price="18.00" date="2008-02-23">
 <!--
     <available size="S"/>
--->
     <available size="M"/>
     <available size="L"/>
+-->
     <available size="XL"/>
     <image
       small="/order/articles/images/thumbnails/girlie-hacking-black-front.jpg"
@@ -163,7 +149,7 @@
       small="/order/articles/images/thumbnails/hooded-fsfs-blue-front.jpg"
       large="/order/articles/images/hooded-fsfs-blue-front.jpg"/>
     <image
-      small="/order/articles/images/thumbnails/hooded-fsfs-blue-back.jpg"
+      small="/orderarticles/images/thumbnails/hooded-fsfs-blue-back.jpg"
       large="/order/articles/images/hooded-fsfs-blue-back.jpg"/>
   </item>
 
@@ -192,16 +178,17 @@
       small="/order/articles/images/thumbnails/baby-romper-fork-white-front.jpg"
       large="/order/articles/images/baby-romper-fork-white-front.jpg"/>
   </item>
-<!--
+
   <item type="baby-clothes" id="baby-romper-fork-beige" price="18.00" date="2012-10-04">
     <available size="0-3m"/>
     <available size="3-6m"/>
     <available size="6-12m"/>
+    <available size="12-18m"/>
     <image
       small="/order/articles/images/thumbnails/baby-romper-fork-beige-front.jpg"
       large="/order/articles/images/baby-romper-fork-beige-front.jpg"/>
   </item>
--->
+
   <item type="other" id="bag-no-cloud-black" price="10.00" date="2015-03-27">
     <available size="#"/>
     <image
@@ -230,7 +217,7 @@
       small="/order/articles/images/thumbnails/pin-gnu-gold.jpg"
       large="/order/articles/images/pin-gnu-gold.jpg"/>
   </item>
-
+-->
 
   <item type="other" id="cufflinks-gnu" price="18.00" date="2012-10-13">
     <available size="#"/>
@@ -253,8 +240,6 @@
       large="/order/articles/images/pin-fellowship-magnet.jpg"/>
   </item>
 
-  -->
-  
   <item type="other" id="cufflinks-fellowship" price="8.00" date="2012-10-10">
     <available size="#"/>
     <image
@@ -290,7 +275,7 @@
   </item>
 
 <!--
-  <item type="other" id="mug-configurable-white" price="10.00" date="2015-10-01">
+  <item type="other" id="mug-configurable-white" price="12.00" date="2015-10-01">
     <available size="#"/>
     <image
       small="/order/articles/images/thumbnails/mug-configurable-white.jpg"

@@ -94,7 +94,6 @@
   </xsl:template>
 
   <!-- How to show a link -->
-<!--
   <xsl:template match="/buildinfo/document/set/news/link">
     <xsl:element name="a">
       <xsl:attribute name="href">
@@ -105,6 +104,5 @@
       <xsl:text>]</xsl:text>
     </xsl:element>
   </xsl:template>
--->
   
 </xsl:stylesheet>

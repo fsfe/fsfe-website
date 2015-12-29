@@ -21,7 +21,7 @@
   </xsl:template>
 
   <!-- This creates looping pictures in a box. All pictures are located in a directory and have numbered names (here ilovefs-gallery-thumb-NNN.jpg) -->
-  <xsl:template name="picture-box">
+  <xsl:template match="picture-box">
     <!-- appears once when <picture-box /> is called -->
     <script type="text/javascript">
       /* &lt;![CDATA[ */

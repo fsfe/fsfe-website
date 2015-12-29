@@ -17,6 +17,21 @@
   <!-- This creates looping pictures in a box. All pictures are located in a directory and have numbered names (here ilovefs-gallery-thumb-NNN.jpg) -->
   <xsl:template match="picture-box">
     <!-- appears once when <picture-box /> is called -->
+    
+    <div id="quote-box">
+      <div id="quote-box-inner" class="logo-list quote">
+        <div class="img">
+          <noscript>
+            <img>
+              <xsl:attribute name="src">
+                /campaigns/ilovefs/whylovefs/photos/gallery/ilovefs-gallery-thumb-1.jpg
+              </xsl:attribute>
+            </img>
+          </noscript>
+        </div> <!-- /img -->
+      </div> <!-- /quote-box-inner -->
+    </div> <!-- /quote-box -->
+    
     <script type="text/javascript">
       /* &lt;![CDATA[ */
       var quotes = [
@@ -24,7 +39,7 @@
       <!-- this template calls the loop below -->
       <xsl:call-template name="picture-box">
         <xsl:with-param name="pStart" select="1"/>
-        <xsl:with-param name="pEnd" select="50"/> <!-- select maximum number of pictures which should be shown in picture box -->
+        <xsl:with-param name="pEnd" select="42"/> <!-- select maximum number of pictures which should be shown in picture box -->
       </xsl:call-template>
       <!-- and here again the one-time content -->
       
@@ -36,6 +51,7 @@
       
         $('#quote-box-inner').fadeOut('slow', function() {
           $('#quote-box-inner div.img').html('<img src="'+quotes[index]['photo']+'"/>');
+<!--
           $('#quote-box-inner div.cont').html('<p class="text txt">'
                                         + quotes[index]['text']
                                         + '</p><p><span class="author">'
@@ -44,6 +60,7 @@
                                         + quotes[index]['license']
                                         + '</span></p>'
           );
+-->
           $('#quote-box-inner').fadeIn('slow', function() {});
         });
       
@@ -67,7 +84,7 @@
       <xsl:choose>
         <xsl:when test="$pStart = $pEnd">
           {
-            'photo': 'https://fsfe.org/campaigns/ilovefs/whylovefs/photos/gallery/ilovefs-gallery-thumb-<xsl:value-of select="$pStart"/>.jpg',
+            'photo': '/campaigns/ilovefs/whylovefs/photos/gallery/ilovefs-gallery-thumb-<xsl:value-of select="$pStart"/>.jpg',
           },
           <xsl:text>&#xA;</xsl:text>
         </xsl:when>

@@ -85,7 +85,7 @@
           </xsl:call-template>
         </xsl:otherwise>
       </xsl:choose>
-    </xsl:if
+    </xsl:if>
   </xsl:template>
   <!-- / picture-box -->
 

@@ -19,17 +19,17 @@
     <!-- appears once when <picture-box /> is called -->
     
     <div id="quote-box">
-      <div id="quote-box-inner" class="logo-list quote">
-        <div class="img">
-          <noscript>
-            <img>
-              <xsl:attribute name="src">
-                /campaigns/ilovefs/whylovefs/photos/gallery/ilovefs-gallery-thumb-1.jpg
-              </xsl:attribute>
-            </img>
-          </noscript>
-        </div> <!-- /img -->
-      </div> <!-- /quote-box-inner -->
+      <a href="http://download.fsfe.org/campaigns/ilovefs/gallery/ilovefs-gallery-1.jpg">
+        <div id="quote-box-inner" class="logo-list quote">
+          <div class="img">
+            <noscript>
+              <img>
+                <xsl:attribute name="src">/campaigns/ilovefs/whylovefs/photos/gallery/ilovefs-gallery-thumb-1.jpg</xsl:attribute>
+              </img>
+            </noscript>
+          </div> <!-- /img -->
+        </div> <!-- /quote-box-inner -->
+      </a>
     </div> <!-- /quote-box -->
     
     <script type="text/javascript">
@@ -50,17 +50,8 @@
       function changeImage () {
       
         $('#quote-box-inner').fadeOut('slow', function() {
+          $('#quote-box a').html('<a href="'+quotes[index]['link']+'">');
           $('#quote-box-inner div.img').html('<img src="'+quotes[index]['photo']+'"/>');
-<!--
-          $('#quote-box-inner div.cont').html('<p class="text txt">'
-                                        + quotes[index]['text']
-                                        + '</p><p><span class="author">'
-                                        + quotes[index]['author']
-                                        + '</span><span class="license">'
-                                        + quotes[index]['license']
-                                        + '</span></p>'
-          );
--->
           $('#quote-box-inner').fadeIn('slow', function() {});
         });
       
@@ -85,6 +76,7 @@
         <xsl:when test="$pStart = $pEnd">
           {
             'photo': '/campaigns/ilovefs/whylovefs/photos/gallery/ilovefs-gallery-thumb-<xsl:value-of select="$pStart"/>.jpg',
+            'link': 'http://download.fsfe.org/campaigns/ilovefs/gallery/ilovefs-gallery-<xsl:value-of select="$pStart"/>.jpg',
           },
           <xsl:text>&#xA;</xsl:text>
         </xsl:when>

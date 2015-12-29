@@ -19,17 +19,17 @@
     <!-- appears once when <picture-box /> is called -->
     
     <div id="quote-box">
-      <a href="http://download.fsfe.org/campaigns/ilovefs/gallery/ilovefs-gallery-1.jpg">
         <div id="quote-box-inner" class="logo-list quote">
-          <div class="img">
-            <noscript>
-              <img>
-                <xsl:attribute name="src">/campaigns/ilovefs/whylovefs/photos/gallery/ilovefs-gallery-thumb-1.jpg</xsl:attribute>
-              </img>
-            </noscript>
-          </div> <!-- /img -->
+          <a href="http://download.fsfe.org/campaigns/ilovefs/gallery/ilovefs-gallery-1.jpg">
+            <div class="img">
+              <noscript>
+                <img>
+                  <xsl:attribute name="src">/campaigns/ilovefs/whylovefs/photos/gallery/ilovefs-gallery-thumb-1.jpg</xsl:attribute>
+                </img>
+              </noscript>
+            </div> <!-- /img -->
+          </a>
         </div> <!-- /quote-box-inner -->
-      </a>
     </div> <!-- /quote-box -->
     
     <script type="text/javascript">
@@ -50,10 +50,9 @@
       function changeImage () {
       
         $('#quote-box-inner').fadeOut('slow', function() {
-          $('#quote-box a').html('<a href="'+quotes[index]['link']+'">');
-          $('#quote-box-inner div.img').html('<img src="'+quotes[index]['photo']+'"/>');
-          $('#quote-box-inner').fadeIn('slow', function() {});
-        });
+          $('#quote-box-inner a').html('<a href="' + quotes[index]['link'] + '">'
+                                     + '<div class="img"><img src="' + quotes[index]['photo'] + '"/></div>'
+          );
       
         index = (index+1)%quotes.length;
         setTimeout("changeImage();",5000);

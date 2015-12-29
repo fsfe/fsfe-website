@@ -47,12 +47,14 @@
       
       <![CDATA[
       var index = Math.floor(Math.random()*quotes.length);
-      function changeImage () {
+      function changeImage() {
       
         $('#quote-box-inner').fadeOut('slow', function() {
-          $('#quote-box-inner a').html('<a href="' + quotes[index]['link'] + '">'
+          $('#quote-box-inner').html('<a href="' + quotes[index]['link'] + '">'
                                      + '<div class="img"><img src="' + quotes[index]['photo'] + '"/></div>'
-          );
+                                     );
+          $('#quote-box-inner').fadeIn('slow', function() {});
+          });
       
         index = (index+1)%quotes.length;
         setTimeout("changeImage();",5000);

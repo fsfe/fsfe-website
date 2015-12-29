@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:output method="xml" encoding="UTF-8" indent="yes" />
   
   <xsl:import href="../../../tools/xsltsl/tagging.xsl" />
   
@@ -19,6 +20,7 @@
   <xsl:template match="picture-box">
     <!-- appears once when <picture-box /> is called -->
     <script type="text/javascript">
+      /* &lt;![CDATA[ */
       var quotes = [
       
       <!-- this template calls the loop below -->
@@ -29,7 +31,8 @@
       <!-- and here again the one-time content -->
       
       ];
-
+      
+      <![CDATA[
       var index = Math.floor(Math.random()*quotes.length);
       function changeImage () {
       
@@ -52,6 +55,9 @@
       
       changeImage();
       ]]>
+      
+      /* ]]&gt; */
+      
     </script>
 
   </xsl:template>

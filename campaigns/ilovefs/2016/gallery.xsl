@@ -2,6 +2,8 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   
+  <xsl:import href="../../../fsfe.xsl" />
+  
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
   
 <!-- This creates a page containing images of a gallery. All pictures are located in a directory and have numbered names (here ilovefs-gallery-thumb-NNN.jpg) -->

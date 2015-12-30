@@ -18,7 +18,7 @@
   <xsl:template match="picture-box">    
     <!-- appears once when <picture-box /> is called -->
     
-    <div id="picture-box" style="height: 225px"> <!-- change height of pictures -->
+    <div id="picture-box" <!--style="height: 225px"-->> <!-- change height of pictures -->
       <div id="picture-box-inner" class="logo-list quote">
         <a href="http://download.fsfe.org/campaigns/ilovefs/gallery/ilovefs-gallery-1.jpg">
           <div class="img">
@@ -46,11 +46,11 @@
       <![CDATA[
       var index = Math.floor(Math.random()*quotes.length);
       function changeImage() {
-        $('#picture-box-inner').fadeOut('slow', function() {
+        $('#picture-box-inner').fadeTo(600, 0, function() {
           $('#picture-box-inner').html('<a href="' + quotes[index]['link'] + '">'
                                      + '<div class="img"><img src="' + quotes[index]['photo'] + '"/></div>'
                                      );
-          $('#picture-box-inner').fadeIn('slow', function() {});
+          $('#picture-box-inner').fadeTo(600, 1, function() {});
           });
         index = (index+1)%quotes.length;
         setTimeout("changeImage();",5000);

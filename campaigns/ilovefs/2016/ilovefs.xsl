@@ -37,8 +37,8 @@
       var quotes = [
       <!-- this template calls the loop below -->
       <xsl:call-template name="picture-box">
-        <xsl:with-param name="pStart" select="1"/>
-        <xsl:with-param name="pEnd" select="42"/> <!-- select maximum number of pictures which should be shown in picture box -->
+        <xsl:with-param name="num" select="1"/> <!-- starting number -->
+        <xsl:with-param name="max" select="42"/> <!-- select maximum number of pictures which should be shown in picture box -->
       </xsl:call-template>
       <!-- and here again the one-time content -->
       ];
@@ -65,31 +65,19 @@
   </xsl:template>
 
   <xsl:template name="picture-box">
-    <xsl:param name="pStart"/>
-    <xsl:param name="pEnd"/>
-    
-    <xsl:if test="not($pStart > $pEnd)">
-      <xsl:choose>
-        <xsl:when test="$pStart = $pEnd">
-          {
-            'photo': '/campaigns/ilovefs/whylovefs/photos/gallery/ilovefs-gallery-thumb-<xsl:value-of select="$pStart"/>.jpg',
-            'link': 'http://download.fsfe.org/campaigns/ilovefs/gallery/ilovefs-gallery-<xsl:value-of select="$pStart"/>.jpg',
-          },
-        </xsl:when>
-        
-        <xsl:otherwise>
-          <xsl:variable name="vMid" select=
-           "floor(($pStart + $pEnd) div 2)"/>
-          <xsl:call-template name="picture-box">
-            <xsl:with-param name="pStart" select="$pStart"/>
-            <xsl:with-param name="pEnd" select="$vMid"/>
-          </xsl:call-template>
-          <xsl:call-template name="picture-box">
-            <xsl:with-param name="pStart" select="$vMid+1"/>
-            <xsl:with-param name="pEnd" select="$pEnd"/>
-          </xsl:call-template>
-        </xsl:otherwise>
-      </xsl:choose>
+    <xsl:param name="num"/>
+    <xsl:param name="max"/>
+    <xsl:if test="not($num > $max)">
+      {
+        'photo': '/campaigns/ilovefs/whylovefs/photos/gallery/ilovefs-gallery-thumb-<xsl:value-of select="$num"/>.jpg',
+        'link': 'http://download.fsfe.org/campaigns/ilovefs/gallery/ilovefs-gallery-<xsl:value-of select="$num"/>.jpg',
+      },
+      <xsl:call-template name="picture-box"> <!-- initiate the next round -->
+        <xsl:with-param name="num">
+          <xsl:value-of select="$num+1" /> <!-- count +1 -->
+        </xsl:with-param>
+        <xsl:with-param name="max" select="$max"/>
+      </xsl:call-template>
     </xsl:if>
   </xsl:template>
   <!-- / picture-box -->

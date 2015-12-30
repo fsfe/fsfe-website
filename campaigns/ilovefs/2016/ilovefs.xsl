@@ -16,20 +16,23 @@
 
   <!-- This creates looping pictures in a box. All pictures are located in a directory and have numbered names (here ilovefs-gallery-thumb-NNN.jpg) -->
   <xsl:template match="picture-box">
+    <xsl:variable name="imgheight" select="225px" /> <!-- set fixed height of pictures. Important to avoid "jumping" text during switch of pictures -->
+    
     <!-- appears once when <picture-box /> is called -->
     
     <div id="picture-box">
-        <div id="picture-box-inner" class="logo-list quote">
-          <a href="http://download.fsfe.org/campaigns/ilovefs/gallery/ilovefs-gallery-1.jpg">
-            <div class="img">
-              <noscript>
-                <img>
-                  <xsl:attribute name="src">/campaigns/ilovefs/whylovefs/photos/gallery/ilovefs-gallery-thumb-1.jpg</xsl:attribute>
-                </img>
-              </noscript>
-            </div> <!-- /img -->
-          </a>
-        </div> <!-- /picture-box-inner -->
+      <xsl:attribute name="style">height:<xsl:value-of select="$imgheight" /></xsl:attribute>
+      <div id="picture-box-inner" class="logo-list quote">
+        <a href="http://download.fsfe.org/campaigns/ilovefs/gallery/ilovefs-gallery-1.jpg">
+          <div class="img">
+            <noscript>
+              <img>
+                <xsl:attribute name="src">/campaigns/ilovefs/whylovefs/photos/gallery/ilovefs-gallery-thumb-1.jpg</xsl:attribute>
+              </img>
+            </noscript>
+          </div> <!-- /img -->
+        </a>
+      </div> <!-- /picture-box-inner -->
     </div> <!-- /picture-box -->
     
     <script type="text/javascript">

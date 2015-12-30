@@ -18,7 +18,7 @@
   <xsl:template match="picture-box">    
     <!-- appears once when <picture-box /> is called -->
     
-    <div id="picture-box" <!--style="height: 225px"-->> <!-- change height of pictures -->
+    <div id="picture-box"> <!-- change height of pictures -->
       <div id="picture-box-inner" class="logo-list quote">
         <a href="http://download.fsfe.org/campaigns/ilovefs/gallery/ilovefs-gallery-1.jpg">
           <div class="img">

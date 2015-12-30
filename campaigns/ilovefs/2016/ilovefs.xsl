@@ -16,12 +16,12 @@
 
   <!-- This creates looping pictures in a box. All pictures are located in a directory and have numbered names (here ilovefs-gallery-thumb-NNN.jpg) -->
   <xsl:template match="picture-box">
-    <xsl:variable name="imgheight" select="225px" /> <!-- set fixed height of pictures. Important to avoid "jumping" text during switch of pictures -->
+    <!--<xsl:variable name="imgheight" select="225px" />--> <!-- set fixed height of pictures. Important to avoid "jumping" text during switch of pictures -->
     
     <!-- appears once when <picture-box /> is called -->
     
     <div id="picture-box">
-      <xsl:attribute name="style">height:<xsl:value-of select="$imgheight" /></xsl:attribute>
+      <!--<xsl:attribute name="style">height:<xsl:value-of select="$imgheight" /></xsl:attribute>-->
       <div id="picture-box-inner" class="logo-list quote">
         <a href="http://download.fsfe.org/campaigns/ilovefs/gallery/ilovefs-gallery-1.jpg">
           <div class="img">

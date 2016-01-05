@@ -81,35 +81,5 @@
     </xsl:if>
   </xsl:template>
   <!-- / picture-box -->
-
-  <!-- may be needed for picture box if text appears and has to be sanitised -->
-  <xsl:template name="escape">
-    <xsl:param name="string"/>
-    <xsl:variable name="apos" select='"&apos;"' />
-    <xsl:choose>
-      <xsl:when test='contains($string, $apos)'>
-        <xsl:value-of select="substring-before($string,$apos)" />
-        <xsl:text>\'</xsl:text>
-        <xsl:call-template name="escape">
-          <xsl:with-param name="string" select="substring-after($string, $apos)" />
-        </xsl:call-template>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:value-of select="$string" />
-      </xsl:otherwise>
-    </xsl:choose>
-  </xsl:template>
-
-  <!-- How to show a link -->
-  <xsl:template match="/buildinfo/document/set/news/link">
-    <xsl:element name="a">
-      <xsl:attribute name="href">
-        <xsl:value-of select="text()" />
-      </xsl:attribute>
-      <xsl:text>[</xsl:text>
-      <xsl:value-of select="/buildinfo/document/text[@id='more']" />
-      <xsl:text>]</xsl:text>
-    </xsl:element>
-  </xsl:template>
   
 </xsl:stylesheet>

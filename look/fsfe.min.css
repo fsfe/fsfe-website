@@ -11020,6 +11020,9 @@ a.the-fellowship {
   .frontpage #campaigns-boxes #appelbaum .text {
     margin-right: 35%;
   }
+  .frontpage #campaigns-boxes #appelbaum .text {
+    font-size: 1.25em;
+  }
 }
 .frontpage #campaigns-boxes #appelbaum .copyright {
   font-size: 0.6em;
@@ -11084,12 +11087,16 @@ a.the-fellowship {
   .frontpage #campaigns-boxes #zacchiroli2 .author,
   .frontpage #campaigns-boxes #zacchiroli2 .text {
     margin-right: 45%;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }
 @media (min-width: 992px) {
-  .frontpage #campaigns-boxes #zacchiroli2 .author,
+  .frontpage #campaigns-boxes #zacchiroli2 .author {
+    margin-right: 35%;
+  }
   .frontpage #campaigns-boxes #zacchiroli2 .text {
     margin-right: 35%;
+    font-size: 1.25em;
   }
 }
 .frontpage #campaigns-boxes #dfd {

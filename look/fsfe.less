@@ -178,6 +178,9 @@ a.the-fellowship {
                 .author, .text {
                     margin-right: 35%;
                 }
+                .text {
+				    font-size: 1.25em;
+				}
             }
             .copyright {
                 font-size: 0.6em;
@@ -229,12 +232,17 @@ a.the-fellowship {
                 background-size: contain;
                 .author, .text {
                     margin-right: 45%;
+                    background-color: rgba(0,0,0,0.5);
                 }
             }
 
             @media (min-width: @screen-md) {
-                .author, .text {
+                .author{
                     margin-right: 35%;
+				}
+                .text {
+                    margin-right: 35%;
+                    font-size: 1.25em;
                 }
             }
         }

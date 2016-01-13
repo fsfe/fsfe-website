@@ -202,8 +202,47 @@ a.the-fellowship {
                 .text {font-size: 1.3em; }
                 .text, .author {max-width: 80ex; margin: 1em auto; display: block;}
             }
-
         }
+
+        #zacchiroli2 {
+            background: url('/graphics/zacchiroli.jpg')  top right  no-repeat #fcfcfc;
+            background-size: cover;
+            text-shadow: 0px 1px 8px rgb(0,0,0);
+
+            @media (min-width: @screen-sm) {
+                background-size: contain;
+            }
+
+            img { display: none; }
+            .author:before {content: "– ";}
+            .text { 
+                .quote; 
+            }
+            .author, .text {
+                display: block;
+                background-color: rgba(0,0,0,0.5);
+                padding: 0.5em;
+            }
+
+            @media (min-width: @screen-sm) {
+                .author, .text {
+                    margin-right: 45%;
+                }
+            }
+
+            @media (min-width: @screen-md) {
+                .author, .text {
+                    margin-right: 35%;
+                }
+            }
+            .copyright {
+                font-size: 0.6em;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
+
         #dfd {
             .campaign-box-center;
             background: url('/graphics/fellowship/plussy_tile_01-33alpha.png') rgba(118, 181, 32,1);

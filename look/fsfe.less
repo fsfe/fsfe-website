@@ -206,24 +206,27 @@ a.the-fellowship {
 
         #zacchiroli2 {
             background: url('/graphics/zacchiroli.jpg')  top right  no-repeat #b8b8b8;
+            background-size: cover;
             text-shadow: 0px 1px 8px rgb(0,0,0);
-
-            @media (min-width: @screen-sm) {
-                background-size: contain;
-            }
-
-            img { display: none; }
+            
             .author:before {content: "– ";}
             .text { 
                 .quote; 
             }
             .author, .text {
                 display: block;
-                background-color: rgba(0,0,0,0.5);
                 padding: 0.5em;
             }
 
+            .copyright {
+                font-size: 0.6em;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+
             @media (min-width: @screen-sm) {
+                background-size: contain;
                 .author, .text {
                     margin-right: 45%;
                 }
@@ -233,12 +236,6 @@ a.the-fellowship {
                 .author, .text {
                     margin-right: 35%;
                 }
-            }
-            .copyright {
-                font-size: 0.6em;
-                position: absolute;
-                bottom: 0;
-                right: 0;
             }
         }
 

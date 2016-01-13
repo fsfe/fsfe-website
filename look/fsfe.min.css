@@ -11063,6 +11063,11 @@ a.the-fellowship {
   background-size: cover;
   text-shadow: 0px 1px 8px #000000;
 }
+@media (min-width: 768px) {
+  .frontpage #campaigns-boxes #zacchiroli2 {
+    background-size: contain;
+  }
+}
 .frontpage #campaigns-boxes #zacchiroli2 .author:before {
   content: "– ";
 }
@@ -11074,30 +11079,32 @@ a.the-fellowship {
   display: block;
   padding: 0.5em;
 }
+@media (min-width: 768px) and (max-width: 768px) {
+  .frontpage #campaigns-boxes #zacchiroli2 .author,
+  .frontpage #campaigns-boxes #zacchiroli2 .text {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+@media (min-width: 768px) {
+  .frontpage #campaigns-boxes #zacchiroli2 .author,
+  .frontpage #campaigns-boxes #zacchiroli2 .text {
+    margin-right: 45%;
+  }
+}
+@media (min-width: 992px) {
+  .frontpage #campaigns-boxes #zacchiroli2 .author,
+  .frontpage #campaigns-boxes #zacchiroli2 .text {
+    margin-right: 35%;
+  }
+  .frontpage #campaigns-boxes #zacchiroli2 .text {
+    font-size: 1.25em;
+  }
+}
 .frontpage #campaigns-boxes #zacchiroli2 .copyright {
   font-size: 0.6em;
   position: absolute;
   bottom: 0;
   right: 0;
-}
-@media (min-width: 768px) {
-  .frontpage #campaigns-boxes #zacchiroli2 {
-    background-size: contain;
-  }
-  .frontpage #campaigns-boxes #zacchiroli2 .author,
-  .frontpage #campaigns-boxes #zacchiroli2 .text {
-    margin-right: 45%;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-}
-@media (min-width: 992px) {
-  .frontpage #campaigns-boxes #zacchiroli2 .author {
-    margin-right: 35%;
-  }
-  .frontpage #campaigns-boxes #zacchiroli2 .text {
-    margin-right: 35%;
-    font-size: 1.25em;
-  }
 }
 .frontpage #campaigns-boxes #dfd {
   text-align: center;

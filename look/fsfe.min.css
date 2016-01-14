@@ -11092,9 +11092,10 @@ a.the-fellowship {
   }
 }
 @media (min-width: 992px) {
-  .frontpage #campaigns-boxes #zacchiroli2 .author,
-  .frontpage #campaigns-boxes #zacchiroli2 .text {
-    margin-right: 35%;
+  .frontpage #campaigns-boxes #zacchiroli2 {
+    /*.author, .text {
+                    margin-right: 35%;
+                }*/
   }
   .frontpage #campaigns-boxes #zacchiroli2 .text {
     font-size: 1.25em;

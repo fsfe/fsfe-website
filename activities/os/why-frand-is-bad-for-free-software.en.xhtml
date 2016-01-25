@@ -2,26 +2,80 @@
 <html>
 
 	<head>
-		<title>Why FRAND is bad for Free Software</title>
+		<title>Why is FRAND bad for Free Software?</title>
 	</head>
 
 	<body>
+		<h1>Why is FRAND bad for Free Software?</h1>
 
-		<h1>Why FRAND is bad for Free Software</h1>
+		<p>FRAND (“fair, reasonable, and non-discriminatory”) is an acronym used to refer to a wide array of patent licensing practices. Under patent law, whoever wants to produce and market a patented invention is required for a licence, including when it is necessary to comply to a certain industry standard. To reduce the broad power of the patent holder, the industry resorted to agreements that bound patent holders to certain licensing conditions, usually referred as the “fair, reasonable and non-discriminatory” terms. In most cases, such licences make a proper Free Software implementation of the standard impossible, due to incompatibilities with Free Software licences and other obstacles of practical nature. As a consequence, FRAND licences cannot be considered fair, reasonable nor non-discriminatory.</p>
+		
+		<h3 id="interoperability-and-standardisation">Interoperability and standardisation</h3>
+		
+		<p>In the ICT sector, interoperability leads to faster innovation and stronger competition by allowing different technologies to interact with each other, thus creating new and improved services and products<a href="#fn1" class="fn" id="fnref1">1</a>. Standardisation is one of the ways to interoperability. Setting common technical specifications and requirements allows different manufacturers to develop software and hardware products that can be safely integrated with those from their partners <em>and</em> of their competitors, if those standards are widely implemented. So called “intellectual property rights” are antithetical to standardisation<a href="#fn2" class="fn" id="fnref2">2</a> because they grant to the right-holder the monopoly on technology and therefore restrict competition and interoperability. In order to mitigate potential patent litigation threats, standard setting organisations (SSOs) typically require their members to license “standard essential patents” (SEPs - patents on inventions that are essential to the implementation of the standard) on FRAND terms. Allegedly this should encourage stakeholders to adopt and implement the standard while ensuring revenues to SEP owners for the usage of the patent.</p>
+		
+		<h3 id="what-is-frand">What is FRAND?</h3>
+		
+		<p>What makes FRAND a fuzzy concept is the fact that there is no consensus on what are “fair”, “reasonable” and “non-discriminatory” terms:</p>
+		
+		<ul>
+			<li><p><strong>Fair</strong> primarily relates to the underlying licensing terms, which should not be anti-competitive nor would be considered unlawful if imposed by a dominant firm in their relative market.</p></li>
+			<li><p><strong>Reasonable</strong> refers mainly to licensing rates.</p></li>
+			<li><p><strong>Non-discriminatory</strong> relates to both the terms and the rates, requiring similar treatment for each licensee.</p></li>
+		</ul>
+		
+		<h3 id="why-frand-is-incompatible-with-the-gnu-gpl">Why FRAND is incompatible with the GNU GPL?</h3>
+		
+		<p>FRAND licences usually require a payment of royalties that is based on the number of distributed copies. It is a well established fact that such requirement in <a href="#why-frand-is-incompatible-with-the-gnu-gpl?">FRAND is incompatible with Free Software licences</a>, especially with the GNU GPL family. A few commentators argue that, in general, there is no conflict between FRAND and Free Software, but even they acknowledge the incompatibility of FRAND with the GNU GPL, LGPL and AGPL<a href="#fn3" class="fn" id="fnref3">3</a> which are some of the most popular and widely used licences. These are incompatible with any royalty-bearing conditions: for example Section 7 of the GPL v2 (the “Liberty or Death clause”), ensures that the presence of any extra restriction preventing users from exercising the freedoms in the license -like patent royalties- revokes the right to continue distribution of the software. In addition, FRAND terms require licensor and licensee to agree on an individual license that cannot be automatically transferred to third parties, hence breaching the GPL requirement “that any patent must be licensed for everyone’s free use or not at all”.</p>
+		
+		<p>It has been calculated that at least 85% of Free Software projects are distributed under licences that are incompatible with royalty bearing regimes<a href="#fn4" class="fn" id="fnref4">4</a>. In this respect, the “non-discriminatory” criterion cannot be met, as it excludes individuals and companies that work with Free Software from implementing the FRAND licensed technology. It follows that a FRAND-licensed Standard Essential Patent is neither “fair” nor “reasonable”.</p>
+		
+		<h3 id="can-frand-be-really-frand-for-free-software">Can FRAND be really FRAND for Free Software?</h3>
+		
+		<p>Even when considering those few Free Software licences that might be compatible with royalty bearing terms, there are still many obstacles that need to be removed before a patented technology can be implemented in Free Software.</p>
+		
+		<p>Usually FRAND terms require royalty payments based on the number of distributed copies. As Free Software gives each user the freedom to redistribute the software itself, keeping track and collecting such royalties would, in practice, be impossible. Some rare FRAND terms allow to pay a lump sum amount, so that the developers can avoid keeping track of the distributed copies. This practice might seem like a viable option, however, only big corporations with a dedicated legal department are capable of negotiating such terms, thus excluding individual programmers and small and medium enterprises (SMEs). It is essential to ensure that different actors can enter the market, especially in the ICT sector, where it is not unusual to go from being a start-up to a leader company in less than a decade. Easier access to standardised technologies will instead contribute to competition, as more new players will be allowed to emerge on the market and base their ideas on the existing technologies.</p>
+		
+		<p>Some even rarer FRAND licences do not include any kind of royalty payment (FRAND-Z, FRAND-RF), but present other restrictions, like the requirement to contact the SEP holder to obtain an individual licence. This is still discriminatory against Free Software, because it would require any user willing to redistribute modified versions to contact the SEP holder, wasting time and resources and seriously impairing the collaborative model that drives Free Software. A FRAND licence stripped of this restriction, granted for everyone and not requiring any royalty payment is referred as a “Royalty free” (or, better, “Restriction free”) and it is usually considered to be a separate licence from FRAND.</p>
+		
+		<p>Similar licence terms can be achieved by forcing FRAND to be compatible with the GPL by definition. Standard setting organisations (SSOs) can require participants to the standardisation process to explicitly agree that a licence is FRAND only if it allows the use and distribution of the essential patented technology under terms that are not less restrictive than the GNU GPL v.2 or any later version. Furthermore, to ensure that such a policy is not circumvented, SSOs should carefully consider the status of all the components of any new standard. It is not uncommon for a new standard to be built upon a previous one. If the latter was drafted under different rules (e.g. allowing royalty-based FRAND or unrestricted patents), the full implementation of the new standard may depend on the licensing terms of SEPs included in the older standard. Such a situation will undermine the efforts that were made to properly address the problem of SEPs. The final necessary complement to this setup is an adequate enforcement system to ensure that patent holders are kept to their obligations.</p>
+		
+		<h3 id="why-frand-is-not-good-for-software">Why FRAND is not good for software?</h3>
+		
+		<p>In the field of standards governing software, internet and web, there is a distinct absence of SEPs<a href="#fn5" class="fn" id="fnref5">5</a>. This is particularly evident in the policies of several SSOs working in these fields: for example the vast majority of standards recognised by the Organisation for the Advancement of Structured Information Standards (OASIS) operates under royalty free terms<a href="#fn6" class="fn" id="fnref6">6</a> and although the option of FRAND is included in their policy, OASIS recognises its trend towards royalty-free standards<a href="#fn7" class="fn" id="fnref7">7</a>. The Internet Engineering Task Force (IETF) discourages encumbered patent standards in the general instructions to their working groups<a href="#fn8" class="fn" id="fnref8">8</a>. Even better, the W3C requires any SEP to be licenced to everyone on royalty free basis<a href="#fn9" class="fn" id="fnref9">9</a>.</p>
+		
+		<p>SEP and FRAND emanated from telecoms sector and through traditional SSOs, while software, internet and web have developed in a more collaborative way, i.e. through fora and consortia<a href="#fn10" class="fn" id="fnref10">10</a>. This difference has to be taken into account while regulating the work of SSOs. Applying the model that has been developed for one sector to another, which has practically and historically developed in a different way, can lead to consequences opposite to the aim of standardisation. As such, the approach of ‘one size fits all’ is inappropriate and can stifle innovation instead of encouraging it.</p>
+		
+		<h3 id="the-alternative-to-frand">The alternative to FRAND</h3>
+		
+		<p>The way to achieve the widest interoperability and competition on the market is to adopt Open Standards that are compatible with Free Software licenses.<a href="#fn11" class="fn" id="fnref11">11</a> The rapid development of software, web and internet technology has been largely based on Open Standards, which are available free of restrictions and royalties. This shows that restriction-free standards are crucial in an environment where innovation is rapid and accumulative, and where most actors are small and lack the resources to engage in sophisticated patent licensing transactions. Licensing conditions that pose barriers for such actors to enter the market or compete with their large counterparts are significantly hampering the competition and as such cannot be called fair, reasonable or non-discriminatory. Therefore, only licences that are truly Restriction free allow the standard to be an Open Standard, i.e. “free from legal or technical clauses that limit its utilisation by any party or in any business model”<a href="#fn12" class="fn" id="fnref12">12</a>. Furthermore, drafting such standards in a minimalistic<a href="#fn13" class="fn" id="fnref13">13</a> way will ensure that companies of different size are actually in the position to implement them, which will achieve true non-discrimination across different business sizes and models. This will also contribute to the wider and more effective adoption of standards across industries. Non-minimalistic standards are instead cumbersome and require huge investments of time and resources to be implemented.</p>
+		
+		<h2 id="conclusion">Conclusion</h2>
+		
+		<p>FRAND is incompatible with most of Free Software. In order to overcome this contradiction, it is necessary to ensure that SEPs are licensed under terms that are compatible with Free Software, e.g. Restriction free. However, this option might still place additional obstacles to the implementation of innovative technology in Free Software, depending on the actual content of the SEP licence and on the enforcing capabilities of the standard setting organisation. The widest adoption of standards, which is in principle the aim of FRAND, can be achieved by developing them as open and minimalistic<a href="#fn14" class="fn" id="fnref14">14</a>. These standards will ensure the widest competition of different Free Software and proprietary actors on the market, without excluding one or the other.</p>
+		
+		<h2 id="fn">Footnotes</h2>
 
-		<p>Should patents that cover standards be licensed royalty-free (as <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/#sec-Requirements">W3C recommends</a>), or should should they instead be licensed under so-called "fair, reasonable and non-discriminatory terms" (FRAND)?</p>
-
-		<p>FRAND is a misnomer as the terms are often unfair, unreasonable, and highly discriminatory, particularly for Free Software. In reality FRAND is only fair and reasonable to a small circle of the most powerful software companies.</p>
-
-		<p>Paying royalties of 0.000001 Cent per copy to implement a standard might look fair at the first sight, but such a fee would make it impossible to distribute a program as Free Software. Free Software safeguards the right to share with others. Therefore, when Free Software companies sell their software they cannot know how many people will eventually end up using it. It becomes impossible to estimate the total amount of royalties owed to patent owners; Free Software businesses will be unable to compete with their proprietary competitors and Free Software as a whole would be undermined.</p>
-
-	</body>
-
-	<author id="gerloff" />
+		<ol>
+			<li id="fn1"><p>Urs Gasse, John Palfrey, <a href="https://cyber.law.harvard.edu/interop/pdfs/interop-breaking-barriers.pdf">“When and How ICT Interoperability Drives Innovation”</a>, Berkman Publication Series, 2007.<a href="#fnref1" class="ref">↩</a></p></li>
+			<li id="fn2"><p>Georg Greve, <a href="http://blogs.fsfe.org/greve/?p=309">“Considerations on Innovation and Competition Policy”</a>.<a href="#fnref2" class="ref">↩</a></p></li>
+			<li id="fn3"><p>Jay Kesan, <a href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=1767083">“The Fallacy of OSS Discrimination by FRAND Licensing: An Empirical Analysis”</a>, Illinois Public Law Research Paper No. 10-14, 2011-02-22.<a href="#fnref3" class="ref">↩</a></p></li>
+			<li id="fn4"><p>According to <a href="https://fsfe.org/activities/os/bsa-letter-analysis.en.html#5">our analysis</a> based on <a href="http://www.blackducksoftware.com/oss/licenses#top20">data from Black Duck software</a>.<a href="#fnref4" class="ref">↩</a></p></li>
+			<li id="fn5"><p>Mark Bohhanon, <a href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2477533">“Out of the Murky Lagoon and into… Is there a Emerging Consistent US Government Policy on Standard Essential Patents?”</a>, 2014-08-08.<a href="#fnref5" class="ref">↩</a></p></li>
+			<li id="fn6"><p>OASIS, <a href="https://www.oasis-open.org/org/faq">FAQ section</a>, question No. 7. “What are the IPR Policies of OASIS?”.<a href="#fnref6" class="ref">↩</a></p></li>
+			<li id="fn7"><p><a href="http://www.nist.gov/standardsgov/upload/OASIS.pdf">“OASIS response to NSTC request for feedback on standard practices”</a>, 75 FR 76397 (2011).<a href="#fnref7" class="ref">↩</a></p></li>
+			<li id="fn8"><p>IETF, <a href="https://tools.ietf.org/html/rfc3979">RFC 3979</a>.<a href="#fnref8" class="ref">↩</a></p></li>
+			<li id="fn9"><p><a href="http://www.w3.org/Consortium/Patent-Policy-20040205/#sec-Requirements">W3C patent policy</a>.<a href="#fnref9" class="ref">↩</a></p></li>
+			<li id="fn10"><p>Mark Bohhanon, <a href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2477533">“Out of the Murky Lagoon and into… Is there a Emerging Consistent US Government Policy on Standard Essential Patents?”</a>, 2014-08-08.<a href="#fnref10" class="ref">↩</a></p></li>
+			<li id="fn11"><p>Rishab Gosh, <a href="http://www.flosspols.org/deliverables/FLOSSPOLS-D04-openstandards-v6.pdf">“An Economic Basis for Open Standards”</a>, Policy Report of FLOSSPOLS Project managed by the European Commission, University of Maastricht, 2005.<a href="#fnref11" class="ref">↩</a></p></li>
+			<li id="fn12"><p><a href="https://fsfe.org/activities/os/def.en.html">Open standard definition</a>.<a href="#fnref12" class="ref">↩</a></p></li>
+			<li id="fn13"><p>Bernhard Reiter, <a href="https://fsfe.org/activities/os/minimalisticstandards.en.html">“The minimal principle: because being an open standard is not enough”</a>.<a href="#fnref13" class="ref">↩</a></p></li>
+			<li id="fn14"><p>Bernhard Reiter, <a href="https://fsfe.org/activities/os/minimalisticstandards.en.html">“The minimal principle: because being an open standard is not enough”</a>.<a href="#fnref14" class="ref">↩</a></p></li>
+		</ol>
+		</body>
+		
 	<date>
-		<original content="2010-10-01" />
+		<original content="2015-12-01" />
 	</date>
-
-	<timestamp>$Date: 2012-03-06 18:28:55 +0100 (Tue, 06 Mar 2012) $ $Author: gollo $</timestamp>
 	
 </html>

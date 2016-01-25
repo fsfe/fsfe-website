@@ -17,8 +17,7 @@ RewriteRUle ^promo(/.*)?	/contribute/spreadtheword$1	[redirect=permanent]
 RewriteRule   ^(cyf|convince).*      http://wiki.fsfe.org/ConvinceYourFriends        [R=permanent]
 
 # Redirection for IloveFS campaign. Should always redirect to the most recent year
-RewriteRule ^campaigns/ilovefs(/?)$ /campaigns/ilovefs/2016/index.html
-RewriteRule ^campaigns/ilovefs/ilovefs(/.*) /campaigns/ilovefs/2016$1
+RewriteRule ^campaigns/ilovefs/ilovefs(/.*)? /campaigns/ilovefs/2016$1
 
 
 

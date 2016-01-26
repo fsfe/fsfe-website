@@ -19,7 +19,8 @@
       <xsl:sort select="@date" order="descending"/>
       <p>
         <b><xsl:value-of select="@date" /></b><br/>
-        <xsl:value-of select="body"/>
+<!--    <xsl:value-of select="body"/>-->
+        <xsl:apply-templates select="body/node()" />
         <xsl:variable name="link"><xsl:value-of select="link"/></xsl:variable>
         <xsl:if test="$link!=''">
           &#160;<a href="{link}" class="learn-more"><xsl:value-of select="/buildinfo/document/text[@id='more']"/></a>

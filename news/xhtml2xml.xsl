@@ -34,6 +34,7 @@
 
 	<xsl:element name="body">
 	  <xsl:value-of select="//p[@newsteaser]"/>
+    <xsl:text>blahblah</xsl:text>
 	</xsl:element>
 	
 	<xsl:element name="body-complete">

@@ -19,9 +19,9 @@ RewriteRule   ^(cyf|convince).*      http://wiki.fsfe.org/ConvinceYourFriends   
 
 # Redirections for IloveFS campaign
 RewriteRule ^campaigns/ilovefs/ilovefs(.*)html$ /campaigns/ilovefs/index$1html [redirect=permanent]
-# RewriteRule ^campaigns/ilovefs(/?)$ /campaigns/ilovefs/2016/ [redirect=permanent] # UPDATE always current year's campaign
-RewriteRule ^campaigns/ilovefs/([^/]*)(.html)?$ /campaigns/ilovefs/2016/$1.html [redirect=permanent]
-RewriteRule ^campaigns/ilovefs/latest-report(.*)$ /news/2015/news-20150303-01.html [redirect=permanent] # UPDATE always the latest available report
+RewriteRule ^campaigns/ilovefs(/?)$ /campaigns/ilovefs/2016/ [redirect=permanent] # UPDATE year
+RewriteRule ^campaigns/ilovefs/([^/]*)(.html)?$ /campaigns/ilovefs/2016/$1.html [redirect=permanent] # UPDATE year
+RewriteRule ^campaigns/ilovefs/latest-report(.*)$ /news/2015/news-20150303-01.html [redirect=permanent] # UPDATE always link to latest available report
 RewriteRule ^campaigns/ilovefs/(201[2-5])/index(.*)$ /campaigns/ilovefs/$1/ [redirect=permanent]
 RewriteRule ^campaigns/ilovefs/(201[2-5])(/?)$ /campaigns/ilovefs/$1/ilovefs.html
 # Following rule shouldn't be necessary anymore in 2017

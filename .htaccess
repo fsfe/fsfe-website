@@ -18,6 +18,7 @@ RewriteRule   ^(cyf|convince).*      http://wiki.fsfe.org/ConvinceYourFriends   
 
 # Redirection for IloveFS campaign. Should always redirect to the most recent year
 RewriteRule ^campaigns/ilovefs(/?)$ /campaigns/ilovefs/2016/ [redirect=permanent]
+RewriteRule ^campaigns/ilovefs/([2012-2015])/index(.*)$ /campaigns/ilovefs/$1/ilovefs$2 [redirect=permanent]
 # RewriteRule ^campaigns/ilovefs(/[^/]*)?$ /campaigns/ilovefs/2016$1
 
 

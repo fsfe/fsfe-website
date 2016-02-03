@@ -10,13 +10,15 @@ RewriteRule ^campaigns/ayc(.*) /campaigns/askyourcandidates$1 [redirect=permanen
 # NoCloud campaign, as printed on posters
 RewriteRUle ^nocloud(/.*)?	/activities/nocloud$1	[redirect=permanent]
 
+# Short cut for promo order
+RewriteRUle ^promo(/.*)?	/contribute/spreadtheword$1	[redirect=permanent]
+
 # Redirect convince your friends easy pages to the wiki page
 RewriteRule   ^(cyf|convince).*      http://wiki.fsfe.org/ConvinceYourFriends        [R=permanent]
 
 # Redirection for IloveFS campaign. Should always redirect to the most recent year
-RewriteRule ^campaigns/ilovefs(/?)$ /campaigns/ilovefs/2015/ilovefs.html
-RewriteRule ^campaigns/ilovefs/ilovefs(.*) /campaigns/ilovefs/2015/ilovefs$1
-
+RewriteRule ^campaigns/ilovefs(/?)$ /campaigns/ilovefs/2016/ [redirect=permanent]
+# RewriteRule ^campaigns/ilovefs(/[^/]*)?$ /campaigns/ilovefs/2016$1
 
 
 RewriteRule ^(.*)\.no.html /$1.nb.html [redirect=permanent]
@@ -62,9 +64,6 @@ RewriteRule ^valentine/valentine(.*) /campaigns/valentine/2011/valentine-2011$1 
 RewriteRule ^campaigns/valentine(/?)$ /campaigns/valentine/2011/valentine-2011 [redirect=temp]
 RewriteRule ^campaigns/valentine/2011(/?)$ /campaigns/valentine/2011/valentine-2011 [redirect=temp]
 
-
-# Redirect convince your friends easy pages to the wiki page
-RewriteRule	^(cyf|convince).*	http://wiki.fsfe.org/ConvinceYourFriends	[redirect=permanent]
 
 # Temporary fix unitl we have a /freesoftware dir for contribute/advocacy/cwfs.en.html
 # RewriteRule ^freesoftware/freesoftware(.*) /about/basics/freesoftware$1 [redirect=temp]

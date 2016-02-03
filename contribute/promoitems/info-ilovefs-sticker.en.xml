@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="ilovefs-sticker">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>I love Free Software - Sticker</name>
+    <description>
+      A sticker to show your love to use, study, share and improve software. 
+    </description>
+    <type>Sticker</type>
+    <size>9 x 5 cm</size>
+    <context><a href="https://fsfe.org/campaigns/ilovefs/ilovefs.en.html">I love Free Software campaign</a></context>
+    <languages>
+      <a href="http://download.fsfe.org/advocacy/promomaterial/IloveFS/IloveFS-sticker/ilovefs-sticker.en.pdf">English</a>
+    </languages>
+    <printed>
+      English
+    </printed>
+    <license>CC0</license>
+    <author>Markus Meier</author>
+    <source><a href="http://download.fsfe.org/advocacy/promomaterial/FYA/IloveFS-sticker/">ilovefs-sticker* in downloads.fsfe.org</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

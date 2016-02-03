@@ -16,8 +16,15 @@ RewriteRUle ^promo(/.*)?	/contribute/spreadtheword$1	[redirect=permanent]
 # Redirect convince your friends easy pages to the wiki page
 RewriteRule   ^(cyf|convince).*      http://wiki.fsfe.org/ConvinceYourFriends        [R=permanent]
 
-# Redirection for IloveFS campaign. Should always redirect to the most recent year
-RewriteRule ^campaigns/ilovefs(/[^/]*)?$ /campaigns/ilovefs/2016$1
+
+# Redirections for IloveFS campaign
+RewriteRule ^campaigns/ilovefs/[^/]*.html$ /campaigns/ilovefs/
+RewriteRule ^campaigns/ilovefs(/?)$ /campaigns/ilovefs/2016/ [redirect=permanent] # UPDATE always current year's campaign
+RewriteRule ^campaigns/ilovefs/latest-report(.*)$ /news/2015/news-20150303-01.html [redirect=permanent] # UPDATE always the latest available report
+RewriteRule ^campaigns/ilovefs/(201[2-5])/index(.*)$ /campaigns/ilovefs/$1/ [redirect=permanent]
+RewriteRule ^campaigns/ilovefs/(201[2-5])(/?)$ /campaigns/ilovefs/$1/ilovefs.html
+# Following rule shouldn't be necessary anymore in 2017
+RewriteRule ^campaigns/ilovefs/2016/ilovefs(.*)$ /campaigns/ilovefs/2016/index$1 [redirect=permanent]
 
 
 RewriteRule ^(.*)\.no.html /$1.nb.html [redirect=permanent]

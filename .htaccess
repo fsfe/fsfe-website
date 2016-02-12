@@ -94,3 +94,7 @@ RewriteRule ^en/rss/feed/events.xml /events/events.en.rss  [redirect=permanent]
 RewriteRule ^news/fsfe-fr-channel.fr.xml /news/news.fr.rss [redirect=permanent]
 RewriteRule ^about/members(.*) /about/team$1 [redirect=permanent]
 
+# Old staff profiles
+RewriteRule ^about/bako /about/team [redirect=permanent]
+RewriteRule ^about/polvani /about/team [redirect=permanent]
+RewriteRule ^about/tuke /about/team [redirect=permanent]

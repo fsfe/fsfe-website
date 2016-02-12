@@ -38,7 +38,7 @@
       <!-- this template calls the loop below -->
       <xsl:call-template name="picture-box">
         <xsl:with-param name="num" select="1"/> <!-- starting number -->
-        <xsl:with-param name="max" select="42"/> <!-- select maximum number of pictures which should be shown in picture box -->
+        <xsl:with-param name="max" select="68"/> <!-- select maximum number of pictures which should be shown in picture box -->
       </xsl:call-template>
       <!-- and here again the one-time content -->
       ];

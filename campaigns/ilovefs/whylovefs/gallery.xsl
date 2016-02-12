@@ -12,7 +12,7 @@
     <!-- this template calls the loop below -->
     <xsl:call-template name="picture-list">
       <xsl:with-param name="num" select="1"/> <!-- starting number -->
-      <xsl:with-param name="max" select="42"/> <!-- select maximum number of pictures which should be shown in picture list -->
+      <xsl:with-param name="max" select="68"/> <!-- select maximum number of pictures which should be shown in picture list -->
     </xsl:call-template>
   </xsl:template>
 

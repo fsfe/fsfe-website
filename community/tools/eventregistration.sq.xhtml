@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html>
+  <head>
+    <title>Njoftoni veprimtari të bashkësisë suaj FSFE</title>
+  </head>
+  <body>
+ 
+    <h1>Njoftoni veprimtari të bashkësisë suaj FSFE</h1>
+
+    <div id="introduction">
+      <p>Përdorni formularin më poshtë që të njoftoni çdo veprimtari që ka lidhje me një fushë veprimi të FSFE-së. Qoftë kur bëhet fjalë për takim apo bisedë, për një stendë në rrugë apo një transmetim në radio: Bëjani të ditur bashkësisë dhe botës se ç’ndodh.</p>
+
+    </div>
+
+    <!--<h2>Register</h2>-->
+
+    <form action="/cgi-bin/registerevent.php" method="POST" class="register_event fsfe-form" enctype="multipart/form-data" role="form">
+      <input name="register_event" type="hidden" />
+
+	<!--<fieldset id="register_event">-->
+
+        <label for="name" class="required">Emri juaj<span class="star">*</span></label>
+        <input name="name" value="" required="required" type="text" />
+
+        <label for="email" class="required">Email-i juaj<span class="star">*</span></label>
+        <input name="email" value="" required="required" type="email" /> 
+
+        <p class="help-block">Të dhënat tuaja personale nuk do të ndahen kurrë me të tjerët, as shiten. Përdoren vetëm për t’u lidhur me ju, nëse ka nevojë për t’u lidhur apo ka probleme.</p>
+
+        <!--<label for="groupname">Group name</label>
+        <input name="groupname" value="" type="text" />-->
+
+        <!--<label for="groupurl">Group URL</label>
+        <input name="groupurl" value="" type="text" />-->
+
+        <label for="title" class="required">Titull veprimtarie<span class="star">*</span></label>
+        <input name="title" value="" required="required" type="text" />
+		<table>
+			<tr>
+			<td>
+				<label for="startdate" class="required">Datë fillimi<span class="star">*</span></label>
+				<input name="startdate" value="" required="required" type="date" placeholder="YYYY-MM-DD" />
+			</td>
+			<td>
+				<label for="enddate" >Datë përfundimi</label>
+				<input name="enddate" value="" type="date" placeholder="YYYY-MM-DD" />
+			</td>
+			</tr>
+		</table>
+        <label for="description" class="required">Përshkrim<span class="star">*</span></label>
+        <textarea name="description" required="required"></textarea>
+
+        <p class="help-block">Ju lutemi, shpjegoni shkurt se përse është veprimtaria që organizoni, si të merret pjesë dhe ç’mund të presin pjesëmarrësit prej saj. Nëse veprimtarinë tuaj e regjistroni në një gjuhë tjetër nga anglishtja, ju lutemi, shihni mundësinë të parashtroni edhe një version anglisht për të <strong>për të bërë mundur kuptimin e saj prej nesh</strong>. Kini gjithashtu parasysh se (për arsye teknike), te faqja jonë hyrëse fsfe.org mund të paraqesim vetëm zëra veprimtarish në anglisht  - çfarëdo gjuhe tjetër do të jetë e dukshme vetëm te fsfe.org/events.</p>
+
+        <label for="url">URL Veprimtarie</label>
+        <input name="url" value="" type="text" />
+
+        <!--<label for="location">Event Location</label>
+        <input name="location" value="" type="text" />-->
+
+
+        <!-- Please give more guidance - make sure that the format is correct because these will be used to generate tags also -->
+
+        <label for="city">Qytet<span class="star">*</span></label>
+        <input name="city" value="" required="required" type="text" />
+
+        <label for="country">Vend<span class="star">*</span></label>
+        <input name="country" value="" required="required" type="text" />
+
+        <!--</fieldset>-->
+	<!-- Should help against spam -->
+		
+	<input value="Shtojeni veprimtarinë" name="submit" type="submit" />
+	<p class="help-block"><span class="star">*</span> = fusha të domosdoshme</p>
+
+    </form>
+    
+    <p>Pas plotësimit të formularit dhe ripohimit të parashtrimit të zërit tuaj përmes shtypjes së butonit "shtojeni veprimtarinë" button, do të prodhohet dhe do t’ju dërgohet  një kartelë .xml. Nëse miratohet, veprimtaria juaj do të ngarkohet dhe do të duhej të shfaqej te fsfe.org dhe/ose te fsfe.org/events brenda 48 orëve të ardhshme. Kini parasysh se ne promovojmë vetëm veprimtari FSFE dhe që lidhen me bashkësi FSFE, por jo çfarëdo lloji tjetër veprimtarish mbi Software-in e Lirë (po, pa përjashtime - sado të rëndësishme të jenë).</p> 
+     
+  </body>
+ </html>

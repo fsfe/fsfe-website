@@ -134,9 +134,6 @@
       </xsl:element>
     </xsl:for-each>
 
-    <script src="/scripts/jquery-1.10.2.min.js"></script>
-    <script src="/scripts/modernizr.custom.65251.js"></script>
-
     <script>
       hljs.tabReplace = "  ";
 //        hljs.initHighligtingOnLoad();

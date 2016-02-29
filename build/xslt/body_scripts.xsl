@@ -3,6 +3,9 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:template name="body_scripts">
+  	<script src="/scripts/jquery-1.10.2.min.js"></script>
+    <script src="/scripts/modernizr.custom.65251.js"></script>
+    <script src="/scripts/jquery.cycle2.min.js" type="text/javascript"></script>
     <script src="/scripts/bootstrap-3.0.3.custom.js"></script>
     <script src="/scripts/placeholder.js"></script>
   </xsl:template>

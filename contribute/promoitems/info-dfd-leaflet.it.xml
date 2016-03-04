@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="dfd-leaflet">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Document Freedom Day - Pieghevole</name>
+    <description>
+      Il pieghevole per promuovere la nostra campagna <a href="http://www.documentfreedom.org/">Document Freedom Day</a>. Spiega a cosa servano gli standard, cos'è uno standard aperto e come impegnarsi per promuovere la Libertà dei Documenti.
+    </description>
+    <type>Leaflet</type>
+    <size>10 x 21 cm (piegato); 29,7 x 21 cm (=A4, aperto)</size>
+    <context><a href="http://www.documentfreedom.org/">Document Freedom Day</a></context>
+    
+<!-- everything below this line uses native language names for each language or technical abbreviations respectively, so there is no need to transalate it from here on -->
+    
+    <languages>
+		 <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro.zh-tw.pdf">中文</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro.ja.pdf">日本語</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro.ca.pdf">Català</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro.de.pdf">Deutsch</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro.en.pdf">English</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro.es.pdf">Español</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro.fr.pdf">Français</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro-FI.pdf">Suomi</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro.tr.pdf">Türkçe</a>
+    </languages>
+    <printed>
+      Deutsch, English, Español, Français, Türkçe
+    </printed>
+    <license>CC BY-SA 4.0</license>
+    <author>Free Software Foundation Europe</author>
+    <source>
+		<a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro_de_SOURCES.tar.gz">Deutsch</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro_en_SOURCES.tar.gz">English</a>
+    </source> 
+    <printready></printready>
+  </info>
+
+</infoset>

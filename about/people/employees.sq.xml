@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<employeeset>
+  <employee id="full/m">I&#160;punësuar&#160;me&#160;kohë&#160;të&#160;plotë</employee>
+  <employee id="full/f">E&#160;punësuar&#160;me&#160;kohë&#160;të&#160;plotë</employee>
+  <employee id="part/m">I&#160;punësuar&#160;me&#160;kohë&#160;të&#160;pjeshme</employee>
+  <employee id="part/f">E&#160;punësuar&#160;me&#160;kohë&#160;të&#160;pjeshme</employee>
+  <employee id="intern/m">Stazhier</employee>
+  <employee id="intern/f">Stazhiere</employee>
+  <!--You should use the intern function rather than this, but maybe this will be needed-->
+  <employee id="freelancer/m">Specialist&#160;i&#160;lirë</employee>
+  <employee id="freelancer/f">Specialiste&#160;i&#160;lirë</employee>
+</employeeset>

@@ -23,6 +23,9 @@
           <xsl:attribute name="href"><xsl:value-of select="$linkresources"/>/about/legal/imprint.html#id-privacy-policy</xsl:attribute>
           <xsl:attribute name="class">privacy-policy</xsl:attribute>
           <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'privacy-policy'" /></xsl:call-template>
+        </xsl:element> / <xsl:element name="a">
+          <xsl:attribute name="href"><xsl:value-of select="$linkresources"/>/about/transparency-commitment.html</xsl:attribute>
+          <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'transparency-commitment'" /></xsl:call-template>
         </xsl:element>
       </li></ul>
       <p><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id"

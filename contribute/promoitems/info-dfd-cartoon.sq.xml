@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="dfd-cartoon">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Dita e Lirisë së Dokumenteve - Karikaturë</name>
+    <description>
+      Seria e karikaturave për promovimin e fushatës <a href="http://www.documentfreedom.org/">Dita e Lirisë së Dokumenteve</a>. Në anën e prapme të versionit të shtypur në Anglisht mund të gjeni një shpjegim të ilustruar të formateve të hapët.   
+    </description>
+    <type>Karikaturë</type>
+    <size>A4 (21 x 29,5 cm)</size>
+    <context><a href="http://www.documentfreedom.org/">Dita e Lirisë së Dokumenteve</a></context>
+    
+<!-- everything below this line uses native language names for each language or technical abbreviations respectively, so there is no need to transalate it from here on -->
+    
+    <languages>
+		<a href="http://download.fsfe.org/advocacy/promomaterial/DFD/cartoon_and_open_formats.en.pdf">Anglisht - Karikaturë &amp;Formate të Hapët</a><br/> 
+		Vetëm karikaturë: <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/cartoon.ca.png">Català</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/cartoon.de.png">Deutsch</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/cartoon.en.jpg">English</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/cartoon.es.png">Español</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/cartoon.gl.png">Galician</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/cartoon.ru.png">Русский</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/cartoon.tr.png">Türkçe</a> 
+    </languages>
+    <printed>
+      Versioni në anglisht.
+    </printed>
+    <license>CC-BY-SA 4.0</license>
+    <author>Jamie Cosley, Prill</author>
+    <source><a href="http://download.fsfe.org/advocacy/promomaterial/DFD/cartoon_sources.tar.gz">Anglisht - Vetëm karikaturë</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/cartoon_and_open_formats_sources.tar.gz">Anglisht - Karikaturë &amp; Formate të Hapët</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="drm-leaflet">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Administrim Dixhital Kufizimesh</name>
+    <description>
+      Kjo fletëpalosje trajton <a href="http://drm.info">Administrimin Dixhital të Kufizimeve</a> dhe rreziqet e tij. Këtë fletëpalosje e kemi prodhuar tok me <a href="https://digitalegesellschaft.de">Digitale Gesellschaft</a> dhe vjen si një përmbledhje e goditur për këtë temë komplekse.
+    </description>
+    <type>Fletëpalosje</type>
+    <size>A5 (148 x 21 cm, e palosur); A4 (29,7 x 21 cm, e papalosur)</size>
+    <context><a href="http://drm.info">Administrim Dixhital Kufizimesh</a></context>
+    
+<!-- everything below this line uses native language names for each language or technical abbreviations respectively, so there is no need to transalate it from here on -->
+    
+    <languages><a href= "http://download.fsfe.org/advocacy/promomaterial/DRM/DRM_handcuffs.de.pdf">Deutsch</a>, <a href= "http://download.fsfe.org/advocacy/promomaterial/DRM/DRM_handcuffs.en.pdf">English</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DRM/DRM_handcuffs.fr.pdf">Français</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DRM/DRM_handcuffs.sq.pdf">Shqip</a>  
+    </languages>
+    <printed>
+      Deutsch, English, Français, Shqip
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <author>FSFE, EDRi, Digitale Gesellschaft</author>
+       <source>
+		<a href="http://download.fsfe.org/advocacy/promomaterial/DRM/">DRM_handcuffs* in downloads.fsfe.org</a>
+	</source> 
+    <printready></printready>
+  </info>
+
+</infoset>

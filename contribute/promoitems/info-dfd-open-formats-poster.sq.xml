@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="dfd-poster-open-format">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Dita e Lirisë së Dokumenteve - Afishe mbi formatet e Hapur</name>
+    <description>
+      Shpjegim i ilustruar i formateve të Hapur, për  promovim të fushatës sonë <a href="http://www.documentfreedom.org/">Dita e Lirisë së Dokumenteve</a>. 
+    </description>
+    <type>Afishe</type>
+    <size>A3 (29,5 x 42 cm)</size>
+    <context><a href="http://www.documentfreedom.org/">Dita e Lirisë së Dokumenteve</a></context>
+    <languages>
+		<a href="http://download.fsfe.org/advocacy/promomaterial/DFD/open_formats_poster_A3_EN_FR_v2.pdf" title="Open Formats Poster">English &amp; Français</a>
+    </languages>
+    <printed>
+      Afishe me dy faqe, në Anglisht dhe Frëngjisht. 
+    </printed>
+    <license>CC-BY-SA 4.0</license>
+    <author>April</author>
+    <source>
+		<a href="http://download.fsfe.org/advocacy/promomaterial/DFD/open_formats_poster_A3_sources.tar.gz" title="Open Formats Poster Sources">English &amp; Français</a>
+    </source> 
+    <printready></printready>
+  </info>
+
+</infoset>

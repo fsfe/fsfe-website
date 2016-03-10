@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="dfd-postcard">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Kartolinë për Standarde të Hapura</name>
+    <description>
+      Kartolina "Standarde të Hapura" është për <a href="http://www.documentfreedom.org/">fushatën tonë Dita e Lirisë së Dokumenteve</a>.Dërgojani gjithë botës!
+    </description>
+    <type>Kartolinë</type>
+    <size>A6</size>
+    <context><a href="http://www.documentfreedom.org/">Dita e Lirisë së Dokumenteve</a></context>
+    <languages>
+      <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_ROBOTS_postcard_5000.pdf">Anglisht</a>
+    </languages>
+    <printed>
+      Anglisht
+    </printed>
+    <license>CC-BY-SA 4.0</license>
+    <author>Markus MEier</author>
+    <source><a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_ROBOTS_postcard_5000_sources.tar.gz">Anglisht</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

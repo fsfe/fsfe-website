@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="tdwyt-sticker">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Nuk Duan Që Ju Të Jeni të Lirë- Ngjitës</name>
+    <description>
+      Ngjitës me sloganin "Nuk duan që j të jeni të lirë" për promovimin e fushatës sonë <a href="https://fsfe.org/campaigns/theydontwantyouto/index.en.html">Nuk Duan Që Ju</a>. 
+    </description>
+    <type>Ngjitës</type>
+    <size>7,4 x 7,4 cm</size>
+    <context><a href="https://fsfe.org/campaigns/theydontwantyouto/index.en.html">Nuk Duan Që Ju</a></context>
+    <languages>
+		<a href="http://download.fsfe.org/advocacy/promomaterial/TDWYT/laptop.png">Anglisht</a>
+    </languages>
+    <printed>
+		<a href="http://download.fsfe.org/advocacy/promomaterial/TDWYT/laptop.pdf">Anglisht</a>
+    </printed>
+    <license>CC-BY-SA 4.0</license>
+    <author>Free Software Foundation Europe</author>
+    <source><a href="http://download.fsfe.org/advocacy/promomaterial/TDWYT/laptop.svg">Anglisht</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

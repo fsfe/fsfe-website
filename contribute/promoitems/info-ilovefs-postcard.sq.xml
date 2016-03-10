@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="ilovefs-postcard">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>E dua Software-in e Lirë - Kartolinë</name>
+    <description>
+      Njëra anë me sloganin "I love Free Software - ... but I love YOU more!", tjetra, njësoj si kartolinat e zakonshme me vend për tekst dhe adresën e marrësit.
+    </description>
+    <type>Kartolinë</type>
+    <size>15,4 x 11,1 cm</size>
+    <context><a href="/campaigns/ilovefs/ilovefs.en.html">Fushata E dua Software-in e Lirë</a></context>
+    <languages>
+      <a href="http://download.fsfe.org/advocacy/promomaterial/IloveFS/IloveFS-postcard/ilovefs-postcard.en.pdf">Anglisht</a>
+    </languages>
+    <printed>
+      Anglisht.
+    </printed>
+    <license>CC0</license>
+    <author>Markus Meier</author>
+    <source><a href="http://download.fsfe.org/advocacy/promomaterial/IloveFS/IloveFS-postcard/">ilovefs-postcard* in downloads.fsfe.org</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

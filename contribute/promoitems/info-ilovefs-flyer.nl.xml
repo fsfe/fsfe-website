@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="ilovefs-flyer">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>I love Free Software-informatievel</name>
+    <description>
+      Het informatievel van onze <a href="/campaigns/ilovefs/ilovefs.en.html">I love Free Software-campagne</a>. Dit Informatievel heeft twee kanten: een kant met het IloveFS-hart, hetzelfde als op de poster (zie volgend product). De andere kant toont de datum (Valentijnsdag) en de URL van de campagne, zoals u ziet in de verkleinde afbeelding. 
+    </description>
+    <type>Informatievel</type>
+    <size>A7 (7,4 x 10,5 cm)</size>
+    <context><a href="/campaigns/ilovefs/ilovefs.en.html">I love Free Software</a></context>
+    <languages>
+      <a href="http://download.fsfe.org/advocacy/promomaterial/IloveFS/IloveFS-flyer/ilovefs-flyer-A7.en.pdf">Engels</a>
+    </languages>
+    <printed>
+      Engels.
+    </printed>
+    <license>CC0</license>
+    <author>Markus Meier</author>
+    <source><a href="http://download.fsfe.org/advocacy/promomaterial/IloveFS/IloveFS-flyer/">ilovefs-flyer* in downloads.fsfe.org</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

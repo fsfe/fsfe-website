@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="f-droid-flyer">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Bevrijd uw Android-informatievel</name>
+    <description>
+      Het in het oog springende informatievel ter promotie van onze <a href="http://www.freeyourandroid.org">"Bevrijd uw Android"-campagne</a>
+    </description>
+    <type>Informatievel</type>
+    <size>13 x 7,1 cm</size>
+    <context><a href="http://www.freeyourandroid.org">Bevrijd uw Android-campagne</a></context>
+    <languages>
+      <a href="http://download.fsfe.org/advocacy/promomaterial/FYA/FYA-flyer/FYA_flyer_DIN_A7_en.png">Engels</a>, 
+      <a href="http://download.fsfe.org/advocacy/promomaterial/FYA/FYA-flyer/FYA_flyer_DIN_A7_fr.png">Frans</a>, 
+      <a href="http://download.fsfe.org/advocacy/promomaterial/FYA/FYA-flyer/FYA_flyer_DIN_A7_de_oxl.png">Duits</a>, 
+      <a href="http://download.fsfe.org/advocacy/promomaterial/FYA/FYA-flyer/FYA_flyer_DIN_A7_el.png">Grieks</a>, 
+      <a href="http://download.fsfe.org/advocacy/promomaterial/FYA/FYA-flyer/FYA_flyer_DIN_A7_it.png">Italiaans</a>, 
+      <a href="http://download.fsfe.org/advocacy/promomaterial/FYA/FYA-flyer/FYA_flyer_DIN_A7_es.png">Spaans</a>,    
+    </languages>
+    <printed>
+      Engels, Duits
+    </printed>
+    <license>CC-BY-SA 4.0</license>
+    <author>Free Software Foundation Europe</author>
+    <source>
+      <a href="http://download.fsfe.org/advocacy/promomaterial/FYA/FYA-flyer/" title="F-Droid leaflet sources">FYA_flyer_DIN_A7_* in downloads.fsfe.org</a>
+      
+      
+	</source> 
+    <printready></printready>
+  </info>
+
+</infoset>

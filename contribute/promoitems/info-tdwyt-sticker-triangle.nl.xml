@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="tdwyt-sticker-triangle">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Freedom Not Included-sticker</name>
+    <description>
+      Een sticker met de waarschuwing "Freedom Not Included" in het Engels, Spaans, Pools, Duits, Italiaans, Frans en Grieks ter promotie van onze <a href="https://fsfe.org/campaigns/theydontwantyouto/index.en.html">They Dont Want You.To</a>-campagne. 
+    </description>
+    <type>Sticker</type>
+    <size>7,4 x 5,2 cm</size>
+    <context><a href="https://fsfe.org/campaigns/theydontwantyouto/index.en.html">They Dont Want You.To</a></context>
+    <languages>
+		<a href="http://download.fsfe.org/advocacy/promomaterial/TDWYT/warning-triangle-translated-pre-print.pdf">Meertalig</a>
+    </languages>
+    <printed>
+		<a href="http://download.fsfe.org/advocacy/promomaterial/TDWYT/warning-triangle-translated-pre-print.pdf">Meertalig</a>
+    </printed>
+    <license>CC-BY-SA 4.0</license>
+    <author>Free Software Foundation Europe</author>
+    <source><a href="http://download.fsfe.org/advocacy/promomaterial/TDWYT/sticker_not_included_warning_extended.svg">Meertalig</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="dfd-chance-poster">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Document Vrijheidsdag - Poster</name>
+    <description>
+      Dit is de poster van de Document Vrijheidsdag-campagne 2014. Zij heeft twee kanten (voorkant in het Engels, achterkant in zes talen) en is beschikbaar in A2 en A3.
+    </description>
+    <type>Poster</type>
+    <size>A2 (42 x 59,4 cm), A3 (29,7 x 42 cm)</size>
+    <context><a href="http://www.documentfreedom.org/">Document Vrijheidsdag</a></context>
+    <languages>
+      <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/dfd-robots-poster-a2.pdf" title="Open Standards make sense">A2 - Voorkant in het Engels - Achterkant meertalig</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/dfd-robots-poster-a3.pdf" title="Open Standards make sense">A3 - Voorkant in het Engels - Achterkant meertalig</a>
+    </languages>
+    <printed>
+      A3 &amp; A2, zes talen op de achterkant van de poster: Engels, Frans, Duits, Portugees, Spaans en Turks
+    </printed>
+    <license>CC BY-SA 4.0</license>
+    <author>FSFE</author>
+    <source></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

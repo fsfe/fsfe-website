@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="nocloud-postcard">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>There is no cloud, just other people's computers - Postkaart</name>
+    <description>
+	  Een postkaart met daarop "There is no cloud just other people's computers".
+    </description>
+    <type>Postkaart</type>
+    <size>14,7 x 10,4 cm</size>
+    <context></context>
+    <languages>
+		<a href="http://download.fsfe.org/advocacy/promomaterial/NoCloud/NoCloud-postcard/thereisnocloud-postcard.en.pdf">Engels</a>
+    </languages>
+    <printed>
+      Engels
+    </printed>
+    <license>CC-BY-SA 4.0</license>
+    <author>Markus Meier</author>
+    <source><a href="http://download.fsfe.org/advocacy/promomaterial/NoCloud/NoCloud-postcard/">nocloud-postcard* in downloads.fsfe.org</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

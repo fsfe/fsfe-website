@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="dfd-poster-open-format">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Document Freedom Day - Poster zu freien Formaten</name>
+    <description>
+      Eine bebilderte Erklärung freier Formate für den <a href="http://www.documentfreedom.org/">Document Freedom Day</a>. 
+    </description>
+    <type>Poster</type>
+    <size>A3 (29,5 x 42 cm)</size>
+    <context><a href="http://www.documentfreedom.org/">Document Freedom Day</a></context>
+    <languages>
+		<a href="http://download.fsfe.org/advocacy/promomaterial/DFD/open_formats_poster_A3_EN_FR_v2.pdf" title="Open Formats Poster">Englisch &amp; Französisch</a>
+    </languages>
+    <printed>
+      Zweiseitiges Poster auf Englisch und Französisch
+    </printed>
+    <license>CC-BY-SA 4.0</license>
+    <author>April</author>
+    <source>
+		<a href="http://download.fsfe.org/advocacy/promomaterial/DFD/open_formats_poster_A3_sources.tar.gz" title="Open Formats Poster Sources">Englisch &amp; Französisch</a>
+    </source> 
+    <printready></printready>
+  </info>
+
+</infoset>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="tdwyt-sticker-big">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>They Don't Want You To… - Aufkleber</name>
+    <description>
+      Ein Aufkleber mit dem Text "They don't want you to…" um unsere <a href="https://fsfe.org/campaigns/theydontwantyouto/index.en.html">"They Dont Want You.To"</a>-Aktion gegen Einschränkungen bei Produkten und Dienstleistungen zu bewerben.
+    </description>
+    <type>Aufkleber</type>
+    <size>14,8 x 14,8 cm</size>
+    <context><a href="https://fsfe.org/campaigns/theydontwantyouto/index.en.html">They Dont Want You.To</a></context>
+    <languages>
+		<a href="http://download.fsfe.org/advocacy/promomaterial/TDWYT/billboard-300dpi.png">Englisch</a>
+    </languages>
+    <printed>
+		Englisch
+    </printed>
+    <license>CC-BY-SA 4.0</license>
+    <author>Free Software Foundation Europe</author>
+    <source><a href="http://download.fsfe.org/campaigns/tdwyt/artwork/stickers/large/billboard.svg">English</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

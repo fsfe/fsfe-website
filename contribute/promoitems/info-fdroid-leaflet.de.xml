@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="f-droid-leaflet">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Befreien Sie Ihr Android! - Faltblatt</name>
+    <description>
+      Dieses Flugblatt beschreibt <a href="">F-Droid</a>, eine Installationsquelle für Freie-Software-Apps auf Android und Android-basierten Forks wie <a href="http://www.cyanogenmod.org/">Cyanogenmod</a> oder <a href="http://replicant.us/">Replicant</a>.  Das Flugblatt erklärt die Installation und Verwendung von F-Droid, dem App Store für Freie Software, der ohne Werbung, ohne den Nutzer auszuspionieren, ohne das Sammeln von Nutzerdaten und ohne einen Google-Account funktioniert.  Zusätzlich enthält dieses Flugblatt Empfehlungen für freie Apps und allgemeine Erklärungen zu Freier Software.
+    </description>
+    <type>Flugblatt</type>
+    <size>10 x 21 cm (gefaltet); 29,7 x 21 cm (=A4, ungefaltet)</size>
+    <context><a href="http://www.freeyourandroid.org">Befreien Sie Ihr Android!</a></context>
+    
+<!-- everything below this line uses native language names for each language or technical abbreviations respectively, so there is no need to transalate it from here on -->
+    
+    <languages>
+      <a href="http://download.fsfe.org/advocacy/promomaterial/FYA/Fdroid-leaflet/fdroid-leaflet.de.pdf" title="F-Droid">Deutsch</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/FYA/Fdroid-leaflet/fdroid-leaflet.en.pdf" title="F-Droid">English</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/FYA/Fdroid-leaflet/fdroid-leaflet.fr.pdf" title="F-Droid">Français</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/FYA/Fdroid-leaflet/fdroid-leaflet.it.pdf" title="F-Droid">Italiano</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/FYA/Fdroid-leaflet/fdroid-leaflet.fi.pdf" title="F-Droid">Suomi</a> 
+    </languages>
+    <printed>
+      Deutsch, English, Français, Italiano
+    </printed>
+    <license>CC-BY-SA 4.0</license>
+    <author>Free Software Foundation Europe</author>
+    <source>
+      <a href="http://download.fsfe.org/advocacy/promomaterial/FYA/Fdroid-leaflet/" title="F-Droid leaflet sources">F-droid_folder.* in downloads.fsfe.org</a>
+	</source> 
+    <printready></printready>
+  </info>
+
+</infoset>

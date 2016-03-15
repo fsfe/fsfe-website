@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="dfd-os-sticker-big">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Aufkleber zu freien Standards (120x120mm)</name>
+    <description>
+     Dieser Aufkleber zu freien Standards bewirbt den <a href="http://documentfreedom.org/">Document Freedom Day</a>. Die Roboter sind das Logo der Aktion.
+    </description>
+    <type>Aufkleber</type>
+    <size>12 x 12 cm</size>
+    <context><a href="http://documentfreedom.org/">Document Freedom Day</a></context>
+    <languages>
+		<a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_Protest_ROBOTS_120x120.pdf">Englisch</a>
+    </languages>
+    <printed>
+		Englisch
+    </printed>
+    <license>CC-BY-SA 4.0</license>
+    <author>Free Software Foundation Europe</author>
+    <source>
+		<a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_Protest_ROBOTS_120x120_sources.tar.gz">Englisch</a>
+    </source> 
+    <printready></printready>
+  </info>
+
+</infoset>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="ilovefs-flyer">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Ich love Free Software - Flugblatt</name>
+    <description>
+      Das Flugblatt zu unserer <a href="/campaigns/ilovefs/ilovefs.en.html">"I love Free Software"-Aktion</a>. Das Flugblatt ist zweiseitig:  Eine Seite mit dem "I love FS"-Herz, das gleiche wie auf dem Poster (siehe nächster Artikel), die andere Seite mit dem Datum (Valentinstag) und der URL der Aktion - wie im Bild zu sehen.
+    </description>
+    <type>Flugblatt</type>
+    <size>A7 (7,4 x 10,5 cm)</size>
+    <context><a href="/campaigns/ilovefs/ilovefs.en.html">I love Free Software</a></context>
+    <languages>
+      <a href="http://download.fsfe.org/advocacy/promomaterial/IloveFS/IloveFS-flyer/ilovefs-flyer-A7.en.pdf">Englisch</a>
+    </languages>
+    <printed>
+      Englisch.
+    </printed>
+    <license>CC0</license>
+    <author>Markus Meier</author>
+    <source><a href="http://download.fsfe.org/advocacy/promomaterial/IloveFS/IloveFS-flyer/">ilovefs-flyer* in downloads.fsfe.org</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

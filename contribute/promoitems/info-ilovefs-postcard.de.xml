@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="ilovefs-postcard">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>I love Free Software - Postkarte</name>
+    <description>
+      Die Postkarte ist zweiseitig:  Eine Seite mit dem Spruch "I love Free Software …but I love YOU more!", die andere Seite ist wie bei einer normalen Postkarte mit Platz für Text und eine Adresse.
+    </description>
+    <type>Postkarte</type>
+    <size>15,4 x 11,1 cm</size>
+    <context><a href="/campaigns/ilovefs/ilovefs.en.html">"I love Free Software"-Aktion</a></context>
+    <languages>
+      <a href="http://download.fsfe.org/advocacy/promomaterial/IloveFS/IloveFS-postcard/ilovefs-postcard.en.pdf">Englisch</a>
+    </languages>
+    <printed>
+      Englisch.
+    </printed>
+    <license>CC0</license>
+    <author>Markus Meier</author>
+    <source><a href="http://download.fsfe.org/advocacy/promomaterial/IloveFS/IloveFS-postcard/">ilovefs-postcard* in downloads.fsfe.org</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

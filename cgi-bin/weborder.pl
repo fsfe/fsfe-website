@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-# NOTE:
+# NOTE: 
 # If the format of the generated mail changes, please notify Penny in the DUS
 # office, since the emails are processed automatically.
 
@@ -9,16 +9,11 @@ use POSIX qw(strftime);
 
 my $query = new CGI;
 
-# Search robots sometimes don't fill in the _shipping field
-# EDIT 2011-09-19 (Penny) useless, since there's a option preselected
-#if (!$query->param("_shipping")) {
-#  die "Invalid order, possibly a search engine robot.";
-#}
-
 my $date = strftime "%Y-%m-%d", localtime;
 my $time = strftime "%s", localtime;
 my $reference = "order.$date." . substr $time, -5;
 my $buyer = $query->param("name");
+my $email = $query->param("email");
 my $amount = 0;
 my $discount = 0;
 
@@ -44,9 +39,9 @@ foreach $name ($query->param) {
 # Spam bots will be tempted to fill in this actually invisible field
 if (not $query->param("url") && $check_empty == false) {
   open(MAIL, "|/usr/lib/sendmail -t -f mueller\@fsfeurope.org");
-  print MAIL "From: order\@fsfeurope.org\n";
+  print MAIL "From: $buyer <$email>\n";
   print MAIL "To: order\@fsfeurope.org\n";
-  print MAIL "Subject: $reference $buyer\n\n";
+  print MAIL "Subject: $reference\n\n";
   print MAIL "$reference\n\n";
   foreach $name ($query->param) {
     $value = $query->param($name);

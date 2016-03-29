@@ -41,7 +41,11 @@ if (not $query->param("url") && $check_empty == false) {
   open(MAIL, "|/usr/lib/sendmail -t -f mueller\@fsfeurope.org");
   print MAIL "From: $buyer <$email>\n";
   print MAIL "To: order\@fsfeurope.org\n";
+  print MAIL "Content-Transfer-Encoding: 8bit\n";
+  print MAIL "Content-Type: text/plain; charset=\"UTF-8\"\n";
   print MAIL "Subject: $reference\n\n";
+
+
   print MAIL "$reference\n\n";
   foreach $name ($query->param) {
     $value = $query->param($name);

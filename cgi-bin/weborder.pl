@@ -38,9 +38,10 @@ foreach $name ($query->param) {
 
 # Spam bots will be tempted to fill in this actually invisible field
 if (not $query->param("url") && $check_empty == false) {
-  open(MAIL, "|/usr/lib/sendmail -t -f mueller\@fsfeurope.org");
+  open(MAIL, "|/usr/lib/sendmail -t -f office\@fsfe.org");
   print MAIL "From: $buyer <$email>\n";
   print MAIL "To: order\@fsfeurope.org\n";
+  print MAIL "X-OTRS-DynamicField-OrderID: $reference\n";
   print MAIL "Content-Transfer-Encoding: 8bit\n";
   print MAIL "Content-Type: text/plain; charset=\"UTF-8\"\n";
   print MAIL "Subject: $reference\n\n";

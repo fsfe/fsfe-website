@@ -5,10 +5,10 @@ use POSIX qw(strftime);
 
 my $query = new CGI;
 
-if ($query->param("url")) {
-  print "<p>Invalid input!</p>\n";
-  exit;
-}
+# if ($query->param("url")) {
+#   print "<p>Invalid input!</p>\n";
+#   exit;
+# }
 
 my $name = $query->param("name");
 my $address = $query->param("address");
@@ -36,15 +36,15 @@ foreach $item ($query->param) {
   }
 }
 
-if ($empty) {
-  print "<p>No items selected!</p>\n";
-  exit;
-}
+# if ($empty) {
+#   print "<p>No items selected!</p>\n";
+#   exit;
+# }
 
-if ($amount > 999) {
-  print "<p>Sorry, total amount too large.</p>\n";
-  exit;
-}
+# if ($amount > 999) {
+#   print "<p>Sorry, total amount too large.</p>\n";
+#   exit;
+# }
 
 my $amount_f = sprintf("%.2f", $amount);
 

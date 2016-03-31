@@ -1,21 +1,16 @@
 #!/usr/bin/perl
 
-# NOTE: 
-# If the format of the generated mail changes, please notify Penny in the DUS
-# office, since the emails are processed automatically.
-
 use CGI;
 use POSIX qw(strftime);
 
 my $query = new CGI;
 
-my $date = strftime "%Y-%m-%d", localtime;
-my $time = strftime "%s", localtime;
-my $reference = "order.$date." . substr $time, -5;
+my $date = strftime("%y%j", localtime);
+my $time = strftime("%s", localtime);
+my $reference = "MP" . $date . substr($time, -5);
 my $buyer = $query->param("name");
 my $email = $query->param("email");
 my $amount = 0;
-my $discount = 0;
 
 # -----------------------------------------------------------------------------
 # Check for empty messages (Penny & Rainer, 2011-12-20)
@@ -30,7 +25,6 @@ foreach $name ($query->param) {
     break; 
   }
 }
-
 
 # -----------------------------------------------------------------------------
 # Calculate amount and generate mail to office
@@ -61,15 +55,10 @@ if (not $query->param("url") && $check_empty == false) {
         print MAIL "$name: $price\n";
       }
 
-      if ($discount > 0 && $name ne "shipping") {
-        $price *= (1 - ($discount / 100));
-      }
-
       $amount += $value * $price;
     }
   }
 
-  print MAIL "discount: $discount\n";
   $amount = sprintf "%.2f", $amount;
   print MAIL "Total amount: $amount\n";
   close MAIL;

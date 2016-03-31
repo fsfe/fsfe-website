@@ -36,6 +36,8 @@ if ($amount > 999) {
   die "<p>Sorry, total amount too large.</p>";
 }
 
+my $amount_f = sprintf("%.2f", $amount);
+
 # -----------------------------------------------------------------------------
 # Create payment reference for this order
 # -----------------------------------------------------------------------------
@@ -80,7 +82,7 @@ if (not $spambait and not $empty) {
 print "Content-type: text/html\n\n";
 open TEMPLATE, "/home/www/html/global/order/tmpl-thankyou." . $language . ".html";
 while (<TEMPLATE>) {
-  s/:AMOUNT:/sprintf("%.2f", $amount)/g;
+  s/:AMOUNT:/$amount_f/g;
   s/:REFERENCE:/$reference/g;
   print;
 }

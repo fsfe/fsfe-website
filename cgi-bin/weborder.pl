@@ -78,7 +78,7 @@ if (not $spambait and not $empty) {
 # -----------------------------------------------------------------------------
 
 print "Content-type: text/html\n\n";
-open TEMPLATE, "/home/www/html/global/order/tmpl-thankyou." . $query->param("language") . ".html";
+open TEMPLATE, "/home/www/html/global/order/tmpl-thankyou." . $language . ".html";
 while (<TEMPLATE>) {
   s/:AMOUNT:/sprintf("%.2f", $amount)/g;
   s/:REFERENCE:/$reference/g;

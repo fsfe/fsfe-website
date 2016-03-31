@@ -5,62 +5,65 @@ use POSIX qw(strftime);
 
 my $query = new CGI;
 
-my $date = strftime("%y%j", localtime);
-my $time = strftime("%s", localtime);
-my $reference = "MP" . $date . substr($time, -5);
-my $buyer = $query->param("name");
+my $name = $query->param("name");
+my $address = $query->param("address");
 my $email = $query->param("email");
+my $language = $query->param("language");
+my $spambait = $query->param("url");
+
+# Remove all parameters except for items and prices.
+$query->delete("name", "address", "email", "language", "url");
+
+# -----------------------------------------------------------------------------
+# Calculate total amount and check for empty orders
+# -----------------------------------------------------------------------------
+
+my $empty = true;
 my $amount = 0;
 
-# -----------------------------------------------------------------------------
-# Check for empty messages (Penny & Rainer, 2011-12-20)
-# -----------------------------------------------------------------------------
-
-my $check_empty = true;
-
-foreach $name ($query->param) {
-  $value = $query->param($name);
-  if ($value ne "" && $name ne "shipping" && $name ne "language") {
-    $check_empty = false;
-    break; 
-  }
+foreach $item ($query->param) {
+  $value = $query->param($item);
+  if (not $item =~ /^_/ and $value) {
+    my $price = $query->param("_$item");
+    $amount += $value * $price;
+    if ($item != "shipping") $empty = false;
 }
 
+if ($amount > 999) die "<p>Sorry, total amount too large.</p>"
+
 # -----------------------------------------------------------------------------
-# Calculate amount and generate mail to office
+# Create payment reference for this order
 # -----------------------------------------------------------------------------
 
-# Spam bots will be tempted to fill in this actually invisible field
-if (not $query->param("url") && $check_empty == false) {
+my $date = strftime("%y%j", localtime);
+my $time = strftime("%s", localtime);
+my $reference = "MP" . $date . substr($time, -2) . sprintf("%03u", $amount);
+
+# -----------------------------------------------------------------------------
+# Generate mail to office
+# -----------------------------------------------------------------------------
+
+if (not $spambait and not $empty) {
   open(MAIL, "|/usr/lib/sendmail -t -f office\@fsfe.org");
-  print MAIL "From: $buyer <$email>\n";
+  print MAIL "From: $name <$email>\n";
   print MAIL "To: order\@fsfeurope.org\n";
   print MAIL "X-OTRS-DynamicField-OrderID: $reference\n";
+  print MAIL "X-OTRS-DynamicField-OrderAmount: $amount\n";
   print MAIL "Content-Transfer-Encoding: 8bit\n";
   print MAIL "Content-Type: text/plain; charset=\"UTF-8\"\n";
   print MAIL "Subject: $reference\n\n";
 
-
   print MAIL "$reference\n\n";
-  foreach $name ($query->param) {
-    $value = $query->param($name);
-    if (not $name =~ /^_/ and $value) {
-      my $price = $query->param("_$name");
 
-      # EDIT 2010-09-19 (Penny) Change the "shipping"-value to it's price so it can be
-      # autodetected (otherwise "value" would always be "1" regardless of users choice)
-      if ($name ne "shipping") {
-        print MAIL "$name: $value\n";
-      } else {
-        print MAIL "$name: $price\n";
-      }
-
-      $amount += $value * $price;
+  foreach $item ($query->param) {
+    $value = $query->param($item);
+    if (not $item =~ /^_/ and $value) {
+      my $price = $query->param("_$item");
+      printf MAIL "%-20s %3u x %2.2f = %3.2f\n", $item, $value, $price, $value * $price;
     }
   }
 
-  $amount = sprintf "%.2f", $amount;
-  print MAIL "Total amount: $amount\n";
+  printf MAIL "Total amount: € %.2f\n", $amount;
   close MAIL;
 }
 
@@ -71,7 +74,7 @@ if (not $query->param("url") && $check_empty == false) {
 print "Content-type: text/html\n\n";
 open TEMPLATE, "/home/www/html/global/order/tmpl-thankyou." . $query->param("language") . ".html";
 while (<TEMPLATE>) {
-  s/:AMOUNT:/$amount/g;
+  s/:AMOUNT:/sprintf("%.2f", $amount)/g;
   s/:REFERENCE:/$reference/g;
   print;
 }

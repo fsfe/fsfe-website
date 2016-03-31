@@ -5,10 +5,10 @@ use POSIX qw(strftime);
 
 my $query = new CGI;
 
-# if ($query->param("url")) {
-#   print "<p>Invalid input!</p>\n";
-#   exit;
-# }
+if ($query->param("url")) {
+  print "<p>Invalid input!</p>\n";
+  exit;
+}
 
 my $name = $query->param("name");
 my $address = $query->param("address");
@@ -43,7 +43,7 @@ foreach $item ($query->param) {
 
 if ($amount > 999) {
   print "<p>Sorry, total amount too large.</p>\n";
-  exit 0;
+  exit;
 }
 
 my $amount_f = sprintf("%.2f", $amount);
@@ -77,11 +77,13 @@ foreach $item ($query->param) {
   $value = $query->param($item);
   if (not $item =~ /^_/ and $value) {
     my $price = $query->param("_$item");
-    printf MAIL "%-20s %3u x %2.2f = %3.2f\n", $item, $value, $price, $value * $price;
+    printf MAIL "%-30s %3u x %2.2f = %3.2f\n", $item, $value, $price, $value * $price;
   }
 }
 
-printf MAIL "Total amount: € %.2f\n", $amount;
+print MAIL "------------------------------------------------\n";
+printf MAIL "Total amount                            € %3.2f\n", $amount;
+print MAIL "================================================\n";
 close MAIL;
 
 # -----------------------------------------------------------------------------

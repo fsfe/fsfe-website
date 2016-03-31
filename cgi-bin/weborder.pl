@@ -26,10 +26,15 @@ foreach $item ($query->param) {
   if (not $item =~ /^_/ and $value) {
     my $price = $query->param("_$item");
     $amount += $value * $price;
-    if ($item != "shipping") $empty = false;
+    if ($item != "shipping") {
+      $empty = false;
+    }
+  }
 }
 
-if ($amount > 999) die "<p>Sorry, total amount too large.</p>"
+if ($amount > 999) {
+  die "<p>Sorry, total amount too large.</p>";
+}
 
 # -----------------------------------------------------------------------------
 # Create payment reference for this order

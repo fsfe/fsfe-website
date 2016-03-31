@@ -6,6 +6,7 @@ use POSIX qw(strftime);
 my $query = new CGI;
 
 if ($query->param("url")) {
+  print "Content-type: text/html\n\n";
   print "<p>Invalid input!</p>\n";
   exit;
 }
@@ -30,18 +31,20 @@ foreach $item ($query->param) {
   if (not $item =~ /^_/ and $value) {
     my $price = $query->param("_$item");
     $amount += $value * $price;
-    if ($item != "shipping") {
+    if ($item ne "shipping") {
       $empty = 0;
     }
   }
 }
 
-# if ($empty) {
-#   print "<p>No items selected!</p>\n";
-#   exit;
-# }
+if ($empty) {
+  print "Content-type: text/html\n\n";
+  print "<p>No items selected!</p>\n";
+  exit;
+}
 
 if ($amount > 999) {
+  print "Content-type: text/html\n\n";
   print "<p>Sorry, total amount too large.</p>\n";
   exit;
 }

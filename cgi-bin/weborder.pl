@@ -6,7 +6,8 @@ use POSIX qw(strftime);
 my $query = new CGI;
 
 if ($query->param("url")) {
-  die("<p>Invalid input!</p>");
+  print "<p>Invalid input!</p>\n";
+  exit;
 }
 
 my $name = $query->param("name");
@@ -21,7 +22,7 @@ $query->delete("name", "address", "email", "language", "url");
 # Calculate total amount and check for empty orders
 # -----------------------------------------------------------------------------
 
-my $empty = true;
+my $empty = 1;
 my $amount = 0;
 
 foreach $item ($query->param) {
@@ -30,17 +31,19 @@ foreach $item ($query->param) {
     my $price = $query->param("_$item");
     $amount += $value * $price;
     if ($item != "shipping") {
-      $empty = false;
+      $empty = 0;
     }
   }
 }
 
 if ($empty) {
-  die("<p>No items selected!</p>");
+  print "<p>No items selected!</p>\n";
+  exit;
 }
 
 if ($amount > 999) {
-  die "<p>Sorry, total amount too large.</p>";
+  print "<p>Sorry, total amount too large.</p>\n";
+  exit;
 }
 
 my $amount_f = sprintf("%.2f", $amount);

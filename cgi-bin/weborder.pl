@@ -41,10 +41,10 @@ foreach $item ($query->param) {
 #   exit;
 # }
 
-# if ($amount > 999) {
-#   print "<p>Sorry, total amount too large.</p>\n";
-#   exit;
-# }
+if ($amount > 999) {
+  print "<p>Sorry, total amount too large.</p>\n";
+  exit 0;
+}
 
 my $amount_f = sprintf("%.2f", $amount);
 

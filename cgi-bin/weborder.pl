@@ -53,7 +53,8 @@ if (not $spambait and not $empty) {
   print MAIL "Content-Type: text/plain; charset=\"UTF-8\"\n";
   print MAIL "Subject: $reference\n\n";
 
-  print MAIL "$reference\n\n";
+  print MAIL "$name\n";
+  print MAIL "$address\n\n";
 
   foreach $item ($query->param) {
     $value = $query->param($item);

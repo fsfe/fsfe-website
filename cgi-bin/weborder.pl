@@ -80,13 +80,13 @@ foreach $item ($query->param) {
   $value = $query->param($item);
   if (not $item =~ /^_/ and $value) {
     my $price = $query->param("_$item");
-    printf MAIL "%-30s %3u x %2.2f = %3.2f\n", $item, $value, $price, $value * $price;
+    printf MAIL "%-30s %3u x %5.2f = %6.2f\n", $item, $value, $price, $value * $price;
   }
 }
 
-print MAIL "------------------------------------------------\n";
-printf MAIL "Total amount                            € %3.2f\n", $amount;
-print MAIL "================================================\n";
+print MAIL "--------------------------------------------------\n";
+printf MAIL "Total amount                            € %6.2f\n", $amount;
+print MAIL "==================================================\n";
 close MAIL;
 
 # -----------------------------------------------------------------------------

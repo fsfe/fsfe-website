@@ -14,10 +14,11 @@ if ($query->param("url")) {
 my $name = $query->param("name");
 my $address = $query->param("address");
 my $email = $query->param("email");
+my $phone = $query->param("phone");
 my $language = $query->param("language");
 
 # Remove all parameters except for items and prices.
-$query->delete("name", "address", "email", "language", "url");
+$query->delete("url", "name", "address", "email", "phone", "language");
 
 # -----------------------------------------------------------------------------
 # Calculate total amount and check for empty orders
@@ -74,7 +75,8 @@ print MAIL "Content-Type: text/plain; charset=\"UTF-8\"\n";
 print MAIL "Subject: $reference\n\n";
 
 print MAIL "$name\n";
-print MAIL "$address\n\n";
+print MAIL "$address\n";
+print MAIL "Phone: $phone\n\n";
 
 foreach $item ($query->param) {
   $value = $query->param($item);

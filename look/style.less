@@ -1519,10 +1519,39 @@ ul.taglist {
 
 /* Signature pictures */
 
-.signature img {
+.signature-logo img {
   height: auto;
   max-height: 130px;
   max-width: 150px !important;
+}
+
+.signature-table {
+  table {
+    .table;
+    .table-striped;
+    margin-top: 40px;
+  }
+  
+  table > tbody > tr > td {
+    vertical-align: middle;
+  }
+    
+  img {
+    height: auto;
+    max-height: 65px;
+    max-width: 80px !important;
+  }
+}
+
+/* statement block with lighter background and normal font */
+
+blockquote#statement {
+  background-color: rgba(116, 140, 156, 0.1);
+}
+
+blockquote#statement p {
+  font-family: "Roboto",sans-serif;
+  font-weight: unset;
 }
 
 

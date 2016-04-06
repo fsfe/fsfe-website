@@ -17,6 +17,8 @@
   <!-- This creates looping pictures in a box. All pictures are located in a directory and have numbered names (here ilovefs-gallery-thumb-NNN.jpg) -->
   <xsl:template match="picture-box">    
     <!-- appears once when <picture-box /> is called -->
+    <xsl:variable name="from"><xsl:value-of select="@from"/></xsl:variable>
+    <xsl:variable name="to"><xsl:value-of select="@to"/></xsl:variable>
     
     <div id="picture-box" style="height:225px;"> <!-- change to height of pictures -->
       <div id="picture-box-inner" class="logo-list quote">
@@ -37,8 +39,8 @@
       var quotes = [
       <!-- this template calls the loop below -->
       <xsl:call-template name="picture-box">
-        <xsl:with-param name="num" select="1"/> <!-- starting number -->
-        <xsl:with-param name="max" select="68"/> <!-- select maximum number of pictures which should be shown in picture box -->
+        <xsl:with-param name="num" select="$from"/> <!-- starting number -->
+        <xsl:with-param name="max" select="$to"/> <!-- select maximum number of pictures which should be shown in picture box -->
       </xsl:call-template>
       <!-- and here again the one-time content -->
       ];

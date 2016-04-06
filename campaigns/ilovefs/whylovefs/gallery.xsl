@@ -7,12 +7,15 @@
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
   
 <!-- This creates a page containing images of a gallery. All pictures are located in a directory and have numbered names (here ilovefs-gallery-thumb-NNN.jpg) -->
-  <xsl:template match="picture-list">    
+  <xsl:template match="picture-list">   
     <!-- appears once when <picture-list /> is called -->
     <!-- this template calls the loop below -->
+    <xsl:variable name="from"><xsl:value-of select="@from"/></xsl:variable>
+    <xsl:variable name="to"><xsl:value-of select="@to"/></xsl:variable>
+    
     <xsl:call-template name="picture-list">
-      <xsl:with-param name="num" select="1"/> <!-- starting number -->
-      <xsl:with-param name="max" select="68"/> <!-- select maximum number of pictures which should be shown in picture list -->
+      <xsl:with-param name="num" select="$from"/> <!-- starting number -->
+      <xsl:with-param name="max" select="$to"/> <!-- select maximum number of pictures which should be shown in picture list -->
     </xsl:call-template>
   </xsl:template>
 

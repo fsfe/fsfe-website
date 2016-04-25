@@ -9,7 +9,7 @@
     <xsl:variable name="type"><xsl:value-of select="@type"/></xsl:variable>
 
     <xsl:element name="table">
-      <xsl:attribute name="id">merchandise</xsl:attribute>
+      <xsl:attribute name="class">merchandise</xsl:attribute>
 
       <xsl:for-each select="/buildinfo/document/set/item [@type = $type]">
         <xsl:sort select="@date" order="descending"/>

@@ -67,45 +67,48 @@
         Shipping outside Europe (€12.00)<br/>
       </p>
 
-      <table>
+      <table class="order-form">
         <tr>
-          <td><p>Name:</p></td>
-          <td>
-            <input type="text" size="80" style="width:500px" name="name"/>
+          <td class="order-left"><p>Name:</p></td>
+          <td class="order-right">
+            <input type="text" name="name"/>
           </td>
         </tr>
         <tr>
-          <td><p>Address:</p></td>
-          <td>
-            <textarea cols="80" rows="5" style="width:500px" name="address"/>
+          <td class="order-left"><p>Address:</p></td>
+          <td class="order-right">
+            <textarea rows="5" name="address"/>
           </td>
         </tr>
         <tr>
-          <td><p>Email:</p></td>
-          <td>
-            <input type="text" size="80" style="width:500px" name="email"/>
+          <td class="order-left"><p>Email:</p></td>
+          <td class="order-right">
+            <input type="text" name="email"/>
           </td>
         </tr>
         <tr>
-          <td><p>Phone:</p></td>
-          <td>
-            <input type="text" size="80" style="width:500px" name="phone"/>
+          <td class="order-left"><p>Phone:</p></td>
+          <td class="order-right">
+            <input type="text" name="phone"/>
+          </td>
+        </tr>
+        <tr>
+          <td class="order-left"></td>
+          <td class="order-right">
+            <p class="n">
+              Please do not put anything in here:
+              <input type="text" size="40" name="url"/>
+            </p>
+            
+            <!-- Translators: Please change the value here to your language -->
+            <input type="hidden" name="language" value="en"/>
+            <!-- Translators: Please also translate the value here, it's the label
+                 of the button -->
+            <input id="order-submit" type="submit" value="Order items"/>
           </td>
         </tr>
       </table>
 
-      <p class="n">
-        Please do not put anything in here:
-        <input type="text" size="40" name="url"/>
-      </p>
-
-      <center>
-        <!-- Translators: Please also translate the value here, it's the label
-                          of the button -->
-        <input type="submit" value="Request those items"/>
-      </center>
-      <!-- Translators: Please change the value here to your language -->
-      <input type="hidden" name="language" value="en"/>
     </form>
   </body>
 

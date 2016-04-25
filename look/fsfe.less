@@ -516,15 +516,15 @@ table.merchandise tr:last-child {
   border-bottom: medium none;
 }
 table.merchandise td {
-  margin: 5px;
   padding: 10px 0;
 }
 table.merchandise .image {
   width: 25%;
+  min-width: 250px;
 }
 table.merchandise .image img {
   max-height: 120px;
-  padding: 0 5px;
+  margin: 5px;
 }
 table.merchandise .description {
   width: 60%;
@@ -532,4 +532,32 @@ table.merchandise .description {
 table.merchandise .quantity {
   text-align: right;
   width: 15%;
+  min-width: 100px
+}
+@media only screen and (max-device-width: 700px) {
+  table.merchandise .image {
+    min-width: 125px;
+  }
+}
+@media only screen and (max-device-width: 400px) {
+  table.merchandise .quantity {
+    min-width: 0px;
+  }
+  table.merchandise .image img {
+    max-width: 110px;
+  }
+}
+table.order-form {
+  width: 100%;
+}
+table.order-form .order-left {
+  min-width: 65px;
+  width: 10%;
+}
+table.order-form .order-right input,textarea {
+  max-width: 400px;
+  width: 90%;
+}
+table.order-form #order-submit {
+  width: auto;
 }

@@ -114,8 +114,9 @@
     <function country="IT"></function>
   </person>
 
-  <person id="cryptie" avatar="no" teams="fr">
+  <person id="cryptie" avatar="no" teams="fr, translation-coordinators">
       <name>Amandine “Cryptie”</name>
+      <function volunteers="translators-fr">deputy/f</function>
       <country>FR</country>
       <email>cryptie (at) fsfe (dot) org</email>
   </person>
@@ -148,6 +149,12 @@
     <avatar>/fellowship/graphics/people/nicolasdietrich-avatar.jpg</avatar>
   </person>
   
+  <person id="diz" avatar="no" teams="translation-coordinators">
+  	<name>Andrés Diz</name>
+  	<country>ES</country>
+  	<email>pd (at) fsfe (dot) org</email>
+  	<function volunteers="translators-es">deputy/m</function>
+  </person>
 
 <!--
   
@@ -269,7 +276,6 @@
   <person id="jyrinki" avatar="yes" teams="fi, core">
     <name>Timo Jyrinki</name>
     <country>FI</country>
-    <function volunteers="translators-fi">coordinator/m</function>
     <function country="FI">deputy/m</function>
     <email>mirv (at) fsfe (dot) org</email>
     <link>http://iki.fi/tjyrinki/</link>
@@ -352,10 +358,11 @@
   </person>
   -->
 
-  <person id="mehl" avatar="yes" teams="core, de">
+  <person id="mehl" avatar="yes" teams="core, de, translation-coordinators">
     <name>Max Mehl</name>
     <country>DE</country>
     <function country="DE">coordinator/m</function>
+    <function volunteers="translators-de">deputy/m</function>
     <email>max.mehl (at) fsfe (dot) org</email>
     <link>/about/mehl/mehl.html</link>
     <avatar>/about/mehl/mehl-avatar.jpg</avatar>
@@ -431,7 +438,7 @@
     <avatar>/about/reiter/reiter-avatar.jpg</avatar>
   </person>
 
-  <person id="repentinus" avatar="yes" association-member="yes" teams="ga">
+  <person id="repentinus" avatar="yes" association-member="yes" teams="ga, translation-coordinators">
     <name>Heiki Lõhmus</name>
     <country>EE</country>
     <function volunteers="translators">coordinator/m</function>

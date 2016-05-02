@@ -76,6 +76,8 @@
     <avatar>/fellowship/graphics/people/carstenagger-avatar.jpg</avatar>
   </person>
     
+  <!--
+
   <person id="albers" avatar="yes" teams="berlin">
     <name>Erik Albers</name>
     <country>DE</country>
@@ -84,6 +86,8 @@
     <link>/about/albers/albers.en.html</link>
     <avatar>/about/albers/albers-avatar.jpg</avatar>
   </person>
+
+-->
   
   <person id="arnold" avatar="yes" teams="frankfurt">
     <name>Guido Arnold</name>
@@ -129,12 +133,16 @@
     <email>harmuth (at) fsfeurope (dot) org</email>
   </person>
 
+  <!--
+
   <person id="heintze" avatar="no" teams="berlin">
     <name>Silvan Heintze</name>
     <function>coordinator/m</function>
     <email>silvan (at) fsfe (dot) org</email>
     <avatar>/fellowship/graphics/people/silvanheintze-avatar.jpg</avatar>
   </person>
+
+-->
   
   <person id="hopf" avatar="no" teams="hamburg">
     <name>Dominic Hopf</name>
@@ -301,6 +309,22 @@
     <email>flx (at) fsfe (dot) org</email>
     <link>https://wiki.fsfe.org/Fellows/flx</link>
     <avatar>/fellowship/graphics/people/felixstegerman-avatar.png</avatar>
+  </person>
+
+  <person id="tomas" avatar="no" teams="berlin">
+    <name>Tomás</name>
+    <country>DE</country>
+    <function>coordinator/m</function>
+    <email>tomas (at) tuxteam (dot) de</email>
+    <link></link>
+    <avatar></avatar>
+  </person>
+
+  <person id="ricardo" avatar="no" teams="berlin">
+    <name>Ricardo Wurmus</name>
+    <function>coordinator/m</function>
+    <email>rekado (at) elephly (dot) net</email>
+    <avatar></avatar>
   </person>
   
   <person id="stehmann" avatar="no" teams="duesseldorf">

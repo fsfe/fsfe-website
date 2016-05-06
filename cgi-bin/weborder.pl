@@ -2,7 +2,7 @@
 
 use CGI;
 use POSIX qw(strftime);
-# use Digest::SHA1 qw(sha1_hex);
+use Digest::SHA1 qw(sha1_hex);
 
 my $query = new CGI;
 

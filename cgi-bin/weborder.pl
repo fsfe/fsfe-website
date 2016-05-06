@@ -135,7 +135,7 @@ while (<TEMPLATE>) {
     print "      <input type=\"hidden\" name=\"CN\"           value=\"$name\"/>\n";
     print "      <input type=\"hidden\" name=\"EMAIL\"        value=\"$email\"/>\n";
     print "      <!-- interface template -->\n";
-    print "      <input type=\"hidden\" name=\"TP\"           value=\"https://fsfe.org/order/tmpl-thankyou.$language.html\"/>\n";
+    print "      <input type=\"hidden\" name=\"TP\"           value=\"https://fsfe.org/order/tmpl-concardis.$language.html\"/>\n";
     print "      <input type=\"hidden\" name=\"PMListType\"   value=\"2\"/>\n";
     print "      <!-- post-payment redirection -->\n";
     print "      <input type=\"hidden\" name=\"accepturl\"    value=\"http://fsfe.org/order/thankyou.$language.html\"/>\n";

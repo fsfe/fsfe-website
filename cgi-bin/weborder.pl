@@ -24,6 +24,18 @@ $query->delete("url", "name", "address", "email", "phone", "language");
 # Calculate total amount and check for empty orders
 # -----------------------------------------------------------------------------
 
+if (!$name) {
+  print "Content-type: text/html\n\n";
+  print "<p>Please enter your name!</p>\n";
+  exit;
+}
+
+if (!$email) {
+  print "Content-type: text/html\n\n";
+  print "<p>Please enter your email address!</p>\n";
+  exit;
+}
+
 my $empty = 1;
 my $amount = 0;
 
@@ -51,6 +63,7 @@ if ($amount > 999) {
 }
 
 my $amount_f = sprintf("%.2f", $amount);
+my $amount100 = $amount * 100;
 
 # -----------------------------------------------------------------------------
 # Create payment reference for this order
@@ -98,7 +111,41 @@ close MAIL;
 print "Content-type: text/html\n\n";
 open TEMPLATE, "/home/www/html/global/order/tmpl-thankyou." . $language . ".html";
 while (<TEMPLATE>) {
-  s/:AMOUNT:/$amount_f/g;
-  s/:REFERENCE:/$reference/g;
-  print;
+  if (/:FORM:/) {
+    my $passphrase = "Only4TestingPurposes";
+    my $shastring = 
+        "ACCEPTURL=http://fsfe.org/order/thankyou.$language.html$passphrase" .
+        "AMOUNT=$amount100$passphrase" .
+        "CANCELURL=http://fsfe.org/order/cancel.$language.html$passphrase" .
+        "CN=$name$passphrase" .
+        "CURRENCY=EUR$passphrase" .
+        "EMAIL=$email$passphrase" .
+        "LANGUAGE=$language$passphrase" .
+        "ORDERID=$reference$passphrase" .
+        "PMLISTTYPE=2$passphrase" .
+        "PSPID=40F00871$passphrase" .
+        "TP=https://fsfe.org/order/tmpl-thankyou.$language.html$passphrase";
+    my $shasum = uc(sha1_hex($shastring));
+    print "      <!-- payment parameters -->\n";
+    print "      <input type=\"hidden\" name=\"PSPID\"        value=\"40F00871\"/>\n";
+    print "      <input type=\"hidden\" name=\"orderID\"      value=\"$reference\"/>\n";
+    print "      <input type=\"hidden\" name=\"amount\"       value=\"$amount100\"/>\n";
+    print "      <input type=\"hidden\" name=\"currency\"     value=\"EUR\"/>\n";
+    print "      <input type=\"hidden\" name=\"language\"     value=\"$language\"/>\n";
+    print "      <input type=\"hidden\" name=\"CN\"           value=\"$name\"/>\n";
+    print "      <input type=\"hidden\" name=\"EMAIL\"        value=\"$email\"/>\n";
+    print "      <!-- interface template -->\n";
+    print "      <input type=\"hidden\" name=\"TP\"           value=\"https://fsfe.org/order/tmpl-thankyou.$language.html\"/>\n";
+    print "      <input type=\"hidden\" name=\"PMListType\"   value=\"2\"/>\n";
+    print "      <!-- post-payment redirection -->\n";
+    print "      <input type=\"hidden\" name=\"accepturl\"    value=\"http://fsfe.org/order/thankyou.$language.html\"/>\n";
+    print "      <input type=\"hidden\" name=\"cancelurl\"    value=\"http://fsfe.org/order/cancel.$language.html\"/>\n";
+    print "      <!-- SHA1 signature -->\n";
+    print "      <input type=\"hidden\" name=\"SHASign\"      value=\"$shasum\"/>\n";
+  } else {
+    s/:AMOUNT:/$amount_f/g;
+    s/:REFERENCE:/$reference/g;
+    print;
+  }
 }
+close TEMPLATE;

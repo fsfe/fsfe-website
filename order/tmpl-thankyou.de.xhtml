@@ -20,12 +20,12 @@
     </p>
 
     <p>
-      Empfänger: Free Software Foundation Europe e.V.<br />
-      Adresse: Schönhauser Allee 6/7, 10119 Berlin, Deutschland<br />
+      Empfänger: Free Software Foundation Europe e.V.<br/>
+      Adresse: Schönhauser Allee 6/7, 10119 Berlin, Deutschland<br/>
       IBAN: DE47 4306 0967 2059 7908 01<br/>
       Bank: GLS Gemeinschaftsbank eG, 44774 Bochum, Deutschland<br/>
-      BIC: GENODEM1GLS<br />
-      Überweisungsbetrag: :AMOUNT:<br />
+      BIC: GENODEM1GLS<br/>
+      Überweisungsbetrag: :AMOUNT:<br/>
       Verwendungszweck: :REFERENCE:
     </p>
 
@@ -49,6 +49,15 @@
         <input type="hidden" name="no_note" value="1"/>
         <input type="hidden" name="no_shipping" value="1"/>
         <input type="submit" name="submit" value="Pay with PayPal"/>
+      </center>
+    </form>
+
+    <h3>Online-Zahlung</h3>
+
+    <form action="https://secure.payengine.de/ncol/prod/orderstandard.asp" method="post">
+      <center>
+        :FORM:
+        <input type="submit" name="submit" value="Online bezahlen"/>
       </center>
     </form>
   </body>

@@ -122,7 +122,7 @@ my $shastring =
     "PMLISTTYPE=2$passphrase" .
     "PSPID=40F00871$passphrase" .
     "TP=https://fsfe.org/order/tmpl-thankyou.$language.html$passphrase";
-my $shasum = uc(sha1_hex($shastring));
+#my $shasum = uc(sha1_hex($shastring));
 my $form = "";
 #my $form = "      <!-- payment parameters -->\n" .
 #    "      <input type=\"hidden\" name=\"PSPID\"        value=\"40F00871\"/>\n" .

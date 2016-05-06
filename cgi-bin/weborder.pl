@@ -123,22 +123,23 @@ my $shastring =
     "PSPID=40F00871$passphrase" .
     "TP=https://fsfe.org/order/tmpl-thankyou.$language.html$passphrase";
 my $shasum = uc(sha1_hex($shastring));
-my $form = "      <!-- payment parameters -->\n" .
-    "      <input type=\"hidden\" name=\"PSPID\"        value=\"40F00871\"/>\n" .
-    "      <input type=\"hidden\" name=\"orderID\"      value=\"$reference\"/>\n" .
-    "      <input type=\"hidden\" name=\"amount\"       value=\"$amount100\"/>\n" .
-    "      <input type=\"hidden\" name=\"currency\"     value=\"EUR\"/>\n" .
-    "      <input type=\"hidden\" name=\"language\"     value=\"$language\"/>\n" .
-    "      <input type=\"hidden\" name=\"CN\"           value=\"$name\"/>\n" .
-    "      <input type=\"hidden\" name=\"EMAIL\"        value=\"$email\"/>\n" .
-    "      <!-- interface template -->\n" .
-    "      <input type=\"hidden\" name=\"TP\"           value=\"https://fsfe.org/order/tmpl-concardis.$language.html\"/>\n" .
-    "      <input type=\"hidden\" name=\"PMListType\"   value=\"2\"/>\n" .
-    "      <!-- post-payment redirection -->\n" .
-    "      <input type=\"hidden\" name=\"accepturl\"    value=\"http://fsfe.org/order/thankyou.$language.html\"/>\n" .
-    "      <input type=\"hidden\" name=\"cancelurl\"    value=\"http://fsfe.org/order/cancel.$language.html\"/>\n" .
-    "      <!-- SHA1 signature -->\n" .
-    "      <input type=\"hidden\" name=\"SHASign\"      value=\"$shasum\"/>";
+my $form = "";
+#my $form = "      <!-- payment parameters -->\n" .
+#    "      <input type=\"hidden\" name=\"PSPID\"        value=\"40F00871\"/>\n" .
+#    "      <input type=\"hidden\" name=\"orderID\"      value=\"$reference\"/>\n" .
+#    "      <input type=\"hidden\" name=\"amount\"       value=\"$amount100\"/>\n" .
+#    "      <input type=\"hidden\" name=\"currency\"     value=\"EUR\"/>\n" .
+#    "      <input type=\"hidden\" name=\"language\"     value=\"$language\"/>\n" .
+#    "      <input type=\"hidden\" name=\"CN\"           value=\"$name\"/>\n" .
+#    "      <input type=\"hidden\" name=\"EMAIL\"        value=\"$email\"/>\n" .
+#    "      <!-- interface template -->\n" .
+#    "      <input type=\"hidden\" name=\"TP\"           value=\"https://fsfe.org/order/tmpl-concardis.$language.html\"/>\n" .
+#    "      <input type=\"hidden\" name=\"PMListType\"   value=\"2\"/>\n" .
+#    "      <!-- post-payment redirection -->\n" .
+#    "      <input type=\"hidden\" name=\"accepturl\"    value=\"http://fsfe.org/order/thankyou.$language.html\"/>\n" .
+#    "      <input type=\"hidden\" name=\"cancelurl\"    value=\"http://fsfe.org/order/cancel.$language.html\"/>\n" .
+#    "      <!-- SHA1 signature -->\n" .
+#    "      <input type=\"hidden\" name=\"SHASign\"      value=\"$shasum\"/>";
 
 # -----------------------------------------------------------------------------
 # Lead user to "thankyou" page

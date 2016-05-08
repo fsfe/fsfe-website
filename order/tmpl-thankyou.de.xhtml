@@ -1,22 +1,34 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 
 <html>
   <head>
-    <title>Free Software Foundation Europe - Vielen Dank für Ihre Bestellung!</title>
+    <title>Vielen Dank für Ihre Bestellung! – FSFE</title>
   </head>
 
   <body>
-    <h1>Vielen Dank für Ihre Bestellung!</h1>
-
-    <p>
-      Der Gesamtpreis Ihrer Bestellung beträgt <strong>€:AMOUNT:</strong>.
-      Sie können per Überweisung oder PayPal zahlen.
+    <p id="category" class="p-category">
+      <a href="/order/order.html">Fanartikel</a>
     </p>
 
-    <h3>Überweisung</h3>
+    <h1>Vielen Dank für Ihre Bestellung!</h1>
+
+    <p class="p-summary">
+      Der Gesamtpreis Ihrer Bestellung beträgt <strong>€:AMOUNT:</strong>.
+    </p>
 
     <p>
-      Um per Überweisung zu zahlen, verwenden Sie bitte die folgenden Daten:
+      Sie können jetzt online mit verschiedenen Kredit- und Debitkarten oder
+      mit PayPal bezahlen.
+    </p>
+
+    <form action="https://secure.payengine.de/ncol/prod/orderstandard.asp" method="post">
+:FORM:
+      <input type="submit" name="submit" value="Online bezahlen"/>
+    </form>
+
+    <p>
+      Falls Sie eine Bezahlung per Überweisung bevorzugen, verwenden Sie bitte
+      folgende Daten:
     </p>
 
     <p>
@@ -28,36 +40,6 @@
       Überweisungsbetrag: :AMOUNT:<br/>
       Verwendungszweck: :REFERENCE:
     </p>
-
-    <h3>PayPal</h3>
-
-    <p>
-      Sie können ebenso per Kreditkarte oder auf andere von PayPal akzeptierte
-      Zahlungsarten zahlen. Wenn Sie diese Option wählen möchten, klicken Sie
-      einfach auf den unten stehenden Button.
-    </p>
-
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-      <center>
-        <input type="hidden" name="cmd" value="_xclick"/>
-        <input type="hidden" name="business" value="paypal@fsfeurope.org"/>
-        <input type="hidden" name="image_url" value="http://fsfeurope.org/graphics/logo.png"/>
-        <input type="hidden" name="item_number" value=":REFERENCE:"/>
-        <input type="hidden" name="item_name" value="Online Order"/>
-        <input type="hidden" name="amount" value=":AMOUNT:"/>
-        <input type="hidden" name="currency_code" value="EUR"/>
-        <input type="hidden" name="no_note" value="1"/>
-        <input type="hidden" name="no_shipping" value="1"/>
-        <input type="submit" name="submit" value="Pay with PayPal"/>
-      </center>
-    </form>
-
-    <h3>Online-Zahlung</h3>
-
-    <form action="https://secure.payengine.de/ncol/prod/orderstandard.asp" method="post">
-:FORM:
-      <input type="submit" name="submit" value="Online bezahlen"/>
-    </form>
   </body>
 
   <timestamp>$Date$ $Author$</timestamp>

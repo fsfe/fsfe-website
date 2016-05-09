@@ -110,7 +110,7 @@ if (empty($_POST['lastname'])  ||
     empty($_POST['specifics']) ||
    !empty($_POST['url']) ) {
 
-  header("Location: http://fsfe.org/order/orderpromo-error.$lang.html");
+  header("Location: http://fsfe.org/contribute/spreadtheword-ordererror.$lang.html");
   exit();
 }
 
@@ -150,7 +150,7 @@ $test = send_mail ( "assist@fsfe.org", $_POST['email'], $subject, $msg );
 if (isset($_POST['donate']) && ($_POST['donate'] > 0)) {
   relay_donation($_POST['donationID']);
 } else {
-  header("Location: http://fsfe.org/order/orderpromo-thanks.$lang.html");
+  header("Location: http://fsfe.org/contribute/spreadtheword-orderthanks.$lang.html");
 }
 
 ?>

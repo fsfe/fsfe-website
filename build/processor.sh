@@ -15,18 +15,18 @@ process_file(){
 
   build_xmlstream "$shortname" "$lang" "$olang" \
   | xsltproc "$processor" - \
-  | sed -r '
-      s;< *(a|link)( [^>]*)? href="https?://'"$domain"'/([^"]*)";<\1\2 href="/\3";g
-      s;< *(a|link)( [^>]*)? href='\''https?://'"$domain"'/([^'\'']*)'\'';<\1\2 href='\''/\3'\'';g
+  | sed -r ':X; N; $!bX;
+      s;<[\r\n\t ]*(a|link)([\r\n\t ][^>]*)?[\r\n\t ]href="https?://'"$domain"'/([^"]*)";<\1\2 href="/\3";g
+      s;<[\r\n\t ]*(a|link)([\r\n\t ][^>]*)?[\r\n\t ]href='\''https?://'"$domain"'/([^'\'']*)'\'';<\1\2 href='\''/\3'\'';g
 
-      s;< *(a|link)( [^>]*)? href="(https?://[^"]*)";<\1\2 href="#== norewrite ==\3";g
-      s;< *(a|link)( [^>]*)? href="([^#"])([^"]*/)?([^\./"]*\.)(html|rss|ics)(#[^"]*)?";<\1\2 href="\3\4\5'"$lang"'.\6\7";g
-      s;< *(a|link)( [^>]*)? href="([^#"]*/)(#[^"]*)?";<\1\2 href="\3index.'"$lang"'.html\4";g
-      s;< *(a|link)( [^>]*)? href="#== norewrite ==(https?://[^"]*)";<\1\2 href="\3";g
+      s;<[\r\n\t ]*(a|link)([\r\n\t ][^>]*)?[\r\n\t ]href="(https?://[^"]*)";<\1\2 href="#== norewrite ==\3";g
+      s;<[\r\n\t ]*(a|link)([\r\n\t ][^>]*)?[\r\n\t ]href="([^#"])([^"]*/)?([^\./"]*\.)(html|rss|ics)(#[^"]*)?";<\1\2 href="\3\4\5'"$lang"'.\6\7";g
+      s;<[\r\n\t ]*(a|link)([\r\n\t ][^>]*)?[\r\n\t ]href="([^#"]*/)(#[^"]*)?";<\1\2 href="\3index.'"$lang"'.html\4";g
+      s;<[\r\n\t ]*(a|link)([\r\n\t ][^>]*)?[\r\n\t ]href="#== norewrite ==(https?://[^"]*)";<\1\2 href="\3";g
 
-      s;< *(a|link)( [^>]*)? href='\''(https?://[^'\'']*)'\'';<\1\2 href='\''#== norewrite ==\3'\'';g
-      s;< *(a|link)( [^>]*)? href='\''([^#'\''])([^'\'']*/)?([^\./'\'']*\.)(html|rss|ics)(#[^'\'']*)?'\'';<\1\2 href='\''\3\4\5'"$lang"'.\6\7'\'';g
-      s;< *(a|link)( [^>]*)? href='\''([^#'\'']*/)(#[^'\'']*)?'\'';<\1\2 href='\''\3index.'"$lang"'.html\4'\'';g
-      s;< *(a|link)( [^>]*)? href='\''#== norewrite ==(https?://[^'\'']*)'\'';<\1\2 href='\''\3'\'';g
+      s;<[\r\n\t ]*(a|link)([\r\n\t ][^>]*)?[\r\n\t ]href='\''(https?://[^'\'']*)'\'';<\1\2 href='\''#== norewrite ==\3'\'';g
+      s;<[\r\n\t ]*(a|link)([\r\n\t ][^>]*)?[\r\n\t ]href='\''([^#'\''])([^'\'']*/)?([^\./'\'']*\.)(html|rss|ics)(#[^'\'']*)?'\'';<\1\2 href='\''\3\4\5'"$lang"'.\6\7'\'';g
+      s;<[\r\n\t ]*(a|link)([\r\n\t ][^>]*)?[\r\n\t ]href='\''([^#'\'']*/)(#[^'\'']*)?'\'';<\1\2 href='\''\3index.'"$lang"'.html\4'\'';g
+      s;<[\r\n\t ]*(a|link)([\r\n\t ][^>]*)?[\r\n\t ]href='\''#== norewrite ==(https?://[^'\'']*)'\'';<\1\2 href='\''\3'\'';g
   '
 }

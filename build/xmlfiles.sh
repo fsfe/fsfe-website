@@ -16,8 +16,8 @@ include_xml(){
     [ -z "$enc" ] && enc="UTF-8"
 
     iconv -f "$enc" -t "UTF-8" "$file" \
-    | tr '\n\t\r' '   ' \
-    | sed -r 's:<(\?[xX][mM][lL]|!DOCTYPE) [^>]+>::g
+    | sed -r ':X; N; $!bX;
+              s:<(\?[xX][mM][lL]|!DOCTYPE)[[:space:]]+[^>]+>::g
               s:<[^!][^>]*>::;
               s:</[^>]*>([^<]*((<[^>]+/>|<!([^>]|<[^>]*>)*>|<\?[^>]+>)[^<]*)*)?$:\1:;'
   fi
@@ -28,8 +28,8 @@ get_attributes(){
   # XHTML file
   file="$1"
 
-  cat "$file" \
-  | tr '\n\t\r' '   ' \
-  | sed -rn 's;^.*< *([xX]|[xX]?[hH][tT])[mM][lL] +([^>]*)>.*$;\2;p'
+  sed -rn ':X; N; $!bX;
+           s;^.*<[\n\t\r ]*([xX]|[xX]?[hH][tT])[mM][lL][\n\t\r ]+([^>]*)>.*$;\2;p' \
+    "$file"
 }
 

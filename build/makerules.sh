@@ -203,7 +203,7 @@ xslt_dependencies(){
   file="$1"
 
   cat "$file" \
-  | tr '\n\t' '  ' \
+  | tr '\n\t\r' '   ' \
   | sed -r 's;(<xsl:(include|import)[^>]*>);\n\1\n;g' \
   | sed -nr '/<xsl:(include|import)[^>]*>/s;^.*href *= *"([^"]*)".*$;\1;gp'
 }

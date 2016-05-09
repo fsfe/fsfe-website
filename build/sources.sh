@@ -118,11 +118,9 @@ auto_sources(){
   else
     list_sources "$sourcesfile" "$lang"
   fi | while read source; do
-    echo -n "$source\t"
-    include_xml "$source" 
-    echo
+    printf '\n### filename="%s" ###\n%s' "$source" "$(include_xml "$source")" 
   done \
-  | sed -r 's:^([^\t]+)\t[^<]*(< *[^ >]+)([^>]*>):\2 filename="\1" \3:'
+  | sed -r ':X; N; $!bX; s;\n### (filename="[^\n"]+") ###\n[^<]*(<[^>]+)>;\2 \1>;g'
 }
 
 lang_sources(){

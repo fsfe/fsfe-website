@@ -2,31 +2,17 @@
 
 <html>
   <head>
-    <title>Free Software Foundation Europe - Merchandise</title>
+    <title>Merchandise – FSFE</title>
   </head>
 
   <body>
-    <h1>FSFE Merchandise</h1>
+    <h1>Merchandise</h1>
 
-    <div id="introduction">
-      <div class="image">
-        <img src="/graphics/stars-smaller.png" alt="Stars" />
-      </div>
-
-      <p>
-        Show your love for Free Software by using and wearing the branded items below.
-        Free Software clothing is a great way of raising awareness within your local
-        community, and each sale helps to fund critical FSFE projects.
-        <br />
-        <strong>IMPORTANT!</strong> We are currently moving our items
-        between locations, and orders may be delayed. We'll work hard
-        to make the delay as short as possible, but you can expect up 
-        to two weeks additional delivery time.
-        <br />
-        We also stock a range of <a href="#other-items">stationary, mugs, badges, and keyrings</a>.
-      </p>
-
-    </div>
+    <p class="p-summary">
+      Show your love for Free Software by using and wearing the branded items
+      below. Free Software clothing is a great way of raising awareness within
+      your local community, and each sale helps to fund critical FSFE projects.
+    </p>
 
     <form action="/cgi-bin/weborder.pl" method="post" class="item-grid">
       <h2>T-Shirts</h2>
@@ -45,14 +31,16 @@
 
       <dynamic-content type="baby-clothes"/>
 
-      <a name="other-items"><a name="other-items"><h2 id="other-items">Other Items</h2></a></a>
+      <h2 id="other-items">Other Items</h2>
 
       <dynamic-content type="other"/>
 
       <h2>Promotion materials</h2>
 
       <p>
-	Check our <a href="/contribute/spreadtheword.html#promo-material">order page for information materials</a> to leaflets, stickers and other things. 
+        Check our
+        <a href="/contribute/spreadtheword.html#promo-material">order page for information material</a>
+        to order leaflets, stickers and other things. 
       </p>
 
       <h2>Shipping</h2>
@@ -101,14 +89,13 @@
             </p>
             
             <!-- Translators: Please change the value here to your language -->
-            <input type="hidden" name="language" value="en"/>
+            <input type="hidden" name="language" value="en_GB"/>
             <!-- Translators: Please also translate the value here, it's the label
                  of the button -->
             <input id="order-submit" type="submit" value="Order items"/>
           </td>
         </tr>
       </table>
-
     </form>
   </body>
 

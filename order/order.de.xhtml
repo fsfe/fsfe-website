@@ -1,32 +1,20 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 
 <html>
   <head>
-    <title>Free Software Foundation Europe – Fanartikel</title>
+    <title>Fanartikel – FSFE</title>
   </head>
 
   <body>
+    <h1>Fanartikel</h1>
 
-    <h1>FSFE-Fanartikel</h1>
-
-    <div id="introduction">
-      <div class="image">
-        <img src="/graphics/stars-smaller.png" alt="" />
-      </div>
-
-      <p>
-        Zeigen Sie, dass Sie ein Fan von Freier Software sind, indem Sie
-        die unten gezeigten Fanartikel benutzen oder tragen.
-        Freie-Software-Kleidungsstücke sind eine großartige Methode, um
-        Freie Software in Ihrer Umgebung stärker ins Bewusstsein zu bringen,
-        und mit jedem Kauf unterstützen Sie wichtige Projekte der FSFE.
-        <br />
-        <br />
-        Wie haben auch eine Auswahl von <a href="#other-items">Büroartikeln,
-        Tassen, Abzeichen und Schlüsselanhängern</a> vorrätig.
-      </p>
-      
-    </div>
+    <p class="p-summary">
+      Zeigen Sie, dass Sie ein Fan von Freier Software sind, indem Sie die unten
+      gezeigten Fanartikel benutzen oder tragen. Diese Artikel sind eine
+      großartige Methode, um Freie Software in Ihrer Umgebung stärker ins
+      Bewusstsein zu bringen, und mit jedem Kauf unterstützen Sie wichtige
+      Projekte der FSFE.
+    </p>
 
     <form action="/cgi-bin/weborder.pl" method="post" class="item-grid">
       <h2>T-Shirts für Männer</h2>
@@ -45,16 +33,16 @@
  
       <dynamic-content type="baby-clothes"/>
 
-      <a name="other-items"><h2 id="other-items">Andere Artikel</h2></a>
+      <h2>Andere Artikel</h2>
 
       <dynamic-content type="other"/>
 
       <h2>Infomaterial</h2>
     
       <p>
-	Auf unserer <a href="/contribute/spreadtheword.html#promo-material">Informations-Material-Seite
-        </a> können Sie 
-        Broschüren, Sticker und anderes bestellen.
+        Auf unserer
+        <a href="/contribute/spreadtheword.html#promo-material">Informations-Material-Seite</a>
+        können Sie Broschüren, Sticker und anderes bestellen.
       </p>
 
       <h2>Versandkosten</h2>
@@ -69,46 +57,47 @@
         Weltweiter Versand (€12.00)<br/>
       </p>
 
-      <table>
+      <table class="order-form">
         <tr>
-          <td><p>Name:</p></td>
-          <td>
-            <input type="text" size="80" style="width:500px" name="name"/>
+          <td class="order-left"><p>Name:</p></td>
+          <td class="order-right">
+            <input type="text" name="name"/>
           </td>
         </tr>
         <tr>
-          <td><p>Adresse:</p></td>
-          <td>
-            <textarea cols="80" rows="5" style="width:500px" name="address"/>
+          <td class="order-left"><p>Adresse:</p></td>
+          <td class="order-right">
+            <textarea rows="5" name="address"/>
           </td>
         </tr>
         <tr>
-          <td><p>E-Mail:</p></td>
-          <td>
-            <input type="text" size="80" style="width:500px" name="email"/>
+          <td class="order-left"><p>E-Mail:</p></td>
+          <td class="order-right">
+            <input type="text" name="email"/>
           </td>
         </tr>
         <tr>
-          <td><p>Telefon:</p></td>
-          <td>
-            <input type="text" size="80" style="width:500px" name="phone"/>
+          <td class="order-left"><p>Telefon:</p></td>
+          <td class="order-right">
+            <input type="text" name="phone"/>
+          </td>
+        </tr>
+        <tr>
+          <td class="order-left"></td>
+          <td class="order-right">
+            <p class="n">
+              Bitte hier nichts eingeben:
+              <input type="text" size="40" name="url"/>
+            </p>
+            
+            <!-- Translators: Please change the value here to your language -->
+            <input type="hidden" name="language" value="de_DE"/>
+            <!-- Translators: Please also translate the value here, it's the label
+                 of the button -->
+            <input id="order-submit" type="submit" value="Artikel bestellen"/>
           </td>
         </tr>
       </table>
-
-      <!-- Should help against spam -->
-      <p class="n">
-        Please do not put anything in here:
-        <input type="text" size="40" name="url"/>
-      </p>
-
-      <center>
-        <!-- Translators: Please also translate the value here, it's the label
-                          of the button -->
-        <input type="submit" value="Artikel bestellen"/>
-      </center>
-      <!-- Translators: Please change the value here to your language -->
-      <input type="hidden" name="language" value="de"/>
     </form>
   </body>
 

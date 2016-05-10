@@ -156,6 +156,25 @@
   	<function volunteers="translators-es">deputy/m</function>
   </person>
 
+<!--
+  
+  <person id="falgueyrac" avatar="no" teams="fr, core">
+    <name>Lucile Falgueyrac</name>
+    <country>FR</country>
+  -->
+  
+ 
+    <!--function>intern/f</function-->
+<!--
+    <email>lucile.falg (at) fsfe (dot) org</email>
+  -->
+    <!--employee>full/f</employee-->
+<!--
+  </person>
+  -->
+  
+  
+
   <person id="feltrin" avatar="no" teams="ftf, core">
     <name>Nicola Feltrin</name>
     <country>IT</country>
@@ -213,12 +232,12 @@
     <employee>freelancer/m</employee>
   </person>
 
-  <!-- <person id="harmuth" avatar="no" association-member="yes" teams="ga">
+  <person id="harmuth" avatar="no" association-member="yes" teams="ga">
     <name>Stefan Harmuth</name>
     <country>DE</country>
     <function>fellowship-representative/m</function>
     <email>harmuth (at) fsfeurope (dot) org</email>
-  </person> -->
+  </person>
 
   <!--
   <person id="marius" avatar="no" teams="intern">
@@ -229,13 +248,6 @@
     <employee>full/m</employee>
   </person>
   -->
-
-  <person id="mirko" avatar="no" association-member="yes" teams="ga">
-    <name>Mirko Boehm</name>
-    <country>DE</country>
-    <function>fellowship-representative/m</function>
-    <email>mirko (at) fsfe (dot) org</email>
-  </person>
 
   <person id="jean" avatar="yes" teams="fr, core">
     <name>Nicolas Jean</name>

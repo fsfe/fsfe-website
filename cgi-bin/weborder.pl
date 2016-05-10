@@ -86,6 +86,7 @@ print MAIL "To: order\@fsfeurope.org\n";
 print MAIL "Cc: mueller\@fsfeurope.org\n";
 print MAIL "X-OTRS-DynamicField-OrderID: $reference\n";
 print MAIL "X-OTRS-DynamicField-OrderAmount: $amount\n";
+print MAIL "X-OTRS-DynamicField-OrderLanguage: $language\n";
 print MAIL "Content-Transfer-Encoding: 8bit\n";
 print MAIL "Content-Type: text/plain; charset=\"UTF-8\"\n";
 print MAIL "Subject: $reference\n\n";

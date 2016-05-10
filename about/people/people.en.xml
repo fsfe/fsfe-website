@@ -161,15 +161,9 @@
   <person id="falgueyrac" avatar="no" teams="fr, core">
     <name>Lucile Falgueyrac</name>
     <country>FR</country>
-  -->
-  
- 
-    <!--function>intern/f</function-->
-<!--
+    <function>intern/f</function>
     <email>lucile.falg (at) fsfe (dot) org</email>
-  -->
-    <!--employee>full/f</employee-->
-<!--
+    <employee>full/f</employee>
   </person>
   -->
   
@@ -232,12 +226,14 @@
     <employee>freelancer/m</employee>
   </person>
 
+  <!--
   <person id="harmuth" avatar="no" association-member="yes" teams="ga">
     <name>Stefan Harmuth</name>
     <country>DE</country>
     <function>fellowship-representative/m</function>
     <email>harmuth (at) fsfeurope (dot) org</email>
   </person>
+  -->
 
   <!--
   <person id="marius" avatar="no" teams="intern">
@@ -367,6 +363,13 @@
     <link>/about/mehl/mehl.html</link>
     <avatar>/about/mehl/mehl-avatar.jpg</avatar>
     <employee>part/m</employee>
+  </person>
+
+  <person id="mirko" avatar="no" association-member="yes" teams="ga">
+    <name>Mirko Boehm</name>
+    <country>DE</country>
+    <function>fellowship-representative/m</function>
+    <email>mirko (at) fsfe (dot) org</email>
   </person>
 
   <person id="moeller" avatar="yes" teams="ga, ch">

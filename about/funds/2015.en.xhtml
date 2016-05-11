@@ -3,6 +3,32 @@
 <html>
   <head>
     <title>Income and Expense 2015 – FSFE</title>
+    <style type="text/css">
+      tr:nth-child(odd) {
+        background-color: #f9f9f9;
+      }
+      th {
+        background-color: #6bb340;
+      }
+      td {
+        border-bottom: 1px solid #6bb340;
+      }
+      th, td {
+        text-align: right;
+        padding-left: .3em;
+        padding-right: .3em;
+        width: 12em;
+      }
+      th:nth-child(1), td:nth-child(1) {
+        text-align: left;
+        width: auto;
+      }
+      tr.sum {
+        font-weight: bold;
+        border-top: 1px solid black;
+        margin-bottom: 1.5em;
+      }
+    </style>
   </head>
 
   <body>
@@ -43,13 +69,9 @@
         <td align="right">206.96</td>
       </tr>
 
-      <tr>
+      <tr class="sum">
         <td><strong>Total income</strong></td>
         <td align="right"><strong>445,998.83</strong></td>
-      </tr>
-
-      <tr>
-        <td colspan="2">&#160;</td>
       </tr>
 
       <tr>
@@ -82,16 +104,12 @@
         <td align="right">32,142.55</td>
       </tr>
 
-      <tr>
+      <tr class="sum">
         <td><strong>Total expenses</strong></td>
         <td align="right"><strong>436,086.40</strong></td>
       </tr>
 
-      <tr>
-        <td colspan="2">&#160;</td>
-      </tr>
-
-      <tr>
+      <tr class="sum">
         <td><strong>Surplus</strong></td>
         <td align="right"><strong>9,912.43</strong></td>
       </tr>

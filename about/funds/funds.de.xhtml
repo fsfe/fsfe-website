@@ -4,15 +4,22 @@
   <head>
     <title>Einnahmen und Ausgaben – FSFE</title>
     <style type="text/css">
-      table {
-        border-collapse: collapse;
-        border: 1px solid black;
+      tr:nth-child(odd) {
+        background-color: #d0f400;
+      }
+      th {
+        background-color: #6bb340;
+        border-bottom: 1px solid black;
       }
       th, td {
         text-align: right;
         padding-left: .3em;
         padding-right: .3em;
-        border: 1px solid black;
+        width: 15em;
+      }
+      th:nth-child(1), td:nth-child(1) {
+        text-align: left;
+        width: auto;
       }
     </style>
   </head>

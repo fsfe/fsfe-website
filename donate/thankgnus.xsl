@@ -32,6 +32,12 @@
               </xsl:element>
               <xsl:element name="td">
                 <xsl:value-of select="node()"/>
+                <xsl:if test="@mark">
+                  <xsl:element name="span">
+                    <xsl:attribute name="style">color:red</xsl:attribute>
+                    <xsl:text>*</xsl:text>
+                  </xsl:element>
+                </xsl:if>
               </xsl:element>
             </xsl:element>
           </xsl:for-each>

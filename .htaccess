@@ -4,6 +4,8 @@ RewriteEngine On
 RewriteRule ^favicon.ico /graphics/fsfe.ico [redirect=permanent]
 RewriteRule ^graphics/fsfeurope.ico /graphics/fsfe.ico [redirect=permanent]
 
+## === SHORT URLs ===
+
 # AskYourCandidates redirect
 RewriteRule ^campaigns/ayc(.*) /campaigns/askyourcandidates$1 [redirect=permanent]
 
@@ -16,6 +18,10 @@ RewriteRUle ^promo(/.*)?	/contribute/spreadtheword$1	[redirect=permanent]
 # Redirect convince your friends easy pages to the wiki page
 RewriteRule   ^(cyf|convince).*      http://wiki.fsfe.org/ConvinceYourFriends        [R=permanent]
 
+# Summit 2016
+RewriteRule	^summit16(/.*)?$	https://wiki.fsfe.org/Events/Summit2016/CallForParticipation$1	[redirect=permanent]
+
+## === MOVED PAGES ===
 
 # Redirections for IloveFS campaign
 RewriteRule ^campaigns/ilovefs/ilovefs(.*)html$ /campaigns/ilovefs/index$1html [redirect=permanent]

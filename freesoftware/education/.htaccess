@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteRule ^argumentation(.*) education$1 [redirect=permanent]
+

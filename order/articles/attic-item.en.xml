@@ -117,17 +117,6 @@
       large="/order/articles/images/tshirt-mdf-green-back.jpg"/>
   </item>
 
-  <item type="tshirt" id="tshirt-dfd-white" price="18.00" date="2008-03-01">
-    <available size="L"/>
-    <available size="XL"/>
-    <available size="XXL"/>
-    <image
-      small="/order/articles/images/thumbnails/tshirt-dfd-white-front.jpg"
-      large="/order/articles/images/tshirt-dfd-white-front.jpg"/>
-    <image
-      small="/order/articles/images/thumbnails/tshirt-dfd-white-back.jpg"
-      large="/order/articles/images/tshirt-dfd-white-back.jpg"/>
-  </item>
   <item type="girlie" id="girlie-dfd-purple" price="20.00" date="2014-03-18">
     <available size="S"/>
     <available size="M"/>
@@ -169,20 +158,6 @@
     <image
       small="/order/articles/images/thumbnails/baby-romper-fork-green-front.jpg"
       large="/order/articles/images/baby-romper-fork-green-front.jpg"/>
-  </item>
--->
-<!--
-  <item type="other" id="mug-fellowship-black" price="10.00" date="2008-03-01">
-    <available size="#"/>
-    <image
-      small="/order/articles/images/thumbnails/mug-fellowship-black.jpg"
-      large="/order/articles/images/mug-fellowship-black.jpg"/>
-  </item>
-  <item type="other" id="mug-fellowship-white" price="10.00" date="2008-03-01">
-    <available size="#"/>
-    <image
-      small="/order/articles/images/thumbnails/mug-fellowship-white.jpg"
-      large="/order/articles/images/mug-fellowship-white.jpg"/>
   </item>
 -->
 </itemset>

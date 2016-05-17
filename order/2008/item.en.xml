@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Do not translate this file! -->
+
+<itemset>
+  <item type="tshirt" id="tshirt-hacking-black" price="20.00" date="2008-02-23">
+    <available size="S"/>
+    <available size="M"/>
+    <available size="L"/>
+    <available size="XL"/>
+    <available size="XXL"/>
+    <image
+      small="2008/tshirt-hacking-black-front-small.jpg"
+      large="2008/tshirt-hacking-black-front-large.jpg"/>
+    <image
+      small="2008/tshirt-hacking-black-back-small.jpg"
+      large="2008/tshirt-hacking-black-back-large.jpg"/>
+  </item>
+  <item type="tshirt" id="tshirt-liberate-white" price="18.00" date="2008-03-01">
+    <available size="L"/>
+    <available size="XL"/>
+    <image
+      small="2008/tshirt-liberate-white-front-small.jpg"
+      large="2008/tshirt-liberate-white-front-large.jpg"/>
+    <image
+      small="2008/tshirt-liberate-white-back-small.jpg"
+      large="2008/tshirt-liberate-white-back-large.jpg"/>
+  </item>
+  <item type="other" id="keyring-plussy-green" price="7.00" date="2008-03-01">
+    <available size="#"/>
+    <image
+      small="2008/keyring-plussy-green-small.jpg"
+      large="2008/keyring-plussy-green-large.jpg"/>
+  </item>
+  <!-- item type="other" id="mug-plussy-black" price="10.00" date="2008-03-01">
+    <available size="#"/>
+    <image
+      small="2008/mug-plussy-black-small.jpg"
+      large="2008/mug-plussy-black-large.jpg"/>
+  </item -->
+</itemset>

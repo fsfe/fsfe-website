@@ -39,23 +39,7 @@
     <h2>Select which banner to display</h2>
 
     <p>
-        For banners showing up on the <a href="/">frontpage of fsfe.org</a>, you need to edit <code>index.xsl</code>. Look for:
-    </p>
-
-    <pre><code>
-  &#60;xsl:template match="campaigns"&#62;
-    </code></pre>
-
-    <p>
-        Then add the campaign’s identifier at the end of this xsl code:
-    </p>
-
-    <pre><code>
-&#60;xsl:for-each select="/buildinfo/textsetbackup/campaigns/campaign[@id='present-campaign-id' <strong>or @id='new-campaign-id'</strong>]"&#62;
-    </code></pre>
-
-    <p>
-        If you need help with XSL please ask the <a href="/contribute/web/web.html">web team</a>.
+        For banners showing up on the <a href="/">frontpage of fsfe.org</a>, you should set <code>running="yes"</code> in the campaign file. The <code>index.xsl</code> loops around and includes all campaigns set as running.
     </p>
 
     <h2>Style the campaign banner</h2>

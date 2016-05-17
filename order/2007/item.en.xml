@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- Do not translate this file! -->
+
+<itemset>
+  <item type="hooded" id="hoodie-fsfelogo-grey" price="35.00" date="2007-01-01">
+    <available size="S"/>
+    <available size="M"/>
+    <image
+      small="2007/hoodie-fsfelogo-grey-front-small.jpg"
+      large="2007/hoodie-fsfelogo-grey-front-large.jpg"/>
+    <image
+      small="2007/hoodie-fsfelogo-grey-back-small.jpg"
+      large="2007/hoodie-fsfelogo-grey-back-large.jpg"/>
+  </item>
+  <item type="tshirt" id="tshirt-ussi-blue" price="18.00" date="2007-01-01">
+    <available size="S"/>
+    <image
+      small="2007/tshirt-ussi-blue-front-small.jpg"
+      large="2007/tshirt-ussi-blue-front-large.jpg"/>
+    <image
+      small="2007/tshirt-ussi-blue-back-small.jpg"
+      large="2007/tshirt-ussi-blue-back-large.jpg"/>
+  </item>
+</itemset>

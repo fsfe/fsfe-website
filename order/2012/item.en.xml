@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- Do not translate this file! -->
+
+<itemset>
+  <item type="other" id="lanyard-plussy-green" price="3.00" date="2012-01-01">
+    <available size="77cm"/>
+    <image
+      small="2012/lanyard-plussy-green-small.jpg"
+      large="2012/lanyard-plussy-green-large.jpg"/>
+  </item>
+  <item type="other" id="pin-plussy-green" price="3.00" date="2012-10-11">
+    <available size="17mm"/>
+    <image
+      small="2012/pin-plussy-green-small.jpg"
+      large="2012/pin-plussy-green-large.jpg"/>
+  </item>
+  <item type="other" id="magnetpin-plussy-green" price="3.00" date="2012-10-11">
+    <available size="17mm"/>
+    <!-- same picture as the non-magnet pin -->
+    <image
+      small="2012/pin-plussy-green-small.jpg"
+      large="2012/pin-plussy-green-large.jpg"/>
+  </item>
+</itemset>

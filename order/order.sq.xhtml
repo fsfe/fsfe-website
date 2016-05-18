@@ -1,30 +1,20 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <html>
   <head>
-    <title>Free Software Foundation Europe - Artikuj Tregtarë</title>
+    <title>Artikuj Tregtarë – FSFE</title>
   </head>
 
   <body>
-    <h1>Artikuj Tregtarë FSFE</h1>
+    <h1>Artikuj Tregtarë</h1>
 
-    <div id="introduction">
-      <div class="image">
-        <img src="/graphics/stars-smaller.png" alt="Yje" />
-      </div>
-
-      <p>
-        Shpaloseni dashurinë tuaj për Software-in e Lirë duke përdorur
-        dhe veshur artikujt më poshtë që përdorin markën tonë. Veshja e
-        diçkaje që shpalos Software-in e Lirë është një rrugë e bukur
-        për rritjen e ndërgjegjësimit brenda bashkësisë suaj vendore, 
-        dhe çdo shitje ndihmon financimin e projekteve kritike të FSFE-së.
-        <br />
-        <br />
-        Kemi gjendje gjithashtu  një gamë <a href="#other-items">artikujsh kancelerie, kupa, stema, dhe mbajtëse çelësash</a>.
-      </p>
-      
-    </div>
+    <p class="p-summary">
+      Shpaloseni dashurinë tuaj për Software-in e Lirë duke përdorur
+      dhe veshur artikujt më poshtë që përdorin markën tonë. Veshja e
+      diçkaje që shpalos Software-in e Lirë është një rrugë e bukur
+      për rritjen e ndërgjegjësimit brenda bashkësisë suaj vendore, 
+      dhe çdo shitje ndihmon financimin e projekteve kritike të FSFE-së.
+    </p>
 
     <form action="/cgi-bin/weborder.pl" method="post" class="item-grid">
       <h2>Bluza</h2>
@@ -43,7 +33,7 @@
  
       <dynamic-content type="baby-clothes"/>
 
-      <a name="other-items"><a name="other-items"><h2 id="other-items">Artikuj të Tjerë</h2></a></a>
+      <h2 id="other-items">Artikuj të Tjerë</h2>
 
       <dynamic-content type="other"/>
 
@@ -66,49 +56,51 @@
         Dërgim jashtë Europës (€12.00)<br/>
       </p>
 
-      <table>
+      <table class="order-form">
         <tr>
-          <td><p>Emër:</p></td>
-          <td>
-            <input type="text" size="80" style="width:500px" name="name"/>
+          <td class="order-left"><p>Emër:</p></td>
+          <td class="order-right">
+            <input type="text" name="name"/>
           </td>
         </tr>
         <tr>
-          <td><p>Adresë:</p></td>
-          <td>
-            <textarea cols="80" rows="5" style="width:500px" name="address"/>
+          <td class="order-left"><p>Adresë:</p></td>
+          <td class="order-right">
+            <textarea rows="5" name="address"/>
           </td>
         </tr>
         <tr>
-          <td><p>Email:</p></td>
-          <td>
-            <input type="text" size="80" style="width:500px" name="email"/>
+          <td class="order-left"><p>Email:</p></td>
+          <td class="order-right">
+            <input type="text" name="email"/>
           </td>
         </tr>
         <tr>
-          <td><p>Telefon:</p></td>
-          <td>
-            <input type="text" size="80" style="width:500px" name="phone"/>
+          <td class="order-left"><p>Telefon:</p></td>
+          <td class="order-right">
+            <input type="text" name="phone"/>
+          </td>
+        </tr>
+        <tr>
+          <td class="order-left"></td>
+          <td class="order-right">
+            <p class="n">
+              Please do not put anything in here:
+              <input type="text" size="40" name="url"/>
+            </p>
+            
+            <!-- Translators: Please change the value here to your language -->
+            <input type="hidden" name="language" value="sq"/>
+            <!-- Translators: Please also translate the value here, it's the label
+                 of the button -->
+            <input id="order-submit" type="submit" value="Bëni kërkesën për këto objekte"/>
           </td>
         </tr>
       </table>
-
-      <p class="n">
-        Please do not put anything in here:
-        <input type="text" size="40" name="url"/>
-      </p>
-
-      <center>
-        <!-- Translators: Please also translate the value here, it's the label
-                          of the button -->
-        <input type="submit" value="Bëni kërkesën për këto objekte"/>
-      </center>
-      <!-- Translators: Please change the value here to your language -->
-      <input type="hidden" name="language" value="sq"/>
     </form>
   </body>
 
-  <timestamp>$Date$ $Author$</timestamp>
+  <timestamp>$Date: 2016-05-09 10:06:28 +0200 (Mon, 09. Mai 2016) $ $Author: reinhard $</timestamp>
 </html>
 <!--
 Local Variables: ***

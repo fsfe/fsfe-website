@@ -1,30 +1,19 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <html>
   <head>
-    <title>Free Software Foundation Europe - Handelswaar</title>
+    <title>Handelswaar – FSFE</title>
   </head>
 
   <body>
-    <h1>FSFE Handelswaar</h1>
+    <h1>Handelswaar</h1>
 
-    <div id="introduction">
-      <div class="image">
-        <img src="/graphics/stars-smaller.png" alt="Sterren" />
-      </div>
-
-      <p>
-Toon je liefde voor Vrije Software door de promotie-artikelen hieronder te 
-gebruiken en te dragen. Het dragen van Vrije Software-kleding is een goede 
-manier om de bekendheid te vergroten in je lokale gemeenschap, en iedere 
-verkoop helpt de cruciale FSFE projecten te financieren.
-        <br />
-        <br />
-We hebben ook een voorraad <a href="#other-items">bureau-accesoires, mokken, 
-badges, en sleutelhangers</a>.
-      </p>
-
-    </div>
+    <p class="p-summary">
+      Toon je liefde voor Vrije Software door de promotie-artikelen hieronder te
+      gebruiken en te dragen. Het dragen van Vrije Software-kleding is een goede
+      manier om de bekendheid te vergroten in je lokale gemeenschap, en iedere
+      verkoop helpt de cruciale FSFE projecten te financieren.
+    </p>
 
     <form action="/cgi-bin/weborder.pl" method="post" class="item-grid">
       <h2>T-Shirts</h2>
@@ -50,8 +39,8 @@ badges, en sleutelhangers</a>.
       <h2>Promotiematerialen</h2>
 
       <p>
-Bekijk onze <a href="/contribute/spreadtheword.html#promo-material">bestelpagina 
-voor informatiematerialen</a> zoals folders en stickers. 
+        Bekijk onze <a href="/contribute/spreadtheword.html#promo-material">bestelpagina 
+        voor informatiematerialen</a> zoals folders en stickers. 
       </p>
 
       <h2>Verzenden</h2>
@@ -66,45 +55,47 @@ voor informatiematerialen</a> zoals folders en stickers.
         Verzenden buiten Europa (€12.00)<br/>
       </p>
 
-      <table>
+      <table class="order-form">
         <tr>
-          <td><p>Naam:</p></td>
-          <td>
-            <input type="text" size="80" style="width:500px" name="name"/>
+          <td class="order-left"><p>Naam:</p></td>
+          <td class="order-right">
+            <input type="text" name="name"/>
           </td>
         </tr>
         <tr>
-          <td><p>Adres:</p></td>
-          <td>
-            <textarea cols="80" rows="5" style="width:500px" name="address"/>
+          <td class="order-left"><p>Adres:</p></td>
+          <td class="order-right">
+            <textarea rows="5" name="address"/>
           </td>
         </tr>
         <tr>
-          <td><p>E-mail:</p></td>
-          <td>
-            <input type="text" size="80" style="width:500px" name="email"/>
+          <td class="order-left"><p>E-mail:</p></td>
+          <td class="order-right">
+            <input type="text" name="email"/>
           </td>
         </tr>
         <tr>
-          <td><p>Telefoon:</p></td>
-          <td>
-            <input type="text" size="80" style="width:500px" name="phone"/>
+          <td class="order-left"><p>Telefoon:</p></td>
+          <td class="order-right">
+            <input type="text" name="phone"/>
+          </td>
+        </tr>
+        <tr>
+          <td class="order-left"></td>
+          <td class="order-right">
+            <p class="n">
+              Vul hier alsjeblieft niets in:
+              <input type="text" size="40" name="url"/>
+            </p>
+            
+            <!-- Translators: Please change the value here to your language -->
+            <input type="hidden" name="language" value="nl_NL"/>
+            <!-- Translators: Please also translate the value here, it's the label
+                 of the button -->
+            <input id="order-submit" type="submit" value="Bestel die artikelen"/>
           </td>
         </tr>
       </table>
-
-      <p class="n">
-        Vul hier alsjeblieft niets in:
-        <input type="text" size="40" name="url"/>
-      </p>
-
-      <center>
-        <!-- Translators: Please also translate the value here, it's the label
-                          of the button -->
-        <input type="submit" value="Bestel die artikelen"/>
-      </center>
-      <!-- Translators: Please change the value here to your language -->
-      <input type="hidden" name="language" value="nl"/>
     </form>
   </body>
 

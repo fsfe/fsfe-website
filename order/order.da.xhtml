@@ -1,30 +1,19 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <html>
   <head>
-    <title>Free Software Foundation Europe - Merchandise</title>
+    <title>Merchandise – FSFE</title>
   </head>
 
   <body>
-    <h1>FSFE-merchandise</h1>
+    <h1>Merchandise</h1>
 
-    <div id="introduction">
-      <div class="image">
-        <img src="/graphics/stars-smaller.png" alt="Stars" />
-      </div>
-
-      <p>
-        Vis at du elsker fri software ved at anvende og iklæde dig de neden for 
-        nævnte mærkevarer.  Fri software-beklædning er en fantastisk måde at 
-        skabe opmærksomhed inden for dit lokale fællesskab, og hvert salg giver 
-        øknomiske midler til vigtige FSFE-projekter.
-        <br />
-        <br />
-        Vi har også en række <a href="#other-items">kontorartikler, krus, badges 
-        og nøgleringe</a>.
-      </p>
-
-    </div>
+    <p class="p-summary">
+      Vis at du elsker fri software ved at anvende og iklæde dig de neden for 
+      nævnte mærkevarer.  Fri software-beklædning er en fantastisk måde at 
+      skabe opmærksomhed inden for dit lokale fællesskab, og hvert salg giver 
+      øknomiske midler til vigtige FSFE-projekter.
+    </p>
 
     <form action="/cgi-bin/weborder.pl" method="post" class="item-grid">
       <h2>T-shirts til mænd</h2>
@@ -43,7 +32,7 @@
 
       <dynamic-content type="baby-clothes"/>
 
-      <a name="other-items"><a name="other-items"><h2 id="other-items">Andre varer</h2></a></a>
+      <h2 id="other-items">Andre varer</h2>
 
       <dynamic-content type="other"/>
 
@@ -66,46 +55,47 @@
         Forsendelse uden for Europa (€12,00)<br/>
       </p>
 
-      <table>
+      <table class="order-form">
         <tr>
-          <td><p>Navn:</p></td>
-          <td>
-            <input type="text" size="80" style="width:500px" name="name"/>
+          <td class="order-left"><p>Navn:</p></td>
+          <td class="order-right">
+            <input type="text" name="name"/>
           </td>
         </tr>
         <tr>
-          <td><p>Adresse:</p></td>
-          <td>
-            <textarea cols="80" rows="5" style="width:500px" name="address"/>
+          <td class="order-left"><p>Adresse:</p></td>
+          <td class="order-right">
+            <textarea rows="5" name="address"/>
           </td>
         </tr>
         <tr>
-          <td><p>E-mail:</p></td>
-          <td>
-            <input type="text" size="80" style="width:500px" name="email"/>
+          <td class="order-left"><p>E-mail:</p></td>
+          <td class="order-right">
+            <input type="text" name="email"/>
           </td>
         </tr>
         <tr>
-          <td><p>Telefon:</p></td>
-          <td>
-            <input type="text" size="80" style="width:500px" name="phone"/>
+          <td class="order-left"><p>Telefon:</p></td>
+          <td class="order-right">
+            <input type="text" name="phone"/>
+          </td>
+        </tr>
+        <tr>
+          <td class="order-left"></td>
+          <td class="order-right">
+            <p class="n">
+              Vær venlig ikke at skrive noget her:
+              <input type="text" size="40" name="url"/>
+            </p>
+            
+            <!-- Translators: Please change the value here to your language -->
+            <input type="hidden" name="language" value="da_DK"/>
+            <!-- Translators: Please also translate the value here, it's the label
+                 of the button -->
+            <input id="order-submit" type="submit" value="Bestil de valgte varer"/>
           </td>
         </tr>
       </table>
-
-      <!-- Should help against spam -->
-      <p class="n">
-        Vær venlig ikke at skrive noget her:
-        <input type="text" size="40" name="url"/>
-      </p>
-
-      <center>
-        <!-- Translators: Please also translate the value here, it's the label
-                          of the button -->
-        <input type="submit" value="Bestil de valgte varer"/>
-      </center>
-      <!-- Translators: Please change the value here to your language -->
-      <input type="hidden" name="language" value="da"/>
     </form>
   </body>
 

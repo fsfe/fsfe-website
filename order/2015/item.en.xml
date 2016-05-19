@@ -66,8 +66,8 @@
     <available size="6-12m"/>
     <available size="12-18m"/>
     <image
-      small="2015/romper-fork-white-front-small.jpg"
-      large="2015/romper-fork-white-front-large.jpg"/>
+      small="2015/romper-fork-white-small.jpg"
+      large="2015/romper-fork-white-large.jpg"/>
   </item>
 
   <item type="baby-clothes" id="romper-fork-natural" price="20.00" date="2015-09-11">
@@ -87,7 +87,7 @@
       large="2015/mug-configurable-white-large.jpg"/>
   </item -->
 
-  <!-- item type="tshirt" id="tshirt-nocloud-burgundy" price="20.00" date="2015-10-23">
+  <item type="tshirt" id="tshirt-nocloud-burgundy" price="20.00" date="2015-10-23">
     <available size="S"/>
     <available size="L"/>
     <image
@@ -96,7 +96,7 @@
     <image
       small="2016/tshirt-nocloud-burgundy-back-small.jpg"
       large="2016/tshirt-nocloud-burgundy-back-large.jpg"/>
-  </item -->
+  </item>
 
   <item type="tshirt" id="tshirt-ilovefs-blue" price="20.00" date="2015-10-17">
     <available size="S"/>

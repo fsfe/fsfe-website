@@ -6,7 +6,7 @@
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
 
   <!-- In /html/body node, append dynamic content -->
-  <xsl:template match="body">
+  <xsl:template match="/buildinfo/document/body/include-news">
       <!-- First, include what's in the source file -->
       <xsl:apply-templates />
 

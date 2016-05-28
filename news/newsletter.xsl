@@ -7,7 +7,7 @@
 
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
 
-  <xsl:template match="body">
+  <xsl:template match="/buildinfo/document/body/include-newsletter">
     <xsl:apply-templates />
 
     <!-- $today = current date (given as <html date="...">) -->

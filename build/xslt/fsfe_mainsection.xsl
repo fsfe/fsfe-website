@@ -14,7 +14,7 @@
         </xsl:if>
   
         <!-- Here goes the actual content of the <body> node of the input file -->
-        <xsl:apply-templates select="body | /buildinfo/document/event/body | /buildinfo/document/news/body" />
+        <xsl:apply-templates select="/buildinfo/document/event/body | /buildinfo/document/news/body | /buildinfo/document/body/*" />
       
         <!-- Show tags if this is a news press release or an event -->
         <xsl:if test="/buildinfo/document/@newsdate or /buildinfo/document/event">

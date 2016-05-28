@@ -34,7 +34,7 @@
   </xsl:template>
 
   <!-- In /html/body node, append dynamic content -->
-  <xsl:template match="body">
+  <xsl:template match="/buildinfo/document/body/include-events">
       <!-- First, include what's in the source file -->
       <xsl:apply-templates />
       

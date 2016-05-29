@@ -72,9 +72,9 @@ my $amount100 = $amount * 100;
 # Create payment reference for this order
 # -----------------------------------------------------------------------------
 
-my $date = strftime("%y%j", localtime);
+my $date = strftime("%j", localtime);
 my $time = strftime("%s", localtime);
-my $reference = "MP" . $date . substr($time, -2) . sprintf("%03u", $amount);
+my $reference = "MP" . $date . substr($time, -4) . sprintf("%03u", $amount);
 
 # -----------------------------------------------------------------------------
 # Generate mail to office

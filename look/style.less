@@ -676,10 +676,8 @@ div#subpages, .grid-row {
     }
 }
 
-.press, .country.frontpage, #donate-fsfe {
-    #content {
-        .heading { .subsite #content .heading; }
-    }
+.press, .country.frontpage, #donate-fsfe, #merchandise {
+    .toplevel;
 }
 
 .press.release {
@@ -696,11 +694,6 @@ div#subpages, .grid-row {
     }
 }
 
-#donate-fsfe, .country.frontpage, #merchandise {
-    #content {
-        h1 { .subsite #content .heading; }
-    }
-}
 
         /* subpages "backward compatibility" */
 
@@ -816,6 +809,12 @@ div#subpages, .grid-row {
         }
     }
 
+}
+
+.toplevel {
+    #content {
+        h1, .heading { .subsite #content .heading; }
+    }
 }
 
 

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<html>
+  <head>
+    <title>Bedankt voor uw bestelling! – FSFE</title>
+  </head>
+
+  <body>
+    <p id="category" class="p-category">
+      <a href="/order/order.html">Handelswaar</a>
+    </p>
+
+    <h1>Bedankt voor uw bestelling!</h1>
+
+    <p class="p-summary">
+      Uw bestelling kost in totaal <strong>€:AMOUNT:</strong>.
+    </p>
+
+    <p>
+      U kan nu online betalen met verschillende krediet- of debetkaarten of met PayPal.
+    </p>
+
+    <form action="https://secure.payengine.de/ncol/prod/orderstandard.asp" method="post">
+:FORM:
+      <!-- translators: please also translate the term "Pay online", it will
+           show on the button. -->
+      <input type="submit" name="submit" value="Betaal online"/>
+    </form>
+
+    <p>
+      Als u met bankoverschrijving wilt betalen gebruik dan alstublieft de 
+volgende data:
+    </p>
+
+    <p>
+      Ontvanger: Free Software Foundation Europe e.V.<br/>
+      Adres: Schönhauser Allee 6/7, 10119 Berlijn, Duitsland<br/>
+      IBAN: DE47 4306 0967 2059 7908 01<br/>
+      Bank: GLS Gemeinschaftsbank eG, 44774 Bochum, Duitsland<br/>
+      BIC: GENODEM1GLS<br/>
+      Bedrag: :AMOUNT:<br/>
+      Betaalreferentie: :REFERENCE:
+    </p>
+  </body>
+
+  <followup>join</followup>
+  <timestamp>$Date: 2016-05-12 09:33:40 +0200 (Thu, 12 May 2016) $ $Author: reinhard $</timestamp>
+<translator>André Ockers</translator>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

@@ -13,16 +13,16 @@ validate_tagmap(){
 map_tags(){
   for xml in "$@"; do
     printf '%s ' "$xml"
-    sed -rn ':a;N;$!ba
+    unicat "$xml" \
+    | sed -rn ':a;N;$!ba
              s;<!([^>]|<[^>]*>)*>;;g
-             s;[\n\t ]+; ;g
-             s; ?([</>]) ?;\1;g
+             s;[\n\t ]+; ;g; s; ?([</>]) ?;\1;g
              tb;Tb;:b
              s;.*<tags( [^>]+)?>[^<]*<tag( [^>]+)?>(.*)</tag>[^<]*</tags>.*;\3;;Tc
              s; ;+;g
              s;</tag>[^<]*<tag(\+[^>]+)?>; ;g;p;q
              :c;a\
-             ' "$xml"
+             '
   done
 }
 

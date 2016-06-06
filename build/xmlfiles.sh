@@ -2,6 +2,14 @@
 
 inc_xmlfiles=true
 
+unicat(){
+  # convert XML files to UTF-8
+  for file in "$@"; do
+    enc="$(sed -nr 'bA; :Q q; :A s:^.*<\?.*encoding="([^"]+)".*$:\1:p; tQ' "$file")"
+    iconv -f "${enc:-UTF-8}" -t "UTF-8" "$file"
+  done
+}
+
 include_xml(){
   # include second level elements of a given XML file
   # this emulates the behaviour of the original
@@ -10,12 +18,7 @@ include_xml(){
   file="$1"
 
   if [ -f "$file" ]; then
-    # guess encoding from xml header
-    # we will convert everything to utf-8 prior to processing
-    enc="$(sed -nr 's:^.*<\?.*encoding="([^"]+)".*$:\1:p' "$file")"
-    [ -z "$enc" ] && enc="UTF-8"
-
-    iconv -f "$enc" -t "UTF-8" "$file" \
+    unicat "$file" \
     | sed -r ':X; $bY; N; bX; :Y;
               s:<(\?[xX][mM][lL]|!DOCTYPE)[[:space:]]+[^>]+>::g
               s:<[^!][^>]*>::;

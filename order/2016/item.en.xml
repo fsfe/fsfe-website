@@ -40,9 +40,9 @@
 
   <item type="tshirt" id="tshirt-nocloud-black" price="20.00" date="2016-03-07">
     <available size="S"/>
-    <available size="M"/>
+    <!-- available size="M"/ -->
     <!-- available size="L"/ -->
-    <available size="XL"/>
+    <!-- available size="XL"/ -->
     <!-- available size="XXL"/ -->
     <image
       small="2016/tshirt-nocloud-black-front-small.jpg"

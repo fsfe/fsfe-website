@@ -43,12 +43,12 @@ YEAR := <?xml version="1.0" encoding="utf-8"?><dateset><date year="$(shell date 
 MONTH := <?xml version="1.0" encoding="utf-8"?><dateset><date month="$(shell date +%Y-%m)" /></dateset> 
 DAY := <?xml version="1.0" encoding="utf-8"?><dateset><date day="$(shell date +%Y-%m-%d)" /></dateset> 
 
-.PHONY: date_today
+.PHONY: date_today d_day.en.xml
 date_today: d_year.en.xml d_month.en.xml d_day.en.xml
 
-d_year.en.xml:
-	grep -q '$(YEAR)' $@ || echo '$(YEAR)' >$@
-d_month.en.xml:
-	grep -q '$(MONTH)' $@ || echo '$(MONTH)' >$@
 d_day.en.xml:
 	grep -q '$(DAY)' $@ || echo '$(DAY)' >$@
+d_month.en.xml: d_day.en.xml
+	grep -q '$(MONTH)' $@ || echo '$(MONTH)' >$@
+d_year.en.xml: d_month.en.xml
+	grep -q '$(YEAR)' $@ || echo '$(YEAR)' >$@

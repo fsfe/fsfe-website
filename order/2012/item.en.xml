@@ -3,17 +3,49 @@
 <!-- Do not translate this file! -->
 
 <itemset>
-  <item type="other" id="pin-plussy-green" price="3.00" date="2012-10-11">
-    <available size="17mm"/>
+  <item type="baby-clothes" id="romper-fork-blue" price="18.00" date="2012-10-06">
+    <available size="3-6"/>
+    <available size="6-12"/>
+    <available size="12-18"/>
+    <image
+      small="2012/romper-fork-blue-small.jpg"
+      large="2012/romper-fork-blue-large.jpg"/>
+  </item>
+
+  <item type="baby-clothes" id="romper-fork-green" price="18.00" date="2012-10-06">
+    <available size="12-18"/>
+    <image
+      small="2012/romper-fork-green-small.jpg"
+      large="2012/romper-fork-green-large.jpg"/>
+  </item>
+
+  <item type="other" id="pin-plussy-green" price="3.00" date="2012-10-06">
+    <available size="#"/>
     <image
       small="2012/pin-plussy-green-small.jpg"
       large="2012/pin-plussy-green-large.jpg"/>
   </item>
-  <item type="other" id="magnetpin-plussy-green" price="3.00" date="2012-10-11">
-    <available size="17mm"/>
+
+  <item type="other" id="magnetpin-plussy-green" price="3.00" date="2012-10-06">
+    <available size="#"/>
     <!-- same picture as the non-magnet pin -->
     <image
       small="2012/pin-plussy-green-small.jpg"
       large="2012/pin-plussy-green-large.jpg"/>
+  </item>
+
+  <item type="other" id="pin-gnu-silver" price="10.00" date="2012-10-06">
+    <available size="#"/>
+    <image
+      small="2012/pin-gnu-silver-small.jpg"
+      large="2012/pin-gnu-silver-large.jpg"/>
+  </item>
+
+  <item type="other" id="magnetpin-gnu-silver" price="10.00" date="2012-10-06">
+    <available size="#"/>
+    <!-- same picture as the non-magnet pin -->
+    <image
+      small="2012/pin-gnu-silver-small.jpg"
+      large="2012/pin-gnu-silver-large.jpg"/>
   </item>
 </itemset>

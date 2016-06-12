@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <infoset>
+  <info id="romper-fork-blue">
+    <name>(Plussy) = fork() Baby romper, blauw/rood</name>
+    <description>
+      <p>
+        Er is geen tekst op de rugzijde. De maten refereren aan de leeftijd in maanden.
+      </p>
+    </description>
+  </info>
+
+  <info id="romper-fork-green">
+    <name>I am a fork Baby romper, groen</name>
+    <description>
+      <p>
+        Er is geen tekst op de rugzijde. De maten refereren aan de leeftijd in maanden.
+      </p>
+    </description>
+  </info>
+
   <info id="pin-plussy-green">
     <name>Fellowship speld</name>
     <description>
@@ -9,8 +27,27 @@
       </p>
     </description>
   </info>
+
   <info id="magnetpin-plussy-green">
     <name>Fellowship speld</name>
+    <description>
+      <p>
+        Dezelfde speld, nu met magneet
+      </p>
+    </description>
+  </info>
+
+  <info id="pin-gnu-silver">
+    <name>Gnu speld</name>
+    <description>
+      <p>
+        Een speld met Gnu en de tekst  "Free Software Foundation Europe"
+      </p>
+    </description>
+  </info>
+
+  <info id="magnetpin-gnu-silver">
+    <name>Gnu speld</name>
     <description>
       <p>
         Dezelfde speld, nu met magneet

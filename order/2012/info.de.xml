@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <infoset>
+  <info id="romper-fork-blue">
+    <name>Baby Strampler "(Plussy) = fork()", blau mit roten Bünden</name>
+    <description>
+      <p>
+       Die Rückseite ist unbedruckt. Die Größenangaben beziehen sich auf das Alter in Monaten.
+      </p>
+    </description>
+  </info>
+
+  <info id="romper-fork-green">
+    <name>Baby Strampler "I am a fork", grün</name>
+    <description>
+      <p>
+       Die Rückseite ist unbedruckt. Die Größenangaben beziehen sich auf das Alter in Monaten.
+      </p>
+    </description>
+  </info>
+
   <info id="pin-plussy-green">
     <name>Fellowship-Anstecknadel</name>
     <description>
@@ -9,8 +27,27 @@
       </p>
     </description>
   </info>
+
   <info id="magnetpin-plussy-green">
     <name>Fellowship-Anstecknadel</name>
+    <description>
+      <p>
+        Derselbe Pin, aber mit Magnetverschluss.
+      </p>
+    </description>
+  </info>
+
+  <info id="pin-gnu-silver">
+    <name>GNU-Anstecknadel</name>
+    <description>
+      <p>
+        Eine Anstecknadel mit dem GNU und rundherum der Schriftzug "Free Software Foundation Europe".
+      </p>
+    </description>
+  </info>
+
+  <info id="magnetpin-gnu-silver">
+    <name>GNU-Anstecknadel</name>
     <description>
       <p>
         Derselbe Pin, aber mit Magnetverschluss.

@@ -32,10 +32,13 @@
       small="2008/keyring-plussy-green-small.jpg"
       large="2008/keyring-plussy-green-large.jpg"/>
   </item>
-  <!-- item type="other" id="mug-plussy-black" price="10.00" date="2008-03-01">
-    <available size="#"/>
+  <item type="t-shirt" id="tshirt-mdf-green" price="18.00" date="2008-11-02">
+    <available size="L"/>
     <image
-      small="2008/mug-plussy-black-small.jpg"
-      large="2008/mug-plussy-black-large.jpg"/>
-  </item -->
+      small="/order/2008/tshirt-mdf-green-front-small.jpg"
+      large="/order/2008/tshirt-mdf-green-front-large.jpg"/>
+    <image
+      small="/order/2008/tshirt-mdf-green-back-small.jpg"
+      large="/order/2008/tshirt-mdf-green-back-large.jpg"/>
+  </item>
 </itemset>

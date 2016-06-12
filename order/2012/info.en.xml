@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <infoset>
+  <info id="romper-fork-blue">
+    <name>(Plussy) = fork() Baby romper, blue/red</name>
+    <description>
+      <p>
+       There is no text on the back side. The sizes are refering to the months of age.
+      </p>
+    </description>
+  </info>
+
+  <info id="romper-fork-green">
+    <name>I am a fork Baby romper, green</name>
+    <description>
+      <p>
+       There is no text on the back side. The sizes are refering to the months of age.
+      </p>
+    </description>
+  </info>
+
   <info id="pin-plussy-green">
     <name>Fellowship pin</name>
     <description>
@@ -9,8 +27,27 @@
       </p>
     </description>
   </info>
+
   <info id="magnetpin-plussy-green">
     <name>Fellowship pin</name>
+    <description>
+      <p>
+        Same pin, but with magnet.
+      </p>
+    </description>
+  </info>
+
+  <info id="pin-gnu-silver">
+    <name>Gnu pin</name>
+    <description>
+      <p>
+        A pin with the Gnu. The text around: "Free Software Foundation Europe"
+      </p>
+    </description>
+  </info>
+
+  <info id="magnetpin-gnu-silver">
+    <name>Gnu pin</name>
     <description>
       <p>
         Same pin, but with magnet.

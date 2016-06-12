@@ -1,33 +1,26 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8" />
-<title>VKP calculator</title>
-</head>
-<body>
-
 <?php
 
+$output = '';
+
 $epd = $_POST['country']; // Euro per day
+if ($epd === 'other') {
+  $epd = $_POST['country_other'];
+}
 $epd = explode('/', $epd);
 $epd_trav = $epd[0];
 $epd_full = $epd[1];
 
-echo "<p>Travel day(s): " . $epd_trav . " EUR per day <br />";
-echo "Full day(s): " . $epd_full . " EUR per day</p>";
+$output .= "<p>Travel day(s): " . $epd_trav . " EUR per day <br />";
+$output .= "Full day(s): " . $epd_full . " EUR per day</p>";
 
-?>
-
-<table class="table table-striped">
+$output .= '<table class="table table-striped">
   <tr>
     <th>Date</th>
-    <th>Breakfast paid</th>
-    <th>Lunch paid</th>
-    <th>Dinner paid</th>
+    <th>Breakfast</th>
+    <th>Lunch</th>
+    <th>Dinner</th>
     <th>Your Reimbursement</th>
-  </tr>
-
-<?php
+  </tr>';
 
 $days = array('out', 1, 2, 3, 4, 5, 6, 7, 'return');
 
@@ -54,55 +47,60 @@ foreach ($days as &$day) {  // calculate for each day
       $desc = " (full)";
     }
     // open row
-    echo "<tr>";
+    $output .= "<tr>";
     
     // date
-    echo "<td>" . $date . $desc . "</td>";
+    $output .= "<td>" . $date . $desc . "</td>";
     
     // breakfast ($r_b)
     if ($break === "yes") {
       $r_b = $eur * 0.2;
       $r_day = $r_day + $r_b;
-      echo "<td>yes (" . $r_b . " €)</td>";
+      $output .= "<td>yes (" . $r_b . " €)</td>";
     } else {
-      echo "<td>no</td>";
+      $output .= "<td>no</td>";
     }
     
     // lunch ($r_l)
     if ($lunch === "yes") {
       $r_l = $eur * 0.4;
       $r_day = $r_day + $r_l;
-      echo "<td>yes (" . $r_l . " €)</td>";
+      $output .= "<td>yes (" . $r_l . " €)</td>";
     } else {
-      echo "<td>no</td>";
+      $output .= "<td>no</td>";
     }
     
     // breakfast ($r_d)
     if ($dinner === "yes") {
       $r_d = $eur * 0.4;
       $r_day = $r_day + $r_d;
-      echo "<td>yes (" . $r_d . " €)</td>";
+      $output .= "<td>yes (" . $r_d . " €)</td>";
     } else {
-      echo "<td>no</td>";
+      $output .= "<td>no</td>";
     }
     
     // reimbursement for the single day
-    echo "<td>" . $r_day . " €</td>";
+    $output .= "<td>" . $r_day . " €</td>";
     $r_total = $r_total + $r_day;
     
     // close row (day)
-    echo "</tr>";
+    $output .= "</tr>";
   
   } // if day is used
 }
 
-echo "<tr><td></td><td></td><td></td><td></td>";
-echo "<td><strong>Total VKP: " . $r_total . " €</strong></td></tr>";
+$output .= "<tr><td></td><td></td><td></td><td></td>";
+$output .= "<td><strong>Total VKP: " . $r_total . " €</strong></td></tr></table>";
+
+//------------------------------------
+
+function replace_page($temp, $content){
+    $vars = array('%RESULT%'=>$content);
+    return str_replace(array_keys($vars), $vars, $temp);
+}
+
+$template = file_get_contents('/home/www/html/global/internal/pd-result.en.html', true);
+
+echo replace_page($template, $output);
 
 ?>
-
-
-</table>
-
-</body>
-</html>

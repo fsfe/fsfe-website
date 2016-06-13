@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
-
+<!-- Originally coded by Max Mehl <max.mehl [at] fsfe [dot] org> for FSFE e.V. -->
 <html>
   <head>
     <title>FSFE - Internal Tools - per diem calculator</title>
     <style type="text/css">
-      tr#descr {
+      tr.descr {
         font-style: italic;
         font-size: small;
       }
@@ -21,14 +21,19 @@
     <h1>Calculate per diem charges (VKP)</h1>
     
     <form action="/cgi-bin/perdiem.php" method="post">
-  
-      <h2>1. Select country</h2>
-      <!-- you can add new countries. For the individual amounts, set value=$travel/$full -->
-      <input type="radio" id="de" name="country" value="12/24" checked="checked" /><label for="de"> Germany</label>
-      <input type="radio" id="be" name="country" value="28/41" /><label for="be"> Belgium</label><br />
-      <input type="radio" id="other" name="country" value="other" />Other (per diems travel/full (e.g. "12/24" for Germany)): <input type="text" name="country_other" placeholder="12/24" />
+      <h2>1. Select your own country</h2>
       
-      <h2>2. Which meal did you pay yourself?</h2>
+      <!-- if you add new countries, the respective settings have to be set in PHP file -->
+      <input type="radio" id="home-de" name="home" value="de" checked="checked" /><label for="home-de"> Germany</label>
+      <input type="radio" id="home-se" name="home" value="se" /><label for="home-se"> Sweden</label><br />
+      
+      <h2>2. Select the destination country</h2>
+      <!-- you can add new countries. For the individual amounts, set value="CC=$travel/$full,[...]" -->
+      <input type="radio" id="dest-de" name="dest" value="de=12/24,se=292.5/585" checked="checked" /><label for="dest-de"> Germany</label>
+      <input type="radio" id="dest-be" name="dest" value="de=28/41,se=315.5/631" /><label for="dest-be"> Belgium</label><br />
+      <input type="radio" id="dest-other" name="dest" value="other" />Other <input type="text" name="dest_other" placeholder="12/24" /><label>(per diems travel/full (e.g. "12/24" for Germany -> Germany))</label>
+      
+      <h2>3. Which meal did you pay yourself?</h2>
       <table class="table table-striped">
         <tr>
           <th>Use</th>
@@ -37,7 +42,7 @@
           <th>Lunch</th>
           <th>Dinner</th>
         </tr>
-        <tr id="descr">
+        <tr class="descr">
           <td>Calculate this day</td>
           <td>Name the day (e.g. by date) <br />Leave blank to autoname them</td>
           <td>Did you pay this meal yourself?</td>
@@ -47,6 +52,9 @@
         
         <tr>
           <td colspan="5"><strong>Outward travel day (or if you travelled only one day)</strong></td>
+        </tr>
+        <tr class="descr">
+          <td colspan="5">Please be aware of when a day counts as travel or full day!</td>
         </tr>
         
         <tr>
@@ -69,6 +77,9 @@
 
         <tr>
           <td colspan="5"><strong>Full days (only check those you travelled)</strong></td>
+        </tr>
+        <tr class="descr">
+          <td colspan="5">Please be aware of when a day counts as travel/half or full day!</td>
         </tr>
 
         <tr>
@@ -194,6 +205,9 @@
         <tr>
           <td colspan="5"><strong>Return travel day</strong></td>
         </tr>
+        <tr class="descr">
+          <td colspan="5">Please be aware of when a day counts as travel or full day!</td>
+        </tr>
 
         <tr>
           <td>
@@ -214,7 +228,7 @@
         </tr>
       </table>
 
-      <button type="submit" name="action" value="calc">Calculate per diems</button>
+      <button type="submit" name="action" value="calc">Calculate per diem</button>
 
     </form>
     

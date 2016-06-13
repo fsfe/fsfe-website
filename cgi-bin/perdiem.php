@@ -26,18 +26,43 @@
 *  
 ***********************************************************************/
 
-$output = '';
+$output = ''; // create empty variable
 
-$epd = $_POST['country']; // Euro per day
-if ($epd === 'other') {
-  $epd = $_POST['country_other'];
+// detect home country and set accodingly: currency, rates
+$home = $_POST['home'];
+if ($home === 'de') {
+  $cur = " €";
+  $c_b = 0.2;
+  $c_l = 0.4;
+  $c_d = 0.4;
+} elseif ($home === 'se' ) {
+  $cur = " SEK";
+  $c_b = 0.15;
+  $c_l = 0.35;
+  $c_d = 0.35;
 }
-$epd = explode('/', $epd);
-$epd_trav = $epd[0];
-$epd_full = $epd[1];
 
-$output .= "<p>Travel day(s): " . $epd_trav . " EUR per day <br />";
-$output .= "Full day(s): " . $epd_full . " EUR per day</p>";
+
+// amount per day
+$epd = $_POST['dest'];
+if ($epd === 'other') {
+  $epd = $_POST['dest_other'];  // if other destination, just take this value
+} else {
+  $pattern = "/" . $home . "=([0-9.]+)?\/([0-9.]+)?/";  // define pattern something like "/de=12/24/"
+  $epd = preg_match($pattern, $epd, $match, PREG_OFFSET_CAPTURE); // actually search for it
+  $epd = $match[0][0]; // matches are on 2nd level inn an array
+  $epd = explode('=', $epd);  // now separate at the "="
+  $epd = $epd[1];   // take the second half of it "12/24"
+}
+
+$epd = explode('/', $epd);  // separate at "/"
+$epd_trav = $epd[0];  // first half
+$epd_full = $epd[1];  // second hald
+
+$output .= "<p>Travel day(s): " . $epd_trav . $cur . " per day <br />";
+$output .= "Full day(s): " . $epd_full . $cur . " per day <br />";
+$output .= "Own country: " . $home . " <br />";
+$output .= "Percentage rate for breakfast/lunch/dinner: " . $c_b . "/" . $c_l . "/" . $c_d . " <br /></p>";
 
 $output .= '<table class="table table-striped">
   <tr>
@@ -85,7 +110,7 @@ foreach ($days as &$day) {  // calculate for each day
     if ($break === "yes") {
       $r_b = $eur * 0.2;
       $r_day = $r_day + $r_b;
-      $output .= "<td>yes (" . $r_b . " €)</td>";
+      $output .= "<td>yes (" . $r_b . $cur . ")</td>";
     } else {
       $output .= "<td>no</td>";
     }
@@ -94,7 +119,7 @@ foreach ($days as &$day) {  // calculate for each day
     if ($lunch === "yes") {
       $r_l = $eur * 0.4;
       $r_day = $r_day + $r_l;
-      $output .= "<td>yes (" . $r_l . " €)</td>";
+      $output .= "<td>yes (" . $r_l . $cur . ")</td>";
     } else {
       $output .= "<td>no</td>";
     }
@@ -103,13 +128,13 @@ foreach ($days as &$day) {  // calculate for each day
     if ($dinner === "yes") {
       $r_d = $eur * 0.4;
       $r_day = $r_day + $r_d;
-      $output .= "<td>yes (" . $r_d . " €)</td>";
+      $output .= "<td>yes (" . $r_d . $cur . ")</td>";
     } else {
       $output .= "<td>no</td>";
     }
     
     // reimbursement for the single day
-    $output .= "<td>" . $r_day . " €</td>";
+    $output .= "<td>" . $r_day . $cur . "</td>";
     $r_total = $r_total + $r_day;
     
     // close row (day)
@@ -119,7 +144,7 @@ foreach ($days as &$day) {  // calculate for each day
 }
 
 $output .= "<tr><td></td><td></td><td></td><td></td>";
-$output .= "<td><strong>Total per diem: " . $r_total . " €</strong></td></tr></table>";
+$output .= "<td><strong>Total per diem: " . $r_total . $cur . "</strong></td></tr></table>";
 
 //------------------------------------
 

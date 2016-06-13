@@ -50,7 +50,7 @@ foreach ($days as &$day) {  // calculate for each day
     $output .= "<tr>";
     
     // date
-    if ($date = '' ) {
+    if ($date === '' ) {
       $date = "Day " . $day;
     }
     $output .= "<td>" . $date . $desc . "</td>";
@@ -93,7 +93,7 @@ foreach ($days as &$day) {  // calculate for each day
 }
 
 $output .= "<tr><td></td><td></td><td></td><td></td>";
-$output .= "<td><strong>Total VKP: " . $r_total . " €</strong></td></tr></table>";
+$output .= "<td><strong>Total per diem: " . $r_total . " €</strong></td></tr></table>";
 
 //------------------------------------
 
@@ -102,15 +102,6 @@ function replace_page($temp, $content){
     return str_replace(array_keys($vars), $vars, $temp);
 }
 
-echo 1;
-$template = file_get_contents('/home/www/html/global/internal/pd-result.en.html', true);
-echo 2;
-$template = file_get_contents('/internal/pd-result.en.html', true);
-echo 3;
-$template = file_get_contents('/../internal/pd-result.en.html', true);
-echo 4;
-$template = file_get_contents('../internal/pd-result.en.html', true);
-echo 5;
 $template = file_get_contents('http://fsfe.org/internal/pd-result.en.html', true);
 
 echo replace_page($template, $output);

@@ -31,15 +31,17 @@ $output = ''; // create empty variable
 // detect home country and set accodingly: currency, rates
 $home = $_POST['home'];
 if ($home === 'de') {
-  $cur = " €";
-  $c_b = 0.2;
-  $c_l = 0.4;
-  $c_d = 0.4;
+  $cur = " €";  // currency
+  $c_b = 0.2;   // breakfast rate
+  $c_l = 0.4;   // lunch rate
+  $c_d = 0.4;   // dinner rate
+  $c_flat = 0;  // flat rate (money which employee gets even if all meals are paid)
 } elseif ($home === 'se' ) {
   $cur = " SEK";
   $c_b = 0.15;
   $c_l = 0.35;
   $c_d = 0.35;
+  $c_flat = 0.15;
 }
 
 
@@ -62,7 +64,8 @@ $epd_full = $epd[1];  // second hald
 $output .= "<p>Travel day(s): " . $epd_trav . $cur . " per day <br />";
 $output .= "Full day(s): " . $epd_full . $cur . " per day <br />";
 $output .= "Own country: " . $home . " <br />";
-$output .= "Percentage rate for breakfast/lunch/dinner: " . $c_b . "/" . $c_l . "/" . $c_d . " <br /></p>";
+$output .= "Percentage rate for breakfast/lunch/dinner: " . $c_b . "/" . $c_l . "/" . $c_d . " <br />";
+$output .= "Flat rate (percentage which employee gets even if all meals are paid): " . $c_flat . " <br /></p>";
 
 $output .= '<table class="table table-striped">
   <tr>
@@ -70,7 +73,8 @@ $output .= '<table class="table table-striped">
     <th>Breakfast</th>
     <th>Lunch</th>
     <th>Dinner</th>
-    <th>Your Reimbursement</th>
+    <th>Flat reimbursement</th>
+    <th>Your total reimbursement</th>
   </tr>';
 
 $days = array('out', 1, 2, 3, 4, 5, 6, 7, 'return');
@@ -86,15 +90,15 @@ foreach ($days as &$day) {  // calculate for each day
   $dinner = $_POST['dinner'][$day];
   
   // set variables
-  $r_day = 0;
+  $r_day = 0;   // reimbursement for this day
   
   
   if ($use === 'yes') { // only calculate if checkbox has been activated (day in use)
     if ($day === 'out' || $day === 'return') {  // set amount of € for travel or full day
-      $eur = $epd_trav;
+      $eur = $epd_trav;   // total reimburseable amount for this day
       $desc = " (travel)";
     } else {
-      $eur = $epd_full;
+      $eur = $epd_full;   // total reimburseable amount for this day
       $desc = " (full)";
     }
     // open row
@@ -133,6 +137,11 @@ foreach ($days as &$day) {  // calculate for each day
       $output .= "<td>no</td>";
     }
     
+    // flat rate
+    $r_flat = $eur * $c_flat;
+    $r_day = $r_day + $r_flat;
+    $output .= "<td>" . $r_flat . $cur . "</td>";
+    
     // reimbursement for the single day
     $output .= "<td>" . $r_day . $cur . "</td>";
     $r_total = $r_total + $r_day;
@@ -143,7 +152,7 @@ foreach ($days as &$day) {  // calculate for each day
   } // if day is used
 }
 
-$output .= "<tr><td></td><td></td><td></td><td></td>";
+$output .= "<tr><td><tr><td></td><td></td><td></td><td></td>";
 $output .= "<td><strong>Total per diem: " . $r_total . $cur . "</strong></td></tr></table>";
 
 //------------------------------------

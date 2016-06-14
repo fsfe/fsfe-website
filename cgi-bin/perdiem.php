@@ -108,7 +108,7 @@ foreach ($days as &$day) {  // calculate for each day
     
     // breakfast ($r_b)
     if ($break === "yes") {
-      $r_b = $eur * 0.2;
+      $r_b = $eur * $c_b;
       $r_day = $r_day + $r_b;
       $output .= "<td>yes (" . $r_b . $cur . ")</td>";
     } else {
@@ -117,7 +117,7 @@ foreach ($days as &$day) {  // calculate for each day
     
     // lunch ($r_l)
     if ($lunch === "yes") {
-      $r_l = $eur * 0.4;
+      $r_l = $eur * $c_l;
       $r_day = $r_day + $r_l;
       $output .= "<td>yes (" . $r_l . $cur . ")</td>";
     } else {
@@ -126,7 +126,7 @@ foreach ($days as &$day) {  // calculate for each day
     
     // breakfast ($r_d)
     if ($dinner === "yes") {
-      $r_d = $eur * 0.4;
+      $r_d = $eur * $c_d;
       $r_day = $r_day + $r_d;
       $output .= "<td>yes (" . $r_d . $cur . ")</td>";
     } else {

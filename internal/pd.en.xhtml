@@ -20,6 +20,19 @@
     <!-- Originally coded by Max Mehl <max.mehl [at] fsfe [dot] org> for FSFE e.V. -->
     <h1>Calculate per diem charges (VKP)</h1>
     
+    <p>Using this form you can calculate the amount of money you can claim as 
+    reimbursement when travelling as FSFE staff. With the checkboxes of the 
+    left column you can add a day in you calculation; the unchecked days will 
+    be ignored. For your travelled days you can mark which meal you paid with 
+    your own money; per default the calculator assumes you paid all meals 
+    yourself, so you will have to uncheck those meals which FSFE paid for, e.g. 
+    by paying the hotel room incl. breakfast.</p>
+    
+    <p>The outward and return travel day are calculated with a reduced per diem 
+    amount, according to the legislation of your residence (currently Sweden 
+    and Germany are pre-defined). Please make sure that you know whether a 
+    certain day counts as half/travel or full day.</p>
+    
     <form action="/cgi-bin/perdiem.php" method="post">
       <h2>1. Select your own country</h2>
       
@@ -31,7 +44,7 @@
       <!-- you can add new countries. For the individual amounts, set value="CC=$travel/$full,[...]" -->
       <input type="radio" id="dest-de" name="dest" value="de=12/24,se=292.5/585" checked="checked" /><label for="dest-de"> Germany</label>
       <input type="radio" id="dest-be" name="dest" value="de=28/41,se=315.5/631" /><label for="dest-be"> Belgium</label><br />
-      <input type="radio" id="dest-other" name="dest" value="other" />Other <input type="text" name="dest_other" placeholder="12/24" /><label>(per diems travel/full (e.g. "12/24" for Germany -> Germany))</label>
+      <input type="radio" id="dest-other" name="dest" value="other" />Other <input type="text" name="dest_other" placeholder="12/24" /><label>(per diem travel/full (e.g. "12/24" for Germany -> Germany))</label>
       
       <h2>3. Which meal did you pay yourself?</h2>
       <table class="table table-striped">
@@ -65,13 +78,13 @@
             <input type="date" name="date[out]" />
           </td>
           <td>
-            <input type="checkbox" name="break[out]" value="yes" />
+            <input type="checkbox" name="break[out]" value="yes" checked="checked" />
           </td>
           <td>
-            <input type="checkbox" name="lunch[out]" value="yes" />
+            <input type="checkbox" name="lunch[out]" value="yes" checked="checked" />
           </td>
           <td>
-            <input type="checkbox" name="dinner[out]" value="yes" />
+            <input type="checkbox" name="dinner[out]" value="yes" checked="checked" />
           </td>
         </tr>
 
@@ -90,13 +103,13 @@
             <input type="date" name="date[1]" />
           </td>
           <td>
-            <input type="checkbox" name="break[1]" value="yes" />
+            <input type="checkbox" name="break[1]" value="yes" checked="checked" />
           </td>
           <td>
-            <input type="checkbox" name="lunch[1]" value="yes" />
+            <input type="checkbox" name="lunch[1]" value="yes" checked="checked" />
           </td>
           <td>
-            <input type="checkbox" name="dinner[1]" value="yes" />
+            <input type="checkbox" name="dinner[1]" value="yes" checked="checked" />
           </td>
         </tr>
         <tr>
@@ -107,13 +120,13 @@
             <input type="date" name="date[2]" />
           </td>
           <td>
-            <input type="checkbox" name="break[2]" value="yes" />
+            <input type="checkbox" name="break[2]" value="yes" checked="checked" />
           </td>
           <td>
-            <input type="checkbox" name="lunch[2]" value="yes" />
+            <input type="checkbox" name="lunch[2]" value="yes" checked="checked" />
           </td>
           <td>
-            <input type="checkbox" name="dinner[2]" value="yes" />
+            <input type="checkbox" name="dinner[2]" value="yes" checked="checked" />
           </td>
         </tr>
         <tr>
@@ -124,13 +137,13 @@
             <input type="date" name="date[3]" />
           </td>
           <td>
-            <input type="checkbox" name="break[3]" value="yes" />
+            <input type="checkbox" name="break[3]" value="yes" checked="checked" />
           </td>
           <td>
-            <input type="checkbox" name="lunch[3]" value="yes" />
+            <input type="checkbox" name="lunch[3]" value="yes" checked="checked" />
           </td>
           <td>
-            <input type="checkbox" name="dinner[3]" value="yes" />
+            <input type="checkbox" name="dinner[3]" value="yes" checked="checked" />
           </td>
         </tr>
         <tr>
@@ -141,13 +154,13 @@
             <input type="date" name="date[4]" />
           </td>
           <td>
-            <input type="checkbox" name="break[4]" value="yes" />
+            <input type="checkbox" name="break[4]" value="yes" checked="checked" />
           </td>
           <td>
-            <input type="checkbox" name="lunch[4]" value="yes" />
+            <input type="checkbox" name="lunch[4]" value="yes" checked="checked" />
           </td>
           <td>
-            <input type="checkbox" name="dinner[4]" value="yes" />
+            <input type="checkbox" name="dinner[4]" value="yes" checked="checked" />
           </td>
         </tr>
         <tr>
@@ -158,13 +171,13 @@
             <input type="date" name="date[5]" />
           </td>
           <td>
-            <input type="checkbox" name="break[5]" value="yes" />
+            <input type="checkbox" name="break[5]" value="yes" checked="checked" />
           </td>
           <td>
-            <input type="checkbox" name="lunch[5]" value="yes" />
+            <input type="checkbox" name="lunch[5]" value="yes" checked="checked" />
           </td>
           <td>
-            <input type="checkbox" name="dinner[5]" value="yes" />
+            <input type="checkbox" name="dinner[5]" value="yes" checked="checked" />
           </td>
         </tr>
         <tr>
@@ -175,13 +188,13 @@
             <input type="date" name="date[6]" />
           </td>
           <td>
-            <input type="checkbox" name="break[6]" value="yes" />
+            <input type="checkbox" name="break[6]" value="yes" checked="checked" />
           </td>
           <td>
-            <input type="checkbox" name="lunch[6]" value="yes" />
+            <input type="checkbox" name="lunch[6]" value="yes" checked="checked" />
           </td>
           <td>
-            <input type="checkbox" name="dinner[6]" value="yes" />
+            <input type="checkbox" name="dinner[6]" value="yes" checked="checked" />
           </td>
         </tr>
         <tr>
@@ -192,13 +205,13 @@
             <input type="date" name="date[7]" />
           </td>
           <td>
-            <input type="checkbox" name="break[7]" value="yes" />
+            <input type="checkbox" name="break[7]" value="yes" checked="checked" />
           </td>
           <td>
-            <input type="checkbox" name="lunch[7]" value="yes" />
+            <input type="checkbox" name="lunch[7]" value="yes" checked="checked" />
           </td>
           <td>
-            <input type="checkbox" name="dinner[7]" value="yes" />
+            <input type="checkbox" name="dinner[7]" value="yes" checked="checked" />
           </td>
         </tr>
         
@@ -217,13 +230,13 @@
             <input type="date" name="date[return]" />
           </td>
           <td>
-            <input type="checkbox" name="break[return]" value="yes" />
+            <input type="checkbox" name="break[return]" value="yes" checked="checked" />
           </td>
           <td>
-            <input type="checkbox" name="lunch[return]" value="yes" />
+            <input type="checkbox" name="lunch[return]" value="yes" checked="checked" />
           </td>
           <td>
-            <input type="checkbox" name="dinner[return]" value="yes" />
+            <input type="checkbox" name="dinner[return]" value="yes" checked="checked" />
           </td>
         </tr>
       </table>

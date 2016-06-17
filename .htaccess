@@ -46,6 +46,7 @@ RewriteRule ^law/eucd/(.*) /projects/eucd$1 [redirect=permanent]
 RewriteRule ^law(.*) /projects/law$1 [redirect=permanent]
 RewriteRule ^swpat(.*) /projects/swpat$1 [redirect=permanent]
 RewriteRule ^donate.html /donate/donate.en.html [redirect=permanent]
+RewriteRule ^associates/about(.*) /associates/associates$1 [redirect=permanent]
 
 # New year's resolution in 2009.
 RewriteRule ^2009$ /news/2009/nyr.html [redirect=permanent]

@@ -94,7 +94,7 @@ RewriteRule ^news/fsfe-fr-channel.fr.xml /news/news.fr.rss [redirect=permanent]
 # Redirects for Legal pages
 RewriteRule ^ftf(.*) /activities/ftf$1 [redirect=permanent]
 RewriteRule ^legal(.*) /activities/ftf$1 [redirect=permanent]
-RewriteRule ^activities/ftf/ftf.en.html /activities/ftf/activities.en.html [redirect=permanent]
+RewriteRule /activities/ftf/ftf.en.html /activities/ftf/activities.en.html [redirect=permanent]
 
 # Commented until I figure out why they do not work
 #RewriteRule /activities/ftf/ftf\.(.*)\.html /activities/ftf/activities\.$1\.html [redirect=permanent]

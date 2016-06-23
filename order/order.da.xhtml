@@ -47,12 +47,12 @@
 
       <p>
         <input type="hidden" name="shipping" value="1"/>
-        <input type="radio" name="_shipping" value="3"/>
-        Forsendelse inden for Tyskland (€3,00)<br/>
-        <input type="radio" name="_shipping" value="7" checked="Y"/>
-        Forsendelse inden for Europa (€7,00)<br/>
-        <input type="radio" name="_shipping" value="12"/>
-        Forsendelse uden for Europa (€12,00)<br/>
+        <input type="radio" id="shipping-de" name="_shipping" value="3"/>
+        <label for="shipping-de">Forsendelse inden for Tyskland (€3,00)</label><br/>
+        <input type="radio" id="shipping-eu" name="_shipping" value="7" checked="Y"/>
+        <label for="shipping-eu">Forsendelse inden for Europa (€7,00)</label><br/>
+        <input type="radio" id="shipping-world" name="_shipping" value="12"/>
+        <label for="shipping-world">Forsendelse uden for Europa (€12,00)</label><br/>
       </p>
 
       <table class="order-form">

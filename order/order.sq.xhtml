@@ -48,12 +48,12 @@
 
       <p>
         <input type="hidden" name="shipping" value="1"/>
-        <input type="radio" name="_shipping" value="3"/>
-        Dërgim brenda Gjermanisë (€3.00)<br/>
-        <input type="radio" name="_shipping" value="7" checked="Y"/>
-        Dërgim brenda Europës (€7.00)<br/>
-        <input type="radio" name="_shipping" value="12"/>
-        Dërgim jashtë Europës (€12.00)<br/>
+        <input type="radio" id="shipping-de" name="_shipping" value="3"/>
+        <label for="shipping-de">Dërgim brenda Gjermanisë (€3.00)</label><br/>
+        <input type="radio" id="shipping-eu" name="_shipping" value="7" checked="Y"/>
+        <label for="shipping-eu">Dërgim brenda Europës (€7.00)</label><br/>
+        <input type="radio" id="shipping-world" name="_shipping" value="12"/>
+        <label for="shipping-world">Dërgim jashtë Europës (€12.00)</label><br/>
       </p>
 
       <table class="order-form">

@@ -49,12 +49,12 @@
 
       <p>
         <input type="hidden" name="shipping" value="1"/>
-        <input type="radio" name="_shipping" value="3"/>
-        Versand innerhalb Deutschlands (€3.00)<br/>
-        <input type="radio" name="_shipping" value="7" checked="Y"/>
-        Versand innerhalb Europas (€7.00)<br/>
-        <input type="radio" name="_shipping" value="12"/>
-        Weltweiter Versand (€12.00)<br/>
+        <input type="radio" id="shipping-de" name="_shipping" value="3"/>
+        <label for="shipping-de">Versand innerhalb Deutschlands (€3.00)</label><br/>
+        <input type="radio" id="shipping-eu" name="_shipping" value="7" checked="Y"/>
+        <label for="shipping-eu">Versand innerhalb Europas (€7.00)</label><br/>
+        <input type="radio" id="shipping-world" name="_shipping" value="12"/>
+        <label for="shipping-world">Weltweiter Versand (€12.00)</label><br/>
       </p>
 
       <table class="order-form">

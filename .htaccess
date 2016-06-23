@@ -99,6 +99,7 @@ RewriteRule ^activities/ftf/rough-guide-for-vendors(.*) /projects/ftf/useful-tip
 RewriteRule ^activities/ftf/contact(.*) /contact/contact$1#ftf [NE,redirect=permanent]
 RewriteRule ^activities/ftf/form(.*) /contact/contact$1#ftf [NE,redirect=permanent]
 RewriteRule ^activities/ftf/ftf\.(.*)html /activities/ftf/activities.$1html [redirect=permanent]
+RewriteRule ^activities/ftf/index\.(.*)html /activities/ftf/activities.$1html [redurect=permanent]
 RewriteRule ^activities/ftf/network\.(.*)html /activities/ftf/ln.$1html [redirect=permanent]
 RewriteRule ^activities/ftf/recommended\.(.*)html /activities/ftf/licence-questions.$1html [redirect=permanent]
 RewriteRule ^activities/ftf/legal-network-policy\.(.*)html /activities/ftf/ln-rules.$1html [redirect=permanent]

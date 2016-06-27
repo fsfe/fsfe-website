@@ -364,10 +364,11 @@
     <employee>part/m</employee>
   </person>
 
-  <person id="mirko" avatar="no" association-member="yes" teams="ga">
+  <person id="mirko" avatar="yes" association-member="yes" teams="ga">
     <name>Mirko Boehm</name>
     <country>DE</country>
     <function>fellowship-representative/m</function>
+    <avatar>/about/mirko/mirko-avatar.jpg</avatar>
     <email>mirko (at) fsfe (dot) org</email>
   </person>
 

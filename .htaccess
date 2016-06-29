@@ -19,7 +19,8 @@ RewriteRUle ^promo(/.*)?	/contribute/spreadtheword$1	[redirect=permanent]
 RewriteRule   ^(cyf|convince).*      http://wiki.fsfe.org/ConvinceYourFriends        [R=permanent]
 
 # Summit 2016
-RewriteRule	^summit16(/.*)?$	https://wiki.fsfe.org/Events/Summit2016/CallForParticipation$1	[redirect=permanent]
+RewriteRule	^summit16(/.*)?$	https://fsfe.org/community/events/2016/summit/frontpage.en.html [redirect=permanent]
+#RewriteRule	^summit16(/.*)?$	https://wiki.fsfe.org/Events/Summit2016/CallForParticipation$1	[redirect=permanent]
 
 ## === MOVED PAGES ===
 

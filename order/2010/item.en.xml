@@ -53,11 +53,18 @@
       small="2010/pen-analogprinter-green-small.jpg"
       large="2010/pen-analogprinter-green-large.jpg"/>
   </item>
-  
-  <!-- item type="other" id="pen-analogprinter-blue" price="12.00" date="2010-02-08">
+
+  <item type="other" id="pen-analogprinter-blue" price="12.00" date="2010-02-08">
     <available size="#"/>
     <image
       small="2010/pen-analogprinter-blue-small.jpg"
       large="2010/pen-analogprinter-blue-large.jpg"/>
-  </item -->
+  </item>
+
+  <item type="other" id="pen-analogprinter-black" price="12.00" date="2010-02-08">
+    <available size="#"/>
+    <image
+      small="2010/pen-analogprinter-black-small.jpg"
+      large="2010/pen-analogprinter-black-large.jpg"/>
+  </item>
 </itemset>

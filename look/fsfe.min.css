@@ -11111,13 +11111,8 @@ a.the-fellowship {
 .frontpage #campaigns-boxes #summit16 {
   text-align: center;
   font-size: 1.3em;
-  background: url('/graphics/summit2016.jpg') #76b520;
-}
-.frontpage #campaigns-boxes #summit16 img {
-  height: 200px;
-  margin-bottom: 10px;
-  margin-top: -70px;
-  max-width: none;
+  background: url('/graphics/summit2016.jpg') center no-repeat #666666;
+  background-size: contain;
 }
 .frontpage #campaigns-boxes #dfd {
   text-align: center;

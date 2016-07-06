@@ -3,8 +3,8 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   
   <xsl:import href="tools/xsltsl/static-elements.xsl" />
+  
   <xsl:import href="fsfe.xsl" />
-
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
   
   <xsl:template match="body">
@@ -108,38 +108,29 @@
       <div class="cycle-pager"/>
       
       <xsl:for-each select="/buildinfo/document/set/campaign[@running = 'yes']">
-          <xsl:apply-templates select="." mode="slideshow" />
+        <xsl:apply-templates select="." mode="slideshow" />
       </xsl:for-each>
       
     </div>
   </xsl:template>
   
   <xsl:template match="campaign" mode="slideshow">
-      <a href="{link}" class="campaign-box">
-          <xsl:attribute name="id">
-            <xsl:value-of select="@id" />
-          </xsl:attribute>
-          <xsl:if test=" photo != '' ">
-              <img src="{photo}" alt="" />
-          </xsl:if>
+    <a href="{link}" class="campaign-box">
+      <xsl:attribute name="id"><xsl:value-of select="@id" /></xsl:attribute>
+      <xsl:if test=" photo != '' "><img src="{photo}" alt="" /></xsl:if>
       <p class="text">
-        <xsl:value-of select="   text   " />
+        <xsl:value-of select="text" />
       </p>
       
-      <!-- Test ignoring of empty fields -->
+      <!-- Author (if existing) -->
       <xsl:if test="author != ''">
-        <span class="author">
-          <xsl:value-of select="   author   " />
-        </span>
+        <span class="author"><xsl:value-of select="author" /></span>
       </xsl:if>
-      
-      <!-- Copyright field -->
+          
+      <!-- Copyright notice (if existing) -->
       <xsl:if test="copyright != ''">
-        <span class="copyright">
-          <xsl:value-of select="   copyright   " />
-        </span>
+        <span class="copyright"><xsl:value-of select="copyright" /></span>
       </xsl:if>
-      
     </a>
   </xsl:template>
   

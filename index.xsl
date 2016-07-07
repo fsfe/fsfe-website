@@ -117,10 +117,18 @@
   <xsl:template match="campaign" mode="slideshow">
     <a href="{link}" class="campaign-box">
       <xsl:attribute name="id"><xsl:value-of select="@id" /></xsl:attribute>
+
+      <!-- If you use the content tag, you can define boxes arbitrarily,
+           but you shouldn't use photo/author/copyright then -->
+      <xsl:if test=" content != '' ">
+         <xsl:apply-templates select="content/@* | content/node()"/>
+      </xsl:if>
+
       <xsl:if test=" photo != '' "><img src="{photo}" alt="" /></xsl:if>
-      <p class="text">
-        <xsl:value-of select="text" />
-      </p>
+
+      <xsl:if test=" text != '' ">
+        <p class="text"><xsl:value-of select="text" /></p>
+      </xsl:if>
       
       <!-- Author (if existing) -->
       <xsl:if test="author != ''">
@@ -136,36 +144,7 @@
   
   <!-- display campaign box 4 -->
   <xsl:template match="campaign-box4">
-    <!--div id="campaign-box-4"-->
-      
-      <!--
-        Here are two codes snippets that will provide for a graphical and a text banner.
-        /!\ comment out one of the two, you probably only want one banner on the front page.
-      -->
-      
-      <!-- graphical banner -->
-      <!--<a href="/campaigns/ilovefs/ilovefs.html">
-        <img src="/graphics/valentine.png" />
-      </a>-->
-      
-      <!--
-        Text banner
-        The ids used here are needed to fetch the correct texts in /tools/texts-content.**.xml
-        /!\ the text with given IDs *must* exist there!
-      -->
-      <!--div class="banner-border">
-        <p>
-          <a href="http://www.defectivebydesign.org/no-drm-in-html5">
-            <xsl:call-template name="gettext">
-              <xsl:with-param name="id" select="'no-drm-in-html5'" />
-            </xsl:call-template>
-          </a>
-        </p>
-      </div -->
-      
-    <!--/div-->
   </xsl:template>
-  
   
   <!--display labels-->
   

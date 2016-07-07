@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <campaigns>
   <campaign running="yes" id="summit16">
-    <!--photo>/graphics/summit2016.jpg</photo-->
-    <text>
+    <link>/community/events/2016/summit/frontpage.en.html</link>
+    <content>
       <img src="/graphics/fsfe-summit-header-logo.png" align="left" />
       <img src="/graphics/fsfe-summit-header-date.png" align="right" />
-    </text>
-    <link>/community/events/2016/summit/frontpage.en.html</link>
+    </content>
   </campaign>
 </campaigns>

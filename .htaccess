@@ -105,6 +105,22 @@ RewriteRule ^about/members(.*) /about/team$1 [redirect=permanent]
 # Moved news pages
 RewriteRule ^news/2016/news-20160629-01(.*) /news/2016/news-20160630-01$1 [redirect=permanent]
 
+# Legal pages redirects
+RewriteRule ^rough-guide-for-users(.*) /projects/ftf/useful-tips-for-users$1 [redirect=permanent]
+RewriteRule ^rough-guide-for-vendors(.*) /projects/ftf/useful-tips-for-vendors$1 [redirect=permanent]
+RewriteRule ^contact(.*) /contact/contact$1#ftf [NE,redirect=permanent]
+RewriteRule ^form(.*) /contact/contact$1#ftf [NE,redirect=permanent]
+RewriteRule ^ftf(.*) /activities/ftf$1 [redirect=permanent]
+RewriteRule ^legal(.*) /activities/ftf$1 [redirect=permanent]
+RewriteRule ^activities/ftf/rough-guide-for-users(.*) /projects/ftf/useful-tips-for-users$1 [redirect=permanent]
+RewriteRule ^activities/ftf/rough-guide-for-vendors(.*) /projects/ftf/useful-tips-for-vendors$1 [redirect=permanent]
+RewriteRule ^activities/ftf/contact(.*) /contact/contact$1#ftf [NE,redirect=permanent]
+RewriteRule ^activities/ftf/form(.*) /contact/contact$1#ftf [NE,redirect=permanent]
+RewriteRule ^activities/ftf/ftf\.(.*)html /activities/ftf/activities.$1html [redirect=permanent]
+RewriteRule ^activities/ftf/index\.(.*)html /activities/ftf/activities.$1html [redirect=permanent]
+RewriteRule ^activities/ftf/network\.(.*)html /activities/ftf/ln.$1html [redirect=permanent]
+RewriteRule ^activities/ftf/recommended\.(.*)html /activities/ftf/licence-questions.$1html [redirect=permanent]
+RewriteRule ^activities/ftf/legal-network-policy\.(.*)html /activities/ftf/ln-rules.$1html [redirect=permanent]
 
 # Old staff profiles
 RewriteRule ^about/bako(.*) /about/team [redirect=permanent]

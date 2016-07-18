@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<html>
+  <head>
+    <title>Prodotti – FSFE</title>
+  </head>
+
+  <body class="toplevel">
+    <h1>Prodotti</h1>
+
+    <p class="p-summary">
+      Mostra il tuo amore per il Software Libero usando e indossando i prodotti personalizzati
+      elencati qui sotto. I vestiti Software Libero sono un buon modo per aumentare la consapevolezza nella
+      tua comunità locale, e ogni acquisto aiuta a finanziare i progetti critici della FSFE.
+    </p>
+
+    <form action="/cgi-bin/weborder.pl" method="post" class="item-grid">
+      <h2>Magliette</h2>
+
+      <dynamic-content type="tshirt"/>
+
+      <h2>Magliette donna</h2>
+
+      <dynamic-content type="girlie"/>
+
+      <h2>Felpe con cappuccio</h2>
+
+      <dynamic-content type="hooded"/>
+
+      <h2>Vestiti per bambini</h2>
+
+      <dynamic-content type="baby-clothes"/>
+
+      <h2 id="other-items">Altri prodotti</h2>
+
+      <dynamic-content type="other"/>
+
+      <h2>Materiale promozionale</h2>
+
+      <p>
+        Controlla la nostra
+        <a href="/contribute/spreadtheword.html#promo-material">pagina del materiale informativo</a>
+        per ordinare volantini, adesivi e altre cose. 
+      </p>
+
+      <h2>Spedizioni</h2>
+
+      <p>
+        <input type="hidden" name="shipping" value="1"/>
+        <input type="radio" id="shipping-de" name="_shipping" value="3"/>
+        <label for="shipping-de">Spedizione in Germania (€3.00)</label><br/>
+        <input type="radio" id="shipping-eu" name="_shipping" value="7" checked="Y"/>
+        <label for="shipping-eu">Spedizione in Europa (€7.00)</label><br/>
+        <input type="radio" id="shipping-world" name="_shipping" value="12"/>
+        <label for="shipping-world">Spedizione fuori Europa (€12.00)</label><br/>
+      </p>
+
+      <table class="order-form">
+        <tr>
+          <td class="order-left"><p>Nome:</p></td>
+          <td class="order-right">
+            <input type="text" name="name"/>
+          </td>
+        </tr>
+        <tr>
+          <td class="order-left"><p>Indirizzo:</p></td>
+          <td class="order-right">
+            <textarea rows="5" name="address"/>
+          </td>
+        </tr>
+        <tr>
+          <td class="order-left"><p>Email:</p></td>
+          <td class="order-right">
+            <input type="text" name="email"/>
+          </td>
+        </tr>
+        <tr>
+          <td class="order-left"><p>Telefono:</p></td>
+          <td class="order-right">
+            <input type="text" name="phone"/>
+          </td>
+        </tr>
+        <tr>
+          <td class="order-left"></td>
+          <td class="order-right">
+            <p class="n">
+              Per favore non scrivere niente qui:
+              <input type="text" size="40" name="url"/>
+            </p>
+            
+            <!-- Translators: Please change the value here to your language -->
+            <input type="hidden" name="language" value="it_IT"/>
+            <!-- Translators: Please also translate the value here, it's the label
+                 of the button -->
+            <input id="order-submit" type="submit" value="Ordina prodotti"/>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+
+  <timestamp>$Date$ $Author$</timestamp>
+  <translator>Stefano Fraccaro</translator>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

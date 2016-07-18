@@ -11,88 +11,74 @@
       <div class="image right">
         <img src="/graphics/stars-smaller.png" alt="Stars"/>
       </div>
+      
+<!-- These wordings are delicate. Please discuss any ideas at web@ before making any changes! -->
 
-<!-- These wordings are delicate. Please discuss any ideas at web@ before
-making any changes! -->
-    <p>
-	<!--Sign up to show that you care about Free Software and support
-	the FSFE's activities.-->
-	Firma per mostrare il tuo sostegno per il Software Libero e per le
-	<a href="/work">attività della FSFE</a>.
-	</p>
-	<p>
-	<!--We will not publish your name, only the total number of supporters.
-	The number of FSFE's supporters shows national and EU-level
-	politicans that
-	Free Software is important. Supporters may also receive occasional
-	important
-	information, at most three times a year.-->
+    <p>Firma per mostrare che tieni al Software Libero e per sostenere le
+    attività della FSFE.</p>
 
-Non pubblicheremo il tuo nome, solo il numero totale dei sostenitori. Il
-numero dei sostenitori della FSFE dimostra ai politici nazionali ed europei
-che il Software Libero è importante. Come sostenitore potrai ricevere
-occasionalmente comunicazioni importanti, al massimo tre volte l'anno.
-	</p>
+    <p>Come sostenitore riceverai la nostra newsletter mensile e potrai
+    ricevere occasionalmente delle informazioni importanti relative alle attività nel tuo paese
+    o regione.</p>
 
-	<div id="support_form">
+      <div id="support_form">
 
-	<form method="post" action="support.php" class="support">
-	    <p>
-	    <label id="firstname">Nome
-	      <input type="text" name="firstname" />
-	    </label>
-	    </p>
-	    <p>
-	    <label id="lastname">Cognome
-	      <input type="text" name="lastname" />
-	    </label>
-	    </p>
-	    <p>
-	    <label id="email">E-mail (obbligatorio)
-	      <input type="email" name="email" required="required" />
-	    </label>
-	    </p>
-	    <p>
-	    <label id="country">Paese (obbligatorio)
-	      <select name="country_code" required="required">
-		<option value="">Seleziona..</option>
-	      <optgroup label="Europe">
+        <form method="post" action="support.php" class="support">
+            <p>
+            <label id="firstname">Nome
+              <input type="text" name="firstname" />
+            </label>
+            </p>
+            <p>
+            <label id="lastname">Cognome
+              <input type="text" name="lastname" />
+            </label>
+            </p>
+            <p>
+            <label id="email">E-mail (obbligatorio)
+              <input type="email" name="email" required="required" />
+            </label>
+            </p>
+            <p>
+            <label id="country">Paese (obbligatorio)
+              <select name="country_code" required="required">
+                <option value="">Seleziona..</option>
+                <optgroup label="Europe">
                   <country-list-europe/>
-		</optgroup>
-		<optgroup label="Other continents">
+                </optgroup>
+                <optgroup label="Other continents">
                   <country-list-other-continents/>
-		</optgroup>
-	      </select>
-	    </label>
-	    </p>
+                </optgroup>
+              </select>
+            </label>
+            </p>
             <p id="support_robotfield" class="n">
-            <label id="rname">Fill this field if you are a robot
+            <label id="rname">Compila questo campo se sei un robot
               <input type="text" name="rname" />
             </label>
             </p>
 
-	  <p><input type="submit" name="submit" value="Sostengo la FSFE!" data-loading-text="Sending.."/></p>
-
+          <p><input type="submit" name="submit" value="Sostengo la FSFE!" data-loading-text="Sending.."/></p>
+        
           <input type="hidden" name="ref_url" value="" />
           <input type="hidden" name="ref_id" value="" />
           <input type="hidden" name="lang" value="it" />
-	</form>
+        </form>
 
-      <p><em>La nostra politica nei confronti della privacy è semplice. Non
-      condivideremo mai questi dati con nessuno al di fuori della
-      FSFE. Punto.</em></p>
+        <p><em>Non pubblicheremo il tuo nome e non condivideremo mai questi dati
+        con nessuno al di fuori della FSFE.</em></p>
 
       </div>
 
-
-<support-form-javascript/>
+      <support-form-javascript/>
   </div>
-
+        
   </body>
 
-  <timestamp>$Date: 2012-07-07 20:21:45 +0200 (Sat, 07 Jul 2012) $ $Author:
-  otto $</timestamp>
-<translator>Alessandro Polvani</translator>
+  <followup>join</followup>
+
+  <timestamp>$Date$ $Author$</timestamp>
+  <translator>Stefano Fraccaro</translator>
 </html>
 <!--
 Local Variables: ***

@@ -139,10 +139,48 @@
       <!-- Get the meta element description -->
       <xsl:value-of select="head/meta[@name = 'description']/@content" />
     </xsl:variable>
-    <xsl:variable name="extract">
+    
+    <!-- EXTRACT -->
+    <!-- take a first extract which should be sufficient for most pages -->
+    <xsl:variable name="extract1">
       <!-- retreive the first 200 letters of the first p element after h1 -->
       <xsl:value-of select="substring(normalize-space(body/h1[1]/following::p[1]),1,200)" />
     </xsl:variable>
+    <!-- measure first extract length -->
+    <xsl:variable name="extractlength1">
+      <xsl:value-of select="string-length($extract1)" />
+    </xsl:variable>
+    <!-- define cases what happens with which extract length -->
+    <xsl:variable name="extract">
+      <xsl:choose>
+        <!-- case: first extract is long enough -->
+        <xsl:when test="$extractlength1 &gt; 50">
+          <xsl:value-of select="$extract1" />
+        </xsl:when>
+        <!-- case: first extract is too short -->
+        <xsl:otherwise>
+          <xsl:variable name="extract2">
+            <!-- retreive the first 200 letters of the *second* p element after h1 -->
+            <xsl:value-of select="substring(normalize-space(body/h1[1]/following::p[2]),1,200)" />
+          </xsl:variable>
+          <!-- measure *second* extract length -->
+          <xsl:variable name="extractlength2">
+            <xsl:value-of select="string-length($extract2)" />
+          </xsl:variable>
+          <xsl:choose>
+            <!-- case: second extract is long enough -->
+            <xsl:when test="$extractlength2 &gt; 50">
+              <xsl:value-of select="$extract2" />
+            </xsl:when>
+            <!-- case: second extract is too short, so take default text -->
+            <xsl:otherwise>
+              Non profit organisation working to create general understanding and support for software freedom. Includes news, events, and campaigns.
+            </xsl:otherwise>
+          </xsl:choose>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+        
     <!-- Twitter cards -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@fsfe" />

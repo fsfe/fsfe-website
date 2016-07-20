@@ -133,6 +133,88 @@
         </xsl:attribute>
       </xsl:element>
     </xsl:for-each>
+    
+    <!-- Twitter and Facebook sharing cards -->
+    <xsl:variable name="metadesc">
+      <!-- Get the meta element description -->
+      <xsl:value-of select="head/meta[@name = 'description']/@content" />
+    </xsl:variable>
+    <xsl:variable name="extract">
+      <!-- retreive the first 200 letters of the first p element after h1 -->
+      <xsl:value-of select="substring(normalize-space(body/h1[1]/following::p[1]),1,200)" />
+    </xsl:variable>
+    <!-- Twitter cards -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@fsfe" />
+    <xsl:element name="meta">
+      <xsl:attribute name="name">twitter:image</xsl:attribute>
+      <xsl:attribute name="content">https:<xsl:value-of select="$linkresources"/>/graphics/logo-text_square.png</xsl:attribute>
+    </xsl:element>
+    <xsl:element name="meta">
+      <xsl:attribute name="name">twitter:title</xsl:attribute>
+      <xsl:attribute name="content">
+        <!-- content of <title> -->
+        <xsl:value-of select="head/title" />
+      </xsl:attribute>
+    </xsl:element>
+    <xsl:element name="meta">
+      <xsl:attribute name="name">twitter:description</xsl:attribute>
+      <xsl:attribute name="content">
+        <xsl:choose>
+          <!-- if there is a meta description, take that -->
+          <xsl:when test="$metadesc != ''"><xsl:value-of select="$metadesc" /></xsl:when>
+          <xsl:otherwise>
+            <xsl:choose>
+              <!-- if not, try to get the short extract -->
+              <xsl:when test="$extract != ''"><xsl:value-of select="$extract" /><xsl:text>...</xsl:text></xsl:when>
+              <!-- if even that isn't available, return a default text 
+                   (not language sensitive). This should never be the case... -->
+              <xsl:otherwise>Non profit organisation working to create general understanding and support for software freedom. Includes news, events, and campaigns.</xsl:otherwise>
+            </xsl:choose>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:attribute>
+    </xsl:element>
+    <!-- Facebook sharing cards -->
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="FSFE - Free Software Foundation Europe" />
+    <xsl:element name="meta">
+      <xsl:attribute name="property">og:image</xsl:attribute>
+      <xsl:attribute name="content">https:<xsl:value-of select="$linkresources"/>/graphics/logo-text_square.png</xsl:attribute>
+    </xsl:element>
+    <xsl:element name="meta">
+      <xsl:attribute name="property">og:locale</xsl:attribute>
+      <xsl:attribute name="content"><xsl:value-of select="/buildinfo/@language"/></xsl:attribute>
+    </xsl:element>
+    <xsl:element name="meta">
+      <xsl:attribute name="property">og:url</xsl:attribute>
+      <xsl:attribute name="content">https:<xsl:value-of select="$linkresources"/><xsl:value-of select="/buildinfo/@filename"/>.html</xsl:attribute>
+    </xsl:element>
+    <xsl:element name="meta">
+      <xsl:attribute name="property">og:title</xsl:attribute>
+      <xsl:attribute name="content">
+        <!-- content of <title> -->
+        <xsl:value-of select="head/title" />
+      </xsl:attribute>
+    </xsl:element>
+    <xsl:element name="meta">
+      <xsl:attribute name="property">og:description</xsl:attribute>
+      <xsl:attribute name="content">
+        <xsl:choose>
+          <!-- if there is a meta description, take that -->
+          <xsl:when test="$metadesc != ''"><xsl:value-of select="$metadesc" /></xsl:when>
+          <xsl:otherwise>
+            <xsl:choose>
+              <!-- if not, try to get the short extract -->
+              <xsl:when test="$extract != ''"><xsl:value-of select="$extract" /><xsl:text>...</xsl:text></xsl:when>
+              <!-- if even that isn't available, return a default text 
+                   (not language sensitive). This should never be the case... -->
+              <xsl:otherwise>Non profit organisation working to create general understanding and support for software freedom. Includes news, events, and campaigns.</xsl:otherwise>
+            </xsl:choose>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:attribute>
+    </xsl:element> <!-- / Sharing cards -->
 
     <script src="/scripts/jquery-1.10.2.min.js"></script>
     <script src="/scripts/modernizr.custom.65251.js"></script>

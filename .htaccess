@@ -22,6 +22,9 @@ RewriteRule   ^(cyf|convince).*      http://wiki.fsfe.org/ConvinceYourFriends   
 RewriteRule	^summit16(/.*)?$	https://fsfe.org/community/events/2016/summit/frontpage$1 [redirect=permanent]
 #RewriteRule	^summit16(/.*)?$	https://wiki.fsfe.org/Events/Summit2016/CallForParticipation$1	[redirect=permanent]
 
+# 15 years of FSFE
+RewriteRule	^15(/.*)?$		https://fsfe.org/campaigns/15years/15years$1 [redirect=permanent]
+
 ## === MOVED PAGES ===
 
 # Redirections for IloveFS campaign

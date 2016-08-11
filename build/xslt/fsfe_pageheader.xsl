@@ -101,6 +101,12 @@
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfe/press'" /></xsl:call-template>
             </xsl:element>
           </xsl:element>
+          <xsl:element name="li">
+            <xsl:element name="a">
+              <xsl:attribute name="href">/join</xsl:attribute>
+              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'join'" /></xsl:call-template>
+            </xsl:element>
+          </xsl:element>
         </xsl:element>
         <!--/ul#menu-list-->
   

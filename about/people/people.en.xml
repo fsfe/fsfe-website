@@ -113,7 +113,7 @@
     <name>Peter Bubestinger</name>
     <country>AT</country>
     <function country="AT">coordinator/m</function>
-    <email>bubestinger (at) fsfeurope (dot) org</email>
+    <email>pb (at) fsfe (dot) org</email>
   </person>
 
    <person id="carraturo" avatar="no" teams="it">
@@ -175,14 +175,11 @@
   </person>
   -->
   
-  
-
-  <person id="feltrin" avatar="no" teams="ftf, core">
+  <person id="feltrin" avatar="no" teams="ftf">
     <name>Nicola Feltrin</name>
     <country>IT</country>
     <function project="ftf">coordinator/m</function>
     <email>nicola (dot) feltrin (at) fsfe (dot) org</email>
-    <employee>full/m</employee>
   </person>
 
   <person id="gerloff" avatar="yes" association-member="yes" teams="de, ga">
@@ -209,7 +206,7 @@
   <person id="gollowitzer" avatar="yes" association-member="yes" teams="at, ga">
     <name>Martin Gollowitzer</name>
     <country>AT</country>
-    <email>gollowitzer (at) fsfeurope (dot) org</email>
+    <email>gollo (at) fsfe (dot) org</email>
     <link>http://wiki.fsfe.org/Fellows/gollo</link>
     <avatar>/about/gollowitzer/gollowitzer-avatar.jpg</avatar>
   </person>
@@ -218,7 +215,7 @@
     <name>Georg C. F. Greve</name>
     <country>CH</country>
     <function>greve</function>
-    <email>greve (at) fsfeurope (dot) org</email>
+    <email>greve (at) fsfe (dot) org</email>
     <link>/about/greve/greve.html</link>
     <avatar>/about/greve/greve-avatar.jpg</avatar>
   </person>
@@ -323,7 +320,7 @@
     <name>Jürgen Kneissl</name>
     <country>AT</country>
     <function country="AT">deputy/m</function>
-    <email>kneissl (at) fsfeurope (dot) org</email>
+    <email>herrka (at) fsfe (dot) org</email>
     <avatar>/about/kneissl/kneissl-avatar.jpg</avatar>
   </person>
 
@@ -410,7 +407,7 @@
     <name>Reinhard Müller</name>
     <country>AT</country>
     <function>financial-officer/m</function>
-    <email>mueller (at) fsfeurope (dot) org</email>
+    <email>reinhard (at) fsfe (dot) org</email>
     <link>http://wiki.fsfe.org/Fellows/reinhard</link>
     <avatar>/about/mueller/mueller-avatar.jpg</avatar>
   </person>
@@ -449,10 +446,10 @@
     <avatar>/about/poderi/poderi-avatar.jpg</avatar>
   </person>
   
-  <person id="polina" avatar="no" teams="intern">
+  <person id="polina" avatar="no" teams="core, ftf">
     <name>Polina Malaja</name>
     <country>ET</country>
-    <function>intern/f</function>
+    <function project="ftf">coordinator/f</function>
     <email>polina (at) fsfe (dot) org</email>
     <employee>full/f</employee>
   </person>
@@ -460,7 +457,7 @@
   <person id="reiter" avatar="yes" association-member="yes" teams="de, ga">
     <name>Bernhard Reiter</name>
     <country>DE</country>
-    <email>reiter (at) fsfeurope (dot) org</email>
+    <email>bernhard (at) fsfe (dot) org</email>
     <link>http://intevation.de/~bernhard/index.en.html</link>
     <avatar>/about/reiter/reiter-avatar.jpg</avatar>
   </person>
@@ -539,7 +536,7 @@
     <country>DE</country>
     <function country="DE">deputy/m</function>
     <!-- <function volunteers="translators-de">coordinator/m</function> -->
-    <email>schiessle (at) fsfeurope (dot) org</email>
+    <email>schiessle (at) fsfe (dot) org</email>
     <link>http://www.schiessle.org</link>
     <avatar>/about/schiessle/schiessle-avatar.jpg</avatar>
   </person>
@@ -557,7 +554,7 @@
     <function>office/f</function>
     <email>usli (at) fsfe (dot) org</email>
     <avatar>/about/sliwinski/sliwinski.png</avatar>
-    <employee>part/f</employee>
+    <employee>full/f</employee>
   </person>
 
   <person id="stegerman" avatar="yes" teams="nl, core">
@@ -595,6 +592,14 @@ ga">
     <link>/about/weiden/weiden.html</link>
     <avatar>/about/weiden/weiden-avatar.jpg</avatar>
   </person>
+
+  <person id="widerstroem" avatar="no" teams="at, core">
+    <name>Christian Widerström</name>
+    <country>AT</country>
+    <employee>freelancer/m</employee>
+    <email>chris (at) fsfe (dot) org</email>
+  </person>
+
 
   <person id="willebrand" avatar="no" teams="fi">
     <name>Martin von Willebrand</name>

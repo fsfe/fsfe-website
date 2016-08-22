@@ -4,6 +4,26 @@
 
 <!-- ALL STATIC TEXTS -->
 
+  <!-- Spreadtheword page -->
+  <text id="stw-type">Type</text>
+  <text id="stw-size">Formaat</text>
+  <text id="stw-context">Contextinformatie</text>
+  <text id="stw-printed"><a href="#id-how-and-what-to-order">Bestel uit onze voorraad</a> in</text>
+  <text id="stw-printed-tooltip">U kan deze gedrukte versies bij ons bestellen door het bestelformulier te gebruiken.</text>
+  <text id="stw-languages">Beschikbaar om te downloaden in</text>
+  <text id="stw-languages-tooltip">Als u ons informatie- en promotiemateriaal online wil verspreiden, voelt u zich dan vrij om 
+het in de beschikbare talen te vertalen.</text>
+  <text id="stw-license">Licentie</text>
+  <text id="stw-author">Auteur</text>
+  <text id="stw-year">Jaar</text>
+  <text id="stw-source">Bronbestanden</text>
+  <text id="stw-source-tooltip">U kan de bronbestanden van dit promotie-artikel downloaden om het aan te passen of om het te vertalen. 
+Respecteer alstublieft de licentie.</text>
+  <text id="stw-printready">Afdrukbare bestanden</text>
+  <text id="stw-printready-tooltip">Dit zijn de bestanden die we sturen naar onze 
+printer, inclusief margerand en andere printerspecifieke instellingen. De bestanden kunnen 
+erg groot zijn (~5-25MB).</text>
+
   <!-- Basic texts -->
   <text id="fsfeurope">Free Software Foundation&#160;Europe</text>
   <text id="fsfnetwork">
@@ -18,41 +38,48 @@
   <text id="lastchanged"> Laatst veranderd: </text>
   <text id="translator1a">We bedanken </text>
   <text id="translator1b"> voor deze vertaling. </text>
-  <text id="translator2">Dit is een niet-officiële vertaling. </text>
+  <text id="translator2">Dit is een onofficiële vertaling. </text>
   <text id="translator3a">Bekijk alstublieft ook de </text>
   <text id="translator3b">originele tekst</text>
   <text id="translator3c"> van deze pagina.</text>
   <text id="permission">
-    Kopiëren en distribueren van dit gehele artikel is toegestaan in ieder medium, mits voorzien van deze notitie.
+Woordelijk kopiëren en distribueren van dit gehele artikel is toegestaan in ieder medium, mits voorzien van deze notitie.
   </text>
 
 
   <!-- Warning info boxes -->
   <text id="outdated">
     <strong>Waarschuwing: </strong>
-    Deze pagina zou verouderd kunnen zijn ten opzichte van het origineel. Bekijk alstublieft
-    <a href="/contribute/contribute.html">deze pagina</a> om te zien hoe u kan helpen met vertalingen en andere dingen.
+    Deze pagina zou achterhaald kunnen zijn ten opzichte van het origineel. Bekijk alstublieft
+    <a href="/contribute/contribute.html">deze pagina</a> om te zien hoe u kan helpen
+    met vertalingen en andere dingen.
   </text>
   <text id="outdated-1">
     <strong>Waarschuwing: </strong>
-    Deze pagina zou verouderd kunnen zijn ten opzichte van de 
+    Deze pagina zou achterhaald kunnen zijn ten opzichte van de
   </text>
   <text id="outdated-2">
-    Gebruik alstublieft 
-    <a href="/contribute/contribute.html">deze pagina</a> om te zien hoe u kan helpen met vertalingen en andere dingen.
+    Gebruik alstublieft
+    <a href="/contribute/contribute.html">deze pagina</a> om te bekijken hoe u 
+kan helpen met vertalingen en andere dingen.
   </text>
   <text id="notranslation">
     <strong>Waarschuwing: </strong>
-    Deze pagina is nog niet vertaald. Wat u hieronder ziet is de originele versie van de pagina. Gebruik alstublieft  <a href="/contribute/contribute.html">deze pagina</a> om te zien hoe u kan helpen met vertalingen en andere dingen.
+    Deze pagina is nog niet vertaald. Wat u hieronder ziet is de originele versie 
+van de pagina. Gebruik alstublieft 
+    <a href="/contribute/contribute.html">deze pagina</a> om te zien hoe u kan 
+helpen met vertalingen en andere dingen.
   </text>
     <text id="under-construction">
-    <strong>Waarschuwing: </strong>Er wordt aan deze pagina gewerkt. <strong>Verspreid deze pagina niet verder</strong> en doe geen poging tot vertalen omdat de inhoud aan verandering onderhevig is.
+    <strong>Waarschuwing: </strong>Aan deze pagina wordt gewerkt. <strong>Verspreid</strong> deze 
+alstublieft niet en probeer haar ook niet te vertalen omdat de inhoud aan verandering onderhevig is.
   </text>
-    <text id="project-complete">Dit project is succesvol beëindigd. Deze pagina's worden hier bewaard voor archiefdoeleinden.  </text>
+    <text id="project-complete">Dit project is succesvol afgerond. Deze pagina's 
+worden hier bewaard voor archiefdoeleinden.</text>
   
   
   <!-- Menu, Navigation, Buttons -->
-  <text id="fsfe/about">Over</text>
+  <text id="fsfe/about">Over ons</text>
   <text id="fsfe/projects">Ons werk</text>
   <text id="fsfe/campaigns">Campagnes</text>
   <text id="fsfe/help">Doe mee!</text>
@@ -63,8 +90,8 @@
   <text id="support/order">Winkel</text>
   <text id="support/thankgnus">Donoren</text>
   <text id="fellowship/fellowship">Fellowship</text>
-  <text id="fellowship/login">Login</text>
-  <text id="fellowship/join">Meedoen</text>
+  <text id="fellowship/login">Inloggen</text>
+  <text id="fellowship/join">Deelnemen</text>
   <text id="fellowship/card">Kaart</text>
   <text id="fellowship/faq">Veelgestelde vragen</text>
   <text id="campaigns/dfd">Document Vrijheidsdag</text>
@@ -72,61 +99,62 @@
   <text id="campaigns/pdf">PDF-lezers</text>
   <text id="campaigns/ayc">Vraag het uw kandidaten</text>
   <text id="campaigns/drm">DRM.info</text>
-  <text id="news/news">Laatste Nieuws</text>
-  <text id="news/events">Aankomende Evenementen</text>
+  <text id="news/news">Laatste nieuws</text>
+  <text id="news/events">Komende evenementen</text>
   <text id="news/press">Perskamer</text>
   <text id="news/nl">Nieuwsbrieven</text>
   <text id="news/planet">Planet blogs</text>
   <text id="ftf/legal">Juridische steun</text>
-  <text id="ftf/services">Diensten en machtigingen</text>
+  <text id="ftf/services">Diensten en fiduciair</text>
   <text id="ftf/doc">Documentatie</text>
-  <text id="ftf/network">Juridisch Netwerk</text>
+  <text id="ftf/network">Juridisch netwerk</text>
   <text id="ftf/conference">Conferenties</text>
-  <text id="ftf/contact">Contact opnemen met het FSFE Juridisch Team</text>
+  <text id="ftf/contact">Contact opnemen met FSFE's juridische team</text>
   <text id="fs/fs">Vrije Software</text>
-  <text id="fs/basics">Vrije Software Basis</text>
+  <text id="fs/basics">Vrije Software basis</text>
   <text id="fs/def">Definitie</text>
-  <text id="fs/soc">Vrije Samenleving</text>
+  <text id="fs/soc">Vrije samenleving</text>
   <text id="fs/edu">Educatie</text>
   <text id="fs/buz">Bedrijfsleven</text>
-  <text id="community/discuss">Vrije Software Discussies</text>
+  <text id="community/discuss">Vrije Softwarediscussies</text>
   
-  <text id="motto-fsfs">Vrije Software, Vrije Samenleving!</text>
-  <text id="motto-fellowship">Doe mee met de FSFE-gemeenschap!</text>
-  <text id="learn-more">Meer weten</text>
+  <text id="motto-fsfs">Vrije Software, Vrije samenleving!</text>
+  <text id="motto-fellowship">Neem deel aan FSFE’s gemeenschap!</text>
+  <text id="learn-more">Meer leren</text>
   <text id="press">Pers</text>
   <text id="newsletter">Nieuwsbrief</text>
   
   <text id="go-to">Ga naar:</text>
   <text id="search">Zoek</text>
-  <text id="submit">Vind</text>
+  <text id="submit">Zoek</text>
   <text id="subscribe">Abonneer</text>
   <text id="email">e-mailadres</text>
   <text id="news">Nieuws</text>
-  <text id="receive-newsletter">Abonneer u op FSFE's maandelijkse nieuwsbrief</text>
-  <text id="subscribe-newsletter">Abonneren op de nieuwsbrief</text>
+  <text id="receive-newsletter">Neem een abonnement op FSFE's maandelijkse nieuwsbrief</text>
+  <text id="subscribe-newsletter">Neem een abonnement op de nieuwsbrief</text>
   <text id="events">Evenementen</text>
-  <text id="more">Lees verder</text>
+  <text id="more">Bekijk meer</text>
   <text id="morenews">Bekijk al het nieuws</text>
   <text id="moreevents">Bekijk alle evenementen</text>
   <text id="contact">Contact</text>
   <text id="team">Team</text>
   <text id="microblog">Microblog</text>
-  <text id="no-avatar">Geen Afbeelding</text>
+  <text id="no-avatar">Geen afbeelding</text>
 
-  <text id="change-lang">Taal veranderen</text>
+  <text id="change-lang">Verander taal</text>
   <text id="menu">Menu</text>
   <text id="content">Inhoud</text>
-  <text id="page-info">Pagina-info</text>
+  <text id="page-info">Pagina info</text>
   <text id="rootpage">Home</text>
   <text id="sitemap">Plattegrond</text>
-  <text id="go-top">Ga naar boven</text>
+  <text id="go-top">Ga naar naar boven</text>
   <text id="source">Broncode</text>
   <text id="contact-us">Contact opnemen</text>
   <text id="translate">Deze pagina vertalen?</text>
-  <text id="contribute-web">Bijdragen aan het Web team</text>
-  <text id="imprint">Colofon</text>
+  <text id="contribute-web">Meedoen met het webteam</text>
+  <text id="imprint">Impressum</text>
   <text id="privacy-policy">Privacybeleid</text>
+  <text id="transparency-commitment">Transparantiebelofte</text>
   <text id="tags">Tags</text>
 
 
@@ -140,61 +168,65 @@
 
   <!-- Petitions -->
   <text id="osig">Organisaties</text>
-  <text id="isig">Individuen</text>
-  <text id="bsig">Bedrijven</text>
+  <text id="isig">Privépersonen</text>
+  <text id="bsig">Bedrijfsleven</text>
   
   
   <!-- Sidebars -->
-  <text id="related-news">Verwant Nieuws</text>
+  <text id="related-news">Verwant nieuws</text>
   <text id="our-work">Ons werk</text>
   <text id="our-work-intro">
-    <p>Als non-gouvernementele organisatie zonder winstoogmerk werkt de Free Software Foundation Europe 
-aan het creëren van algemeen begrip en steun voor Vrije Software en Open Standaarden in de politiek, 
-het bedrijfsleven, de rechtelijke macht en de samenleving als geheel.</p>
+    <p>Als niet-gouvernementele organisatie zonder winstoogmerk 
+werkt Free Software Foundation Europe aan het creëren van algemeen begrip van en 
+steun voor Vrije Software en open standaarden in politiek, bedrijfsleven, 
+het recht en de samenleving als geheel.</p>
   </text>
   <text id="about-fsfe">Over FSFE</text>
   <text id="about-fsfe-intro">
     <p>
-      Free Software Foundation Europe is een organisatie zonder winstoogmerk die gebruikers in staat wil stellen om technologie te controleren.
+      Free Software Foundation Europe is een liefdadigheidsorganisatie die 
+gebruikers in staat stelt om technologie te controleren.
     </p>
     <p>
-Software is sterk verweven met alle aspecten van onze levens. Het is belangrijk dat deze technologie ons tot iets in staat stelt in plaats van ons te beperken. Vrije Software geeft iedereen het recht om software te gebruiken, te begrijpen, aan te passen en te delen. Deze rechten helpen het ondersteunen van andere fundamentele vrijheden zoals de vrijheid van meningsuiting, pers en privacy.</p>
+      In alle aspecten van onze levens is software sterk betrokken. Het is 
+belangrijk dat deze technologie ons versterkt in plaats van ons te beperken. 
+Vrije Software geeft iedereen het recht om software te gebruiken, te 
+begrijpen, aan te passen en te delen. Deze rechten helpen bij het steunen van 
+andere fundamentele rechten zoals vrijheid van meningsuiting, persvrijheid en 
+privacy.
+    </p>
   </text>
 
 
   <!-- Motivational texts for fellowship, support or donations -->
-  <text id="join">Meedoen</text>
+  <text id="join">Join</text>
   <text id="join-paragraph">
-    <p>Word een Fellow van de FSFE om ons werk mogelijk te maken en onze financiële onafhankelijkheid te verzekeren. Door deel te nemen aan de Fellowship wordt u een donerend, duurzaam lid van de FSFE - inclusief toegang tot onze infrastructuur.</p>
+    <p>Word een Fellow van de FSFE om ons in staat te stellen ons werk te doen en 
+onze financiële onafhankelijkheid zeker te stellen. Door deel te nemen aan de 
+Fellowship word u een donerend, duurzaam lid van de FSFE - inclusief 
+toegang tot onze infrastructuur.</p>
   </text>
-  <text id="join-fellowship">Deelnemen aan de Fellowship</text>
+  <text id="join-fellowship">Neem deel aan de Fellowship</text>
 
   <text id="support">Steun de FSFE</text>
   <text id="show-support">Laat uw steun zien!</text>
   <text id="show-support-paragraph">
-      <p>De FSFE heeft uw steun nodig om haar stem te kunnen laten horen! Iedere bijdrage telt!</p>
+      <p>FSFE heeft uw steun nodig om haar stem gehoord te krijgen! Iedere klik telt!</p>
   </text>
   <text id="support-fsfe">Ik steun de FSFE!</text>
 
-  <text id="donate">Doneren</text>
+  <text id="donate">Doneer</text>
   <text id="donate-paragraph">
     <p>
-De Free Software Foundation Europe is een non-gouvernementele organisatie zonder winstoogmerk. <a href="/work.html">Ons werk</a> wordt mogelijk gemaakt door een gemeenschap van 
+      De Free Software Foundation Europe is een niet-gouvernementele organisatie 
+zonder winstoogmerk. <a href="/work.html">Ons werk</a> wordt mogelijk gemaakt 
+door een gemeenschap van 
       <a href="/contribute/contribute.html">vrijwilligers</a>,
       <a href="/fellowship">Fellows</a> en
-      <a href="/donate/thankgnus.html">donoren</a>. Uw donaties zijn cruciaal voor onze kracht en autonomie. Zij stellen ons in staat om te blijven voor Vrije Software waar dat nodig is, en om een onafhankelijke stem te zijn.
+      <a href="/donate/thankgnus.html">donoren</a>. Uw donaties zijn cruciaal 
+voor onze kracht en autonomie. Zij stellen ons in staat om te blijven werken 
+voor Vrije Software waar dat nodig is en om een onafhankelijke stem te blijven.
     </p>
   </text>
-
-
-
-
-  
-
-  
-
-<!-- ALL QUOTES -->
-
   
 </textset>
-

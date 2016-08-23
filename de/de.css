@@ -1,0 +1,26 @@
+.box {
+  float: left;
+  padding: 0.5em 1.5em;
+  background: rgba(0, 54, 97, 0.05) none repeat scroll 0 0;
+  margin-bottom: 2em;
+}
+
+.box h2 {
+  background: rgba(0, 94, 225, 0.4) none repeat scroll 0 0;
+  color: #fff;
+  margin: -0.3em -0.9em 0.5em;
+  min-width: 0;
+  padding: 0.3em;
+}
+
+.box h2 a {
+  color: #fff;
+}
+
+table {
+  border-collapse: separate;
+}
+
+td {
+  padding: 5px 25px 5px 0;
+}

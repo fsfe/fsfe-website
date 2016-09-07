@@ -1,6 +1,6 @@
 
-BASEDIR ::= $(shell dirname $(PWD))
-TAGMAP ::= $(shell find $(BASEDIR) -name '*.xml' \
+BASEDIR := $(shell dirname $(PWD))
+TAGMAP := $(shell find $(BASEDIR) -name '*.xml' \
              | xargs ../build/source_globber.sh map_tags \
             )
 

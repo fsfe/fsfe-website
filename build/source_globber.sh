@@ -10,5 +10,5 @@ case "$command" in
   sourceglobs)   sourceglobs "$sourcesfile" ;;
   lang_sources)  lang_sources "$sourceglobfile" "$lang" ;;
   cast_refglobs) cast_refglobs "$globfile" "$reffile" ;;
-  *)             die "Urecognised command or no command given" ;;
+  *)             die "Unrecognised command or no command given" ;;
 esac

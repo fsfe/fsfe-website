@@ -52,3 +52,10 @@ d_month.en.xml: d_day.en.xml
 	grep -q '$(MONTH)' $@ || echo '$(MONTH)' >$@
 d_year.en.xml: d_month.en.xml
 	grep -q '$(YEAR)' $@ || echo '$(YEAR)' >$@
+
+.PHONY: SOURCEUPDATES
+SOURCEUPDATES: $(shell find ./ -name '*.sources')
+SOURCEREQS = $(shell ./build/source_globber.sh sourceglobs $@ |sed -r 's;$$;.??.xml;g')
+.SECONDEXPANSION:
+%.sources: $$(SOURCEREQS)
+	touch $@

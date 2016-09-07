@@ -2,13 +2,14 @@
 
 inc_stirrups=true
 [ -z "$inc_misc" ] && . "$basedir/build/misc.sh"
-[ -z "$inc_sources" ] && . "$basedir/build/sources.sh"
+# [ -z "$inc_sources" ] && . "$basedir/build/sources.sh"
 
 validate_caches(){
   # outdate / remove cache files if necessary
   # hook functions here as required
 
-  validate_tagmap  # hook from sources.sh
+  # validate_tagmap  # hook from sources.sh
+  true
 }
 
 dir_maker(){

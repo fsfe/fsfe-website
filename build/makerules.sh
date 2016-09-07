@@ -32,45 +32,6 @@ mes(){
   | tr '\n' ' '
 }
 
-glob_maker(){
-  # issue make rules for preglobbed sources files
-  sourcesfile="$1"
-
-  filedir="\${INPUTDIR}/${sourcesfile}"
-  filedir="${filedir%/*}"
-  shortbase="${sourcesfile##*/}"
-  shortbase="${shortbase%.sources}"
-
-  for lang in $(get_languages); do
-    globfile="${filedir}/._._${shortbase}.${lang}.sourceglobs"
-    refglobs="${filedir}/._._${shortbase}.${lang}.refglobs"
-    cat <<MakeEND
-$(mes "$globfile"): $(mes "\${INPUTDIR}/tagmap" "\${INPUTDIR}/$sourcesfile")
-	\${PGLOBBER} \${PROCFLAGS} lang_sources "\${INPUTDIR}/$sourcesfile" "$lang" >"$globfile"
-$(mes "$refglobs"): $(mes "$globfile")
-	\${PGLOBBER} \${PROCFLAGS} cast_refglobs "$globfile" "$refglobs"
-MakeEND
-  done
-}
-
-glob_makers(){
-  # generate make rules for globbing all .sources files
-  # within input tree
-  sourcefind -name '*.sources' \
-  | while read filepath; do
-    glob_maker "$filepath"
-  done 
-}
-
-glob_additions(){
-  printf "%s\n" "$@" \
-  | egrep '.+\.sources$' \
-  | xargs realpath \
-  | while read addition; do
-    glob_maker "${addition#$input/}"
-  done
-}
-
 xhtml_maker(){
   # generate make rules for building html files out of xhtml
   # account for included xml files and xsl rules
@@ -85,9 +46,6 @@ xhtml_maker(){
   shortbase="${shortname##*/}"
   processor="$(get_processor "$shortname")"
 
-  langglob="$filedir/._._${shortbase}.langglob"
-  cast_langglob "$shortname" "$langglob"
-
   [ -f "$shortname".rss.xsl ] && bool_rss=true || bool_rss=false
   [ -f "$shortname".ics.xsl ] && bool_ics=true || bool_ics=false
 
@@ -100,7 +58,7 @@ xhtml_maker(){
     bool_indexname=false
   fi
 
-  [ -f "${shortname}.sources" ] && bool_sourceinc=true || bool_sourceinc=false
+  [ -f "${shortname}.sources" ] && sourcesfile="${shortname}.sources" || unset sourcesfile
 
   # For speed considerations: avoid all disk I/O in this loop
   for lang in $(get_languages); do
@@ -116,23 +74,23 @@ xhtml_maker(){
 
     textsfile="$(get_textsfile "$lang")"
     fundraisingfile="$(get_fundraisingfile "$lang")"
-    $bool_sourceinc && sourceglobs="${filedir#./}/._._${shortbase}.${lang}.refglobs" || unset sourceglobs
+    # $bool_sourceinc && sourceglobs="${filedir#./}/._._${shortbase}.${lang}.refglobs" || unset sourceglobs
 
     cat <<MakeEND
 all: $(mes "$outfile" "$outlink")
-$(mes "$outfile"): $(mes "$depfile" "$processor" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" "$sourceglobs" "$langglob")
+$(mes "$outfile"): $(mes "$depfile" "$processor" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" "$sourcesfile")
 	\${PROCESSOR} \${PROCFLAGS} process_file "${infile}" "$(mio "$processor")" "$olang" >"$outfile"
 $(mes "$outlink"):
 	ln -sf "${outbase}" "${outlink}"
 MakeEND
     $bool_rss && cat<<MakeEND
 all: $(mes "$rssfile")
-$(mes "$rssfile"): $(mes "$depfile" "${shortname}.rss.xsl" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" "$sourceglobs")
+$(mes "$rssfile"): $(mes "$depfile" "${shortname}.rss.xsl" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" "$sourcesfile")
 	\${PROCESSOR} \${PROCFLAGS} process_file "${infile}" "$(mio "${shortname}.rss.xsl")" "$olang" >"$rssfile"
 MakeEND
     $bool_ics && cat<<MakeEND
 all: $(mes "$icsfile")
-$(mes "$icsfile"): $(mes "$depfile" "${shortname}.ics.xsl" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" "$sourceglobs")
+$(mes "$icsfile"): $(mes "$depfile" "${shortname}.ics.xsl" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" "$sourcesfile")
 	\${PROCESSOR} \${PROCFLAGS} process_file "${infile}" "$(mio "${shortname}.ics.xsl")" "$olang" >"$icsfile"
 MakeEND
     $bool_indexname && cat <<MakeEND
@@ -275,8 +233,8 @@ INPUTDIR = $input
 OUTPUTDIR = $output
 
 # cannot store find results in variable because it will result in too many arguments for the shell
-\${INPUTDIR}/tagmap: \$(shell find "$basedir" -name '*.[a-z][a-z].xml')
-	find "$basedir" -name '*.[a-z][a-z].xml' |xargs \${PGLOBBER} \${PROCFLAGS} map_tags >\${INPUTDIR}/tagmap
+# \${INPUTDIR}/tagmap: \$(shell find "$basedir" -name '*.[a-z][a-z].xml')
+# 	find "$basedir" -name '*.[a-z][a-z].xml' |xargs \${PGLOBBER} \${PROCFLAGS} map_tags >\${INPUTDIR}/tagmap
 MakeHead
 
   forcelog Make_globs;      Make_globs="$(logname Make_globs)"
@@ -287,9 +245,6 @@ MakeHead
 
   trap "trap - 0 2 3 6 9 15; killall \"${0##*/}\"" 0 2 3 6 9 15
 
-  [ "$regen_globs" = false -a -s "$Make_globs" ] && \
-     glob_additions "$@" >>"$Make_globs" \
-  || glob_makers >"$Make_globs" &
   [ "$regen_xslt" = false -a -s "$Make_xslt" ] && \
      xslt_additions "$@" >>"$Make_xslt" \
   || xslt_makers >"$Make_xslt" &
@@ -310,6 +265,6 @@ MakeHead
   wait
   trap - 0 2 3 6 9 15
 
-  cat "$Make_globs" "$Make_xslt" "$Make_copy" "$Make_sourcecopy"
+  cat "$Make_xslt" "$Make_copy" "$Make_sourcecopy"
 }
 

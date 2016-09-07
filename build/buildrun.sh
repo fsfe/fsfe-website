@@ -63,20 +63,25 @@ svn_build_into(){
     exit 0
   else
     logstatus SVNlatest <"$SVNchanges"
-    regen_globs=false
     regen_xhtml=false
     regen_xsldeps=false
     regen_copy=false
 
-    egrep -q '^[^UGR]... .*\.xml'   "$SVNchanges" && regen_globs=true
-    egrep -q '^[^A]... .*\.sources' "$SVNchanges" && regen_globs=true
-    egrep -q '^A... .*\.xhtml'      "$SVNchanges" && regen_globs=true
-    egrep -q '^[AD]... .*\.sources' "$SVNchanges" && regen_xhtml=true
-    egrep -q '^[^UGR]... .*\.xhtml' "$SVNchanges" && regen_xhtml=true
-    egrep -q '^A... .*\.xsl'        "$SVNchanges" && regen_xhtml=true
-    egrep -q '^[^A]... .*\.xsl'     "$SVNchanges" && regen_xsldeps=true
-    sed -r '/.*\.(xml|xsl|xhtml|sources)$/d;/Makefile$/d' "$SVNchanges" \
-    | egrep -q '^[^AUGR]... .*'                   && regen_copy=true
+    # What to do, if a certain file type gets added, deleted, modified
+    egrep -q '^[A]... .*\.xml'		"$SVNchanges" && true
+    egrep -q '^[D]... .*\.xml'		"$SVNchanges" && true
+    egrep -q '^[UGR]... .*\.xml'	"$SVNchanges" && true
+    egrep -q '^[A]... .*\.xhtml'	"$SVNchanges" && true
+    egrep -q '^[D]... .*\.xhtml'	"$SVNchanges" && regen_xhtml=true
+    egrep -q '^[UGR]... .*\.xhtml'	"$SVNchanges" && true
+    egrep -q '^[A]... .*\.sources'	"$SVNchanges" && regen_xhtml=true
+    egrep -q '^[D]... .*\.sources'	"$SVNchanges" && regen_xhtml=true
+    egrep -q '^[UGR]... .*\.sources'	"$SVNchanges" && true
+    egrep -q '^[A]... .*\.xsl'		"$SVNchanges" && regen_xhtml=true
+    egrep -q '^[D]... .*\.xsl'		"$SVNchanges" && regen_xhtml=true && regen_xsldeps=true
+    egrep -q '^[UGR]... .*\.xsl'	"$SVNchanges" && regen_xsldeps=true
+    egrep -v '.*(\.xml|\.xsl|\.xhtml|\.sources|Makefile)$' "$SVNchanges" \
+    | egrep -q '^[D]... .*' && regen_copy=true
 
     build_into $(sed -rn '/.*(Makefile|\.xml)$/d;s;^A... (.+)$;\1;p' "$SVNchanges")
   fi

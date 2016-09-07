@@ -11,7 +11,8 @@ validate_tagmap(){
 }
 
 map_tags(){
-  for xml in "$@"; do
+  grep -l '</tag>' "$@" \
+  | while read xml; do
     printf '%s ' "$xml"
     unicat "$xml" \
     | sed -rn ':a;N;$!ba
@@ -34,29 +35,15 @@ tagging_sourceglobs(){
   | while read line; do
     glob="${line%:\[*\]}"
     tags="$(printf %s "$line" |sed -r 's;^.+:\[(.*)\]$;\1;;s; ;+;g;s;,; ;g')"
- 
-    # Input file must match *all* tags from line definition.
-    # Build a sed expression, that performs conjunctive match
-    # at once, e.g. to match all of the tags 'spam', 'eggs',
-    # and 'bacon' the expression will have roughly the form 
-    # "/spam/{/eggs/{/bacon/{p}}}"
-  
-    match="$(printf '%s' "$glob" |sed -r 's;\*;.*;g;s;\?;.;g')"
-    matchline="s;^(${basedir}/${match}.*)\.[a-z]{2}\.xml .*$;\1;p"
-    for tag in $tags ; do
-      matchline="/ $tag( |$)/{${matchline}}"
-    done
 
-    if [ -z "$tags" ]; then
-      # save the i/o if tags are empty, i.e. always match
-      printf '%s \n' "$basedir/"${glob}*.[a-z][a-z].xml |sed -rn "$matchline"
-    elif [ -f "$basedir/tagmap" ]; then
-      sed -rn "$matchline" <"$basedir/tagmap"
-    else
-      map_tags "$basedir/"${glob}*.[a-z][a-z].xml \
-      | sed -rn "$matchline"
-    fi 
+    sourcefiles="$(printf '%s\n' "$basedir/"${glob}*.[a-z][a-z].xml)"
+    
+    for tag in $tags; do
+      sourcefiles="$(printf '%s\n' "$sourcefiles" |grep -Ff "$basedir/tools/tagmaps/${tag}.map")"
+    done
+    printf '%s\n' "$sourcefiles"
   done \
+  | sed -rn 's;^(.+).[a-z]{2}.xml$;\1;p' \
   | sort -u
 }
 

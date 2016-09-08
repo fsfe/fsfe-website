@@ -91,9 +91,13 @@ if [ -z "$inc_arguments" ]; then
   readonly tree="${tree:+$(realpath "$tree")}"
   readonly stagedir="${stagedir:+$(realpath "$stagedir")}"
   readonly basedir="${basedir:+$(realpath "$basedir")}"
-  readonly target="${target:+$(realpath "$target")}"
   readonly domain="${domain:-www.fsfe.org}"
   readonly command
+  if [ "$stagedir" != "$target" ] && printf %s "$target" |egrep -q '^.+@.+:(.+)?$'; then
+    readonly target
+  else 
+    readonly target="${target:+$(realpath "$target")}"
+  fi
   
   case "$command" in
     build_into)      [ -z "$target" ]      && die "Missing destination directory" ;;

@@ -1,6 +1,6 @@
 .PHONY: all
 
-all: subdirs localmenus date_today
+all: subdirs localmenus date_today SOURCEUPDATES
 
 # -----------------------------------------------------------------------------
 # Dive into subdirectories

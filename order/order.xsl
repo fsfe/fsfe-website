@@ -44,16 +44,25 @@
             <xsl:element name="h3">
               <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/name"/>
               <xsl:text> (</xsl:text>
-              <xsl:if test="@oldprice">
-                <xsl:element name="span">
-                  <xsl:attribute name="style">color: red; text-decoration: line-through;</xsl:attribute>
+              <xsl:choose>
+                <xsl:when test="@oldprice">
+                  <xsl:element name="span">
+                    <xsl:attribute name="style">text-decoration: line-through;</xsl:attribute>
+                    <xsl:text>€</xsl:text>
+                    <xsl:value-of select="@oldprice"/>
+                  </xsl:element>
+                  <xsl:text> </xsl:text>
+                  <xsl:element name="span">
+                    <xsl:attribute name="style">color: red;</xsl:attribute>
+                    <xsl:text>€</xsl:text>
+                    <xsl:value-of select="@price"/>
+                  </xsl:element>
+                </xsl:when>
+                <xsl:otherwise>
                   <xsl:text>€</xsl:text>
-                  <xsl:value-of select="@oldprice"/>
-                </xsl:element>
-                <xsl:text> </xsl:text>
-              </xls:if>
-              <xsl:text>€</xsl:text>
-              <xsl:value-of select="@price"/>
+                  <xsl:value-of select="@price"/>
+                </xsl:otherwise>
+              </xsl:choose>
               <xsl:text>)</xsl:text>
             </xsl:element>
 

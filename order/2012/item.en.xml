@@ -1,8 +1,53 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!-- Do not translate this file! -->
 
 <itemset>
+  <!-- item type="tshirt" id="tshirt-fsfs-yellow" price="18.00" date="2012-10-06">
+    <available size="S"/>
+    <image
+      small="2012/tshirt-fsfs-yellow-front-small.jpg"
+      large="2012/tshirt-fsfs-yellow-front-large.jpg"/>
+    <image
+      small="2012/tshirt-fsfs-yellow-back-small.jpg"
+      large="2012/tshirt-fsfs-yellow-back-large.jpg"/>
+  </item -->
+
+  <!-- item type="tshirt" id="tshirt-ilovefs-black" price="18.00" date="2012-10-06">
+    <available size="S"/>
+    <available size="M"/>
+    <available size="XL"/>
+    <image
+      small="2012/tshirt-ilovefs-black-front-small.jpg"
+      large="2012/tshirt-ilovefs-black-front-large.jpg"/>
+    <image
+      small="2012/tshirt-ilovefs-black-back-small.jpg"
+      large="2012/tshirt-ilovefs-black-back-large.jpg"/>
+  </item -->
+
+  <item type="girlie" id="girlie-hacking-black" price="18.00" date="2012-10-06">
+    <available size="S"/>
+    <available size="M"/>
+    <available size="L"/>
+    <available size="XL"/>
+    <image
+      small="2012/girlie-hacking-black-front-small.jpg"
+      large="2012/girlie-hacking-black-front-large.jpg"/>
+    <image
+      small="2012/girlie-hacking-black-back-small.jpg"
+      large="2012/girlie-hacking-black-back-large.jpg"/>
+  </item>
+
+  <item type="hooded" id="hoodie-plussy-black" price="35.00" date="2012-10-06">
+    <available size="S"/>
+    <image
+      small="2012/hoodie-plussy-black-front-small.jpg"
+      large="2012/hoodie-plussy-black-front-large.jpg"/>
+    <image
+      small="2012/hoodie-plussy-black-back-small.jpg"
+      large="2012/hoodie-plussy-black-back-large.jpg"/>
+  </item>
+
   <item type="other" id="pin-plussy-green" price="3.00" date="2012-10-06">
     <available size="#"/>
     <image

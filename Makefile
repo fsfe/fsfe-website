@@ -56,6 +56,9 @@ d_year.en.xml: d_month.en.xml
 .PHONY: SOURCEUPDATES
 SOURCEUPDATES: $(shell find ./ -name '*.sources')
 SOURCEREQS = $(shell ./build/source_globber.sh sourceglobs $@ |sed -r 's;$$;.??.xml;g')
+SOURCEDIRS = $(shell sed -rn 's;^(.*/)[^/]*:(\[\]|global)$$;\1;gp' $@)
 .SECONDEXPANSION:
 %.sources: $$(SOURCEREQS)
+	touch $@
+%.sources: $$(SOURCEDIRS)
 	touch $@

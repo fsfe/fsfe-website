@@ -2,85 +2,124 @@
 
 <html>
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <title>Software Livre na Educação - FSFE</title>
+    <title> FSFE - Software Livre na Educação</title>
   </head>
-  <body>
-    <p id="category"><a href="/work.html">O nosso trabalho</a></p>
+  <body class="article" microformats="h-entry">
+    
+    <p id="category">
+    <a href="/work.html">O que fazemos</a>
+    </p>
+    
     <h1>Software Livre na Educação</h1>
 
     <p id="introduction"> 
-      Promovemos ativamente o uso do Software Livre nas escolas e nas universidades, uma vez que incentiva a escolarização do entendimento sobre a formação do produto e salvaguarda os princípios científicos.
+      Promovemos activamente o uso de Software Livre nas escolas e nas universidades, 
+      uma vez que o Software Livre se baseia no método científico, promovendo a compreensão 
+      dos processos a par da utilização dos produtos.
     </p>
 
     <p>
-      Criamos uma <a
-        href="/activities/education/eduteam.html">Education Task Force</a> para centrar a atenção nestes esforços. A Education Task Force atua como um hub e trabalha no controlo da situação europeia. Participamos de eventos de Software Livre e ajudamos outras iniciativas para tornar a mudança possível. 
+      Logo na sua primeira Assembleia Geral, a FSFE identificou <a
+      href="http://fsfe.org/about/reports/es-2003">a educação como uma das 
+      mais importates áreas de intervenção</a>, para que os estudantes e os jovens 
+      em geral tenham a possibilidade de lidar com o conhecimento em vez de se ficarem 
+      pela mera aprendizagem de matérias. Consequentemente, criamos um <a href="/activities/education/eduteam.html">Grupo de Trabalho sobre o Software 
+      na Educação</a>, para gerir estes esforços. O GT funciona como um hub (centro de coordenação) 
+      e trabalha na monitorização da situação a nível europeu. Para tornar a mudança possível, 
+      participamos em eventos de Software Livre e ajudamos outras iniciativas. 
     </p>
 
     <p>
-      A equipa desenvolve atualmente uma guia de como implantar com sucesso o Software Livre nas escolas e nas universidades. Entre outros argumentos, aqui estão quatro dos principais benefícios:
+      Entre outros argumentos a favor do software Livre, apresentamos quatro dos principais benefícios que proporciona na educação:
     </p>
 
     <ul>
       <li>
-        <strong>Compartilhamento:</strong> Usar o Software Livre permite que as escolas ensinem as crianças a compartilhar e cooperar.
+        <strong>Sentido de partilha:</strong> Usar Software Livre nas escolas facilita a 
+        transmissão dos valores da partilha e da cooperação às crianças. 
       </li>
 
       <li>
-        <strong>Aprender a programar:</strong> A possibilidade/liberdade de mexer motiva as crianças a aprender mais.
+        <strong>Aprender a programar:</strong> A possibilidade/liberdade de mexer 
+        motiva as crianças a aprender mais.
       </li>
     
       <li>
-        <strong>Fácil de administrar:</strong> O Software Livre é estável, seguro e confiável. Ele oferece acesso irrestrito ao código-fonte, permitindo modificá-lo ou adaptá-lo às necessidades das escolas.
+        <strong>Fácil de trabalhar:</strong> O Software Livre é estável, 
+        seguro e fiável. E possibilita o acesso irrestrito ao código-fonte, 
+        permitindo a sua modificação ou a sua adaptação às necessidades das
+        escolas.
       </li>
 
       <li>
-        <strong>Licenças:</strong> Com o Software Livre, os professores podem dar uma cópia para cada aluno. Não há risco de induzir uma criança a usar uma cópia ilegal.
+        <strong>Licenças:</strong> Com o Software Livre, os professores podem 
+        dar uma cópia de cada programa a cada aluno, sem restrições legais. Não se pôe a 
+        questão de induzir as crianças a usarem cópias "piratas" (ilegais).
       </li>
     </ul>
 
-
-    <fetch-news /><h2 id="subpages">Navegação</h2>
-
-    <ul>
-      <li>
-        <h3><a href="/freesoftware/education/argumentation.html">Argumentação detalhada</a></h3>
-        <p>
-          Mais motivos para as escolas <a
-            href="/freesoftware/education/argumentation.html">utilizar o Software Livre</a> e <a
-            href="/activities/education/argumentation.html">dar preferência ao Software Livre nas escolas</a>.
-        </p>
-      </li>
-
-      <li>
-        <h3><a href="http://lists.gnu.org/mailman/listinfo/edu-eu">Lista de discussão de educação</a></h3>
-        <p>
-          Junte-se a discussão sobre Software Livre na educação.
-        </p>
-      </li>
-
-      <li>
-        <h3><a href="/activities/education/eduteam.html">Quem somos</a></h3>
-        <p>
-          Envolva-se na Educational Task Force.
-        </p>
-      </li>
-
-      <li>
-        <h3><a href="http://www.gnu.org/education">Página de educação do GNU</a></h3>
-        <p>
-          O <a href="/about/basics/gnuproject.html">Projeto GNU</a> também mantém uma página de informação sobre o Software Livre na educação. 
-        </p>
-      </li>
-    </ul>
+    <div id="news" class="section">
+      <h2>
+	<a class="rss-feed" href="/news/news.rss"><img src="/graphics/rss.png" alt="News RSS" title="news RSS feed" /></a>
+  <!-- remove identica? add twitter? <a class="ical" href="http://www.twitter.com/fsfe"><img src="/graphics/identica.png" alt="twitter" title="follow FSFE on twitteridenti.ca"/></a> -->
+	
+	<a href="/news/news.html"><news-label /></a>
+	
+      </h2>
+      
+      <!-- this element fetches all news items which have the relevant country tag -->
+      <country-news />
+	
+    </div><!--end #news-->    
+  
+    <div id="events" class="section">
+      <h2>
+	<a class="rss-feed" href="/events/events.rss"><img src="/graphics/rss.png" alt="Events RSS" title="events RSS feed" /></a>
+	<a class="ical" href="webcal://fsfe.org/events/events.ics"><img src="/graphics/ical.png" alt="iCal" title="FSFE events as iCal feed" /></a>
+	
+	<a href="/events/events.html"><events-label /></a>
+	
+      </h2>
+  
+      <!-- this element fetches all event items which have the relevant country tag -->
+      <country-events />
+  
+    </div><!--end #events-->
+    
   </body>
 
-  <timestamp>$Date: 2010-10-11 02:15:46 +0200 (lun. 11 oct. 2010) $ $Author: guest-pcgaldo $</timestamp>
-  <translator>pcgaldo</translator>
-</html><!--
+<sidebar news="ilovefs" promo="about-fsfe">
+    <div id="related-content">
+	<h3>Informação adicional</h3>
+    <ul>
+      <li><a href="/freesoftware/education/argumentation.html">Software Livre nas escolas porquê?</a></li>
+      <li><a href="/activities/education/edu-related-content.html">Resumo de toda a informação do âmbito da educação</a></li>
+          <li><a href="http://www.gnu.org/education">Página da educação do GNU</a></li>
+          <li><a href="https://wiki.fsfe.org/Education">Páginas de educação no nosso Wiki</a></li>
+          <li><a href="http://blogs.fsfe.org/guido/category/education/">Notícias sobre formação em Software Livre</a></li>
+        </ul>
+     
+        <h3>Campanhas em curso</h3>
+         <ul>
+          <li><a href="//documentfreedom.org">Dia da Liberdade Documental!</a></li>
+          <li><a href="/campaigns/nledu/">Desbloquear a educação nos Países Baixos (Holanda)</a></li>
+        </ul>
+
+        <h3>Envolver-se</h3>
+		    <ul>
+          <li><a href="https://lists.gnu.org/mailman/listinfo/edu-eu">Junte-se à nossa lista de endereços para discussão</a></li>
+          <li><a href="/about/printable/">Divulgue os nossos folhetos</a></li>
+          <li><a href="http://l.fsfe.org/edutask">Execute uma tarefa</a></li>
+          <li><a href="mailto:edu-team@fsfeurope.org">Contacte-nos</a></li>
+			
+        </ul>
+    </div>
+</sidebar>
+
+  <timestamp>$Date: 2016-04-07 23:21:23 +0200 (Thu, 07 Apr 2016) $ $Author: guido $</timestamp>
+</html>
+<!--
 Local Variables: ***
 mode: xml ***
 End: ***
 -->
-

@@ -98,13 +98,8 @@ auto_sources(){
   sourcesfile="$1"
   lang="$2"
 
-  globfile="$(echo "$sourcesfile" |sed -r 's;(^|.*/)([^/]+).sources$;\1._._\2.'"$lang"'.sourceglobs;')"
-
-  if [ -e "$globfile" ];then
-    cat "$globfile"
-  else
-    list_sources "$sourcesfile" "$lang"
-  fi | while read source; do
+  list_sources "$sourcesfile" "$lang" \
+  | while read source; do
     printf '\n### filename="%s" ###\n%s' "$source" "$(include_xml "$source")" 
   done \
   | sed -r ':X; N; $!bX; s;\n### (filename="[^\n"]+") ###\n[^<]*(<![^>]+>[^<]*)*(<[^ ]+ );\2\3\1 ;g'
@@ -118,31 +113,9 @@ lang_sources(){
 }
 
 cast_refglobs(){
-  globfile="$1"
-  reffile="$2"
-
-  read globsize refsize <<-x
-	$(stat --printf=\ %s "$globfile" "$reffile" 2>/dev/null)
-	x
-
-  if [ "$globsize" != "$refsize" ]; then  # quick pre check
-    cp "$globfile" "$reffile"
-  elif [ "$globsize" -gt 0 ] && diff -q "$globfile" "$reffile" >/dev/null; then
-    incfile="$(cat "$globfile" |xargs -d\\n ls -t |sed -n '1p')"
-    [ "$incfile" -nt "$reffile" ] && touch "$reffile" || true
-  elif [ "$globsize" -gt 0 ]; then  # files passed pre check, but are different anyway
-    cp "$globfile" "$reffile"
-  fi
+  true
 }
 
 cast_langglob(){
-  shortname="$1"
-  langglob="$2"
-
-  langsources="$(printf %s\\n "${shortname}".*.xhtml)"
-  if [ -e "$langglob" ] && printf %s "$langsources" |diff -q - "$langglob" >/dev/null; then
-    true
-  else
-    printf %s "$langsources" >"$langglob"
-  fi
+  true
 }

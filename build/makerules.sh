@@ -28,8 +28,7 @@ mes(){
   # make escape... escape a filename for make syntax
   # possibly not complete
   mio "$@" \
-  | sed -r 's;([ #]);\\\1;g' \
-  | tr '\n' ' '
+  | sed -zr 's;[ #];\\&;g; s;\n; ;g'
 }
 
 xhtml_maker(){
@@ -63,7 +62,7 @@ xhtml_maker(){
   # For speed considerations: avoid all disk I/O in this loop
   for lang in $(get_languages); do
     infile="${shortname}.${lang}.xhtml"
-    [ -e "$infile" ] && depfile="$infile" || depfile="${shortname}.${olang}.xhtml" 
+    depfile="${shortname}.*.xhtml"
 
     infile="$(mio "$infile")"
     outbase="${shortbase}.${lang}.html"

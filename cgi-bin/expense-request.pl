@@ -28,11 +28,11 @@ my %names = (
   "fellowship" => "Local Fellowship Group",
   "albers" => "Erik Albers",
   "oberg" => "Jonas Öberg",
-  "gollowitzer" => "Martin Gollowitzer",
   "kirschner" => "Matthias Kirschner",
   "mehl" => "Max Mehl",
   "mueller" => "Reinhard Müller",
   "rubini" => "Alessandro Rubini",
+  "lohmus" => "Heiki Lohmus",
   "sliwinski" => "Ulrike Sliwinski",
   "malaja" => "Polina Malaja",
 );

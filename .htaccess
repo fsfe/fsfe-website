@@ -6,6 +6,9 @@ RewriteRule ^graphics/fsfeurope.ico /graphics/fsfe.ico [redirect=permanent]
 
 ## === SHORT URLs ===
 
+# Translators redirect
+RewriteRule ^translate /contribute/translators/ [redirect=permanent]
+
 # AskYourCandidates redirect
 RewriteRule ^campaigns/ayc(.*) /campaigns/askyourcandidates$1 [redirect=permanent]
 

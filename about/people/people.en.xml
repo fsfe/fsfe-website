@@ -463,9 +463,10 @@
     <avatar>/about/reiter/reiter-avatar.jpg</avatar>
   </person>
 
-  <person id="repentinus" avatar="yes" association-member="yes" teams="ga, translation-coordinators">
+  <person id="repentinus" avatar="yes" association-member="yes" teams="ga, translation-coordinators, council">
     <name>Heiki Lõhmus</name>
     <country>EE</country>
+    <function>vice-president/m</function>
     <function volunteers="translators">coordinator/m</function>
     <email>repentinus (at) fsfe (dot) org</email>
     <link>/about/repentinus/repentinus.html</link>
@@ -516,10 +517,9 @@
       <email>pichel (at) fsfe (dot) org</email>
   </person>
   
-    <person id="rubini" avatar="yes" association-member="yes" teams="ga, council">
+    <person id="rubini" avatar="yes" association-member="yes" teams="ga">
     <name>Alessandro Rubini</name>
     <country>IT</country>
-    <function>vice-president/m</function>
     <email>rubini (at) fsfe (dot) org</email>
     <avatar>/about/rubini/rubini-avatar.jpg</avatar>
   </person>

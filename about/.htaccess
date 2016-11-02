@@ -8,3 +8,6 @@ RewriteRule ^oriordan - [G,L]
 # moved here from ../.htaccess because it was ignored there
 RewriteRule ^basics/gnuproject(.*) /freesoftware/basics/gnuproject$1 [redirect=permanent]   # FIXME
 
+RewriteRule     ^printable/printable(\.[a-z][a-z]\.html)$ /contribute/spreadtheword$1     [redirect=permanent]
+RewriteRule     ^printable/index(\.[a-z][a-z]\.html)$     /contribute/spreadtheword$1     [redirect=permanent]
+RewriteRule     ^printable/(printable|index)?$            /contribute/spreadtheword       [redirect=permanent]

@@ -30,10 +30,6 @@ RewriteRule	^15(/.*)?$		https://fsfe.org/campaigns/15years/15years$1 [redirect=p
 
 ## === MOVED PAGES ===
 
-RewriteRule	^about/printable/(printable|index)?$		/contribute/spreadtheword	[redirect=permanent]
-RewriteRule	^about/printable/printable(\.[a-z][a-z]\.html)$	/contribute/spreadtheword$1	[redirect=permanent]
-RewriteRule	^about/printable/index(\.[a-z][a-z]\.html)$	/contribute/spreadtheword$1	[redirect=permanent]
-
 # Redirections for IloveFS campaign
 RewriteRule ^campaigns/ilovefs/ilovefs(.*)html$ /campaigns/ilovefs/index$1html [redirect=permanent]
 RewriteRule ^campaigns/ilovefs((/?)|(/[^/]*).html)$ /campaigns/ilovefs/2016$1 [redirect=permanent] # UPDATE year

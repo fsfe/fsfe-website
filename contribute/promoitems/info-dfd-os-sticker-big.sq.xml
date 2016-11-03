@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="dfd-os-sticker-big">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Ngjitës për Standarde të Hapura (120x120mm)</name>
+    <description>
+     Ngjitësi "Standarde të Hapura" është për <a href="http://documentfreedom.org/">fushatën tonë Dita e Lirisë së Dokumenteve</a>. Robotët janë logoja e fushatës.
+    </description>
+    <type>Ngjitës</type>
+    <size>12 x 12 cm</size>
+    <context><a href="http://documentfreedom.org/">Dita e Lirisë së Dokumenteve</a></context>
+    <languages>
+		<a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_Protest_ROBOTS_120x120.pdf">Anglisht</a>
+    </languages>
+    <printed>
+		Anglisht
+    </printed>
+    <license>CC-BY-SA 4.0</license>
+    <author>Free Software Foundation Europe</author>
+    <source>
+		<a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_Protest_ROBOTS_120x120_sources.tar.gz">Anglisht</a>
+    </source> 
+    <printready></printready>
+  </info>
+
+</infoset>

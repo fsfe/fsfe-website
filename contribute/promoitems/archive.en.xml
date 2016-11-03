@@ -32,6 +32,11 @@ to every item in this file -->
     <item type="f-droid" id="f-droid-flyer" year="2014" order="">
  	<image
     imgsmall="/contribute/promopics/fya-flyer-en_thumb.png"/>
+  </item>
+  
+  <item type="f-droid" id="f-droid-poster" year="2014" order="2">
+ 	<image
+    imgsmall="/contribute/promopics/fya-poster_thumb.png"/>
   </item> 
   
   <!-- No Cloud -->
@@ -56,5 +61,27 @@ to every item in this file -->
  	<image
     imgsmall="/contribute/promopics/tdwyt-triangle-thumb.png"/>
   </item>   
+  
+  <!-- Document Freedom Day -->
+  <item type="dfd" id="dfd-os-sticker" year="2014" order="2">
+  <image
+    imgsmall="/contribute/promopics/dfd-protest-robots-stickers_thumb.png"/>
+  </item>
+  
+  <item type="dfd" id="dfd-os-sticker-big" year="2014" order="3">
+  <image
+    imgsmall="/contribute/promopics/dfd-protest-robots-stickers_thumb.png"/>
+  </item>
+
+  <item type="dfd" id="dfd-flyer" year="2015" order="5">
+  <image
+    imgsmall="/contribute/promopics/dfd-2015-a7-front-mu.png"/>
+  </item>
+  
+  <!-- I love Free Software -->
+  <item type="ilovefs" id="ilovefs-poster" year="2014" order="4">
+ 	<image
+    imgsmall="/contribute/promopics/ilovefs_poster_A1_thumb.png"/>
+  </item> 
 
 </itemset>

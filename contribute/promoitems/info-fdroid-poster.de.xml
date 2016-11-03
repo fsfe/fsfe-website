@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="f-droid-poster">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Befreien Sie Ihr Android - Poster</name>
+    <description>
+      Dieses Poster bewirbt unsere <a href="http://www.freeyourandroid.org">"Befreien Sie Ihr Android!"-Aktion</a>, für die es auch Flugblätter gibt.  Dieses Poster hat sich als wahrer Blickfang herausgestellt und zieht viele Menschen an, die sich für die Hintergründe dieser Aktion interessieren.  Wir empfehlen die Verwendung an Ständen und bei anderen öffentlichen Aktivitäten.
+    </description>
+    <type>Poster</type>
+    <size>A1</size>
+    <context><a href="http://www.freeyourandroid.org">Befreien Sie Ihr Android!</a></context>
+    
+<!-- everything below this line uses native language names for each language or technical abbreviations respectively, so there is no need to transalate it from here on -->
+    
+    <languages>
+	  <a href="http://download.fsfe.org/advocacy/promomaterial/FYA/FYA-poster/FYA_poster_DIN_A1_de.png">Deutsch</a>, 
+      <a href="http://download.fsfe.org/advocacy/promomaterial/FYA/FYA-poster/FYA_poster_DIN_A1_en_xl.png">English</a>,
+      <a href="http://download.fsfe.org/advocacy/promomaterial/FYA/FYA-poster/FYA_poster_DIN_A1_es.png">Español</a>,
+      <a href="http://download.fsfe.org/advocacy/promomaterial/FYA/FYA-poster/FYA_poster_DIN_A1_el.png">Ελληνικάk</a>,  
+      <a href="http://download.fsfe.org/advocacy/promomaterial/FYA/FYA-poster/FYA_poster_DIN_A1_fr.png">Français</a>
+    
+    </languages>
+    <printed>
+      English
+    </printed>
+    <license>CC-BY-SA 4.0</license>
+    <author>Free Software Foundation Europe</author>
+    <source>
+	  <a href="http://download.fsfe.org/advocacy/promomaterial/FYA/FYA-poster/" title="Free Your Android poster sources">FYA_poster_DIN_A1_* in downloads.fsfe.org</a>
+	</source> 
+    <printready></printready>
+  </info>
+
+</infoset>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="ilovefs-poster">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>I love Free Software - Poster</name>
+    <description>
+      Das Poster unserer <a href="/campaigns/ilovefs/ilovefs.en.html">"I love Free Software"-Aktion</a>.  Das Poster hat ein einprägsames Design und eine attraktive Farbgebung.
+    </description>
+    <type>Poster (für den Versand gefaltet)</type>
+    <size>A1 (59,4 x 84,1 cm)</size>
+    <context><a href="https://fsfe.org/campaigns/ilovefs/ilovefs.en.html">"I love Free Software"-Aktion</a></context>
+    <languages>
+      <a href="http://download.fsfe.org/advocacy/promomaterial/IloveFS/IloveFS-poster/ilovefs-poster-A1.en.pdf">Englisch</a>
+    </languages>
+    <printed>
+      Englisch
+    </printed>
+    <license>CC0</license>
+    <author>Markus Meier</author>
+    <source><a href="http://download.fsfe.org/advocacy/promomaterial/IloveFS/IloveFS-poster/">ilovefs-poster* in downloads.fsfe.org</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

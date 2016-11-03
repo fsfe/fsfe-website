@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="dfd-os-sticker-big">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Open standaarden-plakker (120x120mm)</name>
+    <description>
+     De "open standaarden"-plakkers als antwoord op onze <a href="http://documentfreedom.org/">Document Vrijheidsdag-campagne</a>. De robots zijn het logo van de campagne.
+    </description>
+    <type>Plakker</type>
+    <size>12 x 12 cm</size>
+    <context><a href="http://documentfreedom.org/">Document Vrijheidsdag</a></context>
+    <languages>
+		<a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_Protest_ROBOTS_120x120.pdf">Engels</a>
+    </languages>
+    <printed>
+		Engels
+    </printed>
+    <license>CC-BY-SA 4.0</license>
+    <author>Free Software Foundation Europe</author>
+    <source>
+		<a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_Protest_ROBOTS_120x120_sources.tar.gz">Engels</a>
+    </source> 
+    <printready></printready>
+  </info>
+
+</infoset>

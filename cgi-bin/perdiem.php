@@ -152,7 +152,7 @@ foreach ($days as &$day) {  // calculate for each day
   } // if day is used
 }
 
-$output .= "<tr><td><tr><td></td><td></td><td></td><td></td>";
+$output .= "<tr><td></td><td></td><td></td><td></td><td></td>";
 $output .= "<td><strong>Total per diem: " . $r_total . $cur . "</strong></td></tr></table>";
 
 //------------------------------------

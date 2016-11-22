@@ -9,6 +9,9 @@ RewriteRule ^graphics/fsfeurope.ico /graphics/fsfe.ico [redirect=permanent]
 # Translators redirect
 RewriteRule ^translate /contribute/translators/ [redirect=permanent]
 
+# Old supporter database
+RewriteRule ^support /join [redirect=permanent]
+
 # AskYourCandidates redirect
 RewriteRule ^campaigns/ayc(.*) /campaigns/askyourcandidates$1 [redirect=permanent]
 

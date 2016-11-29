@@ -101,6 +101,7 @@
     <avatar>/about/baillard/baillard-avatar.jpg</avatar>
   </person>
  
+<!--
     <person id="Cellini" avatar="no" teams="intern">
     <name>Cellini Bedi</name>
     <country>FR</country>
@@ -108,6 +109,7 @@
     <email>cellini (at) fsfe (dot) org</email>
     <employee>full/f</employee>
   </person>
+-->
 
   <person id="borchardt" avatar="yes" association-member="yes" teams="ga">
     <name>Jan-Christoph Borchardt</name>
@@ -202,11 +204,11 @@
     <avatar>/about/gerloff/gerloff-avatar.jpg</avatar>
   </person>
   
-    <person id="Olga" avatar="no" teams="intern">
+  <person id="gkotsopoulou" avatar="no" teams="intern">
     <name>Olga Gkotsopoulou</name>
     <country>EL</country>
     <function>intern/f</function>
-    <email>olga_gk(at) fsfe (dot) org</email>
+    <email>olga_gk (at) fsfe (dot) org</email>
     <employee>full/f</employee>
   </person>
 
@@ -537,6 +539,14 @@
     <email>sandklef (at) fsfeurope (dot) org</email>
     <link>/about/sandklef/sandklef.html</link>
     <avatar>/about/sandklef/sandklef-avatar.jpg</avatar>
+  </person>
+  
+  <person id="sanjurjo" avatar="no" teams="intern">
+    <name>Fernando Sanjurjo</name>
+    <country>ES</country>
+    <function>intern/m</function>
+    <email>fersp (at) fsfe (dot) org</email>
+    <employee>full/f</employee>
   </person>
 
   <person id="schiessle" avatar="yes" teams="ga, de">

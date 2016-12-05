@@ -19,9 +19,9 @@
     <xsl:variable name="start">
       <xsl:value-of select="translate (@start, '-', '')" />
     </xsl:variable>
-    
+
     <xsl:variable name="end">
-      <xsl:value-of select="concat(substring(@end,1,4),substring(@end,6,2),substring(@end,9,2)+1)" />
+      <xsl:value-of select="translate (@end, '-', '')" />
     </xsl:variable>
     
     <xsl:variable name="link">
@@ -42,7 +42,9 @@
     <xsl:call-template name="nl" />
 
     <xsl:text>DTSTART;VALUE=DATE:</xsl:text><xsl:value-of select="$start" /><xsl:call-template name="nl" />
-    <xsl:text>DTEND;VALUE=DATE:</xsl:text><xsl:value-of select="$end" /><xsl:call-template name="nl" />
+    <xsl:if test="not($start = $end)">
+      <xsl:text>DTEND;VALUE=DATE:</xsl:text><xsl:value-of select="$end" /><xsl:call-template name="nl" />
+    </xsl:if>
     
     <xsl:text>URL:</xsl:text>
     <xsl:choose>

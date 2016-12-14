@@ -132,3 +132,8 @@ RewriteRule ^activities/ftf/legal-network-policy\.(.*)html /activities/ftf/ln-ru
 RewriteRule ^about/bako(.*) /about/team [redirect=permanent]
 RewriteRule ^about/polvani(.*) /about/team [redirect=permanent]
 RewriteRule ^about/tuke(.*) /about/team [redirect=permanent]
+
+# This recipie makes sure that permanent redirects are not cached
+# indefinitely, but re-validated every 10 minutes.
+Header append Cache-Control s-maxage=600 "expr=%{REQUEST_STATUS} == 301"
+Header append Cache-Control max-age=600 "expr=%{REQUEST_STATUS} == 301"

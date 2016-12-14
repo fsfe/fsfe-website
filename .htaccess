@@ -135,5 +135,6 @@ RewriteRule ^about/tuke(.*) /about/team [redirect=permanent]
 
 # This recipie makes sure that permanent redirects are not cached
 # indefinitely, but re-validated every 10 minutes.
-Header append Cache-Control s-maxage=600 "expr=%{REQUEST_STATUS} == 301"
-Header append Cache-Control max-age=600 "expr=%{REQUEST_STATUS} == 301"
+# NOTE: Enable this when we get an Apache 2.4 :-/
+#Header append Cache-Control s-maxage=600 "expr=%{REQUEST_STATUS} == 301"
+#Header append Cache-Control max-age=600 "expr=%{REQUEST_STATUS} == 301"

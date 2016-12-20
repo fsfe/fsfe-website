@@ -21,6 +21,11 @@ please contact fellowship@fsfeurope.org
  
 Thanks,
 your website
+--boundary
+Content-Type: text/plain; charset=utf-8
+Content-Disposition: attachment; filename="wikievent.txt"
+
+<?=$wiki?>
 --boundary 
 Content-Type: application/xml; charset=utf-8 
 Content-Disposition: attachment; filename="event.xml" 

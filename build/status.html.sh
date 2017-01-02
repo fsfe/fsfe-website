@@ -169,7 +169,7 @@ label  {
     )
 
     <h2>SVN changes</h2>$(
-    if [ ${start_time} -lt ${t_svnupdate} ]; then
+    if [ ${start_time} -le ${t_svnupdate} ]; then
       web_tab SVN_tab "at $(timestamp ${t_svnupdate})" "<pre>$(htmlcat SVNlatest)</pre>" checked
     else
       web_tab SVN_tab "Unconditional build, changes ignored" ""

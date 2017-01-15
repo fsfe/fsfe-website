@@ -3,10 +3,32 @@
 <html>
   <head>
     <title>Artikuj Tregtarë – FSFE</title>
+    
+    <style type="text/css">
+    div#toc {
+      float: right;
+      clear: right;
+      border: solid 1px;
+      margin: .5em;
+      background: rgb(240,240,240);
+      width: 30%;
+    }
+    </style>
   </head>
 
   <body class="toplevel">
     <h1>Artikuj Tregtarë</h1>
+    
+    <div id="toc">
+      <p style="text-indent:1em;">Available merchandise:</p>
+      <ul style="margin-bottom: 1em;">
+        <li><a href="#tshirt">Bluza</a></li>
+        <li><a href="#girlie">Bluza për Femra</a></li>
+        <li><a href="#hooded">Bluza me Kapuç</a></li>
+        <li><a href="#baby-clothes">Për Foshnja</a></li>
+        <li><a href="#other">Artikuj të Tjerë</a></li>
+      </ul>
+    </div>
 
     <p class="p-summary">
       Shpaloseni dashurinë tuaj për Software-in e Lirë duke përdorur
@@ -15,25 +37,27 @@
       për rritjen e ndërgjegjësimit brenda bashkësisë suaj vendore, 
       dhe çdo shitje ndihmon financimin e projekteve kritike të FSFE-së.
     </p>
+    
+    <p style="clear:both;"></p>
 
     <form action="/cgi-bin/weborder.pl" method="post" class="item-grid">
-      <h2>Bluza</h2>
+      <h2 id="tshirt">Bluza</h2>
  
       <dynamic-content type="tshirt"/>
 
-      <h2>Bluza për Femra</h2>
+      <h2 id="girlie">Bluza për Femra</h2>
  
       <dynamic-content type="girlie"/>
 
-      <h2>Bluza me Kapuç</h2>
+      <h2 id="hooded">Bluza me Kapuç</h2>
  
       <dynamic-content type="hooded"/>
 
-      <h2>Për Foshnja</h2>
+      <h2 id="baby-clothes">Për Foshnja</h2>
  
       <dynamic-content type="baby-clothes"/>
 
-      <h2 id="other-items">Artikuj të Tjerë</h2>
+      <h2 id="other">Artikuj të Tjerë</h2>
 
       <dynamic-content type="other"/>
 

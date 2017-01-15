@@ -3,10 +3,32 @@
 <html>
   <head>
     <title>Handelswaar – FSFE</title>
+    
+    <style type="text/css">
+    div#toc {
+      float: right;
+      clear: right;
+      border: solid 1px;
+      margin: .5em;
+      background: rgb(240,240,240);
+      width: 30%;
+    }
+    </style>
   </head>
 
   <body class="toplevel">
     <h1>Handelswaar</h1>
+    
+    <div id="toc">
+      <p style="text-indent:1em;">Available merchandise:</p>
+      <ul style="margin-bottom: 1em;">
+        <li><a href="#tshirt">T-Shirts</a></li>
+        <li><a href="#girlie">T-Shirts voor vrouwen</a></li>
+        <li><a href="#hooded">Shirts met kap (hoodies)</a></li>
+        <li><a href="#baby-clothes">Babykleding</a></li>
+        <li><a href="#other">Andere items</a></li>
+      </ul>
+    </div>
 
     <p class="p-summary">
     Toon uw liefde voor Vrije Software door de promotie-artikelen hieronder te
@@ -14,25 +36,27 @@
       manier om het bewustzijn in uw lokle gemeenschap te vergroten en iedere
       verkoop helpt om cruciale FSFE-projecten te financieren.
     </p>
+    
+    <p style="clear:both;"></p>
 
     <form action="/cgi-bin/weborder.pl" method="post" class="item-grid">
-      <h2>T-Shirts</h2>
+      <h2 id="tshirt">T-Shirts</h2>
 
       <dynamic-content type="tshirt"/>
 
-      <h2>T-Shirts voor vrouwen</h2>
+      <h2 id="girlie">T-Shirts voor vrouwen</h2>
 
       <dynamic-content type="girlie"/>
 
-      <h2>Shirts met kap (hoodies)</h2>
+      <h2 id="hooded">Shirts met kap (hoodies)</h2>
 
       <dynamic-content type="hooded"/>
 
-      <h2>Babykleding</h2>
+      <h2 id="baby-clothes">Babykleding</h2>
 
       <dynamic-content type="baby-clothes"/>
 
-      <h2 id="other-items">Andere items</h2>
+      <h2 id="other">Andere items</h2>
 
       <dynamic-content type="other"/>
 

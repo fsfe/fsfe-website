@@ -3,10 +3,32 @@
 <html>
   <head>
     <title>Merchandise – FSFE</title>
+    
+    <style type="text/css">
+    div#toc {
+      float: right;
+      clear: right;
+      border: solid 1px;
+      margin: .5em;
+      background: rgb(240,240,240);
+      width: 30%;
+    }
+    </style>
   </head>
 
   <body class="toplevel">
     <h1>Merchandise</h1>
+    
+    <div id="toc">
+      <p style="text-indent:1em;">Available merchandise:</p>
+      <ul style="margin-bottom: 1em;">
+        <li><a href="#tshirt">T-shirts</a></li>
+        <li><a href="#girlie">T-shirts til kvinder</a></li>
+        <li><a href="#hooded">Hættetrøjer</a></li>
+        <li><a href="#baby-clothes">Babytøj</a></li>
+        <li><a href="#other">Andre varer</a></li>
+      </ul>
+    </div>
 
     <p class="p-summary">
       Vis at du elsker fri software ved at anvende og iklæde dig de neden for 
@@ -14,25 +36,27 @@
       skabe opmærksomhed inden for dit lokale fællesskab, og hvert salg giver 
       øknomiske midler til vigtige FSFE-projekter.
     </p>
+    
+    <p style="clear:both;"></p>
 
     <form action="/cgi-bin/weborder.pl" method="post" class="item-grid">
-      <h2>T-shirts</h2>
+      <h2 id="tshirt">T-shirts</h2>
 
       <dynamic-content type="tshirt"/>
 
-      <h2>T-shirts til kvinder</h2>
+      <h2 id="girlie">T-shirts til kvinder</h2>
 
       <dynamic-content type="girlie"/>
 
-      <h2>Hættetrøjer</h2>
+      <h2 id="hooded">Hættetrøjer</h2>
 
       <dynamic-content type="hooded"/>
 
-      <h2>Babytøj</h2>
+      <h2 id="baby-clothes">Babytøj</h2>
 
       <dynamic-content type="baby-clothes"/>
 
-      <h2 id="other-items">Andre varer</h2>
+      <h2 id="other">Andre varer</h2>
 
       <dynamic-content type="other"/>
 

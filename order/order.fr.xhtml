@@ -3,10 +3,32 @@
 <html>
   <head>
     <title>Boutique – FSFE</title>
+    
+    <style type="text/css">
+    div#toc {
+      float: right;
+      clear: right;
+      border: solid 1px;
+      margin: .5em;
+      background: rgb(240,240,240);
+      width: 30%;
+    }
+    </style>
   </head>
 
   <body class="toplevel">
     <h1>La boutique de la FSFE</h1>
+    
+    <div id="toc">
+      <p style="text-indent:1em;">Available merchandise:</p>
+      <ul style="margin-bottom: 1em;">
+        <li><a href="#tshirt">T-Shirts</a></li>
+        <li><a href="#girlie">T-Shirts femme</a></li>
+        <li><a href="#hooded">Sweatshirts à capuche</a></li>
+        <li><a href="#baby-clothes">Vêtements pour bébés</a></li>
+        <li><a href="#other">Autres objets</a></li>
+      </ul>
+    </div>
 
     <p class="p-summary">
       Affichez votre amour pour le Logiciel Libre et montrez le en arborant l'un
@@ -15,25 +37,27 @@
       plus chaque achat d'articles contribue au financement des projets soutenus
       par la FSFE.
     </p>
+    
+    <p style="clear:both;"></p>
 
     <form action="/cgi-bin/weborder.pl" method="post" class="item-grid">
-      <h2>T-Shirts</h2>
+      <h2 id="tshirt">T-Shirts</h2>
 
       <dynamic-content type="tshirt"/>
 
-      <h2>T-Shirts femme</h2>
+      <h2 id="girlie">T-Shirts femme</h2>
 
       <dynamic-content type="girlie"/>
 
-      <h2>Sweatshirts à capuche</h2>
+      <h2 id="hooded">Sweatshirts à capuche</h2>
 
       <dynamic-content type="hooded"/>
 
-      <h2>Vêtements pour bébés</h2>
+      <h2 id="baby-clothes">Vêtements pour bébés</h2>
 
       <dynamic-content type="baby-clothes"/>
 
-      <h2 id="other-items">Autres objets</h2>
+      <h2 id="other">Autres objets</h2>
 
       <dynamic-content type="other"/>
 

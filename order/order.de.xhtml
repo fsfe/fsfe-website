@@ -3,10 +3,32 @@
 <html>
   <head>
     <title>Fanartikel – FSFE</title>
+    
+    <style type="text/css">
+    div#toc {
+      float: right;
+      clear: right;
+      border: solid 1px;
+      margin: .5em;
+      background: rgb(240,240,240);
+      width: 30%;
+    }
+    </style>
   </head>
 
   <body class="toplevel">
     <h1>Fanartikel</h1>
+    
+    <div id="toc">
+      <p style="text-indent:1em;">Available merchandise:</p>
+      <ul style="margin-bottom: 1em;">
+        <li><a href="#tshirt">T-Shirts</a></li>
+        <li><a href="#girlie">Damen-T-Shirts</a></li>
+        <li><a href="#hooded">Kapuzenshirts</a></li>
+        <li><a href="#baby-clothes">Babykleidung</a></li>
+        <li><a href="#other">Andere Artikel</a></li>
+      </ul>
+    </div>
 
     <p class="p-summary">
       Zeigen Sie, dass Sie ein Fan von Freier Software sind, indem Sie die unten
@@ -15,25 +37,27 @@
       Bewusstsein zu bringen, und mit jedem Kauf unterstützen Sie wichtige
       Projekte der FSFE.
     </p>
+    
+    <p style="clear:both;"></p>
 
     <form action="/cgi-bin/weborder.pl" method="post" class="item-grid">
-      <h2>T-Shirts</h2>
+      <h2 id="tshirt">T-Shirts</h2>
  
       <dynamic-content type="tshirt"/>
 
-      <h2>Damen-T-Shirts</h2>
+      <h2 id="girlie">Damen-T-Shirts</h2>
  
       <dynamic-content type="girlie"/>
 
-      <h2>Kapuzenshirts</h2>
+      <h2 id="hooded">Kapuzenshirts</h2>
  
       <dynamic-content type="hooded"/>
 
-      <h2>Babykleidung</h2>
+      <h2 id="baby-clothes">Babykleidung</h2>
  
       <dynamic-content type="baby-clothes"/>
 
-      <h2>Andere Artikel</h2>
+      <h2 id="other">Andere Artikel</h2>
 
       <dynamic-content type="other"/>
 

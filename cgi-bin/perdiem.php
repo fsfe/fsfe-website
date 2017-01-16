@@ -42,6 +42,13 @@ if ($home === 'de') {
   $c_l = 0.35;
   $c_d = 0.35;
   $c_flat = 0.15;
+} elseif ($home === 'other') {
+  $home_other = explode("/", $_POST['home_other']);
+  $cur = " " . $home_other[0];
+  $c_b = $home_other[1];
+  $c_l = $home_other[2];
+  $c_d = $home_other[3];
+  $c_flat = $home_other[4];
 }
 
 

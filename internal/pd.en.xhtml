@@ -12,6 +12,7 @@
       }
       label {
         font-weight: normal;
+        margin-left: 5px;
       }
     </style>
   </head>
@@ -39,12 +40,13 @@
       <!-- if you add new countries, the respective settings have to be set in PHP file -->
       <input type="radio" id="home-de" name="home" value="de" checked="checked" /><label for="home-de"> Germany</label>
       <input type="radio" id="home-se" name="home" value="se" /><label for="home-se"> Sweden</label><br />
+      <input type="radio" id="home-other" name="home" value="other" />Other <input type="text" name="home_other" placeholder="€/0.2/0.4/0.4/0" /><label>(Other: currency and percentage rates: currency/breakfast/lunch/dinner/flat (e.g. "€/0.2/0.4/0.4/0" for Germany). If <em>Other</em> is selected, you'll have to set the values in step 2 manually)</label>
       
       <h2>2. Select the destination country</h2>
       <!-- you can add new countries. For the individual amounts, set value="CC=$travel/$full,[...]" -->
       <input type="radio" id="dest-de" name="dest" value="de=12/24,se=292.5/585" checked="checked" /><label for="dest-de"> Germany</label>
       <input type="radio" id="dest-be" name="dest" value="de=28/41,se=315.5/631" /><label for="dest-be"> Belgium</label><br />
-      <input type="radio" id="dest-other" name="dest" value="other" />Other <input type="text" name="dest_other" placeholder="12/24" /><label>(per diem travel/full (e.g. "12/24" for Germany -> Germany))</label>
+      <input type="radio" id="dest-other" name="dest" value="other" />Other <input type="text" name="dest_other" placeholder="12/24" /><label>(Other: per diem travel/full (e.g. "12/24" for Germany -> Germany))</label>
       
       <h2>3. Which meal did you pay yourself?</h2>
       <table class="table table-striped">

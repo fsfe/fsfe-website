@@ -21,6 +21,8 @@ forcelog(){
   [ "$(logname "$name")" = "/dev/null" ] \
   && forcedlog="$forcedlog\n${name}=$(tempfile -p w3bld -s $$)"
 }
+
+[ -z "$USER" ] && USER="$(whoami)"
 trap "trap - 0 2 3 6 9 15; find \"${TMPDIR:-/tmp}/\" -maxdepth 1 -user \"$USER\" -name \"w3bld*$$\" -delete" 0 2 3 6 9 15
 
 logstatus(){

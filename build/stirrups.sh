@@ -35,7 +35,7 @@ build_manifest(){
 
   sed -nr 's;\\ ; ;g;
            s;\\#;#;g;
-           s;\$\{OUTPUTDIR\}/([^:]+) :.*;\1;p'
+           s;\$\{OUTPUTDIR\}/([^:]+):.*;\1;p'
 }
 
 remove_orphans(){

@@ -17,9 +17,9 @@ mio(){
   # by replacing in and out pathes with make variables.
   for each in "$@"; do
     case "$each" in
-      "$input"/*)  echo "\${INPUTDIR}/${each#$input/}" ;;
-      "$output"/*) echo "\${OUTPUTDIR}/${each#$output/}" ;;
-      *) echo "$each" ;;
+      "$input"/*)  printf '${INPUTDIR}/%s\n' "${each#${input}/}" ;;
+      "$output"/*) printf '${OUTPUTDIR}/%s\n' "${each#${output}/}" ;;
+      *) printf %s\\n "$each" ;;
     esac
   done
 }
@@ -28,7 +28,8 @@ mes(){
   # make escape... escape a filename for make syntax
   # possibly not complete
   mio "$@" \
-  | sed -zr 's;[ #];\\&;g; s;\n; ;g'
+  | sed -r ':X; $bY; N; bX; :Y;
+            s;[ #];\\&;g; s;\n; ;g'
 }
 
 xhtml_maker(){

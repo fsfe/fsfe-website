@@ -1,5 +1,23 @@
 #!/bin/sh
 
+# Check dependencies
+deperrors=''
+for depend in realpath rsync xsltproc xmllint sed find egrep grep wc make tee date iconv; do
+  if ! which "$depend" >/dev/null 2>&1; then
+    deperrors="$depend $deperrors"
+  fi
+done
+if [ -n "$deperrors" ]; then
+  printf '\033[1;31m'
+  cat <<-EOF
+	The build script depends on some other programs to function.
+	Not all of those programs could be located on your system.
+	Please use your package manager to install the following programs:
+	EOF
+  printf '\n\033[0;31m%s\n' "$deperrors"
+  exit 1
+fi >>/dev/stderr
+
 basedir="${0%/*}/.."
 [ -z "$inc_misc" ] && . "$basedir/build/misc.sh"
 readonly start_time="$(date +%s)"

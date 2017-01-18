@@ -48,25 +48,33 @@
             <xsl:element name="li">
               <xsl:element name="a">
                 <xsl:attribute name="href">pdfreaders.html</xsl:attribute>
-		The Readers
+                <xsl:call-template name="fsfe-gettext">
+                  <xsl:with-param name="id" select="'pdfreaders-head-readers'" />
+                </xsl:call-template>
               </xsl:element>
             </xsl:element>
             <xsl:element name="li">
               <xsl:element name="a">
                 <xsl:attribute name="href">os.html</xsl:attribute>
-                Open Standards
+                <xsl:call-template name="fsfe-gettext">
+                  <xsl:with-param name="id" select="'pdfreaders-head-standards'" />
+                </xsl:call-template>
               </xsl:element>
             </xsl:element>
             <xsl:element name="li">
               <xsl:element name="a">
                 <xsl:attribute name="href">graphics.html</xsl:attribute>
-                Graphics
+                <xsl:call-template name="fsfe-gettext">
+                  <xsl:with-param name="id" select="'pdfreaders-head-graphics'" />
+                </xsl:call-template>
               </xsl:element>
             </xsl:element>
             <xsl:element name="li">
               <xsl:element name="a">
                 <xsl:attribute name="href">about.html</xsl:attribute>
-                About
+                <xsl:call-template name="fsfe-gettext">
+                  <xsl:with-param name="id" select="'pdfreaders-head-about'" />
+                </xsl:call-template>
               </xsl:element>
             </xsl:element>
           </xsl:element>

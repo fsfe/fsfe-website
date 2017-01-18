@@ -24,7 +24,9 @@
           </xsl:element>
  
           <xsl:element name="span"> <xsl:attribute name="class">label platform</xsl:attribute>
-            Platforms:
+            <xsl:call-template name="fsfe-gettext">
+              <xsl:with-param name="id" select="'pdfreaders-body-platforms'" />
+            </xsl:call-template>
           </xsl:element>
           <xsl:for-each select="platform">
             <xsl:element name="a"> <xsl:attribute name="class">info platform</xsl:attribute>

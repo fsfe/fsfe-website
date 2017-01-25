@@ -3,7 +3,7 @@
 <!-- Do not translate this file! -->
 
 <itemset>
-  <item type="girlie" id="girlie-hacking-grey" price="20.00" date="2015-01-26">
+  <!-- item type="girlie" id="girlie-hacking-grey" price="20.00" date="2015-01-26">
     <available size="M"/>
     <available size="L"/>
     <available size="XL"/>
@@ -47,7 +47,7 @@
     <image
       small="2015/hoodie-plussy-blue-back-small.jpg"
       large="2015/hoodie-plussy-blue-back-large.jpg"/>
-  </item>
+  </item -->
 
   <item type="baby-clothes" id="romper-fork-white" price="20.00" date="2015-09-11">
     <available size="0-3m"/>
@@ -75,7 +75,7 @@
       large="2015/mug-configurable-white-large.jpg"/>
   </item -->
 
-  <item type="tshirt" id="tshirt-nocloud-burgundy" price="20.00" date="2015-10-23">
+  <!-- item type="tshirt" id="tshirt-nocloud-burgundy" price="20.00" date="2015-10-23">
     <available size="S"/>
     <image
       small="2015/tshirt-nocloud-burgundy-front-small.jpg"
@@ -93,5 +93,5 @@
     <image
       small="2015/tshirt-ilovefs-blue-front-small.jpg"
       large="2015/tshirt-ilovefs-blue-front-large.jpg"/>
-  </item>
+  </item -->
 </itemset>

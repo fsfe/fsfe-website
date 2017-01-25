@@ -14,7 +14,7 @@
       large="2016/tshirt-ilovefs-darkblue-front-large.jpg"/>
   </item>
 
-  <item type="girlie" id="girlie-ilovefs-darkblue" price="20.00" date="2016-01-21">
+  <!-- item type="girlie" id="girlie-ilovefs-darkblue" price="20.00" date="2016-01-21">
     <available size="S"/>
     <available size="M"/>
     <available size="L"/>
@@ -33,7 +33,7 @@
     <image
       small="2016/tshirt-gnupg-blue-back-small.jpg"
       large="2016/tshirt-gnupg-blue-back-large.jpg"/>
-  </item>
+  </item -->
 
   <item type="tshirt" id="tshirt-nocloud-black" price="20.00" date="2016-03-07">
     <available size="S"/>
@@ -92,7 +92,7 @@
       large="2016/tshirt-nocloud-blue-back-large.jpg"/>
   </item>
 
-  <item type="girlie" id="girlie-nocloud-black" price="20.00" date="2016-07-11">
+  <!-- item type="girlie" id="girlie-nocloud-black" price="20.00" date="2016-07-11">
     <available size="S"/>
     <available size="M"/>
     <available size="L"/>
@@ -103,7 +103,7 @@
     <image
       small="2016/girlie-nocloud-black-back-small.jpg"
       large="2016/girlie-nocloud-black-back-large.jpg"/>
-  </item>
+  </item -->
 
   <item type="other" id="bag-nocloud-black" price="6.00" date="2016-09-05">
     <available size="#"/>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html>
+<head>
+  <title>MS-OOXML – Panoramica – FSFE</title>
+</head>
+
+<body class="article" microformats="h-entry">
+
+ <p id="category">
+	 <a href="/work.html">Il nostro lavoro</a>
+	 </p>
+  
+<h1 class="p-name">MS-OOXML: un pseudo-standard che pretende di essere aperto</h1>
+
+<div class="e-content">
+
+<div id="introduction">
+
+<p>Sin dall'inizio del processo di standardizzazione di
+Office Open XML - OOXML (nel seguito MS-OOXML) di Microsoft, la FSFE ha espresso
+seri dubbi sul fatto che MS-OOXML possa essere considerato aperto o,
+addirittura, che possa essere considerato uno standard. La FSFE è stata la prima a sollevare il problema nella
+comunità e a guidare il movimento contro la standardizzazione di MS-OOXML,
+seguendo da vicino nel corso degli anni gli sviluppi rilevanti. Ma perché
+MS-OOXML non può ancora essere considerato uno
+<a href="https://fsfe.org/activities/os/os.en.html">Standard Aperto</a>,
+nonostante la sua approvazione da parte delle organizzazioni di standardizzazione internazionali?</p>
+ 
+ </div>
+
+<h2 id="What-is-microsoft's-ooxml">Cos'è OOXML di Microsoft?</h2>
+
+<p>MS-OOXML è un formato per i documenti da ufficio basato su XML e sviluppato da
+Microsoft. Esso descrive documenti per l'elaborazione di testo, fogli di calcolo, presentazioni
+grafici, diagrammi, forme geometriche, ed altro materiale grafico. MS-OOXML fu approvato
+nel 2006 da <a href="http://www.ecma-international.org/publications/standards/Ecma-376.htm">ECMA
+International</a>, un'organizzazione di standardizzazione internazionale privata,
+presumibilmente come Standard Aperto.</p>
+
+<p>Nel 2008, anche l'Organizzazione Internazionale per la Standardizzazione (ISO) approvò
+l'MS-OOXML, come uno Standard Aperto internazionale con la
+<a href="http://standards.iso.org/ittf/PubliclyAvailableStandards/index.html">ISO/IEC 29500</a>,
+dopo che Microsoft chiese un processo di standardizzazione con trattamento preferenziale.
+ISO approvò lo standard nonostante quest'ultimo fosse stato inizialmente rifiutato,
+a causa di numerose e giustificate preoccupazioni espresse dagli organi dei suoi membri nazionali.</p>
+ 
+ 
+<h2 id="how-did-we-get-there">Come siamo arrivati a questo punto?</h2>
+
+<p>Nel 2001 iniziò uno sforzo comune per creare un formato aperto di documento,
+con lo scopo di promuovere gli Standard Aperti e di provare a limitare il monopolio del software per ufficio di Microsoft.
+Il risultato di questo sforzo, che durò quattro anni, fu l'Open
+Document Format v1.0 (ODF), implementato con Software Libero. Esso fu approvato per la prima volta
+nel 2006 come uno <a href="https://www.oasis-open.org/">Standard OASIS</a>
+e successivamente, da <a href="http://www.iso.org/iso/home.html">ISO</a>/IEC JTC1
+come uno standard internazionale, sotto il codice ISO/IEC  26300:2006. Tale
+formato avrebbe potuto minacciare la posizione dominante di Microsoft nel mercato dei documenti,
+che a quei tempi utilizzava formati proprietari. Microsoft, temendo di perdere il suo potere,
+produsse il suo cosiddetto formato aperto attraverso un processo di approvazione ISO controverso.</p>
+
+
+<p>Come si può immaginare, il "nuovo" formato parve inutile al gruppo di lavoro
+ISO poiché esisteva già uno standard per i documenti: ODF; perciò ad una prima
+votazione il "nuovo" formato fu respinto. Ad ogni Microsoft, attraverso un processo più politico
+che tecnico, riuscì a fare in modo che la propria proposta ricevesse un trattamento preferenziale, sebbene
+parti specifiche della proposta continuassero ad incontrare resistenze da parte degli organi dei sui membri nazionali.
+Fu a questo punto, durante il processo di revisione, che fu messa sul tavolo la
+proposta di creare due sotto-standard di MS-OOXML, chiamati ISO 29500 Transitional
+a ISO 29500 Strict. Questo è ciò che accadde: la versione Strict fu accettata
+da ISO, mentre la versione Transitional fu a Microsoft, permettendole
+di escludere alcune funzioni di compatibilità e facilitando la conversione
+dai vecchi formati binari proprietari.</p>
+ 
+<p>Infine nel 2008 ISO diede la sua approvazione a MS-OOXML, e giustificò la propria decisione
+dichiarando che il mercato aveva bisogno di un altro standard per i documenti. È da notare
+che Microsoft, al tempo dell'approvazione, non aveva a disposizione alcuna
+versione di Microsoft Office che fosse conforme allo standard ISO/IEC
+che era appena stato approvato. Questa situazione si era creata a causa delle molteplici modifiche
+che fu necessario apportare alla versione originale dello standard affinché quest'ultimo potesse completare il processo di approvazione.</p>
+
+<p>Di conseguenza, sebbene i vecchi formati binari (.doc, ,xsl e .ppt)
+continuassero ad essere supportati da Microsoft, MS-OOXML diventò lo standard predefinito
+di tutti i documenti di Microsoft Office (.docx, .xslx e .pptx), a partire
+da Microsoft Office 2007. Nonostante ciò, MS-OOXML Transitional è
+l'unico sotto-standard utilizzato diffusamente e questo è un punto da tener presente: quei
+due sotto-standard portarono ad una situazione in cui esisteva uno standard, ed
+esisteva un altro formato, completamente implementato e diffuso ovunque, che
+possedeva solo uno status di specifica proprietaria non documentata. In altre
+parole, qualcosa che partì con l'intento di consentire un periodo di transizione
+fu trasformato in normalità, introducendo ostacoli ad ogni proposito di interoperabilità.</p>
+
+<p>In teoria Microsoft Office 2010 è in grado di: leggere documenti ECMA-376,
+leggere e scrivere documenti ISO/IEC 29500 Transitional, e leggere documenti
+ISO/IEC 29500 Strict. Sempre in teoria, Microsoft Office 2013 e Microsoft Office 2016
+sono anche in grado, in aggiunta, di leggere e scrivere documenti ISO/IEC 29500 Strict.
+In pratica però, in tutte queste versioni di Microsoft Office, l'opzione predefinita per i documenti è quella Transitional,
+così lo standard Strict è di fatto non usato, a meno che
+l'utente non modifichi manualmente l'impostazione predefinita.</p>
+
+ 
+<h2 id="is-ms-ooxml-a-true-open-standard">MS-OOXML è un vero Standard Aperto?</h2>
+ 
+<p>Sebbene molte persone assumano che formati ampiamente utilizzati
+possano essere identificati come Standard Aperti, fra questi ve ne sono un certo numero che
+non sono conformi ai criteri elencati nella
+<a href="https://fsfe.org/activities/os/def.html">definizione di Standard Aperto</a>.
+MS-OOXML è uno di quelli, i cosiddetti pseudo-standard.</p>
+
+<h3 id="dual-standards">Standard doppio</h3>
+
+<p>Una prima obiezione: MS-OOXML potrebbe essere giudicato non necessario. Gli ingegneri
+del software potrebbero usare, invece, Open Document Format (ODF), come un formato
+per software da ufficio meno complicato e che era già uno standard internazionale
+al tempo del processo di revisione di MS-OOXML; ODF è anche basato sulla tecnologia XML
+ed ha le stesse capacità teoriche. La stessa Microsoft
+è un membro di OASIS, l'organizzazione all'interno della quale lo standard ODF fu
+sviluppato e nella quale è tuttora mantenuto. Microsoft era a conoscenza
+dell'intero processo e fu invitata a partecipare, ma presumibilmente rifiutò di
+farlo, sebbene avesse potuto sottomettere ad OASIS le proprie richieste tecnologiche
+affinché fossero incluse in ODF. Il fatto di avere due standard sovrapposti per la stessa cosa
+crea solo carichi di lavoro ulteriori e confusione, e può essere deleterio per
+la concorrenza.</p>
+ 
+<h3 id="compatibility-and-interoperability">Compatibilità e interoperabilità</h3>
+ 
+<p>Presumibilmente uno dei principali vantaggi di MS-OOXML è la sua capacità di consentire
+la retro-compatibilità. In pratica, comunque, MS-OOXML sembra essere
+compatibile solo con i documenti Microsoft, mentre la sua interoperabilità
+con prodotti di altri venditori sembra che sia stata, da progetto, resa
+estremamente complicata. Ciò è legato anche al fatto che MS-OOXML fu inizialmente
+progettato per essere compatibile con i formati proprietari di Microsoft esistenti, a differenza
+di ODF che fu progettato con lo scopo di consentire l'interoperabilità documentale.</p>
+ 
+<h3 id="supporting-pre-existing-open-standards">Supporto ai pre-esistenti
+Standard Aperti</h3>
+ 
+<p>Ogni volta che fosse possibile ed applicabile gli standard dovrebbero essere progettati basandosi su
+precedenti sforzi di standardizzazione e non dovrebbero dipendere da tecnologie proprietarie o di un venditore specifico.
+Invece MS-OOXML ignora vari standard ed utilizza i propri
+formati specifici. Ciò getta un sostanziale carico di lavoro su
+qualunque venditore volesse implementare in modo completo MS-OOXML. Rimangono dubbi su come una
+qualunque terza parte possa mai implementarlo ugualmente bene, specialmente nel caso in cui uno
+standard arrivi a contare 6000 pagine di specifiche tradendo i suoi scopi
+<a href="https://fsfe.org/activities/os/minimalisticstandards.html">minimalisti</a>.</p> 
+ 
+<h3 id="proprietary-software">Estensioni proprietarie</h3>
+ 
+<p>Le estensioni proprietarie specifiche di un prodotto sono una tecnica ben nota
+nei processi di standardizzazione sfruttata dai venditori per esercitare abuso di monopolio. L'abuso fu la questione centrale della
+<a href="https://fsfe.org/activities/ms-vs-eu/timeline.html">decisione contro Microsoft della Commissione europea nel 2004</a>.
+Per questa ragione, è interpretazione comune che gli Standard Aperti non dovrebbero
+permettere tali estensioni proprietarie, e che tali tecniche di distorsione del mercato
+non dovrebbero essere possibili sulla base di Standard Aperti.</p>
+ 
+<h3 id="application-independence">Indipendenza applicativa</h3>
+<p>Gli standard non dovrebbero dipendere da certi sistemi operativi, ambienti
+o applicazioni, poiché l'indipendenza applicativa e di implementazione è una
+delle più importanti caratteristiche di ogni standard. Nonostante tutto,
+MS-OOXML include riferimenti a prodotti Microsoft particolari.</p>
+ 
+<h2 id="conclusion">Conclusioni</h2>
+
+<p>MS-OOXML Strict non raggiunge i propri scopi come Standard Aperto. Non è
+deliberatamente mai stato implementato, per consentire alla sua versione Transitional proprietaria
+di guadagnare terreno come il formato predefinito di MS Office e mantenere
+le persone vincolate nelle soluzioni proprietarie. <a href="https://fsfe.org/activities/os/os.html#what-can-you-do">Guarda cosa puoi fare a riguardo</a>.</p>
+
+</div>
+ </body>
+  
+<sidebar promo="our-work">
+<dynamic-content/>
+
+<h2>Indice</h2>
+<ul>
+<li>
+<a href="#what-is-microsoft's-ooxml">Cos'è OOXML di Microsoft?</a>
+</li>
+<li>
+<a href="#how-did-we-get-there">Come siamo arrivati a questo punto?</a>
+</li>
+<li>
+<a href="#is-ms-ooxml-a-true-open-standard">MS-OOXML è un vero Standard Aperto?</a>
+</li>
+<li style="padding-left:10px;">
+<a href="#dual-standards">Standard doppio</a>
+</li>
+<li style="padding-left:10px;">
+<a href="#compatibility-and-interoperability">Compatibilità ed interoperabilità</a>
+</li>
+<li style="padding-left:10px;">
+<a href="#supporting-pre-existing-open-standards">Supporto ai pre-esistenti Standard Aperti</a>
+</li>
+<li style="padding-left:10px;">
+<a href="#proprietary-extensions">Estensioni proprietarie</a>
+</li>
+<li style="padding-left:10px;">
+<a href="#application-independence">Indipendenza applicativa</a>
+</li>
+<li>
+<a href="#conclusion">Conclusioni</a>
+</li>
+</ul>     
+
+<h2>Letture di approfondimento</h2>
+
+<ul>
+	<li>
+		<a href="/activities/os/msooxml-interoperability.html">Informativa di FSFE sul contesto: l'interoperabilità soffre con MS-OOXML</a>
+	</li>
+	<li> 
+		<a href="/activities/os/msooxml-idiosyncrasies.html">Informativa di FSFE sul contesto: DIS-29500 disapprovato prima dell'uso?</a>
+	</li>
+	<li>
+		<a href="/activities/os/msooxml-questions.html">Sei domande agli enti nazionali di standardizzazione</a>
+	</li>
+</ul>
+
+<h2>Collegamenti esterni di interesse</h2>
+<ul>
+
+	<li> 
+		<a href="http://www.groklaw.net/articlebasic.php?story=20061208135621706">Articolo su Groklaw: Novell's "Danaergeschenk"</a>
+	</li> 
+	<li>
+		<a href="/activities/os/msooxml-questions-for-ms.html">Articolo su BBC: Domande a Microsoft sui formati aperti</a>
+	</li>
+	<li> 
+		<a href="/activities/os/msooxml-converter-hoax.html">Articolo su Heise.de: La bufala del convertitore</a>
+	</li>
+</ul>
+</sidebar>
+    <translator>Tarin Gamberini</translator>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

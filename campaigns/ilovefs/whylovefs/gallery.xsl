@@ -29,9 +29,9 @@
         <xsl:attribute name="class">captioned left</xsl:attribute>
         <xsl:attribute name="style">max-width: 300px; width: 40%;</xsl:attribute>
         <xsl:element name="a">
-          <xsl:attribute name="href">http://download.fsfe.org/campaigns/ilovefs/gallery/ilovefs-gallery-<xsl:value-of select="$num"/>.jpg</xsl:attribute>
+          <xsl:attribute name="href">https://download.fsfe.org/campaigns/ilovefs/gallery/ilovefs-gallery-<xsl:value-of select="$num"/>.jpg</xsl:attribute>
           <xsl:element name="img">
-            <xsl:attribute name="src">/campaigns/ilovefs/whylovefs/photos/gallery/ilovefs-gallery-thumb-<xsl:value-of select="$num"/>.jpg</xsl:attribute>
+            <xsl:attribute name="src">https://download.fsfe.org/campaigns/ilovefs/gallery/thumbs/ilovefs-gallery-thumb-<xsl:value-of select="$num"/>.jpg</xsl:attribute>
             <xsl:attribute name="alt">A picture of one or more Free Software loving persons</xsl:attribute>
             <xsl:attribute name="width">100%</xsl:attribute>
           </xsl:element> <!-- /img -->
@@ -43,9 +43,9 @@
         <xsl:attribute name="class">captioned right</xsl:attribute>
         <xsl:attribute name="style">max-width: 300px; width: 40%;</xsl:attribute>
         <xsl:element name="a">
-          <xsl:attribute name="href">http://download.fsfe.org/campaigns/ilovefs/gallery/ilovefs-gallery-<xsl:value-of select="$num+1"/>.jpg</xsl:attribute>
+          <xsl:attribute name="href">https://download.fsfe.org/campaigns/ilovefs/gallery/ilovefs-gallery-<xsl:value-of select="$num+1"/>.jpg</xsl:attribute>
           <xsl:element name="img">
-            <xsl:attribute name="src">/campaigns/ilovefs/whylovefs/photos/gallery/ilovefs-gallery-thumb-<xsl:value-of select="$num+1"/>.jpg</xsl:attribute>
+            <xsl:attribute name="src">https://download.fsfe.org/campaigns/ilovefs/gallery/thumbs/ilovefs-gallery-thumb-<xsl:value-of select="$num+1"/>.jpg</xsl:attribute>
             <xsl:attribute name="alt">A picture of one or more Free Software loving persons</xsl:attribute>
             <xsl:attribute name="width">100%</xsl:attribute>
           </xsl:element> <!-- /img -->

@@ -4,7 +4,7 @@
 
   <xsl:variable name="mode">
     <!-- here you can set the mode to switch between normal and IloveFS style -->
-    <xsl:value-of select="'valentine'" /> <!-- can be either 'normal' or 'valentine' -->
+    <xsl:value-of select="'normal'" /> <!-- can be either 'normal' or 'valentine' -->
   </xsl:variable>
 
   <xsl:template name="page-head"><xsl:element name="head">

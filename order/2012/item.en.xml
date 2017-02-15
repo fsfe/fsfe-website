@@ -3,10 +3,8 @@
 <!-- Do not translate this file! -->
 
 <itemset>
-  <!-- item type="tshirt" id="tshirt-ilovefs-black" price="10.00" oldprice="18.00" date="2012-10-06">
+  <item type="tshirt" id="tshirt-ilovefs-black" price="10.00" oldprice="18.00" date="2012-10-06">
     <available size="S"/>
-    <available size="M"/>
-    <available size="XL"/>
     <image
       small="2012/tshirt-ilovefs-black-front-small.jpg"
       large="2012/tshirt-ilovefs-black-front-large.jpg"/>
@@ -26,7 +24,6 @@
   </item>
 
   <item type="girlie" id="girlie-hacking-black" price="10.00" oldprice="18.00" date="2012-10-06">
-    <available size="S"/>
     <available size="XL"/>
     <image
       small="2012/girlie-hacking-black-front-small.jpg"
@@ -34,7 +31,7 @@
     <image
       small="2012/girlie-hacking-black-back-small.jpg"
       large="2012/girlie-hacking-black-back-large.jpg"/>
-  </item -->
+  </item>
 
   <item type="other" id="pin-plussy-green" price="3.00" date="2012-10-06">
     <available size="#"/>
@@ -43,20 +40,13 @@
       large="2012/pin-plussy-green-large.jpg"/>
   </item>
 
-  <!-- item type="other" id="magnetpin-plussy-green" price="3.00" date="2012-10-06">
-    <available size="#"/ -->
+  <item type="other" id="magnetpin-plussy-green" price="3.00" date="2012-10-06">
+    <available size="#"/>
     <!-- same picture as the non-magnet pin -->
-    <!-- image
+    <image
       small="2012/pin-plussy-green-small.jpg"
       large="2012/pin-plussy-green-large.jpg"/>
   </item>
-
-  <item type="other" id="cufflinks-plussy-green" price="8.00" date="2012-10-06">
-    <available size="#"/>
-    <image
-      small="2012/cufflinks-plussy-green-small.jpg"
-      large="2012/cufflinks-plussy-green-large.jpg"/>
-  </item -->
 
   <item type="other" id="pin-gnu-silver" price="10.00" date="2012-10-06">
     <available size="#"/>

@@ -3,7 +3,7 @@
 <!-- Do not translate this file! -->
 
 <itemset>
-  <!-- item type="tshirt" id="tshirt-fsfs-blue" price="10.00" oldprice="18.00" date="2010-02-08">
+  <item type="tshirt" id="tshirt-fsfs-blue" price="10.00" oldprice="18.00" date="2010-02-08">
     <available size="S"/>
     <image
       small="2010/tshirt-fsfs-blue-front-small.jpg"
@@ -31,7 +31,7 @@
     <image
       small="2010/tshirt-fsfs-red-back-small.jpg"
       large="2010/tshirt-fsfs-red-back-large.jpg"/>
-  </item -->
+  </item>
   
   <item type="other" id="pen-analogprinter-green" price="5.00" date="2010-02-08">
     <available size="#"/>

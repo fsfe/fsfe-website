@@ -3,8 +3,7 @@
 <!-- Do not translate this file! -->
 
 <itemset>
-  <!-- item type="girlie" id="girlie-hacking-grey" price="20.00" date="2015-01-26">
-    <available size="M"/>
+  <item type="girlie" id="girlie-hacking-grey" price="20.00" date="2015-01-26">
     <available size="L"/>
     <available size="XL"/>
     <image
@@ -17,7 +16,6 @@
 
   <item type="tshirt" id="tshirt-openstandards-khaki" price="20.00" date="2015-01-26">
     <available size="S"/>
-    <available size="M"/>
     <image
       small="2015/tshirt-openstandards-khaki-front-small.jpg"
       large="2015/tshirt-openstandards-khaki-front-large.jpg"/>
@@ -39,16 +37,6 @@
       large="2015/girlie-openstandards-blue-back-large.jpg"/>
   </item>
 
-  <item type="hooded" id="hoodie-plussy-blue" price="45.00" date="2015-01-26">
-    <available size="S"/>
-    <image
-      small="2015/hoodie-plussy-blue-front-small.jpg"
-      large="2015/hoodie-plussy-blue-front-large.jpg"/>
-    <image
-      small="2015/hoodie-plussy-blue-back-small.jpg"
-      large="2015/hoodie-plussy-blue-back-large.jpg"/>
-  </item>
-
   <item type="baby-clothes" id="romper-fork-white" price="20.00" date="2015-09-11">
     <available size="0-3m"/>
     <available size="3-6m"/>
@@ -61,31 +49,13 @@
 
   <item type="baby-clothes" id="romper-fork-natural" price="20.00" date="2015-09-11">
     <available size="0-3m"/>
-    <available size="3-6m"/>
     <available size="6-12m"/>
     <image
       small="2015/romper-fork-natural-small.jpg"
       large="2015/romper-fork-natural-large.jpg"/>
   </item>
 
-  <item type="other" id="mug-configurable-white" price="12.00" date="2015-10-09">
-    <available size="#"/>
-    <image
-      small="2015/mug-configurable-white-small.jpg"
-      large="2015/mug-configurable-white-large.jpg"/>
-  </item -->
-
-  <!-- item type="tshirt" id="tshirt-nocloud-burgundy" price="20.00" date="2015-10-23">
-    <available size="S"/>
-    <image
-      small="2015/tshirt-nocloud-burgundy-front-small.jpg"
-      large="2015/tshirt-nocloud-burgundy-front-large.jpg"/>
-    <image
-      small="2015/tshirt-nocloud-burgundy-back-small.jpg"
-      large="2015/tshirt-nocloud-burgundy-back-large.jpg"/>
-  </item -->
-
-  <!-- item type="tshirt" id="tshirt-ilovefs-blue" price="20.00" date="2015-10-17">
+  <item type="tshirt" id="tshirt-ilovefs-blue" price="20.00" date="2015-10-17">
     <available size="S"/>
     <available size="M"/>
     <available size="L"/>
@@ -93,5 +63,5 @@
     <image
       small="2015/tshirt-ilovefs-blue-front-small.jpg"
       large="2015/tshirt-ilovefs-blue-front-large.jpg"/>
-  </item -->
+  </item>
 </itemset>

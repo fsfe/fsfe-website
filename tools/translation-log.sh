@@ -37,6 +37,26 @@ outdir=$2
 
 
 # -----------------------------------------------------------------------------
+# Create a list of files
+# -----------------------------------------------------------------------------
+
+getlanguages(){
+    for i in index.*.xhtml;
+    do
+        echo $i|cut -d . -f 2
+    done|grep -xv en
+}
+
+languages="$(getlanguages)"
+> $infile
+for lang in $(getlanguages)
+do
+    find . -name '*.en.xhtml' -exec bash -c 'echo '$lang' $(dirname '{}'|xargs echo -n; echo -n /; basename {} .en.xhtml){.'$lang'.xhtml,.en.xhtml}' ';'
+    > ${infile}.$lang
+done >> $infile
+
+
+# -----------------------------------------------------------------------------
 # Create a separate file per language
 # -----------------------------------------------------------------------------
 
@@ -47,28 +67,22 @@ outdir=$2
 # Performance seems to be much better if we do it in 2 separate runs.
 # Otherwise, we would have to run the grep for each line of the file.
 
-# First run: missing translations
-sort "${infile}" \
-  | uniq \
-  | sed --expression='s/\.\///g' \
-  | grep --invert-match --file="tools/translation-ignore.txt" \
-  | while read language wantfile havefile; do
-  if [ ! -f "${wantfile}" ]; then
-    date="$(date --iso-8601 --reference=${havefile})"
-    echo "missing ${date} ${wantfile} NONE ${havefile}" >> "${infile}.${language}"
-  fi
-done
-
-# Second run: outdated translations
+# First: missing translations
+# Second: outdated translations
 sort "${infile}" \
   | uniq \
   | sed --expression='s/\.\///g' \
   | while read language wantfile havefile; do
-  if [ -f "${wantfile}" ]; then
-    date1="$(date --iso-8601 --reference=${wantfile})"
-    date2="$(date --iso-8601 --reference=${havefile})"
-    echo "outdated ${date2} ${wantfile} ${date1} ${havefile}" >> "${infile}.${language}"
-  fi
+    havedate="$(date --reference=${havefile} +%s)"
+    if [ ! -f "${wantfile}" ]; then
+      echo "missing ${havedate} ${wantfile} NONE ${havefile}" >> "${infile}.${language}"
+    else
+      date="$(date --reference=${wantfile} +%s)"
+      if [[ $date -lt $havedate ]]
+      then
+        echo "outdated ${havedate} ${wantfile} ${date} ${havefile}" >> "${infile}.${language}"
+      fi
+    fi
 done
 
 
@@ -139,14 +153,14 @@ for file in ${infile}.*; do
         echo "        <td>"
         echo "          <a href=\"${srcroot}/${wantfile}\">${wantfile}</a>"
         echo "        </td>"
-        echo "        <td align=\"center\">${date1}</td>"
+        echo "        <td align=\"center\">$( date +%d-%m-%Y -d @${date1} )</td>"
         echo "        <td>"
         echo "          <a href=\"${cvsroot}/${wantfile}\">[changelog]</a>"
         echo "        </td>"
         echo "        <td>"
         echo "          <a href=\"${srcroot}/${havefile}\">${havefile}</a>"
         echo "        </td>"
-        echo "        <td align=\"center\">${date2}</td>"
+        echo "        <td align=\"center\">$( date +%d-%m-%Y -d @${date2} )</td>"
         echo "        <td>"
         echo "          <a href=\"${cvsroot}/${havefile}\">[changelog]</a>"
         echo "        </td>"
@@ -157,7 +171,7 @@ for file in ${infile}.*; do
         echo "        <td>"
         echo "          <a href=\"${srcroot}/${havefile}\">${havefile}</a>"
         echo "        </td>"
-        echo "        <td align=\"center\">${date2}</td>"
+        echo "        <td align=\"center\">$( date +%d-%m-%Y -d @${date2} )</td>"
       fi
       echo "      </tr>"
     done
@@ -209,14 +223,14 @@ grep --no-filename "^outdated" ${infile}.* \
       echo "        <td>"
       echo "          <a href=\"${srcroot}/${wantfile}\">${wantfile}</a>"
       echo "        </td>"
-      echo "        <td align=\"center\">${date1}</td>"
+      echo "        <td align=\"center\">$( date +%d-%m-%Y -d @${date1})</td>"
       echo "        <td>"
       echo "          <a href=\"${cvsroot}/${wantfile}\">[changelog]</a>"
       echo "        </td>"
       echo "        <td>"
       echo "          <a href=\"${srcroot}/${havefile}\">${havefile}</a>"
       echo "        </td>"
-      echo "        <td align=\"center\">${date2}</td>"
+      echo "        <td align=\"center\">$( date +%d-%m-%Y -d @${date2})</td>"
       echo "        <td>"
       echo "          <a href=\"${cvsroot}/${havefile}\">[changelog]</a>"
       echo "        </td>"

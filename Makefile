@@ -6,11 +6,14 @@ all: subdirs localmenus date_today SOURCEUPDATES
 # Dive into subdirectories
 # -----------------------------------------------------------------------------
 
-SUBDIRS := $(shell find */* -name "Makefile" | xargs --max-args=1 dirname)
+SUBDIRS := $(shell find */* -name "Makefile" | xargs dirname)
 
 .PHONY: subdirs $(SUBDIRS)
 
 subdirs: $(SUBDIRS)
+
+# run jobs for tools/ only after events/ and news/ have been completed
+tools: | events news
 
 $(SUBDIRS):
 	$(MAKE) -k -C $@ || true
@@ -54,11 +57,13 @@ d_year.en.xml: d_month.en.xml
 	grep -q '$(YEAR)' $@ || echo '$(YEAR)' >$@
 
 .PHONY: SOURCEUPDATES
+
+# finish jobs in subdirs before updating .sources
+SOURCEUPDATES: | subdirs
+
 SOURCEUPDATES: $(shell find ./ -name '*.sources')
 SOURCEREQS = $(shell ./build/source_globber.sh sourceglobs $@ |sed -r 's;$$;.??.xml;g')
 SOURCEDIRS = $(shell sed -rn 's;^(.*/)[^/]*:(\[\]|global)$$;\1;gp' $@)
 .SECONDEXPANSION:
-%.sources: $$(SOURCEREQS)
-	touch $@
-%.sources: $$(SOURCEDIRS)
+%.sources: $$(SOURCEDIRS) $$(SOURCEREQS)
 	touch $@

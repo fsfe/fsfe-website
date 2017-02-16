@@ -63,7 +63,13 @@ SOURCEUPDATES: | subdirs
 
 SOURCEUPDATES: $(shell find ./ -name '*.sources')
 SOURCEREQS = $(shell ./build/source_globber.sh sourceglobs $@ |sed -r 's;$$;.??.xml;g')
-SOURCEDIRS = $(shell sed -rn 's;^(.*/)[^/]*:(\[\]|global)$$;\1;gp' $@)
+
+# use shell globbing to work around faulty globbing in gnu make
+SOURCEDIRS = $(shell sed -rn 's;^(.*/)[^/]*:(\[\]|global)$$;\1;gp' $@ \
+               | while read glob; do \
+                 printf '%s\n' $$glob; \
+               done \
+              )
 .SECONDEXPANSION:
 %.sources: $$(SOURCEDIRS) $$(SOURCEREQS)
 	touch $@

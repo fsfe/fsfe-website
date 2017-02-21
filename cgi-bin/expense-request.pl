@@ -72,7 +72,7 @@ my %names = (
 # );
 
 my %responsible = (
-  "ADMIN-TRAVEL" => "oberg",
+  "ADMIN-COORD" => "oberg",
   "ADMIN-GA" => "oberg",
   "ADMIN-TECH" => "oberg",
   "ADMIN-FUNDRAISING" => "oberg",
@@ -96,11 +96,10 @@ my %responsible = (
   "PERSONELL-OBERG" => "kirschner",
   "PERSONELL-MALAJA" => "oberg",
   "OFFICE-BERLIN" => "oberg",
-  "OFFICE-DUSSELDORF" => "oberg",
 );
 
 my %account = (
-  "ADMIN-TRAVEL" => "2503",
+  "ADMIN-COORD" => "2504",
   "ADMIN-GA" => "2505",
   "ADMIN-TECH" => "2506",
   "ADMIN-FUNDRAISING" => "2509",

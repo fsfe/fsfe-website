@@ -17,7 +17,7 @@ Below is the list of the information you gave.
  
 You find all other information in the xml file attached. It will be uploaded
 in the next 24 hours. If you like to withdraw your event or in case you like to change some information,
-please contact fellowship@fsfeurope.org
+please contact fcontact@fsfe.org
  
 Thanks,
 your website

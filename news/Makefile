@@ -1,32 +1,34 @@
-XSL_STYLESHEET := xhtml2xml.xsl
+.PHONY: all .FORCE
+.FORCE:
+all:
 
-# For a correct generation of the link, use full path from this directory
-FILES := ../news/*/*.xhtml ../projects/*/*.xhtml
+# -----------------------------------------------------------------------------
+# remove xml files where original xhtml does not exist anymore
+# -----------------------------------------------------------------------------
+# note the reversal of target <-> prerequisite relationship
+# make will execute thew command for all xhtml files (targets) that
+# do not exist, in doing so it will not make the target, but rather
+# remove the xml file that generated it
 
-# Trying to keep things readable
-ACTUAL_PREREQUISITE = ../$$(echo $* | sed -e 's,___,/,g').xhtml
-FIND_XHTML = ../$$(echo $$FILE | sed -e 's,___,/,g').xhtml
-TRANSFORM = xsltproc  --stringparam link $$(echo $$FILE | sed -e 's,\.\.,,' | sed -e 's,..\.xhtml,html,') $(XSL_STYLESHEET) $$FILE > $@
+REMOVALS := $(subst ___,/,$(patsubst ./generated_xml/%.xml,../%.xhtml,$(wildcard ./generated_xml/*.xml)))
+../%.xhtml:
+	rm generated_xml/$(subst /,___,$*).xml
 
-# Select files
-sources := $(shell grep -l "<html newsdate" $(FILES))
-all_xmls := $(notdir $(basename $(wildcard ./generated_xml/*.xml)))
+all: $(REMOVALS)
 
-# Create targets 
-first_step = $(subst /,___, $(subst ../,, $(sources)))
-too_xml := $(addprefix ./generated_xml/, $(first_step:.xhtml=.xml))
+# -----------------------------------------------------------------------------
+# build includable xml files from all xhtml files that contain news
+# -----------------------------------------------------------------------------
+XMLNAMES := $(shell find ../ -name '*.xhtml' \
+              | xargs grep -l "<html newsdate" \
+              | sed -r 's;/;___;g; s;^\.\.___(.+)\.xhtml$$;./generated_xml/\1.xml;;' \
+             )
 
+XMLSOURCE = ../$(subst ___,/,$*).xhtml
 
-.PHONY: all
-all: $(too_xml) remove_artifacts
+all: $(XMLNAMES)
 
-generated_xml/%.xml: $(sources)
-	FILE="$(ACTUAL_PREREQUISITE)"; if printf "%s" "$?" |grep -qF "$$FILE"; then $(TRANSFORM); fi
+.SECONDEXPANSION:
 
-# Remove xml files for files thas are no longer in CVS
-.PHONY: remove_artifacts
-remove_artifacts:
-	for FILE in $(all_xmls); do if [ ! -f $(FIND_XHTML) ]; then rm generated_xml/$$FILE.xml ; fi ; done
-
-
-
+generated_xml/%.xml: $$(XMLSOURCE) #xhtml2xml.xsl
+	xsltproc --stringparam link /$(subst ___,/,$(basename $*)).html xhtml2xml.xsl $< > $@

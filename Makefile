@@ -1,6 +1,6 @@
-.PHONY: all
-
-all: subdirs localmenus date_today SOURCEUPDATES
+.PHONY: all .FORCE
+.FORCE:
+all:
 
 # -----------------------------------------------------------------------------
 # Dive into subdirectories
@@ -8,61 +8,47 @@ all: subdirs localmenus date_today SOURCEUPDATES
 
 SUBDIRS := $(shell find */* -name "Makefile" | xargs dirname)
 
-.PHONY: subdirs $(SUBDIRS)
+$(SUBDIRS): .FORCE
+	$(MAKE) -j -k -C $@ || true
 
-subdirs: $(SUBDIRS)
-
-# run jobs for tools/ only after events/ and news/ have been completed
-tools: | events news
-
-$(SUBDIRS):
-	$(MAKE) -k -C $@ || true
+all: $(SUBDIRS)
 
 # -----------------------------------------------------------------------------
 # Handle local menus
 # -----------------------------------------------------------------------------
 
-HELPERFILE := menuhelper
-SELECT := '<localmenu.*</localmenu>'
-STYLESHEET := ./tools/buildmenu.xsl 
+MENUSOURCES := $(shell find -name '*.xhtml' |xargs grep -l '<localmenu.*</localmenu>' )
 
-FIND := ./\(.*/\)*\(.*\)\.\([a-z][a-z]\)\.xhtml:[ \t]*\(.*\)
-REPLACE := <menuitem language="\3"><dir>/\1</dir><link>\2.html</link>\4</menuitem>
+localmenuinfo.en.xml: ./tools/buildmenu.xsl $(MENUSOURCES)
+	{ printf '<localmenuset>'; \
+	  grep -E '<localmenu.*</localmenu>' $^ \
+          | sed -r 's;(.*/)?(.+)\.([a-z][a-z])\.xhtml:(.+);\
+                    <menuitem language="\3"><dir>/\1</dir><link>\2.html</link>\4</menuitem>;'; \
+	  printf '</localmenuset>'; \
+	} | xsltproc -o $@ $< -
 
-sources := $(shell grep -l -R --include='*.xhtml' $(SELECT) . )
+all: localmenuinfo.en.xml
 
-.PHONY: localmenus
+# -----------------------------------------------------------------------------
+# Timestamp files for regular jobs and XML inclusion in various places
+# -----------------------------------------------------------------------------
 
-localmenus: localmenuinfo.en.xml
-
-localmenuinfo.en.xml: $(sources) $(STYLESHEET)
-	echo \<localmenuset\> > $(HELPERFILE)
-	grep -R --include='*.xhtml' $(SELECT) .| sed -e 's,$(FIND),$(REPLACE),' >> $(HELPERFILE)
-	echo \</localmenuset\> >> $(HELPERFILE)
-	xsltproc -o $@ $(STYLESHEET) $(HELPERFILE) 
-	rm $(HELPERFILE)
-
-YEAR := <?xml version="1.0" encoding="utf-8"?><dateset><date year="$(shell date +%Y)" /></dateset> 
+YEAR  := <?xml version="1.0" encoding="utf-8"?><dateset><date year="$(shell date +%Y)" /></dateset> 
 MONTH := <?xml version="1.0" encoding="utf-8"?><dateset><date month="$(shell date +%Y-%m)" /></dateset> 
-DAY := <?xml version="1.0" encoding="utf-8"?><dateset><date day="$(shell date +%Y-%m-%d)" /></dateset> 
+DAY   := <?xml version="1.0" encoding="utf-8"?><dateset><date day="$(shell date +%Y-%m-%d)" /></dateset>
 
-.PHONY: date_today d_day.en.xml
-date_today: d_year.en.xml d_month.en.xml d_day.en.xml
+d_day.en.xml: $(if $(findstring   $(DAY),$(shell cat d_day.en.xml)),,.FORCE)
+	printf %s\\n   '$(DAY)' >$@
+d_month.en.xml: $(if $(findstring $(MONTH),$(shell cat d_month.en.xml)),,.FORCE)
+	printf %s\\n '$(MONTH)' >$@
+d_year.en.xml: $(if $(findstring  $(YEAR),$(shell cat d_year.en.xml)),,.FORCE)
+	printf %s\\n  '$(YEAR)' >$@
 
-d_day.en.xml:
-	grep -q '$(DAY)' $@ || echo '$(DAY)' >$@
-d_month.en.xml: d_day.en.xml
-	grep -q '$(MONTH)' $@ || echo '$(MONTH)' >$@
-d_year.en.xml: d_month.en.xml
-	grep -q '$(YEAR)' $@ || echo '$(YEAR)' >$@
+all: d_year.en.xml d_month.en.xml d_day.en.xml
 
-.PHONY: SOURCEUPDATES
-
-# finish jobs in subdirs before updating .sources
-SOURCEUPDATES: | subdirs
-
-SOURCEUPDATES: $(shell find ./ -name '*.sources')
-SOURCEREQS = $(shell ./build/source_globber.sh sourceglobs $@ |sed -r 's;$$;.??.xml;g')
+# -----------------------------------------------------------------------------
+# Update .sources files
+# -----------------------------------------------------------------------------
 
 # use shell globbing to work around faulty globbing in gnu make
 SOURCEDIRS = $(shell sed -rn 's;^(.*/)[^/]*:(\[\]|global)$$;\1;gp' $@ \
@@ -70,6 +56,41 @@ SOURCEDIRS = $(shell sed -rn 's;^(.*/)[^/]*:(\[\]|global)$$;\1;gp' $@ \
                  printf '%s\n' $$glob; \
                done \
               )
+SOURCEREQS = $(shell ./build/source_globber.sh sourceglobs $@ |sed -r 's;$$;.??.xml;g')
+
+all: $(shell find ./ -name '*.sources')
+
+# -----------------------------------------------------------------------------
+# generate tag maps
+# -----------------------------------------------------------------------------
+
+TAGMAP := $(shell find $(PWD) -name '*.xml' \
+             | xargs ./build/source_globber.sh map_tags \
+            )
+
+TAGNAMES := $(shell printf %s '$(TAGMAP)' \
+              | cut -d" " -f2- \
+              | tr ' ' '\n' \
+              | grep -vE '[\$%/:()]' \
+              | sort -u \
+              | xargs printf 'tools/tagmaps/%s.map ' \
+             )
+
+MAPREQS = $(shell printf %s '$(TAGMAP)' \
+            | sed -r 's;[^ ]+\...\.xml;\n&;g' \
+            | grep ' $*' \
+            | cut -d' ' -f1 \
+           )
+
+all: $(TAGNAMES)
+
+# -----------------------------------------------------------------------------
+# Second Expansion rules
+# -----------------------------------------------------------------------------
 .SECONDEXPANSION:
-%.sources: $$(SOURCEDIRS) $$(SOURCEREQS)
+
+%.sources: $$(SOURCEDIRS) $$(SOURCEREQS) | $(TAGNAMES)
 	touch $@
+
+tools/tagmaps/%.map: $$(MAPREQS) | $(SUBDIRS)
+	printf '%s\n' $^ > $@

@@ -17,7 +17,7 @@ build_into(){
 
   validate_caches
 
-  make -j $ncpu -C "$basedir" \
+  make -C "$basedir" \
   | t_logstatus premake
 
   dir_maker "$basedir" "$stagedir"

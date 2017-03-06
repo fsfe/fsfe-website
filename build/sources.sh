@@ -15,15 +15,43 @@ map_tags(){
   | while read xml; do
     printf '%s ' "$xml"
     unicat "$xml" \
-    | sed -rn ':a;N;$!ba
-             s;<!([^>]|<[^>]*>)*>;;g
-             s;[\n\t ]+; ;g; s; ?([</>]) ?;\1;g
-             tb;Tb;:b
-             s;.*<tags( [^>]+)?>[^<]*<tag( [^>]+)?>(.*)</tag>[^<]*</tags>.*;\3;;Tc
-             s; ;+;g
-             s;</tag>[^<]*<tag(\+[^>]+)?>; ;g;p;q
-             :c;a\
-             '
+    | sed -rn '# Normalise XML (strip comments, unify white-spaces)
+               :X; $bY; N; bX; :Y;
+               s;[\n\t ]+; ;g;
+               s; ?([</>]) ?;\1;g
+               s;<!([^>]|<[^>]*>)*>;;g
+
+               # Loop over <tags> section
+               s;.*<tags( [^>])?>(.+)</tags>.*;\2;
+               tK; b; :K;
+
+               # Collect new format tags
+               /<tag key="[^"]+"(\/>|>[^<]*<\/tag>)/{
+                 H; s;.*<tag key="([^"]+)"(/>|>[^<]*</tag>).*;\1;
+                 x; s;(.*)<tag key="([^"]+)"(/>|>[^<]*</tag>);\1;
+                 bK;
+               }
+
+               # Collect old format tags
+               /<tag( [^>]+)?>([^<]+)<\/tag>/{
+                 H; s;.*<tag( [^>]+)?>([^<]+)</tag>.*;\2;
+                 x; s;(.*)<tag( [^>]+)?>([^<]+)</tag>;\1;
+                 bK;
+               }
+
+               H;x;
+               # Loop end
+
+               # delete junk (non-tag content in the tags section)
+               s;\n+[^\n]*$;;
+
+               # normalise tagnames
+               y;ABCDEFGHIJKLMNOPQRSTUVWXYZ;abcdefghijklmnopqrstuvwxyz;
+               s;[-_+ /];;g
+
+               # put tags in one line and print
+               s;(\n|$); ;g; p;
+              '
   done
 }
 
@@ -34,7 +62,12 @@ tagging_sourceglobs(){
   [ -f "$sourcesfile" ] && grep ':\[.*\]$' "$sourcesfile" \
   | while read line; do
     glob="${line%:\[*\]}"
-    tags="$(printf %s "$line" |sed -r 's;^.+:\[(.*)\]$;\1;;s; ;+;g;s;,; ;g')"
+    tags="$(printf %s "$line" \
+            | sed -r 's;^.+:\[(.*)\]$;\1;;
+                      y;ABCDEFGHIJKLMNOPQRSTUVWXYZ;abcdefghijklmnopqrstuvwxyz;
+                      s;[-_+ /];;g
+                      s;,; ;g
+                     ')"
 
     sourcefiles="$(printf '%s\n' "$basedir/"${glob}*.[a-z][a-z].xml)"
     

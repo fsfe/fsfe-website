@@ -183,40 +183,54 @@ foreach ($days as &$d) {  // calculate for each day
     if ($rc_er === '') { $rc_er = "ER-NUMBER"; }
     if ($rc_catch === '') { $rc_catch = "CATCHPHRASE"; }
     
-    $output .= "<tr>";
-    
-    $output .= "<td>" . $rc_name . "</td>";
-    $output .= "<td>" . $date[$d] . "</td>";
-    
-    $r_day[$d] = preg_replace("/\./", ",", $r_day[$d]);   // replace . by , in amount to make it compatible with the used spreadsheet template
-    $output .= "<td>" . $r_day[$d] . "</td>";
-    
-    $output .= "<td></td>";
-    $output .= "<td>" . $rc_er . "</td>";
-    $output .= "<td>" . $rc_catch . "</td>";
-    $output .= "<td>per diem</td>";
-    
-    if ($break[$d] === "yes") {
-      $remark[$d] = "breakfast+";
+    if ($r_day[$d] !== 0) {
+      $output .= "<tr>";
+      
+      // 1. Name
+      $output .= "<td>" . $rc_name . "</td>";
+      
+      // 2. Date
+      $output .= "<td>" . $date[$d] . "</td>";
+      
+      // 3. Amount
+      $r_day[$d] = preg_replace("/\./", ",", $r_day[$d]);   // replace . by , in amount to make it compatible with the used spreadsheet template
+      $output .= "<td>" . $r_day[$d] . "</td>";
+      
+      // 4. Recipient Name (empty)
+      $output .= "<td></td>";
+      
+      // 5. ER number
+      $output .= "<td>" . $rc_er . "</td>";
+      
+      // 6. Catchphrase
+      $output .= "<td>" . $rc_catch . "</td>";
+      
+      // 7. Receipt/per diem
+      $output .= "<td>per diem</td>";
+      
+      // 8. Remarks
+      if ($break[$d] === "yes") {
+        $remark[$d] = "breakfast+";
+      }
+      if ($lunch[$d] === "yes") {
+        $remark[$d] .= "lunch+";
+      }
+      if ($dinner[$d] === "yes") {
+        $remark[$d] .= "dinner";
+      }
+      if ($break[$d] != "yes" && $lunch[$d] != "yes" && $dinner[$d] != "yes") {
+        $remark[$d] = "nothing";
+      }
+      if ($break[$d] === "yes" && $lunch[$d] === "yes" && $dinner[$d] === "yes") {
+        $remark[$d] = "everything";
+      }
+      $remark[$d] = preg_replace("/\+$/", "", $remark[$d]);
+      $remark[$d] .= " self-paid";
+      
+      $output .= "<td>" . $remark[$d] . "</td>";
+      
+      $output .= "</tr>";
     }
-    if ($lunch[$d] === "yes") {
-      $remark[$d] .= "lunch+";
-    }
-    if ($dinner[$d] === "yes") {
-      $remark[$d] .= "dinner";
-    }
-    if ($break[$d] != "yes" && $lunch[$d] != "yes" && $dinner[$d] != "yes") {
-      $remark[$d] = "nothing";
-    }
-    if ($break[$d] === "yes" && $lunch[$d] === "yes" && $dinner[$d] === "yes") {
-      $remark[$d] = "everything";
-    }
-    $remark[$d] = preg_replace("/\+$/", "", $remark[$d]);
-    $remark[$d] .= " self-paid";
-    
-    $output .= "<td>" . $remark[$d] . "</td>";
-    
-    $output .= "</tr>";
   }
 
 }

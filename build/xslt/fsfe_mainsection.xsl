@@ -15,7 +15,7 @@
   
         <!-- Here goes the actual content of the <body> node of the input file -->
         <xsl:apply-templates select="/buildinfo/document/event/body | /buildinfo/document/news/body | /buildinfo/document/body/* | /buildinfo/document/body/node()" />
-      
+        
         <!-- Show tags if this is a news press release or an event -->
         <xsl:if test="/buildinfo/document/@newsdate or /buildinfo/document/event">
           <xsl:if test="count(/buildinfo/document/tags/tag[. != 'front-page' and . != 'newsletter']) > 0">
@@ -54,7 +54,159 @@
               </xsl:for-each>
             </footer>
           </xsl:if>
-        </xsl:if>
+        </xsl:if> <!-- /tags -->
+        
+        <!-- SOCIAL NETWORK LINKS (BOTTOM) -->
+        <xsl:choose>
+          <xsl:when test = "not(/buildinfo/document/body/@class = 'frontpage')"> <!-- don't show on index -->
+            <!-- normalized article title -->
+            <xsl:variable name="share-title">
+              <xsl:value-of select="normalize-space(head/title)" />
+            </xsl:variable>
+            <!-- article URL -->
+            <xsl:variable name="share-url">
+              <xsl:text>https:</xsl:text>
+              <xsl:value-of select="$linkresources"/><xsl:value-of select="/buildinfo/@filename"/>
+              <xsl:text>.html</xsl:text>
+            </xsl:variable>
+            
+            <xsl:element name="div"> <!-- div containing all buttons -->
+              <xsl:attribute name="class">share-buttons-bottom</xsl:attribute>
+              <h3>
+                <xsl:call-template name="fsfe-gettext">
+                  <xsl:with-param name="id" select="'share-head'" />
+                </xsl:call-template>
+              </h3>
+              <!-- Diaspora -->
+              <xsl:element name="a">
+                <xsl:attribute name="class">button share-diaspora</xsl:attribute>
+                <xsl:attribute name="title">
+                  <xsl:call-template name="fsfe-gettext">
+                    <xsl:with-param name="id" select="'share-page'" />
+                  </xsl:call-template>
+                  <xsl:text> Diaspora</xsl:text>
+                </xsl:attribute>
+                <xsl:attribute name="target">_blank</xsl:attribute>
+                <xsl:attribute name="href">/cgi-bin/share.php?service=diaspora&amp;ref=bottom&amp;url=<xsl:value-of select="$share-url" />&amp;title=<xsl:value-of select="$share-title" /></xsl:attribute>
+                <xsl:text>Diaspora</xsl:text>
+              </xsl:element>
+              <!-- GNU Social -->
+              <xsl:element name="a">
+                <xsl:attribute name="class">button share-gnusocial</xsl:attribute>
+                <xsl:attribute name="title">
+                  <xsl:call-template name="fsfe-gettext">
+                    <xsl:with-param name="id" select="'share-page'" />
+                  </xsl:call-template>
+                  <xsl:text> GNU Social</xsl:text>
+                </xsl:attribute>
+                <xsl:attribute name="target">_blank</xsl:attribute>
+                <xsl:attribute name="href">/cgi-bin/share.php?service=gnusocial&amp;ref=bottom&amp;url=<xsl:value-of select="$share-url" />&amp;title=<xsl:value-of select="$share-title" /></xsl:attribute>
+                <xsl:text>GNU Social</xsl:text>
+              </xsl:element>
+              <!-- Reddit -->
+              <xsl:element name="a">
+                <xsl:attribute name="class">button share-reddit</xsl:attribute>
+                <xsl:attribute name="title">
+                  <xsl:call-template name="fsfe-gettext">
+                    <xsl:with-param name="id" select="'share-page'" />
+                  </xsl:call-template>
+                  <xsl:text> Reddit</xsl:text>
+                </xsl:attribute>
+                <xsl:attribute name="target">_blank</xsl:attribute>
+                <xsl:attribute name="href">/cgi-bin/share.php?service=reddit&amp;ref=bottom&amp;url=<xsl:value-of select="$share-url" />&amp;title=<xsl:value-of select="$share-title" /></xsl:attribute>
+                <xsl:text>Reddit</xsl:text>
+              </xsl:element>
+              <!-- Flattr -->
+              <xsl:element name="a">
+                <xsl:attribute name="class">button share-flattr</xsl:attribute>
+                <xsl:attribute name="title">
+                  <xsl:call-template name="fsfe-gettext">
+                    <xsl:with-param name="id" select="'share-microdonation'" />
+                  </xsl:call-template>
+                  <xsl:text> Flattr</xsl:text>
+                </xsl:attribute>
+                <xsl:attribute name="target">_blank</xsl:attribute>
+                <xsl:attribute name="href">/cgi-bin/share.php?service=flattr&amp;ref=bottom&amp;url=<xsl:value-of select="$share-url" />&amp;title=<xsl:value-of select="$share-title" /></xsl:attribute>
+                <xsl:text>Flattr</xsl:text>
+              </xsl:element>
+              <!-- Hacker News -->
+              <xsl:element name="a">
+                <xsl:attribute name="class">button share-hnews</xsl:attribute>
+                <xsl:attribute name="title">
+                  <xsl:call-template name="fsfe-gettext">
+                    <xsl:with-param name="id" select="'share-page'" />
+                  </xsl:call-template>
+                  <xsl:text> Hacker News</xsl:text>
+                </xsl:attribute>
+                <xsl:attribute name="target">_blank</xsl:attribute>
+                <xsl:attribute name="href">/cgi-bin/share.php?service=hnews&amp;ref=bottom&amp;url=<xsl:value-of select="$share-url" />&amp;title=<xsl:value-of select="$share-title" /></xsl:attribute>
+                <xsl:text>HackerNews</xsl:text>
+              </xsl:element>
+              <!-- Twitter -->
+              <xsl:element name="a">
+                <xsl:attribute name="class">button share-twitter</xsl:attribute>
+                <xsl:attribute name="title">
+                  <xsl:call-template name="fsfe-gettext">
+                    <xsl:with-param name="id" select="'share-page'" />
+                  </xsl:call-template>
+                  <xsl:text> Twitter</xsl:text>
+                </xsl:attribute>
+                <xsl:attribute name="target">_blank</xsl:attribute>
+                <xsl:attribute name="href">/cgi-bin/share.php?service=twitter&amp;ref=bottom&amp;url=<xsl:value-of select="$share-url" />&amp;title=<xsl:value-of select="$share-title" /></xsl:attribute>
+                <xsl:text>Twitter</xsl:text>
+              </xsl:element>
+              <!-- Facebook -->
+              <xsl:element name="a">
+                <xsl:attribute name="class">button share-facebook</xsl:attribute>
+                <xsl:attribute name="title">
+                  <xsl:call-template name="fsfe-gettext">
+                    <xsl:with-param name="id" select="'share-page'" />
+                  </xsl:call-template>
+                  <xsl:text> Facebook</xsl:text>
+                </xsl:attribute>
+                <xsl:attribute name="target">_blank</xsl:attribute>
+                <xsl:attribute name="href">/cgi-bin/share.php?service=facebook&amp;ref=bottom&amp;url=<xsl:value-of select="$share-url" />&amp;title=<xsl:value-of select="$share-title" /></xsl:attribute>
+                <xsl:text>Facebook</xsl:text>
+              </xsl:element>
+              <!-- Google+ -->
+              <xsl:element name="a">
+                <xsl:attribute name="class">button share-gplus</xsl:attribute>
+                <xsl:attribute name="title">
+                  <xsl:call-template name="fsfe-gettext">
+                    <xsl:with-param name="id" select="'share-page'" />
+                  </xsl:call-template>
+                  <xsl:text> Google Plus</xsl:text>
+                </xsl:attribute>
+                <xsl:attribute name="target">_blank</xsl:attribute>
+                <xsl:attribute name="href">/cgi-bin/share.php?service=gplus&amp;ref=bottom&amp;url=<xsl:value-of select="$share-url" />&amp;title=<xsl:value-of select="$share-title" /></xsl:attribute>
+                <xsl:text>Google+</xsl:text>
+              </xsl:element>
+              <!-- Support -->
+              <xsl:element name="a">
+                <xsl:attribute name="class">button share-support</xsl:attribute>
+                <xsl:attribute name="title">
+                  <xsl:call-template name="fsfe-gettext">
+                    <xsl:with-param name="id" select="'support'" />
+                  </xsl:call-template>
+                </xsl:attribute>
+                <xsl:attribute name="target">_blank</xsl:attribute>
+                <xsl:attribute name="href">/cgi-bin/share.php?service=support&amp;ref=bottom&amp;url=<xsl:value-of select="$share-url" />&amp;title=<xsl:value-of select="$share-title" /></xsl:attribute>
+                <xsl:text>Support!</xsl:text>
+              </xsl:element>
+              <p><em>
+                <xsl:call-template name="fsfe-gettext">
+                  <xsl:with-param name="id" select="'share-warning'" />
+                </xsl:call-template>
+                <xsl:text> </xsl:text>
+                <a href="https://wiki.fsfe.org/Advocacy/ProprietaryWebServices">
+                <xsl:call-template name="fsfe-gettext">
+                  <xsl:with-param name="id" select="'learn-more'" />
+                </xsl:call-template>
+              </a>.</em></p>
+            </xsl:element> <!-- /div Social network share buttons -->
+          </xsl:when>
+        </xsl:choose>
+        <!-- /Social Network Links (Bottom) -->
   
       </xsl:element>
       <!--/article#content-->
@@ -234,6 +386,158 @@
               </xsl:element>
             </xsl:otherwise>
           </xsl:choose>
+          
+        <!-- SOCIAL NETWORK LINKS (SIDEBAR) -->
+        <xsl:choose>
+          <xsl:when test = "not(/buildinfo/document/body/@class = 'frontpage')"> <!-- don't show on index -->
+            <!-- normalized article title -->
+            <xsl:variable name="share-title">
+              <xsl:value-of select="normalize-space(head/title)" />
+            </xsl:variable>
+            <!-- article URL -->
+            <xsl:variable name="share-url">
+              <xsl:text>https:</xsl:text>
+              <xsl:value-of select="$linkresources"/><xsl:value-of select="/buildinfo/@filename"/>
+              <xsl:text>.html</xsl:text>
+            </xsl:variable>
+            
+            <xsl:element name="div"> <!-- div containing all buttons -->
+              <xsl:attribute name="class">share-buttons-sidebar</xsl:attribute>
+              <h3>
+                <xsl:call-template name="fsfe-gettext">
+                  <xsl:with-param name="id" select="'share-head'" />
+                </xsl:call-template>
+              </h3>
+              <!-- Diaspora -->
+              <xsl:element name="a">
+                <xsl:attribute name="class">button share-diaspora</xsl:attribute>
+                <xsl:attribute name="title">
+                  <xsl:call-template name="fsfe-gettext">
+                    <xsl:with-param name="id" select="'share-page'" />
+                  </xsl:call-template>
+                  <xsl:text> Diaspora</xsl:text>
+                </xsl:attribute>
+                <xsl:attribute name="target">_blank</xsl:attribute>
+                <xsl:attribute name="href">/cgi-bin/share.php?service=diaspora&amp;ref=sidebar&amp;url=<xsl:value-of select="$share-url" />&amp;title=<xsl:value-of select="$share-title" /></xsl:attribute>
+                <xsl:text>Diaspora</xsl:text>
+              </xsl:element>
+              <!-- GNU Social -->
+              <xsl:element name="a">
+                <xsl:attribute name="class">button share-gnusocial</xsl:attribute>
+                <xsl:attribute name="title">
+                  <xsl:call-template name="fsfe-gettext">
+                    <xsl:with-param name="id" select="'share-page'" />
+                  </xsl:call-template>
+                  <xsl:text> GNU Social</xsl:text>
+                </xsl:attribute>
+                <xsl:attribute name="target">_blank</xsl:attribute>
+                <xsl:attribute name="href">/cgi-bin/share.php?service=gnusocial&amp;ref=sidebar&amp;url=<xsl:value-of select="$share-url" />&amp;title=<xsl:value-of select="$share-title" /></xsl:attribute>
+                <xsl:text>GNU Social</xsl:text>
+              </xsl:element>
+              <!-- Reddit -->
+              <xsl:element name="a">
+                <xsl:attribute name="class">button share-reddit</xsl:attribute>
+                <xsl:attribute name="title">
+                  <xsl:call-template name="fsfe-gettext">
+                    <xsl:with-param name="id" select="'share-page'" />
+                  </xsl:call-template>
+                  <xsl:text> Reddit</xsl:text>
+                </xsl:attribute>
+                <xsl:attribute name="target">_blank</xsl:attribute>
+                <xsl:attribute name="href">/cgi-bin/share.php?service=reddit&amp;ref=sidebar&amp;url=<xsl:value-of select="$share-url" />&amp;title=<xsl:value-of select="$share-title" /></xsl:attribute>
+                <xsl:text>Reddit</xsl:text>
+              </xsl:element>
+              <!-- Flattr -->
+              <xsl:element name="a">
+                <xsl:attribute name="class">button share-flattr</xsl:attribute>
+                <xsl:attribute name="title">
+                  <xsl:call-template name="fsfe-gettext">
+                    <xsl:with-param name="id" select="'share-microdonation'" />
+                  </xsl:call-template>
+                  <xsl:text> Flattr</xsl:text>
+                </xsl:attribute>
+                <xsl:attribute name="target">_blank</xsl:attribute>
+                <xsl:attribute name="href">/cgi-bin/share.php?service=flattr&amp;ref=sidebar&amp;url=<xsl:value-of select="$share-url" />&amp;title=<xsl:value-of select="$share-title" /></xsl:attribute>
+                <xsl:text>Flattr</xsl:text>
+              </xsl:element>
+              <!-- Hacker News -->
+              <xsl:element name="a">
+                <xsl:attribute name="class">button share-hnews</xsl:attribute>
+                <xsl:attribute name="title">
+                  <xsl:call-template name="fsfe-gettext">
+                    <xsl:with-param name="id" select="'share-page'" />
+                  </xsl:call-template>
+                  <xsl:text> Hacker News</xsl:text>
+                </xsl:attribute>
+                <xsl:attribute name="target">_blank</xsl:attribute>
+                <xsl:attribute name="href">/cgi-bin/share.php?service=hnews&amp;ref=sidebar&amp;url=<xsl:value-of select="$share-url" />&amp;title=<xsl:value-of select="$share-title" /></xsl:attribute>
+                <xsl:text>HackerNews</xsl:text>
+              </xsl:element>
+              <!-- Twitter -->
+              <xsl:element name="a">
+                <xsl:attribute name="class">button share-twitter</xsl:attribute>
+                <xsl:attribute name="title">
+                  <xsl:call-template name="fsfe-gettext">
+                    <xsl:with-param name="id" select="'share-page'" />
+                  </xsl:call-template>
+                  <xsl:text> Twitter</xsl:text>
+                </xsl:attribute>
+                <xsl:attribute name="target">_blank</xsl:attribute>
+                <xsl:attribute name="href">/cgi-bin/share.php?service=twitter&amp;ref=sidebar&amp;url=<xsl:value-of select="$share-url" />&amp;title=<xsl:value-of select="$share-title" /></xsl:attribute>
+                <xsl:text>Twitter</xsl:text>
+              </xsl:element>
+              <!-- Facebook -->
+              <xsl:element name="a">
+                <xsl:attribute name="class">button share-facebook</xsl:attribute>
+                <xsl:attribute name="title">
+                  <xsl:call-template name="fsfe-gettext">
+                    <xsl:with-param name="id" select="'share-page'" />
+                  </xsl:call-template>
+                  <xsl:text> Facebook</xsl:text>
+                </xsl:attribute>
+                <xsl:attribute name="target">_blank</xsl:attribute>
+                <xsl:attribute name="href">/cgi-bin/share.php?service=facebook&amp;ref=sidebar&amp;url=<xsl:value-of select="$share-url" />&amp;title=<xsl:value-of select="$share-title" /></xsl:attribute>
+                <xsl:text>Facebook</xsl:text>
+              </xsl:element>
+              <!-- Google+ -->
+              <xsl:element name="a">
+                <xsl:attribute name="class">button share-gplus</xsl:attribute>
+                <xsl:attribute name="title">
+                  <xsl:call-template name="fsfe-gettext">
+                    <xsl:with-param name="id" select="'share-page'" />
+                  </xsl:call-template>
+                  <xsl:text> Google Plus</xsl:text>
+                </xsl:attribute>
+                <xsl:attribute name="target">_blank</xsl:attribute>
+                <xsl:attribute name="href">/cgi-bin/share.php?service=gplus&amp;ref=sidebar&amp;url=<xsl:value-of select="$share-url" />&amp;title=<xsl:value-of select="$share-title" /></xsl:attribute>
+                <xsl:text>Google+</xsl:text>
+              </xsl:element>
+              <!-- Support -->
+              <xsl:element name="a">
+                <xsl:attribute name="class">button share-support</xsl:attribute>
+                <xsl:attribute name="title">
+                  <xsl:call-template name="fsfe-gettext">
+                    <xsl:with-param name="id" select="'support'" />
+                  </xsl:call-template>
+                </xsl:attribute>
+                <xsl:attribute name="target">_blank</xsl:attribute>
+                <xsl:attribute name="href">/cgi-bin/share.php?service=support&amp;ref=sidebar&amp;url=<xsl:value-of select="$share-url" />&amp;title=<xsl:value-of select="$share-title" /></xsl:attribute>
+                <xsl:text>Support!</xsl:text>
+              </xsl:element>
+              <p><em>
+                <xsl:call-template name="fsfe-gettext">
+                  <xsl:with-param name="id" select="'share-warning'" />
+                </xsl:call-template>
+                <xsl:text> </xsl:text>
+                <a href="https://wiki.fsfe.org/Advocacy/ProprietaryWebServices">
+                <xsl:call-template name="fsfe-gettext">
+                  <xsl:with-param name="id" select="'learn-more'" />
+                </xsl:call-template>
+              </a>.</em></p>
+            </xsl:element> <!-- /div Social network share buttons -->
+          </xsl:when>
+        </xsl:choose>
+        <!-- /Social Network Links (Sidebar) -->
   
         </xsl:element>
         <!--/aside#sidebar-->

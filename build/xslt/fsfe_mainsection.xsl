@@ -72,7 +72,7 @@
             
 
             <xsl:element name="form"> <!-- div containing all buttons -->
-              <xsl:attribute name="action">/cgi-bin/share.php</xsl:attribute>
+              <xsl:attribute name="action">/share</xsl:attribute>
               <xsl:attribute name="method">GET</xsl:attribute>
               <xsl:attribute name="class">share-buttons bottom</xsl:attribute>
               <xsl:attribute name="target">_blank</xsl:attribute>
@@ -131,7 +131,7 @@
                   <xsl:attribute name="type">text</xsl:attribute>
                   <xsl:attribute name="name">diasporapod</xsl:attribute>
                   <xsl:attribute name="value"></xsl:attribute>
-                  <xsl:attribute name="placeholder">http://Diaspora TLD</xsl:attribute>
+                  <xsl:attribute name="placeholder">Diaspora URL (diasp.tld)</xsl:attribute>
                 </xsl:element>
                 <xsl:element name="button">
                   <xsl:attribute name="type">submit</xsl:attribute>
@@ -164,7 +164,7 @@
                   <xsl:attribute name="type">text</xsl:attribute>
                   <xsl:attribute name="name">gnusocialpod</xsl:attribute>
                   <xsl:attribute name="value"></xsl:attribute>
-                  <xsl:attribute name="placeholder">http://GNU Social TLD</xsl:attribute>
+                  <xsl:attribute name="placeholder">GNU Social URL (gnusocial.tld)</xsl:attribute>
                 </xsl:element>
                 <xsl:element name="button">
                   <xsl:attribute name="type">submit</xsl:attribute>
@@ -481,7 +481,7 @@
             </xsl:variable>
             
             <xsl:element name="form"> <!-- div containing all buttons -->
-              <xsl:attribute name="action">/cgi-bin/share.php</xsl:attribute>
+              <xsl:attribute name="action">/share</xsl:attribute>
               <xsl:attribute name="method">GET</xsl:attribute>
               <xsl:attribute name="class">share-buttons sidebar</xsl:attribute>
               <xsl:attribute name="target">_blank</xsl:attribute>
@@ -540,7 +540,7 @@
                   <xsl:attribute name="type">text</xsl:attribute>
                   <xsl:attribute name="name">diasporapod</xsl:attribute>
                   <xsl:attribute name="value"></xsl:attribute>
-                  <xsl:attribute name="placeholder">http://Diaspora TLD</xsl:attribute>
+                  <xsl:attribute name="placeholder">Diaspora URL (diasp.tld)</xsl:attribute>
                 </xsl:element>
                 <xsl:element name="button">
                   <xsl:attribute name="type">submit</xsl:attribute>
@@ -573,7 +573,7 @@
                   <xsl:attribute name="type">text</xsl:attribute>
                   <xsl:attribute name="name">gnusocialpod</xsl:attribute>
                   <xsl:attribute name="value"></xsl:attribute>
-                  <xsl:attribute name="placeholder">http://GNU Social TLD</xsl:attribute>
+                  <xsl:attribute name="placeholder">GNU Social URL (gnusocial.tld)</xsl:attribute>
                 </xsl:element>
                 <xsl:element name="button">
                   <xsl:attribute name="type">submit</xsl:attribute>

@@ -583,112 +583,114 @@ form.thankyou {
 
 
 /* SOCIAL NETWORK SHARE BUTTONS (below articles and pages) */
-.share-buttons-bottom {
+.share-buttons.bottom {
   margin: 4em 0 -2em 0;
   font-size: 0.7em;
 }
-.share-buttons-bottom a.button {
+.share-buttons.bottom button.button,
+.share-buttons.bottom label.button {
   display: inline-block;
   margin: 2.5px 5px 2.5px 0;
-  color: #000;
+  color: #fff;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: normal;
   text-align: center;
   text-decoration: none;
   padding: 7px 7px 7px 20px;
   width: 19%;
   min-width: 90px;
   max-width: 110px;
+  border: none;
   border-radius: 3px;
   background-position: left 5px center;
   background-repeat: no-repeat;
   background-size: 20px auto;
   opacity: 0.9;
+  vertical-align: top;
 }
-.share-buttons-bottom a.share-facebook {
+
+.share-buttons.bottom .share-facebook {
   background-color: #3b5998;
   background-image: url("/graphics/services/facebook_white.png");
-  color: #fff;
 }
-.share-buttons-bottom a.share-facebook:hover {
+.share-buttons.bottom .share-facebook:hover {
   background-color: #143271 !important;
 }
-.share-buttons-bottom a.share-twitter {
+.share-buttons.bottom .share-twitter {
   background-color: #55acee;
   background-image: url("/graphics/services/twitter_white.png");
-  color: #fff;
 }
-.share-buttons-bottom a.share-twitter:hover {
+.share-buttons.bottom .share-twitter:hover {
   background-color: #338acc !important;
 }
-.share-buttons-bottom a.share-gplus {
+.share-buttons.bottom .share-gplus {
   background-color: #d34836;
   background-image: url("/graphics/services/gplus_white.png");
-  color: #fff;
 }
-.share-buttons-bottom a.share-gplus:hover {
+.share-buttons.bottom .share-gplus:hover {
   background-color: #b12614 !important;
 }
-.share-buttons-bottom a.share-diaspora {
+.share-buttons.bottom .share-diaspora {
   background-color: #404040;
   background-image: url("/graphics/services/diaspora_white.png");
-  color: #fff;
 }
-.share-buttons-bottom a.share-diaspora:hover {
+.share-buttons.bottom .share-diaspora:hover {
   background-color: #101010 !important;
 }
-.share-buttons-bottom a.share-flattr {
+.share-buttons.bottom .share-flattr {
   background-color: #7ea352;
   background-image: url("/graphics/services/flattr_white.png");
-  color: #fff;
 }
-.share-buttons-bottom a.share-flattr:hover {
+.share-buttons.bottom .share-flattr:hover {
   background-color: #5a7f2e !important;
 }
-.share-buttons-bottom a.share-support {
+.share-buttons.bottom .share-support {
   background-color: #202d79;
   background-image: url("/graphics/services/fsfe_white.png");
-  color: #fff;
 }
-.share-buttons-bottom a.share-support:hover {
+.share-buttons.bottom .share-support:hover {
   background-color: #0a1763 !important;
 }
-.share-buttons-bottom a.share-reddit {
+.share-buttons.bottom .share-reddit {
   background-color: #ff5700;
   background-image: url("/graphics/services/reddit_white.png");
-  color: #fff;
 }
-.share-buttons-bottom a.share-reddit:hover {
+.share-buttons.bottom .share-reddit:hover {
   background-color: #dd3500 !important;
 }
-.share-buttons-bottom a.share-gnusocial {
+.share-buttons.bottom .share-gnusocial {
   background-color: #a22430;
   background-image: url("/graphics/services/gnusocial_white.png");
-  color: #fff;
 }
-.share-buttons-bottom a.share-gnusocial:hover {
+.share-buttons.bottom .share-gnusocial:hover {
   background-color: #850713 !important;
 }
-.share-buttons-bottom a.share-hnews {
+.share-buttons.bottom .share-hnews {
   background-color: #ff6600;
   background-image: url("/graphics/services/hackernews_white.png");
-  color: #fff;
 }
-.share-buttons-bottom a.share-hnews:hover {
+.share-buttons.bottom .share-hnews:hover {
   background-color: #dd3500 !important;
 }
 
 /* SOCIAL NETWORK SHARE BUTTONS (in sidebar) */
-.share-buttons-sidebar {
+.share-buttons.sidebar {
   margin: 20px 0 0 0;
   font-size: 0.7em;
   display: none; /* visible from ~992px on, see media query below */
 
 }
-.share-buttons-sidebar a.button {
+.share-buttons.sidebar button.button,
+.share-buttons.sidebar label.button {
   display: inline-block;
   margin: 2.5px 5px 2.5px 0;
   color: #000;
   text-align: center;
   text-decoration: none;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: normal;
   padding: 7px 0px 7px 17px;
   width: 30%;
   max-width: 110px;
@@ -699,52 +701,94 @@ form.thankyou {
   background-size: 16px auto;
   background-color: #fff;
 }
-.share-buttons-sidebar a.button:hover {
+.share-buttons.sidebar .button:hover {
   background-color: #eee !important;
 }
-.share-buttons-sidebar a.share-facebook {
+.share-buttons.sidebar button.share-facebook {
   color: #3b5998;
   background-image: url("/graphics/services/facebook.png");
 }
-.share-buttons-sidebar a.share-twitter {
+.share-buttons.sidebar button.share-twitter {
   color: #55acee;
   background-image: url("/graphics/services/twitter.png");
 }
-.share-buttons-sidebar a.share-gplus {
+.share-buttons.sidebar button.share-gplus {
   color: #d34836;
   background-image: url("/graphics/services/gplus.png");
 }
-.share-buttons-sidebar a.share-diaspora {
+.share-buttons.sidebar label.share-diaspora {
   color: #404040;
   background-image: url("/graphics/services/diaspora.png");
 }
-.share-buttons-sidebar a.share-flattr {
+.share-buttons.sidebar button.share-flattr {
   color: #7ea352;
   background-image: url("/graphics/services/flattr.png");
 }
-.share-buttons-sidebar a.share-support {
+.share-buttons.sidebar button.share-support {
   color: #202d79;
   background-image: url("/graphics/services/fsfe.png");
 }
-.share-buttons-sidebar a.share-reddit {
+.share-buttons.sidebar button.share-reddit {
   color: #ff5700;
   background-image: url("/graphics/services/reddit.png");
 }
-.share-buttons-sidebar a.share-gnusocial {
+.share-buttons.sidebar label.share-gnusocial {
   color: #a22430;
   background-image: url("/graphics/services/gnusocial.png");
 }
-.share-buttons-sidebar a.share-hnews {
+.share-buttons.sidebar button.share-hnews {
   color: #dd3500;
   background-image: url("/graphics/services/hackernews.png");
 }
 @media (min-width: @screen-md) {
-  .share-buttons-sidebar {
+  .share-buttons.sidebar {
     display: block !important;
   }
 }
 
-/* Hide gnusocial button until share-gnusocial.php runs on a host with PHP>5.3 and with php*-curl installed */
-.button.share-gnusocial {
+/* Hide gnusocial button until share-gnusocial.php runs on a host with PHP>5.3 and with php*-curl installed
+.button.share-gnusocial { 
   display: none !important;
+} 
+*/
+.share-buttons input[type="radio"],
+.share-buttons input[type="radio"] + span,
+.share-buttons input[type="checkbox"],
+.share-buttons input[type="checkbox"] + span {display: none;}
+.share-buttons input[type="radio"]:checked + span,
+.share-buttons input[type="checkbox"]:checked + span {
+  position: absolute;
+  margin-top: 3.5em; margin-left: -10em;
+  padding: .5em;
+  z-index: 3;
+  background-color: #333;
+  border-radius: .5em;
+  display: inline-block;
 }
+.share-buttons input[type="radio"]:checked + span:before,
+.share-buttons input[type="checkbox"]:checked + span:before {
+  content: '';
+  position: absolute;
+  top: -1em;
+  height: 0em; width: 0em;
+  border-bottom: 1em solid #333;
+  border-left: 1em solid transparent;
+  border-right: 1em solid transparent;
+  z-index: 3;
+}
+.share-buttons input[type="radio"] + span > *{ vertical-align: middle; }
+.share-buttons input[type="radio"] + span > button {
+  margin: 2.5px 0 2.5px 5px;
+  min-width: 4em;
+  padding: .25em;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: normal;
+}
+.share-buttons input[type="radio"] + span > label {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, .5);
+}
+

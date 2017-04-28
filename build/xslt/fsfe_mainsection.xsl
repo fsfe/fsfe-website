@@ -58,7 +58,7 @@
         
         <!-- SOCIAL NETWORK LINKS (BOTTOM) -->
         <xsl:choose>
-          <xsl:when test = "not(/buildinfo/document/body/@class = 'frontpage')"> <!-- don't show on index -->
+          <xsl:when test = "not(/buildinfo/document/body/@class = 'frontpage') and not(/buildinfo/document/body/@class = 'errorpage')"> <!-- don't show on index and error pages-->
             <!-- normalized article title -->
             <xsl:variable name="share-title">
               <xsl:value-of select="normalize-space(head/title)" />

@@ -97,6 +97,11 @@ to every item in this file -->
     imgsmall="/contribute/promopics/ilovefs-sticker_thumb.png"/>
   </item> 
   
+    <item type="ilovefs" id="ilovefs-poster-2sided" year="2014" order="4">
+ 	<image
+    imgsmall="/contribute/promopics/ilovefs_poster_A1_thumb.png"/>
+  </item> 
+  
   <!-- No cloud -->
   
     <item type="nocloud" id="nocloud-sticker" year="2015" order="1">
@@ -114,6 +119,10 @@ to every item in this file -->
      imgsmall="/contribute/promopics/thereisnocloud-postcard-thumb.png"/>
   </item>
 
+  <item type="nocloud" id="nocloud-poster-2sided" year="2015" order="4">
+ 	<image
+    imgsmall="/contribute/promopics/thereisnocloud-poster-thumb.png"/>
+  </item>  
   
 
 </itemset>

@@ -41,10 +41,11 @@ to every item in this file -->
   
   <!-- No Cloud -->
   
-  <item type="nocloud" id="nocloud-poster" year="2015" order="">
+  <item type="nocloud" id="nocloud-poster" year="2015" order="4">
  	<image
     imgsmall="/contribute/promopics/thereisnocloud-poster-thumb.png"/>
   </item>  
+  
   
      <!-- They Dont Want You.To -->
   <item type="tdwyt" id="tdwyt-sticker" year="2012" order="1">
@@ -79,7 +80,8 @@ to every item in this file -->
   </item>
   
   <!-- I love Free Software -->
-  <item type="ilovefs" id="ilovefs-poster" year="2014" order="4">
+
+    <item type="ilovefs" id="ilovefs-poster" year="2014" order="4">
  	<image
     imgsmall="/contribute/promopics/ilovefs_poster_A1_thumb.png"/>
   </item> 

@@ -101,10 +101,15 @@ to every item in this file -->
   
     <item type="nocloud" id="nocloud-sticker" year="2015" order="1">
  	<image
-    imgsmall="/contribute/promopics/thereisnocloud-v2-preview.png"/>
+    imgsmall="/contribute/promopics/thereisnocloud-bluecolor-preview.png"/>
+  </item>
+  
+   <item type="nocloud" id="nocloud-sticker-bw" year="2017" order="2">
+ 	<image
+    imgsmall="/contribute/promopics/thereisnocloud-bw-preview.png"/>
   </item>
 
-  <item type="nocloud" id="nocloud-postcard" year="2014" order="2">
+  <item type="nocloud" id="nocloud-postcard" year="2014" order="3">
  	 <image
      imgsmall="/contribute/promopics/thereisnocloud-postcard-thumb.png"/>
   </item>

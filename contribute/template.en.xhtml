@@ -257,12 +257,40 @@
     a picture like the above, please specify a <code>style="max-width:
         Xpx;"</code> property where X is the width of the picture.</p> 
 
+    <p>This is the source code for the example picture above:</p>
+
+    <pre><code>
+    &#60;div class="captioned" style="max-width: 2000px;"&#62;
+        &#60;header&#62;
+            &#60;p&#62;An article would not be complete without a picture!&#60;/p&#62;
+        &#60;/header&#62;
+        &#60;img src="https://hroy.eu/images/fsfe_ecm-group_pic/2013-09-ECM-group-picture.JPG" a#60="group picture!" /&#62;
+        &#60;footer&#62;
+            &#60;p&#62;This is a picture from the Group coordinators meeting in Berlin, September 2013!&#60;/p&#62;
+        &#60;/footer&#62;
+    &#60;/div&#62;
+    </code></pre>
+
     <p>If you want to center the picture, add the <code>center-block</code>
     class. If you want to make it float on the left, add the class
     <code>left</code>, and <code>right</code> to make it float… to the
     right! So, if you want to have a captioned picture on the right, you can
     add <code>div class="captioned right" style="max-width: Xpx; width:
     Y%;"</code></p>
+
+    <p>Here's an example code for a right-side picture taking 1/3 of the width:</p>
+
+    <pre><code>
+    &#60;div class="captioned right" style="max-width: 400px; width: 33%;"&#62;
+        &#60;header&#62;
+            &#60;p&#62;An article would not be complete without a picture!&#60;/p&#62;
+        &#60;/header&#62;
+        &#60;img src="https://hroy.eu/images/fsfe_ecm-group_pic/2013-09-ECM-group-picture.JPG" a#60="group picture!" /&#62;
+        &#60;footer&#62;
+            &#60;p&#62;This is a picture from the Group coordinators meeting in Berlin, September 2013!&#60;/p&#62;
+        &#60;/footer&#62;
+    &#60;/div&#62;
+    </code></pre>
 
     <h2>General design</h2>
 

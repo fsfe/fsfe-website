@@ -499,7 +499,7 @@
               <xsl:element name="input" >
                 <xsl:attribute name="type">hidden</xsl:attribute>
                 <xsl:attribute name="name">ref</xsl:attribute>
-                <xsl:attribute name="value">bottom</xsl:attribute>
+                <xsl:attribute name="value">sidebar</xsl:attribute>
               </xsl:element>
               <xsl:element name="input" >
                 <xsl:attribute name="type">hidden</xsl:attribute>

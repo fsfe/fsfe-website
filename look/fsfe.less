@@ -746,11 +746,7 @@ form.thankyou {
   }
 }
 
-/* Hide gnusocial button until share-gnusocial.php runs on a host with PHP>5.3 and with php*-curl installed
-.button.share-gnusocial { 
-  display: none !important;
-} 
-*/
+/* Share buttons form layout and behaviour hacks */
 .share-buttons input[type="radio"],
 .share-buttons input[type="radio"] + span,
 .share-buttons input[type="checkbox"],
@@ -792,3 +788,7 @@ form.thankyou {
   background-color: rgba(0, 0, 0, .5);
 }
 
+/* Separate share buttons form from possibly floating content */
+form.share-buttons {
+  clear: both;
+}

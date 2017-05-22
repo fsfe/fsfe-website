@@ -2,6 +2,22 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
+  <xsl:template name="taglinks">
+    <xsl:param name="prefix" />
+
+    <xsl:for-each select="/buildinfo/document/tags/tag">
+      <xsl:choose><xsl:when test="@key and .">
+        <a href="/tags/tagged.html#{$prefix}{@key}" class="p-category tag tag-{@key}"><xsl:value-of select="."/></a>
+      </xsl:when><xsl:when test="@key">
+        <a href="/tags/tagged.html#{$prefix}{@key}" class="p-category tag tag-{@key}"><xsl:value-of select="@key"/></a>
+      </xsl:when><xsl:when test="@content"> <!-- Legacy -->
+        <a href="/tags/tagged.html#{$prefix}{.}" class="p-category tag tag-{.}"><xsl:value-of select="@content"/></a>
+      </xsl:when><xsl:otherwise> <!-- Legacy and bad style -->
+        <a href="/tags/tagged.html#{$prefix}{.}" class="p-category tag tag-{.}"><xsl:value-of select="."/></a>
+      </xsl:otherwise></xsl:choose>
+    </xsl:for-each>
+  </xsl:template>
+
   <xsl:template name="fsfe_mainsection">
     <xsl:element name="section">
       <xsl:attribute name="id">main</xsl:attribute>
@@ -19,39 +35,15 @@
         <!-- Show tags if this is a news press release or an event -->
         <xsl:if test="/buildinfo/document/@newsdate or /buildinfo/document/event">
           <xsl:if test="count(/buildinfo/document/tags/tag[. != 'front-page' and . != 'newsletter']) > 0">
-            <footer class="tags">
-              <span id="tags">
-                <xsl:call-template name="fsfe-gettext">
-                  <xsl:with-param name="id" select="'tags'" />
-                </xsl:call-template>
+            <footer class="tags"><span id="tags">
+                <xsl:call-template name="fsfe-gettext"> <xsl:with-param name="id" select="'tags'" /></xsl:call-template>
               </span>
 
-              <xsl:for-each select="/buildinfo/document/tags/tag">
-                <xsl:if test="/buildinfo/document/@newsdate">
-                    <a href="/tags/tagged.html#n{.}" class="tag tag-{.} p-category">
-                      <xsl:choose>
-                        <xsl:when test="@content">
-                          <xsl:value-of select="@content"/>
-                        </xsl:when>
-                        <xsl:otherwise>
-                          <xsl:value-of select="."/>
-                        </xsl:otherwise>
-                      </xsl:choose>
-                    </a>
-                </xsl:if>
-                <xsl:if test="/buildinfo/document/event">
-                    <a href="/tags/tagged.html#e{.}" class="tag tag-{.} p-category">
-                      <xsl:choose>
-                        <xsl:when test="@content">
-                          <xsl:value-of select="@content"/>
-                        </xsl:when>
-                        <xsl:otherwise>
-                          <xsl:value-of select="."/>
-                        </xsl:otherwise>
-                      </xsl:choose>
-                    </a>
-                </xsl:if>
-              </xsl:for-each>
+              <xsl:choose><xsl:when test="/buildinfo/document/@newsdate">
+                <xsl:call-template name="taglinks"><xsl:with-param name="prefix" select="'n'"/></xsl:call-template>
+              </xsl:when><xsl:when test="/buildinfo/document/event">
+                <xsl:call-template name="taglinks"><xsl:with-param name="prefix" select="'e'"/></xsl:call-template>
+              </xsl:when></xsl:choose>
             </footer>
           </xsl:if>
         </xsl:if> <!-- /tags -->

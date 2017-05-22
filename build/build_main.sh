@@ -2,7 +2,7 @@
 
 # Check dependencies
 deperrors=''
-for depend in realpath rsync xsltproc xmllint sed find egrep grep wc make tee date iconv; do
+for depend in realpath rsync xsltproc xmllint sed find egrep grep wc make tee date iconv wget; do
   if ! which "$depend" >/dev/null 2>&1; then
     deperrors="$depend $deperrors"
   fi

@@ -73,8 +73,19 @@ TAGNAMES := $(shell printf %s '$(TAGMAP)' \
               | tr ' ' '\n' \
               | grep -vE '[\$%/:()]' \
               | sort -u \
-              | xargs printf 'tools/tagmaps/%s.map ' \
              )
+
+MAPNAMES := $(shell printf 'tools/tagmaps/%s.map ' $(TAGNAMES))
+INDEXNAMES := $(shell printf 'tags/tagged-%s.en.xhtml ' $(TAGNAMES))
+INDEXSOURCES := $(shell printf 'tags/tagged-%s.sources ' $(TAGNAMES))
+
+all: $(INDEXNAMES)
+tags/tagged-%.en.xhtml: tags/tagged.en.xhtml
+	cp $< $@
+
+all: $(INDEXSOURCES)
+tags/tagged-%.sources:
+	printf '%s:[$*]\n' 'news/*/news' news/generated_xml/ news/nl/nl 'events/*/event' >$@
 
 MAPREQS = $(shell printf %s '$(TAGMAP)' \
             | sed -r 's;[^ ]+\...\.xml;\n&;g' \
@@ -82,14 +93,14 @@ MAPREQS = $(shell printf %s '$(TAGMAP)' \
             | cut -d' ' -f1 \
            )
 
-all: $(TAGNAMES)
+all: $(MAPNAMES)
 
 # -----------------------------------------------------------------------------
 # Second Expansion rules
 # -----------------------------------------------------------------------------
 .SECONDEXPANSION:
 
-%.sources: $$(SOURCEDIRS) $$(SOURCEREQS) | $(TAGNAMES)
+%.sources: $$(SOURCEDIRS) $$(SOURCEREQS) | $(MAPNAMES) $(INDEXSOURCES)
 	touch $@
 
 tools/tagmaps/%.map: $$(MAPREQS) | $(SUBDIRS)

@@ -107,9 +107,10 @@
                   <xsl:call-template name="fsfe-gettext">
                     <xsl:with-param name="id" select="'share-page'" />
                   </xsl:call-template>
+                  <xsl:text> Diaspora</xsl:text>
                 </xsl:attribute>
                 <xsl:attribute name="for">diaspora-share-bottom</xsl:attribute>
-                <xsl:text> Diaspora</xsl:text>
+                <xsl:text>Diaspora</xsl:text>
               </xsl:element>
               <xsl:element name="input">
                 <xsl:attribute name="type">radio</xsl:attribute>
@@ -140,9 +141,10 @@
                   <xsl:call-template name="fsfe-gettext">
                     <xsl:with-param name="id" select="'share-page'" />
                   </xsl:call-template>
+                  <xsl:text> GNU Social</xsl:text>
                 </xsl:attribute>
                 <xsl:attribute name="for">gnusocial-share-bottom</xsl:attribute>
-                <xsl:text> GNU Social</xsl:text>
+                <xsl:text>GNU Social</xsl:text>
               </xsl:element>
               <xsl:element name="input">
                 <xsl:attribute name="type">radio</xsl:attribute>
@@ -176,8 +178,9 @@
                   <xsl:call-template name="fsfe-gettext">
                     <xsl:with-param name="id" select="'share-page'" />
                   </xsl:call-template>
+                  <xsl:text> Reddit</xsl:text>
                 </xsl:attribute>
-                <xsl:text> Reddit</xsl:text>
+                <xsl:text>Reddit</xsl:text>
               </xsl:element>
               
               <!-- Flattr -->
@@ -190,6 +193,7 @@
                   <xsl:call-template name="fsfe-gettext">
                     <xsl:with-param name="id" select="'share-microdonation'" />
                   </xsl:call-template>
+                  <xsl:text> Flattr</xsl:text>
                 </xsl:attribute>
                 <xsl:text>Flattr</xsl:text>
               </xsl:element>
@@ -204,8 +208,9 @@
                   <xsl:call-template name="fsfe-gettext">
                     <xsl:with-param name="id" select="'share-page'" />
                   </xsl:call-template>
+                  <xsl:text> Hacker News</xsl:text>
                 </xsl:attribute>
-                <xsl:text> Hacker News</xsl:text>
+                <xsl:text>Hacker News</xsl:text>
               </xsl:element>
 
               <!-- Twitter -->
@@ -218,8 +223,9 @@
                   <xsl:call-template name="fsfe-gettext">
                     <xsl:with-param name="id" select="'share-page'" />
                   </xsl:call-template>
+                  <xsl:text> Twitter</xsl:text>
                 </xsl:attribute>
-                <xsl:text> Twitter</xsl:text>
+                <xsl:text>Twitter</xsl:text>
               </xsl:element>
 
               <!-- Facebook -->
@@ -232,8 +238,9 @@
                   <xsl:call-template name="fsfe-gettext">
                     <xsl:with-param name="id" select="'share-page'" />
                   </xsl:call-template>
+                  <xsl:text> Facebook</xsl:text>
                 </xsl:attribute>
-                <xsl:text> Facebook</xsl:text>
+                <xsl:text>Facebook</xsl:text>
               </xsl:element>
 
               <!-- Google+ -->
@@ -246,8 +253,9 @@
                   <xsl:call-template name="fsfe-gettext">
                     <xsl:with-param name="id" select="'share-page'" />
                   </xsl:call-template>
+                  <xsl:text> Google+</xsl:text>
                 </xsl:attribute>
-                <xsl:text> Google+</xsl:text>
+                <xsl:text>Google+</xsl:text>
               </xsl:element>
 
               <!-- Support -->

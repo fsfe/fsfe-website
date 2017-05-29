@@ -34,7 +34,7 @@ RewriteRule	^15(/.*)?$		https://fsfe.org/campaigns/15years/15years$1 [redirect=p
 ## === MOVED PAGES ===
 
 # Redirections for IloveFS campaign
-RewriteRule ^campaigns/ilovefs/latest-report(.*)$ /news/2016/news-20160222-01.html [redirect=permanent] # UPDATE always link to latest available report
+RewriteRule ^campaigns/ilovefs/latest-report(.*)$ /news/2017/news-20170315-01.html [redirect=permanent] # UPDATE always link to latest available report
 RewriteRule ^campaigns/ilovefs/ilovefs(.*)html$ /campaigns/ilovefs/index$1html [redirect=permanent]
 RewriteRule ^campaigns/ilovefs((/?)|(/[^/]*).html)$ /campaigns/ilovefs/2017$1 [PT] # UPDATE year
 RewriteRule ^campaigns/ilovefs/(201[2-5])/index(.*)$ /campaigns/ilovefs/$1/ [redirect=permanent]

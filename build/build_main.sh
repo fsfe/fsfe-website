@@ -53,9 +53,14 @@ fi
 [ -z "$inc_stirrups" ]  && . "$basedir/build/stirrups.sh"
 
 case "$command" in
-  map_tags)        map_tags "$@";;
+  svn_build_into)  if [ "${statusdir}/full_build" -nt "${statusdir}/index.cgi" ]; then
+                     debug "discovered flag file, performing full build"
+                     build_into
+                   else
+                     svn_build_into
+                   fi ;;
   build_into)      build_into ;;
-  svn_build_into)  svn_build_into ;;
+  map_tags)        map_tags "$@";;
   process_file)    process_file "$workfile" "$processor" "$olang" ;;
   build_xmlstream) build_xmlstream "$(get_shortname "$workfile")" "$(get_language "$workfile")" "$olang" ;;
   tree_maker)      tree_maker "$tree" "$target" ;;

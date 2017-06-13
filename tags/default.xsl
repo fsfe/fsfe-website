@@ -26,6 +26,7 @@
 
       <xsl:for-each select="/buildinfo/document/set/news">
         <xsl:element name="li">
+          <span class="newsdate">[<xsl:value-of select="@date" />]</span>
           <xsl:element name="a">
             <xsl:attribute name="href"><xsl:value-of select="link" /></xsl:attribute>
             <xsl:value-of select="title" />
@@ -44,6 +45,7 @@
       <xsl:for-each select="/buildinfo/document/set/event">
 
         <xsl:element name="li">
+          <span class="newsdate">[<xsl:value-of select="@start" />]</span>
           <xsl:element name="a">
             <xsl:attribute name="href">
               <xsl:call-template name="event-link">

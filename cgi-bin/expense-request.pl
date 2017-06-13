@@ -86,8 +86,8 @@ my %responsible = (
   "POLICY-TRAVEL" => "kirschner",
   "POLICY-DEV" => "kirschner",
   "POLICY-CAMPAIGN" => "kirschner",
-  "MERCHANDISE-PURCHASE" => "oberg",
-  "MERCHANDISE-OTHER" => "oberg",
+  "MERCHANDISE-PURCHASE" => "sliwinski",
+  "MERCHANDISE-OTHER" => "sliwinski",
   "PERSONELL-INTERN" => "oberg",
   "PERSONELL-KIRSCHNER" => "oberg",
   "PERSONELL-ALBERS" => "oberg",
@@ -95,7 +95,7 @@ my %responsible = (
   "PERSONELL-MEHL" => "oberg",
   "PERSONELL-OBERG" => "kirschner",
   "PERSONELL-MALAJA" => "oberg",
-  "OFFICE-BERLIN" => "oberg",
+  "OFFICE-BERLIN" => "sliwinski",
 );
 
 my %account = (

@@ -569,12 +569,13 @@
     <avatar>/about/stegerman/stegerman-avatar.png</avatar>
   </person>
   
-    <person id="suhr" avatar="no" teams="intern">
+    <person id="suhr" avatar="yes" teams="intern">
     <name>Jonke Suhr</name>
     <country>DE</country>
     <function>intern/m</function>
     <email>suhrj (at) fsfe (dot) org</email>
     <employee>full/m</employee>
+    <avatar>/about/suhr/suhr.png</avatar>
   </person>
 
   <person id="suklje" avatar="yes" association-member="yes" teams="ftf, ga">
@@ -593,7 +594,8 @@
     <email>lukewm (at) fsfe (dot) org</email>
     <employee>part/m</employee>
   </person>
-
+ 
+ <!--
   <person id="vaseva" avatar="no" teams="intern">
     <name>Lyudmila Vaseva</name>
     <country>DE</country>
@@ -601,6 +603,7 @@
     <email>lusy (at) fsfe (dot) org</email>
     <employee>part/f</employee>
   </person>
+-->
 
   <person id="verheesen" avatar="yes" teams="nl, core">
     <name>Maurice Verheesen</name>

@@ -20,6 +20,12 @@ to every item in this file -->
  	<image
     imgsmall="/contribute/promopics/folder-fsfe-en1_thumb.png"/>
   </item>
+  
+    <item type="fsfe" id="fellowship-poster" year="2008" order="4">
+ 	<image
+    imgsmall="/contribute/promopics/joinfellowship-poster_thumb.png"/>
+  </item>  
+  
 
   <!-- Free Software and users freedom -->
   <item type="fsfreedom" id="nocloud-sticker" year="2015" order="1">
@@ -64,6 +70,12 @@ to every item in this file -->
   </item>   
   
   <!-- Document Freedom Day -->
+  
+    <item type="dfd" id="dfd-leaflet" year="2014" order="1">
+ 	<image
+    imgsmall="/contribute/promopics/dfd-leaflet_thumb.png"/>
+  </item>
+  
   <item type="dfd" id="dfd-os-sticker" year="2014" order="2">
   <image
     imgsmall="/contribute/promopics/dfd-protest-robots-stickers_thumb.png"/>

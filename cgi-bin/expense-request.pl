@@ -203,14 +203,6 @@ print MAIL "--$boundary\n";
 print MAIL "Content-Type: text/plain; charset=utf-8\n";
 print MAIL "Content-Transfer-Encoding: 8bit\n\n";
 
-print MAIL "This expense request was sent via web interface\n\n";
-
-print MAIL "--$boundary\n";
-print MAIL "Content-Type: text/plain; charset=utf-8\n";
-print MAIL "Content-Disposition: attachment; filename=$reference.txt\n";
-print MAIL "Content-Description: Expense Request\n";
-print MAIL "Content-Transfer-Encoding: 8bit\n\n";
-
 print MAIL "WHO: $names{$who}\n\n";
 print MAIL "WHAT: $what\n\n";
 print MAIL "WHEN: $when\n\n";

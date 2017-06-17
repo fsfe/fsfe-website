@@ -51,7 +51,7 @@
         <xsl:element name="p">
           <xsl:attribute name="class">right grid-70</xsl:attribute>
           <xsl:attribute name="style">margin-top:0;</xsl:attribute>
-          <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/description" />
+          <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/description" />
         </xsl:element>
         <!-- / Description -->
         

@@ -2,6 +2,14 @@
 
 exec 2>/dev/null
 
+if [ "$QUERY_STRING" = "full_build" ]; then
+  if printf %s "$HTTP_REFERER" |grep -qE '^https?://([^/]+\.)?fsfe\.org/'; then
+    touch ./full_build
+  fi
+  printf 'Location: ./\n\n'
+  exit 0
+fi
+
 timestamp(){
   date -d "@$1" +"%F %T (%Z)"
 }
@@ -64,7 +72,7 @@ body { width: 100%; margin: 0; padding: 1ex; }
   transition: all .2s linear;
 }
 
-dl {
+dl, .fullbuild {
   display: block;
   width: 60%;
   min-width: 320px;
@@ -105,6 +113,21 @@ input.tabhandle + label.filled::after { content: ', more...';}
 input.tabhandle:checked + label::before { content: '\25b9 \00a0';}
 input.tabhandle:checked + label.filled::before { content: '\25be \00a0'; color: initial;}
 input.tabhandle:checked + label.filled::after { content: ', less...';}
+
+.fullbuild {
+  text-align: center;
+  padding: 1ex;
+  border: 1px solid black;
+  border-radius: 1ex;
+}
+span.fullbuild { color: #000; background-color: #AAA;}
+a.fullbuild {
+  font-weight: bold; 
+  color: #FFF;
+  background-color: #66D;
+  border-width: 2px;
+  border-color: #008;
+}
 
 h1 {
   text-align: center;
@@ -155,6 +178,11 @@ label  {
       <dt>Duration:</dt><dd>$([ "$duration" -gt 0 ] && duration ${duration})</dd>
       <dt>Termination Status:</dt><dd>${term_status:-running...}</dd>
     </dl>
+    $(if [ ./full_build -nt ./index.cgi ]; then
+        printf '<span class="fullbuild">Full rebuild will be started within next minute.</span>'
+      else
+        printf '<a class="fullbuild" href="./?full_build">Schedule full rebuild</a>'
+    fi)
 
     <h2>Previous builds</h2>$(
       web_tab prev_tab '' "
@@ -163,7 +191,8 @@ label  {
         ls -t status_*.html |head -n10 |while read stat; do
           t="${stat#status_}"
           t="${t%.html}"
-          printf '%s' "<a href=\"$stat\">$(timestamp "$t")</a> - $(sed -rn 's;^.*<dt>Duration:</dt><dd>(.+)</dd>.*$;\1;p;T;q' "$stat")<br>"
+          printf '<a href="%s">%s</a> - %s<br>'
+                 "$stat" "$(timestamp "$t")" "$(sed -rn 's;^.*<dt>Duration:</dt><dd>(.+)</dd>.*$;\1;p;T;q' "$stat")"
         done
       )"
     )

@@ -191,7 +191,7 @@ label  {
         ls -t status_*.html |head -n10 |while read stat; do
           t="${stat#status_}"
           t="${t%.html}"
-          printf '<a href="%s">%s</a> - %s<br>'
+          printf '<a href="%s">%s</a> - %s<br>' \
                  "$stat" "$(timestamp "$t")" "$(sed -rn 's;^.*<dt>Duration:</dt><dd>(.+)</dd>.*$;\1;p;T;q' "$stat")"
         done
       )"

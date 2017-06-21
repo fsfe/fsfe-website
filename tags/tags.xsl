@@ -11,69 +11,56 @@
   <xsl:template match="buildinfo">
     <xsl:apply-templates select="node()"/>
   </xsl:template>
+
+  <xsl:key name="news-tags" match="/buildinfo/document/set/news/tags/tag[@key]"
+           use="translate(@key,'ABCDEFGHIJKLMNOPQRSTUVWXYZ-_+ /','abcdefghijklmnopqrstuvwxyz')"/>
+  <xsl:key name="news-tags" match="/buildinfo/document/set/news/tags/tag[not(@key)]"
+           use="translate(.,'ABCDEFGHIJKLMNOPQRSTUVWXYZ-_+ /','abcdefghijklmnopqrstuvwxyz')"/>
+  <xsl:key name="event-tags" match="/buildinfo/document/set/event/tags/tag[@key]"
+           use="translate(@key,'ABCDEFGHIJKLMNOPQRSTUVWXYZ-_+ /','abcdefghijklmnopqrstuvwxyz')"/>
+  <xsl:key name="event-tags" match="/buildinfo/document/set/event/tags/tag[not(@key)]"
+           use="translate(.,'ABCDEFGHIJKLMNOPQRSTUVWXYZ-_+ /','abcdefghijklmnopqrstuvwxyz')"/>
   
   <!-- TODO: add tags that correspond to project ids -->
+  <xsl:template name="taglink">
+    <xsl:param name="type"/>
+
+    <xsl:variable name="keyname"
+         select="translate(@key,'ABCDEFGHIJKLMNOPQRSTUVWXYZ-_+ /','abcdefghijklmnopqrstuvwxyz')"/>
+    <xsl:variable name="tagname"
+         select="translate(.,'ABCDEFGHIJKLMNOPQRSTUVWXYZ-_+ /','abcdefghijklmnopqrstuvwxyz')"/>
+
+    <xsl:choose><xsl:when test="@key">
+      <xsl:if test="generate-id() = generate-id(key($type, $keyname))">
+        <li><a href="/tags/tagged-{$keyname}.html"><xsl:value-of select="."/></a></li>
+      </xsl:if>
+    </xsl:when><xsl:when test="@content and not(@content = '')">
+      <xsl:if test="generate-id() = generate-id(key($type, $tagname))">
+        <li><a href="/tags/tagged-{$tagname}.html"><xsl:value-of select="@content"/></a></li>
+      </xsl:if>
+    </xsl:when><xsl:otherwise>
+      <xsl:if test="generate-id() = generate-id(key($type, $tagname))">
+        <li><a href="/tags/tagged-{$tagname}.html"><xsl:value-of select="."/></a></li>
+      </xsl:if>
+    </xsl:otherwise></xsl:choose>
+  </xsl:template>  
 
   <!--display dynamic list of news items-->
   <xsl:template match="all-tags-news">
-
-    <xsl:element name="ul">
-      <xsl:attribute name="class">taglist</xsl:attribute>
-
-      <xsl:for-each select="/buildinfo/document/set/news/tags/tag">
-        <xsl:sort select="." order="ascending" />
-        <xsl:variable name="thistag" select="node()" />
-
-        <xsl:if test="generate-id() = generate-id(key('news-tags-by-value', normalize-space(.)))">
-          <xsl:element name="li">
-            <xsl:element name="a">
-              <xsl:attribute name="href">
-                <xsl:text>/tags/tagged.</xsl:text>
-                <xsl:value-of select="/buildinfo/@language" />
-                <xsl:text>.html#n</xsl:text>
-                <xsl:value-of select="translate($thistag,' ','')" />
-              </xsl:attribute>
-              <xsl:value-of select="."/>
-            </xsl:element>
-          </xsl:element>
-        </xsl:if>
-
+    <ul class="taglist">
+      <xsl:for-each select="/buildinfo/document/set/news/tags/tag"><xsl:sort select="." order="ascending" />
+        <xsl:call-template name="taglink"><xsl:with-param name="type" select="'news-tags'"/></xsl:call-template>
       </xsl:for-each>
-
-    </xsl:element>
-
+    </ul>
   </xsl:template>
 
-  
   <!--display dynamic list of newsletters items-->
   <xsl:template match="all-tags-events">
-    
-    <xsl:element name="ul">
-      <xsl:attribute name="class">taglist</xsl:attribute>
-
-      <xsl:for-each select="/buildinfo/document/set/event/tags/tag">
-        <xsl:sort select="." order="ascending" />
-        <xsl:variable name="thistag" select="node()" />
-
-        <xsl:if test="generate-id() = generate-id(key('events-tags-by-value', normalize-space(.)))">
-          <xsl:element name="li">
-            <xsl:element name="a">
-              <xsl:attribute name="href">
-                <xsl:text>/tags/tagged.</xsl:text>
-                <xsl:value-of select="/buildinfo/@language" />
-                <xsl:text>.html#e</xsl:text>
-                <xsl:value-of select="translate($thistag,' ','')" />
-              </xsl:attribute>
-              <xsl:value-of select="."/>
-            </xsl:element>
-          </xsl:element>
-        </xsl:if>
-
+    <ul class="taglist">
+      <xsl:for-each select="/buildinfo/document/set/event/tags/tag"><xsl:sort select="." order="ascending" />
+        <xsl:call-template name="taglink"><xsl:with-param name="type" select="'event-tags'"/></xsl:call-template>
       </xsl:for-each>
-
-    </xsl:element>
-    
+    </ul>
   </xsl:template>
-
 
 </xsl:stylesheet>

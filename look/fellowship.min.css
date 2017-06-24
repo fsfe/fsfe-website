@@ -1068,7 +1068,7 @@ textarea#search button,textarea#search input[name="query"]{height:auto}
 #main,#followup{background:#fff;margin:1em auto;padding:1.5em;font-size:1.1em;box-shadow:0 .4em 1em #c8c8c8}@media (min-width:768px){#main,#followup{padding:3em}}
 #main{padding-top:1em}#main h1,#main h2,#main h3,#main h4,#main h5,#main h6{-moz-hypens:manual;-webkit-hyphens:manual;hyphens:manual}
 #main p{-moz-hyphens:auto;-webkit-hyphens:auto;hyphens:auto}
-#main footer.tags{clear:both;color:#999;margin:3em 0 -2em 0;font-size:.8em}#main footer.tags a.tag{display:inline-block;padding:.3em;background:#c8e7a6;border-radius:4px;margin:0 0 .3em .5em}
+#main aside#tags{clear:both;margin:3em 0 -2em 0;font-size:.8em;float:none;position:static}#main aside#tags h2{display:inline;color:#999;font-size:1em;font-weight:normal}
 #main footer.notice{clear:both;margin:3em -1.5em -3em;background:#eee;color:#555;padding:1em}#main footer.notice:before,#main footer.notice:after{content:" ";display:table}
 #main footer.notice:after{clear:both}
 #main footer.notice:before,#main footer.notice:after{content:" ";display:table}
@@ -1355,7 +1355,7 @@ table#gold>tbody>tr:hover>td,table#gold>tbody>tr:hover>th{background-color:#f5f5
 #eifv2-track .clear:after{clear:both}
 #eifv2-track .grid-50{position:relative;min-height:1px;padding-left:15px;padding-right:15px}@media (min-width:992px){#eifv2-track .grid-50{float:left;width:50%}}
 #eifv2-track blockquote{margin-left:0}#eifv2-track blockquote p{font-size:.9em}
-ul.taglist{margin:0;padding:0;list-style:none}ul.taglist li{display:inline;white-space:nowrap}ul.taglist li a{display:inline-block;padding:.3em;background:#c8e7a6;border-radius:4px;margin:0 0 .3em .5em}
+ul.taglist{margin:0;padding:0;list-style:none;display:inline}ul.taglist li{display:inline;white-space:nowrap}ul.taglist li a{display:inline-block;padding:.3em;background:#c8e7a6;border-radius:4px;margin:0 0 .3em .5em}
 .tagginglabel{display:inline-block;padding:.3em;background:#c8e7a6;border-radius:4px;margin:0 0 .3em .5em}
 .tag16{font-size:16}
 .tag17{font-size:17}
@@ -1383,7 +1383,7 @@ ul.taglist{margin:0;padding:0;list-style:none}ul.taglist li{display:inline;white
 .tag39{font-size:39}
 .tag40{font-size:40}
 .tag.title{margin-top:4em}
-.tag-front-page,.tag-newsletter,.tag-en,.tag-gb,.tag-uk,.tag-at,.tag-de,.tag-ee,.tag-es,.tag-fi,.tag-fr,.tag-it,.tag-se,.tag-sq,.tag-sk,.tag-si,.tag-ro,.tag-pt,.tag-pl,.tag-no,.tag-nl,.tag-hu,.tag-hr,.tag-ch,.tag-br,.tag-be,.tag-othertags{display:none !important}
+.taglist a[href^="/tags/tagged-frontpage"],.tag-front-page{display:none !important}
 .question{margin-bottom:15px;margin-top:60px}
 .answer,.question2,.answer2{padding:.5em 1em;text-align:justify}
 .question2{margin-left:1em}

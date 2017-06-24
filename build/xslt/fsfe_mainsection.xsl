@@ -5,17 +5,22 @@
   <xsl:template name="taglinks">
     <xsl:param name="prefix" />
 
-    <xsl:for-each select="/buildinfo/document/tags/tag">
+    <ul class="taglist"><xsl:for-each select="/buildinfo/document/tags/tag">
+      <xsl:variable name="keyname"
+           select="translate(@key,'ABCDEFGHIJKLMNOPQRSTUVWXYZ-_+ /','abcdefghijklmnopqrstuvwxyz')"/>
+      <xsl:variable name="tagname"
+           select="translate(.,'ABCDEFGHIJKLMNOPQRSTUVWXYZ-_+ /','abcdefghijklmnopqrstuvwxyz')"/>
+
       <xsl:choose><xsl:when test="@key and .">
-        <a href="/tags/tagged.html#{$prefix}{@key}" class="p-category tag tag-{@key}"><xsl:value-of select="."/></a>
-      </xsl:when><xsl:when test="@key">
-        <a href="/tags/tagged.html#{$prefix}{@key}" class="p-category tag tag-{@key}"><xsl:value-of select="@key"/></a>
-      </xsl:when><xsl:when test="@content"> <!-- Legacy -->
-        <a href="/tags/tagged.html#{$prefix}{.}" class="p-category tag tag-{.}"><xsl:value-of select="@content"/></a>
+        <li><a href="/tags/tagged-{$keyname}.html"><xsl:value-of select="."/></a></li>
+      </xsl:when><xsl:when test="@content and not(@content = '')"> <!-- Legacy -->
+        <li><a href="/tags/tagged-{$tagname}.html"><xsl:value-of select="@content"/></a></li>
+      </xsl:when><xsl:when test="@key"> <!-- bad style -->
+        <li><a href="/tags/tagged-{$keyname}.html"><xsl:value-of select="@key"/></a></li>
       </xsl:when><xsl:otherwise> <!-- Legacy and bad style -->
-        <a href="/tags/tagged.html#{$prefix}{.}" class="p-category tag tag-{.}"><xsl:value-of select="."/></a>
+        <li><a href="/tags/tagged-{$tagname}.html"><xsl:value-of select="."/></a></li>
       </xsl:otherwise></xsl:choose>
-    </xsl:for-each>
+    </xsl:for-each></ul>
   </xsl:template>
 
   <xsl:template name="fsfe_mainsection">
@@ -33,19 +38,15 @@
         <xsl:apply-templates select="/buildinfo/document/event/body | /buildinfo/document/news/body | /buildinfo/document/body/* | /buildinfo/document/body/node()" />
         
         <!-- Show tags if this is a news press release or an event -->
-        <xsl:if test="/buildinfo/document/@newsdate or /buildinfo/document/event">
-          <xsl:if test="count(/buildinfo/document/tags/tag[. != 'front-page' and . != 'newsletter']) > 0">
-            <footer class="tags"><span id="tags">
-                <xsl:call-template name="fsfe-gettext"> <xsl:with-param name="id" select="'tags'" /></xsl:call-template>
-              </span>
+        <xsl:if test="(/buildinfo/document/@newsdate or /buildinfo/document/event)
+                      and /buildinfo/document/tags/tag[not(. = 'front-page' or @key = 'front-page')]">
+          <aside id="tags">
+            <h2><xsl:call-template name="fsfe-gettext">
+              <xsl:with-param name="id" select="'tags'" />
+            </xsl:call-template></h2>
 
-              <xsl:choose><xsl:when test="/buildinfo/document/@newsdate">
-                <xsl:call-template name="taglinks"><xsl:with-param name="prefix" select="'n'"/></xsl:call-template>
-              </xsl:when><xsl:when test="/buildinfo/document/event">
-                <xsl:call-template name="taglinks"><xsl:with-param name="prefix" select="'e'"/></xsl:call-template>
-              </xsl:when></xsl:choose>
-            </footer>
-          </xsl:if>
+            <xsl:call-template name="taglinks"/>
+          </aside>
         </xsl:if> <!-- /tags -->
         
         <!-- SOCIAL NETWORK LINKS (BOTTOM) -->
@@ -61,7 +62,6 @@
               <xsl:value-of select="$linkresources"/><xsl:value-of select="/buildinfo/@filename"/>
               <xsl:text>.html</xsl:text>
             </xsl:variable>
-            
 
             <xsl:element name="form"> <!-- div containing all buttons -->
               <xsl:attribute name="action">/share</xsl:attribute>
@@ -133,6 +133,7 @@
                   <xsl:text>OK</xsl:text>
                 </xsl:element>
               </xsl:element>
+              <xsl:element name="wbr"/>
 
               <!-- GNU Social -->
               <xsl:element name="label">
@@ -167,6 +168,7 @@
                   <xsl:text>OK</xsl:text>
                 </xsl:element>
               </xsl:element>
+              <xsl:element name="wbr"/>
 
               <!-- Reddit -->
               <xsl:element name="button">
@@ -182,6 +184,7 @@
                 </xsl:attribute>
                 <xsl:text>Reddit</xsl:text>
               </xsl:element>
+              <xsl:element name="wbr"/>
               
               <!-- Flattr -->
               <xsl:element name="button">
@@ -197,6 +200,7 @@
                 </xsl:attribute>
                 <xsl:text>Flattr</xsl:text>
               </xsl:element>
+              <xsl:element name="wbr"/>
 
               <!-- Hacker News -->
               <xsl:element name="button">
@@ -212,6 +216,7 @@
                 </xsl:attribute>
                 <xsl:text>Hacker News</xsl:text>
               </xsl:element>
+              <xsl:element name="wbr"/>
 
               <!-- Twitter -->
               <xsl:element name="button">
@@ -227,6 +232,7 @@
                 </xsl:attribute>
                 <xsl:text>Twitter</xsl:text>
               </xsl:element>
+              <xsl:element name="wbr"/>
 
               <!-- Facebook -->
               <xsl:element name="button">
@@ -242,6 +248,7 @@
                 </xsl:attribute>
                 <xsl:text>Facebook</xsl:text>
               </xsl:element>
+              <xsl:element name="wbr"/>
 
               <!-- Google+ -->
               <xsl:element name="button">
@@ -257,6 +264,7 @@
                 </xsl:attribute>
                 <xsl:text>Google+</xsl:text>
               </xsl:element>
+              <xsl:element name="wbr"/>
 
               <!-- Support -->
               <xsl:element name="button">
@@ -271,6 +279,7 @@
                 </xsl:attribute>
                 <xsl:text>Support!</xsl:text>
               </xsl:element>
+              <xsl:element name="wbr"/>
 
               <p><em>
                 <xsl:call-template name="fsfe-gettext">

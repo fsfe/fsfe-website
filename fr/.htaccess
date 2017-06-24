@@ -1,0 +1,7 @@
+RewriteEngine	On
+
+RewriteRule ^news\.html		/fr/fr.html	[redirect=permanent]
+RewriteRule ^events\.html	/fr/fr.html	[redirect=permanent]
+RewriteRule ^news\.(..)\.html	/fr/fr.$1.html	[redirect=permanent]
+RewriteRule ^events\.(..)\.html	/fr/fr.$1.html	[redirect=permanent]
+

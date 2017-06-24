@@ -21,7 +21,6 @@
   <xsl:key name="event-tags" match="/buildinfo/document/set/event/tags/tag[not(@key)]"
            use="translate(.,'ABCDEFGHIJKLMNOPQRSTUVWXYZ-_+ /','abcdefghijklmnopqrstuvwxyz')"/>
   
-  <!-- TODO: add tags that correspond to project ids -->
   <xsl:template name="taglink">
     <xsl:param name="type"/>
 

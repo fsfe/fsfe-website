@@ -86,6 +86,7 @@ tags/tagged-%.en.xhtml: tags/tagged.en.xhtml
 all: $(INDEXSOURCES)
 tags/tagged-%.sources:
 	printf '%s:[$*]\n' 'news/*/news' news/generated_xml/ news/nl/nl 'events/*/event' >$@
+	printf 'd_day:[]' >>$@
 
 MAPREQS = $(shell printf %s '$(TAGMAP)' \
             | sed -r 's;[^ ]+\...\.xml;\n&;g' \

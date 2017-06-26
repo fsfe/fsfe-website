@@ -1,0 +1,5 @@
+RewriteEngine	On
+
+RewriteRule ^tagged\.html	/tags/tags.html		[redirect=permanent]
+RewriteRule ^tagged\.(..)\.html	/tags/tags.$1.html	[redirect=permanent]
+

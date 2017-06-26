@@ -4,7 +4,7 @@
                 xmlns:dt="http://xsltsl.org/date-time"
                 exclude-result-prefixes="dt">
 
-  <xsl:import href="translations.xsl" />
+  <xsl:import href="../../build/xslt/gettext.xsl" />
   <xsl:import href="static-elements.xsl" />
   <xsl:import href="date-time.xsl" />
   <xsl:output method="xml" encoding="utf-8" indent="yes" />
@@ -16,76 +16,47 @@
     <xsl:param name="show-date" select="'yes'" />
     <xsl:param name="compact-view" select="'no'" />
     
-    <xsl:variable name="link">
-      <xsl:value-of select="link" />
-    </xsl:variable>
-    
-    <xsl:variable name="day">
-      <xsl:value-of select="substring(@date,9,2)" />
-    </xsl:variable>
-    
-    <xsl:variable name="month">
-      <xsl:call-template name="dt:get-month-name">
-        <xsl:with-param name="month" select="substring(@date,6,2)" />
-      </xsl:call-template>
-    </xsl:variable>
-    
-    <xsl:variable name="year">
-      <xsl:value-of select="substring(@date,1,4)" />
-    </xsl:variable>
-    
     <xsl:variable name="title">
-      <xsl:choose>
-        <xsl:when test="$link != ''">
-          <a href="{link}">
-            <xsl:value-of select="title" />
-          </a>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:value-of select="title" />
-        </xsl:otherwise>
-      </xsl:choose>
+      <xsl:choose><xsl:when test="link != ''">
+        <a href="{link}"><xsl:value-of select="title" /></a>
+      </xsl:when><xsl:otherwise>
+        <xsl:value-of select="title" />
+      </xsl:otherwise></xsl:choose>
     </xsl:variable>
     
     <xsl:variable name="date">
-      <xsl:value-of select="$day" />
+      <xsl:value-of select="substring(@date,9,2)" />
       <xsl:text> </xsl:text>
-      <xsl:value-of select="$month" />
+      <xsl:call-template name="dt:get-month-name">
+        <xsl:with-param name="month" select="substring(@date,6,2)" />
+      </xsl:call-template>
       <xsl:if test="$display-year = 'yes'">
         <xsl:text> </xsl:text>
-        <xsl:value-of select="$year" />
+        <xsl:value-of select="substring(@date,1,4)" />
       </xsl:if>
       <xsl:text>: </xsl:text>
     </xsl:variable>
       
-        <!--<div class="entry">-->
-        <xsl:element name="div">
-          <xsl:attribute name="class">entry</xsl:attribute>
-          
-          <!-- title -->
-          <h3>
-            <xsl:call-template name="generate-id-attribute">
-              <xsl:with-param name="title" select="title" />
-            </xsl:call-template>
-            <xsl:copy-of select="$title" />
-          </h3>
-          
-          <!-- news date -->
-          <xsl:if test="$show-date = 'yes'">
-            <p class="date">
-              <xsl:copy-of select="$date" />
-            </p>
-          </xsl:if>
-          
-          <!-- news text -->
-          <xsl:if test="$compact-view = 'no'">
-		<div class="text">
-		<xsl:apply-templates select="body/node()" />
-		</div>
-          </xsl:if>
-          
-        </xsl:element>
-    
+    <!--<div class="entry">-->
+    <div class="entry">
+      <!-- title -->
+      <h3>
+        <xsl:call-template name="generate-id-attribute">
+          <xsl:with-param name="title" select="title" />
+        </xsl:call-template>
+        <xsl:copy-of select="$title" />
+      </h3>
+      
+      <!-- news date -->
+      <xsl:if test="$show-date = 'yes'">
+        <p class="date"><xsl:copy-of select="$date" /></p>
+      </xsl:if>
+      
+      <!-- news text -->
+      <xsl:if test="$compact-view = 'no'">
+    	<div class="text"><xsl:apply-templates select="body/node()" /></div>
+      </xsl:if>
+    </div>
   </xsl:template>
   
   <!-- Show a single newsletter item -->

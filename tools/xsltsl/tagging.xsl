@@ -16,13 +16,14 @@
     <xsl:param name="show-date" select="'yes'" />
     <xsl:param name="compact-view" select="'no'" />
 
-    <xsl:for-each select="/buildinfo/document/set/news[ translate (@date, '-', '') &lt;= translate ($today, '-', '')
+    <xsl:for-each select="/buildinfo/document/set/news[
+      translate(@date, '-', '') &lt;= translate($today, '-', '')
       and ($tag = '' or tags/tag[@key] = $tag or tags/tag = $tag)
-      and tags/tag != 'newsletter'
+      and not(tags/tag = 'newsletter' or tags/tag[@key] = 'newsletter')
       and not( @type = 'newsletter' ) ]"> <!-- Legacy -->
       <xsl:sort select="@date" order="descending" />
 
-      <xsl:if test="position() &lt;= $nb-items or $nb-items=''">
+      <xsl:if test="$nb-items = '' or position() &lt;= $nb-items">
         <xsl:call-template name="news">
           <xsl:with-param name="show-date" select="$show-date" />
           <xsl:with-param name="compact-view" select="$compact-view" />
@@ -95,113 +96,4 @@
 
     </xsl:otherwise> </xsl:choose>
   </xsl:template>
-
-  <xsl:key name="news-tags-by-value" match="news/tags/tag" use="."/>
-  
-  <xsl:key name="events-tags-by-value" match="event/tags/tag" use="."/>
-  
-  <!--display dynamic list of tagged news, sorted by tag -->
-
-  <xsl:template name="tagged-news">
-
-    <!-- loop through all tags (this complex expression loops over each tag once) --> 
-    <xsl:for-each select="/buildinfo/document/set/news/tags/tag[ count( . | key( 'news-tags-by-value', . )[1] ) = 1 ]">
-
-      <xsl:sort select="." order="ascending" />
-
-      <xsl:variable name="tag" select="." />
-
-      <xsl:element name="div">
-        <xsl:attribute name="class">tag-<xsl:value-of select="$tag" /> tag title</xsl:attribute>
-        <xsl:attribute name="id">
-          <xsl:text>n</xsl:text>
-          <xsl:value-of select="translate($tag, ' ', '')" />
-        </xsl:attribute>
-
-        <xsl:element name="h3">
-          <xsl:call-template name="generate-id-attribute" />
-
-          <xsl:choose> <xsl:when test="@content">
-            <xsl:value-of select="@content"/>
-          </xsl:when><xsl:otherwise>
-            <xsl:value-of select="$tag" />
-          </xsl:otherwise></xsl:choose>
-        </xsl:element>
-
-        <xsl:element name="ul">
-          <xsl:attribute name="class">tag-<xsl:value-of select="$tag" /> tag list</xsl:attribute>
-
-          <!-- loop through all news having this tag -->
-          <xsl:for-each select="/buildinfo/document/set/news[tags/tag = $tag]">
-            <xsl:element name="li">
-              <xsl:element name="a">
-                <xsl:attribute name="href"><xsl:value-of select="link" /></xsl:attribute>
-                <xsl:value-of select="title" />
-              </xsl:element>
-            </xsl:element>
-          </xsl:for-each>
-
-        </xsl:element>
-
-      </xsl:element>
-
-    </xsl:for-each>
-
-  </xsl:template>
-  
-  
-  <!-- display dynamic list of tagged events, sorted by tag -->
-
-  <xsl:template name="tagged-events">
-    <xsl:param name="absolute-fsfe-links" />
-    
-    <!-- loop through all tags (this complex expression loops over each tag once) -->
-    <xsl:for-each select="/buildinfo/document/set/event/tags/tag[ count( . | key( 'events-tags-by-value', . )[1] ) = 1 ]">
-      <xsl:sort select="." order="ascending" />
-      <xsl:variable name="tag" select="." />
-
-      <xsl:element name="div">
-        <xsl:attribute name="class">tag-<xsl:value-of select="$tag" /> tag title</xsl:attribute>
-        <xsl:attribute name="id">
-          <xsl:text>e</xsl:text>
-          <xsl:value-of select="translate($tag, ' ', '')" />
-        </xsl:attribute>
-        <xsl:element name="h3">
-          <xsl:call-template name="generate-id-attribute" />
-          <xsl:choose> <xsl:when test="@content">
-            <xsl:value-of select="@content"/>
-          </xsl:when><xsl:otherwise>
-            <xsl:value-of select="$tag" />
-          </xsl:otherwise></xsl:choose>
-        </xsl:element>
-
-        <xsl:element name="ul">
-          <xsl:attribute name="class">tag-<xsl:value-of select="$tag" /> tag list</xsl:attribute>
-
-          <!-- loop through all events having this tag -->
-          <xsl:for-each select="/buildinfo/document/set/event[tags/tag = $tag]">
-
-            <xsl:element name="li">
-              <xsl:element name="a">
-                <xsl:attribute name="href">
-                  <xsl:call-template name="event-link">
-                    <xsl:with-param name="absolute-fsfe-links" select="$absolute-fsfe-links" />
-                  </xsl:call-template>
-                </xsl:attribute>
-                <xsl:value-of select="title" />
-              </xsl:element><!--a-->
-            </xsl:element><!--li-->
-
-          </xsl:for-each>
-        </xsl:element>
-
-      </xsl:element>
-
-    </xsl:for-each>
-    
-  </xsl:template>
-
-
-  <xsl:key name="all-tags-by-value" match="tags/tag" use="."/>
-  
 </xsl:stylesheet>

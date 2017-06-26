@@ -39,89 +39,38 @@
     <xsl:variable name="lang">
       <xsl:value-of select="/buildinfo/document/@language"/>
     </xsl:variable>
-
     <xsl:variable name="nl-lang">
-      <xsl:choose>
-	<xsl:when test="boolean(document('')/xsl:stylesheet/nl:langs/nl:lang[@value = $lang])">
-	  <xsl:value-of select="$lang" />
-	</xsl:when>
-	<xsl:otherwise>
-	  <xsl:text>en</xsl:text>
-	</xsl:otherwise>
-      </xsl:choose>
+      <xsl:choose><xsl:when test="boolean(document('')/xsl:stylesheet/nl:langs/nl:lang[@value = $lang])">
+	<xsl:value-of select="$lang" />
+      </xsl:when><xsl:otherwise>
+	<xsl:text>en</xsl:text>
+      </xsl:otherwise></xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="email">
+      <xsl:call-template name="gettext"><xsl:with-param name="id" select="'email'" /></xsl:call-template>
+    </xsl:variable>
+    <xsl:variable name="submit">
+      <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'subscribe'" /></xsl:call-template>
     </xsl:variable>
 
-    <xsl:element name="form">
-      <xsl:attribute name="id">formnl</xsl:attribute>
-      <xsl:attribute name="name">formnl</xsl:attribute>
-      <xsl:attribute name="method">post</xsl:attribute>
-      <xsl:attribute name="action">
-	<xsl:text>//lists.fsfe.org/mailman/subscribe/newsletter-</xsl:text>
-	<xsl:value-of select="$nl-lang"/>
-      </xsl:attribute>
-      <xsl:element name="p">
-	<xsl:element name="select">
-	  <xsl:attribute name="id">language</xsl:attribute>
-	  <xsl:attribute name="name">language</xsl:attribute>
-	  <xsl:attribute name="onchange">
-	    <xsl:text>var form = document.getElementById('formnl'); var sel=document.getElementById('language'); form.action='//lists.fsfe.org/mailman/subscribe/newsletter-'+sel.options[sel.options.selectedIndex].value</xsl:text>
-	  </xsl:attribute>
+    <form id="formnl" name="formnl" method="POST" action="//lists.fsfe.org/mailman/subscribe/newsletter-{$nl-lang}">
+      <p>
+        <select id="language" name="language" onchange="var form = document.getElementById('formnl'); var sel=document.getElementById('language'); form.action='//lists.fsfe.org/mailman/subscribe/newsletter-'+sel.options[sel.options.selectedIndex].value">
 	  <xsl:for-each select="document('')/xsl:stylesheet/nl:langs/nl:lang">	  
 	    <xsl:element name="option">
-	      <xsl:attribute name="value">
-		<xsl:value-of select="@value" />
-	      </xsl:attribute>
-	      <xsl:if test="$nl-lang = @value">
-		<xsl:attribute name="selected" />
-	      </xsl:if>
+	      <xsl:attribute name="value"><xsl:value-of select="@value" /></xsl:attribute>
+	      <xsl:if test="$nl-lang = @value"><xsl:attribute name="selected" /></xsl:if>
 	      <xsl:value-of select="." />
 	    </xsl:element>
 	  </xsl:for-each>
-	</xsl:element> <!-- select -->
+	</select> <!-- select -->
   
-  <!-- get translation for "email address" -->
-  <xsl:variable name="email">
-    <xsl:call-template name="gettext">
-      <xsl:with-param name="id" select="'email'" />
-    </xsl:call-template>
-  </xsl:variable>
-  
-	<xsl:element name="input">
-	  <xsl:attribute name="id">email</xsl:attribute>
-	  <xsl:attribute name="name">email</xsl:attribute>
-	  <xsl:attribute name="type">email</xsl:attribute>
-	  <xsl:attribute name="placeholder"><xsl:value-of select="$email" /></xsl:attribute>
-	</xsl:element> <!-- input -->
-	<xsl:call-template name="subscribe-button" />
-      </xsl:element> <!-- p -->
-    </xsl:element> <!-- form -->
+        <input id="email" name="email" type="email" placeholder="{$email}"/>
+        <input id="submit" type="submit" value="{$submit}" />
+      </p>
+    </form>
   </xsl:template>
   
-  <!--generate subscribe button in correct language-->
-  <xsl:template name="subscribe-button">
-    
-    <xsl:variable name="submit">
-      <xsl:call-template name="gettext">
-        <xsl:with-param name="id" select="'subscribe'" />
-      </xsl:call-template>
-    </xsl:variable>
-    
-    <xsl:element name="input">
-      <xsl:attribute name="id">submit</xsl:attribute>
-      <xsl:attribute name="type">submit</xsl:attribute>
-      <xsl:attribute name="value">
-        <xsl:choose>
-          <xsl:when test="$submit != ''">
-            <xsl:value-of select="$submit" />
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:text>Submit</xsl:text>
-          </xsl:otherwise>
-        </xsl:choose>
-      </xsl:attribute>
-    </xsl:element>
-  </xsl:template>
-
   <!-- auto generate ID for headings if doesn't already exist -->
   <xsl:template name="generate-id">
     <xsl:copy>

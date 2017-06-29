@@ -34,7 +34,6 @@
         <xsl:text> </xsl:text>
         <xsl:value-of select="substring(@date,1,4)" />
       </xsl:if>
-      <xsl:text>: </xsl:text>
     </xsl:variable>
       
     <!--<div class="entry">-->

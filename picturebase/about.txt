@@ -1,0 +1,21 @@
+this will become the database for the pictures to be used on fsfe.org that will be filled and organised in the upcoming weeks by Erik with Susanne.
+
+For now, in short: ALL pictures we use on our webpage in the long run shall end up in "picturebase" or in a subfolder. 
+
+Subfolders will be made by categories. This will be 
+	booths - all pictures that include a booth
+	people - pictures of individual people or groups that are associated with FSFE
+	events - all events by fsfe, community-meet-ups, summits, GA-meetings etc
+	community - pictures by and with our community
+	
+all pictues in all categories shall use the following name-scheme: YEAR-MONTH-SHORT-NAME-AND-USE-KEYWORDS.jpg
+For each item please put a .txt-file with the EXACT same name in this repository
+where you leave the following information inside:
+- Year:
+- Author: (single or group)
+- License:
+- Contact: (for any question/feedback)
+- Additional remarks: (if any)
+- so far has been used (at/for/inside):
+
+If you scale the original image for any reason (most probably for web-publishing), then reuse the name with the suffix NAME-000px with 000 being the amount of the pixel in width of the image.

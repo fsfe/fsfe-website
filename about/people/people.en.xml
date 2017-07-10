@@ -60,7 +60,6 @@
   <!--
     Improvement ideas:
         When improving this teampage, we had some other ideas for which we had no time to implement:
-        - Not background colors but badges/text behind every person indicating, what salaray basis he/she is working on and what employment status
         - A map where the residency of every team member is shown
         - (Dynamic) overview of sectors (like education, policy, legal) and their members
         - Making this whole thing more simple than it is now ;)
@@ -100,16 +99,6 @@
     <email>baillard (at) fsfeurope (dot) org</email>
     <avatar>/about/baillard/baillard-avatar.jpg</avatar>
   </person>
-
-<!--
-    <person id="Cellini" avatar="no" teams="intern">
-    <name>Cellini Bedi</name>
-    <country>FR</country>
-    <function>intern/f</function>
-    <email>cellini (at) fsfe (dot) org</email>
-    <employee>full/f</employee>
-  </person>
--->
 
   <person id="borchardt" avatar="yes" association-member="yes" teams="ga">
     <name>Jan-Christoph Borchardt</name>
@@ -174,17 +163,6 @@
   	<function volunteers="translators-es">deputy/m</function>
   </person>
 
-<!--
-
-  <person id="falgueyrac" avatar="no" teams="fr, core">
-    <name>Lucile Falgueyrac</name>
-    <country>FR</country>
-    <function>intern/f</function>
-    <email>lucile.falg (at) fsfe (dot) org</email>
-    <employee>full/f</employee>
-  </person>
-  -->
-
   <person id="feltrin" avatar="no" teams="ftf">
     <name>Nicola Feltrin</name>
     <country>IT</country>
@@ -231,25 +209,6 @@
     <employee>freelancer/m</employee>
   </person>
 
-  <!--
-  <person id="harmuth" avatar="no" association-member="yes" teams="ga">
-    <name>Stefan Harmuth</name>
-    <country>DE</country>
-    <function>fellowship-representative/m</function>
-    <email>harmuth (at) fsfeurope (dot) org</email>
-  </person>
-  -->
-
-  <!--
-  <person id="marius" avatar="no" teams="intern">
-    <name>Marius Jammes</name>
-    <country>FR</country>
-    <function>intern/m</function>
-    <email>mjammes (at) fsfe (dot) org</email>
-    <employee>full/m</employee>
-  </person>
-  -->
-
   <person id="jean" avatar="yes" teams="fr, core">
     <name>Nicolas Jean</name>
     <country>FR</country>
@@ -291,15 +250,6 @@
     <avatar>/about/kekalainen/kekalainen-avatar.jpg</avatar>
   </person>
 
-  <!-- <person id="kersten" avatar="no" teams="de, core">
-    <name>Rainer Kersten</name>
-    <country>DE</country>
-    <function>office/m</function>
-    <function>merchandise/m</function>
-    <email>kersten (at) fsfeurope (dot) org</email>
-    <employee>part/m</employee>
-  </person> -->
-
   <person id="kirschner" avatar="yes" association-member="yes" teams="de, ga, council">
     <name>Matthias Kirschner</name>
     <country>DE</country>
@@ -326,16 +276,6 @@
     <avatar>/about/koch/koch-avatar.jpg</avatar>
   </person>
 
-  <!--
-  <person id="lammi" avatar="no" teams="intern">
-    <name>Matti Lammi</name>
-    <country>FI</country>
-    <function>intern/m</function>
-    <email>lammi (at) fsfeurope (dot) org</email>
-    <employee>full/m</employee>
-  </person>
-  -->
-
   <person id="lindfors" avatar="no" teams="fi">
     <name>Timo Juhani Lindfors</name>
     <country>FI</country>
@@ -348,16 +288,6 @@
     <function country="ES">coordinator/m</function>
     <email>machon (at) fsfeurope (dot) org</email>
   </person>
-
-  <!--
-  <person id="miks" avatar="no" teams="intern">
-    <name>Miks Upenieks</name>
-    <country>LV</country>
-    <function>intern/m</function>
-    <email>miks (at) fsfe (dot) org</email>
-    <employee>full/m</employee>
-  </person>
-  -->
 
   <person id="marrali" avatar="yes" teams="it, core">
     <name>Michele Marrali</name>
@@ -392,7 +322,6 @@
     <country>CH</country>
     <function country="CH">coordinator/f</function>
     <email>pati (at) fsfe (dot) org</email>
-    <!-- <link></link> -->
     <avatar>/about/moeller/moeller-avatar.jpg</avatar>
   </person>
 
@@ -471,7 +400,6 @@
     <name>Cristian Rigamonti</name>
     <country>IT</country>
     <function>sysadmin/m</function>
-    <!-- <function volunteers="translators-it">coordinator/m</function> -->
     <email>rigamonti (at) fsfeurope (dot) org</email>
     <link>http://wiki.fsfe.org/Fellows/cri</link>
     <avatar>/about/rigamonti/rigamonti-avatar.jpg</avatar>
@@ -485,16 +413,6 @@
     <link>http://wiki.fsfe.org/Fellows/comzeradd</link>
     <avatar>/about/roussos/roussos-avatar.jpg</avatar>
   </person>
-
-  <!--
-  <person id="ritz" avatar="no" teams="intern">
-    <name>Asa Ritz</name>
-    <country>US</country>
-    <function>intern/m</function>
-    <email>asawritz (at) fsfe (dot) org</email>
-    <employee>full/m</employee>
-  </person>
-  -->
 
   <person id="roy" avatar="yes" association-member="yes" teams="fr, ftf, ga">
     <name>Hugo Roy</name>
@@ -538,7 +456,6 @@
     <name>Björn Schießle</name>
     <country>DE</country>
     <function country="DE">deputy/m</function>
-    <!-- <function volunteers="translators-de">coordinator/m</function> -->
     <email>schiessle (at) fsfe (dot) org</email>
     <link>http://www.schiessle.org</link>
     <avatar>/about/schiessle/schiessle-avatar.jpg</avatar>
@@ -587,23 +504,13 @@
     <avatar>/about/suklje/suklje-avatar.jpg</avatar>
   </person>
 
-  <person id="murphy" avatar="no" teams="intern">
+  <person id="murphy" avatar="no" teams="">
     <name>Luke Murphy</name>
     <country>IRL</country>
     <function>intern/m</function>
     <email>lukewm (at) fsfe (dot) org</email>
     <employee>part/m</employee>
   </person>
- 
- <!--
-  <person id="vaseva" avatar="no" teams="intern">
-    <name>Lyudmila Vaseva</name>
-    <country>DE</country>
-    <function>intern/f</function>
-    <email>lusy (at) fsfe (dot) org</email>
-    <employee>part/f</employee>
-  </person>
--->
 
   <person id="verheesen" avatar="yes" teams="nl, core">
     <name>Maurice Verheesen</name>

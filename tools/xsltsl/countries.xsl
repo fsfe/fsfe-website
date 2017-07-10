@@ -128,6 +128,13 @@
                               </xsl:variable>
                               <xsl:value-of select="/buildinfo/document/set/country[@id=$country]" />
                           </xsl:if>
+                          <xsl:if test="@group != ''">
+                              <xsl:text> </xsl:text>
+                              <xsl:variable name="group">
+                                  <xsl:value-of select="@group" />
+                              </xsl:variable>
+                              <xsl:value-of select="/buildinfo/document/set/group[@id=$group]" />
+                          </xsl:if>
                           <xsl:if test="@project != ''">
                               <xsl:text> </xsl:text>
                               <xsl:variable name="project">

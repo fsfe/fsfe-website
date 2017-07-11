@@ -243,7 +243,8 @@
     </xsl:if>
     
     <xsl:if test="/buildinfo/document/download">
-        <span class="download"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'download'" /></xsl:call-template>&#160;</span>
+        <xsl:element name="br" />
+        <span class="download"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'download'" /></xsl:call-template>:&#160;</span>
         <xsl:element name="a">
                 <xsl:attribute name="href"><xsl:value-of select="/buildinfo/document/download/@content" /></xsl:attribute>
                 <xsl:value-of select="/buildinfo/document/download/@type" />

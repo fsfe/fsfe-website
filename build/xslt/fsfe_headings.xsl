@@ -138,6 +138,7 @@
                   <xsl:when test="@id and document('../../about/people/people.en.xml')/personset/person[@id=$id]">
                   <!-- if the author is in fsfe's people.xml then we take information from there --> 
                     <xsl:choose>
+                      <!-- person has a link -->
                       <xsl:when test="document('../../about/people/people.en.xml')/personset/person[@id=$id]/link">
                           <xsl:element name="a">
                                   <xsl:attribute name="class">author p-author h-card</xsl:attribute>
@@ -150,8 +151,9 @@
                                           </xsl:element>
                                   </xsl:if>
                                   <xsl:value-of select="document('../../about/people/people.en.xml')/personset/person[@id=$id]/name" />
-                          </xsl:element>&#160;
+                          </xsl:element>
                       </xsl:when>
+                      <!-- person has no link -->
                       <xsl:otherwise>
                           <xsl:if test="document('../../about/people/people.en.xml')/personset/person[@id=$id]/avatar">
                                   <xsl:element name="img">
@@ -160,13 +162,15 @@
                                   </xsl:element>
                           </xsl:if>
                           <span class="author p-author">
-                            <xsl:value-of select="document('../../about/people/people.en.xml')/personset/person[@id=$id]/name" />&#160;
+                            <xsl:value-of select="document('../../about/people/people.en.xml')/personset/person[@id=$id]/name" />
                           </span>
                       </xsl:otherwise>
                     </xsl:choose>
                   </xsl:when>
+                  <!-- person is not in people.en.xml -->
                   <xsl:otherwise>
                     <xsl:choose>
+                      <!-- person has a link -->
                       <xsl:when test="link">
                         <xsl:element name="a">
                                   <xsl:attribute name="class">author p-author h-card</xsl:attribute>
@@ -179,8 +183,9 @@
                                           </xsl:element>
                                   </xsl:if>
                                   <xsl:value-of select="name" />
-                          </xsl:element>&#160;
+                          </xsl:element>
                       </xsl:when>
+                      <!-- person has no link -->
                       <xsl:otherwise>
                           <xsl:if test="avatar">
                                   <xsl:element name="img">
@@ -189,15 +194,37 @@
                                   </xsl:element>
                           </xsl:if>
                           <span class="author p-author">
-                            <xsl:value-of select="name" />&#160;
+                            <xsl:value-of select="name" />
                           </span>
                       </xsl:otherwise>
                     </xsl:choose>
                   </xsl:otherwise>
               </xsl:choose>
+              
+              <!-- choose whether to put a comma or an "and" between authors -->
+              <xsl:choose>
+                <!-- second-last author and not first author -->
+                <xsl:when test="position() = last()-1 and not(position() = 1)">
+                  <xsl:text>, </xsl:text><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'and'" /></xsl:call-template><xsl:text>&#160;</xsl:text>
+                </xsl:when>
+                <!-- second-last author and first author -->
+                <xsl:when test="position() = last()-1 and position() = 1">
+                  <xsl:text> </xsl:text><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'and'" /></xsl:call-template><xsl:text>&#160;</xsl:text>
+                </xsl:when>
+                <!-- not last author -->
+                <xsl:when test="not(position() = last())">
+                  <xsl:text>, </xsl:text>
+                </xsl:when>
+                <!-- last or only author -->
+                <xsl:otherwise>
+                  <xsl:text> </xsl:text>
+                </xsl:otherwise>
+              </xsl:choose>
+            
           </xsl:for-each>
     </xsl:if>
-
+    
+    <!-- only show date if <date> exists (not news entries for example) -->
     <xsl:if test="/buildinfo/document/date">
         <span class="published-on"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'published'" /></xsl:call-template>&#160;</span> 
         <xsl:element name="time">

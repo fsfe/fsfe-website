@@ -8,13 +8,22 @@
   order (place of appearance in respective category) 
 to every item in this file -->
 
+<!-- An item can also be just an introductionary text. Then it needs
+  id (verbose ID)
+  type (category)
+  introduction="yes"
+  order="1"
+
+Such an item doesn't need an image!
+-->
+
 <itemset> 
 
   <!-- FSFE and Fellowship -->
 
   <item type="fsfe" id="15y-fsfe-sticker" year="2016" order="1">
  	<image
-    imgsmall="/contribute/promopics/FSFE_15_Sticker_en_thumb"/>
+    imgsmall="/contribute/promopics/FSFE_15_Sticker_en_thumb.png"/>
   </item> 
  
   <item type="fsfe" id="plussy-sticker" year="2005" order="3">
@@ -41,7 +50,8 @@ to every item in this file -->
   </item>
   
   <!-- Document Freedom Day -->
-
+  
+  <item introduction="yes" type="dfd" id="dfd-introduction" order="1" /> <!-- introduction item with just text, doesn't need a picture -->
   
     <item type="dfd" id="dfd-chance-poster" year="2014" order="4">
  	<image

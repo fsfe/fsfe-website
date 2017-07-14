@@ -49,6 +49,11 @@ Such an item doesn't need an image!
     imgsmall="/contribute/promopics/drm_thumb.png"/>
   </item>
   
+      <item type="hackingforfreedom" id="hacking-for-freedom-sticker-v2" year="2017" order="4">
+ 	<image
+    imgsmall="/contribute/promopics/hacking-for-freedom-sticker-v2-thumb.png"/>
+  </item>
+  
   <!-- Document Freedom Day -->
   
   <item introduction="yes" type="dfd" id="dfd-introduction" order="1" /> <!-- introduction item with just text, doesn't need a picture -->
@@ -98,6 +103,11 @@ Such an item doesn't need an image!
     imgsmall="/contribute/promopics/ilovefs_poster_A1_thumb.png"/>
   </item> 
   
+    <item type="ilovefs" id="ilovefs-balloon" year="2015" order="5">
+ 	<image
+    imgsmall="/contribute/promopics/ilovefs-balloon-combined-thumb.png"/>
+  </item> 
+  
   <!-- No cloud -->
   
     <item type="nocloud" id="nocloud-sticker" year="2015" order="1">
@@ -118,14 +128,6 @@ Such an item doesn't need an image!
   <item type="nocloud" id="nocloud-poster-2sided" year="2015" order="4">
  	<image
     imgsmall="/contribute/promopics/thereisnocloud-poster-thumb.png"/>
-  </item>
-  
-    <!-- Hacking for Freedom -->
-  
-    <item type="hackingforfreedom" id="hacking-for-freedom-sticker-v2" year="2017" order="1">
- 	<image
-    imgsmall="/contribute/promopics/hacking-for-freedom-sticker-v2-thumb.png"/>
-  </item>
-  
+  </item> 
 
 </itemset>

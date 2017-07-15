@@ -21,7 +21,7 @@
   <text id="stw-printready-tooltip">Questi sono i file che mandiamo alla nostra stampante, con elementi oltre il margine di pagina ed altre impostazioni specifiche per la stampa. I file possono essere molto grandi (~5-25MB).</text>
 
   <!-- Basic texts -->
-  <text id="fsfeurope">Free Software Foundation Europe</text>
+  <text id="fsfeurope">Free Software Foundation&#160;Europe</text>
   <text id="fsfnetwork">
     FSFE ha delle <a href="//fsfe.org/about/fsfnetwork.html">organizzazioni associate</a> in
      <a href="//www.fsf.org/">Nord America</a>,
@@ -145,9 +145,10 @@
   <text id="contact-us">Contattaci</text>
   <text id="translate">Traduci questa pagina?</text>
   <text id="contribute-web">Contribuisci al team Web</text>
-  <!-- !! TRANSLATION TO BE CHECKED !! -->
-  <text id="imprint">Note editoriali</text>
+  <!-- !! TRANSLATION TO BE CHECKED !! --><text id="imprint">Note editoriali</text><!-- !! TRANSLATION TO BE CHECKED !! -->
   <text id="privacy-policy">Politica sulla Privacy</text>
+  <text id="transparency-commitment">Impegno alla trasparenza</text>
+  <text id="tags">Tag</text>
 
 
   <!-- Article metadata -->
@@ -156,6 +157,7 @@
   <text id="published">Pubblicato</text>
   <text id="revision">ultimo aggiornamento</text>
   <text id="download">Scarica</text>
+  <text id="and">e</text>
 
 
   <!-- Petitions -->
@@ -175,24 +177,17 @@
   <text id="about-fsfe">Sulla FSFE</text>
   <text id="about-fsfe-intro">
     <p>
-      La Free Software Foundation Europe si dedica alla crescita del Software 
-      Libero e lavora per la <strong>libertà</strong> nell'emergente società
-      digitale.
+      La Free Software Foundation Europe è un'associazione che incoraggia gli utenti ad
+      avere il controllo della tecnologia.
     </p>
-   <!-- <p>
-      Access to software determines who may participate in a digital society.  
-      The freedoms to <a href="/about/basics/freesoftware.html">use, study, 
-      share, and improve</a> software allow <strong>equal</strong> 
-      participation, and are extremely important.
+    <p>
+      Il Software è presente in tutti gli aspetti della nostra vita ed è importante
+      che questa tecnologia ci aiuti anziché limitarci. Il Software Libero
+      garantisce a tutti il diritto di usare, studiare, modificare e condividere il software.
+      Questi diritti aiutano a sostenere altre libertà fondamentali come il diritto di
+      parola, la libertà di stampa e la privacy.
     </p>
-  </text> -->
-  <p>
-     L'accesso al software determina chi possa partecipare in una socità digitale.  
-      Le libertà di <a href="/about/basics/freesoftware.html">usare, studiare, 
-      condividere, e migliorare</a> i software permettono <strong>equa</strong> 
-      partecipazione, e sono estremamente importanti.
-    </p>
-</text> 
+  </text>
 
 
   <!-- Motivational texts for fellowship, support or donations -->
@@ -222,11 +217,17 @@
       a lavorare per il Software Libero ovunque necessario, e di essere una voce indipendente.
     </p>
   </text>
-
-
-
-
-
-
-
+  
+  <!-- pdfreaders.org -->
+  <text id="pdfreaders-head-readers">I lettori</text>
+  <text id="pdfreaders-head-standards">Standard Aperti</text>
+  <text id="pdfreaders-head-graphics">Grafica</text>
+  <text id="pdfreaders-head-about">Informazioni</text>
+  <text id="pdfreaders-body-platforms">Piattaforme:</text>
+  
+  <!-- Share and support buttons -->
+  <text id="share-head">Condividi e sostieni</text>
+  <text id="share-page">Condividi questa pagina su</text>
+  <text id="share-microdonation">Fai una micro-donazione via</text>
+  <text id="share-warning">Alcuni servizi possono non essere Software Libero e possono pregiudicare la tua privacy.</text>
 </textset>

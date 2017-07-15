@@ -20,169 +20,172 @@
   <text id="stw-printready">File pronti per la stampa</text>
   <text id="stw-printready-tooltip">Questi sono i file che mandiamo alla nostra stampante, con elementi oltre il margine di pagina ed altre impostazioni specifiche per la stampa. I file possono essere molto grandi (~5-25MB).</text>
 
-<!-- Basic texts -->
-<text id="fsfeurope">Free Software Foundation Europe</text>
-<text id="fsfnetwork">
-     FSFE ha delle <a href="//fsfe.org/about/fsfnetwork.html">organizzazioni associate</a> in
+  <!-- Basic texts -->
+  <text id="fsfeurope">Free Software Foundation Europe</text>
+  <text id="fsfnetwork">
+    FSFE ha delle <a href="//fsfe.org/about/fsfnetwork.html">organizzazioni associate</a> in
      <a href="//www.fsf.org/">Nord America</a>,
      <a href="http://fsf.org.in/">India</a> e
      <a href="http://www.fsfla.org/">America Latina</a>.
   </text>
 
 
-<!-- Footer -->
-<text id="lastchanged">Ultima modifica: </text>
-<text id="translator1a">Ringraziamo </text>
-<text id="translator1b"> per questa traduzione. </text>
-<text id="translator2">Questa è una traduzione non ufficiale. </text>
-<text id="translator3a">Si veda il </text>
-<text id="translator3b">testo originale</text>
-<text id="translator3c"> per la versione ufficiale di questa pagina.</text>
-<text id="permission">
-    La copia letterale e la distribuzione di questo articolo nella sua 
-    integrità sono permesse con qualsiasi mezzo, a condizione che questa 
-    nota sia riprodotta.
+  <!-- Footer -->
+  <text id="lastchanged">Ultima modifica: </text>
+  <text id="translator1a">Ringraziamo </text>
+  <text id="translator1b"> per questa traduzione. </text>
+  <text id="translator2">Questa è una traduzione non ufficiale. </text>
+  <text id="translator3a">Si veda il </text>
+  <text id="translator3b">testo originale</text>
+  <text id="translator3c"> per la versione ufficiale di questa pagina.</text>
+  <text id="permission">
+    La copia letterale e la distribuzione di questo articolo nella sua integrità sono permesse
+    con qualsiasi mezzo, a condizione che questa nota sia riprodotta.
   </text>
 
 
-<!-- Warning info boxes -->
-<text id="outdated"><strong>Attenzione: </strong>
+  <!-- Warning info boxes -->
+  <text id="outdated">
+    <strong>Attenzione: </strong>
     La traduzione di questa pagina potrebbe non essere aggiornata rispetto
     all'originale. Per contribuire alle traduzioni si veda
     <a href="/contribute/contribute.html">questa pagina</a>.
   </text>
-<text id="outdated-1"><strong>Attenzione: </strong>
+  <text id="outdated-1">
+    <strong>Attenzione: </strong>
     La traduzione di questa pagina potrebbe non essere aggiornata rispetto al
   </text>
-<text id="outdated-2">
+  <text id="outdated-2">
     Per contribuire alle traduzioni si veda
     <a href="/contribute/contribute.html">questa pagina</a>.
   </text>
-<text id="notranslation"><strong>Attenzione: </strong>
+  <text id="notranslation">
+    <strong>Attenzione: </strong>
     Questa pagina non è ancora stata tradotta: di seguito è riportata la
     versione originale.  Per contribuire alle traduzioni si
     veda <a href="/contribute/contribute.html">questa pagina</a>.
   </text>
-<text id="under-construction"><strong>Attenzione: </strong>Questa pagina è in costruzione. Per favore <strong>non divulgare </strong> o iniziare una traduzione in quanto il contenuto è soggetto a cambiamenti.
-</text>
+    <text id="under-construction">
+    <strong>Attenzione: </strong>Questa pagina è in costruzione. Per favore  <strong>non divulgare </strong> o iniziare una traduzione in quanto il contenuto è soggetto a cambiamenti.
+  </text>
+    <text id="project-complete">Il progetto è stato portato a termine con successo. Queste pagine rimangono online per la consultazione.  </text>
+  
+  
+  <!-- Menu, Navigation, Buttons -->
+  <text id="fsfe/about">Informazioni</text>
+  <text id="fsfe/projects">Progetti</text>
+  <text id="fsfe/campaigns">Campagne</text>
+  <text id="fsfe/help">Partecipare</text>
+  <text id="fsfe/press">Stampa</text>
+  <text id="fsfe/contact">Contattaci</text>
+  <text id="support/donate">Donazioni</text>
+  <text id="support/support">Sostienici</text>
+  <text id="support/order">Negozio</text>
+  <text id="support/thankgnus">I nostri donatori</text>
+  <text id="fellowship/fellowship">La Fellowship</text>
+  <text id="fellowship/login">Login</text>
+  <text id="fellowship/join">Diventa Fellow</text>
+  <text id="fellowship/card">Smartcard</text>
+  <text id="fellowship/faq">F.A.Q.</text>
+  <text id="campaigns/dfd">Document Freedom Day</text>
+  <text id="campaigns/fya">Libera il tuo Android</text>
+  <text id="campaigns/pdf">Lettori PDF</text>
+  <text id="campaigns/ayc">Chiedi ai tuoi condidati</text>
+  <text id="campaigns/drm">DRM.info</text>
+  <text id="news/news">Ultime notizie</text>
+  <text id="news/events">Prossimi eventi</text>
+  <text id="news/press">Comunicati stampa</text>
+  <text id="news/nl">Newsletter</text>
+  <text id="news/planet">Planet blog</text>
+  <text id="ftf/legal">Supporto legale</text>
+  <text id="ftf/services">Servizi e Fiduciary</text>
+  <text id="ftf/doc">Documentazione</text>
+  <text id="ftf/network">Rete legale</text>
+  <text id="ftf/conference">Conferenze</text>
+  <text id="ftf/contact">Contatta il Team Legale della FSFE</text>
+  <text id="fs/fs">Software Libero</text>
+  <text id="fs/basics">Le basi del Software Libero</text>
+  <text id="fs/def">Definizione</text>
+  <text id="fs/soc">Società Libera</text>
+  <text id="fs/edu">Istruzione</text>
+  <text id="fs/buz">Business</text>
+  <text id="community/discuss">Discussioni sul Software Libero</text>
+  
+  <text id="motto-fsfs">Software Libero, Società Libera!</text>
+  <text id="motto-fellowship">Unisciti alla Felloship!</text>
+  <text id="learn-more">Saperne di più</text>
+  <text id="press">Stampa</text>
+  <text id="newsletter">Newsletter</text>
+  
+  <text id="go-to">Vai a:</text>
+  <text id="search">Cerca</text>
+  <text id="submit">Invia</text>
+  <text id="subscribe">Iscriviti</text>
+  <text id="email">indirizzo email</text>
+  <text id="news">Ultime notizie</text>
+  <text id="receive-newsletter">Ricevere la newsletter mensile della FSFE</text>
+  <text id="subscribe-newsletter">Iscriviti alla newsletter mensile</text>
+  <text id="events">Prossimi eventi</text>
+  <text id="more">Continua</text>
+  <text id="morenews">Altre notizie…</text>
+  <text id="moreevents">Altri eventi…</text>
+  <text id="contact">Contatto</text>
+  <text id="team">Team</text>
+  <text id="microblog">Microblog</text>
+  <text id="no-avatar">Immagine non disponibile</text>
 
-<text id="project-complete">
-	Il progetto è stato portato a termine con successo. Queste pagine rimangono online per la consultazione.
-</text>
-
-
-<!-- Menu, Navigation, Buttons -->
-<text id="fsfe/about">Informazioni</text>
-<text id="fsfe/projects">Progetti</text>
-<text id="fsfe/campaigns">Campagne</text>
-<text id="fsfe/help">Partecipare</text>
-<text id="fsfe/press">Stampa</text>
-<text id="fsfe/contact">Contattaci</text>
-<text id="support/donate">Donazioni</text>
-<text id="support/support">Sostienici</text>
-<text id="support/order">Negozio</text>
-<text id="support/thankgnus">I nostri donatori</text>
-<text id="fellowship/fellowship">La Fellowship</text>
-<text id="fellowship/login">Login</text>
-<text id="fellowship/join">Diventa Fellow</text>
-<text id="fellowship/card">Smartcard</text>
-<text id="fellowship/faq">F.A.Q.</text>
-<text id="campaigns/dfd">Document Freedom Day</text>
-<text id="campaigns/fya">Libera il tuo Android</text>
-<text id="campaigns/pdf">Lettori PDF</text>
-<text id="campaigns/ayc">Chiedi ai tuoi condidati</text>
-<text id="campaigns/drm">DRM.info</text>
-<text id="news/news">Ultime notizie</text>
-<text id="news/events">Prossimi eventi</text>
-<text id="news/press">Comunicati stampa</text>
-<text id="news/nl">Newsletter</text>
-<text id="news/planet">Planet blog</text>
-<text id="ftf/legal">Supporto legale</text>
-<text id="ftf/services">Servizi e Fiduciary</text>
-<text id="ftf/doc">Documentazione</text>
-<text id="ftf/network">Rete legale</text>
-<text id="ftf/conference">Conferenze</text>
-<text id="ftf/contact">Contatta il Team Legale della FSFE</text>
-<text id="fs/fs">Software Libero</text>
-<text id="fs/basics">Le basi del Software Libero</text>
-<text id="fs/def">Definizione</text>
-<text id="fs/soc">Società Libera</text>
-<text id="fs/edu">Istruzione</text>
-<text id="fs/buz">Business</text>
-<text id="community/discuss">Discussioni sul Software Libero</text>
-<text id="motto-fsfs">Software Libero, Società Libera!</text>
-<text id="motto-fellowship">Unisciti alla Felloship!</text>
-<text id="learn-more">Saperne di più</text>
-<text id="press">Stampa</text>
-<text id="newsletter">Newsletter</text>
-<text id="go-to">Vai a:</text>
-<text id="search">Cerca</text>
-<text id="submit">Invia</text>
-<text id="subscribe">Iscriviti</text>
-<text id="email">indirizzo email</text>
-<text id="news">Ultime notizie</text>
-<text id="receive-newsletter">Ricevere la newsletter mensile della FSFE</text>
-<text id="subscribe-newsletter">Iscriviti alla newsletter mensile</text>
-<text id="events">Prossimi eventi</text>
-<text id="more">Continua</text>
-<text id="morenews">Altre notizie…</text>
-<text id="moreevents">Altri eventi…</text>
-<text id="contact">Contatto</text>
-<text id="team">Team</text>
-<text id="microblog">Microblog</text>
-<text id="no-avatar">Immagine non disponibile</text>
-<text id="change-lang">Cambia lingua</text>
-<text id="menu">Menu</text>
-<text id="content">Contenuto</text>
-<text id="page-info">Informazioni sulla pagina</text>
-<text id="rootpage">Home</text>
-<text id="sitemap">Mappa del sito</text>
-<text id="go-top">Vai all'inizio</text>
-<text id="source">Codice sorgente</text>
-<text id="contact-us">Contattaci</text>
-<text id="translate">Traduci questa pagina?</text>
-<text id="contribute-web">Contribuisci al team Web</text>
-<!-- !! TRANSLATION TO BE CHECKED !! --> <text id="imprint">Note editoriali</text>
-<text id="privacy-policy">Politica sulla Privacy</text>
-
-
-<!-- Article metadata -->
-<text id="author">Autore</text>
-<text id="writtenby">Scritto da</text>
-<text id="published">Pubblicato</text>
-<text id="revision">ultimo aggiornamento</text>
-<text id="download">Scarica</text>
+  <text id="change-lang">Cambia lingua</text>
+  <text id="menu">Menu</text>
+  <text id="content">Contenuto</text>
+  <text id="page-info">Informazioni sulla pagina</text>
+  <text id="rootpage">Home</text>
+  <text id="sitemap">Mappa del sito</text>
+  <text id="go-top">Vai all'inizio</text>
+  <text id="source">Codice sorgente</text>
+  <text id="contact-us">Contattaci</text>
+  <text id="translate">Traduci questa pagina?</text>
+  <text id="contribute-web">Contribuisci al team Web</text>
+  <!-- !! TRANSLATION TO BE CHECKED !! -->
+  <text id="imprint">Note editoriali</text>
+  <text id="privacy-policy">Politica sulla Privacy</text>
 
 
-<!-- Petitions -->
-<text id="osig">Organizzazioni</text>
-<text id="isig">Individui</text>
-<text id="bsig">Aziende</text>
+  <!-- Article metadata -->
+  <text id="author">Autore</text>
+  <text id="writtenby">Scritto da</text>
+  <text id="published">Pubblicato</text>
+  <text id="revision">ultimo aggiornamento</text>
+  <text id="download">Scarica</text>
 
 
-<!-- Sidebars -->
-<text id="related-news">Notizie correlate</text>
-<text id="our-work">Il nostro lavoro</text>
-<text id="our-work-intro">
-  <p>Come organizzazione no-profit e non governativa, la Free Software Foundation 
-    Europe lavora al fine di creare conoscenza e sostegno per il Software Libero e gli
-    Standard Aperti nella politica, negli affari, nelle leggi e nella società
-    in generale.</p>
-</text>
-<text id="about-fsfe">Sulla FSFE</text>
-<text id="about-fsfe-intro">
-  <p>
+  <!-- Petitions -->
+  <text id="osig">Organizzazioni</text>
+  <text id="isig">Individui</text>
+  <text id="bsig">Aziende</text>
+  
+  
+  <!-- Sidebars -->
+  <text id="related-news">Notizie correlate</text>
+  <text id="our-work">Il nostro lavoro</text>
+  <text id="our-work-intro">
+    <p>Come organizzazione no-profit e non governativa, la Free Software Foundation 
+    Europe lavora al fine di creare conoscenza e sostegno per il Software Libero
+    e gli Standard Aperti nella politica, negli affari, nelle leggi e nella società in generale.</p>
+  </text>
+  <text id="about-fsfe">Sulla FSFE</text>
+  <text id="about-fsfe-intro">
+    <p>
       La Free Software Foundation Europe si dedica alla crescita del Software 
       Libero e lavora per la <strong>libertà</strong> nell'emergente società
       digitale.
     </p>
- <!-- <p>
+   <!-- <p>
       Access to software determines who may participate in a digital society.  
       The freedoms to <a href="/about/basics/freesoftware.html">use, study, 
       share, and improve</a> software allow <strong>equal</strong> 
       participation, and are extremely important.
     </p>
-</text> -->
+  </text> -->
   <p>
      L'accesso al software determina chi possa partecipare in una socità digitale.  
       Le libertà di <a href="/about/basics/freesoftware.html">usare, studiare, 
@@ -192,21 +195,23 @@
 </text> 
 
 
-<!-- Motivational texts for fellowship, support or donations -->
-<text id="join">Associati</text>
-<text id="join-paragraph">
-  <p>Diventa un Fellow della FSFE per sostenere il nostro lavoro e aiutarci ad assicurare la nostra indipendenza finanziaria. Unendoti alla Fellowship diventerai un membro donatore e sostenitore della FSFE - incluso l'accesso alla nostra infrastruttura.</p>
-</text>
-<text id="join-fellowship">Unisciti alla Fellowship</text>
-<text id="support">Sostieni la FSFE</text>
-<text id="show-support">Mostra il tuo sostegno!</text>
-<text id="show-support-paragraph">
-  <p>La FSFE ha bisogno che il tuo sostegno sia reso visibile! Ogni contributo è importante!</p>
-</text>
-<text id="support-fsfe">Io sostengo la FSFE!</text>
-<text id="donate">Donazioni</text>
-<text id="donate-paragraph">
-  <p>
+  <!-- Motivational texts for fellowship, support or donations -->
+  <text id="join">Associati</text>
+  <text id="join-paragraph">
+    <p>Diventa un Fellow della FSFE per sostenere il nostro lavoro e aiutarci ad assicurare la nostra indipendenza finanziaria. Unendoti alla Fellowship diventerai un membro donatore e sostenitore della FSFE - incluso l'accesso alla nostra infrastruttura.</p>
+  </text>
+  <text id="join-fellowship">Unisciti alla Fellowship</text>
+
+  <text id="support">Sostieni la FSFE</text>
+  <text id="show-support">Mostra il tuo sostegno!</text>
+  <text id="show-support-paragraph">
+      <p>La FSFE ha bisogno che il tuo sostegno sia reso visibile! Ogni contributo è importante!</p>
+  </text>
+  <text id="support-fsfe">Io sostengo la FSFE!</text>
+
+  <text id="donate">Donazioni</text>
+  <text id="donate-paragraph">
+    <p>
       La Free Software Foundation Europe è una organizzazione no-profit e
       non governativa. <a href="/work.html">Il nostro lavoro</a> è reso
       possibile dalla comunità di
@@ -214,10 +219,9 @@
       <a href="/fellowship">Fellow</a> e
       <a href="/donate/thankgnus.html">donatori</a>. Le vostre donazioni sono
       cruciali per la nostra solidità e autonomia. Esse permettono di continuare
-      a lavorare per il Software Libero ovunque necessario, e di essere una voce
-      indipendente.
+      a lavorare per il Software Libero ovunque necessario, e di essere una voce indipendente.
     </p>
-</text>
+  </text>
 
 
 

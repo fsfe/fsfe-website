@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="fya-sticker">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Free Your Android - Sticker</name>
+    <description>
+        This small-sized stickers fits perfectly on the back of your Android device.
+    </description>
+    <type>Sticker</type>
+    <context><a href="http://www.freeyourandroid.org">Free Your Android campaign</a></context>
+    <printed>
+      English
+    </printed>
+    <license>CC-BY-SA 4.0</license>
+    <author>Free Software Foundation Europe</author>
+    <printready></printready>
+  </info>
+
+</infoset>
+ 

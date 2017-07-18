@@ -21,7 +21,15 @@ Such an item doesn't need an image!
 
   <!-- FSFE and Fellowship -->
 
-  <item type="fsfe" id="15y-fsfe-sticker" year="2016" order="1">
+<!--
+  <item type="fsfe" id="fsfe-logo-sticker" year="2017" order="1">
+ 	<image
+    imgsmall="/contribute/promopics/fsfe-sticker-thumb.png"/>
+  </item>
+    
+    -->
+    
+    <item type="fsfe" id="15y-fsfe-sticker" year="2016" order="2">
  	<image
     imgsmall="/contribute/promopics/FSFE_15_Sticker_en_thumb.png"/>
   </item> 

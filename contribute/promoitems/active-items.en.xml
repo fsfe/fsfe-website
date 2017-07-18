@@ -62,6 +62,18 @@ Such an item doesn't need an image!
     imgsmall="/contribute/promopics/hacking-for-freedom-sticker-v2-thumb.png"/>
   </item>
   
+  <!-- Public Money, Public Code -->
+  
+<!--
+
+    <item type="pmpc" id="pmpc-sticker" year="2017" order="1">
+ 	<image
+    imgsmall="/contribute/promopics/pmpc-sticker-thumb.png"/>
+
+  </item>
+
+-->
+  
   <!-- Document Freedom Day -->
   
   <item introduction="yes" type="dfd" id="dfd-introduction" order="1" /> <!-- introduction item with just text, doesn't need a picture -->

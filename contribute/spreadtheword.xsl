@@ -117,7 +117,7 @@
                   <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-context'" /></xsl:call-template>
                   <xsl:text>: </xsl:text>
                 </xsl:element>
-                <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/context" />
+                <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/context" />
                 <xsl:element name="br"></xsl:element>
               </xsl:if>
               
@@ -146,7 +146,7 @@
                   <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-license'" /></xsl:call-template>
                   <xsl:text>: </xsl:text>
                 </xsl:element>
-                <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/license" />
+                <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/license" />
                 <xsl:element name="br"></xsl:element>
               </xsl:if>
               
@@ -156,7 +156,7 @@
                   <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'stw-author'" /></xsl:call-template>
                   <xsl:text>: </xsl:text>
                 </xsl:element>
-                <xsl:value-of select="/buildinfo/document/set/info[@id=$id]/author" />
+                <xsl:copy-of select="/buildinfo/document/set/info[@id=$id]/author" />
                 <xsl:element name="br"></xsl:element>
               </xsl:if>
               

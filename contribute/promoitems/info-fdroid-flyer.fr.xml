@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="f-droid-flyer">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Libérez votre Android</name>
+    <description>
+      Le tract accrocheur pour promouvoir notre <a href="http://www.freeyourandroid.org">campagne "Libérez votre Android".</a>
+    </description>
+    <type>Tract</type>
+    <size>13 x 7,1 cm</size>
+    <context><a href="http://www.freeyourandroid.org">Campagne "Libérez votre Android"</a></context>
+    <languages>
+      <a href="http://download.fsfe.org/advocacy/promomaterial/FYA/FYA-flyer/FYA_flyer_DIN_A7_en.png">English</a>, 
+      <a href="http://download.fsfe.org/advocacy/promomaterial/FYA/FYA-flyer/FYA_flyer_DIN_A7_fr.png">French</a>, 
+      <a href="http://download.fsfe.org/advocacy/promomaterial/FYA/FYA-flyer/FYA_flyer_DIN_A7_de_oxl.png">German</a>, 
+      <a href="http://download.fsfe.org/advocacy/promomaterial/FYA/FYA-flyer/FYA_flyer_DIN_A7_el.png">Greek</a>, 
+      <a href="http://download.fsfe.org/advocacy/promomaterial/FYA/FYA-flyer/FYA_flyer_DIN_A7_it.png">Italian</a>, 
+      <a href="http://download.fsfe.org/advocacy/promomaterial/FYA/FYA-flyer/FYA_flyer_DIN_A7_es.png">Spanish</a>,    
+    </languages>
+    <printed>
+      English, German
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <author>Free Software Foundation Europe</author>
+    <source>
+      <a href="http://download.fsfe.org/advocacy/promomaterial/FYA/FYA-flyer/" title="F-Droid leaflet sources">FYA_flyer_DIN_A7_* in downloads.fsfe.org</a>
+      
+      
+	</source> 
+    <printready></printready>
+  </info>
+
+</infoset>

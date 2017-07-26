@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="ilovefs-flyer">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>I love Free Software (j'aime le Logiciel Libre) - Tract</name>
+
+    <description>
+    Le tract de notre  <a href="/campaigns/ilovefs/ilovefs.en.html">campagne I love Free Software (J'aime le Logiciel Libre)</a>. Ce tract est en recto-verso&#160;: un côté représente un cœur avec l'inscription ILove-FS, identique à l'affiche (cf. article suivant). L'autre face (L'autre côté) indique la date (le jour de la St. Valentin) ainsi que l'adresse URL de la campagne.
+    </description> 
+
+    <type>Tract</type>
+    <size>A7 (7,4 x 10,5 cm)</size>
+    <context><a href="/campaigns/ilovefs/ilovefs.en.html">I love Free Software</a></context>
+    <languages>
+      <a href="http://download.fsfe.org/advocacy/promomaterial/IloveFS/IloveFS-flyer/ilovefs-flyer-A7.en.pdf">English</a>
+    </languages>
+    <printed>
+      English.
+    </printed>
+    <license><a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></license>
+    <author>Markus Meier</author>
+    <source><a href="http://download.fsfe.org/advocacy/promomaterial/IloveFS/IloveFS-flyer/">ilovefs-flyer* in downloads.fsfe.org</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

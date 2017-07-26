@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="fya-sticker">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Libérez votre Android - Autocollants</name>
+    <description>
+		Ce petit autocollant se colle parfaitement à l'arriére d'un terminal Android.
+    </description>
+    <type>Autocollant</type>
+    <size>⌀ 3cm</size>
+    <context><a href="http://www.freeyourandroid.org">Libérez votre Android</a></context>
+    <languages>
+      <a href="http://download.fsfe.org/advocacy/promomaterial/FYA/FYA-sticker/FYA_sticker_2017_3cm.pdf">English</a>
+    </languages>
+      <printed>
+      English
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <author>Free Software Foundation Europe</author>
+    <source><a href="http://download.fsfe.org/advocacy/promomaterial/FYA/FYA-sticker/">FYA_sticker* in downloads.fsfe.org</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>
+ 

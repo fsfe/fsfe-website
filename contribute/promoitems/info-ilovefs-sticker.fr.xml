@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="ilovefs-sticker">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>I love Free Software - Autocollant</name>
+
+    <description>
+     Un autocollant qui montre que vous adorez utiliser, étudier, partager et améliorer les logiciels.
+    </description>
+    <type>Autocollant</type>
+    <size>9 x 5 cm</size>
+    <context><a href="https://fsfe.org/campaigns/ilovefs/ilovefs.en.html">Campagne I love Free Software</a></context>
+    <languages>
+      <a href="http://download.fsfe.org/advocacy/promomaterial/IloveFS/IloveFS-sticker/ilovefs-sticker.en.pdf">English</a>
+    </languages>
+    <printed>
+      English
+    </printed>
+    <license><a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></license>
+    <author>Markus Meier</author>
+    <source><a href="http://download.fsfe.org/advocacy/promomaterial/IloveFS/IloveFS-sticker/">ilovefs-sticker* in downloads.fsfe.org</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="ilovefs-poster-2sided">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>I love Free Software - Affiche</name>
+    <description>
+      L'affiche de notre <a href="/campaigns/ilovefs/ilovefs.html">campagne I love Free Software</a>. L'affiche est recto-verso.
+      Sur l'autre face vous trouverez notre affiche <a href="#nocloud-poster-2sided">noCloud</a>.
+    </description>
+    <type>Affiche (pliée pour l'envoi)</type>
+    <size>A2 (59,4 x 84,1 cm)</size>
+    <context><a href="https://fsfe.org/campaigns/ilovefs/ilovefs.en.html">Campagne I love Free Software</a></context>
+    <languages>
+      <a href="http://download.fsfe.org/advocacy/promomaterial/IloveFS/IloveFS-poster/ilovefs-poster-A1.en.pdf">English</a>
+    </languages>
+    <printed>
+      English
+    </printed>
+    <license><a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></license>
+    <author>Markus Meier</author>
+    <source><a href="http://download.fsfe.org/advocacy/promomaterial/IloveFS/IloveFS-poster/">ilovefs-poster* in downloads.fsfe.org</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

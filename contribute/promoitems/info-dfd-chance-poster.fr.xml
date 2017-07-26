@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="dfd-chance-poster">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Journée de Libération des Documents - Affiche</name>
+   <description>
+		Ceci est l'affiche de notre campagne "Journée de Libération des Documents". Elle est recto-verso (recto en anglais, verso en six langues). 
+
+    </description>
+    <type>Affiche</type>
+    <size>A2 (42 x 59,4 cm), A3 (29,7 x 42 cm)</size>
+    <context><a href="http://www.documentfreedom.org/">Journée de Libération des Documents</a></context>
+    <languages>
+		<a href="http://download.fsfe.org/advocacy/promomaterial/DFD/dfd-robots-poster-a2.pdf" title="Open Standards make sense">A2 - Recto Anglais - Verso Multilingue</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/dfd-robots-poster-a3.pdf" title="Open Standards make sense">A3 - Recto Anglais - Verso Multilingue</a>
+    </languages>
+    <printed>
+		A3 &amp; A2, six langues au dos de l'affiche&#160; : Anglais, Français, Allemand, Portugais, Espagnol, Turc
+	</printed>
+
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></license>
+    <author>FSFE</author>
+    <source><a href="http://download.fsfe.org/advocacy/promomaterial/DFD/">dfd-robots-poster* in downloads.fsfe.org</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

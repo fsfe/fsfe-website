@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="fellowship-poster">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Rejoindre la Fellowship</name>
+    <description> 
+		L'affiche "Rejoindre la Fellowship" à pour objectif de mettre en avant la Fellowship, elle est donc à afficher en évidence, par exemple, dans une salle de réunion ou un Hackerspace - elle peut aussi être utilisée pour des activités publiques. 
+    </description>
+    <type>Affiche (pliée pour l'envoi)</type>
+
+    <size>A1 (59,4 x 84,1 cm)</size>
+    <context></context>
+
+<!-- everything below this line uses native language names for each language or technical abbreviations respectively, so there is no need to transalate it from here on -->
+
+    <languages>
+      <a href="http://download.fsfe.org/advocacy/promomaterial/FSFE/JoinTheFellowshipPoster/FSFE-Fellowship-poster.de.xl.pdf">Deutsch</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/FSFE/JoinTheFellowshipPoster/FSFE-Fellowship-poster.en.xl.pdf">English</a>
+      
+    </languages>
+    <printed>
+      English
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <author>Markus Meier</author>
+    <source></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="fs-and-tools">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Logiciel Libre et outils</name>
+    <description>
+
+        Ce dépliant compare l'utilisation du Logiciel Libre à l'utilisation de vis et de tournevis. Cette analogie spécialement faite pour un public n'ayant pas de notions techniques est généralement bien perçu sur les stands de la FSFE. 
+
+    </description>
+    <type>Dépliant</type>
+    <size>10 x 21 cm (plié); 29,7 x 21 cm (=A4, déplié)</size>
+    <context><a href="http://download.fsfe.org/advocacy/leaflets/leaflet-fs-and-tools.en.pdf">Logiciel Libre et outils</a></context>
+
+
+<!-- everything below this line uses native language names for each language or technical abbreviations respectively, so there is no need to transalate it from here on -->
+    
+    <languages>
+      <a href="http://download.fsfe.org/advocacy/promomaterial/FStools/leaflet-fs-and-tools.de.pdf">Deutsch</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/FStools/leaflet-fs-and-tools.en.pdf">English</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/FStools/leaflet-fs-and-tools.fr.pdf">Français</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/FStools/leaflet-fs-and-tools.it.pdf">Italiano</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/FStools/leaflet-fs-and-tools.nl.pdf">Nederlands</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/FStools/leaflet-fs-and-tools.pl.pdf">Polski</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/FStools/leaflet-fs-and-tools.fi.pdf">Suomi</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/FStools/leaflet-fs-and-tools.sq.pdf">Shqip</a>   
+    </languages>
+    <printed>
+      Deutsch, English, Français, Polski, Shqip
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <author>Free Software Foundation Europe</author>
+    <source>
+		<a href="http://download.fsfe.org/advocacy/promomaterial/FStools/">leaflet-fs-and-tools.* in downloads.fsfe.org</a>
+	</source> 
+    <printready></printready>
+  </info>
+
+</infoset>

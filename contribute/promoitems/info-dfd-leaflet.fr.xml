@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="dfd-leaflet">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Journée de Libération des Documents - Dépliant</name>
+    <description>
+      Le dépliant pour promouvoir notre <a href="http://www.documentfreedom.org/">Journée de Libération des Documents</a>. Il explique à quoi servent les standards, qu'est-ce qu'un standard ouvert et comment s'engager pour la Libération des Documents.
+    </description>
+    <type>Dépliant</type>
+    <size>10 x 21 cm (plié); 29,7 x 21 cm (=A4, déplié)</size>
+    <context><a href="http://www.documentfreedom.org/">Journée de Libération des Documents</a></context>
+
+   
+<!-- everything below this line uses native language names for each language or technical abbreviations respectively, so there is no need to transalate it from here on -->
+    
+    <languages>
+		 <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro.zh-tw.pdf">中文</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro.ja.pdf">日本語</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro.ca.pdf">Català</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro.de.pdf">Deutsch</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro.en.pdf">English</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro.es.pdf">Español</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro.fr.pdf">Français</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro-FI.pdf">Suomi</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro.tr.pdf">Türkçe</a>
+    </languages>
+    <printed>
+      Deutsch, English, Español, Français, Türkçe
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></license>
+    <author>Free Software Foundation Europe</author>
+    <source>
+		<a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro_de_SOURCES.tar.gz">Deutsch</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro_en_SOURCES.tar.gz">English</a>
+    </source> 
+    <printready></printready>
+  </info>
+
+</infoset>

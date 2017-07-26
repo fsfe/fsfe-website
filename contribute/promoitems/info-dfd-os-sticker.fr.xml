@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="dfd-os-sticker">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Autocollants standards ouverts (74x74mm)</name>
+    
+
+    <description>
+       Les autocollants "Standards Ouverts" abordent notre <a href="http://documentfreedom.org/">campagne Journée de Libération des Documents</a>. Les robots sont le logo de la campagne.
+    </description>
+
+     <type>Autocollant</type>
+    <size>7,4 x 7,4 cm</size>
+    <context><a href="http://documentfreedom.org/">Journée de Libération des Documents</a></context>
+    <languages>
+		<a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_Protest_ROBOTS_74x74.pdf">English</a>
+    </languages>
+    <printed>
+		English
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <author>Free Software Foundation Europe</author>
+    <source>
+		<a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_Protest_ROBOTS_74x74_sources.tar.gz">English</a>
+    </source> 
+    <printready></printready>
+  </info>
+
+</infoset>

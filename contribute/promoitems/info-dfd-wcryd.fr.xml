@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="dfd-wcryd">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+     <name>Autocollant - Nous ne pouvons pas lire vos documents</name>
+    <description>
+      L'autocollant "We cannot read your documents" ("Nous ne pouvons pas lire vos documents") a été conçu pour notre campagne Journée de Libération des Documents. Ce slogan souligne le problème qu'induit l'utilisation de formats propriétaires qui empêchent la lecture des documents à tous ceux qui n'utilisent pas le même logiciel propriétaire.
+    </description>
+    
+    <type>Autocollant</type>
+    <size>7,4 x 7,4 cm</size>
+    <context><a href="http://www.documentfreedom.org/">Journée de Libération des Documents</a></context>
+    <languages>
+      <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/we-cannot-read-your-documents.png">English</a>
+    </languages>
+    <printed>
+      English
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <author>Free Software Foundation Europe</author>
+    <source><a href="http://download.fsfe.org/advocacy/promomaterial/DFD/we-cannot-read-your-documents.svg">English</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

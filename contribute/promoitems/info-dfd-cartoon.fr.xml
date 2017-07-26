@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="dfd-cartoon">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Journée de Libération des Documents - Bande Dessinée </name>
+    <description>
+      Une BD de promotion de notre campagne Journée de Libération des Documents Sur l'autre face de l'imprimé en anglais, vous trouverez une explication illustrée des <a href="#dfd-poster-open-format">ostandards ouverts</a>.   
+    </description>  
+    <type>Bande dessinée</type>
+    <size>A4 (21 x 29,5 cm)</size>
+    <context><a href="http://www.documentfreedom.org/">Journée de Libération des Documents</a></context>
+    
+<!-- everything below this line uses native language names for each language or technical abbreviations respectively, so there is no need to transalate it from here on -->
+    
+    <languages>
+		<a href="http://download.fsfe.org/advocacy/promomaterial/DFD/cartoon_and_open_formats.en.pdf">English - Cartoon &amp; Open formats</a><br/> 
+		Cartoon only: <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/cartoon.ca.png">Català</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/cartoon.de.png">Deutsch</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/cartoon.en.jpg">English</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/cartoon.es.png">Español</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/cartoon.gl.png">Galician</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/cartoon.ru.png">Русский</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/cartoon.tr.png">Türkçe</a> 
+    </languages>
+    <printed>
+      English version.
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <author>Jamie Cosley, April</author>
+    <source><a href="http://download.fsfe.org/advocacy/promomaterial/DFD/cartoon_sources.tar.gz">English - Cartoon only</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/cartoon_and_open_formats_sources.tar.gz">English - Cartoon &amp; Open Formats</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

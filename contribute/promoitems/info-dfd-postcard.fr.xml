@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="dfd-postcard">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Carte postale - Standards ouverts</name>
+     <description>
+
+    Les cartes postales "Standards Ouverts" abordent notre <a href="http://www.documentfreedom.org/">campagne Journée de Libération des Documents</a>. Envoyez-les dans le monde entier&#160;!
+
+    </description>
+    
+    <type>Carte postale</type>
+    <size>A6</size>
+    <context><a href="http://www.documentfreedom.org/">Journée de Libération des Documents</a></context>
+     <languages>
+      <a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_ROBOTS_postcard_5000.pdf">English</a>
+    </languages>
+    <printed>
+      English
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <author>Markus Meier</author>
+    <source><a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_ROBOTS_postcard_5000_sources.tar.gz">English</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

@@ -5,7 +5,7 @@
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
 
   <xsl:template match="sigtable">
-    <xsl:copy-of select="document('sigtable.xml')"/>
+    <xsl:copy-of select="document('sigtable.en.xml')"/>
   </xsl:template>
   
 </xsl:stylesheet>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="tdwyt-sticker">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>They Don't Want You To Be Free (Ils ne veulent pas que vous soyez Libres) - Autocollant</name>
+
+    <description>
+     Un Autocollant avec le slogan "They Don't Want You To Be Free" ("Ils ne veulent pas que vous soyez Libres") pour promouvoir notre campagne <a href="https://fsfe.org/campaigns/theydontwantyouto/index.en.html">They Dont Want You.To (Ils ne veulent pas que vous)</a> 
+    </description>
+
+<type>Autocollant</type>
+    <size>7,4 x 7,4 cm</size>
+    <context><a href="https://fsfe.org/campaigns/theydontwantyouto/index.en.html">They Dont Want You.To</a></context>
+    <languages>
+		<a href="http://download.fsfe.org/advocacy/promomaterial/TDWYT/laptop.png">English</a>
+    </languages>
+    <printed>
+		<a href="http://download.fsfe.org/advocacy/promomaterial/TDWYT/laptop.pdf">English</a>
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <author>Free Software Foundation Europe</author>
+    <source><a href="http://download.fsfe.org/advocacy/promomaterial/TDWYT/laptop.svg">English</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

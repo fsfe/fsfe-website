@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="tdwyt-sticker-big">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    
+    <name>They Don't Want You To ... (Ils ne veulent pas que vous ...) - Autocollant</name>
+     <description>
+      Un Autocollant avec le texte "They don't want you to ... (Ils ne veulent pas que vous...)" pour promouvoir notre campagne <a href="https://fsfe.org/campaigns/theydontwantyouto/index.en.html">They Dont Want You.To</a> contre le verrouillage des produits et services.
+    </description>
+
+    <type>Autocollant</type>
+    
+
+    <size>14,8 x 14,8 cm</size>
+    <context><a href="https://fsfe.org/campaigns/theydontwantyouto/index.en.html">They Dont Want You.To</a></context>
+    <languages>
+		<a href="http://download.fsfe.org/advocacy/promomaterial/TDWYT/billboard-300dpi.png">English</a>
+    </languages>
+    <printed>
+		English
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <author>Free Software Foundation Europe</author>
+    <source><a href="http://download.fsfe.org/campaigns/tdwyt/artwork/stickers/large/billboard.svg">English</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

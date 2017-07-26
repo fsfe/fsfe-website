@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="nocloud-postcard">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Il n'y a pas de cloud, juste les ordinateurs d'autres personnes - Carte postale</name>
+    <description>
+		Une carte postale pour faire comprendre aux gens une réalité de leur vie en ligne&#160;: "Il n'y a pas de cloud, juste les ordinateurs d'autres personnes".
+    </description>
+    <type>Carte postale</type>
+    
+    <type>Postcard</type>
+    <size>14,7 x 10,4 cm</size>
+    <context></context>
+    <languages>
+		<a href="http://download.fsfe.org/advocacy/promomaterial/NoCloud/NoCloud-postcard/thereisnocloud-postcard.en.pdf">English</a>
+    </languages>
+    <printed>
+      English
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <author>Markus Meier</author>
+    <source><a href="http://download.fsfe.org/advocacy/promomaterial/NoCloud/NoCloud-postcard/">nocloud-postcard* in downloads.fsfe.org</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

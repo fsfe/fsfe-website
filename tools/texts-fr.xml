@@ -3,6 +3,21 @@
 <textset>
 
 <!-- ALL STATIC TEXTS -->
+ <!-- Spreadtheword page -->
+  <text id="stw-type">Type</text>
+  <text id="stw-size">Taille</text>
+  <text id="stw-context">Contexte</text>
+  <text id="stw-printed"><a href="#id-how-and-what-to-order">Commander depuis nos stocks </a> sur</text>
+  <text id="stw-printed-tooltip">Vous pouvez nous commander ces versions imprimées via le formulaire de commande.</text>
+  <text id="stw-languages">Disponible au télécharment en</text>
+  <text id="stw-languages-tooltip">Si vous souhaitez diffuser notre matériel de promotion et nos informations en ligne, n'hésitez pas à les télécharger dans les langues disponibles.</text>
+  <text id="stw-license">Licence</text>
+  <text id="stw-author">Auteur</text>
+  <text id="stw-year">Année</text>
+  <text id="stw-source">Fichier source</text>
+  <text id="stw-source-tooltip">Vous pouvez télécharger le fichier source de cet élément pour le modifier ou le traduire. Veuillez respecter la licence.</text>
+  <text id="stw-printready">Fichier(s) prêt(s) à imprimer</text>
+  <text id="stw-printready-tooltip">Ces fichiers sont ceux que nous envoyons à notre imprimeur, incluant les fonds perdus et autres paramètres d'imprimerie. Ces fichiers peuvent être très gros (~5-25MB).</text>
 
 
 <!-- Basic texts -->
@@ -10,6 +25,7 @@
 <text id="fsfnetwork">
     La FSFE a des <a href="//fsfe.org/about/fsfnetwork.html">organisations sœurs</a> en <a href="//www.fsf.org">Amérique du nord</a>, en <a href="http://fsf.org.in">Inde</a> et en <a href="http://www.fsfla.org">Amérique latine</a>. 
   </text>
+  
 
 
 <!-- Footer -->
@@ -52,6 +68,11 @@ permise sur tout support, pourvu que cette notice soit préservée.
   <text id="project-complete">Ce projet a été un succès. Ces pages sont laissées ici à des fins d’archivage.</text>
 
 
+
+
+
+
+
 <!-- Menu, Navigation, Buttons -->
 <text id="fsfe/about">À propos</text>
 <text id="fsfe/projects">Notre action</text>
@@ -68,8 +89,8 @@ permise sur tout support, pourvu que cette notice soit préservée.
 <text id="fellowship/join">Adhérer</text>
 <text id="fellowship/card">Carte</text>
 <text id="fellowship/faq">Questions</text>
-<text id="campaigns/dfd">Document Freedom Day</text>
-<text id="campaigns/fya">Libérez votre Android !</text>
+<text id="campaigns/dfd">Journée de Libération des Documents</text>
+<text id="campaigns/fya">Libérez votre Android&#160;!</text>
 <text id="campaigns/pdf">Lecteurs PDF</text>
 <text id="campaigns/ayc">Questionnez vos candidats</text>
 <text id="campaigns/drm">DRM.info</text>
@@ -77,30 +98,32 @@ permise sur tout support, pourvu que cette notice soit préservée.
 <text id="news/events">Évènements à venir</text>
 <text id="news/press">Espace presse</text>
 <text id="news/nl">Lettres d’actualité</text>
-<text id="news/planet">Blogs du planète</text>
+<text id="news/planet">Blogs de l'aggrégateur</text>
 <text id="ftf/legal">Assistance juridique</text>
 <text id="ftf/services">Services et fiducie</text>
 <text id="ftf/doc">Documentation</text>
 <text id="ftf/network">Réseau juridique</text>
 <text id="ftf/conference">Conférences</text>
-<text id="ftf/contact">Contacter l’équipe juridique FSFE</text>
+<text id="ftf/contact">Contacter l’équipe juridique de la FSFE</text>
 <text id="fs/fs">Logiciel Libre</text>
 <text id="fs/basics">Bases du Logiciel Libre</text>
 <text id="fs/def">Définition</text>
 <text id="fs/soc">Société libre</text>
 <text id="fs/edu">Éducation</text>
 <text id="fs/buz">Économie</text>
-<text id="community/discuss">Discussions du Logiciel Libre</text>
-<text id="motto-fsfs">Logiciel Libre, Société Libre !</text>
-<text id="motto-fellowship">Rejoignez la communauté de la FSFE !</text>
+<text id="community/discuss">Discussions sur le Logiciel Libre</text>
+
+<text id="motto-fsfs">Logiciel Libre, Société Libre&#160;!</text>
+<text id="motto-fellowship">Rejoignez la communauté de la FSFE&#160;!</text>
 <text id="learn-more">En savoir plus</text>
 <text id="press">Presse</text>
 <text id="newsletter">Lettre d'information</text>
-<text id="go-to">Aller à:</text>
+
+<text id="go-to">Aller à&#160;:</text>
 <text id="search">Rechercher</text>
 <text id="submit">Envoyer</text>
 <text id="subscribe">S'abonner</text>
-<!-- !! MISSING TRANSLATION --> <text id="email">email address</text>
+<text id="email">Addresse e-mail</text>
 <text id="news">Actualité</text>
 <text id="receive-newsletter">S'abonner à la lettre d'information mensuelle de la FSFE</text>
 <text id="subscribe-newsletter">S’abonner à la lettre d’information</text>
@@ -112,6 +135,7 @@ permise sur tout support, pourvu que cette notice soit préservée.
 <text id="team">Équipe</text>
 <text id="microblog">Microblog</text>
 <text id="no-avatar">Pas d'image</text>
+
 <text id="change-lang">Changer de langue</text>
 <text id="menu">Menu</text>
 <text id="content">Contenu</text>
@@ -121,10 +145,12 @@ permise sur tout support, pourvu que cette notice soit préservée.
 <text id="go-top">Aller en haut</text>
 <text id="source">Code source</text>
 <text id="contact-us">Contactez-nous</text>
-<text id="translate">Traduire cette page ?</text>
+<text id="translate">Traduire cette page&#160;?</text>
 <text id="contribute-web">S’impliquer dans l’équipe Web</text>
 <text id="imprint">Mentions légales</text>
 <text id="privacy-policy">Politique de confidentialité</text>
+<text id="transparency-commitment">Engagement de transparence</text>
+<text id="tags">Mots clés</text>
 
 
 <!-- Article metadata -->
@@ -152,14 +178,17 @@ permise sur tout support, pourvu que cette notice soit préservée.
 <text id="about-fsfe">À propos de la FSFE</text>
 <text id="about-fsfe-intro">
   <p>
-        La Free Software Foundation Europe (FSFE : Fondation européenne
-        pour le Logiciel Libre) est une organisation dédiée à la promotion des
-        Logiciels Libres œuvrant en faveur de la <strong>liberté</strong>
-        dans la société de l'information.
-      </p>
+        La Free Software Foundation Europe (FSFE : Fondation européenne pour le Logiciel Libre) est une organisation qui redonne le pouvoir aux utilisateurs sur la technologie.
+  </p>
   <p>
-      L'accès aux logiciels est déterminant dans la participation de chacun à la société numérique. Les libertés <a href="/about/basics/freesoftware.fr.html">d'utiliser, copier, modifier et redistribuer</a> les logiciels permettent donc d'assurer <strong>l'égalité</strong> de tous dans la participation à l'ère de l'information, ce qui est capital !
-      </p>
+     
+      Le logiciel est profondément impliqué dans tous les aspects de nos vies. Il est important que cette technologie nous donne le pouvoir plutôt qu'elle nous limite. Le Logiciel Libre donne à chacun les libertés d'utiliser, copier, modifier et redistribuer les logiciels. Ces libertés aident à soutenir d'autres droits fondamentaux comme la liberté d'expression, la liberté de la presse ou le respect de la vie privée.
+  </p>
+
+
+
+
+
 </text>
 
 
@@ -172,9 +201,9 @@ permise sur tout support, pourvu que cette notice soit préservée.
 </text>
 <text id="join-fellowship">Rejoignez la Fellowship</text>
 <text id="support">Soutenez la FSFE</text>
-<text id="show-support">Montrez votre soutien !</text>
+<text id="show-support">Montrez votre soutien&#160;!</text>
 <text id="show-support-paragraph">
-  <p>La FSFE a besoin de voutre soutien pour que sa voix soit entendue ! Chaque soutien est important !</p>
+  <p>La FSFE a besoin de voutre soutien pour que sa voix soit entendue&#160;! Chaque soutien est important&#160;!</p>
 </text>
 <text id="support-fsfe">Je soutiens la FSFE !</text>
 <text id="donate">Faire un don</text>
@@ -192,8 +221,18 @@ permise sur tout support, pourvu que cette notice soit préservée.
 </text>
 
 
-
-
+  <!-- pdfreaders.org -->
+  <text id="pdfreaders-head-readers">Les lecteurs</text>
+  <text id="pdfreaders-head-standards">Standards Ouverts</text>
+  <text id="pdfreaders-head-graphics">Graphismes</text>
+  <text id="pdfreaders-head-about">À propos</text>
+  <text id="pdfreaders-body-platforms">Plateformes&#160;:</text>
+  
+  <!-- Share and support buttons -->
+  <text id="share-head">Partager et soutenir</text>
+  <text id="share-page">Partager cette page sur</text>
+  <text id="share-microdonation">Faire une micro-donation par</text>
+  <text id="share-warning">Certains services peuvent ne pas être compatibles avec les Logiciels Libres et abîmer votre vie privée.</text>
 
 
 

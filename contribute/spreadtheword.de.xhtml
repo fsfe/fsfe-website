@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<title>Sag es weiter!</title>
+		<title>Spread the word</title>
 		<meta content="FSFE's Promotion Material" name="description" />
 		<meta content="FSFE Graphics Buttons Logo Promotion Sticker Poster Leaflets Flyer Campaigns Free Your Android I cannot read your documents Fellowship Plussy Gnu" name="keywords" />
 		
@@ -15,6 +15,10 @@
 		    h1, h2, h3 {
 		      clear: both;
 		    }
+        
+        .noclear {
+          clear: none;
+        }
 		    
 		    div#toc {
 		      float: right;
@@ -23,158 +27,191 @@
 		      margin: .5em;
 		      background: rgb(240,240,240);
 		      width: 40%;
+		      padding: 1em 1.5em 1.5em 1.5em;
+		      margin: 1.5em;
 		    }
+        
+        div#toc p {
+          text-indent: 0.5em;
+          margin-top: 1.5em;
+        }
+        
+        div#toc p.head {
+          font-size: 1.15em;
+          text-align: center;
+          margin-top: 0;
+          text-indent: 0;
+        }
+        
+        form#orderpromo {
+          clear: both;
+          margin: 2em 0 3em 0;
+          width: 70%;
+        }
 		    
 		  </style>
     
 	</head>
 
 	<body>
-		<p id="category"><a href="/contribute/">Machen Sie mit!</a></p>
+		<p id="category"><a href="/contribute/">Mach mit!</a></p>
 		
-		<h1 id="spread-the-word">Sag' es weiter!</h1>
+		<h1 id="spread-the-word">Sag es weiter!</h1>
 		
-		<h2 id="promo-material">Werbematerial der FSFE</h2>
+		
 		
 		<div id="toc">
-		  <p style="text-indent:1em;">Verfügbares Werbematerial</p>
-		  <ul style="margin-bottom: 1em;">
-		    <li><a href="#fsfe-and-fellowship-material">Über die FSFE und das Fellowship</a></li>
-		    <li><a href="#freedom">Freie Software &amp; Nutzerfreiheit</a></li>
-		    <li><a href="#f-droid">"Befreien Sie Ihr Android!"-Aktion</a></li>
-		    <li><a href="#ilovefs">"I love Free Software"-Aktion</a></li>
-		    <li><a href="#nocloud">"There is no cloud"-Aktion</a></li>
-		    <li><a href="#dfd">Document Freedom Day</a></li>
+			<p class="head"><strong><a href="#how-to-order">Jetzt bestellen</a></strong></p>
+		  
+		  <p><strong>Verfügbare Infomaterialien</strong></p>
+		  <ul>
+		    <li><a href="#fsfe-and-community">FSFE und unsere Community</a></li>
+		    <li><a href="#freedom">Free Software und Nutzerfreiheit</a></li>
+		    <li><a href="#f-droid">"Free Your Android" - Aktion</a></li>
+		    <li><a href="#ilovefs">"I love Free Software" - Aktion</a></li>
+		    <li><a href="#nocloud">"There is no cloud ..." - Aktion</a></li>
+		    <li><a href="#dfd">"Document Freedom Day"- Aktion</a></li>
+
+		  </ul>
+		  <p><strong>Hinter den Kulissen</strong></p>  
+		  <ul>
+        <li><a href="#feedback">Feedback?</a></li>
+        <li><a href="#archives">Unser Archiv</a></li>
+        <li><a href="#upcoming">Zukünftiges Material und Kampagnen</a></li>
 		  </ul>
 		</div>
 		
+		<h2 id="promo-material" class="noclear">FSFE-Infomaterial</h2>
 		
-		
-		<p>Gehst du zu einem Treffen über Freie Software oder
+		<p>
+			Gehst du zu einem Treffen über Freie Software oder
 		organisierst du vielleicht sogar eines?  Vielleicht
 		möchtest du deinen Freunden und Kollegen Freie
 		Software und die Arbeit der FSFE nahe bringen?  Es
-		gibt viele Gründe dafür, Werbematerial zu Freier
+		gibt viele Gründe dafür, Infomaterial zu Freier
 		Software und zur FSFE erhalten zu wollen.  Was auch
 		immer der Grund sein mag, wir schicken dir gern
-		gedrucktes Werbematerial kostenlos zu.  Einen
-		Überblick über das erhältliche Werbematerial mit
+        gedrucktes Infomaterial <strong>kostenlos</strong> zu.<br /> Einen
+		Überblick über das erhältliche Infomaterial mit
 		Details zu jedem Produkt findest du weiter unten auf
-		dieser Seite. <a href="getyourgraphic.html"> Grafiken
-		und Material zum Selberdrucken</a> findest du auf
-		einer eigenen Seite.</p>
+		dieser Seite.</p>
 
 
-		<h2 id="id-how-and-what-to-order">So bestellst du</h2>
+		<h2 id="how-to-order" class="noclear">So bestellst Du</h2>
 		
-		<p>Verwende bitte das folgende Bestellformular, um
-		Werbematerial zu bestellen.  Du kannst entweder unser
-		Standard-Werbepaket bestellen oder uns genau sagen,
+			<p>
+			Verwende bitte das folgende Bestellformular, um
+		Infomaterial zu bestellen.  Du kannst entweder unser
+		Standard-Infopaket bestellen oder uns genau sagen,
 		welche Materialien du in welcher Menge brauchst
 		oder möchtest.  Entscheide einfach selbst, aber bitte
 		beachte, dass wir wegen der Transportkosten
 		normalerweise nur Sendungen bis zu 1 kg verschicken.
 		Falls du mehr Material benötigst, frag bitte vorher
-		bei uns nach.</p>
+		bei uns nach.
+			</p>
 			
+      
 			<form class="highlight labeledform" id="orderpromo" method="post" action="/cgi-bin/promotion.php" accept-charset="utf-8">
                 <!-- Translators: please set the value for the language to your language code -->
                 <input type="hidden" name="language" value="de" />
-         
-                <h3>Bitte schickt das Werbematerial an:</h3>
+                <h3>Bitte schickt das Infomaterial an:</h3>
                 <span class="formlabel">Vorname, Nachname:</span>
-                  <input type="text" name="firstname" placeholder="First Name" size="20" />
-                  <input type="text"  name="lastname" placeholder="Last Name" size="20" /><br/>
-                <span class="formlabel">E-Mail:</span>
+                  <input type="text" name="firstname" placeholder="Vorname" size="20" />
+                  <input type="text"  name="lastname" placeholder="Nachname" size="20" /><br/>
+                <span class="formlabel">Email:</span>
                   <input type="text" name="email" placeholder="Email" size="40" /><br/>
                 <span class="formlabel">Firma/Organisation (falls zutreffend):</span>
                   <input type="text" name="org" placeholder="Organisation" size="40" /><br/>
 
 		<span class="formlabel">Straße, Hausnummer:</span>
-                  <input type="text" name="street" size="40" /><br/>
+                  <input type="text" name="Straße" size="40" /><br/>
 		<span class="formlabel">Postleitzahl, Ort:</span>
-                  <input type="text" name="city" size="40" /><br/>
+                  <input type="text" name="Ort" size="40" /><br/>
 		<span class="formlabel">Land:</span>
-                  <input type="text" name="country" size="40" /><br/>
+                  <input type="text" name="Land" size="40" /><br/>
+
+			
 
                 <!-- span class="formlabel">Address:</span>
                   <textarea name="address" rows="4" cols="40"></textarea><br/ -->
 
-                <span class="formlabel">Ich möchte bevorzugt Werbematerial aus folgendem Themenbereich::</span>
+                <span class="formlabel">Ich möchte bevorzugt Werbematerial aus folgendem Themenbereich:</span>
                   <textarea name="specifics" rows="6" cols="40">
-Kein spezieller Wunsch, schickt mir einfach das Standardpaket.  Das bedeutet, dass wir versuchen werden dir etwas von allem, was hier aufgelistet ist, zu schicken.  Solltest du besondere Wünsche haben, lösche bitte diesen Text und trage deine Wünsche hier ein.
+Kein spezieller Wunsch, schickt mir einfach das Standardpaket. Das bedeutet, dass wir versuchen werden, Dir etwas von allem, was hier aufgelistet ist, zu schicken.  Solltest Du besondere Wünsche haben, lösche bitte diesen Text und trage Deine Wünsche hier ein.
                   </textarea><br/>
-                <span class="formlabel">Ich möchte das Material für folgenden Zweck
-                (kurze Beschreibung):</span>
+                <span class="formlabel">Ich möchte das Material für folgenden Zweck (kurze Beschreibung):</span>
                   <textarea name="usage" rows="4" cols="40"></textarea><br/>
-                <span class="formlabel">Weitere Kommentare:</span>
+                <span class="formlabel">Any comment:</span>
                   <textarea name="comment" rows="4" cols="40"></textarea><br/>
                   <input type="submit" name="url" value="I am a spam robot" style="display:none;" />
-		  <span class="formlabel">Unterstütze unsere Arbeit mit 10 € oder mehr: </span>
+		  <span class="formlabel">Support our work with a donation of 10€ or more: </span>
                   <input type="number" name="donate" value="0" min="0" step="5"/>€ 
                   <!-- Translators: please translate the label of this button (the value field) -->
-                  <input type="submit" name="dothis" value="Jetzt bestellen!"/>
+                  <input type="submit" name="dothis" value="Order now!"/>
                   <input type="submit" name="url" value="I am a spam robot" style="display:none;" /><br/>
                 </form>
+                
 		
-		<h2 id="id-available-promotion-material">Verfügbares Werbematerial</h2>
+		<h1 id="available-promotion-material" style="margin-top:3em;">Verfügbares Infomaterial</h1>
 
 <!-- START ITEMIZE TESTING -->
 
-		<h3 id="fsfe-and-fellowship-material" class="left break">Über die FSFE und das Fellowship</h3>
+		<h2 id="fsfe-and-community" class="left break">FSFE und unsere Communityy</h2>
 		
 		<dynamic-content type="fsfe"/>
 		
-		<h3 id="freedom" class="left break">Free Software und Nutzerfreiheit</h3>
+		<h2 id="freedom" class="left break">Freie Software und Nutzerfreiheit</h2>
 		
 		<dynamic-content type="freedom"/>
+        <dynamic-content type="hackingforfreedom"/>
 		
-		<h3 id="f-droid" class="left break">Befreien Sie Ihr Android!</h3>
+		<h2 id="f-droid" class="left break">Free Your Android</h2>
 		
 		<dynamic-content type="f-droid"/>
 		
-		<h3 id="ilovefs" class="left break">I love Free Software</h3>
+		<h2 id="ilovefs" class="left break">I love Free Software</h2>
 		
 		<dynamic-content type="ilovefs"/>
 		
-		<h3 id="nocloud" class="left break">There is no cloud</h3>
+		<h2 id="nocloud" class="left break">There is no cloud</h2>
 		
 		<dynamic-content type="nocloud"/>
-		
-		<h3 id="dfd" class="left break">Document Freedom Day</h3>
-		
+				
+		<h2 id="dfd" class="left break">Document Freedom Day</h2>
+        		
 		<dynamic-content type="dfd"/>
 		
-		
-		
-		
-		
-		
-		
 
-
+		
 <!-- END ITEMIZE TESTING -->
 
-	<h2 id="archives" class="left break">Werbematerial-Archiv</h2>
+	<h2 id="feedback" class="left break">Feedback?</h2>
 	<p class="left break">
-        Manchmal ist ein Teil unseres Werbematerials überholt.  Das
-        ist zum Beispiel dann der Fall wenn eine Aktion ausläuft.  Du
-        kannst aber älteres Material noch in unserem<a
-        href="/contribute/promotion-materials-archive.en.html">Werbematerial-Archiv.</a>
-        finden und herunterladen</p>
+		Hattest du irgendwelche Probleme bei deiner Bestellung, hast du einen Tippfehler in einem Text gefunden oder hast du vielleicht eine Anmerkung oder eine Idee für zukünftiges Infomaterial? Oder vielleicht willst du uns einfach nur eine nette Nachricht schreiben? <a href="mailto:contact@fsfe.org">Teile doch dein Feedback</a> mit uns.</p>
+		
+		<p class="left break">Wir freuen uns immer darüber, schöne Geschichten zu hören oder Fotos zu sehen, die unser Infomaterial in Aktion zeigen. Viele Leute teilen ihre Erfahrungen und Fotos auch auf den sozialen Netzwerken mit uns. </p>
+
+
+
+	<h2 id="archives" class="left break">Unser Archiv</h2>
+	<p class="left break">
+	Manchmal ist ein Teil unseres Infomaterials überholt. Das ist zum Beispiel dann der Fall, wenn eine Aktion ausläuft. Du kannst aber älteres Material noch in unserem <a
+	href="/contribute/promotion-materials-archive">Archiv</a> finden und herunterladen.</p>
 		
 
-	<h2 id="upcoming" class="left break">Neue Aktionen und neues Werbematerial</h2>
+	<h2 id="upcoming" class="left break">Zukünftiges Material und Kampagnen</h2>
 
-	<p class="left break">Ab und zu solltest du auf dieser Seite nochmal nach neuem Werbematerial suchen - wir werden Sie weiterhin aktualisieren.  Wenn du helfen möchtest, neue Designs zu erstellen oder bestehende zu verbessern, werde Teil des <a href="/contribute/designers/designers">Design-Teams</a>. Oder wenn du zu Übersetzungen von Seiten oder Materialien beitragen möchtest, werde Teil unseres <a href="/contribute/translators/translators">Übersetzungs-Teams</a>.
+	<p class="left break">Ab und zu solltest Du auf dieser Seite noch mal nach neuem Infomaterial schauen – wir werden sie immer wieder aktualisieren. Wenn Du helfen möchtest, neue Designs zu erstellen oder bestehende zu verbessern, werde Teil des <a href="/contribute/designers/designers">Design-Teams</a>. Oder wenn du zu Übersetzungen von Seiten oder Materialien beitragen möchtest, werde Teil unseres <a href="/contribute/translators/translators">Übersetzungs-Teams</a>.
 	</p>
 
 	</body>
 
-  <timestamp></timestamp>
+
 </html>
 <!--
 Local Variables: ***
 mode: xml ***
 End: ***
 -->
+ 

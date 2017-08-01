@@ -405,7 +405,6 @@
     <name>Max Mehl</name>
     <country>DE</country>
     <function>program-manager/m</function>
-    <function country="DE">coordinator/m</function>
     <function volunteers="translators-de">deputy/m</function>
     <email>max.mehl (at) fsfe (dot) org</email>
     <link>/about/mehl/mehl.html</link>
@@ -567,7 +566,7 @@
   <person id="schiessle" avatar="yes" teams="ga, de">
     <name>Björn Schießle</name>
     <country>DE</country>
-    <function country="DE">deputy/m</function>
+    <function country="DE">coordinator/m</function>
     <email>schiessle (at) fsfe (dot) org</email>
     <link>http://www.schiessle.org</link>
     <avatar>/about/schiessle/schiessle-avatar.jpg</avatar>
@@ -587,6 +586,14 @@
     <email>usli (at) fsfe (dot) org</email>
     <avatar>/about/sliwinski/sliwinski.png</avatar>
     <employee>full/f</employee>
+  </person>
+
+  <person id="snow" avatar="no" teams="de, core">
+    <name>Florian Snow</name>
+    <country>DE</country>
+    <function country="DE">deputy/m</function>
+    <email>floriansnow (at) fsfe (dot) org</email>
+    <link>https://wiki.fsfe.org/Fellows/floriansnow</link>
   </person>
 
   <person id="stegerman" avatar="yes" teams="nl, core">

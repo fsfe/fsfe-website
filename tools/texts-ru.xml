@@ -4,6 +4,25 @@
 
 <!-- ALL STATIC TEXTS -->
 
+  <!-- Spreadtheword page -->
+  <text id="stw-type">Тип</text>
+  <text id="stw-size">Размер</text>
+  <text id="stw-context">Контекстная информация</text>
+  <text id="stw-printed"><a href="#how-to-order">Заказать со склада</a> в</text>
+  <text id="stw-printed-tooltip">Эти печатные версии можно заказать, заполнив бланк.</text>
+  <text id="stw-languages">Можно получить в электронном виде на языках:</text>
+  <text id="stw-languages-tooltip">Наши наглядные материалы доступны на сайте на разных
+языках.</text>
+  <text id="stw-license">Лицензия</text>
+  <text id="stw-author">Автор</text>
+  <text id="stw-year">Год</text>
+  <text id="stw-source">Исходные файлы</text>
+  <text id="stw-source-tooltip">Для изменения или перевода возьмите исходные файлы.
+Соблюдайте, пожалуйста, их лицензию.</text>
+  <text id="stw-printready">Файлы для печати</text>
+  <text id="stw-printready-tooltip">Эти файлы, которые мы распечатываем, они отформатированы
+под наш принтер. Некоторые из них довольно велики (5...25 МБ).</text>
+
 
 <!-- Basic texts -->
 <text id="fsfeurope">Европейский фонд свободного программного обеспечения</text>
@@ -99,7 +118,7 @@
 <text id="search">Поиск</text>
 <text id="submit">Отправить</text>
 <text id="subscribe">Подписаться</text>
-<!-- !! MISSING TRANSLATION --> <text id="email">email address</text>
+<text id="email">адрес электронной почты</text>
 <text id="news">Последние новости</text>
 <text id="receive-newsletter">Подписаться на ежемесячные выпуски новостей ЕФСПО</text>
 <text id="subscribe-newsletter">Подписаться на выпуски новостей</text>
@@ -124,7 +143,7 @@
 <text id="contribute-web">Участвовать в разработке сайта</text>
 <text id="imprint">Реквизиты</text>
 <text id="privacy-policy">Политика конфиденциальности</text>
-
+<text id="tags">Рубрики</text>
 
 <!-- Article metadata -->
 <text id="author">Автор</text>
@@ -132,7 +151,6 @@
 <text id="published">опубликовано</text>
 <text id="revision">обновлено</text>
 <text id="download">Загрузить</text>
-
 
 <!-- Petitions -->
 <text id="osig">Организации</text>
@@ -196,11 +214,17 @@
         и выражать независимое мнение. 
       </p>
 </text>
+<!-- pdfreaders.org -->
+<text id="pdfreaders-head-readers">Программы чтения</text>
+<text id="pdfreaders-head-standards">Открытые стандарты</text>
+<text id="pdfreaders-head-graphics">Графика</text>
+<text id="pdfreaders-head-about">О сайте</text>
+<text id="pdfreaders-body-platforms">Платформы:</text>
 
-
-
-
-
-
-
+<!-- Share and support buttons -->
+<text id="share-head">Обсуждай и поддерживай</text>
+<text id="share-page">Обсудить страницу в</text>
+<text id="share-microdonation">Микропожертвование через</text>
+<text id="share-warning">Некоторые службы могут быть враждебны свободным
+программам и наносить ущерб вашей конфиденциальности.</text>
 </textset>

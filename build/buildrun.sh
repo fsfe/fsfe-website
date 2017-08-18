@@ -86,7 +86,9 @@ git_build_into(){
       s;^ create mode [0-7]{6} (.+);\1;p;
       s;^ rename ([^{]+ => )(.*) \([0-9]+%\);\2;p;
       s;^ rename ([^{]*)(\{.* => )(.+)\}(.*) \([0-9]+%\);\1\3\4;p
-    ' "$GITchanges")
+      ' "$GITchanges" \
+      | xargs -d\\n printf "${basedir}"/%s\\n
+    )
   fi
 }
 

@@ -64,7 +64,7 @@ all: $(shell find ./ -name '*.sources')
 # generate tag maps
 # -----------------------------------------------------------------------------
 
-TAGMAP := $(shell find $(PWD) -name '*.xml' \
+TAGMAP := $(shell find ./ -name '*.xml' \
              | xargs ./build/source_globber.sh map_tags \
             )
 

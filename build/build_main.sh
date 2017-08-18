@@ -53,6 +53,12 @@ fi
 [ -z "$inc_stirrups" ]  && . "$basedir/build/stirrups.sh"
 
 case "$command" in
+  git_build_into)  if [ "${statusdir}/full_build" -nt "${statusdir}/index.cgi" ]; then
+                     debug "discovered flag file, performing full build"
+                     build_into
+                   else
+                     git_build_into
+                   fi ;;
   svn_build_into)  if [ "${statusdir}/full_build" -nt "${statusdir}/index.cgi" ]; then
                      debug "discovered flag file, performing full build"
                      build_into

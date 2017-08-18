@@ -38,7 +38,7 @@ buildpids=$(
   | egrep "[s]h ${0} .*" \
   | wc -l
 )
-if [ $command = "build_into" -o $command = "svn_build_into" ] && [ "$buildpids" -gt 2 ]; then
+if [ $command = "build_into" -o $command = "git_build_into" -o $command = "svn_build_into" ] && [ "$buildpids" -gt 2 ]; then
   debug "build script is already running"
   exit 0
 fi

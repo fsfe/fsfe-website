@@ -9,7 +9,7 @@ inc_makerules=true
 [ -z "$inc_sources" ] && . "$basedir/build/sources.sh"
 
 sourcefind() {
-  find "$input" -name .svn -prune -o -type f "$@" -printf '%P\n'
+  find "$input" -name .svn -prune -name .git -prune -o -type f "$@" -printf '%P\n'
 }
 
 mio(){

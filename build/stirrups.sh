@@ -20,7 +20,10 @@ dir_maker(){
   output="${2%/}"
 
   curpath="$output"
-  find "$input" -depth -type d \! -path '*/.svn' \! -path '*/.svn/*' -printf '%P\n' \
+  find "$input" -depth -type d \
+       \! -path '*/.svn' \! -path '*/.svn/*' \
+       \! -path '*/.git' \! -path '*/.git/*' \
+       -printf '%P\n' \
   | while read filepath; do
     oldpath="$curpath"
     curpath="$output/$filepath/"

@@ -38,6 +38,7 @@ htmlcat(){
 
 start_time=$(cat "start_time" || stat -c %Y "$0" || echo 0)
 t_svnupdate=$(stat -c %Y "SVNlatest" ||echo 0)
+t_gitupdate=$(stat -c %Y "GITlatest" ||echo 0)
 t_premake=$(stat -c %Y "premake" ||echo 0)
 t_makefile=$(stat -c %Y "Makefile" ||echo 0)
 t_makecopy=$(stat -c %Y "Make_copy" ||echo 0)
@@ -197,15 +198,19 @@ label  {
       )"
     )
 
-    <h2>SVN changes</h2>$(
-    if [ ${start_time} -le ${t_svnupdate} ]; then
-      web_tab SVN_tab "at $(timestamp ${t_svnupdate})" "<pre>$(htmlcat SVNlatest)</pre>" checked
+    <h2>VCS changes</h2>$(
+    if [ ${start_time} -le ${t_gitupdate} ]; then
+      web_tab VCS_tab "at $(timestamp ${t_gitupdate})" "<pre>$(htmlcat GITlatest)</pre>" checked
+    elif [ ${start_time} -le ${t_svnupdate} ]; then
+      web_tab VCS_tab "at $(timestamp ${t_svnupdate})" "<pre>$(htmlcat SVNlatest)</pre>" checked
     else
-      web_tab SVN_tab "Unconditional build, changes ignored" ""
+      web_tab VCS_tab "Unconditional build, changes ignored" ""
     fi)
 
     <h2>Premake</h2>$(
-    if [ $start_time -lt $t_premake -a $start_time -lt $t_svnupdate ]; then
+    if [ $start_time -lt $t_premake -a $start_time -lt $t_gitupdate ]; then
+      web_tab Premaketab "Premake run time $(duration $(($t_premake - $t_gitupdate)))" "<pre>$(tail premake |htmlcat)</pre><a href="premake">full log</a>"
+    elif [ $start_time -lt $t_premake -a $start_time -lt $t_svnupdate ]; then
       web_tab Premaketab "Premake run time $(duration $(($t_premake - $t_svnupdate)))" "<pre>$(tail premake |htmlcat)</pre><a href="premake">full log</a>"
     elif [ $start_time -lt $t_premake ]; then
       web_tab Premaketab "Premake run time $(duration $(($t_premake - $start_time)))" "<pre>$(tail premake |htmlcat)</pre><a href="premake">full log</a>"

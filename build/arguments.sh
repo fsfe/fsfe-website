@@ -33,6 +33,10 @@ if [ -z "$inc_arguments" ]; then
         command="$1$command"
         [ "$#" -gt 0 ] && shift 1 && target="$1"
         ;;
+      git_build_into)
+        command="$1$command"
+        [ "$#" -gt 0 ] && shift 1 && target="$1"
+        ;;
       svn_build_into)
         command="$1$command"
         [ "$#" -gt 0 ] && shift 1 && target="$1"
@@ -101,6 +105,7 @@ if [ -z "$inc_arguments" ]; then
   
   case "$command" in
     build_into)      [ -z "$target" ]      && die "Missing destination directory" ;;
+    git_build_into)  [ -z "$target" ]      && die "Missing destination directory" ;;
     svn_build_into)  [ -z "$target" ]      && die "Missing destination directory" ;;
     process_file)    [ -z "$workfile" ]    && die "Need at least input file" ;;
     build_xmlstream) [ -z "$workfile" ]    && die "Missing xhtml file name" ;;

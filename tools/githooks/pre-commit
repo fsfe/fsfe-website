@@ -1,0 +1,17 @@
+#!/bin/sh
+
+TESTS=0
+
+git stash save -q --keep-index
+
+for xmlfile in $(
+  git status --porcelain \
+  | sed -rn 's;^([AM ]{3})(.*\.xsl|.*\.xml|.*\.xhtml)$;\2;p' \
+); do
+  xmllint --noout --nonet "${xmlfile}"
+  TESTS=$((${TESTS} + $?))
+done
+
+git stash pop -q
+
+exit "$TESTS"

@@ -1,0 +1,13 @@
+#!/bin/sh
+
+TESTS=0
+
+for xmlfile in $(
+  git status --porcelain \
+  | sed -rn 's;^[AM]  (.*\.xsl|.*\.xml|.*\.xhtml)$;\1;p' \
+); do
+  xmllint --noout --nonet "${xmlfile}"
+  TESTS=$((${TESTS} + $?))
+done
+
+exit "$TESTS"

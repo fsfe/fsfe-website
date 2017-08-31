@@ -50,13 +50,12 @@
                                   If you want to send a message to us, you can also use the following form to do so.
                                 </p>
                                 <form method="post" action="https://forms.fsfe.org/email">
-                                  <input type="email" name="from" id="from" />
-                                  <label for="from">Your email</label>
-                                  <input type="text" size="45" name="subject" id="subject" />
-                                  <label for="subject">Subject</label>
-                                  <textarea name="content" id="content" rows="5" cols="45">
+                                  <input type="hidden" name="appid" value="contact" />
+
+                                  <input type="email" name="from" id="from" placeholder="Your email address" />
+                                  <input type="text" size="35" name="subject" id="subject" placeholder="Subject" />
+                                  <textarea name="content" id="content" rows="5" cols="45" placeholder="Write your message here">
                                   </textarea>
-                                  <label for="content">Message</label>
                                   <input type="submit" value="Send" />
                                 </form>
 			</div>

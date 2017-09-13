@@ -140,11 +140,3 @@ RewriteRule ^about/tuke(.*) /about/team [redirect=permanent]
 
 # Nicer URL for share buttons
 RewriteRule ^share/?$ /cgi-bin/share.php [NC,L]
-
-# password-protect certain news
-<FilesMatch "news-20170913-01">
-  AuthName "Access restricted"
-  AuthType Basic
-  AuthUserFile /home/www/fsfe.org/.htpasswd
-  require valid-user
-</FilesMatch>

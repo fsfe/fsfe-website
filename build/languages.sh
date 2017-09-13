@@ -38,6 +38,7 @@ sr Српски
 sv Svenska
 tr Türkçe
 uk Українська
+zh 漢語
 EOL
 }
 

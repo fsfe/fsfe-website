@@ -606,12 +606,14 @@
     <employee>full/f</employee>
   </person>
 
-  <person id="snow" avatar="no" teams="de, core">
+  <person id="snow" avatar="yes" teams="de, core, franconia">
     <name>Florian Snow</name>
     <country>DE</country>
     <function country="DE">deputy/m</function>
+    <function group="franconia">coordinator/m</function>
     <email>floriansnow (at) fsfe (dot) org</email>
     <link>https://wiki.fsfe.org/Fellows/floriansnow</link>
+    <avatar>/about/snow/avatar.jpg</avatar>
   </person>
 
   <person id="stegerman" avatar="yes" teams="nl, core">

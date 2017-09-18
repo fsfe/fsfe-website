@@ -25,7 +25,7 @@ use POSIX qw(strftime);
 # -----------------------------------------------------------------------------
 
 my %names = (
-  "fellowship" => "Local Fellowship Group",
+  "fellowship" => "Local FSFE Group",
   "albers" => "Erik Albers",
   "oberg" => "Jonas Öberg",
   "kirschner" => "Matthias Kirschner",
@@ -40,36 +40,6 @@ my %names = (
 # -----------------------------------------------------------------------------
 # List of people responsible for the projects
 # -----------------------------------------------------------------------------
-
-# Vacation "reply" for Jonas
-#
-# my %responsible = (
-#   "ADMIN-TRAVEL" => "kirschner",
-#   "ADMIN-GA" => "kirschner",
-#   "ADMIN-TECH" => "kirschner",
-#   "ADMIN-FUNDRAISING" => "kirschner",
-#   "GR-TRAINING" => "kirschner",
-#   "GR-LOCAL" => "kirschner",
-#   "PA-OUTREACH" => "kirschner",
-#   "PA-MATERIAL" => "kirschner",
-#   "PA-CAMPAIGN" => "kirschner",
-#   "NET-ORG" => "kirschner",
-#   "NET-TRAVEL" => "kirschner",
-#   "POLICY-TRAVEL" => "kirschner",
-#   "POLICY-DEV" => "kirschner",
-#   "POLICY-CAMPAIGN" => "kirschner",
-#   "MERCHANDISE-PURCHASE" => "kirschner",
-#   "MERCHANDISE-OTHER" => "kirschner",
-#   "PERSONELL-INTERN" => "kirschner",
-#   "PERSONELL-KIRSCHNER" => "kirschner",
-#   "PERSONELL-ALBERS" => "kirschner",
-#   "PERSONELL-SLIWINSKI" => "kirschner",
-#   "PERSONELL-MEHL" => "kirschner",
-#   "PERSONELL-OBERG" => "kirschner",
-#   "PERSONELL-MALAJA" => "kirschner",
-#   "OFFICE-BERLIN" => "kirschner",
-#   "OFFICE-DUSSELDORF" => "kirschner",
-# );
 
 my %responsible = (
   "ADMIN-COORD" => "oberg",
@@ -88,6 +58,8 @@ my %responsible = (
   "POLICY-CAMPAIGN" => "kirschner",
   "MERCHANDISE-PURCHASE" => "sliwinski",
   "MERCHANDISE-OTHER" => "sliwinski",
+  "REUSE-PURCHASE-OTHER" => "oberg",
+  "REUSE-PURCHASE-DE" => "oberg",
   "PERSONELL-INTERN" => "oberg",
   "PERSONELL-KIRSCHNER" => "oberg",
   "PERSONELL-ALBERS" => "oberg",
@@ -115,6 +87,8 @@ my %account = (
   "POLICY-CAMPAIGN" => "2545",
   "MERCHANDISE-PURCHASE" => "8154",
   "MERCHANDISE-OTHER" => "8159",
+  "REUSE-PURCHASE-OTHER" => "6113",
+  "REUSE-PURCHASE-DE" => "6112",
   "PERSONELL-INTERN" => "81000",
   "PERSONELL-KIRSCHNER" => "81012",
   "PERSONELL-ALBERS" => "81021",

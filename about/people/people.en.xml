@@ -193,7 +193,7 @@
    <avatar>/about/dengg/dengg-avatar.jpg</avatar>
   </person>
 
-  <person id="dietrich" avatar="yes" association-member="yes" teams="de, ga">
+  <person id="dietrich" avatar="yes" association-member="yes" teams="de">
     <name>Nicolas Dietrich</name>
     <country>DE</country>
     <email>nidi (at) fsfe (dot) org</email>
@@ -387,12 +387,14 @@
     <email>frankie (at) fsfe (dot) org</email>
   </person>
 
+<!--
   <person id="machon" avatar="no" association-member="yes" teams="ga, es">
     <name>Pablo Machón</name>
     <country>ES</country>
     <function country="ES">coordinator/m</function>
     <email>machon (at) fsfeurope (dot) org</email>
   </person>
+  -->
   
   <person id="malaja" avatar="yes" teams="core, ftf">
     <name>Polina Malaja</name>

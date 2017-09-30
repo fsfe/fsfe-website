@@ -51,13 +51,13 @@ my $subject = "Business card order $reference";
 
 my $boundary = "NextPart$reference";
 
-my $replyto = "office\@fsfeurope.org, $email";
+my $replyto = "contact\@fsfe.org, $email";
 
 open(MAIL, "|/usr/lib/sendmail -t -f $email");
 print MAIL "From: $email\n";
 print MAIL "Reply-To: $replyto\n";
 print MAIL "Mail-Followup-To: $replyto\n";
-print MAIL "To: office\@fsfeurope.org\n";
+print MAIL "To: contact\@fsfe.org\n";
 print MAIL "Cc: $email\n";
 
 print MAIL "Subject: $subject\n";

@@ -34,6 +34,26 @@
 
   </xsl:template>
 
+  <!--display dynamic list of (not yet tagged) newsletters items-->
+
+  <xsl:template name="fetch-newsletters">
+    <xsl:param name="today" select="/buildinfo/@date" />
+    <xsl:param name="nb-items" select="''" />
+
+    <xsl:for-each select="/buildinfo/document/set/news[
+      translate(@date, '-', '') &lt;= translate($today, '-', '')
+      and (tags/tag[@key] = 'newsletter' or tags/tag = 'newsletter'
+      or @type = 'newsletter' ) ]">
+      <xsl:sort select="@date" order="descending" />
+
+      <xsl:if test="$nb-items = '' or position() &lt;= $nb-items">
+        <xsl:call-template name="newsletter" />
+      </xsl:if>
+    </xsl:for-each>
+
+  </xsl:template>
+
+
   <!--display dynamic list of tagged event items-->
 
   <xsl:template name="fetch-events">

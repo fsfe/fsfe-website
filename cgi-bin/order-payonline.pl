@@ -5,8 +5,10 @@ use Digest::SHA1 qw(sha1_hex);
 
 my $query = new CGI;
 
-my $reference = $query->param("reference") ~ "s/\W//g";         # Only numbers and characters to aviod cross site scripting
-my $language = $query->param("language") ~ "s/\W//g";
+my $reference = $query->param("reference");
+my $language = $query->param("language");
+$reference =~ "s/\W//g";        # Only numbers and characters to aviod cross site scripting
+$language =~ "s/\W//g";
 
 my $lang = substr($language, 0, 2);
 my $amount = substr($reference, 9, 3);

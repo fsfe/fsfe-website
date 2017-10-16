@@ -7,8 +7,8 @@ my $query = new CGI;
 
 my $reference = $query->param("reference");
 my $language = $query->param("language");
-$reference =~ "s/\W//g";        # Only numbers and characters to aviod cross site scripting
-$language =~ "s/\W//g";
+$reference = ($reference =~ "s/\W//g");         # Only numbers and characters to aviod cross site scripting
+$language = ($language =~ "s/\W//g");
 
 my $lang = substr($language, 0, 2);
 my $amount = substr($reference, 9, 3);

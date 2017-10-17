@@ -4,11 +4,11 @@ This repository contains the source files of [fsfe.org](https://fsfe.org), pdfre
 
 ## Table of Contents
 
-* Technical information
-* Structure
-* Contribute
-* Translate
-* Build
+* [Technical information](#technical-information)
+* [Structure](#structure)
+* [Contribute](#contribute)
+* [Translate](#translate)
+* [Build](#build)
 
 
 ## Technical information

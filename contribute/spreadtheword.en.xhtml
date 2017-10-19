@@ -101,18 +101,19 @@
                 <h3>Please send promotional material to:</h3>
                 <span class="formlabel">First name, Last name:</span>
                   <input type="text" name="firstname" placeholder="First Name" size="20" />
-                  <input type="text"  name="lastname" placeholder="Last Name" size="20" /><br/>
+                  <input type="text"  name="lastname" placeholder="Last Name" size="20" required="required" /><br/>
                 <span class="formlabel">Email:</span>
-                  <input type="text" name="email" placeholder="Email" size="40" /><br/>
+                  <input type="email" name="email" placeholder="Email" size="40" required="required" /><br/>
                 <span class="formlabel">Company/Organisation (if any):</span>
                   <input type="text" name="org" placeholder="Organisation" size="40" /><br/>
 
 		<span class="formlabel">Street, No.:</span>
-                  <input type="text" name="street" size="40" /><br/>
+                  <input type="text" name="street" size="40" required="required" /><br/>
 		<span class="formlabel">Zip, City:</span>
-                  <input type="text" name="city" size="40" /><br/>
+                  <input type="text" name="zip" size="10" required="required" />
+                  <input type="text" name="city" size="30" required="required" />
 		<span class="formlabel">Country:</span>
-                  <input type="text" name="country" size="40" /><br/>
+                  <input type="text" name="country" size="40" required="required" /><br/>
 
 			
 
@@ -120,7 +121,7 @@
                   <textarea name="address" rows="4" cols="40"></textarea><br/ -->
 
                 <span class="formlabel">I would like the promotion package to focus on:</span>
-                  <textarea name="specifics" rows="6" cols="40">
+                  <textarea name="specifics" rows="6" cols="40" required="required">
 No focus; just send me the default package. That means we will try to ensure that you receive something from everything listed here. If you have any preferences, please delete this text and state them here.
                   </textarea><br/>
                 <span class="formlabel">I would like to use the material for (short description):</span>

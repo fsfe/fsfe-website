@@ -105,6 +105,7 @@ $lang = $_POST['language'];
 if (empty($_POST['lastname'])  ||
     empty($_POST['email'])     ||
     empty($_POST['street'])    ||
+    empty($_POST['zip'])       ||
     empty($_POST['city'])      ||
     empty($_POST['country'])   ||
     empty($_POST['specifics']) ||
@@ -122,9 +123,10 @@ $msg = "Hey, someone ordered promotional material:\n".
        "EMail:      {$_POST['email']}\n".
        "\n".
        "Address:\n".
+       "{$_POST['firstname']} " . "{$_POST['lastname']}\n".
        "{$_POST['org']}\n".
        "{$_POST['street']}\n".
-       "{$_POST['city']}\n".
+       "{$_POST['zip']} "."{$_POST['city']}\n".
        "{$_POST['country']}\n".
        "\n".
        "Specifics of the Order:\n".

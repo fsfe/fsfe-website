@@ -66,24 +66,25 @@
                 <h3>Enviar material promocional par:</h3>
                 <span class="formlabel">Primeiro Nome, Último Nome:</span>
                   <input type="text" name="firstname" placeholder="Primeiro Nome" size="20" />
-                  <input type="text"  name="lastname" placeholder="Último Nome" size="20" /><br/>
+                  <input type="text"  name="lastname" placeholder="Último Nome" size="20" required="required" /><br/>
                 <span class="formlabel">Email:</span>
-                  <input type="text" name="email" placeholder="Email" size="40" /><br/>
+                  <input type="email" name="email" placeholder="Email" size="40" required="required" /><br/>
                 <span class="formlabel">Empresa/Organização (se for o caso):</span>
                   <input type="text" name="org" placeholder="Organização" size="40" /><br/>
 
 		<span class="formlabel">Rua, Nº:</span>
-                  <input type="text" name="street" size="40" /><br/>
+                  <input type="text" name="street" size="40" required="required" /><br/>
 		<span class="formlabel">Código Postal, Localidade:</span>
-                  <input type="text" name="city" size="40" /><br/>
+                  <input type="text" name="zip" size="10" required="required" />
+                  <input type="text" name="city" size="26" required="required" /><br />
 		<span class="formlabel">País:</span>
-                  <input type="text" name="country" size="40" /><br/>
+                  <input type="text" name="country" size="40" required="required" /><br/>
 
                 <!-- span class="formlabel">Address:</span>
                   <textarea name="address" rows="4" cols="40"></textarea><br/ -->
 
                 <span class="formlabel">Pretendo um pacote promocional centrado em:</span>
-                  <textarea name="specifics" rows="6" cols="40">
+                  <textarea name="specifics" rows="6" cols="40" required="required">
 Pretendo o pacote padrão. Nesta opção enviar-lhe-emos um pouco de tudo o que está listado aqui. Se tiver preferências por algo em concreto, agradecemos que elimine este texto e especifique-as aqui.
                   </textarea><br/>
                 <span class="formlabel">Pretendo material para (descrição breve):</span>

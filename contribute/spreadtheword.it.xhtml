@@ -100,18 +100,19 @@
                 <h3>Gentilmente inviare materiale promozionale a:</h3>
                 <span class="formlabel">Nome, Cognome:</span>
                   <input type="text" name="firstname" placeholder="Nome" size="20" />
-                  <input type="text"  name="lastname" placeholder="Cognome" size="20" /><br/>
+                  <input type="text"  name="lastname" placeholder="Cognome" size="20" required="required" /><br/>
                 <span class="formlabel">Email:</span>
-                  <input type="text" name="email" placeholder="Email" size="40" /><br/>
+                  <input type="email" name="email" placeholder="Email" size="40" required="required" /><br/>
                 <span class="formlabel">Azienda/Organizzazione (opzionale):</span>
                   <input type="text" name="org" placeholder="Organizzazione" size="40" /><br/>
 
 		<span class="formlabel">Indirizzo, N:</span>
-                  <input type="text" name="street" size="40" /><br/>
+                  <input type="text" name="street" size="40" required="required" /><br/>
 		<span class="formlabel">Cap, Città:</span>
-                  <input type="text" name="city" size="40" /><br/>
+                  <input type="text" name="zip" size="10" required="required" />
+                  <input type="text" name="city" size="26" required="required" /><br />
 		<span class="formlabel">Paese:</span>
-                  <input type="text" name="country" size="40" /><br/>
+                  <input type="text" name="country" size="40" required="required" /><br/>
 
 			
 
@@ -119,7 +120,7 @@
                   <textarea name="address" rows="4" cols="40"></textarea><br/ -->
 
                 <span class="formlabel">Vorrei che il pacchetto promozionale fosse personalizzato su:</span>
-                  <textarea name="specifics" rows="6" cols="40">
+                  <textarea name="specifics" rows="6" cols="40" required="required">
 Nessuna personalizzazione, mandatemi il pacco standard. Questo significa che ti manderemo un po' di tutto quello elencato qui. Se hai delle preferenze, cancella questo testo, ed esplicitale qui.
                   </textarea><br/>
                 <span class="formlabel">Vorrei usare il materiale per (breve descrizione):</span>

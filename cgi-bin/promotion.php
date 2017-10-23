@@ -123,9 +123,12 @@ $msg = "Hey, someone ordered promotional material:\n".
        "EMail:      {$_POST['email']}\n".
        "\n".
        "Address:\n".
-       "{$_POST['firstname']} " . "{$_POST['lastname']}\n".
-       "{$_POST['org']}\n".
-       "{$_POST['street']}\n".
+       "{$_POST['firstname']} " . "{$_POST['lastname']}\n";
+
+if (!empty($_POST['org'])) {
+  $msg .= "{$_POST['org']}\n";
+}
+$msg .= "{$_POST['street']}\n".
        "{$_POST['zip']} "."{$_POST['city']}\n".
        "{$_POST['country']}\n".
        "\n".

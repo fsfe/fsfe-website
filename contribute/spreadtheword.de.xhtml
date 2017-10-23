@@ -119,18 +119,19 @@
                 <h3>Bitte schickt das Infomaterial an:</h3>
                 <span class="formlabel">Vorname, Nachname:</span>
                   <input type="text" name="firstname" placeholder="Vorname" size="20" />
-                  <input type="text"  name="lastname" placeholder="Nachname" size="20" /><br/>
+                  <input type="text"  name="lastname" placeholder="Nachname" size="20" required="required" /><br/>
                 <span class="formlabel">Email:</span>
-                  <input type="text" name="email" placeholder="Email" size="40" /><br/>
+                  <input type="email" name="email" placeholder="Email" size="40" required="required" /><br/>
                 <span class="formlabel">Firma/Organisation (falls zutreffend):</span>
                   <input type="text" name="org" placeholder="Organisation" size="40" /><br/>
 
 		<span class="formlabel">Straße, Hausnummer:</span>
-                  <input type="text" name="street" size="40" /><br/>
+                  <input type="text" name="street" size="40" required="required" /><br/>
 		<span class="formlabel">Postleitzahl, Ort:</span>
-                  <input type="text" name="city" size="40" /><br/>
+                  <input type="text" name="zip" size="10" required="required" />
+                  <input type="text" name="city" size="26" required="required" /><br />
 		<span class="formlabel">Land:</span>
-                  <input type="text" name="country" size="40" /><br/>
+                  <input type="text" name="country" size="40" required="required" /><br/>
 
 			
 
@@ -138,7 +139,7 @@
                   <textarea name="address" rows="4" cols="40"></textarea><br/ -->
 
                 <span class="formlabel">Ich möchte bevorzugt Werbematerial aus folgendem Themenbereich:</span>
-                  <textarea name="specifics" rows="6" cols="40">
+                  <textarea name="specifics" rows="6" cols="40" required="required">
 Kein spezieller Wunsch, schickt mir einfach das Standardpaket. Das bedeutet, dass wir versuchen werden, Dir etwas von allem, was hier aufgelistet ist, zu schicken.  Solltest Du besondere Wünsche haben, lösche bitte diesen Text und trage Deine Wünsche hier ein.
                   </textarea><br/>
                 <span class="formlabel">Ich möchte das Material für folgenden Zweck (kurze Beschreibung):</span>

@@ -66,24 +66,25 @@ Do të merrni pjesë në një takim mbi Software-in e Lirë apo madje po organiz
                 <h3>Ju lutemi, dërgoni material promocional te:</h3>
                 <span class="formlabel">Emër, Mbiemër:</span>
                   <input type="text" name="firstname" placeholder="First Name" size="20" />
-                  <input type="text"  name="lastname" placeholder="Last Name" size="20" /><br/>
+                  <input type="text"  name="lastname" placeholder="Last Name" size="20" required="required" /><br/>
                 <span class="formlabel">Email:</span>
-                  <input type="text" name="email" placeholder="Email" size="40" /><br/>
+                  <input type="email" name="email" placeholder="Email" size="40" required="required" /><br/>
                 <span class="formlabel">Kompani/Organizëm (në pastë):</span>
                   <input type="text" name="org" placeholder="Organisation" size="40" /><br/>
 
 		<span class="formlabel">Rruga, No.:</span>
-                  <input type="text" name="street" size="40" /><br/>
+                  <input type="text" name="street" size="40" required="required" /><br/>
 		<span class="formlabel">Zip, Qyteti:</span>
-                  <input type="text" name="city" size="40" /><br/>
+                  <input type="text" name="zip" size="10" required="required" />
+                  <input type="text" name="city" size="26" required="required" /><br />
 		<span class="formlabel">Vendi:</span>
-                  <input type="text" name="country" size="40" /><br/>
+                  <input type="text" name="country" size="40" required="required" /><br/>
 
                 <!-- span class="formlabel">Address:</span>
                   <textarea name="address" rows="4" cols="40"></textarea><br/ -->
 
                 <span class="formlabel">Do të doja paketën promocionale që merret me:</span>
-                  <textarea name="specifics" rows="6" cols="40">
+                  <textarea name="specifics" rows="6" cols="40" required="required">
 Pa temë specifike, thjesht dërgomëni paketën parazgjedhje. Kjo do të thotë që do të përpiqemi t’ju dërgojmë pak nga të gjitha nga ato që shihni këtu. Nëse keni ndonjë parapëlqim, ju lutemi, fshijeni këtë tekst dhe tregojini atë këtu.
                   </textarea><br/>
                 <span class="formlabel">Do të doja ta përdorja materialin për (përshkrim i shkurtër):</span>

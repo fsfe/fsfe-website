@@ -102,20 +102,21 @@
                 <h3>Veuillez envoyer le matériel promotionnel à&#160;:</h3>
                 <span class="formlabel">Prénom, Nom&#160;:</span>
                   <input type="text" name="firstname" placeholder="Prénom" size="20" />
-                  <input type="text"  name="lastname" placeholder="Nom" size="20" /><br/>
+                  <input type="text"  name="lastname" placeholder="Nom" size="20" required="required" /><br/>
                 <span class="formlabel">E-mail&#160;:</span>
-                  <input type="text" name="email" placeholder="Courriel" size="40" /><br/>
+                  <input type="email" name="email" placeholder="Courriel" size="40" required="required" /><br/>
                   
 
                 <span class="formlabel">Entreprise/Organisation (si pertinent):</span>
                   <input type="text" name="org" placeholder="Organisation" size="40" /><br/>
                   
 					<span class="formlabel">Numéro et nom de la rue&#160;:</span>
-                  <input type="text" name="street" size="40" /><br/>
+                  <input type="text" name="street" size="40" required="required" /><br/>
 				<span class="formlabel">Code postale et ville&#160;:</span>
-                  <input type="text" name="city" size="40" /><br/>
+                  <input type="text" name="zip" size="10" required="required" />
+                  <input type="text" name="city" size="26" required="required" /><br />
 				<span class="formlabel">Pays&#160;:</span>
-                  <input type="text" name="country" size="40" /><br/>
+                  <input type="text" name="country" size="40" required="required" /><br/>
                   
 		
 
@@ -123,7 +124,7 @@
                   <textarea name="address" rows="4" cols="40"></textarea><br/ -->
 
                 <span class="formlabel">Je voudrais que le matériel de promotion se concentre sur&#160;:</span>
-                  <textarea name="specifics" rows="6" cols="40">Rien de particulier, envoyez-moi seulement le kit habituel. (Cela signifie que nous essaierons de faire en sorte que vous receviez quelques exemplaires de chaque élément listé ici. Si vous avez une préférence, merci d'effacer ce texte puis de l'indiquer ici.)
+                  <textarea name="specifics" rows="6" cols="40" required="required">Rien de particulier, envoyez-moi seulement le kit habituel. (Cela signifie que nous essaierons de faire en sorte que vous receviez quelques exemplaires de chaque élément listé ici. Si vous avez une préférence, merci d'effacer ce texte puis de l'indiquer ici.)
                   </textarea><br/>
                 <span class="formlabel">J'aimerais utiliser ce matériel pour (courte description)&#160;:</span>
                   <textarea name="usage" rows="4" cols="40"></textarea><br/>

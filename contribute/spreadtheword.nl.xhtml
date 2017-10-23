@@ -98,18 +98,19 @@
                 <h3>Verzend het promotiemateriaal alstublieft naar:</h3>
                 <span class="formlabel">Voornaam, achternaam:</span>
                   <input type="text" name="firstname" placeholder="Voornaam" size="20" />
-                  <input type="text"  name="lastname" placeholder="Achternaam" size="20" /><br/>
+                  <input type="text"  name="lastname" placeholder="Achternaam" size="20" required="required" /><br/>
                 <span class="formlabel">E-mail:</span>
-                  <input type="text" name="email" placeholder="E-mail" size="40" /><br/>
+                  <input type="email" name="email" placeholder="E-mail" size="40" required="required" /><br/>
                 <span class="formlabel">Bedrijf/organisatie (mits Van toepassing):</span>
                   <input type="text" name="org" placeholder="Organisatie" size="40" /><br/>
 
                 <span class="formlabel">Straat, nr.:</span>
-                  <input type="text" name="street" size="40" /><br/>
+                  <input type="text" name="street" size="40" required="required" /><br/>
                 <span class="formlabel">Postcode, stad:</span>
-                  <input type="text" name="city" size="40" /><br/>
+                  <input type="text" name="zip" size="10" required="required" />
+                  <input type="text" name="city" size="26" required="required" /><br />
                 <span class="formlabel">Land:</span>
-                  <input type="text" name="country" size="40" /><br/>
+                  <input type="text" name="country" size="40" required="required" /><br/>
 
                         
 
@@ -117,7 +118,7 @@
                   <textarea name="address" rows="4" cols="40"></textarea><br/ -->
 
                 <span class="formlabel">Ik zou graag willen dat het promotiepakket de focus richt op:</span>
-                  <textarea name="specifics" rows="6" cols="40">Geen specifieke focus, verzend gewoon het standaardpakket. Dat betekent dat we zullen proberen zeker te stellen dat u iets uit alles van deze lijst zult ontvangen. Mocht u enige voorkeur hebben, verwijder dan alstublieft deze tekst en vul deze hier in.
+                  <textarea name="specifics" rows="6" cols="40" required="required">Geen specifieke focus, verzend gewoon het standaardpakket. Dat betekent dat we zullen proberen zeker te stellen dat u iets uit alles van deze lijst zult ontvangen. Mocht u enige voorkeur hebben, verwijder dan alstublieft deze tekst en vul deze hier in.
                   </textarea><br/>
                 <span class="formlabel">Ik zou het materiaal graag willen gebruiken voor (korte beschrijving):</span>
                   <textarea name="usage" rows="4" cols="40"></textarea><br/>

@@ -135,7 +135,9 @@ auto_sources(){
   | while read source; do
     printf '\n### filename="%s" ###\n%s' "$source" "$(include_xml "$source")" 
   done \
-  | sed -r ':X; N; $!bX; s;\n### (filename="[^\n"]+") ###\n[^<]*(<![^>]+>[^<]*)*(<[^ ]+ );\2\3\1 ;g'
+  | sed -r ':X; N; $!bX;
+            s;\n### (filename="[^\n"]+") ###\n[^<]*(<![^>]+>[^<]*)*(<([^/>]+/)*([^/>]+))(/?>);\2\3 \1\6;g;
+           '
 }
 
 lang_sources(){

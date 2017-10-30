@@ -126,6 +126,7 @@ RewriteRule ^activities/ftf/index\.(.*)html /activities/ftf/activities.$1html [r
 RewriteRule ^activities/ftf/network\.(.*)html /activities/ftf/ln.$1html [redirect=permanent]
 RewriteRule ^activities/ftf/recommended\.(.*)html /activities/ftf/licence-questions.$1html [redirect=permanent]
 RewriteRule ^activities/ftf/legal-network-policy\.(.*)html /activities/ftf/ln-rules.$1html [redirect=permanent]
+RewriteRule ^activities/ftf/education /activities/ftf/services.html [redirect=permanent]
 
 # Old staff profiles
 RewriteRule ^about/bako(.*) /about/team [redirect=permanent]
@@ -140,6 +141,7 @@ RewriteRule ^about/tuke(.*) /about/team [redirect=permanent]
 
 # Nicer URL for share buttons
 RewriteRule ^share/?$ /cgi-bin/share.php [NC,L]
+
 
 # Removal of duplicate information, and deprecating /fellowship/
 RewriteRule ^about/community /contact/community.html [redirect=permanent]

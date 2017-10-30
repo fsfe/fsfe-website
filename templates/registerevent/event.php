@@ -4,7 +4,7 @@
 <eventset> 
 	<event start="<?=htmlspecialchars($startdate)?>" end="<?if($enddate):?><?=htmlspecialchars($enddate)?><?else:?><?=htmlspecialchars($startdate)?><?endif;?>"> 
  
-		<title><?if($title):?><?=htmlspecialchars($title)?><?else:?>Fellowship event<?endif;?><?if($city):?> in <?=htmlspecialchars($city)?><?endif;?><?if($country):?>, <?=htmlspecialchars($country)?><?endif;?></title> 
+		<title><?if($title):?><?=htmlspecialchars($title)?><?else:?>FSFE event<?endif;?><?if($city):?> in <?=htmlspecialchars($city)?><?endif;?><?if($country):?>, <?=htmlspecialchars($country)?><?endif;?></title> 
  
 		<body> 
 			<p><?=$description?></p> 

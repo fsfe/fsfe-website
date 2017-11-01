@@ -440,10 +440,9 @@
     <avatar>/about/moeller/moeller-avatar.jpg</avatar>
   </person>
 
-  <person id="mueller" avatar="yes" association-member="yes" teams="ga, council, at">
+  <person id="mueller" avatar="yes" association-member="yes" teams="ga, at">
     <name>Reinhard Müller</name>
     <country>AT</country>
-    <function>financial-officer/m</function>
     <email>reinhard (at) fsfe (dot) org</email>
     <link>http://wiki.fsfe.org/Fellows/reinhard</link>
     <avatar>/about/mueller/mueller-avatar.jpg</avatar>
@@ -473,11 +472,12 @@
     <avatar>/about/oberg/oberg-avatar.jpg</avatar>
   </person>
 
-  <person id="ohnewein" avatar="yes" association-member="yes" teams="it, ga">
+  <person id="ohnewein" avatar="yes" association-member="yes" teams="ga, council, it">
     <name>Patrick Ohnewein</name>
     <country>IT</country>
+    <function>financial-officer/m</function>
     <function country="IT">deputy/m</function>
-    <email>ohnewein (at) fsfeurope (dot) org</email>
+    <email>patrick (at) fsfe (dot) org</email>
     <avatar>/about/ohnewein/ohnewein-avatar.jpg</avatar>
   </person>
 
@@ -641,6 +641,7 @@
     <function group="duesseldorf">coordinator/m</function>
   </person>
 
+<!--
   <person id="suhr" avatar="yes" teams="intern">
     <name>Jonke Suhr</name>
     <country>DE</country>
@@ -649,6 +650,7 @@
     <employee>full/m</employee>
     <avatar>/about/suhr/suhr.png</avatar>
   </person>
+-->
 
   <person id="suklje" avatar="yes" association-member="yes" teams="ftf, ga, si">
     <name>Matija Šuklje</name>

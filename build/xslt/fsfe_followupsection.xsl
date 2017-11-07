@@ -53,7 +53,7 @@
         <xsl:when test="/buildinfo/document/followup = 'join'">
           <xsl:attribute name="class">join</xsl:attribute>
           <xsl:element name="h2">
-            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'join-fellowship'" /></xsl:call-template>
+            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'support/become'" /></xsl:call-template>
           </xsl:element>
           <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'join-paragraph'" /></xsl:call-template>
           <xsl:element name="a">

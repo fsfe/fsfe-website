@@ -47,10 +47,19 @@
           </xsl:element>
 
           <xsl:element name="a">
+              <xsl:attribute name="href">/join?fsfe-header</xsl:attribute>
+              <xsl:attribute name="id">direct-to-join</xsl:attribute>
+              <xsl:element name="i">
+                <xsl:attribute name="class">fa fa-user-plus fa-lg</xsl:attribute>
+              </xsl:element>
+              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'support/become'" /></xsl:call-template>
+          </xsl:element>
+
+          <xsl:element name="a">
               <xsl:attribute name="href">/fellowship/login.html</xsl:attribute>
               <xsl:attribute name="id">direct-to-login</xsl:attribute>
               <xsl:element name="i">
-                <xsl:attribute name="class">fa fa-user fa-lg</xsl:attribute>
+                <xsl:attribute name="class">fa fa-sign-in fa-lg</xsl:attribute>
               </xsl:element>
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fellowship/login'" /></xsl:call-template>
           </xsl:element>

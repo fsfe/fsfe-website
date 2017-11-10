@@ -150,6 +150,7 @@ RewriteRule ^fellowship/faq https://wiki.fsfe.org/KnowHow/FSFELife/FAQ [redirect
 RewriteRule ^fellowship/card https://wiki.fsfe.org/TechDocs/CardHowtos [redirect=permanent]
 RewriteRule ^fellowship/new-group https://wiki.fsfe.org/KnowHow/Groups/CoordinatorsHandbook [redirect=permanent]
 RewriteRule ^fellowship/events(.*) https://fsfe.org/events$1 [redirect=permanent]
+RewriteRule ^fellowship/payment(.*) https://fsfe.org/donate/payment$1 [redirect=permanent]
 RewriteRule ^fellowship/groups https://wiki.fsfe.org/LocalGroups [redirect=permanent]
 RewriteRule ^fellowship/groups/berlin https://wiki.fsfe.org/LocalGroups/Berlin [redirect=permanent]
 RewriteRule ^fellowship/groups/coordinators https://wiki.fsfe.org/Teams/Coordinators [redirect=permanent]

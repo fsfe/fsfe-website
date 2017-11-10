@@ -58,8 +58,8 @@
         <xsl:element name="li">
           <xsl:attribute name="class">support</xsl:attribute>
           <xsl:element name="a">
-            <xsl:attribute name="href">/donate/donate.html#ref-fullmenu</xsl:attribute>
-            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'support/donate'" /></xsl:call-template>
+            <xsl:attribute name="href">/join?ref-fullmenu</xsl:attribute>
+            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'support/support'" /></xsl:call-template>
           </xsl:element>
   
           <xsl:element name="ul">
@@ -90,42 +90,7 @@
             </xsl:for-each>
           </xsl:element>
           <!--/ul-->
-  
-          <!-- Fellowship portal menu -->
-          <xsl:element name="ul">
-            <xsl:attribute name="class">fellowship</xsl:attribute>
-            <xsl:element name="li">
-              <xsl:attribute name="class">fellowship</xsl:attribute>
-              <xsl:element name="a">
-                <xsl:attribute name="href">/fellowship/</xsl:attribute>
-                <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fellowship/fellowship'" /></xsl:call-template>
-              </xsl:element>
-              <xsl:element name="ul">
-                <xsl:variable name="menu"><xsl:value-of select="@id" /></xsl:variable>
-                <xsl:for-each select="/buildinfo/menuset/menu[@parent='fellowship']">
-                  <!--<xsl:sort select="@id"/>-->
-                  <xsl:sort select="@priority" />
-                  <xsl:variable name="id"><xsl:value-of select="@id" /></xsl:variable>
-                  <xsl:element name="li">
-                    <xsl:choose>
-                      <xsl:when test="not(string(.))">
-                        <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="$id" /></xsl:call-template>
-                      </xsl:when>
-                      <xsl:when test=". = concat(/buildinfo/@filename ,'.html')">
-                        <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="$id" /></xsl:call-template>
-                      </xsl:when>
-                      <xsl:otherwise>
-                        <xsl:element name="a">
-                          <xsl:attribute name="href"><xsl:value-of select="." /></xsl:attribute>
-                          <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="$id" /></xsl:call-template>
-                        </xsl:element>
-                      </xsl:otherwise>
-                    </xsl:choose>
-                  </xsl:element> <!-- /li -->
-                </xsl:for-each>
-              </xsl:element><!-- end ul -->
-            </xsl:element>
-          </xsl:element>
+
         </xsl:element> <!-- /li -->
   
         <!-- Planet portal menu -->

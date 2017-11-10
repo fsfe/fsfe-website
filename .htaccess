@@ -146,3 +146,4 @@ RewriteRule ^share/?$ /cgi-bin/share.php [NC,L]
 # Removal of duplicate information, and deprecating /fellowship/
 RewriteRule ^about/community /contact/community.html [redirect=permanent]
 RewriteRule ^fellowship/communicate /contact/community.html [redirect=permanent]
+RewriteRule ^fellowship/faq https://wiki.fsfe.org/KnowHow/FSFELife/FAQ [redirect=permanent]

@@ -154,3 +154,6 @@ RewriteRule ^fellowship/payment(.*) https://fsfe.org/donate/payment$1 [redirect=
 RewriteRule ^fellowship/groups https://wiki.fsfe.org/LocalGroups [redirect=permanent]
 RewriteRule ^fellowship/groups/berlin https://wiki.fsfe.org/LocalGroups/Berlin [redirect=permanent]
 RewriteRule ^fellowship/groups/coordinators https://wiki.fsfe.org/Teams/Coordinators [redirect=permanent]
+RewriteRule ^login	/fellowship/login.en.html [redirect=permanent]
+RewriteRule ^fellowship	/ [redirect=permanent]
+

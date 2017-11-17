@@ -702,96 +702,40 @@
 
           <xsl:element name="div">
             <xsl:attribute name="id">search</xsl:attribute>
-
-              <xsl:element name="form">
-                <xsl:attribute name="method">get</xsl:attribute>
-                <xsl:attribute name="action">http://fsfe.yacy.net/yacysearch.html</xsl:attribute>
-
-                <xsl:element name="input">
-                  <xsl:attribute name="type">hidden</xsl:attribute>
-                  <xsl:attribute name="name">verify</xsl:attribute>
-                  <xsl:attribute name="value">true</xsl:attribute>
-                </xsl:element>
-
-                <xsl:element name="input">
-                  <xsl:attribute name="type">hidden</xsl:attribute>
-                  <xsl:attribute name="name">maximumRecords</xsl:attribute>
-                  <xsl:attribute name="value">10</xsl:attribute>
-                </xsl:element>
-
-                <xsl:element name="input">
-                  <xsl:attribute name="type">hidden</xsl:attribute>
-                  <xsl:attribute name="name">meanCount</xsl:attribute>
-                  <xsl:attribute name="value">5</xsl:attribute>
-                </xsl:element>
-
-                <xsl:element name="input">
-                  <xsl:attribute name="type">hidden</xsl:attribute>
-                  <xsl:attribute name="name">resource</xsl:attribute>
-                  <xsl:attribute name="value">local</xsl:attribute>
-                </xsl:element>
-
-                <xsl:element name="input">
-                  <xsl:attribute name="type">hidden</xsl:attribute>
-                  <xsl:attribute name="name">prefermaskfilter</xsl:attribute>
-                  <xsl:attribute name="value">.*.<xsl:value-of select="/buildinfo/@language"/>.html</xsl:attribute>
-                </xsl:element>
-
-                <xsl:element name="input">
-                  <xsl:attribute name="type">hidden</xsl:attribute>
-                  <xsl:attribute name="name">prefermaskfilter</xsl:attribute>
-                  <xsl:attribute name="value">.*</xsl:attribute>
-                </xsl:element>
-
-                <xsl:element name="input">
-                  <xsl:attribute name="type">hidden</xsl:attribute>
-                  <xsl:attribute name="name">display</xsl:attribute>
-                  <xsl:attribute name="value">2</xsl:attribute>
-                </xsl:element>
-
-                <xsl:element name="input">
-                  <xsl:attribute name="type">hidden</xsl:attribute>
-                  <xsl:attribute name="name">nav</xsl:attribute>
-                  <xsl:attribute name="value">hosts</xsl:attribute>
-                </xsl:element>
-
-                <xsl:element name="p">
-                  <xsl:element name="input">
-                    <xsl:attribute name="type">image</xsl:attribute>
-                    <xsl:attribute name="src">/graphics/icons/search-button.png</xsl:attribute>
-                    <xsl:attribute name="alt">
-                      <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'search'" /></xsl:call-template>
-                    </xsl:attribute>
-                  </xsl:element>
-
-                  <xsl:element name="input">
-                    <xsl:attribute name="type">text</xsl:attribute>
-                    <xsl:attribute name="name">query</xsl:attribute>
-                    <xsl:attribute name="placeholder">
-                      <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'search'" /></xsl:call-template>
-                    </xsl:attribute>
-                  </xsl:element>
-
-                  <!--
-                  <xsl:element name="input">
-                    <xsl:attribute name="type">submit</xsl:attribute>
-                    <xsl:attribute name="name">search</xsl:attribute>
-                    <xsl:attribute name="value">
-                      <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'submit'" /></xsl:call-template>
-                    </xsl:attribute>
-                  </xsl:element>
-                  -->
-                </xsl:element>
-
+  
+            <xsl:element name="form">
+              <xsl:attribute name="method">get</xsl:attribute>
+              <xsl:attribute name="action">//fsfe.org/cgi-bin/search.cgi</xsl:attribute>
+  
+              <xsl:element name="input">
+                <xsl:attribute name="type">hidden</xsl:attribute>
+                <xsl:attribute name="name">l</xsl:attribute>
+                <xsl:attribute name="value"><xsl:value-of select="/buildinfo/@language"/></xsl:attribute>
               </xsl:element>
-              <!--/form-->
-          </xsl:element>
-          <!--/div#search-->
-          
+  
+              <xsl:element name="p">
+                <xsl:element name="input">
+                  <xsl:attribute name="type">image</xsl:attribute>
+                  <xsl:attribute name="src">/graphics/icons/search-button.png</xsl:attribute>
+                  <xsl:attribute name="alt">
+                    <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'search'" /></xsl:call-template>
+                  </xsl:attribute>
+                </xsl:element>
+  
+                <xsl:element name="input">
+                  <xsl:attribute name="type">text</xsl:attribute>
+                  <xsl:attribute name="name">q</xsl:attribute>
+                  <xsl:attribute name="placeholder">
+                    <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'search'" /></xsl:call-template>
+                  </xsl:attribute>
+                </xsl:element>
+              </xsl:element>
+
+            </xsl:element><!--/form-->
+          </xsl:element><!--/div#search-->
 
         </xsl:element>
         <!--/nav#menu-->
-
 
         <xsl:element name="div">
           <xsl:attribute name="id">masthead</xsl:attribute>

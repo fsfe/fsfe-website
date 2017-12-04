@@ -19,7 +19,7 @@ forcelog(){
   name="$1"
 
   [ "$(logname "$name")" = "/dev/null" ] \
-  && forcedlog="$forcedlog\n${name}=$(tempfile -p w3bld -s $$)"
+  && forcedlog="$forcedlog\n${name}=$(mktemp -p w3bld -s $$)"
 }
 
 [ -z "$USER" ] && USER="$(whoami)"

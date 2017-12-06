@@ -51,4 +51,60 @@
       small="2017/zipped-fsfs-burgundy-back-small.jpg"
       large="2017/zipped-fsfs-burgundy-back-large.jpg"/>
   </item>
+
+  <item type="tshirt" id="tshirt-100freedoms-black" price="20.00" date="2017-12-05">
+    <available size="S"/>
+    <available size="M"/>
+    <available size="L"/>
+    <available size="XL"/>
+    <available size="XXL"/>
+    <available size="XXXL"/>
+    <image
+      small="2017/tshirt-100freedoms-black-front-small.jpg"
+      large="2017/tshirt-100freedoms-black-front-large.jpg"/>
+    <image
+      small="2017/tshirt-100freedoms-black-back-small.jpg"
+      large="2017/tshirt-100freedoms-black-back-large.jpg"/>
+  </item>
+
+  <item type="tshirt" id="tshirt-100freedoms-orange" price="20.00" date="2017-12-05">
+    <available size="S"/>
+    <available size="M"/>
+    <available size="L"/>
+    <available size="XL"/>
+    <available size="XXL"/>
+    <available size="XXXL"/>
+    <image
+      small="2017/tshirt-100freedoms-orange-front-small.jpg"
+      large="2017/tshirt-100freedoms-orange-front-large.jpg"/>
+    <image
+      small="2017/tshirt-100freedoms-orange-back-small.jpg"
+      large="2017/tshirt-100freedoms-orange-back-large.jpg"/>
+  </item>
+
+  <item type="tshirt" id="tshirt-100freedoms-pink" price="20.00" date="2017-12-05">
+    <available size="S"/>
+    <available size="M"/>
+    <available size="L"/>
+    <available size="XL"/>
+    <available size="XXL"/>
+    <available size="XXXL"/>
+    <image
+      small="2017/tshirt-100freedoms-pink-front-small.jpg"
+      large="2017/tshirt-100freedoms-pink-front-large.jpg"/>
+    <image
+      small="2017/tshirt-100freedoms-pink-back-small.jpg"
+      large="2017/tshirt-100freedoms-pink-back-large.jpg"/>
+  </item>
+
+  <item type="tshirt" id="kidstshirt-fork-red" price="20.00" date="2017-12-05">
+    <available size="3-4"/>
+    <available size="5-6"/>
+    <available size="7-8"/>
+    <available size="9-10"/>
+    <available size="11-12"/>
+    <image
+      small="2017/kidstshirt-fork-red-front-small.jpg"
+      large="2017/kidstshirt-fork-red-front-large.jpg"/>
+  </item>
 </itemset>

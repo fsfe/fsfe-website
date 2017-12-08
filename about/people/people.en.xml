@@ -21,7 +21,8 @@
                 This tag is not needed if the person is member of the GA
       council: The person is member of FSFE's council (president, vice, executive director)
       ftf: member of Legal team, former Freedom Task Force
-            intern: The person is intern (dont forget to add <employee>part</employee>
+	    intern: The person is intern (dont forget to add <employee>part</employee>
+      care: Code of Conduct Active Response Ensurers
     <name> Full name of the person
     <country> Where the person lives (TODO: Where is this used?!)
     <function> The function(s) of the person (you can have more). This is a bit more complicated to express, as it uses several sources of possible functions:
@@ -86,7 +87,7 @@
     <avatar>/fellowship/graphics/people/carstenagger-avatar.jpg</avatar>
   </person>
 
-  <person id="albers" avatar="yes" teams="ga, de">
+  <person id="albers" avatar="yes" teams="ga, de, care">
     <name>Erik Albers</name>
     <country>DE</country>
     <function>fellowship-coordinator/m</function>
@@ -396,7 +397,7 @@
   </person>
   -->
   
-  <person id="malaja" avatar="yes" teams="ga, ftf">
+  <person id="malaja" avatar="yes" teams="ga, ftf, care">
     <name>Polina Malaja</name>
     <country>EE</country>
     <function project="ftf">coordinator/f</function>
@@ -525,7 +526,7 @@
     <avatar>/about/reiter/reiter-avatar.jpg</avatar>
   </person>
 
-  <person id="repentinus" avatar="yes" association-member="yes" teams="ga, translation-coordinators, council">
+  <person id="repentinus" avatar="yes" association-member="yes" teams="ga, translation-coordinators, council, care">
     <name>Heiki Lõhmus</name>
     <country>EE</country>
     <function>vice-president/m</function>

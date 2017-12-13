@@ -15,6 +15,7 @@
     <xsl:param name="display-year" select="'yes'" />
     <xsl:param name="show-date" select="'yes'" />
     <xsl:param name="compact-view" select="'no'" />
+    <xsl:param name="sidebar" select="'no'" />
 
     <xsl:for-each select="/buildinfo/document/set/news[
       translate(@date, '-', '') &lt;= translate($today, '-', '')
@@ -28,6 +29,7 @@
           <xsl:with-param name="show-date" select="$show-date" />
           <xsl:with-param name="compact-view" select="$compact-view" />
           <xsl:with-param name="display-year" select="$display-year" />
+          <xsl:with-param name="sidebar" select="$sidebar" />
         </xsl:call-template>
       </xsl:if>
     </xsl:for-each>

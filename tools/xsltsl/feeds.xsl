@@ -15,6 +15,7 @@
     <xsl:param name="display-year" select="'no'" />
     <xsl:param name="show-date" select="'yes'" />
     <xsl:param name="compact-view" select="'no'" />
+    <xsl:param name="sidebar" select="'no'" />
     
     <xsl:variable name="title">
       <xsl:choose><xsl:when test="link != ''">
@@ -35,27 +36,47 @@
         <xsl:value-of select="substring(@date,1,4)" />
       </xsl:if>
     </xsl:variable>
-      
-    <!--<div class="entry">-->
-    <div class="entry">
-      <!-- title -->
-      <h3>
-        <xsl:call-template name="generate-id-attribute">
-          <xsl:with-param name="title" select="title" />
-        </xsl:call-template>
-        <xsl:copy-of select="$title" />
-      </h3>
-      
-      <!-- news date -->
-      <xsl:if test="$show-date = 'yes'">
-        <p class="date"><xsl:copy-of select="$date" /></p>
-      </xsl:if>
-      
-      <!-- news text -->
-      <xsl:if test="$compact-view = 'no'">
-    	<div class="text"><xsl:apply-templates select="body/node()" /></div>
-      </xsl:if>
-    </div>
+    
+    <xsl:choose>
+      <xsl:when test="$sidebar = 'yes'">
+        <li>
+          <!-- title -->
+          <xsl:call-template name="generate-id-attribute">
+            <xsl:with-param name="title" select="title" />
+          </xsl:call-template>
+          <xsl:copy-of select="$title" />
+          
+          <!-- news date -->
+          <xsl:if test="$show-date = 'yes'">
+            <xsl:text> (</xsl:text>
+            <xsl:copy-of select="$date" />
+            <xsl:text>)</xsl:text>
+          </xsl:if>
+        </li>
+      </xsl:when>
+      <xsl:otherwise>
+        <!--<div class="entry">-->
+        <div class="entry">
+          <!-- title -->
+          <h3>
+            <xsl:call-template name="generate-id-attribute">
+              <xsl:with-param name="title" select="title" />
+            </xsl:call-template>
+            <xsl:copy-of select="$title" />
+          </h3>
+          
+          <!-- news date -->
+          <xsl:if test="$show-date = 'yes'">
+            <p class="date"><xsl:copy-of select="$date" /></p>
+          </xsl:if>
+          
+          <!-- news text -->
+          <xsl:if test="$compact-view = 'no'">
+          <div class="text"><xsl:apply-templates select="body/node()" /></div>
+          </xsl:if>
+        </div>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
   
   <!-- Show a single newsletter item -->

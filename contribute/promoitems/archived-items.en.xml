@@ -26,6 +26,15 @@ to every item in this file -->
     imgsmall="/contribute/promopics/joinfellowship-poster_thumb.png"/>
   </item>  
   
+  <item type="fsfe" id="15y-fsfe-sticker" year="2016" order="2">
+ 	<image
+    imgsmall="/contribute/promopics/FSFE_15_Sticker_en_thumb.png"/>
+  </item> 
+ 
+  <item type="fsfe" id="plussy-sticker" year="2005" order="3">
+ 	<image
+    imgsmall="/contribute/promopics/plussy-sticker-thumb.png"/>
+  </item> 
 
   <!-- Free Software and users freedom -->
   <item type="fsfreedom" id="nocloud-sticker" year="2015" order="1">
@@ -70,6 +79,11 @@ to every item in this file -->
   </item>   
   
   <!-- Document Freedom Day -->
+  
+  <item type="dfd" id="dfd-cartoon" year="2014" order="20">
+ 	<image
+    imgsmall="/contribute/promopics/cartoon.en.png"/>
+  </item>
   
     <item type="dfd" id="dfd-leaflet" year="2014" order="1">
  	<image

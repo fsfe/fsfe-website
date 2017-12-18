@@ -155,5 +155,6 @@ RewriteRule ^fellowship/groups https://wiki.fsfe.org/LocalGroups [redirect=perma
 RewriteRule ^fellowship/groups/berlin https://wiki.fsfe.org/LocalGroups/Berlin [redirect=permanent]
 RewriteRule ^fellowship/groups/coordinators https://wiki.fsfe.org/Teams/Coordinators [redirect=permanent]
 RewriteRule ^login	/fellowship/login.en.html [redirect=permanent]
+RewriteRule ^fellowship/graphics/people - [L]
 RewriteRule ^fellowship	/ [redirect=permanent]
 

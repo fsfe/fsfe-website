@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# This hook runs is supposed to run server-side in the repository and will reject commit with faulty XML syntax.
+# Client-side linting is recommended though
+
+TEMPDIR=`mktemp -d`
+
+oldrev=$1
+newrev=$2
+refname=$3
+
+TESTS=0
+
+while read oldrev newrev refname; do
+
+  echo "Checking XML syntax"
+
+  # get changed XSL/XML/XHTML files
+  files=`git diff --name-only ${oldrev} ${newrev} | sed -rn 's;(.*\.xsl$|.*\.xml$|.*\.xhtml$)$;\1;p'`
+
+  for xmlfile in ${files}; do
+    echo -n "${xmlfile}: "
+    if [[ $(git show ${newrev}:${xmlfile} | xmllint --noout --nonet - &> /dev/null; echo $?) != 0 ]]; then
+      echo "ERROR"
+      echo "Revision: ${newrev}"
+      git show ${newrev}:${xmlfile} | xmllint --noout --nonet -
+      TESTS=$((${TESTS} + $?))
+    else
+      echo "OK"
+    fi
+  done
+
+done
+
+rm -r ${TEMPDIR}
+exit "$TESTS"

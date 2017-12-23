@@ -61,7 +61,7 @@
       <xsl:if test="string(/buildinfo/document/@newsdate)">
         <a href="/donate/index.html" class="small-donate">
           <xsl:call-template name="fsfe-gettext">
-            <xsl:with-param name="id" select="'donate'" />
+            <xsl:with-param name="id" select="'support/become'" />
           </xsl:call-template>
         </a>
       </xsl:if>

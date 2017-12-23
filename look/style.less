@@ -167,7 +167,7 @@ div#subpages, .grid-row {
         padding: .5em;
     }
 
-    #direct-to-menu-list, #direct-to-translations, #direct-to-home, #direct-to-login {
+    #direct-to-menu-list, #direct-to-translations, #direct-to-home, #direct-to-login, #direct-to-join {
         visibility: visible;
         display: inline-block;
 
@@ -850,6 +850,10 @@ div#subpages, .grid-row {
     a.btn {
         .btn-primary;
     }
+    
+    @media (min-width: @screen-sm) {
+        padding: 3em 3em 3em 2em;
+    }
 }
 
 #followup.subscribe-nl {
@@ -870,6 +874,7 @@ div#subpages, .grid-row {
     p {
         .make-sm-column(8);
         padding: 0;
+        padding-top: 1em;
     }
     a.btn {
         .make-sm-column(2);

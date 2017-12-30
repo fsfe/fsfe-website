@@ -51,12 +51,8 @@ all: d_year.en.xml d_month.en.xml d_day.en.xml
 # -----------------------------------------------------------------------------
 
 # use shell globbing to work around faulty globbing in gnu make
-SOURCEDIRS = $(shell sed -rn 's;^(.*/)[^/]*:(\[\]|global)$$;\1;gp' $@ \
-               | while read glob; do \
-                 printf '%s\n' $$glob; \
-               done \
-              )
-SOURCEREQS = $(shell ./build/source_globber.sh sourceglobs $@ |sed -r 's;$$;.??.xml;g')
+SOURCEDIRS = $(shell sed -rn 's;^(.*/)[^/]*:(\[\]|global)$$;\1;gp' $@ )
+SOURCEREQS = $(shell ./build/source_globber.sh sourceglobs $@ |sed 's;$$;.??.xml;g' )
 
 all: $(shell find ./ -name '*.sources')
 
@@ -66,11 +62,11 @@ all: $(shell find ./ -name '*.sources')
 
 TAGMAP := $(shell find ./ -name '*.xml' \
              | xargs ./build/source_globber.sh map_tags \
+             | sed -r "s;';'\'';g; s;[^ ]+;'&';g;" \
             )
 
-TAGNAMES := $(shell printf %s '$(TAGMAP)' \
-              | cut -d" " -f2- \
-              | tr ' ' '\n' \
+TAGNAMES := $(shell printf '%s\n' $(TAGMAP) \
+              | sed '/\...\.xml$$/d' \
               | grep -vE '[\$%/:()]' \
               | sort -u \
              )
@@ -88,7 +84,7 @@ tags/tagged-%.sources:
 	printf '%s:[$*]\n' 'news/*/news' news/generated_xml/ news/nl/nl 'events/*/event' >$@
 	printf 'd_day:[]' >>$@
 
-MAPREQS = $(shell printf %s '$(TAGMAP)' \
+MAPREQS = $(shell printf '%s ' $(TAGMAP) \
             | sed -r 's;[^ ]+\...\.xml;\n&;g' \
             | grep ' $*' \
             | cut -d' ' -f1 \

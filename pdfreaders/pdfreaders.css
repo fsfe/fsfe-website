@@ -36,7 +36,7 @@ header {
   padding: 1em;
   width: 20%;
 }
-#logo img, #fsfe-logo img {
+#logo img, #fsfe-logo embed, #fsfe-logo img {
   width: 100%;
 }
 #translations {

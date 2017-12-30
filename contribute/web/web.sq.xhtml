@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<html>
+  <head>
+    <title>Informacion për përgjegjës sajtesh - FSFE</title>
+  </head>
+  <body class="article web" microformats="h-entry" id="information-webmasters">
+
+    <p id="category"><a href="/contribute/">Jepni Ndihmesë</a></p>
+    <h1 class="p-name">Webmastering</h1>
+
+    <div class="e-content">
+
+        <p id="introduction" class="p-summary">
+          <em>Ekipi Web</em> mirëmban dhe zhvillon sajtet e FSFE-së —
+          që shtrihen nga <a href="/">fsfe.org</a> te sajtet për projekte
+          dhe fushata. Përgjegjësit e sajteve janë vullnetarë që punojnë
+          për të përmirësuar fytyrën që i paraqet botës organizmi, dhe për
+          të përmirësuar zgjidhjet teknike bazë të punës sonë web.
+        </p>
+
+
+        <h2>Njihuni me ne, njihuni me sajtin</h2>
+
+        <p>
+        Nëse doni të kini një ide se ç’përfaqëson puna me sajtin e FSFE-së,
+        rruga më e mirë është të bisedoni me ne. Disa prej përgjegjësve
+        gjenden rregullisht te kanali #fsfe në freenode, ku do të gëzoheshim
+        të njiheshim dhe t’u përgjigjemi pyetjeve tuaja!
+        Për të parë se kush merret me sajtin, dhe me FSFE-në në tërësi,
+        vizitoni <a href="/about/team.html">faqen e ekipit tonë</a>.
+        </p>
+
+        <p>
+        Bashkërenduesi juaj web, Paul Hänsch.
+        </p>
+
+
+        <h2>Hyrje</h2>
+
+        <p>
+          Teknologjitë dhe programet e përdorur për mirëmbajtjen e sajtit të FSFE-së
+          duhet të jenë të njohura për mjaft programues dhe autorë, dhe mund të jenë
+          me interes edhe për ata që s’i kanë zbuluar ende.
+        </p>
+
+        <p>
+          Përkthyesit dhe vullnetarët e rastit ka shumë gjasa që do të merren vetëm
+          me
+        </p>
+
+        <ul>
+          <li>
+            <a href="http://en.wikipedia.org/wiki/XHTML">XHTML</a> – prej
+            së cilës prodhohen faqet web
+          </li>
+          <li>
+            <a href="http://git-scm.com/">Git</a> – për
+            kontroll versionesh të burimeve të faqeve web
+          </li>
+        </ul>
+
+        <p>
+          Vullnetarë të interesuar për t’i hyrë më thellë mirëmbajtjes do të duhej të ishin
+          të familjarizuar me
+        </p>
+
+        <ul>
+          <li>
+            <a href="https://www.gnu.org/software/bash/">Bash</a> – për skripte mirëmbajtjeje dhe
+
+          </li>
+          <li>
+            <a href="http://www.apache.org/">Apache</a> – si shërbyes web
+          </li>
+        </ul>
+
+
+        <h2 id="Understanding">Të kuptojmë si janë ndërtuar faqet web</h2>
+
+        <p>
+          Faqet web të <var>fsfe.org</var>-ut mirëmbahen si një grup kartelash
+          XML. Shërbyesi web si prodhon faqet HTML duke u nisur nga këto kartela XML, çdo 10 minuta. Për pasojë, krejt përpunimet e faqeve bëhen te kartela XML, pra HTML-të nuk përpunohen kurrë drejtpërsëdrejti.
+        </p>
+
+        <p>
+          Çdo faqe në fsfe.org emërtohet si
+          <var><em>emërfaqeje</em>.<em>gjuhë</em>.html</var>
+          (si <em>gjuhë</em> jepete two-letter <a
+          href="http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">kodi ISO-639</a> dyshkronjësh për gjuhën, bie fjala, "sq" për shqipen apo "da" për danishten).
+          Kartelat burim emërtohen në formën
+          <var><em>emërfaqeje</em>.<em>gjuhë</em>.xhtml</var>.
+        </p>
+
+        <p>
+          Disa faqe përmbajnë një pjesë dinamike: përveç teksti të fiksuar, të marrë nga kartela XHTML, ato përmbajnë të dhëna nga një ose disa kartela XML. Kurdo që prodhohet një faqe e tillë, sistemi përdor kartelat e përkthyera XML, dhe përdor versionin anglisht të atyre kartelave XML që nuk janë përkthyer ende. Në këtë mënyrë, faqe të tilla mund të përfundojnë me pjesë të përkthyera dhe me pjesë që shfaqen ende në anglisht. Shembuj faqesh të tilla janë <a href="/">faqja e fillimit</a>,
+          <a href="/news/">faqja e lajmeve</a>, dhe <a href="/events/">faqja e veprimtarive</a>.
+        </p>
+
+        <h2 id="Getting">Puna me sajtin si përkthyes/redaktor</h2>
+
+        <p>Ju lutemi, për më tepër informacion, vizitoni <a href="https://wiki.fsfe.org/TechDocs/Mainpage/Editing">faqen tonë wiki mbi përpunime sajti</a>:</p>
+
+        <ul>
+          <li>si të kopjohet në kompjuterin tuaj kodi burim i sajtit</li>
+          <li>si të përpunohen kartela dhe të hidhen te sajti</li>
+          <li>si të bashkërendohet puna me të tjerë përpunues të sajtit</li>
+          <li>përdorimi me përgjegjësi i lejes për shkrim</li>
+          <li>teknika të thelluara për webmaster</li>
+          <li>licencim i saktë i kodit burim dhe elementëve media</li>
+        </ul>
+
+    </div>
+    <!--/e-content-->
+
+  </body>
+<sidebar promo="about-fsfe">
+    <div id="related-content">
+        <h3>Howtos:</h3>
+        <ul>
+            <li>
+            <a href="/contribute/web/tagging.html">Përdorni etiketa dhe tejtëdhëna artikujsh, sendërtoni një faqe vendi</a>
+            </li>
+            <li>
+            <a href="/contribute/web/css.html">Përpunoni CSS me LESS</a>
+            </li>
+            <li>
+            <a href="/contribute/web/campaigns-frontpage.html">Shtoni dhe përzgjidhni banderola fushatash për ballinën</a>
+            </li>
+            <li>
+            <a href="/contribute/template.html">Një gjedhe artikulli, për përdorimin e dizajnit të ri</a>
+            </li>
+        </ul>
+    </div>
+</sidebar>
+<tags>
+    <tag>webmaster</tag>
+</tags>
+<timestamp>$Date$ $Author$</timestamp>
+
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

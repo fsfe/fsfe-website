@@ -18,16 +18,16 @@
     <donor date="2017-05-05" img="donors/google.jpg">Google</donor>
     <donor date="2017-12-29" img="donors/intel.png">Intel</donor>
     <donor date="2017-12-20" img="donors/linuxfoundation.png">Linux Foundation</donor>
-    <donor date="2017-12-31" img="donors/linuxhotel.png">Linuxhotel Villa Vogelsang</donor>
+    <donor img="donors/linuxhotel.png">Linuxhotel Villa Vogelsang</donor>
     <donor date="2017-03-02" img="donors/redhat.png">Red Hat</donor>
   </gold>
 
   <silver>
-    <donor date="2017-12-31" img="donors/silver-2ndquadrant.png">2ndQuadrant</donor>
+    <donor img="donors/silver-2ndquadrant.png">2ndQuadrant</donor>
     <donor date="2017-07-17" img="donors/silver-arm.png">ARM</donor>
     <donor date="2017-03-21" img="donors/silver-credativ.png">credativ GmbH</donor>
-    <donor date="2017-12-31" img="donors/silver-endocode.png">Endocode AG</donor>
-    <donor date="2017-12-31" img="donors/silver-freiheit.png">freiheit.com technologies</donor>
+    <donor img="donors/silver-endocode.png">Endocode AG</donor>
+    <donor img="donors/silver-freiheit.png">freiheit.com technologies</donor>
     <donor date="2017-12-03" img="donors/silver-heinlein-support.png">Heinlein Support GmbH</donor>
     <donor date="2017-03-07" img="donors/silver-hp.png">HP</donor>
     <donor date="2017-12-29" img="donors/silver-intevation.png">Intevation GmbH</donor>
@@ -35,27 +35,34 @@
     <donor date="2017-12-28" img="donors/silver-oin.jpg">Open Invention Network</donor>
     <donor date="2017-04-27" img="donors/silver-siemens.png">Siemens</donor>
     <donor date="2017-03-13" img="donors/silver-sflc.png">Software Freedom Law Center</donor>
-    <donor date="2017-12-31" img="donors/silver-sysmocom.png">sysmocom - s.f.m.c. GmbH</donor>
+    <donor img="donors/silver-sysmocom.png">sysmocom - s.f.m.c. GmbH</donor>
     <donor date="2017-12-29">Thomas Etter</donor>
   </silver>
 
   <bronze>
+    <donor date="2017-07-18">Adler-Apotheke Ahrensburg, Dr. Martin Zuther e.K.</donor>
     <donor date="2017-09-10">Alexander Kahl (-09/2017)</donor>
     <donor date="2017-03-23">Amadeus IT Group</donor>
     <donor date="2017-03-23">Andrew Wilson</donor>
+    <donor date="2017-12-15">Berlin Linux User Group (BeLUG)</donor>
     <donor date="2017-12-18">Bibliotek-Systemer As</donor>
     <donor date="2017-02-22">Bird &amp; Bird</donor>
     <donor date="2017-01-10">Björn Persson</donor>
     <donor date="2017-06-19">CFEngine</donor>
     <donor date="2017-01-12">foo.li systeme + software</donor>
-    <donor date="2017-12-31">inmedias.it GmbH</donor>
+    <donor date="2017-12-14">Ingenieurgemeinschaft IgH</donor>
+    <donor>inmedias.it GmbH</donor>
     <donor date="2017-12-22">ITOMIG GmbH</donor>
-    <donor date="2017-12-31">Joachim Zobel</donor>
-    <donor date="2017-12-31">LIHAS - LinuxHaus Stuttgart</donor>
-    <donor date="2017-12-31">Mario Lardieri</donor>
-    <donor date="2017-01-02">René Genz</donor>
+    <donor>Joachim Zobel</donor>
+    <donor date="2017-12-04">Johannes Krampf</donor>
+    <donor>LIHAS - LinuxHaus Stuttgart</donor>
+    <donor>Mario Lardieri</donor>
+    <donor date="2017-09-29">Martin F. Krafft</donor>
+    <donor date="2017-12-05">Martin Knoblauch (Knobisoft)</donor>
+    <donor>Pascal Cedraschi</donor>
+    <donor>René Genz</donor>
     <donor date="2017-03-15">Simon Harhues</donor>
-    <donor date="2017-12-31">Stephan Kreutzer</donor>
+    <donor>Stephan Kreutzer</donor>
     <donor date="2017-12-21">Univention GmbH</donor>
     <donor date="2017-02-13">Wolfgang Ocker</donor>
   </bronze>

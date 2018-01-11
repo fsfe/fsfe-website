@@ -63,7 +63,7 @@ function relay_donation($orderID) {
 }
 
 function send_mail ( $to, $from, $subject, $message, $bcc = NULL, $att = NULL, $att_type = NULL, $att_name = NULL ) {
-  $headers = "From: $from\r\n";
+  $headers = "From: $from\r\nX-OTRS-DynamicField-OrderState: order\r\n";
   if ( isset( $bcc )) { $headers .= "Bcc: $bcc" . "\r\n"; }
   
   $message = nl2br( $message );

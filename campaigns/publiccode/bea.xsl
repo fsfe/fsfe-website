@@ -5,6 +5,10 @@
   <xsl:import href="../../tools/xsltsl/tagging.xsl" />
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
 
+  <xsl:template match="sigtable-orgs">
+    <xsl:copy-of select="document('sigtable-orgs.en.xml')"/>
+  </xsl:template>
+
   <xsl:template match="sigtable">
     <xsl:copy-of select="document('sigtable.en.xml')"/>
   </xsl:template>

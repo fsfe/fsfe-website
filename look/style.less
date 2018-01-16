@@ -1533,6 +1533,40 @@ ul.taglist {
   }
 }
 
+.signature-table-orgs {
+  ul {
+    display: block;
+    position: relative;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+  }
+  ul li {
+    display: inline-block;
+    position: relative;
+    list-style: none;
+  }
+  ul li a {
+    display: block;
+    position: relative;
+    max-width: 120px;
+    max-height: 80px;
+    min-width: 120px;
+    min-height: 80px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: scale(0.8);
+    opacity: 1;
+    transition: opacity .5s, transform .5s, background-color .5s, filter .5s;
+  }
+  ul li a:hover {
+    opacity: 1;
+    transform: scale(0.9);
+    z-index: 5;
+  }
+}
+
 /* statement block with lighter background and normal font */
 
 blockquote#statement {

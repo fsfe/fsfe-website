@@ -109,6 +109,14 @@
       <xsl:with-param name="display" select="'coordinators'" />
     </xsl:call-template>
   </xsl:template>
+
+  <!-- Greece -->
+    <xsl:template match="greece-members">
+    <xsl:call-template name="country-people-list">
+      <xsl:with-param name="team" select="'gr'" />
+      <xsl:with-param name="display" select="'coordinators'" />
+    </xsl:call-template>
+  </xsl:template>
   
   <!-- Hamburg -->
   <xsl:template match="hamburg-members">

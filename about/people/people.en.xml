@@ -114,6 +114,7 @@
     <avatar>/about/baillard/baillard-avatar.jpg</avatar>
   </person>
 
+<!--
   <person id="carmenbianca" avatar="no" teams="intern">
     <name>Carmen Bianca Bakker</name>
     <country>NL</country>
@@ -121,6 +122,10 @@
     <email>carmenbianca (at) fsfe (dot) org</email>
     <employee>full/f</employee>
   </person>
+-->
+
+
+
   
   <person id="boehm" avatar="yes" association-member="yes" teams="ga, de, representatives">
     <name>Mirko Boehm</name>
@@ -138,13 +143,14 @@
     <avatar>/about/borchardt/borchardt-avatar.jpg</avatar>
   </person>
 
+<!--
   <person id="bubestinger" avatar="no" teams="at, core">
     <name>Peter Bubestinger</name>
     <country>AT</country>
     <function country="AT">coordinator/m</function>
     <email>pb (at) fsfe (dot) org</email>
   </person>
-
+-->
    <person id="carraturo" avatar="no" teams="it">
     <name>Alexjan Carraturo</name>
     <country>IT</country>
@@ -169,15 +175,24 @@
     <avatar>/about/coughlan/coughlan-avatar.jpg</avatar>
   </person>
 
+<!--
   <person id="dasilva" avatar="no" teams="intern">
     <name>Erik Da Silva</name>
     <country>FR</country>
     <function>intern/m</function>
     <email>erik.ds (at) fsfe (dot) org</email>
     <employee>full/m</employee>
-<!--
-    <avatar>/</avatar>
--->  </person>
+-->
+
+  <person id="cw" avatar="no" teams="at">
+    <name>Chris</name>
+    <country>AT</country>
+    <function country="AT">deputy/m</function>
+    <email>cw (at) fsfe (dot) org</email>
+    <avatar></avatar>
+  </person>
+
+
 
   <person id="darrington" avatar="no" teams="munich">
     <name>John Darrington</name>

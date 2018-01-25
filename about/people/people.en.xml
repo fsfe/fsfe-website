@@ -114,18 +114,11 @@
     <avatar>/about/baillard/baillard-avatar.jpg</avatar>
   </person>
 
-<!--
-  <person id="carmenbianca" avatar="no" teams="intern">
+  <person id="carmenbianca" avatar="no" teams="">
     <name>Carmen Bianca Bakker</name>
     <country>NL</country>
-    <function>intern/f</function>
     <email>carmenbianca (at) fsfe (dot) org</email>
-    <employee>full/f</employee>
   </person>
--->
-
-
-
   
   <person id="boehm" avatar="yes" association-member="yes" teams="ga, de, representatives">
     <name>Mirko Boehm</name>
@@ -143,14 +136,12 @@
     <avatar>/about/borchardt/borchardt-avatar.jpg</avatar>
   </person>
 
-<!--
-  <person id="bubestinger" avatar="no" teams="at, core">
+  <person id="bubestinger" avatar="no" teams="at">
     <name>Peter Bubestinger</name>
     <country>AT</country>
-    <function country="AT">coordinator/m</function>
     <email>pb (at) fsfe (dot) org</email>
   </person>
--->
+
    <person id="carraturo" avatar="no" teams="it">
     <name>Alexjan Carraturo</name>
     <country>IT</country>
@@ -167,32 +158,23 @@
   <person id="coughlan" avatar="yes" association-member="yes" teams="ga, ftf">
     <name>Shane M. Coughlan</name>
     <country>JP</country>
-    <!--
-    <function project="ftf">seniorcounsel/m</function>
-    -->
     <email>coughlan (at) fsfe (dot) org</email>
     <link>https://jp.linkedin.com/in/shanecoughlan</link>
     <avatar>/about/coughlan/coughlan-avatar.jpg</avatar>
   </person>
 
-<!--
-  <person id="dasilva" avatar="no" teams="intern">
+  <person id="dasilva" avatar="no" teams="">
     <name>Erik Da Silva</name>
     <country>FR</country>
-    <function>intern/m</function>
     <email>erik.ds (at) fsfe (dot) org</email>
-    <employee>full/m</employee>
--->
+  </person>
 
   <person id="cw" avatar="no" teams="at">
     <name>Chris</name>
     <country>AT</country>
     <function country="AT">deputy/m</function>
     <email>cw (at) fsfe (dot) org</email>
-    <avatar></avatar>
   </person>
-
-
 
   <person id="darrington" avatar="no" teams="munich">
     <name>John Darrington</name>
@@ -233,11 +215,6 @@
   <person id="gerloff" avatar="yes" association-member="yes" teams="de, ga">
     <name>Karsten Gerloff</name>
     <country>DE</country>
-    <!--
-    <function project="os">coordinator/m</function>
-    <function project="igf">coordinator/m</function>
-    <function project="wipo">coordinator/m</function>
-    -->
     <email>gerloff (at) fsfe (dot) org</email>
     <link>/about/gerloff/gerloff.html</link>
     <avatar>/about/gerloff/gerloff-avatar.jpg</avatar>
@@ -402,14 +379,11 @@
     <email>frankie (at) fsfe (dot) org</email>
   </person>
 
-<!--
-  <person id="machon" avatar="no" association-member="yes" teams="ga, es">
+  <person id="machon" avatar="no" association-member="yes" teams="">
     <name>Pablo Machón</name>
     <country>ES</country>
-    <function country="ES">coordinator/m</function>
     <email>machon (at) fsfeurope (dot) org</email>
   </person>
-  -->
   
   <person id="malaja" avatar="yes" teams="ga, ftf, care">
     <name>Polina Malaja</name>

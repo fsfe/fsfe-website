@@ -25,7 +25,7 @@
   </item>
 
   <item type="hooded" id="zipped-fsfs-black" price="50.00" date="2017-09-06">
-    <available size="S"/>
+    <!-- available size="S"/ -->
     <available size="M"/>
     <available size="L"/>
     <available size="XL"/>
@@ -39,7 +39,7 @@
   </item>
 
   <item type="hooded" id="zipped-fsfs-burgundy" price="50.00" date="2017-09-06">
-    <available size="S"/>
+    <!-- available size="S"/ -->
     <available size="M"/>
     <available size="L"/>
     <available size="XL"/>
@@ -57,8 +57,8 @@
     <available size="M"/>
     <available size="L"/>
     <available size="XL"/>
-    <available size="XXL"/>
-    <available size="XXXL"/>
+    <!-- available size="XXL"/>
+    <available size="XXXL"/ -->
     <image
       small="2017/tshirt-100freedoms-black-front-small.jpg"
       large="2017/tshirt-100freedoms-black-front-large.jpg"/>
@@ -73,7 +73,7 @@
     <available size="L"/>
     <available size="XL"/>
     <available size="XXL"/>
-    <available size="XXXL"/>
+    <!-- available size="XXXL"/ -->
     <image
       small="2017/tshirt-100freedoms-orange-front-small.jpg"
       large="2017/tshirt-100freedoms-orange-front-large.jpg"/>
@@ -88,7 +88,7 @@
     <available size="L"/>
     <available size="XL"/>
     <available size="XXL"/>
-    <available size="XXXL"/>
+    <!-- available size="XXXL"/ -->
     <image
       small="2017/tshirt-100freedoms-pink-front-small.jpg"
       large="2017/tshirt-100freedoms-pink-front-large.jpg"/>
@@ -97,7 +97,7 @@
       large="2017/tshirt-100freedoms-pink-back-large.jpg"/>
   </item>
 
-  <item type="tshirt" id="kidstshirt-fork-red" price="20.00" date="2017-12-05">
+  <!-- item type="tshirt" id="kidstshirt-fork-red" price="20.00" date="2017-12-05">
     <available size="3-4"/>
     <available size="5-6"/>
     <available size="7-8"/>
@@ -106,5 +106,5 @@
     <image
       small="2017/kidstshirt-fork-red-front-small.jpg"
       large="2017/kidstshirt-fork-red-front-large.jpg"/>
-  </item>
+  </item -->
 </itemset>

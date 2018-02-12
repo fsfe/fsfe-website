@@ -65,7 +65,7 @@ function relay_donation($orderID) {
 function send_mail ( $to, $from, $subject, $message, $bcc = NULL, $att = NULL, $att_type = NULL, $att_name = NULL ) {
   $headers = "From: $from\r\n";
   if ( isset( $bcc )) { $headers .= "Bcc: $bcc" . "\r\n"; }
-  if ( isset( $_POST["donationID"]) {
+  if ( isset( $_POST["donationID"])) {
     $headers .= "X-OTRS-DynamicField-OrderID: " . $_POST["donationID"] . "\r\n";
     $headers .= "X-OTRS-DynamicField-OrderAmount: " . $_POST["donation"] . "\r\n";
   }

@@ -67,7 +67,7 @@ function send_mail ( $to, $from, $subject, $message, $bcc = NULL, $att = NULL, $
   if ( isset( $bcc )) { $headers .= "Bcc: $bcc" . "\r\n"; }
   if ( isset( $_POST["donationID"])) {
     $headers .= "X-OTRS-DynamicField-OrderID: " . $_POST["donationID"] . "\r\n";
-    $headers .= "X-OTRS-DynamicField-OrderAmount: " . $_POST["donation"] . "\r\n";
+    $headers .= "X-OTRS-DynamicField-OrderAmount: " . $_POST["donate"] . "\r\n";
   }
   $headers .= "X-OTRS-DynamicField-OrderLanguage: " . $_POST["language"] . "\r\n";
   $headers .= "X-OTRS-DynamicField-OrderState: order\r\n";

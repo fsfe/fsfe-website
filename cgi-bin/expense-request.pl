@@ -118,6 +118,7 @@ my $percent1 = $query->param("percent1");
 my $budget2 = "NONE"; # $query->param("budget2");
 my $percent2 = $query->param("percent2");
 my $refund = $query->param("refund");
+my $catch_phrase = $query->param("catch_phrase");
 
 my $date = strftime "%Y-%m-%d", localtime;
 my $time = strftime "%s", localtime;
@@ -138,7 +139,7 @@ if ($budget2 ne "NONE") {
   $to2 = $responsible{$budget2};
 }
 
-my $subject = "Expense Request $reference ($budget1";
+my $subject = "Expense Request $reference $catch_phrase ($budget1";
 if ($budget2 ne "NONE") {
   $subject .= "+$budget2";
 }

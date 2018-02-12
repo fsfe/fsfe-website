@@ -70,7 +70,7 @@ function send_mail ( $to, $from, $subject, $message, $bcc = NULL, $att = NULL, $
     $headers .= "X-OTRS-DynamicField-OrderAmount: " . $_POST["donation"] . "\r\n";
   }
   $headers .= "X-OTRS-DynamicField-OrderLanguage: " . $_POST["language"] . "\r\n";
-  $headers = "X-OTRS-DynamicField-OrderState: order\r\n";
+  $headers .= "X-OTRS-DynamicField-OrderState: order\r\n";
   
   $message = nl2br( $message );
   

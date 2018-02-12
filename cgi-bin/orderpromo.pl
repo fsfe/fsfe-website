@@ -1,13 +1,8 @@
 #!/usr/bin/perl
 
 use CGI;
-use POSIX qw(strftime);
 
 my $query = new CGI;
-
-my $date = strftime "%Y-%m-%d", localtime;
-my $time = strftime "%s", localtime;
-my $reference = "order.$date." . substr $time, -5;
 
 # technically we only need the last name for shipping
 my $firstname = $query->param("firstname");
@@ -44,8 +39,8 @@ if (
 "Content-Transfer-Encoding: 8bit
 Content-type: text/plain; charset=UTF-8
 From: $email
-To: assist\@fsfe.org
-Subject: [promo order] $reference $firstname $lastname
+To: contact\@fsfe.org
+Subject: [promo order] $firstname $lastname
 Precedence: bulk
 
 Hey, someone ordered promotional material:

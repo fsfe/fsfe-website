@@ -63,8 +63,14 @@ function relay_donation($orderID) {
 }
 
 function send_mail ( $to, $from, $subject, $message, $bcc = NULL, $att = NULL, $att_type = NULL, $att_name = NULL ) {
-  $headers = "From: $from\r\nX-OTRS-DynamicField-OrderState: order\r\n";
+  $headers = "From: $from\r\n";
   if ( isset( $bcc )) { $headers .= "Bcc: $bcc" . "\r\n"; }
+  if ( isset( $_POST["donationID"])) {
+    $headers .= "X-OTRS-DynamicField-OrderID: " . $_POST["donationID"] . "\r\n";
+    $headers .= "X-OTRS-DynamicField-OrderAmount: " . $_POST["donate"] . "\r\n";
+  }
+  $headers .= "X-OTRS-DynamicField-OrderLanguage: " . $_POST["language"] . "\r\n";
+  $headers .= "X-OTRS-DynamicField-OrderState: order\r\n";
   
   $message = nl2br( $message );
   
@@ -115,8 +121,7 @@ if (empty($_POST['lastname'])  ||
   exit();
 }
 
-$reference = "order.".date("%Y-%m-%d").".".(date("%U") % 100000);
-$subject = "[promo order] $reference {$_POST['firstname']} {$_POST['lastname']}";
+$subject = "[promo order] {$_POST['firstname']} {$_POST['lastname']}";
 $msg = "Hey, someone ordered promotional material:\n".
        "First Name: {$_POST['firstname']}\n".
        "Last Name:  {$_POST['lastname']}\n".

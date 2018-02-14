@@ -156,7 +156,7 @@ if (isset($_POST['donate']) && ($_POST['donate'] > 0)) {
           "confirmation from Concardis for the order: {$_POST['donationID']}";
 }
 
-$test = send_mail ( "contact@fsfe.org", $_POST['email'], $subject, $msg );
+$test = send_mail ( "contact@fsfe.org", $_POST['firstnamename'] . " " . $_POST['lastname'] . " <" . $_POST['email'] . ">", $subject, $msg );
 
 if (isset($_POST['donate']) && ($_POST['donate'] > 0)) {
   relay_donation($_POST['donationID']);

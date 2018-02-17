@@ -1,1 +1,5 @@
-https://git.fsfe.org/max.mehl/fsfe-website/src/branch/master/.drone.yml
+pipeline:
+  syntaxcheck:
+    image: vsasyan/xmllint
+    commands:
+        - find . -type f \( -iname "*.xhtml" -o -iname "*.xml" -o -iname "*.xsl" \) -exec xmllint --noout {} +

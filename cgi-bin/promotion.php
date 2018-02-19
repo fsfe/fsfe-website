@@ -20,7 +20,7 @@ function gen_alnum($digits){
 
 function relay_donation($orderID) {
   $name = $_POST['name'];
-  $email = $_POST['email'];
+  $email = $_POST['mail'];
   $amount100 = $_POST['donate'] * 100;
   $language = $_POST['language'];
   $lang = substr($language, 0, 2);
@@ -110,12 +110,13 @@ $lang = $_POST['language'];
 
 # Sanity checks (*very* sloppy input validation)
 if (empty($_POST['lastname'])  ||
-    empty($_POST['email'])     ||
+    empty($_POST['mail'])     ||
     empty($_POST['street'])    ||
     empty($_POST['zip'])       ||
     empty($_POST['city'])      ||
     empty($_POST['country'])   ||
     empty($_POST['specifics']) ||
+    $_POST['quiz'] != 21      ||
    !empty($_POST['address']) ) {
 
   header("Location: http://fsfe.org/contribute/spreadtheword-ordererror.$lang.html");
@@ -126,7 +127,7 @@ $subject = "[promo order] {$_POST['firstname']} {$_POST['lastname']}";
 $msg = "Hey, someone ordered promotional material:\n".
        "First Name: {$_POST['firstname']}\n".
        "Last Name:  {$_POST['lastname']}\n".
-       "EMail:      {$_POST['email']}\n".
+       "EMail:      {$_POST['mail']}\n".
        "\n".
        "Address:\n".
        "{$_POST['firstname']} " . "{$_POST['lastname']}\n";
@@ -156,7 +157,7 @@ if (isset($_POST['donate']) && ($_POST['donate'] > 0)) {
           "confirmation from Concardis for the order: {$_POST['donationID']}";
 }
 
-$test = send_mail ( "contact@fsfe.org", $_POST['firstname'] . " " . $_POST['lastname'] . " <" . $_POST['email'] . ">", $subject, $msg );
+$test = send_mail ( "contact@fsfe.org", $_POST['firstname'] . " " . $_POST['lastname'] . " <" . $_POST['mail'] . ">", $subject, $msg );
 
 if (isset($_POST['donate']) && ($_POST['donate'] > 0)) {
   relay_donation($_POST['donationID']);

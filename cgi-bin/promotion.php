@@ -116,7 +116,7 @@ if (empty($_POST['lastname'])  ||
     empty($_POST['city'])      ||
     empty($_POST['country'])   ||
     empty($_POST['specifics']) ||
-   !empty($_POST['url']) ) {
+   !empty($_POST['address']) ) {
 
   header("Location: http://fsfe.org/contribute/spreadtheword-ordererror.$lang.html");
   exit();

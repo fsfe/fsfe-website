@@ -3,15 +3,7 @@
 <!-- Do not translate this file! -->
 
 <itemset>
-  <!-- item type="tshirt" id="tshirt-ilovefs-darkblue" price="20.00" date="2016-01-21">
-    <available size="S"/>
-    <available size="M"/>
-    <image
-      small="2016/tshirt-ilovefs-darkblue-front-small.jpg"
-      large="2016/tshirt-ilovefs-darkblue-front-large.jpg"/>
-  </item -->
-
-  <!-- item type="girlie" id="girlie-ilovefs-darkblue" price="20.00" date="2016-01-21">
+  <item type="girlie" id="girlie-ilovefs-darkblue" price="20.00" date="2016-01-21">
     <available size="S"/>
     <available size="M"/>
     <available size="L"/>
@@ -19,17 +11,7 @@
     <image
       small="2016/girlie-ilovefs-darkblue-front-small.jpg"
       large="2016/girlie-ilovefs-darkblue-front-large.jpg"/>
-  </item -->
-
-  <!-- item type="tshirt" id="tshirt-gnupg-blue" price="20.00" date="2016-02-03">
-    <available size="S"/>
-    <image
-      small="2016/tshirt-gnupg-blue-front-small.jpg"
-      large="2016/tshirt-gnupg-blue-front-large.jpg"/>
-    <image
-      small="2016/tshirt-gnupg-blue-back-small.jpg"
-      large="2016/tshirt-gnupg-blue-back-large.jpg"/>
-  </item -->
+  </item>
 
   <item type="tshirt" id="tshirt-nocloud-black" price="20.00" date="2016-03-07">
     <available size="S"/>
@@ -46,7 +28,7 @@
       large="2016/tshirt-nocloud-black-back-large.jpg"/>
   </item>
 
-  <!-- item type="tshirt" id="tshirt-nocloud-red" price="20.00" date="2016-03-07">
+  <item type="tshirt" id="tshirt-nocloud-red" price="20.00" date="2016-03-07">
     <available size="S"/>
     <available size="M"/>
     <available size="L"/>
@@ -58,12 +40,12 @@
     <image
       small="2016/tshirt-nocloud-red-back-small.jpg"
       large="2016/tshirt-nocloud-red-back-large.jpg"/>
-  </item -->
+  </item>
 
   <item type="tshirt" id="tshirt-nocloud-green" price="20.00" date="2016-03-07">
     <available size="S"/>
-    <!-- available size="M"/>
-    <available size="L"/ -->
+    <available size="M"/>
+    <!-- available size="L"/ -->
     <available size="XL"/>
     <!-- available size="XXL"/ -->
     <image
@@ -74,10 +56,10 @@
       large="2016/tshirt-nocloud-green-back-large.jpg"/>
   </item>
 
-  <!-- item type="tshirt" id="tshirt-nocloud-blue" price="20.00" date="2016-03-07">
+  <item type="tshirt" id="tshirt-nocloud-blue" price="20.00" date="2016-03-07">
     <available size="S"/>
     <available size="M"/>
-    <available size="L"/>
+    <!-- available size="L"/ -->
     <available size="XL"/>
     <available size="XXL"/>
     <image
@@ -86,13 +68,13 @@
     <image
       small="2016/tshirt-nocloud-blue-back-small.jpg"
       large="2016/tshirt-nocloud-blue-back-large.jpg"/>
-  </item -->
+  </item>
 
   <item type="girlie" id="girlie-nocloud-black" price="20.00" date="2016-07-11">
-    <!-- available size="S"/ -->
+    <available size="S"/>
     <available size="M"/>
-    <!-- available size="L"/>
-    <available size="XL"/ -->
+    <available size="L"/>
+    <available size="XL"/>
     <image
       small="2016/girlie-nocloud-black-front-small.jpg"
       large="2016/girlie-nocloud-black-front-large.jpg"/>

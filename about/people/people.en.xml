@@ -274,6 +274,13 @@
     <avatar>/fellowship/graphics/people/simonhornbacher-avatar.jpg</avatar>
   </person>
 
+  <person id="indorato" avatar="no" teams="core">
+    <name>Francesca Indorato</name>
+    <country>DE</country>
+    <email>fi (at) fsfe (dot) org</email>
+    <employee>part/f</employee>
+  </person>
+
   <person id="jean" avatar="yes" teams="fr, core">
     <name>Nicolas Jean</name>
     <country>FR</country>
@@ -363,6 +370,14 @@
     <email>koch (at) fsfeurope (dot) org</email>
     <link>http://blogs.fsfe.org/werner/</link>
     <avatar>/about/koch/koch-avatar.jpg</avatar>
+  </person>
+
+  <person id="lequertier" avatar="no" teams="intern">
+    <name>Vincent Lequertier</name>
+    <country>DE</country>
+    <email>vincent (at) fsfe (dot) org</email>
+    <employee>full/m</employee>
+    <function>intern/m</function>
   </person>
 
   <person id="lindfors" avatar="no" teams="fi">
@@ -677,6 +692,14 @@
     <email>nanda (at) fsfe (dot) org</email>
     <link>/about/weiden/weiden.html</link>
     <avatar>/about/weiden/weiden-avatar.jpg</avatar>
+  </person>
+
+  <person id="weymeirsch" avatar="no" teams="intern">
+    <name>Jan Weymeirsch</name>
+    <country>DE</country>
+    <email>janwey (at) fsfe (dot) org</email>
+    <employee>full/m</employee>
+    <function>intern/m</function>
   </person>
 
   <person id="widerstroem" avatar="no" teams="at, core">

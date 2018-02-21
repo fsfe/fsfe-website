@@ -11,5 +11,6 @@ generated_xml/wikievents.en.xml: .FORCE
 	| xsltproc --html ../tools/wikicalendars.xsl - 2>&- \
 	| xmllint --format - >$@.cache
 	diff -q -N $@.cache $@ || mv $@.cache $@
+	rm -f $@.cache
 
 all: generated_xml/wikievents.en.xml

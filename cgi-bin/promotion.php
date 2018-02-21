@@ -73,8 +73,6 @@ function send_mail ( $to, $from, $subject, $message, $bcc = NULL, $att = NULL, $
   $headers .= "X-OTRS-DynamicField-OrderLanguage: " . $_POST["language"] . "\r\n";
   $headers .= "X-OTRS-DynamicField-OrderState: order\r\n";
   
-  $message = nl2br( $message );
-  
   if ( $att ) {
     $eol = PHP_EOL;
     $separator = md5( time());
@@ -87,7 +85,7 @@ function send_mail ( $to, $from, $subject, $message, $bcc = NULL, $att = NULL, $
      
     // message
     $headers .= "--".$separator.$eol;
-    $headers .= "Content-Type: text/html; charset=\"UTF-8\"".$eol;
+    $headers .= "Content-Type: text/plain; charset=\"UTF-8\"".$eol;
     $headers .= "Content-Transfer-Encoding: 8bit".$eol.$eol;
     $headers .= $message.$eol.$eol;
      
@@ -100,7 +98,7 @@ function send_mail ( $to, $from, $subject, $message, $bcc = NULL, $att = NULL, $
     $headers .= $att_f.$eol.$eol;
     $headers .= "--".$separator."--";
   } else {
-    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
   }
   
   return mail( $to, $subject, $message, $headers );
@@ -121,6 +119,9 @@ if (empty($_POST['lastname'])  ||
   header("Location: http://fsfe.org/contribute/spreadtheword-ordererror.$lang.html");
   exit();
 }
+
+# Without this, escapeshellarg() will eat non-ASCII characters.
+setlocale(LC_CTYPE, "en_US.UTF-8");
 
 $subject = "[promo order] {$_POST['firstname']} {$_POST['lastname']}";
 $msg = "Hey, someone ordered promotional material:\n".
@@ -156,7 +157,23 @@ if (isset($_POST['donate']) && ($_POST['donate'] > 0)) {
           "confirmation from Concardis for the order: {$_POST['donationID']}";
 }
 
-$test = send_mail ( "contact@fsfe.org", $_POST['firstname'] . " " . $_POST['lastname'] . " <" . $_POST['mail'] . ">", $subject, $msg );
+# Generate letter to be sent along with the material
+$odtfill = $_SERVER["DOCUMENT_ROOT"] . "/cgi-bin/odtfill";
+$template = $_SERVER["DOCUMENT_ROOT"] . "/templates/promotionorder.odt";
+$outfile = "/tmp/promotionorder.odt";
+$name = $_POST['firstname'] . " " . $_POST['lastname'];
+$address = "";
+if (!empty($_POST['org'])) {
+  $address .= $_POST['org'] . "\\n";
+}
+$address .= $_POST['street'] . "\\n" .
+            $_POST['zip'] . " " . $_POST['city'] . "\\n" .
+            $_POST['country'];
+$name = escapeshellarg($name);
+$address = escapeshellarg($address);
+shell_exec("$odtfill $template $outfile Name=$name Address=$address");
+
+$test = send_mail ("contact@fsfe.org", $_POST['firstname'] . " " . $_POST['lastname'] . " <" . $_POST['mail'] . ">", $subject, $msg, NULL, file_get_contents($outfile), "application/vnd.oasis.opendocument.text", "letter.odt");
 
 if (isset($_POST['donate']) && ($_POST['donate'] > 0)) {
   relay_donation($_POST['donationID']);

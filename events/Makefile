@@ -9,8 +9,8 @@ all:
 generated_xml/wikievents.en.xml: .FORCE
 	wget --user-agent="" -qO- "https://wiki.fsfe.org/Events/Published?action=refresh" \
 	| xsltproc --html ../tools/wikicalendars.xsl - 2>&- \
-	| xmllint --format - >$@.cache
-	diff -q -N $@.cache $@ || mv $@.cache $@
-	rm -f $@.cache
+	| xmllint --format - > /tmp/wikievents.cache
+	diff -q -N /tmp/wikievents.cache $@ || mv /tmp/wikievents.cache $@
+	rm -f /tmp/wikievents.cache
 
 all: generated_xml/wikievents.en.xml

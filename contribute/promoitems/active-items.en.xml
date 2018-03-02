@@ -27,7 +27,6 @@ Such an item doesn't need an image!
     imgsmall="/contribute/promopics/fsfe-sticker-thumb.png"/>
   </item>
 
-
     <!-- FS and users freedoms -->
   
     <item type="freedom" id="fs-and-tools" year="2014" order="1">
@@ -49,15 +48,31 @@ Such an item doesn't need an image!
  	<image
     imgsmall="/contribute/promopics/hacking-for-freedom-sticker-v2-thumb.png"/>
   </item>
-  
-  <!-- Public Money, Public Code -->
-  
 
+  <!--100 freedoms -->
+
+  <item type="fsfe" id="100-freedoms-black-sticker" year="2017" order="1">
+    <image imgsmall="/contribute/promopics/100-freedoms-sticker-black.png"/>
+  </item>
+
+  <item type="fsfe" id="100-freedoms-orange-sticker" year="2017" order="1">
+    <image imgsmall="/contribute/promopics/100-freedoms-sticker-orange.png"/>
+  </item>
+
+  <!-- Public Money, Public Code -->
 
     <item type="pmpc" id="pmpc-sticker" year="2017" order="1">
  	<image
     imgsmall="/contribute/promopics/pmpc-sticker-thumb.png"/>
 
+  </item>
+
+  <item type="pmpc" id="pmpc-postcard" year="2017" order="1">
+      <image imgsmall="/contribute/promopics/pmpc_postcard_front_thumb.png"/>
+  </item>
+
+  <item type="pmpc" id="pmpc-poster" year="2018" order="1">
+      <image imgsmall="/contribute/promopics/pmpc_poster_combined_thumb.png"/>
   </item>
 
 
@@ -95,9 +110,8 @@ Such an item doesn't need an image!
   
   <!-- I love Free Software -->
   <item type="ilovefs" id="ilovefs-postcard" year="2014" order="3">
- 	<image
-    imgsmall="/contribute/promopics/ilovefs-postcard-front-thumb.png"/>
-  </item> 
+    <image imgsmall="/contribute/promopics/ilovefs-postcard-front-thumb.png"/>
+  </item>
   
   <item type="ilovefs" id="ilovefs-flyer" year="2014" order="2">
  	<image
@@ -108,11 +122,15 @@ Such an item doesn't need an image!
  	<image
     imgsmall="/contribute/promopics/ilovefs-sticker_thumb.png"/>
   </item> 
-  
+
+  <item type="ilovefs" id="ilovefs-burgundy-sticker" year="2016" order="1">
+    <image imgsmall="/contribute/promopics/ilovefs-sticker_burgundy_thumb.png"/>
+  </item>
+
     <item type="ilovefs" id="ilovefs-poster-2sided" year="2014" order="4">
  	<image
     imgsmall="/contribute/promopics/ilovefs_poster_A1_thumb.png"/>
-  </item> 
+  </item>
   
     <item type="ilovefs" id="ilovefs-balloon" year="2015" order="5">
  	<image

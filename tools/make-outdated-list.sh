@@ -11,8 +11,7 @@ cat << _END_
 
 _END_
 
-find . -iname "*\.[a-z][a-z]\.xhtml"|grep -v '^./[a-z][a-z]/.*'|grep -v '^./news'|sed 's/\.[a-z][a-z]\.xhtml//'|sort|uniq|while read A; do
-  if test -f "$A.en.xhtml"; then
+find . -type f -iname "*\.en\.xhtml" | grep -v '^./[a-z][a-z]/\|^./news'|sed 's/\.[a-z][a-z]\.xhtml//'|sort|while read A; do
    originaldate=`git log --pretty="%cd" --date=raw -1 $A.en.xhtml|cut -d' ' -f1`
    for i in $A.[a-z][a-z].xhtml; do
      if [[ $i != *".en."* ]]; then
@@ -24,7 +23,6 @@ find . -iname "*\.[a-z][a-z]\.xhtml"|grep -v '^./[a-z][a-z]/.*'|grep -v '^./news
        fi
      fi
   done
- fi
 done|sort -t' ' -k 1,1 -k 3nr,3 -k 5nr,5|\
 while read lang page originaldate trdate diff; do
   if [[ $nowlang != $lang ]]; then

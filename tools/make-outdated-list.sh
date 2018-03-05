@@ -41,13 +41,13 @@ while read lang page originaldate trdate diff; do
   diffdays=$((diff/60/60/24))
 
   if [[ $diffdays -gt 180 && $originaldate -gt $yearago ]]; then
-    red=' style="color: red;"'
+    color=' style="color: red;"'
   elif [[ $diffdays -gt 180 ]]; then
-    red=' style="color: orange;"'
+    color=' style="color: orange;"'
   else
-    red=''
+    color=''
   fi
-  echo "<tr><td$red>$page</td><td>$orig</td><td>$tr</td><td$red>$diffdays</td></tr>"
+  echo "<tr><td$color>$page</td><td>$orig</td><td>$tr</td><td$color>$diffdays</td></tr>"
 
 done
 

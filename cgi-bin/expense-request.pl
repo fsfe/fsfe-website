@@ -40,10 +40,6 @@ my %names = (
 # -----------------------------------------------------------------------------
 
 my %responsible = (
-  "INTERNAL-COORD" => "mk",
-  "INTERNAL-GA" => "mk",
-  "INTERNAL-TECH" => "mk",
-  "INTERNAL-FUNDRAISING" => "mk",
   "PA-OUTREACH" => "mk",
   "PA-MATERIAL" => "mk",
   "PA-CAMPAIGN" => "mk",
@@ -57,6 +53,10 @@ my %responsible = (
   "REUSE-OTHER" => "mk",
   "MERCHANDISE-PURCHASE" => "usli",
   "MERCHANDISE-OTHER" => "usli",
+  "INTERNAL-COORD" => "mk",
+  "INTERNAL-GA" => "mk",
+  "INTERNAL-TECH" => "mk",
+  "INTERNAL-FUNDRAISING" => "mk",
   "PERSONELL-INTERN" => "mk",
   "PERSONELL-KIRSCHNER" => "mk",
   "PERSONELL-ALBERS" => "mk",
@@ -68,10 +68,6 @@ my %responsible = (
 );
 
 my %account = (
-  "INTERNAL-COORD" => "2504",
-  "INTERNAL-GA" => "2505",
-  "INTERNAL-TECH" => "2506",
-  "INTERNAL-FUNDRAISING" => "2509",
   "PA-OUTREACH" => "2513",
   "PA-MATERIAL" => "2514",
   "PA-CAMPAIGN" => "2515",
@@ -85,6 +81,10 @@ my %account = (
   "REUSE-OTHER" => "6110",
   "MERCHANDISE-PURCHASE" => "8154",
   "MERCHANDISE-OTHER" => "8159",
+  "INTERNAL-COORD" => "2504",
+  "INTERNAL-GA" => "2505",
+  "INTERNAL-TECH" => "2506",
+  "INTERNAL-FUNDRAISING" => "2509",
   "PERSONELL-INTERN" => "81000",
   "PERSONELL-KIRSCHNER" => "81012",
   "PERSONELL-ALBERS" => "81021",

@@ -78,6 +78,7 @@ function send_registration_mail($from, $to) {
 	$headers = "From: " . $from . "\n"
 		. "MIME-Version: 1.0\n"
                 . "X-OTRS-Queue: Misc\n"
+                . "X-OTRS-Owner: eal\n"
                 . "X-OTRS-Responsible: eal\n"
 		. "Content-Type: multipart/mixed; boundary=boundary";
 

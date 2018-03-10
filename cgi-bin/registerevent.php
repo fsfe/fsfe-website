@@ -53,7 +53,7 @@ function eval_date($date) {
 }
 
 
-function send_registration_mail() {
+function send_registration_mail($from, $to) {
 	$data = array(
 		'name' => $_POST['name'],
 		'email' => $_POST['email'],
@@ -74,9 +74,8 @@ function send_registration_mail() {
 
 	$message = eval_template('registerevent/mail.php', $data);
 
-	$to = $_POST['email'].",contact@fsfe.org";
 	$subject = "Event registration: " . $_POST['title'];
-	$headers = "From: " . $_POST['name'] . " <" . $_POST['email'] . "\n"
+	$headers = "From: " . $from . "\n"
 		. "MIME-Version: 1.0\n"
                 . "X-OTRS-Queue: Misc\n"
                 . "X-OTRS-Responsible: eal\n"
@@ -88,7 +87,8 @@ function send_registration_mail() {
 }
 
 if ( isset($_POST['register_event']) AND empty($_POST['spam']) AND eval_date($_POST['startdate']) AND eval_date($_POST['enddate']) || empty($_POST['enddate'])  ) {
-	$error = send_registration_mail();
+	$error = send_registration_mail($_POST['name'] . " <" . $_POST['email'] . ">", "FSFE <contact@fsfe.org>");
+	$error = send_registration_mail("FSFE <contact@fsfe.org>", $_POST['name'] . " <" . $_POST['email'] . ">");
 
 	echo eval_xml_template('registerevent/success.en.html', array(
 		'notice' => '', // TODO display some error code here

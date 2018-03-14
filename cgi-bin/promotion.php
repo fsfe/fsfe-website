@@ -65,13 +65,12 @@ function relay_donation($orderID) {
 function send_mail ( $to, $from, $subject, $message, $bcc = NULL, $att = NULL, $att_type = NULL, $att_name = NULL ) {
   $headers = "From: $from\r\n";
   if ( isset( $bcc )) { $headers .= "Bcc: $bcc" . "\r\n"; }
-  $headers .= "X-OTRS-Queue: Orders::Promo\r\n";
+  $headers .= "X-OTRS-Queue: Shipping::Promo Material Order\r\n";
   if ( isset( $_POST["donationID"])) {
     $headers .= "X-OTRS-DynamicField-OrderID: " . $_POST["donationID"] . "\r\n";
     $headers .= "X-OTRS-DynamicField-OrderAmount: " . $_POST["donate"] . "\r\n";
   }
   $headers .= "X-OTRS-DynamicField-OrderLanguage: " . $_POST["language"] . "\r\n";
-  $headers .= "X-OTRS-DynamicField-OrderState: order\r\n";
   
   if ( $att ) {
     $eol = PHP_EOL;
@@ -123,8 +122,8 @@ if (empty($_POST['lastname'])  ||
 # Without this, escapeshellarg() will eat non-ASCII characters.
 setlocale(LC_CTYPE, "en_US.UTF-8");
 
-$subject = "[promo order] {$_POST['firstname']} {$_POST['lastname']}";
-$msg = "Hey, someone ordered promotional material:\n".
+$subject = "Promotional material order";
+$msg = "Please send me promotional material:\n".
        "First Name: {$_POST['firstname']}\n".
        "Last Name:  {$_POST['lastname']}\n".
        "EMail:      {$_POST['mail']}\n".

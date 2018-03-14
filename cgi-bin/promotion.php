@@ -122,7 +122,7 @@ if (empty($_POST['lastname'])  ||
 # Without this, escapeshellarg() will eat non-ASCII characters.
 setlocale(LC_CTYPE, "en_US.UTF-8");
 
-$subject = "Promotional material order";
+$subject = "Promotion material order";
 $msg = "Please send me promotional material:\n".
        "First Name: {$_POST['firstname']}\n".
        "Last Name:  {$_POST['lastname']}\n".

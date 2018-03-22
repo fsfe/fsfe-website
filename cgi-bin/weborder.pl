@@ -83,7 +83,7 @@ my $reference = "MP" . $date . substr($time, -4) . sprintf("%03u", $amount);
 open(MAIL, "|/usr/lib/sendmail -t -f contact\@fsfe.org");
 print MAIL "From: $name <$email>\n";
 print MAIL "To: contact\@fsfe.org\n";
-print MAIL "X-OTRS-Queue: Financial::Merchandise Orders\n";
+print MAIL "X-OTRS-Queue: Finance::Merchandise Orders\n";
 print MAIL "X-OTRS-DynamicField-OrderID: $reference\n";
 print MAIL "X-OTRS-DynamicField-OrderAmount: $amount\n";
 print MAIL "X-OTRS-DynamicField-OrderLanguage: $language\n";

@@ -4,18 +4,38 @@
 
 <!-- ALL STATIC TEXTS -->
 
+  <!-- Spreadtheword page -->
+  <text id="stw-type">Typ</text>
+  <text id="stw-size">Wymiary</text>
+  <text id="stw-context">Kontekst</text>
+  <text id="stw-printed"><a href="#how-to-order">Zamów</a> w języku</text>
+  <text id="stw-printed-tooltip">Możesz zamówić darmowe wydruki korzystając z formularza.</text>
+  <text id="stw-languages">Dostępne w formatach</text>
+  <text id="stw-languages-tooltip">Jeśli chcesz rozsyłać nasze materiały online, śmiało ściągnij je w dowolnym, interesującym Cię, języku.</text>
+  <text id="stw-license">Licencja</text>
+  <text id="stw-author">Autor</text>
+  <text id="stw-year">Rok</text>
+  <text id="stw-source">Pliki źródłowe</text>
+  <text id="stw-source-tooltip">Możesz pobrać pliki źródłowe materiałów promocyjnych aby je modyfikować bądź tłumaczyć. Proszę, zważ jednak na ich licencję.</text>
+  <text id="stw-printready">Pliki gotowe do druku</text>
+  <text id="stw-printready">Print-ready files</text>
+  <text id="stw-printready">Print-ready files</text>
+  <text id="stw-printready-tooltip">Pliki które wysyłamy do druku, włącznie z zadrukiem i innymi specyficznymi ustawieniami dla drukarki. Te pliki mogą być bardzo duże (~5-25MB).</text>
 
-<!-- Basic texts -->
-<!-- !! MISSING TRANSLATION --> <text id="fsfeurope">Free Software Foundation Europe</text>
-<!-- !! MISSING TRANSLATION --> <text id="fsfnetwork">
-    FSFE has <a href="//fsfe.org/about/fsfnetwork.html">sister organisations</a> in <a href="//www.fsf.org/">North America</a>, <a href="http://fsf.org.in/">India</a> and <a href="http://www.fsfla.org/">Latin America</a>.
+  <!-- Basic texts -->
+  <text id="fsfeurope">Free Software Foundation&#160;Europe</text>
+  <text id="fsfnetwork">
+    FSFE ma <a href="//fsfe.org/about/fsfnetwork.html">organizacje bliźniacze</a> w <a
+      href="//www.fsf.org/">Ameryce Północnej</a>, <a
+      href="http://fsf.org.in/">Indiach</a> oraz <a
+      href="http://www.fsfla.org/">Ameryce Południowej</a>.
   </text>
 
 
 <!-- Footer -->
 <text id="lastchanged"> Ostatnia aktualizacja: </text>
-<text id="translator1a">Podziękowania dla </text>
-<text id="translator1b"> za to nieoficjalne tłumaczenie. </text>
+<text id="translator1a">Autorem tłumaczenia jest </text>;
+<text id="translator1b">, dziękujemy za to nieoficjalne tłumaczenie. </text>
 <text id="translator2">Ten dokument to nieoficjalne tłumaczenie.</text>
 <text id="translator3a">Prosimy odwołać się do </text>
 <text id="translator3b">oryginalnego tekstu</text>
@@ -26,175 +46,184 @@
   </text>
 
 
-<!-- Warning info boxes -->
-<text id="outdated"><strong>Ostrzeżenie:</strong>
+  <!-- Warning info boxes -->
+  <text id="outdated">
+    <strong>Uwaga: </strong>
     Treść strony może być nieaktualna w porównaniu z oryginałem. Na
     <a href="/contribute/contribute.html">tej stronie</a> dowiesz się, jak można
-    pomóc w tłumaczeniu, lub pomóc w inny sposób.
+    pomóc w tłumaczeniu lub  w inny sposób.
   </text>
-<!-- !! MISSING TRANSLATION --> <text id="outdated-1"><strong>Warning: </strong>
-    This page may be out of date with the
+  <text id="outdated-1">
+    <strong>Uwaga: </strong>
+    Ta strona może być przestarzała w porównaniu do
   </text>
-<!-- !! MISSING TRANSLATION --> <text id="outdated-2">
-    Please use
-    <a href="/contribute/contribute.html">this page</a> to see how you can help
-    with translations, and other things.
+  <text id="outdated-2">
+    Na
+    <a href="/contribute/contribute.html">tej stronie</a> dowiesz się, jak można
+    pomóc w tłumaczeniu lub w inny sposób.
   </text>
-<text id="notranslation"><strong>Ostrzeżenie:</strong>
+  <text id="notranslation">
+    <strong>Uwaga: </strong>
     Ta strona nie została jeszcze przetłumaczona. Poniżej znajduje się
     jej oryginalna wersja. Na
     <a href="/contribute/contribute.html">tej stronie</a> dowiesz się, jak można
-    pomóc w tłumaczeniu, lub pomóc w inny sposób.
+    pomóc w tłumaczeniu lub w inny sposób.
   </text>
-<!-- !! MISSING TRANSLATION --> <text id="under-construction"><strong>Warning: </strong>This page is under construction. Please <strong>do not spread</strong> or attempt translation as its content is subject to change.
+    <text id="under-construction">
+    <strong>Uwaga: </strong>Ta strona jest dopiero tworzona. Proszę <strong>nie udostępniaj jej</strong> ani nie staraj sie jej tłumaczyć - jej zawartość może ulec zmianie.
   </text>
-<!-- !! MISSING TRANSLATION --> <text id="project-complete">This project has been successfully finished. These pages are kept here for archiving purposes.  </text>
+    <text id="project-complete">Ten projekt już się pomyślnie zakończył. Strony są utrzymywane celem archiwizacji.  </text>
+  
+  
+  <!-- Menu, Navigation, Buttons -->
+  <text id="fsfe/about">O nas</text>
+  <text id="fsfe/projects">Nasza działalność</text>
+  <text id="fsfe/campaigns">Kampanie</text>
+  <text id="fsfe/help">Włącz się</text>
+  <text id="fsfe/press">Dla prasy</text>
+  <text id="fsfe/contact">Kontakt</text>
+  <text id="support/donate">Darowizny</text>
+  <text id="support/support">Wsparcie finansowe</text>
+  <text id="support/order">Sklep</text>
+  <text id="support/thankgnus">Darczyńcy</text>
+  <text id="fellowship/fellowship">Członkostwo w fundacji</text>
+  <text id="fellowship/login">Login</text>
+  <text id="fellowship/join">Dołącz</text>
+  <text id="fellowship/card">Karta</text>
+  <text id="fellowship/faq">F.A.Q.</text>
+  <text id="campaigns/dfd">Document Freedom Day</text>
+  <text id="campaigns/fya">Free Your Android</text>
+  <text id="campaigns/pdf">PDF readers</text>
+  <text id="campaigns/ayc">Zapytaj swojego kandydata</text>
+  <text id="campaigns/drm">DRM.info</text>
+  <text id="news/news">Najświeższe wiadomości</text>
+  <text id="news/events">Nadchodzące wydarzenia</text>
+  <text id="news/press">Prasa i Media</text>
+  <text id="news/nl">Newslettery</text>
+  <text id="news/planet">Blogi Planety</text>
+  <text id="ftf/legal">Wsparcie prawne</text>
+  <text id="ftf/services">Usługi powiernicze i inne</text>
+  <text id="ftf/doc">Dokumentacja</text>
+  <text id="ftf/network">Siatka prawna</text>
+  <text id="ftf/conference">Konferencje</text>
+  <text id="ftf/contact">Skontaktuj się z prawnikami FSFE</text>
+  <text id="fs/fs">Wolne Oprogramowanie</text>
+  <text id="fs/basics">Fundamenty Wolnego Oprogramowania</text>
+  <text id="fs/def">Definicja</text>
+  <text id="fs/soc">Wolne społeczeństwo</text>
+  <text id="fs/edu">Edukacja</text>
+  <text id="fs/buz">Biznes</text>
+  <text id="community/discuss">Dyskusje nt Wolnego Oprogramowania</text>
+  
+  <text id="motto-fsfs">Wolne Oprogramowanie, wolne społeczeństwo!</text>
+  <text id="motto-fellowship">Dołącz do społeczności FSFE!</text>
+  <text id="learn-more">Dowiedz się więcej</text>
+  <text id="press">Prasa</text>
+  <text id="newsletter">Newsletter</text>
+  
+  <text id="go-to">Idź do:</text>
+  <text id="search">Wyszukaj</text>
+  <text id="submit">Wyślij</text>
+  <text id="subscribe">Subskrybuj</text>
+  <text id="email">adres email</text>
+  <text id="news">Wiadomości</text>
+  <text id="receive-newsletter">Subskrybuj miesięczny newsletter FSFE</text>
+  <text id="subscribe-newsletter">Subskrybuj nasz newsletter</text>
+  <text id="events">Wydarzenia</text>
+  <text id="more">Zobacz więcej</text>
+  <text id="morenews">Zobacz wszystkie wiadomości</text>
+  <text id="moreevents">Zobacz wszystkie wydarzenia</text>
+  <text id="contact">Kontakt</text>
+  <text id="team">Grupa</text>
+  <text id="microblog">Mikroblog</text>
+  <text id="no-avatar">Brak zdjęcia</text>
+
+  <text id="change-lang">Zmień język</text>
+  <text id="menu">Menu</text>
+  <text id="content">Zawartość</text>
+  <text id="page-info">Informacje o stronie</text>
+  <text id="rootpage">Strona domowa</text>
+  <text id="sitemap">Mapa strony</text>
+  <text id="go-top">Wróć na górę</text>
+  <text id="source">Kod źródłowy</text>
+  <text id="contact-us">Kontakt</text>
+  <text id="translate">Przetłumacz tę stronę</text>
+  <text id="contribute-web">Wspomóż webmasterów</text>
+<!-- tu -->
+  <text id="imprint">Impressum</text>
+  <text id="privacy-policy">Polityka prywatności</text>
+  <text id="transparency-commitment">Manifest przeźroczystości</text>
+  <text id="tags">Słowa kluczowe</text>
 
 
-<!-- Menu, Navigation, Buttons -->
-<text id="fsfe/about">O nas</text>
-<text id="fsfe/projects">Projekty</text>
-<text id="fsfe/campaigns">Kampanie</text>
-<text id="fsfe/help">Włącz się</text>
-<!-- !! MISSING TRANSLATION --> <text id="fsfe/press">Press</text>
-<!-- !! MISSING TRANSLATION --> <text id="fsfe/contact">Contact us</text>
-<!-- !! MISSING TRANSLATION --> <text id="support/donate">Donate</text>
-<!-- !! MISSING TRANSLATION --> <text id="support/support">Support</text>
-<!-- !! MISSING TRANSLATION --> <text id="support/order">Shop</text>
-<!-- !! MISSING TRANSLATION --> <text id="support/thankgnus">Donors</text>
-<text id="support/become">Zostań naszym darczyńcą</text>
-<!-- !! MISSING TRANSLATION --> <text id="fellowship/fellowship">Fellowship</text>
-<!-- !! MISSING TRANSLATION --> <text id="fellowship/login">Login</text>
-<!-- !! MISSING TRANSLATION --> <text id="fellowship/join">Join</text>
-<!-- !! MISSING TRANSLATION --> <text id="fellowship/card">Card</text>
-<!-- !! MISSING TRANSLATION --> <text id="fellowship/faq">F.A.Q.</text>
-<!-- !! MISSING TRANSLATION --> <text id="campaigns/dfd">Document Freedom Day</text>
-<!-- !! MISSING TRANSLATION --> <text id="campaigns/fya">Free Your Android</text>
-<!-- !! MISSING TRANSLATION --> <text id="campaigns/pdf">PDF readers</text>
-<!-- !! MISSING TRANSLATION --> <text id="campaigns/ayc">Ask your candidates</text>
-<!-- !! MISSING TRANSLATION --> <text id="campaigns/drm">DRM.info</text>
-<!-- !! MISSING TRANSLATION --> <text id="news/news">Latest News</text>
-<!-- !! MISSING TRANSLATION --> <text id="news/events">Upcoming Events</text>
-<!-- !! MISSING TRANSLATION --> <text id="news/press">Press Room</text>
-<!-- !! MISSING TRANSLATION --> <text id="news/nl">Newsletters</text>
-<!-- !! MISSING TRANSLATION --> <text id="news/planet">Planet blogs</text>
-<!-- !! MISSING TRANSLATION --> <text id="ftf/legal">Legal support</text>
-<!-- !! MISSING TRANSLATION --> <text id="ftf/services">Services and Fiduciary</text>
-<!-- !! MISSING TRANSLATION --> <text id="ftf/doc">Documentation</text>
-<!-- !! MISSING TRANSLATION --> <text id="ftf/network">Legal Network</text>
-<!-- !! MISSING TRANSLATION --> <text id="ftf/conference">Conferences</text>
-<!-- !! MISSING TRANSLATION --> <text id="ftf/contact">Contact FSFE Legal Team</text>
-<!-- !! MISSING TRANSLATION --> <text id="fs/fs">Free Software</text>
-<!-- !! MISSING TRANSLATION --> <text id="fs/basics">Free Software Basics</text>
-<!-- !! MISSING TRANSLATION --> <text id="fs/def">Definition</text>
-<!-- !! MISSING TRANSLATION --> <text id="fs/soc">Free Society</text>
-<!-- !! MISSING TRANSLATION --> <text id="fs/edu">Education</text>
-<!-- !! MISSING TRANSLATION --> <text id="fs/buz">Business</text>
-<!-- !! MISSING TRANSLATION --> <text id="motto-fsfs">Free Software, Free Society!</text>
-<!-- !! MISSING TRANSLATION --> <text id="motto-fellowship">Join FSFE’s community!</text>
-<!-- !! MISSING TRANSLATION --> <text id="learn-more">Learn more</text>
-<!-- !! MISSING TRANSLATION --> <text id="press">Press</text>
-<!-- !! MISSING TRANSLATION --> <text id="newsletter">Newsletter</text>
-<!-- !! MISSING TRANSLATION --> <text id="go-to">Go to:</text>
-<text id="search">Szukaj</text>
-<text id="submit">Wyślij</text>
-<!-- !! MISSING TRANSLATION --> <text id="subscribe">Subscribe</text>
-<!-- !! MISSING TRANSLATION --> <text id="email">email address</text>
-<text id="news">Najświeższe wiadomości</text>
-<!-- !! MISSING TRANSLATION --> <text id="receive-newsletter">Subscribe to FSFE's monthly newsletter</text>
-<!-- !! MISSING TRANSLATION --> <text id="subscribe-newsletter">Subscribe to the newsletter</text>
-<text id="events">Nadchodzące wydarzenia</text>
-<text id="more">Czytaj dalej...</text>
-<text id="morenews">Więcej wiadomości...</text>
-<text id="moreevents">Więcej wydarzeń...</text>
-<!-- !! MISSING TRANSLATION --> <text id="contact">Contact</text>
-<!-- !! MISSING TRANSLATION --> <text id="team">Team</text>
-<!-- !! MISSING TRANSLATION --> <text id="microblog">Microblog</text>
-<!-- !! MISSING TRANSLATION --> <text id="no-avatar">No Picture</text>
-<!-- !! MISSING TRANSLATION --> <text id="change-lang">Change language</text>
-<!-- !! MISSING TRANSLATION --> <text id="menu">Menu</text>
-<!-- !! MISSING TRANSLATION --> <text id="content">Content</text>
-<!-- !! MISSING TRANSLATION --> <text id="page-info">Page info</text>
-<!-- !! MISSING TRANSLATION --> <text id="rootpage">Home</text>
-<!-- !! MISSING TRANSLATION --> <text id="sitemap">Sitemap</text>
-<!-- !! MISSING TRANSLATION --> <text id="go-top">Go to the top</text>
-<!-- !! MISSING TRANSLATION --> <text id="source">Source code</text>
-<!-- !! MISSING TRANSLATION --> <text id="contact-us">Contact us</text>
-<!-- !! MISSING TRANSLATION --> <text id="translate">Translate this page?</text>
-<!-- !! MISSING TRANSLATION --> <text id="contribute-web">Contribute to the Web team</text>
-<!-- !! MISSING TRANSLATION --> <text id="imprint">Imprint</text>
-<!-- !! MISSING TRANSLATION --> <text id="privacy-policy">Privacy Policy</text>
+  <!-- Article metadata -->
+  <text id="author">Autor</text>
+  <text id="writtenby">Autor&#160;</text>
+  <text id="published">Data</text>
+  <text id="revision">ostatnia edycja&#160;</text>
+  <text id="download">Pobierz</text>
+  <text id="and">i</text>
 
 
-<!-- Article metadata -->
-<!-- !! MISSING TRANSLATION --> <text id="author">Author</text>
-<!-- !! MISSING TRANSLATION --> <text id="writtenby">Written by</text>
-<!-- !! MISSING TRANSLATION --> <text id="published">on</text>
-<!-- !! MISSING TRANSLATION --> <text id="revision">updated on</text>
-<!-- !! MISSING TRANSLATION --> <text id="download">Download</text>
-
-
-<!-- Petitions -->
-<!-- !! MISSING TRANSLATION --> <text id="osig">Organisations</text>
-<!-- !! MISSING TRANSLATION --> <text id="isig">Individuals</text>
-<!-- !! MISSING TRANSLATION --> <text id="bsig">Businesses</text>
-
-
-<!-- Sidebars -->
-<!-- !! MISSING TRANSLATION --> <text id="related-news">Related News</text>
-<!-- !! MISSING TRANSLATION --> <text id="our-work">Our Work</text>
-<!-- !! MISSING TRANSLATION --> <text id="our-work-intro">
-  <p>As a non-profit, non-governmental organisation, Free Software Foundation 
-    Europe works to create general understanding and support for Free Software 
-    and Open Standards in politics, business, law and society at large.</p>
-</text>
-<!-- !! MISSING TRANSLATION --> <text id="about-fsfe">About FSFE</text>
-<!-- !! MISSING TRANSLATION --> <text id="about-fsfe-intro">
-  <p>
-      Free Software Foundation Europe is dedicated to the furthering of Free 
-      Software and working for <strong>freedom</strong> in the emerging digital 
-      society.
+  <!-- Petitions -->
+  <text id="osig">Organizacje</text>
+  <text id="isig">Osoby prywatne</text>
+  <text id="bsig">Firmy</text>
+  
+  
+  <!-- Sidebars -->
+  <text id="related-news">Powiązane </text>
+  <text id="our-work">Nasza praca</text>
+  <text id="our-work-intro">
+    <p>Jako organizacja pozarządowa, non-profit, Free Software Foundation Europe skupia swoje działanie na stworzenie ogólnego zrozumienia istoty Wolnego Oprogramowania, wsparcia dla niego i Otwartych Standardów w polityce, biznesie, prawie i społeczeństwie w ogóle.</p>
+  </text>
+  <text id="about-fsfe">O FSFE</text>
+  <text id="about-fsfe-intro">
+    <p>
+      Free Software Foundation Europe jest organizacją charytatywną, która walczy o prawa użytkowników w kontrolowaniu technologii.
     </p>
-  <p>
-      Access to software determines who may participate in a digital society.  
-      The freedoms to <a href="/about/basics/freesoftware.html">use, study, 
-      share, and improve</a> software allow <strong>equal</strong> 
-      participation, and are extremely important.
+    <p>
+      Oprogramowanie jest ściśle powiązane z każdym aspektem naszego życia. To ważne, aby technologia nas wspomagała, a nie ograniczała. Wolne Oprogramowanie daje każdemu prawo do użytkowania, wglądu, dopasowania do siebie i dzielenia się oprogramowaniem (w zmienionej wersji). Takie przywileje pozwalają zachować inne fundamentalne prawa jak prawo wolności głosu, wolności prasy i prywatności.
     </p>
-</text>
+  </text>
 
 
-<!-- Motivational texts for fellowship, support or donations -->
-<text id="join">Join</text>
-<!-- !! MISSING TRANSLATION --> <text id="join-paragraph">
-  <p>Become a Fellow of the FSFE to empower our work and help to assure our financial independence. By joining the Fellowship you will become a donating, sustaining member of the FSFE - including access to our infrastructure.</p>
-</text>
-<!-- !! MISSING TRANSLATION --> <text id="join-fellowship">Join the Fellowship</text>
-<!-- !! MISSING TRANSLATION --> <text id="support">Support the FSFE</text>
-<!-- !! MISSING TRANSLATION --> <text id="show-support">Show your support!</text>
-<!-- !! MISSING TRANSLATION --> <text id="show-support-paragraph">
-  <p>FSFE needs your support to get its voice heard! Every hit counts!</p>
-</text>
-<!-- !! MISSING TRANSLATION --> <text id="support-fsfe">I support the FSFE!</text>
-<text id="support-paragraph"><p>Zostając darczyńcą FSFE wspierasz naszą pracę i zapewniasz nam niezależność finansową.</p></text>
-<text id="donate">Darowizny</text>
-<!-- !! MISSING TRANSLATION --> <text id="donate-paragraph">
-  <p>
-      The Free Software Foundation Europe is a non-profit non-governmental
-      organisation. <a href="/work.html">Our work</a> is made
-      possible by a community of
-      <a href="/contribute/contribute.html">volunteers</a>,
-      <a href="/fellowship">Fellows</a> and
-      <a href="/donate/thankgnus.html">donors</a>. Your donations are critical to our
-      strength and autonomy. They enable us to continue working for Free
-      Software wherever necessary, and to be an independent voice.
+  <!-- Motivational texts for fellowship, support or donations -->
+  <text id="join">Join</text>
+  <text id="join-paragraph">
+    <p>Zostań darczyńcą FSFE, aby pozwolić nam na dalsze działanie i zapewnić niezależność finansową. Poprzez wkład finansowy zostaniesz naszym członkiem fundacji - otrzymasz dostęp do naszej infrastruktury.</p>
+
+  </text>
+  <text id="join-fellowship">Dołącz do stowarzyszenia</text>
+
+  <text id="support">Wesprzyj FSFE</text>
+  <text id="show-support">Okaż swoje wsparcie!</text>
+  <text id="show-support-paragraph">
+      <p>FSFE potrzebuje twojego wsparcia aby mogło zostać usłyszane! Każde kliknięcie ma znaczenie!</p>
+  </text>
+  <text id="support-fsfe">Wspieram FSFE!</text>
+
+  <text id="donate">Donacje</text>
+  <text id="donate-paragraph">
+    <p>
+      Free Software Foundation Europe jest pozarządową organizacją non-profit. <a href="/work.html">Nasza praca</a> jest możliwa dzięki społeczności 
+      <a href="/contribute/contribute.html">wolontariuszy</a>,
+      <a href="/fellowship">darczyńców</a> i
+      <a href="/donate/thankgnus.html">sponsorów</a>. Wasze dotacje są kluczowe dla zachowania naszej autonomii i wsparcia naszej siły. Pozwalają nam na kontynuację prac dla ruchu Wolnego Oprogramowania tam, gdzie to wymagane i gdzie potrzebny jest niezależny głos.
     </p>
-</text>
 
-
-
-
-
-
-
+  </text>
+  
+  <!-- pdfreaders.org -->
+  <text id="pdfreaders-head-readers">Czytniki</text>
+  <text id="pdfreaders-head-standards">Otwarte standardy</text>
+  <text id="pdfreaders-head-graphics">Grafiki</text>
+  <text id="pdfreaders-head-about">O akcji</text>
+  <text id="pdfreaders-body-platforms">Platformy:</text>
+  
+  <!-- Share and support buttons -->
+  <text id="share-head">Podziel się i wesprzyj</text>
+  <text id="share-page">Udostępnij na</text>
+  <text id="share-microdonation">Wyślij mikro-dotację przez</text>
+  <text id="share-warning">Niektóre usługi mogą być niekompatybilne z Wolnym Oprogramowaniem i naruszać Twoją prywatność.</text>
 </textset>

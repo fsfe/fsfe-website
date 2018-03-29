@@ -40,15 +40,14 @@ my %names = (
 # -----------------------------------------------------------------------------
 
 my %responsible = (
-  "PA-OUTREACH" => "council",
+  "PA-EVENTS" => "council",
   "PA-MATERIAL" => "council",
-  "PA-CAMPAIGN" => "council",
-  "LEGAL-TRAVEL" => "council",
+  "PA-CAMPAIGNS" => "council",
+  "LEGAL-EVENTS" => "council",
   "LEGAL-ORG" => "council",
-  "POLICY-TRAVEL" => "council",
-  "POLICY-CAMPAIGN" => "council",
-  "POLICY-DEV" => "council",
-  "REUSE-TRAVEL" => "council",
+  "POLICY-EVENTS" => "council",
+  "POLICY-CAMPAIGNS" => "council",
+  "REUSE-EVENTS" => "council",
   "REUSE-MATERIAL" => "council",
   "REUSE-OTHER" => "council",
   "MERCHANDISE-PURCHASE" => "usli",
@@ -63,20 +62,18 @@ my %responsible = (
   "PERSONELL-SLIWINSKI" => "council",
   "PERSONELL-MALAJA" => "council",
   "PERSONELL-MEHL" => "council",
-  "PERSONELL-OBERG" => "council",
   "OFFICE-BERLIN" => "usli",
 );
 
 my %account = (
-  "PA-OUTREACH" => "2513",
+  "PA-EVENTS" => "2513",
   "PA-MATERIAL" => "2514",
-  "PA-CAMPAIGN" => "2515",
-  "LEGAL-TRAVEL" => "2533",
+  "PA-CAMPAIGNS" => "2515",
+  "LEGAL-EVENTS" => "2533",
   "LEGAL-ORG" => "2535",
-  "POLICY-TRAVEL" => "2543",
-  "POLICY-CAMPAIGN" => "2545",
-  "POLICY-DEV" => "2546",
-  "REUSE-TRAVEL" => "6113",
+  "POLICY-EVENTS" => "2543",
+  "POLICY-CAMPAIGNS" => "2545",
+  "REUSE-EVENTS" => "6113",
   "REUSE-MATERIAL" => "6114",
   "REUSE-OTHER" => "6110",
   "MERCHANDISE-PURCHASE" => "8154",
@@ -91,7 +88,6 @@ my %account = (
   "PERSONELL-SLIWINSKI" => "81036",
   "PERSONELL-MALAJA" => "81040",
   "PERSONELL-MEHL" => "81042",
-  "PERSONELL-OBERG" => "81201",
   "OFFICE-BERLIN" => "82001",
 );
 

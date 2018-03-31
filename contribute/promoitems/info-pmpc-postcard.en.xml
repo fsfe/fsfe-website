@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="pmpc-postcard">
+    <!-- Leave a tag like <printready> blank or erase it if you don't
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in
+    /tools/texts-**.xml -->
+    <name>Public Money, Public Code - Postcard</name>
+    <description>
+        A postcard to be used by you for the PMPC compaign.
+    </description>
+    <type>Postcard</type>
+    <size>154 x 111 mm</size>
+    <context><a href="https://publiccode.eu/">Public Money, Public Code campaign</a></context>
+    <languages>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/PMPC/PMPC_postcard_empty_back.pdf">English</a>
+    </languages>
+    <printed>
+      English.
+    </printed>
+    <license><a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></license>
+    <author>Markus Meier</author>
+    <source><a href="https://download.fsfe.org/advocacy/promomaterial/PMPC/sources/PMPC_postcard_empty_back.sla">PMPC_postcard_empty_back.sla in download.fsfe.org</a></source>
+    <printready></printready>
+  </info>
+</infoset>

@@ -25,16 +25,14 @@ use POSIX qw(strftime);
 # -----------------------------------------------------------------------------
 
 my %names = (
-  "fellowship" => "Local FSFE Group",
-  "albers" => "Erik Albers",
-  "oberg" => "Jonas Öberg",
-  "kirschner" => "Matthias Kirschner",
-  "mehl" => "Max Mehl",
-  "mueller" => "Reinhard Müller",
-  "rubini" => "Alessandro Rubini",
-  "lohmus" => "Heiki Lohmus",
-  "sliwinski" => "Ulrike Sliwinski",
-  "malaja" => "Polina Malaja",
+  "eal" => "Erik Albers",
+  "mk" => "Matthias Kirschner",
+  "repentinus" => "Heiki Lohmus",
+  "polina" => "Polina Malaja",
+  "max.mehl" => "Max Mehl",
+  "reinhard" => "Reinhard Müller",
+  "jonas" => "Jonas Öberg",
+  "usli" => "Ulrike Sliwinski",
 );
 
 # -----------------------------------------------------------------------------
@@ -42,64 +40,59 @@ my %names = (
 # -----------------------------------------------------------------------------
 
 my %responsible = (
-  "ADMIN-COORD" => "kirschner",
-  "ADMIN-GA" => "kirschner",
-  "ADMIN-TECH" => "kirschner",
-  "ADMIN-FUNDRAISING" => "kirschner",
-  "GR-TRAINING" => "kirschner",
-  "GR-LOCAL" => "kirschner",
-  "PA-OUTREACH" => "kirschner",
-  "PA-MATERIAL" => "kirschner",
-  "PA-CAMPAIGN" => "kirschner",
-  "NET-ORG" => "kirschner",
-  "NET-TRAVEL" => "kirschner",
-  "POLICY-TRAVEL" => "kirschner",
-  "POLICY-DEV" => "kirschner",
-  "POLICY-CAMPAIGN" => "kirschner",
-  "MERCHANDISE-PURCHASE" => "sliwinski",
-  "MERCHANDISE-OTHER" => "sliwinski",
-  "REUSE-OTHER" => "kirschner",
-  "REUSE-TRAVEL" => "kirschner",
-  "REUSE-MATERIAL" => "kirschner",
-  "PERSONELL-INTERN" => "kirschner",
-  "PERSONELL-KIRSCHNER" => "kirschner",
-  "PERSONELL-ALBERS" => "kirschner",
-  "PERSONELL-SLIWINSKI" => "kirschner",
-  "PERSONELL-MEHL" => "kirschner",
-  "PERSONELL-OBERG" => "kirschner",
-  "PERSONELL-MALAJA" => "kirschner",
-  "OFFICE-BERLIN" => "sliwinski",
+  "PA-EVENTS" => "council",
+  "PA-MATERIAL" => "council",
+  "PA-CAMPAIGNS" => "council",
+  "LEGAL-EVENTS" => "council",
+  "LEGAL-ORG" => "council",
+  "POLICY-EVENTS" => "council",
+  "POLICY-CAMPAIGNS" => "council",
+  "FOSS4SME-EVENTS" => "council",
+  "FOSS4SME-OTHER" => "council",
+  "REUSE-EVENTS" => "council",
+  "REUSE-MATERIAL" => "council",
+  "REUSE-OTHER" => "council",
+  "MERCHANDISE-PURCHASE" => "usli",
+  "MERCHANDISE-OTHER" => "usli",
+  "INTERNAL-COORD" => "council",
+  "INTERNAL-GA" => "council",
+  "INTERNAL-TECH" => "council",
+  "INTERNAL-FUNDRAISING" => "council",
+  "PERSONELL-INTERN" => "council",
+  "PERSONELL-KIRSCHNER" => "council",
+  "PERSONELL-ALBERS" => "council",
+  "PERSONELL-SLIWINSKI" => "council",
+  "PERSONELL-MALAJA" => "council",
+  "PERSONELL-MEHL" => "council",
+  "OFFICE-BERLIN" => "usli",
 );
 
 my %account = (
-  "ADMIN-COORD" => "2504",
-  "ADMIN-GA" => "2505",
-  "ADMIN-TECH" => "2506",
-  "ADMIN-FUNDRAISING" => "2509",
-  "GR-TRAINING" => "2527",
-  "GR-LOCAL" => "2526",
-  "PA-OUTREACH" => "2513",
+  "PA-EVENTS" => "2513",
   "PA-MATERIAL" => "2514",
-  "PA-CAMPAIGN" => "2515",
-  "NET-TRAVEL" => "2533",
-  "NET-ORG" => "2535",
-  "POLICY-TRAVEL" => "2543",
-  "POLICY-DEV" => "2546",
-  "POLICY-CAMPAIGN" => "2545",
+  "PA-CAMPAIGNS" => "2515",
+  "LEGAL-EVENTS" => "2533",
+  "LEGAL-ORG" => "2535",
+  "POLICY-EVENTS" => "2543",
+  "POLICY-CAMPAIGNS" => "2545",
+  "FOSS4SME-EVENTS" => "2553",
+  "FOSS4SME-OTHER" => "2550",
+  "REUSE-EVENTS" => "6113",
+  "REUSE-MATERIAL" => "6114",
+  "REUSE-OTHER" => "6110",
   "MERCHANDISE-PURCHASE" => "8154",
   "MERCHANDISE-OTHER" => "8159",
-  "REUSE-OTHER" => "6110",
-  "REUSE-TRAVEL" => "6113",
-  "REUSE-MATERIAL" => "6114",
+  "INTERNAL-COORD" => "2504",
+  "INTERNAL-GA" => "2505",
+  "INTERNAL-TECH" => "2506",
+  "INTERNAL-FUNDRAISING" => "2509",
   "PERSONELL-INTERN" => "81000",
   "PERSONELL-KIRSCHNER" => "81012",
   "PERSONELL-ALBERS" => "81021",
   "PERSONELL-SLIWINSKI" => "81036",
-  "PERSONELL-MEHL" => "81042",
-  "PERSONELL-OBERG" => "81201",
   "PERSONELL-MALAJA" => "81040",
+  "PERSONELL-MEHL" => "81052",
   "OFFICE-BERLIN" => "82001",
-  "OFFICE-DUSSELDORF" => "82002",
 );
 
 # -----------------------------------------------------------------------------
@@ -108,42 +101,22 @@ my %account = (
 
 my $query = new CGI;
 
+my $catch_phrase = $query->param("catch_phrase");
 my $who = $query->param("who");
 my $what = $query->param("what");
 my $when = $query->param("when");
 my $why = $query->param("why");
 my $estimate = $query->param("estimate");
-my $budget1 = $query->param("budget1");
-my $percent1 = $query->param("percent1");
-my $budget2 = "NONE"; # $query->param("budget2");
-my $percent2 = $query->param("percent2");
+my $budget = $query->param("budget");
 my $refund = $query->param("refund");
-my $catch_phrase = $query->param("catch_phrase");
 
-my $date = strftime "%Y-%m-%d", localtime;
-my $time = strftime "%s", localtime;
-my $account1 = $account{$budget1};
-my $account2 = "";
-if ($budget2 ne "NONE") {
-  $account2 = $account{$budget2};
-}
-my $reference = "er.$date." . substr $time, -3;
-$reference .= ".$account1";
-if ($budget2 ne "NONE") {
-  $reference .= "+$account2";
-}
+my $date = strftime("%Y-%m-%d", localtime);
+my $time = strftime("%s", localtime);
+my $account = $account{$budget};
+my $reference = "er.$date." . substr($time, -3) . ".$account";
 
-my $to1 = $responsible{$budget1};
-my $to2 = "";
-if ($budget2 ne "NONE") {
-  $to2 = $responsible{$budget2};
-}
-
-my $subject = "Expense Request $reference $catch_phrase ($budget1";
-if ($budget2 ne "NONE") {
-  $subject .= "+$budget2";
-}
-$subject .= ")";
+my $to = $responsible{$budget};
+my $subject = "Expense Request $reference $catch_phrase ($budget)";
 
 # -----------------------------------------------------------------------------
 # Generate mail to responsible person
@@ -151,25 +124,14 @@ $subject .= ")";
 
 my $boundary = "NextPart$reference";
 
-my $replyto = "finance\@fsfeurope.org, $to1\@fsfeurope.org";
-if ($who ne "fellowship") {
-  $replyto .= ", $who\@fsfeurope.org";
-}
+my $replyto = "finance\@fsfe.org, $to\@fsfe.org, $who\@fsfe.org";
 
-if ($budget2 ne "NONE") {
-  $replyto .= ", $to2\@fsfeurope.org";
-}
-
-open(MAIL, "|/usr/lib/sendmail -t -f $who\@fsfeurope.org");
-print MAIL "From: $who\@fsfeurope.org\n";
+open(MAIL, "|/usr/lib/sendmail -t -f $who\@fsfe.org");
+print MAIL "From: $who\@fsfe.org\n";
 print MAIL "Reply-To: $replyto\n";
 print MAIL "Mail-Followup-To: $replyto\n";
-if ($budget2 ne "NONE") {
-  print MAIL "To: $to1\@fsfeurope.org, $to2\@fsfeurope.org\n";
-} else {
-  print MAIL "To: $to1\@fsfeurope.org\n";
-}
-print MAIL "CC: $who\@fsfeurope.org\n";
+print MAIL "To: $to\@fsfe.org\n";
+print MAIL "CC: $who\@fsfe.org\n";
 print MAIL "BCC: auto-er\@fsfeurope.org\n";
 print MAIL "Subject: $subject\n";
 print MAIL "Mime-Version: 1.0\n";
@@ -185,11 +147,7 @@ print MAIL "WHAT: $what\n\n";
 print MAIL "WHEN: $when\n\n";
 print MAIL "WHY: $why\n\n";
 print MAIL "ESTIMATE: $estimate\n\n";
-if ($budget2 ne "NONE") {
-  print MAIL "BUDGET: $budget1 ($account1) $percent1\% $budget2 ($account2) $percent2\%\n\n";
-} else {
-  print MAIL "BUDGET: $budget1 ($account1)\n\n";
-}
+print MAIL "BUDGET: $budget ($account)\n\n";
 print MAIL "REFUND CONTACT: $refund\n\n";
 print MAIL "AUTHORISED:\n\n";
 print MAIL "BY:\n\n";
@@ -209,9 +167,5 @@ print "WHAT: $what<br />\n\n";
 print "WHEN: $when<br />\n\n";
 print "WHY: $why<br />\n\n";
 print "ESTIMATE: $estimate<br />\n\n";
-if ($budget2 ne "NONE") {
-  print "BUDGET: $budget1 $percent1\% $budget2 $percent2\%<br />\n\n";
-} else {
-  print "BUDGET: $budget1<br />\n\n";
-}
+print "BUDGET: $budget<br />\n\n";
 print "REFUND CONTACT: $refund<br />\n\n";

@@ -1,0 +1,87 @@
+#!/bin/bash
+# ==============================================================================
+# Fill in placeholder fields in an ODT file
+# ==============================================================================
+# Copyright © 2017,2018 Reinhard Müller <reinhard@fsfe.org>
+# This work is free. You can redistribute it and/or modify it under the
+# terms of the Do What The Fuck You Want To Public License, Version 2,
+# as published by Sam Hocevar. See http://www.wtfpl.net/ for more details.
+# ==============================================================================
+# example:
+# odtfill template.odt out.odt repeat=2 Recipient="Fred Bloggs\nHope Road 17" Means="Credit card payment" Type="Pin" Type="T-Shirt, L"
+
+if [ -z "$3" ]; then
+  echo "Usage: $(basename $0) INFILE.odt OUTFILE.odt PLACEHOLDER=VALUE ..."
+  exit 0
+fi
+
+infile=$(readlink --canonicalize-missing "$1")
+outfile=$(readlink --canonicalize-missing "$2")
+shift
+shift
+
+# ------------------------------------------------------------------------------
+# Unpack the ODT file into a temporary directory
+# ------------------------------------------------------------------------------
+
+tmpdir=/tmp/odtfill.$$
+
+mkdir "${tmpdir}"
+cd "${tmpdir}"
+
+unzip -q "${infile}"
+
+# ------------------------------------------------------------------------------
+# Replace the content of the placeholders
+# ------------------------------------------------------------------------------
+
+while [ "$1" ]; do
+  # Split parameter name=value into name and value parts
+  name="${1%=*}"
+  value="${1#*=}"
+
+  if [ "${name}" == "$1" ]; then
+    echo "WARNING: ignoring invalid parameter '$1' (not in required format PLACEHOLDER=VALUE)"
+    shift
+    continue
+  fi
+
+  if [ "${name}" == "repeat" ]; then
+    replacement=""
+    for i in $(seq ${value}); do
+      replacement="${replacement}<table:table-row\\1</table:table-row>"
+    done
+    # Insert special marker after the first </table:table-row>, needed because
+    # sed is always greedy and would replace up to the last table-row in the
+    # whole document
+    sed --in-place --expression="s%</table:table-row>%&HERE%" content.xml
+    sed --in-place --expression="s%<table:table-row\\(.*\\)</table:table-row>HERE%${replacement}%" content.xml
+    shift
+    continue
+  fi
+
+  # Replace some special characters with what they need to be in ODT
+  value="${value//&/&amp;}"
+  value="${value//</&lt;}"
+  value="${value//>/&gt;}"
+  value="${value//\\n/<text:line-break/>}"
+
+  # Escape % and & for sed
+  value="${value//%/\\%}"
+  value="${value//&/\\&}"
+
+  # Now do the replacement
+  sed --in-place --expression="s%<text:placeholder[^>]*>&lt;${name}&gt;</text:placeholder>%${value}%g" content.xml
+
+  # Next please...
+  shift
+done
+
+# ------------------------------------------------------------------------------
+# Build final ODT file and clean up
+# ------------------------------------------------------------------------------
+
+zip -q "${outfile}" -r *
+
+cd ${OLDPWD}
+rm --recursive "${tmpdir}"

@@ -20,7 +20,7 @@ function gen_alnum($digits){
 
 function relay_donation($orderID) {
   $name = $_POST['name'];
-  $email = $_POST['email'];
+  $email = $_POST['mail'];
   $amount100 = $_POST['donate'] * 100;
   $language = $_POST['language'];
   $lang = substr($language, 0, 2);
@@ -65,14 +65,12 @@ function relay_donation($orderID) {
 function send_mail ( $to, $from, $subject, $message, $bcc = NULL, $att = NULL, $att_type = NULL, $att_name = NULL ) {
   $headers = "From: $from\r\n";
   if ( isset( $bcc )) { $headers .= "Bcc: $bcc" . "\r\n"; }
+  $headers .= "X-OTRS-Queue: Shipping::Promo Material Orders\r\n";
   if ( isset( $_POST["donationID"])) {
     $headers .= "X-OTRS-DynamicField-OrderID: " . $_POST["donationID"] . "\r\n";
     $headers .= "X-OTRS-DynamicField-OrderAmount: " . $_POST["donate"] . "\r\n";
   }
   $headers .= "X-OTRS-DynamicField-OrderLanguage: " . $_POST["language"] . "\r\n";
-  $headers .= "X-OTRS-DynamicField-OrderState: order\r\n";
-  
-  $message = nl2br( $message );
   
   if ( $att ) {
     $eol = PHP_EOL;
@@ -86,7 +84,7 @@ function send_mail ( $to, $from, $subject, $message, $bcc = NULL, $att = NULL, $
      
     // message
     $headers .= "--".$separator.$eol;
-    $headers .= "Content-Type: text/html; charset=\"UTF-8\"".$eol;
+    $headers .= "Content-Type: text/plain; charset=\"UTF-8\"".$eol;
     $headers .= "Content-Transfer-Encoding: 8bit".$eol.$eol;
     $headers .= $message.$eol.$eol;
      
@@ -99,7 +97,7 @@ function send_mail ( $to, $from, $subject, $message, $bcc = NULL, $att = NULL, $
     $headers .= $att_f.$eol.$eol;
     $headers .= "--".$separator."--";
   } else {
-    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
+    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
   }
   
   return mail( $to, $subject, $message, $headers );
@@ -109,23 +107,26 @@ $lang = $_POST['language'];
 
 # Sanity checks (*very* sloppy input validation)
 if (empty($_POST['lastname'])  ||
-    empty($_POST['email'])     ||
+    empty($_POST['mail'])     ||
     empty($_POST['street'])    ||
     empty($_POST['zip'])       ||
     empty($_POST['city'])      ||
     empty($_POST['country'])   ||
     empty($_POST['specifics']) ||
-   !empty($_POST['url']) ) {
+   !empty($_POST['address']) ) {
 
   header("Location: http://fsfe.org/contribute/spreadtheword-ordererror.$lang.html");
   exit();
 }
 
-$subject = "[promo order] {$_POST['firstname']} {$_POST['lastname']}";
-$msg = "Hey, someone ordered promotional material:\n".
+# Without this, escapeshellarg() will eat non-ASCII characters.
+setlocale(LC_CTYPE, "en_US.UTF-8");
+
+$subject = "Promotion material order";
+$msg = "Please send me promotional material:\n".
        "First Name: {$_POST['firstname']}\n".
        "Last Name:  {$_POST['lastname']}\n".
-       "EMail:      {$_POST['email']}\n".
+       "EMail:      {$_POST['mail']}\n".
        "\n".
        "Address:\n".
        "{$_POST['firstname']} " . "{$_POST['lastname']}\n";
@@ -155,7 +156,23 @@ if (isset($_POST['donate']) && ($_POST['donate'] > 0)) {
           "confirmation from Concardis for the order: {$_POST['donationID']}";
 }
 
-$test = send_mail ( "contact@fsfe.org", $_POST['email'], $subject, $msg );
+# Generate letter to be sent along with the material
+$odtfill = $_SERVER["DOCUMENT_ROOT"] . "/cgi-bin/odtfill";
+$template = $_SERVER["DOCUMENT_ROOT"] . "/templates/promotionorder.odt";
+$outfile = "/tmp/promotionorder.odt";
+$name = $_POST['firstname'] . " " . $_POST['lastname'];
+$address = "";
+if (!empty($_POST['org'])) {
+  $address .= $_POST['org'] . "\\n";
+}
+$address .= $_POST['street'] . "\\n" .
+            $_POST['zip'] . " " . $_POST['city'] . "\\n" .
+            $_POST['country'];
+$name = escapeshellarg($name);
+$address = escapeshellarg($address);
+shell_exec("$odtfill $template $outfile Name=$name Address=$address");
+
+$test = send_mail ("contact@fsfe.org", $_POST['firstname'] . " " . $_POST['lastname'] . " <" . $_POST['mail'] . ">", $subject, $msg, NULL, file_get_contents($outfile), "application/vnd.oasis.opendocument.text", "letter.odt");
 
 if (isset($_POST['donate']) && ($_POST['donate'] > 0)) {
   relay_donation($_POST['donationID']);

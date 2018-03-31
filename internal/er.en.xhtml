@@ -11,18 +11,23 @@
     <form action="/cgi-bin/expense-request.pl" method="post">
       <table>
         <tr>
-          <td><p>Who (if you select Local FSFE Group here, please give your email address in one of the other fields, so we can get back to you!):</p></td>
+          <td><p>Catch phrase:</p></td>
+          <td>
+            <input type="text" size="80" style="width:500px" name="catch_phrase"/>
+          </td>
+        </tr>
+        <tr>
+          <td><p>Who:</p></td>
           <td>
             <select name="who" size="1">
-              <option value="fellowship">Local FSFE Group</option>
-              <option value="albers">Erik Albers</option>
-	      <option value="oberg">Jonas Öberg</option>
-              <option value="kirschner">Matthias Kirschner</option>
-              <option value="mehl">Max Mehl</option>
-              <option value="mueller">Reinhard Müller</option>
-              <option value="lohmus">Heiki Lohmus</option>
-              <option value="sliwinski">Ulrike Sliwinski</option>
-              <option value="malaja">Polina Malaja</option>
+              <option value="eal">Erik Albers</option>
+              <option value="mk">Matthias Kirschner</option>
+              <option value="repentinus">Heiki Lohmus</option>
+              <option value="polina">Polina Malaja</option>
+              <option value="max.mehl">Max Mehl</option>
+              <option value="reinhard">Reinhard Müller</option>
+	      <option value="jonas">Jonas Öberg</option>
+              <option value="usli">Ulrike Sliwinski</option>
             </select>
           </td>
         </tr>
@@ -53,91 +58,39 @@
         <tr>
           <td><p>Budget:</p></td>
           <td>
-            <select name="budget1" size="1">
-              <option value="ADMIN-COORD">ADMIN Coordination</option>
-              <option value="ADMIN-GA">ADMIN General Assembly</option>
-              <option value="ADMIN-TECH">ADMIN technical infrastructure</option>
-              <option value="ADMIN-FUNDRAISING">ADMIN fundraising</option>
-              <option value="GR-TRAINING">GROWING training activists</option>
-              <option value="GR-LOCAL">GROWING local activities incl travel</option>
-              <option value="PA-OUTREACH">PA outreach (events)</option>
+            <select name="budget" size="1">
+              <option value="PA-EVENTS">PA participation in non-internal events and meetings</option>
               <option value="PA-MATERIAL">PA information material</option>
-              <option value="PA-CAMPAIGN">PA specific campaigns</option>
-              <option value="NET-TRAVEL">NETWORK travel costs</option>
-              <option value="NET-ORG">NETWORK workshops/conferences</option>
-              <option value="POLICY-TRAVEL">POLICY travel costs</option>
-              <option value="POLICY-CAMPAIGN">POLICY campaigns</option>
-              <option value="POLICY-DEV">POLICY development</option>
-              <option value="MERCHANDISE-PURCHASE">MERCHANDISE purchase of goods</option>
-              <option value="MERCHANDISE-OTHER">MERCHANDISE packing, shipping, and other costs</option>
-              <option value="REUSE-TRAVEL">REUSE travel costs</option>
+              <option value="PA-CAMPAIGNS">PA specific campaigns</option>
+              <option value="LEGAL-EVENTS">LEGAL perticipation in non-internal events and meetings</option>
+              <option value="LEGAL-ORG">LEGAL workshop</option>
+              <option value="POLICY-EVENTS">POLICY participation in non-internal events and meetings</option>
+              <option value="POLICY-CAMPAIGNS">POLICY campaigns</option>
+              <option value="FOSS4SME-EVENTS">FOSS4SMEs participation in non-internal events and meetings</option>
+              <option value="FOSS4SME-OTHER">FOSS4SMEs other costs</option>
+              <option value="REUSE-EVENTS">REUSE participation in non-internal events and meetings</option>
               <option value="REUSE-MATERIAL">REUSE information material</option>
               <option value="REUSE-OTHER">REUSE other costs</option>
-              <option value="PERSONELL-INTERN">PERSONELL Interns</option>
-              <option value="PERSONELL-KIRSCHNER">PERSONELL Matthias Kirschner</option>
-              <option value="PERSONELL-ALBERS">PERSONELL Erik Albers</option>
-              <option value="PERSONELL-SLIWINSKI">PERSONELL Ulrike Sliwinski</option>
-              <option value="PERSONELL-MALAJA">PERSONELL Polina Malaja</option>
-              <option value="PERSONELL-MEHL">PERSONELL Max Mehl</option>
-              <option value="PERSONELL-OBERG">PERSONELL Jonas Öberg (includes homeoffice)</option>
-              <option value="OFFICE-BERLIN">OFFICE Berlin</option>
-            </select>
-          </td>
-        </tr>
-        <!-- tr>
-          <td><p>Percentage 1:</p></td>
-          <td>
-            <input type="text" size="80" style="width:500px" name="percent1"/>
-          </td>
-        </tr>
-        <tr>
-          <td><p>Budget 2:</p></td>
-          <td>
-            <select name="budget2" size="1">
-              <option value="NONE">No second budget</option>
-              <option value="ADMIN-COORD">ADMIN coordination</option>
-              <option value="ADMIN-GA">ADMIN General Assembly</option>
-              <option value="ADMIN-TECH">ADMIN technical infrastructure</option>
-              <option value="ADMIN-FUNDRAISING">ADMIN fundraising</option>
-              <option value="GR-TRAINING">GROWING training activists incl travel</option>
-              <option value="GR-LOCAL">GROWING local activities</option>
-              <option value="PA-OUTREACH">PA outreach (events)</option>
-              <option value="PA-MATERIAL">PA information material</option>
-              <option value="PA-CAMPAIGN">PA campaigns</option>
-              <option value="NET-TRAVEL">NETWORK travel costs</option>
-              <option value="NET-ORG">NETWORK workshops/conferences</option>
-              <option value="POLICY-TRAVEL">POLICY travel costs</option>
-              <option value="POLICY-CAMPAIGN">POLICY campaigns</option>
-              <option value="POLICY-DEV">POLICY development</option>
               <option value="MERCHANDISE-PURCHASE">MERCHANDISE purchase of goods</option>
-              <option value="MERCHANDISE-SHIPPING">MERCHANDISE shipping costs</option>
+              <option value="MERCHANDISE-OTHER">MERCHANDISE packing, shipping, and other costs</option>
+              <option value="INTERNAL-COORD">INTERNAL Coordination</option>
+              <option value="INTERNAL-GA">INTERNAL General Assembly</option>
+              <option value="INTERNAL-TECH">INTERNAL technical infrastructure</option>
+              <option value="INTERNAL-FUNDRAISING">INTERNAL fundraising</option>
               <option value="PERSONELL-INTERN">PERSONELL Interns</option>
               <option value="PERSONELL-KIRSCHNER">PERSONELL Matthias Kirschner</option>
               <option value="PERSONELL-ALBERS">PERSONELL Erik Albers</option>
               <option value="PERSONELL-SLIWINSKI">PERSONELL Ulrike Sliwinski</option>
-              <option value="PERSONELL-MEHL">PERSONELL Max Mehl</option>
               <option value="PERSONELL-MALAJA">PERSONELL Polina Malaja</option>
-              <option value="PERSONELL-OBERG">PERSONELL Jonas Öberg (includes homeoffice)</option>
+              <option value="PERSONELL-MEHL">PERSONELL Max Mehl</option>
               <option value="OFFICE-BERLIN">OFFICE Berlin</option>
             </select>
           </td>
         </tr>
-        <tr>
-          <td><p>Percentage 2:</p></td>
-          <td>
-            <input type="text" size="80" style="width:500px" name="percent2"/>
-          </td>
-        </tr -->
         <tr>
           <td><p>Refund Contact:</p></td>
           <td>
             <input type="text" size="80" style="width:500px" name="refund"/>
-          </td>
-        </tr>
-        <tr>
-          <td><p>Catch phrase:</p></td>
-          <td>
-            <input type="text" size="80" style="width:500px" name="catch_phrase"/>
           </td>
         </tr>
       </table>
@@ -147,7 +100,6 @@
       </center>
     </form>
   </body>
-
 
   <timestamp>$Date$ $Author$</timestamp>
 </html>

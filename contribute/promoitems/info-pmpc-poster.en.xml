@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="pmpc-poster">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Public Money, Public code - Poster</name>
+    <description>
+      The poster to promote our <a href="https://publiccode.eu/">"Public Money, Public Code" campaign</a> for which there are stickers and postcards available, too.
+    </description>
+    <type>Poster</type>
+    <size>A2</size>
+    <context><a href="https://publiccode.eu/">Public Money, Public Code campaign</a></context>
+
+<!-- everything below this line uses native language names for each language or technical abbreviations respectively, so there is no need to transalate it from here on -->
+
+    <languages>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/PMPC/FSFE_PMPC_Poster_A2_v3.pdf">English</a>,
+    </languages>
+    <printed>
+      English
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <author>Free Software Foundation Europe</author>
+    <source><a href="https://download.fsfe.org/advocacy/promomaterial/PMPC/sources/FSFE_PMPC_Poster_A2.sla">FSFE_PMPC_Poster_A2.sla in download.fsfe.org</a></source>
+    <printready></printready>
+  </info>
+</infoset>

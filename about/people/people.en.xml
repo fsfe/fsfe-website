@@ -176,6 +176,17 @@
     <email>cw (at) fsfe (dot) org</email>
   </person>
 
+  <person id="daffre" avatar="yes" teams="ch, zurich">
+    <name>Gian-Maria Daffré</name>
+    <country>CH</country>
+    <function country="CH">deputy/m</function>
+    <function group="zurich">coordinator/m</function>
+    <email>swaechter (at) fsfe (dot) org</email> 
+    <email></email>
+    <avatar>/fellowship/graphics/people/gianmariadaffre-avatar.jpg</avatar>
+  </person>
+
+
   <person id="darrington" avatar="no" teams="munich">
     <name>John Darrington</name>
     <country>DE</country>
@@ -274,6 +285,14 @@
     <avatar>/fellowship/graphics/people/simonhornbacher-avatar.jpg</avatar>
   </person>
 
+  <person id="indorato" avatar="no" teams="core">
+    <name>Francesca Indorato</name>
+    <country>DE</country>
+    <email>fi (at) fsfe (dot) org</email>
+    <employee>part/f</employee>
+    <function id="office/f">Office</function>
+  </person>
+
   <person id="jean" avatar="yes" teams="fr, core">
     <name>Nicolas Jean</name>
     <country>FR</country>
@@ -365,6 +384,14 @@
     <avatar>/about/koch/koch-avatar.jpg</avatar>
   </person>
 
+  <person id="lequertier" avatar="no" teams="intern">
+    <name>Vincent Lequertier</name>
+    <country>DE</country>
+    <email>vincent (at) fsfe (dot) org</email>
+    <employee>full/m</employee>
+    <function>intern/m</function>
+  </person>
+
   <person id="lindfors" avatar="no" teams="fi">
     <name>Timo Juhani Lindfors</name>
     <country>FI</country>
@@ -421,10 +448,10 @@
   </person>
 
   <person id="moeller" avatar="yes" teams="core, ch">
-    <name>Patricia Möller</name>
+    <name>Marcus Möller</name>
     <country>CH</country>
     <function country="CH">deputy/f</function>
-    <email>pati (at) fsfe (dot) org</email>
+    <email>mmoeller (at) fsfe (dot) org</email>
     <avatar>/about/moeller/moeller-avatar.jpg</avatar>
   </person>
 
@@ -477,12 +504,10 @@
     <avatar>/about/piana/piana-avatar.jpg</avatar>
   </person>
 
-  <person id="kristiprogri" avatar="no" teams="intern">
+  <person id="kristiprogri" avatar="no" teams="">
     <name>Kristi Progri</name>
     <country>AL</country>
-    <function>intern/f</function>
     <email>kristiprogri (at) fsfe (dot) org</email>
-    <employee>full/f</employee>
   </person>
   
   <person id="pocock" teams="ga, representatives">
@@ -661,11 +686,9 @@
     <avatar>/about/verheesen/mo-avatar.jpg</avatar>
   </person>
 
-  <person id="waechter" avatar="yes" teams="ch, zurich">
+  <person id="waechter" avatar="yes" teams="">
     <name>Simon Wächter</name>
     <country>CH</country>
-    <function country="CH">coordinator/m</function>
-    <function group="zurich">coordinator/m</function>
     <email>swaechter (at) fsfe (dot) org</email>
     <link>http://wiki.fsfe.org/Fellows/swaechter</link>
     <avatar>/fellowship/graphics/people/swaechter-avatar.jpeg</avatar>
@@ -677,6 +700,14 @@
     <email>nanda (at) fsfe (dot) org</email>
     <link>/about/weiden/weiden.html</link>
     <avatar>/about/weiden/weiden-avatar.jpg</avatar>
+  </person>
+
+  <person id="weymeirsch" avatar="no" teams="intern">
+    <name>Jan Weymeirsch</name>
+    <country>DE</country>
+    <email>janwey (at) fsfe (dot) org</email>
+    <employee>full/m</employee>
+    <function>intern/m</function>
   </person>
 
   <person id="widerstroem" avatar="no" teams="at, core">

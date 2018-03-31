@@ -80,14 +80,13 @@ my $reference = "MP" . $date . substr($time, -4) . sprintf("%03u", $amount);
 # Generate mail to office
 # -----------------------------------------------------------------------------
 
-open(MAIL, "|/usr/lib/sendmail -t -f office\@fsfe.org");
+open(MAIL, "|/usr/lib/sendmail -t -f contact\@fsfe.org");
 print MAIL "From: $name <$email>\n";
-print MAIL "To: order\@fsfeurope.org\n";
-print MAIL "Cc: mueller\@fsfeurope.org\n";
+print MAIL "To: contact\@fsfe.org\n";
+print MAIL "X-OTRS-Queue: Finance::Merchandise Orders\n";
 print MAIL "X-OTRS-DynamicField-OrderID: $reference\n";
 print MAIL "X-OTRS-DynamicField-OrderAmount: $amount\n";
 print MAIL "X-OTRS-DynamicField-OrderLanguage: $language\n";
-print MAIL "X-OTRS-DynamicField-OrderState: order\n";
 print MAIL "Content-Transfer-Encoding: 8bit\n";
 print MAIL "Content-Type: text/plain; charset=\"UTF-8\"\n";
 print MAIL "Subject: $reference\n\n";

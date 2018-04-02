@@ -87,6 +87,7 @@ print MAIL "X-OTRS-Queue: Finance::Merchandise Orders\n";
 print MAIL "X-OTRS-DynamicField-OrderID: $reference\n";
 print MAIL "X-OTRS-DynamicField-OrderAmount: $amount\n";
 print MAIL "X-OTRS-DynamicField-OrderLanguage: $language\n";
+print MAIL "X-OTRS-DynamicField-OrderState: order\n";
 print MAIL "Content-Transfer-Encoding: 8bit\n";
 print MAIL "Content-Type: text/plain; charset=\"UTF-8\"\n";
 print MAIL "Subject: $reference\n\n";

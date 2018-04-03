@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="plussy-sticker">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Adesivo Plussy</name>
+    <description>
+        Plussy è il simbolo della nostra comunità. Lo sfondo dell'adesivo è trasparente,
+        così è possibile integrarlo in ogni contesto; non solamente dietro lo schermo di un portatile.
+    </description>
+    <type>Adesivo</type>
+    <size>Grande (74 x 74 mm) e piccolo (52 x 52 mm) </size>
+    <context><a href="https://fsfe.org/fellowship/ams/join.php?ams=join">Unisciti alla FSFE</a></context>
+    <languages>
+      <a href="http://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/FSFE-plussy_72x72_v2.sla">SLA</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/FSFE-plussy.png">PNG</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/FSFE-plussy_72x72_v2.pdf">PDF</a>, <a href="http://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/FSFE-plussy.svg">SVG</a>
+    </languages>
+    <printed>
+      tutte le lingue
+    </printed>
+    <license>Il "Logo Fellowship" (e le sue varianti) possono essere utilizzati ed esposti per pubblicizzare l'attività della FSFE e della sua comunità durante attività intraprese da sostenitori della FSFE, relative a qualsiasi Software libero. In ogni modo, se non vi è stato dato l'incarico di rappresentare la FSFE, vi chiediamo di non creare la falsa impressione di parlare ufficialmente a nome della FSFE, nè che quest'ultima abbia promosso o approvato ufficialment ciò che state facendo.</license>
+    <author>Free Software Foundation Europe</author>
+    <source>
+        <a href="http://download.fsfe.org/advocacy/promomaterial/FSFE/PlussySticker/" title="Plussy sticker sources">Plussy* in download.fsfe.org</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

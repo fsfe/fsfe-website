@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <info id="dfd-os-sticker-big">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Adesivo Open Standard (120x120mm)</name>
+    <description>
+     L'adesivo "Open Standards" pubblicizza la campagna del <a href="http://documentfreedom.org/">Document Freedom Day</a>. I tre robot sono il logo dell'iniziativa.
+    </description>
+    <type>Adesivo</type>
+    <size>12 x 12 cm</size>
+    <context><a href="http://documentfreedom.org/">Document Freedom Day</a></context>
+    <languages>
+		<a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_Protest_ROBOTS_120x120.pdf">English</a>
+    </languages>
+    <printed>
+		English
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <author>Free Software Foundation Europe</author>
+    <source>
+		<a href="http://download.fsfe.org/advocacy/promomaterial/DFD/DFD_Protest_ROBOTS_120x120_sources.tar.gz">English</a>
+    </source> 
+    <printready></printready>
+  </info>
+
+</infoset>

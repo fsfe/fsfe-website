@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html>
+  <head>
+    <title>Kondig uw FSFE-gemeenschapsevenement aan</title>
+  </head>
+  <body>
+ 
+    <h1>Kondig uw FSFE-gemeenschapsevenement aan</h1>
+
+    <div id="introduction">
+      <p>Use the form below to announce every event that is related to a FSFE activity. If it's a meeting or a talk, if it's a booth in the streets or a radio podcast: Let the community and the world know what's happening.</p>
+
+    </div>
+
+        <!--<h2>Registreer</h2>-->
+
+        <form action="/cgi-bin/registerevent.php" method="POST" class="register_event fsfe-form" enctype="multipart/form-data" role="form">
+          <input name="register_event" type="hidden" />
+
+            <!--<fieldset id="register_event">-->
+
+            <label for="name" class="required">Uw naam<span class="star">*</span></label>
+            <input name="name" value="" required="required" type="text" />
+
+            <label for="email" class="required">Uw e-mail<span class="star">*</span></label>
+            <input name="email" value="" required="required" type="email" /> 
+
+            <p class="help-block">Uw persoonlijke informatie zal nooit worden gedeeld of verkocht. Het wordt alleen gebruikt om contact met u op te nemen als er wedervragen of problemen zijn. </p>
+
+            <!--<label for="groupname">Naam van de groep</label>
+            <input name="groupname" value="" type="text" />-->
+
+            <!--<label for="groupurl">Groep URL</label>
+            <input name="groupurl" value="" type="text" />-->
+
+            <label for="title" class="required">Naam van het evenement<span class="star">*</span></label>
+            <input name="title" value="" required="required" type="text" />
+                    <table>
+                            <tr>
+                            <td>
+                                    <label for="startdate" class="required">Startdatum<span class="star">*</span></label>
+                                    <input name="startdate" value="" required="required" type="date" placeholder="YYYY-MM-DD" />
+                            </td>
+                            <td>
+                                    <label for="enddate" >Einddatum</label>
+                                    <input name="enddate" value="" type="date" placeholder="YYYY-MM-DD" />
+                            </td>
+                            </tr>
+                    </table>
+            <label for="description" class="required">Beschrijving<span class="star">*</span></label>
+            <textarea name="description" required="required"></textarea>
+
+            <p class="help-block">Maak alstublieft in het kort duidelijk waar uw evenement over gaat, hoe men eraan kan deelnemen en wat deelnemers kunnen verwachten. Als u uv evenement in een andere taal dan Engels registreert, overweeg dan alstublieft om ook een Engelse versie toe te voegen <strong>zodat u er zeker van kunt zijn dat wij het begrijpen</strong>. Wees u er alstublieft ook van bewust dat (vanwege technische redenen) we alleen Engelse evenementen vermelden op onze voorpagina fsfe.org - elke andere taal zal alleen zichtbaar zijn op fsfe.org/events.</p>
+
+            <label for="url">Evenement URL</label>
+            <input name="url" value="" type="text" />
+
+            <!--<label for="location">Locatie van het evenement</label>
+            <input name="location" value="" type="text" />-->
+
+
+            <!-- Please give more guidance - make sure that the format is correct because these will be used to generate tags also -->
+
+            <label for="city">Stad<span class="star">*</span></label>
+            <input name="city" value="" required="required" type="text" />
+
+            <label for="country">Land<span class="star">*</span></label>
+            <input name="country" value="" required="required" type="text" />
+
+            <!--</fieldset>-->
+            <!-- Should help against spam -->
+                    
+            <input value="Voeg evenement toe" name="submit" type="submit" />
+            <p class="help-block"><span class="star">*</span> = required fields</p>
+
+        </form>
+        
+        <p>Na het invullen van het formulier en het bevestigen met de "Voeg evenement toe"-knop zal er een xml-bestand worden gegenereerd en aan ons worden verzonden. Als het wordt goedgekeurd zal uw evenement binnen 48 uur worden toegevoegd zodat het verschijnt op fsfe.org en/of op fsfe.org/events. Wees u ervan bewust dat we alleen FSFE en aan de FSFE-gemeenschap gerelateerde evenementen promoten en dus geen andere gevarieerde Vrije Software-activiteiten (ja, zonder uitzonderingen - hoe belangrijk zik ook mogen zijn).</p> 
+        
+        <p>Wees u ervan bewust dat op alle FSFE-evenementen onze <a href="https://fsfe.org/about/codeofconduct">gedragsregels</a> van toepassing zijn, die vriendelijk aan alle deelnemers vragen om excellent naar elkaar te zijn. Kondig uw evenement alstublieft niet aan als FSFE-evenement als u niet van plant bent onze gedragsregels te implementeren.</p>
+         
+      </body>
+<translator>André Ockers</translator>
+     </html>
+     
+  </body>
+ </html>

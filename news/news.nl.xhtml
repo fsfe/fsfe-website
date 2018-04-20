@@ -1,31 +1,21 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
-<html>
-  <head>
-    <title>Nieuwsarchief – FSFE</title>
-  </head>
-  <body>
-    <h1>Nieuwsarchief</h1>
+    <html>
+      <head>
+        <title>Nieuwsarchief – FSFE</title>
+      </head>
 
-    <p id="introduction">
-Deze pagina verzamelt de reguliere nieuwsverhalen die FSFE publiceert over haar 
-campagnes en activiteiten. Meld u aan op de <a
-        href="/press/index.html">e-maillijst met persberichten</a> of
-      abonneer je op <a href="/news/news.rss">ons RSS-draadje</a> om op de hoogte te blijven
-      van onze activiteiten. Er zijn ook <a href="newsletter.html">maandelijkse 
-        nieuwsbrieven</a> beschikbaar. Wereldwijd Vrije Software-nieuws is
-      beschikbaar van FSFE's <a href="/about/fsfnetwork.html">zusterorganisaties.</a>.
-    </p>
+      <body class="article" microformats="h-entry">
+        <h1 class="p-name">Nieuws</h1>
+        <include-news/>
+      </body>
 
-    <include-news/>
-  </body>
+      <sidebar promo="none">
+        <h2><i class="fa fa-rss"></i></h2>
+        <p>Deze pagina verzamelt de reguliere nieuwsverhalen die FSFE publiceert over haar campagnes en activiteiten. <br />Meld u aan voor de <a href="/press/index.html">e-maillijst met persberichten</a> of abonneer u op <a href="/news/news.rss">onze RSS-feed</a> om op de hoogte te blijven van onze activiteiten. <a href="newsletter.html">Maandelijkse nieuwsbrieven</a> zijn ook beschikbaar.</p>
+      </sidebar>
 
-  <text id="more">Lees meer…</text>
-  <timestamp>$Date$ $Author$</timestamp>
-<translators>André Ockers</translators>
-</html>
-<!--
-Local Variables: ***
-mode: xml ***
-End: ***
--->
+      <text id="more">Lees meer…</text>
+      <timestamp>$Date$ $Author$</timestamp>
+<translator>André Ockers</translator>
+    </html>

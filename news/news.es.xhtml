@@ -7,10 +7,15 @@
       title="FSFE - Noticias"
       href="http://www.fsfeurope.org/news/news.es.rss"/>
   </head>
-    <body>
-    <h1>Archivo de Noticias</h1>
 
-    <p id="introduction">
+  <body class="article" microformats="h-entry">
+    <h1 class="p-name">Archivo de Noticias</h1>
+    <include-news/>
+  </body>
+
+  <sidebar promo="none">
+    <h2><i class="fa fa-rss"></i></h2>
+    <p>
       Esta página recoge las noticias regulares que
       la FSFE publica sobre sus campañas y actividades.
       Únase a la <a href="https://mail.fsfeurope.org/mailman/listinfo/newsletter-es">lista de
@@ -21,16 +26,8 @@
       Software Libre a través de las <a href="/about/fsfnetwork.html">organizaciones hermanas</a> de la FSFE.
       <a href="news.rss" class="feed">Canal de noticias RSS</a>
     </p>
-    
-
-    <include-news/>
-  </body>
+  </sidebar>
 
   <text id="more">Leer más...</text>
   <timestamp>$Date$ $Author$</timestamp>
 </html>
-<!--
-Local Variables: ***
-mode: xml ***
-End: ***
--->

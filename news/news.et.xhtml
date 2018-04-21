@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="utf-8"?>
 
 <html>
   <head>
@@ -7,16 +7,22 @@
       title="FSFE - News"
       href="http://www.fsfeurope.org/news/news.en.rss"/>
   </head>
-  <body>
-    <h1>Uudiste arhiiv</h1>
 
-<div style="text-align: center;">
-<p>
-[ <b>News</b> ] 
-[ <b><a href="/news/newsletter.html">Uudisteleht</a></b> ] 
-</p>
-</div>
+  <body class="article" microformats="h-entry">
+    <h1 class="p-name">Uudiste arhiiv</h1>
 
+    <div style="text-align: center;">
+      <p>
+        [ <b>News</b> ]
+        [ <b><a href="/news/newsletter.html">Uudisteleht</a></b> ]
+      </p>
+    </div>
+
+    <include-news/>
+  </body>
+
+  <sidebar promo="none">
+    <h2><i class="fa fa-rss"></i></h2>
     <p>
       Paljud uudised on tulnud
       <a href="/press/index.html">pressipostinimekirja kaudu, </a> kus saate
@@ -24,22 +30,15 @@
     </p>
 
     <p>
-      FSFE uudised on olemas ka läbi <a href="news.rss">RSS kaudu</a>.
+      FSFE uudised on olemas ka lÃ¤bi <a href="news.rss">RSS kaudu</a>.
     </p>
 
     <p>
       Lisaks regulaarsetele uudistele, FSFE
       omab <a href="newsletter.html">ka kuulist ajalehte</a>.
     </p>
-
-    <include-news/>
-  </body>
+  </sidebar>
 
   <text id="more">Veel...</text>
   <timestamp>$Date$ $Author$</timestamp>
 </html>
-<!--
-Local Variables: ***
-mode: xml ***
-End: ***
--->

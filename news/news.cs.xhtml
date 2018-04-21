@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="iso-8859-1" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 
 <html>
   <head>
@@ -7,16 +7,22 @@
       title="FSFE - News"
       href="http://www.fsfeurope.org/news/news.en.rss"/>
   </head>
-  <body>
-    <h1>Archiv novinek</h1>
 
-<div style="text-align: center;">
-<p>
-[ <b>Novinky</b> ] 
-[ <b><a href="/news/newsletter.html">Zpravodaj</a></b> ] 
-</p>
-</div>
+  <body class="article" microformats="h-entry">
+    <h1 class="p-name">Archiv novinek</h1>
 
+    <div style="text-align: center;">
+      <p>
+        [ <b>Novinky</b> ]
+        [ <b><a href="/news/newsletter.html">Zpravodaj</a></b> ]
+      </p>
+    </div>
+
+    <include-news/>
+  </body>
+
+  <sidebar promo="none">
+    <h2><i class="fa fa-rss"></i></h2>
     <p>
       Většina našich novinek bývá také zveřejněna v 
       <a href="/press/index.html">mailing listu tiskových zpráv</a>, do kterých se můžete 
@@ -31,15 +37,8 @@
 	Mimo běžné novinky, zmíněné na teto stránce, vydává FSFE navíc 
       <a href="newsletter.html">měsíční zpravodaj</a>.
     </p>
-
-    <include-news/>
-  </body>
+  </sidebar>
 
   <text id="more">Přečtěte si více...</text>
   <timestamp>$Date$ $Author$</timestamp>
 </html>
-<!--
-Local Variables: ***
-mode: xml ***
-End: ***
--->

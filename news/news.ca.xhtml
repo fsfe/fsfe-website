@@ -7,16 +7,22 @@
       title="FSFE - Arxiu de notícies"
       href="http://www.fsfeurope.org/news/news.ca.rss"/>
   </head>
-  <body>
-    <h1>Arxiu de notícies</h1>
 
-<div style="text-align: center;">
-<p>
-[ <b>Notícies</b> ] 
-[ <b><a href="/news/newsletter.html">Butlletins</a></b> ] 
-</p>
-</div>
+  <body class="article" microformats="h-entry">
+    <h1 class="p-name">Arxiu de notícies</h1>
 
+    <div style="text-align: center;">
+      <p>
+        [ <b>Notícies</b> ]
+        [ <b><a href="/news/newsletter.html">Butlletins</a></b> ]
+      </p>
+    </div>
+
+    <include-news/>
+  </body>
+
+  <sidebar promo="none">
+    <h2><i class="fa fa-rss"></i></h2>
     <p>
       La majoria de notícies també es publiquen a les nostres
       <a href="/press/index.html">llistes de correu de notes de premsa</a> a les quals us podeu
@@ -31,15 +37,9 @@
       A part de les notícies llistades en aquesta pàgina, l'FSFE
       també publica <a href="newsletter.html">butlletins de notícies mensuals</a>.
     </p>
+  </sidebar>
 
-    <include-news/>
-  </body>
   <text id="more">Llegiu-ne més...</text>
   <translator>Rafael Carreras</translator>
   <timestamp>$Date$ $Author$</timestamp>
 </html>
-<!--
-Local Variables: ***
-mode: xml ***
-End: ***
--->

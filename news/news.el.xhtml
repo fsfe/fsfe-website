@@ -4,10 +4,15 @@
   <head>
     <title>Αρχειοθήκη Ειδήσεων - FSFE</title>
   </head>
-  <body>
-    <h1>Αρχειοθήκη Ειδήσεων</h1>
 
-    <p id="introduction">
+  <body class="article" microformats="h-entry">
+    <h1 class="p-name">Αρχειοθήκη Ειδήσεων</h1>
+    <include-news/>
+  </body>
+
+  <sidebar promo="none">
+    <h2><i class="fa fa-rss"></i></h2>
+    <p>
       Αυτή η σελίδα συλλέγει την τακτική ειδησεογραφία που δημοσιεύει το FSFE 
       για τις εκστρατείες και τις δραστηριότητές του. Εγγραφείτε στον 
       <a href="/press/index.html">κατάλογο παραληπτών τύπου</a> ή
@@ -18,15 +23,8 @@
       διαθέσιμες από τους
       <a href="/about/fsfnetwork.html">ομοθυγατρικούς οργανισμούς</a> του FSFE.
     </p>
-
-    <include-news/>
-  </body>
+  </sidebar>
 
   <text id="more">Διαβάστε περισσότερα...</text>
   <timestamp>$Date$ $Author$</timestamp>
 </html>
-<!--
-Local Variables: ***
-mode: xml ***
-End: ***
--->

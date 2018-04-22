@@ -7,10 +7,15 @@
       title="FSFE – Neuigkeiten"
       href="http://www.fsfeurope.org/news/news.de.rss"/>
   </head>
-  <body>
-    <h1>Meldungsarchiv</h1>
 
-    <p id="introduction">
+  <body class="article" microformats="h-entry">
+    <h1 class="p-name">Meldungsarchiv</h1>
+    <include-news/>
+  </body>
+
+  <sidebar promo="none">
+    <h2><i class="fa fa-rss"></i></h2>
+    <p>
       Diese Seite ist ein Archiv regelmäßiger Meldungen, die die FSFE über
       ihre Kampagnen und Aktivitäten veröffentlicht. Sie können unsere
       <a href="/press/index.html">Mailingliste für Pressemitteilungen</a>
@@ -21,15 +26,8 @@
       erhältlich.
       <a href="news.rss" class="feed">RSS-Feed der Meldungen</a>
     </p>
-
-    <include-news/>
-  </body>
+  </sidebar>
 
   <text id="more">Mehr …</text>
   <timestamp>$Date$ $Author$</timestamp>
 </html>
-<!--
-Local Variables: ***
-mode: xml ***
-End: ***
--->

@@ -7,10 +7,15 @@
       title="FSFE - Vijesti"
       href="http://www.fsfeurope.org/news/news.en.rss"/>
   </head>
-  <body>
-    <h1>Arhiva vijesti</h1>
 
-    <p id="introduction">
+  <body class="article" microformats="h-entry">
+    <h1 class="p-name">Arhiva vijesti</h1>
+    <include-news/>
+  </body>
+
+  <sidebar promo="none">
+    <h2><i class="fa fa-rss"></i></h2>
+    <p>
       Ova stranica sadrži redovite vijesti koje objavljuje FSFE o svojim kampanjama i
       aktivnostima. Pridružite se <a href="/press/index.html">mailing listi za medije</a>
       kako biste dobivali objave za medije. <a href="newsletter.html">Mjesečne novinske brošure</a>
@@ -18,16 +23,8 @@
       <a href="/about/fsfnetwork.html">sestrinske organizacije</a>.
       <a href="news.rss" class="feed">Dostava vijesti RSS-om</a>
     </p>
-    
-
-    <include-news/>
-  </body>
+  </sidebar>
 
   <text id="more">Pročitajte više...</text>
   <timestamp>$Date$ $Author$</timestamp>
 </html>
-<!--
-Local Variables: ***
-mode: xml ***
-End: ***
--->

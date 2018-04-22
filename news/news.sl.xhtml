@@ -4,9 +4,14 @@
   <head>
     <title>FSFE - Arhiv novic</title>
   </head>
-  <body>
-    <h1>Arhiv novic</h1>
 
+  <body class="article" microformats="h-entry">
+    <h1 class="p-name">Arhiv novic</h1>
+    <include-news/>
+  </body>
+
+  <sidebar promo="none">
+    <h2><i class="fa fa-rss"></i></h2>
     <p>
       Večina novic je objavljena preko naše 
       <a href="/press/index.html">tiskovne mailing liste</a>, na katero se lahko
@@ -21,16 +26,9 @@
       Poleg rednih novic, najdenih na tej strani, FSFE izdaja
       <a href="newsletter.html">mesečni bilten</a>.
     </p>
-
-    <include-news/>
-  </body>
+  </sidebar>
 
   <text id="more">Več...</text>
   <translator>Luka Goltnik</translator>
   <timestamp>$Date$ $Author$</timestamp>
 </html>
-<!--
-Local Variables: ***
-mode: xml ***
-End: ***
--->

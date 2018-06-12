@@ -634,7 +634,7 @@
             </xsl:element>
 
             <xsl:element name="a">
-                <xsl:attribute name="href">/fellowship/login.html</xsl:attribute>
+              <xsl:attribute name="href">https://my.fsfe.org/</xsl:attribute>
               <xsl:attribute name="id">direct-to-login</xsl:attribute>
               <xsl:element name="i">
                 <xsl:attribute name="class">fa fa-user fa-lg</xsl:attribute>

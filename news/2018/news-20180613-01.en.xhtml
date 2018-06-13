@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<html newsdate="2019-06-13">
+<html newsdate="2018-06-13">
 
 <head>
     <title>Technical Note: Mail Issues on June 8</title>
@@ -9,16 +9,19 @@
 
 <h1>Technical Note: Mail Issues on June 8</h1>
 
-<p newsteaser="yes">On Friday morning, one of our servers had a fatal hardware crash. This 
-affected parts of our mail infrastructure and mailing lists. Meanwhile, 
-all services are back to normal. We would like inform you about what 
-happened and which problems it caused.</p>
+<p newsteaser="yes">On Friday morning, one of our servers had a fatal 
+hardware crash. This affected parts of our mail infrastructure and 
+mailing lists. Meanwhile, all services are back to normal. We would 
+like inform you about what happened and which problems it caused. In a 
+nutshell: Please make sure your emails arrived and check your SMTP 
+settings.</p>
 
-<p>Unfortunately, due to the downtime, some mails sent during this time 
-to some of our <a href="https://lists.fsfe.org/">mailing lists</a> may 
-have been lost while most have just been delayed. Please make sure that 
-your mails sent on 8 and 9 June arrived their destination by checking 
-the archives, and resend them if necessary. If you still experience 
+<p>Unfortunately, due to the downtime, a small number of mails sent 
+during this time to some of our <a 
+href="https://lists.fsfe.org/">mailing lists</a> may have been lost 
+while most have just been delayed. Please make sure that your mails 
+sent on 8 and 9 June arrived their destination by checking the 
+archives, and resend them if necessary. If you still experience 
 problems, please <a href="/contact/">get in touch with us</a>.</p>
 
 <p>Background: The said server lost one of its hardware components for 
@@ -26,6 +29,14 @@ which we weren't able to get a replacement at short notice. This forced
 us to migrate the setup and data to a new host. We have been able to 
 bring the most critical service back to life within the course of the 
 day, others were reestablished during the weekend.</p>
+
+<p>At the same time, we modernised large parts of the mail 
+infrastructure, for instance anti-spam measurements. This also involves 
+a change in our SMTP setting for people using this service: From now on 
+we will no longer accept mails delivered to port 25. Please make sure 
+to use port 587 if you would like to send emails, and make sure the 
+settings in your email clients match <a 
+href="https://wiki.fsfe.org/TechDocs/SMTP">our recommendations</a>.</p>
 
 <p>Please excuse the inconveniences this caused. We will work hard to 
 prevent such a long downtime of a critical service in the future. If 

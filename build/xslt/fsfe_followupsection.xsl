@@ -57,7 +57,7 @@
           </xsl:element>
           <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'support-paragraph'" /></xsl:call-template>
           <xsl:element name="a">
-            <xsl:attribute name="href">/join?ref-followupbox</xsl:attribute>
+            <xsl:attribute name="href">https://my.fsfe.org/support</xsl:attribute>
             <xsl:attribute name="class">btn</xsl:attribute>
             <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'support'" /></xsl:call-template>
           </xsl:element>

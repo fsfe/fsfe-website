@@ -58,7 +58,7 @@
         <xsl:element name="li">
           <xsl:attribute name="class">support</xsl:attribute>
           <xsl:element name="a">
-            <xsl:attribute name="href">/join?ref-fullmenu</xsl:attribute>
+            <xsl:attribute name="href">https://my.fsfe.org/support</xsl:attribute>
             <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'support/support'" /></xsl:call-template>
           </xsl:element>
   

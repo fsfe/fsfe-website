@@ -10,7 +10,7 @@
   <menu id="fsfe/contact" priority="5" parent="fsfe">/contact/contact.html</menu>
 
   <menu id="support" />
-  <menu id="support/become" priority="0" parent="support">/join?ref-fullmenu</menu>
+  <menu id="support/become" priority="0" parent="support">https://my.fsfe.org/support</menu>
   <menu id="support/donate" priority="1" parent="support">/donate/donate.html</menu>
   <menu id="support/order" priority="2" parent="support">/order/order.html</menu>
   <menu id="support/thankgnus" priority="3" parent="support">/donate/thankgnus.html</menu>

@@ -3,8 +3,6 @@
 <html>
   <head>
     <title>Sala de prensa - FSFE</title>
-
-    <link href="/style/grid.css" rel="stylesheet" />
     <script>
 
       /*
@@ -25,53 +23,58 @@
     </script>
   </head>
 
-  <body>
-    <h1>Sala de prensa</h1>
+  <body class="press" id="press-room">
+    <h1 class="heading">Sala de prensa</h1>
 
-     <div id="introduction">
-      <div class="image">
-        <img src="/graphics/stars-smaller.png" alt="Stars"/>
-      </div>
+  <div id="introduction">
 
-<p>
-      La FSFE considera que el acceso al software determina quién puede
-      participar en la sociedad digital. Las libertades de
-      <a href="/about/basics/freesoftware.html">usar, compartir, estudiar y mejorar</a>
-      el software son necesarias para una participación igualitaria en la era de la información.
-    </p></div>
+  <!-- for the following two paragraphs, please have a look at http://fsfe.org/about/mission -->
 
-    <p>
-      La Free Software Foundation Europe (FSFE) es una organización
-      no gubernamental y sin ánimo de lucro que actúa en
-      <a href="/contact/local.html">muchos países europeos</a> y está involucrada en muchas actividades
-      globales. El acceso al software determina la participación en la
-      sociedad digital: para asegurar una participación igualitaria en la era de la información,
-      así como la libre competencia, la Free Software Foundation Europe
-     busca y está comprometida con la promoción del Software Libre; definido por las
-      libertades de usar, estudiar, modificar y copiar. Desde su fundación en el año 2001, se centra en sensibilizar sobre estas cuestiones, asegurando el Software Libre política y
-      legalmente, y apoyando el desarrollo del Software Libre como forma de garantizar la libertad individual.
-    </p>
+    <p>La Fundación del Software Libre de Europa, «FSFE», es una organización no 
+    gubernamental con el propósito de empoderar a los usuarios para que tomen el control de la
+    tecnología. El software interviene ampliamente en todas las facetas de
+    la vida; es crucial, por tanto, que esta tecnología nos fortalezca, en lugar de
+    restringirnos. El Software Libre garantiza a todo el mundo el derecho a
+    utilizar, comprender, modificar y compartir el software. Estos derechos, a su vez, 
+    ayudan en la protección de otros derechos fundamentales, como el de la libertad de expresión, 
+    la libertad de prensa y el derecho a la intimidad.</p>
 
+  </div>
+
+  <p>La FSFE trabaja para que las organizaciones y los particulares comprendan de qué manera
+  contribuye el Software Libre a la libertad, la transparencia y la 
+  libre elección. Defiende los derechos de los usuarios mediante la eliminación de
+  los obstáculos a la adopción del Software Libre, alentando a la gente a usar y
+  desarrollar Software Libre, y ofreciendo recursos para que todos podamos fomentarlo,
+  aun más, en Europa.</p>
 
     <div class="grid-50-50">
       <div class="box first">
         <h2>Reciba nuestros comunicados de prensa</h2>
 
         <p>
-          Al suscribirse a nuestros feeds de noticias o a las listas de correo se mantendrá informado de las últimas noticias del mundo del Software Libre.
+          Suscríbase a nuestras noticias, o a las listas de correo, y
+          manténgase informado sobre todas las novedades del mundo del
+          Software Libre.
         </p>
 
         <form method="post" action="http://lists.fsfe.org/mailman/subscribe/press-release">
           <p>
-            <input type="text" name="email" value="suemail@ejemplo.com" onClick="removeValue(this)" />
-            <input type="submit" value="Suscribir" />
+            <input type="text" name="email" value="su_email@ejemplo.com" onClick="removeValue(this)" />
+            <input type="submit" value="Suscribirse" />
           </p>
         </form>
 
         <p>
-          Para obtener actualizaciones instantáneas y noticias de última hora también puede seguirnos <a
-            href="http://identi.ca/fsfe">en Identi.ca</a> o <a
-            href="http://twitter.com/fsfe">en Twitter</a>.
+            Su dirección de correo electrónico se guardará en nuestro servidor «Mailman». 
+            Puede encontrar más información <a
+            href="https://wiki.fsfe.org/TechDocs/DataProcessingTransparency#Communications_means">aquí</a>.
+        </p>
+
+        <p>
+          Puede seguir de forma inmediata nuestras novedades y últimas noticias, en <a
+            href="http://identi.ca/fsfe">Identi.ca</a> o <a
+            href="http://twitter.com/fsfe">Twitter</a>.
         </p>
       </div>
 
@@ -82,20 +85,22 @@
       </div>
     </div>
 
-
+    <div class="grid-50-50">
+    
+    <div class="box first">
     <h2>Más información</h2>
 
     <p>
       Por favor, envíe sus preguntas a <a
-        href="mailto:press@fsfeurope.org">press@fsfeurope.org</a>, o a la siguiente dirección de correo
-      postal:
+        href="mailto:press@fsfeurope.org">press@fsfeurope.org</a>, o a la
+      siguiente dirección de correo postal:
     </p>
 
     <address>
       Free Software Foundation Europe e.V.<br />
       Schönhauser Allee 6/7<br />
-      10119 Berlin<br />
-      Germany
+      10119 Berlín<br />
+      Alemania
     </address>
 
     <p>
@@ -103,18 +108,59 @@
     </p>
 
     <p>
-      Para cuestiones generales, puede consulte nuestra
+      Para cuestiones generales, puede consultar nuestra
       <a href="/contact/contact.html">información de contacto</a>.
     </p>
+    </div>
+    
+    <div class="box">
+      
+      <h2>Acerca de la FSFE</h2>
+      
+      <p>En <a href="/timeline">nuestra cronología</a> se reseñan los logros
+      más destacables de los últimos años, en diversas áreas.</p>
+      
+      <video width="480" height="270" crossorigin="crossorigin" poster="/graphics/15years-video-poster.png" controls="controls">
+        <source media="screen and (min-device-width:1000px)" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="https://download.fsfe.org/videos/15years/FSFE15_30.mp4"></source>
+        <source media="screen and (min-device-width:1000px)" type="video/webm; codecs=&quot;vp9, opus&quot;" src="https://download.fsfe.org/videos/15years/FSFE15_38.webm"></source>
+        <source media="screen and (max-device-width:999px)" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="https://download.fsfe.org/videos/15years/FSFE15_mobile.mp4"></source>
+        <source media="screen and (max-device-width:999px)" type="video/webm; codecs=&quot;vp9, opus&quot;" src="https://download.fsfe.org/videos/15years/FSFE15_mobile.webm"></source>
+        <track default="default" label="English" srclang="en" kind="subtitle" src="https://download.fsfe.org/videos/15years/vtt/15years-FSFE.en.vtt"></track>
+        <track label="Deutsch" srclang="de" kind="subtitle" src="https://download.fsfe.org/videos/15years/vtt/15years-FSFE.de.vtt"></track>
+        <track label="Ελληνικά" srclang="el" kind="subtitle" src="https://download.fsfe.org/videos/15years/vtt/15years-FSFE.el.vtt"></track>
+        <track label="Español" srclang="es" kind="subtitle" src="https://download.fsfe.org/videos/15years/vtt/15years-FSFE.es.vtt"></track>
+        <track label="Français" srclang="fr" kind="subtitle" src="https://download.fsfe.org/videos/15years/vtt/15years-FSFE.fr.vtt"></track>
+        <track label="Italian" srclang="it" kind="subtitle" src="https://download.fsfe.org/videos/15years/vtt/15years-FSFE.it.vtt"></track>
+        <track label="Nederlands" srclang="nl" kind="subtitle" src="https://download.fsfe.org/videos/15years/vtt/15years-FSFE.nl.vtt"></track>
+        <track label="Shqip" srclang="sq" kind="subtitle" src="https://download.fsfe.org/videos/15years/vtt/15years-FSFE.sq.vtt"></track>
+        <track label="Türkçe" srclang="tr" kind="subtitle" src="https://download.fsfe.org/videos/15years/vtt/15years-FSFE.tr.vtt"></track>
+        <track label="српски" srclang="sr" kind="subtitle" src="https://download.fsfe.org/videos/15years/vtt/15years-FSFE.sr.vtt"></track>
+        <track label="eesti keel" srclang="et" kind="subtitle" src="https://download.fsfe.org/videos/15years/vtt/15years-FSFE.et.vtt"></track>
 
-
+        <track label="English" srclang="en" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.en.srt"></track>
+        <track label="Deutsch" srclang="de" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.de.srt"></track>
+        <track label="Ελληνικά" srclang="el" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.el.srt"></track>
+        <track label="Español" srclang="es" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.es.srt"></track>
+        <track label="Français" srclang="fr" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.fr.srt"></track>
+        <track label="Italian" srclang="it" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.it.srt"></track>
+        <track label="Nederlands" srclang="nl" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.nl.srt"></track>
+        <track label="Shqip" srclang="sq" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.sq.srt"></track>
+        <track label="Türkçe" srclang="tr" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.tr.srt"></track>
+        <track label="српски" srclang="sr" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.sr.srt"></track>
+        <track label="eesti keel" srclang="et" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.et.srt"></track>
+      </video>    
+    
+    </div>
+    
+    </div> <!-- END 2nd 50-50 grid -->
+    
     <h2 id="subpages" class="show-heading">Recursos</h2>
 
     <ul>
       <li>
         <h3><a href="/about/graphics/graphics.html">Logo e imágenes</a></h3>
         <p>
-          Descargue nuestro logotipo y otros elementos gráficos.
+          Descargue nuestro logotipo y otras imágenes.
         </p>
       </li>
 
@@ -124,18 +170,17 @@
       -->
 
       <li>
-        <h3><a href="/about/basics/freesoftware.html">Fundamentos del Software Libre</a></h3>
-        <!-- Later this should link to /freesoftware/ -->
+        <h3><a href="/freesoftware/freesoftware.html">Principios fundamentales del Software Libre</a></h3>
         <p>
-          Aprenda la diferencia entre Software Libre, Open Source, y Libre
-          Software.
+          Descubra cuál es la diferencia entre Software Libre, software de 
+          código abierto y Libre Software.
         </p>
       </li>
     </ul>
   </body>
 
   <timestamp>10-01-23 17:58:15 +0100 (Sam, 23. Jän 2010) $ $Author$</timestamp>
-  <translator>pcgaldo</translator>
+  <translator>Miguel Abad</translator>
 </html>
 <!--
 Local Variables: ***

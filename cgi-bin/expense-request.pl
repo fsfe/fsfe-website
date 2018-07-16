@@ -28,10 +28,8 @@ my %names = (
   "eal" => "Erik Albers",
   "mk" => "Matthias Kirschner",
   "repentinus" => "Heiki Lohmus",
-  "polina" => "Polina Malaja",
   "max.mehl" => "Max Mehl",
   "reinhard" => "Reinhard Müller",
-  "jonas" => "Jonas Öberg",
   "usli" => "Ulrike Sliwinski",
 );
 

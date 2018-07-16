@@ -279,13 +279,10 @@
     <avatar>/about/grote/grote-avatar.jpg</avatar>
   </person>
 
-  <person id="hansch" avatar="no" teams="core">
+  <person id="hansch" avatar="no" teams="">
     <name>Paul Hänsch</name>
     <country>DE</country>
-    <function volunteers="web">coordinator/m</function>
-    <function>sysadmin/m</function>
     <email>paul (at) fsfe (dot) org</email>
-    <employee>freelancer/m</employee>
   </person>
 
   <person id="hopf" avatar="no" teams="hamburg">
@@ -491,10 +488,9 @@
     <avatar>/fellowship/graphics/people/mauricionascimento-avatar.jpg</avatar>
   </person>
 
-  <person id="oberg" avatar="yes" association-member="yes" teams="ga, council">
-    <name>Jonas Öberg (on parental leave)</name>
+  <person id="oberg" avatar="yes" association-member="yes" teams="ga">
+    <name>Jonas Öberg</name>
     <country>SE</country>
-    <function>executive-director/m</function>
     <email>jonas (at) fsfe (dot) org</email>
     <link>/about/oberg/oberg.html</link>
     <avatar>/about/oberg/oberg-avatar.jpg</avatar>

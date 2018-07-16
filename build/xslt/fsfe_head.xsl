@@ -254,15 +254,9 @@
       </xsl:attribute>
     </xsl:element> <!-- / Sharing cards -->
 
-    <script src="/scripts/jquery-1.10.2.min.js"></script>
+    <script src="/scripts/jquery-3.3.1.min.js"></script>
     <script src="/scripts/modernizr.custom.65251.js"></script>
 
-    <script>
-      hljs.tabReplace = "  ";
-//        hljs.initHighligtingOnLoad();
-// above line throws error: Uncaught TypeError: Object [object Object] has no method 'initHighligtingOnLoad'
-    </script>
-    
     <xsl:comment><![CDATA[[if lt IE 9]>
          <script src="/scripts/html5shiv.js"></script>
          <script src="/scripts/respond.min.js"></script>

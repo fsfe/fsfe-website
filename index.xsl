@@ -104,7 +104,16 @@
   </xsl:template>
 
   <xsl:template match="campaigns">
-    <div  id="campaigns-boxes" class="cycle-slideshow"  data-cycle-pause-on-hover="true" data-cycle-speed="500"  data-cycle-timeout="9000" data-cycle-slides="a"  data-cycle-fx="scrollHorz" data-cycle-swipe="true">
+    <div
+            id="campaigns-boxes"
+            class="cycle-slideshow"
+            data-cycle-log="false"
+            data-cycle-pause-on-hover="true"
+            data-cycle-speed="500"
+            data-cycle-timeout="9000"
+            data-cycle-slides="a"
+            data-cycle-fx="scrollHorz"
+            data-cycle-swipe="true">
       <div class="cycle-pager"/>
       
       <xsl:for-each select="/buildinfo/document/set/campaign[@running = 'yes']">

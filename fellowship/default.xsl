@@ -177,7 +177,7 @@
       </xsl:element>
     </xsl:for-each>
     
-    <script src="/scripts/jquery-1.10.2.min.js"></script>
+    <script src="/scripts/jquery-3.3.1.min.js"></script>
     <script src="/scripts/modernizr.custom.30122.js"></script>
     <script src="/scripts/bootstrap-3.0.3.min.js"></script>
     <script src="/scripts/master.js"></script>
@@ -186,8 +186,6 @@
 
     <script>
       hljs.tabReplace = "  ";
-//        hljs.initHighligtingOnLoad();
-// above line throws error: Uncaught TypeError: Object [object Object] has no method 'initHighligtingOnLoad'
     </script>
     
     <xsl:comment>

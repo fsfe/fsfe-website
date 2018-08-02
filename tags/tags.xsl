@@ -47,16 +47,16 @@
   <!--display dynamic list of news items-->
   <xsl:template match="all-tags-news">
     <ul class="taglist">
-      <xsl:for-each select="/buildinfo/document/set/news/tags/tag"><xsl:sort select="." order="ascending" />
+      <xsl:for-each select="/buildinfo/document/set/news/tags/tag"><xsl:sort select="translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')" order="ascending" />
         <xsl:call-template name="taglink"><xsl:with-param name="type" select="'news-tags'"/></xsl:call-template>
       </xsl:for-each>
     </ul>
   </xsl:template>
 
-  <!--display dynamic list of newsletters items-->
+  <!--display dynamic list of event items-->
   <xsl:template match="all-tags-events">
     <ul class="taglist">
-      <xsl:for-each select="/buildinfo/document/set/event/tags/tag"><xsl:sort select="." order="ascending" />
+      <xsl:for-each select="/buildinfo/document/set/event/tags/tag"><xsl:sort select="translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz')" order="ascending" />
         <xsl:call-template name="taglink"><xsl:with-param name="type" select="'event-tags'"/></xsl:call-template>
       </xsl:for-each>
     </ul>

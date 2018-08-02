@@ -29,14 +29,14 @@
     </xsl:element>
   </xsl:template>
   
-  <!--display dynamic list of newsletters items-->
+  <!--display dynamic list of event items-->
   <xsl:template name="tagged-events" match="tagged-events">
     <xsl:element name="ul">
       <xsl:attribute name="class">tag list</xsl:attribute>
 
       <!-- loop through all events having this tag -->
       <xsl:for-each select="/buildinfo/document/set/event">
-
+        <xsl:sort select="@date" order="descending" />
         <xsl:element name="li">
           <span class="newsdate">[<xsl:value-of select="@start" />]</span>
           <xsl:element name="a">

@@ -293,12 +293,13 @@
     <avatar>/fellowship/graphics/people/simonhornbacher-avatar.jpg</avatar>
   </person>
 
-  <person id="indorato" avatar="no" teams="core">
+  <person id="indorato" avatar="yes" teams="core">
     <name>Francesca Indorato</name>
     <country>DE</country>
     <email>fi (at) fsfe (dot) org</email>
     <employee>part/f</employee>
     <function id="office/f">Office</function>
+    <avatar>/about/indorato/indorato-avatar.jpg</avatar>
   </person>
 
   <person id="jean" avatar="yes" teams="fr, core">

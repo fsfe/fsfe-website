@@ -26,7 +26,7 @@
       <!-- Outdated note -->
       <xsl:if test="/buildinfo/@outdated='yes'">
         <xsl:element name="div">
-          <xsl:attribute name="class">alert warning red</xsl:attribute>
+          <xsl:attribute name="class">alert warning yellow</xsl:attribute>
           <xsl:element name="a">
             <xsl:attribute name="class">close</xsl:attribute>
             <xsl:attribute name="data-dismiss">alert</xsl:attribute>
@@ -51,7 +51,7 @@
       <!-- Missing translation note -->
       <xsl:if test="/buildinfo/@language!=/buildinfo/document/@language">
         <xsl:element name="div">
-          <xsl:attribute name="class">alert warning red</xsl:attribute>
+          <xsl:attribute name="class">alert warning yellow</xsl:attribute>
           <xsl:element name="a">
             <xsl:attribute name="class">close</xsl:attribute>
             <xsl:attribute name="data-dismiss">alert</xsl:attribute>

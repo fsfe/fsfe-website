@@ -219,9 +219,35 @@ img.signatory-logo {
         #summit16 img:last-of-type  { bottom: 10%; right: 5%; width: 50%; max-width: 400px; }
         @media (min-width: 800px) { #summit16 img:first-of-type {top: 20%;} }
         
-        #box15years {
-            .campaign-box-center;
-            background: url('/graphics/15years-campaignbox.png')  center no-repeat #666;
+        #boxpmpc {
+            background: url('/graphics/pmpc_slider.jpg')  left 33%  no-repeat #666;
+            background-size: cover;
+            text-shadow: 0px 1px 8px rgb(0,0,0);
+
+            .text, .text2 {
+                .quote;
+            }
+            .text, .text2 {
+                display: block;
+                padding: 1.25em;
+                min-width: 120px;
+                font-size: 1.25em;
+                hyphens: none;
+                text-align: center;
+            }
+
+            @media (min-width: @screen-sm) {
+                .text {
+                    float: left;
+                    width: 30%;
+                }
+                .text2 {
+                    float: right;
+                    width: 30%;
+                }
+                background-position: center;
+            }
+
         }
 
         #dfd {

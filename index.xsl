@@ -138,6 +138,10 @@
       <xsl:if test=" text != '' ">
         <p class="text"><xsl:value-of select="text" /></p>
       </xsl:if>
+
+      <xsl:if test=" text2 != '' ">
+        <p class="text2"><xsl:value-of select="text2" /></p>
+      </xsl:if>
       
       <!-- Author (if existing) -->
       <xsl:if test="author != ''">

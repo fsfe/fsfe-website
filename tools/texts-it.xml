@@ -37,7 +37,7 @@
   <text id="translator2">Questa è una traduzione non ufficiale. </text>
   <text id="translator3a">Si veda il </text>
   <text id="translator3b">testo originale</text>
-  <text id="translator3c"> per la versione ufficiale di questa pagina.</text>
+  <text id="translator3c"> di questa pagina.</text>
   <text id="permission">
     La copia letterale e la distribuzione di questo articolo nella sua integrità sono permesse
     con qualsiasi mezzo, a condizione che questa nota sia riprodotta.
@@ -46,24 +46,24 @@
 
   <!-- Warning info boxes -->
   <text id="outdated">
-    <strong>Attenzione: </strong>
-    La traduzione di questa pagina potrebbe non essere aggiornata rispetto
-    all'originale. Per contribuire alle traduzioni si veda
-    <a href="/contribute/contribute.html">questa pagina</a>.
+	Questa traduzione potrebbe non essere aggiornata rispetto all'originale. <a 
+	href="/contribute/translators/translators.html">Per favore aiutaci a 
+	tradurre</a> questa ed altre pagine su fsfe.org, affinché le persone possano leggere 
+	i nostri messaggi nelle propria lingua nativa.
   </text>
   <text id="outdated-1">
-    <strong>Attenzione: </strong>
-    La traduzione di questa pagina potrebbe non essere aggiornata rispetto al
+    La traduzione potrebbe non essere aggiornata rispetto al
   </text>
   <text id="outdated-2">
-    Per contribuire alle traduzioni si veda
-    <a href="/contribute/contribute.html">questa pagina</a>.
+     <a href="/contribute/translators/translators.html">Per favore aiutaci a 
+     tradurre</a> questa ed altre pagine su fsfe.org, affinché le persone possano leggere 
+	i nostri messaggi nelle propria lingua nativa.
   </text>
   <text id="notranslation">
-    <strong>Attenzione: </strong>
-    Questa pagina non è ancora stata tradotta: di seguito è riportata la
-    versione originale.  Per contribuire alle traduzioni si
-    veda <a href="/contribute/contribute.html">questa pagina</a>.
+    Questa pagina non è ancora stata tradotta. <a 
+	href="/contribute/translators/translators.html">Per favore aiutaci a 
+	tradurre</a> questa ed altre pagine su fsfe.org, affinché le persone possano leggere 
+	i nostri messaggi nelle propria lingua nativa.
   </text>
     <text id="under-construction">
     <strong>Attenzione: </strong>Questa pagina è in costruzione. Per favore  <strong>non divulgare </strong> o iniziare una traduzione in quanto il contenuto è soggetto a cambiamenti.
@@ -99,11 +99,11 @@
   <text id="news/nl">Newsletter</text>
   <text id="news/planet">Planet blog</text>
   <text id="ftf/legal">Supporto legale</text>
-  <text id="ftf/services">Servizi e Fiduciary</text>
+  <text id="ftf/services">Servizi e Fiduciari</text>
   <text id="ftf/doc">Documentazione</text>
   <text id="ftf/network">Rete legale</text>
   <text id="ftf/conference">Conferenze</text>
-  <text id="ftf/contact">Contatta il Team Legale della FSFE</text>
+  <text id="ftf/contact">Contatta il Team Legale di FSFE</text>
   <text id="fs/fs">Software Libero</text>
   <text id="fs/basics">Le basi del Software Libero</text>
   <text id="fs/def">Definizione</text>
@@ -124,8 +124,8 @@
   <text id="subscribe">Iscriviti</text>
   <text id="email">indirizzo email</text>
   <text id="news">Ultime notizie</text>
-  <text id="receive-newsletter">Ricevere la newsletter mensile della FSFE</text>
-  <text id="subscribe-newsletter">Iscriviti alla newsletter mensile</text>
+  <text id="receive-newsletter">Iscriviti alla newsletter mensile di FSFE</text>
+  <text id="subscribe-newsletter">Iscriviti alla newsletter</text>
   <text id="events">Prossimi eventi</text>
   <text id="more">Continua</text>
   <text id="morenews">Altre notizie…</text>
@@ -146,7 +146,7 @@
   <text id="contact-us">Contattaci</text>
   <text id="translate">Traduci questa pagina?</text>
   <text id="contribute-web">Contribuisci al team Web</text>
-<text id="imprint">Note legali</text>
+  <text id="imprint">Note legali</text>
   <text id="privacy-policy">Politica sulla Privacy</text>
   <text id="transparency-commitment">Impegno alla trasparenza</text>
   <text id="tags">Tag</text>

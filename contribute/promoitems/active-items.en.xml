@@ -61,10 +61,14 @@ Such an item doesn't need an image!
 
   <!-- Public Money, Public Code -->
 
+    <item type="pmpc" id="pmpc-sticker-text-only" year="2018" order="1">
+ 	<image
+    imgsmall="/contribute/promopics/PMPC_sticker_TEXT_ONLY.png"/>
+  </item>
+
     <item type="pmpc" id="pmpc-sticker" year="2017" order="1">
  	<image
     imgsmall="/contribute/promopics/pmpc-sticker-thumb.png"/>
-
   </item>
 
   <item type="pmpc" id="pmpc-postcard" year="2017" order="1">

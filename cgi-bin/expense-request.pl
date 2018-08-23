@@ -30,6 +30,7 @@ my %names = (
   "repentinus" => "Heiki Lohmus",
   "max.mehl" => "Max Mehl",
   "reinhard" => "Reinhard Müller",
+  "alex.sander" => "Alexander Sander",
   "usli" => "Ulrike Sliwinski",
 );
 
@@ -63,6 +64,7 @@ my %responsible = (
   "PERSONELL-SLIWINSKI" => "council",
   "PERSONELL-MALAJA" => "council",
   "PERSONELL-MEHL" => "council",
+  "PERSONELL-SANDER" => "council",
   "OFFICE-BERLIN" => "usli",
 );
 
@@ -92,6 +94,7 @@ my %account = (
   "PERSONELL-SLIWINSKI" => "81036",
   "PERSONELL-MALAJA" => "81040",
   "PERSONELL-MEHL" => "81052",
+  "PERSONELL-SANDER" => "81057",
   "OFFICE-BERLIN" => "82001",
 );
 

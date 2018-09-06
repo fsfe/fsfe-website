@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<html>
+  <head>
+    <title>Siparişiniz için teşekkürler! – FSFE</title>
+  </head>
+
+  <body>
+    <p id="category" class="p-category">
+      <a href="/order/order.html">Ürünler</a>
+    </p>
+
+    <h1>Siparişiniz için teşekkürler!!</h1>
+
+    <p class="p-summary">
+      Siparişinizin toplam ücreti: <strong>€:AMOUNT:</strong>.
+    </p>
+
+    <p>
+        Çeşitli kredi ve nakit kartlarla veya PayPal aracılığıyla şimdi çevrimiçi
+        ödeme yapabilirsiniz.
+    </p>
+
+    <form action="https://secure.payengine.de/ncol/prod/orderstandard_utf8.asp" method="post" class="thankyou">
+:FORM:
+      <!-- translators: please also translate the term "Pay online", it will
+           show on the button. -->
+      <input type="submit" name="submit" value="Çevrimiçi Öde"/>
+    </form>
+
+    <p>
+      Banka aktarımını tercih ediyorsanız, lütfen aşağıdaki bilgileri kullanın:
+    </p>
+
+    <p>
+      Alıcı: Free Software Foundation Europe e.V.<br/>
+      Adres: Schönhauser Allee 6/7, 10119 Berlin, Germany<br/>
+      IBAN: DE47 4306 0967 2059 7908 01<br/>
+      Banka: GLS Gemeinschaftsbank eG, 44774 Bochum, Germany<br/>
+      BIC: GENODEM1GLS<br/>
+      Miktar: :AMOUNT:<br/>
+      Ödeme Referansı (Payment reference): :REFERENCE:
+    </p>
+  </body>
+
+  <followup>join</followup>
+  <timestamp>$Date$ $Author$</timestamp>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

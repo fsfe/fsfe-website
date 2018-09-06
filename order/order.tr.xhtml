@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<html>
+  <head>
+    <title>Ürünler – FSFE</title>
+    
+    <style type="text/css">
+    div#toc {
+      float: right;
+      clear: right;
+      border: solid 1px;
+      margin: .5em;
+      background: rgb(240,240,240);
+      width: 30%;
+    }
+    </style>
+  </head>
+
+  <body class="toplevel">
+    <h1>Ürünler</h1>
+
+    <div id="toc">
+      <p style="text-indent:1em;">Mevcut ürünler:</p>
+      <ul style="margin-bottom: 1em;">
+        <li><a href="#tshirt">Tişörtler</a></li>
+        <li><a href="#girlie">Kadın Tişörtleri</a></li>
+        <li><a href="#hooded">Kapşonlular</a></li>
+        <!-- li><a href="#baby-clothes">Bebek Kıyafetleri</a></li -->
+        <li><a href="#other">Diğer Ürünler</a></li>
+      </ul>
+    </div>
+
+    <p class="p-summary">
+        Özgür Yazılım sevginizi aşağıdaki işaretli ürünleri giyerek ve kullanarak
+        gösterin. Özgür Yazılım kıyafetleri yerel topluluğunuzda farkındalığı arttırmak
+        için oldukça iyi bir yöntemdir ve her satış da kritik FSFE projelerini maddi
+        olarak desteklemektir.
+    </p>
+    
+    <p style="clear:both;"></p>
+
+
+    <form action="/cgi-bin/weborder.pl" method="post" class="item-grid">
+      <h2 id="tshirt">Tişörtler</h2>
+
+      <dynamic-content type="tshirt"/>
+
+      <h2 id="girlie">Kadın Tişörtleri</h2>
+
+      <dynamic-content type="girlie"/>
+
+      <h2 id="hooded">Kapşonlular</h2>
+
+      <dynamic-content type="hooded"/>
+
+      <!-- h2 id="baby-clothes">Bebek Kıyafetleri</h2>
+
+      <dynamic-content type="baby-clothes"/ -->
+
+      <h2 id="other">Diğer Ürünler</h2>
+
+      <dynamic-content type="other"/>
+
+      <h2>Promosyon Malzemeleri</h2>
+
+      <p>
+        Broşür, çıkartma ve diğer şeyleri sipariş etmek için
+        <a href="/contribute/spreadtheword.html#promo-material">bilgi malzemeleri
+        sipariş sayfamızı</a> inceleyin.
+      </p>
+
+      <h2>Kargo</h2>
+
+      <p>
+        <input type="hidden" name="shipping" value="1"/>
+        <input type="radio" id="shipping-de" name="_shipping" value="3"/>
+        <label for="shipping-de">Almanya içerisine (€3.00)</label><br/>
+        <input type="radio" id="shipping-eu" name="_shipping" value="7" checked="Y"/>
+        <label for="shipping-eu">Avrupa içerisine (€7.00)</label><br/>
+        <input type="radio" id="shipping-world" name="_shipping" value="12"/>
+        <label for="shipping-world">Avrupa dışına (€12.00)</label><br/>
+      </p>
+
+      <table class="order-form">
+        <tr>
+          <td class="order-left"><p>İsim:</p></td>
+          <td class="order-right">
+            <input type="text" name="name"/>
+          </td>
+        </tr>
+        <tr>
+          <td class="order-left"><p>Tam Adres:</p></td>
+          <td class="order-right">
+            <textarea rows="5" name="address"/>
+          </td>
+        </tr>
+        <tr>
+          <td class="order-left"><p>E-posta:</p></td>
+          <td class="order-right">
+            <input type="text" name="email"/>
+          </td>
+        </tr>
+        <tr>
+          <td class="order-left"><p>Telefon:</p></td>
+          <td class="order-right">
+            <input type="text" name="phone"/>
+          </td>
+        </tr>
+        <tr>
+          <td class="order-left"></td>
+          <td class="order-right">
+            <p class="n">
+              Lütfen buraya bir şey yazmayın:
+              <input type="text" size="40" name="url"/>
+            </p>
+            
+            <!-- Translators: Please change the value here to your language -->
+            <input type="hidden" name="language" value="tr_TR"/>
+            <!-- Translators: Please also translate the value here, it's the label
+                 of the button -->
+            <input id="order-submit" type="submit" value="Ürünleri Sipariş Et"/>
+          </td>
+        </tr>
+      </table>
+    </form>
+
+    <p>
+        Ödeme için banka aktarımı, PayPal ve çeşitli kredi ve nakit kartlarını 
+        kullanabilirsiniz. Siparişinizi verdiğinizde daha ayrıntılı bilgi size
+        iletilecektir.
+    </p>
+  </body>
+
+  <timestamp>$Date$ $Author$</timestamp>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

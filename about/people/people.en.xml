@@ -87,7 +87,7 @@
     <avatar>/fellowship/graphics/people/carstenagger-avatar.jpg</avatar>
   </person>
 
-  <person id="albers" avatar="yes" teams="ga, de, care">
+  <person id="albers" avatar="yes" association-member="yes" teams="ga, de, care">
     <name>Erik Albers</name>
     <country>DE</country>
     <function>program-manager/m</function>
@@ -586,11 +586,21 @@
       <email>pichel (at) fsfe (dot) org</email>
   </person>
 
-    <person id="rubini" avatar="yes" association-member="yes" teams="ga">
+  <person id="rubini" avatar="yes" association-member="yes" teams="ga">
     <name>Alessandro Rubini</name>
     <country>IT</country>
     <email>rubini (at) fsfe (dot) org</email>
     <avatar>/about/rubini/rubini-avatar.jpg</avatar>
+  </person>
+  
+  <person id="sander" avatar="yes" teams="core">
+    <name>Alexander Sander</name>
+    <country>DE</country>
+    <function id="policy-analyst/m">Policy Analyst</function>
+    <email>alex.sander (at) fsfe (dot) org</email>
+    <link>/about/sander/sander.html</link>
+    <avatar>/about/sander/sander-avatar.jpg</avatar>
+    <employee>full/m</employee>
   </person>
 
   <person id="sandklef" avatar="yes" association-member="yes" teams="ga">

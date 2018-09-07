@@ -43,27 +43,21 @@
 
 
 <!-- Warning info boxes -->
-<text id="outdated"><strong>Achtung: </strong>
-    Diese Seite ist eine Übersetzung, deren Original sich seit der
-    Übersetzung geändert hat. Du siehst also möglicherweise
-    eine ältere Version. Bitte informiere Dich <a href="/contribute/contribute.html">hier</a> 
-    darüber, wie Du uns bei Übersetzungen und anderen Dingen
-    unterstützen kannst.
-  </text>
-<text id="outdated-1"><strong>Achtung: </strong>
-    Diese Seite ist eine Übersetzung, deren 
-  </text>
+<text id="outdated-1">
+    Diese Übersetzung stimmt nicht mehr überein mit dem
+  </text><!-- followed by "translator3b" + . -->
 <text id="outdated-2">
-	sich seit der Übersetzung geändert hat. Du siehst also möglicherweise eine 
-	ältere Version. Bitte informiere Dich <a 
-	href="/contribute/contribute.html">hier</a> darüber, wie Du uns bei 
-	Übersetzungen und anderen Dingen unterstützen kannst.
-  </text>
-<text id="notranslation"><strong>Achtung: </strong>
-    Von dieser Seite existiert noch keine Übersetzung. Im Moment
-    siehst Du die originale Version dieser Seite. Bitte informiere dich <a href="/contribute/contribute.html">hier</a>, um zu sehen, wie Du uns
-    bei Übersetzungen und anderen Dingen unterstützen kannst.
-  </text>
+  Bitte hilf uns, diese und andere <a 
+  href="/contribute/translators/translators.html">Seiten auf fsfe.org 
+  zu übersetzen</a>, damit alle unsere Informationen in ihrer 
+  Muttersprache lesen können. 
+</text>
+<text id="notranslation">
+  Diese Seite wurde bisher noch nicht übersetzt. Bitte hilf uns, diese 
+  und andere <a href="/contribute/translators/translators.html">Seiten 
+  auf fsfe.org zu übersetzen</a>, damit alle unsere Informationen in 
+  ihrer Muttersprache lesen können.
+</text>
 <text id="under-construction"><strong>Warnung: </strong>Diese Seite ist unter Bearbeitung. Bitte übersetze sie nicht, da sie noch stark verändert wird.
   </text>
 <text id="project-complete">

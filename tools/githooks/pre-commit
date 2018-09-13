@@ -3,8 +3,8 @@
 TESTS=0
 
 for xmlfile in $(
-  git status --porcelain \
-  | sed -En "s/ [AM] (.*\.xsl|.*\.xml|.*\.xhtml)/\1/p"
+  git status -s \
+  | sed -En "s/\s*[AM]\s*(.*\.xsl|.*\.xml|.*\.xhtml)/\1/p"
 ); do
   xmllint --noout --nonet "${xmlfile}"
   TESTS=$((${TESTS} + $?))

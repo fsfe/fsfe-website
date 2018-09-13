@@ -11,15 +11,18 @@
 div.aboutperson {
   background: #DCDCDC;
   padding: 1em;
-  margin: 2em 1em 2em 1em;
+  margin: 2em 1em 2em 1em; 
   font-size: 90%;
 }
 div.aboutperson img {
-  padding: 1em;
+  padding: 1em 1em 1em 2em;
+ 
+  
   min-width: 200px !important;
-  max-width: 70% !important;
+  max-width: 30% !important;
   float: right;
   position: relative;
+  
 }
 blockquote.highlight p {
   font-size: 130%;
@@ -35,13 +38,13 @@ blockquote.highlight p {
 
 		<h1>"Go open today, there's no excuse not to" - interview with Timo Aarnio, GIS expert at National Land Survey of Finland.</h1> 
 
-		<p newsteaser="yes">Oskari is a Free Software platform for browsing, sharing and analysing geographic information from distributed data sources. Its development is coordinated by the National Land Survey of Finland and is organised through the Oskari network with over 38 organisations from both the public and private sector. Oskari was awarded second prize in the cross-border category of the European Commission's Sharing and Reuse Awards Contest 2017. To shed light on best practices regarding Free Software developed by public funds, we have conducted an interview with Timo Aarnio, GIS Expert at the National Land Survey of Finland’s SDI Services department. </p> 
+		<p newsteaser="yes">Oskari is a Free Software platform for browsing, sharing and analysing geographic information from distributed data sources. Its development is coordinated by the National Land Survey of Finland and is organised through the Oskari network with over 38 organisations from both the public and private sector. Oskari was awarded second prize in the cross-border category of the <a href="https://ec.europa.eu/isa2/news/winners-sharing-and-reuse-awards-made-public_en">European Commission's Sharing and Reuse Awards Contest 2017</a> and is currently going through incubation phase to become an official <a href="https://osgeo.org">Open Source Geospatial Foundation (OSGeo) Project</a>. To shed light on best practices regarding Free Software developed by public funds, we have conducted an interview with Timo Aarnio, GIS Expert at the National Land Survey of Finland’s SDI Services department. </p> 
 
 		<p class="question">FSFE: Could you briefly explain what “Oskari” is?</p>
  
 		<p>Timo Aarnio: <a href="http://oskari.org/">Oskari</a> is an open source web map application platform. It can be used to set up services that benefit from or require a map component. Oskari is designed to be used as a part of spatial data infrastructure so that the data is not stored in the Oskari instance but rather fetched from different APIs on-the-fly.</p>
 		
-				<div class="aboutperson"> <img src="" 	alt="Picture of Timo Aarnio" /> <p>Timo Aarnio works as a GIS Expert at the National Land Survey of Finland’s SDI Services department. With a background in IT Administration, Timo has a lot of experience with open source software especially on the server side. At NLSFI he has been working as a product owner for the Oskari open source software, with a focus on analysis and thematic mapping functions, and as an expert in the INSPIRE implementation with OGC compliant services. Timo’s biggest interests are agile development, user-centered design, and web applications.</p></div>
+				<div class="aboutperson"> <img src="/graphics/Timo_Aarnio.jpg" 	alt="Picture of Timo Aarnio" /> <p>Timo Aarnio works as a GIS Expert at the National Land Survey of Finland’s SDI Services department. With a background in IT Administration, Timo has a lot of experience with open source software especially on the server side. At NLSFI he has been working as a product owner for the Oskari open source software, with a focus on analysis and thematic mapping functions, and as an expert in the INSPIRE implementation with OGC compliant services. Timo’s biggest interests are agile development, user-centered design, and web applications.</p></div>
 
 		<p class="question">What is the main target group for Oskari? Public administrations?</p>
 
@@ -49,7 +52,7 @@ blockquote.highlight p {
 	
 		<p class="question">What was the initial idea behind creating Oskari?</p> 
  
-		<p>The idea for Oskari came about when a new geoportal was being planned for Finland. Commercial solutions did not offer enough functionalities to fulfil the needs of the National Land Survey of Finland, so they decided to build a new software utilising existing open source solutions as much as possible. There was also a desire to try new development methods, like Agile and Scrum, the latter was chosen.</p>
+		<p>The idea for Oskari came about when a new geoportal was being planned for Finland. Commercial solutions did not offer enough functionalities to fulfil the needs of the National Land Survey of Finland, so we decided to develop a new software utilising existing open source solutions as much as possible. There was also a desire to try new development methods, like Agile and Scrum.</p>
 		
 		
 		
@@ -57,7 +60,7 @@ blockquote.highlight p {
 				<p class="question">How did the development of Oskari benefit from existing open source solutions or from collaboration with other projects?</p>
 		
 		 
-		<p>For Oskari we’ve used as many readily available libraries and pieces of software as possible. We use, for example, GeoTools, GeoServer, OpenLayers, PostgreSQL/PostGIS, redis, just to name a few. Going further, all of our “production line” is based on Free and Open Source Software tools and our production servers also all run Linux. We’ve also been in contact with some similar projects and tried to find ways to collaborate.</p>  
+		<p>For Oskari we’ve used as many readily available libraries and pieces of software as possible. We use, for example, GeoTools, GeoServer, OpenLayers, PostgreSQL/PostGIS, Redis, just to name a few. Going further, all of our “production line” is based on Free and Open Source Software tools and our production servers also all run Linux. We’ve also been in contact with some similar projects and tried to find ways to collaborate.</p>  
 		
 			<blockquote class="highlight"><p>All of our “production line” is based on Free and Open Source Software tools and our production servers also all run Linux.</p></blockquote>
 			
@@ -97,7 +100,12 @@ blockquote.highlight p {
 		 
 		 <p>Outside of Finland we don’t yet have that many cases of re-using Oskari. The national mapping agencies in Moldova and Iceland are the only ones I know of. I suppose the biggest reason for this is that there is no company selling Oskari yet internationally. So all the organisations interested in Oskari have had to use their own resources when trying to re-use the software. In the future this is probably going to change for the better as interest from companies is on the rise.</p> 
 		 
+<div class="captioned" style="width:100%; margin: 1.5em auto;">
 
+<a href="http://demo.oskari.org/"><img src="/graphics/oskari.jpg" alt="Oskari map" style="max-width: 1000 px; width: 100%;" align="left"/></a>
+<footer><p style="text-align:center">Oskari software demo, image source: http://oskari.org/ </p></footer> 
+
+</div>
 		 
 		 <p class="question">Who are the active members of the community around Oskari? Is it composed of individuals or organisations?</p>  
 		 

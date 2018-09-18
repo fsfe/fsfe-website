@@ -62,9 +62,10 @@ my %responsible = (
   "PERSONELL-KIRSCHNER" => "council",
   "PERSONELL-ALBERS" => "council",
   "PERSONELL-SLIWINSKI" => "council",
-  "PERSONELL-MALAJA" => "council",
   "PERSONELL-MEHL" => "council",
   "PERSONELL-SANDER" => "council",
+  "PERSONELL-KU" => "council",
+  "PERSONELL-MANCHEVA" => "council",
   "OFFICE-BERLIN" => "usli",
 );
 
@@ -95,6 +96,8 @@ my %account = (
   "PERSONELL-MALAJA" => "81040",
   "PERSONELL-MEHL" => "81052",
   "PERSONELL-SANDER" => "81057",
+  "PERSONELL-KU" => "81058",
+  "PERSONELL-MANCHEVA" => "81059",
   "OFFICE-BERLIN" => "82001",
 );
 

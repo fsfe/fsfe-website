@@ -47,7 +47,7 @@
           </xsl:element>
 
           <xsl:element name="a">
-              <xsl:attribute name="href">https:///my.fsfe.org/support</xsl:attribute>
+              <xsl:attribute name="href">https://my.fsfe.org/support</xsl:attribute>
               <xsl:attribute name="id">direct-to-join</xsl:attribute>
               <xsl:element name="i">
                 <xsl:attribute name="class">fa fa-user-plus fa-lg</xsl:attribute>

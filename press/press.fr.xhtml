@@ -44,19 +44,10 @@
 	<p>
 	  En vous inscrivant à nos fils d'information ou à nos listes de diffusion, vous demeurez informés des derniers évènements du monde des Logiciels Libres.
         </p>
-
-        <form method="post" action="http://lists.fsfe.org/mailman/subscribe/press-release">
-          <p>
-            <input type="text" name="email" value="your@email.com" onChange="this.value = ''" onClick="this.value = ''" />
-            <input type="submit" value="S’abonner" />
-          </p>
+        
+        <form id="formnl" name="formnl" method="POST" action="//lists.fsfe.org/mailman/listinfo/press-release">
+          <input type="submit" value="S’abonner" />
         </form>
-
-        <p>
-            Votre adresse mail va être envoyée à notre serveur Mailman. Merci de vous rendre <a
-            href="https://wiki.fsfe.org/TechDocs/DataProcessingTransparency#Communications_means">ici</a>
-            pour plus d'informations.
-        </p>
 
 	<p>
 	  Pour des données instantanées ou de dernière minute, vous pouvez aussi nous suivre <a

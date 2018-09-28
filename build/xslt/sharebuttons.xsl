@@ -86,36 +86,36 @@
       </xsl:element>
       <xsl:element name="wbr"/>
 
-      <!-- GNU Social -->
+      <!-- Mastodon -->
       <xsl:element name="label">
-        <xsl:attribute name="class">button share-gnusocial</xsl:attribute>
+        <xsl:attribute name="class">button share-mastodon</xsl:attribute>
         <xsl:attribute name="title">
           <xsl:call-template name="fsfe-gettext">
             <xsl:with-param name="id" select="'share-page'" />
           </xsl:call-template>
-          <xsl:text> GNU Social</xsl:text>
+          <xsl:text> Mastodon</xsl:text>
         </xsl:attribute>
-        <xsl:attribute name="for">gnusocial-share-bottom</xsl:attribute>
-        <xsl:text>GNU Social</xsl:text>
+        <xsl:attribute name="for">mastodon-share-bottom</xsl:attribute>
+        <xsl:text>Mastodon</xsl:text>
       </xsl:element>
       <xsl:element name="input">
         <xsl:attribute name="type">radio</xsl:attribute>
         <xsl:attribute name="name">popup</xsl:attribute>
-        <xsl:attribute name="id">gnusocial-share-bottom</xsl:attribute>
+        <xsl:attribute name="id">mastodon-share-bottom</xsl:attribute>
       </xsl:element>
       <xsl:element name="span">
-        <xsl:attribute name="class">popup gnusocial</xsl:attribute>
+        <xsl:attribute name="class">popup mastodon</xsl:attribute>
         <xsl:element name="label"><xsl:attribute name="for">no-share-popup</xsl:attribute></xsl:element>
         <xsl:element name="input">
           <xsl:attribute name="type">text</xsl:attribute>
-          <xsl:attribute name="name">gnusocialpod</xsl:attribute>
+          <xsl:attribute name="name">mastodonpod</xsl:attribute>
           <xsl:attribute name="value"></xsl:attribute>
-          <xsl:attribute name="placeholder">GNU Social URL (gnusocial.tld)</xsl:attribute>
+          <xsl:attribute name="placeholder">Mastodon URL (mastodon.tld)</xsl:attribute>
         </xsl:element>
         <xsl:element name="button">
           <xsl:attribute name="type">submit</xsl:attribute>
           <xsl:attribute name="name">service</xsl:attribute>
-          <xsl:attribute name="value">gnusocial</xsl:attribute>
+          <xsl:attribute name="value">mastodon</xsl:attribute>
           <xsl:text>OK</xsl:text>
         </xsl:element>
       </xsl:element>

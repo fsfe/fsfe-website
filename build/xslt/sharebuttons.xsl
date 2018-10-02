@@ -19,6 +19,7 @@
       <xsl:attribute name="method">GET</xsl:attribute>
       <xsl:attribute name="class">share-buttons bottom</xsl:attribute>
       <xsl:attribute name="target">_blank</xsl:attribute>
+      <xsl:attribute name="onkeypress">return event.keyCode != 13;</xsl:attribute>
       <h3>
         <xsl:call-template name="fsfe-gettext">
           <xsl:with-param name="id" select="'share-head'" />

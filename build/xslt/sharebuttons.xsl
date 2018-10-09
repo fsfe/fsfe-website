@@ -202,22 +202,6 @@
       </xsl:element>
       <xsl:element name="wbr"/>
 
-      <!-- Google+ -->
-      <xsl:element name="button">
-        <xsl:attribute name="type">submit</xsl:attribute>
-        <xsl:attribute name="name">service</xsl:attribute>
-        <xsl:attribute name="value">gplus</xsl:attribute>
-        <xsl:attribute name="class">button share-gplus</xsl:attribute>
-        <xsl:attribute name="title">
-          <xsl:call-template name="fsfe-gettext">
-            <xsl:with-param name="id" select="'share-page'" />
-          </xsl:call-template>
-          <xsl:text> Google+</xsl:text>
-        </xsl:attribute>
-        <xsl:text>Google+</xsl:text>
-      </xsl:element>
-      <xsl:element name="wbr"/>
-
       <!-- Support -->
       <xsl:element name="button">
         <xsl:attribute name="type">submit</xsl:attribute>

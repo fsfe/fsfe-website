@@ -29,7 +29,13 @@
         </xsl:element>
       </li></ul>
       <p><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id"
-            select="'permission'" /></xsl:call-template></p>
+            select="'permission'" /></xsl:call-template>
+            <xsl:element name="a">
+              <xsl:attribute name="href"><xsl:value-of select="$linkresources"/>/about/js-licences.html</xsl:attribute>
+              <xsl:attribute name="data-jslicense">1</xsl:attribute>
+              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'js-licences'" /></xsl:call-template>
+            </xsl:element>
+      </p>
     </xsl:element>
   </xsl:template>
 </xsl:stylesheet>

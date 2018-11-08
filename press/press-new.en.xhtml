@@ -3,6 +3,30 @@
 <html>
   <head>
     <title>Press Room - FSFE</title>
+    
+    <style>
+
+    
+    
+    
+		ul.subheadings li {
+    				grid-template-columns: 1fr 4fr;
+    				display: grid;
+    				grid-column-gap: 10px;
+    				margin-top:20px;
+    				
+    		}
+    		  ul.subheadings li h3 {
+    				margin-top:0px;
+    		} 
+    		
+    	div.icon {
+				max-width: 72px;
+				}
+    		
+    		</style>
+    
+    
   </head>
 
   <body class="press" id="press-room">
@@ -46,7 +70,7 @@
         </form>
       </div>
 
-      <p>
+      <p style="margin:0em 2em 0em 2em;">
         <strong>Subscribing to our press-release-list is the easiest way to ensure you receive all FSFE's press releases.</strong>
       </p>
 
@@ -57,7 +81,7 @@
 
       <h2>Follow our News</h2>
 
-      <p>Apart from our press releases we publish important news about our work and our campaigns. To ensure you receive them, you can subscribe to our <a href="https://fsfe.org/news/news.en.rss">RSS feed</a> and our <a href="https://fsfe.org/news/newsletter">Newsletter</a>.</p>
+      <p>Apart from our press releases we regularly publish important news about our work and our campaigns. To ensure you receive them, you can subscribe to our <a href="https://fsfe.org/news/news.en.rss">RSS feed</a> and our <a href="https://fsfe.org/news/newsletter">Newsletter</a>.</p>
 
       <div class="share-buttons bottom" style="text-align:center; margin-top:1em;margin-bottom:1em;">
         <a target="_blank" href="https://fsfe.org/donate/?ml-signup">
@@ -73,7 +97,7 @@
       <p>
         For instant updates and hot news you can also follow us on <a
           href="https://mastodon.social/@fsfe">Mastodon</a>, <a href="https://diasp.eu/u/fsfe">Diaspora</a>, <a
-          href="https://twitter.com/fsfe">Twitter</a> and<a href="https://facebook.com/thefsfe">Facebook</a>.
+          href="https://twitter.com/fsfe">Twitter</a> and <a href="https://facebook.com/thefsfe">Facebook</a>.
       </p>
 
       <div class="share-buttons bottom" style="text-align:center;margin-top:1em;margin-bottom:1em;">
@@ -129,7 +153,7 @@
 
       <h2>About FSFE</h2>
 
-      <p>The Free Software Foundation Europe was founded in 2001 as a charity to empower users to control technology. You can find our goals defined and the methods we use to achieve them written down in <a href="/about/mission">our mission statement</a>. In <a href="/timeline/timeline">our interactive timeline</a>, we collected our most important achievements to promote and defend software freedom in Europe since 2001 within various areas.</p>
+      <p>The Free Software Foundation Europe was founded in 2001 as a charity to empower users to control technology. You can find our goals defined and the methods we use to achieve them written down in <a href="/about/mission">our mission statement</a>. In <a href="/timeline/timeline">our timeline</a>, we collected our most important achievements to promote and defend software freedom in Europe since 2001 within various areas.</p>
 
     </div>
 
@@ -139,9 +163,9 @@
 
     <div class="box first">
 
-      <h3>Matthias Kirschner, President of FSFE:</h3>
+      <h3>Matthias Kirschner, President of the FSFE:</h3>
 
-      <video style="align:center; margin:2em 0 2em 0;" width="100%" crossorigin="crossorigin" poster="https://download.fsfe.org/videos/supporter/posters/matthias.jpg" controls="controls">
+      <video style="align:center" width="100%" crossorigin="crossorigin" poster="https://download.fsfe.org/videos/supporter/posters/matthias.jpg" controls="controls">
         <source media="screen and (min-device-width:1000px)" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="https://download.fsfe.org/videos/supporter/matthias_desktop.mp4"></source>
         <source media="screen and (min-device-width:1000px)" type="video/webm; codecs=&quot;vp9, opus&quot;" src="https://download.fsfe.org/videos/supporter/matthias_desktop.webm"></source>
         <source media="screen and (max-device-width:999px)" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="https://download.fsfe.org/videos/supporter/matthias_mobile.mp4"></source>
@@ -155,7 +179,7 @@
 
       <h3>Birthday video - 15 years of FSFE:</h3>
 
-      <video style="align:center" width="90%" height="270" crossorigin="crossorigin" poster="/graphics/15years-video-poster.png" controls="controls">
+      <video style="align:center" width="100%" crossorigin="crossorigin" poster="/graphics/15years-video-poster.png" controls="controls">
         <source media="screen and (min-device-width:1000px)" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="https://download.fsfe.org/videos/15years/FSFE15_30.mp4"></source>
         <source media="screen and (min-device-width:1000px)" type="video/webm; codecs=&quot;vp9, opus&quot;" src="https://download.fsfe.org/videos/15years/FSFE15_38.webm"></source>
         <source media="screen and (max-device-width:999px)" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="https://download.fsfe.org/videos/15years/FSFE15_mobile.mp4"></source>
@@ -194,34 +218,42 @@
 
     <h2>Background and resources</h2>
 
-    <ul>
+      <ul class="subheadings">
 
-      <li>
+      <li><div class="icon"><a href="/freesoftware/freesoftware.html"><img src="/graphics/icons/fs-basics.png" alt="Free Software Basics" /></a></div>
+      <div>
         <h3><a href="/freesoftware/freesoftware.html">Free Software Basics</a></h3>
         <p>
           Access to software determines who may participate in a digital society. Read about the role of Free Software in key areas in our <a href="/freesoftware/freesoftware.html">introduction to Free Software</a>.
         </p>
+      </div>
       </li>
 
-      <li>
+      <li><div class="icon"><a href="/about/graphics/graphics.html"><img src="/graphics/icons/graphics.png" alt="Logo and Graphics" /></a></div>
+      <div>
         <h3><a href="/about/graphics/graphics.html">Logo and Graphics</a></h3>
         <p>
           Download <a href="/about/graphics/graphics.html">our logo and other graphics</a> to use them in your publication.
         </p>
+        </div>
       </li>
 
-      <li>
+      <li><div class="icon"><a href="/about/principles.html"><img src="/graphics/icons/howwework.png" alt="How we work" /></a></div>
+      <div>
         <h3><a href="/about/principles.html">How we work</a></h3>
         <p>
           We see ourselves as Europeans with different backgrounds who support developing a common culture of co-operation. <a href="/about/principles.html">Our principles</a> will help you understand the way we think and work.
         </p>
+        </div>
       </li>
 
-      <li>
-        <h3><a href="/about/principles.html">Who we are</a></h3>
+      <li><div class="icon"><a href="/about/team.html"><img src="/graphics/icons/meetus.png" alt="Who we are" /></a></div>
+      <div>
+        <h3><a href="/about/team.html">Who we are</a></h3>
         <p>
           Find members of our community, volunteers, interns, staffers and coordinators on <a href="/about/team.html">our team page</a>.
         </p>
+        </div>
       </li>
 
       <!--

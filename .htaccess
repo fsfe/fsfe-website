@@ -31,6 +31,9 @@ RewriteRule	^summit16(/.*)?$	https://fsfe.org/community/events/2016/summit/front
 # 15 years of FSFE
 RewriteRule	^15(/.*)?$		https://fsfe.org/campaigns/15years/15years$1 [redirect=permanent]
 
+# EU policies wiki page, e.g. linked from the PMPC brochure
+RewriteRule ^fs-policies/?$ https://wiki.fsfe.org/Activities/EU_Policies_overview_FS [redirect=permanent]
+
 ## === MOVED PAGES ===
 
 # Redirections for IloveFS campaign

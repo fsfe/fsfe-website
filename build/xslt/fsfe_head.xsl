@@ -139,6 +139,10 @@
       <!-- Get the meta element description -->
       <xsl:value-of select="head/meta[@name = 'description']/@content" />
     </xsl:variable>
+    <xsl:variable name="metaimage">
+      <!-- Get the meta element description -->
+      <xsl:value-of select="head/meta[@name = 'image']/@content" />
+    </xsl:variable>
     
     <!-- EXTRACT -->
     <!-- take a first extract which should be sufficient for most pages -->
@@ -186,7 +190,15 @@
     <meta name="twitter:site" content="@fsfe" />
     <xsl:element name="meta">
       <xsl:attribute name="name">twitter:image</xsl:attribute>
-      <xsl:attribute name="content">https:<xsl:value-of select="$linkresources"/>/graphics/logo-text_square.png</xsl:attribute>
+      <xsl:attribute name="content">
+        <xsl:choose>
+          <!-- if there is a meta "image", take that -->
+          <xsl:when test="$metaimage != ''"><xsl:value-of select="$metaimage" /></xsl:when>
+          <xsl:otherwise>
+            https:<xsl:value-of select="$linkresources"/>/graphics/logo-text_square.png
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:attribute>
     </xsl:element>
     <xsl:element name="meta">
       <xsl:attribute name="name">twitter:title</xsl:attribute>
@@ -218,7 +230,15 @@
     <meta property="og:site_name" content="FSFE - Free Software Foundation Europe" />
     <xsl:element name="meta">
       <xsl:attribute name="property">og:image</xsl:attribute>
-      <xsl:attribute name="content">https:<xsl:value-of select="$linkresources"/>/graphics/logo-text_square.png</xsl:attribute>
+      <xsl:attribute name="content">
+        <xsl:choose>
+          <!-- if there is a meta "image", take that -->
+          <xsl:when test="$metaimage != ''"><xsl:value-of select="$metaimage" /></xsl:when>
+          <xsl:otherwise>
+            https:<xsl:value-of select="$linkresources"/>/graphics/logo-text_square.png
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:attribute>
     </xsl:element>
     <xsl:element name="meta">
       <xsl:attribute name="property">og:locale</xsl:attribute>

@@ -43,7 +43,7 @@
 				<input name="startdate" value="" required="required" type="date" placeholder="YYYY-MM-DD" />
 			</td>
 			<td>
-				<label for="enddate" >End date</label>
+				<label for="enddate" >End date</label>*
 				<input name="enddate" value="" type="date" placeholder="YYYY-MM-DD" />
 			</td>
 			</tr>
@@ -53,7 +53,17 @@
 
         <p class="help-block">Please explain briefly what your event is about, how to attend and what participants can expect. If you register your event in another language than English, please consider to also upload an English version <strong>to make sure we understand it</strong>. Also be aware that (for technical reasons) we can only list English event entries on our front-page fsfe.org - any other language will only be visible under fsfe.org/events.</p>
 
-        <label for="url">Event URL</label>
+	   <label for="tags">Choose one or more tags below</label>*
+        
+        <div class="checkboxlist">
+		<div class="checkbox"><label><input type="checkbox" name="tags[]" value="talk" />talk</label></div>
+		<div class="checkbox"><label><input type="checkbox" name="tags[]" value="infobooth" />infobooth</label></div>
+		<div class="checkbox"><label><input type="checkbox" name="tags[]" value="localgrouop" />local group</label></div>
+		<div class="checkbox"><label><input type="checkbox" name="tags[]" value="workshop" />workshop</label></div>
+		<div class="checkbox"><label><input type="checkbox" name="tags[]" value="meeting" />meeting</label></div>
+	</div>
+
+        <label for="url">Event URL (if available)</label>
         <input name="url" value="" type="text" />
 
         <!--<label for="location">Event Location</label>
@@ -65,8 +75,38 @@
         <label for="city">City<span class="star">*</span></label>
         <input name="city" value="" required="required" type="text" />
 
-        <label for="country">Country<span class="star">*</span></label>
-        <input name="country" value="" required="required" type="text" />
+        <div class="form-group">
+        <label for="country">Country<span class="star">*</span></label>        
+        <select name="country" class="form-control">
+			<option value="at">Austria</option>
+			<option value="be">Belgium</option>
+			<option value="bg">Bulgaria</option>
+			<option value="hr">Croatia</option>
+			<option value="dk">Denmark</option>
+			<option value="ee">Estonia</option>
+			<option value="fi">Finland</option>
+			<option value="fr">France</option>
+			<option value="de">Germany</option>
+			<option value="gr">Greece</option>
+			<option value="hu">Hungary</option>
+			<option value="ie">Ireland</option>
+			<option value="it">Italy</option>
+			<option value="lv">Latvia</option>
+			<option value="lt">Lithuania</option>
+			<option value="lu">Luxembourg</option>
+			<option value="mt">Malta</option>
+			<option value="nl">Netherlands</option>
+			<option value="pl">Poland</option>
+			<option value="pt">Portugal</option>
+			<option value="ro">Romania</option>
+			<option value="sk">Slovakia</option>
+			<option value="si">Slovenia</option>
+			<option value="es">Spain</option>
+			<option value="se">Sweden</option>
+			<option value="uk">United Kingdom</option>
+			<option value="other">Other</option>
+		</select>
+		</div>
 
         <!--</fieldset>-->
 	<!-- Should help against spam -->

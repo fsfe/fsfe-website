@@ -67,6 +67,7 @@ function send_registration_mail($from, $to) {
 		'location' => $_POST['location'],
 		'city' => $_POST['city'],
 		'country' => $_POST['country'],
+		'tags' => $_POST ['tags'] ?: [],
 	);
 
 	$data['event'] = eval_template('registerevent/event.php', $data);

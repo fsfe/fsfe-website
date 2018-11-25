@@ -14,8 +14,12 @@
  
 
 		<tags>
-			<tag content=""><?=htmlspecialchars($city)?></tag>
 			<tag content=""><?=htmlspecialchars($country)?></tag>
+			<?php
+				foreach ($tags as $tag) {
+					echo sprintf('<tag content="">%s</tag>', htmlspecialchars($tag));
+				}
+			?>
 			<tag>front-page</tag>
 		</tags>
 

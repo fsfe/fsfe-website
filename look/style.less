@@ -272,26 +272,19 @@ div#subpages, .grid-row {
 /* grid */
 .article, .planet {
     #content, #planet-posts {
-        flex: 0 0 100%;
+        .make-xs-column(12);
+        .make-md-column(8);
         padding-left: 0;
     }
-
     #sidebar {
-        flex: 0 0 100%;
+        .make-xs-column(12);
+        .make-md-column(4);
         padding-right: 0;
     }
 }
 
-@media (min-width: @screen-md-min) {
-    .article, .planet {
-        #content, #planet-posts {
-            flex: 1 0 66%;
-        }
-
-        #sidebar {
-            flex: 0 0 33%;
-        }
-    }
+#content + #sidebar {
+    .article #sidebar;
 }
 
 #main, #followup {

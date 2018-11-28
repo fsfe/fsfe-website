@@ -6,7 +6,6 @@ body {
     background: url(/graphics/fellowship/plussy_tile_03.png) top left fixed #F9F9F9;
     font-family: "Roboto", sans-serif;
 }
-
 .svg body {
     background: url(/graphics/fellowship/plussy_tile_03.svg) top left fixed #F9F9F9;
 }
@@ -14,7 +13,6 @@ body {
 #logo {
     background: url(/graphics/logo_transparent.png) top left no-repeat;
 }
-
 .svg #logo {
     background: url(/graphics/logo_transparent.svg) top left no-repeat;
 }
@@ -29,8 +27,90 @@ body {
     height: 85px;
 }
 
+@media (max-width: @screen-sm) {
+
+    #link-home a {
+        height: 50px;
+    }
+
+    #top {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        position: relative;
+
+        #search {
+            display: none;
+        }
+    }
+
+    #masthead {
+        background-color: #fff;
+        order: 1;
+        min-height: 50px;
+        padding: 10px;
+
+        #logo {
+            background-position: left center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            min-height: 50px;
+            min-width: 120px;
+        }
+    }
+
+    #menu {
+        background-color: #fff;
+        margin-left: 0;
+        order: 2;
+        padding: 10px;
+
+        #direct-links {
+            margin-bottom: 0;
+
+            #direct-to-menu-list {
+                font-size: 1.3em;
+            }
+
+            #direct-to-translations {
+                position: absolute;
+                top: 5px;
+                right: 85px;
+            }
+
+            #direct-to-login {
+                position: absolute;
+                top: 5px;
+                right: 10px;
+            }
+        }
+
+        #direct-to-home,
+        #direct-to-join {
+            display: none;
+        }
+    }
+
+    #menu-list {
+        display: block;
+        margin-top: 10px;
+        padding-bottom: 0;
+    }
+
+    #index-html {
+        #main {
+            padding-top: 0;
+        }
+    }
+
+    #bottom {
+        padding: 10px;
+    }
+}
+
 #menu {
-    @media (min-width: @screen-xs) {
+    @media (min-width: @screen-sm) {
         margin-left: 200px;
     }
 }
@@ -46,14 +126,14 @@ body {
 
 .svg #followup {
     @media (min-width: @screen-sm) {
-        background: url(/graphics/ribbon.svg) no-repeat 100% -70px @body-bg;
+        background: url(/graphics/ribbon.svg) no-repeat 100% -70px @body-bg; 
     }
 }
 
 #followup.join {
-    background: url(/graphics/fellowship/ribbon_fellowship2.png) no-repeat 100% -30px @body-bg;
+    background: url(/graphics/fellowship/ribbon_fellowship2.png) no-repeat 100% -30px @body-bg; 
     @media (min-width: @screen-sm) {
-        background: url(/graphics/fellowship/ribbon_fellowship2.png) no-repeat 100% -50% @body-bg;
+        background: url(/graphics/fellowship/ribbon_fellowship2.png) no-repeat 100% -50% @body-bg; 
     }
 }
 
@@ -116,7 +196,7 @@ img.signatory-logo {
             }
 
             p.text {
-                /*background: url('/graphics/fsfs.png') top center no-repeat transparent;
+                /*background: url('/graphics/fsfs.png') top center no-repeat transparent; 
                 background-size: contain; */
                 -moz-hyphens: manual;
                 -webkit-hyphens: manual;
@@ -355,6 +435,7 @@ img.signatory-logo {
 }
 
 
+
 #news {
     padding-bottom: 1.5em;
 
@@ -410,9 +491,14 @@ img.signatory-logo {
 }
 
 .newsdate {
-    font-size: .875em;
-    color: #888;
-    margin-right: 1ex;
+  font-size: .875em;
+  color: #888;
+  margin-right: 1ex;
+}
+
+[newsteaser="yes"] {
+	font-weight: bold;
+	font-size: 1.2em;
 }
 
 [newsteaser="yes"] {
@@ -433,7 +519,6 @@ img.signatory-logo {
         h3 {
             display: inline-block;
         }
-
         p.date {
             #news .dt-published;
             display: block;
@@ -443,7 +528,6 @@ img.signatory-logo {
             }
         }
     }
-
     a.learn-more {
         line-height: 2;
     }
@@ -455,7 +539,6 @@ img.signatory-logo {
         float: left;
         width: 69%;
     }
-
     #team {
         display: inline-block;
         float: left;
@@ -476,8 +559,6 @@ img.signatory-logo {
         display: block;
         margin: .5em 0;
     }
-
-    margin-bottom: 20px;
 }
 
 #feeds {
@@ -529,21 +610,13 @@ ul.archivetaglist li {
     padding: 0 0.25em;
 }
 
-ul.archivemeta li:first-child {
-    padding-left: 0;
-}
+ul.archivemeta li:first-child {padding-left: 0; }
 
-ul.archivemeta li a, ul.archivetaglist li a {
-    color: #999;
-}
+ul.archivemeta li a, ul.archivetaglist li a { color: #999; }
 
-.archiveauthor {
-    margin: 0 0.25em;
-}
+.archiveauthor { margin: 0 0.25em; }
 
-ul.archivetaglist {
-    margin-left: 6%;
-}
+ul.archivetaglist { margin-left: 6%; }
 
 /* donate */
 
@@ -558,7 +631,6 @@ ul.archivetaglist {
             .form-control;
             max-width: 25em;
         }
-
         #donate-validate {
             .btn;
             .btn-lg;
@@ -592,12 +664,9 @@ ul.archivetaglist {
     @media (min-width: @screen-md) {
         position: absolute;
         margin-left: -200px;
-        margin-top: -10em;
+        margin-top:-10em;
     }
-
-    img {
-        display: none;
-    }
+    img {display: none;}
 }
 
 /* Valentine for ILOVEFS style */
@@ -606,25 +675,25 @@ ul.archivetaglist {
     #logo {
         background: url(/graphics/logov.png) top left no-repeat;
     }
-
     .svg #logo {
         background: url(/graphics/logov.svg) top left no-repeat;
     }
 
     #followup {
-        background: url(/graphics/ribbonv.png) no-repeat 100% -40px @body-bg;
+        background: url(/graphics/ribbonv.png) no-repeat 100% -40px @body-bg; 
 
         @media (min-width: @screen-sm) {
-            background: url(/graphics/ribbonv.png) no-repeat 100% -70px @body-bg;
+            background: url(/graphics/ribbonv.png) no-repeat 100% -70px @body-bg; 
         }
     }
 }
 
 .svg .valentine-ilovefs #followup {
     @media (min-width: @screen-sm) {
-        background: url(/graphics/ribbonv.svg) no-repeat 100% -70px @body-bg;
+        background: url(/graphics/ribbonv.svg) no-repeat 100% -70px @body-bg; 
     }
 }
+
 
 
 /* Planet style */
@@ -647,10 +716,9 @@ ul.archivetaglist {
 
 #planet-posts {
     .daygroup {
-        h2:first-child {
+    	h2:first-child {
             color: @brand-strong;
         }
-
         .blogitem {
             padding-bottom: 3em;
             margin-bottom: 3em;
@@ -666,9 +734,9 @@ ul.archivetaglist {
 
 .wiki #direct-links {
     visibility: visible;
-
+    
     a {
-        display: inline-block;
+        display:inline-block;
     }
 }
 
@@ -682,371 +750,233 @@ ul.archivetaglist {
 /* PDFreaders buglist */
 
 tr.highlighted {
-    background-color: rgb(208, 244, 0);
+  background-color: rgb(208,244,0);
 }
 
 
 /* FSFE Shop (/order) */
 
 table.merchandise tr {
-    border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
-
 table.merchandise tr:last-child {
-    border-bottom: medium none;
+  border-bottom: medium none;
 }
-
 table.merchandise td {
-    padding: 10px 0;
+  padding: 10px 0;
 }
-
 table.merchandise .image {
-    width: 25%;
-    min-width: 250px;
+  width: 25%;
+  min-width: 250px;
 }
-
 table.merchandise .image img {
-    max-height: 120px;
-    margin: 5px;
+  max-height: 120px;
+  margin: 5px;
 }
-
 table.merchandise .description {
-    width: 60%;
+  width: 60%;
 }
-
 table.merchandise .quantity {
-    text-align: right;
-    width: 15%;
-    min-width: 100px
+  text-align: right;
+  width: 15%;
+  min-width: 100px
 }
-
 @media only screen and (max-device-width: 700px) {
-    table.merchandise .image {
-        min-width: 125px;
-    }
+  table.merchandise .image {
+    min-width: 125px;
+  }
 }
-
 @media only screen and (max-device-width: 400px) {
-    table.merchandise .quantity {
-        min-width: 0px;
-    }
-
-    table.merchandise .image img {
-        max-width: 110px;
-    }
+  table.merchandise .quantity {
+    min-width: 0px;
+  }
+  table.merchandise .image img {
+    max-width: 110px;
+  }
 }
-
 table.order-form {
-    width: 100%;
+  width: 100%;
 }
-
 table.order-form .order-left {
-    min-width: 65px;
-    width: 10%;
+  min-width: 65px;
+  width: 10%;
 }
-
-table.order-form .order-right input, textarea {
-    max-width: 400px;
-    width: 90%;
+table.order-form .order-right input,textarea {
+  max-width: 400px;
+  width: 90%;
 }
-
 table.order-form #order-submit {
-    width: auto;
+  width: auto;
 }
-
 form.thankyou {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
-.share-top-buttons-label {
-    margin-right: 1rem;
-}
 
 /* SOCIAL NETWORK SHARE BUTTONS (below articles and pages) */
 .share-buttons.bottom {
-    margin: 4em 0 -2em 0;
+  margin: 4em 0 -2em 0;
+  font-size: 0.7em;
 }
-
-.share-buttons-top {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.share-buttons-sidebar {
-    padding-left: 2rem;
-}
-
-.share-button-top,
-.share-button-sidebar,
 .share-buttons.bottom button.button,
 .share-buttons.bottom label.button {
-    display: inline-block;
-    margin: 2.5px 5px 2.5px 0;
-    color: #fff;
-    font-weight: normal;
-    font-size: 1em;
-    line-height: normal;
-    text-align: center;
-    text-decoration: none;
-    padding: 7px 7px 7px 20px;
-    width: 19%;
-    min-width: 100px;
-    max-width: 110px;
-    border: none;
-    border-radius: 3px;
-    background-position: left 5px center;
-    background-repeat: no-repeat;
-    background-size: 20px auto;
-    opacity: 0.9;
-    vertical-align: top;
+  display: inline-block;
+  margin: 2.5px 5px 2.5px 0;
+  color: #fff;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: normal;
+  text-align: center;
+  text-decoration: none;
+  padding: 7px 7px 7px 20px;
+  width: 19%;
+  min-width: 100px;
+  max-width: 110px;
+  border: none;
+  border-radius: 3px;
+  background-position: left 5px center;
+  background-repeat: no-repeat;
+  background-size: 20px auto;
+  opacity: 0.9;
+  vertical-align: top;
+}
+.share-buttons.bottom a:hover {
+  text-decoration: none;
 }
 
-.share-button-top,
-.share-buttons.bottom,
-.share-buttons-sidebar {
-    font-size: .7em;
+.share-buttons.bottom .share-facebook {
+  background-color: #3b5998;
+  background-image: url("/graphics/services/facebook_white.png");
 }
-
-.share-buttons-top,
-.share-buttons-sidebar,
-.share-buttons.bottom {
-
-    a:hover {
-        text-decoration: none;
-    }
-
-    .share-rss {
-        background-color: #f4a000;
-        background-image: url("/graphics/services/rss_white.png");
-    }
-
-    .share-rss:hover {
-        background-color: #f78200 !important;
-    }
-
-    .share-mail {
-        background-color: #6e6e6e;
-        background-image: url("/graphics/services/mail_white.png");
-    }
-
-    .share-mail:hover {
-        background-color: #272727 !important;
-    }
-
-    .share-mastodon {
-        background-color: #2b90d9;
-        background-image: url("/graphics/services/mastodon_white.png");
-    }
-
-    .share-mastodon:hover {
-        background-color: #1060a9 !important;
-    }
-
-    .share-diaspora {
-        background-color: #404040;
-        background-image: url("/graphics/services/diaspora_white.png");
-    }
-
-    .share-diaspora:hover {
-        background-color: #101010 !important;
-    }
-
-    .share-facebook {
-        background-color: #3b5998;
-        background-image: url("/graphics/services/facebook_white.png");
-    }
-
-    .share-facebook:hover {
-        background-color: #143271 !important;
-    }
-
-    .share-twitter {
-        background-color: #55acee;
-        background-image: url("/graphics/services/twitter_white.png");
-    }
-
-    .share-twitter:hover {
-        background-color: #338acc !important;
-    }
-
-    .share-support {
-        background-color: #202d79;
-        background-image: url("/graphics/services/fsfe_white.png");
-        padding-left: 25px;
-
-        &:hover {
-            background-color: #0a1763 !important;
-        }
-    }
+.share-buttons.bottom .share-facebook:hover {
+  background-color: #143271 !important;
 }
-
+.share-buttons.bottom .share-twitter {
+  background-color: #55acee;
+  background-image: url("/graphics/services/twitter_white.png");
+}
+.share-buttons.bottom .share-twitter:hover {
+  background-color: #338acc !important;
+}
 .share-buttons.bottom .share-gplus {
-    background-color: #d34836;
-    background-image: url("/graphics/services/gplus_white.png");
+  background-color: #d34836;
+  background-image: url("/graphics/services/gplus_white.png");
 }
-
 .share-buttons.bottom .share-gplus:hover {
-    background-color: #b12614 !important;
+  background-color: #b12614 !important;
 }
-
+.share-buttons.bottom .share-diaspora {
+  background-color: #404040;
+  background-image: url("/graphics/services/diaspora_white.png");
+}
+.share-buttons.bottom .share-diaspora:hover {
+  background-color: #101010 !important;
+}
 .share-buttons.bottom .share-flattr {
-    background-color: #7ea352;
-    background-image: url("/graphics/services/flattr_white.png");
+  background-color: #7ea352;
+  background-image: url("/graphics/services/flattr_white.png");
 }
-
 .share-buttons.bottom .share-flattr:hover {
-    background-color: #5a7f2e !important;
+  background-color: #5a7f2e !important;
 }
-
+.share-buttons.bottom .share-support {
+  background-color: #202d79;
+  background-image: url("/graphics/services/fsfe_white.png");
+}
+.share-buttons.bottom .share-support:hover {
+  background-color: #0a1763 !important;
+}
 .share-buttons.bottom .share-reddit {
-    background-color: #ff5700;
-    background-image: url("/graphics/services/reddit_white.png");
+  background-color: #ff5700;
+  background-image: url("/graphics/services/reddit_white.png");
 }
-
 .share-buttons.bottom .share-reddit:hover {
-    background-color: #dd3500 !important;
+  background-color: #dd3500 !important;
 }
-
 .share-buttons.bottom .share-gnusocial {
-    background-color: #a22430;
-    background-image: url("/graphics/services/gnusocial_white.png");
+  background-color: #a22430;
+  background-image: url("/graphics/services/gnusocial_white.png");
 }
-
 .share-buttons.bottom .share-gnusocial:hover {
-    background-color: #850713 !important;
+  background-color: #850713 !important;
 }
-
+.share-buttons .share-mastodon {
+  background-color: #2b90d9;
+  background-image: url("/graphics/services/mastodon_white.png");
+}
+.share-buttons .share-mastodon:hover {
+  background-color: #1060a9 !important;
+}
 .share-buttons.bottom .share-hnews {
-    background-color: #ff6600;
-    background-image: url("/graphics/services/hackernews_white.png");
+  background-color: #ff6600;
+  background-image: url("/graphics/services/hackernews_white.png");
 }
-
 .share-buttons.bottom .share-hnews:hover {
-    background-color: #dd3500 !important;
+  background-color: #dd3500 !important;
+}
+.share-buttons.bottom .share-rss {
+  background-color: #f4a000;
+  background-image: url("/graphics/services/rss_white.png");
+}
+.share-buttons.bottom .share-rss:hover {
+  background-color: #f78200 !important;
+}
+.share-buttons.bottom .share-mail {
+  background-color: #6e6e6e;
+  background-image: url("/graphics/services/mail_white.png");
+}
+.share-buttons.bottom .share-mail:hover {
+  background-color: #272727 !important;
 }
 
 /* Share buttons form layout and behaviour hacks */
 .share-buttons input[type="radio"],
 .share-buttons input[type="radio"] + span,
 .share-buttons input[type="checkbox"],
-.share-buttons input[type="checkbox"] + span {
-    display: none;
-}
-
+.share-buttons input[type="checkbox"] + span {display: none;}
 .share-buttons input[type="radio"]:checked + span,
 .share-buttons input[type="checkbox"]:checked + span {
-    position: absolute;
-    margin-top: 3.5em;
-    margin-left: -10em;
-    padding: .5em;
-    z-index: 3;
-    background-color: #333;
-    border-radius: .5em;
-    display: inline-block;
+  position: absolute;
+  margin-top: 3.5em; margin-left: -10em;
+  padding: .5em;
+  z-index: 3;
+  background-color: #333;
+  border-radius: .5em;
+  display: inline-block;
 }
-
 .share-buttons input[type="radio"]:checked + span:before,
 .share-buttons input[type="checkbox"]:checked + span:before {
-    content: '';
-    position: absolute;
-    top: -1em;
-    height: 0em;
-    width: 0em;
-    border-bottom: 1em solid #333;
-    border-left: 1em solid transparent;
-    border-right: 1em solid transparent;
-    z-index: 3;
+  content: '';
+  position: absolute;
+  top: -1em;
+  height: 0em; width: 0em;
+  border-bottom: 1em solid #333;
+  border-left: 1em solid transparent;
+  border-right: 1em solid transparent;
+  z-index: 3;
 }
-
-.share-buttons input[type="radio"] + span > * {
-    vertical-align: middle;
-}
-
+.share-buttons input[type="radio"] + span > *{ vertical-align: middle; }
 .share-buttons input[type="radio"] + span > button {
-    margin: 2.5px 0 2.5px 5px;
-    min-width: 4em;
-    padding: .25em;
-    font-weight: normal;
-    font-size: 1em;
-    line-height: normal;
+  margin: 2.5px 0 2.5px 5px;
+  min-width: 4em;
+  padding: .25em;
+  font-weight: normal;
+  font-size: 1em;
+  line-height: normal;
 }
-
 .share-buttons input[type="radio"] + span > label {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    background-color: rgba(0, 0, 0, .5);
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, .5);
 }
 
 /* Separate share buttons form from possibly floating content */
 form.share-buttons {
-    clear: both;
+  clear: both;
 }
 
 /* Free Your Andoid pages */
 video#freeyourandroid {
-    max-width: 500px;
-}
-
-.news-sidebar {
-    // there is no sidebar on mobile
-    display: none;
-}
-
-@media (min-width: @screen-md-min) {
-    .news-sidebar {
-        display: block;
-        padding-top: 5.1rem;
-    }
-
-    .news-follow-us {
-        display: none;
-    }
-}
-
-.more-news {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 2rem;
-
-    a.learn-more {
-        font-size: 1.3em;
-        font-weight: bold;
-        white-space: nowrap;
-    }
-}
-
-#formnl {
-
-    #submit {
-        .btn;
-        .btn-lg;
-        .btn-block;
-        .btn-primary;
-        font-size: 1.4em;
-        margin-bottom: 5px;
-    }
-
-}
-
-.home-order-image-container {
-    display: block;
-    margin-bottom: 10px;
-    text-align: center;
-
-    .home-order-image {
-        width: 80%;
-    }
-}
-
-.home-shop-block {
-    margin-bottom: 50px;
-}
-
-.home-newsletter-label {
-    margin-top: 30px;
+  max-width:500px;
 }

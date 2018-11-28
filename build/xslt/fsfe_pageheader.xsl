@@ -20,8 +20,6 @@
           <xsl:element name="a">
             <xsl:attribute name="href">#menu-list</xsl:attribute>
             <xsl:attribute name="id">direct-to-menu-list</xsl:attribute>
-            <xsl:attribute name="data-toggle">collapse</xsl:attribute>
-            <xsl:attribute name="data-target">#menu-list</xsl:attribute>
             <xsl:element name="i">
               <xsl:attribute name="class">fa fa-bars fa-lg</xsl:attribute>
             </xsl:element>

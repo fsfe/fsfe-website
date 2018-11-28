@@ -42,5 +42,8 @@ work the same way. Here are some addings:
     
     <xsl:with-param name="display-details" select="'yes'" />
     
-
+- the "display-tags" parameter determines whether a list of tags will be
+  displayed below the tag.
+    
+    <xsl:with-param name="display-tags" select="'yes'" />
 

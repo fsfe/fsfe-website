@@ -66,6 +66,7 @@
     <xsl:param name="nb-items" select="''" />
     <xsl:param name="display-details" select="'no'" />
     <xsl:param name="display-year" select="'yes'" />
+    <xsl:param name="display-tags" select="'no'" />
 
     <xsl:choose> <xsl:when test="$wanted-time = 'past'">
       <!-- Past events -->
@@ -79,6 +80,7 @@
             <xsl:with-param name="header" select="$header" />
             <xsl:with-param name="display-details" select="$display-details" />
             <xsl:with-param name="display-year" select="$display-year" />
+            <xsl:with-param name="display-tags" select="$display-tags" />
           </xsl:call-template>
         </xsl:if>
       </xsl:for-each>
@@ -96,6 +98,7 @@
             <xsl:with-param name="header" select="$header" />
             <xsl:with-param name="display-details" select="$display-details" />
             <xsl:with-param name="display-year" select="$display-year" />
+            <xsl:with-param name="display-tags" select="$display-tags" />
           </xsl:call-template>
         </xsl:if>
       </xsl:for-each>
@@ -112,6 +115,7 @@
             <xsl:with-param name="header" select="$header" />
             <xsl:with-param name="display-details" select="$display-details" />
             <xsl:with-param name="display-year" select="$display-year" />
+            <xsl:with-param name="display-tags" select="$display-tags" />
           </xsl:call-template>
         </xsl:if>
       </xsl:for-each>

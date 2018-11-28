@@ -96,6 +96,7 @@
     <xsl:param name="header" select="''" />
     <xsl:param name="display-details" select="'no'" />
     <xsl:param name="display-year" select="'no'" />
+    <xsl:param name="display-tags" select="'no'" />
     
     <!-- Create variables -->
     <xsl:variable name="start">
@@ -231,6 +232,31 @@
         </div>
       </xsl:if>
       
+		<!-- tags -->
+      <xsl:if test="$display-tags = 'yes'">
+			<ul class="archivetaglist">
+				<!-- <xsl:apply-templates select="tags" /> /-->
+				<xsl:for-each select="tags/tag[not(. = 'front-page' or @key = 'front-page')]">
+					<xsl:variable name="keyname"
+						select="translate(@key,'ABCDEFGHIJKLMNOPQRSTUVWXYZ-_+ /','abcdefghijklmnopqrstuvwxyz')" />
+					<xsl:variable name="tagname"
+						select="translate(.,'ABCDEFGHIJKLMNOPQRSTUVWXYZ-_+ /','abcdefghijklmnopqrstuvwxyz')" />
+					<xsl:choose>
+						<xsl:when test="@key and .">
+							<li><a href="/tags/tagged-{$keyname}.html"><xsl:value-of select="." /></a></li>
+							</xsl:when><xsl:when test="@content and not(@content = '')"><!-- Legacy -->
+							<li><a href="/tags/tagged-{$tagname}.html"><xsl:value-of select="@content" /></a></li>
+							</xsl:when><xsl:when test="@key"><!-- bad style -->
+							<li><a href="/tags/tagged-{$keyname}.html"><xsl:value-of select="@key" /></a></li>
+							</xsl:when>
+							<xsl:otherwise><!-- Legacy and bad style-->
+								<li><a href="/tags/tagged-{$tagname}.html"><xsl:value-of select="." /></a></li>
+							</xsl:otherwise>
+						</xsl:choose>
+				</xsl:for-each>
+			</ul>
+		</xsl:if>
+
     </xsl:element>
     
   </xsl:template>

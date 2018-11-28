@@ -4,9 +4,15 @@
   <head>
     <title>Events</title>
   </head>
-  <body>
-    <h1>Events</h1>
+  <body class="article" microformat="h-entry">
+    <h1 class="p-name">Events</h1>
 
+
+    <include-events/>
+  </body>
+
+  <sidebar promo="none">
+    <h2><i class="fa"></i></h2>
     <p>
       Free Software Foundation Europe participates in many Free
       Software events. If you know about a FSFE related event that is not yet
@@ -14,14 +20,24 @@
       using our <a href="/community/tools/eventregistration.html">event
       announcement tool</a>.
     </p>
-    
-     <p>The FSFE's events are covered by our <a href="https://fsfe.org/about/codeofconduct">Code of Conduct</a> that kindly asks all participants to be excellent to each other. 	Our event announcements are also available via
-      <a href="events.rss" class="feed">RSS feed</a> as well as an
-      <a href="webcal://fsfe.org/events/events.en.ics">iCalendar feed</a>.
+    <p>
+      Some internal events are only announced on our <a href="http://wiki.fsfe.org/Events">wiki</a>.
     </p>
-
-    <include-events/>
-  </body>
+    
+    <p>The FSFE's events are covered by our <a href="https://fsfe.org/about/codeofconduct">Code of Conduct</a> that kindly asks all participants to be excellent to each other.
+    </p>
+    <div class="share-buttons-sidebar">
+      <a target="_blank" href="https://fsfe.org/news/newsletter">
+        <button class="share-button-sidebar share-mail">Newsletter</button>
+      </a>
+      <a target="_blank" href="events.rss">
+        <button class="share-button-sidebar share-rss">RSS Feed</button>
+      </a>
+      <a target="_blank" href="webcal://fsfe.org/events/events.en.ics">
+        <button class="share-button-sidebar share-cal">iCalendar feed</button>
+      </a>
+    </div>
+  </sidebar>
 
   <text id="current">Current events</text>
   <text id="future">Future events</text>

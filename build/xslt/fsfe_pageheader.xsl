@@ -120,40 +120,6 @@
         </xsl:element>
         <!--/ul#menu-list-->
   
-        <xsl:element name="div">
-          <xsl:attribute name="id">search</xsl:attribute>
-  
-            <xsl:element name="form">
-              <xsl:attribute name="method">get</xsl:attribute>
-              <xsl:attribute name="action">//fsfe.org/cgi-bin/search.cgi</xsl:attribute>
-  
-              <xsl:element name="input">
-                <xsl:attribute name="type">hidden</xsl:attribute>
-                <xsl:attribute name="name">l</xsl:attribute>
-                <xsl:attribute name="value"><xsl:value-of select="/buildinfo/@language"/></xsl:attribute>
-              </xsl:element>
-  
-              <xsl:element name="p">
-                <xsl:element name="input">
-                  <xsl:attribute name="type">image</xsl:attribute>
-                  <xsl:attribute name="src">/graphics/icons/search-button.png</xsl:attribute>
-                  <xsl:attribute name="alt">
-                    <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'search'" /></xsl:call-template>
-                  </xsl:attribute>
-                </xsl:element>
-  
-                <xsl:element name="input">
-                  <xsl:attribute name="type">text</xsl:attribute>
-                  <xsl:attribute name="name">q</xsl:attribute>
-                  <xsl:attribute name="placeholder">
-                    <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'search'" /></xsl:call-template>
-                  </xsl:attribute>
-                </xsl:element>
-              </xsl:element>
-
-            </xsl:element><!--/form-->
-        </xsl:element><!--/div#search-->
-  
       </xsl:element>
       <!--/nav#menu-->
   

@@ -6,6 +6,7 @@ body {
     background: url(/graphics/fellowship/plussy_tile_03.png) top left fixed #F9F9F9;
     font-family: "Roboto", sans-serif;
 }
+
 .svg body {
     background: url(/graphics/fellowship/plussy_tile_03.svg) top left fixed #F9F9F9;
 }
@@ -13,6 +14,7 @@ body {
 #logo {
     background: url(/graphics/logo_transparent.png) top left no-repeat;
 }
+
 .svg #logo {
     background: url(/graphics/logo_transparent.svg) top left no-repeat;
 }
@@ -23,8 +25,8 @@ body {
 }
 
 #link-home a {
-    width: 158px; 
-    height: 85px; 
+    width: 158px;
+    height: 85px;
 }
 
 #menu {
@@ -34,24 +36,24 @@ body {
 }
 
 #followup {
-    background: url(/graphics/ribbon.png) no-repeat 100% -40px @body-bg; 
-    text-shadow: rgb(255,255,255) 0 0 .5em;
+    background: url(/graphics/ribbon.png) no-repeat 100% -40px @body-bg;
+    text-shadow: rgb(255, 255, 255) 0 0 .5em;
 
     @media (min-width: @screen-sm) {
-        background: url(/graphics/ribbon.png) no-repeat 100% -70px @body-bg; 
+        background: url(/graphics/ribbon.png) no-repeat 100% -70px @body-bg;
     }
 }
 
 .svg #followup {
     @media (min-width: @screen-sm) {
-        background: url(/graphics/ribbon.svg) no-repeat 100% -70px @body-bg; 
+        background: url(/graphics/ribbon.svg) no-repeat 100% -70px @body-bg;
     }
 }
 
 #followup.join {
-    background: url(/graphics/fellowship/ribbon_fellowship2.png) no-repeat 100% -30px @body-bg; 
+    background: url(/graphics/fellowship/ribbon_fellowship2.png) no-repeat 100% -30px @body-bg;
     @media (min-width: @screen-sm) {
-        background: url(/graphics/fellowship/ribbon_fellowship2.png) no-repeat 100% -50% @body-bg; 
+        background: url(/graphics/fellowship/ribbon_fellowship2.png) no-repeat 100% -50% @body-bg;
     }
 }
 
@@ -61,20 +63,20 @@ body {
 }
 
 a.the-fellowship {
-    padding: 8px 20px 0 0;   
+    padding: 8px 20px 0 0;
     background: url(/graphics/plussy-bright-20.png) no-repeat top right transparent;
 }
 
 img.signatory-logo {
-		padding: 10px;
-	}
+    padding: 10px;
+}
 
 /* fsfe.org front page */
 
-.frontpage { 
+.frontpage {
 
-/* motto not displayed */
-    
+    /* motto not displayed */
+
     #campaigns-boxes {
 
         background: url('/graphics/ribbon.png') top right no-repeat transparent;
@@ -92,7 +94,9 @@ img.signatory-logo {
             }
             width: 100%;
 
-            img {max-width: 33%;}
+            img {
+                max-width: 33%;
+            }
         }
 
         .campaign-box-center {
@@ -102,7 +106,7 @@ img.signatory-logo {
 
         #freesociety {
             .campaign-box-center;
-            font-family: 'GNUTypewriter', @font-family-monospace; 
+            font-family: 'GNUTypewriter', @font-family-monospace;
             background: url('/graphics/motto.jpg') top center no-repeat #666;
             background-size: cover;
             font-size: 2em;
@@ -110,8 +114,9 @@ img.signatory-logo {
                 font-size: 2.7em;
                 padding-top: 1.8em;
             }
+
             p.text {
-                /*background: url('/graphics/fsfs.png') top center no-repeat transparent; 
+                /*background: url('/graphics/fsfs.png') top center no-repeat transparent;
                 background-size: contain; */
                 -moz-hyphens: manual;
                 -webkit-hyphens: manual;
@@ -120,17 +125,21 @@ img.signatory-logo {
         }
 
         #amaelle {
-            background: url('/graphics/amaelle.jpg')  center 33%  no-repeat #666;
+            background: url('/graphics/amaelle.jpg') center 33% no-repeat #666;
             background-size: cover;
-            text-shadow: 0px 1px 8px rgb(0,0,0);
+            text-shadow: 0px 1px 8px rgb(0, 0, 0);
 
-            .author:before {content: "– ";}
-            .text { 
-                .quote; 
+            .author:before {
+                content: "– ";
             }
+
+            .text {
+                .quote;
+            }
+
             .author, .text {
                 display: block;
-                background-color: rgba(0,0,0,0.5);
+                background-color: rgba(0, 0, 0, 0.5);
                 padding: 0.5em;
             }
 
@@ -148,27 +157,36 @@ img.signatory-logo {
             }
 
             @media (min-width: @screen-md) {
-                .text {font-size: 1.25em; }
+                .text {
+                    font-size: 1.25em;
+                }
             }
 
         }
 
         #appelbaum {
-            background: url('/graphics/appelbaum.jpg')  top right  no-repeat #070400;
+            background: url('/graphics/appelbaum.jpg') top right no-repeat #070400;
             background-size: cover;
 
             @media (min-width: @screen-sm) {
                 background-size: contain;
             }
 
-            img { display: none; }
-            .author:before {content: "– ";}
-            .text { 
-                .quote; 
+            img {
+                display: none;
             }
+
+            .author:before {
+                content: "– ";
+            }
+
+            .text {
+                .quote;
+            }
+
             .author, .text {
                 display: block;
-                background-color: rgba(0,0,0,0.5);
+                background-color: rgba(0, 0, 0, 0.5);
                 padding: 0.5em;
             }
 
@@ -183,6 +201,7 @@ img.signatory-logo {
                     margin-right: 35%;
                 }
             }
+
             .copyright {
                 font-size: 0.6em;
                 position: absolute;
@@ -190,21 +209,38 @@ img.signatory-logo {
                 right: 0;
             }
         }
-        
-        #zacchiroli {
-            background: url('/graphics/group-blur-800.jpg')  center 33%  no-repeat #666;
-            text-shadow: 0px 1px 2px rgb(0,0,0);
 
-            img { float: right; margin-left: 1em; }
-            .author:before {content: "– ";}
-            .text { 
-                .quote; 
+        #zacchiroli {
+            background: url('/graphics/group-blur-800.jpg') center 33% no-repeat #666;
+            text-shadow: 0px 1px 2px rgb(0, 0, 0);
+
+            img {
+                float: right;
+                margin-left: 1em;
+            }
+
+            .author:before {
+                content: "– ";
+            }
+
+            .text {
+                .quote;
             }
 
             @media (min-width: @screen-md) {
-                img { margin-left: 3em; }
-                .text {font-size: 1.3em; }
-                .text, .author {max-width: 80ex; margin: 1em auto; display: block;}
+                img {
+                    margin-left: 3em;
+                }
+
+                .text {
+                    font-size: 1.3em;
+                }
+
+                .text, .author {
+                    max-width: 80ex;
+                    margin: 1em auto;
+                    display: block;
+                }
             }
 
         }
@@ -214,19 +250,40 @@ img.signatory-logo {
             background: url('/graphics/fsfe-summit-header-background.jpg') center no-repeat #666;
             background-size: cover;
         }
-        #summit16 img { position: absolute; }
-        #summit16 img:first-of-type { top: 10%; left: 5%; width: 40%; max-width: 250px; }
-        #summit16 img:last-of-type  { bottom: 10%; right: 5%; width: 50%; max-width: 400px; }
-        @media (min-width: 800px) { #summit16 img:first-of-type {top: 20%;} }
-        
+
+        #summit16 img {
+            position: absolute;
+        }
+
+        #summit16 img:first-of-type {
+            top: 10%;
+            left: 5%;
+            width: 40%;
+            max-width: 250px;
+        }
+
+        #summit16 img:last-of-type {
+            bottom: 10%;
+            right: 5%;
+            width: 50%;
+            max-width: 400px;
+        }
+
+        @media (min-width: 800px) {
+            #summit16 img:first-of-type {
+                top: 20%;
+            }
+        }
+
         #boxpmpc {
-            background: url('/graphics/pmpc_slider.jpg')  left 33%  no-repeat #666;
+            background: url('/graphics/pmpc_slider.jpg') left 33% no-repeat #666;
             background-size: cover;
-            text-shadow: 0px 1px 8px rgb(0,0,0);
+            text-shadow: 0px 1px 8px rgb(0, 0, 0);
 
             .text, .text2 {
                 .quote;
             }
+
             .text, .text2 {
                 display: block;
                 padding: 1.25em;
@@ -241,10 +298,12 @@ img.signatory-logo {
                     float: left;
                     width: 30%;
                 }
+
                 .text2 {
                     float: right;
                     width: 30%;
                 }
+
                 background-position: center;
             }
 
@@ -252,40 +311,48 @@ img.signatory-logo {
 
         #dfd {
             .campaign-box-center;
-            background: url('/graphics/fellowship/plussy_tile_01-33alpha.png') rgba(118, 181, 32,1);
-            img {height: 200px;margin-bottom: 10px;margin-top:-70px;max-width: none;}
+            background: url('/graphics/fellowship/plussy_tile_01-33alpha.png') rgba(118, 181, 32, 1);
+
+            img {
+                height: 200px;
+                margin-bottom: 10px;
+                margin-top: -70px;
+                max-width: none;
+            }
         }
-        
+
         #ilovefs {
             .campaign-box-center;
-            background: url('/graphics/ilovefs-hashtag-campaignbox.png')  center 33%  no-repeat transparent;
+            background: url('/graphics/ilovefs-hashtag-campaignbox.png') center 33% no-repeat transparent;
         }
-        
+
         #racketware {
             .campaign-box-center;
-            background:  center 33%  no-repeat #FFF;
+            background: center 33% no-repeat #FFF;
 
-            .text { display: none; }
+            .text {
+                display: none;
+            }
         }
 
         #becomefellow {
             .campaign-box-center;
-            background: url('/graphics/group-blur-800.jpg')  center 33%  no-repeat #666;
+            background: url('/graphics/group-blur-800.jpg') center 33% no-repeat #666;
         }
 
         #fightback {
             .campaign-box-center;
-            background: url('/graphics/thedaywefightback.png')  center 33%  no-repeat transparent;
+            background: url('/graphics/thedaywefightback.png') center 33% no-repeat transparent;
         }
-        
+
     }
 }
+
 .svg #campaigns-boxes #dfd {
     img {
         /*TODO: can we maybe change it to svg here?*/
     }
 }
-
 
 
 #news {
@@ -307,24 +374,31 @@ img.signatory-logo {
             display: inline-block;
             padding-right: 0.5em;
         }
+
         p.date {
             display: inline-block;
             #news .dt-published;
             font-weight: 300;
             margin-bottom: 0;
         }
-    } 
-    
+    }
+
     .entry:nth-child(1n+3) {
 
         h3 {
             font-size: 1em;
-            margin: 0.7em 0 0  0;
+            margin: 0.7em 0 0 0;
         }
-        .text, p { display: none; }
-        p.date { display: inline-block; }
+
+        .text, p {
+            display: none;
+        }
+
+        p.date {
+            display: inline-block;
+        }
     }
-    
+
 }
 
 
@@ -336,9 +410,9 @@ img.signatory-logo {
 }
 
 .newsdate {
-  font-size: .875em;
-  color: #888;
-  margin-right: 1ex;
+    font-size: .875em;
+    color: #888;
+    margin-right: 1ex;
 }
 
 [newsteaser="yes"] {
@@ -351,12 +425,15 @@ img.signatory-logo {
     clear: both;
     padding-top: 1.5em;
 
-    #map { height: 280px; }
+    #map {
+        height: 280px;
+    }
 
     .entry {
         h3 {
             display: inline-block;
         }
+
         p.date {
             #news .dt-published;
             display: block;
@@ -366,6 +443,7 @@ img.signatory-logo {
             }
         }
     }
+
     a.learn-more {
         line-height: 2;
     }
@@ -377,12 +455,13 @@ img.signatory-logo {
         float: left;
         width: 69%;
     }
+
     #team {
         display: inline-block;
         float: left;
     }
 
-    #newsletter, #shop-promo, .country.frontpage #teams  {
+    #newsletter, #shop-promo, .country.frontpage #teams {
         display: inline-block;
         float: right;
         width: 30%;
@@ -397,6 +476,8 @@ img.signatory-logo {
         display: block;
         margin: .5em 0;
     }
+
+    margin-bottom: 20px;
 }
 
 #feeds {
@@ -424,9 +505,13 @@ img.signatory-logo {
 
 /* news archive */
 
-.archivenews h3 { line-height: 1.2em; }
+.archivenews h3 {
+    line-height: 1.2em;
+}
 
-.archivenews p { font-size: 0.9em; }
+.archivenews p {
+    font-size: 0.9em;
+}
 
 ul.archivemeta, ul.archivetaglist {
     color: #999;
@@ -444,13 +529,21 @@ ul.archivetaglist li {
     padding: 0 0.25em;
 }
 
-ul.archivemeta li:first-child {padding-left: 0; }
+ul.archivemeta li:first-child {
+    padding-left: 0;
+}
 
-ul.archivemeta li a, ul.archivetaglist li a { color: #999; }
+ul.archivemeta li a, ul.archivetaglist li a {
+    color: #999;
+}
 
-.archiveauthor { margin: 0 0.25em; }
+.archiveauthor {
+    margin: 0 0.25em;
+}
 
-ul.archivetaglist { margin-left: 6%; }
+ul.archivetaglist {
+    margin-left: 6%;
+}
 
 /* donate */
 
@@ -465,6 +558,7 @@ ul.archivetaglist { margin-left: 6%; }
             .form-control;
             max-width: 25em;
         }
+
         #donate-validate {
             .btn;
             .btn-lg;
@@ -498,9 +592,12 @@ ul.archivetaglist { margin-left: 6%; }
     @media (min-width: @screen-md) {
         position: absolute;
         margin-left: -200px;
-        margin-top:-10em;
+        margin-top: -10em;
     }
-    img {display: none;}
+
+    img {
+        display: none;
+    }
 }
 
 /* Valentine for ILOVEFS style */
@@ -509,25 +606,25 @@ ul.archivetaglist { margin-left: 6%; }
     #logo {
         background: url(/graphics/logov.png) top left no-repeat;
     }
+
     .svg #logo {
         background: url(/graphics/logov.svg) top left no-repeat;
     }
 
     #followup {
-        background: url(/graphics/ribbonv.png) no-repeat 100% -40px @body-bg; 
+        background: url(/graphics/ribbonv.png) no-repeat 100% -40px @body-bg;
 
         @media (min-width: @screen-sm) {
-            background: url(/graphics/ribbonv.png) no-repeat 100% -70px @body-bg; 
+            background: url(/graphics/ribbonv.png) no-repeat 100% -70px @body-bg;
         }
     }
 }
 
 .svg .valentine-ilovefs #followup {
     @media (min-width: @screen-sm) {
-        background: url(/graphics/ribbonv.svg) no-repeat 100% -70px @body-bg; 
+        background: url(/graphics/ribbonv.svg) no-repeat 100% -70px @body-bg;
     }
 }
-
 
 
 /* Planet style */
@@ -550,9 +647,10 @@ ul.archivetaglist { margin-left: 6%; }
 
 #planet-posts {
     .daygroup {
-    	h2:first-child {
+        h2:first-child {
             color: @brand-strong;
         }
+
         .blogitem {
             padding-bottom: 3em;
             margin-bottom: 3em;
@@ -568,9 +666,9 @@ ul.archivetaglist { margin-left: 6%; }
 
 .wiki #direct-links {
     visibility: visible;
-    
+
     a {
-        display:inline-block;
+        display: inline-block;
     }
 }
 
@@ -584,233 +682,371 @@ ul.archivetaglist { margin-left: 6%; }
 /* PDFreaders buglist */
 
 tr.highlighted {
-  background-color: rgb(208,244,0);
+    background-color: rgb(208, 244, 0);
 }
 
 
 /* FSFE Shop (/order) */
 
 table.merchandise tr {
-  border-bottom: 1px solid #ddd;
-}
-table.merchandise tr:last-child {
-  border-bottom: medium none;
-}
-table.merchandise td {
-  padding: 10px 0;
-}
-table.merchandise .image {
-  width: 25%;
-  min-width: 250px;
-}
-table.merchandise .image img {
-  max-height: 120px;
-  margin: 5px;
-}
-table.merchandise .description {
-  width: 60%;
-}
-table.merchandise .quantity {
-  text-align: right;
-  width: 15%;
-  min-width: 100px
-}
-@media only screen and (max-device-width: 700px) {
-  table.merchandise .image {
-    min-width: 125px;
-  }
-}
-@media only screen and (max-device-width: 400px) {
-  table.merchandise .quantity {
-    min-width: 0px;
-  }
-  table.merchandise .image img {
-    max-width: 110px;
-  }
-}
-table.order-form {
-  width: 100%;
-}
-table.order-form .order-left {
-  min-width: 65px;
-  width: 10%;
-}
-table.order-form .order-right input,textarea {
-  max-width: 400px;
-  width: 90%;
-}
-table.order-form #order-submit {
-  width: auto;
-}
-form.thankyou {
-  margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
 }
 
+table.merchandise tr:last-child {
+    border-bottom: medium none;
+}
+
+table.merchandise td {
+    padding: 10px 0;
+}
+
+table.merchandise .image {
+    width: 25%;
+    min-width: 250px;
+}
+
+table.merchandise .image img {
+    max-height: 120px;
+    margin: 5px;
+}
+
+table.merchandise .description {
+    width: 60%;
+}
+
+table.merchandise .quantity {
+    text-align: right;
+    width: 15%;
+    min-width: 100px
+}
+
+@media only screen and (max-device-width: 700px) {
+    table.merchandise .image {
+        min-width: 125px;
+    }
+}
+
+@media only screen and (max-device-width: 400px) {
+    table.merchandise .quantity {
+        min-width: 0px;
+    }
+
+    table.merchandise .image img {
+        max-width: 110px;
+    }
+}
+
+table.order-form {
+    width: 100%;
+}
+
+table.order-form .order-left {
+    min-width: 65px;
+    width: 10%;
+}
+
+table.order-form .order-right input, textarea {
+    max-width: 400px;
+    width: 90%;
+}
+
+table.order-form #order-submit {
+    width: auto;
+}
+
+form.thankyou {
+    margin-bottom: 10px;
+}
+
+.share-top-buttons-label {
+    margin-right: 1rem;
+}
 
 /* SOCIAL NETWORK SHARE BUTTONS (below articles and pages) */
 .share-buttons.bottom {
-  margin: 4em 0 -2em 0;
-  font-size: 0.7em;
-}
-.share-buttons.bottom button.button,
-.share-buttons.bottom label.button {
-  display: inline-block;
-  margin: 2.5px 5px 2.5px 0;
-  color: #fff;
-  font-weight: normal;
-  font-size: 1em;
-  line-height: normal;
-  text-align: center;
-  text-decoration: none;
-  padding: 7px 7px 7px 20px;
-  width: 19%;
-  min-width: 100px;
-  max-width: 110px;
-  border: none;
-  border-radius: 3px;
-  background-position: left 5px center;
-  background-repeat: no-repeat;
-  background-size: 20px auto;
-  opacity: 0.9;
-  vertical-align: top;
-}
-.share-buttons.bottom a:hover {
-  text-decoration: none;
+    margin: 4em 0 -2em 0;
 }
 
-.share-buttons.bottom .share-facebook {
-  background-color: #3b5998;
-  background-image: url("/graphics/services/facebook_white.png");
+.share-buttons-top {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
 }
-.share-buttons.bottom .share-facebook:hover {
-  background-color: #143271 !important;
+
+.share-buttons-sidebar {
+    padding-left: 2rem;
 }
-.share-buttons.bottom .share-twitter {
-  background-color: #55acee;
-  background-image: url("/graphics/services/twitter_white.png");
+
+.share-button-top,
+.share-button-sidebar,
+.share-buttons.bottom button.button,
+.share-buttons.bottom label.button {
+    display: inline-block;
+    margin: 2.5px 5px 2.5px 0;
+    color: #fff;
+    font-weight: normal;
+    font-size: 1em;
+    line-height: normal;
+    text-align: center;
+    text-decoration: none;
+    padding: 7px 7px 7px 20px;
+    width: 19%;
+    min-width: 100px;
+    max-width: 110px;
+    border: none;
+    border-radius: 3px;
+    background-position: left 5px center;
+    background-repeat: no-repeat;
+    background-size: 20px auto;
+    opacity: 0.9;
+    vertical-align: top;
 }
-.share-buttons.bottom .share-twitter:hover {
-  background-color: #338acc !important;
+
+.share-button-top,
+.share-buttons.bottom,
+.share-buttons-sidebar {
+    font-size: .7em;
 }
+
+.share-buttons-top,
+.share-buttons-sidebar,
+.share-buttons.bottom {
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    .share-rss {
+        background-color: #f4a000;
+        background-image: url("/graphics/services/rss_white.png");
+    }
+
+    .share-rss:hover {
+        background-color: #f78200 !important;
+    }
+
+    .share-mail {
+        background-color: #6e6e6e;
+        background-image: url("/graphics/services/mail_white.png");
+    }
+
+    .share-mail:hover {
+        background-color: #272727 !important;
+    }
+
+    .share-mastodon {
+        background-color: #2b90d9;
+        background-image: url("/graphics/services/mastodon_white.png");
+    }
+
+    .share-mastodon:hover {
+        background-color: #1060a9 !important;
+    }
+
+    .share-diaspora {
+        background-color: #404040;
+        background-image: url("/graphics/services/diaspora_white.png");
+    }
+
+    .share-diaspora:hover {
+        background-color: #101010 !important;
+    }
+
+    .share-facebook {
+        background-color: #3b5998;
+        background-image: url("/graphics/services/facebook_white.png");
+    }
+
+    .share-facebook:hover {
+        background-color: #143271 !important;
+    }
+
+    .share-twitter {
+        background-color: #55acee;
+        background-image: url("/graphics/services/twitter_white.png");
+    }
+
+    .share-twitter:hover {
+        background-color: #338acc !important;
+    }
+
+    .share-support {
+        background-color: #202d79;
+        background-image: url("/graphics/services/fsfe_white.png");
+        padding-left: 25px;
+
+        &:hover {
+            background-color: #0a1763 !important;
+        }
+    }
+}
+
 .share-buttons.bottom .share-gplus {
-  background-color: #d34836;
-  background-image: url("/graphics/services/gplus_white.png");
+    background-color: #d34836;
+    background-image: url("/graphics/services/gplus_white.png");
 }
+
 .share-buttons.bottom .share-gplus:hover {
-  background-color: #b12614 !important;
+    background-color: #b12614 !important;
 }
-.share-buttons.bottom .share-diaspora {
-  background-color: #404040;
-  background-image: url("/graphics/services/diaspora_white.png");
-}
-.share-buttons.bottom .share-diaspora:hover {
-  background-color: #101010 !important;
-}
+
 .share-buttons.bottom .share-flattr {
-  background-color: #7ea352;
-  background-image: url("/graphics/services/flattr_white.png");
+    background-color: #7ea352;
+    background-image: url("/graphics/services/flattr_white.png");
 }
+
 .share-buttons.bottom .share-flattr:hover {
-  background-color: #5a7f2e !important;
+    background-color: #5a7f2e !important;
 }
-.share-buttons.bottom .share-support {
-  background-color: #202d79;
-  background-image: url("/graphics/services/fsfe_white.png");
-}
-.share-buttons.bottom .share-support:hover {
-  background-color: #0a1763 !important;
-}
+
 .share-buttons.bottom .share-reddit {
-  background-color: #ff5700;
-  background-image: url("/graphics/services/reddit_white.png");
+    background-color: #ff5700;
+    background-image: url("/graphics/services/reddit_white.png");
 }
+
 .share-buttons.bottom .share-reddit:hover {
-  background-color: #dd3500 !important;
+    background-color: #dd3500 !important;
 }
+
 .share-buttons.bottom .share-gnusocial {
-  background-color: #a22430;
-  background-image: url("/graphics/services/gnusocial_white.png");
+    background-color: #a22430;
+    background-image: url("/graphics/services/gnusocial_white.png");
 }
+
 .share-buttons.bottom .share-gnusocial:hover {
-  background-color: #850713 !important;
+    background-color: #850713 !important;
 }
-.share-buttons .share-mastodon {
-  background-color: #2b90d9;
-  background-image: url("/graphics/services/mastodon_white.png");
-}
-.share-buttons .share-mastodon:hover {
-  background-color: #1060a9 !important;
-}
+
 .share-buttons.bottom .share-hnews {
-  background-color: #ff6600;
-  background-image: url("/graphics/services/hackernews_white.png");
+    background-color: #ff6600;
+    background-image: url("/graphics/services/hackernews_white.png");
 }
+
 .share-buttons.bottom .share-hnews:hover {
-  background-color: #dd3500 !important;
-}
-.share-buttons.bottom .share-rss {
-  background-color: #f4a000;
-  background-image: url("/graphics/services/rss_white.png");
-}
-.share-buttons.bottom .share-rss:hover {
-  background-color: #f78200 !important;
-}
-.share-buttons.bottom .share-mail {
-  background-color: #6e6e6e;
-  background-image: url("/graphics/services/mail_white.png");
-}
-.share-buttons.bottom .share-mail:hover {
-  background-color: #272727 !important;
+    background-color: #dd3500 !important;
 }
 
 /* Share buttons form layout and behaviour hacks */
 .share-buttons input[type="radio"],
 .share-buttons input[type="radio"] + span,
 .share-buttons input[type="checkbox"],
-.share-buttons input[type="checkbox"] + span {display: none;}
+.share-buttons input[type="checkbox"] + span {
+    display: none;
+}
+
 .share-buttons input[type="radio"]:checked + span,
 .share-buttons input[type="checkbox"]:checked + span {
-  position: absolute;
-  margin-top: 3.5em; margin-left: -10em;
-  padding: .5em;
-  z-index: 3;
-  background-color: #333;
-  border-radius: .5em;
-  display: inline-block;
+    position: absolute;
+    margin-top: 3.5em;
+    margin-left: -10em;
+    padding: .5em;
+    z-index: 3;
+    background-color: #333;
+    border-radius: .5em;
+    display: inline-block;
 }
+
 .share-buttons input[type="radio"]:checked + span:before,
 .share-buttons input[type="checkbox"]:checked + span:before {
-  content: '';
-  position: absolute;
-  top: -1em;
-  height: 0em; width: 0em;
-  border-bottom: 1em solid #333;
-  border-left: 1em solid transparent;
-  border-right: 1em solid transparent;
-  z-index: 3;
+    content: '';
+    position: absolute;
+    top: -1em;
+    height: 0em;
+    width: 0em;
+    border-bottom: 1em solid #333;
+    border-left: 1em solid transparent;
+    border-right: 1em solid transparent;
+    z-index: 3;
 }
-.share-buttons input[type="radio"] + span > *{ vertical-align: middle; }
+
+.share-buttons input[type="radio"] + span > * {
+    vertical-align: middle;
+}
+
 .share-buttons input[type="radio"] + span > button {
-  margin: 2.5px 0 2.5px 5px;
-  min-width: 4em;
-  padding: .25em;
-  font-weight: normal;
-  font-size: 1em;
-  line-height: normal;
+    margin: 2.5px 0 2.5px 5px;
+    min-width: 4em;
+    padding: .25em;
+    font-weight: normal;
+    font-size: 1em;
+    line-height: normal;
 }
+
 .share-buttons input[type="radio"] + span > label {
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  z-index: -1;
-  background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, .5);
 }
 
 /* Separate share buttons form from possibly floating content */
 form.share-buttons {
-  clear: both;
+    clear: both;
 }
 
 /* Free Your Andoid pages */
 video#freeyourandroid {
-  max-width:500px;
+    max-width: 500px;
+}
+
+.news-sidebar {
+    // there is no sidebar on mobile
+    display: none;
+}
+
+@media (min-width: @screen-md-min) {
+    .news-sidebar {
+        display: block;
+        padding-top: 5.1rem;
+    }
+
+    .news-follow-us {
+        display: none;
+    }
+}
+
+.more-news {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+
+    a.learn-more {
+        font-size: 1.3em;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+}
+
+#formnl {
+
+    #submit {
+        .btn;
+        .btn-lg;
+        .btn-block;
+        .btn-primary;
+        font-size: 1.4em;
+        margin-bottom: 5px;
+    }
+
+}
+
+.home-order-image-container {
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+
+    .home-order-image {
+        width: 80%;
+    }
+}
+
+.home-shop-block {
+    margin-bottom: 50px;
+}
+
+.home-newsletter-label {
+    margin-top: 30px;
 }

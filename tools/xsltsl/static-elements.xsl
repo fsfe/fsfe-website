@@ -54,20 +54,24 @@
     </xsl:variable>
 
     <form id="formnl" name="formnl" method="POST" action="//lists.fsfe.org/mailman/listinfo/newsletter-{$nl-lang}">
-      <p>
-        <select id="language" name="language" onchange="var form = document.getElementById('formnl'); var sel=document.getElementById('language'); form.action='//lists.fsfe.org/mailman/listinfo/newsletter-'+sel.options[sel.options.selectedIndex].value">
-	  <xsl:for-each select="document('')/xsl:stylesheet/nl:langs/nl:lang">	  
-	    <xsl:element name="option">
-	      <xsl:attribute name="value"><xsl:value-of select="@value" /></xsl:attribute>
-	      <xsl:if test="$nl-lang = @value"><xsl:attribute name="selected" /></xsl:if>
-	      <xsl:value-of select="." />
-	    </xsl:element>
-	  </xsl:for-each>
-	</select> <!-- select -->
-  
-        <!--<input id="email" name="email" type="email" placeholder="{$email}"/>-->
-        <input id="submit" type="submit" value="{$submit}" />
-      </p>
+      <select id="language" name="language"
+              class="form-control form-control-lg input-lg"
+              onchange="var form = document.getElementById('formnl'); var sel=document.getElementById('language'); form.action='//lists.fsfe.org/mailman/listinfo/newsletter-'+sel.options[sel.options.selectedIndex].value">
+        <xsl:for-each select="document('')/xsl:stylesheet/nl:langs/nl:lang">
+          <xsl:element name="option">
+            <xsl:attribute name="value">
+              <xsl:value-of select="@value"/>
+            </xsl:attribute>
+            <xsl:if test="$nl-lang = @value">
+              <xsl:attribute name="selected"/>
+            </xsl:if>
+            <xsl:value-of select="."/>
+          </xsl:element>
+        </xsl:for-each>
+      </select>
+
+      <!--<input id="email" name="email" type="email" placeholder="{$email}"/>-->
+      <input id="submit" type="submit" value="{$submit}"/>
     </form>
   </xsl:template>
   

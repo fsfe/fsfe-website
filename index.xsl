@@ -29,7 +29,7 @@
   <xsl:template match="all-news">
     <xsl:call-template name="fetch-news">
       <xsl:with-param name="tag">front-page</xsl:with-param>
-      <xsl:with-param name="nb-items" select="5" />
+      <xsl:with-param name="nb-items" select="4" />
       <xsl:with-param name="show-date" select="'yes'" />
       <!--TODO enable a "Read More" link with class "learn-more" at the end of newsteaser-->
     </xsl:call-template>

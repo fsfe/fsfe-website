@@ -269,25 +269,30 @@ div#subpages, .grid-row {
 }
 
 
-/* the main and follow up sections */
+/* grid */
+.article, .planet {
+    #content, #planet-posts {
+        flex: 0 0 100%;
+        padding-left: 0;
+    }
 
-    /* grid */
+    #sidebar {
+        flex: 0 0 100%;
+        padding-right: 0;
+    }
+}
+
+@media (min-width: @screen-md-min) {
     .article, .planet {
         #content, #planet-posts {
-            .make-xs-column(12);
-            .make-md-column(8);
-            padding-left: 0;
+            flex: 1 0 66%;
         }
-        #sidebar {
-            .make-xs-column(12);
-            .make-md-column(4);
-            padding-right: 0;
-        }
-    }
 
-    #content + #sidebar {
-        .article #sidebar;
+        #sidebar {
+            flex: 0 0 33%;
+        }
     }
+}
 
 #main, #followup {
     background: @body-bg;
@@ -1088,22 +1093,27 @@ a.learn-more {
     border-bottom: 1px dotted @brand-primary;
     font-variant: small-caps;
     text-transform: lowercase;
-}
-a.learn-more:hover {
-    text-decoration: none;
-    border-bottom-style: solid;
-}
-a.learn-more:after {
-    padding-left: 0.3em;
-    content: " ▸";
-    opacity: 0.8;
-    transition: padding-left 0.15s linear 0s, color 0.15s linear 0s, opacity 0.15s linear 0s;
-}
-a.learn-more:hover:after {
-    padding-left: 0.6em;
-    margin-right: -0.3em;
-    content: " ▸";
-    opacity: 1;
+    padding-right: 1em;
+    position: relative;
+
+    &:hover {
+        text-decoration: none;
+        border-bottom-style: solid;
+    }
+
+    &:after {
+        position: absolute;
+        right: .3em;
+        content: " ▸";
+        opacity: 0.8;
+        transition: all 150ms linear;
+    }
+
+    &:hover:after {
+        right: 0;
+        content: " ▸";
+        opacity: 1;
+    }
 }
 
 .social-link {
@@ -1117,8 +1127,12 @@ a.learn-more:hover:after {
     .btn-block;
     .btn-success;
     font-size: 1.4em;
-    margin-top: 2em;
 }
+
+.supporter-text {
+    margin-top: 5px;
+}
+
 .small-donate, .small.donate {
     .btn;
     .btn-sm;

@@ -40,5 +40,11 @@
       <xsl:with-param name="nb-items" select="4"/>
     </xsl:call-template>
   </xsl:template>
+  
+  <!-- Static elements which can be included everywhere -->
+  <xsl:template match="static-element">
+    <xsl:variable name="id"><xsl:value-of select="@id"/></xsl:variable>
+    <xsl:copy-of select="/buildinfo/document/set/element[@id=$id]" />
+  </xsl:template>
 
 </xsl:stylesheet>

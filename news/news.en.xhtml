@@ -6,13 +6,81 @@
   </head>
 
   <body class="article" microformats="h-entry">
+  <div class="news-follow-us">
+    <div class="share-top-buttons-label">Follow us:</div>
+    <div class="share-buttons-top">
+      <a target="_blank" href="https://fsfe.org/news/newsletter">
+        <button class="share-button-top share-mail">Newsletter</button>
+      </a>
+      <a target="_blank" href="https://fsfe.org/news/news.en.rss">
+        <button class="share-button-top share-rss">RSS Feed</button>
+      </a>
+      <a target="_blank" href="https://mastodon.social/@fsfe">
+        <button class="share-button-top share-mastodon">Mastodon</button>
+      </a>
+      <a target="_blank" href="https://diasp.eu/u/fsfe">
+        <button class="share-button-top share-diaspora">Diaspora</button>
+      </a>
+      <a target="_blank" href="https://twitter.com/fsfe">
+        <button class="share-button-top share-twitter">Twitter</button>
+      </a>
+      <a target="_blank" href="https://facebook.com/thefsfe">
+        <button class="share-button-top share-facebook">Facebook</button>
+      </a>
+    </div>
+  </div>
+
     <h1 class="p-name">News</h1>
     <include-news/>
   </body>
 
   <sidebar promo="none">
-    <h2><i class="fa fa-rss"></i></h2>
-    <p>This page collects the regular news stories that FSFE publishes about its campaigns and activities. <br />Join the <a href="/press/index.html">press release mailing list</a> or subscribe to <a href="/news/news.rss">our RSS feed</a> to keep up-to-date on our activites. <a href="newsletter.html">Monthly newsletters</a> are also available.</p>
+    <div class="news-sidebar">
+      <h2>Follow our News</h2>
+
+      <p>
+        To keep up with our latest news, you can subscribe our <a href="/news/news.en.rss">RSS feed</a> and
+        our <a href="/news/newsletter">Newsletter</a>.
+      </p>
+
+      <div class="share-buttons-sidebar">
+        <a target="_blank" href="https://fsfe.org/news/newsletter">
+          <button class="share-button-sidebar share-mail">Newsletter</button>
+        </a>
+        <a target="_blank" href="https://fsfe.org/news/news.en.rss">
+          <button class="share-button-sidebar share-rss">RSS Feed</button>
+        </a>
+      </div>
+
+
+      <h2>Social Media</h2>
+
+      <p>
+        For instant updates and hot news you can also follow us on <a
+          href="https://mastodon.social/@fsfe">Mastodon</a>, <a href="https://diasp.eu/u/fsfe">Diaspora</a>, <a
+          href="https://twitter.com/fsfe">Twitter</a> and <a href="https://facebook.com/thefsfe">Facebook</a>.
+      </p>
+
+      <div class="share-buttons-sidebar">
+        <a target="_blank" href="https://mastodon.social/@fsfe">
+          <button class="share-button-sidebar share-mastodon">Mastodon</button>
+        </a>
+        <a target="_blank" href="https://diasp.eu/u/fsfe">
+          <button class="share-button-sidebar share-diaspora">Diaspora</button>
+        </a><br/>
+        <a target="_blank" href="https://twitter.com/fsfe">
+          <button class="share-button-sidebar share-twitter">Twitter</button>
+        </a>
+        <a target="_blank" href="https://facebook.com/thefsfe">
+          <button class="share-button-sidebar share-facebook">Facebook</button>
+        </a>
+      </div>
+
+      <hr/>
+
+      <static-element id="video" />
+
+    </div>
   </sidebar>
 
   <text id="more">Read more…</text>

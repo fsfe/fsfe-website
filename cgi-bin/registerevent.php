@@ -55,7 +55,7 @@ function eval_date($date) {
 if (isset($_POST['tags'])) {
   $tags = $_POST['tags'];
 } else {
-  $tags = [];
+  $tags = array();
 }
 
 function send_registration_mail($from, $to) {

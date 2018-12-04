@@ -3,3 +3,4 @@ pipeline:
     image: vsasyan/xmllint
     commands:
         - find . -type f \( -iname "*.xhtml" -o -iname "*.xml" -o -iname "*.xsl" \) -exec xmllint --noout {} +
+        - bash tools/check-non-en-frontpage.sh news

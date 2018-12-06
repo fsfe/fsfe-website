@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 
 use CGI;
-use Digest::SHA1 qw(sha1_hex);
+use Digest::SHA qw(sha1_hex);
 
 my $query = new CGI;
 

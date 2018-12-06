@@ -149,7 +149,7 @@ my $form = "      <!-- payment parameters -->\n" .
 # -----------------------------------------------------------------------------
 
 print "Content-type: text/html\n\n";
-open TEMPLATE, "/home/www/html/global/order/tmpl-thankyou." . $lang . ".html";
+open TEMPLATE, "/srv/www/html/global/order/tmpl-thankyou." . $lang . ".html";
 while (<TEMPLATE>) {
   s/:AMOUNT:/$amount_f/g;
   s/:REFERENCE:/$reference/g;

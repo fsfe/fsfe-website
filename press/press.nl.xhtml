@@ -1,165 +1,268 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-    <html>
-      <head>
-        <title>Persruimte - FSFE</title>
-        <script>
+<html>
+  <head>
+    <title>Voor de pers - FSFE</title>
+    
+    <style>
 
-          /*
-           * Fields that carry values at page load will be emptied if this
-           * is called and the field has not been edited before.
-           */
-          var changedFields = new Array();
+    
+    
+    
+                ul.subheadings li {
+                                    grid-template-columns: 1fr 4fr;
+                                    display: grid;
+                                    grid-column-gap: 10px;
+                                    margin-top:20px;
+                                    
+                    }
+                      ul.subheadings li h3 {
+                                    margin-top:0px;
+                    } 
+                    
+            div.icon {
+                                max-width: 72px;
+                                }
+                    
+                    </style>
+    
+    
+  </head>
 
-          function removeValue(field) {
-            if (!changedFields[field.getAttribute("name")]) {
-              changedFields[field.getAttribute("name")] = true;
-              field.value = "";
-            }
+  <body class="press" id="press-room">
+    <h1 class="heading">Pers</h1>
 
-            return false;
-          }
+  <div id="introduction">
+  <!-- for the following two paragraphs, please have a look at http://fsfe.org/about/mission -->
 
-        </script>
-      </head>
+    <p>Free Software Foundation Europe is een organisatie zonder winstoogmerk die gebruikers in staat wil stellen om technologie te controleren. Software is sterk verweven met alle aspecten van onze levens. Het is belangrijk dat deze technologie ons tot iets in staat stelt in plaats van ons te beperken. Vrije Software geeft iedereen het recht om software te gebruiken, te begrijpen, aan te passen en te delen. Deze rechten helpen het ondersteunen van andere fundamentele vrijheden zoals de vrijheid van meningsuiting, pers en privacy.</p>
 
-      <body class="press" id="press-room">
-        <h1 class="heading">Pers</h1>
+  </div>
 
-      <div id="introduction">
+  <div class="right" style="max-width: 100px; width: 25%;">
+    <img src="/about/graphics/stars.png" alt="Sterren van het FSFE-logo" />
+  </div>
 
-      <!-- for the following two paragraphs, please have a look at http://fsfe.org/about/mission -->
 
-        <p>Free Software Foundation Europe is een organisatie zonder winstoogmerk die gebruikers in staat wil stellen om technologie te controleren. Software is sterk verweven met alle aspecten van onze levens. Het is belangrijk dat deze technologie ons tot iets in staat stelt in plaats van ons te beperken. Vrije Software geeft iedereen het recht om software te gebruiken, te begrijpen, aan te passen en te delen. Deze rechten helpen het ondersteunen van andere fundamentele vrijheden zoals de vrijheid van meningsuiting, pers en privacy.</p>
+  <p>Free Software Foundation Europe helpt individuen en organisaties te begrijpen hoe Vrije Software bijdraagt aan vrijheid, transparantie en zelfbeschikking. Ze vergroot de rechten van de gebruikers door het afbreken van barrières naar het overgaan op Vrije Software, ze moedigt mensen aan om Vrije Software te gebruiken en te ontwikkelen en ze biedt hulpbronnen om iedereen in staat te stellen om Vrije Software verder te promoten in Europa.</p>
 
+
+  <div class="grid-50-50" style="margin-top:3em">
+
+    <div class="box first">
+
+      <h2><a href="/news/news.html" class="feed">Laatste persberichten</a> </h2>
+
+      <dynamic-content />
+
+      <div style="text-align:center; margin:2em">
+        <form id="formnl" name="formnl" method="POST" action="//lists.fsfe.org/mailman/listinfo/press-release">
+          <input type="submit" value="Word abonnee" />
+        </form>
       </div>
 
-      <p>Free Software Foundation Europe helpt individuen en organisaties te begrijpen hoe Vrije Software bijdraagt aan vrijheid, transparantie en zelfbeschikking. Ze vergroot de rechten van de gebruikers door het afbreken van barrières naar het overgaan op Vrije Software, ze moedigt mensen aan om Vrije Software te gebruiken en te ontwikkelen en ze biedt hulpbronnen om iedereen in staat te stellen om Vrije Software verder te promoten in Europa.</p>
+      <p style="margin:0em 2em 0em 2em;">
+        <strong>Abonneer u op onze e-maillijst met persberichten om op de gemakkelijkste manier alle FSFE-persberichten zeker te ontvangen.</strong>
+      </p>
 
-        <div class="grid-50-50">
-          <div class="box first">
-            <h2>Ontvang onze persberichten</h2>
+    </div>
 
-            <p>
-              Door u te abonneren op onze nieuwsfeeds of e-maillijsten kunt u up-to-date blijven met het laatste nieuws uit de Vrije Software-wereld. 
-            </p>
 
-            <form id="formnl" name="formnl" method="POST" action="//lists.fsfe.org/mailman/listinfo/press-release">
-              <input type="submit" value="Subscribe" />
-            </form>
+    <div class="box">
 
-            <p>
-              Voor directe updates en het laatste nieuws kunt u ons ook volgen  <a
-                href="http://identi.ca/fsfe">op Identi.ca</a> of <a
-                href="http://twitter.com/fsfe">op Twitter</a>.
-            </p>
-          </div>
+      <h2>Volg ons nieuws</h2>
 
-          <div class="box">
-            <h2><a href="/news/news.html" class="feed">Laatste nieuws</a></h2>
+      <p>Naast persberichten publiceren we ook regelmatig belangrijk nieuws over ons werk en onze campagnes. Abonneer u op onze <a href="https://fsfe.org/news/news.en.rss">RSS-feed</a> en onze <a href="https://fsfe.org/news/newsletter">nieuwsbrief</a> om zeker te zijn van ontvangst.</p>
 
-            <dynamic-content />
-          </div>
-        </div>
+      <div class="share-buttons bottom" style="text-align:center; margin-top:1em;margin-bottom:1em;">
+        <a target="_blank" href="https://fsfe.org/news/newsletter">
+          <button class="button share-mail">nieuwsbrief</button>
+        </a>
+        <a target="_blank" href="https://fsfe.org/news/news.en.rss">
+          <button class="button share-rss">RSS-feed</button>
+        </a>
+      </div>
 
-        <div class="grid-50-50">
-        
-        <div class="box first">
-        <h2>Inlichtingen</h2>
+      <h2>Sociale media</h2>
 
+      <p>
+        Voor direct en heet nieuws kunt u ons ook volgen op <a
+          href="https://mastodon.social/@fsfe">Mastodon</a>, <a href="https://diasp.eu/u/fsfe">Diaspora</a>, <a
+          href="https://twitter.com/fsfe">Twitter</a> en <a href="https://facebook.com/thefsfe">Facebook</a>.
+      </p>
+
+      <div class="share-buttons bottom" style="text-align:center;margin-top:1em;margin-bottom:1em;">
+        <a target="_blank" href="https://mastodon.social/@fsfe">
+          <button class="button share-mastodon">Mastodon</button>
+        </a>
+        <a target="_blank" href="https://diasp.eu/u/fsfe">
+          <button class="button share-diaspora">Diaspora</button>
+        </a><br />
+        <a target="_blank" href="https://twitter.com/fsfe">
+          <button class="button share-twitter">Twitter</button>
+        </a>
+        <a target="_blank" href="https://facebook.com/thefsfe">
+          <button class="button share-facebook">Facebook</button>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="grid-50-50" style="margin-top:3em">
+
+    <div class="box first">
+
+      <h2>Perscontact</h2>
+
+      <p>
+        Richt uw vragen alstubieft aan <a
+        href="mailto:press@fsfeurope.org">press@fsfe.org</a>, of per post aan:
+      </p>
+
+      <address>
+        Free Software Foundation Europe e.V.<br />
+        Schönhauser Allee 6/7<br />
+        10119 Berlin<br />
+        Duitsland
+      </address>
+
+      <p>
+        Telefoon: +49-30-27595290
+      </p>
+
+      <p>
+        Bekijk voor algemene vragen alstublieft onze 
+        <a href="/contact/contact.html">contactinformatie</a>.
+      </p>
+
+    </div>
+
+    <div class="box">
+
+      <h2>Over FSFE</h2>
+
+      <p>De Free Software Foundation Europe is in 2001 opgericht als liefdadigheidsinstelling om gebruikers in staat te stellen om technologie te controleren. U kunt onze gedefinieerde doelen en de methoden die we gebruiken om deze te bereiken vinden in <a href="/about/mission">onze missieverklaring</a>. In <a href="/timeline/timeline">onze tijdlijn</a> verzamelden we onze belangrijkste prestaties op verschillende gebieden ter promotie en verdediging van softwarevrijheid in Europa sinds 2001.</p>
+
+    </div>
+
+  </div>
+
+  <div class="grid-50-50" style="margin-top:3em">
+
+    <div class="box first">
+
+      <h3>Matthias Kirschner, voorzitter van de FSFE:</h3>
+
+      <video style="align:center" width="100%" crossorigin="crossorigin" poster="https://download.fsfe.org/videos/supporter/posters/matthias.jpg" controls="controls">
+        <source media="screen and (min-device-width:1000px)" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="https://download.fsfe.org/videos/supporter/matthias_desktop.mp4"></source>
+        <source media="screen and (min-device-width:1000px)" type="video/webm; codecs=&quot;vp9, opus&quot;" src="https://download.fsfe.org/videos/supporter/matthias_desktop.webm"></source>
+        <source media="screen and (max-device-width:999px)" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="https://download.fsfe.org/videos/supporter/matthias_mobile.mp4"></source>
+        <source media="screen and (max-device-width:999px)" type="video/webm; codecs=&quot;vp9, opus&quot;" src="https://download.fsfe.org/videos/supporter/matthias_mobile.webm"></source>
+        <track default="default" label="English" srclang="en" kind="subtitles" src="https://download.fsfe.org/videos/supporter/subtitles/matthias.vtt"></track>
+      </video>
+
+    </div>
+
+    <div class="box">
+
+      <h3>Verjaardagsvideo: 15 jaren FSFE:</h3>
+
+      <video style="align:center" width="100%" crossorigin="crossorigin" poster="/graphics/15years-video-poster.png" controls="controls">
+        <source media="screen and (min-device-width:1000px)" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="https://download.fsfe.org/videos/15years/FSFE15_30.mp4"></source>
+        <source media="screen and (min-device-width:1000px)" type="video/webm; codecs=&quot;vp9, opus&quot;" src="https://download.fsfe.org/videos/15years/FSFE15_38.webm"></source>
+        <source media="screen and (max-device-width:999px)" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="https://download.fsfe.org/videos/15years/FSFE15_mobile.mp4"></source>
+        <source media="screen and (max-device-width:999px)" type="video/webm; codecs=&quot;vp9, opus&quot;" src="https://download.fsfe.org/videos/15years/FSFE15_mobile.webm"></source>
+        <track default="default" label="Nederlands" srclang="nl" kind="subtitle" src="https://download.fsfe.org/videos/15years/vtt/15years-FSFE.nl.vtt"></track>
+        <track label="Deutsch" srclang="de" kind="subtitle" src="https://download.fsfe.org/videos/15years/vtt/15years-FSFE.de.vtt"></track>
+        <track label="Ελληνικά" srclang="el" kind="subtitle" src="https://download.fsfe.org/videos/15years/vtt/15years-FSFE.el.vtt"></track>
+        <track label="Español" srclang="es" kind="subtitle" src="https://download.fsfe.org/videos/15years/vtt/15years-FSFE.es.vtt"></track>
+        <track label="Français" srclang="fr" kind="subtitle" src="https://download.fsfe.org/videos/15years/vtt/15years-FSFE.fr.vtt"></track>
+        <track label="Italian" srclang="it" kind="subtitle" src="https://download.fsfe.org/videos/15years/vtt/15years-FSFE.it.vtt"></track>
+        <track label="Nederlands" srclang="nl" kind="subtitle" src="https://download.fsfe.org/videos/15years/vtt/15years-FSFE.nl.vtt"></track>
+        <track label="Shqip" srclang="sq" kind="subtitle" src="https://download.fsfe.org/videos/15years/vtt/15years-FSFE.sq.vtt"></track>
+        <track label="Türkçe" srclang="tr" kind="subtitle" src="https://download.fsfe.org/videos/15years/vtt/15years-FSFE.tr.vtt"></track>
+        <track label="српски" srclang="sr" kind="subtitle" src="https://download.fsfe.org/videos/15years/vtt/15years-FSFE.sr.vtt"></track>
+        <track label="eesti keel" srclang="et" kind="subtitle" src="https://download.fsfe.org/videos/15years/vtt/15years-FSFE.et.vtt"></track>
+
+        <track label="English" srclang="en" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.en.srt"></track>
+        <track label="Deutsch" srclang="de" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.de.srt"></track>
+        <track label="Ελληνικά" srclang="el" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.el.srt"></track>
+        <track label="Español" srclang="es" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.es.srt"></track>
+        <track label="Français" srclang="fr" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.fr.srt"></track>
+        <track label="Italian" srclang="it" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.it.srt"></track>
+        <track label="Nederlands" srclang="nl" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.nl.srt"></track>
+        <track label="Shqip" srclang="sq" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.sq.srt"></track>
+        <track label="Türkçe" srclang="tr" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.tr.srt"></track>
+        <track label="српски" srclang="sr" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.sr.srt"></track>
+        <track label="eesti keel" srclang="et" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.et.srt"></track>
+      </video>
+
+
+    </div>
+
+  </div>
+
+  <div style="padding-top:3em">
+
+    <h2>Achtergrond en hulpbronnen</h2>
+
+      <ul class="subheadings">
+
+      <li><div class="icon"><a href="/freesoftware/freesoftware.html"><img src="/graphics/icons/fs-basics.png" alt="Vrije Software basis" /></a></div>
+      <div>
+        <h3><a href="/freesoftware/freesoftware.html">Vrije Software basis</a></h3>
         <p>
-          Neem voor inlichtingen alstublieft contact op met <a
-            href="mailto:press@fsfeurope.org">press@fsfeurope.org</a>, of per post naar:
+          Toegang tot software bepaalt wie er mag deelnemen aan een digitale samenleving. Lees over de rol van Vrije Software op cruciale gebieden in onze <a href="/freesoftware/freesoftware.html">introductie tot Vrije Software</a>.
         </p>
+      </div>
+      </li>
 
-        <address>
-          Free Software Foundation Europe e.V.<br />
-          Schönhauser Allee 6/7<br />
-          10119 Berlijn<br />
-          Duitsland
-        </address>
-
+      <li><div class="icon"><a href="/about/graphics/graphics.html"><img src="/graphics/icons/graphics.png" alt="Logo en afbeeldingen" /></a></div>
+      <div>
+        <h3><a href="/about/graphics/graphics.html">Logo en afbeeldingen</a></h3>
         <p>
-          Telefoon: +49-30-27595290
-        </p>
-
-        <p>
-          Kijk voor algemene inlichtingen alstublieft op onze 
-          <a href="/contact/contact.html">pagina met contact-information</a>.
+          Download <a href="/about/graphics/graphics.html">ons logo en andere afbeeldingen</a> om ze te gebruiken in uw publicatie.
         </p>
         </div>
-        
-        <div class="box">
-          
-          <h2>Over FSFE</h2>
-          
-          <p><a href="/timeline">Onze tijdlijn</a> biedt u een overzicht van de belangrijkste prestaties op verschillende gebieden in de afgelopen jaren.</p>
-          
-          <video width="480" height="270" crossorigin="crossorigin" poster="/graphics/15years-video-poster.png" controls="controls">
-            <source media="screen and (min-device-width:1000px)" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="https://download.fsfe.org/videos/15years/FSFE15_30.mp4"></source>
-            <source media="screen and (min-device-width:1000px)" type="video/webm; codecs=&quot;vp9, opus&quot;" src="https://download.fsfe.org/videos/15years/FSFE15_38.webm"></source>
-            <source media="screen and (max-device-width:999px)" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="https://download.fsfe.org/videos/15years/FSFE15_mobile.mp4"></source>
-            <source media="screen and (max-device-width:999px)" type="video/webm; codecs=&quot;vp9, opus&quot;" src="https://download.fsfe.org/videos/15years/FSFE15_mobile.webm"></source>
-            <track label="English" srclang="en" kind="subtitle" src="https://download.fsfe.org/videos/15years/vtt/15years-FSFE.en.vtt"></track>
-            <track label="Deutsch" srclang="de" kind="subtitle" src="https://download.fsfe.org/videos/15years/vtt/15years-FSFE.de.vtt"></track>
-            <track label="Ελληνικά" srclang="el" kind="subtitle" src="https://download.fsfe.org/videos/15years/vtt/15years-FSFE.el.vtt"></track>
-            <track label="Español" srclang="es" kind="subtitle" src="https://download.fsfe.org/videos/15years/vtt/15years-FSFE.es.vtt"></track>
-            <track label="Français" srclang="fr" kind="subtitle" src="https://download.fsfe.org/videos/15years/vtt/15years-FSFE.fr.vtt"></track>
-            <track label="Italian" srclang="it" kind="subtitle" src="https://download.fsfe.org/videos/15years/vtt/15years-FSFE.it.vtt"></track>
-            <track default="default" label="Nederlands" srclang="nl" kind="subtitle" src="https://download.fsfe.org/videos/15years/vtt/15years-FSFE.nl.vtt"></track>
-            <track label="Shqip" srclang="sq" kind="subtitle" src="https://download.fsfe.org/videos/15years/vtt/15years-FSFE.sq.vtt"></track>
-            <track label="Türkçe" srclang="tr" kind="subtitle" src="https://download.fsfe.org/videos/15years/vtt/15years-FSFE.tr.vtt"></track>
-            <track label="српски" srclang="sr" kind="subtitle" src="https://download.fsfe.org/videos/15years/vtt/15years-FSFE.sr.vtt"></track>
-            <track label="eesti keel" srclang="et" kind="subtitle" src="https://download.fsfe.org/videos/15years/vtt/15years-FSFE.et.vtt"></track>
+      </li>
 
-            <track label="English" srclang="en" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.en.srt"></track>
-            <track label="Deutsch" srclang="de" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.de.srt"></track>
-            <track label="Ελληνικά" srclang="el" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.el.srt"></track>
-            <track label="Español" srclang="es" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.es.srt"></track>
-            <track label="Français" srclang="fr" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.fr.srt"></track>
-            <track label="Italian" srclang="it" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.it.srt"></track>
-            <track label="Nederlands" srclang="nl" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.nl.srt"></track>
-            <track label="Shqip" srclang="sq" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.sq.srt"></track>
-            <track label="Türkçe" srclang="tr" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.tr.srt"></track>
-            <track label="српски" srclang="sr" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.sr.srt"></track>
-            <track label="eesti keel" srclang="et" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.et.srt"></track>
-          </video>    
-        
+      <li><div class="icon"><a href="/about/principles.html"><img src="/graphics/icons/howwework.png" alt="Hoe we werken" /></a></div>
+      <div>
+        <h3><a href="/about/principles.html">Hoe we werken</a></h3>
+        <p>
+          We zien onszelf als Europeanen met verschillende achtergronden die de ontwikkeling van een gemeenschappelijke cultuur van samenwerking steunen. <a href="/about/principles.html">Onze principes</a> zullen u helpen te begrijpen hoe we denken en werken.
+        </p>
         </div>
-        
-        </div> <!-- END 2nd 50-50 grid -->
-        
-        <h2 id="subpages" class="show-heading">Bronnen</h2>
+      </li>
 
-        <ul>
-          <li>
-            <h3><a href="/about/graphics/graphics.html">Logo en afbeeldingen</a></h3>
-            <p>
-              Download ons logo en andere afbeeldingen.
-            </p>
-          </li>
+      <li><div class="icon"><a href="/about/team.html"><img src="/graphics/icons/meetus.png" alt="Wie we zijn" /></a></div>
+      <div>
+        <h3><a href="/about/team.html">Wie we zijn</a></h3>
+        <p>
+          Vind mensen van onze gemeenschap, vrijwilligers, stagiaires en stagiairs, stafleden en coördinatoren op <a href="/about/team.html">onze teampagina</a>.
+        </p>
+        </div>
+      </li>
 
-          <!--
-            We should have a link to a subset of people on our people page who can
-            give official press statements
-          -->
+      <!--
+        We should have a link to a subset of people on our people page who can
+        give official press statements
+      -->
 
-          <li>
-            <h3><a href="/freesoftware/freesoftware.html">Vrije Software Basis</a></h3>
-            <p>
-              Leer het verschil tussen Vrije Software, Open Bron en Libre
-              Software.
-            </p>
-          </li>
-        </ul>
-      </body>
+    </ul>
 
-      <timestamp>10-01-23 17:58:15 +0100 (Sam, 23. Jän 2010) $ $Author$</timestamp>
-<translator>André Ockers en Nico Rikken</translator>
-    </html>
-    <!--
-    Local Variables: ***
-    mode: xml ***
-    End: ***
-    -->
+  </div>
+  </body>
+
+  <timestamp>10-01-23 17:58:15 +0100 (Sam, 23. Jän 2010) $ $Author: jonas $</timestamp>
+<translator>André Ockers</translator>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->
+
 

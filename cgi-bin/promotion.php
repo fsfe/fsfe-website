@@ -72,7 +72,7 @@ function send_mail ( $to, $from, $subject, $msg, $bcc = NULL, $att = NULL, $att_
   }
   $headers .= "X-OTRS-DynamicField-OrderLanguage: " . $_POST["language"] . "\n";
   $headers .= "X-OTRS-DynamicField-OrderState: order\n";
-  
+
   if ( $att ) {
     $separator = md5( time());
     $att_f = chunk_split( base64_encode( $att ));
@@ -83,7 +83,7 @@ function send_mail ( $to, $from, $subject, $msg, $bcc = NULL, $att = NULL, $att_
     $headers .= "This is a MIME encoded message.\n";
      
     // message
-    $message .= "--".$separator."\n";
+    $message = "--".$separator."\n";
     $message .= "Content-Type: text/plain; charset=\"UTF-8\"\n";
     $message .= "Content-Transfer-Encoding: 8bit\n\n";
     $message .= $msg."\n\n";

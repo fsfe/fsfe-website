@@ -94,7 +94,7 @@ function send_mail ( $to, $from, $subject, $msg, $bcc = NULL, $att = NULL, $att_
     $message .= "--".$separator."\n";
     $message .= "Content-Type: $att_type; name=\"$att_name\"\n"; 
     $message .= "Content-Transfer-Encoding: base64\n";
-    $message .= "Content-Disposition: attachment\n";
+    $message .= "Content-Disposition: attachment\n\n";
     $message .= $att_f."\n";
 
     // end of message

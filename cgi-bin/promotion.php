@@ -79,26 +79,29 @@ function send_mail ( $to, $from, $subject, $msg, $bcc = NULL, $att = NULL, $att_
     
     $headers .= "MIME-Version: 1.0\n"; 
     $headers .= "Content-Type: multipart/mixed; boundary=\"".$separator."\"\n"; 
-    $headers .= "Content-Transfer-Encoding: 7bit\n";
-    $headers .= "This is a MIME encoded message.\n";
+    $headers .= "Content-Transfer-Encoding: 7bit";
      
     // message
-    $message = "--".$separator."\n";
+    $message = "This is a MIME encoded message.\n\n";
+
+    // text
+    $message .= "--".$separator."\n";
     $message .= "Content-Type: text/plain; charset=\"UTF-8\"\n";
     $message .= "Content-Transfer-Encoding: 8bit\n\n";
-    $message .= $msg."\n\n";
+    $message .= $msg."\n";
      
     // attachment
     $message .= "--".$separator."\n";
     $message .= "Content-Type: $att_type; name=\"$att_name\"\n"; 
     $message .= "Content-Transfer-Encoding: base64\n";
     $message .= "Content-Disposition: attachment\n";
-    $message .= $att_f."\n\n";
+    $message .= $att_f."\n";
 
     // end of message
     $message .= "--".$separator."--";
   } else {
     $headers .= "Content-Type: text/plain; charset=UTF-8\n";
+    $headers .= "Content-Transfer-Encoding: 8bit";
     $message = $msg;
   }
   

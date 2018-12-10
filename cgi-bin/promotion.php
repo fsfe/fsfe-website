@@ -62,43 +62,44 @@ function relay_donation($orderID) {
   ));
 }
 
-function send_mail ( $to, $from, $subject, $message, $bcc = NULL, $att = NULL, $att_type = NULL, $att_name = NULL ) {
-  $headers = "From: $from\r\n";
-  if ( isset( $bcc )) { $headers .= "Bcc: $bcc" . "\r\n"; }
-  $headers .= "X-OTRS-Queue: Shipping::Promo Material Orders\r\n";
+function send_mail ( $to, $from, $subject, $msg, $bcc = NULL, $att = NULL, $att_type = NULL, $att_name = NULL ) {
+  $headers = "From: $from\n";
+  if ( isset( $bcc )) { $headers .= "Bcc: $bcc" . "\n"; }
+  $headers .= "X-OTRS-Queue: Shipping::Promo Material Orders\n";
   if ( isset( $_POST["donationID"])) {
-    $headers .= "X-OTRS-DynamicField-OrderID: " . $_POST["donationID"] . "\r\n";
-    $headers .= "X-OTRS-DynamicField-OrderAmount: " . $_POST["donate"] . "\r\n";
+    $headers .= "X-OTRS-DynamicField-OrderID: " . $_POST["donationID"] . "\n";
+    $headers .= "X-OTRS-DynamicField-OrderAmount: " . $_POST["donate"] . "\n";
   }
-  $headers .= "X-OTRS-DynamicField-OrderLanguage: " . $_POST["language"] . "\r\n";
-  $headers .= "X-OTRS-DynamicField-OrderState: order\r\n";
+  $headers .= "X-OTRS-DynamicField-OrderLanguage: " . $_POST["language"] . "\n";
+  $headers .= "X-OTRS-DynamicField-OrderState: order\n";
   
   if ( $att ) {
-    $eol = PHP_EOL;
     $separator = md5( time());
     $att_f = chunk_split( base64_encode( $att ));
     
-    $headers .= "MIME-Version: 1.0".$eol; 
-    $headers .= "Content-Type: multipart/mixed; boundary=\"".$separator."\"".$eol.$eol; 
-    $headers .= "Content-Transfer-Encoding: 7bit".$eol;
-    $headers .= "This is a MIME encoded message.".$eol.$eol;
+    $headers .= "MIME-Version: 1.0\n"; 
+    $headers .= "Content-Type: multipart/mixed; boundary=\"".$separator."\"\n"; 
+    $headers .= "Content-Transfer-Encoding: 7bit\n";
+    $headers .= "This is a MIME encoded message.\n";
      
     // message
-    $headers .= "--".$separator.$eol;
-    $headers .= "Content-Type: text/plain; charset=\"UTF-8\"".$eol;
-    $headers .= "Content-Transfer-Encoding: 8bit".$eol.$eol;
-    $headers .= $message.$eol.$eol;
+    $message .= "--".$separator."\n";
+    $message .= "Content-Type: text/plain; charset=\"UTF-8\"\n";
+    $message .= "Content-Transfer-Encoding: 8bit\n\n";
+    $message .= $msg."\n\n";
      
     // attachment
-    $headers .= "--".$separator.$eol;
-    
-    $headers .= "Content-Type: $att_type; name=\"$att_name\"".$eol; 
-    $headers .= "Content-Transfer-Encoding: base64".$eol;
-    $headers .= "Content-Disposition: attachment".$eol.$eol;
-    $headers .= $att_f.$eol.$eol;
-    $headers .= "--".$separator."--";
+    $message .= "--".$separator."\n";
+    $message .= "Content-Type: $att_type; name=\"$att_name\"\n"; 
+    $message .= "Content-Transfer-Encoding: base64\n";
+    $message .= "Content-Disposition: attachment\n";
+    $message .= $att_f."\n\n";
+
+    // end of message
+    $message .= "--".$separator."--";
   } else {
-    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+    $headers .= "Content-Type: text/plain; charset=UTF-8\n";
+    $message = $msg;
   }
   
   return mail( $to, $subject, $message, $headers );

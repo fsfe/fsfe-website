@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<html>
-  <head>
-    <title>Kondig uw FSFE-gemeenschapsevenement aan</title>
-  </head>
-  <body>
- 
-    <h1>Kondig uw FSFE-gemeenschapsevenement aan</h1>
+    <html>
+      <head>
+        <title>Kondig uw FSFE-gemeenschapsevenement aan</title>
+      </head>
+      <body>
+     
+        <h1>Kondig uw FSFE-gemeenschapsevenement aan</h1>
 
-    <div id="introduction">
-      <p>Use the form below to announce every event that is related to a FSFE activity. If it's a meeting or a talk, if it's a booth in the streets or a radio podcast: Let the community and the world know what's happening.</p>
+        <div id="introduction">
+          <p>Gebruik het formulier hieronder om ieder FSFE-evenement dat is gerelateerd aan een FSFE-activiteit aan te kondigen. Of het nu een ontmoeting, een lezing, een kraam op straat of een radio-podcast is: laat de gemeenschap en de wereld weten wat er gebeurt.</p>
 
-    </div>
+        </div>
 
         <!--<h2>Registreer</h2>-->
 
@@ -26,7 +26,7 @@
             <label for="email" class="required">Uw e-mail<span class="star">*</span></label>
             <input name="email" value="" required="required" type="email" /> 
 
-            <p class="help-block">Uw persoonlijke informatie zal nooit worden gedeeld of verkocht. Het wordt alleen gebruikt om contact met u op te nemen als er wedervragen of problemen zijn. </p>
+            <p class="help-block">Uw persoonlijke informatie zal nooit worden gedeeld of verkocht. Het wordt alleen gebruikt om contact met u op te nemen als er vragen of problemen zijn.</p>
 
             <!--<label for="groupname">Naam van de groep</label>
             <input name="groupname" value="" type="text" />-->
@@ -43,20 +43,30 @@
                                     <input name="startdate" value="" required="required" type="date" placeholder="YYYY-MM-DD" />
                             </td>
                             <td>
-                                    <label for="enddate" >Einddatum</label>
+                                    <label for="enddate" >Einddatum</label>*
                                     <input name="enddate" value="" type="date" placeholder="YYYY-MM-DD" />
                             </td>
                             </tr>
                     </table>
-            <label for="description" class="required">Beschrijving<span class="star">*</span></label>
+            <label for="description" class="required">Description<span class="star">*</span></label>
             <textarea name="description" required="required"></textarea>
 
-            <p class="help-block">Maak alstublieft in het kort duidelijk waar uw evenement over gaat, hoe men eraan kan deelnemen en wat deelnemers kunnen verwachten. Als u uv evenement in een andere taal dan Engels registreert, overweeg dan alstublieft om ook een Engelse versie toe te voegen <strong>zodat u er zeker van kunt zijn dat wij het begrijpen</strong>. Wees u er alstublieft ook van bewust dat (vanwege technische redenen) we alleen Engelse evenementen vermelden op onze voorpagina fsfe.org - elke andere taal zal alleen zichtbaar zijn op fsfe.org/events.</p>
+            <p class="help-block">Maak alstublieft in het kort duidelijk waar uw evenement over gaat, hoe men eraan kan deelnemen en wat deelnemers kunnen verwachten. Als u uw evenement in een andere taal dan Engels registreert, overweeg dan alstublieft om ook een Engelse versie toe te voegen <strong>zodat u er zeker van kunt zijn dat wij het begrijpen</strong>. Wees u er alstublieft ook van bewust dat we (vanwege technische redenen) alleen Engelse evenementen vermelden op onze voorpagina fsfe.org - elke andere taal zal alleen zichtbaar zijn op fsfe.org/events.</p>
 
-            <label for="url">Evenement URL</label>
+               <label for="tags">Kies één of meer tags hieronder</label>*
+            
+            <div class="checkboxlist">
+                    <div class="checkbox"><label><input type="checkbox" name="tags[]" value="lezing" />talk</label></div>
+                    <div class="checkbox"><label><input type="checkbox" name="tags[]" value="infokraam" />infobooth</label></div>
+                    <div class="checkbox"><label><input type="checkbox" name="tags[]" value="lokalegroep" />local group</label></div>
+                    <div class="checkbox"><label><input type="checkbox" name="tags[]" value="werkgroep" />workshop</label></div>
+                    <div class="checkbox"><label><input type="checkbox" name="tags[]" value="ontmoeting" />meeting</label></div>
+            </div>
+
+            <label for="url">Evenement URL (als beschikbaar)</label>
             <input name="url" value="" type="text" />
 
-            <!--<label for="location">Locatie van het evenement</label>
+            <!--<label for="location">Evenement locatie</label>
             <input name="location" value="" type="text" />-->
 
 
@@ -65,8 +75,38 @@
             <label for="city">Stad<span class="star">*</span></label>
             <input name="city" value="" required="required" type="text" />
 
-            <label for="country">Land<span class="star">*</span></label>
-            <input name="country" value="" required="required" type="text" />
+            <div class="form-group">
+            <label for="country">Land<span class="star">*</span></label>        
+            <select name="country" class="form-control">
+                            <option value="be">België</option>
+                            <option value="bg">Bulgarije</option>
+                            <option value="dk">Denemarken</option>
+                            <option value="de">Duitsland</option>
+                            <option value="ee">Estland</option>
+                            <option value="fi">Finland</option>
+                            <option value="fr">Frankrijk</option>
+                            <option value="gr">Griekenland</option>
+                            <option value="hu">Hongarije</option>
+                            <option value="ie">Ierland</option>
+                            <option value="it">Italië</option>
+                            <option value="hr">Kroatië</option>
+                            <option value="lv">Letland</option>
+                            <option value="lt">Litouwen</option>
+                            <option value="lu">Luxemburg</option>
+                            <option value="mt">Malta</option>
+                            <option value="nl">Nederland</option>
+                            <option value="at">Oostenrijk</option>
+                            <option value="pl">Polen</option>
+                            <option value="pt">Portugal</option>
+                            <option value="ro">Roemenie</option>
+                            <option value="sk">Slowakije</option>
+                            <option value="si">Slovenië</option>
+                            <option value="es">Spanje</option>
+                            <option value="uk">Verenigd Koninkrijk</option>
+                            <option value="se">Zweden</option>
+                            <option value="other">Ander</option>
+                    </select>
+                    </div>
 
             <!--</fieldset>-->
             <!-- Should help against spam -->
@@ -76,10 +116,10 @@
 
         </form>
         
-        <p>Na het invullen van het formulier en het bevestigen met de "Voeg evenement toe"-knop zal er een xml-bestand worden gegenereerd en aan ons worden verzonden. Als het wordt goedgekeurd zal uw evenement binnen 48 uur worden toegevoegd zodat het verschijnt op fsfe.org en/of op fsfe.org/events. Wees u ervan bewust dat we alleen FSFE en aan de FSFE-gemeenschap gerelateerde evenementen promoten en dus geen andere gevarieerde Vrije Software-activiteiten (ja, zonder uitzonderingen - hoe belangrijk zik ook mogen zijn).</p> 
+        <p>Na het invullen van het formulier en het bevestigen met de "Voeg evenement toe"-knop zal er een xml-bestand worden gegenereerd en aan ons worden verzonden. Na goedkeuring zal uw evenement binnen 48 uur worden geüpload zodat het verschijnt op fsfe.org en/of op fsfe.org/events. Wees u ervan bewust dat we alleen FSFE en aan de FSFE-gemeenschap gerelateerde evenementen promoten en dus geen andere gevarieerde Vrije Software-activiteiten (ja, zonder uitzonderingen; hoe belangrijk ze ook mogen zijn).</p> 
         
-        <p>Wees u ervan bewust dat op alle FSFE-evenementen onze <a href="https://fsfe.org/about/codeofconduct">gedragsregels</a> van toepassing zijn, die vriendelijk aan alle deelnemers vragen om excellent naar elkaar te zijn. Kondig uw evenement alstublieft niet aan als FSFE-evenement als u niet van plant bent onze gedragsregels te implementeren.</p>
+        <p>Wees u ervan bewust dat op alle FSFE-evenementen onze <a href="https://fsfe.org/about/codeofconduct">gedragscode</a> van toepassing is, die aan alle deelnemers vriendelijk vraagt om excellent naar elkaar te zijn. Kondig uw evenement alstublieft niet aan als FSFE-evenement als u niet van plan bent onze gedragscode te implementeren.</p>
          
       </body>
-<translator>André Ockers</translator>
+    <translator>André Ockers</translator>
      </html>

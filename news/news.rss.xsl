@@ -99,8 +99,8 @@
         <copyright>Copyright (c) Free Software Foundation Europe. Verbatim copying and distribution
           of this entire article is permitted in any medium, provided this
           notice is preserved.</copyright>
-        <managingEditor>press@fsfeurope.org (FSFE Press Team)</managingEditor>
-        <webMaster>web@fsfeurope.org (FSFE Webmaster Team)</webMaster>
+        <managingEditor>press@fsfe.org (FSFE Press Team)</managingEditor>
+        <webMaster>web@lists.fsfe.org (FSFE Webmaster Team)</webMaster>
         <image>
           <url>http://fsfe.org/news/fsfe-news.png</url>
           <title>FSFE News</title>

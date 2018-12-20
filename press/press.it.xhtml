@@ -3,41 +3,51 @@
 <html>
   <head>
     <title>Sala stampa - FSFE</title>
-    <script>
+    
+    <style>
 
-      /*
-       * Fields that carry values at page load will be emptied if this
-       * is called and the field has not been edited before.
-       */
-      var changedFields = new Array();
-
-      function removeValue(field) {
-        if (!changedFields[field.getAttribute("name")]) {
-          changedFields[field.getAttribute("name")] = true;
-          field.value = "";
-        }
-
-        return false;
-      }
-
-    </script>
+    
+    
+    
+		ul.subheadings li {
+    				grid-template-columns: 1fr 4fr;
+    				display: grid;
+    				grid-column-gap: 10px;
+    				margin-top:20px;
+    				
+    		}
+    		  ul.subheadings li h3 {
+    				margin-top:0px;
+    		} 
+    		
+    	div.icon {
+				max-width: 72px;
+				}
+    		
+    		</style>
+    
+    
   </head>
 
   <body class="press" id="press-room">
     <h1 class="heading">Stampa</h1>
 
   <div id="introduction">
-
   <!-- for the following two paragraphs, please have a look at http://fsfe.org/about/mission -->
 
-  <p>La Free Software Foundation Europe è una fondazione che incoraggia gli utenti ad
-  avere il controllo della tecnologia.Il Software coinvolge profondamente tutti gli aspetti delle nostre
-  vite. È importante che questa tecnologia ci aiuti anziché
-  limitarci. Il Software Libero garantisce a tutti il diritto di usare, studiare,
-  adattare e condividere il software. Questi diritti aiutano a sostenere altre libertà fondamentali
-  come il diritto di parola, la libertà di stampa e la privacy.</p>
+    <p>La Free Software Foundation Europe è un'organizzazione che aiuta gli utenti ad
+    avere il controllo della tecnologia che utilizzano. Il Software coinvolge profondamente tutti gli aspetti delle nostre
+    vite. È importante che questa tecnologia ci aiuti anziché
+    limitarci. Il Software Libero garantisce a tutti il diritto di usare, studiare,
+    adattare e condividere il software. Questi diritti aiutano a mantenere altre libertà fondamentali
+    come il diritto di parola, la libertà di stampa e quello alla privacy.</p>
 
   </div>
+
+  <div class="right" style="max-width: 100px; width: 25%;">
+    <img src="/about/graphics/stars.png" alt="Stars of the FSFE logo" />
+  </div>
+
 
   <p>La Free Software Foundation Europe aiuta le persone e le organizzazioni a comprendere come il
   Software Libero contribuisca alla libertà, alla trasparenza e all'autodeterminazione. Essa
@@ -45,71 +55,131 @@
   incoraggia le persone ad usare e sviluppare Software Libero e fornisce risorse per
   consentire a chiunque di promuovere ulteriormente il Software Libero in Europa.</p>
 
-    <div class="grid-50-50">
-      <div class="box first">
-        <h2>Comunicati stampa</h2>
 
-        <p>
-          Iscrivendosi ai nostri news feed o alle nostre mailing list potete
-          tenervi aggiornati con le ultime notizie dal mondo del Software
-          Libero.
-        </p>
-        
-        <form id="formnl" name="formnl" method="POST" action="//lists.fsfe.org/mailman/listinfo/press-release">
-          <input type="submit" value="Iscrivimi" />
-        </form>
+  <div class="grid-50-50" style="margin-top:3em">
 
-        <p>
-          Per aggiornamenti e notizie in tempo reale, potete anche seguirci <a
-            href="http://identi.ca/fsfe">su Identi.ca</a> o <a
-            href="http://twitter.com/fsfe">su Twitter</a>.
-        </p>
-      </div>
-
-      <div class="box">
-        <h2><a href="/news/news.html" class="feed">Ultime notizie</a></h2>
-
-        <dynamic-content />
-      </div>
-    </div>
-
-    <div class="grid-50-50">
-    
     <div class="box first">
-    <h2>Richieste</h2>
 
-    <p>
-      Potete inviare le vostre richieste a <a
-        href="mailto:press@fsfeurope.org">press@fsfeurope.org</a>, o per posta
-        a:
-    </p>
+      <h2><a href="/news/news.html" class="feed">Comunicati stampa</a> </h2>
 
-    <address>
-      Free Software Foundation Europe e.V.<br />
-      Schönhauser Allee 6/7<br />
-      10119 Berlin<br />
-      Germany
-    </address>
+      <dynamic-content />
 
-    <p>
-      Telefono: +49-30-27595290
-    </p>
+      <div style="text-align:center; margin:2em">
+        <form id="formnl" name="formnl" method="POST" action="//lists.fsfe.org/mailman/listinfo/press-release">
+          <input type="submit" value="Subscribe" />
+        </form>
+      </div>
 
-    <p>
-      Per richieste generali, si veda la
-      <a href="/contact/contact.html">pagina dei contatti</a>.
-    </p>
+      <p style="margin:0em 2em 0em 2em;">
+        <strong>Iscrivendovi ai nostri news feed o alle nostre mailing list potrete tenervi aggiornati sulle ultime notizie dal mondo del Software Libero.</strong>
+      </p>
+
     </div>
-    
+
+
     <div class="box">
-      
-      <h2>Riguardo a FSFE</h2>
-      
-      <p><a href="/timeline">La nostra cronologia degli eventi</a> ti da un'idea dei
-      principali successi ottenuti in varie aree nel corso degli ultimi 
-      anni.</p>
-      
-      <video width="480" height="270" crossorigin="crossorigin" poster="/graphics/15years-video-poster.png" controls="controls">
+
+      <h2>Segui le nostre notizie</h2>
+
+      <p>Oltre ai comunicati stampa pubblichiamo regolarmente notizie sulle nostre attività e sulle nostre campagne. Per non rischiare di perderle puoi iscriverti al nostro <a href="https://fsfe.org/news/news.en.rss">feed RSS</a> oppure alla nostra <a href="https://fsfe.org/news/newsletter">newsletter</a>.</p>
+
+      <div class="share-buttons bottom" style="text-align:center; margin-top:1em;margin-bottom:1em;">
+        <a target="_blank" href="https://fsfe.org/news/newsletter">
+          <button class="button share-mail">Newsletter</button>
+        </a>
+        <a target="_blank" href="https://fsfe.org/news/news.en.rss">
+          <button class="button share-rss">Feed RSS</button>
+        </a>
+      </div>
+
+      <h2>Social media</h2>
+
+      <p>
+        Per aggiornamenti e notizie in tempo reale potete seguirci via <a
+          href="https://mastodon.social/@fsfe">Mastodon</a>, <a href="https://diasp.eu/u/fsfe">Diaspora</a>, <a
+          href="https://twitter.com/fsfe">Twitter</a> e <a href="https://facebook.com/thefsfe">Facebook</a>.
+      </p>
+
+      <div class="share-buttons bottom" style="text-align:center;margin-top:1em;margin-bottom:1em;">
+        <a target="_blank" href="https://mastodon.social/@fsfe">
+          <button class="button share-mastodon">Mastodon</button>
+        </a>
+        <a target="_blank" href="https://diasp.eu/u/fsfe">
+          <button class="button share-diaspora">Diaspora</button>
+        </a><br />
+        <a target="_blank" href="https://twitter.com/fsfe">
+          <button class="button share-twitter">Twitter</button>
+        </a>
+        <a target="_blank" href="https://facebook.com/thefsfe">
+          <button class="button share-facebook">Facebook</button>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="grid-50-50" style="margin-top:3em">
+
+    <div class="box first">
+
+      <h2>Contatti per la stampa</h2>
+
+      <p>
+        Potete contattarci per email al <a
+        href="mailto:press@fsfeurope.org">press@fsfe.org</a>, o per posta
+        al:
+      </p>
+
+      <address>
+        Free Software Foundation Europe e.V.<br />
+        Schönhauser Allee 6/7<br />
+        10119 Berlin<br />
+        Germany
+      </address>
+
+      <p>
+        Numero di telefono: +49 30 27595290
+      </p>
+
+      <p>
+        Per informazioni di carattere generale potete consultare la pagina
+        <a href="/contact/contact.html">informazioni di contatto</a>.
+      </p>
+
+    </div>
+
+    <div class="box">
+
+      <h2>Informazioni sulla FSFE</h2>
+
+      <p>La Free Software Foundation Europe è stata fondata nel 2001 come organizzazione non governativa e senza fini di lucro con il fine di aiutare gli utenti a controllare la tecnologia. I nostri metodi ed obiettivi sono esposti nella pagina <a href="/about/mission">La nostra missione</a>. Nella <a href="/timeline/timeline">cronologia</a> abbiamo rappresentato i nostri successi più importanti nella difesa del software Libero in Europa dal 2001.</p>
+
+    </div>
+
+  </div>
+
+  <div class="grid-50-50" style="margin-top:3em">
+
+    <div class="box first">
+
+      <h3>Matthias Kirschner, Presidente della FSFE:</h3>
+
+      <video style="align:center" width="100%" crossorigin="crossorigin" poster="https://download.fsfe.org/videos/supporter/posters/matthias.jpg" controls="controls">
+        <source media="screen and (min-device-width:1000px)" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="https://download.fsfe.org/videos/supporter/matthias_desktop.mp4"></source>
+        <source media="screen and (min-device-width:1000px)" type="video/webm; codecs=&quot;vp9, opus&quot;" src="https://download.fsfe.org/videos/supporter/matthias_desktop.webm"></source>
+        <source media="screen and (max-device-width:999px)" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="https://download.fsfe.org/videos/supporter/matthias_mobile.mp4"></source>
+        <source media="screen and (max-device-width:999px)" type="video/webm; codecs=&quot;vp9, opus&quot;" src="https://download.fsfe.org/videos/supporter/matthias_mobile.webm"></source>
+        <track default="default" label="English" srclang="en" kind="subtitles" src="https://download.fsfe.org/videos/supporter/subtitles/matthias.vtt"></track>
+      </video>
+
+    </div>
+
+    <div class="box">
+
+      <h3>Il nostro anniversario - i 15 anni della FSFE:</h3>
+
+      <video style="align:center" width="100%" crossorigin="crossorigin" poster="/graphics/15years-video-poster.png" controls="controls">
         <source media="screen and (min-device-width:1000px)" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="https://download.fsfe.org/videos/15years/FSFE15_30.mp4"></source>
         <source media="screen and (min-device-width:1000px)" type="video/webm; codecs=&quot;vp9, opus&quot;" src="https://download.fsfe.org/videos/15years/FSFE15_38.webm"></source>
         <source media="screen and (max-device-width:999px)" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="https://download.fsfe.org/videos/15years/FSFE15_mobile.mp4"></source>
@@ -137,20 +207,53 @@
         <track label="Türkçe" srclang="tr" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.tr.srt"></track>
         <track label="српски" srclang="sr" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.sr.srt"></track>
         <track label="eesti keel" srclang="et" kind="subtitle" src="https://download.fsfe.org/videos/15years/srt/15years-FSFE.et.srt"></track>
-      </video>    
-    
-    </div>
-    
-    </div> <!-- END 2nd 50-50 grid -->
-    
-    <h2 id="subpages" class="show-heading">Risorse</h2>
+      </video>
 
-    <ul>
-      <li>
-        <h3><a href="/about/graphics/graphics.html">Logo e grafiche</a></h3>
+
+    </div>
+
+  </div>
+
+  <div style="padding-top:3em">
+
+    <h2>Background e risorse</h2>
+
+      <ul class="subheadings">
+
+      <li><div class="icon"><a href="/freesoftware/freesoftware.html"><img src="/graphics/icons/fs-basics.png" alt="Principi del Software Libero" /></a></div>
+      <div>
+        <h3><a href="/freesoftware/freesoftware.html">I principi del Software Libero</a></h3>
         <p>
-          Scaricate il nostro logo e altro materiale grafico.
+          L'accesso al software discrimina le persone che possono e quelle che non possono far parte di una società digitale. Scopri qual'è l'importanza del Software Libero in aree chiave della società moderna leggendo la nostra <a href="/freesoftware/freesoftware.html">introduzione al Software Libero</a>.
         </p>
+      </div>
+      </li>
+
+      <li><div class="icon"><a href="/about/graphics/graphics.html"><img src="/graphics/icons/graphics.png" alt="Logo e materiale grafico" /></a></div>
+      <div>
+        <h3><a href="/about/graphics/graphics.html">Logo e materiale grafico</a></h3>
+        <p>
+          Potete scaricare il <a href="/about/graphics/graphics.html">nostro logo ed altro materiale grafico</a> ed utilizzarli nelle vostre pubblicazioni.
+        </p>
+        </div>
+      </li>
+
+      <li><div class="icon"><a href="/about/principles.html"><img src="/graphics/icons/howwework.png" alt="Come lavoriamo" /></a></div>
+      <div>
+        <h3><a href="/about/principles.html">Come lavoriamo</a></h3>
+        <p>
+          Vediamo noi stessi come cittadini europei appartenenti a diverse culture che lavorano assieme allo scopo di realizzare una cultura collaborativa comune. Leggendo i <a href="/about/principles.html">nostri principi</a> potrai capire ciò in cui crediamo e per cui lavoriamo.
+        </p>
+        </div>
+      </li>
+
+      <li><div class="icon"><a href="/about/team.html"><img src="/graphics/icons/meetus.png" alt="Chi siamo" /></a></div>
+      <div>
+        <h3><a href="/about/team.html">Chi siamo</a></h3>
+        <p>
+          Vedi chi sono i membri della nostra community: volontari, stagisti, membri dello staff e coordinatori nella pagina del <a href="/about/team.html">team della FSFE</a>.
+        </p>
+        </div>
       </li>
 
       <!--
@@ -158,21 +261,17 @@
         give official press statements
       -->
 
-      <li>
-        <h3><a href="/freesoftware/freesoftware.html">Cos'è il Software Libero</a></h3>
-        <p>
-          Scoprite la differenza tra Free Software, Open Source e Software
-          Libero.
-        </p>
-      </li>
     </ul>
+
+  </div>
   </body>
 
-  <translator>Tarin Gamberini</translator>
-  <timestamp>10-01-23 17:58:15 +0100 (Sam, 23. Jän 2010) $ $Author$</timestamp>
+  <timestamp>23-01-2010 17:58:15 +0100 $ $Author: jonas $</timestamp>
+  <translator>Tarin Gamberini e Sebastiano Pistore</translator>
 </html>
 <!--
 Local Variables: ***
 mode: xml ***
 End: ***
 -->
+

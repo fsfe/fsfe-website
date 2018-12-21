@@ -4,8 +4,8 @@
 
 <itemset>
   <item type="tshirt" id="tshirt-hacking-black" price="20.00" date="2008-02-23">
-    <available size="S"/>
-    <available size="M"/>
+    <available size="S" a="46" b="70"/>
+    <available size="M" a="53" b="70"/>
     <image
       small="2008/tshirt-hacking-black-front-small.jpg"
       large="2008/tshirt-hacking-black-front-large.jpg"/>

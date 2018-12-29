@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<svg width="400" height="320" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+  <title>size-hooded</title>
+  <g fill="none" stroke="black">
+    <path id="outline" d="M172,82 L142,82 L2,222 L32,252 L132,152 L132,318 L268,318 L268,152 L368,252 L398,222 L258,82 L228,82 C270,-25 130,-25 172,82" stroke-width="4"/>
+    <path id="line_a" d="M132,160 L268,160" stroke-dasharray="5,5"/>
+    <path id="line_b" d="M240,82 L240,318" stroke-dasharray="5,5"/>
+    <path id="line_c" d="M2,222 L172,82" stroke-dasharray="5,5"/>
+    <text id="text_a" x="170" y="150" fill="black" font-family="sans-serif" font-size="48" font-style="italic">a</text>
+    <text id="text_b" x="205" y="250" fill="black" font-family="sans-serif" font-size="48" font-style="italic">b</text>
+    <text id="text_c" x="40" y="155" fill="black" font-family="sans-serif" font-size="48" font-style="italic">c</text>
+  </g>
+</svg>

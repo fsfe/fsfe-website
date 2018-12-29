@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<svg width="400" height="320" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+  <title>size-tshirt</title>
+  <g fill="none" stroke="black">
+    <path id="outline" d="M102,2 L2,52 L42,132 L102,102 L92,318 L308,318 L298,102 L358,132 L398,52 L298,2 L250,2 C230,30 170,30 150,2 L102,2" stroke-width="4"/>
+    <path id="line_a" d="M102,110 L298,110" stroke-dasharray="5,5"/>
+    <path id="line_b" d="M270,2 L270,318" stroke-dasharray="5,5"/>
+    <text id="text_a" x="150" y="100" fill="black" font-family="sans-serif" font-size="48" font-style="italic">a</text>
+    <text id="text_b" x="235" y="240" fill="black" font-family="sans-serif" font-size="48" font-style="italic">b</text>
+  </g>
+</svg>

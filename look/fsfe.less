@@ -781,17 +781,19 @@ table.merchandise .quantity {
   width: 15%;
   min-width: 100px
 }
-@media only screen and (max-device-width: 700px) {
+@media (max-width: @screen-xs-max) {
+  table.merchandise .image, table.merchandise .description, table.merchandise .quantity {
+    display: block;
+    width: auto;
+  }
   table.merchandise .image {
-    min-width: 125px;
+    padding-bottom: 0;
   }
-}
-@media only screen and (max-device-width: 400px) {
+  table.merchandise .description {
+    padding: 0;
+  }
   table.merchandise .quantity {
-    min-width: 0px;
-  }
-  table.merchandise .image img {
-    max-width: 110px;
+    padding-top: 0;
   }
 }
 table.order-form {

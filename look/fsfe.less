@@ -756,59 +756,84 @@ tr.highlighted {
 
 /* FSFE Shop (/order) */
 
-table.merchandise tr {
-  border-bottom: 1px solid #ddd;
-}
-table.merchandise tr:last-child {
-  border-bottom: medium none;
-}
-table.merchandise td {
-  padding: 10px 0;
-}
-table.merchandise .image {
-  width: 25%;
-  min-width: 250px;
-}
-table.merchandise .image img {
-  max-height: 120px;
-  margin: 5px;
-}
-table.merchandise .description {
-  width: 60%;
-}
-table.merchandise .quantity {
-  text-align: right;
-  width: 15%;
-  min-width: 100px
-}
-@media (max-width: @screen-xs-max) {
-  table.merchandise .image, table.merchandise .description, table.merchandise .quantity {
-    display: block;
-    width: auto;
+table.merchandise {
+  tr {
+    border-bottom: 1px solid #ddd;
+    &:last-child {
+      border-bottom: medium none;
+    }
   }
-  table.merchandise .image {
-    padding-bottom: 0;
+  td {
+    padding: 10px 0;
+    &.image {
+      width: 25%;
+      min-width: 250px;
+      img {
+        max-height: 120px;
+        margin: 5px;
+      }
+    }
+    &.description {
+      width: 60%;
+    }
+    &.quantity {
+      text-align: right;
+      width: 15%;
+      min-width: 100px
+    }
+    @media (max-width: @screen-xs-max) {
+      &.image, &.description, &.quantity {
+        display: block;
+        width: auto;
+      }
+      &.image {
+        padding-bottom: 0;
+      }
+      &.description {
+        padding: 0;
+      }
+      &.quantity {
+        padding-top: 0;
+      }
+    }
   }
-  table.merchandise .description {
-    padding: 0;
+  .tooltip-anchor {
+    color: #236892;
+    position: relative;
   }
-  table.merchandise .quantity {
-    padding-top: 0;
+  .tooltip-content {
+    color: black;
+    text-align: center;
+    width: 7em;
+    padding: .5em;
+    background-color: #85bfe2;
+    border: 1px solid black;
+    position: absolute;
+    right: 0;
+    bottom: 2em;
+    z-index: 1;
+    visibility: hidden;
+    img {
+      width: 100%;
+    }
+  }
+  .tooltip-anchor:hover .tooltip-content {
+    visibility: visible;
   }
 }
 table.order-form {
   width: 100%;
-}
-table.order-form .order-left {
-  min-width: 65px;
-  width: 10%;
-}
-table.order-form .order-right input,textarea {
-  max-width: 400px;
-  width: 90%;
-}
-table.order-form #order-submit {
-  width: auto;
+  .order-left {
+    min-width: 65px;
+    width: 10%;
+  }
+  .order-right input,textarea {
+    max-width: 400px;
+    width: 90%;
+  }
+  #order-submit {
+    width: auto;
+  }
 }
 form.thankyou {
   margin-bottom: 10px;

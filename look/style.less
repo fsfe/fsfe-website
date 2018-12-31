@@ -5,7 +5,7 @@
 /* very generic elements */
 
 body {
-    @media (min-width: @screen-lg) {
+    @media (min-width: @screen-lg-min) {
         font-size: ceil(@font-size-base * 1.1428); // ~16px
     }
 }
@@ -119,7 +119,7 @@ div#subpages, .grid-row {
     display: block;
     width: 100%;
 
-    @media (min-width: @screen-sm) {
+    @media (min-width: @screen-sm-min) {
         padding-left: 3em;
     }
 }
@@ -146,13 +146,13 @@ div#subpages, .grid-row {
     text-align: center;
     color: @brand-strong;
 
-    @media (min-width: @screen-xs) {
+    @media (min-width: @screen-xs-min) {
         font-size: 2.7em;
     }
 }
 
 #menu {
-    @media (min-width: @screen-sm) {
+    @media (min-width: @screen-sm-min) {
         .pull-right;
         text-align: right;
     }
@@ -176,7 +176,7 @@ div#subpages, .grid-row {
         }
     }
 
-    @media (min-width: @screen-sm) {
+    @media (min-width: @screen-sm-min) {
         #direct-to-menu-list {
             visibility: hidden;
             display: none;
@@ -192,7 +192,7 @@ div#subpages, .grid-row {
     #direct-to-translations, #direct-to-menu-list {display: none;}
 }
 
-@media (min-width: @screen-xs) {
+@media (min-width: @screen-xs-min) {
     #menu-list, #search {
         display: inline-block;
     }
@@ -203,7 +203,7 @@ div#subpages, .grid-row {
     .collapse;
     padding-bottom: 1.5em;
 
-    @media (min-width: @screen-xs) {
+    @media (min-width: @screen-xs-min) {
         .collapse.in;
         display: inline-block;
         padding-bottom: 0.5em;
@@ -216,7 +216,7 @@ div#subpages, .grid-row {
             .btn;
             font-weight: 400;
 
-            @media (min-width: @screen-md) {
+            @media (min-width: @screen-md-min) {
                 .btn-lg;
             }
         }
@@ -230,7 +230,7 @@ div#subpages, .grid-row {
 .no-js #menu-list {
     .collapse.in;
 
-    @media (min-width: @screen-xs) {
+    @media (min-width: @screen-xs-min) {
         display: inline-block;
         padding-bottom: 0.5em;
     }
@@ -294,7 +294,7 @@ div#subpages, .grid-row {
     font-size: 1.1em;
     box-shadow: 0 .4em 1em rgb(200,200,200);
 
-    @media (min-width: @screen-sm) {
+    @media (min-width: @screen-sm-min) {
         padding: 3em;
     }
 }
@@ -343,7 +343,7 @@ div#subpages, .grid-row {
 
         a {color: @gray-dark;}
 
-        @media (min-width: @screen-sm) {
+        @media (min-width: @screen-sm-min) {
             margin: 3em -3em -3em;
         }
     }
@@ -440,7 +440,7 @@ div#subpages, .grid-row {
     }
 
     aside {
-        @media (min-width: @screen-md) {
+        @media (min-width: @screen-md-min) {
             float: right;
             margin-left: 100%;
             position: absolute;
@@ -650,14 +650,14 @@ div#subpages, .grid-row {
         margin-top: 1.5em;
         margin-bottom: 1.5em;
         margin-left: -1.5em;
-        @media (min-width: @screen-sm) {
+        @media (min-width: @screen-sm-min) {
             margin-left: -3em;
         }
     }
     .standout-text {
         .standout;
         padding-left: 1.5em;
-        @media (min-width: @screen-sm) {
+        @media (min-width: @screen-sm-min) {
             padding-left: 3em;
         }
     }
@@ -720,7 +720,7 @@ div#subpages, .grid-row {
                 .make-sm-column(6);
             }
 
-            @media (min-width: @screen-sm) {
+            @media (min-width: @screen-sm-min) {
                 li {
                     display: inline-block;
                 }
@@ -741,7 +741,7 @@ div#subpages, .grid-row {
             margin: -0.5em -0.2em 0.5em;
             border: 0;
 
-            @media (min-width: @screen-sm) {
+            @media (min-width: @screen-sm-min) {
                 width: 50%;
                 margin: -1em 0 1em 0;
             }
@@ -766,7 +766,7 @@ div#subpages, .grid-row {
                 .make-sm-column(6);
             }
 
-            @media (min-width: @screen-xs) {
+            @media (min-width: @screen-xs-min) {
                 li:nth-child(odd) {
                     clear: both;
                 }
@@ -794,7 +794,7 @@ div#subpages, .grid-row {
                 .make-sm-column(4);
             }
 
-            @media (min-width: @screen-xs) {
+            @media (min-width: @screen-xs-min) {
                 li:nth-child(odd) {
                     clear: none;
                 }
@@ -849,7 +849,7 @@ div#subpages, .grid-row {
         .btn-primary;
     }
     
-    @media (min-width: @screen-sm) {
+    @media (min-width: @screen-sm-min) {
         padding: 3em 3em 3em 2em;
     }
 }
@@ -998,7 +998,7 @@ div#subpages, .grid-row {
     margin: -1em -1.5em;
     margin-bottom: 3em;
 
-    @media (min-width: @screen-sm) {
+    @media (min-width: @screen-sm-min) {
         margin-left: -3em;
         margin-right: -3em;
         padding: 0;
@@ -1014,7 +1014,7 @@ div#subpages, .grid-row {
         color: @body-bg;
         text-shadow: 0px 1px 2px @brand-strong;
 
-        @media (min-width: @screen-md) {
+        @media (min-width: @screen-md-min) {
             overflow-y: hidden;
         }
     }

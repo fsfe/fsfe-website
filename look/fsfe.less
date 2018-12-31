@@ -27,7 +27,7 @@ body {
     height: 85px;
 }
 
-@media (max-width: @screen-sm) {
+@media (max-width: @screen-xs-max) {
 
     #link-home a {
         height: 50px;
@@ -110,7 +110,7 @@ body {
 }
 
 #menu {
-    @media (min-width: @screen-sm) {
+    @media (min-width: @screen-sm-min) {
         margin-left: 200px;
     }
 }
@@ -119,20 +119,20 @@ body {
     background: url(/graphics/ribbon.png) no-repeat 100% -40px @body-bg;
     text-shadow: rgb(255, 255, 255) 0 0 .5em;
 
-    @media (min-width: @screen-sm) {
+    @media (min-width: @screen-sm-min) {
         background: url(/graphics/ribbon.png) no-repeat 100% -70px @body-bg;
     }
 }
 
 .svg #followup {
-    @media (min-width: @screen-sm) {
+    @media (min-width: @screen-sm-min) {
         background: url(/graphics/ribbon.svg) no-repeat 100% -70px @body-bg; 
     }
 }
 
 #followup.join {
     background: url(/graphics/fellowship/ribbon_fellowship2.png) no-repeat 100% -30px @body-bg; 
-    @media (min-width: @screen-sm) {
+    @media (min-width: @screen-sm-min) {
         background: url(/graphics/fellowship/ribbon_fellowship2.png) no-repeat 100% -50% @body-bg; 
     }
 }
@@ -162,14 +162,14 @@ img.signatory-logo {
         background: url('/graphics/ribbon.png') top right no-repeat transparent;
         height: 400px;
 
-        @media (min-width: @screen-xs) {
+        @media (min-width: @screen-xs-min) {
             height: 300px;
         }
 
         .campaign-box {
             height: 400px;
 
-            @media (min-width: @screen-xs) {
+            @media (min-width: @screen-xs-min) {
                 height: 300px;
             }
             width: 100%;
@@ -190,7 +190,7 @@ img.signatory-logo {
             background: url('/graphics/motto.jpg') top center no-repeat #666;
             background-size: cover;
             font-size: 2em;
-            @media (min-width: @screen-xs) {
+            @media (min-width: @screen-xs-min) {
                 font-size: 2.7em;
                 padding-top: 1.8em;
             }
@@ -223,7 +223,7 @@ img.signatory-logo {
                 padding: 0.5em;
             }
 
-            @media (min-width: @screen-sm) {
+            @media (min-width: @screen-sm-min) {
                 .author, .text {
                     margin-left: 45%;
                 }
@@ -236,7 +236,7 @@ img.signatory-logo {
                 right: 0;
             }
 
-            @media (min-width: @screen-md) {
+            @media (min-width: @screen-md-min) {
                 .text {
                     font-size: 1.25em;
                 }
@@ -248,7 +248,7 @@ img.signatory-logo {
             background: url('/graphics/appelbaum.jpg') top right no-repeat #070400;
             background-size: cover;
 
-            @media (min-width: @screen-sm) {
+            @media (min-width: @screen-sm-min) {
                 background-size: contain;
             }
 
@@ -270,13 +270,13 @@ img.signatory-logo {
                 padding: 0.5em;
             }
 
-            @media (min-width: @screen-sm) {
+            @media (min-width: @screen-sm-min) {
                 .author, .text {
                     margin-right: 45%;
                 }
             }
 
-            @media (min-width: @screen-md) {
+            @media (min-width: @screen-md-min) {
                 .author, .text {
                     margin-right: 35%;
                 }
@@ -307,7 +307,7 @@ img.signatory-logo {
                 .quote;
             }
 
-            @media (min-width: @screen-md) {
+            @media (min-width: @screen-md-min) {
                 img {
                     margin-left: 3em;
                 }
@@ -373,7 +373,7 @@ img.signatory-logo {
                 text-align: center;
             }
 
-            @media (min-width: @screen-sm) {
+            @media (min-width: @screen-sm-min) {
                 .text {
                     float: left;
                     width: 30%;
@@ -444,7 +444,7 @@ img.signatory-logo {
         font-size: .9em;
         display: block;
 
-        @media (min-width: @screen-sm) {
+        @media (min-width: @screen-sm-min) {
             display: inline-block;
             padding: 0;
         }
@@ -523,7 +523,7 @@ img.signatory-logo {
             #news .dt-published;
             display: block;
             margin-bottom: 0;
-            @media (min-width: @screen-sm) {
+            @media (min-width: @screen-sm-min) {
                 display: block;
             }
         }
@@ -533,7 +533,7 @@ img.signatory-logo {
     }
 }
 
-@media (min-width: @screen-sm) {
+@media (min-width: @screen-sm-min) {
     #news, #events {
         display: inline-block;
         float: left;
@@ -661,7 +661,7 @@ ul.archivetaglist { margin-left: 6%; }
     margin-left: -6em;
     margin-right: 1.5em;
 
-    @media (min-width: @screen-md) {
+    @media (min-width: @screen-md-min) {
         position: absolute;
         margin-left: -200px;
         margin-top:-10em;
@@ -682,14 +682,14 @@ ul.archivetaglist { margin-left: 6%; }
     #followup {
         background: url(/graphics/ribbonv.png) no-repeat 100% -40px @body-bg; 
 
-        @media (min-width: @screen-sm) {
+        @media (min-width: @screen-sm-min) {
             background: url(/graphics/ribbonv.png) no-repeat 100% -70px @body-bg; 
         }
     }
 }
 
 .svg .valentine-ilovefs #followup {
-    @media (min-width: @screen-sm) {
+    @media (min-width: @screen-sm-min) {
         background: url(/graphics/ribbonv.svg) no-repeat 100% -70px @body-bg; 
     }
 }

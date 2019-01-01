@@ -19,7 +19,7 @@
 # -----------------------------------------------------------------------------
 
 use CGI;
-use Encode qw(encode);
+use Encode qw(decode encode);
 use POSIX qw(strftime);
 use Digest::SHA qw(sha1_hex);
 use MIME::Lite;

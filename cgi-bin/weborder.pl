@@ -173,7 +173,7 @@ $msg = MIME::Lite->new(
 $msg->attach(
   Type => "text/plain",
   Charset => "UTF-8",
-  Data => decode("utf8", $body);
+  Data => decode("utf8", $body));
 
 $msg->attach(
   Type => "application/vnd.oasis.opendocument.text",

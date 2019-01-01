@@ -175,7 +175,7 @@ $address .= $_POST['street'] . "\\n" .
             $_POST['country'];
 $name = escapeshellarg($name);
 $address = escapeshellarg($address);
-shell_exec("$odtfill $template $outfile Name=$name Address=$address");
+shell_exec("$odtfill $template $outfile Name=$name Address=$address Name=$name");
 
 $test = send_mail ("contact@fsfe.org", $_POST['firstname'] . " " . $_POST['lastname'] . " <" . $_POST['mail'] . ">", $subject, $msg, NULL, file_get_contents($outfile), "application/vnd.oasis.opendocument.text", "letter.odt");
 

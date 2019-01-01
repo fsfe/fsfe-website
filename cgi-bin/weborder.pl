@@ -19,6 +19,7 @@
 # -----------------------------------------------------------------------------
 
 use CGI;
+use Encode qw(encode);
 use POSIX qw(strftime);
 use Digest::SHA qw(sha1_hex);
 use MIME::Lite;
@@ -96,8 +97,8 @@ my $net = sprintf "%.2f", $amount_f - $vat;
 # Create payment reference for this order
 # -----------------------------------------------------------------------------
 
-my $date = strftime "%j", localtime;
-my $time = strftime "%s", localtime;
+my $date = strftime("%j", localtime);
+my $time = strftime("%s", localtime);
 my $reference = "MP" . $date . (substr $time, -4) . (sprintf "%03u", $amount);
 
 # -----------------------------------------------------------------------------
@@ -136,7 +137,7 @@ push @odtfill, "/tmp/invoice.odt";
 # placeholder replacements
 push @odtfill, "repeat=" . $count;
 push @odtfill, "Name=" . $name;
-push @odtfill, "Address=" . $address =~ s/\n/\\n/r;
+push @odtfill, "Address=" . $address =~ s/\r\n/\\n/r;
 foreach $item ($query->param) {
   $value = $query->param($item);
   if (not $item =~ /^_/ and $value) {
@@ -159,7 +160,7 @@ system @odtfill;
 # -----------------------------------------------------------------------------
 
 $msg = MIME::Lite->new(
-  "From:" => "$name <$email>",
+  "From:" => encode("MIME-Header", "$name") . " <$email>",
   "To:" => "contact\@fsfe.org",
   "Subject:" => "$reference",
   "X-OTRS-Queue:" => "Finance::Merchandise Orders",
@@ -174,7 +175,7 @@ $msg->attach(
   Type => "application/vnd.oasis.opendocument.text",
   Path => "/tmp/invoice.odt");
 
-$msg->send();
+$msg->send("sendmail", FromSender => $email);
 
 # -----------------------------------------------------------------------------
 # Generate form for ConCardis payment

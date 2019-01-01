@@ -23,6 +23,7 @@ use Encode qw(decode encode);
 use POSIX qw(strftime);
 use Digest::SHA qw(sha1_hex);
 use MIME::Lite;
+use utf8;
 
 # -----------------------------------------------------------------------------
 # Get parameters
@@ -36,10 +37,10 @@ if ($query->param("url")) {
   exit;
 }
 
-my $name = $query->param("name");
-my $address = $query->param("address");
-my $email = $query->param("email");
-my $phone = $query->param("phone");
+my $name = decode("utf-8", $query->param("name"));
+my $address = decode("utf-8", $query->param("address"));
+my $email = decode("utf-8", $query->param("email"));
+my $phone = decode("utf-8", $query->param("phone"));
 my $language = $query->param("language");
 
 # Remove all parameters except for items and prices.
@@ -160,7 +161,7 @@ system @odtfill;
 # -----------------------------------------------------------------------------
 
 $msg = MIME::Lite->new(
-  "From:" => encode("MIME-Header", decode("utf8", $name)) . " <$email>",
+  "From:" => encode("MIME-Q", $name) . " <$email>",
   "To:" => "contact\@fsfe.org",
   "Subject:" => "$reference",
   "X-OTRS-Queue:" => "Finance::Merchandise Orders",
@@ -173,7 +174,7 @@ $msg = MIME::Lite->new(
 $msg->attach(
   Type => "text/plain; charset=utf-8",
   Encoding => "8bit",
-  Data => $body);
+  Data => encode("utf-8", $body));
 
 $msg->attach(
   Type => "application/vnd.oasis.opendocument.text",

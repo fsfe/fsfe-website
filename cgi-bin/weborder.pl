@@ -137,7 +137,7 @@ push @odtfill, "/tmp/invoice.odt";
 # placeholder replacements
 push @odtfill, "repeat=" . $count;
 push @odtfill, "Name=" . $name;
-push @odtfill, "Address=" . ($address =~ s/\n/\\n/r);
+push @odtfill, "Address=" . $address =~ s/\n/\\n/gr;
 foreach $item ($query->param) {
   $value = $query->param($item);
   if (not $item =~ /^_/ and $value) {
@@ -171,9 +171,9 @@ $msg = MIME::Lite->new(
   Type => "multipart/mixed");
 
 $msg->attach(
-  Type => "text/plain",
-  Charset => "UTF-8",
-  Data => decode("utf8", $body));
+  Type => "text/plain; charset=utf-8",
+  Encoding => "8bit",
+  Data => $body);
 
 $msg->attach(
   Type => "application/vnd.oasis.opendocument.text",

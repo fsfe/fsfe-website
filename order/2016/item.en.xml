@@ -3,7 +3,7 @@
 <!-- Do not translate this file! -->
 
 <itemset>
-  <item type="girlie" id="girlie-ilovefs-darkblue" price="20.00" date="2016-01-21">
+  <item type="girlie" id="girlie-ilovefs-darkblue" oldprice="20.00" price="10.00" date="2016-01-21">
     <available size="S"  a="43" b="60"/>
     <available size="M"/>
     <available size="XL" a="50" b="66"/>
@@ -43,7 +43,7 @@
 
   <item type="tshirt" id="tshirt-nocloud-green" price="20.00" date="2016-03-07">
     <available size="S"   a="44.5" b="66"/>
-    <available size="L"   a="49"   b="72"/>
+    <!-- available size="L"   a="49"   b="72"/ -->
     <available size="XL"  a="51"   b="75"/>
     <image
       small="2016/tshirt-nocloud-green-front-small.jpg"
@@ -70,8 +70,8 @@
   <item type="girlie" id="girlie-nocloud-black" price="20.00" date="2016-07-11">
     <available size="S"  a="38" b="59"/>
     <available size="M"  a="43" b="64"/>
-    <available size="L"  a="46" b="66"/>
-    <available size="XL" a="48" b="69"/>
+    <!-- available size="L"  a="46" b="66"/>
+    <available size="XL" a="48" b="69"/ -->
     <image
       small="2016/girlie-nocloud-black-front-small.jpg"
       large="2016/girlie-nocloud-black-front-large.jpg"/>

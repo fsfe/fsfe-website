@@ -186,7 +186,16 @@
     </xsl:variable>
         
     <!-- Twitter cards -->
-    <meta name="twitter:card" content="summary" />
+    <xsl:element name="meta">
+      <xsl:attribute name="name">twitter:card</xsl:attribute>
+      <xsl:attribute name="content">
+        <xsl:choose>
+          <!-- if there is a meta "image", use a large summary card -->
+          <xsl:when test="$metaimage != ''">summary_large_image</xsl:when>
+          <xsl:otherwise>summary</xsl:otherwise>
+        </xsl:choose>
+      </xsl:attribute>
+    </xsl:element>    
     <meta name="twitter:site" content="@fsfe" />
     <xsl:element name="meta">
       <xsl:attribute name="name">twitter:image</xsl:attribute>
@@ -195,7 +204,7 @@
           <!-- if there is a meta "image", take that -->
           <xsl:when test="$metaimage != ''"><xsl:value-of select="$metaimage" /></xsl:when>
           <xsl:otherwise>
-            https:<xsl:value-of select="$linkresources"/>/graphics/logo-text_square.png
+            https://fsfe.org/graphics/logo-text_square.png
           </xsl:otherwise>
         </xsl:choose>
       </xsl:attribute>
@@ -235,7 +244,7 @@
           <!-- if there is a meta "image", take that -->
           <xsl:when test="$metaimage != ''"><xsl:value-of select="$metaimage" /></xsl:when>
           <xsl:otherwise>
-            https:<xsl:value-of select="$linkresources"/>/graphics/logo-text_square.png
+            https://fsfe.org/graphics/logo-text_square.png
           </xsl:otherwise>
         </xsl:choose>
       </xsl:attribute>

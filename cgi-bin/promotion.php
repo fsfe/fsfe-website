@@ -151,17 +151,16 @@ if ($_POST['packagetype'] == 'default') {
   $msg .= "Custom package:\n".
           "{$_POST['specifics']}\n";
 }
+$languages = implode(',',$_POST['languages']);
 $msg .= "\n".
        "Preferred language(s) (if available):\n".
-       "{$_POST['languages']}\n".
+       "{$languages}\n".
        "\n".
        "The material is going to be used for:\n".
        "{$_POST['usage']}\n".
        "\n".
        "Comments:\n".
-       "{$_POST['comment']}\n".
-       "\n".
-       "Preferred language was: {$_POST['language']}\n";
+       "{$_POST['comment']}\n";
 
 if (isset($_POST['donate']) && ($_POST['donate'] > 0)) {
   $_POST['donationID'] = "DAFSPCK".gen_alnum(5);

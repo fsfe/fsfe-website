@@ -117,7 +117,7 @@ if (empty($_POST['lastname'])  ||
     empty($_POST['zip'])       ||
     empty($_POST['city'])      ||
     empty($_POST['country'])   ||
-    empty($_POST['specifics']) ||
+    empty($_POST['packagetype']) ||
    !empty($_POST['address']) ) {
 
   header("Location: http://fsfe.org/contribute/spreadtheword-ordererror.$lang.html");
@@ -143,8 +143,17 @@ $msg .= "{$_POST['street']}\n".
        "{$_POST['zip']} "."{$_POST['city']}\n".
        "{$_POST['country']}\n".
        "\n".
-       "Specifics of the Order:\n".
-       "{$_POST['specifics']}\n".
+       "Specifics of the Order:\n";
+# Default or custom package?
+if ($_POST['packagetype'] == 'default') {
+  $msg .= "Default package: Something from everything listed here, depending on size, language selection and availability.\n";
+} else {
+  $msg .= "Custom package:\n".
+          "{$_POST['specifics']}\n";
+}
+$msg .= "\n".
+       "Preferred language(s) (if available):\n".
+       "{$_POST['languages']}\n".
        "\n".
        "The material is going to be used for:\n".
        "{$_POST['usage']}\n".

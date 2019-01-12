@@ -72,6 +72,8 @@ function send_mail ( $to, $from, $subject, $msg, $bcc = NULL, $att = NULL, $att_
   }
   $headers .= "X-OTRS-DynamicField-OrderLanguage: " . $_POST["language"] . "\n";
   $headers .= "X-OTRS-DynamicField-OrderState: order\n";
+  $headers .= "X-OTRS-DynamicField-PromoMaterialCountry: " . $_POST["country"] . "\n";
+  $headers .= "X-OTRS-DynamicField-PromoMaterialLanguages: " . implode(',', $_POST['languages']) . "\n";
 
   if ( $att ) {
     $separator = md5( time());
@@ -127,7 +129,11 @@ if (empty($_POST['lastname'])  ||
 # Without this, escapeshellarg() will eat non-ASCII characters.
 setlocale(LC_CTYPE, "en_US.UTF-8");
 
-$subject = "Promotion material order";
+if ($_POST['packagetype'] == 'default') {
+  $subject = "Standard promotion material order";
+} else {
+  $subject = "Custom promotion material order";
+}
 $msg = "Please send me promotional material:\n".
        "First Name: {$_POST['firstname']}\n".
        "Last Name:  {$_POST['lastname']}\n".

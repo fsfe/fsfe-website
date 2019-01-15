@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+    <elementset>
+      <element id="video">
+      <h2>Steun de FSFE</h2>
+
+      <video
+          crossorigin="crossorigin"
+          poster="https://download.fsfe.org/videos/supporter/posters/cryptie.jpg"
+          controls="controls"
+          width="100%">
+        <source
+            media="screen and (max-device-width:999px)"
+            type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;"
+            src="https://download.fsfe.org/videos/supporter/cryptie_mobile.mp4"/>
+        <source
+            media="screen and (max-device-width:999px)"
+            type="video/webm; codecs=&quot;vp9, opus&quot;"
+            src="https://download.fsfe.org/videos/supporter/cryptie_mobile.webm"/>
+        <track default="default" label="English" srclang="en" kind="subtitles" src="https://download.fsfe.org/videos/supporter/subtitles/cryptie.vtt"/>
+      </video>
+      <p class="supporter-text">
+        Word supporter zodat u ons in staat stelt om ons werk te doen en onze financiële zelfstandigheid zekerstelt.
+      </p>
+        <a class="big-donate" href="https://my.fsfe.org/support">Word supporter</a>
+      </element>
+    </elementset>

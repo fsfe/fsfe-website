@@ -72,6 +72,8 @@ function send_mail ( $to, $from, $subject, $msg, $bcc = NULL, $att = NULL, $att_
   }
   $headers .= "X-OTRS-DynamicField-OrderLanguage: " . $_POST["language"] . "\n";
   $headers .= "X-OTRS-DynamicField-OrderState: order\n";
+  $headers .= "X-OTRS-DynamicField-PromoMaterialCountry: " . $_POST["country"] . "\n";
+  $headers .= "X-OTRS-DynamicField-PromoMaterialLanguages: " . implode(',', $_POST['languages']) . "\n";
 
   if ( $att ) {
     $separator = md5( time());
@@ -117,7 +119,7 @@ if (empty($_POST['lastname'])  ||
     empty($_POST['zip'])       ||
     empty($_POST['city'])      ||
     empty($_POST['country'])   ||
-    empty($_POST['specifics']) ||
+    empty($_POST['packagetype']) ||
    !empty($_POST['address']) ) {
 
   header("Location: http://fsfe.org/contribute/spreadtheword-ordererror.$lang.html");
@@ -127,7 +129,11 @@ if (empty($_POST['lastname'])  ||
 # Without this, escapeshellarg() will eat non-ASCII characters.
 setlocale(LC_CTYPE, "en_US.UTF-8");
 
-$subject = "Promotion material order";
+if ($_POST['packagetype'] == 'default') {
+  $subject = "Standard promotion material order";
+} else {
+  $subject = "Custom promotion material order";
+}
 $msg = "Please send me promotional material:\n".
        "First Name: {$_POST['firstname']}\n".
        "Last Name:  {$_POST['lastname']}\n".
@@ -143,16 +149,24 @@ $msg .= "{$_POST['street']}\n".
        "{$_POST['zip']} "."{$_POST['city']}\n".
        "{$_POST['country']}\n".
        "\n".
-       "Specifics of the Order:\n".
-       "{$_POST['specifics']}\n".
+       "Specifics of the Order:\n";
+# Default or custom package?
+if ($_POST['packagetype'] == 'default') {
+  $msg .= "Default package: Something from everything listed here, depending on size, language selection and availability.\n";
+} else {
+  $msg .= "Custom package:\n".
+          "{$_POST['specifics']}\n";
+}
+$languages = implode(',',$_POST['languages']);
+$msg .= "\n".
+       "Preferred language(s) (if available):\n".
+       "{$languages}\n".
        "\n".
        "The material is going to be used for:\n".
        "{$_POST['usage']}\n".
        "\n".
        "Comments:\n".
-       "{$_POST['comment']}\n".
-       "\n".
-       "Preferred language was: {$_POST['language']}\n";
+       "{$_POST['comment']}\n";
 
 if (isset($_POST['donate']) && ($_POST['donate'] > 0)) {
   $_POST['donationID'] = "DAFSPCK".gen_alnum(5);
@@ -175,7 +189,7 @@ $address .= $_POST['street'] . "\\n" .
             $_POST['country'];
 $name = escapeshellarg($name);
 $address = escapeshellarg($address);
-shell_exec("$odtfill $template $outfile Name=$name Address=$address");
+shell_exec("$odtfill $template $outfile Name=$name Address=$address Name=$name");
 
 $test = send_mail ("contact@fsfe.org", $_POST['firstname'] . " " . $_POST['lastname'] . " <" . $_POST['mail'] . ">", $subject, $msg, NULL, file_get_contents($outfile), "application/vnd.oasis.opendocument.text", "letter.odt");
 

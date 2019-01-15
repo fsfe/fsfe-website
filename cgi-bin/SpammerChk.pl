@@ -58,7 +58,7 @@ sub querySpammer {
    my $ua  = LWP::UserAgent->new;
 
    $ua->agent("SpammerChk/1.0.0");
-   $ua->from('webmaster@fsfeurope.org');
+   $ua->from('webmaster@fsfe.org');
    $ua->max_size(8192);
 
    $response = $ua->get($reqURL);

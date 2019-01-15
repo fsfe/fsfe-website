@@ -10,7 +10,7 @@ RewriteRule ^graphics/fsfeurope.ico /graphics/fsfe.ico [redirect=permanent]
 RewriteRule ^translate /contribute/translators/ [redirect=permanent]
 
 # Old supporter database
-RewriteRule ^support/?$ /join [redirect=permanent]
+RewriteRule ^support(/.*)? /join [redirect=permanent]
 
 # AskYourCandidates redirect
 RewriteRule ^campaigns/ayc(.*) /campaigns/askyourcandidates$1 [redirect=permanent]
@@ -58,6 +58,7 @@ RewriteRule ^swpat(.*) /projects/swpat$1 [redirect=permanent]
 RewriteRule ^donate.html /donate/donate.en.html [redirect=permanent]
 RewriteRule ^associates/about(.*) /associates/associates$1 [redirect=permanent]
 RewriteRule ^contribute/traineeship(.*) /contribute/internship$1 [redirect=permanent]
+RewriteRule ^contribute/donate(.*) /donate$1 [redirect=permanent]
 RewriteRule ^contact/local(.*) /about/localteams$1 [redirect=permanent]
 
 # New year's resolution in 2009.
@@ -65,8 +66,7 @@ RewriteRule ^2009$ /news/2009/nyr.html [redirect=permanent]
 RewriteRule ^2009/$ /news/2009/nyr.html [redirect=permanent]
 
 # Help section redirs.
-RewriteRule ^help$ /contribute/ [redirect=permanent]
-RewriteRule ^help/$ /contribute/ [redirect=permanent]
+RewriteRule ^help/?$ /contribute/ [redirect=permanent]
 RewriteRule ^help/index(.*) /contribute/contribute$1 [redirect=permanent]
 RewriteRule ^help/help(.*) /contribute/contribute$1 [redirect=permanent]
 RewriteRule ^help/web\.(.*) /contribute/web/web.$1 [redirect=permanent]

@@ -4,24 +4,43 @@
   <head>
     <title>Evenementen</title>
   </head>
-  <body>
-    <h1>Evenementen</h1>
+  <body class="article" microformat="h-entry">
+    <h1 class="p-name">Evenementen</h1>
 
-    <p>
-      Free Software Foundation Europe neemt deel aan vele Vrije
-      Software-evenementen. Als u iets weet over een aan de FSFE verwant evenement dat nog niet op deze lijst staat of als u uw eigen evenement wil organiseren dan kan u het eenvoudig toevoegen door ons <a href="/community/tools/eventregistration.html">evenement   aankondigingsgereedschap</a> te gebruiken.
-    </p>
-
-    <p>Op FSFE's evenementen zijn onze <a href="https://fsfe.org/about/codeofconduct">gedragsregels</a> van toepassing, waarin vriendelijk aan alle deelnemers wordt gevraagd om excellent met elkaar om te gaan. FSFE evenementaankondigingen zijn ook beschikbaar in
-      <a href="events.rss" class="feed">RSS-</a> en
-      <a href="webcal://fsfe.org/events/events.en.ics">iCalendar</a>-formaat.
-    </p>
 
     <include-events/>
   </body>
 
-  <text id="current">Huidige evenementen</text>
-  <text id="future">Komende evenementen</text>
+    <sidebar promo="none">
+                <h2>Volg onze evenementen</h2>
+                        <p>Free Software Foundation Europe neemt deel aan vele Vrije Software-evenementen. Officiële evenementen ziet u op deze pagina. Mis geen enkel evenement door ze te volgen via <a href="/events/events.en.rss">RSS</a> of als <a href="webcal://fsfe.org/events/events.en.ics">iCalendar-feed</a>.</p>
+
+                        <div class="share-buttons-sidebar">
+                          <a target="_blank" href="events.rss">
+                                <button class="share-button-sidebar share-rss">RSS-feed</button>
+                          </a>
+                          <a target="_blank" href="        ">
+                                <button class="share-button-sidebar share-cal">iCalendar-feed</button>
+                          </a>
+                        </div>
+
+                
+                <h2>Voeg een evenement toe</h2>
+                        <p>Als u een FSFE-gerelateerd evenement kent dat hier nog net stat vermeld of dat u zelf organiseert dan kunt u het eenvoudig toevoegen door gebruik te maken van ons <a href="/community/tools/eventregistration.html">evenement aankondigingsgereedschap</a>.
+
+                                <div style="margin: 0 0 2em 0;">
+                                          <a class="big-donate" href="/community/tools/eventregistration.html">Voeg evenement toe</a>
+                                </div>
+                        </p>
+                <h2>Gedragscode</h2>
+                        <p>Alle evenementen van de FSFE vallen onder onze <a href="https://fsfe.org/about/codeofconduct.html">gedragscode</a> die van alle deelnemers vriendelijk vraagt om excellent naar elkaar te zijn</p>
+                <h2>Zelf gecreerde evenementen</h2>
+                        <p>Sommige inofficiële en zelf-georganiseerde gemeenschapsevenementen worden alleen aangekondigd op onze <a href="http://wiki.fsfe.org/Events">wiki-kalender</a>. Als u interesse heeft, mis ze dan niet.
+                        </p>
+        </sidebar>
+
+  <text id="current">Lopende evenementen</text>
+  <text id="future">toekomstige evenementen</text>
   <text id="past">Afgelopen evenementen</text>
   <text id="more">Lees meer...</text>
   <text id="page">Externe evenementenpagina...</text>
@@ -32,4 +51,3 @@ Local Variables: ***
 mode: xml ***
 End: ***
 -->
-

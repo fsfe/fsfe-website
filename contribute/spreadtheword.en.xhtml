@@ -48,6 +48,66 @@
           margin: 2em 0 3em 0;
           width: 70%;
         }
+        
+        form#orderpromo div {
+          margin-bottom: 0.7em;
+        }
+        
+        form#orderpromo label {
+          font-weight: normal;
+        }
+        
+        form#orderpromo div > label,
+        form#orderpromo div > input,
+        form#orderpromo div > textarea {
+          margin-left: 20px;
+        }
+        
+        div.langselector ul {
+          list-style: none;
+        }
+        
+        form#orderpromo input[type="checkbox"],
+        form#orderpromo input[type="radio"] {
+          margin-right: 0.3em;
+        }
+        
+        div.langselector li {
+          display: inline-block;
+          width: 9em;
+        }
+        
+        form#orderpromo .reveal {
+          opacity: 0;
+          max-height: 0;
+          overflow: hidden;
+          transform: scale(1);
+          transition: 0.5s;
+        }
+        
+        form#orderpromo input[type="radio"]:checked ~ .reveal {
+          opacity: 1;
+          max-height: 300px; /* little bit of a magic number :( */
+          overflow: visible;
+        }
+        
+        form#orderpromo fieldset {
+          border: 1px groove #aaa !important;
+          padding: 1em 1.4em 1.4em 1.4em !important;
+          margin: 0 0 1.5em 0 !important;
+          -webkit-box-shadow:  0px 0px 0px 0px #000;
+                  box-shadow:  0px 0px 0px 0px #000;
+        }
+
+        form#orderpromo fieldset legend {
+          font-size: 1.2em !important;
+          font-weight: bold !important;
+          text-align: left !important;
+          width:auto;
+          padding:0 10px;
+          border-bottom:none;
+          margin-bottom: 0;
+        }
 		    
 		  </style>
     
@@ -96,46 +156,105 @@
 			
       
 			<form class="highlight labeledform" id="orderpromo" method="post" action="/cgi-bin/promotion.php" accept-charset="utf-8">
-                <!-- Translators: please set the value for the language to your language code -->
-                <input type="hidden" name="language" value="en" />
-                <h3>Please send promotional material to:</h3>
-                <span class="formlabel">First name, Last name:</span>
-                  <input type="text" name="firstname" placeholder="First Name" size="20" />
-                  <input type="text"  name="lastname" placeholder="Last Name" size="20" required="required" /><br/>
-                <span class="formlabel">Email:</span>
-                  <input type="email" name="mail" placeholder="Email" size="40" required="required" /><br/>
-                <span class="formlabel">Company/Organisation (if any):</span>
-                  <input type="text" name="org" placeholder="Organisation" size="40" /><br/>
-
-		<span class="formlabel">Street, No.:</span>
-                  <input type="text" name="street" size="40" required="required" /><br/>
-		<span class="formlabel">Zip, City:</span>
-                  <input type="text" name="zip" size="10" required="required" />
-                  <input type="text" name="city" size="26" required="required" /><br />
-		<span class="formlabel">Country:</span>
-                  <input type="text" name="country" size="40" required="required" /><br/>
-
-			
-
-                <!-- span class="formlabel">Address:</span>
-                  <textarea name="address" rows="4" cols="40"></textarea><br/ -->
-
-                <span class="formlabel">I would like the promotion package to focus on:</span>
-                  <textarea name="specifics" rows="6" cols="40" required="required">
-No focus; just send me the default package. That means we will try to ensure that you receive something from everything listed here. If you have any preferences, please delete this text and state them here.
-                  </textarea><br/>
-                <span class="formlabel">I would like to use the material for (short description):</span>
-                  <textarea name="usage" rows="4" cols="40"></textarea><br/>
-                <span class="formlabel">Any comment:</span>
-                  <textarea name="comment" rows="4" cols="40"></textarea><br/>
-                  <input type="text" name="address" placeholder="Which address shall be used?" size="20" class="special" />
-		  <span class="formlabel">Support our work with a donation of 10€ or more: </span>
-                  <input type="number" name="donate" value="0" min="0" step="5"/>€ 
-                  <!-- Translators: please translate the label of this button (the value field) -->
-                  <input type="submit" name="dothis" value="Order now!"/>
-                </form>
+        <!-- Translators: please set the value for the language to your language code -->
+        <input type="hidden" name="language" value="en" />
+        <h3>Order promotional material</h3>
+        <p>Fields marked with * are mandatory.</p>
+        <fieldset>
+          <legend>Your address</legend>
+          <div>
+            <span class="formlabel">First name, Last name*:</span>
+            <input type="text" name="firstname" placeholder="First Name" size="15" />
+            <input type="text"  name="lastname" placeholder="Last Name" size="15" required="required" />
+          </div>
+          <div>
+            <span class="formlabel">Email*:</span>
+            <input type="email" name="mail" placeholder="Email" size="20" required="required" />
+          </div>
+          <div>
+            <span class="formlabel">Company/Organisation (if any):</span>
+            <input type="text" name="org" placeholder="Organisation" size="20" />
+          </div>
+          <div>
+            <span class="formlabel">Street, No.*:</span>
+            <input type="text" name="street" size="20" required="required" />
+          </div>
+          <div>
+            <span class="formlabel">Zip*, City*:</span>
+            <input type="text" name="zip" size="5" required="required" />
+            <input type="text" name="city" size="15" required="required" />
+          </div>
+          <div>
+            <span class="formlabel">Country*:</span>
+            <input type="text" name="country" size="20" required="required" />
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Compose your package</legend>
+          <div>
+            <span class="formlabel">Package selection*:</span>
+            <label for="default"><input type="radio" name="packagetype" id="default" value="default" required="required" />Default: Something from everything listed here, depending on size, language selection and availability. Select <em>Custom</em> if you would like to set preferences.</label>
+            <div>
+              <label for="custom"><input type="radio" name="packagetype" id="custom" value="custom" required="required" />Custom: You can set preferences, e.g. specific campaigns or the type of promotion materials. Unfortunately we cannot guarantee to fulfill all wishes.
+              <div class="reveal">
+                <textarea name="specifics" rows="6" cols="40" placeholder="For example: Only leaflets explaining Free Software, no posters..." />
+              </div>
+              </label>
+            </div>
+          </div>
+          <div>
+            <span class="formlabel">I would like to use the material for (short description)*:</span>
+            <textarea name="usage" rows="4" cols="40" placeholder="For example: Spreading information about Free Software in my surrounding, on event XYZ..." required="required" />
+          </div>
+          <div class="langselector">
+            <span class="formlabel">My language preferences (we cannot guarantee availability):</span>
+            <ul>
+              <!-- Translators: No need to translate here, we use the native names -->
+              <!-- If you want to extend, please iterate the number behind "lang" accordingly -->
+              <li><label for="lang1"><input type="checkbox" name="languages[]" id="lang1" value="en" checked="checked" />English</label></li>
+              <li><label for="lang2"><input type="checkbox" name="languages[]" id="lang2" value="cn" />中文</label></li>
+              <li><label for="lang3"><input type="checkbox" name="languages[]" id="lang3" value="de" />Deutsch</label></li>
+              <li><label for="lang4"><input type="checkbox" name="languages[]" id="lang4" value="el" />Eλληνικά</label></li>
+              <li><label for="lang5"><input type="checkbox" name="languages[]" id="lang5" value="es" />Español</label></li>
+              <li><label for="lang6"><input type="checkbox" name="languages[]" id="lang6" value="fr" />Français</label></li>
+              <li><label for="lang7"><input type="checkbox" name="languages[]" id="lang7" value="it" />Italiano</label></li>
+              <li><label for="lang8"><input type="checkbox" name="languages[]" id="lang8" value="lt" />Latviešu</label></li>
+              <li><label for="lang9"><input type="checkbox" name="languages[]" id="lang9" value="nl" />Nederlands</label></li>
+              <li><label for="lang10"><input type="checkbox" name="languages[]" id="lang10" value="pl" />Polski</label></li>
+              <li><label for="lang11"><input type="checkbox" name="languages[]" id="lang11" value="ru" />Русский</label></li>
+              <li><label for="lang12"><input type="checkbox" name="languages[]" id="lang12" value="sq" />Shqip</label></li>
+              <li><label for="lang13"><input type="checkbox" name="languages[]" id="lang13" value="sr" /> Српски / srpski</label></li>
+              <li><label for="lang14"><input type="checkbox" name="languages[]" id="lang14" value="fi" />Suomi</label></li>
+              <li><label for="lang15"><input type="checkbox" name="languages[]" id="lang15" value="tr" />Türkçe</label></li>
+            </ul>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Last steps</legend>
+          <div>
+            <span class="formlabel">Additional comment:</span>
+            <textarea name="comment" rows="2" cols="40" />
+          </div>
+          <div>
+            <input type="text" name="address" placeholder="Which address shall be used?" size="20" class="special" />
+          </div>
+          <!-- hide newsletter field for once as it requires some extra backend work 
+          <div>
+            <span class="formlabel">Receive the latest Free Software news:</span>
+            <label for="wantinfo"><input name="wantinfo" id="wantinfo" type="checkbox" />I want to receive occasional information about FSFE's activities (less than one email a week on average)</label> 
+          </div> -->
+          <div>
+            <span class="formlabel">Support our work with a voluntary donation*:</span>
+            <input type="number" name="donate" value="" min="0" step="5" placeholder="0 or ≥ 10 €" required="required" />€ 
+          </div>
+        </fieldset>
+        <div>
+          <!-- Translators: please translate the label of this button (the value field) -->
+          <input type="submit" name="dothis" value="Order now!"/>
+        </div>
+      </form>
                 
-		
+
 		<h1 id="available-promotion-material" style="margin-top:3em;">Available promotion material</h1>
 
 <!-- START ITEMIZE TESTING -->

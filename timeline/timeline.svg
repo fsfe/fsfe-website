@@ -60,13 +60,13 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7071068"
-     inkscape:cx="579.17899"
-     inkscape:cy="1331.6584"
+     inkscape:cx="605.16206"
+     inkscape:cy="87.150498"
      inkscape:document-units="px"
-     inkscape:current-layer="layer4"
+     inkscape:current-layer="layer5"
      showgrid="false"
-     inkscape:window-width="1192"
-     inkscape:window-height="1025"
+     inkscape:window-width="1557"
+     inkscape:window-height="1023"
      inkscape:window-x="67"
      inkscape:window-y="27"
      inkscape:window-maximized="0"
@@ -139,7 +139,7 @@
        width="215"
        height="1863.215"
        x="279.82123"
-       y="-277.62427" />
+       y="-276.21005" />
     <rect
        style="fill:#e9ffe7;fill-opacity:1;stroke:none;stroke-width:1.02744615"
        id="rect9493-7"
@@ -5162,7 +5162,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="http://mail.fsfeurope.org/pipermail/press-release/2005q1/000094.html"
-       transform="translate(30.251532,708.27874)">
+       transform="translate(30.251532,708.27874)"
+       onmouseover="document.getElementById(&quot;10205&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;10205&quot;).style.display = &quot;none&quot;">
       <g
          transform="translate(22.047056,37.555714)"
          onmouseout="document.getElementById(&quot;10205&quot;).style.display = &quot;none&quot;"
@@ -5227,7 +5229,9 @@
        xlink:title=""
        target="_blank"
        xlink:href="http://mail.fsfeurope.org/pipermail/press-release/2001q2/000003.html"
-       transform="translate(31.590607,1438.8194)">
+       transform="translate(31.590607,1438.8194)"
+       onmouseover="document.getElementById(&quot;10401&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;10401&quot;).style.display = &quot;none&quot;">
       <text
          id="text4835"
          y="70.694748"
@@ -5261,7 +5265,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="https://fsfe.org/news/2010/news-20100428-01.html"
-       transform="translate(30.564038,-448.79442)">
+       transform="translate(30.564038,-448.79442)"
+       onmouseover="document.getElementById(&quot;10410&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;10410&quot;).style.display = &quot;none&quot;">
       <g
          transform="translate(27.597282,57.044346)"
          onmouseout="document.getElementById(&quot;10410&quot;).style.display = &quot;none&quot;"
@@ -5311,7 +5317,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="https://fsfe.org/news/2008/news-20081210-01.html"
-       transform="translate(29.212465,-22.75342)">
+       transform="translate(29.212465,-22.75342)"
+       onmouseover="document.getElementById(&quot;11208&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;11208&quot;).style.display = &quot;none&quot;">
       <g
          transform="translate(43.030062,49.242195)"
          onmouseout="document.getElementById(&quot;11208&quot;).style.display = &quot;none&quot;"
@@ -5356,7 +5364,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="https://fsfe.org/activities/os/def.html"
-       transform="translate(30.251543,1181.0558)">
+       transform="translate(30.251543,1181.0558)"
+       onmouseover="document.getElementById(&quot;20504&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;20504&quot;).style.display = &quot;none&quot;">
       <g
          onmouseout="document.getElementById(&quot;20504&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;20504&quot;).style.display = &quot;inline&quot;"
@@ -5401,7 +5411,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="https://fsfe.org/activities/os/eifv2.html"
-       transform="translate(30.251543,849.21932)">
+       transform="translate(30.251543,849.21932)"
+       onmouseover="document.getElementById(&quot;21104&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;21104&quot;).style.display = &quot;none&quot;">
       <g
          onmouseout="document.getElementById(&quot;21104&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;21104&quot;).style.display = &quot;inline&quot;"
@@ -5455,7 +5467,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="http://mail.fsfeurope.org/pipermail/press-release/2005q3/000109.html"
-       transform="translate(30.251532,562.60138)">
+       transform="translate(30.251532,562.60138)"
+       onmouseover="document.getElementById(&quot;20605&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;20605&quot;).style.display = &quot;none&quot;">
       <g
          transform="translate(-27.896543,60.760275)"
          onmouseout="document.getElementById(&quot;20605&quot;).style.display = &quot;none&quot;"
@@ -5505,7 +5519,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="https://fsfe.org/news/2009/news-20090908-01.html"
-       transform="translate(30.251543,-263.74562)">
+       transform="translate(30.251543,-263.74562)"
+       onmouseover="document.getElementById(&quot;20909&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;20909&quot;).style.display = &quot;none&quot;">
       <g
          onmouseout="document.getElementById(&quot;20909&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;20909&quot;).style.display = &quot;inline&quot;"
@@ -5553,7 +5569,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="https://fsfe.org/news/2012/news-20121120-01.html"
-       transform="translate(30.251552,-865.84502)">
+       transform="translate(30.251552,-865.84502)"
+       onmouseover="document.getElementById(&quot;21112&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;21112&quot;).style.display = &quot;none&quot;">
       <g
          onmouseout="document.getElementById(&quot;21112&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;21112&quot;).style.display = &quot;inline&quot;"
@@ -5603,7 +5621,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="https://fsfe.org/news/2012/news-20121101-02.html"
-       transform="translate(30.251543,-662.55802)">
+       transform="translate(30.251543,-662.55802)"
+       onmouseover="document.getElementById(&quot;20512&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;20512&quot;).style.display = &quot;none&quot;">
       <g
          onmouseout="document.getElementById(&quot;20512&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;20512&quot;).style.display = &quot;inline&quot;"
@@ -5668,7 +5688,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="http://mail.fsfeurope.org/pipermail/press-release/2006q4/000159.html"
-       transform="translate(30.251444,455.67308)">
+       transform="translate(30.251444,455.67308)"
+       onmouseover="document.getElementById(&quot;31106&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;31106&quot;).style.display = &quot;none&quot;">
       <text
          onmouseout="document.getElementById(&quot;31106&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;31106&quot;).style.display = &quot;inline&quot;"
@@ -5698,7 +5720,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="https://fsfe.org/news/2011/news-20111201-02.html"
-       transform="translate(29.155436,-426.90122)">
+       transform="translate(29.155436,-426.90122)"
+       onmouseover="document.getElementById(&quot;31211&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;31211&quot;).style.display = &quot;none&quot;">
       <text
          onmouseout="document.getElementById(&quot;31211&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;31211&quot;).style.display = &quot;inline&quot;"
@@ -5733,7 +5757,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="http://mail.fsfeurope.org/pipermail/press-release/2004q2/000057.html"
-       transform="translate(30.25134,805.83266)">
+       transform="translate(30.25134,805.83266)"
+       onmouseover="document.getElementById(&quot;40504&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;40504&quot;).style.display = &quot;none&quot;">
       <text
          onmouseout="document.getElementById(&quot;40504&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;40504&quot;).style.display = &quot;inline&quot;"
@@ -5763,7 +5789,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="https://fsfe.org/news/2008/news-20080220-01.html"
-       transform="translate(30.423215,15.776481)">
+       transform="translate(30.423215,15.776481)"
+       onmouseover="document.getElementById(&quot;40308&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;40308&quot;).style.display = &quot;none&quot;">
       <text
          onmouseout="document.getElementById(&quot;40308&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;40308&quot;).style.display = &quot;inline&quot;"
@@ -5793,7 +5821,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="https://fsfe.org/news/2009/news-20090202-01.html"
-       transform="translate(30.25134,-201.71572)">
+       transform="translate(30.25134,-201.71572)"
+       onmouseover="document.getElementById(&quot;40209&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;40209&quot;).style.display = &quot;none&quot;">
       <text
          onmouseout="document.getElementById(&quot;40209&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;40209&quot;).style.display = &quot;inline&quot;"
@@ -5848,7 +5878,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="http://mail.fsfeurope.org/pipermail/press-release/2007q1/000168.html"
-       transform="translate(30.251444,306.81628)">
+       transform="translate(30.251444,306.81628)"
+       onmouseover="document.getElementById(&quot;30207&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;30207&quot;).style.display = &quot;none&quot;">
       <text
          onmouseout="document.getElementById(&quot;30207&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;30207&quot;).style.display = &quot;inline&quot;"
@@ -5878,7 +5910,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="https://fsfe.org/news/2012/news-20120228-01.html"
-       transform="translate(30.251462,-856.96761)">
+       transform="translate(30.251462,-856.96761)"
+       onmouseover="document.getElementById(&quot;40312&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;40312&quot;).style.display = &quot;none&quot;">
       <text
          onmouseout="document.getElementById(&quot;40312&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;40312&quot;).style.display = &quot;inline&quot;"
@@ -5908,7 +5942,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="https://fsfe.org/news/2010/news-20100510-01.html"
-       transform="translate(29.462483,-641.25862)">
+       transform="translate(29.462483,-641.25862)"
+       onmouseover="document.getElementById(&quot;10510&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;10510&quot;).style.display = &quot;none&quot;">
       <text
          onmouseout="document.getElementById(&quot;10510&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;10510&quot;).style.display = &quot;inline&quot;"
@@ -5938,7 +5974,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="https://blogs.fsfe.org/eal/2013/10/08/fsfes-first-european-coordinators-meeting/"
-       transform="translate(30.251545,-1148.1429)">
+       transform="translate(30.251545,-1148.1429)"
+       onmouseover="document.getElementById(&quot;10913&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;10913&quot;).style.display = &quot;none&quot;">
       <text
          onmouseout="document.getElementById(&quot;10913&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;10913&quot;).style.display = &quot;inline&quot;"
@@ -5990,7 +6028,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="https://fsfe.org/news/2013/news-20130612-01.html"
-       transform="translate(29.86091,-1037.2562)">
+       transform="translate(29.86091,-1037.2562)"
+       onmouseover="document.getElementById(&quot;20613&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;20613&quot;).style.display = &quot;none&quot;">
       <text
          onmouseout="document.getElementById(&quot;20613&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;20613&quot;).style.display = &quot;inline&quot;"
@@ -6025,7 +6065,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="https://fsfe.org/news/2012/news-20121106-01.html"
-       transform="translate(30.251383,-1110.5084)">
+       transform="translate(30.251383,-1110.5084)"
+       onmouseover="document.getElementById(&quot;31112&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;31112&quot;).style.display = &quot;none&quot;">
       <text
          onmouseout="document.getElementById(&quot;31112&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;31112&quot;).style.display = &quot;inline&quot;"
@@ -6055,7 +6097,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="https://fsfe.org/activities/ms-vs-eu/ms-vs-eu.html"
-       transform="translate(29.845317,130.98468)">
+       transform="translate(29.845317,130.98468)"
+       onmouseover="document.getElementById(&quot;30907&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;30907&quot;).style.display = &quot;none&quot;">
       <text
          onmouseout="document.getElementById(&quot;30907&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;30907&quot;).style.display = &quot;inline&quot;"
@@ -6090,7 +6134,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="https://fsfe.org/news/2012/news-20120619-01.html"
-       transform="translate(30.079386,-968.0089)">
+       transform="translate(30.079386,-968.0089)"
+       onmouseover="document.getElementById(&quot;30612&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;30612&quot;).style.display = &quot;none&quot;">
       <text
          onmouseout="document.getElementById(&quot;30612&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;30612&quot;).style.display = &quot;inline&quot;"
@@ -6120,7 +6166,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="https://fsfe.org/news/2009/news-20090624-01.html"
-       transform="translate(30.251545,-188.03032)">
+       transform="translate(30.251545,-188.03032)"
+       onmouseover="document.getElementById(&quot;10609&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;10609&quot;).style.display = &quot;none&quot;">
       <text
          onmouseout="document.getElementById(&quot;10609&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;10609&quot;).style.display = &quot;inline&quot;"
@@ -6150,7 +6198,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="https://fsfe.org/activities/education/education.html"
-       transform="translate(30.423215,1003.485)">
+       transform="translate(30.423215,1003.485)"
+       onmouseover="document.getElementById(&quot;40703&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;40703&quot;).style.display = &quot;none&quot;">
       <text
          onmouseout="document.getElementById(&quot;40703&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;40703&quot;).style.display = &quot;inline&quot;"
@@ -6180,7 +6230,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="https://fsfe.org/news/2013/news-20130626-01.html"
-       transform="translate(30.251463,-601.28006)">
+       transform="translate(30.251463,-601.28006)"
+       onmouseover="document.getElementById(&quot;30212&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;30212&quot;).style.display = &quot;none&quot;">
       <text
          onmouseout="document.getElementById(&quot;30212&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;30212&quot;).style.display = &quot;inline&quot;"
@@ -6210,7 +6262,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="https://fsfe.org/campaigns/swpat/memorandum.html"
-       transform="translate(30.251481,377.34778)">
+       transform="translate(30.251481,377.34778)"
+       onmouseover="document.getElementById(&quot;20605&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;20605&quot;).style.display = &quot;none&quot;">
       <g
          transform="translate(-28.287117,153.38708)"
          onmouseout="document.getElementById(&quot;20605b&quot;).style.display = &quot;none&quot;"
@@ -6261,7 +6315,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="http://mail.fsfeurope.org/pipermail/press-release/2005q4/000122.html"
-       transform="translate(28.77415,638.34738)">
+       transform="translate(28.77415,638.34738)"
+       onmouseover="document.getElementById(&quot;31105&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;31105&quot;).style.display = &quot;none&quot;">
       <text
          onmouseout="document.getElementById(&quot;31105&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;31105&quot;).style.display = &quot;inline&quot;"
@@ -6296,7 +6352,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="https://fsfe.org/news/2008/news-20080214-01.html"
-       transform="translate(29.677043,-96.71542)">
+       transform="translate(29.677043,-96.71542)"
+       onmouseover="document.getElementById(&quot;30208&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;30208&quot;).style.display = &quot;none&quot;">
       <text
          onmouseout="document.getElementById(&quot;30208&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;30208&quot;).style.display = &quot;inline&quot;"
@@ -6345,7 +6403,9 @@
     <a
        id="a5937"
        xlink:href="https://fsfe.org/activities/drm/"
-       transform="translate(30.251469,98.1875)">
+       transform="translate(30.251469,98.1875)"
+       onmouseover="document.getElementById(&quot;41006&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;41006&quot;).style.display = &quot;none&quot;">
       <text
          onmouseout="document.getElementById(&quot;41006&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;41006&quot;).style.display = &quot;inline&quot;"
@@ -6376,7 +6436,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="https://fsfe.org/activities/os/msooxml.html"
-       transform="translate(30.251405,221.31948)">
+       transform="translate(30.251405,221.31948)"
+       onmouseover="document.getElementById(&quot;40707&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;40707&quot;).style.display = &quot;none&quot;">
       <text
          onmouseout="document.getElementById(&quot;40707&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;40707&quot;).style.display = &quot;inline&quot;"
@@ -6415,7 +6477,9 @@
        id="a5619"
        xlink:href="https://fsfe.org/campaigns/ilovefs/"
        target="_blank"
-       transform="translate(30.251469,138.1875)">
+       transform="translate(30.251469,138.1875)"
+       onmouseover="document.getElementById(&quot;40210&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;40210&quot;).style.display = &quot;none&quot;">
       <text
          onmouseout="document.getElementById(&quot;40210&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;40210&quot;).style.display = &quot;inline&quot;"
@@ -6446,7 +6510,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="https://fsfe.org/documents/whyfs.html"
-       transform="translate(30.423251,1129.9885)">
+       transform="translate(30.423251,1129.9885)"
+       onmouseover="document.getElementById(&quot;41101&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;41101&quot;).style.display = &quot;none&quot;">
       <text
          onmouseout="document.getElementById(&quot;41101&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;41101&quot;).style.display = &quot;inline&quot;"
@@ -6477,7 +6543,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="https://fsfe.org/news/2012/news-20120214.01.html"
-       transform="translate(30.251403,-758.88943)">
+       transform="translate(30.251403,-758.88943)"
+       onmouseover="document.getElementById(&quot;30212b&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;30212b&quot;).style.display = &quot;none&quot;">
       <text
          onmouseout="document.getElementById(&quot;30212b&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;30212b&quot;).style.display = &quot;inline&quot;"
@@ -6508,7 +6576,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="https://fsfe.org/news/2013/news-20130312-01.html"
-       transform="translate(359.72492,-672.95193)">
+       transform="translate(359.72492,-672.95193)"
+       onmouseover="document.getElementById(&quot;30312&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;30312&quot;).style.display = &quot;none&quot;">
       <g
          onmouseout="document.getElementById(&quot;30312&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;30312&quot;).style.display = &quot;inline&quot;"
@@ -6559,7 +6629,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="https://fsfe.org/news/2015/news-20150922-01.html"
-       transform="translate(45.794251,-1393.2276)">
+       transform="translate(45.794251,-1393.2276)"
+       onmouseover="document.getElementById(&quot;10915&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;10915&quot;).style.display = &quot;none&quot;">
       <text
          onmouseout="document.getElementById(&quot;10915&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;10915&quot;).style.display = &quot;inline&quot;"
@@ -6600,7 +6672,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="https://fsfe.org/news/2014/news-20140116-01.html"
-       transform="translate(262.16141,-1183.7682)">
+       transform="translate(262.16141,-1183.7682)"
+       onmouseover="document.getElementById(&quot;20114&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;20114&quot;).style.display = &quot;none&quot;">
       <text
          onmouseout="document.getElementById(&quot;20114&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;20114&quot;).style.display = &quot;inline&quot;"
@@ -6631,7 +6705,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="https://fsfe.org/news/2014/news-20140528-01.html"
-       transform="translate(261.26298,-1275.9555)">
+       transform="translate(261.26298,-1275.9555)"
+       onmouseover="document.getElementById(&quot;20514&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;20514&quot;).style.display = &quot;none&quot;">
       <text
          onmouseout="document.getElementById(&quot;20514&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;20514&quot;).style.display = &quot;inline&quot;"
@@ -6667,7 +6743,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="https://fsfe.org/news/2015/news-20150210-01.html"
-       transform="translate(261.3411,-1345.9434)">
+       transform="translate(261.3411,-1345.9434)"
+       onmouseover="document.getElementById(&quot;20215&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;20215&quot;).style.display = &quot;none&quot;">
       <text
          onmouseout="document.getElementById(&quot;20215&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;20215&quot;).style.display = &quot;inline&quot;"
@@ -6698,7 +6776,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="https://fsfe.org/news/2016/news-20160725-01.html"
-       transform="translate(260.87235,-1426.8115)">
+       transform="translate(260.87235,-1426.8115)"
+       onmouseover="document.getElementById(&quot;20816&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;20816&quot;).style.display = &quot;none&quot;">
       <text
          onmouseout="document.getElementById(&quot;20816&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;20816&quot;).style.display = &quot;inline&quot;"
@@ -6729,7 +6809,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="https://fsfe.org/activities/ftf/ln.html"
-       transform="translate(30.25153,-1248.7582)">
+       transform="translate(30.25153,-1248.7582)"
+       onmouseover="document.getElementById(&quot;31115&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;31115&quot;).style.display = &quot;none&quot;">
       <text
          onmouseout="document.getElementById(&quot;31115&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;31115&quot;).style.display = &quot;inline&quot;"
@@ -6934,7 +7016,9 @@
        target="_blank"
        xlink:title=""
        xlink:href="https://wiki.fsfe.org/Migrated/Bolzano2006"
-       transform="translate(30.251652,-234.08748)">
+       transform="translate(30.251652,-234.08748)"
+       onmouseover="document.getElementById(&quot;41106&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;41106&quot;).style.display = &quot;none&quot;">
       <text
          onmouseout="document.getElementById(&quot;41106&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;41106&quot;).style.display = &quot;inline&quot;"
@@ -7036,7 +7120,9 @@
        transform="translate(30.217037,-1392.8639)"
        inkscape:export-filename="/home/gbs/Documents/b.png"
        inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90">
+       inkscape:export-ydpi="90"
+       onmouseover="document.getElementById(&quot;31017&quot;).style.display = &quot;inline&quot;"
+       onmouseout="document.getElementById(&quot;31017&quot;).style.display = &quot;none&quot;">
       <text
          onmouseout="document.getElementById(&quot;31115&quot;).style.display = &quot;none&quot;"
          onmouseover="document.getElementById(&quot;31115&quot;).style.display = &quot;inline&quot;"

@@ -166,7 +166,7 @@ close MAIL;
 # Inform user that everything was ok
 # -----------------------------------------------------------------------------
 
-print "Content-type: text/html\n\n";
+print "Content-type: text/html; charset=utf-8\n\n";
 print "Your request $reference was sent. Thank you.<br /><br />";
 print "WHO: $names{$who}<br />\n\n";
 print "WHAT: $what<br />\n\n";

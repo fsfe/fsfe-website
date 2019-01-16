@@ -28,10 +28,12 @@ my %names = (
   "eal" => "Erik Albers",
   "mk" => "Matthias Kirschner",
   "repentinus" => "Heiki Lohmus",
+  "galia" => "Galina Mancheva",
   "max.mehl" => "Max Mehl",
   "reinhard" => "Reinhard Müller",
   "alex.sander" => "Alexander Sander",
   "usli" => "Ulrike Sliwinski",
+  "gabriel.ku" => "Gabriel Ku Wei Bin",
 );
 
 # -----------------------------------------------------------------------------
@@ -52,6 +54,8 @@ my %responsible = (
   "REUSE-EVENTS" => "council",
   "REUSE-MATERIAL" => "council",
   "REUSE-OTHER" => "council",
+  "NGI0-DISCOVERY" => "council",
+  "NGI0-PET" => "council",
   "MERCHANDISE-PURCHASE" => "usli",
   "MERCHANDISE-OTHER" => "usli",
   "INTERNAL-COORD" => "council",
@@ -80,6 +84,8 @@ my %account = (
   "POLICY-OTHER" => "2540",
   "FOSS4SME-EVENTS" => "2553",
   "FOSS4SME-OTHER" => "2550",
+  "NGI0-DISCOVERY" => "2560",
+  "NGI0-PET" => "2570",
   "REUSE-EVENTS" => "6113",
   "REUSE-MATERIAL" => "6114",
   "REUSE-OTHER" => "6110",

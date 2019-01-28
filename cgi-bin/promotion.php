@@ -72,7 +72,7 @@ function send_mail ( $to, $from, $subject, $msg, $bcc = NULL, $att = NULL, $att_
   }
   $headers .= "X-OTRS-DynamicField-OrderLanguage: " . $_POST["language"] . "\n";
   $headers .= "X-OTRS-DynamicField-OrderState: order\n";
-  $headers .= "X-OTRS-DynamicField-PromoMaterialCountry: " . $_POST["country"] . "\n";
+  $headers .= "X-OTRS-DynamicField-PromoMaterialCountry: " . $countrycode . "\n";
   $headers .= "X-OTRS-DynamicField-PromoMaterialLanguages: " . implode(',', $_POST['languages']) . "\n";
 
   if ( $att ) {
@@ -129,6 +129,10 @@ if (empty($_POST['lastname'])  ||
 # Without this, escapeshellarg() will eat non-ASCII characters.
 setlocale(LC_CTYPE, "en_US.UTF-8");
 
+# $_POST["country"] has values like "DE|Germany", so split this string
+$countrycode = explode('|', $_POST["country"])[0];
+$countryname = explode('|', $_POST["country"])[1];
+
 if ($_POST['packagetype'] == 'default') {
   $subject = "Standard promotion material order";
 } else {
@@ -147,7 +151,7 @@ if (!empty($_POST['org'])) {
 }
 $msg .= "{$_POST['street']}\n".
        "{$_POST['zip']} "."{$_POST['city']}\n".
-       "{$_POST['country']}\n".
+       "{$countryname}\n".
        "\n".
        "Specifics of the Order:\n";
 # Default or custom package?
@@ -186,7 +190,7 @@ if (!empty($_POST['org'])) {
 }
 $address .= $_POST['street'] . "\\n" .
             $_POST['zip'] . " " . $_POST['city'] . "\\n" .
-            $_POST['country'];
+            $countryname;
 $name = escapeshellarg($name);
 $address = escapeshellarg($address);
 shell_exec("$odtfill $template $outfile Name=$name Address=$address Name=$name");

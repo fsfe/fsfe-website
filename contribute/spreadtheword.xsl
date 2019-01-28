@@ -239,8 +239,7 @@
   <xsl:template match="add-language">
     <xsl:element name="input">
       <xsl:attribute name="type">hidden</xsl:attribute>
-      <xsl:attribute name="id">lang</xsl:attribute>
-      <xsl:attribute name="name">lang</xsl:attribute>
+      <xsl:attribute name="name">language</xsl:attribute>
       <xsl:attribute name="value">
         <xsl:value-of select="/buildinfo/document/@language" />
       </xsl:attribute>

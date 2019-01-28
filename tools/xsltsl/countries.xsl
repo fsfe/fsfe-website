@@ -218,7 +218,7 @@
         <!-- will output: <option value="ZZ">Fooland</option> -->
         <xsl:element name="option">
           <xsl:attribute name="value">
-            <xsl:value-of select="@id" />
+            <xsl:value-of select="@id" />|<xsl:value-of select="." />
           </xsl:attribute>
           <xsl:value-of select="." />
         </xsl:element>  <!-- /option -->

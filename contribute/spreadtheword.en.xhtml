@@ -156,8 +156,7 @@
 			
       
 			<form class="highlight labeledform" id="orderpromo" method="post" action="/cgi-bin/promotion.php" accept-charset="utf-8">
-        <!-- Translators: please set the value for the language to your language code -->
-        <input type="hidden" name="language" value="en" />
+        <add-language />
         <h3>Order promotional material</h3>
         <p>Fields marked with * are mandatory.</p>
         <fieldset>
@@ -186,7 +185,7 @@
           </div>
           <div>
             <span class="formlabel">Country*:</span>
-            <input type="text" name="country" size="20" required="required" />
+            <country-list />
           </div>
         </fieldset>
         <fieldset>

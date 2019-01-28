@@ -198,14 +198,32 @@
       </xsl:element>
   </xsl:template>
   
-  
+  <!-- showing a dropdown select menu with all countries in /tools/countries.**.xml -->
   <xsl:template name="country-list">
-    <select id="country" name="country">
+    <xsl:param name="required" select="'no'" />
+    <xsl:element name="select">
+      <xsl:attribute name="id">country</xsl:attribute>
+      <xsl:attribute name="name">country</xsl:attribute>
+      <!-- when called with the required="yes" param, add the attribute 
+      and an empty option -->
+      <xsl:choose>
+        <xsl:when test="$required = 'yes'">
+          <xsl:attribute name="required">required</xsl:attribute>
+          <option></option> <!-- this will force people to pick a choice actively -->
+        </xsl:when>
+      </xsl:choose>
+      <!-- loop over all countries in countries.**.xml -->
       <xsl:for-each select="/buildinfo/document/set/country">
-      	<xsl:sort select="." lang="en" />
-      	<option><xsl:value-of select="." /></option>
+        <xsl:sort select="." lang="en" />
+        <!-- will output: <option value="ZZ">Fooland</option> -->
+        <xsl:element name="option">
+          <xsl:attribute name="value">
+            <xsl:value-of select="@id" />
+          </xsl:attribute>
+          <xsl:value-of select="." />
+        </xsl:element>  <!-- /option -->
       </xsl:for-each>
-    </select>
+    </xsl:element> <!-- /select -->
   </xsl:template>
   
   <!-- please note that there is also a country list ordered by continent (Europe or not) in static-elements.xsl -->

@@ -63,6 +63,7 @@ function relay_donation($orderID) {
 }
 
 function send_mail ( $to, $from, $subject, $msg, $bcc = NULL, $att = NULL, $att_type = NULL, $att_name = NULL ) {
+  global $countrycode; // take variable from below where we split the POST string
   $headers = "From: $from\n";
   if ( isset( $bcc )) { $headers .= "Bcc: $bcc" . "\n"; }
   $headers .= "X-OTRS-Queue: Shipping::Promo Material Orders\n";

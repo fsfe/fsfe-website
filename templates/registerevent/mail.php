@@ -13,7 +13,7 @@ Below is the list of the information you gave.
 	Name: <?=$name?> 
 	Email: <?=$email?> 
 
-	Location: <?=$city?>, <?=$country?>
+	Location: <?=$city?>, <?=$countryname?>
  
 You find all other information in the xml file attached. It will be uploaded
 in the next 24 hours. If you like to withdraw your event or in case you like to change some information,

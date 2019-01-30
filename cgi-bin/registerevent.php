@@ -52,12 +52,6 @@ function eval_date($date) {
 	return (!$dt['errors'] && $dt['year'] && preg_match("#^(19|20)\d\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])$#", $date) === 1);
 }
 
-if (isset($_POST['tags'])) {
-  $tags = $_POST['tags'];
-} else {
-  $tags = array();
-}
-
 function send_registration_mail($from, $to) {
 	$data = array(
 		'name' => $_POST['name'],
@@ -71,8 +65,9 @@ function send_registration_mail($from, $to) {
 		'url' => htmlspecialchars($_POST['url']),
 		'location' => $_POST['location'],
 		'city' => $_POST['city'],
-		'country' => $_POST['country'],
-		'tags' => $tags,
+		'countrycode' => explode('|', $_POST['country'])[0],
+		'countryname' => explode('|', $_POST['country'])[1],
+		'tags' => $_POST['tags']
 	);
 
 	$data['event'] = eval_template('registerevent/event.php', $data);

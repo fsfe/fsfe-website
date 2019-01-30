@@ -327,7 +327,7 @@ div#subpages, .grid-row {
           font-size: 1em;
           font-weight: normal;
         }
-        
+
         h2::after {
           content: ":";
         }
@@ -848,7 +848,7 @@ div#subpages, .grid-row {
     a.btn {
         .btn-primary;
     }
-    
+
     @media (min-width: @screen-sm-min) {
         padding: 3em 3em 3em 2em;
     }
@@ -856,11 +856,22 @@ div#subpages, .grid-row {
 
 #followup.subscribe-nl {
     h2 {
-        .make-sm-column(5);
-        margin: 0;
+        .make-md-column(6);
+        .make-lg-column(5);
+        margin: 0 0 10px;
     }
     form {
-        .make-sm-column(7);
+        .make-md-column(6);
+        .make-lg-column(7);
+    }
+}
+
+@media (min-width: @screen-md-min) {
+    #followup.subscribe-nl {
+        h2 {
+            margin: 0;
+            top: 5px;
+        }
     }
 }
 
@@ -1528,11 +1539,11 @@ ul.taglist {
     .table-striped;
     margin-top: 40px;
   }
-  
+
   table > tbody > tr > td {
     vertical-align: middle;
   }
-    
+
   img {
     height: auto;
     max-height: 65px;

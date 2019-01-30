@@ -241,7 +241,7 @@
       <xsl:attribute name="type">hidden</xsl:attribute>
       <xsl:attribute name="name">language</xsl:attribute>
       <xsl:attribute name="value">
-        <xsl:value-of select="/buildinfo/document/@language" />
+        <xsl:value-of select="/buildinfo/@language" />
       </xsl:attribute>
     </xsl:element>
   </xsl:template>

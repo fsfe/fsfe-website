@@ -111,6 +111,22 @@ function send_mail ( $to, $from, $subject, $msg, $bcc = NULL, $att = NULL, $att_
   return mail( $to, $subject, $message, $headers );
 }
 
+# send information to mail-signup.php if user wished to sign up to community mails or newsletter
+function mail_signup($data) {
+  $url = $_SERVER['REQUEST_SCHEME']. '://' . $_SERVER['HTTP_HOST'] . '/cgi-bin/mail-signup.php';
+  $context = stream_context_create(
+    array(
+      'http' => array(
+        'method' => 'POST',
+        'header' => 'Content-type: application/x-www-form-urlencoded',
+        'content' => http_build_query($data),
+        'timeout' => 10
+      )
+    )
+  );
+  file_get_contents($url, FALSE, $context);
+}
+
 $lang = $_POST['language'];
 
 # Sanity checks (*very* sloppy input validation)
@@ -195,6 +211,20 @@ $address .= $_POST['street'] . "\\n" .
 $name = escapeshellarg($name);
 $address = escapeshellarg($address);
 shell_exec("$odtfill $template $outfile Name=$name Address=$address Name=$name");
+
+# Make subscriptions to newsletter/community mails
+if ($_POST['subcd'] == "y") {
+  $signupdata = array(
+    'list' => 'community',
+    'name' => $_POST['firstname'] . " " . $_POST['lastname'],
+    'mail' => $_POST['mail'],
+    'address' => $_POST['street'],
+    'zip' => $_POST['zip'],
+    'city' => $_POST['city'],
+    'country' => $countrycode
+  );
+  mail_signup($signupdata);
+}
 
 $test = send_mail ("contact@fsfe.org", $_POST['firstname'] . " " . $_POST['lastname'] . " <" . $_POST['mail'] . ">", $subject, $msg, NULL, file_get_contents($outfile), "application/vnd.oasis.opendocument.text", "letter.odt");
 

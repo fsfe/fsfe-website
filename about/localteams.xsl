@@ -134,6 +134,15 @@
     </xsl:call-template>
   </xsl:template>
   
+  
+      <!-- Kiel -->
+  <xsl:template match="kiel-members">
+    <xsl:call-template name="country-people-list">
+      <xsl:with-param name="team" select="'kiel'" />
+      <xsl:with-param name="display" select="'coordinators'" />
+    </xsl:call-template>
+  </xsl:template>
+  
     <!-- Linz -->
   <xsl:template match="linz-members">
     <xsl:call-template name="country-people-list">

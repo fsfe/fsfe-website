@@ -142,6 +142,14 @@
     </xsl:call-template>
   </xsl:template>
   
+     <!-- Madrid -->
+  <xsl:template match="madrid-members">
+    <xsl:call-template name="country-people-list">
+      <xsl:with-param name="team" select="'madrid'" />
+      <xsl:with-param name="display" select="'coordinators'" />
+    </xsl:call-template>
+  </xsl:template>
+  
   <!-- Manchester -->
     <xsl:template match="manchester-members">
     <xsl:call-template name="country-people-list">
@@ -154,6 +162,15 @@
   <xsl:template match="munich-members">
     <xsl:call-template name="country-people-list">
       <xsl:with-param name="team" select="'munich'" />
+      <xsl:with-param name="display" select="'coordinators'" />
+    </xsl:call-template>
+  </xsl:template>
+  
+  
+    <!-- Milano -->
+  <xsl:template match="milano-members">
+    <xsl:call-template name="country-people-list">
+      <xsl:with-param name="team" select="'milano'" />
       <xsl:with-param name="display" select="'coordinators'" />
     </xsl:call-template>
   </xsl:template>

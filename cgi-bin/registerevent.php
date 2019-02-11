@@ -78,9 +78,7 @@ function send_registration_mail($from, $to) {
 	$subject = "Event registration: " . $_POST['title'];
 	$headers = "From: " . $from . "\n"
 		. "MIME-Version: 1.0\n"
-                . "X-OTRS-Queue: Misc\n"
-                . "X-OTRS-Owner: eal\n"
-                . "X-OTRS-Responsible: eal\n"
+                . "X-OTRS-Queue: Events\n"
 		. "Content-Type: multipart/mixed; boundary=boundary";
 
 	mail($to, $subject, $message, $headers);

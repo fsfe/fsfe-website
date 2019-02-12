@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Do not translate this file! -->
+
+<itemset>
+  <item type="tshirt" id="tshirt-pmpc-black" price="20.00" date="2019-02-11">
+    <available size="S"    a="46" b="66"/>
+    <available size="M"    a="50" b="70"/>
+    <available size="L"    a="51" b="71"/>
+    <available size="XL"   a="55" b="75"/>
+    <available size="XXL"  a="57" b="77"/>
+    <available size="XXXL"/>
+    <image
+      small="2019/tshirt-pmpc-black-front-small.jpg"
+      large="2019/tshirt-pmpc-black-front-large.jpg"/>
+    <image
+      small="2019/tshirt-pmpc-black-back-small.jpg"
+      large="2019/tshirt-pmpc-black-back-large.jpg"/>
+  </item>
+</itemset>

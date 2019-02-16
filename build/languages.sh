@@ -22,7 +22,6 @@ fr Français
 hr Hrvatski
 hu Magyar
 it Italiano
-ku Kurdî
 mk Mакедонски
 nb Norsk (bokmål)
 nl Nederlands

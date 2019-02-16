@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 inc_makerules=true
 [ -z "$inc_misc" ] && . "$basedir/build/misc.sh"

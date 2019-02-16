@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 inc_misc=true
 [ -z "$inc_logging" ] && . "$basedir/build/logging.sh"

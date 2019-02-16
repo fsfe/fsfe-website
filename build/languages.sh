@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # lazy-ass include guard
 inc_languages=true

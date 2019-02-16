@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 [ -z "$inc_misc" ] && . "$basedir/build/misc.sh"
 

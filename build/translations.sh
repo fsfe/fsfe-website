@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 inc_translations=true
 [ -z "$inc_filenames" ] && . "$basedir/build/filenames.sh"

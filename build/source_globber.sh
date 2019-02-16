@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 basedir="${0%/*}/.."
 [ -z "$inc_sources" ] && . "$basedir/build/sources.sh"

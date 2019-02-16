@@ -69,7 +69,9 @@ git_build_into(){
   elif egrep '^Already up-to-date\.' "$GITchanges"; then
     debug "No changes to GIT:\n" \
           "$(cat "$GITchanges")"
-    exit 0
+    # Exit status should only be 0 if there was a successful build.
+    # So set it to 1 here.
+    exit 1
   else
     logstatus GITlatest <"$GITchanges"
     regen_xhtml=false
@@ -114,7 +116,9 @@ svn_build_into(){
   elif egrep '^At revision [0-9]+\.' "$SVNchanges"; then
     debug "No changes to SVN:\n" \
           "$(cat "$SVNchanges")"
-    exit 0
+    # Exit status should only be 0 if there was a successful build.
+    # So set it to 1 here.
+    exit 1
   else
     logstatus SVNlatest <"$SVNchanges"
     regen_xhtml=false

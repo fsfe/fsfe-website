@@ -29,9 +29,15 @@ build_into(){
   | remove_orphans "$stagedir" \
   | logstatus removed
 
-  if ! make -j $ncpu -f "$(logname Makefile)" all 2>&1; then
-    die "See buildlog for errors reported by Make"
-  fi | t_logstatus buildlog
+  (
+    # Make sure that the following pipe exits with a nonzero exit code if the
+    # make run fails.
+    set -o pipefail
+
+    if ! make -j $ncpu -f "$(logname Makefile)" all 2>&1; then
+      die "See buildlog for errors reported by Make"
+    fi | t_logstatus buildlog
+  ) || exit 1
 
   if [ "$stagedir" != "$target" ]; then
     rsync -av --del "$stagedir/" "$target/" \

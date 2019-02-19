@@ -62,7 +62,7 @@ function send_registration_mail($from, $to) {
 		'startdate' => $_POST['startdate'],
 		'enddate' => $_POST['enddate'],
 		'description' => $_POST['description'],
-		'url' => htmlspecialchars($_POST['url']),
+		'url' => $_POST['url'],
 		'location' => $_POST['location'],
 		'city' => $_POST['city'],
 		'countrycode' => explode('|', $_POST['country'])[0],

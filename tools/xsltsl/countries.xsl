@@ -201,9 +201,16 @@
   <!-- showing a dropdown select menu with all countries in /tools/countries.**.xml -->
   <xsl:template name="country-list">
     <xsl:param name="required" select="'no'" />
+    <xsl:param name="class" select="''" />
     <xsl:element name="select">
       <xsl:attribute name="id">country</xsl:attribute>
       <xsl:attribute name="name">country</xsl:attribute>
+      <!-- if called with a "class" value, set it as the CSS class --> 
+      <xsl:choose>
+        <xsl:when test="$class != ''">
+          <xsl:attribute name="class"><xsl:value-of select="$class" /></xsl:attribute>
+        </xsl:when>
+      </xsl:choose>
       <!-- when called with the required="yes" param, add the attribute 
       and an empty option -->
       <xsl:choose>

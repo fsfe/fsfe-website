@@ -16,6 +16,19 @@
     <!--<h2>Register</h2>-->
 
     <form action="/cgi-bin/registerevent.php" method="POST" class="register_event fsfe-form" enctype="multipart/form-data" role="form">
+      <!-- @TRANSLATORS: there is no need to translate the HTML 
+      attributes of the elements in this form, just the text between 
+      the '>' and '<'. 
+
+      An example:
+
+        <label><input type="checkbox" name="tags[]" value="localgroup" />talk</label>
+
+      can be translated to Spanish
+
+        <label><input type="checkbox" name="tags[]" value="localgroup" />grupo local</label>
+
+      Thank you! -->
       <input name="register_event" type="hidden" />
 
 	<!--<fieldset id="register_event">-->
@@ -27,6 +40,48 @@
         <input name="email" value="" required="required" type="email" /> 
 
         <p class="help-block">Your personal information will never be shared nor sold. It is used only to get in contact with you if there are any call backs or problems.</p>
+
+        <div class="form-group">
+        <label for="lang">Language of this event registration<span class="star">*</span></label>
+        <!-- @Translators: There is no need to translate the list below -->
+        <select id="lang" name="lang" class="form-control" required="required">
+          <option></option>
+          <option value="ar">&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1617;&#1577;</option>
+          <option value="bg">Български</option>
+          <option value="bs">Bosanski</option>
+          <option value="ca">Català</option>
+          <option value="cs">Česky</option>
+          <option value="da">Dansk</option>
+          <option value="de">Deutsch</option>
+          <option value="el">Ελληνικά</option>
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="et">Eesti</option>
+          <option value="fi">Suomi</option>
+          <option value="fr">Français</option>
+          <option value="hr">Hrvatski</option>
+          <option value="hu">Magyar</option>
+          <option value="it">Italiano</option>
+          <option value="mk">Mакедонски</option>
+          <option value="nb">Norsk (bokmål)</option>
+          <option value="nl">Nederlands</option>
+          <option value="nn">Norsk (nynorsk)</option>
+          <option value="pl">Polski</option>
+          <option value="pt">Português</option>
+          <option value="ro">Română</option>
+          <option value="ru">Русский</option>
+          <option value="sk">Slovenčina</option>
+          <option value="sl">Slovenščina</option>
+          <option value="sq">Shqip</option>
+          <option value="sr">Српски</option>
+          <option value="sv">Svenska</option>
+          <option value="tr">Türkçe</option>
+          <option value="uk">Українська</option>
+          <option value="zh">漢語</option>
+        </select>
+        
+        <p class="help-block">Please indicate the language of the text you will insert in the title and description. This will help our team to upload your event quickly and flawlessly. If you would like to provide a translation of your event (that would be great!), please make a separate event registration. Thank you!</p>
+        </div>
 
         <!--<label for="groupname">Group name</label>
         <input name="groupname" value="" type="text" />-->
@@ -43,7 +98,7 @@
 				<input name="startdate" value="" required="required" type="date" placeholder="YYYY-MM-DD" />
 			</td>
 			<td>
-				<label for="enddate" >End date</label>*
+				<label for="enddate" >End date</label>
 				<input name="enddate" value="" type="date" placeholder="YYYY-MM-DD" />
 			</td>
 			</tr>
@@ -77,39 +132,9 @@
         <input name="city" value="" required="required" type="text" />
 
         <div class="form-group">
-        <label for="country">Country<span class="star">*</span></label>        
-        <select name="country" class="form-control">
-          <option value="at|Austria">Austria</option>
-          <option value="be|Belgium">Belgium</option>
-          <option value="bg|Bulgaria">Bulgaria</option>
-          <option value="hr|Croatia">Croatia</option>
-          <option value="dk|Denmark">Denmark</option>
-          <option value="ee|Estonia">Estonia</option>
-          <option value="fi|Finland">Finland</option>
-          <option value="fr|France">France</option>
-          <option value="de|Germany">Germany</option>
-          <option value="gr|Greece">Greece</option>
-          <option value="hu|Hungary">Hungary</option>
-          <option value="ie|Ireland">Ireland</option>
-          <option value="it|Italy">Italy</option>
-          <option value="lv|Latvia">Latvia</option>
-          <option value="lt|Lithuania">Lithuania</option>
-          <option value="lu|Luxembourg">Luxembourg</option>
-          <option value="mt|Malta">Malta</option>
-          <option value="nl|Netherlands">Netherlands</option>
-          <option value="pl|Poland">Poland</option>
-          <option value="pt|Portugal">Portugal</option>
-          <option value="ro|Romania">Romania</option>
-          <option value="sr|Serbia">Serbia</option>
-          <option value="sk|Slovakia">Slovakia</option>
-          <option value="si|Slovenia">Slovenia</option>
-          <option value="es|Spain">Spain</option>
-          <option value="se|Sweden">Sweden</option>
-          <option value="ch|Switzerland">Switzerland</option>
-          <option value="uk|United Kingdom">United Kingdom</option>
-          <option value="|outside of Europe">Other</option>
-        </select>
-		</div>
+          <label for="country">Country<span class="star">*</span></label>
+          <country-list />
+        </div>
 
         <!--</fieldset>-->
 	<!-- Should help against spam -->

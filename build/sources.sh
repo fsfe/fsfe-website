@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 inc_sources=true
 [ -z "$inc_xmlfiles" ] && . "$basedir/build/xmlfiles.sh"

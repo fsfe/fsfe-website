@@ -62,12 +62,13 @@ function send_registration_mail($from, $to) {
 		'startdate' => $_POST['startdate'],
 		'enddate' => $_POST['enddate'],
 		'description' => $_POST['description'],
-		'url' => htmlspecialchars($_POST['url']),
+		'url' => $_POST['url'],
 		'location' => $_POST['location'],
 		'city' => $_POST['city'],
 		'countrycode' => explode('|', $_POST['country'])[0],
 		'countryname' => explode('|', $_POST['country'])[1],
-		'tags' => $_POST['tags']
+		'tags' => $_POST['tags'],
+		'lang' => $_POST['lang']
 	);
 
 	$data['event'] = eval_template('registerevent/event.php', $data);
@@ -80,6 +81,10 @@ function send_registration_mail($from, $to) {
 		. "MIME-Version: 1.0\n"
                 . "X-OTRS-Queue: Events\n"
 		. "Content-Type: multipart/mixed; boundary=boundary";
+
+  // uncomment for local debug
+  // print_r($message);
+  // exit(0);
 
 	mail($to, $subject, $message, $headers);
 

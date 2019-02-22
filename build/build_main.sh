@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Check dependencies
 deperrors=''
@@ -40,7 +40,7 @@ buildpids=$(
 )
 if [ $command = "build_into" -o $command = "git_build_into" -o $command = "svn_build_into" ] && [ "$buildpids" -gt 2 ]; then
   debug "build script is already running"
-  exit 0
+  exit 1
 fi
 
 [ -z "$inc_filenames" ] && . "$basedir/build/filenames.sh"

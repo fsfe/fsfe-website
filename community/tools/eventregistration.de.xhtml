@@ -9,14 +9,26 @@
     <h1>Mach Deine FSFE Veranstaltung bekannt</h1>
 
     <div id="introduction">
-
-      <p>Nutze dieses Formular um jegliche FSFE Veranstaltung bekannt zu machen. Sei es ein Treffen oder ein Vortrag, sei es ein Straßenstand oder eine Radiosendung: Lass unserer Gemeinschaft und die gesamte Welt wissen, was passiert.</p>
+      <p>Nutze dieses Formular, um jegliche FSFE Veranstaltung bekannt zu machen. Sei es ein Treffen oder ein Vortrag, sei es ein Straßenstand oder eine Radiosendung: Lass unsere Gemeinschaft und die gesamte Welt wissen, was passiert.</p>
 
     </div>
 
-<!--    <h2>Registrieren</h2> -->
+    <!--<h2>Register</h2>-->
 
     <form action="/cgi-bin/registerevent.php" method="POST" class="register_event fsfe-form" enctype="multipart/form-data" role="form">
+      <!-- @TRANSLATORS: there is no need to translate the HTML 
+      attributes of the elements in this form, just the text between 
+      the '>' and '<'. 
+      
+      An example:
+      
+        <label><input type="checkbox" name="tags[]" value="localgroup" />talk</label>
+        
+      can be translated to Spanish
+        
+        <label><input type="checkbox" name="tags[]" value="localgroup" />grupo local</label>
+        
+      Thank you! -->
       <input name="register_event" type="hidden" />
 
 	<!--<fieldset id="register_event">-->
@@ -27,7 +39,49 @@
         <label for="email" class="required">Deine Email<span class="star">*</span></label>
         <input name="email" value="" required="required" type="email" /> 
 
-        <p class="help-block">Deine persönlichen Informationen werden nicht verbreitet oder verkauft. Sie werden lediglich dazu verwendet Dich zu kontaktieren falls es Rückfragen oder Probleme gibt. </p>
+        <p class="help-block">Deine persönlichen Informationen werden nicht verbreitet oder verkauft. Sie werden lediglich dazu verwendet Dich zu kontaktieren falls es Rückfragen oder Probleme gibt.</p>
+
+        <div class="form-group">
+        <label for="lang">Sprache dieser Eventregistrierung<span class="star">*</span></label>
+        <!-- @Translators: There is no need to translate the list below -->
+        <select id="lang" name="lang" class="form-control" required="required">
+          <option></option>
+          <option value="ar">&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1617;&#1577;</option>
+          <option value="bg">Български</option>
+          <option value="bs">Bosanski</option>
+          <option value="ca">Català</option>
+          <option value="cs">Česky</option>
+          <option value="da">Dansk</option>
+          <option value="de">Deutsch</option>
+          <option value="el">Ελληνικά</option>
+          <option value="en">English</option>
+          <option value="es">Español</option>
+          <option value="et">Eesti</option>
+          <option value="fi">Suomi</option>
+          <option value="fr">Français</option>
+          <option value="hr">Hrvatski</option>
+          <option value="hu">Magyar</option>
+          <option value="it">Italiano</option>
+          <option value="mk">Mакедонски</option>
+          <option value="nb">Norsk (bokmål)</option>
+          <option value="nl">Nederlands</option>
+          <option value="nn">Norsk (nynorsk)</option>
+          <option value="pl">Polski</option>
+          <option value="pt">Português</option>
+          <option value="ro">Română</option>
+          <option value="ru">Русский</option>
+          <option value="sk">Slovenčina</option>
+          <option value="sl">Slovenščina</option>
+          <option value="sq">Shqip</option>
+          <option value="sr">Српски</option>
+          <option value="sv">Svenska</option>
+          <option value="tr">Türkçe</option>
+          <option value="uk">Українська</option>
+          <option value="zh">漢語</option>
+        </select>
+        
+        <p class="help-block">Bitte teile uns mit, in welcher Sprache du den Titel und die Beschreibung verfassen wirst. Das hilft unserem Team, deine Veranstaltung schnell und fehlerfrei zu veröffentlichen. Wenn du eine Übersetzung zur Verfügung stellen möchtest (das wäre großartig!), erstelle bitte eine separate Eventregistrierung. Vielen Dank!</p>
+        </div>
 
         <!--<label for="groupname">Group name</label>
         <input name="groupname" value="" type="text" />-->
@@ -49,13 +103,23 @@
 			</td>
 			</tr>
 		</table>
-        <label for="description" class="required">Beschreibung<span class="star">*</span></label>
+        <label for="description" class="required">Beschreibung (nur Text, kein HTML)<span class="star">*</span></label>
         <textarea name="description" required="required"></textarea>
 
-        <p class="help-block">Bitter erkläre kurz worum es bei dieser Veranstaltung geht, wie man teilnehmen kann und was Teilnehmende erwarten können. Falls Du Deine Veranstaltung in einer anderen Sprache als Englisch registrierst, bitte erwäge auch eine englische Version derselben Veranstaltung zu registrieren, um <strong>sicher zu sein, dass wir die Beschreibung verstehen</strong>. Bitte nehme auch zur Kenntnis, dass wir (aus technischen Gründen) nur englischsprachige Veranstaltungen auf unserer Startseite fsfe.org einbinden können - alle anderen Sprachversionen sind lediglich unter fsfe.org/events sichtbar.
-</p>
+        <p class="help-block">Bitte erkläre kurz, worum es bei dieser Veranstaltung geht, wie man teilnehmen kann und was Teilnehmende erwarten können. Falls Du Deine Veranstaltung in einer anderen Sprache als Englisch registrierst, bitte erwäge auch eine englische Version derselben Veranstaltung zu registrieren, um <strong>sicher zu sein, dass wir die Beschreibung verstehen</strong>. Bitte nehme auch zur Kenntnis, dass wir (aus technischen Gründen) nur englischsprachige Veranstaltungen auf unserer Startseite fsfe.org einbinden können - alle anderen Sprachversionen sind lediglich unter fsfe.org/events sichtbar.</p>
 
-        <label for="url">URL zur Veranstaltung</label>
+	   <label for="tags">Wähle einen oder mehrere der untenstehenden Tags</label>*
+        
+        <div class="checkboxlist">
+		<div class="checkbox"><label><input type="checkbox" name="tags[]" value="talk" />Vortrag</label></div>
+		<div class="checkbox"><label><input type="checkbox" name="tags[]" value="panel" />Panel</label></div>
+		<div class="checkbox"><label><input type="checkbox" name="tags[]" value="infobooth" />Infostand</label></div>
+		<div class="checkbox"><label><input type="checkbox" name="tags[]" value="localgroup" />Lokale Gruppe</label></div>
+		<div class="checkbox"><label><input type="checkbox" name="tags[]" value="workshop" />Workshop</label></div>
+		<div class="checkbox"><label><input type="checkbox" name="tags[]" value="meeting" />Treffen</label></div>
+	</div>
+
+        <label for="url">URL zur Veranstaltung (wenn verfügbar)</label>
         <input name="url" value="" type="text" />
 
         <!--<label for="location">Event Location</label>
@@ -67,18 +131,24 @@
         <label for="city">Stadt<span class="star">*</span></label>
         <input name="city" value="" required="required" type="text" />
 
-        <label for="country">Land<span class="star">*</span></label>
-        <input name="country" value="" required="required" type="text" />
+        <div class="form-group">
+          <label for="country">Land<span class="star">*</span></label>        
+          <country-list />
+        </div>
 
         <!--</fieldset>-->
 	<!-- Should help against spam -->
 		
-	<input value="Add event" name="submit" type="submit" />
+	<input value="Veranstaltung hinzufügen" name="submit" type="submit" />
 	<p class="help-block"><span class="star">*</span> = benötigte Felder</p>
 
     </form>
     
-    <p>Nachdem Du das Formular ausgefüllt und deinen Inhalt mit "Veranstaltung eintragen" bestätigt hast, wird eine xml-Datei erstellt und an uns gesendet. Nach unserer Bestätigung wird Dein Eintrag hochgeladen und sollte innerhalb von 48 Stunden auf fsfe.org und/oder fsfe.org/events erscheinen. Bitte nehme zur Kenntnis, dass wir ausschließlich FSFE und FSFE community Veranstaltungen bewerben und keine anderen Freie Software Aktivitäten (Ja, ohne Ausnahme - wie wichtig diese andere Veranstaltung auch sein mag).</p> 
+    <p>Nachdem Du das Formular ausgefüllt und deinen Inhalt mit "Veranstaltung eintragen" bestätigt hast, wird eine xml-Datei erstellt und an uns gesendet. Nach unserer Bestätigung wird Dein Eintrag hochgeladen und sollte innerhalb von 48 Stunden auf fsfe.org und/oder fsfe.org/events erscheinen. Bitte nehme zur Kenntnis, dass wir ausschließlich FSFE und FSFE-Community-Veranstaltungen bewerben und keine anderen Freie-Software-Aktivitäten (ja, ohne Ausnahme - wie wichtig diese andere Veranstaltung auch sein mag).</p> 
+    
+    <p>Keep in mind that all of the FSFE's events are covered by our <a href="https://fsfe.org/about/codeofconduct">Code of Conduct</a> that kindly asks all participants to be excellent to each other. Please do not announce your event as a FSFE event if you do not plan to implement our Code of Conduct.
+    
+    Beachte, dass alle FSFE-Events von unserem <a href="https://fsfe.org/about/codeofconduct">Verhaltenskodex</a> abgedeckt sind, der von Teilnehmenden ein gegenseitiges exzellentes Verhalten erwartet. Bitte registriere Deine Veranstaltung nicht als eine FSFE-Veranstaltung, wenn du nicht vorhast, unseren Verhaltenskodex anzuwenden.</p>
      
   </body>
  </html>

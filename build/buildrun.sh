@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 inc_buildrun=true
 [ -z "$inc_makerules" ] && . "$basedir/build/makerules.sh"
@@ -29,9 +29,15 @@ build_into(){
   | remove_orphans "$stagedir" \
   | logstatus removed
 
-  if ! make -j $ncpu -f "$(logname Makefile)" all 2>&1; then
-    die "See buildlog for errors reported by Make"
-  fi | t_logstatus buildlog
+  (
+    # Make sure that the following pipe exits with a nonzero exit code if the
+    # make run fails.
+    set -o pipefail
+
+    if ! make -j $ncpu -f "$(logname Makefile)" all 2>&1; then
+      die "See buildlog for errors reported by Make"
+    fi | t_logstatus buildlog
+  ) || exit 1
 
   if [ "$stagedir" != "$target" ]; then
     rsync -av --del "$stagedir/" "$target/" \
@@ -63,7 +69,9 @@ git_build_into(){
   elif egrep '^Already up-to-date\.' "$GITchanges"; then
     debug "No changes to GIT:\n" \
           "$(cat "$GITchanges")"
-    exit 0
+    # Exit status should only be 0 if there was a successful build.
+    # So set it to 1 here.
+    exit 1
   else
     logstatus GITlatest <"$GITchanges"
     regen_xhtml=false
@@ -108,7 +116,9 @@ svn_build_into(){
   elif egrep '^At revision [0-9]+\.' "$SVNchanges"; then
     debug "No changes to SVN:\n" \
           "$(cat "$SVNchanges")"
-    exit 0
+    # Exit status should only be 0 if there was a successful build.
+    # So set it to 1 here.
+    exit 1
   else
     logstatus SVNlatest <"$SVNchanges"
     regen_xhtml=false

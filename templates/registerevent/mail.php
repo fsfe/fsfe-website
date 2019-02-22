@@ -28,7 +28,7 @@ Content-Disposition: attachment; filename="wikievent.txt"
 <?=$wiki?>
 --boundary 
 Content-Type: application/xml; charset=utf-8 
-Content-Disposition: attachment; filename="event.xml" 
+Content-Disposition: attachment; filename="event-<?php echo str_replace("-", "", $startdate) . "-01." . $lang; ?>.xml" 
 
 <?=$event?>
 --boundary--

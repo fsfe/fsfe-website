@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # lazy-ass include guard
 inc_languages=true
@@ -22,7 +22,6 @@ fr Français
 hr Hrvatski
 hu Magyar
 it Italiano
-ku Kurdî
 mk Mакедонски
 nb Norsk (bokmål)
 nl Nederlands

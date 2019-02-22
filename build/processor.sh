@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 inc_processor=true
 [ -z "$inc_filenames" ] && . "$basedir/build/filenames.sh"
@@ -12,6 +12,10 @@ process_file(){
   shortname=$(get_shortname "$infile")
   lang=$(get_language "$infile")
   [ -z "$processor" ] && processor="$(get_processor "$shortname")"
+
+  # Make sure that the following pipe exits with a nonzero exit code if *any*
+  # of the commands fails.
+  set -o pipefail
 
   build_xmlstream "$shortname" "$lang" "$olang" \
   | xsltproc "$processor" - \

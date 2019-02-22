@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 inc_makerules=true
 [ -z "$inc_misc" ] && . "$basedir/build/misc.sh"
@@ -79,19 +79,19 @@ xhtml_maker(){
     cat <<MakeEND
 all: $(mes "$outfile" "$outlink")
 $(mes "$outfile"): $(mes "$depfile" "$processor" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" "$sourcesfile")
-	\${PROCESSOR} \${PROCFLAGS} process_file "${infile}" "$(mio "$processor")" "$olang" >"$outfile"
+	\${PROCESSOR} \${PROCFLAGS} process_file "${infile}" "$(mio "$processor")" "$olang" >"$outfile" || { rm $outfile; exit 1; }
 $(mes "$outlink"):
 	ln -sf "${outbase}" "${outlink}"
 MakeEND
     $bool_rss && cat<<MakeEND
 all: $(mes "$rssfile")
 $(mes "$rssfile"): $(mes "$depfile" "${shortname}.rss.xsl" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" "$sourcesfile")
-	\${PROCESSOR} \${PROCFLAGS} process_file "${infile}" "$(mio "${shortname}.rss.xsl")" "$olang" >"$rssfile"
+	\${PROCESSOR} \${PROCFLAGS} process_file "${infile}" "$(mio "${shortname}.rss.xsl")" "$olang" >"$rssfile" || { rm $rssfile; exit 1; }
 MakeEND
     $bool_ics && cat<<MakeEND
 all: $(mes "$icsfile")
 $(mes "$icsfile"): $(mes "$depfile" "${shortname}.ics.xsl" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" "$sourcesfile")
-	\${PROCESSOR} \${PROCFLAGS} process_file "${infile}" "$(mio "${shortname}.ics.xsl")" "$olang" >"$icsfile"
+	\${PROCESSOR} \${PROCFLAGS} process_file "${infile}" "$(mio "${shortname}.ics.xsl")" "$olang" >"$icsfile" || { rm $icsfile; exit 1; }
 MakeEND
     $bool_indexname && cat <<MakeEND
 all: $(mes "$outpath/index.${lang}.html" "$outpath/index.html.$lang")

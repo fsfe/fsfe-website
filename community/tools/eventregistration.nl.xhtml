@@ -9,7 +9,7 @@
         <h1>Kondig uw FSFE-gemeenschapsevenement aan</h1>
 
         <div id="introduction">
-          <p>Gebruik het formulier hieronder om ieder FSFE-evenement dat is gerelateerd aan een FSFE-activiteit aan te kondigen. Of het nu een ontmoeting, een lezing, een kraam op straat of een radio-podcast is: laat de gemeenschap en de wereld weten wat er gebeurt.</p>
+          <p>Gebruik het formulier hieronder om ieder evenement dat is gerelateerd aan een FSFE-activiteit aan te kondigen. Of het nu een ontmoeting, een lezing, een kraam op straat of een radio-podcast is: laat de gemeenschap en de wereld weten wat er gebeurt.</p>
 
         </div>
 
@@ -48,7 +48,7 @@
                             </td>
                             </tr>
                     </table>
-            <label for="description" class="required">Description<span class="star">*</span></label>
+            <label for="description" class="required">Beschrijving<span class="star">*</span></label>
             <textarea name="description" required="required"></textarea>
 
             <p class="help-block">Maak alstublieft in het kort duidelijk waar uw evenement over gaat, hoe men eraan kan deelnemen en wat deelnemers kunnen verwachten. Als u uw evenement in een andere taal dan Engels registreert, overweeg dan alstublieft om ook een Engelse versie toe te voegen <strong>zodat u er zeker van kunt zijn dat wij het begrijpen</strong>. Wees u er alstublieft ook van bewust dat we (vanwege technische redenen) alleen Engelse evenementen vermelden op onze voorpagina fsfe.org - elke andere taal zal alleen zichtbaar zijn op fsfe.org/events.</p>
@@ -56,17 +56,18 @@
                <label for="tags">Kies één of meer tags hieronder</label>*
             
             <div class="checkboxlist">
-                    <div class="checkbox"><label><input type="checkbox" name="tags[]" value="lezing" />talk</label></div>
-                    <div class="checkbox"><label><input type="checkbox" name="tags[]" value="infokraam" />infobooth</label></div>
-                    <div class="checkbox"><label><input type="checkbox" name="tags[]" value="lokalegroep" />local group</label></div>
-                    <div class="checkbox"><label><input type="checkbox" name="tags[]" value="werkgroep" />workshop</label></div>
-                    <div class="checkbox"><label><input type="checkbox" name="tags[]" value="ontmoeting" />meeting</label></div>
+                    <div class="checkbox"><label><input type="checkbox" name="tags[]" value="talk" />lezing</label></div>
+                    <div class="checkbox"><label><input type="checkbox" name="tags[]" value="panel" />panel</label></div>
+                    <div class="checkbox"><label><input type="checkbox" name="tags[]" value="infobooth" />infokraam</label></div>
+                    <div class="checkbox"><label><input type="checkbox" name="tags[]" value="localgrouop" />lokale groep</label></div>
+                    <div classs="checkbox"><label><input type="checkbox" name="tags[]" value="workshop" />werkgroep</label></div>
+                    <div class="checkbox"><label><input type="checkbox" name="tags[]" value="meeting" />ontmoeting</label></div>
             </div>
 
-            <label for="url">Evenement URL (als beschikbaar)</label>
+            <label for="url">Evenement URL (indien beschikbaar)</label>
             <input name="url" value="" type="text" />
 
-            <!--<label for="location">Evenement locatie</label>
+            <!--<label for="location">Locatie van het evenement</label>
             <input name="location" value="" type="text" />-->
 
 
@@ -78,48 +79,48 @@
             <div class="form-group">
             <label for="country">Land<span class="star">*</span></label>        
             <select name="country" class="form-control">
-                            <option value="be">België</option>
-                            <option value="bg">Bulgarije</option>
-                            <option value="dk">Denemarken</option>
-                            <option value="de">Duitsland</option>
-                            <option value="ee">Estland</option>
-                            <option value="fi">Finland</option>
-                            <option value="fr">Frankrijk</option>
-                            <option value="gr">Griekenland</option>
-                            <option value="hu">Hongarije</option>
-                            <option value="ie">Ierland</option>
-                            <option value="it">Italië</option>
-                            <option value="hr">Kroatië</option>
-                            <option value="lv">Letland</option>
-                            <option value="lt">Litouwen</option>
-                            <option value="lu">Luxemburg</option>
-                            <option value="mt">Malta</option>
-                            <option value="nl">Nederland</option>
-                            <option value="at">Oostenrijk</option>
-                            <option value="pl">Polen</option>
-                            <option value="pt">Portugal</option>
-                            <option value="ro">Roemenie</option>
-                            <option value="sk">Slowakije</option>
-                            <option value="si">Slovenië</option>
-                            <option value="es">Spanje</option>
-                            <option value="uk">Verenigd Koninkrijk</option>
-                            <option value="se">Zweden</option>
-                            <option value="other">Ander</option>
+                                <option value="be|België">België</option>
+                                <option value="bg|Bulgarije">Bulgarije</option>
+                                <option value="dk|Denemarken">Denemarken</option>
+                                <option value="de|Duitsland">Duitsland</option>
+                                <option value="ee|Estland">Estland</option>
+                                <option value="fi|Finland">Finland</option>
+                                <option value="fr|Frankrijk">Frankrijk</option>
+                                <option value="gr|Griekenland">Griekenland</option>
+                                <option value="hu|Hongarije">Hongarije</option>
+                                <option value="ie|Ierland">Ierland</option>
+                                <option value="it|Italië">Italië</option>
+                                <option value="hr|Kroatië">Kroatië</option>
+                                <option value="lv|Letland">Letland</option>
+                                <option value="lt|Litouwen">Litouwen</option>
+                                <option value="lu|Luxemburg">Luxemburg</option>
+                                <option value="mt|Malta">Malta</option>
+                                <option value="nl|Nederland">Nederland</option>
+                                <option value="at|Oostenrijk">Oostenrijk</option>
+                                <option value="pl|Polen">Polen</option>
+                                <option value="pt|Portugal">Portugal</option>
+                                <option value="ro|Roemenie">Roemenie</option>
+                                <option value="sk|Slowakije">Slowakije</option>
+                                <option value="si|Slovenië">Slovenië</option>
+                                <option value="es|Spanje">Spanje</option>
+                                <option value="uk|Verenigd Koninkrijk">Verenigd Koninkrijk</option>
+                                <option value="se|Zweden">Zweden</option>
+                                <option value="|buiten Europa">Ander</option>
                     </select>
                     </div>
 
             <!--</fieldset>-->
             <!-- Should help against spam -->
                     
-            <input value="Voeg evenement toe" name="submit" type="submit" />
+            <input value="Voeg een evenement toe" name="submit" type="submit" />
             <p class="help-block"><span class="star">*</span> = required fields</p>
 
         </form>
         
-        <p>Na het invullen van het formulier en het bevestigen met de "Voeg evenement toe"-knop zal er een xml-bestand worden gegenereerd en aan ons worden verzonden. Na goedkeuring zal uw evenement binnen 48 uur worden geüpload zodat het verschijnt op fsfe.org en/of op fsfe.org/events. Wees u ervan bewust dat we alleen FSFE en aan de FSFE-gemeenschap gerelateerde evenementen promoten en dus geen andere gevarieerde Vrije Software-activiteiten (ja, zonder uitzonderingen; hoe belangrijk ze ook mogen zijn).</p> 
+        <p>Na het invullen van het formulier en het bevestigen met de "Voeg een evenement toe"-knop zal er een xml-bestand worden gegenereerd en aan ons worden verzonden. Na goedkeuring zal uw evenement binnen 48 uur worden geüpload zodat het verschijnt op fsfe.org en/of op fsfe.org/events. Wees u ervan bewust dat we alleen FSFE- en aan de FSFE-gemeenschap gerelateerde evenementen promoten en dus geen andere Vrije Software-activiteiten (ja, zonder uitzonderingen; hoe belangrijk ze ook mogen zijn).</p> 
         
         <p>Wees u ervan bewust dat op alle FSFE-evenementen onze <a href="https://fsfe.org/about/codeofconduct">gedragscode</a> van toepassing is, die aan alle deelnemers vriendelijk vraagt om excellent naar elkaar te zijn. Kondig uw evenement alstublieft niet aan als FSFE-evenement als u niet van plan bent onze gedragscode te implementeren.</p>
          
       </body>
-    <translator>André Ockers</translator>
+  <translator>André Ockers</translator>
      </html>

@@ -128,12 +128,10 @@
     <avatar>/about/borchardt/borchardt-avatar.jpg</avatar>
   </person>
 
-  <person id="brooke-smith" avatar="yes" teams="intern">
+  <person id="brooke-smith" avatar="yes" teams="">
     <name>George Brooke-Smith</name>
     <country>GB</country>
     <email>georgebs (at) fsfe (dot) org</email>
-    <employee>full/m</employee>
-    <function>intern/m</function>
     <avatar>/about/brooke-smith/thirdtimelucky.jpg</avatar>
   </person>
 
@@ -341,10 +339,9 @@
       <email>schnouki (at) fsfe (dot) org</email>
   </person>
 
-  <person id="jyrinki" avatar="yes" teams="fi, core">
+  <person id="jyrinki" avatar="yes" teams="">
     <name>Timo Jyrinki</name>
     <country>FI</country>
-    <function country="FI">deputy/m</function>
     <email>mirv (at) fsfe (dot) org</email>
     <link>http://iki.fi/tjyrinki/</link>
     <avatar>/about/jyrinki/jyrinki-avatar.jpg</avatar>
@@ -366,7 +363,7 @@
     <link>http://wiki.fsfe.org/Fellows/the_unconventional</link>
   </person>
 
-  <person id="kekalainen" avatar="yes" teams="fi, core">
+  <person id="kekalainen" avatar="yes" teams="">
     <name>Otto Kekäläinen</name>
     <country>FI</country>
     <function country="FI">coordinator/m</function>

@@ -16,6 +16,19 @@
         <!--<h2>Registreer</h2>-->
 
         <form action="/cgi-bin/registerevent.php" method="POST" class="register_event fsfe-form" enctype="multipart/form-data" role="form">
+          <!-- @TRANSLATORS: there is no need to translate the HTML 
+          attributes of the elements in this form, just the text between 
+          the '>' and '<'. 
+
+          An example:
+
+            <label><input type="checkbox" name="tags[]" value="localgroup" />talk</label>
+
+          can be translated to Spanish
+
+            <label><input type="checkbox" name="tags[]" value="localgroup" />grupo local</label>
+
+          Thank you! -->
           <input name="register_event" type="hidden" />
 
             <!--<fieldset id="register_event">-->
@@ -28,13 +41,55 @@
 
             <p class="help-block">Uw persoonlijke informatie zal nooit worden gedeeld of verkocht. Het wordt alleen gebruikt om contact met u op te nemen als er vragen of problemen zijn.</p>
 
-            <!--<label for="groupname">Naam van de groep</label>
+            <div class="form-group">
+            <label for="lang">Taal van deze evenementregistratie<span class="star">*</span></label>
+            <!-- @Translators: There is no need to translate the list below -->
+            <select id="lang" name="lang" class="form-control" required="required">
+              <option></option>
+              <option value="ar">&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1617;&#1577;</option>
+              <option value="bg">Български</option>
+              <option value="bs">Bosanski</option>
+              <option value="ca">Català</option>
+              <option value="cs">Česky</option>
+              <option value="da">Dansk</option>
+              <option value="de">Deutsch</option>
+              <option value="el">Ελληνικά</option>
+              <option value="en">English</option>
+              <option value="es">Español</option>
+              <option value="et">Eesti</option>
+              <option value="fi">Suomi</option>
+              <option value="fr">Français</option>
+              <option value="hr">Hrvatski</option>
+              <option value="hu">Magyar</option>
+              <option value="it">Italiano</option>
+              <option value="mk">Mакедонски</option>
+              <option value="nb">Norsk (bokmål)</option>
+              <option value="nl">Nederlands</option>
+              <option value="nn">Norsk (nynorsk)</option>
+              <option value="pl">Polski</option>
+              <option value="pt">Português</option>
+              <option value="ro">Română</option>
+              <option value="ru">Русский</option>
+              <option value="sk">Slovenčina</option>
+              <option value="sl">Slovenščina</option>
+              <option value="sq">Shqip</option>
+              <option value="sr">Српски</option>
+              <option value="sv">Svenska</option>
+              <option value="tr">Türkçe</option>
+              <option value="uk">Українська</option>
+              <option value="zh">漢語</option>
+            </select>
+            
+            <p class="help-block">Maak alstublieft de taal duidelijk van de tekst die u zult invoegen in de titel en beschrijving. Dit zal ons team helpen bij het snel en foutloos uploaden van uw evenement. Mocht u een vertaling van uw evenement (hetgeen fantastisch zou zijn!) zou willen aanleveren maak daar dan alstublieft een aparte evenementregistratie van. Dank u!</p>
+            </div>
+
+            <!--<label for="groupname">Groepsnaam</label>
             <input name="groupname" value="" type="text" />-->
 
             <!--<label for="groupurl">Groep URL</label>
             <input name="groupurl" value="" type="text" />-->
 
-            <label for="title" class="required">Naam van het evenement<span class="star">*</span></label>
+            <label for="title" class="required">Titel van het evenement<span class="star">*</span></label>
             <input name="title" value="" required="required" type="text" />
                     <table>
                             <tr>
@@ -43,31 +98,31 @@
                                     <input name="startdate" value="" required="required" type="date" placeholder="YYYY-MM-DD" />
                             </td>
                             <td>
-                                    <label for="enddate" >Einddatum</label>*
+                                    <label for="enddate" >Einddatum</label>
                                     <input name="enddate" value="" type="date" placeholder="YYYY-MM-DD" />
                             </td>
                             </tr>
                     </table>
-            <label for="description" class="required">Beschrijving<span class="star">*</span></label>
+            <label for="description" class="required">Beschrijving (gewoon tekst, geen HTML)<span class="star">*</span></label>
             <textarea name="description" required="required"></textarea>
 
-            <p class="help-block">Maak alstublieft in het kort duidelijk waar uw evenement over gaat, hoe men eraan kan deelnemen en wat deelnemers kunnen verwachten. Als u uw evenement in een andere taal dan Engels registreert, overweeg dan alstublieft om ook een Engelse versie toe te voegen <strong>zodat u er zeker van kunt zijn dat wij het begrijpen</strong>. Wees u er alstublieft ook van bewust dat we (vanwege technische redenen) alleen Engelse evenementen vermelden op onze voorpagina fsfe.org - elke andere taal zal alleen zichtbaar zijn op fsfe.org/events.</p>
+            <p class="help-block">Leg alstublieft in het kort uit waar uw evenement over gaat, hoe men deel kan nemen en wan deelnemers kunnen verwachten. Als u uw evenement in een andere taal dan Engels registreet, overweeg dan alstublieft om ook een Engelse versie te upload.n <strong>om er zeker van te zijn dat we het begrijpen</strong>. Wees er alstublieft bewust van dat we (vanwege technische redenen) alleen Engelstalige evenementen tonen op onze voorpagina fsfe.org - elke andere taal zal alleen zichtbaar zijn op fsfe.org/events.</p>
 
-               <label for="tags">Kies één of meer tags hieronder</label>*
+               <label for="tags">Kies een of meer trefwoorden:</label>*
             
             <div class="checkboxlist">
                     <div class="checkbox"><label><input type="checkbox" name="tags[]" value="talk" />lezing</label></div>
                     <div class="checkbox"><label><input type="checkbox" name="tags[]" value="panel" />panel</label></div>
                     <div class="checkbox"><label><input type="checkbox" name="tags[]" value="infobooth" />infokraam</label></div>
-                    <div class="checkbox"><label><input type="checkbox" name="tags[]" value="localgrouop" />lokale groep</label></div>
-                    <div classs="checkbox"><label><input type="checkbox" name="tags[]" value="workshop" />werkgroep</label></div>
+                    <div class="checkbox"><label><input type="checkbox" name="tags[]" value="localgroup" />lokale groep</label></div>
+                    <div class="checkbox"><label><input type="checkbox" name="tags[]" value="workshop" />werkgroep</label></div>
                     <div class="checkbox"><label><input type="checkbox" name="tags[]" value="meeting" />ontmoeting</label></div>
             </div>
 
             <label for="url">Evenement URL (indien beschikbaar)</label>
             <input name="url" value="" type="text" />
 
-            <!--<label for="location">Locatie van het evenement</label>
+            <!--<label for="location">Evenement locatie</label>
             <input name="location" value="" type="text" />-->
 
 
@@ -77,37 +132,9 @@
             <input name="city" value="" required="required" type="text" />
 
             <div class="form-group">
-            <label for="country">Land<span class="star">*</span></label>        
-            <select name="country" class="form-control">
-                                <option value="be|België">België</option>
-                                <option value="bg|Bulgarije">Bulgarije</option>
-                                <option value="dk|Denemarken">Denemarken</option>
-                                <option value="de|Duitsland">Duitsland</option>
-                                <option value="ee|Estland">Estland</option>
-                                <option value="fi|Finland">Finland</option>
-                                <option value="fr|Frankrijk">Frankrijk</option>
-                                <option value="gr|Griekenland">Griekenland</option>
-                                <option value="hu|Hongarije">Hongarije</option>
-                                <option value="ie|Ierland">Ierland</option>
-                                <option value="it|Italië">Italië</option>
-                                <option value="hr|Kroatië">Kroatië</option>
-                                <option value="lv|Letland">Letland</option>
-                                <option value="lt|Litouwen">Litouwen</option>
-                                <option value="lu|Luxemburg">Luxemburg</option>
-                                <option value="mt|Malta">Malta</option>
-                                <option value="nl|Nederland">Nederland</option>
-                                <option value="at|Oostenrijk">Oostenrijk</option>
-                                <option value="pl|Polen">Polen</option>
-                                <option value="pt|Portugal">Portugal</option>
-                                <option value="ro|Roemenie">Roemenie</option>
-                                <option value="sk|Slowakije">Slowakije</option>
-                                <option value="si|Slovenië">Slovenië</option>
-                                <option value="es|Spanje">Spanje</option>
-                                <option value="uk|Verenigd Koninkrijk">Verenigd Koninkrijk</option>
-                                <option value="se|Zweden">Zweden</option>
-                                <option value="|buiten Europa">Ander</option>
-                    </select>
-                    </div>
+              <label for="country">Land<span class="star">*</span></label>
+              <country-list />
+            </div>
 
             <!--</fieldset>-->
             <!-- Should help against spam -->

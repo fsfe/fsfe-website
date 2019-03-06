@@ -51,7 +51,7 @@ all: d_year.en.xml d_month.en.xml d_day.en.xml
 # -----------------------------------------------------------------------------
 
 # use shell globbing to work around faulty globbing in gnu make
-SOURCEDIRS = $(shell ls -d `sed -rn 's;^(.*/)[^/]*:(\[\]|global)$$;\1;gp' $@`)
+SOURCEDIRS = $(shell ls -d `sed -rn 's;^(.*/)[^/]*:(\[.*\])$$;\1;gp' $@`)
 SOURCEREQS = $(shell ./build/source_globber.sh sourceglobs $@ |sed 's;$$;.??.xml;g' )
 
 all: $(shell find ./ -name '*.sources')
@@ -82,8 +82,11 @@ all: $(INDEXNAMES)
 tags/tagged-%.en.xhtml: tags/tagged.en.xhtml
 	cp $< $@
 
+# We update a tagmap whenever any of the XML files mentioned therein *or* a
+# translation of such an XML file changes. Following that, the matching
+# .sources file is also updated, which causes a rebuild of the taglist page.
 all: $(INDEXSOURCES)
-tags/tagged-%.sources:
+tags/tagged-%.sources: tools/tagmaps/%.map
 	printf '%s:[$*]\n' 'news/*/news' news/generated_xml/ news/nl/nl 'events/*/event' >$@
 	printf 'd_day:[]' >>$@
 
@@ -91,6 +94,7 @@ MAPREQS = $(shell printf '%s ' $(TAGMAP) \
             | sed -r 's;[^ ]+\...\.xml;\n&;g' \
             | grep ' $*' \
             | cut -d' ' -f1 \
+            | sed -r 's;\.en\.xml;.??.xml;' \
            )
 
 all: $(MAPNAMES)

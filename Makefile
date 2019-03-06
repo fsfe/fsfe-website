@@ -51,7 +51,7 @@ all: d_year.en.xml d_month.en.xml d_day.en.xml
 # -----------------------------------------------------------------------------
 
 # use shell globbing to work around faulty globbing in gnu make
-SOURCEDIRS = $(shell sed -rn 's;^(.*/)[^/]*:(\[\]|global)$$;\1;gp' $@ )
+SOURCEDIRS = $(shell ls -d `sed -rn 's;^(.*/)[^/]*:(\[\]|global)$$;\1;gp' $@`)
 SOURCEREQS = $(shell ./build/source_globber.sh sourceglobs $@ |sed 's;$$;.??.xml;g' )
 
 all: $(shell find ./ -name '*.sources')

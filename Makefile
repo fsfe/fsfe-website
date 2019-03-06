@@ -60,7 +60,10 @@ all: $(shell find ./ -name '*.sources')
 # generate tag maps
 # -----------------------------------------------------------------------------
 
-TAGMAP := $(shell find ./ -name '*.xml' \
+# We only have to look at the English files; all translations will have the
+# same tags. This speeds up the process and brings the list below the length
+# limit for a command line (for now).
+TAGMAP := $(shell find ./ -name '*.en.xml' \
              | xargs ./build/source_globber.sh map_tags \
              | sed -r "s;';'\'';g; s;[^ ]+;'&';g;" \
             )

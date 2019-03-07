@@ -47,7 +47,7 @@ echo "* Collecting list of files for each tag"
 
 for xml_file in `find * -name '*.xml' | xargs grep -l '</tag>' | sort`; do
   xsltproc build/xslt/get_tags.xsl "${xml_file}" | while read raw_tag; do
-    tag=`echo "${raw_tag}" | tr -d ' +-/_' | tr '[:upper:]' '[:lower:]'`
+    tag=`echo "${raw_tag}" | tr -d ' +-/:_' | tr '[:upper:]' '[:lower:]'`
     echo ${xml_file} >> "/tmp/tagmaps/${tag}.map"
   done
 done

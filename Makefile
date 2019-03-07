@@ -1,3 +1,16 @@
+# -----------------------------------------------------------------------------
+# Makefile for "premake" step
+# -----------------------------------------------------------------------------
+# This Makefile creates some .xml and xhtml files which serve as source files
+# in the main build run. It is executed in the source directory, before the
+# Makefile for the main build run is constructed and executed.
+#
+# It also touches all the .sources files which refer to added, modified, or
+# deleted .xml files. This way, we avoid that in the main build Makefile each
+# .html file has to list a long and changing list of .xml prerequisites - it is
+# sufficient to just have the .sources file as a prerequisite.
+# -----------------------------------------------------------------------------
+
 .PHONY: all .FORCE
 .FORCE:
 all:
@@ -17,7 +30,7 @@ all: $(SUBDIRS)
 # Handle local menus
 # -----------------------------------------------------------------------------
 
-MENUSOURCES := $(shell find -name '*.xhtml' |xargs grep -l '<localmenu.*</localmenu>' )
+MENUSOURCES := $(shell find -name '*.xhtml' | xargs grep -l '<localmenu.*</localmenu>' )
 
 localmenuinfo.en.xml: ./tools/buildmenu.xsl $(MENUSOURCES)
 	{ printf '<localmenuset>'; \
@@ -47,65 +60,48 @@ d_year.en.xml: $(if $(findstring  $(YEAR),$(shell cat d_year.en.xml)),,.FORCE)
 all: d_year.en.xml d_month.en.xml d_day.en.xml
 
 # -----------------------------------------------------------------------------
-# Update .sources files
+# Generate tag maps
 # -----------------------------------------------------------------------------
 
-# use shell globbing to work around faulty globbing in gnu make
-SOURCEDIRS = $(shell ls -d `sed -rn 's;^(.*/)[^/]*:(\[.*\])$$;\1;gp' $@`)
-SOURCEREQS = $(shell ./build/source_globber.sh sourceglobs $@ |sed 's;$$;.??.xml;g' )
+# Generation of tag maps is handled in an external script which generates
+# tools/tagmaps/*.map, tags/tagged-*.en.xhtml, and tags/tagged-*.sources. The
+# tag map files cannot be targets in this Makefile, because list of map files
+# is not known when the Makefile starts - some new tags might be created when
+# generating the .xml files in the news/generated_xml directory.
+tagmaps: $(SUBDIRS)
+	@build/make_tagmaps.sh
 
-all: $(shell find ./ -name '*.sources')
+all: tagmaps
 
-# -----------------------------------------------------------------------------
-# generate tag maps
-# -----------------------------------------------------------------------------
-
-# We only have to look at the English files; all translations will have the
-# same tags. This speeds up the process and brings the list below the length
-# limit for a command line (for now).
-TAGMAP := $(shell find ./ -name '*.en.xml' \
-             | xargs ./build/source_globber.sh map_tags \
-             | sed -r "s;';'\'';g; s;[^ ]+;'&';g;" \
-            )
-
-TAGNAMES := $(shell printf '%s\n' $(TAGMAP) \
-              | sed '/\...\.xml$$/d' \
-              | grep -vE '[\$%/:()]' \
-              | sort -u \
-             )
-
-MAPNAMES := $(shell printf 'tools/tagmaps/%s.map ' $(TAGNAMES))
-INDEXNAMES := $(shell printf 'tags/tagged-%s.en.xhtml ' $(TAGNAMES))
-INDEXSOURCES := $(shell printf 'tags/tagged-%s.sources ' $(TAGNAMES))
-
-all: $(INDEXNAMES)
-tags/tagged-%.en.xhtml: tags/tagged.en.xhtml
-	cp $< $@
-
-# We update a tagmap whenever any of the XML files mentioned therein *or* a
-# translation of such an XML file changes. Following that, the matching
-# .sources file is also updated, which causes a rebuild of the taglist page.
-all: $(INDEXSOURCES)
-tags/tagged-%.sources: tools/tagmaps/%.map
-	printf '%s:[$*]\n' 'news/*/news' news/generated_xml/ news/nl/nl 'events/*/event' >$@
-	printf 'd_day:[]' >>$@
-
-MAPREQS = $(shell printf '%s ' $(TAGMAP) \
-            | sed -r 's;[^ ]+\...\.xml;\n&;g' \
-            | grep ' $*' \
-            | cut -d' ' -f1 \
-            | sed -r 's;\.en\.xml;.??.xml;' \
-           )
-
-all: $(MAPNAMES)
+.PHONY: tagmaps
 
 # -----------------------------------------------------------------------------
-# Second Expansion rules
+# Touch .sources files for which the web pages must be rebuilt
 # -----------------------------------------------------------------------------
+
+# Secondary expansion means that the SOURCEDIRS and SOURCEREQS variables will
+# be executed once for each target, and it allows us to use the variable $@
+# within the expression.
 .SECONDEXPANSION:
 
-%.sources: $$(SOURCEDIRS) $$(SOURCEREQS) | $(MAPNAMES) $(INDEXSOURCES)
+# This variable contains all the directories listed in the .sources file. It is
+# added to the prerequisites so that the removal of a file from such a
+# directory also triggers a rebuild of the web pages which have included the
+# now removed file. However, we explicitly exclude "." (the root source
+# directory) because that also contains a lot of other files.
+SOURCEDIRS = $(shell ls -d `sed -rn 's;^(.*/)[^/]*:(\[.*\])$$;\1;gp' $@` | grep -v '^\.$$')
+
+# This variable contains all the actual .xml files covered by the .sources
+# file. It obviously is a prerequisite because a page has to be rebuilt if any
+# of the .xml files included into it has changed.
+SOURCEREQS = $(shell ./build/source_globber.sh sourceglobs $@ | sed 's;$$;.??.xml;g' )
+
+# We simply touch the .sources file. The corresponding .xhtml files in all
+# languages depend on the .sources file, so all languages will be rebuilt in
+# the main build run.
+%.sources: $$(SOURCEDIRS) $$(SOURCEREQS) | tagmaps
 	touch $@
 
-tools/tagmaps/%.map: $$(MAPREQS) | $(SUBDIRS)
-	printf '%s\n' $^ > $@
+# The .sources files in the tags directory are already handled by
+# make_tagmaps.sh
+all: $(shell find * -name '*.sources' -not -path 'tags/*')

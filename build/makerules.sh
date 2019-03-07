@@ -232,9 +232,6 @@ PROCFLAGS = --source "$basedir" --statusdir "$statusdir" --domain "$domain"
 INPUTDIR = $input
 OUTPUTDIR = $output
 
-# cannot store find results in variable because it will result in too many arguments for the shell
-# \${INPUTDIR}/tagmap: \$(shell find "$basedir" -name '*.[a-z][a-z].xml')
-# 	find "$basedir" -name '*.[a-z][a-z].xml' |xargs \${PGLOBBER} \${PROCFLAGS} map_tags >\${INPUTDIR}/tagmap
 MakeHead
 
   forcelog Make_globs;      Make_globs="$(logname Make_globs)"

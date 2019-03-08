@@ -62,7 +62,7 @@ echo "* Checking for updated tags"
 for map_file in `ls /tmp/tagmaps`; do
   if ! cmp --quiet "/tmp/tagmaps/${map_file}" "tools/tagmaps/${map_file}"; then
     tag=`basename "${map_file}" .map`
-    echo "  * Tag ${tag} has been updated."
+    echo "*   Tag ${tag} has been updated."
     cp "/tmp/tagmaps/${map_file}" "tools/tagmaps/${map_file}"
     cp "tags/tagged.en.xhtml" "tags/tagged-${tag}.en.xhtml"
     echo "events/*/events:[${tag}]" > "tags/tagged-${tag}.sources"
@@ -82,7 +82,7 @@ echo "* Checking for deleted tags"
 for map_file in `ls tools/tagmaps | grep '\.map'`; do
   if [ ! -f "/tmp/tagmaps/${map_file}" ]; then
     tag=`basename "${map_file}" .map`
-    echo "  * Tag ${tag} has been deleted."
+    echo "*   Tag ${tag} has been deleted."
     rm "tools/tagmaps/${map_file}"
     rm "tags/tagged-${tag}.en.xhtml"
     rm "tags/tagged-${tag}.sources"

@@ -65,9 +65,9 @@ all: d_year.en.xml d_month.en.xml d_day.en.xml
 
 # Generation of tag maps is handled in an external script which generates
 # tools/tagmaps/*.map, tags/tagged-*.en.xhtml, and tags/tagged-*.sources. The
-# tag map files cannot be targets in this Makefile, because list of map files
-# is not known when the Makefile starts - some new tags might be created when
-# generating the .xml files in the news/generated_xml directory.
+# tag map files cannot be targets in this Makefile, because the list of map
+# files is not known when the Makefile starts - some new tags might be created
+# when generating the .xml files in the news/generated_xml directory.
 tagmaps: $(SUBDIRS)
 	@build/make_tagmaps.sh
 

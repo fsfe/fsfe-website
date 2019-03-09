@@ -336,6 +336,7 @@ SOURCE_DST_FILES := \$(patsubst \$(INPUTDIR)/%,\$(OUTPUTDIR)/source/%,\$(HTML_SR
 ALL_TARGETS := \$(HTML_DST_FILES) \$(HTML_DST_LINKS) \$(INDEX_DST_LINKS) \$(RSS_DST_FILES) \$(ICS_DST_FILES) \$(COPY_DST_FILES) \$(SOURCE_DST_FILES)
 
 .PHONY: clean
+all: clean
 clean:
 	@echo "Cleaning up excess files"
 	\$(file >manifest)
@@ -346,8 +347,6 @@ clean:
 	  | diff - manifest.sorted \
 	  | sed -rn 's;^< ;;p' \
 	  | while read file; do echo "* Deleting \$\${file}"; rm "\$\${file}"; done
-
-all: clean
 
 # -----------------------------------------------------------------------------
 

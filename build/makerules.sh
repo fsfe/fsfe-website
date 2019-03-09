@@ -227,10 +227,129 @@ tree_maker(){
   cat <<MakeHead
 .PHONY: all
 PROCESSOR = "$basedir/build/process_file.sh"
-PGLOBBER = "$basedir/build/source_globber.sh"
 PROCFLAGS = --source "$basedir" --statusdir "$statusdir" --domain "$domain"
 INPUTDIR = $input
 OUTPUTDIR = $output
+LANGUAGES = $(echo $(get_languages))
+
+# -----------------------------------------------------------------------------
+# Build .html files from .xhtml sources
+# -----------------------------------------------------------------------------
+
+# All .xhtml source files
+HTML_SRC_FILES := \$(shell find \$(INPUTDIR) -name '*.??.xhtml')
+
+# All basenames of .xhtml source files (without .<lang>.xhtml ending)
+# Note: \$(sort ...) is used to remove duplicates
+HTML_SRC_BASES := \$(sort \$(basename \$(basename \$(HTML_SRC_FILES))))
+
+# All directories containing .xhtml source files
+HTML_SRC_DIRS := \$(sort \$(dir \$(HTML_SRC_BASES)))
+
+# The same as above, but moved to the output directory
+HTML_DST_BASES := \$(patsubst \$(INPUTDIR)/%,\$(OUTPUTDIR)/%,\$(HTML_SRC_BASES))
+
+# List of .<lang>.html files to build
+HTML_DST_FILES := \$(foreach base,\$(HTML_DST_BASES),\$(foreach lang,\$(LANGUAGES),\$(base).\$(lang).html))
+
+# -----------------------------------------------------------------------------
+# Create symlinks from file.<lang>.html to file.html.<lang>
+# -----------------------------------------------------------------------------
+
+# List of .html.<lang> symlinks to create
+HTML_DST_LINKS := \$(foreach base,\$(HTML_DST_BASES),\$(foreach lang,\$(LANGUAGES),\$(base).html.\$(lang)))
+
+# -----------------------------------------------------------------------------
+# Create index.* symlinks
+# -----------------------------------------------------------------------------
+
+# All .xhtml source files with the same name as their parent directory
+INDEX_SRC_FILES := \$(wildcard \$(foreach directory,\$(HTML_SRC_DIRS),\$(directory)\$(notdir \$(directory:/=)).??.xhtml))
+
+# All basenames of .xhtml source files with the same name as their parent
+# directory
+INDEX_SRC_BASES := \$(sort \$(basename \$(basename \$(INDEX_SRC_FILES))))
+
+# All directories containing .xhtml source files with the same name as their
+# parent directory (that is, all directories in which index files should be
+# created)
+INDEX_SRC_DIRS := \$(dir \$(INDEX_SRC_BASES))
+
+# The same as above, but moved to the output directory
+INDEX_DST_DIRS := \$(patsubst \$(INPUTDIR)/%,\$(OUTPUTDIR)/%,\$(INDEX_SRC_DIRS))
+
+# List of index.<lang>.html and index.html.<lang> symlinks to create
+INDEX_DST_LINKS := \$(foreach base,\$(INDEX_DST_DIRS),\$(foreach lang,\$(LANGUAGES),\$(base)index.\$(lang).html \$(base)index.html.\$(lang)))
+
+# -----------------------------------------------------------------------------
+# Build .rss files from .xhtml sources
+# -----------------------------------------------------------------------------
+
+# All .rss.xsl scripts which can create .rss output
+RSS_SRC_SCRIPTS := \$(shell find \$(INPUTDIR) -name '*.rss.xsl')
+
+# All basenames of .xhtml source files from which .rss files should be built
+RSS_SRC_BASES := \$(sort \$(basename \$(basename \$(RSS_SRC_SCRIPTS))))
+
+# The same as above, but moved to the output directory
+RSS_DST_BASES := \$(patsubst \$(INPUTDIR)/%,\$(OUTPUTDIR)/%,\$(RSS_SRC_BASES))
+
+# List of .<lang>.rss files to build
+RSS_DST_FILES := \$(foreach base,\$(RSS_DST_BASES),\$(foreach lang,\$(LANGUAGES),\$(base).\$(lang).rss))
+
+# -----------------------------------------------------------------------------
+# Build .ics files from .xhtml sources
+# -----------------------------------------------------------------------------
+
+# All .ics.xsl scripts which can create .ics output
+ICS_SRC_SCRIPTS := \$(shell find \$(INPUTDIR) -name '*.ics.xsl')
+
+# All basenames of .xhtml source files from which .ics files should be built
+ICS_SRC_BASES := \$(sort \$(basename \$(basename \$(ICS_SRC_SCRIPTS))))
+
+# The same as above, but moved to the output directory
+ICS_DST_BASES := \$(patsubst \$(INPUTDIR)/%,\$(OUTPUTDIR)/%,\$(ICS_SRC_BASES))
+
+# List of .<lang>.ics files to build
+ICS_DST_FILES := \$(foreach base,\$(ICS_DST_BASES),\$(foreach lang,\$(LANGUAGES),\$(base).\$(lang).ics))
+
+# -----------------------------------------------------------------------------
+# Copy images, docments etc
+# -----------------------------------------------------------------------------
+
+# All files which should just be copied over
+COPY_SRC_FILES := \$(shell find \$(INPUTDIR) -type f -not -path '\$(INPUTDIR)/.git/*' -not -name 'Makefile' -not -name '*.sources' -not -name '*.xhtml' -not -name '*.xml' -not -name '*.xsl')
+
+# The same as above, but moved to the output directory
+COPY_DST_FILES := \$(patsubst \$(INPUTDIR)/%,\$(OUTPUTDIR)/%,\$(COPY_SRC_FILES))
+
+# -----------------------------------------------------------------------------
+# Copy .xhtml files to "source" directory in target directory tree
+# -----------------------------------------------------------------------------
+
+SOURCE_DST_FILES := \$(patsubst \$(INPUTDIR)/%,\$(OUTPUTDIR)/source/%,\$(HTML_SRC_FILES))
+
+# -----------------------------------------------------------------------------
+# Clean up excess files in target directory
+# -----------------------------------------------------------------------------
+
+ALL_TARGETS := \$(HTML_DST_FILES) \$(HTML_DST_LINKS) \$(INDEX_DST_LINKS) \$(RSS_DST_FILES) \$(ICS_DST_FILES) \$(COPY_DST_FILES) \$(SOURCE_DST_FILES)
+
+.PHONY: clean
+clean:
+	@echo "Cleaning up excess files"
+	\$(file >manifest)
+	\$(foreach filename,\$(ALL_TARGETS),\$(file >>manifest,\$(filename)))
+	@sort manifest > manifest.sorted
+	@find -L \$(OUTPUTDIR) -type f \
+	  | sort \
+	  | diff - manifest.sorted \
+	  | sed -rn 's;^< ;;p' \
+	  | while read file; do echo "* Deleting \$\${file}"; rm "\$\${file}"; done
+
+all: clean
+
+# -----------------------------------------------------------------------------
 
 MakeHead
 

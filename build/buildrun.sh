@@ -15,19 +15,11 @@ build_into(){
 
   forcelog Makefile
 
-  validate_caches
-
-  make -C "$basedir" \
-  | t_logstatus premake
+  make -C "$basedir" | t_logstatus premake
 
   dir_maker "$basedir" "$stagedir"
 
-  tree_maker "$basedir" "$stagedir" "$@" \
-  | logstatus Makefile \
-  | build_manifest \
-  | logstatus manifest \
-  | remove_orphans "$stagedir" \
-  | logstatus removed
+  tree_maker "$basedir" "$stagedir" "$@" > "$(logname Makefile)"
 
   (
     # Make sure that the following pipe exits with a nonzero exit code if the
@@ -40,12 +32,10 @@ build_into(){
   ) || exit 1
 
   if [ "$stagedir" != "$target" ]; then
-    rsync -av --del "$stagedir/" "$target/" \
-    | t_logstatus stagesync
-
+    rsync -av --del "$stagedir/" "$target/" | t_logstatus stagesync
   fi
 
-  date +%s |logstatus end_time
+  date +%s | logstatus end_time
   if [ -n "$statusdir" ]; then
     cd "$statusdir"
     ./index.cgi |tail -n+3 >status_$(date +%s).html

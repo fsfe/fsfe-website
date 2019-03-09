@@ -48,7 +48,6 @@ t_makexhtml=$(stat -c %Y "Make_xhtml" ||echo 0)
 t_manifest=$(stat -c %Y "manifest" ||echo 0)
 t_makerun=$(stat -c %Y "buildlog" ||echo 0)
 t_errors=$(stat -c %Y "lasterror" ||echo 0)
-t_removed=$(stat -c %Y "removed" ||echo 0)
 t_stagesync=$(stat -c %Y "stagesync" ||echo 0)
 end_time=$(cat "end_time" || echo 0)
 duration=$(($end_time - $start_time))
@@ -246,17 +245,6 @@ label  {
     fi)
 
     <h2>File Manifest</h2>$(web_tab Manifesttab "Number of files: $(wc -l manifest |cut -d\  -f1)" "<pre>$(tail manifest |htmlcat)</pre><a href=\"manifest\">view full</a>")
-
-    <h2>Files removed</h2>$(
-    if [ $start_time -lt $t_removed -a -s "removed" ]; then
-      web_tab Removedtab "$(wc -l removed |cut -f1 -d\ )" "<pre>$(htmlcat removed)</pre>"
-    elif [ $start_time -lt $t_removed ]; then
-      web_tab Removedtab "none" ""
-    elif [ -z ${term_status} ]; then
-      web_tab Removedtab "waiting..." ""
-    else
-      web_tab Removedtab "none" ""
-    fi)
 
     <h2>Files updated</h2>$(
     if [ ${start_time} -lt ${t_stagesync} -a -s stagesync ]; then

@@ -226,6 +226,7 @@ tree_maker(){
 
   cat <<MakeHead
 .PHONY: all
+.DELETE_ON_ERROR:
 PROCESSOR = "$basedir/build/process_file.sh"
 PROCFLAGS = --source "$basedir" --statusdir "$statusdir" --domain "$domain"
 INPUTDIR = $input
@@ -333,19 +334,20 @@ SOURCE_DST_FILES := \$(patsubst \$(INPUTDIR)/%,\$(OUTPUTDIR)/source/%,\$(HTML_SR
 # Clean up excess files in target directory
 # -----------------------------------------------------------------------------
 
-ALL_TARGETS := \$(HTML_DST_FILES) \$(HTML_DST_LINKS) \$(INDEX_DST_LINKS) \$(RSS_DST_FILES) \$(ICS_DST_FILES) \$(COPY_DST_FILES) \$(SOURCE_DST_FILES)
+ALL_DST := \$(HTML_DST_FILES) \$(HTML_DST_LINKS) \$(INDEX_DST_LINKS) \$(RSS_DST_FILES) \$(ICS_DST_FILES) \$(COPY_DST_FILES) \$(SOURCE_DST_FILES)
 
 .PHONY: clean
 all: clean
 clean:
 	@echo "Cleaning up excess files"
-	\$(file >manifest)
-	\$(foreach filename,\$(ALL_TARGETS),\$(file >>manifest,\$(filename)))
+	@# Write all destination filenames into "manifest" file, one per line
+	\$(file >manifest,)
+	\$(foreach filename,\$(ALL_DST),\$(file >>manifest,\$(filename)))
 	@sort manifest > manifest.sorted
-	@find -L \$(OUTPUTDIR) -type f \
-	  | sort \
-	  | diff - manifest.sorted \
-	  | sed -rn 's;^< ;;p' \
+	@find -L \$(OUTPUTDIR) -type f \\
+	  | sort \\
+	  | diff - manifest.sorted \\
+	  | sed -rn 's;^< ;;p' \\
 	  | while read file; do echo "* Deleting \$\${file}"; rm "\$\${file}"; done
 
 # -----------------------------------------------------------------------------

@@ -11,6 +11,7 @@ build_into(){
 
   [ -n "$statusdir" ] && cp "$basedir/build/status.html.sh" "$statusdir/index.cgi"
   printf %s "$start_time" |logstatus start_time
+  [ -s "$(logname lasterror)" ] && truncate -s 0 "$(logname lasterror)"
   [ -s "$(logname debug)" ] && truncate -s 0 "$(logname debug)"
 
   forcelog Makefile

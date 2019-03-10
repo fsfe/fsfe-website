@@ -47,11 +47,10 @@ t_makexslt=$(stat -c %Y "Make_xslt" ||echo 0)
 t_makexhtml=$(stat -c %Y "Make_xhtml" ||echo 0)
 t_manifest=$(stat -c %Y "manifest" ||echo 0)
 t_makerun=$(stat -c %Y "buildlog" ||echo 0)
-t_errors=$(stat -c %Y "lasterror" ||echo 0)
 t_stagesync=$(stat -c %Y "stagesync" ||echo 0)
 end_time=$(cat "end_time" || echo 0)
 duration=$(($end_time - $start_time))
-term_status=$(if [ "$duration" -gt 0 -a lasterror -nt start_time ]; then
+term_status=$(if [ "$duration" -gt 0 -a -f lasterror ]; then
                 echo Error
               elif [ "$duration" -gt 0 ]; then
                 echo Success
@@ -238,7 +237,7 @@ label  {
     fi)
 
     <h2>Errors</h2>$(
-    if [ $start_time -lt $t_errors ]; then
+    if [ -f lasterror ]; then
       web_tab Errortab "There were errors" "<pre>$(htmlcat lasterror)</pre>"
     else
       web_tab Errortab "none" ""

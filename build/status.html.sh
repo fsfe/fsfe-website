@@ -41,8 +41,6 @@ t_svnupdate=$(stat -c %Y "SVNlatest" ||echo 0)
 t_gitupdate=$(stat -c %Y "GITlatest" ||echo 0)
 t_premake=$(stat -c %Y "premake" ||echo 0)
 t_makefile=$(stat -c %Y "Makefile" ||echo 0)
-t_makecopy=$(stat -c %Y "Make_copy" ||echo 0)
-t_makesourcecopy=$(stat -c %Y "Make_sourcecopy" ||echo 0)
 t_makexslt=$(stat -c %Y "Make_xslt" ||echo 0)
 t_makexhtml=$(stat -c %Y "Make_xhtml" ||echo 0)
 t_manifest=$(stat -c %Y "manifest" ||echo 0)
@@ -220,8 +218,6 @@ label  {
     if [ $start_time -lt $t_makefile ]; then
       web_tab Makefiletab "Generation time: $(duration $(($t_makefile - $t_premake)) )" "
       <h3>Header</h3>$(web_tab Makeheadertab "" "<pre>$(head Makefile |htmlcat)</pre>")
-      <h3>Copy rules</h3>$(web_tab Makecopytab "Generation time: $(duration $(($t_makecopy - $t_premake)))" "<pre>$(tail Make_copy |htmlcat)</pre>")
-      <h3>Source copy rules</h3>$(web_tab Makescopytab "Generation time: $(duration $(($t_makesourcecopy - $t_premake)))" "<pre>$(tail Make_sourcecopy |htmlcat)</pre>")
       <h3>XSLT rules</h3>$(web_tab Makexslttab "Generation time: $(duration $(($t_makexslt - $t_premake)))" "<pre>$(tail Make_xslt |htmlcat)</pre>")
       <h3>XHTML rules</h3>$(web_tab Makexhtmltab "Generation time: $(duration $(($t_makexhtml - $t_premake)))" "<pre>$(tail Make_xhtml |htmlcat)</pre>")
       <h3>Full Makefile</h3>$(web_tab Makefilefull "<a href="Makefile">view</a>" "")"

@@ -66,8 +66,8 @@ case "$command" in
                      svn_build_into
                    fi ;;
   build_into)      build_into ;;
-  process_file)    process_file "$workfile" "$processor" "$olang" ;;
-  build_xmlstream) build_xmlstream "$(get_shortname "$workfile")" "$(get_language "$workfile")" "$olang" ;;
+  process_file)    process_file "$workfile" "$processor" ;;
+  build_xmlstream) build_xmlstream "$(get_shortname "$workfile")" "$(get_language "$workfile")" ;;
   tree_maker)      tree_maker "$tree" "$target" ;;
   sourceglobs)     sourceglobs "$sourcesfile" ;;
   lang_sources)    lang_sources "$sourceglobfile" "$lang" ;;

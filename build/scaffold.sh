@@ -13,8 +13,8 @@ build_xmlstream(){
   # a single xhtml page to be built
   shortname="$1"
   lang="$2"
-  olang="$3"
 
+  olang="$(echo "${shortname}".[a-z][a-z].xhtml "${shortname}".[e]n.xhtml |sed -rn 's;^.*\.([a-z]{2})\.xhtml.*$;\1;p')"
   dirname="${shortname%/*}/"
   texts_xml=$(get_textsfile $lang)
   fundraising_xml=$(get_fundraisingfile $lang)

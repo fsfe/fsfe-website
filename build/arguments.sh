@@ -41,7 +41,6 @@ if [ -z "$inc_arguments" ]; then
       build_xmlstream)
         command="$1$command"
         [ "$#" -gt 0 ] && shift 1 && workfile="$1"
-        [ "$#" -gt 0 ] && shift 1 && olang="$1"
         ;;
       tree_maker)
         command="$1$command"
@@ -52,7 +51,6 @@ if [ -z "$inc_arguments" ]; then
         command="$1$command"
         [ "$#" -gt 0 ] && shift 1 && workfile="$1"
         [ "$#" -gt 0 ] && shift 1 && processor="$1"
-        [ "$#" -gt 0 ] && shift 1 && olang="$1"
         ;;
       sourceglobs)
         command="$1$command"
@@ -80,7 +78,6 @@ if [ -z "$inc_arguments" ]; then
     [ "$#" -gt 0 ] && shift 1
   done
   
-  olang="${olang:-en}"
   tree="${tree:-$basedir}"
   stagedir="${stagedir:-$target}"
   today="${today:-$(date +%F)}"

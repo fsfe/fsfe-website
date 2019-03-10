@@ -7,7 +7,6 @@ inc_processor=true
 process_file(){
   infile="$1"
   processor="$2"
-  olang="$3"
 
   shortname=$(get_shortname "$infile")
   lang=$(get_language "$infile")
@@ -17,7 +16,7 @@ process_file(){
   # of the commands fails.
   set -o pipefail
 
-  build_xmlstream "$shortname" "$lang" "$olang" \
+  build_xmlstream "$shortname" "$lang" \
   | xsltproc "$processor" - \
   | sed -r ':X; N; $!bX;
       s;<[\r\n\t ]*(a|link)([\r\n\t ][^>]*)?[\r\n\t ]href="(https?:)?//'"$domain"'/([^"]*)";<\1\2 href="/\4";gI

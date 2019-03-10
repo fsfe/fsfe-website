@@ -1,6 +1,6 @@
-news/*/news:[front-page]
-news/generated_xml/:[front-page]
-events/*/event:[front-page]
+news/*/news:[frontpage]
+news/*/.news:[frontpage]
+events/*/event:[frontpage]
 tools/frontpage/:[]
 d_day:[]
 

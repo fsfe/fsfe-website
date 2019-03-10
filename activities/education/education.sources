@@ -10,6 +10,6 @@ campaigns/*/project:[]
 contact/local:[]
 
 news/*/news:[education]
-news/generated_xml/:[education]
+news/*/.news:[education]
 events/*/event:[education]
 d_day:[]

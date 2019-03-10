@@ -1,3 +1,4 @@
-news/*/news:[Routers]
-news/generated_xml/:[Routers]
-news/nl/nl:[Routers]
+news/*/news:[routers]
+news/*/.news:[routers]
+news/nl/nl:[routers]
+news/nl/.nl:[routers]

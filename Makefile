@@ -67,7 +67,7 @@ all: d_year.en.xml d_month.en.xml d_day.en.xml
 # tools/tagmaps/*.map, tags/tagged-*.en.xhtml, and tags/tagged-*.sources. The
 # tag map files cannot be targets in this Makefile, because the list of map
 # files is not known when the Makefile starts - some new tags might be created
-# when generating the .xml files in the news/generated_xml directory.
+# when generating the .xml files in the news/* subdirectories.
 tagmaps: $(SUBDIRS)
 	@build/make_tagmaps.sh
 

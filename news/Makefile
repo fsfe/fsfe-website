@@ -1,34 +1,42 @@
-.PHONY: all .FORCE
-.FORCE:
-all:
+# -----------------------------------------------------------------------------
+# Makefile to generate includeable .xml files from .xhtml news pages
+# -----------------------------------------------------------------------------
+
+.PHONY: all
 
 # -----------------------------------------------------------------------------
-# remove xml files where original xhtml does not exist anymore
+# Remove .xml files where original .xhtml file does not exist anymore
 # -----------------------------------------------------------------------------
 # note the reversal of target <-> prerequisite relationship
 # make will execute thew command for all xhtml files (targets) that
 # do not exist, in doing so it will not make the target, but rather
 # remove the xml file that generated it
 
-REMOVALS := $(subst ___,/,$(patsubst ./generated_xml/%.xml,../%.xhtml,$(wildcard ./generated_xml/*.xml)))
-../%.xhtml:
-	rm generated_xml/$(subst /,___,$*).xml
+# All currently existing generated .xml files
+GENERATED_XML := $(wildcard */.*.xml)
 
-all: $(REMOVALS)
+# List of corresponding source files (foo/.bar.xx.xml -> foo/bar.xx.xhtml)
+GENERATED_XML_SOURCES := $(patsubst %.xml,%.xhtml,$(subst /.,/,$(GENERATED_XML)))
+
+all: $(GENERATED_XML_SOURCES)
+%.xhtml:
+	@echo '* Removing $(subst /,/.,$*).xml'
+	@rm '$(subst /,/.,$*).xml'
 
 # -----------------------------------------------------------------------------
-# build includable xml files from all xhtml files that contain news
+# Generate .xml files from .xhtml files
 # -----------------------------------------------------------------------------
-XMLNAMES := $(shell find ../ -name '*.xhtml' \
-              | xargs grep -l "<html newsdate" \
-              | sed -r 's;/;___;g; s;^\.\.___(.+)\.xhtml$$;./generated_xml/\1.xml;;' \
-             )
-
-XMLSOURCE = ../$(subst ___,/,$*).xhtml
-
-all: $(XMLNAMES)
 
 .SECONDEXPANSION:
 
-generated_xml/%.xml: $$(XMLSOURCE) #xhtml2xml.xsl
-	xsltproc --stringparam link /$(subst ___,/,$(basename $*)).html xhtml2xml.xsl $< > $@
+# All existing .xhtml files
+XHTML := $(shell ls */*.??.xhtml | xargs grep -l '<html newsdate')
+
+# List of .xml files to generate
+XML := $(patsubst %.xhtml,%.xml,$(subst /,/.,$(XHTML)))
+
+all: $(XML)
+XMLSOURCE = $(patsubst %.xml,%.xhtml,$(subst /.,/,$@))
+%.xml: $$(XMLSOURCE) xhtml2xml.xsl
+	@echo '* Generating $@'
+	@xsltproc --stringparam link '/news/$(basename $(basename $<)).html' xhtml2xml.xsl '$<' > '$@'

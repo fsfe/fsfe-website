@@ -65,10 +65,11 @@ for map_file in `ls /tmp/tagmaps`; do
     echo "*   Tag ${tag} has been updated."
     cp "/tmp/tagmaps/${map_file}" "tools/tagmaps/${map_file}"
     cp "tags/tagged.en.xhtml" "tags/tagged-${tag}.en.xhtml"
-    echo "events/*/events:[${tag}]" > "tags/tagged-${tag}.sources"
     echo "news/*/news:[${tag}]" >> "tags/tagged-${tag}.sources"
-    echo "news/generated_xml/:[${tag}]" >> "tags/tagged-${tag}.sources"
+    echo "news/*/.news:[${tag}]" >> "tags/tagged-${tag}.sources"
     echo "news/nl/nl:[${tag}]" >> "tags/tagged-${tag}.sources"
+    echo "news/nl/.nl:[${tag}]" >> "tags/tagged-${tag}.sources"
+    echo "events/*/events:[${tag}]" > "tags/tagged-${tag}.sources"
     echo "d_day:[]" >> "tags/tagged-${tag}.sources"
   fi
 done

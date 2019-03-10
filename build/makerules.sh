@@ -231,6 +231,7 @@ PROCESSOR = "$basedir/build/process_file.sh"
 PROCFLAGS = --source "$basedir" --statusdir "$statusdir" --domain "$domain"
 INPUTDIR = $input
 OUTPUTDIR = $output
+STATUSDIR = $statusdir
 LANGUAGES = $(echo $(get_languages))
 
 # -----------------------------------------------------------------------------
@@ -342,11 +343,11 @@ clean:
 	@echo "Cleaning up excess files"
 	@# Write all destination filenames into "manifest" file, one per line
 	\$(file >manifest,)
-	\$(foreach filename,\$(ALL_DST),\$(file >>manifest,\$(filename)))
-	@sort manifest > manifest.sorted
+        \$(foreach filename,\$(ALL_DST),\$(file >>$(STATUSDIR)/manifest,\$(filename)))
+        @sort $(STATUSDIR)/manifest > $(STATUSDIR)/manifest.sorted
 	@find -L \$(OUTPUTDIR) -type f \\
 	  | sort \\
-	  | diff - manifest.sorted \\
+          | diff - $(STATUSDIR)/manifest.sorted \\
 	  | sed -rn 's;^< ;;p' \\
 	  | while read file; do echo "* Deleting \$\${file}"; rm "\$\${file}"; done
 

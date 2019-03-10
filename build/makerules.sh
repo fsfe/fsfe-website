@@ -342,9 +342,9 @@ all: clean
 clean:
 	@echo "Cleaning up excess files"
 	@# Write all destination filenames into "manifest" file, one per line
-	\$(file >manifest,)
-        \$(foreach filename,\$(ALL_DST),\$(file >>\$(STATUSDIR)/manifest,\$(filename)))
-        @sort \$(STATUSDIR)/manifest > \$(STATUSDIR)/manifest.sorted
+	\$(file >manifest)
+	\$(foreach filename,\$(ALL_DST),\$(file >>\$(STATUSDIR)/manifest,\$(filename)))
+	@sort \$(STATUSDIR)/manifest > \$(STATUSDIR)/manifest.sorted
 	@find -L \$(OUTPUTDIR) -type f \\
 	  | sort \\
           | diff - \$(STATUSDIR)/manifest.sorted \\

@@ -343,11 +343,11 @@ clean:
 	@echo "Cleaning up excess files"
 	@# Write all destination filenames into "manifest" file, one per line
 	\$(file >manifest,)
-        \$(foreach filename,\$(ALL_DST),\$(file >>$(STATUSDIR)/manifest,\$(filename)))
-        @sort $(STATUSDIR)/manifest > $(STATUSDIR)/manifest.sorted
+        \$(foreach filename,\$(ALL_DST),\$(file >>\$(STATUSDIR)/manifest,\$(filename)))
+        @sort \$(STATUSDIR)/manifest > \$(STATUSDIR)/manifest.sorted
 	@find -L \$(OUTPUTDIR) -type f \\
 	  | sort \\
-          | diff - $(STATUSDIR)/manifest.sorted \\
+          | diff - \$(STATUSDIR)/manifest.sorted \\
 	  | sed -rn 's;^< ;;p' \\
 	  | while read file; do echo "* Deleting \$\${file}"; rm "\$\${file}"; done
 

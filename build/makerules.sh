@@ -46,9 +46,6 @@ xhtml_maker(){
   shortbase="${shortname##*/}"
   processor="$(get_processor "$shortname")"
 
-  [ -f "$shortname".rss.xsl ] && bool_rss=true || bool_rss=false
-  [ -f "$shortname".ics.xsl ] && bool_ics=true || bool_ics=false
-
   [ -f "${shortname}.sources" ] && sourcesfile="${shortname}.sources" || unset sourcesfile
 
   # For speed considerations: avoid all disk I/O in this loop
@@ -195,8 +192,8 @@ INDEX_SRC_DIRS := \$(dir \$(INDEX_SRC_BASES))
 # The same as above, but moved to the output directory
 INDEX_DST_DIRS := \$(patsubst \$(INPUTDIR)/%,\$(OUTPUTDIR)/%,\$(INDEX_SRC_DIRS))
 
-# List of index.<lang>.html and index.html.<lang> symlinks to create
-INDEX_DST_LINKS := \$(foreach base,\$(INDEX_DST_DIRS),\$(foreach lang,\$(LANGUAGES),\$(base)index.\$(lang).html \$(base)index.html.\$(lang)))
+# List of index.<lang>.html symlinks to create
+INDEX_DST_LINKS := \$(foreach base,\$(INDEX_DST_DIRS),\$(foreach lang,\$(LANGUAGES),\$(base)index.\$(lang).html))
 
 all: \$(INDEX_DST_LINKS)
 EOF
@@ -254,7 +251,7 @@ EOF
     cat<<EOF
 \$(OUTPUTDIR)/%.${lang}.rss: \$(INPUTDIR)/%.*.xhtml \$(INPUTDIR)/%.sources \$(INPUTDIR)/%.rss.xsl \$(INPUTDIR)/tools/menu-global.xml $(get_textsfile "en") $(get_fundraisingfile "${lang}")
 	@echo "* Building \$*.${lang}.rss"
-	@\${PROCESSOR} \${PROCFLAGS} process_file \$(INPUTDIR)/%.${lang}.xhtml \$(INPUTDIR)/%.rss.xsl > \$@
+	@\${PROCESSOR} \${PROCFLAGS} process_file \$(INPUTDIR)/\$*.${lang}.xhtml \$(INPUTDIR)/\$*.rss.xsl > \$@
 EOF
   done
 
@@ -283,7 +280,7 @@ EOF
     cat<<EOF
 \$(OUTPUTDIR)/%.${lang}.ics: \$(INPUTDIR)/%.*.xhtml \$(INPUTDIR)/%.sources \$(INPUTDIR)/%.ics.xsl \$(INPUTDIR)/tools/menu-global.xml $(get_textsfile "en") $(get_fundraisingfile "${lang}")
 	@echo "* Building \$*.${lang}.ics"
-	@\${PROCESSOR} \${PROCFLAGS} process_file \$(INPUTDIR)/%.${lang}.xhtml \$(INPUTDIR)/%.ics.xsl > \$@
+	@\${PROCESSOR} \${PROCFLAGS} process_file \$(INPUTDIR)/\$*.${lang}.xhtml \$(INPUTDIR)/\$*.ics.xsl > \$@
 EOF
   done
 

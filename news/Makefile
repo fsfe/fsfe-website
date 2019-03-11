@@ -20,7 +20,7 @@ GENERATED_XML_SOURCES := $(patsubst %.xml,%.xhtml,$(subst /.,/,$(GENERATED_XML))
 
 all: $(GENERATED_XML_SOURCES)
 %.xhtml:
-	@echo '* Removing $(subst /,/.,$*).xml'
+	@echo '*   Removing $(subst /,/.,$*).xml'
 	@rm '$(subst /,/.,$*).xml'
 
 # -----------------------------------------------------------------------------
@@ -38,5 +38,5 @@ XML := $(patsubst %.xhtml,%.xml,$(subst /,/.,$(XHTML)))
 all: $(XML)
 XMLSOURCE = $(patsubst %.xml,%.xhtml,$(subst /.,/,$@))
 %.xml: $$(XMLSOURCE) xhtml2xml.xsl
-	@echo '* Generating $@'
+	@echo '*   Generating $@'
 	@xsltproc --stringparam link '/news/$(basename $(basename $<)).html' xhtml2xml.xsl '$<' > '$@'

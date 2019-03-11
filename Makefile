@@ -18,7 +18,8 @@ SUBDIRS := $(shell find */* -name "Makefile" | xargs dirname)
 
 all: $(SUBDIRS)
 $(SUBDIRS): .FORCE
-	$(MAKE) -j -k -C $@ || true
+	@echo "* Preparing subdirectory $*"
+	@$(MAKE) -j -k -C $@
 
 # -----------------------------------------------------------------------------
 # Handle local menus

@@ -7,46 +7,48 @@ inc_buildrun=true
 [ -z "$inc_misc" ] && . "$basedir/build/misc.sh"
 
 build_into(){
+  set -o pipefail
+
+  printf %s "$start_time" > "$(logname start_time)"
+
   ncpu="$(grep -c ^processor /proc/cpuinfo)"
 
   [ -n "$statusdir" ] && cp "$basedir/build/status.html.sh" "$statusdir/index.cgi"
-  printf %s "$start_time" |logstatus start_time
+
   [ -f "$(logname lasterror)" ] && rm "$(logname lasterror)"
   [ -f "$(logname debug)" ] && rm "$(logname debug)"
 
   forcelog Makefile
 
-  (
-    # Make sure that the following pipe exits with a nonzero exit code if the
-    # make run fails.
-    set -o pipefail
-
-    make -C "$basedir" | t_logstatus premake
-  ) || exit 1
+  {
+    echo "Starting phase 1" \
+    && make -C "$basedir" --no-print-directory 2>&1 \
+    && echo "Finishing phase 1" \
+    || die "Error during phase 1"
+  } | t_logstatus phase_1 || exit 1
 
   dir_maker "$basedir" "$stagedir" || exit 1
 
-  tree_maker "$basedir" "$stagedir" > "$(logname Makefile)" || exit 1
+  {
+    tree_maker "$basedir" "$stagedir" 2>&1 \
+    || die "Error during phase 2 Makefile generation"
+  } > "$(logname Makefile)" || exit 1
 
-  (
-    # Make sure that the following pipe exits with a nonzero exit code if the
-    # make run fails.
-    set -o pipefail
-
-    if ! make -j $ncpu -f "$(logname Makefile)" all 2>&1; then
-      die "See buildlog for errors reported by Make"
-    fi | t_logstatus buildlog
-  ) || exit 1
+  {
+    echo "Starting phase 2" \
+    && make -j $ncpu -f "$(logname Makefile)" 2>&1 \
+    && echo "Finishing phase 2" \
+    || die "Error during phase 2"
+  } | t_logstatus phase_2 || exit 1
 
   if [ "$stagedir" != "$target" ]; then
     rsync -av --del "$stagedir/" "$target/" | t_logstatus stagesync
   fi
 
-  date +%s | logstatus end_time
+  date +%s > "$(logname end_time)"
+
   if [ -n "$statusdir" ]; then
-    cd "$statusdir"
-    ./index.cgi |tail -n+3 >status_$(date +%s).html
-    cd -
+    ( cd "$statusdir"; ./index.cgi | tail -n+3 > status_$(date +%s).html )
   fi
 }
 

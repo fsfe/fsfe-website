@@ -41,8 +41,6 @@ t_svnupdate=$(stat -c %Y "SVNlatest" ||echo 0)
 t_gitupdate=$(stat -c %Y "GITlatest" ||echo 0)
 t_premake=$(stat -c %Y "premake" ||echo 0)
 t_makefile=$(stat -c %Y "Makefile" ||echo 0)
-t_makexslt=$(stat -c %Y "Make_xslt" ||echo 0)
-t_makexhtml=$(stat -c %Y "Make_xhtml" ||echo 0)
 t_manifest=$(stat -c %Y "manifest" ||echo 0)
 t_makerun=$(stat -c %Y "buildlog" ||echo 0)
 t_stagesync=$(stat -c %Y "stagesync" ||echo 0)
@@ -203,7 +201,7 @@ label  {
       web_tab VCS_tab "Unconditional build, changes ignored" ""
     fi)
 
-    <h2>Premake</h2>$(
+    <h2>Phase 1</h2>$(
     if [ $start_time -lt $t_premake -a $start_time -lt $t_gitupdate ]; then
       web_tab Premaketab "Premake run time $(duration $(($t_premake - $t_gitupdate)))" "<pre>$(tail premake |htmlcat)</pre><a href="premake">full log</a>"
     elif [ $start_time -lt $t_premake -a $start_time -lt $t_svnupdate ]; then
@@ -214,18 +212,15 @@ label  {
       web_tab Premaketab "waiting..." ""
     fi)
 
-    <h2>Makefile</h2>$(
+    <h2>Phase 2 Makefile</h2>$(
     if [ $start_time -lt $t_makefile ]; then
       web_tab Makefiletab "Generation time: $(duration $(($t_makefile - $t_premake)) )" "
-      <h3>Header</h3>$(web_tab Makeheadertab "" "<pre>$(head Makefile |htmlcat)</pre>")
-      <h3>XSLT rules</h3>$(web_tab Makexslttab "Generation time: $(duration $(($t_makexslt - $t_premake)))" "<pre>$(tail Make_xslt |htmlcat)</pre>")
-      <h3>XHTML rules</h3>$(web_tab Makexhtmltab "Generation time: $(duration $(($t_makexhtml - $t_premake)))" "<pre>$(tail Make_xhtml |htmlcat)</pre>")
-      <h3>Full Makefile</h3>$(web_tab Makefilefull "<a href="Makefile">view</a>" "")"
+      "<a href="Makefile">view</a>"
    else
       web_tab Makefiletab "waiting..." ""
    fi)
 
-    <h2>Makerun</h2>$(
+    <h2>Phase 2</h2>$(
     if [ $start_time -lt $t_makerun ]; then
       web_tab Makeruntab "Build time: $(duration $(($t_makerun - $t_makefile)) )" "<pre>$(tail buildlog |htmlcat)</pre><a href=\"buildlog\">view full</a>"
     else
@@ -239,7 +234,13 @@ label  {
       web_tab Errortab "none" ""
     fi)
 
-    <h2>File Manifest</h2>$(web_tab Manifesttab "Number of files: $(wc -l manifest |cut -d\  -f1)" "<pre>$(tail manifest |htmlcat)</pre><a href=\"manifest\">view full</a>")
+    <h2>File Manifest</h2>$(
+    if [ $start_time -lt $t_manifest ]; then
+      web_tab Manifesttab "Number of files: $(wc -l manifest | cut -d\  -f1)" "
+      <a href=\"manifest\">view</a>"
+    else
+      web_tab Makeruntab "waiting..." ""
+    fi)
 
     <h2>Files updated</h2>$(
     if [ ${start_time} -lt ${t_stagesync} -a -s stagesync ]; then

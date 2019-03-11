@@ -4,11 +4,6 @@
 # This Makefile creates some .xml and xhtml files which serve as source files
 # in the main build run. It is executed in the source directory, before the
 # Makefile for the main build run is constructed and executed.
-#
-# It also touches all the .sources files which refer to added, modified, or
-# deleted .xml files. This way, we avoid that in the main build Makefile each
-# .html file has to list a long and changing list of .xml prerequisites - it is
-# sufficient to just have the .sources file as a prerequisite.
 # -----------------------------------------------------------------------------
 
 .PHONY: all .FORCE
@@ -56,49 +51,16 @@ d_year.en.xml: $(if $(findstring  $(YEAR),$(shell cat d_year.en.xml)),,.FORCE)
 	printf %s\\n  '$(YEAR)' >$@
 
 # -----------------------------------------------------------------------------
-# Generate tag maps
+# Generate XML filelists
 # -----------------------------------------------------------------------------
 
-# Generation of tag maps is handled in an external script which generates
-# tools/tagmaps/*.map, tags/tagged-*.en.xhtml, and tags/tagged-*.sources. The
-# tag map files cannot be targets in this Makefile, because the list of map
-# files is not known when the Makefile starts - some new tags might be created
-# when generating the .xml files in the news/* subdirectories.
+# Generation of XML filelists is handled in an external script which generates
+# all .xmllist and the tags/tagged-*.en.xhtml files. These files cannot be
+# targets in this Makefile, because the list of tags is not known when the
+# Makefile starts - some new tags might be created when generating the .xml
+# files in the news/* subdirectories.
 
-.PHONY: tagmaps
-all: tagmaps
-tagmaps: $(SUBDIRS)
-	@build/make_tagmaps.sh
-
-
-# -----------------------------------------------------------------------------
-# Touch .sources files for which the web pages must be rebuilt
-# -----------------------------------------------------------------------------
-
-# The .sources files in the tags directory are already handled by
-# make_tagmaps.sh
-SOURCES_FILES := $(shell find * -name '*.sources' -not -path 'tags/*')
-
-# Secondary expansion means that the SOURCEDIRS and SOURCEREQS variables will
-# be executed once for each target, and it allows us to use the variable $@
-# within the expression.
-.SECONDEXPANSION:
-
-# This variable contains all the directories listed in the .sources file. It is
-# added to the prerequisites so that the removal of a file from such a
-# directory also triggers a rebuild of the web pages which have included the
-# now removed file. However, we explicitly exclude "." (the root source
-# directory) because that also contains a lot of other files.
-SOURCES_DIRS = $(shell ls -d `sed -rn 's;^(.*/)[^/]*:(\[.*\])$$;\1;gp' $@` | grep -v '^\.$$')
-
-# This variable contains all the actual .xml files covered by the .sources
-# file. It obviously is a prerequisite because a page has to be rebuilt if any
-# of the .xml files included into it has changed.
-SOURCES_REQS = $(shell ./build/source_globber.sh sourceglobs $@ | sed 's;$$;.??.xml;g' )
-
-# We simply touch the .sources file. The corresponding .xhtml files in all
-# languages depend on the .sources file, so all languages will be rebuilt in
-# the main build run.
-all: $(SOURCES_FILES)
-%.sources: $$(SOURCES_DIRS) $$(SOURCES_REQS) | tagmaps
-	touch $@
+.PHONY: xmllists
+all: xmllists
+xmllists: $(SUBDIRS)
+	@build/make_xmllists.sh

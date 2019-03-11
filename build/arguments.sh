@@ -52,20 +52,6 @@ if [ -z "$inc_arguments" ]; then
         [ "$#" -gt 0 ] && shift 1 && workfile="$1"
         [ "$#" -gt 0 ] && shift 1 && processor="$1"
         ;;
-      sourceglobs)
-        command="$1$command"
-        [ "$#" -gt 0 ] && shift 1 && sourcesfile="$1"
-        ;;
-      lang_sources)
-        command="$1$command"
-        [ "$#" -gt 0 ] && shift 1 && sourceglobfile="$1"
-        [ "$#" -gt 0 ] && shift 1 && lang="$1"
-        ;;
-      cast_refglobs)
-        command="$1$command"
-        [ "$#" -gt 0 ] && shift 1 && globfile="$1"
-        [ "$#" -gt 0 ] && shift 1 && reffile="$1"
-        ;;
       wakeup_news)
         command="$1$command"
         [ "$#" -gt 0 ] && shift 1 && today="$1"
@@ -99,9 +85,6 @@ if [ -z "$inc_arguments" ]; then
     process_file)    [ -z "$workfile" ]    && die "Need at least input file" ;;
     build_xmlstream) [ -z "$workfile" ]    && die "Missing xhtml file name" ;;
     tree_maker)      [ -z "$target" ]      && die "Missing target location" ;;
-    sourceglobs)     [ -z "$sourcesfile" ] && die "Missing .sources file" ;;
-    lang_sources)    [ -z "$sourceglobfile" -o -z "$lang" ] && die "Need source globfile and language" ;;
-    cast_refglobs)   [ -z "$globfile" -o -z "$reffile" ] && die "Need globfile and reffile" ;;
     wakeup_news)     true;;
     *help*)          print_help; exit 0 ;;
     *)               die "Urecognised command or no command given" ;;

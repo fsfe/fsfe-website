@@ -59,7 +59,7 @@ build_xmlstream(){
 	    \$Author: automatic \$
 	  </timestamp>
 	  <set>
-	    $(auto_sources "${shortname}.sources" "$lang")
+	    $(auto_sources "${shortname}" "$lang")
 	  </set>
 	
 	  $(include_xml "$infile")

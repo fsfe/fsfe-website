@@ -5,7 +5,7 @@
 <!-- ====================================================================== -->
 <!-- This XSL script processes all <tag> elements of an XML file and        -->
 <!-- outputs the content of each of these elements, separated by newlines.  -->
-<!-- It is used by the script build/make_tagmaps.sh.                        -->
+<!-- It is used by the script build/make_xmllists.sh.                       -->
 <!-- ====================================================================== -->
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">

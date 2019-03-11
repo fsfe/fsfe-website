@@ -69,8 +69,5 @@ case "$command" in
   process_file)    process_file "$workfile" "$processor" ;;
   build_xmlstream) build_xmlstream "$(get_shortname "$workfile")" "$(get_language "$workfile")" ;;
   tree_maker)      tree_maker "$tree" "$target" ;;
-  sourceglobs)     sourceglobs "$sourcesfile" ;;
-  lang_sources)    lang_sources "$sourceglobfile" "$lang" ;;
-  cast_refglobs)   cast_refglobs "$globfile" "$reffile" ;;
   wakeup_news)     wakeup_news "$today" ;;
 esac

@@ -45,8 +45,9 @@ xhtml_maker(){
   filedir="${shortname%/*}"
   shortbase="${shortname##*/}"
   processor="$(get_processor "$shortname")"
+  list_file="`dirname ${shortname}`/.`basename ${shortname}`.xmllist"
 
-  [ -f "${shortname}.sources" ] && sourcesfile="${shortname}.sources" || unset sourcesfile
+  [ -f "${list_file}" ] && xmllist="${list_file}" || unset xmllist
 
   # For speed considerations: avoid all disk I/O in this loop
   for lang in $(get_languages); do
@@ -62,7 +63,7 @@ xhtml_maker(){
 
     cat <<MakeEND
 all: $(mes "$outfile")
-$(mes "$outfile"): $(mes "$depfile" "$processor" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" "$sourcesfile")
+$(mes "$outfile"): $(mes "$depfile" "$processor" "$textsen" "$textsfile" "$fundraisingfile" "$menufile" "$xmllist")
 	\${PROCESSOR} \${PROCFLAGS} process_file "${infile}" "$(mio "$processor")" >"$outfile" || { rm $outfile; exit 1; }
 MakeEND
   done
@@ -249,7 +250,7 @@ EOF
 
   for lang in ${languages}; do
     cat<<EOF
-\$(OUTPUTDIR)/%.${lang}.rss: \$(INPUTDIR)/%.*.xhtml \$(INPUTDIR)/%.sources \$(INPUTDIR)/%.rss.xsl \$(INPUTDIR)/tools/menu-global.xml $(get_textsfile "en") $(get_fundraisingfile "${lang}")
+\$(OUTPUTDIR)/%.${lang}.rss: \$(INPUTDIR)/%.*.xhtml \$(INPUTDIR)/.%.xmllist \$(INPUTDIR)/%.rss.xsl \$(INPUTDIR)/tools/menu-global.xml $(get_textsfile "en") $(get_fundraisingfile "${lang}")
 	@echo "* Building \$*.${lang}.rss"
 	@\${PROCESSOR} \${PROCFLAGS} process_file \$(INPUTDIR)/\$*.${lang}.xhtml \$(INPUTDIR)/\$*.rss.xsl > \$@
 EOF
@@ -278,7 +279,7 @@ EOF
 
   for lang in ${languages}; do
     cat<<EOF
-\$(OUTPUTDIR)/%.${lang}.ics: \$(INPUTDIR)/%.*.xhtml \$(INPUTDIR)/%.sources \$(INPUTDIR)/%.ics.xsl \$(INPUTDIR)/tools/menu-global.xml $(get_textsfile "en") $(get_fundraisingfile "${lang}")
+\$(OUTPUTDIR)/%.${lang}.ics: \$(INPUTDIR)/%.*.xhtml \$(INPUTDIR)/.%.xmllist \$(INPUTDIR)/%.ics.xsl \$(INPUTDIR)/tools/menu-global.xml $(get_textsfile "en") $(get_fundraisingfile "${lang}")
 	@echo "* Building \$*.${lang}.ics"
 	@\${PROCESSOR} \${PROCFLAGS} process_file \$(INPUTDIR)/\$*.${lang}.xhtml \$(INPUTDIR)/\$*.ics.xsl > \$@
 EOF
@@ -291,13 +292,13 @@ EOF
 # -----------------------------------------------------------------------------
 
 # All files which should just be copied over
-COPY_SRC_FILES := \$(shell find \$(INPUTDIR) -type f -not -path '\$(INPUTDIR)/.git/*' -not -name 'Makefile' -not -name '*.sources' -not -name '*.xhtml' -not -name '*.xml' -not -name '*.xsl')
+COPY_SRC_FILES := \$(shell find \$(INPUTDIR) -type f -not -path '\$(INPUTDIR)/.git/*' -not -name 'Makefile' -not -name '*.sources' -not -name "*.xmllist" -not -name '*.xhtml' -not -name '*.xml' -not -name '*.xsl')
 
 # The same as above, but moved to the output directory
 COPY_DST_FILES := \$(patsubst \$(INPUTDIR)/%,\$(OUTPUTDIR)/%,\$(COPY_SRC_FILES))
 
 all: \$(COPY_DST_FILES)
-\$(COPY_DST_FILEST): \$(OUTPUTDIR)/%: \$(INPUTDIR)/%
+\$(COPY_DST_FILES): \$(OUTPUTDIR)/%: \$(INPUTDIR)/%
 	@echo "* Copying file \$*"
 	@cp \$< \$@
 
@@ -310,7 +311,7 @@ SOURCE_DST_FILES := \$(patsubst \$(INPUTDIR)/%,\$(OUTPUTDIR)/source/%,\$(HTML_SR
 all: \$(SOURCE_DST_FILES)
 \$(SOURCE_DST_FILES): \$(OUTPUTDIR)/source/%: \$(INPUTDIR)/%
 	@echo "* Copying source \$*"
-	cp \$< \$@
+	@cp \$< \$@
 
 # -----------------------------------------------------------------------------
 # Clean up excess files in target directory

@@ -18,8 +18,6 @@ build_into(){
   [ -f "$(logname lasterror)" ] && rm "$(logname lasterror)"
   [ -f "$(logname debug)" ] && rm "$(logname debug)"
 
-  forcelog Makefile
-
   {
     echo "Starting phase 1" \
     && make -C "$basedir" --no-print-directory 2>&1 \
@@ -28,6 +26,8 @@ build_into(){
   } | t_logstatus phase_1 || exit 1
 
   dir_maker "$basedir" "$stagedir" || exit 1
+
+  forcelog Makefile
 
   {
     tree_maker "$basedir" "$stagedir" 2>&1 \

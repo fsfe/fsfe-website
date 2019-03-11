@@ -16,7 +16,13 @@ build_into(){
 
   forcelog Makefile
 
-  make -C "$basedir" | t_logstatus premake
+  (
+    # Make sure that the following pipe exits with a nonzero exit code if the
+    # make run fails.
+    set -o pipefail
+
+    make -C "$basedir" | t_logstatus premake
+  ) || exit 1
 
   dir_maker "$basedir" "$stagedir"
 

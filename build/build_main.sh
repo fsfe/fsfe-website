@@ -38,7 +38,7 @@ buildpids=$(
   | egrep "[s]h ${0} .*" \
   | wc -l
 )
-if [ $command = "build_into" -o $command = "git_build_into" -o $command = "svn_build_into" ] && [ "$buildpids" -gt 2 ]; then
+if [ $command = "build_into" -o $command = "git_build_into" ] && [ "$buildpids" -gt 2 ]; then
   debug "build script is already running"
   exit 1
 fi
@@ -58,12 +58,6 @@ case "$command" in
                      build_into
                    else
                      git_build_into
-                   fi ;;
-  svn_build_into)  if [ "${statusdir}/full_build" -nt "${statusdir}/index.cgi" ]; then
-                     debug "discovered flag file, performing full build"
-                     build_into
-                   else
-                     svn_build_into
                    fi ;;
   build_into)      build_into ;;
   process_file)    process_file "$workfile" "$processor" ;;

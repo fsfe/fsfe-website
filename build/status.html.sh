@@ -200,54 +200,51 @@ label  {
 
     <h2>Phase 1</h2>$(
     if [ $start_time -lt $t_phase_1 -a $start_time -lt $t_gitupdate ]; then
-      web_tab Premaketab "Premake run time $(duration $(($t_phase_1 - $t_gitupdate)))" "<pre>$(tail phase_1 |htmlcat)</pre><a href=\"phase_1\">full log</a>"
+      web_tab phase-1 "Build time: $(duration $(($t_phase_1 - $t_gitupdate)))" "<pre>$(tail phase_1 |htmlcat)</pre><a href=\"phase_1\">full log</a>"
     elif [ $start_time -lt $t_phase_1 ]; then
-      web_tab Premaketab "Premake run time $(duration $(($t_phase_1 - $start_time)))" "<pre>$(tail phase_1 |htmlcat)</pre><a href=\"phase_1\">full log</a>"
+      web_tab phase-1 "Build time: $(duration $(($t_phase_1 - $start_time)))" "<pre>$(tail phase_1 |htmlcat)</pre><a href=\"phase_1\">full log</a>"
     else
-      web_tab Premaketab "waiting..." ""
+      web_tab phase-1 "waiting..." ""
     fi)
 
     <h2>Phase 2 Makefile</h2>$(
     if [ $start_time -lt $t_makefile ]; then
-      web_tab Makefiletab "Generation time: $(duration $(($t_makefile - $t_phase_1)) )" \
+      web_tab makefile "Build time: $(duration $(($t_makefile - $t_phase_1)) )" \
       "<a href=\"Makefile\">view</a>"
    else
-      web_tab Makefiletab "waiting..." ""
+      web_tab makefile "waiting..." ""
    fi)
 
     <h2>Phase 2</h2>$(
     if [ $start_time -lt $t_phase_2 ]; then
-      web_tab Makeruntab "Build time: $(duration $(($t_phase_2 - $t_makefile)) )" "<pre>$(tail phase_2 |htmlcat)</pre><a href=\"phase_2\">view full</a>"
+      web_tab phase-2 "Build time: $(duration $(($t_phase_2 - $t_makefile)) )" "<pre>$(tail phase_2 |htmlcat)</pre><a href=\"phase_2\">view full</a>"
     else
-      web_tab Makeruntab "waiting..." ""
+      web_tab phase-2 "waiting..." ""
     fi)
 
-    <h2>File Manifest</h2>$(
-    if [ $start_time -lt $t_manifest ]; then
-      web_tab Manifesttab "Number of files: $(wc -l manifest | cut -d\  -f1)" "
-      <a href=\"manifest\">view</a>"
-    else
-      web_tab Manifesttab "waiting..." ""
-    fi)
-
-    <h2>Files updated</h2>$(
+    <h2>Target update</h2>$(
     if [ ${start_time} -lt ${t_stagesync} -a -s stagesync ]; then
-      web_tab Updatedtab "Updated $(( $(wc -l stagesync |cut -f1 -d\ ) - 4 )) files" "<pre>$(htmlcat stagesync)</pre>"
+      web_tab stagesync "Updated $(( $(wc -l stagesync |cut -f1 -d\ ) - 4 )) files" "<pre>$(htmlcat stagesync)</pre>"
     elif [ -z ${term_status} ]; then
-      web_tab Updatedtab "waiting..." ""
+      web_tab stagesync "waiting..." ""
     else
-      web_tab Updatedtab "-" ""
+      web_tab stagesync "-" ""
     fi)
     
     <h2>Errors</h2>$(
     if [ -f lasterror ]; then
-      web_tab Errortab "There were errors" "<pre>$(htmlcat lasterror)</pre>"
+      web_tab errors "There were errors" "<pre>$(htmlcat lasterror)</pre>"
     else
-      web_tab Errortab "none" ""
+      web_tab errors "none" ""
+    fi)
+
+    <h2>File Manifest</h2>$(
+    if [ $start_time -lt $t_manifest ]; then
+      web_tab manifest "Number of files: $(wc -l manifest | cut -d\  -f1)" "
+      <a href=\"manifest\">view</a>"
+    else
+      web_tab manifest "waiting..." ""
     fi)
   </body>
 </html>
-
 HTML_END
-
-# vi:set filetype=html:

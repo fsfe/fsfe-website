@@ -38,7 +38,7 @@ mkdir /tmp/tagmaps
 
 echo "* Generating tag maps"
 
-for xml_file in `find * -name '*.xml' | xargs grep -l '</tag>' | sort`; do
+for xml_file in `find * -name '*.??.xml' | xargs grep -l '</tag>' | sort`; do
   xsltproc "build/xslt/get_tags.xsl" "${xml_file}" | while read raw_tag; do
     tag=`echo "${raw_tag}" | tr -d ' +-/:_' | tr '[:upper:]' '[:lower:]'`
     echo ${xml_file} | sed -r 's;\...\.xml$;;' >> "/tmp/tagmaps/${tag}"
@@ -85,7 +85,7 @@ rm -rf /tmp/tagmaps
 # Update .xmllist files for .sources
 # -----------------------------------------------------------------------------
 
-all_xml="`find * -name '*.xml' | sed -r 's;\...\.xml$;;' | sort -u`"
+all_xml="`find * -name '*.??.xml' | sed -r 's;\...\.xml$;;' | sort -u`"
 
 for source_file in `find * -name '*.sources' | sort`; do
   cat ${source_file} | while read line; do
@@ -114,4 +114,23 @@ for source_file in `find * -name '*.sources' | sort`; do
   fi
 
   rm -f /tmp/xmllist
+done
+
+# -----------------------------------------------------------------------------
+# Touch all .xmllist files where one of the contained files has changed
+# -----------------------------------------------------------------------------
+
+for list_file in `find * -name '.*.xmllist' | sort`; do
+  must_touch="no"
+  for pattern in `cat "${list_file}"`; do
+    for filename in `ls ${pattern}.??.xml`; do
+      if [ "${filename}" -nt "${list_file}" ]; then
+        must_touch="yes"
+      fi
+    done
+  done
+  if [ "${must_touch}" == "yes" ]; then
+    echo "* Touching ${list_file}"
+    touch "${list_file}"
+  fi
 done

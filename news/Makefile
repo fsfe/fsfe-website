@@ -1,11 +1,50 @@
 # -----------------------------------------------------------------------------
-# Makefile to generate includeable .xml files from .xhtml news pages
+# Makefile for FSFE website build, preparation for news subdirectory
 # -----------------------------------------------------------------------------
 
 .PHONY: all
+.SECONDEXPANSION:
 
 # -----------------------------------------------------------------------------
-# Remove .xml files where original .xhtml file does not exist anymore
+# Copy news archive template to each of the years
+# -----------------------------------------------------------------------------
+
+# All years for which a subdirectory exists
+ARCH_YEARS := $(sort $(wildcard [0-9][0-9][0-9][0-9]))
+
+# No archive for the current year
+ARCH_YEARS := $(filter-out $(lastword $(ARCH_YEARS)),$(ARCH_YEARS))
+
+# Languages in which the template exists
+ARCH_LANGS := $(suffix $(basename $(wildcard archive-template.??.xhtml)))
+
+# .xhtml files to generate
+ARCH_XHTML := $(foreach year,$(ARCH_YEARS),$(foreach lang,$(ARCH_LANGS),$(year)/$(year)$(lang).xhtml))
+
+all: $(ARCH_XHTML)
+$(ARCH_XHTML): %.xhtml: archive-template$$(suffix $$*).xhtml
+	@echo "*   Updating $@"
+	@# $(dir $@) returns YYYY/, we abuse the slash for closing the sed command
+	@sed 's/:YYYY:/$(dir $@)g' $< > $@
+
+# .sources files to generate
+ARCH_SOURCES := $(foreach year,$(ARCH_YEARS),$(year)/$(year).sources)
+
+all: $(ARCH_SOURCES)
+$(ARCH_SOURCES): %.sources:
+	@echo "*   Creating $@"
+	@echo "news/$(dir $@)news-*:[]\nnews/$(dir $@).news-*:[]\nlocalmenuinfo:[]\n" > $@
+
+# .xsl files to generate
+ARCH_XSL := $(foreach year,$(ARCH_YEARS),$(year)/$(year).xsl)
+
+all: $(ARCH_XSL)
+$(ARCH_XSL): %.xsl: news.xsl
+	@echo "*   Creating $@"
+	@sed -r 's/(import href=")/\1..\//; s/(\.\.\/about)/..\/\1/' $< > $@
+
+# -----------------------------------------------------------------------------
+# Remove generated .xml files where original .xhtml file does not exist anymore
 # -----------------------------------------------------------------------------
 # note the reversal of target <-> prerequisite relationship
 # make will execute thew command for all xhtml files (targets) that
@@ -26,8 +65,6 @@ all: $(GENERATED_XML_SOURCES)
 # -----------------------------------------------------------------------------
 # Generate .xml files from .xhtml files
 # -----------------------------------------------------------------------------
-
-.SECONDEXPANSION:
 
 # All existing .xhtml files
 XHTML := $(shell ls */*.??.xhtml | xargs grep -l '<html newsdate')

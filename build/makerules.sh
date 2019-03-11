@@ -210,10 +210,23 @@ EOF
 # -----------------------------------------------------------------------------
 
 # All files which should just be copied over
-COPY_SRC_FILES := \$(shell find \$(INPUTDIR) -type f -not -path '\$(INPUTDIR)/.git/*' -not -name 'Makefile' -not -name '*.sources' -not -name "*.xmllist" -not -name '*.xhtml' -not -name '*.xml' -not -name '*.xsl')
+COPY_SRC_FILES := \$(shell find \$(INPUTDIR) -type f \
+  -not -path '\$(INPUTDIR)/.git/*' \
+  -not -path '\$(INPUTDIR)/build/*' \
+  -not -path '\$(INPUTDIR)/tools/*' \
+  -not -name '.drone.yml' \
+  -not -name '.gitignore' \
+  -not -name 'README*' \
+  -not -name 'Makefile' \
+  -not -name '*.sources' \
+  -not -name "*.xmllist" \
+  -not -name '*.xhtml' \
+  -not -name '*.xml' \
+  -not -name '*.xsl' \
+)
 
 # The same as above, but moved to the output directory
-COPY_DST_FILES := \$(patsubst \$(INPUTDIR)/%,\$(OUTPUTDIR)/%,\$(COPY_SRC_FILES))
+COPY_DST_FILES := \$(sort \$(patsubst \$(INPUTDIR)/%,\$(OUTPUTDIR)/%,\$(COPY_SRC_FILES)))
 
 all: \$(COPY_DST_FILES)
 \$(COPY_DST_FILES): \$(OUTPUTDIR)/%: \$(INPUTDIR)/%
@@ -224,7 +237,7 @@ all: \$(COPY_DST_FILES)
 # Copy .xhtml files to "source" directory in target directory tree
 # -----------------------------------------------------------------------------
 
-SOURCE_DST_FILES := \$(patsubst \$(INPUTDIR)/%,\$(OUTPUTDIR)/source/%,\$(HTML_SRC_FILES))
+SOURCE_DST_FILES := \$(sort \$(patsubst \$(INPUTDIR)/%,\$(OUTPUTDIR)/source/%,\$(HTML_SRC_FILES)))
 
 all: \$(SOURCE_DST_FILES)
 \$(SOURCE_DST_FILES): \$(OUTPUTDIR)/source/%: \$(INPUTDIR)/%

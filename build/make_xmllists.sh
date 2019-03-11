@@ -38,14 +38,14 @@ mkdir /tmp/tagmaps
 
 echo "* Generating tag maps"
 
-for xml_file in `find * -name '*.??.xml' | xargs grep -l '</tag>' | sort`; do
+for xml_file in $(find * -name '*.??.xml' | xargs grep -l '</tag>' | sort); do
   xsltproc "build/xslt/get_tags.xsl" "${xml_file}" | while read raw_tag; do
-    tag=`echo "${raw_tag}" | tr -d ' +-/:_' | tr '[:upper:]' '[:lower:]'`
-    echo ${xml_file} | sed -r 's;\...\.xml$;;' >> "/tmp/tagmaps/${tag}"
+    tag=$(echo "${raw_tag}" | tr -d ' +-/:_' | tr '[:upper:]' '[:lower:]')
+    echo "${xml_file%.??.xml}" >> "/tmp/tagmaps/${tag}"
   done
 done
 
-for tag in `ls /tmp/tagmaps`; do
+for tag in $(ls "/tmp/tagmaps"); do
   echo "d_day" >> "/tmp/tagmaps/${tag}"
   sort -u "/tmp/tagmaps/${tag}" > "/tmp/tagmaps/tmp"
   mv "/tmp/tagmaps/tmp" "/tmp/tagmaps/${tag}"
@@ -55,7 +55,7 @@ done
 # Update only those files where a change has happened
 # -----------------------------------------------------------------------------
 
-for tag in `ls /tmp/tagmaps`; do
+for tag in $(ls "/tmp/tagmaps"); do
   if ! cmp --quiet "/tmp/tagmaps/${tag}" "tags/.tagged-${tag}.xmllist"; then
     echo "* Updating tag ${tag}"
     cp "tags/tagged.en.xhtml" "tags/tagged-${tag}.en.xhtml"
@@ -67,7 +67,7 @@ done
 # Remove the files for tags which have been completely deleted
 # -----------------------------------------------------------------------------
 
-for tag in `ls tags | sed -rn 's/tagged-(.*)\.en.xhtml/\1/p'`; do
+for tag in $(ls "tags" | sed -rn 's/tagged-(.*)\.en.xhtml/\1/p'); do
   if [ ! -f "/tmp/tagmaps/${tag}" ]; then
     echo "* Deleting tag ${tag}"
     rm "tags/tagged-${tag}.en.xhtml"
@@ -79,20 +79,20 @@ done
 # Remove the temporary directory
 # -----------------------------------------------------------------------------
 
-rm -rf /tmp/tagmaps
+rm -rf "/tmp/tagmaps"
 
 # -----------------------------------------------------------------------------
 # Update .xmllist files for .sources
 # -----------------------------------------------------------------------------
 
-all_xml="`find * -name '*.??.xml' | sed -r 's;\...\.xml$;;' | sort -u`"
+all_xml="$(find * -name '*.??.xml' | sed -r 's/\...\.xml$//' | sort -u)"
 
-for source_file in `find * -name '*.sources' | sort`; do
+for source_file in $(find * -name '*.sources' | sort); do
   cat ${source_file} | while read line; do
-    pattern=`echo "${line}" | sed -rn 's;(.*):\[.*\]$;\1;p'`
-    pattern=`echo "${pattern}" | sed -r -e 's;\.;\\.;g' -e 's;\*;.*;g'`
-    tag=`echo "${line}" | sed -rn 's;.*:\[(.*)\]$;\1;p'`
-    tag=`echo "${tag}" | tr -d ' +-/:_' | tr '[:upper:]' '[:lower:]'`
+    pattern=$(echo "${line}" | sed -rn 's/(.*):\[.*\]$/\1/p')
+    pattern=$(echo "${pattern}" | sed -r -e 's/\./\\./g; s/\*/.*/g')
+    tag=$(echo "${line}" | sed -rn 's/.*:\[(.*)\]$/\1/p')
+    tag=$(echo "${tag}" | tr -d ' +-/:_' | tr '[:upper:]' '[:lower:]')
 
     if [ -z "${pattern}" ]; then
       continue
@@ -106,24 +106,24 @@ for source_file in `find * -name '*.sources' | sort`; do
     fi | grep "${pattern}" || true
   done | sort -u > "/tmp/xmllist"
 
-  list_file="`dirname ${source_file}`/.`basename ${source_file} .sources`.xmllist"
+  list_file="$(dirname ${source_file})/.$(basename ${source_file} .sources).xmllist"
 
   if ! cmp --quiet "/tmp/xmllist" "${list_file}"; then
     echo "* Updating ${list_file}"
     cp "/tmp/xmllist" "${list_file}"
   fi
 
-  rm -f /tmp/xmllist
+  rm -f "/tmp/xmllist"
 done
 
 # -----------------------------------------------------------------------------
 # Touch all .xmllist files where one of the contained files has changed
 # -----------------------------------------------------------------------------
 
-for list_file in `find * -name '.*.xmllist' | sort`; do
+for list_file in $(find * -name '.*.xmllist' | sort); do
   must_touch="no"
-  for pattern in `cat "${list_file}"`; do
-    for filename in `ls ${pattern}.??.xml`; do
+  for pattern in $(cat "${list_file}"); do
+    for filename in $(ls ${pattern}.??.xml); do
       if [ "${filename}" -nt "${list_file}" ]; then
         must_touch="yes"
       fi

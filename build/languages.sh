@@ -2,7 +2,6 @@
 
 # lazy-ass include guard
 inc_languages=true
-[ -z "$inc_filenames" ] && . "$basedir/build/filenames.sh"
 
 languages(){
 cat <<EOL
@@ -42,5 +41,6 @@ EOL
 }
 
 get_languages(){
-  languages |cut -d\  -f1
+  # The list of all languages in one line, separated by blanks
+  echo `languages | cut -d\  -f1`
 }

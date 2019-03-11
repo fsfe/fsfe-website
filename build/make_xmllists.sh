@@ -2,18 +2,18 @@
 # -----------------------------------------------------------------------------
 # Update XML filelists (*.xmllist) and tag list pages (tags/tagged-*)
 # -----------------------------------------------------------------------------
-# From all <tag> content from all XML files, and from all .sources filelists,
-# this script creates or updates the following files:
+# This script is called from the phase 1 Makefile.
 #
-# */.<base>.xmllist - a list of all XML files matching the patterns in the
-#   corresponding */<base>.sources list.
+# * tags/tagged-<tags>.en.xhtml for each tag used. Apart from being
+#   automatically created, these are regular source files for HTML pages, and
+#   in phase 2 are built into pages listing all news items and events for a
+#   tag.
 #
-# tags/tagged-<tag>.en.xhtml - a source file which will be built by the
-#   standard build process into a web page listing all news and events with
-#   this tag.
-#
-# Each of these files is only touched when the actual content has changed,
-# so the build makefile can determine which web pages must be rebuilt.
+# * <dir>/.<base>.xmllist for each <dir>/<base>.sources as well as for each
+#   tags/tagged-<tags>.en.xhtml. These files are used in phase 2 to include the
+#   correct XML files when generating the HTML pages. It is taken care that
+#   these files are only updated whenever their content actually changes, so
+#   they can serve as a prerequisite in the phase 2 Makefile.
 #
 # Changing or removing tags in XML files is also considered, in which case a
 # file is removed from the .xmllist files.
@@ -52,8 +52,7 @@ for tag in `ls /tmp/tagmaps`; do
 done
 
 # -----------------------------------------------------------------------------
-# Update only those files where a change has happened (an XML file been added
-# or removed) so make can later see what has changed since the last build
+# Update only those files where a change has happened
 # -----------------------------------------------------------------------------
 
 for tag in `ls /tmp/tagmaps`; do
@@ -65,7 +64,7 @@ for tag in `ls /tmp/tagmaps`; do
 done
 
 # -----------------------------------------------------------------------------
-# Remove the map files for tags which have been completely deleted
+# Remove the files for tags which have been completely deleted
 # -----------------------------------------------------------------------------
 
 for tag in `ls tags | sed -rn 's/tagged-(.*)\.en.xhtml/\1/p'`; do
@@ -83,7 +82,7 @@ done
 rm -rf /tmp/tagmaps
 
 # -----------------------------------------------------------------------------
-# Update map files for .sources
+# Update .xmllist files for .sources
 # -----------------------------------------------------------------------------
 
 all_xml="`find * -name '*.xml' | sed -r 's;\...\.xml$;;' | sort -u`"

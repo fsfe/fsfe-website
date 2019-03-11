@@ -139,7 +139,7 @@ tree_maker(){
   shift 2
 
   # List of languages in a single line, separated by blanks
-  languages=$(echo $(get_languages))
+  languages=$(get_languages)
 
   cache_textsfile
   cache_fundraising

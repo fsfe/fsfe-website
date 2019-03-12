@@ -88,6 +88,8 @@ rm -rf "${tagmaps}"
 # Update .xmllist files for .sources
 # -----------------------------------------------------------------------------
 
+echo "* Updating XML lists"
+
 all_xml="$(find * -name '*.??.xml' | sed -r 's/\...\.xml$//' | sort -u)"
 
 for source_file in $(find * -name '*.sources' | sort); do
@@ -112,7 +114,7 @@ for source_file in $(find * -name '*.sources' | sort); do
   list_file="$(dirname ${source_file})/.$(basename ${source_file} .sources).xmllist"
 
   if ! cmp --quiet "/tmp/xmllist-${pid}" "${list_file}"; then
-    echo "* Updating ${list_file}"
+    echo "*   Updating ${list_file}"
     cp "/tmp/xmllist-${pid}" "${list_file}"
   fi
 
@@ -133,7 +135,7 @@ for list_file in $(find * -name '.*.xmllist' | sort); do
     done
   done
   if [ "${must_touch}" == "yes" ]; then
-    echo "* Touching ${list_file}"
+    echo "*   Touching ${list_file}"
     touch "${list_file}"
   fi
 done

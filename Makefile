@@ -133,4 +133,4 @@ default_xsl:
 .PHONY: xmllists
 all: xmllists
 xmllists: $(SUBDIRS)
-	@build/make_xmllists.sh
+	@tools/make_xmllists.sh

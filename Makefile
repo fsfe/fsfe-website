@@ -25,7 +25,7 @@ $(SUBDIRS): .FORCE
 # Handle local menus
 # -----------------------------------------------------------------------------
 
-MENUSOURCES := $(shell find -name '*.xhtml' | xargs grep -l '<localmenu.*</localmenu>' )
+MENUSOURCES := $(shell find -name '*.xhtml' -not -name "*-template.*" | xargs grep -l '<localmenu.*</localmenu>' | sort)
 
 all: localmenuinfo.en.xml
 localmenuinfo.en.xml: ./tools/buildmenu.xsl $(MENUSOURCES)

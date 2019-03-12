@@ -94,21 +94,28 @@ all_xml="$(find * -name '*.??.xml' | sed -r 's/\...\.xml$//' | sort -u)"
 
 for source_file in $(find * -name '*.sources' | sort); do
   cat ${source_file} | while read line; do
+    # Get the pattern from the pattern:[tag] construction
     pattern=$(echo "${line}" | sed -rn 's/(.*):\[.*\]$/\1/p')
-    pattern=$(echo "${pattern}" | sed -r -e 's/\./\\./g; s/\*/.*/g')
-    tag=$(echo "${line}" | sed -rn 's/.*:\[(.*)\]$/\1/p')
-    tag=$(echo "${tag}" | tr -d ' +-/:_' | tr '[:upper:]' '[:lower:]')
 
     if [ -z "${pattern}" ]; then
       continue
     fi
+
+    # Change from a glob pattern into a regex
+    pattern=$(echo "${pattern}" | sed -r -e 's/([.^$[])/\\\1/g; s/\*/.*/g')
+
+    # Get the tag from the pattern:[tag] construction
+    tag=$(echo "${line}" | sed -rn 's/.*:\[(.*)\]$/\1/p')
+
+    # Change to lowercase and remove invalid characters
+    tag=$(echo "${tag,,}" | tr -d ' +-/:_')
 
     # We append || true so the script doesn't fail if grep finds nothing at all
     if [ -n "${tag}" ]; then
       cat "tags/.tagged-${tag}.xmllist"
     else
       echo "${all_xml}"
-    fi | grep "${pattern}" || true
+    fi | grep "^${pattern}" || true
   done | sort -u > "/tmp/xmllist-${pid}"
 
   list_file="$(dirname ${source_file})/.$(basename ${source_file} .sources).xmllist"

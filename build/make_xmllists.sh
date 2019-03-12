@@ -25,12 +25,16 @@
 set -e
 set -o pipefail
 
+pid=$$
+
 # -----------------------------------------------------------------------------
 # Make sure temporary directory is empty
 # -----------------------------------------------------------------------------
 
-rm -rf /tmp/tagmaps
-mkdir /tmp/tagmaps
+tagmaps="/tmp/tagmaps-${pid}"
+
+rm -rf "${tagmaps}"
+mkdir "${tagmaps}"
 
 # -----------------------------------------------------------------------------
 # Create a complete and current map of which tag is used in which files
@@ -41,24 +45,24 @@ echo "* Generating tag maps"
 for xml_file in $(find * -name '*.??.xml' | xargs grep -l '</tag>' | sort); do
   xsltproc "build/xslt/get_tags.xsl" "${xml_file}" | while read raw_tag; do
     tag=$(echo "${raw_tag}" | tr -d ' +-/:_' | tr '[:upper:]' '[:lower:]')
-    echo "${xml_file%.??.xml}" >> "/tmp/tagmaps/${tag}"
+    echo "${xml_file%.??.xml}" >> "${tagmaps}/${tag}"
   done
 done
 
-for tag in $(ls "/tmp/tagmaps"); do
-  sort -u "/tmp/tagmaps/${tag}" > "/tmp/tagmaps/tmp"
-  mv "/tmp/tagmaps/tmp" "/tmp/tagmaps/${tag}"
+for tag in $(ls "${tagmaps}"); do
+  sort -u "${tagmaps}/${tag}" > "${tagmaps}/tmp"
+  mv "${tagmaps}/tmp" "${tagmaps}/${tag}"
 done
 
 # -----------------------------------------------------------------------------
 # Update only those files where a change has happened
 # -----------------------------------------------------------------------------
 
-for tag in $(ls "/tmp/tagmaps"); do
-  if ! cmp --quiet "/tmp/tagmaps/${tag}" "tags/.tagged-${tag}.xmllist"; then
+for tag in $(ls "${tagmaps}"); do
+  if ! cmp --quiet "${tagmaps}/${tag}" "tags/.tagged-${tag}.xmllist"; then
     echo "* Updating tag ${tag}"
     cp "tags/tagged.en.xhtml" "tags/tagged-${tag}.en.xhtml"
-    cp "/tmp/tagmaps/${tag}" "tags/.tagged-${tag}.xmllist"
+    cp "${tagmaps}/${tag}" "tags/.tagged-${tag}.xmllist"
   fi
 done
 
@@ -67,7 +71,7 @@ done
 # -----------------------------------------------------------------------------
 
 for tag in $(ls "tags" | sed -rn 's/tagged-(.*)\.en.xhtml/\1/p'); do
-  if [ ! -f "/tmp/tagmaps/${tag}" ]; then
+  if [ ! -f "${tagmaps}/${tag}" ]; then
     echo "* Deleting tag ${tag}"
     rm "tags/tagged-${tag}.en.xhtml"
     rm "tags/.tagged-${tag}.xmllist"
@@ -78,7 +82,7 @@ done
 # Remove the temporary directory
 # -----------------------------------------------------------------------------
 
-rm -rf "/tmp/tagmaps"
+rm -rf "${tagmaps}"
 
 # -----------------------------------------------------------------------------
 # Update .xmllist files for .sources
@@ -103,16 +107,16 @@ for source_file in $(find * -name '*.sources' | sort); do
     else
       echo "${all_xml}"
     fi | grep "${pattern}" || true
-  done | sort -u > "/tmp/xmllist"
+  done | sort -u > "/tmp/xmllist-${pid}"
 
   list_file="$(dirname ${source_file})/.$(basename ${source_file} .sources).xmllist"
 
-  if ! cmp --quiet "/tmp/xmllist" "${list_file}"; then
+  if ! cmp --quiet "/tmp/xmllist-${pid}" "${list_file}"; then
     echo "* Updating ${list_file}"
-    cp "/tmp/xmllist" "${list_file}"
+    cp "/tmp/xmllist-${pid}" "${list_file}"
   fi
 
-  rm -f "/tmp/xmllist"
+  rm -f "/tmp/xmllist-${pid}"
 done
 
 # -----------------------------------------------------------------------------

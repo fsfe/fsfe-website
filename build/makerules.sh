@@ -25,35 +25,6 @@ STATUSDIR = $statusdir
 LANGUAGES = $languages
 
 # -----------------------------------------------------------------------------
-# Touch all XSL files depending on a newer other XSL file
-# -----------------------------------------------------------------------------
-
-EOF
-
-  # Generate make dependencies for all .xsl files in input tree
-  find "${input}" -name '*.xsl' -not -name '.default.xsl' -printf '%P\n' \
-  | while read xsl_file; do
-    prerequisites=$(echo $(
-      cat "${input}/${xsl_file}" \
-      | tr '\n\t\r' '   ' \
-      | sed -r 's;(<xsl:(include|import)[^>]*>);\n\1\n;g' \
-      | sed -nr '/<xsl:(include|import)[^>]*>/s;^.*href *= *"([^"]*)".*$;\1;gp' \
-      | xargs -I'{}' realpath "${input}/$(dirname ${xsl_file})/{}" \
-      | sed -r "s;^${input};\$(INPUTDIR);"
-    ))
-    if [ -n "${prerequisites}" ]; then
-      echo "all: \$(INPUTDIR)/${xsl_file}"
-      echo "\$(INPUTDIR)/${xsl_file}: ${prerequisites}"
-      echo ""
-    fi
-  done 
-
-  cat <<EOF
-%.xsl:
-	@echo "* Touching \$*"
-	@touch \$@
-
-# -----------------------------------------------------------------------------
 # Build .html files from .xhtml sources
 # -----------------------------------------------------------------------------
 

@@ -113,7 +113,7 @@ default_xsl:
 	done
 
 # -----------------------------------------------------------------------------
-# Generate XML filelists
+# Update XML filelists
 # -----------------------------------------------------------------------------
 
 # After this step, the following files will be up to date:
@@ -134,3 +134,18 @@ default_xsl:
 all: xmllists
 xmllists: $(SUBDIRS)
 	@tools/make_xmllists.sh
+
+# -----------------------------------------------------------------------------
+# Update XSL stylesheets
+# -----------------------------------------------------------------------------
+
+# This step updates (actually: just touches) all XSL files which depend on
+# another XSL file that has changed since the last build run. The phase 2
+# Makefile then only has to consider the directly used stylesheet as a
+# prerequisite for building each file and doesn't have to worry about other
+# stylesheets imported into that one.
+
+.PHONY: stylesheets
+all: stylesheets
+stylesheets: $(SUBDIRS)
+	@tools/update_stylesheets.sh

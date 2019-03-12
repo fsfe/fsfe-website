@@ -46,7 +46,6 @@ for xml_file in $(find * -name '*.??.xml' | xargs grep -l '</tag>' | sort); do
 done
 
 for tag in $(ls "/tmp/tagmaps"); do
-  echo "d_day" >> "/tmp/tagmaps/${tag}"
   sort -u "/tmp/tagmaps/${tag}" > "/tmp/tagmaps/tmp"
   mv "/tmp/tagmaps/tmp" "/tmp/tagmaps/${tag}"
 done

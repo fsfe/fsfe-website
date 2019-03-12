@@ -20,7 +20,7 @@ build_into(){
 
   {
     echo "Starting phase 1" \
-    && make -C "$basedir" --no-print-directory 2>&1 \
+    && make --silent --directory="$basedir" 2>&1 \
     && echo "Finishing phase 1" \
     || die "Error during phase 1"
   } | t_logstatus phase_1 || exit 1
@@ -36,7 +36,7 @@ build_into(){
 
   {
     echo "Starting phase 2" \
-    && make -j $ncpu -f "$(logname Makefile)" 2>&1 \
+    && make --jobs=$ncpu --file="$(logname Makefile)" 2>&1 \
     && echo "Finishing phase 2" \
     || die "Error during phase 2"
   } | t_logstatus phase_2 || exit 1

@@ -18,8 +18,8 @@ SUBDIRS := $(shell find */* -name "Makefile" | xargs dirname)
 
 all: $(SUBDIRS)
 $(SUBDIRS): .FORCE
-	@echo "* Preparing subdirectory $@"
-	@$(MAKE) -j -k -C $@
+	echo "* Preparing subdirectory $@"
+	$(MAKE) --silent --directory=$@
 
 # -----------------------------------------------------------------------------
 # Handle local menus
@@ -70,7 +70,7 @@ TEXTS_LINKS := $(foreach lang,$(LANGUAGES),tools/.texts-$(lang).xml)
 
 all: $(TEXTS_LINKS)
 tools/.texts-%.xml: .FORCE
-	@if [ -f tools/texts-$*.xml ]; then \
+	if [ -f tools/texts-$*.xml ]; then \
 	  ln -sf texts-$*.xml $@; \
 	else \
 	  ln -sf texts-en.xml $@; \
@@ -80,7 +80,7 @@ FUNDRAISING_LINKS := $(foreach lang,$(LANGUAGES),.fundraising.$(lang).xml)
 
 all: $(FUNDRAISING_LINKS)
 .fundraising.%.xml: .FORCE
-	@if [ -f fundraising.$*.xml ]; then \
+	if [ -f fundraising.$*.xml ]; then \
 	  ln -sf fundraising.$*.xml $@; \
 	else \
 	  ln -sf fundraising.en.xml $@; \
@@ -102,7 +102,7 @@ XHTML_DIRS := $(patsubst %/,%,$(sort $(dir $(shell find -name '*.??.xhtml'))))
 .PHONY: default_xsl
 all: default_xsl
 default_xsl:
-	@for directory in $(XHTML_DIRS); do \
+	for directory in $(XHTML_DIRS); do \
 	  dir="$${directory}"; \
 	  prefix=""; \
 	  until [ -f "$${dir}/default.xsl" -o "$${dir}" = "." ]; do \
@@ -133,7 +133,7 @@ default_xsl:
 .PHONY: xmllists
 all: xmllists
 xmllists: $(SUBDIRS)
-	@tools/make_xmllists.sh
+	tools/update_xmllists.sh
 
 # -----------------------------------------------------------------------------
 # Update XSL stylesheets
@@ -148,4 +148,4 @@ xmllists: $(SUBDIRS)
 .PHONY: stylesheets
 all: stylesheets
 stylesheets: $(SUBDIRS)
-	@tools/update_stylesheets.sh
+	tools/update_stylesheets.sh

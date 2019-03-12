@@ -56,8 +56,8 @@ EOF
   for lang in ${languages}; do
     cat<<EOF
 \$(OUTPUTDIR)/%.${lang}.html: \$(INPUTDIR)/%.*.xhtml \$\$(XMLLIST_DEP) \$\$(XSL_DEP) \$(INPUTDIR)/tools/menu-global.xml \$(INPUTDIR)/tools/.texts-${lang}.xml \$(INPUTDIR)/tools/texts-en.xml \$(INPUTDIR)/.fundraising.${lang}.xml \$(INPUTDIR)/fundraising.en.xml
-	@echo "* Building \$*.${lang}.html"
-	@\${PROCESSOR} \${PROCFLAGS} process_file \$(INPUTDIR)/\$*.${lang}.xhtml > \$@
+	echo "* Building \$*.${lang}.html"
+	\${PROCESSOR} \${PROCFLAGS} process_file \$(INPUTDIR)/\$*.${lang}.xhtml > \$@
 EOF
   done
 
@@ -91,8 +91,8 @@ EOF
   for lang in ${languages}; do
     cat<<EOF
 \$(OUTPUTDIR)/%/index.${lang}.html:
-	@echo "* Creating symlink \$*/index.${lang}.html"
-	@ln -sf \$(notdir \$*).${lang}.html \$@
+	echo "* Creating symlink \$*/index.${lang}.html"
+	ln -sf \$(notdir \$*).${lang}.html \$@
 EOF
   done
 
@@ -111,8 +111,8 @@ EOF
   for lang in ${languages}; do
     cat<<EOF
 \$(OUTPUTDIR)/%.html.${lang}:
-	@echo "* Creating symlink \$*.html.${lang}"
-	@ln -sf \$(notdir \$*).${lang}.html \$@
+	echo "* Creating symlink \$*.html.${lang}"
+	ln -sf \$(notdir \$*).${lang}.html \$@
 EOF
   done
 
@@ -140,8 +140,8 @@ EOF
   for lang in ${languages}; do
     cat<<EOF
 \$(OUTPUTDIR)/%.${lang}.rss: \$(INPUTDIR)/%.*.xhtml \$\$(XMLLIST_DEP) \$(INPUTDIR)/%.rss.xsl \$(INPUTDIR)/tools/menu-global.xml \$(INPUTDIR)/tools/.texts-${lang}.xml \$(INPUTDIR)/tools/texts-en.xml \$(INPUTDIR)/.fundraising.${lang}.xml \$(INPUTDIR)/fundraising.en.xml
-	@echo "* Building \$*.${lang}.rss"
-	@\${PROCESSOR} \${PROCFLAGS} process_file \$(INPUTDIR)/\$*.${lang}.xhtml \$(INPUTDIR)/\$*.rss.xsl > \$@
+	echo "* Building \$*.${lang}.rss"
+	\${PROCESSOR} \${PROCFLAGS} process_file \$(INPUTDIR)/\$*.${lang}.xhtml \$(INPUTDIR)/\$*.rss.xsl > \$@
 EOF
   done
 
@@ -169,8 +169,8 @@ EOF
   for lang in ${languages}; do
     cat<<EOF
 \$(OUTPUTDIR)/%.${lang}.ics: \$(INPUTDIR)/%.*.xhtml \$\$(XMLLIST_DEP) \$(INPUTDIR)/%.ics.xsl \$(INPUTDIR)/tools/menu-global.xml \$(INPUTDIR)/tools/.texts-${lang}.xml \$(INPUTDIR)/tools/texts-en.xml \$(INPUTDIR)/.fundraising.${lang}.xml \$(INPUTDIR)/fundraising.en.xml
-	@echo "* Building \$*.${lang}.ics"
-	@\${PROCESSOR} \${PROCFLAGS} process_file \$(INPUTDIR)/\$*.${lang}.xhtml \$(INPUTDIR)/\$*.ics.xsl > \$@
+	echo "* Building \$*.${lang}.ics"
+	\${PROCESSOR} \${PROCFLAGS} process_file \$(INPUTDIR)/\$*.${lang}.xhtml \$(INPUTDIR)/\$*.ics.xsl > \$@
 EOF
   done
 
@@ -201,8 +201,8 @@ COPY_DST_FILES := \$(sort \$(patsubst \$(INPUTDIR)/%,\$(OUTPUTDIR)/%,\$(COPY_SRC
 
 all: \$(COPY_DST_FILES)
 \$(COPY_DST_FILES): \$(OUTPUTDIR)/%: \$(INPUTDIR)/%
-	@echo "* Copying file \$*"
-	@cp \$< \$@
+	echo "* Copying file \$*"
+	cp \$< \$@
 
 # -----------------------------------------------------------------------------
 # Copy .xhtml files to "source" directory in target directory tree
@@ -212,8 +212,8 @@ SOURCE_DST_FILES := \$(sort \$(patsubst \$(INPUTDIR)/%,\$(OUTPUTDIR)/source/%,\$
 
 all: \$(SOURCE_DST_FILES)
 \$(SOURCE_DST_FILES): \$(OUTPUTDIR)/source/%: \$(INPUTDIR)/%
-	@echo "* Copying source \$*"
-	@cp \$< \$@
+	echo "* Copying source \$*"
+	cp \$< \$@
 
 # -----------------------------------------------------------------------------
 # Clean up excess files in target directory
@@ -224,11 +224,11 @@ ALL_DST := \$(HTML_DST_FILES) \$(INDEX_DST_LINKS) \$(HTML_DST_LINKS) \$(RSS_DST_
 .PHONY: clean
 all: clean
 clean:
-	@# Write all destination filenames into "manifest" file, one per line
+	# Write all destination filenames into "manifest" file, one per line
 	\$(file >\$(STATUSDIR)/manifest)
 	\$(foreach filename,\$(ALL_DST),\$(file >>\$(STATUSDIR)/manifest,\$(filename)))
-	@sort \$(STATUSDIR)/manifest > \$(STATUSDIR)/manifest.sorted
-	@find -L \$(OUTPUTDIR) -type f \\
+	sort \$(STATUSDIR)/manifest > \$(STATUSDIR)/manifest.sorted
+	find -L \$(OUTPUTDIR) -type f \\
 	  | sort \\
 	  | diff - \$(STATUSDIR)/manifest.sorted \\
 	  | sed -rn 's;^< ;;p' \\

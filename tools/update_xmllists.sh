@@ -27,6 +27,9 @@ set -o pipefail
 
 pid=$$
 
+thisyear=$(date --date="this year" +%Y)
+lastyear=$(date --date="last year" +%Y)
+
 # -----------------------------------------------------------------------------
 # Make sure temporary directory is empty
 # -----------------------------------------------------------------------------
@@ -100,6 +103,10 @@ for source_file in $(find * -name '*.sources' | sort); do
     if [ -z "${pattern}" ]; then
       continue
     fi
+
+    # Honor $thisyear and $lastyear variables
+    pattern=${pattern//\$thisyear/${thisyear}}
+    pattern=${pattern//\$lastyear/${lastyear}}
 
     # Change from a glob pattern into a regex
     pattern=$(echo "${pattern}" | sed -r -e 's/([.^$[])/\\\1/g; s/\*/.*/g')

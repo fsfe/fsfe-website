@@ -1,4 +1,4 @@
-news/*/news:[routers]
-news/*/.news:[routers]
-news/nl/nl:[routers]
-news/nl/.nl:[routers]
+news/*/news-*:[routers]
+news/*/.news-*:[routers]
+news/nl/nl-*:[routers]
+news/nl/.nl-*:[routers]

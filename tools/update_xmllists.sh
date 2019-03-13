@@ -122,7 +122,7 @@ for source_file in $(find * -name '*.sources' | sort); do
       cat "tags/.tagged-${tag}.xmllist"
     else
       echo "${all_xml}"
-    fi | grep "^${pattern}" || true
+    fi | grep "^${pattern}\$" || true
   done | sort -u > "/tmp/xmllist-${pid}"
 
   list_file="$(dirname ${source_file})/.$(basename ${source_file} .sources).xmllist"

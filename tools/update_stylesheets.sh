@@ -39,7 +39,7 @@ makefile="/tmp/makefile-${pid}"
   done 
 
   echo '%.xsl:'
-  echo -e '\techo "*   Touching $*"'
+  echo -e '\techo "*   Touching $@"'
   echo -e '\ttouch $@'
 } > "${makefile}"
 

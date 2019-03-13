@@ -143,12 +143,17 @@
 
     <!-- Before the first event, include the header -->
     <xsl:if test="position() = 1 and $header != ''">
-      <h2>
-        <xsl:call-template name="generate-id-attribute">
-          <xsl:with-param name="title" select="/buildinfo/document/text[@id = $header]" />
-        </xsl:call-template>
+      <xsl:variable name="headertext">
         <xsl:value-of select="/buildinfo/document/text[@id = $header]" />
-      </h2>
+      </xsl:variable>
+      <xsl:if test="$headertext != ''">
+        <xsl:element name="h2">
+          <xsl:call-template name="generate-id-attribute">
+            <xsl:with-param name="title" select="$headertext" />
+          </xsl:call-template>
+          <xsl:value-of select="$headertext" />
+        </xsl:element>
+      </xsl:if>
     </xsl:if>
     
     

@@ -5,14 +5,16 @@
     <title>News Archive for :YYYY: - FSFE</title>
   </head>
 
-  <body class="article" microformats="h-entry">
+  <body class="article">
+    <p id="category"><a href="/news/news.html">News</a></p>
+
     <div class="news-follow-us">
       <div class="share-top-buttons-label">Follow us:</div>
       <div class="share-buttons-top">
-        <a target="_blank" href="https://fsfe.org/news/newsletter">
+        <a target="_blank" href="/news/newsletter.html">
           <button class="share-button-top share-mail">Newsletter</button>
         </a>
-        <a target="_blank" href="https://fsfe.org/news/news.en.rss">
+        <a target="_blank" href="/news/news.rss">
           <button class="share-button-top share-rss">RSS Feed</button>
         </a>
         <a target="_blank" href="https://mastodon.social/@fsfe">
@@ -30,9 +32,9 @@
       </div>
     </div>
 
-    <localmenu dir="/news/" set="year" id=":YYYY:" link=":YYYY:/:YYYY:">:YYYY:</localmenu>
+    <localmenu dir="/news/" set="year" id=":YYYY:" link=":YYYY:/:YYYY:.html">:YYYY:</localmenu>
 
-    <h1 class="p-name">News Archive for :YYYY:</h1>
+    <h1>News Archive for :YYYY:</h1>
 
     <include-news/>
   </body>
@@ -43,15 +45,15 @@
 
       <p>
         To keep up with our latest news, subscribe to our
-        <a href="/news/news.en.rss">RSS feed</a> and our
-        <a href="/news/newsletter">Newsletter</a>.
+        <a href="/news/news.rss">RSS feed</a> and our
+        <a href="/news/newsletter.html">Newsletter</a>.
       </p>
 
       <div class="share-buttons-sidebar">
-        <a target="_blank" href="https://fsfe.org/news/newsletter">
+        <a target="_blank" href="/news/newsletter.html">
           <button class="share-button-sidebar share-mail">Newsletter</button>
         </a>
-        <a target="_blank" href="https://fsfe.org/news/news.en.rss">
+        <a target="_blank" href="/news/news.rss">
           <button class="share-button-sidebar share-rss">RSS Feed</button>
         </a>
       </div>

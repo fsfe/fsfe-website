@@ -29,7 +29,7 @@ makefile="/tmp/makefile-${pid}"
       | tr '\t\r\n' '   ' \
       | sed -r 's/(<xsl:(include|import)[^>]*>)/\n\1\n/g' \
       | sed -rn '/<xsl:(include|import)[^>]*>/s/^.*href *= *"([^"]*)".*$/\1/gp' \
-      | xargs -I'{}' realpath "$(dirname ${xsl_file})/{}" \
+      | xargs -I'{}' realpath --relative-to="." "$(dirname ${xsl_file})/{}" \
     ))
     if [ -n "${prerequisites}" ]; then
       echo "all: ${xsl_file}"

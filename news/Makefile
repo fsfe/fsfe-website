@@ -15,6 +15,9 @@ ARCH_YEARS := $(sort $(wildcard [0-9][0-9][0-9][0-9]))
 # No archive for the current year
 ARCH_YEARS := $(filter-out $(lastword $(ARCH_YEARS)),$(ARCH_YEARS))
 
+# ... and the year before
+ARCH_YEARS := $(filter-out $(lastword $(ARCH_YEARS)),$(ARCH_YEARS))
+
 # Languages in which the template exists
 ARCH_LANGS := $(suffix $(basename $(wildcard archive-template.??.xhtml)))
 
@@ -23,7 +26,7 @@ ARCH_XHTML := $(foreach year,$(ARCH_YEARS),$(foreach lang,$(ARCH_LANGS),$(year)/
 
 all: $(ARCH_XHTML)
 $(ARCH_XHTML): %.xhtml: archive-template$$(suffix $$*).xhtml
-	@echo "*   Updating $@"
+	@echo "*   Creating $@"
 	@# $(dir $@) returns YYYY/, we abuse the slash for closing the sed command
 	@sed 's/:YYYY:/$(dir $@)g' $< > $@
 

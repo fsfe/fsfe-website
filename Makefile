@@ -121,6 +121,7 @@ default_xsl:
 #   automatically created, these are regular source files for HTML pages, and
 #   in phase 2 are built into pages listing all news items and events for a
 #   tag.
+# * tags/.tags.??.xml with a list of the tags useed.
 # * <dir>/.<base>.xmllist for each <dir>/<base>.sources as well as for each
 #   tags/tagged-<tags>.en.xhtml. These files are used in phase 2 to include the
 #   correct XML files when generating the HTML pages. It is taken care that

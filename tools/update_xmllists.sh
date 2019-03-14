@@ -2,12 +2,15 @@
 # -----------------------------------------------------------------------------
 # Update XML filelists (*.xmllist) and tag list pages (tags/tagged-*)
 # -----------------------------------------------------------------------------
-# This script is called from the phase 1 Makefile.
+# This script is called from the phase 1 Makefile and creates/updates the
+# following files:
 #
 # * tags/tagged-<tags>.en.xhtml for each tag used. Apart from being
 #   automatically created, these are regular source files for HTML pages, and
 #   in phase 2 are built into pages listing all news items and events for a
 #   tag.
+#
+# * tags/.tags.??.xml with a list of the tags useed.
 #
 # * <dir>/.<base>.xmllist for each <dir>/<base>.sources as well as for each
 #   tags/tagged-<tags>.en.xhtml. These files are used in phase 2 to include the
@@ -39,16 +42,31 @@ tagmaps="/tmp/tagmaps-${pid}"
 rm -rf "${tagmaps}"
 mkdir "${tagmaps}"
 
+taglabels="/tmp/taglabels-${pid}"
+
+rm -rf "${taglabels}"
+mkdir "${taglabels}"
+
 # -----------------------------------------------------------------------------
 # Create a complete and current map of which tag is used in which files
 # -----------------------------------------------------------------------------
 
 echo "* Generating tag maps"
 
-for xml_file in $(find * -name '*.??.xml' | xargs grep -l '</tag>' | sort); do
-  xsltproc "build/xslt/get_tags.xsl" "${xml_file}" | while read raw_tag; do
-    tag=$(echo "${raw_tag}" | tr -d ' +-/:_' | tr '[:upper:]' '[:lower:]')
+for xml_file in $(find * -name '*.??.xml' -not -path 'tags/*' | xargs grep -l '</tag>' | sort); do
+  xsltproc "build/xslt/get_tags.xsl" "${xml_file}" | while read raw_tag label; do
+    tag=$(echo "${raw_tag}" | tr '[:upper:]' '[:lower:]')
+
+    # Add file to list of files by tag name
     echo "${xml_file%.??.xml}" >> "${tagmaps}/${tag}"
+
+    # Store label by language and tag name
+    language=$(echo ${xml_file} | sed -rn 's/^.*\.(..)\.xml/\1/p')
+    if [ "${language}" -a "${label}" ]; then
+      mkdir -p "${taglabels}/${language}"
+      # Always overwrite so the newest news item will win.
+      echo "${label}" > "${taglabels}/${language}/${tag}"
+    fi
   done
 done
 
@@ -82,10 +100,52 @@ for tag in $(ls "tags" | sed -rn 's/tagged-(.*)\.en.xhtml/\1/p'); do
 done
 
 # -----------------------------------------------------------------------------
+# Update the tag lists
+# -----------------------------------------------------------------------------
+
+taglist="/tmp/taglist-${pid}"
+
+for language in $(ls ${taglabels}); do
+  {
+    echo '<?xml version="1.0" encoding="UTF-8"?>'
+    echo ''
+    echo '<tagset>'
+
+    for section in "news" "events"; do
+      for tag in $(ls "${tagmaps}"); do
+        count=$(grep "^${section}/" "${tagmaps}/${tag}" | wc --lines || true)
+
+        if [ -f "${taglabels}/${language}/${tag}" ]; then
+          label="$(cat "${taglabels}/${language}/${tag}")"
+        elif [ -f "${taglabels}/en/${tag}" ]; then
+          label="$(cat "${taglabels}/en/${tag}")"
+        else
+          label="${tag}"
+        fi
+
+        if [ "${count}" != "0" ]; then
+          echo "  <tag section=\"${section}\" name=\"${tag}\" count=\"${count}\">${label}</tag>"
+        fi
+      done
+    done
+
+    echo '</tagset>'
+  } > ${taglist}
+
+  if ! cmp --quiet "${taglist}" "tags/.tags.${language}.xml"; then
+    echo "*   Updating tags/.tags.${language}.xml"
+    cp "${taglist}" "tags/.tags.${language}.xml"
+  fi
+
+  rm -f "${taglist}"
+done
+
+# -----------------------------------------------------------------------------
 # Remove the temporary directory
 # -----------------------------------------------------------------------------
 
 rm -rf "${tagmaps}"
+rm -rf "${taglabels}"
 
 # -----------------------------------------------------------------------------
 # Update .xmllist files for .sources

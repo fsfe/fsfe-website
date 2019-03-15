@@ -229,7 +229,6 @@ for list_file in $(find * -name '.*.xmllist' | sort); do
   # For long file lists, the following would fail with an exit code of 141
   # (SIGPIPE), so we must add a "|| true"
   newest_xml_file="$(ls -t ${xml_files} | head --lines=1 || true)"
-  echo $list_file: $newest_xml_file >> rmu
 
   if [ "${newest_xml_file}" -nt "${list_file}" ]; then
     echo "*   Touching ${list_file}"

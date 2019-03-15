@@ -70,6 +70,10 @@ for xml_file in $(find * -name '*.??.xml' -not -path 'tags/*' | xargs grep -l '<
   done
 done
 
+# -----------------------------------------------------------------------------
+# Make sure that each file only appears once per tag map
+# -----------------------------------------------------------------------------
+
 for tag in $(ls "${tagmaps}"); do
   sort -u "${tagmaps}/${tag}" > "${tagmaps}/tmp"
   mv "${tagmaps}/tmp" "${tagmaps}/${tag}"
@@ -81,7 +85,7 @@ done
 
 for tag in $(ls "${tagmaps}"); do
   if ! cmp --quiet "${tagmaps}/${tag}" "tags/.tagged-${tag}.xmllist"; then
-    echo "* Updating tag ${tag}"
+    echo "*   Updating tag ${tag}"
     cp "tags/tagged.en.xhtml" "tags/tagged-${tag}.en.xhtml"
     cp "${tagmaps}/${tag}" "tags/.tagged-${tag}.xmllist"
   fi
@@ -93,7 +97,7 @@ done
 
 for tag in $(ls "tags" | sed -rn 's/tagged-(.*)\.en.xhtml/\1/p'); do
   if [ ! -f "${tagmaps}/${tag}" ]; then
-    echo "* Deleting tag ${tag}"
+    echo "*   Deleting tag ${tag}"
     rm "tags/tagged-${tag}.en.xhtml"
     rm "tags/.tagged-${tag}.xmllist"
   fi
@@ -102,6 +106,8 @@ done
 # -----------------------------------------------------------------------------
 # Update the tag lists
 # -----------------------------------------------------------------------------
+
+echo "* Updating tag lists"
 
 taglist="/tmp/taglist-${pid}"
 
@@ -198,6 +204,8 @@ done
 # -----------------------------------------------------------------------------
 # Touch all .xmllist files where one of the contained files has changed
 # -----------------------------------------------------------------------------
+
+echo "* Checking contents of XML lists"
 
 for list_file in $(find * -name '.*.xmllist' | sort); do
   must_touch="no"

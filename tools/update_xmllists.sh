@@ -54,14 +54,13 @@ mkdir "${taglabels}"
 echo "* Generating tag maps"
 
 for xml_file in $(find * -name '*.??.xml' -not -path 'tags/*' | xargs grep -l '</tag>' | sort); do
-  xsltproc "build/xslt/get_tags.xsl" "${xml_file}" | while read raw_tag label; do
-    tag=$(echo "${raw_tag}" | tr '[:upper:]' '[:lower:]')
-
+  xsltproc "build/xslt/get_tags.xsl" "${xml_file}" | while read tag label; do
     # Add file to list of files by tag name
     echo "${xml_file%.??.xml}" >> "${tagmaps}/${tag}"
 
     # Store label by language and tag name
-    language=$(echo ${xml_file} | sed -rn 's/^.*\.(..)\.xml/\1/p')
+    xml_base=${xml_file%.xml}
+    language=${xml_base##*.}
     if [ "${language}" -a "${label}" ]; then
       mkdir -p "${taglabels}/${language}"
       # Always overwrite so the newest news item will win.
@@ -91,6 +90,8 @@ for tag in $(ls "${tagmaps}"); do
   fi
 done
 
+rm -f "tags/tagged-front-page.en.xhtml"         # We don't want that one
+
 # -----------------------------------------------------------------------------
 # Remove the files for tags which have been completely deleted
 # -----------------------------------------------------------------------------
@@ -111,6 +112,14 @@ echo "* Updating tag lists"
 
 taglist="/tmp/taglist-${pid}"
 
+declare -A filecount
+
+for section in "news" "events"; do
+  for tag in $(ls "${tagmaps}"); do
+    filecount["${tag}:${section}"]=$(grep "^${section}/" "${tagmaps}/${tag}" | wc --lines || true)
+  done
+done
+
 for language in $(ls ${taglabels}); do
   {
     echo '<?xml version="1.0" encoding="UTF-8"?>'
@@ -119,7 +128,11 @@ for language in $(ls ${taglabels}); do
 
     for section in "news" "events"; do
       for tag in $(ls "${tagmaps}"); do
-        count=$(grep "^${section}/" "${tagmaps}/${tag}" | wc --lines || true)
+        if [ "${tag}" == "front-page" ]; then
+          continue              # We don't want an actual page for that
+        fi
+
+        count=${filecount["${tag}:${section}"]}
 
         if [ -f "${taglabels}/${language}/${tag}" ]; then
           label="$(cat "${taglabels}/${language}/${tag}")"
@@ -208,15 +221,17 @@ done
 echo "* Checking contents of XML lists"
 
 for list_file in $(find * -name '.*.xmllist' | sort); do
-  must_touch="no"
-  for pattern in $(cat "${list_file}"); do
-    for filename in $(ls ${pattern}.??.xml); do
-      if [ "${filename}" -nt "${list_file}" ]; then
-        must_touch="yes"
-      fi
-    done
-  done
-  if [ "${must_touch}" == "yes" ]; then
+  if [ ! -s "${list_file}" ]; then                # Empty file list
+    continue
+  fi
+
+  xml_files="$(sed -r 's/(^.*$)/\1.??.xml/' "${list_file}")"
+  # For long file lists, the following would fail with an exit code of 141
+  # (SIGPIPE), so we must add a "|| true"
+  newest_xml_file="$(ls -t ${xml_files} | head --lines=1 || true)"
+  echo $list_file: $newest_xml_file >> rmu
+
+  if [ "${newest_xml_file}" -nt "${list_file}" ]; then
     echo "*   Touching ${list_file}"
     touch "${list_file}"
   fi

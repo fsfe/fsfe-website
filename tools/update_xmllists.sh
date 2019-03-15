@@ -175,7 +175,7 @@ for source_file in $(find * -name '*.sources' | sort); do
     tag=$(echo "${line}" | sed -rn 's/.*:\[(.*)\]$/\1/p')
 
     # Change to lowercase and remove invalid characters
-    tag=$(echo "${tag,,}" | tr -d ' +-/:_')
+    tag=$(echo "${tag,,}" | tr ' ' '_' | tr -d '/:')
 
     # We append || true so the script doesn't fail if grep finds nothing at all
     if [ -n "${tag}" ]; then

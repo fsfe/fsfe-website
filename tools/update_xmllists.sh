@@ -220,7 +220,7 @@ done
 
 echo "* Checking contents of XML lists"
 
-for list_file in $(find * -name '.*.xmllist' | sort); do
+for list_file in $(find -name '.*.xmllist' -printf '%P\n' | sort); do
   if [ ! -s "${list_file}" ]; then                # Empty file list
     continue
   fi

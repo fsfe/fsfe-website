@@ -12,17 +12,16 @@
   <xsl:output method="text" encoding="UTF-8"/>
 
   <xsl:template match="tag">
-    <!-- tag name -->
-    <xsl:value-of select="translate(.,' .+-/:_','')"/>
-    <!-- blank -->
+    <!-- Output tag name, stripping some forbidden characters -->
+    <xsl:value-of select="translate(., ' .+-/:_', '')"/>
+    <!-- Output a blank -->
     <xsl:text> </xsl:text>
-    <!-- tag label -->
+    <!-- Output tag label -->
     <xsl:value-of select="@content"/>
-    <!-- append a newline -->
+    <!-- Append a newline -->
     <xsl:text>&#xa;</xsl:text>
   </xsl:template>
   
-  <xsl:template match="@*|node()" priority="-1">
-    <xsl:apply-templates select="@*|node()"/>
-  </xsl:template>
+  <!-- Suppress output of text nodes, which would be the default -->
+  <xsl:template match="text()"/>
 </xsl:stylesheet>

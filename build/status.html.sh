@@ -3,7 +3,7 @@
 exec 2>/dev/null
 
 if [ "$QUERY_STRING" = "full_build" ]; then
-  if printf %s "$HTTP_REFERER" |grep -qE '^https?://([^/]+\.)?fsfe\.org/'; then
+  if printf %s "$HTTP_REFERER" | grep -qE '^https?://([^/]+\.)?fsfe\.org/'; then
     touch ./full_build
   fi
   printf 'Location: ./\n\n'
@@ -13,9 +13,24 @@ fi
 timestamp(){
   date -d "@$1" +"%F %T (%Z)"
 }
+
 duration(){
-  printf %s "$(($1 / 60)) minuntes $(($1 % 60)) seconds"
+  minutes=$(($1 / 60))
+  if [ "${minutes}" == "1" ]; then
+    minutes="${minutes} minute"
+  else
+    minutes="${minutes} minutes"
+  fi
+
+  seconds=$(($1 % 60))
+  if [ "${seconds}" == "1" ]; then
+    seconds="${seconds} second"
+  else
+    seconds="${seconds} seconds"
+  fi
+  echo "${minutes} ${seconds}"
 }
+
 web_tab(){
   tabname="$1"
   tablabel="$2"
@@ -28,6 +43,7 @@ web_tab(){
 <div class="tabcontent">${tabcontent}</div>
 EOF
 }
+
 htmlcat(){
   sed 's;&;\&amp\;;g;
        s;<;\&lt\;;g;

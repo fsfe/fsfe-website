@@ -14,7 +14,7 @@ timestamp(){
   date -d "@$1" +"%F %T (%Z)"
 }
 duration(){
-  printf %s "$(($1 / 60))min $(($1 % 60))s"
+  printf %s "$(($1 / 60)) minuntes $(($1 % 60)) seconds"
 }
 web_tab(){
   tabname="$1"
@@ -179,7 +179,7 @@ label  {
     fi)
 
     <h2>Previous builds</h2>$(
-      web_tab prev_tab '' "
+      web_tab 'tab-prev' '' "
       <a href=\"./\">latest</a><br>
       $(
         ls -t status_*.html |head -n10 |while read stat; do
@@ -193,57 +193,81 @@ label  {
 
     <h2>GIT changes</h2>$(
     if [ ${start_time} -le ${t_gitupdate} ]; then
-      web_tab VCS_tab "at $(timestamp ${t_gitupdate})" "<pre>$(htmlcat GITlatest)</pre>" checked
+      web_tab "tab-git" \
+              "at $(timestamp ${t_gitupdate})" \
+              "<pre>$(htmlcat GITlatest)</pre>" \
+              "checked"
     else
-      web_tab VCS_tab "Unconditional build, changes ignored" ""
+      web_tab "tab-git" \
+              "Unconditional build, changes ignored"
     fi)
 
     <h2>Phase 1</h2>$(
     if [ $start_time -lt $t_phase_1 -a $start_time -lt $t_gitupdate ]; then
-      web_tab phase-1 "Build time: $(duration $(($t_phase_1 - $t_gitupdate)))" "<pre>$(tail phase_1 |htmlcat)</pre><a href=\"phase_1\">full log</a>"
+      web_tab "tab-phase-1" \
+              "$(duration $(($t_phase_1 - $t_gitupdate)))" \
+              "<pre>$(htmlcat  phase_1)</pre>"
     elif [ $start_time -lt $t_phase_1 ]; then
-      web_tab phase-1 "Build time: $(duration $(($t_phase_1 - $start_time)))" "<pre>$(tail phase_1 |htmlcat)</pre><a href=\"phase_1\">full log</a>"
+      web_tab "tab-phase-1" \
+              "$(duration $(($t_phase_1 - $start_time)))" \
+              "<pre>$(htmlcat phase_1)</pre>"
     else
-      web_tab phase-1 "waiting..." ""
+      web_tab "tab-phase-1" \
+              "waiting..."
     fi)
 
     <h2>Phase 2 Makefile</h2>$(
     if [ $start_time -lt $t_makefile ]; then
-      web_tab makefile "Build time: $(duration $(($t_makefile - $t_phase_1)) )" \
-      "<a href=\"Makefile\">view</a>"
+      web_tab "tab-makefile" \
+              "$(duration $(($t_makefile - $t_phase_1)) )" \
+              "<pre>$(htmlcat Makefile)</pre>"
    else
-      web_tab makefile "waiting..." ""
+      web_tab "tab-makefile" \
+              "waiting..."
    fi)
 
     <h2>Phase 2</h2>$(
     if [ $start_time -lt $t_phase_2 ]; then
-      web_tab phase-2 "Build time: $(duration $(($t_phase_2 - $t_makefile)) )" "<pre>$(tail phase_2 |htmlcat)</pre><a href=\"phase_2\">view full</a>"
+      web_tab "tab-phase-2" \
+              "$(duration $(($t_phase_2 - $t_makefile)) )" \
+              "<pre>$(htmlcat phase_2)</pre>"
     else
-      web_tab phase-2 "waiting..." ""
+      web_tab "tab-phase-2" \
+              "waiting..."
     fi)
 
     <h2>Target update</h2>$(
     if [ ${start_time} -lt ${t_stagesync} -a -s stagesync ]; then
-      web_tab stagesync "Updated $(( $(wc -l stagesync |cut -f1 -d\ ) - 4 )) files" "<pre>$(htmlcat stagesync)</pre>"
+      web_tab "tab-sync" \
+              "$(($(wc -l stagesync |cut -f1 -d\ ) - 4)) updated files" \
+              "<pre>$(htmlcat stagesync)</pre>"
     elif [ -z ${term_status} ]; then
-      web_tab stagesync "waiting..." ""
+      web_tab "tab-sync" \
+              "waiting..."
     else
-      web_tab stagesync "-" ""
+      web_tab "tab-sync" \
+              "-"
     fi)
     
     <h2>Errors</h2>$(
     if [ -f lasterror ]; then
-      web_tab errors "There were errors" "<pre>$(htmlcat lasterror)</pre>"
+      web_tab "tab-errors" \
+              "There were errors" \
+              "<pre>$(htmlcat lasterror)</pre>" \
+              "checked"
     else
-      web_tab errors "none" ""
+      web_tab "tab-errors" \
+              "none"
     fi)
 
     <h2>File Manifest</h2>$(
     if [ $start_time -lt $t_manifest ]; then
-      web_tab manifest "Number of files: $(wc -l manifest | cut -d\  -f1)" "
-      <a href=\"manifest\">view</a>"
+      web_tab "tab-manifest" \
+              "$(wc -l manifest | cut -d\  -f1) files" \
+              "<a href=\"manifest\">view</a>"
     else
-      web_tab manifest "waiting..." ""
+      web_tab "tab-manifest" \
+              "waiting..."
     fi)
   </body>
 </html>

@@ -98,14 +98,14 @@ rm -f "tags/tagged-front-page.en.xhtml"         # We don't want that one
 
 for tag in $(ls "tags" | sed -rn 's/tagged-(.*)\.en.xhtml/\1/p'); do
   if [ ! -f "${tagmaps}/${tag}" ]; then
-    echo "*   Deleting tag ${tag}"
+    echo "*   Deleting tags/tagged-${tag}.en.xhtml"
     rm "tags/tagged-${tag}.en.xhtml"
   fi
 done
 
 for tag in $(ls -a "tags" | sed -rn 's/.tagged-(.*)\.xmllist/\1/p'); do
   if [ ! -f "${tagmaps}/${tag}" ]; then
-    echo "*   Deleting tag ${tag}"
+    echo "*   Deleting tags/.tagged-${tag}.xmllist"
     rm "tags/.tagged-${tag}.xmllist"
   fi
 done

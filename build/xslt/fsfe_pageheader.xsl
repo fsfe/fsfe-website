@@ -8,7 +8,6 @@
   
       <xsl:element name="nav">
         <xsl:attribute name="id">menu</xsl:attribute>
-        <xsl:attribute name="role">navigation</xsl:attribute>
   
         <xsl:element name="div">
           <xsl:attribute name="id">direct-links</xsl:attribute>

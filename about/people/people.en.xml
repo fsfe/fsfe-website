@@ -113,9 +113,10 @@
     <avatar>/about/arnold/arnold-avatar.jpg</avatar>
   </person>
 
-  <person id="carmenbianca" avatar="no">
+  <person id="bakker" avatar="no">
     <name>Carmen Bianca Bakker</name>
     <country>NL</country>
+    <function project="reuse">deputy/f</function>
     <email>carmenbianca (at) fsfe (dot) org</email>
   </person>
   
@@ -131,6 +132,7 @@
     <name>Jan-Christoph Borchardt</name>
     <country>DE</country>
     <team>ga</team>
+    <team>care</team>
     <email>jancborchardt (at) fsfe (dot) org</email>
     <link>http://jancborchardt.net</link>
     <avatar>/about/borchardt/borchardt-avatar.jpg</avatar>
@@ -187,6 +189,7 @@
   <person id="dasilva" avatar="no">
     <name>Erik Da Silva</name>
     <country>FR</country>
+    <function country="FR">deputy/m</function>
     <email>erik.ds (at) fsfe (dot) org</email>
   </person>
 
@@ -340,7 +343,7 @@
   <person id="indorato" avatar="yes">
     <name>Francesca Indorato</name>
     <country>DE</country>
-    <function id="office/f">Office</function>
+    <function>office/f</function>
     <team>core</team>
     <email>fi (at) fsfe (dot) org</email>
     <employee>part/f</employee>
@@ -402,7 +405,6 @@
   <person id="kekalainen" avatar="yes">
     <name>Otto Kekäläinen</name>
     <country>FI</country>
-    <function country="FI">coordinator/m</function>
     <email>otto (at) fsfe (dot) org</email>
     <avatar>/about/kekalainen/kekalainen-avatar.jpg</avatar>
   </person>
@@ -459,9 +461,16 @@
     <employee>full/m</employee>
   </person>
 
+  <person id="lasota" avatar="no">
+    <name>Lucas Lasota</name>
+    <email>lucas.lasota (at) fsfe (dot) org</email>
+    <employee>intern/m</employee>
+  </person>
+
   <person id="lequertier" avatar="no">
     <name>Vincent Lequertier</name>
-    <country>DE</country>
+    <country>FR</country>
+    <function country="FR">deputy/m</function>
     <email>vincent (at) fsfe (dot) org</email>
   </person>
 
@@ -470,6 +479,20 @@
     <country>FI</country>
     <team>fi</team>
     <email>timo.lindfors (at) iki (dot) fi</email>
+  </person>
+
+  <person id="lohmus" avatar="yes" association-member="yes">
+    <name>Heiki Lõhmus</name>
+    <country>EE</country>
+    <function>vice-president/m</function>
+    <function volunteers="translators">coordinator/m</function>
+    <team>council</team>
+    <team>ga</team>
+    <team>translation-coordinators</team>
+    <team>care</team>
+    <email>repentinus (at) fsfe (dot) org</email>
+    <link>/about/repentinus/repentinus.html</link>
+    <avatar>/about/repentinus/avatar.jpg</avatar>
   </person>
 
   <person id="lovergine" avatar="no">
@@ -647,26 +670,9 @@
     <avatar>/about/reiter/reiter-avatar.jpg</avatar>
   </person>
 
-  <person id="repentinus" avatar="yes" association-member="yes">
-    <name>Heiki Lõhmus</name>
-    <country>EE</country>
-    <function>vice-president/m</function>
-    <function volunteers="translators">coordinator/m</function>
-    <team>council</team>
-    <team>ga</team>
-    <team>translation-coordinators</team>
-    <team>care</team>
-    <email>repentinus (at) fsfe (dot) org</email>
-    <link>/about/repentinus/repentinus.html</link>
-    <avatar>/about/repentinus/avatar.jpg</avatar>
-  </person>
-
   <person id="rigamonti" avatar="yes">
     <name>Cristian Rigamonti</name>
-    <country>IT</country>
-    <team>it</team>
     <email>cri (at) fsfe (dot) org</email>
-    <link>https://wiki.fsfe.org/Fellows/cri</link>
     <avatar>/about/rigamonti/rigamonti-avatar.jpg</avatar>
   </person>
 

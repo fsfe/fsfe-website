@@ -12,8 +12,10 @@
   <xsl:output method="text" encoding="UTF-8"/>
 
   <xsl:template match="tag">
-    <!-- Output tag name, removing some forbidden characters -->
-    <xsl:value-of select="translate(., ' /:', '_')"/>
+    <!-- Output canonicalized tag name -->
+    <xsl:value-of select="translate(.,
+        'ABCDEFGHIJKLMNOPQRSTUVWXYZ /:',
+        'abcdefghijklmnopqrstuvwxyz_')"/>
     <!-- Output a blank -->
     <xsl:text> </xsl:text>
     <!-- Output tag label -->

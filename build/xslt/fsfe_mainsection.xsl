@@ -7,7 +7,7 @@
   <xsl:template name="taglinks">
     <xsl:param name="prefix" />
 
-    <ul class="taglist"><xsl:for-each select="/buildinfo/document/tags/tag">
+    <ul class="taglist"><xsl:for-each select="/buildinfo/document/tags/tag[not(. = 'front-page' or @key = 'front-page')]">
       <xsl:variable name="keyname"
            select="translate(@key,'ABCDEFGHIJKLMNOPQRSTUVWXYZ /:','abcdefghijklmnopqrstuvwxyz_')"/>
       <xsl:variable name="tagname"

@@ -16,11 +16,7 @@
       
       <xsl:element name="ul">
           <xsl:attribute name="class">people</xsl:attribute>
-          <xsl:for-each select="/buildinfo/document/set/person[
-                                  contains(@teams, $commateam) or
-                                  contains(@teams, $teamcomma) or
-                                  @teams=$team or
-                                  $team='']">
+          <xsl:for-each select="/buildinfo/document/set/person[team = $team or $team = '']">
                                                 
               <xsl:sort select="@id" />
               <xsl:variable name="id" select="@id" />

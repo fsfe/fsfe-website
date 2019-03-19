@@ -29,7 +29,10 @@ LANGUAGES = $languages
 # -----------------------------------------------------------------------------
 
 # All .xhtml source files
-HTML_SRC_FILES := \$(shell find \$(INPUTDIR) -name '*.??.xhtml')
+HTML_SRC_FILES := \$(shell find \$(INPUTDIR) \
+  -name '*.??.xhtml' \
+  -not -path '\$(INPUTDIR)/.git/*' \
+)
 
 # All basenames of .xhtml source files (without .<lang>.xhtml ending)
 # Note: \$(sort ...) is used to remove duplicates
@@ -123,7 +126,10 @@ EOF
 # -----------------------------------------------------------------------------
 
 # All .rss.xsl scripts which can create .rss output
-RSS_SRC_SCRIPTS := \$(shell find \$(INPUTDIR) -name '*.rss.xsl')
+RSS_SRC_SCRIPTS := \$(shell find \$(INPUTDIR) \
+  -name '*.rss.xsl' \
+  -not -path '\$(INPUTDIR)/.git/*' \
+)
 
 # All basenames of .xhtml source files from which .rss files should be built
 RSS_SRC_BASES := \$(sort \$(basename \$(basename \$(RSS_SRC_SCRIPTS))))
@@ -152,7 +158,10 @@ EOF
 # -----------------------------------------------------------------------------
 
 # All .ics.xsl scripts which can create .ics output
-ICS_SRC_SCRIPTS := \$(shell find \$(INPUTDIR) -name '*.ics.xsl')
+ICS_SRC_SCRIPTS := \$(shell find \$(INPUTDIR) \
+  -name '*.ics.xsl' \
+  -not -path '\$(INPUTDIR)/.git/*' \
+)
 
 # All basenames of .xhtml source files from which .ics files should be built
 ICS_SRC_BASES := \$(sort \$(basename \$(basename \$(ICS_SRC_SCRIPTS))))

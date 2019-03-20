@@ -572,6 +572,50 @@ img.signatory-logo {
 }
 
 
+// ----------------------------------------------------------------------------
+// Overview pages (like "about", "contribute", ...
+// ----------------------------------------------------------------------------
+
+body.overview #content {
+    .toplevel;
+
+    h2 {
+        text-align: center;
+        margin-top: (@line-height-computed * 3);
+        margin-bottom: @line-height-computed;
+    }
+
+    ul {
+        .list-no-style;
+        .make-row;
+
+        li {
+            .make-md-column(6);
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            grid-column-gap: 10px;
+            margin-top: 20px;
+
+            @media (min-width: @screen-md-min) {
+                &:nth-child(odd) {
+                    clear: both;
+                }
+            }
+
+            img {
+                padding: 5px;
+            }
+
+            h3 {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+// ----------------------------------------------------------------------------
+
+
 /* Testimonials divs */
 
 .testimonial {

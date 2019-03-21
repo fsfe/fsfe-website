@@ -22,7 +22,7 @@ ARCH_YEARS := $(filter-out $(lastword $(ARCH_YEARS)),$(ARCH_YEARS))
 ARCH_LANGS := $(suffix $(basename $(wildcard archive-template.??.xhtml)))
 
 # .xhtml files to generate
-ARCH_XHTML := $(foreach year,$(ARCH_YEARS),$(foreach lang,$(ARCH_LANGS),$(year)/$(year)$(lang).xhtml))
+ARCH_XHTML := $(foreach year,$(ARCH_YEARS),$(foreach lang,$(ARCH_LANGS),$(year)/index$(lang).xhtml))
 
 all: $(ARCH_XHTML)
 $(ARCH_XHTML): %.xhtml: archive-template$$(suffix $$*).xhtml
@@ -31,7 +31,7 @@ $(ARCH_XHTML): %.xhtml: archive-template$$(suffix $$*).xhtml
 	@sed 's/:YYYY:/$(dir $@)g' $< > $@
 
 # .sources files to generate
-ARCH_SOURCES := $(foreach year,$(ARCH_YEARS),$(year)/$(year).sources)
+ARCH_SOURCES := $(foreach year,$(ARCH_YEARS),$(year)/index.sources)
 
 all: $(ARCH_SOURCES)
 $(ARCH_SOURCES): %.sources:
@@ -39,7 +39,7 @@ $(ARCH_SOURCES): %.sources:
 	@echo "news/$(dir $@)news-*:[]\nnews/$(dir $@).news-*:[]\nlocalmenuinfo:[]\n" > $@
 
 # .xsl files to generate
-ARCH_XSL := $(foreach year,$(ARCH_YEARS),$(year)/$(year).xsl)
+ARCH_XSL := $(foreach year,$(ARCH_YEARS),$(year)/index.xsl)
 
 all: $(ARCH_XSL)
 $(ARCH_XSL): %.xsl: news.xsl

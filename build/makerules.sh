@@ -58,7 +58,7 @@ EOF
 
   for lang in ${languages}; do
     cat<<EOF
-\$(OUTPUTDIR)/%.${lang}.html: \$(INPUTDIR)/%.*.xhtml \$\$(XMLLIST_DEP) \$\$(XSL_DEP) \$(INPUTDIR)/tools/menu-global.xml \$(INPUTDIR)/tools/.texts-${lang}.xml \$(INPUTDIR)/tools/texts-en.xml \$(INPUTDIR)/.fundraising.${lang}.xml \$(INPUTDIR)/fundraising.en.xml
+\$(filter %.${lang}.html,\$(HTML_DST_FILES)): \$(OUTPUTDIR)/%.${lang}.html: \$(INPUTDIR)/%.*.xhtml \$\$(XMLLIST_DEP) \$\$(XSL_DEP) \$(INPUTDIR)/tools/menu-global.xml \$(INPUTDIR)/tools/.texts-${lang}.xml \$(INPUTDIR)/tools/texts-en.xml \$(INPUTDIR)/.fundraising.${lang}.xml \$(INPUTDIR)/fundraising.en.xml
 	echo "* Building \$*.${lang}.html"
 	\${PROCESSOR} \${PROCFLAGS} process_file "\$(INPUTDIR)/\$*.${lang}.xhtml" > "\$@"
 EOF
@@ -93,7 +93,7 @@ EOF
 
   for lang in ${languages}; do
     cat<<EOF
-\$(OUTPUTDIR)/%/index.${lang}.html:
+\$(filter %/index.${lang}.html,\$(INDEX_DST_LINKS)): \$(OUTPUTDIR)/%/index.${lang}.html:
 	echo "* Creating symlink \$*/index.${lang}.html"
 	ln -sf "\$(notdir \$*).${lang}.html" "\$@"
 EOF

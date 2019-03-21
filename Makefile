@@ -11,6 +11,24 @@
 .FORCE:
 
 # -----------------------------------------------------------------------------
+# Update XSL stylesheets
+# -----------------------------------------------------------------------------
+
+# This step updates (actually: just touches) all XSL files which depend on
+# another XSL file that has changed since the last build run. The phase 2
+# Makefile then only has to consider the directly used stylesheet as a
+# prerequisite for building each file and doesn't have to worry about other
+# stylesheets imported into that one.
+# This must run before the "dive into subdirectories" step, because in the news
+# and events directories, the XSL files, if updated, will be copied for the
+# per-year archives.
+
+.PHONY: stylesheets
+all: stylesheets
+stylesheets: $(SUBDIRS)
+	tools/update_stylesheets.sh
+
+# -----------------------------------------------------------------------------
 # Dive into subdirectories
 # -----------------------------------------------------------------------------
 
@@ -142,18 +160,3 @@ default_xsl:
 all: xmllists
 xmllists: $(SUBDIRS)
 	tools/update_xmllists.sh
-
-# -----------------------------------------------------------------------------
-# Update XSL stylesheets
-# -----------------------------------------------------------------------------
-
-# This step updates (actually: just touches) all XSL files which depend on
-# another XSL file that has changed since the last build run. The phase 2
-# Makefile then only has to consider the directly used stylesheet as a
-# prerequisite for building each file and doesn't have to worry about other
-# stylesheets imported into that one.
-
-.PHONY: stylesheets
-all: stylesheets
-stylesheets: $(SUBDIRS)
-	tools/update_stylesheets.sh

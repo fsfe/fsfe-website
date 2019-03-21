@@ -29,7 +29,7 @@ LANGUAGES = $languages
 # -----------------------------------------------------------------------------
 
 # All .xhtml source files
-HTML_SRC_FILES := \$(shell find \$(INPUTDIR) \
+HTML_SRC_FILES := \$(shell find "\$(INPUTDIR)" \
   -name '*.??.xhtml' \
   -not -path '\$(INPUTDIR)/.git/*' \
 )
@@ -60,7 +60,7 @@ EOF
     cat<<EOF
 \$(OUTPUTDIR)/%.${lang}.html: \$(INPUTDIR)/%.*.xhtml \$\$(XMLLIST_DEP) \$\$(XSL_DEP) \$(INPUTDIR)/tools/menu-global.xml \$(INPUTDIR)/tools/.texts-${lang}.xml \$(INPUTDIR)/tools/texts-en.xml \$(INPUTDIR)/.fundraising.${lang}.xml \$(INPUTDIR)/fundraising.en.xml
 	echo "* Building \$*.${lang}.html"
-	\${PROCESSOR} \${PROCFLAGS} process_file \$(INPUTDIR)/\$*.${lang}.xhtml > \$@
+	\${PROCESSOR} \${PROCFLAGS} process_file "\$(INPUTDIR)/\$*.${lang}.xhtml" > "\$@"
 EOF
   done
 
@@ -95,7 +95,7 @@ EOF
     cat<<EOF
 \$(OUTPUTDIR)/%/index.${lang}.html:
 	echo "* Creating symlink \$*/index.${lang}.html"
-	ln -sf \$(notdir \$*).${lang}.html \$@
+	ln -sf "\$(notdir \$*).${lang}.html" "\$@"
 EOF
   done
 
@@ -115,7 +115,7 @@ EOF
     cat<<EOF
 \$(OUTPUTDIR)/%.html.${lang}:
 	echo "* Creating symlink \$*.html.${lang}"
-	ln -sf \$(notdir \$*).${lang}.html \$@
+	ln -sf "\$(notdir \$*).${lang}.html" "\$@"
 EOF
   done
 
@@ -126,7 +126,7 @@ EOF
 # -----------------------------------------------------------------------------
 
 # All .rss.xsl scripts which can create .rss output
-RSS_SRC_SCRIPTS := \$(shell find \$(INPUTDIR) \
+RSS_SRC_SCRIPTS := \$(shell find "\$(INPUTDIR)" \
   -name '*.rss.xsl' \
   -not -path '\$(INPUTDIR)/.git/*' \
 )
@@ -147,7 +147,7 @@ EOF
     cat<<EOF
 \$(OUTPUTDIR)/%.${lang}.rss: \$(INPUTDIR)/%.*.xhtml \$\$(XMLLIST_DEP) \$(INPUTDIR)/%.rss.xsl \$(INPUTDIR)/tools/menu-global.xml \$(INPUTDIR)/tools/.texts-${lang}.xml \$(INPUTDIR)/tools/texts-en.xml \$(INPUTDIR)/.fundraising.${lang}.xml \$(INPUTDIR)/fundraising.en.xml
 	echo "* Building \$*.${lang}.rss"
-	\${PROCESSOR} \${PROCFLAGS} process_file \$(INPUTDIR)/\$*.${lang}.xhtml \$(INPUTDIR)/\$*.rss.xsl > \$@
+	\${PROCESSOR} \${PROCFLAGS} process_file "\$(INPUTDIR)/\$*.${lang}.xhtml" "\$(INPUTDIR)/\$*.rss.xsl" > "\$@"
 EOF
   done
 
@@ -158,7 +158,7 @@ EOF
 # -----------------------------------------------------------------------------
 
 # All .ics.xsl scripts which can create .ics output
-ICS_SRC_SCRIPTS := \$(shell find \$(INPUTDIR) \
+ICS_SRC_SCRIPTS := \$(shell find "\$(INPUTDIR)" \
   -name '*.ics.xsl' \
   -not -path '\$(INPUTDIR)/.git/*' \
 )
@@ -179,7 +179,7 @@ EOF
     cat<<EOF
 \$(OUTPUTDIR)/%.${lang}.ics: \$(INPUTDIR)/%.*.xhtml \$\$(XMLLIST_DEP) \$(INPUTDIR)/%.ics.xsl \$(INPUTDIR)/tools/menu-global.xml \$(INPUTDIR)/tools/.texts-${lang}.xml \$(INPUTDIR)/tools/texts-en.xml \$(INPUTDIR)/.fundraising.${lang}.xml \$(INPUTDIR)/fundraising.en.xml
 	echo "* Building \$*.${lang}.ics"
-	\${PROCESSOR} \${PROCFLAGS} process_file \$(INPUTDIR)/\$*.${lang}.xhtml \$(INPUTDIR)/\$*.ics.xsl > \$@
+	\${PROCESSOR} \${PROCFLAGS} process_file "\$(INPUTDIR)/\$*.${lang}.xhtml" "\$(INPUTDIR)/\$*.ics.xsl" > "\$@"
 EOF
   done
 
@@ -190,7 +190,7 @@ EOF
 # -----------------------------------------------------------------------------
 
 # All files which should just be copied over
-COPY_SRC_FILES := \$(shell find \$(INPUTDIR) -type f \
+COPY_SRC_FILES := \$(shell find "\$(INPUTDIR)" -type f \
   -not -path '\$(INPUTDIR)/.git/*' \
   -not -path '\$(INPUTDIR)/build/*' \
   -not -path '\$(INPUTDIR)/tools/*' \
@@ -211,7 +211,7 @@ COPY_DST_FILES := \$(sort \$(patsubst \$(INPUTDIR)/%,\$(OUTPUTDIR)/%,\$(COPY_SRC
 all: \$(COPY_DST_FILES)
 \$(COPY_DST_FILES): \$(OUTPUTDIR)/%: \$(INPUTDIR)/%
 	echo "* Copying file \$*"
-	cp \$< \$@
+	cp "\$<" "\$@"
 
 # -----------------------------------------------------------------------------
 # Copy .xhtml files to "source" directory in target directory tree
@@ -222,7 +222,7 @@ SOURCE_DST_FILES := \$(sort \$(patsubst \$(INPUTDIR)/%,\$(OUTPUTDIR)/source/%,\$
 all: \$(SOURCE_DST_FILES)
 \$(SOURCE_DST_FILES): \$(OUTPUTDIR)/source/%: \$(INPUTDIR)/%
 	echo "* Copying source \$*"
-	cp \$< \$@
+	cp "\$<" "\$@"
 
 # -----------------------------------------------------------------------------
 # Clean up excess files in target directory
@@ -236,10 +236,10 @@ clean:
 	# Write all destination filenames into "manifest" file, one per line
 	\$(file >\$(STATUSDIR)/manifest)
 	\$(foreach filename,\$(ALL_DST),\$(file >>\$(STATUSDIR)/manifest,\$(filename)))
-	sort \$(STATUSDIR)/manifest > \$(STATUSDIR)/manifest.sorted
-	find -L \$(OUTPUTDIR) -type f \\
+	sort "\$(STATUSDIR)/manifest" > "\$(STATUSDIR)/manifest.sorted"
+	find -L "\$(OUTPUTDIR)" -type f \\
 	  | sort \\
-	  | diff - \$(STATUSDIR)/manifest.sorted \\
+	  | diff - "\$(STATUSDIR)/manifest.sorted" \\
 	  | sed -rn 's;^< ;;p' \\
 	  | while read file; do echo "* Deleting \$\${file}"; rm "\$\${file}"; done
 

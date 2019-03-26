@@ -1,6 +1,7 @@
 #!/usr/bin/perl
-#
+# -----------------------------------------------------------------------------
 # Script for handling expense requests
+# -----------------------------------------------------------------------------
 # Copyright (C) Free Software Foundation Europe e.V.
 #
 # This program is free software: you can redistribute it and/or modify
@@ -15,7 +16,7 @@
 #
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>
-
+# -----------------------------------------------------------------------------
 
 use CGI;
 use POSIX qw(strftime);
@@ -26,6 +27,7 @@ use POSIX qw(strftime);
 
 my %names = (
   "eal" => "Erik Albers",
+  "sansusann" => "Susanne Eiswirt",
   "mk" => "Matthias Kirschner",
   "repentinus" => "Heiki Lohmus",
   "galia" => "Galina Mancheva",
@@ -106,6 +108,7 @@ my %account = (
   "PERSONELL-SANDER" => "81057",
   "PERSONELL-KU" => "81058",
   "PERSONELL-MANCHEVA" => "81059",
+  "PERSONELL-EISWIRT" => "81062",
   "OFFICE-BERLIN" => "82001",
 );
 
@@ -175,11 +178,11 @@ close MAIL;
 # -----------------------------------------------------------------------------
 
 print "Content-type: text/html; charset=utf-8\n\n";
-print "Your request $reference was sent. Thank you.<br /><br />";
-print "WHO: $names{$who}<br />\n\n";
-print "WHAT: $what<br />\n\n";
-print "WHEN: $when<br />\n\n";
-print "WHY: $why<br />\n\n";
-print "ESTIMATE: $estimate<br />\n\n";
-print "BUDGET: $budget<br />\n\n";
-print "REFUND CONTACT: $refund<br />\n\n";
+print "Your request $reference was sent. Thank you.<br/><br/>";
+print "WHO: $names{$who}<br/>\n\n";
+print "WHAT: $what<br/>\n\n";
+print "WHEN: $when<br/>\n\n";
+print "WHY: $why<br/>\n\n";
+print "ESTIMATE: $estimate<br/>\n\n";
+print "BUDGET: $budget<br/>\n\n";
+print "REFUND CONTACT: $refund<br/>\n\n";

@@ -14,8 +14,8 @@
     <xsl:element name="dl">
       <xsl:attribute name="id">press-releases</xsl:attribute>
 
-      <!-- Show news except those in the future, but no newsletters -->
-      <xsl:for-each select="/buildinfo/document/set/news[translate(@date,'-','')&lt;=translate($today,'-','') and not(@type='newsletter')]">
+      <!-- Show news except those in the future -->
+      <xsl:for-each select="/buildinfo/document/set/news[translate(@date,'-','')&lt;=translate($today,'-','')]">
         <xsl:sort select="@date" order="descending" />
 
         <!-- A news entry -->

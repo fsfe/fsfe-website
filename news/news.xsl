@@ -20,10 +20,9 @@
       <xsl:value-of select="/buildinfo/@date" />
     </xsl:variable>
 
-    <!-- show news except those in the future, but no newsletters -->
+    <!-- show news except those in the future -->
     <xsl:for-each select="/buildinfo/document/set/news
-                          [translate (@date, '-', '') &lt;= translate ($today, '-', '')
-                          and not (@type = 'newsletter')]">
+                          [translate (@date, '-', '') &lt;= translate ($today, '-', '')]">
       <xsl:sort select="@date" order="descending" />
 
       <!-- begin: news entry -->

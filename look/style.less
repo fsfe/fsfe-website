@@ -58,7 +58,71 @@ h1, h2, h3, h4 {
 }
 
 
-/* page structure and grids */
+// ----------------------------------------------------------------------------
+// Classes to place a decorative image beside a block element
+// ----------------------------------------------------------------------------
+
+// Common styles for images on the left or right side
+.with-image() {
+    .make-row();
+
+    // The image must be the first child of the .with-image-* container, and
+    // takes 1/4 of the total width. On XS sized screens, it will go above the
+    // text.
+    > img:first-child {
+        display: block;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        .make-sm-column(3);
+        @media (max-width: @screen-xs-max) {
+            width: 180px;       // includes grid padding of 30px!
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    // All other children of the .with-image-* container take 3/4 of the total
+    // width.
+    > :nth-child(n+2) {
+        .make-sm-column(9);
+    }
+}
+
+// Image on the left side of text
+.with-image-left {
+    .with-image();
+
+    // The second child element will go beside the image. All further children
+    // (starting with #3) need an explicit offset to go below the second.
+    > :nth-child(n+3) {
+        .make-sm-column-offset(3);
+    }
+}
+
+// Image on the right side of text
+.with-image-right {
+    .with-image();
+
+    // The image is pushed to the right side...
+    > img:first-child {
+        .make-sm-column-push(9);
+    }
+
+    // ...and the text pulled to the left side.
+    > :nth-child(2) {
+        .make-sm-column-pull(3);
+    }
+
+    // Need an explicit clear below the image
+    > :nth-child(3) {
+        clear: both;
+    }
+}
+
+
+// ============================================================================
+// Page structure and grids
+// ============================================================================
 
 #translations, #main, #followup {
     .make-row();

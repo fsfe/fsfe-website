@@ -573,6 +573,37 @@ img.signatory-logo {
 
 
 // ----------------------------------------------------------------------------
+// List of quotes
+// ----------------------------------------------------------------------------
+
+ul.quote-list {
+    .list-unstyled();
+    .quote();
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    > li {
+        // Add thin lines between the quotes
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-top: 1px solid @hr-border;
+        border-bottom: 1px solid @hr-border;
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        // Special formatting for the source of the quote
+        p.source {
+            font-weight: bold;
+            margin-left: 3em;
+            &:before {
+                content: '\2014 \00A0'; // EM DASH, NBSP
+            }
+        }
+    }
+}
+
+// ----------------------------------------------------------------------------
 // Overview pages (like "about", "contribute", ...
 // ----------------------------------------------------------------------------
 

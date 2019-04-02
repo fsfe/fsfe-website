@@ -76,18 +76,6 @@
               <xsl:with-param name="id" select="'learn-more'" />
           </xsl:call-template></a>
 
-        </xsl:when><xsl:when test = "/buildinfo/document/sidebar/@promo = 'about-fsfe'">
-          <h3 class="promo"><xsl:call-template name="fsfe-gettext">
-            <xsl:with-param name="id" select="'about-fsfe'" />
-          </xsl:call-template></h3>
-          <xsl:call-template name="fsfe-gettext">
-            <xsl:with-param name="id" select="'about-fsfe-intro'" />
-          </xsl:call-template>
-          <a href="/about/about.html" class="learn-more">
-            <xsl:call-template name="fsfe-gettext">
-              <xsl:with-param name="id" select="'learn-more'" />
-          </xsl:call-template></a>
-
         </xsl:when><xsl:when test = "/buildinfo/document/sidebar/@promo = 'donate'">
           <h3 class="promo"><xsl:call-template name="fsfe-gettext">
             <xsl:with-param name="id" select="'donate'" />
@@ -104,7 +92,7 @@
         </xsl:when><xsl:when test = "/buildinfo/document/sidebar/@promo = 'none'">
 
         <!--otherwise display about-fsfe-->
-        </xsl:when><xsl:when test = "not(/buildinfo/document/sidebar/@promo = 'no')">
+        </xsl:when><xsl:otherwise>
           <h3 class="promo"><xsl:call-template name="fsfe-gettext">
             <xsl:with-param name="id" select="'about-fsfe'" />
           </xsl:call-template></h3>
@@ -113,9 +101,9 @@
           </xsl:call-template>
           <a href="/about/about.html" class="learn-more">
             <xsl:call-template name="fsfe-gettext">
-            <xsl:with-param name="id" select="'learn-more'" />
+              <xsl:with-param name="id" select="'learn-more'" />
           </xsl:call-template></a>
-        </xsl:when>
+        </xsl:otherwise>
       </xsl:choose>
 
     </aside>

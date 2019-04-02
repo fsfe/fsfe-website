@@ -39,7 +39,7 @@ body {
 }
 
 #menu {
-    @media (min-width: @screen-xs) {
+    @media (min-width: @screen-xs-min) {
         margin-left: 300px;
     }
 }
@@ -48,7 +48,7 @@ body {
     background: url(/graphics/fellowship/ribbon_fellowship2.png) no-repeat 100% -30px @body-bg; 
     text-shadow: rgb(255,255,255) 0 0 .5em;
 
-    @media (min-width: @screen-sm) {
+    @media (min-width: @screen-sm-min) {
         background: url(/graphics/fellowship/ribbon_fellowship2.png) no-repeat 100% -50% @body-bg; 
     }
 }
@@ -95,7 +95,7 @@ a.the-fellowship {
 
     #events {
 
-        @media (min-width: @screen-md) {
+        @media (min-width: @screen-md-min) {
             float: right;
             width: 50%;
             margin: 2em 0 1em 1em;
@@ -112,7 +112,7 @@ a.the-fellowship {
             a {color: #FFF;}
             margin: 0;
             padding: 0.3em;
-            @media (min-width: @screen-md) {
+            @media (min-width: @screen-md-min) {
                 margin: -0.3em -0.9em 0.5em;
             }
         }

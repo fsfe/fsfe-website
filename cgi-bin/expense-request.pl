@@ -1,6 +1,7 @@
 #!/usr/bin/perl
-#
+# -----------------------------------------------------------------------------
 # Script for handling expense requests
+# -----------------------------------------------------------------------------
 # Copyright (C) Free Software Foundation Europe e.V.
 #
 # This program is free software: you can redistribute it and/or modify
@@ -15,7 +16,7 @@
 #
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>
-
+# -----------------------------------------------------------------------------
 
 use CGI;
 use POSIX qw(strftime);
@@ -26,12 +27,15 @@ use POSIX qw(strftime);
 
 my %names = (
   "eal" => "Erik Albers",
+  "sansusann" => "Susanne Eiswirt",
   "mk" => "Matthias Kirschner",
   "repentinus" => "Heiki Lohmus",
+  "galia" => "Galina Mancheva",
   "max.mehl" => "Max Mehl",
   "reinhard" => "Reinhard Müller",
   "alex.sander" => "Alexander Sander",
   "usli" => "Ulrike Sliwinski",
+  "gabriel.ku" => "Gabriel Ku Wei Bin",
 );
 
 # -----------------------------------------------------------------------------
@@ -52,6 +56,9 @@ my %responsible = (
   "REUSE-EVENTS" => "council",
   "REUSE-MATERIAL" => "council",
   "REUSE-OTHER" => "council",
+  "NGI0-DISCOVERY" => "council",
+  "NGI0-PET" => "council",
+  "NGI0-COMMON" => "council",
   "MERCHANDISE-PURCHASE" => "usli",
   "MERCHANDISE-OTHER" => "usli",
   "INTERNAL-COORD" => "council",
@@ -80,6 +87,9 @@ my %account = (
   "POLICY-OTHER" => "2540",
   "FOSS4SME-EVENTS" => "2553",
   "FOSS4SME-OTHER" => "2550",
+  "NGI0-DISCOVERY" => "2560",
+  "NGI0-PET" => "2570",
+  "NGI0-COMMON" => "2580",
   "REUSE-EVENTS" => "6113",
   "REUSE-MATERIAL" => "6114",
   "REUSE-OTHER" => "6110",
@@ -98,6 +108,7 @@ my %account = (
   "PERSONELL-SANDER" => "81057",
   "PERSONELL-KU" => "81058",
   "PERSONELL-MANCHEVA" => "81059",
+  "PERSONELL-EISWIRT" => "81062",
   "OFFICE-BERLIN" => "82001",
 );
 
@@ -166,12 +177,12 @@ close MAIL;
 # Inform user that everything was ok
 # -----------------------------------------------------------------------------
 
-print "Content-type: text/html\n\n";
-print "Your request $reference was sent. Thank you.<br /><br />";
-print "WHO: $names{$who}<br />\n\n";
-print "WHAT: $what<br />\n\n";
-print "WHEN: $when<br />\n\n";
-print "WHY: $why<br />\n\n";
-print "ESTIMATE: $estimate<br />\n\n";
-print "BUDGET: $budget<br />\n\n";
-print "REFUND CONTACT: $refund<br />\n\n";
+print "Content-type: text/html; charset=utf-8\n\n";
+print "Your request $reference was sent. Thank you.<br/><br/>";
+print "WHO: $names{$who}<br/>\n\n";
+print "WHAT: $what<br/>\n\n";
+print "WHEN: $when<br/>\n\n";
+print "WHY: $why<br/>\n\n";
+print "ESTIMATE: $estimate<br/>\n\n";
+print "BUDGET: $budget<br/>\n\n";
+print "REFUND CONTACT: $refund<br/>\n\n";

@@ -20,10 +20,9 @@
       <xsl:value-of select="/buildinfo/@date" />
     </xsl:variable>
 
-    <!-- show news except those in the future, but no newsletters -->
+    <!-- show news except those in the future -->
     <xsl:for-each select="/buildinfo/document/set/news
-                          [translate (@date, '-', '') &lt;= translate ($today, '-', '')
-                          and not (@type = 'newsletter')]">
+                          [translate (@date, '-', '') &lt;= translate ($today, '-', '')]">
       <xsl:sort select="@date" order="descending" />
 
       <!-- begin: news entry -->
@@ -111,9 +110,9 @@
   <xsl:template match="buildinfo/document/set/news/tags">
     <xsl:for-each select="tag[not(. = 'front-page' or @key = 'front-page')]">
       <xsl:variable name="keyname"
-                    select="translate(@key,'ABCDEFGHIJKLMNOPQRSTUVWXYZ-_+ /','abcdefghijklmnopqrstuvwxyz')" />
+                    select="translate(@key,'ABCDEFGHIJKLMNOPQRSTUVWXYZ /:','abcdefghijklmnopqrstuvwxyz_')" />
       <xsl:variable name="tagname"
-                    select="translate(.,'ABCDEFGHIJKLMNOPQRSTUVWXYZ-_+ /','abcdefghijklmnopqrstuvwxyz')" />
+                    select="translate(.,'ABCDEFGHIJKLMNOPQRSTUVWXYZ /:','abcdefghijklmnopqrstuvwxyz_')" />
       <xsl:choose>
         <xsl:when test="@key and .">
           <li><a href="/tags/tagged-{$keyname}.html"><xsl:value-of select="." /></a></li>

@@ -1,16 +1,7 @@
-#!/bin/sh
+#!/bin/bash
 
 inc_stirrups=true
 [ -z "$inc_misc" ] && . "$basedir/build/misc.sh"
-# [ -z "$inc_sources" ] && . "$basedir/build/sources.sh"
-
-validate_caches(){
-  # outdate / remove cache files if necessary
-  # hook functions here as required
-
-  # validate_tagmap  # hook from sources.sh
-  true
-}
 
 dir_maker(){
   # set up directory tree for output
@@ -32,44 +23,23 @@ dir_maker(){
   done
 }
 
-build_manifest(){
-  # read a Makefile from stdin and generate
-  # list of all make tagets
-
-  sed -nr 's;\\ ; ;g;
-           s;\\#;#;g;
-           s;\$\{OUTPUTDIR\}/([^:]+):.*;\1;p'
-}
-
-remove_orphans(){
-  # read list of files which should be in a directory tree
-  # and remove everything else
-  dtree="${1%/}"
-
-  # Idea behind the algorithm:
-  # `find` will list every existing file once.
-  # The manifest of all make targets will list all wanted files once.
-  # Concatenate all lines from manifest and `find`.
-  # Every file which is listed twice is wanted and exists.
-  # We use 'uniq -u' to drop those from the list.
-  # Remaining single files exist only in the tree and are to be
-  # removed (or were just added to the manifest and cannot be removed
-  # from the tree)
-
-  (find "$dtree" \( -type f -o -type l \) -printf '%P\n' ; cat) \
-  | sort \
-  | uniq -u \
-  | while read file; do
-    rm -v "$dtree/$file"
-  done
-}
-
-wakeup_news(){
+wakeup(){
   # Performs a `touch` on all files which are to be released at the
   # presented date.
   today="$1"
 
-  find "$basedir" -name '*.xml' \
+  # All news with today's date
+  find "${basedir}/news" -name '*.xml' \
   | xargs egrep -l "<[^>]+ date=[\"']${today}[\"'][^>]*>" \
+  | xargs touch -c 2>&- || true
+
+  # All events which start today
+  find "${basedir}/events" -name '*.xml' \
+  | xargs egrep -l "<[^>]+ start=[\"']${today}[\"'][^>]*>" \
+  | xargs touch -c 2>&- || true
+
+  # All events which ended yesterday
+  find "${basedir}/events" -name '*.xml' \
+  | xargs egrep -l "<[^>]+ end=[\"']$(date -d "${today} -1 day" +%F)[\"'][^>]*>" \
   | xargs touch -c 2>&- || true
 }

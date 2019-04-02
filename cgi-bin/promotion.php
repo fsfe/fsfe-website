@@ -63,6 +63,7 @@ function relay_donation($orderID) {
 }
 
 function send_mail ( $to, $from, $subject, $msg, $bcc = NULL, $att = NULL, $att_type = NULL, $att_name = NULL ) {
+  global $countrycode; // take variable from below where we split the POST string
   $headers = "From: $from\n";
   if ( isset( $bcc )) { $headers .= "Bcc: $bcc" . "\n"; }
   $headers .= "X-OTRS-Queue: Shipping::Promo Material Orders\n";
@@ -72,6 +73,8 @@ function send_mail ( $to, $from, $subject, $msg, $bcc = NULL, $att = NULL, $att_
   }
   $headers .= "X-OTRS-DynamicField-OrderLanguage: " . $_POST["language"] . "\n";
   $headers .= "X-OTRS-DynamicField-OrderState: order\n";
+  $headers .= "X-OTRS-DynamicField-PromoMaterialCountry: " . $countrycode . "\n";
+  $headers .= "X-OTRS-DynamicField-PromoMaterialLanguages: " . implode(',', $_POST['languages']) . "\n";
 
   if ( $att ) {
     $separator = md5( time());
@@ -108,6 +111,22 @@ function send_mail ( $to, $from, $subject, $msg, $bcc = NULL, $att = NULL, $att_
   return mail( $to, $subject, $message, $headers );
 }
 
+# send information to mail-signup.php if user wished to sign up to community mails or newsletter
+function mail_signup($data) {
+  $url = $_SERVER['REQUEST_SCHEME']. '://' . $_SERVER['HTTP_HOST'] . '/cgi-bin/mail-signup.php';
+  $context = stream_context_create(
+    array(
+      'http' => array(
+        'method' => 'POST',
+        'header' => 'Content-type: application/x-www-form-urlencoded',
+        'content' => http_build_query($data),
+        'timeout' => 10
+      )
+    )
+  );
+  file_get_contents($url, FALSE, $context);
+}
+
 $lang = $_POST['language'];
 
 # Sanity checks (*very* sloppy input validation)
@@ -117,7 +136,7 @@ if (empty($_POST['lastname'])  ||
     empty($_POST['zip'])       ||
     empty($_POST['city'])      ||
     empty($_POST['country'])   ||
-    empty($_POST['specifics']) ||
+    empty($_POST['packagetype']) ||
    !empty($_POST['address']) ) {
 
   header("Location: http://fsfe.org/contribute/spreadtheword-ordererror.$lang.html");
@@ -127,7 +146,15 @@ if (empty($_POST['lastname'])  ||
 # Without this, escapeshellarg() will eat non-ASCII characters.
 setlocale(LC_CTYPE, "en_US.UTF-8");
 
-$subject = "Promotion material order";
+# $_POST["country"] has values like "DE|Germany", so split this string
+$countrycode = explode('|', $_POST["country"])[0];
+$countryname = explode('|', $_POST["country"])[1];
+
+if ($_POST['packagetype'] == 'default') {
+  $subject = "Standard promotion material order";
+} else {
+  $subject = "Custom promotion material order";
+}
 $msg = "Please send me promotional material:\n".
        "First Name: {$_POST['firstname']}\n".
        "Last Name:  {$_POST['lastname']}\n".
@@ -141,18 +168,26 @@ if (!empty($_POST['org'])) {
 }
 $msg .= "{$_POST['street']}\n".
        "{$_POST['zip']} "."{$_POST['city']}\n".
-       "{$_POST['country']}\n".
+       "{$countryname}\n".
        "\n".
-       "Specifics of the Order:\n".
-       "{$_POST['specifics']}\n".
+       "Specifics of the Order:\n";
+# Default or custom package?
+if ($_POST['packagetype'] == 'default') {
+  $msg .= "Default package: Something from everything listed here, depending on size, language selection and availability.\n";
+} else {
+  $msg .= "Custom package:\n".
+          "{$_POST['specifics']}\n";
+}
+$languages = implode(',',$_POST['languages']);
+$msg .= "\n".
+       "Preferred language(s) (if available):\n".
+       "{$languages}\n".
        "\n".
        "The material is going to be used for:\n".
        "{$_POST['usage']}\n".
        "\n".
        "Comments:\n".
-       "{$_POST['comment']}\n".
-       "\n".
-       "Preferred language was: {$_POST['language']}\n";
+       "{$_POST['comment']}\n";
 
 if (isset($_POST['donate']) && ($_POST['donate'] > 0)) {
   $_POST['donationID'] = "DAFSPCK".gen_alnum(5);
@@ -172,10 +207,24 @@ if (!empty($_POST['org'])) {
 }
 $address .= $_POST['street'] . "\\n" .
             $_POST['zip'] . " " . $_POST['city'] . "\\n" .
-            $_POST['country'];
+            $countryname;
 $name = escapeshellarg($name);
 $address = escapeshellarg($address);
-shell_exec("$odtfill $template $outfile Name=$name Address=$address");
+shell_exec("$odtfill $template $outfile Name=$name Address=$address Name=$name");
+
+# Make subscriptions to newsletter/community mails
+if ($_POST['subcd'] == "y") {
+  $signupdata = array(
+    'list' => 'community',
+    'name' => $_POST['firstname'] . " " . $_POST['lastname'],
+    'mail' => $_POST['mail'],
+    'address' => $_POST['street'],
+    'zip' => $_POST['zip'],
+    'city' => $_POST['city'],
+    'country' => $countrycode
+  );
+  mail_signup($signupdata);
+}
 
 $test = send_mail ("contact@fsfe.org", $_POST['firstname'] . " " . $_POST['lastname'] . " <" . $_POST['mail'] . ">", $subject, $msg, NULL, file_get_contents($outfile), "application/vnd.oasis.opendocument.text", "letter.odt");
 

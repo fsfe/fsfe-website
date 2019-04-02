@@ -1,3 +1,4 @@
-news/*/news:[RadioDirective]
-news/generated_xml/:[RadioDirective]
-news/nl/nl:[RadioDirective]
+news/*/news-*:[radiodirective]
+news/*/.news-*:[radiodirective]
+news/nl/nl-*:[radiodirective]
+news/nl/.nl-*:[radiodirective]

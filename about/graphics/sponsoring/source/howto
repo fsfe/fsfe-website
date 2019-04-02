@@ -9,7 +9,9 @@ Where outputdir is the name of a directory where the files will be generated. If
 
 Make sure that button_template.svg is available when you run the script.
 
-The script will also generate xhtml chunks for inclusion in the sponsoring.xhtml file. You can find the xhtml code in the output directory (file: xhtml) after running the script. To be provided with correct path names in the xhtml output it is recommended to run the script from the directory containing "sponsoring.xhtml".
+(DEPRECATED: The script will also generate xhtml chunks for inclusion in the sponsoring.xhtml file. You can find the xhtml code in the output directory (file: xhtml) after running the script. To be provided with correct path names in the xhtml output it is recommended to run the script from the directory containing "sponsoring.xhtml".)
+
+After running the script, open the file about/graphics/sponsoring/sponsoring-buttons.en.xml and add the new year. You don't need to edit sponsoring.en.xhtml or translated files, but it might need a full site rebuild or a fake update to have the website updated.
 
 Note:
 generate-all.sh and sponsoring_buttons.svg are DEPRECATED.

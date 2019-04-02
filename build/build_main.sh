@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Check dependencies
 deperrors=''
@@ -38,9 +38,9 @@ buildpids=$(
   | egrep "[s]h ${0} .*" \
   | wc -l
 )
-if [ $command = "build_into" -o $command = "git_build_into" -o $command = "svn_build_into" ] && [ "$buildpids" -gt 2 ]; then
+if [ $command = "build_into" -o $command = "git_build_into" ] && [ "$buildpids" -gt 2 ]; then
   debug "build script is already running"
-  exit 0
+  exit 1
 fi
 
 [ -z "$inc_filenames" ] && . "$basedir/build/filenames.sh"
@@ -59,19 +59,9 @@ case "$command" in
                    else
                      git_build_into
                    fi ;;
-  svn_build_into)  if [ "${statusdir}/full_build" -nt "${statusdir}/index.cgi" ]; then
-                     debug "discovered flag file, performing full build"
-                     build_into
-                   else
-                     svn_build_into
-                   fi ;;
   build_into)      build_into ;;
-  map_tags)        map_tags "$@";;
-  process_file)    process_file "$workfile" "$processor" "$olang" ;;
-  build_xmlstream) build_xmlstream "$(get_shortname "$workfile")" "$(get_language "$workfile")" "$olang" ;;
+  process_file)    process_file "$workfile" "$processor" ;;
+  build_xmlstream) build_xmlstream "$(get_shortname "$workfile")" "$(get_language "$workfile")" ;;
   tree_maker)      tree_maker "$tree" "$target" ;;
-  sourceglobs)     sourceglobs "$sourcesfile" ;;
-  lang_sources)    lang_sources "$sourceglobfile" "$lang" ;;
-  cast_refglobs)   cast_refglobs "$globfile" "$reffile" ;;
-  wakeup_news)     wakeup_news "$today" ;;
+  wakeup)          wakeup "$today" ;;
 esac

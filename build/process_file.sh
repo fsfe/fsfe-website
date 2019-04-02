@@ -1,9 +1,11 @@
-#!/bin/sh
+#!/bin/bash
 
 basedir="${0%/*}/.."
 [ -z "$inc_processor" ] && . "$basedir/build/processor.sh"
 
 . "$basedir/build/arguments.sh"
 
-[ "$command" = process_file ] && process_file "$workfile" "$processor" "$olang" \
-|| die "Urecognised command or no command given"
+case "$command" in
+  process_file) process_file "$workfile" "$processor" ;;
+  *) die "Unrecognised command or no command given" ;;
+esac

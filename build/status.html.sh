@@ -1,9 +1,9 @@
-#!/bin/sh
+#!/bin/bash
 
 exec 2>/dev/null
 
 if [ "$QUERY_STRING" = "full_build" ]; then
-  if printf %s "$HTTP_REFERER" |grep -qE '^https?://([^/]+\.)?fsfe\.org/'; then
+  if printf %s "$HTTP_REFERER" | grep -qE '^https?://([^/]+\.)?fsfe\.org/'; then
     touch ./full_build
   fi
   printf 'Location: ./\n\n'
@@ -13,9 +13,24 @@ fi
 timestamp(){
   date -d "@$1" +"%F %T (%Z)"
 }
+
 duration(){
-  printf %s "$(($1 / 60))min $(($1 % 60))s"
+  minutes=$(($1 / 60))
+  if [ "${minutes}" == "1" ]; then
+    minutes="${minutes} minute"
+  else
+    minutes="${minutes} minutes"
+  fi
+
+  seconds=$(($1 % 60))
+  if [ "${seconds}" == "1" ]; then
+    seconds="${seconds} second"
+  else
+    seconds="${seconds} seconds"
+  fi
+  echo "${minutes} ${seconds}"
 }
+
 web_tab(){
   tabname="$1"
   tablabel="$2"
@@ -28,6 +43,7 @@ web_tab(){
 <div class="tabcontent">${tabcontent}</div>
 EOF
 }
+
 htmlcat(){
   sed 's;&;\&amp\;;g;
        s;<;\&lt\;;g;
@@ -37,22 +53,15 @@ htmlcat(){
 }
 
 start_time=$(cat "start_time" || stat -c %Y "$0" || echo 0)
-t_svnupdate=$(stat -c %Y "SVNlatest" ||echo 0)
 t_gitupdate=$(stat -c %Y "GITlatest" ||echo 0)
-t_premake=$(stat -c %Y "premake" ||echo 0)
+t_phase_1=$(stat -c %Y "phase_1" ||echo 0)
 t_makefile=$(stat -c %Y "Makefile" ||echo 0)
-t_makecopy=$(stat -c %Y "Make_copy" ||echo 0)
-t_makesourcecopy=$(stat -c %Y "Make_sourcecopy" ||echo 0)
-t_makexslt=$(stat -c %Y "Make_xslt" ||echo 0)
-t_makexhtml=$(stat -c %Y "Make_xhtml" ||echo 0)
+t_phase_2=$(stat -c %Y "phase_2" ||echo 0)
 t_manifest=$(stat -c %Y "manifest" ||echo 0)
-t_makerun=$(stat -c %Y "buildlog" ||echo 0)
-t_errors=$(stat -c %Y "lasterror" ||echo 0)
-t_removed=$(stat -c %Y "removed" ||echo 0)
 t_stagesync=$(stat -c %Y "stagesync" ||echo 0)
 end_time=$(cat "end_time" || echo 0)
 duration=$(($end_time - $start_time))
-term_status=$(if [ "$duration" -gt 0 -a lasterror -nt start_time ]; then
+term_status=$(if [ "$duration" -gt 0 -a -f lasterror ]; then
                 echo Error
               elif [ "$duration" -gt 0 ]; then
                 echo Success
@@ -186,7 +195,7 @@ label  {
     fi)
 
     <h2>Previous builds</h2>$(
-      web_tab prev_tab '' "
+      web_tab 'tab-prev' '' "
       <a href=\"./\">latest</a><br>
       $(
         ls -t status_*.html |head -n10 |while read stat; do
@@ -198,78 +207,84 @@ label  {
       )"
     )
 
-    <h2>VCS changes</h2>$(
+    <h2>GIT changes</h2>$(
     if [ ${start_time} -le ${t_gitupdate} ]; then
-      web_tab VCS_tab "at $(timestamp ${t_gitupdate})" "<pre>$(htmlcat GITlatest)</pre>" checked
-    elif [ ${start_time} -le ${t_svnupdate} ]; then
-      web_tab VCS_tab "at $(timestamp ${t_svnupdate})" "<pre>$(htmlcat SVNlatest)</pre>" checked
+      web_tab "tab-git" \
+              "at $(timestamp ${t_gitupdate})" \
+              "<pre>$(htmlcat GITlatest)</pre>" \
+              "checked"
     else
-      web_tab VCS_tab "Unconditional build, changes ignored" ""
+      web_tab "tab-git" \
+              "Unconditional build, changes ignored"
     fi)
 
-    <h2>Premake</h2>$(
-    if [ $start_time -lt $t_premake -a $start_time -lt $t_gitupdate ]; then
-      web_tab Premaketab "Premake run time $(duration $(($t_premake - $t_gitupdate)))" "<pre>$(tail premake |htmlcat)</pre><a href="premake">full log</a>"
-    elif [ $start_time -lt $t_premake -a $start_time -lt $t_svnupdate ]; then
-      web_tab Premaketab "Premake run time $(duration $(($t_premake - $t_svnupdate)))" "<pre>$(tail premake |htmlcat)</pre><a href="premake">full log</a>"
-    elif [ $start_time -lt $t_premake ]; then
-      web_tab Premaketab "Premake run time $(duration $(($t_premake - $start_time)))" "<pre>$(tail premake |htmlcat)</pre><a href="premake">full log</a>"
+    <h2>Phase 1</h2>$(
+    if [ $start_time -lt $t_phase_1 -a $start_time -lt $t_gitupdate ]; then
+      web_tab "tab-phase-1" \
+              "$(duration $(($t_phase_1 - $t_gitupdate)))" \
+              "<pre>$(htmlcat  phase_1)</pre>"
+    elif [ $start_time -lt $t_phase_1 ]; then
+      web_tab "tab-phase-1" \
+              "$(duration $(($t_phase_1 - $start_time)))" \
+              "<pre>$(htmlcat phase_1)</pre>"
     else
-      web_tab Premaketab "waiting..." ""
+      web_tab "tab-phase-1" \
+              "waiting..."
     fi)
 
-    <h2>Makefile</h2>$(
+    <h2>Phase 2 Makefile</h2>$(
     if [ $start_time -lt $t_makefile ]; then
-      web_tab Makefiletab "Generation time: $(duration $(($t_makefile - $t_premake)) )" "
-      <h3>Header</h3>$(web_tab Makeheadertab "" "<pre>$(head Makefile |htmlcat)</pre>")
-      <h3>Copy rules</h3>$(web_tab Makecopytab "Generation time: $(duration $(($t_makecopy - $t_premake)))" "<pre>$(tail Make_copy |htmlcat)</pre>")
-      <h3>Source copy rules</h3>$(web_tab Makescopytab "Generation time: $(duration $(($t_makesourcecopy - $t_premake)))" "<pre>$(tail Make_sourcecopy |htmlcat)</pre>")
-      <h3>XSLT rules</h3>$(web_tab Makexslttab "Generation time: $(duration $(($t_makexslt - $t_premake)))" "<pre>$(tail Make_xslt |htmlcat)</pre>")
-      <h3>XHTML rules</h3>$(web_tab Makexhtmltab "Generation time: $(duration $(($t_makexhtml - $t_premake)))" "<pre>$(tail Make_xhtml |htmlcat)</pre>")
-      <h3>Full Makefile</h3>$(web_tab Makefilefull "<a href="Makefile">view</a>" "")"
+      web_tab "tab-makefile" \
+              "$(duration $(($t_makefile - $t_phase_1)) )" \
+              "<pre>$(htmlcat Makefile)</pre>"
    else
-      web_tab Makefiletab "waiting..." ""
+      web_tab "tab-makefile" \
+              "waiting..."
    fi)
 
-    <h2>Makerun</h2>$(
-    if [ $start_time -lt $t_makerun ]; then
-      web_tab Makeruntab "Build time: $(duration $(($t_makerun - $t_makefile)) )" "<pre>$(tail buildlog |htmlcat)</pre><a href=\"buildlog\">view full</a>"
+    <h2>Phase 2</h2>$(
+    if [ $start_time -lt $t_phase_2 ]; then
+      web_tab "tab-phase-2" \
+              "$(duration $(($t_phase_2 - $t_makefile)) )" \
+              "<pre>$(htmlcat phase_2)</pre>"
     else
-      web_tab Makeruntab "waiting..." ""
+      web_tab "tab-phase-2" \
+              "waiting..."
     fi)
 
-    <h2>Errors</h2>$(
-    if [ $start_time -lt $t_errors ]; then
-      web_tab Errortab "There were errors" "<pre>$(htmlcat lasterror)</pre>"
-    else
-      web_tab Errortab "none" ""
-    fi)
-
-    <h2>File Manifest</h2>$(web_tab Manifesttab "Number of files: $(wc -l manifest |cut -d\  -f1)" "<pre>$(tail manifest |htmlcat)</pre><a href=\"manifest\">view full</a>")
-
-    <h2>Files removed</h2>$(
-    if [ $start_time -lt $t_removed -a -s "removed" ]; then
-      web_tab Removedtab "$(wc -l removed |cut -f1 -d\ )" "<pre>$(htmlcat removed)</pre>"
-    elif [ $start_time -lt $t_removed ]; then
-      web_tab Removedtab "none" ""
-    elif [ -z ${term_status} ]; then
-      web_tab Removedtab "waiting..." ""
-    else
-      web_tab Removedtab "none" ""
-    fi)
-
-    <h2>Files updated</h2>$(
+    <h2>Target update</h2>$(
     if [ ${start_time} -lt ${t_stagesync} -a -s stagesync ]; then
-      web_tab Updatedtab "Updated $(( $(wc -l stagesync |cut -f1 -d\ ) - 4 )) files" "<pre>$(htmlcat stagesync)</pre>"
+      web_tab "tab-sync" \
+              "$(($(wc -l stagesync |cut -f1 -d\ ) - 4)) updated files" \
+              "<pre>$(htmlcat stagesync)</pre>"
     elif [ -z ${term_status} ]; then
-      web_tab Updatedtab "waiting..." ""
+      web_tab "tab-sync" \
+              "waiting..."
     else
-      web_tab Updatedtab "-" ""
+      web_tab "tab-sync" \
+              "-"
     fi)
     
+    <h2>Errors</h2>$(
+    if [ -f lasterror ]; then
+      web_tab "tab-errors" \
+              "There were errors" \
+              "<pre>$(htmlcat lasterror)</pre>" \
+              "checked"
+    else
+      web_tab "tab-errors" \
+              "none"
+    fi)
+
+    <h2>File Manifest</h2>$(
+    if [ $start_time -lt $t_manifest ]; then
+      web_tab "tab-manifest" \
+              "$(wc -l manifest | cut -d\  -f1) files" \
+              "<a href=\"manifest\">view</a>"
+    else
+      web_tab "tab-manifest" \
+              "waiting..."
+    fi)
   </body>
 </html>
-
 HTML_END
-
-# vi:set filetype=html:

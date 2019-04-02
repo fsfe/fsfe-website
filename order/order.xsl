@@ -2,7 +2,6 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:import href="../fsfe.xsl" />
-  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
 
   <!-- Fill dynamic content -->
   <xsl:template match="dynamic-content">
@@ -11,7 +10,7 @@
     <xsl:element name="table">
       <xsl:attribute name="class">merchandise</xsl:attribute>
 
-      <xsl:for-each select="/buildinfo/document/set/item [@type = $type]">
+      <xsl:for-each select="/buildinfo/document/set/item[@type=$type]">
         <xsl:sort select="@date" order="descending"/>
         <xsl:variable name="id"><xsl:value-of select="@id"/></xsl:variable>
         <xsl:variable name="price"><xsl:value-of select="@price"/></xsl:variable>
@@ -75,8 +74,47 @@
             <xsl:attribute name="class">quantity</xsl:attribute>
             <xsl:for-each select="available">
               <xsl:element name="p">
-                <xsl:value-of select="@size"/>
-                <xsl:text>: </xsl:text>
+
+                <!-- Label, possibly with tooltip -->
+                <xsl:choose>
+                  <xsl:when test="$type='other'">
+                    <xsl:value-of select="@size"/>
+                    <xsl:text>:&#160;</xsl:text>
+                  </xsl:when>
+                  <xsl:otherwise>
+                    <xsl:element name="span">
+                      <xsl:attribute name="class">tooltip-anchor</xsl:attribute>
+                      <xsl:value-of select="@size"/>
+                      <xsl:text>:</xsl:text>
+                      <xsl:element name="span">
+                        <xsl:attribute name="class">tooltip-content</xsl:attribute>
+                        <xsl:element name="img">
+                          <xsl:attribute name="src">
+                            <xsl:choose>
+                              <xsl:when test="$type='hooded'">size-hooded.svg</xsl:when>
+                              <xsl:otherwise>size-tshirt.svg</xsl:otherwise>
+                            </xsl:choose>
+                          </xsl:attribute>
+                        </xsl:element>
+                        <xsl:element name="br"/>
+                        <xsl:text>a&#160;=&#160;</xsl:text>
+                        <xsl:value-of select="@a"/>
+                        <xsl:text>&#160;cm</xsl:text>
+                        <xsl:element name="br"/>
+                        <xsl:text>b&#160;=&#160;</xsl:text>
+                        <xsl:value-of select="@b"/>
+                        <xsl:text>&#160;cm</xsl:text>
+                        <xsl:if test="$type='hooded'">
+                          <xsl:element name="br"/>
+                          <xsl:text>c&#160;=&#160;</xsl:text>
+                          <xsl:value-of select="@c"/>
+                          <xsl:text>&#160;cm</xsl:text>
+                        </xsl:if>
+                      </xsl:element>
+                      <xsl:text>&#160;</xsl:text>
+                    </xsl:element>
+                  </xsl:otherwise>
+                </xsl:choose>
 
                 <!-- Real input for quantity -->
                 <xsl:element name="input">

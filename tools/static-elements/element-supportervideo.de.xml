@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elementset>
+  <element id="video">
+  <h2>Unterstütze die FSFE</h2>
+  <video
+      crossorigin="crossorigin"
+      poster="https://download.fsfe.org/videos/supporter/posters/bernhard.jpg"
+      controls="controls"
+      width="100%">
+    <source
+        media="screen and (max-device-width:999px)"
+        type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;"
+        src="https://download.fsfe.org/videos/supporter/bernhard_mobile.mp4"/>
+    <source
+        media="screen and (max-device-width:999px)"
+        type="video/webm; codecs=&quot;vp9, opus&quot;"
+        src="https://download.fsfe.org/videos/supporter/bernhard_mobile.webm"/>
+    <track default="default" label="English" srclang="en" kind="subtitles" src="https://download.fsfe.org/videos/supporter/subtitles/bernhard.vtt"/>
+  </video>
+  <p class="supporter-text">
+    Als FSFE-Supporter ermöglichst du unsere Arbeit und sicherst unsere finanzielle Unabhängigkeit.
+  </p>
+    <a class="big-donate" href="https://my.fsfe.org/support" title="zur Supporter Infoseite">Werde Supporter!</a>
+  </element>
+</elementset>

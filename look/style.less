@@ -5,7 +5,7 @@
 /* very generic elements */
 
 body {
-    @media (min-width: @screen-lg) {
+    @media (min-width: @screen-lg-min) {
         font-size: ceil(@font-size-base * 1.1428); // ~16px
     }
 }
@@ -47,6 +47,11 @@ q, .en q {
 
 
 /* Typography */
+
+h1 {
+    .page-header;
+    color: @brand-strong;
+}
 
 h1, h2, h3, h4 {
     font-weight: 300;
@@ -119,7 +124,7 @@ div#subpages, .grid-row {
     display: block;
     width: 100%;
 
-    @media (min-width: @screen-sm) {
+    @media (min-width: @screen-sm-min) {
         padding-left: 3em;
     }
 }
@@ -146,13 +151,13 @@ div#subpages, .grid-row {
     text-align: center;
     color: @brand-strong;
 
-    @media (min-width: @screen-xs) {
+    @media (min-width: @screen-xs-min) {
         font-size: 2.7em;
     }
 }
 
 #menu {
-    @media (min-width: @screen-sm) {
+    @media (min-width: @screen-sm-min) {
         .pull-right;
         text-align: right;
     }
@@ -176,7 +181,7 @@ div#subpages, .grid-row {
         }
     }
 
-    @media (min-width: @screen-sm) {
+    @media (min-width: @screen-sm-min) {
         #direct-to-menu-list {
             visibility: hidden;
             display: none;
@@ -192,7 +197,7 @@ div#subpages, .grid-row {
     #direct-to-translations, #direct-to-menu-list {display: none;}
 }
 
-@media (min-width: @screen-xs) {
+@media (min-width: @screen-xs-min) {
     #menu-list, #search {
         display: inline-block;
     }
@@ -203,7 +208,7 @@ div#subpages, .grid-row {
     .collapse;
     padding-bottom: 1.5em;
 
-    @media (min-width: @screen-xs) {
+    @media (min-width: @screen-xs-min) {
         .collapse.in;
         display: inline-block;
         padding-bottom: 0.5em;
@@ -216,7 +221,7 @@ div#subpages, .grid-row {
             .btn;
             font-weight: 400;
 
-            @media (min-width: @screen-md) {
+            @media (min-width: @screen-md-min) {
                 .btn-lg;
             }
         }
@@ -230,7 +235,7 @@ div#subpages, .grid-row {
 .no-js #menu-list {
     .collapse.in;
 
-    @media (min-width: @screen-xs) {
+    @media (min-width: @screen-xs-min) {
         display: inline-block;
         padding-bottom: 0.5em;
     }
@@ -294,7 +299,7 @@ div#subpages, .grid-row {
     font-size: 1.1em;
     box-shadow: 0 .4em 1em rgb(200,200,200);
 
-    @media (min-width: @screen-sm) {
+    @media (min-width: @screen-sm-min) {
         padding: 3em;
     }
 }
@@ -327,7 +332,7 @@ div#subpages, .grid-row {
           font-size: 1em;
           font-weight: normal;
         }
-        
+
         h2::after {
           content: ":";
         }
@@ -343,7 +348,7 @@ div#subpages, .grid-row {
 
         a {color: @gray-dark;}
 
-        @media (min-width: @screen-sm) {
+        @media (min-width: @screen-sm-min) {
             margin: 3em -3em -3em;
         }
     }
@@ -435,12 +440,8 @@ div#subpages, .grid-row {
 
 
 #content {
-    h1 {
-        .page-header;
-    }
-
     aside {
-        @media (min-width: @screen-md) {
+        @media (min-width: @screen-md-min) {
             float: right;
             margin-left: 100%;
             position: absolute;
@@ -620,6 +621,27 @@ div#subpages, .grid-row {
 
 /* style specific to certain pages */
 
+.toplevel {
+    #category {
+        display: none;
+    }
+    h1 {
+        background: lighten(@brand-primary,20%);
+        color: #FFF;
+        text-shadow: 0px 1px 2px @brand-strong;
+        display: block;
+        min-width: 200px;
+        padding: .5em;
+        margin: -0.5em -0.2em 0.5em;
+        border: 0;
+
+        @media (min-width: @screen-sm-min) {
+            width: 50%;
+            margin: -1em 0 1em 0;
+        }
+    }
+}
+
 .full-width {
     /* For very particular pages where you need as wide as possible */
     #main {
@@ -628,18 +650,16 @@ div#subpages, .grid-row {
 }
 
 .frontpage, .subsite, .full-width {
-
     #content {
         max-width: none;
     }
 }
 
 .article {
-
     #content {
         display: inline-block;
 
-        .p-name, h1 {
+        .p-name {
             color: @brand-strong;
         }
     }
@@ -650,14 +670,14 @@ div#subpages, .grid-row {
         margin-top: 1.5em;
         margin-bottom: 1.5em;
         margin-left: -1.5em;
-        @media (min-width: @screen-sm) {
+        @media (min-width: @screen-sm-min) {
             margin-left: -3em;
         }
     }
     .standout-text {
         .standout;
         padding-left: 1.5em;
-        @media (min-width: @screen-sm) {
+        @media (min-width: @screen-sm-min) {
             padding-left: 3em;
         }
     }
@@ -680,10 +700,6 @@ div#subpages, .grid-row {
         margin-right: 1.5em;
         margin-left: 0;
     }
-}
-
-.country.frontpage, #donate-fsfe, #press-room {
-    .toplevel;
 }
 
 .press.release {
@@ -720,7 +736,7 @@ div#subpages, .grid-row {
                 .make-sm-column(6);
             }
 
-            @media (min-width: @screen-sm) {
+            @media (min-width: @screen-sm-min) {
                 li {
                     display: inline-block;
                 }
@@ -728,24 +744,10 @@ div#subpages, .grid-row {
         }
 
 .subsite {
+    .toplevel;
+
     #content {
         .make-row;
-
-        .heading {
-            background: lighten(@brand-primary,20%);
-            color: #FFF;
-            text-shadow: 0px 1px 2px @brand-strong;
-            display: block;
-            min-width: 200px;
-            padding: .5em;
-            margin: -0.5em -0.2em 0.5em;
-            border: 0;
-
-            @media (min-width: @screen-sm) {
-                width: 50%;
-                margin: -1em 0 1em 0;
-            }
-        }
 
         #introduction {
             .make-xs-column(12);
@@ -766,7 +768,7 @@ div#subpages, .grid-row {
                 .make-sm-column(6);
             }
 
-            @media (min-width: @screen-xs) {
+            @media (min-width: @screen-xs-min) {
                 li:nth-child(odd) {
                     clear: both;
                 }
@@ -794,7 +796,7 @@ div#subpages, .grid-row {
                 .make-sm-column(4);
             }
 
-            @media (min-width: @screen-xs) {
+            @media (min-width: @screen-xs-min) {
                 li:nth-child(odd) {
                     clear: none;
                 }
@@ -815,15 +817,6 @@ div#subpages, .grid-row {
         }
     }
 
-}
-
-.toplevel {
-    #content {
-        h1, .heading { .subsite #content .heading; }
-    }
-    #category {
-        display: none;
-    }
 }
 
 
@@ -848,19 +841,30 @@ div#subpages, .grid-row {
     a.btn {
         .btn-primary;
     }
-    
-    @media (min-width: @screen-sm) {
+
+    @media (min-width: @screen-sm-min) {
         padding: 3em 3em 3em 2em;
     }
 }
 
 #followup.subscribe-nl {
     h2 {
-        .make-sm-column(5);
-        margin: 0;
+        .make-md-column(6);
+        .make-lg-column(5);
+        margin: 0 0 10px;
     }
     form {
-        .make-sm-column(7);
+        .make-md-column(6);
+        .make-lg-column(7);
+    }
+}
+
+@media (min-width: @screen-md-min) {
+    #followup.subscribe-nl {
+        h2 {
+            margin: 0;
+            top: 5px;
+        }
     }
 }
 
@@ -998,7 +1002,7 @@ div#subpages, .grid-row {
     margin: -1em -1.5em;
     margin-bottom: 3em;
 
-    @media (min-width: @screen-sm) {
+    @media (min-width: @screen-sm-min) {
         margin-left: -3em;
         margin-right: -3em;
         padding: 0;
@@ -1014,7 +1018,7 @@ div#subpages, .grid-row {
         color: @body-bg;
         text-shadow: 0px 1px 2px @brand-strong;
 
-        @media (min-width: @screen-md) {
+        @media (min-width: @screen-md-min) {
             overflow-y: hidden;
         }
     }
@@ -1528,11 +1532,11 @@ ul.taglist {
     .table-striped;
     margin-top: 40px;
   }
-  
+
   table > tbody > tr > td {
     vertical-align: middle;
   }
-    
+
   img {
     height: auto;
     max-height: 65px;

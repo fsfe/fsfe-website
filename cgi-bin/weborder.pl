@@ -1,8 +1,33 @@
 #!/usr/bin/perl
+# -----------------------------------------------------------------------------
+# Process merchandise order
+# -----------------------------------------------------------------------------
+# Copyright (C) 2008-2019 Free Software Foundation Europe <contact@fsfe.org>
+#
+# This program is free software: you can redistribute it and/or modify it under
+# the terms of the GNU Affero General Public License as published by the Free
+# Software Foundation, either version 3 of the License, or (at your option) any
+# later version.
+#
+# This program is distributed in the hope that it will be useful, but WITHOUT
+# ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+# FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for more
+# details.
+#
+# You should have received a copy of the GNU Affero General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>
+# -----------------------------------------------------------------------------
 
 use CGI;
+use Encode qw(decode encode);
 use POSIX qw(strftime);
 use Digest::SHA qw(sha1_hex);
+use MIME::Lite;
+use utf8;
+
+# -----------------------------------------------------------------------------
+# Get parameters
+# -----------------------------------------------------------------------------
 
 my $query = new CGI;
 
@@ -12,19 +37,19 @@ if ($query->param("url")) {
   exit;
 }
 
-my $name = $query->param("name");
-my $address = $query->param("address");
-my $email = $query->param("email");
-my $phone = $query->param("phone");
+my $name = decode("utf-8", $query->param("name"));
+my $address = decode("utf-8", $query->param("address"));
+my $email = decode("utf-8", $query->param("email"));
+my $phone = decode("utf-8", $query->param("phone"));
 my $language = $query->param("language");
 
 # Remove all parameters except for items and prices.
 $query->delete("url", "name", "address", "email", "phone", "language");
 
-my $lang = substr($language, 0, 2);
+my $lang = substr $language, 0, 2;
 
 # -----------------------------------------------------------------------------
-# Calculate total amount and check for empty orders
+# Calculate total amount and do some sanity checks
 # -----------------------------------------------------------------------------
 
 if (!$name) {
@@ -39,21 +64,19 @@ if (!$email) {
   exit;
 }
 
-my $empty = 1;
+my $count = 0;
 my $amount = 0;
 
 foreach $item ($query->param) {
   $value = $query->param($item);
   if (not $item =~ /^_/ and $value) {
     my $price = $query->param("_$item");
+    $count += 1;
     $amount += $value * $price;
-    if ($item ne "shipping") {
-      $empty = 0;
-    }
   }
 }
 
-if ($empty) {
+if ($count < 2) {
   print "Content-type: text/html\n\n";
   print "<p>No items selected!</p>\n";
   exit;
@@ -65,8 +88,11 @@ if ($amount > 999) {
   exit;
 }
 
-my $amount_f = sprintf("%.2f", $amount);
+my $amount_f = sprintf "%.2f", $amount ;
 my $amount100 = $amount * 100;
+
+my $vat = sprintf "%.2f", ($amount_f / 1.19) * 0.19;
+my $net = sprintf "%.2f", $amount_f - $vat;
 
 # -----------------------------------------------------------------------------
 # Create payment reference for this order
@@ -74,40 +100,87 @@ my $amount100 = $amount * 100;
 
 my $date = strftime("%j", localtime);
 my $time = strftime("%s", localtime);
-my $reference = "MP" . $date . substr($time, -4) . sprintf("%03u", $amount);
+my $reference = "MP" . $date . (substr $time, -4) . (sprintf "%03u", $amount);
 
 # -----------------------------------------------------------------------------
-# Generate mail to office
+# Compile email text
 # -----------------------------------------------------------------------------
 
-open(MAIL, "|/usr/lib/sendmail -t -f contact\@fsfe.org");
-print MAIL "From: $name <$email>\n";
-print MAIL "To: contact\@fsfe.org\n";
-print MAIL "X-OTRS-Queue: Finance::Merchandise Orders\n";
-print MAIL "X-OTRS-DynamicField-OrderID: $reference\n";
-print MAIL "X-OTRS-DynamicField-OrderAmount: $amount\n";
-print MAIL "X-OTRS-DynamicField-OrderLanguage: $language\n";
-print MAIL "X-OTRS-DynamicField-OrderState: order\n";
-print MAIL "Content-Transfer-Encoding: 8bit\n";
-print MAIL "Content-Type: text/plain; charset=\"UTF-8\"\n";
-print MAIL "Subject: $reference\n\n";
-
-print MAIL "$name\n";
-print MAIL "$address\n";
-print MAIL "Phone: $phone\n\n";
+my $body = "$name\n$address\nPhone: $phone\n\n";
 
 foreach $item ($query->param) {
   $value = $query->param($item);
   if (not $item =~ /^_/ and $value) {
     my $price = $query->param("_$item");
-    printf MAIL "%-30s %3u x %5.2f = %6.2f\n", $item, $value, $price, $value * $price;
+    $body .= sprintf "%-30s %3u x %5.2f = %6.2f\n", $item, $value, $price, $value * $price;
   }
 }
 
-print MAIL "---------------------------------------------------\n";
-printf MAIL "Total amount                               € %6.2f\n", $amount;
-print MAIL "===================================================\n";
-close MAIL;
+$body .= "---------------------------------------------------\n";
+$body .= sprintf("Total amount                               € %6.2f\n", $amount);
+$body .= "===================================================\n";
+
+# -----------------------------------------------------------------------------
+# Generate invoice
+# -----------------------------------------------------------------------------
+
+my @odtfill = qw();
+
+# odtfill script
+push @odtfill, $ENV{"DOCUMENT_ROOT"} . "/cgi-bin/odtfill";
+
+# template file
+push @odtfill, $ENV{"DOCUMENT_ROOT"} . "/templates/invoice.odt";
+
+# output file
+push @odtfill, "/tmp/invoice.odt";
+
+# placeholder replacements
+push @odtfill, "repeat=" . $count;
+push @odtfill, "Name=" . $name;
+push @odtfill, "Address=" . $address =~ s/\n/\\n/gr;
+foreach $item ($query->param) {
+  $value = $query->param($item);
+  if (not $item =~ /^_/ and $value) {
+    my $price = $query->param("_$item");
+    push @odtfill, "Count=" . $value;
+    push @odtfill, "Item=" . $item;
+    push @odtfill, "Amount=" . sprintf "%.2f", $value * $price;
+  }
+}
+push @odtfill, "Total=" . $amount_f;
+push @odtfill, "Net=" . $net;
+push @odtfill, "Vat=" . $vat;
+push @odtfill, "Code=" . $reference;
+
+# run the script
+system @odtfill;
+
+# -----------------------------------------------------------------------------
+# Send email to OTRS
+# -----------------------------------------------------------------------------
+
+$msg = MIME::Lite->new(
+  "From:" => encode("MIME-Q", $name) . " <$email>",
+  "To:" => "contact\@fsfe.org",
+  "Subject:" => "$reference",
+  "X-OTRS-Queue:" => "Finance::Merchandise Orders",
+  "X-OTRS-DynamicField-OrderID:" => "$reference",
+  "X-OTRS-DynamicField-OrderAmount:" => "$amount",
+  "X-OTRS-DynamicField-OrderLanguage:" => "$language",
+  "X-OTRS-DynamicField-OrderState:" => "order",
+  Type => "multipart/mixed");
+
+$msg->attach(
+  Type => "text/plain; charset=utf-8",
+  Encoding => "8bit",
+  Data => encode("utf-8", $body));
+
+$msg->attach(
+  Type => "application/vnd.oasis.opendocument.text",
+  Path => "/tmp/invoice.odt");
+
+$msg->send("sendmail", FromSender => $email);
 
 # -----------------------------------------------------------------------------
 # Generate form for ConCardis payment
@@ -126,7 +199,7 @@ my $shastring =
     "PMLISTTYPE=2$passphrase" .
     "PSPID=40F00871$passphrase" .
     "TP=https://fsfe.org/order/tmpl-concardis.$lang.html$passphrase";
-my $shasum = uc(sha1_hex($shastring));
+my $shasum = uc sha1_hex($shastring);
 my $form = "      <!-- payment parameters -->\n" .
     "      <input type=\"hidden\" name=\"PSPID\"        value=\"40F00871\"/>\n" .
     "      <input type=\"hidden\" name=\"orderID\"      value=\"$reference\"/>\n" .
@@ -149,7 +222,7 @@ my $form = "      <!-- payment parameters -->\n" .
 # -----------------------------------------------------------------------------
 
 print "Content-type: text/html\n\n";
-open TEMPLATE, "/srv/www/html/global/order/tmpl-thankyou." . $lang . ".html";
+open TEMPLATE, $ENV{"DOCUMENT_ROOT"} . "/order/tmpl-thankyou." . $lang . ".html";
 while (<TEMPLATE>) {
   s/:AMOUNT:/$amount_f/g;
   s/:REFERENCE:/$reference/g;

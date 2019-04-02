@@ -7,6 +7,12 @@
   <xsl:param name="link"/>
 
   <xsl:template match="/html">
+    <xsl:text>&#xa;</xsl:text>
+    <xsl:comment> ***************************************************** </xsl:comment>
+    <xsl:comment> This file has been automatically generated.           </xsl:comment>
+    <xsl:comment> Please do not modify it, and do not commit it to git. </xsl:comment>
+    <xsl:comment> ***************************************************** </xsl:comment>
+    <xsl:text>&#xa;</xsl:text>
 
     <xsl:element name="newsset">
       <xsl:element name="news">
@@ -21,13 +27,6 @@
           </xsl:attribute>
         </xsl:if>
 	
-        <!-- TODO: to be removed -->
-        <xsl:if test="/html/@tags">
-          <xsl:attribute name ="tags">
-            <xsl:value-of select="/html/@tags"/>
-          </xsl:attribute>
-        </xsl:if>
-
         <xsl:element name="title">
           <xsl:value-of select="/html/head/title"/>
         </xsl:element>

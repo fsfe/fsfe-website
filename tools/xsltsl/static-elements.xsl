@@ -7,7 +7,7 @@
                 xmlns:months="."
                 xmlns:nl="."
                 xmlns:str='http://xsltsl.org/string'
-                exclude-result-prefixes="dt weekdays months nl">
+                exclude-result-prefixes="dt weekdays months nl str">
   <xsl:import href="string.xsl" />
   
   <xsl:output method="xml" encoding="utf-8" indent="yes" />

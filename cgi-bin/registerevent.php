@@ -52,12 +52,6 @@ function eval_date($date) {
 	return (!$dt['errors'] && $dt['year'] && preg_match("#^(19|20)\d\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])$#", $date) === 1);
 }
 
-if (isset($_POST['tags'])) {
-  $tags = $_POST['tags'];
-} else {
-  $tags = array();
-}
-
 function send_registration_mail($from, $to) {
 	$data = array(
 		'name' => $_POST['name'],
@@ -68,11 +62,13 @@ function send_registration_mail($from, $to) {
 		'startdate' => $_POST['startdate'],
 		'enddate' => $_POST['enddate'],
 		'description' => $_POST['description'],
-		'url' => htmlspecialchars($_POST['url']),
+		'url' => $_POST['url'],
 		'location' => $_POST['location'],
 		'city' => $_POST['city'],
-		'country' => $_POST['country'],
-		'tags' => $tags,
+		'countrycode' => explode('|', $_POST['country'])[0],
+		'countryname' => explode('|', $_POST['country'])[1],
+		'tags' => $_POST['tags'],
+		'lang' => $_POST['lang']
 	);
 
 	$data['event'] = eval_template('registerevent/event.php', $data);
@@ -83,10 +79,12 @@ function send_registration_mail($from, $to) {
 	$subject = "Event registration: " . $_POST['title'];
 	$headers = "From: " . $from . "\n"
 		. "MIME-Version: 1.0\n"
-                . "X-OTRS-Queue: Misc\n"
-                . "X-OTRS-Owner: eal\n"
-                . "X-OTRS-Responsible: eal\n"
+                . "X-OTRS-Queue: Events\n"
 		. "Content-Type: multipart/mixed; boundary=boundary";
+
+  // uncomment for local debug
+  // print_r($message);
+  // exit(0);
 
 	mail($to, $subject, $message, $headers);
 

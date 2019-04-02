@@ -1,37 +1,45 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <html>
   <head>
-    <title>News Archive – FSFE</title>
+    <title>News - FSFE</title>
   </head>
 
-  <body class="article" microformats="h-entry">
-  <div class="news-follow-us">
-    <div class="share-top-buttons-label">Follow us:</div>
-    <div class="share-buttons-top">
-      <a target="_blank" href="https://fsfe.org/news/newsletter">
-        <button class="share-button-top share-mail">Newsletter</button>
-      </a>
-      <a target="_blank" href="https://fsfe.org/news/news.en.rss">
-        <button class="share-button-top share-rss">RSS Feed</button>
-      </a>
-      <a target="_blank" href="https://mastodon.social/@fsfe">
-        <button class="share-button-top share-mastodon">Mastodon</button>
-      </a>
-      <a target="_blank" href="https://diasp.eu/u/fsfe">
-        <button class="share-button-top share-diaspora">Diaspora</button>
-      </a>
-      <a target="_blank" href="https://twitter.com/fsfe">
-        <button class="share-button-top share-twitter">Twitter</button>
-      </a>
-      <a target="_blank" href="https://facebook.com/thefsfe">
-        <button class="share-button-top share-facebook">Facebook</button>
-      </a>
-    </div>
-  </div>
+  <body class="toplevel article">
+    <h1>News</h1>
 
-    <h1 class="p-name">News</h1>
+    <div class="news-follow-us">
+      <div class="share-top-buttons-label">Follow us:</div>
+      <div class="share-buttons-top">
+        <a target="_blank" href="newsletter.html">
+          <button class="share-button-top share-mail">Newsletter</button>
+        </a>
+        <a target="_blank" href="news.rss">
+          <button class="share-button-top share-rss">RSS Feed</button>
+        </a>
+        <a target="_blank" href="https://mastodon.social/@fsfe">
+          <button class="share-button-top share-mastodon">Mastodon</button>
+        </a>
+        <a target="_blank" href="https://diasp.eu/u/fsfe">
+          <button class="share-button-top share-diaspora">Diaspora</button>
+        </a>
+        <a target="_blank" href="https://twitter.com/fsfe">
+          <button class="share-button-top share-twitter">Twitter</button>
+        </a>
+        <a target="_blank" href="https://facebook.com/thefsfe">
+          <button class="share-button-top share-facebook">Facebook</button>
+        </a>
+      </div>
+    </div>
+
     <include-news/>
+
+    <h2><a href="2017/index.html">News archives</a></h2>
+
+    <p>
+      For older news items, please see our news archives.
+      <a class="learn-more" href="2017/index.html"/>
+    </p>
   </body>
 
   <sidebar promo="none">
@@ -39,26 +47,28 @@
       <h2>Follow our News</h2>
 
       <p>
-        To keep up with our latest news, subscribe to our <a href="/news/news.en.rss">RSS feed</a> and
-        our <a href="/news/newsletter">Newsletter</a>.
+        To keep up with our latest news, subscribe to our
+        <a href="news.rss">RSS feed</a> and our
+        <a href="newsletter.html">Newsletter</a>.
       </p>
 
       <div class="share-buttons-sidebar">
-        <a target="_blank" href="https://fsfe.org/news/newsletter">
+        <a target="_blank" href="newsletter.html">
           <button class="share-button-sidebar share-mail">Newsletter</button>
         </a>
-        <a target="_blank" href="https://fsfe.org/news/news.en.rss">
+        <a target="_blank" href="news.rss">
           <button class="share-button-sidebar share-rss">RSS Feed</button>
         </a>
       </div>
 
-
       <h2>Social Media</h2>
 
       <p>
-        For short news follow us on <a
-          href="https://mastodon.social/@fsfe">Mastodon</a>, <a href="https://diasp.eu/u/fsfe">Diaspora</a>, <a
-          href="https://twitter.com/fsfe">Twitter</a> and <a href="https://facebook.com/thefsfe">Facebook</a>.
+        For short news follow us on
+        <a href="https://mastodon.social/@fsfe">Mastodon</a>,
+        <a href="https://diasp.eu/u/fsfe">Diaspora</a>,
+        <a href="https://twitter.com/fsfe">Twitter</a>, and
+        <a href="https://facebook.com/thefsfe">Facebook</a>.
       </p>
 
       <div class="share-buttons-sidebar">
@@ -79,10 +89,6 @@
       <hr/>
 
       <static-element id="video" />
-
     </div>
   </sidebar>
-
-  <text id="more">Read more…</text>
-  <timestamp>$Date$ $Author$</timestamp>
 </html>

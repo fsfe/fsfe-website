@@ -14,13 +14,16 @@
       width: 30%;
     }
     </style>
+    <meta name="description" content="Zeigen Sie, dass Sie ein Fan von Freier Software sind, indem Sie die Artikel benutzen und tragen, die von der FSFE angeboten werden." />
+    <meta name="keywords" content="shop kaufen t-shirt pullover artikel merchandise werbung magnet tasche lätzchen pin versand bezahlung" />
+    <meta name="image" content="https://fsfe.org/graphics/tshirt-promo-800px.jpg" />
   </head>
 
   <body class="toplevel">
     <h1>Fanartikel</h1>
     
     <div id="toc">
-      <p style="text-indent:1em;">Available merchandise:</p>
+      <p style="text-indent:1em;">Kategorien:</p>
       <ul style="margin-bottom: 1em;">
         <li><a href="#tshirt">T-Shirts</a></li>
         <li><a href="#girlie">Damen-T-Shirts</a></li>
@@ -38,6 +41,11 @@
       Projekte der FSFE.
     </p>
     
+    <p>
+      Um die genauen Maße zu erhalten, bewegen Sie den Mauszeiger über die Größenangaben oder
+      sehen Sie in der <a href="size.html">Größentabelle</a> nach.
+    </p>
+
     <p style="clear:both;"></p>
 
     <form action="/cgi-bin/weborder.pl" method="post" class="item-grid">
@@ -79,6 +87,8 @@
         <label for="shipping-eu">Versand innerhalb Europas (€7.00)</label><br/>
         <input type="radio" id="shipping-world" name="_shipping" value="12"/>
         <label for="shipping-world">Weltweiter Versand (€12.00)</label><br/>
+        <input type="radio" id="shipping-none" name="_shipping" value="0"/>
+        <label for="shipping-none">Kein Versand (Selbstabholung)</label><br/>
       </p>
 
       <table class="order-form">

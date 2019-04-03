@@ -14,25 +14,6 @@
         /tools/xsltsl/tagging-documentation.txt
   -->
 
-  <!-- we need to include some things for event maps -->
-  <xsl:template match="head">
-    <head>
-      <xsl:call-template name="page-head" />
-      <xsl:element name="link">
-        <xsl:attribute name="rel">stylesheet</xsl:attribute>
-        <xsl:attribute name="href">/look/leaflet.css</xsl:attribute>
-      </xsl:element>
-      <xsl:element name="script">
-        <xsl:attribute name="type">text/javascript</xsl:attribute>
-        <xsl:attribute name="src">/scripts/leaflet.js</xsl:attribute>
-      </xsl:element>
-      <xsl:element name="script">
-        <xsl:attribute name="type">text/javascript</xsl:attribute>
-        <xsl:attribute name="src">/scripts/map.js</xsl:attribute>
-      </xsl:element>
-    </head>
-  </xsl:template>
-
   <!-- In /html/body node, append dynamic content -->
   <xsl:template match="/buildinfo/document/body/include-events">
       <!-- First, include what's in the source file -->

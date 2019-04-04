@@ -137,9 +137,7 @@
               <!-- News description -->
               <xsl:element name="description">
                 <xsl:copy-of select="normalize-space(body)"/>
-                <xsl:text>
-Support FSFE, join the Fellowship: https://fellowship.fsfe.org/login/join.php
-Make a one time donation: http://fsfe.org/donate/donate.html</xsl:text>
+                <xsl:text>Support FSFE: https://my.fsfe.org/support</xsl:text>
               </xsl:element>
               
               <!-- News body -->
@@ -155,21 +153,10 @@ Make a one time donation: http://fsfe.org/donate/donate.html</xsl:text>
                 </xsl:choose>
                 
                 <xsl:element name="p">
-                  
-                  <xsl:text>Support FSFE, </xsl:text>
                   <xsl:element name="a">
-                    <xsl:attribute name="href">https://fellowship.fsfe.org/login/join.php</xsl:attribute>
-                    <xsl:text>join the Fellowship</xsl:text>
+                    <xsl:attribute name="href">https://my.fsfe.org/support</xsl:attribute>
+                    <xsl:text>Support FSFE</xsl:text>
                   </xsl:element>
-                  
-                  <xsl:element name="br" />
-                  
-                  <xsl:text>Make a </xsl:text>
-                  <xsl:element name="a">
-                    <xsl:attribute name="href">http://fsfe.org/donate/donate.html</xsl:attribute>
-                    <xsl:text>one time donation</xsl:text>
-                  </xsl:element>
-                  
                 </xsl:element>
                 
                 <xsl:text disable-output-escaping="yes">]]&gt;</xsl:text>

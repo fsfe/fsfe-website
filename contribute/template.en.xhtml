@@ -17,7 +17,7 @@
         So, you are publishing an article on fsfe.org? Let’s have a look at
         this <a href="/source/contribute/template.en.xhtml">template page source code</a> to see how you can make use of the many
         features at your disposal with this new design!
-        <a class="fn" id="ref-name-that-footnote" href="#fn-name-that-footnote">1</a> 
+        <a class="fn" id="ref-name-that-footnote" href="#fn-name-that-footnote">1</a>
         All code samples are pasted directly from the source file of this page.
     </p>
 
@@ -42,7 +42,7 @@
         A file can have more than one class and more than one microformats
         (separated by a space), but a file can only have one id. These
         attributes are very useful to have different kinds of styling depending
-        on what kind of content we’re showing. 
+        on what kind of content we’re showing.
     </p>
 
     <p>
@@ -70,14 +70,14 @@
     <p>
         Microformats attributes are both about style and about metadata of a
         page.  To learn what microformats are, please read <a
-            href="http://microformats.org">microformats.org</a>. 
+            href="http://microformats.org">microformats.org</a>.
 
         This page, as most articles, news entries, event items, should have
         proper metadata and use microformats.
 
         If you are <em>not</em> going to use microformats markup inside a
         source file, there’s no need to enable them, so remove the
-        "microformats" information from the &#60;body&#62; element. 
+        "microformats" information from the &#60;body&#62; element.
     </p>
 
 
@@ -134,8 +134,8 @@
 
         &#60;ul&#62;&#60;li&#62;&#60;a href="/contribute/web/web.html"&#62;Webmastering&#60;/a&#62;&#60;/li&#62;
         &#60;li&#62;&#60;a href="/contribute/editors/editors.html"&#62;Information for editors&#60;/a&#62;&#60;/li&#62;
-        &#60;li&#62;&#60;a href="/contribute/contribute.html"&#62;Contribute&#60;/a&#62;&#60;/li&#62;&#60;/ul&#62; 
-        
+        &#60;li&#62;&#60;a href="/contribute/contribute.html"&#62;Contribute&#60;/a&#62;&#60;/li&#62;&#60;/ul&#62;
+
         &#60;h4&#62;Ongoing campaigns&#60;/h4&#62;
         &#60;ul&#62;&#60;li&#62;&#60;a href="//documentfreedom.org"&#62;Document Freedom Day!&#60;/a&#62;&#60;/li&#62;&#60;/ul&#62;
     &#60;/div&#62;
@@ -234,7 +234,7 @@
 
     <blockquote>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ut gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id dolor. Pellentesque auctor nisi id magna consequat sagittis. Curabitur dapibus enim sit amet elit pharetra tincidunt feugiat nisl imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed odio eros. Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at sem facilisis semper ac in est.</p>
-        
+
         <footer>
             – <cite>Cicero</cite>
         </footer>
@@ -242,55 +242,56 @@
 
     <p>Alternative, you can also <q cite="http://example.org">quote an example inline</q> (the quotation marks will vary depending on the language).</p>
 
+      <h2>An article would not be complete without a picture!</h2>
 
-    <div class="captioned" style="max-width: 2000px;">
-        <header>
-            <p>An article would not be complete without a picture!</p>
-        </header>
-        <img src="https://hroy.eu/images/fsfe_ecm-group_pic/2013-09-ECM-group-picture.JPG" alt="group picture!" />
-        <footer>
-            <p>This is a picture from the Group coordinators meeting in Berlin, September 2013!</p>
-        </footer>
-    </div>
+      <figure>
+        <img
+            src="https://hroy.eu/images/fsfe_ecm-group_pic/2013-09-ECM-group-picture.JPG"
+            alt="group picture!"/>
+        <figcaption>
+          This is a picture from the Group coordinators meeting<br/>
+          Berlin, September 2013
+        </figcaption>
+      </figure>
 
-    <p>If you want to use the <code>div class="captioned"</code> to display
-    a picture like the above, please specify a <code>style="max-width:
-        Xpx;"</code> property where X is the width of the picture.</p> 
+      <p>This is the source code for the example picture above:</p>
 
-    <p>This is the source code for the example picture above:</p>
+<pre><code>
+&lt;figure>
+  &lt;img
+      src="https://hroy.eu/images/fsfe_ecm-group_pic/2013-09-ECM-group-picture.JPG"
+      alt="group picture!"/>
+  &lt;figcaption>
+    This is a picture from the Group coordinators meeting&lt;br/>
+    Berlin, September 2013
+  &lt;/figcaption>
+&lt;/figure>
+</code></pre>
 
-    <pre><code>
-    &#60;<strong>div class="captioned" style="max-width: 2000px;"</strong>&#62;
-        &#60;header&#62;
-            &#60;p&#62;An article would not be complete without a picture!&#60;/p&#62;
-        &#60;/header&#62;
-        &#60;img src="https://hroy.eu/images/fsfe_ecm-group_pic/2013-09-ECM-group-picture.JPG" alt="group picture!" /&#62;
-        &#60;footer&#62;
-            &#60;p&#62;This is a picture from the Group coordinators meeting in Berlin, September 2013!&#60;/p&#62;
-        &#60;/footer&#62;
-    &#60;/div&#62;
-    </code></pre>
+      <p>
+        For left aligned captions, just add <code>class="text-left"</code> to the <code>figcaption</code> element.
+      </p>
 
-    <p>If you want to center the picture, add the <code>center-block</code>
-    class. If you want to make it float on the left, add the class
-    <code>left</code>, and <code>right</code> to make it float… to the
-    right! So, if you want to have a captioned picture on the right, you can
-    add <code>div class="captioned right" style="max-width: Xpx; width:
-    Y%;"</code></p>
+      <figure class="float-right">
+        <img
+            src="https://hroy.eu/images/fsfe_ecm-group_pic/2013-09-ECM-group-picture.JPG"
+            alt="group picture!" />
+      </figure>
+      <p>
+        You can also have figures left or right within the text flow.
+        Just apply the classes <code>float-right</code> or <code>float-right</code> on them.
+      </p>
 
-    <p>Here's an example code for a right-side picture taking 1/3 of the width:</p>
-
-    <pre><code>
-    &#60;div class="captioned <strong>right</strong>" style="max-width: 400px; <strong>width: 33%</strong>;"&#62;
-        &#60;header&#62;
-            &#60;p&#62;An article would not be complete without a picture!&#60;/p&#62;
-        &#60;/header&#62;
-        &#60;img src="https://hroy.eu/images/fsfe_ecm-group_pic/2013-09-ECM-group-picture.JPG" alt="group picture!" /&#62;
-        &#60;footer&#62;
-            &#60;p&#62;This is a picture from the Group coordinators meeting in Berlin, September 2013!&#60;/p&#62;
-        &#60;/footer&#62;
-    &#60;/div&#62;
-    </code></pre>
+      <p>
+        Code for the inline image above:
+      </p>
+<pre><code>
+&lt;figure class="float-right">
+  &lt;img
+      src="https://hroy.eu/images/fsfe_ecm-group_pic/2013-09-ECM-group-picture.JPG"
+      alt="group picture!" />
+&lt;/figure>
+</code></pre>
 
     <h2>General design</h2>
 
@@ -336,7 +337,7 @@
     </ul>
 
     <h2 id="fn">Footnotes</h2>
-    <ol> 
+    <ol>
       <li id="fn-name-that-footnote">
       This is just a footnote! Please read <a href="/source/template.en.xhtml">the source code of this page</a> to see
       how footnotes should be made.
@@ -355,8 +356,8 @@
 
         <ul><li><a href="/contribute/web/web.html">Webmastering</a></li>
         <li><a href="/contribute/editors/editors.html">Information for editors</a></li>
-        <li><a href="/contribute/contribute.html">Contribute</a></li></ul> 
-        
+        <li><a href="/contribute/contribute.html">Contribute</a></li></ul>
+
         <h4>Ongoing campaigns</h4>
         <ul><li><a href="//documentfreedom.org">Document Freedom Day!</a></li></ul>
     </div>

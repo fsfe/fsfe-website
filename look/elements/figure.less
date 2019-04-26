@@ -1,0 +1,55 @@
+.figure,
+figure {
+  display: table;
+  margin: 20px auto 30px;
+  position: relative;
+  max-width: 100%;
+
+  &:after {
+    bottom: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 500;
+  }
+
+  .figcaption,
+  figcaption {
+    background-color: @gray-lighter;
+    caption-side: bottom;
+    display: table-caption;
+    font-size: .9em;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    z-index: 1000;
+  }
+}
+
+@media screen and (min-width: @screen-md-min) {
+  figure,
+  .figure {
+    margin: 30px auto 40px;
+    max-width: 90%;
+
+    &.float-left,
+    &.float-right {
+      margin: 0;
+      max-width: 30%;
+    }
+
+    &.float-left {
+      float: left;
+      margin-right: 30px;
+    }
+
+    &.float-right {
+      float: right;
+      margin-left: 30px;
+    }
+  }
+}

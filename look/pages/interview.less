@@ -1,14 +1,14 @@
 .interview {
   .interview-quote-container {
-    align-items: stretch;
     display: flex;
+    flex-direction: column;
     margin-bottom: 3rem;
     margin-top: 3rem;
 
     blockquote {
       flex: 1;
-      margin-bottom: 0;
-      margin-top: 0;
+      margin: 0;
+      order: 2;
     }
 
     .interview-portrait {
@@ -16,6 +16,7 @@
       background-repeat: no-repeat;
       background-size: cover;
       flex: 0 0 200px;
+      order: 1;
     }
   }
 
@@ -26,12 +27,8 @@
 
     img {
       transform: rotate(90deg);
-      height: 10rem;
+      height: 8rem;
     }
-  }
-
-  .interview-video {
-    width: 100%;
   }
 
   .question {
@@ -45,21 +42,50 @@
     padding-left: 1em;
   }
 
-  .quote-picture {
-    flex: 0 0 20rem;
-    height: auto;
-    max-height: 200px;
+  .interview-support-btn-container {
+    margin: 30px 0 40px;
   }
 
-  .icons {
-    padding: 1em 0 0 0;
-    float: right;
+  // Hide the sidebar on mobile devices.
+  // It doesn't contain any content but the "become a supporter" button, yet.
+  // This button is also displayed at the bottom of the page.
+  #sidebar {
+    display: none;
   }
+}
 
-  .videocaption {
-    margin: 0 3em 0 3em;
-    text-align: center;
-    font-size: 0.8em;
-    opacity: 0.7;
+@media screen and (min-width: @screen-sm-min) {
+  .interview {
+    .interview-quote-container {
+      align-items: stretch;
+      flex-direction: row;
+
+      blockquote {
+        margin-left: -3em;
+        order: 1;
+      }
+
+      .interview-portrait {
+        flex: 0 0 200px;
+        order: 2;
+
+        img {
+          border-radius: 0;
+        }
+      }
+    }
+
+    #sidebar {
+      display: block;
+    }
+  }
+}
+
+@media screen and (min-width: @screen-md-min) {
+  .interview {
+    .interview-support-btn-container {
+      margin: 30px auto 40px;
+      max-width: 90%;
+    }
   }
 }

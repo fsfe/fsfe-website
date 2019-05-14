@@ -3,42 +3,14 @@
     padding-right: 0;
   }
 
-  .interview-quote-container {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 3rem;
-    margin-top: 3rem;
-
-    blockquote {
-      flex: 1;
-      margin: 0;
-      order: 2;
-    }
-
-    .interview-portrait {
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      flex: 0 0 200px;
-      order: 1;
-    }
-  }
-
-  .interview-fsfe-divider {
-    margin-bottom: 3rem;
-    margin-top: 3rem;
-    text-align: center;
-
-    img {
-      transform: rotate(90deg);
-      height: 8rem;
-    }
+  h2 {
+    margin-top: 8rem;
   }
 
   .question {
     font-size: 110%;
     font-weight: bold;
-    margin-bottom: 1em;
+    margin-bottom: .5em;
     margin-top: 2em;
   }
 
@@ -62,25 +34,6 @@
   .interview {
     #content {
       padding-right: 15px;
-    }
-
-    .interview-quote-container {
-      align-items: stretch;
-      flex-direction: row;
-
-      blockquote {
-        margin-left: -3em;
-        order: 1;
-      }
-
-      .interview-portrait {
-        flex: 0 0 200px;
-        order: 2;
-
-        img {
-          border-radius: 0;
-        }
-      }
     }
 
     #sidebar {

@@ -54,6 +54,10 @@ fi
 A=$(echo "$FILE" | sed -E "s/\.[a-z][a-z]\.$EXT//")
 # get change date of English file
 EN=$A.en.$EXT
+if [ ! -e "$EN" ]; then
+  out "English file does not exist. Aborting. ($EN)"
+  exit 2
+fi
 endate=$(git log --pretty="%cd" --date=raw -1 "$EN"|cut -d' ' -f1)
 # Convert to YYYY-MM-DD
 ymd=$(date +"%Y-%m-%d" --date="@$endate")

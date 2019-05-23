@@ -39,6 +39,22 @@
         <!-- Here goes the actual content of the <body> node of the input file -->
         <xsl:apply-templates select="/buildinfo/document/event/body | /buildinfo/document/news/body | /buildinfo/document/body/* | /buildinfo/document/body/node()" />
         
+        <!-- Link to discussion topic on community.fsfe.org -->
+        <xsl:if test = "/buildinfo/document/discussion/@href">
+          <xsl:element name="p">
+            <xsl:element name="a">
+              <xsl:attribute name="class">learn-more</xsl:attribute>
+              <xsl:attribute name="href">
+                <xsl:value-of select="discussion/@href" />
+              </xsl:attribute>
+              <xsl:call-template name="fsfe-gettext">
+                <xsl:with-param name="id" select="'discuss-article'" />
+              </xsl:call-template>
+              <xsl:text> </xsl:text>
+            </xsl:element>
+          </xsl:element>
+        </xsl:if>
+
         <!-- Show tags if this is a news press release or an event -->
         <xsl:if test="(/buildinfo/document/@newsdate or /buildinfo/document/event)
                       and /buildinfo/document/tags/tag[not(. = 'front-page' or @key = 'front-page')]">

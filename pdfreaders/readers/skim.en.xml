@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<readers> <reader priority="80">
+  <name>Skim</name>
+  <logo>skim.png</logo>
+  <homepage>https://skim-app.sourceforge.io/</homepage>
+  <license>BSD</license>
+  <platform><name>Mac OS X</name><installer>https://sourceforge.net/projects/skim-app/files/SkimNotes/SkimNotes-1.3.13/SkimNotes-1.3.13.tgz/download</installer></platform>
+  <language>en</language>
+
+  <description>
+    PDF reader and note-taker for OS X.
+  </description>
+</reader> </readers>
+
+
+

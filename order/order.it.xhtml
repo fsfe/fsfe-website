@@ -14,16 +14,19 @@
       width: 30%;
     }
     </style>
+    <meta name="description" content="Mostra il tuo amore per il Software Libero usando e indossando gli oggetti della FSFE" />
+    <meta name="keywords" content="ordina t-shirt magliette felpe vestiti adesivi merchandise pubblicità calamite borse bavaglini spille spedizione acquisto paypal bonifico" />
+    <meta name="image" content="https://fsfe.org/graphics/tshirt-promo-800px.jpg" />
   </head>
 
   <body class="toplevel">
     <h1>Prodotti</h1>
-    
+
     <div id="toc">
       <p style="text-indent:1em;">Prodotti disponibili:</p>
       <ul style="margin-bottom: 1em;">
         <li><a href="#tshirt">Magliette</a></li>
-        <li><a href="#girlie">Magliette donna</a></li>
+        <li><a href="#girlie">Magliette da donna</a></li>
         <li><a href="#hooded">Felpe con cappuccio</a></li>
         <!-- li><a href="#baby-clothes">Vestiti per bambini</a></li -->
         <li><a href="#other">Altri prodotti</a></li>
@@ -31,11 +34,17 @@
     </div>
 
     <p class="p-summary">
-      Mostra il tuo amore per il Software Libero usando e indossando i prodotti personalizzati
-      elencati qui sotto. I vestiti Software Libero sono un buon modo per far conoscere i tuoi principi 
-      nella zona in cui vivi, e inoltre ogni acquisto aiuta a finanziare i progetti critici della FSFE.
+      Mostra il tuo amore per il Software Libero usando e indossando i nostri prodotti.
+      I vestiti Software Libero sono un buon modo per far conoscere i nostri principi 
+      nella zona in cui vivi, e inoltre ogni acquisto finanzia i progetti della FSFE.
     </p>
     
+    <p>
+      Per ottenere informazioni dettagliate sulle dimensioni effettive degli abiti
+      posiziona il puntatore del mouse sui codici delle taglie (S, M, ecc...) oppure
+      consulta la <a href="size.html">tabella delle taglie</a>.
+    </p>
+
     <p style="clear:both;"></p>
 
     <form action="/cgi-bin/weborder.pl" method="post" class="item-grid">
@@ -43,7 +52,7 @@
 
       <dynamic-content type="tshirt"/>
 
-      <h2 id="girlie">Magliette donna</h2>
+      <h2 id="girlie">Magliette da donna</h2>
 
       <dynamic-content type="girlie"/>
 
@@ -62,9 +71,9 @@
       <h2>Materiale promozionale</h2>
 
       <p>
-        Controlla la nostra
-        <a href="/contribute/spreadtheword.html#promo-material">pagina del materiale informativo</a>
-        per ordinare volantini, adesivi e altre cose. 
+        Visita la pagina del
+        <a href="/contribute/spreadtheword.html#promo-material">materiale informativo</a>
+        per consultare e richiedere volantini, adesivi e altro materiale. 
       </p>
 
       <h2>Spedizione</h2>
@@ -72,11 +81,13 @@
       <p>
         <input type="hidden" name="shipping" value="1"/>
         <input type="radio" id="shipping-de" name="_shipping" value="3"/>
-        <label for="shipping-de">Spedizione in Germania (€3.00)</label><br/>
+        <label for="shipping-de">Spedizione in Germania (3,00 €)</label><br/>
         <input type="radio" id="shipping-eu" name="_shipping" value="7" checked="Y"/>
-        <label for="shipping-eu">Spedizione in Europa (€7.00)</label><br/>
+        <label for="shipping-eu">Spedizione in Europa (7,00 €)</label><br/>
         <input type="radio" id="shipping-world" name="_shipping" value="12"/>
-        <label for="shipping-world">Spedizione fuori Europa (€12.00)</label><br/>
+        <label for="shipping-world">Spedizione extra UE (12,00 €)</label><br/>
+        <!-- input type="radio" id="shipping-none" name="_shipping" value="0"/>
+        <label for="shipping-none">No shipping (self collection)</label><br/ -->
       </p>
 
       <table class="order-form">
@@ -116,15 +127,20 @@
             <input type="hidden" name="language" value="it_IT"/>
             <!-- Translators: Please also translate the value here, it's the label
                  of the button -->
-            <input id="order-submit" type="submit" value="Ordina prodotti"/>
+            <input id="order-submit" type="submit" value="Confermo l'ordine"/>
           </td>
         </tr>
       </table>
     </form>
+
+    <p>
+      È possibile pagare tramite bonifico bancario, PayPal, carta di credito o di debito.
+      Dopo l'invio dell'ordine riceverai le informazioni necessarie per effettuare il pagamento.
+    </p>
   </body>
 
   <timestamp>$Date$ $Author$</timestamp>
-  <translator>Stefano Fraccaro</translator>
+  <translator>Stefano Fraccaro e Sebastiano Pistore</translator>
 </html>
 <!--
 Local Variables: ***

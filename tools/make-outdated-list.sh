@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/usr/bin/env bash
 OUT=/var/www/web/translations.html
 cd /srv/www/fsfe.org_git
 

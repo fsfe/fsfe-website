@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 inc_sources=true
 [ -z "$inc_misc" ] && . "$basedir/build/misc.sh"

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # This hook runs is supposed to run server-side in the repository and will reject commit with faulty XML syntax.
 # Client-side linting is recommended though

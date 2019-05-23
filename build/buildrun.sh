@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 inc_buildrun=true
 [ -z "$inc_makerules" ] && . "$basedir/build/makerules.sh"

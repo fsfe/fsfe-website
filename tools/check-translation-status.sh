@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 A=$(echo $1 | sed 's/\.[a-z][a-z]\.xhtml//')
 originaldate=`git log --pretty="%cd" --date=raw -1 $A.en.xhtml|cut -d' ' -f1`

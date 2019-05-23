@@ -5,8 +5,11 @@ print_usage() {
   echo ""
   echo "Usage: ./check-translation-status.sh [-a] [-q] -f file.en.xml"
   echo ""
-  echo " -f FILENAME"
+  echo " -f <FILENAME>"
   echo " (Relative or absolute path to file that shall be checked)"
+  echo ""
+  echo " -o up|out"
+  echo " (Only print language code whose translations are up-to-date or outdated)"
   echo ""
   echo " -a (If given, checks all available translations of the file)"
   echo ""
@@ -22,19 +25,26 @@ print_usage() {
 
 ALL="0"
 QUIET="0"
-while getopts f:aq OPT; do
+while getopts f:o:aq OPT; do
   case $OPT in
-        f)  FILE=$OPTARG;;
+        f)  FILE=$OPTARG;;  # file name
         a)  ALL="1";;
         q)  QUIET="1";;
+        o)  ONLY=$OPTARG;;  # print only languages which are up/outdated
         h)  print_help;;
   esac
 done
 
-# show usage if no parameter given
-if [ "$1" = "" ]; then
+# show usage if no required parameter given
+if [ "$1" = "" ] || [ -z "$FILE" ]; then
   print_usage
   exit 0
+fi
+
+# -o supresses all other output (-q), and implicates -a
+if [ ! -z "$ONLY" ]; then
+  QUIET="1"
+  ALL="1"
 fi
 
 function out {
@@ -80,9 +90,17 @@ if [ "$ALL" == "1" ]; then
       # mark as outdated if difference larger than 1 hour
       if [[ $diff -lt -3600 ]]; then
         out "  OUTDATED     $lang    $ymd"
+        # print outdated language code
+        if [ "$ONLY" == "out" ]; then
+          echo "$lang"
+        fi
       else
         out "  Up-to-date   $lang    $ymd"
-      fi 
+        # print up-to-date language code
+        if [ "$ONLY" == "up" ]; then
+          echo "$lang"
+        fi
+      fi
     fi
   done | sort
   exit 0
@@ -105,5 +123,7 @@ else
       out "  Up-to-date   $lang    $ymd"
       exit 0
     fi 
-  fi
+    else
+      out "  (Comparing status of English file does not make sense)"
+    fi
 fi

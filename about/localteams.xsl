@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   
@@ -86,7 +86,7 @@
     </xsl:call-template>
   </xsl:template>
   
-  <!-- Düsseldorf -->
+  <!-- DÃ¼sseldorf -->
   <xsl:template match="duesseldorf-members">
     <xsl:call-template name="country-people-list">
       <xsl:with-param name="team" select="'duesseldorf'" />
@@ -167,7 +167,7 @@
     </xsl:call-template>
   </xsl:template>
   
-  <!-- München -->
+  <!-- MÃ¼nchen -->
   <xsl:template match="munich-members">
     <xsl:call-template name="country-people-list">
       <xsl:with-param name="team" select="'munich'" />

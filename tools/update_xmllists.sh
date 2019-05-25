@@ -85,7 +85,8 @@ done
 for tag in $(ls "${tagmaps}"); do
   if ! cmp --quiet "${tagmaps}/${tag}" "tags/.tagged-${tag}.xmllist"; then
     echo "*   Updating tag ${tag}"
-    cp "tags/tagged.en.xhtml" "tags/tagged-${tag}.en.xhtml"
+    sed "s,XXX_TAGNAME_XXX,${tag},g" "tags/tagged.en.xhtml"  \
+              > "tags/tagged-${tag}.en.xhtml"
     cp "${tagmaps}/${tag}" "tags/.tagged-${tag}.xmllist"
   fi
 done

@@ -41,9 +41,6 @@
           <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/fsfe.less</xsl:attribute>
           <xsl:attribute name="type">text/css</xsl:attribute>
         </xsl:element>
-        <xsl:element name="script">
-          <xsl:attribute name="src"><xsl:value-of select="$urlprefix"/>/scripts/less.min.js</xsl:attribute>
-        </xsl:element>
       </xsl:when>
       <xsl:otherwise>
         <xsl:element name="link">

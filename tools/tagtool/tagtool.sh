@@ -53,7 +53,7 @@ renameTag()
 	for f in $(findTaggedFiles "$oldTagId")
 	do
 		echo "..$f" >&2
-		if ! doVerbose sed -E -i "s;>\W*$oldTagId\W*</tag>;>$newTagId</tag>;" "$f"
+		if ! doVerbose sed -E -i "s;>\W*$oldTagId\W*</tag>;>$newTagId</tag>;i" "$f"
 		then
 			echo "ERROR!" >&2
 			return 1

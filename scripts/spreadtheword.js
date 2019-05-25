@@ -20,18 +20,15 @@
     }
 
     form.addEventListener('submit', function (event) {
-        var value = donationAmountInput.value;
+        var value = donationAmountInput.value.trim();
 
-        if (value) {
+        if (value !== '') {
             var parsedValue = parseInt(value, 10);
 
-            if (parsedValue < 10) {
+            if (parsedValue > 0 && parsedValue < 10) {
                 setDonateError();
                 event.preventDefault();
             }
-        } else {
-            setDonateError();
-            event.preventDefault();
         }
     });
 })();

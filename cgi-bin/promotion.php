@@ -231,7 +231,7 @@ $test = send_mail ("contact@fsfe.org", $_POST['firstname'] . " " . $_POST['lastn
 /**
  * Only process donations starting from 10 euro.
  */
-if (isset($_POST['donate']) && ((int) $_POST['donate']) > 10) {
+if (isset($_POST['donate']) && ((int) $_POST['donate']) >= 10) {
   relay_donation($_POST['donationID']);
 } else {
   header("Location: http://fsfe.org/contribute/spreadtheword-orderthanks.$lang.html");

@@ -52,7 +52,7 @@ renameTag()
 	echo "Renaming tag $oldTagId to $newTagId..." >&2
 	for f in $(findTaggedFiles "$oldTagId")
 	do
-		echo "..$f" >&2
+		echo "  $f" >&2
 		if ! doVerbose sed -E -i "s;>\W*$oldTagId\W*</tag>;>$newTagId</tag>;i" "$f"
 		then
 			echo "ERROR!" >&2
@@ -70,7 +70,7 @@ removeTag()
 	echo "Deleting tag $tagId..." >&2
 	for f in $(findTaggedFiles "$oldTagId")
 	do
-		echo "..$f" >&2
+		echo "  $f" >&2
 		if ! doVerbose sed -E -i "s;\W*<tag\W*content=\"[^\"]*\"\W*>\W*$TagId\W*</tag>\W*;;i" "$f"
 		then
 			echo "ERROR!" >&2

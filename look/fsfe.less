@@ -1,4 +1,5 @@
 @import "style.less";
+@import "elements/figure";
 
 /* fsfe.org pages */
 
@@ -27,7 +28,7 @@ body {
     height: 85px;
 }
 
-@media (max-width: @screen-sm) {
+@media (max-width: @screen-xs-max) {
 
     #link-home a {
         height: 50px;
@@ -110,7 +111,7 @@ body {
 }
 
 #menu {
-    @media (min-width: @screen-sm) {
+    @media (min-width: @screen-sm-min) {
         margin-left: 200px;
     }
 }
@@ -119,20 +120,20 @@ body {
     background: url(/graphics/ribbon.png) no-repeat 100% -40px @body-bg;
     text-shadow: rgb(255, 255, 255) 0 0 .5em;
 
-    @media (min-width: @screen-sm) {
+    @media (min-width: @screen-sm-min) {
         background: url(/graphics/ribbon.png) no-repeat 100% -70px @body-bg;
     }
 }
 
 .svg #followup {
-    @media (min-width: @screen-sm) {
+    @media (min-width: @screen-sm-min) {
         background: url(/graphics/ribbon.svg) no-repeat 100% -70px @body-bg;
     }
 }
 
 #followup.join {
     background: url(/graphics/fellowship/ribbon_fellowship2.png) no-repeat 100% -30px @body-bg;
-    @media (min-width: @screen-sm) {
+    @media (min-width: @screen-sm-min) {
         background: url(/graphics/fellowship/ribbon_fellowship2.png) no-repeat 100% -50% @body-bg;
     }
 }
@@ -162,14 +163,14 @@ img.signatory-logo {
         background: url('/graphics/ribbon.png') top right no-repeat transparent;
         height: 400px;
 
-        @media (min-width: @screen-xs) {
+        @media (min-width: @screen-xs-min) {
             height: 300px;
         }
 
         .campaign-box {
             height: 400px;
 
-            @media (min-width: @screen-xs) {
+            @media (min-width: @screen-xs-min) {
                 height: 300px;
             }
             width: 100%;
@@ -190,7 +191,7 @@ img.signatory-logo {
             background: url('/graphics/motto.jpg') top center no-repeat #666;
             background-size: cover;
             font-size: 2em;
-            @media (min-width: @screen-xs) {
+            @media (min-width: @screen-xs-min) {
                 font-size: 2.7em;
                 padding-top: 1.8em;
             }
@@ -223,7 +224,7 @@ img.signatory-logo {
                 padding: 0.5em;
             }
 
-            @media (min-width: @screen-sm) {
+            @media (min-width: @screen-sm-min) {
                 .author, .text {
                     margin-left: 45%;
                 }
@@ -236,7 +237,7 @@ img.signatory-logo {
                 right: 0;
             }
 
-            @media (min-width: @screen-md) {
+            @media (min-width: @screen-md-min) {
                 .text {
                     font-size: 1.25em;
                 }
@@ -261,7 +262,7 @@ img.signatory-logo {
                 .quote;
             }
 
-            @media (min-width: @screen-md) {
+            @media (min-width: @screen-md-min) {
                 img {
                     margin-left: 3em;
                 }
@@ -296,7 +297,7 @@ img.signatory-logo {
                 text-align: center;
             }
 
-            @media (min-width: @screen-sm) {
+            @media (min-width: @screen-sm-min) {
                 .text {
                     float: left;
                     width: 30%;
@@ -327,7 +328,7 @@ img.signatory-logo {
         font-size: .9em;
         display: block;
 
-        @media (min-width: @screen-sm) {
+        @media (min-width: @screen-sm-min) {
             display: inline-block;
             padding: 0;
         }
@@ -393,10 +394,6 @@ img.signatory-logo {
     clear: both;
     padding-top: 1.5em;
 
-    #map {
-        height: 280px;
-    }
-
     .entry {
         h3 {
             display: inline-block;
@@ -405,7 +402,7 @@ img.signatory-logo {
             #news .dt-published;
             display: block;
             margin-bottom: 0;
-            @media (min-width: @screen-sm) {
+            @media (min-width: @screen-sm-min) {
                 display: block;
             }
         }
@@ -415,7 +412,7 @@ img.signatory-logo {
     }
 }
 
-@media (min-width: @screen-sm) {
+@media (min-width: @screen-sm-min) {
     #news, #events {
         display: inline-block;
         float: left;
@@ -452,6 +449,87 @@ img.signatory-logo {
         }
     }
 }
+
+
+// ----------------------------------------------------------------------------
+// List of quotes
+// ----------------------------------------------------------------------------
+
+ul.quote-list {
+    .list-unstyled();
+    .quote();
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    > li {
+        // Add thin lines between the quotes
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-top: 1px solid @hr-border;
+        border-bottom: 1px solid @hr-border;
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        // Special formatting for the source of the quote
+        p.source {
+            font-weight: bold;
+            margin-left: 3em;
+            &:before {
+                content: '\2014 \00A0'; // EM DASH, NBSP
+            }
+        }
+
+        // Special formatting for complementary information
+        p.complementary {
+            font-family: "Roboto", sans-serif;
+            margin-left: 1.5em;
+        }
+    }
+}
+
+// ----------------------------------------------------------------------------
+// Overview pages (like "about", "contribute", ...
+// ----------------------------------------------------------------------------
+
+body.overview #content {
+    .toplevel;
+
+    h2 {
+        text-align: center;
+        margin-top: (@line-height-computed * 3);
+        margin-bottom: @line-height-computed;
+    }
+
+    ul {
+        .list-no-style;
+        .make-row;
+
+        li {
+            .make-md-column(6);
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            grid-column-gap: 10px;
+            margin-top: 20px;
+
+            @media (min-width: @screen-md-min) {
+                &:nth-child(odd) {
+                    clear: both;
+                }
+            }
+
+            img {
+                padding: 5px;
+            }
+
+            h3 {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+// ----------------------------------------------------------------------------
 
 
 /* Testimonials divs */
@@ -543,7 +621,7 @@ ul.archivetaglist { margin-left: 6%; }
     margin-left: -6em;
     margin-right: 1.5em;
 
-    @media (min-width: @screen-md) {
+    @media (min-width: @screen-md-min) {
         position: absolute;
         margin-left: -200px;
         margin-top:-10em;
@@ -564,14 +642,14 @@ ul.archivetaglist { margin-left: 6%; }
     #followup {
         background: url(/graphics/ribbonv.png) no-repeat 100% -40px @body-bg;
 
-        @media (min-width: @screen-sm) {
+        @media (min-width: @screen-sm-min) {
             background: url(/graphics/ribbonv.png) no-repeat 100% -70px @body-bg;
         }
     }
 }
 
 .svg .valentine-ilovefs #followup {
-    @media (min-width: @screen-sm) {
+    @media (min-width: @screen-sm-min) {
         background: url(/graphics/ribbonv.svg) no-repeat 100% -70px @body-bg;
     }
 }
@@ -638,57 +716,84 @@ tr.highlighted {
 
 /* FSFE Shop (/order) */
 
-table.merchandise tr {
-  border-bottom: 1px solid #ddd;
-}
-table.merchandise tr:last-child {
-  border-bottom: medium none;
-}
-table.merchandise td {
-  padding: 10px 0;
-}
-table.merchandise .image {
-  width: 25%;
-  min-width: 250px;
-}
-table.merchandise .image img {
-  max-height: 120px;
-  margin: 5px;
-}
-table.merchandise .description {
-  width: 60%;
-}
-table.merchandise .quantity {
-  text-align: right;
-  width: 15%;
-  min-width: 100px
-}
-@media only screen and (max-device-width: 700px) {
-  table.merchandise .image {
-    min-width: 125px;
+table.merchandise {
+  tr {
+    border-bottom: 1px solid #ddd;
+    &:last-child {
+      border-bottom: medium none;
+    }
   }
-}
-@media only screen and (max-device-width: 400px) {
-  table.merchandise .quantity {
-    min-width: 0px;
+  td {
+    padding: 10px 0;
+    &.image {
+      width: 25%;
+      min-width: 250px;
+      img {
+        max-height: 120px;
+        margin: 5px;
+      }
+    }
+    &.description {
+      width: 60%;
+    }
+    &.quantity {
+      text-align: right;
+      width: 15%;
+      min-width: 100px
+    }
+    @media (max-width: @screen-xs-max) {
+      &.image, &.description, &.quantity {
+        display: block;
+        width: auto;
+      }
+      &.image {
+        padding-bottom: 0;
+      }
+      &.description {
+        padding: 0;
+      }
+      &.quantity {
+        padding-top: 0;
+      }
+    }
   }
-  table.merchandise .image img {
-    max-width: 110px;
+  .tooltip-anchor {
+    color: #236892;
+    position: relative;
+  }
+  .tooltip-content {
+    color: black;
+    text-align: center;
+    width: 7em;
+    padding: .5em;
+    background-color: #85bfe2;
+    border: 1px solid black;
+    position: absolute;
+    right: 0;
+    bottom: 2em;
+    z-index: 1;
+    visibility: hidden;
+    img {
+      width: 100%;
+    }
+  }
+  .tooltip-anchor:hover .tooltip-content {
+    visibility: visible;
   }
 }
 table.order-form {
   width: 100%;
-}
-table.order-form .order-left {
-  min-width: 65px;
-  width: 10%;
-}
-table.order-form .order-right input,textarea {
-  max-width: 400px;
-  width: 90%;
-}
-table.order-form #order-submit {
-  width: auto;
+  .order-left {
+    min-width: 65px;
+    width: 10%;
+  }
+  .order-right input,textarea {
+    max-width: 400px;
+    width: 90%;
+  }
+  #order-submit {
+    width: auto;
+  }
 }
 form.thankyou {
   margin-bottom: 10px;
@@ -955,13 +1060,23 @@ video#freeyourandroid {
 
 #formnl {
 
+    select {
+        display: inline-block;
+        height: 45px;
+        line-height: 45px;
+        margin-right: 10px;
+        width: auto;
+    }
+
     #submit {
         .btn;
-        .btn-lg;
         .btn-block;
         .btn-primary;
-        font-size: 1.4em;
-        margin-bottom: 5px;
+        display: inline-block;
+        font-size: 21px;
+        line-height: 31px;
+        padding: 6px 12px;
+        width: auto;
     }
 
 }

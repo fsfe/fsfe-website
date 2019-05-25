@@ -1,6 +1,32 @@
+# -----------------------------------------------------------------------------
+# Makefile for FSFE website build, phase 1
+# -----------------------------------------------------------------------------
+# This Makefile is executed in the root of the source directory tree, and
+# creates some .xml and xhtml files as well as some symlinks, all of which
+# serve as input files in phase 2. The whole phase 1 runs within the source
+# directory tree and does not touch the target directory tree at all.
+# -----------------------------------------------------------------------------
+
 .PHONY: all .FORCE
 .FORCE:
-all:
+
+# -----------------------------------------------------------------------------
+# Update XSL stylesheets
+# -----------------------------------------------------------------------------
+
+# This step updates (actually: just touches) all XSL files which depend on
+# another XSL file that has changed since the last build run. The phase 2
+# Makefile then only has to consider the directly used stylesheet as a
+# prerequisite for building each file and doesn't have to worry about other
+# stylesheets imported into that one.
+# This must run before the "dive into subdirectories" step, because in the news
+# and events directories, the XSL files, if updated, will be copied for the
+# per-year archives.
+
+.PHONY: stylesheets
+all: stylesheets
+stylesheets: $(SUBDIRS)
+	tools/update_stylesheets.sh
 
 # -----------------------------------------------------------------------------
 # Dive into subdirectories
@@ -8,17 +34,23 @@ all:
 
 SUBDIRS := $(shell find */* -name "Makefile" | xargs dirname)
 
-$(SUBDIRS): .FORCE
-	$(MAKE) -j -k -C $@ || true
-
 all: $(SUBDIRS)
+$(SUBDIRS): .FORCE
+	echo "* Preparing subdirectory $@"
+	$(MAKE) --silent --directory=$@
 
 # -----------------------------------------------------------------------------
 # Handle local menus
 # -----------------------------------------------------------------------------
 
-MENUSOURCES := $(shell find -name '*.xhtml' |xargs grep -l '<localmenu.*</localmenu>' )
+# FIXME: This runs when the makefile is parsed, before maybe new *.xhtml files
+# are created in the news/<year>/ and events/<year>/ directories. It would be
+# better to move this into a separate script tools/update-localmenus.sh. It
+# would also be better if there was a separate .localmenu.en.xml file for each
+# directory.
+MENUSOURCES := $(shell find -name '*.xhtml' -not -name "*-template.*" | xargs grep -l '<localmenu.*</localmenu>' | sort)
 
+all: localmenuinfo.en.xml
 localmenuinfo.en.xml: ./tools/buildmenu.xsl $(MENUSOURCES)
 	{ printf '<localmenuset>'; \
 	  grep -E '<localmenu.*</localmenu>' $^ \
@@ -26,8 +58,6 @@ localmenuinfo.en.xml: ./tools/buildmenu.xsl $(MENUSOURCES)
                     <menuitem language="\3"><dir>/\1</dir><link>\2.html</link>\4</menuitem>;'; \
 	  printf '</localmenuset>'; \
 	} | xsltproc -o $@ $< -
-
-all: localmenuinfo.en.xml
 
 # -----------------------------------------------------------------------------
 # Timestamp files for regular jobs and XML inclusion in various places
@@ -37,6 +67,7 @@ YEAR  := <?xml version="1.0" encoding="utf-8"?><dateset><date year="$(shell date
 MONTH := <?xml version="1.0" encoding="utf-8"?><dateset><date month="$(shell date +%Y-%m)" /></dateset> 
 DAY   := <?xml version="1.0" encoding="utf-8"?><dateset><date day="$(shell date +%Y-%m-%d)" /></dateset>
 
+all: d_year.en.xml d_month.en.xml d_day.en.xml
 d_day.en.xml: $(if $(findstring   $(DAY),$(shell cat d_day.en.xml)),,.FORCE)
 	printf %s\\n   '$(DAY)' >$@
 d_month.en.xml: $(if $(findstring $(MONTH),$(shell cat d_month.en.xml)),,.FORCE)
@@ -44,61 +75,88 @@ d_month.en.xml: $(if $(findstring $(MONTH),$(shell cat d_month.en.xml)),,.FORCE)
 d_year.en.xml: $(if $(findstring  $(YEAR),$(shell cat d_year.en.xml)),,.FORCE)
 	printf %s\\n  '$(YEAR)' >$@
 
-all: d_year.en.xml d_month.en.xml d_day.en.xml
-
 # -----------------------------------------------------------------------------
-# Update .sources files
+# Create XML symlinks
 # -----------------------------------------------------------------------------
 
-# use shell globbing to work around faulty globbing in gnu make
-SOURCEDIRS = $(shell sed -rn 's;^(.*/)[^/]*:(\[\]|global)$$;\1;gp' $@ )
-SOURCEREQS = $(shell ./build/source_globber.sh sourceglobs $@ |sed 's;$$;.??.xml;g' )
+# After this step, the following symlinks will exist:
+# * tools/.texts-<lang>.xml for each language
+# * ./fundraising.<lang>.xml for each language
+# Each of these symlinks will point to the corresponding file without a dot at
+# the beginning of the filename, if present, and to the English version
+# otherwise. This symlinks make sure that phase 2 can easily use the right file
+# for each language, also as a prerequisite in the Makefile.
 
-all: $(shell find ./ -name '*.sources')
+LANGUAGES := $(shell . build/languages.sh && get_languages)
 
-# -----------------------------------------------------------------------------
-# generate tag maps
-# -----------------------------------------------------------------------------
+TEXTS_LINKS := $(foreach lang,$(LANGUAGES),tools/.texts-$(lang).xml)
 
-TAGMAP := $(shell find ./ -name '*.xml' \
-             | xargs ./build/source_globber.sh map_tags \
-             | sed -r "s;';'\'';g; s;[^ ]+;'&';g;" \
-            )
+all: $(TEXTS_LINKS)
+tools/.texts-%.xml: .FORCE
+	if [ -f tools/texts-$*.xml ]; then \
+	  ln -sf texts-$*.xml $@; \
+	else \
+	  ln -sf texts-en.xml $@; \
+	fi
 
-TAGNAMES := $(shell printf '%s\n' $(TAGMAP) \
-              | sed '/\...\.xml$$/d' \
-              | grep -vE '[\$%/:()]' \
-              | sort -u \
-             )
+FUNDRAISING_LINKS := $(foreach lang,$(LANGUAGES),.fundraising.$(lang).xml)
 
-MAPNAMES := $(shell printf 'tools/tagmaps/%s.map ' $(TAGNAMES))
-INDEXNAMES := $(shell printf 'tags/tagged-%s.en.xhtml ' $(TAGNAMES))
-INDEXSOURCES := $(shell printf 'tags/tagged-%s.sources ' $(TAGNAMES))
-
-all: $(INDEXNAMES)
-tags/tagged-%.en.xhtml: tags/tagged.en.xhtml
-	cp $< $@
-
-all: $(INDEXSOURCES)
-tags/tagged-%.sources:
-	printf '%s:[$*]\n' 'news/*/news' news/generated_xml/ news/nl/nl 'events/*/event' >$@
-	printf 'd_day:[]' >>$@
-
-MAPREQS = $(shell printf '%s ' $(TAGMAP) \
-            | sed -r 's;[^ ]+\...\.xml;\n&;g' \
-            | grep ' $*' \
-            | cut -d' ' -f1 \
-           )
-
-all: $(MAPNAMES)
+all: $(FUNDRAISING_LINKS)
+.fundraising.%.xml: .FORCE
+	if [ -f fundraising.$*.xml ]; then \
+	  ln -sf fundraising.$*.xml $@; \
+	else \
+	  ln -sf fundraising.en.xml $@; \
+	fi
 
 # -----------------------------------------------------------------------------
-# Second Expansion rules
+# Create XSL symlinks
 # -----------------------------------------------------------------------------
-.SECONDEXPANSION:
 
-%.sources: $$(SOURCEDIRS) $$(SOURCEREQS) | $(MAPNAMES) $(INDEXSOURCES)
-	touch $@
+# After this step, each directory with source files for HTML pages contains a
+# symlink named .default.xsl and pointing to the default.xsl "responsible" for
+# this directory. These symlinks make it easier for the phase 2 Makefile to
+# determine which XSL script should be used to build a HTML page from a source
+# file.
 
-tools/tagmaps/%.map: $$(MAPREQS) | $(SUBDIRS)
-	printf '%s\n' $^ > $@
+# All directories containing source files for HTML pages.
+# FIXME: This runs when the makefile is parsed, before maybe new *.xhtml files
+# are created in the news/<year>/ and events/<year>/ directories.
+XHTML_DIRS := $(patsubst %/,%,$(sort $(dir $(shell find -name '*.??.xhtml'))))
+
+.PHONY: default_xsl
+all: default_xsl
+default_xsl:
+	for directory in $(XHTML_DIRS); do \
+	  dir="$${directory}"; \
+	  prefix=""; \
+	  until [ -f "$${dir}/default.xsl" -o "$${dir}" = "." ]; do \
+	    dir="$${dir%/*}"; \
+	    prefix="$${prefix}../"; \
+	  done; \
+	  ln -sf "$${prefix}default.xsl" "$${directory}/.default.xsl"; \
+	done
+
+# -----------------------------------------------------------------------------
+# Update XML filelists
+# -----------------------------------------------------------------------------
+
+# After this step, the following files will be up to date:
+# * tags/tagged-<tags>.en.xhtml for each tag used. Apart from being
+#   automatically created, these are regular source files for HTML pages, and
+#   in phase 2 are built into pages listing all news items and events for a
+#   tag.
+# * tags/.tags.??.xml with a list of the tags useed.
+# * <dir>/.<base>.xmllist for each <dir>/<base>.sources as well as for each
+#   tags/tagged-<tags>.en.xhtml. These files are used in phase 2 to include the
+#   correct XML files when generating the HTML pages. It is taken care that
+#   these files are only updated whenever their content actually changes, so
+#   they can serve as a prerequisite in the phase 2 Makefile.
+# This step is handled in an external script, because the list of files to
+# generate is not known when the Makefile starts - some new tags might be
+# introduced when generating the .xml files in the news/* subdirectories.
+
+.PHONY: xmllists
+all: xmllists
+xmllists: $(SUBDIRS)
+	tools/update_xmllists.sh

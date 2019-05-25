@@ -85,7 +85,6 @@
           <xsl:text>OK</xsl:text>
         </xsl:element>
       </xsl:element>
-      <xsl:element name="wbr"/>
 
       <!-- Mastodon -->
       <xsl:element name="label">
@@ -120,7 +119,6 @@
           <xsl:text>OK</xsl:text>
         </xsl:element>
       </xsl:element>
-      <xsl:element name="wbr"/>
 
       <!-- Reddit -->
       <xsl:element name="button">
@@ -136,7 +134,6 @@
         </xsl:attribute>
         <xsl:text>Reddit</xsl:text>
       </xsl:element>
-      <xsl:element name="wbr"/>
       
       <!-- Flattr -->
       <xsl:element name="button">
@@ -152,7 +149,6 @@
         </xsl:attribute>
         <xsl:text>Flattr</xsl:text>
       </xsl:element>
-      <xsl:element name="wbr"/>
 
       <!-- Hacker News -->
       <xsl:element name="button">
@@ -168,7 +164,6 @@
         </xsl:attribute>
         <xsl:text>Hacker News</xsl:text>
       </xsl:element>
-      <xsl:element name="wbr"/>
 
       <!-- Twitter -->
       <xsl:element name="button">
@@ -184,7 +179,6 @@
         </xsl:attribute>
         <xsl:text>Twitter</xsl:text>
       </xsl:element>
-      <xsl:element name="wbr"/>
 
       <!-- Facebook -->
       <xsl:element name="button">
@@ -200,7 +194,6 @@
         </xsl:attribute>
         <xsl:text>Facebook</xsl:text>
       </xsl:element>
-      <xsl:element name="wbr"/>
 
       <!-- Support -->
       <xsl:element name="button">
@@ -215,7 +208,6 @@
         </xsl:attribute>
         <xsl:text>Support!</xsl:text>
       </xsl:element>
-      <xsl:element name="wbr"/>
 
       <p><em>
         <xsl:call-template name="fsfe-gettext">

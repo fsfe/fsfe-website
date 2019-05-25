@@ -31,32 +31,20 @@
       <xsl:attribute name="content">IE=edge</xsl:attribute>
     </xsl:element>
     
-    <xsl:choose>
-      <xsl:when test="/buildinfo/document/body[  contains( @class, 'fellowship' )  ]">
-        <xsl:element name="link">
-          <xsl:attribute name="rel">stylesheet</xsl:attribute>
-          <xsl:attribute name="media">all</xsl:attribute>
-          <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/fellowship.min.css</xsl:attribute>
-          <xsl:attribute name="type">text/css</xsl:attribute>
-        </xsl:element>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:element name="link">
-          <xsl:attribute name="rel">stylesheet</xsl:attribute>
-          <xsl:attribute name="media">all</xsl:attribute>
-          <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/fsfe.min.css</xsl:attribute>
-          <xsl:attribute name="type">text/css</xsl:attribute>
-        </xsl:element>
-        <xsl:if test="$mode = 'valentine'">
-          <xsl:element name="link">
-            <xsl:attribute name="rel">stylesheet</xsl:attribute>
-            <xsl:attribute name="media">all</xsl:attribute>
-            <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/valentine.min.css</xsl:attribute>
-            <xsl:attribute name="type">text/css</xsl:attribute>
-          </xsl:element>
-        </xsl:if>
-      </xsl:otherwise>
-    </xsl:choose>
+    <xsl:element name="link">
+      <xsl:attribute name="rel">stylesheet</xsl:attribute>
+      <xsl:attribute name="media">all</xsl:attribute>
+      <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/fsfe.min.css</xsl:attribute>
+      <xsl:attribute name="type">text/css</xsl:attribute>
+    </xsl:element>
+    <xsl:if test="$mode = 'valentine'">
+      <xsl:element name="link">
+        <xsl:attribute name="rel">stylesheet</xsl:attribute>
+        <xsl:attribute name="media">all</xsl:attribute>
+        <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/valentine.min.css</xsl:attribute>
+        <xsl:attribute name="type">text/css</xsl:attribute>
+      </xsl:element>
+    </xsl:if>
     
     <xsl:element name="link">
       <xsl:attribute name="rel">stylesheet</xsl:attribute>
@@ -186,7 +174,16 @@
     </xsl:variable>
         
     <!-- Twitter cards -->
-    <meta name="twitter:card" content="summary" />
+    <xsl:element name="meta">
+      <xsl:attribute name="name">twitter:card</xsl:attribute>
+      <xsl:attribute name="content">
+        <xsl:choose>
+          <!-- if there is a meta "image", use a large summary card -->
+          <xsl:when test="$metaimage != ''">summary_large_image</xsl:when>
+          <xsl:otherwise>summary</xsl:otherwise>
+        </xsl:choose>
+      </xsl:attribute>
+    </xsl:element>    
     <meta name="twitter:site" content="@fsfe" />
     <xsl:element name="meta">
       <xsl:attribute name="name">twitter:image</xsl:attribute>
@@ -195,7 +192,7 @@
           <!-- if there is a meta "image", take that -->
           <xsl:when test="$metaimage != ''"><xsl:value-of select="$metaimage" /></xsl:when>
           <xsl:otherwise>
-            https:<xsl:value-of select="$linkresources"/>/graphics/logo-text_square.png
+            https://fsfe.org/graphics/logo-text_square.png
           </xsl:otherwise>
         </xsl:choose>
       </xsl:attribute>
@@ -235,7 +232,7 @@
           <!-- if there is a meta "image", take that -->
           <xsl:when test="$metaimage != ''"><xsl:value-of select="$metaimage" /></xsl:when>
           <xsl:otherwise>
-            https:<xsl:value-of select="$linkresources"/>/graphics/logo-text_square.png
+            https://fsfe.org/graphics/logo-text_square.png
           </xsl:otherwise>
         </xsl:choose>
       </xsl:attribute>

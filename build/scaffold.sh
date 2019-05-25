@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 inc_scaffold=true
 [ -z "$inc_xmlfiles" ] && . "$basedir/build/xmlfiles.sh"
@@ -13,8 +13,8 @@ build_xmlstream(){
   # a single xhtml page to be built
   shortname="$1"
   lang="$2"
-  olang="$3"
 
+  olang="$(echo "${shortname}".[a-z][a-z].xhtml "${shortname}".[e]n.xhtml |sed -rn 's;^.*\.([a-z]{2})\.xhtml.*$;\1;p')"
   dirname="${shortname%/*}/"
   texts_xml=$(get_textsfile $lang)
   fundraising_xml=$(get_fundraisingfile $lang)
@@ -59,7 +59,7 @@ build_xmlstream(){
 	    \$Author: automatic \$
 	  </timestamp>
 	  <set>
-	    $(auto_sources "${shortname}.sources" "$lang")
+	    $(auto_sources "${shortname}" "$lang")
 	  </set>
 	
 	  $(include_xml "$infile")

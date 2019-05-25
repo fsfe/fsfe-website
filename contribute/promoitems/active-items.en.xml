@@ -43,11 +43,6 @@ Such an item doesn't need an image!
  	<image
     imgsmall="/contribute/promopics/drm_thumb.png"/>
   </item>
-  
-      <item type="hackingforfreedom" id="hacking-for-freedom-sticker-v2" year="2017" order="4">
- 	<image
-    imgsmall="/contribute/promopics/hacking-for-freedom-sticker-v2-thumb.png"/>
-  </item>
 
   <!--100 freedoms -->
 
@@ -61,6 +56,10 @@ Such an item doesn't need an image!
 
   <!-- Public Money, Public Code -->
 
+  <item type="pmpc" id="pmpc-brochure" year="2019" order="1">
+    <image imgsmall="/contribute/promopics/pmpc_brochure_cover.jpg"/>
+  </item>
+  
     <item type="pmpc" id="pmpc-sticker-slogan" year="2018" order="1">
  	<image
     imgsmall="/contribute/promopics/PMPC_sticker_SLOGAN-thumb.png"/>

@@ -71,7 +71,7 @@ while [ "$1" ]; do
   value="${value//&/\\&}"
 
   # Now do the replacement
-  sed --in-place --expression="s%<text:placeholder[^>]*>&lt;${name}&gt;</text:placeholder>%${value}%g" content.xml
+  sed --in-place --expression="s%<text:placeholder[^>]*>&lt;${name}&gt;</text:placeholder>%${value}%" content.xml
 
   # Next please...
   shift

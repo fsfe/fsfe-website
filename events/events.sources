@@ -1,3 +1,2 @@
-events/*/event:[]
-events/*/*/event:[]
-d_day:[]
+events/$thisyear/event-*:[]
+events/$lastyear/event-*:[]

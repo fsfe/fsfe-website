@@ -78,7 +78,7 @@ my $data = { institution_name => $query->param ('institution-name'),
 
 $template->process ('pdfreaders-mail.tt2', $data, \$mail);
 
-open MAIL, "|/usr/lib/sendmail -t -f web\@fsfeurope.org";
+open MAIL, "|/usr/lib/sendmail -t -f web\@lists.fsfe.org";
 print MAIL $mail;
 close MAIL;
 

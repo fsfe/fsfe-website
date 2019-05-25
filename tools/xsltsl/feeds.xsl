@@ -79,18 +79,6 @@
     </xsl:choose>
   </xsl:template>
   
-  <!-- Show a single newsletter item -->
-  <xsl:template name="newsletter">
-    <xsl:variable name="link">
-      <xsl:value-of select="link" />
-    </xsl:variable>
-    <li>
-      <a href="{link}">
-        <xsl:value-of select="title" />
-      </a>
-    </li>
-  </xsl:template>
-  
   <!-- Show a single event -->
   <xsl:template name="event">
     <xsl:param name="header" select="''" />
@@ -143,12 +131,17 @@
 
     <!-- Before the first event, include the header -->
     <xsl:if test="position() = 1 and $header != ''">
-      <h2>
-        <xsl:call-template name="generate-id-attribute">
-          <xsl:with-param name="title" select="/buildinfo/document/text[@id = $header]" />
-        </xsl:call-template>
+      <xsl:variable name="headertext">
         <xsl:value-of select="/buildinfo/document/text[@id = $header]" />
-      </h2>
+      </xsl:variable>
+      <xsl:if test="$headertext != ''">
+        <xsl:element name="h2">
+          <xsl:call-template name="generate-id-attribute">
+            <xsl:with-param name="title" select="$headertext" />
+          </xsl:call-template>
+          <xsl:value-of select="$headertext" />
+        </xsl:element>
+      </xsl:if>
     </xsl:if>
     
     
@@ -159,18 +152,6 @@
         <xsl:value-of select="@filename" />
       </xsl:attribute>
       
-      <!-- event map -->
-      <xsl:if test="./place">
-        <xsl:variable name="map-id" select="position()"/>
-        <div id="map-{$map-id}" class="map"></div>
-        <script type="text/javascript">
-          /* &lt;![CDATA[ */
-            map_init('map-<xsl:value-of select="$map-id"/>', <xsl:value-of select="./place/lat"/>, <xsl:value-of select="./place/lon"/>)
-          /* ]]&gt; */
-        </script>
-        <noscript><!-- TODO --></noscript>
-      </xsl:if>
- 
       <!-- event title with or without link -->
       <h3>
      	<xsl:call-template name="generate-id-attribute">
@@ -238,9 +219,9 @@
 				<!-- <xsl:apply-templates select="tags" /> /-->
 				<xsl:for-each select="tags/tag[not(. = 'front-page' or @key = 'front-page')]">
 					<xsl:variable name="keyname"
-						select="translate(@key,'ABCDEFGHIJKLMNOPQRSTUVWXYZ-_+ /','abcdefghijklmnopqrstuvwxyz')" />
+						select="translate(@key,'ABCDEFGHIJKLMNOPQRSTUVWXYZ /:','abcdefghijklmnopqrstuvwxyz_')" />
 					<xsl:variable name="tagname"
-						select="translate(.,'ABCDEFGHIJKLMNOPQRSTUVWXYZ-_+ /','abcdefghijklmnopqrstuvwxyz')" />
+						select="translate(.,'ABCDEFGHIJKLMNOPQRSTUVWXYZ /:','abcdefghijklmnopqrstuvwxyz_')" />
 					<xsl:choose>
 						<xsl:when test="@key and .">
 							<li><a href="/tags/tagged-{$keyname}.html"><xsl:value-of select="." /></a></li>

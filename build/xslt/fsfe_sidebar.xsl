@@ -63,7 +63,10 @@
         </a>
       </xsl:if>
 
+      <!-- Add promotion block depending on the "promo" parameter -->
       <xsl:choose>
+
+        <!-- Promotion block "our-work" -->
         <xsl:when test = "/buildinfo/document/sidebar/@promo = 'our-work'">
           <h3 class="promo"><xsl:call-template name="fsfe-gettext">
             <xsl:with-param name="id" select="'our-work'" />
@@ -75,20 +78,27 @@
             <xsl:call-template name="fsfe-gettext">
               <xsl:with-param name="id" select="'learn-more'" />
           </xsl:call-template></a>
+        </xsl:when>
 
-        </xsl:when><xsl:when test = "/buildinfo/document/sidebar/@promo = 'about-fsfe'">
+        <!-- Promotion block "support" -->
+        <xsl:when test = "/buildinfo/document/sidebar/@promo = 'support'">
           <h3 class="promo"><xsl:call-template name="fsfe-gettext">
-            <xsl:with-param name="id" select="'about-fsfe'" />
+            <xsl:with-param name="id" select="'support'" />
           </xsl:call-template></h3>
           <xsl:call-template name="fsfe-gettext">
-            <xsl:with-param name="id" select="'about-fsfe-intro'" />
+            <xsl:with-param name="id" select="'our-work-intro'" />
           </xsl:call-template>
-          <a href="/about/about.html" class="learn-more">
+          <xsl:call-template name="fsfe-gettext">
+            <xsl:with-param name="id" select="'support-paragraph'" />
+          </xsl:call-template>
+          <a href="https://my.fsfe.org/support" class="big-donate">
             <xsl:call-template name="fsfe-gettext">
-              <xsl:with-param name="id" select="'learn-more'" />
+              <xsl:with-param name="id" select="'support/become'" />
           </xsl:call-template></a>
+        </xsl:when>
 
-        </xsl:when><xsl:when test = "/buildinfo/document/sidebar/@promo = 'donate'">
+        <!-- Promotion block "donate" -->
+        <xsl:when test = "/buildinfo/document/sidebar/@promo = 'donate'">
           <h3 class="promo"><xsl:call-template name="fsfe-gettext">
             <xsl:with-param name="id" select="'donate'" />
           </xsl:call-template></h3>
@@ -99,12 +109,10 @@
             <xsl:call-template name="fsfe-gettext">
               <xsl:with-param name="id" select="'donate'" />
           </xsl:call-template></a>
+        </xsl:when>
 
-        <!-- empty sidebar -->
-        </xsl:when><xsl:when test = "/buildinfo/document/sidebar/@promo = 'none'">
-
-        <!--otherwise display about-fsfe-->
-        </xsl:when><xsl:when test = "not(/buildinfo/document/sidebar/@promo = 'no')">
+        <!-- Promotion block "about-fsfe", which is the default -->
+        <xsl:when test = "not(/buildinfo/document/sidebar/@promo = 'none')">
           <h3 class="promo"><xsl:call-template name="fsfe-gettext">
             <xsl:with-param name="id" select="'about-fsfe'" />
           </xsl:call-template></h3>
@@ -113,7 +121,7 @@
           </xsl:call-template>
           <a href="/about/about.html" class="learn-more">
             <xsl:call-template name="fsfe-gettext">
-            <xsl:with-param name="id" select="'learn-more'" />
+              <xsl:with-param name="id" select="'learn-more'" />
           </xsl:call-template></a>
         </xsl:when>
       </xsl:choose>

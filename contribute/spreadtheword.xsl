@@ -2,6 +2,7 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:import href="../fsfe.xsl" />
+  <xsl:import href="../tools/xsltsl/countries.xsl" />
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
 
   <!-- Fill dynamic content -->
@@ -224,6 +225,25 @@
         
     </xsl:for-each>
     
+  </xsl:template>
+
+  <!-- Dropdown list of countries requiring a choice -->
+  <!-- when copying this, remember importing the xsl, and editing the .source file -->
+  <xsl:template match="country-list">
+    <xsl:call-template name="country-list">
+      <xsl:with-param name="required" select="'yes'"/>
+    </xsl:call-template>
+  </xsl:template>
+
+  <!-- Add a hidden field to the form to identify the language used. -->
+  <xsl:template match="add-language">
+    <xsl:element name="input">
+      <xsl:attribute name="type">hidden</xsl:attribute>
+      <xsl:attribute name="name">language</xsl:attribute>
+      <xsl:attribute name="value">
+        <xsl:value-of select="/buildinfo/@language" />
+      </xsl:attribute>
+    </xsl:element>
   </xsl:template>
 
 </xsl:stylesheet>

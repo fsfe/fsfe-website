@@ -1,3 +1,4 @@
-news/*/news:[bea]
-news/generated_xml/:[bea]
-news/nl/nl:[bea]
+news/*/news-*:[bea]
+news/*/.news-*:[bea]
+news/nl/nl-*:[bea]
+news/nl/.nl-*:[bea]

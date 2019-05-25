@@ -1,3 +1,4 @@
-news/*/news:[nledu]
-news/generated_xml/:[nledu]
-news/nl/nl:[nledu]
+news/*/news-*:[nledu]
+news/*/.news-*:[nledu]
+news/nl/nl-*:[nledu]
+news/nl/.nl-*:[nledu]

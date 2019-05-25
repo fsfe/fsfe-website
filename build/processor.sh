@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 inc_processor=true
 [ -z "$inc_filenames" ] && . "$basedir/build/filenames.sh"
@@ -7,13 +7,16 @@ inc_processor=true
 process_file(){
   infile="$1"
   processor="$2"
-  olang="$3"
 
   shortname=$(get_shortname "$infile")
   lang=$(get_language "$infile")
   [ -z "$processor" ] && processor="$(get_processor "$shortname")"
 
-  build_xmlstream "$shortname" "$lang" "$olang" \
+  # Make sure that the following pipe exits with a nonzero exit code if *any*
+  # of the commands fails.
+  set -o pipefail
+
+  build_xmlstream "$shortname" "$lang" \
   | xsltproc "$processor" - \
   | sed -r ':X; N; $!bX;
       s;<[\r\n\t ]*(a|link)([\r\n\t ][^>]*)?[\r\n\t ]href="(https?:)?//'"$domain"'/([^"]*)";<\1\2 href="/\4";gI

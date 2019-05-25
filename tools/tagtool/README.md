@@ -33,6 +33,22 @@ You can then fill the "action" field with the following actions:
 A word of warning: you'll probably need to polish the results by hand a little
 (removing empty lines, checking for duplicate tags introduced by renaming).
 
+### Doing quick changes
+
+If there is demand I can add a proper command line interface I can write one.
+Until then, you have to write a csv file.
+
+The following example would remove the tag "useless" and rename the tag "type" to "notypo":
+
+```
+cat >quickchange.csv <<EOF
+action;name;id;section;count
+rm;;useless;;
+mv:notypo;;typo;;
+EOF
+tagtool.sh quickchange.csv
+```
+
 ## Debugging
 
 You can call tagtool.sh with the environment variable "VERBOSE" set to 1.

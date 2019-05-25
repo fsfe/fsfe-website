@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 inc_filenames=true
 [ -z "$inc_languages" ] && . "$basedir/build/languages.sh"

@@ -33,4 +33,6 @@ You can then fill the "action" field with the following actions:
 A word of warning: you'll probably need to polish the results by hand a little
 (removing empty lines, checking for duplicate tags introduced by renaming).
 
+## Debugging
 
+You can call tagtool.sh with the environment variable "VERBOSE" set to 1.

@@ -15,13 +15,25 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ###
-
 TAGSDATAFILE="$1"
 if [[ ! -f "$1" ]]
 then
 	echo "No data file. Please read the source for help..." >&2
 	exit 1
 fi
+
+# set to "1" to add verbose debug outpu
+VERBOSE=${VERBOSE:-0}
+
+doVerbose()
+# doVerbose CMD ARGS..
+{
+	if [[ VERBOSE -eq 1 ]]
+	then
+		echo "${@@Q}" >&2
+	fi
+	"$@"
+}
 
 findTaggedFiles()
 # findTaggedFiles TAG_ID
@@ -41,7 +53,7 @@ renameTag()
 	for f in $(findTaggedFiles "$oldTagId")
 	do
 		echo "..$f" >&2
-		if ! sed -E -i "s;>\W*$oldTagId\W*</tag>;>$newTagId</tag>;" "$f"
+		if ! doVerbose sed -E -i "s;>\W*$oldTagId\W*</tag>;>$newTagId</tag>;" "$f"
 		then
 			echo "ERROR!" >&2
 			return 1
@@ -59,7 +71,7 @@ removeTag()
 	for f in $(findTaggedFiles "$oldTagId")
 	do
 		echo "..$f" >&2
-		if ! sed -E -i "s;\W*<tag\W*content=\"[^\"]*\"\W*>\W*$TagId\W*</tag>\W*;;i" "$f"
+		if ! doVerbose sed -E -i "s;\W*<tag\W*content=\"[^\"]*\"\W*>\W*$TagId\W*</tag>\W*;;i" "$f"
 		then
 			echo "ERROR!" >&2
 			return 1

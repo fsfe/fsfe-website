@@ -15,7 +15,7 @@
       <tag content="<?php echo htmlspecialchars($countryname); ?>"><?php echo htmlspecialchars($countrycode); ?></tag>
       <?php
         foreach ($tags as $tag) {
-          echo sprintf('<tag content="">%s</tag>', htmlspecialchars($tag)) . "\n";
+          echo sprintf('<tag>%s</tag>', htmlspecialchars($tag)) . "\n";
         }
       ?>
       <tag>front-page</tag>

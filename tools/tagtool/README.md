@@ -48,7 +48,3 @@ mv:notypo;;typo;;
 EOF
 tagtool.sh quickchange.csv
 ```
-
-## Debugging
-
-You can call tagtool.sh with the environment variable "VERBOSE" set to 1.

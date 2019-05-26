@@ -15,24 +15,47 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ###
-TAGSDATAFILE="$1"
-if [[ ! -f "$1" ]]
-then
-	echo "No data file. Please read the source for help..." >&2
-	exit 1
-fi
 
-# set to "1" to add verbose debug outpu
-VERBOSE=${VERBOSE:-0}
+VERBOSE=0
+NO_ACT=0
 
-doVerbose()
-# doVerbose CMD ARGS..
+print_help()
+{
+	cat <<EOF >&2
+Usage: tagstool [-n|--no-act] [-v|--verbose] -b|--bulk-process TAGSDATAFILE
+
+Transform tag data by bulk.
+
+Options:
+-n|--no-act                Don't perform any changes.
+-v|--verbose               Add verbose output of changes.
+
+Actions:
+-b|--bulk TAGSDATAFILE     Transform bulk transformations a defined in the
+                           csv file. See README.md for details.
+                           Available transformations:
+                            - rm: delete tag
+                            - mv:newtag: move the tag to a newtag
+
+EOF
+}
+
+performAction()
+# performAction CMD ARGS..
+# Perform the given command, if NO_ACT is not set.
+# If VERBOSE is set, also print the command.
+# Please use this for all actions that perform a change on the data!
 {
 	if [[ VERBOSE -eq 1 ]]
 	then
 		echo "${@@Q}" >&2
 	fi
-	"$@"
+	if [[ NO_ACT -eq 1 ]]
+	then
+		echo "NOT calling $1..." >&2
+	else
+		"$@"
+	fi
 }
 
 findTaggedFiles()
@@ -53,7 +76,7 @@ renameTag()
 	for f in $(findTaggedFiles "$oldTagId")
 	do
 		echo "  $f" >&2
-		if ! doVerbose sed -E -i "s;>\W*$oldTagId\W*</tag>;>$newTagId</tag>;i" "$f"
+		if ! performAction sed -E -i "s;>\W*$oldTagId\W*</tag>;>$newTagId</tag>;i" "$f"
 		then
 			echo "ERROR!" >&2
 			return 1
@@ -71,7 +94,7 @@ removeTag()
 	for f in $(findTaggedFiles "$oldTagId")
 	do
 		echo "  $f" >&2
-		if ! doVerbose sed -E -i "s;\W*<tag\W*content=\"[^\"]*\"\W*>\W*$TagId\W*</tag>\W*;;i" "$f"
+		if ! performAction sed -E -i "s;\W*<tag\W*content=\"[^\"]*\"\W*>\W*$TagId\W*</tag>\W*;;i" "$f"
 		then
 			echo "ERROR!" >&2
 			return 1
@@ -116,4 +139,51 @@ process_actions()
 	done
 }
 
-process_actions < "$TAGSDATAFILE"
+do_bulk()
+# do_bulk TAGSDATAFILE
+# perform a bulk action based on data in the given tags data csv file.
+{
+	local TAGSDATAFILE="$1"
+	if [[ ! -f "$TAGSDATAFILE" ]]
+	then
+		echo "No data file. Please read the source for help..." >&2
+		return 1
+	fi
+	process_actions < "$TAGSDATAFILE"
+}
+
+###
+# Parse commandline:
+###
+
+TEMP=`getopt -o hbvn --long help,bulk-process,verbose,no-act \
+     -n 'tagtool' -- "$@"`
+
+if [ $? != 0 ] ; then echo "Terminating..." >&2 ; exit 1 ; fi
+
+# Note the quotes around `$TEMP': they are essential!
+eval set -- "$TEMP"
+
+while true ; do
+	case "$1" in
+		-h|--help) print_help ; exit ;;
+		-b|--bulk-process) ACTION=do_bulk ; shift ;;
+		-v|--verbose) VERBOSE=1 ; shift ;;
+		-n|--no-act) NO_ACT=1 ; shift ;;
+		--) shift ; break ;;
+		*) echo "Internal error!" ; exit 1 ;;
+	esac
+done
+
+###
+# Perform action:
+###
+
+if [ -z "$ACTION" ]
+then
+	echo "No action chosen!" >&2
+	print_help
+	exit 1
+fi
+
+"$ACTION" "$@"

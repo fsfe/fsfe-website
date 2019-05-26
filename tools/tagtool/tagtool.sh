@@ -23,6 +23,7 @@ print_help()
 {
 	cat <<EOF >&2
 Usage: tagstool [-n|--no-act] [-v|--verbose] -b|--bulk-process TAGSDATAFILE
+       tagstool [-n|--no-act] [-v|--verbose] --remove-empty
 
 Transform tag data by bulk.
 
@@ -30,12 +31,14 @@ Options:
 -n|--no-act                Don't perform any changes.
 -v|--verbose               Add verbose output of changes.
 
-Actions:
+Actions (only one action per invocation):
 -b|--bulk TAGSDATAFILE     Transform bulk transformations a defined in the
                            csv file. See README.md for details.
                            Available transformations:
                             - rm: delete tag
                             - mv:newtag: move the tag to a newtag
+
+--remove-empty             Remove empty content attribute for tags.
 
 EOF
 }
@@ -152,11 +155,22 @@ do_bulk()
 	process_actions < "$TAGSDATAFILE"
 }
 
+do_removeEmpty()
+# removeEmpty
+{
+	echo "Removing empty 'content' attribute  from tags..." >&2
+	for f in $(git grep -Eil '<tag\W+content="\W*"\W*>')
+	do
+		echo "  $f" >&2
+		performAction sed -E -i 's;<tag\W+content="\W*"\W*>;<tag>;g' "$f"
+	done
+}
+
 ###
 # Parse commandline:
 ###
 
-TEMP=`getopt -o hbvn --long help,bulk-process,verbose,no-act \
+TEMP=`getopt -o hbvn --long help,bulk-process,verbose,no-act,remove-empty \
      -n 'tagtool' -- "$@"`
 
 if [ $? != 0 ] ; then echo "Terminating..." >&2 ; exit 1 ; fi
@@ -166,10 +180,11 @@ eval set -- "$TEMP"
 
 while true ; do
 	case "$1" in
-		-h|--help) print_help ; exit ;;
 		-b|--bulk-process) ACTION=do_bulk ; shift ;;
-		-v|--verbose) VERBOSE=1 ; shift ;;
+		-h|--help) print_help ; exit ;;
 		-n|--no-act) NO_ACT=1 ; shift ;;
+		--remove-empty) ACTION=do_removeEmpty ; shift ;;
+		-v|--verbose) VERBOSE=1 ; shift ;;
 		--) shift ; break ;;
 		*) echo "Internal error!" ; exit 1 ;;
 	esac

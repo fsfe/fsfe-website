@@ -246,52 +246,6 @@ img.signatory-logo {
 
         }
 
-        #appelbaum {
-            background: url('/graphics/appelbaum.jpg') top right no-repeat #070400;
-            background-size: cover;
-
-            @media (min-width: @screen-sm-min) {
-                background-size: contain;
-            }
-
-            img {
-                display: none;
-            }
-
-            .author:before {
-                content: "– ";
-            }
-
-            .text {
-                .quote;
-            }
-
-            .author, .text {
-                display: block;
-                background-color: rgba(0, 0, 0, 0.5);
-                padding: 0.5em;
-            }
-
-            @media (min-width: @screen-sm-min) {
-                .author, .text {
-                    margin-right: 45%;
-                }
-            }
-
-            @media (min-width: @screen-md-min) {
-                .author, .text {
-                    margin-right: 35%;
-                }
-            }
-
-            .copyright {
-                font-size: 0.6em;
-                position: absolute;
-                bottom: 0;
-                right: 0;
-            }
-        }
-
         #zacchiroli {
             background: url('/graphics/group-blur-800.jpg') center 33% no-repeat #666;
             text-shadow: 0px 1px 2px rgb(0, 0, 0);
@@ -323,37 +277,6 @@ img.signatory-logo {
                     margin: 1em auto;
                     display: block;
                 }
-            }
-
-        }
-
-        #summit16 {
-            .campaign-box-center;
-            background: url('/graphics/fsfe-summit-header-background.jpg') center no-repeat #666;
-            background-size: cover;
-        }
-
-        #summit16 img {
-            position: absolute;
-        }
-
-        #summit16 img:first-of-type {
-            top: 10%;
-            left: 5%;
-            width: 40%;
-            max-width: 250px;
-        }
-
-        #summit16 img:last-of-type {
-            bottom: 10%;
-            right: 5%;
-            width: 50%;
-            max-width: 400px;
-        }
-
-        @media (min-width: 800px) {
-            #summit16 img:first-of-type {
-                top: 20%;
             }
         }
 
@@ -391,52 +314,12 @@ img.signatory-logo {
 
         }
 
-        #dfd {
-            .campaign-box-center;
-            background: url('/graphics/fellowship/plussy_tile_01-33alpha.png') rgba(118, 181, 32, 1);
-
-            img {
-                height: 200px;
-                margin-bottom: 10px;
-                margin-top: -70px;
-                max-width: none;
-            }
-        }
-
         #ilovefs {
             .campaign-box-center;
             background: url('/graphics/ilovefs-hashtag-campaignbox.png') center 33% no-repeat transparent;
         }
-
-        #racketware {
-            .campaign-box-center;
-            background: center 33% no-repeat #FFF;
-
-            .text {
-                display: none;
-            }
-        }
-
-        #becomefellow {
-            .campaign-box-center;
-            background: url('/graphics/group-blur-800.jpg') center 33% no-repeat #666;
-        }
-
-        #fightback {
-            .campaign-box-center;
-            background: url('/graphics/thedaywefightback.png') center 33% no-repeat transparent;
-        }
-
     }
 }
-
-.svg #campaigns-boxes #dfd {
-    img {
-        /*TODO: can we maybe change it to svg here?*/
-    }
-}
-
-
 
 #news {
     padding-bottom: 1.5em;
@@ -483,7 +366,6 @@ img.signatory-logo {
     }
 
 }
-
 
 #latest-news-list, #more-news-list {
     list-style-type: none;

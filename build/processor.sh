@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 inc_processor=true
 [ -z "$inc_filenames" ] && . "$basedir/build/filenames.sh"

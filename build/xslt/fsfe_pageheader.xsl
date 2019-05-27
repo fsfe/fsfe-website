@@ -72,15 +72,6 @@
             <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'change-lang'" /></xsl:call-template>
           </xsl:element>
   
-          <xsl:element name="a">
-            <xsl:attribute name="href">/</xsl:attribute>
-            <xsl:attribute name="id">direct-to-home</xsl:attribute>
-            <xsl:element name="i">
-              <xsl:attribute name="class">fa fa-home fa-lg</xsl:attribute>
-            </xsl:element>
-            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfeurope'" /></xsl:call-template>
-          </xsl:element>
-  
         </xsl:element>
         <!--/div#direct-links-->
   

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 inc_scaffold=true
 [ -z "$inc_xmlfiles" ] && . "$basedir/build/xmlfiles.sh"

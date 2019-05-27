@@ -91,7 +91,8 @@ function send_registration_mail($from, $to) {
 	return $data['img_error'];
 }
 
-if ( isset($_POST['register_event']) AND empty($_POST['spam']) AND eval_date($_POST['startdate']) AND eval_date($_POST['enddate']) || empty($_POST['enddate'])  ) {
+if ( isset($_POST['register_event']) AND empty($_POST['spam']) AND eval_date($_POST['startdate'])
+	AND ( eval_date($_POST['enddate']) ) || empty($_POST['enddate'])  ) {
 	$error = send_registration_mail($_POST['name'] . " <" . $_POST['email'] . ">", "FSFE <contact@fsfe.org>");
 	$error = send_registration_mail("FSFE <contact@fsfe.org>", $_POST['name'] . " <" . $_POST['email'] . ">");
 

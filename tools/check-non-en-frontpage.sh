@@ -1,4 +1,4 @@
-#/bin/bash
+#!/usr/bin/env bash
 
 # checks whether there non-EN items appear on the FSFE front-page, which is undesired
 

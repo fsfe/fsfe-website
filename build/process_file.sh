@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 basedir="${0%/*}/.."
 [ -z "$inc_processor" ] && . "$basedir/build/processor.sh"

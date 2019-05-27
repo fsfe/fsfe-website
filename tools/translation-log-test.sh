@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # This script is called by build.sh to create the translation log html
 # files from the translations.log file created by build.pl.

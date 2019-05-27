@@ -24,6 +24,7 @@ use POSIX qw(strftime);
 use Digest::SHA qw(sha1_hex);
 use MIME::Lite;
 use utf8;
+use 5.010;
 
 # -----------------------------------------------------------------------------
 # Get parameters
@@ -42,9 +43,31 @@ my $address = decode("utf-8", $query->param("address"));
 my $email = decode("utf-8", $query->param("email"));
 my $phone = decode("utf-8", $query->param("phone"));
 my $language = $query->param("language");
+my $country = $query->param("country");
+my $country_code;
+my $country_name;
+my $ship;
+my @eu = ('AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 
+          'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'GB');
+
+# Calculate shipping fees based on country codes from drop-down list
+
+($country_code, $country_name) = split('|', $country);
+
+given ($country_code) {
+  when ($_ eq 'DE') {
+    $ship = 3;
+  }
+  when ($_ ~~ @eu) {
+    $ship = 7;
+  }
+  default {
+    $ship = 12;
+  }
+}
 
 # Remove all parameters except for items and prices.
-$query->delete("url", "name", "address", "email", "phone", "language");
+$query->delete("url", "name", "address", "email", "phone", "language", "country");
 
 my $lang = substr $language, 0, 2;
 
@@ -75,6 +98,8 @@ foreach $item ($query->param) {
     $amount += $value * $price;
   }
 }
+
+$amount += $ship;
 
 if ($count < 2) {
   print "Content-type: text/html\n\n";
@@ -115,6 +140,8 @@ foreach $item ($query->param) {
     $body .= sprintf "%-30s %3u x %5.2f = %6.2f\n", $item, $value, $price, $value * $price;
   }
 }
+
+$body .= "Shipping to %s %-30u", $country_name, $ship);
 
 $body .= "---------------------------------------------------\n";
 $body .= sprintf("Total amount                               € %6.2f\n", $amount);

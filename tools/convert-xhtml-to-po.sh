@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash_
 # This file takes a .en.xhtml file in output and makes the .po and .pot files.
 set -e
 set -o pipefail

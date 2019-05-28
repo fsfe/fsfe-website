@@ -1,5 +1,6 @@
 @import "style.less";
 @import "elements/figure";
+@import "pages/interview";
 
 /* fsfe.org pages */
 
@@ -317,37 +318,6 @@ img.signatory-logo {
                     display: block;
                 }
             }
-
-        }
-
-        #summit16 {
-            .campaign-box-center;
-            background: url('/graphics/fsfe-summit-header-background.jpg') center no-repeat #666;
-            background-size: cover;
-        }
-
-        #summit16 img {
-            position: absolute;
-        }
-
-        #summit16 img:first-of-type {
-            top: 10%;
-            left: 5%;
-            width: 40%;
-            max-width: 250px;
-        }
-
-        #summit16 img:last-of-type {
-            bottom: 10%;
-            right: 5%;
-            width: 50%;
-            max-width: 400px;
-        }
-
-        @media (min-width: 800px) {
-            #summit16 img:first-of-type {
-                top: 20%;
-            }
         }
 
         #boxpmpc {
@@ -384,52 +354,12 @@ img.signatory-logo {
 
         }
 
-        #dfd {
-            .campaign-box-center;
-            background: url('/graphics/fellowship/plussy_tile_01-33alpha.png') rgba(118, 181, 32, 1);
-
-            img {
-                height: 200px;
-                margin-bottom: 10px;
-                margin-top: -70px;
-                max-width: none;
-            }
-        }
-
         #ilovefs {
             .campaign-box-center;
             background: url('/graphics/ilovefs-hashtag-campaignbox.png') center 33% no-repeat transparent;
         }
-
-        #racketware {
-            .campaign-box-center;
-            background: center 33% no-repeat #FFF;
-
-            .text {
-                display: none;
-            }
-        }
-
-        #becomefellow {
-            .campaign-box-center;
-            background: url('/graphics/group-blur-800.jpg') center 33% no-repeat #666;
-        }
-
-        #fightback {
-            .campaign-box-center;
-            background: url('/graphics/thedaywefightback.png') center 33% no-repeat transparent;
-        }
-
     }
 }
-
-.svg #campaigns-boxes #dfd {
-    img {
-        /*TODO: can we maybe change it to svg here?*/
-    }
-}
-
-
 
 #news {
     padding-bottom: 1.5em;
@@ -476,7 +406,6 @@ img.signatory-logo {
     }
 
 }
-
 
 #latest-news-list, #more-news-list {
     list-style-type: none;
@@ -688,7 +617,12 @@ ul.archivemeta li a, ul.archivetaglist li a { color: #999; }
 
 .archiveauthor { margin: 0 0.25em; }
 
-ul.archivetaglist { margin-left: 6%; }
+ul.archivetaglist {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: .4em;
+    padding-top: .5em;
+}
+ul.archivetaglist li:first-child {padding-left: 0; }
 
 /* donate */
 
@@ -893,20 +827,7 @@ table.merchandise {
     visibility: visible;
   }
 }
-table.order-form {
-  width: 100%;
-  .order-left {
-    min-width: 65px;
-    width: 10%;
-  }
-  .order-right input,textarea {
-    max-width: 400px;
-    width: 90%;
-  }
-  #order-submit {
-    width: auto;
-  }
-}
+
 form.thankyou {
   margin-bottom: 10px;
 }
@@ -1210,3 +1131,5 @@ video#freeyourandroid {
 .home-newsletter-label {
     margin-top: 30px;
 }
+
+@import "pages/spreadtheword";

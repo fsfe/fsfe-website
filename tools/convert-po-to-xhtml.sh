@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # This file takes a .pot file and makes the xhtml
 set -e
 set -o pipefail

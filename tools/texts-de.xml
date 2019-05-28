@@ -19,7 +19,7 @@
   <text id="stw-source-tooltip">Hier kannst du die Quelldateien für das Informaterial herunterladen um es anzupassen oder zu übersetzen. Bitte respektiere dabei die Lizenz.</text>
   <text id="stw-printready">Druckfertige Dateien</text>
   <text id="stw-printready-tooltip">Diese Dateien verwenden wir für die Druckerei, inklusive Beschnittzugabe und anderen druckspezifischen Einstellungen. Sie können sehr groß sein (~5-25MB).</text>
-    
+
 <!-- Basic texts -->
 <text id="fsfeurope">Free Software Foundation Europe</text>
 <text id="fsfnetwork">
@@ -36,8 +36,8 @@
 <text id="translator3b">Originaltext</text>
 <text id="translator3c">.</text>
 <text id="permission">
-    Die unveränderte Wiedergabe und Verteilung dieses 
-    gesamten Textes in beliebiger Form ist gestattet, sofern 
+    Die unveränderte Wiedergabe und Verteilung dieses
+    gesamten Textes in beliebiger Form ist gestattet, sofern
     dieser Hinweis erhalten bleibt.
   </text>
 <text id="js-licences">JavaScript-Lizenzen</text>
@@ -48,21 +48,21 @@
     Diese Übersetzung stimmt nicht mehr überein mit dem
   </text><!-- followed by "translator3b" + . -->
 <text id="outdated-2">
-  Bitte hilf uns, diese und andere <a 
-  href="/contribute/translators/translators.html">Seiten auf fsfe.org 
-  zu übersetzen</a>, damit alle unsere Informationen in ihrer 
-  Muttersprache lesen können. 
+  Bitte hilf uns, diese und andere <a
+  href="/contribute/translators/translators.html">Seiten auf fsfe.org
+  zu übersetzen</a>, damit alle unsere Informationen in ihrer
+  Muttersprache lesen können.
 </text>
 <text id="notranslation">
-  Diese Seite wurde bisher noch nicht übersetzt. Bitte hilf uns, diese 
-  und andere <a href="/contribute/translators/translators.html">Seiten 
-  auf fsfe.org zu übersetzen</a>, damit alle unsere Informationen in 
+  Diese Seite wurde bisher noch nicht übersetzt. Bitte hilf uns, diese
+  und andere <a href="/contribute/translators/translators.html">Seiten
+  auf fsfe.org zu übersetzen</a>, damit alle unsere Informationen in
   ihrer Muttersprache lesen können.
 </text>
 <text id="under-construction"><strong>Warnung: </strong>Diese Seite ist unter Bearbeitung. Bitte übersetze sie nicht, da sie noch stark verändert wird.
   </text>
 <text id="project-complete">
-	  Dieses Projekt wurde erfolgreich abgeschlossen. Diese Seiten dienen als Archiv für die darauf befindlichen Informationen. 
+	  Dieses Projekt wurde erfolgreich abgeschlossen. Diese Seiten dienen als Archiv für die darauf befindlichen Informationen.
   </text>
 
 
@@ -183,32 +183,28 @@
 <!-- Motivational texts for fellowship, support or donations -->
 <text id="join">Beitreten</text>
 <text id="join-paragraph">
-  <p>Werde Fellow der FSFE, um unsere Arbeit zu unterstützen und 
-  unsere finanzielle Unabhängigkeit zu sichern. Wenn Du der  
-  Fellowship beitrittst, wirst Du Fördermitglied der FSFE - mit Zugriff 
+  <p>Werde Fellow der FSFE, um unsere Arbeit zu unterstützen und
+  unsere finanzielle Unabhängigkeit zu sichern. Wenn Du der
+  Fellowship beitrittst, wirst Du Fördermitglied der FSFE - mit Zugriff
   auf unsere Infrastruktur.</p>
 </text>
 <text id="join-fellowship">Tritt der Fellowship bei</text>
 <text id="support">Unterstützen Sie die FSFE</text>
 <text id="show-support">Zeig Deine Unterstütung!</text>
-<text id="show-support-paragraph">
-  <p>FSFE benötigt Deine Unterstützung, um gehört zu werden! Jeder Treffer zählt!</p>
-</text>
+<text id="show-support-paragraph">FSFE benötigt Deine Unterstützung, um gehört zu werden! Jeder Treffer zählt!</text>
 <text id="support-fsfe">Ich unterstütze die FSFE!</text>
-<text id="support-paragraph"><p>Wenn du uns unterstützt, stärkst du unsere Arbeit und hilfst dabei, unsere finanzielle Unabhängigkeit zu sichern.</p></text>
+<text id="support-paragraph">Wenn du uns unterstützt, stärkst du unsere Arbeit und hilfst dabei, unsere finanzielle Unabhängigkeit zu sichern.</text>
 <text id="donate">Spenden</text>
 <text id="donate-paragraph">
-  <p>
-        Die Free Software Foundation Europe ist eine gemeinnützige
-        Nichtregierungsorganisation. <a href="/work.html">Unsere Arbeit</a>
-        wird durch eine Gemeinschaft von 
-        <a href="/contribute/contribute.html">ehrenamtlichen Mitarbeitern</a>, 
-        <a href="/fellowship">Fellows</a> und 
-        <a href="/donate/thankgnus.html">Spendern</a> ermöglicht. Deine Spenden
-        sind essenziell für unsere Stärke und Unabhängigkeit. Sie ermöglichen
-        es uns, weiterhin für Freie Software zu arbeiten, wo immer das nötig
-        ist, und machen uns zu einer unabhängigen Stimme.
-      </p>
+    Die Free Software Foundation Europe ist eine gemeinnützige
+    Nichtregierungsorganisation. <a href="/work.html">Unsere Arbeit</a>
+    wird durch eine Gemeinschaft von
+    <a href="/contribute/contribute.html">ehrenamtlichen Mitarbeitern</a>,
+    <a href="/fellowship">Fellows</a> und
+    <a href="/donate/thankgnus.html">Spendern</a> ermöglicht. Deine Spenden
+    sind essenziell für unsere Stärke und Unabhängigkeit. Sie ermöglichen
+    es uns, weiterhin für Freie Software zu arbeiten, wo immer das nötig
+    ist, und machen uns zu einer unabhängigen Stimme.
 </text>
 
   <!-- pdfreaders.org -->
@@ -217,13 +213,13 @@
   <text id="pdfreaders-head-graphics">Banner</text>
   <text id="pdfreaders-head-about">Über uns</text>
   <text id="pdfreaders-body-platforms">Betriebssysteme:</text>
-  
+
   <!-- Share and support buttons -->
   <text id="share-head">Teilen und unterstützen</text>
   <text id="share-page">Diese Seite teilen über</text>
   <text id="share-microdonation">Eine Micro-Spende tätigen über</text>
   <text id="share-warning">Einige Dienste könnten Freie-Software-unfreundlich sein und die Privatsphäre verletzen.</text>
-  
+
   <!-- Sponsoring buttons -->
   <text id="donation-buttons">Spenden-Grafiken</text>
   <text id="Donor">Spender</text>

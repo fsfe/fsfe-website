@@ -1,6 +1,4 @@
 @import "bootstrap/bootstrap.less";
-@import "hover.less"; /* FIXME: do we still use this? */
-
 
 /* very generic elements */
 
@@ -236,7 +234,7 @@ div#subpages, .grid-row {
         padding: .5em;
     }
 
-    #direct-to-menu-list, #direct-to-translations, #direct-to-home, #direct-to-login, #direct-to-join {
+    #direct-to-menu-list, #direct-to-translations, #direct-to-login, #direct-to-join {
         visibility: visible;
         display: inline-block;
 
@@ -932,19 +930,22 @@ div#subpages, .grid-row {
     }
 }
 
-#followup.join, #followup.support, #followup.donate {
+#followup.join,
+#followup.support,
+#followup.donate {
     h2 {
         .make-sm-column(4);
         text-align: center;
     }
+
     p {
         .make-sm-column(8);
         padding: 0;
         padding-top: 1em;
     }
+
     a.btn {
-        .make-sm-column(2);
-        .make-sm-column-offset(4);
+        margin-top: 8px;
     }
 }
 

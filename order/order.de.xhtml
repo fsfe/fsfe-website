@@ -13,6 +13,12 @@
       background: rgb(240,240,240);
       width: 30%;
     }
+
+    @media only screen and (max-width: 600px) {
+      div#toc {
+        width: 100%;
+      }
+    }
     </style>
     <meta name="description" content="Zeigen Sie, dass Sie ein Fan von Freier Software sind, indem Sie die Artikel benutzen und tragen, die von der FSFE angeboten werden." />
     <meta name="keywords" content="shop kaufen t-shirt pullover artikel merchandise werbung magnet tasche lätzchen pin versand bezahlung" />
@@ -36,8 +42,8 @@
     <p class="p-summary">
       Zeigen Sie, dass Sie ein Fan von Freier Software sind, indem Sie die unten
       gezeigten Fanartikel benutzen oder tragen. Diese Artikel sind eine
-      großartige Methode, um Freie Software in Ihrer Umgebung stärker ins
-      Bewusstsein zu bringen, und mit jedem Kauf unterstützen Sie wichtige
+      großartige Möglichkeit, um Freie Software in Ihrer Umgebung stärker ins
+      Bewusstsein zu bringen. Mit jedem Kauf unterstützen Sie wichtige
       Projekte der FSFE.
     </p>
     
@@ -73,65 +79,81 @@
     
       <p>
         Auf unserer
-        <a href="/contribute/spreadtheword.html#promo-material">Informations-Material-Seite</a>
+        <a href="/contribute/spreadtheword.html#promo-material">Informationsmaterial-Seite</a>
         können Sie Broschüren, Sticker und anderes bestellen.
       </p>
 
-      <h2>Versandkosten</h2>
+      <h2>Versand</h2>
 
-      <p>
-        <input type="hidden" name="shipping" value="1"/>
-        <input type="radio" id="shipping-de" name="_shipping" value="3"/>
-        <label for="shipping-de">Versand innerhalb Deutschlands (€3.00)</label><br/>
-        <input type="radio" id="shipping-eu" name="_shipping" value="7" checked="Y"/>
-        <label for="shipping-eu">Versand innerhalb Europas (€7.00)</label><br/>
-        <input type="radio" id="shipping-world" name="_shipping" value="12"/>
-        <label for="shipping-world">Weltweiter Versand (€12.00)</label><br/>
-        <!-- input type="radio" id="shipping-none" name="_shipping" value="0"/>
-        <label for="shipping-none">Kein Versand (Selbstabholung)</label><br/ -->
+      <input type="hidden" name="shipping" value="1"/>
+      <div class="radio">
+        <label>
+          <input type="radio" name="_shipping" id="shipping-de" value="3" />
+          <strong>Versand innerhalb Deutschlands (€3.00)</strong>
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="_shipping" id="shipping-eu" value="7" checked="" />
+          <strong>Versand innerhalb Europas (€7.00)</strong>
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="_shipping" id="shipping-world" value="12" />
+          <strong>Versand außerhalb Europas (€12.00)</strong>
+        </label>
+      </div>
+
+      <div class="row form-group">
+        <div class="col-sm-2">
+          <label class="control-label" for="name">Name:</label>
+        </div>
+        <div class="col-sm-4">
+          <input class="form-control" id="name" name="name" type="text" />
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <div class="col-sm-2">
+          <label class="control-label vcenter" for="address">Vollständige Adresse:</label>
+        </div>
+        <div class="col-sm-4">
+          <textarea class="form-control" rows="5" id="address" name="address" type="text" />
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <div class="col-sm-2">
+          <label class="control-label" for="email">E-Mail:</label>
+        </div>
+        <div class="col-sm-4">
+          <input class="form-control" id="email" name="email" type="email" />
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <div class="col-sm-2">
+          <label class="control-label" for="phone">Telefon:</label>
+        </div>
+        <div class="col-sm-4">
+          <input class="form-control" id="phone" name="phone" type="text" />
+        </div>
+      </div>
+
+      <p class="n">
+        Bitte hier nichts eingeben:
+        <input type="text" size="40" name="url"/>
       </p>
 
-      <table class="order-form">
-        <tr>
-          <td class="order-left"><p>Name:</p></td>
-          <td class="order-right">
-            <input type="text" name="name"/>
-          </td>
-        </tr>
-        <tr>
-          <td class="order-left"><p>Vollständige Adresse:</p></td>
-          <td class="order-right">
-            <textarea rows="5" name="address"/>
-          </td>
-        </tr>
-        <tr>
-          <td class="order-left"><p>E-Mail:</p></td>
-          <td class="order-right">
-            <input type="text" name="email"/>
-          </td>
-        </tr>
-        <tr>
-          <td class="order-left"><p>Telefon:</p></td>
-          <td class="order-right">
-            <input type="text" name="phone"/>
-          </td>
-        </tr>
-        <tr>
-          <td class="order-left"></td>
-          <td class="order-right">
-            <p class="n">
-              Bitte hier nichts eingeben:
-              <input type="text" size="40" name="url"/>
-            </p>
-            
-            <!-- Translators: Please change the value here to your language -->
-            <input type="hidden" name="language" value="de_DE"/>
-            <!-- Translators: Please also translate the value here, it's the label
-                 of the button -->
-            <input id="order-submit" type="submit" value="Artikel bestellen"/>
-          </td>
-        </tr>
-      </table>
+      <!-- Translators: Please change the value here to your language -->
+      <input type="hidden" name="language" value="de_DE"/>
+
+      <div class="row form-group">
+        <div class="col-sm-offset-2 col-sm-6">
+          <button type="submit" class="btn btn-primary">Artikel bestellen</button>
+        </div>
+      </div>
     </form>
 
     <p>

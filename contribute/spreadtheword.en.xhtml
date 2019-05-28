@@ -3,126 +3,22 @@
 <html>
 	<head>
 		<title>Spread the word</title>
-		<meta content="FSFE's Promotion Material" name="description" />
-		<meta content="FSFE Graphics Buttons Logo Promotion Sticker Poster Leaflets Flyer Campaigns Free Your Android I cannot read your documents Fellowship Plussy Gnu" name="keywords" />
-		
-		<style type="text/css">
-		    div.two-column {
-		      float: left;
-		      width: 40%;
-		    }
-		    
-		    h1, h2, h3 {
-		      clear: both;
-		    }
-        
-        .noclear {
-          clear: none;
-        }
-		    
-		    div#toc {
-		      float: right;
-		      clear: right;
-		      border: solid 1px;
-		      margin: .5em;
-		      background: rgb(240,240,240);
-		      width: 40%;
-		      padding: 1em 1.5em 1.5em 1.5em;
-		      margin: 1.5em;
-		    }
-        
-        div#toc p {
-          text-indent: 0.5em;
-          margin-top: 1.5em;
-        }
-        
-        div#toc p.head {
-          font-size: 1.15em;
-          text-align: center;
-          margin-top: 0;
-          text-indent: 0;
-        }
-        
-        form#orderpromo {
-          clear: both;
-          margin: 2em 0 3em 0;
-          width: 70%;
-        }
-        
-        form#orderpromo div {
-          margin-bottom: 0.7em;
-        }
-        
-        form#orderpromo label {
-          font-weight: normal;
-        }
-        
-        form#orderpromo div > label,
-        form#orderpromo div > input,
-        form#orderpromo div > textarea {
-          margin-left: 20px;
-        }
-        
-        div.langselector ul {
-          list-style: none;
-        }
-        
-        form#orderpromo input[type="checkbox"],
-        form#orderpromo input[type="radio"] {
-          margin-right: 0.3em;
-        }
-        
-        div.langselector li {
-          display: inline-block;
-          width: 9em;
-        }
-        
-        form#orderpromo .reveal {
-          opacity: 0;
-          max-height: 0;
-          overflow: hidden;
-          transform: scale(1);
-          transition: 0.5s;
-        }
-        
-        form#orderpromo input[type="radio"]:checked ~ .reveal {
-          opacity: 1;
-          max-height: 300px; /* little bit of a magic number :( */
-          overflow: visible;
-        }
-        
-        form#orderpromo fieldset {
-          border: 1px groove #aaa !important;
-          padding: 1em 1.4em 1.4em 1.4em !important;
-          margin: 0 0 1.5em 0 !important;
-          -webkit-box-shadow:  0px 0px 0px 0px #000;
-                  box-shadow:  0px 0px 0px 0px #000;
-        }
-
-        form#orderpromo fieldset legend {
-          font-size: 1.2em !important;
-          font-weight: bold !important;
-          text-align: left !important;
-          width:auto;
-          padding:0 10px;
-          border-bottom:none;
-          margin-bottom: 0;
-        }
-		    
-		  </style>
-    
+		<meta
+        name="description"
+        content="FSFE's Promotion Material"/>
+		<meta
+        name="keywords"
+        content="FSFE Graphics Buttons Logo Promotion Sticker Poster Leaflets Flyer Campaigns Free Your Android I cannot read your documents Fellowship Plussy Gnu"/>
 	</head>
 
-	<body>
+	<body class="spreadtheword">
 		<p id="category"><a href="/contribute/">Contribute</a></p>
-		
+
 		<h1 id="spread-the-word">Spread the word!</h1>
-		
-		
-		
+
 		<div id="toc">
 			<p class="head"><strong><a href="#how-to-order">Order now</a></strong></p>
-		  
+
 		  <p><strong>Available promotion material</strong></p>
 		  <ul>
 		    <li><a href="#fsfe-and-community">FSFE and our community</a></li>
@@ -134,28 +30,33 @@
 		    <li><a href="#dfd">"Document Freedom Day"- campaign</a></li>
 
 		  </ul>
-		  <p><strong>Behind the scenes</strong></p>  
+		  <p><strong>Behind the scenes</strong></p>
 		  <ul>
         <li><a href="#feedback">Any Feedback?</a></li>
         <li><a href="#archives">Our Archive</a></li>
         <li><a href="#upcoming">Upcoming promotion and campaigns</a></li>
 		  </ul>
 		</div>
-		
+
 		<h2 id="promo-material" class="noclear">FSFE Promotion Material</h2>
-		
+
 		<p>
 			Are you going to a Free Software meeting or are you even organising one? Maybe you like to promote Free Software and the work of the FSFE around your friends and colleagues or at some public event? There are various reasons why and when you might like to receive promotion material for Free Software and the FSFE. Whatever it might be, we will be happy to send you our printed promotion material for <strong>no cost</strong>.<br /> On this page, you find an overview about our material and details about each product.</p>
 
 
 		<h2 id="how-to-order" class="noclear">How to order</h2>
-		
+
 			<p>
 			To order promotion material please use the following order form. You can order our default package or individual quantities and tell us explicitly what kind of promotion material you need or prefer. Feel free to decide for yourself. However, please keep in mind, that for postal reasons, in general we just send packages up to 1kg. If you need more, please ask in advance.
 			</p>
-			
-      
-			<form class="highlight labeledform" id="orderpromo" method="post" action="/cgi-bin/promotion.php" accept-charset="utf-8">
+
+
+			<form
+          class="highlight labeledform form-inline"
+          id="orderpromo"
+          method="post"
+          action="/cgi-bin/promotion.php"
+          accept-charset="utf-8">
         <add-language />
         <h3>Order promotional material</h3>
         <p>Fields marked with * are mandatory.</p>
@@ -241,9 +142,29 @@
             <span class="formlabel">Receive the latest Free Software news:</span>
             <label for="subcd"><input name="subcd" id="subcd" value="y" type="checkbox" />I want to receive occasional information about the FSFE's activities</label>
           </div>
-          <div>
+          <div
+              id="donate-group"
+              class="form-group">
             <span class="formlabel">Support our work with a voluntary donation*:</span>
-            <input type="number" name="donate" value="" min="0" step="5" placeholder="0 or ≥ 10 €" required="required" />€ 
+            <div class="input-group">
+              <input
+                  id="donate"
+                  name="donate"
+                  type="number"
+                  class="form-control "
+                  value=""
+                  placeholder="0 or ≥ 10 €"
+                  min="0"
+                  required="required"/>
+              <div class="input-group-addon">€</div>
+            </div>
+            <div
+                id="donate-error"
+                class="help-block"
+                style="display: none;">
+              If you want to make a donation please enter at least 10 €.<br />
+              If you don't want to donate please enter 0 €.
+            </div>
           </div>
         </fieldset>
         <div>
@@ -251,48 +172,48 @@
           <input type="submit" name="dothis" value="Order now!"/>
         </div>
       </form>
-                
+
 
 		<h1 id="available-promotion-material" style="margin-top:3em;">Available promotion material</h1>
 
 <!-- START ITEMIZE TESTING -->
 
 		<h2 id="fsfe-and-community" class="left break">FSFE and our community</h2>
-		
+
 		<dynamic-content type="fsfe"/>
-		
+
 		<h2 id="freedom" class="left break">Free Software and User Freedom</h2>
-		
+
 		<dynamic-content type="freedom"/>
         <dynamic-content type="hackingforfreedom"/>
-        
+
         <h2 id="pmpc" class="left break">Public Money, Public Code</h2>
         <dynamic-content type="pmpc"/>
-		
-		<h2 id="f-droid" class="left break">Free Your Android</h2>
-		
-		<dynamic-content type="f-droid"/>
-		
-		<h2 id="ilovefs" class="left break">I love Free Software</h2>
-		
-		<dynamic-content type="ilovefs"/>
-		
-		<h2 id="nocloud" class="left break">There is no cloud</h2>
-		
-		<dynamic-content type="nocloud"/>
-				
-		<h2 id="dfd" class="left break">Document Freedom Day</h2>
-        		
-		<dynamic-content type="dfd"/>
-		
 
-		
+		<h2 id="f-droid" class="left break">Free Your Android</h2>
+
+		<dynamic-content type="f-droid"/>
+
+		<h2 id="ilovefs" class="left break">I love Free Software</h2>
+
+		<dynamic-content type="ilovefs"/>
+
+		<h2 id="nocloud" class="left break">There is no cloud</h2>
+
+		<dynamic-content type="nocloud"/>
+
+		<h2 id="dfd" class="left break">Document Freedom Day</h2>
+
+		<dynamic-content type="dfd"/>
+
+
+
 <!-- END ITEMIZE TESTING -->
 
 	<h2 id="feedback" class="left break">Any feedback?</h2>
 	<p class="left break">
 		Did you experience any trouble with your order, found a typo in our text, you have a remark or an idea for upcoming promotion material? Or you just like to send us a motivating message? Please <a href="mailto:contact@fsfe.org">share your feedback</a> with us.</p>
-		
+
 		<p class="left break">We are always eager to hear some nice stories or to see pictures that you have with our promotion material. Many people also share their experience and pictures via social media with us. </p>
 
 
@@ -304,16 +225,16 @@
 	and still download older material in our <a
 	href="/contribute/promotion-materials-archive">promotion material
 	archive.</a></p>
-		
+
 
 	<h2 id="upcoming" class="left break">Upcoming promotion and campaigns</h2>
 
 	<p class="left break">From time to time, have a look at this page again for new promotional material - we will continue to update it. If you would like to help making new designs or improve old ones, join the <a href="/contribute/designers/designers">designers team</a>. Or if you would like to add translations of pages or materials, join the <a href="/contribute/translators/translators">translators team</a>.
 	</p>
 
+  <script src="/scripts/spreadtheword.js"></script>
+
 	</body>
-
-
 </html>
 <!--
 Local Variables: ***

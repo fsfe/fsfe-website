@@ -13,6 +13,12 @@
           background: rgb(240,240,240);
           width: 30%;
         }
+
+        @media only screen and (max-width: 600px) {
+          div#toc {
+            width: 100%;
+          }
+        }
         </style>
         <meta name="description" content="Toon uw liefde voor Vrije Software door de FSFE-fanartikelen te gebruiken en te dragen." />
         <meta name="keywords" content="winkel bestel  t-shirt shirts hoodie artikelen fan-artikelen promoot magneet tas slab pin verzenden kopen post betaling" />
@@ -75,63 +81,78 @@ Toon uw liefde voor Vrije Software door de fan-artikelen hieronder te
             om informatiematerialen</a> zoals folders en stickers te bestellen.
           </p>
 
-          <h2>Verzenden</h2>
+      <h2>Verzenden</h2>
 
-          <p>
+      <input type="hidden" name="shipping" value="1"/>
+      <div class="radio">
+        <label>
+          <input type="radio" name="_shipping" id="shipping-de" value="3" />
+          <strong>Verzenden binnen Duitsland (€3.00)</strong>
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="_shipping" id="shipping-eu" value="7" checked="" />
+          <strong>Verzenden binnen Europa (€7.00)</strong>
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="_shipping" id="shipping-world" value="12" />
+          <strong>Verzenden buiten Europa (€12.00)</strong>
+        </label>
+      </div>
 
-<input type="hidden" name="shipping" value="1"/>
-            <input type="radio" id="shipping-de" name="_shipping" value="3"/>
-            <label for="shipping-de">Verzenden binnen Duitsland (€3.00)</label><br/>
-            <input type="radio" id="shipping-eu" name="_shipping" value="7" checked="Y"/>
-            <label for="shipping-eu">Verzenden binnen Europa (€7.00)</label><br/>
-            <input type="radio" id="shipping-world" name="_shipping" value="12"/>
-            <label for="shipping-world">Verzenden buiten Europa (€12.00)</label><br/>
-            <!-- input type="radio" id="shipping-none" name="_shipping" value="0"/>
-            <label for="shipping-none">Niet verzenden (zelf ophalen)</label><br/ -->
-          </p>
+      <div class="row form-group">
+        <div class="col-sm-2">
+          <label class="control-label" for="name">naam:</label>
+        </div>
+        <div class="col-sm-4">
+          <input class="form-control" id="name" name="name" type="text" />
+        </div>
+      </div>
 
-          <table class="order-form">
-            <tr>
-              <td class="order-left"><p>Naam:</p></td>
-              <td class="order-right">
-                <input type="text" name="name"/>
-              </td>
-            </tr>
-            <tr>
-              <td class="order-left"><p>Compleet adres:</p></td>
-              <td class="order-right">
-                <textarea rows="5" name="address"/>
-              </td>
-            </tr>
-            <tr>
-              <td class="order-left"><p>E-mail:</p></td>
-              <td class="order-right">
-                <input type="text" name="email"/>
-              </td>
-            </tr>
-            <tr>
-              <td class="order-left"><p>Telefoon:</p></td>
-              <td class="order-right">
-                <input type="text" name="phone"/>
-              </td>
-            </tr>
-            <tr>
-              <td class="order-left"></td>
-              <td class="order-right">
-                <p class="n">
-                  Vul hier alstublieft niets in:
-                  <input type="text" size="40" name="url"/>
-                </p>
-                
-                <!-- Translators: Please change the value here to your language -->
-                <input type="hidden" name="language" value="nl"/>
-                <!-- Translators: Please also translate the value here, it's the label
-                     of the button -->
-                <input id="order-submit" type="submit" value="Bestel artikelen"/>
-              </td>
-            </tr>
-          </table>
-        </form>
+      <div class="row form-group">
+        <div class="col-sm-2">
+          <label class="control-label vcenter" for="address">Compleet adres:</label>
+        </div>
+        <div class="col-sm-4">
+          <textarea class="form-control" rows="5" id="address" name="address" type="text" />
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <div class="col-sm-2">
+          <label class="control-label" for="email">E-mail:</label>
+        </div>
+        <div class="col-sm-4">
+          <input class="form-control" id="email" name="email" type="email" />
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <div class="col-sm-2">
+          <label class="control-label" for="phone">Telefoon:</label>
+        </div>
+        <div class="col-sm-4">
+          <input class="form-control" id="phone" name="phone" type="text" />
+        </div>
+      </div>
+
+      <p class="n">
+        Vul hier alstublieft niets in:
+        <input type="text" size="40" name="url"/>
+      </p>
+
+      <!-- Translators: Please change the value here to your language -->
+      <input type="hidden" name="language" value="nl_NL"/>
+
+      <div class="row form-group">
+        <div class="col-sm-offset-2 col-sm-6">
+          <button type="submit" class="btn btn-primary">Bestel artikelen</button>
+        </div>
+      </div>
+    </form>
 
         <p>
 Betaling is mogelijk via bankoverschrijving, PayPal en verschillende 

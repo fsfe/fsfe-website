@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # This script makes it easier to update the PDFreaders signatures.
 # 1. Save the automatically sent emails (subject: [PDFReaders] petition 

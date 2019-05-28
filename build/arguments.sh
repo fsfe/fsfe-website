@@ -23,6 +23,9 @@ if [ -z "$inc_arguments" ]; then
       -d|--dest|--destination)
         [ "$#" -gt 0 ] && shift 1 && target="$1"
         ;;
+      --build-env)
+        [ "$#" -gt 0 ] && shift 1 && build_env="$1"
+        ;;
       -h|--help)
         command="help"
         ;;

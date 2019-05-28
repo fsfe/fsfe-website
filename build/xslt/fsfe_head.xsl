@@ -30,29 +30,57 @@
       <xsl:attribute name="http-equiv">X-UA-Compatible</xsl:attribute>
       <xsl:attribute name="content">IE=edge</xsl:attribute>
     </xsl:element>
-    
-    <xsl:element name="link">
-      <xsl:attribute name="rel">stylesheet</xsl:attribute>
-      <xsl:attribute name="media">all</xsl:attribute>
-      <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/fsfe.min.css</xsl:attribute>
-      <xsl:attribute name="type">text/css</xsl:attribute>
-    </xsl:element>
-    <xsl:if test="$mode = 'valentine'">
-      <xsl:element name="link">
-        <xsl:attribute name="rel">stylesheet</xsl:attribute>
-        <xsl:attribute name="media">all</xsl:attribute>
-        <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/valentine.min.css</xsl:attribute>
-        <xsl:attribute name="type">text/css</xsl:attribute>
-      </xsl:element>
-    </xsl:if>
-    
+
+    <xsl:choose>
+      <xsl:when test="$build-env = 'development'">
+        <xsl:choose>
+          <xsl:when test="$mode = 'valentine'">
+            <xsl:element name="link">
+              <xsl:attribute name="rel">stylesheet/less</xsl:attribute>
+              <xsl:attribute name="media">all</xsl:attribute>
+              <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/valentine.less</xsl:attribute>
+              <xsl:attribute name="type">text/css</xsl:attribute>
+            </xsl:element>
+          </xsl:when>
+          <xsl:otherwise><!-- not valentine -->
+            <xsl:element name="link">
+              <xsl:attribute name="rel">stylesheet/less</xsl:attribute>
+              <xsl:attribute name="media">all</xsl:attribute>
+              <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/fsfe.less</xsl:attribute>
+              <xsl:attribute name="type">text/css</xsl:attribute>
+            </xsl:element>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:when>
+      <xsl:otherwise><!-- not development -->
+        <xsl:choose>
+          <xsl:when test="$mode = 'valentine'">
+            <xsl:element name="link">
+              <xsl:attribute name="rel">stylesheet</xsl:attribute>
+              <xsl:attribute name="media">all</xsl:attribute>
+              <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/valentine.min.css</xsl:attribute>
+              <xsl:attribute name="type">text/css</xsl:attribute>
+            </xsl:element>
+          </xsl:when>
+          <xsl:otherwise><!-- not valentine -->
+            <xsl:element name="link">
+              <xsl:attribute name="rel">stylesheet</xsl:attribute>
+              <xsl:attribute name="media">all</xsl:attribute>
+              <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/fsfe.min.css</xsl:attribute>
+              <xsl:attribute name="type">text/css</xsl:attribute>
+            </xsl:element>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:otherwise>
+    </xsl:choose>
+
     <xsl:element name="link">
       <xsl:attribute name="rel">stylesheet</xsl:attribute>
       <xsl:attribute name="media">print</xsl:attribute>
       <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/print.css</xsl:attribute>
       <xsl:attribute name="type">text/css</xsl:attribute>
     </xsl:element>
-    
+
     <xsl:if test="/buildinfo/@language='ar'">
       <xsl:element name="link">
         <xsl:attribute name="rel">stylesheet</xsl:attribute>
@@ -61,7 +89,7 @@
         <xsl:attribute name="type">text/css</xsl:attribute>
       </xsl:element>
     </xsl:if>
-    
+
     <xsl:element name="link">
       <xsl:attribute name="rel">icon</xsl:attribute>
       <xsl:attribute name="href">
@@ -73,17 +101,17 @@
       </xsl:attribute>
       <xsl:attribute name="type">image/x-icon</xsl:attribute>
     </xsl:element>
-    
+
     <link rel="apple-touch-icon" href="{$urlprefix}/graphics/touch-icon.png" type="image/png" />
     <link rel="apple-touch-icon-precomposed" href="{$urlprefix}/graphics/touch-icon.png" type="image/png" />
-    
+
     <xsl:element name="link">
       <xsl:attribute name="rel">alternate</xsl:attribute>
       <xsl:attribute name="title">FSFE <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'menu1/news'" /></xsl:call-template></xsl:attribute>
       <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/news/news.<xsl:value-of select="/buildinfo/@language"/>.rss</xsl:attribute>
       <xsl:attribute name="type">application/rss+xml</xsl:attribute>
     </xsl:element>
-    
+
     <xsl:element name="link">
       <xsl:attribute name="rel">alternate</xsl:attribute>
       <xsl:attribute name="title">FSFE <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'menu1/events'" /></xsl:call-template></xsl:attribute>
@@ -102,7 +130,7 @@
         <xsl:attribute name="title"><xsl:value-of select="."  disable-output-escaping="yes" /></xsl:attribute>
       </xsl:element>
     </xsl:for-each>
-    
+
     <xsl:for-each select="/buildinfo/document/author">
       <xsl:variable name="id">
         <xsl:value-of select="@id" />
@@ -121,7 +149,7 @@
         </xsl:attribute>
       </xsl:element>
     </xsl:for-each>
-    
+
     <!-- Twitter and Facebook sharing cards -->
     <xsl:variable name="metadesc">
       <!-- Get the meta element description -->
@@ -131,7 +159,7 @@
       <!-- Get the meta element description -->
       <xsl:value-of select="head/meta[@name = 'image']/@content" />
     </xsl:variable>
-    
+
     <!-- EXTRACT -->
     <!-- take a first extract which should be sufficient for most pages -->
     <xsl:variable name="extract1">
@@ -172,7 +200,7 @@
         </xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
-        
+
     <!-- Twitter cards -->
     <xsl:element name="meta">
       <xsl:attribute name="name">twitter:card</xsl:attribute>
@@ -183,7 +211,7 @@
           <xsl:otherwise>summary</xsl:otherwise>
         </xsl:choose>
       </xsl:attribute>
-    </xsl:element>    
+    </xsl:element>
     <meta name="twitter:site" content="@fsfe" />
     <xsl:element name="meta">
       <xsl:attribute name="name">twitter:image</xsl:attribute>
@@ -214,7 +242,7 @@
             <xsl:choose>
               <!-- if not, try to get the short extract -->
               <xsl:when test="$extract != ''"><xsl:value-of select="$extract" /><xsl:text>...</xsl:text></xsl:when>
-              <!-- if even that isn't available, return a default text 
+              <!-- if even that isn't available, return a default text
                    (not language sensitive). This should never be the case... -->
               <xsl:otherwise>Non profit organisation working to create general understanding and support for software freedom. Includes news, events, and campaigns.</xsl:otherwise>
             </xsl:choose>
@@ -262,7 +290,7 @@
             <xsl:choose>
               <!-- if not, try to get the short extract -->
               <xsl:when test="$extract != ''"><xsl:value-of select="$extract" /><xsl:text>...</xsl:text></xsl:when>
-              <!-- if even that isn't available, return a default text 
+              <!-- if even that isn't available, return a default text
                    (not language sensitive). This should never be the case... -->
               <xsl:otherwise>Non profit organisation working to create general understanding and support for software freedom. Includes news, events, and campaigns.</xsl:otherwise>
             </xsl:choose>
@@ -281,7 +309,7 @@
     <xsl:comment><![CDATA[[if (lt IE 9) & (!IEMobile)]>
          <link rel="stylesheet" media="all" href="/look/ie.min.css" type="text/css">
         <![endif]]]></xsl:comment>
-    
+
     <!-- Copy head element from the xhtml source file (and possibly from external xsl rules) -->
     <xsl:apply-templates select="head/node()" />
   </xsl:element></xsl:template>

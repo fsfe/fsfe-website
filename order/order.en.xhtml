@@ -44,7 +44,7 @@
       below. Free Software clothing is a great way of raising awareness within
       your local community, and each sale helps to fund critical FSFE projects.
     </p>
-    
+
     <p>
       To get detailed information about the actual dimensions of the various
       sizes of the clothes, place your mouse pointer over the size label or
@@ -84,25 +84,15 @@
 
       <h2>Shipping</h2>
 
-      <input type="hidden" name="shipping" value="1"/>
-      <div class="radio">
-        <label>
-          <input type="radio" name="_shipping" id="shipping-de" value="3" />
-          <strong>Shipping within Germany (€3.00)</strong>
-        </label>
-      </div>
-      <div class="radio">
-        <label>
-          <input type="radio" name="_shipping" id="shipping-eu" value="7" checked="" />
-          <strong>Shipping within Europe (€7.00)</strong>
-        </label>
-      </div>
-      <div class="radio">
-        <label>
-          <input type="radio" name="_shipping" id="shipping-world" value="12" />
-          <strong>Shipping outside Europe (€12.00)</strong>
-        </label>
-      </div>
+      <p>The following shipping fees apply:
+        <ul>
+          <li>Shipping within Germany: €3.00</li>
+          <li>Shipping within Europe: €7.00</li>
+          <li>Shipping worldwide: €12.00</li>
+        </ul>
+      </p>
+
+      <h2>Your Data</h2>
 
       <div class="row form-group">
         <div class="col-sm-2">
@@ -115,10 +105,19 @@
 
       <div class="row form-group">
         <div class="col-sm-2">
-          <label class="control-label vcenter" for="address">Complete address:</label>
+          <label class="control-label vcenter" for="address">Address:</label>
         </div>
         <div class="col-sm-4">
           <textarea class="form-control" rows="5" id="address" name="address" type="text" />
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <div class="col-sm-2">
+          <label class="control-label" for="address">Country:</label>
+        </div>
+        <div class="col-sm-4">
+          <country-list />
         </div>
       </div>
 

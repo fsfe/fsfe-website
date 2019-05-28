@@ -41,7 +41,7 @@ if ($query->param("url")) {
 my $name = decode("utf-8", $query->param("name"));
 my $address = decode("utf-8", $query->param("address"));
 my $country = $query->param("country");
-my ($country_code, $country_name) = split /|/, $country;
+my ($country_code, $country_name) = split /\|/, $country;
 my $email = decode("utf-8", $query->param("email"));
 my $phone = decode("utf-8", $query->param("phone"));
 my $language = $query->param("language");
@@ -173,6 +173,7 @@ foreach $item ($query->param) {
     push @odtfill, "Amount=" . sprintf "%.2f", $value * $price;
   }
 }
+push @odtfill, "Country=" . $country_name;      # 2nd Country placeholder
 push @odtfill, "Shipping=" . sprintf "%.2f", $shipping;
 push @odtfill, "Total=" . $amount_f;
 push @odtfill, "Net=" . $net;

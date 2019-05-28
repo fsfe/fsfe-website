@@ -16,20 +16,30 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ###
 
-VERBOSE=0
+FORCE=0
+LANGUAGE=
 NO_ACT=0
+VERBOSE=0
 
 print_help()
 {
 	cat <<EOF >&2
-Usage: tagstool [-n|--no-act] [-v|--verbose] -b|--bulk-process TAGSDATAFILE
-       tagstool [-n|--no-act] [-v|--verbose] --remove-empty
+Usage: tagstool OPTIONS -b|--bulk-process TAGSDATAFILE
+       tagstool OPTIONS --find-tags TAG..
+       tagstool OPTIONS --remove-empty-labels
+       tagstool OPTIONS --remove-tags TAG..
+       tagstool OPTIONS --remove-tags OLD NEW
+       tagstool OPTIONS --set-label LABEL [--force] TAG
 
 Transform tag data by bulk.
 
 Options:
 -n|--no-act                Don't perform any changes.
 -v|--verbose               Add verbose output of changes.
+--language CC              Limit action to files with the given two-letter
+                           ISO 639-1 language code; leave empty to select all.
+                           (default: $LANGUAGE).
+-f|--force                 Overwrite existing information (for --set-label).
 
 Actions (only one action per invocation):
 -b|--bulk TAGSDATAFILE     Transform bulk transformations a defined in the
@@ -37,8 +47,18 @@ Actions (only one action per invocation):
                            Available transformations:
                             - rm: delete tag
                             - mv:newtag: move the tag to a newtag
-
---remove-empty             Remove empty content attribute for tags.
+--find-tags                List all files containing the given tags.
+                           If a non-empty language is given, the output is
+                           limited to that language.
+--remove-empty-labels      Remove empty content attribute for tags.
+                           Not affected by --language option.
+--remove-tags TAGS..       Remove the given tags.
+--rename-tag OLD NEW       Rename the OLD tag to NEW tag in all files.
+--set-label LABEL          Set the given label on all given tag.
+                           The tag is given as positional parameter.
+                           This action is limited to one language at a time,
+                           because the label is a localized string.
+                           By default, existing labels are not overwritten.
 
 EOF
 }
@@ -69,15 +89,38 @@ findTaggedFiles()
 	git grep -i -l ">$tagId</tag>"
 }
 
+fileIsLanguage()
+# fileIsLanguage FILE LANGUAGE
+# Check the language of a file based on its filename
+# If the filename matches the language or if the language is an empty string, return true,
+# otherwise return false.
+{
+	# remove filename until first "."
+	local suffix="${1#*.}"
+	local language="$2"
+	if [[ -z "$language" ]]
+	then
+		return 0
+	fi
+	# greedily remove from back to the leftmost "."
+	local pre_suffix="${suffix%%.*}"
+	[[ "$pre_suffix" == "$language" ]]
+}
+
 renameTag()
 # renameTag OLD NEW
 # rename the tag using case-insensitive matching in all files.
+# Global variables: LANGUAGE
 {
 	local oldTagId="$1"
 	local newTagId="$2"
 	echo "Renaming tag $oldTagId to $newTagId..." >&2
 	for f in $(findTaggedFiles "$oldTagId")
 	do
+		if ! fileIsLanguage "$f" "$LANGUAGE"
+		then
+			continue
+		fi
 		echo "  $f" >&2
 		if ! performAction sed -E -i "s;>\W*$oldTagId\W*</tag>;>$newTagId</tag>;i" "$f"
 		then
@@ -91,11 +134,16 @@ removeTag()
 # removeTag TAG
 # remove the tag id in all files
 # this will result in additional empty lines
+# Global variables: LANGUAGE
 {
 	local tagId="$1"
 	echo "Deleting tag $tagId..." >&2
 	for f in $(findTaggedFiles "$oldTagId")
 	do
+		if ! fileIsLanguage "$f" "$LANGUAGE"
+		then
+			continue
+		fi
 		echo "  $f" >&2
 		if ! performAction sed -E -i "s;\W*<tag\W*content=\"[^\"]*\"\W*>\W*$TagId\W*</tag>\W*;;i" "$f"
 		then
@@ -105,8 +153,38 @@ removeTag()
 	done
 }
 
-process_action()
+setTagLabel()
+# setTagLabel TagId Label
+# Global Variables: FORCE, LANGUAGE
+{
+	local TagId="$1"
+	local Label="$2"
+	# regexp part to force content:
+	local re_force_content=
+	if [[ FORCE -eq 1 ]]
+	then
+		re_force_content="content=\"[^\"]*\"\W*"
+	fi
+	echo "Setting label for tag $TagId to $Label.." >&2
+	for f in $(findTaggedFiles "$TagId")
+	do
+		# language is not empty
+		if ! fileIsLanguage "$f" "$LANGUAGE"
+		then
+			continue
+		fi
+		echo "  $f" >&2
+		if ! performAction sed -E -i "s;<tag\W*$re_force_content>\W*$TagId\W*</tag>\W*;<tag content=\"$Label\">$TagId</tag>;i" "$f"
+		then
+			echo "ERROR!" >&2
+			return 1
+		fi
+	done
+}
+
+processOneActionLine()
 # process a single csv action line from stdin and call the appropriate method
+# Global variables: LANGUAGE (indirect)
 {
 	IFS=";" read action name id section count || return 2
 	# ignore empty actions
@@ -128,7 +206,8 @@ process_action()
 	esac
 }
 
-process_actions()
+processActionLines()
+# Global variables: LANGUAGE (indirect)
 {
 	read firstline
 	if [[ "$firstline" != "action;name;id;section;count" ]]
@@ -136,15 +215,16 @@ process_actions()
 		echo "Input data does not look like it contains the right columns. Bailing out..." >&2
 		exit 1
 	fi
-	while process_action
+	while processOneActionLine
 	do
 		true
 	done
 }
 
-do_bulk()
-# do_bulk TAGSDATAFILE
+action_bulkProcess()
+# action_bulkProcess TAGSDATAFILE
 # perform a bulk action based on data in the given tags data csv file.
+# Global variables: LANGUAGE (indirect)
 {
 	local TAGSDATAFILE="$1"
 	if [[ ! -f "$TAGSDATAFILE" ]]
@@ -152,11 +232,30 @@ do_bulk()
 		echo "No data file. Please read the source for help..." >&2
 		return 1
 	fi
-	process_actions < "$TAGSDATAFILE"
+	processActionLines < "$TAGSDATAFILE"
 }
 
-do_removeEmpty()
+action_findTags()
+# action_findTags TAGS..
+# find all files containing the given tags
+# If language is set, limit to the given language.
+# Global variables: LANGUAGE
+{
+	for tagId
+	do
+		for f in $(findTaggedFiles "$tagId")
+		do
+			if fileIsLanguage "$f" "$LANGUAGE"
+			then
+				echo "$f"
+			fi
+		done
+	done | sort -u
+}
+
+action_removeEmpty()
 # removeEmpty
+# removes empty labels
 {
 	echo "Removing empty 'content' attribute  from tags..." >&2
 	for f in $(git grep -Eil '<tag\W+content="\W*"\W*>')
@@ -166,12 +265,50 @@ do_removeEmpty()
 	done
 }
 
+action_removeTags()
+# action_removeTags TAG..
+# Remove the given tags from all files
+# Global variables: LANGUAGE (indirect)
+{
+	for tagId
+	do
+		removeTag "$tagId"
+	done
+}
+
+action_renameTag()
+# action_renameTag OLD NEW
+# Rename the old tag to new.
+# Global variables: LANGUAGE (indirect)
+{
+	if [[ "$#" -ne 2 ]]
+	then
+		echo "Error: expected 2 arguments, got $#." >&2
+		return 1
+	fi
+	renameTag "$1" "$2"
+}
+
+action_setLabel()
+# action_setLabel TAG
+# Global variables: FORCE, LABEL, LANGUAGE
+{
+	local TagId="$1"
+	if [[ -z "${LANGUAGE}" || -n "${LANGUAGE/??}" ]]
+	then
+		echo "Language must be a two-letter ISO 639-1 code!" >&2
+		return 1
+	fi
+	setTagLabel "$TagId" "$LABEL"
+}
+
 ###
 # Parse commandline:
 ###
 
-TEMP=`getopt -o hbvn --long help,bulk-process,verbose,no-act,remove-empty \
-     -n 'tagtool' -- "$@"`
+TEMP=`getopt -o bhnv \
+      --long bulk-process,find-tags,force,help,language:,no-act,remove-empty-labels,remove-tags,rename-tag,set-label:,verbose \
+      -n 'tagtool' -- "$@"`
 
 if [ $? != 0 ] ; then echo "Terminating..." >&2 ; exit 1 ; fi
 
@@ -180,10 +317,16 @@ eval set -- "$TEMP"
 
 while true ; do
 	case "$1" in
-		-b|--bulk-process) ACTION=do_bulk ; shift ;;
+		-b|--bulk-process) ACTION=action_bulkProcess ; shift ;;
+		--find-tags) ACTION=action_findTags ; shift ;;
+		--force) FORCE=1 ; shift ;;
 		-h|--help) print_help ; exit ;;
+		--language) LANGUAGE="$2" ; shift 2 ;;
 		-n|--no-act) NO_ACT=1 ; shift ;;
-		--remove-empty) ACTION=do_removeEmpty ; shift ;;
+		--remove-empty-labels) ACTION=action_removeEmpty ; shift ;;
+		--remove-tags) ACTION=action_removeTags ; shift ;;
+		--rename-tag) ACTION=action_renameTag ; shift ;;
+		--set-label) ACTION=action_setLabel ; LABEL="$2" ; shift 2 ;;
 		-v|--verbose) VERBOSE=1 ; shift ;;
 		--) shift ; break ;;
 		*) echo "Internal error!" ; exit 1 ;;

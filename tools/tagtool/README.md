@@ -35,8 +35,11 @@ A word of warning: you'll probably need to polish the results by hand a little
 
 ### Doing quick changes
 
-If there is demand I can add a proper command line interface I can write one.
-Until then, you have to write a csv file.
+For quick changes, tagtool.sh provides easy to use commandline options.
+Call "tagtool.sh --help" to see a summary.
+
+If you want to gather changes in a file, you can write a csv file by hand.
+Just take care that the proper header line is present.
 
 The following example would remove the tag "useless" and rename the tag "type" to "notypo":
 

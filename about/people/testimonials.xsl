@@ -145,7 +145,7 @@
               <xsl:element name="a">
                 <xsl:attribute name="href"><xsl:value-of select="read/@link"/></xsl:attribute>
                 <xsl:element name="span">
-                  <xsl:attribute name="class">fa fa-video-camera fa-lg</xsl:attribute>
+                  <xsl:attribute name="class">fa fa-microphone fa-lg</xsl:attribute>
                 </xsl:element>
                 <xsl:text> </xsl:text>
                 <xsl:apply-templates select="read/node()"/>

@@ -41,7 +41,7 @@ if ($query->param("url")) {
 my $name = decode("utf-8", $query->param("name"));
 my $address = decode("utf-8", $query->param("address"));
 my $country = $query->param("country");
-(my $country_code, my $country_name) = split('|', $country);
+my ($country_code, $country_name) = split /|/, $country;
 my $email = decode("utf-8", $query->param("email"));
 my $phone = decode("utf-8", $query->param("phone"));
 my $language = $query->param("language");
@@ -50,15 +50,17 @@ my $language = $query->param("language");
 my @eu = ('AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 
           'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'GB');
 
+my $shipping;
+
 given ($country_code) {
   when ($_ eq 'DE') {
-    my $shipping = 3;
+    $shipping = 3;
   }
   when ($_ ~~ @eu) {
-    my $shipping = 7;
+    $shipping = 7;
   }
   default {
-    my $shipping = 12;
+    $shipping = 12;
   }
 }
 
@@ -137,7 +139,7 @@ foreach $item ($query->param) {
   }
 }
 
-$body .= sprintf "Shipping to %-30s %6.2f\n", $country_name, $shipping;
+$body .= sprintf "Shipping to %-30s   %6.2f\n", $country_name, $shipping;
 $body .= "---------------------------------------------------\n";
 $body .= sprintf "Total amount                               € %6.2f\n", $amount;
 $body .= "===================================================\n";

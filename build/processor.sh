@@ -17,7 +17,7 @@ process_file(){
   set -o pipefail
 
   build_xmlstream "$shortname" "$lang" \
-  | xsltproc "$processor" - \
+  | xsltproc --stringparam "build-env" "${build_env:-development}" "$processor" - \
   | sed -r ':X; N; $!bX;
       s;<[\r\n\t ]*(a|link)([\r\n\t ][^>]*)?[\r\n\t ]href="(https?:)?//'"$domain"'/([^"]*)";<\1\2 href="/\4";gI
       s;<[\r\n\t ]*(a|link)([\r\n\t ][^>]*)?[\r\n\t ]href='\''(https?:)?//'"$domain"'/([^'\'']*)'\'';<\1\2 href='\''/\4'\'';gI

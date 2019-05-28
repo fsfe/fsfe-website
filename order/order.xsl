@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:import href="../fsfe.xsl" />
   <xsl:import href="../tools/xsltsl/countries.xsl" />
-  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
+  <xsl:import href="../fsfe.xsl" />
+
   <!-- Fill dynamic content -->
   <xsl:template match="dynamic-content">
     <xsl:variable name="type"><xsl:value-of select="@type"/></xsl:variable>
@@ -150,10 +150,11 @@
       </xsl:for-each>
     </xsl:element>
   </xsl:template>
-<!-- Dropdown list of countries requiring a choice -->
-  <!-- when copying this, remember importing the xsl, and editing the .source file -->
+
+  <!-- Dropdown list of countries requiring a choice -->
   <xsl:template match="country-list">
     <xsl:call-template name="country-list">
+      <xsl:with-param name="class" select="'form-control'"/>
       <xsl:with-param name="required" select="'yes'"/>
     </xsl:call-template>
   </xsl:template>

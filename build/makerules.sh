@@ -18,7 +18,7 @@ tree_maker(){
 .DELETE_ON_ERROR:
 .SECONDEXPANSION:
 PROCESSOR = "$basedir/build/process_file.sh"
-PROCFLAGS = --source "$basedir" --statusdir "$statusdir" --domain "$domain"
+PROCFLAGS = --build-env "${build_env:-development}" --source "$basedir" --statusdir "$statusdir" --domain "$domain"
 INPUTDIR = $input
 OUTPUTDIR = $output
 STATUSDIR = $statusdir

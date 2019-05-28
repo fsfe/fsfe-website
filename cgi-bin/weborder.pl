@@ -40,34 +40,30 @@ if ($query->param("url")) {
 
 my $name = decode("utf-8", $query->param("name"));
 my $address = decode("utf-8", $query->param("address"));
+my $country = $query->param("country");
+(my $country_code, my $country_name) = split('|', $country);
 my $email = decode("utf-8", $query->param("email"));
 my $phone = decode("utf-8", $query->param("phone"));
 my $language = $query->param("language");
-my $country = $query->param("country");
-my $country_code;
-my $country_name;
-my $ship;
+
+# Calculate shipping fees based on country codes from drop-down list
 my @eu = ('AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 
           'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'GB');
 
-# Calculate shipping fees based on country codes from drop-down list
-
-($country_code, $country_name) = split('|', $country);
-
 given ($country_code) {
   when ($_ eq 'DE') {
-    $ship = 3;
+    my $shipping = 3;
   }
   when ($_ ~~ @eu) {
-    $ship = 7;
+    my $shipping = 7;
   }
   default {
-    $ship = 12;
+    my $shipping = 12;
   }
 }
 
 # Remove all parameters except for items and prices.
-$query->delete("url", "name", "address", "email", "phone", "language", "country");
+$query->delete("url", "name", "address", "country", "email", "phone", "language");
 
 my $lang = substr $language, 0, 2;
 
@@ -99,9 +95,9 @@ foreach $item ($query->param) {
   }
 }
 
-$amount += $ship;
+$amount += $shipping;
 
-if ($count < 2) {
+if ($count < 1) {
   print "Content-type: text/html\n\n";
   print "<p>No items selected!</p>\n";
   exit;
@@ -131,7 +127,7 @@ my $reference = "MP" . $date . (substr $time, -4) . (sprintf "%03u", $amount);
 # Compile email text
 # -----------------------------------------------------------------------------
 
-my $body = "$name\n$address\nPhone: $phone\n\n";
+my $body = "$name\n$address\n$country_name\nPhone: $phone\n\n";
 
 foreach $item ($query->param) {
   $value = $query->param($item);
@@ -141,10 +137,9 @@ foreach $item ($query->param) {
   }
 }
 
-$body .= "Shipping to %s %-30u", $country_name, $ship);
-
+$body .= sprintf "Shipping to %-30s %6.2f\n", $country_name, $shipping;
 $body .= "---------------------------------------------------\n";
-$body .= sprintf("Total amount                               € %6.2f\n", $amount);
+$body .= sprintf "Total amount                               € %6.2f\n", $amount;
 $body .= "===================================================\n";
 
 # -----------------------------------------------------------------------------
@@ -166,6 +161,7 @@ push @odtfill, "/tmp/invoice.odt";
 push @odtfill, "repeat=" . $count;
 push @odtfill, "Name=" . $name;
 push @odtfill, "Address=" . $address =~ s/\n/\\n/gr;
+push @odtfill, "Country=" . $country_name;
 foreach $item ($query->param) {
   $value = $query->param($item);
   if (not $item =~ /^_/ and $value) {
@@ -175,6 +171,7 @@ foreach $item ($query->param) {
     push @odtfill, "Amount=" . sprintf "%.2f", $value * $price;
   }
 }
+push @odtfill, "Shipping=" . sprintf "%.2f", $shipping;
 push @odtfill, "Total=" . $amount_f;
 push @odtfill, "Net=" . $net;
 push @odtfill, "Vat=" . $vat;

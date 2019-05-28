@@ -58,3 +58,13 @@ OPTIONS
   information will be written to stdout. The directory will also be used
   to store some temporary files, which would otherwise be set up in the
   system wide temp directory.
+
+--build-env "selection"
+  Indicate the current build environment. "selection" can be one of:
+  * "fsfe.org": building https://fsfe.org on the production server
+  * "test.fsfe.org": building https://test.fsfe.org on the production server
+  * "development" (default): local development build
+  In a local development build, code to dynamically compile the less files into
+  CSS will be included in the HTML output, while in the other environments, the
+  precompiles fsfe.min.css (or valentine.min.css) will be referenced from the
+  generated web pages.

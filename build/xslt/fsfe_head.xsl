@@ -2,8 +2,6 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-  <xsl:import href="../../config.xsl" />
-
   <xsl:variable name="mode">
     <!-- here you can set the mode to switch between normal and IloveFS style -->
     <xsl:value-of select="'normal'" /> <!-- can be either 'normal' or 'valentine' -->
@@ -34,37 +32,45 @@
     </xsl:element>
 
     <xsl:choose>
-      <xsl:when test="$css-mode = 'browser' and $mode = 'normal'">
-        <xsl:element name="link">
-          <xsl:attribute name="rel">stylesheet/less</xsl:attribute>
-          <xsl:attribute name="media">all</xsl:attribute>
-          <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/fsfe.less</xsl:attribute>
-          <xsl:attribute name="type">text/css</xsl:attribute>
-        </xsl:element>
+      <xsl:when test="$build-env = 'development'">
+        <xsl:choose>
+          <xsl:when test="$mode = 'valentine'">
+            <xsl:element name="link">
+              <xsl:attribute name="rel">stylesheet/less</xsl:attribute>
+              <xsl:attribute name="media">all</xsl:attribute>
+              <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/valentine.less</xsl:attribute>
+              <xsl:attribute name="type">text/css</xsl:attribute>
+            </xsl:element>
+          </xsl:when>
+          <xsl:otherwise><!-- not valentine -->
+            <xsl:element name="link">
+              <xsl:attribute name="rel">stylesheet/less</xsl:attribute>
+              <xsl:attribute name="media">all</xsl:attribute>
+              <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/fsfe.less</xsl:attribute>
+              <xsl:attribute name="type">text/css</xsl:attribute>
+            </xsl:element>
+          </xsl:otherwise>
+        </xsl:choose>
       </xsl:when>
-      <xsl:when test="$css-mode = 'browser' and $mode = 'valentine'">
-        <xsl:element name="link">
-          <xsl:attribute name="rel">stylesheet/less</xsl:attribute>
-          <xsl:attribute name="media">all</xsl:attribute>
-          <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/valentine.less</xsl:attribute>
-          <xsl:attribute name="type">text/css</xsl:attribute>
-        </xsl:element>
-      </xsl:when>
-      <xsl:when test="$css-mode = 'compiled' and $mode = 'valentine'">
-        <xsl:element name="link">
-          <xsl:attribute name="rel">stylesheet</xsl:attribute>
-          <xsl:attribute name="media">all</xsl:attribute>
-          <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/valentine.min.css</xsl:attribute>
-          <xsl:attribute name="type">text/css</xsl:attribute>
-        </xsl:element>
-      </xsl:when>
-      <xsl:otherwise>
-        <xsl:element name="link">
-          <xsl:attribute name="rel">stylesheet</xsl:attribute>
-          <xsl:attribute name="media">all</xsl:attribute>
-          <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/fsfe.min.css</xsl:attribute>
-          <xsl:attribute name="type">text/css</xsl:attribute>
-        </xsl:element>
+      <xsl:otherwise><!-- not development -->
+        <xsl:choose>
+          <xsl:when test="$mode = 'valentine'">
+            <xsl:element name="link">
+              <xsl:attribute name="rel">stylesheet</xsl:attribute>
+              <xsl:attribute name="media">all</xsl:attribute>
+              <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/valentine.min.css</xsl:attribute>
+              <xsl:attribute name="type">text/css</xsl:attribute>
+            </xsl:element>
+          </xsl:when>
+          <xsl:otherwise><!-- not valentine -->
+            <xsl:element name="link">
+              <xsl:attribute name="rel">stylesheet</xsl:attribute>
+              <xsl:attribute name="media">all</xsl:attribute>
+              <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/look/fsfe.min.css</xsl:attribute>
+              <xsl:attribute name="type">text/css</xsl:attribute>
+            </xsl:element>
+          </xsl:otherwise>
+        </xsl:choose>
       </xsl:otherwise>
     </xsl:choose>
 

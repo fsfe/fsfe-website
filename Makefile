@@ -11,6 +11,18 @@
 .FORCE:
 
 # -----------------------------------------------------------------------------
+# Update CSS files
+# -----------------------------------------------------------------------------
+
+# This step recompiles the less files into the final CSS files to be
+# distributed to the web server.
+
+all: look/fsfe.min.css look/valentine.min.css
+look/%.min.css: $(shell find "look" -name '*.less')
+	echo "* Compiling $@"
+	lessc "look/$*.less" -x "$@"
+
+# -----------------------------------------------------------------------------
 # Update XSL stylesheets
 # -----------------------------------------------------------------------------
 

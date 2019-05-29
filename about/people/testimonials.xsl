@@ -122,6 +122,36 @@
             <xsl:attribute name="class">source</xsl:attribute>
             <xsl:apply-templates select="name/node()"/>
           </xsl:element>
+
+          <!-- Optional link to interview video -->
+          <xsl:if test="watch">
+            <xsl:element name="p">
+              <xsl:attribute name="class">complementary</xsl:attribute>
+              <xsl:element name="a">
+                <xsl:attribute name="href"><xsl:value-of select="watch/@link"/></xsl:attribute>
+                <xsl:element name="span">
+                  <xsl:attribute name="class">fa fa-video-camera fa-lg</xsl:attribute>
+                </xsl:element>
+                <xsl:text> </xsl:text>
+                <xsl:apply-templates select="watch/node()"/>
+              </xsl:element><!-- a -->
+            </xsl:element><!-- p -->
+          </xsl:if>
+
+          <!-- Optional link to interview text -->
+          <xsl:if test="read">
+            <xsl:element name="p">
+              <xsl:attribute name="class">complementary</xsl:attribute>
+              <xsl:element name="a">
+                <xsl:attribute name="href"><xsl:value-of select="read/@link"/></xsl:attribute>
+                <xsl:element name="span">
+                  <xsl:attribute name="class">fa fa-microphone fa-lg</xsl:attribute>
+                </xsl:element>
+                <xsl:text> </xsl:text>
+                <xsl:apply-templates select="read/node()"/>
+              </xsl:element><!-- a -->
+            </xsl:element><!-- p -->
+          </xsl:if>
         </xsl:element><!-- div -->
       </xsl:element><!-- div -->
     </xsl:element><!-- li -->

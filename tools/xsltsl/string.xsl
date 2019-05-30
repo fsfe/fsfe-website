@@ -156,7 +156,7 @@
     </refparameter>
 
     <refreturn>
-      <para>Returns string with first character uppcase and all remaining characters lowercase.</para>
+      <para>Returns string with first character uppercase and all remaining characters lowercase.</para>
     </refreturn>
   </doc:template>
 
@@ -232,7 +232,7 @@
     </refparameter>
 
     <refreturn>
-      <para>Returns string with first character uppcase and all remaining characters lowercase.</para>
+      <para>Returns string with first character uppercase and all remaining characters lowercase.</para>
     </refreturn>
   </doc:template>
 

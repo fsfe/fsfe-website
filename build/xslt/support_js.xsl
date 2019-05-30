@@ -33,7 +33,7 @@
   <xsl:template name="support-form-javascript">
     <script type="text/javascript" src="/scripts/jquery.validate.min.js"></script>
     <!-- 
-        script type="text/javascript" src="/scripts/jquery.validate-lozalization/messages_fi.js"></script 
+        script type="text/javascript" src="/scripts/jquery.validate-localization/messages_fi.js"></script 
         *How to inser lang code in above?*
      -->
     <script type="text/javascript">

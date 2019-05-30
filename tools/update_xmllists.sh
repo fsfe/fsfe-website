@@ -10,7 +10,7 @@
 #   in phase 2 are built into pages listing all news items and events for a
 #   tag.
 #
-# * tags/.tags.??.xml with a list of the tags useed.
+# * tags/.tags.??.xml with a list of the tags used.
 #
 # * <dir>/.<base>.xmllist for each <dir>/<base>.sources as well as for each
 #   tags/tagged-<tags>.en.xhtml. These files are used in phase 2 to include the

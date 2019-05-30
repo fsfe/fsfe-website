@@ -7,8 +7,8 @@
       <xsl:attribute name="id">followup</xsl:attribute>
          <!--
          TODO Okay, so the idea here is to be able to display different "followup" boxes. I would suggest doing it like this:
-          - the xml page shold be able to say that it wants to show a
-              specific boxe and would contain e.g.
+          - the xml page should be able to say that it wants to show a
+              specific box and would contain e.g.
               <followup>subscribe-newsletter</followup> so the page would show
               the following box.
           - if the xml page does not contain any <followup> variable, then we should be able to set a default followup box on our own.

@@ -89,7 +89,7 @@
   <xsl:template name="ical-escape">
     <xsl:param name="text" />
     
-    <!-- characters to be backslahed: \;, -->
+    <!-- characters to be backslashed: \;, -->
     <xsl:value-of select="str:replace(str:replace(str:replace($text,'\','\\'),',','\,'),';','\;')" />
   </xsl:template>
 

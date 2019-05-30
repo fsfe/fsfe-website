@@ -6,7 +6,7 @@ inc_translations=true
 
 get_textsfile(){
   # get the texts file for a given language
-  # fall back to english if necessary
+  # fall back to English if necessary
   lang="$1"
 
   if [ -f "$basedir/tools/texts-${1}.xml" ]; then

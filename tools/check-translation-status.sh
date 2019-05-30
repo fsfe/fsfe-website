@@ -41,7 +41,7 @@ if [ "$1" = "" ] || [ -z "$FILE" ]; then
   exit 0
 fi
 
-# -o supresses all other output (-q), and implicates -a
+# -o suppresses all other output (-q), and implicates -a
 if [ ! -z "$ONLY" ]; then
   QUIET="1"
   ALL="1"

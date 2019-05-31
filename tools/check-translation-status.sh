@@ -61,9 +61,9 @@ if ! [[ "$EXT" =~ ^(xhtml|xml)$ ]]; then
 fi
 
 # remove "en.$EXT"
-A=$(echo "$FILE" | sed -E "s/\.[a-z][a-z]\.$EXT//")
+BASE=$(echo "$FILE" | sed -E "s/\.[a-z][a-z]\.$EXT//")
 # get change date of English file
-EN=$A.en.$EXT
+EN=$BASE.en.$EXT
 if [ ! -e "$EN" ]; then
   out "English file does not exist. Aborting. ($EN)"
   exit 2
@@ -77,7 +77,7 @@ out "  --------    ----   ----------"
 
 if [ "$ALL" == "1" ]; then
   # Loop over all translations of this file
-  for i in "$A".[a-z][a-z].$EXT; do
+  for i in "$BASE".[a-z][a-z].$EXT; do
     if [[ $i != *".en."* ]]; then
       # get language code
       lang=$(echo "$i"|sed "s/.*\.\([a-z][a-z]\)\.$EXT/\1/")

@@ -7,8 +7,10 @@ TESTS=0
 for xmlfile in $(
   git diff --staged --name-only | grep -E "(\.xhtml$|\.xml$|\.xsl$)"
 ); do
-  xmllint --noout --nonet "${xmlfile}"
-  TESTS=$((${TESTS} + $?))
+  if [ -e "${xmlfile}" ]; then
+    xmllint --noout --nonet "${xmlfile}"
+    TESTS=$((${TESTS} + $?))
+  fi
 done
 
 if [ $TESTS -gt 0 ]; then

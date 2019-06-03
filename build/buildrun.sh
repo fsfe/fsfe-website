@@ -42,7 +42,7 @@ build_into(){
   } | t_logstatus phase_2 || exit 1
 
   if [ "$stagedir" != "$target" ]; then
-    rsync -av --del "$stagedir/" "$target/" | t_logstatus stagesync
+    rsync -av --copy-unsafe-links --del "$stagedir/" "$target/" | t_logstatus stagesync
   fi
 
   date +%s > "$(logname end_time)"

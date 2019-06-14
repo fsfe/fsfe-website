@@ -146,7 +146,7 @@ div#subpages, .grid-row {
     border-bottom: 1px solid @gray-light;
     position: absolute;
     width: 100%;
-    z-index: 99;
+    z-index: 1000;
     transition: display 0.15s linear 0s, opacity 0.15s linear 0s;
 
     a.close {.pull-right;.make-md-column(1);}
@@ -184,7 +184,9 @@ div#subpages, .grid-row {
 #masthead {
     display: block;
     padding: 3em 1em 0;
+    position: relative;
     width: 100%;
+    z-index: 100;
 
     @media (min-width: @screen-sm-min) {
         position: relative;
@@ -228,6 +230,9 @@ div#subpages, .grid-row {
 }
 
 #menu {
+    position: relative;
+    z-index: 200;
+
     @media (min-width: @screen-sm-min) {
         .pull-right;
         text-align: right;

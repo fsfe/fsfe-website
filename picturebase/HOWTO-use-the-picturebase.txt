@@ -1,0 +1,113 @@
+Welcome to the FSFE's picturebase
+
+Please put all pictures in here using the following scheme:
+
+
+# Quality
+Pictures should be uploaded in the best quality and dimensions available. It is easy to downscale any picture but impossible to upscale dimensions. Consider to GIMP your pictures befor uploading to improve their visual appearance.
+
+
+# 800-pixel-web-Version
+Any picture you like to use embedded in fsfe.org should be downscaled to a width of 800 pixels with the same name as your picture but added a "-800px" in the end of the file name. This allows us to embedding this downscaled picture for faster page-loads of fsfe.org and in the same time immediately access the original picture if wanted. 
+Example:
+* /booths/201807-booth-at-rmll.jpg
+* /booths/201807-booth-at-rmll-800px.jpg
+
+
+# Filenames
+Filename are a big help to get an info about a picture without the need to open it. All files should start with the year and most probably also with the month when the picture was taken. 
+Example: 
+* /events/201905-webathon-group-picture.jpg
+
+In case of a graphic it should include the year the grapic was taken
+Example:
+* /campaigns/ilovefs/2019-ilovefs-artwork-Elektrollart.jpeg
+
+depending on the folder the picture is archived in, the filenames also follow a certain scheme that is explained in the next section where the content of these folders is explained as well. 
+
+
+# Topical Folders
+
+we have topical folders inside the picturebase to help find pictures when in need. Please read through the following information to understand where to put your picture.
+
+Sometimes pictures can be in two folder, for example a group-picture shot during a FSFE event qualifies for the /events/ folder as well as the /people/ folder. You have to chose one of the folders then, please do not put them in both!
+
+As a general help to decide where to put them you should follow the approach to go from the most concrete topical folder to the broader one. More concrete are
+- booths (booths only)
+- campaigns (specific campaigns inside)
+- events (only fsfe-events)
+- fundraising (only fundraising relevant pictures here)
+- onstage (only pictures of fsfe people giving talks, workshops etc)
+
+More broader folders are:
+- graphics
+- miscellaneous 
+- people (but only fsfe-people!)
+all of which collect pictures that do not fit in the other categories.
+
+
+## booths
+In this folder all pictures should be about a booth and vice versa: Booth pictures with people or without people, in the morning or at night ... 
+Please give all pictures in here the following name:
+* YYYYMM-booth-at-EVENTNAME
+(YYYY means year and MM means month)
+Example:
+* /booths/201807-booth-at-rmll.jpg
+
+## campaigns
+Pictures that are about a specific campaign end up in their corresponding subfolder of the campaigns-folder. 
+Please give all pictures in here the following name:
+* YYYYMM-SHORTNAMEOFCAMPAIGN-CONTENT
+(YYYY means year and MM means month)
+Example: 
+* /campaigns/ilovefs/201801-pmpc-brochure-people.jpg
+
+## events
+Pictures that are about an event BY THE FSFE should end up here. Community meetings, web-a-thons, GA-meetings etc. Please do not put pictures here of events, the FSFE has been but not organised itself.
+Please give all pictures in here the following name:
+* YYYYMM-NAMEOFEVENT-CONTENT
+(YYYY means year and MM means month)
+Example: 
+* /events/201905-webathon-group-picture.jpg
+
+## fundraising
+Put all pictures and graphics in here that are to be used for fundraising specifically.
+Please give all pictures in here the following name:
+* YYYY-NAMEOFPERSONORCONTENT-PIXELINWIDTH
+(YYYY means year and MM means month)
+Example: 
+* /fundraising/2019-Francesca-Bria-1200x900.en.png
+
+## graphics
+Put all pictures in here that are pure graphics and not to be used in the contexts of the other folders. For example logos that we use on our pages or informational graphics.
+
+## miscelleanous
+Put all pictures and graphics in here that fit in no other folder.
+Please give all pictures in here the following name:
+* YYYY-CONTENT
+(YYYY means year and MM means month)
+Example: 
+* /miscellaneous/2018-cryptie-video-poster.jpg
+
+## onstage
+Pur all pictures here where FSFE affiliated people are on stage or in spotlight, giving a talk, a workhop etc.
+Please give all pictures in here the following name:
+* YYYY-SURNAME-LASTNAME-CONTENT
+(YYYY means year and MM means month)
+Example: 
+* /onstage/201906_Matthias_Kirschner_OW2con_Paris.jpg
+
+
+## people
+Put all pictures in here that show people as their main content, individually or in groups, but only fsfe-people! If we have a group picture by friends that we use in a context, we put them in miscelleanous, like for example: /miscelleanous/201610-pica-pica-hacklab.JPG
+Please give all pictures in here the following name:
+* YYYY-SURNAME-LASTNAME-CONTENT
+(YYYY means year and MM means month)
+Example: 
+* /people/2011-isabell-drost-fromm.jpg
+
+
+
+
+
+

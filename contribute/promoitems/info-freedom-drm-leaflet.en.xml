@@ -1,33 +1,35 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <infoset>
   <info id="drm-leaflet">
-    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    <!-- Leave a tag like <printready> blank or erase it if you don't
     want to appear it -->
-    <!-- Translations for "Type", "Size" etc. can be found in 
+    <!-- Translations for "Type", "Size" etc. can be found in
     /tools/texts-**.xml -->
+    <imagelink>https://download.fsfe.org/advocacy/promomaterial/DRM/DRM_handcuffs.en.pdf</imagelink>
     <name>Digital Restrictions Management</name>
-    <description>
-        This is a leaflet about <a href="http://drm.info">Digital Restriction Management</a> and its menace to our
-        citizens' rights, our digital heritage, our creativity and our privacy. Since
-        recent developments in HTML5 a topic that is more relevant than ever.
-    </description>
+    <description>This is a leaflet about <a href="http://drm.info">Digital Restriction Management</a> and its menace to our citizens' rights, our digital heritage, our creativity and our privacy. Since recent developments in HTML5 a topic that is more relevant than ever.</description>
     <type>Leaflet</type>
-    <size>A5 (148 x 210 mm, folded); A4 (297 x 210 mm, unfolded)</size>
-    <context><a href="http://drm.info">Digital Restriction Management</a></context>
-    
-<!-- everything below this line uses native language names for each language or technical abbreviations respectively, so there is no need to transalate it from here on -->
-    
-    <languages><a href= "https://download.fsfe.org/advocacy/promomaterial/DRM/DRM_handcuffs.de.pdf">Deutsch</a>, <a href= "https://download.fsfe.org/advocacy/promomaterial/DRM/DRM_handcuffs.en.pdf">English</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/DRM/DRM_handcuffs.fr.pdf">Français</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/DRM/DRM_handcuffs.sq.pdf">Shqip</a>  
-    </languages>
-    <printed>
-      Deutsch, English, Français, Shqip
-    </printed>
-    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
-    <author>FSFE, EDRi, Digitale Gesellschaft</author>
-       <source>
-		<a href="https://download.fsfe.org/advocacy/promomaterial/DRM/">DRM_handcuffs* in download.fsfe.org</a>
-	</source> 
-    <printready></printready>
-  </info>
+    <size>A4; folded: A5</size>
+    <context>
+      <a href="http://drm.info">DRM</a>
+    </context>
 
+<!-- everything below this line uses native language names for each language or technical abbreviations respectively, so there is no need to transalate it from here on -->
+
+    <languages>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/DRM/DRM_handcuffs.de.pdf">Deutsch</a>,
+      <a href="https://download.fsfe.org/advocacy/promomaterial/DRM/DRM_handcuffs.en.pdf">English</a>,
+      <a href="https://download.fsfe.org/advocacy/promomaterial/DRM/DRM_handcuffs.fr.pdf">Français</a>,
+      <a href="https://download.fsfe.org/advocacy/promomaterial/DRM/DRM_handcuffs.sq.pdf">Shqip</a>
+    </languages>
+    <printed>Deutsch, English, Français, Shqip</printed>
+    <license>
+      <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>
+    </license>
+    <author>FSFE, EDRi, Digitale Gesellschaft</author>
+    <source>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/DRM/">DRM in download.fsfe.org</a>
+    </source>
+    <!-- <printready></printready> -->
+  </info>
 </infoset>

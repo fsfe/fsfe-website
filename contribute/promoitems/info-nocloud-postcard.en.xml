@@ -1,28 +1,30 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <infoset>
   <info id="nocloud-postcard">
-    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    <!-- Leave a tag like <printready> blank or erase it if you don't
     want to appear it -->
-    <!-- Translations for "Type", "Size" etc. can be found in 
+    <!-- Translations for "Type", "Size" etc. can be found in
     /tools/texts-**.xml -->
-    <name>There is no cloud, just other people's computers - Postcard</name>
-    <description>
+    <imagelink>https://download.fsfe.org/advocacy/promomaterial/NoCloud/NoCloud-postcard/thereisnocloud-postcard.en.pdf</imagelink>
+    <name>There is no cloud, just other people's computers</name>
+    <!-- <description>
         A postcard to let people know about their
         online-reality that says "There is no cloud just other people's computers"
-    </description>
+    </description> -->
     <type>Postcard</type>
     <size>147 x 104 mm</size>
-    <context></context>
+    <!-- <context></context> -->
     <languages>
-		<a href="https://download.fsfe.org/advocacy/promomaterial/NoCloud/NoCloud-postcard/thereisnocloud-postcard.en.pdf">English</a>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/NoCloud/NoCloud-postcard/thereisnocloud-postcard.en.pdf">English</a>
     </languages>
-    <printed>
-      English
-    </printed>
-    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <printed>English</printed>
+    <license>
+      <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>
+    </license>
     <author>Markus Meier</author>
-    <source><a href="https://download.fsfe.org/advocacy/promomaterial/NoCloud/NoCloud-postcard/">nocloud-postcard* in download.fsfe.org</a></source> 
-    <printready></printready>
+    <source>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/NoCloud/NoCloud-postcard/">NoCloud-postcard in download.fsfe.org</a>
+    </source>
+    <!-- <printready></printready> -->
   </info>
-
 </infoset>

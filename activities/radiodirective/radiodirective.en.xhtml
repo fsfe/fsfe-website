@@ -18,212 +18,83 @@
 
 <div id="introduction">
 
+<!-- @TRANSLATORS: Please do not translate this update yet, it's subject to immediate changes in the proofreading phase -->
+
+<p>An EU regulation may make it impossible to install a custom piece of software on most radio decives like WiFi routers, smartphones, and embedded devices. It requires hardware manufacturers to implement a barrier that disallows users to install any software which has not been certified by them. This has negative implications on user rights and Free Software, security, fair competition, the environment, and charitable community initiatives.</p>
+
+</div>
+
 <div class="right" style="max-width: 506px; width: 30%;">
   <img src="img/radiolockdown-cage.jpg" alt="a bird cage with a router and a mobile phone imprisoned, both sending radio waves" />
 </div>
 
-<p>Radio signals are everywhere and increasingly many devices connect using 
-wireless and mobile networks or GPS. Legal regulations of the usage of radio 
-signals are increasing, too. Now, a European directive wants to revise and 
-extend them by demanding device manufacturers to check each device software's 
-compliance. At first sight, this may sound reasonable but it has highly 
-negative implications on <a href="#freesoftware">user rights and Free 
-Software</a>, fair <a href="#competition">competition</a>, <a 
-href="#society">innovation, environment, and volunteering</a> – mostly without 
-comparably large benefits for <a href="#security">security</a> 
-unfortunately.</p>
+<p>The origin of these issues lies in one article of the <a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0053">Radio Equipment Directive</a> (2014/53/EU) which has been passed in 2014. Although the directive is already implemented in the member states' national legislations, the problematic Article 3(3)(i) is still on hold and subject to exact definition.
+</p>
 
-<p>Many organisations and companies signed our <a 
-href="/activities/radiodirective/statement.html">Joint Statement against Radio 
-Lockdown Directive</a> in which we have formulated <a href="#proposals">several 
-proposals</a> to EU institutions and EU member states with concrete steps to 
-solve these issues.</p>
+<blockquote><p>[R]adio equipment [shall support] certain features in order to ensure that software can only be loaded into the radio equipment where the compliance of the combination of the radio equipment and software has been demonstrated.<br /> – <em>Radio Equipment Directive, Article 3(3)(i)</em></p></blockquote>
 
-</div>
+<p>The said article requires that device manufacturers check every software which can be loaded onto the device regarding its compliance with applicable radio regulations (e.g. signal frequency and strength). Until now, the responsibility for compliance lay with users if they modified something, no matter if it was related to hardware or software. This shift of responsibility sounds convenient for users but in fact takes away the ability to control this important technology. It gives the device manfacturers the control over the choice of software which can run on their devices.</p>
 
-<h2>Briefly about the directive</h2>
+<p>Since 2015, the FSFE has been working on raising awareness among the public, industry, and political decision-takers, and contributes expertise to limit the negative outcomes of this article. Many organisations and companies signed our <a href="/activities/radiodirective/statement.html">Joint Statement against Radio Lockdown</a> in which we have formulated several proposals to EU institutions and EU member states with concrete steps to solve these issues.</p>
 
-<p>In May 2014 the European Parliament and the European Council passed the 
-Radio Equipment Directive <a 
-href="http://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX%3A32014L0053">2014/53/EU</a>. 
-Its main purposes are harmonisation of existing regulations, improving security 
-of radio spectra, and protection of health and safety. All EU members states 
-have to implement the directive in national law until 12.06.2016 with a 
-transition period of one year. The countries usually have some room for 
-interpretation in the implementation process. The directive itself is not bad, 
-and we support its aim at large. However, when it comes to the details of the 
-software compliance assessment it seems that the lawmakers disproportionally 
-disadvantaged users' rights and fair competition.</p>
 
-<p>In fact, almost all devices which can send and receive radio signals (WiFi, 
-mobile network, GPS...) are affected. The crunch point is in Article 3.3(i): 
-radio equipment shall support "<em>certain features in order to ensure that 
-software can only be loaded into the radio equipment where the compliance of 
-the combination of the radio equipment and software has been 
-demonstrated</em>". This implies that device manufacturers have to check every 
-software which can be loaded on the device regarding its compliance with 
-applicable radio regulations (e.g. signal frequency and strength). Until now, 
-the responsibility for the compliance rested on the users if they modified 
-something, no matter if hardware- or software-wise.</p>
+<h2 id="devices">Which devices are affected?</h2>
 
-<h2 id="freesoftware">Dangers for Free Software</h2>
+<p>By default, almost all devices which can send and receive radio signals fall under this directive. For instance, WiFi routers, mobile phones, bluetooth chips in computers, GPS receivers, and so-called "smart devices" in households. But the European Parliament asked the European Commission to adopt a so-called Delegated Act in which they define the classes of devices which shall fall under this regulation.</p>
 
-<p>The radio equipment directive 2014/53/EU will have a negative effect on 
-users and companies. Because device manufacturers will have to assess every 
-software regarding its compliance with existing national radio regulations 
-(Art. 3.3(i)), we expect it to become impossible or very hard for users and 
-companies to use alternative software on devices they bought – routers, mobile 
-phones, WiFi-cards and the laptops they are built in, or almost all 
-Internet-of-Things devices in the future.</p>
+<p>In turn, the European Commission has installed an <a href="http://ec.europa.eu/transparency/regexpert/index.cfm?do=groupDetail.groupDetail&amp;groupID=3413">Expert Group</a>, mostly consisting of member states' public agencies, to come up with recommendations. Unfortunately, as of June 2019, the majority of the group intends to make broad and diffuse device categories like "Software Defined Radio" and "Internet of Things" a subject of radio lockdown.</p>
 
-<p>This not only is a severe burden for those affected but also violating the 
-customers' rights of free choice. They will be locked in to software of the 
-manufacturers because they cannot choose the software and hardware 
-independently anymore. This aspect is crucial because alternative, especially 
-<a href="/about/basics/freesoftware.html">Free Software</a>, often satisfies 
-special requirements regarding security, technical features and standards, or 
-legal demands.</p>
 
-<p>The status quo erects high barriers for customers to control their soft- and 
-hardware. Increasingly many devices use radio signals, among them very 
-sensitive ones like mobile phones, personal computers, household equipment, or 
-the internet access gateways in homes and companies. For the sake of security 
-and fair competition we have to make sure that people can always choose the 
-software they want to run on their devices without additional constraints, as 
-long as the software does respect current laws (see the <a 
-href="#security">chapter about security</a>).</p>
+<h2 id="threats">Why is Radio Lockdown dangerous?</h2>
 
-<p>We see negative outcomes of this directive already. Several manufacturers 
-have installed modules on their devices checking which software is loaded. This 
-is done by built-in non-free and non-removable modules disrespecting users' 
-rights and demands to use technology which they can control. For the future we 
-are afraid of modules not only checking software but for example also the exact 
-location or behaviour of the owners. In the end that would make it harder or 
-impossible to exchange software which works against one's interests, like 
-spying on the respective user or business.</p>
+<p>First of all, the scope is immense. Radio devices are everywhere and increasingly many devices connect using wireless and mobile networks. The influence of this technology in our daily lives continously grows. Therefore, it is more important than ever to ensure that users are not restricted. But Article 3(3)(i) does not enforce only a certain security measurement, but drastically limits the control that customers have over the technology they own.</p>
 
-<h2 id="competition">Dangers for competition</h2>
+<p>For each of the following areass, we see a number of issues caused by Radio Lockdown, as we explain in the following.</p>
 
-<p>There are many companies dependent on the usage of alternative and Free 
-Software firmware on devices. Among them are wireless network providers, 
-creators of more secure mobile operating systems, or programmers of 
-custom-tailored and more efficient software solutions for existing hardware. 
-All of them might be hindered and economically discriminated against by larger 
-manufacturers with their infuse software. Alternative software is the 
-foundation of many companies' products, and we should prevent economic 
-disadvantages for them.</p>
+<h3 id="freesoftware">Software freedom</h3>
 
-<p>Especially for smaller and medium-sized businesses we expect negative 
-outcomes. First because of the dangers if their software is not or heavily 
-delayed being assessed by manufacturers. Second due to the expectable high 
-costs for those manufacturing enterprises having to assess each and every 
-firmware thoroughly (see recital 29). This will also have an additional 
-negative impact on start-up businesses.</p>
+<p>To control technology, we have to be able to control the software running it. This only is possible with <a href="/about/basics/freesoftware.html">Free Software</a>. So if we want to have transparent and trustworthy devices, we need to make the software running on them Free Software. But any device affected by Article 3(3)(i) will only allow the installation of software which has been authorised by the device manufacturer. It is unlikely that a manufacturer will certify all the available, perfectly legal software for its device. This turns manufacturers into gatekeepers, and with their particular interests they may make it more difficult to use Free Software on radio devices.</p>
 
-<p>Concerning legal affairs we assume difficulties with existing license 
-conditions, for example with the GNU General Public License. It requires all 
-parts of the software to be under the same or a compatible license. 
-Manufacturers having to include proprietary non-compatible software parts then 
-might infringe the terms of the GNU GPL. This could force manufacturers not 
-willing or able to include proprietary software parts to rewrite these huge 
-parts from scratch which is impossible for many businesses and would hinder 
-progress as it heavily slows down development.</p>
+<h3 id="compliance">Licence compliance</h3>
 
-<h2 id="society">Innovation, Volunteering, Sustainability</h2>
+<p>A large number of radio devices uses Free Software such as GNU/Linux, the GNU C Library or Samba which are licenced under the popular GNU GPL, LGPL or AGPL licences. The <a href="https://download.fsfe.org/policy/radiodirective/RED_Legal_Study_Jaeger-2019.pdf">Legal Study on the Radio Equipment Directive's Potential Ramifications for FOSS</a> by the renowed lawyer Dr. Till Jaeger found that Article 3(3)(i) is incompatible with the licence conditions of GPL-3.0, LGPL-3.0 and AGPL-3.0 and probably more Free Software licences like GPL-2.0 and LGPL-2.1:</p>
 
-<p>If the directive becomes effective without necessary exceptions (see below) 
-this will affect basic conditions for innovation negatively. Progress is 
-achieved by learning from past developments and walking new paths. If all 
-communicative devices are locked down, a huge area of innovation will be 
-too.</p>
+<blockquote><p>It can be stated that widely used Free and Open Source Software programs as GNU/Linux, GNU C Library and Samba will not be able to be used in products which fall into the scope of Art. 3(3)(i) RED if the delegated acts of the European Commission do not provide for a limitation. Otherwise, the manufacturer would risk a copyright infringement since any violation of the license conditions of the GPL and LGPL results in an automatic termination of the rights granted.</p></blockquote>
 
-<p>Same applies to charity initiatives and organisations depending on using 
-custom software on devices they bought. Efforts of volunteer associations, for 
-example <a href="http://freifunk.net/">Freifunk</a> helping people in need to 
-connect to the internet, may be rendered void or at least handicapped severely. 
-Since we are sure that this implication was not intended by the European 
-institutions we ask for necessary changes.</p>
+<p>This would put manufacturers using components under these licenses into a dangerous position. On the one hand, they have to set up a software lockdown on their devices, on the other hand they illegally breach the licence terms.</p>
 
-<p>Furthermore, alternative software on radio (and also non-radio) devices also 
-promotes a sustainable economy. There are many devices still in working order 
-which do not receive updates from the original manufacturers anymore. In most 
-cases, Free Software firmware has a much longer support period which prevents 
-users and customers having to dispose still working electronic equipment. In 
-return, this also improves the security of users since older hardware still 
-receives security updates after a manufacturer stops supporting those.</p>
+<h3 id="security">Security</h3>
 
-<h2 id="security">Speaking about security</h2>
+<p>Radio equipment like smartphones, routers, or smart home devices are highly sensitive parts of everyday life today. Unfortunately, many manufacturers sacrifice security for lower costs. For many devices there is better software which protects data and still offers equal or even better functionality. Users have to be able to protect themselves by installing safer and well-maintained software. But if certain manufacturers do not even care for security, it is unlikely that they will run a costly certification of third-party software.</p>
 
-<p>We are in favor of the directive's aim to improve security of radio devices 
-but not at the unbalanced expense of users' freedom and security in other 
-areas. Firstly installing alternative software mostly helps increasing the 
-devices' security. Secondly we are convinced that such strict regulations are 
-not necessary for typical consumer products with limited radio output power. 
-And thirdly we believe that such technical restrictions will not hinder those 
-people willingly violating applicable radio regulations.</p>
+<h3 id="competition">Competition</h3>
 
-<p>Especially Free Software firmware projects are very advanced in terms of security 
-measures, no least because technical errors get fixed quickly in collaborative 
-and transparent processes. Alternative software solutions mostly have much longer 
-security support cycles than the default manufacturer firmware. Many Free 
-Software projects that are programming firmware for consumer devices address 
-high security demands by offering special features the default software does 
-not support. So instead of promoting security the current state of the radio 
-equipment directive disables users and businesses to choose more secure 
-software for their devices. If a software on a device actually violates a radio 
-regulation it would be the more efficient way to support the software's 
-creators instead of restricting users' independence on a massively broad 
-level.</p>
+<p>If customers don't like a certain product, they can use another from a different manufacturer. New competitors can access the market to convince customers with better features. But Article 3(3)(i) favours huge enterprises as it forces companies to install software barriers and do certification of additional software. For example, a small and medium-sized manufacturer of WiFI routers cannot certify all available Free Software operating systems and their different versions. Also, companies bundling their own software with third-party hardware will run into problems. On the other hand, large companies which don't want users to use any other software than their own will profit from this threshold.</p>
 
-<h2 id="proposals">Our proposals</h2>
+<h3 id="environment">Environment</h3>
 
-<p>We formulated several proposals to EU institutions and EU members states. 
-Many organisations and businesses support these goals and signed our <a 
-href="/activities/radiodirective/statement.html">Joint Statement against Radio 
-Lockdown</a>. We invite your organisation or company to also <a 
-href="/activities/radiodirective/statement.html#sig">express your 
-opinion</a>.</p>
+<p>The life cycles of radio devices like mobile phones and routers continuously decrease. From a security perspective, there are only two options for a device which does not receive any vendor updates any more: install another firmware which still receives updates, or throw the whole device away. From an environmental perspective, the first solution is much better. But manufacturers do not have an incentive to certify alternative firmware for devices they want to get rid of.</p>
 
-<blockquote>
-<h3>What we expect of EU institutions</h3>
+<h3 id="society">Community Services</h3>
 
-<p>We ask the European Commission to adopt delegated acts - as empowered by the 
-European Parliament and Council (Art. 44) - which either </p>
+<p>Charitable initiatives like <a href="https://freifunk.net">Freifunk</a>, <a href="https://funkfeuer.at">Funkfeuer</a>, <a href="http://ninux.org">Ninux</a>, or <a href="https://guifi.net">Guifi</a> depend on third-party hardware which they can use with their own software for their charity causes. They create innovative solutions for the public with limited resources. At the same time, they are dependent on devices which they can use with they own, individually adapted software.</p>
+
+
+<h2 id="getactive">What can I do?</h2>
+
+<p>Although organisations like the FSFE are continously fighting to limit the negative consequences of Radio Lockdown, we need your help! Here are a few proposals how you can contribute to our common efforts:</p>
 
 <ul>
-  <li>make general exceptions for all Free Software not developed by the 
-  manufacturers of the respective radio equipment themselves but from other 
-  companies or individuals.</li>
-  <li>do not shift the responsibility for the software's regulatory compliance 
-  from the users to the manufacturers when making changes to the default 
-  configuration. Software and hardware should not be treated differently in 
-  that respect.</li>
+  <li>Contact the European Commission, especially DG GROW, which is in charge of the delegated act, and your politcial representatives. Make them aware of your worries.</li>
+  <li>Contact your national agencies or other actors which have a seat in the <a href="http://ec.europa.eu/transparency/regexpert/index.cfm?do=groupDetail.groupDetail&amp;groupID=3413">Expert Group</a> to show them that you care about this topic.</li>
+  <li>Participate in <a href="https://ec.europa.eu/info/law/better-regulation/initiatives/ares-2018-6621038_en">public consultations</a>. You will learn about opportunities via <a href="/news">the FSFE's news channels</a>.</li>
+  <li>If you represent a company or other industry actor, contact relevant business associations or the European Telecommunications Standards Institute (ETSI).</li>
+  <li>If you represent a company or organisations concerned by Radio Lockdown, sign the <a href="/activities/radiodirective/statement.html">joint statement</a>.</li>
 </ul>
-</blockquote>
 
-<blockquote>
-<h3>What we expect of EU member states</h3>
-
-<p>We ask member state legislators to </p>
-<ul>
-  <li>interpret the directive's provisions so that Free Software can still be 
-  installed on radio devices without discrimination, and users' rights are 
-  safeguarded. As pointed out in recital (19), third party software providers, 
-  such as Free Software projects, shall not be disadvantaged.</li>
-  <li>make sure that small and medium-sized manufacturers will not be burdened 
-  disproportionally by being forced to assess each and every alternative 
-  software.</li>
-  <li>make sure that users are not forced to install non-free software.</li>
-</ul>
-</blockquote>
 
 </div><!--/e-content-->
 
-<!-- No news yet
-  <h2>Related news</h2>
-
-      <fetch-news/>
--->
 
   </body>
   
@@ -245,16 +116,17 @@ European Parliament and Council (Art. 44) - which either </p>
   <li><a href="/activities/radiodirective/statement.html">Joint Statement against Radio Lockdown</a></li>
 </ul>
 
+<h3>External links</h3>
+  <ul>
+    <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32014L0053">Full text and translations of RED 2014/53/EU</a></li>
+    <li><a href="https://ec.europa.eu/info/law/better-regulation/initiatives/ares-2018-6621038">EU Commission's feedback portal and roadmap</a></li>
+    <li><a href="https://download.fsfe.org/policy/radiodirective/RED_Legal_Study_Jaeger-2019.pdf">Legal Study on the Radio Equipment Directive’s Potential Ramifications for FOSS</a> by Dr. Till Jaeger</li>
+  </ul>
+
 <h3>Latest News</h3>
 <ul>
 <fetch-news/>
 </ul>
-
-<h3>External links</h3>
-  <ul>
-    <li><a href="http://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX%3A32014L0053">Full text of RED 2014/53/EU</a></li>
-    <!--<li><a href="http://blog.die-linke.de/digitalelinke/niemand-hat-die-absicht-freie-software-zu-verbieten/">Statement of German party DIE LINKE</a></li>-->
-  </ul>
 
 </sidebar>
 

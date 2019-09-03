@@ -210,8 +210,8 @@ COPY_DST_FILES := \$(sort \$(patsubst \$(INPUTDIR)/%,\$(OUTPUTDIR)/%,\$(COPY_SRC
 
 all: \$(COPY_DST_FILES)
 \$(COPY_DST_FILES): \$(OUTPUTDIR)/%: \$(INPUTDIR)/%
-	echo "* Copying file \$*"
-	cp "\$<" "\$@"
+	echo "* Linking file \$*"
+	ln -sf "\$<" "\$@"
 
 # -----------------------------------------------------------------------------
 # Copy .xhtml files to "source" directory in target directory tree
@@ -221,8 +221,8 @@ SOURCE_DST_FILES := \$(sort \$(patsubst \$(INPUTDIR)/%,\$(OUTPUTDIR)/source/%,\$
 
 all: \$(SOURCE_DST_FILES)
 \$(SOURCE_DST_FILES): \$(OUTPUTDIR)/source/%: \$(INPUTDIR)/%
-	echo "* Copying source \$*"
-	cp "\$<" "\$@"
+	echo "* Linking source \$*"
+	ln -sf "\$<" "\$@"
 
 # -----------------------------------------------------------------------------
 # Clean up excess files in target directory

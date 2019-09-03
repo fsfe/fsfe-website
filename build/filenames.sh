@@ -6,7 +6,7 @@ inc_filenames=true
 list_langs(){
   # list all languages a file exists in by globbing up
   # the shortname (i.e. file path with file ending omitted)
-  # output is readily formated for inclusion
+  # output is readily formatted for inclusion
   # in xml stream
   shortname="$1"
 

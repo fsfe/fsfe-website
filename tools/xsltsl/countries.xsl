@@ -11,9 +11,6 @@
       <xsl:param name="display" select="''" />
       <!-- parameter 'display' can limit the shown people to coordinators -->
       
-      <xsl:variable name="teamcomma"><xsl:value-of select="$team" />,</xsl:variable>
-      <xsl:variable name="commateam">, <xsl:value-of select="$team" /></xsl:variable>
-      
       <xsl:element name="ul">
           <xsl:attribute name="class">people</xsl:attribute>
           <xsl:for-each select="/buildinfo/document/set/person[team = $team or $team = '']">
@@ -50,7 +47,7 @@
                     <xsl:element name="p">
                       <!-- Picture -->
                       <xsl:choose>
-                        <xsl:when test="avatar">
+                        <xsl:when test="avatar != ''">
                           <xsl:choose>
                             <xsl:when test="link != ''">
                                 <xsl:element name="a">

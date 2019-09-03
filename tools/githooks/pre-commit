@@ -1,13 +1,83 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
+GIT_ROOT=$(git rev-parse --show-toplevel)
+
+# CHECK XML SYNTAX
 TESTS=0
-
 for xmlfile in $(
-  git status -s \
-  | sed -En "s/\s*[AM]\s*(.*\.xsl|.*\.xml|.*\.xhtml)/\1/p"
+  git diff --staged --name-only | grep -E "(\.xhtml$|\.xml$|\.xsl$)"
 ); do
-  xmllint --noout --nonet "${xmlfile}"
-  TESTS=$((${TESTS} + $?))
+  if [ -e "${xmlfile}" ]; then
+    xmllint --noout --nonet "${xmlfile}"
+    TESTS=$((${TESTS} + $?))
+  fi
 done
 
-exit "$TESTS"
+if [ $TESTS -gt 0 ]; then
+
+cat <<EOF >&2
+
+  === SYNTAX ERROR ===
+  One or more files failed the XML syntax check!
+
+  The error log above will help you to identify the error. Read it from
+  the top. The numbers behind the file name point to the line number in
+  the file where the error has been detected.
+
+  Check this line and its surroundings for XML/HTML tags that have not 
+  been closed correctly, errors with special characters like "&", or
+  other syntactical mistakes.
+
+  The commit has been aborted. You have to fix the problem first.
+EOF
+
+  exit $TESTS
+fi
+
+
+# CHECK TRANSLATIONS WHICH WILL BE OUTDATED
+ALLFILES=$(git diff --staged --name-only | grep -E "(\.xhtml$|\.xml$)")
+ENFILES=$(echo "${ALLFILES}" | grep -E "\.en\.")
+OUTDATED=0
+TEXT=
+
+#echo "$ALLFILES"
+
+for file in $ENFILES; do
+  WARN=
+  #echo $file
+  # Get file extension
+  EXT="${file##*.}"
+  # remove "en.$EXT"
+  BASE=$(echo "${file}" | sed -E "s/\.[a-z][a-z]\.$EXT//")
+  LANGS_UP=$("${GIT_ROOT}"/tools/check-translation-status.sh -f "${file}" -o up)
+  #echo $BASE $LANGS_UP
+
+  # check whether previously up-to-date translations will be in this commit
+  for trans in $LANGS_UP; do
+    trans="$BASE.$trans.$EXT"
+    if ! $(echo "${ALLFILES}" | grep -Eq "^${trans}$" ); then
+      OUTDATED=$((${OUTDATED} + 1))
+      WARN="$WARN, $trans"
+    fi
+  done
+  WARN=$(echo $WARN | sed -E "s/^, //")
+  TEXT="${TEXT}|$file => $WARN"
+done
+
+if [ $OUTDATED -gt 0 ]; then
+  cat <<EOF >&2
+  === OUTDATE WARNING ===
+  Your commit caused $OUTDATED previously up-to-date translations 
+  to become outdated!
+
+  If you made non-content changes to the English base files, 
+  consider making a fake-commit to these translations:
+
+  - $(echo $TEXT | sed -E -e "s/^\|//" -e "s/\|/\n  - /g")
+
+  Read more: https://wiki.fsfe.org/TechDocs/Mainpage/Translations/Outdated
+
+EOF
+
+fi

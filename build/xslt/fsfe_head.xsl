@@ -163,7 +163,7 @@
     <!-- EXTRACT -->
     <!-- take a first extract which should be sufficient for most pages -->
     <xsl:variable name="extract1">
-      <!-- retreive the first 200 letters of the first p element after h1 -->
+      <!-- retrieve the first 200 letters of the first p element after h1 -->
       <xsl:value-of select="substring(normalize-space(body/h1[1]/following::p[1]),1,200)" />
     </xsl:variable>
     <!-- measure first extract length -->
@@ -180,7 +180,7 @@
         <!-- case: first extract is too short -->
         <xsl:otherwise>
           <xsl:variable name="extract2">
-            <!-- retreive the first 200 letters of the *second* p element after h1 -->
+            <!-- retrieve the first 200 letters of the *second* p element after h1 -->
             <xsl:value-of select="substring(normalize-space(body/h1[1]/following::p[2]),1,200)" />
           </xsl:variable>
           <!-- measure *second* extract length -->

@@ -10,6 +10,9 @@
 .PHONY: all .FORCE
 .FORCE:
 
+# This will be overwritten in the command line running this Makefile.
+build_env = development
+
 # -----------------------------------------------------------------------------
 # Update CSS files
 # -----------------------------------------------------------------------------
@@ -17,10 +20,12 @@
 # This step recompiles the less files into the final CSS files to be
 # distributed to the web server.
 
+ifneq ($(build_env),development)
 all: look/fsfe.min.css look/valentine.min.css
 look/%.min.css: $(shell find "look" -name '*.less')
 	echo "* Compiling $@"
 	lessc "look/$*.less" -x "$@"
+endif
 
 # -----------------------------------------------------------------------------
 # Update XSL stylesheets

@@ -1,153 +1,153 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-    <html>
-      <head>
-        <title>Kondig uw FSFE-gemeenschapsevenement aan</title>
-      </head>
-      <body>
-     
-        <h1>Kondig uw FSFE-gemeenschapsevenement aan</h1>
-
-        <div id="introduction">
-          <p>Gebruik het formulier hieronder om ieder evenement dat is gerelateerd aan een FSFE-activiteit aan te kondigen. Of het nu een ontmoeting, een lezing, een kraam op straat of een radio-podcast is: laat de gemeenschap en de wereld weten wat er gebeurt.</p>
-
-        </div>
-
-        <!--<h2>Registreer</h2>-->
-
-        <form action="/cgi-bin/registerevent.php" method="POST" class="register_event fsfe-form" enctype="multipart/form-data" role="form">
-          <!-- @TRANSLATORS: there is no need to translate the HTML 
-          attributes of the elements in this form, just the text between 
-          the '>' and '<'. 
-
-          An example:
-
-            <label><input type="checkbox" name="tags[]" value="localgroup" />talk</label>
-
-          can be translated to Spanish
-
-            <label><input type="checkbox" name="tags[]" value="localgroup" />grupo local</label>
-
-          Thank you! -->
-          <input name="register_event" type="hidden" />
-
-            <!--<fieldset id="register_event">-->
-
-            <label for="name" class="required">Uw naam<span class="star">*</span></label>
-            <input name="name" value="" required="required" type="text" />
-
-            <label for="email" class="required">Uw e-mail<span class="star">*</span></label>
-            <input name="email" value="" required="required" type="email" /> 
-
-            <p class="help-block">Uw persoonlijke informatie zal nooit worden gedeeld of verkocht. Het wordt alleen gebruikt om contact met u op te nemen als er vragen of problemen zijn.</p>
-
-            <div class="form-group">
-            <label for="lang">Taal van deze evenementregistratie<span class="star">*</span></label>
-            <!-- @Translators: There is no need to translate the list below -->
-            <select id="lang" name="lang" class="form-control" required="required">
-              <option></option>
-              <option value="ar">&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1617;&#1577;</option>
-              <option value="bg">Български</option>
-              <option value="bs">Bosanski</option>
-              <option value="ca">Català</option>
-              <option value="cs">Česky</option>
-              <option value="da">Dansk</option>
-              <option value="de">Deutsch</option>
-              <option value="el">Ελληνικά</option>
-              <option value="en">English</option>
-              <option value="es">Español</option>
-              <option value="et">Eesti</option>
-              <option value="fi">Suomi</option>
-              <option value="fr">Français</option>
-              <option value="hr">Hrvatski</option>
-              <option value="hu">Magyar</option>
-              <option value="it">Italiano</option>
-              <option value="mk">Mакедонски</option>
-              <option value="nb">Norsk (bokmål)</option>
-              <option value="nl">Nederlands</option>
-              <option value="nn">Norsk (nynorsk)</option>
-              <option value="pl">Polski</option>
-              <option value="pt">Português</option>
-              <option value="ro">Română</option>
-              <option value="ru">Русский</option>
-              <option value="sk">Slovenčina</option>
-              <option value="sl">Slovenščina</option>
-              <option value="sq">Shqip</option>
-              <option value="sr">Српски</option>
-              <option value="sv">Svenska</option>
-              <option value="tr">Türkçe</option>
-              <option value="uk">Українська</option>
-              <option value="zh">漢語</option>
-            </select>
-            
-            <p class="help-block">Maak alstublieft de taal duidelijk van de tekst die u zult invoegen in de titel en beschrijving. Dit zal ons team helpen bij het snel en foutloos uploaden van uw evenement. Mocht u een vertaling van uw evenement (hetgeen fantastisch zou zijn!) zou willen aanleveren maak daar dan alstublieft een aparte evenementregistratie van. Dank u!</p>
-            </div>
-
-            <!--<label for="groupname">Groepsnaam</label>
-            <input name="groupname" value="" type="text" />-->
-
-            <!--<label for="groupurl">Groep URL</label>
-            <input name="groupurl" value="" type="text" />-->
-
-            <label for="title" class="required">Titel van het evenement<span class="star">*</span></label>
-            <input name="title" value="" required="required" type="text" />
-                    <table>
-                            <tr>
-                            <td>
-                                    <label for="startdate" class="required">Startdatum<span class="star">*</span></label>
-                                    <input name="startdate" value="" required="required" type="date" placeholder="YYYY-MM-DD" />
-                            </td>
-                            <td>
-                                    <label for="enddate" >Einddatum</label>
-                                    <input name="enddate" value="" type="date" placeholder="YYYY-MM-DD" />
-                            </td>
-                            </tr>
-                    </table>
-            <label for="description" class="required">Beschrijving (gewoon tekst, geen HTML)<span class="star">*</span></label>
-            <textarea name="description" required="required"></textarea>
-
-            <p class="help-block">Leg alstublieft in het kort uit waar uw evenement over gaat, hoe men deel kan nemen en wan deelnemers kunnen verwachten. Als u uw evenement in een andere taal dan Engels registreet, overweeg dan alstublieft om ook een Engelse versie te upload.n <strong>om er zeker van te zijn dat we het begrijpen</strong>. Wees er alstublieft bewust van dat we (vanwege technische redenen) alleen Engelstalige evenementen tonen op onze voorpagina fsfe.org - elke andere taal zal alleen zichtbaar zijn op fsfe.org/events.</p>
-
-               <label for="tags">Kies een of meer trefwoorden:</label>*
-            
-            <div class="checkboxlist">
-                    <div class="checkbox"><label><input type="checkbox" name="tags[]" value="talk" />lezing</label></div>
-                    <div class="checkbox"><label><input type="checkbox" name="tags[]" value="panel" />panel</label></div>
-                    <div class="checkbox"><label><input type="checkbox" name="tags[]" value="infobooth" />infokraam</label></div>
-                    <div class="checkbox"><label><input type="checkbox" name="tags[]" value="localgroup" />lokale groep</label></div>
-                    <div class="checkbox"><label><input type="checkbox" name="tags[]" value="workshop" />werkgroep</label></div>
-                    <div class="checkbox"><label><input type="checkbox" name="tags[]" value="meeting" />ontmoeting</label></div>
-            </div>
-
-            <label for="url">Evenement URL (indien beschikbaar)</label>
-            <input name="url" value="" type="text" />
-
-            <!--<label for="location">Evenement locatie</label>
-            <input name="location" value="" type="text" />-->
-
-
-            <!-- Please give more guidance - make sure that the format is correct because these will be used to generate tags also -->
-
-            <label for="city">Stad<span class="star">*</span></label>
-            <input name="city" value="" required="required" type="text" />
-
-            <div class="form-group">
-              <label for="country">Land<span class="star">*</span></label>
-              <country-list />
-            </div>
-
-            <!--</fieldset>-->
-            <!-- Should help against spam -->
-                    
-            <input value="Voeg een evenement toe" name="submit" type="submit" />
-            <p class="help-block"><span class="star">*</span> = required fields</p>
-
-        </form>
-        
-        <p>Na het invullen van het formulier en het bevestigen met de "Voeg een evenement toe"-knop zal er een xml-bestand worden gegenereerd en aan ons worden verzonden. Na goedkeuring zal uw evenement binnen 48 uur worden geüpload zodat het verschijnt op fsfe.org en/of op fsfe.org/events. Wees u ervan bewust dat we alleen FSFE- en aan de FSFE-gemeenschap gerelateerde evenementen promoten en dus geen andere Vrije Software-activiteiten (ja, zonder uitzonderingen; hoe belangrijk ze ook mogen zijn).</p> 
-        
-        <p>Wees u ervan bewust dat op alle FSFE-evenementen onze <a href="https://fsfe.org/about/codeofconduct">gedragscode</a> van toepassing is, die aan alle deelnemers vriendelijk vraagt om excellent naar elkaar te zijn. Kondig uw evenement alstublieft niet aan als FSFE-evenement als u niet van plan bent onze gedragscode te implementeren.</p>
+        <html>
+          <head>
+            <title>Kondig uw FSFE-gemeenschapsevenement aan</title>
+          </head>
+          <body>
          
-      </body>
-  <translator>André Ockers</translator>
-     </html>
+            <h1>Kondig uw FSFE-gemeenschapsevenement aan</h1>
+
+            <div id="introduction">
+              <p>Gebruik het formulier hieronder om ieder evenement dat is gerelateerd aan een FSFE-activiteit aan te kondigen. Of het nu een ontmoeting, een lezing, een kraam op straat of een radio-podcast is: laat de gemeenschap en de wereld weten wat er gebeurt.</p>
+
+            </div>
+
+            <!--<h2>Registreer</h2>-->
+
+            <form action="/cgi-bin/registerevent.php" method="POST" class="register_event fsfe-form" enctype="multipart/form-data" role="form">
+              <!-- @TRANSLATORS: there is no need to translate the HTML 
+              attributes of the elements in this form, just the text between 
+              the '>' and '<'. 
+
+              An example:
+
+                <label><input type="checkbox" name="tags[]" value="localgroup" />talk</label>
+
+              can be translated to Spanish
+
+                <label><input type="checkbox" name="tags[]" value="localgroup" />grupo local</label>
+
+              Thank you! -->
+              <input name="register_event" type="hidden" />
+
+                <!--<fieldset id="register_event">-->
+
+                <label for="name" class="required">Uw naam<span class="star">*</span></label>
+                <input name="name" value="" required="required" type="text" />
+
+                <label for="email" class="required">Uw e-mail<span class="star">*</span></label>
+                <input name="email" value="" required="required" type="email" /> 
+
+                <p class="help-block">Uw persoonlijke informatie zal nooit worden gedeeld of verkocht. Het wordt alleen gebruikt om contact met u op te nemen als er vragen of problemen zijn.</p>
+
+                <div class="form-group">
+                <label for="lang">Taal van deze evenementregistratie<span class="star">*</span></label>
+                <!-- @Translators: There is no need to translate the list below -->
+                <select id="lang" name="lang" class="form-control" required="required">
+                  <option></option>
+                  <option value="ar">&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1617;&#1577;</option>
+                  <option value="bg">Български</option>
+                  <option value="bs">Bosanski</option>
+                  <option value="ca">Català</option>
+                  <option value="cs">Česky</option>
+                  <option value="da">Dansk</option>
+                  <option value="de">Deutsch</option>
+                  <option value="el">Ελληνικά</option>
+                  <option value="en">English</option>
+                  <option value="es">Español</option>
+                  <option value="et">Eesti</option>
+                  <option value="fi">Suomi</option>
+                  <option value="fr">Français</option>
+                  <option value="hr">Hrvatski</option>
+                  <option value="hu">Magyar</option>
+                  <option value="it">Italiano</option>
+                  <option value="mk">Mакедонски</option>
+                  <option value="nb">Norsk (bokmål)</option>
+                  <option value="nl">Nederlands</option>
+                  <option value="nn">Norsk (nynorsk)</option>
+                  <option value="pl">Polski</option>
+                  <option value="pt">Português</option>
+                  <option value="ro">Română</option>
+                  <option value="ru">Русский</option>
+                  <option value="sk">Slovenčina</option>
+                  <option value="sl">Slovenščina</option>
+                  <option value="sq">Shqip</option>
+                  <option value="sr">Српски</option>
+                  <option value="sv">Svenska</option>
+                  <option value="tr">Türkçe</option>
+                  <option value="uk">Українська</option>
+                  <option value="zh">漢語</option>
+                </select>
+                
+                <p class="help-block">Maak alstublieft de taal duidelijk van de tekst die u zult invoegen in de titel en beschrijving. Dit zal ons team helpen bij het snel en foutloos uploaden van uw evenement. Mocht u een vertaling van uw evenement (hetgeen fantastisch zou zijn!) zou willen aanleveren maak daar dan alstublieft een aparte evenementregistratie van. Dank u!</p>
+                </div>
+
+                <!--<label for="groupname">Groepsnaam</label>
+                <input name="groupname" value="" type="text" />-->
+
+                <!--<label for="groupurl">Groep URL</label>
+                <input name="groupurl" value="" type="text" />-->
+
+                <label for="title" class="required">Titel van het evenement<span class="star">*</span></label>
+                <input name="title" value="" required="required" type="text" />
+                        <table>
+                                <tr>
+                                <td>
+                                        <label for="startdate" class="required">Startdatum<span class="star">*</span></label>
+                                        <input name="startdate" value="" required="required" type="date" placeholder="YYYY-MM-DD" />
+                                </td>
+                                <td>
+                                        <label for="enddate" >Einddatum</label>
+                                        <input name="enddate" value="" type="date" placeholder="YYYY-MM-DD" />
+                                </td>
+                                </tr>
+                        </table>
+                <label for="description" class="required">Beschrijving (gewoon tekst, geen HTML)<span class="star">*</span></label>
+                <textarea name="description" required="required"></textarea>
+
+                <p class="help-block">Leg alstublieft in het kort uit waar uw evenement over gaat, hoe men deel kan nemen en wan deelnemers kunnen verwachten. Als u uw evenement in een andere taal dan Engels registreert, overweeg dan alstublieft om ook een Engelse versie te uploaden <strong>om er zeker van te zijn dat we het begrijpen</strong>. Wees er alstublieft bewust van dat we (vanwege technische redenen) alleen Engelstalige evenementen tonen op onze voorpagina fsfe.org - elke andere taal zal alleen zichtbaar zijn op fsfe.org/events.</p>
+
+                   <label for="tags">Kies een of meer trefwoorden:</label>*
+                
+                <div class="checkboxlist">
+                        <div class="checkbox"><label><input type="checkbox" name="tags[]" value="talk" />lezing</label></div>
+                        <div class="checkbox"><label><input type="checkbox" name="tags[]" value="panel" />panel</label></div>
+                        <div class="checkbox"><label><input type="checkbox" name="tags[]" value="infobooth" />infokraam</label></div>
+                        <div class="checkbox"><label><input type="checkbox" name="tags[]" value="localgroup" />lokale groep</label></div>
+                        <div class="checkbox"><label><input type="checkbox" name="tags[]" value="workshop" />werkgroep</label></div>
+                        <div class="checkbox"><label><input type="checkbox" name="tags[]" value="meeting" />ontmoeting</label></div>
+                </div>
+
+                <label for="url">Evenement URL (indien beschikbaar)</label>
+                <input name="url" value="" type="text" />
+
+                <!--<label for="location">Evenement locatie</label>
+                <input name="location" value="" type="text" />-->
+
+
+                <!-- Please give more guidance - make sure that the format is correct because these will be used to generate tags also -->
+
+                <label for="city">Stad<span class="star">*</span></label>
+                <input name="city" value="" required="required" type="text" />
+
+                <div class="form-group">
+                  <label for="country">Land<span class="star">*</span></label>
+                  <country-list />
+                </div>
+
+                <!--</fieldset>-->
+                <!-- Should help against spam -->
+                        
+                <input value="Voeg een evenement toe" name="submit" type="submit" />
+                <p class="help-block"><span class="star">*</span> = required fields</p>
+
+            </form>
+            
+            <p>Na het invullen van het formulier en het bevestigen met de "Voeg een evenement toe"-knop zal er een xml-bestand worden gegenereerd en aan ons worden verzonden. Na goedkeuring zal uw evenement binnen 48 uur worden geüpload zodat het verschijnt op fsfe.org en/of op fsfe.org/events. Wees u ervan bewust dat we alleen FSFE- en aan de FSFE-gemeenschap gerelateerde evenementen promoten en dus geen andere Vrije Software-activiteiten (ja, zonder uitzonderingen; hoe belangrijk ze ook mogen zijn).</p> 
+            
+            <p>Wees u ervan bewust dat op alle FSFE-evenementen onze <a href="https://fsfe.org/about/codeofconduct">gedragscode</a> van toepassing is, die aan alle deelnemers vriendelijk vraagt om excellent naar elkaar te zijn. Kondig uw evenement alstublieft niet aan als FSFE-evenement als u niet van plan bent onze gedragscode te implementeren.</p>
+             
+          </body>
+      <translator>André Ockers</translator>
+         </html>

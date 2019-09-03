@@ -21,6 +21,17 @@ LANGUAGE=
 NO_ACT=0
 VERBOSE=0
 
+log()
+# log LVL MESSAGE
+{
+	local min_lvl="$1"
+	shift
+	if [[ VERBOSE -ge min_lvl ]]
+	then
+		echo "$@" >&2
+	fi
+}
+
 print_help()
 {
 	cat <<EOF >&2
@@ -28,7 +39,7 @@ Usage: tagstool OPTIONS -b|--bulk-process TAGSDATAFILE
        tagstool OPTIONS --find-tags TAG..
        tagstool OPTIONS --remove-empty-labels
        tagstool OPTIONS --remove-tags TAG..
-       tagstool OPTIONS --remove-tags OLD NEW
+       tagstool OPTIONS --rename-tags OLD NEW
        tagstool OPTIONS --set-label LABEL [--force] TAG
 
 Transform tag data by bulk.
@@ -47,12 +58,12 @@ Actions (only one action per invocation):
                            Available transformations:
                             - rm: delete tag
                             - mv:newtag: move the tag to a newtag
---find-tags                List all files containing the given tags.
+--find-tags TAG..          List all files containing the given tags.
                            If a non-empty language is given, the output is
                            limited to that language.
 --remove-empty-labels      Remove empty content attribute for tags.
                            Not affected by --language option.
---remove-tags TAGS..       Remove the given tags.
+--remove-tags TAG..        Remove the given tags.
 --rename-tag OLD NEW       Rename the OLD tag to NEW tag in all files.
 --set-label LABEL          Set the given label on all given tag.
                            The tag is given as positional parameter.
@@ -69,10 +80,7 @@ performAction()
 # If VERBOSE is set, also print the command.
 # Please use this for all actions that perform a change on the data!
 {
-	if [[ VERBOSE -eq 1 ]]
-	then
-		echo "${@@Q}" >&2
-	fi
+	log 1 "${@@Q}"
 	if [[ NO_ACT -eq 1 ]]
 	then
 		echo "NOT calling $1..." >&2
@@ -119,6 +127,7 @@ renameTag()
 	do
 		if ! fileIsLanguage "$f" "$LANGUAGE"
 		then
+			log 2 "Ignoring file (language filter): $f"
 			continue
 		fi
 		echo "  $f" >&2
@@ -138,14 +147,15 @@ removeTag()
 {
 	local tagId="$1"
 	echo "Deleting tag $tagId..." >&2
-	for f in $(findTaggedFiles "$oldTagId")
+	for f in $(findTaggedFiles "$tagId")
 	do
 		if ! fileIsLanguage "$f" "$LANGUAGE"
 		then
+			log 2 "Ignoring file (language filter): $f"
 			continue
 		fi
 		echo "  $f" >&2
-		if ! performAction sed -E -i "s;\W*<tag\W*content=\"[^\"]*\"\W*>\W*$TagId\W*</tag>\W*;;i" "$f"
+		if ! performAction sed -E -i "s;\W*<tag\W*(content=\"[^\"]*\"\W*)?>\W*$tagId\W*</tag>\W*;;i" "$f"
 		then
 			echo "ERROR!" >&2
 			return 1
@@ -171,6 +181,7 @@ setTagLabel()
 		# language is not empty
 		if ! fileIsLanguage "$f" "$LANGUAGE"
 		then
+			log 2 "Ignoring file (language filter): $f"
 			continue
 		fi
 		echo "  $f" >&2
@@ -248,6 +259,8 @@ action_findTags()
 			if fileIsLanguage "$f" "$LANGUAGE"
 			then
 				echo "$f"
+			else
+				log 2 "Ignoring file (language filter): $f"
 			fi
 		done
 	done | sort -u
@@ -327,7 +340,7 @@ while true ; do
 		--remove-tags) ACTION=action_removeTags ; shift ;;
 		--rename-tag) ACTION=action_renameTag ; shift ;;
 		--set-label) ACTION=action_setLabel ; LABEL="$2" ; shift 2 ;;
-		-v|--verbose) VERBOSE=1 ; shift ;;
+		-v|--verbose) let VERBOSE++ ; shift ;;
 		--) shift ; break ;;
 		*) echo "Internal error!" ; exit 1 ;;
 	esac

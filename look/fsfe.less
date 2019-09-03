@@ -206,6 +206,75 @@ img.signatory-logo {
             }
         }
 
+        #slidbria {
+            background: url('/graphics/slider-banner-FrancescaBria.png') left 33% no-repeat #666;
+            background-size: cover;
+            text-shadow: 0px 1px 8px rgb(0, 0, 0);
+
+            .author:before {
+                content: "– ";
+            }
+
+            .author, .text {
+                display: block;
+            }
+
+            .author {
+                font-size: 0.8em;
+            }
+
+            .text {
+                .quote;
+                padding: 40% 0 4%;
+                font-size: 1em;
+            }
+
+            @media (min-width: 480px) {
+                .text {
+                    margin-left: 48%;
+                    padding: 0 0 4%;
+                }
+            }
+
+            @media (min-width:525px) {
+                .text {
+                    padding: 0 0 8%;
+                }
+            }
+
+            @media (min-width:550px) {
+                .author {
+                    margin-left: 40%;
+                }
+                .author, .text {
+                    padding: 0.5em;
+                }
+                .text {
+                    margin-left: 50%;
+                }
+            }
+
+            @media (min-width: @screen-md-min) {
+                .author {
+                    font-size: 1em;
+                    padding-top: 0;
+                }
+                .author, .text {
+                    margin-left: 48%;
+                }
+                .text {
+                    font-size: 1.25em;
+                }
+            }
+
+            .copyright {
+                font-size: 0.6em;
+                position: absolute;
+                bottom: 4px;
+                right: 4px;
+            }
+        }
+
         #amaelle {
             background: url('/graphics/amaelle.jpg') center 33% no-repeat #666;
             background-size: cover;
@@ -1081,13 +1150,25 @@ video#freeyourandroid {
 
 .more-news {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: .75em;
     margin-top: 2rem;
 
     a.learn-more {
         font-size: 1.3em;
         font-weight: bold;
+        line-height: 1.5;
         white-space: nowrap;
+    }
+
+    @media (min-width: @screen-sm-min) {
+        flex-direction: row;
+        gap: 0;
+        justify-content: space-between;
+
+        a.learn-more {
+            line-height: 1;
+        }
     }
 }
 

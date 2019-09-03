@@ -5,17 +5,17 @@
   <xsl:template name="fsfe_pageheader">
     <xsl:element name="header">
       <xsl:attribute name="id">top</xsl:attribute>
-  
+
       <xsl:element name="nav">
         <xsl:attribute name="id">menu</xsl:attribute>
-  
+
         <xsl:element name="div">
           <xsl:attribute name="id">direct-links</xsl:attribute>
-  
+
           <xsl:element name="span">
             <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'go-to'" /></xsl:call-template>
           </xsl:element>
-  
+
           <xsl:element name="a">
             <xsl:attribute name="href">#menu-list</xsl:attribute>
             <xsl:attribute name="id">direct-to-menu-list</xsl:attribute>
@@ -24,19 +24,19 @@
             </xsl:element>
             <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'menu'" /></xsl:call-template>
           </xsl:element>
-  
+
           <xsl:element name="a">
             <xsl:attribute name="href">#content</xsl:attribute>
             <xsl:attribute name="id">direct-to-content</xsl:attribute>
             <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'content'" /></xsl:call-template>
           </xsl:element>
-  
+
           <xsl:element name="a">
             <xsl:attribute name="href">#full-menu</xsl:attribute>
             <xsl:attribute name="id">direct-to-full-menu</xsl:attribute>
             <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'sitemap'" /></xsl:call-template>
           </xsl:element>
-  
+
           <xsl:element name="a">
             <xsl:attribute name="href">#source</xsl:attribute>
             <xsl:attribute name="id">direct-to-source</xsl:attribute>
@@ -60,7 +60,7 @@
               </xsl:element>
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fellowship/login'" /></xsl:call-template>
           </xsl:element>
- 
+
           <xsl:element name="a">
             <xsl:attribute name="href">#translations</xsl:attribute>
             <xsl:attribute name="id">direct-to-translations</xsl:attribute>
@@ -71,10 +71,10 @@
             </xsl:element>
             <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'change-lang'" /></xsl:call-template>
           </xsl:element>
-  
+
         </xsl:element>
         <!--/div#direct-links-->
-  
+
         <xsl:element name="ul">
           <xsl:attribute name="id">menu-list</xsl:attribute>
           <xsl:element name="li">
@@ -109,14 +109,14 @@
           </xsl:element>
         </xsl:element>
         <!--/ul#menu-list-->
-  
+
       </xsl:element>
       <!--/nav#menu-->
-  
-  
+
+
       <xsl:element name="div">
         <xsl:attribute name="id">masthead</xsl:attribute>
-  
+
         <xsl:element name="div">
           <xsl:attribute name="id">link-home</xsl:attribute>
           <xsl:element name="a">
@@ -125,7 +125,7 @@
           </xsl:element>
         </xsl:element>
         <!--/div#link-home-->
-  
+
         <xsl:element name="div">
           <xsl:attribute name="id">logo</xsl:attribute>
           <xsl:element name="span">
@@ -133,17 +133,16 @@
             </xsl:element>
         </xsl:element>
         <!--/div#logo-->
-  
+
         <xsl:element name="div">
           <xsl:attribute name="id">motto</xsl:attribute>
-          <xsl:element name="span"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'motto-fsfs'" /></xsl:call-template></xsl:element>
-          <!-- TODO different motto content depending on planet (use 'motto-planet'), wiki (use 'motto-wiki'), or fsfe dot org, page, so we may have to change this to another way-->
+          empowering users<br class="motto-br" /> to control technology
         </xsl:element>
         <!--/div#motto-->
-  
+
       </xsl:element>
       <!--/div#masthead-->
-  
+
     </xsl:element>
     <!--/header#top-->
   </xsl:template>

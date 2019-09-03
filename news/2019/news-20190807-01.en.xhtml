@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html newsdate="2019-08-07">
+<head>
+  <title>REUSE makes copyright and licensing easier than ever</title>
+  <meta name="image" content="https://fsfe.org/picturebase/miscellaneous/201908-reuse-tool.png" />
+</head>
+<body>
+
+<h1>
+  REUSE makes copyright and licensing easier than ever
+</h1>
+
+<p newsteaser="yes">REUSE helps developers to declare copyright and licensing of their projects. Today, the REUSE project released version 3.0 of their specification. The new edition is accompanied by a helper tool and makes adopting the best practices easier than ever.</p>
+
+<p>The licensing of a software project is critical information. Developers set the terms under which others can reuse their software, from individuals to giant corporations. Authors want to make sure that others adhere to their chosen licenses; potential re-users have to know the license of third-party software before publication; and companies have to ensure license compliance in their products that often build on top of existing projects. The <a href="https://reuse.software">REUSE</a> project, led by the Free Software Foundation Europe (FSFE), helps all of these parties.</p>
+
+<figure>
+  <img src="/picturebase/miscellaneous/201908-reuse-tool.png" alt="Output of the REUSE helper tool" />
+  <figcaption>Output of the REUSE helper tool</figcaption>
+</figure>
+
+<p>REUSE aims to have all copyright and licensing information stored as close to the source files as possible. This is achieved by directly adding this information to the file in a standardised and machine-readable form. If a file does not support that, a <code>.license</code> file or central DEP-5 configuration file can be used instead. This way, developers can be assured that re-users will not oversee copyright holders and their intended license.</p>
+
+<p>Following the best practices is simple:</p>
+
+<ol>
+  <li>Choose and provide licenses: Select a Free Software license, find the unique identifier of this license, and store the full license text inside a dedicated <code>LICENSES/</code> directory.</li>
+  <li>Add copyright and licensing information to each file: Add at least two lines indicating the copyright holder and the license.</li>
+  <li>Confirm REUSE compliance: Use the REUSE tool to check whether all necessary information is present.</li>
+</ol>
+
+<p>Adopters can start with a new <a href="https://reuse.software/tutorial">tutorial</a> that explains how to make a repository REUSE compliant. To ensure that developers can concentrate on their actual work, we have developed the <a href="https://git.fsfe.org/reuse/tool/">REUSE helper tool</a> that automates and assists with some of these steps. It can also be <a href="https://reuse.software/dev">included in CI/CD workflows</a> to confirm REUSE compliance continuously.</p>
+
+<p>Our constantly expanding <a href="https://reuse.software/faq">FAQ</a> answers basic questions about licensing, copyright, and more complex use cases. Advanced users and integrators will find the <a href="https://reuse.software/spec">full specification</a> helpful.</p>
+
+<p>And there is more to come: The REUSE initiative will continue its work on making copyright and licensing easier for everyone. Our roadmap includes configurable templates for adding the headers with the helper tool, as well as an API that for example allows projects to display a dynamic badge indicating the REUSE status, or third-party services to integrate REUSE checks.</p>
+
+<p>REUSE is already being used by various software projects like the <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/process/license-rules.rst">Linux kernel</a>, and recommended by other license compliance initiatives like <a href="https://www.openchainproject.org/news/2017/09/13/fsfe-contributes-reuse-guide-to-openchain-curriculum">OpenChain</a>. We welcome other developers to adopt REUSE and look forward to feedback and collaboration. Please <a href="/contact">contact us</a> and join the <a href="https://lists.fsfe.org/mailman/listinfo/reuse">mailing list</a>.</p>
+
+</body>
+  
+ <tags>
+  <tag>front-page</tag>
+  <tag content="REUSE">reuse</tag>
+  <tag content="Licensing">licensing</tag>
+  <tag content="Copyright">copyright</tag>
+ </tags>
+
+<author id="bakker" />
+<author id="mehl" />
+
+<discussion href="https://community.fsfe.org/t/reuse-makes-copyright-and-licensing-easier-than-ever/307" />
+
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

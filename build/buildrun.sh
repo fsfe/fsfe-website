@@ -20,7 +20,7 @@ build_into(){
 
   {
     echo "Starting phase 1" \
-    && make --silent --directory="$basedir" 2>&1 \
+    && make --silent --directory="$basedir" build_env="${build_env:-development}" 2>&1 \
     && echo "Finishing phase 1" \
     || die "Error during phase 1"
   } | t_logstatus phase_1 || exit 1
@@ -42,7 +42,7 @@ build_into(){
   } | t_logstatus phase_2 || exit 1
 
   if [ "$stagedir" != "$target" ]; then
-    rsync -av --del "$stagedir/" "$target/" | t_logstatus stagesync
+    rsync -av --copy-unsafe-links --del "$stagedir/" "$target/" | t_logstatus stagesync
   fi
 
   date +%s > "$(logname end_time)"

@@ -39,7 +39,7 @@ if ($query->param("url")) {
 
 my $name = decode("utf-8", $query->param("name"));
 my $address = decode("utf-8", $query->param("address"));
-my $country = $query->param("country");
+my $country = decode("utf-8", $query->param("country"));
 my ($country_code, $country_name) = split /\|/, $country;
 my $email = decode("utf-8", $query->param("email"));
 my $phone = decode("utf-8", $query->param("phone"));

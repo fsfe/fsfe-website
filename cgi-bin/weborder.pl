@@ -46,22 +46,13 @@ my $email = decode("utf-8", $query->param("email"));
 my $phone = decode("utf-8", $query->param("phone"));
 my $language = $query->param("language");
 
-# Calculate shipping fees based on country codes from drop-down list
-my @eu = ('AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 
-          'LV', 'LT', 'LU', 'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'GB');
-
+# Determine shipping fees based on country code from drop-down list
 my $shipping;
 
-given ($country_code) {
-  when ($_ eq 'DE') {
-    $shipping = 3;
-  }
-  when ($_ ~~ @eu) {
-    $shipping = 7;
-  }
-  default {
-    $shipping = 12;
-  }
+if ($country_code == 'DE') {
+  $shipping = 5;
+} else {
+  $shipping = 8;
 }
 
 # Remove all parameters except for items and prices.

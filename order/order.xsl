@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+  <xsl:import href="../tools/xsltsl/countries.xsl" />
   <xsl:import href="../fsfe.xsl" />
 
   <!-- Fill dynamic content -->
@@ -148,6 +149,14 @@
         </xsl:element>
       </xsl:for-each>
     </xsl:element>
+  </xsl:template>
+
+  <!-- Dropdown list of countries requiring a choice -->
+  <xsl:template match="country-list">
+    <xsl:call-template name="country-list">
+      <xsl:with-param name="class" select="'form-control'"/>
+      <xsl:with-param name="required" select="'yes'"/>
+    </xsl:call-template>
   </xsl:template>
 
 </xsl:stylesheet>

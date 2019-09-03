@@ -24,7 +24,6 @@ use POSIX qw(strftime);
 use Digest::SHA qw(sha1_hex);
 use MIME::Lite;
 use utf8;
-use 5.010;
 
 # -----------------------------------------------------------------------------
 # Get parameters

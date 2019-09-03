@@ -48,7 +48,7 @@ my $language = $query->param("language");
 # Determine shipping fees based on country code from drop-down list
 my $shipping;
 
-if ($country_code == 'DE') {
+if ($country_code eq 'DE') {
   $shipping = 5;
 } else {
   $shipping = 8;

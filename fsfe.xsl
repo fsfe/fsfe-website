@@ -44,7 +44,7 @@
   <!-- Static elements which can be included everywhere -->
   <xsl:template match="static-element">
     <xsl:variable name="id"><xsl:value-of select="@id"/></xsl:variable>
-    <xsl:copy-of select="/buildinfo/document/set/element[@id=$id]" />
+    <xsl:copy-of select="/buildinfo/document/set/element[@id=$id]/node()" />
   </xsl:template>
 
 </xsl:stylesheet>

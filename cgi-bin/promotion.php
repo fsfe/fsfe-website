@@ -111,20 +111,22 @@ function send_mail ( $to, $from, $subject, $msg, $bcc = NULL, $att = NULL, $att_
   return mail( $to, $subject, $message, $headers );
 }
 
-# send information to mail-signup.php if user wished to sign up to community mails or newsletter
-function mail_signup($data) {
-  $url = $_SERVER['REQUEST_SCHEME']. '://' . $_SERVER['HTTP_HOST'] . '/cgi-bin/mail-signup.php';
-  $context = stream_context_create(
-    array(
-      'http' => array(
-        'method' => 'POST',
-        'header' => 'Content-type: application/x-www-form-urlencoded',
-        'content' => http_build_query($data),
-        'timeout' => 10
-      )
-    )
+/**
+ * Calls the "mail-signup" script with the data.
+ * 
+ * Sends the script into the background to
+ * handle the request asynchronously.
+ * 
+ * @param array $data
+ * @see mail-signup.php
+ */
+function mail_signup(array $data) {
+  $cmd = sprintf(
+    'php %s %s > /dev/null &',
+    __DIR__ . '/mail-signup.php',
+    escapeshellarg(json_encode($data))
   );
-  file_get_contents($url, FALSE, $context);
+  exec($cmd);
 }
 
 $lang = $_POST['language'];
@@ -208,12 +210,21 @@ if (!empty($_POST['org'])) {
 $address .= $_POST['street'] . "\\n" .
             $_POST['zip'] . " " . $_POST['city'] . "\\n" .
             $countryname;
-$name = escapeshellarg($name);
-$address = escapeshellarg($address);
-shell_exec("$odtfill $template $outfile Name=$name Address=$address Name=$name");
+$cmd = sprintf(
+  '%s %s %s %s %s %s',
+  $odtfill,
+  $template,
+  $outfile,
+  'Name=' . escapeshellarg($name),
+  'Address=' . escapeshellarg($address),
+  'Name=' . escapeshellarg($name)
+);
+shell_exec($cmd);
 
 # Make subscriptions to newsletter/community mails
-if ($_POST['subcd'] == "y") {
+$subcd = isset($_POST['subcd']) ? $_POST['subcd'] : false;
+$subnl = isset($_POST['subnl']) ? $_POST['subnl'] : false;
+if ($subcd == "y") {
   $signupdata = array(
     'list' => 'community',
     'name' => $_POST['firstname'] . " " . $_POST['lastname'],
@@ -222,6 +233,15 @@ if ($_POST['subcd'] == "y") {
     'zip' => $_POST['zip'],
     'city' => $_POST['city'],
     'country' => $countrycode
+  );
+  mail_signup($signupdata);
+}
+if ($subnl == "y") {
+  $signupdata = array(
+    'list' => 'newsletter',
+    'name' => $_POST['firstname'] . " " . $_POST['lastname'],
+    'mail' => $_POST['mail'],
+    'lang' => $_POST['language']
   );
   mail_signup($signupdata);
 }
@@ -234,6 +254,7 @@ $test = send_mail ("contact@fsfe.org", $_POST['firstname'] . " " . $_POST['lastn
 if (isset($_POST['donate']) && ((int) $_POST['donate']) >= 5) {
   relay_donation($_POST['donationID']);
 } else {
+  // DEBUG: Comment out next line to be able to see errors and printed info
   header("Location: http://fsfe.org/contribute/spreadtheword-orderthanks.$lang.html");
 }
 

@@ -1,33 +1,93 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <html>
-  <head>
-    <title>FSFE – Meldungsarchiv</title>
-    <link rel="alternate" type="application/rss+xml"
-      title="FSFE – Neuigkeiten"
-      href="http://www.fsfeurope.org/news/news.de.rss"/>
-  </head>
+<head>
+  <title>News - FSFE</title>
+</head>
 
-  <body class="article" microformats="h-entry">
-    <h1 class="p-name">Meldungsarchiv</h1>
-    <include-news/>
-  </body>
+<body class="toplevel article">
+<h1>News</h1>
 
-  <sidebar promo="none">
-    <h2><i class="fa fa-rss"></i></h2>
+<div class="news-follow-us">
+  <div class="share-top-buttons-label">Folge uns:</div>
+  <div class="share-buttons-top">
+    <a target="_blank" href="newsletter.html">
+      <button class="share-button-top share-mail">Newsletter</button>
+    </a>
+    <a target="_blank" href="news.rss">
+      <button class="share-button-top share-rss">RSS Feed</button>
+    </a>
+    <a target="_blank" href="https://mastodon.social/@fsfe">
+      <button class="share-button-top share-mastodon">Mastodon</button>
+    </a>
+    <a target="_blank" href="https://diasp.eu/u/fsfe">
+      <button class="share-button-top share-diaspora">Diaspora</button>
+    </a>
+    <a target="_blank" href="https://twitter.com/fsfe">
+      <button class="share-button-top share-twitter">Twitter</button>
+    </a>
+    <a target="_blank" href="https://facebook.com/thefsfe">
+      <button class="share-button-top share-facebook">Facebook</button>
+    </a>
+  </div>
+</div>
+
+<include-news/>
+
+<h2><a href="2017/index.html">News-Archiv</a></h2>
+<p>
+  Ältere News finden sich in unserem News-Archiv
+  <a class="learn-more" href="2017/index.html"/>
+</p>
+</body>
+
+<sidebar promo="none">
+  <div class="news-sidebar">
+    <h2>News Abo</h2>
     <p>
-      Diese Seite ist ein Archiv regelmäßiger Meldungen, die die FSFE über
-      ihre Kampagnen und Aktivitäten veröffentlicht. Sie können unsere
-      <a href="/press/index.html">Mailingliste für Pressemitteilungen</a>
-      abonnieren, um Pressemitteilungen automatisch zugeschickt zu bekommen.
-      Ebenfalls erhältlich ist unser <a href="newsletter.html">monatlicher
-      Newsletter</a>. Weltweite Neuigkeiten zu Freier Software ist von den
-      <a href="/about/fsfnetwork.html">Schwesterorganisationen der FSFE</a>
-      erhältlich.
-      <a href="news.rss" class="feed">RSS-Feed der Meldungen</a>
+      Um auf dem Laufenden zu bleiben, abonniere unseren
+      <a href="news.rss">RSS Feed</a> oder unseren
+      <a href="newsletter.html">Newsletter</a>.
     </p>
-  </sidebar>
 
-  <text id="more">Mehr …</text>
-  <timestamp>$Date$ $Author$</timestamp>
+    <div class="share-buttons-sidebar">
+      <a target="_blank" href="newsletter.html">
+        <button class="share-button-sidebar share-mail">Newsletter</button>
+      </a>
+      <a target="_blank" href="news.rss">
+        <button class="share-button-sidebar share-rss">RSS Feed</button>
+      </a>
+    </div>
+
+    <h2>Soziale Medien</h2>
+
+    <p>
+      Für weitere Meldungen folge uns auf
+      <a href="https://mastodon.social/@fsfe">Mastodon</a>,
+      <a href="https://diasp.eu/u/fsfe">Diaspora</a>,
+      <a href="https://twitter.com/fsfe">Twitter</a> und
+      <a href="https://facebook.com/thefsfe">Facebook</a>.
+    </p>
+
+    <div class="share-buttons-sidebar">
+      <a target="_blank" href="https://mastodon.social/@fsfe">
+        <button class="share-button-sidebar share-mastodon">Mastodon</button>
+      </a>
+      <a target="_blank" href="https://diasp.eu/u/fsfe">
+        <button class="share-button-sidebar share-diaspora">Diaspora</button>
+      </a><br/>
+      <a target="_blank" href="https://twitter.com/fsfe">
+        <button class="share-button-sidebar share-twitter">Twitter</button>
+      </a>
+      <a target="_blank" href="https://facebook.com/thefsfe">
+        <button class="share-button-sidebar share-facebook">Facebook</button>
+      </a>
+    </div>
+
+    <hr/>
+
+    <static-element id="video" />
+  </div>
+</sidebar>
+<translator>Michael Weimann</translator>
 </html>

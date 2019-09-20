@@ -615,6 +615,7 @@
     <name>André Ockers</name>
     <country>NL</country>
     <function volunteers="translators-nl">deputy/m</function>
+    <function country="NL">deputy/m</function>
     <team>core</team>
     <team>translation-coordinators</team>
     <email>ao (at) fsfe (dot) org</email>
@@ -679,6 +680,15 @@
     <name>Cristian Rigamonti</name>
     <email>cri (at) fsfe (dot) org</email>
     <avatar>/about/rigamonti/rigamonti-avatar.jpg</avatar>
+  </person>
+
+  <person id="rikken">
+    <name>Nico Rikken</name>
+    <country>NL</country>
+    <function country="NL">coordinator/m</function>
+    <team>core</team>
+    <team>nl</team>
+    <email>nico.rikken (at) fsfe (dot) org</email>
   </person>
 
   <person id="roussos">
@@ -801,8 +811,6 @@
   <person id="stegerman">
     <name>Felix Stegerman</name>
     <country>NL</country>
-    <function country="NL">deputy/m</function>
-    <team>core</team>
     <team>nl</team>
     <email>flx (at) fsfe (dot) org</email>
     <link>https://wiki.fsfe.org/Fellows/flx</link>
@@ -847,8 +855,6 @@
   <person id="verheesen">
     <name>Maurice Verheesen</name>
     <country>NL</country>
-    <function country="NL">coordinator/m</function>
-    <team>core</team>
     <team>nl</team>
     <email>mho (at) fsfe (dot) org</email>
     <link>http://mauriceverheesen.nl/</link>

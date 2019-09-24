@@ -248,7 +248,7 @@ div#subpages, .grid-row {
         padding: .5em;
     }
 
-    #direct-to-menu-list, #direct-to-translations, #direct-to-login, #direct-to-join {
+    #direct-to-menu-list, #direct-to-translations, #direct-to-login {
         visibility: visible;
         display: inline-block;
 
@@ -273,12 +273,6 @@ div#subpages, .grid-row {
     #direct-to-translations, #direct-to-menu-list {display: none;}
 }
 
-@media (min-width: @screen-xs-min) {
-    #menu-list, #search {
-        display: inline-block;
-    }
-}
-
 #menu-list {
     .list-no-style;
     .collapse;
@@ -286,7 +280,6 @@ div#subpages, .grid-row {
 
     @media (min-width: @screen-xs-min) {
         .collapse.in;
-        display: inline-block;
         padding-bottom: 0.5em;
     }
 
@@ -297,7 +290,7 @@ div#subpages, .grid-row {
             .btn;
             font-weight: 400;
 
-            @media (min-width: @screen-md-min) {
+            @media (min-width: @screen-lg-min) {
                 .btn-lg;
             }
         }

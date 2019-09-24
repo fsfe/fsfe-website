@@ -44,15 +44,6 @@
           </xsl:element>
 
           <xsl:element name="a">
-              <xsl:attribute name="href">https://my.fsfe.org/support</xsl:attribute>
-              <xsl:attribute name="id">direct-to-join</xsl:attribute>
-              <xsl:element name="i">
-                <xsl:attribute name="class">fa fa-user-plus fa-lg</xsl:attribute>
-              </xsl:element>
-              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'support/become'" /></xsl:call-template>
-          </xsl:element>
-
-          <xsl:element name="a">
               <xsl:attribute name="href">https://my.fsfe.org/</xsl:attribute>
               <xsl:attribute name="id">direct-to-login</xsl:attribute>
               <xsl:element name="i">
@@ -95,6 +86,9 @@
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfe/campaigns'" /></xsl:call-template>
             </xsl:element>
           </xsl:element>
+          <xsl:element name="br">
+            <xsl:attribute name="class">hidden-lg</xsl:attribute>
+          </xsl:element>
           <xsl:element name="li">
             <xsl:element name="a">
               <xsl:attribute name="href">/contribute/contribute.html</xsl:attribute>
@@ -105,6 +99,12 @@
             <xsl:element name="a">
               <xsl:attribute name="href">/press/press.html</xsl:attribute>
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfe/press'" /></xsl:call-template>
+            </xsl:element>
+          </xsl:element>
+          <xsl:element name="li">
+            <xsl:element name="a">
+              <xsl:attribute name="href">https://my.fsfe.org/donate</xsl:attribute>
+              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'donate'" /></xsl:call-template>
             </xsl:element>
           </xsl:element>
         </xsl:element>

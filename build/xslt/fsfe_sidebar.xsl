@@ -105,7 +105,7 @@
           <xsl:call-template name="fsfe-gettext">
             <xsl:with-param name="id" select="'donate-paragraph'" />
           </xsl:call-template>
-          <a href="/donate/donate.html#ref-sidebar" class="learn-more big-donate">
+          <a href="https://my.fsfe.org/donate" class="learn-more big-donate">
             <xsl:call-template name="fsfe-gettext">
               <xsl:with-param name="id" select="'donate'" />
           </xsl:call-template></a>

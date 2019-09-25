@@ -5,17 +5,11 @@
 /* fsfe.org pages */
 
 body {
-    background: url(/graphics/fellowship/plussy_tile_03.png) top left fixed #F9F9F9;
-    font-family: "Roboto", sans-serif;
-}
-.svg body {
     background: url(/graphics/fellowship/plussy_tile_03.svg) top left fixed #F9F9F9;
+    font-family: "Roboto", sans-serif;
 }
 
 #logo {
-    background: url(/graphics/logo_transparent.png) top left no-repeat;
-}
-.svg #logo {
     background: url(/graphics/logo_transparent.svg) top left no-repeat;
 }
 
@@ -117,15 +111,9 @@ body {
 }
 
 #followup {
-    background: url(/graphics/ribbon.png) no-repeat 100% -40px @body-bg;
+    background: url(/graphics/ribbon.svg) no-repeat 100% -40px @body-bg;
     text-shadow: rgb(255, 255, 255) 0 0 .5em;
 
-    @media (min-width: @screen-sm-min) {
-        background: url(/graphics/ribbon.png) no-repeat 100% -70px @body-bg;
-    }
-}
-
-.svg #followup {
     @media (min-width: @screen-sm-min) {
         background: url(/graphics/ribbon.svg) no-repeat 100% -70px @body-bg;
     }
@@ -133,6 +121,7 @@ body {
 
 #followup.join {
     background: url(/graphics/fellowship/ribbon_fellowship2.png) no-repeat 100% -30px @body-bg;
+
     @media (min-width: @screen-sm-min) {
         background: url(/graphics/fellowship/ribbon_fellowship2.png) no-repeat 100% -50% @body-bg;
     }
@@ -707,28 +696,17 @@ ul.archivetaglist li:first-child {padding-left: 0; }
 
 .valentine-ilovefs {
     #logo {
-        background: url(/graphics/logov.png) top left no-repeat;
-    }
-    .svg #logo {
         background: url(/graphics/logov.svg) top left no-repeat;
     }
 
     #followup {
-        background: url(/graphics/ribbonv.png) no-repeat 100% -40px @body-bg;
+        background: url(/graphics/ribbonv.svg) no-repeat 100% -40px @body-bg;
 
         @media (min-width: @screen-sm-min) {
-            background: url(/graphics/ribbonv.png) no-repeat 100% -70px @body-bg;
+            background: url(/graphics/ribbonv.svg) no-repeat 100% -70px @body-bg;
         }
     }
 }
-
-.svg .valentine-ilovefs #followup {
-    @media (min-width: @screen-sm-min) {
-        background: url(/graphics/ribbonv.svg) no-repeat 100% -70px @body-bg;
-    }
-}
-
-
 
 /* Planet style */
 

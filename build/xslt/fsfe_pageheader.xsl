@@ -86,8 +86,9 @@
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfe/campaigns'" /></xsl:call-template>
             </xsl:element>
           </xsl:element>
-          <xsl:element name="br">
+          <xsl:element name="li">
             <xsl:attribute name="class">hidden-lg</xsl:attribute>
+            <xsl:attribute name="style">display: block;</xsl:attribute>
           </xsl:element>
           <xsl:element name="li">
             <xsl:element name="a">

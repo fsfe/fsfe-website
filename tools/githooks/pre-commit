@@ -34,6 +34,54 @@ EOF
   exit $TESTS
 fi
 
+# CHECK FOR NEWLY INTRODUCED TAGS
+NEWTAGS=0
+FILES=""
+# test all newly staged (added) XML files in /news and /events
+for xmlfile in $(
+  git diff --staged --name-only | grep -E "^(news/|events/).*(\.xhtml$|\.xml$|\.xsl$)"
+); do
+  hit=0
+  tags=""
+  # go through all tags in this file
+  for tag in $(grep -Ei "<tag.*?>.+?</tag>" "${xmlfile}" | sed -E "s|.*<tag.*?>(.+?)</tag>.*|\1|g"); do
+    # check if this tag does exist in any other news/event item
+    if [ -z "$(git grep -irlE "<tag.*?>${tag}</tag>" news/ events/ | grep -v "${xmlfile}")" ]; then
+      hit=1
+      tags="${tag}, ${tags}"
+      NEWTAGS=$((${NEWTAGS} + 1))
+    fi
+  done
+  # if any new tag has been found, enlist them
+  if [ $hit != 0 ]; then
+    tags="${tags%, }"
+    FILES="${FILES}|${xmlfile} (new tag(s): ${tags})"
+  fi
+done
+
+if [ $NEWTAGS -gt 0 ]; then
+  cat <<EOF >&2
+  === NEW / DUPLICATED TAG(S) ===
+  Your commit introduced $NEWTAGS tag(s) which did not exist before in
+  our news or event items!
+  $(echo $FILES | sed -E -e "s/\|/\n  - /g")
+
+  Please make sure that you use already used tags, and only introduce a
+  new tag e.g. if it's about a new campaign that will be more often
+  mentioned in news or events. If you feel unsure, please ask
+  <web@lists.fsfe.org>.
+
+  Here you will find the currently used tags:
+  https://fsfe.org/tags/tags.html
+
+  Your commit has been executed anyway. Please make another commit to
+  replace a new tag with an already existing one unless you are really
+  sure. Thank you.
+
+EOF
+
+fi
+
 
 # CHECK TRANSLATIONS WHICH WILL BE OUTDATED
 ALLFILES=$(git diff --staged --name-only | grep -E "(\.xhtml$|\.xml$)")

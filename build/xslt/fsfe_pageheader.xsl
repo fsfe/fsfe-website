@@ -6,6 +6,31 @@
     <xsl:element name="header">
       <xsl:attribute name="id">top</xsl:attribute>
 
+      <xsl:element name="div">
+        <xsl:attribute name="id">masthead</xsl:attribute>
+
+        <xsl:element name="a">
+          <xsl:attribute name="id">logo</xsl:attribute>
+          <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/</xsl:attribute>
+          <xsl:element name="span">
+            <xsl:call-template name="fsfe-gettext">
+              <xsl:with-param name="id" select="'fsfeurope'"/>
+            </xsl:call-template>
+          </xsl:element>
+        </xsl:element>
+        <!--/a#logo-->
+
+        <xsl:element name="div">
+          <xsl:attribute name="id">motto</xsl:attribute>
+          <xsl:text>empowering users </xsl:text>
+          <xsl:element name="br"/>
+          <xsl:text>to control technology</xsl:text>
+        </xsl:element>
+        <!--/div#motto-->
+
+      </xsl:element>
+      <!--/div#masthead-->
+
       <xsl:element name="nav">
         <xsl:attribute name="id">menu</xsl:attribute>
 
@@ -113,36 +138,6 @@
 
       </xsl:element>
       <!--/nav#menu-->
-
-
-      <xsl:element name="div">
-        <xsl:attribute name="id">masthead</xsl:attribute>
-
-        <xsl:element name="div">
-          <xsl:attribute name="id">link-home</xsl:attribute>
-          <xsl:element name="a">
-            <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/</xsl:attribute>
-            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'rootpage'" /></xsl:call-template>
-          </xsl:element>
-        </xsl:element>
-        <!--/div#link-home-->
-
-        <xsl:element name="div">
-          <xsl:attribute name="id">logo</xsl:attribute>
-          <xsl:element name="span">
-                <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfeurope'" /></xsl:call-template>
-            </xsl:element>
-        </xsl:element>
-        <!--/div#logo-->
-
-        <xsl:element name="div">
-          <xsl:attribute name="id">motto</xsl:attribute>
-          empowering users<br class="motto-br" /> to control technology
-        </xsl:element>
-        <!--/div#motto-->
-
-      </xsl:element>
-      <!--/div#masthead-->
 
     </xsl:element>
     <!--/header#top-->

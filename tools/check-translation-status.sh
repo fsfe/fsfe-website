@@ -69,6 +69,13 @@ if [ ! -e "$EN" ]; then
   exit 2
 fi
 endate=$(git log --pretty="%cd" --date=raw -1 "$EN"|cut -d' ' -f1)
+
+# check if we have a git log of the EN base file. If not, abort
+if [ -z "${endate}" ]; then
+  out "EN file does not have any Git log. Ususally this means the file is new"
+  exit 0
+fi
+
 # Convert to YYYY-MM-DD
 ymd=$(date +"%Y-%m-%d" --date="@$endate")
 out "Basefile: $EN ( $ymd )"

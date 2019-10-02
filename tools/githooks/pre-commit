@@ -9,7 +9,7 @@ for xmlfile in $(
 ); do
   if [ -e "${xmlfile}" ]; then
     xmllint --noout --nonet "${xmlfile}"
-    TESTS=$((${TESTS} + $?))
+    TESTS=$((TESTS + $?))
   fi
 done
 
@@ -46,10 +46,10 @@ for xmlfile in $(
   # go through all tags in this file
   for tag in $(grep -Ei "<tag.*?>.+?</tag>" "${xmlfile}" | sed -E "s|.*<tag.*?>(.+?)</tag>.*|\1|g"); do
     # check if this tag does exist in any other news/event item
-    if [ -z "$(git grep -irlE "<tag.*?>${tag}</tag>" news/ events/ | grep -v "${xmlfile}")" ]; then
+    if ! git grep -irlE "<tag.*?>${tag}</tag>" news/ events/ | grep -vq "${xmlfile}"; then
       hit=1
       tags="${tag}, ${tags}"
-      NEWTAGS=$((${NEWTAGS} + 1))
+      NEWTAGS=$((NEWTAGS + 1))
     fi
   done
   # if any new tag has been found, enlist them
@@ -64,7 +64,7 @@ if [ $NEWTAGS -gt 0 ]; then
   === NEW / DUPLICATED TAG(S) ===
   Your commit introduced $NEWTAGS tag(s) which did not exist before in
   our news or event items!
-  $(echo $FILES | sed -E -e "s/\|/\n  - /g")
+  $(echo "${FILES}" | sed -E -e "s/\|/\n  - /g")
 
   Please make sure that you use already used tags, and only introduce a
   new tag e.g. if it's about a new campaign that will be more often
@@ -99,29 +99,29 @@ for file in $ENFILES; do
 
   # check whether previously up-to-date translations will be in this commit
   for trans in $LANGS_UP; do
-    trans="$BASE.$trans.$EXT"
-    if ! $(echo "${ALLFILES}" | grep -Eq "^${trans}$" ); then
-      OUTDATED=$((${OUTDATED} + 1))
-      WARN="$WARN, $trans"
+    trans="${BASE}.${trans}.${EXT}"
+    if ! echo "${ALLFILES}" | grep -Eq "^${trans}$"; then
+      OUTDATED=$((OUTDATED + 1))
+      WARN="${WARN}, ${trans}"
     fi
   done
-  WARN=$(echo $WARN | sed -E "s/^, //")
+  WARN=$(echo "${WARN}" | sed -E "s/^, //")
   # only add to list of outdated files if at least 1 warning has been found
-  if [ ! -z "${WARN}" ]; then
-    TEXT="${TEXT}|$file => $WARN"
+  if [ -n "${WARN}" ]; then
+    TEXT="${TEXT}|${file} => ${WARN}"
   fi
 done
 
 if [ $OUTDATED -gt 0 ]; then
   cat <<EOF >&2
   === OUTDATE WARNING ===
-  Your commit caused $OUTDATED previously up-to-date translations 
+  Your commit caused ${OUTDATED} previously up-to-date translations 
   to become outdated!
 
   If you made non-content changes to the English base files, 
   consider making a fake-commit to these translations:
 
-  - $(echo $TEXT | sed -E -e "s/^\|//" -e "s/\|/\n  - /g")
+  - $(echo "${TEXT}" | sed -E -e "s/^\|//" -e "s/\|/\n  - /g")
 
   Read more: https://wiki.fsfe.org/TechDocs/Mainpage/Translations/Outdated
 

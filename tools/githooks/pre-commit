@@ -89,17 +89,13 @@ ENFILES=$(echo "${ALLFILES}" | grep -E "\.en\.")
 OUTDATED=0
 TEXT=
 
-#echo "$ALLFILES"
-
 for file in $ENFILES; do
   WARN=
-  #echo $file
   # Get file extension
   EXT="${file##*.}"
   # remove "en.$EXT"
   BASE=$(echo "${file}" | sed -E "s/\.[a-z][a-z]\.$EXT//")
   LANGS_UP=$("${GIT_ROOT}"/tools/check-translation-status.sh -f "${file}" -o up)
-  #echo $BASE $LANGS_UP
 
   # check whether previously up-to-date translations will be in this commit
   for trans in $LANGS_UP; do

@@ -106,7 +106,10 @@ for file in $ENFILES; do
     fi
   done
   WARN=$(echo $WARN | sed -E "s/^, //")
-  TEXT="${TEXT}|$file => $WARN"
+  # only add to list of outdated files if at least 1 warning has been found
+  if [ ! -z "${WARN}" ]; then
+    TEXT="${TEXT}|$file => $WARN"
+  fi
 done
 
 if [ $OUTDATED -gt 0 ]; then

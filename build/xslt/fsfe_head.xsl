@@ -175,7 +175,7 @@
           <!-- if there is a meta "image", take that -->
           <xsl:when test="$metaimage != ''"><xsl:value-of select="$metaimage" /></xsl:when>
           <xsl:otherwise>
-            https://fsfe.org/graphics/logo-text_square.png
+            <xsl:text>https://fsfe.org/graphics/logo-text_square.png</xsl:text>
           </xsl:otherwise>
         </xsl:choose>
       </xsl:attribute>
@@ -203,7 +203,7 @@
           <!-- if there is a meta "image", take that -->
           <xsl:when test="$metaimage != ''"><xsl:value-of select="$metaimage" /></xsl:when>
           <xsl:otherwise>
-            https://fsfe.org/graphics/logo-text_square.png
+            <xsl:text>https://fsfe.org/graphics/logo-text_square.png</xsl:text>
           </xsl:otherwise>
         </xsl:choose>
       </xsl:attribute>

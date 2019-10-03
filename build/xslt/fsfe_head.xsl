@@ -152,8 +152,7 @@
 
     <!-- Twitter and Facebook sharing cards -->
     <xsl:variable name="metaimage">
-      <!-- Get the meta element description -->
-      <xsl:value-of select="head/meta[@name = 'image']/@content" />
+      <xsl:value-of select="image/@url" />
     </xsl:variable>
 
     <!-- Twitter cards -->

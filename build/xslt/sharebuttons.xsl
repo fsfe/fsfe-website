@@ -171,7 +171,7 @@
       <!-- e-mail -->
       <xsl:element name="a">
         <xsl:attribute name="href">
-          <xsl:value-of select="concat('mailto:?subject=', str:encode-uri($share-title, 'true', 'UTF-8'), '&amp;body=', str:encode-uri($share-url, 'true', 'UTF-8'))"/>
+          <xsl:value-of select="concat('mailto:?subject=', str:encode-uri($share-title, 'true', 'UTF-8'), '&amp;body=', str:encode-uri($extract, 'true', 'UTF-8'), '%0A%0A', str:encode-uri($share-url, 'true', 'UTF-8'))"/>
         </xsl:attribute>
         <xsl:attribute name="class">button share-mail</xsl:attribute>
         <xsl:text>E-Mail</xsl:text>

@@ -156,8 +156,7 @@
       <xsl:value-of select="head/meta[@name = 'description']/@content" />
     </xsl:variable>
     <xsl:variable name="metaimage">
-      <!-- Get the meta element description -->
-      <xsl:value-of select="head/meta[@name = 'image']/@content" />
+      <xsl:value-of select="image/@url" />
     </xsl:variable>
 
     <!-- EXTRACT -->

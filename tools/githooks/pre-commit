@@ -44,6 +44,9 @@ for xmlfile in $(
   hit=0
   tags=""
   # go through all tags in this file
+  # make only a new line a field separator to support tags with spaces inside (which is not recommended)
+  OLDIFS=$IFS
+  IFS=$'\n'
   for tag in $(grep -Ei "<tag.*?>.+?</tag>" "${xmlfile}" | sed -E "s|.*<tag.*?>(.+?)</tag>.*|\1|g"); do
     # check if this tag does exist in any other news/event item
     if ! git grep -irlE "<tag.*?>${tag}</tag>" news/ events/ | grep -vq "${xmlfile}"; then
@@ -52,6 +55,7 @@ for xmlfile in $(
       NEWTAGS=$((NEWTAGS + 1))
     fi
   done
+  IFS=$OLDIFS   # reset IFS, usually " \t\n"
   # if any new tag has been found, enlist them
   if [ $hit != 0 ]; then
     tags="${tags%, }"

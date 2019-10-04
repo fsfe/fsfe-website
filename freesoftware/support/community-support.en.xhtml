@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <html>
-	<author id="tuke" />
 	<date>
 		<original content="2011-06-01" />
 	</date>
@@ -20,25 +19,25 @@
     <p>
       Using and configuring software can be a complex task. Often instructions or assistance are required in order to know how to achieve what you need to with your computer. Sharing skills and knowledge is central to the Free Software philosophy, and as a result the Free Software support community offers a plethora of resources for meeting user's needs.
     </p>
-    
+
     </div>
-    
 
     <h2 id="manuals">User manuals and help guides</h2>
 
 <p>Most Free Software applications are accompanied by manuals on how to use them. Manuals are good for finding out how to use the core features of a particular program. When you expect to be able to perform a task, but can't figure out how to do it, reading the manual is often the best first step. Many software projects take great care to produce accurate and extensive user manuals, and reading them is often the shortest route to a solution.</p>
 
-<div class="captioned center" style="width:500px">
-
-	<img src="manual.png" alt="OpenOffice Writer manual" />
-	
-	<p>OpenOffice Writer's manual</p>
-	
-</div>
+    <figure>
+      <img
+          src="manual.png"
+          alt="LibreOffice Writer's manual"/>
+      <figcaption>
+        LibreOffice Writer's manual
+      </figcaption>
+    </figure>
 
 <p>In desktop applications, like Mozilla Firefox or OpenOffice, these can usually be found in the application's 'Help' menu. In text-only terminal applications, these can usually be accessed by typing 'man' (short for manual) followed by the application name. For example, this command would show the manual for the move command:</p>
 
-<p class="terminal">man mv</p>
+<pre class="terminal">man mv</pre>
 
 <p>Sometimes manuals are installed separately to the application itself, particularly if the manual is very long. In such cases you either need to install the manual separately on your computer, or alternatively view the manual online.</p>
 
@@ -46,17 +45,18 @@
 
 <p>Wikis are websites which allow lots of different people to change the content of their webpages. They provide a platform for groups to work collaboratively on guides and documentation, and update it with their own knowledge and experience. Wikipedia is an example of a wiki which is used for encyclopedic information; wikis about Free Software projects contain only information about the application that they relate to.</p>
 
-<div class="captioned center" style="width:500px">
-
-	<a href="http://wiki.inkscape.org/wiki/index.php/Inkscape">
-	
-		<img src="wiki.png" alt="Inkscape's wiki" />
-	
-	</a>
-	
-	<p>Inkscape's wiki</p>
-	
-</div>
+    <a
+        href="http://wiki.inkscape.org/wiki/index.php/Inkscape"
+        target="_blank">
+      <figure>
+        <img
+            src="wiki.png"
+            alt="Inkscape's wiki"/>
+        <figcaption>
+          Inkscape's wiki
+        </figcaption>
+      </figure>
+    </a>
 
 <p>Wikis are similar to manuals, but are often broader in scope, and sometimes more up-to-date. Some wikis have many contributors and are excellent compendiums of guides and instructions. Others however are not very well maintained, and may contain information which is out-of-date, or inexhaustive. If you need assistance with a Free Software application that has a wiki then checking to see if your problem is documented there may well be worthwhile.</p>
 
@@ -66,38 +66,24 @@
 
 <p><a href="http://en.wikipedia.org/wiki/Internet_forum">Forums</a> are a medium of non-real time communication between a large number of different people. With a forum account, visitors can read messages published (or 'posted') by other visitors, and post messages of their own which are visible to other forum users. They are good for many types of questions and support, especially questions which are specific, or may affect the minority of the application's users. They can be searched for messages relating to the problem that you have, and in cases where this doesn't return a solution, they can be used to post new questions. The accuracy of information found in support forums varies, as does the level of moderation, and the average speed of reply. Most forums have their own <a href="http://en.wikipedia.org/wiki/Internet_forum#Rules_and_policies_on_forums">set of rules</a> designed to facilitate communication, which users must agree to during registration.</p>
 
-<div class="captioned center" style="width:500px">
-
-	<a href="http://forum.kde.org/">
-	
-		<img src="forum.png" alt="KDE's forum" />
-		
-	</a>
-	
-	<p>KDE's forum</p>
-	
-</div>
+    <a
+        href="https://forum.kde.org/"
+        target="_blank">
+      <figure>
+        <img
+            src="forum.png"
+            alt="KDE's forum"/>
+        <figcaption>
+          KDE's forum
+        </figcaption>
+      </figure>
+    </a>
 
 <p>Forums are very widely used by Free Software support communities, and can provide an easily accessible database of structured information about other users' experiences, problems and solutions. Forums are accessible via a web browser, and often contain many thousands of messages.</p>
 
 <h2 id="chat">Real time chat (IRC)</h2>
 
 <p>Some Free Software projects, particularly larger ones and GNU/Linux distributions, have chat rooms where users meet to communicate in real time. They use a system called Internet Relay Chat (IRC), and channels (chatrooms) vary greatly in size and nature. Some contain thousands of people at any one time, others contain only a few members, or none at all. Quality and speed of assistance can also be unpredictable as moderation of real time communication is harder than non-real time methods (such as <a href="#forums">forums</a>), and participants may also be chatting in several other rooms simultaneously, causing their responses to be slow. IRC has a long history, and has developed its own <a href="http://www.ircbeginner.com/ircinfo/etiquette.html">customs and etiquette</a>.</p>
-
-<!-- use another example which is completely Free Software, and does not have the problems Ubuntu has
-
-<div class="captioned center" style="width:500px">
-
-	<a href="irc://irc.freenode.net/ubuntu">
-	
-		<img src="irc.png" alt="Ubuntu's IRC support channel" />
-	
-	</a>
-	
-	<p>Ubuntu's IRC support channel</p>
-	
-</div>
--->
 
 <p>When other research has drawn a blank, or you need help with something that's hard to explain and unlikely to be documented anywhere else, support chat rooms can be invaluable. They can be particularly useful for finding different ways of approaching a problem that you're stuck with, and for getting expert technical attention.</p>
 
@@ -124,28 +110,29 @@
 <p>Often it is possible to find the email addresses of Free Software developers and message them directly. Some developers, particularly of smaller projects, welcome this kind of contact. Others prefer not to be contacted in this way, particularly if the message concerns a request for information that can be found elsewhere. Generally you should only email developers if there is no other support system available for the software concerned, of if your question contains information which may be sensitive (relating to security, for example).</p>
 
 <h2 id="remote">Remote control (VNC)</h2>
-    
-   <p><a href="http://en.wikipedia.org/wiki/Virtual_Network_Computing">Virtual network computing</a> (VNC) allows the remote control of one computer's graphical desktop from another over an Internet connection. The host computer is controlled remotely by the client computer, and shows real-time images of the mouse and running applications to the controller on the client computer's screen. VNC can be an efficient way for an expert to fix your computer on your behalf. In such cases you can sit back and watch your computer doing what it was instructed by the person who is remotely controlling it. Due to the degree of control over your machine that VNC entails, it is advisable to only accept support via VNC from somebody who you know well and trust, or from a company from whom you have the protection of a legal contract. Although VNC is a powerful tool for getting technical help, it is not generally unconventional as a community support tool.</p>
-   
-   <div class="captioned center" style="width:500px">
 
-	<a href="http://www.kde.org/applications/system/krfb/">
-	
-		<img src="vnc.png" alt="Initiating a VNC connection using Krfb on KDE4" />
-		
-	</a>
-	
-	<p>Initiating a VNC connection using Krfb on KDE4</p>
-	
-</div>
-    
+   <p><a href="http://en.wikipedia.org/wiki/Virtual_Network_Computing">Virtual network computing</a> (VNC) allows the remote control of one computer's graphical desktop from another over an Internet connection. The host computer is controlled remotely by the client computer, and shows real-time images of the mouse and running applications to the controller on the client computer's screen. VNC can be an efficient way for an expert to fix your computer on your behalf. In such cases you can sit back and watch your computer doing what it was instructed by the person who is remotely controlling it. Due to the degree of control over your machine that VNC entails, it is advisable to only accept support via VNC from somebody who you know well and trust, or from a company from whom you have the protection of a legal contract. Although VNC is a powerful tool for getting technical help, it is not generally unconventional as a community support tool.</p>
+
+     <a
+         href="https://remmina.org/support/"
+         target="_blank">
+       <figure>
+         <img
+             src="vnc.png"
+             alt="Initializing a VNC connection using Remmina"/>
+         <figcaption>
+           Initializing a VNC connection using Remmina
+         </figcaption>
+       </figure>
+     </a>
+
     <p>The ease of establishing a VNC connection depends on the operating system, and in the case of GNU/Linux, the distribution that you are using. Free cross platform VNC software exists for all major operating systems. Most major GNU/Linux distributions have integrated VNC solutions. If you are using VNC for support, the expert to whom you will hand control may be able to assist you in choosing and configuring VNC software.</p>
-    
+
   </body>
   <sidebar>
   <h3>Contents</h3>
     <ul>
-    
+
       <li><a href="#manuals">User manuals and help guides</a></li>
       <li><a href="#wikis">Wikis</a></li>
       <li><a href="#forums">Web forums</a></li>
@@ -154,7 +141,7 @@
       <li><a href="#meetings">User group meeings</a></li>
       <li><a href="#email">Email</a></li>
       <li><a href="#remote">Remote control (VNC)</a></li>
-      
+
     </ul>
     </sidebar>
 

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html newsdate="2019-08-07">
+<head>
+  <title>REUSE rende copyright e licenze più semplici che mai</title>
+</head>
+<body>
+
+<h1>
+  REUSE rende copyright e licenze più semplici che mai
+</h1>
+
+<p newsteaser="yes">REUSE è stato realizzato per aiutare gli sviluppatori ad indicare chiaramente copyright e licenza dei propri progetti. L'ultima versione delle specifiche di REUSE è la 3.0, che è inoltre accompagnata da un tool di supporto che rende più semplice l'adozione delle best practice suggerite.</p>
+
+<p>La licenza di un software è un'informazione fondamentale per chi vuole utilizzarlo. Nella licenza gli sviluppatori del programma stabiliscono le condizioni da rispettare per poterlo utilizzare, che l'utilizzatore sia un privato cittadino oppure una multinazionale. Se l'autore di un programma vuole assicurarsi che altri rispettino la licenza con cui ha distribuito il proprio programma, è necessario che i potenziali riutilizzatori possano conoscere la licenza con cui è stato rilasciato un software. Per le aziende il problema è ancora maggiore, dato che devono garantire ai propri clienti la legalità delle licenze dei propri prodotti, che spesso si basano su progetti già esistenti. Il progetto <a href="https://reuse.software">REUSE</a>, guidato dalla Free Software Foundation Europe (FSFE), semplifica tutto questo.</p>
+
+<figure>
+  <img src="/picturebase/miscellaneous/201908-reuse-tool.png" alt="Output del tool di supporto REUSE" />
+  <figcaption>Output del tool di supporto REUSE</figcaption>
+</figure>
+
+<p>REUSE mira a conservare le informazioni sul copyright e sulle licenze il più vicino possibile ai file a cui si riferiscono. Questo risultato viene raggiunto aggiungendo queste informazioni al file in formato testo, seguendo un formato standardizzato e leggibile dai programmi. Se per ragioni tecniche un file non permette di aggiungere altro testo oltre quello del software è possibile inserire le informazioni in un file <code> .license </code>, oppure in un file di configurazione DEP-5. In questo modo gli sviluppatori potranno essere certi che i riutilizzatori di un codice non potranno non conoscere i detentori del copyright e la licenza di quel determinato codice.</p>
+
+<p>Seguire le best practice è semplice:</p>
+
+<ol>
+  <li> Scegli e includi una licenza: scegli una licenza Libera, trova l'identificatore univoco di questa licenza e copia senza modificarlo il testo completo della licenza in una directory <code> LICENSES / </code> dedicata. </li>
+  <li> Aggiungi informazioni sul copyright e sulla licenza a ciascun file: almeno due righe che indichino il detentore del copyright ed il nome della licenza. </li>
+  <li> Verifica che il programma sia conforme a REUSE: utilizza il tool REUSE per verificare la presenza e correttezza formale di tutte le informazioni necessarie. </li>
+</ol>
+
+<p>I nuovi utenti possono iniziare con un <a href="https://reuse.software/tutorial"> tutorial </a> che spiega come rendere conforme un repository a REUSE. Per aiutare gli sviluppatori a concentrarsi sulla programmazione abbiamo sviluppato il <a href="https://git.fsfe.org/reuse/tool/"> tool di supporto REUSE </a> che automatizza e guida alcuni dei questi passaggi. Può essere <a href="https://reuse.software/dev"> integrato in workflow CI/CD </a> per utilizzare REUSE senza modificare il consueto ambiente di sviluppo.</p>
+
+<p>Le nostre <a href="https://reuse.software/faq"> FAQ </a> (in continuo aggiornamento) rispondono alle domande di base su licenze, copyright e casi d'uso più complessi. Utenti avanzati e integratori di sistemi troveranno utile consultare la <a href="https://reuse.software/spec"> specifica completa </a>.</p>
+
+<p>E c'è di più: REUSE continuerà a lavorare per rendere il rispetto del copyright e delle licenze più facile per tutti. La nostra tabella di marcia include template configurabili per l'aggiunta delle intestazioni tramite il tool di supporto, nonché un'API che, ad esempio, consenta ai progetti di visualizzare un badge dinamico che indichi lo stato REUSE oppure servizi di terze parti per integrare i controlli REUSE.</p>
+
+<p>REUSE è già utilizzato da vari progetti software come ad esempio il <a href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/tree/Documentation/process/license-rules.rst">kernel Linux</a>, e raccomandato da altre iniziative di conformità delle licenze come <a href="https://www.openchainproject.org/news/2017/09/13/fsfe-contributes-reuse-guide-to-openchain-curriculum">OpenChain</a>. Diamo il benvenuto ad altri sviluppatori che decidono di adottare REUSE ed aspettiamo il loro feedback. Se sei interessato a contribuire al progetto <a href="/contact">contattaci</a> e iscriviti alla nostra <a href="https://lists.fsfe.org/mailman/listinfo/reuse">mailing list</a>.</p>
+
+</body>
+
+ <tags>
+  <tag>front-page</tag>
+  <tag content="REUSE">reuse</tag>
+  <tag content="Licensing">licensing</tag>
+  <tag content="Copyright">copyright</tag>
+ </tags>
+
+<author id="bakker" />
+<author id="mehl" />
+
+<discussion href="https://community.fsfe.org/t/reuse-makes-copyright-and-licensing-easier-than-ever/307" />
+<translator>Sebastiano Pistore</translator>
+
+<image url="https://fsfe.org/picturebase/miscellaneous/201908-reuse-tool.png" />
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <html>
   <head>
     <title>Fanartikel – FSFE</title>
-    
+
     <style type="text/css">
     div#toc {
       float: right;
@@ -22,12 +22,11 @@
     </style>
     <meta name="description" content="Zeigen Sie, dass Sie ein Fan von Freier Software sind, indem Sie die Artikel benutzen und tragen, die von der FSFE angeboten werden." />
     <meta name="keywords" content="shop kaufen t-shirt pullover artikel merchandise werbung magnet tasche lätzchen pin versand bezahlung" />
-    <meta name="image" content="https://fsfe.org/graphics/tshirt-promo-800px.jpg" />
   </head>
 
   <body class="toplevel">
     <h1>Fanartikel</h1>
-    
+
     <div id="toc">
       <p style="text-indent:1em;">Kategorien:</p>
       <ul style="margin-bottom: 1em;">
@@ -46,7 +45,7 @@
       Bewusstsein zu bringen. Mit jedem Kauf unterstützen Sie wichtige
       Projekte der FSFE.
     </p>
-    
+
     <p>
       Um die genauen Maße zu erhalten, bewegen Sie den Mauszeiger über die Größenangaben oder
       sehen Sie in der <a href="size.html">Größentabelle</a> nach.
@@ -56,19 +55,19 @@
 
     <form action="/cgi-bin/weborder.pl" method="post" class="item-grid">
       <h2 id="tshirt">T-Shirts</h2>
- 
+
       <dynamic-content type="tshirt"/>
 
       <h2 id="girlie">Damen-T-Shirts</h2>
- 
+
       <dynamic-content type="girlie"/>
 
       <h2 id="hooded">Kapuzenshirts</h2>
- 
+
       <dynamic-content type="hooded"/>
 
       <!-- h2 id="baby-clothes">Babykleidung</h2>
- 
+
       <dynamic-content type="baby-clothes"/ -->
 
       <h2 id="other">Andere Artikel</h2>
@@ -76,7 +75,7 @@
       <dynamic-content type="other"/>
 
       <h2>Infomaterial</h2>
-    
+
       <p>
         Auf unserer
         <a href="/contribute/spreadtheword.html#promo-material">Informationsmaterial-Seite</a>
@@ -85,57 +84,44 @@
 
       <h2>Versand</h2>
 
-      <input type="hidden" name="shipping" value="1"/>
-      <div class="radio">
-        <label>
-          <input type="radio" name="_shipping" id="shipping-de" value="3" />
-          <strong>Versand innerhalb Deutschlands (€3.00)</strong>
-        </label>
-      </div>
-      <div class="radio">
-        <label>
-          <input type="radio" name="_shipping" id="shipping-eu" value="7" checked="" />
-          <strong>Versand innerhalb Europas (€7.00)</strong>
-        </label>
-      </div>
-      <div class="radio">
-        <label>
-          <input type="radio" name="_shipping" id="shipping-world" value="12" />
-          <strong>Versand außerhalb Europas (€12.00)</strong>
-        </label>
-      </div>
+      <p>Es gelten folgende Versandkosten:</p>
+      <ul>
+        <li>Versand innerhalb Deutschlands: €5.00</li>
+        <li>Weltweiter Versand: €8.00</li>
+      </ul>
+
+      <h2>Ihre Daten</h2>
 
       <div class="row form-group">
-        <div class="col-sm-2">
-          <label class="control-label" for="name">Name:</label>
-        </div>
+        <label class="col-sm-2 control-label" for="name">Name:</label>
         <div class="col-sm-4">
           <input class="form-control" id="name" name="name" type="text" />
         </div>
       </div>
 
       <div class="row form-group">
-        <div class="col-sm-2">
-          <label class="control-label vcenter" for="address">Vollständige Adresse:</label>
-        </div>
+        <label class="col-sm-2 control-label" for="address">Adresse:</label>
         <div class="col-sm-4">
           <textarea class="form-control" rows="5" id="address" name="address" type="text" />
         </div>
       </div>
 
       <div class="row form-group">
-        <div class="col-sm-2">
-          <label class="control-label" for="email">E-Mail:</label>
+        <label class="col-sm-2 control-label" for="address">Land:</label>
+        <div class="col-sm-4">
+          <country-list />
         </div>
+      </div>
+
+      <div class="row form-group">
+        <label class="col-sm-2 control-label" for="email">E-Mail:</label>
         <div class="col-sm-4">
           <input class="form-control" id="email" name="email" type="email" />
         </div>
       </div>
 
       <div class="row form-group">
-        <div class="col-sm-2">
-          <label class="control-label" for="phone">Telefon:</label>
-        </div>
+        <label class="col-sm-2 control-label" for="phone">Telefon:</label>
         <div class="col-sm-4">
           <input class="form-control" id="phone" name="phone" type="text" />
         </div>
@@ -163,7 +149,7 @@
     </p>
   </body>
 
-  <timestamp>$Date$ $Author$</timestamp>
+  <image url="https://fsfe.org/graphics/tshirt-promo-800px.jpg" />
 </html>
 <!--
 Local Variables: ***

@@ -56,7 +56,7 @@
             <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'donate-paragraph'" /></xsl:call-template>
             <br />
             <xsl:element name="a">
-              <xsl:attribute name="href">/donate/donate.html?ref-followupbox</xsl:attribute>
+              <xsl:attribute name="href">https://my.fsfe.org/donate</xsl:attribute>
               <xsl:attribute name="class">btn</xsl:attribute>
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'donate'" /></xsl:call-template>
             </xsl:element>

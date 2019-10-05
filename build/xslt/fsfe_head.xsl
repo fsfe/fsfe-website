@@ -151,54 +151,8 @@
     </xsl:for-each>
 
     <!-- Twitter and Facebook sharing cards -->
-    <xsl:variable name="metadesc">
-      <!-- Get the meta element description -->
-      <xsl:value-of select="head/meta[@name = 'description']/@content" />
-    </xsl:variable>
     <xsl:variable name="metaimage">
-      <!-- Get the meta element description -->
-      <xsl:value-of select="head/meta[@name = 'image']/@content" />
-    </xsl:variable>
-
-    <!-- EXTRACT -->
-    <!-- take a first extract which should be sufficient for most pages -->
-    <xsl:variable name="extract1">
-      <!-- retrieve the first 200 letters of the first p element after h1 -->
-      <xsl:value-of select="substring(normalize-space(body/h1[1]/following::p[1]),1,200)" />
-    </xsl:variable>
-    <!-- measure first extract length -->
-    <xsl:variable name="extractlength1">
-      <xsl:value-of select="string-length($extract1)" />
-    </xsl:variable>
-    <!-- define cases what happens with which extract length -->
-    <xsl:variable name="extract">
-      <xsl:choose>
-        <!-- case: first extract is long enough -->
-        <xsl:when test="$extractlength1 &gt; 50">
-          <xsl:value-of select="$extract1" />
-        </xsl:when>
-        <!-- case: first extract is too short -->
-        <xsl:otherwise>
-          <xsl:variable name="extract2">
-            <!-- retrieve the first 200 letters of the *second* p element after h1 -->
-            <xsl:value-of select="substring(normalize-space(body/h1[1]/following::p[2]),1,200)" />
-          </xsl:variable>
-          <!-- measure *second* extract length -->
-          <xsl:variable name="extractlength2">
-            <xsl:value-of select="string-length($extract2)" />
-          </xsl:variable>
-          <xsl:choose>
-            <!-- case: second extract is long enough -->
-            <xsl:when test="$extractlength2 &gt; 50">
-              <xsl:value-of select="$extract2" />
-            </xsl:when>
-            <!-- case: second extract is too short, so take default text -->
-            <xsl:otherwise>
-              Non profit organisation working to create general understanding and support for software freedom. Includes news, events, and campaigns.
-            </xsl:otherwise>
-          </xsl:choose>
-        </xsl:otherwise>
-      </xsl:choose>
+      <xsl:value-of select="image/@url" />
     </xsl:variable>
 
     <!-- Twitter cards -->
@@ -220,7 +174,7 @@
           <!-- if there is a meta "image", take that -->
           <xsl:when test="$metaimage != ''"><xsl:value-of select="$metaimage" /></xsl:when>
           <xsl:otherwise>
-            https://fsfe.org/graphics/logo-text_square.png
+            <xsl:text>https://fsfe.org/graphics/logo-text_square.png</xsl:text>
           </xsl:otherwise>
         </xsl:choose>
       </xsl:attribute>
@@ -235,19 +189,7 @@
     <xsl:element name="meta">
       <xsl:attribute name="name">twitter:description</xsl:attribute>
       <xsl:attribute name="content">
-        <xsl:choose>
-          <!-- if there is a meta description, take that -->
-          <xsl:when test="$metadesc != ''"><xsl:value-of select="$metadesc" /></xsl:when>
-          <xsl:otherwise>
-            <xsl:choose>
-              <!-- if not, try to get the short extract -->
-              <xsl:when test="$extract != ''"><xsl:value-of select="$extract" /><xsl:text>...</xsl:text></xsl:when>
-              <!-- if even that isn't available, return a default text
-                   (not language sensitive). This should never be the case... -->
-              <xsl:otherwise>Non profit organisation working to create general understanding and support for software freedom. Includes news, events, and campaigns.</xsl:otherwise>
-            </xsl:choose>
-          </xsl:otherwise>
-        </xsl:choose>
+        <xsl:value-of select="$extract" />
       </xsl:attribute>
     </xsl:element>
     <!-- Facebook sharing cards -->
@@ -260,7 +202,7 @@
           <!-- if there is a meta "image", take that -->
           <xsl:when test="$metaimage != ''"><xsl:value-of select="$metaimage" /></xsl:when>
           <xsl:otherwise>
-            https://fsfe.org/graphics/logo-text_square.png
+            <xsl:text>https://fsfe.org/graphics/logo-text_square.png</xsl:text>
           </xsl:otherwise>
         </xsl:choose>
       </xsl:attribute>
@@ -283,19 +225,7 @@
     <xsl:element name="meta">
       <xsl:attribute name="property">og:description</xsl:attribute>
       <xsl:attribute name="content">
-        <xsl:choose>
-          <!-- if there is a meta description, take that -->
-          <xsl:when test="$metadesc != ''"><xsl:value-of select="$metadesc" /></xsl:when>
-          <xsl:otherwise>
-            <xsl:choose>
-              <!-- if not, try to get the short extract -->
-              <xsl:when test="$extract != ''"><xsl:value-of select="$extract" /><xsl:text>...</xsl:text></xsl:when>
-              <!-- if even that isn't available, return a default text
-                   (not language sensitive). This should never be the case... -->
-              <xsl:otherwise>Non profit organisation working to create general understanding and support for software freedom. Includes news, events, and campaigns.</xsl:otherwise>
-            </xsl:choose>
-          </xsl:otherwise>
-        </xsl:choose>
+        <xsl:value-of select="$extract" />
       </xsl:attribute>
     </xsl:element> <!-- / Sharing cards -->
 

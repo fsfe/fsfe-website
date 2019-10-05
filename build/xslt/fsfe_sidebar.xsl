@@ -56,7 +56,7 @@
       <xsl:apply-templates select="/buildinfo/document/sidebar/node()" />
   
       <xsl:if test="string(/buildinfo/document/@newsdate)">
-        <a href="/donate/index.html" class="small-donate">
+        <a href="https://my.fsfe.org/support" class="small-donate">
           <xsl:call-template name="fsfe-gettext">
             <xsl:with-param name="id" select="'support/become'" />
           </xsl:call-template>
@@ -105,7 +105,7 @@
           <xsl:call-template name="fsfe-gettext">
             <xsl:with-param name="id" select="'donate-paragraph'" />
           </xsl:call-template>
-          <a href="/donate/donate.html#ref-sidebar" class="learn-more big-donate">
+          <a href="https://my.fsfe.org/donate" class="learn-more big-donate">
             <xsl:call-template name="fsfe-gettext">
               <xsl:with-param name="id" select="'donate'" />
           </xsl:call-template></a>

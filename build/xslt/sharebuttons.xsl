@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet
+    version="1.0"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:str="http://exslt.org/strings">
 
   <xsl:template name="sharebuttons">
     <!-- normalized article title -->
@@ -134,7 +137,7 @@
         </xsl:attribute>
         <xsl:text>Reddit</xsl:text>
       </xsl:element>
-      
+
       <!-- Flattr -->
       <xsl:element name="button">
         <xsl:attribute name="type">submit</xsl:attribute>
@@ -163,6 +166,15 @@
           <xsl:text> Hacker News</xsl:text>
         </xsl:attribute>
         <xsl:text>Hacker News</xsl:text>
+      </xsl:element>
+
+      <!-- e-mail -->
+      <xsl:element name="a">
+        <xsl:attribute name="href">
+          <xsl:value-of select="concat('mailto:?subject=', str:encode-uri($share-title, 'true', 'UTF-8'), '&amp;body=', str:encode-uri($extract, 'true', 'UTF-8'), '%0A%0A', str:encode-uri($share-url, 'true', 'UTF-8'))"/>
+        </xsl:attribute>
+        <xsl:attribute name="class">button share-mail</xsl:attribute>
+        <xsl:text>E-Mail</xsl:text>
       </xsl:element>
 
       <!-- Twitter -->

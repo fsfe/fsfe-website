@@ -6,6 +6,31 @@
     <xsl:element name="header">
       <xsl:attribute name="id">top</xsl:attribute>
 
+      <xsl:element name="div">
+        <xsl:attribute name="id">masthead</xsl:attribute>
+
+        <xsl:element name="a">
+          <xsl:attribute name="id">logo</xsl:attribute>
+          <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/</xsl:attribute>
+          <xsl:element name="span">
+            <xsl:call-template name="fsfe-gettext">
+              <xsl:with-param name="id" select="'fsfeurope'"/>
+            </xsl:call-template>
+          </xsl:element>
+        </xsl:element>
+        <!--/a#logo-->
+
+        <xsl:element name="div">
+          <xsl:attribute name="id">motto</xsl:attribute>
+          <xsl:text>empowering users </xsl:text>
+          <xsl:element name="br"/>
+          <xsl:text>to control technology</xsl:text>
+        </xsl:element>
+        <!--/div#motto-->
+
+      </xsl:element>
+      <!--/div#masthead-->
+
       <xsl:element name="nav">
         <xsl:attribute name="id">menu</xsl:attribute>
 
@@ -41,15 +66,6 @@
             <xsl:attribute name="href">#source</xsl:attribute>
             <xsl:attribute name="id">direct-to-source</xsl:attribute>
             <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'page-info'" /></xsl:call-template>
-          </xsl:element>
-
-          <xsl:element name="a">
-              <xsl:attribute name="href">https://my.fsfe.org/support</xsl:attribute>
-              <xsl:attribute name="id">direct-to-join</xsl:attribute>
-              <xsl:element name="i">
-                <xsl:attribute name="class">fa fa-user-plus fa-lg</xsl:attribute>
-              </xsl:element>
-              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'support/become'" /></xsl:call-template>
           </xsl:element>
 
           <xsl:element name="a">
@@ -96,6 +112,10 @@
             </xsl:element>
           </xsl:element>
           <xsl:element name="li">
+            <xsl:attribute name="class">hidden-lg</xsl:attribute>
+            <xsl:attribute name="style">display: block;</xsl:attribute>
+          </xsl:element>
+          <xsl:element name="li">
             <xsl:element name="a">
               <xsl:attribute name="href">/contribute/contribute.html</xsl:attribute>
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfe/help'" /></xsl:call-template>
@@ -107,41 +127,17 @@
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfe/press'" /></xsl:call-template>
             </xsl:element>
           </xsl:element>
+          <xsl:element name="li">
+            <xsl:element name="a">
+              <xsl:attribute name="href">https://my.fsfe.org/donate</xsl:attribute>
+              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'donate'" /></xsl:call-template>
+            </xsl:element>
+          </xsl:element>
         </xsl:element>
         <!--/ul#menu-list-->
 
       </xsl:element>
       <!--/nav#menu-->
-
-
-      <xsl:element name="div">
-        <xsl:attribute name="id">masthead</xsl:attribute>
-
-        <xsl:element name="div">
-          <xsl:attribute name="id">link-home</xsl:attribute>
-          <xsl:element name="a">
-            <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/</xsl:attribute>
-            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'rootpage'" /></xsl:call-template>
-          </xsl:element>
-        </xsl:element>
-        <!--/div#link-home-->
-
-        <xsl:element name="div">
-          <xsl:attribute name="id">logo</xsl:attribute>
-          <xsl:element name="span">
-                <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfeurope'" /></xsl:call-template>
-            </xsl:element>
-        </xsl:element>
-        <!--/div#logo-->
-
-        <xsl:element name="div">
-          <xsl:attribute name="id">motto</xsl:attribute>
-          empowering users<br class="motto-br" /> to control technology
-        </xsl:element>
-        <!--/div#motto-->
-
-      </xsl:element>
-      <!--/div#masthead-->
 
     </xsl:element>
     <!--/header#top-->

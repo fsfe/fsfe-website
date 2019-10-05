@@ -2,276 +2,239 @@
 <!-- @TRANSLATORS: PLEASE DON'T TRANSLATE THIS FILE YET. IT IS SUBJECT TO CHANGE DURING THE NEXT WEEKS -->
 <html>
 	<head>
-		<title>Spread the word!</title>
-		<meta name="description" content="FSFE's information, campaign and promotion material"/>
-		<!-- <meta
-			name="keywords"
-			content="FSFE Graphics Buttons Logo Promotion Sticker Poster Leaflets Flyer Campaigns Free Your Android I cannot read your documents Fellowship Plussy Gnu"/> -->
+		<title>Spread the word</title>
+		<meta
+        name="description"
+        content="FSFE's Promotion Material"/>
+		<meta
+        name="keywords"
+        content="FSFE Graphics Buttons Logo Promotion Sticker Poster Leaflets Flyer Campaigns Free Your Android I cannot read your documents Fellowship Plussy Gnu"/>
 	</head>
 
-	<body>
+	<body class="spreadtheword">
 		<p id="category"><a href="/contribute/">Contribute</a></p>
 
 		<h1 id="spread-the-word">Spread the word!</h1>
 
-		<p>Are you interested in Free Software and the FSFE? Are you going to a Free Software meeting or are you even organising one? There are various reasons why and when you might like to receive information, campaign or promotion material for Free Software and the FSFE. Whatever it might be, on this page you can download our print templates and we will be happy to send you printed material for no cost.</p>
+		<div id="toc">
+			<p class="head"><strong><a href="#how-to-order">Order now</a></strong></p>
 
-		<a id="go-to-order" href="#how-to-order" role="button" class="btn btn-primary btn-lg btn-block">Go to order!</a>
+		  <p><strong>Available promotion material</strong></p>
+		  <ul>
+		    <li><a href="#fsfe-and-community">FSFE and our community</a></li>
+		    <li><a href="#freedom">Free Software and User Freedom</a></li>
+            <li><a href="#pmpc">"Public Money, Public Code" - campaign</a></li>
+		    <li><a href="#f-droid">"Free Your Android" - campaign</a></li>
+		    <li><a href="#ilovefs">"I love Free Software" - campaign</a></li>
+		    <li><a href="#nocloud">"There is no cloud ..." - campaign</a></li>
+		    <li><a href="#dfd">"Document Freedom Day"- campaign</a></li>
 
-		<!-- ITEMIZE -->
-		<!-- <div class="row">
-			<div class="col-md-12">
-				<h3 id="fsfe-and-community">FSFE and our community</h3>
-			</div>
-		</div> -->
+		  </ul>
+		  <p><strong>Behind the scenes</strong></p>
+		  <ul>
+        <li><a href="#feedback">Any Feedback?</a></li>
+        <li><a href="#archives">Our Archive</a></li>
+        <li><a href="#upcoming">Upcoming promotion and campaigns</a></li>
+		  </ul>
+		</div>
+
+		<h2 id="promo-material" class="noclear">FSFE Promotion Material</h2>
+
+		<p>
+			Are you going to a Free Software meeting or are you even organising one? Maybe you like to promote Free Software and the work of the FSFE around your friends and colleagues or at some public event? There are various reasons why and when you might like to receive promotion material for Free Software and the FSFE. Whatever it might be, we will be happy to send you our printed promotion material for <strong>no cost</strong>.<br /> On this page, you find an overview about our material and details about each product.</p>
+
+
+		<h2 id="how-to-order" class="noclear">How to order</h2>
+
+			<p>
+			To order promotion material please use the following order form. You can order our default package or individual quantities and tell us explicitly what kind of promotion material you need or prefer. Feel free to decide for yourself. However, please keep in mind, that for postal reasons, in general we just send packages up to 1kg. If you need more, please ask in advance.
+			</p>
+
+
+			<form
+          class="highlight labeledform form-inline"
+          id="orderpromo"
+          method="post"
+          action="/cgi-bin/promotion.php"
+          accept-charset="utf-8">
+        <add-language />
+        <h3>Order promotional material</h3>
+        <p>Fields marked with * are mandatory.</p>
+        <fieldset>
+          <legend>Your address</legend>
+          <div>
+            <span class="formlabel">First name, Last name*:</span>
+            <input type="text" name="firstname" placeholder="First Name" size="15" />
+            <input type="text"  name="lastname" placeholder="Last Name" size="15" required="required" />
+          </div>
+          <div>
+            <span class="formlabel">Email*:</span>
+            <input type="email" name="mail" placeholder="Email" size="20" required="required" />
+          </div>
+          <div>
+            <span class="formlabel">Company/Organisation (if any):</span>
+            <input type="text" name="org" placeholder="Organisation" size="20" />
+          </div>
+          <div>
+            <span class="formlabel">Street, No.*:</span>
+            <input type="text" name="street" size="20" required="required" />
+          </div>
+          <div>
+            <span class="formlabel">Zip*, City*:</span>
+            <input type="text" name="zip" size="5" required="required" />
+            <input type="text" name="city" size="15" required="required" />
+          </div>
+          <div>
+            <span class="formlabel">Country*:</span>
+            <country-list />
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Compose your package</legend>
+          <div>
+            <span class="formlabel">Package selection*:</span>
+            <label for="default"><input type="radio" name="packagetype" id="default" value="default" required="required" />Default: Something from everything listed here, depending on size, language selection and availability. Select <em>Custom</em> if you would like to set preferences.</label>
+            <div>
+              <label for="custom"><input type="radio" name="packagetype" id="custom" value="custom" required="required" />Custom: You can set preferences, e.g. specific campaigns or the type of promotion materials. Unfortunately we cannot guarantee to fulfill all wishes.
+              <div class="reveal">
+                <textarea name="specifics" rows="6" cols="40" placeholder="For example: Only leaflets explaining Free Software, no posters..." />
+              </div>
+              </label>
+            </div>
+          </div>
+          <div>
+            <span class="formlabel">I would like to use the material for (short description)*:</span>
+            <textarea name="usage" rows="4" cols="40" placeholder="For example: Spreading information about Free Software in my surrounding, on event XYZ..." required="required" />
+          </div>
+          <div class="langselector">
+            <span class="formlabel">My language preferences (we cannot guarantee availability):</span>
+            <ul>
+              <!-- Translators: No need to translate here, we use the native names -->
+              <!-- If you want to extend, please iterate the number behind "lang" accordingly -->
+              <li><label for="lang1"><input type="checkbox" name="languages[]" id="lang1" value="en" checked="checked" />English</label></li>
+              <li><label for="lang2"><input type="checkbox" name="languages[]" id="lang2" value="cn" />中文</label></li>
+              <li><label for="lang3"><input type="checkbox" name="languages[]" id="lang3" value="de" />Deutsch</label></li>
+              <li><label for="lang4"><input type="checkbox" name="languages[]" id="lang4" value="el" />Eλληνικά</label></li>
+              <li><label for="lang5"><input type="checkbox" name="languages[]" id="lang5" value="es" />Español</label></li>
+              <li><label for="lang6"><input type="checkbox" name="languages[]" id="lang6" value="fr" />Français</label></li>
+              <li><label for="lang7"><input type="checkbox" name="languages[]" id="lang7" value="it" />Italiano</label></li>
+              <li><label for="lang8"><input type="checkbox" name="languages[]" id="lang8" value="lt" />Latviešu</label></li>
+              <li><label for="lang9"><input type="checkbox" name="languages[]" id="lang9" value="nl" />Nederlands</label></li>
+              <li><label for="lang10"><input type="checkbox" name="languages[]" id="lang10" value="pl" />Polski</label></li>
+              <li><label for="lang11"><input type="checkbox" name="languages[]" id="lang11" value="ru" />Русский</label></li>
+              <li><label for="lang12"><input type="checkbox" name="languages[]" id="lang12" value="sq" />Shqip</label></li>
+              <li><label for="lang13"><input type="checkbox" name="languages[]" id="lang13" value="sr" /> Српски / srpski</label></li>
+              <li><label for="lang14"><input type="checkbox" name="languages[]" id="lang14" value="fi" />Suomi</label></li>
+              <li><label for="lang15"><input type="checkbox" name="languages[]" id="lang15" value="tr" />Türkçe</label></li>
+            </ul>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Last steps</legend>
+          <div>
+            <span class="formlabel">Additional comment:</span>
+            <textarea name="comment" rows="2" cols="40" />
+          </div>
+          <div>
+            <input type="text" name="address" placeholder="Which address shall be used?" size="20" class="special" />
+          </div>
+          <div>
+            <span class="formlabel">Receive the latest Free Software news:</span>
+            <label for="subcd"><input name="subcd" id="subcd" value="y" type="checkbox" />I want to receive occasional information about the FSFE's activities</label>
+            <label for="subnl"><input name="subnl" id="subnl" value="y" type="checkbox" />I want to receive the FSFE's monthly newsletter</label>
+          </div>
+          <div
+              id="donate-group"
+              class="form-group">
+            <span class="formlabel">Support our work with a voluntary donation*:</span>
+            <div class="input-group">
+              <input
+                  id="donate"
+                  name="donate"
+                  type="number"
+                  class="form-control "
+                  value=""
+                  placeholder="0 or ≥ 10 €"
+                  min="0"
+                  required="required"/>
+              <div class="input-group-addon">€</div>
+            </div>
+            <div
+                id="donate-error"
+                class="help-block"
+                style="display: none;">
+              If you want to make a donation please enter at least 10 €.<br />
+              If you don't want to donate please enter 0 €.
+            </div>
+          </div>
+        </fieldset>
+        <div>
+          <!-- Translators: please translate the label of this button (the value field) -->
+          <input type="submit" name="dothis" value="Order now!"/>
+        </div>
+      </form>
+
+
+		<h1 id="available-promotion-material" style="margin-top:3em;">Available promotion material</h1>
+
+<!-- START ITEMIZE TESTING -->
+
+		<h2 id="fsfe-and-community" class="left break">FSFE and our community</h2>
+
 		<dynamic-content type="fsfe"/>
 
-		<div class="row">
-			<div class="col-md-12">
-				<h3 id="pmpc">Public Money? Public Code!</h3>
-			</div>
-		</div>
-		<dynamic-content type="pmpc"/>
+		<h2 id="freedom" class="left break">Free Software and User Freedom</h2>
 
-		<div class="row">
-			<div class="col-md-12">
-				<h3 id="freedom">Free Software and User Freedom</h3>
-			</div>
-		</div>
 		<dynamic-content type="freedom"/>
-		<dynamic-content type="hackingforfreedom"/>
+        <dynamic-content type="hackingforfreedom"/>
 
-		<div class="row">
-			<div class="col-md-12">
-				<h3 id="ilovefs">Show your love for Free Software</h3>
-			</div>
-		</div>
-		<dynamic-content type="ilovefs"/>
+        <h2 id="pmpc" class="left break">Public Money, Public Code</h2>
+        <dynamic-content type="pmpc"/>
 
-		<div class="row">
-			<div class="col-md-12">
-				<h3 id="f-droid">Free Your Android!</h3>
-			</div>
-		</div>
+		<h2 id="f-droid" class="left break">Free Your Android</h2>
+
 		<dynamic-content type="f-droid"/>
 
-		<div class="row">
-			<div class="col-md-12">
-				<h3 id="nocloud">NO CLOUD</h3>
-			</div>
-		</div>
+		<h2 id="ilovefs" class="left break">I love Free Software</h2>
+
+		<dynamic-content type="ilovefs"/>
+
+		<h2 id="nocloud" class="left break">There is no cloud</h2>
+
 		<dynamic-content type="nocloud"/>
 
-		<div class="row">
-			<div class="col-md-12">
-				<h3 id="dfd">Document Freedom For Everyone</h3>
-			</div>
-		</div>
+		<h2 id="dfd" class="left break">Document Freedom Day</h2>
+
 		<dynamic-content type="dfd"/>
 
-		<hr />
 
-		<div class="row">
-			<div class="col-md-12">
-				<h2 id="how-to-order">Get printed information and campaign material</h2>
-			</div>
-		</div>
 
-		<p>You can order our default package or individual quantities and tell us in detail what kind of information, campaign or promotion material you need. However, please keep in mind that we cannot guarantee availability and for postal reasons, we generally only send packages up to 1kg. If you need more for special occasions, please send us an email to <a href="mailto:contact@fsfe.org">contact@fsfe.org</a>.</p>
+<!-- END ITEMIZE TESTING -->
 
-		<hr />
+	<h2 id="feedback" class="left break">Any feedback?</h2>
+	<p class="left break">
+		Did you experience any trouble with your order, found a typo in our text, you have a remark or an idea for upcoming promotion material? Or you just like to send us a motivating message? Please <a href="mailto:contact@fsfe.org">share your feedback</a> with us.</p>
 
-		<form method="post" id="orderpromo" action="/cgi-bin/promotion.php" accept-charset="utf-8">
-			<add-language />
-			<fieldset>
-				<div class="form-row">
-					<div class="form-group col-md-6">
-						<label for="firstname">First name *</label>
-						<input type="text" class="form-control" id="firstname" required="required" />
-					</div>
-					<div class="form-group col-md-6">
-						<label for="lastname">Last name *</label>
-						<input type="text" class="form-control" id="lastname" required="required" />
-					</div>
-				</div>
-				<div class="form-row">
-					<div class="form-group col-md-6">
-						<label for="org">Company / Organisation</label>
-						<input type="text" class="form-control" id="org" />
-					</div>
-					<div class="form-group col-md-6">
-						<label for="mail">Email *</label>
-						<input type="email" class="form-control" id="mail" required="required" />
-					</div>
-				</div>
-				<div class="form-row">
-					<div class="form-group col-md-12">
-						<label for="street">Street, No. *</label>
-						<input type="text" class="form-control" id="street" required="required" />
-					</div>
-				</div>
-				<div class="form-row">
-					<div class="form-group col-md-6">
-						<label for="zip">Postcode *</label>
-						<input type="text" class="form-control" id="zip" required="required" />
-					</div>
-					<div class="form-group col-md-6">
-						<label for="city">City *</label>
-						<input type="text" class="form-control" id="city" required="required" />
-					</div>
-				</div>
-				<div class="form-row">
-					<div class="form-group col-md-12">
-						<label for="country">Country *</label>
-						<country-list />
-					</div>
-				</div>
-			</fieldset>
-			<fieldset>
-				<div id="langprefs" class="form-row">
-					<div class="form-group col-md-12">
-						<label>Language preferences</label>
-					</div>
-					<div class="form-group col-md-12">
-					<!-- @Translators: No need to translate here, we use the native names -->
-					<!-- If you want to extend, please iterate the number behind "lang" accordingly -->
-						<div class="checkbox col-md-2">
-							<label for="lang1"><input type="checkbox" name="languages[]" id="lang1" value="en" checked="checked" />English</label>
-						</div>
-						<div class="checkbox col-md-2">
-							<label for="lang2"><input type="checkbox" name="languages[]" id="lang2" value="cn" />中文</label>
-						</div>
-						<div class="checkbox col-md-2">
-							<label for="lang3"><input type="checkbox" name="languages[]" id="lang3" value="de" />Deutsch</label>
-						</div>
-						<div class="checkbox col-md-2">
-							<label for="lang4"><input type="checkbox" name="languages[]" id="lang4" value="el" />Eλληνικά</label>
-						</div>
-						<div class="checkbox col-md-2">
-							<label for="lang5"><input type="checkbox" name="languages[]" id="lang5" value="es" />Español</label>
-						</div>
-						<div class="checkbox col-md-2">
-							<label for="lang6"><input type="checkbox" name="languages[]" id="lang6" value="fr" />Français</label>
-						</div>
-						<div class="checkbox col-md-2">
-							<label for="lang7"><input type="checkbox" name="languages[]" id="lang7" value="it" />Italiano</label>
-						</div>
-						<div class="checkbox col-md-2">
-							<label for="lang8"><input type="checkbox" name="languages[]" id="lang8" value="lt" />Latviešu</label>
-						</div>
-						<div class="checkbox col-md-2">
-							<label for="lang9"><input type="checkbox" name="languages[]" id="lang9" value="nl" />Nederlands</label>
-						</div>
-						<div class="checkbox col-md-2">
-							<label for="lang10"><input type="checkbox" name="languages[]" id="lang10" value="pl" />Polski</label>
-						</div>
-						<div class="checkbox col-md-2">
-							<label for="lang11"><input type="checkbox" name="languages[]" id="lang11" value="ru" />Русский</label>
-						</div>
-						<div class="checkbox col-md-2">
-							<label for="lang12"><input type="checkbox" name="languages[]" id="lang12" value="sq" />Shqip</label>
-						</div>
-						<div class="checkbox col-md-2">
-							<label for="lang13"><input type="checkbox" name="languages[]" id="lang13" value="sr" /> Српски / srpski</label>
-						</div>
-						<div class="checkbox col-md-2">
-							<label for="lang14"><input type="checkbox" name="languages[]" id="lang14" value="fi" />Suomi</label>
-						</div>
-						<div class="checkbox col-md-2">
-							<label for="lang15"><input type="checkbox" name="languages[]" id="lang15" value="tr" />Türkçe</label>
-						</div>
-					</div>
-				</div>
-				<div class="form-row">
-					<div class="col-md-12">
-						<label>Package type *</label>
-					</div>
-					<div class="form-group col-md-12">
-						<input type="radio" name="packagetype" id="default" value="default" required="required" checked="checked" />
-						<label for="default" class="btn btn-default col-md-6">Default</label>
-						<input type="radio" name="packagetype" id="custom" value="custom" required="required" />
-						<label for="custom" class="btn btn-default col-md-6">Custom</label>
-						<div id="defaultorder" class="col-md-12">
-							<p class="packageselect">Some of everything, depending on size, language selection and availability.</p>
-						</div>
-						<div id="customorder" class="col-md-12">
-							<p class="packageselect">Specify further preferences, e.g. campaigns or material type:</p>
-							<textarea name="specifics" class="form-control" rows="1" placeholder="e.g. no posters, only 'I love Free Software' material ... "></textarea>
-							<p class="help-block">Please keep in mind that we unfortunately cannot guarantee availability.</p>
-						</div>
-					</div>
-				</div>
-				<div class="form-row">
-					<div class="form-group col-md-12">
-						<label>I want to use the material for *</label>
-						<textarea name="usage" class="form-control" rows="2" placeholder="A short description, e.g.: spreading information about Free Software in my surrounding; providing information about Free Software at the event XY ..." required="required" />
-					</div>
-				</div>
-				<div id="donate-group" class="form-row">
-					<div class="col-md-12">
-						<label>I will support the FSFE with a donation *</label>
-					</div>
-					<div class="form-group col-md-12">
-						<input type="radio" name="donate" id="nodonate" value="nodonate" required="required" />
-						<label for="nodonate" class="btn btn-default col-md-3">no donation</label>
-						<input type="radio" name="donate" id="10donate" value="10donate" required="required" checked="checked" />
-						<label for="10donate" class="btn btn-default col-md-3">10 EUR</label>
-						<input type="radio" name="donate" id="otherdonate" value="otherdonate" required="required" />
-						<label for="otherdonate" class="btn btn-default col-md-3">> 10 EUR</label>
-						<div id="customdonation" class="col-md-3">
-							<div class="input-group">
-								<input id="donate" name="donate" type="number" class="form-control" value="" placeholder="15" min="11"/><div class="input-group-addon">EUR</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="form-row">
-					<div class="form-group col-md-12">
-						<label>Any comment?</label>
-						<textarea name="comment" class="form-control" rows="1" />
-					</div>
-				</div>
-				<div class="form-row">
-					<div class="col-md-12">
-						<div class="checkbox">
-							<label for="subcd"><input name="subcd" id="subcd" value="y" type="checkbox" />I am happy to receive occasional informations about the FSFE's activities.</label>
-						</div>
-					</div>
-				</div>
-			</fieldset>
-				<div class="row">
-					<div class="col-md-12">
-						<!-- @Translators: please translate the label of this button (the value field) -->
-						<input type="submit" name="dothis" class="btn btn-primary btn-block" value="Order now!"/>
-				</div>
-			</div>
-		</form>
+		<p class="left break">We are always eager to hear some nice stories or to see pictures that you have with our promotion material. Many people also share their experience and pictures via social media with us. </p>
 
-		<div class="row">
-			<div class="col-md-12">
-				<h3 id="archives">Archive</h3>
-			</div>
-		</div>
 
-		<p>In case, parts of our material get outdated, we move it to our <a href="/contribute/promotion-materials-archive">material archive</a>. There you can still dowload the source files. </p>
 
-		<div class="row">
-			<div class="col-md-12">
-				<h3 id="feedback">Any feedback?</h3>
-			</div>
-		</div>
+	<h2 id="archives" class="left break">Promotion Material Archive</h2>
+	<p class="left break">
+	Sometimes, parts of our promotion material section get outdated. This might be
+	the case, for example, when specific campaign runs out. However, you can find
+	and still download older material in our <a
+	href="/contribute/promotion-materials-archive">promotion material
+	archive.</a></p>
 
-		<p>Did you experience any trouble with your order, found a typo in our text, you have a remark or an idea for upcoming items? Please <a href="mailto:contact@fsfe.org">share your feedback</a> with us. We are also always eager to receive nice stories and pictures, if you like our material.</p>
 
-		<div class="row">
-			<div class="col-md-12">
-				<h3 id="upcoming">Passionate to volunteer?</h3>
-			</div>
-		</div>
+	<h2 id="upcoming" class="left break">Upcoming promotion and campaigns</h2>
 
-		<p>If you would like to help making new designs or improve old ones, join the <a href="/contribute/designers/designers">designers team</a>. If you want to support us with translations of our pages or materials, we will be happy to welcome you in our <a href="/contribute/translators/translators">translators team</a>.</p>
+	<p class="left break">From time to time, have a look at this page again for new promotional material - we will continue to update it. If you would like to help making new designs or improve old ones, join the <a href="/contribute/designers/designers">designers team</a>. Or if you would like to add translations of pages or materials, join the <a href="/contribute/translators/translators">translators team</a>.
+	</p>
 
-		<!-- <script src="/scripts/spreadtheword.js"></script> -->
+  <script src="/scripts/spreadtheword.js"></script>
+
 	</body>
 </html>
 <!--
@@ -279,3 +242,4 @@ Local Variables: ***
 mode: xml ***
 End: ***
 -->
+

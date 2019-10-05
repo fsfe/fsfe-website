@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<html>
+  <head>
+    <title>Marchandise – FSFE</title>
+
+    <style type="text/css">
+    div#toc {
+      float: right;
+      clear: right;
+      border: solid 1px;
+      margin: .5em;
+      background: rgb(240,240,240);
+      width: 30%;
+    }
+
+    @media only screen and (max-width: 600px) {
+      div#toc {
+        width: 100%;
+      }
+    }
+    </style>
+    <meta name="description" content="Show your love for Free Software by using and wearing the branded items the FSFE offers." />
+    <meta name="keywords" content="shop order t-shirt shirts hoodie items merch merchandise promote magnet bag bib pin shipping buy postal payment" />
+    <meta name="image" content="https://fsfe.org/graphics/tshirt-promo-800px.jpg" />
+  </head>
+
+  <body class="toplevel">
+    <h1>Marchandise</h1>
+
+    <div id="toc">
+      <p style="text-indent:1em;">Marchandise disponible:</p>
+      <ul style="margin-bottom: 1em;">
+        <li><a href="#tshirt">T-shirts</a></li>
+        <li><a href="#girlie">T-shirts Femmes</a></li>
+        <li><a href="#hooded">Sweat-shirts à capuche</a></li>
+        <!-- li><a href="#baby-clothes">Vêtements pour bébé</a></li -->
+        <li><a href="#other">Autres articles</a></li>
+      </ul>
+    </div>
+
+    <p class="p-summary">
+      Montrez votre amour pour le Logiciel Libre en utilisant et en portant les éléments de la marque
+       ci-dessous. Les vêtements aux couleurs du Logiciel Libre sont un excellent moyen de sensibiliser
+       votre communauté locale et chaque vente permet de financer des projets critiques de la FSFE.
+    </p>
+
+    <p>
+      Pour obtenir des informations détaillées sur les dimensions réelles des différentes
+       taille des vêtements, placez le pointeur de la souris sur l’étiquette de taille ou
+       regardez le <a href="size.html">tableau des tailles</a>.
+    </p>
+
+    <p style="clear:both;"></p>
+
+    <form action="/cgi-bin/weborder.pl" method="post" class="item-grid">
+      <h2 id="tshirt">T-Shirts</h2>
+
+      <dynamic-content type="tshirt"/>
+
+      <h2 id="girlie">T-Shirts Femmes</h2>
+
+      <dynamic-content type="girlie"/>
+
+      <h2 id="hooded">Sweat-shirts à capuche</h2>
+
+      <dynamic-content type="hooded"/>
+
+      <!-- h2 id="baby-clothes">Vêtements pour bébé</h2>
+
+      <dynamic-content type="baby-clothes"/ -->
+
+      <h2 id="other">Autres articles</h2>
+
+      <dynamic-content type="other"/>
+
+      <h2>Matériels promotionnels</h2>
+
+      <p>
+        Vérifier notre
+        <a href="/contribute/spreadtheword.html#promo-material">page de commande pour matériels d'information</a>
+        pour commander des tracts, des autocollants et d'autres articles.
+      </p>
+
+      <h2>Expédition</h2>
+
+      <input type="hidden" name="shipping" value="1"/>
+      <div class="radio">
+        <label>
+          <input type="radio" name="_shipping" id="shipping-de" value="3" />
+          <strong>Expédition vers l'Allemagne (€3.00)</strong>
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="_shipping" id="shipping-eu" value="7" checked="" />
+          <strong>Expédition vers l'Europe (€7.00)</strong>
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="_shipping" id="shipping-world" value="12" />
+          <strong>Expédition en dehors de l'Europe (€12.00)</strong>
+        </label>
+      </div>
+
+      <div class="row form-group">
+        <div class="col-sm-2">
+          <label class="control-label" for="name">Nom:</label>
+        </div>
+        <div class="col-sm-4">
+          <input class="form-control" id="name" name="name" type="text" />
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <div class="col-sm-2">
+          <label class="control-label vcenter" for="address">Adresse complète:</label>
+        </div>
+        <div class="col-sm-4">
+          <textarea class="form-control" rows="5" id="address" name="address" type="text" />
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <div class="col-sm-2">
+          <label class="control-label" for="email">Email:</label>
+        </div>
+        <div class="col-sm-4">
+          <input class="form-control" id="email" name="email" type="email" />
+        </div>
+      </div>
+
+      <div class="row form-group">
+        <div class="col-sm-2">
+          <label class="control-label" for="phone">Téléphone:</label>
+        </div>
+        <div class="col-sm-4">
+          <input class="form-control" id="phone" name="phone" type="text" />
+        </div>
+      </div>
+
+      <p class="n">
+        Merci de ne rien renseigner ici:
+        <input type="text" size="40" name="url"/>
+      </p>
+
+      <!-- Translators: Please change the value here to your language -->
+      <input type="hidden" name="language" value="fr_FR"/>
+
+      <div class="row form-group">
+        <div class="col-sm-offset-2 col-sm-6">
+          <button type="submit" class="btn btn-primary">Commander les articles</button>
+        </div>
+      </div>
+    </form>
+
+    <p>Le paiement est possible par virement bancaire, PayPal et diveres cartes de crédit et de
+       débit. Vous recevrez de plus amples informations lors de la soumission de votre commande.
+    </p>
+  </body>
+
+  <timestamp>$Date$ $Author$</timestamp>
+  <translator>Julien, OliBug</translator>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

@@ -27,7 +27,6 @@ use POSIX qw(strftime);
 
 my %names = (
   "eal" => "Erik Albers",
-  "susanne" => "Susanne Eiswirt",
   "fi" => "Francesca Indorato",
   "mk" => "Matthias Kirschner",
   "repentinus" => "Heiki Lohmus",
@@ -67,6 +66,7 @@ my %responsible = (
   "INTERNAL-TECH" => "council",
   "INTERNAL-FUNDRAISING" => "council",
   "PERSONELL-INTERN" => "council",
+  "PERSONELL-BFD" => "council",
   "PERSONELL-KIRSCHNER" => "council",
   "PERSONELL-ALBERS" => "council",
   "PERSONELL-SLIWINSKI" => "council",
@@ -74,7 +74,6 @@ my %responsible = (
   "PERSONELL-SANDER" => "council",
   "PERSONELL-KU" => "council",
   "PERSONELL-MANCHEVA" => "council",
-  "PERSONELL-EISWIRT" => "council",
   "OFFICE-BERLIN" => "usli",
 );
 
@@ -102,6 +101,7 @@ my %account = (
   "INTERNAL-TECH" => "2506",
   "INTERNAL-FUNDRAISING" => "2509",
   "PERSONELL-INTERN" => "81000",
+  "PERSONELL-BFD" => "81001",
   "PERSONELL-KIRSCHNER" => "81012",
   "PERSONELL-ALBERS" => "81021",
   "PERSONELL-SLIWINSKI" => "81036",
@@ -110,7 +110,6 @@ my %account = (
   "PERSONELL-SANDER" => "81057",
   "PERSONELL-KU" => "81058",
   "PERSONELL-MANCHEVA" => "81059",
-  "PERSONELL-EISWIRT" => "81062",
   "OFFICE-BERLIN" => "82001",
 );
 

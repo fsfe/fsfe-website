@@ -161,3 +161,7 @@ RewriteRule ^login https://my.fsfe.org/ [redirect=permanent]
 RewriteRule ^fellowship/graphics/people - [L]
 RewriteRule ^fellowship	/ [redirect=permanent]
 
+# Podcast rules for better links
+RewriteRule ^/news/podcast/?$ /news/podcast.html [redirect=permanent]
+RewriteRule ^/news/podcast.rss$ /news/podcast.en.rss [L,redirect=permanent]
+RewriteRule ^/news/podcast-opus.rss$ /news/podcast-opus.en.rss [L,redirect=permanent]

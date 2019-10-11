@@ -34,6 +34,11 @@ RewriteRule	^15(/.*)?$		https://fsfe.org/campaigns/15years/15years$1 [redirect=p
 # EU policies wiki page, e.g. linked from the PMPC brochure
 RewriteRule ^fs-policies/?$ https://wiki.fsfe.org/Activities/EU_Policies_overview_FS [redirect=permanent]
 
+# Podcast rules for better links
+RewriteRule ^news/podcast/?$ /news/podcast.html [redirect=permanent]
+RewriteRule ^news/podcast.rss$ /news/podcast.en.rss [L,redirect=permanent]
+RewriteRule ^news/podcast-opus.rss$ /news/podcast-opus.en.rss [L,redirect=permanent]
+
 ## === MOVED PAGES ===
 
 # Redirections for IloveFS campaign
@@ -160,8 +165,3 @@ RewriteRule ^fellowship/groups/coordinators https://wiki.fsfe.org/Teams/Coordina
 RewriteRule ^login https://my.fsfe.org/ [redirect=permanent]
 RewriteRule ^fellowship/graphics/people - [L]
 RewriteRule ^fellowship	/ [redirect=permanent]
-
-# Podcast rules for better links
-RewriteRule ^news/podcast/?$ /news/podcast.html [redirect=permanent]
-RewriteRule ^news/podcast.rss$ /news/podcast.en.rss [L,redirect=permanent]
-RewriteRule ^news/podcast-opus.rss$ /news/podcast-opus.en.rss [L,redirect=permanent]

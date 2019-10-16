@@ -530,13 +530,14 @@ div#subpages, .grid-row {
     }
 
 
-    blockquote, .blockQuote {
+    blockquote,
+    .blockQuote {
         .quote;
         border: 0;
         padding-top: 20px;
         padding-bottom: 20px;
         /* does not work, weird: background-color: lighten(@brand-secondary, 77%);*/
-        background-color: rgba(116, 140, 156,0.23);
+        background-color: rgba(116, 140, 156, 0.23);
 
         p {
             line-height: 1.35;
@@ -547,9 +548,18 @@ div#subpages, .grid-row {
                 font-style: italic;
             }
         }
+
         & + & {
             margin-top: -1.3em;
         }
+    }
+
+    blockquote .blockquote__name {
+        display: inline-block;
+        font-style: italic;
+        padding-top: @spacing-1;
+        padding-left: @spacing-2;
+        width: 100%;
     }
 
     pre, pre code {

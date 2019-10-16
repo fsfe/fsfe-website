@@ -1,9 +1,7 @@
 .toc {
   background: rgb(240, 240, 240);
   border: 1px solid #a2a9b1;
-  display: inline-block;
   padding: @spacing-2;
-  width: 80%;
 
   &__title {
     font-weight: bold;
@@ -14,5 +12,12 @@
     font-size: .9em;
     line-height: 1.5;
     margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: @screen-md-min) {
+  .toc {
+    display: inline-block;
+    width: 80%;
   }
 }

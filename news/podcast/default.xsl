@@ -30,28 +30,53 @@
       <xsl:text>Your browser dows not support the audio element.</xsl:text>
     </xsl:element>
 
-    <!-- Download -->
-    <xsl:element name="p">
-      <xsl:element name="em">
-        <xsl:call-template name="gettext">
-          <xsl:with-param name="id" select="'download'" />
-        </xsl:call-template>
+    <!-- Subscribe feed / Download file row -->
+    <xsl:element name="div">
+      <xsl:attribute name="class">podcast-interact clearfix</xsl:attribute>
+      <!-- feed -->
+      <xsl:element name="span">
+        <xsl:attribute name="class">share-buttons-inline pull-left</xsl:attribute>
+        <!-- TODO: language-variable links -->
+        <xsl:element name="a">
+          <xsl:attribute name="href">feed://fsfe.org/news/podcast-opus.en.rss</xsl:attribute>
+          <xsl:element name="button">
+            <xsl:attribute name="class">share-button-sidebar share-podcast</xsl:attribute>
+            <xsl:text>OPUS Feed</xsl:text>
+          </xsl:element>
+        </xsl:element>
+        <xsl:element name="a">
+          <xsl:attribute name="href">feed://fsfe.org/news/podcast.en.rss</xsl:attribute>
+          <xsl:element name="button">
+            <xsl:attribute name="class">share-button-sidebar share-podcast</xsl:attribute>
+            <xsl:text>MP3 Feed</xsl:text>
+          </xsl:element>
+        </xsl:element>
       </xsl:element>
-      <xsl:text>: </xsl:text>
-      <xsl:element name="a">
-        <xsl:attribute name="href">
-          <xsl:value-of select="/buildinfo/document/podcast/opus/url" />
-        </xsl:attribute>
-        OPUS
-      </xsl:element>
-      <xsl:text> | </xsl:text>
-      <xsl:element name="a">
-        <xsl:attribute name="href">
-          <xsl:value-of select="/buildinfo/document/podcast/mp3/url" />
-        </xsl:attribute>
-        MP3
+      <!-- download -->
+      <xsl:element name="span">
+        <xsl:attribute name="class">pull-right</xsl:attribute>
+        <xsl:element name="em">
+          <xsl:call-template name="gettext">
+            <xsl:with-param name="id" select="'download'" />
+          </xsl:call-template>
+        </xsl:element>
+        <xsl:text>: </xsl:text>
+        <xsl:element name="a">
+          <xsl:attribute name="href">
+            <xsl:value-of select="/buildinfo/document/podcast/opus/url" />
+          </xsl:attribute>
+          OPUS
+        </xsl:element>
+        <xsl:text> | </xsl:text>
+        <xsl:element name="a">
+          <xsl:attribute name="href">
+            <xsl:value-of select="/buildinfo/document/podcast/mp3/url" />
+          </xsl:attribute>
+          MP3
+        </xsl:element>
       </xsl:element>
     </xsl:element>
+
   </xsl:template>
   
 </xsl:stylesheet> 

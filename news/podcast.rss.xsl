@@ -120,7 +120,7 @@
     <rss version="2.0">
       <channel>
         <title>Software Freedom Podcast</title>
-        <description>The regular podcast about Software Freedom and ongoing activities hosted by the Free Software Foundation Europe</description>
+        <description>The regular podcast about Software Freedom and ongoing activities hosted by the FSFE</description>
         <link>https://fsfe.org/news/podcast</link>
         <language><xsl:value-of select="$lang" /></language>
         <copyright>Copyright (c) Free Software Foundation Europe. Creative Commons BY-SA 4.0</copyright>
@@ -186,7 +186,7 @@
         </itunes:category>
         <itunes:keywords>free software, open source, libre, foss, floss, oss, programming, policy, talk, interview, news, tech, technology, freedom, liberty, fsfe, fsf, foundation</itunes:keywords>
         <itunes:image href="https://fsfe.org/graphics/podcast-logo.png" />
-        <itunes:summary>The regular podcast about Software Freedom and ongoing activities hosted by the Free Software Foundation Europe</itunes:summary>
+        <itunes:summary>The regular podcast about Software Freedom and ongoing activities hosted by the FSFE</itunes:summary>
         <itunes:subtitle>The monthly podcast about Free Software</itunes:subtitle>
         <itunes:block>false</itunes:block>
         <itunes:explicit>false</itunes:explicit>

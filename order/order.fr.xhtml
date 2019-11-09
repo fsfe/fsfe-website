@@ -84,64 +84,51 @@
 
       <h2>Expédition</h2>
 
-      <input type="hidden" name="shipping" value="1"/>
-      <div class="radio">
-        <label>
-          <input type="radio" name="_shipping" id="shipping-de" value="3" />
-          <strong>Expédition vers l'Allemagne (€3.00)</strong>
-        </label>
-      </div>
-      <div class="radio">
-        <label>
-          <input type="radio" name="_shipping" id="shipping-eu" value="7" checked="" />
-          <strong>Expédition vers l'Europe (€7.00)</strong>
-        </label>
-      </div>
-      <div class="radio">
-        <label>
-          <input type="radio" name="_shipping" id="shipping-world" value="12" />
-          <strong>Expédition en dehors de l'Europe (€12.00)</strong>
-        </label>
-      </div>
+      <p>Les frais d'expédition suivant s'appliquent :</p>
+      <ul>
+        <li>Expédition vers l'Allemagne : 5.00€</li>
+        <li>Expédition en dehors de l'Allemagne: 8.00€</li>
+      </ul>
+
+      <h2>Vos informations</h2>
 
       <div class="row form-group">
-        <div class="col-sm-2">
-          <label class="control-label" for="name">Nom:</label>
-        </div>
+        <label class="col-sm-2 control-label" for="name">Nom :</label>
         <div class="col-sm-4">
           <input class="form-control" id="name" name="name" type="text" />
         </div>
       </div>
 
       <div class="row form-group">
-        <div class="col-sm-2">
-          <label class="control-label vcenter" for="address">Adresse complète:</label>
-        </div>
+        <label class="col-sm-2 control-label" for="address">Adresse complète:</label>
         <div class="col-sm-4">
           <textarea class="form-control" rows="5" id="address" name="address" type="text" />
         </div>
       </div>
 
       <div class="row form-group">
-        <div class="col-sm-2">
-          <label class="control-label" for="email">Email:</label>
+        <label class="col-sm-2 control-label" for="address">Pays :</label>
+        <div class="col-sm-4">
+          <country-list />
         </div>
+      </div>
+
+      <div class="row form-group">
+        <label class="col-sm-2 control-label" for="email">Email :</label>
         <div class="col-sm-4">
           <input class="form-control" id="email" name="email" type="email" />
         </div>
       </div>
 
       <div class="row form-group">
-        <div class="col-sm-2">
-          <label class="control-label" for="phone">Téléphone:</label>
-        </div>
+        <label class="col-sm-2 control-label" for="phone">Téléphone :</label>
         <div class="col-sm-4">
           <input class="form-control" id="phone" name="phone" type="text" />
         </div>
       </div>
 
       <p class="n">
-        Merci de ne rien renseigner ici:
+        Merci de ne rien renseigner ici :
         <input type="text" size="40" name="url"/>
       </p>
 
@@ -155,7 +142,7 @@
       </div>
     </form>
 
-    <p>Le paiement est possible par virement bancaire, PayPal et diveres cartes de crédit et de
+    <p>Le paiement est possible par virement bancaire, PayPal et divers cartes de crédit et de
        débit. Vous recevrez de plus amples informations lors de la soumission de votre commande.
     </p>
   </body>

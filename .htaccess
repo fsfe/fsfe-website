@@ -137,6 +137,17 @@ RewriteRule ^contact/local(.*) /about/localteams$1 [R=301,L]
 # FELLOWSHIP AND DONATIONS
 # =============================================================================
 
+# Payment
+RewriteRule ^/fellowship/paypal$          https://my.fsfe.org/payonline [R=301,L]
+RewriteRule ^/fellowship/payonline$       https://my.fsfe.org/payonline [R=301,L]
+RewriteRule ^/fellowship/paypal/(.*)      https://my.fsfe.org/payonline/$1 [R=301,L]
+RewriteRule ^/fellowship/payonline/([^/]*)/(.*)   https://my.fsfe.org/payonline/$2 [R=301,L]
+RewriteRule ^/fellowship/payonline/(.*)   https://my.fsfe.org/payonline/$1 [R=301,L]
+RewriteRule ^/fellowship/login/(.*)       https://my.fsfe.org/ [R=301,L]
+RewriteRule ^/fellowship/join/(.*)        https://my.fsfe.org/support [R=301,L]
+RewriteRule ^/fellowship/donate/(.*)      https://my.fsfe.org/donate [R=301,L]
+RewriteRule ^/donate/payonline/(.*)       https://my.fsfe.org/payonline/$1 [R=301,L]
+
 # Old /fellowship pages
 RewriteRule ^/fellowship/donate.*    https://my.fsfe.org/donate [R=301,L]
 RewriteRule ^/fellowship/join.*    https://my.fsfe.org/support [R=301,L]
@@ -155,17 +166,6 @@ RewriteRule ^fellowship/payment(.*) https://fsfe.org/donate/payment$1 [R=301,L]
 RewriteRule ^projects/fellowship /fellowship/ [R=301,L]
 # Catch the rest
 RewriteRule ^fellowship / [R=301,L]
-
-# Payment
-RewriteRule ^/fellowship/paypal$          https://my.fsfe.org/payonline [R=301,L]
-RewriteRule ^/fellowship/payonline$       https://my.fsfe.org/payonline [R=301,L]
-RewriteRule ^/fellowship/paypal/(.*)      https://my.fsfe.org/payonline/$1 [R=301,L]
-RewriteRule ^/fellowship/payonline/([^/]*)/(.*)   https://my.fsfe.org/payonline/$2 [R=301,L]
-RewriteRule ^/fellowship/payonline/(.*)   https://my.fsfe.org/payonline/$1 [R=301,L]
-RewriteRule ^/fellowship/login/(.*)       https://my.fsfe.org/ [R=301,L]
-RewriteRule ^/fellowship/join/(.*)        https://my.fsfe.org/support [R=301,L]
-RewriteRule ^/fellowship/donate/(.*)      https://my.fsfe.org/donate [R=301,L]
-RewriteRule ^/donate/payonline/(.*)       https://my.fsfe.org/payonline/$1 [R=301,L]
 
 # Donate
 RewriteRule ^donate.html$ /donate/donate.en.html [R=301,L]

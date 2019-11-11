@@ -4,22 +4,22 @@ RewriteEngine On
 RewriteRule ^favicon.ico /graphics/fsfe.ico [redirect=permanent]
 RewriteRule ^graphics/fsfeurope.ico /graphics/fsfe.ico [redirect=permanent]
 
-## === SHORT URLs ===
+
+# =============================================================================
+# SHORT URLS
+# =============================================================================
 
 # Translators redirect
 RewriteRule ^translate /contribute/translators/ [redirect=permanent]
-
-# Old supporter database
-RewriteRule ^support(/.*)? /join [redirect=permanent]
 
 # AskYourCandidates redirect
 RewriteRule ^campaigns/ayc(.*) /campaigns/askyourcandidates$1 [redirect=permanent]
 
 # NoCloud campaign, as printed on posters
-RewriteRUle ^nocloud(/.*)?	/activities/nocloud$1	[redirect=permanent]
+RewriteRule ^nocloud(/.*)?	/activities/nocloud$1	[redirect=permanent]
 
 # Short cut for promo order
-RewriteRUle ^promo(/.*)?	/contribute/spreadtheword$1	[redirect=permanent]
+RewriteRule ^promo(/.*)?	/contribute/spreadtheword$1	[redirect=permanent]
 
 # Redirect convince your friends easy pages to the wiki page
 RewriteRule   ^(cyf|convince).*      http://wiki.fsfe.org/ConvinceYourFriends        [R=permanent]
@@ -34,52 +34,26 @@ RewriteRule	^15(/.*)?$		https://fsfe.org/campaigns/15years/15years$1 [redirect=p
 # EU policies wiki page, e.g. linked from the PMPC brochure
 RewriteRule ^fs-policies/?$ https://wiki.fsfe.org/Activities/EU_Policies_overview_FS [redirect=permanent]
 
-# Podcast rules for better links
+# Share buttons
+RewriteRule ^share/?$ /cgi-bin/share.php [NC,L]
+
+
+# =============================================================================
+# CAMPAIGN/TOPIC-SPECIFIC REDIRECTS
+# =============================================================================
+
+# Podcast
 RewriteRule ^news/podcast/?$ /news/podcast.html [redirect=permanent]
 RewriteRule ^news/podcast.rss$ /news/podcast.en.rss [L,redirect=permanent]
 RewriteRule ^news/podcast-opus.rss$ /news/podcast-opus.en.rss [L,redirect=permanent]
 
-## === MOVED PAGES ===
-
-# Redirections for IloveFS campaign
+# ILoveFS
+RewriteRule ^campaigns/ilovefs((/?)|(/[^/]*).html)$ /campaigns/ilovefs/2019$1 [PT] # UPDATE year
 RewriteRule ^campaigns/ilovefs/latest-report(.*)$ /news/2019/news-20190329-01.html [redirect=permanent] # UPDATE always link to latest available report
 RewriteRule ^campaigns/ilovefs/ilovefs(.*)html$ /campaigns/ilovefs/index$1html [redirect=permanent]
-RewriteRule ^campaigns/ilovefs((/?)|(/[^/]*).html)$ /campaigns/ilovefs/2019$1 [PT] # UPDATE year
 RewriteRule ^campaigns/ilovefs/(201[2-5])/index(.*)$ /campaigns/ilovefs/$1/ [redirect=permanent]
 RewriteRule ^campaigns/ilovefs/(201[2-5])(/?)$ /campaigns/ilovefs/$1/ilovefs.html
-
-
-RewriteRule ^(.*)\.no.html /$1.nb.html [redirect=permanent]
-RewriteRule ^(.*)\.no.rss /$1.nb.rss [redirect=permanent]
-RewriteRule ^contact/press(.*) /press/press$1 [redirect=permanent]
-RewriteRule ^standards(.*) /projects/os$1 [redirect=permanent]
-RewriteRule ^education(.*) /projects/education$1 [redirect=permanent]
-RewriteRule ^ftf(.*) /activities/ftf$1 [redirect=permanent]
-RewriteRule ^stacs(.*) /projects/stacs$1 [redirect=permanent]
-RewriteRule ^gbn(.*) /projects/gbn$1 [redirect=permanent]
-RewriteRule ^law/eucd/(.*) /projects/eucd$1 [redirect=permanent]
-RewriteRule ^law(.*) /projects/law$1 [redirect=permanent]
-RewriteRule ^swpat(.*) /projects/swpat$1 [redirect=permanent]
-RewriteRule ^donate.html /donate/donate.en.html [redirect=permanent]
-RewriteRule ^associates/about(.*) /associates/associates$1 [redirect=permanent]
-RewriteRule ^contribute/traineeship(.*) /contribute/internship$1 [redirect=permanent]
-RewriteRule ^contribute/donate(.*) /donate$1 [redirect=permanent]
-RewriteRule ^contact/local(.*) /about/localteams$1 [redirect=permanent]
-RewriteRule ^donate(/?|/donate/?|/donate\..*|/index.*)$ https://my.fsfe.org/donate [redirect=permanent]
-
-# New year's resolution in 2009.
-RewriteRule ^2009$ /news/2009/nyr.html [redirect=permanent]
-RewriteRule ^2009/$ /news/2009/nyr.html [redirect=permanent]
-
-# Help section redirs.
-RewriteRule ^help/?$ /contribute/ [redirect=permanent]
-RewriteRule ^help/index(.*) /contribute/contribute$1 [redirect=permanent]
-RewriteRule ^help/help(.*) /contribute/contribute$1 [redirect=permanent]
-RewriteRule ^help/web\.(.*) /contribute/web/web.$1 [redirect=permanent]
-RewriteRule ^help/(.*) /donate/$1 [redirect=permanent]
-
-# Valentine campaign redirects.
-# 2010
+# old redirects
 RewriteRule ^valentine-2010/(.*) /campaigns/valentine/2010/$1 [redirect=permanent]
 RewriteRule ^vd2010/(.*) /campaigns/valentine/2010/$1 [redirect=permanent]
 RewriteRule ^campaigns/vd2010/vd2010(.*) /campaigns/valentine/2010/valentine-2010$1 [redirect=permanent]
@@ -88,41 +62,19 @@ RewriteRule ^campaigns/valentine-2010/(.*).png /campaigns/valentine/$1.png [redi
 RewriteRule ^campaigns/valentine-2010/(.*).svg /campaigns/valentine/$1.svg [redirect=permanent]
 RewriteRule ^campaigns/vd2010/(.*) /campaigns/valentine/2010/$1 [redirect=permanent]
 RewriteRule ^campaigns/vd2010 /campaigns/valentine/2010/valentine-2010 [redirect=permanent]
-# current
 RewriteRule ^valentine/valentine(.*) /campaigns/valentine/2011/valentine-2011$1 [redirect=permanent]
-
 # trying fix the dirty hack redirection loop from 2011-06-30
 RewriteRule ^campaigns/valentine(/?)$ /campaigns/valentine/2011/valentine-2011 [redirect=temp]
 RewriteRule ^campaigns/valentine/2011(/?)$ /campaigns/valentine/2011/valentine-2011 [redirect=temp]
 
+# Help section
+RewriteRule ^help/?$ /contribute/ [redirect=permanent]
+RewriteRule ^help/index(.*) /contribute/contribute$1 [redirect=permanent]
+RewriteRule ^help/help(.*) /contribute/contribute$1 [redirect=permanent]
+RewriteRule ^help/web\.(.*) /contribute/web/web.$1 [redirect=permanent]
+RewriteRule ^help/(.*) /donate/$1 [redirect=permanent]
 
-# Temporary fix unitl we have a /freesoftware dir for contribute/advocacy/cwfs.en.html
-# RewriteRule ^freesoftware/freesoftware(.*) /about/basics/freesoftware$1 [redirect=temp]
-
-# Rewrite for dead links to gnupg-ccid stuff
-RewriteRule ^en/content/download/17665/125518/file/gnupg-ccid.rules http://wiki.fsfe.org/Card_howtos/Card_reader_setup_(udev)?action=AttachFile&do=view&target=gnupg-ccid.rules [redirect=permanent]
-RewriteRule ^en/content/download/15872/77909/file/gnupg-ccid http://wiki.fsfe.org/Card_howtos/Card_reader_setup_(udev)?action=AttachFile&do=view&target=gnupg-ccid [redirect=permanent]
-
-# Redirects to reduce 404's
-RewriteRule ^en/layout/set/rss/content/view/full/5116 http://blogs.fsfe.org/ciaran/?feed=rss2 [redirect=permanent]
-RewriteRule ^en/layout/set/rss/content/view/full/5009 http://blogs.fsfe.org/maffulli/?feed=rss2 [redirect=permanent]
-RewriteRule ^en/layout/set/rss/content/view/full/4972 http://blogs.fsfe.org/gerloff/?feed=rss2 [redirect=permanent]
-RewriteRule ^en/layout/set/rss/content/view/full/5971 http://blogs.fsfe.org/jj/?feed=rss2 [redirect=permanent]
-RewriteRule ^en/layout/set/rss/content/view/full/6128 http://blogs.fsfe.org/jj/?feed=rss2 [redirect=permanent]
-RewriteRule ^en/layout/set/rss/content/view/full/4974 http://blogs.fsfe.org/greve/?feed=rss2 [redirect=permanent]
-RewriteRule ^en/news http://fsfe.org/news/ [redirect=permanent]
-RewriteRule ^people/greve /about/greve/ [redirect=permanent]
-RewriteRule ^projects/fellowship /fellowship/ [redirect=permanent]
-RewriteRule ^fellowship/contact /contact/contact.html [redirect=permanent]
-RewriteRule ^en/rss/feed/news.xml /news/news.en.rss [redirect=permanent]
-RewriteRule ^en/rss/feed/events.xml /events/events.en.rss  [redirect=permanent]
-RewriteRule ^news/fsfe-fr-channel.fr.xml /news/news.fr.rss [redirect=permanent]
-RewriteRule ^about/members(.*) /about/team$1 [redirect=permanent]
-
-# Moved news pages
-RewriteRule ^news/2016/news-20160629-01(.*) /news/2016/news-20160630-01$1 [redirect=permanent]
-
-# Legal pages redirects
+# Legal team pages
 RewriteRule ^ftf(.*) /activities/ftf$1 [redirect=permanent]
 RewriteRule ^legal(.*) /activities/ftf$1 [redirect=permanent]
 RewriteRule ^activities/ftf/rough-guide-for-users(.*) /projects/ftf/useful-tips-for-users$1 [redirect=permanent]
@@ -137,32 +89,112 @@ RewriteRule ^activities/ftf/recommended\.(.*)html /activities/ftf/licence-questi
 RewriteRule ^activities/ftf/legal-network-policy\.(.*)html /activities/ftf/ln-rules.$1html [redirect=permanent]
 RewriteRule ^activities/ftf/education /activities/ftf/services.html [redirect=permanent]
 
+
+# =============================================================================
+# MOVED PAGES
+# =============================================================================
+
+# News
+RewriteRule ^news/fsfe-fr-channel.fr.xml /news/news.fr.rss [redirect=permanent]
+RewriteRule ^2009$ /news/2009/nyr.html [redirect=permanent]
+RewriteRule ^2009/$ /news/2009/nyr.html [redirect=permanent]
+RewriteRule ^news/2016/news-20160629-01(.*) /news/2016/news-20160630-01$1 [redirect=permanent]
+
 # Old staff profiles
 RewriteRule ^about/bako(.*) /about/team [redirect=permanent]
 RewriteRule ^about/polvani(.*) /about/team [redirect=permanent]
 RewriteRule ^about/tuke(.*) /about/team [redirect=permanent]
+RewriteRule ^people/greve /about/greve/ [redirect=permanent]
 
-# This recipie makes sure that permanent redirects are not cached
-# indefinitely, but re-validated every 10 minutes.
-# NOTE: Enable this when we get an Apache 2.4 :-/
-#Header append Cache-Control s-maxage=600 "expr=%{REQUEST_STATUS} == 301"
-#Header append Cache-Control max-age=600 "expr=%{REQUEST_STATUS} == 301"
+# /en/.*
+RewriteRule ^en/layout/set/rss/content/view/full/5116 http://blogs.fsfe.org/ciaran/?feed=rss2 [redirect=permanent]
+RewriteRule ^en/layout/set/rss/content/view/full/5009 http://blogs.fsfe.org/maffulli/?feed=rss2 [redirect=permanent]
+RewriteRule ^en/layout/set/rss/content/view/full/4972 http://blogs.fsfe.org/gerloff/?feed=rss2 [redirect=permanent]
+RewriteRule ^en/layout/set/rss/content/view/full/5971 http://blogs.fsfe.org/jj/?feed=rss2 [redirect=permanent]
+RewriteRule ^en/layout/set/rss/content/view/full/6128 http://blogs.fsfe.org/jj/?feed=rss2 [redirect=permanent]
+RewriteRule ^en/layout/set/rss/content/view/full/4974 http://blogs.fsfe.org/greve/?feed=rss2 [redirect=permanent]
+RewriteRule ^en/news http://fsfe.org/news/ [redirect=permanent]
+RewriteRule ^en/rss/feed/news.xml /news/news.en.rss [redirect=permanent]
+RewriteRule ^en/rss/feed/events.xml /events/events.en.rss  [redirect=permanent]
+RewriteRule ^en/content/download/17665/125518/file/gnupg-ccid.rules http://wiki.fsfe.org/Card_howtos/Card_reader_setup_(udev)?action=AttachFile&do=view&target=gnupg-ccid.rules [redirect=permanent]
+RewriteRule ^en/content/download/15872/77909/file/gnupg-ccid http://wiki.fsfe.org/Card_howtos/Card_reader_setup_(udev)?action=AttachFile&do=view&target=gnupg-ccid [redirect=permanent]
 
-# Nicer URL for share buttons
-RewriteRule ^share/?$ /cgi-bin/share.php [NC,L]
-
-
-# Removal of duplicate information, and deprecating /fellowship/
+# Other pages
+RewriteRule ^support(/.*)? /join [redirect=permanent]
+RewriteRule ^about/members(.*) /about/team$1 [redirect=permanent]
 RewriteRule ^about/community /contact/community.html [redirect=permanent]
-RewriteRule ^fellowship/communicate /contact/community.html [redirect=permanent]
-RewriteRule ^fellowship/faq https://wiki.fsfe.org/KnowHow/FSFELife/FAQ [redirect=permanent]
+RewriteRule ^(.*)\.no.html /$1.nb.html [redirect=permanent]
+RewriteRule ^(.*)\.no.rss /$1.nb.rss [redirect=permanent]
+RewriteRule ^contact/press(.*) /press/press$1 [redirect=permanent]
+RewriteRule ^standards(.*) /projects/os$1 [redirect=permanent]
+RewriteRule ^education(.*) /projects/education$1 [redirect=permanent]
+RewriteRule ^ftf(.*) /activities/ftf$1 [redirect=permanent]
+RewriteRule ^stacs(.*) /projects/stacs$1 [redirect=permanent]
+RewriteRule ^gbn(.*) /projects/gbn$1 [redirect=permanent]
+RewriteRule ^law/eucd/(.*) /projects/eucd$1 [redirect=permanent]
+RewriteRule ^law(.*) /projects/law$1 [redirect=permanent]
+RewriteRule ^swpat(.*) /projects/swpat$1 [redirect=permanent]
+RewriteRule ^associates/about(.*) /associates/associates$1 [redirect=permanent]
+RewriteRule ^contribute/traineeship(.*) /contribute/internship$1 [redirect=permanent]
+RewriteRule ^contribute/donate(.*) /donate$1 [redirect=permanent]
+RewriteRule ^contact/local(.*) /about/localteams$1 [redirect=permanent]
+
+
+# =============================================================================
+# FELLOWSHIP AND DONATIONS
+# =============================================================================
+
+# Old /fellowship pages
+RedirectRule ^/fellowship/donate.*    https://my.fsfe.org/donate
+RedirectRule ^/fellowship/join.*    https://my.fsfe.org/support
+RedirectRule ^/fellowship/login.*   https://my.fsfe.org/
 RewriteRule ^fellowship/card https://wiki.fsfe.org/TechDocs/CardHowtos [redirect=permanent]
-RewriteRule ^fellowship/new-group https://wiki.fsfe.org/KnowHow/Groups/CoordinatorsHandbook [redirect=permanent]
+RewriteRule ^fellowship/communicate /contact/community.html [redirect=permanent]
+RewriteRule ^fellowship/contact /contact/contact.html [redirect=permanent]
 RewriteRule ^fellowship/events(.*) https://fsfe.org/events$1 [redirect=permanent]
-RewriteRule ^fellowship/payment(.*) https://fsfe.org/donate/payment$1 [redirect=permanent]
-RewriteRule ^fellowship/groups https://wiki.fsfe.org/LocalGroups [redirect=permanent]
+RewriteRule ^fellowship/faq https://wiki.fsfe.org/KnowHow/FSFELife/FAQ [redirect=permanent]
+RewriteRule ^fellowship/graphics/people - [L]
 RewriteRule ^fellowship/groups/berlin https://wiki.fsfe.org/LocalGroups/Berlin [redirect=permanent]
 RewriteRule ^fellowship/groups/coordinators https://wiki.fsfe.org/Teams/Coordinators [redirect=permanent]
+RewriteRule ^fellowship/groups https://wiki.fsfe.org/LocalGroups [redirect=permanent]
+RewriteRule ^fellowship/new-group https://wiki.fsfe.org/KnowHow/Groups/CoordinatorsHandbook [redirect=permanent]
+RewriteRule ^fellowship/payment(.*) https://fsfe.org/donate/payment$1 [redirect=permanent]
+RewriteRule ^projects/fellowship /fellowship/ [redirect=permanent]
+RewriteRule ^fellowship / [redirect=permanent]  # Catch the rest
+
+# Payment
+RewriteRule ^/fellowship/paypal$          https://my.fsfe.org/payonline [R=permanent,L]
+RewriteRule ^/fellowship/payonline$       https://my.fsfe.org/payonline [R=permanent,L]
+RewriteRule ^/fellowship/paypal/(.*)      https://my.fsfe.org/payonline/$1 [R=permanent,L]
+RewriteRule ^/fellowship/payonline/([^/]*)/(.*)   https://my.fsfe.org/payonline/$2 [R=permanent,L]
+RewriteRule ^/fellowship/payonline/(.*)   https://my.fsfe.org/payonline/$1 [R=permanent,L]
+RewriteRule ^/fellowship/login/(.*)       https://my.fsfe.org/ [R=permanent,L]
+RewriteRule ^/fellowship/join/(.*)        https://my.fsfe.org/support [R=permanent,L]
+RewriteRule ^/fellowship/donate/(.*)      https://my.fsfe.org/donate [R=permanent,L]
+RewriteRule ^/donate/payonline/(.*)       https://my.fsfe.org/payonline/$1 [R=permanent,L]
+
+# Donate
+RewriteRule ^donate.html$ /donate/donate.en.html [redirect=permanent]
+RewriteRule ^donate(/?|/donate/?|/donate\..*|/index.*)$ https://my.fsfe.org/donate [redirect=permanent]
 RewriteRule ^login https://my.fsfe.org/ [redirect=permanent]
-RewriteRule ^fellowship/graphics/people - [L]
-RewriteRule ^fellowship	/ [redirect=permanent]
+
+
+# =============================================================================
+# MISCELLANEOUS
+# =============================================================================
+
+# Block nasty freebie sites
+# block iframes
+Header append X-FRAME-OPTIONS "SAMEORIGIN"
+# block based on certain referers
+RewriteCond %{HTTP_REFERER} .*telegra.ph/Besplatnye-vozdushnye-shary-i-naklejki-02-19 [NC,OR]
+RewriteCond %{HTTP_REFERER} .*zakupersi.com.* [NC,OR]
+RewriteCond %{HTTP_REFERER} .*pepper.pl.* [NC,OR]
+RewriteCond %{HTTP_REFERER} .*pl-pepper.digidip.net.* [NC,OR]
+RewriteCond %{HTTP_REFERER} .*dealdoktor.de.* [NC,OR]
+RewriteCond %{HTTP_REFERER} .*monetenfuchs.de.* [NC,OR]
+RewriteCond %{HTTP_REFERER} .*devswag.io.* [NC,OR]
+RewriteCond %{HTTP_REFERER} .*devrant.com/rants/.* [NC]
+RewriteCond %{REQUEST_URI} ^/?promo.*$ [NC,OR]
+RewriteCond %{REQUEST_URI} ^/?contribute/spreadtheword[^-].*$ [NC]
+RewriteRule .* /contribute/spreadtheword-freebie.html [L,R]

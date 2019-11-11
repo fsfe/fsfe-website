@@ -48,8 +48,9 @@ RewriteRule ^news/podcast.rss$ /news/podcast.en.rss [L,R=301]
 RewriteRule ^news/podcast-opus.rss$ /news/podcast-opus.en.rss [L,R=301]
 
 # ILoveFS
-RewriteRule ^campaigns/ilovefs((/?)|(/[^/]*).html)$ /campaigns/ilovefs/2019$1 [PT] # UPDATE year
-RewriteRule ^campaigns/ilovefs/latest-report(.*)$ /news/2019/news-20190329-01.html [R=301,L] # UPDATE always link to latest available report
+# TODO each year: update links for next two lines
+RewriteRule ^campaigns/ilovefs(/?$|/[^/]*.html$) /campaigns/ilovefs/2019$1 [PT,L]
+RewriteRule ^campaigns/ilovefs/latest-report.*$ /news/2019/news-20190329-01.html [R=301,L]
 RewriteRule ^campaigns/ilovefs/ilovefs(.*)html$ /campaigns/ilovefs/index$1html [R=301,L]
 RewriteRule ^campaigns/ilovefs/(201[2-5])/index(.*)$ /campaigns/ilovefs/$1/ [R=301,L]
 RewriteRule ^campaigns/ilovefs/(201[2-5])(/?)$ /campaigns/ilovefs/$1/ilovefs.html [R=301,L]
@@ -67,19 +68,19 @@ RewriteRule ^help/web\.(.*) /contribute/web/web.$1 [R=301,L]
 RewriteRule ^help/(.*) /donate/$1 [R=301,L]
 
 # Legal team pages
-RewriteRule ^ftf(.*) /activities/ftf$1 [R=301,L]
-RewriteRule ^legal(.*) /activities/ftf$1 [R=301,L]
-RewriteRule ^activities/ftf/rough-guide-for-users(.*) /projects/ftf/useful-tips-for-users$1 [R=301,L]
-RewriteRule ^activities/ftf/rough-guide-for-vendors(.*) /projects/ftf/useful-tips-for-vendors$1 [R=301,L]
-RewriteRule ^activities/ftf/contact(.*) /contact/contact$1#ftf [NE,R=301]
-RewriteRule ^activities/ftf/form(.*) /contact/contact$1#ftf [NE,R=301]
+RewriteRule ^ftf(.*)$ /activities/ftf$1 [R=301,L]
+RewriteRule ^legal(.*)$ /activities/ftf$1 [R=301,L]
+RewriteRule ^activities/ftf/?$ /activities/ftf/activities.html [R=301,L]
 RewriteRule ^activities/ftf/ftf\.(.*)html /activities/ftf/activities.$1html [R=301,L]
-RewriteRule ^activities/ftf/$ /activities/ftf/activities.html [R=301,L]
 RewriteRule ^activities/ftf/index\.(.*)html /activities/ftf/activities.$1html [R=301,L]
+RewriteRule ^activities/ftf/rough-guide-for-users(.*)$ /projects/ftf/useful-tips-for-users$1 [R=301,L]
+RewriteRule ^activities/ftf/rough-guide-for-vendors(.*)$ /projects/ftf/useful-tips-for-vendors$1 [R=301,L]
+RewriteRule ^activities/ftf/contact(.*)$ /contact/contact$1#ftf [NE,R=301]
+RewriteRule ^activities/ftf/form(.*)$ /contact/contact$1#ftf [NE,R=301]
 RewriteRule ^activities/ftf/network\.(.*)html /activities/ftf/ln.$1html [R=301,L]
 RewriteRule ^activities/ftf/recommended\.(.*)html /activities/ftf/licence-questions.$1html [R=301,L]
 RewriteRule ^activities/ftf/legal-network-policy\.(.*)html /activities/ftf/ln-rules.$1html [R=301,L]
-RewriteRule ^activities/ftf/education /activities/ftf/services.html [R=301,L]
+RewriteRule ^activities/ftf/education.*$ /activities/ftf/services.html [R=301,L]
 
 
 # =============================================================================
@@ -90,13 +91,13 @@ RewriteRule ^activities/ftf/education /activities/ftf/services.html [R=301,L]
 RewriteRule ^news/fsfe-fr-channel.fr.xml /news/news.fr.rss [R=301,L]
 RewriteRule ^2009$ /news/2009/nyr.html [R=301,L]
 RewriteRule ^2009/$ /news/2009/nyr.html [R=301,L]
-RewriteRule ^news/2016/news-20160629-01(.*) /news/2016/news-20160630-01$1 [R=301,L]
+RewriteRule ^news/2016/news-20160629-01(.*)$ /news/2016/news-20160630-01$1 [R=301,L]
 
 # Old staff profiles
-RewriteRule ^about/bako(.*) /about/team [R=301,L]
-RewriteRule ^about/polvani(.*) /about/team [R=301,L]
-RewriteRule ^about/tuke(.*) /about/team [R=301,L]
-RewriteRule ^people/greve /about/greve/ [R=301,L]
+RewriteRule ^about/bako(/.*)?$ /about/team [R=301,L]
+RewriteRule ^about/polvani(/.*)?$ /about/team [R=301,L]
+RewriteRule ^about/tuke(/.*)?$ /about/team [R=301,L]
+RewriteRule ^people/greve(/.*)?$ /about/greve [R=301,L]
 
 # /en/.*
 RewriteRule ^en/layout/set/rss/content/view/full/5116 http://blogs.fsfe.org/ciaran/?feed=rss2 [R=301,L]
@@ -152,7 +153,8 @@ RewriteRule ^fellowship/groups https://wiki.fsfe.org/LocalGroups [R=301,L]
 RewriteRule ^fellowship/new-group https://wiki.fsfe.org/KnowHow/Groups/CoordinatorsHandbook [R=301,L]
 RewriteRule ^fellowship/payment(.*) https://fsfe.org/donate/payment$1 [R=301,L]
 RewriteRule ^projects/fellowship /fellowship/ [R=301,L]
-RewriteRule ^fellowship / [R=301,L]  # Catch the rest
+# Catch the rest
+RewriteRule ^fellowship / [R=301,L]
 
 # Payment
 RewriteRule ^/fellowship/paypal$          https://my.fsfe.org/payonline [R=301,L]

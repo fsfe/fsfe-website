@@ -65,6 +65,7 @@ RewriteRule ^associates/about(.*) /associates/associates$1 [redirect=permanent]
 RewriteRule ^contribute/traineeship(.*) /contribute/internship$1 [redirect=permanent]
 RewriteRule ^contribute/donate(.*) /donate$1 [redirect=permanent]
 RewriteRule ^contact/local(.*) /about/localteams$1 [redirect=permanent]
+RewriteRule ^donate(/?|/donate/?|/donate\..*|/index.*)$ https://my.fsfe.org/donate [redirect=permanent]
 
 # New year's resolution in 2009.
 RewriteRule ^2009$ /news/2009/nyr.html [redirect=permanent]

@@ -8,7 +8,8 @@
     <!-- Apply news page PRE-rules -->
     <xsl:if test="string(/buildinfo/document/@newsdate) and
                     (not(string(/buildinfo/document/@type)) or
-                    /buildinfo/document/@type != 'newsletter')">
+                    /buildinfo/document/@type != 'newsletter' and
+                    /buildinfo/document/@type != 'podcast')">
       
       <!-- add link to press/press.xx.html -->
       <xsl:element name="p">
@@ -31,6 +32,17 @@
       </xsl:element>
     </xsl:if>
     
+    <!-- Apply podcast page PRE-rules -->
+    <xsl:if test="string(/buildinfo/document/@newsdate) and /buildinfo/document/@type = 'podcast'">
+      <xsl:element name="p">
+        <xsl:attribute name="id">category</xsl:attribute>
+        <xsl:element name="a">
+          <xsl:attribute name="href">/news/podcast.<xsl:value-of select="/buildinfo/@language"/>.html</xsl:attribute>
+          <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'podcast'" /></xsl:call-template>
+        </xsl:element>
+      </xsl:element>
+    </xsl:if>
+
     <!-- auto generate ID for headings if it doesn't already exist -->
     <xsl:call-template name="generate-id" />
     

@@ -79,9 +79,10 @@
     <name>Carsten Agger</name>
     <country>DK</country>
     <function country="DK">coordinator/m</function>
-    <function group="aarhus">coordinator/m</function>
+    <!-- <function group="aarhus">coordinator/m</function> -->
+    <team>core</team>
     <team>dk</team>
-    <team>aarhus</team>
+    <!-- <team>aarhus</team> -->
     <email>agger (at) fsfe (dot) org</email>
     <link>https://blogs.fsfe.org/agger/</link>
     <avatar>/fellowship/graphics/people/carstenagger-avatar.jpg</avatar>
@@ -474,6 +475,7 @@
     <name>Vincent Lequertier</name>
     <country>FR</country>
     <function country="FR">deputy/m</function>
+    <team>core</team>
     <email>vincent (at) fsfe (dot) org</email>
   </person>
 

@@ -52,4 +52,69 @@
       small="2019/pin-fsfe-white-small.jpg"
       large="2019/pin-fsfe-white-large.jpg"/>
   </item>
+
+  <item type="tshirt" id="tshirt-multilingual-black" price="20.00" date="2019-12-07">
+    <available size="S"    a="46" b="66"/>
+    <available size="M"    a="50" b="70"/>
+    <available size="L"    a="51" b="71"/>
+    <available size="XL"   a="55" b="75"/>
+    <available size="XXL"  a="57" b="77"/>
+    <available size="XXXL" a="63" b="79"/>
+    <image
+      small="2019/tshirt-multilingual-black-front-small.jpg"
+      large="2019/tshirt-multilingual-black-front-large.jpg"/>
+    <image
+      small="2019/tshirt-multilingual-black-back-small.jpg"
+      large="2019/tshirt-multilingual-black-back-large.jpg"/>
+  </item>
+
+  <item type="tshirt" id="tshirt-multilingual-green" price="20.00" date="2019-12-07">
+    <available size="S"    a="46" b="66"/>
+    <available size="M"    a="50" b="70"/>
+    <available size="L"    a="51" b="71"/>
+    <available size="XL"   a="55" b="75"/>
+    <available size="XXL"  a="57" b="77"/>
+    <available size="XXXL" a="63" b="79"/>
+    <image
+      small="2019/tshirt-multilingual-green-front-small.jpg"
+      large="2019/tshirt-multilingual-green-front-large.jpg"/>
+    <image
+      small="2019/tshirt-multilingual-green-back-small.jpg"
+      large="2019/tshirt-multilingual-green-back-large.jpg"/>
+  </item>
+
+  <item type="girlie" id="girlie-multilingual-black" price="20.00" date="2019-12-07">
+    <available size="S"    a="44"   b="62"/>
+    <available size="M"    a="47.5" b="62"/>
+    <available size="L"    a="48"   b="65"/>
+    <available size="XL"   a="53.5" b="66"/>
+    <available size="XXL"  a="55"   b="68"/>
+    <image
+      small="2019/girlie-multilingual-black-front-small.jpg"
+      large="2019/girlie-multilingual-black-front-large.jpg"/>
+    <image
+      small="2019/girlie-multilingual-black-back-small.jpg"
+      large="2019/girlie-multilingual-black-back-large.jpg"/>
+  </item>
+
+  <item type="girlie" id="girlie-multilingual-blue" price="20.00" date="2019-12-07">
+    <available size="S"    a="44"   b="62"/>
+    <available size="M"    a="47.5" b="62"/>
+    <available size="L"    a="48"   b="65"/>
+    <available size="XL"   a="53.5" b="66"/>
+    <available size="XXL"  a="55"   b="68"/>
+    <image
+      small="2019/girlie-multilingual-blue-front-small.jpg"
+      large="2019/girlie-multilingual-blue-front-large.jpg"/>
+    <image
+      small="2019/girlie-multilingual-blue-back-small.jpg"
+      large="2019/girlie-multilingual-blue-back-large.jpg"/>
+  </item>
+
+  <item type="other" id="baby-bib-black" price="15.00" date="2019-12-07">
+    <available size="#"/>
+    <image
+      small="2019/baby-bib-black-small.jpg"
+      large="2019/baby-bib-black-large.jpg"/>
+  </item>
 </itemset>

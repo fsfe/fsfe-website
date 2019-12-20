@@ -210,11 +210,11 @@
             <!-- Podcast description -->
             <xsl:element name="description">
               <xsl:copy-of select="normalize-space(body)"/>
-              <xsl:text> Join the FSFE community and support the podcast: https://my.fsfe.org/support?ref=podcast</xsl:text>
+              <xsl:text> Join the FSFE community and support the podcast: https://my.fsfe.org/support?referrer=podcast</xsl:text>
             </xsl:element>
             <xsl:element name="itunes:summary">
               <xsl:copy-of select="normalize-space(body)"/>
-              <xsl:text> Join the FSFE community and support the podcast: https://my.fsfe.org/support?ref=podcast</xsl:text>
+              <xsl:text> Join the FSFE community and support the podcast: https://my.fsfe.org/support?referrer=podcast</xsl:text>
             </xsl:element>
             
             <!-- Podcast body -->
@@ -247,7 +247,7 @@
               
               <xsl:element name="p">
                 <xsl:element name="a">
-                  <xsl:attribute name="href">https://my.fsfe.org/support?ref=podcast</xsl:attribute>
+                  <xsl:attribute name="href">https://my.fsfe.org/support?referrer=podcast</xsl:attribute>
                   <xsl:text>Join the FSFE community and support the podcast</xsl:text>
                 </xsl:element>
               </xsl:element>

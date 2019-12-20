@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:dt="http://xsltsl.org/date-time" xmlns:weekdays="." xmlns:months="." xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:psc="http://podlove.org/simple-chapters" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+  <channel>
+    <title>Software Freedom Podcast</title>
+    <description>The regular podcast about Software Freedom and ongoing activities hosted by the FSFE</description>
+    <link>https://fsfe.org/news/podcast</link>
+    <language>en</language>
+    <copyright>Copyright (c) Free Software Foundation Europe. Creative Commons BY-SA 4.0</copyright>
+    <managingEditor>press@fsfe.org (FSFE Press Team)</managingEditor>
+    <webMaster>web@lists.fsfe.org (FSFE Webmaster Team)</webMaster>
+    <image>
+      <url>https://fsfe.org/graphics/podcast-logo.png</url>
+      <title>Software Freedom Podcast</title>
+      <width>88</width>
+      <height>31</height>
+      <link>https://fsfe.org/news/podcast</link>
+    </image>
+    <atom:link href="https://fsfe.org/news/podcast.en.rss" rel="self" type="application/rss+xml" title="Software Freedom Podcast (mp3 Audio)"/>
+    <atom:link href="https://fsfe.org/news/podcast-opus.en.rss" rel="alternate" type="application/rss+xml" title="Software Freedom Podcast (opus Audio)"/>
+    <lastBuildDate>2019-12-20 18:36:34</lastBuildDate>
+    <generator>FSFE website build system: podcast.rss.xsl</generator>
+    <itunes:type>episodic</itunes:type>
+    <itunes:owner>
+      <itunes:name>Free Software Foundation Europe (FSFE)</itunes:name>
+      <itunes:email>contact@fsfe.org</itunes:email>
+    </itunes:owner>
+    <itunes:author>Free Software Foundation Europe (FSFE)</itunes:author>
+    <itunes:category text="Technology"/>
+    <itunes:category text="News">
+      <itunes:category text="Tech News"/>
+    </itunes:category>
+    <itunes:keywords>free software, open source, libre, foss, floss, oss, programming, policy, talk, interview, news, tech, technology, freedom, liberty, fsfe, fsf, foundation</itunes:keywords>
+    <itunes:image href="https://fsfe.org/graphics/podcast-logo.png"/>
+    <itunes:summary>The regular podcast about Software Freedom and ongoing activities hosted by the FSFE</itunes:summary>
+    <itunes:subtitle>The monthly podcast about Free Software</itunes:subtitle>
+    <itunes:block>false</itunes:block>
+    <itunes:explicit>false</itunes:explicit>
+    <item>
+      <title>Software Freedom Podcast #2 about KDE with Lydia Pintscher </title>
+      <itunes:title>Software Freedom Podcast #2 about KDE with Lydia Pintscher </itunes:title>
+      <description>We are back with the second episode of our Software Freedom Podcast! Once a month, we talk with people who have inspiring ideas about software freedom. In this episode, we talk with Lydia Pintscher from KDE about the development of the KDE community, the different KDE projects and the issues they will be tackling over the next two years. Join the FSFE community and support the podcast: https://my.fsfe.org/support?ref=podcast</description>
+      <itunes:summary>We are back with the second episode of our Software Freedom Podcast! Once a month, we talk with people who have inspiring ideas about software freedom. In this episode, we talk with Lydia Pintscher from KDE about the development of the KDE community, the different KDE projects and the issues they will be tackling over the next two years. Join the FSFE community and support the podcast: https://my.fsfe.org/support?ref=podcast</itunes:summary>
+      <content:encoded><![CDATA[<h1>
+  Software Freedom Podcast #2 about KDE with Lydia Pintscher
+</h1><p>
+ We are back with the second episode of our Software Freedom Podcast! 
+ Once a month, we talk with people who have inspiring ideas about 
+ software freedom. In this episode, we talk with Lydia Pintscher from 
+ KDE about the development of the KDE community, the different KDE projects 
+ and the issues they will be tackling over the next two years. 
+</p><p>
+ When we were planning this second episode of the Software Freedom Podcast,
+ we were keen on inviting someone from the Free Software community. We 
+ thought that Lydia, as the current Vice President of KDE, would be the 
+ perfect person to join us for our second episode. This gives us the chance 
+ to introduce to you the wonderful KDE community and all its different projects. 
+ In this episode, we talk about how Lydia balances her day job with the 
+ volunteer position of vice president of KDE. We also discuss some broader 
+ topics like the development of the KDE community and the different projects 
+ they are working on, as well as the future outlook of these projects. 
+</p><p>Read more:</p><ul>
+  <li><a href="https://kde.org">About KDE</a></li>
+  <li><a href="https://community.kde.org/Get_Involved">Join the KDE community</a></li>
+  <li><a href="https://kde.org/goals">KDE Akademy goals</a></li>
+</ul><p><a class="learn-more" href="https://community.fsfe.org/t/software-freedom-podcast-2-about-kde-with-lydia-pintscher/363">Discuss this </a></p><p><a href="https://my.fsfe.org/support?ref=podcast">Join the FSFE community and support the podcast</a></p>]]></content:encoded>
+      <link>https://fsfe.org/news/podcast/episode-2.html</link>
+      <guid isPermaLink="false">https://fsfe.org/news/podcast/episode-2.html</guid>
+      <pubDate>12 Nov 2019 00:00:00 +0100</pubDate>
+      <itunes:author>Free Software Foundation Europe (FSFE)</itunes:author>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:block>false</itunes:block>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:subtitle>Interview with Lydia Pintscher about KDE. The perfect episode for a quick overview of KDE</itunes:subtitle>
+      <itunes:duration>23:40</itunes:duration>
+      <itunes:episode>2</itunes:episode>
+      <enclosure url="https://download.fsfe.org/audio/podcast/SFP002.mp3" length="22604880" type="audio/mp3"/>
+      <psc:chapters>
+        <psc:chapter start="0:00" title="Welcome to the podcast"/>
+        <psc:chapter start="0:32" title="Introduction to KDE and Lydia Pintscher"/>
+        <psc:chapter start="01:20" title="Interview with Lydia Pintscher about KDE"/>
+        <psc:chapter start="22:50" title="Closing words"/>
+      </psc:chapters>
+    </item>
+    <item>
+      <title>Software Freedom Podcast #3 about Free Software in the mobile phone communication with Harald Welte </title>
+      <itunes:title>Software Freedom Podcast #3 about Free Software in the mobile phone communication with Harald Welte </itunes:title>
+      <description>Once a month, we talk with people who have inspiring ideas about software freedom. In this third episode, our guest is Harald Welte, Free Software programmer and activist. Harald discusses with us his current projects regarding mobile phone communication and the general status of Free Software in this area. Join the FSFE community and support the podcast: https://my.fsfe.org/support?ref=podcast</description>
+      <itunes:summary>Once a month, we talk with people who have inspiring ideas about software freedom. In this third episode, our guest is Harald Welte, Free Software programmer and activist. Harald discusses with us his current projects regarding mobile phone communication and the general status of Free Software in this area. Join the FSFE community and support the podcast: https://my.fsfe.org/support?ref=podcast</itunes:summary>
+      <content:encoded><![CDATA[<h1>Software Freedom Podcast #3 about Free Software mobile phone communication with Harald Welte
+</h1><p>
+Once a month, we talk with people who have inspiring ideas about software freedom. In this third episode, our guest is Harald Welte, Free Software programmer and activist. Harald discusses with us his current projects regarding mobile phone communication and the general status of Free Software in this area. 
+</p><p>
+One of the main topics this year was and still is the coming implementation of the 5G standard. There were long debates, and several countries have taken steps to ban specific vendors. These countries are even trying to convince others to do likewise.  To allow enough room for this broad issue and include an expert's point of view, we dedicate a full Software Freedom Podcast episode to discuss this with Harald Welte. Harald is a Free Software developer known for his involvement in OpenMoko, the first Free Software phone; his work for gplviolations.org to make sure companies adhere to the obligations of Free Software licenses; and nowadays his work on the umbrella project "Open source mobile communications", or Osmocom for short.  Together with Harald, we give you an overview of the use of Free Software in mobile phone communication; talk with you about the basics of this technology; about the difference of 3G, 4G, and 5G; the Huawei ban and <a href="https://osmocom.org/">Osmocom</a>; as well as about the state of Free Software in those fields.</p><p>Read more:</p><ul>
+  <li><a href="https://osmocom.org/">About Osmocom</a></li>
+  <li><a href="http://git.osmocom.org/">Osmocom git</a></li>
+ </ul><p><a class="learn-more" href="https://community.fsfe.org/t/software-freedom-podcast-3-about-free-software-mobile-phone-communication-with-harald-welte/375">Discuss this </a></p><p><a href="https://my.fsfe.org/support?ref=podcast">Join the FSFE community and support the podcast</a></p>]]></content:encoded>
+      <link>https://fsfe.org/news/podcast/episode-3.html</link>
+      <guid isPermaLink="false">https://fsfe.org/news/podcast/episode-3.html</guid>
+      <pubDate>12 Nov 2019 00:00:00 +0100</pubDate>
+      <itunes:author>Free Software Foundation Europe (FSFE)</itunes:author>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:block>false</itunes:block>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:subtitle>Interview with Harald Welte about Free Software in mobile phone communication. The perfect episode for a quick overview of Free Software in mobile phone communication</itunes:subtitle>
+      <itunes:duration>30:02</itunes:duration>
+      <itunes:episode>2</itunes:episode>
+      <enclosure url="https://download.fsfe.org/audio/podcast/SFP003.mp3" length="37347888" type="audio/mp3"/>
+      <psc:chapters>
+        <psc:chapter start="0:00" title="Welcome to the podcast"/>
+        <psc:chapter start="00:32" title="Introduction of Harald Welte"/>
+        <psc:chapter start="01:03" title="Interview with Harald Welte about Free Software in mobile phone communication"/>
+        <psc:chapter start="29:35" title="Closing words"/>
+      </psc:chapters>
+    </item>
+    <item>
+      <title>Software Freedom Podcast #1 on Day Against DRM with Cory Doctorow</title>
+      <itunes:title>Software Freedom Podcast #1 on Day Against DRM with Cory Doctorow</itunes:title>
+      <description>We have a Podcast! Starting with this episode, we will talk once a month with people who have inspiring ideas about software freedom. In our first episode of our Software Freedom Podcast, we address the issue of Digital Restrictions Management (DRM) together with Cory Doctorow, a British-Canadian writer, political activist, and co-editor of the blog boingboing.net. Cory Doctorow is a prominent supporter of software freedom and a less restrictive copyright law. His books are published under Creative Commons licenses. Join the FSFE community and support the podcast: https://my.fsfe.org/support?ref=podcast</description>
+      <itunes:summary>We have a Podcast! Starting with this episode, we will talk once a month with people who have inspiring ideas about software freedom. In our first episode of our Software Freedom Podcast, we address the issue of Digital Restrictions Management (DRM) together with Cory Doctorow, a British-Canadian writer, political activist, and co-editor of the blog boingboing.net. Cory Doctorow is a prominent supporter of software freedom and a less restrictive copyright law. His books are published under Creative Commons licenses. Join the FSFE community and support the podcast: https://my.fsfe.org/support?ref=podcast</itunes:summary>
+      <content:encoded><![CDATA[<h1>
+  Software Freedom Podcast #1 on Day Against DRM with Cory Doctorow
+</h1><p>
+  We have a Podcast! Starting with this episode, we will talk once a
+  month with people who have inspiring ideas about software freedom. In
+  our first episode of our Software Freedom Podcast, we address the
+  issue of Digital Restrictions Management (DRM) together with Cory
+  Doctorow, a British-Canadian writer, political activist, and
+  co-editor of the blog boingboing.net. Cory Doctorow is a prominent
+  supporter of software freedom and a less restrictive copyright law.
+  His books are published under Creative Commons licenses.
+</p><p>
+  When we planned the first episode, we exchanged some ideas for
+  possible guests. When we heard that the <a href="https://www.defectivebydesign.org/dayagainstdrm/2019">Day
+  Against DRM</a> will take place in October we thought: we have to get
+  Cory Doctorow as our first guest on Digital Restrictions Management.
+  In this episode of the Software Freedom Podcast, we talk about the
+  difference between books and an e-books with DRM, how authors and
+  artist can make money without DRM, security implications of DRM,
+  regulation of the so called "Internet of Things", and other questions
+  related to this issue.
+</p><p>Read more:</p><ul>
+  <li><a href="https://www.defectivebydesign.org/dayagainstdrm/2019">Day against DRM 2019</a></li>
+  <li><a href="https://fsfe.org/activities/drm/drm.html">More information about DRM</a></li>
+  <li><a href="https://fsfe.org/contribute/spreadtheword#drm-leaflet">Informative leaflet explaining DRM</a></li>
+  <li><a href="https://fsfe.org/activities/drm/sony-rootkit-fiasco.html">"Revisiting the Sony Rootkit"</a></li>
+  <li><a href="https://boingboing.net/">Boing Boing</a></li>
+</ul><p><a class="learn-more" href="https://community.fsfe.org/t/software-freedom-podcast-1-on-day-against-drm-with-cory-doctorow/344">Discuss this </a></p><p><a href="https://my.fsfe.org/support?ref=podcast">Join the FSFE community and support the podcast</a></p>]]></content:encoded>
+      <link>https://fsfe.org/news/podcast/episode-1.html</link>
+      <guid isPermaLink="false">https://fsfe.org/news/podcast/episode-1.html</guid>
+      <pubDate>12 Oct 2019 00:00:00 +0100</pubDate>
+      <itunes:author>Free Software Foundation Europe (FSFE)</itunes:author>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:block>false</itunes:block>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:subtitle>Interview with Cory Doctorow about DRM, how lack of technological control affects our society today and in the future, and his latest book "Unauthorized Bread". The perfect episode for the annual Day against DRM!</itunes:subtitle>
+      <itunes:duration>39:42</itunes:duration>
+      <itunes:episode>1</itunes:episode>
+      <enclosure url="https://download.fsfe.org/audio/podcast/SFP01.mp3" length="38125101" type="audio/mp3"/>
+      <psc:chapters>
+        <psc:chapter start="0:00" title="Welcome to the podcast"/>
+        <psc:chapter start="0:25" title="Introduction to DRM and Cory Doctorow"/>
+        <psc:chapter start="38:38" title="Conclusion and closing words"/>
+      </psc:chapters>
+    </item>
+  </channel>
+</rss>

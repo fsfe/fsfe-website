@@ -12,6 +12,8 @@
                 xmlns:psc="http://podlove.org/simple-chapters"
                 xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
 
+  <xsl:import href="../build/xslt/gettext.xsl" />
+
   <xsl:output method="xml" encoding="utf-8" indent="yes"/>
 
   <!-- $today = current date (given as <html date="...">) -->
@@ -226,6 +228,22 @@
                   <xsl:copy-of select="normalize-space(body)"/>
                 </xsl:otherwise>
               </xsl:choose>
+
+              <!-- Link to discussion topic on community.fsfe.org -->
+              <xsl:if test = "discussion/@href">
+                <xsl:element name="p">
+                  <xsl:element name="a">
+                    <xsl:attribute name="class">learn-more</xsl:attribute>
+                    <xsl:attribute name="href">
+                      <xsl:value-of select="discussion/@href" />
+                    </xsl:attribute>
+                    <xsl:call-template name="fsfe-gettext">
+                      <xsl:with-param name="id" select="'discuss-article'" />
+                    </xsl:call-template>
+                    <xsl:text> </xsl:text>
+                  </xsl:element>
+                </xsl:element>
+              </xsl:if>
               
               <xsl:element name="p">
                 <xsl:element name="a">

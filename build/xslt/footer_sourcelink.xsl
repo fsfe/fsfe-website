@@ -29,8 +29,9 @@
       <ul><li>
         <!-- Link to the XHTML source -->
         <xsl:element name="a">
+          <xsl:attribute name="rel">nofollow</xsl:attribute>
           <xsl:attribute name="href">
-            <xsl:text>https://git.fsfe.org/FSFE/fsfe-website/src/branch/master</xsl:text>
+            <xsl:text>/source</xsl:text>
             <xsl:value-of select="/buildinfo/@filename"/>
             <xsl:text>.</xsl:text>
             <xsl:value-of select="/buildinfo/document/@language"/>

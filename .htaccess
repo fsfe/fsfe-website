@@ -137,14 +137,15 @@ RewriteRule ^contact/local(.*) /about/localteams$1 [R=301,L]
 # =============================================================================
 
 # Payment
-RewriteRule ^fellowship/paypal(/.*)?$    https://my.fsfe.org/payonline/$1 [R=301,L]
-RewriteRule ^fellowship/payonline(/.*)?$ https://my.fsfe.org/payonline/$1 [R=301,L]
+RewriteRule ^fellowship/paypal(/.*)?$    https://my.fsfe.org/payonline$1 [R=301,L]
+RewriteRule ^fellowship/payonline(/.*)?$ https://my.fsfe.org/payonline$1 [R=301,L]
 RewriteRule ^fellowship/payonline/([^/]*)/(.*)   https://my.fsfe.org/payonline/$2 [R=301,L]
 RewriteRule ^fellowship/login(/.*)?$     https://my.fsfe.org/ [R=301,L]
 RewriteRule ^fellowship/join(/.*)?$      https://my.fsfe.org/support [R=301,L]
 RewriteRule ^fellowship/donate(/.*)?$    https://my.fsfe.org/donate [R=301,L]
 RewriteRule ^fellowship/payment(/.*)?$    https://fsfe.org/donate/payment$1 [R=301,L]
-RewriteRule ^donate/payonline(/.*)?$     https://my.fsfe.org/payonline/$1 [R=301,L]
+RewriteRule ^donate/payonline(/.*)?$     https://my.fsfe.org/payonline$1 [R=301,L]
+RewriteRule ^order/payonline.(.*)/(.*) /cgi-bin/order-payonline.pl?language=$1&reference=$2
 
 # Old /fellowship pages
 RewriteRule ^fellowship/card(/.*)?$ https://wiki.fsfe.org/TechDocs/CardHowtos [R=301,L]
@@ -159,13 +160,13 @@ RewriteRule ^fellowship/new-group(/.*)?$ https://wiki.fsfe.org/KnowHow/Groups/Co
 RewriteRule ^fellowship / [R=301,L]
 
 # Donate
-RewriteRule ^donate.html$ /donate/donate.en.html [R=301,L]
-RewriteRule ^donate(/?|/donate/?|/donate\..*|/index.*)$ https://my.fsfe.org/donate [R=301,L]
-RewriteRule ^login(/.*)?$ https://my.fsfe.org/ [R=301,L]
+RewriteRule ^donate(/?|/donate/?|/donate\..*|/donate-.*|/index.*)$ https://my.fsfe.org/donate [R=301,L]
+RewriteRule ^donate(/onetime-donation.*|/spenden.*|/paypal.*)$ https://my.fsfe.org/donate [R=301,L]
 
 # Join/Support
 RewriteRule ^support(er)?(/.*)?$ https://my.fsfe.org/donate [R=301,L]
 RewriteRule ^join(/.*)?$ https://my.fsfe.org/donate [R=301,L]
+RewriteRule ^login(/.*)?$ https://my.fsfe.org/ [R=301,L]
 
 
 # =============================================================================
@@ -173,7 +174,7 @@ RewriteRule ^join(/.*)?$ https://my.fsfe.org/donate [R=301,L]
 # =============================================================================
 
 # Old pages
-RewriteRule ^about/printable(/.*)?$ /contribute/spreadtheword/ R=301,L
+RewriteRule ^about/printable(/.*)?$ /contribute/spreadtheword/ [R=301,L]
 
 
 # =============================================================================

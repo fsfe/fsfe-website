@@ -1,8 +1,0 @@
-RewriteEngine On
-RewriteRule ^donate-2002\.(.*) /donate/donate.$1 [redirect=permanent]
-RewriteRule ^spenden(.*) /donate/donate$1 [redirect=permanent]
-RewriteRule ^paypal(.*) /donate/donate$1 [redirect=permanent]
-RewriteRule ^donate-2004-uk(.*) /donate/donate$1 [redirect=permanent]
-RewriteRule ^donate-2002-de(.*) /donate/germany$1 [redirect=permanent]
-RewriteRule ^donate-2007-ch(.*) /donate/switzerland$1 [redirect=permanent]
-RewriteRule ^onetime-donation(.*) /fellowship/donate$1 [redirect=permanent]

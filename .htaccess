@@ -113,7 +113,6 @@ RewriteRule ^en/content/download/17665/125518/file/gnupg-ccid.rules http://wiki.
 RewriteRule ^en/content/download/15872/77909/file/gnupg-ccid http://wiki.fsfe.org/Card_howtos/Card_reader_setup_(udev)?action=AttachFile&do=view&target=gnupg-ccid [R=301,L]
 
 # Other pages
-RewriteRule ^support(er)?(/.*)?$ https://my.fsfe.org/donate [R=301,L]
 RewriteRule ^about/members(.*) /about/team$1 [R=301,L]
 RewriteRule ^about/community /contact/community.html [R=301,L]
 RewriteRule ^(.*)\.no.html /$1.nb.html [R=301,L]
@@ -163,6 +162,10 @@ RewriteRule ^fellowship / [R=301,L]
 RewriteRule ^donate.html$ /donate/donate.en.html [R=301,L]
 RewriteRule ^donate(/?|/donate/?|/donate\..*|/index.*)$ https://my.fsfe.org/donate [R=301,L]
 RewriteRule ^login https://my.fsfe.org/ [R=301,L]
+
+# Join/Support
+RewriteRule ^support(er)?(/.*)?$ https://my.fsfe.org/donate [R=301,L]
+RewriteRule ^join(/.*)?$ https://my.fsfe.org/donate [R=301,L]
 
 
 # =============================================================================

@@ -11,7 +11,7 @@ RewriteRule ^translate /contribute/translators/ [redirect=permanent]
 
 # Old supporter database
 RewriteRule ^support(/.*)? /join [redirect=permanent,L]
-RewriteRile ^join(/.*)?$ https://my.fsfe.org/donate [R=301,L]
+RewriteRule ^join(/.*)?$ https://my.fsfe.org/donate [R=301,L]
 
 # AskYourCandidates redirect
 RewriteRule ^campaigns/ayc(.*) /campaigns/askyourcandidates$1 [redirect=permanent]

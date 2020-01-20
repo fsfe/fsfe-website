@@ -101,8 +101,7 @@ RewriteRule ^activities/ftf/education.*$ /activities/ftf/services.html [R=301,L]
 
 # News
 RewriteRule ^news/fsfe-fr-channel.fr.xml /news/news.fr.rss [R=301,L]
-RewriteRule ^2009$ /news/2009/nyr.html [R=301,L]
-RewriteRule ^2009/$ /news/2009/nyr.html [R=301,L]
+RewriteRule ^2009/?$ /news/2009/nyr.html [R=301,L]
 RewriteRule ^news/2016/news-20160629-01(.*)$ /news/2016/news-20160630-01$1 [R=301,L]
 
 # Old staff profiles
@@ -123,6 +122,61 @@ RewriteRule ^en/rss/feed/events.xml /events/events.en.rss  [R=301,L]
 RewriteRule ^en/content/download/17665/125518/file/gnupg-ccid.rules http://wiki.fsfe.org/Card_howtos/Card_reader_setup_(udev)?action=AttachFile&do=view&target=gnupg-ccid.rules [R=301,L]
 RewriteRule ^en/content/download/15872/77909/file/gnupg-ccid http://wiki.fsfe.org/Card_howtos/Card_reader_setup_(udev)?action=AttachFile&do=view&target=gnupg-ccid [R=301,L]
 
+# Tags
+RewriteRule ^tags/tagged(\...)(\.html)?$ /tags/tags$1.html [R=301,L]
+
+# Documents
+RewriteRule ^documents/fp6(.*) /projects/fp6$1 [R=301,L]
+RewriteRule ^documents/whatwedo(.*) /about/basics/whatwedo$1 [R=301,L]
+RewriteRule ^documents/gnuproject(.*) /about/basics/gnuproject$1 [R=301,L]
+RewriteRule ^documents/whyweexist(.*) /about/basics/whyweexist$1 [R=301,L]
+RewriteRule ^documents/freesoftware(.*) /about/basics/freesoftware$1 [R=301,L]
+RewriteRule ^documents/preamble(.*) /about/history/preamble$1 [R=301,L]
+RewriteRule ^documents/doi(.*) /about/history/doi$1 [R=301,L]
+RewriteRule ^documents/msooxml(.*) /projects/os/msooxml$1 [R=301,L]
+RewriteRule ^documents/iprip(.*) /projects/wipo/iprip$1 [R=301,L]
+RewriteRule ^documents/wiwo(.*) /projects/wipo/wiwo$1 [R=301,L]
+RewriteRule ^documents/printable/(.*) /about/printable/$1 [R=301,L]
+RewriteRule ^documents/reports/(.*) /about/reports/$1 [R=301,L]
+RewriteRule ^documents/rms-fs-2006-03-09(.*) /freesoftware/transcripts/rms-fs-2006-03-09$1 [R=301,L]
+
+# Projects
+RewriteRule ^projects/agnula(.*) /campaigns/agnula$1 [R=301,L]
+RewriteRule ^projects/bgw(.*) /campaigns/bgw$1 [R=301,L]
+RewriteRule ^projects/browserbundling(.*) /campaigns/browserbundling$1 [R=301,L]
+RewriteRule ^projects/btw09(.*) /campaigns/btw09$1 [R=301,L]
+RewriteRule ^projects/eucd(.*) /campaigns/eucd$1 [R=301,L]
+RewriteRule ^projects/gbn(.*) /campaigns/gbn$1 [R=301,L]
+RewriteRule ^projects/gplv3(.*) /campaigns/gplv3$1 [R=301,L]
+RewriteRule ^projects/horizon2020(.*) /campaigns/horizon2020$1 [R=301,L]
+RewriteRule ^projects/ipred2(.*) /campaigns/ipred2$1 [R=301,L]
+RewriteRule ^projects/mankind(.*) /campaigns/mankind$1 [R=301,L]
+RewriteRule ^projects/pdfreaders(.*) /campaigns/pdfreaders$1 [R=301,L]
+RewriteRule ^projects/self(.*) /campaigns/self$1 [R=301,L]
+RewriteRule ^projects/stacs(.*) /campaigns/stacs$1 [R=301,L]
+RewriteRule ^projects/swpat(.*) /campaigns/swpat$1 [R=301,L]
+RewriteRule ^projects/wsis(.*) /campaigns/wsis$1 [R=301,L]
+RewriteRule ^projects/active(.*)html$ /campaigns/campaigns$1html [R=301,L]
+RewriteRule ^projects/finished(.*)html$ /campaigns/campaigns$1html [R=301,L]
+RewriteRule ^projects/inactive(.*)html$ /campaigns/campaigns$1html [R=301,L]
+RewriteRule ^projects/drm(.*) /activities/drm$1 [R=301,L]
+RewriteRule ^projects/education(.*) /activities/education$1 [R=301,L]
+RewriteRule ^projects/os(.*) /activities/os$1 [R=301,L]
+RewriteRule ^projects/procurement(.*) /activities/procurement$1 [R=301,L]
+RewriteRule ^projects/eu(.*) /activities/eu$1 [R=301,L]
+RewriteRule ^projects/ftf(.*) /activities/ftf$1 [R=301,L]
+RewriteRule ^projects/fla(.*) /activities/ftf$1 [R=301,L]
+RewriteRule ^projects/ms-vs-eu(.*) /activities/ms-vs-eu$1 [R=301,L]
+RewriteRule ^projects/un(.*) /activities/un$1 [R=301,L]
+RewriteRule ^projects/wipo(.*) /activities/wipo$1 [R=301,L]
+RewriteRule ^projects/fp6(.*) /activities/fp6$1 [R=301,L]
+RewriteRule ^projects/fp7(.*) /activities/fp7$1 [R=301,L]
+RewriteRule ^projects/map(.*) /activities/map$1 [R=301,L]
+RewriteRule ^projects/igf(.*) /activities/igf$1 [R=301,L]
+RewriteRule ^projects/work(.*) /work$1 [R=301,L]
+RewriteRule ^projects/leaflet-fellowship-FSA(.*) /about/printable/leaflet-fellowship-FSA$1 [R=301,L]
+RewriteRule ^projects(/.*)?$ / [R=301,L]
+
 # Other pages
 RewriteRule ^about/members(/.*)?$ /about/team$1 [R=301,L]
 RewriteRule ^about/community(/.*)?$ /contact/community.html [R=301,L]
@@ -142,6 +196,11 @@ RewriteRule ^associates/about(.*) /associates/associates$1 [R=301,L]
 RewriteRule ^contribute/traineeship(.*) /contribute/internship$1 [R=301,L]
 RewriteRule ^contribute/donate(.*) /donate$1 [R=301,L]
 RewriteRule ^contact/local(.*) /about/localteams$1 [R=301,L]
+RewriteRule ^fr/(news|events)\.(..\.)?html /fr/fr.$1html [R=301,L]
+RewriteRule ^campaigns/wsis/cs-benchmarks\.(.*)$ /campaigns/wsis/cs-benchmarks-03-11-14.$1 [R=301,L]
+RewriteRule ^freesoftware/education/argumentation(.*)$ /freesoftware/education/education$1 [R=301,L]
+RewriteRule ^contribute/translators\.(.*) /contribute/translators/translators.$1 [R=301,L]
+RewriteRule ^contribute/booth(.*) https://wiki.fsfe.org/KnowHow/Groups/OrganizeABooth [R=301,L]
 
 
 # =============================================================================
@@ -192,3 +251,11 @@ RewriteRule ^about/printable(/.*)?$ /contribute/spreadtheword/ [R=301,L]
 # =============================================================================
 # MISCELLANEOUS
 # =============================================================================
+
+# Forbid access to these folders
+RewriteRule ^(tools|build)/?.*$ - [F,L]
+
+# Custom Directory Index for these folders
+<Directory campaigns/browserbundling>
+  DirectoryIndex letter-20091005.en.html
+</Directory>

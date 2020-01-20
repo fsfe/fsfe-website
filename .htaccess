@@ -256,6 +256,4 @@ RewriteRule ^about/printable(/.*)?$ /contribute/spreadtheword/ [R=301,L]
 RewriteRule ^(tools|build)/?.*$ - [F,L]
 
 # Custom Directory Index for these folders
-<Directory campaigns/browserbundling>
-  DirectoryIndex letter-20091005.en.html
-</Directory>
+RewriteRule ^campaigns/browserbundling/?$ /campaigns/browserbundling/letter-20091005.html [R=301,L]

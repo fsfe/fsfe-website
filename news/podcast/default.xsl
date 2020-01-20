@@ -16,14 +16,14 @@
       <!-- OPUS -->
       <xsl:element name="source">
         <xsl:attribute name="src">
-          <xsl:value-of select="/buildinfo/document/podcast/opus/url" />
+          <xsl:value-of select="/buildinfo/document/podcast/opus/url" /><xsl:text>?ref=player</xsl:text>
         </xsl:attribute>
         <xsl:attribute name="type">audio/ogg;codecs=opus</xsl:attribute>
       </xsl:element>
       <!-- MP3 -->
       <xsl:element name="source">
         <xsl:attribute name="src">
-          <xsl:value-of select="/buildinfo/document/podcast/mp3/url" />
+          <xsl:value-of select="/buildinfo/document/podcast/mp3/url" /><xsl:text>?ref=player</xsl:text>
         </xsl:attribute>
         <xsl:attribute name="type">audio/mp3</xsl:attribute>
       </xsl:element>
@@ -63,14 +63,14 @@
         <xsl:text>: </xsl:text>
         <xsl:element name="a">
           <xsl:attribute name="href">
-            <xsl:value-of select="/buildinfo/document/podcast/opus/url" />
+            <xsl:value-of select="/buildinfo/document/podcast/opus/url" /><xsl:text>?ref=download</xsl:text>
           </xsl:attribute>
           OPUS
         </xsl:element>
         <xsl:text> | </xsl:text>
         <xsl:element name="a">
           <xsl:attribute name="href">
-            <xsl:value-of select="/buildinfo/document/podcast/mp3/url" />
+            <xsl:value-of select="/buildinfo/document/podcast/mp3/url" /><xsl:text>?ref=download</xsl:text>
           </xsl:attribute>
           MP3
         </xsl:element>

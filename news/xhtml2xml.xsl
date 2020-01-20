@@ -57,6 +57,7 @@
         <xsl:copy-of select="/html/author" />
         <!-- Copy data of <podcast> to XML files -->
         <xsl:copy-of select="/html/podcast" />
+        <xsl:copy-of select="/html/discussion" />
       
       </xsl:element>
     </xsl:element>

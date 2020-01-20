@@ -79,12 +79,13 @@
     <name>Carsten Agger</name>
     <country>DK</country>
     <function country="DK">coordinator/m</function>
-    <function group="aarhus">coordinator/m</function>
+    <!-- <function group="aarhus">coordinator/m</function> -->
+    <team>ga</team>
+    <!--<team>core</team> -->
     <team>dk</team>
-    <team>aarhus</team>
+    <!-- <team>aarhus</team> -->
     <email>agger (at) fsfe (dot) org</email>
     <link>https://blogs.fsfe.org/agger/</link>
-    <avatar>/fellowship/graphics/people/carstenagger-avatar.jpg</avatar>
   </person>
 
   <person id="albers">
@@ -202,7 +203,7 @@
     <country>CH</country>
     <function country="CH">deputy/m</function>
     <function group="zurich">coordinator/m</function>
-    <team>core</team>
+    <team>ga</team>
     <team>ch</team>
     <team>zurich</team>
     <email>giammi (at) fsfe (dot) org</email>
@@ -251,7 +252,6 @@
 
   <person id="eiswirt">
     <name>Susanne Eiswirt</name>
-    <avatar>/about/eiswirt/eiswirt-avatar.jpg</avatar>
   </person>
 
   <person id="feltrin">
@@ -427,7 +427,6 @@
     <name>Matthias Kirschner</name>
     <country>DE</country>
     <function>president/m</function>
-    <function project="ftf">coordinator/m</function>
     <team>council</team>
     <team>ga</team>
     <team>de</team>
@@ -458,9 +457,13 @@
 
   <person id="lasota">
     <name>Lucas Lasota</name>
+    <country>BR</country>
+    <function>project-manager/m</function>
+    <team>core</team>
     <email>lucas.lasota (at) fsfe (dot) org</email>
-    <employee>intern/m</employee>
-    <team>intern</team>
+    <link>/about/lasota/lasota.html</link>
+    <avatar>/about/lasota/lasota-avatar.jpg</avatar>
+    <employee>part/m</employee> 
   </person>
 
   <person id="mehring">
@@ -474,7 +477,9 @@
     <name>Vincent Lequertier</name>
     <country>FR</country>
     <function country="FR">deputy/m</function>
+    <team>core</team>
     <email>vincent (at) fsfe (dot) org</email>
+    <avatar>/about/lequertier/lequertier-avatar.jpg</avatar>
   </person>
 
   <person id="lindfors">
@@ -555,12 +560,6 @@
   <person id="mancheva">
     <name>Galia Mancheva</name>
     <country>BU</country>
-    <function>project-manager/f</function>
-    <team>core</team>
-    <email>galia (at) fsfe (dot) org</email>
-    <link>/about/mancheva/mancheva.html</link>
-    <avatar>/about/mancheva/mancheva-avatar.jpg</avatar>
-    <employee>full/f</employee>
   </person>
 
   <person id="moeller">
@@ -614,7 +613,8 @@
     <country>NL</country>
     <function volunteers="translators-nl">deputy/m</function>
     <function country="NL">deputy/m</function>
-    <team>core</team>
+    <team>ga</team>
+    <!--<team>core</team> -->
     <team>translation-coordinators</team>
     <email>ao (at) fsfe (dot) org</email>
     <avatar>/about/ockers/ockers-avatar.jpg</avatar>
@@ -736,7 +736,7 @@
   <person id="sander">
     <name>Alexander Sander</name>
     <country>DE</country>
-    <function>policy-analyst/m</function>
+    <function>policy-manager/m</function>
     <team>core</team>
     <email>alex.sander (at) fsfe (dot) org</email>
     <link>/about/sander/sander.html</link>

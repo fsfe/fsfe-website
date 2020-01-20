@@ -4,7 +4,7 @@
 
 <itemset>
   <item type="tshirt" id="tshirt-pmpc-black" price="20.00" date="2019-02-11">
-    <available size="S"    a="46" b="66"/>
+    <!-- available size="S"    a="46" b="66"/ -->
     <available size="M"    a="50" b="70"/>
     <available size="L"    a="51" b="71"/>
     <available size="XL"   a="55" b="75"/>
@@ -24,4 +24,104 @@
       small="2019/gymsac-nocloud-black-small.jpg"
       large="2019/gymsac-nocloud-black-large.jpg"/>
   </item>
+
+  <item type="hooded" id="zipped-fsfs-blue" price="50.00" date="2019-11-22">
+    <available size="S"   a="50" b="67" c="72"/>
+    <available size="M"   a="53" b="69" c="73"/>
+    <available size="L"   a="56" b="72" c="74"/>
+    <available size="XL"  a="59" b="76" c="75"/>
+    <available size="XXL" a="62" b="78" c="76"/>
+    <image
+      small="2019/zipped-fsfs-blue-front-small.jpg"
+      large="2019/zipped-fsfs-blue-front-large.jpg"/>
+    <image
+      small="2019/zipped-fsfs-blue-back-small.jpg"
+      large="2019/zipped-fsfs-blue-back-large.jpg"/>
+  </item>
+
+  <item type="other" id="pin-fsfe-white" price="5.00" date="2019-11-22">
+    <available size="#"/>
+    <image
+      small="2019/pin-fsfe-white-small.jpg"
+      large="2019/pin-fsfe-white-large.jpg"/>
+  </item>
+
+  <item type="other" id="magnetpin-fsfe-white" price="5.00" date="2019-11-22">
+    <available size="#"/>
+    <image
+      small="2019/pin-fsfe-white-small.jpg"
+      large="2019/pin-fsfe-white-large.jpg"/>
+  </item>
+
+  <item type="tshirt" id="tshirt-multilingual-black" price="20.00" date="2019-12-07">
+    <available size="S"    a="46" b="66"/>
+    <available size="M"    a="50" b="70"/>
+    <available size="L"    a="51" b="71"/>
+    <available size="XL"   a="55" b="75"/>
+    <available size="XXL"  a="57" b="77"/>
+    <available size="XXXL" a="63" b="79"/>
+    <image
+      small="2019/tshirt-multilingual-black-front-small.jpg"
+      large="2019/tshirt-multilingual-black-front-large.jpg"/>
+    <image
+      small="2019/tshirt-multilingual-black-back-small.jpg"
+      large="2019/tshirt-multilingual-black-back-large.jpg"/>
+  </item>
+
+  <item type="tshirt" id="tshirt-multilingual-green" price="20.00" date="2019-12-07">
+    <available size="S"    a="46" b="66"/>
+    <available size="M"    a="50" b="70"/>
+    <available size="L"    a="51" b="71"/>
+    <available size="XL"   a="55" b="75"/>
+    <available size="XXL"  a="57" b="77"/>
+    <!-- available size="XXXL" a="63" b="79"/ -->
+    <image
+      small="2019/tshirt-multilingual-green-front-small.jpg"
+      large="2019/tshirt-multilingual-green-front-large.jpg"/>
+    <image
+      small="2019/tshirt-multilingual-green-back-small.jpg"
+      large="2019/tshirt-multilingual-green-back-large.jpg"/>
+  </item>
+
+  <item type="girlie" id="girlie-multilingual-black" price="20.00" date="2019-12-07">
+    <available size="S"    a="44"   b="62"/>
+    <available size="M"    a="47.5" b="62"/>
+    <available size="L"    a="48"   b="65"/>
+    <available size="XL"   a="53.5" b="66"/>
+    <available size="XXL"  a="55"   b="68"/>
+    <image
+      small="2019/girlie-multilingual-black-front-small.jpg"
+      large="2019/girlie-multilingual-black-front-large.jpg"/>
+    <image
+      small="2019/girlie-multilingual-black-back-small.jpg"
+      large="2019/girlie-multilingual-black-back-large.jpg"/>
+  </item>
+
+  <item type="girlie" id="girlie-multilingual-blue" price="20.00" date="2019-12-07">
+    <available size="S"    a="44"   b="62"/>
+    <available size="M"    a="47.5" b="62"/>
+    <available size="L"    a="48"   b="65"/>
+    <available size="XL"   a="53.5" b="66"/>
+    <available size="XXL"  a="55"   b="68"/>
+    <image
+      small="2019/girlie-multilingual-blue-front-small.jpg"
+      large="2019/girlie-multilingual-blue-front-large.jpg"/>
+    <image
+      small="2019/girlie-multilingual-blue-back-small.jpg"
+      large="2019/girlie-multilingual-blue-back-large.jpg"/>
+  </item>
+
+  <item type="other" id="baby-bib-black" price="15.00" date="2019-12-07">
+    <available size="#"/>
+    <image
+      small="2019/baby-bib-black-small.jpg"
+      large="2019/baby-bib-black-large.jpg"/>
+  </item>
+
+  <!-- item type="other" id="card-christmas-blue" price="20.00" date="2019-12-09">
+    <available size="#"/>
+    <image
+      small="2019/card-christmas-blue-small.jpg"
+      large="2019/card-christmas-blue-large.jpg"/>
+  </item -->
 </itemset>

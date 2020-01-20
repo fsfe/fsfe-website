@@ -12,6 +12,8 @@
                 xmlns:psc="http://podlove.org/simple-chapters"
                 xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
 
+  <xsl:import href="../build/xslt/gettext.xsl" />
+
   <xsl:output method="xml" encoding="utf-8" indent="yes"/>
 
   <!-- $today = current date (given as <html date="...">) -->
@@ -120,7 +122,7 @@
     <rss version="2.0">
       <channel>
         <title>Software Freedom Podcast</title>
-        <description>The regular podcast about Software Freedom and ongoing activities hosted by the FSFE</description>
+        <description>The regular podcast about Free Software and ongoing activities hosted by the FSFE</description>
         <link>https://fsfe.org/news/podcast</link>
         <language><xsl:value-of select="$lang" /></language>
         <copyright>Copyright (c) Free Software Foundation Europe. Creative Commons BY-SA 4.0</copyright>
@@ -186,7 +188,7 @@
         </itunes:category>
         <itunes:keywords>free software, open source, libre, foss, floss, oss, programming, policy, talk, interview, news, tech, technology, freedom, liberty, fsfe, fsf, foundation</itunes:keywords>
         <itunes:image href="https://fsfe.org/graphics/podcast-logo.png" />
-        <itunes:summary>The regular podcast about Software Freedom and ongoing activities hosted by the FSFE</itunes:summary>
+        <itunes:summary>The regular podcast about Free Software and ongoing activities hosted by the FSFE</itunes:summary>
         <itunes:subtitle>The monthly podcast about Free Software</itunes:subtitle>
         <itunes:block>false</itunes:block>
         <itunes:explicit>false</itunes:explicit>
@@ -208,11 +210,11 @@
             <!-- Podcast description -->
             <xsl:element name="description">
               <xsl:copy-of select="normalize-space(body)"/>
-              <xsl:text> Join the FSFE community and support the podcast: https://my.fsfe.org/support?ref=podcast</xsl:text>
+              <xsl:text> Join the FSFE community and support the podcast: https://my.fsfe.org/support?referrer=podcast</xsl:text>
             </xsl:element>
             <xsl:element name="itunes:summary">
               <xsl:copy-of select="normalize-space(body)"/>
-              <xsl:text> Join the FSFE community and support the podcast: https://my.fsfe.org/support?ref=podcast</xsl:text>
+              <xsl:text> Join the FSFE community and support the podcast: https://my.fsfe.org/support?referrer=podcast</xsl:text>
             </xsl:element>
             
             <!-- Podcast body -->
@@ -226,10 +228,26 @@
                   <xsl:copy-of select="normalize-space(body)"/>
                 </xsl:otherwise>
               </xsl:choose>
+
+              <!-- Link to discussion topic on community.fsfe.org -->
+              <xsl:if test = "discussion/@href">
+                <xsl:element name="p">
+                  <xsl:element name="a">
+                    <xsl:attribute name="class">learn-more</xsl:attribute>
+                    <xsl:attribute name="href">
+                      <xsl:value-of select="discussion/@href" />
+                    </xsl:attribute>
+                    <xsl:call-template name="fsfe-gettext">
+                      <xsl:with-param name="id" select="'discuss-article'" />
+                    </xsl:call-template>
+                    <xsl:text> </xsl:text>
+                  </xsl:element>
+                </xsl:element>
+              </xsl:if>
               
               <xsl:element name="p">
                 <xsl:element name="a">
-                  <xsl:attribute name="href">https://my.fsfe.org/support?ref=podcast</xsl:attribute>
+                  <xsl:attribute name="href">https://my.fsfe.org/support?referrer=podcast</xsl:attribute>
                   <xsl:text>Join the FSFE community and support the podcast</xsl:text>
                 </xsl:element>
               </xsl:element>

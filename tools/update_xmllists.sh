@@ -30,6 +30,7 @@ set -o pipefail
 
 pid=$$
 
+nextyear=$(date --date="next year" +%Y)
 thisyear=$(date --date="this year" +%Y)
 lastyear=$(date --date="last year" +%Y)
 
@@ -190,7 +191,8 @@ for source_file in $(find * -name '*.sources' | sort); do
       continue
     fi
 
-    # Honor $thisyear and $lastyear variables
+    # Honor $nextyear, $thisyear, and $lastyear variables
+    pattern=${pattern//\$nextyear/${nextyear}}
     pattern=${pattern//\$thisyear/${thisyear}}
     pattern=${pattern//\$lastyear/${lastyear}}
 

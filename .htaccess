@@ -128,7 +128,7 @@ RewriteRule ^tags/tagged(\...)(\.html)?$ /tags/tags$1.html [R=301,L]
 # Documents
 RewriteRule ^documents/fp6(.*) /projects/fp6$1 [R=301,L]
 RewriteRule ^documents/whatwedo(.*) /about/basics/whatwedo$1 [R=301,L]
-RewriteRule ^documents/gnuproject(.*) /about/basics/gnuproject$1 [R=301,L]
+RewriteRule ^documents/gnuproject(.*) /freesoftware/basics/gnuproject$1 [R=301,L]
 RewriteRule ^documents/whyweexist(.*) /about/basics/whyweexist$1 [R=301,L]
 RewriteRule ^documents/freesoftware(.*) /about/basics/freesoftware$1 [R=301,L]
 RewriteRule ^documents/preamble(.*) /about/history/preamble$1 [R=301,L]
@@ -253,7 +253,7 @@ RewriteRule ^about/printable(/.*)?$ /contribute/spreadtheword/ [R=301,L]
 # =============================================================================
 
 # Forbid access to these folders
-RewriteRule ^(tools|build)/?.*$ - [F,L]
+RewriteRule ^(tools|build)(/.*)?$ - [F,L]
 
 # Custom Directory Index for these folders
 RewriteRule ^campaigns/browserbundling/?$ /campaigns/browserbundling/letter-20091005.html [R=301,L]

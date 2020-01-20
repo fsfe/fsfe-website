@@ -1,3 +1,15 @@
+# This file handles all redirects/rewrites for fsfe.org
+# Some of the rewrites are for shorter URLs, most for support of
+# changed URLs or deleted pages.
+#
+# Some redirect definitions cannot be handled by this file and therefore
+# are places directly in the webserver configuration:
+#   https://git.fsfe.org/fsfe-system-hackers/webserver-bunsen/src/branch/master/files/apache2-sites/fsfe.org.conf
+#
+# Please do not create other .htaccess files in this project! It would
+# overwrite rewrites concerning its directories in this file and
+# and thereby create a lot of confusion.
+
 RewriteEngine On
 
 # Favicon

@@ -61,7 +61,7 @@ RewriteRule ^news/podcast-opus.rss$ /news/podcast-opus.en.rss [L,R=301]
 
 # ILoveFS
 # TODO each year: update links for next two lines
-RewriteRule ^campaigns/ilovefs(/?$|/[^/]*.html$) /campaigns/ilovefs/2019$1 [PT,L]
+RewriteRule ^campaigns/ilovefs(/?$|/[^/]*.html$) /campaigns/ilovefs/2020$1 [PT,L]
 RewriteRule ^campaigns/ilovefs/latest-report.*$ /news/2019/news-20190329-01.html [R=301,L]
 RewriteRule ^campaigns/ilovefs/ilovefs(.*)html$ /campaigns/ilovefs/index$1html [R=301,L]
 RewriteRule ^campaigns/ilovefs/(201[2-5])/index(.*)$ /campaigns/ilovefs/$1/ [R=301,L]

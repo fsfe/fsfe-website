@@ -145,7 +145,7 @@ my $subject = "Expense Request $reference $catch_phrase ($budget)";
 
 my $boundary = "NextPart$reference";
 
-my $replyto = "finance\@fsfe.org, $to\@fsfe.org, $who\@fsfe.org";
+my $replyto = "finance\@fsfe.org, $to\@fsfe.org, $who\@fsfe.org, er-archive\@lists.fsfe.org";
 
 open(MAIL, "|/usr/lib/sendmail -t -f $who\@fsfe.org");
 print MAIL "From: $who\@fsfe.org\n";

@@ -136,24 +136,24 @@ for xmlfile in $(
   fi
 done
 
-if [ $ENCERRORS -gt 0 ]; then
+#if [ $ENCERRORS -gt 0 ]; then
 
-cat <<EOF >&2
-  === FILE ENCODING ERROR ===
-  One or more files in your commit have a wrong encoding.
+#cat <<EOF >&2
+  #=== FILE ENCODING ERROR ===
+  #One or more files in your commit have a wrong encoding.
 
-  The following files are not UTF-8 encoded:
-  $(echo "${FILES}" | sed -E -e "s/\|/\n  - /g")
+  #The following files are not UTF-8 encoded:
+  #$(echo "${FILES}" | sed -E -e "s/\|/\n  - /g")
 
-  For the FSFE website, we strongly prefer UTF-8 encoded files.
-  Everything else creates problems. Please change the file encoding in
-  your text editor or with a special tool.
+  #For the FSFE website, we strongly prefer UTF-8 encoded files.
+  #Everything else creates problems. Please change the file encoding in
+  #your text editor or with a special tool.
 
-  The commit has been aborted. You have to fix the problem first.
-EOF
+  #The commit has been aborted. You have to fix the problem first.
+#EOF
 
-  exit $ENCERRORS
-fi
+  #exit $ENCERRORS
+#fi
 
 
 # CHECK FOR COMMON ERRORS IN NEWS/EVENT FILES

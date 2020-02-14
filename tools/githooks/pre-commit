@@ -1,4 +1,23 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
+
+# Check dependencies
+deperrors=''
+for depend in git xmllint sed file grep bash; do
+  if ! which "$depend" >/dev/null 2>&1; then
+    deperrors="$depend $deperrors"
+  fi
+done
+if [ -n "$deperrors" ]; then
+  cat <<-EOF
+	The githook script depends on some other programs to function.
+	Not all of those programs could be located on your system.
+	Please use your package manager to install the following
+	programs: $deperrors
+
+	Your commit has therefore been aborted.  
+	EOF
+  exit 1
+fi >>/dev/stderr
 
 GIT_ROOT=$(git rev-parse --show-toplevel)
 
@@ -48,7 +67,7 @@ for xmlfile in $(
   IFS=$'\n'
   for tag in $(grep -Ei "<tag.*?>.+?</tag>" "${xmlfile}" | sed -E "s|.*<tag.*?>(.+?)</tag>.*|\1|g"); do
     # check if this tag does exist in any other news/event item
-    if ! git grep -irlE "<tag.*?>${tag}</tag>" news/ events/ | grep -vq "${xmlfile}"; then
+    if ! git grep -ilE "<tag.*?>${tag}</tag>" news/ events/ | grep -vq "${xmlfile}"; then
       hit=1
       tags="${tag}, ${tags}"
       NEWTAGS=$((NEWTAGS + 1))
@@ -136,24 +155,24 @@ for xmlfile in $(
   fi
 done
 
-#if [ $ENCERRORS -gt 0 ]; then
+if [ $ENCERRORS -gt 0 ]; then
 
-#cat <<EOF >&2
-  #=== FILE ENCODING ERROR ===
-  #One or more files in your commit have a wrong encoding.
+cat <<EOF >&2
+  === FILE ENCODING ERROR ===
+  One or more files in your commit have a wrong encoding.
 
-  #The following files are not UTF-8 encoded:
-  #$(echo "${FILES}" | sed -E -e "s/\|/\n  - /g")
+  The following files are not UTF-8 encoded:
+  $(echo "${FILES}" | sed -E -e "s/\|/\n  - /g")
 
-  #For the FSFE website, we strongly prefer UTF-8 encoded files.
-  #Everything else creates problems. Please change the file encoding in
-  #your text editor or with a special tool.
+  For the FSFE website, we strongly prefer UTF-8 encoded files.
+  Everything else creates problems. Please change the file encoding in
+  your text editor or with a special tool.
 
-  #The commit has been aborted. You have to fix the problem first.
-#EOF
+  The commit has been aborted. You have to fix the problem first.
+EOF
 
-  #exit $ENCERRORS
-#fi
+  exit $ENCERRORS
+fi
 
 
 # CHECK FOR COMMON ERRORS IN NEWS/EVENT FILES

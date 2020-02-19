@@ -48,6 +48,7 @@ my %responsible = (
   "PA-MATERIAL" => "council",
   "PA-CAMPAIGNS" => "council",
   "PA-PODCAST" => "council",
+  "PA-ECONOMIC" => "council",
   "LEGAL-EVENTS" => "council",
   "LEGAL-ORG" => "council",
   "POLICY-EVENTS" => "council",
@@ -75,7 +76,9 @@ my %responsible = (
   "PERSONELL-MEHL" => "council",
   "PERSONELL-SANDER" => "council",
   "PERSONELL-KU" => "council",
-  "PERSONELL-MANCHEVA" => "council",
+  "PERSONELL-INDORATO" => "council",
+  "PERSONELL-LASOTA" => "council",
+  "PERSONELL-MEHRING" => "council",
   "OFFICE-BERLIN" => "usli",
 );
 
@@ -84,6 +87,7 @@ my %account = (
   "PA-MATERIAL" => "2514",
   "PA-CAMPAIGNS" => "2515",
   "PA-PODCAST" => "2516",
+  "PA-ECONOMIC" => "8210",
   "LEGAL-EVENTS" => "2533",
   "LEGAL-ORG" => "2535",
   "POLICY-EVENTS" => "2543",
@@ -112,7 +116,9 @@ my %account = (
   "PERSONELL-MEHL" => "81052",
   "PERSONELL-SANDER" => "81057",
   "PERSONELL-KU" => "81058",
-  "PERSONELL-MANCHEVA" => "81059",
+  "PERSONELL-INDORATO" => "81061",
+  "PERSONELL-LASOTA" => "81061",
+  "PERSONELL-MANCHEVA" => "81066",
   "OFFICE-BERLIN" => "82001",
 );
 

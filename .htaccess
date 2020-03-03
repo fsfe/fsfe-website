@@ -22,7 +22,7 @@ RewriteRule ^graphics/fsfeurope.ico /graphics/fsfe.ico [R=301,L]
 # =============================================================================
 
 # Redirect
-RewriteRule ^translate /contribute/translators/ [R=301,L]
+RewriteRule ^translate/?$ /contribute/translators/ [R=301,L]
 
 # AskYourCandidates
 RewriteRule ^campaigns/ayc(.*) /campaigns/askyourcandidates$1 [R=301,L]
@@ -34,11 +34,10 @@ RewriteRule ^nocloud(/.*)?  /activities/nocloud$1 [R=301,L]
 RewriteRule ^promo(/.*)?  /contribute/spreadtheword$1 [R=301,L]
 
 # Convince your friends
-RewriteRule   ^(cyf|convince).* http://wiki.fsfe.org/ConvinceYourFriends [R=301,L]
+RewriteRule   ^(cyf|convince)/?$ http://wiki.fsfe.org/ConvinceYourFriends [R=301,L]
 
 # Summit 2016
 RewriteRule ^summit16(/.*)?$  https://fsfe.org/community/events/2016/summit/frontpage$1 [R=301,L]
-#RewriteRule  ^summit16(/.*)?$  https://wiki.fsfe.org/Events/Summit2016/CallForParticipation$1  [R=301,L]
 
 # 15 years of FSFE
 RewriteRule ^15(/.*)?$    https://fsfe.org/campaigns/15years/15years$1 [R=301,L]
@@ -48,6 +47,9 @@ RewriteRule ^fs-policies/?$ https://wiki.fsfe.org/Activities/EU_Policies_overvie
 
 # Share buttons
 RewriteRule ^share/?$ /cgi-bin/share.php [NC,L]
+
+# Link to PMPC event, can be changed afterwards
+RewriteRule ^publiccode/?$ https://registration.fsfe.org/Digitale-Verwaltung-2020 [R=301,L]
 
 
 # =============================================================================

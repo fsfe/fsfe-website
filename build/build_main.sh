@@ -17,6 +17,9 @@ if [ -n "$deperrors" ]; then
   printf '\n\033[0;31m%s\n' "$deperrors"
   exit 1
 fi >>/dev/stderr
+if ! make --version | grep -q "GNU Make 4"; then
+  die "The build script requires GNU Make 4.x"
+fi
 
 basedir="${0%/*}/.."
 [ -z "$inc_misc" ] && . "$basedir/build/misc.sh"

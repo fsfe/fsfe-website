@@ -42,7 +42,11 @@ build_into(){
   } | t_logstatus phase_2 || exit 1
 
   if [ "$stagedir" != "$target" ]; then
-    rsync -av --copy-unsafe-links --del "$stagedir/" "$target/" | t_logstatus stagesync
+    # rsync issues a "copying unsafe symlink" message for each of the "unsafe"
+    # symlinks which we copy while rsyncing. These messages are issued even if
+    # the files have not changed and clutter up the output, so we filter them
+    # out.
+    rsync -av --copy-unsafe-links --del "$stagedir/" "$target/" | grep -v "copying unsafe symlink" | t_logstatus stagesync
   fi
 
   date +%s > "$(logname end_time)"

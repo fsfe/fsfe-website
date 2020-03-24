@@ -27,6 +27,26 @@ readonly start_time="$(date +%s)"
 
 . "$basedir/build/arguments.sh"
 
+# Check special dependencies for (test.)fsfe.org build server
+if [ "$build_env" == "fsfe.org" ] || [ "$build_env" == "test.fsfe.org" ]; then
+  deperrors=''
+  for depend in lessc; do
+    if ! which "$depend" >/dev/null 2>&1; then
+      deperrors="$depend $deperrors"
+    fi
+  done
+  if [ -n "$deperrors" ]; then
+    printf '\033[1;31m'
+    cat <<-EOF
+		The build script depends on some other programs to function.
+		Not all of those programs could be located on your system.
+		Please use your package manager to install the following programs:
+		EOF
+    printf '\n\033[0;31m%s\n' "$deperrors"
+    exit 1
+  fi 1>&2
+fi
+
 if [ -n "$statusdir" ]; then
   mkdir -p "$statusdir"
   [ ! -w "$statusdir" -o ! -d "$statusdir" ] && \

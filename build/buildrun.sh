@@ -67,7 +67,7 @@ git_build_into(){
     die "GIT reported the following problem:\n$(cat "$GITerrors")"
   fi
 
-  if egrep '^Already up-to-date\.' "$GITchanges"; then
+  if egrep '^Already up[ -]to[ -]date' "$GITchanges"; then
     debug "No changes to GIT:\n$(cat "$GITchanges")"
     # Exit status should only be 0 if there was a successful build.
     # So set it to 1 here.

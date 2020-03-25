@@ -1,28 +1,43 @@
 #!/usr/bin/env bash
 
-# Check dependencies
-deperrors=''
-for depend in realpath rsync xsltproc xmllint sed find egrep grep wc make tee date iconv wget; do
-  if ! which "$depend" >/dev/null 2>&1; then
-    deperrors="$depend $deperrors"
-  fi
-done
-if [ -n "$deperrors" ]; then
-  printf '\033[1;31m'
-  cat <<-EOF
-	The build script depends on some other programs to function.
-	Not all of those programs could be located on your system.
-	Please use your package manager to install the following programs:
-	EOF
-  printf '\n\033[0;31m%s\n' "$deperrors"
-  exit 1
-fi >>/dev/stderr
+# Dependency check function
+check_dependencies() {
+  depends="$@"
+  deperrors=''
+  for depend in $depends; do
+    if ! which "$depend" >/dev/null 2>&1; then
+      deperrors="$depend $deperrors"
+    fi
+  done
+  if [ -n "$deperrors" ]; then
+    printf '\033[1;31m'
+    cat <<-EOF
+		The build script depends on some other programs to function.
+		Not all of those programs could be located on your system.
+		Please use your package manager to install the following programs:
+		EOF
+    printf '\n\033[0;31m%s\n' "$deperrors"
+    exit 1
+  fi 1>&2
+}
+
+# Check dependencies for all kinds of build envs (e.g. development, fsfe.org)
+check_dependencies realpath rsync xsltproc xmllint sed find egrep grep wc make tee date iconv wget
+
+if ! make --version | grep -q "GNU Make 4"; then
+  die "The build script requires GNU Make 4.x"
+fi
 
 basedir="${0%/*}/.."
 [ -z "$inc_misc" ] && . "$basedir/build/misc.sh"
 readonly start_time="$(date +%s)"
 
 . "$basedir/build/arguments.sh"
+
+# Check special dependencies for (test.)fsfe.org build server
+if [ "$build_env" == "fsfe.org" ] || [ "$build_env" == "test.fsfe.org" ]; then
+  check_dependencies lessc
+fi
 
 if [ -n "$statusdir" ]; then
   mkdir -p "$statusdir"

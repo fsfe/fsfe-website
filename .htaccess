@@ -22,7 +22,7 @@ RewriteRule ^graphics/fsfeurope.ico /graphics/fsfe.ico [R=301,L]
 # =============================================================================
 
 # Redirect
-RewriteRule ^translate /contribute/translators/ [R=301,L]
+RewriteRule ^translate/?$ /contribute/translators/ [R=301,L]
 
 # AskYourCandidates
 RewriteRule ^campaigns/ayc(.*) /campaigns/askyourcandidates$1 [R=301,L]
@@ -34,11 +34,10 @@ RewriteRule ^nocloud(/.*)?  /activities/nocloud$1 [R=301,L]
 RewriteRule ^promo(/.*)?  /contribute/spreadtheword$1 [R=301,L]
 
 # Convince your friends
-RewriteRule   ^(cyf|convince).* http://wiki.fsfe.org/ConvinceYourFriends [R=301,L]
+RewriteRule   ^(cyf|convince)/?$ http://wiki.fsfe.org/ConvinceYourFriends [R=301,L]
 
 # Summit 2016
 RewriteRule ^summit16(/.*)?$  https://fsfe.org/community/events/2016/summit/frontpage$1 [R=301,L]
-#RewriteRule  ^summit16(/.*)?$  https://wiki.fsfe.org/Events/Summit2016/CallForParticipation$1  [R=301,L]
 
 # 15 years of FSFE
 RewriteRule ^15(/.*)?$    https://fsfe.org/campaigns/15years/15years$1 [R=301,L]
@@ -48,6 +47,9 @@ RewriteRule ^fs-policies/?$ https://wiki.fsfe.org/Activities/EU_Policies_overvie
 
 # Share buttons
 RewriteRule ^share/?$ /cgi-bin/share.php [NC,L]
+
+# Link to PMPC event, can be changed afterwards
+RewriteRule ^publiccode/?$ https://registration.fsfe.org/Digitale-Verwaltung-2020 [R=301,L]
 
 
 # =============================================================================
@@ -61,7 +63,7 @@ RewriteRule ^news/podcast-opus.rss$ /news/podcast-opus.en.rss [L,R=301]
 
 # ILoveFS
 # TODO each year: update links for next two lines
-RewriteRule ^campaigns/ilovefs(/?$|/[^/]*.html$) /campaigns/ilovefs/2019$1 [PT,L]
+RewriteRule ^campaigns/ilovefs(/?$|/[^/]*.html$) /campaigns/ilovefs/2020$1 [PT,L]
 RewriteRule ^campaigns/ilovefs/latest-report.*$ /news/2019/news-20190329-01.html [R=301,L]
 RewriteRule ^campaigns/ilovefs/ilovefs(.*)html$ /campaigns/ilovefs/index$1html [R=301,L]
 RewriteRule ^campaigns/ilovefs/(201[2-5])/index(.*)$ /campaigns/ilovefs/$1/ [R=301,L]
@@ -175,7 +177,7 @@ RewriteRule ^projects/map(.*) /activities/map$1 [R=301,L]
 RewriteRule ^projects/igf(.*) /activities/igf$1 [R=301,L]
 RewriteRule ^projects/work(.*) /work$1 [R=301,L]
 RewriteRule ^projects/leaflet-fellowship-FSA(.*) /about/printable/leaflet-fellowship-FSA$1 [R=301,L]
-RewriteRule ^projects(/.*)?$ / [R=301,L]
+RewriteRule ^projects(/.*)?$ /campaigns/ [R=301,L]
 
 # Other pages
 RewriteRule ^about/members(/.*)?$ /about/team$1 [R=301,L]
@@ -196,7 +198,7 @@ RewriteRule ^associates/about(.*) /associates/associates$1 [R=301,L]
 RewriteRule ^contribute/traineeship(.*) /contribute/internship$1 [R=301,L]
 RewriteRule ^contribute/donate(.*) /donate$1 [R=301,L]
 RewriteRule ^contact/local(.*) /about/localteams$1 [R=301,L]
-RewriteRule ^fr/(news|events)\.(..\.)?html /fr/fr.$1html [R=301,L]
+RewriteRule ^fr/(news|events)\.(..\.)?html /fr/fr.$2html [R=301,L]
 RewriteRule ^campaigns/wsis/cs-benchmarks\.(.*)$ /campaigns/wsis/cs-benchmarks-03-11-14.$1 [R=301,L]
 RewriteRule ^freesoftware/education/argumentation(.*)$ /freesoftware/education/education$1 [R=301,L]
 RewriteRule ^contribute/translators\.(.*) /contribute/translators/translators.$1 [R=301,L]

@@ -42,7 +42,11 @@ build_into(){
   } | t_logstatus phase_2 || exit 1
 
   if [ "$stagedir" != "$target" ]; then
-    rsync -av --copy-unsafe-links --del "$stagedir/" "$target/" | t_logstatus stagesync
+    # rsync issues a "copying unsafe symlink" message for each of the "unsafe"
+    # symlinks which we copy while rsyncing. These messages are issued even if
+    # the files have not changed and clutter up the output, so we filter them
+    # out.
+    rsync -av --copy-unsafe-links --del "$stagedir/" "$target/" | grep -v "copying unsafe symlink" | t_logstatus stagesync
   fi
 
   date +%s > "$(logname end_time)"
@@ -63,7 +67,7 @@ git_build_into(){
     die "GIT reported the following problem:\n$(cat "$GITerrors")"
   fi
 
-  if egrep '^Already up-to-date\.' "$GITchanges"; then
+  if egrep '^Already up[ -]to[ -]date' "$GITchanges"; then
     debug "No changes to GIT:\n$(cat "$GITchanges")"
     # Exit status should only be 0 if there was a successful build.
     # So set it to 1 here.

@@ -17,12 +17,15 @@
 <!-- everything below this line uses native language names for each language or technical abbreviations respectively, so there is no need to transalate it from here on -->
 
     <languages>
-      <a href="https://download.fsfe.org/campaigns/pmpc/PMPC-Modernising-with-Free-Software.pdf">English</a>
+      <a href="https://download.fsfe.org/campaigns/pmpc/PMPC-Modernising-with-Free-Software.pdf">English</a>,
+      <a href="https://download.fsfe.org/campaigns/pmpc/PMPC-Modernising-with-Free-Software.de.pdf">German</a>,
+      <a href="https://download.fsfe.org/campaigns/pmpc/PMPC-Modernising-with-Free-Software.cz,pdf">Czech</a>,
+      <a href="https://download.fsfe.org/campaigns/pmpc/PMPC-Modernising-with-Free-Software.pt_br.pdf">Brazilian Portuguese</a>,
     </languages>
-    <printed>English</printed>
-    <license>
-      <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>
-    </license>
+    <printed>
+      English, German
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
     <author>Free Software Foundation Europe</author>
     <!-- <printready></printready> -->
     <source>

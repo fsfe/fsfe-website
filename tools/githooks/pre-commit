@@ -1,4 +1,23 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
+
+# Check dependencies
+deperrors=''
+for depend in git xmllint sed file grep bash; do
+  if ! which "$depend" >/dev/null 2>&1; then
+    deperrors="$depend $deperrors"
+  fi
+done
+if [ -n "$deperrors" ]; then
+  cat <<-EOF
+	The githook script depends on some other programs to function.
+	Not all of those programs could be located on your system.
+	Please use your package manager to install the following
+	programs: $deperrors
+
+	Your commit has therefore been aborted.  
+	EOF
+  exit 1
+fi >>/dev/stderr
 
 GIT_ROOT=$(git rev-parse --show-toplevel)
 
@@ -16,7 +35,6 @@ done
 if [ $TESTS -gt 0 ]; then
 
 cat <<EOF >&2
-
   === SYNTAX ERROR ===
   One or more files failed the XML syntax check!
 
@@ -49,7 +67,7 @@ for xmlfile in $(
   IFS=$'\n'
   for tag in $(grep -Ei "<tag.*?>.+?</tag>" "${xmlfile}" | sed -E "s|.*<tag.*?>(.+?)</tag>.*|\1|g"); do
     # check if this tag does exist in any other news/event item
-    if ! git grep -irlE "<tag.*?>${tag}</tag>" news/ events/ | grep -vq "${xmlfile}"; then
+    if ! git grep -ilE "<tag.*?>${tag}</tag>" news/ events/ | grep -vq "${xmlfile}"; then
       hit=1
       tags="${tag}, ${tags}"
       NEWTAGS=$((NEWTAGS + 1))
@@ -84,6 +102,146 @@ if [ $NEWTAGS -gt 0 ]; then
 
 EOF
 
+fi
+
+
+# CHECK FOR HTML FILE EXTENSION
+NAMEERRORS=0
+FILES=""
+# find all newly staged (added) .html files
+for htmlfile in $(
+  git diff --staged --name-only | grep -Ei "(\.html$)"
+); do
+  if [ -e "${htmlfile}" ]; then
+    FILES="${FILES}|${htmlfile}"
+    NAMEERRORS=$((NAMEERRORS + 1))
+  fi
+done
+
+if [ $NAMEERRORS -gt 0 ]; then
+
+cat <<EOF >&2
+  === FILE EXTENSION ERROR ===
+  One or more files in your commit have a wrong file extension.
+
+  The following files have ".html" as files extension:
+  $(echo "${FILES}" | sed -E -e "s/\|/\n  - /g")
+
+  This creates problems with our build system. It is supposed to create
+  the final HTML files from the .xhtml source files. So please make
+  sure you follow the format for the XHTML files, and to name them
+  accordingly.
+
+  The commit has been aborted. You have to fix the problem first.
+EOF
+
+  exit $NAMEERRORS
+fi
+
+
+# CHECK ENCODING
+ENCERRORS=0
+FILES=""
+# test all newly staged (added) .html/.xml/.xhtml files
+for xmlfile in $(
+  git diff --staged --name-only | grep -E "(\.xhtml$|\.xml$|\.xsl$)"
+); do
+  if [ -e "${xmlfile}" ]; then
+    regex="(utf-8|us-ascii)"
+    if ! [[ $(file -b --mime-encoding "${xmlfile}") =~ $regex ]]; then
+      FILES="${FILES}|${xmlfile}"
+      ENCERRORS=$((ENCERRORS + 1))
+    fi
+  fi
+done
+
+if [ $ENCERRORS -gt 0 ]; then
+
+cat <<EOF >&2
+  === FILE ENCODING ERROR ===
+  One or more files in your commit have a wrong encoding.
+
+  The following files are not UTF-8 encoded:
+  $(echo "${FILES}" | sed -E -e "s/\|/\n  - /g")
+
+  For the FSFE website, we strongly prefer UTF-8 encoded files.
+  Everything else creates problems. Please change the file encoding in
+  your text editor or with a special tool.
+
+  The commit has been aborted. You have to fix the problem first.
+EOF
+
+  exit $ENCERRORS
+fi
+
+
+# CHECK FOR COMMON ERRORS IN NEWS/EVENT FILES
+COMMONERRORS=0
+FILES_NAME=""
+FILES_DATE=""
+# test all newly staged (added) XML files in /news and /events
+for xmlfile in $(
+  git diff --staged --name-only | grep -E "^(news/|events/).*(\.xhtml$|\.xml$)"
+); do
+  if [ -e "${xmlfile}" ]; then
+    FILENAME="$(basename "${xmlfile}")"
+    # file naming scheme
+    regex="^(news|event)-20[0-9]{6}-[0-9]{2}\.[a-z]{2}\.(xml|xhtml)$"
+    if ! [[ $FILENAME =~ $regex ]]; then
+      FILES_NAME="${FILES_NAME}|${xmlfile}"
+      COMMONERRORS=$((COMMONERRORS + 1))
+    fi
+    # newsdate attribute
+    regex="^20[0-9]{2}-[0-9]{2}-[0-9]{2}$"
+    if grep -qE "<html\s*newsdate=\".*?>" "${xmlfile}"; then
+      newsdate=$(grep -E "<html\s*newsdate=\".*?>" "${xmlfile}" | sed -E 's/.*newsdate="(.+?)".*/\1/')
+      if ! [[ $newsdate =~ $regex ]]; then
+        FILES_DATE="${FILES_DATE}|${xmlfile}"
+        COMMONERRORS=$((COMMONERRORS + 1))
+      fi
+    fi
+  fi
+done
+
+if [ $COMMONERRORS -gt 0 ]; then
+
+cat <<EOF >&2
+  === COMMON NEWS/EVENT ERRROR ===
+  One or more files in your commit contain typical mistakes for news
+  and event items.
+EOF
+
+if [[ -n $FILES_NAME ]]; then
+cat <<EOF >&2
+
+  The following files do not follow the naming scheme for news and
+  events:
+  $(echo "${FILES_NAME}" | sed -E -e "s/\|/\n  - /g")
+
+  The scheme is "news-20YYMMDD-01.en.xhtml" for news, and
+  "event-YYYYMMDD-01.en.xml" for events. If there is more than one item
+  per date, count the "-01" onwards. Of course, the ".en" can also be
+  the code for another language we support.
+EOF
+fi
+
+if [[ -n $FILES_DATE ]]; then
+cat <<EOF >&2
+
+  The following files do not follow the scheme for the newsdate attribute:
+  $(echo "${FILES_DATE}" | sed -E -e "s/\|/\n  - /g")
+
+  The scheme is "20YY-MM-DD", so the respective line should look
+  something like this: <html newsdate="2020-01-01">
+EOF
+fi
+
+cat <<EOF >&2
+
+  The commit has been aborted. You have to fix the problem first.
+EOF
+
+  exit $COMMONERRORS
 fi
 
 
@@ -129,6 +287,7 @@ if [ $OUTDATED -gt 0 ]; then
 
   Read more: https://wiki.fsfe.org/TechDocs/Mainpage/Translations/Outdated
 
+  The commit will be executed, but please address the problem appropriately.
 EOF
 
 fi

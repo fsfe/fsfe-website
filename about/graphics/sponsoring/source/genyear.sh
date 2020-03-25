@@ -6,7 +6,7 @@ alias echo='/bin/echo -e'
 year=$1
 odir=$2
 template="$(dirname "$0")/button_template.svg"
-tempfile="$(tempfile -s '.svg')"
+tempfile="$(mktemp --suffix '.svg')"
 
 if [ -z "$year" ]; then
   echo "Usage: $0 year [outputdir]"

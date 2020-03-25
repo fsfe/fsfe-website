@@ -26,11 +26,12 @@ use POSIX qw(strftime);
 # -----------------------------------------------------------------------------
 
 my %names = (
+  "bonnie" => "Bonnie Mehring",
   "eal" => "Erik Albers",
   "fi" => "Francesca Indorato",
   "mk" => "Matthias Kirschner",
+  "lucas.lasota" => "Lucas Lasota",
   "repentinus" => "Heiki Lohmus",
-  "galia" => "Galina Mancheva",
   "max.mehl" => "Max Mehl",
   "reinhard" => "Reinhard Müller",
   "alex.sander" => "Alexander Sander",
@@ -47,6 +48,7 @@ my %responsible = (
   "PA-MATERIAL" => "council",
   "PA-CAMPAIGNS" => "council",
   "PA-PODCAST" => "council",
+  "PA-ECONOMIC" => "council",
   "LEGAL-EVENTS" => "council",
   "LEGAL-ORG" => "council",
   "POLICY-EVENTS" => "council",
@@ -74,7 +76,9 @@ my %responsible = (
   "PERSONELL-MEHL" => "council",
   "PERSONELL-SANDER" => "council",
   "PERSONELL-KU" => "council",
-  "PERSONELL-MANCHEVA" => "council",
+  "PERSONELL-INDORATO" => "council",
+  "PERSONELL-LASOTA" => "council",
+  "PERSONELL-MEHRING" => "council",
   "OFFICE-BERLIN" => "usli",
 );
 
@@ -83,6 +87,7 @@ my %account = (
   "PA-MATERIAL" => "2514",
   "PA-CAMPAIGNS" => "2515",
   "PA-PODCAST" => "2516",
+  "PA-ECONOMIC" => "8210",
   "LEGAL-EVENTS" => "2533",
   "LEGAL-ORG" => "2535",
   "POLICY-EVENTS" => "2543",
@@ -111,7 +116,9 @@ my %account = (
   "PERSONELL-MEHL" => "81052",
   "PERSONELL-SANDER" => "81057",
   "PERSONELL-KU" => "81058",
-  "PERSONELL-MANCHEVA" => "81059",
+  "PERSONELL-INDORATO" => "81061",
+  "PERSONELL-LASOTA" => "81061",
+  "PERSONELL-MEHRING" => "81066",
   "OFFICE-BERLIN" => "82001",
 );
 
@@ -144,15 +151,14 @@ my $subject = "Expense Request $reference $catch_phrase ($budget)";
 
 my $boundary = "NextPart$reference";
 
-my $replyto = "finance\@fsfe.org, $to\@fsfe.org, $who\@fsfe.org";
+my $replyto = "finance\@fsfe.org, $to\@fsfe.org, $who\@fsfe.org, er-archive\@lists.fsfe.org";
 
 open(MAIL, "|/usr/lib/sendmail -t -f $who\@fsfe.org");
 print MAIL "From: $who\@fsfe.org\n";
 print MAIL "Reply-To: $replyto\n";
 print MAIL "Mail-Followup-To: $replyto\n";
 print MAIL "To: $to\@fsfe.org\n";
-print MAIL "CC: $who\@fsfe.org\n";
-print MAIL "BCC: auto-er\@fsfeurope.org\n";
+print MAIL "CC: er-archive\@lists.fsfe.org, $who\@fsfe.org\n";
 print MAIL "Subject: $subject\n";
 print MAIL "Mime-Version: 1.0\n";
 print MAIL "Content-Type: multipart/mixed; boundary=$boundary\n";

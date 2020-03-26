@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-OUT=/var/www/web/translations.html
+OUT=/srv/www/status.fsfe.org/translations.html
 cd /srv/www/fsfe.org_git
 
 nowlang=''

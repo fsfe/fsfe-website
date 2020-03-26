@@ -186,7 +186,7 @@ for xmlfile in $(
   if [ -e "${xmlfile}" ]; then
     FILENAME="$(basename "${xmlfile}")"
     # file naming scheme
-    regex="^(news|event)-20[0-9]{6}-[0-9]{2}\.[a-z]{2}\.(xml|xhtml)$"
+    regex="^((nl-20[0-9]{4})|(news|event)-20[0-9]{6}-[0-9]{2})\.[a-z]{2}\.(xml|xhtml)$"
     if ! [[ $FILENAME =~ $regex ]]; then
       FILES_NAME="${FILES_NAME}|${xmlfile}"
       COMMONERRORS=$((COMMONERRORS + 1))
@@ -194,8 +194,9 @@ for xmlfile in $(
     # newsdate attribute
     regex="^20[0-9]{2}-[0-9]{2}-[0-9]{2}$"
     if grep -qE "<html\s*newsdate=\".*?>" "${xmlfile}"; then
-      newsdate=$(grep -E "<html\s*newsdate=\".*?>" "${xmlfile}" | sed -E 's/.*newsdate="(.+?)".*/\1/')
+      newsdate=$(grep -E "<html\s*newsdate=\".*?>" "${xmlfile}" | perl -pe 's/.*newsdate="(.+?)".*/\1/')
       if ! [[ $newsdate =~ $regex ]]; then
+        echo "$xmlfile: $newsdate"
         FILES_DATE="${FILES_DATE}|${xmlfile}"
         COMMONERRORS=$((COMMONERRORS + 1))
       fi

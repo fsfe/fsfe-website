@@ -77,7 +77,8 @@ if ($list == 'community' ) {  // COMMUNITY
     'address' => $address,
     'zip' => $zip,
     'city' => $city,
-    'country' => $country
+    'country' => $country,
+    'wants_info' => '1'
   );
   mail_signup('https://my.fsfe.org/subscribe', $signupdata);
 } elseif ($list == 'newsletter') {  // NEWSLETTER

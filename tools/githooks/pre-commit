@@ -181,7 +181,7 @@ FILES_NAME=""
 FILES_DATE=""
 # test all newly staged (added) XML files in /news and /events
 for xmlfile in $(
-  git diff --staged --name-only | grep -E "^(news/|events/).*(\.xhtml$|\.xml$)"
+  git diff --staged --name-only | grep -E "^(news/20[0-9]{2}/|news/nl/|news/podcast/|events/20[0-9]{2}/).*(\.xhtml$|\.xml$)"
 ); do
   if [ -e "${xmlfile}" ]; then
     FILENAME="$(basename "${xmlfile}")"

@@ -2,7 +2,7 @@
 
 # Check dependencies
 deperrors=''
-for depend in git xmllint sed file grep bash; do
+for depend in git xmllint sed file grep bash perl; do
   if ! which "$depend" >/dev/null 2>&1; then
     deperrors="$depend $deperrors"
   fi

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <!-- Do not translate this file! -->
-<!-- Please assign the attributes
-  id (vebose ID of item),
-  type (category like dfd, fya...),
-  year (year of first production) and
-  order (place of appearance in respective category)
+<!-- Please assign the attributes 
+  id (vebose ID of item), 
+  type (category like dfd, fya...), 
+  year (year of first production) and 
+  order (place of appearance in respective category) 
 to every item in this file -->
 
 <!-- An item can also be just an introductionary text. Then it needs
@@ -18,34 +18,42 @@ Such an item doesn't need an image!
 -->
 
 <itemset>
+  <version>1</version>
+
+   
 
   <!-- FSFE and Fellowship -->
 
+
   <item type="fsfe" id="fsfe-logo-sticker" year="2017" order="1">
-    <image imgsmall="/contribute/promopics/fsfe-sticker-thumb.png"/>
+ 	<image
+    imgsmall="/contribute/promopics/fsfe-sticker-thumb.png"/>
   </item>
 
-  <!-- FS and users freedoms -->
-
-  <item type="freedom" id="fs-and-tools" year="2014" order="1">
-    <image imgsmall="/contribute/promopics/freiheit-thumb.png"/>
+    <!-- FS and users freedoms -->
+  
+    <item type="freedom" id="fs-and-tools" year="2014" order="1">
+ 	<image
+    imgsmall="/contribute/promopics/freiheit-thumb.png"/>
   </item>
 
   <item type="freedom" id="gnupg-leaflet" year="2014" order="2">
-    <image imgsmall="/contribute/promopics/gnupg-leaflet-en-thumb.png"/>
-  </item>
-
+ 	<image
+    imgsmall="/contribute/promopics/gnupg-leaflet-en-thumb.png"/>
+  </item>  
+   
   <item type="freedom" id="drm-leaflet" year="2012" order="3">
-    <image imgsmall="/contribute/promopics/drm_thumb.png"/>
+ 	<image
+    imgsmall="/contribute/promopics/drm_thumb.png"/>
   </item>
 
   <!--100 freedoms -->
 
-  <item type="fsfe" id="100-freedoms-black-sticker" year="2017" order="2">
+  <item type="fsfe" id="100-freedoms-black-sticker" year="2017" order="1">
     <image imgsmall="/contribute/promopics/100-freedoms-sticker-black.png"/>
   </item>
 
-  <item type="fsfe" id="100-freedoms-orange-sticker" year="2017" order="3">
+  <item type="fsfe" id="100-freedoms-orange-sticker" year="2017" order="1">
     <image imgsmall="/contribute/promopics/100-freedoms-sticker-orange.png"/>
   </item>
 
@@ -54,90 +62,107 @@ Such an item doesn't need an image!
   <item type="pmpc" id="pmpc-brochure" year="2019" order="1">
     <image imgsmall="/contribute/promopics/pmpc_brochure_cover.jpg"/>
   </item>
-
-  <item type="pmpc" id="pmpc-sticker-slogan" year="2018" order="2">
-    <image imgsmall="/contribute/promopics/PMPC_sticker_SLOGAN-thumb.png"/>
+  
+    <item type="pmpc" id="pmpc-sticker-slogan" year="2018" order="1">
+ 	<image
+    imgsmall="/contribute/promopics/PMPC_sticker_SLOGAN-thumb.png"/>
   </item>
 
-  <item type="pmpc" id="pmpc-sticker-logo" year="2017" order="4">
-    <image imgsmall="/contribute/promopics/pmpc-logo-sticker-thumb.png"/>
+    <item type="pmpc" id="pmpc-sticker-logo" year="2017" order="1">
+ 	<image
+    imgsmall="/contribute/promopics/pmpc-logo-sticker-thumb.png"/>
   </item>
 
-  <item type="pmpc" id="pmpc-postcard" year="2017" order="5">
-    <image imgsmall="/contribute/promopics/pmpc_postcard_front_thumb.png"/>
+  <item type="pmpc" id="pmpc-postcard" year="2017" order="1">
+      <image imgsmall="/contribute/promopics/pmpc_postcard_front_thumb.png"/>
   </item>
 
-  <item type="pmpc" id="pmpc-poster" year="2018" order="3">
-    <image imgsmall="/contribute/promopics/pmpc_poster_back_thumb.png"/>
+  <item type="pmpc" id="pmpc-poster" year="2018" order="1">
+      <image imgsmall="/contribute/promopics/pmpc_poster_combined_thumb.png"/>
   </item>
 
+
+  
   <!-- Document Freedom Day -->
-
+  
   <item introduction="yes" type="dfd" id="dfd-introduction" order="1" /> <!-- introduction item with just text, doesn't need a picture -->
-
-  <item type="dfd" id="dfd-chance-poster" year="2014" order="4">
-    <image imgsmall="/contribute/promopics/a2.mu_thumb.png"/>
+  
+    <item type="dfd" id="dfd-chance-poster" year="2014" order="4">
+ 	<image
+    imgsmall="/contribute/promopics/a2.mu_thumb.png"/>
   </item>
 
-  <item type="dfd" id="dfd-poster-open-format" year="2014" order="6">
-    <image imgsmall="/contribute/promopics/open_formats_poster_ENthumb.png"/>
+    <item type="dfd" id="dfd-poster-open-format" year="2014" order="6">
+ 	<image
+    imgsmall="/contribute/promopics/open_formats_poster_ENthumb.png"/>
   </item>
-
-  <item type="dfd" id="dfd-wcryd" year="2014" order="8">
-    <image imgsmall="/contribute/promopics/wcryd-sticker-thumb.png"/>
+  
+     <item type="dfd" id="dfd-wcryd" year="2014" order="8">
+ 	<image
+    imgsmall="/contribute/promopics/wcryd-sticker-thumb.png"/>
   </item>
-
+  
+ 
    <!-- F-droid -->
-
   <item type="f-droid" id="f-droid-leaflet" year="2014" order="1">
-    <image imgsmall="/contribute/promopics/fdroid-flyer_thumb.png"/>
+ 	<image
+    imgsmall="/contribute/promopics/fdroid-flyer_thumb.png"/>
   </item>
-
+  
   <item type="f-droid" id="fya-sticker" year="2017" order="2">
-    <image imgsmall="/contribute/promopics/fya-sticker-2012-3cm.png"/>
-  </item>
-
+ 	<image
+    imgsmall="/contribute/promopics/fya-sticker-2012-3cm.png"/>
+  </item> 
+  
   <!-- I love Free Software -->
-  <item type="ilovefs" id="ilovefs-postcard" year="2014" order="6">
+  <item type="ilovefs" id="ilovefs-postcard" year="2014" order="3">
     <image imgsmall="/contribute/promopics/ilovefs-postcard-front-thumb.png"/>
   </item>
-
-  <item type="ilovefs" id="ilovefs-flyer" year="2014" order="5">
-    <image imgsmall="/contribute/promopics/ilovefs_flyer_A7_thumb.png"/>
-  </item>
+  
+  <item type="ilovefs" id="ilovefs-flyer" year="2014" order="2">
+ 	<image
+    imgsmall="/contribute/promopics/ilovefs_flyer_A7_thumb.png"/>
+  </item> 
 
   <item type="ilovefs" id="ilovefs-sticker" year="2016" order="1">
-    <image  imgsmall="/contribute/promopics/ilovefs-sticker_thumb.png"/>
-  </item>
+ 	<image
+    imgsmall="/contribute/promopics/ilovefs-sticker_thumb.png"/>
+  </item> 
 
-  <item type="ilovefs" id="ilovefs-burgundy-sticker" year="2016" order="2">
+  <item type="ilovefs" id="ilovefs-burgundy-sticker" year="2016" order="1">
     <image imgsmall="/contribute/promopics/ilovefs-sticker_burgundy_thumb.png"/>
   </item>
 
-  <item type="ilovefs" id="ilovefs-poster-2sided" year="2014" order="4">
-    <image  imgsmall="/contribute/promopics/ilovefs_poster_A1_thumb.png"/>
+    <item type="ilovefs" id="ilovefs-poster-2sided" year="2014" order="4">
+ 	<image
+    imgsmall="/contribute/promopics/ilovefs_poster_A1_thumb.png"/>
   </item>
-
-  <item type="ilovefs" id="ilovefs-balloon" year="2015" order="3">
-    <image imgsmall="/contribute/promopics/ilovefs-balloon-combined-thumb.png"/>
-  </item>
-
+  
+    <item type="ilovefs" id="ilovefs-balloon" year="2015" order="5">
+ 	<image
+    imgsmall="/contribute/promopics/ilovefs-balloon-combined-thumb.png"/>
+  </item> 
+  
   <!-- No cloud -->
-
-  <item type="nocloud" id="nocloud-sticker" year="2015" order="1">
-    <image imgsmall="/contribute/promopics/thereisnocloud-bluecolor-preview.png"/>
+  
+    <item type="nocloud" id="nocloud-sticker" year="2015" order="1">
+ 	<image
+    imgsmall="/contribute/promopics/thereisnocloud-bluecolor-preview.png"/>
   </item>
-
-  <item type="nocloud" id="nocloud-sticker-bw" year="2017" order="2">
-    <image imgsmall="/contribute/promopics/thereisnocloud-bw-preview.png"/>
+  
+   <item type="nocloud" id="nocloud-sticker-bw" year="2017" order="2">
+ 	<image
+    imgsmall="/contribute/promopics/thereisnocloud-bw-preview.png"/>
   </item>
 
   <item type="nocloud" id="nocloud-postcard" year="2014" order="3">
-    <image imgsmall="/contribute/promopics/thereisnocloud-postcard-thumb.png"/>
+ 	 <image
+     imgsmall="/contribute/promopics/thereisnocloud-postcard-thumb.png"/>
   </item>
 
   <item type="nocloud" id="nocloud-poster-2sided" year="2015" order="4">
-    <image imgsmall="/contribute/promopics/thereisnocloud-poster-thumb.png"/>
-  </item>
+ 	<image
+    imgsmall="/contribute/promopics/thereisnocloud-poster-thumb.png"/>
+  </item> 
 
 </itemset>

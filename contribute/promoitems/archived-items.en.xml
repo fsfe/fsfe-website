@@ -1,109 +1,134 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <!-- Do not translate this file! -->
-<!-- Please assign the attributes
-  id (vebose ID of item),
-  type (category like dfd, fya...),
-  year (year of first production) and
-  order (place of appearance in respective category)
+<!-- Please assign the attributes 
+  id (vebose ID of item), 
+  type (category like dfd, fya...), 
+  year (year of first production) and 
+  order (place of appearance in respective category) 
 to every item in this file -->
 
 <itemset>
+  <version>1</version>
+
 
   <!-- FSFE and Fellowship -->
-
   <item type="fsfe" id="fellowship-leaflet" year="2008" order="1">
-    <image imgsmall="/contribute/promopics/fellowship-leaflet-thumb.png"/>
+ 	<image
+    imgsmall="/contribute/promopics/fellowship-leaflet-thumb.png"/>
   </item>
 
   <item type="fsfe" id="fsfe-folder" year="2005" order="2">
-    <image imgsmall="/contribute/promopics/folder-fsfe-en1_thumb.png"/>
+ 	<image
+    imgsmall="/contribute/promopics/folder-fsfe-en1_thumb.png"/>
   </item>
-
-  <item type="fsfe" id="fellowship-poster" year="2008" order="5">
-    <image imgsmall="/contribute/promopics/joinfellowship-poster_thumb.png"/>
-  </item>
-
-  <item type="fsfe" id="15y-fsfe-sticker" year="2016" order="3">
-    <image imgsmall="/contribute/promopics/FSFE_15_Sticker_en_thumb.png"/>
-  </item>
-
-  <item type="fsfe" id="plussy-sticker" year="2005" order="4">
-    <image imgsmall="/contribute/promopics/plussy-sticker-thumb.png"/>
-  </item>
+  
+    <item type="fsfe" id="fellowship-poster" year="2008" order="4">
+ 	<image
+    imgsmall="/contribute/promopics/joinfellowship-poster_thumb.png"/>
+  </item>  
+  
+  <item type="fsfe" id="15y-fsfe-sticker" year="2016" order="2">
+ 	<image
+    imgsmall="/contribute/promopics/FSFE_15_Sticker_en_thumb.png"/>
+  </item> 
+ 
+  <item type="fsfe" id="plussy-sticker" year="2005" order="3">
+ 	<image
+    imgsmall="/contribute/promopics/plussy-sticker-thumb.png"/>
+  </item> 
 
   <!-- Free Software and users freedom -->
-
   <item type="fsfreedom" id="nocloud-sticker" year="2015" order="1">
-    <image imgsmall="/contribute/promopics/thereisnocloud_thumb.png"/>
+ 	<image
+    imgsmall="/contribute/promopics/thereisnocloud_thumb.png"/>
   </item>
-
+  
   <!-- Free Your Android -->
-
-  <item type="f-droid" id="f-droid-flyer" year="2014" order="1">
-    <image imgsmall="/contribute/promopics/fya-flyer-en_thumb.png"/>
+  
+    <item type="f-droid" id="f-droid-flyer" year="2014" order="">
+ 	<image
+    imgsmall="/contribute/promopics/fya-flyer-en_thumb.png"/>
   </item>
-
+  
   <item type="f-droid" id="f-droid-poster" year="2014" order="2">
-    <image imgsmall="/contribute/promopics/fya-poster_thumb.png"/>
-  </item>
-
+ 	<image
+    imgsmall="/contribute/promopics/fya-poster_thumb.png"/>
+  </item> 
+  
   <!-- No Cloud -->
-
+  
   <item type="nocloud" id="nocloud-poster" year="2015" order="4">
-    <image imgsmall="/contribute/promopics/thereisnocloud-poster-thumb.png"/>
-  </item>
-
-  <!-- They Dont Want You.To -->
-
+ 	<image
+    imgsmall="/contribute/promopics/thereisnocloud-poster-thumb.png"/>
+  </item>  
+  
+  
+     <!-- They Dont Want You.To -->
   <item type="tdwyt" id="tdwyt-sticker" year="2012" order="1">
-    <image imgsmall="/contribute/promopics/tdwyt-laptop-thumb.png"/>
-  </item>
-
+ 	<image
+    imgsmall="/contribute/promopics/tdwyt-laptop-thumb.png"/>
+  </item> 
+ 
   <item type="tdwyt" id="tdwyt-sticker-big" year="2012" order="2">
-    <image imgsmall="/contribute/promopics/tdwyt-billboard-small-thumb.png"/>
-  </item>
+ 	<image
+    imgsmall="/contribute/promopics/tdwyt-billboard-small-thumb.png"/>
+  </item>   
 
   <item type="tdwyt" id="tdwyt-sticker-triangle" year="2012" order="3">
-    <image imgsmall="/contribute/promopics/tdwyt-triangle-thumb.png"/>
-  </item>
-
+ 	<image
+    imgsmall="/contribute/promopics/tdwyt-triangle-thumb.png"/>
+  </item>   
+  
   <!-- Document Freedom Day -->
-
+  
   <item type="dfd" id="dfd-cartoon" year="2014" order="20">
-    <image imgsmall="/contribute/promopics/cartoon.en.png"/>
+ 	<image
+    imgsmall="/contribute/promopics/cartoon.en.png"/>
   </item>
-
-  <item type="dfd" id="dfd-leaflet" year="2014" order="1">
-    <image imgsmall="/contribute/promopics/dfd-leaflet_thumb.png"/>
+  
+    <item type="dfd" id="dfd-leaflet" year="2014" order="1">
+ 	<image
+    imgsmall="/contribute/promopics/dfd-leaflet_thumb.png"/>
   </item>
-
+  
   <item type="dfd" id="dfd-os-sticker" year="2014" order="2">
-    <image imgsmall="/contribute/promopics/dfd-protest-robots-stickers_thumb.png"/>
+  <image
+    imgsmall="/contribute/promopics/dfd-protest-robots-stickers_thumb.png"/>
   </item>
-
+  
   <item type="dfd" id="dfd-os-sticker-big" year="2014" order="3">
-    <image imgsmall="/contribute/promopics/dfd-protest-robots-stickers_thumb.png"/>
+  <image
+    imgsmall="/contribute/promopics/dfd-protest-robots-stickers_thumb.png"/>
+  </item>
+  
+    <item type="dfd" id="dfd-cartoon" year="2014" order="7">
+ 	<image
+    imgsmall="/contribute/promopics/cartoon.en.png"/>
   </item>
 
   <item type="dfd" id="dfd-flyer" year="2015" order="5">
-    <image imgsmall="/contribute/promopics/dfd-2015-a7-front-mu.png"/>
+  <image
+    imgsmall="/contribute/promopics/dfd-2015-a7-front-mu.png"/>
   </item>
-
-  <item type="dfd" id="dfd-postcard" year="2015" order="9">
-    <image imgsmall="/contribute/promopics/dfd-robots-postcard_thumb.png"/>
+  
+    <item type="dfd" id="dfd-postcard" year="2015" order="9">
+ 	<image
+    imgsmall="/contribute/promopics/dfd-robots-postcard_thumb.png"/>
   </item>
-
+  
   <!-- FS and users freedoms -->
-
-  <item type="hackingforfreedom" id="hacking-for-freedom-sticker-v2" year="2017" order="4">
-    <image imgsmall="/contribute/promopics/hacking-for-freedom-sticker-v2-thumb.png"/>
+  
+    <item type="hackingforfreedom" id="hacking-for-freedom-sticker-v2" year="2017" order="4">
+ 	<image
+    imgsmall="/contribute/promopics/hacking-for-freedom-sticker-v2-thumb.png"/>
   </item>
 
   <!-- I love Free Software -->
 
-  <item type="ilovefs" id="ilovefs-poster" year="2014" order="4">
-    <image imgsmall="/contribute/promopics/ilovefs_poster_A1_thumb.png"/>
-  </item>
+    <item type="ilovefs" id="ilovefs-poster" year="2014" order="4">
+ 	<image
+    imgsmall="/contribute/promopics/ilovefs_poster_A1_thumb.png"/>
+  </item> 
 
 </itemset>

@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <infoset>
+  <version>1</version>
+
   <info id="ilovefs-flyer">
-    <!-- Leave a tag like <printready> blank or erase it if you don't
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
     want to appear it -->
-    <!-- Translations for "Type", "Size" etc. can be found in
+    <!-- Translations for "Type", "Size" etc. can be found in 
     /tools/texts-**.xml -->
-    <imagelink>https://download.fsfe.org/advocacy/promomaterial/IloveFS/IloveFS-flyer/ilovefs-flyer-A7.en.pdf</imagelink>
-    <name>I ♥ Free Software Day</name>
-    <description>On the 14th of February we celebrate the annual 'I love Free Software Day'.</description>
+    <name>I love Free Software - Flyer</name>
+    <description>
+      The flyer of our <a href="/campaigns/ilovefs/ilovefs.html">I love Free Software campaign</a>. The flyer is two-sided: One side with the IloveFS-heart (same as in the <a href="https://fsfe.org/contribute/spreadtheword#ilovefs-poster-2sided">IloveFS-poster</a>). The other side is showing the date (Valentine's Day) and the URL of the IloveFS-campaign.
+    </description>
     <type>Flyer</type>
-    <size>A7</size>
-    <context>
-      <a href="/campaigns/ilovefs">I ♥ Free Software</a>
-    </context>
+    <size>A7 (74 x 105 mm)</size>
+    <context><a href="/campaigns/ilovefs">I love Free Software</a></context>
     <languages>
       <a href="https://download.fsfe.org/advocacy/promomaterial/IloveFS/IloveFS-flyer/ilovefs-flyer-A7.en.pdf">English</a>
     </languages>
-    <printed>English</printed>
-    <license>
-      <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>
-    </license>
+    <printed>
+      English.
+    </printed>
+    <license><a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></license>
     <author>Markus Meier</author>
-    <source>
-      <a href="https://download.fsfe.org/advocacy/promomaterial/IloveFS/IloveFS-flyer/">ilovefs-flyer in download.fsfe.org</a>
-    </source>
-    <!-- <printready></printready> -->
+    <source><a href="https://download.fsfe.org/advocacy/promomaterial/IloveFS/IloveFS-flyer/">ilovefs-flyer* in download.fsfe.org</a></source> 
+    <printready></printready>
   </info>
+
 </infoset>

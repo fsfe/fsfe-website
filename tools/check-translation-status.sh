@@ -24,6 +24,8 @@ print_usage() {
   exit 0
 }
 
+basedir=$(dirname $(dirname $(realpath $0)))
+
 ALL="0"
 QUIET="0"
 while getopts f:o:aqh OPT; do
@@ -68,21 +70,13 @@ BASE=$(echo "${FILE}" | sed -E "s/\.[a-z][a-z]\.${EXT}//")
 EN="${BASE}".en."${EXT}"
 if [ ! -e "${EN}" ]; then
   out "English file does not exist. Aborting. (${EN})"
-  exit 2
-fi
-endate=$(git log --pretty="%cd" --date=raw -1 "${EN}"|cut -d' ' -f1)
-
-# check if we have a git log of the EN base file. If not, abort
-if [ -z "${endate}" ]; then
-  out "EN file does not have any Git log. Ususally this means the file is new"
   exit 0
 fi
+envers=$(xsltproc ${basedir}/build/xslt/get_version.xsl "${EN}")
 
-# Convert to YYYY-MM-DD
-ymd=$(date +"%Y-%m-%d" --date="@$endate")
-out "Basefile: ${EN} ( ${ymd} )"
-out "  STATUS      LANG    DATE"
-out "  --------    ----   ----------"
+out "Basefile: ${EN} (Version ${envers:-not set})"
+out "  STATUS      LANG   VERSION"
+out "  --------    ----   -------"
 
 if [ "${ALL}" == "1" ]; then
   # Loop over all translations of this file
@@ -90,21 +84,17 @@ if [ "${ALL}" == "1" ]; then
     if [[ $i != *".en."* ]]; then
       # get language code
       lang=$(echo "${i}"|sed "s/.*\.\([a-z][a-z]\)\.${EXT}/\1/")
-      # get change date of translation
-      trdate=$(git log --pretty="%cd" --date=raw -1 "${i}"|cut -d' ' -f1)
-      # Convert to YYYY-MM-DD
-      ymd=$(date +"%Y-%m-%d" --date="@${trdate}")
-      # get time difference in seconds
-      diff=$((trdate-endate))
-      # mark as outdated if difference larger than 1 hour
-      if [[ $diff -lt -3600 ]]; then
-        out "  OUTDATED     ${lang}    ${ymd}"
+      # get version of translation
+      trvers=$(xsltproc ${basedir}/build/xslt/get_version.xsl "${i}")
+      # mark as outdated if version differs
+      if [ ${trvers:-0} -lt ${envers:-0} ]; then
+        out "  OUTDATED     ${lang}       ${trvers:-not set}"
         # print outdated language code
         if [ "${ONLY}" == "out" ]; then
           echo "${lang}"
         fi
       else
-        out "  Up-to-date   ${lang}    ${ymd}"
+        out "  Up-to-date   ${lang}       ${trvers:-not set}"
         # print up-to-date language code
         if [ "${ONLY}" == "up" ]; then
           echo "${lang}"
@@ -119,17 +109,13 @@ else
     # get language code
     lang=$(echo "${i}"|sed "s/.*\.\([a-z][a-z]\)\.${EXT}/\1/")
     # get change date of translation
-    trdate=$(git log --pretty="%cd" --date=raw -1 "${i}"|cut -d' ' -f1)
-    # Convert to YYYY-MM-DD
-    ymd=$(date +"%Y-%m-%d" --date="@${trdate}")
-    # get time difference in seconds
-    diff=$((trdate-endate))
-    # mark as outdated if difference larger than 1 hour
-    if [[ $diff -lt -3600 ]]; then
-      out "  OUTDATED     ${lang}    ${ymd}"
+    trvers=$(xsltproc ${basedir}/build/xslt/get_version.xsl "${i}")
+    # mark as outdated if version differs
+    if [ ${trvers:-0} -lt ${envers:-0} ]; then
+      out "  OUTDATED     ${lang}       ${trvers:-not set}"
       exit 1
     else
-      out "  Up-to-date   ${lang}    ${ymd}"
+      out "  Up-to-date   ${lang}       ${trvers:-not set}"
       exit 0
     fi 
   else

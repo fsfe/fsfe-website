@@ -1,71 +1,107 @@
-a#go-to-order {
-    margin: 15px 0;
-}
-
-a#go-to-order, #orderpromo input[type=radio]:checked + label, #orderpromo .btn-default:hover {
-    color: #3394CE;
-    background-color: #fff;
-    border-color: #3394CE;
-}
-
-#orderpromo #langprefs .checkbox {
-    margin-top: -5px;
-}
-
-#orderpromo input[type=radio], #orderpromo #defaultorder, #orderpromo #customorder, #orderpromo #customdonation {
-    display: none;
-}
-
-#orderpromo #default:checked ~ #defaultorder, #orderpromo #custom:checked ~ #customorder, #orderpromo #otherdonate:checked ~ #customdonation {
-    display: inline-block;
-    vertical-align: middle;
-}
-
-#orderpromo p.packageselect {
-    margin-top: 15px;
-}
-
-#orderpromo input[type=submit] {
-    .btn-lg;
-    margin: 10px 0 15px;
-    background-color: #3394CE;
-    border-color: #3394CE;
-}
-
-.promoitem {
-    margin: 10px 0;
-    padding: 10px 0;
-}
-
-.promoimg {
-    margin-bottom: 10px;
-}
-
-.grow {
-    padding-left: 0;
-}
-
-.grow img {
-    transition: 1s ease;
+.spreadtheword {
+  h1, h2, h3 {
+    clear: both;
   }
 
-.grow img:hover {
-    -webkit-transform: scale(1.25);
-    -ms-transform: scale(1.25);
-    transform: scale(1.25);
-    transition: 1s ease;
-}
+  .noclear {
+    clear: none;
+  }
 
-.promoitemdetails {
-    font-size: 0.9em;
-}
+  div#toc {
+    float: right;
+    clear: right;
+    border: solid 1px;
+    margin: .5em;
+    background: rgb(240, 240, 240);
+    width: 40%;
+    padding: 1em 1.5em 1.5em 1.5em;
+    margin: 1.5em;
+  }
 
-.promoitemdetails h4 {
+  div#toc p {
+    text-indent: 0.5em;
+    margin-top: 1.5em;
+  }
+
+  div#toc p.head {
+    font-size: 1.15em;
+    text-align: center;
     margin-top: 0;
-}
+    text-indent: 0;
+  }
 
-.promoitemdetails span.detail-label {
-    padding-right: 15px;
-    font-size: 0.8em;
-    text-transform: uppercase;
+  form#orderpromo {
+    clear: both;
+    margin: 2em 0 3em 0;
+    width: 70%;
+  }
+
+  form#orderpromo div {
+    margin-bottom: 0.7em;
+  }
+
+  form#orderpromo label {
+    font-weight: normal;
+  }
+
+  form#orderpromo div > label,
+  form#orderpromo div > input,
+  form#orderpromo div > textarea {
+    margin-left: 20px;
+  }
+
+  div.langselector ul {
+    list-style: none;
+  }
+
+  form#orderpromo input[type="checkbox"],
+  form#orderpromo input[type="radio"] {
+    margin-right: 0.3em;
+  }
+
+  div.langselector li {
+    display: inline-block;
+    width: 9em;
+  }
+
+  form#orderpromo .reveal {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transform: scale(1);
+    transition: 0.5s;
+  }
+
+  form#orderpromo input[type="radio"]:checked ~ .reveal {
+    opacity: 1;
+    max-height: 300px; /* little bit of a magic number :( */
+    overflow: visible;
+  }
+
+  form#orderpromo fieldset {
+    border: 1px groove #aaa !important;
+    padding: 1em 1.4em 1.4em 1.4em !important;
+    margin: 0 0 1.5em 0 !important;
+    -webkit-box-shadow: 0px 0px 0px 0px #000;
+    box-shadow: 0px 0px 0px 0px #000;
+  }
+
+  form#orderpromo fieldset legend {
+    font-size: 1.2em !important;
+    font-weight: bold !important;
+    text-align: left !important;
+    width: auto;
+    padding: 0 10px;
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+
+  form#orderpromo .help-block {
+    font-size: 16px;
+    padding-left: 19px;
+  }
+
+  form#orderpromo .input-group-addon {
+    padding: 6px 12px 6px 30px;
+  }
 }

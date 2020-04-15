@@ -1,36 +1,39 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <infoset>
+  <version>1</version>
+
   <info id="f-droid-leaflet">
-    <!-- Leave a tag like <printready> blank or erase it if you don't
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
     want to appear it -->
-    <!-- Translations for "Type", "Size" etc. can be found in
+    <!-- Translations for "Type", "Size" etc. can be found in 
     /tools/texts-**.xml -->
-    <imagelink>https://download.fsfe.org/advocacy/promomaterial/FYA/Fdroid-leaflet/fdroid-leaflet.en.pdf</imagelink>
-    <name>Free Your Android with F-Droid</name>
-    <description>This is a leaflet about <a href="http://f-droid.org/">F-Droid</a>, a Free Software App Repository for Android and Android-based custom-ROMs. It explains the installation and use of F-Droid and also provides some recommendations of pretty good Free Software Apps for you to use.</description>
+    <name>Free Your Android - Leaflet</name>
+    <description>
+        This is a leaflet about <a href="http://f-droid.org/">F-Droid</a>, a Free
+        Software App Repository for Android and Android-based custom-ROMs like <a
+        href="https://replicant.us/">Replicant</a>. This leaflet explains the
+        installation and use of F-Droid - the Free App store without Ads, Spying,
+        Tracking or the need of a Google account. It also includes some
+        recommendations of pretty good Free Software Apps for you to use.
+    </description>
     <type>Leaflet</type>
-    <size>A4; folded: 99 x 210 mm</size>
-    <context>
-      <a href="http://www.freeyourandroid.org">Free Your Android</a>
-    </context>
-
+    <size>99 x 210 mm (folded); 297 x 210 mm (=A4, unfolded)</size>
+    <context><a href="http://www.freeyourandroid.org">Free Your Android campaign</a></context>
+    
 <!-- everything below this line uses native language names for each language or technical abbreviations respectively, so there is no need to transalate it from here on -->
-
+    
     <languages>
-      <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/Fdroid-leaflet/fdroid-leaflet.de.pdf" title="F-Droid">Deutsch</a>,
-      <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/Fdroid-leaflet/fdroid-leaflet.en.pdf" title="F-Droid">English</a>,
-      <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/Fdroid-leaflet/fdroid-leaflet.fr.pdf" title="F-Droid">Français</a>,
-      <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/Fdroid-leaflet/fdroid-leaflet.it.pdf" title="F-Droid">Italiano</a>,
-      <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/Fdroid-leaflet/fdroid-leaflet.fi.pdf" title="F-Droid">Suomi</a>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/Fdroid-leaflet/fdroid-leaflet.de.pdf" title="F-Droid">Deutsch</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/Fdroid-leaflet/fdroid-leaflet.en.pdf" title="F-Droid">English</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/Fdroid-leaflet/fdroid-leaflet.fr.pdf" title="F-Droid">Français</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/Fdroid-leaflet/fdroid-leaflet.it.pdf" title="F-Droid">Italiano</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/Fdroid-leaflet/fdroid-leaflet.fi.pdf" title="F-Droid">Suomi</a> 
     </languages>
-    <printed>Deutsch, English, Français, Italiano</printed>
-    <license>
-      <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>
-    </license>
+    <printed>
+      Deutsch, English, Français, Italiano
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
     <author>Free Software Foundation Europe</author>
     <source>
-      <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/Fdroid-leaflet/" title="F-Droid leaflet sources">F-Droid in download.fsfe.org</a>
-    </source>
-    <!-- <printready></printready> -->
+      <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/Fdroid-leaflet/" title="F-Droid leaflet sources">F-droid_folder.* in download.fsfe.org</a>
+	</source> 
+    <printready></printready>
   </info>
+
 </infoset>

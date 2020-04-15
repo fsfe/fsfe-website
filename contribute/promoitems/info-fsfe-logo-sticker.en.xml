@@ -1,29 +1,23 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <infoset>
+  <version>1</version>
+
   <info id="fsfe-logo-sticker">
-    <imagelink>https://download.fsfe.org/advocacy/promomaterial/FSFE/FSFElogo/fsfe-sticker-print.pdf</imagelink>
-    <name>FSFE logo</name>
-    <!-- <description>
+    <name>FSFE logo sticker</name>
+    <description>
       Our logo on a die-cut sticker. Fits any purpose. Get it, stick it.
-    </description> -->
-    <type>Die-cut sticker</type>
-    <size>66 x 39 mm</size>
-    <context>
-      <a href="https://fsfe.org/about/graphics/">Offical FSFE logo</a>
-    </context>
+    </description>
+    <type>Sticker</type>
+    <size> 66 x 39 mm</size>
+    <context><a href="https://fsfe.org/about/graphics/">The offical FSFE logo</a></context>
     <languages>
-      <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/FSFElogo/fsfe-sticker-print.pdf">PDF</a>,
-      <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/FSFElogo/fsfe-logo.sla">SLA</a>,
-      <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/FSFElogo/fsfe-sticker-print.svg">SVG</a>
+		<a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/FSFElogo/fsfe-sticker-print.pdf">PDF</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/FSFElogo/fsfe-logo.sla">SLA</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/FSFElogo/fsfe-sticker-print.svg">SVG</a>
     </languages>
-    <!-- <printed>
+    <printed>
       any/no language
-    </printed> -->
-    <license>The logo of the FSFE must never be used in a way that could be understood as endorsing certain activities, home pages, products or entities without prior consent of the FSFE.</license>
+    </printed>
+    <license>The logo of the FSFE must never be used in a way that could be understood as endorsing certain activities, home pages, products or entities without prior consent of the FSFE. </license>
     <author>Free Software Foundation Europe</author>
-    <source>
-      <a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/FSFElogo/">FSFE logo in download.fsfe.org</a>
-    </source>
-    <!-- <printready></printready> -->
+    <source><a href="https://download.fsfe.org/advocacy/promomaterial/FSFE/FSFElogo/">fsfe-logo* in download.fsfe.org</a></source>
   </info>
 </infoset>

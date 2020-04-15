@@ -1,42 +1,34 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <infoset>
+  <version>1</version>
+
   <info id="dfd-leaflet">
-    <!-- Leave a tag like <printready> blank or erase it if you don't
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
     want to appear it -->
-    <!-- Translations for "Type", "Size" etc. can be found in
+    <!-- Translations for "Type", "Size" etc. can be found in 
     /tools/texts-**.xml -->
-    <imagelink>https://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro.en.pdf</imagelink>
-    <name>Open Standards</name>
-    <description>The leaflet comes with explanations what standards are for, what is an Open Standard and how to engage for Document Freedom.</description>
+    <name>Document Freedom Day - Leaflet</name>
+    <description>
+      The leaflet to promote our <a href="http://www.documentfreedom.org/">Document Freedom Day</a> campaign. It comes with explanations what standards are for, what is an Open Standard and how to engage for Document Freedom.
+    </description>
     <type>Leaflet</type>
-    <size>A4; folded: 10 x 21 cm</size>
-    <context>
-      <a href="http://www.documentfreedom.org/">Document Freedom Day</a>
-    </context>
-
+    <size>10 x 21 cm (folded); 29,7 x 21 cm (=A4, unfolded)</size>
+    <context><a href="http://www.documentfreedom.org/">Document Freedom Day</a></context>
+    
 <!-- everything below this line uses native language names for each language or technical abbreviations respectively, so there is no need to transalate it from here on -->
-
+    
     <languages>
-      <a href="https://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro.zh-tw.pdf">中文</a>,
-      <a href="https://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro.ja.pdf">日本語</a>,
-      <a href="https://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro.ca.pdf">Català</a>,
-      <a href="https://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro.de.pdf">Deutsch</a>,
-      <a href="https://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro.en.pdf">English</a>,
-      <a href="https://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro.es.pdf">Español</a>,
-      <a href="https://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro.fr.pdf">Français</a>,
-      <a href="https://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro-FI.pdf">Suomi</a>,
-      <a href="https://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro.tr.pdf">Türkçe</a>
+		 <a href="https://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro.zh-tw.pdf">中文</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro.ja.pdf">日本語</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro.ca.pdf">Català</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro.de.pdf">Deutsch</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro.en.pdf">English</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro.es.pdf">Español</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro.fr.pdf">Français</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro-FI.pdf">Suomi</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro.tr.pdf">Türkçe</a>
     </languages>
-    <!-- <printed>
+    <printed>
       Deutsch, English, Español, Français, Türkçe
-    </printed> -->
-    <license>
-      <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
-    </license>
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></license>
     <author>Free Software Foundation Europe</author>
     <source>
-      <a href="https://download.fsfe.org/advocacy/promomaterial/DFD/">DFD in download.fsfe.org</a>
-    </source>
-    <!-- <printready></printready> -->
+		<a href="https://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro_de_SOURCES.tar.gz">Deutsch</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/DFD/DFD_leaflet-intro_en_SOURCES.tar.gz">English</a>
+    </source> 
+    <printready></printready>
   </info>
+
 </infoset>

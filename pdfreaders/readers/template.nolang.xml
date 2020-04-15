@@ -22,6 +22,8 @@
      the list.
 -->
 <readers>
+  <version>1</version>
+
 <reader priority="1000">
   <name>Reader Name</name> <!-- The name displayed in the headline -->
   <logo>logofile.png</logo>    <!-- The filename of the logo in the headline,

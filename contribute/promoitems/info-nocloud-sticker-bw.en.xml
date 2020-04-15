@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <infoset>
+  <version>1</version>
+
   <info id="nocloud-sticker-bw">
-    <imagelink>https://download.fsfe.org/advocacy/promomaterial/NoCloud/NoCloud-sticker/thereisnocloud-sticker-74mm-blackwhite.en.pdf</imagelink>
-    <name>There is no cloud, just other people's computers - black/white</name>
-    <!-- <description>
+    <name>"There is no cloud, just other people's computers" - Sticker</name>
+    <description>
       A sticker to let people know about their online-reality that says "There is no cloud just other people's computers"
-    </description> -->
+    </description>
     <type>Sticker</type>
     <size>74 x 74 mm</size>
-    <!-- <source></source> -->
+    <source></source> 
     <languages>
       <a href="https://download.fsfe.org/advocacy/promomaterial/NoCloud/NoCloud-sticker/thereisnocloud-sticker-74mm-blackwhite.en.pdf">English</a>
     </languages>
-    <printed>English</printed>
-    <license>
-      <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>
-    </license>
+    <printed>
+      English
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
     <author>Markus Meier</author>
-    <source>
-      <a href="https://download.fsfe.org/advocacy/promomaterial/NoCloud/NoCloud-sticker/">NoCloud (black/white) in download.fsfe.org</a>
-    </source>
+    <source><a href="https://download.fsfe.org/advocacy/promomaterial/NoCloud/NoCloud-sticker/">nocloud-sticker* in download.fsfe.org</a></source>
   </info>
+
 </infoset>

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <menuset>
+  <version>1</version>
+
   <menu id="fsfe" />
   <menu id="fsfe/about" priority="0" parent="fsfe">/about/about.html</menu>
   <!--menu id="fsfe/mission" priority="1" parent="fsfe">/mission.html</menu-->

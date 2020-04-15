@@ -1,31 +1,33 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <infoset>
+  <version>1</version>
+
   <info id="dfd-poster-open-format">
-    <!-- Leave a tag like <printready> blank or erase it if you don't
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
     want to appear it -->
-    <!-- Translations for "Type", "Size" etc. can be found in
+    <!-- Translations for "Type", "Size" etc. can be found in 
     /tools/texts-**.xml -->
-    <imagelink>https://download.fsfe.org/advocacy/promomaterial/DFD/open_formats_poster_A3_DE_v2.pdf</imagelink>
-    <name>Open formats, what for?</name>
-    <description>A poster to explain how Open Standards are crucial for the interoperability of data between different software programs as well as for the longevity of documents and the sustainability of data. <span class="text-danger">The poster is not part of the default package. If you would like to order it, please mention it in a custom order.</span></description>
+    <name>Document Freedom Day: Open formats poster</name>
+    <description>
+        A poster to explain how Open Standards are crucial for the interoperability of
+        data between different software programs as well as for the longevity of
+        documents and the sustainability of data.
+    </description>
     <type>Poster</type>
-    <size>A3</size>
-    <context>
-      <a href="http://www.documentfreedom.org/">Document Freedom Day</a>
-    </context>
+    <size>A3 (295 x 420 mm)</size>
+    <context><a href="http://www.documentfreedom.org/">Document Freedom Day</a></context>
     <languages>
-      <a href="https://download.fsfe.org/advocacy/promomaterial/DFD/open_formats_poster_A3_DE_v2.pdf" title="Open Formats Poster">Deutsch</a>,
-      <a href="https://download.fsfe.org/advocacy/promomaterial/DFD/open_formats_poster_A3_EN_v2.pdf" title="Open Formats Poster">English</a>,
-      <a href="https://download.fsfe.org/advocacy/promomaterial/DFD/open_formats_poster_A3_FR_v2.pdf" title="Open Formats Poster">Français</a>
+		<a href="https://download.fsfe.org/advocacy/promomaterial/DFD/open_formats_poster_A3_DE_v2.pdf" title="Open Formats Poster">Deutsch</a>, 
+		<a href="https://download.fsfe.org/advocacy/promomaterial/DFD/open_formats_poster_A3_EN_v2.pdf" title="Open Formats Poster">English</a>, 
+		<a href="https://download.fsfe.org/advocacy/promomaterial/DFD/open_formats_poster_A3_FR_v2.pdf" title="Open Formats Poster">Français</a> 
     </languages>
-    <printed>Two sided in English and French</printed>
-    <license>
-      <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>
-    </license>
+    <printed>
+      Two sided poster in English and French. 
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
     <author>April</author>
-    <source>
-      <a href="https://download.fsfe.org/advocacy/promomaterial/DFD/">Open formats in download.fsfe.org</a>
-    </source>
-    <!-- <printready></printready> -->
+    <source><a href="https://download.fsfe.org/advocacy/promomaterial/DFD/">open_formats_poster* in download.fsfe.org</a></source> 
+    <printready></printready>
   </info>
+
 </infoset>

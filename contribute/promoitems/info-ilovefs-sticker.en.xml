@@ -1,31 +1,29 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <infoset>
+  <version>1</version>
+
   <info id="ilovefs-sticker">
-    <!-- Leave a tag like <printready> blank or erase it if you don't
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
     want to appear it -->
-    <!-- Translations for "Type", "Size" etc. can be found in
+    <!-- Translations for "Type", "Size" etc. can be found in 
     /tools/texts-**.xml -->
-    <imagelink>https://download.fsfe.org/advocacy/promomaterial/IloveFS/IloveFS-sticker/wir-machen-Druck/ilovefs-sticker.en.pdf</imagelink>
-    <name>I ♥ Free Software - pink</name>
-    <!-- <description>
-      A sticker to show your love to use, study, share and improve software.
-    </description> -->
+    <name>I love Free Software - Sticker</name>
+    <description>
+      A sticker to show your love to use, study, share and improve software. 
+    </description>
     <type>Sticker</type>
     <size>90 x 50 mm</size>
-    <context>
-      <a href="/campaigns/ilovefs">I ♥ Free Software</a>
-    </context>
+    <context><a href="/campaigns/ilovefs">I love Free Software campaign</a></context>
     <languages>
       <a href="https://download.fsfe.org/advocacy/promomaterial/IloveFS/IloveFS-sticker/wir-machen-Druck/ilovefs-sticker.en.pdf">English</a>
     </languages>
-    <printed>English</printed>
-    <license>
-      <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a>
-    </license>
+    <printed>
+      English
+    </printed>
+    <license><a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></license>
     <author>Markus Meier</author>
-    <source>
-      <a href="https://download.fsfe.org/advocacy/promomaterial/IloveFS/IloveFS-sticker/">ilovefs-sticker (pink) in download.fsfe.org</a>
-    </source>
-    <!-- <printready></printready> -->
+    <source><a href="https://download.fsfe.org/advocacy/promomaterial/IloveFS/IloveFS-sticker/">ilovefs-sticker* in download.fsfe.org</a></source> 
+    <printready></printready>
   </info>
+
 </infoset>

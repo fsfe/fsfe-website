@@ -1,35 +1,30 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <infoset>
+  <version>1</version>
+
   <info id="fya-sticker">
-    <!-- Leave a tag like <printready> blank or erase it if you don't
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
     want to appear it -->
-    <!-- Translations for "Type", "Size" etc. can be found in
+    <!-- Translations for "Type", "Size" etc. can be found in 
     /tools/texts-**.xml -->
-    <imagelink>https://download.fsfe.org/advocacy/promomaterial/FYA/FYA-sticker/FYA_sticker_2017_3cm.pdf</imagelink>
-    <name>Free Your Android</name>
-    <!-- <description>
+    <name>Free Your Android - Sticker</name>
+    <description>
         This small-sized sticker fits perfectly on the back of your Android device.
-    </description> -->
+    </description>
     <type>Sticker</type>
     <size>⌀ 30mm</size>
-    <context>
-      <a href="http://www.freeyourandroid.org">Free Your Android</a>
-    </context>
+    <context><a href="http://www.freeyourandroid.org">Free Your Android campaign</a></context>
     <languages>
-      <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/FYA-sticker/FYA_sticker_2017_3cm.pdf">PDF</a>,
-      <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/FYA-sticker/FYA_sticker_2017_3cm.sla">SLA</a>,
-      <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/FYA-sticker/FYA_sticker_2017_3cm.svg">SVG</a>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/FYA-sticker/FYA_sticker_2017_3cm.pdf">PDF</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/FYA-sticker/FYA_sticker_2017_3cm.sla">SLA</a>, <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/FYA-sticker/FYA_sticker_2017_3cm.svg">SVG</a>
     </languages>
-      <!-- <printed>
+      <printed>
       any/no language
-    </printed> -->
-    <license>
-      <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>
-    </license>
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
     <author>Free Software Foundation Europe</author>
-    <source>
-      <a href="https://download.fsfe.org/advocacy/promomaterial/FYA/FYA-sticker/">Free Your Android in download.fsfe.org</a>
-    </source>
-    <!-- <printready></printready> -->
+    <source><a href="https://download.fsfe.org/advocacy/promomaterial/FYA/FYA-sticker/">FYA_sticker* in download.fsfe.org</a></source> 
+    <printready></printready>
   </info>
+
 </infoset>
+ 

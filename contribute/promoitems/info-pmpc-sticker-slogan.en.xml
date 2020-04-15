@@ -1,26 +1,23 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <infoset>
+  <version>1</version>
+
   <info id="pmpc-sticker-slogan">
-    <imagelink>https://download.fsfe.org/advocacy/promomaterial/PMPC/PMPC_sticker_slogan_105x52.pdf</imagelink>
-    <name>Public Money? Public Code! slogan</name>
-    <!-- <description>
+    <name>Public Money, Public Code - Sticker (Slogan)</name>
+    <description>
       This sticker is the newest of our latest campaign: Public Money, Public Code.
-    </description> -->
+    </description>
     <type>Sticker</type>
     <size> 10,5 cm x 5,2 cm</size>
-    <context>
-      <a href="https://publiccode.eu/">Public Money? Public Code!</a>
-    </context>
+    <context>Public Money, Public Code campaign</context>
     <languages>
-		    <a href="https://download.fsfe.org/advocacy/promomaterial/PMPC/PMPC_sticker_slogan_105x52.pdf">PDF</a>
+		<a href="https://download.fsfe.org/advocacy/promomaterial/PMPC/PMPC_sticker_slogan_105x52.pdf">PDF</a>
     </languages>
-    <printed>English</printed>
-    <license>
-      <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>
-    </license>
+    <printed>
+      English
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
     <author>Free Software Foundation Europe</author>
-    <source>
-      <a href="https://download.fsfe.org/advocacy/promomaterial/PMPC/">PMPC slogan in download.fsfe.org</a>
-    </source>
+    <source><a href="https://download.fsfe.org/advocacy/promomaterial/PMPC/">PMPC Slogan Sticker in download.fsfe.org</a></source>
   </info>
 </infoset>

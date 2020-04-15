@@ -68,7 +68,7 @@ BASE=$(echo "${FILE}" | sed -E "s/\.[a-z][a-z]\.${EXT}//")
 EN="${BASE}".en."${EXT}"
 if [ ! -e "${EN}" ]; then
   out "English file does not exist. Aborting. (${EN})"
-  exit 2
+  exit 0
 fi
 endate=$(git log --pretty="%cd" --date=raw -1 "${EN}"|cut -d' ' -f1)
 

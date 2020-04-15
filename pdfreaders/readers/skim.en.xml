@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<readers> <reader priority="20">
+<readers>
+  <version>1</version>
+
+   <reader priority="20">
   <name>Skim</name>
   <logo>skim.png</logo>
   <homepage>https://skim-app.sourceforge.io/</homepage>

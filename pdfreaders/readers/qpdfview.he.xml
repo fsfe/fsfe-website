@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<readers> <reader priority="40">
+<readers>
+  <version>1</version>
+
+   <reader priority="40">
   <name>qpdfview</name>
   <logo>qpdfview.png</logo>
   <homepage>https://launchpad.net/qpdfview</homepage>

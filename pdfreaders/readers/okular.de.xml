@@ -1,4 +1,7 @@
-<readers> <reader priority="30">
+<readers>
+  <version>1</version>
+
+   <reader priority="30">
   <name>Okular</name>
   <logo>okular.png</logo>
   <homepage>http://okular.kde.org/</homepage>

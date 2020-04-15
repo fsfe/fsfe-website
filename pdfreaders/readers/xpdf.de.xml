@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<readers> <reader priority="30">
+<readers>
+  <version>1</version>
+
+   <reader priority="30">
   <name>Xpdf</name>
   <logo>xpdf.png</logo>
   <homepage>http://www.foolabs.com/xpdf/</homepage>

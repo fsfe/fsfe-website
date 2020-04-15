@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<readers> <reader priority="5">
+<readers>
+  <version>1</version>
+
+   <reader priority="5">
   <name>BePDF</name>
   <logo>bepdf.png</logo>
   <homepage>http://bepdf.sourceforge.net/</homepage>

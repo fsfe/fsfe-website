@@ -7,6 +7,11 @@ inc_scaffold=true
 [ -z "$inc_fundraising" ] && . "$basedir/build/fundraising.sh"
 [ -z "$inc_sources" ] && . "$basedir/build/sources.sh"
 
+get_version(){
+  version=$(xsltproc $basedir/build/xslt/get_version.xsl $1)
+  echo ${version:-0}
+}
+
 build_xmlstream(){
   # assemble the xml stream for feeding into xsltproc
   # the expected shortname and language flag indicate 
@@ -24,7 +29,7 @@ build_xmlstream(){
 
   if [ -f "${shortname}.${lang}.xhtml" ]; then
     act_lang="$lang"
-    [ "${shortname}.${olang}.xhtml" -nt "${shortname}.${lang}.xhtml" ] && outdated=yes
+    [ $(get_version "${shortname}.${olang}.xhtml") -gt $(get_version "${shortname}.${lang}.xhtml") ] && outdated=yes
   else
     act_lang="$olang"
   fi
@@ -68,4 +73,3 @@ build_xmlstream(){
 	</buildinfo>
 	EOF
 }
-

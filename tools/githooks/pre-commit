@@ -1,92 +1,236 @@
 #!/usr/bin/env bash
 
+# =============================================================================
 # Check dependencies
+# =============================================================================
+
 deperrors=''
 for depend in git xmllint sed file grep bash perl; do
-  if ! which "$depend" >/dev/null 2>&1; then
+  if ! command -v "$depend" >/dev/null 2>&1; then
     deperrors="$depend $deperrors"
   fi
 done
 if [ -n "$deperrors" ]; then
   cat <<-EOF
-	The githook script depends on some other programs to function.
-	Not all of those programs could be located on your system.
-	Please use your package manager to install the following
-	programs: $deperrors
+	The githook script depends on some other programs to function. Not all of
+	those programs could be located on your system. Please use your package
+	manager to install the following programs: $deperrors
 
-	Your commit has therefore been aborted.  
+	Your commit has therefore been aborted.
 	EOF
   exit 1
 fi >>/dev/stderr
 
-GIT_ROOT=$(git rev-parse --show-toplevel)
 
-# CHECK XML SYNTAX
-TESTS=0
-for xmlfile in $(
-  git diff --staged --name-only | grep -E "(\.xhtml$|\.xml$|\.xsl$)"
-); do
-  if [ -e "${xmlfile}" ]; then
-    xmllint --noout --nonet "${xmlfile}"
-    TESTS=$((TESTS + $?))
+# =============================================================================
+# Define variables
+# =============================================================================
+
+# static vars
+files_all=$(git diff --staged --name-only)
+total="$(echo "$files_all" | wc -l)"
+count=0
+
+# return codes
+RETURN_SYNTAX=0
+RETURN_HTML=0
+RETURN_TAGS=0
+RETURN_ENC=0
+RETURN_NAME=0
+RETURN_NEWSDATE=0
+RETURN_VERSION_PRES=0
+RETURN_VERSION_INT=0
+
+# displayed files
+FILES_SYNTAX=""
+FILES_HTML=""
+FILES_TAGS=""
+FILES_ENC=""
+FILES_NAME=""
+FILES_NEWSDATE=""
+FILES_VERSION_PRES=""
+FILES_VERSION_INT=""
+
+
+# =============================================================================
+# Check all files for different things
+# =============================================================================
+
+for f in $files_all; do
+  ((count++))
+  echo -ne "pre-commit check: [$count/$total]\r"
+
+  # ---------------------------------------------------------------------------
+  # XML syntax
+  # ---------------------------------------------------------------------------
+  fileregex="(\.xhtml$|\.xml$|\.xsl$)"
+  if [[ ( $f =~ $fileregex ) && ( -e "$f" ) ]]; then
+    xmllint --noout --nonet "${f}"
+    if [[ $? != 0 ]]; then
+      RETURN_SYNTAX=$((RETURN_SYNTAX + 1))
+      FILES_SYNTAX="${FILES_SYNTAX}|${f}"
+    fi
   fi
+
+  # ---------------------------------------------------------------------------
+  # HTML files
+  # ---------------------------------------------------------------------------
+  fileregex="(\.html$)"
+  if [[ ( $f =~ $fileregex ) && ( -e "$f" ) ]]; then
+    RETURN_HTML=$((RETURN_HTML + 1))
+    FILES_HTML="${FILES_HTML}|${f}"
+  fi
+
+  # ---------------------------------------------------------------------------
+  # New tags
+  # ---------------------------------------------------------------------------
+  fileregex="^(news/|events/).*(\.xhtml$|\.xml$|\.xsl$)"
+  if [[ ( $f =~ $fileregex ) && ( -e "$f" ) ]]; then
+    hit=0
+    tags=""
+    # go through all tags in this file
+    # make only a new line a field separator to support tags with spaces inside (which is not recommended)
+    OLDIFS=$IFS   # save IFS, usually " \t\n"
+    IFS=$'\n'
+    for tag in $(grep -Ei "<tag.*?>.+?</tag>" "${f}" | sed -E "s|.*<tag.*?>(.+?)</tag>.*|\1|g"); do
+      # check if this tag does exist in any other news/event item
+      if ! git grep -ilE "<tag.*?>${tag}</tag>" news/ events/ | grep -vq "${f}"; then
+        hit=1
+        tags="${tag}, ${tags}"
+        RETURN_TAGS=$((RETURN_TAGS + 1))
+      fi
+    done
+    IFS=$OLDIFS   # reset IFS
+    # if any new tag has been found, enlist them
+    if [ $hit != 0 ]; then
+      tags="${tags%, }"
+      FILES_TAGS="${FILES_TAGS}|${f} (new tag(s): ${tags})"
+    fi
+  fi
+
+  # ---------------------------------------------------------------------------
+  # Encoding
+  # ---------------------------------------------------------------------------
+  fileregex="(\.xhtml$|\.xml$|\.xsl$)"
+  if [[ ( $f =~ $fileregex ) && ( -e "$f" ) ]]; then
+    regex="(utf-8|us-ascii)"
+    if ! [[ $(file -b --mime-encoding "${f}") =~ $regex ]]; then
+      RETURN_ENC=$((RETURN_ENC + 1))
+      FILES_ENC="${FILES_ENC}|${f}"
+    fi
+  fi
+
+  # ---------------------------------------------------------------------------
+  # Naming and newsdate attribute mistakes in news/events
+  # ---------------------------------------------------------------------------
+  fileregex="^(news/20[0-9]{2}/|news/nl/|news/podcast/|events/20[0-9]{2}/).*(\.xhtml$|\.xml$)"
+  if [[ ( $f =~ $fileregex ) && ( -e "$f" ) ]]; then
+  filename="$(basename "${f}")"
+    # file naming scheme
+    regex="^((nl-20[0-9]{4})|episode-[0-9]{1,3}|(news|event)-20[0-9]{6}-[0-9]{2})\.[a-z]{2}\.(xml|xhtml)$"
+    if ! [[ $filename =~ $regex ]]; then
+      RETURN_NAME=$((RETURN_NAME + 1))
+      FILES_NAME="${FILES_NAME}|${f}"
+    fi
+
+    # newsdate attribute scheme
+    regex="^20[0-9]{2}-[0-9]{2}-[0-9]{2}$"
+    if grep -qE "<html\s*newsdate=\".*?>" "${f}"; then
+      newsdate=$(grep -E "<html\s*newsdate=\".*?>" "${f}" | perl -pe 's/.*newsdate="(.+?)".*/\1/')
+      if ! [[ $newsdate =~ $regex ]]; then
+        RETURN_NEWSDATE=$((RETURN_NEWSDATE + 1))
+        FILES_NEWSDATE="${FILES_NEWSDATE}|${f}"
+      fi
+    fi
+  fi
+
+  # ---------------------------------------------------------------------------
+  # Version tag presence + integer check
+  # ---------------------------------------------------------------------------
+  fileregex="(\.xhtml$|\.xml$)"
+  if [[ ( $f =~ $fileregex ) && ( -e "$f" ) ]]; then
+    # check whether version tag is present
+    if ! xmllint --xpath "/*/version" "${f}" &>/dev/null; then
+      RETURN_VERSION_PRES=$((RETURN_VERSION_PRES + 1))
+      FILES_VERSION_PRES="${FILES_VERSION_PRES}|${f}"
+    else
+      # check whether it's a positive integer
+      if ! [[ $(xmllint --xpath "/*/version/text()" "${f}") =~ ^[0-9]+$ ]]; then
+        RETURN_VERSION_INT=$((RETURN_VERSION_INT + 1))
+        FILES_VERSION_INT="${FILES_VERSION_INT}|${f}"
+      fi
+    fi
+  fi
+
+  # ---------------------------------------------------------------------------
+  # Version tag numbering scheme
+  # ---------------------------------------------------------------------------
+  fileregex="(\.xhtml$|\.xml$)"
+  if [[ ( $f =~ $fileregex ) && ( -e "$f" ) ]]; then
+    if ! xmllint --xpath "/*/version" "${f}" &>/dev/null; then
+      RETURN_VERSION=$((RETURN_VERSION + 1))
+      FILES_VERSION="${FILES_VERSION}|${f}"
+    fi
+  fi
+
 done
 
-if [ $TESTS -gt 0 ]; then
+echo -ne "\n"
 
-cat <<EOF >&2
-  === SYNTAX ERROR ===
-  One or more files failed the XML syntax check!
+
+# =============================================================================
+# Report based on failed checks
+# =============================================================================
+
+if [ $RETURN_SYNTAX -gt 0 ]; then
+  cat <<EOF >&2
+  ==================
+  || SYNTAX ERROR ||
+  ==================
+  ${RETURN_SYNTAX} files failed the XML syntax check!
+  $(echo "${FILES_SYNTAX}" | sed -E -e "s/\|/\n  - /g")
 
   The error log above will help you to identify the error. Read it from
   the top. The numbers behind the file name point to the line number in
   the file where the error has been detected.
 
-  Check this line and its surroundings for XML/HTML tags that have not 
+  Check this line and its surroundings for XML/HTML tags that have not
   been closed correctly, errors with special characters like "&", or
   other syntactical mistakes.
 
-  The commit has been aborted. You have to fix the problem first.
-EOF
+  The commit will be aborted. You have to fix the problem first.
 
-  exit $TESTS
+EOF
 fi
 
-# CHECK FOR NEWLY INTRODUCED TAGS
-NEWTAGS=0
-FILES=""
-# test all newly staged (added) XML files in /news and /events
-for xmlfile in $(
-  git diff --staged --name-only | grep -E "^(news/|events/).*(\.xhtml$|\.xml$|\.xsl$)"
-); do
-  hit=0
-  tags=""
-  # go through all tags in this file
-  # make only a new line a field separator to support tags with spaces inside (which is not recommended)
-  OLDIFS=$IFS
-  IFS=$'\n'
-  for tag in $(grep -Ei "<tag.*?>.+?</tag>" "${xmlfile}" | sed -E "s|.*<tag.*?>(.+?)</tag>.*|\1|g"); do
-    # check if this tag does exist in any other news/event item
-    if ! git grep -ilE "<tag.*?>${tag}</tag>" news/ events/ | grep -vq "${xmlfile}"; then
-      hit=1
-      tags="${tag}, ${tags}"
-      NEWTAGS=$((NEWTAGS + 1))
-    fi
-  done
-  IFS=$OLDIFS   # reset IFS, usually " \t\n"
-  # if any new tag has been found, enlist them
-  if [ $hit != 0 ]; then
-    tags="${tags%, }"
-    FILES="${FILES}|${xmlfile} (new tag(s): ${tags})"
-  fi
-done
-
-if [ $NEWTAGS -gt 0 ]; then
+if [ $RETURN_HTML -gt 0 ]; then
   cat <<EOF >&2
-  === NEW / DUPLICATED TAG(S) ===
-  Your commit introduced $NEWTAGS tag(s) which did not exist before in
+  ==========================
+  || FILE EXTENSION ERROR ||
+  ==========================
+  ${RETURN_HTML} files in your commit have a wrong file extension.
+
+  The following files have ".html" as file extensions:
+  $(echo "${FILES_HTML}" | sed -E -e "s/\|/\n  - /g")
+
+  This creates problems with our build system. It is supposed to create
+  the final HTML files from the .xhtml source files. So please make
+  sure you follow the format for the XHTML files, and to name them
+  accordingly.
+
+  The commit will be aborted. You have to fix the problem first.
+
+EOF
+fi
+
+if [ $RETURN_TAGS -gt 0 ]; then
+  cat <<EOF >&2
+  =============================
+  || NEW / DUPLICATED TAG(S) ||
+  =============================
+  Your commit introduced $RETURN_TAGS tag(s) which did not exist before in
   our news or event items!
-  $(echo "${FILES}" | sed -E -e "s/\|/\n  - /g")
+  $(echo "${FILES_TAGS}" | sed -E -e "s/\|/\n  - /g")
 
   Please make sure that you use already used tags, and only introduce a
   new tag e.g. if it's about a new campaign that will be more often
@@ -101,120 +245,32 @@ if [ $NEWTAGS -gt 0 ]; then
   sure. Thank you.
 
 EOF
-
 fi
 
-
-# CHECK FOR HTML FILE EXTENSION
-NAMEERRORS=0
-FILES=""
-# find all newly staged (added) .html files
-for htmlfile in $(
-  git diff --staged --name-only | grep -Ei "(\.html$)"
-); do
-  if [ -e "${htmlfile}" ]; then
-    FILES="${FILES}|${htmlfile}"
-    NAMEERRORS=$((NAMEERRORS + 1))
-  fi
-done
-
-if [ $NAMEERRORS -gt 0 ]; then
-
-cat <<EOF >&2
-  === FILE EXTENSION ERROR ===
-  One or more files in your commit have a wrong file extension.
-
-  The following files have ".html" as files extension:
-  $(echo "${FILES}" | sed -E -e "s/\|/\n  - /g")
-
-  This creates problems with our build system. It is supposed to create
-  the final HTML files from the .xhtml source files. So please make
-  sure you follow the format for the XHTML files, and to name them
-  accordingly.
-
-  The commit has been aborted. You have to fix the problem first.
-EOF
-
-  exit $NAMEERRORS
-fi
-
-
-# CHECK ENCODING
-ENCERRORS=0
-FILES=""
-# test all newly staged (added) .html/.xml/.xhtml files
-for xmlfile in $(
-  git diff --staged --name-only | grep -E "(\.xhtml$|\.xml$|\.xsl$)"
-); do
-  if [ -e "${xmlfile}" ]; then
-    regex="(utf-8|us-ascii)"
-    if ! [[ $(file -b --mime-encoding "${xmlfile}") =~ $regex ]]; then
-      FILES="${FILES}|${xmlfile}"
-      ENCERRORS=$((ENCERRORS + 1))
-    fi
-  fi
-done
-
-if [ $ENCERRORS -gt 0 ]; then
-
-cat <<EOF >&2
-  === FILE ENCODING ERROR ===
-  One or more files in your commit have a wrong encoding.
+if [ $RETURN_ENC -gt 0 ]; then
+  cat <<EOF >&2
+  =========================
+  || FILE ENCODING ERROR ||
+  =========================
+  ${RETURN_ENC} files in your commit have a wrong encoding.
 
   The following files are not UTF-8 encoded:
-  $(echo "${FILES}" | sed -E -e "s/\|/\n  - /g")
+  $(echo "${FILES_ENC}" | sed -E -e "s/\|/\n  - /g")
 
   For the FSFE website, we strongly prefer UTF-8 encoded files.
   Everything else creates problems. Please change the file encoding in
   your text editor or with a special tool.
 
-  The commit has been aborted. You have to fix the problem first.
-EOF
+  The commit will be aborted. You have to fix the problem first.
 
-  exit $ENCERRORS
+EOF
 fi
 
-
-# CHECK FOR COMMON ERRORS IN NEWS/EVENT FILES
-COMMONERRORS=0
-FILES_NAME=""
-FILES_DATE=""
-# test all newly staged (added) XML files in /news and /events
-for xmlfile in $(
-  git diff --staged --name-only | grep -E "^(news/20[0-9]{2}/|news/nl/|news/podcast/|events/20[0-9]{2}/).*(\.xhtml$|\.xml$)"
-); do
-  if [ -e "${xmlfile}" ]; then
-    FILENAME="$(basename "${xmlfile}")"
-    # file naming scheme
-    regex="^((nl-20[0-9]{4})|episode-[0-9]{1,3}|(news|event)-20[0-9]{6}-[0-9]{2})\.[a-z]{2}\.(xml|xhtml)$"
-    if ! [[ $FILENAME =~ $regex ]]; then
-      FILES_NAME="${FILES_NAME}|${xmlfile}"
-      COMMONERRORS=$((COMMONERRORS + 1))
-    fi
-    # newsdate attribute
-    regex="^20[0-9]{2}-[0-9]{2}-[0-9]{2}$"
-    if grep -qE "<html\s*newsdate=\".*?>" "${xmlfile}"; then
-      newsdate=$(grep -E "<html\s*newsdate=\".*?>" "${xmlfile}" | perl -pe 's/.*newsdate="(.+?)".*/\1/')
-      if ! [[ $newsdate =~ $regex ]]; then
-        echo "$xmlfile: $newsdate"
-        FILES_DATE="${FILES_DATE}|${xmlfile}"
-        COMMONERRORS=$((COMMONERRORS + 1))
-      fi
-    fi
-  fi
-done
-
-if [ $COMMONERRORS -gt 0 ]; then
-
-cat <<EOF >&2
-  === COMMON NEWS/EVENT ERRROR ===
-  One or more files in your commit contain typical mistakes for news
-  and event items.
-EOF
-
-if [[ -n $FILES_NAME ]]; then
-cat <<EOF >&2
-
+if [ $RETURN_NAME -gt 0 ]; then
+  cat <<EOF >&2
+  =======================
+  || FILE NAMING ERROR ||
+  =======================
   The following files do not follow the naming scheme for news and
   events:
   $(echo "${FILES_NAME}" | sed -E -e "s/\|/\n  - /g")
@@ -228,24 +284,63 @@ cat <<EOF >&2
   If there is more than one news item per date, count the "-01"
   onwards. Of course, the ".en" can also be the code for another
   language we support.
+
+  The commit will be aborted. You have to fix the problem first.
+
 EOF
 fi
 
-if [[ -n $FILES_DATE ]]; then
-cat <<EOF >&2
-
+if [ $RETURN_NEWSDATE -gt 0 ]; then
+  cat <<EOF >&2
+  ==============================
+  || NEWSDATE ATTRIBUTE ERROR ||
+  ==============================
   The following files do not follow the scheme for the newsdate attribute:
-  $(echo "${FILES_DATE}" | sed -E -e "s/\|/\n  - /g")
+  $(echo "${FILES_NEWSDATE}" | sed -E -e "s/\|/\n  - /g")
 
   The scheme is "20YY-MM-DD", so the respective line should look
   something like this: <html newsdate="2020-01-01">
+
+  The commit will be aborted. You have to fix the problem first.
+
 EOF
 fi
 
-cat <<EOF >&2
+if [ $RETURN_VERSION_PRES -gt 0 ]; then
+  cat <<EOF >&2
+  =========================
+  || MISSING VERSION TAG ||
+  =========================
+  The following files do not contain the mandatory <version> tag, or it is at
+  the wrong level:
+  $(echo "${FILES_VERSION_PRES}" | sed -E -e "s/\|/\n  - /g")
 
-  The commit has been aborted. You have to fix the problem first.
+  Please read more about outdated translations and the version tag here:
+  https://wiki.fsfe.org/TechDocs/Mainpage/Translations/
+
+  The commit will be aborted. You have to fix the problem first.
+
 EOF
-
-  exit $COMMONERRORS
 fi
+
+if [ $RETURN_VERSION_INT -gt 0 ]; then
+  cat <<EOF >&2
+  =======================
+  || WRONG VERSION TAG ||
+  =======================
+  The following files contain a malformed <version> tag:
+  $(echo "${FILES_VERSION_INT}" | sed -E -e "s/\|/\n  - /g")
+
+  The version tag may only be a positive integer (so a number, no decimals or
+  alphabetic characters)!
+
+  Please read more about outdated translations and the version tag here:
+  https://wiki.fsfe.org/TechDocs/Mainpage/Translations/
+
+  The commit will be aborted. You have to fix the problem first.
+
+EOF
+fi
+
+exit $((RETURN_SYNTAX + RETURN_ENC + RETURN_NAME + RETURN_NEWSDATE + \
+        RETURN_VERSION_PRES + RETURN_VERSION_INT))

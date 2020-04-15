@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <readers>
+  <version>1</version>
+
 <reader priority="20">
   <name>SumatraPDF</name>
   <logo>sumatrapdf.png</logo>

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<readers> <reader priority="35">
+<readers>
+  <version>1</version>
+
+   <reader priority="35">
   <name>PDF.JS</name>
   <logo>pdf.js.png</logo>
   <homepage>http://mozilla.github.io/pdf.js/</homepage>

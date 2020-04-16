@@ -24,7 +24,6 @@ Such an item doesn't need an image!
 
   <!-- FSFE and Fellowship -->
 
-
   <item type="fsfe" id="fsfe-logo-sticker" year="2017" order="1">
  	<image
     imgsmall="/contribute/promopics/fsfe-sticker-thumb.png"/>
@@ -39,6 +38,21 @@ Such an item doesn't need an image!
   <item type="fsfe" id="multilanguage-free-software-purple" year="2019" order="3">
     <image imgsmall="/contribute/promopics/free-software-multilanguage-purple.png"/>
   </item>
+
+  <!-- Hacking 100 freedom -->
+
+  <item type="fsfe" id="hacking-100-freedom-sticker-blue" year="2019" order="4">
+    <image imgsmall="/contribute/promopics/hacking-100-freedom-sticker-blue.png"/>
+  </item>
+
+  <item type="fsfe" id="hacking-100-freedom-sticker-darkblue" year="2019" order="5">
+    <image imgsmall="/contribute/promopics/hacking-100-freedom-sticker-darkblue.png"/>
+  </item>
+
+  <item type="fsfe" id="hacking-100-freedom-sticker-green" year="2019" order="6">
+    <image imgsmall="/contribute/promopics/hacking-100-freedom-sticker-green.png"/>
+  </item>
+
 
     <!-- FS and users freedoms -->
   
@@ -60,7 +74,6 @@ Such an item doesn't need an image!
 
   <!--100 freedoms -->
 
-
    <item type="freedom" id="100-freedoms-sticker-black" year="2017" order="1">
     <image imgsmall="/contribute/promopics/100-freedoms-sticker-black.png"/>
   </item>
@@ -69,17 +82,6 @@ Such an item doesn't need an image!
     <image imgsmall="/contribute/promopics/100-freedoms-sticker-orange.png"/>
   </item>
 
-  <item type="freedom" id="100-freedoms-sticker-blue" year="2019" order="3">
-    <image imgsmall="/contribute/promopics/hacking-100-freedom-sticker-blue.png"/>
-  </item>
-
-  <item type="freedom" id="100-freedoms-sticker-darkblue" year="2019" order="4">
-    <image imgsmall="/contribute/promopics/hacking-100-freedom-sticker-darkblue.png"/>
-  </item>
-
-  <item type="freedom" id="100-freedoms-sticker-green" year="2019" order="5">
-    <image imgsmall="/contribute/promopics/hacking-100-freedom-sticker-green.png"/>
-  </item>
 
   <!-- Public Money, Public Code -->
 

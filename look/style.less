@@ -14,6 +14,10 @@ hr {
     clear: both;
 }
 
+.lead {
+    font-weight: bold;
+}
+
 .list-no-style {
     list-style-type: none;
     margin: 0;
@@ -48,12 +52,12 @@ q, .en q {
 
 /* Typography */
 
-h1 {
+h1, .h1 {
     .page-header;
     color: @brand-strong;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
     font-weight: 300;
 }
 
@@ -369,7 +373,7 @@ div#subpages, .grid-row {
 #main {
     padding-top: 1em;
 
-    h1, h2, h3, h4, h5, h6 {
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
         -moz-hypens: manual;
         -webkit-hyphens: manual;
         hyphens: manual;
@@ -721,7 +725,7 @@ div#subpages, .grid-row {
     }
 }
 
-.frontpage, .subsite, .full-width {
+.front-page, .frontpage, .subsite, .full-width {
     #content {
         max-width: none;
     }

@@ -1,0 +1,174 @@
+// ============================================================================
+// Styles specific to the front page
+// ============================================================================
+
+.frontpage {
+    #main {
+        padding: 0;
+    }
+
+    .introduction {
+        height: 300px;
+        background-image: url("/graphics/motto.png");
+        padding: 3em;
+        text-shadow: 0 0 4px black;
+        color: white;
+
+        p {
+            max-width: 680px;
+            font-weight: bold;
+        }
+    }
+
+    .three-columns {
+        // This makes all 3 columns the same height.
+        @media (min-width: @screen-md-min) {
+            display: flex;
+        }
+
+        .column, .entry {
+            .make-xs-column(12);
+            .make-md-column(4);
+            padding-top: 15px;
+            padding-bottom: 15px;
+            color: black;
+
+            h3 {
+                margin-top: 0;
+            }
+
+            a {
+                color: black;
+            }
+        }
+
+        a.column:hover {
+            text-decoration: none;
+        }
+
+        .column:nth-child(1), .entry:nth-child(1) {
+            background-color: @brand-primary;
+        }
+
+        .column:nth-child(2), .entry:nth-child(2) {
+            background-color: @brand-medium;
+        }
+
+        .column:nth-child(3), .entry:nth-child(3) {
+            background-color: @brand-green;
+        }
+    }
+
+    .news {
+        .date {
+            .small;
+        }
+    }
+
+    .news-info {
+        ul {
+            .list-unstyled;
+
+            li {
+                .make-xs-column(12);
+                .make-md-column(4);
+                .text-center;
+
+                margin-top: 30px;
+                margin-bottom: 30px;
+
+                a {
+                    .btn;
+                    .btn-lg;
+                    .btn-success;
+                }
+            }
+        }
+
+        .subscribe-nl {
+            .make-row;
+
+            margin-bottom: 30px;
+
+            p {
+                .make-md-column(6);
+                .h3;
+                .text-right;
+
+                @media (min-width: @screen-md-min) {
+                    margin: 0;
+                    top: 5px;
+                }
+            }
+
+            form {
+                .make-md-column(6);
+            }
+        }
+    }
+
+    .testimonials {
+        .column {
+            .testimonial-image {
+                .make-xs-column(12);
+                .make-sm-column(3);
+                .make-md-column(12);
+
+                img {
+                    .center-block;
+                    width: 150px;
+                }
+            }
+
+            .testimonial-text {
+                .make-xs-column(12);
+                .make-sm-column(9);
+                .make-md-column(12);
+
+                margin-top: 15px;
+
+                p.source {
+                    .text-right;
+
+                    margin-bottom: 0;
+                    font-weight: bold;
+                    &:before {
+                        content: '\2014 \00A0'; // EM DASH, NBSP
+                    }
+                }
+            }
+        }
+    }
+
+    .donate-info {
+        .center-block;
+        .text-center;
+        .lead;
+
+        padding-top: 30px;
+        padding-bottom: 30px;
+        width: 75%
+    }
+
+    .promo {
+        .h3;
+        .text-center;
+
+        height: 300px;
+        background-image: url("/graphics/infomaterial-450px.png");
+        background-size: 280px;
+        background-position: bottom;
+        background-repeat: no-repeat;
+    }
+
+    .order {
+        .h3;
+        .text-center;
+
+        height: 300px;
+        background-image: url("/graphics/t-shirt-promo-v2.png");
+        background-size: 280px;
+        background-position: bottom;
+        background-repeat: no-repeat;
+    }
+}

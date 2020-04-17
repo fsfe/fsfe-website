@@ -36,6 +36,7 @@
                       <xsl:attribute name="src">
                         <xsl:value-of select="image"/>
                       </xsl:attribute>
+                      <xsl:attribute name="alt"/>
                     </xsl:element>
                   </xsl:element>
                 </xsl:when>
@@ -44,6 +45,7 @@
                     <xsl:attribute name="src">
                       <xsl:value-of select="image"/>
                     </xsl:attribute>
+                    <xsl:attribute name="alt"/>
                   </xsl:element>
                 </xsl:otherwise>
               </xsl:choose>

@@ -85,13 +85,6 @@ img.signatory-logo {
 
 }
 
-#latest-news-list, #more-news-list {
-    list-style-type: none;
-    font-size: 1.2em;
-    font-weight: 300;
-    padding: 0;
-}
-
 .newsdate {
   font-size: .875em;
   color: #888;
@@ -142,7 +135,7 @@ img.signatory-logo {
         float: left;
     }
 
-    #newsletter, #shop-promo, .country.frontpage #teams {
+    .country.frontpage #teams {
         display: inline-block;
         float: right;
         width: 30%;
@@ -152,20 +145,10 @@ img.signatory-logo {
     }
 }
 
-#newsletter, .newsletter #sidebar {
+.newsletter #sidebar {
     input {
         display: block;
         margin: .5em 0;
-    }
-}
-
-#feeds {
-    a.ical, a.rss-feed {
-        .small;
-        color: @gray-light;
-
-        i.fa {
-        }
     }
 }
 
@@ -474,30 +457,6 @@ video#freeyourandroid {
     }
 }
 
-.more-news {
-    display: flex;
-    flex-direction: column;
-    gap: .75em;
-    margin-top: 2rem;
-
-    a.learn-more {
-        font-size: 1.3em;
-        font-weight: bold;
-        line-height: 1.5;
-        white-space: nowrap;
-    }
-
-    @media (min-width: @screen-sm-min) {
-        flex-direction: row;
-        gap: 0;
-        justify-content: space-between;
-
-        a.learn-more {
-            line-height: 1;
-        }
-    }
-}
-
 #formnl {
 
     select {
@@ -519,22 +478,4 @@ video#freeyourandroid {
         width: auto;
     }
 
-}
-
-.home-order-image-container {
-    display: block;
-    margin-bottom: 10px;
-    text-align: center;
-
-    .home-order-image {
-        width: 80%;
-    }
-}
-
-.home-shop-block {
-    margin-bottom: 50px;
-}
-
-.home-newsletter-label {
-    margin-top: 30px;
 }

@@ -33,7 +33,11 @@
       </p>
     </div>
 
-    <h2 class="hidden">News</h2>
+    <h2>Latest News</h2>
+
+    <p class="subtitle">
+      <a href="/news/index.html">All news</a>
+    </p>
 
     <div class="three-columns news">
       <dynamic-content-news/>
@@ -44,23 +48,16 @@
     <div class="news-info">
       <ul>
         <li>
-          <a href="/news/index.html">
-            <span class="fa fa-newspaper-o fa-lg"/>
-            Read all news
-          </a>
-        </li>
-
-        <li>
           <a href="/news/podcast.html">
             <span class="fa fa-podcast fa-lg"/>
-            Hear our podcasts
+            Podcasts
           </a>
         </li>
 
         <li>
           <a href="https://planet.fsfe.org/en">
             <span class="fa fa-users fa-lg"/>
-            Visit the community blogs
+            Community blogs
           </a>
         </li>
       </ul>
@@ -70,7 +67,11 @@
       </div>
     </div>
 
-    <h2 class="hidden">Testimonials</h2>
+    <h2>Our Community</h2>
+
+    <p class="subtitle">
+      <a href="/about/people/testimonials.html">More quotes from our community</a>
+    </p>
 
     <div class="three-columns testimonials">
       <dynamic-content-testimonials/>
@@ -78,25 +79,35 @@
 
     <h2 class="hidden">Donate</h2>
 
-    <p class="donate-info">
-      With a financial support you will contribute to a solid foundation on
-      which we are building our charitable work for freedom in the information
-      society. 
-      <a class="big-donate" href="https://my.fsfe.org/donate">Become a supporter now!</a>
-    </p>
+    <div class="donate-info">
+      <p>
+        With a financial support you will contribute to a solid foundation on
+        which we are building our charitable work for freedom in the information
+        society. 
+      </p>
+      <a class="btn btn-success btn-lg" href="https://my.fsfe.org/donate">Become a supporter now!</a>
+    </div>
 
-    <h2 class="hidden">Further items</h2>
+    <h2>What should this heading say?</h2>
 
     <div class="three-columns further">
-      <a class="column promo" href="/contribute/spreadtheword.html">
-        <p>Information material</p>
-      </a>
-      <a class="column order" href="/order/index.html">
-        <p>Merchandise</p>
-      </a>
-      <a class="column events" href="/events/index.html">
+      <div class="column">
+        <a href="/contribute/spreadtheword.html">
+          <h3>Information material</h3>
+          <img src="/graphics/infomaterial-450px.png"/>
+        </a>
+      </div>
+
+      <div class="column events">
         <dynamic-content-events/>
-      </a>
+      </div>
+
+      <div class="column">
+        <a href="/order/index.html">
+          <h3>Merchandise</h3>
+          <img src="/graphics/t-shirt-promo-v2.png"/>
+        </a>
+      </div>
     </div>
   </body>
 </html>

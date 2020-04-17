@@ -3,67 +3,28 @@
 // ============================================================================
 
 .frontpage {
-    #main {
-        padding: 0;
+    .introduction {
+        .text-center;
+
+        padding: 30px;
+        font-weight: bold;
     }
 
-    .introduction {
-        height: 300px;
-        background-image: url("/graphics/motto.png");
-        padding: 3em;
-        text-shadow: 0 0 4px black;
-        color: white;
+    h2 {
+        .text-center;
+    }
 
-        p {
-            max-width: 680px;
-            font-weight: bold;
-        }
+    .subtitle {
+        .text-center;
+        .small;
     }
 
     .three-columns {
-        margin-left: 3em;
-        margin-right: 3em;
-
-        // This makes all 3 columns the same height.
-        @media (min-width: @screen-md-min) {
-            display: flex;
-        }
+        .make-row;
 
         .column, .entry {
             .make-xs-column(12);
             .make-md-column(4);
-            padding-top: 15px;
-            padding-bottom: 15px;
-            color: black;
-
-            h3 {
-                margin-top: 0;
-            }
-
-            a {
-                color: black;
-            }
-        }
-
-        a.column:hover {
-            text-decoration: none;
-        }
-    }
-
-    .three-columns.colored {
-        margin-left: 0;
-        margin-right: 0;
-
-        .column:nth-child(1), .entry:nth-child(1) {
-            background-color: @brand-primary;
-        }
-
-        .column:nth-child(2), .entry:nth-child(2) {
-            background-color: @brand-medium;
-        }
-
-        .column:nth-child(3), .entry:nth-child(3) {
-            background-color: @brand-green;
         }
     }
 
@@ -76,19 +37,18 @@
     .news-info {
         ul {
             .list-unstyled;
+            .make-row;
 
             li {
                 .make-xs-column(12);
-                .make-md-column(4);
+                .make-sm-column(6);
                 .text-center;
 
-                margin-top: 30px;
-                margin-bottom: 30px;
+                margin-top: 15px;
 
                 a {
                     .btn;
-                    .btn-lg;
-                    .btn-success;
+                    .btn-default;
                 }
             }
         }
@@ -96,7 +56,11 @@
         .subscribe-nl {
             .make-row;
 
+            margin-top: 30px;
             margin-bottom: 30px;
+            background: rgba(116,140,156,0.23);
+            padding-top: 15px;
+            padding-bottom: 15px;
 
             p {
                 .make-md-column(6);
@@ -149,30 +113,32 @@
     }
 
     .donate-info {
-        .center-block;
-        .text-center;
-        .lead;
-
-        padding-top: 30px;
-        padding-bottom: 30px;
-        width: 75%
-    }
-
-    .promo, .order {
-        .h3;
         .text-center;
 
-        height: 300px;
-        background-size: 280px;
-        background-position: bottom;
-        background-repeat: no-repeat;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        background: rgba(116,140,156,0.23);
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        p {
+            .center-block;
+
+            max-width: 75%;
+        }
     }
 
-    .promo {
-        background-image: url("/graphics/infomaterial-450px.png");
-    }
+    .further {
+        .text-center;
 
-    .order {
-        background-image: url("/graphics/t-shirt-promo-v2.png");
+        img {
+            width: 280px;
+        }
+
+        .event-date {
+            .small;
+
+            margin-bottom: 0;
+        }
     }
 }

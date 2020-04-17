@@ -24,24 +24,26 @@
 
   <xsl:template match="dynamic-content-testimonials">
     <xsl:for-each select="/buildinfo/document/set/quote[@frontpage]">
-      <xsl:element name="a">
+      <xsl:element name="div">
         <xsl:attribute name="class">column</xsl:attribute>
-        <xsl:attribute name="href">/about/people/testimonials.html</xsl:attribute>
 
         <xsl:element name="div">
           <xsl:attribute name="class">row</xsl:attribute>
 
           <xsl:element name="div">
             <xsl:attribute name="class">testimonial-image</xsl:attribute>
-            <xsl:element name="img">
-              <xsl:attribute name="class">img-circle</xsl:attribute>
-              <xsl:attribute name="src">
-                <xsl:value-of select="@image"/>
-              </xsl:attribute>
-              <xsl:attribute name="alt">
-                <xsl:value-of select="/buildinfo/document/text[@id='photograph']"/>
-              </xsl:attribute>
-            </xsl:element><!-- img -->
+            <xsl:element name="a">
+              <xsl:attribute name="href">/about/people/testimonials.html#<xsl:value-of select="@id"/></xsl:attribute>
+              <xsl:element name="img">
+                <xsl:attribute name="class">img-circle</xsl:attribute>
+                <xsl:attribute name="src">
+                  <xsl:value-of select="@image"/>
+                </xsl:attribute>
+                <xsl:attribute name="alt">
+                  <xsl:value-of select="/buildinfo/document/text[@id='photograph']"/>
+                </xsl:attribute>
+              </xsl:element><!-- img -->
+            </xsl:element><!-- a -->
           </xsl:element><!-- div -->
 
           <xsl:element name="div">
@@ -51,7 +53,10 @@
             </xsl:element>
             <xsl:element name="p">
               <xsl:attribute name="class">source</xsl:attribute>
-              <xsl:apply-templates select="name/node()"/>
+              <xsl:element name="a">
+                <xsl:attribute name="href">/about/people/testimonials.html#<xsl:value-of select="@id"/></xsl:attribute>
+                <xsl:apply-templates select="name/node()"/>
+              </xsl:element>
             </xsl:element>
           </xsl:element><!-- div -->
         </xsl:element><!-- div -->
@@ -66,32 +71,34 @@
 
   <xsl:template match="dynamic-content-events">
     <xsl:element name="h3">
-      <!--translated word "events"-->
-      <xsl:call-template name="gettext">
-        <xsl:with-param name="id" select="'events'"/>
-      </xsl:call-template>
+      <xsl:element name="a">
+        <xsl:attribute name="href">/events/index.html</xsl:attribute>
+        <!--translated word "events"-->
+        <xsl:call-template name="gettext">
+          <xsl:with-param name="id" select="'events'"/>
+        </xsl:call-template>
+      </xsl:element>
     </xsl:element>
 
-    <xsl:element name="ul">
-      <xsl:attribute name="class">list-unstyled</xsl:attribute>
-      <xsl:for-each select="/buildinfo/document/set/event
-        [translate (@end, '-', '') &gt;= translate ($today, '-', '')
-         and (tags/tag = 'front-page')
-        ]">
-        <xsl:sort select="@start"/>
-        <xsl:if test="position() &lt;= 3">
-          <xsl:element name="li">
-            <xsl:value-of select="@start"/>
-            <xsl:if test="@start != @end">
-              <xsl:text> – </xsl:text>
-              <xsl:value-of select="@end"/>
-            </xsl:if>
-            <xsl:text>: </xsl:text>
-            <xsl:value-of select="title"/>
-          </xsl:element>
-        </xsl:if>
-      </xsl:for-each>
-    </xsl:element>
+    <xsl:for-each select="/buildinfo/document/set/event
+      [translate (@end, '-', '') &gt;= translate ($today, '-', '')
+       and (tags/tag = 'front-page')
+      ]">
+      <xsl:sort select="@start"/>
+      <xsl:if test="position() &lt;= 3">
+        <xsl:element name="p">
+          <xsl:attribute name="class">event-date</xsl:attribute>
+          <xsl:value-of select="@start"/>
+          <xsl:if test="@start != @end">
+            <xsl:text> – </xsl:text>
+            <xsl:value-of select="@end"/>
+          </xsl:if>
+        </xsl:element>
+        <xsl:element name="p">
+          <xsl:value-of select="title"/>
+        </xsl:element>
+      </xsl:if>
+    </xsl:for-each>
   </xsl:template>
 
 

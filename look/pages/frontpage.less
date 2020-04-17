@@ -2,86 +2,97 @@
 // Styles specific to the front page
 // ============================================================================
 
-.frontpage {
+body.frontpage {
     .introduction {
+        padding-top: 30px;
+        padding-bottom: 30px;
         font-weight: bold;
-    }
 
-    h2 {
-        .text-center;
-    }
-
-    .subtitle {
-        .text-center;
-        .small;
+        .h3 {
+            font-weight: inherit;
+        }
     }
 
     .three-columns {
         .make-row;
 
-        .column, .entry {
+        .column {
             .make-xs-column(12);
             .make-md-column(4);
         }
     }
 
     .news {
-        .date {
-            .small;
+        .row {
+            margin-top: 10px;
+            margin-bottom: 10px;
+
+            .image {
+                .make-xs-column(12);
+                .make-sm-column(5);
+                .make-md-column(12);
+                margin-top: 10px;
+                margin-bottom: 10px;
+
+                img {
+                    @media (max-width: @screen-xs-max) {
+                        .center-block;
+                        width: 200px;
+                    }
+                }
+            }
+
+            .text {
+                .make-xs-column(12);
+                .make-sm-column(7);
+                .make-md-column(12);
+
+                h3 {
+                    margin-top: 0;
+                }
+
+                .date {
+                    .small;
+                }
+        }
         }
     }
 
-    .news-info {
-        ul {
-            .list-unstyled;
-            .make-row;
+    .subscribe-nl {
+        .make-row;
 
-            li {
-                .make-xs-column(12);
-                .make-sm-column(6);
-                .text-center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        background: @brand-medium;
+        padding-top: 15px;
+        padding-bottom: 15px;
 
-                margin-top: 15px;
+        p {
+            .make-md-column(6);
+            .h3;
+            .text-right;
 
-                a {
-                    .btn;
-                    .btn-default;
-                }
+            @media (min-width: @screen-md-min) {
+                margin: 0;
+                top: 5px;
             }
         }
 
-        .subscribe-nl {
-            .make-row;
-
-            margin-top: 30px;
-            margin-bottom: 30px;
-            background: rgba(116,140,156,0.23);
-            padding-top: 15px;
-            padding-bottom: 15px;
-
-            p {
-                .make-md-column(6);
-                .h3;
-                .text-right;
-
-                @media (min-width: @screen-md-min) {
-                    margin: 0;
-                    top: 5px;
-                }
-            }
-
-            form {
-                .make-md-column(6);
-            }
+        form {
+            .make-md-column(6);
         }
     }
 
     .testimonials {
-        .column {
-            .testimonial-image {
+        .row {
+            margin-top: 10px;
+            margin-bottom: 10px;
+
+            .image {
                 .make-xs-column(12);
                 .make-sm-column(3);
                 .make-md-column(12);
+                margin-bottom: 10px;
 
                 img {
                     .center-block;
@@ -89,18 +100,15 @@
                 }
             }
 
-            .testimonial-text {
+            .text {
                 .make-xs-column(12);
                 .make-sm-column(9);
                 .make-md-column(12);
 
-                margin-top: 15px;
-
-                p.source {
+                .source {
                     .text-right;
-
                     margin-bottom: 0;
-                    font-weight: bold;
+
                     &:before {
                         content: '\2014 \00A0'; // EM DASH, NBSP
                     }
@@ -111,17 +119,17 @@
 
     .donate-info {
         .text-center;
-
         margin-top: 30px;
         margin-bottom: 30px;
-        background: rgba(116,140,156,0.23);
+        border-radius: @border-radius-large;
+        background: @brand-mix;
         padding-top: 15px;
         padding-bottom: 15px;
+        color: white;
 
         p {
             .center-block;
-
-            max-width: 75%;
+            max-width: 60%;
         }
     }
 
@@ -132,10 +140,11 @@
             width: 280px;
         }
 
-        .event-date {
-            .small;
-
-            margin-bottom: 0;
+        .events {
+            .date {
+                .small;
+                margin-bottom: 0;
+            }
         }
     }
 }

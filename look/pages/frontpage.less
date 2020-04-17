@@ -21,6 +21,9 @@
     }
 
     .three-columns {
+        margin-left: 3em;
+        margin-right: 3em;
+
         // This makes all 3 columns the same height.
         @media (min-width: @screen-md-min) {
             display: flex;
@@ -45,6 +48,11 @@
         a.column:hover {
             text-decoration: none;
         }
+    }
+
+    .three-columns.colored {
+        margin-left: 0;
+        margin-right: 0;
 
         .column:nth-child(1), .entry:nth-child(1) {
             background-color: @brand-primary;
@@ -150,25 +158,21 @@
         width: 75%
     }
 
-    .promo {
+    .promo, .order {
         .h3;
         .text-center;
 
         height: 300px;
-        background-image: url("/graphics/infomaterial-450px.png");
         background-size: 280px;
         background-position: bottom;
         background-repeat: no-repeat;
     }
 
-    .order {
-        .h3;
-        .text-center;
+    .promo {
+        background-image: url("/graphics/infomaterial-450px.png");
+    }
 
-        height: 300px;
+    .order {
         background-image: url("/graphics/t-shirt-promo-v2.png");
-        background-size: 280px;
-        background-position: bottom;
-        background-repeat: no-repeat;
     }
 }

@@ -70,13 +70,13 @@
                   </xsl:otherwise>
                 </xsl:choose>
               </xsl:element>
-          
+
               <!-- Date -->
               <xsl:element name="p">
                 <xsl:attribute name="class">date</xsl:attribute>
                 <xsl:value-of select="@date"/>
               </xsl:element>
-          
+
               <!-- Teaser -->
               <xsl:element name="div">
                 <xsl:attribute name="class">teaser</xsl:attribute>

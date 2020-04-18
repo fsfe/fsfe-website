@@ -2,35 +2,53 @@
 // Styles specific to the front page
 // ============================================================================
 
+// Add #main to the selector so general selectors including #main don't
+// overrule our special settings.
 body.frontpage #main {
+
+    // ------------------------------------------------------------------------
+    // Introduction paragraph at the top of the page
+    // ------------------------------------------------------------------------
+
     .introduction {
-        background-image: url('/graphics/color-bar.jpg');
-        background-position: bottom;
-        background-size: contain;
-        background-repeat: no-repeat;
+        font-weight: bold;
         padding-top: 30px;
         padding-bottom: 20px;
-        font-weight: bold;
+        background-image: url('/graphics/color-bar.jpg');
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: contain;
 
-        .h3 {
-            font-weight: inherit;
+        // Make the first line bigger and separated from the rest.
+        :first-child {
+            font-size: @font-size-h3;
             margin-bottom: 20px;
         }
 
+        // Make the "learn more" link slightly smaller to look better.
         .learn-more {
             font-size: 95%;
         }
     }
 
+    // ------------------------------------------------------------------------
+    // Section headings
+    // ------------------------------------------------------------------------
+
     h2 {
+        // Semantically h2, but on this page they should be formatted like h1.
         .h1;
         margin-top: 30px;
 
         a.learn-more {
-            font-size: 50%;
             font-weight: normal;
+            font-size: 50%;
         }
     }
+
+    // ------------------------------------------------------------------------
+    // Display 3 equal columns side-by-side on larger screens (used 3 times)
+    // ------------------------------------------------------------------------
 
     .three-columns {
         .make-row;
@@ -38,112 +56,23 @@ body.frontpage #main {
         .column {
             .make-xs-column(12);
             .make-md-column(4);
-        }
-    }
-
-    .news {
-        .row {
             margin-top: 10px;
             margin-bottom: 10px;
-
-            .image {
-                .make-xs-column(12);
-                .make-sm-column(5);
-                .make-md-column(12);
-                margin-top: 10px;
-                margin-bottom: 10px;
-
-                img {
-                    @media (max-width: @screen-xs-max) {
-                        .center-block;
-                        width: 200px;
-                    }
-                }
-            }
-
-            .text {
-                .make-xs-column(12);
-                .make-sm-column(7);
-                .make-md-column(12);
-
-                h3 {
-                    margin-top: 0;
-                }
-
-                .date {
-                    .small;
-                }
-        }
         }
     }
 
-    .subscribe {
-        .text-center;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        background: @brand-primary;
-        padding-top: 15px;
-        padding-bottom: 15px;
+    // ------------------------------------------------------------------------
+    // Wide block (used 2 times)
+    // ------------------------------------------------------------------------
+
+    .wide-block {
         font-weight: 500;
-        color: white;
-
-        p {
-            padding-left: 3em;
-            padding-right: 3em;
-            .hyphens(manual);
-        }
-
-        input[type=submit] {
-            .btn-default;
-            font-size: inherit;
-            font-weight: inherit;
-        }
-    }
-
-    .testimonials {
-        .row {
-            margin-top: 10px;
-            margin-bottom: 10px;
-
-            .image {
-                .make-xs-column(12);
-                .make-sm-column(3);
-                .make-md-column(12);
-                margin-bottom: 10px;
-
-                img {
-                    .center-block;
-                    width: 150px;
-                }
-            }
-
-            .text {
-                .make-xs-column(12);
-                .make-sm-column(9);
-                .make-md-column(12);
-
-                .source {
-                    .text-right;
-                    margin-bottom: 0;
-
-                    &:before {
-                        content: '\2014 \00A0'; // EM DASH, NBSP
-                    }
-                }
-            }
-        }
-    }
-
-    .donate-info {
         .text-center;
-        margin-top: 30px;
+        padding: 15px;
+        // This top margin adds to the bottom margin of the row class and <p>
+        // elements directly above, summing up to 30px.
+        margin-top: 10px;
         margin-bottom: 30px;
-        background: @brand-mix;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        font-size: 125%;
-        font-weight: 500;
-        color: white;
 
         p {
             .hyphens(manual);
@@ -155,10 +84,125 @@ body.frontpage #main {
         }
     }
 
-    .further {
+    // ------------------------------------------------------------------------
+    // News section
+    // ------------------------------------------------------------------------
+
+    .news {
+        .three-columns;
+
+        // Show the image to the left on tablet-sized screens, to the top
+        // on larger or smaller screens.
+        .image {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            .make-xs-column(12);
+            .make-sm-column(5);
+            .make-md-column(12);
+
+            // On very small screens, limit the image to 200px, otherwise
+            // it would span the whole screen width.
+            img {
+                @media (max-width: @screen-xs-max) {
+                    width: 200px;
+                    .center-block;
+                }
+            }
+        }
+
+        // Keep everything except the image in a block and put it where it
+        // belongs.
+        .text {
+            .make-xs-column(12);
+            .make-sm-column(7);
+            .make-md-column(12);
+
+            // Keep the distance between image and news title small.
+            h3 {
+                margin-top: 0;
+            }
+
+            .date {
+                .small;
+            }
+        }
+    }
+
+    // ------------------------------------------------------------------------
+    // Block asking to subscribe to news updates
+    // ------------------------------------------------------------------------
+
+    .subscribe {
+        .wide-block;
+        color: white;
+        background-color: @brand-primary;
+    }
+
+    // ------------------------------------------------------------------------
+    // Testimonials section
+    // ------------------------------------------------------------------------
+
+    .testimonials {
+        // This is very similar to the news section, but because of the
+        // different sizes of the images, some values are different, so we keep
+        // it separate.
+        .three-columns;
+
+        // Show the image to the left on tablet-sized screens, to the top
+        // on larger or smaller screens.
+        .image {
+            // Unlike for the news items, we set no top margin, because
+            // with the rounded images and the smaller font in the first
+            // line of the text, it looks better this way when the image is
+            // *beside* the text.
+            margin-bottom: 10px;
+            .make-xs-column(12);
+            .make-sm-column(3);
+            .make-md-column(12);
+
+            img {
+                width: 150px;
+                .center-block;
+            }
+        }
+
+        // Keep everything except the image in a block and put it where it
+        // belongs.
+        .text {
+            .make-xs-column(12);
+            .make-sm-column(9);
+            .make-md-column(12);
+
+            .source {
+                .text-right;
+                &:before {
+                    content: '\2014 \00A0'; // EM DASH, NBSP
+                }
+            }
+        }
+    }
+
+    // ------------------------------------------------------------------------
+    // Block asking to become a supporter
+    // ------------------------------------------------------------------------
+
+    .become-supporter {
+        .wide-block;
+        color: white;
+        font-size: 125%;
+        background-color: @brand-mix;
+    }
+
+    // ------------------------------------------------------------------------
+    // Next steps section
+    // ------------------------------------------------------------------------
+
+    .next-steps {
+        .three-columns;
         .text-center;
 
         h3 {
+            margin-top: 0;
             margin-bottom: 20px;
         }
 

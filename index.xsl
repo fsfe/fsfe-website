@@ -78,7 +78,7 @@
               </xsl:element>
 
               <!-- Teaser -->
-              <xsl:element name="div">
+              <xsl:element name="p">
                 <xsl:attribute name="class">teaser</xsl:attribute>
                 <xsl:apply-templates select="body/node()"/>
                 <xsl:if test="link != ''">

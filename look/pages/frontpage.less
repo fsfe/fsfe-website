@@ -2,14 +2,28 @@
 // Styles specific to the front page
 // ============================================================================
 
-body.frontpage {
+body.frontpage #main {
     .introduction {
+        background-image: url('/graphics/color-bar.jpg');
+        background-position: bottom;
+        background-size: contain;
+        background-repeat: no-repeat;
         padding-top: 30px;
-        padding-bottom: 30px;
+        padding-bottom: 20px;
         font-weight: bold;
 
         .h3 {
             font-weight: inherit;
+        }
+    }
+
+    h2 {
+        .h1;
+        margin-top: 30px;
+
+        a {
+            font-size: 50%;
+            font-weight: normal;
         }
     }
 
@@ -58,28 +72,26 @@ body.frontpage {
         }
     }
 
-    .subscribe-nl {
-        .make-row;
-
+    .subscribe {
+        .text-center;
         margin-top: 30px;
         margin-bottom: 30px;
-        background: @brand-medium;
+        background: @brand-primary;
         padding-top: 15px;
         padding-bottom: 15px;
+        font-weight: 500;
+        color: white;
 
         p {
-            .make-md-column(6);
-            .h3;
-            .text-right;
-
-            @media (min-width: @screen-md-min) {
-                margin: 0;
-                top: 5px;
-            }
+            padding-left: 3em;
+            padding-right: 3em;
+            .hyphens(manual);
         }
 
-        form {
-            .make-md-column(6);
+        input[type=submit] {
+            .btn-default;
+            font-size: inherit;
+            font-weight: inherit;
         }
     }
 
@@ -121,15 +133,20 @@ body.frontpage {
         .text-center;
         margin-top: 30px;
         margin-bottom: 30px;
-        border-radius: @border-radius-large;
         background: @brand-mix;
         padding-top: 15px;
         padding-bottom: 15px;
+        font-size: 125%;
+        font-weight: 500;
         color: white;
 
         p {
-            .center-block;
-            max-width: 60%;
+            .hyphens(manual);
+        }
+
+        .btn {
+            font-size: inherit;
+            font-weight: inherit;
         }
     }
 
@@ -139,7 +156,7 @@ body.frontpage {
         img {
             width: 280px;
         }
-
+        
         .events {
             .date {
                 .small;

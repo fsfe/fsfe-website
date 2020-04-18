@@ -161,13 +161,10 @@
 
   <xsl:template match="dynamic-content-events">
     <xsl:element name="h3">
-      <xsl:element name="a">
-        <xsl:attribute name="href">/events/index.html</xsl:attribute>
-        <!--translated word "events"-->
-        <xsl:call-template name="gettext">
-          <xsl:with-param name="id" select="'events'"/>
-        </xsl:call-template>
-      </xsl:element>
+      <!--translated word "events"-->
+      <xsl:call-template name="gettext">
+        <xsl:with-param name="id" select="'events'"/>
+      </xsl:call-template>
     </xsl:element>
 
     <xsl:for-each select="/buildinfo/document/set/event

@@ -1,90 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <html>
-  <version>1</version>
+  <version>2</version>
 
   <head>
     <title>FSFE - Free Software Foundation Europe</title>
-    <script src="/scripts/jquery.cycle2.min.js" type="text/javascript"></script>
-    <meta name="description" content="Non profit organisation working to create general understanding and support for software freedom. Includes news, events, and campaigns." />
-    <meta name="keywords" content="fsfe free software open source foss floss oss fsf government public sector gpl" />
+    <meta
+      name="description"
+      content="Non profit organisation working to create general understanding
+        and support for software freedom. Includes news, events, and campaigns.
+        "/>
+    <meta
+      name="keywords"
+      content="fsfe free software open source foss floss oss fsf government
+        public sector gpl"/>
   </head>
 
-  <body class="frontpage" id="index-html">
-    <campaigns />
+  <body class="frontpage">
+    <h1 class="hidden">Free Software Foundation Europe</h1>
 
-    <h1 class="hide">Free Software Foundation Europe</h1>
+    <div class="introduction">
+      <p>
+        Free Software Foundation Europe is a charity that empowers users to
+        control technology.
+      </p>
 
-    <div id="feeds">
-      <div id="news" class="section">
-        <h2>
-          <a href="/news/news.html"><news-label /></a>
-          <a class="rss-feed" href="/news/news.rss" title="news RSS feed"><i class="fa fa-rss"></i></a>
-          <a class="ical" href="https://mastodon.social/@fsfe" title="follow FSFE on Mastodon" rel="me"><i class="fa fa-comments-o"></i></a>
-        </h2>
+      <p>
+        Software is deeply involved in all aspects of our lives. Free Software
+        gives everybody the rights to use, understand, adapt and share software.
+        These rights help support other fundamental rights like freedom of
+        speech, freedom of press and privacy.
+        <a class="learn-more" href="/freesoftware/index.html">Learn more...</a>
+      </p>
+    </div>
 
-        <all-news />
+    <h2>
+      Our Latest News
+      <a class="learn-more" href="/news/index.html">Read&#160;more...</a>
+    </h2>
 
-        <div class="more-news">
-          <a href="/news/news.html" class="learn-more">See all news</a>
-          <a href="https://planet.fsfe.org/en" class="learn-more community-blog-link">Read the Community blogs</a>
-        </div>
-      </div>
+    <div class="news">
+      <dynamic-content-news/>
+    </div>
 
-      <div id="newsletter" class="section">
-        <static-element id="video" />
+    <div class="subscribe">
+      <p>
+        Subscribe to our email updates. Our experts inform you about current
+        news, events, activities, and how you can contribute.
+      </p>
 
-        <h2 class="home-newsletter-label">
-          <newsletter-label />
-        </h2>
-
-        <subscribe-nl />
-
-        Read <a href="/news/newsletter.html">the archive</a>
-      </div>
-
-      <hr />
-
-      <div id="events" class="section">
-        <h2>
-          <a href="/events/events.html"><events-label /></a>
-          <a class="rss-feed" href="/events/events.rss" title="events RSS feed"><i class="fa fa-rss"></i></a>
-          <a class="ical" href="webcal://fsfe.org/events/events.ics" title="FSFE events as iCal feed"><i class="fa fa-calendar-o"></i></a>
-        </h2>
-
+      <form method="post" action="https://my.fsfe.org/subscribe">
         <p>
-          If you know about a FSFE related event that is not yet listed here or
-          that you run on your own, you can easily add it by using our
-          <a href="/community/tools/eventregistration.html">event announcement tool</a>.
+          <input type="hidden" name="language" value="en"/>
+          <input type="text" name="name" placeholder="Your name" required="yes"/>
+          <input type="email" name="email1" placeholder="Your email address" required="yes"/>
+          <input type="hidden" name="wants_info" value="yes"/>
+          <input type="hidden" name="return_to" value="https://fsfe.org/index.html"/>
         </p>
+        <button class="btn btn-default" type="submit">Stay informed</button>
+      </form>
+    </div>
 
-        <all-events />
+    <h2>
+      Our Community
+      <a class="learn-more" href="/contribute/index.html">Get&#160;active...</a>
+    </h2>
+
+    <div class="testimonials">
+      <dynamic-content-testimonials/>
+    </div>
+
+    <h2 class="hidden">Donate</h2>
+
+    <div class="become-supporter">
+      <p>
+        Freedom in the information society needs your financial contribution.
+      </p>
+      <a class="btn btn-default" href="https://my.fsfe.org/donate">Become a supporter now</a>
+    </div>
+
+    <h2>Your Next Steps</h2>
+
+    <div class="next-steps">
+      <div class="column">
+        <h3>Information material</h3>
+        <a href="/contribute/spreadtheword.html">
+          <img src="/graphics/infomaterial-450px.png" alt=""/>
+        </a>
+        <p>
+          <a class="learn-more" href="/contribute/spreadtheword.html">Spread the word...</a>
+        </p>
       </div>
 
-      <div id="shop-promo" class="section">
-        <div class="home-shop-block">
-          <a href="/contribute/spreadtheword.html" class="home-order-image-container">
-            <img src="/graphics/infomaterial-450px.png" alt="" class="home-order-image" />
-          </a>
-          <a class="big-donate" href="/contribute/spreadtheword.html">Infomaterial</a>
-        </div>
+      <div class="column events">
+        <h3>Events</h3>
+        <dynamic-content-events/>
+        <p>
+          <a class="learn-more" href="/events/events.html">See all events...</a>
+        </p>
+      </div>
 
-        <div class="home-shop-block">
-          <a href="/order/order.html?ref-frontpage" class="home-order-image-container">
-            <img src="/graphics/t-shirt-promo-v2.png" alt="" class="home-order-image" />
-          </a>
-          <a class="big-donate" href="/order/order.html?ref-frontpage">Shop</a>
-        </div>
+      <div class="column">
+        <h3>Merchandise</h3>
+        <a href="/order/index.html">
+          <img src="/graphics/t-shirt-promo-v2.png" alt=""/>
+        </a>
+        <p>
+          <a class="learn-more" href="/order/index.html">Get your gear...</a>
+        </p>
       </div>
     </div>
   </body>
 
-  <!--Do not translate this ↓-->
-  <followup>join</followup>
-  <timestamp>$Date$ $Author$</timestamp>
+  <followup>no</followup>
 </html>
-<!--
-Local Variables: ***
-mode: xml ***
-End: ***
--->

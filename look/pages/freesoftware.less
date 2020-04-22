@@ -1,0 +1,90 @@
+// ============================================================================
+// Styles specific to the /freesoftware page
+// ============================================================================
+
+body.freesoftware {
+    .fsgrid {
+        // Expand height of grid columns to all same size.
+        @media (min-width: @screen-sm-min) {
+            display: flex;
+        }
+
+        .pie {
+            display: grid;
+            grid-template-columns: auto auto;
+            margin: 0 auto;
+            @media (max-width: @screen-xs-max) {
+                width: 192.2px;
+                height: 192.2px;
+                margin: 10px auto 20px auto;
+            }
+
+            .pie-base() {
+                width: 99.6px;
+                height: 99.6px;
+                position: relative;
+                display: inline-block;
+                @media (min-width: @screen-md-min) {
+                    width: 122px;
+                    height: 122px;
+                }
+                @media (min-width: @screen-lg-min) {
+                    width: 155px;
+                    height: 155px;
+                }
+                p {
+                    @media (min-width: @screen-lg-min) {
+                        font-size: 150%;
+                    }
+                    color: white;
+                    position: absolute;
+                    margin-bottom: 0;
+                }
+            }
+
+            .pie-use {
+                .pie-base;
+                border-top-left-radius: 100%;
+                background-color: @brand-strong;
+                p {
+                    .text-right;
+                    right: 15%;
+                    bottom: 10%;
+                }
+            }
+
+            .pie-study {
+                .pie-base;
+                border-top-right-radius: 100%;
+                background-color: @brand-primary;
+                p {
+                    .text-left;
+                    left: 15%;
+                    bottom: 10%;
+                }
+            }
+
+            .pie-share {
+                .pie-base;
+                border-bottom-left-radius: 100%;
+                background-color: @brand-mix;
+                p {
+                    .text-right;
+                    right: 15%;
+                    top: 10%;
+                }
+            }
+
+            .pie-improve {
+                .pie-base;
+                border-bottom-right-radius: 100%;
+                background-color: @brand-medium;
+                p {
+                    .text-left;
+                    left: 15%;
+                    top: 10%;
+                }
+            }
+        }
+    }
+}

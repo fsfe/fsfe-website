@@ -19,7 +19,7 @@ $gnusocialuser = "@fsfe@quitter.no";
 $mastodonuser = "@fsfe@mastodon.social";
 $twitteruser = "fsfe";
 $flattruser = "fsfe";
-$supporturl = "https://fsfe.org/donate?share";
+$supporturl = "https://my.fsfe.org/donate?referrer=share";
 
 // Don't change below here
 $service = isset($_GET['service']) ? $_GET['service'] : false;

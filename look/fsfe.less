@@ -5,6 +5,7 @@
 @import "pages/frontpage";
 @import "pages/interview";
 @import "pages/spreadtheword";
+@import "pages/freesoftware";
 
 /* fsfe.org pages */
 
@@ -236,6 +237,38 @@ body.overview #content {
                 margin-top: 0;
             }
         }
+    }
+}
+
+/* make the icons smaller */
+.icon-grid.icons-sm {
+    li {
+        @media (min-width: @screen-xs-min) {
+            img {
+                max-width: 50% !important;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+/* move all icons in the middle */
+/* not used currently but perhaps a nice option */
+.icon-grid.icons-middle {
+    li {
+      @media (min-width: @screen-md-min) {
+          &:nth-child(odd) {
+              grid-template-columns: 4fr 1fr;
+
+              div {
+                order: 1;
+                text-align: right;
+              }
+              img {
+                order: 2;
+              }
+          }
+      }
     }
 }
 

@@ -25,7 +25,8 @@ check_dependencies() {
 check_dependencies realpath rsync xsltproc xmllint sed find egrep grep wc make tee date iconv wget
 
 if ! make --version | grep -q "GNU Make 4"; then
-  die "The build script requires GNU Make 4.x"
+  echo "The build script requires GNU Make 4.x"
+  exit 1
 fi
 
 basedir="${0%/*}/.."

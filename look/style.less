@@ -48,13 +48,20 @@ q, .en q {
 
 /* Typography */
 
-h1 {
+h1, .h1 {
     .page-header;
     color: @brand-strong;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
     font-weight: 300;
+}
+
+// Inherit the non-standard font settings into form controls.
+.form-control, .btn {
+    font-weight: inherit;
+    font-size: inherit;
+    height: auto;
 }
 
 
@@ -369,7 +376,7 @@ div#subpages, .grid-row {
 #main {
     padding-top: 1em;
 
-    h1, h2, h3, h4, h5, h6 {
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
         -moz-hypens: manual;
         -webkit-hyphens: manual;
         hyphens: manual;
@@ -422,14 +429,6 @@ div#subpages, .grid-row {
     footer.creativecommons {
         background: url(/graphics/cc-logo.png) 2em 50% no-repeat @gray-lighter;
         padding-left: 150px;
-    }
-}
-
-@media (max-width: @screen-xs-max) {
-    #index-html {
-        #main {
-            padding-top: 0;
-        }
     }
 }
 
@@ -1081,59 +1080,6 @@ div#subpages, .grid-row {
 // Other elements
 // ============================================================================
 
-#campaigns-boxes {
-    height: 0;
-    margin: -1em -1.5em;
-    margin-bottom: 3em;
-
-    @media (min-width: @screen-sm-min) {
-        margin-left: -3em;
-        margin-right: -3em;
-        padding: 0;
-    }
-
-    .campaign-box {
-        .container;
-        position: absolute;
-        display: block;
-        padding: 3em;
-        overflow-y: auto;
-        text-decoration: none !important;
-        color: @body-bg;
-        text-shadow: 0px 1px 2px @brand-strong;
-
-        @media (min-width: @screen-md-min) {
-            overflow-y: hidden;
-        }
-    }
-    /* pager */
-    .cycle-pager {
-    text-align: center; bottom:0; width: 100%; z-index: 500; position: absolute;  overflow: hidden;
-    height: 35px;
-    padding-top: 7px;
-    }
-    .cycle-pager span {
-    width: 16px; height: 16px;
-    display: inline-block; color: transparent; cursor: pointer;
-    border-radius: 50px;
-    background: rgba(255,255,255,0.4);
-    margin: 0.1em;
-    }
-    .cycle-pager span.cycle-pager-active { background: rgba(255,255,255,0.8);}
-    .cycle-pager > * { cursor: pointer;}
-}
-
-.no-js .cycle-pager { display: none; }
-.no-js #campaigns-boxes {
-    overflow-y: scroll;
-    overflow-x: hidden;
-
-    .campaign-box {
-        display: inline-block;
-        position: relative;
-    }
-}
-
 /* footnotes */
 
 a.fn {
@@ -1185,6 +1131,7 @@ a.learn-more {
     &:after {
         position: absolute;
         right: .3em;
+        top: .1em;
         content: " ▸";
         opacity: 0.8;
         transition: all 150ms linear;

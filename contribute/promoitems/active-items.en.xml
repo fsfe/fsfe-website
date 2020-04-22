@@ -24,38 +24,64 @@ Such an item doesn't need an image!
 
   <!-- FSFE and Fellowship -->
 
-
   <item type="fsfe" id="fsfe-logo-sticker" year="2017" order="1">
  	<image
     imgsmall="/contribute/promopics/fsfe-sticker-thumb.png"/>
   </item>
 
+  <!-- Free Software multilanguage -->
+
+  <item type="fsfe" id="multilanguage-free-software-logocolours" year="2019" order="2">
+    <image imgsmall="/contribute/promopics/free-software-multilanguage-logocolours.png"/>
+  </item>
+
+  <item type="fsfe" id="multilanguage-free-software-purple" year="2019" order="3">
+    <image imgsmall="/contribute/promopics/free-software-multilanguage-purple.png"/>
+  </item>
+
+  <!-- Hacking 100 freedom -->
+
+  <item type="fsfe" id="hacking-100-freedom-sticker-blue" year="2019" order="4">
+    <image imgsmall="/contribute/promopics/hacking-100-freedom-sticker-blue.png"/>
+  </item>
+
+  <item type="fsfe" id="hacking-100-freedom-sticker-darkblue" year="2019" order="5">
+    <image imgsmall="/contribute/promopics/hacking-100-freedom-sticker-darkblue.png"/>
+  </item>
+
+  <item type="fsfe" id="hacking-100-freedom-sticker-green" year="2019" order="6">
+    <image imgsmall="/contribute/promopics/hacking-100-freedom-sticker-green.png"/>
+  </item>
+
+
     <!-- FS and users freedoms -->
   
-    <item type="freedom" id="fs-and-tools" year="2014" order="1">
+    <item type="freedom" id="fs-and-tools" year="2014" order="0">
  	<image
     imgsmall="/contribute/promopics/freiheit-thumb.png"/>
   </item>
 
-  <item type="freedom" id="gnupg-leaflet" year="2014" order="2">
+  <item type="freedom" id="gnupg-leaflet" year="2014" order="6">
  	<image
     imgsmall="/contribute/promopics/gnupg-leaflet-en-thumb.png"/>
   </item>  
    
-  <item type="freedom" id="drm-leaflet" year="2012" order="3">
+  <item type="freedom" id="drm-leaflet" year="2012" order="7">
  	<image
     imgsmall="/contribute/promopics/drm_thumb.png"/>
   </item>
 
+
   <!--100 freedoms -->
 
-  <item type="fsfe" id="100-freedoms-black-sticker" year="2017" order="1">
+   <item type="freedom" id="100-freedoms-sticker-black" year="2017" order="1">
     <image imgsmall="/contribute/promopics/100-freedoms-sticker-black.png"/>
   </item>
 
-  <item type="fsfe" id="100-freedoms-orange-sticker" year="2017" order="1">
+  <item type="freedom" id="100-freedoms-sticker-orange" year="2017" order="2">
     <image imgsmall="/contribute/promopics/100-freedoms-sticker-orange.png"/>
   </item>
+
 
   <!-- Public Money, Public Code -->
 

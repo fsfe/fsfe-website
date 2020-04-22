@@ -2,6 +2,7 @@
 @import "elements/figure";
 @import "elements/podcast";
 @import "elements/sharebuttons";
+@import "pages/frontpage";
 @import "pages/interview";
 @import "pages/spreadtheword";
 
@@ -36,243 +37,6 @@ body {
 
 img.signatory-logo {
     padding: 10px;
-}
-
-/* fsfe.org front page */
-
-.frontpage {
-
-    /* motto not displayed */
-
-    #campaigns-boxes {
-
-        background: url('/graphics/ribbon.png') top right no-repeat transparent;
-        height: 400px;
-
-        @media (min-width: @screen-xs-min) {
-            height: 300px;
-        }
-
-        .campaign-box {
-            height: 400px;
-
-            @media (min-width: @screen-xs-min) {
-                height: 300px;
-            }
-            width: 100%;
-
-            img {
-                max-width: 33%;
-            }
-        }
-
-        .campaign-box-center {
-            text-align: center;
-            font-size: 1.3em;
-        }
-
-        #freesociety {
-            .campaign-box-center;
-            font-family: 'GNUTypewriter', @font-family-monospace;
-            background: url('/graphics/motto.jpg') top center no-repeat #666;
-            background-size: cover;
-            font-size: 2em;
-            @media (min-width: @screen-xs-min) {
-                font-size: 2.7em;
-                padding-top: 1.8em;
-            }
-
-            p.text {
-                /*background: url('/graphics/fsfs.png') top center no-repeat transparent;
-                background-size: contain; */
-                -moz-hyphens: manual;
-                -webkit-hyphens: manual;
-                hyphens: manual;
-            }
-        }
-
-        #slidbria {
-            background: url('/graphics/slider-banner-FrancescaBria.png') left 33% no-repeat #666;
-            background-size: cover;
-            text-shadow: 0px 1px 8px rgb(0, 0, 0);
-
-            .author:before {
-                content: "– ";
-            }
-
-            .author, .text {
-                display: block;
-            }
-
-            .author {
-                font-size: 0.8em;
-            }
-
-            .text {
-                .quote;
-                padding: 40% 0 4%;
-                font-size: 1em;
-            }
-
-            @media (min-width: 480px) {
-                .text {
-                    margin-left: 48%;
-                    padding: 0 0 4%;
-                }
-            }
-
-            @media (min-width:525px) {
-                .text {
-                    padding: 0 0 8%;
-                }
-            }
-
-            @media (min-width:550px) {
-                .author {
-                    margin-left: 40%;
-                }
-                .author, .text {
-                    padding: 0.5em;
-                }
-                .text {
-                    margin-left: 50%;
-                }
-            }
-
-            @media (min-width: @screen-md-min) {
-                .author {
-                    font-size: 1em;
-                    padding-top: 0;
-                }
-                .author, .text {
-                    margin-left: 48%;
-                }
-                .text {
-                    font-size: 1.25em;
-                }
-            }
-
-            .copyright {
-                font-size: 0.6em;
-                position: absolute;
-                bottom: 4px;
-                right: 4px;
-            }
-        }
-
-        #amaelle {
-            background: url('/graphics/amaelle.jpg') center 33% no-repeat #666;
-            background-size: cover;
-            text-shadow: 0px 1px 8px rgb(0, 0, 0);
-
-            .author:before {
-                content: "– ";
-            }
-
-            .text {
-                .quote;
-            }
-
-            .author, .text {
-                display: block;
-                background-color: rgba(0, 0, 0, 0.5);
-                padding: 0.5em;
-            }
-
-            @media (min-width: @screen-sm-min) {
-                .author, .text {
-                    margin-left: 45%;
-                }
-            }
-
-            .copyright {
-                font-size: 0.6em;
-                position: absolute;
-                bottom: 0;
-                right: 0;
-            }
-
-            @media (min-width: @screen-md-min) {
-                .text {
-                    font-size: 1.25em;
-                }
-            }
-
-        }
-
-        #zacchiroli {
-            background: url('/graphics/group-blur-800.jpg') center 33% no-repeat #666;
-            text-shadow: 0px 1px 2px rgb(0, 0, 0);
-
-            img {
-                float: right;
-                margin-left: 1em;
-            }
-
-            .author:before {
-                content: "– ";
-            }
-
-            .text {
-                .quote;
-            }
-
-            @media (min-width: @screen-md-min) {
-                img {
-                    margin-left: 3em;
-                }
-
-                .text {
-                    font-size: 1.3em;
-                }
-
-                .text, .author {
-                    max-width: 80ex;
-                    margin: 1em auto;
-                    display: block;
-                }
-            }
-        }
-
-        #boxpmpc {
-            background: url('/graphics/pmpc_slider.jpg') left 33% no-repeat #666;
-            background-size: cover;
-            text-shadow: 0px 1px 8px rgb(0, 0, 0);
-
-            .text, .text2 {
-                .quote;
-            }
-
-            .text, .text2 {
-                display: block;
-                padding: 1.25em;
-                min-width: 120px;
-                font-size: 1.25em;
-                hyphens: none;
-                text-align: center;
-            }
-
-            @media (min-width: @screen-sm-min) {
-                .text {
-                    float: left;
-                    width: 30%;
-                }
-
-                .text2 {
-                    float: right;
-                    width: 30%;
-                }
-
-                background-position: center;
-            }
-
-        }
-
-        #ilovefs {
-            .campaign-box-center;
-            background: url('/graphics/ilovefs-hashtag-campaignbox.png') center 33% no-repeat transparent;
-        }
-    }
 }
 
 #news {
@@ -319,13 +83,6 @@ img.signatory-logo {
         }
     }
 
-}
-
-#latest-news-list, #more-news-list {
-    list-style-type: none;
-    font-size: 1.2em;
-    font-weight: 300;
-    padding: 0;
 }
 
 .newsdate {
@@ -378,7 +135,7 @@ img.signatory-logo {
         float: left;
     }
 
-    #newsletter, #shop-promo, .country.frontpage #teams {
+    .country.frontpage #teams {
         display: inline-block;
         float: right;
         width: 30%;
@@ -388,20 +145,10 @@ img.signatory-logo {
     }
 }
 
-#newsletter, .newsletter #sidebar {
+.newsletter #sidebar {
     input {
         display: block;
         margin: .5em 0;
-    }
-}
-
-#feeds {
-    a.ical, a.rss-feed {
-        .small;
-        color: @gray-light;
-
-        i.fa {
-        }
     }
 }
 
@@ -524,7 +271,7 @@ body.overview #content {
     }
 }
 
-.events .date,
+.events .entry .date,
 .archivemeta {
     margin-bottom: 10px;
 }
@@ -533,7 +280,7 @@ body.overview #content {
     margin-bottom: 56px;
 }
 
-.events .date,
+.events .entry .date,
 ul.archivemeta,
 ul.archivetaglist {
     color: #999;
@@ -710,30 +457,6 @@ video#freeyourandroid {
     }
 }
 
-.more-news {
-    display: flex;
-    flex-direction: column;
-    gap: .75em;
-    margin-top: 2rem;
-
-    a.learn-more {
-        font-size: 1.3em;
-        font-weight: bold;
-        line-height: 1.5;
-        white-space: nowrap;
-    }
-
-    @media (min-width: @screen-sm-min) {
-        flex-direction: row;
-        gap: 0;
-        justify-content: space-between;
-
-        a.learn-more {
-            line-height: 1;
-        }
-    }
-}
-
 #formnl {
 
     select {
@@ -755,22 +478,4 @@ video#freeyourandroid {
         width: auto;
     }
 
-}
-
-.home-order-image-container {
-    display: block;
-    margin-bottom: 10px;
-    text-align: center;
-
-    .home-order-image {
-        width: 80%;
-    }
-}
-
-.home-shop-block {
-    margin-bottom: 50px;
-}
-
-.home-newsletter-label {
-    margin-top: 30px;
 }

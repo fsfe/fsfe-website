@@ -36,7 +36,7 @@ ARCH_SOURCES := $(foreach year,$(ARCH_YEARS),$(year)/index.sources)
 all: $(ARCH_SOURCES)
 $(ARCH_SOURCES): %.sources:
 	@echo "*   Creating $@"
-	@echo "news/$(dir $@)news-*:[]\nnews/$(dir $@).news-*:[]\nlocalmenuinfo:[]\n" > $@
+	@echo "news/$(dir $@)news-*:[]\nnews/$(dir $@).news-*:[]\n$(dir $@).localmenu:[]\n" > $@
 
 # .xsl files to generate
 ARCH_XSL := $(foreach year,$(ARCH_YEARS),$(year)/index.xsl)

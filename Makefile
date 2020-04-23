@@ -60,21 +60,10 @@ $(SUBDIRS): .FORCE
 # Handle local menus
 # -----------------------------------------------------------------------------
 
-# FIXME: This runs when the makefile is parsed, before maybe new *.xhtml files
-# are created in the news/<year>/ and events/<year>/ directories. It would be
-# better to move this into a separate script tools/update-localmenus.sh. It
-# would also be better if there was a separate .localmenu.en.xml file for each
-# directory.
-MENUSOURCES := $(shell find -name '*.xhtml' -not -name "*-template.*" | xargs grep -l '<localmenu.*</localmenu>' | sort)
-
-all: localmenuinfo.en.xml
-localmenuinfo.en.xml: ./tools/buildmenu.xsl $(MENUSOURCES)
-	{ printf '<localmenuset>'; \
-	  grep -E '<localmenu.*</localmenu>' $^ \
-          | sed -r 's;(.*/)?(.+)\.([a-z][a-z])\.xhtml:(.+);\
-                    <menuitem language="\3"><dir>/\1</dir><link>\2.html</link>\4</menuitem>;'; \
-	  printf '</localmenuset>'; \
-	} | xsltproc -o $@ $< -
+.PHONY: localmenus
+all: localmenus
+localmenus: $(SUBDIRS)
+	tools/update_localmenus.sh
 
 # -----------------------------------------------------------------------------
 # Timestamp files for regular jobs and XML inclusion in various places

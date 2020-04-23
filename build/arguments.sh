@@ -51,10 +51,6 @@ if [ -z "$inc_arguments" ]; then
         [ "$#" -gt 0 ] && shift 1 && workfile="$1"
         [ "$#" -gt 0 ] && shift 1 && processor="$1"
         ;;
-      wakeup)
-        command="$1$command"
-        [ "$#" -gt 0 ] && shift 1 && today="$1"
-        ;;
       *)
         print_error "Unknown option: $1"
         exit 1
@@ -65,7 +61,6 @@ if [ -z "$inc_arguments" ]; then
   
   tree="${tree:-$basedir}"
   stagedir="${stagedir:-$target}"
-  today="${today:-$(date +%F)}"
   readonly tree="${tree:+$(realpath "$tree")}"
   readonly stagedir="${stagedir:+$(realpath "$stagedir")}"
   readonly basedir="${basedir:+$(realpath "$basedir")}"
@@ -83,7 +78,6 @@ if [ -z "$inc_arguments" ]; then
     process_file)    [ -z "$workfile" ]    && die "Need at least input file" ;;
     build_xmlstream) [ -z "$workfile" ]    && die "Missing xhtml file name" ;;
     tree_maker)      [ -z "$target" ]      && die "Missing target location" ;;
-    wakeup)          true;;
     *help*)          print_help; exit 0 ;;
     *)               die "Urecognised command or no command given" ;;
   esac

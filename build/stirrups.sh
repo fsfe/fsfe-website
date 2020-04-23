@@ -22,24 +22,3 @@ dir_maker(){
     match "$oldpath" "^$curpath" || mkdir -p "$curpath" "$srcdir"
   done
 }
-
-wakeup(){
-  # Performs a `touch` on all files which are to be released at the
-  # presented date.
-  today="$1"
-
-  # All news with today's date
-  find "${basedir}/news" -name '*.xml' \
-  | xargs egrep -l "<[^>]+ date=[\"']${today}[\"'][^>]*>" \
-  | xargs touch -c 2>&- || true
-
-  # All events which start today
-  find "${basedir}/events" -name '*.xml' \
-  | xargs egrep -l "<[^>]+ start=[\"']${today}[\"'][^>]*>" \
-  | xargs touch -c 2>&- || true
-
-  # All events which ended yesterday
-  find "${basedir}/events" -name '*.xml' \
-  | xargs egrep -l "<[^>]+ end=[\"']$(date -d "${today} -1 day" +%F)[\"'][^>]*>" \
-  | xargs touch -c 2>&- || true
-}

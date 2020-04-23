@@ -57,22 +57,6 @@ $(SUBDIRS): .FORCE
 	$(MAKE) --silent --directory=$@
 
 # -----------------------------------------------------------------------------
-# Timestamp files for regular jobs and XML inclusion in various places
-# -----------------------------------------------------------------------------
-
-YEAR  := <?xml version="1.0" encoding="utf-8"?><dateset><date year="$(shell date +%Y)" /></dateset> 
-MONTH := <?xml version="1.0" encoding="utf-8"?><dateset><date month="$(shell date +%Y-%m)" /></dateset> 
-DAY   := <?xml version="1.0" encoding="utf-8"?><dateset><date day="$(shell date +%Y-%m-%d)" /></dateset>
-
-all: d_year.en.xml d_month.en.xml d_day.en.xml
-d_day.en.xml: $(if $(findstring   $(DAY),$(shell cat d_day.en.xml)),,.FORCE)
-	printf %s\\n   '$(DAY)' >$@
-d_month.en.xml: $(if $(findstring $(MONTH),$(shell cat d_month.en.xml)),,.FORCE)
-	printf %s\\n '$(MONTH)' >$@
-d_year.en.xml: $(if $(findstring  $(YEAR),$(shell cat d_year.en.xml)),,.FORCE)
-	printf %s\\n  '$(YEAR)' >$@
-
-# -----------------------------------------------------------------------------
 # Create XML symlinks
 # -----------------------------------------------------------------------------
 

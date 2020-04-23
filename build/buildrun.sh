@@ -6,7 +6,8 @@ inc_buildrun=true
 [ -z "$inc_logging" ] && . "$basedir/build/logging.sh"
 [ -z "$inc_misc" ] && . "$basedir/build/misc.sh"
 
-build_into(){
+# The actual build
+buildrun(){
   set -o pipefail
 
   printf %s "$start_time" > "$(logname start_time)"
@@ -56,6 +57,7 @@ build_into(){
   fi
 }
 
+# Update git and then do an actual build
 git_build_into(){
   forcelog GITchanges; GITchanges="$(logname GITchanges)"
   forcelog GITerrors;  GITerrors="$(logname GITerrors)"
@@ -75,5 +77,17 @@ git_build_into(){
   fi
 
   logstatus GITlatest < "$GITchanges"
-  build_into
+  buildrun
+}
+
+# Clean up everything and then do an actual (full) build
+build_into(){
+
+  # Clean up source directory.
+  git -C "${basedir}" clean -dxf
+
+  # Remove old stage directory.
+  rm -rf "${stagedir}"
+
+  buildrun
 }

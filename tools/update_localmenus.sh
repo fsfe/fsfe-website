@@ -39,7 +39,6 @@ done
 for dir in ${!files_by_dir[@]}; do
   for file in ${files_by_dir[${dir}]}; do
     if [ "${file}" -nt "${dir}/.localmenu.en.xml" ]; then
-      echo "*    Updating local menu in ${dir}"
 
       # Find out which languages to generate.
       languages=$(
@@ -57,6 +56,7 @@ for dir in ${!files_by_dir[@]}; do
 
       # For each language, create the .localmenu.${lang}.xml file.
       for lang in $languages; do
+        echo "*   Updating ${dir}/.localmenu.${lang}.xml"
         {
           echo "<?xml version=\"1.0\"?>"
           echo ""

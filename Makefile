@@ -57,15 +57,6 @@ $(SUBDIRS): .FORCE
 	$(MAKE) --silent --directory=$@
 
 # -----------------------------------------------------------------------------
-# Handle local menus
-# -----------------------------------------------------------------------------
-
-.PHONY: localmenus
-all: localmenus
-localmenus: $(SUBDIRS)
-	tools/update_localmenus.sh
-
-# -----------------------------------------------------------------------------
 # Timestamp files for regular jobs and XML inclusion in various places
 # -----------------------------------------------------------------------------
 
@@ -115,6 +106,12 @@ all: $(FUNDRAISING_LINKS)
 	  ln -sf fundraising.en.xml $@; \
 	fi
 
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# The following steps are handled in an external script, because the list of
+# files to generate is not known when the Makefile starts - some new tags might
+# be introduced when generating the .xml files in the news/* subdirectories.
+# !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 # -----------------------------------------------------------------------------
 # Create XSL symlinks
 # -----------------------------------------------------------------------------
@@ -125,23 +122,21 @@ all: $(FUNDRAISING_LINKS)
 # determine which XSL script should be used to build a HTML page from a source
 # file.
 
-# All directories containing source files for HTML pages.
-# FIXME: This runs when the makefile is parsed, before maybe new *.xhtml files
-# are created in the news/<year>/ and events/<year>/ directories.
-XHTML_DIRS := $(patsubst %/,%,$(sort $(dir $(shell find -name '*.??.xhtml'))))
-
 .PHONY: default_xsl
 all: default_xsl
 default_xsl:
-	for directory in $(XHTML_DIRS); do \
-	  dir="$${directory}"; \
-	  prefix=""; \
-	  until [ -f "$${dir}/default.xsl" -o "$${dir}" = "." ]; do \
-	    dir="$${dir%/*}"; \
-	    prefix="$${prefix}../"; \
-	  done; \
-	  ln -sf "$${prefix}default.xsl" "$${directory}/.default.xsl"; \
-	done
+	tools/update_defaultxsls.sh
+
+# -----------------------------------------------------------------------------
+# Update local menus
+# -----------------------------------------------------------------------------
+
+# After this step, all .localmenu.??.xml files will be up to date.
+
+.PHONY: localmenus
+all: localmenus
+localmenus: $(SUBDIRS)
+	tools/update_localmenus.sh
 
 # -----------------------------------------------------------------------------
 # Update XML filelists
@@ -158,9 +153,6 @@ default_xsl:
 #   correct XML files when generating the HTML pages. It is taken care that
 #   these files are only updated whenever their content actually changes, so
 #   they can serve as a prerequisite in the phase 2 Makefile.
-# This step is handled in an external script, because the list of files to
-# generate is not known when the Makefile starts - some new tags might be
-# introduced when generating the .xml files in the news/* subdirectories.
 
 .PHONY: xmllists
 all: xmllists

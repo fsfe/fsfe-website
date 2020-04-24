@@ -1,13 +1,12 @@
 #!/usr/bin/env bash
 
 inc_makerules=true
-[ -z "$inc_languages" ] && . "$basedir/build/languages.sh"
 
 tree_maker(){
   # walk through file tree and issue Make rules according to file type
   input="$(realpath "$1")"
   output="$(realpath "$2")"
-  languages=$(echo $(languages | cut -d\  -f1))
+  languages="$(ls -xw0 "${basedir}/global/languages")"
 
   cat <<EOF
 # -----------------------------------------------------------------------------

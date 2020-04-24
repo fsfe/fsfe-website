@@ -232,14 +232,6 @@
     <script src="/scripts/jquery-3.3.1.min.js"></script>
     <script src="/scripts/modernizr.custom.65251.js"></script>
 
-    <xsl:comment><![CDATA[[if lt IE 9]>
-         <script src="/scripts/html5shiv.js"></script>
-         <script src="/scripts/respond.min.js"></script>
-         <![endif]]]></xsl:comment>
-    <xsl:comment><![CDATA[[if (lt IE 9) & (!IEMobile)]>
-         <link rel="stylesheet" media="all" href="/look/ie.min.css" type="text/css">
-        <![endif]]]></xsl:comment>
-
     <!-- Copy head element from the xhtml source file (and possibly from external xsl rules) -->
     <xsl:apply-templates select="head/node()" />
   </xsl:element></xsl:template>

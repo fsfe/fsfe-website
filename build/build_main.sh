@@ -25,7 +25,8 @@ check_dependencies() {
 check_dependencies realpath rsync xsltproc xmllint sed find egrep grep wc make tee date iconv wget
 
 if ! make --version | grep -q "GNU Make 4"; then
-  die "The build script requires GNU Make 4.x"
+  echo "The build script requires GNU Make 4.x"
+  exit 1
 fi
 
 basedir="${0%/*}/.."
@@ -60,12 +61,9 @@ fi
 
 [ -z "$inc_filenames" ] && . "$basedir/build/filenames.sh"
 [ -z "$inc_buildrun" ]  && . "$basedir/build/buildrun.sh"
-[ -z "$inc_languages" ] && . "$basedir/build/languages.sh"
 [ -z "$inc_makerules" ] && . "$basedir/build/makerules.sh"
 [ -z "$inc_processor" ] && . "$basedir/build/processor.sh"
 [ -z "$inc_scaffold" ]  && . "$basedir/build/scaffold.sh"
-[ -z "$inc_sources" ]   && . "$basedir/build/sources.sh"
-[ -z "$inc_stirrups" ]  && . "$basedir/build/stirrups.sh"
 
 case "$command" in
   git_build_into)  if [ "${statusdir}/full_build" -nt "${statusdir}/index.cgi" ]; then
@@ -78,5 +76,4 @@ case "$command" in
   process_file)    process_file "$workfile" "$processor" ;;
   build_xmlstream) build_xmlstream "$(get_shortname "$workfile")" "$(get_language "$workfile")" ;;
   tree_maker)      tree_maker "$tree" "$target" ;;
-  wakeup)          wakeup "$today" ;;
 esac

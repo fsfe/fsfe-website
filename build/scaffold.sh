@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 inc_scaffold=true
-[ -z "$inc_languages" ] && . "$basedir/build/languages.sh"
 
 get_version(){
   version=$(xsltproc $basedir/build/xslt/get_version.xsl $1)
@@ -33,14 +32,11 @@ list_langs(){
   # the shortname (i.e. file path with file ending omitted)
   # output is readily formatted for inclusion
   # in xml stream
-  shortname="$1"
-
-  langfilter=$(
-    echo "$shortname".[a-z][a-z].xhtml \
-    | sed -r 's;[^ ]+.([a-z]{2}).xhtml;\1;g;s; ;|;g'
-  )
-  languages | egrep "^($langfilter) " \
-  | sed -r 's:^([a-z]{2}) (.+)$:<tr id="\1">\2</tr>:g'
+  for file in "${1}".[a-z][a-z].xhtml; do
+    language="${file: -8:2}"
+    text="$(echo -n $(cat "${basedir}/global/languages/${language}"))"
+    echo "<tr id=\"${language}\">${text}</tr>"
+  done
 }
 
 list_sources(){

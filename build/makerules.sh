@@ -7,7 +7,7 @@ tree_maker(){
   # walk through file tree and issue Make rules according to file type
   input="$(realpath "$1")"
   output="$(realpath "$2")"
-  languages=$(get_languages)
+  languages=$(echo $(languages | cut -d\  -f1))
 
   cat <<EOF
 # -----------------------------------------------------------------------------
@@ -18,7 +18,7 @@ tree_maker(){
 .DELETE_ON_ERROR:
 .SECONDEXPANSION:
 PROCESSOR = "$basedir/build/process_file.sh"
-PROCFLAGS = --build-env "${build_env:-development}" --source "$basedir" --statusdir "$statusdir" --domain "$domain"
+PROCFLAGS = --build-env "${build_env:-development}" --source "$basedir" --domain "$domain"
 INPUTDIR = $input
 OUTPUTDIR = $output
 STATUSDIR = $statusdir

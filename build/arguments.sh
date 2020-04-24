@@ -78,7 +78,7 @@ if [ -z "$inc_arguments" ]; then
     process_file)    [ -z "$workfile" ]    && die "Need at least input file" ;;
     build_xmlstream) [ -z "$workfile" ]    && die "Missing xhtml file name" ;;
     tree_maker)      [ -z "$target" ]      && die "Missing target location" ;;
-    *help*)          print_help; exit 0 ;;
+    *help*)          cat "$basedir/build/HELP"; exit 0 ;;
     *)               die "Urecognised command or no command given" ;;
   esac
 fi

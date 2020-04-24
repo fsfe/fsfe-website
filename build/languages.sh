@@ -39,8 +39,3 @@ uk Українська
 zh 漢語
 EOL
 }
-
-get_languages(){
-  # The list of all languages in one line, separated by blanks
-  echo `languages | cut -d\  -f1`
-}

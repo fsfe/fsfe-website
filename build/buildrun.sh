@@ -2,9 +2,32 @@
 
 inc_buildrun=true
 [ -z "$inc_makerules" ] && . "$basedir/build/makerules.sh"
-[ -z "$inc_stirrups" ] && . "$basedir/build/stirrups.sh"
 [ -z "$inc_logging" ] && . "$basedir/build/logging.sh"
 [ -z "$inc_misc" ] && . "$basedir/build/misc.sh"
+
+match(){
+  printf %s "$1" | egrep -q "$2"
+}
+
+dir_maker(){
+  # set up directory tree for output
+  # optimise by only issuing mkdir commands
+  # for leaf directories
+  input="${1%/}"
+  output="${2%/}"
+
+  curpath="$output"
+  find "$input" -depth -type d \
+       \! -path '*/.svn' \! -path '*/.svn/*' \
+       \! -path '*/.git' \! -path '*/.git/*' \
+       -printf '%P\n' \
+  | while read filepath; do
+    oldpath="$curpath"
+    curpath="$output/$filepath/"
+    srcdir="$output/source/$filepath/"
+    match "$oldpath" "^$curpath" || mkdir -p "$curpath" "$srcdir"
+  done
+}
 
 # The actual build
 buildrun(){

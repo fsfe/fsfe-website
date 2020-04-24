@@ -68,7 +68,7 @@ $(SUBDIRS): .FORCE
 # otherwise. This symlinks make sure that phase 2 can easily use the right file
 # for each language, also as a prerequisite in the Makefile.
 
-LANGUAGES := $(shell . build/languages.sh && get_languages)
+LANGUAGES := $(shell . build/languages.sh && echo `languages | cut -d\  -f1`)
 
 TEXTS_LINKS := $(foreach lang,$(LANGUAGES),tools/.texts-$(lang).xml)
 

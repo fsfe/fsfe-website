@@ -24,10 +24,10 @@ done
 
 find . -type f -iname "*\.en\.xhtml" | grep -v '^./[a-z][a-z]/\|^./news'|sed 's/\.[a-z][a-z]\.xhtml//'|sort|while read A; do
    originaldate=`git log --pretty="%cd" --date=raw -1 $A.en.xhtml|cut -d' ' -f1`
-   original_version=$(xsltproc build/xsl/get_version.xsl $A.en.xhtml)
+   original_version=$(xsltproc build/xslt/get_version.xsl $A.en.xhtml)
    for i in $A.[a-z][a-z].xhtml; do
      if [[ $i != *".en."* ]]; then
-       translation_version=$(xsltproc build/xsl/get_version.xsl $i)
+       translation_version=$(xsltproc build/xslt/get_version.xsl $i)
        if [ ${translation_version:-0} -lt ${original_version:-0} ]; then
          lang=`echo $i|sed 's/.*\.\([a-z][a-z]\)\.xhtml/\1/'`
          echo "$lang $A $originaldate $original_version $translation_version"

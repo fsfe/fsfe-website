@@ -17,7 +17,7 @@
   
       <xsl:element name="a">
         <xsl:attribute name="class">contribute-translation</xsl:attribute>
-        <xsl:attribute name="href"><xsl:value-of select="$linkresources"/>/contribute/translators/</xsl:attribute>
+        <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/contribute/translators/</xsl:attribute>
         <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'translate'" /></xsl:call-template>
       </xsl:element>
   
@@ -33,7 +33,7 @@
             <xsl:otherwise>
               <xsl:element name="li">
                 <xsl:element name="a">
-                  <xsl:attribute name="href"><xsl:value-of select="/buildinfo/@filename"/>.<xsl:value-of select="@id"/>.html</xsl:attribute>
+                  <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/><xsl:value-of select="/buildinfo/@filename"/>.<xsl:value-of select="@id"/>.html</xsl:attribute>
                   <xsl:value-of select="." disable-output-escaping="yes"/>
                 </xsl:element>
               </xsl:element>

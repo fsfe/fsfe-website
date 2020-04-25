@@ -7,31 +7,31 @@
       <xsl:attribute name="id">legal-info</xsl:attribute>
   
       <p>Copyright © 2001-2020 <xsl:element name="a">
-        <xsl:attribute name="href"><xsl:value-of select="$linkresources"/>/</xsl:attribute>
+        <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/</xsl:attribute>
         <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfeurope'" /></xsl:call-template>
       </xsl:element>.</p>
       <ul><li>
         <xsl:element name="a">
-          <xsl:attribute name="href"><xsl:value-of select="$linkresources"/>/contact/contact.html</xsl:attribute>
+          <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/contact/contact.html</xsl:attribute>
           <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'contact-us'" /></xsl:call-template>
         </xsl:element>
       </li><li>
         <xsl:element name="a">
-          <xsl:attribute name="href"><xsl:value-of select="$linkresources"/>/about/legal/imprint.html</xsl:attribute>
+          <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/about/legal/imprint.html</xsl:attribute>
           <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'imprint'" /></xsl:call-template>
         </xsl:element> / <xsl:element name="a">
-          <xsl:attribute name="href"><xsl:value-of select="$linkresources"/>/about/legal/imprint.html#id-privacy-policy</xsl:attribute>
+          <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/about/legal/imprint.html#id-privacy-policy</xsl:attribute>
           <xsl:attribute name="class">privacy-policy</xsl:attribute>
           <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'privacy-policy'" /></xsl:call-template>
         </xsl:element> / <xsl:element name="a">
-          <xsl:attribute name="href"><xsl:value-of select="$linkresources"/>/about/transparency-commitment.html</xsl:attribute>
+          <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/about/transparency-commitment.html</xsl:attribute>
           <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'transparency-commitment'" /></xsl:call-template>
         </xsl:element>
       </li></ul>
       <p><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id"
             select="'permission'" /></xsl:call-template>
             <xsl:element name="a">
-              <xsl:attribute name="href"><xsl:value-of select="$linkresources"/>/about/js-licences.html</xsl:attribute>
+              <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/about/js-licences.html</xsl:attribute>
               <xsl:attribute name="data-jslicense">1</xsl:attribute>
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'js-licences'" /></xsl:call-template>
             </xsl:element>

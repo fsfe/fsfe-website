@@ -95,19 +95,19 @@
           <xsl:attribute name="id">menu-list</xsl:attribute>
           <xsl:element name="li">
             <xsl:element name="a">
-              <xsl:attribute name="href">/about/about.html</xsl:attribute>
+              <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/about/about.html</xsl:attribute>
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfe/about'" /></xsl:call-template>
             </xsl:element>
           </xsl:element>
           <xsl:element name="li">
             <xsl:element name="a">
-              <xsl:attribute name="href">/work.html</xsl:attribute>
+              <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/work.html</xsl:attribute>
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfe/projects'" /></xsl:call-template>
             </xsl:element>
           </xsl:element>
           <xsl:element name="li">
             <xsl:element name="a">
-              <xsl:attribute name="href">/campaigns/campaigns.html</xsl:attribute>
+              <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/campaigns/campaigns.html</xsl:attribute>
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfe/campaigns'" /></xsl:call-template>
             </xsl:element>
           </xsl:element>
@@ -117,13 +117,13 @@
           </xsl:element>
           <xsl:element name="li">
             <xsl:element name="a">
-              <xsl:attribute name="href">/contribute/contribute.html</xsl:attribute>
+              <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/contribute/contribute.html</xsl:attribute>
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfe/help'" /></xsl:call-template>
             </xsl:element>
           </xsl:element>
           <xsl:element name="li">
             <xsl:element name="a">
-              <xsl:attribute name="href">/press/press.html</xsl:attribute>
+              <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/press/press.html</xsl:attribute>
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfe/press'" /></xsl:call-template>
             </xsl:element>
           </xsl:element>

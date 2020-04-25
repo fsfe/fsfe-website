@@ -38,6 +38,7 @@
             <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'outdated-1'" /></xsl:call-template>
             <xsl:element name="a">
               <xsl:attribute name="href">
+                <xsl:value-of select="$urlprefix"/>
                 <xsl:value-of select="/buildinfo/@filename"/>
                 <xsl:text>.en.html</xsl:text>
               </xsl:attribute>

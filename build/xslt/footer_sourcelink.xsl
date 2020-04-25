@@ -31,6 +31,7 @@
         <xsl:element name="a">
           <xsl:attribute name="rel">nofollow</xsl:attribute>
           <xsl:attribute name="href">
+            <xsl:value-of select="$urlprefix"/>
             <xsl:text>/source</xsl:text>
             <xsl:value-of select="/buildinfo/@filename"/>
             <xsl:text>.</xsl:text>
@@ -41,14 +42,14 @@
         </xsl:element>
       </li><li>
         <xsl:element name="a">
-          <xsl:attribute name="href"><xsl:value-of select="$linkresources"/>/contribute/web/</xsl:attribute>
+          <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/contribute/web/</xsl:attribute>
           <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'contribute-web'" /></xsl:call-template>
         </xsl:element>
       </li></ul>
   
       <p>
         <xsl:element name="a">
-          <xsl:attribute name="href"><xsl:value-of select="$linkresources"/>/contribute/translators/</xsl:attribute>
+          <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/contribute/translators/</xsl:attribute>
           <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'translate'" /></xsl:call-template>
         </xsl:element>
         <!-- Insert the appropriate translation notice -->
@@ -67,6 +68,7 @@
           <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'translator3a'" /></xsl:call-template>
           <xsl:element name="a">
             <xsl:attribute name="href">
+              <xsl:value-of select="$urlprefix"/>
               <xsl:value-of select="/buildinfo/@filename"/>
               <xsl:text>.en.html</xsl:text>
             </xsl:attribute>

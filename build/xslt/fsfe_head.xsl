@@ -213,7 +213,7 @@
     </xsl:element>
     <xsl:element name="meta">
       <xsl:attribute name="property">og:url</xsl:attribute>
-      <xsl:attribute name="content">https:<xsl:value-of select="$linkresources"/><xsl:value-of select="/buildinfo/@filename"/>.html</xsl:attribute>
+      <xsl:attribute name="content">https://fsfe.org<xsl:value-of select="/buildinfo/@filename"/>.html</xsl:attribute>
     </xsl:element>
     <xsl:element name="meta">
       <xsl:attribute name="property">og:title</xsl:attribute>
@@ -229,8 +229,8 @@
       </xsl:attribute>
     </xsl:element> <!-- / Sharing cards -->
 
-    <script src="/scripts/jquery-3.3.1.min.js"></script>
-    <script src="/scripts/modernizr.custom.65251.js"></script>
+    <script src="{$urlprefix}/scripts/jquery-3.3.1.min.js"></script>
+    <script src="{$urlprefix}/scripts/modernizr.custom.65251.js"></script>
 
     <!-- Copy head element from the xhtml source file (and possibly from external xsl rules) -->
     <xsl:apply-templates select="head/node()" />

@@ -13,11 +13,6 @@
   <xsl:import href="build/xslt/fsfe_head.xsl" />
   <xsl:import href="build/xslt/fsfe_body.xsl" />
 
-  <!-- For pages used on external web servers, load the CSS from absolute URL -->
-  <xsl:variable name="urlprefix">
-    <xsl:if test="/buildinfo/document/@external">https://fsfe.org</xsl:if>
-  </xsl:variable>
-
   <!-- EXTRACT / DESCRIPTION of each page -->
   <xsl:variable name="metadesc">
     <!-- Get the meta element description -->

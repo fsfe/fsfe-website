@@ -93,50 +93,52 @@
         </xsl:element>
         <!--/div#direct-links-->
 
-        <xsl:element name="ul">
-          <xsl:attribute name="id">menu-list</xsl:attribute>
-          <xsl:element name="li">
-            <xsl:element name="a">
-              <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/about/about.html</xsl:attribute>
-              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfe/about'" /></xsl:call-template>
+        <xsl:if test="not(/buildinfo/document/@external)">
+          <xsl:element name="ul">
+            <xsl:attribute name="id">menu-list</xsl:attribute>
+            <xsl:element name="li">
+              <xsl:element name="a">
+                <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/about/about.html</xsl:attribute>
+                <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfe/about'" /></xsl:call-template>
+              </xsl:element>
+            </xsl:element>
+            <xsl:element name="li">
+              <xsl:element name="a">
+                <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/work.html</xsl:attribute>
+                <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfe/projects'" /></xsl:call-template>
+              </xsl:element>
+            </xsl:element>
+            <xsl:element name="li">
+              <xsl:element name="a">
+                <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/campaigns/campaigns.html</xsl:attribute>
+                <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfe/campaigns'" /></xsl:call-template>
+              </xsl:element>
+            </xsl:element>
+            <xsl:element name="li">
+              <xsl:attribute name="class">hidden-lg</xsl:attribute>
+              <xsl:attribute name="style">display: block;</xsl:attribute>
+            </xsl:element>
+            <xsl:element name="li">
+              <xsl:element name="a">
+                <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/contribute/contribute.html</xsl:attribute>
+                <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfe/help'" /></xsl:call-template>
+              </xsl:element>
+            </xsl:element>
+            <xsl:element name="li">
+              <xsl:element name="a">
+                <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/press/press.html</xsl:attribute>
+                <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfe/press'" /></xsl:call-template>
+              </xsl:element>
+            </xsl:element>
+            <xsl:element name="li">
+              <xsl:element name="a">
+                <xsl:attribute name="href">https://my.fsfe.org/donate</xsl:attribute>
+                <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'donate'" /></xsl:call-template>
+              </xsl:element>
             </xsl:element>
           </xsl:element>
-          <xsl:element name="li">
-            <xsl:element name="a">
-              <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/work.html</xsl:attribute>
-              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfe/projects'" /></xsl:call-template>
-            </xsl:element>
-          </xsl:element>
-          <xsl:element name="li">
-            <xsl:element name="a">
-              <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/campaigns/campaigns.html</xsl:attribute>
-              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfe/campaigns'" /></xsl:call-template>
-            </xsl:element>
-          </xsl:element>
-          <xsl:element name="li">
-            <xsl:attribute name="class">hidden-lg</xsl:attribute>
-            <xsl:attribute name="style">display: block;</xsl:attribute>
-          </xsl:element>
-          <xsl:element name="li">
-            <xsl:element name="a">
-              <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/contribute/contribute.html</xsl:attribute>
-              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfe/help'" /></xsl:call-template>
-            </xsl:element>
-          </xsl:element>
-          <xsl:element name="li">
-            <xsl:element name="a">
-              <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/press/press.html</xsl:attribute>
-              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfe/press'" /></xsl:call-template>
-            </xsl:element>
-          </xsl:element>
-          <xsl:element name="li">
-            <xsl:element name="a">
-              <xsl:attribute name="href">https://my.fsfe.org/donate</xsl:attribute>
-              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'donate'" /></xsl:call-template>
-            </xsl:element>
-          </xsl:element>
-        </xsl:element>
-        <!--/ul#menu-list-->
+          <!--/ul#menu-list-->
+        </xsl:if>
 
       </xsl:element>
       <!--/nav#menu-->

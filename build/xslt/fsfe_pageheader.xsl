@@ -68,25 +68,27 @@
             <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'page-info'" /></xsl:call-template>
           </xsl:element>
 
-          <xsl:element name="a">
+          <xsl:if test="not(/buildinfo/document/@external)">
+            <xsl:element name="a">
               <xsl:attribute name="href">https://my.fsfe.org/</xsl:attribute>
               <xsl:attribute name="id">direct-to-login</xsl:attribute>
               <xsl:element name="i">
                 <xsl:attribute name="class">fa fa-sign-in fa-lg</xsl:attribute>
               </xsl:element>
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fellowship/login'" /></xsl:call-template>
-          </xsl:element>
-
-          <xsl:element name="a">
-            <xsl:attribute name="href">#translations</xsl:attribute>
-            <xsl:attribute name="id">direct-to-translations</xsl:attribute>
-            <xsl:attribute name="data-toggle">collapse</xsl:attribute>
-            <xsl:attribute name="data-target">#translations</xsl:attribute>
-            <xsl:element name="i">
-              <xsl:attribute name="class">fa fa-globe fa-lg</xsl:attribute>
             </xsl:element>
-            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'change-lang'" /></xsl:call-template>
-          </xsl:element>
+
+            <xsl:element name="a">
+              <xsl:attribute name="href">#translations</xsl:attribute>
+              <xsl:attribute name="id">direct-to-translations</xsl:attribute>
+              <xsl:attribute name="data-toggle">collapse</xsl:attribute>
+              <xsl:attribute name="data-target">#translations</xsl:attribute>
+              <xsl:element name="i">
+                <xsl:attribute name="class">fa fa-globe fa-lg</xsl:attribute>
+              </xsl:element>
+              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'change-lang'" /></xsl:call-template>
+            </xsl:element>
+          </xsl:if>
 
         </xsl:element>
         <!--/div#direct-links-->

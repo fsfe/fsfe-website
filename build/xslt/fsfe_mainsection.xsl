@@ -29,16 +29,16 @@
     <xsl:element name="section">
       <xsl:attribute name="id">main</xsl:attribute>
       <xsl:attribute name="role">main</xsl:attribute>
-  
+
       <xsl:element name="article">
         <xsl:attribute name="id">content</xsl:attribute>
         <xsl:if test="/buildinfo/document/body/@microformats">
           <xsl:attribute name="class"><xsl:value-of select="/buildinfo/document/body/@microformats" /></xsl:attribute>
         </xsl:if>
-  
+
         <!-- Here goes the actual content of the <body> node of the input file -->
         <xsl:apply-templates select="/buildinfo/document/event/body | /buildinfo/document/news/body | /buildinfo/document/body/* | /buildinfo/document/body/node()" />
-        
+
         <!-- Link to discussion topic on community.fsfe.org -->
         <xsl:if test = "/buildinfo/document/discussion/@href">
           <xsl:element name="p">
@@ -66,20 +66,21 @@
             <xsl:call-template name="taglinks"/>
           </aside>
         </xsl:if> <!-- /tags -->
-        
+
         <!-- SOCIAL NETWORK LINKS (BOTTOM) -->
         <xsl:if test = "not(/buildinfo/document/body/@class = 'frontpage') and
-                        not(/buildinfo/document/body/@class = 'errorpage')">
+                        not(/buildinfo/document/body/@class = 'errorpage') and
+                        not(/buildinfo/document/@external)">
           <xsl:call-template name="sharebuttons"/>
         </xsl:if>
-  
+
       </xsl:element>
       <!--/article#content-->
-  
+
       <xsl:if test = "/buildinfo/document/sidebar or /buildinfo/document/@newsdate">
           <xsl:call-template name="sidebar"/>
       </xsl:if>
-  
+
       <xsl:if test = "/buildinfo/document/legal">
         <footer class="copyright notice creativecommons">
 
@@ -94,11 +95,11 @@
           </xsl:when><xsl:otherwise>
             <span><xsl:value-of select="/buildinfo/document/legal/notice"/></span>
           </xsl:otherwise></xsl:choose>
-  
+
         </footer>
         <!--/footer-->
       </xsl:if>
-  
+
       <!--Depreciated: it's here only for "backward compatibility"  cc license way-->
       <xsl:if test = "string(/buildinfo/document/head/meta[@name='cc-license']/@content)">
         <footer id="cc-licenses"><xsl:element name="p">
@@ -108,7 +109,7 @@
           </xsl:for-each>
         </xsl:element></footer>
       </xsl:if>
-  
+
     </xsl:element>
     <!--/section#main-->
   </xsl:template>

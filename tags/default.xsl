@@ -4,7 +4,6 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:dt="http://xsltsl.org/date-time">
   
-  <xsl:import href="../tools/xsltsl/events-utils.xsl" />
   <xsl:import href="../fsfe.xsl" />
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
 
@@ -36,14 +35,22 @@
 
       <!-- loop through all events having this tag -->
       <xsl:for-each select="/buildinfo/document/set/event">
-        <xsl:sort select="@date" order="descending" />
+        <xsl:sort select="@start" order="descending" />
         <xsl:element name="li">
           <span class="newsdate">[<xsl:value-of select="@start" />]</span>
           <xsl:element name="a">
             <xsl:attribute name="href">
-              <xsl:call-template name="event-link">
-                <xsl:with-param name="absolute-fsfe-links" select="no" />
-              </xsl:call-template>
+              <xsl:choose>
+                <xsl:when test="link">
+                  <xsl:apply-templates select="link"/>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:text>/events/events.</xsl:text>
+                  <xsl:value-of select="/buildinfo/@language" />
+                  <xsl:text>.html#</xsl:text>
+                  <xsl:value-of select="@filename" />
+                </xsl:otherwise>
+              </xsl:choose>
             </xsl:attribute>
             <xsl:value-of select="title" />
           </xsl:element><!--a-->

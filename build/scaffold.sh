@@ -13,10 +13,13 @@ include_xml(){
   # build script which wasn't able to load top
   # level elements from any file
   if [ -f "$1" ]; then
+    # Remove <version> because the filename attribute would otherwise be added
+    # to this element instead of the actual content element.
+    sed 's;<version>.*</version>;;' "$1" | \
     sed -r ':X; $bY; N; bX; :Y;
             s:<(\?[xX][mM][lL]|!DOCTYPE)[[:space:]]+[^>]+>::g
             s:<[^!][^>]*>::;
-            s:</[^>]*>([^<]*((<[^>]+/>|<!([^>]|<[^>]*>)*>|<\?[^>]+>)[^<]*)*)?$:\1:;' "$1"
+            s:</[^>]*>([^<]*((<[^>]+/>|<!([^>]|<[^>]*>)*>|<\?[^>]+>)[^<]*)*)?$:\1:;'
   fi
 }
 

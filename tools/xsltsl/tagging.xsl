@@ -2,7 +2,6 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dt="http://xsltsl.org/date-time">
   <xsl:import href="feeds.xsl" />
-  <xsl:import href="events-utils.xsl" />
 
   <xsl:output method="xml" encoding="UTF-8" indent="yes" />
 

@@ -9,7 +9,6 @@
   
   <xsl:template match="fetch-news">
     <xsl:call-template name="fetch-news">
-      <xsl:with-param name="tag" select="'ilovefs'"/>
       <xsl:with-param name="nb-items" select="2"/>
     </xsl:call-template>
   </xsl:template>

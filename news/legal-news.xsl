@@ -7,9 +7,7 @@
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
   
   <xsl:template match="legal-news">
-    <xsl:call-template name="fetch-news">
-      <xsl:with-param name="tag" select="'legal-news'" />
-    </xsl:call-template>
+    <xsl:call-template name="fetch-news"/>
   </xsl:template>
   
 </xsl:stylesheet>

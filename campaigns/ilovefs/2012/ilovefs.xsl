@@ -7,10 +7,8 @@
   <xsl:import href="../../../fsfe.xsl" />
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
   
-  
   <xsl:template match="fetch-news">
     <xsl:call-template name="fetch-news">
-      <xsl:with-param name="tag" select="'ilovefs'"/>
       <xsl:with-param name="nb-items" select="5"/>
     </xsl:call-template>
   </xsl:template>

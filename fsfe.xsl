@@ -73,11 +73,6 @@
   <!-- HTML 5 compatibility doctype, since our XSLT parser doesn't support disabling output escaping -->
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
 
-  <!-- Ignore "latin" tags, used only for printable material -->
-  <xsl:template match="latin">
-    <xsl:apply-templates select="@*|node()"/>
-  </xsl:template>
-  
   <!-- Static elements which can be included everywhere -->
   <xsl:template match="static-element">
     <xsl:variable name="id"><xsl:value-of select="@id"/></xsl:variable>

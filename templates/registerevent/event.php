@@ -12,15 +12,13 @@
     <?php if($url) { echo "<link>" . htmlspecialchars($url) . "</link>"; }?>
 
     <tags>
-      <tag content="<?php echo htmlspecialchars($countryname); ?>"><?php echo htmlspecialchars($countrycode); ?></tag>
+      <tag key="<?php echo htmlspecialchars($countrycode); ?>"><?php echo htmlspecialchars($countryname); ?></tag>
       <?php
         foreach ($tags as $tag) {
-          echo sprintf('<tag>%s</tag>', htmlspecialchars($tag)) . "\n";
+          echo sprintf('<tag key="%s"/>', htmlspecialchars($tag)) . "\n";
         }
       ?>
-      <tag>front-page</tag>
+      <tag key="front-page"/>
     </tags>
-
-
   </event>
 </eventset>

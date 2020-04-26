@@ -26,10 +26,10 @@
     </body>
     <page>https://tuebix.org/</page>
     <tags>
-      <tag content="Deutschland">de</tag>
-      <tag content="Vortrag">talk</tag>
-      <tag content="Informationsstand">infobooth</tag>
-      <tag>front-page</tag>
+      <tag key="de">Deutschland</tag>
+      <tag key="talk">Vortrag</tag>
+      <tag key="infobooth">Informationsstand</tag>
+      <tag key="front-page"/>
     </tags>
   </event>
 </eventset>

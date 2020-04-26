@@ -18,7 +18,9 @@
           <xsl:element name="a">
             <xsl:attribute name="href">
               <xsl:text>tagged-</xsl:text>
-              <xsl:value-of select="@name"/>
+              <xsl:value-of select="@key"/>
+              <xsl:text>.</xsl:text>
+              <xsl:value-of select="/buildinfo/@language"/>
               <xsl:text>.html</xsl:text>
             </xsl:attribute>
 

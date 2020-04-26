@@ -4,27 +4,6 @@
   <xsl:include href="sharebuttons.xsl" />
   <xsl:include href="fsfe_sidebar.xsl" />
 
-  <xsl:template name="taglinks">
-    <xsl:param name="prefix" />
-
-    <ul class="taglist"><xsl:for-each select="/buildinfo/document/tags/tag[not(. = 'front-page' or @key = 'front-page')]">
-      <xsl:variable name="keyname"
-           select="translate(@key,'ABCDEFGHIJKLMNOPQRSTUVWXYZ /:','abcdefghijklmnopqrstuvwxyz_')"/>
-      <xsl:variable name="tagname"
-           select="translate(.,'ABCDEFGHIJKLMNOPQRSTUVWXYZ /:','abcdefghijklmnopqrstuvwxyz_')"/>
-
-      <xsl:choose><xsl:when test="@key and .">
-        <li><a href="/tags/tagged-{$keyname}.html"><xsl:value-of select="."/></a></li>
-      </xsl:when><xsl:when test="@content and not(@content = '')"> <!-- Legacy -->
-        <li><a href="/tags/tagged-{$tagname}.html"><xsl:value-of select="@content"/></a></li>
-      </xsl:when><xsl:when test="@key"> <!-- bad style -->
-        <li><a href="/tags/tagged-{$keyname}.html"><xsl:value-of select="@key"/></a></li>
-      </xsl:when><xsl:otherwise> <!-- Legacy and bad style -->
-        <li><a href="/tags/tagged-{$tagname}.html"><xsl:value-of select="."/></a></li>
-      </xsl:otherwise></xsl:choose>
-    </xsl:for-each></ul>
-  </xsl:template>
-
   <xsl:template name="fsfe_mainsection">
     <xsl:element name="section">
       <xsl:attribute name="id">main</xsl:attribute>
@@ -57,13 +36,17 @@
 
         <!-- Show tags if this is a news press release or an event -->
         <xsl:if test="(/buildinfo/document/@newsdate or /buildinfo/document/event)
-                      and /buildinfo/document/tags/tag[not(. = 'front-page' or @key = 'front-page')]">
+                      and /buildinfo/document/tags/tag[not(@key='front-page')]">
           <aside id="tags">
             <h2><xsl:call-template name="fsfe-gettext">
               <xsl:with-param name="id" select="'tags'" />
             </xsl:call-template></h2>
 
-            <xsl:call-template name="taglinks"/>
+            <ul class="taglist">
+              <xsl:for-each select="/buildinfo/document/tags/tag[not(@key='front-page')]">
+                <li><a href="/tags/tagged-{@key}.{/buildinfo/@language}.html"><xsl:value-of select="."/></a></li>
+              </xsl:for-each>
+            </ul>
           </aside>
         </xsl:if> <!-- /tags -->
 

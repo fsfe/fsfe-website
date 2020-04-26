@@ -11,8 +11,8 @@
 
   <xsl:template match="dynamic-content-news">
     <xsl:for-each select="/buildinfo/document/set/news[
-      translate(@date, '-', '') &lt;= translate($today, '-', '')
-      and (tags/tag = 'front-page')
+        translate(@date, '-', '') &lt;= translate($today, '-', '')
+        and (tags/tag/@key = 'front-page')
       ]">
       <xsl:sort select="@date" order="descending"/>
       <xsl:if test="position() &lt;= 3">
@@ -159,9 +159,9 @@
   <!-- ==================================================================== -->
 
   <xsl:template match="dynamic-content-events">
-    <xsl:for-each select="/buildinfo/document/set/event
-      [translate (@end, '-', '') &gt;= translate ($today, '-', '')
-       and (tags/tag = 'front-page')
+    <xsl:for-each select="/buildinfo/document/set/event[
+        translate (@end, '-', '') &gt;= translate ($today, '-', '')
+        and (tags/tag/@key = 'front-page')
       ]">
       <xsl:sort select="@start"/>
       <xsl:if test="position() &lt;= 3">

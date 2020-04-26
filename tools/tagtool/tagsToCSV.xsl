@@ -2,7 +2,7 @@
 <!-- create a csv file from the aggregated tags files in tags/
 	
 Usage to find duplicate tags:
-xsltproc tagsToCSV.xsl tags/.tags.en.xml |sort
+xsltproc tools/tagtool/tagsToCSV.xsl tags/.tags.en.xml |sort
 /-->
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"

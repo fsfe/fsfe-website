@@ -35,8 +35,7 @@ log()
 print_help()
 {
 	cat <<EOF >&2
-Usage: tagstool OPTIONS -b|--bulk-process TAGSDATAFILE
-       tagstool OPTIONS --find-tags TAG..
+Usage: tagstool OPTIONS --find-tags TAG..
        tagstool OPTIONS --remove-empty-labels
        tagstool OPTIONS --remove-tags TAG..
        tagstool OPTIONS --rename-tags OLD NEW
@@ -53,11 +52,6 @@ Options:
 -f|--force                 Overwrite existing information (for --set-label).
 
 Actions (only one action per invocation):
--b|--bulk TAGSDATAFILE     Transform bulk transformations a defined in the
-                           csv file. See README.md for details.
-                           Available transformations:
-                            - rm: delete tag
-                            - mv:newtag: move the tag to a newtag
 --find-tags TAG..          List all files containing the given tags.
                            If a non-empty language is given, the output is
                            limited to that language.
@@ -193,59 +187,6 @@ setTagLabel()
 	done
 }
 
-processOneActionLine()
-# process a single csv action line from stdin and call the appropriate method
-# Global variables: LANGUAGE (indirect)
-{
-	IFS=";" read action name id section count || return 2
-	# ignore empty actions
-	if [[ -z "$action" ]]
-	then
-		return 0
-	fi
-
-	case "$action" in
-		rm)
-			removeTag "$id"
-			;;
-		mv:*)
-			renameTag "$id" "${action/mv:/}"
-			;;
-		*)
-			echo "Ignoring  action: $action on tag $section/$id" >&2
-			;;
-	esac
-}
-
-processActionLines()
-# Global variables: LANGUAGE (indirect)
-{
-	read firstline
-	if [[ "$firstline" != "action;name;id;section;count" ]]
-	then
-		echo "Input data does not look like it contains the right columns. Bailing out..." >&2
-		exit 1
-	fi
-	while processOneActionLine
-	do
-		true
-	done
-}
-
-action_bulkProcess()
-# action_bulkProcess TAGSDATAFILE
-# perform a bulk action based on data in the given tags data csv file.
-# Global variables: LANGUAGE (indirect)
-{
-	local TAGSDATAFILE="$1"
-	if [[ ! -f "$TAGSDATAFILE" ]]
-	then
-		echo "No data file. Please read the source for help..." >&2
-		return 1
-	fi
-	processActionLines < "$TAGSDATAFILE"
-}
-
 action_findTags()
 # action_findTags TAGS..
 # find all files containing the given tags
@@ -319,8 +260,8 @@ action_setLabel()
 # Parse commandline:
 ###
 
-TEMP=`getopt -o bhnv \
-      --long bulk-process,find-tags,force,help,language:,no-act,remove-empty-labels,remove-tags,rename-tag,set-label:,verbose \
+TEMP=`getopt -o hnv \
+      --long find-tags,force,help,language:,no-act,remove-empty-labels,remove-tags,rename-tag,set-label:,verbose \
       -n 'tagtool' -- "$@"`
 
 if [ $? != 0 ] ; then echo "Terminating..." >&2 ; exit 1 ; fi
@@ -330,7 +271,6 @@ eval set -- "$TEMP"
 
 while true ; do
 	case "$1" in
-		-b|--bulk-process) ACTION=action_bulkProcess ; shift ;;
 		--find-tags) ACTION=action_findTags ; shift ;;
 		--force) FORCE=1 ; shift ;;
 		-h|--help) print_help ; exit ;;

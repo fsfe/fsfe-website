@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  
-  <xsl:import href="../tools/xsltsl/countries.xsl" />
+
+  <xsl:import href="../tools/xsltsl/people.xsl" />
   <xsl:import href="../fsfe.xsl" />
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
-  
-  <!-- 
+
+  <!--
     For documentation on tagging (e.g. display a people list), take a
     look at the documentation under
       /tools/xsltsl/documentation-tagging.txt
   -->
-  
-  <!-- Fill dynamic content -->  
-  
+
+  <!-- Fill dynamic content -->
+
   <!-- Athens -->
     <xsl:template match="athens-members">
     <xsl:call-template name="country-people-list">
@@ -21,7 +21,7 @@
       <xsl:with-param name="display" select="'coordinators'" />
     </xsl:call-template>
   </xsl:template>
-  
+
   <!-- Austria -->
   <xsl:template match="austria-members">
     <xsl:call-template name="country-people-list">
@@ -29,7 +29,7 @@
       <xsl:with-param name="display" select="'coordinators'" />
     </xsl:call-template>
   </xsl:template>
-  
+
   <!-- Barcelona -->
   <xsl:template match="barcelona-members">
     <xsl:call-template name="country-people-list">
@@ -37,7 +37,7 @@
       <xsl:with-param name="display" select="'coordinators'" />
     </xsl:call-template>
   </xsl:template>
-  
+
   <!-- Bari -->
   <xsl:template match="bari-members">
     <xsl:call-template name="country-people-list">
@@ -45,7 +45,7 @@
       <xsl:with-param name="display" select="'coordinators'" />
     </xsl:call-template>
   </xsl:template>
-  
+
   <!-- Belgium -->
   <xsl:template match="belgium-members">
     <xsl:call-template name="country-people-list">
@@ -53,7 +53,7 @@
       <xsl:with-param name="display" select="'coordinators'" />
     </xsl:call-template>
   </xsl:template>
-   
+
   <!-- Berlin -->
   <xsl:template match="berlin-members">
     <xsl:call-template name="country-people-list">
@@ -61,7 +61,7 @@
       <xsl:with-param name="display" select="'coordinators'" />
     </xsl:call-template>
   </xsl:template>
-  
+
   <!-- Bonn -->
   <xsl:template match="bonn-members">
     <xsl:call-template name="country-people-list">
@@ -69,7 +69,7 @@
       <xsl:with-param name="display" select="'coordinators'" />
     </xsl:call-template>
   </xsl:template>
-  
+
   <!-- Cologne -->
   <xsl:template match="cologne-members">
     <xsl:call-template name="country-people-list">
@@ -77,7 +77,7 @@
       <xsl:with-param name="display" select="'coordinators'" />
     </xsl:call-template>
   </xsl:template>
-  
+
   <!-- Copenhagen -->
     <xsl:template match="aarhus-members">
     <xsl:call-template name="country-people-list">
@@ -85,7 +85,7 @@
       <xsl:with-param name="display" select="'coordinators'" />
     </xsl:call-template>
   </xsl:template>
-  
+
   <!-- Düsseldorf -->
   <xsl:template match="duesseldorf-members">
     <xsl:call-template name="country-people-list">
@@ -93,7 +93,7 @@
       <xsl:with-param name="display" select="'coordinators'" />
     </xsl:call-template>
   </xsl:template>
-  
+
   <!-- Germany -->
     <xsl:template match="germany-members">
     <xsl:call-template name="country-people-list">
@@ -101,7 +101,7 @@
       <xsl:with-param name="display" select="'coordinators'" />
     </xsl:call-template>
   </xsl:template>
-  
+
   <!-- Great Britain -->
     <xsl:template match="unitedkingdom-members">
     <xsl:call-template name="country-people-list">
@@ -117,7 +117,7 @@
       <xsl:with-param name="display" select="'coordinators'" />
     </xsl:call-template>
   </xsl:template>
-  
+
   <!-- Hamburg -->
   <xsl:template match="hamburg-members">
     <xsl:call-template name="country-people-list">
@@ -125,7 +125,7 @@
       <xsl:with-param name="display" select="'coordinators'" />
     </xsl:call-template>
   </xsl:template>
-  
+
   <!-- Italy -->
   <xsl:template match="italy-members">
     <xsl:call-template name="country-people-list">
@@ -133,8 +133,8 @@
       <xsl:with-param name="display" select="'coordinators'" />
     </xsl:call-template>
   </xsl:template>
-  
-  
+
+
       <!-- Kiel -->
   <xsl:template match="kiel-members">
     <xsl:call-template name="country-people-list">
@@ -142,7 +142,7 @@
       <xsl:with-param name="display" select="'coordinators'" />
     </xsl:call-template>
   </xsl:template>
-  
+
     <!-- Linz -->
   <xsl:template match="linz-members">
     <xsl:call-template name="country-people-list">
@@ -150,7 +150,7 @@
       <xsl:with-param name="display" select="'coordinators'" />
     </xsl:call-template>
   </xsl:template>
-  
+
      <!-- Madrid -->
   <xsl:template match="madrid-members">
     <xsl:call-template name="country-people-list">
@@ -158,7 +158,7 @@
       <xsl:with-param name="display" select="'coordinators'" />
     </xsl:call-template>
   </xsl:template>
-  
+
   <!-- Manchester -->
     <xsl:template match="manchester-members">
     <xsl:call-template name="country-people-list">
@@ -166,7 +166,7 @@
       <xsl:with-param name="display" select="'coordinators'" />
     </xsl:call-template>
   </xsl:template>
-  
+
   <!-- München -->
   <xsl:template match="munich-members">
     <xsl:call-template name="country-people-list">
@@ -174,8 +174,8 @@
       <xsl:with-param name="display" select="'coordinators'" />
     </xsl:call-template>
   </xsl:template>
-  
-  
+
+
     <!-- Milano -->
   <xsl:template match="milano-members">
     <xsl:call-template name="country-people-list">
@@ -183,7 +183,7 @@
       <xsl:with-param name="display" select="'coordinators'" />
     </xsl:call-template>
   </xsl:template>
-  
+
   <!-- Netherlands -->
   <xsl:template match="netherlands-members">
     <xsl:call-template name="country-people-list">
@@ -191,7 +191,7 @@
       <xsl:with-param name="display" select="'coordinators'" />
     </xsl:call-template>
   </xsl:template>
-  
+
   <!-- Paris -->
   <xsl:template match="paris-members">
     <xsl:call-template name="country-people-list">
@@ -199,7 +199,7 @@
       <xsl:with-param name="display" select="'coordinators'" />
     </xsl:call-template>
   </xsl:template>
-  
+
   <!-- Representatives -->
   <xsl:template match="representatives-members">
     <xsl:call-template name="country-people-list">
@@ -222,7 +222,7 @@
       <xsl:with-param name="display" select="'coordinators'" />
     </xsl:call-template>
   </xsl:template>
-  
+
   <!-- Spain -->
   <xsl:template match="spain-members">
     <xsl:call-template name="country-people-list">
@@ -230,7 +230,7 @@
       <xsl:with-param name="display" select="'coordinators'" />
     </xsl:call-template>
   </xsl:template>
-  
+
   <!-- Switzerland -->
   <xsl:template match="switzerland-members">
     <xsl:call-template name="country-people-list">
@@ -238,7 +238,7 @@
       <xsl:with-param name="display" select="'coordinators'" />
     </xsl:call-template>
   </xsl:template>
-  
+
     <!-- Vienna -->
   <xsl:template match="vienna-members">
     <xsl:call-template name="country-people-list">
@@ -254,5 +254,5 @@
       <xsl:with-param name="display" select="'coordinators'" />
     </xsl:call-template>
   </xsl:template>
-  
+
 </xsl:stylesheet>

@@ -57,7 +57,7 @@
         - /about/team.**.xhtml: The frame of the team page: Information texts, Headlines etc
         - /about/team.xsl: In this file, tags like <council-members /> are defined.
         - /about/team.sources: Where to look for people-files, translations of functions/projects/countries and so on
-        - /tools/xsltsl/countries.xsl: The building of the team lists itself: Links, Background colors, inclusion of avatars etc
+        - /tools/xsltsl/people.xsl: The building of the team lists itself: Links, Background colors, inclusion of avatars etc
   -->
   <!--
     Improvement ideas:
@@ -174,7 +174,7 @@
    <name>Christian Busse</name>
    <country>DE</country>
    <email>purine_bitter (at) fsfe (dot) org</email>
-   <!-- function group="openscience">coordinator/m</function> 
+   <!-- function group="openscience">coordinator/m</function>
    <team>openscience</team> -->
    <team>team</team>
   </person>
@@ -483,7 +483,7 @@
     <email>lucas.lasota (at) fsfe (dot) org</email>
     <link>/about/lasota/lasota.html</link>
     <avatar>/about/lasota/lasota-avatar.jpg</avatar>
-    <employee>part/m</employee> 
+    <employee>part/m</employee>
   </person>
 
   <person id="mehring">
@@ -824,7 +824,7 @@
     <team>ga</team>
     <team>core</team>
     <email>usli (at) fsfe (dot) org</email>
-    <employee>part/f</employee> 
+    <employee>part/f</employee>
     <avatar>/about/sliwinski/sliwinski.png</avatar>
   </person>
 

@@ -9,9 +9,6 @@
 
   <xsl:template name="fetch-news">
     <xsl:param name="nb-items" select="''" />
-    <xsl:param name="display-year" select="'yes'" />
-    <xsl:param name="show-date" select="'yes'" />
-    <xsl:param name="compact-view" select="'no'" />
     <xsl:param name="sidebar" select="'no'" />
 
     <xsl:for-each select="/buildinfo/document/set/news[
@@ -21,9 +18,6 @@
 
       <xsl:if test="$nb-items = '' or position() &lt;= $nb-items">
         <xsl:call-template name="news">
-          <xsl:with-param name="show-date" select="$show-date" />
-          <xsl:with-param name="compact-view" select="$compact-view" />
-          <xsl:with-param name="display-year" select="$display-year" />
           <xsl:with-param name="sidebar" select="$sidebar" />
         </xsl:call-template>
       </xsl:if>
@@ -36,8 +30,6 @@
     <xsl:param name="wanted-time" select="future" /> <!-- value in {"past", "present", "future"} -->
     <xsl:param name="header" select="''" />
     <xsl:param name="nb-items" select="''" />
-    <xsl:param name="display-details" select="'no'" />
-    <xsl:param name="display-year" select="'yes'" />
     <xsl:param name="display-tags" select="'no'" />
 
     <xsl:choose> <xsl:when test="$wanted-time = 'past'">
@@ -49,8 +41,6 @@
         <xsl:if test="position() &lt;= $nb-items or $nb-items=''">
           <xsl:call-template name="event">
             <xsl:with-param name="header" select="$header" />
-            <xsl:with-param name="display-details" select="$display-details" />
-            <xsl:with-param name="display-year" select="$display-year" />
             <xsl:with-param name="display-tags" select="$display-tags" />
           </xsl:call-template>
         </xsl:if>
@@ -66,8 +56,6 @@
         <xsl:if test="position() &lt;= $nb-items or $nb-items=''">
           <xsl:call-template name="event">
             <xsl:with-param name="header" select="$header" />
-            <xsl:with-param name="display-details" select="$display-details" />
-            <xsl:with-param name="display-year" select="$display-year" />
             <xsl:with-param name="display-tags" select="$display-tags" />
           </xsl:call-template>
         </xsl:if>
@@ -82,8 +70,6 @@
         <xsl:if test="position() &lt;= $nb-items or $nb-items=''">
           <xsl:call-template name="event">
             <xsl:with-param name="header" select="$header" />
-            <xsl:with-param name="display-details" select="$display-details" />
-            <xsl:with-param name="display-year" select="$display-year" />
             <xsl:with-param name="display-tags" select="$display-tags" />
           </xsl:call-template>
         </xsl:if>

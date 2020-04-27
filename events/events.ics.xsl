@@ -13,7 +13,6 @@
 
   <!-- Show a single event -->
   <xsl:template name="event">
-    <xsl:param name="header" />
 
     <!-- Create variables -->
     <xsl:variable name="start">
@@ -68,19 +67,17 @@
   </xsl:template>
   
   <xsl:template match="/buildinfo/document">
-	  <xsl:text>BEGIN:VCALENDAR</xsl:text><xsl:call-template name="nl" />
-	  <xsl:text>VERSION:2.0</xsl:text><xsl:call-template name="nl" />
-	  <xsl:text>PRODID:fsfe.org/events/events.ics.xsl</xsl:text><xsl:call-template name="nl" />
+    <xsl:text>BEGIN:VCALENDAR</xsl:text><xsl:call-template name="nl" />
+    <xsl:text>VERSION:2.0</xsl:text><xsl:call-template name="nl" />
+    <xsl:text>PRODID:fsfe.org/events/events.ics.xsl</xsl:text><xsl:call-template name="nl" />
       <!-- Future events -->
       <xsl:for-each select="/buildinfo/document/set/event[
           translate(@start, '-', '') &gt;= translate(/buildinfo/@date, '-', '')
         ]">
         <xsl:sort select="@start" order="descending" />
-        <xsl:call-template name="event">
-          <xsl:with-param name="header">current</xsl:with-param>
-        </xsl:call-template>
+        <xsl:call-template name="event"/>
       </xsl:for-each>
-	  <xsl:text>END:VCALENDAR</xsl:text>
+    <xsl:text>END:VCALENDAR</xsl:text>
   </xsl:template>
   
   

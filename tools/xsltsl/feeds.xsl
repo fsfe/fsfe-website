@@ -12,9 +12,6 @@
   <!-- define content type templates-->
     
   <xsl:template name="news">
-    <xsl:param name="display-year" select="'no'" />
-    <xsl:param name="show-date" select="'yes'" />
-    <xsl:param name="compact-view" select="'no'" />
     <xsl:param name="sidebar" select="'no'" />
     
     <xsl:variable name="title">
@@ -31,10 +28,8 @@
       <xsl:call-template name="dt:get-month-name">
         <xsl:with-param name="month" select="substring(@date,6,2)" />
       </xsl:call-template>
-      <xsl:if test="$display-year = 'yes'">
-        <xsl:text> </xsl:text>
-        <xsl:value-of select="substring(@date,1,4)" />
-      </xsl:if>
+      <xsl:text> </xsl:text>
+      <xsl:value-of select="substring(@date,1,4)" />
     </xsl:variable>
     
     <xsl:choose>
@@ -47,11 +42,9 @@
           <xsl:copy-of select="$title" />
           
           <!-- news date -->
-          <xsl:if test="$show-date = 'yes'">
-            <xsl:text> (</xsl:text>
-            <xsl:copy-of select="$date" />
-            <xsl:text>)</xsl:text>
-          </xsl:if>
+          <xsl:text> (</xsl:text>
+          <xsl:copy-of select="$date" />
+          <xsl:text>)</xsl:text>
         </li>
       </xsl:when>
       <xsl:otherwise>
@@ -66,14 +59,10 @@
           </h3>
           
           <!-- news date -->
-          <xsl:if test="$show-date = 'yes'">
-            <p class="date"><xsl:copy-of select="$date" /></p>
-          </xsl:if>
+          <p class="date"><xsl:copy-of select="$date" /></p>
           
           <!-- news text -->
-          <xsl:if test="$compact-view = 'no'">
           <div class="text"><xsl:apply-templates select="body/node()" /></div>
-          </xsl:if>
         </div>
       </xsl:otherwise>
     </xsl:choose>
@@ -82,8 +71,6 @@
   <!-- Show a single event -->
   <xsl:template name="event">
     <xsl:param name="header" select="''" />
-    <xsl:param name="display-details" select="'no'" />
-    <xsl:param name="display-year" select="'no'" />
     <xsl:param name="display-tags" select="'no'" />
     
     <!-- Create variables -->
@@ -187,10 +174,8 @@
             <xsl:value-of select="$end_day" />
             <xsl:text> </xsl:text>
             <xsl:value-of select="$end_month" />
-            <xsl:if test="$display-year = 'yes'">
-              <xsl:text> </xsl:text>
-              <xsl:value-of select="$end_year" />
-            </xsl:if>
+            <xsl:text> </xsl:text>
+            <xsl:value-of select="$end_year" />
           </p>
         </xsl:when>
         <xsl:otherwise>
@@ -198,20 +183,16 @@
             <xsl:value-of select="$start_day" />
             <xsl:text> </xsl:text>
             <xsl:value-of select="$start_month" />
-            <xsl:if test="$display-year = 'yes'">
-              <xsl:text> </xsl:text>
-              <xsl:value-of select="$end_year" />
-            </xsl:if>
+            <xsl:text> </xsl:text>
+            <xsl:value-of select="$end_year" />
           </p>
         </xsl:otherwise>
       </xsl:choose>
       
-      <!-- and possibly details about the event -->
-      <xsl:if test="$display-details = 'yes'">
-        <div class="details">
-          <xsl:apply-templates select="body/node()" />
-        </div>
-      </xsl:if>
+      <!-- details about the event -->
+      <div class="details">
+        <xsl:apply-templates select="body/node()" />
+      </div>
       
       <!-- tags -->
       <xsl:if test="$display-tags = 'yes'">

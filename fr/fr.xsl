@@ -116,14 +116,12 @@
         <!-- Current events -->
         <xsl:call-template name="fetch-events">
             <xsl:with-param name="wanted-time" select="'present'" />
-            <xsl:with-param name="display-details" select="'yes'" />
         </xsl:call-template>
         
         <!-- Future events -->
         <xsl:call-template name="fetch-events">
             <xsl:with-param name="wanted-time" select="'future'" />
             <xsl:with-param name="nb-items" select="2" />
-            <xsl:with-param name="display-details" select="'yes'" />
         </xsl:call-template>
     </xsl:template>
     

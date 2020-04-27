@@ -7,11 +7,6 @@
   <xsl:output method="xml" encoding="UTF-8" omit-xml-declaration="yes"
     indent="yes" />
 
-  <!-- $today = current date (given as <html date="...">) -->
-  <xsl:variable name="today">
-    <xsl:value-of select="/buildinfo/@date" />
-  </xsl:variable>
-
   <!-- ============= -->
   <!-- Link handling -->
   <!-- ============= -->
@@ -98,8 +93,9 @@
         </image>
 
         <!-- Event items -->
-        <xsl:for-each select="/buildinfo/document/set/event
-          [translate (@end, '-', '') &gt;= translate ($today, '-', '')]">
+        <xsl:for-each select="/buildinfo/document/set/event[
+            translate(@end, '-', '') &gt;= translate(/buildinfo/@date, '-', '')
+          ]">
           <xsl:sort select="@start" />
           <xsl:if test="position() &lt; 11">
             <xsl:variable name="start"><xsl:value-of select="@start" /></xsl:variable>

@@ -2,7 +2,6 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:import href="fsfe.xsl"/>
-  <xsl:variable name="today" select="/buildinfo/@date"/>
 
 
   <!-- ==================================================================== -->
@@ -11,7 +10,7 @@
 
   <xsl:template match="dynamic-content-news">
     <xsl:for-each select="/buildinfo/document/set/news[
-        translate(@date, '-', '') &lt;= translate($today, '-', '')
+        translate(@date, '-', '') &lt;= translate(/buildinfo/@date, '-', '')
       ]">
       <xsl:sort select="@date" order="descending"/>
       <xsl:if test="position() &lt;= 3">
@@ -159,7 +158,7 @@
 
   <xsl:template match="dynamic-content-events">
     <xsl:for-each select="/buildinfo/document/set/event[
-        translate (@end, '-', '') &gt;= translate ($today, '-', '')
+        translate (@end, '-', '') &gt;= translate (/buildinfo/@date, '-', '')
       ]">
       <xsl:sort select="@start"/>
       <xsl:if test="position() &lt;= 3">

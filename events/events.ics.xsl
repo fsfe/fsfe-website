@@ -71,12 +71,10 @@
 	  <xsl:text>BEGIN:VCALENDAR</xsl:text><xsl:call-template name="nl" />
 	  <xsl:text>VERSION:2.0</xsl:text><xsl:call-template name="nl" />
 	  <xsl:text>PRODID:fsfe.org/events/events.ics.xsl</xsl:text><xsl:call-template name="nl" />
-      <!-- $today = current date (given as <html date="...">) -->
-      <xsl:variable name="today">
-        <xsl:value-of select="/buildinfo/@date" />
-      </xsl:variable>
       <!-- Future events -->
-      <xsl:for-each select="/buildinfo/document/set/event[translate (@start, '-', '') &gt;= translate ($today, '-', '')]">
+      <xsl:for-each select="/buildinfo/document/set/event[
+          translate(@start, '-', '') &gt;= translate(/buildinfo/@date, '-', '')
+        ]">
         <xsl:sort select="@start" order="descending" />
         <xsl:call-template name="event">
           <xsl:with-param name="header">current</xsl:with-param>

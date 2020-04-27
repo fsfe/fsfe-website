@@ -7,14 +7,14 @@
   <xsl:import href="../fsfe.xsl" />
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
 
-  <xsl:variable name="today"><xsl:value-of select="/buildinfo/@date" /></xsl:variable>
-  
   <!--display dynamic list of news items-->
   <xsl:template name="tagged-news" match="tagged-news">
     <xsl:element name="ul">
       <xsl:attribute name="class">tag list</xsl:attribute>
 
-      <xsl:for-each select="/buildinfo/document/set/news[translate(@date, '-', '') &lt;= translate($today, '-', '')]">
+      <xsl:for-each select="/buildinfo/document/set/news[
+          translate(@date, '-', '') &lt;= translate(/buildinfo/@date, '-', '')
+        ]">
         <xsl:sort select="@date" order="descending" />
 
         <xsl:element name="li">

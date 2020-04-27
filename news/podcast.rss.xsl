@@ -16,11 +16,6 @@
 
   <xsl:output method="xml" encoding="utf-8" indent="yes"/>
 
-  <!-- $today = current date (given as <html date="...">) -->
-  <xsl:variable name="today">
-    <xsl:value-of select="/buildinfo/@date" />
-  </xsl:variable>
-
   <!-- ====== -->
   <!-- Months -->
   <!-- ====== -->
@@ -195,7 +190,9 @@
 
 
         <!-- Podcast episodes -->
-        <xsl:for-each select="/buildinfo/document/set/news[translate (@date, '-', '') &lt;= translate ($today, '-', '')]">
+        <xsl:for-each select="/buildinfo/document/set/news[
+            translate(@date, '-', '') &lt;= translate(/buildinfo/@date, '-', '')
+          ]">
           <xsl:sort select="@date" order="descending"/>
           <xsl:element name="item">
 

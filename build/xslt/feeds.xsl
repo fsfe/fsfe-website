@@ -205,39 +205,4 @@
     
   </xsl:template>
 
-  <!-- Show a person's avatar -->
-  <xsl:template name="avatar">
-    <xsl:param name="id" />
-    <xsl:param name="haveavatar" select="'no'" />
-    <xsl:variable name="fullname">
-     <xsl:value-of select="name" />
-    </xsl:variable>
-    <xsl:variable name="img-path">
-        <xsl:choose>
-                  <xsl:when test="$haveavatar='yes'"><xsl:value-of select="concat( '/about/', $id, '/', $id, '-avatar.jpg' )" /></xsl:when>
-                  <xsl:otherwise>/graphics/default-avatar.png</xsl:otherwise>
-        </xsl:choose>
-    </xsl:variable>
-    <xsl:variable name="alt-text">
-     <xsl:choose>
-       <xsl:when test="$haveavatar = 'yes'">
-                  <xsl:value-of select="concat( '[ ', $fullname, ' ]' )" />
-       </xsl:when>
-       <xsl:otherwise>[ <xsl:call-template name="gettext">
-          <xsl:with-param name="id" select="'no-avatar'" />
-         </xsl:call-template> ]</xsl:otherwise>
-     </xsl:choose>
-    </xsl:variable>
-
-    <xsl:element name="img">
-      <xsl:attribute name="src">
-        <xsl:value-of select="$img-path" />
-      </xsl:attribute>
-      <xsl:attribute name="alt">
-        <xsl:value-of select="$alt-text" />
-      </xsl:attribute>
-
-    </xsl:element>
-  </xsl:template>
-
 </xsl:stylesheet>

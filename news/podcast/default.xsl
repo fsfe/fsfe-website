@@ -6,7 +6,6 @@
   exclude-result-prefixes="dt">
  
   <xsl:import href="../../fsfe.xsl" />
-  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
 
   <!-- Podcast audio player for both MP3 and OPUS -->
   <xsl:template match="audio-player">

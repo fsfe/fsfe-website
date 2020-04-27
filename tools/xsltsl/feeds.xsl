@@ -7,7 +7,6 @@
   <xsl:import href="../../build/xslt/gettext.xsl" />
   <xsl:import href="static-elements.xsl" />
   <xsl:import href="date-time.xsl" />
-  <xsl:output method="xml" encoding="utf-8" indent="yes" />
     
   <!-- define content type templates-->
     

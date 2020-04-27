@@ -6,6 +6,5 @@
   exclude-result-prefixes="dt">
  
   <xsl:import href="fsfe.xsl" />
-  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
   
 </xsl:stylesheet> 

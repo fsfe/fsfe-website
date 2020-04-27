@@ -10,8 +10,6 @@
                 exclude-result-prefixes="dt weekdays months nl str">
   <xsl:import href="string.xsl" />
   
-  <xsl:output method="xml" encoding="utf-8" indent="yes" />
-  
   <nl:langs>
     <nl:lang value="en">English</nl:lang>
     <nl:lang value="el">Ελληνικά</nl:lang>

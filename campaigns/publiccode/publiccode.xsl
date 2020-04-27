@@ -5,8 +5,6 @@
   <xsl:import href="../../tools/xsltsl/tagging.xsl" />
   
   <xsl:import href="../../fsfe.xsl" />
-  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
-  
   
   <xsl:template match="fetch-news">
     <xsl:call-template name="fetch-news">

@@ -6,7 +6,6 @@
 
   <xsl:import href="../tools/xsltsl/tagging.xsl" />
   <xsl:import href="../fsfe.xsl" />
-  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
   
   <!-- 
       For documentation on tagging (e.g. fetching news and events), take a

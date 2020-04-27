@@ -3,8 +3,6 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:dt="http://xsltsl.org/date-time">
   <xsl:import href="feeds.xsl" />
 
-  <xsl:output method="xml" encoding="UTF-8" indent="yes" />
-
   <!--display dynamic list of tagged news items-->
 
   <xsl:template name="fetch-news">

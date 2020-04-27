@@ -6,10 +6,6 @@
 
   <xsl:import href="../fsfe.xsl" />
   <xsl:import href="../tools/xsltsl/date-time.xsl" />
-  <xsl:output method="html"
-              encoding="utf-8"
-              indent="yes"
-              doctype-system="about:legacy-compat" />
 
   <!-- in /html/body node, append dynamic content -->
   <xsl:template match="/buildinfo/document/body/include-news">

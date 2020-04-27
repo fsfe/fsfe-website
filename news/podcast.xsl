@@ -6,8 +6,6 @@
   <xsl:import href="../fsfe.xsl" />
   <xsl:import href="news.xsl" />
 
-  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
-
   <xsl:template match="/buildinfo/document/body">
     <xsl:apply-templates />
   </xsl:template>

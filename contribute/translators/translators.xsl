@@ -6,7 +6,6 @@
   
   <xsl:import href="../../tools/xsltsl/people.xsl" />
   <xsl:import href="../../fsfe.xsl" />
-  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
 
   <xsl:template match="translation-coordinators-list">
     <xsl:call-template name="country-people-list">

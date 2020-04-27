@@ -4,7 +4,6 @@
 
   <xsl:import href="../tools/xsltsl/people.xsl" />
   <xsl:import href="../fsfe.xsl" />
-  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
 
   <!--
     For documentation on tagging (e.g. display a people list), take a

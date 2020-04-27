@@ -6,7 +6,6 @@
   
   <xsl:import href="../tools/xsltsl/people.xsl" />
   <xsl:import href="../fsfe.xsl" />
-  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
   
   <xsl:template match="care-team-list">
     <xsl:copy-of select="document('codeofconduct-careteam.en.xml')"/>

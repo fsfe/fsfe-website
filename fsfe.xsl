@@ -6,12 +6,15 @@
   xmlns:str="http://exslt.org/strings"
   extension-element-prefixes="str">
 
-  <xsl:import href="build/xslt/gettext.xsl" />
   <xsl:import href="tools/xsltsl/static-elements.xsl" />
   <xsl:import href="tools/xsltsl/tagging.xsl" />
 
   <xsl:import href="build/xslt/fsfe_head.xsl" />
   <xsl:import href="build/xslt/fsfe_body.xsl" />
+  <xsl:import href="build/xslt/gettext.xsl" />
+
+  <!-- HTML 5 compatibility doctype, since our XSLT parser doesn't support disabling output escaping -->
+  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
 
   <!-- EXTRACT / DESCRIPTION of each page -->
   <xsl:variable name="metadesc">
@@ -69,9 +72,6 @@
 
   <!-- Do not copy non-HTML elements to output -->
   <xsl:include href="build/xslt/fsfe_nolocal.xsl" />
-
-  <!-- HTML 5 compatibility doctype, since our XSLT parser doesn't support disabling output escaping -->
-  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
 
   <!-- Static elements which can be included everywhere -->
   <xsl:template match="static-element">

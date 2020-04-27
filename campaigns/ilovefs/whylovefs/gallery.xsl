@@ -4,8 +4,6 @@
   
   <xsl:import href="../../../fsfe.xsl" />
   
-  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
-  
 <!-- This creates a page containing images of a gallery.
 All pictures are located in a directory and have numbered names (here ilovefs-gallery-thumb-NNN.jpg)
 The generated list will start at the largest number ('to' aka 'max') and end with the smallest ('from' aka 'min) -->

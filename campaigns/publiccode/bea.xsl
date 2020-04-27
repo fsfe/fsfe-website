@@ -3,7 +3,6 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:import href="../../fsfe.xsl" />
   <xsl:import href="../../tools/xsltsl/tagging.xsl" />
-  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
 
   <xsl:template match="sigtable-orgs">
     <xsl:copy-of select="document('sigtable-orgs.en.xml')"/>

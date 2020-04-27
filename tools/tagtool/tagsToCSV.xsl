@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- create a csv file from the aggregated tags files in tags/
-	  
+	
 Usage to find duplicate tags:
 xsltproc tagsToCSV.xsl tags/.tags.en.xml |sort
 /-->

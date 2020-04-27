@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:template name="footer_sourcelink">
     <xsl:element name="section">
       <xsl:attribute name="id">source</xsl:attribute>
-  
+
       <!-- "Last changed" magic -->
       <p>
         <xsl:variable name="timestamp">
@@ -25,7 +25,7 @@
           (<xsl:value-of select="$Author"/>)
         </xsl:if>
       </p>
-  
+
       <ul><li>
         <!-- Link to the XHTML source -->
         <xsl:element name="a">
@@ -46,7 +46,7 @@
           <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'contribute-web'" /></xsl:call-template>
         </xsl:element>
       </li></ul>
-  
+
       <p>
         <xsl:element name="a">
           <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/contribute/translators/</xsl:attribute>
@@ -77,7 +77,7 @@
           <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'translator3c'" /></xsl:call-template>
         </xsl:if>
       </p>
-  
+
     </xsl:element>
     <!--/section#source-->
   </xsl:template>

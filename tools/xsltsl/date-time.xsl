@@ -691,7 +691,7 @@
 
     <xsl:choose>
       <xsl:when test="$month = 2">
-        <xsl:choose> 
+        <xsl:choose>
           <xsl:when test="($year mod 4) = 0 and (($year mod 400) = 0
                           or ($year mod 100) != 0)">29</xsl:when>
           <xsl:otherwise>28</xsl:otherwise>
@@ -818,7 +818,7 @@
 
   <xsl:template name="dt:get-month-name">
     <xsl:param name="month"/>
-    
+
     <xsl:choose>
       <xsl:when test="$month = 1">January</xsl:when>
       <xsl:when test="$month = 2">February</xsl:when>
@@ -1087,7 +1087,7 @@
       </xsl:when>
       <xsl:when test='starts-with($monToUpper,"APR")'>
 	<xsl:value-of select='4'/>
-      </xsl:when>      
+      </xsl:when>
       <xsl:when test='starts-with($monToUpper,"MAY")'>
 	<xsl:value-of select='5'/>
       </xsl:when>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!-- XSL stylesheet for generation RSS feeds.  It's currently using RSS 2.0. -->
 
@@ -73,11 +73,11 @@
   <!-- ============ -->
   <!-- Main routine -->
   <!-- ============ -->
-  
+
   <xsl:template match="/buildinfo">
     <xsl:apply-templates select="document" />
   </xsl:template>
-  
+
   <xsl:template match="/buildinfo/document">
     <!-- Language -->
     <xsl:variable name="lang">
@@ -103,13 +103,13 @@
           <height>31</height>
           <link>http://fsfe.org/news/</link>
         </image>
-        
+
         <xsl:element name="atom:link">
           <xsl:attribute name="href">http://fsfe.org/news/news.<xsl:value-of select="$lang"/>.rss</xsl:attribute>
           <xsl:attribute name="rel">self</xsl:attribute>
           <xsl:attribute name="type">application/rss+xml</xsl:attribute>
         </xsl:element>
-        
+
         <!-- News items -->
         <xsl:for-each select="/buildinfo/document/set/news[
             translate(@date, '-', '') &lt;= translate(/buildinfo/@date, '-', '')
@@ -117,15 +117,15 @@
           <xsl:sort select="@date" order="descending"/>
           <xsl:if test="position() &lt; 11">
             <xsl:element name="item">
-              
+
               <!-- guid -->
               <xsl:element name="guid">
                 <xsl:attribute name="isPermaLink">false</xsl:attribute>
                 <xsl:value-of select="@filename"/>
               </xsl:element>
-              
-              
-              
+
+
+
               <!-- Title -->
               <xsl:element name="title">
                 <xsl:value-of select="title"/>
@@ -136,7 +136,7 @@
                 <xsl:copy-of select="normalize-space(body)"/>
                 <xsl:text>Support FSFE: https://my.fsfe.org/support</xsl:text>
               </xsl:element>
-              
+
               <!-- News body -->
               <xsl:element name="content:encoded">
                 <xsl:text disable-output-escaping="yes">&lt;![CDATA[</xsl:text>
@@ -148,17 +148,17 @@
                     <xsl:copy-of select="normalize-space(body)"/>
                   </xsl:otherwise>
                 </xsl:choose>
-                
+
                 <xsl:element name="p">
                   <xsl:element name="a">
                     <xsl:attribute name="href">https://my.fsfe.org/support</xsl:attribute>
                     <xsl:text>Support FSFE</xsl:text>
                   </xsl:element>
                 </xsl:element>
-                
+
                 <xsl:text disable-output-escaping="yes">]]&gt;</xsl:text>
               </xsl:element>
-              
+
               <!-- Link -->
               <xsl:if test="link != ''">
                 <xsl:variable name="link">
@@ -192,11 +192,11 @@
       </channel>
     </rss>
   </xsl:template>
-  
+
   <!-- take care that links within <content:encoded> are not relative -->
   <xsl:template match="a">
     <xsl:element name="a">
-      
+
       <xsl:attribute name="href">
         <xsl:choose>
           <xsl:when test="substring(@href,1,1) = '/'">
@@ -208,19 +208,19 @@
           </xsl:otherwise>
         </xsl:choose>
       </xsl:attribute>
-      
+
       <xsl:value-of select="." />
-      
+
     </xsl:element>
   </xsl:template>
-  
+
   <!-- remove newsteaser from <p> -->
   <xsl:template match="p">
     <xsl:copy>
       <xsl:apply-templates select="node()" />
     </xsl:copy>
   </xsl:template>
-  
+
   <!-- as well as images -->
   <xsl:template match="img">
     <xsl:element name="img">
@@ -237,8 +237,8 @@
       </xsl:attribute>
     </xsl:element>
   </xsl:template>
-  
+
   <!-- Do not copy <body-complete> to output at all -->
   <xsl:template match="body-complete"/>
-  
+
 </xsl:stylesheet>

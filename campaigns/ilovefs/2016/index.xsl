@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  
   <xsl:import href="../../../fsfe.xsl" />
-  
+
   <xsl:template match="fetch-news">
     <xsl:call-template name="fetch-news">
       <xsl:with-param name="nb-items" select="5"/>
@@ -11,11 +10,11 @@
   </xsl:template>
 
   <!-- This creates looping pictures in a box. All pictures are located in a directory and have numbered names (here ilovefs-gallery-thumb-NNN.jpg) -->
-  <xsl:template match="picture-box">    
+  <xsl:template match="picture-box">
     <!-- appears once when <picture-box /> is called -->
     <xsl:variable name="from"><xsl:value-of select="@from"/></xsl:variable>
     <xsl:variable name="to"><xsl:value-of select="@to"/></xsl:variable>
-    
+
     <div id="picture-box" style="height:225px;"> <!-- change to height of pictures -->
       <div id="picture-box-inner" class="logo-list quote">
         <a href="http://download.fsfe.org/campaigns/ilovefs/gallery/ilovefs-gallery-1.jpg">
@@ -29,7 +28,7 @@
         </a>
       </div> <!-- /picture-box-inner -->
     </div> <!-- /picture-box -->
-    
+
     <script type="text/javascript">
       /* &lt;![CDATA[ */
       var quotes = [
@@ -40,7 +39,7 @@
       </xsl:call-template>
       <!-- and here again the one-time content -->
       ];
-      
+
       <![CDATA[
       var index = Math.floor(Math.random()*quotes.length);
       function changeImage() {
@@ -53,12 +52,12 @@
         index = (index+1)%quotes.length;
         setTimeout("changeImage();",5000);
       }
-      
+
       changeImage();
       ]]>
-      
+
       /* ]]&gt; */
-      
+
     </script>
   </xsl:template>
 
@@ -79,5 +78,5 @@
     </xsl:if>
   </xsl:template>
   <!-- / picture-box -->
-  
+
 </xsl:stylesheet>

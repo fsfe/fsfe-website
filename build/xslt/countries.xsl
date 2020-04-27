@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
+
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <!-- showing a dropdown select menu with all countries in /tools/countries.**.xml -->
@@ -8,13 +9,13 @@
     <xsl:element name="select">
       <xsl:attribute name="id">country</xsl:attribute>
       <xsl:attribute name="name">country</xsl:attribute>
-      <!-- if called with a "class" value, set it as the CSS class --> 
+      <!-- if called with a "class" value, set it as the CSS class -->
       <xsl:choose>
         <xsl:when test="$class != ''">
           <xsl:attribute name="class"><xsl:value-of select="$class" /></xsl:attribute>
         </xsl:when>
       </xsl:choose>
-      <!-- when called with the required="yes" param, add the attribute 
+      <!-- when called with the required="yes" param, add the attribute
       and an empty option -->
       <xsl:choose>
         <xsl:when test="$required = 'yes'">
@@ -35,6 +36,6 @@
       </xsl:for-each>
     </xsl:element> <!-- /select -->
   </xsl:template>
-  
+
 </xsl:stylesheet>
 

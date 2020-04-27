@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  
   <xsl:import href="../../fsfe.xsl" />
-  
+
   <xsl:template match="fetch-news">
     <xsl:call-template name="fetch-news">
       <xsl:with-param name="nb-items" select="5"/>
     </xsl:call-template>
   </xsl:template>
-  
+
   <!-- How to show a link -->
   <xsl:template match="/buildinfo/document/set/news/link">
     <xsl:element name="a">
@@ -21,5 +20,5 @@
       <xsl:text>]</xsl:text>
     </xsl:element>
   </xsl:template>
-  
+
 </xsl:stylesheet>

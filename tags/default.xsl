@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<xsl:stylesheet version="1.0"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:dt="http://xsltsl.org/date-time">
-  
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:import href="../fsfe.xsl" />
 
   <!--display dynamic list of news items-->
@@ -26,7 +23,7 @@
       </xsl:for-each>
     </xsl:element>
   </xsl:template>
-  
+
   <!--display dynamic list of event items-->
   <xsl:template name="tagged-events" match="tagged-events">
     <xsl:element name="ul">

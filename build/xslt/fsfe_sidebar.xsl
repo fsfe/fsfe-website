@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  
+
   <xsl:template name="sidebar">
     <aside id="sidebar">
       <xsl:if test="string(/buildinfo/document/@newsdate) and /buildinfo/document/@type = 'newsletter'">
@@ -32,7 +32,7 @@
             </xsl:call-template></a></li>
         </ul>
       </xsl:if>
-  
+
       <xsl:if test="string(/buildinfo/document/@newsdate) and count(/buildinfo/document/@type) = 0">
         <h3><xsl:call-template name="fsfe-gettext">
           <xsl:with-param name="id" select="'fsfe/press'" />
@@ -52,9 +52,9 @@
             </xsl:call-template></a></li>
         </ul>
       </xsl:if>
-  
+
       <xsl:apply-templates select="/buildinfo/document/sidebar/node()" />
-  
+
       <xsl:if test="string(/buildinfo/document/@newsdate)">
         <a href="https://my.fsfe.org/support" class="small-donate">
           <xsl:call-template name="fsfe-gettext">

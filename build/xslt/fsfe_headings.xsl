@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <!-- Modify H1 -->
   <xsl:template match="h1">
-    
+
     <!-- Apply news page PRE-rules -->
     <xsl:if test="string(/buildinfo/document/@newsdate) and
                     (not(string(/buildinfo/document/@type)) or
                     /buildinfo/document/@type != 'newsletter' and
                     /buildinfo/document/@type != 'podcast')">
-      
+
       <!-- add link to press/press.xx.html -->
       <xsl:element name="p">
         <xsl:attribute name="id">category</xsl:attribute>
@@ -20,7 +20,7 @@
         </xsl:element>
       </xsl:element>
     </xsl:if>
-    
+
     <!-- Apply newsletter page PRE-rules -->
     <xsl:if test="string(/buildinfo/document/@newsdate) and /buildinfo/document/@type = 'newsletter'">
       <xsl:element name="p">
@@ -31,7 +31,7 @@
         </xsl:element>
       </xsl:element>
     </xsl:if>
-    
+
     <!-- Apply podcast page PRE-rules -->
     <xsl:if test="string(/buildinfo/document/@newsdate) and /buildinfo/document/@type = 'podcast'">
       <xsl:element name="p">
@@ -45,7 +45,7 @@
 
     <!-- auto generate ID for headings if it doesn't already exist -->
     <xsl:call-template name="generate-id" />
-    
+
     <!-- Apply news page rules -->
     <xsl:if test="string(/buildinfo/document/@newsdate) and
                     (not(string(/buildinfo/document/@type)) or
@@ -60,7 +60,7 @@
           <xsl:value-of select="/buildinfo/document/@newsdate" />
         </xsl:element>
       </xsl:element>
-      
+
     </xsl:if>
     <!-- End apply news page rules -->
 
@@ -76,59 +76,59 @@
     <xsl:if test = "string(/buildinfo/document/head/meta[@name='author-name-1']/@content)">
       <xsl:element name="div">
         <xsl:attribute name="id">article-metadata</xsl:attribute>
-        
+
         <xsl:if test = "string(/buildinfo/document/head/meta[@name='author-name-1']/@content)">
           <span class="written-by"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'author'" /></xsl:call-template>: </span>
           <xsl:choose>
             <xsl:when test="/buildinfo/document/head/meta[@name='author-link-1']">
               <xsl:variable name="author-link-1" select="/buildinfo/document/head/meta[@name='author-link-1']/@content" />
               <a  class="p-author" rel='author' href='{$author-link-1}'>
-              <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name-1']/@content" /> </a> 
+              <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name-1']/@content" /> </a>
             </xsl:when>
             <xsl:otherwise>
-              <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name-1']/@content" /> 
+              <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name-1']/@content" />
             </xsl:otherwise>
           </xsl:choose>
         </xsl:if>
-    
+
         <xsl:if test = "string(/buildinfo/document/head/meta[@name='author-name-2']/@content)">
           <xsl:choose>
             <xsl:when test="/buildinfo/document/head/meta[@name='author-link-2']">
               <xsl:variable name="author-link-2" select="/buildinfo/document/head/meta[@name='author-link-2']/@content" />
               , <a  class="p-author" rel='author' href='{$author-link-2}'>
-              <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name-2']/@content" /> </a> 
+              <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name-2']/@content" /> </a>
             </xsl:when>
             <xsl:otherwise>
-              , <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name-2']/@content" /> 
+              , <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name-2']/@content" />
             </xsl:otherwise>
           </xsl:choose>
         </xsl:if>
-        
+
         <xsl:if test = "string(/buildinfo/document/head/meta[@name='author-name-3']/@content)">
           <xsl:choose>
             <xsl:when test="/buildinfo/document/head/meta[@name='author-link-3']">
               <xsl:variable name="author-link-3" select="/buildinfo/document/head/meta[@name='author-link-3']/@content" />
               , <a class="p-author" rel='author' href='{$author-link-3}'>
-              <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name-3']/@content" /> </a> 
+              <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name-3']/@content" /> </a>
             </xsl:when>
             <xsl:otherwise>
-              , <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name-3']/@content" /> 
+              , <xsl:value-of select="/buildinfo/document/head/meta[@name='author-name-3']/@content" />
             </xsl:otherwise>
           </xsl:choose>
         </xsl:if>
-    
+
         <span class="published-on">&#160;<xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'published'" /></xsl:call-template>: </span>
         <xsl:element name="time">
           <xsl:attribute name="class">dt-published</xsl:attribute>
           <xsl:value-of select="/buildinfo/document/head/meta[@name='publication-date']/@content" />
         </xsl:element>
-        
+
         <xsl:if test = "string(/buildinfo/document/head/meta[@name='pdf-link']/@content)">
           <span class="pdf-download">&#160;PDF: </span>
           <xsl:variable name="pdf-link" select="/buildinfo/document/head/meta[@name='pdf-link']/@content" />
           <a href='{$pdf-link}'>download</a>
         </xsl:if>
-        
+
       </xsl:element> <!-- </div> -->
     </xsl:if>
     <!-- End Apply article rules -->
@@ -140,15 +140,15 @@
 
         <xsl:if test="/buildinfo/document/author">
             <span class="written-by"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'writtenby'" /></xsl:call-template>&#160;</span>
-            
+
           <xsl:for-each select="/buildinfo/document/author">
               <xsl:variable name="id">
                 <xsl:value-of select="@id" />
               </xsl:variable>
 
-              <xsl:choose>    
+              <xsl:choose>
                   <xsl:when test="@id and document('../../about/people/people.en.xml')/personset/person[@id=$id]">
-                  <!-- if the author is in fsfe's people.xml then we take information from there --> 
+                  <!-- if the author is in fsfe's people.xml then we take information from there -->
                     <xsl:choose>
                       <!-- person has a link -->
                       <xsl:when test="document('../../about/people/people.en.xml')/personset/person[@id=$id]/link">
@@ -212,7 +212,7 @@
                     </xsl:choose>
                   </xsl:otherwise>
               </xsl:choose>
-              
+
               <!-- choose whether to put a comma or an "and" between authors -->
               <xsl:choose>
                 <!-- second-last author and not first author -->
@@ -232,20 +232,20 @@
                   <xsl:text> </xsl:text>
                 </xsl:otherwise>
               </xsl:choose>
-            
+
           </xsl:for-each>
     </xsl:if>
-    
+
     <!-- only show date if <date> exists (not news entries for example) -->
     <xsl:if test="/buildinfo/document/date">
-        <span class="published-on"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'published'" /></xsl:call-template>&#160;</span> 
+        <span class="published-on"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'published'" /></xsl:call-template>&#160;</span>
         <xsl:element name="time">
           <xsl:attribute name="class">dt-published</xsl:attribute>
           <xsl:value-of select="/buildinfo/document/date/original/@content" />
         </xsl:element>&#160;
         <xsl:if test="/buildinfo/document/date/revision">
                 (<span class="revision-on"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'revision'" /></xsl:call-template></span>
-          <xsl:for-each select="/buildinfo/document/date/revision">                
+          <xsl:for-each select="/buildinfo/document/date/revision">
             &#160;<xsl:element name="time">
               <xsl:attribute name="class">dt-updated</xsl:attribute>
               <xsl:value-of select="@content" />
@@ -253,7 +253,7 @@
           </xsl:for-each>)&#160;
         </xsl:if>
     </xsl:if>
-    
+
     <xsl:if test="/buildinfo/document/download">
         <xsl:element name="br" />
         <span class="download"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'download'" /></xsl:call-template>:&#160;</span>
@@ -262,44 +262,44 @@
                 <xsl:value-of select="/buildinfo/document/download/@type" />
         </xsl:element>
     </xsl:if>
-    
+
       </xsl:element>
     </xsl:if>
     <!--End Article authors, date-->
-         
+
   </xsl:template>
-  <!-- End modifications to H1 --> 
-  
+  <!-- End modifications to H1 -->
+
   <!-- Modify H2 -->
   <xsl:template match="h2">
     <!-- auto generate ID for headings if it doesn't already exist -->
     <xsl:call-template name="generate-id" />
   </xsl:template>
-  
+
   <!-- Modify H3 -->
   <xsl:template match="h3">
     <!-- auto generate ID for headings if it doesn't already exist -->
     <xsl:call-template name="generate-id" />
   </xsl:template>
-  
+
   <!-- Modify H4 -->
   <xsl:template match="h4">
     <!-- auto generate ID for headings if it doesn't already exist -->
     <xsl:call-template name="generate-id" />
   </xsl:template>
-  
+
   <!-- Modify H4 -->
   <xsl:template match="h4">
     <!-- auto generate ID for headings if it doesn't already exist -->
     <xsl:call-template name="generate-id" />
   </xsl:template>
-  
+
   <!-- Modify H5 -->
   <xsl:template match="h5">
     <!-- auto generate ID for headings if it doesn't already exist -->
     <xsl:call-template name="generate-id" />
   </xsl:template>
-  
+
   <!-- Modify H6 -->
   <xsl:template match="h6">
     <!-- auto generate ID for headings if it doesn't already exist -->

@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<xsl:stylesheet version="1.0"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-  xmlns:dt="http://xsltsl.org/date-time">
-  
-  <xsl:import href="../build/xslt/people.xsl" />
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:import href="../fsfe.xsl" />
+  <xsl:import href="../build/xslt/people.xsl" />
 
-  <!-- To localise this page to a new country, copy this file and change the following:
-  
-    # <xsl:variable name="country-code">de</xsl:variable> -> change xx to your country code
-    
-    For more information, take a look at the documentation at
-        http://fsfe.org/contribute/web/tagging.html
-    
-  -->
-  
   <xsl:variable name="country-code">at</xsl:variable>
-  
+
   <!--display labels-->
 
   <!--translated word "news"-->
@@ -54,14 +42,14 @@
       <xsl:with-param name="id" select="'team'" />
     </xsl:call-template>
   </xsl:template>
-  
+
   <!--define contact information-->
-  
+
   <xsl:template match="contact-details">
     <xsl:for-each select="/buildinfo/document/set/contact">
 
     <xsl:if test="@id = 'DE'">
-  
+
   <!-- Email -->
     <xsl:if test="email != ''">
       <xsl:element name="p">
@@ -76,12 +64,12 @@
         </xsl:element>
       </xsl:element>
     </xsl:if>
-  
+
   <!-- Address -->
     <xsl:if test="address != ''">
      <xsl:apply-templates select="address"/>
     </xsl:if>
-  
+
   <!-- Phone -->
     <xsl:if test="phone != ''">
       <xsl:element name="p">
@@ -102,28 +90,28 @@
     </xsl:if>
     </xsl:for-each>
   </xsl:template>
-  
+
   <!--define dynamic list of country news items-->
     <xsl:template match="country-news">
         <xsl:call-template name="fetch-news">
             <xsl:with-param name="nb-items" select="3" />
         </xsl:call-template>
     </xsl:template>
-    
+
     <!--define dynamic list of country event items-->
     <xsl:template match="country-events">
         <!-- Current events -->
         <xsl:call-template name="fetch-events">
             <xsl:with-param name="wanted-time" select="'present'" />
         </xsl:call-template>
-        
+
         <!-- Future events -->
         <xsl:call-template name="fetch-events">
             <xsl:with-param name="wanted-time" select="'future'" />
             <xsl:with-param name="nb-items" select="3" />
         </xsl:call-template>
     </xsl:template>
-    
+
     <!--define dynamic list of country team members-->
     <xsl:template match="country-team-list">
         <xsl:call-template name="country-people-list">

@@ -6,5 +6,5 @@
   <xsl:template match="sigtable">
     <xsl:copy-of select="document('sigtable.en.xml')"/>
   </xsl:template>
-  
+
 </xsl:stylesheet>

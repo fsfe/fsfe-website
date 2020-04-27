@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  
   <xsl:import href="../fsfe.xsl" />
   <xsl:import href="../build/xslt/static-elements.xsl" />
 
@@ -22,17 +21,17 @@
       </p>
     </xsl:for-each>
   </xsl:template>
-  
+
   <!--translated sentence "receive-newsletter"-->
   <xsl:template match="receive-newsletter">
     <xsl:call-template name="gettext">
       <xsl:with-param name="id" select="'receive-newsletter'" />
     </xsl:call-template>
   </xsl:template>
-  
+
   <xsl:template match="subscribe-nl">
     <xsl:call-template name="subscribe-nl" />
   </xsl:template>
-  
+
 </xsl:stylesheet>
 

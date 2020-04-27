@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -9,7 +9,7 @@
                 xmlns:str='http://xsltsl.org/string'
                 exclude-result-prefixes="dt weekdays months nl str">
   <xsl:import href="../../tools/xsltsl/string.xsl" />
-  
+
   <nl:langs>
     <nl:lang value="en">English</nl:lang>
     <nl:lang value="el">Ελληνικά</nl:lang>
@@ -65,27 +65,27 @@
       <input id="submit" type="submit" value="{$submit}"/>
     </form>
   </xsl:template>
-  
+
   <!-- auto generate ID for headings if doesn't already exist -->
   <xsl:template name="generate-id">
     <xsl:copy>
       <xsl:call-template name="generate-id-attribute" />
-      
+
       <xsl:if test="@class">
           <xsl:attribute name="class">
             <xsl:value-of select="@class" />
-          </xsl:attribute>      
+          </xsl:attribute>
       </xsl:if>
-        
+
       <xsl:apply-templates select="node()"/>
-  
+
     </xsl:copy>
   </xsl:template>
-  
-  
+
+
   <xsl:template name="generate-id-attribute">
     <xsl:param name="title" select="''" />
-    
+
     <xsl:variable name="title2">
       <xsl:choose>
         <xsl:when test="normalize-space($title)=''">
@@ -96,22 +96,22 @@
         </xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
-    
+
     <xsl:choose>
       <xsl:when test="not(@id) or normalize-space($title)!=''">
         <!-- replace spaces with dashes -->
         <xsl:variable name="punctuation">.,:;!?&#160;&quot;'()[]&lt;&gt;>{}</xsl:variable>
         <xsl:variable name="formattedTitle1" select="translate(normalize-space(translate($title2,$punctuation,' ')),' ','-')"/>
-        
+
         <xsl:variable   name="accents">áàâäãéèêëíìîïóòôöõúùûüçğ</xsl:variable>
         <xsl:variable name="noaccents">aaaaaeeeeiiiiooooouuuucg</xsl:variable>
-        
+
         <xsl:variable name="formattedTitle2">
           <xsl:call-template name="str:to-lower">
             <xsl:with-param name="text" select="$formattedTitle1" />
           </xsl:call-template>
         </xsl:variable>
-        
+
         <xsl:attribute name="id">
           <xsl:value-of select="concat('id-',translate($formattedTitle2,$accents,$noaccents))" />
         </xsl:attribute>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!-- XSL stylesheet for generating RSS feeds. We use RSS 0.91 for now -->
 

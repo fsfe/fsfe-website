@@ -1,17 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-
-  <xsl:import href="../build/xslt/people.xsl" />
   <xsl:import href="../fsfe.xsl" />
-
-  <!--
-    For documentation on tagging (e.g. display a people list), take a
-    look at the documentation under
-      /tools/xsltsl/documentation-tagging.txt
-  -->
+  <xsl:import href="../build/xslt/people.xsl" />
 
   <!-- Fill dynamic content -->
+
   <!-- All people with council tag -->
   <xsl:template match="council-members">
     <xsl:call-template name="country-people-list">

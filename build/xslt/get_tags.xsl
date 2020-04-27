@@ -21,7 +21,7 @@
     <!-- Append a newline -->
     <xsl:text>&#xa;</xsl:text>
   </xsl:template>
-  
+
   <!-- Suppress output of text nodes, which would be the default -->
   <xsl:template match="text()"/>
 </xsl:stylesheet>

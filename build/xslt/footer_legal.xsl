@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:template name="footer_legal">
     <xsl:element name="section">
       <xsl:attribute name="id">legal-info</xsl:attribute>
-  
+
       <p>Copyright © 2001-2020 <xsl:element name="a">
         <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/</xsl:attribute>
         <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfeurope'" /></xsl:call-template>

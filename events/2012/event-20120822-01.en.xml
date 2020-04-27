@@ -12,11 +12,11 @@ On August 22, Hugo Roy will be at Campus Party talking about " Why Free Software
     </body>
     <page>http://www.campus-party.eu/</page>
     <tags>
-      <tag>campus party</tag>
-      <tag>Berlin</tag>
+      <tag key="campus-party"/>
+      <tag key="berlin"/>
 
-      <tag>De</tag>
-      <tag>front-page</tag>
+      <tag key="de"/>
+      <tag key="front-page"/>
     </tags>
   </event>
 </eventset>

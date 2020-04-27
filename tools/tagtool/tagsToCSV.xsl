@@ -13,6 +13,6 @@ xsltproc tagsToCSV.xsl tags/.tags.en.xml |sort
               doctype-system="about:legacy-compat" />
   <xsl:template match="/">action;name;id;section;count
 <xsl:for-each select="tagset/tag">
-;<xsl:value-of select='.'/>;<xsl:value-of select='@name'/>;<xsl:value-of select='@section'/>;<xsl:value-of select='@count'/></xsl:for-each>;
+;<xsl:value-of select='.'/>;<xsl:value-of select='@key'/>;<xsl:value-of select='@section'/>;<xsl:value-of select='@count'/></xsl:for-each>;
  </xsl:template>
 </xsl:stylesheet>

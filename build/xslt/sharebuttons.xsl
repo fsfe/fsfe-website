@@ -12,8 +12,8 @@
     </xsl:variable>
     <!-- article URL -->
     <xsl:variable name="share-url">
-      <xsl:text>https:</xsl:text>
-      <xsl:value-of select="$linkresources"/><xsl:value-of select="/buildinfo/@filename"/>
+      <xsl:text>https://fsfe.org</xsl:text>
+      <xsl:value-of select="/buildinfo/@filename"/>
       <xsl:text>.html</xsl:text>
     </xsl:variable>
 

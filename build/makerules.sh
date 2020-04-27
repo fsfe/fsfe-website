@@ -1,13 +1,12 @@
 #!/usr/bin/env bash
 
 inc_makerules=true
-[ -z "$inc_languages" ] && . "$basedir/build/languages.sh"
 
 tree_maker(){
   # walk through file tree and issue Make rules according to file type
   input="$(realpath "$1")"
   output="$(realpath "$2")"
-  languages=$(get_languages)
+  languages="$(ls -xw0 "${basedir}/global/languages")"
 
   cat <<EOF
 # -----------------------------------------------------------------------------
@@ -18,7 +17,7 @@ tree_maker(){
 .DELETE_ON_ERROR:
 .SECONDEXPANSION:
 PROCESSOR = "$basedir/build/process_file.sh"
-PROCFLAGS = --build-env "${build_env:-development}" --source "$basedir" --statusdir "$statusdir" --domain "$domain"
+PROCFLAGS = --build-env "${build_env:-development}" --source "$basedir" --domain "$domain"
 INPUTDIR = $input
 OUTPUTDIR = $output
 STATUSDIR = $statusdir
@@ -193,6 +192,7 @@ EOF
 COPY_SRC_FILES := \$(shell find "\$(INPUTDIR)" -type f \
   -not -path '\$(INPUTDIR)/.git/*' \
   -not -path '\$(INPUTDIR)/build/*' \
+  -not -path '\$(INPUTDIR)/global/*' \
   -not -path '\$(INPUTDIR)/tools/*' \
   -not -name '.drone.yml' \
   -not -name '.gitignore' \

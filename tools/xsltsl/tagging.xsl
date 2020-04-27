@@ -9,7 +9,6 @@
   <!--display dynamic list of tagged news items-->
 
   <xsl:template name="fetch-news">
-    <xsl:param name="tag" select="''"/>
     <xsl:param name="today" select="/buildinfo/@date" />
     <xsl:param name="nb-items" select="''" />
     <xsl:param name="display-year" select="'yes'" />
@@ -18,8 +17,8 @@
     <xsl:param name="sidebar" select="'no'" />
 
     <xsl:for-each select="/buildinfo/document/set/news[
-      translate(@date, '-', '') &lt;= translate($today, '-', '')
-      and ($tag = '' or tags/tag[@key] = $tag or tags/tag = $tag)]">
+        translate(@date, '-', '') &lt;= translate($today, '-', '')
+      ]">
       <xsl:sort select="@date" order="descending" />
 
       <xsl:if test="$nb-items = '' or position() &lt;= $nb-items">
@@ -36,7 +35,6 @@
   <!--display dynamic list of tagged event items-->
 
   <xsl:template name="fetch-events">
-    <xsl:param name="tag" select="''"/>
     <xsl:param name="today" select="/buildinfo/@date" />
     <xsl:param name="wanted-time" select="future" /> <!-- value in {"past", "present", "future"} -->
     <xsl:param name="header" select="''" />
@@ -47,9 +45,8 @@
 
     <xsl:choose> <xsl:when test="$wanted-time = 'past'">
       <!-- Past events -->
-      <xsl:for-each select="/buildinfo/document/set/event
-        [translate (@end, '-', '') &lt; translate ($today, '-', '')
-         and (tags/tag = $tag or $tag='')
+      <xsl:for-each select="/buildinfo/document/set/event[
+          translate (@end, '-', '') &lt; translate ($today, '-', '')
         ]">
         <xsl:sort select="@end" order="descending" />
         <xsl:if test="position() &lt;= $nb-items or $nb-items=''">
@@ -64,10 +61,9 @@
 
     </xsl:when> <xsl:when test="$wanted-time = 'present'">
       <!-- Current events -->
-      <xsl:for-each select="/buildinfo/document/set/event
-        [translate (@start, '-', '') &lt;= translate ($today, '-', '')
-         and translate (@end,   '-', '') &gt;= translate ($today, '-', '')
-         and (tags/tag = $tag or $tag='')
+      <xsl:for-each select="/buildinfo/document/set/event[
+          translate (@start, '-', '') &lt;= translate ($today, '-', '')
+          and translate (@end,   '-', '') &gt;= translate ($today, '-', '')
         ]">
         <xsl:sort select="@start" order="descending" />
         <xsl:if test="position() &lt;= $nb-items or $nb-items=''">
@@ -82,9 +78,8 @@
 
     </xsl:when> <xsl:otherwise> <!-- if we were not told what to do, display future events -->
       <!-- Future events -->
-      <xsl:for-each select="/buildinfo/document/set/event
-        [translate (@start, '-', '') &gt; translate ($today, '-', '')
-         and (tags/tag = $tag or $tag='')
+      <xsl:for-each select="/buildinfo/document/set/event[
+          translate (@start, '-', '') &gt; translate ($today, '-', '')
         ]">
         <xsl:sort select="@start" />
         <xsl:if test="position() &lt;= $nb-items or $nb-items=''">

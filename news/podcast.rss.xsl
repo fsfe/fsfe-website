@@ -82,11 +82,11 @@
   <!-- ============ -->
   <!-- Main routine -->
   <!-- ============ -->
-  
+
   <xsl:template match="/buildinfo">
     <xsl:apply-templates select="document" />
   </xsl:template>
-  
+
   <xsl:template match="/buildinfo/document">
 
     <!-- param audioformat mp3 or opus (or none), set variable $format and $alternateformat -->
@@ -193,12 +193,12 @@
         <itunes:block>false</itunes:block>
         <itunes:explicit>false</itunes:explicit>
 
-        
+
         <!-- Podcast episodes -->
         <xsl:for-each select="/buildinfo/document/set/news[translate (@date, '-', '') &lt;= translate ($today, '-', '')]">
           <xsl:sort select="@date" order="descending"/>
           <xsl:element name="item">
-            
+
             <!-- Title -->
             <xsl:element name="title">
               <xsl:value-of select="title"/>
@@ -216,7 +216,7 @@
               <xsl:copy-of select="normalize-space(body)"/>
               <xsl:text> Join the FSFE community and support the podcast: https://my.fsfe.org/support?referrer=podcast</xsl:text>
             </xsl:element>
-            
+
             <!-- Podcast body -->
             <xsl:element name="content:encoded">
               <xsl:text disable-output-escaping="yes">&lt;![CDATA[</xsl:text>
@@ -244,17 +244,17 @@
                   </xsl:element>
                 </xsl:element>
               </xsl:if>
-              
+
               <xsl:element name="p">
                 <xsl:element name="a">
                   <xsl:attribute name="href">https://my.fsfe.org/support?referrer=podcast</xsl:attribute>
                   <xsl:text>Join the FSFE community and support the podcast</xsl:text>
                 </xsl:element>
               </xsl:element>
-              
+
               <xsl:text disable-output-escaping="yes">]]&gt;</xsl:text>
             </xsl:element>
-            
+
             <!-- Link and GUID -->
             <xsl:if test="link != ''">
               <xsl:variable name="link">
@@ -289,7 +289,16 @@
             <itunes:author>Free Software Foundation Europe (FSFE)</itunes:author>
             <itunes:explicit>false</itunes:explicit>
             <itunes:block>false</itunes:block>
-            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:episodeType>
+              <xsl:choose>
+                <xsl:when test="podcast/type != ''">
+                  <xsl:value-of select="podcast/type" />
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:text>full</xsl:text>
+                </xsl:otherwise>
+              </xsl:choose>
+            </itunes:episodeType>
 
             <!-- Episode subtitle -->
             <xsl:element name="itunes:subtitle">
@@ -302,9 +311,11 @@
             </xsl:element>
 
             <!-- Episode number -->
-            <xsl:element name="itunes:episode">
-              <xsl:value-of select="podcast/episode"/>
-            </xsl:element>
+            <xsl:if test="podcast/episode != ''">
+              <xsl:element name="itunes:episode">
+                <xsl:value-of select="podcast/episode"/>
+              </xsl:element>
+            </xsl:if>
 
             <!-- Enclosure (audio file path) -->
             <xsl:element name="enclosure">
@@ -337,11 +348,11 @@
       </channel>
     </rss>
   </xsl:template>
-  
+
   <!-- take care that links within <content:encoded> are not relative -->
   <xsl:template match="a">
     <xsl:element name="a">
-      
+
       <xsl:attribute name="href">
         <xsl:choose>
           <xsl:when test="substring(@href,1,1) = '/'">
@@ -353,9 +364,9 @@
           </xsl:otherwise>
         </xsl:choose>
       </xsl:attribute>
-      
+
       <xsl:value-of select="." />
-      
+
     </xsl:element>
   </xsl:template>
   <!-- as well as images -->
@@ -387,8 +398,8 @@
       <xsl:apply-templates select="node()"/>
     </xsl:copy>
   </xsl:template>
-  
+
   <!-- Do not copy <body-complete> to output at all -->
   <xsl:template match="body-complete"/>
-  
+
 </xsl:stylesheet>

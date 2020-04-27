@@ -14,14 +14,14 @@
   </body>
   <page>https://fosdem.org/2016/</page>
   <tags>
-	<tag>fr</tag>
-	<tag>bnl</tag>
-	<tag content="Belgjikë">BE</tag>
-	<tag content="Bruksel">Brussels</tag>
-	<tag content="FOSDEM">Fosdem</tag>
-	<tag content="Anëtarësi Shok">Fellowship</tag>
-	<tag>infobooth</tag>
-	<tag>front-page</tag>
+	<tag key="fr"/>
+	<tag key="bnl"/>
+	<tag key="be">Belgjikë</tag>
+	<tag key="brussels">Bruksel</tag>
+	<tag key="fosdem">FOSDEM</tag>
+	<tag key="fellowship">Anëtarësi Shok</tag>
+	<tag key="infobooth"/>
+	<tag key="front-page"/>
   </tags>
 </event>
 </eventset>

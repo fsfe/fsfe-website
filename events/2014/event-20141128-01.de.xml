@@ -11,10 +11,10 @@
    <link>http://oekotop100.de/software</link>
    
    <tags>
-    <tag content="Deutschland">de</tag>
-    <tag content="Berlin">Berlin</tag>
-    <tag content="Vortrag">Talk</tag>
-    <tag>front-page</tag>
+    <tag key="de">Deutschland</tag>
+    <tag key="berlin">Berlin</tag>
+    <tag key="talk">Vortrag</tag>
+    <tag key="front-page"/>
    </tags>
 
   </event>

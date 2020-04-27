@@ -154,24 +154,24 @@
       
       <!-- event title with or without link -->
       <h3>
-     	<xsl:call-template name="generate-id-attribute">
+       <xsl:call-template name="generate-id-attribute">
           <xsl:with-param name="title" select="title" />
-     	</xsl:call-template>
-     	<xsl:choose>
-     	  <xsl:when test="$link != ''">
-     	    <a href="{link}">
-     	      <xsl:value-of select="title" />
-     	    </a>
-     	  </xsl:when>
-     	  <xsl:when test="$page != ''">
-     	    <a href="{page}">
-     	      <xsl:value-of select="title" />
-     	    </a>
-     	  </xsl:when>
-     	  <xsl:otherwise>
-     	  	<xsl:value-of select="title" />
-     	  </xsl:otherwise>
-     	</xsl:choose>
+       </xsl:call-template>
+       <xsl:choose>
+         <xsl:when test="$link != ''">
+           <a href="{link}">
+             <xsl:value-of select="title" />
+           </a>
+         </xsl:when>
+         <xsl:when test="$page != ''">
+           <a href="{page}">
+             <xsl:value-of select="title" />
+           </a>
+         </xsl:when>
+         <xsl:otherwise>
+           <xsl:value-of select="title" />
+         </xsl:otherwise>
+       </xsl:choose>
       </h3>
      
       <!-- event date -->
@@ -213,30 +213,14 @@
         </div>
       </xsl:if>
       
-		<!-- tags -->
+      <!-- tags -->
       <xsl:if test="$display-tags = 'yes'">
-			<ul class="archivetaglist">
-				<!-- <xsl:apply-templates select="tags" /> /-->
-				<xsl:for-each select="tags/tag[not(. = 'front-page' or @key = 'front-page')]">
-					<xsl:variable name="keyname"
-						select="translate(@key,'ABCDEFGHIJKLMNOPQRSTUVWXYZ /:','abcdefghijklmnopqrstuvwxyz_')" />
-					<xsl:variable name="tagname"
-						select="translate(.,'ABCDEFGHIJKLMNOPQRSTUVWXYZ /:','abcdefghijklmnopqrstuvwxyz_')" />
-					<xsl:choose>
-						<xsl:when test="@key and .">
-							<li><a href="/tags/tagged-{$keyname}.html"><xsl:value-of select="." /></a></li>
-							</xsl:when><xsl:when test="@content and not(@content = '')"><!-- Legacy -->
-							<li><a href="/tags/tagged-{$tagname}.html"><xsl:value-of select="@content" /></a></li>
-							</xsl:when><xsl:when test="@key"><!-- bad style -->
-							<li><a href="/tags/tagged-{$keyname}.html"><xsl:value-of select="@key" /></a></li>
-							</xsl:when>
-							<xsl:otherwise><!-- Legacy and bad style-->
-								<li><a href="/tags/tagged-{$tagname}.html"><xsl:value-of select="." /></a></li>
-							</xsl:otherwise>
-						</xsl:choose>
-				</xsl:for-each>
-			</ul>
-		</xsl:if>
+        <ul class="archivetaglist">
+          <xsl:for-each select="tags/tag[not(@key='front-page')]">
+            <li><a href="/tags/tagged-{@key}.{/buildinfo/@language}.html"><xsl:value-of select="." /></a></li>
+          </xsl:for-each>
+        </ul>
+      </xsl:if>
 
     </xsl:element>
     

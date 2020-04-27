@@ -13,11 +13,6 @@
   <xsl:import href="build/xslt/fsfe_head.xsl" />
   <xsl:import href="build/xslt/fsfe_body.xsl" />
 
-  <!-- For pages used on external web servers, load the CSS from absolute URL -->
-  <xsl:variable name="urlprefix">
-    <xsl:if test="/buildinfo/document/@external">https://fsfe.org</xsl:if>
-  </xsl:variable>
-
   <!-- EXTRACT / DESCRIPTION of each page -->
   <xsl:variable name="metadesc">
     <!-- Get the meta element description -->
@@ -78,19 +73,6 @@
   <!-- HTML 5 compatibility doctype, since our XSLT parser doesn't support disabling output escaping -->
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
 
-  <!-- Ignore "latin" tags, used only for printable material -->
-  <xsl:template match="latin">
-    <xsl:apply-templates select="@*|node()"/>
-  </xsl:template>
-  
- <!--FIXME ↓-->
-  <xsl:template match="fetch-news">
-    <xsl:call-template name="fetch-news">
-      <xsl:with-param name="tag" select="'/buildinfo/document/sidebar/@news'"/>
-      <xsl:with-param name="nb-items" select="4"/>
-    </xsl:call-template>
-  </xsl:template>
-  
   <!-- Static elements which can be included everywhere -->
   <xsl:template match="static-element">
     <xsl:variable name="id"><xsl:value-of select="@id"/></xsl:variable>

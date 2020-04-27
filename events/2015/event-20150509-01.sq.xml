@@ -10,12 +10,12 @@
     </body> 
       <link>http://oscal.openlabs.cc</link>
     <tags>
-      <tag>front-page</tag>
-      <tag content="Open Source Conference Albania">OSCAL</tag>
-      <tag content="Peter Bubestinger">peter_bubestinger</tag>
-      <tag content="FFmpeg">FFmpeg</tag>
-      <tag content="Keynote">keynote</tag>
-      <tag>al</tag>
+      <tag key="front-page"/>
+      <tag key="oscal">Open Source Conference Albania</tag>
+      <tag key="peter_bubestinger">Peter Bubestinger</tag>
+      <tag key="ffmpeg">FFmpeg</tag>
+      <tag key="keynote">Keynote</tag>
+      <tag key="al"/>
     </tags>
   </event>
 </eventset>

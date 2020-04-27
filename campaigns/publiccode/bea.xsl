@@ -15,7 +15,6 @@
   
   <xsl:template match="fetch-news">
     <xsl:call-template name="fetch-news">
-      <xsl:with-param name="tag" select="'bea'"/>
       <xsl:with-param name="nb-items" select="5"/>
       <xsl:with-param name="sidebar" select="'yes'"/>
     </xsl:call-template>

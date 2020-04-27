@@ -95,9 +95,6 @@
   <!--define dynamic list of country news items-->
     <xsl:template match="country-news">
         <xsl:call-template name="fetch-news">
-            <xsl:with-param name="tag">
-                <xsl:value-of select="education" />
-            </xsl:with-param>
             <xsl:with-param name="nb-items" select="3" />
         </xsl:call-template>
     </xsl:template>
@@ -107,9 +104,6 @@
         <!-- Current events -->
         <xsl:call-template name="fetch-events">
             <xsl:with-param name="wanted-time" select="'present'" />
-            <xsl:with-param name="tag">
-                <xsl:value-of select="education" />
-            </xsl:with-param>
             <xsl:with-param name="display-details" select="'yes'" />
         </xsl:call-template>
         
@@ -117,9 +111,6 @@
         <xsl:call-template name="fetch-events">
             <xsl:with-param name="wanted-time" select="'future'" />
             <xsl:with-param name="nb-items" select="3" />
-            <xsl:with-param name="tag">
-                <xsl:value-of select="education" />
-            </xsl:with-param>
             <xsl:with-param name="display-details" select="'yes'" />
         </xsl:call-template>
     </xsl:template>

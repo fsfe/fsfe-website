@@ -33,28 +33,13 @@
     <h2>Basic instructions</h2>
 
     <p>
-      A tag should be in <a href="https://en.wikipedia.org/wiki/CamelCase">CamelCase</a> except for special tags like <code>front-page</code>, <code>newsletter</code>. So for instance, the tag “very important subject” should be <code>VeryImportantSubject</code>. 
-      A tag should contain a <code>content</code> attribute except for special tags. <bold>This attribute should be translated and human readable</bold>, because it will be shown on certain pages. For instance, if you tag a page about the Windows Tax.
+      A tag key should be in lowercase and not contain any spaces, colons, and slashes. So for instance, the key for the tag “very important subject” should be <code>very-important-subject</code>. 
+      The content of the tag should be translated and human readable, because it will be shown on certain pages. For instance, if you tag a page about the Windows Tax.
     </p>
 
     <pre class="file">
-      &lt;tag content="Windows Tax"&gt;WindowsTax&lt;/tag&gt;
+      &lt;tag key="windows-tax"&gt;Windows Tax&lt;/tag&gt;
     </pre>
-
-    <p>
-    If you are translating, you should never edit what is “here” between <code>&lt;tag&gt;here&lt;/tag&gt;</code> but you can add a translated <code>content</code> attribute. For instance, take an English file with:</p>
-
-    <pre class="file">
-      &lt;tag&gt;Ruling&lt;/tag&gt;
-    </pre>
-
-    <p>“Ruling” in French would be “Décision de justice” so you should do:</p>
-
-    <pre class="file">
-      &lt;tag content="Décision de justice"&gt;Ruling&lt;/tag&gt;
-    </pre>
-
-
 
     <h2>Tag pages, news and events</h2>
     
@@ -73,9 +58,9 @@
       &lt;news&gt;
       [...]
       &lt;tags&gt;
-      &lt;tag&gt;front-page&lt;/tag&gt;
-      &lt;tag content="Software Patents"&gt;Swpats&lt;/tag&gt;
-      &lt;tag content="Novell"&gt;Novell&lt;/tag&gt;
+      &lt;tag key="front-page"/&gt;
+      &lt;tag key="swpat"&gt;Software Patents&lt;/tag&gt;
+      &lt;tag key="novell"&gt;Novell&lt;/tag&gt;
       &lt;/tags&gt;
       &lt;/news&gt;
     </pre>
@@ -88,8 +73,8 @@
       &lt;event&gt;
       [...]
       &lt;tags&gt;
-      &lt;tag&gt;front-page&lt;/tag&gt;
-      &lt;tag content="Italy"&gt;it&lt;/tag&gt;
+      &lt;tag key="front-page"/&gt;
+      &lt;tag key="it"&gt;Italy&lt;/tag&gt;
       &lt;/tags&gt;
       &lt;/event&gt;
     </pre>
@@ -98,8 +83,8 @@
     will appear on the front page of fsfe.org!</p>
     
     <p>
-    Tags should all be written in English; there is no need for translation
-    since the tags do not appear online, but are used internally for
+    Tag keys should all be written in English; there is no need for translation
+    since they do not appear online, but are used internally for
     filtering news items or events.
     </p>
     
@@ -281,10 +266,6 @@
         </ul>
     </div>
 </sidebar>
-<tags>
-    <tag>webmaster</tag>
-</tags>
-
   <timestamp>$Date: 2010-07-07 05:16:55 +0200 (Wed, 07 Jul 2010) $ $Author: hugo $</timestamp>
 </html>
 <!--

@@ -10,11 +10,34 @@ process_file(){
 
   shortname=$(get_shortname "$infile")
   lang=$(get_language "$infile")
-  [ -z "$processor" ] && processor="$(get_processor "$shortname")"
+
+  if [ -z "${processor}" ]; then
+    if [ -f "${shortname}.xsl" ]; then
+      processor="${shortname}.xsl"
+    else
+      # Actually use the symlink target, so the relative includes are searched
+      # in the correct directory.
+      processor="$(realpath "${shortname%/*}/.default.xsl")"
+    fi
+  fi
 
   # Make sure that the following pipe exits with a nonzero exit code if *any*
   # of the commands fails.
   set -o pipefail
+
+  # The sed command of death below does the following:
+  # 1. Remove https://fsfe.org (or https://test.fsfe.org) from the start of all
+  #    links
+  # 2. Change links from /foo/bar.html into /foo/bar.xx.html
+  # 3. Change links from foo/bar.html into foo/bar.xx.html
+  # 4. Same for .rss and .ics links
+  # 5. Change links from /foo/bar/ into /foo/bar/index.xx.html
+  # 6. Change links from foo/bar/ into foo/bar/index.xx.html
+  # ... where xx is the language code.
+  # Everything is duplicated to allow for the href attribute to be enclosed in
+  # single or double quotes.
+  # I am strongly convinced that there must be a less obfuscated way of doing
+  # this. --Reinhard
 
   build_xmlstream "$shortname" "$lang" \
   | xsltproc --stringparam "build-env" "${build_env:-development}" "$processor" - \

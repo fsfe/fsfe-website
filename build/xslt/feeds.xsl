@@ -4,9 +4,8 @@
                 xmlns:dt="http://xsltsl.org/date-time"
                 exclude-result-prefixes="dt">
 
-  <xsl:import href="../../build/xslt/gettext.xsl" />
-  <xsl:import href="static-elements.xsl" />
-  <xsl:import href="date-time.xsl" />
+  <xsl:import href="gettext.xsl" />
+  <xsl:import href="../../tools/xsltsl/date-time.xsl" />
     
   <!-- define content type templates-->
     

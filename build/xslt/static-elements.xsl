@@ -8,7 +8,7 @@
                 xmlns:nl="."
                 xmlns:str='http://xsltsl.org/string'
                 exclude-result-prefixes="dt weekdays months nl str">
-  <xsl:import href="string.xsl" />
+  <xsl:import href="../../tools/xsltsl/string.xsl" />
   
   <nl:langs>
     <nl:lang value="en">English</nl:lang>

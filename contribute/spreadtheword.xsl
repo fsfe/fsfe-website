@@ -2,7 +2,7 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:import href="../fsfe.xsl" />
-  <xsl:import href="../tools/xsltsl/countries.xsl" />
+  <xsl:import href="../build/xslt/countries.xsl" />
 
   <!-- Fill dynamic content -->
   <xsl:template match="dynamic-content">

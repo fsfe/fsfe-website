@@ -4,7 +4,7 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:dt="http://xsltsl.org/date-time">
   
-  <xsl:import href="../tools/xsltsl/people.xsl" />
+  <xsl:import href="../build/xslt/people.xsl" />
   <xsl:import href="../fsfe.xsl" />
   
   <xsl:template match="care-team-list">

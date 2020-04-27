@@ -37,11 +37,3 @@ all: $(ARCH_SOURCES)
 $(ARCH_SOURCES): %.sources:
 	@echo "*   Creating $@"
 	@echo "events/$(dir $@)event-*:[]\nevents/$(dir $@).event-*:[]\nevents/.localmenu:[]\n" > $@
-
-# .xsl files to generate
-ARCH_XSL := $(foreach year,$(ARCH_YEARS),$(year)/index.xsl)
-
-all: $(ARCH_XSL)
-$(ARCH_XSL): %.xsl: events.xsl
-	@echo "*   Creating $@"
-	@sed -r 's/(import href=")/\1..\//; s/(\.\.\/about)/..\/\1/' $< > $@

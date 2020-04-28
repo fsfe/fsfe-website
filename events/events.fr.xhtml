@@ -9,22 +9,35 @@
 
   <body class="toplevel article events">
     <h1>Evénements</h1>
-    <h2>Ajouter un événement</h2>
 
-    <p>
-      Si vous connaissez un événement lié à la FSFE qui n'est pas encore répertorié ici ou
-      que vous organisez seul, vous pouvez facilement l’ajouter en utilisant notre
-      <a href="/community/tools/eventregistration.html">outil d'annonce d'événement</a>.
-    </p>
+    <section id="add-event">
+      <h2>Ajouter un événement</h2>
 
-    <include-events/>
+      <p>
+        Si vous connaissez un événement lié à la FSFE qui n'est pas encore répertorié ici ou
+        que vous organisez seul, vous pouvez facilement l’ajouter en utilisant notre
+        <a href="/community/tools/eventregistration.html">outil d'annonce d'événement</a>.
+      </p>
+    </section>
 
-    <h2><a href="2018/index.html">Evénements archivés</a></h2>
+    <section id="current-events">
+      <include-events group="current">Evénements actuels</include-events>
+    </section>
+    <section id="future-events">
+      <include-events group="future">Evénements à venir</include-events>
+    </section>
+    <section id="past-events">
+      <include-events group="past">Evénements passés</include-events>
+    </section>
 
-    <p>
-      Pour les événements plus anciens, veuillez consulter nos archives d'événements.
-      <a class="learn-more" href="2018/index.html"/>
-    </p>
+    <section id="event-archives">
+      <h2><a href="2018/index.html">Evénements archivés</a></h2>
+
+      <p>
+        Pour les événements plus anciens, veuillez consulter nos archives d'événements.
+        <a class="learn-more" href="2018/index.html"/>
+      </p>
+    </section>
   </body>
 
   <sidebar promo="none">
@@ -76,8 +89,5 @@
     </p>
   </sidebar>
 
-  <text id="current">Evénements actuels</text>
-  <text id="future">Evénements à venir</text>
-  <text id="past">Evénements passés</text>
   <translator>Julien, OliBug</translator>
 </html>

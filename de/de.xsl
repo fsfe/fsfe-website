@@ -98,21 +98,12 @@
         </xsl:call-template>
     </xsl:template>
 
-  <!-- EVENTS -->
   <!--display dynamic list of event items-->
   <xsl:template match="country-events">
-    <!-- Current events -->
     <xsl:call-template name="fetch-events">
-      <xsl:with-param name="wanted-time" select="'present'" />
-    </xsl:call-template>
-
-    <!-- Future events -->
-    <xsl:call-template name="fetch-events">
-      <xsl:with-param name="wanted-time" select="'future'" />
       <xsl:with-param name="nb-items" select="3" />
-      <!--FIXME ↑ why is it showing one more?-->
     </xsl:call-template>
-  </xsl:template> <!-- /EVENTS -->
+  </xsl:template>
 
     <!--define dynamic list of country team members-->
     <xsl:template match="country-team-list">

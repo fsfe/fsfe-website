@@ -288,54 +288,32 @@ body.overview #content {
     margin-right: 10px;
 }
 
-/* news archive */
 
-.events .entry,
-.archivenews {
-    margin-bottom: 56px;
+/* verbose listing of news and events */
 
-    h3 {
-        line-height: 1.2;
-        margin-bottom: 4px;
-        margin-top: 0;
+article.news, article.event {
+    border-bottom: 1px solid @gray-lighter;
+
+    p.meta {
+        .text-muted;
+        .small;
+
+        a {
+            color: inherit;
+        }
     }
 
-    p {
-        font-size: 0.9em;
-    }
-}
+    ul.tags {
+        .list-inline;
+        .text-muted;
+        .small;
 
-.events .entry .date,
-.archivemeta {
-    margin-bottom: 10px;
-}
-
-#id-add-an-event + p {
-    margin-bottom: 56px;
-}
-
-.events .entry .date,
-p.archivemeta,
-ul.archivetaglist {
-    color: #999;
-    font-size: 0.9em;
-    padding-left: 0;
-
-    a {
-        color: #999;
+        a {
+            color: inherit;
+        }
     }
 }
 
-
-ul.archivetaglist {
-    margin-bottom: 0;
-
-    li {
-        display: inline-block;
-        margin-right: .75em;
-        padding: 0;
-    }
-}
 
 /* thank donors */
 

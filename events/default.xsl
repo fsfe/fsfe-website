@@ -3,6 +3,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:import href="../fsfe.xsl"/>
 
+
   <!-- ==================================================================== -->
   <!-- Display a single event                                               -->
   <!-- ==================================================================== -->
@@ -11,9 +12,9 @@
 
     <!-- Wrap the event entry into an <article> -->
     <xsl:element name="article">
-      <xsl:attribute name="class">entry</xsl:attribute>
+      <xsl:attribute name="class">event</xsl:attribute>
       <xsl:attribute name="id">
-        <xsl:value-of select="@filename" />
+        <xsl:value-of select="@filename"/>
       </xsl:attribute>
 
       <!-- Title with or without link -->
@@ -23,27 +24,25 @@
 
       <!-- Date -->
       <xsl:element name="p">
-        <xsl:attribute name="class">date</xsl:attribute>
+        <xsl:attribute name="class">meta</xsl:attribute>
         <xsl:call-template name="event-date"/>
       </xsl:element>
 
       <!-- Details -->
-      <xsl:element name="div">
-        <xsl:attribute name="class">details</xsl:attribute>
-        <xsl:apply-templates select="body/node()" />
-      </xsl:element>
+      <xsl:apply-templates select="body/node()"/>
 
       <!-- Tags -->
       <xsl:element name="ul">
-        <xsl:attribute name="class">archivetaglist</xsl:attribute>
+        <xsl:attribute name="class">tags</xsl:attribute>
         <xsl:for-each select="tags/tag[not(@key='front-page')]">
-          <li><a href="/tags/tagged-{@key}.{/buildinfo/@language}.html"><xsl:value-of select="." /></a></li>
+          <li><a href="/tags/tagged-{@key}.{/buildinfo/@language}.html"><xsl:value-of select="."/></a></li>
         </xsl:for-each>
       </xsl:element>
 
     </xsl:element>
 
   </xsl:template>
+
 
   <!-- ==================================================================== -->
   <!-- Display a verbose list of events                                     -->

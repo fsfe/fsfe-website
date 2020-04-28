@@ -52,33 +52,21 @@
 
               <!-- Title (with or without link) -->
               <xsl:element name="h3">
-                <xsl:choose>
-                  <xsl:when test="link != ''">
-                    <xsl:element name="a">
-                      <xsl:attribute name="href">
-                        <xsl:value-of select="link"/>
-                      </xsl:attribute>
-                      <xsl:value-of select="title"/>
-                    </xsl:element><!-- a -->
-                  </xsl:when>
-                  <xsl:otherwise>
-                    <xsl:value-of select="title"/>
-                  </xsl:otherwise>
-                </xsl:choose>
+                <xsl:call-template name="news-title"/>
               </xsl:element><!-- h3 -->
 
               <!-- Date -->
               <xsl:element name="p">
                 <xsl:attribute name="class">date</xsl:attribute>
-                <xsl:value-of select="@date"/>
+                <xsl:call-template name="news-date"/>
               </xsl:element><!-- p/date -->
 
               <!-- Teaser -->
               <xsl:element name="p">
                 <xsl:attribute name="class">teaser</xsl:attribute>
                 <xsl:apply-templates select="body/node()"/>
-                <xsl:if test="link != ''">
-                  <xsl:text> </xsl:text>
+                <xsl:if test="link">
+                  <xsl:text>&#160;</xsl:text>
                   <xsl:element name="a">
                     <xsl:attribute name="class">learn-more</xsl:attribute>
                     <xsl:attribute name="href">
@@ -166,11 +154,7 @@
         <!-- Date -->
         <xsl:element name="p">
           <xsl:attribute name="class">date</xsl:attribute>
-          <xsl:value-of select="@start"/>
-          <xsl:if test="@start != @end">
-            <xsl:text> – </xsl:text>
-            <xsl:value-of select="@end"/>
-          </xsl:if>
+          <xsl:call-template name="event-date"/>
         </xsl:element><!-- p/date -->
 
         <!-- Description -->

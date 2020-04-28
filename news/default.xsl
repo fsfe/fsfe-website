@@ -21,17 +21,18 @@
       <!-- begin: news entry -->
       <section class="archivenews">
         <!-- title (linked) -->
-        <h3>
+        <xsl:element name="h3">
           <xsl:call-template name="news-title"/>
-        </h3>
+        </xsl:element>
         <!-- date and author -->
-        <ul class="archivemeta">
-          <li> <!-- date -->
-            <xsl:call-template name="news-date"/>
-          </li> <!-- author -->
-          <xsl:if test="/buildinfo/document/set/news/author">
-            <xsl:apply-templates select="author" />
-        </xsl:if></ul>
+        <xsl:element name="p">
+          <xsl:attribute name="class">archivemeta</xsl:attribute>
+          <xsl:call-template name="news-date"/>
+          <xsl:if test="author">
+            <xsl:text> – </xsl:text>
+            <xsl:apply-templates select="author"/>
+          </xsl:if>
+        </xsl:element>
         <!-- text and read-more-link -->
         <p><xsl:apply-templates select="body/node()" />
         <xsl:text>&#160;</xsl:text>
@@ -49,41 +50,37 @@
   <!-- how to display: author -->
   <xsl:template match="buildinfo/document/set/news/author">
     <xsl:variable name="id" select="@id" />
-    <xsl:if test="position() = 1">
-      <li class="archiveauthor"><xsl:text>&#x2014;</xsl:text></li>
+    <!-- if author is in fsfe's people.xml, take information from there -->
+    <xsl:choose>
+      <!-- author is in people.en.xml -->
+      <xsl:when test="@id and document('../about/people/people.en.xml')/personset/person[@id=$id]">
+        <xsl:choose>
+          <!-- person has a link -->
+          <xsl:when test="document('../about/people/people.en.xml')/personset/person[@id=$id]/link">
+            <a rel="author" href="{document('../about/people/people.en.xml')/personset/person[@id=$id]/link}">
+              <xsl:value-of select="document('../about/people/people.en.xml')/personset/person[@id=$id]/name" />
+          </a></xsl:when>
+          <!-- person has no link -->
+          <xsl:otherwise>
+            <span>
+              <xsl:value-of select="document('../about/people/people.en.xml')/personset/person[@id=$id]/name" />
+          </span></xsl:otherwise></xsl:choose>
+      </xsl:when>
+      <!-- author is not in people.en.xml -->
+      <xsl:otherwise>
+        <xsl:choose>
+          <!-- person has a link -->
+          <xsl:when test="link">
+            <a rel="author" href="{link}"><xsl:value-of select="name" /></a>
+          </xsl:when>
+          <!-- person has no link -->
+          <xsl:otherwise>
+            <span class="author p-author"><xsl:value-of select="name" />
+          </span></xsl:otherwise></xsl:choose>
+    </xsl:otherwise></xsl:choose>
+    <xsl:if test="not(position() = last())">
+      <xsl:text>, </xsl:text>
     </xsl:if>
-    <li> <!-- if author is in fsfe's people.xml, take information from there -->
-      <xsl:choose>
-        <!-- author is in people.en.xml -->
-        <xsl:when test="@id and document('../about/people/people.en.xml')/personset/person[@id=$id]">
-          <xsl:choose>
-            <!-- person has a link -->
-            <xsl:when test="document('../about/people/people.en.xml')/personset/person[@id=$id]/link">
-              <a rel="author" href="{document('../about/people/people.en.xml')/personset/person[@id=$id]/link}">
-                <xsl:value-of select="document('../about/people/people.en.xml')/personset/person[@id=$id]/name" />
-            </a></xsl:when>
-            <!-- person has no link -->
-            <xsl:otherwise>
-              <span>
-                <xsl:value-of select="document('../about/people/people.en.xml')/personset/person[@id=$id]/name" />
-            </span></xsl:otherwise></xsl:choose>
-        </xsl:when>
-        <!-- author is not in people.en.xml -->
-        <xsl:otherwise>
-          <xsl:choose>
-            <!-- person has a link -->
-            <xsl:when test="link">
-              <a rel="author" href="{link}"><xsl:value-of select="name" /></a>
-            </xsl:when>
-            <!-- person has no link -->
-            <xsl:otherwise>
-              <span class="author p-author"><xsl:value-of select="name" />
-            </span></xsl:otherwise></xsl:choose>
-      </xsl:otherwise></xsl:choose>
-      <xsl:if test="not(position() = last())">
-        <xsl:text>, </xsl:text>
-      </xsl:if>
-    </li>
   </xsl:template>
 
 

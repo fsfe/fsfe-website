@@ -61,23 +61,23 @@
           (
             $group = 'past'
             and
-            translate (@end, '-', '') &gt;= translate (/buildinfo/@date, '-', '')
+            translate(@end,'-','') &gt;= translate(/buildinfo/@date,'-','')
           )
           or
           (
             $group = 'current'
             and
             (
-              translate (@start, '-', '') &gt; translate (/buildinfo/@date, '-', '')
+              translate(@start,'-','') &gt; translate(/buildinfo/@date,'-','')
               or
-              translate (@end,   '-', '') &lt; translate (/buildinfo/@date, '-', '')
+              translate(@end,'-','') &lt; translate(/buildinfo/@date,'-','')
             )
           )
           or
           (
             $group = 'future'
             and
-            translate (@start, '-', '') &lt;= translate (/buildinfo/@date, '-', '')
+            translate(@start,'-','') &lt;= translate(/buildinfo/@date,'-','')
           )
         )
       ]">

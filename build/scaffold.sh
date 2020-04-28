@@ -50,15 +50,17 @@ auto_sources(){
 
   list_file="$(dirname ${shortname})/.$(basename ${shortname}).xmllist"
 
-  cat "${list_file}" | while read base; do
-    if [ -f "${basedir}/${base}.${lang}.xml" ]; then
-      printf '\n### filename="%s" ###\n%s' "$(basename ${base})" "$(include_xml "${basedir}/${base}.${lang}.xml")"
-    elif [ -f "${basedir}/${base}.en.xml" ]; then
-      printf '\n### filename="%s" ###\n%s' "$(basename ${base})" "$(include_xml "${basedir}/${base}.en.xml")"
-    fi
-  done \
-  | sed -r ':X; N; $!bX;
-            s;\n### (filename="[^\n"]+") ###\n[^<]*(<![^>]+>[^<]*)*(<([^/>]+/)*([^/>]+))(/?>);\2\3 \1\6;g;'
+  if [ -f "${list_file}" ]; then
+    cat "${list_file}" | while read base; do
+      if [ -f "${basedir}/${base}.${lang}.xml" ]; then
+        printf '\n### filename="%s" ###\n%s' "$(basename ${base})" "$(include_xml "${basedir}/${base}.${lang}.xml")"
+      elif [ -f "${basedir}/${base}.en.xml" ]; then
+        printf '\n### filename="%s" ###\n%s' "$(basename ${base})" "$(include_xml "${basedir}/${base}.en.xml")"
+      fi
+    done \
+    | sed -r ':X; N; $!bX;
+              s;\n### (filename="[^\n"]+") ###\n[^<]*(<![^>]+>[^<]*)*(<([^/>]+/)*([^/>]+))(/?>);\2\3 \1\6;g;'
+  fi
 }
 
 build_xmlstream(){

@@ -21,28 +21,21 @@
       <!-- begin: news entry -->
       <section class="archivenews">
         <!-- title (linked) -->
-        <h3><xsl:choose><xsl:when test="link != ''">
-            <a href="{link}"><xsl:value-of select="title" /></a>
-          </xsl:when><xsl:otherwise>
-            <xsl:value-of select="title" />
-        </xsl:otherwise></xsl:choose></h3>
+        <h3>
+          <xsl:call-template name="news-title"/>
+        </h3>
         <!-- date and author -->
         <ul class="archivemeta">
           <li> <!-- date -->
-            <xsl:value-of select="substring(@date,9,2)" />
-            <xsl:text> </xsl:text>
-            <xsl:call-template name="dt:get-month-name">
-              <xsl:with-param name="month" select="substring(@date,6,2)" />
-            </xsl:call-template>
-            <xsl:text> </xsl:text>
-            <xsl:value-of select="substring(@date,1,4)" />
+            <xsl:call-template name="news-date"/>
           </li> <!-- author -->
           <xsl:if test="/buildinfo/document/set/news/author">
             <xsl:apply-templates select="author" />
         </xsl:if></ul>
         <!-- text and read-more-link -->
         <p><xsl:apply-templates select="body/node()" />
-        <xsl:apply-templates select="link" /></p>
+        <xsl:text>&#160;</xsl:text>
+        <a class="learn-more" href="{link}"></a></p>
         <!-- tags -->
         <xsl:if test="/buildinfo/document/set/news/tags/tag
                       [not(@key='front-page')]">
@@ -93,11 +86,6 @@
     </li>
   </xsl:template>
 
-  <!-- how to display: read-more-link -->
-  <xsl:template match="/buildinfo/document/set/news/link">
-    <xsl:text>&#160;</xsl:text>
-    <a class="learn-more" href="{text()}"></a>
-  </xsl:template>
 
   <!-- how to display: tags -->
   <xsl:template match="buildinfo/document/set/news/tags">

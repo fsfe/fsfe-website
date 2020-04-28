@@ -8,43 +8,52 @@
   <xsl:import href="gettext.xsl" />
   <xsl:import href="../../tools/xsltsl/date-time.xsl" />
 
+
   <!-- ==================================================================== -->
   <!-- News                                                                 -->
   <!-- ==================================================================== -->
 
+  <!-- News title with our without link -->
+  <xsl:template name="news-title">
+    <xsl:choose>
+      <xsl:when test="link">
+        <xsl:element name="a">
+          <xsl:attribute name="href">
+            <xsl:value-of select="link"/>
+          </xsl:attribute>
+          <xsl:value-of select="title"/>
+        </xsl:element>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="title"/>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+  <!-- News date -->
+  <xsl:template name="news-date">
+    <xsl:value-of select="substring(@date,9,2)" />
+    <xsl:text> </xsl:text>
+    <xsl:call-template name="dt:get-month-name">
+      <xsl:with-param name="month" select="substring(@date,6,2)" />
+    </xsl:call-template>
+    <xsl:text> </xsl:text>
+    <xsl:value-of select="substring(@date,1,4)" />
+  </xsl:template>
+
+  <!-- Show a complete news item -->
   <xsl:template name="news">
     <xsl:param name="sidebar" select="'no'" />
-
-    <xsl:variable name="title">
-      <xsl:choose><xsl:when test="link != ''">
-        <a href="{link}"><xsl:value-of select="title" /></a>
-      </xsl:when><xsl:otherwise>
-        <xsl:value-of select="title" />
-      </xsl:otherwise></xsl:choose>
-    </xsl:variable>
-
-    <xsl:variable name="date">
-      <xsl:value-of select="substring(@date,9,2)" />
-      <xsl:text> </xsl:text>
-      <xsl:call-template name="dt:get-month-name">
-        <xsl:with-param name="month" select="substring(@date,6,2)" />
-      </xsl:call-template>
-      <xsl:text> </xsl:text>
-      <xsl:value-of select="substring(@date,1,4)" />
-    </xsl:variable>
 
     <xsl:choose>
       <xsl:when test="$sidebar = 'yes'">
         <li>
           <!-- title -->
-          <xsl:call-template name="generate-id-attribute">
-            <xsl:with-param name="title" select="title" />
-          </xsl:call-template>
-          <xsl:copy-of select="$title" />
+          <xsl:call-template name="news-title"/>
 
           <!-- news date -->
           <xsl:text> (</xsl:text>
-          <xsl:copy-of select="$date" />
+          <xsl:call-template name="news-date"/>
           <xsl:text>)</xsl:text>
         </li>
       </xsl:when>
@@ -53,14 +62,11 @@
         <div class="entry">
           <!-- title -->
           <h3>
-            <xsl:call-template name="generate-id-attribute">
-              <xsl:with-param name="title" select="title" />
-            </xsl:call-template>
-            <xsl:copy-of select="$title" />
+            <xsl:call-template name="news-title"/>
           </h3>
 
           <!-- news date -->
-          <p class="date"><xsl:copy-of select="$date" /></p>
+          <p class="date"><xsl:call-template name="news-date" /></p>
 
           <!-- news text -->
           <div class="text"><xsl:apply-templates select="body/node()" /></div>
@@ -68,6 +74,7 @@
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
+
 
   <!-- ==================================================================== -->
   <!-- Events                                                               -->
@@ -161,7 +168,7 @@
     </xsl:choose>
   </xsl:template>
 
-  <!-- Show a single event -->
+  <!-- Show a complete event item -->
   <xsl:template name="event">
 
     <xsl:element name="div">

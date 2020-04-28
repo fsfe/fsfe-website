@@ -42,31 +42,20 @@ list_langs(){
   done
 }
 
-list_sources(){
-  # read a .xmllist file and generate a list
-  # of all referenced xml files with preference
-  # for a given language
-  shortname="$1"
-  lang="$2"
-
-  list_file="`dirname ${shortname}`/.`basename ${shortname}`.xmllist"
-
-  if [ -f "${list_file}" ]; then
-    cat "${list_file}" | while read base; do
-      echo "${basedir}/${base}".[a-z][a-z].xml "${basedir}/${base}".en.[x]ml "${basedir}/${base}.${lang}".[x]ml
-    done | sed -rn 's;^(.* )?([^ ]+\.[a-z]{2}\.xml).*$;\2;p'
-  fi
-}
-
 auto_sources(){
   # import elements from source files, add file name
   # attribute to first element included from each file
   shortname="$1"
   lang="$2"
 
-  list_sources "$shortname" "$lang" \
-  | while read source; do
-    printf '\n### filename="%s" ###\n%s' "$source" "$(include_xml "$source")" 
+  list_file="$(dirname ${shortname})/.$(basename ${shortname}).xmllist"
+
+  cat "${list_file}" | while read base; do
+    if [ -f "${basedir}/${base}.${lang}.xml" ]; then
+      printf '\n### filename="%s" ###\n%s' "$(basename ${base})" "$(include_xml "${basedir}/${base}.${lang}.xml")"
+    elif [ -f "${basedir}/${base}.en.xml" ]; then
+      printf '\n### filename="%s" ###\n%s' "$(basename ${base})" "$(include_xml "${basedir}/${base}.en.xml")"
+    fi
   done \
   | sed -r ':X; N; $!bX;
             s;\n### (filename="[^\n"]+") ###\n[^<]*(<![^>]+>[^<]*)*(<([^/>]+/)*([^/>]+))(/?>);\2\3 \1\6;g;'

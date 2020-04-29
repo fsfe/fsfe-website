@@ -51,11 +51,12 @@ auto_sources(){
   list_file="$(dirname ${shortname})/.$(basename ${shortname}).xmllist"
 
   if [ -f "${list_file}" ]; then
-    cat "${list_file}" | while read base; do
-      if [ -f "${basedir}/${base}.${lang}.xml" ]; then
-        printf '\n### filename="%s" ###\n%s' "$(basename ${base})" "$(include_xml "${basedir}/${base}.${lang}.xml")"
-      elif [ -f "${basedir}/${base}.en.xml" ]; then
-        printf '\n### filename="%s" ###\n%s' "$(basename ${base})" "$(include_xml "${basedir}/${base}.en.xml")"
+    cat "${list_file}" | while read path; do
+      base="$(basename ${path})"
+      if [ -f "${basedir}/${path}.${lang}.xml" ]; then
+        printf '\n### filename="%s" ###\n%s' "${base#.}" "$(include_xml "${basedir}/${path}.${lang}.xml")"
+      elif [ -f "${basedir}/${path}.en.xml" ]; then
+        printf '\n### filename="%s" ###\n%s' "${base#.}" "$(include_xml "${basedir}/${path}.en.xml")"
       fi
     done \
     | sed -r ':X; N; $!bX;

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-  <xsl:include href="sharebuttons.xsl" />
-  <xsl:include href="fsfe_sidebar.xsl" />
+  <xsl:include href="tags.xsl"/>
+  <xsl:include href="sharebuttons.xsl"/>
+  <xsl:include href="fsfe_sidebar.xsl"/>
 
   <xsl:template name="fsfe_mainsection">
     <xsl:element name="section">
@@ -44,11 +45,7 @@
                 <xsl:with-param name="id" select="'tags'"/>
               </xsl:call-template>
             </xsl:element>
-            <ul class="tags">
-              <xsl:for-each select="/buildinfo/document/tags/tag[not(@key='front-page')]">
-                <li><a href="/tags/tagged-{@key}.{/buildinfo/@language}.html"><xsl:value-of select="."/></a></li>
-              </xsl:for-each>
-            </ul>
+            <xsl:apply-templates select="/buildinfo/document/tags"/>
           </xsl:element>
         </xsl:if> <!-- /tags -->
 

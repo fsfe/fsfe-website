@@ -12,14 +12,11 @@
                buildinfo/trlist|
                buildinfo/fundraising|
                buildinfo/localmenuset|
-               buildinfo/document/tags|
                buildinfo/document/legal|
                buildinfo/document/author|
                buildinfo/document/date|
                buildinfo/document/download|
                buildinfo/document/followup"/>
-
-  <xsl:template match="set | tags | text"/>
 
   <!-- For all other nodes, copy verbatim -->
   <xsl:template match="@*|node()" priority="-1">

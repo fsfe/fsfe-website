@@ -85,12 +85,7 @@
       </xsl:element><!-- p -->
 
       <!-- Tags -->
-      <xsl:element name="ul">
-        <xsl:attribute name="class">tags</xsl:attribute>
-        <xsl:for-each select="tags/tag[not(@key='front-page')]">
-          <li><a href="/tags/tagged-{@key}.{/buildinfo/@language}.html"><xsl:value-of select="."/></a></li>
-        </xsl:for-each>
-      </xsl:element>
+      <xsl:apply-templates select="tags"/>
 
     </xsl:element>
 

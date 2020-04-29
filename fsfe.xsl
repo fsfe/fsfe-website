@@ -6,11 +6,11 @@
   xmlns:str="http://exslt.org/strings"
   extension-element-prefixes="str">
 
-  <xsl:import href="build/xslt/fsfe_head.xsl" />
-  <xsl:import href="build/xslt/fsfe_body.xsl" />
-  <xsl:import href="build/xslt/gettext.xsl" />
-  <xsl:import href="build/xslt/static-elements.xsl" />
-  <xsl:import href="build/xslt/tagging.xsl" />
+  <xsl:include href="build/xslt/fsfe_head.xsl" />
+  <xsl:include href="build/xslt/fsfe_body.xsl" />
+  <xsl:include href="build/xslt/gettext.xsl" />
+  <xsl:include href="build/xslt/static-elements.xsl" />
+  <xsl:include href="build/xslt/tagging.xsl" />
 
   <!-- HTML 5 compatibility doctype, since our XSLT parser doesn't support disabling output escaping -->
   <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />

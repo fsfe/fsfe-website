@@ -18,7 +18,15 @@
               <xsl:value-of select="/buildinfo/@language"/>
               <xsl:text>.html</xsl:text>
             </xsl:attribute>
-            <xsl:value-of select="."/>
+            <!-- If the <tag> element has no text content, fall back to key -->
+            <xsl:choose>
+              <xsl:when test="text()">
+                <xsl:value-of select="."/>
+              </xsl:when>
+              <xsl:otherwise>
+                <xsl:value-of select="@key"/>
+              </xsl:otherwise>
+            </xsl:choose>
           </xsl:element><!-- a -->
         </xsl:element><!-- li -->
       </xsl:for-each>

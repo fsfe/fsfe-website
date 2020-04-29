@@ -11,11 +11,4 @@
     <xsl:copy-of select="document('sigtable.en.xml')"/>
   </xsl:template>
 
-  <xsl:template match="fetch-news">
-    <xsl:call-template name="fetch-news">
-      <xsl:with-param name="nb-items" select="5"/>
-      <xsl:with-param name="sidebar" select="'yes'"/>
-    </xsl:call-template>
-  </xsl:template>
-
 </xsl:stylesheet>

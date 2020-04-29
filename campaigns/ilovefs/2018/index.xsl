@@ -3,12 +3,6 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:import href="../../../fsfe.xsl" />
 
-  <xsl:template match="fetch-news">
-    <xsl:call-template name="fetch-news">
-      <xsl:with-param name="nb-items" select="5"/>
-    </xsl:call-template>
-  </xsl:template>
-
   <!-- This creates looping pictures in a box. All pictures are located in a directory and have numbered names (here ilovefs-gallery-thumb-NNN.jpg) -->
   <xsl:template match="picture-box">
     <!-- appears once when <picture-box /> is called -->

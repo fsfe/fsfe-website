@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
+
 <html>
   <version>1</version>
 
@@ -21,15 +22,6 @@
       so it makes it easy to implement your own country page.
     </p>
     
-    <!--p>
-      <img src="/graphics/icons/warning.png" />
-      The first system we have used, an attribute consisting of
-      comma-separated values, was not very adapted to the way we generate
-      dynamic information.
-      Therefore, we have opted for the hereunder defined system, a more
-      xml-style one.
-    </p-->
-
     <h2>Basic instructions</h2>
 
     <p>
@@ -88,131 +80,6 @@
     filtering news items or events.
     </p>
     
-    
-    <h3>Using the fetch-news template</h3>
-
-    <ul>
-      <li>
-        the <var>tag</var> parameter defines what news will be displayed. If you are
-        building up a country page, this is your country code. Leave blank
-        if you wish to receive news items with any tags.
-      </li>
-    </ul>
-    
-    <pre class="file">&lt;xsl:with-param name="tag" select="'<var>your tag</var>'"/&gt;</pre>
-    
-    <ul>
-      <li>
-        the <var>nb-items</var> parameter determines how many news items will be displayed
-      </li>
-    </ul>
-    
-    <pre class="file">&lt;xsl:with-param name="nb-items" select="'<var>x</var>'" /&gt;</pre>
-    
-    
-    <h3>Using the fetch-newsletter template</h3>
-
-    <p>Works exactly as the fetch-news template, but does not propose tagging yet.</p>
-    
-    
-    <h3>Using the fetch-events template</h3>
-    
-    <p>
-        fetch-events works in a very similar manner to fetch-news, <var>tag</var> and <var>nb-items</var>
-        work the same way. Here are some addings:
-    </p>
-    
-    <ul>
-      <li>
-        the <var>wanted-time</var> parameter defines what events you want
-        to display, "past", "present" or "future"
-      </li>
-    </ul>
-    
-    <pre class="file">&lt;xsl:with-param name="wanted-time" select="'<var>future|present|past</var>'" /&gt;</pre>
-    
-    <ul>
-      <li>
-        the <var>header</var> parameter determines the text that will be displayed on top
-        of your block of events (used e.g. on events/events.xsl).
-        Possible values are 'future', 'current' or 'past'. Leave blank if you
-        don't want any header.
-      </li>
-    </ul>
-    
-    <pre class="file">&lt;xsl:with-param name="header" select="'<var>future|current|past</var>'" /&gt;</pre>
-    
-    <ul>
-      <li>
-        the <var>display-details</var> parameter says if 'yes' or 'no' you will have
-        the text of each event displayed along with its date and title.
-      </li>
-    </ul>
-    
-    <pre class="file">&lt;xsl:with-param name="display-details" select="'<var>yes|no</var>'" /&gt;</pre>
-    
-    
-    
-    <h2>Implementing a country page</h2>
-    
-    <p>
-      Implementing a country page won't take you long.
-      <a href="/uk/uk.html">United Kingdom</a> and
-      <a href="/de/de.html">Germany</a> country pages are a good example
-      of what you can achieve easily and how.
-    </p>
-    
-    <p>
-      <strong>1. </strong>
-      The very first thing to do is to create a folder with your country
-      code, e.g. "/de", "/uk" or "/it" in the root folder of the fsfe-web
-      svn (you will see other country folders there).<br/>
-      You may want to copy the three common files you'll find in already
-      existing country folders, e.g uk.en.xhtml, uk.xsl and uk.sources,
-      and of course rename them accordingly.
-    </p>
-    
-    <p>
-      <strong>2. </strong>
-      You should not have to modify **.sources.
-      You want to change the <var>countrycode</var>
-      variable in the **.xsl file to your country code, modifying the
-      following line.
-        
-    <pre class="file">&lt;xsl:variable name="country-code"&gt;<var>xx</var>&lt;/xsl:variable&gt;</pre>
-      
-      In the **.**.xhtml page, you should only change the identi.ca
-      account, or deactivate it if your country team does not have one yet.
-      
-    <pre class="file">"user":"fsfeuk",</pre>
-      
-      Play further with this file if you want to change the display of
-      your country page.
-      
-    </p>
-    
-    <h3>Using the country-people-list template</h3>
-    
-    <ul>
-      <li>(the call to country-people-list in **.xsl is responsible for the displayed people list)</li>
-      <li>add the <var>xx</var> tag to corresponding people in /about/people/people.en.xml, e.g.</li>
-    </ul>
-    
-    <pre class="file">&lt;person id="mueller" member="yes" teams="main, de"&gt;</pre>
-    
-    <p>
-      People tagged with your country code will appear in your country
-      page's people list. (If you want to add a person that is not there yet,
-      be careful not to add him/her to the "main" team if he/she is not
-      a member of it).
-    </p>
-    
-    <p>
-      For people's pictures, you should put a 48*48 pixels picture in the
-      /about/<var>id</var> folder named <var>id</var>-avatar.jpg. Then edit
-      <var>/about/people/people.en.xml</var> and add a line for
-      <var>avatar</var> to the picture URL.
-    </p>
     
     <h3>Tagging author, date and download files</h3>
     

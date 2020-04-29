@@ -388,22 +388,38 @@ div#subpages, .grid-row {
         hyphens: auto;
     }
 
-    aside#tags {
-        clear: both;
+    footer#tags {
+        .small;
         margin: 3em 0 -2em 0;
-        font-size: 0.8em;
-        float: none;
-        position: static;
+        clear: both;
 
         h2 {
-          display: inline;
-          color: @gray-light;
-          font-size: 1em;
-          font-weight: normal;
+            .text-muted;
+            font-weight: normal;
+            font-size: inherit;
+            margin-right: 5px;
+            display: inline;
+
+            &::after {
+                content: ":";
+            }
         }
 
-        h2::after {
-          content: ":";
+        ul.tags {
+            .list-inline;
+            display: inline;
+
+            li {
+                white-space: nowrap;
+
+                a {
+                    padding: 4px;
+                    border-radius: 4px;
+                    background: lighten(@brand-primary,40%);
+                    margin-bottom: .3em; /* in case there are 2 lines of tags */
+                    display: inline-block;
+                }
+            }
         }
     }
 
@@ -891,6 +907,36 @@ div#subpages, .grid-row {
 }
 
 
+/* verbose listing of news and events */
+
+article.news, article.event {
+    border-bottom: 1px solid @gray-lighter;
+
+    p.meta {
+        .text-muted;
+        .small;
+
+        a {
+            color: inherit;
+        }
+    }
+
+    ul.tags {
+        .list-inline;
+        .text-muted;
+        .small;
+
+        li {
+            white-space: nowrap;
+
+            a {
+                color: inherit;
+            }
+        }
+    }
+}
+
+
 /* followup boxes */
 
 #followup {
@@ -1285,28 +1331,6 @@ table#gold {
     }
 }
 
-
-/* -------------------------------------------------------------------- */
-/* Tags lists                                                           */
-/* -------------------------------------------------------------------- */
-
-ul.taglist {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: inline;
-    li {
-        display: inline;
-        white-space: nowrap;
-        a {
-            display: inline-block;
-            padding: 0.3em;
-            background: lighten(@brand-primary,40%);
-            border-radius: 4px;
-            margin: 0 0 0.3em 0.5em;
-        }
-    }
-}
 
 /* AskYourCandidates - parties colors for their answers */
 

@@ -37,17 +37,19 @@
         <!-- Show tags if this is a news press release or an event -->
         <xsl:if test="(/buildinfo/document/@newsdate or /buildinfo/document/event)
                       and /buildinfo/document/tags/tag[not(@key='front-page')]">
-          <aside id="tags">
-            <h2><xsl:call-template name="fsfe-gettext">
-              <xsl:with-param name="id" select="'tags'" />
-            </xsl:call-template></h2>
-
-            <ul class="taglist">
+          <xsl:element name="footer">
+            <xsl:attribute name="id">tags</xsl:attribute>
+            <xsl:element name="h2">
+              <xsl:call-template name="fsfe-gettext">
+                <xsl:with-param name="id" select="'tags'"/>
+              </xsl:call-template>
+            </xsl:element>
+            <ul class="tags">
               <xsl:for-each select="/buildinfo/document/tags/tag[not(@key='front-page')]">
                 <li><a href="/tags/tagged-{@key}.{/buildinfo/@language}.html"><xsl:value-of select="."/></a></li>
               </xsl:for-each>
             </ul>
-          </aside>
+          </xsl:element>
         </xsl:if> <!-- /tags -->
 
         <!-- SOCIAL NETWORK LINKS (BOTTOM) -->

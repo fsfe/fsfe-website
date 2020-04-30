@@ -4,7 +4,10 @@
   <xsl:import href="../fsfe.xsl" />
   <xsl:import href="../build/xslt/people.xsl" />
 
+  <!-- All people with council tag -->
   <xsl:template match="care-team-list">
-    <xsl:copy-of select="document('codeofconduct-careteam.en.xml')"/>
+    <xsl:call-template name="country-people-list">
+      <xsl:with-param name="team" select="'care'" />
+    </xsl:call-template>
   </xsl:template>
 </xsl:stylesheet>

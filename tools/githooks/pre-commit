@@ -92,9 +92,9 @@ for f in $files_all; do
     # make only a new line a field separator to support tags with spaces inside (which is not recommended)
     OLDIFS=$IFS   # save IFS, usually " \t\n"
     IFS=$'\n'
-    for tag in $(grep -Ei "<tag.*?>.+?</tag>" "${f}" | sed -E "s|.*<tag.*?>(.+?)</tag>.*|\1|g"); do
+    for tag in $(grep -Ei '<tag(\s|\>)' "${f}" | perl -pe 's/.*<tag key="(.+?)".*/\1/'); do
       # check if this tag does exist in any other news/event item
-      if ! git grep -ilE "<tag.*?>${tag}</tag>" news/ events/ | grep -vq "${f}"; then
+      if ! git grep -ilE "<tag key=\"${tag}\"" news/ events/ | grep -vq "${f}"; then
         hit=1
         tags="${tag}, ${tags}"
         RETURN_TAGS=$((RETURN_TAGS + 1))

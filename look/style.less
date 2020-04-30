@@ -54,7 +54,7 @@ h1, .h1 {
 }
 
 h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
-    font-weight: 300;
+    font-weight: 400;
 }
 
 // Inherit the non-standard font settings into form controls.
@@ -388,22 +388,38 @@ div#subpages, .grid-row {
         hyphens: auto;
     }
 
-    aside#tags {
-        clear: both;
+    footer#tags {
+        .small;
         margin: 3em 0 -2em 0;
-        font-size: 0.8em;
-        float: none;
-        position: static;
+        clear: both;
 
         h2 {
-          display: inline;
-          color: @gray-light;
-          font-size: 1em;
-          font-weight: normal;
+            .text-muted;
+            font-weight: normal;
+            font-size: inherit;
+            margin-right: 5px;
+            display: inline;
+
+            &::after {
+                content: ":";
+            }
         }
 
-        h2::after {
-          content: ":";
+        ul.tags {
+            .list-inline;
+            display: inline;
+
+            li {
+                white-space: nowrap;
+
+                a {
+                    padding: 4px;
+                    border-radius: 4px;
+                    background: lighten(@brand-primary,40%);
+                    margin-bottom: .3em; /* in case there are 2 lines of tags */
+                    display: inline-block;
+                }
+            }
         }
     }
 
@@ -777,16 +793,6 @@ div#subpages, .grid-row {
     .article;
 }
 
-.france.frontpage {
-    .article;
-    #news, #events {
-        width: auto;
-    }
-    #team {
-        margin-top: 3em;
-    }
-}
-
 
         /* subpages "backward compatibility" */
 
@@ -888,6 +894,36 @@ div#subpages, .grid-row {
         }
     }
 
+}
+
+
+/* verbose listing of news and events */
+
+article.news, article.event {
+    border-bottom: 1px solid @gray-lighter;
+
+    p.meta {
+        .text-muted;
+        .small;
+
+        a {
+            color: inherit;
+        }
+    }
+
+    ul.tags {
+        .list-inline;
+        .text-muted;
+        .small;
+
+        li {
+            white-space: nowrap;
+
+            a {
+                color: inherit;
+            }
+        }
+    }
 }
 
 
@@ -1186,80 +1222,7 @@ a.learn-more {
 }
 
 
-/* People pages */
-
-.people img, img.author-avatar {
-  float: left;
-  margin: 5px 10px 25px 0px;
-  width: 48px;
-  height: 48px;
-  border: 1px solid rgb(50,50,50);
-  box-shadow: 0 0 3px  rgba(0,0,0,0.3);
-}
-
-ul.people {
-    -moz-hypens: manual;
-    -webkit-hyphens: manual;
-    hyphens: manual;
-    list-style-type:none;
-    padding-left: 0;
-    font-size: 0.9em;
-}
-
-ul.people:after {
-clear: both;
-margin-right:100%;
-content: " ";
-}
-
-ul.people li {
-  display: block;
-  float: left;
-  width: 48%;
-  min-width: 20em;
-  padding-right: .5em;
-}
-
-ul.people li:nth-child(odd) {
-  clear: left;
-}
-
-
-ul.people li:last-child:after {
-  clear: both;
-}
-
-.people .name, .people .email {
-  display: block;
-}
-
-.people .name {
-  font-weight: bold;
-}
-
-.people .email {
-  font-style: italic;
-}
-
-.employee {
-    line-height: 0.8em;
-    margin-left: 0.5em;
-    padding: 0.4em;
-    border-radius: 5%;
-    display: inline-block;
-}
-
-.employee.full, .employee.intern {
-    background-color: rgb(190, 245, 190);
-}
-
-.employee.part {
-    background-color: rgb(228, 247, 228);
-}
-
-.employee.fee, .employee.freelancer {
-    background-color: rgb(239, 242, 251);
-}
+/* People's personal pages */
 
 .bio {
     .article;
@@ -1358,68 +1321,6 @@ table#gold {
     }
 }
 
-
-/* -------------------------------------------------------------------- */
-/* Tags lists                                                           */
-/* -------------------------------------------------------------------- */
-
-ul.taglist {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: inline;
-    li {
-        display: inline;
-        white-space: nowrap;
-        a {
-            .tagginglabel;
-        }
-    }
-}
-
-.tagginglabel {
-            display: inline-block;
-            padding: 0.3em;
-            background: lighten(@brand-primary,40%);
-            border-radius: 4px;
-            margin: 0 0 0.3em 0.5em;
-}
-
-.tag16 { font-size: 16; }
-.tag17 { font-size: 17; }
-.tag18 { font-size: 18; }
-.tag19 { font-size: 19; }
-.tag20 { font-size: 20; }
-.tag21 { font-size: 21; }
-.tag22 { font-size: 22; }
-.tag23 { font-size: 23; }
-.tag24 { font-size: 24; }
-.tag25 { font-size: 25; }
-.tag26 { font-size: 26; }
-.tag27 { font-size: 27; }
-.tag28 { font-size: 28; }
-.tag29 { font-size: 29; }
-.tag30 { font-size: 30; }
-.tag31 { font-size: 31; }
-.tag32 { font-size: 32; }
-.tag33 { font-size: 33; }
-.tag34 { font-size: 34; }
-.tag35 { font-size: 35; }
-.tag36 { font-size: 36; }
-.tag37 { font-size: 37; }
-.tag38 { font-size: 38; }
-.tag39 { font-size: 39; }
-.tag40 { font-size: 40; }
-
-.tag.title {
-    margin-top: 4em;
-}
-
-/* hide front-page tag */
-.taglist a[href^="/tags/tagged-frontpage"],
-.tag-front-page {
-    display: none !important;
-}
 
 /* AskYourCandidates - parties colors for their answers */
 
@@ -1635,10 +1536,6 @@ blockquote#statement p {
 .interview-question {
   font-style:italic;
   font-weight:bold;
-}
-/*fixing style for pages not up to date with the new design*/
-#content #frontpage {
-    #campaign-box-1, #campaign-box-2 {display: none;}
 }
 
 

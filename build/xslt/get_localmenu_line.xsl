@@ -29,7 +29,7 @@
     <xsl:value-of select="normalize-space(node())"/>
     <xsl:text>&lt;/localmenuitem&gt;</xsl:text>
   </xsl:template>
-  
+
   <!-- Suppress output of text nodes, which would be the default -->
   <xsl:template match="text()"/>
 </xsl:stylesheet>

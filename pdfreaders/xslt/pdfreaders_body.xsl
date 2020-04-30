@@ -10,8 +10,7 @@
   <xsl:include href="../../build/xslt/footer_sourcelink.xsl" />
   <xsl:include href="../../build/xslt/footer_legal.xsl" />
   <xsl:include href="../../build/xslt/gettext.xsl" />
-
-  <xsl:include href="../../tools/xsltsl/static-elements.xsl" />
+  <xsl:include href="../../build/xslt/static-elements.xsl" />
 
   <xsl:template name="page-body">
     <xsl:element name="body">
@@ -81,21 +80,21 @@
         </xsl:element>
 
       </xsl:element>
- 
+
       <xsl:call-template name="notifications" />
 
       <xsl:element name="section"> <xsl:attribute name="id">main</xsl:attribute>
         <xsl:apply-templates select="body/node()" />
       </xsl:element>
- 
+
       <xsl:element name="footer">
         <xsl:attribute name="id">bottom</xsl:attribute>
- 
+
         <!-- xsl:call-template name="footer_sitenav" />
         <xsl:element name="hr" / -->
         <xsl:call-template name="footer_sourcelink" />
         <xsl:call-template name="footer_legal" />
- 
+
         <xsl:element name="section">
           <xsl:attribute name="id">sister-organisations</xsl:attribute>
           <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfnetwork'" /></xsl:call-template>

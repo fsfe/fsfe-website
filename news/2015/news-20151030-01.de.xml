@@ -18,9 +18,9 @@
       <sidebar promo="about-fsfe">
       </sidebar>
     <tags>
-        <tag>front-page</tag>
-      	<tag content="Schweiz">ch</tag>
-	<tag content="Libreboot">Libreboot</tag>
+        <tag key="front-page"/>
+      	<tag key="ch">Schweiz</tag>
+	<tag key="libreboot">Libreboot</tag>
 
     </tags>
   </news>

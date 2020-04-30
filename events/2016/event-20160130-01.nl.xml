@@ -11,14 +11,14 @@
   </body>
   <page>https://fosdem.org/2016/</page>
   <tags>
-	<tag>fr</tag>
-	<tag>bnl</tag>
-	<tag content="België">BE</tag>
-	<tag content="Brussel">Brussels</tag>
-	<tag content="FOSDEM">Fosdem</tag>
-	<tag content="Fellowship">Fellowship</tag>
-	<tag content="kraam">infobooth</tag>
-	<tag content="voorpagina">front-page</tag>
+	<tag key="fr"/>
+	<tag key="bnl"/>
+	<tag key="be">België</tag>
+	<tag key="brussels">Brussel</tag>
+	<tag key="fosdem">FOSDEM</tag>
+	<tag key="fellowship">Fellowship</tag>
+	<tag key="infobooth">kraam</tag>
+	<tag key="front-page">voorpagina</tag>
   </tags>
 </event>
 </eventset> 

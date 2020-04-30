@@ -14,12 +14,12 @@
  
 		<link>https://chaosdorf.de/kontakt/</link>
 		<tags>
-			<tag>front-page</tag>
-			<tag content="Düsseldorf">düsseldorf</tag>
-			<tag content="Lokales FSFE Treffen">localgroup</tag>
-			<tag>meeting</tag>
-			<tag content="Python">python</tag>
-			<tag content="Dokumentation">documentation</tag>
+			<tag key="front-page"/>
+			<tag key="düsseldorf">Düsseldorf</tag>
+			<tag key="localgroup">Lokales FSFE Treffen</tag>
+			<tag key="meeting"/>
+			<tag key="python">Python</tag>
+			<tag key="documentation">Dokumentation</tag>
 		</tags>
 
  

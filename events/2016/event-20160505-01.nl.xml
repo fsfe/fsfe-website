@@ -14,9 +14,9 @@ aanwezig zijn. </p>
     </body> 
       <link>http://opentechsummit.net/</link>
     <tags>
-      <tag>front-page</tag>
-      <tag content="OpenTechSummit">OTS</tag>
-      <tag content="FSFE-kraam">infobooth</tag>
+      <tag key="front-page"/>
+      <tag key="ots">OpenTechSummit</tag>
+      <tag key="infobooth">FSFE-kraam</tag>
     </tags>
   </event>
 </eventset>

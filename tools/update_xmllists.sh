@@ -54,12 +54,12 @@ mkdir "${taglabels}"
 
 echo "* Generating tag maps"
 
-for xml_file in $(find * -name '*.??.xml' -not -path 'tags/*' | xargs grep -l '</tag>' | sort); do
+for xml_file in $(find * -name '*.??.xml' -not -path 'tags/*' | xargs grep -l '<tag' | sort); do
   xsltproc "build/xslt/get_tags.xsl" "${xml_file}" | while read tag label; do
-    # Add file to list of files by tag name
+    # Add file to list of files by tag key
     echo "${xml_file%.??.xml}" >> "${tagmaps}/${tag}"
 
-    # Store label by language and tag name
+    # Store label by language and tag key
     xml_base=${xml_file%.xml}
     language=${xml_base##*.}
     if [ "${language}" -a "${label}" ]; then
@@ -151,7 +151,7 @@ for language in $(ls ${taglabels}); do
         fi
 
         if [ "${count}" != "0" ]; then
-          echo "  <tag section=\"${section}\" name=\"${tag}\" count=\"${count}\">${label}</tag>"
+          echo "  <tag section=\"${section}\" key=\"${tag}\" count=\"${count}\">${label}</tag>"
         fi
       done
     done

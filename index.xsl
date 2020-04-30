@@ -2,7 +2,6 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:import href="fsfe.xsl"/>
-  <xsl:variable name="today" select="/buildinfo/@date"/>
 
 
   <!-- ==================================================================== -->
@@ -11,8 +10,7 @@
 
   <xsl:template match="dynamic-content-news">
     <xsl:for-each select="/buildinfo/document/set/news[
-      translate(@date, '-', '') &lt;= translate($today, '-', '')
-      and (tags/tag = 'front-page')
+        translate(@date, '-', '') &lt;= translate(/buildinfo/@date, '-', '')
       ]">
       <xsl:sort select="@date" order="descending"/>
       <xsl:if test="position() &lt;= 3">
@@ -54,33 +52,21 @@
 
               <!-- Title (with or without link) -->
               <xsl:element name="h3">
-                <xsl:choose>
-                  <xsl:when test="link != ''">
-                    <xsl:element name="a">
-                      <xsl:attribute name="href">
-                        <xsl:value-of select="link"/>
-                      </xsl:attribute>
-                      <xsl:value-of select="title"/>
-                    </xsl:element><!-- a -->
-                  </xsl:when>
-                  <xsl:otherwise>
-                    <xsl:value-of select="title"/>
-                  </xsl:otherwise>
-                </xsl:choose>
+                <xsl:call-template name="news-title"/>
               </xsl:element><!-- h3 -->
 
               <!-- Date -->
               <xsl:element name="p">
                 <xsl:attribute name="class">date</xsl:attribute>
-                <xsl:value-of select="@date"/>
+                <xsl:call-template name="news-date"/>
               </xsl:element><!-- p/date -->
 
               <!-- Teaser -->
               <xsl:element name="p">
                 <xsl:attribute name="class">teaser</xsl:attribute>
                 <xsl:apply-templates select="body/node()"/>
-                <xsl:if test="link != ''">
-                  <xsl:text> </xsl:text>
+                <xsl:if test="link">
+                  <xsl:text>&#160;</xsl:text>
                   <xsl:element name="a">
                     <xsl:attribute name="class">learn-more</xsl:attribute>
                     <xsl:attribute name="href">
@@ -159,9 +145,8 @@
   <!-- ==================================================================== -->
 
   <xsl:template match="dynamic-content-events">
-    <xsl:for-each select="/buildinfo/document/set/event
-      [translate (@end, '-', '') &gt;= translate ($today, '-', '')
-       and (tags/tag = 'front-page')
+    <xsl:for-each select="/buildinfo/document/set/event[
+        translate (@end, '-', '') &gt;= translate (/buildinfo/@date, '-', '')
       ]">
       <xsl:sort select="@start"/>
       <xsl:if test="position() &lt;= 3">
@@ -169,11 +154,7 @@
         <!-- Date -->
         <xsl:element name="p">
           <xsl:attribute name="class">date</xsl:attribute>
-          <xsl:value-of select="@start"/>
-          <xsl:if test="@start != @end">
-            <xsl:text> – </xsl:text>
-            <xsl:value-of select="@end"/>
-          </xsl:if>
+          <xsl:call-template name="event-date"/>
         </xsl:element><!-- p/date -->
 
         <!-- Description -->

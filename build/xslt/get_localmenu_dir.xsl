@@ -13,7 +13,7 @@
   <xsl:template match="localmenu">
     <xsl:value-of select="@dir"/>
   </xsl:template>
-  
+
   <!-- Suppress output of text nodes, which would be the default -->
   <xsl:template match="text()"/>
 </xsl:stylesheet>

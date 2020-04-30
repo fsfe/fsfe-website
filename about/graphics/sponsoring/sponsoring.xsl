@@ -1,9 +1,7 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:import href="../../../fsfe.xsl" />
-  <xsl:output method="html" encoding="utf-8" indent="yes" doctype-system="about:legacy-compat" />
-
 
   <xsl:template match="buttons">
     <xsl:for-each select="/buildinfo/document/set/year"> <!-- loop years -->
@@ -28,7 +26,7 @@
             <xsl:attribute name="src"><xsl:value-of select="$year" />/<xsl:value-of select="@type" /><xsl:value-of select="$year" />_w_medium.png</xsl:attribute>
           </xsl:element>
           <!-- white background -->
-          <xsl:element name="p"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'background/white'" /></xsl:call-template>: 
+          <xsl:element name="p"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'background/white'" /></xsl:call-template>:
             <xsl:text>[</xsl:text>
             <xsl:element name="a">
               <xsl:attribute name="href"><xsl:value-of select="$year" />/<xsl:value-of select="@type" /><xsl:value-of select="$year" />_w_huge.png</xsl:attribute>
@@ -55,7 +53,7 @@
             <xsl:text>]</xsl:text>
           </xsl:element>
           <!-- transparent background -->
-          <xsl:element name="p"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'background/transparent'" /></xsl:call-template>: 
+          <xsl:element name="p"><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'background/transparent'" /></xsl:call-template>:
             <xsl:text>[</xsl:text>
             <xsl:element name="a">
               <xsl:attribute name="href"><xsl:value-of select="$year" />/<xsl:value-of select="@type" /><xsl:value-of select="$year" />_t_huge.png</xsl:attribute>

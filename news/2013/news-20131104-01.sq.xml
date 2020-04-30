@@ -13,11 +13,11 @@ Sot FSFE-ja fillon një fushatë të re për t’i bërë të rinjtë të ndërg
     </body>
     <link>http://theydontwantyou.to</link>
     <tags>
-      <tag>front-page</tag>    
-      <tag content="Privatësi">Privacy</tag>
-      <tag content="Survejim">privacy</tag>
-      <tag>Theydontwantyouto</tag>
-      <tag content="Fushata">Campaigns</tag>
+      <tag key="front-page"/>    
+      <tag key="privacy">Privatësi</tag>
+      <tag key="privacy">Survejim</tag>
+      <tag key="theydontwantyouto"/>
+      <tag key="campaigns">Fushata</tag>
     </tags>
   </news>
 </newsset>

@@ -13,10 +13,13 @@ include_xml(){
   # build script which wasn't able to load top
   # level elements from any file
   if [ -f "$1" ]; then
+    # Remove <version> because the filename attribute would otherwise be added
+    # to this element instead of the actual content element.
+    sed 's;<version>.*</version>;;' "$1" | \
     sed -r ':X; $bY; N; bX; :Y;
             s:<(\?[xX][mM][lL]|!DOCTYPE)[[:space:]]+[^>]+>::g
             s:<[^!][^>]*>::;
-            s:</[^>]*>([^<]*((<[^>]+/>|<!([^>]|<[^>]*>)*>|<\?[^>]+>)[^<]*)*)?$:\1:;' "$1"
+            s:</[^>]*>([^<]*((<[^>]+/>|<!([^>]|<[^>]*>)*>|<\?[^>]+>)[^<]*)*)?$:\1:;'
   fi
 }
 
@@ -39,34 +42,26 @@ list_langs(){
   done
 }
 
-list_sources(){
-  # read a .xmllist file and generate a list
-  # of all referenced xml files with preference
-  # for a given language
-  shortname="$1"
-  lang="$2"
-
-  list_file="`dirname ${shortname}`/.`basename ${shortname}`.xmllist"
-
-  if [ -f "${list_file}" ]; then
-    cat "${list_file}" | while read base; do
-      echo "${basedir}/${base}".[a-z][a-z].xml "${basedir}/${base}".en.[x]ml "${basedir}/${base}.${lang}".[x]ml
-    done | sed -rn 's;^(.* )?([^ ]+\.[a-z]{2}\.xml).*$;\2;p'
-  fi
-}
-
 auto_sources(){
   # import elements from source files, add file name
   # attribute to first element included from each file
   shortname="$1"
   lang="$2"
 
-  list_sources "$shortname" "$lang" \
-  | while read source; do
-    printf '\n### filename="%s" ###\n%s' "$source" "$(include_xml "$source")" 
-  done \
-  | sed -r ':X; N; $!bX;
-            s;\n### (filename="[^\n"]+") ###\n[^<]*(<![^>]+>[^<]*)*(<([^/>]+/)*([^/>]+))(/?>);\2\3 \1\6;g;'
+  list_file="$(dirname ${shortname})/.$(basename ${shortname}).xmllist"
+
+  if [ -f "${list_file}" ]; then
+    cat "${list_file}" | while read path; do
+      base="$(basename ${path})"
+      if [ -f "${basedir}/${path}.${lang}.xml" ]; then
+        printf '\n### filename="%s" ###\n%s' "${base#.}" "$(include_xml "${basedir}/${path}.${lang}.xml")"
+      elif [ -f "${basedir}/${path}.en.xml" ]; then
+        printf '\n### filename="%s" ###\n%s' "${base#.}" "$(include_xml "${basedir}/${path}.en.xml")"
+      fi
+    done \
+    | sed -r ':X; N; $!bX;
+              s;\n### (filename="[^\n"]+") ###\n[^<]*(<![^>]+>[^<]*)*(<([^/>]+/)*([^/>]+))(/?>);\2\3 \1\6;g;'
+  fi
 }
 
 build_xmlstream(){

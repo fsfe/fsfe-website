@@ -9,22 +9,35 @@
 
   <body class="toplevel article events">
     <h1>Veranstaltungen</h1>
-    <h2>Neue Veranstaltung hinzufügen</h2>
 
-    <p>
-      Wenn du von einer FSFE Veranstaltung weißt, die noch nicht gelistet ist
-      oder selber eine veranstaltest, kannst du sie ganz einfach zu dieser Liste hinzufügen,
-      indem du unser <a href="/community/tools/eventregistration.html">Veranstaltungsformular</a> benutzt.
-    </p>
+    <section id="add-event">
+      <h2>Neue Veranstaltung hinzufügen</h2>
 
-    <include-events/>
+      <p>
+        Wenn du von einer FSFE Veranstaltung weißt, die noch nicht gelistet ist
+        oder selber eine veranstaltest, kannst du sie ganz einfach zu dieser Liste hinzufügen,
+        indem du unser <a href="/community/tools/eventregistration.html">Veranstaltungsformular</a> benutzt.
+      </p>
+    </section>
 
-    <h2><a href="2017/2017.html">Veranstaltungsarchive</a></h2>
+    <section id="current-events">
+      <include-events group="current">Aktuelle Veranstaltungen</include-events>
+    </section>
+    <section id="future-events">
+      <include-events group="future">Kommende Veranstaltungen</include-events>
+    </section>
+    <section id="past-events">
+      <include-events group="past">Vergangene Veranstaltungen</include-events>
+    </section>
 
-    <p>
-      Für ältere Veranstaltungen, schaue in unseren Veranstaltungsarchiven.
-      <a class="learn-more" href="2017/2017.html"/>
-    </p>
+    <section id="events-archive">
+      <h2><a href="2018/index.html">Veranstaltungsarchive</a></h2>
+
+      <p>
+        Für ältere Veranstaltungen, schaue in unseren Veranstaltungsarchiven.
+        <a class="learn-more" href="2018/index.html"/>
+      </p>
+    </section>
   </body>
 
   <sidebar promo="none">
@@ -75,10 +88,6 @@
       Falls du Interesse hast, dann informiere dich, um sie nicht zu verpassen.
     </p>
   </sidebar>
-
-  <text id="current">Aktuelle Veranstaltungen</text>
-  <text id="future">Kommende Veranstaltungen</text>
-  <text id="past">Vergangene Veranstaltungen</text>
 </html>
 
 <!--

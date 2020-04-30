@@ -12,18 +12,16 @@
   <xsl:output method="text" encoding="UTF-8"/>
 
   <xsl:template match="tag">
-    <!-- Output canonicalized tag name -->
-    <xsl:value-of select="translate(.,
-        'ABCDEFGHIJKLMNOPQRSTUVWXYZ /:',
-        'abcdefghijklmnopqrstuvwxyz_')"/>
+    <!-- Output tag name with some safeguarding against invalid characters -->
+    <xsl:value-of select="translate(@key, ' /:', '---')"/>
     <!-- Output a blank -->
     <xsl:text> </xsl:text>
     <!-- Output tag label -->
-    <xsl:value-of select="@content"/>
+    <xsl:value-of select="."/>
     <!-- Append a newline -->
     <xsl:text>&#xa;</xsl:text>
   </xsl:template>
-  
+
   <!-- Suppress output of text nodes, which would be the default -->
   <xsl:template match="text()"/>
 </xsl:stylesheet>

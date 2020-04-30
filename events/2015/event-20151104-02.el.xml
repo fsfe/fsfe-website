@@ -12,10 +12,10 @@
     </body> 
       <link>http://copycamp.pl/el/</link>
     <tags>
-      <tag>front-page</tag>
-      <tag content="Poland">pl</tag>
-      <tag content="Copyright">copyright</tag>
-      <tag content="FSFE booth">infobooth</tag>
+      <tag key="front-page"/>
+      <tag key="pl">Poland</tag>
+      <tag key="copyright">Copyright</tag>
+      <tag key="infobooth">FSFE booth</tag>
     </tags>
   </event>
 </eventset>

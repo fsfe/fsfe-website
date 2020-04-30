@@ -17,12 +17,12 @@
      të Industrisë TI.
     </body> 
     <tags>
-      <tag>front-page</tag>
+      <tag key="front-page"/>
 
-    <tag>Seoul</tag>
-    <tag>Policy</tag>
-    <tag>Legal</tag>
-      <tag content="Bisedë">talk</tag>
+    <tag key="seoul"/>
+    <tag key="policy"/>
+    <tag key="legal"/>
+      <tag key="talk">Bisedë</tag>
     </tags>
   </event>
 </eventset>

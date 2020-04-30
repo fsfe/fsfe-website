@@ -192,6 +192,7 @@ EOF
 COPY_SRC_FILES := \$(shell find "\$(INPUTDIR)" -type f \
   -not -path '\$(INPUTDIR)/.git/*' \
   -not -path '\$(INPUTDIR)/build/*' \
+  -not -path '\$(INPUTDIR)/global/*' \
   -not -path '\$(INPUTDIR)/tools/*' \
   -not -name '.drone.yml' \
   -not -name '.gitignore' \

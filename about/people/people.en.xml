@@ -44,7 +44,7 @@
     <email> Email address of the person. Please use (at) and (dot) for spam protection reasons
     <link> If someone clicks on a name, he can be redirected to a page with further information.
       In most cases, it's /about/surname/surname.html (if there's a page)
-    <avatar> Here you can display an image. Please only use local images like /about/surname/surname.png
+    <avatar> Here you can display an image. These image files have to be located in /about/people/avatars/, and ideally be named with the surname (id) of the person. Maximum 50x50px please!
     <employee> Working status inside the FSFE, defined by the earned money. Only nexessary if the person receives money on a regular basis for his/her work
       full: Person is working 4 or 5 days a week
       part: Person is working 3 or less days a week
@@ -53,11 +53,12 @@
   <!--
     Technical information:
         The teampage derives its information from many files and XSL scripts.
-        - /about/people/people.en.xml (this file): All FSFE-teammembers, even those not belonging to team@ (i.e. country teams)#+
+        - /about/people/people.en.xml (this file): All FSFE-teammembers, even those not belonging to team@ (i.e. country teams)
         - /about/team.**.xhtml: The frame of the team page: Information texts, Headlines etc
         - /about/team.xsl: In this file, tags like <council-members /> are defined.
         - /about/team.sources: Where to look for people-files, translations of functions/projects/countries and so on
-        - /tools/xsltsl/people.xsl: The building of the team lists itself: Links, Background colors, inclusion of avatars etc
+        - /about/people/avatars/: Place for all avatar pictures
+        - /build/xslt/people.xsl: The building of the team lists itself: Links, Background colors, inclusion of avatars etc
   -->
   <!--
     Improvement ideas:

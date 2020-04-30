@@ -112,10 +112,11 @@ RewriteRule ^about/reports/es-2009(.*)$ /news/2009/news-20090620-01$1 [R=301,L]
 RewriteRule ^freesoftware/enterprise/freesoftwarecompany(.*)$ /news/2018/news-20181202-01$1 [R=301,L]
 RewriteRule ^freesoftware/enterprise/chargeofitsbrand(.*)$ /news/2009/news-20090604-01$1 [R=301,L]
 
-# Old staff profiles
-RewriteRule ^about/(bako|polvani|tuke|maffulli|jakobs|oriordan)(/.*)?$ /about/team [R=301,L]
-RewriteRule ^about/nanda(/.*)?$ /about/weiden [R=301,L]
+# Old/moved people/staff profiles
+RewriteRule ^about/(bako|polvani|tuke|maffulli|jakobs|oriordan|oberg|coughlan|weiden|nanda)(/.*)?$ /about/team [R=301,L]
+RewriteRule ^about/(albers|gerloff|greve|kirschner|ku|lasota|mehl|repentinus|roy|sander)(/.*)?$ /about/people/$1$2 [R=301,L]
 RewriteRule ^people/greve(/.*)?$ /about/people/greve [R=301,L]
+RewriteRule ^about/people/?(people.*)?$ /about/team.html [R=301,L]
 
 # /en/.*
 RewriteRule ^en/layout/set/rss/content/view/full/5116 http://blogs.fsfe.org/ciaran/?feed=rss2 [R=301,L]

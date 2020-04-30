@@ -115,7 +115,7 @@ RewriteRule ^freesoftware/enterprise/chargeofitsbrand(.*)$ /news/2009/news-20090
 # Old staff profiles
 RewriteRule ^about/(bako|polvani|tuke|maffulli|jakobs|oriordan)(/.*)?$ /about/team [R=301,L]
 RewriteRule ^about/nanda(/.*)?$ /about/weiden [R=301,L]
-RewriteRule ^people/greve(/.*)?$ /about/greve [R=301,L]
+RewriteRule ^people/greve(/.*)?$ /about/people/greve [R=301,L]
 
 # /en/.*
 RewriteRule ^en/layout/set/rss/content/view/full/5116 http://blogs.fsfe.org/ciaran/?feed=rss2 [R=301,L]

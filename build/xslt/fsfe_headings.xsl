@@ -159,7 +159,7 @@
                                   <xsl:if test="document('../../about/people/people.en.xml')/personset/person[@id=$id]/avatar">
                                           <xsl:element name="img">
                                                   <xsl:attribute name="alt"></xsl:attribute>
-                                                  <xsl:attribute name="src"><xsl:value-of select="document('../../about/people/people.en.xml')/personset/person[@id=$id]/avatar" /></xsl:attribute>
+                                                  <xsl:attribute name="src">/about/people/avatars/<xsl:value-of select="document('../../about/people/people.en.xml')/personset/person[@id=$id]/avatar" /></xsl:attribute>
                                           </xsl:element>
                                   </xsl:if>
                                   <xsl:value-of select="document('../../about/people/people.en.xml')/personset/person[@id=$id]/name" />
@@ -170,7 +170,7 @@
                           <xsl:if test="document('../../about/people/people.en.xml')/personset/person[@id=$id]/avatar">
                                   <xsl:element name="img">
                                           <xsl:attribute name="alt"></xsl:attribute>
-                                          <xsl:attribute name="src"><xsl:value-of select="document('../../about/people/people.en.xml')/personset/person[@id=$id]/avatar" /></xsl:attribute>
+                                          <xsl:attribute name="src">/about/people/avatars/<xsl:value-of select="document('../../about/people/people.en.xml')/personset/person[@id=$id]/avatar" /></xsl:attribute>
                                   </xsl:element>
                           </xsl:if>
                           <span class="author p-author">

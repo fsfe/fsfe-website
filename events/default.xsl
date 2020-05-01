@@ -28,8 +28,8 @@
         <xsl:call-template name="event-date"/>
       </xsl:element>
 
-      <!-- Details -->
-      <xsl:apply-templates select="body/node()"/>
+      <!-- Info -->
+      <xsl:call-template name="event-info"/>
 
       <!-- Tags -->
       <xsl:apply-templates select="tags"/>

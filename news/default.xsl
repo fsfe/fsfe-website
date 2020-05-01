@@ -73,16 +73,7 @@
       </xsl:element>
 
       <!-- Text and "read-more" link -->
-      <xsl:element name="p">
-        <xsl:apply-templates select="body/node()"/>
-        <xsl:text>&#160;</xsl:text>
-        <xsl:element name="a">
-          <xsl:attribute name="class">learn-more</xsl:attribute>
-          <xsl:attribute name="href">
-            <xsl:value-of select="link"/>
-          </xsl:attribute>
-        </xsl:element><!-- a/learn-more -->
-      </xsl:element><!-- p -->
+      <xsl:call-template name="news-teaser"/>
 
       <!-- Tags -->
       <xsl:apply-templates select="tags"/>
@@ -93,7 +84,7 @@
 
 
   <!-- ==================================================================== -->
-  <!-- Display a verbose list of events                                     -->
+  <!-- Display a verbose list of news items                                 -->
   <!-- ==================================================================== -->
 
   <xsl:template match="include-news">

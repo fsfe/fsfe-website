@@ -33,8 +33,7 @@ the /news/2008/ directory)
 Add an xhtml file in the appropriate directory.
 
 Write an ordinary xhtml file. Add the newsdate="date" attribute in the
-xhtml tag. The paragraph that has to be copied into the xml file
-should be marked with the newsteaser="yes" attribute.
+xhtml tag. The first <p> element will be copied into the xml file.
 
 (eg:
 
@@ -48,10 +47,9 @@ should be marked with the newsteaser="yes" attribute.
 
 <body>
 
-.....
+<p>This is the paragraph that will be copied into the xml file. <p>
 
-<p newsteaser="yes">this is the paragraph that will be copied into the
-xml file. <p>
+<p>This is a paragraph that will not be copied.</p>
 
 ....
 

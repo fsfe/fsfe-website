@@ -50,7 +50,7 @@
     <!-- Add leading "https://fsfe.org" if necessary -->
     <xsl:variable name="full-link">
       <xsl:choose>
-        <xsl:when test="starts-with ($link, 'https:')">
+        <xsl:when test="starts-with ($link, 'http:')">
           <xsl:value-of select="$link" />
         </xsl:when>
         <xsl:when test="starts-with ($link, 'https:')">
@@ -63,7 +63,7 @@
 
     <!-- Insert language into link -->
     <xsl:choose>
-      <xsl:when test="starts-with ($full-link, 'http://www.fsfeurope.org/')
+      <xsl:when test="starts-with ($full-link, 'https://fsfe.org/')
                       and substring-before ($full-link, '.html') != ''">
         <xsl:value-of select="concat (substring-before ($full-link, '.html'),
                                       '.', $lang, '.html')" />
@@ -349,7 +349,6 @@
   <!-- take care that links within <content:encoded> are not relative -->
   <xsl:template match="a">
     <xsl:element name="a">
-
       <xsl:attribute name="href">
         <xsl:choose>
           <xsl:when test="substring(@href,1,1) = '/'">
@@ -361,11 +360,10 @@
           </xsl:otherwise>
         </xsl:choose>
       </xsl:attribute>
-
       <xsl:value-of select="." />
-
     </xsl:element>
   </xsl:template>
+
   <!-- as well as images -->
   <xsl:template match="img">
     <xsl:element name="img">
@@ -383,14 +381,8 @@
     </xsl:element>
   </xsl:template>
 
-  <!-- remove newsteaser from <p> -->
-  <xsl:template match="p">
-    <xsl:copy>
-      <xsl:apply-templates select="node()" />
-    </xsl:copy>
-  </xsl:template>
-  <!-- Allow other basic styling elements, copy them verbatim -->
-  <xsl:template match="strong|em|ul|ol|li|h1|h2|h3|h4|h5|h6">
+  <!-- Allow basic styling elements, copy them without attributes -->
+  <xsl:template match="p|strong|em|ul|ol|li|h1|h2|h3|h4|h5|h6">
     <xsl:copy>
       <xsl:apply-templates select="node()"/>
     </xsl:copy>

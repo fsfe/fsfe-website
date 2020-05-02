@@ -32,7 +32,7 @@
         </xsl:element>
 
         <xsl:element name="body">
-          <xsl:value-of select="/html/body/p[@newsteaser]"/>
+          <xsl:copy-of select="/html/body/p[1]"/>
         </xsl:element>
 
         <xsl:element name="body-complete">
@@ -59,7 +59,6 @@
 
         <xsl:copy-of select="/html/tags" />
         <xsl:copy-of select="/html/author" />
-        <!-- Copy data of <podcast> to XML files -->
         <xsl:copy-of select="/html/podcast" />
         <xsl:copy-of select="/html/discussion" />
 

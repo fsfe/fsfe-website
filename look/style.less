@@ -134,7 +134,7 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
 #translations, #main, #followup {
     .make-row();
 }
-#translations, #top, #main, #followup, #bottom, #fsfe-web, #full-menu, #notifications {
+#translations, #top, #notifications, #main, #followup, #fsfe-web, #full-menu, #page-info {
     .container;
 }
 
@@ -1095,20 +1095,13 @@ article.news, article.event {
     }
 }
 
-#legal-info, #source {
-    .make-row;
+#page-info {
+    // .make-row;  can't use .container and .make-row on same element
 
-    p, ul {
-        .list-no-style;
-        .make-xs-column(6);
+    div {
+        .make-xs-column(12);
         .make-sm-column(4);
     }
-
-}
-
-#sister-organisations {
-    text-align: center;
-    margin-top: 2em;
 }
 
 

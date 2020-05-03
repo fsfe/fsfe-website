@@ -111,10 +111,6 @@ build_xmlstream(){
 	  language="$act_lang"
 	  $(get_attributes "$infile")
 	>
-	  <timestamp>
-	    \$Date: $date $time \$
-	    \$Author: automatic \$
-	  </timestamp>
 	  <set>
 	    $(auto_sources "${shortname}" "$lang")
 	  </set>

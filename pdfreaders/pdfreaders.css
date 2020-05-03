@@ -81,7 +81,7 @@ header {
   color: #693;
 }
 
-#main, #followup, #bottom, #source, #legal-info, #sister-organisations {
+#main, #followup, #bottom, #page-info, {
   display: block;
   clear: both;
 }
@@ -207,13 +207,10 @@ header {
   border-style: solid none none none;
 }
 
-#bottom #source, 
-#bottom #legal-info,
-#bottom #sister-organisations {
+#bottom #page-info {
   margin: 0 10%;
 }
-#bottom #source > *, 
-#bottom #legal-info > * {
+#bottom #page-info > * {
   display: inline-block;
   vertical-align: top;
   width: 33%;

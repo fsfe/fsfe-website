@@ -164,12 +164,6 @@
         </xsl:element>
 
         <!-- PODCAST specific information -->
-        <lastBuildDate>
-          <xsl:variable name="timestamp">
-            <xsl:value-of select="/buildinfo/document/timestamp"/>
-          </xsl:variable>
-          <xsl:value-of select="substring-before(substring-after($timestamp, 'Date: '), ' $')"/>
-        </lastBuildDate>
         <generator>FSFE website build system: podcast.rss.xsl</generator>
         <itunes:type>episodic</itunes:type>
         <itunes:owner>

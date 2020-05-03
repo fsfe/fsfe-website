@@ -8,8 +8,7 @@
   <xsl:include href="fsfe_mainsection.xsl" />
   <xsl:include href="fsfe_followupsection.xsl" />
   <xsl:include href="footer_sitenav.xsl" />
-  <xsl:include href="footer_sourcelink.xsl" />
-  <xsl:include href="footer_legal.xsl" />
+  <xsl:include href="fsfe_pagefooter.xsl" />
   <xsl:include href="body_scripts.xsl" />
 
   <!-- HTML body -->
@@ -33,16 +32,7 @@
 
         <xsl:call-template name="footer_sitenav" />
         <xsl:element name="hr" />
-        <xsl:call-template name="footer_sourcelink" />
-        <xsl:call-template name="footer_legal" />
-
-        <xsl:element name="section">
-          <xsl:attribute name="id">sister-organisations</xsl:attribute>
-
-          <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfnetwork'" /></xsl:call-template>
-        </xsl:element>
-        <!--/section#sister-organisations-->
-
+        <xsl:call-template name="fsfe_pagefooter" />
       </xsl:element>
       <!--/footer#bottom-->
 

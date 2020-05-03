@@ -3,7 +3,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <!-- Do not copy non-HTML elements to output -->
-  <xsl:template match="timestamp|
+  <xsl:template match="
                buildinfo/document/translator|
                buildinfo/set|
                buildinfo/textset|

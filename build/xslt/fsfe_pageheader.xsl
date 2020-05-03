@@ -34,59 +34,71 @@
       <xsl:element name="nav">
         <xsl:attribute name="id">menu</xsl:attribute>
 
-        <xsl:element name="div">
+        <xsl:element name="p">
+          <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'go-to'" /></xsl:call-template>
+        </xsl:element>
+
+        <xsl:element name="ul">
           <xsl:attribute name="id">direct-links</xsl:attribute>
 
-          <xsl:element name="span">
-            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'go-to'" /></xsl:call-template>
-          </xsl:element>
-
-          <xsl:element name="a">
-            <xsl:attribute name="href">#menu-list</xsl:attribute>
+          <xsl:element name="li">
             <xsl:attribute name="id">direct-to-menu-list</xsl:attribute>
-            <xsl:element name="i">
-              <xsl:attribute name="class">fa fa-bars fa-lg</xsl:attribute>
+            <xsl:element name="a">
+              <xsl:attribute name="href">#menu-list</xsl:attribute>
+              <xsl:element name="i">
+                <xsl:attribute name="class">fa fa-bars fa-lg</xsl:attribute>
+              </xsl:element>
+              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'menu'" /></xsl:call-template>
             </xsl:element>
-            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'menu'" /></xsl:call-template>
           </xsl:element>
 
-          <xsl:element name="a">
-            <xsl:attribute name="href">#content</xsl:attribute>
+          <xsl:element name="li">
             <xsl:attribute name="id">direct-to-content</xsl:attribute>
-            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'content'" /></xsl:call-template>
+            <xsl:element name="a">
+              <xsl:attribute name="href">#content</xsl:attribute>
+              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'content'" /></xsl:call-template>
+            </xsl:element>
           </xsl:element>
 
-          <xsl:element name="a">
-            <xsl:attribute name="href">#full-menu</xsl:attribute>
+          <xsl:element name="li">
             <xsl:attribute name="id">direct-to-full-menu</xsl:attribute>
-            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'sitemap'" /></xsl:call-template>
+            <xsl:element name="a">
+              <xsl:attribute name="href">#full-menu</xsl:attribute>
+              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'sitemap'" /></xsl:call-template>
+            </xsl:element>
           </xsl:element>
 
-          <xsl:element name="a">
-            <xsl:attribute name="href">#source</xsl:attribute>
+          <xsl:element name="li">
             <xsl:attribute name="id">direct-to-source</xsl:attribute>
-            <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'page-info'" /></xsl:call-template>
+            <xsl:element name="a">
+              <xsl:attribute name="href">#source</xsl:attribute>
+              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'page-info'" /></xsl:call-template>
+            </xsl:element>
           </xsl:element>
 
           <xsl:if test="not(/buildinfo/document/@external)">
-            <xsl:element name="a">
-              <xsl:attribute name="href">https://my.fsfe.org/</xsl:attribute>
+            <xsl:element name="li">
               <xsl:attribute name="id">direct-to-login</xsl:attribute>
-              <xsl:element name="i">
-                <xsl:attribute name="class">fa fa-sign-in fa-lg</xsl:attribute>
+              <xsl:element name="a">
+                <xsl:attribute name="href">https://my.fsfe.org/</xsl:attribute>
+                <xsl:element name="i">
+                  <xsl:attribute name="class">fa fa-sign-in fa-lg</xsl:attribute>
+                </xsl:element>
+                <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fellowship/login'" /></xsl:call-template>
               </xsl:element>
-              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fellowship/login'" /></xsl:call-template>
             </xsl:element>
 
-            <xsl:element name="a">
-              <xsl:attribute name="href">#translations</xsl:attribute>
+            <xsl:element name="li">
               <xsl:attribute name="id">direct-to-translations</xsl:attribute>
-              <xsl:attribute name="data-toggle">collapse</xsl:attribute>
-              <xsl:attribute name="data-target">#translations</xsl:attribute>
-              <xsl:element name="i">
-                <xsl:attribute name="class">fa fa-globe fa-lg</xsl:attribute>
+              <xsl:element name="a">
+                <xsl:attribute name="href">#translations</xsl:attribute>
+                <xsl:attribute name="data-toggle">collapse</xsl:attribute>
+                <xsl:attribute name="data-target">#translations</xsl:attribute>
+                <xsl:element name="i">
+                  <xsl:attribute name="class">fa fa-globe fa-lg</xsl:attribute>
+                </xsl:element>
+                <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'change-lang'" /></xsl:call-template>
               </xsl:element>
-              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'change-lang'" /></xsl:call-template>
             </xsl:element>
           </xsl:if>
 

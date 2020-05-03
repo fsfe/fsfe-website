@@ -259,16 +259,21 @@ div#subpages, .grid-row {
     @media (min-width: @screen-sm-min) {
         .pull-right;
     }
+
+    p {
+        display: none;
+    }
 }
 
 #direct-links {
+    .list-inline;
     .clearfix;
 
     @media (min-width: @screen-sm-min) {
         margin-bottom: 2em;
     }
 
-    span, a {
+    li {
         display: none;
         padding: .5em;
 

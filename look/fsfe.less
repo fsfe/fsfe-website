@@ -38,19 +38,6 @@ img.signatory-logo {
 }
 
 #news {
-    padding-bottom: 1.5em;
-
-    .dt-published {
-        color: @gray-light;
-        font-size: .9em;
-        display: block;
-
-        @media (min-width: @screen-sm-min) {
-            display: inline-block;
-            padding: 0;
-        }
-    }
-
     .entry {
         h3 {
             display: inline-block;
@@ -58,10 +45,16 @@ img.signatory-logo {
         }
 
         p.date {
-            display: inline-block;
-            #news .dt-published;
+            color: @gray-light;
+            font-size: .9em;
+            display: block;
             font-weight: 300;
             margin-bottom: 0;
+
+            @media (min-width: @screen-sm-min) {
+                display: inline-block;
+                padding: 0;
+            }
         }
     }
 
@@ -80,29 +73,23 @@ img.signatory-logo {
             display: inline-block;
         }
     }
-
-}
-
-.newsdate {
-  font-size: .875em;
-  color: #888;
-  margin-right: 1ex;
 }
 
 #events {
-    clear: both;
-    padding-top: 1.5em;
-
     .entry {
         h3 {
             display: inline-block;
         }
+
         p.date {
-            #news .dt-published;
+            color: @gray-light;
+            font-size: .9em;
             display: block;
             margin-bottom: 0;
+
             @media (min-width: @screen-sm-min) {
-                display: block;
+                display: inline-block;
+                padding: 0;
             }
         }
     }
@@ -111,16 +98,10 @@ img.signatory-logo {
     }
 }
 
-@media (min-width: @screen-sm-min) {
-    #news, #events {
-        display: inline-block;
-        float: left;
-        width: 69%;
-    }
-    #team {
-        display: inline-block;
-        float: left;
-    }
+.newsdate {
+  font-size: .875em;
+  color: #888;
+  margin-right: 1ex;
 }
 
 

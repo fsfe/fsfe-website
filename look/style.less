@@ -890,10 +890,13 @@ div#subpages, {
 }
 
 
-/* verbose listing of news and events */
+// ----------------------------------------------------------------------------
+// Verbose listing of news and events
+// ----------------------------------------------------------------------------
 
 article.news, article.event {
     border-bottom: 1px solid @gray-lighter;
+    margin-bottom: 10px;
 
     p.meta {
         .text-muted;
@@ -919,8 +922,33 @@ article.news, article.event {
     }
 }
 
+// In a "related news" section, display all but the first news items in a
+// compressed form.
+section#news article.news:nth-of-type(n+2) {
+    border-bottom: none;
+    margin-bottom: 0;
 
-/* followup boxes */
+    h3 {
+        font-size: inherit;
+        margin-right: .5em;
+        display: inline;
+    }
+
+    p {
+        display: none;
+    }
+
+    // Make sure that there is no line break within the news date. The p.meta
+    // element also is responsible for the margin-bottom of the while item.
+    p.meta {
+        display: inline-block;
+    }
+}
+
+
+// ----------------------------------------------------------------------------
+// Followup boxes
+// ----------------------------------------------------------------------------
 
 #followup {
     .clearfix();

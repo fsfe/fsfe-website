@@ -192,8 +192,8 @@
       ]">
       <xsl:sort select="@start"/>
       <xsl:if test="position() &lt;= $count">
-        <xsl:element name="div">
-          <xsl:attribute name="class">entry</xsl:attribute>
+        <xsl:element name="article">
+          <xsl:attribute name="class">event</xsl:attribute>
           <xsl:attribute name="id">
             <xsl:value-of select="@filename"/>
           </xsl:attribute>
@@ -205,7 +205,7 @@
 
           <!-- Date -->
           <xsl:element name="p">
-            <xsl:attribute name="class">date</xsl:attribute>
+            <xsl:attribute name="class">meta</xsl:attribute>
             <xsl:call-template name="event-date"/>
           </xsl:element>
 

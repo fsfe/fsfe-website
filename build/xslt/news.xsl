@@ -156,8 +156,8 @@
       ]">
       <xsl:sort select="@date" order="descending"/>
       <xsl:if test="position() &lt;= $count">
-        <xsl:element name="div">
-          <xsl:attribute name="class">entry</xsl:attribute>
+        <xsl:element name="article">
+          <xsl:attribute name="class">news</xsl:attribute>
           <xsl:attribute name="id">
             <xsl:value-of select="@filename"/>
           </xsl:attribute>
@@ -169,7 +169,7 @@
 
           <!-- Date -->
           <xsl:element name="p">
-            <xsl:attribute name="class">date</xsl:attribute>
+            <xsl:attribute name="class">meta</xsl:attribute>
             <xsl:call-template name="news-date"/>
           </xsl:element>
 

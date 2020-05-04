@@ -131,14 +131,11 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
 // Page structure and grids
 // ============================================================================
 
-#translations, #main, #followup {
-    .make-row();
-}
-#translations, #top, #notifications, #main, #followup, #fsfe-web, #full-menu, #page-info {
+#translations, #top, #notifications, #main, #followup, #full-menu, #page-info {
     .container;
 }
 
-div#subpages, .grid-row {
+div#subpages, {
     .make-row();
     padding-bottom: 1em;
     .half {
@@ -1013,38 +1010,6 @@ article.news, article.event {
         .container;
         margin-bottom: 1.5em;
     }
-}
-
-#breadcrumbs {
-    clear: both;
-    min-height: 3em;
-    padding: .5em 1.8em;
-
-    a {
-        /* like #fsfe-web a; */
-        display: inline-block;
-        padding: .5em;
-        font-weight: 600;
-    }
-    a:after {
-        content: "   » ";
-    }
-    a:last-child:after {
-        content: "";
-    }
-}
-
-
-#fsfe-web {
-    margin-bottom: 2em;
-
-	a {
-            display: inline-block;
-            padding: 1em .5em;
-            font-weight: 700;
-            color: #FFF;
-            text-shadow: 1px 1px 2px @brand-strong;
-	}
 }
 
 #full-menu {

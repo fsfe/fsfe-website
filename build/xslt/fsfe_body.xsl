@@ -7,7 +7,6 @@
   <xsl:include href="notifications.xsl" />
   <xsl:include href="fsfe_mainsection.xsl" />
   <xsl:include href="fsfe_followupsection.xsl" />
-  <xsl:include href="footer_sitenav.xsl" />
   <xsl:include href="fsfe_pagefooter.xsl" />
   <xsl:include href="body_scripts.xsl" />
 
@@ -26,16 +25,7 @@
       <xsl:call-template name="notifications" />
       <xsl:call-template name="fsfe_mainsection" />
       <xsl:call-template name="fsfe_followupsection" />
-
-      <xsl:element name="footer">
-        <xsl:attribute name="id">bottom</xsl:attribute>
-
-        <xsl:call-template name="footer_sitenav" />
-        <xsl:element name="hr" />
-        <xsl:call-template name="fsfe_pagefooter" />
-      </xsl:element>
-      <!--/footer#bottom-->
-
+      <xsl:call-template name="fsfe_pagefooter" />
       <xsl:call-template name="body_scripts" />
 
     </xsl:element>

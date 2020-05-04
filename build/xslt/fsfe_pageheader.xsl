@@ -61,17 +61,9 @@
           </xsl:element>
 
           <xsl:element name="li">
-            <xsl:attribute name="id">direct-to-full-menu</xsl:attribute>
+            <xsl:attribute name="id">direct-to-page-info</xsl:attribute>
             <xsl:element name="a">
-              <xsl:attribute name="href">#full-menu</xsl:attribute>
-              <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'sitemap'" /></xsl:call-template>
-            </xsl:element>
-          </xsl:element>
-
-          <xsl:element name="li">
-            <xsl:attribute name="id">direct-to-source</xsl:attribute>
-            <xsl:element name="a">
-              <xsl:attribute name="href">#source</xsl:attribute>
+              <xsl:attribute name="href">#page-info</xsl:attribute>
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'page-info'" /></xsl:call-template>
             </xsl:element>
           </xsl:element>

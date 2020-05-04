@@ -82,10 +82,7 @@
         <xsl:apply-templates select="body/node()" />
       </xsl:element>
 
-      <xsl:element name="footer">
-        <xsl:attribute name="id">bottom</xsl:attribute>
-        <xsl:call-template name="fsfe_pagefooter" />
-      </xsl:element>
+      <xsl:call-template name="fsfe_pagefooter" />
     </xsl:element>
   </xsl:template>
 </xsl:stylesheet>

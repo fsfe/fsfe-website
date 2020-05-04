@@ -8,7 +8,6 @@
                buildinfo/set|
                buildinfo/textset|
                buildinfo/textsetbackup|
-               buildinfo/menuset|
                buildinfo/trlist|
                buildinfo/fundraising|
                buildinfo/localmenuset|

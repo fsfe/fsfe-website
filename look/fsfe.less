@@ -4,6 +4,7 @@
 @import "elements/sharebuttons";
 @import "elements/people";
 @import "pages/frontpage";
+@import "pages/news";
 @import "pages/interview";
 @import "pages/spreadtheword";
 @import "pages/freesoftware";
@@ -32,117 +33,14 @@ body {
     }
 }
 
-
-#full-menu {
-    background: url(/graphics/logo_bw_transparent_small.png) no-repeat top left @body-bg;
-}
-
 img.signatory-logo {
     padding: 10px;
-}
-
-#news {
-    padding-bottom: 1.5em;
-
-    .dt-published {
-        color: @gray-light;
-        font-size: .9em;
-        display: block;
-
-        @media (min-width: @screen-sm-min) {
-            display: inline-block;
-            padding: 0;
-        }
-    }
-
-    .entry {
-        h3 {
-            display: inline-block;
-            padding-right: 0.5em;
-        }
-
-        p.date {
-            display: inline-block;
-            #news .dt-published;
-            font-weight: 300;
-            margin-bottom: 0;
-        }
-    }
-
-    .entry:nth-child(1n+3) {
-
-        h3 {
-            font-size: 1em;
-            margin: 0.7em 0 0 0;
-        }
-
-        .text, p {
-            display: none;
-        }
-
-        p.date {
-            display: inline-block;
-        }
-    }
-
 }
 
 .newsdate {
   font-size: .875em;
   color: #888;
   margin-right: 1ex;
-}
-
-[newsteaser="yes"] {
-	font-weight: bold;
-	font-size: 1.2em;
-}
-
-[newsteaser="yes"] {
-	font-weight: bold;
-	font-size: 1.2em;
-}
-
-
-#events {
-    clear: both;
-    padding-top: 1.5em;
-
-    .entry {
-        h3 {
-            display: inline-block;
-        }
-        p.date {
-            #news .dt-published;
-            display: block;
-            margin-bottom: 0;
-            @media (min-width: @screen-sm-min) {
-                display: block;
-            }
-        }
-    }
-    a.learn-more {
-        line-height: 2;
-    }
-}
-
-@media (min-width: @screen-sm-min) {
-    #news, #events {
-        display: inline-block;
-        float: left;
-        width: 69%;
-    }
-    #team {
-        display: inline-block;
-        float: left;
-    }
-}
-
-.newsletter #sidebar {
-    input {
-        display: block;
-        margin: .5em 0;
-    }
 }
 
 

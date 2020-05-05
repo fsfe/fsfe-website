@@ -81,7 +81,7 @@ header {
   color: #693;
 }
 
-#main, #followup, #bottom, #source, #legal-info, #sister-organisations {
+#main, #followup, #bottom, #page-info, {
   display: block;
   clear: both;
 }
@@ -167,6 +167,10 @@ header {
   float: left;
 }
 
+#direct-to-top {
+  display: none;
+}
+
 #bottom {
   margin: 3em 0 0 0;
   background-color: #FFF;
@@ -174,46 +178,16 @@ header {
 #bottom a {
   color: #39C;
 }
-#bottom #full-menu > * {
-  padding: 0;
-  margin: 1em 10%;
-}
-
-#full-menu {
-  padding: 1em 0;
-}
-
-#full-menu-list > li {
-  display: inline-block;
-  width: 12%;
-  margin: 0 2%;
-  vertical-align: top;
-}
-#full-menu-list ul,
-#full-menu-list > li > ul:nth-child(3) > li > ul{
-  list-style-type: none;
-  padding-left: 2ex;
-}
-#full-menu-list > li > :first-child,
-#full-menu-list > li > ul:nth-child(3) > li > :first-child {
-  font-weight: bold;
-}
-#full-menu-list > li > ul:nth-child(3) {
-  padding-left: 0;
-}
 
 #bottom hr {
   border: 1px solid #DDD;
   border-style: solid none none none;
 }
 
-#bottom #source, 
-#bottom #legal-info,
-#bottom #sister-organisations {
+#bottom #page-info {
   margin: 0 10%;
 }
-#bottom #source > *, 
-#bottom #legal-info > * {
+#bottom #page-info > * {
   display: inline-block;
   vertical-align: top;
   width: 33%;

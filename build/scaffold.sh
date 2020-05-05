@@ -102,7 +102,6 @@ build_xmlstream(){
 	  $(list_langs "$shortname")
 	</trlist>
 	
-	<menuset>$(include_xml "$basedir/tools/menu-global.xml")</menuset>
 	<textsetbackup>$(include_xml "$basedir/tools/texts-en.xml")</textsetbackup>
 	<textset>$(include_xml "$texts_xml")</textset>
 	<fundraising>$(include_xml "$fundraising_xml")</fundraising>
@@ -111,10 +110,6 @@ build_xmlstream(){
 	  language="$act_lang"
 	  $(get_attributes "$infile")
 	>
-	  <timestamp>
-	    \$Date: $date $time \$
-	    \$Author: automatic \$
-	  </timestamp>
 	  <set>
 	    $(auto_sources "${shortname}" "$lang")
 	  </set>

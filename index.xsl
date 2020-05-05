@@ -22,29 +22,7 @@
             <!-- Image (with or without link) -->
             <xsl:element name="div">
               <xsl:attribute name="class">image</xsl:attribute>
-              <xsl:choose>
-                <xsl:when test="link != ''">
-                  <xsl:element name="a">
-                    <xsl:attribute name="href">
-                      <xsl:value-of select="link"/>
-                    </xsl:attribute>
-                    <xsl:element name="img">
-                      <xsl:attribute name="src">
-                        <xsl:value-of select="image"/>
-                      </xsl:attribute>
-                      <xsl:attribute name="alt"/>
-                    </xsl:element><!-- img -->
-                  </xsl:element><!-- a -->
-                </xsl:when>
-                <xsl:otherwise>
-                  <xsl:element name="img">
-                    <xsl:attribute name="src">
-                      <xsl:value-of select="image"/>
-                    </xsl:attribute>
-                    <xsl:attribute name="alt"/>
-                  </xsl:element><!-- img -->
-                </xsl:otherwise>
-              </xsl:choose>
+              <xsl:call-template name="news-image"/>
             </xsl:element><!-- div/image -->
 
             <xsl:element name="div">
@@ -62,19 +40,7 @@
               </xsl:element><!-- p/date -->
 
               <!-- Teaser -->
-              <xsl:element name="p">
-                <xsl:attribute name="class">teaser</xsl:attribute>
-                <xsl:apply-templates select="body/node()"/>
-                <xsl:if test="link">
-                  <xsl:text>&#160;</xsl:text>
-                  <xsl:element name="a">
-                    <xsl:attribute name="class">learn-more</xsl:attribute>
-                    <xsl:attribute name="href">
-                      <xsl:value-of select="link"/>
-                    </xsl:attribute>
-                  </xsl:element><!-- a/learn-more -->
-                </xsl:if>
-              </xsl:element><!-- p/teaser -->
+              <xsl:call-template name="news-teaser"/>
 
             </xsl:element><!-- div/text -->
 

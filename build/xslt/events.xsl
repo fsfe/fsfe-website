@@ -105,6 +105,38 @@
 
 
   <!-- ==================================================================== -->
+  <!-- Event information, with or without "read more" link                  -->
+  <!-- ==================================================================== -->
+
+  <xsl:template name="event-info">
+    <xsl:variable name="link">
+      <xsl:choose>
+        <xsl:when test="link">
+          <xsl:value-of select="link"/>
+        </xsl:when>
+        <xsl:when test="page">
+          <xsl:value-of select="page"/>
+        </xsl:when>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:for-each select="body/*">
+      <xsl:copy>
+        <xsl:apply-templates select="@*|node()"/>
+        <xsl:if test="position()=last() and $link">
+          <xsl:text>&#160;</xsl:text>
+          <xsl:element name="a">
+            <xsl:attribute name="class">learn-more</xsl:attribute>
+            <xsl:attribute name="href">
+              <xsl:value-of select="$link"/>
+            </xsl:attribute>
+          </xsl:element><!-- a/learn-more -->
+        </xsl:if>
+      </xsl:copy>
+    </xsl:for-each>
+  </xsl:template>
+
+
+  <!-- ==================================================================== -->
   <!-- List of events (as elements of an unsorted list)                     -->
   <!-- ==================================================================== -->
 
@@ -160,8 +192,8 @@
       ]">
       <xsl:sort select="@start"/>
       <xsl:if test="position() &lt;= $count">
-        <xsl:element name="div">
-          <xsl:attribute name="class">entry</xsl:attribute>
+        <xsl:element name="article">
+          <xsl:attribute name="class">event</xsl:attribute>
           <xsl:attribute name="id">
             <xsl:value-of select="@filename"/>
           </xsl:attribute>
@@ -173,15 +205,12 @@
 
           <!-- Date -->
           <xsl:element name="p">
-            <xsl:attribute name="class">date</xsl:attribute>
+            <xsl:attribute name="class">meta</xsl:attribute>
             <xsl:call-template name="event-date"/>
           </xsl:element>
 
           <!-- Details -->
-          <xsl:element name="div">
-            <xsl:attribute name="class">text</xsl:attribute>
-            <xsl:apply-templates select="body/node()"/>
-          </xsl:element>
+          <xsl:call-template name="event-info"/>
 
         </xsl:element><!-- div/entry -->
       </xsl:if>

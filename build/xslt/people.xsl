@@ -96,7 +96,7 @@
 
                                 <xsl:element name="img">
                             <xsl:attribute name="alt"><xsl:value-of select="name" /></xsl:attribute>
-                            <xsl:attribute name="src"><xsl:value-of select="avatar" /></xsl:attribute>
+                            <xsl:attribute name="src">/about/people/avatars/<xsl:value-of select="avatar" /></xsl:attribute>
                                 </xsl:element>
                               </xsl:element>
                           </xsl:when>
@@ -104,7 +104,7 @@
 
                             <xsl:element name="img">
                               <xsl:attribute name="alt"><xsl:value-of select="name" /></xsl:attribute>
-                              <xsl:attribute name="src"><xsl:value-of select="avatar" /></xsl:attribute>
+                              <xsl:attribute name="src">/about/people/avatars/<xsl:value-of select="avatar" /></xsl:attribute>
                             </xsl:element>
 
                           </xsl:otherwise>
@@ -113,7 +113,7 @@
                       <xsl:otherwise>
                         <xsl:element name="img">
                           <xsl:attribute name="alt"><xsl:value-of select="name" /></xsl:attribute>
-                          <xsl:attribute name="src">/graphics/default-avatar.png</xsl:attribute>
+                          <xsl:attribute name="src">/about/people/avatars/default.png</xsl:attribute>
                         </xsl:element>
                       </xsl:otherwise>
                     </xsl:choose>

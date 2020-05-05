@@ -9,6 +9,37 @@
 
 
   <!-- ==================================================================== -->
+  <!-- News image with or without link                                      -->
+  <!-- ==================================================================== -->
+
+  <xsl:template name="news-image">
+    <xsl:choose>
+      <xsl:when test="link != ''">
+        <xsl:element name="a">
+          <xsl:attribute name="href">
+            <xsl:value-of select="link"/>
+          </xsl:attribute>
+          <xsl:element name="img">
+            <xsl:attribute name="src">
+              <xsl:value-of select="image"/>
+            </xsl:attribute>
+            <xsl:attribute name="alt"/>
+          </xsl:element><!-- img -->
+        </xsl:element><!-- a -->
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:element name="img">
+          <xsl:attribute name="src">
+            <xsl:value-of select="image"/>
+          </xsl:attribute>
+          <xsl:attribute name="alt"/>
+        </xsl:element><!-- img -->
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+
+
+  <!-- ==================================================================== -->
   <!-- News title with or without link                                      -->
   <!-- ==================================================================== -->
 
@@ -41,6 +72,29 @@
     </xsl:call-template>
     <xsl:text> </xsl:text>
     <xsl:value-of select="substring(@date,1,4)"/>
+  </xsl:template>
+
+
+  <!-- ==================================================================== -->
+  <!-- Newsteaser text, with or without "read more" link                    -->
+  <!-- ==================================================================== -->
+
+  <xsl:template name="news-teaser">
+    <xsl:variable name="link" select="link"/>
+    <xsl:for-each select="body/*">
+      <xsl:copy>
+        <xsl:apply-templates select="@*|node()"/>
+        <xsl:if test="position()=last() and $link">
+          <xsl:text>&#160;</xsl:text>
+          <xsl:element name="a">
+            <xsl:attribute name="class">learn-more</xsl:attribute>
+            <xsl:attribute name="href">
+              <xsl:value-of select="$link"/>
+            </xsl:attribute>
+          </xsl:element><!-- a/learn-more -->
+        </xsl:if>
+      </xsl:copy>
+    </xsl:for-each>
   </xsl:template>
 
 
@@ -102,8 +156,8 @@
       ]">
       <xsl:sort select="@date" order="descending"/>
       <xsl:if test="position() &lt;= $count">
-        <xsl:element name="div">
-          <xsl:attribute name="class">entry</xsl:attribute>
+        <xsl:element name="article">
+          <xsl:attribute name="class">news</xsl:attribute>
           <xsl:attribute name="id">
             <xsl:value-of select="@filename"/>
           </xsl:attribute>
@@ -115,15 +169,12 @@
 
           <!-- Date -->
           <xsl:element name="p">
-            <xsl:attribute name="class">date</xsl:attribute>
+            <xsl:attribute name="class">meta</xsl:attribute>
             <xsl:call-template name="news-date"/>
           </xsl:element>
 
           <!-- Text -->
-          <xsl:element name="div">
-            <xsl:attribute name="class">text</xsl:attribute>
-            <xsl:apply-templates select="body/node()"/>
-          </xsl:element>
+          <xsl:call-template name="news-teaser"/>
 
         </xsl:element><!-- div/entry -->
       </xsl:if>

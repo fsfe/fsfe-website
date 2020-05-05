@@ -18,6 +18,7 @@ body.frontpage #main {
         background-repeat: no-repeat;
         background-position: bottom;
         background-size: contain;
+        margin-bottom: 30px;
 
         // Make the first line bigger and separated from the rest.
         :first-child {
@@ -36,12 +37,8 @@ body.frontpage #main {
     // ------------------------------------------------------------------------
 
     h2 {
-        // Semantically h2, but on this page they should be formatted like h1.
-        margin-top: 30px;
-
         a.learn-more {
-            font-weight: normal;
-            font-size: 50%;
+            font-size: 60%;
         }
     }
 
@@ -55,8 +52,24 @@ body.frontpage #main {
         .column {
             .make-xs-column(12);
             .make-md-column(4);
-            margin-top: 10px;
-            margin-bottom: 10px;
+
+            // We maintain our own margins, so suppress the bottom margin
+            // inside the grid.
+            p:last-child {
+                margin-bottom: 0;
+            }
+
+            // If the three boxes are stacked vertically, create some gap
+            // between them as well as some extra gap between the heading and
+            // the first box.
+            @media (max-width: @screen-sm-max) {
+                margin-top: 10px;
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
         }
     }
 
@@ -68,9 +81,7 @@ body.frontpage #main {
         font-weight: 500;
         .text-center;
         padding: 15px;
-        // This top margin adds to the bottom margin of the row class and <p>
-        // elements directly above, summing up to 30px.
-        margin-top: 10px;
+        margin-top: 30px;
         margin-bottom: 30px;
 
         p {
@@ -88,11 +99,21 @@ body.frontpage #main {
         // Show the image to the left on tablet-sized screens, to the top
         // on larger or smaller screens.
         .image {
-            margin-top: 10px;
+            // Create a margin between image and text below.
             margin-bottom: 10px;
             .make-xs-column(12);
             .make-sm-column(5);
             .make-md-column(12);
+
+            @media (min-width: @screen-sm-min) {
+                margin-top: 10px;
+            }
+
+            // In sm size, the text is right beside the image instead of below
+            // it, so we need no margin below the image.
+            @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+                margin-bottom: 0;
+            }
 
             // On very small screens, limit the image to 200px, otherwise
             // it would span the whole screen width.
@@ -145,14 +166,22 @@ body.frontpage #main {
         // Show the image to the left on tablet-sized screens, to the top
         // on larger or smaller screens.
         .image {
-            // Unlike for the news items, we set no top margin, because
-            // with the rounded images and the smaller font in the first
-            // line of the text, it looks better this way when the image is
-            // *beside* the text.
+            // Create a margin between image and text below.
             margin-bottom: 10px;
             .make-xs-column(12);
             .make-sm-column(3);
             .make-md-column(12);
+
+            // Unlike for the news items, we set no top margin, because
+            // with the rounded images and the smaller font in the first
+            // line of the text, it looks better this way when the image is
+            // *beside* the text.
+
+            // In sm size, the text is right beside the image instead of below
+            // it, so we need no margin below the image.
+            @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+                margin-bottom: 0;
+            }
 
             img {
                 width: 150px;

@@ -141,7 +141,8 @@
           <xsl:element name="p">
             <xsl:element name="a">
               <xsl:attribute name="href">
-                <xsl:value-of select="$urlprefix"/>/contribute/web/
+                <xsl:value-of select="$urlprefix"/>
+                <xsl:text>/contribute/web/web.html</xsl:text>
               </xsl:attribute>
               <xsl:call-template name="fsfe-gettext">
                 <xsl:with-param name="id" select="'contribute-web'"/>
@@ -154,7 +155,7 @@
             <xsl:element name="a">
               <xsl:attribute name="href">
                 <xsl:value-of select="$urlprefix"/>
-                <xsl:text>/contribute/translators/</xsl:text>
+                <xsl:text>/contribute/translators/translators.html</xsl:text>
               </xsl:attribute>
               <xsl:call-template name="fsfe-gettext">
                 <xsl:with-param name="id" select="'translate'"/>

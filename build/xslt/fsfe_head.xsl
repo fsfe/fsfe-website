@@ -152,14 +152,16 @@
 
     <!-- Twitter and Facebook sharing cards -->
     <xsl:variable name="metaimage">
-      <xsl:choose>
-        <xsl:when test="starts-with(image/@url, 'http')">
-          <xsl:value-of select="image/@url" />
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:text>https://fsfe.org</xsl:text><xsl:value-of select="image/@url" />
-        </xsl:otherwise>
-      </xsl:choose>
+      <xsl:if test="image/@url">
+        <xsl:choose>
+          <xsl:when test="starts-with(image/@url, 'http')">
+            <xsl:value-of select="image/@url" />
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:text>https://fsfe.org</xsl:text><xsl:value-of select="image/@url" />
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:if>
     </xsl:variable>
 
     <!-- Twitter cards -->

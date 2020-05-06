@@ -88,7 +88,7 @@ findTaggedFiles()
 # grep for files containing the tag
 {
 	local tagId="$1"
-	git grep -i -l ">$tagId</tag>"
+	git grep -i --files-with-matches -E "<tag\W+key=[\"']$tagId[\"']"
 }
 
 fileIsLanguage()

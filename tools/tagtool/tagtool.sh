@@ -56,7 +56,7 @@ Actions (only one action per invocation):
                            limited to that language.
 --remove-tags TAG..        Remove the given tags.
 --rename-tag OLD NEW       Rename the OLD tag to NEW tag in all files.
---set-label LABEL          Set the given label on all given tag.
+--set-label LABEL TAG      Set the given label on all given tag.
                            The tag is given as positional parameter.
                            This action is limited to one language at a time,
                            because the label is a localized string.
@@ -165,6 +165,7 @@ setTagLabel()
 	if [[ FORCE -eq 1 ]]
 	then
 		re_force_content="content=\"[^\"]*\"\W*"
+		re_force_content="|([^<]*</tag>)"
 	fi
 	echo "Setting label for tag $TagId to $Label.." >&2
 	for f in $(findTaggedFiles "$TagId")
@@ -176,7 +177,7 @@ setTagLabel()
 			continue
 		fi
 		echo "  $f" >&2
-		if ! performAction sed -E -i "s;<tag\W*$re_force_content>\W*$TagId\W*</tag>\W*;<tag content=\"$Label\">$TagId</tag>;i" "$f"
+		if ! performAction sed -E -i "s;<tag\W+key=[\"']$TagId[\"']\W*((/>)$re_force_content)\W*;<tag key=\"$TagId\">$Label</tag>;i" "$f"
 		then
 			echo "ERROR!" >&2
 			return 1

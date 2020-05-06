@@ -116,6 +116,7 @@
 
     <!-- Build list -->
     <xsl:element name="ul">
+      <xsl:attribute name="class">news-list</xsl:attribute>
       <xsl:for-each select="/buildinfo/document/set/news[
           translate(@date,'-','') &lt;= translate(/buildinfo/@date,'-','')
         ]">
@@ -123,9 +124,11 @@
         <xsl:if test="position() &lt;= $count">
           <xsl:element name="li">
             <xsl:call-template name="news-title"/>
-            <xsl:text> (</xsl:text>
-            <xsl:call-template name="news-date"/>
-            <xsl:text>)</xsl:text>
+            <xsl:text>&#160;</xsl:text>
+            <xsl:element name="span">
+              <xsl:attribute name="class">date</xsl:attribute>
+              <xsl:call-template name="news-date"/>
+            </xsl:element><!-- span -->
           </xsl:element><!-- li -->
         </xsl:if>
       </xsl:for-each>

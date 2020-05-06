@@ -467,11 +467,6 @@ div#subpages, {
         li {
             border-bottom: 1px solid @gray-lighter;
             padding: .3em 0;
-
-            a {
-                display: block;
-                width: 100%;
-            }
         }
     }
 }
@@ -891,6 +886,18 @@ div#subpages, {
 
 
 // ----------------------------------------------------------------------------
+// Condensed listing of news and events
+// ----------------------------------------------------------------------------
+
+ul.news-list, ul.event-list {
+    span.date {
+        .text-muted;
+        .small;
+    }
+}
+
+
+// ----------------------------------------------------------------------------
 // Verbose listing of news and events
 // ----------------------------------------------------------------------------
 
@@ -1170,10 +1177,6 @@ a.learn-more {
 
 .bio {
     .article;
-
-    #sidebar ul li a {
-        display: inline;
-    }
 }
 
 

@@ -154,15 +154,19 @@
 
     <!-- Build list -->
     <xsl:element name="ul">
+      <xsl:attribute name="class">event-list</xsl:attribute>
       <xsl:for-each select="/buildinfo/document/set/event[
           translate(@end,'-','') &gt;= translate(/buildinfo/@date,'-','')
         ]">
         <xsl:sort select="@start"/>
         <xsl:if test="position() &lt;= $count">
           <xsl:element name="li">
-            <xsl:call-template name="event-date"/>
-            <xsl:text>: </xsl:text>
             <xsl:call-template name="event-title"/>
+            <xsl:text>&#160;</xsl:text>
+            <xsl:element name="span">
+              <xsl:attribute name="date"/>
+              <xsl:call-template name="event-date"/>
+            </xsl:element><!-- span -->
           </xsl:element><!-- li -->
         </xsl:if>
       </xsl:for-each>

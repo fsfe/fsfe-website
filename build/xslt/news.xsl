@@ -102,7 +102,7 @@
   <!-- List of news items (as elements of an unsorted list)                 -->
   <!-- ==================================================================== -->
 
-  <xsl:template match="news-list">
+  <xsl:template name="news-list">
 
     <!-- Number of news items to display -->
     <xsl:variable name="count">
@@ -138,7 +138,7 @@
   <!-- Verbose news feed                                                    -->
   <!-- ==================================================================== -->
 
-  <xsl:template match="news-feed">
+  <xsl:template name="news-feed">
 
     <!-- Number of news items to display -->
     <xsl:variable name="count">
@@ -176,7 +176,7 @@
           <!-- Text -->
           <xsl:call-template name="news-teaser"/>
 
-        </xsl:element><!-- div/entry -->
+        </xsl:element><!-- article -->
       </xsl:if>
     </xsl:for-each>
 

@@ -140,7 +140,7 @@
   <!-- List of events (as elements of an unsorted list)                     -->
   <!-- ==================================================================== -->
 
-  <xsl:template match="event-list">
+  <xsl:template name="event-list">
 
     <!-- Number of events to display -->
     <xsl:variable name="count">
@@ -174,7 +174,7 @@
   <!-- Verbose event feed                                                   -->
   <!-- ==================================================================== -->
 
-  <xsl:template match="event-feed">
+  <xsl:template name="event-feed">
 
     <!-- Number of events to display -->
     <xsl:variable name="count">
@@ -212,7 +212,7 @@
           <!-- Details -->
           <xsl:call-template name="event-info"/>
 
-        </xsl:element><!-- div/entry -->
+        </xsl:element><!-- article -->
       </xsl:if>
     </xsl:for-each>
 

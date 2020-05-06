@@ -36,7 +36,6 @@ print_help()
 {
 	cat <<EOF >&2
 Usage: tagstool OPTIONS --find-tags TAG..
-       tagstool OPTIONS --remove-empty-labels
        tagstool OPTIONS --remove-tags TAG..
        tagstool OPTIONS --rename-tags OLD NEW
        tagstool OPTIONS --set-label LABEL [--force] TAG
@@ -55,8 +54,6 @@ Actions (only one action per invocation):
 --find-tags TAG..          List all files containing the given tags.
                            If a non-empty language is given, the output is
                            limited to that language.
---remove-empty-labels      Remove empty content attribute for tags.
-                           Not affected by --language option.
 --remove-tags TAG..        Remove the given tags.
 --rename-tag OLD NEW       Rename the OLD tag to NEW tag in all files.
 --set-label LABEL          Set the given label on all given tag.
@@ -207,18 +204,6 @@ action_findTags()
 	done | sort -u
 }
 
-action_removeEmpty()
-# removeEmpty
-# removes empty labels
-{
-	echo "Removing empty 'content' attribute  from tags..." >&2
-	for f in $(git grep -Eil '<tag\W+content="\W*"\W*>')
-	do
-		echo "  $f" >&2
-		performAction sed -E -i 's;<tag\W+content="\W*"\W*>;<tag>;g' "$f"
-	done
-}
-
 action_removeTags()
 # action_removeTags TAG..
 # Remove the given tags from all files
@@ -261,7 +246,7 @@ action_setLabel()
 ###
 
 TEMP=`getopt -o hnv \
-      --long find-tags,force,help,language:,no-act,remove-empty-labels,remove-tags,rename-tag,set-label:,verbose \
+      --long find-tags,force,help,language:,no-act,remove-tags,rename-tag,set-label:,verbose \
       -n 'tagtool' -- "$@"`
 
 if [ $? != 0 ] ; then echo "Terminating..." >&2 ; exit 1 ; fi
@@ -276,7 +261,6 @@ while true ; do
 		-h|--help) print_help ; exit ;;
 		--language) LANGUAGE="$2" ; shift 2 ;;
 		-n|--no-act) NO_ACT=1 ; shift ;;
-		--remove-empty-labels) ACTION=action_removeEmpty ; shift ;;
 		--remove-tags) ACTION=action_removeTags ; shift ;;
 		--rename-tag) ACTION=action_renameTag ; shift ;;
 		--set-label) ACTION=action_setLabel ; LABEL="$2" ; shift 2 ;;

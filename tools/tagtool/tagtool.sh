@@ -146,7 +146,7 @@ removeTag()
 			continue
 		fi
 		echo "  $f" >&2
-		if ! performAction sed -E -i "s;\W*<tag\W*(content=\"[^\"]*\"\W*)?>\W*$tagId\W*</tag>\W*;;i" "$f"
+		if ! performAction sed -E -i "s;\W*<tag\W+key=[\"']$tagId[\"']\W*((/>)|([^<]*</tag>))\W*;;i" "$f"
 		then
 			echo "ERROR!" >&2
 			return 1

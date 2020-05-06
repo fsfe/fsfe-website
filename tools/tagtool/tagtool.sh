@@ -122,7 +122,7 @@ renameTag()
 			continue
 		fi
 		echo "  $f" >&2
-		if ! performAction sed -E -i "s;>\W*$oldTagId\W*</tag>;>$newTagId</tag>;i" "$f"
+		if ! performAction sed -E -i "s;<tag\W+key=[\"']$oldTagId[\"']\W*(/?)>;<tag key=\"$newTagId\"\1>;i" "$f"
 		then
 			echo "ERROR!" >&2
 			return 1

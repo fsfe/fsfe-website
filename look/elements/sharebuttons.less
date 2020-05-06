@@ -1,240 +1,163 @@
-/* SOCIAL NETWORK SHARE BUTTONS (below articles and pages) */
-.share-buttons.bottom {
-    margin: 4em 0 -2em 0;
+/*
+* SPDX-FileCopyrightText: 2019 Free Software Foundation Europe e.V. <https://fsfe.org>
+* SPDX-License-Identifier: AGPL-3.0-or-later
+*
+* share-buttons: Share buttons for many social networks and services
+* Upstream: https://git.fsfe.org/FSFE/share-buttons
+*/
+
+/* ********
+ * GENERAL LOOK FOR ALL BUTTONS
+ * ********/
+
+@import "sharebuttons-services";
+
+.share-buttons {
+  font-size: .7em;
+  margin: 2em 0;
 }
 
-.share-buttons-top {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
+.share-buttons a.button,
+.share-buttons button.button,
+.share-buttons label.button {
+  background-position: left 5px center;
+  background-repeat: no-repeat;
+  background-size: 20px auto;
+  border: none;
+  border-radius: 3px;
+  box-sizing: content-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  height: 14px;
+  margin: 2.5px 5px 2.5px 0;
+  max-width: 110px;
+  min-width: 84px;
+  opacity: 0.9;
+  padding: 7px 7px 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow 100ms linear;
+  vertical-align: top;
 }
 
-.share-buttons-sidebar {
-    padding-left: 2rem;
+/* Darken buttons on hover */
+.share-buttons .button {
+  box-shadow: none;
 }
 
-.share-button-top,
-.share-button-sidebar,
-.share-buttons.bottom a.button,
-.share-buttons.bottom button.button,
-.share-buttons.bottom label.button {
-    display: inline-block;
-    margin: 2.5px 5px 2.5px 0;
-    color: #fff;
-    font-weight: normal;
-    font-size: 1em;
-    line-height: normal;
-    text-align: center;
-    text-decoration: none;
-    padding: 7px 7px 7px 20px;
-    width: 19%;
-    min-width: 100px;
-    max-width: 110px;
-    border: none;
-    border-radius: 3px;
-    background-position: left 5px center;
-    background-repeat: no-repeat;
-    background-size: 20px auto;
-    opacity: 0.9;
-    vertical-align: top;
-}
-
-.share-buttons-inline button{
-    vertical-align: middle;
-}
-
-.share-button-top,
-.share-buttons.bottom,
-.share-buttons-inline,
-.share-buttons-sidebar {
-    font-size: .7em;
-}
-
-.share-buttons-top,
-.share-buttons-sidebar,
-.share-buttons-inline,
-.share-buttons.bottom {
-
-    a:hover {
-        text-decoration: none;
-    }
-
-    .share-rss {
-        background-color: #f4a000;
-        background-image: url("/graphics/services/rss_white.png");
-    }
-
-    .share-rss:hover {
-        background-color: #f78200 !important;
-    }
-
-    .share-mail {
-        background-color: #6e6e6e;
-        background-image: url("/graphics/services/mail_white.png");
-    }
-
-    .share-mail:hover {
-        background-color: #272727 !important;
-    }
-
-    .share-mastodon {
-        background-color: #2b90d9;
-        background-image: url("/graphics/services/mastodon_white.png");
-    }
-
-    .share-mastodon:hover {
-        background-color: #1060a9 !important;
-    }
-
-    .share-diaspora {
-        background-color: #404040;
-        background-image: url("/graphics/services/diaspora_white.png");
-    }
-
-    .share-diaspora:hover {
-        background-color: #101010 !important;
-    }
-
-    .share-facebook {
-        background-color: #3b5998;
-        background-image: url("/graphics/services/facebook_white.png");
-    }
-
-    .share-facebook:hover {
-        background-color: #143271 !important;
-    }
-
-    .share-twitter {
-        background-color: #55acee;
-        background-image: url("/graphics/services/twitter_white.png");
-    }
-
-    .share-twitter:hover {
-        background-color: #338acc !important;
-    }
-
-    .share-podcast {
-        background-color: #9AB30E;
-        background-image: url("/graphics/services/podcast_white.png");
-    }
-
-    .share-podcast:hover {
-        background-color: #738607 !important;
-    }
-
-    .share-support {
-        background-color: #9AB30E;
-        background-image: url("/graphics/services/fsfe_white.png");
-        padding-left: 25px;
-
-        &:hover {
-            background-color: #0a1763 !important;
-        }
-    }
-}
-
-.share-buttons.bottom .share-gplus {
-    background-color: #d34836;
-    background-image: url("/graphics/services/gplus_white.png");
-}
-
-.share-buttons.bottom .share-gplus:hover {
-    background-color: #b12614 !important;
-}
-
-.share-buttons.bottom .share-flattr {
-    background-color: #7ea352;
-    background-image: url("/graphics/services/flattr_white.png");
-}
-
-.share-buttons.bottom .share-flattr:hover {
-    background-color: #5a7f2e !important;
-}
-
-.share-buttons.bottom .share-reddit {
-    background-color: #ff5700;
-    background-image: url("/graphics/services/reddit_white.png");
-}
-
-.share-buttons.bottom .share-reddit:hover {
-    background-color: #dd3500 !important;
-}
-
-.share-buttons.bottom .share-gnusocial {
-    background-color: #a22430;
-    background-image: url("/graphics/services/gnusocial_white.png");
-}
-
-.share-buttons.bottom .share-gnusocial:hover {
-    background-color: #850713 !important;
-}
-
-.share-buttons.bottom .share-hnews {
-    background-color: #ff6600;
-    background-image: url("/graphics/services/hackernews_white.png");
-}
-
-.share-buttons.bottom .share-hnews:hover {
-    background-color: #dd3500 !important;
-}
-
-/* Share buttons form layout and behaviour hacks */
-.share-buttons input[type="radio"],
-.share-buttons input[type="radio"] + span,
-.share-buttons input[type="checkbox"],
-.share-buttons input[type="checkbox"] + span {
-    display: none;
-}
-
-.share-buttons input[type="radio"]:checked + span,
-.share-buttons input[type="checkbox"]:checked + span {
-    position: absolute;
-    margin-top: 3.5em;
-    margin-left: -10em;
-    padding: .5em;
-    z-index: 3;
-    background-color: #333;
-    border-radius: .5em;
-    display: inline-block;
-}
-
-.share-buttons input[type="radio"]:checked + span:before,
-.share-buttons input[type="checkbox"]:checked + span:before {
-    content: '';
-    position: absolute;
-    top: -1em;
-    height: 0em;
-    width: 0em;
-    border-bottom: 1em solid #333;
-    border-left: 1em solid transparent;
-    border-right: 1em solid transparent;
-    z-index: 3;
-}
-
-.share-buttons input[type="radio"] + span > * {
-    vertical-align: middle;
-}
-
-.share-buttons input[type="radio"] + span > button {
-    margin: 2.5px 0 2.5px 5px;
-    min-width: 4em;
-    padding: .25em;
-    font-weight: normal;
-    font-size: 1em;
-    line-height: normal;
-}
-
-.share-buttons input[type="radio"] + span > label {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    background-color: rgba(0, 0, 0, .5);
+.share-buttons .button:hover {
+  box-shadow: inset 0 0 0 99999px rgba(0,0,0,0.2);
 }
 
 /* Separate share buttons form from possibly floating content */
 form.share-buttons {
-    clear: both;
+  clear: both;
+}
+
+/* Hide something */
+.n {
+  display: none;
+}
+
+/* Share pop-up behaviour hacks */
+.share-buttons input[type="radio"],
+.share-buttons input[type="radio"] + span,
+.share-buttons input[type="checkbox"],
+.share-buttons input[type="checkbox"] + span {
+  display: none;
+}
+
+.share-buttons input[type="radio"]:checked + span,
+.share-buttons input[type="checkbox"]:checked + span {
+  background-color: #333;
+  border-radius: .5em;
+  display: inline-block;
+  margin-left: -10em;
+  margin-top: 3.5em;
+  padding: .5em;
+  position: absolute;
+  z-index: 3;
+}
+
+.share-buttons input[type="radio"]:checked + span:before,
+.share-buttons input[type="checkbox"]:checked + span:before {
+  border-bottom: 1em solid #333;
+  border-left: 1em solid transparent;
+  border-right: 1em solid transparent;
+  content: '';
+  height: 0;
+  position: absolute;
+  top: -1em;
+  width: 0;
+  z-index: 3;
+}
+
+.share-buttons input[type="radio"] + span > * {
+  vertical-align: middle;
+}
+
+.share-buttons input[type="radio"] + span > button {
+  font-size: 1em;
+  font-weight: normal;
+  line-height: normal;
+  margin: 2.5px 0 2.5px 5px;
+  min-width: 4em;
+  padding: .25em;
+}
+
+.share-buttons input[type="radio"] + span > label {
+  background-color: rgba(0, 0, 0, .5);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+/* ********
+ * SIDEBAR BUTTONS
+ * ********/
+
+form.share-buttons.side {
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  padding: .1vh .5vh;
+  position: fixed;
+  top: 30%;
+  z-index: 10;
+}
+
+@media (max-width: 767px) {
+  form.share-buttons.side {
+    display: none !important;
+  }
+}
+
+.share-buttons.side a.button,
+.share-buttons.side button.button,
+.share-buttons.side label.button {
+  background-color: #474747;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 2.7vh auto;
+  box-sizing: border-box;
+  color: #000;
+  font-size: 0;
+  height: 4vh;
+  min-width: 0;
+  width: 4vh;
+}
+
+/* Share pop-up behaviour */
+.share-buttons.side input[type="radio"]:checked + span,
+.share-buttons.side input[type="checkbox"]:checked + span {
+  margin-left: 0;
+  padding: .5em;
+  width: 300px;
 }

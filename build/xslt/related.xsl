@@ -41,7 +41,6 @@
     <xsl:if test="@tag">
       <xsl:element name="p">
         <xsl:element name="a">
-          <xsl:attribute name="class">learn-more</xsl:attribute>
           <xsl:attribute name="href">
             <xsl:text>/tags/tagged-</xsl:text>
             <xsl:value-of select="@tag"/>
@@ -97,7 +96,6 @@
     <xsl:if test="@tag">
       <xsl:element name="p">
         <xsl:element name="a">
-          <xsl:attribute name="class">learn-more</xsl:attribute>
           <xsl:attribute name="href">
             <xsl:text>/tags/tagged-</xsl:text>
             <xsl:value-of select="@tag"/>

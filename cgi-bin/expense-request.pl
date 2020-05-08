@@ -62,8 +62,8 @@ my %responsible = (
   "NGI0-DISCOVERY" => "council",
   "NGI0-PET" => "council",
   "NGI0-COMMON" => "council",
-  "MERCHANDISE-PURCHASE" => "usli",
-  "MERCHANDISE-OTHER" => "usli",
+  "MERCHANDISE-PURCHASE" => "council",
+  "MERCHANDISE-OTHER" => "council",
   "INTERNAL-COORD" => "council",
   "INTERNAL-GA" => "council",
   "INTERNAL-TECH" => "council",
@@ -79,7 +79,7 @@ my %responsible = (
   "PERSONELL-INDORATO" => "council",
   "PERSONELL-LASOTA" => "council",
   "PERSONELL-MEHRING" => "council",
-  "OFFICE-BERLIN" => "usli",
+  "OFFICE-BERLIN" => "council",
 );
 
 my %account = (

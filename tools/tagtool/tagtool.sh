@@ -85,7 +85,7 @@ findTaggedFiles()
 # grep for files containing the tag
 {
 	local tagId="$1"
-	git grep -i --files-with-matches -E "<tag\W+key=[\"']$tagId[\"']"
+	git grep -i --files-with-matches -E "<tag\s+key=[\"']$tagId[\"']"
 }
 
 fileIsLanguage()
@@ -122,7 +122,7 @@ renameTag()
 			continue
 		fi
 		echo "  $f" >&2
-		if ! performAction sed -E -i "s;<tag\W+key=[\"']$oldTagId[\"']\W*(/?)>;<tag key=\"$newTagId\"\1>;i" "$f"
+		if ! performAction sed -E -i "s;<tag\s+key=[\"']$oldTagId[\"']\s*(/?)>;<tag key=\"$newTagId\"\1>;i" "$f"
 		then
 			echo "ERROR!" >&2
 			return 1
@@ -146,7 +146,9 @@ removeTag()
 			continue
 		fi
 		echo "  $f" >&2
-		if ! performAction sed -E -i "s;\W*<tag\W+key=[\"']$tagId[\"']\W*((/>)|([^<]*</tag>))\W*;;i" "$f"
+		# regexp summary:
+		# /on lines with the tag/ { remove the tag ; if /line empty?/ then delete the entire line }
+		if ! performAction sed -E -i "/tag\s+key=[\"']$tagId[\"']/ { s;\s*<tag\s+key=[\"']$tagId[\"']\s*((/>)|([^/<]*</tag>))\s*;;i ; /^$/d }" "$f"
 		then
 			echo "ERROR!" >&2
 			return 1
@@ -164,7 +166,6 @@ setTagLabel()
 	local re_force_content=
 	if [[ FORCE -eq 1 ]]
 	then
-		re_force_content="content=\"[^\"]*\"\W*"
 		re_force_content="|([^<]*</tag>)"
 	fi
 	echo "Setting label for tag $TagId to $Label.." >&2
@@ -177,7 +178,7 @@ setTagLabel()
 			continue
 		fi
 		echo "  $f" >&2
-		if ! performAction sed -E -i "s;<tag\W+key=[\"']$TagId[\"']\W*((/>)$re_force_content)\W*;<tag key=\"$TagId\">$Label</tag>;i" "$f"
+		if ! performAction sed -E -i "s;<tag\s+key=[\"']$TagId[\"']\s*((/>)$re_force_content)\s*;<tag key=\"$TagId\">$Label</tag>;i" "$f"
 		then
 			echo "ERROR!" >&2
 			return 1

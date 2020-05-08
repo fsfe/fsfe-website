@@ -1,4 +1,4 @@
-news/*/news-*:[openstandards]
-news/*/.news-*:[openstandards]
-news/nl/nl-*:[openstandards]
-news/nl/.nl-*:[openstandards]
+news/*/*:[openstandards]
+news/*/.*:[openstandards]
+events/*/*:[openstandards]
+events/*/.*:[openstandards]

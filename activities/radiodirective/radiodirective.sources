@@ -1,4 +1,4 @@
-news/*/news-*:[radiodirective]
-news/*/.news-*:[radiodirective]
-news/nl/nl-*:[radiodirective]
-news/nl/.nl-*:[radiodirective]
+news/*/*:[radiodirective]
+news/*/.*:[radiodirective]
+events/*/*:[radiodirective]
+events/*/.*:[radiodirective]

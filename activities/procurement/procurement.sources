@@ -1,4 +1,4 @@
-news/*/news-*:[procurement]
-news/*/.news-*:[procurement]
-news/nl/nl-*:[procurement]
-news/nl/.nl-*:[procurement]
+news/*/*:[procurement]
+news/*/.*:[procurement]
+events/*/*:[procurement]
+events/*/.*:[procurement]

@@ -15,7 +15,7 @@
       <xsl:element name="p">
         <xsl:attribute name="id">category</xsl:attribute>
         <xsl:element name="a">
-          <xsl:attribute name="href">/press/press.<xsl:value-of select="/buildinfo/@language"/>.html</xsl:attribute>
+          <xsl:attribute name="href">/news/news.<xsl:value-of select="/buildinfo/@language"/>.html</xsl:attribute>
           <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'breadcrumb-news'" /></xsl:call-template>
         </xsl:element>
       </xsl:element>

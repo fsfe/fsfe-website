@@ -35,7 +35,7 @@ if(empty($service) || empty($url)) {
     $via_fed = "";
     $via_tw = "";
     $via_dia = "";
-    $supporturl = "https://fsfe.org/donate?pmpc";
+    $supporturl = "https://my.fsfe.org/donate?referrer=pmpc";
   } else {
     $via_fed = " via " . $fediverseuser;
     $via_tw = "&via=" . $twitteruser;

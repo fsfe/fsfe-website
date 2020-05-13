@@ -346,8 +346,8 @@ div#subpages, {
 // ----------------------------------------------------------------------------
 
 /* grid */
-.article, {
-    #content, #planet-posts {
+.article {
+    #content {
         .make-xs-column(12);
         .make-md-column(8);
         padding-left: 0;
@@ -357,10 +357,6 @@ div#subpages, {
         .make-md-column(4);
         padding-right: 0;
     }
-}
-
-#content + #sidebar {
-    .article #sidebar;
 }
 
 #main, #followup {
@@ -649,31 +645,6 @@ div#subpages, {
         font-weight: 300;
     }
 
-    .action-after {
-        display: table;
-
-        .action-describe, .action-main {
-            display: table-cell;
-            vertical-align: middle;
-            padding: 0.5em 1em;
-        }
-
-        .action-describe {
-            background: lighten(@brand-primary,40%);
-            color: @brand-strong;
-            width: 23%;
-            text-align: right;
-            &:after {
-                padding-left: 0.3em;
-                content: " ▸";
-            }
-        }
-        .action-main {
-            background: @gray-lighter;
-            width: 77%;
-        }
-    }
-
     .blockHighlight {
         .blockQuote;
         padding-right: 20px;
@@ -771,7 +742,7 @@ div#subpages, {
     blockquote, .blockQuote, .blockHighlight,pre {
         .standout-text;
     }
-    .captioned, .action-after {
+    .captioned, {
         .standout;
     }
     .captioned.center-block, .captioned.center {

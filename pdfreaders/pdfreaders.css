@@ -7,7 +7,8 @@ body {
   margin: 0;
 }
 
-header#top, section#main, body div#notifications {
+header, main, div#notifications, footer {
+  display: block;
   width: 90%;
   max-width: 1000px;
   margin: 0 auto;
@@ -16,27 +17,23 @@ header#top, section#main, body div#notifications {
   border-color: #693;
   background-color: #FFF;
 }
-section#main, body div#notifications {
+
+main, body div#notifications {
   padding: 1%;
 }
+
 .alert.warning.red {
   background-color: #EB8;
   padding: .5em;
 }
 
-header {
-  display: block;
-  clear: both;
-  width: 100%;
-  margin: 0 0 3em 0;
-}
 #logo { float: left; }
 #fsfe-logo { float: right; }
 #logo, #fsfe-logo {
   padding: 1em;
   width: 20%;
 }
-#logo img, #fsfe-logo embed, #fsfe-logo img {
+#logo img, #fsfe-logo img {
   width: 100%;
 }
 #translations {
@@ -81,11 +78,6 @@ header {
   color: #693;
 }
 
-#main, #followup, #bottom, #page-info, {
-  display: block;
-  clear: both;
-}
-
 .graphic-link {
   font-style: italic;
   color: #080;
@@ -99,10 +91,10 @@ header {
   margin: -1em 1em 0 0;
 }
 
-#main .readerlist {
+.readerlist {
   text-align: center;
 }
-#main .readerlist .reader {
+.readerlist .reader {
   display: inline-block;
   text-align: left;
   width: 23%;
@@ -130,17 +122,17 @@ header {
   height: 2em;
   margin-right: 1em;
 }
-#main .readerlist .reader:nth-child(-n+3) {
+.readerlist .reader:nth-child(-n+3) {
   width: 31%;
   min-height: 22em;
   margin-top: 2em;
   margin-bottom: 5em;
   border-width: 3px;
 }
-#main .readerlist .reader:nth-child(-n+3) h1 {
+.readerlist .reader:nth-child(-n+3) h1 {
   font-size: 1.5em;
 }
-#main .readerlist .reader:nth-child(-n+3) .logo {
+.readerlist .reader:nth-child(-n+3) .logo {
   height: 3em;
   margin-right: 1.5em;
 }
@@ -171,26 +163,22 @@ header {
   display: none;
 }
 
-#bottom {
-  margin: 3em 0 0 0;
-  background-color: #FFF;
-}
-#bottom a {
-  color: #39C;
+footer {
+  padding-top: 1em;
+  border-top: 1px solid #693;
 }
 
-#bottom hr {
-  border: 1px solid #DDD;
-  border-style: solid none none none;
+#page-info {
+  font-size: 85%;
+  display: flex;
 }
 
-#bottom #page-info {
-  margin: 0 10%;
-}
-#bottom #page-info > * {
+#page-info > * {
   display: inline-block;
+  padding-left: 1.33em;
+  padding-right: 1.33em;
   vertical-align: top;
-  width: 33%;
+  flex: 1;
 }
 
 @media (max-width: 700px){
@@ -198,16 +186,16 @@ header {
     width: 95%;
     max-width: 504px;
   }
-  header#top, section#main, body div#notifications {
+  header, main, div#notifications, footer {
     width:99%; 
     max-width:630px; 
   }
 }
 @media (max-width: 630px){
-  #main .readerlist .reader {
+  .readerlist .reader {
     width: 48%;
   }
-  #main .readerlist .reader:nth-child(-n+3) {
+  .readerlist .reader:nth-child(-n+3) {
     width: 98%;
     min-height: 1em;
     margin: .5em .75%;
@@ -215,7 +203,7 @@ header {
 }
 @media (max-width: 380px){
   #menu ul li { display: block; }
-  #main .readerlist .reader {
+  .readerlist .reader {
     width: 98%;
     min-height: 1em;
   }

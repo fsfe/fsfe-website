@@ -28,7 +28,7 @@
           <xsl:attribute name="id">fsfe-logo</xsl:attribute>
           <xsl:element name="a">
             <xsl:attribute name="href">http://fsfe.org</xsl:attribute>
-            <xsl:element name="embed">
+            <xsl:element name="img">
               <xsl:attribute name="src">//fsfe.org//graphics/logo_transparent.svg</xsl:attribute>
             </xsl:element>
           </xsl:element>
@@ -78,7 +78,7 @@
 
       <xsl:call-template name="notifications" />
 
-      <xsl:element name="section"> <xsl:attribute name="id">main</xsl:attribute>
+      <xsl:element name="main">
         <xsl:apply-templates select="body/node()" />
       </xsl:element>
 

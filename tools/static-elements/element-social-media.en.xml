@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elementset>
+  <version>1</version>
+
+  <element id="social-media">
+    <h2>Social Media</h2>
+
+    <p>
+      For short news you can follow us on various social networks.
+    </p>
+
+    <div class="share-buttons center">
+      <a target="_blank" class="button share-mastodon" href="https://mastodon.social/@fsfe">Mastodon</a>
+      <a target="_blank" class="button share-twitter" href="https://twitter.com/fsfe">Twitter</a>
+    </div>
+  </element>
+</elementset>

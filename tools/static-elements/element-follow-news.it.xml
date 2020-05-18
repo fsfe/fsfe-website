@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elementset>
+  <version>1</version>
+
+  <element id="follow-news">
+    <h2>Segui le nostre notizie</h2>
+
+    <p>
+      Per essere sempre aggiornati sulle nostre ultime novità,
+      iscrivetevi al nostro feed RSS e visitate i diversi canali
+      mediatici.
+    </p>
+
+    <div class="share-buttons center">
+      <a class="button share-news" href="/news/news.html">FSFE Notizie</a>
+      <a class="button share-rss" href="/news/news.rss">Feed RSS</a>
+      <a class="button share-mail" href="/news/newsletter.html">Newsletter</a>
+      <a class="button share-podcast" href="/news/podcast.html">Podcast</a>
+    </div>
+  </element>
+</elementset>

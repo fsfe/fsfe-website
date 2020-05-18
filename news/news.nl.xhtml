@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
     <html>
-  <version>2</version>
+  <version>3</version>
 
       <head>
         <title>Nieuws - FSFE</title>
@@ -10,23 +10,14 @@
       <body class="toplevel article">
         <h1>Nieuws</h1>
 
-        <div class="news-follow-us">
-          <div class="share-top-buttons-label">Volg ons:</div>
-          <div class="share-buttons-top">
-            <a target="_blank" href="newsletter.html">
-              <button class="share-button-top share-mail">Nieuwsbrief</button>
-            </a>
-            <a target="_blank" href="news.rss">
-              <button class="share-button-top share-rss">RSS-feed</button>
-            </a>
-            <a target="_blank" href="https://mastodon.social/@fsfe">
-              <button class="share-button-top share-mastodon">Mastodon</button>
-            </a>
-            <a target="_blank" href="https://twitter.com/fsfe">
-              <button class="share-button-top share-twitter">Twitter</button>
-            </a>
-          </div>
-        </div>
+        <p class="inline-buttons news-follow-us">Volg ons:
+          <span class="share-buttons">
+            <a class="button share-mail" href="/news/newsletter.html">Nieuwsbrief</a>
+            <a class="button share-rss" href="/news/news.rss">RSS-feed</a>
+            <a target="_blank" class="button share-mastodon" href="https://mastodon.social/@fsfe">Mastodon</a>
+            <a target="_blank" class="button share-twitter" href="https://twitter.com/fsfe">Twitter</a>
+          </span>
+        </p>
 
         <include-news/>
 
@@ -40,36 +31,9 @@
 
       <sidebar promo="none">
         <div class="news-sidebar">
-          <h2>Volg ons nieuws</h2>
+      <static-element id="follow-news" />
 
-          <p>
-            Blijf op de hoogte van ons laatste nieuws door u te abonneren op onze 
-            RSS-feed en onze nieuwsbrief.
-          </p>
-
-          <div class="share-buttons-sidebar">
-            <a href="newsletter.html">
-              <button class="share-button-sidebar share-mail">Nieuwsbrief</button>
-            </a>
-            <a target="_blank" href="news.rss">
-              <button class="share-button-sidebar share-rss">RSS-feed</button>
-            </a>
-          </div>
-
-          <h2>Sociale media</h2>
-
-          <p>
-            Voor nieuws in het kort volgt u ons op:
-          </p>
-
-          <div class="share-buttons-sidebar">
-            <a target="_blank" href="https://mastodon.social/@fsfe">
-              <button class="share-button-sidebar share-mastodon">Mastodon</button>
-            </a>
-            <a target="_blank" href="https://twitter.com/fsfe">
-              <button class="share-button-sidebar share-twitter">Twitter</button>
-            </a>
-          </div>
+      <static-element id="social-media" />
 
           <hr/>
 

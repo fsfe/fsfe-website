@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <html>
-  <version>2</version>
+  <version>3</version>
 
   <head>
     <title>Nachrichten - FSFE</title>
@@ -10,23 +10,14 @@
   <body class="toplevel article">
     <h1>Nachrichten</h1>
 
-    <div class="news-follow-us">
-      <div class="share-top-buttons-label">Folge uns:</div>
-      <div class="share-buttons-top">
-        <a target="_blank" href="newsletter.html">
-          <button class="share-button-top share-mail">Newsletter</button>
-        </a>
-        <a target="_blank" href="news.rss">
-          <button class="share-button-top share-rss">RSS Feed</button>
-        </a>
-        <a target="_blank" href="https://mastodon.social/@fsfe">
-          <button class="share-button-top share-mastodon">Mastodon</button>
-        </a>
-        <a target="_blank" href="https://twitter.com/fsfe">
-          <button class="share-button-top share-twitter">Twitter</button>
-        </a>
-      </div>
-    </div>
+    <p class="inline-buttons news-follow-us">Folge uns:
+      <span class="share-buttons">
+        <a class="button share-mail" href="/news/newsletter.html">Newsletter</a>
+        <a class="button share-rss" href="/news/news.rss">RSS-Feed</a>
+        <a target="_blank" class="button share-mastodon" href="https://mastodon.social/@fsfe">Mastodon</a>
+        <a target="_blank" class="button share-twitter" href="https://twitter.com/fsfe">Twitter</a>
+      </span>
+    </p>
 
     <include-news/>
 
@@ -39,35 +30,9 @@
 
   <sidebar promo="none">
     <div class="news-sidebar">
-      <h2>News Abo</h2>
-      <p>
-        Um auf dem Laufenden zu bleiben, abonniere unseren
-        RSS-Feed oder unseren Newsletter.
-      </p>
+      <static-element id="follow-news" />
 
-      <div class="share-buttons-sidebar">
-        <a href="newsletter.html">
-          <button class="share-button-sidebar share-mail">Newsletter</button>
-        </a>
-        <a target="_blank" href="news.rss">
-          <button class="share-button-sidebar share-rss">RSS Feed</button>
-        </a>
-      </div>
-
-      <h2>Soziale Medien</h2>
-
-      <p>
-        Für weitere Meldungen folge uns auf:
-      </p>
-
-      <div class="share-buttons-sidebar">
-        <a target="_blank" href="https://mastodon.social/@fsfe">
-          <button class="share-button-sidebar share-mastodon">Mastodon</button>
-        </a>
-        <a target="_blank" href="https://twitter.com/fsfe">
-          <button class="share-button-sidebar share-twitter">Twitter</button>
-        </a>
-      </div>
+      <static-element id="social-media" />
 
       <hr/>
 

@@ -54,7 +54,7 @@
 }
 
 /* Separate share buttons form from possibly floating content */
-form.share-buttons {
+.share-buttons {
   clear: both;
 }
 
@@ -119,11 +119,20 @@ form.share-buttons {
   z-index: -1;
 }
 
+/* parent class to put buttons inline vertical-aligned */
+.inline-buttons {
+  display: flex;
+  align-items: center;
+}
+.inline-buttons .share-buttons {
+  margin: 0 0 0 5px;
+}
+
 /* ********
- * SIDEBAR BUTTONS
+ * FLOATING SIDE BUTTONS
  * ********/
 
-form.share-buttons.side {
+.share-buttons.side {
   display: flex;
   flex-direction: column;
   left: 0;
@@ -134,7 +143,7 @@ form.share-buttons.side {
 }
 
 @media (max-width: 767px) {
-  form.share-buttons.side {
+  .share-buttons.side {
     display: none !important;
   }
 }

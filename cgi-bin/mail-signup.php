@@ -80,7 +80,7 @@ if ($list == 'community' ) {  // COMMUNITY
     'country' => $country,
     'wants_info' => '1'
   );
-  mail_signup('https://my.fsfe.org/subscribe', $signupdata);
+  mail_signup('https://my.fsfe.org/subscribe-api', $signupdata);
 } elseif ($list == 'newsletter') {  // NEWSLETTER
   $token = get_token('https://lists.fsfe.org/mailman/listinfo/newsletter-' . $nllang);
   // Wait a few seconds because mailman requests it in SUBSCRIBE_FORM_MIN_TIME

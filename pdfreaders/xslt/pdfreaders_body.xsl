@@ -2,6 +2,9 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
+  <!-- Prefix for links to FSFE's main website -->
+  <xsl:variable name="urlprefix">https://fsfe.org</xsl:variable>
+
   <xsl:include href="../../build/xslt/notifications.xsl" />
   <xsl:include href="../../build/xslt/translation_list.xsl" />
   <xsl:include href="../../build/xslt/fsfe_pagefooter.xsl" />

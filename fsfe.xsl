@@ -15,6 +15,7 @@
   <xsl:include href="build/xslt/fsfe_body.xsl" />
   <xsl:include href="build/xslt/gettext.xsl" />
   <xsl:include href="build/xslt/static-elements.xsl" />
+  <xsl:include href="build/xslt/module.xsl" />
   <xsl:include href="build/xslt/related.xsl" />
 
   <!-- HTML 5 compatibility doctype, since our XSLT parser doesn't support disabling output escaping -->
@@ -76,11 +77,4 @@
 
   <!-- Do not copy non-HTML elements to output -->
   <xsl:include href="build/xslt/fsfe_nolocal.xsl" />
-
-  <!-- Static elements which can be included everywhere -->
-  <xsl:template match="static-element">
-    <xsl:variable name="id"><xsl:value-of select="@id"/></xsl:variable>
-    <xsl:copy-of select="/buildinfo/document/set/element[@id=$id]/node()" />
-  </xsl:template>
-
 </xsl:stylesheet>

@@ -1,13 +1,14 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<elementset>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
   <version>1</version>
 
-  <element id="follow-news">
+  <module>
     <h2>News-Abo</h2>
 
     <p>
-      Um auf dem Laufenden zu bleiben, abonniere unseren RSS-Feed und
-      schau dir unsere verschiedenen Medienkanäle an:
+      Um auf dem Laufenden zu bleiben, abonniere unseren RSS-Feed und schau dir
+      unsere verschiedenen Medienkanäle an:
     </p>
 
     <div class="share-buttons center">
@@ -16,5 +17,5 @@
       <a class="button share-mail" href="/news/newsletter.html">Newsletter</a>
       <a class="button share-podcast" href="/news/podcast.html">Podcast</a>
     </div>
-  </element>
-</elementset>
+  </module>
+</data>

@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-    <html>
+<html>
   <version>3</version>
 
-    <head>
-      <title>Software Freedom Podcast - FSFE</title>
+  <head>
+    <title>Software Freedom Podcast - FSFE</title>
 
-      <meta name="description" content="Reguliere podcast over vooruitgang en het voorvechten van Vrije Software, van de Free Software Foundation Europe" />
-      <meta name="keywords" content="podcast, Vrije Software, open source, nieuws, update, informatie, audio" />
-    </head>
+    <meta name="description" content="Reguliere podcast over vooruitgang en het voorvechten van Vrije Software, van de Free Software Foundation Europe" />
+    <meta name="keywords" content="podcast, Vrije Software, open source, nieuws, update, informatie, audio" />
+  </head>
 
-    <body class="article">
+  <body class="article">
 
     <!-- Breadcumb -->
     <p id="category"><a href="news.html">Nieuws</a></p>
@@ -27,20 +27,18 @@
       </span>
     </p>
 
-      <include-news/>
+    <include-news/>
 
-    </body>
+  </body>
 
-    <sidebar promo="none">
-      <div class="news-sidebar">
-        <static-element id="follow-news" />
+  <sidebar promo="none">
+    <div class="news-sidebar">
+      <module id="follow-news"/>
+      <module id="social-media"/>
+      <hr/>
+      <module id="video-supporter"/>
+    </div>
+  </sidebar>
 
-        <static-element id="social-media" />
-
-        <hr/>
-
-        <static-element id="video" />
-      </div>
-    </sidebar>
-<translator>André Ockers</translator>
-    </html>
+  <translator>André Ockers</translator>
+</html>

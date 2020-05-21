@@ -175,45 +175,56 @@ rm -rf "${tagmaps}"
 rm -rf "${taglabels}"
 
 # -----------------------------------------------------------------------------
-# Update .xmllist files for .sources
+# Update .xmllist files for .sources and .xhtml containing <module>s
 # -----------------------------------------------------------------------------
 
 echo "* Updating XML lists"
 
 all_xml="$(find * -name '*.??.xml' | sed -r 's/\...\.xml$//' | sort -u)"
 
-for source_file in $(find * -name '*.sources' | sort); do
-  cat ${source_file} | while read line; do
-    # Get the pattern from the pattern:[tag] construction
-    pattern=$(echo "${line}" | sed -rn 's/(.*):\[.*\]$/\1/p')
+source_bases="$(find * -name "*.sources" | sed -r 's/\.sources$//')"
+module_bases="$(find * -name "*.??.xhtml" | xargs grep -l '<module' | sed -r 's/\...\.xhtml$//')"
+all_bases="$((echo "${source_bases}"; echo "${module_bases}") | sort -u)"
 
-    if [ -z "${pattern}" ]; then
-      continue
+for base in ${all_bases}; do
+  {
+    # Data files defined in the .sources list
+    if [ -f "${base}.sources" ]; then
+      cat "${base}.sources" | while read line; do
+        # Get the pattern from the pattern:[tag] construction
+        pattern=$(echo "${line}" | sed -rn 's/(.*):\[.*\]$/\1/p')
+
+        if [ -z "${pattern}" ]; then
+          continue
+        fi
+
+        # Honor $nextyear, $thisyear, and $lastyear variables
+        pattern=${pattern//\$nextyear/${nextyear}}
+        pattern=${pattern//\$thisyear/${thisyear}}
+        pattern=${pattern//\$lastyear/${lastyear}}
+
+        # Change from a glob pattern into a regex
+        pattern=$(echo "${pattern}" | sed -r -e 's/([.^$[])/\\\1/g; s/\*/.*/g')
+
+        # Get the tag from the pattern:[tag] construction
+        tag=$(echo "${line}" | sed -rn 's/.*:\[(.*)\]$/\1/p')
+
+        # We append || true so the script doesn't fail if grep finds nothing at all
+        if [ -n "${tag}" ]; then
+          cat "tags/.tagged-${tag}.xmllist"
+        else
+          echo "${all_xml}"
+        fi | grep "^${pattern}\$" || true
+      done
     fi
 
-    # Honor $nextyear, $thisyear, and $lastyear variables
-    pattern=${pattern//\$nextyear/${nextyear}}
-    pattern=${pattern//\$thisyear/${thisyear}}
-    pattern=${pattern//\$lastyear/${lastyear}}
+    # Data files required for the <module>s used
+    for xhtml_file in ${base}.??.xhtml; do
+      xsltproc "build/xslt/get_modules.xsl" "${xhtml_file}"
+    done
+  } | sort -u > "/tmp/xmllist-${pid}"
 
-    # Change from a glob pattern into a regex
-    pattern=$(echo "${pattern}" | sed -r -e 's/([.^$[])/\\\1/g; s/\*/.*/g')
-
-    # Get the tag from the pattern:[tag] construction
-    tag=$(echo "${line}" | sed -rn 's/.*:\[(.*)\]$/\1/p')
-
-    # Change to lowercase and remove invalid characters
-    tag=$(echo "${tag,,}" | tr ' ' '_' | tr -d '/:')
-
-    # We append || true so the script doesn't fail if grep finds nothing at all
-    if [ -n "${tag}" ]; then
-      cat "tags/.tagged-${tag}.xmllist"
-    else
-      echo "${all_xml}"
-    fi | grep "^${pattern}\$" || true
-  done | sort -u > "/tmp/xmllist-${pid}"
-
-  list_file="$(dirname ${source_file})/.$(basename ${source_file} .sources).xmllist"
+  list_file="$(dirname ${base})/.$(basename ${base}).xmllist"
 
   if ! cmp --quiet "/tmp/xmllist-${pid}" "${list_file}"; then
     echo "*   Updating ${list_file}"

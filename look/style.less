@@ -374,16 +374,8 @@ div#subpages, {
 #main {
     padding-top: 1em;
 
-    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-        -moz-hypens: manual;
-        -webkit-hyphens: manual;
-        hyphens: manual;
-    }
-
     p {
-        -moz-hyphens: auto;
-        -webkit-hyphens: auto;
-        hyphens: auto;
+        .hyphens(auto);
     }
 
     footer#tags {

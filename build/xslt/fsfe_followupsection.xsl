@@ -3,7 +3,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
   <xsl:template name="fsfe_followupsection">
-    <xsl:element name="section">
+    <xsl:element name="aside">
       <xsl:attribute name="id">followup</xsl:attribute>
          <!--
          TODO Okay, so the idea here is to be able to display different "followup" boxes. I would suggest doing it like this:
@@ -87,6 +87,6 @@
         </xsl:otherwise>
       </xsl:choose>
     </xsl:element>
-    <!--/section#followup-->
+    <!--/aside#followup-->
   </xsl:template>
 </xsl:stylesheet>

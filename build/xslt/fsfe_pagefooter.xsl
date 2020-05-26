@@ -15,7 +15,6 @@
     </xsl:element>
 
     <xsl:element name="footer">
-      <xsl:attribute name="id">bottom</xsl:attribute>
 
       <xsl:element name="div">
         <xsl:attribute name="id">page-info</xsl:attribute>

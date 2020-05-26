@@ -4,7 +4,7 @@
 
   <xsl:template name="translation_list">
     <xsl:if test="not(/buildinfo/document/@external)">
-      <xsl:element name="div">
+      <xsl:element name="nav">
         <xsl:attribute name="id">translations</xsl:attribute>
         <xsl:attribute name="class">alert</xsl:attribute>
 

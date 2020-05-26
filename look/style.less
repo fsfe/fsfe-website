@@ -135,8 +135,7 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
 // Translation selector
 // ----------------------------------------------------------------------------
 
-#translations {
-    .container;
+nav#translations {
     .collapse;
     .fade;
     background: @body-bg;
@@ -167,7 +166,7 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
     }
 }
 
-.no-js #translations {
+.no-js nav#translations {
     .collapse.in;
     .fade.in;
     position: relative;
@@ -346,19 +345,19 @@ div#notifications {
 
 /* grid */
 .article {
-    #content {
+    div#content {
         .make-xs-column(12);
         .make-md-column(8);
         padding-left: 0;
     }
-    #sidebar {
+    aside#sidebar {
         .make-xs-column(12);
         .make-md-column(4);
         padding-right: 0;
     }
 }
 
-#main, #followup {
+main, aside#followup {
     .container;
     background: @body-bg;
     margin: 1em auto;
@@ -371,7 +370,7 @@ div#notifications {
     }
 }
 
-#main {
+main {
     padding-top: 1em;
 
     p {
@@ -444,7 +443,7 @@ div#notifications {
     }
 }
 
-#sidebar {
+aside#sidebar {
     color: @gray-light;
     padding: 2em 0;
 
@@ -505,7 +504,7 @@ div#notifications {
 }
 
 
-#content {
+div#content {
     aside {
         @media (min-width: @screen-md-min) {
             float: right;
@@ -687,19 +686,19 @@ div#notifications {
 
 .full-width {
     /* For very particular pages where you need as wide as possible */
-    #main {
+    main {
         width: 100%;
     }
 }
 
 .frontpage, .subsite, .full-width {
-    #content {
+    div#content {
         max-width: none;
     }
 }
 
 .article {
-    #content {
+    div#content {
         display: inline-block;
 
         .p-name {
@@ -928,7 +927,7 @@ section#related-news article.news:nth-of-type(n+2) {
 // Followup boxes
 // ----------------------------------------------------------------------------
 
-#followup {
+aside#followup {
     .clearfix();
 
     h2 {
@@ -953,7 +952,7 @@ section#related-news article.news:nth-of-type(n+2) {
     }
 }
 
-#followup.subscribe-nl {
+aside#followup.subscribe-nl {
     h2 {
         .make-md-column(6);
         .make-lg-column(5);
@@ -966,7 +965,7 @@ section#related-news article.news:nth-of-type(n+2) {
 }
 
 @media (min-width: @screen-md-min) {
-    #followup.subscribe-nl {
+    aside#followup.subscribe-nl {
         h2 {
             margin: 0;
             top: 5px;
@@ -974,9 +973,9 @@ section#related-news article.news:nth-of-type(n+2) {
     }
 }
 
-#followup.join,
-#followup.support,
-#followup.donate {
+aside#followup.join,
+aside#followup.support,
+aside#followup.donate {
     h2 {
         .make-sm-column(4);
         text-align: center;
@@ -997,7 +996,7 @@ section#related-news article.news:nth-of-type(n+2) {
 // Page footer
 // ----------------------------------------------------------------------------
 
-#direct-to-top {
+nav#direct-to-top {
     .container;
 
     a {
@@ -1012,7 +1011,7 @@ section#related-news article.news:nth-of-type(n+2) {
     }
 }
 
-#bottom {
+body > footer {
     background: @body-bg;
     box-shadow: 1em 0 1em 1em @body-bg;
     margin: 40px 0 0 0;
@@ -1023,7 +1022,7 @@ section#related-news article.news:nth-of-type(n+2) {
         padding: 10px;
     }
 
-    #page-info {
+    div#page-info {
         .container;
         // .make-row;  can't use .container and .make-row on same element
 

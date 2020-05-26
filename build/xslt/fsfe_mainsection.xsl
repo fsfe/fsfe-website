@@ -6,11 +6,8 @@
   <xsl:include href="fsfe_sidebar.xsl"/>
 
   <xsl:template name="fsfe_mainsection">
-    <xsl:element name="section">
-      <xsl:attribute name="id">main</xsl:attribute>
-      <xsl:attribute name="role">main</xsl:attribute>
-
-      <xsl:element name="article">
+    <xsl:element name="main">
+      <xsl:element name="div">
         <xsl:attribute name="id">content</xsl:attribute>
         <xsl:if test="/buildinfo/document/body/@microformats">
           <xsl:attribute name="class"><xsl:value-of select="/buildinfo/document/body/@microformats" /></xsl:attribute>

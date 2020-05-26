@@ -131,23 +131,12 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
 // Page structure and grids
 // ============================================================================
 
-#translations, #top, #notifications, #main, #followup, #page-info {
-    .container;
-}
-
-div#subpages, {
-    .make-row();
-    padding-bottom: 1em;
-    .half {
-        .make-sm-column(6);
-    }
-}
-
 // ----------------------------------------------------------------------------
 // Translation selector
 // ----------------------------------------------------------------------------
 
 #translations {
+    .container;
     .collapse;
     .fade;
     background: @body-bg;
@@ -191,7 +180,9 @@ div#subpages, {
 // Page header
 // ----------------------------------------------------------------------------
 
-#top {
+header#top {
+    .container;
+
     @media (max-width: @screen-xs-max) {
         padding: 0;
     }
@@ -342,6 +333,14 @@ div#subpages, {
 }
 
 // ----------------------------------------------------------------------------
+// Translations notifications
+// ----------------------------------------------------------------------------
+
+div#notifications {
+    .container;
+}
+
+// ----------------------------------------------------------------------------
 // Page body
 // ----------------------------------------------------------------------------
 
@@ -360,6 +359,7 @@ div#subpages, {
 }
 
 #main, #followup {
+    .container;
     background: @body-bg;
     margin: 1em auto;
     padding: 1.5em;
@@ -374,16 +374,8 @@ div#subpages, {
 #main {
     padding-top: 1em;
 
-    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-        -moz-hypens: manual;
-        -webkit-hyphens: manual;
-        hyphens: manual;
-    }
-
     p {
-        -moz-hyphens: auto;
-        -webkit-hyphens: auto;
-        hyphens: auto;
+        .hyphens(auto);
     }
 
     footer#tags {
@@ -450,12 +442,6 @@ div#subpages, {
         background: url(/graphics/cc-logo.png) 2em 50% no-repeat @gray-lighter;
         padding-left: 150px;
     }
-}
-
-#content {
-    max-width: 99ex;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 #sidebar {
@@ -721,7 +707,7 @@ div#subpages, {
         }
     }
 
-/* blocks that stand out */
+    /* blocks that stand out */
 
     .standout {
         margin-top: 1.5em;
@@ -759,31 +745,39 @@ div#subpages, {
     }
 }
 
-        /* subpages "backward compatibility" */
+/* subpages "backward compatibility" */
 
-        h2#subpages, h3#subpage, h4#subpages {
-                display: none;
-            }
-        h2#subpages.show-heading,
-        h3#subpages.show-heading,
-        h4#subpages.show-heading {
-          display: block;
+div#subpages {
+    .make-row();
+    padding-bottom: 1em;
+    .half {
+        .make-sm-column(6);
+    }
+}
+
+h2#subpages, h3#subpage, h4#subpages {
+        display: none;
+    }
+h2#subpages.show-heading,
+h3#subpages.show-heading,
+h4#subpages.show-heading {
+  display: block;
+}
+
+ul#subpages, h2#subpages + ul, h3#subpages + ul, h4#subpages + ul, ul.subheadings, ul.overview {
+    clear: both;
+    .subsite #content .subheadings;
+
+    li {
+        .make-sm-column(6);
+    }
+
+    @media (min-width: @screen-sm-min) {
+        li {
+            display: inline-block;
         }
-
-        ul#subpages, h2#subpages + ul, h3#subpages + ul, h4#subpages + ul, ul.subheadings, ul.overview {
-            clear: both;
-            .subsite #content .subheadings;
-
-            li {
-                .make-sm-column(6);
-            }
-
-            @media (min-width: @screen-sm-min) {
-                li {
-                    display: inline-block;
-                }
-            }
-        }
+    }
+}
 
 .subsite {
     .toplevel;
@@ -1030,6 +1024,7 @@ section#related-news article.news:nth-of-type(n+2) {
     }
 
     #page-info {
+        .container;
         // .make-row;  can't use .container and .make-row on same element
 
         div {

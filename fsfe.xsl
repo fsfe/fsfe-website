@@ -15,6 +15,7 @@
   <xsl:include href="build/xslt/fsfe_body.xsl" />
   <xsl:include href="build/xslt/gettext.xsl" />
   <xsl:include href="build/xslt/static-elements.xsl" />
+  <xsl:include href="build/xslt/fsfe-cd.xsl" />
   <xsl:include href="build/xslt/module.xsl" />
   <xsl:include href="build/xslt/related.xsl" />
 

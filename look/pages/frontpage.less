@@ -2,9 +2,7 @@
 // Styles specific to the front page
 // ============================================================================
 
-// Add #main to the selector so general selectors including #main don't
-// overrule our special settings.
-body.frontpage #main {
+body.frontpage {
 
     // ------------------------------------------------------------------------
     // Introduction paragraph at the top of the page
@@ -74,22 +72,6 @@ body.frontpage #main {
     }
 
     // ------------------------------------------------------------------------
-    // Wide block (used 2 times)
-    // ------------------------------------------------------------------------
-
-    .wide-block {
-        font-weight: 500;
-        .text-center;
-        padding: 15px;
-        margin-top: 30px;
-        margin-bottom: 30px;
-
-        p {
-            .hyphens(manual);
-        }
-    }
-
-    // ------------------------------------------------------------------------
     // News section
     // ------------------------------------------------------------------------
 
@@ -145,16 +127,6 @@ body.frontpage #main {
     }
 
     // ------------------------------------------------------------------------
-    // Block asking to subscribe to news updates
-    // ------------------------------------------------------------------------
-
-    .subscribe {
-        .wide-block;
-        color: white;
-        background-color: @brand-primary;
-    }
-
-    // ------------------------------------------------------------------------
     // Testimonials section
     // ------------------------------------------------------------------------
 
@@ -204,17 +176,6 @@ body.frontpage #main {
                 }
             }
         }
-    }
-
-    // ------------------------------------------------------------------------
-    // Block asking to become a supporter
-    // ------------------------------------------------------------------------
-
-    .become-supporter {
-        .wide-block;
-        color: white;
-        font-size: 125%;
-        background-color: @brand-mix;
     }
 
     // ------------------------------------------------------------------------

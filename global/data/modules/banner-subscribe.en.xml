@@ -13,10 +13,10 @@
       <form class="form-inline" method="post" action="https://my.fsfe.org/subscribe">
         <input type="hidden" name="language" value="en"/>
         <div class="form-group">
-          <input type="text" class="form-control" name="name" placeholder="Your name" required="yes"/>
+          <input type="text" class="form-control" name="name" placeholder="Your name" required="required"/>
         </div>
         <div class="form-group">
-          <input type="email" class="form-control" name="email1" placeholder="Your email address" required="yes"/>
+          <input type="email" class="form-control" name="email1" placeholder="Your email address" required="required"/>
         </div>
         <fsfe-cd-referrer-input/>
         <input type="hidden" name="wants_info" value="yes"/>

@@ -188,7 +188,9 @@ header#top {
 }
 
 #masthead {
-    margin: 19px 16px 29px 16px;
+    // With the margin-right of -100% we leave as much space for the menu as it
+    // needs.
+    margin: 19px -100% 29px 16px;
 
     @media (max-width: @screen-xs-max) {
         margin: 0;

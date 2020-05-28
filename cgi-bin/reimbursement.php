@@ -33,25 +33,25 @@ $receipt_dest = [];
 
 
 // FUNCTIONS
-function td($input) {
-  return "<td>$input</td>";
+function errexit($msg) {
+  exit("Error: " . $msg . "<br/><br/>To avoid losing your data, press the back button in your browser");
 }
 
 // Sanity checks
 if ($type == "rc") {
   if ( ! $rc_month || ! $rc_year ) {
-    exit("You must provide month and year of the RC");
+    errexit("You must provide month and year of the RC");
   }
   $type_verbose = "Reimbursement Claim";
   $type_date = "$rc_year-$rc_month";
 } else if ($type == "cc") {
   if ( ! $cc_month || ! $cc_year ) {
-    exit("You must provide quarter and year of the CC statement");
+    errexit("You must provide quarter and year of the CC statement");
   }
   $type_verbose = "Credit Card Statement";
   $type_date = "$cc_year-$cc_month";
 } else {
-  exit("You must provide a reimbursement type");
+  errexit("You must provide a reimbursement type");
 }
 
 // Prepare output table
@@ -91,16 +91,16 @@ foreach ($entry as $key => $date) {  // calculate for each entry
   $receipt_no = $key + 1;
 
   if (! $receipt_tmp) {
-    exit("Something with $receipt_name went wrong, it has not been uploaded.");
+    errexit("Something with $receipt_name went wrong, it has not been uploaded.");
   }
 
   if ($receipt_size > 2097152) {
-    exit("File size of $receipt_name must not be larger than 2MB");
+    errexit("File size of $receipt_name must not be larger than 2MB");
   }
 
   $receipt_mime = mime_content_type($receipt_tmp);
   if(! in_array($receipt_mime, array('image/jpeg', 'image/png', 'application/pdf'))) {
-    exit("Only PDF, JPG and PNG allowed. $receipt_name has $receipt_mime");
+    errexit("Only PDF, JPG and PNG allowed. $receipt_name has $receipt_mime");
   }
 
   $receipt_ext = pathinfo($receipt_name)['extension'];
@@ -109,10 +109,10 @@ foreach ($entry as $key => $date) {  // calculate for each entry
 
   if ($receipt_error == UPLOAD_ERR_OK) {
     if ( ! move_uploaded_file($receipt_tmp, $receipt_dest[$key]) ) {
-      exit("Could not move uploaded file '".$receipt_tmp."' to '".$receipt_dest."'<br/>\n");
+      errexit("Could not move uploaded file '".$receipt_tmp."' to '".$receipt_dest."'<br/>\n");
     }
   } else {
-    exit("Upload error. [".$receipt_error."] on file '".$receipt_name."'<br/>\n");
+    errexit("Upload error. [".$receipt_error."] on file '".$receipt_name."'<br/>\n");
   }
 
   // HTML output

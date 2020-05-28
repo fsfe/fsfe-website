@@ -85,17 +85,22 @@ $output .= '<table class="table table-striped">
     <th>Your total reimbursement</th>
   </tr>';
 
-$days = array('out', 1, 2, 3, 4, 5, 6, 7, 'return'); // define day range
+$use = $_POST['use'];
+$date = $_POST['date'];
+$break = $_POST['break'];
+$lunch = $_POST['lunch'];
+$dinner = $_POST['dinner'];
 
 // set variables
 $r_total = 0;   // total reimbursement
 
-foreach ($days as &$d) {  // calculate for each day
-  $use[$d] = $_POST['use'][$d];
-  $date[$d] = $_POST['date'][$d];
-  $break[$d] = $_POST['break'][$d];
-  $lunch[$d] = $_POST['lunch'][$d];
-  $dinner[$d] = $_POST['dinner'][$d];
+foreach ($use as $d => $day) {  // calculate for each day
+  // set "no" as value for day's variable if empty
+  $use[$d] = $use[$d] ?? 'no';
+  $date[$d] = $date[$d] ?? 'no';
+  $break[$d] = $break[$d] ?? 'no';
+  $lunch[$d] = $lunch[$d] ?? 'no';
+  $dinner[$d] = $dinner[$d] ?? 'no';
   
   // set variables
   $r_day[$d] = 0;   // reimbursement for this day
@@ -175,7 +180,15 @@ $output .= "<p>The following section can be copied to your Reimbursement Claim s
 
 $output .= '<table class="table">';
 $output .= '<tr><th>Employee name</th><th>Date</th><th>Amount (EUR)</th><th>Recipient Name</th><th>ER number</th><th>Catchphrase</th><th>Receipt / per diem</th><th>Remarks</th></tr>';
-foreach ($days as &$d) {  // calculate for each day
+foreach ($use as $d => $day) {  // calculate for each day
+  // set "no" as value for day's variable if empty
+  $use[$d] = $use[$d] ?? 'no';
+  $date[$d] = $date[$d] ?? 'no';
+  $break[$d] = $break[$d] ?? 'no';
+  $lunch[$d] = $lunch[$d] ?? 'no';
+  $dinner[$d] = $dinner[$d] ?? 'no';
+  $remark[$d] = $remark[$d] ?? '';
+
   if ($use[$d] === 'yes') {
     $rc_name = $_POST['rc_name'];
     $rc_er = $_POST['rc_er'];
@@ -246,7 +259,7 @@ function replace_page($temp, $content){
     return str_replace(array_keys($vars), $vars, $temp);
 }
 
-$template = file_get_contents('http://fsfe.org/internal/pd-result.en.html', true);
+$template = file_get_contents($_SERVER['REQUEST_SCHEME'] ."://". $_SERVER['HTTP_HOST'] . '/internal/pd-result.en.html', true);
 
 echo replace_page($template, $output);
 

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<html>
+  <version>1</version>
+
+  <head>
+    <title>Reimbursement Claim / Credit Card statement</title>
+    <style type="text/css">
+      table input.form-control,
+      table textarea.form-control {
+        font-size: 12px;
+      }
+      table td {
+        padding: 1px !important;
+      }
+      .form-control {
+        padding: 3px 6px !important;
+      }
+      input[type="file"] {
+        width: 180px;
+      }
+    </style>
+    <script src="/scripts/addrow.js"></script>
+  </head>
+
+  <body>
+    <h1>Reimbursement Claim / Credit Card statement</h1>
+    
+    <p>
+      In this form, you can enter your reimbursable expenses (monthly)
+      as well as your credit card expenses (twi-monthly), upload
+      receipts, and eventually submit it to our financial team.
+    </p>
+
+    <p>
+      Please fill out all fields as requested, and take care of
+      selecting the correct type (Reimbursement Claim or Credit Card).
+    </p>
+    
+    <form action="/cgi-bin/reimbursement.php" method="post" enctype="multipart/form-data">
+      <h2>1. Set general options</h2>
+
+      <div class="form-group form-inline">
+        <label class="col-sm-3">Employee:</label>
+        <select class="form-control col-sm-9" name="who" size="1" required="required">
+          <option />
+          <option value="alex.sander">Alexander Sander</option>
+          <option value="bonnie">Bonnie Mehring</option>
+          <option value="eal">Erik Albers</option>
+          <option value="fi">Francesca Indorato</option>
+          <option value="gabriel.ku">Gabriel Ku Wei Bin</option>
+          <option value="lucas.lasota">Lucas Lasota</option>
+          <option value="max.mehl">Max Mehl</option>
+          <option value="mk">Matthias Kirschner</option>
+        </select>
+      </div>
+
+      <div class="clearfix"></div>
+
+      <div class="form-group">
+        <label class="col-sm-3">Type:</label>
+        <div class="radio form-inline col-sm-9">
+          <label>
+            <input type="radio" name="type" value="rc" required="required" />
+            Reimbursement Claim for month
+            <select class="form-control" name="rc_month">
+              <option />
+              <option value="01">January</option>
+              <option value="02">February</option>
+              <option value="03">March</option>
+              <option value="04">April</option>
+              <option value="05">May</option>
+              <option value="06">June</option>
+              <option value="07">July</option>
+              <option value="08">August</option>
+              <option value="09">September</option>
+              <option value="10">October</option>
+              <option value="11">November</option>
+              <option value="12">December</option>
+            </select>
+            <select class="form-control" name="rc_year">
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="clearfix"></div>
+        
+        <div class="radio form-inline col-sm-offset-3 col-sm-9">
+          <label>
+            <input type="radio" name="type" value="cc" required="required" />
+            Credit Card for quarter
+            <select class="form-control" name="cc_month">
+              <option />
+              <option value="Q1">Q1</option>
+              <option value="Q2">Q2</option>
+              <option value="Q3">Q3</option>
+              <option value="Q4">Q4</option>
+            </select>
+            <select class="form-control" name="cc_year">
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+            </select>
+          </label>
+        </div>
+      </div>
+      
+      <h2>2. Enter your expenses</h2>
+
+      <table class="table table-striped">
+        <tr>
+          <th>Date</th>
+          <th>Amount in EUR</th>
+          <th>Recipient</th>
+          <th>ER number</th>
+          <th>Catchphrase</th>
+          <th>Receipt Scan</th>
+          <th>Remarks</th>
+          <th>Add/Del Rows</th>
+        </tr>
+        
+        <tr>
+          <td><input type="date" name="entry[]" class="form-control" required="required" /></td>
+          <td><input type="number" name="amount[]" step=".01" class="form-control" placeholder="12.34" required="required" /></td>
+          <td><input type="text" name="recipient[]" class="form-control" required="required" /></td>
+          <td><input type="text" name="er[]" class="form-control" placeholder="er.2020-..." required="required" /></td>
+          <td><input type="text" name="catch[]" class="form-control" required="required" /></td>
+          <td><input type="file" name="receipt[]" class="form-control" required="required" /></td>
+          <td><textarea name="remarks[]" class="form-control" rows="1" required="required"></textarea></td>
+          <td><input type="button" class="AddNewRow btn btn-primary" value="+ 1 row" /></td>
+        </tr>
+
+      </table>
+
+      <h2>3. Extra remarks / notes</h2>
+
+      <p>If necessary, you can add additional remarks and notes to the statement you send.</p>
+
+      <div class="form-group">
+        <textarea name="extra" class="form-control" rows="3"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Send RC/CC report</button>
+
+    </form>
+    
+  </body>
+
+
+</html>

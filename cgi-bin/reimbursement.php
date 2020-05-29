@@ -9,7 +9,7 @@ require 'PHPMailer/PHPMailer.php';
 require 'PHPMailer/SMTP.php';
 
 $html = ''; // create empty variable
-$csv = array(array("Employee name", "Date", "Amount (EUR)", "Recipient name", "ER number", "Catchphrase", "Receipt name", "Remarks")); // create array for CSV
+$csv = array(array("Employee name", "Date", "Amount (EUR)", "Recipient number", "ER number", "Catchphrase", "Receipt name", "Remarks")); // create array for CSV
 $csvfile = tmpfile();
 $csvfile_path = stream_get_meta_data($csvfile)['uri'];
 
@@ -38,7 +38,7 @@ function errexit($msg) {
   exit("Error: " . $msg . "<br/><br/>To avoid losing your data, press the back button in your browser");
 }
 
-// Sanity checks
+// Sanity checks for parameters
 if ($type == "rc") {
   if ( ! $rc_month || ! $rc_year ) {
     errexit("You must provide month and year of the RC");
@@ -92,30 +92,33 @@ if ($mailopt === "normal") {
 }
 $email->addAddress($who . "@fsfe.org");
 
-foreach ($entry as $key => $date) {  // calculate for each entry
+foreach ($entry as $key => $date) {  // run over each row
+  // Get basic variable for each row
   $receipt_tmp = $_FILES["receipt"]["tmp_name"][$key];
   $receipt_error = $_FILES["receipt"]["error"][$key];
   $receipt_name = basename($_FILES["receipt"]["name"][$key]);
   $receipt_size = $_FILES["receipt"]["size"][$key];
-  $receipt_no = $key + 1;
+  $key1 = $key + 1;
+  $receipt_no = sprintf('%02d', $key1);
 
+  // Sanity checks for receipt: upload, size, mime type
   if (! $receipt_tmp) {
     errexit("Something with $receipt_name went wrong, it has not been uploaded.");
   }
-
   if ($receipt_size > 2097152) {
     errexit("File size of $receipt_name must not be larger than 2MB");
   }
-
   $receipt_mime = mime_content_type($receipt_tmp);
   if(! in_array($receipt_mime, array('image/jpeg', 'image/png', 'application/pdf'))) {
     errexit("Only PDF, JPG and PNG allowed. $receipt_name has $receipt_mime");
   }
 
+  // Set name and temporary destination for attached receipt
   $receipt_ext = pathinfo($receipt_name)['extension'];
-  $receipt_rename = $type ."-". $type_date ."-". $who ."-receipt". $receipt_no ."-". $er[$key] .".". "$receipt_ext";
+  $receipt_rename = $type_date ."-". $type ."-". $who ."-receipt-". $receipt_no ."-". $er[$key] .".". "$receipt_ext";
   $receipt_dest[$key] = "/tmp/" . $receipt_rename;
 
+  // Try to move file to temporary destination
   if ($receipt_error == UPLOAD_ERR_OK) {
     if ( ! move_uploaded_file($receipt_tmp, $receipt_dest[$key]) ) {
       errexit("Could not move uploaded file '".$receipt_tmp."' to '".$receipt_dest."'<br/>\n");
@@ -124,7 +127,7 @@ foreach ($entry as $key => $date) {  // calculate for each entry
     errexit("Upload error. [".$receipt_error."] on file '".$receipt_name."'<br/>\n");
   }
 
-  // HTML output
+  // HTML output for this receipt
   $html .= "
   <tr>
     <td>$date</td>
@@ -136,11 +139,10 @@ foreach ($entry as $key => $date) {  // calculate for each entry
     <td>$remarks[$key]</td>
   </tr>";
 
-  // CSV
-  $csv[$receipt_no] = array($who, $date, $amount[$key], $recipient[$key], $er[$key], $catch[$key], $receipt_rename, $remarks[$key]);
+  // CSV for this receipt
+  $csv[$receipt_no] = array($who, $date, $amount[$key], $recipient[$key], $er[$key], $catch[$key], $receipt_no, $remarks[$key]);
 
-  // Email
-
+  // Add receipt as email attachment
   $email->addAttachment($receipt_dest[$key], basename($receipt_dest[$key]));
 } // foreach
 
@@ -148,7 +150,7 @@ foreach ($entry as $key => $date) {  // calculate for each entry
 foreach ($csv as $fields) {
   fputcsv($csvfile, $fields, ',', '"', '"');
 }
-$email->addAttachment($csvfile_path, $type ."-". $type_date ."-". $who . ".csv");
+$email->addAttachment($csvfile_path, $type_date ."-". $type ."-". $who . ".csv");
 
 // Prepare email body
 $email_body = "Hi,

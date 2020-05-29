@@ -5,6 +5,16 @@
   <head>
     <title>Reimbursement Claim / Credit Card statement</title>
     <style type="text/css">
+      th {
+        text-align: center;
+      }
+      tr.descr {
+        font-style: italic;
+        font-size: small;
+      }
+      tr.descr td {
+        padding: 1px 4px !important;
+      }
       table input.form-control,
       table textarea.form-control {
         font-size: 12px;
@@ -113,20 +123,31 @@
       <table class="table table-striped">
         <tr>
           <th>Date</th>
-          <th>Amount in EUR</th>
+          <th>Amount</th>
           <th>Recipient</th>
           <th>ER number</th>
           <th>Catchphrase</th>
           <th>Receipt Scan</th>
           <th>Remarks</th>
-          <th>Add/Del Rows</th>
+          <th>Rows</th>
+        </tr>
+
+        <tr class="descr">
+          <td></td>
+          <td>In EUR. <a href="https://ec.europa.eu/budget/graphs/inforeuro.html">Convert foreign currencies</a></td>
+          <td></td>
+          <td>Valid ER number, or <strong>?</strong> if you do not have it</td>
+          <td>Catch phrase for the ER</td>
+          <td>Upload receipt as PDF</td>
+          <td>Enter <strong>-</strong> if no remark applicable</td>
+          <td>Add a new row, or delete one</td>
         </tr>
         
         <tr>
           <td><input type="date" name="entry[]" class="form-control" required="required" /></td>
           <td><input type="number" name="amount[]" step=".01" class="form-control" placeholder="12.34" required="required" /></td>
           <td><input type="text" name="recipient[]" class="form-control" required="required" /></td>
-          <td><input type="text" name="er[]" class="form-control" placeholder="er.2020-..." required="required" /></td>
+          <td><input type="text" name="er[]" class="form-control" pattern="(^\?$|^er\.[\d]{4}-[\d]{2}-[\d]{2}\.[\d.-]+)" placeholder="er.2020-..." required="required" /></td>
           <td><input type="text" name="catch[]" class="form-control" required="required" /></td>
           <td><input type="file" name="receipt[]" class="form-control" required="required" /></td>
           <td><textarea name="remarks[]" class="form-control" rows="1" required="required"></textarea></td>

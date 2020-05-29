@@ -9,7 +9,7 @@ require 'PHPMailer/PHPMailer.php';
 require 'PHPMailer/SMTP.php';
 
 $html = ''; // create empty variable
-$csv = array(array("Employee name", "Date", "Amount (EUR)", "Recipient number", "ER number", "Catchphrase", "Receipt name", "Remarks")); // create array for CSV
+$csv = array(array("Employee name", "Date", "Amount (EUR)", "Recipient name", "ER number", "Catchphrase", "Receipt number", "Remarks")); // create array for CSV
 $csvfile = tmpfile();
 $csvfile_path = stream_get_meta_data($csvfile)['uri'];
 
@@ -98,6 +98,14 @@ $email->addAddress($who . "@fsfe.org");
 
 foreach ($entry as $key => $date) {  // run over each row
   // Get basic variable for each row
+  /* For receipts, following variables are set:
+   * tmp: the temporary path of the uploaded file
+   * error: any errors with the file
+   * name: the original name of the file
+   * size: file size
+   * rename: the format we want each file to have
+   * dest: the temporary but known location of the file
+  */
   $receipt_tmp = $_FILES["receipt"]["tmp_name"][$key];
   $receipt_error = $_FILES["receipt"]["error"][$key];
   $receipt_name = basename($_FILES["receipt"]["name"][$key]);
@@ -139,7 +147,7 @@ foreach ($entry as $key => $date) {  // run over each row
     <td>$recipient[$key]</td>
     <td>$er[$key]</td>
     <td>$catch[$key]</td>
-    <td>$receipt_rename</td>
+    <td>$receipt_name</td>
     <td>$remarks[$key]</td>
   </tr>";
 

@@ -32,6 +32,10 @@ $mailopt = isset($_POST["mailopt"]) ? $_POST["mailopt"] : false;
 // create empty arrays for uploaded file
 $receipt_dest = [];
 
+// Separate employee name parameters
+$who_verbose = explode('|', $who)[0];
+$who = explode('|', $who)[1];
+
 
 // FUNCTIONS
 function errexit($msg) {
@@ -61,7 +65,7 @@ if ($mailopt === "onlyme") {
 } else if ($mailopt === "none") {
   $html .= "<p><strong>ATTENTION: You have configured to not send any email!</strong></p>";
 }
-$html .= "<p>This <strong>$type_verbose</strong> is made by <strong>$who</strong>.</p>
+$html .= "<p>This <strong>$type_verbose</strong> is made by <strong>$who_verbose</strong>.</p>
 <table class='table table-striped'>
   <tr>
     <th>Date</th>
@@ -85,8 +89,8 @@ $email->Port    = 25;
 //$email->Username   = 'fsfe_user';
 //$email->Password   = 'fsfe_pass';
 //$email->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-$email->SetFrom($who . "@fsfe.org", "$who");
-$email->Subject     = "$type_verbose for $type_date by $who";
+$email->SetFrom($who . "@fsfe.org", $who_verbose);
+$email->Subject     = "$type_verbose for $type_date by $who_verbose";
 if ($mailopt === "normal") {
   $email->addAddress("finance@lists.fsfe.org");
 }
@@ -140,7 +144,7 @@ foreach ($entry as $key => $date) {  // run over each row
   </tr>";
 
   // CSV for this receipt
-  $csv[$receipt_no] = array($who, $date, $amount[$key], $recipient[$key], $er[$key], $catch[$key], $receipt_no, $remarks[$key]);
+  $csv[$receipt_no] = array($who_verbose, $date, $amount[$key], $recipient[$key], $er[$key], $catch[$key], $receipt_no, $remarks[$key]);
 
   // Add receipt as email attachment
   $email->addAttachment($receipt_dest[$key], basename($receipt_dest[$key]));
@@ -155,7 +159,7 @@ $email->addAttachment($csvfile_path, $type_date ."-". $type ."-". $who . ".csv")
 // Prepare email body
 $email_body = "Hi,
 
-This is a $type_verbose for $type_date by $who,
+This is a $type_verbose for $type_date by $who_verbose,
 sent via <https://fsfe.org/internal/rc>.
 
 Please find the expenses and their receipts attached.";

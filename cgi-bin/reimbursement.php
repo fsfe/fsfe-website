@@ -27,6 +27,7 @@ $catch = isset($_POST["catch"]) ? $_POST["catch"] : false;
 $receipt = isset($_POST["receipt"]) ? $_POST["receipt"] : false;
 $remarks = isset($_POST["remarks"]) ? $_POST["remarks"] : false;
 $extra = isset($_POST["extra"]) ? $_POST["extra"] : false;
+$mailopt = isset($_POST["mailopt"]) ? $_POST["mailopt"] : false;
 
 // create empty arrays for uploaded file
 $receipt_dest = [];
@@ -55,6 +56,11 @@ if ($type == "rc") {
 }
 
 // Prepare output table
+if ($mailopt === "onlyme") {
+  $html .= "<p><strong>ATTENTION: The email has only been sent to you, not to the financial team!</strong></p>";
+} else if ($mailopt === "none") {
+  $html .= "<p><strong>ATTENTION: You have configured to not send any email!</strong></p>";
+}
 $html .= "<p>This <strong>$type_verbose</strong> is made by <strong>$who</strong>.</p>
 <table class='table table-striped'>
   <tr>
@@ -81,6 +87,9 @@ $email->Port    = 25;
 //$email->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 $email->SetFrom($who . "@fsfe.org", "$who");
 $email->Subject     = "$type_verbose for $type_date by $who";
+if ($mailopt === "normal") {
+  $email->addAddress("finance@lists.fsfe.org");
+}
 $email->addAddress($who . "@fsfe.org");
 
 foreach ($entry as $key => $date) {  // calculate for each entry
@@ -163,8 +172,10 @@ $extra";
 
 // Send email, and delete attachments
 $email->Body = $email_body;
-$email->send();
-$html .= $email->ErrorInfo;
+if ($mailopt === "normal" || $mailopt === "onlyme") {
+  $email->send();
+  $html .= $email->ErrorInfo;
+}
 foreach ($receipt_dest as $receipt) {
   unlink($receipt);
 }

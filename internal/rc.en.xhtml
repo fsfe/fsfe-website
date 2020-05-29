@@ -164,7 +164,26 @@
         <textarea name="extra" class="form-control" rows="3"></textarea>
       </div>
 
-      <button type="submit" class="btn btn-primary">Send RC/CC report</button>
+      <h2>4. Submit RC/CC statement</h2>
+
+      <p>If you would like to preview the results, either via email or
+      only in the web interface, choose differing options below. To not
+      lose your data, press the "back" button in your browser to come
+      back to this page afterwards.</p>
+
+      <div class="form-group">
+        <label class="radio-inline">
+          <input type="radio" name="mailopt" value="normal" required="required" checked="checked" /> Send emails to finance team and me
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="mailopt" value="onlyme" required="required" /> Send email only to me
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="mailopt" value="none" required="required" /> Do not send any email at all
+        </label>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit RC/CC report</button>
 
     </form>
     

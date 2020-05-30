@@ -122,7 +122,7 @@
     <xsl:for-each select="body/*">
       <xsl:copy>
         <xsl:apply-templates select="@*|node()"/>
-        <xsl:if test="position()=last() and $link">
+        <xsl:if test="position()=last() and $link != ''">
           <xsl:text>&#160;</xsl:text>
           <xsl:element name="a">
             <xsl:attribute name="class">learn-more</xsl:attribute>

@@ -1,6 +1,7 @@
 <?php echo '<?xml version="1.0" encoding="utf-8"?>'; ?>
 
 <eventset>
+  <version>1</version>
   <event start="<?php echo htmlspecialchars($startdate) ?>" end="<?php if($enddate) { echo htmlspecialchars($enddate); } else { echo htmlspecialchars($startdate); }?>">
 
     <title><?php echo htmlspecialchars($title) . " in " . htmlspecialchars($city) . ", " . htmlspecialchars($countryname); ?></title>

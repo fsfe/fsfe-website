@@ -5,17 +5,19 @@
   <event start="2016-02-03" end="2016-02-03">
     <title>Συνάντηση της Κοινότητας Rhine/Main, Γερμανία</title>
     <body>
+      <p>
 
      Την Τετάρτη 3 Φεβρουαρίου, θα γίνει συνάντηση της ομάδας της Κοινότητας
      Rhein/Main στο Café Albatros στη Φρανκφούρτη. Θα συναντηθούμε
      εκεί περίπου στις 19:00. 
+      </p>
     </body> 
       <link>http://wiki.fsfe.org/groups/Rhein-Main</link>
     <tags>
-      <tag>front-page</tag>
-      <tag>de</tag>
-      <tag>fellowship</tag>
-      <tag content="Local group Rhine/Main">fsferm</tag>
+      <tag key="front-page"/>
+      <tag key="de"/>
+      <tag key="fellowship"/>
+      <tag key="fsferm">Local group Rhine/Main</tag>
     </tags>
   </event>
 </eventset>

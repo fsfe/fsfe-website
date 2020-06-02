@@ -5,6 +5,7 @@
    <event start="2014-11-07" end="2014-11-08">
     <title>Περίπτερο του FSFE στο FIfFKon2014 στο Βερολίνο, Γερμανία</title>
    <body>
+     <p>
     Στις 7 και 8 Νοεμβρίου θα υπάρχει περίπτερο στο συνέδριο FIfFKon2014, 
 που διοργανώνει το "Forum InformatikerInnen für Frieden und gesellschaftliche 
 Verantwortung" στο Πολυτεχνείο του Βερολίνου. Τα θέματα θα είναι σχετικά
@@ -12,14 +13,15 @@ Verantwortung" στο Πολυτεχνείο του Βερολίνου. Τα θ�
 πρόσφατο παρελθόν - από το Echelon στο Prism και στο Eikonal. Το FSFE θα έχει
 παρουσία με ένα περίπτερο για να ενημερώσει το κοινό σχετικά με τη σημασία
 του Ελεύθερου Λογισμικού - όχι μόνο για θέματα ασφαλείας.
+     </p>
    </body>
    
    <link>http://fiffkon.de/</link>
    <tags>
-    <tag content="Germany">de</tag>
-    <tag content="Berlin">Berlin</tag>
-    <tag content="Booth">fellowship</tag>
-    <tag>front-page</tag>
+    <tag key="de">Germany</tag>
+    <tag key="berlin">Berlin</tag>
+    <tag key="fellowship">Booth</tag>
+    <tag key="front-page"/>
    </tags>
 
 

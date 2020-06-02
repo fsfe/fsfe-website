@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
@@ -152,7 +152,16 @@
 
     <!-- Twitter and Facebook sharing cards -->
     <xsl:variable name="metaimage">
-      <xsl:value-of select="image/@url" />
+      <xsl:if test="image/@url">
+        <xsl:choose>
+          <xsl:when test="starts-with(image/@url, 'http')">
+            <xsl:value-of select="image/@url" />
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:text>https://fsfe.org</xsl:text><xsl:value-of select="image/@url" />
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:if>
     </xsl:variable>
 
     <!-- Twitter cards -->
@@ -213,7 +222,7 @@
     </xsl:element>
     <xsl:element name="meta">
       <xsl:attribute name="property">og:url</xsl:attribute>
-      <xsl:attribute name="content">https:<xsl:value-of select="$linkresources"/><xsl:value-of select="/buildinfo/@filename"/>.html</xsl:attribute>
+      <xsl:attribute name="content">https://fsfe.org<xsl:value-of select="/buildinfo/@filename"/>.html</xsl:attribute>
     </xsl:element>
     <xsl:element name="meta">
       <xsl:attribute name="property">og:title</xsl:attribute>
@@ -229,16 +238,8 @@
       </xsl:attribute>
     </xsl:element> <!-- / Sharing cards -->
 
-    <script src="/scripts/jquery-3.3.1.min.js"></script>
-    <script src="/scripts/modernizr.custom.65251.js"></script>
-
-    <xsl:comment><![CDATA[[if lt IE 9]>
-         <script src="/scripts/html5shiv.js"></script>
-         <script src="/scripts/respond.min.js"></script>
-         <![endif]]]></xsl:comment>
-    <xsl:comment><![CDATA[[if (lt IE 9) & (!IEMobile)]>
-         <link rel="stylesheet" media="all" href="/look/ie.min.css" type="text/css">
-        <![endif]]]></xsl:comment>
+    <script src="{$urlprefix}/scripts/jquery-3.3.1.min.js"></script>
+    <script src="{$urlprefix}/scripts/modernizr.custom.65251.js"></script>
 
     <!-- Copy head element from the xhtml source file (and possibly from external xsl rules) -->
     <xsl:apply-templates select="head/node()" />

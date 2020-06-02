@@ -22,7 +22,7 @@
 
 <p>
   Ήδη από την πρώτη γενική του συνέλευση, το FSFE προσδιόρισε
-  <a href="http://fsfe.org/about/reports/es-2003">την εκπαίδευση ως μία
+  <a href="/about/reports/es-2003">την εκπαίδευση ως μία
     από τις σημαντικότερες περιοχές δραστηριοποίησης</a> για να έχουν
   οι νέοι σε ηλικία και οι σπουδαστές την ευκαιρία να έρθουν σε επαφή
   με τη γνώση αντί ενός απλουστευτικού σχολικού προϊόντος. Έτσι το FSFE
@@ -58,37 +58,10 @@
 
 </ul>
 
-    <div id="news" class="section">
-      <h2>
-        <a class="rss-feed" href="/news/news.rss"><img src="/graphics/rss.png" alt="News RSS" title="news RSS feed" /></a>
-  <!-- remove identica? add twitter? <a class="ical" href="http://www.twitter.com/fsfe"><img src="/graphics/identica.png" alt="twitter" title="follow FSFE on twitteridenti.ca"/></a> -->
-        
-        <a href="/news/news.html"><news-label /></a>
-        
-      </h2>
-
-      <!-- this element fetches all news items which have the relevant country tag -->
-      <country-news />
-
-    </div><!--end #news-->
-
-    <div id="events" class="section">
-      <h2>
-        <a class="rss-feed" href="/events/events.rss"><img src="/graphics/rss.png" alt="Events RSS" title="events RSS feed" /></a>
-        <a class="ical" href="webcal://fsfe.org/events/events.ics"><img src="/graphics/ical.png" alt="iCal" title="FSFE events as iCal feed" /></a>
-        
-        <a href="/events/events.html"><events-label /></a>
-        
-      </h2>
-
-      <!-- this element fetches all event items which have the relevant country tag -->
-      <country-events />
-
-    </div><!--end #events-->
-
+    <related-feed tag="education"/>
   </body>
 
-<sidebar news="ilovefs" promo="about-fsfe">
+<sidebar promo="about-fsfe">
     <div id="related-content">
         <h3>Περισσότερες πληροφορίες</h3>
         <ul>
@@ -120,7 +93,6 @@
     </div>
 </sidebar>
 
-  <timestamp>$Date$ $Author$</timestamp>
 </html>
 <!--
 Local Variables: ***

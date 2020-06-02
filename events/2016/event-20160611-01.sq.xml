@@ -6,16 +6,18 @@
   <event start="2016-06-11" end="2016-06-11">
     <title>Stendë FSFE në Tübix në Tubingen, Gjermani</title>
     <body>
+      <p>
       Tübix, një veprimtari mbi Software-in e Lirë në qytetin jugor Tubingen të Gjermanisë,
       zhvillohet për herë të dytë më 11 qershor 2016. Hyrja është e lirë.
       <br/>
       Këtë radhë, FSFE-ja është e pranishme me një stendë dhe ofron informacione rreth
       veprimtarive të saj dhe Software-it të Lirë në përgjithësi, si dhe artikuj tregtarë.
+      </p>
     </body> 
     <page>http://www.tuebix.org/</page>
     <tags>
-      <tag>front-page</tag>
-      <tag>de</tag>
+      <tag key="front-page"/>
+      <tag key="de"/>
     </tags>
   </event>
 </eventset>

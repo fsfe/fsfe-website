@@ -6,6 +6,7 @@
   <news date="2009-07-02">
     <title>Συνέντευξη στην Κοινότητα με τον Smári McCarthy</title>
     <body>
+      <p>
 Ο Smári McCarthy είναι ένας στοχαστής αναρχικός και τεχνικός χαοτικών εφαρμογών - με ένα
 ισχυρό ενδιαφέρον για το Ελεύθερο Λογισμικό και τη δημοκρατία. Τώρα στη θητεία του ως
 διευθυντής έργων στο Icelandic Innovation Center, ο Smári εργάζεται πάνω στην ψηφιακή
@@ -13,11 +14,12 @@
 παραδοχές της κοινωνικής οργάνωσης. Πήρα μια ενδιαφέρουσα συνέντευξη από τον Smári, στην
 οποία ανέλυσε τα έργα στα οποία δραστηριοποιείται και πώς αυτά μπορούν να συμβάλλουν
 σε έναν πιο βιώσιμο κόσμο.
+      </p>
     </body>
    <link>http://fellowship.fsfe.org/interviews/</link>
     <tags>
-	<tag>education</tag>
-      <tag>fellowship-interview</tag>
+	<tag key="education"/>
+      <tag key="fellowship-interview"/>
     </tags>
 
   </news>

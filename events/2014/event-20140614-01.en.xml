@@ -5,6 +5,7 @@
    <event start="2014-06-14" end="2014-06-14">
    <title>Social Event at German speaking team meeting, Essen, Germany</title>
    <body>
+     <p>
      On Saturday 14 June at 18:00 there will be a social event in the
      Linuxhotel in Essen. During the weekend the German speaking teams of FSFE
      will have an internal coordination meeting. On Saturday we invite all
@@ -12,12 +13,13 @@
      Free Software issues with us, and hopefully enjoy the good weather with a
      BBQ. Please let us know if you plan to come and if you can also bring some
      snacks, so we can keep that in mind when we buy food.
+     </p>
    </body>
    <link>https://wiki.fsfe.org/groups/Duesseldorf</link>
    <tags>
-    <tag>de</tag>
+    <tag key="de"/>
 
-    <tag>front-page</tag>
+    <tag key="front-page"/>
    </tags>
   </event>
 </eventset>

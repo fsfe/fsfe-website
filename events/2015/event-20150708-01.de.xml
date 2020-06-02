@@ -5,15 +5,17 @@
   <event start="2015-07-08" end="2015-07-08">
     <title>Richard Stallman Vortrag "Free Software and Your Freedom" in Frankfurt/M., Deutschland</title>
     <body>
+      <p>
 Am Mittwoch, den 8. Juli, wird Richard Stallman über "Free Software and Your
 Freedom" im Gallustheater Frankfurt reden.  Die Veranstaltung beginn um 19:00 Uhr. Die Fellowship-Gruppe Rhein/Main begleitet den Vortrag mit einem Informationsstand um mit dem interessierten Publikum weiter zu diskutieren und Informationsmaterial zu verteilen.
+     </p>
    </body> 
       <link>http://www.gallustheater.de/2015/07/stallma.php</link>
     <tags>
-      <tag>front-page</tag>
-      <tag>de</tag>
-      <tag>fellowship</tag>
-      <tag content="Local group Rhine/Main">fsferm</tag>
+      <tag key="front-page"/>
+      <tag key="de"/>
+      <tag key="fellowship"/>
+      <tag key="fsferm">Local group Rhine/Main</tag>
     </tags>
   </event>
 </eventset>

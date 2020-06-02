@@ -5,16 +5,18 @@
   <event start="2018-08-18" end="2018-08-18">
     <title>FSFE Info-booth organized by local group Rhine/Main at Rotlintstraßenfest in Frankfurt</title>
     <body>
+      <p>
 
      On Saturday, 18 August, the FSFE group Rhein/Main
       will inform visitors of the Rotlintstraßenfest in Frankfurt. Stop by and have a chat with us! 
+      </p>
     </body> 
       <link>https://wiki.fsfe.org/Events/2018/fsferm-rotlintstrassenfest-ffm</link>
     <tags>
-      <tag>front-page</tag>
-      <tag>de</tag>
-      <tag>fellowship</tag>
-      <tag content="Local group Rhine/Main">fsferm</tag>
+      <tag key="front-page"/>
+      <tag key="de"/>
+      <tag key="fellowship"/>
+      <tag key="fsferm">Local group Rhine/Main</tag>
     </tags>
   </event>
 </eventset>

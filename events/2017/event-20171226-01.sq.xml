@@ -5,16 +5,18 @@
 
   <event start="2017-12-26" end="2017-12-30">
 	  <title>FSFE-ja e pranishme me një asamble në Chaos Communication Camp 34C3 në Lajpcig, Gjermani</title>
-    <body> Si edhe vitet e shkuara, FSFE-ja do të jetë e pranishme me një asamble gjatë Chaos Communication Camp nga 26 deri më 30 dhjetor. Më tepër hollësi më poshtë. Hëpërhë jemi duke pranuar aplikime për sesione, nëse jeni i interesuar të merrni pjesë, shihni lajmin: https://fsfe.org/news/2017/news-20171024-01.en.html
+    <body>
+      <p> Si edhe vitet e shkuara, FSFE-ja do të jetë e pranishme me një asamble gjatë Chaos Communication Camp nga 26 deri më 30 dhjetor. Më tepër hollësi më poshtë. Hëpërhë jemi duke pranuar aplikime për sesione, nëse jeni i interesuar të merrni pjesë, shihni lajmin: https://fsfe.org/news/2017/news-20171024-01.en.html
 
+      </p>
     </body>
  <link>https://fsfe.org/news/2017/news-20171024-01.en.html</link>
       <tags>
-	<tag>front-page</tag>
-	<tag content="Gjermani">de</tag>
-	<tag content="Lajpcig">Leipzig</tag>
-	<tag content="Thirrje për Aplikime">CfP</tag>
-	<tag content="34C3">ccc</tag>
+	<tag key="front-page"/>
+	<tag key="de">Gjermani</tag>
+	<tag key="leipzig">Lajpcig</tag>
+	<tag key="cfp">Thirrje për Aplikime</tag>
+	<tag key="ccc">34C3</tag>
     </tags>
   </event>
 </eventset>

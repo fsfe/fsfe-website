@@ -36,7 +36,6 @@
 
 
           <!-- Footer -->
-          <text id="lastchanged"> Laatst gewijzigd: </text>
           <text id="translator1a">We bedanken </text>
           <text id="translator1b"> voor deze vertaling. </text>
           <text id="translator2">Dit is geen officiële vertaling. </text>
@@ -62,7 +61,7 @@
             <text id="under-construction">
             <strong>Waarschuwing: </strong>Aan deze pagina wordt gewerkt. <strong>Verspreid deze alstublieft niet</strong> en probeer deze ook niet te vertalen omdat de inhoud verandert.
           </text>
-            <text id="project-complete">Dit project is suuccesvol afgerond. Deze pagina's worden hier bewaard voor archiefdoeleinden.  </text>
+            <text id="project-complete">Dit project is succesvol afgerond. Deze pagina's worden hier bewaard voor archiefdoeleinden.  </text>
 
 
     <!-- Menu, Navigation, Buttons -->
@@ -72,38 +71,14 @@
           <text id="fsfe/help">Bijdragen</text>
           <text id="fsfe/press">Pers</text>
           <text id="fsfe/contact">Contact</text>
-          <text id="support/donate">Doneer</text>
-          <text id="support/support">Steun</text>
-          <text id="support/order">Fan-artikelen</text>
-          <text id="support/thankgnus">Donoren</text>
           <text id="support/become">Word een supporter</text>
-          <text id="fellowship/fellowship">Fellowship</text>
           <text id="fellowship/login">Login</text>
-          <text id="fellowship/join">Meedoen</text>
-          <text id="fellowship/card">Kaart</text>
-          <text id="fellowship/faq">Veelgestelde vragen</text>
-          <text id="campaigns/dfd">Document Vrijheidsdag</text>
-          <text id="campaigns/fya">Bevrijd uw Android</text>
-          <text id="campaigns/pdf">PDF-lezers</text>
-          <text id="campaigns/ayc">Vraag het uw kandidaten</text>
-          <text id="campaigns/drm">DRM.info</text>
           <text id="news/news">Laatste nieuws</text>
           <text id="news/events">Komende evenementen</text>
           <text id="news/press">Voor de pers</text>
           <text id="news/nl">Nieuwsbrieven</text>
           <text id="news/planet">Planet blogs</text>
-          <text id="ftf/legal">Juridische steun</text>
-          <text id="ftf/services">Diensten en machtigingen</text>
-          <text id="ftf/doc">Documentatie</text>
-          <text id="ftf/network">Juridisch netwerk</text>
-          <text id="ftf/conference">Conferenties</text>
-          <text id="ftf/contact">Contact met FSFE Juridisch Team</text>
-          <text id="fs/fs">Vrije Software</text>
           <text id="fs/basics">Vrije Software basis</text>
-          <text id="fs/def">Definitie</text>
-          <text id="fs/soc">Vrije Samenleving</text>
-          <text id="fs/edu">Onderwijs</text>
-          <text id="fs/buz">Bedrijven</text>
           <text id="community/discuss">Vrije Softwarediscussies</text>
 
           <text id="motto-fsfs">Vrije Software, Vrije Samenleving!</text>
@@ -118,6 +93,7 @@
           <text id="subscribe">Abonneer u</text>
           <text id="email">e-mailadres</text>
           <text id="news">Nieuws</text>
+          <text id="breadcrumb-news">Nieuws</text>
           <text id="receive-newsletter">Abonneer u op FSFE's maandelijkse nieuwsbrief</text>
           <text id="subscribe-newsletter">Abonneer u op de nieuwsbrief</text>
           <text id="events">Evenementen</text>
@@ -146,7 +122,6 @@
 
 
           <!-- Article metadata -->
-          <text id="author">Auteur</text>
           <text id="writtenby">Geschreven&#160;door</text>
           <text id="published">op</text>
           <text id="revision">bijgewerkt&#160;op</text>
@@ -160,8 +135,13 @@
           <text id="bsig">Bedrijven</text>
 
 
-          <!-- Sidebars -->
+          <!-- News and event feeds -->
           <text id="related-news">Verwant nieuws</text>
+          <text id="related-events">Verwante evenementen</text>
+          <text id="related-all">Verwant nieuws en evenementen</text>
+
+
+          <!-- Sidebars -->
           <text id="our-work">Ons werk</text>
           <text id="our-work-intro">
             <p>Als niet-gouvernementele organisatie zonder winstoogmerk
@@ -216,7 +196,7 @@
 
           <!-- pdfreaders.org -->
           <text id="pdfreaders-head-readers">De lezers</text>
-          <text id="pdfreaders-head-standards">Open Standaardsen</text>
+          <text id="pdfreaders-head-standards">Open Standaarden</text>
           <text id="pdfreaders-head-graphics">Afbeeldingen</text>
           <text id="pdfreaders-head-about">Over ons</text>
           <text id="pdfreaders-body-platforms">Platforms:</text>

@@ -5,18 +5,20 @@
   <event start="2018-02-03" end="2018-02-04">
     <title>FOSDEM 2018, Brussels, Belgium</title>
     <body>
+      <p>
       FOSDEM, Europe's largest Free Software conference, takes place on
       February 3 and 4 at Campus Solbosch of Free University Brussels (ULB).
       Admission is free.<br />
       As usual, FSFE is present with a booth and presents latest news from its
       work, a wide range of information material, stickers, and postcards, and
       of course the latest <a href="/order/order.en.html">FSFE fashion</a>.
+      </p>
     </body>
     <page>https://fosdem.org/2018/</page>
     <tags>
-      <tag>fr</tag>
-      <tag>bnl</tag>
-      <tag>front-page</tag>
+      <tag key="fr"/>
+      <tag key="bnl"/>
+      <tag key="front-page"/>
     </tags>
   </event>
 </eventset>

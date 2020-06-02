@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <xsl:stylesheet
     version="1.0"
@@ -12,15 +12,15 @@
     </xsl:variable>
     <!-- article URL -->
     <xsl:variable name="share-url">
-      <xsl:text>https:</xsl:text>
-      <xsl:value-of select="$linkresources"/><xsl:value-of select="/buildinfo/@filename"/>
+      <xsl:text>https://fsfe.org</xsl:text>
+      <xsl:value-of select="/buildinfo/@filename"/>
       <xsl:text>.html</xsl:text>
     </xsl:variable>
 
     <xsl:element name="form"> <!-- div containing all buttons -->
       <xsl:attribute name="action">/share</xsl:attribute>
       <xsl:attribute name="method">GET</xsl:attribute>
-      <xsl:attribute name="class">share-buttons bottom</xsl:attribute>
+      <xsl:attribute name="class">share-buttons</xsl:attribute>
       <xsl:attribute name="target">_blank</xsl:attribute>
       <xsl:attribute name="onkeypress">return event.keyCode != 13;</xsl:attribute>
       <h3>
@@ -55,70 +55,36 @@
         <xsl:attribute name="placeholder">Please do not put anything here</xsl:attribute>
       </xsl:element>
 
-      <!-- Diaspora -->
+      <!-- Fediverse -->
       <xsl:element name="label">
-        <xsl:attribute name="class">button share-diaspora</xsl:attribute>
+        <xsl:attribute name="class">button share-fediverse</xsl:attribute>
         <xsl:attribute name="title">
           <xsl:call-template name="fsfe-gettext">
             <xsl:with-param name="id" select="'share-page'" />
           </xsl:call-template>
-          <xsl:text> Diaspora</xsl:text>
+          <xsl:text> Fediverse</xsl:text>
         </xsl:attribute>
-        <xsl:attribute name="for">diaspora-share-bottom</xsl:attribute>
-        <xsl:text>Diaspora</xsl:text>
+        <xsl:attribute name="for">fediverse-share</xsl:attribute>
+        <xsl:text>Fediverse</xsl:text>
       </xsl:element>
       <xsl:element name="input">
         <xsl:attribute name="type">radio</xsl:attribute>
         <xsl:attribute name="name">popup</xsl:attribute>
-        <xsl:attribute name="id">diaspora-share-bottom</xsl:attribute>
+        <xsl:attribute name="id">fediverse-share</xsl:attribute>
       </xsl:element>
       <xsl:element name="span">
-        <xsl:attribute name="class">popup diaspora</xsl:attribute>
+        <xsl:attribute name="class">popup fediverse</xsl:attribute>
         <xsl:element name="label"><xsl:attribute name="for">no-share-popup</xsl:attribute></xsl:element>
         <xsl:element name="input">
           <xsl:attribute name="type">text</xsl:attribute>
-          <xsl:attribute name="name">diasporapod</xsl:attribute>
+          <xsl:attribute name="name">fediversepod</xsl:attribute>
           <xsl:attribute name="value"></xsl:attribute>
-          <xsl:attribute name="placeholder">Diaspora URL (diasp.tld)</xsl:attribute>
+          <xsl:attribute name="placeholder">Fediverse URL (fediverse.tld)</xsl:attribute>
         </xsl:element>
         <xsl:element name="button">
           <xsl:attribute name="type">submit</xsl:attribute>
           <xsl:attribute name="name">service</xsl:attribute>
-          <xsl:attribute name="value">diaspora</xsl:attribute>
-          <xsl:text>OK</xsl:text>
-        </xsl:element>
-      </xsl:element>
-
-      <!-- Mastodon -->
-      <xsl:element name="label">
-        <xsl:attribute name="class">button share-mastodon</xsl:attribute>
-        <xsl:attribute name="title">
-          <xsl:call-template name="fsfe-gettext">
-            <xsl:with-param name="id" select="'share-page'" />
-          </xsl:call-template>
-          <xsl:text> Mastodon</xsl:text>
-        </xsl:attribute>
-        <xsl:attribute name="for">mastodon-share-bottom</xsl:attribute>
-        <xsl:text>Mastodon</xsl:text>
-      </xsl:element>
-      <xsl:element name="input">
-        <xsl:attribute name="type">radio</xsl:attribute>
-        <xsl:attribute name="name">popup</xsl:attribute>
-        <xsl:attribute name="id">mastodon-share-bottom</xsl:attribute>
-      </xsl:element>
-      <xsl:element name="span">
-        <xsl:attribute name="class">popup mastodon</xsl:attribute>
-        <xsl:element name="label"><xsl:attribute name="for">no-share-popup</xsl:attribute></xsl:element>
-        <xsl:element name="input">
-          <xsl:attribute name="type">text</xsl:attribute>
-          <xsl:attribute name="name">mastodonpod</xsl:attribute>
-          <xsl:attribute name="value"></xsl:attribute>
-          <xsl:attribute name="placeholder">Mastodon URL (mastodon.tld)</xsl:attribute>
-        </xsl:element>
-        <xsl:element name="button">
-          <xsl:attribute name="type">submit</xsl:attribute>
-          <xsl:attribute name="name">service</xsl:attribute>
-          <xsl:attribute name="value">mastodon</xsl:attribute>
+          <xsl:attribute name="value">fediverse</xsl:attribute>
           <xsl:text>OK</xsl:text>
         </xsl:element>
       </xsl:element>

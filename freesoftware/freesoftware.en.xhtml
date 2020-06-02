@@ -1,72 +1,278 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <html>
-  <version>1</version>
+  <version>3</version>
 
   <head>
     <title>Free Software - FSFE</title>
   </head>
-  <body>
-    <h1>Introduction to Free Software</h1>
+  <body class="toplevel freesoftware">
+    <h1>What is Free Software</h1>
+    <div id="introduction">
+      <p>
+        The principles of Free Software are simple but it is important
+        to not get confused by the underlying complexity caused by its
+        long history. Learn about the <a href="#freedoms">four
+        freedoms</a> and their meaning, the fundamentals about <a
+        href="#licences">Free Software licenses</a>, the <a
+        href="#advantages">advantages</a> that Free Software provides,
+        and the most common <a href="#synonyms">synonyms</a>.
+      </p>
 
-	<div id="introduction">
-	
-		<div class="image">
-			<img alt="Stars" src="/graphics/stars-smaller.png" />
-		</div>	
+      <p>
+        Looking beyond the circle of software itself, you can read more about
+        the interplay of Free Software with <a href="#more">other fields</a>
+        like education, procurement and democracy.
+      </p>
+    </div>
 
-		<p>Access to software determines who may participate in a
-		digital society. Free Software gives you the freedoms
-		to <a href="/about/basics/freesoftware.html"> use, study, share, and
-		improve</a> software. This allow equal participation and
-		affects many apects of modern society. These sections introduce
-		the role of Free Software in key areas and provide links to
-		further information.</p>
+    <h2 id="freedoms">The Four Freedoms</h2>
 
-    	</div>
+    <p>
+      Free Software refers to freedom, not price. It guarantees its users the
+      essential four freedoms. The absence of at least one of these freedoms
+      means an application is proprietary, so non‐Free Software.
+    </p>
 
-    <ul class="overview">
+    <!-- Pie chart and text adopted from p.4 of the PMPC brochure -->
+    <div class="fsgrid">
+      <div class="pie">
+        <div class="pie-use"><p>Use</p></div>
+        <div class="pie-study"><p>Study</p></div>
+        <div class="pie-share"><p>Share</p></div>
+        <div class="pie-improve"><p>Improve</p></div>
+       </div>
+     </div>
+
+     <div class="icon-grid icons-sm">
+       <ul>
+         <li>
+           <img src="/graphics/icons/pie-topleft.png" alt=""/>
+           <div>
+             <h3>Use</h3>
+             <p>
+               Free Software can be used for any purpose and is free of
+               restrictions such as licence expiry or geographic limitations.
+             </p>
+           </div>
+         </li>
+
+         <li>
+           <img src="/graphics/icons/pie-topright.png" alt=""/>
+           <div>
+             <h3>Study</h3>
+             <p>
+               Free Software and its code can be studied by anyone, without
+               non‐disclosure agreements or similar restrictions.
+             </p>
+           </div>
+         </li>
+
+         <li>
+           <img src="/graphics/icons/pie-bottomleft.png" alt=""/>
+           <div>
+             <h3>Share</h3>
+             <p>
+               Free Software can be shared and copied at virtually no cost.
+             </p>
+           </div>
+         </li>
+
+         <li>
+           <img src="/graphics/icons/pie-bottomright.png" alt=""/>
+           <div>
+             <h3>Improve</h3>
+             <p>
+               Free Software can be modified by anyone, and these improvements
+               can be shared publicly.
+             </p>
+           </div>
+         </li>
+       </ul>
+     </div>
+
+    <h2 id="licences">Licenses</h2>
+
+    <p>
+      The four freedoms are given by a software’s licence. Software licences
+      define the conditions under which a programme can be used and reused. For
+      it to be Free Software, the licence text must contain at least the four
+      freedoms. The <a
+      href="https://www.gnu.org/licenses/license-list.html">Free Software
+      Foundation</a> and the <a
+      href="https://opensource.org/licenses/category">Open Source Initiative</a>
+      maintain lists of reviewed and approved licences. An application can
+      usually not be considered Free Software, if its licence does not appear in
+      one of these lists.
+    </p>
+
+    <p>
+      There are a multitude of licences with different focuses, and a
+      software product or parts of it can also be licenced under more than one
+      licence. The actual selection is a strategic question but you are advised
+      to pick one of the most widely used licences.
+    </p>
+
+    <h2 id="advantages">Advantages</h2>
+
+    <!-- adopted from PMPC brochure p.16+17 -->
+
+    <p>
+      Free Software is about freedom. In practice, this provides numerous
+      advantages for users, organisations, businesses and governments.
+    </p>
+
+    <div class="icon-grid">
+      <ul>
+        <li>
+          <img src="/graphics/icons/autonomy.png" alt="" />
+          <div>
+            <h3>Autonomy</h3>
+            <p>
+              Free Software helps to develop and maintain tailored software that
+              suits your needs, not just the vendor's business model.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <img src="/graphics/icons/collaboration.png" alt="" />
+          <div>
+            <h3>Collaboration</h3>
+            <p>
+              Free Software can be shared and used in a non-exclusive way by
+              everyone – serving the public good.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <img src="/graphics/icons/share-copy.png" alt="" />
+          <div>
+            <h3>Share &amp; Copy</h3>
+            <p>
+              A Free Software licence allows a limitless number of installations
+              to be run, without paying extra.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <img src="/graphics/icons/no-lock-in.png" alt="" />
+          <div>
+            <h3>No Lock-in</h3>
+            <p>
+              Free Software licenses reinforce independence from vendors and
+              provide more choice in service providers.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <img src="/graphics/icons/reuse.png" alt="" />
+          <div>
+            <h3>Reuse Code</h3>
+            <p>
+              Free Software provides the freedom to reuse the code for other
+              projects.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <img src="/graphics/icons/innovation.png" alt="" />
+          <div>
+            <h3>Innovation</h3>
+            <p>
+              A Free Software licence encourages innovation for your software.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <img src="/graphics/icons/competition.png" alt="" />
+          <div>
+            <h3>Competition</h3>
+            <p>
+              Free Software resists monopolisation and enhances competition.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <img src="/graphics/icons/security.png" alt="" />
+          <div>
+            <h3>Security</h3>
+            <p>
+              Free Software allows for independent security checks that help
+              close security holes faster.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <h2 id="synonyms">Synonyms</h2>
+
+    <p>
+      Over the course of time, people came up with additional labels for Free
+      Software. Often the motivation for these terms is to highlight different
+      aspects and to avoid confusion.
+    </p>
+
+    <p>
+      Free Software was first defined with the four freedoms mentioned above by
+      the <a href="/freesoftware/gnuproject.html">GNU project</a> in 1986. In
+      1998, "Open Source" has been set up as a marketing campaign for Free
+      Software but with the same freedoms in mind. Other widely known labels for
+      Free Software are "Libre Software", initiated to avoid the ambiguity of
+      the English word "free", and "FOSS" or "FLOSS" as abbreviations for "Free
+      (Libre) Open Source Software".
+    </p>
+
+    <p>
+      The level of freedom particular software offers is always determined by
+      the licence, not the label. In other words, don’t get confused by
+      different terms for the same features. If you are interested in the
+      historical background and why we prefer the original term, you can <a
+      class="learn-more"
+      href="/freesoftware/comparison.html">Read&#160;more...</a>
+    </p>
+
+    <h2 id="more">Further Insights</h2>
+
+    <p>
+      The numerous advantages of Free Software are a benefit in itself, but also contribute positively to other technical and non-technical fields. Since the FSFE's foundation in 2001, we have been exploring different areas and how Free Software can make a difference.
+    </p>
+
+    <ul>
       <li>
-        <h3><a href="/freesoftware/basics/summary.html">Free Software: its origin and definition</a></h3>
+        <strong><a href="/freesoftware/democracy.html">Democracy</a></strong>:
+        technology greatly influences today's society. That is why control over
+        technology has to be in the hands of everybody, not just a small group.
       </li>
-      
       <li>
-        <h3><a href="/freesoftware/society/society.html">Society</a></h3>
+        <strong><a href="/activities/os/">Open Standards</a></strong>: Open
+        Standards allow people to share all kinds of data freely and with
+        perfect fidelity. They resist lock-in and other artificial barriers to
+        interoperability, and promote choice between vendors and technology
+        solutions.
       </li>
-
       <li>
-        <h3><a href="/freesoftware/education/education.html">Education</a></h3>
+        <strong><a href="/activities/education/">Education</a></strong>: Free
+        Software is pedagogically superior, its basic spirit of freedom
+        and cooperation is the proper spirit of education in a democratic
+        environment.
       </li>
-
       <li>
-        <h3><a href="/freesoftware/enterprise/enterprise.html">Enterprise</a></h3>
+        <strong><a href="/activities/procurement/">Public
+        Procurement</a></strong>: Free Software is a perfect fit for the public
+        sector. It is a public resource that government organisations can use,
+        study, improve, and share with each other. For citizens, this means
+        transparency, cost efficiency, and the freedom to interact with their
+        government in the way that suits them best.
       </li>
-
-      <!--
-      <li>
-        <h3><a href="/freesoftware/public-sector/public-sector.html">Public sector</a></h3>
-      </li>
-      -->
-
-      <li>
-        <h3><a href="/freesoftware/legal/legal.html">Legal</a></h3>
-      </li>
-      
-      <li>
-        <h3><a href="/freesoftware/support/support.html">Getting support</a></h3>
-      </li>
-
-      <!--
-      <li>
-        <h3><a href="/freesoftware/statistics/statistics.html">Statistics</a></h3>
-      </li>
-      -->
-
-</ul>
-
+    </ul>
 
   </body>
-
-  <timestamp>$Date: 2010-08-06 14:09:58 +0200 (Fri, 06 Aug 2010) $ $Author: maelle $</timestamp>
 </html>
-

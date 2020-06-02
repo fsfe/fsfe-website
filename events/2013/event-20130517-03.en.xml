@@ -6,15 +6,17 @@
   <event start="2013-05-17" end="2013-05-17">
     <title>Michael Stehmann will speak in parliament of North Rhine Westphalia </title>
 
-    <body>On Friday, May 17th, Michael Stemann will speak on the <a 
+    <body>
+      <p>On Friday, May 17th, Michael Stemann will speak on the <a 
       href="http://www.nrw.de/opennrw/veranstaltung-1/das-programm.html"> event
       #opennrw</a> about "OpenDate through Open Standards". The talk will start
       at 11:45 hrs in the parlieament of North Rhine Westphalia in Dusseldorf,
-      Germany.</body>
+      Germany.  </p>
+</body>
 
     <tags>
-      <tag>de</tag>
-      <tag>publicadministration</tag>
+      <tag key="de"/>
+      <tag key="publicadministration"/>
     </tags>
   </event>
 </eventset>

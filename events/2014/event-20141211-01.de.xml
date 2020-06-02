@@ -5,15 +5,17 @@
    <event start="2014-12-11" end="2014-12-11">
    <title>Fellowship Meeting, Berlin, Deutschland</title>
    <body>
+     <p>
     Am Donnerstag, 11.Dezember, ist das nächste Berliner Fellowshipmeeting, wie immer in der e-lok (nähe Ostkreuz). Diesmal wird es kein Programm geben und auch keine Weihnachtsfeier. Stattdessen wollen wir die Tage nutzen noch einmal wie gewohnt zusammen zu kommen und über Freie Software zu philosophieren. In der e-lok gibt es gutes Essen und Getränke zu angenehmen Preisen, gute Stimmung ist kostenlos. Beginn ab 19.30. 
+     </p>
    </body>
    
    <tags>
      <link>http://zope2.in-berlin.de:8100/wsb/elok/jc-e-lok/kontakte</link>
-    <tag content="Deutschland">de</tag>
-    <tag content="Berlin">Berlin</tag>
-    <tag content="Fellowship">fellowship</tag>
-    <tag>front-page</tag>
+    <tag key="de">Deutschland</tag>
+    <tag key="berlin">Berlin</tag>
+    <tag key="fellowship">Fellowship</tag>
+    <tag key="front-page"/>
    </tags>
 
 

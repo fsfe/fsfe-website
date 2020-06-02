@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <html>
-  <version>1</version>
+  <version>3</version>
 
   <head>
     <title>News Archive for :YYYY: - FSFE</title>
@@ -10,7 +10,7 @@
   <body class="article">
     <p id="category"><a href="/news/news.html">News</a></p>
 
-    <localmenu dir="/news/" set="year" id=":YYYY:" link=":YYYY:/index.html">:YYYY:</localmenu>
+    <localmenu dir="news" set="year" id=":YYYY:">:YYYY:</localmenu>
 
     <h1>News Archive for :YYYY:</h1>
 
@@ -26,14 +26,8 @@
         <a target="_blank" href="https://mastodon.social/@fsfe">
           <button class="share-button-top share-mastodon">Mastodon</button>
         </a>
-        <a target="_blank" href="https://diasp.eu/u/fsfe">
-          <button class="share-button-top share-diaspora">Diaspora</button>
-        </a>
         <a target="_blank" href="https://twitter.com/fsfe">
           <button class="share-button-top share-twitter">Twitter</button>
-        </a>
-        <a target="_blank" href="https://facebook.com/thefsfe">
-          <button class="share-button-top share-facebook">Facebook</button>
         </a>
       </div>
     </div>
@@ -43,47 +37,8 @@
 
   <sidebar promo="none">
     <div class="news-sidebar">
-      <h2>Follow our News</h2>
-
-      <p>
-        To keep up with our latest news, subscribe to our
-        <a href="/news/news.rss">RSS feed</a> and our
-        <a href="/news/newsletter.html">Newsletter</a>.
-      </p>
-
-      <div class="share-buttons-sidebar">
-        <a target="_blank" href="/news/newsletter.html">
-          <button class="share-button-sidebar share-mail">Newsletter</button>
-        </a>
-        <a target="_blank" href="/news/news.rss">
-          <button class="share-button-sidebar share-rss">RSS Feed</button>
-        </a>
-      </div>
-
-      <h2>Social Media</h2>
-
-      <p>
-        For short news follow us on
-        <a href="https://mastodon.social/@fsfe">Mastodon</a>,
-        <a href="https://diasp.eu/u/fsfe">Diaspora</a>,
-        <a href="https://twitter.com/fsfe">Twitter</a>, and
-        <a href="https://facebook.com/thefsfe">Facebook</a>.
-      </p>
-
-      <div class="share-buttons-sidebar">
-        <a target="_blank" href="https://mastodon.social/@fsfe">
-          <button class="share-button-sidebar share-mastodon">Mastodon</button>
-        </a>
-        <a target="_blank" href="https://diasp.eu/u/fsfe">
-          <button class="share-button-sidebar share-diaspora">Diaspora</button>
-        </a><br/>
-        <a target="_blank" href="https://twitter.com/fsfe">
-          <button class="share-button-sidebar share-twitter">Twitter</button>
-        </a>
-        <a target="_blank" href="https://facebook.com/thefsfe">
-          <button class="share-button-sidebar share-facebook">Facebook</button>
-        </a>
-      </div>
+      <module id="follow-news"/>
+      <module id="social-media"/>
     </div>
   </sidebar>
 </html>

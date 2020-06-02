@@ -1,86 +1,64 @@
 <?xml version="1.0" encoding="utf-8" ?>
     <!-- To add avatar images or members, edit the file: /about/people/people.en.xml -->
     <html>
-  <version>2</version>
+      <version>3</version>
 
       <head>
         <title>Over Free Software Foundation Europe - Team</title>
+        <script src="/scripts/filter-teams.js" />
       </head>
 
       <body>
-                    <p id="category"><a href="/about/">Over ons</a></p>
+        <p id="category"><a href="/about/">Over ons</a></p>
         <h1>Het FSFE Team</h1>
 
-    <p>Deze mensen werken op reguliere basis voor en binnen de FSFE dus  is aan hen de beschikking over permanente verantwoordelijkheden en autoriteiten op bepaalde 
-    gebieden gegeven. Sommigen van hen zijn leden van de 
-    <a href="/about/legal/legal.html">geregistreerde vereniging</a>, anderen zijn dat niet.
-    </p>
+        <p>
+			Deze mensen werken op reguliere basis voor en binnen de FSFE dus is aan hen de beschikking over permanente verantwoordelijkheden en autoriteiten op bepaalde 
+    gebieden gegeven.
+        </p>
 
-        
         <div id="show-people">
             <h2 id="council">Raad</h2>
+            <p>
+              De raad is 
+    verantwoordelijk voor grotere budgetkwesties en de implementatie van strategische 
+    richtlijnen.
+            </p>
 
-<p>De raad is 
-    verantwoordelijk voor grotere budgetkwesties, implementatie van strategische 
-    richtlijnen en de rechten van nationale associaties.</p> 
-
-                    
             <council-members />
 
-<!--
-            <h2 id="general-assembly">Algemene vergadering</h2>
- 
-<p>De algemene vergadering bestaat uit de leden van 
-    <a href="/about/legal/legal.html">het juridische lichaam van de FSFE</a>. Zij is 
-    verantwoordelijk voor strategische planning, budgettering, agenda-bepaling en het ontlasten, kiezen en terugroepen van de 
-    uitvoerende raad en de financieel directeur.</p>
+            <h2 id="core">Centrale teams</h2>
+            <p>
+              Hier vindt u zowel mensen die op vrijwillige of betaalde basis werken aan de dagelijkse taken rond de kernkwesties van de organisatie als wel de leden van de <a href="/about/legal/legal.html">juridische vereniging</a>. U kunt iedereen zien die in deze groepen werkt of een selectie bekijken.
+            </p>
 
-<h2 id="general-assembly">Algemene vergadering</h2>
-    <p>De algemene vergadering bestaat uit de leden van 
-    <a href="/about/team.html">het juridische lichaam van de FSFE</a>. Zij is 
-    verantwoordelijk voor de strategische planning, het budgetteren, het bepalen 
-    stellen van de agenda, exoneratie, en het kiezen en terugroepen van de 
-    uitvoerende raad en de financiële officier.</p>
+            <div class="filter-teams">
+              <label class="radio-inline">
+                <input name="filter-teams" type="radio" onclick="selectAllTeams()" checked="" />Allen
+              </label>
+              <label class="radio-inline">
+                <input name="filter-teams" type="radio" onclick="selectTeam('core')" />Europees Kernteam
+              </label>
+              <label class="radio-inline">
+                <input name="filter-teams" type="radio" onclick="selectTeam('ga')" />Algemene Vergadering
+              </label>
+              <label class="radio-inline">
+                <input name="filter-teams" type="radio" onclick="selectTeam('employee')" />Werknemers
+              </label>
+            </div>
+            <noscript>
+              <div class="alert alert-warning" role="alert">Dit onderdeel vereist dat u onze <a href="/about/js-licences.html">Vrije Software JavaScript</a> activeert.</div>
+            </noscript>
 
-            <ga-members />   
-
--->
-
-            <h2 id="eu-core-team">Europees kernteam</h2>
-    <p>Hier kunt u mensen vinden die vrijwillig of betaald werken aan de 
-    dagelijkse taken van de organisatie die deel uitmaken van de kern-onderwerpen: 
-    landteam (vice-)coördinatoren, staf, coördinatoren van speciale teams of 
-    systeembeheerders. Niet genoemd hierbij zijn een enorm aantal 
-    wisselende vrijwilligers uit ons werkteam en zij die bijdragen aan onze 
-    campagnes of aan specifieke onderwerpen.</p>
-
-               
             <core-members />
-            
-<!--              
-            <h2 id="interns">Stagiair(e)s</h2>
 
-     <p><a href="/contribute/internship.html">Onze stagiair(e)s</a> werken aan 
-    verschillende onderwerpen binnen de teams van FSFE: zij steunen  lopende projecten 
-    en campagnes, coördineren vrijwilligers en communiceren met de gemeenschap, 
-    overheden en andere organisaties.</p>
-
-            <intern-members />
-            
             <h2>Lokale teams</h2>
-    <p>Zoekt u een lokaal contact om actief te worden of om gewoon meer te leren 
-    over Vrije Software en de FSFE? In steeds meer Europese steden worden lokale 
-    FSFE-groepen gevormd om een verschil te maken. Bezoek alstublieft onze 
-    <a href="localteams.html">lokale teampagina</a> om te zien of er zich al een 
-    groep in uw gebied bevindt.</p>
+            <p>Bent u op zoek naar een lokaal contactpersoon om actief te worden of wilt u gewoon meer leren over Vrije Software en de FSFE? In steeds meer Europese steden worden FSFE-groepen gevormd om een verschil te maken. Bekijk alstublieft ons <a href="https://wiki.fsfe.org/LocalGroups/">overzicht van lokale groepen</a> om te bekijken over er al een groep in uw gebied is.</p>
 
--->
-            
         </div>
       </body>
       <followup>join</followup>
-      <timestamp>$Date$ $Author$</timestamp>
-    <translator>André Ockers</translator>
+      <translator>André Ockers</translator>
     </html>
     <!--
     Local Variables: ***

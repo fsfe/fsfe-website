@@ -33,7 +33,6 @@
 
 
   <!-- Footer -->
-  <text id="lastchanged"> Ndryshuar së fundi më: </text>
   <text id="translator1a">Falënderojmë </text>
   <text id="translator1b"> për këtë përkthim. </text>
   <text id="translator2">Ky është një përkthim jozyrtar. </text>
@@ -82,38 +81,14 @@
   <text id="fsfe/help">Kontribuoni</text>
   <text id="fsfe/press">Për Shtypin</text>
   <text id="fsfe/contact">Lidhuni Me Ne</text>
-  <text id="support/donate">Dhuroni</text>
-  <text id="support/support">Përkrahje</text>
-  <text id="support/order">Blini</text>
-  <text id="support/thankgnus">Dhurues</text>
   <text id="support/become">Bëhuni një përkrahës</text>
-  <text id="fellowship/fellowship">Anëtarësi Shok</text>
   <text id="fellowship/login">Hyrje</text>
-  <text id="fellowship/join">Bëhuni Pjesë</text>
-  <text id="fellowship/card">Kartë</text>
-  <text id="fellowship/faq">F.A.Q.</text>
-  <text id="campaigns/dfd">Dita e Lirisë së Dokumenteve</text>
-  <text id="campaigns/fya">Çlironi Android-in Tuaj</text>
-  <text id="campaigns/pdf">Lexues PDF-sh</text>
-  <text id="campaigns/ayc">Pyetni Kandidatët Tuaj</text>
-  <text id="campaigns/drm">DRM.info</text>
   <text id="news/news">Lajmet e Reja</text>
   <text id="news/events">Veprimtari Së Afërmi</text>
   <text id="news/press">Zyra e Shtypit</text>
   <text id="news/nl">Buletine</text>
   <text id="news/planet">Blogje Planet</text>
-  <text id="ftf/legal">Asistencë Ligjore</text>
-  <text id="ftf/services">Shërbime dhe Garant Ligjor</text>
-  <text id="ftf/doc">Dokumentim</text>
-  <text id="ftf/network">Rrjet Ligjor</text>
-  <text id="ftf/conference">Konferenca</text>
-  <text id="ftf/contact">Lidhuni me Ekipin Ligjor të FSFE-së</text>
-  <text id="fs/fs">Software-i i Lirë</text>
   <text id="fs/basics">Bazat e Software-it të Lirë</text>
-  <text id="fs/def">Përkufizim</text>
-  <text id="fs/soc">Shoqëri e Lirë</text>
-  <text id="fs/edu">Edukim</text>
-  <text id="fs/buz">Biznes</text>
   <text id="community/discuss">Diskutime Mbi Software-in e Lirë</text>
 
   <text id="motto-fsfs">Software i Lirë, Shoqëri e Lirë!</text>
@@ -128,6 +103,7 @@
   <text id="subscribe">Pajtohuni</text>
   <text id="email">adresë email</text>
   <text id="news">Lajme</text>
+<!-- !! MISSING TRANSLATION --> <text id="breadcrumb-news">News</text>
   <text id="receive-newsletter">Pajtohuni te buletini mujor i FSFE-së</text>
   <text id="subscribe-newsletter">Pajtohuni te buletini</text>
   <text id="events">Veprimtari</text>
@@ -156,7 +132,6 @@
 
 
   <!-- Article metadata -->
-  <text id="author">Autor</text>
   <text id="writtenby">Shkruar nga</text>
   <text id="published">më</text>
   <text id="revision">përditësuar më</text>
@@ -170,8 +145,13 @@
   <text id="bsig">Biznese</text>
 
 
+  <!-- News and event feeds -->
+  <text id="related-news">Lajme të afërta</text>
+  <!-- !! MISSING TRANSLATION --> <text id="related-events">Related Events</text>
+  <!-- !! MISSING TRANSLATION --> <text id="related-all">All related news and events</text>
+
+
   <!-- Sidebars -->
-  <text id="related-news">Lajme të Afërta</text>
   <text id="our-work">Puna Jonë</text>
   <text id="our-work-intro">
    <p>Si një shoqatë jofitimprurëse, joqeveritare, Free Software Foundation

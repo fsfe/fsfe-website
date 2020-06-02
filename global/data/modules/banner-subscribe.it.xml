@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+  <version>1</version>
+
+  <module>
+    <div class="banner-subscribe">
+      <p>
+        Iscriviti ai nostri aggiornamenti per email. I nostri esperti ti
+        informeranno sulle notizie più recenti, gli eventi, le attività e su
+        come partecipare.
+      </p>
+
+      <form class="form-inline" method="post" action="https://my.fsfe.org/subscribe">
+        <input type="hidden" name="language" value="it"/>
+        <div class="form-group">
+          <input type="text" class="form-control" name="name" placeholder="Il tuo nome" required="required"/>
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" name="email1" placeholder="Il tuo indirizzo email" required="required"/>
+        </div>
+        <fsfe-cd-referrer-input/>
+        <input type="hidden" name="wants_info" value="yes"/>
+        <button class="btn btn-default" type="submit">Voglio rimanere informato/a</button>
+      </form>
+    </div>
+  </module>
+</data>

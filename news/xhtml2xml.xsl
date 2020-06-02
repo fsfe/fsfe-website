@@ -16,29 +16,33 @@
 
     <xsl:element name="newsset">
       <xsl:element name="news">
-        
+
         <xsl:attribute name="date">
           <xsl:value-of select="/html/@newsdate"/>
         </xsl:attribute>
-        
+
         <xsl:if test="/html/@type">
           <xsl:attribute name ="type">
             <xsl:value-of select="/html/@type"/>
           </xsl:attribute>
         </xsl:if>
-	
+
         <xsl:element name="title">
           <xsl:value-of select="/html/head/title"/>
         </xsl:element>
 
         <xsl:element name="body">
-          <xsl:value-of select="/html/body/p[@newsteaser]"/>
+          <xsl:copy-of select="/html/body/p[1]"/>
         </xsl:element>
-	
+
         <xsl:element name="body-complete">
           <xsl:copy-of select="/html/body/node()"/>
         </xsl:element>
-	
+
+        <xsl:element name="image">
+          <xsl:value-of select="/html/image/@url"/>
+        </xsl:element>
+
         <xsl:element name="link">
           <xsl:variable name="the_link">
             <xsl:value-of select="/html/@link"/>
@@ -52,13 +56,12 @@
             </xsl:otherwise>
           </xsl:choose>
         </xsl:element>
-        
+
         <xsl:copy-of select="/html/tags" />
         <xsl:copy-of select="/html/author" />
-        <!-- Copy data of <podcast> to XML files -->
         <xsl:copy-of select="/html/podcast" />
         <xsl:copy-of select="/html/discussion" />
-      
+
       </xsl:element>
     </xsl:element>
   </xsl:template>

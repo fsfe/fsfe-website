@@ -6,6 +6,7 @@
   <news date="2012-07-04">
     <title>Ευκαιρίες μαθητείας στο FSFE</title>
     <body>
+      <p>
       
       Το FSFE έχει δύο θέσεις μαθητείας διαθέσιμες, με αρχή 
       τον Αύγουστο 2012. Αναζητάμε έξυπνα, δραστήρια άτομα
@@ -15,14 +16,15 @@
       καλωσορίζουμε την αίτησή σας. Αν θέλετε να περάσετε από τέσσερις
       έως δώδεκα συναρπαστικούς μήνες εργαζόμενοι στο σημείο όπου
       η τεχνολογία συναντά την κοινωνία και την πολιτική, <a
-      href="http://fsfe.org/contribute/internship.el.html">στείλτε
+      href="/contribute/internship.el.html">στείλτε
       μια αίτηση τώρα</a>.
+        </p>
       </body>
     <link>http://fsfe.org/contribute/internship.el.html</link>
     <tags>
-      <tag>front-page</tag>
-      <tag>internship</tag>
-      <tag>eu</tag>
+      <tag key="front-page"/>
+      <tag key="internship"/>
+      <tag key="eu"/>
     </tags>
   </news>
 </newsset>

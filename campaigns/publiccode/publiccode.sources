@@ -1,4 +1,4 @@
-news/*/news-*:[pmpc]
-news/*/.news-*:[pmpc]
-news/nl/nl-*:[pmpc]
-news/nl/.nl-*:[pmpc]
+news/*/*:[pmpc]
+news/*/.*:[pmpc]
+events/*/*:[pmpc]
+events/*/.*:[pmpc]

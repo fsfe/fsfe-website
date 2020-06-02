@@ -5,6 +5,7 @@
   <news date="2014-07-11">
     <title>[Blog] Raportim prej takimit të ekipit tonë të gjermanishtfolësve për 2014-n </title>
 	<body>
+  <p>
 
     Nga 13 – 15 qershor 2014 FSFE-ja zhvilloi takimin e ekipit të vet
     të gjermanishtfolësve, në Linuxhotel në Esen. Pjesëmarrësit patën
@@ -17,14 +18,15 @@
     për të planifikuar veprimtaritë e ardhshme dhe për të disktuar çështjet
     aktuale.
 	  
-	</body>
+	  </p>
+</body>
   <link>https://blogs.fsfe.org/mk/fsfes-german-speaking-team-meeting-2014/</link>
 	
     <tags>
-		<tag>front-page</tag>
-		<tag>de</tag>
-		<tag>FYA</tag>
-		<tag content="Pakti Për Software të Lirë">FSpact</tag>
+		<tag key="front-page"/>
+		<tag key="de"/>
+		<tag key="fya"/>
+		<tag key="fspact">Pakti Për Software të Lirë</tag>
 		
 
     </tags>

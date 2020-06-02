@@ -33,7 +33,6 @@
 
 
   <!-- Footer -->
-  <text id="lastchanged"> Last changed: </text>
   <text id="translator1a">We thank </text>
   <text id="translator1b"> for this translation. </text>
   <text id="translator2">This is an unofficial translation. </text>
@@ -75,38 +74,14 @@
   <text id="fsfe/help">Contribute</text>
   <text id="fsfe/press">Press</text>
   <text id="fsfe/contact">Contact us</text>
-  <text id="support/donate">Donate</text>
-  <text id="support/support">Support</text>
-  <text id="support/order">Shop</text>
-  <text id="support/thankgnus">Donors</text>
   <text id="support/become">Become a supporter</text>
-  <text id="fellowship/fellowship">Fellowship</text>
   <text id="fellowship/login">Login</text>
-  <text id="fellowship/join">Join</text>
-  <text id="fellowship/card">Card</text>
-  <text id="fellowship/faq">F.A.Q.</text>
-  <text id="campaigns/dfd">Document Freedom Day</text>
-  <text id="campaigns/fya">Free Your Android</text>
-  <text id="campaigns/pdf">PDF readers</text>
-  <text id="campaigns/ayc">Ask your candidates</text>
-  <text id="campaigns/drm">DRM.info</text>
   <text id="news/news">Latest News</text>
   <text id="news/events">Upcoming Events</text>
   <text id="news/press">Press Room</text>
   <text id="news/nl">Newsletters</text>
   <text id="news/planet">Planet blogs</text>
-  <text id="ftf/legal">Legal support</text>
-  <text id="ftf/services">Services and Fiduciary</text>
-  <text id="ftf/doc">Documentation</text>
-  <text id="ftf/network">Legal Network</text>
-  <text id="ftf/conference">Conferences</text>
-  <text id="ftf/contact">Contact FSFE Legal Team</text>
-  <text id="fs/fs">Free Software</text>
   <text id="fs/basics">Free Software Basics</text>
-  <text id="fs/def">Definition</text>
-  <text id="fs/soc">Free Society</text>
-  <text id="fs/edu">Education</text>
-  <text id="fs/buz">Business</text>
   <text id="community/discuss">Free Software Discussions</text>
 
   <text id="motto-fsfs">Free Software, Free Society!</text>
@@ -122,6 +97,7 @@
   <text id="subscribe">Subscribe</text>
   <text id="email">email address</text>
   <text id="news">News</text>
+  <text id="breadcrumb-news">News</text>
   <text id="receive-newsletter">Subscribe to FSFE's monthly newsletter</text>
   <text id="subscribe-newsletter">Subscribe to the newsletter</text>
   <text id="events">Events</text>
@@ -165,8 +141,13 @@
   <text id="bsig">Businesses</text>
 
 
-  <!-- Sidebars -->
+  <!-- News and event feeds -->
   <text id="related-news">Related News</text>
+  <text id="related-events">Related Events</text>
+  <text id="related-all">All related news and events</text>
+
+
+  <!-- Sidebars -->
   <text id="our-work">Our Work</text>
   <text id="our-work-intro">
     <p>As a non-profit, non-governmental organisation, Free Software Foundation

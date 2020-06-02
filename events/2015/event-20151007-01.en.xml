@@ -5,16 +5,18 @@
   <event start="2015-10-07" end="2015-10-07">
     <title>Fellowship Meeting Rhine/Main, Germany</title>
     <body>
+      <p>
 
      On Wednesday, 7 October, the Fellowship group Rhein/Main
       will meet in the Café Albatros in Frankfurt. We will meet there around 19:00 h. 
+      </p>
     </body> 
       <link>http://wiki.fsfe.org/groups/Rhein-Main</link>
     <tags>
-      <tag>front-page</tag>
-      <tag>de</tag>
-      <tag>fellowship</tag>
-      <tag content="Local group Rhine/Main">fsferm</tag>
+      <tag key="front-page"/>
+      <tag key="de"/>
+      <tag key="fellowship"/>
+      <tag key="fsferm">Local group Rhine/Main</tag>
     </tags>
   </event>
 </eventset>

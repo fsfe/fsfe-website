@@ -1,4 +1,4 @@
-news/*/news-*:[bea]
-news/*/.news-*:[bea]
-news/nl/nl-*:[bea]
-news/nl/.nl-*:[bea]
+news/*/*:[bea]
+news/*/.*:[bea]
+events/*/*:[bea]
+events/*/.*:[bea]

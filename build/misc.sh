@@ -3,14 +3,6 @@
 inc_misc=true
 [ -z "$inc_logging" ] && . "$basedir/build/logging.sh"
 
-print_help(){
-  cat "$basedir/build/HELP"
-}
-
-match(){
-  printf %s "$1" |egrep -q "$2"
-}
-
 debug(){
   if [ "$#" -ge 1 ]; then
     echo "$(date '+%F %T'): $@" |logappend debug >&2

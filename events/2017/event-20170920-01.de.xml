@@ -6,6 +6,7 @@
   <event start="2017-09-20" end="2017-09-20">
 	  <title>Sondertreffen der FSFE-Gruppe Franken am 20. September 2017 in Nürnberg</title>
     <body>
+      <p>
 	Am Mittwoch, 20. September 2017 ab 18:30 Uhr findet in der
 	Lederer Kulturbrauerei in Nürnberg ein Sondertreffen der
 	FSFE-Gruppe Franken mit Special Guests aus der FSFE-Regionalgruppe Düsseldorf.
@@ -20,12 +21,13 @@
 
         Eine kurze unverbindliche Anmeldung an floriansnow@fsfe.org
         wäre zwecks Platzreservierung nett.
+      </p>
     </body>
       <link>https://wiki.fsfe.org/LocalGroups/Franken</link>
       <tags>
-        <tag>Nürnberg</tag>
-	<tag>de</tag>
-	<tag>front-page</tag>
+        <tag key="nürnberg"/>
+	<tag key="de"/>
+	<tag key="front-page"/>
     </tags>
   </event>
 </eventset>

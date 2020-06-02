@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!-- XSL stylesheet for generating podcast RSS feeds -->
 
@@ -15,11 +15,6 @@
   <xsl:import href="../build/xslt/gettext.xsl" />
 
   <xsl:output method="xml" encoding="utf-8" indent="yes"/>
-
-  <!-- $today = current date (given as <html date="...">) -->
-  <xsl:variable name="today">
-    <xsl:value-of select="/buildinfo/@date" />
-  </xsl:variable>
 
   <!-- ====== -->
   <!-- Months -->
@@ -55,7 +50,7 @@
     <!-- Add leading "https://fsfe.org" if necessary -->
     <xsl:variable name="full-link">
       <xsl:choose>
-        <xsl:when test="starts-with ($link, 'https:')">
+        <xsl:when test="starts-with ($link, 'http:')">
           <xsl:value-of select="$link" />
         </xsl:when>
         <xsl:when test="starts-with ($link, 'https:')">
@@ -68,7 +63,7 @@
 
     <!-- Insert language into link -->
     <xsl:choose>
-      <xsl:when test="starts-with ($full-link, 'http://www.fsfeurope.org/')
+      <xsl:when test="starts-with ($full-link, 'https://fsfe.org/')
                       and substring-before ($full-link, '.html') != ''">
         <xsl:value-of select="concat (substring-before ($full-link, '.html'),
                                       '.', $lang, '.html')" />
@@ -82,11 +77,11 @@
   <!-- ============ -->
   <!-- Main routine -->
   <!-- ============ -->
-  
+
   <xsl:template match="/buildinfo">
     <xsl:apply-templates select="document" />
   </xsl:template>
-  
+
   <xsl:template match="/buildinfo/document">
 
     <!-- param audioformat mp3 or opus (or none), set variable $format and $alternateformat -->
@@ -169,12 +164,6 @@
         </xsl:element>
 
         <!-- PODCAST specific information -->
-        <lastBuildDate>
-          <xsl:variable name="timestamp">
-            <xsl:value-of select="/buildinfo/document/timestamp"/>
-          </xsl:variable>
-          <xsl:value-of select="substring-before(substring-after($timestamp, 'Date: '), ' $')"/>
-        </lastBuildDate>
         <generator>FSFE website build system: podcast.rss.xsl</generator>
         <itunes:type>episodic</itunes:type>
         <itunes:owner>
@@ -193,12 +182,14 @@
         <itunes:block>false</itunes:block>
         <itunes:explicit>false</itunes:explicit>
 
-        
+
         <!-- Podcast episodes -->
-        <xsl:for-each select="/buildinfo/document/set/news[translate (@date, '-', '') &lt;= translate ($today, '-', '')]">
+        <xsl:for-each select="/buildinfo/document/set/news[
+            translate(@date, '-', '') &lt;= translate(/buildinfo/@date, '-', '')
+          ]">
           <xsl:sort select="@date" order="descending"/>
           <xsl:element name="item">
-            
+
             <!-- Title -->
             <xsl:element name="title">
               <xsl:value-of select="title"/>
@@ -216,7 +207,7 @@
               <xsl:copy-of select="normalize-space(body)"/>
               <xsl:text> Join the FSFE community and support the podcast: https://my.fsfe.org/support?referrer=podcast</xsl:text>
             </xsl:element>
-            
+
             <!-- Podcast body -->
             <xsl:element name="content:encoded">
               <xsl:text disable-output-escaping="yes">&lt;![CDATA[</xsl:text>
@@ -244,17 +235,17 @@
                   </xsl:element>
                 </xsl:element>
               </xsl:if>
-              
+
               <xsl:element name="p">
                 <xsl:element name="a">
                   <xsl:attribute name="href">https://my.fsfe.org/support?referrer=podcast</xsl:attribute>
                   <xsl:text>Join the FSFE community and support the podcast</xsl:text>
                 </xsl:element>
               </xsl:element>
-              
+
               <xsl:text disable-output-escaping="yes">]]&gt;</xsl:text>
             </xsl:element>
-            
+
             <!-- Link and GUID -->
             <xsl:if test="link != ''">
               <xsl:variable name="link">
@@ -289,7 +280,16 @@
             <itunes:author>Free Software Foundation Europe (FSFE)</itunes:author>
             <itunes:explicit>false</itunes:explicit>
             <itunes:block>false</itunes:block>
-            <itunes:episodeType>full</itunes:episodeType>
+            <itunes:episodeType>
+              <xsl:choose>
+                <xsl:when test="podcast/type != ''">
+                  <xsl:value-of select="podcast/type" />
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:text>full</xsl:text>
+                </xsl:otherwise>
+              </xsl:choose>
+            </itunes:episodeType>
 
             <!-- Episode subtitle -->
             <xsl:element name="itunes:subtitle">
@@ -302,9 +302,11 @@
             </xsl:element>
 
             <!-- Episode number -->
-            <xsl:element name="itunes:episode">
-              <xsl:value-of select="podcast/episode"/>
-            </xsl:element>
+            <xsl:if test="podcast/episode != ''">
+              <xsl:element name="itunes:episode">
+                <xsl:value-of select="podcast/episode"/>
+              </xsl:element>
+            </xsl:if>
 
             <!-- Enclosure (audio file path) -->
             <xsl:element name="enclosure">
@@ -337,11 +339,10 @@
       </channel>
     </rss>
   </xsl:template>
-  
+
   <!-- take care that links within <content:encoded> are not relative -->
   <xsl:template match="a">
     <xsl:element name="a">
-      
       <xsl:attribute name="href">
         <xsl:choose>
           <xsl:when test="substring(@href,1,1) = '/'">
@@ -353,11 +354,10 @@
           </xsl:otherwise>
         </xsl:choose>
       </xsl:attribute>
-      
       <xsl:value-of select="." />
-      
     </xsl:element>
   </xsl:template>
+
   <!-- as well as images -->
   <xsl:template match="img">
     <xsl:element name="img">
@@ -375,20 +375,14 @@
     </xsl:element>
   </xsl:template>
 
-  <!-- remove newsteaser from <p> -->
-  <xsl:template match="p">
-    <xsl:copy>
-      <xsl:apply-templates select="node()" />
-    </xsl:copy>
-  </xsl:template>
-  <!-- Allow other basic styling elements, copy them verbatim -->
-  <xsl:template match="strong|em|ul|ol|li|h1|h2|h3|h4|h5|h6">
+  <!-- Allow basic styling elements, copy them without attributes -->
+  <xsl:template match="p|strong|em|ul|ol|li|h1|h2|h3|h4|h5|h6">
     <xsl:copy>
       <xsl:apply-templates select="node()"/>
     </xsl:copy>
   </xsl:template>
-  
+
   <!-- Do not copy <body-complete> to output at all -->
   <xsl:template match="body-complete"/>
-  
+
 </xsl:stylesheet>

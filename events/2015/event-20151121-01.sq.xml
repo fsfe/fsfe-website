@@ -4,7 +4,8 @@
 
    <event start="2015-11-21" end="2015-11-22">
    <title>[veprimtari e anuluar] FSFE-ja në Le Capitole du Libre në Tuluzë, Francë</title>
-   <body>/ Përditësim: <strong>veprimtaria është anuluar</strong> për shkak të vrasjeve
+   <body>
+     <p>/ Përditësim: <strong>veprimtaria është anuluar</strong> për shkak të vrasjeve
    terroriste në Paris. / 
    FSFE-ja është e lumtur të marrë pjesë për herë të parë në veprimtarinë
    e Tuluzës “Le Capitole du Libre”. Veç stendës. veprimtarët e FSFE-së presin
@@ -13,12 +14,13 @@
    njëri është një hyrje në licenca të software-it të lirë, tjetri është një
    bisedë mbi rastin Skype, retroinxhinierimin dhe ligjet e shpërpilimit në  
    Francë dheh Europë.
+     </p>
    </body>
    <link>https://2015.capitoledulibre.org</link>
    <tags>
-    <tag content="Tuluzë">Toulouse</tag>
-    <tag content="Francë">fr</tag>
-    <tag>front-page</tag>
+    <tag key="toulouse">Tuluzë</tag>
+    <tag key="fr">Francë</tag>
+    <tag key="front-page"/>
    </tags>
 
 

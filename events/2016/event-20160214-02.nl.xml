@@ -5,17 +5,19 @@
    <event start="2016-02-14" end="2016-02-14">
    <title>I Love Free Software-dag 2016</title>
 
-<body>Medewerkers aan Vrije Software stellen ons in staat om de vrijheidsgereedschappen 
+<body>
+  <p>Medewerkers aan Vrije Software stellen ons in staat om de vrijheidsgereedschappen 
 die we waarderen iedere dag te gebruiken. Ontwikkelaars, ontwerpers, vertalers 
 en vele anderen verdienen onze dankbaarheid. Laten we "dank je wel" tegen hen 
 zeggen op de traditionele dag van de liefde: Valentijnsdag. In tegenstelling tot 
 gebruikelijke evenementen is IloveFS een exclusief online evenement. 
 Neem een kijkje op de website zodat je kan zien hoe je het met ons kan vieren.
+     </p>
    </body>
    <link>http://ilovefs.org</link>
    <tags>
-    <tag>ilovefs</tag>
-    <tag content="voorpagina">front-page</tag>
+    <tag key="ilovefs"/>
+    <tag key="front-page">voorpagina</tag>
    </tags>
   </event>
 </eventset>

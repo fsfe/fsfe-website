@@ -5,16 +5,19 @@
    <event start="2014-02-01" end="2014-02-02">
    <title>FOSDEM 2014</title>
    <body>
+     <p>
        Cette année, FOSDEM se tiendra les 1er et 2 février 2014 à Bruxelles. La FSFE sera présente avec son stand et de nombreux fellows, coordinateurs et employés seront présents également.<br />Comme chaque année, nous sommes impatients de pouvoir nous rencontrer à nouveau, de pouvoir discuter et passer un bon moment ensemble.
+     </p>
    </body>
    <page>https://fosdem.org/2014</page>
    <tags>
 
-    <tag>fr</tag>
-    <tag>bnl</tag>
-    <tag content="FOSDEM">Fosdem</tag> <tag>2014</tag>
-    <tag>fellowship</tag>
-    <tag>front-page</tag>
+    <tag key="fr"/>
+    <tag key="bnl"/>
+    <tag key="fosdem">FOSDEM</tag>
+    <tag key="2014"/>
+    <tag key="fellowship"/>
+    <tag key="front-page"/>
    </tags>
 
 

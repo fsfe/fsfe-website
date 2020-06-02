@@ -5,17 +5,17 @@
    <event start="2013-02-02" end="2013-02-03">
    <title>FOSDEM 2013</title>
    <body>
+     <p>
    This year, <a href="https://fosdem.org/2013/" target="_blank">FOSDEM</a> will be held on the 2nd and 3rd of February 2013 in Brussels. FSFE will participate with a booth and three talks. Henrik Sanklef, Vice president of FSFE, will speak about Searduino <a href="https://fosdem.org/2013/schedule/event/searduino_arduino_simulator_and_c_devel_environment/" target="_blank">Searduino</a> on Saturday afternoon (at 14:20); Otto Kekäläinen, our finnish fellowship coordinator, will speak about <a href="https://fosdem.org/2013/schedule/event/public_procurement/" target="_blank">fixing public procurement</a> on Sunday afternoon (at 16:00); Eric Albers, Outreach coordinator, will speak about <a href="https://fosdem.org/2013/schedule/event/phone_liberation_parties/" target="_blank">Free Your Android - phone liberation parties</a> on Sunday (at 14:00). As like every year, we're looking forward to many meetings and discussions and also to a very good time for all.
+     </p>
    </body>
    <page>https://fosdem.org/2013</page>
    <tags>
-
-    <tag content="FOSDEM">Fosdem</tag> <tag>2013</tag>
-    <tag>fellowship</tag>
-    <tag>front-page</tag>
+    <tag key="fosdem">FOSDEM</tag>
+    <tag key="2013"/>
+    <tag key="fellowship"/>
+    <tag key="front-page"/>
    </tags>
-
-
   </event>
 </eventset>
 

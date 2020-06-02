@@ -1,0 +1,205 @@
+// ============================================================================
+// Styles specific to the front page
+// ============================================================================
+
+body.frontpage {
+
+    // ------------------------------------------------------------------------
+    // Introduction paragraph at the top of the page
+    // ------------------------------------------------------------------------
+
+    .introduction {
+        font-weight: bold;
+        padding-top: 30px;
+        padding-bottom: 20px;
+        background-image: url('/graphics/color-bar.jpg');
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: contain;
+        margin-bottom: 30px;
+
+        // Make the first line bigger and separated from the rest.
+        :first-child {
+            font-size: @font-size-h3;
+            margin-bottom: 20px;
+        }
+
+        // Make the "learn more" link slightly smaller to look better.
+        .learn-more {
+            font-size: 95%;
+        }
+    }
+
+    // ------------------------------------------------------------------------
+    // Section headings
+    // ------------------------------------------------------------------------
+
+    h2 {
+        a.learn-more {
+            font-size: 60%;
+        }
+    }
+
+    // ------------------------------------------------------------------------
+    // Display 3 equal columns side-by-side on larger screens (used 3 times)
+    // ------------------------------------------------------------------------
+
+    .three-columns {
+        .make-row;
+
+        .column {
+            .make-xs-column(12);
+            .make-md-column(4);
+
+            // We maintain our own margins, so suppress the bottom margin
+            // inside the grid.
+            p:last-child {
+                margin-bottom: 0;
+            }
+
+            // If the three boxes are stacked vertically, create some gap
+            // between them as well as some extra gap between the heading and
+            // the first box.
+            @media (max-width: @screen-sm-max) {
+                margin-top: 10px;
+                margin-bottom: 10px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    // ------------------------------------------------------------------------
+    // News section
+    // ------------------------------------------------------------------------
+
+    .news {
+        .three-columns;
+
+        // Show the image to the left on tablet-sized screens, to the top
+        // on larger or smaller screens.
+        .image {
+            // Create a margin between image and text below.
+            margin-bottom: 10px;
+            .make-xs-column(12);
+            .make-sm-column(5);
+            .make-md-column(12);
+
+            @media (min-width: @screen-sm-min) {
+                margin-top: 10px;
+            }
+
+            // In sm size, the text is right beside the image instead of below
+            // it, so we need no margin below the image.
+            @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+                margin-bottom: 0;
+            }
+
+            // On very small screens, limit the image to 200px, otherwise
+            // it would span the whole screen width.
+            img {
+                @media (max-width: @screen-xs-max) {
+                    width: 200px;
+                    .center-block;
+                }
+            }
+        }
+
+        // Keep everything except the image in a block and put it where it
+        // belongs.
+        .text {
+            .make-xs-column(12);
+            .make-sm-column(7);
+            .make-md-column(12);
+
+            // Keep the distance between image and news title small.
+            h3 {
+                margin-top: 0;
+            }
+
+            .date {
+                .text-muted;
+                .small;
+            }
+        }
+    }
+
+    // ------------------------------------------------------------------------
+    // Testimonials section
+    // ------------------------------------------------------------------------
+
+    .testimonials {
+        // This is very similar to the news section, but because of the
+        // different sizes of the images, some values are different, so we keep
+        // it separate.
+        .three-columns;
+
+        // Show the image to the left on tablet-sized screens, to the top
+        // on larger or smaller screens.
+        .image {
+            // Create a margin between image and text below.
+            margin-bottom: 10px;
+            .make-xs-column(12);
+            .make-sm-column(3);
+            .make-md-column(12);
+
+            // Unlike for the news items, we set no top margin, because
+            // with the rounded images and the smaller font in the first
+            // line of the text, it looks better this way when the image is
+            // *beside* the text.
+
+            // In sm size, the text is right beside the image instead of below
+            // it, so we need no margin below the image.
+            @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+                margin-bottom: 0;
+            }
+
+            img {
+                width: 150px;
+                .center-block;
+            }
+        }
+
+        // Keep everything except the image in a block and put it where it
+        // belongs.
+        .text {
+            .make-xs-column(12);
+            .make-sm-column(9);
+            .make-md-column(12);
+
+            .source {
+                .text-right;
+                &:before {
+                    content: '\2014 \00A0'; // EM DASH, NBSP
+                }
+            }
+        }
+    }
+
+    // ------------------------------------------------------------------------
+    // Next steps section
+    // ------------------------------------------------------------------------
+
+    .next-steps {
+        .three-columns;
+        .text-center;
+
+        h3 {
+            margin-top: 0;
+        }
+
+        img {
+            width: 280px;
+        }
+
+        .events {
+            .date {
+                .text-muted;
+                .small;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

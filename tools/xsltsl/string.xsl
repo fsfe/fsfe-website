@@ -271,7 +271,7 @@
         <xsl:with-param name="text">
           <xsl:value-of select="substring($string-with-only-spaces, string-length($firstword) + 2)"/>
         </xsl:with-param>
-        <xsl:with-param name="all" select="true()"/>            
+        <xsl:with-param name="all" select="true()"/>
       </xsl:call-template>
     </xsl:param>
     <xsl:value-of select="translate($before-space-removal,' ','')"/>
@@ -568,7 +568,7 @@
       <xsl:otherwise>
         <xsl:value-of select="$text"/>
       </xsl:otherwise>
-    </xsl:choose>            
+    </xsl:choose>
   </xsl:template>
 
   <doc:template name="str:count-substring" xmlns="">
@@ -753,7 +753,7 @@
           <xsl:with-param name="position" select="$position - 1"/>
           <xsl:with-param name="chars" select="$chars"/>
         </xsl:call-template>
-        
+
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
@@ -800,7 +800,7 @@
 
     <xsl:value-of select="concat($firstpart, $chars, $secondpart)"/>
   </xsl:template>
- 
+
 
   <doc:template name="str:backward" xmlns="">
     <refpurpose>String reversal</refpurpose>

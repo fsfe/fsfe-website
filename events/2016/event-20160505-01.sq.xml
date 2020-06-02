@@ -10,9 +10,9 @@
     </body> 
       <link>http://opentechsummit.net/</link>
     <tags>
-      <tag>front-page</tag>
-      <tag content="OpenTechSummit">OTS</tag>
-      <tag content="Stendë e FSFE-së">infobooth</tag>
+      <tag key="front-page"/>
+      <tag key="ots">OpenTechSummit</tag>
+      <tag key="infobooth">Stendë e FSFE-së</tag>
     </tags>
   </event>
 </eventset>

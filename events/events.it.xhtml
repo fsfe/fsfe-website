@@ -1,51 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <html>
-  <version>1</version>
+  <version>2</version>
 
   <head>
     <title>Eventi - FSFE</title>
   </head>
 
-  <body class="toplevel article events">
+  <body class="toplevel article">
     <h1>Eventi</h1>
-    <h2>Add an event</h2>
 
-    <p>
-      Se sei a conoscenza di un evento collegato alla FSFE che non è presente nella lista
-      o ne stai organizzando uno, puoi aggiungerlo a questa pagina usando lo strumento di
-      <a href="/community/tools/eventregistration.html">registrazione eventi</a>.
-    </p>
+    <section id="add-event">
+      <h2>Add an event</h2>
 
-    <include-events/>
+      <p>
+        Se sei a conoscenza di un evento collegato alla FSFE che non è presente nella lista
+        o ne stai organizzando uno, puoi aggiungerlo a questa pagina usando lo strumento di
+        <a href="/community/tools/eventregistration.html">registrazione eventi</a>.
+      </p>
+    </section>
 
-    <h2><a href="2017/index.html">Archivio eventi</a></h2>
+    <section id="current-events">
+      <include-events group="current">Eventi in corso</include-events>
+    </section>
+    <section id="future-events">
+      <include-events group="future">Eventi futuri</include-events>
+    </section>
+    <section id="past-events">
+      <include-events group="past">Eventi passati</include-events>
+    </section>
 
-    <p>
-      Gli eventi precedenti a questo periodo sono consultabili presso l'Archivio eventi.
-      <a class="learn-more" href="2017/index.html"/>
-    </p>
+    <section id="event-archives">
+      <h2><a href="2018/index.html">Archivio eventi</a></h2>
+
+      <p>
+        Gli eventi precedenti a questo periodo sono consultabili presso l'Archivio eventi.
+        <a class="learn-more" href="2018/index.html"/>
+      </p>
+    </section>
   </body>
 
   <sidebar promo="none">
-    <h2>Segui gli eventi</h2>
-
-    <p>
-      La FSFE partecipa a molti eventi legati al Software Libero.
-      Gli eventi ufficiali sono elencati in questa pagina. Per non perderteli
-      puoi seguirli anche via
-      <a href="events.rss">RSS</a> oppure tramite
-      <a href="webcal://fsfe.org/events/events.ics">feed iCalendar</a>.
-    </p>
-
-    <div class="share-buttons-sidebar">
-      <a target="_blank" href="events.rss">
-        <button class="share-button-sidebar share-rss">Feed RSS</button>
-      </a>
-      <a target="_blank" href="webcal://fsfe.org/events/events.ics">
-        <button class="share-button-sidebar share-cal">Feed iCalendar</button>
-      </a>
-    </div>
+    <module id="follow-events"/>
 
     <h2>Aggiungi evento mancante</h2>
 
@@ -75,8 +71,4 @@
       interessato ad uno di questi eventi dovrai ricordarti di non mancare.
     </p>
   </sidebar>
-
-  <text id="current">Eventi in corso</text>
-  <text id="future">Eventi futuri</text>
-  <text id="past">Eventi passati</text>
 </html>

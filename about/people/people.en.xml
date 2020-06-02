@@ -44,7 +44,7 @@
     <email> Email address of the person. Please use (at) and (dot) for spam protection reasons
     <link> If someone clicks on a name, he can be redirected to a page with further information.
       In most cases, it's /about/surname/surname.html (if there's a page)
-    <avatar> Here you can display an image. Please only use local images like /about/surname/surname.png
+    <avatar> Here you can display an image. These image files have to be located in /about/people/avatars/, and ideally be named with the surname (id) of the person. Maximum 50x50px please!
     <employee> Working status inside the FSFE, defined by the earned money. Only nexessary if the person receives money on a regular basis for his/her work
       full: Person is working 4 or 5 days a week
       part: Person is working 3 or less days a week
@@ -53,11 +53,12 @@
   <!--
     Technical information:
         The teampage derives its information from many files and XSL scripts.
-        - /about/people/people.en.xml (this file): All FSFE-teammembers, even those not belonging to team@ (i.e. country teams)#+
+        - /about/people/people.en.xml (this file): All FSFE-teammembers, even those not belonging to team@ (i.e. country teams)
         - /about/team.**.xhtml: The frame of the team page: Information texts, Headlines etc
         - /about/team.xsl: In this file, tags like <council-members /> are defined.
         - /about/team.sources: Where to look for people-files, translations of functions/projects/countries and so on
-        - /tools/xsltsl/countries.xsl: The building of the team lists itself: Links, Background colors, inclusion of avatars etc
+        - /about/people/avatars/: Place for all avatar pictures
+        - /build/xslt/people.xsl: The building of the team lists itself: Links, Background colors, inclusion of avatars etc
   -->
   <!--
     Improvement ideas:
@@ -74,7 +75,7 @@
     <team>gb</team>
     <email>padams (at) fsfe (dot) org</email>
     <link>http://blogs.fsfe.org/padams/</link>
-    <avatar>/about/adams/adams-avatar.jpg</avatar>
+    <avatar>adams.jpg</avatar>
   </person>
 
   <person id="agger">
@@ -99,8 +100,8 @@
     <team>de</team>
     <team>care</team>
     <email>eal (at) fsfe (dot) org</email>
-    <link>/about/albers/albers.en.html</link>
-    <avatar>/about/albers/albers-avatar.jpg</avatar>
+    <link>/about/people/albers/albers.html</link>
+    <avatar>albers.jpg</avatar>
     <employee>full/m</employee>
   </person>
 
@@ -112,7 +113,7 @@
     <team>rheinmain</team>
     <email>guido (at) fsfe (dot) org</email>
     <link>http://blogs.fsfe.org/guido/</link>
-    <avatar>/about/arnold/arnold-avatar.jpg</avatar>
+    <avatar>arnold.jpg</avatar>
   </person>
 
   <person id="bakker">
@@ -126,7 +127,7 @@
     <name>Mirko Boehm</name>
     <country>DE</country>
     <team>de</team>
-    <avatar>/about/mirko/mirko-avatar.jpg</avatar>
+    <avatar>mirko.jpg</avatar>
     <email>mirko (at) fsfe (dot) org</email>
   </person>
 
@@ -146,14 +147,14 @@
     <team>care</team>
     <email>jancborchardt (at) fsfe (dot) org</email>
     <link>http://jancborchardt.net</link>
-    <avatar>/about/borchardt/borchardt-avatar.jpg</avatar>
+    <avatar>borchardt.jpg</avatar>
   </person>
 
   <person id="brooke-smith">
     <name>George Brooke-Smith</name>
     <country>GB</country>
     <email>georgebs (at) fsfe (dot) org</email>
-    <avatar>/about/brooke-smith/thirdtimelucky.jpg</avatar>
+    <avatar>brooke-smith.jpg</avatar>
   </person>
 
   <person id="bubestinger">
@@ -167,7 +168,16 @@
     <name>Alexandra Busch</name>
     <country>DE</country>
     <email>alex.busch (at) fsfe (dot) org</email>
-    <avatar>/about/busch/busch-avatar.jpg</avatar>
+    <avatar>busch.jpg</avatar>
+  </person>
+
+  <person id="busse">
+   <name>Christian Busse</name>
+   <country>DE</country>
+   <email>purine_bitter (at) fsfe (dot) org</email>
+   <!-- function group="openscience">coordinator/m</function>
+   <team>openscience</team> -->
+   <team>team</team>
   </person>
 
    <person id="carraturo">
@@ -191,7 +201,7 @@
   <person id="coughlan">
     <name>Shane M. Coughlan</name>
     <email>shane (at) fsfe (dot) org</email>
-    <avatar>/about/coughlan/coughlan-avatar.jpg</avatar>
+    <avatar>coughlan.jpg</avatar>
   </person>
 
   <person id="dasilva">
@@ -213,7 +223,7 @@
     <team>ch</team>
     <team>zurich</team>
     <email>giammi (at) fsfe (dot) org</email>
-    <avatar>/about/daffre/daffre-avatar.jpg</avatar>
+    <avatar>daffre.jpg</avatar>
   </person>
 
   <person id="darrington">
@@ -231,7 +241,7 @@
    <team>core</team>
    <team>at</team>
    <link>http://wiki.fsfe.org/Fellows/albert</link>
-   <avatar>/about/dengg/dengg-avatar.jpg</avatar>
+   <avatar>dengg.jpg</avatar>
   </person>
 
   <person id="dietrich">
@@ -239,7 +249,6 @@
     <country>DE</country>
     <team>de</team>
     <email>nidi (at) fsfe (dot) org</email>
-    <avatar>/fellowship/graphics/people/nicolasdietrich-avatar.jpg</avatar>
   </person>
 
   <person id="diz">
@@ -270,6 +279,13 @@
     <email>nicola (dot) feltrin (at) fsfe (dot) org</email>
   </person>
 
+  <person id="falgueyrac">
+    <name>Lucile Falgueyrac</name>
+    <team>care</team>
+    <email>lucile.falg (at) fsfe (dot) org</email>
+    <avatar>falgueyrac.jpg</avatar>
+  </person>
+
   <person id="gerloff">
     <name>Karsten Gerloff</name>
     <country>DE</country>
@@ -277,8 +293,8 @@
     <team>core</team>
     <team>de</team>
     <email>gerloff (at) fsfe (dot) org</email>
-    <link>/about/gerloff/gerloff.html</link>
-    <avatar>/about/gerloff/gerloff-avatar.jpg</avatar>
+    <link>/about/people/gerloff/gerloff.html</link>
+    <avatar>gerloff.jpg</avatar>
   </person>
 
   <person id="gkotsopoulou">
@@ -310,8 +326,8 @@
     <team>core</team>
     <team>de</team>
     <email>greve (at) fsfe (dot) org</email>
-    <link>/about/greve/greve.html</link>
-    <avatar>/about/greve/greve-avatar.jpg</avatar>
+    <link>/about/people/greve/greve.html</link>
+    <avatar>greve.jpg</avatar>
   </person>
 
   <person id="grote">
@@ -321,7 +337,7 @@
     <team>de</team>
     <email>Torsten.Grote (at) fsfe (dot) org</email>
     <link>https://blog.grobox.de</link>
-    <avatar>/about/grote/grote-avatar.jpg</avatar>
+    <avatar>grote.jpg</avatar>
   </person>
 
   <person id="grun">
@@ -354,7 +370,6 @@
     <team>linz</team>
     <email>simonh (at) fsfe (dot) org</email>
     <link>https://wiki.fsfe.org/Fellows/lfodh</link>
-    <avatar>/fellowship/graphics/people/simonhornbacher-avatar.jpg</avatar>
   </person>
 
   <person id="indorato">
@@ -364,7 +379,7 @@
     <team>core</team>
     <email>fi (at) fsfe (dot) org</email>
     <employee>part/f</employee>
-    <avatar>/about/indorato/indorato-avatar.jpg</avatar>
+    <avatar>indorato.jpg</avatar>
   </person>
 
   <person id="jean">
@@ -372,8 +387,7 @@
     <country>FR</country>
     <team>fr</team>
     <email>nicoulas (at) fsfe (dot) org</email>
-    <link>/about/jean/jean.html</link>
-    <avatar>/about/jean/jean-avatar.jpg</avatar>
+    <avatar>jean.jpg</avatar>
   </person>
 
 
@@ -382,7 +396,7 @@
     <country>DE</country>
     <email>riepernet (at) fsfe (dot) org</email>
     <link>http://blogs.fsfe.org/riepernet/</link>
-    <avatar>/about/jensch/jensch-avatar.jpg</avatar>
+    <avatar>jensch.jpg</avatar>
   </person>
 
   <person id="jost">
@@ -397,7 +411,7 @@
     <country>FI</country>
     <email>mirv (at) fsfe (dot) org</email>
     <link>http://iki.fi/tjyrinki/</link>
-    <avatar>/about/jyrinki/jyrinki-avatar.jpg</avatar>
+    <avatar>jyrinki.jpg</avatar>
   </person>
 
   <person id="kalkhoff">
@@ -422,7 +436,7 @@
     <name>Otto Kekäläinen</name>
     <country>FI</country>
     <email>otto (at) fsfe (dot) org</email>
-    <avatar>/about/kekalainen/kekalainen-avatar.jpg</avatar>
+    <avatar>kekalainen.jpg</avatar>
   </person>
 
   <person id="kesper">
@@ -442,8 +456,8 @@
     <team>core</team>
     <team>de</team>
     <email>mk (at) fsfe (dot) org</email>
-    <link>/about/kirschner/kirschner.html</link>
-    <avatar>/about/kirschner/kirschner-avatar.jpg</avatar>
+    <link>/about/people/kirschner/kirschner.html</link>
+    <avatar>kirschner.jpg</avatar>
     <employee>full/m</employee>
   </person>
 
@@ -451,7 +465,7 @@
     <name>Jürgen Kneissl</name>
     <country>AT</country>
     <email>herrka (at) fsfe (dot) org</email>
-    <avatar>/about/kneissl/kneissl-avatar.jpg</avatar>
+    <avatar>kneissl.jpg</avatar>
   </person>
 
   <person id="ku">
@@ -461,8 +475,8 @@
     <team>core</team>
     <team>care</team>
     <email>gabriel.ku (at) fsfe (dot) org</email>
-    <link>/about/ku/ku.html</link>
-    <avatar>/about/ku/ku-avatar.jpg</avatar>
+    <link>/about/people/ku/ku.html</link>
+    <avatar>ku.jpg</avatar>
     <employee>full/m</employee>
   </person>
 
@@ -472,16 +486,16 @@
     <function>project-manager/m</function>
     <team>core</team>
     <email>lucas.lasota (at) fsfe (dot) org</email>
-    <link>/about/lasota/lasota.html</link>
-    <avatar>/about/lasota/lasota-avatar.jpg</avatar>
-    <employee>part/m</employee> 
+    <link>/about/people/lasota/lasota.html</link>
+    <avatar>lasota.jpg</avatar>
+    <employee>part/m</employee>
   </person>
 
   <person id="mehring">
     <name>Bonnie Mehring</name>
     <team>core</team>
     <email>bonnie (at) fsfe (dot) org</email>
-    <avatar>/about/mehring/mehring-avatar.jpg</avatar>
+    <avatar>mehring.jpg</avatar>
     <employee>part/f</employee>
   </person>
 
@@ -492,7 +506,7 @@
     <team>ga</team>
     <team>core</team>
     <email>vincent (at) fsfe (dot) org</email>
-    <avatar>/about/lequertier/lequertier-avatar.jpg</avatar>
+    <avatar>lequertier.jpg</avatar>
   </person>
 
   <person id="lindfors">
@@ -513,8 +527,8 @@
     <team>translation-coordinators</team>
     <team>care</team>
     <email>repentinus (at) fsfe (dot) org</email>
-    <link>/about/repentinus/repentinus.html</link>
-    <avatar>/about/repentinus/avatar.jpg</avatar>
+    <link>/about/people/repentinus/repentinus.html</link>
+    <avatar>lohmus.jpg</avatar>
   </person>
 
   <person id="lovergine">
@@ -539,7 +553,7 @@
     <team>ftf</team>
     <team>care</team>
     <email>polina (at) fsfe (dot) org</email>
-    <avatar>/about/malaja/malaja-avatar.jpg</avatar>
+    <avatar>malaja.jpg</avatar>
   </person>
 
   <person id="marrali">
@@ -547,7 +561,7 @@
     <country>IT</country>
     <team>it</team>
     <email>puster (at) fsfe (dot) org</email>
-    <avatar>/about/marrali/marrali-avatar.jpg</avatar>
+    <avatar>marrali.jpg</avatar>
   </person>
 
   <person id="marti">
@@ -568,8 +582,8 @@
     <team>de</team>
     <team>translation-coordinators</team>
     <email>max.mehl (at) fsfe (dot) org</email>
-    <link>/about/mehl/mehl.html</link>
-    <avatar>/about/mehl/mehl-avatar.jpg</avatar>
+    <link>/about/people/mehl/mehl.html</link>
+    <avatar>mehl.jpg</avatar>
     <employee>full/m</employee>
   </person>
 
@@ -587,7 +601,7 @@
     <team>ch</team>
     <team>zurich</team>
     <email>mmoeller (at) fsfe (dot) org</email>
-    <avatar>/about/moeller/moeller-avatar.jpg</avatar>
+    <avatar>moeller.jpg</avatar>
   </person>
 
   <person id="mueller">
@@ -598,7 +612,7 @@
     <team>at</team>
     <email>reinhard (at) fsfe (dot) org</email>
     <link>http://wiki.fsfe.org/Fellows/reinhard</link>
-    <avatar>/about/mueller/mueller-avatar.jpg</avatar>
+    <avatar>mueller.jpg</avatar>
   </person>
 
   <person id="murphy">
@@ -613,7 +627,6 @@
     <team>be</team>
     <function country="BE">coordinator/m</function>
     <email>aurion (at) fsfe (dot) org</email>
-    <avatar>/fellowship/graphics/people/mauricionascimento-avatar.jpg</avatar>
   </person>
 
   <person id="oberg">
@@ -621,8 +634,7 @@
     <country>SE</country>
     <team>ga</team>
     <email>jonas (at) fsfe (dot) org</email>
-    <link>/about/oberg/oberg.html</link>
-    <avatar>/about/oberg/oberg-avatar.jpg</avatar>
+    <avatar>oberg.jpg</avatar>
   </person>
 
   <person id="ockers">
@@ -634,7 +646,7 @@
     <team>core</team>
     <team>translation-coordinators</team>
     <email>ao (at) fsfe (dot) org</email>
-    <avatar>/about/ockers/ockers-avatar.jpg</avatar>
+    <avatar>ockers.jpg</avatar>
   </person>
 
   <person id="ohnewein">
@@ -647,7 +659,7 @@
     <team>core</team>
     <team>it</team>
     <email>patrick (at) fsfe (dot) org</email>
-    <avatar>/about/ohnewein/ohnewein-avatar.jpg</avatar>
+    <avatar>ohnewein.jpg</avatar>
   </person>
 
   <person id="piana">
@@ -658,7 +670,7 @@
     <team>ftf</team>
     <email></email>
     <link>http://piana.eu/</link>
-    <avatar>/about/piana/piana-avatar.jpg</avatar>
+    <avatar>piana.jpg</avatar>
   </person>
 
   <person id="kristiprogri">
@@ -672,7 +684,7 @@
     <country>IT</country>
     <team>ga</team>
     <email>poderi (at) fsfe (dot) org</email>
-    <avatar>/about/poderi/poderi-avatar.jpg</avatar>
+    <avatar>poderi.jpg</avatar>
   </person>
 
   <person id="rathke">
@@ -691,13 +703,13 @@
     <team>de</team>
     <email>bernhard (at) fsfe (dot) org</email>
     <link>http://intevation.de/~bernhard/index.en.html</link>
-    <avatar>/about/reiter/reiter-avatar.jpg</avatar>
+    <avatar>reiter.jpg</avatar>
   </person>
 
   <person id="rigamonti">
     <name>Cristian Rigamonti</name>
     <email>cri (at) fsfe (dot) org</email>
-    <avatar>/about/rigamonti/rigamonti-avatar.jpg</avatar>
+    <avatar>rigamonti.jpg</avatar>
   </person>
 
   <person id="rikken">
@@ -707,7 +719,7 @@
     <team>core</team>
     <team>nl</team>
     <email>nico.rikken (at) fsfe (dot) org</email>
-    <avatar>/about/rikken/rikken-avatar.jpg</avatar>
+    <avatar>rikken.jpg</avatar>
   </person>
 
   <person id="roussos">
@@ -721,7 +733,7 @@
     <function group="athens">coordinator/m</function>
     <email>comzeradd (at) fsfe (dot) org</email>
     <link>http://wiki.fsfe.org/Fellows/comzeradd</link>
-    <avatar>/about/roussos/roussos-avatar.jpg</avatar>
+    <avatar>roussos.jpg</avatar>
   </person>
 
   <person id="roy">
@@ -734,8 +746,8 @@
     <function country="FR">coordinator/m</function>
     <function group="paris">coordinator/m</function>
     <email>hugo (at) fsfe (dot) org</email>
-    <link>/about/roy/roy.html</link>
-    <avatar>/about/roy/roy-avatar.jpg</avatar>
+    <link>/about/people/roy/roy.html</link>
+    <avatar>roy.jpg</avatar>
   </person>
 
   <person id="roche">
@@ -751,7 +763,7 @@
     <team>ga</team>
     <team>core</team>
     <email>rubini (at) fsfe (dot) org</email>
-    <avatar>/about/rubini/rubini-avatar.jpg</avatar>
+    <avatar>rubini.jpg</avatar>
   </person>
 
   <person id="sander">
@@ -760,8 +772,8 @@
     <function>policy-manager/m</function>
     <team>core</team>
     <email>alex.sander (at) fsfe (dot) org</email>
-    <link>/about/sander/sander.html</link>
-    <avatar>/about/sander/sander-avatar.jpg</avatar>
+    <link>/about/people/sander/sander.html</link>
+    <avatar>sander.jpg</avatar>
     <employee>full/m</employee>
   </person>
 
@@ -771,8 +783,7 @@
     <team>ga</team>
     <team>core</team>
     <email>hesa (at) fsfe (dot) org</email>
-    <link>/about/sandklef/sandklef.html</link>
-    <avatar>/about/sandklef/sandklef-avatar.jpg</avatar>
+    <avatar>sandklef.jpg</avatar>
   </person>
 
   <person id="sanjurjo">
@@ -790,7 +801,7 @@
     <team>de</team>
     <email>schiessle (at) fsfe (dot) org</email>
     <link>http://www.schiessle.org</link>
-    <avatar>/about/schiessle/schiessle-avatar.jpg</avatar>
+    <avatar>schiessle.jpg</avatar>
   </person>
 
   <person id="schoenitzer">
@@ -815,8 +826,8 @@
     <team>ga</team>
     <team>core</team>
     <email>usli (at) fsfe (dot) org</email>
-    <employee>part/f</employee> 
-    <avatar>/about/sliwinski/sliwinski.png</avatar>
+    <employee>part/f</employee>
+    <avatar>sliwinski.png</avatar>
   </person>
 
   <person id="snow">
@@ -830,7 +841,7 @@
     <function group="franconia">coordinator/m</function>
     <email>floriansnow (at) fsfe (dot) org</email>
     <link>https://wiki.fsfe.org/Fellows/floriansnow</link>
-    <avatar>/about/snow/avatar.jpg</avatar>
+    <avatar>snow.jpg</avatar>
   </person>
 
   <person id="stegerman">
@@ -839,7 +850,7 @@
     <team>nl</team>
     <email>flx (at) fsfe (dot) org</email>
     <link>https://wiki.fsfe.org/Fellows/flx</link>
-    <avatar>/about/stegerman/stegerman-avatar.png</avatar>
+    <avatar>stegerman.png</avatar>
   </person>
 
   <person id="stehmann">
@@ -854,7 +865,7 @@
     <name>Jonke Suhr</name>
     <country>DE</country>
     <email>suhrj (at) fsfe (dot) org</email>
-    <avatar>/about/suhr/suhr.png</avatar>
+    <avatar>suhr.png</avatar>
   </person>
 
   <person id="suklje">
@@ -867,7 +878,7 @@
     <team>ftf</team>
     <email>hook (at) fsfe (dot) org</email>
     <link>http://matija.suklje.name</link>
-    <avatar>/about/suklje/suklje-avatar.jpg</avatar>
+    <avatar>suklje.jpg</avatar>
   </person>
 
   <person id="tomas">
@@ -884,7 +895,7 @@
     <team>nl</team>
     <email>mho (at) fsfe (dot) org</email>
     <link>http://mauriceverheesen.nl/</link>
-    <avatar>/about/verheesen/mo-avatar.jpg</avatar>
+    <avatar>verheesen.jpg</avatar>
   </person>
 
   <person id="vinto">
@@ -901,7 +912,6 @@
     <country>CH</country>
     <email>swaechter (at) fsfe (dot) org</email>
     <link>http://wiki.fsfe.org/Fellows/swaechter</link>
-    <avatar>/fellowship/graphics/people/swaechter-avatar.jpeg</avatar>
   </person>
 
   <person id="weiden">
@@ -910,8 +920,7 @@
     <team>ga</team>
     <team>core</team>
     <email>nanda (at) fsfe (dot) org</email>
-    <link>/about/weiden/weiden.html</link>
-    <avatar>/about/weiden/weiden-avatar.jpg</avatar>
+    <avatar>weiden.jpg</avatar>
   </person>
 
   <person id="weitzhofer">
@@ -956,7 +965,6 @@
     <name>Ricardo Wurmus</name>
     <team>berlin</team>
     <email>rekado (at) fsfe (dot) org</email>
-    <avatar>/fellowship/graphics/people/ricardowurmus-avatar.jpg</avatar>
   </person>
 
   <person id="zanga">
@@ -970,7 +978,6 @@
     <country>AT</country>
     <team>linz</team>
     <email>jzarl (at) fsfe (dot) org</email>
-    <avatar>/fellowship/graphics/people/JohannesZarl.jpg</avatar>
   </person>
 
 </personset>

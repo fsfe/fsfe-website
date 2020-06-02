@@ -6,13 +6,15 @@
    
   <event start="2017-06-01" end="2017-06-01"> 
     <title>OpenExpo in Madrid, Spanje</title> 
-    <body> 
+    <body>
+      <p> 
       OpenExpo is een jaarlijkse conferentie over Vrije Software en Open Data op 1 juni in Madrid. Free Software Foundation Europe zal aanwezig zijn met een kraam om bezoekers te informeren over de organisatie en haar werk.
+      </p>
     </body> 
     <link>http://www.openexpo.es/en/</link> 
     <tags>
-      <tag content="Spanje">es</tag>
-      <tag>front-page</tag>
+      <tag key="es">Spanje</tag>
+      <tag key="front-page"/>
     </tags>
   </event> 
 </eventset> 

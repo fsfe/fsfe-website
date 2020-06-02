@@ -1,95 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <html>
-  <version>1</version>
+  <version>3</version>
 
-<head>
-  <title>News - FSFE</title>
-</head>
+  <head>
+    <title>Nachrichten - FSFE</title>
+  </head>
 
-<body class="toplevel article">
-<h1>News</h1>
+  <body class="toplevel article">
+    <h1>Nachrichten</h1>
 
-<div class="news-follow-us">
-  <div class="share-top-buttons-label">Folge uns:</div>
-  <div class="share-buttons-top">
-    <a target="_blank" href="newsletter.html">
-      <button class="share-button-top share-mail">Newsletter</button>
-    </a>
-    <a target="_blank" href="news.rss">
-      <button class="share-button-top share-rss">RSS Feed</button>
-    </a>
-    <a target="_blank" href="https://mastodon.social/@fsfe">
-      <button class="share-button-top share-mastodon">Mastodon</button>
-    </a>
-    <a target="_blank" href="https://diasp.eu/u/fsfe">
-      <button class="share-button-top share-diaspora">Diaspora</button>
-    </a>
-    <a target="_blank" href="https://twitter.com/fsfe">
-      <button class="share-button-top share-twitter">Twitter</button>
-    </a>
-    <a target="_blank" href="https://facebook.com/thefsfe">
-      <button class="share-button-top share-facebook">Facebook</button>
-    </a>
-  </div>
-</div>
-
-<include-news/>
-
-<h2><a href="2017/index.html">News-Archiv</a></h2>
-<p>
-  Ältere News finden sich in unserem News-Archiv
-  <a class="learn-more" href="2017/index.html"/>
-</p>
-</body>
-
-<sidebar promo="none">
-  <div class="news-sidebar">
-    <h2>News Abo</h2>
-    <p>
-      Um auf dem Laufenden zu bleiben, abonniere unseren
-      <a href="news.rss">RSS Feed</a> oder unseren
-      <a href="newsletter.html">Newsletter</a>.
+    <p class="inline-buttons news-follow-us">Folge uns:
+      <span class="share-buttons">
+        <a class="button share-mail" href="/news/newsletter.html">Newsletter</a>
+        <a class="button share-rss" href="/news/news.rss">RSS-Feed</a>
+        <a target="_blank" class="button share-mastodon" href="https://mastodon.social/@fsfe">Mastodon</a>
+        <a target="_blank" class="button share-twitter" href="https://twitter.com/fsfe">Twitter</a>
+      </span>
     </p>
 
-    <div class="share-buttons-sidebar">
-      <a target="_blank" href="newsletter.html">
-        <button class="share-button-sidebar share-mail">Newsletter</button>
-      </a>
-      <a target="_blank" href="news.rss">
-        <button class="share-button-sidebar share-rss">RSS Feed</button>
-      </a>
-    </div>
+    <include-news/>
 
-    <h2>Soziale Medien</h2>
-
+    <h2><a href="2018/index.html">Nachrichtenarchiv</a></h2>
     <p>
-      Für weitere Meldungen folge uns auf
-      <a href="https://mastodon.social/@fsfe">Mastodon</a>,
-      <a href="https://diasp.eu/u/fsfe">Diaspora</a>,
-      <a href="https://twitter.com/fsfe">Twitter</a> und
-      <a href="https://facebook.com/thefsfe">Facebook</a>.
+      Ältere Nachrichten finden sich in unserem Nachrichtenarchiv
+      <a class="learn-more" href="2018/index.html"/>
     </p>
+  </body>
 
-    <div class="share-buttons-sidebar">
-      <a target="_blank" href="https://mastodon.social/@fsfe">
-        <button class="share-button-sidebar share-mastodon">Mastodon</button>
-      </a>
-      <a target="_blank" href="https://diasp.eu/u/fsfe">
-        <button class="share-button-sidebar share-diaspora">Diaspora</button>
-      </a><br/>
-      <a target="_blank" href="https://twitter.com/fsfe">
-        <button class="share-button-sidebar share-twitter">Twitter</button>
-      </a>
-      <a target="_blank" href="https://facebook.com/thefsfe">
-        <button class="share-button-sidebar share-facebook">Facebook</button>
-      </a>
+  <sidebar promo="none">
+    <div class="news-sidebar">
+      <module id="follow-news"/>
+      <module id="social-media"/>
+      <hr/>
+      <module id="video-supporter"/>
     </div>
+  </sidebar>
 
-    <hr/>
-
-    <static-element id="video" />
-  </div>
-</sidebar>
-<translator>Michael Weimann</translator>
+  <translator>Michael Weimann</translator>
 </html>

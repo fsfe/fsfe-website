@@ -5,6 +5,7 @@
   <event start="2015-11-28" end="2015-11-28">
     <title>Yearly Netherlands Fellowshipmeeting in Eindhoven, the Netherlands</title>
     <body>
+      <p>
 
 This year, the Netherlands Fellowshipmeeting will be at <link><a
 href="http://t-dose.org/">T-DOSE</a></link>. T-DOSE is a free and yearly event
@@ -14,12 +15,13 @@ the Fontys University of Applied Science, Rachelsmolen 1, in Eindhoven.
 FSFE Netherlands will be there with a booth on both days. The yearly
 Fellowshipmeeting will start on 28 November at 16:00h. This
 invitation is for everyone interested in the FSFE or Free Software.
-We're looking forward to meeting you there!</body>
+We're looking forward to meeting you there!  </p>
+</body>
     <tags>
-      <tag>front-page</tag>
-      <tag>nl</tag>
-      <tag>fellowship</tag>
-      <tag content="FSFE Fellowshipgroup The Netherlands">fsfenl</tag>
+      <tag key="front-page"/>
+      <tag key="nl"/>
+      <tag key="fellowship"/>
+      <tag key="fsfenl">FSFE Fellowshipgroup The Netherlands</tag>
     </tags>
   </event>
 </eventset>

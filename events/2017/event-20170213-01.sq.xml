@@ -5,16 +5,18 @@
   <event start="2017-02-13" end="2017-02-13">
     <title>Richard Stallman mban një bisedë në Mynster, Gjermani</title>
     <body>
+      <p>
      Të hënën, më 13 shkurt, themeluesi i entit tonë motër do të mbajë një
      bisedë në Mynster (NorthRin-Vestfali). Përkrahësit e FSFE-së do të ngrenë
      një stendë të vogël informative dhe presin të bisedojnë me publikun lidhur
      me Software-in e Lirë në Europë.
+      </p>
     </body>
       <link>http://rg-muensterland.gi.de/veranstaltungen/ankuendigungen.html</link>
     <tags>
-      <tag>front-page</tag>
+      <tag key="front-page"/>
 
-      <tag>talk</tag>
+      <tag key="talk"/>
     </tags>
   </event>
 </eventset>

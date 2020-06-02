@@ -31,7 +31,6 @@
 
 
 <!-- Footer -->
-<text id="lastchanged">Dernière modification : </text>
 <text id="translator1a">Nous remercions </text>
 <text id="translator1b"> pour cette traduction non-officielle. </text>
 <text id="translator2">Cette page est une traduction non-officielle. </text>
@@ -82,38 +81,14 @@ permise sur tout support, pourvu que cette notice soit préservée.
 <text id="fsfe/help">Contribuer</text>
 <text id="fsfe/press">Presse</text>
 <text id="fsfe/contact">Nous contacter</text>
-<text id="support/donate">Faire un don</text>
-<text id="support/support">Nous soutenir</text>
-<text id="support/order">Boutique</text>
-<text id="support/thankgnus">Nos donateurs</text>
 <text id="support/become">Devenez un soutien</text>
-<text id="fellowship/fellowship">La Fellowship</text>
 <text id="fellowship/login">Connexion</text>
-<text id="fellowship/join">Adhérer</text>
-<text id="fellowship/card">Carte</text>
-<text id="fellowship/faq">Questions</text>
-<text id="campaigns/dfd">Journée de Libération des Documents</text>
-<text id="campaigns/fya">Libérez votre Android&#160;!</text>
-<text id="campaigns/pdf">Lecteurs PDF</text>
-<text id="campaigns/ayc">Questionnez vos candidats</text>
-<text id="campaigns/drm">DRM.info</text>
 <text id="news/news">Dernières nouvelles</text>
 <text id="news/events">Évènements à venir</text>
 <text id="news/press">Espace presse</text>
 <text id="news/nl">Lettres d’actualité</text>
 <text id="news/planet">Blogs de l'aggrégateur</text>
-<text id="ftf/legal">Assistance juridique</text>
-<text id="ftf/services">Services et fiducie</text>
-<text id="ftf/doc">Documentation</text>
-<text id="ftf/network">Réseau juridique</text>
-<text id="ftf/conference">Conférences</text>
-<text id="ftf/contact">Contacter l’équipe juridique de la FSFE</text>
-<text id="fs/fs">Logiciel Libre</text>
 <text id="fs/basics">Bases du Logiciel Libre</text>
-<text id="fs/def">Définition</text>
-<text id="fs/soc">Société libre</text>
-<text id="fs/edu">Éducation</text>
-<text id="fs/buz">Économie</text>
 <text id="community/discuss">Discussions sur le Logiciel Libre</text>
 
 <text id="motto-fsfs">Logiciel Libre, Société Libre&#160;!</text>
@@ -128,6 +103,7 @@ permise sur tout support, pourvu que cette notice soit préservée.
 <text id="subscribe">S'abonner</text>
 <text id="email">Addresse e-mail</text>
 <text id="news">Actualité</text>
+<text id="breadcrumb-news">Actualité</text>
 <text id="receive-newsletter">S'abonner à la lettre d'information mensuelle de la FSFE</text>
 <text id="subscribe-newsletter">S’abonner à la lettre d’information</text>
 <text id="events">Évènements</text>
@@ -156,7 +132,6 @@ permise sur tout support, pourvu que cette notice soit préservée.
 
 
 <!-- Article metadata -->
-<text id="author">Auteur</text>
 <text id="writtenby">Par</text>
 <text id="published">le</text>
 <text id="revision">mis-à-jour le</text>
@@ -170,8 +145,13 @@ permise sur tout support, pourvu que cette notice soit préservée.
 <text id="bsig">Entreprises</text>
 
 
+<!-- News and event feeds -->
+<text id="related-news">Autres articles sur le sujet</text>
+<text id="related-events">Évènements associés</text>
+<text id="related-all">Tous les articles et événements associés</text>
+
+
 <!-- Sidebars -->
-<text id="related-news">Communiqués à ce propos</text>
 <text id="our-work">Notre action</text>
 <text id="our-work-intro">
   <p>En tant qu'organisme non gouvernemental (ONG) à but non-lucratif, la Free Software Foundation Europe œuvre à la compréhension de l'intérêt des Logiciels Libres et des Standards Ouverts, ainsi qu'à obtenir le soutien de ceux-ci auprès des politiques, des entreprises, dans les lois et dans la société dans son ensemble.

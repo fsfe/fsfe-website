@@ -6,7 +6,8 @@
    
   <event start="2018-03-10" end="2018-03-11"> 
     <title>Chemnitzer Linux-Tage in Chemnitz, Deutschland</title> 
-    <body> 
+    <body>
+      <p> 
       Die Chemnitzer Linux-Tage sind eine der größten Freie-Software-Konferenzen in
       Deutschland und finden am 10. und 11. März im zentralen Hörsaal- und
       Seminar-Gebäude der Technischen Universität Chemnitz, Reichenhainer
@@ -15,11 +16,12 @@
       <a href="https://chemnitzer.linux-tage.de/2018/en/programm/beitrag/332">am Sonntag, dem 11. März um 10:00 Uhr im Raum V2</a>
       über <a href="https://www.schiessle.org/articles/2017/11/14/software-freedom-in-the-cloud/">Freie Software im Zeitalter der Cloud</a>.
       Der Eintritt zur gesamten Veranstaltung ist frei.
+      </p>
     </body> 
     <link>http://chemnitzer.linux-tage.de/2017/de</link> 
     <tags>
-      <tag>de</tag>
-      <tag>front-page</tag>
+      <tag key="de"/>
+      <tag key="front-page"/>
     </tags>
   </event> 
 </eventset> 

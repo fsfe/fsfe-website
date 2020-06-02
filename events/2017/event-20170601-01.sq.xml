@@ -6,12 +6,14 @@
   <event start="2017-06-01" end="2017-06-01">
     <title>OpenExpo në Madrid, Spanjë</title>
     <body>
+      <p>
       OpenExpo është një konferencë e përvitshme mbi Software-in e Lirë dhe Të dhënat e Hapura, që do të zhvillohet më 1 qershor, 2017 në Madrid. Free Software Foundation Europe do të jetë e pranishme me një stendë informacioni për vizitorët rreth organizmit dhe punës së tij.
+      </p>
     </body>
     <link>http://www.openexpo.es/en/</link>
     <tags>
-      <tag>es</tag>
-      <tag>front-page</tag>
+      <tag key="es"/>
+      <tag key="front-page"/>
     </tags>
   </event>
 </eventset>

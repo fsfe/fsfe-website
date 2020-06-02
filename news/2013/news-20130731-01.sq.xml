@@ -22,9 +22,9 @@ më shumë se një vit në përgatitje, tani janë më të rëndësishme se kurr
     </body>
     <link>https://en.necessaryandproportionate.org/text</link>
     <tags>
-      <tag>front-page</tag>    
-      <tag content="Privatësi">Privacy</tag>
-      <tag content="Survejim">privacy</tag>
+      <tag key="front-page"/>    
+      <tag key="privacy">Privatësi</tag>
+      <tag key="privacy">Survejim</tag>
     </tags>
   </news>
 </newsset>

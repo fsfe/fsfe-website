@@ -6,6 +6,7 @@
   <event start="2011-10-06" end="2011-10-06">
     <title>10 misunderstandings about Free Software (or are they lies?), Berlin, Germany</title>
     <body>
+      <p>
       Matthias Kirschner will give a talk on common misunderstandings about
       Free Software, for instance 'You cannot earn money with Free Software',
       'You cannot have copyright with Free Software', 'Free Software is only
@@ -14,12 +15,13 @@
       event will take place as part of Informatik 2011, organized by the
       Technische Universität Berlin, in in the TU main building Room H 0112,
       Straße des 17. Juni, EG, from 10 to 11 a.m.
+      </p>
     </body>
     <page>http://www.informatik2011.de/studierende.html</page> 
     <tags>
-      <tag>front-page</tag>
-      <tag>de</tag>
-      <tag>Berlin</tag>
+      <tag key="front-page"/>
+      <tag key="de"/>
+      <tag key="berlin"/>
     </tags>
   </event>
 </eventset>

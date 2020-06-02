@@ -4,7 +4,8 @@
 
    <event start="2015-11-21" end="2015-11-22">
    <title>[event cancelled] FSFE at Le Capitole du Libre in Toulouse, France</title>
-   <body>/ Update: <strong>The event has been cancelled</strong> due to the
+   <body>
+     <p>/ Update: <strong>The event has been cancelled</strong> due to the
    Paris shootings. / 
    FSFE will be pleased to join the Toulouse event “Le Capitole du Libre” 
    for the first time. With a booth, FSFE activists are looking forward 
@@ -12,12 +13,13 @@
    and Legal Team member Hugo Roy will give two talks, one is an introduction 
    to free software licenses, the other is a talk about the Skype case, 
    reverse engineering and decompilation law in France and Europe.
+     </p>
    </body>
    <link>https://2015.capitoledulibre.org</link>
    <tags>
-    <tag>Toulouse</tag>
-    <tag>fr</tag>
-    <tag>front-page</tag>
+    <tag key="toulouse"/>
+    <tag key="fr"/>
+    <tag key="front-page"/>
    </tags>
 
 

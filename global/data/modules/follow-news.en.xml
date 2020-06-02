@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+  <version>1</version>
+
+  <module>
+    <h2>Follow our News</h2>
+
+    <p>
+      To keep up with our latest news, subscribe to our RSS feed and visit the
+      different media channels.
+    </p>
+
+    <div class="share-buttons center">
+      <a class="button share-news" href="/news/news.html">FSFE News</a>
+      <a class="button share-rss" href="/news/news.rss">RSS Feed</a>
+      <a class="button share-mail" href="/news/newsletter.html">Newsletter</a>
+      <a class="button share-podcast" href="/news/podcast.html">Podcast</a>
+    </div>
+  </module>
+</data>

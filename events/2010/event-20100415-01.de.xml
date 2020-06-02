@@ -6,6 +6,7 @@
   <event start="2010-04-14" end="2010-04-17">
     <title>"Linuxwochen" in Linz, Österreich</title>
     <body>
+      <p>
       Der Event an der
     <a href="http://www.ufg.ac.at/">Kunstuniversität Linz</a>,
     bietet Workshops, Hacklabs, Präsentationen und Performances im Feld digitaler Kunst-
@@ -13,11 +14,12 @@
     Die FSFE wird sich mit einem Informationsstand präsentieren, wo jede(r) herzlich
     eingeladen ist, sich bei einer gemütlichen Tasse Kaffee über Freie Software 
     zu unterhalten.
+      </p>
     </body>
 
     <page>http://linz.linuxwochen.at/</page>
   <tags>
-    <tag>at</tag>
+    <tag key="at"/>
   </tags>
   </event>
 </eventset>

@@ -6,6 +6,7 @@
   <event start="2013-04-20" end="2013-04-20">
     <title>"Linuxtage" në Grac, Austri</title>
     <body>
+      <p>
     Në veprimtarinë vjetore njëditore në Grac, mjaft biseda paraqitjeje 
     dhe stenda informacioni u ofrojnë vizitorëve mundësinë të përditësohen
     me informacion rreth GNU/Linux-it, Software-it të Lirë dhe projektesh 
@@ -17,10 +18,11 @@
         <li>Albert Dengg: "Çlironi Android-in Tuaj: Sa <i>i lirë</i> është vërtet ky sistem, dhe çfarë mund të bëni për ta përmirësuar gjendjen?"</li>
         <li>Peter Bubestinger: "Regjistroni. Miksoni. Masterizoni: produksion profesional audio me Software të Lirë!"</li>
     </ul>
+      </p>
     </body>
     <page>http://www.linuxtage.at/</page>
   <tags>
-    <tag>at</tag>
+    <tag key="at"/>
   </tags>
   </event>
 </eventset>

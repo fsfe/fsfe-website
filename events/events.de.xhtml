@@ -1,51 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <html>
-  <version>1</version>
+  <version>2</version>
 
   <head>
     <title>Veranstaltungen - FSFE</title>
   </head>
 
-  <body class="toplevel article events">
+  <body class="toplevel article">
     <h1>Veranstaltungen</h1>
-    <h2>Neue Veranstaltung hinzufügen</h2>
 
-    <p>
-      Wenn du von einer FSFE Veranstaltung weißt, die noch nicht gelistet ist
-      oder selber eine veranstaltest, kannst du sie ganz einfach zu dieser Liste hinzufügen,
-      indem du unser <a href="/community/tools/eventregistration.html">Veranstaltungsformular</a> benutzt.
-    </p>
+    <section id="add-event">
+      <h2>Neue Veranstaltung hinzufügen</h2>
 
-    <include-events/>
+      <p>
+        Wenn du von einer FSFE Veranstaltung weißt, die noch nicht gelistet ist
+        oder selber eine veranstaltest, kannst du sie ganz einfach zu dieser Liste hinzufügen,
+        indem du unser <a href="/community/tools/eventregistration.html">Veranstaltungsformular</a> benutzt.
+      </p>
+    </section>
 
-    <h2><a href="2017/2017.html">Veranstaltungsarchive</a></h2>
+    <section id="current-events">
+      <include-events group="current">Aktuelle Veranstaltungen</include-events>
+    </section>
+    <section id="future-events">
+      <include-events group="future">Kommende Veranstaltungen</include-events>
+    </section>
+    <section id="past-events">
+      <include-events group="past">Vergangene Veranstaltungen</include-events>
+    </section>
 
-    <p>
-      Für ältere Veranstaltungen, schaue in unseren Veranstaltungsarchiven.
-      <a class="learn-more" href="2017/2017.html"/>
-    </p>
+    <section id="events-archive">
+      <h2><a href="2018/index.html">Veranstaltungsarchive</a></h2>
+
+      <p>
+        Für ältere Veranstaltungen, schaue in unseren Veranstaltungsarchiven.
+        <a class="learn-more" href="2018/index.html"/>
+      </p>
+    </section>
   </body>
 
   <sidebar promo="none">
-    <h2>Folge unseren Veranstaltungen</h2>
-
-    <p>
-      Die Free Software Foundation Europe ist immer wieder bei Veranstaltungen rund um Freie Software präsent.
-      Offizielle Veranstaltungen werden auf dieser Seite veröffentlicht.
-      Um sicher zu gehen, dass du keine Veranstaltung verpasst, kannst du unsere Veranstaltungen über
-      <a href="events.rss">RSS</a> oder als
-      <a href="webcal://fsfe.org/events/events.ics">iCalendar</a> abonnieren.
-    </p>
-
-    <div class="share-buttons-sidebar">
-      <a target="_blank" href="events.rss">
-        <button class="share-button-sidebar share-rss">RSS Feed</button>
-      </a>
-      <a target="_blank" href="webcal://fsfe.org/events/events.ics">
-        <button class="share-button-sidebar share-cal">iCalendar</button>
-      </a>
-    </div>
+    <module id="follow-events"/>
 
     <h2>Neue Veranstaltung hinzufügen</h2>
 
@@ -75,10 +71,6 @@
       Falls du Interesse hast, dann informiere dich, um sie nicht zu verpassen.
     </p>
   </sidebar>
-
-  <text id="current">Aktuelle Veranstaltungen</text>
-  <text id="future">Kommende Veranstaltungen</text>
-  <text id="past">Vergangene Veranstaltungen</text>
 </html>
 
 <!--

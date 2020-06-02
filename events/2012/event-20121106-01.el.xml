@@ -6,6 +6,7 @@
    <event start="2012-11-06" end="2012-11-06">
    <title>Ομιλία του Karsten Gerloff στο LinuxCon Europe 2012</title>
    <body>
+     <p>
 Ο
 <a hfref= "http://events.linuxfoundation.org/events/linuxcon-europe/schedule">
 Karsten Gerloff</a>, πρόεδρος του FSFE, θα δώσει μια ομιλία σχετικά
@@ -16,13 +17,14 @@ LinuxcConEurope</a>. Με τίτλο
 <a href="http://events.linuxfoundation.org/events/linuxcon-europe/schedule"> 
 "All watched over by machines of loving grace?"</a>, η ομιλία θα αρχίσει στις
 13:20 στο ξενοδοχείο Fira Palace
+  </p>
 </body>
    <link>hhttp://events.linuxfoundation.org/events/linuxcon-europe/schedule</link>
    <tags>
-    <tag>es</tag>
-    <tag>Barcelona</tag>
-    <tag>Linuxcon Europe</tag>
-    <tag>front-page</tag>
+    <tag key="es"/>
+    <tag key="barcelona"/>
+    <tag key="linuxcon-europe"/>
+    <tag key="front-page"/>
    </tags>
   </event>
 </eventset>

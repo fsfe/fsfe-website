@@ -1,68 +1,62 @@
 <?php
 /*
+* SPDX-FileCopyrightText: 2019 Free Software Foundation Europe e.V. <https://fsfe.org>
+* SPDX-FileCopyrightText: 2018 Daniel Martin Gomez
+* SPDX-License-Identifier: AGPL-3.0-or-later
+*
 * share-buttons: Share buttons for many social networks and services
-* Copyright (C) 2018 Max Mehl <max.mehl@fsfe.org>, Paul Hänsch <paul@fsfe.org>
-*
-* This program is free software: you can redistribute it and/or modify it under
-* the terms of the GNU Affero General Public License as published by the Free
-* Software Foundation, either version 3 of the License, or (at your option) any
-* later version.
-*
-* This program is distributed in the hope that it will be useful, but WITHOUT
-* ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
-* FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more
-* details <http://www.gnu.org/licenses/>.
+* Upstream: https://git.fsfe.org/FSFE/share-buttons
 */
 
-// Change these variables
-$gnusocialuser = "@fsfe@quitter.no";
-$mastodonuser = "@fsfe@mastodon.social";
-$twitteruser = "fsfe";
-$flattruser = "fsfe";
-$supporturl = "https://fsfe.org/donate?share";
+/* load config. You normally don't want to edit something here */
+require_once 'share-config.php';
+$fediverseuser = $config['fediverseuser'];
+$diasporauser = $config['diasporauser'];
+$twitteruser = $config['twitteruser'];
+$flattruser = $config['flattruser'];
+$supporturl = $config['supporturl'];
 
-// Don't change below here
 $service = isset($_GET['service']) ? $_GET['service'] : false;
 $url = isset($_GET['url']) ? $_GET['url'] : false;
 $title = isset($_GET['title']) ? $_GET['title'] : false;
 $ref = isset($_GET['ref']) ? $_GET['ref'] : false;
-$diasporapod = isset($_GET['diasporapod']) ? $_GET['diasporapod'] : false;
-$gnusocialpod = isset($_GET['gnusocialpod']) ? $_GET['gnusocialpod'] : false;
-$mastodonpod = isset($_GET['mastodonpod']) ? $_GET['mastodonpod'] : false;
+$fediversepod = isset($_GET['fediversepod']) ? $_GET['fediversepod'] : false;
 
 if(empty($service) || empty($url)) {
   echo 'At least one required variable is empty. You have to define at least service and url';
 } else {
   $service = htmlspecialchars($service);
-  $diasporapod = htmlspecialchars($diasporapod);
-  $gnusocialpod = htmlspecialchars($gnusocialpod);
-  $mastodonpod = htmlspecialchars($mastodonpod);
+  $fediversepod = htmlspecialchars($fediversepod);
   $url = urlencode($url);
   $title = urlencode($title);
-  
+
   /* Special referrers for FSFE campaigns */
   if($ref == "pmpc-side" || $ref == "pmpc-spread") {
-    $via_gs = "";
-    $via_ma = "";
+    $via_fed = "";
     $via_tw = "";
-    $supporturl = "https://fsfe.org/donate?pmpc";
+    $via_dia = "";
+    $supporturl = "https://my.fsfe.org/donate?referrer=pmpc";
   } else {
-    $via_gs = " via " . $gnusocialuser;
-    $via_ma = " via " . $mastodonuser;
+    $via_fed = " via " . $fediverseuser;
     $via_tw = "&via=" . $twitteruser;
+    $via_dia = " via " . $diasporauser;
   }
-  
-  if ($service === "diaspora") {
-    $diasporapod = validateurl($diasporapod);
-    header("Location: " . $diasporapod . "/bookmarklet?url=" . $url . "&title=" . $title);
-    die();
-  } elseif($service === "gnusocial") {
-    $gnusocialpod = validateurl($gnusocialpod);
-    header("Location: " . $gnusocialpod . "/notice/new?status_textarea=" . $title . " " . $url . $via_gs);
-    die();
-  } elseif($service === "mastodon") {
-    $mastodonpod = validateurl($mastodonpod);
-    header("Location: " . $mastodonpod . "/share?text=" . $title . " " . $url . $via_ma);
+
+  if ($service === "fediverse") {
+    $fediversepod = validateurl($fediversepod);
+    $fediverse = which_fediverse($fediversepod);
+    if($fediverse === "mastodon") {
+      // Mastodon
+      header("Location: " . $fediversepod . "/share?text=" . $title . " " . $url . $via_fed);
+    } elseif($fediverse === "diaspora") {
+      // Diaspora
+      header("Location: " . $fediversepod . "/bookmarklet?url=" . $url . "&title=" . $title . $via_dia);
+    } elseif($fediverse === "gnusocial") {
+      // GNU Social
+      header("Location: " . $fediversepod . "/notice/new?status_textarea=" . $title . " " . $url . $via_fed);
+    } else {
+      echo 'Your Fediverse instance is unknown. We cannot find out which service it belongs to, sorry.';
+    }
     die();
   } elseif($service === "reddit") {
     header("Location: https://reddit.com/submit?url=" . $url . "&title=" . $title);
@@ -90,12 +84,63 @@ if(empty($service) || empty($url)) {
   }
 }
 
-// If diaspora/GS/Mastodon pod has been typed without http(s):// prefix, add it
+// Sanitise URLs
 function validateurl($url) {
+  // If Fediverse pod has been typed without http(s):// prefix, add it
   if (preg_match('#^https?://#i', $url) === 0) {
-    return 'https://' . $url;
+    $url = 'https://' . $url;
+  }
+  // remove trailing spaces and slashes
+  $url = trim($url, " /");
+
+  return $url;
+}
+
+// Is $pod a Mastodon instance or a GNU Social server?
+function getFediverseNetwork($pod) {
+$curl = curl_init($pod . "/api/statusnet/version.xml");
+curl_exec($curl);
+$code = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+curl_close($curl);
+if ($code == 200) {
+  // GNU social server
+  return 0;
+} else {
+  // Mastodon server
+  return 1;
+}
+}
+
+function which_fediverse($pod) {
+  if (check_httpstatus($pod . "/api/v1/instance")) {
+    // Mastodon
+    return "mastodon";
+  } elseif (check_httpstatus($pod . "/api/statusnet/version.xml")) {
+    // GNU social
+    return "gnusocial";
+  } elseif (check_httpstatus($pod . "/users/sign_in")) {
+    // Diaspora
+    return "diaspora";
   } else {
-    return $url;
+    return "none";
+  }
+}
+
+function check_httpstatus($url) {
+  $headers = get_headers($url, 1);
+  // check up to 2 redirections
+  if (array_key_exists('2', $headers)) {
+    $httpstatus = $headers[2];
+  } elseif (array_key_exists('1', $headers)) {
+    $httpstatus = $headers[1];
+  } else {
+    $httpstatus = $headers[0];
+  }
+  // check if HTTP status is 200
+  if (strpos($httpstatus, '200 OK') !== false) {
+    return true;
+  } else {
+    return false;
   }
 }
 

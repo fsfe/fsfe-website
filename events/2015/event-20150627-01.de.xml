@@ -5,19 +5,21 @@
   <event start="2015-06-27" end="2015-06-27">
     <title>Fellowship Infostand zum "Grünen Tag" in Frankfurt, Germany</title>
     <body>
+      <p>
 Am Samstag, den 27. Juni präsentiert die
 Fellowship-Gruppe Rhein/Main Freie Software und die
 FSFE mit einem Informationsstand auf dem "Grünen Tag",
 einer Veranstaltung der von Bündnis90/Die Grünen
 Hessen zum Thema Ehrenamt. Die Veranstaltung findet im
 Spenerhaus in Frankfurt statt.
+      </p>
     </body> 
       <link>http://www.gruene-hessen.de/partei/gruener-tag-2015/ </link>
     <tags>
-      <tag>front-page</tag>
-      <tag>de</tag>
-      <tag>fellowship</tag>
-      <tag content="Local group Rhine/Main">fsferm</tag>
+      <tag key="front-page"/>
+      <tag key="de"/>
+      <tag key="fellowship"/>
+      <tag key="fsferm">Local group Rhine/Main</tag>
     </tags>
   </event>
 </eventset>

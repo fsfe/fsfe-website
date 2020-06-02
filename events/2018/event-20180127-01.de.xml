@@ -5,6 +5,7 @@
   <event start="2018-01-27" end="2018-01-27">
     <title>Give it away! Game-Launch im Rahmen von Game ON Stage Reloaded</title>
     <body>
+      <p>
       Am 27.01.2018 findet um 18:00 Uhr im FFT Düsseldorf, Juta,
       Kasernenstraße 6, 40213 Düsseldorf, in Kooperation mit der FSFE ein
       Gespräch rund um Games, Theater und Freie Lizenzen statt.
@@ -13,11 +14,12 @@
       der etwas über Lizenzen Freier Software und Freie Lizenzen sonstiger
       Werke erzählen wird, sowie für das anschließende Gespräch zur Verfügung
       steht.
+      </p>
     </body>
     <page>https://fft-duesseldorf.de/stueck/give-it-away/</page>
     <tags>
-      <tag>de</tag>
-      <tag>front-page</tag>
+      <tag key="de"/>
+      <tag key="front-page"/>
     </tags>
   </event>
 </eventset>

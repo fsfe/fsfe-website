@@ -5,20 +5,22 @@
   <event start="2016-01-30" end="2015-01-31">
 	<title>FOSDEM 2016</title>
 	<body>
+  <p>
 	Dit jaar zal FOSDEM in Brussel gehouden worden op 30 en 31 januari.
 	FSFE zal tenminste deelnemen met een kraam en er zullen vele Fellows,
 	coördinatoren en stafleden aanwezig zijn. Zoals ieder jaar kijken we uit naar de vele ontmoetingen en discussies en een fijne tijd voor ons allen.
+    </p>
   </body>
   <page>https://fosdem.org/2016/</page>
   <tags>
-	<tag>fr</tag>
-	<tag>bnl</tag>
-	<tag content="België">BE</tag>
-	<tag content="Brussel">Brussels</tag>
-	<tag content="FOSDEM">Fosdem</tag>
-	<tag content="Fellowship">Fellowship</tag>
-	<tag content="kraam">infobooth</tag>
-	<tag content="voorpagina">front-page</tag>
+	<tag key="fr"/>
+	<tag key="bnl"/>
+	<tag key="be">België</tag>
+	<tag key="brussels">Brussel</tag>
+	<tag key="fosdem">FOSDEM</tag>
+	<tag key="fellowship">Fellowship</tag>
+	<tag key="infobooth">kraam</tag>
+	<tag key="front-page">voorpagina</tag>
   </tags>
 </event>
 </eventset> 

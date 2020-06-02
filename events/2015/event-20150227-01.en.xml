@@ -5,6 +5,7 @@
   <event start="2015-02-27" end="2015-03-13">
     <title>Fellowship Elections 2015</title>
     <body>
+      <p>
         Fellows of the FSFE will have a vote for the seventh elections for FSFE's
         Fellowship representative. Every Fellow who is allowed to
         vote should have received an email from “FSFE Fellowship (CIVS poll supervisor)”
@@ -18,11 +19,12 @@
           Felix Stegerman,
           Max Mehl and
           Nicolas Dietrich.
+      </p>
     </body> 
     <link>https://wiki.fsfe.org/FellowshipElection_2015</link>
     <tags>
-      <tag>front-page</tag>
-      <tag>fellowship</tag>
+      <tag key="front-page"/>
+      <tag key="fellowship"/>
     </tags>
   </event>
 </eventset>

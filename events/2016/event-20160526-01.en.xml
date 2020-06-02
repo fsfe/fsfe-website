@@ -8,7 +8,8 @@
  
 		<title>foss-north 2016 in Gothenburg, Sweden</title> 
  
-		<body> 
+		<body>
+  <p> 
 The foss-north conference is a software and hardware related event
 with a technical perspective, hosted in Gothenburg and providing a
 meeting place for Nordic foss communities to come together. The FSFE's
@@ -18,13 +19,14 @@ the Linux kernel and in the White Rabbit network at CERN</i>, and
 FSFE's Executive Director, Jonas Öberg, will present a talk about
 the <i>State of Free Software in Europe (and elsewhere)</i>.
 
-		</body> 
+		  </p>
+</body> 
  
 
 		<tags>
-			<tag>Gothenburg</tag>
-			<tag>se</tag>
-			<tag>front-page</tag>
+			<tag key="gothenburg"/>
+			<tag key="se"/>
+			<tag key="front-page"/>
 		</tags>
 
  

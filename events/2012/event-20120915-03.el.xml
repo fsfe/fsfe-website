@@ -5,18 +5,20 @@
 	<event start="2012-09-15" end="2012-09-15">
 	<title>Ημέρα Ελευθερίας Λογισμικού με τα Μέλη του Μάντσεστερ</title>
 		<body>
+  <p>
 			Τα Μέλη στο Μάντσεστερ θα συναντηθούν για να 
 αποφασίσουν το βέλτιστο τρόπο για φωνητική και οπτική συνομιλία (chat) 
 με χρήση Ελεύθερου Λογισμικού. Μεταξύ 14.00-17.00 στο 
 <a href="http://madlab.org.uk/">Madlab Hackerspace</a> υποστηρικτές θα 
 δοκιμάσουν ποιο πρόγραμμα είναι συμβατό με ποιο και θα δημοσιεύσουν έναν
 πίνακα αποτελεσμάτων για δημόσια χρήση.
-		</body>
+		  </p>
+</body>
 		<page>http://wiki.fsfe.org/groups/Manchester</page>
 		<tags>
-			<tag>front-page</tag>
-			<tag>fellowship</tag>
-			<tag>gb</tag>
+			<tag key="front-page"/>
+			<tag key="fellowship"/>
+			<tag key="gb"/>
 		</tags>
 	</event>
 </eventset>

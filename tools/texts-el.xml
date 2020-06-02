@@ -15,7 +15,6 @@
 
 
 <!-- Footer -->
-<text id="lastchanged"> Τελευταία αλλαγή: </text>
 <text id="translator1a">Ευχαριστούμε </text>
 <text id="translator1b"> για αυτήν τη μετάφραση. </text>
 <text id="translator2">Αυτή είναι μια ανεπίσημη μετάφραση. </text>
@@ -65,37 +64,13 @@
 <text id="fsfe/help">Συμβάλλετε</text>
 <text id="fsfe/press">Τύπος</text>
 <text id="fsfe/contact">Επικοινωνήστε μαζί μας</text>
-<text id="support/donate">Δωρεές</text>
-<text id="support/support">Υποστήριξη</text>
-<text id="support/order">Κατάστημα</text>
-<text id="support/thankgnus">Δωροθέτες</text>
-<text id="fellowship/fellowship">Κοινότητα</text>
 <text id="fellowship/login">Σύνδεση</text>
-<text id="fellowship/join">Εγγραφή</text>
-<text id="fellowship/card">Κάρτα</text>
-<text id="fellowship/faq">Συχνές ερωτήσεις</text>
-<text id="campaigns/dfd">Ημέρα Ελευθερίας Εγγράφων</text>
-<text id="campaigns/fya">Ελευθερώστε το Android σας</text>
-<text id="campaigns/pdf">Προγράμματα ανάγνωσης αρχείων PDF</text>
-<text id="campaigns/ayc">Ρωτήστε τους υποψηφίους σας</text>
-<text id="campaigns/drm">DRM.info</text>
 <text id="news/news">Τελευταία νέα</text>
 <text id="news/events">Επόμενες εκδηλώσεις</text>
 <text id="news/press">Αίθουσα Τύπου</text>
 <text id="news/nl">Ενημερωτικά δελτία</text>
 <text id="news/planet">Ιστολόγια Μελών</text>
-<text id="ftf/legal">Νομική υποστήριξη</text>
-<text id="ftf/services">Υπηρεσίες και Εμπιστευτικότητα</text>
-<text id="ftf/doc">Τεκμηρίωση</text>
-<text id="ftf/network">Νομικό δίκτυο</text>
-<text id="ftf/conference">Συνέδρια</text>
-<text id="ftf/contact">Επαφή με τη Νομική Ομάδα του FSFE</text>
-<text id="fs/fs">Ελεύθερο Λογισμικό</text>
 <!-- !! MISSING TRANSLATION --> <text id="fs/basics">Free Software Basics</text>
-<text id="fs/def">Ορισμός</text>
-<text id="fs/soc">Ελεύθερη Κοινωνία</text>
-<text id="fs/edu">Εκπαίδευση</text>
-<text id="fs/buz">Επιχειρήσεις</text>
   <text id="community/discuss">Συζητήσεις για το Ελεύθερο Λογισμικό</text>
 <text id="motto-fsfs">Ελεύθερο Λογισμικό, Ελεύθερη Κοινωνία!</text>
 <text id="motto-fellowship">Εγγραφείτε στην κοινότητα του FSFE!</text>
@@ -108,6 +83,7 @@
 <text id="subscribe">Εγγραφή</text>
 <!-- !! MISSING TRANSLATION --> <text id="email">email address</text>
 <text id="news">Νέα</text>
+<text id="breadcrumb-news">Νέα</text>
 <text id="receive-newsletter">Εγγραφείτε για το μηνιαίο ενημερωτικό δελτίο του FSFE</text>
 <text id="subscribe-newsletter">Εγγραφείτε για το ενημερωτικό δελτίο</text>
 <text id="events">Εκδηλώσεις</text>
@@ -133,7 +109,6 @@
 
 
 <!-- Article metadata -->
-<text id="author">Συγγραφέας</text>
 <text id="writtenby">Δημοσίευση</text>
 <text id="published"/>
 <text id="revision">ενημέρωση</text>
@@ -146,8 +121,13 @@
 <text id="bsig">Επιχειρήσεις</text>
 
 
+<!-- News and event feeds -->
+<text id="related-news">Σχετικά Νέα</text>
+<!-- !! MISSING TRANSLATION --> <text id="related-events">Related Events</text>
+<!-- !! MISSING TRANSLATION --> <text id="related-all">All related news and events</text>
+
+
 <!-- Sidebars -->
-<text id="related-news">Σχετικές ειδήσεις</text>
 <text id="our-work">Η εργασία μας</text>
 <text id="our-work-intro">
   <p>Ως μια μη-κερδοσκοπική, μη-κυβερνητική οργάνωση,

@@ -5,22 +5,24 @@
 
   <event start="2012-03-17" end="2012-03-18">
     <title>FSFE at the Chemnitzer Linuxtage</title>
-    <body> The "Chemnitz Linux Days" is a conference that deals with GNU/Linux
+    <body>
+      <p> The "Chemnitz Linux Days" is a conference that deals with GNU/Linux
      and Free Software . It is open for everyone, novizes and experts alike.
      The FSFE will be present with a booth where you can inform yourself about
      our work and to get to know the people behind FSFE. In addition, <a
-      href="/about/kirschner/kirschner.html">Matthias
+      href="/about/people/kirschner/kirschner.html">Matthias
       Kirschner</a> – Fellowship Coordinator and Coordinator of the German
      team – will give a <a
       href="http://chemnitzer.linux-tage.de/2012/vortraege/860">talk about
       "Non-free software advertisement presented by your government"</a> on
      Saturday, 17.03. at 16:30 in Raum V1.
+      </p>
     </body>
     <link>http://chemnitzer.linux-tage.de/2012/info/</link>
     <tags>
-      <tag>front-page</tag>
-      <tag>de</tag>
-      <tag>clt</tag>
+      <tag key="front-page"/>
+      <tag key="de"/>
+      <tag key="clt"/>
     </tags>
   </event>
 </eventset>

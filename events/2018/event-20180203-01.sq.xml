@@ -5,18 +5,20 @@
   <event start="2018-02-03" end="2018-02-04">
     <title>FOSDEM 2017, Bruksel, Belgjikë</title>
     <body>
+      <p>
       FOSDEM, konferenca më e madhe në Europë për Software-in e Lirë, zhvillohet më
       3 dhe 4 shkurt në Campus Solbosch të Free University Brussels (ULB).
       Hyrja është falas.<br />
       Si zakonisht, FSFE-ja do të jetë e pranishme me një stendë dhe do të
       paraqesë të rejat nga puna e saj, një gamë të gjerë materiali promocional
       ngjitësa dhe kartolina, dhe sigurisht <a href="/order/order.en.html">modën më të re FSFE</a>.
+      </p>
     </body>
     <page>https://fosdem.org/2018/</page>
     <tags>
-      <tag>fr</tag>
-      <tag>bnl</tag>
-      <tag>front-page</tag>
+      <tag key="fr"/>
+      <tag key="bnl"/>
+      <tag key="front-page"/>
     </tags>
   </event>
 </eventset>

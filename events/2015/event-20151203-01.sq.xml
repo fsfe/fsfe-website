@@ -6,6 +6,7 @@
   <event start="2015-12-03" end="2015-12-03">
 	  <title>Marrja përsipër e drejtimit: Vendosja e standardeve të së ardhmes</title>
     <body>
+      <p>
      Jonas Öberg, drejtori ekzekutiv i FSFE-së, do të mbajë fjalën
      kryesore në FOSSCon Korea, për të folur mbi se si i ka dhënë
      formë mjedisit të software-it të lirë vitet e fundit një 
@@ -15,14 +16,15 @@
      standardeve për software-in e lirë në të ardhmen.
      FOSSCon Korea organizohet nga Agjencia Kombëtare Koreane e Promovimit
      të Industrisë TI.
+      </p>
     </body> 
     <tags>
-      <tag>front-page</tag>
+      <tag key="front-page"/>
 
-    <tag>Seoul</tag>
-    <tag>Policy</tag>
-    <tag>Legal</tag>
-      <tag content="Bisedë">talk</tag>
+    <tag key="seoul"/>
+    <tag key="policy"/>
+    <tag key="legal"/>
+      <tag key="talk">Bisedë</tag>
     </tags>
   </event>
 </eventset>

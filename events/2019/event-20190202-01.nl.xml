@@ -3,8 +3,9 @@
   <version>1</version>
 
   <event start="2019-02-02" end="2019-02-03">
-    <title>FOSDEM 2019, Brussel, Belgie</title>
+    <title>FOSDEM 2019, Brussel, België</title>
     <body>
+      <p>
       Europa's grootste Vrije Software-conferentie FOSDEM vindt plaats op 2 en 3
       februari op Campus Solbosch van de Vrije Universiteit Brussel (ULB).
       Toegang is gratis.<br />
@@ -12,12 +13,13 @@
       laatste nieuws van haar werk, een brede collectie informatie-materiaal,
       stickers, kaarten en natuurlijk de nieuwste
       <a href="/order/order.html">FSFE-mode</a>.
+      </p>
     </body>
     <page>https://fosdem.org/2019/</page>
     <tags>
-      <tag>fr</tag>
-      <tag>bnl</tag>
-      <tag>front-page</tag>
+      <tag key="fr"/>
+      <tag key="bnl"/>
+      <tag key="front-page"/>
     </tags>
   </event>
 </eventset>

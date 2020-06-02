@@ -1,84 +1,94 @@
-<?xml version="1.0" encoding="UTF-8"?> 
+<?xml version="1.0" encoding="UTF-8"?>
 
 <html>
-  <version>1</version>
+  <version>2</version>
 
   <head>
     <title>FSFE - Free Software Foundation Europe</title>
-    <script src="/scripts/jquery.cycle2.min.js" type="text/javascript"></script>
-    <meta name="description" content="Gemeinnützige Organisation, die für ein allgemeines Verständnis und Unterstützung von Freier Software arbeitet. Beinhaltet Meldungen, Veranstaltungen und Kampagnen." />
-    <meta name="keywords" content="fsfe Freie Software Open Source foss floss oss fsf Regierung Öffentliche Verwaltung gpl" />
+    <meta
+      name="description"
+      content="Gemeinnützige Organisation, die für ein allgemeines Verständnis
+        und Unterstützung von Freier Software arbeitet. Beinhaltet Meldungen,
+        Veranstaltungen und Kampagnen."/>
+    <meta
+      name="keywords"
+      content="fsfe Freie Software Open Source foss floss oss fsf Regierung
+        Öffentliche Verwaltung gpl"/>
   </head>
 
-  <body class="frontpage" id="index-html">
-    <campaigns />
+  <body class="frontpage">
+    <h1 class="hidden">Free Software Foundation Europe</h1>
 
-    <h1 class="hide">Free Software Foundation Europe</h1>
+    <div class="introduction">
+      <p>
+        Die Free Software Foundation Europe ist ein gemeinnütziger Verein, der
+        Menschen im selbstbestimmten Umgang mit Technik unterstützt.
+      </p>
 
-    <div id="feeds">
-      <div id="news" class="section">
-        <h2>
-          <a href="/news/news.html"><news-label /></a>
-          <a class="rss-feed" href="/news/news.rss" title="RSS-Feed der Meldungen"><i class="fa fa-rss"></i></a>
-	  <a class="ical" href="https://mastodon.social/@fsfe" title="FSFE auf Mastodon folgen" rel="me"><i class="fa fa-comments-o"></i></a>
-        </h2>
+      <p>
+        Software ist in allen Aspekten unseres Lebens tief verankert. Freie
+        Software gibt allen das Recht, Programme für jeden Zweck zu verwenden,
+        zu verstehen, zu verbreiten und zu verbessern. Diese Rechte stärken
+        andere Grundrechte wie die Redefreiheit, die Pressefreiheit und das
+        Recht auf Privatsphäre.
+        <a class="learn-more" href="/freesoftware/index.html">Mehr darüber...</a>
+      </p>
+    </div>
 
-        <all-news />
+    <h2>
+      Neuigkeiten
+      <a class="learn-more" href="/news/index.html">Mehr&#160;davon...</a>
+    </h2>
 
-        <div class="more-news">
-          <a href="/news/news.html" class="learn-more">Alle Meldungen</a>
-          <a href="https://planet.fsfe.org/en" class="learn-more community-blog-link">Community-Blogs</a>
-        </div>
+    <div class="news">
+      <dynamic-content-news/>
+    </div>
+
+    <module id="banner-subscribe"/>
+
+    <h2>
+      Unsere Gemeinschaft
+      <a class="learn-more" href="/contribute/index.html">Mitmachen...</a>
+    </h2>
+
+    <div class="testimonials">
+      <dynamic-content-testimonials/>
+    </div>
+
+    <module id="banner-become-supporter"/>
+
+    <h2>Ihre nächsten Schritte</h2>
+
+    <div class="next-steps">
+      <div class="column">
+        <h3>Informationsmaterial</h3>
+        <a href="/contribute/spreadtheword.html">
+          <img src="/graphics/infomaterial-450px.png" alt=""/>
+        </a>
+        <p>
+          <a class="learn-more" href="/contribute/spreadtheword.html">Material bekommen...</a>
+        </p>
       </div>
 
-      <div id="newsletter" class="section">
-        <static-element id="video" />
-
-        <h2 class="home-newsletter-label">
-          <newsletter-label />
-        </h2>
-
-        <subscribe-nl />
-
-        Zum <a href="/news/newsletter.html">Archiv</a>
+      <div class="column events">
+        <h3>Veranstaltungen</h3>
+        <dynamic-content-events/>
+        <p>
+          <a class="learn-more" href="/events/events.html">Alle Veranstaltungen...</a>
+        </p>
       </div>
 
-      <hr />
-
-      <div id="events" class="section">
-        <h2>
-          <a href="/events/events.html"><events-label /></a>
-          <a class="rss-feed" href="/events/events.rss" title="events RSS feed"><i class="fa fa-rss"></i></a>
-          <a class="ical" href="webcal://fsfe.org/events/events.ics" title="FSFE events as iCal feed"><i class="fa fa-calendar-o"></i></a>
-        </h2>
-
-        <all-events />
-      </div>
-
-      <div id="shop-promo" class="section">
-        <div class="home-shop-block">
-          <a href="/contribute/spreadtheword.html" class="home-order-image-container">
-            <img src="/graphics/infomaterial-450px.png" alt="" class="home-order-image" />
-          </a>
-          <a class="big-donate" href="/contribute/spreadtheword.html">Infomaterial</a>
-        </div>
-
-        <div class="home-shop-block">
-          <a href="/order/order.html?ref-frontpage" class="home-order-image-container">
-            <img src="/graphics/t-shirt-promo-v2.png" alt="" class="home-order-image" />
-          </a>
-          <a class="big-donate" href="/order/order.html?ref-frontpage">Fanartikel</a>
-        </div>
+      <div class="column">
+        <h3>Fanartikel</h3>
+        <a href="/order/index.html">
+          <img src="/graphics/t-shirt-promo-v2.png" alt=""/>
+        </a>
+        <p>
+          <a class="learn-more" href="/order/index.html">Einkaufen...</a>
+        </p>
       </div>
     </div>
   </body>
 
-  <followup>join</followup>
-  <timestamp>$Date$ $Author$</timestamp>
-</html> 
-<!--
-Local Variables: ***
-mode: xml ***
-End: ***
--->
- 
+  <followup>no</followup>
+</html>

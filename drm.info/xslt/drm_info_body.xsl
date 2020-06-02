@@ -2,16 +2,13 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-  <!-- xsl:import href="../../build/xslt/fsfe_headings.xsl" / -->
-  <xsl:include href="../../build/xslt/notifications.xsl" />
-  <!--xsl:include href="../../build/xslt/fsfe_followupsection.xsl" /-->
-  <xsl:include href="../../build/xslt/translation_list.xsl" />
-  <xsl:include href="../../build/xslt/footer_sitenav.xsl" />
-  <xsl:include href="../../build/xslt/footer_sourcelink.xsl" />
-  <xsl:include href="../../build/xslt/footer_legal.xsl" />
-  <xsl:include href="../../build/xslt/gettext.xsl" />
+  <!-- Prefix for links to FSFE's main website -->
+  <xsl:variable name="urlprefix">https://fsfe.org</xsl:variable>
 
-  <xsl:include href="../../tools/xsltsl/static-elements.xsl" />
+  <xsl:include href="../../build/xslt/notifications.xsl" />
+  <xsl:include href="../../build/xslt/translation_list.xsl" />
+  <xsl:include href="../../build/xslt/gettext.xsl" />
+  <xsl:include href="../../build/xslt/static-elements.xsl" />
 
   <xsl:template name="page-body">
     <xsl:element name="body">
@@ -28,7 +25,7 @@
             <xsl:attribute name="class">slogan2</xsl:attribute>
              What you should know about Digital Restrictions Management
           </xsl:element>
- 
+
           <xsl:element name="a">
             <xsl:attribute name="href">http://drm.info</xsl:attribute>
             <xsl:element name="img">
@@ -39,8 +36,7 @@
 	<xsl:call-template name="translation_list" />
         </xsl:element>
 
-
-		<xsl:element name="div">
+	<xsl:element name="div">
           <xsl:attribute name="id">menu</xsl:attribute>
 	  <xsl:element name="div">
             <xsl:attribute name="class">container</xsl:attribute>
@@ -95,34 +91,26 @@
         </xsl:element>
 
       </xsl:element>
-      
-
-
- 
-<!--      <xsl:call-template name="notifications" /> -->
 
       <xsl:element name="div"> <xsl:attribute name="id">body</xsl:attribute>
-	
-          <xsl:apply-templates select="body/node()" />
-<!--	</xsl:element> -->
-<!--      </xsl:element> -->
-      
-    
-      <xsl:element name="div"><xsl:attribute name="class">col3</xsl:attribute>
-	<xsl:element name="h3">Powered By</xsl:element>
-        <xsl:element name="ul">
-           <xsl:attribute name="class">links</xsl:attribute>
-           <xsl:element name="li">
-             <xsl:element name="a"><xsl:attribute name="href">https://fsfe.org/</xsl:attribute>
-               <xsl:element name="img">
-                 <xsl:attribute name="src">logos/logosmall.png</xsl:attribute>
-                 <xsl:attribute name="alt">FSFE</xsl:attribute>
-                 <xsl:attribute name="title">FSF Europe</xsl:attribute>
-               </xsl:element>
-             </xsl:element>
-           </xsl:element>
-</xsl:element>
-        
+
+        <xsl:apply-templates select="body/node()" />
+
+        <xsl:element name="div"><xsl:attribute name="class">col3</xsl:attribute>
+	  <xsl:element name="h3">Powered By</xsl:element>
+          <xsl:element name="ul">
+            <xsl:attribute name="class">links</xsl:attribute>
+            <xsl:element name="li">
+              <xsl:element name="a"><xsl:attribute name="href">https://fsfe.org/</xsl:attribute>
+                <xsl:element name="img">
+                  <xsl:attribute name="src">logos/logosmall.png</xsl:attribute>
+                  <xsl:attribute name="alt">FSFE</xsl:attribute>
+                  <xsl:attribute name="title">FSF Europe</xsl:attribute>
+                </xsl:element>
+              </xsl:element>
+            </xsl:element>
+          </xsl:element>
+
 
 	 <xsl:element name="h4">In Collaboration with</xsl:element>
 	 <xsl:element name="ul">
@@ -165,21 +153,8 @@
            </xsl:element>
 	</xsl:element>	
 </xsl:element>
-<!--      <xsl:element name="hr" /> 
-      <xsl:element name="footer">
-        <xsl:attribute name="id">bottom</xsl:attribute>
- 
-        <xsl:call-template name="footer_sitenav" />
-        <xsl:element name="hr" />
-        <xsl:call-template name="footer_sourcelink" />
-        <xsl:call-template name="footer_legal" />
- 
-        <xsl:element name="section">
-          <xsl:attribute name="id">sister-organisations</xsl:attribute>
-          <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfnetwork'" /></xsl:call-template>
-        </xsl:element> --> 
-      </xsl:element> 
+      </xsl:element>
 </xsl:element>
-   
+
   </xsl:template>
 </xsl:stylesheet>

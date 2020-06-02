@@ -36,6 +36,8 @@ $receipt_dest = [];
 $who_verbose = explode('|', $who)[0];
 $who = explode('|', $who)[1];
 
+// Create variable for sum of all amounts
+$amount_total = "0";
 
 // FUNCTIONS
 function errexit($msg) {
@@ -90,22 +92,37 @@ function beautify_filename($filename) {
 /* Snippet End */ 
 
 
-// Sanity checks for parameters
+// Sanity checks for parameters, and setting variables depending on type
 if ($type == "rc") {
   if ( ! $rc_month || ! $rc_year ) {
     errexit("You must provide month and year of the RC");
   }
   $type_verbose = "Reimbursement Claim";
   $type_date = "$rc_year-$rc_month";
+  $lastday = $type_date . "-01";
 } else if ($type == "cc") {
   if ( ! $cc_month || ! $cc_year ) {
     errexit("You must provide quarter and year of the CC statement");
   }
   $type_verbose = "Credit Card Statement";
   $type_date = "$cc_year-$cc_month";
+  if ($cc_month === "Q1") {
+    $lastday = $cc_year . "-03-01";
+  } else if ($cc_month === "Q2") {
+    $lastday = $cc_year . "-06-01";
+  } else if ($cc_month === "Q3") {
+    $lastday = $cc_year . "-09-01";
+  } else if ($cc_month === "Q4") {
+    $lastday = $cc_year . "-12-01";
+  }
 } else {
   errexit("You must provide a reimbursement type");
 }
+
+// Define last day of accounting phase
+$lastday = new DateTime($lastday);
+$lastday->modify('last day of this month');
+$lastday = $lastday->format('Y-m-d');
 
 // Prepare output table
 if ($mailopt === "onlyme") {
@@ -199,12 +216,19 @@ foreach ($entry as $key => $date) {  // run over each row
     <td>$remarks[$key]</td>
   </tr>";
 
+  // Add to total amount
+  $amount_total = $amount_total + $amount[$key];
+
   // CSV for this receipt
   $csv[$receipt_no] = array($who_verbose, $date, $amount[$key], $recipient[$key], $er[$key], $catch[$key], $receipt_no, $remarks[$key]);
 
   // Add receipt as email attachment
   $email->addAttachment($receipt_dest[$key], basename($receipt_dest[$key]));
 } // foreach
+
+// Add new line for total negated amount
+$amount_total = 0 - $amount_total;
+$csv[] = array($who_verbose, $lastday, $amount_total, "", "", "", "", "total balance");
 
 // Write and attach temporary CSV file
 foreach ($csv as $fields) {

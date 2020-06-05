@@ -97,30 +97,15 @@ if ($type == "rc") {
   }
   $type_verbose = "Reimbursement Claim";
   $type_date = "$rc_year-$rc_month";
-  $lastday = $type_date . "-01";
 } else if ($type == "cc") {
   if ( ! $cc_month || ! $cc_year ) {
     errexit("You must provide quarter and year of the CC statement");
   }
   $type_verbose = "Credit Card Statement";
   $type_date = "$cc_year-$cc_month";
-  if ($cc_month === "Q1") {
-    $lastday = $cc_year . "-03-01";
-  } else if ($cc_month === "Q2") {
-    $lastday = $cc_year . "-06-01";
-  } else if ($cc_month === "Q3") {
-    $lastday = $cc_year . "-09-01";
-  } else if ($cc_month === "Q4") {
-    $lastday = $cc_year . "-12-01";
-  }
 } else {
   errexit("You must provide a reimbursement type");
 }
-
-// Define last day of accounting phase
-$lastday = new DateTime($lastday);
-$lastday->modify('last day of this month');
-$lastday = $lastday->format('Y-m-d');
 
 // Prepare output table
 if ($mailopt === "onlyme") {

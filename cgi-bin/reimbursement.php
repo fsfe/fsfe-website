@@ -36,8 +36,6 @@ $receipt_dest = [];
 $who_verbose = explode('|', $who)[0];
 $who = explode('|', $who)[1];
 
-// Create variable for sum of all amounts
-$amount_total = "0";
 
 // FUNCTIONS
 function errexit($msg) {
@@ -216,19 +214,12 @@ foreach ($entry as $key => $date) {  // run over each row
     <td>$remarks[$key]</td>
   </tr>";
 
-  // Add to total amount
-  $amount_total = $amount_total + $amount[$key];
-
   // CSV for this receipt
   $csv[$receipt_no] = array($who_verbose, $date, $amount[$key], $recipient[$key], $er[$key], $catch[$key], $receipt_no, $remarks[$key]);
 
   // Add receipt as email attachment
   $email->addAttachment($receipt_dest[$key], basename($receipt_dest[$key]));
 } // foreach
-
-// Add new line for total negated amount
-$amount_total = 0 - $amount_total;
-$csv[] = array($who_verbose, $lastday, $amount_total, "", "", "", "", "total balance");
 
 // Write and attach temporary CSV file
 foreach ($csv as $fields) {

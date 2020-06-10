@@ -1,73 +1,72 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!-- To add avatar images or members, edit the file: /about/people/people.en.xml -->
 <html>
-  <version>1</version>
+  <version>3</version>
 
   <head>
     <title>Informazioni sulla Free Software Foundation Europe - Team</title>
+    <script src="/scripts/filter-teams.js" />
   </head>
 
   <body>
-		<p id="category"><a href="/about/">Informazioni</a></p>
+    <p id="category"><a href="/about/">Informazioni</a></p>
     <h1>Il team della FSFE</h1>
 
     <p>
-      Queste persone lavorano per e con la FSFE in modo continuativo,
-      con responsabilità e autorità specifiche in determinati ambiti. Alcune di loro
-      sono <a href="members.html">membri</a> dell'
-      <a href="/about/legal/legal.html">associazione</a>, mentre altri no.
+      Queste persone lavorano all'interno della FSFE in modo continuativo,
+      con responsabilità e autorità diverse
+      in determinati ambiti.
     </p>
-    
+
     <div id="show-people">
         <h2 id="council">Consiglio esecutivo</h2>
-        <p>Il Consiglio è 
-		responsabile delle decisioni economicamente più rilevanti,
-        dell'attuazione delle linee guida
-        strategiche, e dei diritti delle Associazioni nazionali.</p>
+        <p>
+		Il Consiglio è responsabile delle decisioni economicamente più rilevanti e
+        dell'attuazione delle linee guida strategiche.
+        </p>
+
         <council-members />
 
-<!--
-        <h2 id="general-assembly">Assemblea generale</h2>
-        <p>L'Assemblea Generale è formata dai membri dell'<a
-         href="/about/legal/legal.html">Ente morale FSFE</a>. È
-        responsabile della pianificazione strategica e di approvare il bilancio della FSFE.
-        Si occupa inoltre di stilare l'ordine del giorno, dell'esonero, elezione
-        e convocazione del Consiglio esecutivo e del Tesoriere.</p>
+        <h2 id="core">Gruppi centrali</h2>
+        <p>
+          Qui sono presenti le persone che si occupano delle principali incombenze quotidiane
+          dell'organizzazione, come volontari oppure come impiegati stipendiati, così come
+          i membri dell'<a href="/about/legal/legal.html">Ente morale
+          FSFE</a>. Puoi vedere tutti i membri di questi gruppi
+          o visualizzarne solamente una selezione.
+        </p>
 
-        <ga-members />   
--->
-            
-        <h2 id="eu-core-team">Core Team europeo</h2>
-        <p>Di quest'organo fanno parte coloro che si occupano delle principali incombenze quotidiane
-        dell'organizzazione come volontari oppure come dipendenti stipendiati: i coordinatori dei gruppi nazionali
-        ed i loro delegati, lo staff, i coordinatori dei team speciali e gli
-        amministratori di sistema. Non ne fanno parte la maggioranza dei volontari che
-        vanno e vengono nei gruppi di lavoro, i collaboratori delle campagne,
-        o di specifiche tematiche.</p>
-            
+        <div class="filter-teams">
+          <label class="radio-inline">
+            <input name="filter-teams" type="radio" onclick="selectAllTeams()" checked="" />Tutti
+          </label>
+          <label class="radio-inline">
+            <input name="filter-teams" type="radio" onclick="selectTeam('core')" />European Core Team
+          </label>
+          <label class="radio-inline">
+            <input name="filter-teams" type="radio" onclick="selectTeam('ga')" />Assemblea generale
+          </label>
+          <label class="radio-inline">
+            <input name="filter-teams" type="radio" onclick="selectTeam('employee')" />Impiegati
+          </label>
+        </div>
+        <noscript>
+          <div class="alert alert-warning" role="alert">Questa funzione richiede l'esecuzione di alcuni <a href="/about/js-licences.html">JavaScript Liberi</a> per essere fruita.</div>
+        </noscript>
+
         <core-members />
-        
-<!--          
-        <h2 id="interns">Tirocinanti</h2>
-        <p>I <a href="/contribute/internship.html">tirocinanti</a> che lavorano a
-        diversi temi nei gruppi FSFE: sostegno e promozione a progetti e campagne
-        attive, coordinazione dei volontari e comunicazione con la comunità, le
-        pubbliche amministrazioni ed altre organizzazioni.</p>
 
-        <intern-members />
-        
         <h2>Gruppi locali</h2>
         <p>Stai cercando un contatto locale per partecipare alle nostre attività, oppure 
-        semplicemente per chiedere informazioni sul software Libero e sulla FSFE?
-        In sempre più città europee nascono gruppi locali FSFE. Per vedere se esiste 
-        già un gruppo nella tua zona visita la pagina dei <a href="localteams.html">
-        gruppi locali</a>.</p>
--->
-        
+        semplicemente per chiedere informazioni sul Software Libero e sulla FSFE? In sempre più città europee
+        nascono gruppi locali della FSFE. Per scoprire se esiste
+        già un gruppo nella tua zona puoi consultare l'
+        <a href="https://wiki.fsfe.org/LocalGroups/">Elenco dei gruppi locali</a>.</p>
+
     </div>
   </body>
   <followup>join</followup>
-  <translator>Tarin Gamberini, aggiornato da Sebastiano Pistore</translator>
+  <translator>Tarin Gamberini, Sebastiano Pistore</translator>
 </html>
 <!--
 Local Variables: ***

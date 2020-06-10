@@ -97,7 +97,11 @@
               <xsl:attribute name="id">direct-to-donate</xsl:attribute>
               <xsl:element name="a">
                 <xsl:attribute name="class">btn btn-success</xsl:attribute>
-                <xsl:attribute name="href">https://my.fsfe.org/donate</xsl:attribute>
+                <xsl:attribute name="href">
+                  <xsl:text>https://my.fsfe.org/donate?referrer=https://fsfe.org</xsl:text>
+                  <xsl:value-of select="/buildinfo/@filename"/>
+                  <xsl:text>.html</xsl:text>
+                </xsl:attribute>
                 <xsl:element name="i">
                   <xsl:attribute name="class">fa fa-heart-o fa-lg</xsl:attribute>
                 </xsl:element>

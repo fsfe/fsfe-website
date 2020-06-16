@@ -41,6 +41,10 @@ $who = explode('|', $who)[1];
 function errexit($msg) {
   exit("Error: " . $msg . "<br/><br/>To avoid losing your data, press the back button in your browser");
 }
+function replace_page($temp, $content){
+    $vars = array(':RESULT:'=>$content);
+    return str_replace(array_keys($vars), $vars, $temp);
+}
 /* Snippet Begin:
  * SPDX-SnippetLicenseConcluded: CC-BY-SA-4.0
  * SPDX-SnippetCopyrightText: mgutt <https://stackoverflow.com/users/318765/mgutt>
@@ -125,6 +129,7 @@ $html .= "<p>This <strong>$type_verbose</strong> is made by <strong>$who_verbose
     <th>Remarks</th>
   </tr>";
 
+// Prepare email
 $email = new PHPMailer();
 $email->isSMTP();
 $email->Host        = "mail.fsfe.org";
@@ -244,11 +249,6 @@ foreach ($receipt_dest as $receipt) {
 fclose($csvfile);
 
 // --- PRINT OUTPUT IN TEMPLATE FILE ---
-
-function replace_page($temp, $content){
-    $vars = array(':RESULT:'=>$content);
-    return str_replace(array_keys($vars), $vars, $temp);
-}
 
 $template = file_get_contents($_SERVER['REQUEST_SCHEME'] ."://". $_SERVER['HTTP_HOST'] . '/internal/rc-result.en.html', true);
 

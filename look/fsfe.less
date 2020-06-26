@@ -13,8 +13,11 @@
 /* fsfe.org pages */
 
 body {
-    background: url(/graphics/fellowship/plussy_tile_03.svg) top left fixed #F9F9F9;
     font-family: "Roboto", sans-serif;
+
+    @media (min-width: @screen-sm-min) {
+        background: url(/graphics/fellowship/plussy_tile_03.svg) top left fixed #F9F9F9;
+    }
 }
 
 aside#followup {

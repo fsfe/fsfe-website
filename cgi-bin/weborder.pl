@@ -2,7 +2,7 @@
 # -----------------------------------------------------------------------------
 # Process merchandise order
 # -----------------------------------------------------------------------------
-# Copyright (C) 2008-2019 Free Software Foundation Europe <contact@fsfe.org>
+# Copyright (C) 2008-2020 Free Software Foundation Europe <contact@fsfe.org>
 #
 # This program is free software: you can redistribute it and/or modify it under
 # the terms of the GNU Affero General Public License as published by the Free
@@ -104,7 +104,7 @@ if ($amount > 999) {
 my $amount_f = sprintf "%.2f", $amount ;
 my $amount100 = $amount * 100;
 
-my $vat = sprintf "%.2f", ($amount_f / 1.19) * 0.19;
+my $vat = sprintf "%.2f", ($amount_f / 1.16) * 0.16;
 my $net = sprintf "%.2f", $amount_f - $vat;
 
 # -----------------------------------------------------------------------------

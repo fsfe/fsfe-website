@@ -84,21 +84,6 @@ RewriteRule ^help/help(.*) /contribute/contribute$1 [R=301,L]
 RewriteRule ^help/web\.(.*) /contribute/web/web.$1 [R=301,L]
 RewriteRule ^help/(.*) /donate/$1 [R=301,L]
 
-# Legal team pages
-RewriteRule ^ftf(.*)$ /activities/ftf$1 [R=301,L]
-RewriteRule ^legal(.*)$ /activities/ftf$1 [R=301,L]
-RewriteRule ^activities/ftf/?$ /activities/ftf/activities.html [R=301,L]
-RewriteRule ^activities/ftf/ftf\.(.*)html /activities/ftf/activities.$1html [R=301,L]
-RewriteRule ^activities/ftf/index\.(.*)html /activities/ftf/activities.$1html [R=301,L]
-RewriteRule ^activities/ftf/rough-guide-for-users(.*)$ /projects/ftf/useful-tips-for-users$1 [R=301,L]
-RewriteRule ^activities/ftf/rough-guide-for-vendors(.*)$ /projects/ftf/useful-tips-for-vendors$1 [R=301,L]
-RewriteRule ^activities/ftf/contact(.*)$ /contact/contact$1#ftf [NE,R=301]
-RewriteRule ^activities/ftf/form(.*)$ /contact/contact$1#ftf [NE,R=301]
-RewriteRule ^activities/ftf/network\.(.*)html /activities/ftf/ln.$1html [R=301,L]
-RewriteRule ^activities/ftf/recommended\.(.*)html /activities/ftf/licence-questions.$1html [R=301,L]
-RewriteRule ^activities/ftf/legal-network-policy\.(.*)html /activities/ftf/ln-rules.$1html [R=301,L]
-RewriteRule ^activities/ftf/education.*$ /activities/ftf/services.html [R=301,L]
-
 
 # =============================================================================
 # MOVED PAGES
@@ -167,12 +152,16 @@ RewriteRule ^projects(/.*)?$ /campaigns/ [R=301,L]
 # /freesoftware, /about/basics and similar "basic" texts
 RewriteRule ^about/basics/?(.*)$ /freesoftware/ [R=301,L]
 RewriteRule ^freesoftware/basics/(comparison|gnuproject)(.*)$ /freesoftware/$1$2 [R=301,L]
-RewriteRule ^freesoftware/basics/legal/?(.*)$ /activities/ftf/ [R=301,L]
+RewriteRule ^freesoftware/basics/legal/?(.*)$ /freesoftware/legal/ [R=301,L]
 RewriteRule ^freesoftware/education/?(.*)$ /activities/education/ [R=301,L]
 RewriteRule ^freesoftware/society/?(.*)$ /freesoftware/democracy.html [R=301,L]
 RewriteRule ^freesoftware/legal/flashingdevices(.*)$ /campaigns/android/flashingdevices$1 [R=301,L]
 RewriteRule ^freesoftware/public-sector/german-foreign-office-comment(.*)$ https://k7r.eu/buchartikel-freie-software-im-auswartigen-amt-erst-hu-dann-hott/ [R=301,L]
 RewriteRule ^freesoftware/(basics|enterprise|support|third-sector|transcripts)/?(.*)$ /freesoftware/ [R=301,L]
+
+# /activities/ftf/
+# TODO: as soon as a new "work" page is available, update this to the legal section
+RewriteRule ^activities/ftf/?(.*)$ /freesoftware/legal/legal.html [R=301,L]
 
 # Other pages
 RewriteRule ^about/(history|reports)/?(.*)$ /about/ [R=301,L]
@@ -184,7 +173,6 @@ RewriteRule ^(.*)\.no.rss /$1.nb.rss [R=301,L]
 RewriteRule ^contact/press(.*) /press/press$1 [R=301,L]
 RewriteRule ^standards(.*) /projects/os$1 [R=301,L]
 RewriteRule ^education(.*) /projects/education$1 [R=301,L]
-RewriteRule ^ftf(.*) /activities/ftf$1 [R=301,L]
 RewriteRule ^stacs(.*) /projects/stacs$1 [R=301,L]
 RewriteRule ^gbn(.*) /projects/gbn$1 [R=301,L]
 RewriteRule ^law/eucd/(.*) /projects/eucd$1 [R=301,L]

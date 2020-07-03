@@ -95,7 +95,7 @@ RewriteRule ^activities/ftf/rough-guide-for-vendors(.*)$ /projects/ftf/useful-ti
 RewriteRule ^activities/ftf/contact(.*)$ /contact/contact$1#ftf [NE,R=301]
 RewriteRule ^activities/ftf/form(.*)$ /contact/contact$1#ftf [NE,R=301]
 RewriteRule ^activities/ftf/network\.(.*)html /activities/ftf/ln.$1html [R=301,L]
-RewriteRule ^activities/ftf/recommended\.(.*)html /activities/ftf/licence-questions.$1html [R=301,L]
+RewriteRule ^activities/ftf/recommended\.(.*)html /activities/licence-questions/licence-questions.html.$1html [R=301,L]
 RewriteRule ^activities/ftf/legal-network-policy\.(.*)html /activities/ftf/ln-rules.$1html [R=301,L]
 RewriteRule ^activities/ftf/education.*$ /activities/ftf/services.html [R=301,L]
 

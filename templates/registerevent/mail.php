@@ -7,7 +7,7 @@ Content-Disposition: inline
  
 Hi, 
  
-You have registered an event on http://fsfe.org/community/tools/eventregistration
+You have registered an event on https://fsfe.org/community/tools/eventregistration
 
 Below is the list of the information you gave.
 	Name: <?=$name?> 

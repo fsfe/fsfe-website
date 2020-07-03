@@ -141,7 +141,7 @@ if (empty($_POST['lastname'])  ||
     empty($_POST['packagetype']) ||
    !empty($_POST['address']) ) {
 
-  header("Location: http://fsfe.org/contribute/spreadtheword-ordererror.$lang.html");
+  header("Location: https://fsfe.org/contribute/spreadtheword-ordererror.$lang.html");
   exit();
 }
 
@@ -255,7 +255,7 @@ if (isset($_POST['donate']) && ((int) $_POST['donate']) >= 5) {
   relay_donation($_POST['donationID']);
 } else {
   // DEBUG: Comment out next line to be able to see errors and printed info
-  header("Location: http://fsfe.org/contribute/spreadtheword-orderthanks.$lang.html");
+  header("Location: https://fsfe.org/contribute/spreadtheword-orderthanks.$lang.html");
 }
 
 ?>

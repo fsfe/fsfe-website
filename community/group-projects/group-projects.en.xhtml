@@ -16,25 +16,30 @@
       </p>
     </div>
 
+    <p>
+      Fields marked with <strong>*</strong> are mandatory. The more
+      information you provide, the easier the evaluation. Thank you!
+    </p>
+
     <form class="form-horizontal" action="https://forms.fsfe.org/email" method="POST" >
       <input type="hidden" name="appid" value="group-projects" />
 
       <h2>Your contact data</h2>
 
       <div class="form-group">
-        <label for="name" class="col-sm-3 control-label">Your full name</label>
+        <label for="name" class="col-sm-3 control-label">Your full name *</label>
         <div class="col-sm-5">
           <input type="text" class="form-control" id="name" name="name" required="required" />
         </div>
       </div>
       <div class="form-group">
-        <label for="confirm" class="col-sm-3 control-label">Your email</label>
+        <label for="confirm" class="col-sm-3 control-label">Your email *</label>
         <div class="col-sm-5">
           <input type="email" class="form-control" id="confirm" name="confirm" required="required" />
         </div>
       </div>
       <div class="form-group">
-        <label for="localgroup" class="col-sm-3 control-label">Local Group Name</label>
+        <label for="localgroup" class="col-sm-3 control-label">Local Group Name *</label>
         <div class="col-sm-5">
           <input type="text" class="form-control" id="localgroup" name="localgroup" required="required" />
         </div>
@@ -58,15 +63,15 @@
       <h2>Project Duration</h2>
 
       <div class="form-group">
-        <label for="date_start" class="col-sm-3 control-label">Start date</label>
+        <label for="date_start" class="col-sm-3 control-label">Start date *</label>
         <div class="col-sm-5">
-          <input type="text" class="form-control" id="date_start" name="date_start" required="required" />
+          <input type="date" class="form-control" id="date_start" name="date_start" required="required" />
         </div>
       </div>
       <div class="form-group">
-        <label for="date_end" class="col-sm-3 control-label">End date</label>
+        <label for="date_end" class="col-sm-3 control-label">End date *</label>
         <div class="col-sm-5">
-          <input type="text" class="form-control" id="date_end" name="date_end" required="required" />
+          <input type="date" class="form-control" id="date_end" name="date_end" required="required" />
         </div>
       </div>
 
@@ -81,7 +86,7 @@
         </div>
       </div>
       <div class="form-group">
-        <label for="cost_total" class="col-sm-3 control-label">Total expected gross external costs</label>
+        <label for="cost_total" class="col-sm-3 control-label">Total expected gross external costs *</label>
         <div class="col-sm-5">
           <input type="text" class="form-control" id="cost_total" name="cost_total" required="required" />
         </div>

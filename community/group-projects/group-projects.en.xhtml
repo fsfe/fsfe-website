@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html>
+  <version>1</version>
+
+  <head>
+    <title>Local Group Project Call Submission - FSFE</title>
+  </head>
+
+  <body>    
+    <h1>Local Group Project Call Submission</h1>
+
+    <div id="introduction">
+      <p>
+        You can apply for FSFE support for your Local Group Project.
+      </p>
+    </div>
+
+    <form class="form-horizontal" action="https://forms.fsfe.org/email" method="POST" >
+      <input type="hidden" name="appid" value="group-projects" />
+
+      <h2>Your contact data</h2>
+
+      <div class="form-group">
+        <label for="name" class="col-sm-3 control-label">Your full name</label>
+        <div class="col-sm-5">
+          <input type="text" class="form-control" id="name" name="name" required="required" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="confirm" class="col-sm-3 control-label">Your email</label>
+        <div class="col-sm-5">
+          <input type="email" class="form-control" id="confirm" name="confirm" required="required" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="localgroup" class="col-sm-3 control-label">Local Group Name</label>
+        <div class="col-sm-5">
+          <input type="text" class="form-control" id="localgroup" name="localgroup" required="required" />
+        </div>
+      </div>
+
+      <h2>Project Facts</h2>
+
+      <div class="form-group">
+        <label for="deliverables" class="col-sm-3 control-label">Please describe you project output(s) (Deliverables)</label>
+        <div class="col-sm-5">
+          <textarea class="form-control" id="deliverables" name="deliverables" rows="5"></textarea>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="team" class="col-sm-3 control-label">Who will be involved in the project?</label>
+        <div class="col-sm-5">
+          <textarea class="form-control" id="team" name="team" rows="5"></textarea>
+        </div>
+      </div>
+
+      <h2>Project Duration</h2>
+
+      <div class="form-group">
+        <label for="date_start" class="col-sm-3 control-label">Start date</label>
+        <div class="col-sm-5">
+          <input type="text" class="form-control" id="date_start" name="date_start" required="required" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="date_end" class="col-sm-3 control-label">End date</label>
+        <div class="col-sm-5">
+          <input type="text" class="form-control" id="date_end" name="date_end" required="required" />
+        </div>
+      </div>
+
+      <h2>Project Budget</h2>
+
+      <p>Please note that the FSFE can cover only external costs. No working hours can be covered.</p>
+
+      <div class="form-group">
+        <label for="cost_list" class="col-sm-3 control-label">Please list all planned gross external costs</label>
+        <div class="col-sm-5">
+          <textarea class="form-control" id="cost_list" name="cost_list" rows="5"></textarea>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="cost_total" class="col-sm-3 control-label">Total expected gross external costs</label>
+        <div class="col-sm-5">
+          <input type="text" class="form-control" id="cost_total" name="cost_total" required="required" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-5">
+          <button type="submit" class="btn btn-primary">Submit Project</button>
+        </div>
+      </div>
+
+    </form>
+
+  </body>
+  
+</html>

@@ -136,7 +136,7 @@ RewriteRule ^documents/wiwo(.*) /projects/wipo/wiwo$1 [R=301,L]
 RewriteRule ^documents/printable/(.*) /about/printable/$1 [R=301,L]
 RewriteRule ^documents/reports/(.*) /about/reports/$1 [R=301,L]
 RewriteRule ^documents/rms-fs-2006-03-09(.*) /freesoftware/transcripts/rms-fs-2006-03-09$1 [R=301,L]
-RewriteRule ^documents/whyfs(.*)$ /campaigns/whyfs/ [R=301,L]
+RewriteRule ^documents/whyfs(.*)$ /activities/whyfs/ [R=301,L]
 
 # Projects
 # moved to campaigns/

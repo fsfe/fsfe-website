@@ -155,7 +155,7 @@ RewriteRule ^freesoftware/basics/(comparison|gnuproject)(.*)$ /freesoftware/$1$2
 RewriteRule ^freesoftware/basics/legal/?(.*)$ /freesoftware/legal/ [R=301,L]
 RewriteRule ^freesoftware/education/?(.*)$ /activities/education/ [R=301,L]
 RewriteRule ^freesoftware/society/?(.*)$ /freesoftware/democracy.html [R=301,L]
-RewriteRule ^freesoftware/legal/flashingdevices(.*)$ /campaigns/android/flashingdevices$1 [R=301,L]
+RewriteRule ^freesoftware/legal/flashingdevices(.*)$ /activities/android/flashingdevices$1 [R=301,L]
 RewriteRule ^freesoftware/public-sector/german-foreign-office-comment(.*)$ https://k7r.eu/buchartikel-freie-software-im-auswartigen-amt-erst-hu-dann-hott/ [R=301,L]
 RewriteRule ^freesoftware/(basics|enterprise|support|third-sector|transcripts)/?(.*)$ /freesoftware/ [R=301,L]
 

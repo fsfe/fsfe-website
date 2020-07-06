@@ -25,7 +25,7 @@ RewriteRule ^graphics/fsfeurope.ico /graphics/fsfe.ico [R=301,L]
 RewriteRule ^translate/?$ /contribute/translators/ [R=301,L]
 
 # AskYourCandidates
-RewriteRule ^campaigns/ayc(.*) /campaigns/askyourcandidates$1 [R=301,L]
+RewriteRule ^campaigns/ayc(.*) /activities/askyourcandidates$1 [R=301,L]
 
 # NoCloud campaign, as printed on posters
 RewriteRule ^nocloud(/.*)?  /activities/nocloud$1 [R=301,L]

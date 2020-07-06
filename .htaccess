@@ -24,9 +24,6 @@ RewriteRule ^graphics/fsfeurope.ico /graphics/fsfe.ico [R=301,L]
 # Redirect
 RewriteRule ^translate/?$ /contribute/translators/ [R=301,L]
 
-# AskYourCandidates
-RewriteRule ^campaigns/ayc(.*) /activities/askyourcandidates$1 [R=301,L]
-
 # NoCloud campaign, as printed on posters
 RewriteRule ^nocloud(/.*)?  /activities/nocloud$1 [R=301,L]
 
@@ -134,9 +131,9 @@ RewriteRule ^documents/whyfs(.*)$ /activities/whyfs/ [R=301,L]
 # Projects
 # moved to campaigns/
 RewriteRule ^projects/(agnula|bgw|browserbundling|btw09|eucd|gbn|gplv3|horizon2020|ipred2|mankind|pdfreaders|self|stacs|swpat|wsis)(.*)$ /campaigns/$1$2 [R=301,L]
-RewriteRule ^projects/active(.*)$ /campaigns/campaigns$1 [R=301,L]
-RewriteRule ^projects/finished(.*)$ /campaigns/campaigns$1 [R=301,L]
-RewriteRule ^projects/inactive(.*)$ /campaigns/campaigns$1 [R=301,L]
+RewriteRule ^projects/active(.*)$ /activities/activities.html$1 [R=301,L]
+RewriteRule ^projects/finished(.*)$ /activities/activities.html$1 [R=301,L]
+RewriteRule ^projects/inactive(.*)$ /activities/activities.html$1 [R=301,L]
 # moved to activities/
 RewriteRule ^projects/(drm|education|os|procurement|eu|ftf|fla|ms-vs-eu|un|wipo|fp6|fp7|map|igf)(.*)$ /activities/$1$2 [R=301,L]
 RewriteRule ^projects/work(.*) /work$1 [R=301,L]

@@ -44,7 +44,7 @@ Notable directories are:
 This repository also contains the source files of other websites the FSFE hosts:
 
 * `activities/android` for [freeyourandroid.org](http://freeyourandroid.org)
-* `campaigns/ilovefs` for [ilovefs.org](http://ilovefs.org)
+* `activities/ilovefs` for [ilovefs.org](http://ilovefs.org)
 * `drm.info` for [drm.info](http://drm.info)
 * `pdfreaders` for [pdfreaders.org](http://pdfreaders.org)
 * [test.fsfe.org](http://test.fsfe.org) is build from the test branch of this repository

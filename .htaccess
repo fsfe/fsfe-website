@@ -66,16 +66,16 @@ RewriteRule ^news/podcast-opus.rss$ /news/podcast-opus.en.rss [L,R=301]
 
 # ILoveFS
 # TODO each year: update links for next two lines
-RewriteRule ^campaigns/ilovefs(/?$|/[^/]*.html$) /campaigns/ilovefs/2020$1 [PT,L]
-RewriteRule ^campaigns/ilovefs/latest-report.*$ /news/2019/news-20190329-01.html [R=301,L]
-RewriteRule ^campaigns/ilovefs/ilovefs(.*)html$ /campaigns/ilovefs/index$1html [R=301,L]
-RewriteRule ^campaigns/ilovefs/(201[2-5])/index(.*)$ /campaigns/ilovefs/$1/ [R=301,L]
-RewriteRule ^campaigns/ilovefs/(201[2-5])(/?)$ /campaigns/ilovefs/$1/ilovefs.html [R=301,L]
+RewriteRule ^activities/ilovefs(/?$|/[^/]*.html$) /activities/ilovefs/2020$1 [PT,L]
+RewriteRule ^activities/ilovefs/latest-report.*$ /news/2019/news-20190329-01.html [R=301,L]
+RewriteRule ^activities/ilovefs/ilovefs(.*)html$ /activities/ilovefs/index$1html [R=301,L]
+RewriteRule ^activities/ilovefs/(201[2-5])/index(.*)$ /activities/ilovefs/$1/ [R=301,L]
+RewriteRule ^activities/ilovefs/(201[2-5])(/?)$ /activities/ilovefs/$1/ilovefs.html [R=301,L]
 # old URLs
-RewriteRule ^valentine.* /campaigns/ilovefs [R=301,L]
-RewriteRule ^vd20.* /campaigns/ilovefs [R=301,L]
-RewriteRule ^campaigns/valentine.* /campaigns/ilovefs [R=301,L]
-RewriteRule ^campaigns/vd20.* /campaigns/ilovefs [R=301,L]
+RewriteRule ^valentine.* /activities/ilovefs [R=301,L]
+RewriteRule ^vd20.* /activities/ilovefs [R=301,L]
+RewriteRule ^campaigns/valentine.* /activities/ilovefs [R=301,L]
+RewriteRule ^campaigns/vd20.* /activities/ilovefs [R=301,L]
 
 # Help section
 RewriteRule ^help/?$ /contribute/ [R=301,L]

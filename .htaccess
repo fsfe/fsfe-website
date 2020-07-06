@@ -40,7 +40,7 @@ RewriteRule   ^(cyf|convince)/?$ http://wiki.fsfe.org/ConvinceYourFriends [R=301
 RewriteRule ^summit16(/.*)?$  https://fsfe.org/community/events/2016/summit/frontpage$1 [R=301,L]
 
 # 15 years of FSFE
-RewriteRule ^15(/.*)?$    https://fsfe.org/campaigns/15years/15years$1 [R=301,L]
+RewriteRule ^15(/.*)?$    https://fsfe.org/activities/15years/15years$1 [R=301,L]
 
 # Podcast
 RewriteRule ^podcast(/.*)? /news/podcast.html [R=301,L]

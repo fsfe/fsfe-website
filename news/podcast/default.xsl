@@ -27,29 +27,25 @@
 
     <!-- Subscribe feed / Download file row -->
     <xsl:element name="div">
-      <xsl:attribute name="class">podcast-interact clearfix</xsl:attribute>
+      <xsl:attribute name="class">podcast-interact inline-buttons clearfix</xsl:attribute>
       <!-- feed -->
       <xsl:element name="span">
-        <xsl:attribute name="class">share-buttons-inline pull-left</xsl:attribute>
+        <xsl:attribute name="class">share-buttons</xsl:attribute>
         <!-- TODO: language-variable links -->
         <xsl:element name="a">
           <xsl:attribute name="href">feed://fsfe.org/news/podcast-opus.en.rss</xsl:attribute>
-          <xsl:element name="button">
-            <xsl:attribute name="class">share-button-sidebar share-podcast</xsl:attribute>
-            <xsl:text>OPUS Feed</xsl:text>
-          </xsl:element>
+          <xsl:attribute name="class">button share-rss</xsl:attribute>
+          <xsl:text>OPUS Feed</xsl:text>
         </xsl:element>
         <xsl:element name="a">
           <xsl:attribute name="href">feed://fsfe.org/news/podcast.en.rss</xsl:attribute>
-          <xsl:element name="button">
-            <xsl:attribute name="class">share-button-sidebar share-podcast</xsl:attribute>
-            <xsl:text>MP3 Feed</xsl:text>
-          </xsl:element>
+          <xsl:attribute name="class">button share-rss</xsl:attribute>
+          <xsl:text>MP3 Feed</xsl:text>
         </xsl:element>
       </xsl:element>
       <!-- download -->
       <xsl:element name="span">
-        <xsl:attribute name="class">pull-right</xsl:attribute>
+        <xsl:attribute name="class">download</xsl:attribute>
         <xsl:element name="em">
           <xsl:call-template name="gettext">
             <xsl:with-param name="id" select="'download'" />

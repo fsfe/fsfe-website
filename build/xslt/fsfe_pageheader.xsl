@@ -45,10 +45,6 @@
             <xsl:attribute name="id">direct-to-menu-list</xsl:attribute>
             <xsl:element name="a">
               <xsl:attribute name="href">#menu-list</xsl:attribute>
-              <xsl:element name="i">
-                <xsl:attribute name="class">fa fa-bars fa-lg</xsl:attribute>
-              </xsl:element>
-              <xsl:text>&#x2000;</xsl:text>
               <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'menu'" /></xsl:call-template>
             </xsl:element>
           </xsl:element>
@@ -72,6 +68,17 @@
         <!--/ul#direct-links-->
 
         <xsl:if test="not(/buildinfo/document/@external)">
+          <xsl:element name="input">
+            <xsl:attribute name="type">checkbox</xsl:attribute>
+            <xsl:attribute name="id">burger</xsl:attribute>
+          </xsl:element>
+          <xsl:element name="label">
+            <xsl:attribute name="for">burger</xsl:attribute>
+             <xsl:element name="i">
+               <xsl:attribute name="class">fa fa-bars fa-lg</xsl:attribute>
+             </xsl:element>
+          </xsl:element>
+
           <xsl:element name="div">
             <xsl:attribute name="id">menu-list</xsl:attribute>
             <xsl:element name="ul">

@@ -241,6 +241,8 @@ div#masthead {
 }
 
 nav#menu {
+    text-align: right;
+
     @media (max-width: @screen-xs-max) {
         background-color: @body-bg;
         position: absolute;
@@ -264,20 +266,23 @@ nav#menu {
         li {
             display: none;
         }
+    }
 
-        li#direct-to-menu-list {
-            @media (max-width: @screen-xs-max) {
-                text-align: right;
-                display: block;
+    // Invisible checkbox to show/hide the burger menu
+    input {
+        display: none;
+    }
 
-                a {
-                    .btn;
-                }
+    // Burger menu button
+    label {
+        .btn;
 
-                a:hover {
-                    .btn-primary;
-                }
-            }
+        &:hover {
+            .btn-primary;
+        }
+
+        @media (min-width: @screen-sm-min) {
+            display: none;
         }
     }
 
@@ -287,6 +292,7 @@ nav#menu {
             border: 1px solid @gray-light;
             border-radius: @border-radius-base;
             box-shadow: 4px 4px 10px 0 @gray-light;
+            display: none;
         }
 
         ul {
@@ -344,15 +350,13 @@ nav#menu {
             }
         }
     }
+
+    input:checked ~ div#menu-list {
+        display: block;
+    }
 }
 
 .no-js nav#menu {
-    ul#direct-links {
-        li#direct-to-menu-list {
-            display: none;
-        }
-    }
-
     ul {
         li#menu-translations {
             display: none;

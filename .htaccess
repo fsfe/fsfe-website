@@ -134,6 +134,11 @@ RewriteRule ^freesoftware/public-sector/german-foreign-office-comment(.*)$ https
 RewriteRule ^freesoftware/(basics|enterprise|support|third-sector|transcripts)/?(.*)$ /freesoftware/ [R=301,L]
 
 # /activities/ftf/
+RewriteRule ^activities/ftf/avm-gpl-violation(.*)$ /activities/avm-gpl-violation/ [R=301,L]
+RewriteRule ^activities/ftf/legal-conference(.*)$ /activities/ln/llw.html [R=301,L]
+RewriteRule ^activities/ftf/licence-questions(.*)$ /activities/licence-questions/ [R=301,L]
+RewriteRule ^activities/ftf/ln(.*)$ /activities/ln/ [R=301,L]
+RewriteRule ^activities/ftf/ngi0(.*)$ /activities/ngi/ [R=301,L]
 # TODO: as soon as a new "work" page is available, update this to the legal section
 RewriteRule ^activities/ftf/?(.*)$ /freesoftware/legal/legal.html [R=301,L]
 

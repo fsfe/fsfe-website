@@ -5,14 +5,14 @@
 
   <!-- Fill dynamic content -->
   <xsl:template match="dynamic-content">
-    <xsl:for-each select="/buildinfo/document/set/project [@status = 'finished']">
+    <xsl:for-each select="/buildinfo/document/set/activity [@status = 'finished']">
       <xsl:sort select="@date" order="descending"/>
 
       <!-- Title -->
       <xsl:element name="h3">
         <xsl:element name="a">
           <xsl:attribute name="href">
-            <xsl:value-of select="link"/>
+            <xsl:value-of select="link/@href"/>
           </xsl:attribute>
           <xsl:value-of select="title"/>
         </xsl:element>

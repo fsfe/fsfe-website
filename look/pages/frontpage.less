@@ -10,7 +10,6 @@ body.frontpage {
 
     .introduction {
         font-weight: bold;
-        padding-top: 30px;
         padding-bottom: 20px;
         background-image: url('/graphics/color-bar.jpg');
         background-repeat: no-repeat;
@@ -20,8 +19,13 @@ body.frontpage {
 
         // Make the first line bigger and separated from the rest.
         :first-child {
-            font-size: @font-size-h3;
-            margin-bottom: 20px;
+            font-size: @font-size-h4;
+
+            @media (min-width: @screen-sm-min) {
+                font-size: @font-size-h3;
+                margin-top: 30px;
+                margin-bottom: 20px;
+            }
         }
 
         // Make the "learn more" link slightly smaller to look better.

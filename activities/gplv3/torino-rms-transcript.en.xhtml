@@ -1,0 +1,1111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<html>
+  <version>1</version>
+
+  <head>
+    <title>GPLv3 - Transcript of Ricard Stallman in Torino (Turin),
+    Italy; 2006-03-18</title>
+  </head>
+
+  <body>
+
+<h1>Transcript of Richard Stallman speaking on GPLv3 in Torino; 18th
+  March 2006</h1>
+
+<p>
+  See our <a href="gplv3.html">GPLv3 project</a> page for information
+  on <a href="gplv3#participate">how to participate</a>.  And you may
+  be interested in
+  our <a href="https://wiki.fsfe.org/Transcripts#licences">list of
+  transcripts on GPLv3 and free software licences</a>.
+</p>
+
+<p>The following is a transcript of Richard Stallman's presentation
+  made at <a href="gplv3-torino.html">a GPLv3 event held in Torino
+  (Turin), Italy on March 18th 2006</a>.  A video recording of the
+  whole event is available at <a
+  href="http://streaming.polito.it/TFOFS">http://streaming.polito.it/TFOFS</a>.
+  The timestamps in square brackets in the transcript correspond to
+  that recording.</p>
+
+<p>Transcription of this event was undertaken
+  by Ciaran O'Riordan and
+  published as part of <a href="/activities/gplv3/gplv3.html">FSFE's
+  work to assist the GPLv3 consultation process</a>.  Please support
+  work such as this by joining <a href="https://my.fsfe.org/donate">the
+  Fellowship of FSFE</a>, and by encouraging others to do so.</p>
+
+<p>Richard Stallman launched
+  the <a href="/freesoftware/gnuproject.html">GNU project</a> in 1983,
+  and with it the <a href="/freesoftware/freesoftware.html">Free
+  Software</a> movement.  Stallman is the president of FSF - a sister
+  organisation of FSFE.</p>
+
+
+<h2>Sections</h2>
+
+<ol>
+
+<li><a href="#note-on-ip">First, a note on "intellectual property"</a></li>
+
+<li><a href="#on-to-gplv3">On to the GPLv3</a></li>
+
+<li><a href="#version-transitioning">About "or any later version" and
+    transitioning between versions</a></li>
+
+<li><a href="#patent-grant">Software patents: explicit patent grants</a></li>
+
+<li><a href="#four-freedoms">The four freedoms of Free Software</a></li>
+
+<li><a href="#drm">Digital Restrictions Management: how it was tackled
+    without restricting usage or modification</a></li>
+
+<li><a href="#drm-and-laws">DRM and laws about effective restriction measures</a></li>
+
+<li><a href="#licence-compatibility">Licence compatibility</a></li>
+
+<li><a href="#affero-clause">Compatibility with Affero - addressing web services, if you want</a></li>
+
+<li><a href="#compatibility-with-patent-retaliation">Compatibility
+    with two kinds of patent retaliation</a></li>
+
+<li><a href="#limited-retal">The draft GPLv3 does contain
+    a very limited patent retaliation clause</a></li>
+
+<li><a href="#displaying-the-licence">Requirements for notifying users
+    of the licence terms</a></li>
+
+<li><a href="#q1-about-linux">Question 1: What about Linux?</a></li>
+
+<li><a href="#q2-linking">Question 2: About dynamic linking and languages</a></li>
+
+<li><a href="#q3a-judging-the-spirit">Question 3a: What if someone
+    thinks the spirit has been changed?</a></li>
+
+<li><a href="#q3b-can-free-software-beat-drm">Question 3b: Can
+    writing Free Software beat DRM or is lobbying needed? (Stallman's
+    answer discusses democracy)</a></li>
+
+<li><a href="#q4-who-is-involved">Question 4: Who is involved in the process?</a></li>
+
+<li><a href="#q5-why-you">Question 5: Why is there not a team running
+    it instead of you, and who will run it next time?</a></li>
+
+<li><a href="#q6-what-was-rejected">Question 6: What ideas for GPLv3
+    were rejected?</a></li>
+
+</ol>
+
+<ul>
+
+<li><a href="#links">Links to documents for more information on the
+    topics covered</a></li>
+
+</ul>
+
+
+<h2>The transcript</h2>
+
+
+<p>Richard Stallman:</p>
+
+<p class="indent" id="note-on-ip">
+Before I get into the main subject, which is the plans for version
+three of the GPL, I want to mention a very important fundamental
+issue.
+</p>
+
+<p>
+[1h 27m 06s]
+</p>
+
+<p class="indent">
+There is a term that some people use, which causes terrible confusion
+and should never be used, and that is the term "intellectual
+property".  Now, I heard someone mention that term.  I don't think he
+was explaining why that term should not be used.
+</p>
+
+<p class="indent">
+It is devastatingly harmful to use the term "intellectual property"
+because that term implies the existence of something which does not
+exist.
+</p>
+
+<p class="indent">
+Copyright law exists.  Patent law exists.  They have almost nothing in
+common in terms of the requirements that they put on the public.  Trademark
+law also exists.  It has nothing in common with copyright law or
+patent law about what it requires of the public.  So, the idea that there
+is some general thing which these are instances of already gets people
+so confused that they cannot understand these issues.  There is no
+such thing.  These are three separate unrelated issues, and any
+attempt to generalise about them guarantees confusion.  Everyone who
+uses the term "intellectual property" is either confused himself or
+trying to confuse you.
+</p>
+
+<p>
+[applause]
+</p>
+
+<p>
+[1h 29m 12s]
+</p>
+
+<p class="indent">
+I came to this conclusion a few years ago and since then I have decided
+that I will never use that term.  No exceptions.  I will talk about
+why the term is confusing, because that's a useful thing to do, but I
+will never use that term.  I never use it.  I hope you will join me
+in making this firm policy of never using it.  And if someone else
+says something about "intellectual property", I will not respond
+directly to what he said without first explaining the confusion buried
+in it, because you see, the confusion buried in a statement is usually
+more harmful than whatever may be false that he actually tried to
+say.
+</p>
+
+<p class="indent">
+The false premises, the false presuppositions are the most important
+problem.  So, if someone makes a statement about intellectual property
+and some part of it is the specific point, which I might disagree
+with, the first thing I will say is why it's a mistake to talk about
+intellectual property at all, and then I will try to translate what he
+said into clearer terms, and then I might say if I agree with it or
+not.  But that's secondary, and explaining to people the confusion in
+the term intellectual property itself is the most important thing to do.
+</p>
+
+<p class="indent">
+There is a tendency to, we all have it, to follow other people in
+their choice of terminology.  If someone says an outrageous thing and
+he uses the term intellectual property, you will feel drawn into
+responding in the same terms.  So, learn to resist that temptation.
+</p>
+
+<p>
+[1h 31m 20s]
+</p>
+
+<p class="indent">
+The most important mistake, the most important falsehood in that
+statement is its use of the term "intellectual property" in the first
+place.  And the most important thing about it to respond to, if you
+could only choose one thing, is that one.  And you can say: "and since your whole
+picture of the situation is totally confused, clearly the specifics of
+what you said need to be rethought".
+</p>
+
+<p class="indent">
+That's all you need to do to deal with the specific thing he said.
+</p>
+
+<p class="indent">
+And, by the way, when the term "intellectual property" is used in the
+name of a law or a committee, that is an example of the confusion.
+It's almost a certainty that any law named "intellectual property" is
+a harmful, an unjust law.  Of course, you have to check the details to
+be sure of that, but you can be almost certain just from hearing the
+name.  And the reason is that you can tell from the name that unjust
+premises and confusions went into the design of the law so what could
+you expect except harmfulness.
+</p>
+
+<p>
+[1h 33m 00s]
+</p>
+
+<p class="indent" id="on-to-gplv3">
+So, at this point, I should go to the intended topic, which is
+version three of the GPL.
+</p>
+
+<p class="indent">
+I designed GPL version one in 1989, and GPL version two in 1991.  I
+thought of making a version three something like five or six years
+ago.  We didn't intend to wait fifteen years.  It was due to the fact
+that I was busy, and there were some things that were hard to figure
+out.
+</p>
+
+<p class="indent" id="version-transitioning">
+The idea that there would be changes in the GPL was planned from the
+beginning.  That is, version one already included a plan for transition
+to future versions.  We suggested that people release their programs
+under "version one or any later version of the GPL", and the idea was
+that when version two came out, it would automatically be usable for
+all those programs and in the time since version two, we've been
+suggesting that people release their software under "version two or
+any later version" and I believe most GPL covered programs do say
+that, with the result that when GPL version three comes out, a lot of
+software will be usable under GPL version three.
+</p>
+
+<p class="indent">
+The older versions of the GPL also promise that future versions
+would be "similar in spirit".  In other words, the changes will not be
+radical.  Any radical change would be false to the spirit and would
+be wrong.
+</p>
+
+<p>
+[1h 35m 17s]
+</p>
+
+<p class="indent">
+The changes that we've proposed in version three are all in small
+sub-issues.  Some of them are very important, but in the overall
+framework, they're small changes.  And the overall effect of GPL
+version three will be basically the same as version two, protecting
+the same four freedoms, but doing it somewhat better, dealing with
+some problems which we've encountered and adapting better to various
+different laws around the world.
+</p>
+
+<p class="indent">
+One thing that we've done is that we've restructured some of the
+concepts, for instance, we make it clear that many other activities
+that have the effect of providing copies to other people are treated
+the same as distribution.  Anything that's covered by copyright law
+which has the effect that it enables other people to get copies is
+effectively equivalent to distribution, and this insulates GPL version
+three from certain differences between laws in various countries about
+just what constitutes distribution.  So it has the effect of making
+the GPL work more the same in all countries, despite precisely how they have
+formulated their copyright laws.
+</p>
+
+<p class="indent">
+There are many changes in GPL version three which do something like
+that, they actually just make it more uniform and more reliably doing
+the same thing we expected it already did.
+</p>
+
+<p>
+[1h 37m 20s]
+</p>
+
+<p class="indent" id="patent-grant">
+But there are some places where we actually have changed the policies
+in small ways.  One of these concerns software patents.  GPL version
+two is based on an implicit grant of a patent licence.  The idea is
+that if somebody says "here is a thing and you can use it", implicitly
+he's promising he's not going to sue you for patent infringement if
+you go ahead and do what he said; however, since in the past eight
+years or so some other Free Software licences have included
+explicit statements of patent licenses, patent licence grants by
+people distributing the software, and so we decided to do the same
+thing, and we've included an explicit statement that the distributors
+of the software all promise not to sue anybody who is using any
+version of that software for patent infringement based on the versions
+that they distributed.  Basically, whatever their versions do, they're
+promising not to sue you for.
+</p>
+
+<p class="indent">
+However, there's a subtlety that came up in this.  What if somebody
+doesn't have a patent but he has got a licence for that patent, and he
+distributes the code to you.  Well, does that licence he got include
+your exercise of the four freedoms?  Including your freedom to
+redistribute copies yourself, with changes?  Maybe not, but if it
+doesn't, it creates a dangerous and unfair situation.  Unfair to you
+because he is distributing the software, or distributing his version of the
+software, and he is not going to get sued for patent infringement
+because he got a licence.  He distributes it to you under the GPL and
+the GPL says you are free to redistribute it too, but if you do that
+you might get sued because his patent license might not cover you.
+</p>
+
+<p>
+[1h 40m 04s]
+</p>
+
+<p class="indent">
+Well, this is unfair, this is something that's not supposed to
+happen.  He received this program under the GPL and the GPL says when
+he distributes a version of it, he must really give you the freedom to
+do the same.  If he can count on safely doing it, and he knows you
+will get sued if you do it, by a third party, he's cheating.  So, GPL
+version three, along with the explicit patent licence grant, says that
+if he is knowingly relying on a patent licence for distributing his
+version, he must take some effective step to protect you as well if you
+distribute.
+</p>
+
+<p class="indent">
+Now, the reason it talks about "knowingly relying" is that there are
+companies that have signed blanket cross licences with other
+companies, so the company distributing the program,
+might have some blanket cross licence with some company, and that
+blanket cross licence might cover a thousand patents, and they don't
+even know what those thousand patents say.  So, if they don't even
+know that they have a patent licence, they're not required to pay
+attention, but if they know about a specific patent that would
+cover this program, that means they are knowingly relying
+on a patent licence and that means they have to keep you safe as
+well.  This is a very controversial decision.  It may seem like a
+subtle point, it covers a peculiar scenario, but it's not an impossible
+scenario.  It could be a very important scenario.  In this
+scenario, this point is essential to ensure that the GPL really does
+what it intends to do, which is, make sure that you do get the freedom
+to redistribute the software that you got.  And this is typical of the
+ways that we are changing GPL version three.  They apply to
+complicated scenarios but those scenarios may happen frequently, and
+in those scenarios we are trying to make sure that you really get the
+four fundamental freedoms which that Free Software.
+</p>
+
+<p class="indent">
+Did someone earlier already describe the four freedoms?
+</p>
+
+<p class="indent">
+Then I better do so.
+</p>
+
+<p>
+[1h 42m 43s]
+</p>
+
+<p class="indent" id="four-freedoms">
+Freedom zero is the freedom to run the program as you wish for any
+purpose. 
+</p>
+
+<p class="indent">
+Freedom one is the freedom to study the source code and change it to
+do what you wish.
+</p>
+
+<p class="indent">
+Freedom two is the freedom to help your neighbour, that's the freedom
+to make copies and distribute them to others when you wish.
+</p>
+
+<p class="indent">
+Freedom three is the freedom to help your community, that's the
+freedom to publish or distribute modified versions when you wish.
+</p>
+
+<p class="indent">
+So here we're talking about what is necessary to ensure that freedom two
+really exist for you in a certain special scenario, freedom two being
+the freedom to redistribute copies and also freedom three, it applies
+to that too.
+</p>
+
+<p>
+[1h 43m 35s]
+</p>
+
+<p class="indent" id="drm">
+Another area where we have made changes concerns Digital Restrictions
+Management.  Now, freedom zero says you are free to run the program as
+you wish for any purpose.  We are not limiting freedom zero.  If
+someone wants to run a program to encrypt something, that's fine.  If
+someone wants to run a program to decrypt something, that's fine.  If
+somebody wants to run a program to produce an encrypted medium that's
+difficult to access, that's fine.  If somebody has some other GPL
+covered program to access that media and he wants to run it to access
+the encrypted data, that's fine too.  And distributing software that
+could be used for those purposes is also entirely permitted, and
+will be permitted by GPL version 3.
+</p>
+
+<p>
+[1h 44m 58s]
+</p>
+
+<p class="indent">
+However, freedom zero does not include imposing your purposes on
+someone else who is going to run the program, because his freedom zero
+is the freedom to run the program for any purpose of his.  So, there
+is no such thing as the freedom to use any software to impose your
+purpose on someone else.  In fact, that should be illegal.  I'm
+serious.  And that's what DRM is.
+</p>
+
+<p class="indent">
+When somebody distributes a player, that has DRM in it, what he's
+doing is trying to restrict your running of your computer for his
+purposes, which is directly in conflict with the four freedoms that
+you should have.
+</p>
+
+<p class="indent">
+And that's what GPLv3 is in certain ways trying to stop and it does
+this simply by assuring you all four of the freedoms when you use the
+software.  You see, because DRM - Digital Restrictions Management - is
+a plan to restrict the public, anyone distributing a version of a
+GPL-covered program as a player for DRM media always does something to
+stop the public from modifying the player, because his purpose in
+distributing a DRM player is to restrict you, he has to make sure
+you can't escape from his restrictions, from his power.  That means he
+is always going to try to deny you freedom one.  Freedom one is the
+freedom to study the source code of the program and change it to do
+what you want.  What you want, might be, to escape from his
+restrictions, and if you have freedom one, you can escape from his
+restrictions.  So his goal is somehow or other, for practical
+purposes, to deny you freedom number one.
+</p>
+
+<p>
+[1h 47m 26s]
+</p>
+
+<p class="indent">
+Now, what he might do is, use non-Free Software, and then completely
+deny you freedom number one.  In fact, that's what they usually do.
+We can't change that with the GPL because they're not including any
+GPL-covered code.  They don't have to pay attention to the
+GPL.  There should just be a law against it.  It should be illegal.
+DRM should be illegal, but we can't change laws by modifying the GPL.
+</p>
+
+<p class="indent">
+However, there are those that want to use GPL-covered software for
+this purpose, and they want to do so by turning freedom number one
+into a sham, a facade.  So they plan to do something like, make a
+modified version of the GPL-covered program, which contains code to
+restrict you, and distribute that to you and somehow arrange that you
+can't really modify it, or if you modify it it won't run, or if
+you modify it and operate it, it won't operate on the same data.
+</p>
+
+<p>
+[1h 48m 42s]
+</p>
+
+<p class="indent">
+They do this in various ways.  This is known as Tivo-isation because
+this is what the Tivo does.  The Tivo includes some GPL-covered
+software.  It includes a GNU+Linux system, a small one, but it does,
+and you can get the source code for that, as required by the GPL
+because many parts of GNU+Linux are under the GPL, and once you get
+the source code, you can modify it, and there are ways to install the
+modified software in your Tivo and if you do that, it won't run, period.
+Because, it does a check sum of the software and it verifies that it's
+a version from them and if it's your version, it won't run at all.  So
+this is what we are forbidding, with the text we have written for GPL
+version three.  It says that the source code they must give you
+includes whatever signature keys, or codes that are necessary to make
+your modified version run.
+</p>
+
+<p class="indent">
+In other words, it ensures that freedom number one is real.  That you
+really can modify the source code, install it, and then it will run
+and not only that, we say, they must give you enough to make the
+modified version operate on the same range of data.  Because, you see,
+Microsoft's plan, which they call Palladium, and then they change
+the name - they change these names frequently so as to evade
+criticism, to make criticism difficult, to make any kind of comment on
+their plans difficult.  You talk about their plan and they say "Oh,
+we've dropped that, we have a different plan now".  And probably it is
+different in some details, but the point is that they generate
+encryption and decryption keys using a check sum of the program which
+means that a different program can't possibly access the same data.
+Although, that's just the base level, and then on top of that they
+implement other facilities where the program simply has to be signed
+by the authorised signer in order to be able to access the data.
+</p>
+
+<p>
+[1h 51m 29s]
+</p>
+
+<p class="indent">
+Well, GPL version three says that if they distribute a GPL-covered
+program in this way, they must provide you with the key necessary so
+that you can sign your version and make it access the same data.
+Otherwise, they would say "Yes, you can run your modified version, but
+it will have a different check sum, so your version will only
+operate on data files made for your version, just as our version only
+operates on data made for our version".  And what that means is that
+all the available files will only work with their version and your
+changed version will not be able to access them.  That's exactly, in
+fact, how Treacherous Computing is designed to work.  The plan is that
+they will publish files that are encrypted and it will be impossible
+to access those files with any other program, so GPL version three is
+designed to ensure that you really, effectively, get the freedom to
+take the program you were given, modify it, and run the modified
+version to do a different thing on the same data on the same machine.
+</p>
+
+<p class="indent" id="drm-and-laws">
+But, there's one other way that we're trying to thwart DRM.  You see,
+one thing they do is, some countries, including, I'm sad to say, this
+one, have adopted unjust laws that support DRM.  The exact opposite of
+what they ought to do, which is prohibit DRM, and what they say is:
+when media have been encoded for DRM, then writing another program to
+access that media is illegal, and the way they do this is they say
+that DRM constitutes an effective, they call it "protection" I call it
+"restriction", measure.  So, what we say is, by releasing a program
+under GPL version three, you agree that it is not an effective
+restriction measure.  In other words, you authorise others to develop
+on their own software to read the output of your program.
+</p>
+
+<p class="indent">
+This also is a matter of recognising and respecting their freedom to
+develop software and use their computers.  And this, what I've
+described so far, is all that GPL version three says about DRM.
+</p>
+
+<p>
+[1h 54m 36s]
+</p>
+
+<p class="indent" id="licence-compatibility">
+Another area in which we've made large changes has to do with
+compatibility with a wide range of other Free Software licences.
+</p>
+
+<p class="indent">
+We've always understood GPL version two, and version one, as being
+compatible with some other Free Software licences.  Namely, those that
+don't require anything except what the GPL requires.  So, for
+instance, there is the X11 licence, all it requires is that you keep
+the licence there.  This doesn't actually demand anything that
+conflicts with the GPL, so we've always interpreted it as being
+compatible with the GPL, and what it means to say that two free
+software licences are compatible is that you can take code from a
+program under licence A and code from a program under licence B and
+put them together in one program and you have not violated either
+licence.
+</p>
+
+<p class="indent">
+If both licences permit the combining of the code, then you can
+combine the code, and that's what it means to say the licences are
+compatible.  Now, it's very useful to be able to combine the code, so
+compatibility of the licences is a convenient thing.  Now, it's
+impossible for all Free Software licences to be compatible.  You see,
+the GPL makes certain requirements and we are not willing to have them
+taken off, and so another licence, such as GPL version one, that
+doesn't have those requirements, cannot be compatible with GPL version
+two or three.  That's impossible.
+</p>
+
+<p class="indent">
+A licence like the Mozilla Public License has its own specific
+requirements, but it requires things the GPL doesn't require.  It
+can't be compatible, I believe.  So we can't be compatible with all of
+them, but we went through other Free Software licences and we
+identified certain kinds of requirements that are pretty harmless and
+we wouldn't mind if people could attach those kinds of requirements to
+GPL-covered programs, and we made an explicit list of those kinds of
+requirements.  Section seven of the draft of GPL version three says
+you can put your own terms and conditions on code that you add to the
+GPL covered program, and your terms and conditions can include these
+kinds of requirements.  You can also give additional permission.  Any
+kind of additional permission you like.  So your terms on your code
+can be more permissive than the GPL itself.  And section seven makes
+it completely explicit that this is compatible with the GPL.
+</p>
+
+<p>
+[1h 58m 22s]
+</p>
+
+<p class="indent">
+Now, these, the added kinds of requirements that you can make, include
+different requirements as regards credit and notices and how to
+identify changes on your code.  That's harmless, that only really is
+relevant when people change your code, and when they do that they will
+see your terms at the beginning of your code and they will know what
+to do.  And it can include a requirement that they not use certain of
+your trademarks in ways that trademark law forbids.  And this would
+just be a way of reinforcing trademark law using the copyright on your
+code.  And that's harmless because you could actually do that with
+trademark law in the first place.  So this doesn't actually restrict
+people in any way that they wouldn't be restricted otherwise.
+</p>
+
+<p>
+[1h 59m 28s]
+</p>
+
+<p class="indent" id="affero-clause">
+You can put on requirements that -- and this is a non-trivial kind of
+requirement that we've decided to let people put on -- requirements
+that if people run your code, on a publicly accessible server, then it
+must have a command that the user can use to download the source code
+of the version that is running.  Which means that if someone makes
+changes and puts the changes in his version, on his server, he has to
+make his source code changes available to the users who talk to his
+server.
+</p>
+
+<p class="indent">
+This requirement is known as the Affero clause because it's used in
+the Affero GPL.  The Affero GPL is like GNU GPL version two except it
+has this requirement as well.
+</p>
+
+<p class="indent">
+We were thinking of including some kind of requirement like that in
+GNU GPL version three.  We didn't want to make it apply to everything
+automatically.  That would be a drastic change, so we would have to
+make it something that people could activate explicitly for their
+programs, and then I realised people could activate it explicitly for
+their programs by putting the Affero GPL on their programs and as long
+as the GNU GPL says it's compatible with that, that's a way you could
+activate that requirement for your code and it means we don't have to
+put any specific thing about that in the GNU GPL, we only have to make
+the GNU GPL compatible with it and we did.
+</p>
+
+<p id="compat-pat-retal">
+[2h 01m 33s]
+</p>
+
+<p class="indent" id="compatibility-with-patent-retaliation">
+There's another kind of requirement that we've decided to permit, and
+this is patent retaliation clauses.  Now, the reason is that there are
+several other Free Software licences that have patent retaliation
+clauses.
+</p>
+
+<p class="indent">
+Patent retaliation means, if you sue somebody for patent infringement,
+then you lose the right to use this code.
+</p>
+
+<p class="indent">
+Of course there are many ways to do that because every patent
+retaliation clause puts on some specifics, if you sue him or him for
+patent infringement in certain circumstances, then you lose the right
+to use this code, and the question is, what are those circumstances,
+what are the conditions under which the retaliation operates.
+</p>
+
+<p class="indent">
+Now, we saw that there are some very broad and nasty patent retaliation
+clauses.  Some of them say, "if you sue me for patent retaliation, for
+any reason about anything, you lose the right to use this code".  Now
+that's bad because it means, suppose I sue you for patent
+infringement and you have a patent so you counter sue me, and then my
+Free Software licence retaliates against you and you lose the right to
+use that code, now that's not fair because in that case you are
+defending yourself, you're not the aggressor, so we decided to accept
+only patent retaliation clauses that are limited enough that they do
+not retaliate against defense, that they only retaliate against aggression,
+so there are two kinds of clauses that we identified that do this.
+One is, if the clause itself, makes a distinction between defense and
+aggression, so it says, if you sue somebody for patent infringement and
+it's aggression, then you lose the right to use this code, but if you
+are suing in retaliation for aggression, then what you are doing is
+defensive and then we do not retaliate against you.
+</p>
+
+<p class="indent">
+This is one kind of patent retaliation clause that we accept.
+</p>
+
+<p>
+[2h 04m 21s]
+</p>
+
+<p class="indent">
+The other kind is, if you sue, alleging that some Free Software,
+relating to this code is patent infringement, then you lose the right
+to use this code.  In the broad space of possible kinds of
+patent retaliation clauses, we picked two kinds, each of which is
+limited enough that it will not retaliate against people for
+practicing defense with patents.  It will only retaliate against
+aggressors.  And we've said these two kinds of clauses are OK to add to
+your code in a GNU GPL covered program.  This is a conceptually
+complicated thing.  There's no way to make it any simpler, I hope, at
+least, that I've explained it clearly.
+</p>
+
+<p class="indent" id="limited-retal">
+The GPL itself does contain one very limited kind of patent retaliation,
+but it's a different kind.  It says you if make changes in a GPL-covered
+program and then somebody else makes similar changes and you sue him
+for patent infringement then you lose the right to continue making
+changes and copying the program to your own machines.
+</p>
+
+<p class="indent">
+This is a very limited situation and it's meant to protect against one
+particular kind of abuse on the part of server operators where they make
+an improvement, which they're free to do, and run it on their servers
+and they don't release their source code and if the code does not have
+the Affero clause on it then they don't have to release the source
+code, and then you decide that you are going to implement a similar
+improvement and then they sue you for patent infringement.
+</p>
+
+<p class="indent">
+So, once again, we're making a change that keeps people honest and
+makes sure that the four standard freedoms that the four standard
+freedoms that the GPL has always tried to ensure, really apply in all
+cases.
+</p>
+
+<p class="indent" id="displaying-the-licence">
+This is pretty much it, but there is also one interesting change in
+the section that deals with modified versions.  There has always been
+a requirement that if you get a program that prints some kind of
+notice about the licence when it starts up, you can't take that out.
+We've generalised that so that it applies to various kinds of user
+interfaces in various ways.
+</p>
+
+<p class="indent">
+So, for instance, if the program is graphical and it has an "about"
+box, the about box has to say "this is Free Software under the GPL".  And if
+it starts up interactively and asks for commands, then it has to print
+the notice at the beginning, and the requirements are a little bit
+different depending on how obtrusive this would be.  For example, the
+about box is simply a menu item sitting in a menu, well that doesn't
+bother anybody, so we just say that always has to be there.
+</p>
+
+<p class="indent">
+On the other hand, printing a notice at start up can be annoying,
+there are certain programs which shouldn't print notices at start up.
+So what we say is that if the program that you got doesn't print a
+notice and you change it, then your program doesn't have to print a
+notice either.  You know, if you change Bash, well Bash isn't supposed
+to print a notice when it starts up and we don't require you make it
+print a notice, but if you gave it a GUI, with menus, you would have
+to put in an about box because the about box doesn't do any harm.
+</p>
+
+<p>
+[2h 10m 02s]
+</p>
+
+<p class="indent" id="end-of-presentation">
+I've covered all the issues I can think of that are worth discussing, and I am
+willing to ask for questions however you can discuss a question with
+me but if you think you see a problem, you should go to the site
+<a href="http://gplv3.fsf.org">gplv3.fsf.org</a> and report this problem and get it considered through our
+discussion committees and they'll either publish an answer eventually,
+or they will pass the issue on to me and I'll think about whether a
+change is needed.
+</p>
+
+<p class="indent">
+So, I'm ready for questions.
+</p>
+
+<p>
+[2h 10m 55s]
+</p>
+
+<p>
+[applause]
+</p>
+
+<p id="q1-about-linux">
+Q1: I would like to ask, what is the position of Stallman, and to
+clarify a bit about the different position of the Linux community
+about Digital Rights Management.
+</p>
+
+<p class="indent">
+Stallman: I can't speak for them, and I don't want to try.  All I can
+point out is that Linux is one of thousands of programs in the
+GNU+Linux operating system.  These programs already have various
+different licences.  If some of those programs continue to be
+distributed under GPL version two while others move to GPL version
+three or to "GPL version three or later", that won't be any disaster.
+The developers of Linux are the ones who will decide which licence to
+use on their program, but I'm confident that most of the GNU+Linux
+system will be under the GPL version three, regardless of what the
+Linux developers decide about their program.
+</p>
+
+<p class="indent">
+I hope that they will move to GPL version three because I want to see
+Linux resisting Tivo-isation.  Linux, after all, is one of the programs
+that has already been Tivo-ised.
+</p>
+
+<p class="indent">
+[applause]
+</p>
+
+<p id="q2-linking">
+Q2: (Question asked in Italian, something about linking and dynamic
+languages)
+</p>
+
+<p class="indent">
+Stallman: Actually, there are changes making it clearer that it
+doesn't matter which kind of linking is being used.  If there are two
+modules that are designed to be run linked together and it's clear
+from the design from one or the other that they are meant to be linked
+together then we say they are treated as one program and so I hope
+that will make it a little bit clearer although that's not really a
+change, it's a clarification.  That's what we believe GPL version two
+means already.
+</p>
+
+<p id="q3a-judging-the-spirit">
+Q3a: I have two different questions.  The first is what happens if
+anyone released code under GPL version two maybe ten years ago and now
+isn't happy with version three and says you're changing the spirit,
+when I said I would release it under version two and subsequent
+version, I didn't think of these.  Do you imagine he would be bound to
+version three, or...
+</p>
+
+<p class="indent">
+Stallman: Yes.  Because we're not changing the spirit.  These are
+small changes.
+</p>
+
+<p>
+Q3a2: OK, so basically, you're the one who judges...
+</p>
+
+<p class="indent">
+Stallman: Well, maybe a court might, but I can't believe that anyone
+not strongly prejudiced would conclude that this is a change in the
+spirit.  A change in the spirit certainly permits change in the
+details of the requirements and anyone who released it under version
+two or later should have seen the changes that were made from version
+one, which were not as big but they were the same kinds of things.  So
+yeh, if he released it under GPL "two or later" you'll be able to use it
+now under version three.
+</p>
+
+<p id="q3b-can-free-software-beat-drm">
+Q3b1: OK, the second question is that, as you know, I'm involved in
+these United Nation processes on the Internet governance, so I'm
+interested to know, do you think the fight against Digital Rights
+Managements and Trusted Comp[interrupted]
+</p>
+
+<p class="indent">
+Stallman: Digital Restrictions Management, and Treacherous Computing.
+Don't use the enemy's propaganda terms, every time you use those terms
+you are supporting the enemy.
+</p>
+
+<p>
+[applause]
+</p>
+
+<p class="indent">
+Q3b2: OK, so the correct term is Treacherous Computing right?  So on
+the fight against these new mechanisms, do you think it can only be
+won by writing Free Software, releasing Free Software?
+</p>
+
+<p class="indent">
+Stallman: I don't know.
+</p>
+
+<p>
+Q3b3: Do you imagine that there should be need for
+intervention or lobbying at the legal level?
+</p>
+
+<p class="indent" id="democracy">
+Stallman: I think Treacherous Computing should be illegal.  But I
+don't know how we're going to convince governments to actually do that
+because governments mostly are not very democratic anymore.  They
+mostly are the pro-consuls of the mega corporations, their job is to
+keep us in line under the rule of the empire.  That's why they run for
+office, they get into office, they do what the emperor -- the emperor
+being the mega corporations -- tells them to do, and their job is
+explaining to us why they can't do what we want them to do.  It's very
+very sad and once in a while somebody has enough courage to refuse to
+obey, somebody like [sounds like Hugo Chavez].
+</p>
+
+<p>
+Q3b4: So do you think it's not even worth trying?
+</p>
+
+<p class="indent">
+Stallman: Oh, it's worth trying.  It's just going to be hard, the
+point is you have to keep putting the pressure on these politicians.
+In France, there is a battle going on and we still might win it about
+the legalisation of peer-to-peer copying on the Internet.  This shows
+that when enough people get energised, the empire can lose a battle.
+</p>
+
+<p class="indent">
+It's very important.
+</p>
+
+<p>
+[applause]
+</p>
+
+<p>
+[2h 19m 53s]
+</p>
+
+<p class="indent">
+Stallman: Another thing that people should do is refuse to buy
+anything that's based on DRM.  Don't buy corrupt disks, that is the
+fake CDs that have music set up so that you're blocked from copying
+it.  Don't buy DVDs unless you have DeCSS and you can copy it.
+</p>
+
+<p class="indent">
+If you can't copy it - don't buy it!
+</p>
+
+<p>
+[applause]
+</p>
+
+<p>
+[2h 20m 23s]
+</p>
+
+<p id="q4-who-is-involved">
+Q4: (Question in Italian, mentions Eben Moglen)
+</p>
+
+<p class="indent">
+Stallman: Well, first, I'm the one who decides what goes into GPL
+version three, and, of course, whenever I think of language I'm
+usually working with Eben Moglen since he's a lawyer and he's the only
+one that can tell me if the language will really do what I hope it
+will do.  Meanwhile, a lot of other people are involved.  For
+instance, you can go to the <a href="http://gplv3.fsf.org">gplv3.fsf.org</a> site and study it and if you
+think you see something that's not good or whatever kind of problem
+you might think there is, you can report it and your comment will go to a
+discussion committee and, there are four discussion committees, it
+will go to one of those committees which will then group your comment
+with other comments that raise that same issue and then they will
+study each issue and post the issue and their response to it and your
+comment will be connected to the issue which they grouped it into so
+it will be connected to the response as well.
+</p>
+
+<p class="indent">
+And thus, there are probably hundreds of people participating in
+checking the draft and trying to make sure it does the right thing.
+</p>
+
+<p id="q5-why-you">
+Q5: In the end of the process of deciding what modifications of the
+licence will be done there's one single person, that is you.  Can you
+explain why this decision and you have not chosen to make some group?
+</p>
+
+<p class="indent">
+Stallman: I don't know other people who can do this.
+</p>
+
+<p class="indent">
+I hope that the process that's going on now will help develop
+people who can be part of some group activity but at the moment, I
+don't know anyone that I could delegate this to.  Obviously I can't
+always forever be the person doing this, barring unforeseen advances in
+medical technology or AI and nanotechnology, which I certainly hope
+will come soon but they're not likely, but at this point, I think this
+is the right thing to do.
+</p>
+
+<p>
+Q5.2: Maybe it will change in the future.
+</p>
+
+<p class="indent">
+Stallman: I hope.  We're going to have to replace me somehow, sooner
+or later.
+</p>
+
+<p>
+[applause]
+</p>
+
+<p>
+[2h 24m 30s]
+</p>
+
+<p id="q6-what-was-rejected">
+Q6: You told us about what GPLv3 will be, but what about the issues
+that are included, the suggestions that you refused.  Can you give us
+some samples?
+</p>
+
+<p class="indent">
+Stallman: Well, when I decided that we had to do something to resist
+Digital Restrictions Management, the obvious way to do this would be
+restrictions on what kinds of jobs the program can be made to do, but
+I decided that that would be the wrong way to do it and so I thought
+hard and I came up with a way to achieve the job by directly
+protecting the freedom of each user without any restrictions about what
+technical job a version of the program can do.
+</p>
+
+<p class="indent">
+Another example of what we decided not to do was putting the Affero
+clause into the GNU GPL in some way.
+</p>
+
+<p class="indent">
+Another example of something we decided not to do, we decided not to
+put in very much in the way of patent retaliation clause and the
+reason is we have doubts about how effective those clauses really can be.  We
+have doubts about whether our community actually has enough power that
+the threat of our retaliation would scare anyone.
+</p>
+
+<p class="indent">
+So, these are some examples of changes we decided not to do.  Some for
+reasons of principle and some for practical reasons.
+</p>
+
+<p class="indent">
+So, thank you for your attention, and happy hacking.
+</p>
+
+<p>
+[applause]
+</p>
+
+<h2 id="links">Getting more information</h2>
+
+<ul>
+
+<li>FSFE: <a href="gplv3.html">FSF Europe's GPLv3 project page</a></li>
+
+<li>FSF: <a href="http://gplv3.fsf.org/">The GPLv3 website</a></li>
+
+<li>FSF: <a href="http://gplv3.fsf.org/draft">The current draft of GPLv3</a></li>
+
+<li><a href="fisl-rms-transcript.html">A transcript of Richard
+  Stallman's talk from the 2nd international GPLv3 conference, April
+  21st</a></li>
+
+<li><a
+  href="http://www.ifso.ie/documents/gplv3-launch-2006-01-16.html">A
+  transcript of the opening session of the first international GPLv3
+  conference</a> (Eben Moglen discusses the changes made to the
+  license)</li>
+
+<li><a href="http://www.ifso.ie/documents/rms-gplv3-2006-02-25.html">A transcript of
+  Richard Stallman's GPLv3 talk from FOSDEM 2006</a></li>
+
+<li>FSF: <a href="http://gplv3.fsf.org/wiki/index.php/Reusable_texts">The page
+    on the official GPLv3 wiki listing transcripts and similar texts</a></li>
+
+</ul>
+
+
+
+
+  </body>
+
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

@@ -24,9 +24,6 @@ RewriteRule ^graphics/fsfeurope.ico /graphics/fsfe.ico [R=301,L]
 # Redirect
 RewriteRule ^translate/?$ /contribute/translators/ [R=301,L]
 
-# AskYourCandidates
-RewriteRule ^campaigns/ayc(.*) /campaigns/askyourcandidates$1 [R=301,L]
-
 # NoCloud campaign, as printed on posters
 RewriteRule ^nocloud(/.*)?  /activities/nocloud$1 [R=301,L]
 
@@ -40,7 +37,7 @@ RewriteRule   ^(cyf|convince)/?$ http://wiki.fsfe.org/ConvinceYourFriends [R=301
 RewriteRule ^summit16(/.*)?$  https://fsfe.org/community/events/2016/summit/frontpage$1 [R=301,L]
 
 # 15 years of FSFE
-RewriteRule ^15(/.*)?$    https://fsfe.org/campaigns/15years/15years$1 [R=301,L]
+RewriteRule ^15(/.*)?$    https://fsfe.org/activities/15years/15years$1 [R=301,L]
 
 # Podcast
 RewriteRule ^podcast(/.*)? /news/podcast.html [R=301,L]
@@ -54,6 +51,10 @@ RewriteRule ^share/?$ /cgi-bin/share.php [NC,L]
 # Link to PMPC event, can be changed afterwards
 RewriteRule ^publiccode/?$ https://registration.fsfe.org/Digitale-Verwaltung-2020 [R=301,L]
 
+# Others
+RewriteRule ^standards(.*) /activities/os$1 [R=301,L]
+RewriteRule ^education(.*) /activities/education$1 [R=301,L]
+
 
 # =============================================================================
 # CAMPAIGN/TOPIC-SPECIFIC REDIRECTS
@@ -66,16 +67,9 @@ RewriteRule ^news/podcast-opus.rss$ /news/podcast-opus.en.rss [L,R=301]
 
 # ILoveFS
 # TODO each year: update links for next two lines
-RewriteRule ^campaigns/ilovefs(/?$|/[^/]*.html$) /campaigns/ilovefs/2020$1 [PT,L]
-RewriteRule ^campaigns/ilovefs/latest-report.*$ /news/2019/news-20190329-01.html [R=301,L]
-RewriteRule ^campaigns/ilovefs/ilovefs(.*)html$ /campaigns/ilovefs/index$1html [R=301,L]
-RewriteRule ^campaigns/ilovefs/(201[2-5])/index(.*)$ /campaigns/ilovefs/$1/ [R=301,L]
-RewriteRule ^campaigns/ilovefs/(201[2-5])(/?)$ /campaigns/ilovefs/$1/ilovefs.html [R=301,L]
-# old URLs
-RewriteRule ^valentine.* /campaigns/ilovefs [R=301,L]
-RewriteRule ^vd20.* /campaigns/ilovefs [R=301,L]
-RewriteRule ^campaigns/valentine.* /campaigns/ilovefs [R=301,L]
-RewriteRule ^campaigns/vd20.* /campaigns/ilovefs [R=301,L]
+RewriteRule ^activities/ilovefs(/?$|/[^/]*.html$) /activities/ilovefs/2020$1 [PT,L]
+RewriteRule ^activities/ilovefs/latest-report.*$ /news/2019/news-20190329-01.html [R=301,L]
+RewriteRule ^activities/ilovefs/ilovefs(.*)html$ /activities/ilovefs/index$1html [R=301,L]
 
 # Help section
 RewriteRule ^help/?$ /contribute/ [R=301,L]
@@ -123,31 +117,11 @@ RewriteRule ^en/content/download/15872/77909/file/gnupg-ccid http://wiki.fsfe.or
 RewriteRule ^tags/tagged(\...)(\.html)?$ /tags/tags$1.html [R=301,L]
 
 # Documents
-RewriteRule ^documents/fp6(.*) /projects/fp6$1 [R=301,L]
-RewriteRule ^documents/whatwedo(.*) /about/basics/whatwedo$1 [R=301,L]
-RewriteRule ^documents/gnuproject(.*) /freesoftware/gnuproject$1 [R=301,L]
-RewriteRule ^documents/whyweexist(.*) /about/basics/whyweexist$1 [R=301,L]
-RewriteRule ^documents/freesoftware(.*) /about/basics/freesoftware$1 [R=301,L]
-RewriteRule ^documents/preamble(.*) /about/history/preamble$1 [R=301,L]
-RewriteRule ^documents/doi(.*) /about/history/doi$1 [R=301,L]
-RewriteRule ^documents/msooxml(.*) /projects/os/msooxml$1 [R=301,L]
-RewriteRule ^documents/iprip(.*) /projects/wipo/iprip$1 [R=301,L]
-RewriteRule ^documents/wiwo(.*) /projects/wipo/wiwo$1 [R=301,L]
-RewriteRule ^documents/printable/(.*) /about/printable/$1 [R=301,L]
-RewriteRule ^documents/reports/(.*) /about/reports/$1 [R=301,L]
-RewriteRule ^documents/rms-fs-2006-03-09(.*) /freesoftware/transcripts/rms-fs-2006-03-09$1 [R=301,L]
-RewriteRule ^documents/whyfs(.*)$ /campaigns/whyfs/ [R=301,L]
+RewriteRule ^documents/freesoftware(.*) /freesoftware/freesoftware.html [R=301,L]
+RewriteRule ^documents(/.*)?$ / [R=301,L]
 
 # Projects
-# moved to campaigns/
-RewriteRule ^projects/(agnula|bgw|browserbundling|btw09|eucd|gbn|gplv3|horizon2020|ipred2|mankind|pdfreaders|self|stacs|swpat|wsis)(.*)$ /campaigns/$1$2 [R=301,L]
-RewriteRule ^projects/active(.*)$ /campaigns/campaigns$1 [R=301,L]
-RewriteRule ^projects/finished(.*)$ /campaigns/campaigns$1 [R=301,L]
-RewriteRule ^projects/inactive(.*)$ /campaigns/campaigns$1 [R=301,L]
-# moved to activities/
-RewriteRule ^projects/(drm|education|os|procurement|eu|ftf|fla|ms-vs-eu|un|wipo|fp6|fp7|map|igf)(.*)$ /activities/$1$2 [R=301,L]
-RewriteRule ^projects/work(.*) /work$1 [R=301,L]
-RewriteRule ^projects(/.*)?$ /campaigns/ [R=301,L]
+RewriteRule ^projects(/.*)?$ /activities/activities.html [R=301,L]
 
 # /freesoftware, /about/basics and similar "basic" texts
 RewriteRule ^about/basics/?(.*)$ /freesoftware/ [R=301,L]
@@ -155,7 +129,7 @@ RewriteRule ^freesoftware/basics/(comparison|gnuproject)(.*)$ /freesoftware/$1$2
 RewriteRule ^freesoftware/basics/legal/?(.*)$ /freesoftware/legal/ [R=301,L]
 RewriteRule ^freesoftware/education/?(.*)$ /activities/education/ [R=301,L]
 RewriteRule ^freesoftware/society/?(.*)$ /freesoftware/democracy.html [R=301,L]
-RewriteRule ^freesoftware/legal/flashingdevices(.*)$ /campaigns/android/flashingdevices$1 [R=301,L]
+RewriteRule ^freesoftware/legal/flashingdevices(.*)$ /activities/android/flashingdevices$1 [R=301,L]
 RewriteRule ^freesoftware/public-sector/german-foreign-office-comment(.*)$ https://k7r.eu/buchartikel-freie-software-im-auswartigen-amt-erst-hu-dann-hott/ [R=301,L]
 RewriteRule ^freesoftware/(basics|enterprise|support|third-sector|transcripts)/?(.*)$ /freesoftware/ [R=301,L]
 
@@ -163,29 +137,26 @@ RewriteRule ^freesoftware/(basics|enterprise|support|third-sector|transcripts)/?
 # TODO: as soon as a new "work" page is available, update this to the legal section
 RewriteRule ^activities/ftf/?(.*)$ /freesoftware/legal/legal.html [R=301,L]
 
+# Campaigns pages
+RewriteRule ^campaigns(/.*)?$ /activities$1 [R=301,L]
+
+# Norwegian language: Bokmal language code
+RewriteRule ^(.*)\.no.html /$1.nb.html [R=301,L]
+RewriteRule ^(.*)\.no.rss /$1.nb.rss [R=301,L]
+
 # Other pages
 RewriteRule ^about/(history|reports)/?(.*)$ /about/ [R=301,L]
 RewriteRule ^about/members(/.*)?$ /about/team$1 [R=301,L]
 RewriteRule ^about/community(/.*)?$ /contact/community.html [R=301,L]
 RewriteRule ^about/self-conception(/.*)?$ /about/principles$1 [R=301,L]
-RewriteRule ^(.*)\.no.html /$1.nb.html [R=301,L]
-RewriteRule ^(.*)\.no.rss /$1.nb.rss [R=301,L]
 RewriteRule ^contact/press(.*) /press/press$1 [R=301,L]
-RewriteRule ^standards(.*) /projects/os$1 [R=301,L]
-RewriteRule ^education(.*) /projects/education$1 [R=301,L]
-RewriteRule ^stacs(.*) /projects/stacs$1 [R=301,L]
-RewriteRule ^gbn(.*) /projects/gbn$1 [R=301,L]
-RewriteRule ^law/eucd/(.*) /projects/eucd$1 [R=301,L]
-RewriteRule ^law(.*) /projects/law$1 [R=301,L]
-RewriteRule ^swpat(.*) /projects/swpat$1 [R=301,L]
 RewriteRule ^associates/about(.*) /associates/associates$1 [R=301,L]
 RewriteRule ^contribute/traineeship(.*) /contribute/internship$1 [R=301,L]
 RewriteRule ^contribute/donate(.*) /donate$1 [R=301,L]
 RewriteRule ^contact/local(.*) /contact/contact$1 [R=301,L]
 RewriteRule ^about/localteams(.*) /contact/contact$1 [R=301,L]
 RewriteRule ^fr/(news|events)\.(..\.)?html /fr/fr.$2html [R=301,L]
-RewriteRule ^campaigns/wsis/cs-benchmarks\.(.*)$ /campaigns/wsis/cs-benchmarks-03-11-14.$1 [R=301,L]
-RewriteRule ^contribute/translators\.(.*) /contribute/translators/translators.$1 [R=301,L]
+RewriteRule ^activities/wsis/cs-benchmarks\.(.*)$ /activities/wsis/cs-benchmarks-03-11-14.$1 [R=301,L]
 RewriteRule ^contribute/booth(.*) https://wiki.fsfe.org/KnowHow/Groups/OrganizeABooth [R=301,L]
 
 
@@ -232,7 +203,6 @@ RewriteRule ^login(/.*)?$ https://my.fsfe.org/ [R=301,L]
 
 # Old pages
 RewriteRule ^about/printable(/.*)?$ /contribute/spreadtheword/ [R=301,L]
-RewriteRule ^projects/leaflet-fellowship-FSA(.*) /contribute/spreadtheword/ [R=301,L]
 
 
 # =============================================================================
@@ -241,6 +211,3 @@ RewriteRule ^projects/leaflet-fellowship-FSA(.*) /contribute/spreadtheword/ [R=3
 
 # Forbid access to these folders
 RewriteRule ^(tools|build)(/.*)?$ - [F,L]
-
-# Custom Directory Index for these folders
-RewriteRule ^campaigns/browserbundling/?$ /campaigns/browserbundling/letter-20091005.html [R=301,L]

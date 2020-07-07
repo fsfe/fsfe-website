@@ -1,0 +1,172 @@
+﻿<html>
+  <version>1</version>
+
+  <head><title>"Secure Boot": ¿Quién controlará tu próximo ordenador?</title></head>
+<body class="article">
+  <p id="category">
+      <a href="/freesoftware/freesoftware.html">Free Software</a></p>
+
+ 
+<h1>"Secure Boot": ¿Quién controlará tu próximo ordenador?</h1>
+<p>La meta de la FSFE es asegurar que los propietarios de dispositivos TIC y solo ellos,
+ mantienen siempre el control total sobre los mismos.
+ <!-- German: permanent die volle und alleinige Verfügungsgewalt über ihre IT-Geräte innehaben) --> 
+ Este principio fundamental está recientemente amenazado.</p>
+ 
+<p>Mediante una función llamada "Arranque seguro" ("Secure Boot"), que se
+desplegará en ordenadores a partir de 2012, los fabricantes de equipos TIC y de
+componentes de software están intentando acceder a una posición en la que ellos
+controlen permanentemente los dispositivos TIC que produzcan.  En consecuencia,
+tales dispositivos serán "seguros" desde la perspectiva del fabricante, pero no
+necesariamente desde el punto de vista del propietario: El propietario puede verse
+tratado como un adversario. Bloqueando ciertas funciones del dispositivo a voluntad
+del fabricante, éste puede controlar y limitar los usos de una máquina TIC
+de propósito general (p.ej. un PC, portátil, netbook, ...).  En el caso de dispositivos
+con acceso a internet, podrían alterar estas restricciones de funcionalidad en cualquier
+momento incluso sin informar al propietario del dispositivo. Como resultado, los 
+fabricantes TIC pueden retirar derechos que los propietarios de los productos reciben
+habitualmente.</p>
+
+<h2>"Secure Boot": Guardián antes del sistema operativo</h2>
+<p>Al encenderlos, los dispositivos TIC ejecutan un proceso de arranque.  En el caso de los
+ ordenadores, este proceso de arranque consiste en ejecutar firmware (software grabado en chip).
+ Este firmware, a su vez, arranca otro programa llamado cargador de arranque, que lanza el 
+ sistema operativo, sobre el que se pueden ejecutar las aplicaciones.  En 2012 la transición del
+ firmware de PCs, portátiles, servidores, y otros ordenadores desde la BIOS convencional a
+ <a href="http://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface">UEFI</a>
+ estará casi completada.  Comparado con la BIOS convencional, UEFI tiene varias ventajas, como un
+ arranque más rápido, controladores independientes del sistema operativo, y la promesa de una seguridad
+ extendida.</p>
+ <p>El aspecto de la seguridad lo trata una función llamada "Arranque Seguro" ("Secure Boot").
+ Desde UEFI 2.3.1 (publicado el 8 de Abril de 2011) "Arranque Seguro" asegura que durante el
+ proceso de arranque sólo se ejecutará software que cumpla con una de las firmas criptográficas
+ preinstaladas. Esto se hace para evitar que se ejecute software no deseado durante el arranque
+ del ordenador, verificando criptográficamente una firma para cada componente software
+ (varias etapas del firmware UEFI, el cargador de arranque, el núcleo del sistema operativo, etc.)
+ antes de su iniciación. Por tanto, las firmas criptográficas que se vayan a usar tienen que instalarse
+ en la base de datos de firmas de UEFI de cada dispositivo TIC equipado con el "Arranque Seguro" de UEFI
+ <strong>antes</strong> de que se pueda ejecutar un componente software firmado criptográficamente en esa
+ máquina específica.</p>
+ <p>FSFE estima que la inmensa mayoría de fabricantes de ordenadores implementarán "Arranque Seguro", ya
+ que Microsoft <a href="http://msdn.microsoft.com/en-us/library/windows/hardware/hh748200.aspx"> ha
+ anunciado</a> que los fabricantes tienen que implementar el "Arranque Seguro" de UEFI, si desean
+ certificarse para Windows 8, p.ej. para poner el logotipo "Compatible con Windows 8" en sus dispositivos.
+</p>
+ 
+ <div class="aside-box right"><h2>El ordenador: Una máquina de propósito general</h2>
+ <p>Evolucionando el ordenador como máquina de propósito general durante las últimas décadas,
+ nuestra sociedad ha creado una poderosa herramienta para realizar todo tipo de tareas con una única
+ máquina.  Ahora los fabricantes TIC han descubierto que podrían tener un interés económico en
+ limitar arbitrariamente lo que estas máquinas pueden lograr.  Con "Arranque Seguro" el propietario
+ de dispositivos TIC no será capaz de determinar independientemente el uso de sus máquinas,
+ ya que no puede decidir qué software ejecutar.</p>
+ <p>La entidad que eventualmente controle qué software se puede ejecutar en un dispositivo y por tanto
+ determine las funciones que realice el dispositivo, puede controlar en última instancia cualquier dato
+ procesado y almacenado en el dispositivo. Como resultado, el propietario de un dispositivo TIC podría
+ no tener ya el control absoluto de sus propios datos.</p>
+ 
+ </div><h2>¿Qué dispositivos se ven afectados por esto?</h2>
+ <p>Actualmente mucha gente basa sus análisis en la situación de UEFI en los
+ "Requisitos de Certificación Hardware para Windows 8" ("Windows 8 Hardware Certification Requirements"),
+ publicados por Microsoft en Diciembre de 2011. Se entiende que Microsoft no tenía ni tiene obligación
+ de hacer públicas versiones de estos requisitos de certificación hardware, ya que son la base de un
+ contrato individual entre Microsoft y cada fabricante de hardware que quiera obtener el certificado de
+ Microsoft para Windows 8 para sus productos.
+ Por tanto, los "Requisitos de Certificación Hardware para Windows 8" pueden
+ cambiar en cualquier momento sin notificación pública. O algunos detalles específicos
+ de los requisitos para el logotipo podrían diferir entre fabricantes: Todo ocurre a voluntad
+ de Microsoft y principalmente detrás de puertas cerradas. Por tanto nadie puede confiar en que
+ la versión publicada de los "Requisitos de Certificación Hardware para Windows 8" permanezca
+ estática, sino que se deben asumir los detalles expuestos para "Arranque Seguro" como
+ una "diana movil".</p>
+ <p>Por tanto el problema de "Arranque Seguro" no está necesariamente limitado a "Sistemas
+ conectados" (probablemente una gran porción del futuro mercado de portátiles, miniportátiles y PCs)
+ y ordenadores basados en microprocesadores ARM (principalmente tabletas y teléfonos móviles), sino que
+ Microsoft puede expandirlo en cualquier momento a cualquier tipo de dispositivo. Del mismo modo,
+ los fabricantes de hardware que no produzcan dispositivos Windows 8 podrían desplegar el
+ "Arranque Seguro" UEFI u otros procesos de arranque restringidos mediante firmas criptográficas.
+ TiVo ha estado haciendo esto desde hace una década, y varias consolas de juegos de Sony y Microsoft
+ estan usando procesos de arranque restringidos criptográficamente también.
+ Otros fabricantes de software podrían emplear especificaciones o requisitos similares a los
+ "Requisitos de Certificación Hardware para Windows 8", para restringir artificialmente las
+ capacidades de dispositivos TIC.</p>
+ 
+ <h2>¿Se extenderán las restricciones a las aplicaciones?</h2>
+ <p>Aunque la especificación del "Arranque Seguro" de UEFI (así como las especificaciones del
+ Trusted Computing Group que definen el "Arranque Confiable" ó "Trusted Boot") cubren principalmente
+ el proceso de arranque hacia el nucleo del sistema operativo, la infraestructura para extender la
+ comprobación de firma a todo software que se ejecuta en un ordenador está madura y funcionando en
+ varios sistemas operativos. Sin embargo, aparte de Windows 8 actualmente sólo se aplica a
+ controladores de dispositivos para Windows.</p>
+ 
+ <h2>¿Amenaza a la computación de propósito general?</h2>
+ <p>Si todas estas medidas estuvieran bajo control exclusivo de los propietarios del dispositivo,
+ servirían a sus intereses, ayudándoles a extender la seguridad del proceso de arranque, que hoy
+ está generalmente sin asegurar. Éste sería el caso <strong>si</strong> el subsistema de seguridad
+ especificado por el foro de UEFI y el Trusted Computing Group (TCG) garantizara
+ <strong>técnicamente</strong><!-- they can guarantee a lot, but they have to do it technically -->
+ el control exclusivo, permanente y absoluto del propietario sobre la configuración y administración
+ de estos subsistemas de seguridad, lo que incluye la creación, almacenaje, uso y eliminación de
+ claves criptográficas, certificados y firmas.  Pero en cuanto otras entidades aparte del propietario
+ del dispositivo puedan usar estos subsistemas de seguridad, quedarían habilitados para alterar usos
+ inintencionados o simplemente imprevistos de los dispositivos TIC.</p>
+ <p>Por tanto, con la implementación de "Arranque Seguro", la disponibilidad de ordenadores
+ de propósito general bajo control total del propietario podría resultar ampliamente reducida.
+ Los dispositivos significativamente restringidos por medidas como "Arranque Seguro" bajo control
+ de una compañía se denominan ordenadores de propósito especial ("appliances", en inglés. P.ej. media
+ centers, teléfonos, lectores de libro electrónico). Por tanto al menos algunos dispositivos Windows 8
+ constituirán más bien una caja Windows más que un ordenador general personalizable.
+ Aunque pueda haber mercado para tales sistemas específicos, la FSFE insta fervientemente a informar
+ debidamente al potencial comprador etiquetando tales dispositivos TIC como de uso restringido a
+ modelos establecidos por una compañía.</p>
+ 
+ <h2>¿Hay opción de circunvenir estas restricciones?</h2>
+ <p>Los usuarios avanzados de tecnología podrían pensar que han visto medidas
+ similares antes y que la mayoría resultaron vulneradas. Este fue el caso en
+ varios modelos de las consolas para juegos PlayStation y Xbox, así como muchos
+ teléfonos más modernos. Pero la calidad y diversidad son ahora más amplias:</p>
+ <ul><li>El "Arranque Seguro" de UEFI apunta primordialmente a los PCs tradicionales.</li>
+ <li>Está respaldado por amplias partes de la industria TIC, ver p.ej.
+ <a href="http://www.uefi.org/about/">los miembros del foro UEFI.</a></li>
+ <li>Su diseño y especificación son resultado de un esfuerzo colectivo de ingenieros TIC
+ de varias compañías. Arrastra una década de experiencia con procesos de arranque basados
+ en firma y por tanto evita muchos fallos clásicos, p.ej. la ausencia de un proceso de
+ actualización de firmware (UEFI) adecuadamente especificado y criptográficamente seguro.</li>
+ <li>Emplea subsistemas de seguridad basados en hardware, p.ej. en la especificación del TCG
+ (TPM o MTM, y especificaciones de acompañamiento): Mientras la especificación UEFI no
+ impone una implementación específica de "almacenamiento protegido" para las claves
+ criptográficas, certificados y firmas, las especificaciones recientes (desde 2011) del TCG
+ encajan bien.</li>
+ <li>Se esperan fallos de seguridad en "Arranque Seguro" (como en todo software), pero como 
+ habrá competición comercial entre fabricantes UEFI, habrá también interés en resolverlos.
+ En contraste, en el pasado solo implementaron procesos de arranque restringidos
+ criptográficamente fabricantes individuales para sus propios dispositivos específicos:
+ TiVo Inc. para sus TIVOs, Microsoft para varias generaciones de su Xbox, así como Sony
+ para sus Playstations.</li>
+</ul>
+
+<p>Más allá, incluso aunque en el pasado se han roto muchas restricciones de uso similares,
+ esto solo muestra que sus implementaciones técnicas estaban comprometidas y expuestas al
+ software malicioso, y por tanto no aportando la "seguridad" que prometían.
+ Aunque esto es probable que aplique tambien a algunas implementaciones de "Arranque Seguro",
+ la ruptura de tales mecanismos no puede nunca ser una solución para problemas de libertad o
+ ausencia de control por el propietario del dispositivo.</p>
+ 
+ <h2>La FSFE demanda</h2>
+ <p>La amplia disponibilidad de ordenadores de propósito general es crucial para mantener el
+ crecimiento sostenido en el desarrollo y uso de software.</p>
+ <p>FSFE pide que antes de comprar un dispositivo, se informe a los compradores concisamente
+ acerca de las medidas tecnicas implementadas en él, así como de las restriciones de uso
+ específicas y sus consecuencias para el propietario.</p>
+ <p>Además, la FSFE recomienda encarecidamente comprar exclusivamente dispositivos TIC que
+ otorguen a sus propietarios control permanente, absoluto y exclusivo sobre los subsistemas
+ de seguridad (p. ej.  restricciones de uso basadas en firma), con objeto de conservar la capacidad
+ de instalar software arbitrario y en último término, retener el control exclusivo
+ sobre los datos propios.</p>
+ </body>
+  <sidebar promo="our-work" />
+  <author id="kirschner"/>
+  <date>
+    <original content="2012-06-01"/>
+  </date>
+</html>

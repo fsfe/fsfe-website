@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <activityset>
-  <version>1</version>
+  <version>2</version>
 
   <activity id="swpat" date="2003-02-01" status="active">
     <title>Software Patents in Europe</title>
     <description>
-Software patents for Europe are currently being pushed forward
-actively by a lobby gathering around the European patent office and
-the Business Software Alliance (BSA), which represents the interests
-of the large U.S. companies. Software patents are a menace to society
-and economy and the FSFE is actively involved in the resistance
-against such plans.
+      We are working towards a world where software does what software
+      users want it to do. For this, software users must be able to
+      participate in the development and distribution of the software.
+      Software patents block this goal by adding legal and financial
+      risks to software development and distribution and by giving the
+      patent holders legal power to completely prohibit software
+      developers from using the patented ideas.
     </description>
     <link href="/activities/swpat/swpat.html" />
+    <order priority="1" />
+    <tags>
+      <tag key="policy" />
+      <tag key="legal" />
+    </tags>
   </activity>
 </activityset>

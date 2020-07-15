@@ -3,7 +3,7 @@
 <activityset>
   <version>0</version>
 
-  <activity id="stacs" date="2007-03-28" status="finished">
+  <activity date="2007-03-28" status="finished">
     <title>STACS</title>
     <description>
       Το STACS (Επιστήμη, Τεχνολογία και Κοινωνία των Πολιτών) είναι ένα
@@ -14,6 +14,10 @@
       ερευνητών και την ανεύρεση κοινών προγραμμάτων για μελλοντική συνεργασία.
     </description>
     <link href="/activities/stacs/stacs.html" />
+    <order priority="1" />
+    <tags>
+      <tag key="awareness" />
+    </tags>
 
   </activity>
 </activityset>

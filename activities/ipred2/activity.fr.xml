@@ -3,11 +3,15 @@
 <activityset>
   <version>1</version>
 
-  <activity date="2005-09-16" status="active">
+  <activity date="2005-09-16" status="finished">
     <title>IPRED2</title>
     <description>
     Une seconde directive portant sur l'application des "droits à la propriété intellectuelle" a été proposée par la Commission Européenne. Elle vise à criminaliser toutes les infractions "intentionnelles" ou à une "échelle commerciale", et à donner le droit aux détenteurs des droits de participer aux enquêtes. La FSFE va démontrer aux institutions européennes comment une telle loi peut encourager les abus du système judiciaire et avoir un effet négatif sur certaines activités pourtant légales.    </description>
     <link href="/activities/ipred2/ipred2.html" />
+    <order priority="1" />
+    <tags>
+      <tag key="policy" />
+    </tags>
   </activity>
 </activityset>
 

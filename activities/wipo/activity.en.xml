@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <activityset>
-  <version>1</version>
+  <version>2</version>
 
-  <activity id="wipo" date="2004-11-25" status="finished">
+  <activity date="2004-11-25" status="finished">
     <title>World Intellectual Property Organization</title>
     <description>
 The World Intellectual Property Organization (WIPO) is one of the 16
@@ -11,9 +11,13 @@ specialized agencies of the United Nations system of organisations.
 Its role is administrating 23 international treates dealing with
 different aspects of limited monopolies on knowledge. As an observer
 to WIPO and together with a global coalition of other players with
-similar goals, FSFE is working towards reshaping it as a "World
+similar goals, FSFE worked towards reshaping it as a "World
 Intellectual Wealth Organisation."
     </description>
     <link href="/activities/wipo/wipo.html" />
+    <order priority="1" />
+    <tags>
+      <tag key="policy" />
+    </tags>
   </activity>
 </activityset>

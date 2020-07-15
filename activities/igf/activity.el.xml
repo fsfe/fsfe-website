@@ -3,7 +3,7 @@
 <activityset>
   <version>1</version>
 
-  <activity id="igf" date="2006-10-30" status="active">
+  <activity id="igf" date="2006-10-30" status="finished">
     <title>Forum Διακυβέρνησης Διαδικτύου (IGF)</title>
     <description>
 Το Forum Διακυβέρνησης Διαδικτύου (Internet Governance Forum, IGF) είναι
@@ -14,6 +14,10 @@
 ελευθερία γενικά και ιδιαίτερα το Ελεύθερο Λογισμικό.
     </description>
     <link href="/activities/igf/igf.html" />
+    <order priority="1" />
+    <tags>
+      <tag key="policy" />
+    </tags>
   </activity>
 </activityset>
 

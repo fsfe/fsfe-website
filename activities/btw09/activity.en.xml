@@ -3,7 +3,7 @@
 <activityset>
   <version>1</version>
 
-  <activity id="btw09" date="2009-09-27" status="finished">
+  <activity date="2009-09-27" status="finished">
     <title>"Ask your candidates" - German Federal Election 2009</title>
     <description>
 	During the German federal elections in 2009, FSFE called on all German Free
@@ -14,5 +14,9 @@
 	answers.
     </description>
     <link href="/activities/btw09/btw09.html" />
+    <order priority="1" />
+    <tags>
+      <tag key="awareness" />
+    </tags>
   </activity>
 </activityset>

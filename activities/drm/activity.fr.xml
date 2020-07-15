@@ -9,6 +9,10 @@
     DRM.info est une plate forme collaborative initiée et maintenue par la FSFE dans le but d'informer le public sur les dangers présentés par les DRM (Digital Restrictions Management - Gestion des Restrictions Numériques), et également de rendre visibles les problèmes qui se posent à différents groupes. Les contributeurs de DRM.info incluent des associations de défense des droits numériques, des défenseurs des consommateurs, des activistes du net et des bibliothèques.
     </description>
     <link href="/activities/drm/drm.html" />
+    <order priority="1" />
+    <tags>
+      <tag key="awareness" />
+    </tags>
   </activity>
 </activityset>
 

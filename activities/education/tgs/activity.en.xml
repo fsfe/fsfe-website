@@ -3,13 +3,19 @@
 <activityset>
   <version>1</version>
 
-  <activity type="community">
-    <title>TUX&amp;GNU@school</title>
+  <activity date="2002-12-30" status="finished">
+    <title>TUX&amp;GNU@school column</title>
     <description>
-The TUX&amp;GNU@school column by Mario Fux is a column about
-Free Software in education that has found its home in the education
-activities of the FSF Europe.
+      The TUX&amp;GNU@school column was a regular column about Free
+      Software in education written by by Mario Fux. It informed about
+      educational Free Software, useful web sites on the topic and
+      other interesting topics for teachers, students and all software
+      freedom advocates.
     </description>
     <link href="/activities/education/tgs/" />
+    <order priority="1" />
+    <tags>
+      <tag key="awareness" />
+    </tags>
   </activity>
 </activityset>

@@ -3,7 +3,7 @@
 <activityset>
   <version>1</version>
 
-  <activity id="igf" date="2006-10-30" status="active">
+  <activity id="igf" date="2006-10-30" status="finished">
     <title>Internet Governance Forum (IGF)</title>
     <description>
       Het Internet Governance Forum (IGF) is een discussieforum van de Verenigde Naties,
@@ -13,6 +13,10 @@
       bijzonder.
     </description>
     <link href="/activities/igf/igf.html" />
+    <order priority="1" />
+    <tags>
+      <tag key="policy" />
+    </tags>
   </activity>
 </activityset>
 

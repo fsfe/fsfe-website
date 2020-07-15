@@ -3,7 +3,7 @@
 <activityset>
   <version>0</version>
 
-  <activity id="stacs" date="2007-03-28" status="finished">
+  <activity date="2007-03-28" status="finished">
     <title>STACS</title> 
     <description>
     STACS (Science, technology and civil society) ist ein Projekt, dass darauf
@@ -14,7 +14,11 @@
     denen in Zukunft zusammengearbeitet werden kann.
     </description> 
 
-    <link href="/activities/stacs/stacs.html" />  
+    <link href="/activities/stacs/stacs.html" />
+    <order priority="1" />
+    <tags>
+      <tag key="awareness" />
+    </tags>
 
   </activity>
 </activityset>

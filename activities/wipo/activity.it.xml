@@ -3,7 +3,7 @@
 <activityset>
   <version>1</version>
 
-  <activity id="wipo" date="2004-11-25" status="finished">
+  <activity date="2004-11-25" status="finished">
     <title>World Intellectual Property Organization</title>
     <description>
 La World Intellectual Property Organization (WIPO - Organizzazione
@@ -17,6 +17,10 @@ gli stessi obiettivi, la FSFE lavora per trasformare la WIPO in una
 Ricchezza Intellettuale").
     </description>
     <link href="/activities/wipo/wipo.html" />
+    <order priority="1" />
+    <tags>
+      <tag key="policy" />
+    </tags>
   </activity>
 </activityset>
 

@@ -3,11 +3,16 @@
 <activityset>
   <version>1</version>
 
-  <activity id="reuse" date="2017-06-01" status="active">
-    <title>Reuse of Free Software</title>
+  <activity date="2017-06-01" status="active">
+    <title>REUSE Software</title>
     <description>
-The FSFE is running a project to develop and raise awareness of best practices for the expression of license and copyright information in free and open source projects. The project is intended to facilitate management of source code by making licensing and copyright information more consistent in how it is added to source code in ways which allow for automating many of the processes involved.
+The FSFE is running a project to make licensing easy for humans and machines alike. It solves a fundamental issue that Free Software licensing has at the very source: what license is a file licensed under, and who owns the copyright? REUSE provides easy recommendations in three steps that help users, developers and legal professionals.
     </description>
     <link href="/activities/reuse/reuse.html" />
+    <image url="/graphics/logos/reuse.png" />
+    <order priority="1" highlight="yes" />
+    <tags>
+      <tag key="legal" />
+    </tags>
   </activity>
 </activityset>

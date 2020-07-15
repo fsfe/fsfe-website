@@ -3,12 +3,16 @@
 <activityset>
   <version>1</version>
 
-  <activity id="igf" date="2006-10-30" status="active">
+  <activity id="igf" date="2006-10-30" status="finished">
     <title>Forum de la Gouvernance Internet (IGF)</title>
     <description>
     Le Forum de la Gouvernance Internet (IGF) est un forum de discussion des politiques globales au sein des Nations Unies, établi lors du Sommet Mondial de la Société de l'Information (WSIS) des Nations Unies. La FSFE suit les travauxde  l'IGF pour s'assurer que les discussions politiques en cours ne mettent pas en danger les libertés numériques en général et le Logiciel Libre en particulier.
     </description>
     <link href="/activities/igf/igf.html" />
+    <order priority="1" />
+    <tags>
+      <tag key="policy" />
+    </tags>
   </activity>
 </activityset>
 

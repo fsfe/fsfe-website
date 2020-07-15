@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <activityset>
-  <version>1</version>
+  <version>2</version>
 
-  <activity date="2005-09-16" status="active">
+  <activity date="2005-09-16" status="finished">
     <title>IPRED2</title>
     <description>
-A second directive on the enforcement of &quot;intellectual property
-rights&quot; has been proposed by the European Commission.  It aims to
-criminalise all &quot;intentional, commercial-scale&quot;
-infringements, and to allow rights-holders to take part
-investigations.  FSFE will be pointing out to the EU institutions how
-such laws encourage abuse of the legal system and have chilling
-effects on law-abiding activities.
+      A second directive on the enforcement of &quot;intellectual
+      property rights&quot; has been proposed by the European
+      Commission.  It aims to criminalise all &quot;intentional,
+      commercial-scale&quot; infringements, and to allow rights-holders
+      to take part investigations. The FSFE pointed out to the EU
+      institutions how such laws encourage abuse of the legal system
+      and have chilling effects on law-abiding activities.
     </description>
     <link href="/activities/ipred2/ipred2.html" />
+    <order priority="1" />
+    <tags>
+      <tag key="policy" />
+    </tags>
   </activity>
 </activityset>

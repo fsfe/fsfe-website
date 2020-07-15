@@ -3,7 +3,7 @@
 <activityset>
   <version>1</version>
 
-  <activity id="wipo" date="2004-11-25" status="finished">
+  <activity date="2004-11-25" status="finished">
     <title>Παγκόσμιος Οργανισμός Πνευματικής Ιδιοκτησίας</title>
     <description>
 Ο Παγκόσμιος Οργανισμός Πνευματικής Ιδιοκτησίας (WIPO) είναι μία από
@@ -16,6 +16,10 @@
 Διανοητικού Πλούτου."
     </description>
     <link href="/activities/wipo/wipo.html" />
+    <order priority="1" />
+    <tags>
+      <tag key="policy" />
+    </tags>
   </activity>
 </activityset>
 

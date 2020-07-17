@@ -1,0 +1,878 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<html>
+  <version>1</version>
+  <author id="greve"/>
+  <date>
+    <original content="2008-12-02"/>
+  </date>
+  <download type="PDF" content="/freesoftware/standards/ps.en.pdf"/>
+
+  <head>
+    <title>FSFE - Een evenwichtsonderzoek - Standaardisatie en patenten</title>
+  </head>
+
+  <body>
+    <h1>Een evenwichtsonderzoek:<br />Standaardisatie en patenten</h1>
+
+    <p class="indent"><em>
+      Deze studie analyseert de wisselwerking tussen patenten en
+      standaarden. Op het einde van de tekst vindt u enkele concrete
+      oplossingen voor de prangende problemen. Ik ben er van uitgegaan
+      dat de tekst ook bestemd is voor personen zonder
+      voorkennis. Personen die met deze materie vertrouwd zijn kunnen
+      zonder problemen het gedeelte met achtergrondinformatie overslaan.
+    </em></p>
+    <h2>Inleiding</h2>
+
+    <p>
+      Over softwarepatenten zijn al heel controversiële debatten
+      gevoerd. De scheidingslijn lag meestal tussen enerzijds de grote
+      bedrijven met hun enorme patentportfolio's en betrokken in
+      cross-licensing overeenkomsten en anderzijds diegenen die het
+      zonder deze zaken moeten stellen, ondernemers, kleine en
+      middelgrote bedrijven en de gebruikers van de software, gaande
+      van studenten die GNU/Linux gebruiken tot institutionele
+      gebruikers in overheden.
+    </p>
+
+    <p>
+      Dit debat is wat afgekoeld na de verwerping van de
+      softwarepatentenrichtlijn in 2005. Maar andere discussies vulden
+      vlug de leemte. Bijvoorbeeld de discussies over standaardisatie.
+      Open Standaarden was al jaren een graag gebruikte term maar
+      er werd nooit tevoren zo intensief over gediscussieerd.
+    </p>
+
+    <p>
+      Op woensdag 19 november 2008 kwamen beide debatten samen in
+      Brussel tijdens de workshop
+      "<a href="http://ec.europa.eu/enterprise/newsroom/cf/itemshortdetail.cfm?item_id=3371">IPR
+      in ICT standardisation</a>". De titel "Patents in ICT
+      standardisation" zou een betere weerspiegeling van het debat
+      geweest zijn. De discussies gingen bijna exclusief over de
+      wisselwerking tussen patenten en ICT-standaardisatie.
+    </p>
+
+    <p>
+      Patenten en standaarden hebben fundamenteel tegengestelde
+      belangen, heel veel mensen eisen dan ook een evenwicht tussen
+      patenten en standaarden. In dit artikel geef ik mijn visie op de
+      workshop en leg ik uit waarom standaarden voorrang moeten
+      krijgen op patenten, tenminste in het domein van software.
+    </p>
+
+    <h2>Achtergrondinformatie: Patenten &amp; Standaarden 101</h2>
+
+    <p>
+      Het patentsysteem is geen moderne uitvinding. Het vindt zijn
+      oorsprong in de koninklijke "litterae patentes" die aan bepaalde
+      personen exclusieve rechten toekenden. Democratische overheden
+      namen stilaan de rol van de monarchen over en ook de wetgeving
+      rond patenten evolueerde. Maar de fundamentele eigenschappen van
+      patenten zijn nooit veranderd.
+    </p>
+
+    <p>
+      Eenvoudig gesteld: een patent is een monopolie dat voor een
+      beperkte tijd wordt toegekend door een overheid in naam van haar
+      burgers.
+    </p>
+
+    <p>
+      De term monopolie heeft een negatieve bijklank en
+      terecht. Monopolies zijn een rem op de innovatie en doen de
+      prijzen stijgen door een gebrek aan concurrentie. Tengevolge
+      hiervan worden monopolies meestal bekeken als iets schadelijks
+      voor de economie en de samenleving. Het is niet illegaal om een
+      monopolie te hebben, maar de samenleving heeft er alle baat bij
+      om het machtsmisbruik dat in elk monopolie schuilt in te
+      perken. Meestal probeert men dit te bereiken door middel van een
+      antitrustwetgeving.
+    </p>
+
+    <p>
+      Samen met het monopolierecht brengen patenten natuurlijk ook
+      alle neveneffecten van een monopolie. Een regering kent ze toe
+      omdat men vreest dat men geen nieuwe ontdekkingen meer zal
+      publiceren als ze niet beschermd worden door een patent, iets
+      wat men nog erger vindt dan het toekennen van een
+      patentmonopolie.
+    </p>
+
+    <p>
+      De oorspronkelijke patentovereenkomsten waren gebaseerd op een
+      systeem van onthulling. Anderen konden zo iets bijleren en verder
+      bouwen op nieuwe ideeën. Het gebrek aan betekenisvolle
+      onthullingen of andere stimulansen voor publieke kennis zorgen
+      ervoor dat patenten vandaag worden toegekend zonder dat ze
+      positieve impulsen geven aan de samenleving.
+    </p>
+
+    <p>
+      Net zoals patenten zijn standaarden nauw gerelateerd aan
+      onthulling. Het woord standaard blijkt zijn oorsprong te vinden
+      in de heraldiek. Het verwees er naar een symbool dat gebruikt
+      werd om een verzamelpunt in een veldslag aan te duiden.
+    </p>
+
+    <p>
+      Ook in zijn moderne betekenis behoudt het woord de betekenis van
+      publiek zichtbaar referentiepunt, weliswaar gebruikt in een heel
+      andere context.  In
+      de <a href="http://www.merriam-webster.com/dictionary/standard">
+      Merriam-Webster On-line dictionary</a> vindt u onder andere de
+      volgende verklaringen voor standaard: "iets dat wordt vastgelegd
+      door een autoriteit, op maat gemaakt of in algemene consensus
+      als model of voorbeeld." en "een structuur die kan dienen als
+      basis of als ondersteuning".
+    </p>
+
+    <p>
+      Voor de informatie- en communicatietechnologieën is het begrip
+      standaard een combinatie van deze twee omschrijvingen. Volgens
+      het <a href="http://www.bsi-global.com/en/Standards-and-Publications/About-standards/What-is-a-standard/">British
+      Standards Institution</a> (BSI), is een standaard "<em>een
+      overeengekomen, herhaalbare methode om dingen te doen. Het is
+      een gepubliceerd document met technische bepalingen en andere
+      duidelijke criteria, zo ontwikkeld dat het consistent als regel,
+      richtlijn of definitie gebruikt kan worden. [...] Elke standaard
+      is een collectief werk. Commissies van producenten, gebruikers,
+      onderzoekscentra, departementen van de overheid en consumenten
+      trachten een standaard te ontwikkelen die tegemoetkomt aan de
+      noden van de samenleving en de technologie. [...]</em>"
+    </p>
+
+    <p>
+      De bedoeling van dit alles is het creëren van een basisplatform,
+      waar interoperabiliteit en concurrentie vanzelfsprekend aanwezig
+      zijn. Dit geldt in het bijzonder voor de ICT-wereld met zijn
+      sterke netwerkeffecten. Als alle spelers in de ICT-markt zich
+      aan dezelfde standaarden houden en enige moeite doen om de
+      interoperabiliteit te garanderen, dan kunnen alle klanten vrij
+      kiezen tussen de verschillende producten en diensten. Men zou
+      dan ook zonder enig probleem informatie met anderen kunnen
+      delen.
+    </p>
+
+    <p>
+      Het ontbreken of het mislukken van standaardisatie leidt ten
+      gevolge van de netwerkeffecten daarentegen bijna altijd tot
+      monopolisering. Gebruikers die voor een bepaald product of een
+      bepaalde dienst kiezen, kunnen alleen maar samenwerken met
+      personen die van hetzelfde product of dezelfde dienst gebruik
+      maken. Na verloop van tijd zal één bepaalde oplossing zo'n
+      numeriek overwicht hebben dat de anderen nog slechts één keuze
+      rest: mee aansluiten bij de meerderheid of niet langer kunnen
+      communiceren met de grote meerderheid. Zo'n zaken worden
+      bijvoorbeeld bewerkstelligd door bepaalde software te bundelen
+      met reeds dominante hardwareplatformen.
+    </p>
+
+    <p>
+      Standaarden zijn in hoofdzaak instrumenten die concurrentie
+      mogelijk moeten maken ten voordele van de gemeenschap. Het doel
+      van standaardisatie is intrinsiek anti-monopolistisch.
+    </p>
+
+    <p>
+      Standaarden zijn ook pro-innovatief. Aangezien elke afwijking
+      van een standaard niet langer compatibel is, lijken
+      standaardisatie en innovatie elkaar tegen te werken. In zekere
+      zin is dit natuurlijk zo. Maar als de veranderingen gebeuren in
+      onderling overleg tussen de verschillende implementaties, zal er
+      steeds voor alle gebruikers een geüpdatete versie beschikbaar
+      zijn. Ten tweede kan men ook innoveren bovenop de standaard, men
+      gebruikt de bestaande standaard als basis voor innovatie in
+      plaats van de standaard zelf te innoveren.
+    </p>
+
+    <p>
+      Door het globale, op consensus gebaseerde karakter van de eerste
+      oplossing, is het een relatief trage methode. Een ander probleem
+      hiervan is de relatief hoge drempel om toegang te krijgen tot
+      het standaardisatieproces. Dit heeft als gevolg dat grote
+      ondernemingen oververtegenwoordigd zijn in deze commissies ten
+      nadele van de kleine en middelgrote ondernemingen (KMO's).
+    </p>
+
+    <p>
+      De tweede methode is voor iedereen toegankelijk, private
+      personen, KMO's en grote softwarefirma's. De enige beperkingen
+      zijn de snelheid en de mogelijkheden van het team dat werk maakt
+      van de innovatie. Als slechts één speler de innovatie
+      implementeert, krijgt deze tijdelijk een monopoliepositie. Maar
+      eens volgroeid wordt zo'n innovatie vaak geformaliseerd in een
+      nieuwe versie van de standaard, die dan vaak weer een basis
+      vormt voor nieuwe ontwikkelingen.
+    </p>
+
+    <p>
+      Terwijl de eerste methode slechts geschikt lijkt voor trage,
+      kleine verbeteringen aan de standaard, geeft de tweede methode
+      aan een grote economische meerderheid volwaardige kansen om
+      vernieuwende ideeën te implementeren. Deze methode dient dus
+      beschermd te worden in het algemeen belang van de samenleving.
+    </p>
+
+    <h2>Conflict: Fundamenteel tegengestelde instrumenten</h2>
+
+    <p>
+      De fundamenteel verschillende doelen van patenten en standaarden
+      waren vaak een thema tijdens het debat. Dhr. Karsten Meinhold,
+      voorzitter van de ETSI IPR Special
+      Committee <a href="http://ec.europa.eu/enterprise/newsroom/cf/document.cfm?action=display&amp;doc_id=3635&amp;userservice_id=1&amp;request.id=0">vatte
+      het als volgt samen</a>: "<em>IPR's (intellectuele eigendomsrechten)
+      en standaarden dienen verschillende doelen: IPR's zijn bedoeld
+      voor privaat exclusief gebruik, standaarden werden ontwikkeld
+      voor openbaar, collectief gebruik.</em>".
+    </p>
+
+    <p>
+      Zowel patenten als standaarden vinden hun bestaansrecht in het
+      openbaar nut dat ze creëren. Maar toch, als je voor het ene
+      kiest ontneem je de functie van het andere. Standaarden zijn een
+      dam tegen monopolies, patenten creëren monopolies.  Tomoko
+      Miyamoto, senior raadgever voor de afdeling Patentwetgeving van
+      de World Intellectual Property Organization (WIPO) zei er
+      in <a href="http://ec.europa.eu/enterprise/newsroom/cf/document.cfm?action=display&amp;doc_id=3633&amp;userservice_id=1&amp;request.id=0">haar
+      presentatie</a> hetvolgende over: "Patent Thickets (een bewust
+      onduidelijk gehouden kluwen van patenten) en Patent hold-ups
+      (het gebruiken van voorheen niet bekendgemaakte patenten tegen
+      de personen die een implementatie maken van een standaard, nadat
+      de standaard werd goedgekeurd) kunnen het gevolg zijn van
+      bepaalde vormen van het legitiem, exclusieve exploitatierecht
+      dat men krijgt door patenten".
+    </p>
+
+    <p>
+      Met andere woorden: Het toekennen van exclusieve rechten is een
+      doel van het patentsysteem, het rechtmatig uitoefenen van deze
+      rechten heeft als gevolg dat systemen zoals Patent Thickets en
+      Patent Hold-ups ontstaan. Het gebruik van patenten in
+      standaarden toestaan is dus een bewuste maatregel om bepaalde
+      partijen de kans te geven een monopolie over een standaard te
+      verwerven en het recht op implementaties van de standaard door
+      derden af te blokken
+    </p>
+
+    <h2>Ex-Ante Disclosure</h2>
+
+    <p>
+      Betrokkenen bij standaardisatieprojecten hebben de afgelopen
+      jaren al verschillende pogingen ondernomen om deze praktijken te
+      temperen. Een van deze mechanismen wordt "Ex-Ante Disclosure"
+      genoemd. Dit principe zorgt ervoor dat de partijen die onderhandelen
+      over een standaard al tijdens de onderhandelingen eventuele
+      licentievoorwaarden bekend maken. Als deze voorwaarden niet
+      aanvaardbaar zijn voor de andere partijen aan tafel, wordt de
+      technologie die onder die licentievoorwaarden valt niet opgenomen
+      in de standaard.
+    </p>
+
+    <p>
+      Wat aanvaardbare voorwaarden juist zijn, is natuurlijk heel
+      subjectief. Voor grote bedrijven met grote patentportfolio's en
+      bestaande cross-licensing overeenkomsten met de eigenaar van het
+      relevante patent is een patent meer of minder in de overeenkomst
+      een verwaarloosbaar probleem. Voor een KMO, met in het beste
+      geval een kleine patentportfolio, ligt de situatie natuurlijk
+      helemaal anders, vanuit hun perspectief zijn het vaak
+      buitensporige voorwaarden.
+    </p>
+
+    <p>
+      Aangezien KMO's sterk ondervertegenwoordigd zijn in de
+      standaardisatieprocedures zal het "Ex-Ante Disclosure" systeem
+      vooral bevredigende resultaten geven voor de grote bedrijven met
+      grote patentportfolio's die concurreren in dezelfde markt. De
+      economische meerderheid heeft in het algemeen weinig inspraak in
+      de aanvaardbaarheid van de voorwaarden.
+    </p>
+
+    <p>
+      Een ander probleem is de afdwingbaarheid van het ex-ante
+      disclosure systeem. Suzanne Michel, Assistant Director Office of
+      Policy and Coordination van de V.S. Federal Trade Commission
+      (FTC), gaf het volgende voorbeeld
+      in <a href="http://ec.europa.eu/enterprise/newsroom/cf/document.cfm?action=display&amp;doc_id=3631&amp;userservice_id=1&amp;request.id=0">haar
+      presentatie</a>. De FTC ontdekte
+      dat <a href="http://en.wikipedia.org/w/index.php?title=Rambus&amp;oldid=251605519">Rambus
+      Incorporated</a> lid geworden was van
+      de <a href="http://en.wikipedia.org/wiki/JEDEC">Joint Electron
+      Device Engineering Council (JEDEC)</a> en had deelgenomen aan de
+      standaardisatievergaderingen om haar gepatenteerde toepassingen
+      zo aan te passen dat ze betrekking zouden hebben op
+      technologieën waarover gediscussieerd werd voor integratie in
+      toekomstige standaarden. Volgens de FTC was dit puur bedrog, een
+      schending van het JEDEC's "disclosure" beleid en verkreeg Rambus
+      op een illegale manier een monopolie.
+    </p>
+
+    <p>
+      Het <a href="http://en.wikipedia.org/wiki/United_States_Court_of_Appeals_for_the_District_of_Columbia_Circuit">D.C. Circuit
+      Court</a> ging niet akkoord met de conclusies van de FTC in haar
+      beslissing van april 2008. Volgens Mvr. Michel oordeelde de
+      rechter dat het proberen te vermijden van zogenaamde
+      "<a href="http://en.wikipedia.org/wiki/Reasonable_and_Non_Discriminatory_Licensing">Redelijke
+      en niet discriminerende</a>" (RAND) licenties geen misdrijf
+      is. De rechtbank achtte het ook helemaal niet bewezen de JEDEC
+      die technologieën vermeden zou hebben als ze geweten hadden dat
+      Rambus van plan was haar volledige juridische rechten voor die
+      patenten te gebruiken. Ook tegenover het niet-afdwingbaar maken
+      van patenten door middel van een vaag "disclosure" beleid sprak
+      de rechtbank zich negatief uit.
+    </p>
+
+    <p>
+      Zowel patenten als standaarden halen hun bestaansrecht uit de
+      publieke voordelen die ze creëren. De patenten die Rambus
+      verkreeg voor de standaarden die klaar waren om gepubliceerd te
+      worden, hebben geen enkele nieuwe technologie beschreven. Ook
+      het monopolierecht dat Rambus verkreeg staat haaks op het
+      publiek belang. Als men een volledige analyse zou maken van deze
+      situatie, zal het publiek belang meer dan waarschijnlijk niet
+      als winnaar uit de bus komen.
+    </p>
+
+    <p>
+      Blijkbaar was de analyse van de FTC correct, maar ook de
+      rechtbank had gelijk, aangezien het instellen van in de tijd
+      beperkte monopolies het eigenlijke doel is van de
+      patentwetgeving. Het is niet de taak van rechtbanken om wetten
+      ongedaan te maken. En de meeste wetgevers hebben blijkbaar nog
+      niet stil gestaan bij het conflict tussen patenten en
+      standaarden ten aanzien van het openbaar belang.
+    </p>
+
+    <p>
+      JEDEC heeft ondertussen haar beleid aangepast wat
+      soortgelijke praktijken in de toekomst zou moeten vermijden. Als
+      we zien welk belang patentwetgeving van de meeste rechtbanken krijgt
+      tegenover standaardisatie zullen alleen toekomstige rechtszaken
+      kunnen aantonen of deze zaak nu een oplossing kreeg die wel
+      standhoudt bij formeel een juridisch onderzoek.
+    </p>
+
+    <h2>(F)RAND</h2>
+
+    <p>
+      Het voorgaande geldt voor standaardisatieorganisaties die een
+      ex-ante disclosure beleid hebben, wat voor de meeste
+      organisaties echter niet het geval is. Zij rekenen op een
+      vrijwillige bekendmaking de garantie dat patenthouders die bij
+      het proces betrokken zijn zullen akkoord gaan met zogenaamde
+      RAND of FRAND
+      ("<a href="http://en.wikipedia.org/wiki/Fair,_Reasonable_and_Non_Discriminatory_Licensing">Eerlijke,
+      redelijke, niet discriminerende</a>") voorwaarden.
+    </p>
+
+    <p>
+      Een veel gehoorde kritiek op de (F)RAND voorwaarden zijn het
+      gebrek aan een goede definitie van wat eerlijk is voor
+      wie. Tijdens het Internet Governance Forum in Athene (2006)
+      heeft Susy Struble van Sun Microsystems er
+      reeds <a href="http://www.youtube.com/watch?v=CNUdqEqjbOQ">op
+      gewezen</a> dat wat redelijk is voor een bepaalde partij,
+      misschien helemaal niet redelijk is voor een andere partij.
+    </p>
+
+    <p>
+      Er durft nogal wat variatie zitten op de manier waarop rechten
+      ontleend aan een licentie worden uitgeoefend. Dit hangt van
+      verschillende factoren af. De belangen van het bedrijf in de
+      respectievelijke markt en de gretigheid waarmee het bedrijf de
+      inkomsten uit haar patenten najaagt zijn twee voorbeelden.
+    </p>
+
+    <p>
+      Daar komt nog bij dat patenten gekocht of verkregen kunnen worden
+      door herstructureringen of overnames. Een nieuwe patenthouder,
+      die niet deel nam aan het standaardisatieproces en zich nooit
+      eerder toelegde op RAND voorwaarden, kan heel andere zaken
+      redelijk vinden.
+    </p>
+
+    <p>
+      RAND-voorwaarden zijn meestal een vage belofte om licenties op
+      eenvoudig verzoek te verstrekken. Zo'n belofte is niet
+      eeuwigdurend en geeft geen verplichtingen aan een eventuele
+      nieuwe patenthouder. Een nieuwe eigenaar kan vrij kiezen op
+      welke manier hij zijn rechten gebruikt. Dus ook patent hold-ups
+      op alle bestaande implementaties van de standaard zijn mogelijk.
+    </p>
+
+    <p>
+      En zoals Mvr. Miyamoto van WIPO reeds verklaarde zijn patent
+      hold-ups een gerechtvaardigd en voorzien gebruik van het
+      patentsysteem. Het is duidelijk dat ook een systeem met
+      RAND-voorwaarden een grote onzekerheidsfactor inhoudt, wat
+      altijd in het voordeel van de grotere bedrijven speelt. Hun
+      bankrekening is niet alleen beter gevuld, ze hebben ook grote
+      juridische afdelingen en een beter gevulde patentportfolio.
+    </p>
+
+    <p>
+      Deze onzekerheid bezorgt de KMO's grote frustraties. Charles
+      Schulz van Ars Aperta vatte ze samen door naar RAND te verwijzen
+      als "RANDom licenties al naargelang de concurrent". In
+      zijn <a href="http://ec.europa.eu/enterprise/newsroom/cf/document.cfm?action=display&amp;doc_id=3639&amp;userservice_id=1&amp;request.id=0">toespraak</a>
+      heeft Dhr. Schulz er ook op gewezen dat (F)RAND licenties altijd
+      discriminerend zijn tegenover Vrije Software. Ook als het een
+      RAND overeenkomst is waarbij geen royalty's betaald moeten
+      worden, in zogenaamde RF-on-RAND ("Royalty Free on RAND"),
+      RAND-RF ("RAND Royalty Free") of RAND-Z ("RAND with Zero
+      royalties") licenties, blijft het een groot probleem dat men
+      niet de toestemming krijgt om een sublicentie te geven.
+    </p>
+
+    <p>
+      Vrije Software (<a href="/freesoftware/freesoftware">soms ook wel
+      Openbronsoftware, FOSS of FLOSS genoemd)</a> is gebaseerd op het
+      principe dat elke persoon en elke juridische entiteit zowel
+      gebruiker, ontwikkelaar, verdeler of een combinatie van deze
+      drie kan zijn. Alleen voorwaarden die dit mogelijk maken zijn
+      aanvaardbaar voor Vrije Software, een product dat tegen
+      2010  <a href="http://www.flossimpact.eu/">naar schatting</a>
+      32% van de IT-sector zal omvatten en goed zal zijn voor 4% van
+      het Europese BBP.
+    </p>
+
+    <p>
+      Amy Marasco, General Manager Standards Strategy van Microsoft
+      heeft er
+      in <a href="http://ec.europa.eu/enterprise/newsroom/cf/document.cfm?action=display&amp;doc_id=3641&amp;userservice_id=1&amp;request.id=0">haar
+      toespraak</a> de nadruk op gelegd dat zij Vrij Software niet als
+      een bedrijfsmodel beschouwt. Dit is waar in die mate dat
+      propriëtaire software op zich ook geen bedrijfsmodel
+      is. Bedrijfsmodellen zijn de structuren die op Vrije Software
+      en/of propriëtaire software gebouwd worden.
+    </p>
+
+    <p>
+      Mvr. Marasco vervolgde met te stellen dat al deze
+      bedrijfsmodellen legitiem zijn. En alhoewel er sterke
+      meningsverschillen bestaan over welk model het beste en meest
+      duurzame is voor de economie en de samenleving, moeten politiek
+      gezien zowel de bedrijfsmodellen gebaseerd op propriëtaire
+      software, Vrije Software of een mengeling van beide als
+      volwaardig en legitiem beschouwd worden.
+    </p>
+
+    <p>
+      Zoals eerder vermeld, verwacht men dat tegen 2010 4% van het
+      Europese BBP aan Vrije Software gerelateerd zal zijn. Alle
+      partijen waren het er ook over eens dat alle bedrijfsmodellen,
+      dus ook diegenen die gebruik maken van Vrije Software, legitiem
+      zijn. Dus moeten we ons ook afvragen of het eerlijk, redelijk en
+      niet discriminerend is om dit legitiem deel van de economie uit
+      te sluiten door het aanvaarden van licentievoorwaarden die
+      afhankelijk zijn van patenten.
+    </p>
+
+    <h2>Negatieve gevolgen van uitsluiting</h2>
+
+    <p>
+      Deze situatie heeft overeenkomsten met de toestanden
+      rond <a href="http://en.wikipedia.org/wiki/Counterfeit_drugs">nagemaakte
+      geneesmiddelen</a>, waar de argumentatie voor het afdwingen van
+      licenties altijd nauw verbonden is met aspecten van de
+      volksgezondheid. Alleen werkzame geneesmiddelen die een exacte
+      kopie zijn van het gepatenteerde product zijn een schending van
+      het patent. Men loopt het grootste gezondheidsrisico op plaatsen
+      waar de patenten niet geschonden worden.
+    </p>
+
+    <p>
+      Bij standaarden zitten we in een gelijkaardige situatie. Als
+      patenten deel uitmaken van de standaard, kunnen alleen
+      implementaties die deze patententen volgen een efficiënte
+      dam opwerpen tegen een monopolie. Het omzeilen van een patent
+      zal meestal betekenen dat het product niet langer compatibel is
+      met de standaard en dus nadelig zal zijn voor het publiek belang,
+      wat tenslotte toch de initiële reden was om standaarden op te
+      stellen.
+    </p>
+
+    <p>
+      Als men het gebruik van patenten in standaarden toestaat zal dat
+      voor verschillende legitieme bedrijven betekenen dat hun
+      producten niet volledig interoperabel kunnen zijn in sommige
+      markten. De reeds eerder vermelde
+      BSI <a href="http://www.bsi-global.com/en/Standards-and-Publications/About-standards/What-is-a-standard/">zei
+      er hetvolgende over</a>: "Door het ontwikkelen van een standaard
+      legt men niemand verplichtingen op, het staat iedereen vrij een
+      standaard te volgen. Maar, wetten en regelgeving kunnen
+      eventueel verwijzen naar bepaalde standaarden waardoor het
+      naleven ervan wel een verplichting wordt."
+    </p>
+
+    <p>
+      Van zodra een technologie gestandaardiseerd is, worden bepaalde
+      keuzes niet langer gemaakt vanuit technologisch kwalitatief
+      standpunt. Zelfs als er een beter alternatief ontwikkeld wordt
+      dat bovendien vrij zou zijn van bestaande patentproblemen in de
+      standaard, dan nog zal een ontwikkelaar kiezen voor de
+      technologisch inferieure technologie omdat hij zo toegang heeft
+      tot de volledige markt. Wat de oorspronkelijke theorie rond
+      patenten helemaal op zijn kop zet: Technologie krijgt waarde
+      omdat ze gepatenteerd is, ze wordt niet gepatenteerd omdat ze
+      waardevol is.
+    </p>
+
+    <p>
+      In sommige gevallen hebben de standaardisatieorganisaties, zoals
+      bijvoorbeeld de <a href="http://www.iso.org">International
+      Organisation for Standardisation</a> (ISO), een bevoorrechte
+      relatie met overheden in aankoopbeslissingen. Door de
+      bevoorrechte positie die standaarden met patenten en ontoereikende
+      (F)RAND-voorwaarden zo verkrijgen, kunnen niet alle legitieme spelers op een
+      markt deelnemen aan openbare aanbestedingen.
+    </p>
+
+    <p>
+      Door de speciale bevoorrechte positie van organisaties zoals
+      ISO, die voorwaarden aanvaarden waardoor eerlijke concurrentie
+      onvoldoende beschermd wordt, kan het monopolierecht dat
+      initieel bedoeld was voor patenten resulteren in oligopolies en
+      zelfs monopolies bij openbare aankopen. Het onmogelijk maken van
+      concurrentie bij aanbestedingen door middel van het gebruiken
+      van standaarden met patenten staat haaks op het openbaar belang
+      aangezien het leidt tot hogere prijzen wat uiteindelijk weer
+      leidt tot hogere belastingen. 
+    </p>
+
+    <p>
+      Oplossingen voor deze situatie kunnen gevonden worden in de
+      wijze waarop overheden standaarden kiezen voor hun aankopen, de
+      wijze waarop patenten worden opgenomen in standaarden, het
+      patentsysteem zelf of in een combinatie van deze maatregelen.
+    </p>
+
+    <h2>Reeds uitgeprobeerde oplossing</h2>
+
+    <p>
+      Volgens Rigo Wenning, Legal Counsel &amp; Patent Policy Team
+      Contact van het W3C/ERCIM, die een uiteenzetting gaf over
+      "<a href="http://ec.europa.eu/enterprise/newsroom/cf/document.cfm?action=display&amp;doc_id=3636&amp;userservice_id=1&amp;request.id=0">Standards,
+      Patents and the Dynamics of Innovation on the Web</a>", kost een
+      goed onderzoek naar patenten ongeveer 100.000 EUR per zaak. Het
+      W3C weet waarover ze praten, het is de enige
+      standaardisatieorganisatie (SSO) met een patentbeleid voor
+      standaarden dat voldoende streng is om alle legitieme
+      bedrijfsmodellen gelijke kansen te geven.
+    </p>
+
+    <p>
+      Voor de meeste KMO's is 100.000 EUR onderzoekskosten naar
+      patenten een buitensporige kost. En zelfs voor grotere bedrijven
+      blijft 100.000 EUR een aanzienlijk bedrag voor slechts één van
+      de vele aspecten die de kosten bepalen. Eens er gerechtelijke
+      bevelen en schadeclaims tegen een product komen kan de schade
+      nog verder oplopen. In
+      zijn <a href="http://ec.europa.eu/enterprise/newsroom/cf/document.cfm?action=display&amp;doc_id=3646&amp;userservice_id=1&amp;request.id=0">voorstelling
+      van het IBM "SoftIP" concept</a> gebruikte Roger Burt, Senior
+      Counsel van IBM Europe, de volgende quote uit een BSA et
+      al. Amicus brief in de eBay tegen MercExchange zaak om het
+      probleem aan te kaarten. Het vat de problemen van de grote
+      industriële spelers goed samen:
+    </p>
+
+    <quote class="indent">
+      <em> "Technology products typically consist of hundreds or
+	thousands of patented components. It therefore is impossible
+	for technology companies to investigate all of the patents,
+	and pending patent applications that may be relevant to a new
+	invention (product), notwithstanding their best efforts to do
+	so. When, as frequently occurs, the claim of infringement is
+	not made until after the new product is released or the
+	industry standard has been adopted, designing around the claim
+	is no longer a realistic option. Because an injunction will
+	issue automatically upon a finding of infringement – even if
+	the claim relates to an insignificant part of the product –
+	the target of the claim is forced to pay an extortionate
+	settlement in order to preserve its business."</em><br/>
+	(Technologische producten bestaan in de meeste gevallen uit
+	honderden of zelfs duizenden gepatenteerde
+	onderdelen. Daardoor is het voor technologische bedrijven
+	onmogelijk om een onderzoek in te stellen naar alle bestaande
+	en hangende patenten voor toepassingen die mogelijk relevant
+	kunnen zijn voor de nieuwe uitvinding, niettegenstaande de
+	enorme hoeveelheden tijd en moeite die ze investeren. De
+	meeste klachten pas komen als een nieuw product is uitgebracht
+	of nadat de standaard is goedgekeurd. Dan is het ontwikkelen
+	van een alternatief geen realistische oplossing
+	meer. Aangezien de ontdekking van een inbreuk automatisch
+	leidt tot een gerechtelijk bevel - ook al gaat de klacht maar
+	over een klein verwaarloosbaar deeltje van het product - wordt
+	de overtreder verplicht om een buitensporig bedrag te betalen
+	om zijn handel veilig te stellen.)
+    </quote>
+
+    <p>
+      Een andere poging om patentkosten binnen de perken te houden
+      zelfs voor de grootste bedrijven werd voorgesteld door Dhr. Tim
+      Frain,  Director IPR regulatory affairs van Nokia in zijn
+      toespraak
+      "<a href="http://ec.europa.eu/enterprise/newsroom/cf/document.cfm?action=display&amp;doc_id=3649&amp;userservice_id=1&amp;request.id=0">FRAND
+      Best Practice</a>". Dhr. Frain promoot een systeem gebaseerd op
+      "Aggregated Reasonable Terms" &amp; "Proportionality" (ART+P,
+      aanvaardbaar geheel van voorwaarden en proportionaliteit).
+    </p>
+
+    <p>
+      Het idee achter deze aanpak was het feit dat elke patenthouder
+      individueel besliste wat een eerlijke, redelijke en
+      niet-discriminerende voorwaarde is. Het totaal van al die RAND
+      voorwaarden kon vaak oplopen tot meer dan 50% van de kosten van
+      het eindproduct. Alle patenthouders moeten dus vooraf
+      overeenkomen dat de totale kost voor hun licenties binnen de
+      perken blijft. Dhr. Frain gaf als voorbeeld de visie van Nokia
+      op wat redelijk was: Het totaal aan patentkosten voor de
+      communicatietechnologie van een mobiele telefoon zou minder dan
+      10% mogen zijn van de totale kost per toestel.
+    </p>
+
+    <p>
+      Beide benaderingen zijn een poging om controle te krijgen over
+      het recht op monopolie dat bij het patent hoort. Ze hopen dat
+      andere partijen zich vrijwillig inkopen zodat ze de rechten
+      verkregen door hun patenten niet zouden uitoefenen.
+    </p>
+
+    <p>
+      Beide benaderingen discrimineren, in tegenstelling tot hun
+      definitie, een legitiem bedrijfsmodel. Ook de ART+P benadering
+      geeft in praktijk problemen, steeds meer toestellen verenigen
+      verschillende technologieën. Zo kunnen de licentiekosten voor
+      een smart phone makkelijk boven de 50% uitkomen alhoewel de
+      prijs voor het GSM &amp; Co deel beperkt bleef tot 10%. En ook 
+      die 10% kan aardig oplopen, denk maar even aan een laptop met
+      UMTS modem, of sommige toestellen met ingebouwde software. Al
+      deze toestellen worden verkocht in een markt waar de winstmarge
+      ver onder de 10% ligt.
+    </p>
+
+    <p>
+      We durven hierover een controversiële vraag stellen: Is het
+      eerlijk en redelijk dat patenthouders een hoger bedrag krijgen
+      voor hun monopolie dan het innovatieve bedrijf dat nieuwe
+      producten ontwikkeld en al de risico's die daarmee gepaard gaan
+      moet dragen?
+    </p>
+
+    <h2>Cui bono?</h2>
+
+    <p>
+      Wie is hier de winnaar? We hebben al uitgelegd dat patenten
+      ontstaan zijn uit een compromis. De voordelen ervan worden vaak
+      gedemonstreerd met het beeld van de eenzame uitvinder met zijn
+      geniaal idee. Zou het eerlijk zijn dat hij op een dag zijn idee
+      publiceert om vast te stellen dat een groot bedrijf het voor hem
+      op de markt brengt, zonder enige financiële beloning voor de
+      uitvinder? Bijna iedereen gaat ermee akkoord dat dit niet
+      eerlijk is.
+    </p>
+
+    <p>
+      In een wereld zonder patenten heeft die uitvinder slechts twee
+      opties. Hij aanvaardt zijn lot, of hij houdt zijn uitvinding zo
+      lang mogelijk geheim en probeert het ondertussen zelf op de
+      markt te krijgen. Een patent geeft de uitvinder een tijdelijk
+      monopolie in ruil voor het publiceren van zijn uitvinding. De
+      uitvinder krijgt zo de tijd om investeerders te vinden, een
+      bedrijf op te starten, het product verder te ontwikkelen en het
+      op de markt te brengen. Hij krijgt zo een kopstart voordat
+      anderen kunnen concurreren.
+    </p>
+
+    <p>
+      Dit mechanisme heeft in het verleden een hele tijd vrij goed
+      gewerkt. Maar enkelen van de oorspronkelijke parameters zijn
+      ondertussen veranderd, terwijl het patentsysteem zonder veel
+      nadenken werd uitgebreid naar andere domeinen. Dit geldt in het
+      bijzonder voor software, waar patenten een verwaarloosbare rol
+      spelen in het ontsluiten van kennis, waardoor de overeenkomst
+      geen meerwaarde meer heeft voor de samenleving, terwijl de tijd
+      die nodig is om nieuwe innovaties op de markt te brengen steeds
+      korter wordt en de ene technologische doorbraak de vorige steeds
+      vlugger opvolgt.
+    </p>
+
+    <p>
+      <a href="http://en.wikipedia.org/wiki/Ray_Kurzweil">Raymond
+      Kurzweil</a> ontdekte een exponentieel patroon in innovatie, dat
+      helemaal teruggaat tot het eencellig organisme. Aangezien hij
+      concludeerde dat het om een universeel principe moest gaan
+      maakte Dhr Kurzweil
+      een <a href="http://en.wikipedia.org/wiki/Predictions_made_by_Raymond_Kurzweil">reeks
+      voorspellingen</a> voor de toekomst, waarvan er verschillende
+      tot nu toe vrij juist bleken. Als we zijn principes toepassen op
+      patenten, volgt uit de gegarandeerde constante duurtijd van het
+      monopolie een exponentiële groei van de waarde van het
+      individueel patent.
+    </p>
+
+    <p>
+      Voor de samenleving is de prijs voor het toekennen van
+      patenten <a href="http://en.wikipedia.org/wiki/Exponential_growth">exponentieel
+      gegroeid</a> vanaf het moment dat het eerste patentsysteem werd
+      ingevoerd. Dit zou wel eens de reden kunnen zijn waarom de prijs
+      van het patentsysteem vandaag zo buitensporig lijkt en er steeds
+      meer vragen komen om het systeem te hervormen. Onlangs verscheen
+      hierover een verklaring van de V.S. Federal Trade Commission
+      (FTC): <a href="http://www.ftc.gov/opa/2008/11/ipmarketplace.shtm">First
+      in Series of Hearings on Evolving Intellectual Property
+      Marketplace</a>.
+    </p>
+
+    <p>
+      Eventuele oplossingen voor dit probleem zijn het verminderen van
+      de levenduur van de patenten, patenten aanpassen naargelang de
+      specifieke behoeften in de sector en zaken die geen substantiele
+      vernieuwing opleveren uitsluiten van patentering.
+    </p>
+
+    <p>
+      Naar standaarden vertaald was het Dhr. An Baisheng, Afgevaardigd
+      Directeur van het departement voor technologische regulering
+      voor WTO zaken van het Chinese Ministerie voor Economische
+      Zaken, die vragen stelde over de verhouding tussen openbare en
+      private voordelen in zijn
+      presentatie: <a href="http://ec.europa.eu/enterprise/newsroom/cf/document.cfm?action=display&amp;doc_id=3632&amp;userservice_id=1&amp;request.id=0">Strike
+      the Right Balance between Public and Private Interests in IPR in
+      ICT Standardization</a>.
+    </p>
+
+    <p>
+      In het scenario van de eenzame uitvinder kunnen we ook
+      de vraag stellen over patenten in standaarden: Is het eerlijk
+      als onze uitvinder het recht krijgt om uitvindingen van anderen
+      te verbieden als die op één of andere manier met zijn uitvinding
+      verband houdt? Om het iets minder abstract te maken: Geldt een
+      patent op een typemachine ook voor het kopieerpapier dat de
+      juiste afmetingen heeft om met die machine gebruikt te worden?
+      De meeste mensen gaan ermee akkoord dat dit te ver gaat.
+    </p>
+
+    <h2>Potentiële oplossingen</h2>
+
+    <h3>1. Interoperabiliteit overtroeft patenten</h3>
+
+    <p>
+      Tijdens het softwaredebat voor de Europese unie was er een
+      consensus tussen de afgevaardigden van KMO's, Vrije Software en
+      grote bedrijven zoals IBM en Sun Microsystems dat patenten die
+      de interoperabiliteit beperken of verhinderen, niet afdwingbaar
+      zouden mogen zijn.
+    </p>
+
+    <p>
+      In de Europese Gemeenschap kan deze regel opgenomen worden in
+      het lopende debat over patenten. Op internationaal niveau zou
+      WIPO kunnen overwegen om dit deel op te nemen in de lopende
+      discussies over verdere ontwikkelingen.
+    </p>
+
+    <p>
+      Eens geïmplementeerd zou dit de meest schadelijke neveneffecten
+      oplossen voor alle legitieme bedrijfsmodellen en krijgt
+      interoperabiliteit en concurrentie opnieuw de bovenhand over
+      monopolierechten. Als men rekening houdt met de ongelooflijk sterke
+      netwerkeffecten in deze markt is deze keuze gerechtvaardigd.
+    </p>
+
+    <h3>2. De SSO's moeten hun beleid aanpassen</h3>
+
+    <p>
+      Ten tweede kunnen Standaardisatieorganisaties (SSO's) hun beleid
+      aanpassen zodat hun standaarden bruikbaar zijn door alle
+      bedrijfsmodellen. Verschillende SSO-afgevaardigden hielden
+      tijdens de bijeenkomst vol dat het niet hun taak is om een
+      bepaald patentbeleid uit te stippelen. Ondertussen is in
+      het <a href="http://www.itu.int/ITU-T/dbase/patent/patent-policy.html">Algemeen
+      patentbeleid</a> van ITU-T, ITU-R, ISO en IEC reeds opgenomen
+      dat "<em>a patent embodied fully or partly in a Recommendation |
+      Deliverable must be accessible to everybody without undue
+      constraints.</em>" (een patent dat geheel of gedeeltelijk wordt
+      opgenomen in een aanbeveling moet voor iedereen toegankelijk
+      zijn zonder overdadige belemmering). Zoals uit deze analyse
+      blijkt, voldoet de huidige invulling van RAND-voorwaarden niet
+      aan dit principe.
+    </p>
+
+    <p>
+      We kunnen een voorbeeld van oplossing vinden in de methode die
+      de meeste SSO's gebruiken voor het vermijden van potentiële
+      toekomstige klachten van auteursrechthouders. Zij eisen van alle
+      deelnemers aan het standaardisatieproces om hun rechten over te
+      dragen aan de SSO. Het toepassen van een gepaste gelijkaardige
+      maatregel voor patenten om gelijkaardige redenen lijkt
+      gerechtvaardigd.
+    </p>
+
+    <h3>3. Voorzie in tussentijdse oplossingen en overgangsmogelijkheden</h3>
+
+    <p>
+      Er bestaan al verschillende door patenten belaste
+      standaarden. Zelf als WIPO uiteindelijk beslist om de voorkeur te
+      geven aan algemene interoperabiliteit, dan nog zal het
+      tientallen jaren duren vooraleer dit juridisch allemaal geregeld
+      is in de locale wetgevingen.
+    </p>
+
+    <p>
+      Als tussentijdse maatregel moeten de (F)RAND-voorwaarden zo afgedwongen
+      worden dat ze niet langer discriminerend werken tegen legitieme
+      bedrijfsmodellen, wat vandaag nog steeds de algemene gang van
+      zaken is. Een mogelijke oplossing bestaat erin om
+      (F)RAND-royalties afhankelijk te maken van de licentie-inkomsten
+      die eruit volgen.
+    </p>
+
+    <p>
+      Bedrijfsmodellen die gebaseerd zijn op propriëtaire licenties
+      voor auteursrechten- of patentinkomsten, kunnen hun huidige
+      systeem voor het genereren van inkomsten blijven
+      handhaven. Bedrijfsmodellen die niet afhankelijk zijn van
+      licentieinkomsten kunnen volledig interoperabel worden en
+      concurrentieel zijn.
+    </p>
+
+    <p>
+      Als we deze stap zetten zullen ook ITU-T, ITU-R, ISO and IEC
+      opnieuw in regel zijn met hun zelfverklaarde algemeen
+      patentbeleid.
+    </p>
+
+    <h3>4. Moderniseer de aankooprichtlijnen voor overheden</h3>
+
+    <p>
+      Overheden en intergouvernementele organisaties zouden hun
+      aankooprichtlijnen moeten aanpassen zodat er alleen producten
+      aangekocht worden die gebaseerd zijn op standaarden die geen
+      enkel legitiem bedrijfsmodel uitsluiten. Dit betekent dat men
+      zal moeten herbekijken welke standaardisatieorganisaties het
+      volledige vertrouwen krijgen en welke slechts een beperkte
+      goedkeuring door het uitblijven van een aanpassing aan hun
+      patentbeleid op het ogenblik van de controle.</p>
+
+    <hr />
+
+    <p><em>
+	BELANGRIJKE OPMERKING: Dit document werd geschreven door
+    een persoon die gespecialiseerd in het domein van software. De
+    conclusies van dit document kunnen volledig, gedeeltelijk of
+    helemaal niet van toepassing zijn op andere vakgebieden.
+    </em></p>
+
+  </body>
+
+
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->
+

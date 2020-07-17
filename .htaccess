@@ -163,6 +163,7 @@ RewriteRule ^about/localteams(.*) /contact/contact$1 [R=301,L]
 RewriteRule ^fr/(news|events)\.(..\.)?html /fr/fr.$2html [R=301,L]
 RewriteRule ^activities/wsis/cs-benchmarks\.(.*)$ /activities/wsis/cs-benchmarks-03-11-14.$1 [R=301,L]
 RewriteRule ^contribute/booth(.*) https://wiki.fsfe.org/KnowHow/Groups/OrganizeABooth [R=301,L]
+RewriteRule ^activities/askyourcandidates(.*) /activities/elections/askyourcandidates$1 [R=301,L]
 
 
 # =============================================================================

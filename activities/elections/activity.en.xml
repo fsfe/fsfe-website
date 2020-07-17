@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<activityset>
+  <version>1</version>
+
+  <activity date="2009-09-01" status="active">
+    <title>Electoral Activities</title>
+    <description>
+      What better time is there to ask politicians about their stance
+      on Free Software and Open Standards than in the time before an
+      election? We believe that we can and should make these topics an
+      issue in all elections, be it on a European, national, regional,
+      or local level. Depending on the electoral system and culture,
+      there are different strategies and tools we use: Ask Your
+      Candidates a set of questions, the Digital-O-Mat online tool, the
+      Freedomvote online platform, and the Let's Promise pledges.
+    </description>
+    <link href="/activities/elections/index.html" />
+    <image url="/graphics/logos/elections.png" />
+    <order priority="1" highlight="yes" />
+    <tags>
+      <tag key="awareness" />
+      <tag key="policy" />
+    </tags>
+  </activity>
+</activityset>

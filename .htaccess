@@ -53,7 +53,7 @@ RewriteRule ^publiccode/?$ https://registration.fsfe.org/Digitale-Verwaltung-202
 
 # Others
 RewriteRule ^standards(.*) /activities/os$1 [R=301,L]
-RewriteRule ^education(.*) /activities/education$1 [R=301,L]
+RewriteRule ^education(.*) /freesoftware/education$1 [R=301,L]
 
 
 # =============================================================================
@@ -127,7 +127,6 @@ RewriteRule ^projects(/.*)?$ /activities/activities.html [R=301,L]
 RewriteRule ^about/basics/?(.*)$ /freesoftware/ [R=301,L]
 RewriteRule ^freesoftware/basics/(comparison|gnuproject)(.*)$ /freesoftware/$1$2 [R=301,L]
 RewriteRule ^freesoftware/basics/legal/?(.*)$ /freesoftware/legal/ [R=301,L]
-RewriteRule ^freesoftware/education/?(.*)$ /activities/education/ [R=301,L]
 RewriteRule ^freesoftware/society/?(.*)$ /freesoftware/democracy.html [R=301,L]
 RewriteRule ^freesoftware/legal/flashingdevices(.*)$ /activities/android/flashingdevices$1 [R=301,L]
 RewriteRule ^freesoftware/public-sector/german-foreign-office-comment(.*)$ https://k7r.eu/buchartikel-freie-software-im-auswartigen-amt-erst-hu-dann-hott/ [R=301,L]
@@ -141,6 +140,11 @@ RewriteRule ^activities/ftf/ln(.*)$ /activities/ln/ [R=301,L]
 RewriteRule ^activities/ftf/ngi0(.*)$ /activities/ngi/ [R=301,L]
 # TODO: as soon as a new "work" page is available, update this to the legal section
 RewriteRule ^activities/ftf/?(.*)$ /freesoftware/legal/legal.html [R=301,L]
+
+# /activities
+RewriteRule ^activities/askyourcandidates(.*) /activities/elections/askyourcandidates$1 [R=301,L]
+RewriteRule ^activities/education/tgs(.*) /activities/tgs$1 [R=301,L]
+RewriteRule ^activities/education(.*) /freesoftware/education$1 [R=301,L]
 
 # Campaigns pages
 RewriteRule ^campaigns(/.*)?$ /activities$1 [R=301,L]
@@ -163,7 +167,6 @@ RewriteRule ^about/localteams(.*) /contact/contact$1 [R=301,L]
 RewriteRule ^fr/(news|events)\.(..\.)?html /fr/fr.$2html [R=301,L]
 RewriteRule ^activities/wsis/cs-benchmarks\.(.*)$ /activities/wsis/cs-benchmarks-03-11-14.$1 [R=301,L]
 RewriteRule ^contribute/booth(.*) https://wiki.fsfe.org/KnowHow/Groups/OrganizeABooth [R=301,L]
-RewriteRule ^activities/askyourcandidates(.*) /activities/elections/askyourcandidates$1 [R=301,L]
 
 
 # =============================================================================

@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html>
+  <version>1</version>
+
+  <head>
+    <title>TUX&amp;GNU@school - 4th edition</title>
+  </head>
+
+  <body>
+    <div>
+      <h1>TUX&amp;GNU@school - 4th edition</h1>
+
+      <p><i>Every month the column <a
+      href="/activities/tgs/tgs.en.html">TUX&amp;GNU@school
+      [2]</a> reports about free software, a homepage on the topic
+      and an easy to implement idea. This month I talk about <a
+      href="http://bioinformatics.org/ghemical/">Ghemical [3]</a>,
+      modelling und computing molecules, about <a
+      href="http://www.seul.org/edu">seul.org/edu [4]</a>, the
+      education portal of SEUL - Simple End-User Linux and about
+      the idea "word games generated rapidly".</i></p>
+
+      <p>Welcome to the 4th edition. As I promised last time, there
+      are some news today. This is the first edition released under
+      the roof of the <a href="/">Free
+      Software Foundation Europe [5]</a> and <a
+      href="http://www.gnu.org">GNU [6]</a>. In this context
+      TUX&amp;GNU@school will be released in different languages in
+      the future but right now only in German and English. At this
+      point I want to thank Christian Selig and Kristian Rink for
+      their support with writing and translating. Unfortunately
+      there is no report about a school using GNU/Linux and/or Free
+      Software in this edition. I hope that next time I find
+      somebody and I likewise will upgrade the <a
+      href="http://www.edux.ch/nav.php?site=99">Questions Page
+      [7]</a> and translating of course. And again, sorry for the
+      latenese. The reason is easy: It a lot of work (too much for
+      a hobby) promoting and installing (!) GNU/Linux at Swiss
+      schools. But now we're talking about a topic everyone loves:
+      Chemistry.</p>
+
+      <h3>Ghemical - Modelling and computing molecules</h3>
+
+      <p><a href="http://bioinformatics.org/ghemical/">Ghemical
+      [3]</a> is a free program for chemistry, which is relatively
+      easy for modelling and computing molecules. I tssted the
+      version 0.82 under <a href="http://www.debian.org">Debian
+      GNU/Linux 3.0 [8]</a> and <a href="http://www.kde.org">KDE
+      2.2.2 [9]</a>. You can easy install the program under Debian
+      with the command <tt>apt-get install ghemical</tt>. Version
+      0.90 is up to date and if you can trust the homepage, they
+      want to release the version 1.0 in this summer (that's
+      becoming scarely) or autumn. The program is (and was)
+      developed by several people, all listed alphabetically on the
+      homepage.</p>
+
+      <p>Before I begin with the introduction to Ghemical I want to
+      mention yet: Unfortunately my last chemistry teacher took my
+      interest for this subject so I can't interpret all terms
+      correctly. But who is bothering intensifiedly with this
+      subject will understand it much better. That's the reason why
+      I'm not going in the depth of each term and function.</p>
+
+      <p>Starting the program a window quite similar to the first
+      screenshot will appear. That's the main window from where you
+      appoint what will be the project you work on. Up to now
+      quantum and molecular mechanic models and reduced protein
+      models are available whereas the last one isn't completely
+      implemented yet. When you start Ghemical it is most useful
+      doing this out of a terminal because it is still necessary to
+      make some in- and output on the terminal. But this feature
+      shall disappear with the version 1.0. Working with the
+      program the menu panel and the popup menu are the most
+      important aids. The menu panel owns three items: <i>File</i>,
+      <i>Windows</i> and <i>Help</i>. It's important to mention now
+      the program isn't really translated to German. There are only
+      scattered terms, words and descriptions in German. In the
+      menu item <i>File</i> you can open projects, load already
+      existing ones and exit the program. At <i>Windows</i> it is
+      possible to choose between the following three MDI modes:
+      <i>Notebook</i>, <i>Toplevel</i> and <i>Modal</i>. And
+      finally in the last item <i>Help</i> you find either general
+      information about Ghemical or a link to the
+      documentation.</p>
+
+      <p><img src="./img/ghemical.en.png"
+      alt="Screenshot 1: Ghemical with aspirin" width="800"
+      height="600" border="0" /><br />
+      </p>
+
+      <h5>Screenshot 1: Ghemical with aspirin</h5>
+      <br />
+      <br />
+       
+
+      <p>If you decided for a project at the left brink are a lot
+      of modification possibilities to work with. These differ from
+      different rotation and translation directions over the
+      zooming unless the erasing and adding of atoms and bindings
+      of course. Clicking on the prompt window for the molecules
+      with the right mouse button a popup menu appears which
+      contains different items depending on the project. To mention
+      are for instance the different presentation possibilities.
+      Proceeding the single atoms can be indexed differently.
+      Surely it's interesting too that you can plot the molecules
+      in different ways among others there is a display for 3D
+      glasses build in. This popup menu contains then too the basic
+      functions for saving and closing the projects. The choice
+      between between different elements and bindings is possible
+      here too. Beneath these simple function there are more
+      complex ones too. <b>Where the correct adding of hydrogen
+      atoms every reader still understands menu item as
+      "ESP-colored vdW-surface" isn't only imcomprehensible for the
+      author.</b> At this item the interested user and ongoing PhD
+      will hopefully understand it. Principally there is a huge
+      number of different engines and algorithms for studying and
+      changing the molecules. They seem to be quite professional
+      for me as layman. The possibility of generating DNA molecules
+      out of an easy "ACGT code" is absolutely noticeable for
+      me.</p>
+
+      <p><img src="./img/ghemical2.en.png"
+      alt="Screenshot 2: Van der Waals image of acetylsalicyl-acid"
+      width="800" height="600" border="0" /><br />
+      </p>
+
+      <h5>Screenshot 2: Van der Waals image of
+      acetylsalicyl-acid</h5>
+      <br />
+      <br />
+       
+
+      <p>At the end some tips (mainly from the <a
+      href="http://bioinformatics.org/ghemical/">homepage [3]</a>)
+      that can help you with the daily usage.</p>
+
+      <ol>
+        <li>For the generation of a quantum mechanic model
+        principally it is more meaningful to generate a molecular
+        mechanic one first which then you can transform in a
+        quantum mechanic one.</li>
+
+        <li>All menu panel are freely relocatable and placeable
+        outside of the main window too.</li>
+
+        <li>There are a lot of import and export formats available
+        for molecular mechanic models.</li>
+
+        <li>If you are forced using Windows at work then you can
+        find a <a
+        href="http://bioinformatics.org/ghemical/cygwin.html">detailed
+        description [10]</a> about the usage of Ghemical under
+        Windows.</li>
+      </ol>
+      And for those who are still wondering at the end of this
+      short description how you have to pronounce "Ghemical" can
+      find an answer in the statement of an developer which says
+      that generally everybody can pronouce it as he or she want
+      but the "G" comes from "GNU" and/or "GNOME". <br />
+      <br />
+       
+
+      <p>But now continues to the home of Simple End-User
+      Linux.</p>
+
+      <h3>seul.org/edu, the education portal of SEUL - Simple
+      End-User Linux</h3>
+
+      <p><a href="http://www.seul.org/edu">SEUL/edu [4]</a>
+      subproject of <a href="http://www.seul.org">SEUL [11]</a>
+      stands for "Simpel End-User Linux". The goal of SEUL is
+      making available an as easy as possible GNU/Linux system for
+      every user. Thereby qualitatively good software shall arise
+      which preferably will be released under the terms of the <a
+      href="http://www.gnu.org/copyleft/gpl.html">GNU GPL [12]</a>.
+      To manage and assist this the site is hosting a lot of <a
+      href="http://www.seul.org/pub/hosting.html">projects [13]</a>
+      and makes available mailing lists for the coordination of the
+      work. Main language in this project and on the website too is
+      English.</p>
+      The subproject school and education was founded in 1998. Doug
+      Loss is the leader at the moment and Karl Peña is managing a
+      lot of stuff on the <a href="http://www.seul.org/edu">website
+      [4]</a>. Beneath these two there are a lot of other
+      freelancers too. In principle SEUL/edu mainly consists of a
+      mailing list whose access is already described on the
+      frontpage and you can subscribe right there too. <br />
+      <br />
+       
+
+      <p><img src="./img/seul-edu.en.png"
+      alt="Screenshot 3: The homepage of SEUL/edu" width="800"
+      height="600" border="0" /><br />
+      </p>
+
+      <h5>Screenshot 3: The homepage of SEUL/edu</h5>
+      <br />
+      <br />
+       
+
+      <p>The homepage of the project is devided in seven sections.
+      They are: <i>Current projects</i>, <i>Existing software</i>,
+      <i>Case studies</i>, <i>Documentation</i>, <i>Regular
+      reports</i>, <i>List archive</i> and <i>Links</i>. There is
+      only one <a href="http://seul.org/edu/projects.html">project
+      [14]</a> now under the first item whose goal it is making
+      available an ISO-Image containing a counterbalanced
+      collection of education software. But the development stands
+      still at the beginning and we will see what will happen with
+      it. However the database with already <a
+      href="http://richtech.ca/seul/">existing software [15]</a> is
+      remarkable by all means and I never saw such a big one in the
+      internet yet. At the moment the database contains 518
+      software projects arranged by categories believe it or not.
+      There is a short description for each entry. Additional and
+      optional information are: version, date, author, homepage,
+      download URL and the used license of course. Accessorily it
+      is possible showing only predetermined data as the license or
+      a the short description. Important for the further growth is
+      the easy way to enter new software which is accomplished
+      through a <a
+      href="http://richtech.ca/cgi-bin/seul/seuladd0.pl">form on
+      the website [16]</a>. You can search the entries either for a
+      destined application or a pretermined word. But don't forget
+      there is not only Free Software in this database. Because the
+      people of SEUL/edu collected and catalogued already so much
+      software it would possibly make sense that other projects use
+      this database too, integrating it in their webpages and
+      expand it. A translation in other languages would expand the
+      circle of possible users again.</p>
+
+      <p>They who are searching reports about schools using
+      GNU/Linux and/or Free Software making a find here too.
+      SEUL/edu offers <a
+      href="http://casestudy.seul.org/cgi-bin/caseview0.pl">reports
+      [17]</a> of more than 50 schools worldwide. There are a few
+      from Cuenca in Ecuador to Marl in Germany. It is possible to
+      easy make new entries with a <a
+      href="http://casestudy.seul.org/casestudy.html">form [18]</a>
+      on the website. Under <a
+      href="http://seul.org/edu/docs/">documentation [19]</a> you
+      don't find as much at the moment. There is already a
+      classification for the documenation in the future which
+      contains sections as the <i>Users guide</i> or the
+      <i>Teachers guide</i>. Even a category helping
+      decision-makers and people who want to persuade schools of
+      GNU/Linux and/or Free Software is available. But SEUL/edu
+      lists <a
+      href="http://seul.org/edu/docs/relateddoc/index.html">foreign
+      documentation[20]</a> in the same structure too. At the
+      moment there is a helping description for people who want to
+      write documentation for one of the named categories.</p>
+
+      <p>The project itself releases an extensive report about the
+      situation of GNU/Linux and Free Software in and at schools at
+      least twice a month. The since the beginning of 2000
+      published reports are of course archived on the site <a
+      href="http://seul.org/edu/reports.html">[21]</a> so that
+      everyone can read them at any time. Because SEUL/edu mainly
+      works and communicates over the mailing list they made an
+      archive of the list available <a
+      href="http://archives.seul.org/seul/edu/">online [22]</a>
+      too. And finally under the last item you can find an
+      extensive <a
+      href="http://seuldat.seul.org/cgi-bin/link/urlview.pl">links
+      collection [23]</a> to further sites about the theme
+      "GNU/Linux, Free and Open Software in and at schools".</p>
+
+      <p>But now, let's continue with the idea of this month.</p>
+
+      <h3>"Word games generated rapidly"</h3>
+
+      <p>For the last idea, concedely a little skinny one, I didn't
+      receive any implementation because of this continues to the
+      idea of this edition. Because the ideas introduced until now
+      were always more or less for learning or teaching at the hard
+      everyday school life I want to present an idea for loosing
+      today. Riddles, an invention fascinating and entertaining
+      humankind since billions of years, can prettify school a
+      little. Even children find pleasure and happiness with
+      riddles and guessing games. I think about a quite special
+      kind which seems to be rather simple to implement and program
+      too. What I mean is a letters huddle containing different,
+      mostly thematically coherent words. The task is to search and
+      find these words in the mix-up. Mostly the letters are
+      disposed in an rectangle in which the to finding words are
+      placed horizontally, vertically or diagonally. Thereby the
+      searching words can be written forward or backward.</p>
+
+      <p>Perhaps there is already a piece of software generating
+      such riddles. And if not such a thing would be implementable
+      in short time, isn't it ? A little bash script putting words
+      of a definite category into a letters huddle. Writing this
+      letters sequence with some <a
+      href="http://www.latex-project.org">(La)TeX [24]</a> commands
+      into a text file and translating it would result in a quite
+      good-looking riddle for pupils her excercices already
+      finished. And the best, if you select correlatively the word
+      collection pupils even learn the correct orthography or
+      understand the context between the single word families.
+      Anyway I'm curious about the ideas you will create. Farther
+      ideas were for instance that words are written correctly and
+      wrong in the letters mix-up or you make the whole thing with
+      numbers.</p>
+
+      <p>Once again at this place the calling to send <a
+      href="mailto:foxman@lugo.ch">me [1]</a> ideas which you think
+      are easy to implement or you didn't find comparable software
+      yet, then I will report about them at this place in one of
+      the next editions. And perhaps there are firms, schools or
+      single persons offer a reward for an implementation.</p>
+
+      <p>But now continues to a new section.</p>
+
+      <h3>News and up to date program versions</h3>
+
+      <p>In the future I will report in this section about news of
+      GNU/Linux and Free Software at school. Beneath I will list
+      actual program versions of free education software for the
+      moment only of the programs I already reported about in
+      TUX&amp;GNU@school. Software whose version changed since the
+      last edition will be highlighted in red.</p>
+
+      <h4>DebianEdu:</h4>
+
+      <p>On 6th of september Raphael Hertzog announced the birth of
+      DebianEDU a subproject of <a
+      href="http://www.debian.org">Debian [8]</a>. Interim goal of
+      the project is it making Debian the best available
+      distribution school purposes. At the moment they impetuously
+      dicuss on the <a
+      href="http://www.debian.org/MailingLists/subscribe">mailing
+      list [25]</a> how they want to go on the first tasks and what
+      has priority. You can find more information under <a
+      href="http://wiki.debian.net/DebianEdu">[26]</a>.</p>
+
+      <h4>Up to date program versions</h4>
+
+      <ul>
+        <li><a href="http://edu.kde.org/ktouch">KTouch</a> 1.0 -
+        Type writing course under KDE 3.0.3 (<a
+        href="/activities/tgs/tagatschool1.en.html">TGS
+        1</a>)</li>
+
+        <li><a href="http://www.ofset.org/gcompris">GCompris</a>
+        1.1.0 - Education plattform with different boards (<a
+        href="/activities/tgs/tagatschool2.en.html">TGS
+        2</a>)</li>
+
+        <li><a href="http://edu.kde.org/kgeo">KGeo</a> 1.0.2 -
+        Geometry program under KDE 3.0.3 (<a
+        href="/activities/tgs/tagatschool3.en.html">TGS
+        3</a>)</li>
+
+        <li><a
+        href="http://bioinformatics.org/ghemical/">Ghemical</a>
+        0.90 - Chemistry program for modelling and computing
+        molecules (<a
+        href="/activities/tgs/tagatschool4.en.html">TGS
+        4</a>)</li>
+      </ul>
+      <br />
+      <br />
+       
+
+      <p>That's it for this month up to the next.</p>
+
+      <h3>Links:</h3>
+
+      <p>[1] <a href="mailto:foxman@lugo.ch">Criticism, questions,
+      comments, ideas and more please to: foxman@lugo.ch</a><br />
+       [2] <a
+      href="/activities/tgs/tgs.en.html">Homepage
+      of TUX&amp;GNU@school:
+      fsfe.org/activities/tgs/tgs.en.html</a><br />
+       [3] <a href="http://bioinformatics.org/ghemical/">Homepage
+      of Ghemical: bioinformatics.org/ghemical/</a><br />
+       [4] <a href="http://www.seul.org/edu">Homepage of SEUL/edu:
+      www.seul.org/edu</a><br />
+       [5] <a href="/">Homepage of the Free
+      Software Foundation Europe: fsfe.org</a><br />
+       [6] <a href="http://www.gnu.org">Homepage of the GNU
+      project: www.gnu.org</a><br />
+       [7] <a href="http://www.edux.ch/nav.php?site=99">Questions
+      for a possible using of GNU/Linux and/or Free Software at
+      school</a><br />
+       [8] <a href="http://www.debian.org">Homepage of Debian:
+      www.debian.org</a><br />
+       [9] <a href="http://www.kde.org">Homepage of KDE:
+      www.kde.org</a><br />
+       [10] <a
+      href="http://bioinformatics.org/ghemical/cygwin.html">Description
+      about using Ghemical under Windows</a><br />
+       [11] <a href="http://www.seul.org">Homepage of SEUL:
+      www.seul.org</a><br />
+       [12] <a href="http://www.gnu.org/copyleft/gpl.html">GNU
+      General Public License</a><br />
+       [13] <a href="http://www.seul.org/pub/hosting.html">List of
+      projects hosted by SEUL</a><br />
+       [14] <a href="http://seul.org/edu/projects.html">ISO-Project
+      of SEUL/edu</a><br />
+       [15] <a href="http://richtech.ca/seul/">Database with
+      education software for GNU/Linux</a><br />
+       [16] <a
+      href="http://richtech.ca/cgi-bin/seul/seuladd0.pl">Form for
+      entering new software to the database</a><br />
+       [17] <a
+      href="http://casestudy.seul.org/cgi-bin/caseview0.pl">Reports
+      of schools using GNU/Linux and/or Free Software</a><br />
+       [18] <a href="http://casestudy.seul.org/casestudy.html">From
+      for entering new reports</a><br />
+       [19] <a href="http://seul.org/edu/docs/">The
+      documentation-project of SEUL/edu</a><br />
+       [20] <a
+      href="http://seul.org/edu/docs/relateddoc/index.html">Foreign
+      documentation on seul/edu.org</a><br />
+       [21] <a href="http://seul.org/edu/reports.html">Archive with
+      the regular reports of SEUL/edu</a><br />
+       [22] <a href="http://archives.seul.org/seul/edu/">The lists
+      archive of SEUL/edu</a><br />
+       [23] <a
+      href="http://seuldat.seul.org/cgi-bin/link/urlview.pl">Link
+      collection of SEUL/edu:</a><br />
+       [24] <a href="http://www.latex-project.org/">Homepage of
+      LaTeX: www.latex-project.org</a><br />
+       [25] <a
+      href="http://www.debian.org/MailingLists/subscribe">Mailinglists
+      of the Debian project</a><br />
+       [26] <a href="http://wiki.debian.net/DebianEdu">Current
+      homepage of DebianEDU: wiki.debian.net/debianedu6</a><br />
+      </p>
+
+      <h4>About the author:</h4>
+
+      <p>Mario Fux finished 1999 the PrimarlehrerInnenseminar in
+      Brig after he made up mathematical and natural scientifical
+      matura. In a body with two colleagues he founded the <a
+      href="http://www.edux.ch">"ALIS - Arbeitsgruppe Linux an
+      Schulen"</a> (Swiss work group for linux at school).
+      Meanwhile he studies at the <a
+      href="http://www.ethz.ch">Swiss Federal Institut of
+      Technology Zurich</a> <a
+      href="http://www.ee.ethz.ch">informations technology and
+      electrical engineering</a>. And if he once doesn't spend his
+      time in front of the PC, he sits at his nature pond in the <a
+      href="http://www.randa.ch">mountains</a>.</p>
+
+      <p align="center"><i>Copyright (c) 2002 Mario Fux. Permission
+      is granted to copy, distribute and/or modify this document
+      under the terms of the GNU Free Documentation License, Version
+      1.2 or any later version published by the Free Software
+      Foundation; with no Invariant Sections, no Front-Cover Texts,
+      and no Back-Cover Texts.<br />
+      A copy of the license can be found at <a
+      href="http://www.gnu.org/licenses/fdl.html">http://www.gnu.org/licenses/fdl.html</a>.
+      </i></p>
+
+    </div>
+  </body>
+
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

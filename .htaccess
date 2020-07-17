@@ -143,6 +143,9 @@ RewriteRule ^activities/askyourcandidates(.*) /activities/elections/askyourcandi
 RewriteRule ^activities/education/tgs(.*) /activities/tgs$1 [R=301,L]
 RewriteRule ^activities/education(.*) /freesoftware/education$1 [R=301,L]
 RewriteRule ^(activities/)?nocloud(/.*)? /activities/activities.html [R=301,L]
+RewriteRule ^activities/os/msooxml(.*) /acticities/msooxml/msooxml$1 [R=301,L]
+RewriteRule ^activities/os(.*) /freesoftware/standards$1 [R=301,L]
+RewriteRule ^activities/procurement(.*) /freesoftware/procurement$1 [R=301,L]
 
 # Campaigns pages
 RewriteRule ^campaigns(/.*)?$ /activities$1 [R=301,L]

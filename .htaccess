@@ -24,9 +24,6 @@ RewriteRule ^graphics/fsfeurope.ico /graphics/fsfe.ico [R=301,L]
 # Redirect
 RewriteRule ^translate/?$ /contribute/translators/ [R=301,L]
 
-# NoCloud campaign, as printed on posters
-RewriteRule ^nocloud(/.*)?  /activities/nocloud$1 [R=301,L]
-
 # Promotion material order
 RewriteRule ^promo(/.*)?  /contribute/spreadtheword$1 [R=301,L]
 
@@ -145,6 +142,7 @@ RewriteRule ^activities/ftf/?(.*)$ /freesoftware/legal/legal.html [R=301,L]
 RewriteRule ^activities/askyourcandidates(.*) /activities/elections/askyourcandidates$1 [R=301,L]
 RewriteRule ^activities/education/tgs(.*) /activities/tgs$1 [R=301,L]
 RewriteRule ^activities/education(.*) /freesoftware/education$1 [R=301,L]
+RewriteRule ^(activities/)?nocloud(/.*)? /activities/activities.html [R=301,L]
 
 # Campaigns pages
 RewriteRule ^campaigns(/.*)?$ /activities$1 [R=301,L]

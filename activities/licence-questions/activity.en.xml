@@ -3,7 +3,7 @@
 <activityset>
   <version>1</version>
 
-  <activity date="2017-06-01" status="active">
+  <activity date="2015-11-25" status="active">
     <title>Licence Questions</title>
     <description>
       The FSFE’s License Questions mailing list is our group of
@@ -13,7 +13,8 @@
       have over a piece of Free Software, you can contact us.
     </description>
     <link href="/activities/licence-questions/licence-questions.html" />
-    <order priority="1" highlight="no" />
+    <image url="/graphics/logos/licence-questions.png" />
+    <order priority="3" highlight="yes" />
     <tags>
       <tag key="legal" />
     </tags>

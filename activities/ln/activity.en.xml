@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<activityset>
+  <version>1</version>
+
+  <activity date="2007-04-01" status="active">
+    <title>Legal Network</title>
+    <description>
+      The Legal Network is a neutral, non-partisan, group of experts in
+      different fields involved in Free Software legal issues.
+      Currently the Legal Network has several hundreds of participants
+      from different legal systems, academic backgrounds and
+      affiliations. The aim of the Legal Network is to promote
+      discussion and foster better knowledge of the legal constructs
+      that back Free Software. The conversations on the Legal Network
+      are intended to be dynamic, thought-provoking and up to speed
+      with the most recent developments. Since 2007, we have been
+      conducting the annual Legal and Licencing Workshop (LLW) which
+      has become the world’s foremost gathering of lawyers,
+      technologists, and thought leaders on Free Software legal and
+      licensing topics in an informal and confidential atmosphere.
+    </description>
+    <link href="/activities/ln/ln.html" />
+    <image url="/graphics/logos/ln.png" />
+    <order priority="4" highlight="yes" />
+    <tags>
+      <tag key="legal" />
+    </tags>
+  </activity>
+</activityset>

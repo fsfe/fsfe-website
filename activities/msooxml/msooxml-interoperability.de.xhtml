@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<html>
+  <version>1</version>
+
+  <head>
+    <title>FSFE - Kontext Briefing - Interoperabilität leidet unter MS-OOXML</title>
+  </head>
+
+  <body>
+    <h3>FSFE Kontext Briefing</h3>
+
+    <h1>Interoperabilität leidet unter MS-OOXML</h1>
+
+    <center>
+      [<a href="msooxml-interoperability.pdf">Auch als PDF verfügbar (englisch) (1.3M)</a>]
+    </center>
+
+    <p>
+Die geplante MS-OOXML/DIS29500 Spezifikation weckt ernsthafte technische und gesetzliche Bedenken. <sup><a 
+href="#1">1</a></sup> Dieses kontextbezogene Briefing zeigt an Hand dreier Beispiele wie die geplante 
+Spezifikation und 
+ihre praktische Umsetzung in MS Office 2007 Interoperabilität beeinträchtigt, Anbieterabhängigkeit fördert und zu Marktverzerrungen führt.
+    </p>
+
+    <p>
+Bedenken werden nicht gemindert, wenn beim ISO Ballot Resolution Meeting hinsichtlich der vorgeschlagenen Spezifikation mehr als 1.000 technische Belange und eingebrachte Dispositionen einer Diskussion bedurften. Die Teilnehmer waren in der zur Verfügung stehenden Zeit gerade in der Lage 20 bis 30 Dispositionen und etwa 200 kleinere redaktionelle Korrekturen zu diskutieren. Mehr als 900 Aspekte blieben unberücksichtigt. <sup><a href="#2">2</a></sup>
+    </p>
+
+<h2>1. Beispiel: Unspezifizierte binäre Inhalte in von MS Office 2007 generierten MS-OOXML Dateien beeinträchtigen die Interoperabilität</h2>
+
+    <p>
+Untersuchungen haben gezeigt, dass XLSX-Dokumente, die mit MS Office 2007 angelegt wurden, zusätzlich zu den in der MS-OOXML Spezifikation beschriebenen Inhalten Binär-Code aufweisen. Dies beeinträchtigt die Interoperabilität und kann die Wiedergabegenauigkeit reduzieren. Die Untersuchung wurde durchgeführt, indem ein XLSX-Dokument von microsoft.com heruntergeladen wurde und anschließend die komprimierten Inhalte entpackt wurden, um die interne Dateistruktur betrachten zu können. <sup><a href="#3">3</a></sup> <sup><a href="#4">4</a></sup>
+    </p>
+
+    <p>
+Der binäre Inhalt besteht aus drei Dateien: printerSettings1.bin, printerSettings2.bin und printerSettings3.bin. Diese stammen von Microsoft und ihr Inhalt ist nicht in der geplanten Spezifikation beschrieben. Bei der Begutachtung der Binärdateien in einem HEX-Editor zeigten sich Verweise zu 'Microsoft OneNote Import' und 'Brief'. 'Brief' scheint eine Referenz auf die Seitengröße zu sein.
+    </p>
+
+    <p>
+Die Seitengröße in einer Binärdatei zu referenzieren ist problematisch. Die Information über die Seitengröße ist notwendig für die korrekte Darstellung eines Dokuments.  Europäische Anwendungen ohne Zugang zu dieser Binärinformation könnten statt 'Brief' das A4-Seitenformat für die Anzeige verwenden, also mehr Inhalt pro Seite erlauben. Verschiedene Benutzer könnten den Eindruck bekommen, sie dikutierten über verschiedene Dokumente, wenn die Seitenzahlen nicht übereinstimmen.
+    </p>
+
+<h2>2. Beispiel: Die Konformitätsklausel ist bedeutungslos</h2>
+
+    <p>
+Die vorgeschlagene Spezifikation beinhaltet eine locker formulierte Klausel um Anwendungskonformität durchzusetzen. Sie besagt, dass ein konformer Konsument ein konformes Dokument öffnen können muss, ohne dabei einen Fehler zu generieren, und das ein konformer Produzent in der Lage sein muss, ein einziges konformes Dokument zu erzeugen. Alle Eigenschaften der Spezifizierung, die in den Anwendungen umgesetzt sind, müssen den Definitionen der geplanten Spezifikation genügen. <sup><a href="#5">5</a></sup> Unter diesen Bedingungen können selbst Anwendungen, die Dokumente gar nicht bearbeiten, als konform betrachtet werden.
+    </p>
+
+    <p>
+Ein Beispiel einer Applikation, die dieser Konformitätsklausel genügt, aber nicht als konform erachtet werden sollte, ist GNU 'cp', ein Kommando zum Kopieren von Dateien. <sup><a href="#6">6</a></sup> 'cp' ist ein technisch konformer Konsument bezüglich der Spezifikation, weil es konforme Dokumente nicht zurückweist, und alle Eigenschaften der Spezifikation, die in der Anwendung umgesetzt sind (nämlich keine), sind getreu der Spezifikation.  'cp' ist also ein konformer Produzent nach der geplanten Spezifikation, weil es ein konformes Dokument erzeugen kann und alle Eigenschaften der Spezifikation, die in der Anwendung umgesetzt sind (keine), gemäß der Spezifikation sind.
+    </p>
+
+    <p>
+Die Konfomitätsklausel der Spezifikation ist unzureichend, weil nahezu jede Anwendung die Dateien öffnet oder speichert als konform gelten kann. Über das Ausmaß, mit dem eine Anwendung Dokumente nutzt, wird nicht geurteilt und dies ermöglicht irreführende Ansprüche. <sup><a href="#7">7</a></sup>  Eine Konformitätsklausel ist einer der wichtigsten Teile eines Standards und der Text an der Stelle DIS29500 ist effektiv bedeutungslos.
+    </p>
+
+<h2>3. Beispiel: Microsofts Versprechen einer offenen Spezifikation ist kein gesetzlich zuverlässiger Garant für vollständige Interoperabilität</h2>
+
+    <p>
+Von MS Office 2007 generierte MS-OOXML Dateien beinhalten implementationspezifischen Content.  Dies bietet Grund zur Sorge, da Content, der nicht in der Spezifikation beschrieben ist, Unklarheiten schafft über die Gültigkeit der Open Specification Promised (OSP) Microsofts.  Die Gültigkeit der OSP beschränkt sich auf Patente "die notwendig sind, um die Teile der sie betreffenden Spezifikation zu implementieren, die im Detail beschrieben sind. Sie erstreckt sich nicht auf solche, die in dieser Spezifikation lediglich erwähnt werden." <sup><a href="#8">8</a></sup>
+    </p>
+
+    <p>
+Im letzten Satz des zweiten Absatzes besagt die OSP: "Keine außer den ausdrücklich in diesem Dokument niedergeschriebenen Rechten können [...] als gewährt [...] betrachtet werden.". <sup><a href="#9">9</a></sup>  Es scheint vernünftig, bezüglich notwendiger Inhalte, die die Interoperabilität ermöglichen, aber in der Spezifikation weder im Detail beschrieben noch referenziert sind, nicht auf die OSP zu vertrauen.
+    </p>
+
+    <p>
+Diese Bedenken werden noch akuter, wenn das Dokument in anderen Variationen des spezifizierten Formats gespeichert wird.  Zum Beispiel enthalten XLSM-Dokumente ebenso unspezifizierte wie auch binäre Inhalte.  XLSB-Dokumente enthalten Content, der über eine derzeit in der Spezifikation nicht beschriebene Methode gespeichert wird.  Passwortgeschützte XSLX-Dokumente werden ebenfalls in einem Dokumenten-Container gespeichert, der momentan von der Spezifizierung nicht abgedeckt ist.
+    </p>
+
+<h2>Fazit</h2>
+
+    <p>
+Binäre Inhalte, das Fehlen einer effektiven Konformitätsklausel und gesetzliche Unsicherheit sind nur einige der Bedenken, die im Zusammenhang mit der eingereichten MS-OOXML Spezifikation aufkommen.
+    </p>
+
+    <p>
+Da der ISO-Prozess mit über 900 ungelösten technischen Kommentaren konfrontiert ist und keine gesetzlichen Gesichtspunkte diskutieren wird, ist die Eignung der geplanten Spezifikation mehr als fraglich.  Die einzigen Folgen der vorgeschlagenen Spezifikation und ihrer praktischen Umsetzung in MS Office 2007 sind eingeschränkte Interoperabilität, Anbieterabhängigkeit und anhaltende Marktverzerrung.
+    </p>
+
+    <p>
+Unserer Meinung nach gibt es nur eine vernünftige Antwort für nationale Gremien: nehmen Sie DIS29500 aus dem verkürzten Prozess heraus, indem sie mit “ABGELEHNT, mit Stellungnahme” stimmen und Methoden vorschlagen, um die eingereichte Spezifikation über den normalen ISO-Prozess zu bearbeiten, idealerweise über eine Annäherung an ISO/IEC 26300, das Open Document Format (ODF).
+    </p>
+
+    <h2>Zur weiteren Lektüre</h2>
+
+    <ul>
+      <li><a href="/activities/msooxml/msooxml-idiosyncrasies.html">DIS-29500: Deprecated before use?</a></li>
+      <li><a href="/activities/msooxml/msooxml-questions.html">Six questions to national standardisation bodies</a></li>
+      <li><a href="/activities/msooxml/msooxml-converter-hoax.html">The Converter Hoax</a></li>
+      <li><a href="/activities/msooxml/msooxml-questions-for-ms.html">Questions for Microsoft on Open Formats</a></li>
+    </ul>
+
+    <hr />
+
+    <p class="footnote">
+      [<a name="1">1</a>] Zum Beispiel http://www.grokdoc.net/index.php/EOOXML_objections
+    </p>
+
+    <p class="footnote">
+      [<a name="2">2</a>] http://www.consortiuminfo.org/standardsblog/article.php?story=20080229055319727
+    </p>
+
+    <p class="footnote">
+      [<a name="3">3</a>] http://download.microsoft.com/download/a/a/3/aa3411df-5b02-463a-8ab1-9587dd8a2508/Salesdata.xlsx
+    </p>
+
+    <p class="footnote">
+      [<a name="4">4</a>] Der ZIP-Container beinhaltete folgende Dateien: 
+./Content_Types].xml, ./_rels/.rels, ./docProps/app.xml, ./docProps/core.xml, ./docProps/custom.xml, ./xl/_rels/workbook.xml.rels, ./xl/calcChain.xml, ./xl/printerSettings/printerSettings1.bin, ./xl/printerSettings/printerSettings2.bin, ./xl/printerSettings/printerSettings3.bin, ./xl/sharedStrings.xml, ./xl/styles.xml, ./xl/tables/table1.xml, ./xl/theme/theme1.xml, ./xl/workbook.xml, ./xl/worksheets/_rels/sheet1.xml.rels, ./xl/worksheets/_rels/sheet2.xml.rels, ./xl/worksheets/_rels/sheet3.xml.rels, ./xl/worksheets/sheet1.xml, ./xl/worksheets/sheet2.xml, ./xl/worksheets/sheet3.xml 
+    </p>
+
+    <p class="footnote">
+      [<a name="5">5</a>] Der genaue Wortlaut besagt, dass “A conforming consumer shall not reject any conforming documents of at least one document conformance class. the document type (§4) expected by that application. A conforming producer shall be able to produce conforming documents of at least one document conformance class. A conforming application shall treat the information in Office Open XML documents in a manner consistent with the semantic definitions given in this Specification. An application's intended behavior need not require that application to process all of the information in an Office Open XML document. However, the information that it does process shall be processed in a manner that is consistent with the semantic definitions given in this Specification.”
+    </p>
+
+    <p class="footnote">
+      [<a name="6">6</a>] Beginnen Sie mit einem konformen Dokument namens 'test.docx'.  Führen Sie das Kommando 'cp test.docx test_copy.docx' aus und bestätigen Sie, dass keine Fehlermeldungen generiert werden und eine neue Kopie des konformen Dokuments erzeugt worden ist.
+    </p>
+
+    <p class="footnote">
+      [<a name="7">7</a>] Von Microsoft aufgeführte Anwendungen, die die eingereichte Spezifikation unterstützen, sind u.a.: Apple Mac OS X, welches keine Unterstützung für Bilder oder eingebettete Objekte mitbringt.  iWork, welches keinen Support für Spreadsheets aufweist, nur eine begrenzte Anzahl Dokumente importieren kann und keine Möglichkeit bietet, Dokumente zu speichern. Google (Suche / Vorschau), welches zwar Textinhalte interpretiert, aber keine Layout-Funktionen, Bilder oder eingebettete Objekte unterstützt.
+    </p>
+
+    <p class="footnote">
+      [<a name="8">8</a>] http://www.microsoft.com/interop/osp/default.mspx 
+    </p>
+
+    <p class="footnote">
+      [<a name="9">9</a>] Ibid
+    </p>
+
+  </body>
+  <translator>Mathias Heinze</translator>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

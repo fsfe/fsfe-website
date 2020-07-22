@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<activityset>
+  <version>1</version>
+
+  <activity date="2017-06-01" status="active">
+    <title>REUSE Software</title>
+    <description>
+The FSFE is running a project to make licensing easy for humans and machines alike. It solves a fundamental issue that Free Software licensing has at the very source: what license is a file licensed under, and who owns the copyright? REUSE provides easy recommendations in three steps that help users, developers and legal professionals.
+    </description>
+    <link href="/activities/reuse/reuse.html" />
+    <image url="/graphics/logos/reuse.png" />
+    <order priority="5" highlight="yes" />
+    <tags>
+      <tag key="legal" />
+    </tags>
+  </activity>
+</activityset>

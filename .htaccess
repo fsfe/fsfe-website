@@ -24,9 +24,6 @@ RewriteRule ^graphics/fsfeurope.ico /graphics/fsfe.ico [R=301,L]
 # Redirect
 RewriteRule ^translate/?$ /contribute/translators/ [R=301,L]
 
-# NoCloud campaign, as printed on posters
-RewriteRule ^nocloud(/.*)?  /activities/nocloud$1 [R=301,L]
-
 # Promotion material order
 RewriteRule ^promo(/.*)?  /contribute/spreadtheword$1 [R=301,L]
 
@@ -37,7 +34,7 @@ RewriteRule   ^(cyf|convince)/?$ http://wiki.fsfe.org/ConvinceYourFriends [R=301
 RewriteRule ^summit16(/.*)?$  https://fsfe.org/community/events/2016/summit/frontpage$1 [R=301,L]
 
 # 15 years of FSFE
-RewriteRule ^15(/.*)?$    https://fsfe.org/activities/15years/15years$1 [R=301,L]
+RewriteRule ^15(/.*)?$    https://fsfe.org/activities/15years$1 [R=301,L]
 
 # Podcast
 RewriteRule ^podcast(/.*)? /news/podcast.html [R=301,L]
@@ -52,8 +49,8 @@ RewriteRule ^share/?$ /cgi-bin/share.php [NC,L]
 RewriteRule ^publiccode/?$ https://registration.fsfe.org/Digitale-Verwaltung-2020 [R=301,L]
 
 # Others
-RewriteRule ^standards(.*) /activities/os$1 [R=301,L]
-RewriteRule ^education(.*) /activities/education$1 [R=301,L]
+RewriteRule ^standards(.*) /freesoftware/standards$1 [R=301,L]
+RewriteRule ^education(.*) /freesoftware/education$1 [R=301,L]
 
 
 # =============================================================================
@@ -120,14 +117,14 @@ RewriteRule ^tags/tagged(\...)(\.html)?$ /tags/tags$1.html [R=301,L]
 RewriteRule ^documents/freesoftware(.*) /freesoftware/freesoftware.html [R=301,L]
 RewriteRule ^documents(/.*)?$ / [R=301,L]
 
-# Projects
+# Old campaigns and projects pages
 RewriteRule ^projects(/.*)?$ /activities/activities.html [R=301,L]
+RewriteRule ^campaigns(/.*)?$ /activities$1 [R=301,L]
 
 # /freesoftware, /about/basics and similar "basic" texts
 RewriteRule ^about/basics/?(.*)$ /freesoftware/ [R=301,L]
 RewriteRule ^freesoftware/basics/(comparison|gnuproject)(.*)$ /freesoftware/$1$2 [R=301,L]
 RewriteRule ^freesoftware/basics/legal/?(.*)$ /freesoftware/legal/ [R=301,L]
-RewriteRule ^freesoftware/education/?(.*)$ /activities/education/ [R=301,L]
 RewriteRule ^freesoftware/society/?(.*)$ /freesoftware/democracy.html [R=301,L]
 RewriteRule ^freesoftware/legal/flashingdevices(.*)$ /activities/android/flashingdevices$1 [R=301,L]
 RewriteRule ^freesoftware/public-sector/german-foreign-office-comment(.*)$ https://k7r.eu/buchartikel-freie-software-im-auswartigen-amt-erst-hu-dann-hott/ [R=301,L]
@@ -139,11 +136,19 @@ RewriteRule ^activities/ftf/legal-conference(.*)$ /activities/ln/llw.html [R=301
 RewriteRule ^activities/ftf/licence-questions(.*)$ /activities/licence-questions/ [R=301,L]
 RewriteRule ^activities/ftf/ln(.*)$ /activities/ln/ [R=301,L]
 RewriteRule ^activities/ftf/ngi0(.*)$ /activities/ngi/ [R=301,L]
-# TODO: as soon as a new "work" page is available, update this to the legal section
-RewriteRule ^activities/ftf/?(.*)$ /freesoftware/legal/legal.html [R=301,L]
+RewriteRule ^activities/ftf/?(.*)$ /activities/legal.html [R=301,L]
 
-# Campaigns pages
-RewriteRule ^campaigns(/.*)?$ /activities$1 [R=301,L]
+# /activities
+RewriteRule ^activities/askyourcandidates(.*) /activities/elections/askyourcandidates$1 [R=301,L]
+RewriteRule ^activities/btw09(.*) /activities/elections/askyourcandidates/200909-germany-bundestagswahl.html [R=301,L]
+RewriteRule ^activities/education/tgs(.*) /activities/tgs$1 [R=301,L]
+RewriteRule ^activities/education(.*) /freesoftware/education$1 [R=301,L]
+RewriteRule ^activities/os/msooxml(.*) /acticities/msooxml/msooxml$1 [R=301,L]
+RewriteRule ^activities/os(.*) /freesoftware/standards$1 [R=301,L]
+RewriteRule ^activities/procurement(.*) /freesoftware/procurement$1 [R=301,L]
+# deleted activities
+RewriteRule ^(activities/)?nocloud(/.*)? /activities/activities.html [R=301,L]
+RewriteRule ^(activities/)?theydontwantyouto(/.*)? /activities/activities.html [R=301,L]
 
 # Norwegian language: Bokmal language code
 RewriteRule ^(.*)\.no.html /$1.nb.html [R=301,L]
@@ -163,6 +168,7 @@ RewriteRule ^about/localteams(.*) /contact/contact$1 [R=301,L]
 RewriteRule ^fr/(news|events)\.(..\.)?html /fr/fr.$2html [R=301,L]
 RewriteRule ^activities/wsis/cs-benchmarks\.(.*)$ /activities/wsis/cs-benchmarks-03-11-14.$1 [R=301,L]
 RewriteRule ^contribute/booth(.*) https://wiki.fsfe.org/KnowHow/Groups/OrganizeABooth [R=301,L]
+RewriteRule ^work(\...)(\.html)?$ /about/ourwork$1.html [R=301,L]
 
 
 # =============================================================================

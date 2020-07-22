@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html>
+  <version>1</version>
+
+  <head>
+    <title>TUX&amp;GNU@school - 2nd edition</title>
+  </head>
+
+  <body>
+    <div>
+      <h1>TUX&amp;GNU@school - 2nd edition</h1>
+
+      <p><i>Every month the column TUX&amp;GNU@school reports about
+      free education software, a homepage on the topic and an easy
+      to implement idea. This month I talk about <a
+      href="http://www.ofset.org/gcompris">GCompris</a>, a GNU
+      education program for the young and the old, about <a
+      href="http://www.pingos.schulnetz.org">PingoS.schulnetz.org</a>,
+      a homepage for GNU/Linux support at german schools and about
+      the idea "Text4mator - text modification made easy".</i></p>
+
+      <p>Welcome to the second edition of TUX&amp;GNU@school [18].
+      At the beginning I want to thank all the people who sent me
+      tips for education software I could report about. At this
+      place it would be good to explain this column's name: TUX is
+      the name of the meanwhile well-known mascot of Linux, a
+      little dinky penguin. But GNU [2] on the one hand stands for
+      the recursive acronym "GNU is not UNIX", which is the name of
+      a project that's developing a free version of UNIX and on the
+      other hand it stands for the animal species of the mascot of
+      GNU. Finally the "@school" means "in or at school". But now
+      we're going on to the first item.</p>
+
+      <h3>GCompris - free education software for the young and the
+      old</h3>
+
+      <p>GCompris [3] is a free education program that has become
+      official GNU software in the meantime. Actually it's more a
+      uniform interface for different learning boards. I tested the
+      version 1.0.5 under Debian GNU/Linux 3.0 (testing) and KDE
+      2.2.</p>
+
+      <p>When you start the program, the main window of screenshot
+      1 appears. This window is split in three sections with the
+      single learning boards at the top, a short description in the
+      middle and a short menu panel at the bottom. Up to now there
+      are at the head four links that are guiding to another boards
+      and under it, in the second row, there are four boards
+      guiding to the following boards: With the first one, the kid
+      can learn the clock or time, the second link goes to a simple
+      vector painting programm, at the third board you have to set
+      the watergates that way TUX with his ship can go trough and
+      eventually the child learns with the fourth board, where the
+      different countries are situated in North and South America.
+      The pictures at the head of the main window are indicated by
+      different symbols. The small yellow arrow tells the link is
+      going to additional teaching boards, whereas the little
+      stars, at the pictures which are boards themselves, show the
+      level. At teaching boards with an integrated sound output the
+      loudspeaker symbol tells you, if sound output is possible or
+      not, like it's the case in screenshot 1. You can always read
+      a short description and the name of the author in the middle
+      part of the main window. And eventually at the bottom there
+      are four symbols which, from left to right, go to more
+      information about GCompris, open the configuration menu, show
+      the helping documentation and with a click on the last
+      picture closes the program. At the configuration menu you can
+      make settings like the language you prefer or if GCompris has
+      his own window or it starts in fullscreen mode. Regarding the
+      language settings, you should adapt the environment variable
+      LANG to match your language. If not, you can change it e.g.
+      for english by writing the following command on a console:
+      <tt>export LANG=en_EN</tt>.</p>
+
+      <p><img src="./img/gcompris-menu.en.png"
+      alt="Screenshot 1: GCompris in action" width="808"
+      height="628" border="0" /><br />
+      </p>
+
+      <h5>Screenshot 1: GCompris in action</h5>
+      <br />
+      <br />
+       
+
+      <p>With the board for learning the time, I want to show how
+      the single subprograms are built. As you can see in
+      screenshot 2, there is a menu at the bottom too, which
+      contains little pictures. By clicking on the picture
+      rightmost you go back to the main window. By the other two
+      the picture with the die shows you the current level und by
+      clicking on it you climb one level. If you are content with
+      your settings, push the hand with thumb up or alternatively
+      you can push RETURN and the computer checks the correctness
+      of the settings. If the answer was correct you see either a
+      happily clown face or a flower with a laughing mouth and you
+      can even hear it with activated sound output; if the result
+      was wrong, the clown and the flower are sad and you can try
+      it again. The problem you have to solve in this board is to
+      set the watch as the text at the left says. The watch hands
+      can be moved and set with the mouse. In higher levels even
+      the hour watch hand are set to the time given by the minute
+      hand watch. At the right you can see in which of how many
+      levels you are, shown by to numbers.</p>
+
+      <p><img src="./img/gcompris-uhr.en.png"
+      alt="Screenshot 2: Learning the time with GCompris"
+      width="808" height="628" border="0" /><br />
+      </p>
+
+      <h5>Screenshot 2: Learning the time with GCompris</h5>
+      <br />
+      <br />
+       
+
+      <p>As already said at the beginning GCompris is supposed to
+      be "only" a common interface for different teaching boards.
+      The developer encourages everyone to build own boards as
+      descriped shortly in the documentation. Personally I like
+      this program very much because it is interesting for every
+      age with his different subprograms. Up to now GCompris was
+      translated into German, English, French and Spanish whereas
+      they work on an Italian translation and for the near future
+      we can expect a Hungarian one. What I still miss is a
+      evaluation or something like highscores but I think that we
+      won't wait as long for these features because the development
+      of GCompris is going very quickly. Therefore a great thank
+      you for Bruno Coudoin and all the other authors of GCompris
+      too and a lot of success for the future.</p>
+
+      <p><i>Addendum: As I saw right now on the mailing list of the
+      project, they released GCompris 1.1.0. The first edition with
+      editor functions and a Hungarian translation.</i></p>
+
+      <p>But now to the home of the PingoS.</p>
+
+      <h3>Pingos.schulnetz.org - free support for free schools</h3>
+
+      <p><i>Attention: This site is available in German only
+      !!!</i></p>
+
+      <p>Under the URL above you find in the first place the head
+      quarter [4] (see screenshot 2) of the German PingoS. That's a
+      project which wants to find and coordinate volunteers in (at
+      the moment) Germany for GNU/Linux support at schools. They
+      try this with the help of different online media. Willing and
+      interested GNU/Linux appreciators can sign in the online form
+      [5] which asks for state of knowledge and residence too. All
+      data exclusive the name, the email address and the residence
+      are used only internally, the others are entered in the
+      PingoS-helper-card (see screenshot 4). Schools in Germany
+      searching help for imminent project or that only have
+      questions on topic can search on the helper-card [6] and
+      click on the nearest town for a list of helpers in that area.
+      If you only have questions sometimes it's surely not a bad
+      idea to subscribe on the mailing list [7] of the preject.
+      There are always able and rapid answers on the main list [8].
+      If think about larger projects or questions, they distribute
+      the responsibility for it on one of the mailing lists. The
+      work is mostly documented with a short description on the
+      project website [9]. For the future interesting is surely the
+      corporation with groups of Austria or the "ALIS -
+      Arbeitsgruppe Linux an Schulen" [10] (Swiss work group for
+      Linux at school) of Switzerland. Particularly you can even
+      hear about requests from Great Britain for building up
+      something similar.</p>
+
+      <p><img src="./img/pingos.en.png"
+      alt="Screenshot 3: Front page of the PingoS homepage"
+      width="800" height="600" border="0" /><br />
+      </p>
+
+      <h5>Screenshot 3: Front page of the Pingos homepage</h5>
+      <br />
+      <br />
+       
+
+      <p>But the support project isn't the only that's at home on
+      the homepage of the PingoS. Not forgetting the section with
+      the self-developed software [11] of the PingoS, e.g.
+      education or administration software. One of the most famous
+      projects surely is the "Tipptrainer" [12], another program
+      for learning typing, but more about it at another time.
+      Furthermore you can find there a lot of small scripts [13],
+      Perl or Bash, which ease the day for us. A last section of
+      the website I want to talk about is the area with the
+      documentation and the schooling brochures [14]. There you can
+      find almost everything from Python introductions to medium
+      large GNU/Linux courses.</p>
+
+      <p><img src="./img/pingos-karte.jpg"
+      alt="Screenshot 4: PingoS helper card" width="492"
+      height="647" border="0" /><br />
+      </p>
+
+      <h5>Screenshot 4: PingoS helper card</h5>
+      <br />
+      <br />
+       
+
+      <p>At the end I still want to tell about a very interesting
+      project of the PingoS: SelfLinux [15]. With SelfLinux the
+      PingoS want to create a complete reference to GNU/Linux for
+      novices. Therefor they collect written descriptions and
+      articles about tasks and problems around the free operating
+      system and the application software and compose them
+      structured. Until now there is already a lot of knowledge and
+      texts but they still need writer for another texts. At [16]
+      you can explore the work made up to now. From my side good
+      speed for the future and may you receive a "thank you" from
+      time to time.</p>
+
+      <p>That's it about the PingoS, let's proceed to a new idea
+      for an easy to implement software.</p>
+
+      <h3>Text4mator - text modification made easy</h3>
+
+      <p>Before I talk about the idea of this month, I still want
+      to write something about the last one and what resulted of
+      it. In the first three or four months after the publication
+      of the first edition it seemed as if nobody had time to
+      implement the idea. Therefor and because I had to learn
+      programming for my studies I tried it myself. I wrote a not
+      yet satisfying program in C++ that generates random numbers
+      through a bash script that the program writes to a file with
+      LaTeX formatting. The two commands <tt>latex</tt> and
+      <tt>dvips</tt> transform this file into an Postscript file
+      which is printed by <tt>lpr</tt>. I'll release the program
+      and a short description in a few days on [10] under the terms
+      of the GNU GPL. At this point still a thank you to Diego
+      Kuonen for his help with the LaTeX syntax. Then before
+      approximately one and a half month I received an email form
+      Franziska Meyer that she implemented the idea too. But she
+      made it by far more interesting. Because she was already
+      familiarising herself with PHP at that time, she had the idea
+      to implement it as a web service (I want to use this new word
+      once too ;-). Thought and done and like this it is possible
+      today going on her website [17] to generate a worksheet which
+      is downloadable as a pdf-file for the quarter of an hour. An
+      ingenious idea as I think; because like this you don't even
+      have to install a separate program. When I asked her to
+      release the source code to install it perhaps in an Intranet
+      she said: "Ok, ich überleg's mir mal - und schaue den Code
+      durch, ob ich den wirklich freigeben kann ;-)" (Ok, I think
+      about it - and will go through the code whether I can really
+      release that ;-)). Here too a great thank you to ZIS for her
+      effort.</p>
+
+      <p>But now up to the actually idea I want to introduce this
+      time. If you learn the verbosity at school you're doing it
+      right often with worksheets with upper-case texts. In the
+      other case you use for the introduction of punctuation marks
+      often texts without periods, commas, questions marks, etc.
+      The teachers make this all in toilsome handwork. On the other
+      case it would be right easy for good script writers and
+      programmers to implement a solution. There were again
+      different variations and possibilities, e.g. to write all
+      words upper- or lower-case, to write only the first letter
+      lower- or upper-case, etc. Furthermore you have to pay
+      attention to leave always the same space between the single
+      words. I hope somebody of you is having a good mind and I can
+      report about it next time.</p>
+
+      <p>Ok, that's the end for this time. At the end I let you
+      know that my (spontaneous) conceptions for easy to implement
+      ideas are becoming quite rare. I hope so that you can help in
+      this case and will send some to me [1] I can tell about. The
+      next time is already in two weeks because this edition came
+      too late and I don't want to begin with delays. Bye up to the
+      next time when we're on it again ...</p>
+
+      <h3>Links:</h3>
+
+      <p>[1] <a href="mailto:foxman@lugo.ch">Criticism, questions,
+      comments, ideas and more please to: foxman@lugo.ch</a><br />
+       [2] <a href="http://www.gnu.org">Homepage of the GNU
+      project: www.gnu.org</a><br />
+       [3] <a href="http://www.ofset.org/gcompris">Homepage of
+      GCompris: www.ofset.org/gcompris</a><br />
+       [4] <a href="http://www.pingos.schulnetz.org">Homepage of
+      the PingoS: www.pingos.schulnetz.org</a><br />
+       [5] <a
+      href="http://www.pingos.schulnetz.org/anmeldung.php">Registration
+      to the PingoS:
+      www.pingos.schulnetz.org/anmeldung.php</a><br />
+       [6] <a
+      href="http://www.pingos.schulnetz.org/support/map.php">Helper-card
+      of the PingoS:
+      www.pingos.schulnetz.org/support/map.php</a><br />
+       [7] <a
+      href="http://www.pingos.schulnetz.org/support/mailinglist/index.php">
+      Mailing lists of the PingoS:
+      www.pingos.schulnetz.org/support/mailinglist/index.php</a><br />
+
+       [8] <a
+      href="http://www.hh.schule.de/mailman/listinfo/all-linux">Main
+      list of the PingoS:
+      www.hh.schule.de/mailman/listinfo/all-linux</a><br />
+       [9] <a
+      href="http://www.pingos.schulnetz.org/support/projektliste.php">
+      Already finished projects of the PingoS:
+      www.pingos.schulnetz.org/support/projektliste.php</a><br />
+       [10] <a href="http://www.edux.ch">Homepage of "ALIS -
+      Arbeitsgruppe Linux an Schulen" (Swiss work group for linux
+      at school): www.edux.ch</a><br />
+       [11] <a
+      href="http://www.pingos.schulnetz.org/project/software/index.php">
+      Software of the PingoS:
+      www.pingos.schulnetz.org/project/software/index.php</a><br />
+       [12] <a
+      href="http://www.pingos.schulnetz.org/tipptrainer">Homepage
+      of Tipptrainer:
+      www.pingos.schulnetz.org/tipptrainer</a><br />
+       [13] <a
+      href="http://www.pingos.schulnetz.org/project/scripts/index.php">
+      Skript collection of thePingoS:
+      www.pingos.schulnetz.org/project/scripts/index.php</a><br />
+       [14] <a
+      href="http://www.pingos.schulnetz.org/project/schulung/index.php">
+      Documentation and schooling brochures of the PingoS:
+      www.pingos.schulnetz.org/project/schulung/index.php</a><br />
+       [15] <a
+      href="http://selflinux.sourceforge.net">Sourceforge.net page
+      of SelfLinux: selflinux.sourceforge.net</a><br />
+       [16] <a href="http://www.selflinux.de">Homepage of
+      SelfLinux: www.selflinux.de</a><br />
+       [17] <a href="http://www.atreju.ch/1mal1.phtml">1x1
+      worksheets generating online and downloading:
+      www.atreju.ch/1mal1.phtml</a><br />
+       [18] <a
+      href="/activities/tgs/tgs.en.html">Homepage
+      of TUX&amp;GNU@school:
+      fsfe.org/activities/tgs/tgs.en.html</a><br />
+      </p>
+
+      <h4>About the author:</h4>
+
+      <p>Mario Fux finished 1999 the PrimarlehrerInnenseminar in
+      Brig after he made up mathematical and natural scientifical
+      matura. In a body with two colleagues he founded the <a
+      href="http://www.edux.ch">"ALIS - Arbeitsgruppe Linux an
+      Schulen"</a> (Swiss work group for linux at school).
+      Meanwhile he studies at the <a
+      href="http://www.ethz.ch">Swiss Federal Institut of
+      Technology Zurich</a> <a
+      href="http://www.ee.ethz.ch">informations technology and
+      electrical engineering</a>. And if he once doesn't spend his
+      time in front of the PC, he sits at his nature pond in the <a
+      href="http://www.randa.ch">mountains</a>.</p>
+
+      <p align="center"><i>Copyright (c) 2002 Mario Fux. Permission
+      is granted to copy, distribute and/or modify this document
+      under the terms of the GNU Free Documentation License, Version
+      1.2 or any later version published by the Free Software
+      Foundation; with no Invariant Sections, no Front-Cover Texts,
+      and no Back-Cover Texts.<br />
+      A copy of the license can be found at <a
+      href="http://www.gnu.org/licenses/fdl.html">http://www.gnu.org/licenses/fdl.html</a>.
+      </i>
+      </p>
+    </div>
+  </body>
+
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

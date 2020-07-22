@@ -532,14 +532,18 @@ aside#sidebar {
     }
 }
 
+.highlight-text {
+    font-weight: 300;
+    font-size: 1.1em;
+
+    strong {
+        font-weight: 500;
+    }
+}
+
 #introduction {
     p {
-        font-weight: 300;
-        font-size: 1.1em;
-
-        strong {
-            font-weight: 500;
-        }
+        .highlight-text;
     }
 }
 
@@ -1095,6 +1099,11 @@ h2#fn + ol {
     font-size: 0.9em;
     margin: 2em 0;
     padding-top: 1em;
+}
+
+/* Localmenus / nav-tabs */
+ul.nav + p {
+    margin-top: 1em;
 }
 
 /* trivia */

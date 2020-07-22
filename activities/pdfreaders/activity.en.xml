@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<activityset>
+  <version>2</version>
+
+  <activity date="2009-02-02" status="active">
+    <title>PDFreaders</title>
+    <description>
+      With the PDFreaders campaign we turn the spotlight on government
+      organisations who advertise proprietary PDF readers, exposing how
+      frequent such advertisements for non-free software are. With the
+      help of activists across Europe, we contacted these organisations
+      and explained to them how to improve their websites so that they
+      respect our freedom. On <a
+      href="https://pdfreaders.org">pdfreaders.org</a> we present Free
+      Software PDF readers for all major operating systems.
+    </description>
+    <link href="http://pdfreaders.org" />
+    <order priority="2" />
+    <tags>
+      <tag key="awareness" />
+      <tag key="policy" />
+    </tags>
+  </activity>
+</activityset>

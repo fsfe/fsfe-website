@@ -15,7 +15,7 @@
     <country> Where the person lives (TODO: Where is this used?!)
     <function> The function(s) of the person (you can have more). This is a bit more complicated to express, as it uses several sources of possible functions:
       - functions.en.xml: This is the most important file. Here are all "normal" functions like intern or sysadmin, but also "ranks" for other projects
-      - projects.en.xml: There are several projects like Legal Team (ftf), Education (education) or Open Standards (os)
+      - activity.en.xml: There are several projects like Legal Team (ftf), Education (education) or Open Standards (os)
       - countries.en.xml: (translated) names for countries, i.e. for coordinators of a country team
       - groups.en.xml: (translated) names for groups (mostly cities), i.e. for coordinators of a local group
       - function-fellowship.en.xml: Functions related to the fellowship
@@ -56,7 +56,7 @@
         - /about/people/people.en.xml (this file): All FSFE-teammembers, even those not belonging to team@ (i.e. country teams)
         - /about/team.**.xhtml: The frame of the team page: Information texts, Headlines etc
         - /about/team.xsl: In this file, tags like <council-members /> are defined.
-        - /about/team.sources: Where to look for people-files, translations of functions/projects/countries and so on
+        - /about/team.sources: Where to look for people-files, translations of functions/activities/countries and so on
         - /about/people/avatars/: Place for all avatar pictures
         - /build/xslt/people.xsl: The building of the team lists itself: Links, Background colors, inclusion of avatars etc
   -->
@@ -119,7 +119,8 @@
   <person id="bakker">
     <name>Carmen Bianca Bakker</name>
     <country>NL</country>
-    <function project="reuse">deputy/f</function>
+    <function activity="reuse">deputy/f</function>
+    <team>core</team>
     <email>carmenbianca (at) fsfe (dot) org</email>
   </person>
 
@@ -274,7 +275,6 @@
   <person id="feltrin">
     <name>Nicola Feltrin</name>
     <country>IT</country>
-    <function project="ftf">coordinator/m</function>
     <team>ftf</team>
     <email>nicola (dot) feltrin (at) fsfe (dot) org</email>
   </person>

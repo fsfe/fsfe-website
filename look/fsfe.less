@@ -129,6 +129,49 @@ body.overview #content {
 
             h3 {
                 margin-top: 0;
+
+                a {
+                  vertical-align: middle;
+                }
+
+                /* inspired by: main footer#tags ul.tags > li */
+                span.status {
+                  background: lighten(grey,40%);
+                  border-radius: 4px;
+                  color: grey;
+                  font-size: 70%;
+                  margin-left: 10px;
+                  padding: 4px;
+                  vertical-align: middle;
+                }
+            }
+        }
+    }
+
+    &.icons-sm {
+        li {
+            @media (min-width: @screen-xs-min) {
+                img {
+                    max-width: 50% !important;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    &.fullwidth {
+        li {
+            .make-md-column(12);
+            align-items: center;
+        }
+    }
+
+    &.no-icons {
+        li {
+            grid-template-columns: none;
+
+            img {
+                display: none;
             }
         }
     }

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<activityset>
+  <version>1</version>
+
+  <activity date="2019-01-01" status="active">
+    <title>Next Generation Internet</title>
+    <description>
+      The FSFE is a partner organisation of NGI, a coalition of various
+      not-for-profit organisations from across Europe. Funded by the
+      European Commmission, NGI provides grants to individual
+      researchers and developers, as well as teams that wish to work on
+      new ideas and technologies that contribute to the establishment
+      of the Next Generation Internet. The FSFE provides legal support
+      for projects that improve openness, inclusivity, transparency,
+      privacy, cooperation, and protection of data.
+    </description>
+    <link href="/activities/ngi/ngi.html" />
+    <image url="/graphics/logos/ngi.png" />
+    <order priority="1" highlight="yes" />
+    <tags>
+      <tag key="legal" />
+    </tags>
+  </activity>
+</activityset>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<activityset>
+  <version>1</version>
+
+  <activity id="drm.info" date="2006-10-03" status="active">
+    <title>DRM.info</title>
+    <description>
+    Η DRM.info είναι μία συνεργατική πλατφόρμα η οποία ξεκίνησε και
+    υποστηρίζεται από το FSFE για να ενημερώσει και για να κάνει ορατές
+    τις ανησυχίες πολλών διαφορετικών ομάδων σχετικά με τους κινδύνους
+    της Διαχείρισης Ψηφιακών Περιορισμών (DRM). Οι συντελεστές της DRM.info
+    περιλαμβάνουν ψηφιακή ελευθερία, προστασία καταναλωτών, διαδικτυακό
+    ακτιβισμό και οργανισμούς βιβλιοθηκών.
+    </description>
+    <link href="/activities/drm/drm.html" />
+    <order priority="2" />
+    <tags>
+      <tag key="awareness" />
+    </tags>
+  </activity>
+</activityset>
+

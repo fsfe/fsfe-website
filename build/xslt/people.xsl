@@ -165,16 +165,16 @@
                             </xsl:variable>
                             <xsl:value-of select="/buildinfo/document/set/group[@id=$group]" />
                         </xsl:if>
-                        <xsl:if test="@project != ''">
+                        <xsl:if test="@activity != ''">
                             <xsl:text> </xsl:text>
-                            <xsl:variable name="project">
-                                <xsl:value-of select="@project" />
+                            <xsl:variable name="activity">
+                                <xsl:value-of select="@activity" />
                             </xsl:variable>
                             <xsl:element name="a">
                                 <xsl:attribute name="href">
-                                    <xsl:value-of select="/buildinfo/document/set/project[@id=$project]/link" />
+                                    <xsl:value-of select="/buildinfo/document/set/activity[@id=$activity]/link/@href" />
                                 </xsl:attribute>
-                                <xsl:value-of select="/buildinfo/document/set/project[@id=$project]/title" />
+                                <xsl:value-of select="/buildinfo/document/set/activity[@id=$activity]/title" />
                             </xsl:element>
                         </xsl:if>
                         <xsl:if test="@volunteers != ''">
@@ -183,13 +183,6 @@
                                 <xsl:value-of select="@volunteers" />
                             </xsl:variable>
                             <xsl:apply-templates select="/buildinfo/document/set/volunteers[@id=$volunteers]/node()" />
-                        </xsl:if>
-                        <xsl:if test="@projects != ''">
-                            <xsl:text> </xsl:text>
-                            <xsl:variable name="projects">
-                                <xsl:value-of select="@projects" />
-                            </xsl:variable>
-                            <xsl:apply-templates select="/buildinfo/document/set/projects[@id=$projects]/node()" />
                         </xsl:if>
                     </xsl:for-each>
 

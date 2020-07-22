@@ -110,14 +110,8 @@
               </xsl:element>
               <xsl:element name="li">
                 <xsl:element name="a">
-                  <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/work.html</xsl:attribute>
-                  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfe/projects'" /></xsl:call-template>
-                </xsl:element>
-              </xsl:element>
-              <xsl:element name="li">
-                <xsl:element name="a">
                   <xsl:attribute name="href"><xsl:value-of select="$urlprefix"/>/activities/activities.html</xsl:attribute>
-                  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfe/campaigns'" /></xsl:call-template>
+                  <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfe/activities'" /></xsl:call-template>
                 </xsl:element>
               </xsl:element>
               <xsl:element name="li">

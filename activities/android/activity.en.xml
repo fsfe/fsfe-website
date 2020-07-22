@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<activityset>
+  <version>1</version>
+
+  <activity date="2012-02-28" status="active">
+    <title>Free Your Android</title>
+    <description>
+      Android is a mostly free operating system developed mainly by
+      Google. Unfortunately, the drivers for most devices and most
+      applications in the in-built store are not Free Software. This
+      activity helps you to regain control of your Android device and
+      your data. We collect information about running an Android system
+      as free as possible and try to coordinate the efforts in this
+      area.
+    </description>
+    <link href="/activities/android/android.html" />
+    <image url="/graphics/logos/android.png" />
+    <order priority="4" highlight="yes" />
+    <tags>
+      <tag key="awareness" />
+    </tags>
+  </activity>
+</activityset>

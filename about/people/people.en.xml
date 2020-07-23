@@ -14,19 +14,19 @@
     <name> Full name of the person
     <country> Where the person lives (TODO: Where is this used?!)
     <function> The function(s) of the person (you can have more). This is a bit more complicated to express, as it uses several sources of possible functions:
-      - functions.en.xml: This is the most important file. Here are all "normal" functions like intern or sysadmin, but also "ranks" for other projects
-      - activity.en.xml: There are several projects like Legal Team (ftf), Education (education) or Open Standards (os)
+      - functions.en.xml: This is the most important file. Here are all "normal" functions like intern or sysadmin, but also "ranks" for other activities
+      - activity.en.xml: There are several activities like REUSE Software (reuse), PMPC (publiccode) or Router Freedom (routers)
       - countries.en.xml: (translated) names for countries, i.e. for coordinators of a country team
       - groups.en.xml: (translated) names for groups (mostly cities), i.e. for coordinators of a local group
       - function-fellowship.en.xml: Functions related to the fellowship
       - volunteers.en.xml: Functions for volunteers (web team, translation coordinator...)
       Here are some examples:
-        <function>president/f</function>: Female president
-        <function>intern/m</function>: Male intern
-        <function country="DE">deputy/m</function>: Deputy (male) of the German team
-        <function group="bari">coordinator/f</function>: Coordinator (female) of the Bari group
-        <function project="legal">coordinator/m</function>: Coordinator of the Legal team
-        <function volunteers="translators-it">coordinator/m</function>: Coordinator of italian translations
+        * <function>president/f</function>: Female president
+        * <function>intern/m</function>: Male intern
+        * <function country="DE">deputy/m</function>: Deputy (male) of the German team
+        * <function group="bari">coordinator/f</function>: Coordinator (female) of the Bari group
+        * <function activity="reuse">coordinator/m</function>: Coordinator of the REUSE activity
+        * <function volunteers="translators-it">coordinator/m</function>: Coordinator of italian translations
       Note: You can use more than one function tag.
       Note: If someone has no function inside the FSFE, he can ignore the function-tag (like person from associative organisations)
 

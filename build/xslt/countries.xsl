@@ -45,7 +45,7 @@
   </xsl:template>
 
   <xsl:template name="country-list-options">
-    <!-- will output: <option value="ZZ">Fooland</option> -->
+    <!-- will output: <option value="ZZ|Fooland">Fooland</option> -->
     <xsl:element name="option">
       <xsl:attribute name="value">
         <xsl:value-of select="@id" />|<xsl:value-of select="." />

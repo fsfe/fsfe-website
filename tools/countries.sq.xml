@@ -7,6 +7,8 @@
 	
 	-->
 
+  <!-- eea is European Economic Area plus a few manual additions where we want to send to -->
+
 <countryset>
   <version>1</version>
 
@@ -14,7 +16,7 @@
 <country id="AF">Afganistan</country>
 <!--<country id="">Akrotiri and Dhekelia</country> The Sovereign Base Areas of Akrotiri and Dhekelia, Cyprus, Greece-->
 <country id="AX">Ishujt Åland</country>
-<country id="AL">Shqipëri</country>
+<country id="AL" eea="yes">Shqipëri</country>
 <country id="DZ">Algjeri</country>
 <country id="AS">Samoa Amerikane</country>
 <country id="AD">Andorrë</country>
@@ -27,7 +29,7 @@
 <country id="AW">Arubë</country>
 <!--<country id="">Ashmore and Cartier Islands</country>-->
 <country id="AU">Australi</country>
-<country id="AT">Austri</country>
+<country id="AT" eea="yes">Austri</country>
 <country id="AZ">Azerbaixhan</country>
 <country id="BS">Bahamas</country><!-- Bahamas, The -->
 <country id="BH">Bahrein</country>
@@ -35,7 +37,7 @@
 <country id="BB">Barbados</country>
 <!--<country id="">Bassas da India</country>-->
 <country id="BY">Bjellorusi</country>
-<country id="BE">Belgjikë</country>
+<country id="BE" eea="yes">Belgjikë</country>
 <country id="BZ">Belize</country>
 <country id="BJ">Benini</country>
 <country id="BM">Bermudë</country>
@@ -48,7 +50,7 @@
 <country id="IO">Territoret Britanike të Oqeanit Indian</country>
 <country id="VG">Ishujt e Virgjër Britanikë</country>
 <country id="BN">Brunei Darusalam</country>
-<country id="BG">Bullgari</country>
+<country id="BG" eea="yes">Bullgari</country>
 <country id="BF">Burkina Faso</country>
 <country id="BI">Burundi</country>
 <country id="KH">Kamboxhia</country>
@@ -70,14 +72,14 @@
 <!--<country id="">Coral Sea Islands</country>Gay and Lesbian Kingdom of the Coral Sea Islands, Australia-->
 <country id="CR">Kosta Rikë</country>
 <country id="CI">Bregu i Fildishtë</country>
-<country id="HR">Kroaci</country>
+<country id="HR" eea="yes">Kroaci</country>
 <country id="CU">Kubë</country>
 <country id="CW">Kuraçao</country>
-<country id="CY">Qipro</country>
-<country id="CZ">Republika Çeke</country>
+<country id="CY" eea="yes">Qipro</country>
+<country id="CZ" eea="yes">Republika Çeke</country>
 <country id="KP">Republika Demokratike Popullore e Koresë (Korea e Veriut)</country>
 <country id="CD">Republika Demokratike e Kongos (Kinshasa)</country>
-<country id="DK">Danimarkë</country>
+<country id="DK" eea="yes">Danimarkë</country>
 <country id="DJ">Xhibut</country>
 <country id="DM">Dominikë</country>
 <country id="DO">Republika Dominikane</country>
@@ -86,14 +88,14 @@
 <country id="SV">Salvador</country>
 <country id="GQ">Guine Ekuatoriale</country>
 <country id="ER">Eritre</country>
-<country id="EE">Estoni</country>
+<country id="EE" eea="yes">Estoni</country>
 <country id="ET">Etiopi</country>
 <!--<country id="">Europa Island</country>-->
 <country id="FK">Ishujt Malvine (Ishujt Fokland)</country>
 <country id="FO">Ishujt Faroe</country>
 <country id="FJ">Fixhi</country>
-<country id="FI">Finlandë</country>
-<country id="FR">Francë</country>
+<country id="FI" eea="yes">Finlandë</country>
+<country id="FR" eea="yes">Francë</country>
 <country id="GF">Guajana Frënge</country>
 <country id="PF">Polinezia Frënge</country>
 <country id="TF">Tokat Frënge Jugore dhe të Antarktidës</country>
@@ -101,11 +103,11 @@
 <country id="GM">Gambia</country>
 <!--<country id="">Gaza Strip</country> see Palestinian territories-->
 <country id="GE">Gjeorgji</country>
-<country id="DE">Gjermani</country>
+<country id="DE" eea="yes">Gjermani</country>
 <country id="GH">Ganë</country>
 <country id="GI">Gjibraltar</country>
 <!--<country id="">Glorioso Islands</country>-->
-<country id="GR">Greqi</country>
+<country id="GR" eea="yes">Greqi</country>
 <country id="GL">Groenlandë</country>
 <country id="GD">Grenadë</country>
 <country id="GP">Guadalupë</country>
@@ -119,16 +121,16 @@
 <country id="HM">Ishulli Hërd dhe Ishujt McDonald</country>
 <country id="HN">Honduras</country>
 <country id="HK">Hong Kong</country>
-<country id="HU">Hungari</country>
-<country id="IS">Islandë</country>
+<country id="HU" eea="yes">Hungari</country>
+<country id="IS" eea="yes">Islandë</country>
 <country id="IN">Indi</country>
 <country id="ID">Indonezi</country>
 <country id="IR">Iran (Republika Islamike e Iranit)</country>
 <country id="IQ">Irak</country>
-<country id="IE">Irlandë</country>
+<country id="IE" eea="yes">Irlandë</country>
 <country id="IM">Ishulli i Robit</country>
 <country id="IL">Izrael</country>
-<country id="IT">Itali</country>
+<country id="IT" eea="yes">Itali</country>
 <country id="JM">Xhamaikë</country>
 <country id="SJ">Jan Majn</country>
 <country id="JP">Japoni</country>
@@ -141,14 +143,14 @@
 <country id="KW">Kuvajt</country>
 <country id="KG">Kirgizstan</country>
 <country id="LA">Republika Demokratike Popullore e Laosit</country>
-<country id="LV">Letoni</country>
+<country id="LV" eea="yes">Letoni</country>
 <country id="LB">Liban</country>
 <country id="LS">Lesoto</country>
 <country id="LR">Liberi</country>
 <country id="LY">Libi</country>
-<country id="LI">Lihtenshtein</country>
-<country id="LT">Lituani</country>
-<country id="LU">Luksemburg</country>
+<country id="LI" eea="yes">Lihtenshtein</country>
+<country id="LT" eea="yes">Lituani</country>
+<country id="LU" eea="yes">Luksemburg</country>
 <country id="MO">Makau</country>
 <country id="MK">Maqedoni (Ish Republika Jugosllave e Maqedonisë)</country>
 <country id="MG">Madagaskar</country>
@@ -156,7 +158,7 @@
 <country id="MY">Malajzi</country>
 <country id="MV">Maldive</country>
 <country id="ML">Mali</country>
-<country id="MT">Maltë</country>
+<country id="MT" eea="yes">Maltë</country>
 <country id="MH">Ishujt Marshall</country>
 <country id="MQ">Martinikë</country>
 <country id="MR">Mauritani</country>
@@ -175,7 +177,7 @@
 <country id="NR">Nauru</country>
 <!--<country id="">Navassa Island</country>-->
 <country id="NP">Nepal</country>
-<country id="NL">Hollandë</country>
+<country id="NL" eea="yes">Hollandë</country>
 <country id="NC">Kaledoni e Re</country>
 <country id="NZ">Zelandë e Re</country>
 <country id="NI">Nikaragua</country>
@@ -184,7 +186,7 @@
 <country id="NU">Niue</country>
 <country id="NF">Ishujt Norfolk</country>
 <country id="MP">Ishujt Veriorë Mariana</country>
-<country id="NO">Norvegji</country>
+<country id="NO" eea="yes">Norvegji</country>
 <country id="OM">Oman</country>
 <country id="PK">Pakistan</country>
 <country id="PW">Palau</country>
@@ -196,14 +198,14 @@
 <country id="PE">Peru</country>
 <country id="PH">Filipine</country>
 <country id="PN">Ishujt Pitkern</country>
-<country id="PL">Poloni</country>
-<country id="PT">Portugali</country>
+<country id="PL" eea="yes">Poloni</country>
+<country id="PT" eea="yes">Portugali</country>
 <country id="PR">Porto Riko</country>
 <country id="QA">Katar</country>
 <country id="KR">Republika e Koresë (Korea e Jugut)</country>
 <country id="MD">Republika e Moldavisë</country>
 <country id="RE">Reunioni</country>
-<country id="RO">Rumani</country>
+<country id="RO" eea="yes">Rumani</country>
 <country id="RU">Federata Ruse</country>
 <country id="RW">Ruandë</country>
 <country id="SH">Shën Helenë</country>
@@ -222,21 +224,21 @@
 <country id="SG">Singapor</country>
 <country id="SX">Sint Maarten</country>
 <country id="SK">Slovaki</country>
-<country id="SI">Sloveni</country>
+<country id="SI" eea="yes">Sloveni</country>
 <country id="SB">Ishujt Solomon</country>
 <country id="SO">Somali</country>
 <country id="ZA">Afrikë e Jugut</country>
 <country id="GS">Ishujt Xhorxhia Jugore dhe Sanduiçi Jugor</country>
 <country id="SS">Sudan i Jugut (Juba)</country>
-<country id="ES">Spanjë</country>
+<country id="ES" eea="yes">Spanjë</country>
 <!--<country id="">Spratly Islands</country>-->
 <country id="LK">Sri Lankë</country>
 <country id="SD">Sudan (Kartumi)</country>
 <country id="SR">Surinam</country>
 <country id="SJ">Svalbard</country>
 <country id="SZ">Svaziland</country>
-<country id="SE">Suedi</country>
-<country id="CH">Zvicër</country>
+<country id="SE" eea="yes">Suedi</country>
+<country id="CH" eea="yes">Zvicër</country>
 <country id="SY">Republika Arabe e Sirisë</country>
 <country id="TW">Taivan</country>
 <country id="TJ">Taxhikistan</country>
@@ -248,14 +250,14 @@
 <country id="TT">Trinidad dhe Tobago</country>
 <!--<country id="">Tromelin Island</country>-->
 <country id="TN">Tunizi</country>
-<country id="TR">Turqi</country>
+<country id="TR" eea="yes">Turqi</country>
 <country id="TM">Turkmenistan</country>
 <country id="TC">Ishujt Turks dhe Kaikos</country>
 <country id="TV">Tuvalu</country>
 <country id="UG">Ugandë</country>
 <country id="UA">Ukrainë</country>
 <country id="AE">Emiratet e Bashkuara Arabe</country>
-<country id="GB">Mbretëria e Bashkuar e Britanisë së Madhe dhe e Irlandës Veriore</country>
+<country id="GB" eea="yes">Mbretëria e Bashkuar e Britanisë së Madhe dhe e Irlandës Veriore</country>
 <country id="TZ">Republika e Bashkuar e Tanzanisë</country>
 <country id="US">Shtetet e Bashkuar të Amerikës</country>
 <country id="UY">Uruguai</country>

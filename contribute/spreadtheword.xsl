@@ -231,6 +231,7 @@
   <xsl:template match="country-list">
     <xsl:call-template name="country-list">
       <xsl:with-param name="required" select="'yes'"/>
+      <xsl:with-param name="subset" select="'eea'"/>
     </xsl:call-template>
   </xsl:template>
 

@@ -1,6 +1,23 @@
 #!/usr/bin/env bash
-OUT=/srv/www/status.fsfe.org/translations.html
-cd /srv/www/fsfe.org_git
+
+print_usage () { echo "make-outdated-list.sh -o outfile -r repo_path"; }
+
+while getopts o:r:h OPT; do
+  case $OPT in
+    o)  OUT=$OPTARG;;
+    r)  REPO=$OPTARG;;
+    h)  print_usage; exit 0;;
+    *)  echo "Unknown option: -$OPTARG"; print_usage; exit 1;;
+  esac
+done
+
+if [[ -z $OUT || -z $REPO ]]; then
+  echo "Mandatory option missing:"
+  print_usage
+  exit 1
+fi
+
+cd "$REPO"
 
 nowlang=''
 yearago=`date +%s --date='1 year ago'`
@@ -22,15 +39,17 @@ find . -type f -iname "*\.en\.xhtml" | grep -v '^./[a-z][a-z]/\|^./news'|sed 's/
    echo "<a href=#$lang_uniq>$lang_uniq</a>" >> ${OUT}
 done
 
-find . -type f -iname "*\.en\.xhtml" | grep -v '^./[a-z][a-z]/\|^./news'|sed 's/\.[a-z][a-z]\.xhtml//'|sort|while read A; do
-   originaldate=`git log --pretty="%cd" --date=raw -1 $A.en.xhtml|cut -d' ' -f1`
-   original_version=$(xsltproc build/xslt/get_version.xsl $A.en.xhtml)
-   for i in $A.[a-z][a-z].xhtml; do
+find . -type f \( -iname "*\.en\.xhtml" -o -iname "*\.en\.xml" \) -not -path "*/\.*" | grep -v '^./[a-z][a-z]/\|^./news\|^./events' |sort|while read fullname; do
+   ext="${fullname##*.}"
+   base="$(echo $fullname | sed "s/\.[a-z][a-z]\.$ext//")"
+   original_version=$(xsltproc build/xslt/get_version.xsl $base.en.$ext)
+   for i in $base.[a-z][a-z].$ext; do
      if [[ $i != *".en."* ]]; then
        translation_version=$(xsltproc build/xslt/get_version.xsl $i)
        if [ ${translation_version:-0} -lt ${original_version:-0} ]; then
-         lang=`echo $i|sed 's/.*\.\([a-z][a-z]\)\.xhtml/\1/'`
-         echo "$lang $A $originaldate $original_version $translation_version"
+         originaldate=`git log --pretty="%cd" --date=raw -1 $base.en.$ext|cut -d' ' -f1`
+         lang=$(echo $i|sed "s/.*\.\([a-z][a-z]\)\.$ext/\1/")
+         echo "$lang $base $originaldate $original_version $translation_version"
        fi
      fi
   done

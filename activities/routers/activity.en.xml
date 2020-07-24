@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <activityset>
-  <version>1</version>
+  <version>2</version>
 
-  <activity date="2013-11-01" status="active">
+  <activity id="routers" date="2013-11-01" status="active">
     <title>Router Freedom</title>
     <description>
-      An EU regulation may make it impossible to install a custom piece
-      of software on most radio devices like WiFi routers, smartphones,
-      and embedded devices. It requires hardware manufacturers to
-      implement a barrier that disallows users to install any software
-      which has not been certified by them. We are working to avoid the
-      expected negative implications on user rights and Free Software,
-      security, fair competition, the environment, and charitable
-      community initiatives.
+      It should go without saying that in our society we should be able
+      to freely choose technical devices for use in our homes. But some
+      Internet service providers in Europe dishonor this principle by
+      dictating which device their customers have to use in order to
+      connect to the internet, or they discriminate against the owners
+      of alternative devices. This undermining of our basic freedom of
+      choice is strongly opposed by the FSFE and many other
+      organisations, projects, and individuals. Router Freedom is not
+      merely a topic for experts. It affects all of us.
     </description>
     <link href="/activities/routers/routers.html" />
     <image url="/graphics/logos/routers.png" />

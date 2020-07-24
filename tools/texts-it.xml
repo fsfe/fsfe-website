@@ -25,10 +25,10 @@
   <!-- Basic texts -->
   <text id="fsfeurope">Free Software Foundation&#160;Europe</text>
   <text id="fsfnetwork">
-    FSFE ha delle <a href="//fsfe.org/about/fsfnetwork.html">organizzazioni associate</a> in
-     <a href="//www.fsf.org/">Nord America</a>,
-     <a href="http://fsf.org.in/">India</a> e
-     <a href="http://www.fsfla.org/">America Latina</a>.
+    FSFE ha delle <a href="//fsfe.org/about/fsfnetwork.html">organizzazioni associate</a> in <a
+      href="//www.fsf.org/">Nord America</a>, <a
+      href="http://fsf.org.in/">India</a> e <a
+      href="http://www.fsfla.org/">America Latina</a>.
   </text>
 
 
@@ -41,7 +41,7 @@
   <text id="translator3c"> di questa pagina.</text>
   <text id="permission">
     La copia letterale e la distribuzione di questo articolo nella sua integrità sono permesse
-    con qualsiasi mezzo, a condizione che questa nota sia riprodotta.
+    con qualsiasi mezzo, a condizione che questa nota venga riprodotta.
   </text>
   <text id="js-licences">Licenze JavaScript</text>
 
@@ -49,7 +49,7 @@
   <!-- Warning info boxes -->
   <text id="outdated-1">
     La traduzione potrebbe non essere aggiornata rispetto al
-  </text>
+  </text><!-- followed by "translator3b" -->
   <text id="outdated-2">
      <a href="/contribute/translators/translators.html">Per favore aiutaci a
      tradurre</a> questa ed altre pagine su fsfe.org, affinché le persone possano leggere
@@ -71,6 +71,7 @@
   <text id="fsfe/about">Informazioni</text>
   <text id="fsfe/projects">Progetti</text>
   <text id="fsfe/campaigns">Campagne</text>
+  <text id="fsfe/activities">Attività</text>
   <text id="fsfe/help">Partecipare</text>
   <text id="fsfe/press">Stampa</text>
   <text id="fsfe/contact">Contattaci</text>
@@ -85,10 +86,11 @@
   <text id="community/discuss">Discussioni sul Software Libero</text>
 
   <text id="motto-fsfs">Software Libero, Società Libera!</text>
-  <text id="motto-fellowship">Unisciti alla Fellowship!</text>
-  <text id="learn-more">Saperne di più</text>
+  <text id="motto-fellowship">Unisciti alla nostra community!</text>
+  <text id="learn-more">Vuoi saperne di più?</text>
   <text id="press">Stampa</text>
   <text id="newsletter">Newsletter</text>
+  <text id="podcast">Podcast</text>
 
   <text id="go-to">Vai a:</text>
   <text id="search">Cerca</text>
@@ -122,9 +124,12 @@
   <text id="privacy-policy">Informativa sulla privacy</text>
   <text id="transparency-commitment">Impegno alla trasparenza</text>
   <text id="tags">Tag</text>
+  <text id="discuss-article">Commenta l'articolo</text>
+  <text id="finished">Completato</text>
 
 
   <!-- Article metadata -->
+  <text id="author">Autore</text>
   <text id="writtenby">Scritto da</text>
   <text id="published">Pubblicato il</text>
   <text id="revision">Ultimo aggiornamento</text>
@@ -140,14 +145,14 @@
 
   <!-- News and event feeds -->
   <text id="related-news">Notizie correlate</text>
-  <!-- !! MISSING TRANSLATION --> <text id="related-events">Related Events</text>
-  <!-- !! MISSING TRANSLATION --> <text id="related-all">All related news and events</text>
+  <text id="related-events">Eventi collegati</text>
+  <text id="related-all">Notizie ed eventi collegati</text>
 
 
   <!-- Sidebars -->
   <text id="our-work">Il nostro lavoro</text>
   <text id="our-work-intro">
-    <p>Come organizzazione no-profit e non governativa, la Free Software Foundation
+    <p>Come organizzazione non profit e non governativa, la Free Software Foundation
     Europe lavora al fine di creare conoscenza e sostegno per il Software Libero
     e gli Standard Aperti nella politica, negli affari, nelle leggi e nella società in generale.</p>
   </text>
@@ -182,7 +187,7 @@
 
   <text id="donate">Donazioni</text>
   <text id="donate-paragraph">
-    La Free Software Foundation Europe è una organizzazione no-profit e
+    La Free Software Foundation Europe è una organizzazione non profit e
     non governativa. <a href="/about/ourwork.html">Il nostro lavoro</a> è reso
     possibile dalla comunità di
     <a href="/contribute/contribute.html">volontari</a>,

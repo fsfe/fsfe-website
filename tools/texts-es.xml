@@ -1,10 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <textset>
-  <version>1</version>
+  <version>0</version>
 
 
 <!-- ALL STATIC TEXTS -->
+
+  <!-- Spreadtheword page -->
+  <!-- !! MISSING TRANSLATION --> <text id="stw-type">Type</text>
+  <!-- !! MISSING TRANSLATION --> <text id="stw-size">Size</text>
+  <!-- !! MISSING TRANSLATION --> <text id="stw-context">Context information</text>
+  <!-- !! MISSING TRANSLATION --> <text id="stw-printed"><a href="#how-to-order">Order from our stock</a> in</text>
+  <!-- !! MISSING TRANSLATION --> <text id="stw-printed-tooltip">You can order these printed versions from us using the order form.</text>
+  <!-- !! MISSING TRANSLATION --> <text id="stw-languages">Available to download in</text>
+  <!-- !! MISSING TRANSLATION --> <text id="stw-languages-tooltip">If you want to spread our information and promotion material online, feel free to download it in the available languages.</text>
+  <!-- !! MISSING TRANSLATION --> <text id="stw-license">License</text>
+  <!-- !! MISSING TRANSLATION --> <text id="stw-author">Author</text>
+  <!-- !! MISSING TRANSLATION --> <text id="stw-year">Year</text>
+  <!-- !! MISSING TRANSLATION --> <text id="stw-source">Source files</text>
+  <!-- !! MISSING TRANSLATION --> <text id="stw-source-tooltip">You can download the source files of this promotion item to modify or translate it. Please respect its license.</text>
+  <!-- !! MISSING TRANSLATION --> <text id="stw-printready">Print-ready files</text>
+  <!-- !! MISSING TRANSLATION --> <text id="stw-printready-tooltip">These are the files we send to our printer, including bleed and other printer specific settings. The files can be very large (~5-25MB).</text>
 
   <!-- Basic texts -->
  <text id="fsfeurope">Fundación del Software Libre de Europa</text>
@@ -27,47 +43,39 @@
       Se permite la copia y distribución de este documento completo
       en cualquier medio, siempre que se incluya este aviso.
   </text>
+  <!-- !! MISSING TRANSLATION --> <text id="js-licences">JavaScript Licences</text>
 
 
   <!-- Warning info boxes -->
-  <text id="outdated">
-    <strong>Aviso: </strong>
-    Esta página puede estar desactualizada con respecto a la original.
-    Por favor, consulte
-    <a href="/contribute/contribute.html">esta página</a> para informarse de
-    cómo puede ayudar con las traducciones y hacer otras contribuciones.
-  </text>
   <text id="outdated-1">
-    <strong>Aviso: </strong>
     Esta página puede estar desactualizada con respecto a la
-  </text>
+  </text><!-- followed by "translator3b" -->
   <text id="outdated-2">
-    Por favor, consulte
-    <a href="/contribute/contribute.html">esta página</a> para informarse de cómo puede ayudar
-    con traducciones y otros temas.
+     Por favor, consulte<a href="/contribute/translators/translators.html">esta página</a>
+     para informarse
+	de cómo puede ayudar con traducciones.
   </text>
   <text id="notranslation">
-    <strong>Aviso: </strong>
-    Esta página no se ha traducido todavía. Lo que está viendo es
-    la versión original de la página. Por favor, consulte
-    <a href="/contribute/contribute.html">esta página</a> para informarse de
-    cómo puede ayudar con las traducciones y hacer otras contribuciones.
+    Esta página no se ha traducido todavía. Por favor, consulte <a
+	href="/contribute/translators/translators.html">esta página
+	</a> para informarse de cómo puede ayudar con las traducciones
+	y hacer otras contribuciones.
   </text>
-  <text id="under-construction">
+    <text id="under-construction">
     <strong>Aviso: </strong>Esta página está en construcción. Por favor <strong>no la difunda</strong> o intente traducirla, pues su contenido está sujeto a cambios.
   </text>
-  <text id="project-complete">
-	  Este proyecto ha terminado con éxito. Estas páginas se mantienen a efectos de archivo.
-  </text>
+    <text id="project-complete">Este proyecto ha terminado con éxito. Estas páginas se mantienen a efectos de archivo.  </text>
 
 
- <!-- Menu, Navigation, Buttons -->
+  <!-- Menu, Navigation, Buttons -->
   <text id="fsfe/about">Acerca de</text>
   <text id="fsfe/projects">Nuestro trabajo</text>
   <text id="fsfe/campaigns">Campañas</text>
+  <!-- !! MISSING TRANSLATION --> <text id="fsfe/activities">Activities</text>
   <text id="fsfe/help">Colabore</text>
   <text id="fsfe/press">Prensa</text>
   <text id="fsfe/contact">Contactar</text>
+  <!-- !! MISSING TRANSLATION --> <text id="support/become">Become a supporter</text>
   <text id="fellowship/login">Iniciar sesión</text>
   <text id="news/news">Últimas noticias</text>
   <text id="news/events">Próximos actos</text>
@@ -82,6 +90,7 @@
   <text id="learn-more">Saber más</text>
   <text id="press">Prensa</text>
   <text id="newsletter">Boletín de noticias</text>
+  <text id="podcast">Podcast</text>
 
   <text id="go-top">Ir al inicio</text>
   <text id="search">Buscar</text>
@@ -113,15 +122,19 @@
   <text id="contribute-web">Contribuir al equipo de la web</text>
   <text id="imprint">Edición</text>
   <text id="privacy-policy">Política de privacidad</text>
+  <!-- !! MISSING TRANSLATION --> <text id="transparency-commitment">Transparency Commitment</text>
   <text id="tags">Etiquetas</text>
+  <!-- !! MISSING TRANSLATION --> <text id="discuss-article">Discuss this</text>
+  <!-- !! MISSING TRANSLATION --> <text id="finished">Finished</text>
 
 
- <!-- Article metadata -->
- <text id="writtenby">Redactado&#160;por</text>
- <text id="published">Publicado</text>
- <text id="revision">actualizado&#160;el</text>
- <text id="download">Descargar</text>
- <text id="and">y</text>
+  <!-- Article metadata -->
+  <!-- !! MISSING TRANSLATION --> <text id="author">Author</text>
+  <text id="writtenby">Redactado&#160;por</text>
+  <text id="published">Publicado</text>
+  <text id="revision">actualizado&#160;el</text>
+  <text id="download">Descargar</text>
+  <text id="and">y</text>
 
 
   <!-- Petitions -->
@@ -141,7 +154,8 @@
   <text id="our-work-intro"><p>Como organización no gubernamental sin ánimo de lucro,
 la Fundación del Software Libre de Europa trabaja para crear conciencia general y apoyo al
 Software Libre y los Estándares Abiertos en la política, las empresas, las leyes y la sociedad
-en su conjunto.</p></text>
+en su conjunto.</p>
+</text>
   <text id="about-fsfe">Acerca de la FSFE</text>
   <text id="about-fsfe-intro">
       <p>
@@ -154,24 +168,22 @@ sociedad digital emergente.
         Las libertades de <a href="/about/basics/freesoftware.en.html">usar, estudiar, compartir
         y mejorar</a> el software permiten una participación <strong>equitativa</strong>,
         y son extremadamente importantes.
-      </p>
+    </p>
   </text>
 
 
   <!-- Motivational texts for fellowship, support or donations -->
   <text id="join">Únase</text>
   <text id="join-paragraph">
-<p>Hágase «Fellow» (miembro de la comunidad) de la FSFE
-para fortalecer nuestro trabajo y ayudar a asegurar nuestra independencia económica. Al
-unirse a la «Fellowship» se hará un miembro sostenedor, donante, de la FSFE - incluyendo
-acceso a nuestra infraestructura.</p>
-</text>
+    <p>Hágase «Fellow» (miembro de la comunidad) de la FSFE para fortalecer nuestro trabajo y ayudar a asegurar nuestra independencia económica. Al unirse a la «Fellowship» se hará un miembro sostenedor, donante, de la FSFE - incluyendo acceso a nuestra infraestructura.</p>
+  </text>
   <text id="join-fellowship">Únase a la Fellowship</text>
 
   <text id="support">Apoyar a la FSFE</text>
   <text id="show-support">¡Muestre su apoyo!</text>
   <text id="show-support-paragraph">¡La FSFE necesita su apoyo para que se oiga su voz! ¡Cada apoyo cuenta!</text>
   <text id="support-fsfe">¡Yo apoyo a la FSFE!</text>
+  <!-- !! MISSING TRANSLATION --> <text id="support-paragraph">By becoming a supporter of the FSFE you empower our work and help to assure our financial independence.</text>
 
  <text id="donate">Donar</text>
   <text id="donate-paragraph">
@@ -179,20 +191,42 @@ acceso a nuestra infraestructura.</p>
     sin ánimo de lucro. <a href="/about/ourwork.html">Nuestro trabajo</a> es posible
     gracias a una comunidad de
     <a href="/contribute/contribute.es.html">voluntarios</a>,
-    <a href="https://my.fsfe.org/donate">Fellows</a> y
+    <!-- !! MISSING TRANSLATION --> <a href="https://my.fsfe.org/donate">Fellows</a> y
     <a href="thankgnus.es.html">donantes</a>. Sus donaciones son críticas para
     nuestra fuerza y autonomía. Nos posibilitan continuar trabajando por el Software
     Libre donde sea necesario, y ser una voz independiente.
   </text>
 
+  <!-- pdfreaders.org -->
+  <!-- !! MISSING TRANSLATION --> <text id="pdfreaders-head-readers">The Readers</text>
+  <!-- !! MISSING TRANSLATION --> <text id="pdfreaders-head-standards">Open Standards</text>
+  <!-- !! MISSING TRANSLATION --> <text id="pdfreaders-head-graphics">Graphics</text>
+  <!-- !! MISSING TRANSLATION --> <text id="pdfreaders-head-about">About</text>
+  <!-- !! MISSING TRANSLATION --> <text id="pdfreaders-body-platforms">Platforms:</text>
 
+  <!-- Share and support buttons -->
+  <!-- !! MISSING TRANSLATION --> <text id="share-head">Share and support</text>
+  <!-- !! MISSING TRANSLATION --> <text id="share-page">Share this page on</text>
+  <!-- !! MISSING TRANSLATION --> <text id="share-microdonation">Make a micro-donation via</text>
+  <!-- !! MISSING TRANSLATION --> <text id="share-warning">Some services may be Free Software unfriendly and harm your privacy.</text>
+
+  <!-- Sponsoring buttons -->
+  <!-- !! MISSING TRANSLATION --><text id="donation-buttons">Buttons</text>
+  <!-- !! MISSING TRANSLATION --> <text id="Donor">Donor</text>
+  <!-- !! MISSING TRANSLATION --> <text id="BronzeDonor">Bronze Donor</text>
+  <!-- !! MISSING TRANSLATION --> <text id="SilverDonor">Silver Donor</text>
+  <!-- !! MISSING TRANSLATION --> <text id="GoldDonor">Gold Donor</text>
+  <!-- !! MISSING TRANSLATION --> <text id="size/huge">huge</text>
+  <!-- !! MISSING TRANSLATION --> <text id="size/large">large</text>
+  <!-- !! MISSING TRANSLATION --> <text id="size/medium">medium</text>
+  <!-- !! MISSING TRANSLATION --> <text id="size/small">small</text>
+  <!-- !! MISSING TRANSLATION --> <text id="background/white">White background</text>
+  <!-- !! MISSING TRANSLATION --> <text id="background/transparent">Transparent background</text>
 </textset>
 
 <!-- OLD TEXTS AND QUOTES, TRANSLATED TO SPANISH
 
-
  <text id="freesoftwarefoundationeurope">Fundación del Software Libre de Europa</text>
-
 
   <text id="wiki/wiki">Wiki</text>
   <text id="wiki/events">Actos de la Fellowship</text>
@@ -206,11 +240,8 @@ acceso a nuestra infraestructura.</p>
 
   <text id="creative-commons-license">Licencia Creative Commons</text>
 
-
-
   <text id="fsfe/mission">Misión</text>
   <text id="support/funds">Financiación</text>
-
 
   <text id="contribute">Colabore</text>
   <text id="contribute-intro"><p>Somos una comunidad de personas que se comprometen con el
@@ -218,13 +249,10 @@ acceso a nuestra infraestructura.</p>
 Hay muchas maneras de hacerlo y con seguridad encontrará una forma que se ajuste a sus
 intereses y habilidades.</p></text>
 
-
-
   <text id="statement1">La Fundación del Software Libre de Europa es una organización sin ánimo de lucro
 dedicada a la promoción del </text>
   <text id="statement-fs">Software Libre</text>
   <text id="statement2">, trabajando en favor de la libertad en la sociedad de la información</text>
-
 
 	<text id="news">Noticias</text>
   <text id="receive-newsletter">Suscribirse al boletín mensual de noticias de la FSFE</text>
@@ -233,7 +261,6 @@ dedicada a la promoción del </text>
   <text id="more">Ver más</text>
   <text id="morenews">Ver todas las noticias</text>
   <text id="moreevents">Ver todos los actos</text>
-
 
   <text id="email">Correo electrónico</text>
   <text id="email-placeholder">dirección de correo electrónico</text>
@@ -256,64 +283,15 @@ dedicada a la promoción del </text>
         Libre donde sea necesario, y ser una voz independiente.
       </p></text>
 
-
   <text id="cb-restricted-boot">"Arranque seguro": ¿quién controlará su próximo ordenador?</text>
   <text id="cb-restricted-boot-link">¿usted o el fabricante?</text>
 
   <text id="cb-valentine">El 14 de febrero: </text>
   <text id="cb-valentine-link">¡Muestre su amor por el Software Libre!</text>
 
-
   <text id="no-avatar">Sin foto</text>
-
 
   <text id="to">a</text>
   <text id="go-to">Ir a:</text>
-
-
-  <text id="months/1">Enero</text>
-  <text id="months/2">Febrero</text>
-  <text id="months/3">Marzo</text>
-  <text id="months/4">Abril</text>
-  <text id="months/5">Mayo</text>
-  <text id="months/6">Junio</text>
-  <text id="months/7">Julio</text>
-  <text id="months/8">Agosto</text>
-  <text id="months/9">Septiembre</text>
-  <text id="months/10">Octubre</text>
-  <text id="months/11">Noviembre</text>
-  <text id="months/12">Diciembre</text>
-
-  <text id="months-abbreviated/1">Ene</text>
-  <text id="months-abbreviated/2">Feb</text>
-  <text id="months-abbreviated/3">Mar</text>
-  <text id="months-abbreviated/4">Abr</text>
-  <text id="months-abbreviated/5">May</text>
-  <text id="months-abbreviated/6">Jun</text>
-  <text id="months-abbreviated/7">Jul</text>
-  <text id="months-abbreviated/8">Ago</text>
-  <text id="months-abbreviated/9">Sep</text>
-  <text id="months-abbreviated/10">Oct</text>
-  <text id="months-abbreviated/11">Nov</text>
-  <text id="months-abbreviated/12">Dic</text>
-
-  <text id="weekdays/1">Lunes</text>
-  <text id="weekdays/2">Martes</text>
-  <text id="weekdays/3">Miércoles</text>
-  <text id="weekdays/4">Jueves</text>
-  <text id="weekdays/5">Viernes</text>
-  <text id="weekdays/6">Sábado</text>
-  <text id="weekdays/7">Domingo</text>
-
-  <text id="weekdays-abbreviated/1">Lun</text>
-  <text id="weekdays-abbreviated/2">Mar</text>
-  <text id="weekdays-abbreviated/3">Mie</text>
-  <text id="weekdays-abbreviated/4">Jue</text>
-  <text id="weekdays-abbreviated/5">Vie</text>
-  <text id="weekdays-abbreviated/6">Sab</text>
-  <text id="weekdays-abbreviated/7">Dom</text>
-
-
-
   -->
 

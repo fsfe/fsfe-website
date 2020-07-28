@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<textset>
+<data>
   <version>1</version>
 
 
@@ -23,12 +22,9 @@
   <text id="stw-printready-tooltip">Questi sono i file che mandiamo alla nostra stampante, con elementi oltre il margine di pagina ed altre impostazioni specifiche per la stampa. I file possono essere molto grandi (~5-25MB).</text>
 
   <!-- Basic texts -->
-  <text id="fsfeurope">Free Software Foundation&#160;Europe</text>
+  <text id="fsfeurope">Free Software Foundation Europe</text>
   <text id="fsfnetwork">
-    FSFE ha delle <a href="//fsfe.org/about/fsfnetwork.html">organizzazioni associate</a> in <a
-      href="//www.fsf.org/">Nord America</a>, <a
-      href="http://fsf.org.in/">India</a> e <a
-      href="http://www.fsfla.org/">America Latina</a>.
+    FSFE ha delle <a href="//fsfe.org/about/fsfnetwork.html">organizzazioni associate</a> in <a href="//www.fsf.org/">Nord America</a>, <a href="http://fsf.org.in/">India</a> e <a href="http://www.fsfla.org/">America Latina</a>.
   </text>
 
 
@@ -56,8 +52,7 @@
 	i nostri messaggi nella propria lingua madre.
   </text>
   <text id="notranslation">
-    Questa pagina non è ancora stata tradotta. <a
-	href="/contribute/translators/translators.html">Per favore aiutaci a
+    Questa pagina non è ancora stata tradotta. <a href="/contribute/translators/translators.html">Per favore aiutaci a
 	tradurre</a> questa ed altre pagine su fsfe.org, affinché le persone possano leggere
 	i nostri messaggi nelle propria lingua madre.
   </text>
@@ -69,12 +64,12 @@
 
   <!-- Menu, Navigation, Buttons -->
   <text id="fsfe/about">Informazioni</text>
-  <text id="fsfe/projects">Progetti</text>
-  <text id="fsfe/campaigns">Campagne</text>
+
+
   <text id="fsfe/activities">Attività</text>
   <text id="fsfe/help">Partecipare</text>
   <text id="fsfe/press">Stampa</text>
-  <text id="fsfe/contact">Contattaci</text>
+
   <text id="support/become">Diventa sostenitore</text>
   <text id="fellowship/login">Login</text>
   <text id="news/news">Ultime notizie</text>
@@ -85,36 +80,36 @@
   <text id="fs/basics">Le basi del Software Libero</text>
   <text id="community/discuss">Discussioni sul Software Libero</text>
 
-  <text id="motto-fsfs">Software Libero, Società Libera!</text>
-  <text id="motto-fellowship">Unisciti alla nostra community!</text>
+
+
   <text id="learn-more">Vuoi saperne di più?</text>
-  <text id="press">Stampa</text>
+
   <text id="newsletter">Newsletter</text>
   <text id="podcast">Podcast</text>
 
   <text id="go-to">Vai a:</text>
   <text id="search">Cerca</text>
-  <text id="submit">Invia</text>
+
   <text id="subscribe">Iscriviti</text>
   <text id="email">indirizzo email</text>
   <text id="news">Ultime notizie</text>
   <text id="breadcrumb-news">Notizie</text>
   <text id="receive-newsletter">Iscriviti alla newsletter mensile di FSFE</text>
   <text id="subscribe-newsletter">Iscriviti alla newsletter</text>
-  <text id="events">Prossimi eventi</text>
-  <text id="more">Continua</text>
-  <text id="morenews">Altre notizie…</text>
-  <text id="moreevents">Altri eventi…</text>
+
+
+
+
   <text id="contact">Contatto</text>
   <text id="team">Team</text>
-  <text id="microblog">Microblog</text>
-  <text id="no-avatar">Immagine non disponibile</text>
+
+
 
   <text id="change-lang">Cambia lingua</text>
   <text id="menu">Menu</text>
   <text id="content">Contenuto</text>
   <text id="page-info">Informazioni sulla pagina</text>
-  <text id="sitemap">Mappa del sito</text>
+
   <text id="go-top">Vai all'inizio</text>
   <text id="source">Codice sorgente</text>
   <text id="contact-us">Contattaci</text>
@@ -173,11 +168,9 @@
 
 
   <!-- Motivational texts for fellowship, support or donations -->
-  <text id="join">Associati</text>
-  <text id="join-paragraph">
-    <p>Diventa un Fellow della FSFE per valorizzare il nostro lavoro e aiutarci ad assicurare la nostra indipendenza finanziaria. Unendoti alla Fellowship diventerai un membro donatore e sostenitore della FSFE - incluso l'accesso alla nostra infrastruttura.</p>
-  </text>
-  <text id="join-fellowship">Unisciti alla Fellowship</text>
+
+
+
 
   <text id="support">Sostieni la FSFE</text>
   <text id="show-support">Mostra il tuo sostegno!</text>
@@ -212,14 +205,14 @@
 
   <!-- Sponsoring buttons -->
   <text id="donation-buttons">Banner</text>
-  <text id="Donor">Donatore</text>
-  <text id="BronzeDonor">Donatore Bronzo</text>
-  <text id="SilverDonor">Donatore Argento</text>
-  <text id="GoldDonor">Donatore Oro</text>
+
+
+
+
   <text id="size/huge">enorme</text>
   <text id="size/large">grande</text>
   <text id="size/medium">medio</text>
   <text id="size/small">piccolo</text>
   <text id="background/white">Sfondo bianco</text>
   <text id="background/transparent">Sfondo trasparente</text>
-</textset>
+</data>

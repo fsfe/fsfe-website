@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<textset>
+<data>
   <version>1</version>
 
 
@@ -52,8 +51,7 @@
 <text id="outdated-1">
     Перевод этой страницы мог устареть. См.
   </text>
-<text id="outdated-2"> <a
-href="/contribute/translators/translators.html">Помогите нам устранить
+<text id="outdated-2"> <a href="/contribute/translators/translators.html">Помогите нам устранить
 разночтения, а также перевести</a> эту и другие страницы сайта fsfe.org на ваш родной язык.
   </text>
 <text id="notranslation">
@@ -72,11 +70,11 @@ href="/contribute/translators/translators.html">Помогите нам устр
 
 <!-- Menu, Navigation, Buttons -->
 <text id="fsfe/about">О нас</text>
-<text id="fsfe/projects">Наша работа</text>
-<text id="fsfe/campaigns">Кампании</text>
+
+
 <text id="fsfe/help">Участвовать</text>
 <text id="fsfe/press">Пресса</text>
-<text id="fsfe/contact">Контакты</text>
+
 <text id="support/become">Стань сторонником</text>
 <text id="fellowship/login">Авторизоваться</text>
 <text id="news/news">Последние новости</text>
@@ -85,33 +83,33 @@ href="/contribute/translators/translators.html">Помогите нам устр
 <text id="news/nl">Информационный бюллетень</text>
 <text id="news/planet">Блоги «Планета»</text>
 <text id="fs/basics">Основы</text>
-<text id="motto-fsfs">Свободные программы — свободное общество!</text>
-<text id="motto-fellowship">Присоединяйтесь к сообществу ЕФСПО!</text>
+
+
 <text id="learn-more">Подробности</text>
-<text id="press">Пресса</text>
+
 <text id="newsletter">Ежемесячный бюллетень</text>
 <text id="go-to">Перейти:</text>
 <text id="search">Поиск</text>
-<text id="submit">Отправить</text>
+
 <text id="subscribe">Подписаться</text>
 <text id="email">адрес электронной почты</text>
 <text id="news">Последние новости</text>
 <text id="breadcrumb-news">Но́вости</text>
 <text id="receive-newsletter">Подписаться на ежемесячные выпуски новостей ЕФСПО</text>
 <text id="subscribe-newsletter">Подписаться на выпуски новостей</text>
-<text id="events">Предстоящие события</text>
-<text id="more">Подробнее</text>
-<text id="morenews">Архив новостей</text>
-<text id="moreevents">Архив событий</text>
+
+
+
+
 <text id="contact">Координаты</text>
 <text id="team">Команда</text>
-<text id="microblog">Микроблог</text>
-<text id="no-avatar">Нет изображения</text>
+
+
 <text id="change-lang">Изменить язык</text>
 <text id="menu">Меню</text>
 <text id="content">Текст страницы</text>
 <text id="page-info">Исходный текст</text>
-<text id="sitemap">Карта сайта</text>
+
 <text id="go-top">Перейти наверх страницы</text>
 <text id="source">Исходный текст страницы</text>
 <text id="contact-us">Контактная информация</text>
@@ -136,8 +134,6 @@ href="/contribute/translators/translators.html">Помогите нам устр
 
 <!-- News and event feeds -->
 <text id="related-news">Новости по теме</text>
-<!-- !! MISSING TRANSLATION --> <text id="related-events">Related Events</text>
-<!-- !! MISSING TRANSLATION --> <text id="related-all">All related news and events</text>
 
 
 <!-- Sidebars -->
@@ -165,15 +161,9 @@ href="/contribute/translators/translators.html">Помогите нам устр
 
 
 <!-- Motivational texts for fellowship, support or donations -->
-<text id="join">Присоединяйтесь</text>
-<text id="join-paragraph">
-  <p>Вступите в Содружество ЕФСПО, чтобы шире участвовать
-    в нашей работе и помогать нам поддерживать нашу финансовую независимость.
-    Присоединяясь к Содружеству, вы станете финансировать ЕФСПО и сможете
-    участвовать в его работе, получая доступ ко всей нашей
-    инфраструктуре.</p>
-</text>
-<text id="join-fellowship">Присоединяйтесь к Содружеству</text>
+
+
+
 <text id="support">Поддержи ЕФСПО</text>
 <text id="show-support">Продемонстрируй свою поддержку!</text>
 <text id="show-support-paragraph">Для того, чтобы голос ЕФСПО был услышан, он
@@ -208,14 +198,14 @@ href="/contribute/translators/translators.html">Помогите нам устр
 
 <!-- Sponsoring buttons -->
 <text id="donation-buttons">значки спонсоров</text>
-<text id="Donor">Простой</text>
-<text id="BronzeDonor">Бронзовый</text>
-<text id="SilverDonor">Серебряный</text>
-<text id="GoldDonor">Золотой</text>
+
+
+
+
 <text id="size/huge">огромный</text>
 <text id="size/large">большой</text>
 <text id="size/medium">средний</text>
 <text id="size/small">маленький</text>
 <text id="background/white">белый фон, размеры</text>
 <text id="background/transparent">прозрачный фон, размеры</text>
-</textset>
+</data>

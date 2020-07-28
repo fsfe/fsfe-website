@@ -1,34 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<textset>
-  <version>0</version>
+<data>
+  <version>1</version>
 
 
 <!-- ALL STATIC TEXTS -->
 
   <!-- Spreadtheword page -->
-  <!-- !! MISSING TRANSLATION --> <text id="stw-type">Type</text>
-  <!-- !! MISSING TRANSLATION --> <text id="stw-size">Size</text>
-  <!-- !! MISSING TRANSLATION --> <text id="stw-context">Context information</text>
-  <!-- !! MISSING TRANSLATION --> <text id="stw-printed"><a href="#how-to-order">Order from our stock</a> in</text>
-  <!-- !! MISSING TRANSLATION --> <text id="stw-printed-tooltip">You can order these printed versions from us using the order form.</text>
-  <!-- !! MISSING TRANSLATION --> <text id="stw-languages">Available to download in</text>
-  <!-- !! MISSING TRANSLATION --> <text id="stw-languages-tooltip">If you want to spread our information and promotion material online, feel free to download it in the available languages.</text>
-  <!-- !! MISSING TRANSLATION --> <text id="stw-license">License</text>
-  <!-- !! MISSING TRANSLATION --> <text id="stw-author">Author</text>
-  <!-- !! MISSING TRANSLATION --> <text id="stw-year">Year</text>
-  <!-- !! MISSING TRANSLATION --> <text id="stw-source">Source files</text>
-  <!-- !! MISSING TRANSLATION --> <text id="stw-source-tooltip">You can download the source files of this promotion item to modify or translate it. Please respect its license.</text>
-  <!-- !! MISSING TRANSLATION --> <text id="stw-printready">Print-ready files</text>
-  <!-- !! MISSING TRANSLATION --> <text id="stw-printready-tooltip">These are the files we send to our printer, including bleed and other printer specific settings. The files can be very large (~5-25MB).</text>
 
   <!-- Basic texts -->
-  <text id="fsfeurope">Free Software Foundation&#160;Europe</text>
+  <text id="fsfeurope">Free Software Foundation Europe</text>
   <text id="fsfnetwork">
-    Το FSFE έχει <a href="//fsfe.org/about/fsfnetwork.html">ομοθυγατρικούς οργανισμούς</a> στη <a
-      href="//www.fsf.org/">Βόρεια Αμερική</a>, <a
-      href="http://fsf.org.in/">Ινδία</a> και <a
-      href="http://www.fsfla.org/">Λατινική Αμερική</a>.
+    Το FSFE έχει <a href="//fsfe.org/about/fsfnetwork.html">ομοθυγατρικούς οργανισμούς</a> στη <a href="//www.fsf.org/">Βόρεια Αμερική</a>, <a href="http://fsf.org.in/">Ινδία</a> και <a href="http://www.fsfla.org/">Λατινική Αμερική</a>.
   </text>
 
 
@@ -43,13 +25,10 @@
     Η κατά λέξη αντιγραφή και αναδιανομή ολόκληρου του άρθρου επιτρέπεται
     σε οποιοδήποτε μέσο δεδομένου ότι αυτή η σημείωση θα διατηρηθεί.
   </text>
-  <!-- !! MISSING TRANSLATION --> <text id="js-licences">JavaScript Licences</text>
 
 
   <!-- Warning info boxes -->
-  <!-- !! MISSING TRANSLATION --> <text id="outdated-1">
-    This translation may be out of date with the
-  </text><!-- followed by "translator3b" -->
+<!-- followed by "translator3b" -->
   <text id="outdated-2">
      Χρησιμοποιήστε <a href="/contribute/translators/translators.html">αυτήν τη
      σελίδα</a> για να δείτε πώς μπορείτε
@@ -69,52 +48,47 @@
 
   <!-- Menu, Navigation, Buttons -->
   <text id="fsfe/about">Περίγραμμα</text>
-  <text id="fsfe/projects">Η εργασία μας</text>
-  <!-- !! MISSING TRANSLATION --> <text id="fsfe/campaigns">Campaigns</text>
-  <text id="fsfe/campaigns">Δράσεις</text>
+
+
   <text id="fsfe/help">Συμβάλλετε</text>
   <text id="fsfe/press">Τύπος</text>
-  <text id="fsfe/contact">Επικοινωνήστε μαζί μας</text>
-  <!-- !! MISSING TRANSLATION --> <text id="support/become">Become a supporter</text>
+
   <text id="fellowship/login">Σύνδεση</text>
   <text id="news/news">Τελευταία νέα</text>
   <text id="news/events">Επόμενες εκδηλώσεις</text>
   <text id="news/press">Αίθουσα Τύπου</text>
   <text id="news/nl">Ενημερωτικά δελτία</text>
   <text id="news/planet">Ιστολόγια Μελών</text>
-  <!-- !! MISSING TRANSLATION --> <text id="fs/basics">Free Software Basics</text>
   <text id="community/discuss">Συζητήσεις για το Ελεύθερο Λογισμικό</text>
 
-  <text id="motto-fsfs">Ελεύθερο Λογισμικό, Ελεύθερη Κοινωνία!</text>
-  <text id="motto-fellowship">Εγγραφείτε στην κοινότητα του FSFE!</text>
+
+
   <text id="learn-more">Μάθετε περισσότερα</text>
-  <text id="press">Τύπος</text>
+
   <text id="newsletter">Ενημερωτικό δελτίο</text>
-  <!-- !! MISSING TRANSLATION --> <text id="podcast">Podcast</text>
 
   <text id="go-to">Μετάβαση:</text>
   <text id="search">Αναζήτηση</text>
-  <text id="submit">Εγγραφή</text>
+
   <text id="subscribe">Εγγραφή</text>
-  <!-- !! MISSING TRANSLATION --> <text id="email">email address</text>
   <text id="news">Νέα</text>
   <text id="breadcrumb-news">Νέα</text>
   <text id="receive-newsletter">Εγγραφείτε για το μηνιαίο ενημερωτικό δελτίο του FSFE</text>
   <text id="subscribe-newsletter">Εγγραφείτε για το ενημερωτικό δελτίο</text>
-  <text id="events">Εκδηλώσεις</text>
-  <text id="more">Δείτε περισσότερα</text>
-  <text id="morenews">Δείτε όλα τα νέα</text>
-  <text id="moreevents">Δείτε όλες τις εκδηλώσεις</text>
+
+
+
+
   <text id="contact">Επικοινωνία</text>
   <text id="team">Oμάδα</text>
-  <text id="microblog">Μικρο-ιστολόγιο</text>
-  <text id="no-avatar">Χωρίς φωτογραφία</text>
+
+
 
   <text id="change-lang">Αλλαγή γλώσσας</text>
   <text id="menu">Μενού</text>
   <text id="content">Περιεχόμενο</text>
   <text id="page-info">Πληροφορίες σελίδας</text>
-  <text id="sitemap">Επισκόπηση ιστοχώρου</text>
+
   <text id="go-top">Μετάβαση στην κορυφή</text>
   <text id="source">Πηγαίος κώδικας</text>
   <text id="contact-us">Επικοινωνήστε μαζί μας</text>
@@ -122,10 +96,6 @@
   <text id="contribute-web">Συμβάλλετε στην ομάδα του ιστοχώρου</text>
   <text id="imprint">Σφραγίδα</text>
   <text id="privacy-policy">Πολιτική ιδιωτικού απορρήτου</text>
-  <!-- !! MISSING TRANSLATION --> <text id="transparency-commitment">Transparency Commitment</text>
-  <!-- !! MISSING TRANSLATION --> <text id="tags">Tags</text>
-  <!-- !! MISSING TRANSLATION --> <text id="discuss-article">Discuss this</text>
-  <!-- !! MISSING TRANSLATION --> <text id="finished">Finished</text>
 
 
   <!-- Article metadata -->
@@ -145,8 +115,6 @@
 
   <!-- News and event feeds -->
   <text id="related-news">Σχετικά Νέα</text>
-  <!-- !! MISSING TRANSLATION --> <text id="related-events">Related Events</text>
-  <!-- !! MISSING TRANSLATION --> <text id="related-all">All related news and events</text>
 
 
   <!-- Sidebars -->
@@ -173,17 +141,14 @@
 
 
   <!-- Motivational texts for fellowship, support or donations -->
-  <text id="join">Εγγραφή</text>
-  <text id="join-paragraph">
-  <p>Γίνετε Μέλος του FSFE για να ενισχύσετε την εργασία μας και να βοηθήσετε στη διασφάλιση της οικονομικής μας ανεξαρτησίας. Με την εγγραφή σας στην Κοινότητα γίνεστε μόνιμο μέλος του FSFE - συμπεριλαμβάνεται η πρόσβαση στην υποδομή μας.</p>
-  </text>
-  <text id="join-fellowship">Εγγραφείτε στην Κοινότητα</text>
+
+
+
 
   <text id="support">Υποστηρίξτε το FSFE</text>
   <text id="show-support">Αποδείξτε την υποστήρίξή σας!</text>
   <text id="show-support-paragraph">Το FSFE χρειάζεται την υποστηριξή σας για να ακουστεί η φωνή του! Κάθε παροχή μετράει!</text>
   <text id="support-fsfe">Υποστηρίζω το FSFE!</text>
-  <!-- !! MISSING TRANSLATION --> <text id="support-paragraph">By becoming a supporter of the FSFE you empower our work and help to assure our financial independence.</text>
 
   <text id="donate">Δωρεές</text>
   <text id="donate-paragraph">
@@ -198,28 +163,15 @@
   </text>
 
   <!-- pdfreaders.org -->
-  <!-- !! MISSING TRANSLATION --> <text id="pdfreaders-head-readers">The Readers</text>
-  <!-- !! MISSING TRANSLATION --> <text id="pdfreaders-head-standards">Open Standards</text>
-  <!-- !! MISSING TRANSLATION --> <text id="pdfreaders-head-graphics">Graphics</text>
-  <!-- !! MISSING TRANSLATION --> <text id="pdfreaders-head-about">About</text>
-  <!-- !! MISSING TRANSLATION --> <text id="pdfreaders-body-platforms">Platforms:</text>
 
   <!-- Share and support buttons -->
-  <!-- !! MISSING TRANSLATION --> <text id="share-head">Share and support</text>
-  <!-- !! MISSING TRANSLATION --> <text id="share-page">Share this page on</text>
-  <!-- !! MISSING TRANSLATION --> <text id="share-microdonation">Make a micro-donation via</text>
-  <!-- !! MISSING TRANSLATION --> <text id="share-warning">Some services may be Free Software unfriendly and harm your privacy.</text>
 
   <!-- Sponsoring buttons -->
   <text id="donation-buttons">Κουμπιά</text>
-  <text id="Donor">Δωρητής</text>
-  <text id="BronzeDonor">Χακινος δωρητής</text>
-  <text id="SilverDonor">Ασημένιος δωρητής</text>
-  <text id="GoldDonor">Χρυσός δωρητής</text>
-  <!-- !! MISSING TRANSLATION --> <text id="size/huge">huge</text>
-  <!-- !! MISSING TRANSLATION --> <text id="size/large">large</text>
-  <!-- !! MISSING TRANSLATION --> <text id="size/medium">medium</text>
-  <!-- !! MISSING TRANSLATION --> <text id="size/small">small</text>
+
+
+
+
   <text id="background/white">λευκό φόντο</text>
   <text id="background/transparent">λευκό φόντο</text>
-</textset>
+</data>

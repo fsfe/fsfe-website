@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<textset>
+<data>
   <version>1</version>
 
 
@@ -56,11 +55,11 @@
 
 <!-- Menu, Navigation, Buttons -->
 <text id="fsfe/about">Tietoja</text>
-<text id="fsfe/projects">Työmme</text>
-<text id="fsfe/campaigns">Kampanjat</text>
+
+
 <text id="fsfe/help">Osallistu</text>
 <text id="fsfe/press">Lehdistö</text>
-<text id="fsfe/contact">Ota yhteyttä</text>
+
 <text id="fellowship/login">Kirjaudu</text>
 <text id="news/news">Tuoreimmat uutiset</text>
 <text id="news/events">Tulevat tapahtumat</text>
@@ -68,33 +67,32 @@
 <text id="news/nl">Uutiskirjeet</text>
 <text id="news/planet">Blogiplaneetta</text>
 <text id="fs/basics">Perustietoja vapaista ohjelmistoista</text>
-<text id="motto-fsfs">Vapaat ohjelmistot, vapaa yhteiskunta!</text>
-<text id="motto-fellowship">Liity FSFE:n yhteisöön!</text>
+
+
 <text id="learn-more">Opi lisää</text>
-<text id="press">Lehdistö</text>
+
 <text id="newsletter">Uutiskirje</text>
 <text id="go-to">Siirry:</text>
 <text id="search">Hae</text>
-<text id="submit">Lähetä</text>
+
 <text id="subscribe">Tilaa</text>
-<!-- !! MISSING TRANSLATION --> <text id="email">email address</text>
 <text id="news">Tuoreimmat uutiset</text>
 <text id="breadcrumb-news">Uutiset</text>
 <text id="receive-newsletter">Tilaa FSFE:n kuukausittainen uutiskirje</text>
 <text id="subscribe-newsletter">Tilaa uutiskirje</text>
-<text id="events">Tulevat tapahtumat</text>
-<text id="more">Lisää</text>
-<text id="morenews">Lisää uutisia</text>
-<text id="moreevents">Lisää tapahtumia</text>
+
+
+
+
 <text id="contact">Yhteystiedot</text>
 <text id="team">Tiimi</text>
-<text id="microblog">Mikroblogi</text>
-<text id="no-avatar">Ei kuvaa</text>
+
+
 <text id="change-lang">Vaihda kieli</text>
 <text id="menu">Valikko</text>
 <text id="content">Sisältö</text>
 <text id="page-info">Sivun tiedot</text>
-<text id="sitemap">Sivukartta</text>
+
 <text id="go-top">Siirry sivun alkuun</text>
 <text id="source">Lähdekoodi</text>
 <text id="contact-us">Ota yhteyttä</text>
@@ -119,8 +117,6 @@
 
 <!-- News and event feeds -->
 <text id="related-news">Aiheeseen liittyviä uutisia</text>
-<!-- !! MISSING TRANSLATION --> <text id="related-events">Related Events</text>
-<!-- !! MISSING TRANSLATION --> <text id="related-all">All related news and events</text>
 
 
 <!-- Sidebars -->
@@ -146,33 +142,20 @@
 
 
 <!-- Motivational texts for fellowship, support or donations -->
-<text id="join">Liity</text>
-<text id="join-paragraph">
-  <p>Alkamalla FSFE:n Fellow-jäseneksi autat työtämme ja taloudellista riippumattomuuttamme. Liittymällä ylläpidät FSFE:tä sen Fellowship-jäsenenä ja voit käyttää eri palveluitamme.</p>
-</text>
-<text id="join-fellowship">Liity jäseneksi</text>
+
+
+
 <text id="support">Tue FSFE:tä</text>
 <text id="show-support">Näytä tukesi!</text>
 <text id="show-support-paragraph">FSFE tarvitsee Sinun tukeasi tullakseen kuulluksi!</text>
 <text id="support-fsfe">Tuen FSFE:tä!</text>
-<!-- !! MISSING TRANSLATION --> <text id="donate">Donate</text>
-<!-- !! MISSING TRANSLATION --> <text id="donate-paragraph">
-  The Free Software Foundation Europe is a non-profit non-governmental
-  organisation. <a href="/about/ourwork.html">Our work</a> is made
-  possible by a community of
-  <a href="/contribute/contribute.html">volunteers</a>,
-  <a href="/fellowship">Fellows</a> and
-  <a href="/donate/thankgnus.html">donors</a>. Your donations are critical to our
-  strength and autonomy. They enable us to continue working for Free
-  Software wherever necessary, and to be an independent voice.
-</text>
 
   <!-- Sponsoring buttons -->
   <text id="donation-buttons">Napit</text>
-  <text id="Donor">Lahjoittaja</text>
-  <text id="BronzeDonor">Bronssi-lahjoittaja</text>
-  <text id="SilverDonor">Hopea-lahjoittaja</text>
-  <text id="GoldDonor">Kulta-lahjoittaja</text>
+
+
+
+
   <text id="size/huge">valtava</text>
   <text id="size/large">suuri</text>
   <text id="size/medium">normaali</text>
@@ -180,4 +163,4 @@
   <text id="background/white">Valkoinen tausta</text>
   <text id="background/transparent">Läpinäkyvä tausta</text>
 
-</textset>
+</data>

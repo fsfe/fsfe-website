@@ -15,7 +15,9 @@
         <xsl:value-of select="/buildinfo/document/head/title/text()" />
       </xsl:when>
       <xsl:otherwise>
-        <xsl:value-of select="/buildinfo/document/head/title/text()" /><xsl:text> - FSFE</xsl:text>
+        <xsl:value-of select="/buildinfo/document/head/title/text()" />
+        <xsl:text> - </xsl:text>
+        <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfe'" /></xsl:call-template>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:variable>

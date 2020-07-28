@@ -22,7 +22,8 @@
   <text id="stw-printready-tooltip">These are the files we send to our printer, including bleed and other printer specific settings. The files can be very large (~5-25MB).</text>
 
   <!-- Basic texts -->
-  <text id="fsfeurope">Free Software Foundation Europe</text>
+  <text id="fsfe">FSFE</text> <!-- only change this for non-latin character sets -->
+  <text id="fsfeurope">Free Software Foundation&#160;Europe</text>
   <text id="fsfnetwork">
     FSFE has <a href="//fsfe.org/about/fsfnetwork.html">sister organisations</a> in <a href="//www.fsf.org/">North America</a>, <a href="http://fsf.org.in/">India</a> and <a href="http://www.fsfla.org/">Latin America</a>.
   </text>

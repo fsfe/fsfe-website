@@ -21,6 +21,8 @@ cd "$REPO"
 
 nowlang=''
 yearago=`date +%s --date='1 year ago'`
+texts_dir="global/data/texts"
+texts_en=$(grep 'id=".*"' ${texts_dir}/texts.en.xml | perl -pe 's/.*id=\"(.*?)\".*/\1/g')
 
 cat  > ${OUT} << _END_
 <html>
@@ -57,7 +59,17 @@ done|sort -t' ' -k 1,1 -k 3nr,3 -k 5nr,5|\
 while read lang page originaldate original_version translation_version; do
   if [[ $nowlang != $lang ]]; then
     if [[ $nowlang != "" ]]; then
-     echo "</table>" >> ${OUT}
+      echo "</table>" >> ${OUT}
+
+      # Translatable strings
+      texts_file="${texts_dir}/texts.${nowlang}.xml"
+      missing_texts=
+      for text in $texts_en; do
+        if ! xmllint --xpath "//text[@id = \"${text}\"]" "${texts_file}" &>/dev/null; then
+          missing_texts="$missing_texts $text"
+        fi
+      done
+      echo "<p>Missing texts in ${texts_file}:</br>$missing_texts" >> ${OUT}
     fi
     echo "<h1 id=\"$lang\">Language: $lang</h1>" >> ${OUT}
     echo "<table>" >> ${OUT}
@@ -72,7 +84,6 @@ while read lang page originaldate original_version translation_version; do
     color=''
   fi
   echo "<tr><td$color>$page</td><td>$orig</td><td>$original_version</td><td>$translation_version</td></tr>" >> ${OUT}
-
 done
 
 echo "</table>" >> ${OUT}

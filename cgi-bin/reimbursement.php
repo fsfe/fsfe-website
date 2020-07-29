@@ -192,6 +192,11 @@ foreach ($entry as $key => $date) {  // run over each row
     errexit("Upload error. [".$receipt_error."] on file '".$receipt_name."'<br/>\n");
   }
 
+  // Remove "-" when remark empty
+  if ($remarks[$key] === "-") {
+    $remarks[$key] = "";
+  }
+
   // HTML output for this receipt
   $html .= "
   <tr>

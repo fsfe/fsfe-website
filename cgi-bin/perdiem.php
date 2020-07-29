@@ -230,8 +230,11 @@ foreach ($use as $d => $day) {  // calculate for each day
     $r_flat = $eur * $c_flat;
     $r_day[$d] = $r_day[$d] + $r_flat;
 
-    // total reimbursement for the single day
+    // add on top of total reimbursement
     $r_total = $r_total + $r_day[$d];
+
+    // change number format of this day's amount to German (comma)
+    $r_day[$d] = number_format($r_day[$d], 2, ',', '');
 
     // Remarks, explanation what has been self-paid
     $remarks[$d] = "";
@@ -273,7 +276,7 @@ foreach ($use as $d => $day) {  // calculate for each day
 
 // Write and attach temporary CSV file
 foreach ($csv as $fields) {
-  fputcsv($csvfile, $fields, ',', '"', '"');
+  fputcsv($csvfile, $fields, ';', '"', '"');
 }
 $email->addAttachment($csvfile_path, filter_filename("perdiem" ."-". $who ."-". $er ."-". $catch . ".csv"));
 
@@ -285,6 +288,9 @@ $catch (ER: $er),
 sent via <https://fsfe.org/internal/pd>.
 
 Please find the expenses attached.";
+
+// change number format of total amount to German (comma)
+$r_total = number_format($r_total, 2, ',', '');
 
 // Finalise output table
 $html .= "<tr><td><strong>Total:</strong></td><td><strong>$r_total $cur</strong></td>";

@@ -148,7 +148,9 @@ RewriteRule ^activities/os(.*) /freesoftware/standards$1 [R=301,L]
 RewriteRule ^activities/procurement(.*) /freesoftware/procurement$1 [R=301,L]
 # deleted activities
 RewriteRule ^(activities/)?nocloud(/.*)? /activities/activities.html [R=301,L]
-RewriteRule ^(activities/)?theydontwantyouto(/.*)? /activities/activities.html [R=301,L]
+RewriteRule ^activities/policy/.* /activities/policy.html [R=301,L]
+RewriteRule ^activities/theydontwantyouto(/.*)? /activities/activities.html [R=301,L]
+RewriteRule ^activities/un(/.*)? /activities/policy.html [R=301,L]
 
 # Norwegian language: Bokmal language code
 RewriteRule ^(.*)\.no.html /$1.nb.html [R=301,L]

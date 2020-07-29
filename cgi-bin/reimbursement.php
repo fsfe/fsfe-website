@@ -218,7 +218,7 @@ foreach ($entry as $key => $date) {  // run over each row
 
 // Write and attach temporary CSV file
 foreach ($csv as $fields) {
-  fputcsv($csvfile, $fields, ',', '"', '"');
+  fputcsv($csvfile, $fields, ';', '"', '"');
 }
 $email->addAttachment($csvfile_path, filter_filename($type_date ."-". $type ."-". $who . ".csv"));
 

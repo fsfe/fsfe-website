@@ -213,7 +213,7 @@ RewriteRule ^login(/.*)?$ https://my.fsfe.org/ [R=301,L]
 # =============================================================================
 
 # Old pages
-RewriteRule ^about/printable(/.*)?$ /contribute/spreadtheword/ [R=301,L]
+RewriteRule ^about/printable(/.*)?$ /contribute/spreadtheword.html [R=301,L]
 
 
 # =============================================================================

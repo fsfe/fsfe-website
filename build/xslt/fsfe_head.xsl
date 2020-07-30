@@ -7,6 +7,28 @@
     <xsl:value-of select="'normal'" /> <!-- can be either 'normal' or 'valentine' -->
   </xsl:variable>
 
+  <!-- Take /head/title and append " - FSFE", use this as $title -->
+  <xsl:variable name="title">
+    <xsl:choose>
+      <!-- On frontpage, use just <title> to allow custom display -->
+      <xsl:when test="/buildinfo/document/body/@class = 'frontpage'">
+        <xsl:value-of select="/buildinfo/document/head/title/text()" />
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="/buildinfo/document/head/title/text()" />
+        <xsl:text> - </xsl:text>
+        <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'fsfe'" /></xsl:call-template>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>
+
+  <!-- Replace head/title with the version where " - FSFE" has been appended -->
+  <xsl:template match="head/title">
+    <xsl:copy>
+      <xsl:value-of select="$title"/>
+    </xsl:copy>
+  </xsl:template>
+
   <xsl:template name="page-head"><xsl:element name="head">
     <!-- Don't let search engine robots index untranslated pages -->
     <xsl:element name="meta">
@@ -192,7 +214,7 @@
       <xsl:attribute name="name">twitter:title</xsl:attribute>
       <xsl:attribute name="content">
         <!-- content of <title> -->
-        <xsl:value-of select="head/title" />
+        <xsl:value-of select="$title" />
       </xsl:attribute>
     </xsl:element>
     <xsl:element name="meta">
@@ -228,7 +250,7 @@
       <xsl:attribute name="property">og:title</xsl:attribute>
       <xsl:attribute name="content">
         <!-- content of <title> -->
-        <xsl:value-of select="head/title" />
+        <xsl:value-of select="$title" />
       </xsl:attribute>
     </xsl:element>
     <xsl:element name="meta">

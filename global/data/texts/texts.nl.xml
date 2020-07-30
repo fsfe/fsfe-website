@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+  <version>1</version>
+
+
+        <!-- ALL STATIC TEXTS -->
+
+          <!-- Spreadtheword page -->
+          <text id="stw-type">Type</text>
+          <text id="stw-size">Formaat</text>
+          <text id="stw-context">Contextuele informatie</text>
+          <text id="stw-printed"><a href="#how-to-order">Bestel uit onze voorraad</a> in</text>
+          <text id="stw-printed-tooltip">U kunt deze gedrukte versies bij ons bestellen door het bestelformulier te gebruiken.</text>
+          <text id="stw-languages">Beschikbaar om te downloaden in</text>
+          <text id="stw-languages-tooltip">Als u ons informatie- en promotiemateriaal online wilt verspreiden, voelt u zich dan vrij om het in de beschikbare talen te vertalen.</text>
+          <text id="stw-license">Licentie</text>
+          <text id="stw-author">Auteur</text>
+          <text id="stw-year">Jaar</text>
+          <text id="stw-source">Bronbestanden</text>
+          <text id="stw-source-tooltip">U kunt de bronbestanden van dit promotie-artikel downloaden om het aan te passen of om het te vertalen. Respecteer alstublieft de licentie.</text>
+          <text id="stw-printready">Afdrukbare bestanden</text>
+          <text id="stw-printready-tooltip">Dit zijn de bestanden die we sturen naar onze
+        printer, inclusief margerand en andere printerspecifieke instellingen. De bestanden kunnen
+        erg groot zijn (~5-25MB).</text>
+
+
+          <!-- Basic texts -->
+          <text id="fsfeurope">Free Software Foundation Europe</text>
+          <text id="fsfnetwork">
+            FSFE heeft <a href="//fsfe.org/about/fsfnetwork.html">zusterorganisaties</a> in <a href="http://www.fsf.org/">Noord-Amerika</a>, <a href="http://fsf.org.in/">India</a> en <a href="http://www.fsfla.org/">Latijns-Amerika</a>.
+          </text>
+
+
+          <!-- Footer -->
+          <text id="translator1a">We bedanken </text>
+          <text id="translator1b"> voor deze vertaling. </text>
+          <text id="translator2">Dit is geen officiële vertaling. </text>
+          <text id="translator3a">Bekijkt u alstublieft ook de </text>
+          <text id="translator3b">originele tekst</text>
+          <text id="translator3c"> van deze pagina.</text>
+          <text id="permission">
+            Woordelijk kopiëren en distribueren van dit gehele artikel is toegestaan in ieder medium, mits voorzien van deze notitie.</text>
+    <text id="js-licences">JavaScript-licenties</text>
+
+
+
+          <!-- Warning info boxes -->
+          <text id="outdated-1">
+            Deze vertaling zou achterhaald kunnen zijn ten opzichte van </text><!-- followed by "translator3b" -->
+          <text id="outdated-2">
+             <a href="/contribute/translators/translators.html">Help ons alstublieft bij het vertalen </a> van deze en andere pagina's op fsfe.org zodat mensen onze boodschap in hun moedertaal kunnen lezen.
+          </text>
+          <text id="notranslation">
+            Deze pagina is nog niet vertaald. <a href="/contribute/translators/translators.html">Help ons alstublieft bij het vertalen</a> van deze en andere pagina's op fsfe.org zodat mensen onze boodschap in hun moedertaal kunnen lezen.
+          </text>
+            <text id="under-construction">
+            <strong>Waarschuwing: </strong>Aan deze pagina wordt gewerkt. <strong>Verspreid deze alstublieft niet</strong> en probeer deze ook niet te vertalen omdat de inhoud verandert.
+          </text>
+            <text id="project-complete">Dit project is succesvol afgerond. Deze pagina's worden hier bewaard voor archiefdoeleinden.  </text>
+
+
+    <!-- Menu, Navigation, Buttons -->
+          <text id="fsfe/about">Over ons</text>
+
+
+          <text id="fsfe/help">Bijdragen</text>
+          <text id="fsfe/press">Pers</text>
+
+          <text id="support/become">Word een supporter</text>
+          <text id="fellowship/login">Login</text>
+          <text id="news/news">Laatste nieuws</text>
+          <text id="news/events">Komende evenementen</text>
+          <text id="news/press">Voor de pers</text>
+          <text id="news/nl">Nieuwsbrieven</text>
+          <text id="news/planet">Planet blogs</text>
+          <text id="fs/basics">Vrije Software basis</text>
+          <text id="community/discuss">Vrije Softwarediscussies</text>
+
+
+
+          <text id="learn-more">Leer meer</text>
+
+          <text id="newsletter">Nieuwsbrief</text>
+
+          <text id="go-to">Ga naar:</text>
+          <text id="search">Zoek</text>
+
+          <text id="subscribe">Abonneer u</text>
+          <text id="email">e-mailadres</text>
+          <text id="news">Nieuws</text>
+          <text id="breadcrumb-news">Nieuws</text>
+          <text id="receive-newsletter">Abonneer u op FSFE's maandelijkse nieuwsbrief</text>
+          <text id="subscribe-newsletter">Abonneer u op de nieuwsbrief</text>
+
+
+
+
+          <text id="contact">Contact</text>
+          <text id="team">Team</text>
+
+
+
+          <text id="change-lang">Verander taal</text>
+          <text id="menu">Menu</text>
+          <text id="content">Inhoud</text>
+          <text id="page-info">Pagina-informatie</text>
+
+          <text id="go-top">Naar boven</text>
+          <text id="source">Broncode</text>
+          <text id="contact-us">Contact</text>
+          <text id="translate">Deze pagina vertalen?</text>
+          <text id="contribute-web">Draag bij aan het webteam</text>
+          <text id="imprint">Colofon</text>
+          <text id="privacy-policy">Privacybeleid</text>
+          <text id="transparency-commitment">Transparantieverklaring</text>
+          <text id="tags">Trefwoorden</text>
+
+
+          <!-- Article metadata -->
+          <text id="writtenby">Geschreven door</text>
+          <text id="published">op</text>
+          <text id="revision">bijgewerkt op</text>
+          <text id="download">Download</text>
+          <text id="and">en</text>
+
+
+          <!-- Petitions -->
+          <text id="osig">Organisaties</text>
+          <text id="isig">Privépersonen</text>
+          <text id="bsig">Bedrijven</text>
+
+
+          <!-- News and event feeds -->
+          <text id="related-news">Verwant nieuws</text>
+          <text id="related-events">Verwante evenementen</text>
+          <text id="related-all">Verwant nieuws en evenementen</text>
+
+
+          <!-- Sidebars -->
+          <text id="our-work">Ons werk</text>
+          <text id="our-work-intro">
+            <p>Als niet-gouvernementele organisatie zonder winstoogmerk
+        werkt Free Software Foundation Europe aan het creëren van algemeen begrip van en
+        steun voor Vrije Software en Open Standaarden in politiek, bedrijfsleven,
+        het recht en de samenleving als geheel.</p>
+          </text>
+          <text id="about-fsfe">Over FSFE</text>
+          <text id="about-fsfe-intro">
+            <p>
+              Free Software Foundation Europe is een liefdadigheidsorganisatie die
+        gebruikers in staat stelt om technologie te controleren.
+            </p>
+            <p>
+                Software is sterk verweven in alle aspecten van onze levens. Het is
+        belangrijk dat deze technologie ons versterkt in plaats van ons te beperken.
+        Vrije Software geeft iedereen het recht om software te gebruiken, te
+        begrijpen, aan te passen en te delen. Deze rechten helpen bij het steunen van
+        andere fundamentele rechten zoals vrijheid van meningsuiting, persvrijheid en
+        privacy.
+            </p>
+          </text>
+
+
+          <!-- Motivational texts for fellowship, support or donations -->
+
+
+
+
+          <text id="support">Steun de FSFE</text>
+          <text id="show-support">Laat uw steun zien!</text>
+          <text id="show-support-paragraph">FSFE heeft uw steun nodig om haar stem gehoord te krijgen! Iedere klik telt!</text>
+          <text id="support-fsfe">Ik steun de FSFE!</text>
+          <text id="support-paragraph">Door een supporter van de FSFE te worden stelt u ons in staat om te werken en helpt u onze financiële onafhankelijkheid zeker te stellen.</text>
+
+          <text id="donate">Doneer</text>
+          <text id="donate-paragraph">
+              De Free Software Foundation Europe is een niet-gouvernementele organisatie
+        zonder winstoogmerk. <a href="/about/ourwork.html">Ons werk</a> wordt mogelijk gemaakt
+        door een gemeenschap van
+              <a href="/contribute/contribute.html">vrijwilligers</a>,
+              <a href="/fellowship">Fellows</a> en
+              <a href="/donate/thankgnus.html">donoren</a>. Uw donaties zijn cruciaal
+        voor onze kracht en autonomie. Zij stellen ons in staat om te blijven werken
+        voor Vrije Software waar dat nodig is en om een onafhankelijke stem te blijven.
+          </text>
+
+          <!-- pdfreaders.org -->
+          <text id="pdfreaders-head-readers">De lezers</text>
+          <text id="pdfreaders-head-standards">Open Standaarden</text>
+          <text id="pdfreaders-head-graphics">Afbeeldingen</text>
+          <text id="pdfreaders-head-about">Over ons</text>
+          <text id="pdfreaders-body-platforms">Platforms:</text>
+
+          <!-- Share and support buttons -->
+          <text id="share-head">Deel en steun</text>
+          <text id="share-page">Deel deze pagina op</text>
+          <text id="share-microdonation">Maak een micro-donatie over via</text>
+          <text id="share-warning">Enkele diensten zouden onvriendelijk kunnen zijn voor Vrije Software en uw privacy schade kunnen toebrengen.</text>
+
+          <!-- Sponsoring buttons -->
+          <text id="donation-buttons">Buttons</text>
+
+
+
+
+          <text id="size/huge">enorm</text>
+          <text id="size/large">groot</text>
+          <text id="size/medium">middelgroot</text>
+          <text id="size/small">klein</text>
+          <text id="background/white">Witte achtergrond</text>
+          <text id="background/transparent">Transparante achtergrond</text>
+        </data>

@@ -6,8 +6,6 @@
   <!--display dynamic list of news items-->
   <xsl:template name="tagged-news" match="tagged-news">
     <xsl:element name="ul">
-      <xsl:attribute name="class">tag list</xsl:attribute>
-
       <xsl:for-each select="/buildinfo/document/set/news[
           translate(@date, '-', '') &lt;= translate(/buildinfo/@date, '-', '')
         ]">
@@ -27,8 +25,6 @@
   <!--display dynamic list of event items-->
   <xsl:template name="tagged-events" match="tagged-events">
     <xsl:element name="ul">
-      <xsl:attribute name="class">tag list</xsl:attribute>
-
       <!-- loop through all events having this tag -->
       <xsl:for-each select="/buildinfo/document/set/event">
         <xsl:sort select="@start" order="descending" />

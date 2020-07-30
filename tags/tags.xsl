@@ -9,7 +9,7 @@
     </xsl:variable>
 
     <xsl:element name="ul">
-      <xsl:attribute name="class">taglist</xsl:attribute>
+      <xsl:attribute name="class">column</xsl:attribute>
 
       <xsl:for-each select="/buildinfo/document/set/tag[@section=$section]">
         <xsl:sort select="."/>
@@ -25,6 +25,16 @@
             </xsl:attribute>
 
             <xsl:value-of select="."/>
+
+            <!-- show tag key (hidden by default) -->
+            <xsl:element name="span">
+              <xsl:attribute name="class">small tagkey</xsl:attribute>
+              <xsl:text> (</xsl:text>
+              <xsl:value-of select="@key"/>
+              <xsl:text>)</xsl:text>
+            </xsl:element>
+
+            <!-- show badge with number of usages -->
             <xsl:text> </xsl:text>
             <xsl:element name="span">
               <xsl:attribute name="class">badge</xsl:attribute>

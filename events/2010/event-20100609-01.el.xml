@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
- 
 <eventset>
   <version>0</version>
-
   <event start="2010-06-09" end="2010-06-12">
     <title>“LinuxTag” στο Βερολίνο, Γερμανία</title>
     <body>
@@ -16,5 +14,8 @@
       </p>
     </body>
     <link>http://www.linuxtag.org/2010/</link>
+    <tags>
+      <tag key="de"/>
+    </tags>
   </event>
 </eventset>

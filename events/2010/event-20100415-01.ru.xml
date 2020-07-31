@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
- 
 <eventset>
   <version>1</version>
-
-<event start="2010-04-14" end="2010-04-17">
-<title> Мероприятие Linuxwochen в Линце, Австрия</title>
-<body>
-  <p>На мероприятии, которое пройдет в Университете искусств в Линце,
+  <event start="2010-04-14" end="2010-04-17">
+    <title> Мероприятие Linuxwochen в Линце, Австрия</title>
+    <body>
+      <p>На мероприятии, которое пройдет в Университете искусств в Линце,
 будут проведены семинары, доклады и демонстрации из области
 цифровых искусств. ЕФСПО организует стенд и приглашает всех желающих
 побеседовать о свободном программном обеспечении за чашечкой кофе.
   </p>
-</body>
-<page>http://linz.linuxwochen.at/</page>
-</event>
+    </body>
+    <page>http://linz.linuxwochen.at/</page>
+    <tags>
+      <tag key="at"/>
+    </tags>
+  </event>
 </eventset>

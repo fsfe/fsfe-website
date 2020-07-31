@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <eventset>
   <version>0</version>
-
-   <event start="2010-10-15" end="2010-10-15">
-   <title>Encuentro mensual de los Fellowship en Viena, Austria</title>
-   <body>
-     <p>
+  <event start="2010-10-15" end="2010-10-15">
+    <title>Encuentro mensual de los Fellowship en Viena, Austria</title>
+    <body>
+      <p>
 	 Este mes, el encuentro mensual de Fellowship en Viena será en 
    <a href="http://metalab.at/wiki/Lage" title="Metalab location">el 
    Metalab</a>, situado en la Rathausstraße 6 en el primer distrito 
@@ -14,7 +13,9 @@
    para todo aquel que esté interesado en la FSFE o en el Software 
    Libre. !Esperamos verle allí¡
      </p>
-   </body>
+    </body>
+    <tags>
+      <tag key="at"/>
+    </tags>
   </event>
 </eventset>
-

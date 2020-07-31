@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <eventset>
   <version>0</version>
-
-   <event start="2010-12-09" end="2010-12-09">
-   <title>Μηνιαία συνάντηση της Κοινότητας στο Βερολίνο, Γερμανία</title>
-   <body>
-  <p> Αυτόν τον μήνα και πάλι, η Κοινότητα θα πραγματοποιήσει τη συνάντησή της
+  <event start="2010-12-09" end="2010-12-09">
+    <title>Μηνιαία συνάντηση της Κοινότητας στο Βερολίνο, Γερμανία</title>
+    <body>
+      <p> Αυτόν τον μήνα και πάλι, η Κοινότητα θα πραγματοποιήσει τη συνάντησή της
 στο Newthinking Store, <a href="http://nominatim.openstreetmap.org/search?q=Tucholskystr.+48">Tucholskystr. 48, 10117 Berlin</a>.
    Θα είμαστε εκεί από τις 19:30. Ο Ali Gündüz θα κάνει μια παρουσίαση για το
    "<a href="http://aligunduz.org/blog/free_gsm_talk_next_week.html">Ελεύθερο 
@@ -15,7 +14,9 @@
    του κινητού σας με Ελεύθερο Λογισμικό», ανακοινώνει ο Ali Gündüz.
    Ως συνήθως, αυτή η πρόσκληση απευθύνεται σε όσους ενδιαφέρονται για το FSFE 
    ή το Ελεύθερο Λογισμικό. Θα χαρούμε να σας δούμε εκεί!</p>
-   </body>
+    </body>
+    <tags>
+      <tag key="de"/>
+    </tags>
   </event>
 </eventset>
-

@@ -1,29 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <eventset>
   <version>1</version>
-
-   
-	<event start="2016-09-02" end="2016-09-04"> 
- 
-		<title>Mbledhja e FSFE-së në Berlin, Gjermani</title> 
- 
-		<body>
-  <p> 
+  <event start="2016-09-02" end="2016-09-04">
+    <title>Mbledhja e FSFE-së në Berlin, Gjermani</title>
+    <body>
+      <p> 
 Si pjesë e QtCon 2016, që do të zhvillohet në bcc në Berlin, FSFE-ja
 do të organizojë një mbledhje ku mund të takohen pjesëtarë të bashkësisë
 së Software-it të Lirë, për t’u lidhur me njëri-tjetrin, për të përpunuar strategji,
 për t’u dhënë fill punëve të ndryshme dhe për të mësuar tok.
 		  </p>
-</body> 
- 
-
-		<tags>
-			<tag key="berlin">Berlin</tag>
-			<tag key="de">Gjermani</tag>
-			<tag key="front-page"/>
-		</tags>
-
- 
-	</event> 
-</eventset> 
+    </body>
+    <tags>
+      <tag key="berlin">Berlin</tag>
+      <tag key="de">Gjermani</tag>
+      <tag key="front-page"/>
+      <tag key="fellowship"/>
+      <tag key="fsfesummit"/>
+      <tag key="qtcon"/>
+    </tags>
+  </event>
+</eventset>

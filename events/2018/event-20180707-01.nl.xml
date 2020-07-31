@@ -1,28 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <eventset>
   <version>1</version>
-
-   
-        <event start="2018-07-07" end="2018-07-09"> 
- 
-                <title>FSFE track en gemeenschapsontmoeting op de Libre Software Meeting in Straatsburg (Frankrijk)</title> 
- 
-                <body> 
-                        <p>De Libre Software Meeting (LSM) is misschien de grootste door de gemeenschap gedreven Vrije Software-ontmoeting in Frankrijk. In 2018 is zij tevens gastheer van de FSFE-gemeenschapsontmoeting. Het vindt plaats in Straatsburg en de FSFE zal haar eigen track organiseren op de eerste dagen van LSM, van 7 tot 9 juli. Een gedetailleerde agenda en meer informatie zullen snel beschikbaar zijn.</p> 
-                </body> 
- 
-                
-        <link>https://wiki.fsfe.org/Events/LSMandCommunityMeeting2018</link> 
-
-                <tags>
-                        <tag key="rmll"/>
-                        <tag key="lsm"/>
-                        <tag key="straatsburg"/>
-                        <tag key="fr"/>
-                        <tag key="front-page"/>
-                </tags>
-
- 
-        </event> 
-</eventset> 
+  <event start="2018-07-07" end="2018-07-09">
+    <title>FSFE track en gemeenschapsontmoeting op de Libre Software Meeting in Straatsburg (Frankrijk)</title>
+    <body>
+      <p>De Libre Software Meeting (LSM) is misschien de grootste door de gemeenschap gedreven Vrije Software-ontmoeting in Frankrijk. In 2018 is zij tevens gastheer van de FSFE-gemeenschapsontmoeting. Het vindt plaats in Straatsburg en de FSFE zal haar eigen track organiseren op de eerste dagen van LSM, van 7 tot 9 juli. Een gedetailleerde agenda en meer informatie zullen snel beschikbaar zijn.</p>
+    </body>
+    <link>https://wiki.fsfe.org/Events/LSMandCommunityMeeting2018</link>
+    <tags>
+      <tag key="rmll"/>
+      <tag key="lsm"/>
+      <tag key="fr"/>
+      <tag key="front-page"/>
+      <tag key="strasbourg"/>
+    </tags>
+  </event>
+</eventset>

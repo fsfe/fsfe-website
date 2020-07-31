@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
- 
 <eventset>
   <version>0</version>
-
   <event start="2010-10-04" end="2010-10-04">
     <title>Ημέρες IRILL, Παρίσι, Γαλλία</title>
     <body>
@@ -20,5 +18,8 @@
       </p>
     </body>
     <page>http://www.irill.org/events/irill-days-2010</page>
+    <tags>
+      <tag key="fr"/>
+    </tags>
   </event>
 </eventset>

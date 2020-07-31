@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
- 
 <eventset>
   <version>1</version>
-
-<event start="2010-04-25" end="2010-04-25">
-<title>Выступление «Свободные программы, свободное общество»
+  <event start="2010-04-25" end="2010-04-25">
+    <title>Выступление «Свободные программы, свободное общество»
 в Бакнанге</title>
-<body>
-  <p>
+    <body>
+      <p>
 25 апреля в 19.00 <a href="/about/people/kirschner/kirschner.html">Матиас
 Киршнер</a> расскажет о свободном программном обеспечении, его
 значимости для общества и о том, почему политики должны обратить
@@ -17,6 +15,9 @@
 и последующее обсуждение. Адрес: «Kreishaus der Jugendarbeit»,
 Marktstraße 48, 71522 Backnang.
   </p>
-</body>
-</event>
+    </body>
+    <tags>
+      <tag key="de"/>
+    </tags>
+  </event>
 </eventset>

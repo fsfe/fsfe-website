@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <eventset>
   <version>0</version>
-
-   <event start="2010-03-25" end="2010-03-25">
-   <title>Συνάντηση της Κοινότητας στο Graz, Αυστρία</title>
-   <body>
-     <p>
+  <event start="2010-03-25" end="2010-03-25">
+    <title>Συνάντηση της Κοινότητας στο Graz, Αυστρία</title>
+    <body>
+      <p>
    Αυτήν τη φορά, η συνάντηση της Κοινότητας του Graz θα γίνει στο 
    <a href="http://realraum.at/" title="Realraum website">
      Realraum</a>, που βρίσκεται στην Jakoministraße 16, 8010 Graz.
@@ -13,7 +12,9 @@
    είναι για όσους ενδιαφέρονται για το FSFE ή το Ελεύθερο Λογισμικό.
    Θα χαρούμε να σας δούμε εκεί! 
      </p>
-   </body>
+    </body>
+    <tags>
+      <tag key="de"/>
+    </tags>
   </event>
 </eventset>
-

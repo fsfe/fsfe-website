@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
- 
 <eventset>
   <version>1</version>
-
-<event start="2010-04-24" end="2010-04-24">
-<title>Мероприятие Linuxtage в Граце, Австрия</title>
-<body>
-  <p>В течение всего дня в <a href="http://www.fh-joanneum.at/">FH
+  <event start="2010-04-24" end="2010-04-24">
+    <title>Мероприятие Linuxtage в Граце, Австрия</title>
+    <body>
+      <p>В течение всего дня в <a href="http://www.fh-joanneum.at/">FH
 Joanneum</a> будут проводиться доклады и беседы для всех, кто
 интересуется и хочет знать больше о свободном программном обеспечении
 и GNU/Linux. От лица фонда на конференции выступит Петер Бубестингер
 на тему «Свобода образования в эпоху цифровой техники? Свободные
 программы!» (на немецком).  Кроме того, ЕФСПО организуют стенд.
   </p>
-</body>
-<page>http://graz.linuxtage.at/</page>
-</event>
+    </body>
+    <page>http://graz.linuxtage.at/</page>
+    <tags>
+      <tag key="at"/>
+    </tags>
+  </event>
 </eventset>

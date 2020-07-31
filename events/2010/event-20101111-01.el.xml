@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
- 
 <eventset>
   <version>1</version>
-
   <event start="2010-11-11" end="2010-11-11">
     <title>Το FSFE επίτιμος προσκεκλημένος στην Ένωση Δημόσιου Διαλόγου
     του Βερολίνου </title>
     <body>
-
       <p>Το FSFE έχει προσκληθεί από την 
 <a href="http://www.debating.de/">Ένωση Δημόσιου Διαλόγου του Βερολίνου 
 (Berlin Debating Union)</a> για μια ομιλία στην πρώτη φετινή εκδήλωση 
@@ -20,8 +17,9 @@ Humboldt, στην αίθουσα Orbis Humboldtianus, πάνω από το Audi
 Knowledge Sharing Evening θα προσελκύσει φοιτητές από όλα τα πανεπιστήμια
 του Βερολίνου και ελπίζουμε να δούμε και εσάς εκεί !
 </p>
-
     </body>
-
+    <tags>
+      <tag key="de"/>
+    </tags>
   </event>
 </eventset>

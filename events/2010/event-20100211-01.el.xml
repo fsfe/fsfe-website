@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
- 
 <eventset>
   <version>1</version>
-
   <event start="2010-02-11" end="2010-02-11">
     <title>Συνάντηση της Κοινότητας Στουτγάρδης</title>
     <body>
@@ -14,7 +12,10 @@
           Άλλο θέμα θα είναι η επανέναρξη των τακτικών συναντήσεων της Κοινότητας στη Στουτγάρδη.
       </p>
     </body>
-<tag key="education"/>
+    <tag key="education"/>
+    <tags>
+      <tag key="de"/>
+      <tag key="education"/>
+    </tags>
   </event>
 </eventset>
-

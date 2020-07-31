@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <eventset>
   <version>0</version>
-
-   <event start="2010-12-02" end="2010-12-02">
-   <title>Το Ελεύθερο Λογισμικό στη δημόσια διοίκηση, συνέδριο OSEPA,
+  <event start="2010-12-02" end="2010-12-02">
+    <title>Το Ελεύθερο Λογισμικό στη δημόσια διοίκηση, συνέδριο OSEPA,
 	   Badajoz, Ισπανία</title>
-   <body>
-	   <p> 
+    <body>
+      <p> 
 
 		   Σε συνέδριο στο Badajoz, στην Ισπανική περιφέρεια
 		   της Εξτρεμαδούρα, εκπρόσωποι δημοσίων διοικήσεων
@@ -17,8 +16,10 @@
                    το Ελεύθερο Λογισμικό και τα Ανοικτά Πρότυπα.
 
 	   </p>
-   </body>
-   <page>http://www.osepa.eu/conferencia/en/</page>
+    </body>
+    <page>http://www.osepa.eu/conferencia/en/</page>
+    <tags>
+      <tag key="es"/>
+    </tags>
   </event>
 </eventset>
-

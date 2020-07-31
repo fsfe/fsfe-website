@@ -1,28 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <eventset>
   <version>1</version>
-
-   
-	<event start="2016-11-05" end="2016-11-06"> 
- 
-		<title>FSFE mit Vorträgen und Informationsstand auf der OpenRheinRuhr in Oberhausen, Germany</title> 
- 
-		<body> 
-			<p>Die OpenRheinRuhr ist eine Messe mit Kongress rund um das Thema "Freie Software" vom 5. bis 6. November im Rheinischen Industriemuseum in Oberhausen. Am Samstag, 5. November wird es Vorträge von Matthias Kirschner, Max Mehl und Erik Albers geben. Außerdem wird es vor Ort einen Informationsstand geben und die Möglichkeit Freiwillige und Angestellte der FSFE kennenzulernen.
-</p> 
-		</body> 
- 
-		<link>https://openrheinruhr.de/</link> 
- 
-
-		<tags>
-			<tag key="oberhausen"/>
-			<tag key="de"/>
-			
-			
-			<tag key="front-page"/>
-		</tags>
-
- 
-	</event> 
+  <event start="2016-11-05" end="2016-11-06">
+    <title>FSFE mit Vorträgen und Informationsstand auf der OpenRheinRuhr in Oberhausen, Germany</title>
+    <body>
+      <p>Die OpenRheinRuhr ist eine Messe mit Kongress rund um das Thema "Freie Software" vom 5. bis 6. November im Rheinischen Industriemuseum in Oberhausen. Am Samstag, 5. November wird es Vorträge von Matthias Kirschner, Max Mehl und Erik Albers geben. Außerdem wird es vor Ort einen Informationsstand geben und die Möglichkeit Freiwillige und Angestellte der FSFE kennenzulernen.
+</p>
+    </body>
+    <link>https://openrheinruhr.de/</link>
+    <tags>
+      <tag key="oberhausen"/>
+      <tag key="de"/>
+      <tag key="front-page"/>
+      <tag key="infobooth"/>
+      <tag key="talk"/>
+    </tags>
+  </event>
 </eventset>

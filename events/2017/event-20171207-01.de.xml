@@ -1,29 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <eventset>
   <version>1</version>
-
-   
-	<event start="2017-12-07" end="2017-12-07"> 
- 
-		<title>Vortrag über Public Code von Erik Albers im Eigenbaukombinat in Halle, Deutschland</title> 
- 
-		<body> 
-			<p>Erik Albers gibt einen Vortrag über die aktuelle Public Money? Public Code! Kampagne, warum der Staat in Freie Software investieren soll und was dafür konkret auch in Halle machbar ist.
-			</p> 
-		</body> 
- 
-		<link>https://eigenbaukombinat.de/vortrag-public-money-public-code/</link> 
- 
-
-		<tags>
-			<tag key="pmpc">Public Code</tag>
-			<tag key="halle">Halle</tag>
-			<tag key="de">Deutschland</tag>
-			<tag key="eal">Erik Albers</tag>
-			
-			<tag key="front-page"/>
-		</tags>
-
- 
-	</event> 
+  <event start="2017-12-07" end="2017-12-07">
+    <title>Vortrag über Public Code von Erik Albers im Eigenbaukombinat in Halle, Deutschland</title>
+    <body>
+      <p>Erik Albers gibt einen Vortrag über die aktuelle Public Money? Public Code! Kampagne, warum der Staat in Freie Software investieren soll und was dafür konkret auch in Halle machbar ist.
+			</p>
+    </body>
+    <link>https://eigenbaukombinat.de/vortrag-public-money-public-code/</link>
+    <tags>
+      <tag key="pmpc">Public Code</tag>
+      <tag key="halle">Halle</tag>
+      <tag key="de">Deutschland</tag>
+      <tag key="eal">Erik Albers</tag>
+      <tag key="front-page"/>
+      <tag key="halle"/>
+    </tags>
+  </event>
 </eventset>

@@ -80,13 +80,24 @@ buildrun(){
   fi
 }
 
-# Update git and then do an actual build
+# Update git (try 3x) and then do an actual build
 git_build_into(){
   forcelog GITchanges; GITchanges="$(logname GITchanges)"
   forcelog GITerrors;  GITerrors="$(logname GITerrors)"
 
-  git -C "$basedir" pull >"$GITchanges" 2>"$GITerrors"
-  gitterm="$?"
+  gitterm=1
+  i=0
+  while [[ ( $gitterm -ne 0 ) && ( $i -lt 3) ]]; do
+    ((i++))
+
+    git -C "$basedir" pull >"$GITchanges" 2>"$GITerrors"
+    gitterm="$?"
+
+    if [ $gitterm -ne 0 ]; then
+      debug "Git pull unsuccessful. Trying again in a few seconds."
+      sleep $(shuf -i 10-30 -n1)
+    fi
+  done
 
   if [ "$gitterm" -ne 0 ]; then
     die "GIT reported the following problem:\n$(cat "$GITerrors")"

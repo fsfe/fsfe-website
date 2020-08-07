@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+  <version>1</version>
+
+
+<!-- ALL STATIC TEXTS -->
+
+  <!-- Spreadtheword page -->
+  <text id="stw-type">Typ</text>
+  <text id="stw-size">Größe</text>
+  <text id="stw-context">Kontext</text>
+  <text id="stw-printed"><a href="#how-to-order">Aus unserem Bestand bestellen</a> auf</text>
+  <text id="stw-printed-tooltip">Diese Druckversionen kannst Du bei uns über das Formular bestellen.</text>
+  <text id="stw-languages">Als Download verfügbar auf</text>
+  <text id="stw-languages-tooltip">Wenn du unsere Informationen und Infomaterial online verbreiten willst, kannst du es hier in diesen Sprachen herunterladen.</text>
+  <text id="stw-license">Lizenz</text>
+  <text id="stw-author">Autor</text>
+  <text id="stw-year">Jahr</text>
+  <text id="stw-source">Quelldateien</text>
+  <text id="stw-source-tooltip">Hier kannst du die Quelldateien für das Informaterial herunterladen um es anzupassen oder zu übersetzen. Bitte respektiere dabei die Lizenz.</text>
+  <text id="stw-printready">Druckfertige Dateien</text>
+  <text id="stw-printready-tooltip">Diese Dateien verwenden wir für die Druckerei, inklusive Beschnittzugabe und anderen druckspezifischen Einstellungen. Sie können sehr groß sein (~5-25MB).</text>
+
+<!-- Basic texts -->
+<text id="fsfeurope">Free Software Foundation Europe</text>
+<text id="fsfnetwork">
+    Die FSFE hat <a href="//fsfe.org/about/fsfnetwork.html">Schwester-Organisationen</a> in <a href="http://www.fsf.org/">Nordamerika</a>, <a href="http://www.fsf.org.in/">Indien</a> und <a href="http://www.fsfla.org/">Lateinamerika</a>.
+  </text>
+
+
+<!-- Footer -->
+<text id="translator1a">Wir danken </text>
+<text id="translator1b"> für diese Übersetzung. </text>
+<text id="translator2">Dies ist eine Übersetzung. </text>
+<text id="translator3a">Lies auch auch den </text>
+<text id="translator3b">Originaltext</text>
+<text id="translator3c">.</text>
+<text id="permission">
+    Die unveränderte Wiedergabe und Verteilung dieses
+    gesamten Textes in beliebiger Form ist gestattet, sofern
+    dieser Hinweis erhalten bleibt.
+  </text>
+<text id="js-licences">JavaScript-Lizenzen</text>
+
+
+<!-- Warning info boxes -->
+<text id="outdated-1">
+    Diese Übersetzung stimmt nicht mehr überein mit dem
+  </text><!-- followed by "translator3b" + . -->
+<text id="outdated-2">
+  Bitte hilf uns, diese und andere <a href="/contribute/translators/translators.html">Seiten auf fsfe.org
+  zu übersetzen</a>, damit alle unsere Informationen in ihrer
+  Muttersprache lesen können.
+</text>
+<text id="notranslation">
+  Diese Seite wurde bisher noch nicht übersetzt. Bitte hilf uns, diese
+  und andere <a href="/contribute/translators/translators.html">Seiten
+  auf fsfe.org zu übersetzen</a>, damit alle unsere Informationen in
+  ihrer Muttersprache lesen können.
+</text>
+<text id="under-construction"><strong>Warnung: </strong>Diese Seite ist unter Bearbeitung. Bitte übersetze sie nicht, da sie noch stark verändert wird.
+  </text>
+<text id="project-complete">
+	  Dieses Projekt wurde erfolgreich abgeschlossen. Diese Seiten dienen als Archiv für die darauf befindlichen Informationen.
+  </text>
+
+
+<!-- Menu, Navigation, Buttons -->
+<text id="fsfe/about">Über Uns</text>
+
+
+<text id="fsfe/activities">Aktivitäten</text>
+<text id="fsfe/help">Mitmachen</text>
+<text id="fsfe/press">Presse</text>
+
+<text id="support/become">Werde ein Unterstützer</text>
+<text id="fellowship/login">Login</text>
+<text id="news/news">Letzte Meldungen</text>
+<text id="news/events">Nächste Veranstaltungen</text>
+<text id="news/press">Presse</text>
+<text id="news/nl">Newsletter</text>
+<text id="news/planet">Blog Planet</text>
+<text id="fs/basics">Grundlagen über Freie Software</text>
+<text id="community/discuss">Diskussionen über Freie Software</text>
+
+
+
+<text id="learn-more">Mehr darüber</text>
+
+<text id="newsletter">Newsletter</text>
+<text id="go-to">Gehe zu:</text>
+<text id="search">Suche</text>
+
+<text id="subscribe">Einschreiben</text>
+<text id="email">E-Mail-Adresse</text>
+<text id="news">Letzte Meldungen</text>
+<text id="breadcrumb-news">Nachrichten</text>
+<text id="receive-newsletter">FSFE-Newsletter abonnieren</text>
+<text id="subscribe-newsletter">Newsletter abonnieren</text>
+
+
+
+
+<text id="contact">Kontakt</text>
+<text id="team">Team</text>
+
+
+<text id="change-lang">Sprache ändern</text>
+<text id="menu">Menü</text>
+<text id="content">Inhalt</text>
+<text id="page-info">Seiteninformation</text>
+
+<text id="go-top">Zum Anfang gehen</text>
+<text id="source">Quellcode</text>
+<text id="contact-us">Kontaktiere uns</text>
+<text id="translate">Diese Seite übersetzen?</text>
+<text id="contribute-web">Hilf unserem Webteam</text>
+<text id="imprint">Impressum</text>
+<text id="privacy-policy">Datenschutzrichtlinie</text>
+<text id="transparency-commitment">Transparency Commitment</text>
+<text id="tags">Tags</text>
+<text id="discuss-article">Zur Diskussion</text>
+<text id="finished">Abgeschlossen</text>
+
+
+<!-- Article metadata -->
+<text id="writtenby">Von</text>
+<text id="published">am</text>
+<text id="revision">aktualisiert am</text>
+<text id="download">Herunterladen</text>
+<text id="and">und</text>
+
+
+<!-- Petitions -->
+<text id="osig">Organisationen</text>
+<text id="isig">Personen</text>
+<text id="bsig">Unternehmen</text>
+
+
+<!-- News and event feeds -->
+<text id="related-news">Nachrichten zum Thema</text>
+<text id="related-events">Veranstaltungen zum Thema</text>
+<text id="related-all">Alle Nachrichten und Veranstaltungen zum Thema</text>
+
+
+<!-- Sidebars -->
+<text id="our-work">Unsere Arbeit</text>
+<text id="our-work-intro">
+  <p>Als gemeinnützige Nichtregierungsorganisation arbeiten wir daran, allgemeines Verständnis von und Unterstützung für Freie Software und Offene Standards in Politik, Wirtschaft, Recht und der Gesellschaft als Ganzes zu schaffen.</p>
+</text>
+<text id="about-fsfe">Über die FSFE</text>
+<text id="about-fsfe-intro">
+  <p>
+    Die Free Software Foundation Europe ist ein gemeinnütziger Verein, der
+    Menschen im selbstbestimmten Umgang mit Technik unterstützt.
+  </p>
+  <p>
+    Software beeinflusst sämtliche Bereiche unseres Lebens. Es ist wichtig,
+    dass diese Technik uns hilft, statt uns einzuschränken. Freie Software gibt
+    allen das Recht, Programme für jeden Zweck zu verwenden, zu verstehen, zu
+    verbreiten und zu verbessern. Diese Freiheiten stärken andere Grundrechte
+    wie die Redefreiheit, die Pressefreiheit und das Recht auf Privatsphäre.
+  </p>
+</text>
+
+
+<!-- Motivational texts for fellowship, support or donations -->
+
+
+
+<text id="support">Unterstützen Sie die FSFE</text>
+<text id="show-support">Zeig Deine Unterstütung!</text>
+<text id="show-support-paragraph">FSFE benötigt Deine Unterstützung, um gehört zu werden! Jeder Treffer zählt!</text>
+<text id="support-fsfe">Ich unterstütze die FSFE!</text>
+<text id="support-paragraph">Wenn du uns unterstützt, stärkst du unsere Arbeit und hilfst dabei, unsere finanzielle Unabhängigkeit zu sichern.</text>
+<text id="donate">Spenden</text>
+<text id="donate-paragraph">
+    Die Free Software Foundation Europe ist eine gemeinnützige
+    Nichtregierungsorganisation. <a href="/about/ourwork.html">Unsere Arbeit</a>
+    wird durch eine Gemeinschaft von
+    <a href="/contribute/contribute.html">ehrenamtlichen Mitarbeitern</a>,
+    <a href="/fellowship">Fellows</a> und
+    <a href="/donate/thankgnus.html">Spendern</a> ermöglicht. Deine Spenden
+    sind essenziell für unsere Stärke und Unabhängigkeit. Sie ermöglichen
+    es uns, weiterhin für Freie Software zu arbeiten, wo immer das nötig
+    ist, und machen uns zu einer unabhängigen Stimme.
+</text>
+
+  <!-- pdfreaders.org -->
+  <text id="pdfreaders-head-readers">PDF-Betrachter</text>
+  <text id="pdfreaders-head-standards">Offene Standards</text>
+  <text id="pdfreaders-head-graphics">Banner</text>
+  <text id="pdfreaders-head-about">Über uns</text>
+  <text id="pdfreaders-body-platforms">Betriebssysteme:</text>
+
+  <!-- Share and support buttons -->
+  <text id="share-head">Teilen und unterstützen</text>
+  <text id="share-page">Diese Seite teilen über</text>
+  <text id="share-microdonation">Eine Micro-Spende tätigen über</text>
+  <text id="share-warning">Einige Dienste könnten Freie-Software-unfreundlich sein und die Privatsphäre verletzen.</text>
+
+  <!-- Sponsoring buttons -->
+  <text id="donation-buttons">Spenden-Grafiken</text>
+
+
+
+
+  <text id="size/huge">sehr groß</text>
+  <text id="size/large">groß</text>
+  <text id="size/medium">mittel</text>
+  <text id="size/small">klein</text>
+  <text id="background/white">Weißer Hintergrund</text>
+  <text id="background/transparent">Transparenter Hintergrund</text>
+</data>

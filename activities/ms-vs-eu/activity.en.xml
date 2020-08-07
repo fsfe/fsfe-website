@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<activityset>
+  <version>2</version>
+
+  <activity id="ms-vs-eu" date="2004-07-23" status="finished">
+    <title>Microsoft vs. EU Antitrust Case</title>
+    <description>
+      In 2001 the European Union started investigating Microsoft's
+      dominant position in the market for desktop operating systems.
+      The FSFE played two key roles in this case. First, we represented
+      the interests of Free Software developers. Second, we are a
+      public interest organisation who cannot be bought off. Thanks to
+      the excellent work by all involved parties, the case has been won
+      in all rulings up to the European Court of Justice in 2012.
+    </description>
+    <link href="/activities/ms-vs-eu/ms-vs-eu.html" />
+    <image src="/graphics/logos/ms-vs-eu.png" />
+    <order priority="2" highlight="no" />
+    <tags>
+      <tag key="policy" />
+      <tag key="legal" />
+    </tags>
+  </activity>
+</activityset>

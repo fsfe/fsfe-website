@@ -46,7 +46,7 @@
             <xsl:call-template name="fsfe-gettext">
               <xsl:with-param name="id" select="'news/news'" />
             </xsl:call-template></a></li>
-          <li><a href="/about/basics/freesoftware.html">
+          <li><a href="/freesoftware/freesoftware.html">
             <xsl:call-template name="fsfe-gettext">
               <xsl:with-param name="id" select="'fs/basics'" />
             </xsl:call-template></a></li>
@@ -74,7 +74,7 @@
           <xsl:call-template name="fsfe-gettext">
             <xsl:with-param name="id" select="'our-work-intro'" />
           </xsl:call-template>
-          <a href="/work.html" class="learn-more">
+          <a href="/about/ourwork.html" class="learn-more">
             <xsl:call-template name="fsfe-gettext">
               <xsl:with-param name="id" select="'learn-more'" />
           </xsl:call-template></a>

@@ -42,7 +42,7 @@ my $query = CGI->new;
 
 my $lang = $query->param('lang');
 if (not $lang) {$lang = "en";}
-unless ($lang =~ m/^[a-z]{2}$/ and -f "$root/campaigns/pdfreaders/petition.$lang.html")
+unless ($lang =~ m/^[a-z]{2}$/ and -f "$root/activities/pdfreaders/petition.$lang.html")
   {
     $lang = 'en';
   }
@@ -53,7 +53,7 @@ $form->validate_format ('email', type => 'email');
 
 if ($form->has_errors)
   {
-    print "Location: /campaigns/pdfreaders/petition-error.$lang.html\n\n";
+    print "Location: /activities/pdfreaders/petition-error.$lang.html\n\n";
     exit;
   }
 elsif ($query->param ('url')) # Bot!!
@@ -81,4 +81,4 @@ open MAIL, "|/usr/lib/sendmail -t";
 print MAIL $mail;
 close MAIL;
 
-print "Location: /campaigns/pdfreaders/petition-success.$lang.html\n\n";
+print "Location: /activities/pdfreaders/petition-success.$lang.html\n\n";

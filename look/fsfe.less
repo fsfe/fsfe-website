@@ -9,12 +9,16 @@
 @import "pages/interview";
 @import "pages/spreadtheword";
 @import "pages/freesoftware";
+@import "pages/tags";
 
 /* fsfe.org pages */
 
 body {
-    background: url(/graphics/fellowship/plussy_tile_03.svg) top left fixed #F9F9F9;
     font-family: "Roboto", sans-serif;
+
+    @media (min-width: @screen-sm-min) {
+        background: url(/graphics/fellowship/plussy_tile_03.svg) top left fixed #F9F9F9;
+    }
 }
 
 aside#followup {
@@ -126,6 +130,49 @@ body.overview #content {
 
             h3 {
                 margin-top: 0;
+
+                a {
+                  vertical-align: middle;
+                }
+
+                /* inspired by: main footer#tags ul.tags > li */
+                span.status {
+                  background: lighten(grey,40%);
+                  border-radius: 4px;
+                  color: grey;
+                  font-size: 70%;
+                  margin-left: 10px;
+                  padding: 4px;
+                  vertical-align: middle;
+                }
+            }
+        }
+    }
+
+    &.icons-sm {
+        li {
+            @media (min-width: @screen-xs-min) {
+                img {
+                    max-width: 50% !important;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    &.fullwidth {
+        li {
+            .make-md-column(12);
+            align-items: center;
+        }
+    }
+
+    &.no-icons {
+        li {
+            grid-template-columns: none;
+
+            img {
+                display: none;
             }
         }
     }
@@ -192,7 +239,7 @@ body.overview #content {
 /* Android campaign style */
 
 #hello-free-droid {
-    background: url('/campaigns/android/robot.png') no-repeat top left transparent;
+    background: url('/activities/android/robot.png') no-repeat top left transparent;
     height: 200px;
     width: 230px;
     float: left;

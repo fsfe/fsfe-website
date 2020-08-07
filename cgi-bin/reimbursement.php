@@ -192,6 +192,11 @@ foreach ($entry as $key => $date) {  // run over each row
     errexit("Upload error. [".$receipt_error."] on file '".$receipt_name."'<br/>\n");
   }
 
+  // Remove "-" when remark empty
+  if ($remarks[$key] === "-") {
+    $remarks[$key] = "";
+  }
+
   // HTML output for this receipt
   $html .= "
   <tr>
@@ -213,7 +218,7 @@ foreach ($entry as $key => $date) {  // run over each row
 
 // Write and attach temporary CSV file
 foreach ($csv as $fields) {
-  fputcsv($csvfile, $fields, ',', '"', '"');
+  fputcsv($csvfile, $fields, ';', '"', '"');
 }
 $email->addAttachment($csvfile_path, filter_filename($type_date ."-". $type ."-". $who . ".csv"));
 

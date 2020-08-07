@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
- 
 <eventset>
   <version>0</version>
-
   <event start="2010-08-27" end="2010-08-27">
     <title>Πάρτι με ψητά από το FSFE και KDE</title>
     <body>
@@ -13,17 +11,17 @@
         <a href="http://nominatim.openstreetmap.org/search?q=Linienstr.+141">Linienstr. 141</a>.
         Το γραφείο βρίσκεται στην πίσω αυλή.
       </p>
-
       <p>
         Θα φροντίσουμε για τα ποτά, το ψωμί, τη σαλάτα και την ψησταριά.
         Παρακαλούμε φέρτε μαζί σας και το φαγητό της προτίμησής σας!
       </p>
-
       <p>
         Αν σκοπεύετε να παρευρεθείτε, <a href="mailto:maelle@fsfe.org">ενημερώστε μας</a> 
         πριν από τις 20 Αυγούστου.
       </p>
     </body>
+    <tags>
+      <tag key="de"/>
+    </tags>
   </event>
 </eventset>
-

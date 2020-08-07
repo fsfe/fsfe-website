@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <eventset>
   <version>1</version>
-
-   
-	<event start="2016-05-26" end="2016-05-26"> 
- 
-		<title>foss-north 2016 in Göteborg, Zweden</title> 
- 
-		<body>
-  <p> 
+  <event start="2016-05-26" end="2016-05-26">
+    <title>foss-north 2016 in Göteborg, Zweden</title>
+    <body>
+      <p> 
 De foss-north conferentie is een software- en hardware-gerelateerd evenement 
 met een technisch perspectief. dat gehouden wordt in Göteborg en een ontmoetingsplaats 
 biedt voor Noordse foss-gemeenschappen. FSFE's vice-voorzitter, Alessandro Rubini, zal 
@@ -17,16 +12,11 @@ deelnemen en een praatje houden over <i>Tijd in Software en Hardware: hoe de Lin
 en het White Rabbit-netwerk van CERN met tijd omgaan</i>.
 
 		  </p>
-</body> 
- 
-
-		<tags>
-			<tag key="stockholm">Stockholm</tag>
-			<tag key="se">Zweden</tag>
-			<tag key="front-page">voorpagina</tag>
-		</tags>
-
- 
-	</event> 
-</eventset> 
-
+    </body>
+    <tags>
+      <tag key="se">Zweden</tag>
+      <tag key="front-page">voorpagina</tag>
+      <tag key="gothenburg"/>
+    </tags>
+  </event>
+</eventset>

@@ -1,0 +1,942 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<html>
+  <version>1</version>
+
+  <head>
+    <title>GPLv3 - Transcripción de Richard Stallman en la 2da.
+      Conferencia Internacional GPLv3, Porto Alegre, Brasil; 21-04-2006</title>
+  </head>
+
+  <body>
+
+  <h1>Transcripción de la presentación de Richard Stallman en la 2da
+Conferencia Internacional GPLv3, 21 de abril de 2006</h1>
+
+<p>Para más información sobre la GPLv3 y cómo participar, vea nuestra 
+  <a href="gplv3.html">página del proyecto GPLv3</a>. También le puede interesar
+  <a href="https://wiki.fsfe.org/Transcripts#licences">nuestra lista de transcripciones sobre la GPLv3 y 
+  las licencias de software libre</a></p>
+
+<p>Lo que sigue es una transcripción de la presentación de Richard
+Stallman en la Segunda Conferencia Internacional GPLv3, llevada a cabo
+en Porto Alegre conjuntamente con el Foro Internacional de Software
+Libre (FISL). En breve estarán disponibles los videos de
+buena calidad de la conferencia. Esta transcripción está basada
+en una grabación de baja calidad hecha con una pequeña
+cámara digital. Hay algunos «huecos» debido a las limitaciones 
+del hardware.</p>
+
+<p>Esta transcripción fue realizada por 
+Ciaran O'Riordan.
+Puedes apoyar este tipo de trabajos uniéndote a 
+<a href="https://my.fsfe.org/donate">the Fellowship of FSFE</a>, y 
+animando a otros a que lo hagan.</p>
+
+<p>Traduccido al español por el equipo de traductores de la <a
+ href="http://fsfla.org">FSF de América Latina</a></p>
+
+<p>Richard Stallman inició el <a href="/freesoftware/gnuproject.html">proyecto
+GNU</a> y con él, el movimiento del <a href="/freesoftware/freesoftware.html">
+Software Libre</a> Stallman es el presidente de la FSF, organización hermana 
+de la FSFE.</p>
+
+<p>El discurso original se realizó en inglés.</p>
+
+
+<h2>Capítulos de la presentación</h2>
+
+
+<ol>
+
+<li><a href="#begin">La presentación.</a></li>
+<li><a href="#what-is-gpl">¿Qué es la GPL de GNU y el Software Libre?</a></li>
+<li><a href="#what-is-copyleft">¿Qué es el copyleft?</a> </li>
+<li><a href="#before-gnu-gpl">Antecedentes: antes de la GPL de GNU</a></li>
+<li><a href="#liberty-or-death">La cláusula «Libertad o Muerte», el cambio principal de v1 a v2.</a></li>
+<li><a href="#why-change-it">¿Por qué cambiarla? Siempre estuvo en los planes; por eso el trozo de «o cualquier versión posterior».</a></li>
+<li><a href="#tivoisation">Primer cambio fundamental: el perverso DRM parte I, evitando la tivoización.</a></li>
+<li><a href="#circumvention-not-prohibited"> El perverso DRM parte II, asegurar el acceso a los datos generados.</a></li>
+<li><a href="#software-patents-grant">Segundo cambio fundamental: patentes de software parte I, concesión explícita de la patente.</a></li>
+<li><a href="#software-patents-retaliation">Patentes de software II, represalias a patentes de software.</a></li>
+<li><a href="#licence-compatibility">Tercer cambio fundamental: compatibilidad de la licencia</a></li>
+<li><a href="#limits-of-requirements">Cómo se limitan los requisitos añadibles.</a></li>
+
+</ol>
+
+<h2>Sesión de Preguntas y Respuestas</h2>
+
+<ul>
+<li><a href="#q10-gfdl">¿Es buena la GPLv3 para documentación (sobre GFDL)?</a></li>
+<li><a href="#q20-affero">¿Por qué no agregar la clásula Affro para servicios web en la licencia?</a></li>
+<li><a href="#q30-cooperating-with-osi">Acerca de la cooperación con OSI / ESR</a> </li>
+<li><a href="#q40-creative-commons">Creative Commons no es una licencia</a></li>
+<li><a href="#q50-osi-responds">Comentarios de Michael Tiemman presidente de OSI sobre el trabajo de RMS.</a></li>
+<li><a href="#q60-translations">¿Habrá una traducción oficial de la GPLv3?</a></li>
+<li><a href="#q70-fragments">Fragmentos de una pregunta sobre «tivoización» antes de que la grabadora se apagara</a></li>
+</ul>
+
+<ul>
+<li><a href="#links">Enlaces a documentos con mayor información sobre los tópicos cubiertos.</a></li>
+</ul>
+
+
+<h2 id="begin">La presentación</h2>
+
+
+<p>[Richard comienza haciendo referencia a malas noticias que
+ha recibido. La oficina de patentes de Brasil está aceptando patentes 
+de software y dice que esta es la tarea más importante para los partidarios 
+del Software Libre latinoamericanos en los próximos meses.] </p>
+
+<p class="indent">Richard Stallman: Ahora comenzaré con lo que se
+supone que debo hablar, que está de alguna manera relacionado: 
+la Licencia Pública General GNU, o simplemente la GNU GPL. </p>
+
+<p id="what-is-gpl">[sección: ¿Qué son la GPL de GNU y el Software
+libre?]</p>
+
+<p class="indent"> En primer lugar: ¿qué es la Licencia Pública
+General GNU? </p>
+
+<p class="indent"> La Licencia Pública General GNU es una licencia de Software
+Libre, esto es, una licencia que está diseñada para darle cuatro libertades
+esenciales, las cuatro libertades que definen al Software Libre. </p>
+
+<p class="indent">Un programa es Software Libre si tu, usuario, tienes 
+estas cuatro libertades: </p>
+
+<ul>
+
+  <li class="indent">La libertad cero es la libertad de ejecutar
+      el programa como se desee, con cualquier propósito. 
+   </li>
+  <li class="indent">La libertad uno es la libertad para estudiar
+      el código fuente y modificarlo para que haga lo que tu 
+      deseas o necesitas que haga. 
+   </li>
+  <li class="indent">La libertad dos es la libertad para ayudar a
+      otras personas, es la libertad de hacer copias y distribuirlas 
+      a otros en cualquier momento. 
+   </li>
+  <li class="indent">La libertad tres es la libertad para ayudar a la
+      comunidad: la libertad de publicar o distribuir las versiones
+      modificadas cuando tu quieras. 
+   </li>
+</ul>
+
+<p class="indent"> Con estas cuatro libertades, el programa es Software Libre
+porque se distribuye en una manera ética y respeta la libertad individual 
+del usuario y la solidaridad social de su comunidad. </p>
+ 
+<p class="indent"> Si se omite alguna de estas cuatro libertades, el programa se
+distribuye de una manera antisocial que pisotea la libertad del usuario, 
+que ataca la solidaridad social, que mantiene divididos y desprotegidos a 
+los usuarios, de tal forma que no debe hacerse jamás. Así pues, cualquier
+licencia que conceda al usuario estas cuatro libertades es una licencia
+de Software Libre. </p>
+
+<p class="indent"> Hay muchas licencias de Software Libre -demasiadas quizás- puede
+resultar algo inconveniente cuando hay tantas, pero el hecho es que
+cualquier persona puede escribir una licencia que concede estas cuatro
+libertades, y ésta será una licencia de Software Libre. Si concede estas
+cuatro libertades, es una licencia de Software Libre. </p>
+
+<p class="indent"> La Licencia Pública General GNU fué una de las primeras licencias de
+Software Libre. Sé de una que existió antes, la licencia de TeX, pero la
+Licencia Pública General GNU fue diseñada específicamente para ser una
+licencia de Software Libre. </p>
+
+<p id="what-is-copyleft">[sección: ¿Qué es el copyleft?]</p>
+
+<p class="indent"> Hay dos grandes categorías de licencias de Software Libre. Las que 
+son copyleft y las que no lo son. </p>
+
+<p class="indent"> El copyleft implica en una licencia la noción de defensa activa de las
+libertades de los usuarios. Establece que no alcanza con conceder estas
+cuatro libertades, además se debe asegurar que todo usuario que obtenga
+una copia del programa, reciba estas mismas libertades, en la misma forma. 
+</p>
+
+<p class="indent"> Ésta es la idea del copyleft. Una licencia sin copyleft concede las
+cuatro libertades pero permite crear versiones modificadas que no sean
+totalmente libres. Es perfectamente posible, que al momento de recibir
+el programa, éste haya pasado por las manos de algún intermediario que
+haya limitado libertades, de tal modo que el usuario recibirá el código
+pero no las libertades. Una licencia con copyleft dice que cuando los
+intermediarios distribuyen el software, deben dar las mismas libertades
+que obtuvieron al recibirlo. La libertad debe asegurarse. Todos los
+usuarios deben obtener la misma libertad. Ésa es la idea básica del
+copyleft. </p>
+
+<p class="indent"> La Licencia Pública General GNU dice: se te concede el derecho a
+modificar este programa, el derecho a copiar este programa, el derecho
+a distribuir copias del mismo, el derecho a distribuir versiones
+modificadas. Pero hay una condición: cualquier versión que distribuyas,
+debe estar bajo esta misma licencia, y debe estar disponible su código 
+fuente. Eso determina que quién obtenga este software de tus manos, 
+también obtendrá las mismas libertades que tu mismo adquiriste al 
+recibirlo, de este modo, todos los usuarios obtienen estas libertades. 
+</p>
+
+<p id="before-gnu-gpl">[sección: Antecedentes: antes de la GPL de GNU]</p>
+
+<p class="indent"> Las primeras licencias GPL en que trabajé durante los años 80 eran 
+para programas individuales del Proyecto GNU. Por ejemplo, GNU Emacs tenía
+la Licencia Pública General GNU Emacs, y esto suponía un problema. Los
+distintos paquetes de GNU tenían licencias que diferían levemente: cada
+licencia incluía el nombre del programa que se estaba licenciando. GNU
+Emacs tenía la Licencia Pública General GNU Emacs y GCC tenía la Licencia 
+Pública General GNU GCC, eran iguales salvo que una dice que es la 
+Licencia Pública General GNU Emacs y la otra que era la Licencia Pública 
+General GNU GCC, es decir, no eran realmente iguales, apenas eran 
+isomórficas. </p>
+
+<p>[risas] </p>
+
+<p class="indent"> Este era un problema práctico y entendí que resultaría más adecuado si 
+las licencias fueran idénticas para todos los programas. Así que con un
+poco más de trabajo, logré que la licencia ya no necesitara llevar el
+nombre del programa. Ahora la licencia para Emacs podía ser idéntica a
+la licencia del GCC palabra por palabra. </p>
+
+<p class="indent"> La versión 1 de la Licencia Pública General GNU fue publicada en 1989
+como licencia de Software Libre con copyleft, que podrías incluir en un
+programa para licenciarlo bajo sus términos. </p>
+
+<p id="liberty-or-death">[sección: La cláusula de la «Libertad o Muerte», 
+el cambio principal de v1 a v2]</p> 
+
+<p class="indent"> En la publicación de la GPL versión 2 de 1991, se introdujeron algunos
+cambios bastante menores. Pienso que el mayor cambio en la versión 2
+fue la inclusión de la cláusula de «Libertad o Muerte», la cláusula que
+dice que si alguien utiliza una patente o cualquier cosa que en la práctica
+provoque que el programa no sea libre, este no podrá distribuirse en absoluto. Y
+la razón de esta cláusula es extremadamente importante. Veamos, nada
+podemos hacer para eludir el problema legal de las patentes de
+software. Si alguien tiene una patente que alcanza a un programa libre, ese
+alguien podrá detener la distribución del programa. Podrá demandar a
+todo aquel que lo distribuya con sólo pagar abogados que atiendan sus
+demandas.</p>
+
+<p class="indent"> No podemos evitar estas limitaciones mediante la inclusión o no de
+algun elemento en la licencia, pero podemos prevenir algo que es incluso
+peor. Algo peor que la muerte para el programa, es que quien sostenta una
+patente pueda decir al distribuidor «lo demandaré a menos que quite esa
+licencia y me pague» y en efecto, la gente tendrá que obtener el permiso
+y pagar para distribuir el programa. Este ya no sería un programa libre. </p>
+
+<p class="indent"> No podemos escribir una licencia que anule las patentes de software, 
+pero podemos escribir nuestra licencia de modo tal, que pueda matar el
+programa para que nadie pueda esclavizarlo. </p>
+
+<p class="indent"> Esto hace la diferencia, porque si estos personajes pudieran pensar 
+que, a fuerza de demandas lograrían que todo el mundo les pague, les
+resultaría una idea tan atractiva que se verían tentados en extremo a
+hacerlo. Estaríamos entonces frente a cantidad de Software Libre que se
+habría vuelto software privativo, cuyas licencias se han convertido en
+ficción, dado que no garantizan efectivamente las libertades que
+portan. </p>
+
+<p class="indent"> Matar el programa es menos atractivo porque no da dinero, al menos no
+directamente. Diciendo «se podrá matar el programa pero no esclavizar 
+a sus usuarios», de algún modo, estamos protegiéndonos de estos casos, 
+pues sólo lo haría alguien por pura mala fé, o alguien con la intención 
+de causar problemas gratuitamente. </p>
+
+<p class="indent"> Por supuesto, algunas compañías que tienen patentes pueden
+querer atacarnos con la única intención de hacernos fallar. Una de ellas ha
+conseguido una presencia importante aquí, y nos pide cooperación. Pero
+al menos esta cláusula -la de «Libertad o Muerte»- ayuda un poco. Ese
+fue el principal cambio de la versión 2, en 1991. </p>
+
+<p class="indent"> En 1991, el mayor usuario de la GPL de GNU era el propio sistema
+GNU, los paquetes del sistema GNU. Pero durante los años 90 
+mucha más gente comenzó a escribir Software Libre y publicar sus trabajos 
+bajo la GPL de GNU. Su diseño fue concebido para facilitar esta adopción. 
+Yo esperaba que la gente lo hiciera y en los años 90 esto comenzó a ocurrir. 
+Así, el resultado es que la GPL de GNU es hoy la principal licencia de Software 
+Libre, usada en alrededor del 70% de los paquetes de Software Libre. </p>
+
+<p id="why-change-it">[sección: ¿Por qué cambiarla? Siempre estuvo en 
+nuestros planes por eso la parte de «o cualquier versión posterior»]</p>
+
+<p class="indent"> ¿Por qué la estamos cambiando entonces? Bien, desde el
+comienzo mismo pude ver que en algún momento habría que cambiarla. Las cosas 
+cambian, siempre surgen nuevos problemas, la legislación está cambiando, 
+siempre estuvo claro que algún día tendríamos que cambiar esta licencia.
+También pensé que sería aplicada en muchos programas escritos por mucha
+gente distinta, sugerí entonces que se publicaran los programas
+diciendo: «GNU GPL versión 1 o superior». Diciendo «este programa podrá
+ser usado bajo la versión 1 de la GNU GPL o cualquier versión
+posterior», cuando llegara la versión 2, estos programas podrían ser
+usados automáticamente bajo la nueva versión. Entonces a partir de la
+versión 2, hemos liberado los programas diciendo «éste puede ser usado
+bajo la versión 2 o cualquier versión posterior» y así en el futuro,
+cuando la versión 3 de la GNU GPL esté terminada, lista para ser usada
+y publicada oficialmente, todos esos programas podrán estar disponibles
+también bajo la versión 3 y de esta forma facilitarán su transición a la 
+GPLv3. </p>
+
+<p class="indent"> Ok, no sorprende que haya cambios algún día, pero ¿por qué
+estamos cambiando específicamente ahora? ¿Y cuáles son esos cambios? </p>
+
+<p class="indent"> Bien, en primer lugar, no hay un gran cambio. Y no hay una
+única razón para estos cambios, cada cambio tiene su pequeña razón propia. 
+La idea básica es la misma: asegurar las cuatro Libertades a todos los
+usuarios.
+En realidad todos los cambios están en detalles. Muchos de ellos son
+realmente aclaraciónes y no modifican conceptos en absoluto, simplemente dejan
+más claro para todos que estos conceptos son lo que son. </p>
+
+<p class="indent"> Algunos cambios están concebidos para hacer a la GPL más
+independiente de las diferencias entre distintos países y su
+legislación sobre software. Aunque el copyright es muy parecido en
+todos los países, algunos detalles pueden variar, así que ahora
+conocemos más, y estamos en una posición desde la cual podemos
+consultar a más personas para asesorarnos sobre las diferencias entre
+las leyes particulares de cada país. </p>
+
+<p class="indent"> Hemos diseñado el nuevo lenguaje para aislarlo de cambios de
+modo que, no obstante, el significado de la GPL sea el mismo. </p>
+
+<p class="indent"> Bien, esto no resultará muy controvertido, estoy seguro. Pero
+hay algunos cambios que realmente serán sustantivos. Hay tres áreas de
+cambios importantes. Una refiere a la Tivolización, otra tiene relación
+con las patentes de software y la otra está vinculada a la
+compatibilidad con otras licencias de Software Libre. </p>
+
+<p id="tivoisation">[sección: Primer cambio importante: el malévolo DRM 
+parte I, evitando la tivoización]</p>
+
+<p class="indent"> Primero: Tivoización, es un término que he acuñado en
+relación a un producto llamado TiVo, el primer ejemplo, al menos que yo
+recuerde, de cierta amenaza específica a nuestra libertad. TiVo tiene
+un sistema operativo GNU/Linux -ciertamente bastante pequeño pero
+GNU/Linux al fin. Esto significa que contiene programas liberados bajo
+la licencia GPL de GNU, y hasta donde sé no violan la licencia. Presumo
+entonces que sus usuarios pueden obtener el código fuente, puesto a su
+disposición apropiadamente. Los usuarios acceden al código fuente,
+pueden editarlo, pueden compilar sus versiones modificadas y pueden
+instalarlas en su TiVo, y entonces... ¡no funcionarán! </p>
+
+<p class="indent"> Como vemos, el TiVo está diseñado de modo que no corra
+versiones modificadas por el usuario. El sistema ni siquiera se inicia,
+entonces, la libertad 1, la libertad para cambiar el código fuente de
+modo que haga lo que deseas, se mantiene sólo nominalmente, en los
+hechos se puede modificar el código fuente para que haga lo que
+pretendes, pero entonces, en realidad, no hará nada. </p>
+
+<p> [ risas ] </p>
+
+<p class="indent"> A esto lo llamamos tivoización y es ésto lo que estamos tratando
+de evitar. ¿Pero por qué ponemos énfasis en ello? Bien, ¿qué interés
+hay en «tivoizar» los sistemas? ¿Cuál es el motivo? La razón es que se
+está introduciendo características maliciosas en el código y se desea
+impedir que los usuarios puedan eliminar estos problemas deliberados. </p>
+
+<p class="indent"> El TiVo tiene dos clases de características repugnantes. Una
+es que espía al usuario - divulga lo que éste mira. La otra, impide al
+usuario copiar programas de TV fuera del TiVo. Ésta es una forma de
+Gestión Digital de Restricciones (DRM). Sus objetivos son restringir o
+negar las libertades a los usuarios. </p>
+
+<p class="indent"> Así pues, el usuario obtiene Software Libre, puede realmente
+ejercitar la libertad 1 modificando el software que contenga
+restricciones, pero en un esquema tal que globalmente mantendrá esas
+restricciones, concebido para restringir libertades. Ellos 'tivoizan'
+el software para impedir que las modificaciones tengan efecto alguno y
+de esa manera el usuario no pueda escapar de esas restricciones. En
+general, la tivoización es hecha por alguien interesado en imponer
+características repugnantes, características malévolas, sobre otras
+personas. </p>
+
+<p class="indent"> Ahora, estoy en desacuerdo con el uso de esas
+características, pienso que son anti-éticas. Pero mientras la gente
+mantenga completamente, el verdarero disfrute de la libertad número 1,
+no necesito preocuparme de esas características malévolas porque la
+gente las quitará, modificará el código, pero una vez que el software
+sea "tivoizado", los usuarios ya no podrán resolverlo. </p>
+
+<p class="indent"> La versión 3 de la GPL fue diseñada para prohibir la
+tivoización. No prohíbe las características malévolas del código. No
+prohíbe modificaciones al código para que el software informe lo que el
+usuario hace. No prohíbe que se modifique el software para que éste se
+niegue a copiar cosas o que directamente no tenga ninguna
+característica que le permita copiar en absoluto. Lo que si prohíbe es
+que se bloquee al usuario la posibilidad de hacer otras modificaciones.
+</p>
+
+<p class="indent"> La forma de implementar esto ha sido algo en lo hemos
+trabajado mucho, realmente tuvimos que meditar mucho acerca de cómo
+lograrlo. En realidad no lo hacemos prohibiendo ningún tipo de
+distribución. Pueden diseñar hardware que sólo permita ejecutar
+binarios firmados usando cierta llave, pero deberán proporcionar esta
+llave de modo que los binarios que resulten de las modificaciones del
+usuario, también puedan ser firmados. </p>
+
+<p class="indent"> Deben proporcionale todo lo necesario para validar sus
+versiones de modo que funcionen. Así pues, esa es la disposición
+principal contra la Gestión Digital de Restricciones (DRM) incluída en
+la versión tres de la GPL y en realidad todavía no habla del DRM,
+simplemente prohíbe la 'tivoización'. Ciertamente, puede que incluyan
+Gestión Digital de Restricciones (DRMs) en el software y
+proporcionártelo, pero tu puedes eliminar ese DRM. </p>
+
+<p class="indent"> Bien, eso no es lo único que hacemos para evitar DRMs, hay
+algunos otros elementos. Lo que en realidad estamos haciendo es evitar
+que te impongan el DRM de forma tal que no puedas modificar el programa
+para quitarlo. </p>
+
+<p id="circumvention-not-prohibited">[sección: el malévolo DRM parte II, 
+garantizar permisos de acceso a los datos generados.]</p>
+
+<p class="indent">Cuando un programa bajo GPL es utilizado para
+producir datos cifrados, la licencia otorga a la vez el permiso para
+escribir tu propio software para descifrar esos datos, dado que algunos
+países tienen una legislación tan repugnante -por supuesto, pueden
+ustedes adivinar qué país fue el primero- que prohíbe el uso de
+software que permita a la gente eludir las restricciones de DRM. Si un
+trabajo es diseñado para imponer restricciones digitales, y alguien
+publica un programa que permita acceso a ese trabajo sin las
+restricciones, este segundo programa es ilegal -en mi país, y en
+Europa, y en alrededor de otros cincuenta países que han firmado
+tratados cuyo propósito único es restringir a sus propios ciudadanos. </p>
+
+<p class="indent"> Así pues, la GPL establece que si el primer programa, el que
+produce los trabajos restringidos mediante DRM está bajo GPL, se
+otorgan todos el permiso para crear programas bajo GPL, que permitan
+leer aquellos trabajos digitalmente restringidos. Es decir, no pueden
+aprovecharse de las leyes para prohibir otros programas. </p>
+
+<p class="indent"> De nuevo, no estamos prohibiendo cambiar el software para
+incluir DRMs en él, sino que sólo negamos a quien haga esto, la
+posibilidad de prohibir a otros publicar el software que quieran usar y
+hacer el software que quieran hacer. </p>
+
+<p class="indent"> Además, si el programa bajo GPL produce salida para DRM o se
+comunica mediante un protocolo que imponga Gestión Digital de
+Restricciones, deberá también proporcionar los códigos necesarios para
+escribir del otro lado, un servidor autorizado. Así pues, esencialmente
+hemos intentado cubrir todos los puntos. Cualquier intento de utilizar
+un programa bajo GPL de modo que bloquee o prohíba modificar o escribir
+otro software que sea capaz de funcionar con él, no está permitido.
+Tienen que respetar el derecho de cambiar el software y de escribir
+otro software interoperable. </p>
+
+<p class="indent"> Así pues, esta es muestra forma de lidiar con el tema DRM. No
+nos ocupamos mayormente del DRM en sí mismo, nos remitimos a garantizar
+las libertades de forma que la gente que se proponga limitar esa
+libertades, no pueda tener éxito. </p>
+
+<p id="software-patents-grant">[sección: Segundo cambio importante: Las 
+patentes de software Parte I, concesión explícita de la patente]</p>
+
+<p class="indent"> La siguiente área de cambios significativos es la de las
+patentes de software. Nos ocupamos cuidadosamente ahora, del factor que
+fuera decisivo en la versión dos con la cláusula de «Libertad o
+Muerte». Lo hecho al repecto en la versión tres son algunas pocas cosas
+secundarias. </p>
+
+<p class="indent"> Primero, en la versión dos de GPL nos confiamos en una
+licencia implícita de patente. El punto es: ¿qué sucede si la compañía
+que distribuye el programa bajo GPL tiene una patente que se aplica en
+algo al programa? ¿y qué si dicen «distribuiremos esto bajo GPL pero si
+usted intenta utilizar los derechos que la GPL le da, lo demandaremos
+por infringir nuestra patente»? </p>
+
+<p class="indent"> En los EE.UU. no pueden. En los EE.UU., distribuyendo el
+programa bajo GPL, están diciendo que ellos no tienen ninguna objeción
+si usted ejerce sus derechos en los términos GPL, así, si intentan
+demandarlo por esa causa, pierden. Sin embargo, esto no es
+necesariamente cierto en otros países. Algunas otras licencias de
+Software Libre desde hace varios años han tenido concesiones explícitas
+de patente y decidíamos seguirlas. Estamos incluyendo una concesión
+explícita de licencia de patente que dice, más o menos, lo que la ley
+de los EE.UU. haría implícitamente en estos casos.</p>
+
+<p class="indent"> Pero hay otro caso peculiar. ¿Qué sucede si alguien
+distribuye software bajo GPL y tiene un licencia de patente que diga
+que nadie va a demandarlo a él, que el detentor de la patente no lo
+demandará a él cuando él distribuye el software, pero sí a usted,
+cuando usted lo distribuya podrá ser demandado por el mismo poseedor de
+patente. De hecho, podríamos imaginarnos al poseedor de la patente al
+acecho amenazando a todos, continuamente. </p>
+
+<p class="indent"> Eso sería muy malo porque significaría que las libertades no
+estarían allí efectivamente. Un distribuidor logra el beneficio de las
+libertades y se supone que a su vez debe respetar las de los demás pero
+este podría aprovecharse del hecho de que el poseedor de la patente no
+lo demandará a él, sino a usted si intenta (a su vez distribuir el
+software). Este tipo de connivencia puede darse entre dos empresas para
+hacer de la libertad una mera ficción. La versión tres de la GPL dice
+que si un distribuidor se ampara a sabiendas en una licencia de patente
+para distribuir el software a resguardo de demandas, debe cerciorarse
+de que esta protección alcance también a quienes de obtengan de él ese
+software. Así, tendrá que negociar su licencia de modo que incluya todo
+lo que implica la publicación de versiones, incluyendo la posibilidad
+de modificar el programa, distribuir el programa, etc., etc.. </p>
+
+<p class="indent"> Sin embargo, hay una sutileza aquí. Las grandes empresas han
+hecho blanqueo cruzado de licencias. IBM y Microsoft tienen seguramente
+una licencia de blanqueo cruzado de patentes para todas las patentes
+que tienen y tendrán siempre, e incluso puede que IBM no sepa
+exactamente qué cubren las patentes de Microsoft e IBM tiene uno de
+éstos acuerdos con cada gran empresa que tenga relación cercana con las
+computadoras o el software. </p>
+
+<p class="indent"> De modo que IBM tiene licencias de patente para mucha 
+cosas que desconoce. El resultado es tal, que podrían tener una licencia 
+que los asegure y no lo sepan. Así pues, decimos que no es justo ponerlos
+en una posición peor que la suya, por el hecho de estar al aparo de un
+blanqueo cruzado de licencias y alguien más este negociando
+explícitamente una licencia, así que dijimos, bien, aplicaremos
+solamente si usted se ampara a sabiendas en una licencia de patente.
+Entonces, si IBM tiene una licencia de patente como parte de un
+blanqueo cruzado y no lo sabe, en ese caso no es aplicable, pero si
+toma conocimiento que está sucediendo este problema y tienen una
+licencia de patente, entonces tienen que hacer algo. A IBM no parece
+gustarle mucho esta idea. </p>
+
+<p id="software-patents-retaliation">[sección: Patentes de software, 
+Parte II, represalias acotadas]</p>
+
+<p class="indent"> De todas formas. Hay algo más sobre el tratamiento de las
+patentes de software. Nos referimos al caso en que alguien modifica un
+programa publicado bajo GPL y tiene una patente que cubre esas
+modificaciones, pero nunca publica el programa. Si ésta persona lo
+publica, estará extendiendo la concesión de la licencia de patente a
+todos los usuarios. Aquí no habría problemas, pero ¿qué sucede si el
+programa nunca es publicado, y sólo se ejecuta en el webserver de la
+persona o empresa que hizo la modificación? </p>
+
+<p class="indent"> En ese caso no se está otorgando la concesión de la licencia
+de patente a nadie. Puede ser que esta persona diga: «modifiqué este
+programa cubierto por GPL para hacer este trabajo, y si usted escribe
+un programa que haga lo mismo, si usted escribe su propio código para
+hacer este trabajo, yo lo demandaré por violar mi patente». Así pues,
+llegado este punto, podemos decir que esta persona pierde sus derechos
+de hacer copias y de modificar el programa, etcétera. Básicamente, a
+los propósitos del negocio, sus aplicaciones serán insostenibles. De
+esta manera, nos protegemos contra este tipo de amenaza. </p>
+
+<p class="indent"> Ahora, hay algunas otras licencias de Software
+Libre que tienen otra cláusula de represalia por patentes de software. Algunas de
+ellas se diseñan para tomar represalias solamente contra una agresión.
+En algunas de ellas, en las licencias que fueron escritas por una
+empresa, a veces se toman represalias en cualquier de acción
+contra esa empresa. Esto no es bueno. Supongamos, por ejemplo, que la
+empresa A publica un programa cuya licencia caduca si usted demanda a
+la empresa A por violación de una patente. Bueno, admitamos que podría
+ser razonable dado que demandar por la infracción de patente de
+software es una cosa mala. Pero supongamos que la empresa A tiene
+muchas patentes y es habitual que presente demandas contra otros,
+supongamos ahora que la empresa A demanda a la empresa B por violación
+de patentes. Lo que haría la empresa B entonces sería demandar a A
+aduciendo agresión de su parte, contra la cuál B está tomando
+represalias, y así cuando B toma represalias, B pierde su derecho de
+utilizar ese programa porque la licencia del programa dice que si usted
+demanda a la empresa A, pierde el derecho de utilizar este programa. Lo
+que significa que se está tomando represalias por una represalia, y así
+en realidad se está convalidando la agresión de la empresa A. </p>
+
+<p class="indent"> De todas formas, estudiamos varias clases de
+cláusulas de represalias por patentes de software y decidimos que no deseamos poner
+ninguna de ellas en la GNU GPL, excepto la que describí aquí hace cinco
+minutos: ese caso muy limitado en que alguien realiza cambios
+patentados y no los publica. Pero, hay una forma en que otras cláusulas
+de represalia de patente pueden alcanzar a programas cubiertos por la
+versión tres de GNU GPL y ésto nos lleva al tercer cambio fundamental
+en la GPLv3, que es el de una mayor compatibilidad con otras licencias.
+</p>
+
+<p id="licence-compatibility">[sección: Tercer cambio principal:
+compatibilidad de la licencia]</p>
+
+<p class="indent"> Primero: ¿qué significa compatibilidad? </p>
+
+<p class="indent"> Suponga que tenemos dos o tres programas y cada uno tiene su
+propia licencia y usted quiere combinarlos o enlazarlos. ¿Puede
+hacerlo? Bien, cada una de estas licencias pudo incluir condiciones
+para el licenciamiento de combinaciónes. Entonces, la pregunta sería:
+¿Existe algún modo de respetar los términos de ambas licencias a la
+vez? Si lo hay, las licencias son compatibles, y se puede hacer la
+combinación porque existe una forma de licenciar la combinación que
+satisfaga ambas licencias. </p>
+
+<p class="indent"> Pero si no hay manera de licenciar la combinación de modo que
+se cumplan los requisitos de ambas, la combinación no podrá hacerse.
+Eso significa que las licencias son incompatibles. </p>
+
+<p class="indent"> La incompatibilidad entre licencias es un hecho. Siempre ha
+habido licencias de Software Libre incompatibles. Diría que una clase
+flagrante de incompatibilidad es la licencia de TeX, que es
+incompatible con ella misma. </p>
+
+<p> [ risas ] </p>
+
+<p class="indent"> Si usted tiene dos programas bajo licencia Tex, no tiene modo
+alguno de combinarlos. La razón es que la licencia de Tex dice que la
+única manera que de distribuir una versión modificada es distribuyendo
+la versión original más un archivo de modificaciones, un parche. </p>
+
+<p class="indent"> Pensemos este escenario: tenemos estos dos programas ambos
+publicados de esa manera y queremos combinarlos. ¿Cómo se distribuirá
+la versión combinada? Bien, un programa dice que debe ser distribuído
+su original más el archivo del modificaciones, pero el otro dice que
+debe debe ser distribuído de la misma manera. Es imposible que ambos
+sean «el original» en nueva distribución al mismo tiempo, por lo tanto
+la licencia de TeX es incompatible con ella misma. </p>
+
+<p class="indent"> La GNU GPL es una licencia con copyleft. La idea del copyleft
+es: cuándo usted publica una versión modificada, esta deberá estar
+exactamente bajo la misma licencia. El resultado es que, generalmente,
+dos diferentes licencias con copyleft son incompatibles entre sí. Cada
+una dice que la versión modificada tiene que estar bajo esa licencia en
+particular y no otra. Si las licencias son diferentes, una versión
+modificada no puede estar bajo ambas a la vez. Si está bajo una de
+ellas, no está bajo la otra. </p>
+
+<p class="indent"> Así pues, dos diferentes licencias con copyleft, son
+generalmente incompatibles. Pero en la versión tres de la GPL estamos
+intentando incluir elementos pensados para ofrecer mayor compatibilidad
+a la versión tres de la GPL con otras licencias. Ahora la versión tres
+de la GPL es compatible con algunas licencias. A saber, licencias
+permisivas simples. Ejemplos como la licencia X11, la versión revisada
+de BSD, y muchas otras importantes licencias de Software Libre que son
+licencias simples, licencias permisivas de Software Libre. </p>
+
+<p class="indent"> La razón que las hace compatibles con la GPL es la ausencia
+en ellas de requisitos inconsistentes o contrarios a la GPL. Se puede
+tomar la GPL y ponerla encima de estas licencias y esas licencias no
+tendrán objeciones, porque son muy permisivas. </p>
+
+<p class="indent"> Y hay otra clase de licencias que son compatibles con la
+versión dos del GPL, las licencias duales disjuntivas. El ejemplo
+típico es la licencia de Perl. Dice que «usted puede utilizar Perl bajo
+GNU GPL o la bajo la licencia Artistic». Esto es una separación clara
+entre dos licencias. A o B. Y dado que la GNU GPL en este caso es una
+opción, la licencia del Perl es compatible con la GNU GPL. </p>
+
+<p class="indent"> Algunas otras licencias de Software Libre son compatibles con
+la versión dos de la GPL. Hay muchas que no lo son porque tienen otros
+requisitos que no están en la GPL y puesto que la versión dos de la GPL
+no permite el agregado de ningún tipo de requisitos, cualquier licencia
+que incluya requisitos que no estén en la versión dos de la GNU GPL es
+incompatible con ella. </p>
+
+<p class="indent"> Así pues, lo que hemos hecho en el borrador de la versión
+tres de la GPL es establecer una lista específica de ciertas clases de
+requisitos que pueden ser agregados. Estos incluyen algunos requisitos
+algo triviales que pensamos, se podrían agregar de todos modos, como
+decir «mi licencia debe ser preservada», «el aviso de copyright se debe
+preservar», y que no hacen ningún daño. Y términos como, deberá
+indicar de alguna manera que se trata de una versión modificada». La
+GPL siempre ha requerido indicar si se trata de versiones modificadas
+pero lo ha hecho de una forma muy particular. Pero podría agregarse
+código con requisitos diferentes para esas modificaciones y la versión
+tres de la GPL lo aceptará, manteniéndo la compatibilidad. </p>
+
+<p class="indent"> Otra clase particular de requerimiento son las cláusulas de
+represalias por patentes. Dentro de cierto rango, en aquellas que no
+están sujetas a abuso, trabajamos cuidadosamente en el diseño de una
+descripción de requisitos en los cuales la cláusula de represalias de
+patentes no avale agresiones, y estas son las que permitimos. </p>
+
+<p class="indent"> Y finalmente, permitimos el requisito de «Affero». El
+requisito de Affero se encuentra en la Licencia Pública General de
+Affero, la Affero GPL. La Affero GPL es como la versión dos de la GNU
+GPL pero tiene otro requisito, que dice que si pones el programa en un
+sitio Web de acceso público, tienes que liberar el código fuente de tu
+versión. </p>
+
+<p class="indent"> Este es un requisito sobre uso público de un programa. Así
+pues, esta es una clase de requisito que puede ser agregada. No está en
+la versión tres de la GPL en sí misma pero se puede agregar. </p>
+
+<p id="limits-of-requirements">[sección: De cómo se limitan los
+requisitos añadibles]</p>
+
+<p class="indent"> Permítamne poner algo en claro. Usted no puede tomar código
+licenciado bajo GPLv3 existente y simplemente agregar sus requisitos
+adicionales. Lo qué usted puede hacer es escribir su propio código con
+requisitos adicionales propios, o fusionar código de otros que tenga
+requisitos puestos por sus autores, y cuando se lo combine [con código
+bajo GPLv3], estos requisitos seguirán acfectando únicamente al código
+al que originalmente fuera aplicado. Así que en realidad no se distinge
+tanto del resto del programa. Si usted utiliza el programa completo,
+por supuesto que incluye esa parte, y tendrá usted que respetar los
+requisitos que afectan a esa parte. Pero permanecen en esa parte, si
+usted la suprime... </p>
+
+<p> [Desde aquí, las limitaciones de pilas y memoria impiden que
+la grabación esté completa] </p>
+
+<h2>Sesión de preguntas y respuestas</h2>
+
+<p id="q10-gfdl"> P1: ¿Es útil la GPLv3 para documentación o compatible con
+la GNU FDL Licencia de Documentación Libre? </p>
+
+<p class="indent"> Richard Stallman: Las dos licencias son absolutamente
+incompatibles. Son dos licencias con copyleft muy distintas, y
+diferentes licencias con copyleft siempre van a ser incompatibles. La
+GNU GPL tiene requisitos que son inadecuados para quien quiera publicar
+libros impresos, como manuales. No es buena idea utilizar la GNU GPL
+para un manual. Así pues, desarrollé una licencia diferente para
+manuales, una licencia específicamente concebida en la idea de animar a
+empresas comerciales a que la utilicen en la publicación de sus
+manuales. Introduje ciertas características con la esperanza de que
+favorecieran la generación de ganancias a quienes vendan manuales
+publicados bajo una licencia con copyleft y otra característica
+especial que se supone facilitarán la publicación de documentos
+estandar bajo esa licencia. </p>
+
+<p class="indent"> Hay una clase de capítulo llamado capítulo de «endosos» que
+puede decir «Este es el estándar oficial de Foobar» y quien quiera que
+haga versiones modificadas de éste documento debe eliminar este
+capítulo de modo que ya no diga que es una versión oficial del
+estándar. 
+</p>
+
+<p class="indent">Y usted puede poner éste, junto a un capítulo invariado
+diciendo «si usted no ve un capítulo diciendo que ésta es una versión
+oficial del estándar, entonces no lo es». De este modo, si su objetivo
+es asegurarse de que todos sepan si su libro contiene la versión
+oficial del estándar, con esto lo logrará.
+Es triste que ahora, el verdadero objetivo de mayoría de las
+organizaciones de estándares es hacer dinero con la publicación de sus
+estándares, y se nieguen absolutamente a cooperar, pero posibilitar su
+cooperación, de modo que cuando presionemos para que lo hagan, debemos
+propiciar alguna forma práctica en que lo puedan hacer, y la GNU FDL
+Licencia de Documentación Libre lo hace.
+</p>
+
+<p class="indent">Estas cosas son incomatibles con la GPL. </p>
+
+<p id="q20-affero">P2: Parece que la cláusula de Affero está diseñada claramente
+para proteger a la gente que utiliza software a través de su navegador...
+</p>
+
+<p class="indent"> Richard Stallman: Eso no es verdad, pero continúe. Esa no era
+nuestra intención. Lo explicaré pero veamos su pregunta y luego lo
+explicaré. </p>
+
+<p class="indent"> P2b: Mi pregunta, que puede estar basada en premisas falsas,
+es: ¿por qué han tomado la decisión mantener la cláusula de Affero como
+una opción? </p>
+
+<p class="indent"> Richard Stallman: No queremos que esta clase de cambios
+afecten a todo el software GPL existente. Alguna gente no quiere eso.
+Se consideró la inclusión de esta característica en la GPL pero
+decidimos que solamente se activaría si el programa hace algo para
+activarlo. Entiendo que si se desea disponer de formas de activarlo,
+esta forma es tan buena como cualquiera. </p>
+
+<p class="indent"> De todas formas, no es ésta ciertamente una cuestión de
+proteger a un usuario que haga cosas a través de un browser. En
+realidad no se refiere a eso, sino al caso en que una persona A escribe
+un programa para uso en un sitio web, y lo libera bajo la GPL. Otra
+persona B lo mejora e instala en su propio web. No publica su versión
+modificada y no tiene ninguna motivación en publicarla dado que él
+vende los derechos de uso através de su sitio web. Entonces el
+desarrollador A se encuentra en desventaja. Cada vez que él realiza
+cambios, B se beneficia de ellos, pero cada vez que B realiza cambios,
+A no tiene acceso a ellos. De esta manera, si A publica bajo la Affero
+GPL entonces B tiene que publicar sus modificaciones en virtud del uso
+público que hace del programa. </p>
+
+<p class="indent"> De este modo se libera del problema. </p>
+
+<p class="indent"> Ahora, el tema que usted plantea es muy real, pero es otra
+clase de problema. Veamos, intentamos asegurarnos de que usted tiene la
+libertad de cambiar, redistribuir y hacer funcionar el programa como
+usted quiere, pero esto ocurre si tienes una copia del programa. No
+deseamos obviamente darle a nadie la libertad cambiar la copia de otra
+persona porque es ella quien se supone debe tener el control sobre su
+copia, así que para tener/ejercer estas libertades usted tiene que
+tener su propia copia. </p>
+
+<p class="indent"> De hecho, éste no es un problema de lo que diga la GPL, es un
+hecho de la vida, no se puede eludir. Si usted no tiene su propia copia
+del programa, usted no tiene el control. Alguien puede mantener una
+copia por usted, puede ser que usted utilice un servicio de tiempo
+compartido y</p>
+
+<p> [ la grabación se interrumpe otra vez ] </p>
+
+<p id="q30-cooperating-with-osi"> P3: [ sin grabar, pero la pregunta fue sobre la cooperación
+con la iniciativa Open Source OSI ] </p>
+
+<p class="indent"> El movimiento de Software Libre, que fundé en 1983 se
+concentra en la libertad y la comunidad, en los derechos humanos de los
+usuarios de software. La «Open Source» fue fundada en 1998 como un
+intento de dejar de hablar de estas cosas. Para silenciarlas, para
+enterrarlas, para quitarlas de la vista de la gente. Ellos hablan de
+las ventajas prácticas que trae usar el software. Bien, yo también
+hablo de estas ventajas prácticas en mis discursos. Esto es lo que digo
+yo [ Stallman contornea un círculo grande con sus manos ], y esto es lo
+que dicen ellos [ Stallman contornea un círculo más pequeño dentro del
+primer círculo ], es sólo que ellos profundizan en las ventajas
+prácticas, y éso es útil, ustedes saben. Es en el área de los negocios,
+donde obtienen cierta ventaja práctica del hecho de lanzar su software
+bajo una licencia que generalmente es de software libre. Esto es útil,
+pero sigue siendo una parte más superficial en todo esto. </p>
+
+<p class="indent"> Dicen que su deseo es cooperar, y quieren que nosotros
+cooperemos olvidándonos de lo que consideramos lo más importante,
+adhiriendo a su postura de ir solamente a la parte superficial. Ésta es
+la forma en que lo propone Eric Raymond, es muy astuto de su parte
+pedir que abandonemos la parte más importante, y que aparezca él como
+el único que ha sido razonable. </p>
+
+<p id="q40-creative-commons">
+P4: [ inaudible pero menciona «la licencia creative common» ] </p>
+
+<p class="indent"> Richard Stallman: No hay ninguna. </p>
+
+<p class="indent"> P4b: ¿No hay? </p>
+
+<p class="indent"> Richard Stallman: No existe tal cosa como «la licencia Creative Commons».</p>
+
+<p class="indent"> P4c: No para el software </p>
+
+<p class="indent"> Richard Stallman: No existe tal cosa. </p>
+
+<p> [ risas ] </p>
+
+<p class="indent"> Y la razón por la que estoy respondiendo de esta manera es
+que este error es extremadamente común... </p>
+
+<p class="indent"> [ la grabación se interrumpe otra vez, Stallman comienza a
+explicar que hay muchas licencias Creative Commons, algunas son libres
+y otras no lo son, así que la etiqueta «Creative Commons» no es algo
+muy significativo en lo referente a la libertad. ] </p>
+
+<p id="q50-osi-responds">
+P5, por Michael Tiemann, presidente de la Open Source
+Initiative: Acerca de una pregunta anterior que le hicieron sobre Eric
+Raymond, yo quiero precisar el hecho de que Eric Raymond fue el
+presidente de la OSI, pero actualmente ya no lo es. </p>
+
+<p class="indent"> Eric, habla por sí mismo, no por la OSI. También quisiera
+aclarar que como presidente de la OSI, he apoyado siempre la GPL como
+modelo de licencia para los desarrolladores. La licencia GPL es la
+única bajo la que he puesto mis propios programas, además de la LGPL. </p>
+
+<p class="indent"> Reconozco su posición, que es decir que si no estoy hablando
+de la libertad, primero y antes que nada, entonces la estoy enterrando,
+pero pienso en ella de modo diferente... </p>
+
+<p class="indent"> Richard Stallman: Bien, puede que haga usted algo intermedio.
+Hay cosas intermedias. Cuando Eric Raymond era presidente de la OSI,
+podía percibir su intención de enterrar la tema de la libertad muy
+claramente. Y hay otros que hablan de «código abierto» quiénes
+claramente están intentando enterrar la libertad del software. Eso no
+implica que cada uno que utilize el término... lo que es cierto sobre
+vuestro uso del término es que generalmente no llama mucho la atención
+sobre a la libertad. </p>
+
+<p class="indent"> P5b, Michael Tiemann: Bien, en esta conferencia deseo
+expresar que lo que está usted haciendo es increíblemente valioso y lo
+respeto y gracias. </p>
+
+<p class="indent"> Richard Stallman: Gracias. </p>
+
+<p id="q60-translations">
+P6: [ apenas audible, la pregunta es sobre si habrá
+traducciones oficiales de la GPL, Esta persona de la audiencia insta a
+los activistas de la FSF a hacer traducciones oficiales de la licencia
+porque de otro modo, las cortes deberán hacerlas en caaso de litigio y
+estas pueden ser hechas con menos cuidado. ] </p>
+
+<p class="indent"> Richard Stallman: El peligro con una traducción oficial es
+que si incurrimos en una equivocación, podría ser un desastre absoluto.
+</p>
+
+<p class="indent"> ... y nosotros no podemos leer portugués. Yo no puedo y Eben
+Moglen tampoco. E incluso si pudiéramos, eso no significa que vayamos a
+entenderlo como abogados. Vean, trabajando con él en la versión tres de
+la GPL en inglés, puedo decirle «bien, he aquí lo que pienso que
+quiero» pidiéndole que me diga si realmente hace lo que pienso que
+hace. </p>
+
+<p class="indent"> Un trabajo como éste en idiomas extranjeros sería mucho más
+duro, así que producir una traducción de la GLP en cualquier otra
+lengua sería mucho más difícil que lo que ya hemos hecho y no creo que
+sea posible. No sé a quién puedo confiar este trabajo. Conozco abogados
+en varios país que apoyan fuertemente el movimiento de software libre,
+pero confiar esto a ellos es demasiado... especialmente cuando un error
+puede arruinar las cosas a escala global.</p>
+
+<p class="indent">
+He considerado, que tal vez podríamos tener traducciones
+limitadas a un país. Por lo menos eso pone ciertos límites al desastre
+que un error causaría. </p>
+
+<p class="indent"> Otra cosa que me imaginaba -acabo de tener esta idea hoy-
+no sé si es una buena idea, pero podríamos hacer traducciones y decir
+«esta traducción es solamente válida por un año a menos que sea
+renovada o substituida por otra traducción más exacta». No podemos
+hacer eso con la GPL en sí misma. Si pudiéramos cambiar la GPL y forzar
+a la gente pasar a una nueva versión de la GPL, podríamos quitar sus
+libertades, pero la versión inglesa de la GPL no funciona de esa
+manera. Una vez que usted obtiene un programa bajo versión X de la GPL,
+siempre puede utilizarlo bajo versión X de la GPL eternamente. Mientras
+esto sea verdad, es quizá adecuado que las traducciones puedan ser
+revisadas, de modo que si hay un error en una traducción, posiblemente
+pueda corregirse. No sé si esto es realmente aceptable. Hay elementos
+para sostener que lo sea porque la versión original en inglés no será
+revocable, pero no estoy tan convencido que estos sean argumentos
+suficientemente fuertes. Tendré que hablar con gente sobre ello. </p>
+
+<p class="indent"> P6b: Es fácil para usted porque usted vive en un país de
+habla inglesa, pero en el Brasil donde hay un idioma diferente </p>
+
+<p class="indent"> Richard Stallman: Coincido con usted pero ese no es el punto.
+Las razones por las que sería bueno tener traducciones son obvias. El
+punto es: ¿podemos evitar el peligro? </p>
+
+<p class="indent"> Esta idea que he tenido hoy puede ser una forma aceptable de
+conseguir evitar el peligro, y si es así, tendremos traducciones. </p>
+
+<p id="q70-fragments"> P7: [ inaudible ] </p>
+
+<p class="indent"> Richard Stallman: ... y si cierto programa en el sistema
+permite Tivoisazión, entonces pueden Tivoizar, así que si bastantes
+programas importantes adoptan la versión tres de la GPL, la Tivoización
+en la práctica no será factible. </p>
+
+<p class="indent"> Por supuesto, esto depende de que estos programas adopten la
+versión tres de la GPL. </p>
+
+<p> P7b: [ inaudible ] </p>
+
+<p class="indent"> Richard Stallman: Ah, no, el punto es que esas cosas serán
+algo viejas, y en cierto punto ya no es útil utilizarlas. No son una
+opción razonable porque el código fue publicado hace mucho tiempo. </p>
+
+<p> [ fin de la grabación ] </p>
+
+<h2 id="links">Donde obtener más información</h2>
+
+<ul>
+  <li>FSFE: <a href="gplv3.html">Página del proyecto GPLv3 de FSF Europa</a> </li>
+  <li>FSF: <a href="http://gplv3.fsf.org/">Sitio web de GPLv3</a> </li>
+  <li>FSF: <a href="http://gplv3.fsf.org/draft">Borrador actual de la GPLv3</a> </li>
+  <li><a 
+      href="http://www.ifso.ie/documents/gplv3-launch-2006-01-16.html">
+      Transcripción de la apertura de la primera Conferencia Internacional de la GPLv3</a>
+      (Eben Moglen habla de los cambios hechos a la licencia)</li>
+  <li><a href="http://www.ifso.ie/documents/rms-gplv3-2006-02-25.html">
+      Transcripción de la charla de Richard Stallman sobre la GPLv3 en el FOSDEM 2006</a></li>
+  <li><a 
+      href="torino-rms-transcript.html">Transcripción de la charla de Richard Stallman 
+      sobre la GPLv3 en Turín</a></li>
+  <li>FSF: <a href="http://gplv3.fsf.org/wiki/index.php/Reusable_texts">
+      Wiki oficial de la GPLv3 con trascripciónes otros textos similares</a> 
+</li>
+</ul>
+
+
+</body>
+
+</html>

@@ -2,7 +2,7 @@
 # -----------------------------------------------------------------------------
 # Update local menus
 # -----------------------------------------------------------------------------
-# This script is called from the phase 1 Makefile and upates all the
+# This script is called from the phase 1 Makefile and updates all the
 # .localmenu.*.xml files containing the local menus.
 # -----------------------------------------------------------------------------
 

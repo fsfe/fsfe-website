@@ -61,7 +61,7 @@ $(SUBDIRS): .FORCE
 # -----------------------------------------------------------------------------
 
 # After this step, the following symlinks will exist:
-# * tools/.texts-<lang>.xml for each language
+# * global/data/texts/.texts.<lang>.xml for each language
 # * ./fundraising.<lang>.xml for each language
 # Each of these symlinks will point to the corresponding file without a dot at
 # the beginning of the filename, if present, and to the English version
@@ -70,14 +70,14 @@ $(SUBDIRS): .FORCE
 
 LANGUAGES := $(shell ls -xw0 global/languages)
 
-TEXTS_LINKS := $(foreach lang,$(LANGUAGES),tools/.texts-$(lang).xml)
+TEXTS_LINKS := $(foreach lang,$(LANGUAGES),global/data/texts/.texts.$(lang).xml)
 
 all: $(TEXTS_LINKS)
-tools/.texts-%.xml: .FORCE
-	if [ -f tools/texts-$*.xml ]; then \
-	  ln -sf texts-$*.xml $@; \
+global/data/texts/.texts.%.xml: .FORCE
+	if [ -f global/data/texts/texts.$*.xml ]; then \
+	  ln -sf texts.$*.xml $@; \
 	else \
-	  ln -sf texts-en.xml $@; \
+	  ln -sf texts.en.xml $@; \
 	fi
 
 FUNDRAISING_LINKS := $(foreach lang,$(LANGUAGES),.fundraising.$(lang).xml)

@@ -51,7 +51,7 @@
         <xsl:attribute name="class">btn btn-success</xsl:attribute>
         <xsl:attribute name="href">https://my.fsfe.org/support</xsl:attribute>
         <xsl:call-template name="fsfe-gettext">
-          <xsl:with-param name="id">support/become</xsl:with-param>
+          <xsl:with-param name="id" select="'support/become'" />
         </xsl:call-template>
       </xsl:element><!-- a -->
     </xsl:element><!-- div -->

@@ -24,17 +24,19 @@ Most files are XHTML files organised in a rather logical folder structure.
 Notable directories are:
 
 * `about`: Information about the FSFE itself, its team members etc
+* `activities`: All specific FSFE activities
 * `at`, `de`, `ee` etc: Folders used for the FSFE country teams
 * `build`: Mostly custom Bash and XSL scripts to build the website
 * `cgi-bin`: Our very few CGI scripts
 * `error`: Custom 4xx and 5xx error pages
 * `events`: Files for our events, ordered by year
+* `freesoftware`: More timeless pages explaining Free Software and related topics
+* `global`: Globally used data files and modules
 * `graphics`: Icons, pictures and logos
 * `internal`: Forms used mostly by FSFE staff for internal processes
 * `look`: CSS and other style files
 * `news`: Files for news articles, press releases, and newsletters ordered by year
 * `order`: Our web shop
-* `picturebase`: Central directory for pictures we use
 * `scripts`: JavaScript files used on our pages
 * `tags`: Files necessary to display used tags throughout the website. Mostly automatically generated
 * `tools`: Contains miscellaneous XML, XSL, and SH files. Most notably it contains the static translated texts (strings).
@@ -43,8 +45,8 @@ Notable directories are:
 
 This repository also contains the source files of other websites the FSFE hosts:
 
-* `campaigns/android` for [freeyourandroid.org](http://freeyourandroid.org)
-* `campaigns/ilovefs` for [ilovefs.org](http://ilovefs.org)
+* `activities/android` for [freeyourandroid.org](http://freeyourandroid.org)
+* `activities/ilovefs` for [ilovefs.org](http://ilovefs.org)
 * `drm.info` for [drm.info](http://drm.info)
 * `pdfreaders` for [pdfreaders.org](http://pdfreaders.org)
 * [test.fsfe.org](http://test.fsfe.org) is build from the test branch of this repository
@@ -57,7 +59,7 @@ Become member of our awesome [webmaster team](https://fsfe.org/contribute/web/) 
 
 We adore our voluntary translators who make information about Free Software available over 30 languages, from Arabic to Turkish!
 
-Join them to spread the message of our community in all over Europe and beyond. The [translators team page](https://fsfe.org/contribute/translators/) will introduce you to its work.
+Join them to spread the message of our community in all over Europe and beyond. The [translators team page](https://fsfe.org/contribute/translators/) will introduce you to their amazing work.
 
 ## Build
 

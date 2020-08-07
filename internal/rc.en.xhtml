@@ -133,8 +133,8 @@
         </tr>
 
         <tr class="descr">
-          <td></td>
-          <td>In EUR. <a href="https://ec.europa.eu/budget/graphs/inforeuro.html">Convert foreign currencies</a></td>
+          <td>"Belegdatum" for credit card statements</td>
+          <td>In EUR (<a href="https://ec.europa.eu/budget/graphs/inforeuro.html">Convert</a>). Format: 123,00</td>
           <td></td>
           <td>Valid ER number, or <strong>?</strong> if you do not have it</td>
           <td>Catch phrase for the ER</td>
@@ -145,7 +145,7 @@
         
         <tr>
           <td><input type="date" name="entry[]" class="form-control" required="required" /></td>
-          <td><input type="number" name="amount[]" step=".01" class="form-control" placeholder="12.34" required="required" /></td>
+          <td><input type="text" name="amount[]" class="form-control" pattern="\d{0,5},\d{2}" placeholder="12,34" required="required" /></td>
           <td><input type="text" name="recipient[]" class="form-control" required="required" /></td>
           <td><input type="text" name="er[]" class="form-control" pattern="(^\?$|^er\.[\d]{4}-[\d]{2}-[\d]{2}\.[\d.-]+)" placeholder="er.2020-..." required="required" /></td>
           <td><input type="text" name="catch[]" class="form-control" required="required" /></td>

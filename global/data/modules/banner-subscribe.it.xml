@@ -7,8 +7,7 @@
     <div class="banner-subscribe">
       <p>
         Iscriviti ai nostri aggiornamenti per email. I nostri esperti ti
-        informeranno sulle notizie più recenti, gli eventi, le attività e su
-        come partecipare.
+        informeranno sulle notizie più recenti, gli eventi, le attività e su come partecipare.
       </p>
 
       <form class="form-inline" method="post" action="https://my.fsfe.org/subscribe">
@@ -21,7 +20,7 @@
         </div>
         <fsfe-cd-referrer-input/>
         <input type="hidden" name="wants_info" value="yes"/>
-        <button class="btn btn-default" type="submit">Voglio rimanere informato/a</button>
+        <button class="btn btn-default" type="submit">Voglio rimanere informato</button>
       </form>
     </div>
   </module>

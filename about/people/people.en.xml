@@ -14,19 +14,19 @@
     <name> Full name of the person
     <country> Where the person lives (TODO: Where is this used?!)
     <function> The function(s) of the person (you can have more). This is a bit more complicated to express, as it uses several sources of possible functions:
-      - functions.en.xml: This is the most important file. Here are all "normal" functions like intern or sysadmin, but also "ranks" for other projects
-      - projects.en.xml: There are several projects like Legal Team (ftf), Education (education) or Open Standards (os)
+      - functions.en.xml: This is the most important file. Here are all "normal" functions like intern or sysadmin, but also "ranks" for other activities
+      - activity.en.xml: There are several activities like REUSE Software (reuse), PMPC (publiccode) or Router Freedom (routers)
       - countries.en.xml: (translated) names for countries, i.e. for coordinators of a country team
       - groups.en.xml: (translated) names for groups (mostly cities), i.e. for coordinators of a local group
       - function-fellowship.en.xml: Functions related to the fellowship
       - volunteers.en.xml: Functions for volunteers (web team, translation coordinator...)
       Here are some examples:
-        <function>president/f</function>: Female president
-        <function>intern/m</function>: Male intern
-        <function country="DE">deputy/m</function>: Deputy (male) of the German team
-        <function group="bari">coordinator/f</function>: Coordinator (female) of the Bari group
-        <function project="legal">coordinator/m</function>: Coordinator of the Legal team
-        <function volunteers="translators-it">coordinator/m</function>: Coordinator of italian translations
+        * <function>president/f</function>: Female president
+        * <function>intern/m</function>: Male intern
+        * <function country="DE">deputy/m</function>: Deputy (male) of the German team
+        * <function group="bari">coordinator/f</function>: Coordinator (female) of the Bari group
+        * <function activity="reuse">coordinator/m</function>: Coordinator of the REUSE activity
+        * <function volunteers="translators-it">coordinator/m</function>: Coordinator of italian translations
       Note: You can use more than one function tag.
       Note: If someone has no function inside the FSFE, he can ignore the function-tag (like person from associative organisations)
 
@@ -56,7 +56,7 @@
         - /about/people/people.en.xml (this file): All FSFE-teammembers, even those not belonging to team@ (i.e. country teams)
         - /about/team.**.xhtml: The frame of the team page: Information texts, Headlines etc
         - /about/team.xsl: In this file, tags like <council-members /> are defined.
-        - /about/team.sources: Where to look for people-files, translations of functions/projects/countries and so on
+        - /about/team.sources: Where to look for people-files, translations of functions/activities/countries and so on
         - /about/people/avatars/: Place for all avatar pictures
         - /build/xslt/people.xsl: The building of the team lists itself: Links, Background colors, inclusion of avatars etc
   -->
@@ -119,7 +119,8 @@
   <person id="bakker">
     <name>Carmen Bianca Bakker</name>
     <country>NL</country>
-    <function project="reuse">deputy/f</function>
+    <function activity="reuse">deputy/f</function>
+    <team>core</team>
     <email>carmenbianca (at) fsfe (dot) org</email>
   </person>
 
@@ -272,7 +273,6 @@
   <person id="feltrin">
     <name>Nicola Feltrin</name>
     <country>IT</country>
-    <function project="ftf">coordinator/m</function>
     <team>ftf</team>
     <email>nicola (dot) feltrin (at) fsfe (dot) org</email>
   </person>
@@ -820,11 +820,8 @@
   <person id="sliwinski">
     <name>Ulrike Sliwinski</name>
     <country>DE</country>
-    <function>office/f</function>
     <team>ga</team>
-    <team>core</team>
     <email>usli (at) fsfe (dot) org</email>
-    <employee>part/f</employee>
     <avatar>sliwinski.png</avatar>
   </person>
 

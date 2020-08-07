@@ -22,7 +22,7 @@ check_dependencies() {
 }
 
 # Check dependencies for all kinds of build envs (e.g. development, fsfe.org)
-check_dependencies realpath rsync xsltproc xmllint sed find egrep grep wc make tee date iconv wget
+check_dependencies realpath rsync xsltproc xmllint sed find egrep grep wc make tee date iconv wget shuf
 
 if ! make --version | grep -q "GNU Make 4"; then
   echo "The build script requires GNU Make 4.x"

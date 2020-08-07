@@ -19,7 +19,7 @@
       ]">
       <xsl:element name="h3">
         <xsl:call-template name="fsfe-gettext">
-          <xsl:with-param name="id">related-news</xsl:with-param>
+          <xsl:with-param name="id" select="'related-news'" />
         </xsl:call-template>
       </xsl:element>
       <xsl:call-template name="news-list"/>
@@ -31,7 +31,7 @@
       ]">
       <xsl:element name="h3">
         <xsl:call-template name="fsfe-gettext">
-          <xsl:with-param name="id">related-events</xsl:with-param>
+          <xsl:with-param name="id" select="'related-events'" />
         </xsl:call-template>
       </xsl:element>
       <xsl:call-template name="event-list"/>
@@ -47,7 +47,7 @@
             <xsl:text>.html</xsl:text>
           </xsl:attribute>
           <xsl:call-template name="fsfe-gettext">
-            <xsl:with-param name="id">related-all</xsl:with-param>
+            <xsl:with-param name="id" select="'related-all'" />
           </xsl:call-template>
         </xsl:element><!-- a -->
       </xsl:element><!-- p -->
@@ -70,7 +70,7 @@
         <xsl:attribute name="id">related-news</xsl:attribute>
         <xsl:element name="h2">
           <xsl:call-template name="fsfe-gettext">
-            <xsl:with-param name="id">related-news</xsl:with-param>
+            <xsl:with-param name="id" select="'related-news'" />
           </xsl:call-template>
         </xsl:element><!-- h2 -->
         <xsl:call-template name="news-feed"/>
@@ -85,7 +85,7 @@
         <xsl:attribute name="id">related-events</xsl:attribute>
         <xsl:element name="h2">
           <xsl:call-template name="fsfe-gettext">
-            <xsl:with-param name="id">related-events</xsl:with-param>
+            <xsl:with-param name="id" select="'related-events'" />
           </xsl:call-template>
         </xsl:element><!-- h2 -->
         <xsl:call-template name="event-feed"/>
@@ -102,7 +102,7 @@
             <xsl:text>.html</xsl:text>
           </xsl:attribute>
           <xsl:call-template name="fsfe-gettext">
-            <xsl:with-param name="id">related-all</xsl:with-param>
+            <xsl:with-param name="id" select="'related-all'" />
           </xsl:call-template>
         </xsl:element><!-- a -->
       </xsl:element><!-- p -->

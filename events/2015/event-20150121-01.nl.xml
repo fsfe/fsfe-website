@@ -1,26 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <eventset>
   <version>1</version>
-
-   
-	<event start="2015-01-21" end="2015-01-21"> 
- 
-		<title>Fellowship-meeting in Hamburg, Duitsland</title> 
- 
-		<body> 
-			<p>Op 21 januari heeft de Fellowship-groep in Hamburg, Duitsland haar maandelijkse meeting. Iedereen is welkom in de Roxie Bar, Rentzelstraße 6, 20146 Hamburg.</p>  
-		</body> 
- 
-		<link>https://wiki.fsfe.org/groups/Hamburg</link> 
- 
-
-		<tags>
-			<tag key="hamburg">Hamburg</tag>
-			<tag key="de">Deutschland</tag>
-			<tag key="voorpagina"/>
-		</tags>
-
- 
-	</event> 
-</eventset> 
+  <event start="2015-01-21" end="2015-01-21">
+    <title>Fellowship-meeting in Hamburg, Duitsland</title>
+    <body>
+      <p>Op 21 januari heeft de Fellowship-groep in Hamburg, Duitsland haar maandelijkse meeting. Iedereen is welkom in de Roxie Bar, Rentzelstraße 6, 20146 Hamburg.</p>
+    </body>
+    <link>https://wiki.fsfe.org/groups/Hamburg</link>
+    <tags>
+      <tag key="hamburg">Hamburg</tag>
+      <tag key="de">Deutschland</tag>
+      <tag key="front-page"/>
+    </tags>
+  </event>
+</eventset>

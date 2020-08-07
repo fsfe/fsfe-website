@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
- 
 <eventset>
   <version>0</version>
-
   <event start="2010-04-24" end="2010-04-24">
     <title>"Linuxtage" στο Graz, Αυστρία</title>
     <body>
@@ -16,5 +14,8 @@
       </p>
     </body>
     <page>http://graz.linuxtage.at/</page>
+    <tags>
+      <tag key="at"/>
+    </tags>
   </event>
 </eventset>

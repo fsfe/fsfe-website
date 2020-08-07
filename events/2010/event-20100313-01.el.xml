@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
- 
 <eventset>
   <version>0</version>
-
   <event start="2010-03-13" end="2010-03-14">
     <title>Chemnitzer "LinuxTage", Chemnitz, Γερμανία</title>
     <body>
@@ -22,5 +20,8 @@
       </p>
     </body>
     <page>http://chemnitzer.linux-tage.de/2010/</page>
+    <tags>
+      <tag key="de"/>
+    </tags>
   </event>
 </eventset>

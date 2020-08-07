@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html>
+  <version>1</version>
+
+  <head>
+    <title>TUX&amp;GNU@school - Ausgabe 5</title>
+  </head>
+
+  <body>
+    <div>
+    <h1>TUX&amp;GNU@school - Ausgabe 5</h1>
+
+    <p><i>Die Kolumne <a
+    href="/activities/tgs/tgs.de.html">TUX&amp;GNU@school
+    [2]</a> berichtet monatlich jeweils über ein Stück freie
+    Lernsoftware, eine Homepage zum Thema und eine leicht
+    umzusetzende Idee. Diesen Monat geht es um <a
+    href="http://www.newbreedsoftware.com/tuxpaint/">Tuxpaint
+    [3]</a>, ein freies Malprogramm für Kinder, um das Thema "<a
+    href="http://www.debian.org">Debian [4]</a> in der Schule", und
+    um die Idee "Grosse Zahlen einfach begreifen".</i></p>
+
+    <p>Herzlich willkommen zur fünften Ausgabe. Wie bereits
+    versprochen, gibt es wieder was Neues. Dies ist die erste
+    Ausgabe, die unter dem Dach der <a
+    href="/">Free Software Foundation Europe
+    [5]</a> und dem <a href="http://www.gnu.org">GNU-Projekt
+    [6]</a> erscheint. In diesem Zusammenhang wird
+    TUX&amp;GNU@school fortan in mehreren Sprachen erscheinen,
+    zuerst allerdings mal in Englisch und Deutsch. Es sind
+    ebenfalls schon alle früheren Versionen in Englisch verfügbar
+    (<a href="/activities/tgs/tagatschool1.en.html">TGS
+    1 [7]</a>, <a
+    href="/activities/tgs/tagatschool2.en.html">TGS 2
+    [8]</a>, <a
+    href="/activities/tgs/tagatschool3.en.html">TGS 3
+    [9]</a> und <a
+    href="/activities/tgs/tagatschool4.en.html">TGS 4
+    [10]</a>). Falls also noch jemand, der oder die eine ältere
+    Ausgabe liest, Lust hat, eine Idee zu implementieren, nur zu.
+    An dieser Stelle recht herzlichen Dank für die Unterstützung
+    beim Schreiben und Übersetzen an Christian Selig und Kristian
+    Rink. Wir wollen aber nicht zu viel Zeit verlieren und darum
+    gleich los zur diesmaligen Programm-Vorstellung.</p>
+
+    <h3>Tuxpaint - Malen macht richtig Spass</h3>
+
+    <p>Bei <a
+    href="http://www.newbreedsoftware.com/tuxpaint/">Tuxpaint
+    [3]</a> handelt es sich eigentlich um ein freies Malprogramm
+    für Kinder, welches unter der <a
+    href="http://www.gnu.org/licenses/licenses.html#TOCGPL">GNU GPL
+    [11]</a> steht. Ich schreibe "eigentlich", weil ich auch schon
+    von zahlreichen Erwachsenen gehört habe, die davon nicht mehr
+    los kommen ;-). Getestet habe ich die Version 0.9.1 vom
+    16.11.2001 unter <a href="http://www.debian.org">Debian
+    GNU/Linux [4]</a> testing/unstable. Unter Debian ist das
+    Programm ganz einfach mit dem Befehl <tt>apt-get install
+    tuxpaint</tt> zu installieren. Aktuell ist die Version 0.9.2,
+    welche in zahlreichen Sprachen erhältlich ist. Dazu gehören
+    z.B. Deutsch, Französisch, Englisch, Dänisch, etc. um nur
+    einige zu nennen. Die vollständige Liste findet ihr auf der <a
+    href="http://www.newbreedsoftware.com/tuxpaint/features">Homepage
+    des Projektes [12]</a>. Was sicher auch zu erwähnen wäre, sind
+    die <a
+    href="http://www.newbreedsoftware.com/tuxpaint/download">Portierungen
+    [13]</a> auf gängige Plattformen, wie etwa GNU/Linux, Windows,
+    MacOS X und FreeBSD. Da wie bei jeder Freien Software auch in
+    diesem Fall der Quell-Code zur Verfügung steht, sollte weiteren
+    Portierungen eigentlich nichts im Wege stehen.</p>
+
+    <p>Startet man Tuxpaint entweder über die Konsole oder mit
+    einem Klick auf das entsprechende Icon, erscheint zuerst Tux
+    mit einem Pinsel in der Hand. Nach einem Klick auf das Fenster
+    oder ein paar Sekunden warten, erscheint dann der Bildschirm,
+    wie ihn Abbildung 1 zeigt. Die Oberfläche ist in fünf
+    Abschnitte aufgeteilt. Links befindet sich die Werkzeugleiste,
+    in der neben verschiedenen Werkzeuggruppen auch allgemeine
+    Funktionen, wie <i>Drucken</i>, <i>Speichern</i> und
+    <i>Beenden</i> aufgeführt sind. Zu den einzelnen
+    Werkzeuggruppen sind dann am rechten Rand die jeweils
+    verfügbaren Anwendungs-Möglichkeiten enthalten. Ein Beispiel
+    wäre hier die verschiedenen Malgrössen des Farbpinsels. Ein
+    weiteres Beispiel sieht man in Abbildung 1, nämlich die
+    wirklich zahlreichen Stempelvorlagen. Sollte es bei einer
+    bestimmten Funktion möglich sein, zwischen verschiedenen Farben
+    auszuwählen, so sind diese in der zweituntersten Reihe zu
+    finden. Gleich darunter sitzt Tux, der kleine Pinguine, der zu
+    allem etwas zu sagen hat. Entweder er gibt Tipps, oder er
+    erklärt, was gerade angeklickt wurde oder was ein bestimmter
+    Stempel darstellen soll. Und schliesslich der wichtigste und
+    grösste Teil der Oberfläche, nämlich des Künstlers Leinwand,
+    befindet sich in der Mitte. Wie man sieht, habe ich mich in
+    Abbildung 1 schon ein wenig künstlerisch betätigt ;-).</p>
+
+    <p><img src="./img/tuxpaint.de.png"
+    alt="Abbildung 1: Tuxpaint in Aktion" width="648" height="508"
+    border="0" /></p>
+
+    <h5>Abbildung 1: Tuxpaint in Aktion</h5>
+    <br />
+    <br />
+     
+
+    <p>Im Moment muss ich mich gerade arg zusammennehmen, dass ich
+    nicht mit Tuxpaint male, sondern diese Kolumne weiterschreibe.
+    Also, wie jedes gute Programm für Kleinkinder, ist es auch bei
+    Tuxpaint so, dass es zu jeder Aktion und zu jedem Klick ein
+    Geräusch gibt. Benutzt man z.B. den Radiergummi, klingt es so,
+    als ob man tatsächlich was auf dem Bildschirm ausradieren
+    würde. Speziell ist diese Eigenschaft bei einigen
+    Stempel-Vorlagen. Die Ziffern von 0 bis 9 werden z.B. (auf
+    Englisch) gesprochen und beim Auswählen des Gespenstes hört man
+    dieses auch gleich losheulen. Wird die Mondlandefähre
+    angewählt, hört man sogar Neil Armstrong seinen berühmten
+    ersten Satz sagen. Und von diesen speziellen Tönen bei den
+    Stempeln gibt es noch eine ganze Menge mehr.</p>
+
+    <p>Wie bereits erwähnt, ist das Programm in erster Linie für
+    Kleinkinder gedacht und darum sind z.B. auch <i>Rückgängig</i>-
+    und <i>Wiederherstellen</i>-Knöpfe hier einfach mit
+    <i>Zurück</i> und <i>Nochmal</i> beschriftet. Ähnlich ist es
+    mit dem <i>Öffnen</i>-Dialog, den man in Abbildung 2 sieht. Es
+    ist nicht nötig, sich durch zahlreiche Verzeichnisse zu
+    klicken, bis man dann sein Bild findet und anhand des
+    Dateinamens sowieso nicht mehr weiss, was es denn für ein Bild
+    ist. In Tuxpaint klickt die Künstlerin einfach auf
+    <i>Öffnen</i> und wählt dann im Fenster, wo sich sonst die
+    Leinwand befindet, das richtige Bild aus. Es ist auch gleich
+    hier möglich, Bilder zu löschen. Unter GNU/Linux werden
+    übrigens alle Bilder in ein Verzeichnis namens
+    <tt>.tuxpaint/saved</tt> gespeichert, das sich jeweils im
+    eigenen Heimat-Verzeichnis befindet. Die Bilder werden alle im
+    PNG-Format abgelegt, welches ein freies und standardisiertes
+    Format ist. Noch einfacher geht dann das Drucken. Einfach auf
+    <i>Drucken</i> klicken und schon wird das Bild ausgedruckt,
+    vorausgesetzt der Papa oder die Mama haben den Drucker richtig
+    installiert.</p>
+
+    <p><img src="img/tuxpaint.open.de.png"
+    alt="Abbildung 2: Tuxpaint beim Öffnen" width="648"
+    height="508" border="0" /></p>
+
+    <h5>Abbildung 2: Tuxpaint beim Öffnen</h5>
+    <br />
+    <br />
+     
+
+    <p>Hat man's dann mal geschafft, mit dem Malen aufzuhören und
+    verlässt das Programm, weisst einen Tux natürlich freundlichst
+    darauf hin, dass man sein Bild noch nicht gespeichert hat und
+    gibt einem auch gleich die Möglichkeit, dies zu ändern. Ich
+    hoffe, dass ich in all jenen, die Tuxpaint noch nicht kannten,
+    ein wenig Lust zum Ausprobieren erweckt habe. Tuxpaint ist
+    wirklich ein geniales Stück Software, dass man seinen Kindern
+    nicht vorenthalten darf. Ein grosses Dankeschön darum an Bill
+    Kendrick für sein Software-Kunststück, und wir sind alle
+    gespannt, was er uns in Zukunft noch alles bieten wird.</p>
+
+    <p>Nun aber weiter zum Thema "Debian in der Schule".</p>
+
+    <h3>Debian in der Schule</h3>
+
+    <p>Ursprünglich hatte ich vor, in diesem Abschnitt nur das
+    Projekt <a href="http://www.debian.org/devel/debian-jr">"Debian
+    Jr." [14]</a> vorzustellen. Es hat sich in der Zwischenzeit
+    aber ergeben, dass weitere zum Thema passende Unterprojekte in
+    Debian entstanden sind und darum möchte ich hier nun versuchen,
+    alle relevanten Projekte vorzustellen. Dies sollen sein:</p>
+
+    <ul>
+      <li><a href="http://www.debian.org/devel/debian-jr">Debian
+      Jr. [14]</a> - "Linux für Kinder von 1 bis 99"</li>
+
+      <li><a href="http://ddtp.debian.org">DDTP [15]</a> - Das
+      Debian Description Translation Project</li>
+
+      <li><a href="http://wiki.debian.net/debianedu">DebianEDU
+      [16]</a> - Debian als beste Distribution für die Bildung</li>
+
+      <li><a
+      href="http://www.debian.org/devel/debian-desktop">Debian
+      Desktop [17]</a> - Vereinfachung des Einsatzes von Debian auf
+      dem Desktop</li>
+    </ul>
+    Bevor ich aber zu den einzelnen Punkten komme, ist es
+    vielleicht sinnvoll, erst einmal Debian an sich vorzustellen.
+    Debian ist ein Projekt, dass, ähnlich Linux (dem Kernel)
+    selber, von Hunderten von Freiwilligen auf der ganzen Welt
+    betragen wird. Die wohl bekannteste Distribution dieser
+    Gruppierung ist Debian GNU/Linux, welche für bislang <a
+    href="http://www.debian.org/ports">11 Hardware-Architekturen
+    [18]</a> bereitsteht. Weiterhin gibt es noch Projekte mit
+    anderen Kerneln wie <a
+    href="http://www.debian.org/ports/hurd">Debian GNU/Hurd
+    [19]</a> und <a
+    href="http://www.debian.org/ports/freebsd">Debian GNU/FreeBSD
+    [20]</a> <a href="http://www.debian.org/ports/netbsd">(NetBSD)
+    [21]</a>, plus weitere <a
+    href="http://www.debian.org/devel">Unterprojekte [22]</a>.
+    <br />
+    <br />
+     
+
+    <p><a href="http://www.debian.org/devel/debian-jr">Debian Jr.
+    [14]</a>, wie der Titel schon sagt, will die
+    Debian-Distribution für Kinder attraktiver und einfacher
+    gestalten. Dabei werden als primäre Zielgruppe Kinder bis acht
+    Jahre ins Auge gefasst. Ist die Distribution optimal für Kinder
+    dieser Altersstufe angepasst, wird man dies evtl. für jene
+    zwischen 8 und 12 Jahren wiederholen. Das Unterprojekt stellt
+    zahlreiche <a
+    href="http://wiki.debian.net/JuniorPackages">Meta-Pakete
+    [23]</a> zur Verfügung, dies sind Pakete, die thematisch
+    geordnete Programme enthalten. Weiterhin sollen auch Eltern und
+    AdministratorInnen Mittel in die Hände gegeben werden, um das
+    System besser an die neue Zielgruppe anzupassen. Natürlich, wie
+    es bei Freier Software üblich ist, kooperiert auch Debian Jr.
+    mit verwandten Projekten, wie z.B. dem letztmals vorgestellten
+    <a
+    href="/activities/tgs/tagatschool4.de.html">[24]</a>
+    <a href="http://www.seul.org/edu">SEUL/edu [25]</a>. Was gerade
+    auch für die jungen Debian-Benutzer besonders wichtig scheint,
+    ist die Anpassung an deren Muttersprache. Auch dies ist ein
+    Ziel von Debian Jr., doch gerade dafür gibt es unter Debian ein
+    spezielles weiteres Unterprojekt: <a
+    href="http://ddtp.debian.org">DDTP [15]</a>.</p>
+
+    <p><img src="img/debian.de.png"
+    alt="Abbildung 3: Die Homepage von Debian" width="800"
+    height="600" border="0" /></p>
+
+    <h5>Abbildung 3: Die Homepage von Debian</h5>
+    <br />
+    <br />
+     
+
+    <p>Das <a href="http://ddtp.debian.org">DDTP - Debian
+    Description Translation Project [15]</a> machte es sich
+    ursprünglich zur Aufgabe, sämtlich Paket-Beschreibungen in alle
+    auf diesem Planeten gesprochenen Sprachen zu übersetzen. In der
+    unstable-Variante von Debian gibt es mittlerweile über 10000
+    Pakete, also eine ganze Menge Arbeit. Und trotzdem sind meines
+    Wissens für einige Sprachen schon alle Paket-Beschreibungen
+    übersetzt worden. Wie oben bereits angedeutet, beschränkt sich
+    DDTP zur Zeit nicht nur auf Paket-Beschreibungen, sondern
+    übersetzt auch Texte des debian-eigenen Konfigurationswerkzeugs
+    debconf und wird wohl auch bei der Übersetzung des neuen <a
+    href="http://people.debian.org/~mbc/di.html">Debian-Installers
+    [26]</a> aktiv mitarbeiten. Es ist übrigens sehr einfach, bei
+    den Übersetzungen mitzuhelfen, man braucht dazu nur ein
+    Email-Programm und die gute verfasste <a
+    href="http://ddtp.debian.org/how_it_works/index.en.html">Anleitung
+    [27]</a> von Michael Bramer, dem Projekt-Gründer.</p>
+
+    <p>DebianEDU ist noch recht jung. Es wurde erst am 6. September
+    2002 von Raphael Hertzog ins Leben gerufen. Ziel des Projektes
+    ist es laut <a href="http://wiki.debian.net/debianedu">Homepage
+    [16]</a>, die beste GNU/Linux-Distribution für den Schuleinsatz
+    zu erstellen. Entstanden ist DebianEDU aus der <a
+    href="http://logiciels-libres-cndp.ac-versailles.fr/distribution.html">
+    französischen Distribution fast gleichen Namens [28]</a>, die
+    in Frankreich speziell für diesen Zweck entwickelt wurde. Die
+    aus dieser Arbeit entstandenen Kenntnisse und Programme sollen
+    nun in das Projekt einfliessen und weitergeführt oder ergänzt
+    werden. Im Gegensatz zu Debian Jr. konzentriert man sich hier
+    auf Software, die in der Schule und ganz allgemein der Bildung
+    von Bedeutung sein kann. Natürlich gibt es dabei etliche
+    Überschneidungen, wobei aber durch engste Zusammenarbeit
+    doppelt gemachte Arbeit vermieden wird. Auch hier wird auf die
+    Her- und Bereitstellung von Meta-Paketen gesetzt, von denen es
+    auch schon eine ansehnliche Zahl gibt <a
+    href="http://wiki.debian.net/DebianEdu">[29]</a>.</p>
+
+    <p>Das vierte und letzte Debian-Projekt, welches ich hier
+    vorstellen möchte, ist ebenfalls noch sehr jung. Ziel von <a
+    href="http://www.debian.org/devel/debian-desktop">Debian
+    Desktop [17]</a> ist es, Debian GNU/Linux für den
+    Desktop-Benutzer noch attraktiver und einfacher zu machen.
+    Dabei stehen Ziele wie die einfache Installation mit
+    integrierter automatischer Hardwareerkennung ebenso auf der
+    Aufgabenliste wie die Bereitstellung von grafischen
+    Konfigurations-Werkzeugen wie z.B. <a
+    href="http://www.webmin.com">Webmin [30]</a>.</p>
+
+    <p>Debian GNU/Linux ist nicht nur eine vielfältige
+    Distribution, sie ist auch Grundlage vieler mehr oder weniger
+    erfolgreicher kommerzieller Distributionen. Neben kommerziellen
+    Abkömmligen wie etwa <a href="http://www.libranet.com">Libranet
+    [31]</a>, <a href="http://www.progeny.com">Progeny [32]</a>, <a
+    href="http://www.xandros.com">Xandros [33]</a> oder <a
+    href="http://www.lindows.com">Lindows [34]</a>, die leider oft
+    auch proprietäre Software mit untergemischt haben, gibt es aber
+    auch freie Projekte, die auf dem stabilen Fundament von Debian
+    aufbauen. Als wichtigstes Beispiel dieser Gattung ist im Moment
+    wohl <a href="http://www.knoppix.de">Knoppix [35]</a> zu
+    erwähnen. Leider kommt auch diese Distribution nicht ganz ohne
+    proprietäre Software daher. Knoppix vollständig nur von CD-ROM
+    laufende Distribution, die nicht nur zu Demo-Zwecken gut
+    eingesetzt werden kann. Dazu aber weiter unten mehr Infos. <a
+    href="http://www.knoppix.de">Knoppix [35]</a> ist im Gegensatz
+    zu Debian auch schon für absolute GNU/Linux-Neulinge zu
+    empfehlen.</p>
+
+    <p>Nun aber weiter zur Idee in dieser Ausgabe.</p>
+
+    <h3>"Grosse Zahlen einfach begreifen"</h3>
+
+    <p>Was den meisten von uns heute keine Probleme mehr bereit,
+    müssen gerade Schulkinder der unteren Stufen noch mühsam
+    erlernen: Grosse Zahlen. Mit "Grossen Zahlen" meine ich nicht
+    unbedingt eine Million oder grösser, sondern auch schon 100,
+    1000 oder dann 10000. Bei Zahlen bis 100 ist es meist noch
+    möglich, alltägliche und anschauliche Beispiele zu
+    präsentieren, anhand derer sich die Kinder die Zahlen mit der
+    Zeit auch in abstrakter Form vorstellen können. Bei Zahlen
+    darüber wird es dann aber schwer, Beispiele zu finden,
+    geschweige denn, dies praktisch darzustellen. In diesem
+    Zahlenbereich beginnt man also meist damit, die Zahlen zu
+    abstrahieren, d.h. sie von konkreten Massen und Werten zu
+    trennen.</p>
+
+    <p>Bei uns in der Schweiz, und wohl nicht nur hier, verwendet
+    man dazu vielfach kleine Holz- oder Plastikwürfelchen. Diese
+    sind ca. 1 x 1 x 1 cm gross und zehn davon in einer Reihe
+    ergeben dann eine Zehnerreihe. Zehn Zehnerreihen nebeneinander
+    ergeben ein Hunderterfeld und zehn dieser Felder übereinander
+    bzw. nebeneinander, ergeben dann einen Tausenderwürfel bzw. ein
+    Tausenderfeld. Das grösste noch sinnvoll einsetzbare Feld ist
+    das Zehntausenderfeld, welches aus 100 Hunderterfeldern
+    besteht, welche in einem Quadrat angeordnet sind. Ich hoffe,
+    dass diejenigen, die solche Felder und Würfel noch nie gesehen
+    haben, sich das anhand meiner Beschreibung in etwa vorstellen
+    können.</p>
+
+    <p>Gut, was und wie soll man dies in Software umsetzen ? Ich
+    könnte mir da gut vorstellen, dass gewandte <a
+    href="http://www.opengl.com">OpenGL [36]</a> oder allgemein
+    3D-Programmier diese Felder und Würfel recht einfach
+    dreidimensional auf dem Bildschirm darstellen könnten. Kinder,
+    welche sich dann nicht nur vorstellen müssen, sondern anhand
+    eigener Vorgaben Zahlen in dieser Form dargestellt bekommen,
+    fiele es dann vielleicht leichter, mit solch grossen Zahlen
+    auch zu rechnen. Es wäre doch aber auch interessant, wenn eine
+    Rechnung in dieser Form dargestellt würde, die Schülerin sie
+    anhand der Bilder und Zahlen berechnen müsste und dann zur
+    Kontrolle neben der eigentlichen Antwort auch noch den Wert in
+    der 3D-Form dargestellt bekommen würde. Es wäre also schön,
+    wenn <a href="mailto:foxman@lugo.ch">ich [1]</a> bis zum
+    nächsten Mal einige solcher Implementierungen erhalten würde,
+    welche ich dann in TUX&amp;GNU@school 6 Ende Januar 2003
+    vorstellen könnte. Weitergehenden Ideen sind naürlich bis auf
+    die eigenen Fähigkeiten keine Grenzen gesetzt.</p>
+
+    <p>Nun aber zum letzten Abschnitt, den Neuigkeiten.</p>
+
+    <h3>News und aktuelle Programm-Versionen</h3>
+
+    <h4>BSI verschickt Knoppix:</h4>
+
+    <p>Das <a href="http://www.bsi.de">Bundesamt für Sicherheit im
+    Informationsbereich [37]</a> (Deutschland) verschickt <a
+    href="http://www.knoppix.de">Knoppix [35]</a> CD-ROMs. Gegen
+    eine frankierten rückadressierter C5-Umschlag sendet euch das
+    deutsche BSI eine vollständig von CD laufende
+    GNU/Linux-Distribution kostenlos zu. Weitere Infos dazu findet
+    ihr auch deren <a
+    href="http://www.bsi.de/produkte/knoppix/index.htm">Seite
+    [38]</a> zu Knoppix.</p>
+
+    <h4>FreeEduc - Knoppix für freie Lernsoftware</h4>
+
+    <p>Es ist zwar schon eine Weile her, aber nichtsdestotrotz will
+    ich es hier nochmals erwähnen. Ende Oktober veröffentlichte die
+    <a href="http://www.ofset.org">OFSET - Organisation for Free
+    Software in Education and Teaching [39]</a> die erste Version
+    von <a
+    href="http://www.ofset.org/projects/edusoft/edusoft.html">Freeduc
+    [40]</a>. Dabei handelt es sich um eine auf <a
+    href="http://www.knoppix.de">Knoppix [35]</a> basierende
+    Distribution, welche auf die Vorführung freier Lernsoftware
+    ausgelegt ist. Gleich wie bei Knoppix läuft auch hier sämtliche
+    Software direkt von CD und so ist es nicht nötig, vor Gebrauch
+    irgendetwas zu installieren. Dank der sehr guten automatischen
+    Hardwareerkennung muss man auch so gut wie nichts selber
+    konfigurieren. In den nächsten Tagen und Wochen soll dann die
+    Version 1.2 erscheinen. Man darf also gespannt sein.</p>
+
+    <h4>Aktuelle Programm-Versionen</h4>
+
+    <ul>
+      <li><a href="http://edu.kde.org/ktouch">KTouch</a> 1.0 -
+      Schreibmaschinenkurs unter KDE 3.0.5 (<a
+      href="/activities/tgs/tagatschool1.html">TGS
+      1</a>)</li>
+
+      <li><a href="http://www.ofset.org/gcompris">GCompris</a>
+      1.2.1 - Lernsoftplattform mit verschiedensten Boards (<a
+      href="/activities/tgs/tagatschool2.html">TGS
+      2</a>)</li>
+
+      <li><a href="http://edu.kde.org/kgeo">KGeo</a> 1.0.2 -
+      Geometrieprogramm unter KDE 3.0.5 (<a
+      href="/activities/tgs/tagatschool3.de.html">TGS
+      3</a>)</li>
+
+      <li><a
+      href="http://bioinformatics.org/ghemical/">Ghemical</a> 1.0 -
+      Chemieprogramm zur Modellierung und Berechnung von Molekülen
+      (<a
+      href="/activities/tgs/tagatschool4.de.html">TGS
+      4</a>)</li>
+
+      <li><a href="http://www.breedsoft.com">Tuxpaint</a> 0.9.2 -
+      Malprogramm für Kinder und Kind-Gebliebene (<a
+      href="/activities/tgs/tagatschool5.de.html">TGS
+      5</a>)</li>
+    </ul>
+    <br />
+    <br />
+     
+
+    <p>Nun, dass ist es mal wieder gewesen. Doch bevor ich mich
+    verabschiede noch eine Frage: Auf <a
+    href="http://www.pro-linux.de">pro-linux.de [41]</a> fragte
+    nach Erscheinen der letzten Ausgabe jemand nach, ob es dann
+    TUX&amp;GNU@school auch als Newsletter gäbe. Da ich dieser Idee
+    keinesfalls im Weg stehen möchte, will ich hier nun fragen, wie
+    denn dafür allgemein das Interesse aussieht ? Also, darum
+    sollten bitte alle Interessente für eine Newsletter-Ausgabe von
+    TGS <a href="mailto:foxman@lugo.ch">mir [1]</a> bis zum
+    nächsten Mal eine Email zukommen lassen. Natürlich sind wie eh
+    und je auch Fragen, Kritik, Kommentare und Hinweise an dieselbe
+    Stelle zu richten.</p>
+
+    <p>Das war's nun aber endgültig und darum ich schnell noch
+    allen einen guten Rutsch ins neue Jahr und bis zum nächsten
+    Mal.</p>
+
+    <h3>Links:</h3>
+
+    <p>[1] <a href="mailto:foxman@lugo.ch">Kritik, Fragen,
+    Kommentare, Ideen und mehr bitte an: foxman@lugo.ch</a><br />
+     [2] <a
+    href="/activities/tgs/tgs.de.html">Homepage
+    von TUX&amp;GNU@school:
+    fsfe.org/activities/tgs/tgs.de.html</a><br />
+     [3] <a
+    href="http://www.newbreedsoftware.com/tuxpaint/">Homepage von
+    Tuxpaint: www.newbreedsoftware.com/tuxpaint</a><br />
+     [4] <a href="http://www.debian.org">Homepage von Debian:
+    www.debian.org</a><br />
+     [5] <a href="/">Homepage der Free
+    Software Foundation Europe: fsfe.org</a><br />
+     [6] <a href="http://www.gnu.org">Homepage des GNU-Projektes:
+    www.gnu.org</a><br />
+     [7] <a
+    href="/activities/tgs/tagatschool1.en.html">TUX&amp;GNU@school
+    1 auf englisch</a><br />
+     [8] <a
+    href="/activities/tgs/tagatschool2.en.html">TUX&amp;GNU@school
+    2 auf englisch</a><br />
+     [9] <a
+    href="/activities/tgs/tagatschool3.en.html">TUX&amp;GNU@school
+    3 auf englisch</a><br />
+     [10] <a
+    href="/activities/tgs/tagatschool4.en.html">TUX&amp;GNU@school
+    4 auf englisch</a><br />
+     [11] <a
+    href="http://www.gnu.org/licenses/licenses.html#TOCGPL">GNU GPL
+    - General Public License</a><br />
+     [12] <a
+    href="http://www.newbreedsoftware.com/tuxpaint/features">Unterstützt
+    Sprachen von Tuxpaint</a><br />
+     [13] <a
+    href="http://www.newbreedsoftware.com/tuxpaint/download">Portierungen
+    von Tuxpaint</a><br />
+     [14] <a href="http://www.debian.org/devel/debian-jr">Homepage
+    von Debian Jr.: www.debian.org/devel/debian-jr</a><br />
+     [15] <a href="http://ddtp.debian.org">Homepage des Debian
+    Description Translation Project - DDTP:
+    ddtp.debian.org</a><br />
+     [16] <a href="http://wiki.debian.net/DebianEdu">Homepage von
+    DebianEDU: wiki.debian.net/DebianEdu</a><br />
+     [17] <a
+    href="http://www.debian.org/devel/debian-desktop">Homepage von
+    Debian Desktop: www.debian.org/devel/debian-desktop</a><br />
+     [18] <a href="http://www.debian.org/ports">Verfügbare
+    Portierungen von Debian GNU/Linux</a><br />
+     [19] <a href="http://www.debian.org/ports/hurd">Homepage von
+    Debian GNU/Hurd</a><br />
+     [20] <a href="http://www.debian.org/ports/freebsd">Homepage
+    von Debian GNU/FreeBSD</a><br />
+     [21] <a href="http://www.debian.org/ports/netbsd">Homepage von
+    Debian GNU/NetBSD</a><br />
+     [22] <a href="http://www.debian.org/devel">Unterprojekte von
+    Debian</a><br />
+     [23] <a
+    href="http://wiki.debian.net/JuniorPackages">Meta-Pakete von
+    Debian Jr.</a><br />
+     [24] <a
+    href="/activities/tgs/tagatschool4.de.html">SEUL/edu
+    in TUX&amp;GNU@school Ausgabe 4</a><br />
+     [25] <a href="http://www.seul.org/edu">Homepage von SEUL/edu:
+    www.SEUL.org/edu</a><br />
+     [26] <a href="http://people.debian.org/~mbc/di.html">Homepage
+    des neuen Debian-Installers</a><br />
+     [27] <a
+    href="http://ddtp.debian.org/how_it_works/index.en.html">Anleitung,
+    wie man beim DDTP mitmachen kann</a><br />
+     [28] <a
+    href="http://logiciels-libres-cndp.ac-versailles.fr/distribution.html">
+    Homepage von DebianEDUC</a><br />
+     [29] <a href="http://wiki.debian.net/DebianEdu">Meta-Pakete
+    von DebianEDU</a><br />
+     [30] <a href="http://www.webmin.com">Homepage von Webmin:
+    www.webmin.com</a><br />
+     [31] <a href="http://www.libranet.com">Homepage von Libranet:
+    www.libranet.com</a><br />
+     [32] <a href="http://www.progeny.com">Homepage von Progeny:
+    www.progeny.com</a><br />
+     [33] <a href="http://www.xandros.com">Homepage von Xandros:
+    www.xandros.com</a><br />
+     [34] <a href="http://www.lindows.com">Homepage von Lindows:
+    www.lindows.com</a><br />
+     [35] <a href="http://www.knoppix.de">Homepage von Knoppix:
+    www.knoppix.de</a><br />
+     [36] <a href="http://www.opengl.com">Homepage von OpenGL:
+    www.opengl.com</a><br />
+     [37] <a href="http://www.bsi.de">Homepage des deutschen
+    Bundesamtes für Sicherheit in der Informationstechnologie:
+    www.bsi.de</a><br />
+     [38] <a
+    href="http://www.bsi.de/produkte/knoppix/index.htm">Seite zu
+    Knoppix auf der Homepage des BSI</a><br />
+     [39] <a href="http://www.ofset.org">Homepage der OFSET -
+    Organisation for Free Software in Education and Teaching
+    (Organisation für Freie Software Bildung und Unterricht):
+    www.ofset.org</a><br />
+     [40] <a
+    href="http://www.ofset.org/projects/edusoft/edusoft.html">Homepage
+    der Freeduc Distribution</a><br />
+     [41] <a href="http://www.pro-linux.de">Pro-Linux.de: Deutsche
+    News zu GNU/Linux und Freier Software</a><br />
+    </p>
+
+    <h4>Über den Autor:</h4>
+
+    <p>Mario Fux schloss 1999 das PrimarlehrerInnenseminar in Brig
+    ab, wonach er die mathematisch-naturwissenschaftliche Matura
+    nachholte. Zusammen mit zwei Kollegen gründete er Ende 2001 die
+    <a href="http://www.edux.ch">ALIS - Arbeitsgruppe Linux an
+    Schulen</a>. Mittlerweile studiert er an der <a
+    href="http://www.ethz.ch">ETH Zürich</a> <a
+    href="http://www.ee.ethz.ch">Informationstechnologie und
+    Elektrotechnik</a>. Und wenn er seine Zeit einmal nicht vor dem
+    PC verbringt, sitzt er an seinem Naturteich in den <a
+    href="http://www.randa.ch">Bergen</a>.</p>
+
+    <p align="center"><i>Dieses Dokument steht unter der <a
+    href="http://www.gnu.org/licenses/licenses.html#TOCFDL">GNU
+    Free Documentation License</a> und kann unter deren Bedingungen
+    weiterverwendet werden.</i></p>
+
+    <p align="center"><i>Copyright (c) 2002 Mario Fux. Permission
+    is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version
+    1.2 or any later version published by the Free Software
+    Foundation; with no Invariant Sections, no Front-Cover Texts,
+    and no Back-Cover Texts.<br />
+     A copy of the license can be found at <a
+    href="http://www.gnu.org/licenses/fdl.html">http://www.gnu.org/licenses/fdl.html</a>.</i></p>
+    
+    </div>
+  </body>
+
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->
+

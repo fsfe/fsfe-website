@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<html>
+  <version>1</version>
+
+  <head>
+    <title>Fòrum pel Govern d'Internet (FGI) - Programari Sobirà, per Georg Greve</title>
+  </head>
+
+  <body>
+
+<center>
+<h1>Programari Sobirà</h1>
+<h2>Estàndards oberts, Programari Lliure, i l'Internet</h2><br />
+</center>
+<div align="right">
+        <a href="/about/people/greve/greve.html">Georg C.F. Greve</a><br />
+        Free Software Foundation Europa (FSFE), President<br />
+escrit per <a href="http://www.intgovforum.org/contributions_for_1st_IGF.htm" target="_blank">contribucions substancials al primer FGI</a>
+</div>
+
+<center>
+[<a href="SovereignSoftware.pdf">Versió en PDF, en anglès, 91k</a>]
+</center>
+
+<h2>Introducció</h2>
+
+<p>Les qüestions de programari són qüestions de poder i donen forma de manera
+fonamental a les societats en què vivim. Fins i tot per a aquells que no han seguit temes
+de política digital abans, això va esdevenir evident incrementalment durant tota 
+la <a href="/activities/wsis/">Cimera Mundial sobre la Societat de la Informació
+de les Nacions Unides (CMSI)</a>. Dues preguntes fonamentals caracteritzen
+aquest camp de batalla: Qui controla les vostres dades? Qui controla el vostre
+ordinador?</p>
+
+<p>La primera pregunta es resol generalment al voltant dels estàndards oberts i,
+particularment, de com s'han de definir i defensar. Tots els jugadors en el
+camp parlen a favor dels estàndards oberts, però alguns d'ells voldrien que aquest terme
+s'entengués de manera que encara controlin les vostres dades i retinguin el
+poder de bloquejar els competidors a voluntat.</p>
+
+<p>La segona pregunta ha estat una de les controvèrsies clau durant 
+la CMSI, va ser altament controvertida durant el WGIG, i encara és
+controvertit durant el Fòrum pel Govern d'Internet (FGI). Aquesta
+qüestió és sobre els models de programari, privatiu contra lliure, i
+en el context de la CMSI s'ha polaritzat estranyament entre l'ànim de lucre i sense
+ànim de lucre.</p>
+
+<p>Això pot haver passat degut a la situació específica que les grans multinacionals
+del programari privatiu van seguir la CMSI intensament mentre que
+els grans proveïdors multinacionals de Programari Lliure generalment no hi van
+participar i per tant no hi van ser representats al CCBI. [<a name="ref1" href="#1">1</a>]</p>
+
+<h2>Estàndards Oberts</h2>
+
+<p>Havent-se pres ja des de fa uns quants anys com a comuns en la indústria
+de les tecnologies de la informació, els Estàndards Oberts només
+recentment s'han posicionat en el centre de de la política pública. Un
+dels llocs on això va passar és durant la CMSI, i serà d'una importància
+majúscula al Fòrum pel Govern d'Internet (FGI). Però, per què són tan
+importants els Estàndards Oberts?</p>
+
+<h3>Rerefons dels formats</h3>
+
+<p>Tots els ordinadors emmagatzemen i transmeten informació de manera codificada. Les
+codificacions solien ser representacions molt simples on certs valors numèrics
+expressaven un cert caràcter, per exemple. I mentre que la seva
+complexitat s'ha incrementat ràpidament amb la potència i complexitat
+dels ordinadors, sempre s'apliquen certes regles bàsiques.</p>
+
+<p>La primera regla important és que qualsevol elecció de codificació és
+arbitrària, i no una elecció natural. El número 33 pot representar la
+lletra «a» o la «z» depenent de la convenció per a aquest estàndard. No hi
+ha cap manera correcta de fer això, només hi ha maneres possibles.</p>
+
+<p>La segona regla important és que un cop les dades s'han codificat en un
+cert format, només es poden llegir amb programari que implementi aquest
+format, i l'implementi exactament. Fins i tot, petites desviacions de les
+convencions del format causaran fàcilment una corrupció massiva de les dades. Un exemple
+habitual, que normalment no provoca gaires danys, és la pèrdua del format
+en programes de processament de text. En el pitjor dels casos, les dades poden ser
+irecuperables.</p>
+
+<h3>Formats i la fallida del mercat</h3>
+
+<p>Des d'un punt de vista del mercat, una situació com aquesta generalment comporta
+una fallida del mercat: els clients que desen les seves dades en un format es
+troben ràpidament incapaços d'escollir un altre proveïdor que pugui
+implementar el mateix format, o pugui implementar-lo prou bé. Si l'única manera
+de migrar és perdent anys de dades, hi ha una lligadura molt
+efectiva del proveïdor que pràcticament fa impossible la possibilitat
+d'escollir programari d'acord amb els seus mèrits.</p>
+
+<p>Addicionament, els forts efectes de xarxa dominen el món actual dels ordinadors.
+Si una empresa ha invertit fort en una infraestructura d'escriptori en el
+passat i aquesta infraestructura usa certs protocols de comunicacions,
+s'enfronten a dues alternatives: agafar només aquest
+programari que implementa aquests protocols perfectament o deixar de banda la
+inversió i reemplaçar la infraestructura sencera, òbviament amb una alta
+inversió addicional.</p>
+
+<p>Un altre proveïdor que vulgui introduïr-se en aquest mercat s'enfronta amb una
+situació similar a la d'algú que es trobi en una habitació amb gent que parla
+un idioma estranger, sense cap diccionari ni ajuda sintàctica
+disponible. Els idiomes humans són col·leccions de decisions arbitràries com
+els formats d'ordinador i els protocols. No hi ha cap raó natural inherent
+per a anomenar taula a una taula, o anomenar cadira a una cadira. Per a algú
+que no parli aquest idioma i sense un diccionari o almenys
+algú que li vulgui explicar l'idioma, esdevé molt difícil la
+comunicació.</p>
+
+<p>En tecnologies de la informació, alguna gent ha estat capaç d'endevinar
+informació sobre aquests protocols i formats de fitxer simplement mirant com
+altres usen aquest llenguatge. D'això se'n diu anàlisi de protocol i d'alguna manera
+han ajudat a mitigar les influències negatives de les sistemàtiques
+explicades.[<a name="ref2" href="#2">2</a>] També
+és aquesta la raó per la qual alguns proveïdors dominants comencen a usar
+criptografia en els seus protocols, prevenint l'anàlisi de protocols
+en el futur.</p>
+
+<h3>Implicacions de la Política Pública</h3>
+
+<p>Tot això és òbviament un problema major per a la política pública per diverses
+raons i se n'ha parlat en diversos fòrums, per exemple al Parlament
+Danès per a la seva moció <b>B
+103</b>[<a name="3" href="ref3">3</a>]
+en la qual s'elaboren les següents raons.</p>
+
+<h4>Política d'obtenció saludable</h4>
+
+<p>Òbviament, no és sostenible fer inversions que esdevindran
+subjectes als efectes explicats abans. No hi ha virtualment cap mercat
+ni un sol proveïdor en posició d'obviar tota la
+inversió. Com que això no està en línia amb els principis d'eficiència
+i d'obtenció de sostenibilitat del sector públic, aquestes situacions s'han
+d'evitar.</p>
+
+<h4>Protegir la democràcia dels efectes de xarxa</h4>
+
+<p>Els mateixos efectes de xarxa que es descriuen més amunt tenen lloc quan
+el programari necessita comunicar-se amb els ciutadans. Només els ciutadans que
+escollin el subministrador únic que implementa el protocol privatiu es podrien
+llavors comunicar amb la seva administració, violant el
+principi bàsic que els ciutadans siguin capaços de comunicar-se amb llibertat amb
+els seus governs. Usar formats i protocols privatius els forçaria
+a entrar en el mateix cercle viciós d'inversió i
+perills incrementals explicats abans.</p>
+
+<h4>Assegurar la lliure competència</h4>
+
+<p>Una situació com aquesta és òbviament contrària als principis de
+competència i mercats oberts i portarà ràpidament a una concentració
+del mercat i a un ofegament de la innovació. Com que això és contrari als
+objectius de qualsevol govern, els subministraments governmentals haurien de donar suport
+a mercats oberts i competitius.</p>
+
+<h4>Combinant efectes, assegurant l'accessibilitat</h4>
+
+<p>Amb mires a obtenir una administració més eficient, molts ajuntaments i
+diferents parts de l'administració comencen a unificar els recursos. Si
+això s'intenta amb formats privatius, normalment vol dir que,
+a no ser que totes les parts ja usin el mateix programari,
+es perdrà una inversió significativa d'una o de més
+administracions.</p>
+
+<p>A més, s'han de tenir en compte els dret de la gent
+amb discapacitats, que poden tenir requisits especials en programari que
+la implementació d'aquell format privatiu pot no complir. En aquesta
+situació, no hi haurà la possibilitat que la gent amb discapacitats es
+comuniquin amb els seus serveis governamentals.</p>
+
+<h4>Perspectives comercials i polítiques</h4>
+
+<p>Finalment, hi ha fortes qüestions polítiques amb l'emmagatzematge de dades en
+formats privatius. Què passa si aquestes dades esdevenen inaccessibles en el
+futur degut a problemes amb aquest subministrador en particular? Pot un govern
+refiar-se cegament i sense alternativa en la bona fe de qualsevol
+entitat comercial singular?</p>
+
+<h4>Aspectes comercials de llarg termini</h4>
+
+<p>També, juntament amb tot l'explicat, l'increment de l'oferta i la llibertat d'escollir
+en un mercat obert aportarà beneficis addicionals a llarg termini.</p>
+
+<h3><a name="os" />Què és un Estàndard Obert?</h3>
+
+<p>Hi ha diverses definicions de què ha de ser o no ha de ser
+considerat un Estàndard Obert. La ja mencionada moció danesa
+el descriu com a:<ul>
+<li>ben documentat amb la seva especificació completa disponible públicament</li>
+<li>implementable lliurement sense limitacions econòmiques, polítiques o legals
+en la implementació i ús, i </li>
+<li>estandarditzat i mantingut en un fòrum obert (una de les anomenades organitzacions de normalització) en un procés obert.</li>
+</ul></p>
+
+<p>Aquesta és relativament similar a la definició d'un Estàndard Obert per
+la Comissió Europea en el seu Marc d'Interoperabilitat
+Europea.[<a name="ref4" href="4">4</a>]</p>
+
+<p>Ambdues definicions van ser criticades pels proveïdors que s'aprofiten
+comercialment dels cicles de dependència explicats abans, així com 
+les organitzacions que representen els seus interessos. L'argumentació habitual per
+a aquestes crítiques està generalmet orientada per les línies de patents que
+es van concedir sobre aquell format o protocol, i perquè el propietari de la patent
+pot escollir de generar profits de la llicència. L'eufemisme del dia
+per a això sol ser venda de llicències «Raonable i No Discriminatòria»
+(RIND).</p>
+
+<p>Això no és més que un eufemisme perquè les patents són, per la seva natura,
+monopolis limitats concedits per llei a una entitat singular. Aquesta entitat tindrà sempre
+l'última paraula en qualsevol disputa, i de fet hi ha molts casos
+de formats i protocols que es coneixen en teoria, però que
+romanen privatius degut a problemes de patents.</p>
+
+<p>Que tots els altres proveïdors que no tenen la patent estiguin en una
+posició igual de dolenta sembla, de fet, no discriminatori, però no
+canvia fonamentalment la balança de poder de la situació.</p>
+
+<p><b>Tots els
+formats i protocols són fonamentalment arbitraris per natura, però s'han
+de seguir precisament per tal que les dades emmagatzemandes a dins es puguin
+recuperar.</b></p>
+
+<h3>Els Estàndards a la pràctica</h3>
+
+<p>En teoria, les definicions de la Unió Europea o el Parlament
+Danès haurien de ser suficients per a definir un Estàndard Obert. A la pràctica,
+les coses s'han demostrat més complicades perquè la situació amb
+els formats privatius descrita abans és immensament favorable per al
+proveïdor en control d'aquell programari.</p>
+
+<p>De manera que, al final, un proveïdor privatiu amb una certa quantitat de penetració
+de mercat té un incentiu econòmic per a violar l'Estàndard Obert i
+fer que es torni un de privatiu de facto. Això, de fet, ha passat
+repetidament en la història. La investigació antimonopoli de la Comissió Europea
+contra Microsoft proporciona testimoni de com la desviació d'un Estàndard
+Obert (CIFS, el ''Common Internet File System'') va permetre Microsoft
+aprofitar l'avantatge del seu monopoli d'escriptoris en una quasi total dominació en el
+mercat de servidors de treball en grup. Això s'ha provat tant profitós que Microsoft
+sembla més inclinat a pagar milers de milions en multes que aturar aquesta
+pràctica.[<a name="ref5" href="#5">5</a>]</p>
+
+<p>Sovint, això també es fa canviant lleugerament la implementació de
+maneres que siguin difícils de traçar o es poden debatre dins dels límits de
+la interpretació humana, però assegurant-se que les implementacions d'altres
+proveïdors no s'integrin correctament. L'incentiu econòmic
+és enorme per a les empreses privatives que superen un cert
+llindar de mida.</p>
+
+<h3>Com mantenir un Estàndard Obert</h3>
+
+<p>L'única manera de prevenir aquesta mena de coses sembla que és afegir un
+criteri més a les definicions d'abans: «L'estàndard ha de tenir almenys
+una implementació en Programari Lliure i totes les implementacions que vulguin
+complir amb l'Estàndard Obert s'han d'assajar regularment amb la implementació
+o implementacions en Programari Lliure, que actuen com a base comuna de
+referència.».</p>
+
+<p>Com que el Programari Lliure[<a name="ref6" href="#6">6</a>] es defineix, entre
+d'altres maneres, per la llibertat d'estudiar la seva implementació, això permet
+tots els actors del mercat d'estudiar la referència base comuna no només
+en llenguatge d'especificació, sinó també en llenguatge, i els assajos regulars
+amb aquesta base poden ajudar a limitar les desviacions de l'Estàndard Obert.</p>
+
+<p>El Programari Lliure també proporciona les llibertats d'ús, modificació i
+distribució, per consegüent, la majoria de proveïdors també poden incloure simplement
+aquesta implementació en el seu propi programari, reduint així
+les barreres d'interoperabilitat.</p>
+
+<p>De manera que, encara que en teoria no hi ha cap connexió entre els Estàndards Oberts
+i el Programari Lliure, a la pràctica el Programari Lliure esdevé un component necessari
+per a mantenir uns Estàndards Oberts contra l'incentiu econòmic de
+privatitzar o desviar-se d'un Estàndard Obert.</p>
+
+<h3>Els Estàndards Oberts i la CMSI/FGI</h3>
+
+<p>Un bon exemple d'això és internet. Abans que internet esdevingués
+el que és ara, hi va haver diversos intents d'establir
+alguna cosa similar. Per què internet va tenir èxit? Perquè les
+implementacions dels protocols bàsics d'internet, com el TCP/IP, eren Programari
+Lliure i, consegüentment, disponibles igualment per a tothom.</p>
+
+<p>La World Wide Web va repetir aquesta història quan en Tim Berners-Lee va eliminar
+totes les patents dels protocols i formats, i es van implementar en
+Programari Lliure. Més del 60% del llocs web funcionen amb Apache,
+un dels molts servidors web de Programari lliure.</p>
+
+<p>Tristament, el llenguatge sobre Estàndards Oberts adoptat en la CMSI i
+subsegüentment usats en l'FGI podria no ser suficient per a construir
+alguna cosa com internet. Els formats i protocols sota aquesta
+definició poden ser subjectes a tots els efectes elaborats abans.</p>
+
+<p>Així que és important que el Fòrum pel Govern d'Internet (FGI) superi
+aquest llenguatge insuficient i treballi en un autèntic consens internacional
+que protegeixi internet de «l'horror de la privatització»
+en tots els seus protocols i formats. Els estàndards són blocs de construcció
+essencials d'internet -s'han de mantenir per tal que
+internet no caigui víctima d'el síndrome de la torre de Babel.</p>
+
+<h2>Programari Lliure</h2>
+
+<p>La connexió pràctica entre el Programari Lliure i els Estàndards
+Oberts ja s'han elaborat, però hi ha altres qüestions genuïnes del Programari Lliure, 
+que no tenen una connexió directa amb els Estàndards Oberts.
+Aquestes són qüestions de model de programari i, finalment, del
+control sobre el nostre propi ordinador.</p>
+
+<p>El Programari Lliure és programari que dóna tots els usuaris i desenvolupadors les
+següents quatre llibertats:<ul>
+<li>La llibertat d'executar el programa, per a qualsevol propòsit.</li>
+<li>La llibertat d'estudiar com funciona el programa, i adaptar-lo a les vostres necessitats.</li>
+<li>La llibertat de fer i redistribuir còpies.</li>
+<li>La llibertat de millorar el programa, i publicar les millores.</li>
+</ul></p>
+
+<p>És important de fer notar que qualsevol d'aquestes activitats pot ser
+comercial. De fet, hi ha grans empreses internacionals per a les quals el
+Programari lliure és un negoci molt profitós, IBM, SUN i HP
+entre elles.[<a name="ref7" href="#7">7</a>]</p>
+
+<h3>La diferència de models de programari</h3>
+
+<p>De manera que comercialment no hi una línia divisòria entre programari lliure
+i privatiu. En l'última abstracció, la qüestió dels models de programari
+deriva en una pregunta fonamental: Qui té el control sobre el programari
+que s'executa al nostre ordinador?</p>
+
+<p>Amb el programari privatiu, aquest és sempre i exclusivament el
+propietari del programari. El propietari de l'ordinador generalment obté
+alguns permisos per a certs propòsits, però aquests normalment es poden
+revocar i l'usuari mai té ni controla el programari de cap
+manera significativa. Amb el Programari Lliure, l'usuari està al càrrec i
+controla el seu propi programari.</p>
+
+<p>Aquest canvi de poder de «un sobre tota la resta» a «cadascú sobre ell
+mateix» afecta fonamentalment com funciona l'economia nacional, les empreses,
+la ciència, l'educació, la política i la societat en el seu conjunt. Una
+elaboració completa d'aquests aspectes estaria més enllà de la intenció d'aquest article,
+així que ens limitarem a uns pocs aspectes seleccionats de governació i
+sobirania.</p>
+
+<h3>Una qüestió de control</h3>
+
+<p>Malgrat que sembla una òbvia falsedat, hi ha la creença
+amplement comuna que l'usuari controla el seu ordinador. En
+realitat, només el programari és qui controla l'ordinador,
+agafant algunes indicacions de l'usuari si està programat així. Aquesta és una
+distinció fonamental, perquè deixa clar que només
+controlant el programari poden controlar els usuaris el que realment fan
+els seus ordinadors.</p>
+
+<p>Hi ha molts exemples de programari que ho fan secretament, i
+sense el coneixement de l'usuari. Un exemple recent inclou una peça
+de programari que ve amb els CD de SONY i que informa SONY cada cop que
+s'escolta el CD, i en quina màquina. Tot això passava sense
+signes visibles a l'ordinador, i sense cap informació ni
+acceptació per part de l'usuari. De fet, l'usuari va ser falsament informat per SONY
+que això <b>no</b> passava fins que algú va ser capaç de provar que
+el que deien no era cert.[<a name="ref8" href="#8">8</a>]</p>
+
+<p>Hi ha històries semblants per a diverses solucions de programari
+privatiu, incloent-hi programari de col·laboració i conferència que deien
+que era segur i altament xifrat i segurament usat per
+governs per a activitats confidencials per tot el món.</p>
+
+<p>Com que no hi ha cap manera de conèixer amb seguretat què fa el programari
+a no ser que tingueu el control complet sobre ell, l'Agència Alemana per a la Seguretat
+en la Tecnologia de la Informació (BSI) té una recomanació pel Programari
+Lliure.[<a name="ref9" href="#9">9</a>] De fet, les ambaixades alemanes
+de tot el món estan connectades en xarxa amb el Govern Alemany mitjançant Programari
+Lliure, usant la caixa SINA, basada en GNU/Linux.[<a name="ref10"
+href="#10">10</a>] </p>
+
+<h3>Qüestions de mandat polític</h3>
+
+<p>Encara que hi ha hagut un moviment considerable sobre aquest assumpte, els
+Estàndards Oberts a l'administració pública encara siguin una rara excepció. I
+en el món privatiu, que encara és la norma de molts governs,
+generalment només un subministrador pot proveir programari capaç
+d'accedir a aquestes dades i processos. Així que, efectivament, molts dels
+processos governamentals i de l'administració estan controlats per programari
+que al seu torn el controla un sol subministrador sobre el qual el govern no té
+cap control significatiu.</p>
+
+<p>El Programari Lliure és l'única manera d'assegurar que els governs
+controlin realment les seves pròpies dades i processos, incloent-hi les
+infraestructures crítiques. El Programari Lliure també evita l'abans mencionat
+«horror de la privatització» sobre els Estàndards Oberts: no hi ha cap profit en això,
+ja que generalment qualsevol subministrador pot subministrar o mantenir aquella
+solució.</p>
+
+<b>Només el Programari Lliure és autèntic Programari Sobirà.</b>
+
+<h4>El Programari Lliure i la CMSI/WGIG/FGI</h4>
+
+<p>El Programari Lliure i internet van de la mà. El Programari Lliure
+va ser crític per a fer internet possible, i de fet el Programari
+Lliure continua donant forma i fent funcionar internet. Al mateix temps,
+el Programari Lliure i els seus representants han estat exclosos del
+WGIG i els processos d'FGI fins el moment.</p>
+
+<p>Si el Fòrum pel Govern d'Internet ha d'esdevenir un fòrum realment inclusiu
+per a discutir assumptes relacionats amb internet, el Programari Lliure i els seus
+representants s'hi han d'incloure en tots el fòrums rellevants i a tots
+els nivells polítics de l'FGI. D'altra manera, hi ha la possibilitat que la
+gent que actualment continuen construïnt internet simplement se'n vagin
+a fer les seves discussions a un altre lloc.</p>
+
+<hr />
+
+<p class="footnote">
+[<a name="1" href="#ref1">1</a>] Alguna gent veu que els dos assumptes estan connectats, altres argumenten que sempre
+s'haurien de tractar separadament. Com quedarà clar més endavant, els dos
+assumptes no estan de fet connectats en teoria, però tenen una connexió a
+la pràctica. Per tal d'entendre això, és important considerar-los
+primer aïllats i individualment.</p>
+
+<p class="footnote">
+[<a name="2" href="#ref2">2</a>] Així és com l'OpenOffice (<a
+href="http://www.openoffice.org">http://www.openoffice.org</a>) va
+assolir la seva habilitat de llegir generalment la majoria de documents escrits amb Microsoft
+Word, per exemple, o com el programari Samba (<a
+href="http://www.samba.org">http://www.samba.org</a>) esdevé
+capaç de reemplaçar grans parts de les funcionalitats dels servidors
+de treball en grup de Microsoft.</p>
+
+<p class="footnote">
+[<a name="3" href="#ref3">3</a>]
+<a href="http://www.ft.dk/Samling/20051/beslutningsforslag/B103/index.htm">http://www.ft.dk/Samling/20051/beslutningsforslag/B103/index.htm</a></p>
+
+<p class="footnote">
+[<a name="4" href="#ref4">4</a>]
+<a href="http://ec.europa.eu/idabc/en/document/7728.html">http://ec.europa.eu/idabc/en/document/7728.html</a>
+</p>
+
+<p class="footnote">
+[<a name="5" href="#ref5">5</a>]
+<a href="/activities/ms-vs-eu/">https://fsfe.org/activities/ms-vs-eu/</a>
+</p>
+
+<p class="footnote"> [<a name="6" href="#ref6">6</a>] Per a una definició
+completa i concisa de Programari Lliure, si us plau consulteu la «<a
+href="/activities/wipo/fser.html">Referència de les Essències del Programari
+Lliure</a>» també disponible a les <a
+href="http://www.intgovforum.org/contributions_for_1st_IGF.htm">contribucions
+substancials</a> de l'FGI.</p>
+
+<p class="footnote"> [<a name="7" href="#ref7">7</a>] 
+Una definició més completa i elaborada de Programari
+Lliure i una clarificació dels malsentesos estan
+disponibles a la «<a href="/activities/wipo/fser.html">Referència de les Essències del Programari Lliure</a>» i també
+al full de les contribucions substantials de l'FGI.</p>
+
+<p class="footnote"> [<a name="8" href="#ref8">8</a>] 
+<a href="http://www.wired.com/news/privacy/0,1848,69601,00.html">http://www.wired.com/news/privacy/0,1848,69601,00.html</a></p>
+
+<p class="footnote"> [<a name="9" href="#ref9">9</a>] 
+<a href="http://www.bsi.bund.de/oss/index.htm">http://www.bsi.bund.de/oss/index.htm</a></p>
+
+<p class="footnote"> [<a name="10" href="#ref10">10</a>] 
+<a href="http://www.bsi.bund.de/fachthem/sina/index.htm">http://www.bsi.bund.de/fachthem/sina/index.htm</a></p>
+
+
+
+  </body>
+
+  <translator>Rafael Carreras</translator>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->
+

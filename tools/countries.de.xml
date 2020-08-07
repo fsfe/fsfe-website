@@ -3,6 +3,8 @@
 <!--	see http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm
 	for updates -->
 
+<!-- eea is European Economic Area plus a few manual additions where we want to send to -->
+
 <countryset>
   <version>1</version>
 
@@ -13,7 +15,7 @@
 <country id="AF">Afghanistan</country>
 <!--<country id="">Akrotiri and Dhekelia</country> The Sovereign Base Areas of Akrotiri and Dhekelia, Cyprus, Greece-->
 <country id="AX">Åland</country>
-<country id="AL">Albanien</country>
+<country id="AL" eea="yes">Albanien</country>
 <country id="DZ">Algerien</country>
 <country id="AS">Amerikanisches Samoa</country>
 <country id="AD">Andorra</country>
@@ -33,7 +35,7 @@
 <country id="BB">Barbados</country>
 <!--<country id="">Bassas da India</country>-->
 <country id="BY">Belarus</country>
-<country id="BE">Belgien</country>
+<country id="BE" eea="yes">Belgien</country>
 <country id="BZ">Belize</country>
 <country id="BJ">Benin</country>
 <country id="BM">Bermuda</country>
@@ -46,7 +48,7 @@
 <country id="IO">Britisches Territorium im Indischen Ozean</country>
 <country id="VG">Britische Jungfraueninseln</country>
 <country id="BN">Brunei</country>
-<country id="BG">Bulgarien</country>
+<country id="BG" eea="yes">Bulgarien</country>
 <country id="BF">Burkina Faso</country>
 <country id="BI">Burundi</country>
 <country id="CL">Chile</country>
@@ -56,8 +58,8 @@
 <!--<country id="">Coral Sea Islands</country>Gay and Lesbian Kingdom of the Coral Sea Islands, Australia-->
 <country id="CR">Costa Rica</country>
 <country id="CW">Curacao</country>
-<country id="DK">Dänemark</country>
-<country id="DE">Deutschland</country>
+<country id="DK" eea="yes">Dänemark</country>
+<country id="DE" eea="yes">Deutschland</country>
 <country id="DM">Dominica</country>
 <country id="DO">Dominikanische Republik</country>
 <country id="DJ">Dschibuti</country>
@@ -65,13 +67,13 @@
 <country id="CI">Elfenbeinküste</country>
 <country id="SV">El Salvador</country>
 <country id="ER">Eritrea</country>
-<country id="EE">Estland</country>
+<country id="EE" eea="yes">Estland</country>
 <!--<country id="">Europa Island</country>-->
 <country id="FK">Falklandinseln (Malwinen)</country>
 <country id="FO">Färöer Inseln</country>
 <country id="FJ">Fidschi</country>
-<country id="FI">Finnland</country>
-<country id="FR">Frankreich</country>
+<country id="FI" eea="yes">Finnland</country>
+<country id="FR" eea="yes">Frankreich</country>
 <country id="GF">Französisch-Guyana</country>
 <country id="PF">Französisch-Polynesien</country>
 <country id="TF">Französische Süd- und Antarktisgebiete</country>
@@ -83,9 +85,9 @@
 <country id="GI">Gibraltar</country>
 <!--<country id="">Glorioso Islands</country>-->
 <country id="GD">Grenada</country>
-<country id="GR">Griechenland</country>
+<country id="GR" eea="yes">Griechenland</country>
 <country id="GL">Grönland</country>
-<country id="GB">Großbritannien</country>
+<country id="GB" eea="yes">Großbritannien</country>
 <country id="GP">Guadeloupe</country>
 <country id="GU">Guam</country>
 <country id="GT">Guatemala</country>
@@ -101,11 +103,11 @@
 <country id="ID">Indonesien</country>
 <country id="IQ">Irak</country>
 <country id="IR">Iran</country>
-<country id="IE">Irland</country>
-<country id="IS">Island</country>
+<country id="IE" eea="yes">Irland</country>
+<country id="IS" eea="yes">Island</country>
 <country id="IM">Isle of Man</country>
 <country id="IL">Israel</country>
-<country id="IT">Italien</country>
+<country id="IT" eea="yes">Italien</country>
 <country id="JM">Jamaika</country>
 <country id="SJ">Jan Mayen</country>
 <country id="JP">Japan</country>
@@ -131,25 +133,25 @@
 <country id="CG">Kongo, Republik</country>
 <country id="KP">Korea, Nord</country>
 <country id="KR">Korea, Süd</country>
-<country id="HR">Kroatien</country>
+<country id="HR" eea="yes">Kroatien</country>
 <country id="CU">Kuba</country>
 <country id="KW">Kuwait</country>
 <country id="LA">Laos</country>
 <country id="LS">Lesotho</country>
-<country id="LV">Lettland</country>
+<country id="LV" eea="yes">Lettland</country>
 <country id="LB">Libanon</country>
 <country id="LR">Liberia</country>
 <country id="LY">Libyen</country>
-<country id="LI">Liechtenstein</country>
-<country id="LT">Litauen</country>
-<country id="LU">Luxemburg</country>
+<country id="LI" eea="yes">Liechtenstein</country>
+<country id="LT" eea="yes">Litauen</country>
+<country id="LU" eea="yes">Luxemburg</country>
 <country id="MO">Macao</country>
 <country id="MG">Madagaskar</country>
 <country id="MW">Malawi</country>
 <country id="MY">Malaysia</country>
 <country id="MV">Malediven</country>
 <country id="ML">Mali</country>
-<country id="MT">Malta</country>
+<country id="MT" eea="yes">Malta</country>
 <country id="MA">Marokko</country>
 <country id="MH">Marshallinseln</country>
 <country id="MQ">Martinique</country>
@@ -173,14 +175,14 @@
 <country id="NC">Neukaledonien</country>
 <country id="NZ">Neuseeland</country>
 <country id="NI">Nicaragua</country>
-<country id="NL">Niederlande</country>
+<country id="NL" eea="yes">Niederlande</country>
 <country id="NE">Niger</country>
 <country id="NG">Nigeria</country>
 <country id="NU">Niue</country>
 <country id="MP">Nördliche Marianen</country>
 <country id="NF">Norfolkinsel</country>
-<country id="NO">Norwegen</country>
-<country id="AT">Österreich</country>
+<country id="NO" eea="yes">Norwegen</country>
+<country id="AT" eea="yes">Österreich</country>
 <country id="OM">Oman</country>
 <country id="PK">Pakistan</country>
 <country id="PW">Palau</country>
@@ -192,12 +194,12 @@
 <country id="PE">Peru</country>
 <country id="PH">Philippinen</country>
 <country id="PN">Pitcairninseln</country>
-<country id="PL">Polen</country>
-<country id="PT">Portugal</country>
+<country id="PL" eea="yes">Polen</country>
+<country id="PT" eea="yes">Portugal</country>
 <country id="PR">Puerto Rico</country>
 <country id="RE">Reunion</country>
 <country id="RW">Ruanda</country>
-<country id="RO">Rumänien</country>
+<country id="RO" eea="yes">Rumänien</country>
 <country id="RU">Russland</country>
 <country id="SB">Salomonen</country>
 <country id="ZM">Sambia</country>
@@ -210,8 +212,8 @@
 <country id="SM">San Marino</country>
 <country id="ST">Sao Tome und Principe</country>
 <country id="SA">Saudi-Arabien</country>
-<country id="SE">Schweden</country>
-<country id="CH">Schweiz</country>
+<country id="SE" eea="yes">Schweden</country>
+<country id="CH" eea="yes">Schweiz</country>
 <country id="SN">Senegal</country>
 <country id="RS">Serbien</country>
 <country id="SC">Seychellen</country>
@@ -220,9 +222,9 @@
 <country id="SG">Singapur</country>
 <country id="SX">Sint Maarten</country>
 <country id="SK">Slowakei</country>
-<country id="SI">Slowenien</country>
+<country id="SI" eea="yes">Slowenien</country>
 <country id="SO">Somalia</country>
-<country id="ES">Spanien</country>
+<country id="ES" eea="yes">Spanien</country>
 <!--<country id="">Spratly Islands</country>-->
 <country id="SJ">Spitzbergen</country>
 <country id="LK">Sri Lanka</country>
@@ -244,15 +246,15 @@
 <country id="TT">Trinidad und Tobago</country>
 <!--<country id="">Tromelin Island</country>-->
 <country id="TD">Tschad</country>
-<country id="CZ">Tschechische RepubliK</country>
-<country id="TR">Türkei</country>
+<country id="CZ" eea="yes">Tschechische RepubliK</country>
+<country id="TR" eea="yes">Türkei</country>
 <country id="TN">Tunesien</country>
 <country id="TM">Turkmenistan</country>
 <country id="TC">Turks- und Caicosinseln</country>
 <country id="TV">Tuvalu</country>
 <country id="UG">Uganda</country>
 <country id="UA">Ukraine</country>
-<country id="HU">Ungarn</country>
+<country id="HU" eea="yes">Ungarn</country>
 <country id="UY">Uruguay</country>
 <country id="UZ">Usbekistan</country>
 <country id="VU">Vanuatu</country>
@@ -267,6 +269,6 @@
 <country id="CX">Weihnachtsinsel</country>
 <country id="EH">Westliche Sahara</country>
 <country id="CF">Zentralafrikanische Republik</country>
-<country id="CY">Zypern</country>
+<country id="CY" eea="yes">Zypern</country>
 
 </countryset>

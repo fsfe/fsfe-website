@@ -335,23 +335,3 @@
   })
 
 }(jQuery);
-
-/**
- * FSFE custom slide toggle for the mobile menu.
- */
-$(document).ready(function() {
-    if ($(window).width() < 768) {
-        $('#menu-list').hide();
-    }
-
-    $('#direct-to-menu-list').on('click', function(e) {
-        e.preventDefault();
-        $('#menu-list').stop(true, true).slideToggle();
-    });
-
-    $(window).on('resize', function() {
-        if ($(window).width() >= 768) {
-            $('#menu-list').show();
-        }
-    });
-});

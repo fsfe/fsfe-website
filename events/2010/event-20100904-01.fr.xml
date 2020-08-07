@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
- 
 <eventset>
   <version>0</version>
-
   <event start="2010-09-04" end="2010-09-05">
     <title>Braderie de Lille, France</title>
     <body>
@@ -10,17 +8,17 @@
         La Braderie de Lille est un évènement populaire qui se passe chaque 
         année dans les rues de Lille (nord de la France). La FSFE y tiendra
         un stand pour introduire le grand public au Logiciel Libre. N'hésitez
-        pas à nous y rejoindre&#160;!
+        pas à nous y rejoindre !
       </p>
       <p>
-        Le stand est situé <a
-        href="http://nominatim.openstreetmap.org/details.php?place_id=32857522">Place
-        du Vieux Marché aux Chevaux</a> et sera animé par les <a
-        href="https://wiki.fsfe.org/groups/Nord">fellows de France</a> ainsi que
+        Le stand est situé <a href="http://nominatim.openstreetmap.org/details.php?place_id=32857522">Place
+        du Vieux Marché aux Chevaux</a> et sera animé par les <a href="https://wiki.fsfe.org/groups/Nord">fellows de France</a> ainsi que
         le Président de la FSFE, Karsten Gerloff, et Rainer Kersten. Si vous
-        avez l'intention de venir, <a
-        href="mailto:france à lists point fsfe point org">dites-le nous</a>&#160;!
+        avez l'intention de venir, <a href="mailto:france à lists point fsfe point org">dites-le nous</a> !
       </p>
     </body>
+    <tags>
+      <tag key="fr"/>
+    </tags>
   </event>
 </eventset>

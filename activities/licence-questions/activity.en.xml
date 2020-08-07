@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<activityset>
+  <version>1</version>
+
+  <activity id="licence-questions" date="2015-11-25" status="active">
+    <title>Licence Questions</title>
+    <description>
+      The FSFE’s License Questions mailing list is our group of
+      volunteers dedicated to provide help with Free Software licenses
+      and compliance. If you need advice on what Free Software licence
+      you should use, or if you want to know more about what rights you
+      have over a piece of Free Software, you can contact us.
+    </description>
+    <link href="/activities/licence-questions/licence-questions.html" />
+    <image url="/graphics/logos/licence-questions.png" />
+    <order priority="3" highlight="yes" />
+    <tags>
+      <tag key="legal" />
+    </tags>
+  </activity>
+</activityset>

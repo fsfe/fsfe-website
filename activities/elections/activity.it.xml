@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<activityset>
+  <version>1</version>
+
+  <activity id="elections" date="2009-09-01" status="active">
+    <title>Elezioni</title>
+    <description>
+      Quale momento migliore per chiedere ai politici quali sono le loro
+      posizioni sul Software Libero e sugli Standard Aperti che durante una
+      campagna elettorale? Crediamo che sia possibile e utile discutere in pubblico
+      anche di questi argomenti con i futuri governanti: che siano europee, politiche,
+      regionali o semplici amministrative. Il modo migliore in cui fare questo dipende dal sistema elettorale e dalla cultura di ogni paese,
+      proponiamo con diverse strategie e strumenti che abbiamo già utilizzato: Chiedi ai
+      tuoi candidati una serie di domande preparate in anticipo, il Digital-O-Mat, la
+      piattaforma online Freedomvote e la verifica delle promesse elettorali con Let's Promise.
+    </description>
+    <link href="/activities/elections/index.html" />
+    <image url="/graphics/logos/elections.png" />
+    <order priority="3" highlight="yes" />
+    <tags>
+      <tag key="awareness" />
+      <tag key="policy" />
+    </tags>
+  </activity>
+</activityset>

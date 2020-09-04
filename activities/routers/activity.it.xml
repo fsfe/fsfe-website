@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<activityset>
+  <version>2</version>
+
+  <activity id="routers" date="2013-11-01" status="active">
+    <title>Libertà del router</title>
+    <description>
+      Chiunque dovrebbe avere il diritto di usare il router o il modem che
+      preferisce. In molti paesi ciò non è possibile perché i provider internet
+      impediscono agli utenti di esercitare il loro diritto di
+      scelta. Tale situazione causa seri problemi di libertà, privacy e
+      sicurezza. In Germania siamo riusciti ad ottenere un'importante
+      modifica normativa, ma molti paesi europei hanno ancora bisogno del nostro aiuto.
+    </description>
+    <link href="/activities/routers/routers.html" />
+    <image url="/graphics/logos/routers.png" />
+    <order priority="5" highlight="yes" />
+    <tags>
+      <tag key="policy" />
+    </tags>
+  </activity>
+</activityset>

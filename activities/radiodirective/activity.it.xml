@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<activityset>
+  <version>1</version>
+
+  <activity id="radiodirective" date="2016-03-01" status="active">
+    <title>Direttiva UE Blocco radio</title>
+    <description>
+      Una Direttiva UE limita agli utenti l'installazione di Software Libero
+      sulle proprie apparecchiature radio come router, smartphone e
+      dispositivi embedded, obbligando i produttori di questi dispositivi
+      ad implementare un sistema che impedisca agli utenti l'installazione di software
+      che non sia stato certificato da loro. Stiamo lavorando per evitare i
+      danni che questo sistema causerebbe agli utenti di Software Libero,
+      alla sicurezza dei dispositivi, al libero mercato, all'ambiente ed
+      a diverse iniziative benefiche.
+    </description>
+    <link href="/activities/radiodirective/radiodirective.html" />
+    <image url="/graphics/logos/radiodirective.png" />
+    <order priority="3" highlight="yes" />
+    <tags>
+      <tag key="policy" />
+    </tags>
+  </activity>
+</activityset>

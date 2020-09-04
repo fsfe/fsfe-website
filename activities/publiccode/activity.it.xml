@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<activityset>
+  <version>1</version>
+
+  <activity id="publiccode" date="2017-09-13" status="active">
+    <title>Denaro pubblico? Codice pubblico!</title>
+    <description>
+      Perché il software realizzato usando i soldi delle tasse dei cittadini non viene rilasciato come Software Libero? Chiediamo che il software finanziato pubblicamente e sviluppato per il settore pubblico venga reso pubblicamente disponibile sotto una Licenza Libera. Se è denaro pubblico allora dovrebbe essere pubblico anche il codice sorgente. Il codice pagato dalle persone deve essere dato alle persone!
+    </description>
+    <link href="/activities/publiccode/publiccode.html" />
+    <image url="/graphics/logos/publiccode.png" />
+    <order priority="5" highlight="yes" />
+    <tags>
+      <tag key="awareness" />
+      <tag key="policy" />
+    </tags>
+  </activity>
+</activityset>

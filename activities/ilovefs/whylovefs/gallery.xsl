@@ -28,9 +28,9 @@ The generated list will start at the largest number ('to' aka 'max') and end wit
         <xsl:attribute name="class">captioned left</xsl:attribute>
         <xsl:attribute name="style">max-width: 300px; width: 40%;</xsl:attribute>
         <xsl:element name="a">
-          <xsl:attribute name="href">https://download.fsfe.org/activities/ilovefs/gallery/ilovefs-gallery-<xsl:value-of select="$max"/>.jpg</xsl:attribute>
+          <xsl:attribute name="href">https://download.fsfe.org/campaigns/ilovefs/gallery/ilovefs-gallery-<xsl:value-of select="$max"/>.jpg</xsl:attribute>
           <xsl:element name="img">
-            <xsl:attribute name="src">https://download.fsfe.org/activities/ilovefs/gallery/thumbs/ilovefs-gallery-thumb-<xsl:value-of select="$max"/>.jpg</xsl:attribute>
+            <xsl:attribute name="src">https://download.fsfe.org/campaigns/ilovefs/gallery/thumbs/ilovefs-gallery-thumb-<xsl:value-of select="$max"/>.jpg</xsl:attribute>
             <xsl:attribute name="alt">A picture of one or more Free Software loving persons</xsl:attribute>
             <xsl:attribute name="width">100%</xsl:attribute>
           </xsl:element> <!-- /img -->
@@ -42,9 +42,9 @@ The generated list will start at the largest number ('to' aka 'max') and end wit
         <xsl:attribute name="class">captioned right</xsl:attribute>
         <xsl:attribute name="style">max-width: 300px; width: 40%;</xsl:attribute>
         <xsl:element name="a">
-          <xsl:attribute name="href">https://download.fsfe.org/activities/ilovefs/gallery/ilovefs-gallery-<xsl:value-of select="$max - 1"/>.jpg</xsl:attribute>
+          <xsl:attribute name="href">https://download.fsfe.org/campaigns/ilovefs/gallery/ilovefs-gallery-<xsl:value-of select="$max - 1"/>.jpg</xsl:attribute>
           <xsl:element name="img">
-            <xsl:attribute name="src">https://download.fsfe.org/activities/ilovefs/gallery/thumbs/ilovefs-gallery-thumb-<xsl:value-of select="$max - 1"/>.jpg</xsl:attribute>
+            <xsl:attribute name="src">https://download.fsfe.org/campaigns/ilovefs/gallery/thumbs/ilovefs-gallery-thumb-<xsl:value-of select="$max - 1"/>.jpg</xsl:attribute>
             <xsl:attribute name="alt">A picture of one or more Free Software loving persons</xsl:attribute>
             <xsl:attribute name="width">100%</xsl:attribute>
           </xsl:element> <!-- /img -->

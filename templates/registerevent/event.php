@@ -13,7 +13,7 @@
     <?php if($url) { echo "<link>" . htmlspecialchars($url) . "</link>"; }?>
 
     <tags>
-      <tag key="<?php echo htmlspecialchars($countrycode); ?>"><?php echo htmlspecialchars($countryname); ?></tag>
+      <tag key="<?php echo strtolower(htmlspecialchars($countrycode)); ?>"><?php echo htmlspecialchars($countryname); ?></tag>
       <?php
         foreach ($tags as $tag) {
           echo sprintf('<tag key="%s"/>', htmlspecialchars($tag)) . "\n";

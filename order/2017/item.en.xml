@@ -12,10 +12,11 @@
       large="2017/baby-bib-pink-large.png"/>
   </item>
 
-  <item type="hooded" id="zipped-fsfs-black" oldprice="50.00" price="40.00" date="2017-09-06">
-    <available size="XS"  a="47.5" b="64.5" c="70"/>
+  <item type="hooded" id="zipped-fsfs-black" price="50.00" date="2017-09-06">
+    <!-- available size="S"   a="50" b="67" c="72"/ -->
     <available size="M"   a="53" b="69" c="73"/>
     <available size="L"   a="56" b="72" c="74"/>
+    <!-- available size="XL"  a="59" b="76" c="75"/ -->
     <available size="XXL" a="62" b="78" c="76"/>
     <image
       small="2017/zipped-fsfs-black-front-small.jpg"
@@ -25,11 +26,10 @@
       large="2017/zipped-fsfs-black-back-large.jpg"/>
   </item>
 
-  <item type="hooded" id="zipped-fsfs-burgundy" oldprice="50.00" price="40.00" date="2017-09-06">
-    <available size="XS"  a="47.5" b="64.5" c="70"/>
-    <available size="S"   a="50" b="67" c="72"/>
+  <item type="hooded" id="zipped-fsfs-burgundy" price="50.00" date="2017-09-06">
+    <!-- available size="S"   a="50" b="67" c="72"/ -->
     <available size="M"   a="53" b="69" c="73"/>
-    <available size="L"   a="56" b="72" c="74"/>
+    <!-- available size="L"   a="56" b="72" c="74"/ -->
     <available size="XL"  a="59" b="76" c="75"/>
     <available size="XXL" a="62" b="78" c="76"/>
     <image
@@ -55,8 +55,8 @@
       large="2017/tshirt-100freedoms-black-back-large.jpg"/>
   </item>
 
-  <item type="tshirt" id="tshirt-100freedoms-orange" oldprice="20.00" price="15.00" date="2017-12-05">
-    <available size="S"    a="45" b="68"/>
+  <item type="tshirt" id="tshirt-100freedoms-orange" price="20.00" date="2017-12-05">
+    <!-- available size="S"    a="45" b="68"/ -->
     <available size="M"    a="48" b="71"/>
     <available size="L"    a="51" b="71"/>
     <available size="XL"   a="55" b="76"/>
@@ -70,12 +70,13 @@
       large="2017/tshirt-100freedoms-orange-back-large.jpg"/>
   </item>
 
-  <item type="tshirt" id="tshirt-100freedoms-pink" oldprice="20.00" price="15.00" date="2017-12-05">
+  <item type="tshirt" id="tshirt-100freedoms-pink" price="20.00" date="2017-12-05">
     <available size="S"    a="45" b="68"/>
     <available size="M"    a="48" b="71"/>
     <available size="L"    a="51" b="71"/>
     <available size="XL"   a="55" b="76"/>
     <available size="XXL"  a="57" b="77"/>
+    <!-- available size="XXXL" a="58" b="82"/ -->
     <image
       small="2017/tshirt-100freedoms-pink-front-small.jpg"
       large="2017/tshirt-100freedoms-pink-front-large.jpg"/>
@@ -93,20 +94,5 @@
     <image
       small="2017/kidstshirt-fork-red-front-small.jpg"
       large="2017/kidstshirt-fork-red-front-large.jpg"/>
-  </item>
-
-  <item type="tshirt" id="kidstshirt-fork-green" oldprice="20.00" price="15.00" date="2017-12-05">
-    <available size="7-8"   a="37" b="50"/>
-    <available size="9-10"  a="40" b="54"/>
-    <image
-      small="2017/kidstshirt-fork-green-front-small.jpg"
-      large="2017/kidstshirt-fork-green-front-large.jpg"/>
-  </item>
-
-  <item type="tshirt" id="kidstshirt-fork-blue" oldprice="20.00" price="15.00" date="2017-12-05">
-    <available size="3-4"   a="32" b="41"/>
-    <image
-      small="2017/kidstshirt-fork-blue-front-small.jpg"
-      large="2017/kidstshirt-fork-blue-front-large.jpg"/>
   </item>
 </itemset>

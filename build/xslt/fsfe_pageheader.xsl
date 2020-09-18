@@ -20,6 +20,14 @@
         </xsl:element>
         <!--/a#logo-->
 
+        <xsl:element name="div">
+          <xsl:attribute name="id">motto</xsl:attribute>
+          <xsl:text>empowering users </xsl:text>
+          <xsl:element name="br"/>
+          <xsl:text>to control technology</xsl:text>
+        </xsl:element>
+        <!--/div#motto-->
+
       </xsl:element>
       <!--/div#masthead-->
 

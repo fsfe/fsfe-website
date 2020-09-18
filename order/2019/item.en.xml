@@ -6,12 +6,12 @@
   <version>1</version>
 
   <item type="tshirt" id="tshirt-pmpc-black" price="20.00" date="2019-02-11">
-    <available size="S"    a="46" b="66"/>
+    <!-- available size="S"    a="46" b="66"/ -->
     <available size="M"    a="50" b="70"/>
     <available size="L"    a="51" b="71"/>
     <available size="XL"   a="55" b="75"/>
     <available size="XXL"  a="57" b="77"/>
-    <available size="XXXL" a="63" b="79"/>
+    <!-- available size="XXXL" a="63" b="79"/ -->
     <image
       small="2019/tshirt-pmpc-black-front-small.jpg"
       large="2019/tshirt-pmpc-black-front-large.jpg"/>
@@ -27,11 +27,12 @@
       large="2019/gymsac-nocloud-black-large.jpg"/>
   </item>
 
-  <item type="hooded" id="zipped-fsfs-blue" oldprice="50.00" price="40.00" date="2019-11-22">
-    <available size="XS"  a="47.5" b="64.5" c="70"/>
-    <available size="S"   a="50" b="67" c="72"/>
-    <available size="M"   a="53" b="69" c="73"/>
+  <item type="hooded" id="zipped-fsfs-blue" price="50.00" date="2019-11-22">
+    <!-- available size="S"   a="50" b="67" c="72"/>
+    <available size="M"   a="53" b="69" c="73"/ -->
     <available size="L"   a="56" b="72" c="74"/>
+    <!-- available size="XL"  a="59" b="76" c="75"/ -->
+    <available size="XXL" a="62" b="78" c="76"/>
     <image
       small="2019/zipped-fsfs-blue-front-small.jpg"
       large="2019/zipped-fsfs-blue-front-large.jpg"/>
@@ -75,7 +76,7 @@
     <available size="L"    a="51" b="71"/>
     <available size="XL"   a="55" b="75"/>
     <available size="XXL"  a="57" b="77"/>
-    <available size="XXXL" a="63" b="79"/>
+    <!-- available size="XXXL" a="63" b="79"/ -->
     <image
       small="2019/tshirt-multilingual-green-front-small.jpg"
       large="2019/tshirt-multilingual-green-front-large.jpg"/>

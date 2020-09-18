@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <data>
-  <version>1</version>
+  <version>2</version>
 
   <module>
     <div class="banner-subscribe">
       <p>
         Subscribe to our email updates. Our experts inform you about current
-        news, events, activities, and how you can contribute.
+        news, events, activities, and how you can contribute. <span style="font-size:0.8em">(Our&#160;<a href="https://fsfe.org/about/legal/imprint.en.html#id-privacy-policy"><span style="color:white; text-decoration: underline;">Privacy&#160;Policy</span></a>)</span>
       </p>
 
       <form class="form-inline" method="post" action="https://my.fsfe.org/subscribe">

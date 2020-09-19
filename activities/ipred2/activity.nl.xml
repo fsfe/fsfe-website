@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<activityset>
-  <version>1</version>
+    <activityset>
+      <version>2</version>
 
-  <activity date="2005-09-16" status="finished">
-    <title>IPRED2</title>
-    <description>
-De tweede richtlijn voor het afdwingen van "Intellectuele Eigendomsrechten" werd voorgesteld door de Europese Commissie. Het heeft als doel alle opzettelijke inbreuken op commerciële schaal strafbaar te stellen, en het geeft de rechtenhouders de kans om deel te nemen aan het onderzoek. De FSFE wil er de Europese instellingen op wijzen dat dit soort wetten misbruiken van het juridisch systeem aanmoedigen en tevens uitleggen waarom ze ook op legale activiteiten een verlammende invloed hebben.
-    </description>
-    <link href="/activities/ipred2/ipred2.html" />
-    <order priority="1" />
-    <tags>
-      <tag key="policy" />
-    </tags>
-  </activity>
-</activityset>
-
+      <activity id="ipred2" date="2005-09-16" status="finished">
+        <title>IPRED2</title>
+        <description>
+          De Europese Commissie heeft een tweede richtlijn voor het afdwingen van &quot;intellectuele eigendomsrechten&quot; voorgesteld. Het richt zich op het criminaliseren van alle &quot;bewuste inbreuken op commerciële schaal&quot; en om rechthebbenden in staat te stellen om onderzoeken in te stellen. De FSFE heeft EU-instellingen duidelijk gemaakt hoe zulke wetten misbruik van het juridische systeem aanmoedigen en onaangename effecten hebben voor legale activiteiten.
+        </description>
+        <link href="/activities/ipred2/ipred2.html" />
+        <order priority="1" />
+        <tags>
+          <tag key="policy">beleid</tag>
+        </tags>
+      </activity>
+    </activityset>

@@ -260,7 +260,7 @@
       </xsl:attribute>
     </xsl:element> <!-- / Sharing cards -->
 
-    <script src="{$urlprefix}/scripts/jquery-3.3.1.min.js"></script>
+    <script src="{$urlprefix}/scripts/jquery-3.5.1.min.js"></script>
     <script src="{$urlprefix}/scripts/modernizr.custom.65251.js"></script>
 
     <!-- Copy head element from the xhtml source file (and possibly from external xsl rules) -->

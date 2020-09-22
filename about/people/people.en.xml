@@ -216,8 +216,8 @@
   <person id="daffre">
     <name>Gian-Maria Daffré</name>
     <country>CH</country>
-    <function country="CH">deputy/m</function>
-    <function group="zurich">coordinator/m</function>
+    <function country="CH">coordinator/m</function>
+    <function group="zurich">deputy/m</function>
     <team>ga</team>
     <team>core</team>
     <team>ch</team>
@@ -352,6 +352,18 @@
     <name>Paul Hänsch</name>
     <country>DE</country>
     <email>paul (at) fsfe (dot) org</email>
+  </person>
+
+  <person id="hersel">
+    <name>Ralf Hersel</name>
+    <country>CH</country>
+    <function country="CH">deputy/m</function>
+    <function group="zurich">coordinator/m</function>
+    <team>core</team>
+    <team>ch</team>
+    <team>zurich</team>
+    <email>ralfhersel (at) fsfe (dot) org</email>
+    <avatar>hersel.jpg</avatar>
   </person>
 
   <person id="hopf">

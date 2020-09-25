@@ -15,11 +15,11 @@
     <xsl:param name="lang" />
 
     <!-- Original link text -->
-    <!-- We remove leading "http://fsfe.org" by default -->
+    <!-- We remove leading "https://fsfe.org" by default -->
     <xsl:variable name="link">
       <xsl:choose>
-        <xsl:when test="starts-with (normalize-space(.), 'http://fsfe.org')">
-          <xsl:value-of select="substring-after(normalize-space(.), 'http://fsfe.org')" />
+        <xsl:when test="starts-with (normalize-space(.), 'https://fsfe.org')">
+          <xsl:value-of select="substring-after(normalize-space(.), 'https://fsfe.org')" />
         </xsl:when>
         <xsl:otherwise>
           <xsl:value-of select="normalize-space(.)" />
@@ -27,7 +27,7 @@
       </xsl:choose>
     </xsl:variable>
 
-    <!-- Add leading "http://fsfe.org" if necessary -->
+    <!-- Add leading "https://fsfe.org" if necessary -->
     <xsl:variable name="full-link">
       <xsl:choose>
         <xsl:when test="starts-with ($link, 'http:')">
@@ -37,7 +37,7 @@
           <xsl:value-of select="$link" />
         </xsl:when>
         <xsl:otherwise>
-          <xsl:text>http://fsfe.org</xsl:text>
+          <xsl:text>https://fsfe.org</xsl:text>
           <xsl:value-of select="$link" />
         </xsl:otherwise>
       </xsl:choose>
@@ -45,7 +45,7 @@
 
     <!-- Insert language into link -->
     <xsl:choose>
-      <xsl:when test="starts-with ($full-link, 'http://fsfe.org/')
+      <xsl:when test="starts-with ($full-link, 'https://fsfe.org/')
                       and substring-before ($full-link, '.html') != ''">
         <xsl:value-of select="concat (substring-before ($full-link, '.html'),
                                       '.', $lang, '.html')" />
@@ -77,7 +77,7 @@
       <channel>
         <title>FSFE Events</title>
         <description>Free Software Events</description>
-        <link>http://fsfe.org/events/</link>
+        <link>https://fsfe.org/events/</link>
         <language><xsl:value-of select="$lang" /></language>
         <copyright>Copyright (c) Free Software Foundation Europe. Verbatim copying and distribution
           of this entire article is permitted in any medium, provided this
@@ -85,11 +85,11 @@
         <managingEditor>press@fsfe.org (FSFE Press Team)</managingEditor>
         <webMaster>web@lists.fsfe.org (FSFE Webmaster Team)</webMaster>
         <image>
-          <url>http://fsfe.org/events/fsfe-events.png</url>
+          <url>https://fsfe.org/events/fsfe-events.png</url>
           <title>FSFE Events</title>
           <width>88</width>
           <height>31</height>
-          <link>http://fsfe.org/events/</link>
+          <link>https://fsfe.org/events/</link>
         </image>
 
         <!-- Event items -->
@@ -104,7 +104,7 @@
 
               <!-- <guid> (is also a permalink to the event page, with anchor -->
               <xsl:element name="guid">
-                <xsl:text>http://fsfe.org/events/events.html#</xsl:text>
+                <xsl:text>https://fsfe.org/events/events.html#</xsl:text>
                 <xsl:value-of select="@filename"/>
               </xsl:element>
 
@@ -144,7 +144,7 @@
 
                   <!-- link is not present, link to events.html#… -->
                   <xsl:otherwise>
-                    <xsl:text>http://fsfe.org</xsl:text>
+                    <xsl:text>https://fsfe.org</xsl:text>
                     <xsl:text>/events/events.</xsl:text>
                     <xsl:value-of select="$lang" />
                     <xsl:text>.html#</xsl:text>

@@ -28,13 +28,13 @@ RewriteRule ^translate/?$ /contribute/translators/ [R=301,L]
 RewriteRule ^promo(/.*)?  /contribute/spreadtheword$1 [R=301,L]
 
 # Convince your friends
-RewriteRule   ^(cyf|convince)/?$ http://wiki.fsfe.org/ConvinceYourFriends [R=301,L]
+RewriteRule   ^(cyf|convince)/?$ https://wiki.fsfe.org/ConvinceYourFriends [R=301,L]
 
 # Summit 2016
-RewriteRule ^summit16(/.*)?$  https://fsfe.org/community/events/2016/summit/frontpage$1 [R=301,L]
+RewriteRule ^summit16(/.*)?$  /community/events/2016/summit/frontpage$1 [R=301,L]
 
 # 15 years of FSFE
-RewriteRule ^15(/.*)?$    https://fsfe.org/activities/15years$1 [R=301,L]
+RewriteRule ^15(/.*)?$    /activities/15years$1 [R=301,L]
 
 # Podcast
 RewriteRule ^podcast(/.*)? /news/podcast.html [R=301,L]
@@ -98,17 +98,17 @@ RewriteRule ^people/greve(/.*)?$ /about/people/greve [R=301,L]
 RewriteRule ^about/people/?(people.*)?$ /about/team.html [R=301,L]
 
 # /en/.*
-RewriteRule ^en/layout/set/rss/content/view/full/5116 http://blogs.fsfe.org/ciaran/?feed=rss2 [R=301,L]
-RewriteRule ^en/layout/set/rss/content/view/full/5009 http://blogs.fsfe.org/maffulli/?feed=rss2 [R=301,L]
-RewriteRule ^en/layout/set/rss/content/view/full/4972 http://blogs.fsfe.org/gerloff/?feed=rss2 [R=301,L]
-RewriteRule ^en/layout/set/rss/content/view/full/5971 http://blogs.fsfe.org/jj/?feed=rss2 [R=301,L]
-RewriteRule ^en/layout/set/rss/content/view/full/6128 http://blogs.fsfe.org/jj/?feed=rss2 [R=301,L]
-RewriteRule ^en/layout/set/rss/content/view/full/4974 http://blogs.fsfe.org/greve/?feed=rss2 [R=301,L]
-RewriteRule ^en/news http://fsfe.org/news/ [R=301,L]
+RewriteRule ^en/layout/set/rss/content/view/full/5116 https://blogs.fsfe.org/ciaran/?feed=rss2 [R=301,L]
+RewriteRule ^en/layout/set/rss/content/view/full/5009 https://blogs.fsfe.org/maffulli/?feed=rss2 [R=301,L]
+RewriteRule ^en/layout/set/rss/content/view/full/4972 https://blogs.fsfe.org/gerloff/?feed=rss2 [R=301,L]
+RewriteRule ^en/layout/set/rss/content/view/full/5971 https://blogs.fsfe.org/jj/?feed=rss2 [R=301,L]
+RewriteRule ^en/layout/set/rss/content/view/full/6128 https://blogs.fsfe.org/jj/?feed=rss2 [R=301,L]
+RewriteRule ^en/layout/set/rss/content/view/full/4974 https://blogs.fsfe.org/greve/?feed=rss2 [R=301,L]
+RewriteRule ^en/news /news/ [R=301,L]
 RewriteRule ^en/rss/feed/news.xml /news/news.en.rss [R=301,L]
 RewriteRule ^en/rss/feed/events.xml /events/events.en.rss  [R=301,L]
-RewriteRule ^en/content/download/17665/125518/file/gnupg-ccid.rules http://wiki.fsfe.org/Card_howtos/Card_reader_setup_(udev)?action=AttachFile&do=view&target=gnupg-ccid.rules [R=301,L]
-RewriteRule ^en/content/download/15872/77909/file/gnupg-ccid http://wiki.fsfe.org/Card_howtos/Card_reader_setup_(udev)?action=AttachFile&do=view&target=gnupg-ccid [R=301,L]
+RewriteRule ^en/content/download/17665/125518/file/gnupg-ccid.rules https://wiki.fsfe.org/Card_howtos/Card_reader_setup_(udev)?action=AttachFile&do=view&target=gnupg-ccid.rules [R=301,L]
+RewriteRule ^en/content/download/15872/77909/file/gnupg-ccid https://wiki.fsfe.org/Card_howtos/Card_reader_setup_(udev)?action=AttachFile&do=view&target=gnupg-ccid [R=301,L]
 
 # Tags
 RewriteRule ^tags/tagged(\...)(\.html)?$ /tags/tags$1.html [R=301,L]
@@ -184,7 +184,7 @@ RewriteRule ^fellowship/payonline/([^/]*)/(.*)   https://my.fsfe.org/payonline/$
 RewriteRule ^fellowship/login(/.*)?$     https://my.fsfe.org/ [R=301,L]
 RewriteRule ^fellowship/join(/.*)?$      https://my.fsfe.org/support [R=301,L]
 RewriteRule ^fellowship/donate(/.*)?$    https://my.fsfe.org/donate [R=301,L]
-RewriteRule ^fellowship/payment(/.*)?$    https://fsfe.org/donate/payment$1 [R=301,L]
+RewriteRule ^fellowship/payment(/.*)?$    /donate/payment$1 [R=301,L]
 RewriteRule ^donate/payonline(/.*)?$     https://my.fsfe.org/payonline$1 [R=301,L]
 RewriteRule ^order/payonline.(.*)/(.*) /cgi-bin/order-payonline.pl?language=$1&reference=$2
 
@@ -192,7 +192,7 @@ RewriteRule ^order/payonline.(.*)/(.*) /cgi-bin/order-payonline.pl?language=$1&r
 RewriteRule ^fellowship/card(/.*)?$ https://wiki.fsfe.org/TechDocs/CardHowtos [R=301,L]
 RewriteRule ^fellowship/communicate(/.*)?$ /contact/community.html [R=301,L]
 RewriteRule ^fellowship/contact(/.*)?$ /contact/contact.html [R=301,L]
-RewriteRule ^fellowship/events(.*) https://fsfe.org/events$1 [R=301,L]
+RewriteRule ^fellowship/events(.*) /events$1 [R=301,L]
 RewriteRule ^fellowship/faq(/.*)?$ https://wiki.fsfe.org/KnowHow/FSFELife/FAQ [R=301,L]
 RewriteRule ^fellowship/graphics/people(/.*)?$ - [L]
 RewriteRule ^fellowship/groups(/.*)?$ https://wiki.fsfe.org/LocalGroups [R=301,L]

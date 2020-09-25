@@ -40,6 +40,7 @@ RETURN_NAME=0
 RETURN_NEWSDATE=0
 RETURN_VERSION_PRES=0
 RETURN_VERSION_INT=0
+RETURN_ABS_LINK=0
 
 # displayed files
 FILES_SYNTAX=""
@@ -50,6 +51,7 @@ FILES_NAME=""
 FILES_NEWSDATE=""
 FILES_VERSION_PRES=""
 FILES_VERSION_INT=""
+FILES_ABS_LINK=""
 
 
 # =============================================================================
@@ -163,13 +165,14 @@ for f in $files_all; do
   fi
 
   # ---------------------------------------------------------------------------
-  # Version tag numbering scheme
+  # Check absolute links to fsfe.org
   # ---------------------------------------------------------------------------
   fileregex="(\.xhtml$|\.xml$)"
-  if [[ ( $f =~ $fileregex ) && ( -e "$f" ) ]]; then
-    if ! xmllint --xpath "/*/version" "${f}" &>/dev/null; then
-      RETURN_VERSION=$((RETURN_VERSION + 1))
-      FILES_VERSION="${FILES_VERSION}|${f}"
+  exclude="^(drm.info|pdfreaders|global|cgi-bin|build|scripts)"
+  if [[ ( $f =~ $fileregex ) && ( ! $f =~ $exclude ) && ( -e "$f" ) ]]; then
+    if xmllint --xpath "//a/@href" "${f}" | grep -E "https?://fsfe(urope)?.org" &>/dev/null; then
+      RETURN_ABS_LINK=$((RETURN_ABS_LINK + 1))
+      FILES_ABS_LINK="${FILES_ABS_LINK}|${f}"
     fi
   fi
 
@@ -342,5 +345,27 @@ if [ $RETURN_VERSION_INT -gt 0 ]; then
 EOF
 fi
 
+if [ $RETURN_ABS_LINK -gt 0 ]; then
+  cat <<EOF >&2
+  ===============================
+  || ABSOLUTE LINK TO fsfe.org ||
+  ===============================
+  The following files contain a absolute links to fsfe.org:
+  $(echo "${FILES_ABS_LINK}" | sed -E -e "s/\|/\n  - /g")
+
+  Please do not use links containing "https://fsfe.org". So instead of
+
+    <a href="https://fsfe.org/freesoftware/">link</a>
+
+  you should use:
+
+    <a href="/freesoftware">link</a>
+
+  More information about the why and how:
+  https://wiki.fsfe.org/TechDocs/Mainpage/Editing/BestPractices#No_absolute_links_to_fsfe.org 
+
+EOF
+fi
+
 exit $((RETURN_SYNTAX + RETURN_ENC + RETURN_NAME + RETURN_NEWSDATE + \
-        RETURN_VERSION_PRES + RETURN_VERSION_INT))
+        RETURN_VERSION_PRES + RETURN_VERSION_INT + RETURN_ABS_LINK))

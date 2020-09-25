@@ -41,6 +41,7 @@ RETURN_NEWSDATE=0
 RETURN_VERSION_PRES=0
 RETURN_VERSION_INT=0
 RETURN_ABS_LINK=0
+RETURN_FIX_LANG=0
 
 # displayed files
 FILES_SYNTAX=""
@@ -52,6 +53,7 @@ FILES_NEWSDATE=""
 FILES_VERSION_PRES=""
 FILES_VERSION_INT=""
 FILES_ABS_LINK=""
+FILES_FIX_LANG=""
 
 
 # =============================================================================
@@ -173,6 +175,18 @@ for f in $files_all; do
     if xmllint --xpath "//a/@href" "${f}" | grep -E "https?://fsfe(urope)?.org" &>/dev/null; then
       RETURN_ABS_LINK=$((RETURN_ABS_LINK + 1))
       FILES_ABS_LINK="${FILES_ABS_LINK}|${f}"
+    fi
+  fi
+
+  # ---------------------------------------------------------------------------
+  # Check for links with fixed language
+  # ---------------------------------------------------------------------------
+  fileregex="(\.xhtml$|\.xml$)"
+  exclude="^(cgi-bin|build)"
+  if [[ ( $f =~ $fileregex ) && ( ! $f =~ $exclude ) && ( -e "$f" ) ]]; then
+    if xmllint --xpath "//a/@href" "${f}" | grep -E "\"(https?://fsfe(urope)?.org)?/.+?\.[a-z]{2}(\.html)?(#.+?)?\"" &>/dev/null; then
+      RETURN_FIX_LANG=$((RETURN_FIX_LANG + 1))
+      FILES_FIX_LANG="${FILES_FIX_LANG}|${f}"
     fi
   fi
 
@@ -367,5 +381,29 @@ if [ $RETURN_ABS_LINK -gt 0 ]; then
 EOF
 fi
 
+if [ $RETURN_FIX_LANG -gt 0 ]; then
+  cat <<EOF >&2
+  =========================
+  || FIXED LANGUAGE LINK ||
+  =========================
+  The following files contain links with fixed language:
+  $(echo "${FILES_FIX_LANG}" | sed -E -e "s/\|/\n  - /g")
+
+  Please do not preset a language in your links to resources on fsfe.org.
+  So instead of:
+
+    <a href="/contribute/web.en.html">link</a>
+
+  you should use:
+
+    <a href="/contribute/web.html">link</a>
+
+  More information about the why and how:
+  https://wiki.fsfe.org/TechDocs/Mainpage/Editing/BestPractices#No_fixed_language_in_internal_links
+
+EOF
+fi
+
 exit $((RETURN_SYNTAX + RETURN_ENC + RETURN_NAME + RETURN_NEWSDATE + \
-        RETURN_VERSION_PRES + RETURN_VERSION_INT + RETURN_ABS_LINK))
+        RETURN_VERSION_PRES + RETURN_VERSION_INT + RETURN_ABS_LINK + \
+        RETURN_FIX_LANG))

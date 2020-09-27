@@ -140,6 +140,18 @@
                         <xsl:if test="email != ''">
                             <xsl:value-of select="email" />
                         </xsl:if>
+                        <xsl:if test="fingerprint != ''">
+                            <xsl:element name="a">
+                                <xsl:attribute name="href">openpgp4fpr:<xsl:value-of select="fingerprint" /></xsl:attribute>
+                                🐾
+                            </xsl:element>
+                        </xsl:if>
+                        <xsl:if test="keyhref != ''">
+                            <xsl:element name="a">
+                                <xsl:attribute name="href"><xsl:value-of select="keyhref" /></xsl:attribute>
+                                🔑
+                            </xsl:element>
+                        </xsl:if>
                     </xsl:element>
 
                     <!-- Functions -->

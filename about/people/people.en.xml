@@ -42,6 +42,10 @@
       care: Code of Conduct Active Response Ensurers
 
     <email> Email address of the person. Please use (at) and (dot) for spam protection reasons
+    <fingerprint> OpenPGP fingerprint of the person. 40 hex digits. No spaces.
+    <keyhref> Link to the person's OpenPGP key. MUST be served over HTTPS. If the link is to a
+      public keyserver, it MUST identify the key by the fingerprint or another identifier
+      guaranteed to be unique. Key-IDs, names, and e-mail addresses SHALL NOT be used.
     <link> If someone clicks on a name, he can be redirected to a page with further information.
       In most cases, it's /about/surname/surname.html (if there's a page)
     <avatar> Here you can display an image. These image files have to be located in /about/people/avatars/, and ideally be named with the surname (id) of the person. Maximum 50x50px please!
@@ -66,7 +70,6 @@
         - A map where the residency of every team member is shown
         - (Dynamic) overview of sectors (like education, policy, legal) and their members
         - Making this whole thing more simple than it is now ;)
-        - Add PGP keys/fingerprints (issue #50)
   -->
 
   <person id="adams">
@@ -292,6 +295,8 @@
     <team>core</team>
     <team>de</team>
     <email>gerloff (at) fsfe (dot) org</email>
+    <fingerprint>503BEF73BFA17F7BF5B0DF99C566CCC5A859EAC8</fingerprint>
+    <keyhref>/about/people/gerloff/gerloff-public.asc</keyhref>
     <link>/about/people/gerloff/gerloff.html</link>
     <avatar>gerloff.jpg</avatar>
   </person>
@@ -325,6 +330,7 @@
     <team>core</team>
     <team>de</team>
     <email>greve (at) fsfe (dot) org</email>
+    <keyhref>/about/people/greve/greve-public.asc</keyhref>
     <link>/about/people/greve/greve.html</link>
     <avatar>greve.jpg</avatar>
   </person>
@@ -467,6 +473,8 @@
     <team>core</team>
     <team>de</team>
     <email>mk (at) fsfe (dot) org</email>
+    <fingerprint>C922F488F932F95D6F7C10F7A0616A85CE41AD88</fingerprint>
+    <keyhref>/about/people/kirschner/kirschner-public.asc</keyhref>
     <link>/about/people/kirschner/kirschner.html</link>
     <avatar>kirschner.jpg</avatar>
     <employee>full/m</employee>
@@ -594,6 +602,8 @@
     <team>de</team>
     <team>translation-coordinators</team>
     <email>max.mehl (at) fsfe (dot) org</email>
+    <keyhref>https://up.mehl.mx/mehl-current.pub.asc</keyhref>
+    <fingerprint>A942CD00386B3CB26BA9BB652704E4AB371E2E92</fingerprint>
     <link>/about/people/mehl/mehl.html</link>
     <avatar>mehl.jpg</avatar>
     <employee>full/m</employee>
@@ -711,6 +721,8 @@
     <team>core</team>
     <team>de</team>
     <email>bernhard (at) fsfe (dot) org</email>
+    <fingerprint>BDD957F9C4FE0FDC583DCD6D2B7BA3BF9BC3A554</fingerprint>
+    <keyhref>https://intevation.de/~bernhard/bernhard_gpgkey.asc</keyhref>
     <link>http://intevation.de/~bernhard/index.en.html</link>
     <avatar>reiter.jpg</avatar>
   </person>
@@ -809,6 +821,8 @@
     <team>core</team>
     <team>de</team>
     <email>schiessle (at) fsfe (dot) org</email>
+    <fingerprint>244FCEB0CB099524B21FB8962378A753E2BF04F6</fingerprint>
+    <keyhref>https://www.schiessle.org/data/gpg-key.txt</keyhref>
     <link>http://www.schiessle.org</link>
     <avatar>schiessle.jpg</avatar>
   </person>
@@ -883,6 +897,8 @@
     <team>si</team>
     <team>ftf</team>
     <email>hook (at) fsfe (dot) org</email>
+    <fingerprint>556A19C25686A785499D1D4B8C192103C651D7B0</fingerprint>
+    <keyhref>https://matija.suklje.name/documents/publickey.asc</keyhref>
     <link>http://matija.suklje.name</link>
     <avatar>suklje.jpg</avatar>
   </person>

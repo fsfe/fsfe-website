@@ -22,7 +22,7 @@
             <xsl:call-template name="fsfe-gettext">
               <xsl:with-param name="id" select="'news/events'" />
             </xsl:call-template></a></li>
-          <li><a href="http://planet.fsfe.org">
+          <li><a href="https://planet.fsfe.org">
             <xsl:call-template name="fsfe-gettext">
               <xsl:with-param name="id" select="'news/planet'" />
             </xsl:call-template></a></li>

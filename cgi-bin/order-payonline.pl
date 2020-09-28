@@ -21,9 +21,9 @@ my $amount100 = $amount * 100;
 
 my $passphrase = "Only4TestingPurposes";
 my $shastring = 
-    "ACCEPTURL=http://fsfe.org/order/thankyou.$lang.html$passphrase" .
+    "ACCEPTURL=https://fsfe.org/order/thankyou.$lang.html$passphrase" .
     "AMOUNT=$amount100$passphrase" .
-    "CANCELURL=http://fsfe.org/order/cancel.$lang.html$passphrase" .
+    "CANCELURL=https://fsfe.org/order/cancel.$lang.html$passphrase" .
     "CURRENCY=EUR$passphrase" .
     "LANGUAGE=$language$passphrase" .
     "ORDERID=$reference$passphrase" .
@@ -41,8 +41,8 @@ my $form = "      <!-- payment parameters -->\n" .
     "      <input type=\"hidden\" name=\"TP\"           value=\"https://fsfe.org/order/tmpl-concardis.$lang.html\"/>\n" .
     "      <input type=\"hidden\" name=\"PMListType\"   value=\"2\"/>\n" .
     "      <!-- post-payment redirection -->\n" .
-    "      <input type=\"hidden\" name=\"accepturl\"    value=\"http://fsfe.org/order/thankyou.$lang.html\"/>\n" .
-    "      <input type=\"hidden\" name=\"cancelurl\"    value=\"http://fsfe.org/order/cancel.$lang.html\"/>\n" .
+    "      <input type=\"hidden\" name=\"accepturl\"    value=\"https://fsfe.org/order/thankyou.$lang.html\"/>\n" .
+    "      <input type=\"hidden\" name=\"cancelurl\"    value=\"https://fsfe.org/order/cancel.$lang.html\"/>\n" .
     "      <!-- SHA1 signature -->\n" .
     "      <input type=\"hidden\" name=\"SHASign\"      value=\"$shasum\"/>";
 

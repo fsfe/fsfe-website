@@ -48,7 +48,7 @@
     <xsl:text>URL:</xsl:text>
     <xsl:choose>
       <xsl:when test="$page != ''"><xsl:value-of select="$page" /></xsl:when>
-      <xsl:otherwise>http://fsfe.org/events/events.<xsl:value-of select="/buildinfo/@language" />.html</xsl:otherwise>
+      <xsl:otherwise>https://fsfe.org/events/events.<xsl:value-of select="/buildinfo/@language" />.html</xsl:otherwise>
     </xsl:choose>
     <xsl:call-template name="nl" />
 

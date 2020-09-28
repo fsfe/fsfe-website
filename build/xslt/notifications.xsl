@@ -17,7 +17,7 @@
 
           <p>
             If you want to help out, <a
-            href="/contribute/web/web.en.html">consider joining the
+            href="/contribute/web/web.html">consider joining the
             web team</a>.
           </p>
         </div>

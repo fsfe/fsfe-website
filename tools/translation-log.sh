@@ -24,7 +24,7 @@
 # Constants
 # -----------------------------------------------------------------------------
 
-srcroot="http://www.fsfe.org/source"
+srcroot="https://fsfe.org/source"
 cvsroot="https://trac.fsfe.org/fsfe-web/log/trunk"
 
 
@@ -254,7 +254,7 @@ grep --no-filename "^outdated" ${infile}.* \
   echo "  <body>"
   echo "    <h1>Translation status overview</h1>"
   echo "    <p>"
-  echo "      <a href=\"http://status.fsfe.org/\">« Back to <em>Web server status</em></a>"
+  echo "      <a href=\"https://status.fsfe.org/\">« Back to <em>Web server status</em></a>"
   echo "    </p>"
   echo "    <table>"
   echo "      <tr>"

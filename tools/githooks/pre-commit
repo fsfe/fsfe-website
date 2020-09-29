@@ -176,7 +176,7 @@ for f in $files_all; do
   fileregex="(\.xhtml$|\.xml$)"
   exclude="^(drm.info|pdfreaders|global|cgi-bin|build|scripts)"
   if [[ ( $f =~ $fileregex ) && ( ! $f =~ $exclude ) && ( -e "$f" ) ]]; then
-    if xmllint --xpath "//a/@href" "${f}" 2>/dev/null | grep -qE "https?://fsfe(urope)?.org"; then
+    if xmllint --xpath "//a/@href" "${f}" 2>/dev/null | sed -E 's/([^\r\n]) (href=)/\1\n \2/g' | grep -qE "https?://fsfe(urope)?.org"; then
       RETURN_ABS_LINK=$((RETURN_ABS_LINK + 1))
       FILES_ABS_LINK="${FILES_ABS_LINK}|${f}"
     fi
@@ -188,7 +188,7 @@ for f in $files_all; do
   fileregex="(\.xhtml$|\.xml$)"
   exclude="^(cgi-bin|build)"
   if [[ ( $f =~ $fileregex ) && ( ! $f =~ $exclude ) && ( -e "$f" ) ]]; then
-    if xmllint --xpath "//a/@href" "${f}" 2>/dev/null | grep -qE "\"(https?://fsfe(urope)?.org)?/.+?\.[a-z]{2}(\.html)?(#.+?)?\""; then
+    if xmllint --xpath "//a/@href" "${f}" 2>/dev/null | sed -E 's/([^\r\n]) (href=)/\1\n \2/g' | grep -qE "\"(https?://fsfe(urope)?.org)?/.+?\.[a-z]{2}(\.html)?(#.+?)?\""; then
       RETURN_FIX_LANG=$((RETURN_FIX_LANG + 1))
       FILES_FIX_LANG="${FILES_FIX_LANG}|${f}"
     fi

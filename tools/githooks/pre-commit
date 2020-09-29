@@ -42,6 +42,8 @@ RETURN_VERSION_PRES=0
 RETURN_VERSION_INT=0
 RETURN_ABS_LINK=0
 RETURN_FIX_LANG=0
+RETURN_CSS_ELEMENT=0
+RETURN_CSS_ATTR=0
 
 # displayed files
 FILES_SYNTAX=""
@@ -54,6 +56,8 @@ FILES_VERSION_PRES=""
 FILES_VERSION_INT=""
 FILES_ABS_LINK=""
 FILES_FIX_LANG=""
+FILES_CSS_ELEMENT=""
+FILES_CSS_ATTR=""
 
 
 # =============================================================================
@@ -187,6 +191,28 @@ for f in $files_all; do
     if xmllint --xpath "//a/@href" "${f}" | grep -E "\"(https?://fsfe(urope)?.org)?/.+?\.[a-z]{2}(\.html)?(#.+?)?\"" &>/dev/null; then
       RETURN_FIX_LANG=$((RETURN_FIX_LANG + 1))
       FILES_FIX_LANG="${FILES_FIX_LANG}|${f}"
+    fi
+  fi
+
+  # ---------------------------------------------------------------------------
+  # Check for <style> elements
+  # ---------------------------------------------------------------------------
+  fileregex="(\.xhtml$|\.xml$)"
+  if [[ ( $f =~ $fileregex ) && ( -e "$f" ) ]]; then
+    if xmllint --xpath "//style" "${f}" &>/dev/null; then
+      RETURN_CSS_ELEMENT=$((RETURN_CSS_ELEMENT + 1))
+      FILES_CSS_ELEMENT="${FILES_CSS_ELEMENT}|${f}"
+    fi
+  fi
+
+  # ---------------------------------------------------------------------------
+  # Check for style attributes
+  # ---------------------------------------------------------------------------
+  fileregex="(\.xhtml$|\.xml$)"
+  if [[ ( $f =~ $fileregex ) && ( -e "$f" ) ]]; then
+    if xmllint --xpath "//@style" "${f}" &>/dev/null; then
+      RETURN_CSS_ATTR=$((RETURN_CSS_ATTR + 1))
+      FILES_CSS_ATTR="${FILES_CSS_ATTR}|${f}"
     fi
   fi
 
@@ -376,7 +402,9 @@ if [ $RETURN_ABS_LINK -gt 0 ]; then
     <a href="/freesoftware">link</a>
 
   More information about the why and how:
-  https://wiki.fsfe.org/TechDocs/Mainpage/Editing/BestPractices#No_absolute_links_to_fsfe.org 
+  https://wiki.fsfe.org/TechDocs/Mainpage/Editing/BestPractices#No_absolute_links_to_fsfe.org
+
+  The commit will be aborted. You have to fix the problem first.
 
 EOF
 fi
@@ -400,6 +428,50 @@ if [ $RETURN_FIX_LANG -gt 0 ]; then
 
   More information about the why and how:
   https://wiki.fsfe.org/TechDocs/Mainpage/Editing/BestPractices#No_fixed_language_in_internal_links
+
+  The commit will be aborted. You have to fix the problem first.
+
+EOF
+fi
+
+if [ $RETURN_CSS_ELEMENT -gt 0 ]; then
+  cat <<EOF >&2
+  ==========================
+  || INLINE CSS (<style>) ||
+  ==========================
+  The following files contain inline CSS as <style> elements:
+  $(echo "${FILES_CSS_ELEMENT}" | sed -E -e "s/\|/\n  - /g")
+
+  Please do not use <style> elements to define CSS rules for a file.
+
+  More information why this is bad style, and what to do instead:
+  https://wiki.fsfe.org/TechDocs/Mainpage/Editing/BestPractices#No_in-line_CSS
+
+  Your commit will be executed anyway. However, you are strongly
+  recommended to fix this issue in a following commit!
+
+EOF
+fi
+
+if [ $RETURN_CSS_ATTR -gt 0 ]; then
+  cat <<EOF >&2
+  ==========================
+  || INLINE CSS (style="") ||
+  ==========================
+  The following files contain inline CSS as style attributes:
+  $(echo "${FILES_CSS_ATTR}" | sed -E -e "s/\|/\n  - /g")
+
+  Please do not use style attributes to design an element. So instead of:
+
+    <p style="color: red;">text</p>
+
+  use CSS classes instead, or create them if necessary.
+
+  More information why this is bad style, and what to do instead:
+  https://wiki.fsfe.org/TechDocs/Mainpage/Editing/BestPractices#No_in-line_CSS
+
+  Your commit will be executed anyway. However, you are strongly
+  recommended to fix this issue in a following commit!
 
 EOF
 fi

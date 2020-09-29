@@ -208,8 +208,6 @@ foreach ($use as $d => $day) {  // calculate for each day
     // date
     if ($date[$d] === '' ) {
       $date[$d] = "Day " . $d;
-    } else {
-      $date[$d] = date("d.m.Y", strtotime($date[$d]));
     }
     // breakfast ($r_b)
     if ($break[$d] === "yes") {

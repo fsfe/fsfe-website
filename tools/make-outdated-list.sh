@@ -11,20 +11,22 @@ while getopts o:r:h OPT; do
   esac
 done
 
-if [[ -z $OUT || -z $REPO ]]; then
+if [[ -z "${OUT}" || -z "${REPO}" ]]; then
   echo "Mandatory option missing:"
   print_usage
   exit 1
 fi
 
-cd "$REPO"
+cd "${REPO}" || exit 2
 
 nowlang=''
-yearago=`date +%s --date='1 year ago'`
+yearago=$(date +%s --date='1 year ago')
 texts_dir="global/data/texts"
 texts_en=$(grep 'id=".*"' ${texts_dir}/texts.en.xml | perl -pe 's/.*id=\"(.*?)\".*/\1/g')
 
-cat  > ${OUT} << _END_
+OUT_TMP="${OUT}.tmp"
+
+cat > "${OUT_TMP}" << _END_
 <html>
  <body>
   <p><span style="color: red">Red entries</span> are pages where the original is newer than one year.</p>
@@ -38,7 +40,7 @@ find . -type f -iname "*\.en\.xhtml" | grep -v '^./[a-z][a-z]/\|^./news'|sed 's/
          echo $lang_uniq
      done
  done|sort|uniq|while read lang_uniq; do
-   echo "<a href=#$lang_uniq>$lang_uniq</a>" >> ${OUT}
+   echo "<a href=#$lang_uniq>$lang_uniq</a>" >> "${OUT_TMP}"
 done
 
 find . -type f \( -iname "*\.en\.xhtml" -o -iname "*\.en\.xml" \) -not -path "*/\.*" | grep -v '^./[a-z][a-z]/\|^./news\|^./events' |sort|while read fullname; do
@@ -57,9 +59,9 @@ find . -type f \( -iname "*\.en\.xhtml" -o -iname "*\.en\.xml" \) -not -path "*/
   done
 done|sort -t' ' -k 1,1 -k 3nr,3 -k 5nr,5|\
 while read lang page originaldate original_version translation_version; do
-  if [[ $nowlang != $lang ]]; then
-    if [[ $nowlang != "" ]]; then
-      echo "</table>" >> ${OUT}
+  if [[ "$nowlang" != "$lang" ]]; then
+    if [[ "$nowlang" != "" ]]; then
+      echo "</table>" >> "${OUT_TMP}"
 
       # Translatable strings
       texts_file="${texts_dir}/texts.${nowlang}.xml"
@@ -69,11 +71,11 @@ while read lang page originaldate original_version translation_version; do
           missing_texts="$missing_texts $text"
         fi
       done
-      echo "<p>Missing texts in ${texts_file}:</br>$missing_texts" >> ${OUT}
+      echo "<p>Missing texts in ${texts_file}:</br>$missing_texts" >> "${OUT_TMP}"
     fi
-    echo "<h1 id=\"$lang\">Language: $lang</h1>" >> ${OUT}
-    echo "<table>" >> ${OUT}
-    echo "<tr><th>Page</th><th>Original date</th><th>Original version</th><th>Translation version</th></tr>" >> ${OUT}
+    echo "<h1 id=\"$lang\">Language: $lang</h1>" >> "${OUT_TMP}"
+    echo "<table>" >> "${OUT_TMP}"
+    echo "<tr><th>Page</th><th>Original date</th><th>Original version</th><th>Translation version</th></tr>" >> "${OUT_TMP}"
     nowlang=$lang
   fi
   orig=`date +"%Y-%m-%d" --date="@$originaldate"`
@@ -83,9 +85,11 @@ while read lang page originaldate original_version translation_version; do
   else
     color=''
   fi
-  echo "<tr><td$color>$page</td><td>$orig</td><td>$original_version</td><td>$translation_version</td></tr>" >> ${OUT}
+  echo "<tr><td$color>$page</td><td>$orig</td><td>$original_version</td><td>$translation_version</td></tr>" >> "${OUT_TMP}"
 done
 
-echo "</table>" >> ${OUT}
-echo "</body>" >> ${OUT}
-echo "</html>" >> ${OUT}
+echo "</table>" >> "${OUT_TMP}"
+echo "</body>" >> "${OUT_TMP}"
+echo "</html>" >> "${OUT_TMP}"
+
+mv "${OUT_TMP}" "${OUT}"

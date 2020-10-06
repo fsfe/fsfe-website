@@ -31,7 +31,7 @@ Notable directories are:
 * `error`: Custom 4xx and 5xx error pages
 * `events`: Files for our events, ordered by year
 * `freesoftware`: More timeless pages explaining Free Software and related topics
-* `global`: Globally used data files and modules
+* `global`: Globally used data files and modules, also the static translated strings.
 * `graphics`: Icons, pictures and logos
 * `internal`: Forms used mostly by FSFE staff for internal processes
 * `look`: CSS and other style files
@@ -39,7 +39,7 @@ Notable directories are:
 * `order`: Our web shop
 * `scripts`: JavaScript files used on our pages
 * `tags`: Files necessary to display used tags throughout the website. Mostly automatically generated
-* `tools`: Contains miscellaneous XML, XSL, and SH files. Most notably it contains the static translated texts (strings).
+* `tools`: Contains miscellaneous XML, XSL, and SH files.
 
 ### Other domains
 

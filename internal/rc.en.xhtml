@@ -136,7 +136,7 @@
           <td>"Belegdatum" for credit card statements</td>
           <td>In EUR (<a href="https://ec.europa.eu/budget/graphs/inforeuro.html">Convert</a>). Format: 123,00</td>
           <td></td>
-          <td>Valid ER number, or <strong>?</strong> if you do not have it</td>
+          <td>Valid ER number</td>
           <td>Catch phrase for the ER</td>
           <td>Upload receipt as PDF, max. 2MB each</td>
           <td>Enter <strong>-</strong> if no remark applicable</td>
@@ -147,7 +147,7 @@
           <td><input type="date" name="entry[]" class="form-control" required="required" /></td>
           <td><input type="text" name="amount[]" class="form-control" pattern="-?\d{0,5},\d{2}" placeholder="12,34" required="required" /></td>
           <td><input type="text" name="recipient[]" class="form-control" required="required" /></td>
-          <td><input type="text" name="er[]" class="form-control" pattern="(^\?$|^er\.[\d]{4}-[\d]{2}-[\d]{2}\.[\d.-]+)" placeholder="er.2020-..." required="required" /></td>
+          <td><input type="text" name="er[]" class="form-control" pattern="^er\.[\d]{4}-[\d]{2}-[\d]{2}\.[\d.-]+" placeholder="er.2020-..." required="required" /></td>
           <td><input type="text" name="catch[]" class="form-control" required="required" /></td>
           <td><input type="file" name="receipt[]" class="form-control" required="required" /></td>
           <td><textarea name="remarks[]" class="form-control" rows="1" required="required"></textarea></td>

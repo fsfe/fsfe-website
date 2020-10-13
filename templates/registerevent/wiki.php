@@ -4,7 +4,7 @@
 = <?=$title?> =
  Start:: <?=$startdate?> 
  End:: <?=$enddate?> 
- Location:: <?=$city?>, <?=$countryname?> 
+ Location:: <?=$location?> 
  Link:: <?=$url?> 
  bgcolor:: #FFFFFF
  Description:: <?=$description?> 

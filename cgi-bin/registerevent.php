@@ -53,6 +53,16 @@ function eval_date($date) {
 }
 
 function send_registration_mail($from, $to) {
+  // do some prior location computation
+  $countrycode = explode('|', $_POST['country'])[0];
+  $countryname = explode('|', $_POST['country'])[1];
+
+  if($_POST['online'] === "yes") {
+    $location = "online";
+  } else {
+    $location = htmlspecialchars($_POST['city']) . ", " . htmlspecialchars($countryname);
+  }
+
 	$data = array(
 		'name' => $_POST['name'],
 		'email' => $_POST['email'],
@@ -63,10 +73,10 @@ function send_registration_mail($from, $to) {
 		'enddate' => $_POST['enddate'],
 		'description' => $_POST['description'],
 		'url' => $_POST['url'],
-		'location' => $_POST['location'],
-		'city' => $_POST['city'],
-		'countrycode' => explode('|', $_POST['country'])[0],
-		'countryname' => explode('|', $_POST['country'])[1],
+		'online' => $_POST['online'],
+		'location' => $location,
+		'countryname' => $countryname,
+		'countrycode' => $countrycode,
 		'tags' => $_POST['tags'],
 		'lang' => $_POST['lang']
 	);

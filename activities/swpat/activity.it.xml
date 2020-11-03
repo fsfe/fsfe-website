@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<activityset>
+  <version>2</version>
+
+  <activity id="swpat" date="2003-02-01" status="active">
+    <title>Brevetti Software in Europa</title>
+    <description>
+      Stiamo lavorando per un mondo dove il software fa quello che
+      gli utenti vogliono. Per realizzare questo, gli utenti devo essere in grado di
+      partecipare allo sviluppo e alla distribuzione del software.
+      I brevetti software impediscono questo obiettivo aggiungendo rischi legali
+      e finanziari allo sviluppo e alla distribuzione del software, dando inoltre
+      ai detentori dei brevetti il potere legale di proibire completamente l'utilizzo
+      delle idee brevettate agli sviluppatori software.
+    </description>
+    <link href="/activities/swpat/swpat.html" />
+    <order priority="3" />
+    <tags>
+      <tag key="policy" />
+      <tag key="legal" />
+    </tags>
+  </activity>
+</activityset>

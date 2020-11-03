@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<activityset>
+  <version>1</version>
+
+  <activity id="licence-questions" date="2015-11-25" status="active">
+    <title>Domande sulle licenze</title>
+    <description>
+      La mailing list della FSFE relativa alle domande sulle licenze è costituita dal nostro gruppo di
+      volontari che si dedicano a fornire aiuto con le licenze di Software Libero
+      e la loro conformità. Puoi contattarci se hai bisogno di un consiglio su quale licenza di Software Libero
+      sia meglio utilizzare, o se vuoi sapere di più su quali sono i tuoi diritti
+      su un pezzo di Software Libero.
+    </description>
+    <link href="/activities/licence-questions/licence-questions.html" />
+    <image url="/graphics/logos/licence-questions.png" />
+    <order priority="3" highlight="yes" />
+    <tags>
+      <tag key="legal" />
+    </tags>
+  </activity>
+</activityset>

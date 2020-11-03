@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<activityset>
+  <version>2</version>
+
+  <activity id="pdfreaders" date="2009-02-02" status="active">
+    <title>PDFreaders</title>
+    <description>
+      Con la campagna PDFreaders mettiamo luce sulle organizzazioni
+      governative che pubblicizzano lettori PDF proprietari, evidenziando quanto
+      frequentemente compaiono queste raccomandazioni per software non libero. Con
+      l'aiuto di attivisti da tutta Europa, abbiamo contattato queste organizzazioni
+      e spiegato loro come migliorare i loro siti in modo da
+      rispettare la nostra libertà. Su <a href="https://pdfreaders.org">pdfreaders.org</a> si possono trovare lettori
+      PDF di Software Libero per tutti i sistemi operativi più diffusi. 
+    </description>
+    <link href="http://pdfreaders.org" />
+    <order priority="2" />
+    <tags>
+      <tag key="awareness" />
+      <tag key="policy" />
+    </tags>
+  </activity>
+</activityset>

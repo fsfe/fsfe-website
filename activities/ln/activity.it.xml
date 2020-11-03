@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<activityset>
+  <version>1</version>
+
+  <activity id="ln" date="2007-04-01" status="active">
+    <title>Rete legale</title>
+    <description>
+      La rete legale è un gruppo di esperti neutrale, non di parte, con diverse
+      competenze nel campo delle problematiche legali con il Software Libero.
+      Attualmente la rete legale ha diverse centinaia di partecipanti
+      da diversi sistemi legali, formazione accademica e 
+      affiliazione. Lo scopo della rete legale è di promuovere
+      la discussione e curare meglio la conoscenza dei costrutti legali
+      del Software Libero. Le conversazioni della rete legale sono
+      pensate per essere dinamiche, provocanti e stimolanti, per essere
+      sempre aggiornate con i più recenti sviluppi. Dal 2007 stiamo
+      allestendo il workshop annuale legale e sulle licenze (Legal and Licencing Workshop - LLW) che
+      è diventato il più importante raduno mondiale di avvocati, 
+      tecnologi e leader del pensiero su temi legali e di licenza del
+      Software Libero, il tutto in un'atmosfera informale e confidenziale.
+    </description>
+    <link href="/activities/ln/ln.html" />
+    <image url="/graphics/logos/ln.png" />
+    <order priority="4" highlight="yes" />
+    <tags>
+      <tag key="legal" />
+    </tags>
+  </activity>
+</activityset>

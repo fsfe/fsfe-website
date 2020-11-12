@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html newsdate="2020-11-12">
+<version>2</version>
+
+<head>
+  <title>Come (non) impostare un sistema di allerta pubblico</title>
+</head>
+
+<body>
+
+<h1>Come (non) impostare un sistema di allerta pubblico</h1>
+
+<p>Qual è il miglior modo per allertare la popolazione sulle catastrofi? La Germania ha utilizzato App proprietarie che hanno di fatto reso il recente giorno d'allerta ("Warntag")
+  un fallimento ufficiale. Abbiamo analizzato la situazione e trovato soluzioni più forti che rispettino i diritti degli utenti.
+</p>
+
+<p>L'idea che sta alla base delle prove dei sistemi di emergenza è quella di trovare problemi potenziali o reali. È però degno di nota quanto sia andata male in Germania la giornata ufficiale di prova tenutasi in settembre. Specialmente l'<a href="https://www.dw.com/en/germanys-nationwide-emergency-warning-day-sees-bumpy-rollout/a-54877137">inaffidabilità</a>
+  delle  App non libere e non standard ufficialmente sponsorizzate, ha imposto al Ministro degli Interni (BMI), che è il referente dell'Ufficio responsabile della Protezione Civile e Assistenza ai Disastri (BBK), di etichettare questa giornata di test come un completo fallimento.
+</p>
+
+<p>La FSFE ha analizzato i risultati insieme ad esperti della protezione civile e della rete mobile per capire perché le App hanno fallito e da come si potrebbe costituire un sistema più flessibile e aperto.</p>
+
+<figure>
+  <img
+      src="https://pics.fsfe.org/uploads/medium/8a77a3fbd5eb790cf94b2f115f6f94f3.jpg"
+      alt="Un telefono rosso per le emergenze" />
+</figure>
+
+<h2>Sistemi di allerta digitali in Germania</h2>
+
+<p>Ci sono tre App finanziate pubblicamente che possono inviare le allerte di emergenza ufficiali agli utenti: Katwarn, Nina e Biwapp. Tutte e tre sono proprietarie, quindi software non-libero che non permette ai propri utenti di studiare, condividere e migliorare il software. Comunque, esse si basano sul prendere i messaggi di emergenza dal sistema centrale <em>MoWaS</em> ("modular warn system", sistema di allerta modulare) e inoltrarli all'App degli utenti utilizzando la connessione Internet WiFi o mobile dei loro smartphone.
+</p>
+
+<p>Il motivo principale del perché molti messaggi non sono stati notificati in tempo  dall'App o non sono proprio arrivati, è stato il sovraccarico di questo sistema centrale. Non si può di certo esserne sorpresi. In uno scenario dove milioni di dispositivi devono essere raggiunti nel medesimo istante da un singolo sistema centrale con connessioni uno-a-uno (<em>unicast</em>), la rete diventa inevitabilmente un collo di bottiglia.
+</p>
+
+<p>Il problema di base è dato da una eccessiva complessità e da strutture duplicate. Invece di investire un'ingente quantità di denaro pubblico in sistemi centralizzati e in tre App proprietarie, altri stati hanno scelto una infrastruttura flessibile e ben testata per distribuire messaggi di emergenza: SMSCB, più comunemente chiamata <em>broadcast di cella</em>, quindi messaggi uno-a-molti.
+</p>
+
+<h2>Broadcast di cella</h2>
+
+<p>Reso standard intorno al 1990, i broadcast di cella sono un metodo per inviare messaggi a tutte le utenze mobili, globalmente in tutto il paese o limitatamente a specifiche aree, solo in pochi secondi. I cellulari non devono essere registrati in una rete specifica per ricevere questi messaggi, e i messaggi di allerta con priorità massima fanno squillare il telefono anche quando è in silenzioso. E, a differenza degli SMS e la navigazione Internet mobile, i broadcast di cella utilizzano un canale riservato che funziona anche se le celle sono sovraccariche di utenze e traffico.</p>
+
+<p>Inoltre, i broadcast di cella possono essere ricevuti da qualsiasi telefono, non importa se ci siano o meno installate App di emergenza, o se il sistema operativo è aggiornato, o se sono installati servizi proprietari di Google/Apple. Dal momento che la comunicazione è uno-a-molti, non ci sono nemmeno preoccupazioni a riguardo della privacy. Questi chiari benefici hanno portato l'Unione Europea a decidere di basare il sistema <a href="https://en.wikipedia.org/wiki/EU-Alert">EU-Alert</a> sui broadcast di cella. Come direttiva, questo sistema dovrà essere implementato da tutti gli stati membri UE prima del giugno 2022, a meno che lo stato sia in grado di fornire un servizio con prestazioni simili e affidabili - che però è una soglia molto elevata.</p>
+
+<p>Nonostante questi vantaggi, la Germania ha scelto di non basare il suo sistema di allerta per le emergenze sullo standard SMSBC, come hanno invece fatto altri paesi quali i Paesi Bassi, la Grecia, la Romania, l'Italia o gli Stati Uniti. Siccome non c'è alcun obbligo ufficiale per tenere attivo SMSBC, molti provider di reti mobili disabilitano questa funzionalità per risparmiare denaro. Invece, costi molto più alti sono pagati dai contribuenti per finanziare un sistema isolato e le relative App proprietarie.</p>
+
+<figure>
+  <img
+      src="https://pics.fsfe.org/uploads/big/f790c7602451468f95091e50dc7988d1.jpg"
+      alt="Messaggio di allerta broadcast EU-Alert/NL-Alert" />
+  <figcaption>Messaggio di broadcast da EU-Alert/NL-Alert del 2018.
+  CC-BY-SA-4.0 di WarningMessageDelivery</figcaption>
+</figure>
+
+<h2>App di allerta</h2>
+
+<p>Al di là degli evidenti vantaggi dei broadcast di cella, le App di allerta hanno comunque motivo di esistere. Gli utenti possono richiedere varie informazioni su altre regioni e sugli eventi passati. Comunque, è stato dimostrato che un sistema di comunicazione di emergenza basato in gran parte sulle App è eccessivamente predisposto a fallire per la fragilità del singolo punto di rottura.</p>
+
+<p>Inoltre, visto il ruolo critico che hanno questi sistemi per le persone, le App devono essere <a href="/freesoftware/">Software Libero</a>, e costruite sugli <a href="/freesoftware/standards/">Standard Aperti</a>. Solo con la libertà di utilizzare, studiare, condividere e migliorare il software, è possibile un'analisi da parte dei cittadini e da parte di ricercatori della sicurezza indipendenti. Questa analisi a sua volta incrementa la fiducia e la volontà di installare un'App di allerta complementare, come ci insegna l'esperienza pratica con le App di tracciamento del coronavirus.</p>
+
+<h2>Conclusione</h2>
+
+<p>
+  La nostra analisi si conclude con tre punti chiave che non solo le amministrazioni responsabili ma anche altri esponenti dovrebbero tenere a mente.</p>
+
+<ul>
+  <li><div>Le basi delle comunicazioni di emergenza da parte delle autorità ai cittadini dovrebbero essere formate da sistemi standardizzati e flessibili capaci di inviare milioni di messaggi a quanti più dispositivi possibile, indipendentemente dal loro sistema operativo o dal software installato. Attualmente, SMSBC, o broadcast di cella, sembrano essere la migliore implementazione praticabile che funziona correttamente in numerosi stati. Apprezziamo quindi che l'UE abbia scelto di basare EU-Alert sui broadcast di cella.<br/></div></li>
+
+  <li><div>Le App di allerta sono uno strumento complementare utile. Specialmente per le App finanziate pubblicamente, è però cruciale sviluppare e rilasciare il software con una licenza di Software Libero, seguendo il principio di <a href="https://publiccode.eu">Denaro pubblico? Codice pubblico!</a></div></li>
+
+  <li><div>È importante testare i sistemi di allerta, ed è bene che la pianificazione di giornate ordinarie di allerta venga mantenuta in futuro. È normale che capitino degli errori durante questi test, ma non devono essere ignorati ed occorre invece che vengano attentamente esaminati.</div></li>
+
+</ul>
+
+<p>In questa direzione, le amministrazioni responsabili, BBK e BMI, hanno molto lavoro da fare. Ma è una cosa fattibile, sia dal punto di vista pratico che finanziario.
+</p>
+
+</body>
+
+<tags>
+  <tag key="front-page"/>
+  <tag key="de">Germania</tag>
+  <tag key="fya">Android</tag>
+  <tag key="pmpc">Codice Pubblico</tag>
+</tags>
+
+
+<discussion href="https://community.fsfe.org/t/538"/>  
+<image url="https://pics.fsfe.org/uploads/medium/7a0203c58e6e11e841072693a1a91eeb.jpg"/> 
+
+<translator>Francesca Indorato e Luca Bonissi</translator>
+</html>

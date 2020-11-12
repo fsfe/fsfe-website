@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html newsdate="2020-11-12">
+<version>2</version>
+
+<head>
+  <title>Wie man ein öffentliches Warnsystem (nicht) aufbauen sollte</title>
+</head>
+
+<body>
+
+<h1>Wie man ein öffentliches Warnsystem (nicht) aufbauen sollte</h1>
+
+<p>
+  Wie kann man Menschen am besten vor Katastrophen warnen? Deutschland
+  setzt auf proprietäre Apps, wodurch der jüngste "Warntag" zu einem
+  offiziellen Misserfolg wurde. Wir haben die Situation analysiert und
+  robustere Lösungen gefunden, die Nutzerrechte respektieren.
+</p>
+
+<p>
+  Die Grundidee des Testens von Notfallsystemen besteht darin,
+  potenzielle oder tatsächliche Probleme zu finden. Es ist jedoch
+  bemerkenswert, wie viel beim offiziellen deutschen Warntag im
+  September schief gelaufen ist. Insbesondere die <a
+  href="https://www.tagesschau.de/inland/warntag-115.html">Unzuverlässigkeit</a>
+  der offiziell beworbenen, unfreien und nicht standardisierten Apps
+  zwang das zuständige Bundesinnenministerium (BMI), welches dem
+  zuständigen Bundesamt für Bevölkerungsschutz und Katastrophenhilfe
+  (BBK) übergeordnet ist, den Testtag als gescheitert zu kennzeichnen.
+</p>
+
+<p>
+  Die FSFE analysierte die Ergebnisse zusammen mit Experten aus
+  Katastrophenschutz und mobilen Netzwerken, um herauszufinden, warum
+  die Apps fehlschlugen und wie ein belastbareres und offeneres System
+  aussehen kann.
+</p>
+
+<figure>
+  <img
+      src="https://pics.fsfe.org/uploads/medium/8a77a3fbd5eb790cf94b2f115f6f94f3.jpg"
+      alt="Ein rotes Notfalltelefon" />
+</figure>
+
+<h2>Digitale Warnsysteme in Deutschland</h2>
+
+<p>
+  Es gibt drei prominente, öffentlich finanzierte Apps, die offizielle
+  Notfallwarnungen an ihre Benutzer weiterleiten können: Katwarn, Nina
+  und Biwapp. Alle drei sind proprietär, also unfreie Software, die es
+  ihren Benutzern nicht erlaubt, die Software zu benutzen, zu
+  studieren, zu teilen und zu verbessern. Darüber hinaus basieren sie
+  darauf, Notfallwarnungen vom zentralen <em>MoWaS</em> ("modulares
+  Warnsystem") abzurufen und diese über die WLAN- oder mobile
+  Internetverbindung an die Mobiltelefone der App-Nutzer
+  weiterzuleiten.
+</p>
+
+<p>
+  Eine Überlastung dieses zentralen Systems war der Hauptgrund dafür,
+  dass viele Alarme die Nutzer der App nicht oder nicht rechtzeitig
+  erreichten. Das kam jedoch nicht überraschend. In einem Szenario, in
+  dem Millionen von Geräten gleichzeitig von einer zentralen Instanz
+  mit Eins-zu-eins-Verbindungen (<em>unicast</em>) erreicht werden
+  müssen, sind solche Engpässe fast unvermeidlich.
+</p>
+
+<p>
+  Die zugrunde liegenden Probleme sind jedoch unnötige Komplexität und
+  Mehrfachstrukturen. Anstatt große Mengen öffentlicher Gelder in
+  zentralisierte Systeme und drei proprietäre Anwendungen zu
+  investieren, betreiben andere Staaten eine widerstandsfähigere und
+  gut getestete Infrastruktur für die Verteilung von
+  Notfallnachrichten: SMSCB, häufiger auch <em>Cell Broadcast</em>
+  genannt, also Eins-zu-viele-Nachrichten.
+</p>
+
+<h2>Cell Broadcasts</h2>
+
+<p>
+  Um 1990 standardisiert, sind Cell Broadcasts eine etablierte Methode,
+  um Nachrichten an alle Benutzer von Mobilfunknetzen zu senden,
+  entweder in einem ganzen Land oder begrenzt auf bestimmte Gebiete –
+  und zwar in weniger als ein paar Sekunden. Die Telefone müssen nicht
+  einmal in einem bestimmten Netz registriert sein, um diese
+  Nachrichten zu empfangen, und Alarme mit der höchsten Priorität lösen
+  sogar einen Alarm aus, wenn das Telefon stumm geschaltet ist. Außerdem
+  haben solche Broadcasts im Gegensatz zu SMS und mobilem Internet einen
+  reservierten Kanal, der auch dann funktioniert, wenn die
+  Telefonzellen mit vielen eingewählten Geräten und Nachrichten
+  überlastet sind.
+</p>
+
+<p>
+  Darüber hinaus können Cell Broadcasts von jedem Telefon empfangen
+  werden, unabhängig davon, ob Notfall-Apps, ein aktuelles
+  Betriebssystem oder proprietäre Google/Apple-Dienste installiert
+  sind. Da es sich um eine Eins-zu-viele-Kommunikation handelt, gibt es
+  auch keine Datenschutzbedenken. Diese klaren Vorteile veranlassten
+  die Europäische Union zu der Entscheidung, das zukünftige <a
+  href="https://de.wikipedia.org/wiki/EU-Alert">EU-Alert-System</a>
+  Cell Broadcats basieren zu lassen. Als Richtlinie muss dies von allen
+  EU-Mitgliedsstaaten bis Juni 2022 umgesetzt werden, es sei denn, ein
+  Staat kann einen Dienst mit einer ähnlich zuverlässigen Leistung
+  anbieten - was eine sehr hohe Schwelle ist.
+</p>
+
+<p>
+  Ungeachtet dieser Vorteile hat sich Deutschland im Gegensatz zu
+  anderen Ländern wie den Niederlanden, Griechenland, Rumänien, Italien
+  oder den USA dafür entschieden, sein Notfallwarnsystem nicht auf dem
+  SMSBC-Standard aufzubauen. Da es keine offizielle Verpflichtung dazu
+  gibt, haben die meisten Mobilfunknetzbetreiber diese Funktion aus
+  Kostengründen deaktiviert. Stattdessen fallen für den Steuerzahler
+  wesentlich höhere Kosten an, um ein isoliertes System und
+  dazugehörige proprietäre Anwendungen zu finanzieren.
+</p>
+
+<figure>
+  <img
+      src="https://pics.fsfe.org/uploads/big/f790c7602451468f95091e50dc7988d1.jpg"
+      alt="EU-Alert/NL-Alert Cell Broadcast message" />
+  <figcaption>EU-Alert/NL-Alert Cell Broadcast-Nachricht aus dem Jahr 2018.
+  CC-BY-SA-4.0 von WarningMessageDelivery</figcaption>
+</figure>
+
+<h2>Warn-Apps</h2>
+
+<p>
+  Trotz der klaren Vorteile von Cell Broadcasts haben separate
+  Warn-Apps ihre Berechtigung. Benutzer können verschiedene
+  Informationen über andere Regionen und vergangene Geschehnisse
+  einsehen. Einen großen Teil der Notfallkommunikation auf diese Apps
+  zu stützen, hat sich jedoch als zu anfällig dafür erwiesen, beim
+  Ausfall einer Komponente komplett zu versagen.
+</p>
+
+<p>
+  Darüber hinaus müssen sie aufgrund ihrer kritischen Rolle für die
+  Öffentlichkeit <a href="/freesoftware/">Freie Software</a> sein und
+  auf <a href="/freesoftware/standards/">Offenen Standards</a>
+  aufbauen. Nur mit den Freiheiten, Software frei benutzen, studieren,
+  teilen und verbessern zu können, können sie von Bürgern und
+  unabhängigen Sicherheitsforscherinnen analysiert werden. Das
+  wiederum erhöht das Vertrauen und die Bereitschaft, eine ergänzende
+  Warn-App zu installieren, wie die praktischen Erfahrungen mit den
+  Corona-Tracing-Apps zeigen.
+</p>
+
+<h2>Fazit</h2>
+
+<p>
+  Unsere Analyse schließt mit drei zentralen Ergebnissen, die nicht nur
+  die verantwortlichen Verwaltungen, sondern auch andere Akteure im
+  Auge behalten sollten.
+</p>
+
+<ul>
+  <li>
+    Die Grundlage der Notfallkommunikation von Behörden zu Bürgern
+    sollte ein standardisiertes, belastbares System bilden, das in der
+    Lage ist, Millionen von Nachrichten an möglichst viele Geräte zu
+    senden. Das muss dabei unabhängig von deren Betriebssystem oder installierter
+    Software sein. Gegenwärtig scheinen SMSBC, also Cell Broadcasts, die
+    bestmögliche Umsetzung zu sein, die in zahlreichen Staaten gut
+    funktioniert. Daher begrüßen wir, dass die EU sich dafür
+    entschieden hat, EU-Alert auf Cell Broadcasts basieren zu lassen.
+  </li>
+
+  <li>
+    Warn-Apps können eine nützliche Ergänzung sein. Besonders für
+    öffentlich finanzierte Anwendungen ist es entscheidend, die
+    Software unter einer Freie-Software-Lizenz zu entwickeln und zu
+    veröffentlichen, getreu dem Prinzip <a
+    href="https://publiccode.eu/de">Public Money? Public Code!</a>.
+  </li>
+
+  <li>
+    Das Testen von Warnsystemen ist wichtig, und die geplanten regelmäßigen Warntage
+    sollten auch in Zukunft beibehalten werden. Es ist normal, dass bei
+    diesen Tests Fehler auftreten, aber sie dürfen nicht beschönigt
+    werden, sondern erfordern eine gründliche Analyse und Verbesserung.
+  </li>
+
+</ul>
+
+<p>
+  In diesem Sinne haben die zuständigen Verwaltungen, BBK und BMI, viel Arbeit vor
+  sich. Aber es ist machbar, sowohl aus praktischer als auch aus
+  finanzieller Sicht.
+</p>
+
+</body>
+
+<tags>
+  <tag key="front-page"/>
+  <tag key="de">Deutschlamd</tag>
+  <tag key="fya">Android</tag>
+  <tag key="pmpc">Öffentlicher Code</tag>
+</tags>
+
+
+<discussion href="https://community.fsfe.org/t/538"/>  
+<image url="https://pics.fsfe.org/uploads/medium/7a0203c58e6e11e841072693a1a91eeb.jpg"/> 
+
+</html>

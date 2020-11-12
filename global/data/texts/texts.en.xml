@@ -89,12 +89,12 @@
   <text id="podcast">Podcast</text>
 
   <text id="go-to">Go to:</text>
-  <text id="search">Search</text>
 
   <text id="subscribe">Subscribe</text>
   <text id="email">email address</text>
   <text id="news">News</text>
   <text id="breadcrumb-news">News</text>
+  <text id="pages">Pages</text>
   <text id="receive-newsletter">Subscribe to FSFE's monthly newsletter</text>
   <text id="subscribe-newsletter">Subscribe to the newsletter</text>
 
@@ -215,4 +215,10 @@
   <text id="size/small">small</text>
   <text id="background/white">White background</text>
   <text id="background/transparent">Transparent background</text>
+
+  <!-- Search function -->
+  <text id="search">Search</text>
+  <text id="search/placeholder">Search terms...</text>
+  <text id="search/notfound">No search results found. Please rephrase your query.</text>
+  <text id="search/empty">Your search query is empty.</text>
 </data>

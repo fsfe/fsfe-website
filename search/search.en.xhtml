@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html>
+  <version>1</version>
+
+<head>
+  <title>Search</title>
+
+  <script type="text/javascript" src="/scripts/lunr-2.3.9.min.js"></script>
+  <script src="index.js"></script>
+</head>
+<body class="toplevel">
+
+  <h1>Search</h1>
+
+  <div id="introduction">
+    <p>
+      Find news articles and pages about topics your are interested in.
+      You can use one or multiple terms.
+    </p>
+  </div>
+
+  <p>
+    The search crawls through all site titles, teasers and tags, but
+    not the full article text. You will see maximum 15 results, sorted
+    in news and pages. The case of your term does not matter. If you do
+    not find what you were looking for, please try a variation of the
+    terms, or different words, and use the <a href="#tips">advanced
+    search features</a>.
+  </p>
+
+  <noscript>
+    <p>
+      JavaScript needs to be activated for the search functionality to
+      work. Usually, we do our best to avoid depending on this. If you do
+      not want to activate JavaScript, you can use an external search
+      engine which does not require it (for example <a
+      href="https://html.duckduckgo.com/html/">DuckDuckGo</a>), and use
+      the "site:fsfe.org" modifier in the query.
+    </p>
+  </noscript>
+
+  <form class="form-inline" method="GET" action="">
+    <div class="form-group">
+      <input type="text" class="form-control" id="search" name="q" aria-label="Search term" />
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+  </form>
+
+  <h2>Search results</h2>
+
+  <div id="search_results"></div>
+
+  <h2 id="tips">Tips for advanced searches</h2>
+
+  <p>
+    You can customise your searches to narrow down the results. Here
+    are a few examples, you can find more in the <a
+    href="https://lunrjs.com/guides/searching.html">documentation of
+    the library</a> we use.
+  </p>
+
+  <ul>
+    <li>
+      Wildcards: <code>communi*</code> will display results for e.g.
+      <em>community</em> and <em>communication</em>.
+    </li>
+    <li>
+      Presence: with <code>+router -patents consultation</code> you
+      define that <em>router</em> must be found in the results. All
+      results containing <em>patents</em> will be ruled out. The
+      presence of <em>consultation</em> is optional.
+    </li>
+    <li>
+      Fields: you can limit your search to the site titles with
+      <code>title:router</code>. Other fields are <code>teaser</code>,
+      <code>type</code> and <code>tags</code>.
+    </li>
+    <li>
+      Only news/pages: <code>+standard +type:page</code> only shows
+      pages with the word <em>standard</em>. The opposite is the
+      <em>news</em> type. Note the + signs to enforce both terms to be
+      present.
+    </li>
+    <li>
+      Boosts: you can increase weight of certain terms. With
+      <code>router^10 freedom</code> the weight of the first term is
+      10x higher.
+    </li>
+    <li>
+      Fuzzy matches: With <code>organisation~1</code>, you will find
+      results with <em>organisation</em> and <em>organization</em>. One
+      character in the findings can be different from your search term.
+    </li>
+  </ul>
+
+  <script>
+  const searchString = new URLSearchParams(window.location.search).get('q');
+  const locals = [document.documentElement.getAttribute("lang")];
+  if (!locals.includes('en')) {
+      locals.push('en');
+  }
+
+  const $target = document.querySelector('#search_results');
+  if (searchString) {
+
+  // Populate the field with any existing search string
+  document.querySelector('#search').value = searchString;
+
+  // Our index uses title as a key of the hashmap
+  const pagesByURL = pages.reduce((acc, curr) => {
+    acc[curr.url] = curr;
+    return acc;
+  }, {});
+
+  index = lunr(function() {
+                      this.pipeline.remove(lunr.stopWordFilter);
+                      this.pipeline.remove(lunr.trimmer);
+                      this.field("title", { boost: 10 });
+                      this.field("tags", { boost: 5 });
+                      this.field("teaser");
+                      this.field("type");
+                      this.ref("url");
+
+                      pages.forEach(function (page) {
+                          this.add(page)
+                      }, this)
+                  });
+
+    // Do the search and filter out results not from the current local or English
+    let matches = index.search(searchString).filter(p => locals.some(local => p.ref.includes(local + ".html")));
+
+    function display_result(matches) {
+        // workaround xsl XML tag parsing madness
+        return '&lt;ul&gt;' + matches.map(p => {
+          title = pagesByURL[p.ref].title;
+          date = pagesByURL[p.ref].date;
+            if (date) {
+              return '<li>' + '<a href='&apos;+p.ref+&apos;'>'+title+'</a>'+' (' + date + ')</li>';
+            } else {
+              return '<li><a href='&apos;+p.ref+&apos;'>' + title + ' </a></li>';
+            }
+        }).join('') + '&lt;/ul&gt;';
+    }
+
+    if (matches.length > 0) {
+      matches = matches.slice(0, 15);
+      let [news, pages] = matches.reduce(([true_arr, false_arr], m)=> {
+        if (m.ref.includes('news') === false)
+          // return true_arr and append m to false_arr
+          return [true_arr, [...false_arr, m]]
+        else
+          return [[...true_arr,m], false_arr]
+      }, [[],[]]);
+      if (news.length > 0) {
+        news = news.sort((a, b) => pagesByURL[a.ref].date &lt; pagesByURL[b.ref].date);
+        $target.innerHTML = '<h3><translation id="news" /></h3>' + display_result(news);
+      }
+      if (pages.length > 0) {
+        $target.innerHTML += '<h3><translation id="pages" /></h3>' + display_result(pages);
+      }
+    } else {
+      $target.innerHTML = '<p><translation id="search/notfound" /></p>';
+    }
+  } else {
+      $target.innerHTML = '<p><translation id="search/empty" /></p>';
+  }
+  </script>
+</body>
+</html>

@@ -152,7 +152,7 @@
                 <xsl:attribute name="id">menu-search-box</xsl:attribute>
                 <xsl:element name="form">
                   <xsl:attribute name="method">GET</xsl:attribute>
-                  <xsl:attribute name="action">/search/search.en.html</xsl:attribute>
+                  <xsl:attribute name="action"><xsl:value-of select="$urlprefix"/>/search/search.html</xsl:attribute>
                   <xsl:element name="div">
                     <xsl:attribute name="class">input-group</xsl:attribute>
                     <xsl:element name="div">

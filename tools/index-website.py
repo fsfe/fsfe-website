@@ -6,7 +6,6 @@
 import glob
 import json
 from bs4 import BeautifulSoup
-from subprocess import run, PIPE
 import multiprocessing.dummy as mp
 import logging
 from os.path import abspath

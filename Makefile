@@ -14,6 +14,19 @@
 build_env = development
 
 # -----------------------------------------------------------------------------
+# Build search index
+# -----------------------------------------------------------------------------
+
+# This step runs a Python tool that creates an index of all news and
+# articles. It extracts titles, teaser, tags, dates and potentially more.
+# The result will be fed into a JS file.
+
+.PHONY: searchindex
+all: searchindex
+searchindex:
+	python3 tools/index-website.py
+
+# -----------------------------------------------------------------------------
 # Update CSS files
 # -----------------------------------------------------------------------------
 

@@ -1,0 +1,25 @@
+#menu-search-box {
+  display: inline-block;
+  vertical-align: middle;
+
+  form {
+    max-width: 185px;
+
+    & > div > input {
+      display: table-cell;
+      border-radius: 4px;
+    }
+  }
+
+  .btn-primary {
+    .btn;
+    background-color: transparent !important;
+    border: none !important;
+    color: @btn-primary-bg !important;
+    &:hover {
+      background-color: #2a7dae !important;
+      color: #fff !important;
+      border-color: #216280 !important;
+    }
+  }
+}

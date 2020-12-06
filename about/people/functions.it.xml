@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <functionset>
-  <version>0</version>
+  <version>1</version>
 
   <function id="president/f">Presidentessa</function>
   <function id="president/m">Presidente</function>
@@ -19,22 +19,22 @@
   <function id="sysadmin/m">Amministratore di sistema</function>
   <function id="coordinator/f">Coordinatrice</function>
   <function id="coordinator/m">Coordinatore</function>
-  <function id="policy-analyst/f">Policy Analyst</function>
-  <function id="policy-analyst/m">Policy Analyst</function>
-  <function id="policy-manager/f">Policy Manager</function>
-  <function id="policy-manager/m">Policy Manager</function>
-  <function id="campaign-manager/m">Campaign Manager</function>
-  <function id="campaign-manager/f">Campaign Manager</function>
-  <function id="program-manager/f">Programme Manager</function>
-  <function id="program-manager/m">Programme Manager</function>
-  <function id="project-manager/f">Project manager</function>
-  <function id="project-manager/m">Project manager</function>
+  <function id="policy-analyst/f">Analista della Policy</function>
+  <function id="policy-analyst/m">Analista della Policy</function>
+  <function id="policy-manager/f">Responsabile della Policy</function>
+  <function id="policy-manager/m">Responsabile della Policy</function>
+  <function id="campaign-manager/m">Responsabile delle campagne</function>
+  <function id="campaign-manager/f">Responsabile delle campagne</function>
+  <function id="program-manager/f">Responsabile del programma</function>
+  <function id="program-manager/m">Responsabile del programma</function>
+  <function id="project-manager/f">Responsabile del progetto</function>
+  <function id="project-manager/m">Responsabile del progetto</function>
   <function id="deputy/f">Vice coordinatrice</function>
   <function id="deputy/m">Vice coordinatore</function>
-  <function id="seniorcounsel/f">Senior Counsel</function>
-  <function id="seniorcounsel/m">Senior Counsel</function>
-  <function id="member-assembly/f">Member of the General Assembly</function>
-  <function id="member-assembly/m">Member of the General Assembly</function>
-  <function id="merchandise/f">Merchandise</function>
-  <function id="merchandise/m">Merchandise</function>
+  <function id="seniorcounsel/f">Consulente esperta</function>
+  <function id="seniorcounsel/m">Consulente esperto</function>
+  <function id="member-assembly/f">Membro dell'Assemblea Generale</function>
+  <function id="member-assembly/m">Membro dell'Assemblea Generale</function>
+  <function id="merchandise/f">Promotrice dei prodotti</function>
+  <function id="merchandise/m">Promotrore dei prodotti</function>
 </functionset>

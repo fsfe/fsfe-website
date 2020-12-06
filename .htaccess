@@ -48,6 +48,9 @@ RewriteRule ^share/?$ /cgi-bin/share.php [NC,L]
 # Link to PMPC event, can be changed afterwards
 RewriteRule ^publiccode/?$ https://registration.fsfe.org/Digitale-Verwaltung-2020 [R=301,L]
 
+# Subscription page for mail updates
+RewriteRule ^subscribe/?$ /contact/email-updates.html [R=301,L]
+
 # Others
 RewriteRule ^standards(.*) /freesoftware/standards$1 [R=301,L]
 RewriteRule ^education(.*) /freesoftware/education$1 [R=301,L]

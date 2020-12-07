@@ -75,7 +75,7 @@ $(SUBDIRS): .FORCE
 
 # After this step, the following symlinks will exist:
 # * global/data/texts/.texts.<lang>.xml for each language
-# * ./fundraising.<lang>.xml for each language
+# * global/data/topbanner/.topbanner.<lang>.xml for each language
 # Each of these symlinks will point to the corresponding file without a dot at
 # the beginning of the filename, if present, and to the English version
 # otherwise. This symlinks make sure that phase 2 can easily use the right file
@@ -93,14 +93,14 @@ global/data/texts/.texts.%.xml: .FORCE
 	  ln -sf texts.en.xml $@; \
 	fi
 
-FUNDRAISING_LINKS := $(foreach lang,$(LANGUAGES),.fundraising.$(lang).xml)
+TOPBANNER_LINKS := $(foreach lang,$(LANGUAGES),global/data/topbanner/.topbanner.$(lang).xml)
 
-all: $(FUNDRAISING_LINKS)
-.fundraising.%.xml: .FORCE
-	if [ -f fundraising.$*.xml ]; then \
-	  ln -sf fundraising.$*.xml $@; \
+all: $(TOPBANNER_LINKS)
+global/data/topbanner/.topbanner.%.xml: .FORCE
+	if [ -f global/data/topbanner/topbanner.$*.xml ]; then \
+	  ln -sf topbanner.$*.xml $@; \
 	else \
-	  ln -sf fundraising.en.xml $@; \
+	  ln -sf topbanner.en.xml $@; \
 	fi
 
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

@@ -1,0 +1,52 @@
+// ============================================================================
+// Style for topbanner
+// ============================================================================
+
+div.topbanner {
+  .container;
+
+  padding: 0 15px 20px 15px;
+
+  @media (min-width: @screen-sm-min) {
+    padding: 0 0 20px 0;
+  }
+
+  #topbanner-border {
+    position: relative;
+    background: linear-gradient(160deg, rgba(208,244,0,1) 0%, rgba(74,210,240,1) 50%, rgba(32,45,121,1) 100%);
+    padding: 5px;
+
+    #topbanner-inner {
+      background: #fff;
+      padding: 2rem;
+
+      // 2-column box with text on the left, and a centered button on the right
+      .text-button-box {
+        // Make all columns same height by using flexbox
+        // This is used to have the button centered also vertically
+        .row {
+          display: flex;
+          flex-wrap: wrap;
+
+          & > [class*='col-'] {
+            display: flex;
+            flex-direction: column;
+          }
+
+          // Style and position button (2nd column)
+          & div:nth-child(2) {
+            align-items: center;
+            justify-content: center;
+
+            // Make button as significant as on the front-page donation modules
+            .btn-success {
+              font-weight: 500;
+              font-size: 125%;
+            }
+          }
+        }
+      } // /.text-button-box
+
+    }
+  }
+}

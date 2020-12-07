@@ -57,7 +57,7 @@ EOF
 
   for lang in ${languages}; do
     cat<<EOF
-\$(filter %.${lang}.html,\$(HTML_DST_FILES)): \$(OUTPUTDIR)/%.${lang}.html: \$(INPUTDIR)/%.*.xhtml \$\$(XMLLIST_DEP) \$\$(XSL_DEP) \$(INPUTDIR)/global/data/texts/.texts.${lang}.xml \$(INPUTDIR)/global/data/texts/texts.en.xml \$(INPUTDIR)/.fundraising.${lang}.xml \$(INPUTDIR)/fundraising.en.xml
+\$(filter %.${lang}.html,\$(HTML_DST_FILES)): \$(OUTPUTDIR)/%.${lang}.html: \$(INPUTDIR)/%.*.xhtml \$\$(XMLLIST_DEP) \$\$(XSL_DEP) \$(INPUTDIR)/global/data/texts/.texts.${lang}.xml \$(INPUTDIR)/global/data/texts/texts.en.xml \$(INPUTDIR)/global/data/topbanner/.topbanner.${lang}.xml
 	echo "* Building \$*.${lang}.html"
 	\${PROCESSOR} \${PROCFLAGS} process_file "\$(INPUTDIR)/\$*.${lang}.xhtml" > "\$@"
 EOF
@@ -144,7 +144,7 @@ EOF
 
   for lang in ${languages}; do
     cat<<EOF
-\$(OUTPUTDIR)/%.${lang}.rss: \$(INPUTDIR)/%.*.xhtml \$\$(XMLLIST_DEP) \$(INPUTDIR)/%.rss.xsl \$(INPUTDIR)/global/data/texts/.texts.${lang}.xml \$(INPUTDIR)/global/data/texts/texts.en.xml \$(INPUTDIR)/.fundraising.${lang}.xml \$(INPUTDIR)/fundraising.en.xml
+\$(OUTPUTDIR)/%.${lang}.rss: \$(INPUTDIR)/%.*.xhtml \$\$(XMLLIST_DEP) \$(INPUTDIR)/%.rss.xsl \$(INPUTDIR)/global/data/texts/.texts.${lang}.xml \$(INPUTDIR)/global/data/texts/texts.en.xml
 	echo "* Building \$*.${lang}.rss"
 	\${PROCESSOR} \${PROCFLAGS} process_file "\$(INPUTDIR)/\$*.${lang}.xhtml" "\$(INPUTDIR)/\$*.rss.xsl" > "\$@"
 EOF
@@ -176,7 +176,7 @@ EOF
 
   for lang in ${languages}; do
     cat<<EOF
-\$(OUTPUTDIR)/%.${lang}.ics: \$(INPUTDIR)/%.*.xhtml \$\$(XMLLIST_DEP) \$(INPUTDIR)/%.ics.xsl \$(INPUTDIR)/global/data/texts/.texts.${lang}.xml \$(INPUTDIR)/global/data/texts/texts.en.xml \$(INPUTDIR)/.fundraising.${lang}.xml \$(INPUTDIR)/fundraising.en.xml
+\$(OUTPUTDIR)/%.${lang}.ics: \$(INPUTDIR)/%.*.xhtml \$\$(XMLLIST_DEP) \$(INPUTDIR)/%.ics.xsl \$(INPUTDIR)/global/data/texts/.texts.${lang}.xml \$(INPUTDIR)/global/data/texts/texts.en.xml
 	echo "* Building \$*.${lang}.ics"
 	\${PROCESSOR} \${PROCFLAGS} process_file "\$(INPUTDIR)/\$*.${lang}.xhtml" "\$(INPUTDIR)/\$*.ics.xsl" > "\$@"
 EOF

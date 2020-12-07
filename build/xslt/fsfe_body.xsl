@@ -2,6 +2,7 @@
 
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:include href="fsfe_pageclass.xsl" />
+  <xsl:include href="fsfe_topbanner.xsl" />
   <xsl:include href="translation_list.xsl" />
   <xsl:include href="fsfe_pageheader.xsl" />
   <xsl:include href="notifications.xsl" />
@@ -22,6 +23,7 @@
 
       <xsl:call-template name="translation_list" />
       <xsl:call-template name="fsfe_pageheader" />
+      <xsl:call-template name="fsfe_topbanner" />
       <xsl:call-template name="notifications" />
       <xsl:call-template name="fsfe_mainsection" />
       <xsl:call-template name="fsfe_followupsection" />
@@ -32,4 +34,3 @@
   </xsl:template>
 
 </xsl:stylesheet>
-

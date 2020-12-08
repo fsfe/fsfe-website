@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html newsdate="2020-12-08">
+<version>1</version>
+
+<head>
+  <title>Deutsche Corona-App ohne Google-Dienste verfügbar</title>
+</head>
+
+<body>
+
+<h1>Deutsche Corona-App ohne Google-Dienste verfügbar</h1>
+
+<p>
+  Eine Handvoll Freie-Software-Entwickler hat heute geschafft, was
+  offizielle Stellen monatelang versäumt haben: Sie haben die deutsche
+  Corona-Warn-App zum Nachverfolgen von Covid-19-Risikokontakten in
+  einer Version bereitgestellt, die komplett ohne Abhängigkeiten von
+  Google auskommt und im freien App-Store F-Droid erhältlich ist. 
+</p>
+
+<p>
+  Bereits im April dieses Jahres <a
+  href="/news/2020/news-20200402-02.html">formulierte die FSFE zwei
+  Grundvoraussetzungen für sogenannte Corona-Apps</a>. Erstens darf es
+  keine Nutzungspflicht geben, und zweitens müssen sie als Freie
+  Software verfügbar sein. Auf den ersten Blick erfüllt die im Juni
+  veröffentlichte deutsche <em>Corona-Warn-App</em> (CWA), wie mittlerweile
+  viele andere in Europa, diese Anforderungen. Jedoch wird der
+  Austausch von Geräteschlüsseln mittels Bluetooth, auf deren Basis das
+  Risiko berechnet wird, von einer unterliegenden Schnittstelle
+  gehandhabt.
+</p>
+
+<figure>
+  <img
+    src="https://pics.fsfe.org/uploads/medium/4c841b6189a6d77a8061a94ee30b6d1b.jpg"
+    alt="Screenshot of Corona Warn App" />
+</figure>
+
+<p>
+  Das Problem dabei: Diese Schnittstellen-Software, <em>Exposure
+  Notifications API</em> genannt und maßgeblich entwickelt von Apple
+  und Google, ist größtenteils proprietär. Sie kann also nicht frei
+  benutzt, untersucht, verbreitet und verbessert werden. In Googles
+  Android-Betriebssystem ist außerdem die Installation und Nutzung der
+  Play Services notwendig. Diese Google-Dienste greifen tief in das
+  System ein und untergraben die digitale Souveränität der
+  Anwenderinnen und Anwender. Dies verhindert standardmäßig die Nutzung
+  vieler Corona-Apps für Menschen, die auf <a
+  href="/activities/android/">Datenschutz und Softwarefreiheit auf
+  ihren Android-Geräten</a> Wert legen.
+</p>
+
+<h2>Ehrenamtliche lösen Problem Schritt für Schritt</h2>
+
+<p>
+  Eine erste große Verbesserung stellte der Freie-Software-Entwickler
+  und FSFE-Unterstützer Marvin Wißfeld im September bereit. Er <a
+  href="https://mastodon.social/@larma/104630652216622243">baute die
+  Exposure-Notification-Funktionalität in microG ein</a>, eine
+  Freie-Software-Implementierung der proprietären Google-Dienste. Damit
+  können zumindest Menschen diverse Corona-Apps verwenden, die ein <a
+  href="/activities/android/">Google-freies Android-Telefon</a>
+  besitzen und microG installiert haben.
+</p>
+
+<figure>
+  <img
+    src="https://pics.fsfe.org/uploads/medium/35a91da85f747e4c4621ce5e8e336b73.png"
+    alt="Screenshot of microG's Exposure Notification API" />
+  <figcaption>
+    Freie-Software-Implementation der unterliegenden Exposure
+    Notification API in microG
+  </figcaption>
+</figure>
+
+<p>
+  Vor wenigen Tagen gingen Christian Grigis, Fynn Godau, Marcus
+  Hoffmann und Marvin Wißfeld noch einen Schritt weiter. Sie <a
+  href="https://codeberg.org/corona-contact-tracing-germany/cwa-android">integrierten
+  die Exposure-Notification-Komponente von microG direkt in die
+  deutsche Corona-Warn-App</a>. Dieses sogenannte Drop-In-Replacement
+  ermöglicht selbst Menschen, die weder die Google-Dienste noch deren
+  Freie-Software-Alternative microG installiert haben, die Nutzung der CWA. Außerdem
+  <a href="https://f-droid.org/packages/de.corona.tracing/">stellen sie
+  seit heute die App auf F-Droid bereit</a>,
+  einem App Store mit ausschließlich Freier Software. Das ist somit
+  auch vorteilhaft für jene Nutzerinnen und Nutzer, die zwar microG
+  oder Google-Dienste installiert haben, aber ihre Software aus
+  Sicherheits- und Komfortgründen lieber über F-Droid beziehen.
+</p>
+
+<p>
+  microG-Hauptentwickler und FSFE-Unterstützer Marvin Wißfeld ergänzt
+  dazu:
+</p>
+
+<blockquote>
+  <p>
+    "Die vorherige Lösung, microG zu installieren, kommt oftmals aus
+    verschiedenen Gründen nicht in Frage. Die neue App aus F-Droid ist
+    aber zum Beispiel auch problemlos auf allen aktuellen Smartphones
+    von Huawei lauffähig, die seit Mitte 2019 teilweise ohne
+    Google-Dienste ausgeliefert werden. Die Regierung und das RKI haben
+    so in den letzten Monaten womöglich tausende Nutzer der
+    Corona-Warn-App verloren, da ausschließlich Google- und
+    Apple-Nutzer als Zielgruppe anvisiert wurden."
+  </p>
+</blockquote>
+
+<p>
+  Es steht nun den verantwortlichen Stellen, der deutschen
+  Bundesregierung, dem Robert-Koch-Institut (RKI) sowie deren
+  Auftragnehmern SAP und T-Systems frei, die <a
+  href="https://github.com/corona-warn-app/cwa-app-android/issues/1483#issuecomment-734491614">Änderungen
+  in den Hauptentwicklungszweig zu übernehmen</a>, und damit zusammen
+  mit der Freie-Software-Gemeinschaft an einem Strang zu ziehen.
+  Außerdem kann diese Methode prinzipiell auch für Corona-Apps anderer
+  Länder angewandt werden.
+</p>
+
+<h2>Freie Software wieder einmal in Vorreiterrolle</h2>
+
+<p>
+  Wir sehen dabei ein bekanntes Muster: die Freie-Software-Gemeinschaft
+  <a href="https://github.com/corona-warn-app/cwa-documentation/issues/5">legt
+  ein Problem sowie eine mögliche Lösung dar</a>, wird aber so lange <a
+  href="https://github.com/corona-warn-app/cwa-documentation/issues/5#issuecomment-627848335">abgewiesen</a>,
+  bis Ehrenamtliche das Problem mit unbezahltem Einsatz und ohne
+  offizielle Unterstützung selbst lösen. Dabei würde es nicht an den
+  Ressourcen der beteiligten Verwaltungen und Firmen scheitern, diese
+  signifikanten Verbesserungen selbst auszuführen oder zumindest zu
+  unterstützen. Es ist löblich, dass die CWA konsequent von Anfang an
+  als Freie Software entwickelt und veröffentlicht wurde, aber es
+  mangelte an der notwendigen Konsequenz, um technisch mittlerweile
+  unnötige Abhängigkeiten von proprietärer Software zu entfernen.
+</p>
+
+<p>
+  Die FSFE appelliert an Regierungen und Verwaltungen, entwickelte
+  Software als Freie Software zu veröffentlichen, Abhängigkeiten von
+  Googles und Apples Appstores aufzubrechen und stattdessen ihre Apps
+  über unabhängige Quellen wie F-Droid installierbar zu machen, und auf
+  proprietäre Abhängigkeiten zu verzichten. Wie Wißfeld erläutert,
+  ergeben sich bereits im Fall der Corona-Warn-App ganz konkret
+  zusätzliche Vorteile bei der Bekämpfung der Pandemie:
+</p>
+
+<blockquote>
+  <p>
+    "Die freie Implementierung birgt - ganz im Sinne von Freier
+    Software - das Potenzial für Verbesserungen, die die proprietäre
+    Schnittstelle von Google nicht ermöglicht. So wäre es zum Beispiel
+    möglich, bei einer Begegnungs-Warnung auch die Uhrzeit der
+    Begegnung anzuzeigen. Das kann - bei freiwilliger Datenweitergabe
+    des Nutzers - den Gesundheitsämter beim Ermitteln von Hotspots oder
+    Clustern helfen oder für statistische Zwecke genutzt werden, um die
+    Effektivität von Schutzmaßnahmen zu erhöhen."
+  </p>
+</blockquote>
+
+<p>
+  Wir danken allen beteiligten Personen, die die Nutzung der Corona-App
+  in Deutschland ermöglicht haben, ohne dabei Einbußen bei der
+  Softwarefreiheit in Kauf nehmen zu müssen.
+</p>
+
+</body>
+
+<tags>
+  <tag key="front-page"/>
+  <tag key="de">Deutschland</tag>
+  <tag key="fya">Android</tag>
+  <tag key="corona">Corona</tag>
+</tags>
+
+
+<discussion href="https://community.fsfe.org/t/552"/>  
+<image url="https://pics.fsfe.org/uploads/medium/4c841b6189a6d77a8061a94ee30b6d1b.jpg"/> 
+
+</html>

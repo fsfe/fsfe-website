@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html newsdate="2030-12-15">
+<version>1</version>
+
+
+        <head>
+
+                <title>Interview with Cord-Landwehr about REUSE adoption in the KDE community</title>
+
+        </head>   
+
+<body>
+
+        <h1>Interview with Cord-Landwehr about REUSE adoption in the KDE community</h1>
+                        
+        <p>In just three years, our REUSE initiative has successfully changed licensing practices of at least over five hundred projects. From its adoption by NGI0 projects to a Corona Warn App to KDE, 2020 marks another successful year of this campaign. We used the chance to speak with Andreas Cord-Landwehr about REUSE adoption in the KDE community.</p>
+
+
+        <p>In 2017, the FSFE launched its REUSE campaign and it not only has received many important updates since then but also an overwhelming international attention. Since <a href="/news/2019/news-20190807-01.html">the release of version 3.0</a> last year, we have been focussing on supporting Free Software projects in adopting the underlying best practices. And 2020 marks another successful year of this initiative.</p>
+        
+			<figure>
+					<a href="https://reuse.software"><img src="https://pics.fsfe.org/uploads/medium/067321e155d41f42c142757aa90476e2.jpg" alt="Screenshot about how to use REUSE" /></a>
+				</figure>
+        
+        
+        
+        <p>On one hand this is thanks to <a href="/news/2020/news-20201110-01.html#ngi0">the FSFE's role as a consortium member of the Next Generation Internet Zero (NGI0)</a>. In this position, the FSFE's legal team assists all participating software projects with any Free Software copyright and licensing issues that they may run into. And we are encouraging and assisting the projects in becoming REUSE compliant. More than 150 projects that we are reviewing in the scope of our NGI0 involvement are in process of adopting the REUSE specifications and many of them are already REUSE compliant.</p>
+        
+        <p>Recently we became aware of a very prominent project who applied our REUSE best practices, the <a href="https://api.reuse.software/info/github.com/corona-warn-app/cwa-server">German Corona Warn App Server</a> and its iOS app. This is another milestone in our message that any <a href="/news/2020/news-20200402-02.html">Corona tracing apps - being developed with public money - having to be published as Free Software</a>. Followed by <a href="/news/2020/news-20201208-01.html">the great success Free Software hackers achieved</a> in publishing a "Corona Warn App" version that is completely free of pre-existing dependencies on Google.</p> 
+        
+        <p>But the news that made us most happy this year regarding REUSE was about a poject that is even more prominent in our community: one of the biggest and oldest Free Software projects, the well-known KDE community, <a href="https://community.kde.org/Policies/Licensing_Policy#License_Statements">included REUSE in their licensing policy</a> and they already <a href="https://lists.fsfe.org/pipermail/reuse/2020q3/000095.html">migrated all their frameworks to the recommended standard</a>. To shed light on the reasons and practices behind this huge step we conducted an Interview with Andreas Cord-Landwehr, developer at KDE.</p>
+        
+        <div class="row">
+		<div class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-0 col-md-3 pr-3">
+			<figure>
+				<img src="https://pics.fsfe.org/uploads/small/9cc972ca038e4410d58273ee5aa9826f.jpg" />
+			</figure>
+		</div>
+
+		<div class="col-xs-12 col-sm-8 col-md-9">
+			<p>
+				Andreas Cord-Landwehr is FIXME DEVELOPER AT KDE.
+			</p>
+		</div>
+	</div>
+        
+        <p class="question"><strong>FSFE: How did you became aware of the REUSE project and how can one imagine the road from bringing up the idea to its actual implementation in such a large community as KDE is?</strong></p>
+                
+		<div class="answer"><p><strong>Cord-Landwehr:</strong> During our annual KDE conference in 2019, we had a workshop for planning the next major release of our libraries, commonly known as KDE Frameworks. During that session we talked about improving our license consistency by introducing SPDX identifiers. Our goal was to enable automatic tools that would help to ensure license statement quality. This is quite important to KDE, because we have a long history and there are even files in our codebase, which are actually older than some of our contributors. Thus, those files might have seen many edits and license versions over the years.</p>
+			
+			<blockquote><em>"From the outside, it might look that the process of deciding and implementing something like REUSE might be tedious in a big community. But actually, it was quite straight-forward."</em></blockquote>
+			
+		<p>From the outside, it might look that the process of deciding and implementing something like REUSE might be tedious in a big community. But actually, it was quite straight-forward: As a kickoff I sent a proposal mail to our community list to start the discussion. In response to this, I was made aware of the REUSE initiative for the first time. And since the feedback was quite positive, the discussion resulted in a proposal to change our license policy with the goal to make it REUSE compatible. This proposal was <a href="FIXME Link">backed with a detailed blogpost</a> that explained the background and the reasoning why to follow REUSE.</p> 
+		
+		<p>Well, the discussion quickly went to, "Yeah, let's do it" - and so we did. Of course, after some waiting time to ensure that everybody was aware of the move.</p></div>
+		
+		<p class="question"><strong>Have you ever tried other approaches of standardised licensing efforts or what do you like about what REUSE offers in particular?</strong></p>
+                
+		<div class="answer"><p>Over the years I saw other approaches for standardising licensing, but at the end, there are two key features of REUSE for me: Even simple tools or scripts suffice to check REUSE compliance and to get data out of the license statements. Which is important because it allows to create custom tooling tailored to your project's needs. Second, REUSE focusses on being simple to use for developers. In a big community like KDE, you often have newcomers or one-time contributors and it helps a lot if they can state licenses correctly and consistently with ease.</p></div>
+		
+				
+				<figure>
+					<a href="https://download.fsfe.org/videos/reuse/screencasts/reuse-tool.gif"><img src="https://download.fsfe.org/videos/reuse/screencasts/reuse-tool.gif" alt="Screencast about how to use REUSE" /></a>
+				</figure>
+		
+		<p class="question"><strong>What are the KDE frameworks that you made REUSE compliant? How was the selection made and are they significant for the project?</strong></p>
+                
+		<div class="answer"><p>KDE Frameworks are a set of libraries on top of Qt. Many of these libraries provide useful stand alone functionality, like a library for handling archive files like zip, a library for barcode generation, a UI framework for touch interfaces etc. And then there are also those that help to make KDE software more consistent and integrated. As such, our KDE frameworks are a product of their own and especially the first group of libraries are used in many projects and businesses that build on top of Qt. For these "customers" of our frameworks, it is very important to have a clear licensing statement and ways to assure the statement is true.</p></div>
+		
+		<blockquote><em>"We spend quite some time in manual checking of license consistency and even relicensing of files. For me, it was a key goal to simplify and improve this process by involving automatic checks and tools."</em></blockquote>
+		
+		<p class="question"><strong>Why is it for KDE actually important to clarify licensing and copyright of their code?</strong></p>
+                
+		<div class="answer"><p>We have many libraries that contain source code that originates from different decades and originally might even have been developed for another library. To ensure that we still get distributable artifacts, we have a license policy which focuses on movability of source code within our code base. However, errors can be made and we spend quite some time in manual checking of license consistency and even relicensing of files in order to gain a desired outbound license of a library or application. For me, it was a key goal to simplify and improve this process by involving automatic checks and tools.</p></div>
+		
+		
+		
+		<p class="question"><strong>In which steps and with which tools did you reach complete REUSE compliance in the KDE frameworks? Did you create you own tools or was is a lot of manual work? How many people contributed and do you have any good/bad practices to share? Did you run into problems during the process? And if so, how did you  solve them?</strong></p>
+                
+		<div class="answer"><p>The main tool we use for our conversion is <a href="https://invent.kde.org/sdk/licensedigger">licensedigger</a>. This is a self-crafted tool that I started with the only purpose of converting traditional license headers, with all their quirks and funny different statements, to well-formed REUSE compatible licenses. It also helps in the initial conversion of a code repository by adding the required license text files and reporting an overview of the used licenses. For the conversion, we use a dedicated tool here, because we wanted to enforce a very strict license detection mechanism, which allows to focus on reviewing the reference license texts that are added to the tool instead of reviewing every single license header when it gets replaced. As soon as a repository is converted to being REUSE compatible, we switch to use <a href="https://github.com/fsfe/reuse-tool">the REUSE tool</a> to do quality assurance.</p> 
+		
+		<p>Another, still emerging tool, is a CMake build system plugin I created to instrument the REUSE tool together with the build system information, in particular which source file is compiled into which artifact. This allows to generate license consistency checks as simple unit tests, which warn the developer if accidentally incompatible licenses are combined.</p></div>
+		
+		<p class="question"><strong>What are the next steps for REUSE in KDE?</strong></p>
+                
+		<div class="answer"><p>Our codebase is big and major parts are still waiting to be converted into being REUSE compatible. But there is progress! And I am extremely happy that this progress comes from many different people and not just from one guy. If you believe it or not, there are nicer things in the world than doing or reviewing license statement conversions all day long :-)</p></div>
+		
+		<figure>
+			<iframe width="560" height="315" sandbox="allow-same-origin allow-scripts allow-popups" src="https://peertube.social/videos/embed/b67c3505-dd72-410b-9209-22315a1d7546" frameborder="0"></iframe>
+			
+		</figure>
+
+		
+		<p class="question"><strong>If you could change or improve one thing in REUSE, what would it be?</strong></p>
+                
+		<div class="answer"><p>So far we mostly talked about inbound licenses. But I think that for compiled languages like C++ it is important to also get binary artifacts and their outbound licenses into the picture. This is a task that many distributions handled over the years with custom license checkers and an enormous amount of manual review, to ensure that the source licenses are compatible with the distributed outbound licenses. I believe that it is possible to find a way that states the outbound license in a standardized way, which would make those statements reusable for users of a binary artifact. This would allow a complete new dimension of automatic license compatibility checks.</p></div>
+	
+		<p><strong>Thank you very much for this interview!</strong></p>
+		
+
+
+        
+        <p>If you now like the REUSE-Initiative, please consider donating to the FSFE and help us to keep our work going and to help many more projects to become REUSE compliant. With this button you can dedicate your donation to financing the REUSE project in particular and help to get our message heard.</p>
+        
+                <div class="text-center">
+                                <p><a class="btn btn-lg btn-success mb-3" href="https://my.fsfe.org/donate">
+                                                Donate now
+                                </a></p>
+                        </div>
+        
+        <p>In addition you can do it like Greg Kroah-Hartman and help us by spreading the word about our REUSE initiative. Let people know about the benefits of standardised and machine-readable licensing by following the REUSE guidelines, point them to the <a href="https://reuse.software">REUSE homepage</a> or write about it in your favorite communication channels. You can <a href="https://download.fsfe.org/videos/reuse/screencasts/reuse-tool.gif">use our new screencast for your promotion</a>.</p>
+        
+                <figure>
+                                <a href="https://my.fsfe.org/donate"><img src="https://pics.fsfe.org/uploads/medium/dae264593e4ef4e660d89c08672d4b49.png" alt="" /></a>
+                </figure>
+                
+        <p>Companies are invited to become REUSE sponsors and thereby support the REUSE initiative sustainably.</p>
+                
+
+</body>
+
+        <tags>
+                <tag key="front-page"/>
+                <tag key="reuse">REUSE Initiative</tag>
+                <tag key="campaigns">Campaign</tag>
+                <tag key="ngi">Next Generation Internet</tag>
+        </tags>
+
+<discussion href=""/>  
+<image url=""/> 
+</html>
+
+

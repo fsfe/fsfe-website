@@ -1,161 +1,182 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <html>
-  <version>1</version>
+<version>2</version>
 
-  <head>
-    <title>Announce your FSFE community event</title>
-  </head>
-  <body>
- 
-    <h1>Announce your FSFE community event</h1>
+<head>
+  <title>Announce your FSFE community event</title>
+</head>
+<body>
 
-    <div id="introduction">
-      <p>Use the form below to announce every event that is related to a FSFE activity. If it's a meeting or a talk, if it's a booth in the streets or a radio podcast: Let the community and the world know what's happening.</p>
+  <h1>Announce your FSFE community event</h1>
 
+  <div id="introduction">
+    <p>
+      Use the form below to announce every event that is related to a FSFE
+      activity. If it's a meeting or a talk, if it's a booth in the streets or a
+      radio podcast: Let the community and the world know what's happening.
+    </p>
+
+  </div>
+
+  <form action="/cgi-bin/registerevent.php" method="POST" class="fsfe-form" enctype="multipart/form-data" role="form">
+    <!-- @TRANSLATORS: there is no need to translate the HTML
+    attributes of the elements in this form, just the text between
+    the '>' and '<'.
+
+    An example:
+
+    <label><input type="checkbox" name="tags[]" value="localgroup" />talk</label>
+
+    can be translated to Spanish
+
+    <label><input type="checkbox" name="tags[]" value="localgroup" />grupo local</label>
+
+    Thank you! -->
+    <input name="register_event" type="hidden" />
+
+    <label for="name" class="required">Your name<span class="star">*</span></label>
+    <input name="name" value="" required="required" type="text" />
+
+    <label for="email" class="required">Your email<span class="star">*</span></label>
+    <input name="email" value="" required="required" type="email" />
+
+    <p class="help-block">
+      Your personal information will never be shared nor sold. It is used only
+      to get in contact with you if there are any call backs or problems.
+    </p>
+
+    <div class="form-group">
+      <label for="lang">Language of this event registration<span class="star">*</span></label>
+      <!-- @Translators: There is no need to translate the list below -->
+      <select id="lang" name="lang" class="form-control" required="required">
+        <option></option>
+        <option value="ar">&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1617;&#1577;</option>
+        <option value="bg">Български</option>
+        <option value="bs">Bosanski</option>
+        <option value="ca">Català</option>
+        <option value="cs">Česky</option>
+        <option value="da">Dansk</option>
+        <option value="de">Deutsch</option>
+        <option value="el">Ελληνικά</option>
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="et">Eesti</option>
+        <option value="fi">Suomi</option>
+        <option value="fr">Français</option>
+        <option value="hr">Hrvatski</option>
+        <option value="hu">Magyar</option>
+        <option value="it">Italiano</option>
+        <option value="mk">Mакедонски</option>
+        <option value="nb">Norsk (bokmål)</option>
+        <option value="nl">Nederlands</option>
+        <option value="nn">Norsk (nynorsk)</option>
+        <option value="pl">Polski</option>
+        <option value="pt">Português</option>
+        <option value="ro">Română</option>
+        <option value="ru">Русский</option>
+        <option value="sk">Slovenčina</option>
+        <option value="sl">Slovenščina</option>
+        <option value="sq">Shqip</option>
+        <option value="sr">Српски</option>
+        <option value="sv">Svenska</option>
+        <option value="tr">Türkçe</option>
+        <option value="uk">Українська</option>
+        <option value="zh">漢語</option>
+      </select>
+
+      <p class="help-block">
+        Please indicate the language of the text you will insert in the title
+        and description. If you register your event in another language than
+        English, <strong>please consider to also upload an English
+        version</strong> to make sure we understand it. Also be aware that an
+        non English event is only visible on the translated page of fsfe.org. So
+        for example an Italian event would just be visible for
+        fsfe.org/index.it.html.
+      </p>
     </div>
 
-    <!--<h2>Register</h2>-->
+    <label for="title" class="required">Event title<span class="star">*</span></label>
+    <input name="title" value="" required="required" type="text" />
+    <table>
+      <tr>
+        <td>
+          <label for="startdate" class="required">Start date<span class="star">*</span></label>
+          <input name="startdate" value="" required="required" type="date" placeholder="YYYY-MM-DD" />
+        </td>
+        <td>
+          <label for="enddate" >End date</label>
+          <input name="enddate" value="" type="date" placeholder="YYYY-MM-DD" />
+        </td>
+      </tr>
+    </table>
+    <label for="description" class="required">Description (just text, no HTML)<span class="star">*</span></label>
+    <textarea name="description" required="required"></textarea>
 
-    <form action="/cgi-bin/registerevent.php" method="POST" class="register_event fsfe-form" enctype="multipart/form-data" role="form">
-      <!-- @TRANSLATORS: there is no need to translate the HTML 
-      attributes of the elements in this form, just the text between 
-      the '>' and '<'. 
+    <p class="help-block">Please include the following points:</p>
+    <ul class="help-block">
+      <li>What is your event about, and what can people expect?</li>
+      <li>Location, Date and time of the event?</li>
+      <li>Do people need to register, and does it cost money?</li>
+      <li>Who is giving the talk or hosting the meeting?</li>
+      <li>The language of your talk or meeting.</li>
+      <li>For local group meetings: Whether it is open to the public.</li>
+      <li>Please be aware that single line breaks will not be visible after the publication of the event. Please use fully separated paragraphs for this.</li>
+    </ul>
+    <p class="help-block">Thank you for registering your event!</p>
 
-      An example:
+    <label for="tags">Choose one or more tags below</label>*
 
-        <label><input type="checkbox" name="tags[]" value="localgroup" />talk</label>
+    <div class="checkboxlist">
+      <div class="checkbox"><label><input type="checkbox" name="tags[]" value="talk" />talk</label></div>
+      <div class="checkbox"><label><input type="checkbox" name="tags[]" value="panel" />panel</label></div>
+      <div class="checkbox"><label><input type="checkbox" name="tags[]" value="infobooth" />infobooth</label></div>
+      <div class="checkbox"><label><input type="checkbox" name="tags[]" value="localgroup" />local group</label></div>
+      <div class="checkbox"><label><input type="checkbox" name="tags[]" value="workshop" />workshop</label></div>
+      <div class="checkbox"><label><input type="checkbox" name="tags[]" value="meeting" />meeting</label></div>
+    </div>
 
-      can be translated to Spanish
+    <label for="url">Event URL (if available)</label>
+    <input name="url" value="" type="text" />
 
-        <label><input type="checkbox" name="tags[]" value="localgroup" />grupo local</label>
+    <label for="online">Online/virtual event</label>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" name="online" value="yes" />
+        This is an online event. If you check this, please type/select a random
+        value for "City" and "Country" as these will not be displayed.
+      </label>
+    </div>
 
-      Thank you! -->
-      <input name="register_event" type="hidden" />
+    <label for="city">City<span class="star">*</span></label>
+    <input name="city" value="" required="required" type="text" />
 
-	<!--<fieldset id="register_event">-->
+    <div class="form-group">
+      <label for="country">Country<span class="star">*</span></label>
+      <country-list />
+    </div>
 
-        <label for="name" class="required">Your name<span class="star">*</span></label>
-        <input name="name" value="" required="required" type="text" />
+    <input value="Add event" name="submit" type="submit" />
+    <p class="help-block"><span class="star">*</span> = required fields</p>
 
-        <label for="email" class="required">Your email<span class="star">*</span></label>
-        <input name="email" value="" required="required" type="email" /> 
+  </form>
 
-        <p class="help-block">Your personal information will never be shared nor sold. It is used only to get in contact with you if there are any call backs or problems.</p>
+  <p>
+    After filling out the form and confirming your entry with the "add event"
+    button, a xml-file will be generated and sent to us. If approved, your event
+    entry will be uploaded and should appear on fsfe.org and/or on
+    fsfe.org/events during the next 48 hours. Be aware that we only promote FSFE
+    and FSFE community related activities but not any other kind of
+    miscellaneous Free Software activities (yes, without exceptions - how
+    important they ever may be).
+  </p>
 
-        <div class="form-group">
-        <label for="lang">Language of this event registration<span class="star">*</span></label>
-        <!-- @Translators: There is no need to translate the list below -->
-        <select id="lang" name="lang" class="form-control" required="required">
-          <option></option>
-          <option value="ar">&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1617;&#1577;</option>
-          <option value="bg">Български</option>
-          <option value="bs">Bosanski</option>
-          <option value="ca">Català</option>
-          <option value="cs">Česky</option>
-          <option value="da">Dansk</option>
-          <option value="de">Deutsch</option>
-          <option value="el">Ελληνικά</option>
-          <option value="en">English</option>
-          <option value="es">Español</option>
-          <option value="et">Eesti</option>
-          <option value="fi">Suomi</option>
-          <option value="fr">Français</option>
-          <option value="hr">Hrvatski</option>
-          <option value="hu">Magyar</option>
-          <option value="it">Italiano</option>
-          <option value="mk">Mакедонски</option>
-          <option value="nb">Norsk (bokmål)</option>
-          <option value="nl">Nederlands</option>
-          <option value="nn">Norsk (nynorsk)</option>
-          <option value="pl">Polski</option>
-          <option value="pt">Português</option>
-          <option value="ro">Română</option>
-          <option value="ru">Русский</option>
-          <option value="sk">Slovenčina</option>
-          <option value="sl">Slovenščina</option>
-          <option value="sq">Shqip</option>
-          <option value="sr">Српски</option>
-          <option value="sv">Svenska</option>
-          <option value="tr">Türkçe</option>
-          <option value="uk">Українська</option>
-          <option value="zh">漢語</option>
-        </select>
-        
-        <p class="help-block">Please indicate the language of the text you will insert in the title and description. This will help our team to upload your event quickly and flawlessly. If you would like to provide a translation of your event (that would be great!), please make a separate event registration. Thank you!</p>
-        </div>
+  <p>
+    Keep in mind that all of the FSFE's events are covered by our <a
+    href="/about/codeofconduct">Code of Conduct</a> that kindly asks all
+    participants to be excellent to each other. Please do not announce your
+    event as a FSFE event if you do not plan to implement our Code of Conduct.
+  </p>
 
-        <!--<label for="groupname">Group name</label>
-        <input name="groupname" value="" type="text" />-->
-
-        <!--<label for="groupurl">Group URL</label>
-        <input name="groupurl" value="" type="text" />-->
-
-        <label for="title" class="required">Event title<span class="star">*</span></label>
-        <input name="title" value="" required="required" type="text" />
-		<table>
-			<tr>
-			<td>
-				<label for="startdate" class="required">Start date<span class="star">*</span></label>
-				<input name="startdate" value="" required="required" type="date" placeholder="YYYY-MM-DD" />
-			</td>
-			<td>
-				<label for="enddate" >End date</label>
-				<input name="enddate" value="" type="date" placeholder="YYYY-MM-DD" />
-			</td>
-			</tr>
-		</table>
-        <label for="description" class="required">Description (just text, no HTML)<span class="star">*</span></label>
-        <textarea name="description" required="required"></textarea>
-
-        <p class="help-block">Please explain briefly what your event is about, how to attend and what participants can expect. If you register your event in another language than English, please consider to also upload an English version <strong>to make sure we understand it</strong>. Also be aware that (for technical reasons) we can only list English event entries on our front-page fsfe.org - any other language will only be visible under fsfe.org/events.</p>
-
-	   <label for="tags">Choose one or more tags below</label>*
-        
-        <div class="checkboxlist">
-		<div class="checkbox"><label><input type="checkbox" name="tags[]" value="talk" />talk</label></div>
-		<div class="checkbox"><label><input type="checkbox" name="tags[]" value="panel" />panel</label></div>
-		<div class="checkbox"><label><input type="checkbox" name="tags[]" value="infobooth" />infobooth</label></div>
-		<div class="checkbox"><label><input type="checkbox" name="tags[]" value="localgroup" />local group</label></div>
-		<div class="checkbox"><label><input type="checkbox" name="tags[]" value="workshop" />workshop</label></div>
-		<div class="checkbox"><label><input type="checkbox" name="tags[]" value="meeting" />meeting</label></div>
-	</div>
-
-        <label for="url">Event URL (if available)</label>
-        <input name="url" value="" type="text" />
-
-        <!--<label for="location">Event Location</label>
-        <input name="location" value="" type="text" />-->
-
-
-        <!-- Please give more guidance - make sure that the format is correct because these will be used to generate tags also -->
-
-        <label for="online">Online/virtual event</label>
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" name="online" value="yes" /> This is an online event. If you check this, please type/select a random value for "City" and "Country" as these will not be displayed.
-          </label>
-        </div>
-
-        <label for="city">City<span class="star">*</span></label>
-        <input name="city" value="" required="required" type="text" />
-
-        <div class="form-group">
-          <label for="country">Country<span class="star">*</span></label>
-          <country-list />
-        </div>
-
-        <!--</fieldset>-->
-	<!-- Should help against spam -->
-		
-	<input value="Add event" name="submit" type="submit" />
-	<p class="help-block"><span class="star">*</span> = required fields</p>
-
-    </form>
-    
-    <p>After filling out the form and confirming your entry with the "add event" button, a xml-file will be generated and sent to us. If approved, your event entry will be uploaded and should appear on fsfe.org and/or on fsfe.org/events during the next 48 hours. Be aware that we only promote FSFE and FSFE community related activities but not any other kind of miscellaneous Free Software activities (yes, without exceptions - how important they ever may be).</p> 
-    
-    <p>Keep in mind that all of the FSFE's events are covered by our <a href="/about/codeofconduct">Code of Conduct</a> that kindly asks all participants to be excellent to each other. Please do not announce your event as a FSFE event if you do not plan to implement our Code of Conduct.</p>
-     
-  </body>
- </html>
+</body>
+</html>

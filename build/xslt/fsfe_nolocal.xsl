@@ -6,10 +6,10 @@
   <xsl:template match="
                buildinfo/document/translator|
                buildinfo/set|
+               buildinfo/topbanner|
                buildinfo/textset|
                buildinfo/textsetbackup|
                buildinfo/trlist|
-               buildinfo/fundraising|
                buildinfo/localmenuset|
                buildinfo/document/legal|
                buildinfo/document/author|

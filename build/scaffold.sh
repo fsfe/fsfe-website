@@ -66,15 +66,15 @@ auto_sources(){
 
 build_xmlstream(){
   # assemble the xml stream for feeding into xsltproc
-  # the expected shortname and language flag indicate 
+  # the expected shortname and language flag indicate
   # a single xhtml page to be built
   shortname="$1"
   lang="$2"
 
   olang="$(echo "${shortname}".[a-z][a-z].xhtml "${shortname}".[e]n.xhtml |sed -rn 's;^.*\.([a-z]{2})\.xhtml.*$;\1;p')"
   dirname="${shortname%/*}/"
+  topbanner_xml="$basedir/global/data/topbanner/.topbanner.${lang}.xml"
   texts_xml="$basedir/global/data/texts/.texts.${lang}.xml"
-  fundraising_xml="$basedir/.fundraising.${lang}.xml"
   date="$(date +%Y-%m-%d)"
   time="$(date +%H:%M:%S)"
   outdated=no
@@ -97,14 +97,14 @@ build_xmlstream(){
 	  language="$lang"
 	  outdated="$outdated"
 	>
-	
+
 	<trlist>
 	  $(list_langs "$shortname")
 	</trlist>
-	
+
+	<topbanner>$(include_xml "$topbanner_xml")</topbanner>
 	<textsetbackup>$(include_xml "$basedir/global/data/texts/texts.en.xml")</textsetbackup>
 	<textset>$(include_xml "$texts_xml")</textset>
-	<fundraising>$(include_xml "$fundraising_xml")</fundraising>
 	
 	<document
 	  language="$act_lang"
@@ -113,10 +113,10 @@ build_xmlstream(){
 	  <set>
 	    $(auto_sources "${shortname}" "$lang")
 	  </set>
-	
+
 	  $(include_xml "$infile")
 	</document>
-	
+
 	</buildinfo>
 	EOF
 }

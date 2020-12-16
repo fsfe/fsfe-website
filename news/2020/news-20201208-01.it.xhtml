@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html newsdate="2020-12-08">
+<version>1</version>
+
+<head>
+  <title>L'App tedesca per il tracciamento del coronavirus senza i servizi Google</title>
+</head>
+
+<body>
+
+<h1>L'App tedesca per il tracciamento del coronavirus senza i servizi Google</h1>
+
+<p>Un piccolo gruppo di sviluppatori di Software Libero è riuscito ad ottenere ciò che gli enti ufficiali non hanno fatto per mesi: hanno reso disponibile la Corona Warn App tedesca per il tracciamento di rischi di contatto Covid-19 in una versione completamente indipendente da Google e disponibile in F-Droid, l'App store per il Software Libero.
+</p>
+
+<p>Già ad aprile di quest'anno, la FSFE <a href="/news/2020/news-20200402-02.html">ha formulato due requisiti fondamentali per le App di tracciamento del coronavirus</a>. Primo, non deve esserci nessun obbligo nell'usarle, e secondo, devono essere disponibili come Software Libero. A prima vista, la tedesca <em>Corona Warn App</em> (CWA)
+  pubblicata a giugno, sembrerebbe soddisfare questi criteri, come ormai lo fanno molte altre App europee. Ma lo scambio delle chiavi del dispositivo via Bluetooth, sulla base delle quali viene calcolato il rischio, è gestito da un'interfaccia indipendente a più basso livello.
+</p>
+
+<figure>
+  <img
+    src="https://pics.fsfe.org/uploads/medium/4c841b6189a6d77a8061a94ee30b6d1b.jpg"
+    alt="Schermata della Corona Warn App" />
+</figure>
+
+<p>Il problema è che questa interfaccia software, chiamata <em>Exposure
+  Notifications API</em> e sviluppata principalmente da Apple e Google, è sostanzialmente proprietaria. Questo significa che non può essere liberamente usata, investigata, distribuita e migliorata. Nel sistema operativo Android di Google è anche necessario installare e utilizzare i Play Service. Questi servizi Google interagiscono profondamente con il sistema e pregiudicano il pieno controllo digitale dell'utente. Questo impedisce l'utilizzo di molte App di tracciamento del coronavirus da parte delle persone per le quali è importante <a href="/activities/android/">la privacy e la libertà del software sul proprio dispositivo</a>.
+</p>
+
+<h2>Volontari risolvono i problemi un passo alla volta</h2>
+
+<p>A settembre, Marvin Wißfeld, uno sviluppatore di Software Libero e un sostenitore della FSFE, ha fornito un primo significativo miglioramento. Ha <a href="https://mastodon.social/@larma/104630652216622243">portato la funzionalità di exposure notification in microG</a>, una implementazione Software Libero dei proprietari servizi Google. Questo ha permesso perlomeno di utilizzare le diverse App coronavirus a chi possiede <a href="/activities/android/">uno smartphone
+  Android senza i servizi Google</a> ma con installato microG.
+</p>
+
+<figure>
+  <img
+    src="https://pics.fsfe.org/uploads/medium/35a91da85f747e4c4621ce5e8e336b73.png"
+    alt="Schermata delle Exposure Notification API di microG" />
+  <figcaption>Implementazione Software Libero delle Exposure
+    Notification API in microG
+  </figcaption>
+</figure>
+
+<p>
+  Alcuni giorni fa, Christian Grigis, Fynn Godau, Marcus Hoffmann e
+  Marvin Wißfeld hanno fatto un ulteriore passo. Hanno <a href="https://codeberg.org/corona-contact-tracing-germany/cwa-android">integrato
+  il componente di microG per la exposure notification direttamente nella Corona Warn App tedesca</a>. Questo è un rimpiazzo perfetto che permette di utilizzare CWA a chi non ha installato né i servizi Google né l'equivalente Software Libero microG. In aggiunta, da oggi <a href="https://f-droid.org/packages/de.corona.tracing/">l'App è stata resa disponibile in F-Droid</a>, un App store con solo Software Libero. Questo è vantaggioso anche per chi ha installato microG o i servizi Google ma preferisce ottenere il software tramite F-Droid per ragioni di sicurezza o di convenienza.
+</p>
+
+<p>Marvin Wißfeld, lo sviluppatore principale di microG e sostenitore della FSFE, aggiunge:
+</p>
+
+<blockquote>
+  <p>«La precedente soluzione di installare microG è spesso non applicabile per diverse ragioni. Ma la nuova App disponibile in F-Droid può girare senza problemi su tutti gli attuali smartphone, anche ad esempio sugli Huawei, alcuni dei quali sono stati distribuiti senza i servizi Google da metà del 2019. Il governo tedesco e la RKI potrebbero aver perso migliaia di utenti della Corona Warn App negli ultimi mesi,
+    dal momento che solo gli utenti Google e Apple potevano usufruirne».
+  </p>
+</blockquote>
+
+<p>È ora compito degli enti responsabili, il governo tedesco, il
+  Robert Koch Institute (RKI) e i loro committenti SAP e T-Systems, <a href="https://github.com/corona-warn-app/cwa-app-android/issues/1483#issuecomment-734491614">incorporare
+  i cambiamenti nel ramo di sviluppo ufficiale</a>, e così unire gli sforzi con la comunità del Software Libero. In aggiunta, queste modifiche possono essere in linea di principio implementate anche nelle App di tracciamento degli altri paesi.
+</p>
+
+<h2>Il Software Libero ancora una volta pioniere</h2>
+
+<p>Si ripresenta uno schema conosciuto: la comunità del Software Libero <a href="https://github.com/corona-warn-app/cwa-documentation/issues/5">presenta un problema e una possibile soluzione</a>, ma le si <a href="https://github.com/corona-warn-app/cwa-documentation/issues/5#issuecomment-627848335">voltano le spalle</a> finché dei volontari risolvono il problema senza essere pagati e senza un supporto ufficiale. In questo caso, sarebbero state tranquillamente sufficienti le risorse delle autorità e delle aziende coinvolte per poter fare in autonomia questi miglioramenti, o perlomeno per dare un supporto. È encomiabile che la CWA sia stata fin dall'inizio coerentemente sviluppata e pubblica come Software Libero, ma è mancata la necessaria coerenza nel rimuovere le inutili dipendenze tecniche da software proprietario.
+</p>
+
+<p>La FSFE fa appello ai governi e alle amministrazioni di pubblicare il software sviluppato come Software Libero, di interrompere le dipendenze dagli App store di Google e Apple rendendo invece le loro app installabili da sorgenti indipendenti come F-Droid, e di abbandonare le dipendenze da software proprietario. Come spiega Wißfeld, la Corona Warn App
+  offre già vantaggi aggiuntivi concreti nella lotta contro la pandemia:
+</p>
+
+<blockquote>
+  <p>
+    «Con una libera implementazione si ha il potenziale - nello spirito del
+    Software Libero - di offrire miglioramenti, cosa che invece l'interfaccia proprietaria di Google non permette. Ad esempio, sarebbe possibile mostrare data e ora di un incontro ad alto rischio. Questo potrebbe - nel caso in cui l'utente fornisse volontariamente i dati - aiutare la sanità pubblica ad identificare zone o focolai, o potrebbe essere utilizzato a fini statistici per aumentare l'efficacia delle misure protettive».</p>
+</blockquote>
+
+<p>Vorremmo ringraziare tutte le persone che hanno reso possibile utilizzare l'App per il
+  Coronavirus in Germania senza essere costretti ad accettare una qualsivoglia perdita di libertà del software.
+</p>
+
+</body>
+
+<tags>
+  <tag key="front-page"/>
+  <tag key="de">Germania</tag>
+  <tag key="fya">Android</tag>
+  <tag key="corona">Coronavirus</tag>
+</tags>
+
+
+<discussion href="https://community.fsfe.org/t/552"/>  
+<image url="https://pics.fsfe.org/uploads/medium/4c841b6189a6d77a8061a94ee30b6d1b.jpg"/> 
+
+</html>

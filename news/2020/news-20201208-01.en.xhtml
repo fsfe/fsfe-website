@@ -1,69 +1,175 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<html newsdate="2030-12-08">
+<html newsdate="2020-12-08">
 <version>1</version>
 
-
-	<head>
-
-		<title>Public code for publicly financed international development cooperation</title>
-
-	</head>   
+<head>
+  <title>German Corona tracing app available without Google services</title>
+</head>
 
 <body>
 
-	<h1>Public code for publicly financed international development cooperation</h1>
-			
-	<p>International development cooperation is increasingly digitised. Free Software thus is becoming a fundamental technology to reach the United Nation's Sustainable Development Goals. Together with experts in the field, the FSFE summarises these interrelations in one article and demands publicly funded software to be published as Free Software.</p>
+<h1>German Corona tracing app available without Google services</h1>
 
+<p>
+  A handful of Free Software developers today achieved what official
+  bodies have been missing for months: They have made available the
+  German Corona Warn App for tracing Covid-19 risk contacts in a
+  version that is completely free of dependencies on Google and
+  available in F-Droid, the Free Software app store.
+</p>
 
-	<p>Inherent attributes of Free Software and its communities are equal access to the sources, an international culture of sharing and developing software together for the benefit of everyone. While many of us meanwhile find these freedoms to be universal acceptable we see that this is not the case once we look into the world of proprietary software. Even worse, if we see the distribution of resources around the globe.</p>
+<p>
+  Already in April this year, the FSFE <a
+  href="/news/2020/news-20200402-02.html">formulated two fundamental
+  requirements for so-called Corona apps</a>. First, there must be no
+  obligation to use them, and second, they must be available as Free
+  Software. At first glance, the German <em>Corona Warn App</em> (CWA),
+  published in June, meets these criteria, like many others in Europe
+  by now. However, the exchange of device keys via Bluetooth, on the
+  basis of which the risk is calculated, is handled by an underlying
+  interface.
+</p>
 
-	<p>In 2015 the United Nations General Assembly set the Sustainable Development Goals, aiming at "a better and sustainable future for all" by trying to reduce inequalities and offer equal access to the most basic resources of our societies like food, health and education. International development cooperation strives to achieve the UN sustainability goals by improving global conditions and the empowerment of local partners. To some extent similar as with software freedom, existing dependencies should be reduced and new dependencies avoided at all costs.</p>
-	
-	
-		<figure>
-				<img src="https://pics.fsfe.org/uploads/medium/954d4f464602dd534ab90dd976e2547c.png" />
-			</figure>
-	
-		
+<figure>
+  <img
+    src="https://pics.fsfe.org/uploads/medium/4c841b6189a6d77a8061a94ee30b6d1b.jpg"
+    alt="Screenshot of Corona Warn App" />
+</figure>
 
-	<p>Nowadays, international development cooperation is becoming increasingly digitised and shifting its focus towards digital cooperation. Whether in agriculture, industrial production, health care or public administration, the development and maintenance of modern social processes is no longer conceivable without software. To some extent functional software becomes the basic technology of social organization as well as of modern administrative services. The roll-out of proprietary software however exacerbates the dependencies of users in the developing countries to the currently market-dominating software industry from the present industrial countries. Free Software in contrast allows emancipation and independence of its users - be it individuals or state-owned organisations.</p>
-	
+<p>
+  The problem is that this interface software, called <em>Exposure
+  Notifications API</em> and significantly developed by Apple and
+  Google, is largely proprietary. This means it cannot be freely used,
+  investigated, distributed and improved. In Google's Android operating
+  system it is also necessary to install and use the Play Services.
+  These Google services intervene deeply in the system and undermine
+  the digital sovereignty of the users. By default, this prevents the
+  use of many Corona apps for people who value <a
+  href="/activities/android/">privacy and software freedom on their
+  Android devices</a>.
+</p>
 
-	<p>Free Software allows development investments once made to be reused around the globe without (further) license costs and without legal or technical restrictions. The simultaneous publication of its source code on public code repositories also enables one's own software development to profit from reusing, improving and republishing by other actors around the globe. In terms of international cooperation, the freely licensed source code serves as a basis for organized or self-empowered knowledge multiplication and transfer as well as international cooperation. Free Software allows the development of digital cornerstones and provides international standards without creating new monopolies and dependencies.</p>
-	
-	<figure>
-			<img src="https://pics.fsfe.org/uploads/small/583e4bfd7d0565ef16e734467bdcab14.jpg"/>
-		</figure>
-		
+<h2>Volunteers solve problems step by step</h2>
 
+<p>
+  A first major improvement was provided by Free Software developer and
+  FSFE supporter Marvin Wißfeld in September. He <a
+  href="https://mastodon.social/@larma/104630652216622243">built the
+  exposure notification functionality into microG</a>, a Free Software
+  implementation of the proprietary Google services. This allows at
+  least people who own a <a href="/activities/android/">Google-free
+  Android phone</a> and have microG installed to use various Corona
+  apps.
+</p>
 
-	<p>The reasons just mentioned show that Free Software is an essential part of any sustainable digital development. Consequently, also the "Principles for Digital Development" require the publication of software, data and standards under free licenses. The FSFE, together with experts from the German Corporation for International Cooperation, has analyzed and put together <a href="/freesoftware/developmentcooperation/">the main benefits for international development cooperation when relying on Free Software in one article</a>. </p>
-	
-		
-	
-	<p>The article is part of our series about the <a href="/freesoftware/">basics of Free Software</a>. It delivers background on the ongoing process of digitisation in international devlopment cooperation, its effects and the status quo. It sheds light on the multiple benefits that international development cooperation can profit from, when using and developing Free Software. And it culminates in <a href="/freesoftware/developmentcooperation/#pmpc-for-development-cooperation">the FSFE demanding that in all international development cooperation, any software development (co-)financed with public money be published as Free Software</a>.</p>
-	
-		<div class="text-center">
-				<p><a class="btn btn-lg btn-success mb-3 answer2" href="/freesoftware/developmentcooperation/">
-						Read the article
-				</a></p>
-			</div>
-	
-	<blockquote>Nico Lück, co-author of the article and expert from the German Corporation for International Cooperation sums up: "Minimising dependencies and building up local partner capacities fosters sustainability of IT solutions: Free Software and other open resources are the enabling instruments to be preferred and promoted for sustainable development cooperation."</blockquote>
-	
+<figure>
+  <img
+    src="https://pics.fsfe.org/uploads/medium/35a91da85f747e4c4621ce5e8e336b73.png"
+    alt="Screenshot of microG's Exposure Notification API" />
+  <figcaption>
+    Free Software implementation of the underlying Exposure
+    Notification API in microG
+  </figcaption>
+</figure>
+
+<p>
+  A few days ago, Christian Grigis, Fynn Godau, Marcus Hoffmann and
+  Marvin Wißfeld went one step further. They <a
+  href="https://codeberg.org/corona-contact-tracing-germany/cwa-android">integrated
+  the exposure notification component of microG directly into the
+  German Corona Warn App</a>. This so-called Drop-In-Replacement
+  enables even people who have neither the Google services nor their
+  Free Software alternative microG installed, to use the CWA. In
+  addition, as of today they are <a
+  href="https://f-droid.org/packages/de.corona.tracing/">making the app
+  available on F-Droid</a>, an app store with exclusively Free
+  Software. This is therefore also advantageous for those users who
+  have installed microG or Google services but prefer to obtain their
+  software via F-Droid for security and convenience reasons.
+</p>
+
+<p>
+  microG main developer and FSFE supporter Marvin Wißfeld adds:
+</p>
+
+<blockquote>
+  <p>
+    "The previous solution of installing microG is often out of the
+    question for various reasons. But the new app from F-Droid,can also
+    be run without problems on all current smartphones from, for
+    example, Huawei some of which have been delivered without Google
+    services since mid-2019. The German government and the RKI may have
+    lost thousands of users of the Corona Warn App in recent months,
+    as only Google and Apple users were targeted."
+  </p>
+</blockquote>
+
+<p>
+  It is now up to the responsible bodies, the German government, the
+  Robert Koch Institute (RKI) and their contractors SAP and T-Systems,
+  to <a
+  href="https://github.com/corona-warn-app/cwa-app-android/issues/1483#issuecomment-734491614">incorporate
+  the changes into the main development branch</a>, and thus to pull
+  together with the Free Software community. In addition, this method
+  can in principle be used for Corona apps in other countries.
+</p>
+
+<h2>Free Software once again in a pioneering role</h2>
+
+<p>
+  We see a familiar pattern here: the Free Software community <a
+  href="https://github.com/corona-warn-app/cwa-documentation/issues/5">presents
+  a problem and a possible solution</a>, but is <a
+  href="https://github.com/corona-warn-app/cwa-documentation/issues/5#issuecomment-627848335">turned
+  away</a> until volunteers solve the problem themselves with unpaid
+  work and without official support. In this case, the resources of the
+  authorties and companies involved would have easily sufficed to make
+  these significant improvements themselves, or at least to support
+  them. It is laudable that the CWA was consistently developed and
+  published as Free Software from the very beginning. But the process lacked the
+  necessary consistency to remove technically and meanwhile unnecessary
+  dependencies on proprietary software.
+</p>
+
+<p>
+  The FSFE appeals to governments and administrations to publish
+  developed software as Free Software, to break dependencies on
+  Google's and Apple's app stores and instead make their apps
+  installable from independent sources like F-Droid, and to renounce
+  proprietary dependencies. As Wißfeld explains, the Corona Warn App
+  already offers concrete additional advantages in the fight against
+  the pandemic:
+</p>
+
+<blockquote>
+  <p>
+    "The free implementation has the potential - in the spirit of Free
+    Software - for improvements that Google's proprietary interface
+    does not allow. For example, it would be possible to display the
+    time of a high risk encounter. This could - if the user voluntarily
+    provides the data - help public health authorities to identify
+    hotspots or clusters, or be used for statistical purposes to
+    increase the effectiveness of protective measures."
+  </p>
+</blockquote>
+
+<p>
+  We would like to thank all persons involved who made the use of the
+  Corona App in Germany possible without having to accept any loss of
+  software freedom.
+</p>
 
 </body>
 
-	<tags>
-		<tag key="front-page"/>
-		<tag key="funding">International development cooperation</tag>
-		<tag key="pmpc">Public Money? Public Code!</tag>
-		<tag key="sustainability">Sustainable Development Goals</tag>
-		<tag key="united-nations">United Nations</tag>
-	</tags>
+<tags>
+  <tag key="front-page"/>
+  <tag key="de">Germany</tag>
+  <tag key="fya">Android</tag>
+  <tag key="corona">Corona</tag>
+</tags>
 
-<discussion href=""/>  
-<image url="https://pics.fsfe.org/uploads/small/583e4bfd7d0565ef16e734467bdcab14.jpg"/> 
+
+<discussion href="https://community.fsfe.org/t/552"/>  
+<image url="https://pics.fsfe.org/uploads/medium/4c841b6189a6d77a8061a94ee30b6d1b.jpg"/> 
+
 </html>
-

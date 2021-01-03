@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <html newsdate="2020-12-08">
+    <version>1</version>
+
+    <head>
+      <title>Duitse Corona tracerings-app beschikbaar zonder Google-diensten</title>
+    </head>
+
+    <body>
+
+    <h1>Duitse Corona tracerings-app beschikbaar zonder Google-diensten</h1>
+
+    <p>
+      Enkele Vrije Software-ontwikkelaars hebben vandaag bereikt wat officiële lichamen maandenlang hebben gemist: ze hebben de Duitse Corona Waarschuwings-app voor het traceren van Covid-19 risicocontacten beschikbaar gemaakt in een versie die geheel vrij is van afhankelijkheden van Google en beschikbaar is in de Vrije Software app-winkel F-Droid.
+    </p>
+
+    <p>
+      Al in april <a
+      href="/news/2020/news-20200402-02.html">formuleerde de FSFE twee fundamentele voorwaarden voor de zogenoemde Corona apps</a>. Ten eerste moet er geen verplichting zijn om ze te gebruiken en ten tweede moeten ze beschikbaar zijn als Vrije Software. Op het eerste gezicht voldoet de Duitse <em>Corona Waarschuwings-app</em> (CWA),
+      gepubliceerd in juni, aan deze criteria net zoals nu vele anderen in Europa. Toch wordt het uitwisselen van apparaatsleutels via Bluetooth, op basis waarvan het risico wordt berekend, uitgevoerd door een onderliggende interface.
+    </p>
+
+    <figure>
+      <img
+        src="https://pics.fsfe.org/uploads/medium/4c841b6189a6d77a8061a94ee30b6d1b.jpg"
+        alt="Screenshot van Corona Waarschuwings-app" />
+    </figure>
+
+    <p>
+      Het probleem is dat de interface-software, <em>Exposure
+      Notifications API</em> genoemd en met name ontwikkeld is door Apple en
+      Google, grotendeels propriëtair is. Dit betekent dat het niet vrijelijk kan worden onderzocht, gedistribueerd en verbeterd. Binnen Google's Android-besturingssysteem is het ook noodzakelijk om de 'Play Services' te installeren en te gebruiken. Deze Google-diensten grijpen diep in het systeem en ondermijnen de digitale soevereiniteit van de gebruikers. Dit voorkomt standaard het gebruik van vele Corona-apps voor mensen die <a
+      href="/activities/android/">privacy en softwarevrijheid op hun Android-apparaten</a> waarderen.
+    </p>
+
+    <h2>Vrijwilligers lossen problemen stap voor stap op</h2>
+
+    <p>
+     In september leverde Vrije Software-ontwikkelaar en FSFE-supporter Marvin Wißfeld een eerste belangrijke verbetering. Hij <a
+      href="https://mastodon.social/@larma/104630652216622243">bouwde de aanrakingsnotificatiefunctionaliteit in microG</a>, een Vrije Software-implementatie van de propriëtaire Google-diensten. Dit stelt tenminste mensen die een <a href="/activities/android/">Google-vrije Android-telefoon</a> met geïnstalleerde microG bezitten in staat om verschillende Corona apps te gebruiken.
+    </p>
+
+    <figure>
+      <img
+        src="https://pics.fsfe.org/uploads/medium/35a91da85f747e4c4621ce5e8e336b73.png"
+        alt="Screenshot van microG's Exposure Notification API" />
+      <figcaption>
+        Vrije Software-implementatie van de onderliggende Exposure Notification API in microG
+      </figcaption>
+    </figure>
+
+    <p>
+      Enkele dagen geleden gingen Christian Grigis, Fynn Godau, Marcus Hoffmann en
+      Marvin Wißfeld een stap verder. Ze <a
+      href="https://codeberg.org/corona-contact-tracing-germany/cwa-android">integreerden de blootstellingsnotificatiecomponent van microG direct in de Duitse Corona Waarschuwings-app</a>. Deze zogenoemde 'Drop-In-Replacement' stelt zelfs mensen die de Google diensten noch het Vrije Software-alternatief microG hebben geinstalleerd om toch de CWA de gebruiken. Daarbij hebben zij vanaf vandaag <a
+      href="https://f-droid.org/packages/de.corona.tracing/">de app beschikbaar gesteld op F-Droid</a>, een app-winkel met alleen Vrije Software. Dit is daarmee ook van voordeel voor gebruikers die microG of Google-diensten hebben geïnstalleerd maar er de voorkeur aan geven om hun software vanwege veiligheid en gemak te verkrijgen via F-Droid.
+    </p>
+
+    <p>
+      microG-hoofdontwikkelaar en FSFE-supporter Marvin Wißfeld voegt toe:
+    </p>
+
+    <blockquote>
+      <p>
+        "De vorige oplossing van microG installeren is vanwege verschillende redenen vaak niet mogelijk. Maar de nieuwe app van F-Droid kan ook zonder problemen worden gedraaid op alle huidige smartphones van bijvoorbeeld Huawei, die sinds medio 2019 zonder Google-diensten worden geleverd. De Duitse regering en de RKI zouden de afgelopen maanden duizenden gebruikers van de Corona Waarschuwings-app kunnen hebben verloren omdat ze zich alleen hebben gericht op gebruikers van Google en Apple."
+      </p>
+    </blockquote>
+
+    <p>
+      Het is nu aan de verantwoordelijke lichamen, de Duitse regering, het Robert Koch Instituut (RKI) en hun uitvoerders SAP en T-Systems om <a
+      href="https://github.com/corona-warn-app/cwa-app-android/issues/1483#issuecomment-734491614">de veranderingen in hun hoofdontwikkelingstak te integreren</a> en daarmee samen te werken met de Vrije Softwaregemeenschap. Verder kan deze methode kan in principe gebruikt worden voor Corona-apps in andere landen.
+    </p>
+
+    <h2>Vrije Software opnieuw in een pioniersrol</h2>
+
+    <p>
+      We zien hier een bekend patroon: de Vrije Softwaregemeenschap <a
+      href="https://github.com/corona-warn-app/cwa-documentation/issues/5">presenteert een probleem en een mogelijke oplossing</a> maar wordt <a
+      href="https://github.com/corona-warn-app/cwa-documentation/issues/5#issuecomment-627848335">weggestuurd</a> tot vrijwilligers het probleem zelf onbetaald en zonder officiële steun oplossen. In dit geval hadden de betrokken autoriteiten en bedrijven meer dan genoeg hulpbronnen om deze belangrijke verbeteringen zelf uit te voeren of ze tenminste te steunen. Het is te prijzen dat de CWA vanaf het begin consistent is ontwikkeld en gepubliceerd als Vrije Software. Maar tijdens het proces ontbrak de noodzakelijke consistentie om technische en intussen niet langer noodzakelijke afhankelijkheden van propriëtaire software te verwijderen.
+    </p>
+
+    <p>
+      De FSFE roept regeringen en overheden op om ontwikkelde software als Vrije Software te publiceren, afhankelijkheden van de app-winkels van Google en Apple af te breken en in plaats daarvan hun apps installeerbaar te maken van onafhankelijke bronnen zoals F-Droid en propriëtaire afhankelijkheden op te geven. Zoals Wißfeld uitlegt biedt de Corona Waarschuwings-app al concrete toegevoegde voordelen in de strijd tegen de pandemie:
+    </p>
+
+    <blockquote>
+      <p>
+        "De vrije implementatie heeft het potentieel, in de geest van Vrije Software, voor verbeteringen die Google's propriëtaire interface niet toestaat. Het zou bijvoorbeeld mogelijk zijn om de tijd van een ontmoeting met een hoog risico te tonen. Dit zou, als de gebruiker de data vrijwillig levert, de publieke gezondheidsautoriteiten helpen bij het identificeren van de hotspots of clusters, of gebruikt kunnen worden voor statistische doeleinden om de effectiviteit van beschermende maatregelen te vergroten."
+      </p>
+    </blockquote>
+
+    <p>
+      We zouden alle betrokken personen die het gebruik van de Corona-app in Duitsland mogelijk maken zonder verlies van softwarevrijheid te accepteren willen bedanken.
+    </p>
+
+    </body>
+
+    <tags>
+      <tag key="front-page"/>
+      <tag key="de">Duitsland</tag>
+      <tag key="fya">Android</tag>
+      <tag key="corona">Corona</tag>
+    </tags>
+
+
+    <discussion href="https://community.fsfe.org/t/552"/>  
+    <image url="https://pics.fsfe.org/uploads/medium/4c841b6189a6d77a8061a94ee30b6d1b.jpg"/> 
+<translator>André Ockers</translator>
+    </html>
+

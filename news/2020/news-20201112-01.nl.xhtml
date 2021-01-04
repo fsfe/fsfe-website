@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <html newsdate="2020-11-12">
+    <version>2</version>
+
+    <head>
+      <title>Hoe een publiek waarschuwingssysteem (niet) op te zetten</title>
+    </head>
+
+    <body>
+
+    <h1>Hoe een publiek waarschuwingssysteem (niet) op te zetten</h1>
+
+    <p>
+      Wat is de beste manier om mensen te attenderen op catastrofes? Duitsland ging voor propriëtaire apps die de onlangs georganiseerde waarschuwingsdag ("Warntag") officieel een mislukking werd. We analyseerden deze situatie en ontdekten robuustere oplossingen die gebruikersrechten respecteren.
+    </p>
+
+    <p>
+      Het basisidee van het testen van alarmsystemen is om potentiële of echte problemen te vinden. Het is echter opmerkelijk hoe veel er mis ging op de Duitse officiële waarschuwingsdag in september. Vooral de <a
+      href="https://www.dw.com/en/germanys-nationwide-emergency-warning-day-sees-bumpy-rollout/a-54877137">onbetrouwbaarheid</a>
+      van de niet-vrije en niet-standaard apps waarvoor officieel reclame is gemaakt dwongen het Duitse Ministerie van Binnenlandse Zaken (BMI), die gaat over het hiervoor verantwoordelijke Federale Kantoor voor Burgerbescherming en Hulpverlening bij Rampen (BBK), om de testdag als een mislukking aan te merken.
+    </p>
+
+    <p>
+      De FSFE analyseerde haar bevindingen samen met experts op het gebied van databescherming en mobiele netwerken om erachter te komen waarom de apps mislukten en hoe meer veerkrachtige en open systemen er uit kunnen zien.
+    </p>
+
+    <figure>
+      <img
+          src="https://pics.fsfe.org/uploads/medium/8a77a3fbd5eb790cf94b2f115f6f94f3.jpg"
+          alt="Een rode noodtelefoon" />
+    </figure>
+
+    <h2>Digitale waarschuwingssystemen in Duitsland</h2>
+
+    <p>
+      Er zijn drie populaire met publiek geld gefinancierde apps die officiële noodoproepen naar hun gebruikers kunnen versturen: Katwarn, Nina, en Biwapp. Alle drie zijn propriëtaire, dus niet-vrije, software die gebruikers niet toestaan om de software de gebruiken, te bestuderen, te delen en te verbeteren. Verder moeten zij het hebben van het ophalen van noodoproepen van het centrale <em>MoWaS</em> ("modulair waarschuwingssysteem"), die zij doorspelen naar de app-gebruikers via de WiFI- of mobiele internetverbinding van hun telefoons.
+    </p>
+
+    <p>
+      Een overmatige belasting van dit centrale systeem was de belangrijkste reden waarom veel oproepen de app-gebruikers niet op tijd op helemaal niet hebben bereikt. Dit kwam echter niet als een verrassing. In een scenario waarin miljoenen apparaten op hetzelfde moment worden bereikt via een-op-een (<em>unicast</em>) verbindingen zijn netwerkflessenhalzen bijna onvermijdelijk.
+    </p>
+
+    <p>
+      Het onderliggende probleem is echter de vermijdbare complexiteit en gedupliceerde structuren. Andere landen investeerden geen grote hoeveelheden publiek geld in gecentraliseerde systemen en drie propriëtaire apps maar beheren meer veerkrachtige en beter geteste infrastructuur voor het distribueren van noodboodschappen van een naar velen: SMSCB, gewoonlijk <em>cell broadcasts</em> genoemd.
+    </p>
+
+    <h2>Cell Broadcasts</h2>
+
+    <p>
+      Cell broadcasts zijn gestandaardiseerd rond 1990 en vormen een gevestigde methode om aan alle mobiele netwerkgebruikers berichten te sturen; in slechts enkele seconden in een heel land of naar een beperkt aantal gebieden. Telefoons hoeven niet bij een specifiek netwerk geregistreerd te zijn om deze berichten te ontvangen en alarmberichten met de hoogste prioriteit zullen zelfs als het geluid is uitgezet een alarmboodschap doorgeven. En in tegenstelling tot mobiel internet beschikken cell broadcasts over een gereserveerd kanaal dat zelfs werkt als telefoonnetwerken zijn overbelast met gebruikers en berichten.
+    </p>
+
+    <p>
+      Verder kunnen cell broadcasts ontvangen worden door iedere telefoon, ongeacht waarschuwings-apps, een bijgewerkt besturingssysteem of geïnstalleerde diensten van Google en/of Apple. Omdat de communicatie verloopt van een naar velen zijn er ook geen privacybezwaren. Deze duidelijke voordelen hebben de EU ertoe gebracht om het  <a
+      href="https://en.wikipedia.org/wiki/EU-Alert">EU-Alert</a>-systeem te baseren op 
+      cell broadcasts. Deze richtlijn moet voor juni 2022 door alle EU-lidstaten worden geïmplementeerd tenzij een staat een dienst kan leveren met een vergelijkbaar betrouwbaar resultaat, hetgeen een erg hoge drempel is.
+    </p>
+
+    <p>
+      Ondanks deze voordelen koos Duitsland ervoor om, in tegenstelling tot landen zoals Nederland, Griekenland, Roemenië, Italië en de VS, haar alarmeringssysteem niet te baseren op de SMSBC-standaard.
+      Omdat er geen officiële verplichting is hebben de meeste leveranciers van mobiele netwerken ervoor gekozen om deze eigenschap te deactiveren en zo op kosten te besparen. Er worden echter veel hogere kosten op belastingbetalers afgewenteld voor het financiering van een geïsoleerd systeem en de bijbehorende propriëtaire apps.
+    </p>
+
+    <figure>
+      <img
+          src="https://pics.fsfe.org/uploads/big/f790c7602451468f95091e50dc7988d1.jpg"
+          alt="EU-Alert/NL-Alert Cell Broadcast message" />
+      <figcaption>EU-Alert/NL-Alert Cell Broadcast-bericht in 2018.
+      CC-BY-SA-4.0 door WarningMessageDelivery</figcaption>
+    </figure>
+
+    <h2>Waarschuwings-apps</h2>
+
+    <p>
+      Ondanks de duidelijke voordelen van cell broadcasts is er iets te zeggen voor waarschuwings-apps. Gebruikers kunnen informatie opvragen over andere regio's en eerdere evenementen. Toch heeft het baseren van een groot deel van het alarmcommunicatiesysteem op waarschuwings-apps bewezen op enkele mislukte punten te gevoelig te zijn.
+    </p>
+
+    <p>
+      Vanwege de cruciale aard van communicatiesystemen voor noodsituaties moeten zij <a href="/freesoftware/">Vrije Software</a> zijn en gebouwd op <a
+      href="/freesoftware/standards/">Open Standaarden</a>. Alleen met de vrijheden om software te gebruiken, te bestuderen, te delen en te verbeteren kunnen zij geanalyseerd worden door burgers en onafhankelijke veiligheidsonderzoekers. En dit vergroot het vertrouwen en de bereidheid om een extra waarschuwings-app te installeren, zoals de praktische ervaring met de Corona-tracerings-apps laat zien.
+    </p>
+
+    <h2>Conclusie</h2>
+
+    <p>
+       Onze analyse concludeert met drie belangrijke bevindingen waar niet alleen de verantwoordelijke overheden maar ook andere actoren rekening mee dienen te houden.
+    </p>
+
+    <ul>
+      <li>
+        Autoriteiten zouden als basis van communicatie over noodtoestanden een gestandaardiseerd, veerkrachtig systeem moeten kiezen dat in staat is om miljoenen berichten naar zoveel mogelijk apparaten te versturen, onafhankelijk van het besturingssysteem of de geïnstalleerde software. Op dit moment lijkt SMSBC, of cell broadcasts, de best mogelijke implementatie die in verschillende landen goed werkt. Daarom waarderen we dat de EU ervoor koos om EU-Alert te baseren op cell broadcasts.
+      </li>
+
+      <li>
+        Waarschuwings-apps kunnen een nuttige aanvulling zijn. Vooral voor met publiek geld gefinancierde apps is het cruciaal om de software onder een Vrije Software-licentie te ontwikkelen en te publiceren, waarbij het principe van f <a
+        href="https://publiccode.eu">Publiek Geld? Publieke Code!</a> wordt gevolgd.
+      </li>
+
+      <li>
+        Het testen van waarschuwingssystemen is belangrijk en men zou door moeten gaan met de geplande regelmatige waarschuwingsdagen. Het is normaal dat tijdens deze tests fouten plaatsvinden maar er moet niet overheen gekeken worden. In plaats daarvan verdienen fouten een diepgaand antwoord.
+      </li>
+    </ul>
+
+    <p>
+      In dit opzicht hebben de verantwoordelijke overheden, BBK en BMI, nog veel werk te doen. Maar het is, zowel in praktisch en financieel opzicht, te doen.
+    </p>
+
+    </body>
+
+    <tags>
+      <tag key="front-page"/>
+      <tag key="de">Duitsland</tag>
+      <tag key="fya">Bevrijd uw Android</tag>
+      <tag key="pmpc">Publiek Geld? Publieke Code!</tag>
+    </tags>
+
+
+    <discussion href="https://community.fsfe.org/t/538"/>  
+    <image url="https://pics.fsfe.org/uploads/medium/7a0203c58e6e11e841072693a1a91eeb.jpg"/> 
+<translator>André Ockers</translator>
+    </html>
+

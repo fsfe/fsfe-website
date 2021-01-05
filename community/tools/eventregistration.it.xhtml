@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html>
+<version>2</version>
+
+<head>
+  <title>Segnala il tuo evento della comunità FSFE</title>
+</head>
+<body>
+
+  <h1>Segnala il tuo evento della comunità FSFE</h1>
+
+  <div id="introduction">
+    <p>
+      Utilizza il form qui sotto per segnalare un evento che è attinente all'attività
+      della FSFE. Se è un meeting o un discorso, se è uno stand per strada o un
+      podcast radio: dì alla comunità e al mondo cosa si farà.
+    </p>
+
+  </div>
+
+  <form action="/cgi-bin/registerevent.php" method="POST" class="fsfe-form" enctype="multipart/form-data" role="form">
+    <!-- @TRANSLATORS: there is no need to translate the HTML
+    attributes of the elements in this form, just the text between
+    the '>' and '<'.
+
+    An example:
+
+    <label><input type="checkbox" name="tags[]" value="localgroup" />talk</label>
+
+    can be translated to Spanish
+
+    <label><input type="checkbox" name="tags[]" value="localgroup" />grupo local</label>
+
+    Thank you! -->
+    <input name="register_event" type="hidden" />
+
+    <label for="name" class="required">Il tuo nome<span class="star">*</span></label>
+    <input name="name" value="" required="required" type="text" />
+
+    <label for="email" class="required">La tua email<span class="star">*</span></label>
+    <input name="email" value="" required="required" type="email" />
+
+    <p class="help-block">
+      Le tue informazioni personali non verranno mai condivise né vendute. Sono utilizzate solamente
+      per contattarti nel caso di bisogno o in caso di problemi.
+    </p>
+
+    <div class="form-group">
+      <label for="lang">Lingua per la registrazione di questo evento<span class="star">*</span></label>
+      <!-- @Translators: There is no need to translate the list below -->
+      <select id="lang" name="lang" class="form-control" required="required">
+        <option></option>
+        <option value="ar">&#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1617;&#1577;</option>
+        <option value="bg">Български</option>
+        <option value="bs">Bosanski</option>
+        <option value="ca">Català</option>
+        <option value="cs">Česky</option>
+        <option value="da">Dansk</option>
+        <option value="de">Deutsch</option>
+        <option value="el">Ελληνικά</option>
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="et">Eesti</option>
+        <option value="fi">Suomi</option>
+        <option value="fr">Français</option>
+        <option value="hr">Hrvatski</option>
+        <option value="hu">Magyar</option>
+        <option value="it">Italiano</option>
+        <option value="mk">Mакедонски</option>
+        <option value="nb">Norsk (bokmål)</option>
+        <option value="nl">Nederlands</option>
+        <option value="nn">Norsk (nynorsk)</option>
+        <option value="pl">Polski</option>
+        <option value="pt">Português</option>
+        <option value="ro">Română</option>
+        <option value="ru">Русский</option>
+        <option value="sk">Slovenčina</option>
+        <option value="sl">Slovenščina</option>
+        <option value="sq">Shqip</option>
+        <option value="sr">Српски</option>
+        <option value="sv">Svenska</option>
+        <option value="tr">Türkçe</option>
+        <option value="uk">Українська</option>
+        <option value="zh">漢語</option>
+      </select>
+
+      <p class="help-block">
+	Indica la lingua del testo che inserirai nel titolo e
+	nella descrizione. Se registri il tuo evento in una lingua diversa
+	dall'inglese, <strong>se puoi fornisci anche una versione in
+        inglese</strong> per essere sicuri di farne capire il contenuto a chi dovrà valutarlo. Fai anche attenzione che
+	un evento non in inglese è visibile solamente nelle pagine della lingua utilizzata su fsfe.org.
+	Ad esempio, un evento in italiano sarà visibile solamente su
+        fsfe.org/index.it.html.
+      </p>
+    </div>
+
+    <label for="title" class="required">Titolo dell'evento<span class="star">*</span></label>
+    <input name="title" value="" required="required" type="text" />
+    <table>
+      <tr>
+        <td>
+          <label for="startdate" class="required">Data di inizio<span class="star">*</span></label>
+          <input name="startdate" value="" required="required" type="date" placeholder="YYYY-MM-DD" />
+        </td>
+        <td>
+          <label for="enddate" >Data di conclusione</label>
+          <input name="enddate" value="" type="date" placeholder="YYYY-MM-DD" />
+        </td>
+      </tr>
+    </table>
+    <label for="description" class="required">Descrizione (solo testo, no HTML)<span class="star">*</span></label>
+    <textarea name="description" required="required"></textarea>
+
+    <p class="help-block">Includi i seguenti punti:</p>
+    <ul class="help-block">
+      <li>Che cosa tratta il tuo evento, e cosa si aspettano le persone?</li>
+      <li>Luogo, data e ora dell'evento?</li>
+      <li>C'è bisogno di registrarsi, e ha un costo partecipare?</li>
+      <li>Chi terrà il discorso o gestirà l'incontro?</li>
+      <li>La lingua parlata nell'intervento al meeting.</li>
+      <li>Per meeting dei gruppi locali: se è aperto a tutti.</li>
+      <li>Un singolo a capo non sarà visibile dopo la pubblicazione dell'evento. Utilizza un doppio a capo se vuoi dividere in più paragrafi.</li>
+    </ul>
+    <p class="help-block">Grazie per la registrazione del tuo evento!</p>
+
+    <label for="tags">Scegli uno o più dei seguenti tag</label>*
+
+    <div class="checkboxlist">
+      <div class="checkbox"><label><input type="checkbox" name="tags[]" value="talk" />relazione</label></div>
+      <div class="checkbox"><label><input type="checkbox" name="tags[]" value="panel" />tavola rotonda</label></div>
+      <div class="checkbox"><label><input type="checkbox" name="tags[]" value="infobooth" />banchetto informativo</label></div>
+      <div class="checkbox"><label><input type="checkbox" name="tags[]" value="localgroup" />gruppo locale</label></div>
+      <div class="checkbox"><label><input type="checkbox" name="tags[]" value="workshop" />seminario</label></div>
+      <div class="checkbox"><label><input type="checkbox" name="tags[]" value="meeting" />meeting</label></div>
+    </div>
+
+    <label for="url">URL per l'evento (se disponibile)</label>
+    <input name="url" value="" type="text" />
+
+    <label for="online">Evento online/virtuale</label>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" name="online" value="yes" />
+	Questo è un evento online. Se metti qui un segno di spunta, metti pure un
+	valore a caso per "Città" e "Paese", perché non verranno visualizzati.
+      </label>
+    </div>
+
+    <label for="city">Città<span class="star">*</span></label>
+    <input name="city" value="" required="required" type="text" />
+
+    <div class="form-group">
+      <label for="country">Paese<span class="star">*</span></label>
+      <country-list />
+    </div>
+
+    <input value="Aggiungi evento" name="submit" type="submit" />
+    <p class="help-block"><span class="star">*</span> = campi richiesti</p>
+
+  </form>
+
+  <p>
+    Dopo aver compilato il form e confermata la tua richiesta con il pulsante "Aggiungi
+    evento", un file xml verrà generato ed inviato a noi. Se approvato, il tuo evento
+    verrà inserito e dovrebbe comparire su fsfe.org e/o su
+    fsfe.org/events entro 48 ore. Verranno accettate solo attività relative all'FSFE e alla
+    comunità della FSFE, e non altri diversi tipi di attività relative al 
+    Free Software (sì, senza eccezioni - non importa
+    quanto rilevanti esse siano).
+  </p>
+
+  <p>
+    Ricorda che tutti gli eventi della FSFE devono rispettare il nostro <a
+    href="/about/codeofconduct">Codice di Condotta</a> nel quale si chiede a
+    tutti i partecipanti di comportarsi in modo educato l'un con l'altro. Non sottoporre
+    il tuo evento come evento della FSFE se non intendi applicare il nostro Codice di Condotta.
+  </p>
+
+</body>
+</html>

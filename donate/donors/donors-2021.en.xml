@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Please keep each list alphabetically ordered.  Emacs users want to set
+  sort-fold-case to true and run sort-lines on a region.  Vi+ users can
+  visually select the list and use the :sort command.
+
+  The date="..." should be filled with the last date when a donation from this
+  donor came in. It is important for the "current" thankgnus page.
+
+  Currently, the date="..." may only be set in a single xml file for the same
+  donor, so if you add a donor to a file of the new year, don't forget to
+  remove the date="..." in the old year's file.
+-->
+
+<donorset>
+  <version>1</version>
+
+  <gold>
+    <donor date="2021-12-31" img="donors/linuxhotel.png">Linuxhotel Villa Vogelsang</donor>
+  </gold>
+
+  <silver>
+    <donor date="2021-12-31" img="donors/silver-freiheit.png">freiheit.com technologies</donor>
+    <donor date="2021-12-31" img="donors/silver-sysmocom.png">sysmocom - s.f.m.c. GmbH</donor>
+  </silver>
+
+  <bronze>
+    <donor date="2021-01-05">Bibliotek-Systemer As</donor>
+    <donor date="2021-01-05">Björn Persson</donor>
+    <donor date="2021-01-06">Castalia Solutions</donor>
+    <donor date="2021-12-31">Christian Wasserthal</donor>
+    <donor date="2021-12-31">ctrl.alt.coop</donor>
+    <donor>Florian Snow</donor>
+    <donor date="2021-12-31">Hans-Christian Esperer</donor>
+    <donor date="2021-12-31">inmedias.it</donor>
+    <donor date="2021-12-31">Joachim Zobel</donor>
+    <donor date="2021-12-31">LIHAS - LinuxHaus Stuttgart</donor>
+    <donor date="2021-12-31">Matthias Köslin</donor>
+    <donor date="2021-12-31">Neuhaus-IT</donor>
+    <donor date="2021-12-31">Next Level Shit</donor><!-- Michael Czechowski -->
+    <donor date="2021-12-31">Raigo Aljand</donor>
+    <donor date="2021-12-31">scvalex</donor>
+    <donor date="2021-12-31">Stephan Kreutzer</donor>
+    <donor date="2021-12-31">Stéphane Bortzmeyer</donor>
+    <donor date="2021-12-31">Urs Fässler</donor>
+  </bronze>
+</donorset>

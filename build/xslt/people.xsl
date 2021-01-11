@@ -212,6 +212,9 @@
                                 <xsl:when test="substring-before( . , '/') = 'freelancer'">
                                     <xsl:attribute name="class">employee freelancer</xsl:attribute>
                                 </xsl:when>
+                                <xsl:when test="substring-before( . , '/') = 'contractor'">
+                                    <xsl:attribute name="class">employee contractor</xsl:attribute>
+                                </xsl:when>
                                 <xsl:when test="substring-before( . , '/') = 'intern'">
                                     <xsl:attribute name="class">employee intern</xsl:attribute>
                                 </xsl:when>

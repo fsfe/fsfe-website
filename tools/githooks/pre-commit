@@ -34,7 +34,8 @@ count=0
 # return codes
 RETURN_SYNTAX=0
 RETURN_HTML=0
-RETURN_TAGS=0
+RETURN_TAGS_NEW=0
+RETURN_TAGS_MISMATCH=0
 RETURN_ENC=0
 RETURN_NAME=0
 RETURN_NEWSDATE=0
@@ -48,7 +49,8 @@ RETURN_CSS_ATTR=0
 # displayed files
 FILES_SYNTAX=""
 FILES_HTML=""
-FILES_TAGS=""
+FILES_TAGS_NEW=""
+FILES_TAGS_MISMATCH=""
 FILES_ENC=""
 FILES_NAME=""
 FILES_NEWSDATE=""
@@ -94,7 +96,6 @@ for f in $files_all; do
   # ---------------------------------------------------------------------------
   fileregex="^(news/|events/).*(\.xhtml$|\.xml$|\.xsl$)"
   if [[ ( $f =~ $fileregex ) && ( -e "$f" ) ]]; then
-    hit=0
     tags=""
     # go through all tags in this file
     # make only a new line a field separator to support tags with spaces inside (which is not recommended)
@@ -103,16 +104,42 @@ for f in $files_all; do
     for tag in $(grep -Ei '<tag(\s|\>)' "${f}" | perl -pe 's/.*<tag key="(.+?)".*/\1/'); do
       # check if this tag does exist in any other news/event item
       if ! git grep -ilE "<tag key=\"${tag}\"" news/ events/ | grep -vq "${f}"; then
-        hit=1
         tags="${tag}, ${tags}"
-        RETURN_TAGS=$((RETURN_TAGS + 1))
+        RETURN_TAGS_NEW=$((RETURN_TAGS_NEW + 1))
       fi
     done
     IFS=$OLDIFS   # reset IFS
     # if any new tag has been found, enlist them
-    if [ $hit != 0 ]; then
+    if [ $RETURN_TAGS_NEW -gt 0 ]; then
       tags="${tags%, }"
-      FILES_TAGS="${FILES_TAGS}|${f} (new tag(s): ${tags})"
+      FILES_TAGS_NEW="${FILES_TAGS_NEW}|${f} (new tag(s): ${tags})"
+    fi
+  fi
+
+  # ---------------------------------------------------------------------------
+  # Tags mismatch between EN and translations
+  # ---------------------------------------------------------------------------
+  fileregex="^(news/|events/).*(\.xhtml$|\.xml$|\.xsl$)"
+  if [[ ( $f =~ $fileregex ) && ( -e "$f" ) ]]; then
+    # Only check non-english files
+    if [[ ! $f =~ \.en\. ]]; then
+      # Get file extension
+      ext="${f##*.}"
+      # Get base file name (without) "en.$EXT"
+      base=$(echo "${f}" | sed -E "s/\.[a-z][a-z]\.${ext}//")
+      # Extract tags from the translated and the English file, and sort them
+      tags_trans="$(grep -Ei '<tag(\s|\>)' "${f}" | perl -pe 's/.*<tag key="(.+?)".*/\1/' | sort)"
+      tags_en="$(grep -Ei '<tag(\s|\>)' "${base}.en.${ext}" | perl -pe 's/.*<tag key="(.+?)".*/\1/' | sort)"
+      # Compare the two lists, and output tags that are not present in one of
+      # the files. `-3` strips away the list of tags that are common. So the
+      # output should be empty normally
+      if [[ $(comm -3 <(echo "$tags_en") <(echo "$tags_trans")) ]]; then
+        RETURN_TAGS_MISMATCH=$((RETURN_TAGS_MISMATCH + 1))
+      fi
+      # if any mismatched tag has been found, enlist them
+      if [ $RETURN_TAGS_MISMATCH -gt 0 ]; then
+        FILES_TAGS_MISMATCH="${FILES_TAGS_MISMATCH}|${f}"
+      fi
     fi
   fi
 
@@ -262,14 +289,14 @@ if [ $RETURN_HTML -gt 0 ]; then
 EOF
 fi
 
-if [ $RETURN_TAGS -gt 0 ]; then
+if [ $RETURN_TAGS_NEW -gt 0 ]; then
   cat <<EOF >&2
   ====================================
   || [WARN] NEW / DUPLICATED TAG(S) ||
   ====================================
-  Your commit introduced $RETURN_TAGS tag(s) which did not exist before in
+  Your commit introduced $RETURN_TAGS_NEW tag(s) which did not exist before in
   our news or event items!
-  $(echo "${FILES_TAGS}" | sed -E -e "s/\|/\n  - /g")
+  $(echo "${FILES_TAGS_NEW}" | sed -E -e "s/\|/\n  - /g")
 
   Please make sure that you use already used tags, and only introduce a
   new tag e.g. if it's about a new campaign that will be more often
@@ -281,6 +308,25 @@ if [ $RETURN_TAGS -gt 0 ]; then
 
   Please make another commit to replace a new tag with an already
   existing one unless you are really sure. Thank you.
+
+EOF
+fi
+
+if [ $RETURN_TAGS_MISMATCH -gt 0 ]; then
+  cat <<EOF >&2
+  ====================================
+  || [CRIT] MISMATCHED TAG(S) ||
+  ====================================
+  Your commit introduced $RETURN_TAGS_MISMATCH files whose tags do not match its
+  English original!
+  $(echo "${FILES_TAGS_MISMATCH}" | sed -E -e "s/\|/\n  - /g")
+
+  Please make sure that the tags of the original English files match the tags of
+  its translations. You can check this link to learn how tags are being used:
+  https://wiki.fsfe.org/TechDocs/Mainpage/Editing#Tags
+
+  Mismatched tags can create issues with the tags that are hard to debug. Please
+  fix this.
 
 EOF
 fi
@@ -451,11 +497,11 @@ if [ $RETURN_CSS_ATTR -gt 0 ]; then
 EOF
 fi
 
-EXIT_CRIT=$((RETURN_SYNTAX + RETURN_ENC + RETURN_NAME + RETURN_NEWSDATE + \
-          RETURN_VERSION_PRES + RETURN_VERSION_INT + RETURN_ABS_LINK + \
-          RETURN_FIX_LANG))
+EXIT_CRIT=$((RETURN_SYNTAX + RETURN_TAGS_MISMATCH + RETURN_ENC + RETURN_NAME + \
+          RETURN_NEWSDATE + RETURN_VERSION_PRES + RETURN_VERSION_INT + \
+          RETURN_ABS_LINK + RETURN_FIX_LANG))
 
-EXIT_WARN=$(($RETURN_TAGS + $RETURN_CSS_ELEMENT + $RETURN_CSS_ATTR))
+EXIT_WARN=$(($RETURN_TAGS_NEW + $RETURN_CSS_ELEMENT + $RETURN_CSS_ATTR))
 
 if [ $EXIT_CRIT -gt 0 ]; then
   cat <<EOF >&2

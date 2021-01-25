@@ -7,17 +7,17 @@
     <div class="banner-subscribe">
       <p>
         Recevez nos informations par email. Nos experts vous informent sur les
-        dernières actualités, événments, activités, et comment vous pouvez y contribuer.
+        dernières actualités, événements, activités, et comment vous pouvez y contribuer.
         <span style="font-size:0.8em">(Notre&#160;<a href="/about/legal/imprint.html#id-privacy-policy"><span style="color:white; text-decoration: underline;">Politique de &#160;confidentialité</span></a>)</span>
       </p>
 
       <form class="form-inline" method="post" action="https://my.fsfe.org/subscribe">
         <input type="hidden" name="language" value="en"/>
         <div class="form-group">
-          <input type="text" class="form-control" name="name" placeholder="Your name" required="required"/>
+          <input type="text" class="form-control" name="name" placeholder="Votre nom" required="required"/>
         </div>
         <div class="form-group">
-          <input type="email" class="form-control" name="email1" placeholder="Your email address" required="required"/>
+          <input type="email" class="form-control" name="email1" placeholder="Votre adresse mail" required="required"/>
         </div>
         <fsfe-cd-referrer-input/>
         <input type="hidden" name="wants_info" value="yes"/>

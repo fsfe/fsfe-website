@@ -23,7 +23,7 @@
 
       <xsl:call-template name="translation_list" />
       <xsl:call-template name="fsfe_pageheader" />
-      <xsl:call-template name="fsfe_topbanner" />
+      <!-- <xsl:call-template name="fsfe_topbanner" /> --> <!-- trigger to show/hide topbanner -->
       <xsl:call-template name="notifications" />
       <xsl:call-template name="fsfe_mainsection" />
       <xsl:call-template name="fsfe_followupsection" />

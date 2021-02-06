@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<data>
+  <version>2</version>
+
+  <module>
+    <div class="banner-subscribe">
+      <p>
+        Εγγραφείτε στις ενημερώσεις μας μέσω ηλεκτρονικού ταχυδρομείου. Οι ειδικοί μας σας ενημερώνουν για τα τρέχοντα νέα, γεγονότα, δράσεις και πως να συνεισφέρετε. <span style="font-size:0.8em">(Η&#160;<a href="/about/legal/imprint.html#id-privacy-policy"><span style="color:white; text-decoration: underline;">Πολιτική&#160;ιδιωτικότητας</span></a>)</span>
+      </p>
+
+      <form class="form-inline" method="post" action="https://my.fsfe.org/subscribe">
+        <input type="hidden" name="language" value="en"/>
+        <div class="form-group">
+          <input type="text" class="form-control" name="name" placeholder="Το όνομα σου" required="required"/>
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" name="email1" placeholder="Το email σου" required="required"/>
+        </div>
+        <fsfe-cd-referrer-input/>
+        <input type="hidden" name="wants_info" value="yes"/>
+        <button class="btn btn-default" type="submit">Να ενημερώνομαι</button>
+      </form>
+    </div>
+  </module>
+</data>

@@ -6,81 +6,105 @@
 <!-- ALL STATIC TEXTS -->
 
   <!-- Spreadtheword page -->
+  <text id="stw-type">Τύπος</text>
+  <text id="stw-size">Μέγεθος</text>
+  <text id="stw-context">Συναφείς πληροφορίες</text>
+  <text id="stw-printed"><a href="#how-to-order">Παραγγελία από το απόθεμα μας</a> σε</text>
+  <text id="stw-printed-tooltip">Μπορείτε να παραγγείλετε αυτές τις εκτυπωμένες εκδόσεις από εμάς, χρησιμοποιώντας την φόρμα παραγγελίας.</text>
+  <text id="stw-languages">Διαθέσιμο για λήψη σε</text>
+  <text id="stw-languages-tooltip">Αν θέλετε να διαδώσετε το πληροφοριακό και προωθητικό μας υλικό online, είστε ελεύθεροι να το κατεβάσετε στις διαθέσιμες γλώσσες.</text>
+  <text id="stw-license">Άδεια</text>
+  <text id="stw-author">Συγγραφέας</text>
+  <text id="stw-year">Έτος</text>
+  <text id="stw-source">Πηγαία αρχεία</text>
+  <text id="stw-source-tooltip">Μπορείτε να κάνετε λήψη των πηγαίων αρχείων αυτού του προωθητικού αντικειμένου,
+  να το τροποποιήσετε ή να το μεταφράσετε. Παρακαλώ σεβαστείτε την άδειά του.</text>
+  <text id="stw-printready">Αρχεία έτοιμα για εκτύπωση</text>
+  <text id="stw-printready-tooltip">Αυτά είναι τα αρχεία που στέλνουμε στον εκτυπωτή μας, που συμπεριλαμβάνουν ξάκρισμα και άλλες
+  συγκεκριμένες ρυθμίσεις εκτυπωτή. Τα αρχεία μπορεί να είναι πολύ μεγάλα (~5-25MB).</text>
 
   <!-- Basic texts -->
-  <text id="fsfeurope">Free Software Foundation Europe</text>
+  <text id="fsfe">FSFE</text> <!-- only change this for non-latin character sets -->
+  <text id="fsfeurope">Free Software Foundation&#160;Europe</text>
   <text id="fsfnetwork">
-    Το FSFE έχει <a href="//fsfe.org/about/fsfnetwork.html">ομοθυγατρικούς οργανισμούς</a> στη <a href="//www.fsf.org/">Βόρεια Αμερική</a>, <a href="http://fsf.org.in/">Ινδία</a> και <a href="http://www.fsfla.org/">Λατινική Αμερική</a>.
+    Το FSFE έχει <a href="//fsfe.org/about/fsfnetwork.html">αδελφικές οργανώσεις</a> στην <a href="//www.fsf.org/">Βόρεια Αμερική</a>, 
+    <a href="http://fsf.org.in/">Ινδία</a> και <a href="http://www.fsfla.org/">Λατινική Αμερική</a>.
   </text>
 
 
   <!-- Footer -->
   <text id="translator1a">Ευχαριστούμε </text>
-  <text id="translator1b"> για αυτήν τη μετάφραση. </text>
+  <text id="translator1b"> για αυτή τη μετάφραση. </text>
   <text id="translator2">Αυτή είναι μια ανεπίσημη μετάφραση. </text>
-  <text id="translator3a">Παρακαλούμε ανατρέξτε και στο </text>
+  <text id="translator3a">Παρακαλούμε δείτε επίσης στο </text>
   <text id="translator3b">πρωτότυπο κείμενο</text>
   <text id="translator3c"> αυτής της σελίδας.</text>
   <text id="permission">
-    Η κατά λέξη αντιγραφή και αναδιανομή ολόκληρου του άρθρου επιτρέπεται
-    σε οποιοδήποτε μέσο δεδομένου ότι αυτή η σημείωση θα διατηρηθεί.
+    Επιτρέπεται η πιστή αντιγραφή και διανομή του πλήρους άρθρου σε οποιοδήποτε μέσο, 
+    με τον όρο να διατηρηθεί αυτή η σημείωση.
   </text>
+  <text id="js-licences">Άδειες JavaScript</text>
 
 
   <!-- Warning info boxes -->
-<!-- followed by "translator3b" -->
+  <text id="outdated-1">
+    Αυτή η μετάφραση μπορεί να είναι ξεπερασμένη με 
+  </text><!-- followed by "translator3b" -->
   <text id="outdated-2">
-     Χρησιμοποιήστε <a href="/contribute/translators/translators.html">αυτήν τη
-     σελίδα</a> για να δείτε πώς μπορείτε
-	να βοηθήσετε στις μεταφράσεις και σε άλλες ανάγκες.
+     <a href="/contribute/translators/translators.html">Παρακαλώ βοηθήστε μας να μεταφράσουμε</a> αυτή και άλλες σελίδες
+     στο fsfe.org, ώστε οι άνθρωποι να μπορούν να διαβάσουν το μήνυμα μας στην μητρική τους γλώσσα.
   </text>
-<text id="notranslation"><strong>Προειδοποίηση: </strong>
-    Αυτή η σελίδα δεν έχει μεταφραστεί ακόμα. Αυτό που βλέπετε παρακάτω
-	είναι η πρωτότυπη έκδοση της σελίδας. Παρακαλούμε χρησιμοποιήστε
-	<a href="/contribute/translators/translators.html">αυτήν τη σελίδα</a> για να δείτε
-	πώς μπορείτε να βοηθήσετε στις μεταφράσεις και σε άλλες ανάγκες.
+  <text id="notranslation">
+  Αυτή η σελίδα δεν έχει μεταφραστεί ακόμη. <a href="/contribute/translators/translators.html">Παρακαλώ βοηθήστε μας να μεταφράσουμε</a> 
+  αυτή και άλλες σελίδες στο fsfe.org, ώστε οι άνθρωποι να μπορούν να διαβάσουν το μήνυμά μας στην μητρική τους γλώσσα.
   </text>
     <text id="under-construction">
-    <strong>Προειδοποίηση: </strong>Αυτή η σελίδα είναι υπό κατασκευή. Παρακαλούμε όπως <strong>μη διαδίδετε</strong> ή επιχειρείτε μετάφραση καθώς το περιεχόμενο πρόκειται να αλλάξει.
+    <strong>Προειδοποίηση: </strong>Αυτή η σελίδα είναι υπό κατασκευή. Παρακαλώ <strong>μην την διαδίδετε</strong> ή προσπαθείτε να την
+    μεταφράσετε, καθώς τα περιεχόμενα της πρόκειται να αλλάξουν.
   </text>
-    <text id="project-complete">Το πρόγραμμα αυτό έχει ολοκληρωθεί με επιτυχία. Οι σελίδες αυτές διατηρούνται εδώ για λόγους αρχειοθέτησης.</text>
+    <text id="project-complete">Αυτό το έρχο έχει ολοκληρωθεί με επιτυχία. Αυτές οι σελίδες διατηρήθηκαν εδώ για σκοπούς αρχειοθέτησης.  </text>
 
 
   <!-- Menu, Navigation, Buttons -->
-  <text id="fsfe/about">Περίγραμμα</text>
+  <text id="fsfe/about">Περί</text>
 
 
-  <text id="fsfe/help">Συμβάλλετε</text>
+  <text id="fsfe/activities">Διαστηριότητες</text>
+  <text id="fsfe/help">Συνεισφορά</text>
   <text id="fsfe/press">Τύπος</text>
 
+  <text id="support/become">Γίνε υποστηρικτής</text>
   <text id="fellowship/login">Σύνδεση</text>
   <text id="news/news">Τελευταία νέα</text>
-  <text id="news/events">Επόμενες εκδηλώσεις</text>
-  <text id="news/press">Αίθουσα Τύπου</text>
+  <text id="news/events">Επερχόμενες εκδηλώσεις</text>
+  <text id="news/press">Αίθουσα τύπου</text>
   <text id="news/nl">Ενημερωτικά δελτία</text>
-  <text id="news/planet">Ιστολόγια Μελών</text>
-  <text id="community/discuss">Συζητήσεις για το Ελεύθερο Λογισμικό</text>
+  <text id="news/planet">Ιστολόγια του Πλανήτη</text>
+  <text id="fs/basics">Τα βασικά του Ελεύθερου Λογισμικού</text>
+  <text id="community/discuss">Συζητήσεις Ελεύθερου Λογισμικού</text>
 
 
 
   <text id="learn-more">Μάθετε περισσότερα</text>
 
   <text id="newsletter">Ενημερωτικό δελτίο</text>
+  <text id="podcast">Podcast</text>
 
-  <text id="go-to">Μετάβαση:</text>
-  <text id="search">Αναζήτηση</text>
+  <text id="go-to">Μετάβαση σε:</text>
 
-  <text id="subscribe">Εγγραφή</text>
+  <text id="subscribe">Συνδρομή</text>
+  <text id="email">διεύθυνση email</text>
   <text id="news">Νέα</text>
   <text id="breadcrumb-news">Νέα</text>
-  <text id="receive-newsletter">Εγγραφείτε για το μηνιαίο ενημερωτικό δελτίο του FSFE</text>
-  <text id="subscribe-newsletter">Εγγραφείτε για το ενημερωτικό δελτίο</text>
+  <text id="pages">Σελίδες</text>
+  <text id="receive-newsletter">Γραφτείτε συνδρομητής στο μηνιαίο ενημερωτικό δελτίο του FSFE</text>
+  <text id="subscribe-newsletter">Συνδρομή στο ενημερωτικό δελτίο</text>
 
 
 
 
   <text id="contact">Επικοινωνία</text>
-  <text id="team">Oμάδα</text>
+  <text id="team">Ομάδα</text>
 
 
 
@@ -92,19 +116,23 @@
   <text id="go-top">Μετάβαση στην κορυφή</text>
   <text id="source">Πηγαίος κώδικας</text>
   <text id="contact-us">Επικοινωνήστε μαζί μας</text>
-  <text id="translate">Θέλετε να βοηθήσετε στη μετάφραση;</text>
-  <text id="contribute-web">Συμβάλλετε στην ομάδα του ιστοχώρου</text>
+  <text id="translate">Μετάφραση αυτής της σελίδας;</text>
+  <text id="contribute-web">Συνεισφορά στην ομάδα Web</text>
   <text id="imprint">Σφραγίδα</text>
-  <text id="privacy-policy">Πολιτική ιδιωτικού απορρήτου</text>
+  <text id="privacy-policy">Πολιτική ιδιωτικότητας</text>
+  <text id="transparency-commitment">Δέσμευση διαφάνειας</text>
+  <text id="tags">Ετικέτες</text>
+  <text id="discuss-article">Συζητήστε αυτό</text>
+  <text id="finished">Ολοκληρώθηκε</text>
 
 
   <!-- Article metadata -->
-  <text id="author">Author</text>
-  <text id="writtenby">Δημοσίευση</text>
-  <text id="published"/>
-  <text id="revision">ενημέρωση</text>
+  <text id="author">Συγγραφέας</text>
+  <text id="writtenby">Γράφτηκε από</text>
+  <text id="published">στις</text>
+  <text id="revision">ενημερώθηκε στις</text>
   <text id="download">Λήψη</text>
-  <text id="and">and</text>
+  <text id="and">και</text>
 
 
   <!-- Petitions -->
@@ -114,28 +142,30 @@
 
 
   <!-- News and event feeds -->
-  <text id="related-news">Σχετικά Νέα</text>
+  <text id="related-news">Σχετικά νέα</text>
+  <text id="related-events">Σχετικές εκδηλώσεις</text>
+  <text id="related-all">Όλα τα σχετικά νέα και εκδηλώσεις</text>
 
 
   <!-- Sidebars -->
-  <text id="our-work">Η εργασία μας</text>
+  <text id="our-work">Η δουλειά μας</text>
   <text id="our-work-intro">
-  <p>Ως μια μη-κερδοσκοπική, μη-κυβερνητική οργάνωση, το Ευρωπαϊκό Ίδρυμα Ελεύθερου Λογισμικού εργάζεται για να θεμελιώσει τη
-    γενική συνειδητοποίηση και υποστήριξη για το Ελεύθερο Λογισμικό και τα
-    Ανοιχτά Πρότυπα στην πολιτική, στις επιχειρήσεις, στη νομοθεσία και στην κοινωνία γενικότερα.</p>
+    <p>Ως μια μη κερδοσκοπική, μη κυβερνητική οργάνωση, το Ευρωπαϊκό Ίδρυμα Ελεύθερου Λογισμικού 
+    δουλεύει για να δημιουργήσει γενική κατανόηση και υποστήριξη για το Ελεύθερο Λογισμικό και
+    τα Ανοιχτά Πρότυπα, στην πολιτική, στις επιχειρήσεις, στον νόμο και στην κοινωνία γενικότερα.</p>
   </text>
   <text id="about-fsfe">Σχετικά με το FSFE</text>
   <text id="about-fsfe-intro">
     <p>
-        Το Ευρωπαϊκό Ίδρυμα Ελεύθερου Λογισμικού είναι αφοσιωμένο
-        στην ανάπτυξη του Ελεύθερου Λογισμικού και εργάζεται για την <strong>ελευθερία</strong> στην αναδυόμενη ψηφιακή κοινωνία.
+    Το Ευρωπαϊκό Ίδρυμα Ελεύθερου Λογισμικού είναι ένας μη κερδοσκοπικός οργανισμός που 
+    δίνει δύναμη στους χρήστες να ελέγχουν την τεχνολογία.
     </p>
     <p>
-        Η πρόσβαση στο λογισμικό καθορίζει τη συμμετοχή σε μια ψηφιακή
-        κοινωνία. Οι ελευθερίες για
-        <a href="/freesoftware/freesoftware.html">χρήση, μελέτη,
-        διαμοιρασμό και βελτίωση</a> του λογισμικού επιτρέπουν την
-        <strong>ισότιμη</strong> συμμετοχή και είναι εξαιρετικά σημαντικές.
+    Το λογισμικό συμμετέχει βαθιά σε όλες τις πτυχές της ζωής μας. Είναι σημαντικό
+       αυτή η τεχνολογία να μας ενισχύει και όχι να μας περιορίζει. Το Ελεύθερο Λογισμικό
+       δίνει σε όλους τα δικαιώματα χρήσης, κατανόησης, προσαρμογής και κοινής χρήσης λογισμικού.
+       Αυτά τα δικαιώματα βοηθούν στην υποστήριξη άλλων θεμελιωδών δικαιωμάτων όπως η ελευθερία του λόγου, 
+       η ελευθερία του τύπου και η ιδιωτικότητα.
     </p>
   </text>
 
@@ -146,31 +176,52 @@
 
 
   <text id="support">Υποστηρίξτε το FSFE</text>
-  <text id="show-support">Αποδείξτε την υποστήρίξή σας!</text>
-  <text id="show-support-paragraph">Το FSFE χρειάζεται την υποστηριξή σας για να ακουστεί η φωνή του! Κάθε παροχή μετράει!</text>
+  <text id="show-support">Δείξτε την υποστήριξη σας!</text>
+  <text id="show-support-paragraph">Το FSFE χρειάζεται την υποστήριξη σας, για να ακουστει η φωνή του! Κάθε hit μετράει!</text>
   <text id="support-fsfe">Υποστηρίζω το FSFE!</text>
+  <text id="support-paragraph">Με το να γίνεις υποστηρικτής του FSFE ενδυναμώνεις την δουλειά μας και βοηθάς στην διασφάλιση της
+  οικονομικής μας ανεξαρτησίας.</text>
 
-  <text id="donate">Δωρεές</text>
+  <text id="donate">Δωρεά</text>
   <text id="donate-paragraph">
-  Το Ευρωπαϊκό Ίδρυμα Ελεύθερου Λογισμικού είναι μια μη-κερδοσκοπική
-  μη-κυβερνητική οργάνωση. Η <a href="/about/ourwork.html">εργασία μας</a>
-  πραγματοποιείται από μια κοινότητα
-    <a href="/contribute/contribute.html">εθελοντών</a> και
-    <a href="/donate/thankgnus.html">δωρητών</a>. Οι δωρεές σας είναι κρίσιμες
-  για την ισχύ και την αυτονομία μας. Μας παροτρύνουν να συνεχίσουμε
-  τη δραστηριότητά μας για το Ελεύθερο Λογισμικό όπου είναι αναγκαίο και να έχουμε ανεξάρτητη φωνή.
+  Το Ευρωπαϊκό Ίδρυμα Ελεύθερου Λογισμικού είναι ένας μη-κερδοσκοπικός, μη-κυβερνητικός οργανισμός.
+     <a href="/about/ourwork.html">Η εργασία μας</a> είναι δυνατή λόγω της κοινότητας από 
+    <a href="/contribute/contribute.html">εθελοντές</a> και
+    <a href="/donate/thankgnus.html">δωρητές</a>. Οι δωρεές σας είναι κρίσιμες για την δύναμη και την αυτονομία μας. 
+    Μας δίνουν τη δυνατότητα να συνεχίζουμε την εργασία μας για το Ελεύθερο Λογισμικό, οπουδήποτε χρειάζεται, καθώς και
+    στο να είμαστε μια ανεξάρτητη φωνή.
   </text>
 
   <!-- pdfreaders.org -->
+  <text id="pdfreaders-head-readers">Οι αναγνώστες</text>
+  <text id="pdfreaders-head-standards">Ανοιχτά πρότυπα</text>
+  <text id="pdfreaders-head-graphics">Γραφικά</text>
+  <text id="pdfreaders-head-about">Περί</text>
+  <text id="pdfreaders-body-platforms">Πλατφόρμες:</text>
 
   <!-- Share and support buttons -->
+  <text id="share-head">Κοινή χρήση και υποστήριξη</text>
+  <text id="share-page">Κοινή χρήση αυτής της σελίδας σε</text>
+  <text id="share-microdonation">Κάντε μια μικρο-δωρεά μέσω</text>
+  <text id="share-warning">Κάποιες υπηρεσίες μπορεί να μην είναι φιλικές με το Ελεύθερο Λογισμικό
+  και να βλάψουν την ιδιωτικότητα σας.</text>
 
   <!-- Sponsoring buttons -->
-  <text id="donation-buttons">Κουμπιά</text>
+  <text id="donation-buttons">Πλήκτρα</text>
 
 
 
 
-  <text id="background/white">λευκό φόντο</text>
-  <text id="background/transparent">λευκό φόντο</text>
+  <text id="size/huge">τεράστιο</text>
+  <text id="size/large">μεγάλο</text>
+  <text id="size/medium">μεσαίο</text>
+  <text id="size/small">μικρό</text>
+  <text id="background/white">Λευκό υπόβαθρο</text>
+  <text id="background/transparent">Διαφανές υπόβαθρο</text>
+
+  <!-- Search function -->
+  <text id="search">Αναζήτηση</text>
+  <text id="search/placeholder">Όροι αναζήτησης...</text>
+  <text id="search/notfound">Δεν βρέθηκαν αποτελέσματα αναζήτησης. Παρακαλώ επαναδιατυπώστε το ερώτημα σας.</text>
+  <text id="search/empty">Το ερώτημα αναζήτησης είναι κενό.</text>
 </data>

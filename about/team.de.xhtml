@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <html>
-  <version>2</version>
+  <version>3</version>
 
   <head>
     <title>Über die Free Software Foundation Europe - Team</title>
+    <script src="/scripts/filter-teams.js" />
   </head>
- 
+
   <body>
 		<p id="category"><a href="/about/">Über uns</a></p>
     <h1>Das Team der FSFE</h1>
@@ -14,63 +15,57 @@
     <p>
       Diese Personen arbeiten regelmäßig für und mit der FSFE und haben
       somit permanente Verantwortung und Autorität für bestimmte Bereiche
-      übernommen. Manche von ihnen sind Mitglieder
-      des <a href="/about/legal/legal.html">eingetragenen Vereins</a>, manche nicht.
+      übernommen.
     </p>
 
     <div id="show-people">
         <h2 id="council">Exekutivrat</h2>
-        <p>Der Exekutivrat ist
-        verantwortlich für größere Budgetfragen, die Implementation von
-        Strategievorgaben und rechtlichen Angelegenheiten der Landesvereine.</p>
+        <p>Der Exekutivrat ist verantwortlich für größere Budgetfragen und
+        die Implementation von Strategievorgaben.
+        </p>
 
         <council-members />
 
-<!--
-        <h2 id="general-assembly">Mitgliederversammlung</h2>
-        <p>Die Mitgliederversammlung besteht aus den
-        Mitgliedern des <a href="/about/legal/legal.html">eingetragenen
-        Vereins</a>. Sie ist verantwortlich für die strategische Planung,
-        Budgetierung, das Setzen der Agenda, Entlastung sowie Wahl und Wiederwahl
-        des Exekutivrats und des Finanzleiters.</p>
-
-        <ga-members />   
--->
-
-        <h2 id="eu-core-team">Europäisches Kernteam</h2>
-        <p>Hier sind alle Leute aufgelistet, welche an den tagtäglichen
+        <h2 id="core">Europäisches Kernteam</h2>
+        <p>
+        Hier sind Leute aufgelistet, welche an den tagtäglichen
         Kernthemen der Organisation auf freiwilliger oder bezahlter Basis
-        mitwirken: Koordinatoren von Länderteams und ihre Stellvertreter,
-        Festangestellte, Koordinatoren von speziellen Teams oder
-        Systemadministratoren. Nicht aufgeführt sind die Vielzahl an
-        wechselnden Freiwilligen, die in unseren Arbeitsgruppen, bei unseren
-        Aktionen und bei bestimmten Themen mitwirken.</p>
+        mitwirken, sowie die Mitglieder <a href="/about/legal/legal.html">
+        des eingetragenen Vereins</a>. Es können entweder alle Teammitglieder
+        oder jene eines bestimmten Teams ausgewählt werden.
+        </p>
+
+        <div class="filter-teams">
+          <label class="radio-inline">
+            <input name="filter-teams" type="radio" onclick="selectAllTeams()" checked="" />Alle
+          </label>
+          <label class="radio-inline">
+            <input name="filter-teams" type="radio" onclick="selectTeam('core')" />Europäisches Kernteam
+          </label>
+          <label class="radio-inline">
+            <input name="filter-teams" type="radio" onclick="selectTeam('ga')" />Mitgliederversammlung
+          </label>
+          <label class="radio-inline">
+            <input name="filter-teams" type="radio" onclick="selectTeam('employee')" />Angestellte/Auftragnehmer
+          </label>
+        </div>
+        <noscript>
+          <div class="alert alert-warning" role="alert">Diese Funktion erfordert unser <a href="/about/js-licences.html">Freie-Software-JavaScript</a> zu aktivieren.</div>
+        </noscript>
 
         <core-members />
 
-<!--
-        <h2 id="interns">Praktikanten</h2>
-        <p><a href="/contribute/internship.html">Unsere Praktikanten</a>
-        arbeiten an verschiedenen Themen innerhalb der Teams der FSFE: Sie
-        unterstützen laufende Projekte und Kampagnen, koordinieren Freiwillige
-        und stehen in ständigem Kontakt mit unserer Gemeinschaft, öffentlichen
-        Verwaltungen und anderen Organisationen.</p>
-
-        <intern-members />
-
-        <h2 id="id-local-teams">Regionale Gruppen</h2>
+        <h2>Regionale Gruppen</h2>
         <p>Sie suchen Kontakt, um für Freie Software oder die FSFE aktiv zu
-        werden? Oder wollen Sie einfach einmal in persönlicher Atmosphäre mehr 
-        über uns erfahren?<br />
+        werden, oder wollen Sie einfach einmal in persönlicher Atmosphäre mehr
+        über uns erfahren?
         In immer mehr europäischen Städten gründen sich regionale FSFE-Gruppen,
         die genau diesen Zweck verfolgen. Ob es bereits eine Gruppe in Ihrer
-        Gegend gibt, erfahren Sie auf unserer <a href="localteams.html">Seite
-        über regionale Gruppen</a>.</p>
--->
-
+        Gegend gibt, erfahren Sie auf unserer
+        <a href="https://wiki.fsfe.org/LocalGroups/">
+        Seite über regionale Gruppen</a>.</p>
 
     </div>
-   
   </body>
   <followup>join</followup>
 </html>

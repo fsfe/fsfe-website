@@ -9,13 +9,13 @@
     <xsl:variable name="from"><xsl:value-of select="@from"/></xsl:variable>
     <xsl:variable name="to"><xsl:value-of select="@to"/></xsl:variable>
 
-    <div id="picture-box" style="height:225px;"> <!-- change to height of pictures -->
+    <div id="picture-box" style="height:340.157px;"> <!-- change to height of pictures -->
       <div id="picture-box-inner" class="logo-list quote">
-        <a href="https://download.fsfe.org/campaigns/ilovefs/gallery/ilovefs-gallery-1.jpg">
+        <a href="https://download.fsfe.org/campaigns/ilovefs/share-pics/picturebox/Share-Pic-1.png">
           <div class="img">
             <noscript>
               <img>
-                <xsl:attribute name="src">https://download.fsfe.org/campaigns/ilovefs/gallery/thumbs/ilovefs-gallery-thumb-1.jpg</xsl:attribute>
+                <xsl:attribute name="src">https://download.fsfe.org/campaigns/ilovefs/share-pics/picturebox/Share-Pic-1.png</xsl:attribute>
               </img>
             </noscript>
           </div> <!-- /img -->
@@ -60,8 +60,8 @@
     <xsl:param name="max"/>
     <xsl:if test="not($num > $max)">
       {
-        'photo': 'https://download.fsfe.org/campaigns/ilovefs/gallery/thumbs/ilovefs-gallery-thumb-<xsl:value-of select="$num"/>.jpg',
-        'link': 'https://download.fsfe.org/campaigns/ilovefs/gallery/ilovefs-gallery-<xsl:value-of select="$num"/>.jpg',
+        'photo': 'https://download.fsfe.org/campaigns/ilovefs/share-pics/picturebox/Share-Pic-<xsl:value-of select="$num"/>.png',
+        'link': 'https://download.fsfe.org/campaigns/ilovefs/share-pics/picturebox/Share-Pic-<xsl:value-of select="$num"/>.png',
       },
       <xsl:call-template name="picture-box"> <!-- initiate the next round -->
         <xsl:with-param name="num">

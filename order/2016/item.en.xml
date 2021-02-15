@@ -9,7 +9,7 @@
     <available size="S"    a="45"   b="66"/>
     <available size="M"    a="47"   b="69"/>
     <available size="L"    a="47"   b="70"/>
-    <!-- available size="XL"   a="49"   b="75"/ -->
+    <available size="XL"   a="49"   b="75"/>
     <available size="XXL"  a="54"   b="80"/>
     <!-- available size="XXXL" a="66.5" b="82"/ -->
     <image
@@ -20,10 +20,9 @@
       large="2016/tshirt-nocloud-black-back-large.jpg"/>
   </item>
 
-<!--  <item type="tshirt" id="tshirt-nocloud-red" oldprice="20.00" price="15.00" date="2016-03-07">
+  <item type="tshirt" id="tshirt-nocloud-red" oldprice="20.00" price="15.00" date="2016-03-07">
     <available size="S"   a="44.5" b="66"/>
-    <available size="XL"  a="51"   b="75"/>
-    <available size="XXL" a="56.5" b="78"/>
+    <available size="L"   a="49"   b="72"/>
     <image
       small="2016/tshirt-nocloud-red-front-small.jpg"
       large="2016/tshirt-nocloud-red-front-large.jpg"/>
@@ -31,14 +30,12 @@
       small="2016/tshirt-nocloud-red-back-small.jpg"
       large="2016/tshirt-nocloud-red-back-large.jpg"/>
   </item>
--->
 
   <item type="tshirt" id="tshirt-nocloud-blue" price="20.00" date="2016-03-07">
     <available size="S"   a="44.5" b="66"/>
     <available size="M"   a="46"   b="68"/>
     <available size="L"   a="49"   b="72"/>
     <available size="XL"  a="51"   b="75"/>
-    <!-- available size="XXL" a="56.5" b="78"/ -->
     <image
       small="2016/tshirt-nocloud-blue-front-small.jpg"
       large="2016/tshirt-nocloud-blue-front-large.jpg"/>

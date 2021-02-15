@@ -9,7 +9,11 @@
 html {
     .valentine-ilovefs;
 
-    #logo {
+    div#masthead #logo {
         background: url(/graphics/logov.svg) top left no-repeat;
+
+        @media (max-width: @screen-xs-max) {
+          background-size: contain;
+        }
     }
 }

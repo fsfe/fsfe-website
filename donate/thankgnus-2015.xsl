@@ -9,6 +9,7 @@
     <xsl:choose>
       <xsl:when test="$group='gold'">
         <xsl:element name="table">
+          <xsl:attribute name="class">table table-striped</xsl:attribute>
           <xsl:for-each select="/buildinfo/document/set/*[name(.)=$group]/donor">
             <xsl:element name="tr">
               <xsl:element name="td">
@@ -32,6 +33,7 @@
       </xsl:when>
       <xsl:when test="$group='silver'">
         <xsl:element name="table">
+          <xsl:attribute name="class">table table-striped</xsl:attribute>
           <xsl:for-each select="/buildinfo/document/set/*[name(.)=$group]/donor">
             <xsl:element name="tr">
               <xsl:element name="td">

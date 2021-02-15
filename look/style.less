@@ -68,6 +68,19 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
     height: auto;
 }
 
+// Override Bootstrap's default of having all table cells top-aligned
+.table {
+    > thead,
+    > tbody,
+    > tfoot {
+        > tr {
+            > th,
+            > td {
+                vertical-align: middle;
+            }
+        }
+    }
+}
 
 // ----------------------------------------------------------------------------
 // Classes to place a decorative image beside a block element
@@ -1193,14 +1206,6 @@ a.learn-more {
     }
 }
 
-
-/* in donors page */
-table#gold {
-    .table;
-    .table-striped;
-    .table-hover;
-}
-
 /* in spreadtheword */
 
 .margin-vertical {
@@ -1408,10 +1413,6 @@ table#gold {
     .table;
     .table-striped;
     margin-top: 40px;
-  }
-
-  table > tbody > tr > td {
-    vertical-align: middle;
   }
 
   img {

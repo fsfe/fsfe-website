@@ -9,6 +9,7 @@
     <xsl:choose>
       <xsl:when test="$group='patrons'">
         <xsl:element name="table">
+          <xsl:attribute name="class">table table-striped</xsl:attribute>
           <xsl:for-each select="/buildinfo/document/set/*[name(.)=$group]/donor">
             <xsl:element name="tr">
               <xsl:element name="td">

@@ -123,7 +123,6 @@
             <xsl:element name="a">
               <xsl:attribute name="rel">nofollow</xsl:attribute>
               <xsl:attribute name="href">
-                <xsl:value-of select="$urlprefix"/>
                 <xsl:text>https://git.fsfe.org/FSFE/fsfe-website/src/branch/master</xsl:text>
                 <xsl:value-of select="/buildinfo/@filename"/>
                 <xsl:text>.</xsl:text>

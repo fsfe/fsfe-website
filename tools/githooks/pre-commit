@@ -96,6 +96,7 @@ for f in $files_all; do
   # ---------------------------------------------------------------------------
   fileregex="^(news/|events/).*(\.xhtml$|\.xml$|\.xsl$)"
   if [[ ( $f =~ $fileregex ) && ( -e "$f" ) ]]; then
+    hit=0
     tags=""
     # go through all tags in this file
     # make only a new line a field separator to support tags with spaces inside (which is not recommended)
@@ -104,13 +105,14 @@ for f in $files_all; do
     for tag in $(grep -Ei '<tag(\s|\>)' "${f}" | perl -pe 's/.*<tag key="(.+?)".*/\1/'); do
       # check if this tag does exist in any other news/event item
       if ! git grep -ilE "<tag key=\"${tag}\"" news/ events/ | grep -vq "${f}"; then
+        hit=1
         tags="${tag}, ${tags}"
         RETURN_TAGS_NEW=$((RETURN_TAGS_NEW + 1))
       fi
     done
     IFS=$OLDIFS   # reset IFS
     # if any new tag has been found, enlist them
-    if [ $RETURN_TAGS_NEW -gt 0 ]; then
+    if [ $hit -ne 0 ]; then
       tags="${tags%, }"
       FILES_TAGS_NEW="${FILES_TAGS_NEW}|${f} (new tag(s): ${tags})"
     fi
@@ -135,9 +137,6 @@ for f in $files_all; do
       # output should be empty normally
       if [[ $(comm -3 <(echo "$tags_en") <(echo "$tags_trans")) ]]; then
         RETURN_TAGS_MISMATCH=$((RETURN_TAGS_MISMATCH + 1))
-      fi
-      # if any mismatched tag has been found, enlist them
-      if [ $RETURN_TAGS_MISMATCH -gt 0 ]; then
         FILES_TAGS_MISMATCH="${FILES_TAGS_MISMATCH}|${f}"
       fi
     fi

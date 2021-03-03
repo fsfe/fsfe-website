@@ -3,6 +3,11 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:import href="../../fsfe.xsl" />
 
+  <!-- Include the file containing the content of the current year -->
+  <xsl:template match="current-year">
+    <xsl:copy-of select="/buildinfo/document/set/module/node()" />
+  </xsl:template>
+
   <!-- This creates looping pictures in a box. All pictures are located in a directory and have numbered names (here ilovefs-gallery-thumb-NNN.jpg) -->
   <xsl:template match="picture-box">
     <!-- appears once when <picture-box /> is called -->
@@ -46,7 +51,6 @@
         index = (index+1)%quotes.length;
         setTimeout("changeImage();",5000);
       }
-
       changeImage();
       ]]>
 

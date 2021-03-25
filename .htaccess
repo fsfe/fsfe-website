@@ -67,7 +67,7 @@ RewriteRule ^news/podcast-opus.rss$ /news/podcast-opus.en.rss [L,R=301]
 
 # ILoveFS
 # TODO each year: update links for latest report
-RewriteRule ^activities/ilovefs/latest-report.*$ /news/2019/news-20190329-01.html [R=301,L]
+RewriteRule ^activities/ilovefs/latest-report.*$ /news/2021/news-20210317-01.html [R=301,L]
 # Redirect from old locations
 RewriteRule ^activities/ilovefs/ilovefs(.*)html$ /activities/ilovefs/index$1html [R=301,L]
 RewriteRule ^activities/ilovefs/20..(/.*)?$ /activities/ilovefs/index.html [R=301,L]

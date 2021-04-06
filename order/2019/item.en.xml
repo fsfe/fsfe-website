@@ -5,7 +5,7 @@
 <itemset>
   <version>1</version>
 
-  <item type="tshirt" id="tshirt-pmpc-black" price="20.00" date="2019-02-11">
+  <item type="tshirt" id="tshirt-pmpc-black" oldprice="20.00" price="15.00" date="2019-02-11">
     <available size="S"    a="46" b="66"/>
     <available size="M"    a="50" b="70"/>
     <available size="L"    a="51" b="71"/>
@@ -20,7 +20,7 @@
       large="2019/tshirt-pmpc-black-back-large.jpg"/>
   </item>
 
-  <item type="other" id="gymsac-nocloud-black" price="7.00" date="2019-08-19">
+  <item type="other" id="gymsac-nocloud-black" oldprice="7.00" price="4.00" date="2019-08-19">
     <available size="#"/>
     <image
       small="2019/gymsac-nocloud-black-small.jpg"
@@ -56,7 +56,7 @@
       large="2019/tshirt-multilingual-black-back-large.jpg"/>
   </item>
 
-  <item type="tshirt" id="tshirt-multilingual-green" price="20.00" date="2019-12-07">
+  <item type="tshirt" id="tshirt-multilingual-green" oldprice="20.00" price="15.00" date="2019-12-07">
     <available size="S"    a="46" b="66"/>
     <available size="M"    a="50" b="70"/>
     <available size="L"    a="51" b="71"/>
@@ -85,7 +85,7 @@
       large="2019/girlie-multilingual-black-back-large.jpg"/>
   </item>
 
-  <item type="girlie" id="girlie-multilingual-blue" price="20.00" date="2019-12-07">
+  <item type="girlie" id="girlie-multilingual-blue" oldprice="20.00" price="15.00" date="2019-12-07">
     <!-- available size="S"    a="44"   b="62"/ -->
     <available size="M"    a="47.5" b="62"/>
     <available size="L"    a="48"   b="65"/>

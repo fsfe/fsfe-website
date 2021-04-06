@@ -12,7 +12,7 @@
       large="2017/baby-bib-pink-large.png"/>
   </item>
 
-  <item type="tshirt" id="tshirt-100freedoms-black" price="20.00" date="2017-12-05">
+  <item type="tshirt" id="tshirt-100freedoms-black" oldprice="20.00" price="15.00" date="2017-12-05">
     <available size="S"    a="46" b="66"/>
     <available size="M"    a="50" b="70"/>
     <available size="L"    a="51" b="71"/>
@@ -27,7 +27,7 @@
       large="2017/tshirt-100freedoms-black-back-large.jpg"/>
   </item>
 
-  <item type="tshirt" id="tshirt-100freedoms-orange" oldprice="20.00" price="15.00" date="2017-12-05">
+  <item type="tshirt" id="tshirt-100freedoms-orange" oldprice="20.00" price="10.00" date="2017-12-05">
     <available size="M"    a="48" b="71"/>
     <available size="L"    a="51" b="71"/>
     <available size="XL"   a="55" b="76"/>
@@ -40,7 +40,7 @@
       large="2017/tshirt-100freedoms-orange-back-large.jpg"/>
   </item>
 
-  <item type="tshirt" id="tshirt-100freedoms-pink" oldprice="20.00" price="15.00" date="2017-12-05">
+  <item type="tshirt" id="tshirt-100freedoms-pink" oldprice="20.00" price="10.00" date="2017-12-05">
     <available size="S"    a="45" b="68"/>
     <available size="M"    a="48" b="71"/>
     <available size="L"    a="51" b="71"/>
@@ -53,7 +53,7 @@
       large="2017/tshirt-100freedoms-pink-back-large.jpg"/>
   </item>
 
-  <item type="tshirt" id="kidstshirt-fork-red" price="20.00" date="2017-12-05">
+  <item type="tshirt" id="kidstshirt-fork-red" oldprice="20.00" price="15.00" date="2017-12-05">
     <available size="3-4"   a="32" b="41"/>
     <available size="5-6"   a="35" b="45"/>
     <available size="7-8"   a="37" b="50"/>

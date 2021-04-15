@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html>
+  <version>1</version>
+
+    <head>
+        <title>Artificial Intelligence and Free Software</title>
+    </head>
+    <body>
+        <h1>
+            Controlling technology at the age of Artificial Intelligence: a Free
+            Software perspective
+        </h1>
+        <div id="introduction">
+            <p>
+                Technical improvements, the accumulation of large, detailed
+                datasets and advancement in computer hardware have
+                lead to an Artificial Intelligence (AI) revolution.
+                For example, breakthroughs in computer vision have
+                enabled automated decision making based on images
+                and videos, the building of large datasets and
+                amelioration in text analysis coupled with the
+                gathering of personal data have given birth to countless AI
+                applications. These new AI applications have given lot of
+                benefits to These new AI applications have given lot of
+                benefits to European Union (EU) citizens. However, because
+                of its inherent complexity and requirements in technical
+                resources and knowledge, AI may undermine our ability to
+                control technology and put fundamental freedoms at risk.
+                Therefore, introducing new legislation on AI is a worthwhile
+                objective.
+            </p>
+
+            <p>
+                In the context of a new legislation, this article explains
+                how releasing AI applications under Free Software licenses pave
+                the way for more accessibility, transparency and fairness.
+            </p>
+        </div>
+
+        <h2 id="freesoftware">What is Free Software?</h2>
+
+        <p>
+        <a href="freesoftware.html">Free Software</a> (also known as Open Source) empowers people to control
+            technology by granting four freedoms to each user:
+        </p>
+        <ol>
+            <li>
+                The freedom to use software for any purpose, without
+                geographical limitations;
+            </li>
+            <li>
+                The freedom to study software, without any non-disclosure
+                agreement;
+            </li>
+            <li>The freedom to share software and copy it at no cost;</li>
+            <li>The freedom to improve software and share the improvements.</li>
+        </ol>
+
+        <p>
+            These freedoms are granted by releasing software under a Free
+            Software license, whose terms are compatible with the aforementioned
+            freedoms. There exists multiple Free Software licenses with
+            different goals. A software may be licensed under more than one
+            license. Because in order to be freely modified, an AI requires its
+            training code and the data, both needs to be released under a Free
+            Software license to consider the AI as being Free.
+        </p>
+
+        <h2 id="accessibility">Accessibility</h2>
+
+        <p>
+            Accessibility for AI means making it reusable, so that everyone may
+            tinker with it, improve it and use for their own means. To make AI
+            reusable, it can be released under a Free Software license. The
+            advantages of this approach are plenty. By having open legal
+            grounds, a Free AI fosters innovation, because one does not have to
+            deal with artificial restrictions that prevent people from reusing
+            work. Making AI Free therefore saves everyone from having to
+            reinvent the wheel, making researchers and developers alike able to
+            focus on creating new, better AI software instead of rebuilding
+            blocks and reproducing previous work again and again. In addition to
+            improving efficiency, by sharing expertise, Free AI also lowers the
+            cost of development by saving time and removing license fees. All of
+            this improves accessibility of AI, which leads to better and more
+            democratic solutions as everyone can participate.
+        </p>
+
+        <p>
+            Making AI reusable also makes it easier to build specialized AI
+            model upon more generic ones. If a generic AI model is released as
+            Free Software, rather than training a new model from scratch, one
+            could leverage the generic model as a starting point for a specific,
+            downstream prediction task. For example, one could use a generic
+            computer vision model [<a href="#ref-he_deep_2015">1</a>, <a href="#ref-simonyan_very_2015">2</a>]
+            as a starting point for managing public infrastructure which requires
+            specific image treatments. Just like with accessibility in general, this
+            approach has a key advantage: generic models with a lot of parameters
+            and trained on large datasets may make the downstream task easier to
+            learn. This makes AI more accessible by lowering the barrier to entry by
+            making it easier to reuse works.
+        </p>
+
+        <p>
+            However, making both the source code used to train the AI and the
+            corresponding data Free is sometimes not enough to make it accessible.
+            AI requires a huge amount of data in order to identify patterns and
+            correlations which lead to correct predictions. In contrary, not having
+            enough data reduces its ability to understand the world. Furthermore,
+            big datasets and their inherent complexity tend to make AI models large,
+            making their training time-consuming and resources intensive. The
+            complexity in handling the data required to train AI models, coupled
+            with the knowledge required to develop them and manage computer
+            resources demand a lot of human resources. Therefore, it may be hard to
+            exercise the freedoms offered by a Free AI, even though its training
+            source code and data might be released as Free Software. In those cases,
+            releasing the trained AI models as Free Software would greatly improve
+            accessibility.
+        </p>
+        <p>
+            Finally, it should be noted that, just like any other technology, making
+            AI reusable by everyone can potentially be harmful. For example, reusing
+            a face detector released as Free Software as part of a facial
+            recognition software can cause human right issues. However, this holds
+            true regardless of the technology involved. If a software use case is
+            deemed harmful, it should therefore be prohibited without an explicit
+            ban on AI technology.
+        </p>
+
+        <h2 id="transparency">Transparency</h2>
+
+        <p>
+            AI transparency can be subdivided in openness and interpretability.
+            In this context, openness is defined as the right to be
+            informed about the AI software, and interpretability is
+            defined as being able to understand how the input is
+            processed so that one can identify the factors taken into
+            account to make predictions, and their relative importance. In
+            Europe, the right to be informed about the decision of an algorithm
+            is granted by the Recital 71 of the General Data Protection
+            Regulation (GDPR) 2016/679 “
+            <em>
+                In any case, such processing should be subject to suitable
+                safeguards, which should include specific information to
+                the data subject and the right to obtain human
+                intervention, to express his or her point of view, to
+                obtain an explanation of the decision reached after such
+                assessment and to challenge the decision
+            </em>
+                .” Transparency can thus be defined as the ability to understand
+                what led to the predictions.
+        </p>
+
+        <p>
+            AI needs to be transparent because it is used for critical matters. For
+            example, it is used to determine credit worthiness
+            <a href="#ref-dastile_statistical_2020">[3]</a>, in self-driving cars
+            <a href="#ref-badue_self-driving_2019">[4]</a>, in predictive policing
+            <a href="#ref-ensign_runaway_2018">[5]</a> or in healthcare
+            <a href="#ref-schwalbe_artificial_2020">[6]</a>. In these contexts, getting information about how the predictions are done
+            is therefore critical and information about the data used and how it was
+            processed by the AI should be made available. Moreover, trust and adoption
+            of AI would consequently be higher. Furthermore, modern AI technologies such
+            as deep learning are not meant to be transparent, because are composed of
+            millions or billions of individual parameters <a href="#ref-canziani_analysis_2017">[7]</a>, making them very complex and hard to understand. This calls for Free
+            Software which seeks to analyze this complexity.
+        </p>
+        <p>
+            Technologies released as Free Software to make AI more transparent already
+            exists. For example, Local Interpretable Model-Agnostic Explanations (LIME)
+            <a href="#ref-ribeiro_why_2016">[8]</a>
+            is a software package which simplifies a complex prediction model by
+            simulating it with a simpler, more interpretable version, thus enabling
+            users of the AI to understand the parameters that played a role in the
+            prediction. Captum <a href="#ref-kokhlikyan_captum_2020">[9]</a>
+            is library released as Free Software providing an attribution mechanism
+            allowing one to understand the relative importance of each input variable
+            and each parameter of a deep learning model. Making AI more transparent is
+            therefore possible.
+        </p>
+        <p>
+            Although a proprietary AI can be transparent, Free Software facilitates this
+            process by making auditing and inspection easier. While some data might be
+            too sensitive to be released under a Free Software license, statistical
+            properties of the data can still be published. With Free Software, everyone
+            is able to run the AI to understand how it is made, and look up the data
+            that went through it. However, it should be noted that the AI model itself,
+            being composed of millions or billions of parameters, is not meant to be
+            transparent. But simulating the AI model with a much simpler one would make
+            it easy to inspect it.
+        </p>
+        <p>
+            Another benefit of Free Software in this context is that by granting the
+            right to improve the AI software and share improvements with others, it
+            allows everybody to improve transparency, thereby preventing vendor lock-in
+            where one has to wait until the software provider makes AI more transparent.
+        </p>
+
+        <h2 id="fairness">Fairness</h2>
+
+        <p>
+            In artificial intelligence (AI), fairness is defined as making it free of
+            harmful discrimination based on one’s sensitive characteristics such as
+            gender, ethnicity, religion, disabilities or sexual orientation. Because AI
+            models are trained on datasets containing human behaviors and activities
+            that can be unfair, and AI models are designed to recognize and reproduce
+            existing patterns, they can create harmful discrimination and human right
+            violations. For example, (COMPAS) <a href="#ref-noauthor_practitioners_2015">[10]</a>, an algorithm attributing scores which indicates how likely one is going to
+            recidivate their crime, was found to be unfair towards African American
+            <a href="#ref-mattu_machine_2015">[11]</a>, because for them, 44.9% of cases were false positives. The algorithm
+            attributed a high change of recidivism despite the defendants not
+            re-offending. Conversely, 47.7% of the cases for white people were labeled
+            as low risk of recidivism despite them re-offending. Suspected unfairness
+            has also been found in healthcare
+            <a href="#ref-obermeyer_dissecting_2019">[12]</a>, where an algorithm was used to attribute risks scores to patients, thereby
+            identifying those needing additional care resources. To have the same risks
+            scores as white people, black people needed to be in an worst health
+            situation, in term of severity in hypertension, diabetes, anemia, bad
+            cholesterol, or renal failure. Therefore, real fairness issues exist in AI
+            algorithm. Moreover, from a legal perspective, checking for fairness issues
+            is required by the Recital 71 of the GDPR, which requires to “
+            <em>
+            prevent, inter alia, discriminatory effects on natural persons on the basis
+            of racial or ethnic origin, political opinion, religion or beliefs, trade
+            union membership, genetic or health status or sexual orientation, or
+            processing that results in measures having such an effect.
+        </em>
+        ” We thus need solutions to detect potential fairness issues in datasets on
+        which AI is trained and correct it when it occurs.
+        </p>
+        <p>
+            To detect fairness, one needs to quantify it. There are lots of ways to
+            define fairness for AI, based on two categories of approaches. The first one
+            verifies that people grouped according to some sensitive characteristic are
+            treated similarly by the algorithm, e.g. in term of accuracy, true positive
+            rate and false positive rate. The second approach measures fairness at the
+            individual level by ensuring that similar individuals are treated similarly
+            by the algorithm <a href="#ref-dwork_fairness_2011">[13]</a>. More formally, a distance measure between samples of the dataset and a
+            distance measure between the predictions of the algorithm are compared to
+            ensure their ratio is consistent. However, satisfying group fairness and
+            individual fairness at the same time might be impossible <a href="#ref-kleinberg_inherent_2016">[14]</a>. There are three commonly used methods to mitigate unfairness, if detected:
+        </p>
+        <ol>
+            <li>
+                Remove the sensitive attribute (e.g. gender, ethnicity, religion, etc.)
+                from the dataset. This approach does not work in real-world scenario
+                because removing the sensitive attribute is not enough to completely
+                mask it, as the sensitive attribute is often correlated with other
+                attributes of the dataset. Removing it is therefore not sufficient, and
+                removing all attributes correlated with it leads to a lot of information
+                loss;
+            </li>
+            <li>
+                Ensure that the dataset has an equal representation of people if grouped
+                by a sensitive characteristic;
+            </li>
+            <li>
+                Optimize the AI model for accuracy and fairness at the same time. While
+                the algorithm is trained on an existing dataset that contains unfair
+                discrimination, both consider its accuracy and its fairness
+                <a href="#ref-zafar_fairness_2017">[15]</a>. In other words, add fairness to the goal of the algorithm.
+            </li>
+        </ol>
+        <p>
+            If those methods are used, having a perfectly accurate and fair algorithm is
+            impossible, but if the accuracy is defined on a dataset that is known to
+            contain unfair treatment of a particular group, having a less than perfect
+            accuracy may be deemed acceptable.
+        </p>
+        <p>
+            Because a AI released as Free Software may be used and inspected by
+            everyone, verify if it is free of potentially harmful discrimination is
+            easier than if it were proprietary. Moreover, this synergies with AI
+            transparency (see Section <a href="#transparency">Transparency</a>), as a transparent AI facilitates the understanding of the factors considered
+        for making predictions. While necessary, releasing AI as Free Software does not
+        make fair, but make fairness easier to evaluate and enforce.
+        </p>
+
+        <h2 id="conclusions">Conclusions</h2>
+
+        <p>
+            In this article, we highlighted potential issues around the democratization
+            of artificial intelligence (AI) and implications for human rights. Possible
+            Free Software solutions are presented to tackle these issues. In particular,
+            we showed that AI needs to be accessible, transparent and fair in order to
+            be usable. While not a sufficient solution, releasing AI under Free Software
+            licenses is necessary for its widespread use throughout our information
+            systems by making it more scrutable, trustworthy and safe for everyone.
+        </p>
+
+        <h2 id="references">References</h2>
+        <div id="ref-he_deep_2015">
+        [1] K. He, X. Zhang, S. Ren, and J. Sun, “Deep Residual Learning for Image Recognition,” <em>arXiv:1512.03385 [cs]</em>, Dec. 2015.</div>
+        <div id="ref-simonyan_very_2015">
+        [2] K. Simonyan and A. Zisserman, “Very Deep Convolutional Networks for Large-Scale Image Recognition,” <em>arXiv:1409.1556 [cs]</em>, Apr. 2015.</div>
+        <div id="ref-dastile_statistical_2020">
+        [3] X. Dastile, T. Celik, and M. Potsane, “Statistical and machine learning models in credit scoring: A systematic literature survey,” <em>Applied Soft Computing</em>, vol. 91, p. 106263, 2020, doi: <a href="https://doi.org/10.1016/j.asoc.2020.106263">10.1016/j.asoc.2020.106263</a>.</div>
+        <div id="ref-badue_self-driving_2019">
+        [4] C. Badue <em>et al.</em>, “Self-Driving Cars: A Survey,” <em>arXiv:1901.04407 [cs]</em>, Oct. 2019.</div>
+        <div id="ref-ensign_runaway_2018">
+        [5] D. Ensign, S. A. Friedler, S. Neville, C. Scheidegger, and S. Venkatasubramanian, “Runaway Feedback Loops in Predictive Policing,” in <em>Conference on Fairness, Accountability and Transparency</em>, Jan. 2018, pp. 160–171.</div>
+        <div id="ref-schwalbe_artificial_2020">
+        [6] N. Schwalbe and B. Wahl, “Artificial intelligence and the future of global health,” <em>The Lancet</em>, vol. 395, no. 10236, pp. 1579–1586, May 2020, doi: <a href="https://doi.org/10.1016/S0140-6736(20)30226-9">10.1016/S0140-6736(20)30226-9</a>.</div>
+        <div id="ref-canziani_analysis_2017">
+        [7] A. Canziani, A. Paszke, and E. Culurciello, “An Analysis of Deep Neural Network Models for Practical Applications,” <em>arXiv:1605.07678 [cs]</em>, Apr. 2017.</div>
+        <div id="ref-ribeiro_why_2016">
+        [8] M. T. Ribeiro, S. Singh, and C. Guestrin, “"Why Should I Trust You?": Explaining the Predictions of Any Classifier,” <em>arXiv:1602.04938 [cs, stat]</em>, Aug. 2016.</div>
+        <div id="ref-kokhlikyan_captum_2020">
+        [9] N. Kokhlikyan <em>et al.</em>, <em>Captum: A unified and generic model interpretability library for PyTorch</em>. 2020.</div>
+        <div id="ref-noauthor_practitioners_2015">
+        [10] “Practitioners Guide to COMPAS.” Northpointe, Mar. 2015.</div>
+        <div id="ref-mattu_machine_2015">
+        [11] L. K. Mattu Jeff Larson, “Machine Bias,” <em>ProPublica</em>. Mar. 2015.</div>
+        <div id="ref-obermeyer_dissecting_2019">
+        [12] Z. Obermeyer, B. Powers, C. Vogeli, and S. Mullainathan, “Dissecting racial bias in an algorithm used to manage the health of populations,” <em>Science (New York, N.Y.)</em>, vol. 366, no. 6464, pp. 447–453, Oct. 2019, doi: <a href="https://doi.org/10.1126/science.aax2342">10.1126/science.aax2342</a>.</div>
+        <div id="ref-dwork_fairness_2011">
+        [13] C. Dwork, M. Hardt, T. Pitassi, O. Reingold, and R. Zemel, “Fairness Through Awareness,” <em>arXiv:1104.3913 [cs]</em>, Nov. 2011.</div>
+        <div id="ref-kleinberg_inherent_2016">
+        [14] J. Kleinberg, S. Mullainathan, and M. Raghavan, “Inherent Trade-Offs in the Fair Determination of Risk Scores,” <em>arXiv:1609.05807 [cs, stat]</em>, Nov. 2016.</div>
+        <div id="ref-zafar_fairness_2017">
+        [15] M. B. Zafar, I. Valera, M. G. Rodriguez, and K. P. Gummadi, “Fairness Beyond Disparate Treatment &amp; Disparate Impact: Learning Classification without Disparate Mistreatment,” <em>Proceedings of the 26th International Conference on World Wide Web</em>, pp. 1171–1180, Apr. 2017, doi: <a href="https://doi.org/10.1145/3038912.3052660">10.1145/3038912.3052660</a>.</div>
+
+    </body>
+</html>

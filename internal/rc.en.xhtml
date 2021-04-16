@@ -127,8 +127,8 @@
           <th>Recipient</th>
           <th>ER number</th>
           <th>Catchphrase</th>
-          <th>Receipt Scan</th>
           <th>Description</th>
+          <th>Receipt Scan</th>
           <th>Rows</th>
         </tr>
 
@@ -138,8 +138,8 @@
           <td></td>
           <td>Valid ER number</td>
           <td>Catch phrase for the ER</td>
-          <td>Upload receipt as PDF, max. 2MB each</td>
           <td>What specifically was paid for. <strong>-</strong> if equal to catchphrase</td>
+          <td>Upload receipt as PDF, max. 2MB each</td>
           <td>Add a new row, or delete one</td>
         </tr>
 
@@ -149,8 +149,8 @@
           <td>Berlin Bus Company</td>
           <td>er.2021-04-16.123.4567</td>
           <td>Cool Conference</td>
-          <td>e.g. busticket.pdf</td>
           <td>Bus ticket from Berlin to New York</td>
+          <td>e.g. busticket.pdf</td>
           <td></td>
         </tr>
 
@@ -160,8 +160,8 @@
           <td>ACME</td>
           <td>er.2021-04-17.890.1234</td>
           <td>New laptop for Jane Doe</td>
-          <td>e.g. acme-adapter.pdf</td>
           <td>USB adapter for external keyboard</td>
+          <td>e.g. acme-adapter.pdf</td>
           <td></td>
         </tr>
 
@@ -171,8 +171,8 @@
           <td><input type="text" name="recipient[]" class="form-control" required="required" /></td>
           <td><input type="text" name="er[]" class="form-control" pattern="^er\.[\d]{4}-[\d]{2}-[\d]{2}\.[\d.-]+" placeholder="er.2020-..." required="required" /></td>
           <td><input type="text" name="catch[]" class="form-control" required="required" /></td>
+          <td><input type="text" name="remarks[]" class="form-control" required="required" /></td>
           <td><input type="file" name="receipt[]" class="form-control" required="required" /></td>
-          <td><textarea name="remarks[]" class="form-control" rows="1" required="required"></textarea></td>
           <td><input type="button" class="AddNewRow btn btn-primary" value="+ 1 row" /></td>
         </tr>
 

@@ -91,7 +91,7 @@ function beautify_filename($filename) {
   $filename = trim($filename, '.-');
   return $filename;
 }
-/* Snippet End */ 
+/* Snippet End */
 
 
 // Sanity checks for parameters, and setting variables depending on type
@@ -236,7 +236,7 @@ if ($extra) {
   $html .= "<p>Extra remarks: <br />$extra</p>";
 
   $email_body .= "
-  
+
 The sender added the following comment:
 
 $extra";

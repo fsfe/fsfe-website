@@ -9,8 +9,10 @@
         text-align: center;
       }
       tr.descr {
-        font-style: italic;
         font-size: small;
+      }
+      tr.example {
+        font-style: italic;
       }
       tr.descr td {
         padding: 1px 4px !important;
@@ -32,9 +34,9 @@
     <script src="/scripts/addrow.js"></script>
   </head>
 
-  <body>
+  <body class="full-width">
     <h1>Reimbursement Claim / Credit Card statement</h1>
-    
+
     <p>
       In this form, you can enter your reimbursable expenses (monthly)
       as well as your credit card expenses (twi-monthly), upload
@@ -45,7 +47,7 @@
       Please fill out all fields as requested, and take care of
       selecting the correct type (Reimbursement Claim or Credit Card).
     </p>
-    
+
     <form action="/cgi-bin/reimbursement.php" method="post" enctype="multipart/form-data">
       <h2>1. Set general options</h2>
 
@@ -89,7 +91,6 @@
               <option value="12">December</option>
             </select>
             <select class="form-control" name="rc_year">
-              <option value="2020">2020</option>
               <option value="2021">2021</option>
               <option value="2022">2022</option>
             </select>
@@ -97,7 +98,7 @@
         </div>
 
         <div class="clearfix"></div>
-        
+
         <div class="radio form-inline col-sm-offset-3 col-sm-9">
           <label>
             <input type="radio" name="type" value="cc" required="required" />
@@ -110,14 +111,13 @@
               <option value="Q4">Q4</option>
             </select>
             <select class="form-control" name="cc_year">
-              <option value="2020">2020</option>
               <option value="2021">2021</option>
               <option value="2022">2022</option>
             </select>
           </label>
         </div>
       </div>
-      
+
       <h2>2. Enter your expenses</h2>
 
       <table class="table table-striped">
@@ -128,7 +128,7 @@
           <th>ER number</th>
           <th>Catchphrase</th>
           <th>Receipt Scan</th>
-          <th>Remarks</th>
+          <th>Description</th>
           <th>Rows</th>
         </tr>
 
@@ -139,10 +139,32 @@
           <td>Valid ER number</td>
           <td>Catch phrase for the ER</td>
           <td>Upload receipt as PDF, max. 2MB each</td>
-          <td>Enter <strong>-</strong> if no remark applicable</td>
+          <td>What specifically was paid for. <strong>-</strong> if equal to catchphrase</td>
           <td>Add a new row, or delete one</td>
         </tr>
-        
+
+        <tr class="descr example">
+          <td>Example 1: 16.04.2021</td>
+          <td>12,34</td>
+          <td>Berlin Bus Company</td>
+          <td>er.2021-04-16.123.4567</td>
+          <td>Cool Conference</td>
+          <td>e.g. busticket.pdf</td>
+          <td>Bus ticket from Berlin to New York</td>
+          <td></td>
+        </tr>
+
+        <tr class="descr example">
+          <td>Example 2: 17.04.2021</td>
+          <td>67,89</td>
+          <td>ACME</td>
+          <td>er.2021-04-17.890.1234</td>
+          <td>New laptop for Jane Doe</td>
+          <td>e.g. acme-adapter.pdf</td>
+          <td>USB adapter for external keyboard</td>
+          <td></td>
+        </tr>
+
         <tr>
           <td><input type="date" name="entry[]" class="form-control" required="required" /></td>
           <td><input type="text" name="amount[]" class="form-control" pattern="-?\d{0,5},\d{2}" placeholder="12,34" required="required" /></td>
@@ -156,7 +178,7 @@
 
       </table>
 
-      <h2>3. Extra remarks / notes</h2>
+      <h2>3. Notes for the financial team</h2>
 
       <p>If necessary, you can add additional remarks and notes to the statement you send.</p>
 
@@ -186,7 +208,7 @@
       <button type="submit" class="btn btn-primary">Submit RC/CC report</button>
 
     </form>
-    
+
   </body>
 
 

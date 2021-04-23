@@ -129,15 +129,18 @@ for f in $files_all; do
       ext="${f##*.}"
       # Get base file name (without) "en.$EXT"
       base=$(echo "${f}" | sed -E "s/\.[a-z][a-z]\.${ext}//")
-      # Extract tags from the translated and the English file, and sort them
-      tags_trans="$(grep -Ei '<tag(\s|\>)' "${f}" | perl -pe 's/.*<tag key="(.+?)".*/\1/' | sort)"
-      tags_en="$(grep -Ei '<tag(\s|\>)' "${base}.en.${ext}" | perl -pe 's/.*<tag key="(.+?)".*/\1/' | sort)"
-      # Compare the two lists, and output tags that are not present in one of
-      # the files. `-3` strips away the list of tags that are common. So the
-      # output should be empty normally
-      if [[ $(comm -3 <(echo "$tags_en") <(echo "$tags_trans")) ]]; then
-        RETURN_TAGS_MISMATCH=$((RETURN_TAGS_MISMATCH + 1))
-        FILES_TAGS_MISMATCH="${FILES_TAGS_MISMATCH}|${f}"
+      # exit TAGS_MISMATCH check if no english original exists
+      if [[ -e "$base.en.$ext" ]]; then
+        # Extract tags from the translated and the English file, and sort them
+        tags_trans="$(grep -Ei '<tag(\s|\>)' "${f}" | perl -pe 's/.*<tag key="(.+?)".*/\1/' | sort)"
+        tags_en="$(grep -Ei '<tag(\s|\>)' "${base}.en.${ext}" | perl -pe 's/.*<tag key="(.+?)".*/\1/' | sort)"
+        # Compare the two lists, and output tags that are not present in one of
+        # the files. `-3` strips away the list of tags that are common. So the
+        # output should be empty normally
+        if [[ $(comm -3 <(echo "$tags_en") <(echo "$tags_trans")) ]]; then
+          RETURN_TAGS_MISMATCH=$((RETURN_TAGS_MISMATCH + 1))
+          FILES_TAGS_MISMATCH="${FILES_TAGS_MISMATCH}|${f}"
+        fi
       fi
     fi
   fi

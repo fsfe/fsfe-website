@@ -6,12 +6,11 @@
   <version>1</version>
 
   <item type="tshirt" id="tshirt-nocloud-black" price="20.00" date="2016-03-07">
-    <available size="S"    a="45"   b="66"/>
-    <available size="M"    a="47"   b="69"/>
-    <available size="L"    a="47"   b="70"/>
-    <available size="XL"   a="49"   b="75"/>
-    <available size="XXL"  a="54"   b="80"/>
-    <!-- available size="XXXL" a="66.5" b="82"/ -->
+    <available size="S"   a="45"   b="66"/>
+    <available size="M"   a="47"   b="69"/>
+    <available size="L"   a="47"   b="70"/>
+    <available size="XL"  a="49"   b="75"/>
+    <available size="XXL" a="54"   b="80"/>
     <image
       small="2016/tshirt-nocloud-black-front-small.jpg"
       large="2016/tshirt-nocloud-black-front-large.jpg"/>
@@ -21,9 +20,11 @@
   </item>
 
   <item type="tshirt" id="tshirt-nocloud-blue" oldprice="20.00" price="15.00" date="2016-03-07">
+    <available size="S"   a="45"   b="66"/>
     <available size="M"   a="46"   b="68"/>
     <available size="L"   a="49"   b="72"/>
     <available size="XL"  a="51"   b="75"/>
+    <available size="XXL" a="54"   b="80"/>
     <image
       small="2016/tshirt-nocloud-blue-front-small.jpg"
       large="2016/tshirt-nocloud-blue-front-large.jpg"/>

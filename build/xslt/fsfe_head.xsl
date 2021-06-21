@@ -172,6 +172,14 @@
       </xsl:element>
     </xsl:for-each>
 
+    <!-- Meta description -->
+    <xsl:element name="meta">
+      <xsl:attribute name="name">description</xsl:attribute>
+      <xsl:attribute name="content">
+        <xsl:value-of select="$extract" />
+      </xsl:attribute>
+    </xsl:element> <!-- / meta description -->
+
     <!-- Twitter and Facebook sharing cards -->
     <xsl:variable name="metaimage">
       <xsl:if test="image/@url">
@@ -268,4 +276,3 @@
   </xsl:element></xsl:template>
 
 </xsl:stylesheet>
-

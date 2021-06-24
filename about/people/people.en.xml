@@ -101,7 +101,6 @@
     <team>ga</team>
     <team>core</team>
     <team>de</team>
-    <team>care</team>
     <email>eal (at) fsfe (dot) org</email>
     <link>/about/people/albers/albers.html</link>
     <avatar>albers.jpg</avatar>
@@ -520,8 +519,11 @@
     <name>Bonnie Mehring</name>
     <function volunteers="translators">coordinator/f</function>
     <team>core</team>
+    <team>care</team>
     <team>translation-coordinators</team>
     <email>bonnie (at) fsfe (dot) org</email>
+    <fingerprint>88A975E887CDD2BF863810490D10346737F041D9</fingerprint>
+    <keyhref>http://keys.gnupg.net/pks/lookup?op=get&amp;search=0x0D10346737F041D9</keyhref>
     <avatar>mehring.jpg</avatar>
     <employee>part/f</employee>
   </person>
@@ -606,7 +608,6 @@
     <name>Max Mehl</name>
     <country>DE</country>
     <function>program-manager/m</function>
-    <function volunteers="translators-de">deputy/m</function>
     <team>ga</team>
     <team>core</team>
     <team>de</team>
@@ -720,6 +721,14 @@
     <function group="hamburg">coordinator/m</function>
     <team>hamburg</team>
     <email>erack (at) fsfe (dot) org</email>
+  </person>
+
+  <person id="ravestein">
+    <name>Rijk Ravestein</name>
+    <country>NL</country>
+    <team>nl</team>
+    <email>rijkr (at) fsfe (dot) org</email>
+    <avatar>ravestein.jpg</avatar>
   </person>
 
   <person id="reiter">

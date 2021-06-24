@@ -24,14 +24,14 @@
 
   <!-- EXTRACT / DESCRIPTION of each page -->
   <xsl:variable name="metadesc">
-    <!-- Get the meta element description -->
-    <xsl:value-of select="/buildinfo/document/head/meta[@name = 'description']/@content" />
+    <!-- Get the description element -->
+    <xsl:value-of select="/buildinfo/document/description" />
   </xsl:variable>
 
-  <!-- if there is a meta description, take that as an extract -->
+  <!-- if there is a description, take that as an extract -->
   <xsl:variable name="extract">
     <xsl:choose>
-      <!-- case 1: if there is a meta description, take that -->
+      <!-- case 1: if there is a description, take that -->
       <xsl:when test="$metadesc != ''">
         <xsl:value-of select="$metadesc" />
       </xsl:when>

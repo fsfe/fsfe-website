@@ -37,6 +37,7 @@ my %names = (
   "alex.sander" => "Alexander Sander",
   "gabriel.ku" => "Gabriel Ku Wei Bin",
   "linda" => "Linda Wagener",
+  "fani" => "Fani Partsafyllidou",
 );
 
 # -----------------------------------------------------------------------------
@@ -72,6 +73,7 @@ my %responsible = (
   "PERSONELL-LASOTA" => "council",
   "PERSONELL-WAGENER" => "council",
   "PERSONELL-MEHRING" => "council",
+  "PERSONELL-PARTSAFYLLIDOU" => "council",
   "OFFICE-BERLIN" => "council",
 );
 
@@ -104,6 +106,7 @@ my %account = (
   "PERSONELL-LASOTA" => "81061",
   "PERSONELL-WAGENER" => "81069",
   "PERSONELL-MEHRING" => "81070",
+  "PERSONELL-PARTSAFYLLIDOU" => "81072",
   "OFFICE-BERLIN" => "82001",
 );
 

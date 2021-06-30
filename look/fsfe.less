@@ -5,6 +5,7 @@
 @import "elements/search-box";
 @import "elements/sharebuttons";
 @import "elements/people";
+@import "elements/quotes";
 @import "elements/topbanner";
 @import "pages/frontpage";
 @import "pages/news";
@@ -48,44 +49,6 @@ img.signatory-logo {
   font-size: .875em;
   color: #888;
   margin-right: 1ex;
-}
-
-
-// ----------------------------------------------------------------------------
-// List of quotes
-// ----------------------------------------------------------------------------
-
-ul.quote-list {
-    .list-unstyled();
-    .quote();
-    margin-top: 30px;
-    margin-bottom: 30px;
-
-    > li {
-        // Add thin lines between the quotes
-        padding-top: 30px;
-        padding-bottom: 30px;
-        border-top: 1px solid @hr-border;
-        border-bottom: 1px solid @hr-border;
-        p:last-child {
-            margin-bottom: 0;
-        }
-
-        // Special formatting for the source of the quote
-        p.source {
-            font-weight: bold;
-            margin-left: 3em;
-            &:before {
-                content: '\2014 \00A0'; // EM DASH, NBSP
-            }
-        }
-
-        // Special formatting for complementary information
-        p.complementary {
-            font-family: "Roboto", sans-serif;
-            margin-left: 1.5em;
-        }
-    }
 }
 
 // ----------------------------------------------------------------------------

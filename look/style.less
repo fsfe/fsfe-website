@@ -110,6 +110,14 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
     > :nth-child(n+2) {
         .make-sm-column(9);
     }
+
+    // Optionally smaller image (2/10 ratio)
+    &.small-img > img:first-child {
+        .make-sm-column(2);
+    }
+    &.small-img > :nth-child(n+2) {
+        .make-sm-column(10);
+    }
 }
 
 // Image on the left side of text
@@ -140,6 +148,14 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
     // Need an explicit clear below the image
     > :nth-child(3) {
         clear: both;
+    }
+
+    // Optionally smaller image (2/10 ratio)
+    &.small-img > img:first-child {
+        .make-sm-column-push(10);
+    }
+    &.small-img > :nth-child(2) {
+        .make-sm-column-pull(2);
     }
 }
 
@@ -561,31 +577,6 @@ div#content {
             border-left: 1px solid @brand-primary;
             padding-left: 1em;
             font-size: 0.9em;
-        }
-    }
-
-
-    blockquote,
-    .blockQuote {
-        .quote;
-        border: 0;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        /* does not work, weird: background-color: lighten(@brand-secondary, 77%);*/
-        background-color: rgba(116, 140, 156, 0.23);
-
-        p {
-            line-height: 1.35;
-        }
-
-        footer {
-            cite {
-                font-style: italic;
-            }
-        }
-
-        & + & {
-            margin-top: -1.3em;
         }
     }
 

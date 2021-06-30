@@ -74,6 +74,19 @@
             </xsl:element>
           </xsl:element>
 
+          <!-- Jobs -->
+          <xsl:element name="p">
+            <xsl:element name="a">
+              <xsl:attribute name="href">
+                <xsl:value-of select="$urlprefix"/>
+                <xsl:text>/about/jobs/index.html</xsl:text>
+              </xsl:attribute>
+              <xsl:call-template name="fsfe-gettext">
+                <xsl:with-param name="id" select="'jobs'"/>
+              </xsl:call-template>
+            </xsl:element>
+          </xsl:element>
+
           <!-- Imprint and other legal stuff -->
           <xsl:element name="p">
             <xsl:element name="a">

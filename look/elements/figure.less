@@ -50,7 +50,7 @@ figure {
 
     &.float-left,
     &.float-right {
-      margin: 0;
+      margin: 30px 0 40px 0;
       max-width: 30%;
     }
 
@@ -63,5 +63,22 @@ figure {
       float: right;
       margin-left: 30px;
     }
+
+    /* -------------------------------------------------------------------- */
+    /* .max-width-XX classes for max-width from 0-100                           */
+    /* -------------------------------------------------------------------- */
+    // Only applies with figures, and in screen sizes >= md
+    // Create a loop for the values 0-100 in steps of 5, and create a class for any of these
+    @numSizes: 100;
+    .buildSizeClasses(@size) when (@size =< @numSizes) {
+      &.max-width-@{size} {
+          max-width: percentage((@size/100)) !important;
+      }
+      .buildSizeClasses((@size + 5));
+    }
+    //end loop
+    .buildSizeClasses(@size) when (@size > @numSizes) {}
+    //start loop
+    .buildSizeClasses(0);
   }
 }

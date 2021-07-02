@@ -18,6 +18,7 @@
         translate(@date,'-','') &lt;= translate(/buildinfo/@date,'-','')
       ]">
       <xsl:element name="h3">
+        <xsl:attribute name="id">related-list</xsl:attribute>
         <xsl:call-template name="fsfe-gettext">
           <xsl:with-param name="id" select="'related-news'" />
         </xsl:call-template>

@@ -19,13 +19,12 @@
           <text id="stw-source">Bronbestanden</text>
           <text id="stw-source-tooltip">U kunt de bronbestanden van dit promotie-artikel downloaden om het aan te passen of om het te vertalen. Respecteer alstublieft de licentie.</text>
           <text id="stw-printready">Afdrukbare bestanden</text>
-          <text id="stw-printready-tooltip">Dit zijn de bestanden die we sturen naar onze
-        printer, inclusief margerand en andere printerspecifieke instellingen. De bestanden kunnen
+          <text id="stw-printready-tooltip">Dit zijn de bestanden die we naar onze printer sturen, inclusief margerand en andere printerspecifieke instellingen. De bestanden kunnen
         erg groot zijn (~5-25MB).</text>
 
 
           <!-- Basic texts -->
-          <text id="fsfeurope">Free Software Foundation Europe</text>
+          <text id="fsfeurope">Free Software Foundation Europe</text>
           <text id="fsfnetwork">
             FSFE heeft <a href="//fsfe.org/about/fsfnetwork.html">zusterorganisaties</a> in <a href="http://www.fsf.org/">Noord-Amerika</a>, <a href="http://fsf.org.in/">India</a> en <a href="http://www.fsfla.org/">Latijns-Amerika</a>.
           </text>
@@ -74,20 +73,21 @@
           <text id="news/nl">Nieuwsbrieven</text>
           <text id="news/planet">Planet blogs</text>
           <text id="fs/basics">Vrije Software basis</text>
-          <text id="community/discuss">Vrije Softwarediscussies</text>
+          <text id="community/discuss">Vrije Software-discussies</text>
 
 
 
           <text id="learn-more">Leer meer</text>
 
           <text id="newsletter">Nieuwsbrief</text>
+          <text id="podcast">Podcast</text>
 
           <text id="go-to">Ga naar:</text>
-          <text id="search">Zoek</text>
 
           <text id="subscribe">Abonneer u</text>
           <text id="email">e-mailadres</text>
           <text id="news">Nieuws</text>
+          <text id="pages">Pagina's</text>
           <text id="breadcrumb-news">Nieuws</text>
           <text id="receive-newsletter">Abonneer u op FSFE's maandelijkse nieuwsbrief</text>
           <text id="subscribe-newsletter">Abonneer u op de nieuwsbrief</text>
@@ -105,35 +105,38 @@
           <text id="content">Inhoud</text>
           <text id="page-info">Pagina-informatie</text>
 
-          <text id="go-top">Naar boven</text>
+          <text id="go-top">Naar top</text>
           <text id="source">Broncode</text>
-          <text id="contact-us">Contact</text>
+          <text id="contact-us">Contact met ons</text>
           <text id="translate">Deze pagina vertalen?</text>
           <text id="contribute-web">Draag bij aan het webteam</text>
           <text id="imprint">Colofon</text>
           <text id="privacy-policy">Privacybeleid</text>
           <text id="transparency-commitment">Transparantieverklaring</text>
           <text id="tags">Trefwoorden</text>
+          <text id="discuss-article">Discussieer hierover</text>
+          <text id="finished">Beëindigd</text>
 
 
           <!-- Article metadata -->
-          <text id="writtenby">Geschreven door</text>
+          <text id="author">Auteur</text>
+          <text id="writtenby">Geschreven door</text>
           <text id="published">op</text>
-          <text id="revision">bijgewerkt op</text>
+          <text id="revision">bijgewerkt op</text>
           <text id="download">Download</text>
           <text id="and">en</text>
 
 
           <!-- Petitions -->
           <text id="osig">Organisaties</text>
-          <text id="isig">Privépersonen</text>
+          <text id="isig">Individuen</text>
           <text id="bsig">Bedrijven</text>
 
 
           <!-- News and event feeds -->
           <text id="related-news">Verwant nieuws</text>
           <text id="related-events">Verwante evenementen</text>
-          <text id="related-all">Verwant nieuws en evenementen</text>
+          <text id="related-all">Alle verwante nieuws en evenementen</text>
 
 
           <!-- Sidebars -->
@@ -144,7 +147,7 @@
         steun voor Vrije Software en Open Standaarden in politiek, bedrijfsleven,
         het recht en de samenleving als geheel.</p>
           </text>
-          <text id="about-fsfe">Over FSFE</text>
+          <text id="about-fsfe">Over de FSFE</text>
           <text id="about-fsfe-intro">
             <p>
               Free Software Foundation Europe is een liefdadigheidsorganisatie die
@@ -167,10 +170,10 @@
 
 
           <text id="support">Steun de FSFE</text>
-          <text id="show-support">Laat uw steun zien!</text>
+          <text id="show-support">Laat zien dat u ons steunt!</text>
           <text id="show-support-paragraph">FSFE heeft uw steun nodig om haar stem gehoord te krijgen! Iedere klik telt!</text>
           <text id="support-fsfe">Ik steun de FSFE!</text>
-          <text id="support-paragraph">Door een supporter van de FSFE te worden stelt u ons in staat om te werken en helpt u onze financiële onafhankelijkheid zeker te stellen.</text>
+          <text id="support-paragraph">Door een supporter van de FSFE te worden stelt u ons in staat om ons werk te doen en helpt u onze financiële onafhankelijkheid zeker te stellen.</text>
 
           <text id="donate">Doneer</text>
           <text id="donate-paragraph">
@@ -208,4 +211,12 @@
           <text id="size/small">klein</text>
           <text id="background/white">Witte achtergrond</text>
           <text id="background/transparent">Transparante achtergrond</text>
-        </data>
+
+          <!-- Search function -->
+          <text id="search">Zoek</text>
+          <text id="search/placeholder">Zoeken...</text>
+          <text id="search/notfound">Geen zoekresultaten gevonden. Formuleer uw vraag alstublieft opnieuw.</text>
+          <text id="search/empty">Uw zoekopdracht is leefYour search query is empty.</text>
+
+          </data>
+

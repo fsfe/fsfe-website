@@ -104,15 +104,18 @@
       <xsl:element name="div">
         <xsl:attribute name="class">with-image-right</xsl:attribute>
 
-        <xsl:element name="img">
-          <xsl:attribute name="class">img-circle</xsl:attribute>
-          <xsl:attribute name="src">
-            <xsl:value-of select="@image"/>
-          </xsl:attribute>
-          <xsl:attribute name="alt">
-            <xsl:value-of select="/buildinfo/document/text[@id='photograph']"/>
-          </xsl:attribute>
-        </xsl:element><!-- img -->
+        <xsl:element name="div">
+          <xsl:attribute name="class">img-container img-square</xsl:attribute>
+          <xsl:element name="img">
+            <xsl:attribute name="class">img-circle</xsl:attribute>
+            <xsl:attribute name="src">
+              <xsl:value-of select="@image"/>
+            </xsl:attribute>
+            <xsl:attribute name="alt">
+              <xsl:value-of select="/buildinfo/document/text[@id='photograph']"/>
+            </xsl:attribute>
+          </xsl:element><!-- img -->
+        </xsl:element> <!-- /div.img-container.square -->
 
         <xsl:element name="div">
           <xsl:element name="p">

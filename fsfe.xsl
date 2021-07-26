@@ -63,7 +63,7 @@
               </xsl:when>
               <!-- case 3b: also second extract is too short, so take a default text -->
               <xsl:otherwise>
-                <xsl:text>Free Software Foundation Europe is a charity that empowers users to control technology. We enable people to use, understand, adapt and share software.</xsl:text>
+                <xsl:text>Free Software Foundation Europe is a charity that empowers users to control technology. We enable people to use, understand, adapt, and share software.</xsl:text>
               </xsl:otherwise>
             </xsl:choose>
           </xsl:otherwise>

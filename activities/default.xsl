@@ -16,7 +16,7 @@
       <xsl:choose>
         <!-- highlighted activities in full width -->
         <xsl:when test="$highlight = 'yes'">
-          <xsl:attribute name="class">icon-grid fullwidth</xsl:attribute>
+          <xsl:attribute name="class">icon-grid one-per-row</xsl:attribute>
           <xsl:element name="ul">
             <xsl:choose>
               <!-- request certain tag -->

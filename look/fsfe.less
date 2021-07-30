@@ -57,6 +57,20 @@ img.signatory-logo {
 }
 
 // ----------------------------------------------------------------------------
+// General class to make something fullwidth, so filling the whole <main> box
+// ----------------------------------------------------------------------------
+
+.fullwidth {
+  padding: 1em 3em;
+  // Negative margin left/right in sync with padding of <main>
+  margin: 30px -1.5em;
+
+  @media (min-width: @screen-sm-min) {
+    margin: 30px -3em;
+  }
+}
+
+// ----------------------------------------------------------------------------
 // Overview pages (like "about", "contribute", ...
 // ----------------------------------------------------------------------------
 

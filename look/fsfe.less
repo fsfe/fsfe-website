@@ -61,12 +61,25 @@ img.signatory-logo {
 // ----------------------------------------------------------------------------
 
 .fullwidth {
-  padding: 1em 3em;
   // Negative margin left/right in sync with padding of <main>
-  margin: 30px -1.5em;
+  margin-left: -1.5em;
+  margin-right: -1.5em;
 
   @media (min-width: @screen-sm-min) {
-    margin: 30px -3em;
+    margin-left: -3em;
+    margin-right: -3em;
+  }
+
+  // no max-width for all elements it concerns, e.g. figures
+  max-width: none;
+
+  // Optional inner content box that balances the negative margin
+  > .fullwidth-content {
+    padding: 1em 1.5em;
+
+    @media (min-width: @screen-sm-min) {
+      padding: 1em 3em;
+    }
   }
 }
 

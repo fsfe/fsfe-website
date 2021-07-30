@@ -1,5 +1,5 @@
 // ============================================================================
-// Styles specific to the /freesoftware page
+// Styles specific to the /activities/upcyclingandroid/ pages
 // ============================================================================
 
 body.upcycling-android {
@@ -16,111 +16,53 @@ body.upcycling-android {
     background-size: 100% 100%;
   }
 
-  .special-box {
-    font-weight: 500;
-    text-align: center;
-    color: white;
+  // A special variant of color-box meant for the top of the page
+  .color-box.top {
+    margin-top: 0;
 
-    h2, h3 {
-      margin-top: 0;
-      font-weight: 700;
+    .android-logo {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+
+      margin-bottom: 1em;
+
+      img#head {
+        width: 40%;
+        margin-bottom: 1em;
+      }
+      img#text {
+        width: 80%;
+      }
+
+      @media (min-width: @screen-xs-min) {
+        flex-direction: row;
+
+        img#head {
+          order: 2;
+          margin-bottom: 0;
+          width: 30%;
+        }
+        img#text {
+          order: 1;
+          width: 60%;
+        }
+      }
     }
 
     p {
-      font-size: 120%;
-      // no margin-bottom to not distort inner paddings
-      margin-bottom: 0;
-    }
-
-    a.btn {
-      // balance missing margin-bottom from p
-      margin-top: 10px;
-    }
-
-    // BOX VARIANTS
-    &.fullwidth {
-      padding: 1em 3em;
-      // Negative margin left/right in sync with padding of <main>
-      margin: 30px -1.5em;
-
-      @media (min-width: @screen-sm-min) {
-        margin: 30px -3em;
-      }
-    }
-
-    &.top {
-      margin-top: 0;
-
-      .android-logo {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
-
-        margin-bottom: 1em;
-
-        img#head {
-          width: 40%;
-          margin-bottom: 1em;
-        }
-        img#text {
-          width: 80%;
-        }
-
-        @media (min-width: @screen-xs-min) {
-          flex-direction: row;
-
-          img#head {
-            order: 2;
-            margin-bottom: 0;
-            width: 30%;
-          }
-          img#text {
-            order: 1;
-            width: 60%;
-          }
-        }
-      }
-
-      p {
-        .lime;
-
-        font-size: inherit; // 1.1 em
-        border-radius: 15px;
-        padding: 1em;
-
-        a {
-          color: #fff;
-          text-decoration: underline;
-        }
-      }
-
-    }
-
-    &.rounded {
-      padding: 1em;
-      margin: 20px auto;
-      border-radius: 15px;
-
-      // center all the things
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-
-      @media (min-width: @screen-sm-min) {
-        max-width: 70%;
-      }
-    }
-
-    // COLOURS
-    &.lime, .lime {
       background-color: #A4C639;
-    }
-    &.blue, .blue {
-      background-color: #4594C3;
+
+      font-size: inherit; // 1.1 em
+      border-radius: 15px;
+      padding: 1em;
+
+      a {
+        color: #fff;
+        text-decoration: underline;
+      }
     }
   }
 }

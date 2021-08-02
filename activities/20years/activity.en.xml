@@ -1,21 +1,24 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <activityset>
   <version>1</version>
 
   <activity id="20years" date="2021-02-01" status="active">
-	<title>20 Years FSFE</title> <description> 
-		In 2021, the Free Software Foundation Europe turns 20. 
-		Throughout this time we have been working constantly to help 
-		users of technology understand it and improve it. Behind our 
-		progress lies our community. In 20 Years FSFE, we thank 
-		everyone who helped us along the way and we invite you to 
-		celebrate with us. 
-	</description> <link 
-	href="/activities/20years/20years.html"/> <image 
-	url="/graphics/logos/fsfe20.png" /> <order priority="3" 
-	highlight="yes" /> <tags>
+    <title>20 Years FSFE</title>
+    <description>
+      In 2021, the Free Software Foundation Europe turns 20. Throughout this
+      time we have been working constantly to help users of technology
+      understand it and improve it. Behind our progress lies our community. In
+      20 Years FSFE, we thank everyone who helped us along the way and we invite
+      you to celebrate with us.
+    </description>
+    <link href="/activities/20years/20years.html" />
+    <image url="/graphics/logos/fsfe20.png" />
+    <order priority="4" highlight="yes" />
+    <tags>
       <tag key="awareness" />
     </tags>
   </activity>
 </activityset>
+
+

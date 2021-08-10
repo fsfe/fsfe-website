@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html>
+  <version>1</version>
+
+  <head>
+    <title>Update Legal Network Membership Information</title>
+  </head>
+
+  <body>
+    <p id="category"><a href="/activities/ln/ln.html">The Legal Network</a></p>
+
+    <h1>Update Legal Network Membership Information</h1>
+
+    <p>
+      On this page, you can add or update information about yourself. This will
+      compose a document that is available for all Legal Network members in
+      order to gain an oversight of all members, find contact details, and learn
+      about specialists in different professions and legislative systems. The
+      information will be compiled by the Legal Network coordinators regularly.
+    </p>
+
+    <p>
+      In order to update information about yourself, you can just
+      write the new desired text for the affected fields. The other fields will
+      not be touched. If you wish to completely remove yourself from the
+      document, or wish to have certain fields cleared, please contact us
+      directly.
+    </p>
+
+    <form class="form-horizontal" action="https://forms.fsfe.org/email" method="POST" >
+      <input type="hidden" name="appid" value="ln-memberlist" />
+
+      <div class="form-group">
+        <label for="name" class="col-sm-3 control-label">Your full name *</label>
+        <div class="col-sm-5">
+          <input type="text" class="form-control" id="name" name="name" required="required" />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="confirm" class="col-sm-3 control-label">Your email address *</label>
+        <div class="col-sm-5">
+          <input type="email" class="form-control" id="confirm" name="confirm" required="required" />
+        </div>
+        <div class="col-sm-3 small">
+          Please enter the email address your are subscribed with on the Legal
+          Network mailing list. Only if these match, we can successfully
+          add/update your information.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="description" class="col-sm-3 control-label">Short self-description</label>
+        <div class="col-sm-5">
+          <input type="text" class="form-control" id="description" name="description" maxlength="280" />
+        </div>
+        <div class="col-sm-3 small">
+          Optional: shortly describe yourself. 280 characters maximum.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="countries" class="col-sm-3 control-label">Countries you have legal expertise for</label>
+        <div class="col-sm-5">
+          <input type="text" class="form-control" id="countries" name="countries" />
+        </div>
+        <div class="col-sm-3 small">
+          Optional: in which countries are you professionally active, e.g.
+          available for hire? Please use English names, and separate by comma.
+          Example: Spain, USA, Japan, Great Britain
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="link" class="col-sm-3 control-label">Link to further information</label>
+        <div class="col-sm-5">
+          <input type="text" class="form-control" id="link" name="link" />
+        </div>
+        <div class="col-sm-3 small">
+          Optional: one link to further info about yourself, e.g. homepage or
+          social media site.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="checkbox col-sm-offset-3 col-sm-5">
+          <label>
+            <input type="checkbox" name="obligatory" id="obligatory" value="yes" required="required" />
+            I confirm that the information I've provided above is correct. I
+            agree that this information is distributed to all members of the
+            Legal Network.
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-offset-3 col-sm-5">
+          <button type="submit" class="btn btn-primary">Submit Entry</button>
+        </div>
+      </div>
+
+    </form>
+
+  </body>
+
+</html>

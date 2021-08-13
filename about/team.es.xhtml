@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- To add avatar images or members, edit the file: /about/people/people.en.xml -->
+<html>
+  <version>3</version>
+
+  <head>
+    <title>Acerca de Free Software Foundation Europe - Equipo</title>
+    <script src="/scripts/filter-teams.js" />
+  </head>
+
+  <body>
+    <p id="category"><a href="/about/">Acerca de</a></p>
+    <h1>El equipo FSFE</h1>
+
+    <p>
+	Estas personas trabajan para y con la FSFE de forma habitual, por lo que se les ha dado responsabilidades y autoridades permanentes en ciertas áreas.
+    </p>
+
+    <div id="show-people">
+        <h2 id="council">Consejo Ejecutivo</h2>
+        <p>
+          El Consejo Ejecutivo es responsable de las cuestiones presupuestarias más importantes y de la aplicación de las directrices estratégicas.
+        </p>
+
+        <council-members />
+
+        <h2 id="core">Equipos centrales</h2>
+        <p>
+          Aquí puede encontrar personas que trabajan en las tareas diarias de la organización de forma voluntaria o remunerada en torno a los temas centrales, así como los miembros del <a href="/about/legal/legal.html">departamento jurídico</a>. Puede ver a todos los que trabajan en estos grupos o ver una selección.
+        </p>
+
+        <div class="filter-teams">
+          <label class="radio-inline">
+            <input name="filter-teams" type="radio" onclick="selectAllTeams()" checked="" />Todos
+          </label>
+          <label class="radio-inline">
+            <input name="filter-teams" type="radio" onclick="selectTeam('core')" />Equipo Principal Europeo
+          </label>
+          <label class="radio-inline">
+            <input name="filter-teams" type="radio" onclick="selectTeam('ga')" />Asamblea General
+          </label>
+          <label class="radio-inline">
+            <input name="filter-teams" type="radio" onclick="selectTeam('employee')" />Empleados/Contratistas
+          </label>
+        </div>
+        <noscript>
+          <div class="alert alert-warning" role="alert">Esta funcionalidad rquiere tener nuestro <a href="/about/js-licences.html">JavaScript Software Libre</a> activado.</div>
+        </noscript>
+
+        <core-members />
+
+        <h2>Equipos Locales</h2>
+        <p>
+        ¿Está buscando un contacto local para participar activamente, o simplemente para aprender más sobre el Software Libre y la FSFE? En cada vez más ciudades europeas, se forman grupos locales de la FSFE para marcar la diferencia. Para ver si ya hay un grupo en su área, por favor visite nuestra 
+        <a href="https://wiki.fsfe.org/LocalGroups/">página de grupos locales</a>.</p>
+
+    </div>
+  </body>
+  <followup>únete</followup>
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

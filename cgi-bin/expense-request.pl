@@ -26,18 +26,19 @@ use POSIX qw(strftime);
 # -----------------------------------------------------------------------------
 
 my %names = (
+  "alex.sander" => "Alexander Sander",
   "bonnie" => "Bonnie Mehring",
   "eal" => "Erik Albers",
-  "fi" => "Francesca Indorato",
-  "mk" => "Matthias Kirschner",
-  "lucas.lasota" => "Lucas Lasota",
-  "repentinus" => "Heiki Lohmus",
-  "max.mehl" => "Max Mehl",
-  "reinhard" => "Reinhard Müller",
-  "alex.sander" => "Alexander Sander",
-  "gabriel.ku" => "Gabriel Ku Wei Bin",
-  "linda" => "Linda Wagener",
   "fani" => "Fani Partsafyllidou",
+  "fi" => "Francesca Indorato",
+  "gabriel.ku" => "Gabriel Ku Wei Bin",
+  "lina.ceballos" => "Lina Ceballos",
+  "linda" => "Linda Wagener",
+  "lucas.lasota" => "Lucas Lasota",
+  "max.mehl" => "Max Mehl",
+  "mk" => "Matthias Kirschner",
+  "reinhard" => "Reinhard Müller",
+  "repentinus" => "Heiki Lohmus",
 );
 
 # -----------------------------------------------------------------------------
@@ -71,6 +72,7 @@ my %responsible = (
   "PERSONELL-KU" => "council",
   "PERSONELL-INDORATO" => "council",
   "PERSONELL-LASOTA" => "council",
+  "PERSONELL-CEBALLOS" => "council",
   "PERSONELL-WAGENER" => "council",
   "PERSONELL-MEHRING" => "council",
   "PERSONELL-PARTSAFYLLIDOU" => "council",
@@ -104,6 +106,7 @@ my %account = (
   "PERSONELL-KU" => "81058",
   "PERSONELL-INDORATO" => "81060",
   "PERSONELL-LASOTA" => "81061",
+  "PERSONELL-CEBALLOS" => "81068",
   "PERSONELL-WAGENER" => "81069",
   "PERSONELL-MEHRING" => "81070",
   "PERSONELL-PARTSAFYLLIDOU" => "81072",

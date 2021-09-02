@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <activityset>
-  <version>1</version>
+  <version>2</version>
 
   <activity id="igf" date="2006-10-30" status="finished">
     <title>Internet Governance Forum (IGF)</title>
     <description>
-      Het Internet Governance Forum (IGF) is een discussieforum van de Verenigde Naties,
-      opgericht tengevolge van besluiten van de VN World Summit on the Information Society
+Het Internet Governance Forum (IGF) is een discussieforum van de Verenigde Naties,
+      opgericht als gevolg van besluiten van de VN World Summit on the Information Society
       (WSIS). De FSFE volgt het IGF om er zeker van te zijn dat de beleidsdiscussies geen 
-      gevaar  vormen voor de digitale vrijheid in het algemeen en de Vrije Software in het 
+      gevaar vormen voor digitale vrijheid in het algemeen en Vrije Software in het 
       bijzonder.
     </description>
     <link href="/activities/igf/igf.html" />
     <order priority="1" />
     <tags>
-      <tag key="policy" />
+
+  <tag key="ilovefs">I Love Free Software</tag>
+
+      <tag key="policy">beleid</tag>
     </tags>
   </activity>
 </activityset>
-

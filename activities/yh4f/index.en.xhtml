@@ -21,19 +21,18 @@
     </strong></p>
   </div>
 
-<!-- todo we should change it so that it is larger than medium but not 14MB) --> 
   <figure class="fullwidth no-border">
-    <img src="https://pics.fsfe.org/uploads/big/9594f30fb15a8edf5082d60baac594bd.png" alt="Three teenagers standing in a hackerspace" />
+    <img src="https://pics.fsfe.org/uploads/big/2d6b8d83d7c2d5c809085ad4c76d0090.png" alt="Three teenagers standing in a hackerspace" />
   </figure>
 
   <h3>Who can participate?</h3>
 
   <p> 
-    You are <strong>born between 01.01.2002 and 31.12.2008</strong>? You are up
+    You are <em>born between 01.01.2002 and 31.12.2008</em>? You are up
     to hack on a software project of your choice? You want to get the chance to
     meet like-minded people, get one of our cash awards and be invited to
     Brussels to meet the other winners and great people from the Free Software
-    movement? Then register <strong>until 10 October 2021</strong>.
+    movement? Then register <em>until 10 October 2021</em>.
   </p>
 
   <p>
@@ -67,12 +66,10 @@
 
   <p> 
     From May on the evaluation phase is carried out by Free Software experts.
-    <a href="/activities/yh4f/evaluation.html">Our jury members</a> excel in
-    software development; among them are Neil McGovern, Executive Director of
-    the GNOME Foundation; Lydia Pintscher, KDE’s vice president; Claudia
-    Müller-Birn, professor for Human Centered Computing at the Freie
-    Universität Berlin; and Greg Kroah-Hartman, Linux kernel developer. Based
-    on the jury’s grades, the winners are determined and announced.
+    <em><a href="/activities/yh4f/evaluation.html">Our jury
+    members</a></em> excel in software development and are deeply involved
+    in the Free Software movement.  Based on the jury’s grades, the winners are
+    determined and announced.
   </p>
 
   <h3>What is the award?</h3>
@@ -81,96 +78,88 @@
     All of you should have fun during the competition, have the chance to
     briefly follow each other’s work, to exchange ideas, and to share
     problem-solving tips. Everyone who in the end submits a Free Software
-    program will get a participation certificate. 
+    program will get a participation certificate. The first six places will be
+    awarded with <em>cash between 1.024€ and 4.096€ each </em> and all winners
+    will be invited to Brussels for the award ceremony to meet like-minded
+    people in June 2022. 
   </p>
 
-  <p> 
-    The first places will be awarded with 4.096€, the second places with
-    2.048€, and the third places with 1.024€ each. All winners will be invited
-    to Brussels for the award ceremony to meet like-minded people in June 2022.
-    Speeches by prominent professionals of the field will initiate the award
-    ceremony. The parents of the winners who are underage are also invited to
-    this trip and we will provide you an interesting program during your stay
-    in Brussels and make sure you can better get known to each other.
-  </p>
 
   <div class="color-box background" data-color="android-blue">
     <p>Do you have more questions before registering?</p>
     <a href="/activities/yh4f/faq.html" class="btn btn-default">Go to our FAQ</a>
   </div>
   
-  <!-- <div class="color-box border" data-color="fsfe-blue"> -->
-    <h2 id="register">Register your project!</h2>
+  <h2 id="register">Register your project!</h2>
+  
+  <form class="form-horizontal" action="https://forms.fsfe.org/email" method="POST" >
+    <input type="hidden" name="appid" value="yh4f" />
+  
+    <div class="form-group">
+      <label for="first_name" class="col-sm-3 control-label">First name *</label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="first_name" name="first_name" required="required" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="last_name" class="col-sm-3 control-label">Last name *</label>
+      <div class="col-sm-5">
+        <input type="text" class="form-control" id="last_name" name="last_name" required="required" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="gender" class="col-sm-3 control-label">The gender you identify with *</label>
+      <div class="col-sm-5">
+        <select id="gender" class="form-control" name="gender" required="required">
+          <option></option>
+          <option>male</option>
+          <option>female</option>
+          <option>non-binary</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="confirm" class="col-sm-3 control-label">Your email *</label>
+      <div class="col-sm-5">
+        <input type="email" class="form-control" id="confirm" name="confirm" required="required" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="country" class="col-sm-3 control-label">The country you live in *</label>
+      <div class="col-sm-5">
+        <country-list/>
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="birthdate" class="col-sm-3 control-label">Your date of birth *</label>
+      <div class="col-sm-5">
+        <input type="date" class="form-control" id="birthdate" name="birthdate" value="2002-01-01" min="2002-01-01" max="2008-12-31" />
+      </div>
+      <div class="col-sm-3 small">
+        Only participants born between 01.01.2002 and 31.12.2008 are eligible.
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="self_description" class="col-sm-3 control-label">Please tell us a few words about yourself. *</label>
+      <div class="col-sm-5">
+        <textarea class="form-control" id="self_description" name="self_description" rows="5" required="required"></textarea>
+      </div>
+      <div class="col-sm-3 small">
+        For example, where do you live? What hobbys and interests do you have? What motivates you?
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <div class="col-sm-offset-3 col-sm-5">
+        <button type="submit" class="btn btn-primary">Submit Registration</button>
+      </div>
+    </div>
+  
+  </form>
 
-    <form class="form-horizontal" action="https://forms.fsfe.org/email" method="POST" >
-      <input type="hidden" name="appid" value="yh4f" />
-
-      <div class="form-group">
-        <label for="first_name" class="col-sm-3 control-label">First name *</label>
-        <div class="col-sm-5">
-          <input type="text" class="form-control" id="first_name" name="first_name" required="required" />
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="last_name" class="col-sm-3 control-label">Last name *</label>
-        <div class="col-sm-5">
-          <input type="text" class="form-control" id="last_name" name="last_name" required="required" />
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="gender" class="col-sm-3 control-label">The gender you identify with *</label>
-        <div class="col-sm-5">
-          <select id="gender" class="form-control" name="gender" required="required">
-            <option></option>
-            <option>male</option>
-            <option>female</option>
-            <option>non-binary</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="confirm" class="col-sm-3 control-label">Your email *</label>
-        <div class="col-sm-5">
-          <input type="email" class="form-control" id="confirm" name="confirm" required="required" />
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="country" class="col-sm-3 control-label">The country you live in *</label>
-        <div class="col-sm-5">
-          <country-list/>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="birthdate" class="col-sm-3 control-label">Your date of birth *</label>
-        <div class="col-sm-5">
-          <input type="date" class="form-control" id="birthdate" name="birthdate" value="2002-01-01" min="2002-01-01" max="2008-12-31" />
-        </div>
-        <div class="col-sm-3 small">
-          Only participants born between 01.01.2002 and 31.12.2008 are eligible.
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="self_description" class="col-sm-3 control-label">Please tell us a few words about yourself. *</label>
-        <div class="col-sm-5">
-          <textarea class="form-control" id="self_description" name="self_description" rows="5" required="required"></textarea>
-        </div>
-        <div class="col-sm-3 small">
-          For example, where do you live? What hobbys and interests do you have? What motivates you?
-        </div>
-      </div>
-
-      <div class="form-group">
-        <div class="col-sm-offset-3 col-sm-5">
-          <button type="submit" class="btn btn-primary">Submit Registration</button>
-        </div>
-      </div>
-
-    </form>
-  <!-- </div> -->
-
-  <!-- TODO: upload good part of the video for to pics.fsfe.org and use as poster preview -->
+  <!-- TODO: check video encoding + upload a good preview picture of the video for to pics.fsfe.org and use as poster preview -->
   <figure class="max-width-70" id="video">
     <video width="100%" crossorigin="crossorigin" poster="https://pics.fsfe.org/uploads/medium/a140bb548f4c4d936c592721cd7250de.png" controls="controls">
           <!-- <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="https://download.fsfe.org/videos/yh4f/yh4f-reinhard-wiesemann-motivation.mp4"></source> -->

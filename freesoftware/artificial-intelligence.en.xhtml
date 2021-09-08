@@ -240,12 +240,11 @@
   <ol>
     <li>
       Remove the sensitive attribute (e.g. gender, ethnicity, religion, etc.)
-      from the dataset. This approach may not work in real-world scenarios
-      because removing the sensitive attribute might not be enough to completely
-      mask it, as the sensitive attribute is often correlated with other
-      attributes of the dataset. Removing may therefore not be sufficient, and
-      removing all attributes correlated with it may lead to a lot of information
-      loss;
+      from the dataset. This approach may not work in real-world scenarios.
+      When the sensitive attribute is correlated with other attributes of the
+      dataset, removing the sensitive attribute is not be enough to completely
+      mask it. Removing it may therefore not be sufficient, and removing all
+      attributes correlated with it may lead to a lot of information loss;
     </li>
     <li>
       Ensure that the dataset has an equal representation of people if grouped

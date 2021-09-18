@@ -5,60 +5,180 @@
 
 <!-- ALL STATIC TEXTS -->
 
+    <!-- Footer -->
+  <text id="translator1a">Děkujeme</text>
+  <text id="translator1b">za překlad, jehož autorem je.</text>
+  <text id="translator3a">Můžete si přečíst i </text>
+  <text id="translator3b">originál</text>
+  <text id="translator3c"> této stránky.</text>
+  <text id="permission">
+      Kopírování a distribuce doslovných kopií tohoto dokumentu jsou
+      dovoleny komukoliv za předpokladu, že tato poznámka zůstane zachována.
+    </text>
 
-<!-- Basic texts -->
 
-<!-- Footer -->
-<text id="translator1a">Děkujeme za překlad, jehož autorem je </text>
-<text id="translator1b">. </text>
-<text id="translator2">This is an unofficial translation. </text>
-<text id="translator3a">Můžete si přečíst i </text>
-<text id="translator3b">originál</text>
-<text id="translator3c"> této stránky.</text>
-<text id="permission">
-    Kopírování a distribuce doslovných kopií tohoto dokumentu jsou
-    dovoleny komukoliv za předpokladu, že tato poznámka zůstane zachována.
+
+  <!-- Warning info boxes -->
+  <text id="outdated-1">
+    Tato stránka může být zastaralá oproti
+  </text><!-- followed by "translator3b" -->
+  <text id="outdated-2">
+     <a href="/contribute/translators/translators.html">Pomozte nám s překladem</a> této a ostatních stránek na fsfe.org, tak aby ostatní je mohli číst ve svém rodném jazyce.
+  </text>
+  <text id="notranslation">
+    Tato stránka ještě není přeložená. <a href="/contribute/translators/translators.html"> Pomozte nám s překladem</a> této stránky a ostatních stránek na fsfe.org, tak aby ostatní je mohli číst ve svém rodném jazyce.
+  </text>
+    <text id="under-construction">
+    <strong>Varování: </strong>Na této stránce se pracuje. Prosím nesdílejte tuto stránku a nepokoušejte se o překlad, protože metariál na této stránce je podkladem pro změnu.
+  </text>
+    <text id="project-complete">Tento projekt byl úspěšně dokončen. Tyto stránky jsou zde ponechány pro archivní účely.
+    </text>
+
+
+  <!-- Menu, Navigation, Buttons -->
+  <text id="fsfe/about">O nadaci</text>
+
+
+  <text id="fsfe/activities">Aktivity</text>
+  <text id="fsfe/help">Zapojte se</text>
+  <text id="fsfe/press">Zprávy</text>
+
+  <text id="support/become">Přidejte se k nám</text>
+  <text id="fellowship/login">Přihlásit se</text>
+  <text id="news/news">Nejnovější zprávy</text>
+  <text id="news/events">Nadcházenící události</text>
+  <text id="news/press">Tisková místnost</text>
+  <text id="news/nl">Informační bulletiny</text>
+  <text id="news/planet">Planeta blogů</text>
+  <text id="fs/basics">Základy svobodného softwaru</text>
+  <text id="community/discuss">Diskuze o svobodném softwaru</text>
+
+
+
+  <text id="learn-more">Dozvědět se více</text>
+
+  <text id="newsletter">Zpravodaj</text>
+  <text id="podcast">Podcast</text>
+
+  <text id="go-to">Jdi na:</text>
+
+  <text id="subscribe">Odebírat</text>
+  <text id="email">e-mailová adresa</text>
+  <text id="news">Zprávy</text>
+  <text id="breadcrumb-news">Zprávy</text>
+  <text id="pages">Stránky</text>
+  <text id="receive-newsletter">Odebírejte náš měsíční zpravodaj</text>
+  <text id="subscribe-newsletter">Odebírejte náš zpravodaj</text>
+
+
+
+
+  <text id="contact">Kontakt</text>
+  <text id="team">Tým</text>
+
+
+
+  <text id="change-lang">Změna jazyka</text>
+  <text id="menu">Menu</text>
+  <text id="content">Material</text>
+  <text id="page-info">Informační stránka</text>
+
+  <text id="go-top">Zpátky nahoru</text>
+  <text id="source">Zdrojový kód</text>
+  <text id="contact-us">Kontaktujte nás</text>
+  <text id="translate">Přeložit tuto stránku?</text>
+  <text id="contribute-web">Pomožte našému webovému týmu</text>
+  <text id="imprint">Obtisk</text>
+  <text id="privacy-policy">Zásady ochrany osobních údajů</text>
+  <text id="transparency-commitment">Závazek transparentnosti</text>
+  <text id="tags">Tagy</text>
+  <text id="discuss-article">Diskutujte o tom</text>
+  <text id="finished">Dokončeno</text>
+
+
+  <!-- Article metadata -->
+  <text id="author">Autor</text>
+  <text id="writtenby">Napsal</text>
+  <text id="revision">aktualizováno v</text>
+  <text id="download">Stáhnout</text>
+
+
+
+  <!-- Petitions -->
+  <text id="osig">Organizační</text>
+  <text id="isig">Inviduální</text>
+  <text id="bsig">Podniky</text>
+
+
+  <!-- News and event feeds -->
+  <text id="related-news">Relevantní zprávy</text>
+  <text id="related-events">Relevantní události</text>
+  <text id="related-all">Všechny relevantní zprávy a události</text>
+
+
+  <!-- Sidebars -->
+  <text id="our-work">Naše práce</text>
+  <text id="our-work-intro">
+    <p>Jako nezisková nevládní organizace usiluje o obecné porozumění a podporu svobodného softwaru s otevřenými standardy v politice, obchodu, právu a obecné společnosti.</p>
+  </text>
+  <text id="about-fsfe">O nadaci</text>
+  <text id="about-fsfe-intro">
+    <p>
+      Free Software Foundation Europe je charitativní organizace, která usiluje o uživatelskou kontrolu nad technologií.
+    </p>
+    <p>
+      Technologie je nedílnou součastí našého denního života a proto je důležité, aby dělala náš život jednodušší místo toho aby nás omezovala. Proto vzniknul <a href="/freesoftware/freesoftware.html">Svobodný software</a>, který umožňuje všem daný software studovat, provádět změny a sdílet. Tyto práva také napomáhají vašemu soukromí, svobodě projevu a svobodě zpráv.
+    </p>
   </text>
 
 
-<!-- Warning info boxes -->
-<text id="outdated"><strong>Varování: </strong>
-    Tato stránka je oproti originálu zastaralá. Prosíme podívejte se
-    <a href="/contribute/contribute.html">zde</a> pokud můžete pomoci s překlady,
-     případně i jinými věcmi.
+  <!-- Motivational texts for fellowship, support or donations -->
+
+
+
+
+  <text id="support">Podpořte FSFE</text>
+  <text id="show-support">Ukažte svou podporu!</text>
+  <text id="show-support-paragraph">Potřebuje Vaší podporu pro to, aby byl náš hlas slyšet! Každá pomoc se počítá!</text>
+  <text id="support-fsfe">Já podporuji FSFE!</text>
+  <text id="support-paragraph">Tím, že s stanete naším podporovatelem umožňujete naší práci a pomáháte ujistit naší finanční nezávyslost.</text>
+
+  <text id="donate">Přispějte</text>
+  <text id="donate-paragraph">
+    The Free Software Foundation Europe je nezisková a nevládní organizace. <a href="/about/ourwork.html">Naše práce</a> je možná díky naší komunitě
+    <a href="/contribute/contribute.html">dobrovolníků</a> a
+    <a href="/donate/thankgnus.html">sponzorů</a>. Vaše příspěvky jsou nedílnou součástí naší síly a samostatnosti. Umožňují nám pokračovat v práci na svobodném softwaru kdykoliv je to potřeba a dělá nás nezávyslími.
   </text>
-<text id="notranslation"><strong>Varování: </strong>
-    Tato stránka nebyla zatím přeložena. To co zde vidíte, je originální verze stránky. Prosíme podívejte se
-    <a href="/contribute/contribute.html">zde</a> pokud můžete pomoci s překlady,
-     případně i jinými věcmi.
-  </text>
+
+  <!-- pdfreaders.org -->
+  <text id="pdfreaders-head-readers">Čtečky</text>
+  <text id="pdfreaders-head-standards">Otevřené standardy</text>
+  <text id="pdfreaders-head-graphics">Grafika</text>
+  <text id="pdfreaders-head-about">O nás</text>
+  <text id="pdfreaders-body-platforms">Platformy:</text>
+
+  <!-- Share and support buttons -->
+  <text id="share-head">Sdílet a podpořit</text>
+  <text id="share-page">Sdělte tuto stránku na</text>
+  <text id="share-microdonation">Mikrodarovat prostřednictvím</text>
+  <text id="share-warning">Některé služby nemusí respektovat Vaše práva a soukromý.</text>
+
+  <!-- Sponsoring buttons -->
+  <text id="donation-buttons">Tlačítka</text>
 
 
-<!-- Menu, Navigation, Buttons -->
-<text id="fsfe/about">O Nadaci</text>
-
-<text id="fsfe/help">Zapojte se</text>
-<text id="search">Výzkum</text>
-
-<text id="news">Nejnovější zprávy</text>
 
 
+  <text id="size/huge">obrovský</text>
+  <text id="size/large">velký</text>
+  <text id="size/medium">střední</text>
+  <text id="size/small">malý</text>
+  <text id="background/white">Bílé pozadí</text>
+  <text id="background/transparent">Průhledné pozadí</text>
 
-
-
-<!-- Article metadata -->
-
-
-<!-- Petitions -->
-
-
-<!-- News and event feeds -->
-
-
-<!-- Sidebars -->
-
-<!-- Motivational texts for fellowship, support or donations -->
-
-<text id="donate">Přispějte</text>
-
+  <!-- Search function -->
+  <text id="search">Hledat</text>
+  <text id="search/placeholder">Najít...</text>
+  <text id="search/notfound">Nic nebylo nalezeno. No search results found. Zkuste přeformulovat svůj dotaz.</text>
+  <text id="search/empty">Vyhledávací dotaz je prázdný.</text>
 </data>

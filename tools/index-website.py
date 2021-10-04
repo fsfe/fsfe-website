@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 import multiprocessing.dummy as mp
 import logging
 from os.path import abspath
-from os import environ
+from os import environ, sched_getaffinity
 import time
 
 start_time = time.time()
@@ -72,7 +72,7 @@ def process_file(filename: str):
         )
 
 
-n_processes = 4
+n_processes = len(sched_getaffinity(0))
 p = mp.Pool(n_processes)
 logger.info("Spawning {} processes".format(n_processes))
 files = list(glob.glob("**/*.xhtml", recursive=True))

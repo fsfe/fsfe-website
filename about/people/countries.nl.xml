@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <countryset>
-  <version>0</version>
+  <version>1</version>
 
+  <country id="AX">Åland</country>
   <country id="AL">Albanië</country>
   <country id="AT">Oostenrijk</country>
   <country id="BA">Bosnië en Herzegovina</country>
@@ -14,8 +15,10 @@
   <country id="CZ">Tsjechische Republiek</country>
   <country id="DE">Duitsland</country>
   <country id="DK">Denemarken</country>
-  <country id="EE">Estonia</country>
+  <country id="EE">Estland</country>
   <country id="ES">Spanje</country>
+  <country id="EU">Europese Unie</country>
+  <country id="FO">Faeröer</country>
   <country id="FI">Finland</country>
   <country id="FR">Frankrijk</country>
   <country id="GB">Verenigd Koninkrijk</country>
@@ -25,6 +28,7 @@
   <country id="IE">Ierland</country>
   <country id="IS">IJsland</country>
   <country id="IT">Italië</country>
+  <country id="LI">Liechtenstein</country>
   <country id="LT">Litouwen</country>
   <country id="LU">Luxemburg</country>
   <country id="LV">Letland</country>
@@ -41,7 +45,9 @@
   <country id="RU">Russische Federatie</country>
   <country id="SE">Zweden</country>
   <country id="SI">Slovenië</country>
-  <country id="SK">Slovakije</country>
+  <country id="SK">Slowakije</country>
   <country id="TR">Turkije</country>
   <country id="UA">Oekraïne</country>
+  <country id="ZZ">Rest van de wereld</country>
 </countryset>
+

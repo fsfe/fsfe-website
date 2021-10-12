@@ -70,7 +70,12 @@ buildrun(){
     # symlinks which we copy while rsyncing. These messages are issued even if
     # the files have not changed and clutter up the output, so we filter them
     # out.
-    rsync -av --copy-unsafe-links --del "$stagedir/" "$target/" | grep -v "copying unsafe symlink" | t_logstatus stagesync
+    {
+      for destination in ${target//,/ }; do
+        echo "Syncing files to $(echo "$destination" | grep -Po "(?<=@)[^:]+")"
+        rsync -av --copy-unsafe-links --del "$stagedir/" "$destination/" | grep -v "copying unsafe symlink"
+      done
+    } | t_logstatus stagesync
   fi
 
   date +%s > "$(logname end_time)"

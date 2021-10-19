@@ -25,7 +25,7 @@ $html = ''; // create empty variable
 $csv = array(array("Employee name", "Date", "Amount (EUR)", "Recipient name", "ER number", "Catchphrase", "Receipt number", "Remarks")); // create array for CSV
 $csvfile = tmpfile();
 $csvfile_path = stream_get_meta_data($csvfile)['uri'];
-$r_total = 0;   // total reimbursement for early calculation
+$reimb_total = 0;   // total reimbursement for early calculation
 
 $who = isset($_POST["who"]) ? $_POST["who"] : false;
 $er = isset($_POST["er"]) ? $_POST["er"] : false;
@@ -104,10 +104,10 @@ function beautify_filename($filename) {
 
 // Take currency and meal rates for the default country. Other home countries are not supported.
 $defaults = explode("/", $defaults);
-$cur = " " . $defaults[0];            // currency
-$c_b = floatval($defaults[1]);    // breakfast rate
-$c_l = floatval($defaults[2]);    // lunch rate
-$c_d = floatval($defaults[3]);    // dinner rate
+$currency = " " . $defaults[0];            // currency
+$rate_breakf = floatval($defaults[1]);    // breakfast rate
+$rate_lunch = floatval($defaults[2]);    // lunch rate
+$rate_dinner = floatval($defaults[3]);    // dinner rate
 
 // eligible amount per day
 if ($dest === 'other') {
@@ -119,9 +119,9 @@ if ($dest === 'other') {
 }
 
 // dest -> epd (half/full amount)
-$epd = explode('/', $dest);  // separate at "/"
-$epd_trav = floatval($epd[0]);  // first half
-$epd_full = floatval($epd[1]);  // second half
+$maxamount = explode('/', $dest);  // separate at "/"
+$maxamount_trav = floatval($maxamount[0]);  // first half
+$maxamount_full = floatval($maxamount[1]);  // second half
 
 // Prepare output table
 if ($mailopt === "onlyme") {
@@ -179,9 +179,9 @@ foreach ($use as $d => $day) {  // calculate for each day
 
   if ($use[$d] === 'yes') { // only calculate if checkbox has been activated (day in use)
     if ($d === 'out' || $d === 'return') {  // set amount of € for travel or full day
-      $r_day[$d] = $epd_trav;   // total max. reimburseable amount for this half day
+      $reimb_day[$d] = $maxamount_trav;   // total max. reimburseable amount for this half day
     } else {
-      $r_day[$d] = $epd_full;   // total max. reimburseable amount for this full day
+      $reimb_day[$d] = $maxamount_full;   // total max. reimburseable amount for this full day
     }
 
     // date
@@ -193,22 +193,22 @@ foreach ($use as $d => $day) {  // calculate for each day
       // if meal paid by someone else: total amount for today =
       // MINUS total possible amount for a FULL day * rate for this meal
       // no matter whether today is a full or a half day
-      $r_day[$d] = $r_day[$d] - $epd_full * $c_b;
+      $reimb_day[$d] = $reimb_day[$d] - $maxamount_full * $rate_breakf;
     }
     // lunch
     if ($lunch[$d] !== "yes") {
-      $r_day[$d] = $r_day[$d] - $epd_full * $c_l;
+      $reimb_day[$d] = $reimb_day[$d] - $maxamount_full * $rate_lunch;
     }
     // dinner
     if ($dinner[$d] !== "yes") {
-      $r_day[$d] = $r_day[$d] - $epd_full * $c_d;
+      $reimb_day[$d] = $reimb_day[$d] - $maxamount_full * $rate_dinner;
     }
 
     // add on top of total reimbursement
-    $r_total = $r_total + $r_day[$d];
+    $reimb_total = $reimb_total + $reimb_day[$d];
 
     // change number format of this day's amount to German (comma)
-    $r_day[$d] = number_format($r_day[$d], 2, ',', '');
+    $reimb_day[$d] = number_format($reimb_day[$d], 2, ',', '');
 
     // Remarks, explanation what has been self-paid
     $remarks[$d] = "";
@@ -234,7 +234,7 @@ foreach ($use as $d => $day) {  // calculate for each day
     $html .= "
     <tr>
       <td>$date[$d]</td>
-      <td>$r_day[$d]</td>
+      <td>$reimb_day[$d]</td>
       <td></td>
       <td>$er</td>
       <td>$catch</td>
@@ -243,7 +243,7 @@ foreach ($use as $d => $day) {  // calculate for each day
     </tr>";
 
     // CSV for this receipt
-    $csv[$key] = array($who_verbose, $date[$d], $r_day[$d], "", $er, $catch, "per diem", $remarks[$d]);
+    $csv[$key] = array($who_verbose, $date[$d], $reimb_day[$d], "", $er, $catch, "per diem", $remarks[$d]);
 
   } // if day is used
 } // foreach
@@ -264,10 +264,10 @@ sent via <https://fsfe.org/internal/pd>.
 Please find the expenses attached.";
 
 // change number format of total amount to German (comma)
-$r_total = number_format($r_total, 2, ',', '');
+$reimb_total = number_format($reimb_total, 2, ',', '');
 
 // Finalise output table
-$html .= "<tr><td><strong>Total:</strong></td><td><strong>$r_total $cur</strong></td>";
+$html .= "<tr><td><strong>Total:</strong></td><td><strong>$reimb_total $currency</strong></td>";
 $html .= "<td colspan='5'></td></tr>";
 $html .= "</table>";
 if ($extra) {

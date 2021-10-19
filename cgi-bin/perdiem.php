@@ -32,8 +32,7 @@ $er = isset($_POST["er"]) ? $_POST["er"] : false;
 $catch = isset($_POST["catch"]) ? $_POST["catch"] : false;
 $extra = isset($_POST["extra"]) ? $_POST["extra"] : false;
 $mailopt = isset($_POST["mailopt"]) ? $_POST["mailopt"] : false;
-$home = isset($_POST["home"]) ? $_POST["home"] : false;
-$home_other = isset($_POST["home_other"]) ? $_POST["home_other"] : false;
+$defaults = isset($_POST["defaults"]) ? $_POST["defaults"] : false;
 $dest = isset($_POST["dest"]) ? $_POST["dest"] : false;
 $dest_other = isset($_POST["dest_other"]) ? $_POST["dest_other"] : false;
 $use = isset($_POST["use"]) ? $_POST["use"] : false;
@@ -100,40 +99,24 @@ function beautify_filename($filename) {
   $filename = trim($filename, '.-');
   return $filename;
 }
-/* Snippet End */ 
+/* Snippet End */
 
 
-// detect home country and set accodingly: currency, rates
-if ($home === 'de') {
-  $cur = " €";  // currency
-  $c_b = 0.2;   // breakfast rate
-  $c_l = 0.4;   // lunch rate
-  $c_d = 0.4;   // dinner rate
-  $c_flat = 0;  // flat rate (money which employee gets even if all meals are paid)
-} elseif ($home === 'se' ) {
-  $cur = " SEK";
-  $c_b = 0.15;
-  $c_l = 0.35;
-  $c_d = 0.35;
-  $c_flat = 0.15;
-} elseif ($home === 'other') {
-  $home_other = explode("/", $home_other);
-  $cur = " " . $home_other[0];
-  $c_b = $home_other[1];
-  $c_l = $home_other[2];
-  $c_d = $home_other[3];
-  $c_flat = $home_other[4];
-}
+// Take currency and meal rates for the default country. Other home countries are not supported.
+$defaults = explode("/", $defaults);
+$cur = " " . $defaults[0];            // currency
+$c_b = intval($defaults[1]);    // breakfast rate
+$c_l = intval($defaults[2]);    // lunch rate
+$c_d = intval($defaults[3]);    // dinner rate
+$c_flat = intval($defaults[4]); // flat rate (money which employee gets even if all meals are paid)
 
 // eligible amount per day
 if ($dest === 'other') {
   $dest = $dest_other;  // if other destination, just take this value
 } else {
-  $pattern = "/" . $home . "=([0-9.]+)?\/([0-9.]+)?/";  // define pattern something like "/de=12/24/"
+  $pattern = "/([0-9.]+)?\/([0-9.]+)?/";  // define pattern something like "/12/24/"
   $dest = preg_match($pattern, $dest, $match, PREG_OFFSET_CAPTURE); // actually search for it
-  $dest = $match[0][0]; // matches are on 2nd level inn an array
-  $dest = explode('=', $dest);  // now separate at the "="
-  $dest = $dest[1];   // take the second half of it "12/24"
+  $dest = $match[0][0]; // matches are on 2nd level in an array
 }
 
 // dest -> epd (half/full amount)
@@ -298,7 +281,7 @@ if ($extra) {
   $html .= "<p>Extra remarks: <br />$extra</p>";
 
   $email_body .= "
-  
+
 The sender added the following comment:
 
 $extra";

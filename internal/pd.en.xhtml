@@ -40,15 +40,17 @@
       you will have to uncheck those meals which FSFE paid for, e.g. by
       paying the hotel room incl. breakfast.
     </p>
-    
+
     <p>
       The outward and return travel day are calculated with a reduced
       per diem amount, according to the legislation of your residence
       (currently Germany is pre-defined). Please make sure that you
       know whether a certain day counts as half/travel or full day.
     </p>
-    
+
     <form action="/cgi-bin/perdiem.php" method="post">
+      <!-- Define default settings and rates. Currently Germany -->
+      <input type="hidden" name="defaults" value="€/0.2/0.4/0.4/0" />
 
       <h2>1. Set general options</h2>
 
@@ -59,6 +61,7 @@
           <option value="Alexander Sander|alex.sander">Alexander Sander</option>
           <option value="Bonnie Mehring|bonnie">Bonnie Mehring</option>
           <option value="Erik Albers|eal">Erik Albers</option>
+          <option value="Fani Partsafyllidou|fani">Fani Partsafyllidou</option>
           <option value="Francesca Indorato|fi">Francesca Indorato</option>
           <option value="Gabriel Ku Wei Bin|gabriel.ku">Gabriel Ku Wei Bin</option>
           <option value="Lucas Lasota|lucas.lasota">Lucas Lasota</option>
@@ -85,29 +88,15 @@
         </div>
       </div>
 
-      <h2>2. Select your own country</h2>
-
-      <!-- if you add new countries, the respective settings have to be set in PHP file -->
-      <div class="form-group">
-        <label class="radio-inline">
-          <input type="radio" name="home" value="de" checked="checked" /> Germany
-        </label>
-        <label class="radio-inline">
-          <input type="radio" name="home" value="other" /> Other
-        </label>
-        <input type="text" name="home_other" placeholder="€/0.2/0.4/0.4/0" />
-        <p>(Other: currency and percentage rates: currency/breakfast/lunch/dinner/flat (e.g. "€/0.2/0.4/0.4/0" for Germany). If <em>Other</em> is selected, you'll have to set the values for the destination country in the next step manually)</p>
-      </div>
-      
-      <h2>3. Select the destination country</h2>
+      <h2>2. Select the destination country</h2>
 
       <!-- you can add new countries. For the individual amounts, set value="CC=$travel/$full,[...]" -->
       <div class="form-group">
         <label class="radio-inline">
-          <input type="radio" name="dest" value="de=14/28,se=314.5/629" checked="checked" /> Germany
+          <input type="radio" name="dest" value="14/28" checked="checked" /> Germany
         </label>
         <label class="radio-inline">
-          <input type="radio" name="dest" value="de=28/42,se=344/688" /> Belgium
+          <input type="radio" name="dest" value="28/42" /> Belgium
         </label>
         <label class="radio-inline">
           <input type="radio" name="dest" value="other" /> Other
@@ -115,8 +104,8 @@
         <input type="text" name="dest_other" placeholder="14/28" />
         <p>(Other: per diem travel/full (e.g. "14/28" for Germany -> Germany). <a href="https://www.reisekostenabrechnung.com/verpflegungsmehraufwand-2020/">(See the different rates per country.)</a></p>
       </div>
-      
-      <h2>4. Which meal did you pay yourself?</h2>
+
+      <h2>3. Which meal did you pay yourself?</h2>
       <table class="table table-striped">
         <tr>
           <th>Use</th>
@@ -132,14 +121,14 @@
           <td>Did you pay this meal yourself?</td>
           <td>Did you pay this meal yourself?</td>
         </tr>
-        
+
         <tr>
           <td colspan="5"><strong>Outward travel day (or if you travelled only one day)</strong></td>
         </tr>
         <tr class="descr">
           <td colspan="5">Please be aware of when a day counts as travel or full day!</td>
         </tr>
-        
+
         <tr>
           <td><input type="checkbox" name="use[out]" value="yes" checked="checked" /></td>
           <td><input type="date" name="date[out]" /></td>
@@ -204,7 +193,7 @@
           <td><input type="checkbox" name="lunch[7]" value="yes" checked="checked" /></td>
           <td><input type="checkbox" name="dinner[7]" value="yes" checked="checked" /></td>
         </tr>
-        
+
         <tr>
           <td colspan="5"><strong>Return travel day</strong></td>
         </tr>
@@ -221,7 +210,7 @@
         </tr>
       </table>
 
-      <h2>5. Extra remarks / notes</h2>
+      <h2>4. Extra remarks / notes</h2>
 
       <p>If necessary, you can add additional remarks and notes to the statement you send.</p>
 
@@ -229,7 +218,7 @@
         <textarea name="extra" class="form-control" rows="3"></textarea>
       </div>
 
-      <h2>6. Submit per diem report</h2>
+      <h2>5. Submit per diem report</h2>
 
       <p>If you would like to preview the results, either via email or
       only in the web interface, choose differing options below. To not
@@ -251,13 +240,8 @@
       <button type="submit" class="btn btn-primary">Submit per diem report</button>
 
     </form>
-    
+
   </body>
 
 
 </html>
-<!--
-Local Variables: ***
-mode: xml ***
-End: ***
--->

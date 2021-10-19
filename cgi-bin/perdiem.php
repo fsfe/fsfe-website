@@ -204,6 +204,11 @@ foreach ($use as $d => $day) {  // calculate for each day
       $reimb_day[$d] = $reimb_day[$d] - $maxamount_full * $rate_dinner;
     }
 
+    // Avoid negative amounts
+    if ($reimb_day[$d] < 0) {
+      $reimb_day[$d] = 0;
+    }
+
     // add on top of total reimbursement
     $reimb_total = $reimb_total + $reimb_day[$d];
 

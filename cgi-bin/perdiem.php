@@ -105,10 +105,9 @@ function beautify_filename($filename) {
 // Take currency and meal rates for the default country. Other home countries are not supported.
 $defaults = explode("/", $defaults);
 $cur = " " . $defaults[0];            // currency
-$c_b = intval($defaults[1]);    // breakfast rate
-$c_l = intval($defaults[2]);    // lunch rate
-$c_d = intval($defaults[3]);    // dinner rate
-$c_flat = intval($defaults[4]); // flat rate (money which employee gets even if all meals are paid)
+$c_b = floatval($defaults[1]);    // breakfast rate
+$c_l = floatval($defaults[2]);    // lunch rate
+$c_d = floatval($defaults[3]);    // dinner rate
 
 // eligible amount per day
 if ($dest === 'other') {
@@ -121,8 +120,8 @@ if ($dest === 'other') {
 
 // dest -> epd (half/full amount)
 $epd = explode('/', $dest);  // separate at "/"
-$epd_trav = $epd[0];  // first half
-$epd_full = $epd[1];  // second half
+$epd_trav = floatval($epd[0]);  // first half
+$epd_full = floatval($epd[1]);  // second half
 
 // Prepare output table
 if ($mailopt === "onlyme") {
@@ -178,38 +177,32 @@ foreach ($use as $d => $day) {  // calculate for each day
     $key = $d;
   }
 
-  // set variables
-  $r_day[$d] = 0;   // reimbursement for this day
-
   if ($use[$d] === 'yes') { // only calculate if checkbox has been activated (day in use)
     if ($d === 'out' || $d === 'return') {  // set amount of € for travel or full day
-      $eur = $epd_trav;   // total reimburseable amount for this half day
+      $r_day[$d] = $epd_trav;   // total max. reimburseable amount for this half day
     } else {
-      $eur = $epd_full;   // total reimburseable amount for this full day
+      $r_day[$d] = $epd_full;   // total max. reimburseable amount for this full day
     }
 
     // date
     if ($date[$d] === '' ) {
       $date[$d] = "Day " . $d;
     }
-    // breakfast ($r_b)
-    if ($break[$d] === "yes") {
-      $r_b = $eur * $c_b;
-      $r_day[$d] = $r_day[$d] + $r_b;
+    // breakfast
+    if ($break[$d] !== "yes") {
+      // if meal paid by someone else: total amount for today =
+      // MINUS total possible amount for a FULL day * rate for this meal
+      // no matter whether today is a full or a half day
+      $r_day[$d] = $r_day[$d] - $epd_full * $c_b;
     }
-    // lunch ($r_l)
-    if ($lunch[$d] === "yes") {
-      $r_l = $eur * $c_l;
-      $r_day[$d] = $r_day[$d] + $r_l;
+    // lunch
+    if ($lunch[$d] !== "yes") {
+      $r_day[$d] = $r_day[$d] - $epd_full * $c_l;
     }
-    // breakfast ($r_d)
-    if ($dinner[$d] === "yes") {
-      $r_d = $eur * $c_d;
-      $r_day[$d] = $r_day[$d] + $r_d;
+    // dinner
+    if ($dinner[$d] !== "yes") {
+      $r_day[$d] = $r_day[$d] - $epd_full * $c_d;
     }
-    // flat rate
-    $r_flat = $eur * $c_flat;
-    $r_day[$d] = $r_day[$d] + $r_flat;
 
     // add on top of total reimbursement
     $r_total = $r_total + $r_day[$d];

@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<html>
+  <version>1</version>
+
+  <head>
+    <title>Sulla sostenibilità del Software Libero</title>
+  </head>
+
+  <body class="toplevel freesoftware">
+
+    <h1>Sulla sostenibilità del Software Libero</h1>
+    <div id="introduction">
+      <p>
+		  Questo studio analizza e discute diversi aspetti a riguardo della sostenibilità del Software Libero. È parte della serie sui <a href="/freesoftware/">principi del Software Libero</a>. 
+      </p>
+
+    </div>
+
+
+    <h2 id="summary" class="painted">Sommario</h2>
+
+    <p><strong>Viene introdotta la definizione di sostenibilità del software e le sue caratteristiche. Viene mostrato come le caratteristiche insite del Software Libero siano sostenibili come lo è il loro impatto sull'infrastruttura informatica. Viene spiegata l'obsolescenza software e le possibilità di utilizzare il Software Libero per salvaguardare le risorse naturali sia prolungando la vita utile dell'hardware che attraverso il risparmio energetico. Infine, vengono delineate cinque direttive politiche necessarie per una società digitale più sostenibile.</strong>
+    </p>
+
+    
+  <div id="toc">
+	  <h3>Indice</h3>
+	  <ul>
+		  <li><a href="#examining-the-sustainability-of-free-software">(1) Esamina della sostenibilità del Software (Libero)</a></li>
+			  <ul>
+				  <li><a href="#software-as-a-resource-of-modern-societies">(1.1) Il software come una risorsa della società moderna</a></li>
+				  <li><a href="#about-the-sustainability-of-free-software">(1.2) Sulla sostenibilità del Software Libero</a></li>
+				  <li><a href="#designing-a-resource-free-licenses-and-copyleft">(1.3) Progettare una risorsa: licenze libere e copyleft</a></li>
+				  <li><a href="#conservation-and-loss-of-resources-a-question-of-reproducibility">(1.4) Conservazione e perdita di risorse: una questione di riproducibilità</a></li>
+				  <li><a href="#sustainable-use-of-the-resource-brainpower">(1.5) Uso sostenibile delle risorse intellettuali</a></li>
+			  </ul>
+          <li><a href="#free-software-and-it-infrastructures">(2) Software Libero e infrastrutture informatiche</a></li>
+			  <ul>
+				<li><a href="#free-software-is-the-base-for-sustainable-it-infrastructures">(2.1) L'impatto del Software Libero sulla sostenibilità delle infrastrutture informatiche</a></li>
+				<li><a href="#free-software-enables-sustainable-ecosystems">(2.2) Il Software Libero permette ecosistemi sostenibili</a></li>
+			  </ul>
+		  <li><a href="#free-software-sustainability-and-the-use-of-natural-resources">(3) Software Libero, sostenibilità e utilizzo delle risorse naturali</a></li>
+			  <ul>
+			<li><a href="#hardware-production-and-usage-times">(3.1) Estendere i tempi di utilizzo</a></li>
+			<li><a href="#energy-consumption">(3.2) Ridurre il consumo energetico</a></li>
+				<ul>
+					<li><a href="#autonomy-of-use">(3.2.1) Autonomia nell'utilizzo</a></li>
+					<li><a href="#uninstallability-and-modularity">(3.2.2) Possibilità di disinstallazione e modularità</a></li>
+					<li><a href="#reusability">(3.2.3) Riusabilità</a></li>
+				</ul>
+			</ul>
+			<li><a href="#what-can-politics-and-society-do-for-a-more-sustainable-digitization">(4) Cosa possono fare i politici e la società per una digitalizzazione più sostenibile?</a></li>
+				<ul>
+          <li><strong>Computer per uso generico:</strong> <a href="#general-purpose-computers">diritto di utilizzare sistemi operativi e software alternativi</a></li>
+          <li><strong>Accesso all'hardware:</strong> <a href="#access-to-hardware">dispositivi con interfacce, driver e standard aperti</a></li>
+          <li><strong>Libertà di scelta:</strong> <a href="#freedom-of-choice">i gatekeeper devono permettere la concorrenza di servizi e software</a></li>
+          <li><strong>Upcycling (riciclo creativo) del software:</strong> <a href="#upcycling-of-software">pubblicazione del codice sorgente con una licenza libera dopo la fine del supporto</a></li>
+          <li><strong>Infrastrutture pubbliche smart:</strong> <a href="#public-infrastructure-public-code">l'infrastruttura pubblica allestita con Software Libero e codice pubblico</a></li>
+        </ul>
+			<li><a href="#initiatives-around-the-sustainability-of-free-software">(5) Iniziative che riguardano la sostenibilità del Software Libero</a></li>
+      </ul>
+  </div>
+
+
+
+	<h2 id="from-free-software-to-sustainable-software">Dal Software Libero al software sostenibile</h2>
+	
+
+	<p>Il Software Libero (conosciuto anche come Software Open Source) è qualsiasi software che garantisca a qualsiasi utente le quattro libertà di utilizzare, studiare, condividere e migliorare il software<a class="fn" href="#fn1">1</a>. Queste <em>“quattro libertà”</em> sono conferite tramite una licenza software<a class="fn" href="#fn2">2</a>. Le licenze software definiscono le condizioni secondo le quali un programma può essere utilizzato e riutilizzato. Per essere Software Libero, il testo della licenza deve contenere almeno le asserzioni complete delle summenzionate quattro libertà a favore di qualsiasi utente senza alcuna limitazione. Puoi trovare sulle <a href="/">pagine del sito web della Free Software Foundation Europe</a> ulteriori informazioni su <a href="/freesoftware/">Cos'è il Software Libero</a> e come queste quattro libertà aiutano a sostenere altri diritti fondamentali come il diritto di parola, la libertà di stampa e la privacy.</p>
+
+
+
+
+	<p>Il software sostenibile, diversamente dal Software Libero, ha comunque bisogno di una sua precisa definizione. Questo breve studio vuole aiutare a capire il software sostenibile e a fare luce su come le quattro libertà del Software Libero supportano la sostenibilità tramite il software e la sostenibilità del software stesso.</p>
+
+<!--
+	<p>The study is separated into four chapters. In chapter one (<a href="#examining-the-sustainability-of-free-software">1</a>), the most important aspects covering the preservation of software as a resource for modern societies are examined the sustainability of Software is defined by using the United Nation’s definition of “sustainability”. In the second chapter (<a href="#free-software-and-it-infrastructures">2</a>) the previous findings are applied to discuss the sustainability of IT-infrastructures and Free Software ecosystems. In the third chapter (<a href="#free-software-sustainability-and-the-use-of-natural-resources">3</a>) the impact Free Software can have on reducing our consumption of natural resources is examined, in particular the possibilities of Free Software to overcome the dilemma of software obsolescence and other means. In chapter four (<a href="#what-can-politics-and-society-do-for-a-more-sustainable-digitization">4</a>) concrete policy recommendations are given that help to foster a sustainable use of our IT infrastructure and in the final chapter five (<a href="#initiatives-around-the-sustainability-of-free-software">5</a>) we conclude with some suggestions for further readings and other initiatives in the field of digital sustainability. </p>
+	
+-->
+
+	<h3 id="examining-the-sustainability-of-free-software">(1) Esamina della sostenibilità del Software (Libero)</h3>
+
+    <p>Cos'è la sostenibilità? Cosa caratterizza il consumo sostenibile di una risorsa? E cosa si applica nello specifico ad un consumo sostenibile della risorsa software? In questo capitolo elaboriamo come il software è diventato una risorsa per la società moderna (<a href="#software-as-a-resource-of-modern-societies">1.1</a>) e come preservare una attuale risorsa software per il futuro (<a href="#about-the-sustainability-of-free-software">1.2</a>). Esaminiamo brevemente l'influenza di diversi modelli di licenza (<a href="#designing-a-resource-free-licenses-and-copyleft">1.3</a>) per elaborare ulteriormente il potenziale salvataggio dell'ultima copia di una risorsa (<a href="#conservation-and-loss-of-resources-a-question-of-reproducibility">1.4</a>) e l'uso sostenibile di una risorsa chiamata "intelletto" (<a href="#sustainable-use-of-the-resource-brainpower">1.5</a>).
+	</p> 
+     
+     
+	<h3 id="software-as-a-resource-of-modern-societies">(1.1) Il software come una risorsa della società moderna</h3>
+	
+    <p>Il software è diventato una risorsa indispensabile per la società moderna. Che si tratti di produzione industriale, di scienza, di pubblica amministrazione, il nostro utilizzo dei media o anche le nostre comunicazioni di ogni giorno: tutte queste aree sono oggigiorno permeate dal software. Non è più immaginabile una moderna società senza software. <strong>L'esistenza del software e il suo accesso sono quindi diventati un prerequisito per la moderna organizzazione e il funzionamento sociale.</strong> E non solo la nostra organizzazione sociale è basata sul software, ma lo sono anche le nostre macchine e i nostri strumenti. <strong>L'hardware ha bisogno del software per funzionare e viceversa.</strong> Tutte le macchine e i sistemi automatici che abbiamo intorno – che sia a casa, al lavoro o nell'infrastruttura pubblica – necessitano del software come una indispensabile risorsa per fare ciò per cui sono stati progettati. 
+	</p>
+
+	<p>Entrambe le dipendenze – quella di far funzionare le nostre macchine e quella di far funzionare la nostra organizzazione sociale – rendono il software indispensabile per una società moderna e connessa.
+    </p>
+    
+    
+    <h3 id="about-the-sustainability-of-free-software">(1.2) Sulla sostenibilità del Software Libero</h3>
+    
+    
+    <p>Dal momento in cui riconosciamo il software come una fondamentale ed indispensabile risorsa per la società moderna, sorge anche la consapevolezza e l'urgenza di sviluppare – o, se necessario, consumare – questa risorsa nel modo più possibile sostenibile. Dopo tutto, la stabilità e la resilienza dell'organizzazione sociale moderna dipende da questa risorsa. Ma cosa caratterizza concretamente il consumo sostenibile di una risorsa? E cosa si applica specificatamente al consumo sostenibile di una risorsa software?</p>
+    
+	<blockquote>«Lo sviluppo sostenibile è lo sviluppo che soddisfa i bisogni del presente senza compromettere la capacità per le future generazioni di soddisfare i propri bisogni»</blockquote>
+    
+    <p>è una definizione di sostenibilità citata spesso dalla famosa [s]pubblicazione <em>"Il nostro futuro comune"</em><a class="fn" href="#fn3">3</a>. A riguardo delle risorse naturali limitate, una certa forma di privazione può derivare da questa definizione: le generazioni attuali dovrebbero moderare i loro consumi ed attingere da risorse limitate solo una quantità tale da lasciarne a sufficienza per le generazioni future.</p>
+    
+    <p>Il software, tuttavia, non è una risorsa limitata. <strong>Il software non può essere consumato in un modo tale da esaurire la quantità base della risorsa.</strong> Se vogliamo preservare il software odierno come risorsa per le future generazioni, non è necessario effettuare alcune rinuncia pratica, anzi, potrebbe invece essere utile l'approccio opposto.</p>
+    
+    <h4>Risorsa software</h4>
+    
+    <p>La “risorsa software” è inizialmente illimitata: il software può essere installato, copiato ed usato quanto spesso si desidera senza ridurre la quantità o la qualità della risorsa. Di fatto, a riguardo dell'ammontare della risorsa, è vero il contrario: se consideriamo un certo software, ad esempio il “sistema operativo X”, come una risorsa e una installazione di questo sistema operativo X come ammontare 1 di questa risorsa, allora il conteggio totale della “risorsa sistema operativo X” viene incrementata con ogni successiva installazione. Con la seconda installazione del sistema operativo X abbiamo 2 quantità di base di questo software, con una terza installazione 3 quantità di base e così via. <strong>Con ogni ulteriore installazione, ogni copia ed ogni utilizzo di uno specifico software aumenta la quantità di base della risorsa anziché decimarla.</strong> Questo significa che anziché abituarsi a farne a meno, come sarebbe con risorse finite, una possibile strategia per preservare per il futuro una risorsa dell'attuale software sarebbe quella di utilizzarla il più ampiamente possibile, che nella pratica significa installarla il più frequentemente possibile. Questo perché più è ampia la quantità di base di una risorsa, minore è il rischio di perderla o di esaurirla: da questo la semplice deduzione<a class="fn" href="#fn4">4</a>. Questo metodo però è in contraddizione con certi aspetti dell'uso sostenibile dell'hardware e del consumo energetico (come indicato nel capitolo 3), e quindi un metodo più promettente per sostenere il software potrebbe essere la completa archiviazione della risorsa come discusso più avanti in questo capitolo (1.5). </p>
+
+	<p>Comunque, con questo semplice paradigma vediamo già una caratteristica fondamentale a riguardo della sostenibilità del Software Libero: <strong>il Software Libero può essere copiato, condiviso e riutilizzato quanto spesso si vuole.</strong> 
+    </p>
+    
+    <p>Al contrario, questo non è possibile in alcun modo con il software proprietario perché la originale illimitata risorsa software viene mantenuta artificialmente limitata dal modello commerciale proprietario con l'utilizzo di accorgimenti tecnici e di regolamentazioni e politiche legali. Questi accorgimenti tecnici sono, ad esempio, il conteggio del massimo numero di copie o altre forme di gestione delle restrizioni digitali (DRM, Digital Restriction Management)<a class="fn" href="#fn5">5</a>, di solito implementate direttamente dagli stessi autori.  Questi accorgimenti tecnici sono spesso accompagnati e fatti rispettare da misure legali e altre regolamentazioni governative, solitamente intese a rafforzare le ideologie del XX e XXI secolo sui diritti di limitazione intellettuale<a class="fn" href="#fn6">6</a>, come il copyright e la legge sui brevetti<a class="fn" href="#fn7">7</a>. 
+    </p>
+    
+    <h4 id="intergenerational-equity">Equità intergenerazionale</h4>
+    
+    <p>Mentre il software proprietario restringe artificialmente le risorse che sono diventate di importanza fondamentale per l'organizzazione della nostra società e ne impedisce l'utilizzo al pubblico e alle future generazioni, il Software Libero apre e rimuove qualsiasi restrizione artificiosa a queste risorse. <strong>Le licenze di Software Libero garantiscono accesso senza restrizioni alla risorsa software non solo per tutte le persone, ma anche illimitatamente in termini di spazio e tempo.</strong> Dal momento che la disponibilità della risorsa non ha limiti temporali, parliamo anche di <em>“equità intergenerazionale”</em> che mira ad una equità tra le persone che sono vissute nel passato, che vivono oggi e che vivranno nel futuro<a class="fn" href="#fn8">8</a>. È esattamente questa equità intergenerazionale che ha trovato il suo spazio nel cuore del dibattito sulla sostenibilità ambientale fin da <em>“Il nostro futuro comune”</em> perché – come già citato – <em>«lo sviluppo sostenibile è lo sviluppo che soddisfa i bisogni del presente senza compromettere la capacità per le future generazioni di soddisfare i propri bisogni»</em>.
+    </p>
+
+
+    <h3 id="designing-a-resource-free-licenses-and-copyleft">(1.3) Progettare una risorsa: licenze libere e copyleft</h3>
+
+    <p>Dalle precedenti considerazioni è già chiaro che l'ammontare delle risorse – ad esempio duplicandole – di una risorsa software può essere progettata consapevolmente. <strong>Il software proprietario è progettato per limitare la risorsa al fine di artificialmente un mercato intorno ad una risorsa limitata. Le licenze libere permettono invece la realizzazione del pieno potenziale di una risorsa e permettono una distribuzione sostenibile nella direzione dell'equità intergenerazionale.</strong> L'autore di un software può quindi indiscutibilmente decidere sulla disponibilità del software come risorsa scegliendo ed utilizzando una licenza appropriata. 
+    </p>
+
+	<figure>
+    	<img src="https://pics.fsfe.org/uploads/big/081133c18029595190045053c0b28618.png"/>
+        <figcaption>Il software e altri lavori creativi sono pubblicati con uno dei tre principali concetti: copyleft, dominio pubblico e copyright</figcaption>
+	</figure>
+    <p>
+      Il mondo delle licenze libere è a sua volta suddiviso in diversi sottogruppi di licenze, principalmente in diverse licenze copyleft e licenze non protettive come anche la pubblicazione nel “dominio pubblico”<a class="fn" href="#fn9">9</a>. 
+    </p>
+
+    <p>
+      Tutte queste distinte forme di licenze libere permettono la pubblicazione del software utilizzando le possibilità di uso della risorsa attuale discusse sopra in termini della sua disseminazione e preservazione per il futuro. Le licenze non protettive come anche la pubblicazione nel dominio pubblico permettono però a qualsiasi utente di un software concesso con una siffatta licenza libera di farlo diventare successivamente una risorsa limitata e software proprietario. Questo significata che con le licenze non protettive e con il dominio pubblico, c'è sempre il rischio che ulteriori sviluppi del software facciano regredire e di nuovo artificialmente ridurre la quantità di risorse software attraverso l'utilizzo del copyright, della protezione dei brevetti o altre limitazioni dei diritti intellettuali, con la conseguenza che il software non verrebbe reso disponibile né alla generazione corrente né a quella futura. Come risultato, non sarebbe più raggiungibile l'equità intergenerazionale, il che significa che <strong>solo le licenze copyleft garantiscono che futuri sviluppi del software possano essere utilizzati in modo altrettanto sostenibile. </strong>
+    </p>
+
+
+    <h3 id="conservation-and-loss-of-resources-a-question-of-reproducibility">(1.4) Conservazione e perdita di risorse: una questione di riproducibilità</h3>
+
+    <p>Nel <a href="#software-as-a-resource-of-modern-societies">capitolo 1.1</a>, in un teorico esercizio mentale, la più ampia possibile distribuzione di software è stata indicata come modalità per ottenere la stessa risorsa. Questo approccio sembra però poco controllabile ed imprevedibile e più simile ad un gioco d'azzardo, perché a cosa servirebbero – in un altro teorico esercizio mentale – tutti i metodi di distribuzione liberi se, alla fine, tutti gli utenti decidessero di cancellare uno specifico software? Sarebbe anche poco pratico, perché sebbene l'utilizzo diffuso di software potrebbe essere infatti di aiuto per mantenerlo disponibile per il futuro, questo non è assolutamente necessario. <strong>In realtà, per un consumo sostenibile di software come una risorsa e della sua futura disponibilità, la distribuzione o la quantità di base della risorsa attuale non giocano un ruolo decisivo, ma lo gioca piuttosto la sua infinita riproducibilità.</strong> Perché finché almeno la quantità base 1 – inclusa la sua illimitata riproducibilità – è conservata con una licenza libera – nel migliore dei casi includendo la sua documentazione, il linguaggio, gli strumenti di compilazione e il relativo hardware o emulatore –, è sempre teoricamente possibile per le future generazioni creare e distribuire qualsiasi numero di copie in ogni momento da questa quantità base. <strong>Per la riproducibilità è quindi estremamente importante prevenire la “perdita dell'ultima copia”. </strong>
+    </p>
+
+ <h4>Eredità software</h4>
+
+    <p>Qui è dove <a href="https://www.softwareheritage.org/">"Software Heritage"</a> (eredità software) entra in gioco. E se sicuramente non è il solo approccio per archiviare risorse software, è un esempio veramente unico e completo che vale la pena di approfondire: Software Heritage è una non-profit sostenuta dall'UNESCO, la cui missione è «raccogliere, preservare e condividere tutto il software che è pubblicamente disponibile nella forma del codice sorgente».
+    </p>
+
+    <p>Al Software Heritage, il codice sorgente del software è raccolto in diversi modi. Uno di essi è rastrellare automaticamente le piattaforme che ospitano del codice, come GitHub o GitLab, ma Software Heritage permette anche ed <a href="https://www.softwareheritage.org/howto-archive-and-reference-your-code/">offre mezzi semplici per salvare il codice da altri sistemi di controllo di versione pubblici</a> in modo manuale. Entrambi i metodi puntano ad offrire degli accurati archivi che tengono traccia delle origini del software archiviando e storicizzando tutta la storia dello sviluppo incluse le preziose e strutturate informazioni dei metadati. Essi gestiscono anche <a href="https://www.softwareheritage.org/swhap/">il processo di acquisizione dell'eredità software</a> per salvare il vecchio codice memorizzato su diversi supporti fisici e in varie versioni prima che venissero introdotte le piattaforme online che ospitano il codice. 
+    </p>
+
+    <p>Di conseguenza, la stessa infrastruttura del Software Heritage sottolinea un modello di sviluppo sostenibile in quanto anche tutto il software sviluppato per il processo di archiviazione viene rilasciato come Software Libero.</p>
+
+    <h4>Perdita della conoscenza proprietaria</h4>
+
+    <p>Come argomentato pocanzi, una libera distribuzione decentralizzata e un modello di sviluppo software con una licenza libera e ancor più la sua completa archiviazione sono metodi promettenti per prevenire la “perdita dell'ultima copia”. Con il software proprietario, d'altro canto, la perdita dell'ultima copia è un pericolo reale. I tre modi più comuni per una tale perdita di software sono:</p>
+
+    <ul>
+      <li>cancellazione del software o perdita del supporto dati</li>
+      <li>perdita della conoscenza del software e dell'accesso al codice sorgente</li>
+      <li>fine della fornitura del software o del supporto, l' “obsolescenza pianificata”</li>
+    </ul>
+
+    <p>Il primo caso – la cancellazione del software o la perdita del supporto dati – è un vero pericolo, ma in fin dei conti può portare alla completa perdita di una risorsa – ad esempio il menzionato sistema operativo X – solo se questa copia è veramente l'ultima copia della risorsa. Questo caso è diventato estremamente raro nei sistemi distribuiti e collegati in rete dei nostri giorni, ed è stato riportato qui principalmente per ragioni di completezza. Va anche notato che le possibilità di condivisione senza restrizioni del Software Libero incoraggiano virtualmente copie frequenti e quindi rendono il caso dell'esistenza dell'ultima copia ancora più improbabile.</p>
+
+ <h4>Perdita dell'accesso ai sorgenti</h4>
+
+    <p>Il secondo caso della lista precedente <strong>– la perdita della conoscenza del software e dell'accesso al codice sorgente o agli strumenti necessari a compilare il binario dal sorgente – è forse la più comune e probabile causa di perdita permanente del software.</strong> Accade generalmente quando l'azienda che sviluppa software proprietario va in bancarotta e il software e il suo codice segreto e la documentazione associata che è stata fino ad ora sviluppata non è stata archiviata o pubblicata senza che sia stato realizzato un metodico sistema di gestione della conoscenza. In questo modo, il codice del software che è stato sviluppato per anni è spesso irrecuperabilmente perso perché nessuno può più leggere o capire il codice, nemmeno chi lo ha pubblicato dal momento che non esiste più. Questo ha anche un impatto su tutto il software e le infrastrutture che dipendono da esso (confronta il <a href="#free-software-and-it-infrastructures">capitolo 2</a>) e la distruzione o la perdita di conoscenza su un singolo componente software può pregiudicare interi sistemi informatici.
+    </p>
+
+    <p>Il Software Libero, dall'altra parte, non ha questo problema: <strong>una volta pubblicato con una licenza libera, il codice è visibile a chiunque ora e in futuro. Ed anche una improvvisa bancarotta dell'azienda che sviluppava il software non può portare alla completa perdita della conoscenza del codice attuale.</strong> È vero che potrebbe esserci un breve vuoto nel quale un progetto software non viene ulteriormente sviluppato dall'autore originale. Tuttavia, qualsiasi altra terza parte ha la possibilità di capire il codice così come di utilizzarlo senza ulteriori sviluppi o di sviluppare ulteriormente il software a piacimento. Va però fatto notare che, per altre ragioni, non sempre è economicamente vantaggioso o consigliabile sviluppare ulteriormente un progetto software invece di (ri-)scriverlo da capo<a class="fn" href="#fn10">10</a>. Una tale decisione va presa caso per caso, ma non rilasciare il codice dopo la bancarotta di sicuro rimuove completamente questa possibilità.
+    </p>
+
+ <h4 id="planned-obsolescence">Obsolescenza programmata</h4>
+
+    <p>Infine, <strong>uno dei casi più comuni è il terzo della precedente lista: la fine della fornitura del software o la fine del supporto per il software.</strong> Di regola, questo modello commerciale lineare è la base della logica di mercato del software proprietario: la vendita di un nuovo prodotto deve essere promossa svalutando i prodotti attuali<a class="fn" href="#fn11">11</a>. Il software di una certa versione (nell'esempio sopra, il sistema operativo X) non è più supportato, e quindi gli utenti sono obbligati a comprare la nuova versione. 
+    </p>
+
+    <p>Questo approccio è problematico sotto diversi aspetti. Prima di tutto, gli utenti vengono messi fuori gioco e, anziché dare loro il controllo della propria tecnologia, sono obbligati a comprare nuove versioni invece di continuare ad utilizzare quella esistente. Dal momento che non tutti necessariamente vogliono o possono seguire questo approccio, c'è un problema di sicurezza per chi non aggiorna alla nuova versione: possono essere infatti trovati bug nelle versioni non più mantenute del software che possono essere usati da terze parti per entrare nel sistema o nell'applicazione dell'utente per rubare informazioni o far fare all'applicazione operazioni non volute.</p>
+
+    <p>D'altra parte, obbligare ad aggiornare la versione può portare alla svalutazione di hardware che ancora funziona. Questo è il caso di quando la nuova versione non può più essere fatta girare sul vecchio hardware. In definitiva, gli utenti sono combattuti con un dilemma: o continuare ad utilizzare il proprio attuale e funzionante hardware, ma vivendo con il rischio di sicurezza continuando ad usarlo senza nessun ulteriore aggiornamento di sicurezza, oppure essere obbligati a comprare un nuovo hardware solo per poter utilizzare il nuovo aggiornamento software. <strong>Questo dilemma è conosciuto come "obsolescenza software"</strong> (confronta anche il <a href="/freesoftware/sustainability/sustainability.html#software-obsolescence">capitolo 3</a>).
+    </p>
+
+    <p>
+      <strong>Il Software Libero risolve questo dilemma dal momento che non può essere forzata la fine del supporto.</strong> Invece, il Software Libero può essere usato da tutti per tempo e spazio illimitati e nessun soggetto singolo ha il pieno controllo sul software. Il Software Libero offre l'equità intergenerazionale (vedi <a href="#intergenerational-equity">capitolo 1.2</a>) . E se anche con il Software Libero può capitare il caso in cui un progetto software non riceve più aggiornamenti, questo è fondamentalmente il risultato del sotto utilizzo del software – ad esempio il mutuo calo di interesse dell'utente – e soprattutto l'interesse non può imporre imposto. Il che significa che se un progetto software non è più rilevante o è soppiantato da software migliore, allora l'interesse decresce e lo sviluppo di Software Libero può anche essere interrotto. E se il software non è più utilizzato, allora non ha più utenti, e se anche potrebbe avere falle di sicurezza l'impatto non ha alcuna rilevanza nella pratica.</p>
+
+    <p>Ma la cosa più importante è che qualsiasi utente con sufficiente competenza può in ogni momento decidere si sviluppare ulteriormente e riprodurre il vecchio software, anche senza il permesso dell'autore originale. La disponibilità di Software Libero è quindi a servizio della sostenibilità sotto due punti di vista: nella salvaguardia della stessa risorsa software e nel prolungamento della vita utile dell'hardware che dipende o è progettato su questo software. Quest'ultimo punto, la rilevanza del Software Libero per la vita utile dell'hardware, è approfondito nel <a href="#free-software-sustainability-and-the-use-of-natural-resources">capitolo 3</a>.
+    </p>
+
+
+
+<h3 id="sustainable-use-of-the-resource-brainpower">(1.5) Uso sostenibile delle risorse intellettuali</h3>
+
+    <p>Anche se è diventato complicato misurare la "risorsa intellettuale", le possibilità di riutilizzo del Software Libero permettono un uso sostenibile di questa importante risorsa umana: <strong>gli sviluppi software richiedono molto tempo e molto lavoro creativo ed intellettuale, e le possibilità di utilizzare ulteriormente il Software Libero permette a software o componenti software già sviluppati e ben costruiti di essere riutilizzati.</strong> Gli sviluppatori possono sviluppare architetture informatiche “sulle spalle dei giganti” invece di dover reinventare ogni volta la ruota.
+    </p>
+
+<h2 id="free-software-and-it-infrastructures">(2) Software Libero e infrastrutture informatiche</h2>
+
+<h3 id="free-software-is-the-base-for-sustainable-it-infrastructures">(2.1) L'impatto del Software Libero sulla sostenibilità delle infrastrutture informatiche</h3>
+
+    <p>
+	  <strong>Il software viene creato in dipendenza da e con altro software.</strong> Da una parte, ci sono le dipendenze che sorgono quando si fa un “fork” di una risorsa, dove “fork” (letteralmente: diramazione) significa creare uno sviluppo parallelo separato da un esistente sviluppo software. Questo può accadere perché il software con licenza libera può essere utilizzato da qualsiasi azienda, gruppo o anche una singola persona in una certa versione per progettare e pubblicare uno sviluppo parallelo, con la sola accortezza di utilizzare nome e marchio differenti. Debian, ad esempio, è una nota distribuzione GNU/Linux che serve come base per altre note distribuzioni GNU/Linux. Gli sviluppi fatti in Debian sono quindi riportati in tanti altri fork e distribuzioni, e viceversa. Tutti queste distribuzioni vengono sviluppate in dipendenza le une dalle altre.</p>
+
+        
+  <figure>
+    <img src="https://pics.fsfe.org/uploads/big/0ea350b850be62d7b69a713e7798c18a.png"/>
+    <figcaption>L'immagine mostra un estratto della composizione <a href="https://de.wikipedia.org/wiki/Datei:Linux_Distribution_Timeline.svg">in forma visuale di diverse distribuzioni GNU / Linux</a> e i loro “fork”. (Andreas Lundqvist, Muhammad Herdiansyah, Fabio Loli / GFDL 1.3) </figcaption>
+  </figure>
+
+
+    <h4>Interdipendenze critiche</h4>
+    
+    <p>Questo diventa ancor più ovvio con software che è sviluppato all'interno o per l'utilizzo in un ambiente specifico. Ad esempio, un'applicazione che viene sviluppata per uno specifico sistema operativo di solito richiede anche lo stesso sistema operativo affinché l'applicazione possa essere in grado di funzionare. Il sistema operativo a sua volta ha bisogno di strati più a basso livello, ad esempio il kernel (il "cuore" del sistema operativo), per essere in grado di trasmettere le operazioni software all'hardware. Ancora, l'hardware ha bisogno dei propri firmware specifici per essere in grado di funzionare, di interconnettersi, e così via. <strong>Tutti questi livelli sono interdipendenti e possono </strong><strong><strong>eventualmente </strong>essere utilizzati individualmente solo in misura limitata, e non sempre questo è addirittura possibile. </strong>
+    </p>
+
+    <p>In aggiunta, molti programmi che appaiono essere uniformi sono in realtà la combinazione di vari moduli software in una struttura che li raggruppa. I sistemi operativi sono un tipico esempio di raccolta di singole applicazioni, ma le singole applicazioni sono a loro volta solitamente delle combinazioni di moduli più piccoli, e così via. Alla fine, i singoli moduli o le combinazioni di moduli sono integrate in diversi ambienti e, per via del loro riutilizzo ed impiego frequente, diventano di fondamentale importanza per diverse architetture informatiche. Ad esempio, ci sono numerosi browser in diversi sistemi operativi, ma nel cuore dei vari browser ci sono oggigiorno effettivamente solo due differenti motori Javascript: a parte Mozilla Firefox e i suoi derivati, tutti gli altri browser, come Chrome, Opera, Safari ed altri, utilizzano il motore v8 per questo scopo. Più software viene a sua volta costruito basandosi reciprocamente su altri e, soprattutto, più spesso vengono riutilizzati singoli moduli e meno diverse opzioni sono disponibili per i singoli componenti, più alta diventa la criticità della dipendenza e la possibilità di un singolo punto di vulnerabilità nei moderni sistemi informatici.
+    </p>
+
+  <figure>
+    <img src="https://pics.fsfe.org/uploads/big/a14721ad9bfd93625ae92618fe4ca028.png"/>
+    <figcaption>“Dipendenza” CC-BY-NC 2.5 by <a href="https://xkcd.com/2347/">XKCD</a> </figcaption>
+  </figure>
+    
+ <h4>Indipendenza con il Software Libero</h4>
+    
+	<p><strong>Il rischio di dipendenze critiche e di singoli punti di vulnerabilità possono ridurre l'utilizzo del Software Libero.</strong> Anche se, come indicato prima, può accadere anche con il Software Libero che il software non venga più sviluppato o aggiornato, questo non significa comunque che l'intera architettura informatica debba collassare.</p>
+	
+  <p>D'altro canto, come già descritto, di regola il Software Libero non viene ulteriormente sviluppato perché l'interesse generale di quello specifico software – e i numeri del suo utilizzo – sono scemati, e quindi poche persone dovrebbero essere impattate dall'interruzione dello sviluppo. Detto in altro modo, è improbabile che gli autori originali fermino lo sviluppo di un programma molto utilizzato, e, in particolare, è improbabile che venga seguita una logica di mercato lineare, ad esempio svalutando la versione attuale per promuovere la distribuzione di una nuova versione del software.</p>
+	
+  <p>Potrebbero esserci comunque altre ragioni per le quali uno sviluppo di Software Libero venga interrotto. Questo è particolarmente vero per progetti che sono portati avanti da una o poche persone. Ma se anche dovesse accadere un'interruzione senza preavviso di uno specifico sviluppo software, contrariamente al software proprietario dove la cessazione dello sviluppo è accompagnata da una grande perdita di conoscenza, con il Software Libero il software può essere ulteriormente utilizzato e – con le appropriate risorse ed investimenti – anche ulteriormente sviluppato da terze parti. Da non dimenticare, poi, che il software può almeno essere adeguatamente archiviato (vedi "Software Heritage" nel <a href="conservation-and-loss-of-resources-a-question-of-reproducibility">capitolo 1.4</a>). 
+  </p>
+  
+  <p>
+	<strong>A differenza del software proprietario, nessun singolo soggetto può prevenire lo sviluppo o la fornitura del software. Questo in particolare significa che nessun soggetto terzo ha il controllo su infrastrutture critiche di altri.</strong> Questa è la condizione per progettare una infrastruttura informatica sostenibile.
+  </p>
+ 
+  <p>Come spiegato nel <a href="examining-the-sustainability-of-free-software">capitolo
+	1</a>, qualsiasi progetto di Software Libero può essere utilizzato da chiunque in qualsiasi momento per qualsiasi scopo. La risorsa può essere utilizzata illimitatamente in termini di spazio e tempo. <strong>Con il Software Libero, le dipendenze da singoli soggetti sono drasticamente ridotte, mentre la disponibilità dei singoli moduli è garantita e la stabilità delle infrastrutture informatiche è quindi fondamentalmente consolidata.</strong> Tutti queste tre proprietà formano le basi di una infrastruttura digitale sostenibile e del pieno controllo digitale. Il Software Libero è quindi un componente base di sistemi informatici sostenibili.
+  </p>
+  
+<h3 id="free-software-enables-sustainable-ecosystems">(2.2) Il Software Libero permette ecosistemi sostenibili</h3>
+  
+  <p>Dal momento che nessun singolo soggetto può fermare lo sviluppo o la diffusione del Software Libero, applicazioni di Software Libero molto utilizzate fanno spesso crescere i propri “ecosistemi” nei quali tutti i soggetti coinvolti hanno un interesse nel mantenere questo software come una risorsa comune e per i loro utilizzi individuali: la somma di casi d'uso individuali genera sinergia ed aumenta il numero di utilizzi e il potenziale sviluppo di Software Libero. In uno schema semplificato, possiamo vedere il mutuo accrescimento di utenti e sviluppatori, che beneficiano l'uno dell'altro. Questo significa che più utenti ha un progetto software, più installazioni rimangono attive a quindi più diversi casi d'uso vengono sperimentati dal software, che a sua volta può generare interesse per molti sviluppatori ad investire nel software perché gli alti numeri di utilizzo ne giustificano l'investimento in termini di tempo e sforzi. E più sono gli sviluppatori che effettivamente investono tempo nel software, più è probabile che verranno fornite funzionalità o migliore stabilità, che a sua volta significa che ancora più utenti saranno interessati al software.</p>
+  
+  <p>La stessa logica si applica ad ambienti di applicazioni reali, solo che ci saranno altri soggetti oltre ai soli utenti e sviluppatori. 
+	<strong>In termini di sostenibilità, è fondamentale che tutti i soggetti – in maniera cosciente o meno – contribuiscano insieme alla salvaguardia del Software Libero come propria risorsa comune.</strong>	 
+  </p>
+   
+  <figure>
+	<img src="https://pics.fsfe.org/uploads/big/5087b197a6d6e215ec23c7a68f81a65b.png"/>
+    <figcaption><a href=""></a></figcaption>
+  </figure>
+  
+  <p>Nell'illustrazione qui sopra vediamo diversi soggetti che progettano congiuntamente l'utilizzo e forse anche lo sviluppo di un progetto software, o che semplicemente utilizzano il software. Solitamente ci sono gli utenti e gli sviluppatori. Con la maggior parte del software, comunque, ci sono in aggiunta anche un numero di terze parti che hanno un interesse nello sviluppo del software o almeno nel mantenerlo, ad esempio aziende, scienziati, iniziative e altre terze parti.</p>
+
+<h4>“Sostenere una risorsa insieme”</h4>
+
+  <p>Consideriamo il noto Software Libero Wordpress come esempio: 
+	Wordpress è un software per creare blog che è anche utilizzato per progettare siti. Ci sono certamente utenti e sviluppatori di Wordpress che sono interessanti nell'utilizzo e nell'ulteriore sviluppo del software. In aggiunta, però, ci sono ad esempio anche aziende che offrono il supporto a Wordpress – ad esempio per l'installazione, la manutenzione o la personalizzazione per i clienti – e quindi hanno un interesse economico nell'ulteriore sviluppo di Wordpress, oppure scienziati che, ad esempio, vogliono inserire nuovi metodi per visualizzare i dati ad una installazione di Wordpress utilizzata nel sito dell'università. In aggiunta, ci sono terze parti che non hanno a che fare con il concreto utilizzo del software ma hanno comunque un interesse nell'attuale sviluppo ed esistenza della risorsa, ad esempio aziende che noleggiano lo spazio web come attività principale del loro business ma – magari per avere un vantaggio rispetto alla concorrenza – offrono anche delle installazioni automatizzate di Wordpress come servizio, e così via.</p>
+  
+  <p>Tutti questi differenti soggetti hanno differenti interessi o modi di utilizzare la “risorsa Wordpress”, ma quello che hanno in comune è un interesse nell'ulteriore sviluppo della risorsa e nella salvaguardia della stessa. La maggior parte di questi soggetti hanno investito tempo ed energia nella risorsa ed hanno costruito la propria infrastruttura o modello commerciale su di essa. Come spiegato nel <a href="free-software-is-the-base-for-sustainable-it-infrastructures">capitolo 2.1</a>, una perdita della risorsa minaccerebbe l'intera infrastruttura informatica. Per questo tutti i soggetti hanno lo stesso interesse, che non si limita alla salvaguardia della risorsa comune, ma che venga anche ulteriormente sviluppata e che cambiamenti esterni nel mondo informatico possano persistere. Nell'esempio di Wordpress, questo includerebbe il passaggio dello sviluppo dal desktop ai sistemi mobili, o da HTML 4 ad HTML 5.</p>
+  
+  <p>
+	<strong>Questo mostra come il Software Libero sia un modello di sviluppo sostenibile proprio perché non c'è un singolo soggetto che può limitarlo e ricavarne un profitto in modo particolare.</strong> Invece, il patrimonio generato dalla risorsa è condiviso con diversi soggetti che possono progettare i propri sviluppi e le proprie applicazioni. Queste caratteristiche condivise delle risorse di Software Libero creano un interesse comune nella salvaguardia del bene comune e, allo stesso tempo, creano effetti sinergici simili a quelli dei naturali ecosistemi: viene incentivato un alto utilizzo della risorsa per ulteriori sviluppi della stessa, che crea ottime opportunità per casi di sfruttamento economico, che a loro volta motivano gli investimenti nella risorsa ed attraggono ancora più utenti, e quindi l'alta popolarità tra i vari utenti attrae interesse di ricercatori sulla sicurezza, e così via.</p>
+  
+  <p>Ma anche tra concorrenti, il Software Libero è in grado di fornire una risorsa comune sostenibile, come possiamo vedere ad esempio nel kernel Linux. Il kernel Linux è un'interfaccia che traduce le istruzioni del software in istruzioni per lo specifico hardware. Nel 1991, Linus Torvalds ha iniziato lo sviluppo del kernel Linux come singola persona e lo ha rilasciato come Software Libero con la licenza GPLv2<a class="fn" href="#fn12">12</a>. Rapidamente, altri sviluppatori hanno contribuito tramite la rete Internet lavorando assieme e creando il kernel Linux. Oggi, il kernel Linux è indiscutibilmente il kernel più utilizzato in tutto il mondo. Lo troviamo in quasi tutte le forme di dispositivi digitali, dai router ai frigoriferi, dagli smartphone e portatili ai supercomputer<a class="fn" href="#fn13">13</a>. Questo è stato possibile grazie a quelli che ora sono centinaia e migliaia di programmatori di tutto il mondo, ognuno dei quali continua a contribuire ed ad aiutare a migliorare ulteriormente il kernel Linux come risorsa condivisa per tutti. Tra chi ha contribuito ci sono alcuni studenti e volontari, ma principalmente troviamo impiegati di aziende informatiche globali come Huawei, Intel, Red Hat o Google<a class="fn" href="#fn14">14</a>. Questo significa che aziende che sono in competizione l'un l'altra nel mercato libero hanno creato in questo caso una risorsa comune, che a sua volta può essere sfruttata da tutti – inclusa la propria concorrenza – per generare profitti. Questo non va in contraddizione, ma è un business studiato a tavolino: attraverso la risorsa comune, queste aziende evitano il pericolo che i propri sviluppi falliscano o diventino obsoleti, e traggono profitto dallo sviluppo di altri in quanto non devono inventare o imitare ripetutamente ogni nuova idea. Indipendentemente dal fatto che sia intenzionale o meno, tutti coloro che contribuiscono creano una sostenibilità digitale per la risorsa comune "kernel software" sviluppando ulteriormente il kernel Linux.</p>
+
+  <p>E a prescindere dalla direzione nella quale si sviluppano rami individuali o l'intero ecosistema di una soluzione di Software Libero, <strong>vengono sempre mantenute le caratteristiche sostenibili del Software Libero illustrate sin qui: tutti i soggetti mantengono il massimo controllo e possono far scalare ed utilizzare la risorsa software come più desiderano. Non ci sono limitazioni all'uso in termini di quantità o qualità.</strong> Sono esattamente queste proprietà che rendono il Software Libero un'eccellente base sulla quale costruire la propria infrastruttura sostenibile. Dopo tutto, anche se un componente critico non dovesse più venire sviluppato, può essere sviluppato ulteriormente dallo stesso soggetto che ha interesse a farlo.</p>
+  
+  <p>Ancora, i modelli di sviluppo del Software Libero e gli ecosistemi che lo riguardano non funzionano senza che ci sia una loro cura, ed è per questo che molti progetti pongono particolare attenzione che finanziamenti, marketing, modelli di gestione e altri aspetti economici siano sostenibili.	<a href="#sustainoss">Sustain</a> è un'iniziativa per riunire esperti da vari settori per discutere questi aspetti di sostenibilità del Software Libero. Non sono però connessi ai benefici ecologici del Software Libero, e quindi non verranno trattati in questo breve studio.</p>
+ 
+ <h2 id="free-software-sustainability-and-the-use-of-natural-resources">(3) Software Libero, sostenibilità e utilizzo delle risorse naturali</h2>
+ 
+   <p>Qualsiasi cosa digitale nasce nel triangolo di software, hardware ed energia. Ma mentre il software è immateriale, sia l'hardware che l'energia richiedono risorse naturali. Ci sono vari punti di partenza dai quali è possibile ridurre il bisogno di risorse naturali per la digitalizzazione. Tra questi, l'utilizzo del Software Libero può ripagare in svariate dimensioni. In particolare, il Software Libero può aiutare direttamente ad aumentare il tempo di utilizzo di un hardware e quindi ridurre considerevolmente il consumo di risorse nella nostra società digitale.</p>
+   	
+   <figure>
+	<img src="https://pics.fsfe.org/uploads/big/35ee4a8e156b4feb136e9dcb2df60315.png"/>
+    <figcaption></figcaption>
+  </figure>
+  
+ <h3 id="hardware-production-and-usage-times">(3.1) Estendere i tempi di utilizzo</h3>
+
+  <p>Un problema fondamentale per una progettazione sostenibile della digitalizzazione è il tempo di utilizzo dell'hardware, spesso troppo breve. Questi brevi periodi di utilizzo sono dal punto di vista ecologico doppiamente logoranti, sia durante la produzione che nella dismissione.</p>
+  
+  <p>
+	<strong>Il risultato dell'esistente produzione e della sua distribuzione globale è di gran lunga il più grande ammontare di consumo energetico per l'hardware, e la CO2 prodotta in questi processi è di molte volte superiore a quella utilizzata durante la reale durata del prodotto<a class="fn" href="#fn15">15</a></strong>. In aggiunta, la produzione di molti prodotti tecnologici richiede anche l'utilizzo di terre rare, la cui estrazione a sua volta crea massivi problemi sociali in alcuni continenti, da condizioni lavorative disumane a guerre territoriali.</p>   	
+
+  <p>Se non vogliamo abbandonare gli attuali standard di vita ed gli ulteriori sviluppi nella digitalizzazione, ma vogliamo nel contempo mantenere il nostro pianeta vivibile, è necessario un sostanziale approccio per un utilizzo più sostenibile della nostre risorse, e questo è fattibile con l'incremento del tempo di utilizzo del nostro hardware. Per più tempo utilizziamo l'hardware esistente, meno nuovo hardware sarà necessario. Statista (il portale delle statistiche di mercato) afferma che nel solo 2020 sono stati venduti (e quindi prodotti) <a href="https://www.statista.com/statistics/755388/global-smartphone-unit-sales-by-region/">più di 1,5 miliardi di smartphone</a>, e numeri simili si sono visti negli ultimi 5 anni. Assumendo che solo un terzo degli utenti di smartphone estenda l'utilizzo del proprio dispositivo per un anno in più, questa azione ridurrebbe già la produzione di nuovi smartphone di centinaia di milioni di unità all'anno e quindi verrebbe ridotto significativamente il relativo consumo di energia.</p>
+
+  <p>Da non dimenticare che un tempo di utilizzo prolungato dell'hardware aiuta anche a migliorare il nostro bilancio ambientale dall'altro capo del ciclo produttivo, specificatamente nella produzione di rifiuti elettronici. L'<a href="http://ewastemonitor.info/">osservatorio globale dei rifiuti elettronici</a> ha calcolato che solo nel 2019 sono stati prodotti globalmente oltre 50 milioni di tonnellate di rifiuti elettronici. Dal 2014, l'ammontare annuale di rifiuti elettronici è aumentato più di un quinto. A sua volta, solo il 17% di questi sono stati riciclati. La maggior parte degli scarti – incluse ampie parti del riciclo – finisce nei paesi del sud del mondo, dove vengono ulteriormente sfoltiti in condizioni disumane per cercare di separare gli ultimi materiali grezzi ancora utilizzabili.</p>
+  
+<h4 id="software-obsolescence">Obsolescenza software</h4>
+
+  <p>Ci sono spesso numerose ragioni che abbreviano il tempo di utilizzo dell'hardware, come il marketing, i periodi contrattuali, le tendenze e altre influenze. Una ragione decisiva – e allo stesso tempo sfortunatamente troppo poco evidenziata – è comunque la cosiddetta “obsolescenza software”: <strong>l'obsolescenza software avviene quando un produttore di software termina il supporto per il software attuale così che nessun ulteriore supporto viene fornito e la versione successiva allo stesso tempo non può essere installata sull'hardware più vecchio.</strong> In questo caso, il produttore fa nascere nel consumatore il dilemma se comprare un nuovo hardware o se rimanere con una versione software obsoleta e con potenziali problemi di sicurezza (vedi anche il <a href="/freesoftware/sustainability/sustainability.html#planned-obsolescence">capitolo 2</a>).
+  </p>
+  
+  <p>Per molti produttori, l'obsolescenza software programmata è parte della loro strategia di mercato, perché vengono così creati o imposti incentivi a comprare nuovo hardware. L'obsolescenza software permette ai produttori di vendere nuovi prodotti hardware prima che il vecchio hardware sia effettivamente obsoleto<a class="fn" href="#fn16">16</a>. Questo permette e promuove un tempo di utilizzo dell'hardware ancor più breve. Ma un tale uso lineare delle nostre risorse nei confini del nostro pianeta è diventato ormai da tempo insostenibile.
+  </p>
+
+  <p>
+	<strong>Il Software Libero può aiutare ad estendere significativamente il tempo d'utilizzo.</strong> Al "vecchio" hardware, al software o al sistema operativo che non sono più tenuti aggiornati dal produttore, che diventerebbero così obsolescenza software, si può spesso dare nuova vita con l'uso di sistemi operativi di Software Libero e quindi continuare ad essere utilizzati. Questo può essere, ad esempio, per portatili o computer desktop sul cui hardware non gira l'ultima versione di Windows e per il quale la versione installata non è più supportata, o gli smartphone i cui produttori non offrono più aggiornamenti al sistema operativo. Nel caso di portatili e desktop, le distribuzioni GNU/Linux possono anche fornire a computer vecchi di decenni un sistema operativo completo; nel caso degli smartphone, possono essere installate le cosiddette “custom 
+	ROM”<a class="fn" href="#fn17">17</a>.
+  </p>
+
+  <p>L'esempio di Android: molti degli smartphone che soffrono di obsolescenza software sono dispositivi con il sistema operativo Android di Google. In tutta onestà, questo è semplicemente dovuto al fatto che circa il 75% degli smartphone di tutto il mondo ha installato Android. D'altra parte, è anche dovuto al fatto che l'hardware viene attualmente prodotto per lo più da produttori di terze parti e il sistema operativo è invece sviluppato da Google. Come risultato, però, dopo la vendita iniziale, i produttori hardware non hanno alcun ulteriore incentivo ad assicurarsi che il telefono possa essere utilizzato il più a lungo possibile. Al contrario, essi possono sempre contare su nuove versioni di Android fornite da una terza parte – Google – per mantenere la produzione e il marketing di nuovi telefoni, invece di fornire il supporto per le precedenti versioni di Android.</p>
+  
+  <p>Ma le suddette “custom ROM” possono essere installate su quegli smartphone. Queste custom ROM sono modifiche e sistemi operativi di Software Libero del sistema operativo Android originale, che permetto agli utenti di installare "nuovi sistemi operativi" su "vecchio hardware". Questo significa che, in molti casi, almeno gli aggiornamenti di sicurezza possono essere forniti per la versione attuale del sistema operativo, e qualche volta è anche possibile aggiornare ad una versione successiva del sistema operativo. Gli utenti non sono più quindi alla mercé del dilemma dell'obsolescenza software descritta sopra, e la vita utile del rispettivo hardware può essere quindi aumentata significativamente<a class="fn" href="#fn18">18</a>.
+  </p>
+  
+  <p>
+	<strong>Estendendo il tempo di utilizzo dell'hardware e contrastando l'obsolescenza software, il Software Libero può aiutare direttamente a preservare le risorse naturali e ottenere una digitalizzazione sostenibile.</strong>
+  </p>
+
+<h3 id="energy-consumption">(3.2) Ridurre il consumo energetico</h3>
+
+  <p>La ricerca nel campo del consumo energetico del software attraverso la comparazione di software equivalente in scenari d'utilizzo equivalenti e il loro rispettivo consumo della risorsa è ancora nella sue fasi iniziali, ma ci sono comunque già degli approcci e tesi iniziali. L'agenzia per l'ambiente tedesca è pioniere in quest'area e sta svolgendo una campagna per l'introduzione del <a href="/freesoftware/sustainability/sustainability.html#blue-angel">Blue 
+	Angel sull'efficienza energetica e delle risorse dei prodotti software</a>. 
+Attendendo che ulteriori risultati e investigazioni facciano più luce su aspetti specifici che riguardano il consumo energetico del software, per il momento solo le più importanti tesi verranno formulate in questo capitolo.
+  </p>
+
+<h4 id="autonomy-of-use">(3.2.1) Autonomia nell'utilizzo</h4>
+
+  <p>L'autonomia nell'utilizzo gioca un ruolo centrale nei vari scenari d'utilizzo del software ed è molto importante per gli utenti avere il controllo della propria tecnologia<a class="fn" href="#fn19">19</a>. E dal momento che il controllo individuale della tecnologia promuove anche soluzioni modulari e un adeguato pensiero progettuale, l'autonomia dell'utente è progressivamente riconosciuta come la base per un positivo sviluppo verso un uso sostenibile della tecnologia.</p>
+
+<h4>Standard Aperti</h4>
+
+  <p>Gli Standard Aperti permettono alle persone di condividere tutti i tipi di dati in modo libero e con perfetta fedeltà. Gli Standard Aperti prevengono la dipendenza dal fornitore e altre barriere artificiali all'interoperabilità, e promuovono la scelta tra fornitori e soluzioni tecnologiche. Per una più <a href="/freesoftware/standards/def.html">dettagliata definizione di Standard Aperti</a>, vedi la relative pagine nel sito web della FSFE.
+  </p>
+  
+  <p>L'opzione di selezionare e utilizzare gli Standard Aperti come formato dati è un'importante parte dell'autonomia sull'utilizzo. <strong>Gli Standard Aperti rendono possibile sostituire una determinata applicazione con un'altra, con il presupposto che entrambe siano in grado di leggere lo stesso Standard Aperto.</strong> Standard chiusi o proprietari, d'altro canto, creano una dipendenza tecnica dei dati generati e memorizzati per un programma applicativo molto specifico. Questo crea una posizione di monopolio che non solo produce ben conosciuti problemi economici, ma anche problemi ecologici, ad esempio quando la ricerca confermerà che un certo programma è più efficiente per quanto riguarda l'uso delle risorse rispetto ad un altro programma. Ma il programma ecologicamente più sensibile non può essere utilizzato per via dell'incompatibilità dei dati.</p>
+
+  <p>Gli Standard Aperti giocano anche un ruolo importante nella progettazione di infrastrutture informatiche sostenibili (vedi <a href="/freesoftware/sustainability/sustainability.html#free-software-is-the-base-for-sustainable-it-infrastructures">capitolo 2.1</a>). Dal momento che diverse applicazioni possono essere utilizzate per processare gli stessi dati, gli Standard Aperti permettono uno sviluppo organico della propria infrastruttura come anche di successive modifiche e correzioni. Nuove applicazioni e moduli possono essere integrati o scambiati nelle esistenti architetture a condizione che tutti "parlino" gli standard comuni, che sono gli Standard Aperti.</p>
+  
+<h4 id="uninstallability-and-modularity">(3.2.2) Possibilità di disinstallazione e modularità</h4>
+
+  <p>
+	<strong>La possibilità di disinstallare software è una funzionalità fondamentale per qualsiasi autonomia nell'utilizzo della tecnologia, ma questa possibilità è spesso negata su sistemi proprietari</strong>. Molto hardware 
+e il suo sistema operativo vengono “intrinsecamente” forniti con software preinstallato che non può essere sostituito o rimosso<a class="fn" href="#fn20">20</a>. Per molti clienti questo lo si può notare soprattutto nel segmento dei sistemi operativi per smartphone.  E anche se sono appena iniziate attività e misurazioni specifiche, può essere intuitivamente compreso che ogni applicazione – anche se non utilizzata o "aperta" – richiede come minimo una piccola quantità di risorse digitali e quindi di energia. Ad esempio, è necessario dello spazio sulla memoria del dispositivo affinché l'applicazione venga installata, potrebbero venire caricati degli aggiornamenti automatici, il processo di avvio di un sistema operativo potrebbe subire rallentamenti di qualche frazione di secondo, e così via: anche se i numeri e le misurazioni che risultano da un singolo dispositivo potrebbero apparire insignificanti, essi scalano estremamente velocemente in quantità notabili<a class="fn" href="#fn21">21</a> per via della sempre più crescente espansione della digitalizzazione. Perciò, <strong>il fatto che il software può essere disinstallato e il sistema venga velocizzato serve di conseguenza non solo ad assicurare l'autonomia nell'utilizzo, ma serve anche a preservare le risorse</strong>. Il Software Libero dà agli utenti il pieno controllo e, a differenza del software proprietario, di solito permette che il software venga completamente disinstallato. 
+  </p>
+  
+  <p>In modo molto simile, la modularità del Software Libero può aiutare a salvaguardare le risorse ed estendere il tempo di utilizzo dell'hardware. Questo perché un consumo inferiore di risorse ed una minore richiesta di hardware, significa dal punto di vista software non solo che viene utilizzata meno energia, <strong>ma che può essere anche il fattore decisivo per sapere se posso o meno far girare un programma su un vecchio e probabilmente meno potente hardware</strong>.  
+  </p>
+  
+  <p>Quando si utilizza un sistema operativo di Software Libero, si ha sostanzialmente l'opzione di configurare, rimuovere, sostituire o anche installare manualmente ogni modulo e programma. Dal momento che il Software Libero può essere condiviso, possono essere distribuiti sistemi configurati in modo specifico e tutti gli utenti possono beneficiare di questa configurazione. Questo porta alla formazione di gruppi d'interesse – le cosiddette "comunità" – che mantengono e pubblicano particolari configurazioni software di GNU/Linux, le cosiddette "distribuzioni". Ci sono distribuzioni GNU/Linux che sono progettate specificatamente per avere il meno stringente insieme di requisiti hardware attraverso un competente utilizzo dei moduli strettamente essenziali, e quindi forniscono software aggiornato su vecchio hardware.<a class="fn" href="#fn22">22</a>. <strong>In questo modo, la modularità del Software Libero permette ad una persona far girare un idoneo sistema, aumentando quindi la vita utile dell'hardware.</strong>
+  </p>
+  
+<h4 id="reusability">(3.2.3) Riusabilità</h4>
+
+  <p>Nel capitolo <a href="/freesoftware/sustainability/sustainability.html#sustainable-use-of-the-resource-brainpower">(1.5) Uso sostenibile delle risorse intellettuali</a> viene sostenuto che – 
+	benché difficile da misurare – le possibilità di riutilizzo del Software Libero permettono un uso sostenibile dell'importante “risorsa umana intellettiva”. Nel campo dell'intelligenza artificiale (IA) il concreto risparmio di energia che avviene riutilizzando modelli già formati, è tuttavia misurabile e ci aiuta a capire la sostenibilità nel riutilizzare l'energia in altri aspetti dello sviluppo software.</p>
+  
+  <p>Il consumo di energia del software utilizzato per addestrare l'intelligenza artificiale è stimato misurando la potenza assorbita dall'hardware e convertendola in emissioni di CO2<a class="fn" href="#fn23">23</a>. In questo modo si è calcolato che istruire un singolo modello di IA per capire il linguaggio umano consuma una quantità di energia pari a 284 tonnellate di CO2. Se i modelli di IA non venissero condivisi tra tutti, essi avrebbero bisogno di essere addestrati da ciascuno soggetto e da ciascuna applicazione, incrementando quindi drasticamente le emissioni di CO2 in questo settore tecnologico.
+	<strong>Condividere i modelli IA con una licenza di Software Libero permette uno sviluppo sostenibile dell'IA limitando il consumo di energia e quindi le emissioni di CO2</strong><a class="fn" href="#fn24">24</a>.
+  </p>
+  
+  <p>Mettendo insieme entrambi gli aspetti – preservare le risorse intellettuali umane e la potenza elaborativa attraverso il riutilizzo di software e di modelli IA già formati – diventa chiaro come ecosistemi sostenibili costruiti basandosi sul Software Libero  (vedi
+	<a href="/freesoftware/sustainability/sustainability.html#free-software-enables-sustainable-ecosystems">2.2</a>) molto probabilmente sono in grado di risparmiare una quantità innumerevole di energia umana e di energia computazionale, in entrambi i casi diminuendo l'inutile utilizzo di risorse naturali. Questo è esattamente ciò che alcuni competitori hanno capito, sviluppando ad esempio insieme il kernel Linux (vedi l'esempio in 
+	<a href="/freesoftware/sustainability/sustainability.html#free-software-enables-sustainable-ecosystems"> 
+	2.2</a>). Se le autorità statali legassero lo sviluppo di beni intangibili che sono finanziati con denaro pubblico ad una loro pubblicazione con una licenza libera, la nostra società potrebbe trarre profitto in molteplici modi, incluso un uso più sostenibile delle nostre risorse naturali.</p>
+
+<h2 id="what-can-politics-and-society-do-for-a-more-sustainable-digitization">(4) Cosa possono fare i politici e la società per una digitalizzazione più sostenibile?</h2>
+
+  <p><strong>Più ricerchiamo i principi della sostenibilità digitale, più diventa evidente che il Software Libero è anche software sostenibile e viceversa.</strong> Come mostrato in questo studio, il Software Libero (conosciuto anche come Software Open Source) contribuisce alla sostenibilità digitale in diverse dimensioni:</p>
+
+  <ul>
+    <li><a href="/freesoftware/sustainability/sustainability.html#examining-the-sustainability-of-free-software">Assicurare la sostenibilità e la disponibilità del software</a></li>
+    <li><a href="/freesoftware/sustainability/sustainability.html#free-software-and-it-infrastructures">Creare infrastrutture indipendenti ed ecosistemi sostenibili</a></li>
+    <li><a href="/freesoftware/sustainability/sustainability.html#free-software-sustainability-and-the-use-of-natural-resources">Salvaguardare le risorse naturali aumentando il tempo di utilizzo dell'hardware</a></li>
+    <li><a href="/freesoftware/sustainability/sustainability.html#energy-consumption">Ridurre il consumo energetico attraverso l'autonomia nell'utilizzo e la riusabilità</a></li>
+  </ul>
+  
+  <p><strong>È quindi importante che i politici è la società prefissino già oggi degli obiettivi per l'ulteriore promozione dello sviluppo del Software Libero e quindi per la sostenibilità del software</strong> in modo da garantire un futuro vivibile. Per fare in modo che la società possa beneficiare pienamente della sostenibilità del Software Libero, l'hardware deve essere sviluppato e fornito con un pieno accesso e deve essere sotto il controllo del singolo utente. A tal fine, i dispositivi dovranno essere venduti con sistemi operativi pubblicati con una licenza di Software Libero e senza alcuna limitazione tecnica che riguarda il loro utilizzo come computer ad uso generico. Fintanto che non si raggiungerà questo traguardo, gli obiettivi più urgenti attualmente sono:</p>
+  
+  <div class="color-box rounded fullwidth" data-color="android-lime">
+    <div class="fullwidth-content">
+    <ul>
+      <li><strong>Neutralità del dispositivo:</strong></li>
+      <ul>
+        <li><strong>Computer per uso generico:</strong> <a href="#general-purpose-computers">diritto di utilizzare sistemi operativi e software alternativi</a></li>
+        
+        <li><strong>Accesso all'hardware:</strong> <a href="#access-to-hardware">dispositivi con interfacce, driver e standard aperti</a></li>
+        <li><strong>Libertà di scelta:</strong> <a href="#freedom-of-choice">i gatekeeper devono permettere la concorrenza di servizi e software</a></li>
+      </ul>
+      <li><strong>Upcycling (riciclo creativo) del software:</strong> <a href="#upcycling-of-software">pubblicazione del codice sorgente con una licenza libera dopo la fine del supporto</a></li>
+      <li><strong>Infrastrutture pubbliche smart:</strong> <a href="#public-infrastructure-public-code">l'infrastruttura pubblica allestita con Software Libero e codice pubblico</a></li>
+    </ul>
+    </div>
+  </div>
+
+  <h3>Neutralità del dispositivo</h3>
+
+  <p>La neutralità del dispositivo è un termine che è stato introdotto per descrivere un ambiente informatico non discriminatorio dove ogni servizio e applicazione software vengono trattati equamente all'interno del sistema operativo che gira sul dispositivo, nelle piattaforme dominanti e nella rispettive aziende che producono l'hardware. L'idea è quella di assicurare la concorrenza, la protezione dei consumatori e la libertà di scelta offrendo una siffatta "neutralità" ad ogni utente, sviluppatore, azienda o a qualsiasi altro soggetto. Per una più chiara comprensione di come raggiungere una reale neutralità del dispositivo, suddividiamo l'argomento in tre domande separate: <a href="#general-purpose-computers">computer per uso generico</a>, <a href="#access-to-hardware">accesso all'hardware</a> e <a href="#freedom-of-choice">libertà di scelta</a>.</p>
+
+
+  <h3 id="general-purpose-computers"><span class="painted">Computer per uso generico: diritto di utilizzare sistemi operativi e software alternativi</span></h3>
+
+  <p>I produttori odierni di prodotti lineari cercano soprattutto di prevenire l'installazione di Software Libero e di sistemi operativi alternativi, sebbene – o più precisamente perché – questo può <a href="#hardware-production-and-usage-times">chiaramente estendere la vita utile di utilizzo dell'hardware</a> e aiutare ad un più sostenibile uso delle nostre risorse.</p>
+
+  <p>Per ottenere la sostenibilità digitale, è necessario intervenire a livello politico per prevenire un ciclo di vita breve dell'hardware e i corrispondenti modelli commerciali lineari, e permette il libero riutilizzo dei dispositivi. Non dovrebbero essere permesse né misure tecniche (ad esempio bloccare il bootloader) né misure legali (ad esempio termini e condizioni generali e EULA) che mirano a prevenire l'installazione di sistemi operativi alternativi. <strong>Agli utenti deve essere dato il diritto di installare il sistema operativo di loro scelta nei propri dispositivi, così come anche qualsiasi software.</strong></p>
+  
+  <p>Negli ultimi decenni, però, i politici hanno spesso sostenuto l'intenzione dei produttori di bloccare i dispositivi e creare un utilizzo lineare dell'hardware, impedendo o disabilitando la possibilità di riutilizzo o modifica dell'hardware. Il Digital Millenium Copyright Act è un esempio, come lo è la Direttiva europea nella società dell'informazione. Entrambe sono implementazioni del WIPO Copyright Treaty che introduce l'illegalità di qualsiasi attività che punta ad aggiornare o riciclare dispositivi aggirando con qualsiasi mezzo la gestione delle restrizioni digitali.  
+  </p>
+  
+  <p>La FSFE evidenzia l'importanza del controllo individuale dell'utente di computer ad uso generico<a class="fn" href="#fn25">25</a>. Dato il vasto numero di potenti computer ad uso generico – quelle che chiamiamo ad esempio “smartphone” – che viene prodotto e buttato ogni anno<a class="fn" href="#fn26">26</a>, è anche <strong>di inevitabile importanza per un più sostenibile uso delle nostre risorse dare a terze parti e agli utenti il completo accesso a questi computer</strong> e permettere di utilizzare i propri dispositivi per un processo di upcycling (riciclo creativo) continuo<a class="fn" href="#fn27">27</a>. Smartphone “obsoleti”, ad esempio, possono essere utilizzati per altri tipi di processi automatici a casa, al lavoro, o in altri luoghi. Con la crescente "Internet delle cose" e con sempre più dispositivi connessi, dobbiamo agire ora per assicurare in futuro un uso più sostenibile delle nostre risorse e dei nostri dispositivi.</p>
+
+
+  <h3 id="access-to-hardware" class="painted">Accesso all'hardware: dispositivi con interfacce, driver e standard aperti</h3>
+
+  <p>Sebbene i produttori utilizzino computer ad uso generico per i loro dispositivi, spesso cercano di sostenere il marketing della famiglia del proprio prodotto ed impediscono agli utenti di combinare prodotti che vengono dalla concorrenza. Questo crea una artificiale incompatibilità dei propri prodotti con quella di altri produttori. A livello hardware, ad esempio, molte persone si sono scontrate con questa forma di incompatibilità con diversi connettori per la ricarica, che i politici a livello europeo – al momento della stesura di questo studio – stanno cercando di risolvere con un nuovo criterio ecocompatibile<a class="fn" href="#fn28">28</a>. 
+  </p>
+  
+  <p>Incompatibilità simili si possono anche riscontrare a livello software, dove spesso si presentano formati proprietari come ad esempio il formato <em>.doc</em> dei file di Microsoft Word. <strong> Formati proprietari vengono introdotti per prevenire che altre applicazioni software possano in generale accedere ai dati e per prevenire lo stabilirsi di formati dati pubblicamente disponibili come gli Standard Aperti.</strong> 
+    Oltre a danneggiare le concorrenza e l'innovazione, questi formati proprietari sono utilizzati per <a href="#designing-a-resource-free-licenses-and-copyleft">ridurre artificialmente le soluzioni software</a> all'interno dell'ambiente informatico. E da una penuria di soluzioni software. deriva anche una mancanza di possibili soluzioni hardware. Nello specifico, qualsiasi incompatibilità nei dati impedirebbe agli utenti di utilizzare il set di strumenti più efficiente per il proprio ambiente informatico, e le possibilità di ridurre il consumo energetico sarebbero molto limitate.  
+  </p>
+  
+  <p>Le incompatibilità peggiorano per quanto riguarda l'accesso all'hardware, dove si applicano restrizioni principalmente chiudendo interfacce e driver. Al contrario,  <strong>la disposizione di interfacce e driver aperti permette a produttori di terze parti di combinare l'hardware esistente in modo modulare e di formare complesse infrastrutture seguendo aspetti e necessità individuali.</strong> Ad esempio, potrebbe essere possibile combinare diversi prodotti hardware e predisporli insieme focalizzandosi sull'efficienza complessiva o sulla loro flessibilità invece di essere alla mercé della monocultura e delle famiglie di prodotti dei produttori.</p>
+  
+  <p>Le possibilità di combinare tra loro diversi prodotti e famiglie hardware a sostegno di un più sostenibile uso dell'hardware diventerà di importanza sempre maggiore con l'ulteriore crescita dell'Internet delle cose. Con l'accesso aperto a interfacce e driver, qualsiasi fornitore di terze parti sarebbe in grado di offrire servizi come la riparazione dell'hardware, sostenendo un uso più sostenibile e un prolungamento della vita utile dell'hardware. Per questo motivo queste richieste sono anche parte delle richieste per un <a href="#repair">“diritto di riparazione”</a> universale.
+  </p>
+
+
+  <h3 id="freedom-of-choice" class="painted">Libertà di scelta: i gatekeeper devono permettere la concorrenza di servizi e software</h3>
+
+  <p>L'attuale dibattito<a class="fn" href="#fn29">29</a> sulla neutralità del dispositivo combina i due aspetti dell'elaborazione ad uso generale e dell'accesso all'hardware, con il vincolo aggiuntivo per i servizi non liberi e per i sistemi operativi di permettere l'installazione ed utilizzo di servizi e software alternativi. Questa richiesta è particolarmente importante per tutti gli utenti o terze parti che non sono interessati a modificare i sistemi hardware o software, ma vogliono beneficiare di un mercato software più competitivo e più vivace. L'hardware e i sistemi operativi, ma anche i browser e gli store per le app, sono diventanti i gatekeeper (chi controlla l'accesso) dell'interazione tra gli utenti e i servizi. Utenti, sviluppatori e terze parti devono comunque avere la libertà di accedere e offrire informazioni e servizi in queste piattaforme, e non essere bloccati per una qualsiasi ragione di concorrenza.</p>
+
+  <p>La libera scelta dei servizi sarebbe di aiuto per la sostenibilità dei nostri servizi e dispositivi digitali attraverso l'apertura dei mercati e dell'innovazione. Se, ad esempio, i consumatori comprassero un dispositivo smart e potessero successivamente decidere di utilizzare il preinstallato – anche se proprietario – sistema operativo ma non la preinstallata connessione al cloud del produttore originario, e volessero invece utilizzare il servizio di un provider di terze parti, questo potrebbe ampliare la competizione, la libertà degli utenti, e opzioni favorevoli all'ecologia. Sarebbe in particolare permesso un uso più variegato dell'hardware esistente e anche l'assemblaggio dell'hardware in modo più modulare come descritto nell'<a href="#access-to-hardware">accesso all'hardware</a>. </p>
+
+  <h3 id="upcycling-of-software">Upcycling (riciclo creativo) del software: pubblicazione del codice sorgente con una licenza libera dopo la fine del supporto</h3>
+
+  <p>Come mostrato in questo studio, <strong>il Software Libero è una soluzione per superare i problemi dell'obsolescenza software e per <a href="#hardware-production-and-usage-times">aiutare a prolungare la vita utile dell'hardware</a>.</strong> Dalle città smart alle case smart ai telefoni smart, ma è vero anche per i non-(ancora)-connessi dispositivi come le lavatrici, i tostapane o qualsiasi altro macchinario: l'accesso al codice sorgente del software che gira su queste apparecchiature è fondamentale per ogni sorta di operazione di manutenzione, inclusa la riparazione, come anche qualsiasi potenziale processo di riutilizzo o di riciclo di quell'hardware. Senza il pubblico accesso al codice sorgente, solo in produttore originario e gli operatori dei servizi che hanno un contratto con esso possono offrire qualsiasi tipo di servizio. Oltre a problemi economici derivanti dal creare monopoli, i problemi ecologici peggiorano con la fine del supporto del produttore originario. La fine del supporto di solito significa la fine della vita del dispositivo. Anche se l'hardware è ancora perfettamente funzionante, si insinua l'obsolescenza software che rende l'hardware inutilizzabile.</p>
+
+  <p>Per risolvere questo dilemma, <strong> la FSFE richiede che, alla fine del supporto, venga pubblicato il codice sorgente del dispositivo con una licenza libera<a class="fn" href="#fn30">30</a> per tutto il software necessario ad eseguire o modificare il funzionamento originario del dispositivo.</strong> Questo perché la disponibilità del codice sorgente permetterebbe ad qualsiasi terza parte di occuparsi della manutenzione, di estendere il supporto, o di sviluppare ulteriormente il software e il suo dispositivo. Invece di sprecare hardware e risorse preziose, la pubblicazione del codice sorgente prolungherebbe l'utilizzo, la vita utile e la riusabilità, diventando così una barriera contro l'obsolescenza software.</p>
+
+      <figure>
+    <img src="https://pics.fsfe.org/uploads/medium/05a2918272b10cfb4148f461d5334283.png"/>
+    <figcaption>Il grafico mostra come l' "upcycling del software" possa idealmente aiutare ad prolungare la vita utile e a fare crescere il mercato post-vendita dopo la fine del supporto del produttore originale.</figcaption>
+  </figure>
+  <p class="license">Icone riutilizzate dai sorgenti disponibili su <a href="https://freepik.com">Freepik.com</a></p>
+
+
+  <h3 id="public-infrastructure-public-code">Infrastrutture pubbliche smart: l'infrastruttura pubblica allestita con Software Libero e codice pubblico</h3>
+
+  <p>Come esaminato in questo studio, <a href="#free-software-and-it-infrastructures">il Software Libero è a servizio della sostenibilità delle infrastrutture informatiche</a>. Lo fa sia nella possibilità di salvaguardare le risorse attraverso <a href="#uninstallability-and-modularity">l'utilizzo di sistemi modulari e la disinstallazione di moduli</a> che non sono necessari, sia attraverso il controllo del software utilizzato e la possibilità di costruire architetture senza decadere nell'obsolescenza software.
+  </p>
+  
+  <p>Nella società attuale, le infrastrutture informatiche sono il motore delle applicazioni di sistema critiche, dagli ospedali alle pubbliche amministrazioni ai trasporti pubblici locali. <strong>Per beneficiare degli ecosistemi sostenibili che girano intorno ai concetti del Software Libero, un requisito fondamentale è che il software che fa girare le nostre infrastrutture critiche e di tutti i giorni sia software pubblicato con una licenza di Software Libero</strong>. Il Software Libero è la soluzione per garantire che le infrastrutture critiche non siano sotto il controllo di sviluppatori di software proprietario e della strategia di mercato delle loro aziende<a class="fn" href="#fn31">31</a>. Simili pensieri sono spesso indicati con il termine <em>"pieno controllo digitale"</em>.</p>
+
+
+   <p>La maggior parte delle nostre infrastrutture digitali pubbliche viene pagata con fondi pubblici. La FSFE ha lanciato la campagna <a href="https://publiccode.eu/">“Denaro pubblico? Codice pubblico! ”</a> 
+    nel 2017 che da allora ha guadagnato estrema popolarità in tutto il mondo. Il messaggio principale della campagna è quello di creare la basi legali che impongano che <strong>il software sviluppato con fondi pubblici per l'amministrazione pubblica venga pubblicato con una licenza Open Source o di Software Libero.</strong></p>
+
+  <p>Una volta che il principio di "Denaro pubblico? Codice pubblico!' verrà instaurato, le nostre amministrazioni e la nostra società trarrà un grande beneficio da infrastrutture sostenibili e da soluzioni software sostenibili. Il software, una volta sviluppato, può essere usato, personalizzato e condiviso da altre amministrazioni. Si possono stabilire <a href="#free-software-enables-sustainable-ecosystems">ecosistemi sostenibili che riguardano soluzioni software</a>.</p>
+
+  <p><strong>Se è denaro pubblico, anche il codice deve essere pubblico!</strong>
+  </p>
+
+  <!--
+  <p>
+	Several administrations have meanwhile joined this demand, as well 
+	as  <a href="https://publiccode.eu/#organisations">over a hundred 
+	different civil society initiatives</a>. The FSFE wants the 
+	principle of “Public Money? - Public Code!” to become the guiding 
+	principle for the use of public funds across Europe. 
+	Administrations and societies in Europe and beyond would benefit 
+	from ecological and sustainable benefits of Free Software as 
+	outlined in this article as well as social and economic benefits 
+	outlined <a href="/freesoftware/index.html">on 
+	the FSFE’s web pages</a>.
+  </p>
+  
+  <p>
+	More background and information on how you can support this goal 
+	can be found at <a href="https://publiccode.eu/">publiccode.eu</a>
+  </p>
+ -->
+  
+<h3 id="initiatives-around-the-sustainability-of-free-software">(5) Iniziative che riguardano la sostenibilità del Software Libero</h3>
+
+<p>Nel frattempo ci sono molte iniziative che riguarda la sostenibilità del Software Libero. Qui sotto puoi trovare una lista di quelle che sono state citate in questo studio:</p>
+
+		
+  <div class="icon-grid">
+      <ul>
+        <li>
+          <img src="https://pics.fsfe.org/uploads/thumb/ddc0125b3dd3006d292f8c6facb0e12c.jpeg" alt=""/>
+          <div>Con una stima del 75% di tutti gli smartphone, il sistema operativo Android è indubbiamente il più diffuso sistema operativo per smartphone nel mondo. Se solo un terzo di questi utenti estendesse l'utilizzo del loro dispositivo per un anno in più, potremmo evitare che milioni di smartphone vengano prodotti inutilmente. Un utilizzo prolungato degli smartphone comincia a diventare un fattore determinante per un uso più sostenibile delle nostre risorse. “Upcycling di Android” è una imminente iniziativa della Free Software Foundation Europe per prolungare il tempo di utilizzo dei telefoni Android tramite l'installazione di sistemi operativi alternativi. Una campagna online aiuta gli utenti a capire il problema e ad aiutare loro stessi; ulteriore sostegno viene dato tramite dei seminari.</div>
+        </li>
+        
+        <li>
+          <img id="blue-angel" src="https://pics.fsfe.org/uploads/thumb/fe70d18fbe9ea351efaef7ff022e51da.jpeg" alt=""/>
+          <div>Il <a href="https://www.blauer-engel.de/en/products/electric-devices/resources-and-energy-efficient-software-products">Blue Angel sull'efficienza energetica e delle risorse per i prodotti software</a> è un'iniziativa di varie agenzie tedesche per l'ambiente e per la standardizzazione che si prefiggono di affrontare il consumo energetico del software che interagisce con il proprio hardware. Nei requisiti richiesti per ottenere il Blue Angel, molte caratteristiche insite nel Software Libero – ad esempio l'autonomia nell'utilizzo elencata sopra – giocano un ruolo importante. La <a href="https://invent.kde.org/joseph/be4foss">KDE e.V. gestisce un'iniziativa per aiutare progetti di Software Libero ad accedere ed ottenere la certificazione Blue Angel</a> come anche per  <a href="https://invent.kde.org/cschumac/feep">supportare ulteriori attività di ricerca in modo particolare per le applicazione di Software Libero dedicate al desktop</a>.</div>
+        </li>
+      <li>
+          <img src="https://pics.fsfe.org/uploads/thumb/66b6108a007443b9b7992615b7c0d7ac.jpeg" alt=""/>
+          <div>I <a href="https://digitalprinciples.org/">principi della cooperazione digitale</a> sono un accordo sviluppato dalla Fondazione delle Nazioni Uniteare e firmato da numerose iniziative nel settore della cooperazione internazionale. Uno dei suoi nove principi centrali richiede <a href="https://digitalprinciples.org/principle/use-open-standards-open-data-open-source- and-open-innovation /">l'utilizzo degli Standard Aperti, dei Dati Aperti, del Software Libero e di una aperta innovazione</a>. Anche altri principi sono ben allineati con diversi aspetti del Software Libero e della sostenibilità del software come è stato delineato in questo studio. Il sito web della FSFE fornisce una dettagliata analisi del <a href="/freesoftware/developmentcooperation/developmentcooperation.html">potenziale utilizzo del Software Libero per una cooperazione internazionale allo sviluppo sostenibile</a> basata su questi principi e sugli obiettivi di sviluppo sostenibile delle Nazioni Unite.</div>
+        </li>
+    <li>
+          <img id="sustainoss" src="https://pics.fsfe.org/uploads/thumb/0f0b0f35833691b12e87a575ce013bf5.jpeg" alt=""/>
+          <div><a href="https://sustainoss.org/">Sustain</a> è un'iniziativa formata da esperti per pensare alla sostenibilità del Software Libero da un punto di vista organizzativo. Ad esempio, su come ottenere una indipendenza finanziaria sostenibile o su come scegliere i migliori modelli di gestione o di finanziamento a seconda del livello di sviluppo del progetto, sempre puntando alla massimizzazione della longevità del progetto stesso. Dopo aver fatto partire l'iniziativa nel 2017, si sono formati <a href="https://sustainoss.org/working-groups/">diversi gruppi di lavoro</a> che si occupano di certi aspetti che riguardano la sostenibilità del Software Libero come risorsa.</div>
+    </li>
+    <li>
+          <img id="repair" src="https://pics.fsfe.org/uploads/thumb/67cee6dadc6926fe4db4a43d54ceb532.jpeg" alt=""/>
+          <div>In aggiunta all'utilizzo del Software Libero, un generale <a href="https://repair.eu">“diritto di riparazione”</a> è uno dei requisiti fondamentali per una digitalizzazione più sostenibile, in particolare per la longevità del nostro hardware. Dal momento che software e hardware sono funzionali l'uno all'altro, i dibattiti sul diritto di riparazione includono la maggior parte dei concetti base sulla sostenibilità del software e sulla neutralità del dispositivo delineati in questo studio, in particolare il <a href="#general-purpose-computers">diritto all'elaborazione per uso generico</a>, l'<a href="#access-to-hardware">accesso all'hardware</a> e l'<a href="#upcycling-of-software">upcycling del software</a>.</div>
+    </li>
+    <li>
+          <img src="https://pics.fsfe.org/uploads/thumb/a50306d527c295631c97399347f3c9b0.jpeg" alt=""/>
+          <div><a href="https://www.softwareheritage.org/">Software Heritage</a> è una non-profit sostenuta dall'UNESCO, la cui missione è <em>“raccogliere, preservare e condividere tutto il software che è pubblicamente disponibile nella forma del codice sorgente”</em> per stabilire una risorsa sostenibile della conoscenza umana nella forma di codice sorgente. Di conseguenza, la stessa infrastruttura del Software Heritage sottolinea un modello di sviluppo sostenibile in quanto tutto il software sviluppato nel processo viene rilasciato come Software Libero.</div>
+    </li>
+    <li>
+          <img src="https://pics.fsfe.org/uploads/thumb/ad1a7cf659813fb35bbe0122d4b6cf81.jpeg" alt="Logo of Bits &amp; Bauml;ume"/>
+          <div><a href="https://bits-und-baeume.org/en">Bits &amp; Bäume</a> è stata una conferenza sul tema della digitalizzazione sostenibile e nel suo seguito è diventata una rinomata fonte di materiale informativo, incluse le registrazioni delle sessioni e il materiale che è stato prodotto successivamente. In Germania c'è anche una crescente comunità con sezioni locali che è allineata con le richieste degli organizzatori della conferenza. L'autore di questo studio ha anche tenuto un discorso introduttivo a questa conferenza sulla <a href="https://media.ccc.de/v/bub2018-138-digitale_rohstoffe_erhalten_sich_anders">sostenibilità delle risorse digitali (in tedesco)</a>.</div>
+    </li>
+  </ul>
+</div>
+
+<p><strong><br/>Autore: <a href="/about/albers/albers.html">Erik Albers</a></strong></p>
+
+<h2 id="fn">Footnotes</h2>
+
+    <ol>
+		<li id="fn1">Altre informazioni sul Software Libero su fsfe.org: <a href="/freesoftware/">https://fsfe.org/freesoftware/</a></li>
+		<li id="fn2">Altre informazioni sulle licenze di Software Libero su fsfe.org: <a href="/freesoftware/legal/faq.html">https://fsfe.org/freesoftware/legal/faq.html</a></li>
+		<li id="fn3">È anche conosciuto come il Brundlandt Report, pubblicato dalla “Commissione mondiale delle Nazioni Unite sull'ambiente e sullo sviluppo” nel 1987, e nominato più tardi dal presidente della commissione. La copia originale è <a href="https://en.wikisource.org/wiki/Brundtland_Report">disponibile su Wikisource</a>.</li>
+		<li id="fn4">Per altre informazioni su questa logica e ulteriori idee sulla salvaguardia dei materiali digitali grezzi, vedi anche la registrazione dell'intervento al Bits &amp; Trees dell'autore di questo studio: <a href="https://media.ccc.de/v/bub2018-138-digitale_rohstoffe_erhalten_sich_anders">Digitale Rohstoffe erhalten sich anders</a> (in tedesco).</li>
+		<li id="fn5">Per un'introduzione al tema e al problema della gestione delle restrizioni digitali, vedi <a href="https://drm.info/">https://drm.info/</a> </li>
+		<li id="fn6">La FSFE ritiene che il termine "proprietà intellettuale" sia <a href="/news/2020/news-20200820-01.html">ideologicamente carico e pericolosamente ignaro</a> delle significanti differenze che esistono tra le molte aree del diritto che esso cerca di includere. Per questo motivo l'autore di questo studio parla di “diritti di limitazione intellettuale”.</li>
+		<li id="fn7">Visti i pericolosi aspetti dei diritti di limitazione intellettuale per condividere il software e la conoscenza, la FSFE ha condotto e conduce molteplici campagne per convincere chi deve prendere decisioni ad evitare la pericolosa limitazione della conoscenza. Puoi trovare <a href="/activities/policy.html">molte di queste campagne nella pagina delle attività delle politiche della FSFE</a>.</li>
+		<li id="fn8">Vedi <a href="https://en.wikipedia.org/wiki/Intergenerational_equity">Equità intergenerazionale su Wikipedia</a> per ulteriori informazioni.</li>
+		<li id="fn9"><div>Per informazioni più dettagliate sul Software Libero e le sue licenze, vedi le <a href="/freesoftware/legal/faq.html">Domande frequenti sulle licenze di Software Libero</a></div></li>
+		<li id="fn10">Nel 1998 Netscape ha rilasciato il codice sorgente del suo browser “Netscape Navigator” e ha creato la l'organizzazione Mozilla per coordinare i futuri sviluppi del suo prodotto. Come primo passo, però, l'appena fondata organizzazione Mozilla ha riscritto l'intero codice sorgente del browser per basarsi da questo punto in poi sul motore di rendering Gecko, e lo ha pubblicato come “Mozilla Firefox”.</li>
+		<li id="fn11">Il <a href="https://gcemetery.co/">cimitero di Google</a> elenca ad esempio gli attuali (01.06.2021) 166 prodotti software sviluppati da Google dal giorno in cui Google ha deciso di non mantenerli ulteriormente, senza offrire nessuna versione del codice sorgente di questi progetti o dare altri tipi di aiuto agli utenti per poter esportare i loro dati per poter essere utilizzati in altri programmi.</li>
+		<li id="fn12">Versione 2 della GNU General Public License.</li>
+		<li id="fn13">Dal 2017 i primi 500 supercomputer al mondo girano tutti su Linux: <a href="https://www.top500.org/">top500.org</a></li>
+		<li id="fn14">Per la versione 5.10 del kernel Linux, gli impiegati delle sole aziende citate sopra hanno insieme contribuito a ben il 28% di tutte le modifiche apportate al codice, vedi <a href="https://lwn.net/Articles/839772/">Statistiche del ciclo di sviluppo del kernel 5.10</a></li>
+		<li id="fn15">Ad esempio, Apple calcola che il suo contributo di CO2 per il 2018 è stato per il 74% relativo alla produzione, un altro 5% per il trasporto globale, e solo il 19% per l'attuale utilizzo dei prodotti, vedi <a href="https://www.apple.com/environment/pdf /Apple_Environmental_Responsibility_Report_2019.pdf">Resoconto sulla responsabilità ambientale del 2019</a> (che copre l'anno fiscale 2018), pagina 9.</li>
+		<li id="fn16"><div>Questo è particolarmente impressionante nel segmento degli smartphone. Molti di questi dispositivi hanno una vita molto breve, in media da circa 1 anno e mezzo a 2 anni e mezzo. Il più delle volte è perché i telefoni inizialmente distribuiti non vengono più aggiornati dal produttore, e quindi diventano obsolescenza software. La campagna “Upcycling di Android” della Free Software Foundation Europe parte da questo punto e aiuta gli utenti ad estendere il tempo di utilizzo dei loro smartphone.</div></li>
+		<li id="fn17">Vedi anche la campagna “Libera il tuo Android” lanciata dalla Free Software Foundation Europe nel 2013, che sostiene gli utenti nell'installare sistemi operativi alternativi nei propri smartphone Android in modo autonomo.</li>
+		<li id="fn18">Va notato a questo punto che, nel senso di una completa sostenibilità digitale, un tale uso del Software Libero si accoppia meglio con una progettazione modulare dell'hardware e con la più completa riparabilità dell'intero dispositivo o dei suoi singoli moduli (per altre informazioni vedi anche Pohl et al. (2020): <a href="https://www.oekologisches-wirtschaften.de/index.php/oew/article/view/1788/1732">Parametri progettuali per hardware e software di lunga durata, efficienti ed aperti</a>). Il concetto alla base del "diritto di riparazione" è stato chiesto da lungo tempo e include aspetti come una progettazione del prodotto che renda facile la riparazione, l'accesso alle parti di ricambio e l'estensione della garanzia anche nel caso di riparazioni. Altre informazioni su questo argomento si possono trovare sul sito <a href="https://repair.eu/">repair.eu</a></li>
+		<li id="fn19">Per inciso, con il Software Libero si applica la massima autonomia sull'utilizzo, come espresso nel motto della Free Software Foundation Europe: "dare alle persone i mezzi per controllare la tecnologia"</li>
+		<li id="fn20">Confronta, ad esempio, le attività della Free Software Foundation Europe su "<a href="/activities/routers/routers.html">Libertà del Router</a>" e "<a href="https://freeyourandroid.org">Libera il tuo Android</a>". Nel primo caso, si parla del diritto degli utenti di scegliere il proprio router e caricarci un sistema operativo alternativo; nel secondo caso, si parla del diritto degli utenti di installare sistemi operativi alternativi sui propri smartphone.</li>
+		<li id="fn21"><a href="https://media.ccc.de/v/bub2018-2-warum_unser_web_nachhaltiger_werden_muss_und_wie_wir_das_anstellen">Nella sua presentazione al Bits &amp; Bäume</a>, Niklas Jordan ha calcolato come risparmiando solo 25KB nella compressione del logo di Wikipedia si risparmierebbe in un solo mese l'equivalente dei consumi di un anno di nove famiglie di due persone.</li>
+		<li id="fn22">Per altri dettagli, vedi la documentazione della <a href="https://www.umweltbundesamt.de/publikationen/nachhaltige-software">discussione specialistica “Software sostenibile”</a> del 28 novembre 2014 dell'agenzia statale sull'ambiente della Germania, e all'interno di essa: Erik Albers “Freie Software – Ressourcen schonen durch teilen”</li>
+		<li id="fn23">Versione 2 della GNU General Public License.</li>
+		<li id="fn24">La Free Software Foundation Europe ha svolto un'analisi con benefici aggiuntivi che il Software Libero porta all'intelligenza artificiale: <a href="/freesoftware/artificial-intelligence.html">https://fsfe.org/freesoftware/artificial-intelligence.html</a></li>
+		
+		<li id="fn25">Vedi ad esempio <a href="/freesoftware/secure-boot.html">“'Secure Boot': chi controllerà il tuo nuovo computer?”</a></li>
+		<li id="fn26">Secondo Statista nel solo 2020 sono stati venduti (e quindi prodotti) <a href="https://www.statista.com/statistics/755388/global-smartphone-unit-sales-by-region/">più di 1,5 miliardi di smartphone</a>, con numeri simili negli anni addietro.</li>
+		<li id="fn27">Benché purtroppo non siano mai state completate, le idee originali del “Galaxy Upcycling” di Samsung hanno portato una buona luce sulle possibilità di riusare e riciclare smartphone in altri ambienti informatici: <a href="https://de.ifixit.com/News/50450/samsung-galaxy-upcycling-unlocked-smartphone-smarthome-project">https://de.ifixit.com/News/50450/samsung-galaxy-upcycling-unlocked-smartphone-smarthome-project</a></li>
+		<li id="fn28">Vedi ad esempio <a href="https://netzpolitik.org/2021/interne-dokumente-eu-plant-einheitliches-ladekabel-fuer-alle-handys-tablets-und-laptops/">https://netzpolitik.org/2021/interne-dokumente-eu-plant-einheitliches-ladekabel-fuer-alle-handys-tablets-und-laptops/</a></li>
+    <li id="fn29">Vedi ad esempio la discussione sull'articolo 3(7) della Legge sui mercati digitali, la quale afferma che un gatekeeper dovrà <em>"(e) astenersi dal limitare dal punto di vista tecnico la possibilità per gli utenti finali di cambiare e di sottoscrivere diverse applicazioni software e servizi a cui accedere durante l'utilizzo del sistema operativo del gatekeeper, anche per quanto riguarda la scelta degli utenti finali del provider per l'accesso ad Internet;"</em></li>
+    <li id="fn30"> Tutte le licenze definite come <a href="https://www.gnu.org/licenses/license-list.html">licenza di Software Libero dalla Free Software Foundation</a> o come <a href="http://opensource.org/licenses">licenza Open Source dalla Open Source Initiative</a>.</li>
+    <li id="fn31">Vedi anche gli sviluppi nel caso Huawei del 2019 e le dichiarazioni pubblicate dalla FSFE a questo proposito. Al tempo si era inizialmente paventata una possibile esclusione dell'hardware Huawei dalla nuova rete 5G con un associato dibattito sulla <a href="/news/2019/news-20190205-01.html">mancanza di trasparenza del codice del produttore</a>. In questi dibattiti, diversi soggetti hanno sottolineato l'importanza di avere il proprio controllo sulle infrastrutture critiche statali. Poco dopo, la questione del controllo si è virtualmente rovesciata quando Google, sotto la pressione dell'amministrazione Trump, ha negato al gigante cinese Huaweu l'accesso ai componenti proprietari del sistema operativo Android. Questo serio impedimento per l'economia di mercato mostra ancora una volta chiaramente ad Huawei <a href="/news/2019/news-20190520-01.html">quanto sia importante avere il controllo della propria infrastruttura</a> e dei propri componenti, in modo che nel futuro non possa capitare nuovamente che una terza parte minacci il proprio ecosistema.</li>
+	</ol>
+
+
+
+   <p>Questo progetto è finanziato con il supporto di:</p>
+    <img src="https://pics.fsfe.org/uploads/big/e4f61b31daadca46e2942f69fb7da6bf.png" />
+    <img src="https://pics.fsfe.org/uploads/big/7970e2f7c9c69d4e21f00ca242a657ca.jpg" />
+    <p>L'editore è responsabile del contenuto di questa pubblicazione.</p>
+
+
+  </body>
+</html>

@@ -3,7 +3,7 @@ type: docker
 name: default
 
 clone:
-  depth: 50
+  depth: 150
 
 steps:
   - name: syntaxcheck
@@ -11,7 +11,11 @@ steps:
     commands:
     - find . -type f \( -iname "*.xhtml" -o -iname "*.xml" -o -iname "*.xsl" \) -exec xmllint --noout {} +
     - bash tools/check-non-en-frontpage.sh news
-    when:
-      branch:
-      - master
-      - test
+
+trigger:
+  branch:
+  - master
+  - test
+  event:
+  - push
+  - pull_request

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <version>1</version>
+
+  <info id="ua-sticker-round">
+    <!-- Leave a tag like <printready> blank or erase it if you don't 
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in 
+    /tools/texts-**.xml -->
+    <name>Save Your Droid</name>
+    <description>
+      Our Upcycling Android sticker with the slogan "Save Your Droid", the logo and the Internet address. The sticker is round with a size of 50mm. 
+    </description>
+    <type>Sticker</type>
+    <size>50mm x 50mm</size>
+    <context><a href="/activities/upcyclingandroid/">Upcycling Android</a></context>
+    <languages>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/UpcyclingAndroid/U_A_STICKER_round_50x50_mm.pdf">English</a>
+    </languages>
+    <printed>
+      English
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a></license>
+    <author>Markus Meier</author>
+    <source><a href="https://download.fsfe.org/advocacy/promomaterial/UpcyclingAndroid/">Upcycling Android sticker* in download.fsfe.org</a></source> 
+    <printready></printready>
+  </info>
+
+</infoset>

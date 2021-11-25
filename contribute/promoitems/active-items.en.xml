@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 <!-- Do not translate this file! -->
-<!-- Please assign the attributes 
-  id (vebose ID of item), 
-  type (category like dfd, fya...), 
-  year (year of first production) and 
-  order (place of appearance in respective category) 
+<!-- Please assign the attributes
+  id (vebose ID of item),
+  type (category like dfd, fya...),
+  year (year of first production) and
+  order (place of appearance in respective category)
 to every item in this file -->
 
 <!-- An item can also be just an introductionary text. Then it needs
@@ -20,7 +20,7 @@ Such an item doesn't need an image!
 <itemset>
   <version>1</version>
 
-   
+
 
   <!-- FSFE and Fellowship -->
 
@@ -61,7 +61,7 @@ Such an item doesn't need an image!
 
 
     <!-- FS and users freedoms -->
-  
+
     <item type="freedom" id="fs-and-tools" year="2014" order="0">
  	<image
     imgsmall="/contribute/promopics/freiheit-thumb.png"/>
@@ -70,8 +70,8 @@ Such an item doesn't need an image!
   <item type="freedom" id="gnupg-leaflet" year="2014" order="6">
  	<image
     imgsmall="/contribute/promopics/gnupg-leaflet-en-thumb.png"/>
-  </item>  
-   
+  </item>
+
   <item type="freedom" id="drm-leaflet" year="2012" order="7">
  	<image
     imgsmall="/contribute/promopics/drm_thumb.png"/>
@@ -94,7 +94,7 @@ Such an item doesn't need an image!
   <item type="pmpc" id="pmpc-brochure" year="2019" order="1">
     <image imgsmall="/contribute/promopics/pmpc_brochure_cover.jpg"/>
   </item>
-  
+
     <item type="pmpc" id="pmpc-sticker-slogan" year="2018" order="1">
  	<image
     imgsmall="/contribute/promopics/PMPC_sticker_SLOGAN-thumb.png"/>
@@ -114,11 +114,11 @@ Such an item doesn't need an image!
   </item>
 
 
-  
+
   <!-- Document Freedom Day -->
-  
+
   <item introduction="yes" type="dfd" id="dfd-introduction" order="1" /> <!-- introduction item with just text, doesn't need a picture -->
-  
+
     <item type="dfd" id="dfd-chance-poster" year="2014" order="4">
  	<image
     imgsmall="/contribute/promopics/a2.mu_thumb.png"/>
@@ -140,33 +140,33 @@ Such an item doesn't need an image!
  	<image
     imgsmall="/contribute/promopics/ua-sticker-round-thumb.png"/>
   </item>
-  
- 
+
+
    <!-- F-droid -->
   <item type="f-droid" id="f-droid-leaflet" year="2014" order="1">
  	<image
     imgsmall="/contribute/promopics/fdroid-flyer_thumb.png"/>
   </item>
-  
+
   <item type="f-droid" id="fya-sticker" year="2017" order="2">
  	<image
     imgsmall="/contribute/promopics/fya-sticker-2012-3cm.png"/>
-  </item> 
-  
+  </item>
+
   <!-- I love Free Software -->
   <item type="ilovefs" id="ilovefs-postcard" year="2014" order="3">
     <image imgsmall="/contribute/promopics/ilovefs-postcard-front-thumb.png"/>
   </item>
-  
+
   <item type="ilovefs" id="ilovefs-flyer" year="2014" order="2">
  	<image
     imgsmall="/contribute/promopics/ilovefs_flyer_A7_thumb.png"/>
-  </item> 
+  </item>
 
   <item type="ilovefs" id="ilovefs-sticker" year="2016" order="1">
  	<image
     imgsmall="/contribute/promopics/ilovefs-sticker_thumb.png"/>
-  </item> 
+  </item>
 
   <item type="ilovefs" id="ilovefs-burgundy-sticker" year="2016" order="1">
     <image imgsmall="/contribute/promopics/ilovefs-sticker_burgundy_thumb.png"/>
@@ -176,19 +176,19 @@ Such an item doesn't need an image!
  	<image
     imgsmall="/contribute/promopics/ilovefs_poster_A1_thumb.png"/>
   </item>
-  
+
     <item type="ilovefs" id="ilovefs-balloon" year="2015" order="5">
  	<image
     imgsmall="/contribute/promopics/ilovefs-balloon-combined-thumb.png"/>
-  </item> 
-  
+  </item>
+
   <!-- No cloud -->
-  
+
     <item type="nocloud" id="nocloud-sticker" year="2015" order="1">
  	<image
     imgsmall="/contribute/promopics/thereisnocloud-bluecolor-preview.png"/>
   </item>
-  
+
    <item type="nocloud" id="nocloud-sticker-bw" year="2017" order="2">
  	<image
     imgsmall="/contribute/promopics/thereisnocloud-bw-preview.png"/>
@@ -202,6 +202,16 @@ Such an item doesn't need an image!
   <item type="nocloud" id="nocloud-poster-2sided" year="2015" order="4">
  	<image
     imgsmall="/contribute/promopics/thereisnocloud-poster-thumb.png"/>
-  </item> 
+  </item>
+
+  <!-- Children's Book Ada+Zangemann -->
+
+  <item type="childrensbook" id="childrensbook-sticker-ada" year="2021" order="1">
+    <image imgsmall="/contribute/promopics/childrensbook-sticker-ada-thumb.png"/>
+  </item>
+
+  <item type="childrensbook" id="childrensbook-sticker-zangemann" year="2021" order="2">
+    <image imgsmall="/contribute/promopics/childrensbook-sticker-zangemann-thumb.png"/>
+  </item>
 
 </itemset>

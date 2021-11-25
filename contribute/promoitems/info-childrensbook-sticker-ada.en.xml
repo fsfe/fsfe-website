@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<infoset>
+  <version>1</version>
+
+  <info id="childrensbook-sticker-ada">
+    <!-- Leave a tag like <printready> blank or erase it if you don't
+    want to appear it -->
+    <!-- Translations for "Type", "Size" etc. can be found in
+    /tools/texts-**.xml -->
+    <name>Ada sticker</name>
+    <description>
+      A die-cut sticker of Ada protagonist in the children's book "Ada &amp; Zangemann -
+      A tale of software, skateboards, and raspberry ice cream.
+    </description>
+    <type>Sticker</type>
+    <size>48mm x 60mm</size>
+    <context><a href="/activities/childrensbook/">Ada &amp; Zangemann</a></context>
+    <languages>
+      <a href="https://download.fsfe.org/advocacy/promomaterial/ChildrensBook/childrensbook-sticker-ada-PRINT.pdf">PDF</a>
+    </languages>
+    <printed>
+      English
+    </printed>
+    <license><a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA 3.0</a></license>
+    <author>Sandra Brandstätter</author>
+    <source><a href="https://download.fsfe.org/advocacy/promomaterial/ChildrensBook/">childrensbook-sticker-* in download.fsfe.org</a></source>
+    <printready></printready>
+  </info>
+
+</infoset>

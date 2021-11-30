@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<html>
+  <version>1</version>
+
+  <head>
+    <title>Informationen für Webmasters</title>
+  </head>
+  <body class="article" microformats="h-entry">
+
+    <p id="category"><a href="/contribute/">Mach mit!</a></p>
+    <h1 class="p-name">Webmastering</h1>
+
+    <div class="e-content">
+
+        <p id="introduction" class="p-summary">
+          Das <em>Web-Team </em> pflegt und entwickelt den Internetauftritt der 
+          FSFE — von <a href="/">fsfe.org</a> bis zu den Projekt- und 
+          Aktionsseiten. Die Webmaster sind Ehrenamtliche, die daran arbeiten 
+          das Gesicht der Organisation in der Welt, wie auch die 
+          technischen Lösungen unseres Webauftritts zu verbessern. 
+        </p>
+
+
+        <h2>Lernen Sie uns kennen, lernen Sie die Webseite kennen</h2>
+
+		<p>
+		Wenn Sie einen Eindruck davon erhalten möchten, woraus die
+		Arbeit auf und an den Web-Seiten der FSFE besteht, kommen Sie am
+		besten bei uns im IRC Channel #fsfe auf Libera Chat vorbei.
+		Wir freuen uns immer über Gäste und beantworten gerne Ihre
+		Fragen. Um mehr darüber zu erfahren, wer an der Webseite 
+		arbeitet oder über die FSFE an sich, besuchen Sie 
+		<a href="/about/team.html">die FSFE Team-Seite</a> und die 
+		<a href="https://wiki.fsfe.org/Teams/Web">Web Team Seite</a>.
+        </p>
+
+        <h2>Einführung</h2>
+
+        <p>
+		  Die meisten Entwickler und Autoren sollten mit den zur Pflege der
+		  Webseiten eingesetzten Programmen und Techniken bereits gut vertraut sein.
+		  Für diejenigen, die sie noch nicht für sich entdeckt haben,
+		  könnten sie von Interesse sein.
+        </p>
+
+        <p>
+		 Dabei werden Übersetzer und gelegentlich tätige Ehrenamtliche 
+		 höchstwahrscheinlich nur mit den folgenden zwei Werkzeugen in 
+		 Berührung kommen:
+        </p>
+
+        <ul>
+          <li>
+            <a href="https://en.wikipedia.org/wiki/XHTML">XHTML</a> – woraus die Webseiten generiert werden
+          </li>
+          <li>
+            <a href="https://git-scm.com/">Git</a> – zur Versionskontrolle der Webseiten-Quellen
+          </li>
+        </ul>
+
+        <p>
+	  Ehrenamtliche, die ein tiefergehendes Interesse an Pflege und Wartung haben,
+	  sollten sich bereits auskennen mit: 
+        </p>
+
+        <ul>
+          <li>
+            <a href="https://www.gnu.org/software/bash/">Bash</a> – für die Wartung und Scripte zur Seitenerstellung
+          </li>
+          <li>
+            <a href="https://www.apache.org/">Apache</a> – als den Web-Server
+          </li>
+        </ul>
+
+
+        <h2 id="Understanding">Verstehen, wie die Web-Seiten erstellt werden</h2>
+
+        <p>
+          Die Web-Seiten der <var>fsfe.org</var> werden als Paket von 
+          XML-Dateien gepflegt. Der Web-Server generiert die HTML-Seiten aus 
+          diesen XML-Dateien automatisch alle zehn Minuten. Demzufolge werden 
+          alle Bearbeitungen der Seiten in den XML-Dateien durchgeführt und das 
+          HTML wird niemals direkt berabeitet.
+        </p>
+
+        <p>
+          Jede Seite auf fsfe.org ist nach dem folgenden Schema benannt
+          <var><em>seitenname</em>.<em>sprache</em>.html</var>
+          (<em>sprache</em> ist der zwei-Buchstaben-<a
+          href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO-639
+          code</a>, wie "en" für Englisch oder "de" für Deutsch).
+          Die Quell-Dateien sind ebenfalls nach diesem Schema benannt 
+          <var><em>seitenname</em>.<em>sprache</em>.xhtml</var>.
+        </p>
+
+        <p>
+          Manche Seiten haben einen dynamischen Teil: jenseits des Textes, der
+		  aus den XHTML-Dateien entnommen wird, diese Seiten beinhalten 
+		  Informationen aus einer oder mehreren XML-Dateien. Wann immer 
+		  eine solche Seite generiert wird, nutzt das Build-System
+		  die übersetzten XML-Dateien. Die englische Version der XML-Datei
+		  wird nur genutzt, für den Fall, dass eine Übersetzung noch 
+		  nicht verfügbar ist. Durch dieses Verfahren kann es passieren, 
+		  dass Seiten erstellt werden, deren Texte zum Teil übersetzt 
+		  sind, während andere Teile noch in englischer Sprache 
+		  vorhanden sind. Beispiele solcher Seiten schließen die 
+		  <a href="/">Startseite</a>, die <a href="/news/">Nachrichtenseite</a>, 
+		  und die <a href="/events/">Veranstaltungenseite</a> mit ein.
+        </p>
+
+        <h2 id="Getting">Arbeiten mit der Web-Seite als Editor</h2>
+
+        <p>Bitte besuchen Sie unsere 
+        <a href="https://wiki.fsfe.org/TechDocs/Mainpage/Editing">Wiki-Seite zum 
+        bearbeiten von Web-Seiten</a>, für mehr Information zu:</p>
+
+        <ul>
+          <li>"howto" Kopieren des Web-Seiten Quellcodes auf Ihren Computer</li>
+          <li>"howto" Bearbeiten und Übertragen von Dateien auf die Web-Seiten</li>
+          <li>"howto" Koordinierung mit anderen Editoren der Web-Seiten</li>
+          <li>Verantwortlicher Umgang mit Schreibzugriffen</li>
+          <li>Fortgeschrittene Webmaster-Techniken</li>
+          <li>Angemessen Lizensierung von Quellcode und Medien</li>
+        </ul>
+
+    </div>
+    <!--/e-content-->
+
+  </body>
+<sidebar promo="about-fsfe">
+    <div id="related-content">
+        <h3>Howtos:</h3>
+        <ul>
+            <li>
+            <a href="/contribute/web/tagging.html">Tags und Artikel-Metadaten nutzen, Implementieren einer Länder-Seite</a>
+            </li>
+            <li>
+            <a href="/contribute/web/css.html">Berbeiten von CSS mit LESS</a>
+            </li>
+            <li>
+            <a href="/contribute/template.html">Eine Artikelvorlage, um das neue Webdesign zu nutzen</a>
+            </li>
+        </ul>
+    </div>
+</sidebar>
+
+</html>
+<!--
+Local Variables: ***
+mode: xml ***
+End: ***
+-->

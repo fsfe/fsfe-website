@@ -1,0 +1,22 @@
+// ============================================================================
+// Classes for footnotes
+// ============================================================================
+
+a.fn, span.fn {
+  bottom: 0.5em;
+  font-size: 0.7em;
+  position: relative;
+}
+
+/* Hide headline of footnotes below article */
+h2#fn {
+  display: none;
+}
+
+/* Styling of numbered list for footnotes*/
+h2#fn + ol {
+  border-top: 1px solid @gray-lighter;
+  font-size: 0.9em;
+  margin: 2em 0;
+  padding-top: 1em;
+}

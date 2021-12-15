@@ -1,0 +1,45 @@
+// ============================================================================
+// Classes for footnotes
+// ============================================================================
+
+body {
+  counter-reset: footnotes;
+}
+
+/* Automatic counters for footnotes */
+[role="doc-noteref"] {
+  counter-increment: footnotes;
+}
+
+[role="doc-noteref"]::after {
+  content: '[' counter(footnotes) ']';
+  vertical-align: super;
+  font-size: 0.7em;
+}
+
+[role="doc-noteref"]:focus::after {
+  outline: thin dotted;
+  outline-offset: 2px;
+}
+
+[role="doc-backlink"]::after {
+  content: '↩';
+}
+
+/* class "fn" as backwards compatibility */
+a.fn, span.fn {
+  vertical-align: super;
+  font-size: 0.7em;
+}
+
+/* Hide headline of footnotes, but instead make a thin grey line */
+// we recommend #footnotes, but keep #fn as backwards compatibility
+h2#footnotes, h2#fn {
+  display: none;
+}
+h2#footnotes + ol, h2#fn + ol {
+  border-top: 1px solid @gray-lighter;
+  font-size: 0.9em;
+  margin: 2em 0;
+  padding-top: 1em;
+}

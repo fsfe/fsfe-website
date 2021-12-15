@@ -1,0 +1,1073 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<html>
+  <version>1</version>
+
+  <head>
+    <title>Overview of website features</title>
+  </head>
+
+  <body class="article">
+    <p id="category"><a href="/contribute/web.html">Websites</a></p>
+
+    <h1>Overview of website features</h1>
+
+    <div id="introduction">
+      <p>
+        This page shows various features that the fsfe.org website provides for
+        editors. It is far from complete and always work in progress, just like
+        the website in general. And hey, already this paragraph is a special
+        feature, the <code>&lt;div id="introduction"&gt;</code>.
+      </p>
+    </div>
+
+
+    <div class="toc float-right">
+      <p>Table of contents</p>
+      <ol>
+        <li><a href="#metadata">Meta data</a></li>
+        <li><a href="#links">Links</a></li>
+        <li><a href="#graphics">Graphics</a></li>
+        <li><a href="#quotes">Quotes</a></li>
+        <li><a href="#interviews">Interviews</a></li>
+        <li><a href="#toc">Tables of content</a></li>
+        <li><a href="#sidebar-howto">Sidebar</a></li>
+        <li><a href="#modules">Modules</a></li>
+        <li><a href="#footnotes-howto">Footnotes</a></li>
+        <li><a href="#structure">Structuring content</a></li>
+        <li><a href="#related-tags">Related content via tags</a></li>
+        <li><a href="#buttons">Buttons</a></li>
+        <li><a href="#colour-boxes">Coloured Boxes</a></li>
+      </ol>
+    </div>
+
+    <p>
+      If you would like to follow how the features are actually being used, make
+      sure to have a look at the source code of this page. You will find a link
+      <a href="#page-info">in the footer</a>, as on every page.
+    </p>
+
+    <p>
+      First of all, when editing or creating websites, please make sure to <a
+      href="https://wiki.fsfe.org/TechDocs/Mainpage/Editing#Enabling_Git_hooks">enable
+      the Git hooks</a> and follow <a
+      href="https://wiki.fsfe.org/TechDocs/Mainpage/Editing/BestPractices">the
+      best practices</a>. They will mitigate a lot of common issues and make
+      things more pleasant for you and others.
+    </p>
+
+    <p>
+      Secondly, be aware that not all features work on all pages. News items and
+      events have some limitations or extra features. Some things are only
+      possible when you have set <code>&lt;body class="article"&gt;</code> (like
+      the sidebar), while <code>&lt;body class="overview"&gt;</code> is a
+      full-width page with other benefits.
+    </p>
+
+
+    <h2 id="metadata">Meta data</h2>
+
+    <p>
+      You can add various meta data and clever tags in your XHTML file. <a
+      href="https://wiki.fsfe.org/TechDocs/Mainpage/Editing#Adding_meta_information">This
+      wiki page</a> shows all of them. In this article, we set multiple authors
+      (see on top) and a description and image that are visible in social media
+      and other pages.
+    </p>
+
+    <h2 id="links">Links</h2>
+
+    <p>
+      Linking to websites using <code>&lt;a href="https://example.com"&gt;click
+      me&lt;/a&gt;</code> is the 101 of HTML. However, there are a few neat
+      tricks you should know of.
+    </p>
+
+    <h3 id="anchor-links">Anchor links</h3>
+
+    <p>
+      You can not only link to separate website, but also to parts of your page.
+      This can be done with anchor links. To achieve this, you'll first need to
+      mark the portion of the website that you would like to link to. In most
+      cases, this should be done by marking a headline. A use-case could be a
+      table of contents.
+    </p>
+
+    <p>
+      In this example, we gave the headline above this section ("Anchor links")
+      an id: <code>&lt;h3 id="anchor-links"&gt;Anchor links&lt;/h3&gt;</code>.
+      From now on, we can link to the id "anchor-links".
+    </p>
+
+    <p>
+      If you want to link to a section of the <em>same</em> site, you need to
+      prepend the link with a "#". So <a href="#anchor-links">this link</a> is
+      just <code>href="#anchor-links"</code>. However, you can also from another
+      site link to this specific section. Such a link could look like this:
+      <code>&lt;a
+      href="https://fsfe.org/contribute/web/features.html#anchor-links"&gt;click
+      me&lt;/a&gt;</code>.
+    </p>
+
+    <p>
+      <strong>NOTE</strong>: if you do not add an <code>id</code> attribute to
+      headlines, our build system will automatically do so, starting with
+      <code>id-</code> and then followed with the name of the headline (and some
+      modification). However, you are discouraged from using this effectively,
+      because this id will not be the same if the article is translated. So if
+      you link to a headline having the content "Important Section" via the
+      automatically generated anchor link <code>#id-important-section</code>,
+      this link will not work in the Italian translation where the automatically
+      generated id of the headline will be <code>id-sezione-importante</code> or
+      so.
+    </p>
+
+    <h3>Donation links</h3>
+
+    <p>
+      A special feature of our website is the automatic setting of a donation
+      link. Let's say you write a news item and would like to motivate people to
+      become supporters or make a one-time donation. You could just directly
+      link to the <a href="https://my.fsfe.org/donate">donation page</a>, but
+      ideally you want to learn which article motivated people to contribute.
+    </p>
+
+    <p>
+      For this, you can just use <code>fsfe-cd-donate-link</code>. Instead of
+      doing <code>&lt;a href="https://my.fsfe.org/donate"&gt;help
+      us&lt;/a&gt;</code>, you can do: <code>&lt;fsfe-cd-donate-link&gt;help
+      us&lt;/fsfe-cd-donate-link&gt;</code>. This automatically sets a referrer
+      to the donation link. The even cooler thing: it also works with buttons or
+      anything else that you do with <code>a</code> tags:
+    </p>
+
+    <aside>
+      <p>
+        We center the button by adding the <code>text-center</code> class to the
+        surrounding paragraph element. A button in this context is not more than
+        a style piece of text.
+      </p>
+    </aside>
+
+    <p class="text-center">
+      <fsfe-cd-donate-link class="btn btn-lg btn-primary">
+        Donate to the FSFE
+      </fsfe-cd-donate-link>
+    </p>
+
+    <p>
+      To learn more about buttons, click <a href="#buttons">here</a>.
+    </p>
+
+
+    <h2 id="graphics">Graphics</h2>
+
+    <p>
+      Including nice graphics is one of the most important steps to make a page
+      attractive to readers. Therefore, we support many ways how to embed
+      graphics, position them neatly, and fit them to your content. Let's have a
+      look at the default way how to include a picture: (almost) full-size,
+      shadow around it, and a caption below:
+    </p>
+
+    <figure>
+      <img src="/graphics/group-blur-800.jpg" alt="A random group picture" />
+      <figcaption>
+        A picture of a group, somewhen in 2013
+      </figcaption>
+    </figure>
+
+    <p>
+      The code for that would be the following (the next examples won't have
+      this explicit code display, so have a look at the source code then):
+    </p>
+
+    <pre><code>&lt;figure&gt;
+  &lt;img src="/graphics/group-blur-800.jpg" alt="A random group picture" /&gt;
+  &lt;figcaption&gt;
+    A picture of a group, somewhen in 2013
+  &lt;/figcaption&gt;
+&lt;/figure&gt;</code></pre>
+
+    <p>
+      You can equip the <code>&lt;figure&gt;</code> element with many more
+      classes to adapt them to your needs. Here are some examples:
+    </p>
+
+    <figure class="float-right">
+      <img src="/graphics/group-blur-800.jpg" alt="A random group picture" />
+    </figure>
+
+    <p>
+      On the right, we have a <code>class="float-right"</code>, and this time
+      without a <code>figcaption</code>. On large screens, it will stick to the
+      right, on small ones it will become full-width to stay visible for
+      visitors. Of course, <code>float-left</code> is also possible.
+    </p>
+
+    <p>
+      You can also control the width of the image freely. Add the
+      <code>max-width-XX</code> class to the figure, where XX equals a number
+      between 0 and 100 in steps of 5. In the example below, we set it to 55,
+      and apply a few other classes:
+    </p>
+
+    <figure class="max-width-55 no-border">
+      <img src="/graphics/group-blur-800.jpg" alt="A random group picture" />
+      <figcaption class="text-right">
+        This description is right-aligned, why ever...
+      </figcaption>
+    </figure>
+
+    <p>
+      Did you notice that the shadow around the picture is gone?
+      <code>no-border</code> sets that. And for some reason, we defined that the
+      text in the figcaption shall be aligned to the right, by applying the
+      <code>text-right</code> class.
+    </p>
+
+    <p>
+      <strong>BE AWARE</strong>: although we have all these classes, please
+      don't overuse them. We strive to keep a more or less uniform style on
+      fsfe.org. Therefore, try to be consistent with other, similar pages, and
+      don't make your page a playground for wild styling experiments.
+    </p>
+
+    <h2 id="quotes">Quotes</h2>
+
+    <p>
+      For many pages it may make sense to add quotes in between a wall of text.
+      Also here, the FSFE website provides a number of options: raw text, or
+      enriched by a picture, the quoted person's name etc:
+    </p>
+
+    <blockquote>
+      <p>
+        This is a standard quote. Remember that you'll still have to wrap
+        paragraphs in their respective <code>&lt;p&gt;</code>.
+      </p>
+    </blockquote>
+
+    <p>
+      Let's add the author of a quote nicely by adding
+      <code>&lt;cite&gt;</code>:
+    </p>
+
+    <blockquote>
+      <p>
+        "The problem with internet quotes is that you cannot always depend on
+        their accuracy."
+      </p>
+      <cite>Abraham Lincoln</cite>
+    </blockquote>
+
+    <p>
+      To increase authenticity even more, let's add a picture next to the quote:
+    </p>
+
+    <blockquote>
+      <div class="with-image-left">
+        <img src="/graphics/logos/android.png" alt="A happy Android" />
+        <div>
+          <p>
+            "Finally I am free! Thanks to the FSFE's 'Free Your Android' and
+            'Upcycling Android' campaigns, I learnt how to break free from
+            proprietary dependencies! I recommend every android and human to do
+            the same."
+          </p>
+          <cite>A. Droid, random mobile phone</cite>
+        </div>
+      </div>
+    </blockquote>
+
+    <p>
+      Another example with different mixture of classes. We apply
+      <code>small-img</code> to the <code>with-image-right</code> div that, as
+      the name says, puts the image to the right instead of the left. We also
+      use the class <code>img-circle</code> on Matthias' picture. Note that for
+      this, the picture must be square!
+    </p>
+
+    <blockquote>
+      <div class="with-image-right small-img">
+        <img class="img-circle" src="https://pics.fsfe.org/uploads/small/1ac31d3b54bd0ed7db27a074c6d1f7ab.jpg" alt="Matthias Kirschner" />
+        <div>
+          <p>
+            "We are happy to see that the good energy and resources the FSFE
+            community dedicates on creating, translating and promoting the
+            campaign's objectives keeps increasing support from major public
+            stakeholders."
+          </p>
+          <cite>Matthias Kirschner</cite>
+        </div>
+      </div>
+    </blockquote>
+
+
+    <h2 id="interviews">Interviews</h2>
+
+    <p>
+      We sometimes publish interviews, for example with an interesting person.
+      Sometimes, we also ask the same questions to multiple political parties,
+      and want to list their answers using the party colours. Find out how this
+      works:
+    </p>
+
+    <aside>
+      <p>
+        The bold text is done manually with <code>&lt;strong&gt;</code>. There
+        is not uniform style guide (yet), so have a look at how other interviews
+        are doing this.
+      </p>
+    </aside>
+
+    <p class="question">
+      <strong>FSFE: What are the freedoms of Free Software?</strong>
+    </p>
+
+    <div class="answer">
+      <p>
+        <strong>Jane Doe</strong>: These are the freedoms to use, study, share,
+        and improve software.
+      </p>
+      <p>
+        I write this in a second paragraph on the same level: They safeguard
+        user rights!
+      </p>
+    </div>
+
+    <p class="question">
+      <strong>What is the answer to all questions?</strong>
+    </p>
+
+    <aside>
+      <p>
+        Here, we are going one level deeper of one question, so with stacking
+        indentation. It's not used widely, so probably it's not wise to use it.
+      </p>
+    </aside>
+
+    <div class="answer">
+      <p>
+        I assume it's 42.
+      </p>
+
+      <div class="question2">
+        <p>
+          <strong>FSFE: Are you sure? Isn't it 23?</strong>
+        </p>
+      </div>
+
+      <div class="answer2">
+        <p>
+          Oh, well, I don't know.
+        </p>
+      </div>
+    </div>
+
+    <div class="question">
+      <p>
+        <strong>Thank you for your time.</strong>
+      </p>
+    </div>
+
+    <aside>
+      <p>
+        Back to the normal level.
+      </p>
+    </aside>
+
+    <div class="answer">
+      <p>
+        Likewise.
+      </p>
+    </div>
+
+    <p>
+      If you look at the source code, you will see that we sometimes use
+      <code>&lt;p class="question"&gt;</code> and sometimes <code>&lt;div
+      class="answer"&gt;</code> with multiple <code>&lt;p&gt;</code> inside. If
+      a question or answer contains multiple paragraphs, wrap them in a
+      &lt;div&gt; with this class, but leave the &lt;p&gt;s without any class.
+      If they are only one paragraph, it's suffient to just use a &lt;p&gt; with
+      the respective class.
+    </p>
+
+    <h3>Party questions (like Ask Your Candidates)</h3>
+
+    <p>
+      For parties, we have some predefined coloured boxes. You will find them in
+      the file <code>/look/elements/interview-ayc.less</code>. Here is a <a
+      href="https://git.fsfe.org/FSFE/fsfe-website/src/commit/2a8709c12ea00d69581fb40a2e5a02204c1b82ff/look/elements/interview-ayc.less#L48">snapshot</a>.
+    </p>
+
+    <p class="question">
+      <strong>How will you foster user rights?</strong>
+    </p>
+
+    <aside>
+      <p>For the first answer, we use a single &lt;p&gt; with the class
+      <code>answer party diegrüne</code>.</p>
+    </aside>
+
+    <p class="answer party diegrüne">
+      <strong>Clever Party</strong>: We want to use Free Software everywhere!
+    </p>
+
+    <aside>
+      <p>For the second answer, we wrap the two "unclassed" &lt;p&gt; in a div
+      with the class <code>answer party spd</code>.</p>
+    </aside>
+
+    <div class="answer party spd">
+      <p>
+        <strong>Party of Moneysavers</strong>: All software must be free as in beer.
+      </p>
+      <p>
+        Also: Public Money, Public Code! It saves costs in the long run.
+      </p>
+    </div>
+
+    <p class="answer party csu">
+      <strong>Big Tech Party</strong>: User rights do not matter, but our profit
+      does.
+    </p>
+
+
+    <h2 id="toc">Tables of contents</h2>
+
+    <p>
+      If you have a long page, adding a table of contents may come in handy. We
+      offer a few options here. The default one is using a div with the class
+      <code>toc</code>. Inside, the first p element is the headline, and then
+      followed by a list, either ordered or unordered. If you choose ordered,
+      our system will automatically number the items accordingly.
+    </p>
+
+    <p>
+      You can link the different points to specific points of your page.
+      Ideally, you do this via <a href="#anchor-links">anchor links</a> that you
+      define manually for headlines.
+    </p>
+
+    <p>
+      You can also introduce a hierarchy of list items. For this, start a new
+      ordered list ("ol") or unordered list ("ul") within a list item ("li") on
+      the parent level. Below, you can find two non-functional examples: one
+      with ordered lists (numbers), one with unordered lists (bullet points) on
+      the first level, and numbered on the second.
+    </p>
+
+    <div class="toc">
+      <p>Numbered contents</p>
+      <ol>
+        <li>
+          <a href="#first">First item</a>
+        </li>
+        <li>Second item on first level, from here on without links
+          <ol>
+            <li>First item on second level</li>
+          </ol>
+        </li>
+        <li>Third item on first level</li>
+      </ol>
+    </div>
+
+    <hr />
+
+    <div class="toc">
+      <p>Bullet and numbered points mixed</p>
+      <ul>
+        <li>
+          <a href="#first">First item</a>
+        </li>
+        <li>Second item on first level, from here on without links
+          <ul>
+            <li>First item on second level</li>
+          </ul>
+        </li>
+        <li>Third item on first level
+          <ol> <!-- Please, think really hard whether you want to mix ul and ol! -->
+            <li>We can even mix ordered and unordered lists!
+              <ol>
+                <li>OK, now it's getting silly...</li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+      </ul>
+    </div>
+
+    <p>
+      If you don't want the table of contents to use up the full width, you can
+      also move it to the left or right of the page. On the very top of this
+      page you can find and example for a table of contents being on the right
+      side, which is done by adding the class <code>float-right</code> to the
+      ToC's div element. <code>float-left</code> would do the opposite.
+    </p>
+
+
+    <h2 id="sidebar-howto">Sidebar</h2>
+
+    <p>
+      Depending on the class of the <code>&lt;body&gt;</code> element, you page
+      automatically has an empty space to the right (at least on larger
+      screens). This is the sidebar which is defined below the closing
+      <code>&lt;/body&gt;</code>.
+    </p>
+
+    <p>
+      You can leave it empty (so just
+      <code>&lt;sidebar&gt;&lt;/sidebar&gt;</code>), then the build system put
+      some standard text there. But you can also use it for custom content. In
+      this example, we put a headline with "Sidebar content" followed by a few
+      links, <a href="#related-tags">related news</a>, and a paragraph. Below,
+      there is a text motivating to support the FSFE, activated by adding the
+      attribute <code>promo="support"</code>.
+    </p>
+
+    <p>
+      All available sidebar promos can be seen in
+      <code>/build/xslt/fsfe_sidebar.xsl</code>. Currently, these are
+      <code>our-work</code>, <code>support</code>, <code>donate</code> or
+      <code>none</code>. Ask the web team if you miss something!
+    </p>
+
+
+    <h2 id="modules">Modules</h2>
+
+    <p>
+      There are pre-defined modules that you can include almost everywhere on
+      fsfe.org. This way, translators don't have to translate the same text over
+      and over again, and such things can be improved centrally. For instance,
+      check this out:
+    </p>
+
+    <aside>
+      <p>
+        This banner is called via <code>&lt;module id="banner-subscribe"
+        /&gt;</code>
+      </p>
+    </aside>
+
+    <module id="banner-subscribe" />
+
+    <p>
+      You can find all modules <a
+      href="https://git.fsfe.org/FSFE/fsfe-website/src/branch/master/global/data/modules">here</a>,
+      and can add new ones. However, if you are not very familiar with the FSFE
+      website, please consider asking the web mailing list or someone from this
+      team first.
+    </p>
+
+    <aside>
+      <p>
+        There is also the <a href="https://webpreview.fsfe.org">webpreview
+        tool</a> to quickly show how a page can look like, and much more.
+        However, many of the features presented here will not work with the
+        tool. Therefore, a local build is the best way to simulate how your
+        changes will look like in the end.
+      </p>
+    </aside>
+
+    <p>
+      Small pitfall: if you <a
+      href="https://wiki.fsfe.org/TechDocs/Mainpage/BuildLocally">build the
+      website locally</a> and include a module in a page for the first time,
+      you'll have to run <code>make</code> after including a module once.
+    </p>
+
+
+    <h2 id="footnotes-howto">Footnotes</h2>
+
+    <p>
+      Especially for studies and longer articles, you may want to use footnotes.
+      This is simple to achieve once you understand the basic principle.
+    </p>
+
+    <p>
+      In this paragraph, we'll add two footnotes. One is here<a id="ref-1"
+      href="#fn-1" role="doc-noteref"></a>, and let's put another one behind
+      here<a id="ref-2" href="#fn-2" role="doc-noteref"></a>. The cool thing:
+      you don't have to set the numbers yourself! However, it's critical that
+      you retain <code>role="doc-noteref"</code> for each of them, and
+      <code>role="doc-backlink"</code> for the backlinks below.
+    </p>
+
+    <p>
+      Normally, you would have the actual footnotes at the end of the page, so
+      just before <code>&lt;/body&gt;</code>, but let's put it next to this
+      paragraph.
+    </p>
+
+    <aside>
+      <p>
+        Check the &#8617; signs. They refer back to where the footnote's number
+        was first mentioned. This works thanks to <a href="#anchor-links">anchor
+        links</a>.
+      </p>
+    </aside>
+
+    <h2 id="footnotes">Footnotes</h2> <!-- This headline is hidden, but please keep it anyway -->
+    <ol>
+      <li id="fn-1">
+        We called this footnote <code>fn-1</code> and the backlink
+        <code>ref-1</code> but that's completely up to you. <a class="ref"
+        href="#ref-1" role="doc-backlink"></a>
+      </li>
+      <li id="fn-2">
+        Most importantly, it should be consistent across the page so you don't
+        get confused by the <code>fn-number</code> and
+        <code>ref-number</code>.
+        <a class="ref" href="#ref-2" role="doc-backlink"></a>
+      </li>
+    </ol>
+
+
+    <h2 id="structure">Structuring content</h2>
+
+    <p>
+      By default, if you just enter text in <code>&lt;p&gt;</code> elements, you
+      just create a wall of text. Sometimes it makes sense to split the page, or
+      otherwise organise information in smaller pieces. Here are some examples
+      of what you can do:
+    </p>
+
+    <h3>50-50 grid</h3>
+
+    <aside>
+      <p>
+        Applying multiple classes to one element is no problem. Just separate
+        them with a space, e.g. <code>&lt;div class="box first"&gt;</code>
+      </p>
+    </aside>
+
+    <p>
+      With <code>&lt;div class="grid-50-50"&gt;</code> and the follow-up divs
+      you can create two boxes besides each other. On smaller screens, they will
+      be below each other, allowing for enough space. Please make sure to not
+      forget the extra <code>first</code> class for the first <code>&lt;div
+      class="box"&gt;</code>:
+    </p>
+
+    <div class="grid-50-50">
+      <div class="box first">
+        <p>This is how the law is currently drafted:</p>
+        <ol>
+          <li>You shall not use software for every purpose</li>
+          <li>You shall not be able to study technology</li>
+          <li>You must not share software with friends</li>
+          <li>By no means you must be able to improve technology</li>
+        </ol>
+      </div>
+
+      <div class="box">
+        <p>This is what the FSFE proposes instead:</p>
+        <ol>
+          <li>You have the freedom to use software for any purpose</li>
+          <li>You have the freedom to study software</li>
+          <li>You have the freedom to shate software with everyone</li>
+          <li>You have the freedom to improve the software</li>
+        </ol>
+      </div>
+    </div>
+
+    <h3>Icon grid</h3>
+
+    <p>
+      Instead of a mere 50/50 box, you may want to add icons to smaller points
+      you are making. Here, we offer a neat icon grid with exciting options.
+      Let's check out the basic version:
+    </p>
+
+    <div class="icon-grid">
+      <ul>
+        <li>
+          <img src="/graphics/icons/autonomy.png" alt="" />
+          <div>
+            <h3>Autonomy</h3>
+            <p>
+              Free Software helps to develop and maintain tailored software that
+              suits your needs, not just the vendor's business model.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <img src="/graphics/icons/collaboration.png" alt="" />
+          <div>
+            <h3>Collaboration</h3>
+            <p>
+              Free Software can be shared and used in a non-exclusive way by
+              everyone – serving the public good.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <img src="/graphics/icons/share-copy.png" alt="" />
+          <div>
+            <h3>Share &amp; Copy</h3>
+            <p>
+              A Free Software licence allows a limitless number of installations
+              to be run, without paying extra.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <img src="/graphics/icons/no-lock-in.png" alt="" />
+          <div>
+            <h3>No Lock-in</h3>
+            <p>
+              Free Software licences reinforce independence from vendors and
+              provide more choice in service providers.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <p>
+      Some extra classes can refine the whole look and make it very flexible. We
+      will look at <code>icons-sm</code>, <code>one-per-row</code>,
+      <code>no-icons</code>, and <code>icons-middle</code> in short examples.
+    </p>
+
+    <aside>
+      <p>
+        Let us start with small icons (<code>icons-sm</code>) and icons in the
+        middle (<code>icons-middle</code>).
+      </p>
+    </aside>
+
+    <div class="icon-grid icons-sm icons-middle">
+      <ul>
+        <li>
+          <img src="/graphics/icons/pie-topleft.png" alt=""/>
+          <div>
+            <h3>Use</h3>
+            <p>
+              Free Software can be used for any purpose.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <img src="/graphics/icons/pie-topright.png" alt=""/>
+          <div>
+            <h3>Study</h3>
+            <p>
+              Free Software and its code can be studied by anyone.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <hr />
+
+    <aside>
+      <p>
+        If you have a lot of text, <code>one-per-row</code> comes in handy.
+      </p>
+    </aside>
+
+    <div class="icon-grid one-per-row">
+      <ul>
+        <li>
+          <img src="/graphics/icons/autonomy.png" alt="" />
+          <div>
+            <h3>Autonomy</h3>
+            <p>
+              Free Software helps to develop and maintain tailored software that
+              suits your needs, not just the vendor's business model. Lorem
+              ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+              ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et
+              magnis dis parturient montes, nascetur ridiculus mus. Donec quam
+              felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
+              consequat massa quis enim.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <img src="/graphics/icons/collaboration.png" alt="" />
+          <div>
+            <h3>Collaboration</h3>
+            <p>
+              Free Software can be shared and used in a non-exclusive way by
+              everyone – serving the public good. Donec pede justo, fringilla
+              vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
+              imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
+              mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum
+              semper nisi. Aenean vulputate eleifend tellus.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <hr />
+
+    <aside>
+      <p>
+        Last but not least, <code>no-icons</code> completely redacts the
+        graphics.
+      </p>
+    </aside>
+
+    <div class="icon-grid no-icons">
+      <ul>
+        <li>
+          <div>
+            <h3>Use</h3>
+            <p>
+              Free Software can be used for any purpose and is free of
+              restrictions such as licence expiry or geographic limitations.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <h3>Study</h3>
+            <p>
+              Free Software and its code can be studied by anyone, without
+              non‐disclosure agreements or similar restrictions.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <h3>Share</h3>
+            <p>
+              Free Software can be shared and copied at virtually no cost.
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div>
+            <h3>Improve</h3>
+            <p>
+              Free Software can be modified by anyone, and these improvements
+              can be shared publicly.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+
+    <h2 id="related-tags">Related content via tags</h2>
+
+    <p>
+      On campaign websites you may want to automatically include the latest news
+      about your activity. This works on the basis of tags. Each news item
+      should carry tags. The currently existing tags are listed <a
+      href="/tags/tags.html">here</a>. What's important is the tag's
+      <code>key</code>
+    </p>
+
+    <p>
+      For example, the tags section of <a
+      href="/news/2021/news-20211203-01.html">this news items</a> looks like the
+      following:
+    </p>
+
+    <aside>
+      <p>
+        The <code>front-page</code> tag just indicates that a news item shall be
+        listed on the frontpage of fsfe.org.
+      </p>
+    </aside>
+
+    <pre><code>&lt;tags&gt;
+  &lt;tag key="front-page"/&gt;
+  &lt;tag key="internal"&gt;FSFE Internal&lt;/tag&gt;
+  &lt;tag key="tech-teams"&gt;Technical Teams&lt;/tag&gt;
+&lt;/tags&gt;</code></pre>
+
+    <p>
+      Now, we want to include news about the technical teams of the FSFE below
+      this paragraph, and also in the sidebar. This looks like the following:
+    </p>
+
+    <aside>
+      <p>
+        Saving you the look into the source code, the content starting from the
+        "Related News" headline until "All related news and events" is just
+        generated with <code>&lt;related-feed tag="tech-teams" /&gt;</code>.
+        Nice, huh?
+      </p>
+    </aside>
+
+    <related-feed tag="tech-teams" />
+
+    <hr />
+
+    <p>
+      In order to make this work, you need to create a file next to the XHTML
+      file you are creating anyway. In the case of this page, whose file is
+      called <code>features.en.xhtml</code>, you'll need to create
+      <code>features.sources</code>. In <a
+      href="https://git.fsfe.org/FSFE/fsfe-website/src/branch/master/contribute/web/features.sources">this
+      file</a>, you define the files that the build system shall look for as
+      candidates for inclusion. The content of this article's sources file is:
+    </p>
+
+    <pre><code>news/*/*:[tech-teams]
+news/*/.*:[tech-teams]
+events/*/*:[tech-teams]
+events/*/.*:[tech-teams]</code></pre>
+
+    <p>
+      It asks the build system to have a look at all news items and events that
+      contain the tag <code>tech-teams</code>. But the system will the only
+      regard news items that have already been released (date older than today),
+      and event entries that are upcoming or currently ongoing, not past ones.
+    </p>
+
+    <p>
+      Variation: for the <a href="#related-list">sidebar</a> we've chosen
+      <code>&lt;related-list tag="tech-teams" count="2" /&gt;</code> instead of
+      <code>related-feed</code>. This does two extra things: the list does not
+      feature the latest news/event but is a plain list of entries. And with the
+      <code>count</code> attribute we overwrite the default value of maximum 5
+      entries and limit the list to the two most recent news/events.
+    </p>
+
+    <p>
+      By the way: if you don't want to display news items, just delete the lines
+      starting with "news/" - and vice versa for events - from the
+      <code>.sources</code> files.
+    </p>
+
+
+    <h2 id="buttons">Buttons</h2>
+
+    <p>
+      A very simple but powerful element is buttons. There are countless options
+      so we just mention the most used ones. In general, a button in our website
+      is nothing more than a <code>&lt;a&gt;</code> element with a few extra
+      classes.
+    </p>
+
+    <p>
+      <a class="btn btn-default">Default button</a>
+      <a class="btn btn-primary">Button with the primary color</a>
+      <a class="btn btn-lg btn-success">Large green button</a>
+      <a class="btn btn-xs btn-danger">Extra-small red button</a>
+      <a class="btn btn-warning" href="#buttons">Orange button with link to this section</a>
+    </p>
+
+    <p class="text-center">
+      <a class="btn btn-lg btn-info">A centered button</a>
+    </p>
+
+    <aside>
+      <p>
+        Bootstrap is a framework for CSS, so the stylesheets. It already
+        includes a lot of classes like the styling of buttons, their colours and
+        much more.
+      </p>
+    </aside>
+
+    <p>
+      For more, you can check out the corresponding section on <a
+      href="https://getbootstrap.com/docs/3.3/css/#buttons">our Bootstrap
+      version's documentation</a>.
+    </p>
+
+
+    <h2 id="colour-boxes">Coloured boxes</h2>
+
+    <p>
+      Sometimes, you may want to put some content within coloured frames, or
+      have an element that has a unicolour background. Here are a few options,
+      and all of them involve at least the class <code>color-box</code>.
+      However, please do not overload your page.
+    </p>
+
+    <div class="color-box border" data-color="fsfe-blue">
+      <p>
+        This box is using the <code>class="color-box border"</code> and
+        <code>data-color="fsfe-blue"</code>.
+      </p>
+    </div>
+
+    <p>
+      The colours for <code>data-color</code> are defined in the file
+      <code>/look/elements/color-box.less</code>. Here is a link to a <a
+      href="https://git.fsfe.org/FSFE/fsfe-website/src/commit/2a8709c12ea00d69581fb40a2e5a02204c1b82ff/look/elements/color-box.less#L23-L44">snapshotted
+      version</a>.
+    </p>
+
+    <div class="color-box background" data-color="android-lime">
+      <p>
+        This box is using the <code>class="color-box background"</code> and
+        <code>data-color="android-lime"</code>.
+      </p>
+
+      <a class="btn btn-sm btn-default">I am a button missing the href attribute</a>
+    </div>
+
+    <div class="color-box background rounded" data-color="android-blue">
+      <p>
+        This box is using the <code>class="color-box background rounded"</code> and
+        <code>data-color="android-blue"</code>.
+      </p>
+    </div>
+
+    <p>
+      You can also stretch the box. A <code>fullwidth</code> box looks best on a
+      <code>body class="toplevel"</code> or <code>body class="overview"</code>,
+      so page formats that do not have a sidebar.
+    </p>
+
+    <div class="color-box background fullwidth" data-color="dark-green">
+      <p>
+        This box is using the <code>class="color-box background fullwidth"</code> and
+        <code>data-color="dark-green"</code>.
+      </p>
+    </div>
+
+
+    <h2>Conclusion</h2>
+
+    <p>
+      Phew, that was a ride! This article is far from perfect or complete. So if
+      you need more info or wish to have another design option, please propose
+      it to the <a href="/contribute/web/">Web team</a>!
+    </p>
+
+  </body>
+
+  <sidebar promo="support">
+    <h3>Sidebar content</h3>
+    <ul>
+      <li><a href="/contribute">Contribute to the FSFE</a></li>
+      <li><a href="/contribute/web/">Help the web team</a></li>
+      <li><a href="https://my.fsfe.org/donate">Donate to the FSFE</a></li>
+    </ul>
+    <related-list tag="tech-teams" count="2" />
+    <p>
+      The longer list for latest news is <a href="#related-news">here</a>.
+    </p>
+  </sidebar>
+
+  <description>
+    An overview of the exiciting and manifold features FSFE editors have with
+    the website system.
+  </description>
+
+  <author id="mehl" />
+  <author id="roy" />
+  <author>
+    <name>hundreds of people who contributed to the website in more than 20 years</name>
+  </author>
+
+  <image url="https://fsfe.org/graphics/tshirt-promo-800px.jpg" />
+</html>

@@ -18,8 +18,8 @@
 
         <!-- Link to discussion topic on community.fsfe.org -->
         <xsl:if test = "/buildinfo/document/discussion/@href">
-          <xsl:attribute name="id">discussion-link</xsl:attribute>
-          <xsl:element name="p">
+        <xsl:element name="p">
+            <xsl:attribute name="id">discussion-link</xsl:attribute>
             <xsl:element name="a">
               <xsl:attribute name="class">learn-more</xsl:attribute>
               <xsl:attribute name="href">

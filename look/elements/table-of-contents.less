@@ -52,22 +52,26 @@ div.toc {
   }
 
   /* VARIANTS */
-  // Floating box to the right
-  &.float-right {
-    float: right;
-    max-width: 40%;
-  }
 
-  // Floating box to the left
-  &.float-left {
-    float: left;
-    max-width: 40%;
+  // Floating boxes (only on small+ screens)
+  @media screen and (min-width: @screen-sm-min) {
+    // To the right
+    &.float-right {
+      float: right;
+      max-width: 40%;
+    }
 
-    // put blue border and all margin/padding to the right
-    box-shadow: 1px 0 @brand-primary;
-    margin-left: 0px;
-    margin-right: 20px;
-    padding-left: 0px;
-    padding-right: 20px;
+    // To the left
+    &.float-left {
+      float: left;
+      max-width: 40%;
+
+      // put blue border and all margin/padding to the right
+      box-shadow: 1px 0 @brand-primary;
+      margin-left: 0px;
+      margin-right: 20px;
+      padding-left: 0px;
+      padding-right: 20px;
+    }
   }
 }

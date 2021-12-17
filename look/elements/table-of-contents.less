@@ -45,12 +45,12 @@ div.toc {
   ol {
     // automatically count the list items cleverly like "1.2.3 myitem"
     counter-reset: item;
-    li:before {
+    > li:before {
       content: counters(item, ".")" ";
       counter-increment: item;
       margin-right: 0.2em;
     }
-    li {
+    > li {
       // overwrite list-item
       display: block;
     }

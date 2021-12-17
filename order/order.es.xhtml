@@ -5,25 +5,6 @@
 
   <head>
     <title>Productos promocionales</title>
-
-    <style type="text/css">
-    div#toc {
-      float: right;
-      clear: right;
-      border: solid 1px;
-      margin: .5em;
-      background: rgb(240,240,240);
-      width: 30%;
-    }
-
-    @media only screen and (max-width: 600px) {
-      div#toc {
-        width: 100%;
-      }
-    }
-    </style>
-
-
   </head>
 
   <body class="toplevel">
@@ -31,9 +12,9 @@
 
     <module id="order-delay" />
 
-    <div id="toc">
-      <p style="text-indent:1em;">Productos disponibles:</p>
-      <ul style="margin-bottom: 1em;">
+    <div class="toc float-right">
+      <p>Productos disponibles</p>
+      <ul>
         <li><a href="#tshirt">Camisetas</a></li>
         <li><a href="#girlie">Camisetas para mujer</a></li>
         <li><a href="#hooded">Camisetas con capucha</a></li>
@@ -43,18 +24,18 @@
     </div>
 
     <p class="p-summary">
-    Muestra tu amor por el Software Libre usando y llevando los artículos de marca 
-    que aparecen a continuación. La ropa de Software Libre es una gran manera de aumentar la conciencia dentro 
+    Muestra tu amor por el Software Libre usando y llevando los artículos de marca
+    que aparecen a continuación. La ropa de Software Libre es una gran manera de aumentar la conciencia dentro
     de su comunidad local y cada venta ayuda a financiar proyectos críticos de la FSFE.
     </p>
 
     <p>
-    Para obtener información detallada sobre las dimensiones reales de las distintas 
-    tallas de las prendas, sitúe el puntero del ratón sobre la etiqueta de la talla o 
+    Para obtener información detallada sobre las dimensiones reales de las distintas
+    tallas de las prendas, sitúe el puntero del ratón sobre la etiqueta de la talla o
     consulte la <a href="size.html">tabla de tallas</a>.
     </p>
 
-    <p style="clear:both;"></p>
+    <div class="clearfix"></div>
 
     <form action="/cgi-bin/weborder.pl" method="post" class="item-grid">
       <h2 id="tshirt">Camisetas</h2>
@@ -80,8 +61,8 @@
       <h2>Material promocional</h2>
 
       <p>
-        Consulte nuestra 
-        <a href="/contribuir/difundir.html#promo-material">página de pedidos de material informativo</a> 
+        Consulte nuestra
+        <a href="/contribuir/difundir.html#promo-material">página de pedidos de material informativo</a>
         para pedir folletos, pegatinas y otras cosas.
       </p>
 
@@ -146,7 +127,7 @@
     </form>
 
     <p>
-    El pago es posible mediante transferencia bancaria, PayPal y varias tarjetas de crédito y débito. 
+    El pago es posible mediante transferencia bancaria, PayPal y varias tarjetas de crédito y débito.
     Recibirá más información cuando su pedido se haya enviado.
     </p>
   </body>
@@ -154,8 +135,3 @@
 
   <image url="/graphics/tshirt-promo-800px.jpg" />
 </html>
-<!--
-Local Variables: ***
-mode: xml ***
-End: ***
--->

@@ -5,25 +5,6 @@
 
   <head>
     <title>Fan-artikelen</title>
-
-    <style type="text/css">
-    div#toc {
-      float: right;
-      clear: right;
-      border: solid 1px;
-      margin: .5em;
-      background: rgb(240,240,240);
-      width: 30%;
-    }
-
-    @media only screen and (max-width: 600px) {
-      div#toc {
-        width: 100%;
-      }
-    }
-    </style>
-
-
   </head>
 
   <body class="toplevel">
@@ -31,9 +12,9 @@
 
     <module id="order-delay" />
 
-    <div id="toc">
-      <p style="text-indent:1em;">Beschikbare fan-artikelen:</p>
-      <ul style="margin-bottom: 1em;">
+    <div class="toc float-right">
+      <p>Beschikbare fan-artikelen</p>
+      <ul>
         <li><a href="#tshirt">T-Shirts</a></li>
         <li><a href="#girlie">T-Shirts voor dames</a></li>
         <li><a href="#hooded">Shirts met kap (hoodies)</a></li>
@@ -55,7 +36,7 @@
       bekijk de <a href="size.html">maattabel</a>.
     </p>
 
-    <p style="clear:both;"></p>
+    <div class="clearfix"></div>
 
 
     <form action="/cgi-bin/weborder.pl" method="post" class="item-grid">
@@ -158,8 +139,3 @@
   <translator>André Ockers</translator>
   <image url="/graphics/tshirt-promo-800px.jpg" />
 </html>
-<!--
-Local Variables: ***
-mode: xml ***
-End: ***
--->

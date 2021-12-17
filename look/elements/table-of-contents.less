@@ -7,12 +7,17 @@ div.toc {
   box-shadow: -1px 0 @brand-primary;
 
   // Overwrite browser-default paddings/margins
-  margin-left: 20px;
-  padding-left: 20px;
+  margin: 0 20px 0 20px;
+  padding: 10px 0 1px 20px; // the bottom 1px does fix the collapsing margin
 
-  // Headline, usually "Content" or "Table of contents"
-  & > p {
+  // Normal headline/section, usually "Content" or "Table of contents"
+  p {
     font-weight: 700;
+  }
+  // really large headline, useful for larger ToCs with multiple sections
+  p.head {
+    font-size: 1.15em;
+    text-align: center;
   }
 
   // Smaller paddings for sub-levels

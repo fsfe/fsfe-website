@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<activityset>
+  <version>1</version>
+
+  <activity id="childrensbook" date="2021-12-01" status="active">
+    <title>Children's book</title>
+    <description>
+A modern tale that conveys the joy of tinkering to children over six 
+years old and calls for self-determined use of software. 'Ada and 
+Zangemann: a tale of software, skateboards, and raspberry ice cream' is 
+a charming story that adults can also enjoy. 
+    </description>
+    <link href="/activities/childrensbook/" />
+    <image url="/graphics/logos/childrensbook.png" />
+    <order priority="5" highlight="yes" />
+    <tags>
+        <tag key="awareness"/>
+    </tags>
+  </activity>
+</activityset>

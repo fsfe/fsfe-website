@@ -32,8 +32,10 @@ my %names = (
   "fani" => "Fani Partsafyllidou",
   "fi" => "Francesca Indorato",
   "gabriel.ku" => "Gabriel Ku Wei Bin",
+  "jackie" => "Jackie Chen",
   "lina.ceballos" => "Lina Ceballos",
   "linda" => "Linda Wagener",
+  "linus" => "Linus Sehn",
   "lucas.lasota" => "Lucas Lasota",
   "max.mehl" => "Max Mehl",
   "mk" => "Matthias Kirschner",
@@ -75,7 +77,9 @@ my %responsible = (
   "PERSONELL-CEBALLOS" => "council",
   "PERSONELL-WAGENER" => "council",
   "PERSONELL-MEHRING" => "council",
+  "PERSONELL-SEHN" => "council",
   "PERSONELL-PARTSAFYLLIDOU" => "council",
+  "PERSONELL-CHEN" => "council",
   "OFFICE-BERLIN" => "council",
 );
 
@@ -109,7 +113,9 @@ my %account = (
   "PERSONELL-CEBALLOS" => "81068",
   "PERSONELL-WAGENER" => "81069",
   "PERSONELL-MEHRING" => "81070",
+  "PERSONELL-SEHN" => "81071",
   "PERSONELL-PARTSAFYLLIDOU" => "81072",
+  "PERSONELL-CHEN" => "81073",
   "OFFICE-BERLIN" => "82001",
 );
 

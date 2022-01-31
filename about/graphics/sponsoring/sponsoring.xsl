@@ -7,15 +7,12 @@
     <xsl:for-each select="/buildinfo/document/set/year"> <!-- loop years -->
       <xsl:variable name="year"><xsl:value-of select="@id"/></xsl:variable>
 
-      <xsl:element name="h2">
+      <xsl:element name="h3">
+        <xsl:attribute name="id"><xsl:text>donor-</xsl:text><xsl:value-of select="$year" /></xsl:attribute>
         <xsl:value-of select="$year" />
         <xsl:text> </xsl:text><xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="'donation-buttons'" /></xsl:call-template>
       </xsl:element>
       <xsl:for-each select="button"> <!-- loop donation levels -->
-        <xsl:element name="h3">
-          <xsl:call-template name="fsfe-gettext"><xsl:with-param name="id" select="@type" /></xsl:call-template>
-          <xsl:text> </xsl:text>
-          <xsl:value-of select="$year" /></xsl:element>
         <xsl:element name="div">
           <!-- image -->
           <xsl:element name="img">

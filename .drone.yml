@@ -6,11 +6,15 @@ clone:
   depth: 150
 
 steps:
-  - name: syntaxcheck
-    image: vsasyan/xmllint
+  - name: checks
+    image: nixery.dev/shell/git/libxml2/gnused/gnugrep/findutils/perl/file:latest
     commands:
-    - find . -type f \( -iname "*.xhtml" -o -iname "*.xml" -o -iname "*.xsl" \) -exec xmllint --noout {} +
+    # Check whether non-EN news item would appear on front-page
     - bash tools/check-non-en-frontpage.sh news
+    # Run pre-commit checks
+    - bash tools/githooks/pre-commit ci-pr
+    # Check syntax for all files as a safety net
+    - find . -type f \( -iname "*.xhtml" -o -iname "*.xml" -o -iname "*.xsl" \) -exec xmllint --noout {} +
 
 trigger:
   branch:

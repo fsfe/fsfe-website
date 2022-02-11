@@ -26,8 +26,17 @@ fi >>/dev/stderr
 # Define variables
 # =============================================================================
 
-# static vars
-files_all=$(git diff --staged --name-only)
+# find out which files to check
+# In a CI pipeline, we try to get the changed files after the PR has been merged
+if [[ "$1" == "ci-pr" ]]; then
+  files_all=$(git diff-tree --name-only -r origin/master HEAD)
+  echo "Checking the following files:"
+  echo "${files_all}"
+  echo
+# Locally, we only check the staged files
+else
+  files_all=$(git diff --staged --name-only)
+fi
 total="$(echo "$files_all" | wc -l)"
 count=0
 
@@ -68,7 +77,9 @@ FILES_CSS_ATTR=""
 
 for f in $files_all; do
   ((count++))
-  echo -ne "pre-commit check: [$count/$total]\r"
+  if [[ "$1" != "ci-pr" ]]; then
+    echo -ne "pre-commit check: [$count/$total]\r"
+  fi
 
   # ---------------------------------------------------------------------------
   # XML syntax

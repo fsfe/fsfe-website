@@ -4,10 +4,10 @@
 	for code updates
 	see http://www.un.org/en/members/index.shtml for a list of
 	country names.
-	
+
 	-->
 
-  <!-- eea is European Economic Area plus a few manual additions where we want to send to -->
+  <!-- promo is European Economic Area plus a few manual additions where we want to send to -->
 
 <countryset>
   <version>1</version>
@@ -16,7 +16,7 @@
 <country id="AF">Afganistan</country>
 <!--<country id="">Akrotiri and Dhekelia</country> The Sovereign Base Areas of Akrotiri and Dhekelia, Cyprus, Greece-->
 <country id="AX">Ahvenamaa</country>
-<country id="AL" eea="yes" yh4f="yes">Albaania</country>
+<country id="AL" promo="yes" yh4f="yes">Albaania</country>
 <country id="DZ">Alžeeria</country>
 <country id="AS">Ameerika Samoa</country>
 <country id="AD">Andorra</country>
@@ -29,7 +29,7 @@
 <country id="AW">Aruba</country>
 <!--<country id="">Ashmore and Cartier Islands</country>-->
 <country id="AU">Austraalia</country>
-<country id="AT" eea="yes" yh4f="yes">Austria</country>
+<country id="AT" promo="yes" yh4f="yes">Austria</country>
 <country id="AZ">Aserbaidžaan</country>
 <country id="BS">Bahama</country><!-- Bahamas, The -->
 <country id="BH">Bahrein</country>
@@ -37,7 +37,7 @@
 <country id="BB">Barbados</country>
 <!--<country id="">Bassas da India</country>-->
 <country id="BY">Valgevene</country>
-<country id="BE" eea="yes" yh4f="yes">Belgia</country>
+<country id="BE" promo="yes" yh4f="yes">Belgia</country>
 <country id="BZ">Belize</country>
 <country id="BJ">Benin</country>
 <country id="BM">Bermuda</country>
@@ -50,7 +50,7 @@
 <country id="IO">British India ookeani ala</country>
 <country id="VG">British Neitsisaared</country>
 <country id="BN">Brunei</country>
-<country id="BG" eea="yes" yh4f="yes">Bulgaaria</country>
+<country id="BG" promo="yes" yh4f="yes">Bulgaaria</country>
 <country id="BF">Burkina Faso</country>
 <country id="BI">Burundi</country>
 <country id="KH">Kambodža</country>
@@ -72,14 +72,14 @@
 <!--<country id="">Coral Sea Islands</country>Gay and Lesbian Kingdom of the Coral Sea Islands, Australia-->
 <country id="CR">Costa Rica</country>
 <country id="CI">Côte d’Ivoire</country>
-<country id="HR" eea="yes" yh4f="yes">Horvaatia</country>
+<country id="HR" promo="yes" yh4f="yes">Horvaatia</country>
 <country id="CU">Kuuba</country>
 <country id="CW">Curaçao</country>
-<country id="CY" eea="yes" yh4f="yes">Küpros</country>
-<country id="CZ" eea="yes" yh4f="yes">Tšehhi</country>
+<country id="CY" promo="yes" yh4f="yes">Küpros</country>
+<country id="CZ" promo="yes" yh4f="yes">Tšehhi</country>
 <country id="KP">Põhja-Korea</country>
 <country id="CD">Kongo Demokraatlik Vabariik</country>
-<country id="DK" eea="yes" yh4f="yes">Taani</country>
+<country id="DK" promo="yes" yh4f="yes">Taani</country>
 <country id="DJ">Djibouti</country>
 <country id="DM">Dominica</country>
 <country id="DO">Dominikaani Vabariik</country>
@@ -88,14 +88,14 @@
 <country id="SV">El Salvador</country>
 <country id="GQ">Ekvatoriaal-Guinea</country>
 <country id="ER">Eritrea</country>
-<country id="EE" eea="yes" yh4f="yes">Eesti</country>
+<country id="EE" promo="yes" yh4f="yes">Eesti</country>
 <country id="ET">Etioopia</country>
 <!--<country id="">Europa Island</country>-->
 <country id="FK">Falklandi saared</country>
 <country id="FO">Fääri saared</country>
 <country id="FJ">Fidži</country>
-<country id="FI" eea="yes" yh4f="yes">Soome</country>
-<country id="FR" eea="yes" yh4f="yes">Prantsusmaa</country>
+<country id="FI" promo="yes" yh4f="yes">Soome</country>
+<country id="FR" promo="yes" yh4f="yes">Prantsusmaa</country>
 <country id="GF">Prantsuse Guajaana</country>
 <country id="PF">Prantsuse Polüneesia</country>
 <country id="TF">Prantsuse Antarktika ja Lõunaalad</country>
@@ -103,11 +103,11 @@
 <country id="GM">Gambia</country>
 <!--<country id="">Gaza Strip</country> see Palestinian territories-->
 <country id="GE">Gruusia</country>
-<country id="DE" eea="yes" yh4f="yes">Saksamaa</country>
+<country id="DE" promo="yes" yh4f="yes">Saksamaa</country>
 <country id="GH">Ghana</country>
 <country id="GI">Gibraltar</country>
 <!--<country id="">Glorioso Islands</country>-->
-<country id="GR" eea="yes" yh4f="yes">Kreeka</country>
+<country id="GR" promo="yes" yh4f="yes">Kreeka</country>
 <country id="GL">Gröönimaa</country>
 <country id="GD">Grenada</country>
 <country id="GP">Guadeloupe</country>
@@ -121,16 +121,16 @@
 <country id="HM">Heard ja McDonald</country>
 <country id="HN">Honduras</country>
 <country id="HK">Hongkong</country>
-<country id="HU" eea="yes" yh4f="yes">Ungari</country>
-<country id="IS" eea="yes" yh4f="yes">Island</country>
+<country id="HU" promo="yes" yh4f="yes">Ungari</country>
+<country id="IS" promo="yes" yh4f="yes">Island</country>
 <country id="IN">India</country>
 <country id="ID">Indoneesia</country>
 <country id="IR">Iraan</country>
 <country id="IQ">Iraak</country>
-<country id="IE" eea="yes" yh4f="yes">Iirimaa</country>
+<country id="IE" promo="yes" yh4f="yes">Iirimaa</country>
 <country id="IM">Man</country>
 <country id="IL">Iisrael</country>
-<country id="IT" eea="yes" yh4f="yes">Itaalia</country>
+<country id="IT" promo="yes" yh4f="yes">Itaalia</country>
 <country id="JM">Jamaica</country>
 <country id="SJ">Jan Mayen</country>
 <country id="JP">Jaapan</country>
@@ -143,14 +143,14 @@
 <country id="KW">Kuveit</country>
 <country id="KG">Kõrgõzstan</country>
 <country id="LA">Laos</country>
-<country id="LV" eea="yes" yh4f="yes">Läti</country>
+<country id="LV" promo="yes" yh4f="yes">Läti</country>
 <country id="LB">Liibanon</country>
 <country id="LS">Lesotho</country>
 <country id="LR">Libeeria</country>
 <country id="LY">Liibüa</country>
-<country id="LI" eea="yes" yh4f="yes">Liechtenstein</country>
-<country id="LT" eea="yes" yh4f="yes">Leedu</country>
-<country id="LU" eea="yes" yh4f="yes">Luksemburg</country>
+<country id="LI" promo="yes" yh4f="yes">Liechtenstein</country>
+<country id="LT" promo="yes" yh4f="yes">Leedu</country>
+<country id="LU" promo="yes" yh4f="yes">Luksemburg</country>
 <country id="MO">Aomen</country>
 <country id="MK">Makedoonia</country>
 <country id="MG">Madagaskar</country>
@@ -158,7 +158,7 @@
 <country id="MY">Malaisia</country>
 <country id="MV">Maldiivid</country>
 <country id="ML">Mali</country>
-<country id="MT" eea="yes" yh4f="yes">Malta</country>
+<country id="MT" promo="yes" yh4f="yes">Malta</country>
 <country id="MH">Marshalli saared</country>
 <country id="MQ">Martinique</country>
 <country id="MR">Mauritaania</country>
@@ -177,7 +177,7 @@
 <country id="NR">Nauru</country>
 <!--<country id="">Navassa Island</country>-->
 <country id="NP">Nepal</country>
-<country id="NL" eea="yes" yh4f="yes">Holland</country>
+<country id="NL" promo="yes" yh4f="yes">Holland</country>
 <country id="NC">Uus-Kaledoonia</country>
 <country id="NZ">Uus-Meremaa</country>
 <country id="NI">Nicaragua</country>
@@ -186,7 +186,7 @@
 <country id="NU">Niue</country>
 <country id="NF">Norfolki saar</country>
 <country id="MP">Põhja-Mariaanid</country>
-<country id="NO" eea="yes" yh4f="yes">Norra</country>
+<country id="NO" promo="yes" yh4f="yes">Norra</country>
 <country id="OM">Omaan</country>
 <country id="PK">Pakistan</country>
 <country id="PW">Belau</country>
@@ -198,14 +198,14 @@
 <country id="PE">Peruu</country>
 <country id="PH">Filipiinid</country>
 <country id="PN">Pitcairn</country>
-<country id="PL" eea="yes" yh4f="yes">Poola</country>
-<country id="PT" eea="yes" yh4f="yes">Portugal</country>
+<country id="PL" promo="yes" yh4f="yes">Poola</country>
+<country id="PT" promo="yes" yh4f="yes">Portugal</country>
 <country id="PR">Puerto Rico</country>
 <country id="QA">Katar</country>
 <country id="KR">Korea Vabariik (Lõuna-Korea)</country>
 <country id="MD" yh4f="yes">Moldova</country>
 <country id="RE">Réunion</country>
-<country id="RO" eea="yes" yh4f="yes">Rumeenia</country>
+<country id="RO" promo="yes" yh4f="yes">Rumeenia</country>
 <country id="RU" yh4f="yes">Vene Föderatsioon</country>
 <country id="RW">Rwanda</country>
 <country id="SH">Saint Helena</country>
@@ -218,27 +218,27 @@
 <country id="ST">São Tomé ja Príncipe</country>
 <country id="SA">Saudi Araabia</country>
 <country id="SN">Senegal</country>
-<country id="RS" yh4f="yes">Serbia</country>
+<country id="RS" promo="yes" yh4f="yes">Serbia</country>
 <country id="SC">Seišellid</country>
 <country id="SL">Sierra Leone</country>
 <country id="SG">Singapur</country>
 <country id="SX">Sint Maarten</country>
-<country id="SK" eea="yes" yh4f="yes">Slovakkia</country>
-<country id="SI" eea="yes" yh4f="yes">Sloveenia</country>
+<country id="SK" promo="yes" yh4f="yes">Slovakkia</country>
+<country id="SI" promo="yes" yh4f="yes">Sloveenia</country>
 <country id="SB">Saalomoni saared</country>
 <country id="SO">Somaalia</country>
 <country id="ZA">Lõuna-Aafrika Vabariik</country>
 <country id="GS">Lõuna-Georgia ja Lõuna-Sandwichi saared</country>
 <country id="SS">Lõuna-Sudaan</country>
-<country id="ES" eea="yes" yh4f="yes">Hispaania</country>
+<country id="ES" promo="yes" yh4f="yes">Hispaania</country>
 <!--<country id="">Spratly Islands</country>-->
 <country id="LK">Sri Lanka</country>
 <country id="SD">Sudaan</country>
 <country id="SR">Suriname</country>
 <country id="SJ">Svalbard</country>
 <country id="SZ">Svaasimaa</country>
-<country id="SE" eea="yes" yh4f="yes">Rootsi</country>
-<country id="CH" eea="yes" yh4f="yes">Šveits</country>
+<country id="SE" promo="yes" yh4f="yes">Rootsi</country>
+<country id="CH" promo="yes" yh4f="yes">Šveits</country>
 <country id="SY">Süüria</country>
 <country id="TW">Hiina Vabariik (Taiwan)</country>
 <country id="TJ">Tadžikistan</country>
@@ -250,14 +250,14 @@
 <country id="TT">Trinidad ja Tobago</country>
 <!--<country id="">Tromelin Island</country>-->
 <country id="TN">Tuneesia</country>
-<country id="TR" eea="yes" yh4f="yes">Türgi</country>
+<country id="TR" promo="yes" yh4f="yes">Türgi</country>
 <country id="TM">Türkmenistan</country>
 <country id="TC">Turks ja Caicos</country>
 <country id="TV">Tuvalu</country>
 <country id="UG">Uganda</country>
 <country id="UA" yh4f="yes">Ukraina</country>
 <country id="AE">Araabia Ühendemiraadid</country>
-<country id="GB" eea="yes" yh4f="yes">Ühendkuningriik</country>
+<country id="GB" promo="yes" yh4f="yes">Ühendkuningriik</country>
 <country id="TZ">Tansaania</country>
 <country id="US">Ameerika Ühendriigid</country>
 <country id="UY">Uruguay</country>
